@@ -1,7 +1,7 @@
 /* eslint-disable */
 import {
-    OCTET_STRING,
-    ASN1Element as _Element,
+    type OCTET_STRING,
+    type ASN1Element as _Element,
     ASN1TagClass as _TagClass,
     ASN1Construction as _Construction,
     ASN1UniversalType as _UniversalType,
@@ -12,7 +12,7 @@ import {
 } from '@wildboar/asn1';
 import * as $ from '@wildboar/asn1/functional';
 import {
-    DataType,
+    type DataType,
     _decode_DataType,
     _encode_DataType,
 } from '../TestCategories-ASN1Module/DataType.ta.mjs';

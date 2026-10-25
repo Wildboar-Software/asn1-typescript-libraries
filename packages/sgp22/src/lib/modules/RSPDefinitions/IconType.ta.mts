@@ -1,7 +1,7 @@
 /* eslint-disable */
 import {
-    ASN1Element as _Element,
-    INTEGER
+    type ASN1Element as _Element,
+    type INTEGER
 } from "@wildboar/asn1";
 import * as $ from "@wildboar/asn1/functional";
 
@@ -36,7 +36,7 @@ type IconType = INTEGER;
  * @type {number}
  */
 export
-const IconType_jpg: IconType = 0; /* LONG_NAMED_INTEGER_VALUE */
+const IconType_jpg: 0 = 0 satisfies IconType; /* LONG_NAMED_INTEGER_VALUE */
 
 /**
  * @summary IconType_jpg
@@ -48,7 +48,7 @@ const IconType_jpg: IconType = 0; /* LONG_NAMED_INTEGER_VALUE */
  * @type {number}
  */
 export
-const jpg: IconType = IconType_jpg; /* SHORT_NAMED_INTEGER_VALUE */
+const jpg: 0 = IconType_jpg; /* SHORT_NAMED_INTEGER_VALUE */
 
 /**
  * @summary IconType_png
@@ -60,7 +60,7 @@ const jpg: IconType = IconType_jpg; /* SHORT_NAMED_INTEGER_VALUE */
  * @type {number}
  */
 export
-const IconType_png: IconType = 1; /* LONG_NAMED_INTEGER_VALUE */
+const IconType_png: 1 = 1 satisfies IconType; /* LONG_NAMED_INTEGER_VALUE */
 
 /**
  * @summary IconType_png
@@ -72,9 +72,9 @@ const IconType_png: IconType = 1; /* LONG_NAMED_INTEGER_VALUE */
  * @type {number}
  */
 export
-const png: IconType = IconType_png; /* SHORT_NAMED_INTEGER_VALUE */
-export const _decode_IconType = $._decodeInteger;
-export const _encode_IconType = $._encodeInteger;
+const png: 1 = IconType_png; /* SHORT_NAMED_INTEGER_VALUE */
+export const _decode_IconType: $.ASN1Decoder<INTEGER> = $._decodeInteger;
+export const _encode_IconType: $.ASN1Encoder<INTEGER> = $._encodeInteger;
 
 
 /* eslint-enable */

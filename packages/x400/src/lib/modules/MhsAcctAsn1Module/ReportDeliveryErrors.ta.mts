@@ -1,6 +1,6 @@
 /* eslint-disable */
 import {
-    ASN1Element as _Element,
+    type ASN1Element as _Element,
     ASN1TagClass as _TagClass,
     ASN1Construction as _Construction,
     ASN1UniversalType as _UniversalType,
@@ -11,7 +11,7 @@ import {
 } from '@wildboar/asn1';
 import * as $ from '@wildboar/asn1/functional';
 import {
-    MessageDeliveryErrors,
+    type MessageDeliveryErrors,
     _decode_MessageDeliveryErrors,
     _encode_MessageDeliveryErrors,
 } from '../MhsAcctAsn1Module/MessageDeliveryErrors.ta.mjs';
@@ -27,22 +27,13 @@ import {
  */
 export type ReportDeliveryErrors = MessageDeliveryErrors; // DefinedType
 
-let _cached_decoder_for_ReportDeliveryErrors: $.ASN1Decoder<ReportDeliveryErrors> | null = null;
-
 /**
  * @summary Decodes an ASN.1 element into a(n) ReportDeliveryErrors
  * @function
  * @param {_Element} el The element being decoded.
  * @returns {ReportDeliveryErrors} The decoded data structure.
  */
-export function _decode_ReportDeliveryErrors(el: _Element): ReportDeliveryErrors {
-    if (!_cached_decoder_for_ReportDeliveryErrors) {
-        _cached_decoder_for_ReportDeliveryErrors = _decode_MessageDeliveryErrors;
-    }
-    return _cached_decoder_for_ReportDeliveryErrors(el);
-}
-
-let _cached_encoder_for_ReportDeliveryErrors: $.ASN1Encoder<ReportDeliveryErrors> | null = null;
+export const _decode_ReportDeliveryErrors: $.ASN1Decoder<ReportDeliveryErrors> = _decode_MessageDeliveryErrors;
 
 /**
  * @summary Encodes a(n) ReportDeliveryErrors into an ASN.1 Element.
@@ -51,15 +42,7 @@ let _cached_encoder_for_ReportDeliveryErrors: $.ASN1Encoder<ReportDeliveryErrors
  * @param elGetter A function that can be used to get new ASN.1 elements.
  * @returns {_Element} The ReportDeliveryErrors, encoded as an ASN.1 Element.
  */
-export function _encode_ReportDeliveryErrors(
-    value: ReportDeliveryErrors,
-    elGetter: $.ASN1Encoder<ReportDeliveryErrors>
-): _Element {
-    if (!_cached_encoder_for_ReportDeliveryErrors) {
-        _cached_encoder_for_ReportDeliveryErrors = _encode_MessageDeliveryErrors;
-    }
-    return _cached_encoder_for_ReportDeliveryErrors(value, elGetter);
-}
+export const _encode_ReportDeliveryErrors: $.ASN1Encoder<ReportDeliveryErrors> = _encode_MessageDeliveryErrors;
 
 
 /* eslint-enable */

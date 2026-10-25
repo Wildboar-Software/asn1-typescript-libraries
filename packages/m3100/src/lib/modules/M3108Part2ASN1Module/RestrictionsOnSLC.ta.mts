@@ -1,8 +1,8 @@
 /* eslint-disable */
 import {
-    OPTIONAL,
-    GraphicString,
-    ASN1Element as _Element,
+    type OPTIONAL,
+    type GraphicString,
+    type ASN1Element as _Element,
     ASN1TagClass as _TagClass,
     ASN1Construction as _Construction,
     ASN1UniversalType as _UniversalType,
@@ -13,7 +13,7 @@ import {
 } from '@wildboar/asn1';
 import * as $ from '@wildboar/asn1/functional';
 import {
-    RestrictionsOnSLC_restrictionId,
+    type RestrictionsOnSLC_restrictionId,
     _enum_for_RestrictionsOnSLC_restrictionId,
     _decode_RestrictionsOnSLC_restrictionId,
     _encode_RestrictionsOnSLC_restrictionId,
@@ -41,26 +41,34 @@ import {
  *
  */
 export class RestrictionsOnSLC {
+    /**
+     * @summary `restrictionId`.
+     * @public
+     * @readonly
+     */
+    public readonly restrictionId: RestrictionsOnSLC_restrictionId;
+    /**
+     * @summary `restrictionText`.
+     * @public
+     * @readonly
+     */
+    public readonly restrictionText?: OPTIONAL<GraphicString>;
+    /**
+     * @summary Extensions that are not recognized.
+     * @public
+     * @readonly
+     */
+    public readonly _unrecognizedExtensionsList: _Element[];
+
     constructor(
-        /**
-         * @summary `restrictionId`.
-         * @public
-         * @readonly
-         */
-        readonly restrictionId: RestrictionsOnSLC_restrictionId,
-        /**
-         * @summary `restrictionText`.
-         * @public
-         * @readonly
-         */
-        readonly restrictionText?: OPTIONAL<GraphicString>,
-        /**
-         * @summary Extensions that are not recognized.
-         * @public
-         * @readonly
-         */
-        readonly _unrecognizedExtensionsList: _Element[] = []
-    ) {}
+        restrictionId: RestrictionsOnSLC_restrictionId,
+        restrictionText?: OPTIONAL<GraphicString>,
+        _unrecognizedExtensionsList: _Element[] = []
+    ) {
+        this.restrictionId = restrictionId;
+        this.restrictionText = restrictionText;
+        this._unrecognizedExtensionsList = _unrecognizedExtensionsList;
+    }
 
     /**
      * @summary Restructures an object into a RestrictionsOnSLC
@@ -90,7 +98,7 @@ export class RestrictionsOnSLC {
      * @static
      */
 
-    public static _enum_for_restrictionId = _enum_for_RestrictionsOnSLC_restrictionId;
+    public static _enum_for_restrictionId: typeof _enum_for_RestrictionsOnSLC_restrictionId = _enum_for_RestrictionsOnSLC_restrictionId;
 }
 
 

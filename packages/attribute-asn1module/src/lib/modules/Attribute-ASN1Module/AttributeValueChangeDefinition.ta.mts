@@ -1,6 +1,6 @@
 /* eslint-disable */
 import {
-    ASN1Element as _Element,
+    type ASN1Element as _Element,
     ASN1TagClass as _TagClass,
     ASN1Construction as _Construction,
     ASN1UniversalType as _UniversalType,
@@ -28,7 +28,7 @@ import { AttributeValueChangeDefinition_Item, _decode_AttributeValueChangeDefini
  *     SEQUENCE {attributeId        CMIP-ATTRIBUTE.&id({AttributeSet}),
  *               oldAttributeValue
  *                 [1]  CMIP-ATTRIBUTE.&Value({AttributeSet}{@.attributeId})
- *                   OPTIONAL,
+ *                   type OPTIONAL,
  *               newAttributeValue
  *                 [2]  CMIP-ATTRIBUTE.&Value({AttributeSet}{@.attributeId})
  *     }

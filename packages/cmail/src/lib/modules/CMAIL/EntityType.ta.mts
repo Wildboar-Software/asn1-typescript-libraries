@@ -32,7 +32,7 @@ import {
   _encode_EntityType_type,
 } from '../CMAIL/EntityType-type.ta.mjs';
 import {
-    String,
+    type String,
     _decode_String,
     _encode_String,
 } from '../XSD/String.ta.mjs';
@@ -81,7 +81,7 @@ export class EntityType {
    * @public
    * @readonly
    */
-  readonly secretQuestion: SecretQuestionType;
+  public readonly secretQuestion: SecretQuestionType;
   /**
    * @summary `cipheredEnvelopeKey`.
    * @description RSCK wrapped with this party's public
@@ -90,7 +90,7 @@ export class EntityType {
    * @public
    * @readonly
    */
-  readonly cipheredEnvelopeKey: CipheredEnvelopeKeyType;
+  public readonly cipheredEnvelopeKey: CipheredEnvelopeKeyType;
   /**
    * @summary `certificate`.
    * @description This party's public-key certificate
@@ -100,7 +100,7 @@ export class EntityType {
    * @public
    * @readonly
    */
-  readonly certificate: CertificateType;
+  public readonly certificate: CertificateType;
   /**
    * @summary `emailAddress`.
    * @description Shall be RFC 822 format (`CONSTRAINED
@@ -109,7 +109,7 @@ export class EntityType {
    * @public
    * @readonly
    */
-  readonly emailAddress: String;
+  public readonly emailAddress: String;
   /**
    * @summary `type_`.
    * @description Role: `from`, `to`, `cc`, or `transit`.
@@ -118,7 +118,7 @@ export class EntityType {
    * @public
    * @readonly
    */
-  readonly type_: EntityType_type;
+  public readonly type_: EntityType_type;
 
   constructor(
     secretQuestion: SecretQuestionType,
@@ -164,7 +164,7 @@ export class EntityType {
    * @static
    */
 
-  public static _enum_for_type_ = _enum_for_EntityType_type;
+  public static _enum_for_type_: typeof _enum_for_EntityType_type = _enum_for_EntityType_type;
 }
 
 

@@ -1,6 +1,6 @@
 /* eslint-disable */
 import {
-    ASN1Element as _Element,
+    type ASN1Element as _Element,
     ASN1TagClass as _TagClass,
     ASN1Construction as _Construction,
     ASN1UniversalType as _UniversalType,
@@ -11,7 +11,7 @@ import {
 } from '@wildboar/asn1';
 import * as $ from '@wildboar/asn1/functional';
 import {
-    ObjectInstance,
+    type ObjectInstance,
     _decode_ObjectInstance,
     _encode_ObjectInstance,
 } from '@wildboar/cmip';
@@ -28,20 +28,26 @@ import {
  *
  */
 export class PointToMultipoint_toTps_Item {
+    /**
+     * @summary `tp`.
+     * @public
+     * @readonly
+     */
+    public readonly tp: ObjectInstance;
+    /**
+     * @summary `xConnection`.
+     * @public
+     * @readonly
+     */
+    public readonly xConnection: ObjectInstance;
+
     constructor(
-        /**
-         * @summary `tp`.
-         * @public
-         * @readonly
-         */
-        readonly tp: ObjectInstance,
-        /**
-         * @summary `xConnection`.
-         * @public
-         * @readonly
-         */
-        readonly xConnection: ObjectInstance
-    ) {}
+        tp: ObjectInstance,
+        xConnection: ObjectInstance
+    ) {
+        this.tp = tp;
+        this.xConnection = xConnection;
+    }
 
     /**
      * @summary Restructures an object into a PointToMultipoint_toTps_Item

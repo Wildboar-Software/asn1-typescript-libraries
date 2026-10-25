@@ -1,6 +1,6 @@
 /* eslint-disable */
 import {
-    ASN1Element as _Element,
+    type ASN1Element as _Element,
     ASN1TagClass as _TagClass,
     ASN1Construction as _Construction,
     ASN1UniversalType as _UniversalType,
@@ -63,7 +63,7 @@ export type AlarmSeverityCode = _enum_for_AlarmSeverityCode;
  *
  * @enum {number}
  */
-export const AlarmSeverityCode = _enum_for_AlarmSeverityCode;
+export const AlarmSeverityCode: typeof _enum_for_AlarmSeverityCode = _enum_for_AlarmSeverityCode;
 
 
 /**
@@ -71,7 +71,7 @@ export const AlarmSeverityCode = _enum_for_AlarmSeverityCode;
  * @constant
  * @type {number}
  */
-export const AlarmSeverityCode_non_alarmed: AlarmSeverityCode =
+export const AlarmSeverityCode_non_alarmed: _enum_for_AlarmSeverityCode.non_alarmed =
     AlarmSeverityCode.non_alarmed; /* LONG_NAMED_ENUMERATED_VALUE */
 
 
@@ -80,7 +80,7 @@ export const AlarmSeverityCode_non_alarmed: AlarmSeverityCode =
  * @constant
  * @type {number}
  */
-export const non_alarmed: AlarmSeverityCode =
+export const non_alarmed: _enum_for_AlarmSeverityCode.non_alarmed =
     AlarmSeverityCode.non_alarmed; /* SHORT_NAMED_ENUMERATED_VALUE */
 
 
@@ -89,7 +89,7 @@ export const non_alarmed: AlarmSeverityCode =
  * @constant
  * @type {number}
  */
-export const AlarmSeverityCode_minor: AlarmSeverityCode =
+export const AlarmSeverityCode_minor: _enum_for_AlarmSeverityCode.minor =
     AlarmSeverityCode.minor; /* LONG_NAMED_ENUMERATED_VALUE */
 
 
@@ -98,7 +98,7 @@ export const AlarmSeverityCode_minor: AlarmSeverityCode =
  * @constant
  * @type {number}
  */
-export const minor: AlarmSeverityCode =
+export const minor: _enum_for_AlarmSeverityCode.minor =
     AlarmSeverityCode.minor; /* SHORT_NAMED_ENUMERATED_VALUE */
 
 
@@ -107,7 +107,7 @@ export const minor: AlarmSeverityCode =
  * @constant
  * @type {number}
  */
-export const AlarmSeverityCode_major: AlarmSeverityCode =
+export const AlarmSeverityCode_major: _enum_for_AlarmSeverityCode.major =
     AlarmSeverityCode.major; /* LONG_NAMED_ENUMERATED_VALUE */
 
 
@@ -116,7 +116,7 @@ export const AlarmSeverityCode_major: AlarmSeverityCode =
  * @constant
  * @type {number}
  */
-export const major: AlarmSeverityCode =
+export const major: _enum_for_AlarmSeverityCode.major =
     AlarmSeverityCode.major; /* SHORT_NAMED_ENUMERATED_VALUE */
 
 
@@ -125,7 +125,7 @@ export const major: AlarmSeverityCode =
  * @constant
  * @type {number}
  */
-export const AlarmSeverityCode_critical: AlarmSeverityCode =
+export const AlarmSeverityCode_critical: _enum_for_AlarmSeverityCode.critical =
     AlarmSeverityCode.critical; /* LONG_NAMED_ENUMERATED_VALUE */
 
 
@@ -134,7 +134,7 @@ export const AlarmSeverityCode_critical: AlarmSeverityCode =
  * @constant
  * @type {number}
  */
-export const critical: AlarmSeverityCode =
+export const critical: _enum_for_AlarmSeverityCode.critical =
     AlarmSeverityCode.critical; /* SHORT_NAMED_ENUMERATED_VALUE */
 
 
@@ -143,7 +143,7 @@ export const critical: AlarmSeverityCode =
  * @constant
  * @type {number}
  */
-export const AlarmSeverityCode_warning: AlarmSeverityCode =
+export const AlarmSeverityCode_warning: _enum_for_AlarmSeverityCode.warning =
     AlarmSeverityCode.warning; /* LONG_NAMED_ENUMERATED_VALUE */
 
 
@@ -152,18 +152,32 @@ export const AlarmSeverityCode_warning: AlarmSeverityCode =
  * @constant
  * @type {number}
  */
-export const warning: AlarmSeverityCode =
+export const warning: _enum_for_AlarmSeverityCode.warning =
     AlarmSeverityCode.warning; /* SHORT_NAMED_ENUMERATED_VALUE */
 
 
 
 
-export const _decode_AlarmSeverityCode = $._decodeEnumerated;
+export function _decode_AlarmSeverityCode(el: _Element): AlarmSeverityCode {
+    const enumerated = $._decodeEnumerated(el);
+    switch (enumerated) {
+        case AlarmSeverityCode.non_alarmed: return AlarmSeverityCode.non_alarmed;
+        case AlarmSeverityCode.minor: return AlarmSeverityCode.minor;
+        case AlarmSeverityCode.major: return AlarmSeverityCode.major;
+        case AlarmSeverityCode.critical: return AlarmSeverityCode.critical;
+        case AlarmSeverityCode.warning: return AlarmSeverityCode.warning;
+        default:
+            throw new _ConstructionError(
+                'Invalid ENUMERATED value ' + enumerated + ' for AlarmSeverityCode.',
+                el,
+            );
+    }
+}
 
 
 
 
-export const _encode_AlarmSeverityCode = $._encodeEnumerated;
+export const _encode_AlarmSeverityCode: $.ASN1Encoder<AlarmSeverityCode> = $._encodeEnumerated as $.ASN1Encoder<AlarmSeverityCode>;
 
 
 /* eslint-enable */

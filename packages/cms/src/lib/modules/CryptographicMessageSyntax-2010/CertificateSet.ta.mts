@@ -2,7 +2,7 @@
 import { ASN1Element as _Element } from "@wildboar/asn1";
 import * as $ from "@wildboar/asn1/functional";
 import {
-    CertificateChoices,
+    type CertificateChoices,
     _decode_CertificateChoices,
     _encode_CertificateChoices,
 } from "../CryptographicMessageSyntax-2010/CertificateChoices.ta.mjs";

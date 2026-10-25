@@ -1,6 +1,6 @@
 /* eslint-disable */
 import {
-  OPTIONAL,
+  type OPTIONAL,
   ASN1Element as _Element,
   ASN1TagClass as _TagClass,
   ASN1Construction as _Construction,
@@ -17,22 +17,22 @@ import {
   _encode_Create_Attributes,
 } from '../ISO8571-FTAM/Create-Attributes.ta.mjs';
 import {
-  Password,
+  type Password,
   _decode_Password,
   _encode_Password,
 } from '../ISO8571-FTAM/Password.ta.mjs';
 import {
-  Access_Request,
+  type Access_Request,
   _decode_Access_Request,
   _encode_Access_Request,
 } from '../ISO8571-FTAM/Access-Request.ta.mjs';
 import {
-  Shared_ASE_Information,
+  type Shared_ASE_Information,
   _decode_Shared_ASE_Information,
   _encode_Shared_ASE_Information,
 } from '../ISO8571-FTAM/Shared-ASE-Information.ta.mjs';
 import {
-  Account,
+  type Account,
   _decode_Account,
   _encode_Account,
 } from '../ISO8571-FTAM/Account.ta.mjs';
@@ -72,7 +72,7 @@ export class F_CREATE_DIRECTORY_request {
    * @public
    * @readonly
    */
-  readonly initial_attributes: Create_Attributes;
+  public readonly initial_attributes: Create_Attributes;
   /**
    * @summary `create_password`.
    * @description
@@ -83,7 +83,7 @@ export class F_CREATE_DIRECTORY_request {
    * @public
    * @readonly
    */
-  readonly create_password: OPTIONAL<Password>;
+  public readonly create_password: OPTIONAL<Password>;
   /**
    * @summary `requested_access`.
    * @description
@@ -94,7 +94,7 @@ export class F_CREATE_DIRECTORY_request {
    * @public
    * @readonly
    */
-  readonly requested_access: Access_Request;
+  public readonly requested_access: Access_Request;
   /**
    * @summary `shared_ASE_infonnation`.
    * @description
@@ -105,7 +105,7 @@ export class F_CREATE_DIRECTORY_request {
    * @public
    * @readonly
    */
-  readonly shared_ASE_infonnation?: OPTIONAL<Shared_ASE_Information>;
+  public readonly shared_ASE_infonnation?: OPTIONAL<Shared_ASE_Information>;
   /**
    * @summary `account`.
    * @description
@@ -115,7 +115,7 @@ export class F_CREATE_DIRECTORY_request {
    * @public
    * @readonly
    */
-  readonly account?: OPTIONAL<Account>;
+  public readonly account?: OPTIONAL<Account>;
 
   constructor(
     initial_attributes: Create_Attributes,

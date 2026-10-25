@@ -1,7 +1,7 @@
 /* eslint-disable */
 import { id_ecDH } from "../AlgorithmObjectIdentifiers/id-ecDH.va.mjs";
 import {
-    X509Curves,
+    type X509Curves,
     _decode_X509Curves,
     _encode_X509Curves,
 } from "../AlgorithmObjectIdentifiers/X509Curves.vsa.mjs";

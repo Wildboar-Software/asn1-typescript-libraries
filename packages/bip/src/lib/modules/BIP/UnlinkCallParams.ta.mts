@@ -11,7 +11,7 @@ import {
 } from '@wildboar/asn1';
 import * as $ from '@wildboar/asn1/functional';
 import {
-  EndpointIRI,
+  type EndpointIRI,
   _decode_EndpointIRI,
   _encode_EndpointIRI,
 } from '../BIP/EndpointIRI.ta.mjs';
@@ -45,7 +45,7 @@ export class UnlinkCallParams {
    * @public
    * @readonly
    */
-  readonly slaveEndpointIRI: EndpointIRI;
+  public readonly slaveEndpointIRI: EndpointIRI;
 
   constructor(
     slaveEndpointIRI: EndpointIRI

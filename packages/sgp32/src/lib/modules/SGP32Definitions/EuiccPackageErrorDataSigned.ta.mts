@@ -1,15 +1,15 @@
 /* eslint-disable */
 import {
-    INTEGER,
-    OPTIONAL,
-    UTF8String,
-    ASN1Element as _Element,
+    type INTEGER,
+    type OPTIONAL,
+    type UTF8String,
+    type ASN1Element as _Element,
     ASN1TagClass as _TagClass
 } from "@wildboar/asn1";
 import { ASN1SizeError } from "@wildboar/asn1";
 import * as $ from "@wildboar/asn1/functional";
 import { type TransactionId, _decode_TransactionId, _encode_TransactionId } from "@wildboar/sgp22/RSPDefinitions";
-import { EuiccPackageErrorCode, _decode_EuiccPackageErrorCode, _encode_EuiccPackageErrorCode } from "../SGP32Definitions/EuiccPackageErrorCode.ta.mjs";
+import { type EuiccPackageErrorCode, _decode_EuiccPackageErrorCode, _encode_EuiccPackageErrorCode } from "../SGP32Definitions/EuiccPackageErrorCode.ta.mjs";
 
 
 /**
@@ -40,49 +40,58 @@ import { EuiccPackageErrorCode, _decode_EuiccPackageErrorCode, _encode_EuiccPack
  */
 export
 class EuiccPackageErrorDataSigned {
+    /**
+     * @summary `eimId`.
+     * @description
+     * eimId from the rejected euiccPackageSigned, echoed so the eIM can match this
+     * error to the package it sent (SGP.32 v1.2, sections 2.11.1.1 and 5.9.1).
+     * Length 1 to 128 bytes (section 4.3).
+     * @public
+     * @readonly
+     */
+    public readonly eimId: UTF8String;
+    /**
+     * @summary `counterValue`.
+     * @description
+     * counterValue from the rejected package, echoed for the same matching (SGP.32
+     * v1.2, section 2.11.1.1). A replay or an out-of-range counter is reported in
+     * euiccPackageErrorCode, and this field still carries the value that was
+     * checked.
+     * @public
+     * @readonly
+     */
+    public readonly counterValue: INTEGER;
+    /**
+     * @summary `eimTransactionId`.
+     * @description
+     * Present when the signed package contained eimTransactionId; the eUICC echoes
+     * that same value (SGP.32 v1.2, section 2.11.2.1). The identifier is as
+     * defined in SGP.22, which SGP.32 cites from section 2.11.1.1.
+     * @public
+     * @readonly
+     */
+    public readonly eimTransactionId: OPTIONAL<TransactionId>;
+    /**
+     * @summary `euiccPackageErrorCode`.
+     * @description
+     * Why verification failed or why the package was rejected after the eIM key
+     * was resolved (SGP.32 v1.2, sections 2.11.2.1 and 5.9.1). Unknown eimId and a
+     * bad signature use the unsigned error instead.
+     * @public
+     * @readonly
+     */
+    public readonly euiccPackageErrorCode: EuiccPackageErrorCode;
+
     constructor (
-        /**
-         * @summary `eimId`.
-         * @description
-         * eimId from the rejected euiccPackageSigned, echoed so the eIM can match this
-         * error to the package it sent (SGP.32 v1.2, sections 2.11.1.1 and 5.9.1).
-         * Length 1 to 128 bytes (section 4.3).
-         * @public
-         * @readonly
-         */
-        readonly eimId: UTF8String,
-        /**
-         * @summary `counterValue`.
-         * @description
-         * counterValue from the rejected package, echoed for the same matching (SGP.32
-         * v1.2, section 2.11.1.1). A replay or an out-of-range counter is reported in
-         * euiccPackageErrorCode, and this field still carries the value that was
-         * checked.
-         * @public
-         * @readonly
-         */
-        readonly counterValue: INTEGER,
-        /**
-         * @summary `eimTransactionId`.
-         * @description
-         * Present when the signed package contained eimTransactionId; the eUICC echoes
-         * that same value (SGP.32 v1.2, section 2.11.2.1). The identifier is as
-         * defined in SGP.22, which SGP.32 cites from section 2.11.1.1.
-         * @public
-         * @readonly
-         */
-        readonly eimTransactionId: OPTIONAL<TransactionId>,
-        /**
-         * @summary `euiccPackageErrorCode`.
-         * @description
-         * Why verification failed or why the package was rejected after the eIM key
-         * was resolved (SGP.32 v1.2, sections 2.11.2.1 and 5.9.1). Unknown eimId and a
-         * bad signature use the unsigned error instead.
-         * @public
-         * @readonly
-         */
-        readonly euiccPackageErrorCode: EuiccPackageErrorCode
+        eimId: UTF8String,
+        counterValue: INTEGER,
+        eimTransactionId: OPTIONAL<TransactionId>,
+        euiccPackageErrorCode: EuiccPackageErrorCode
     ) {
+        this.eimId = eimId;
+        this.counterValue = counterValue;
+        this.eimTransactionId = eimTransactionId;
+        this.euiccPackageErrorCode = euiccPackageErrorCode;
         if (this.eimId.length < 1 || this.eimId.length > 128) {
             throw new ASN1SizeError("EuiccPackageErrorDataSigned.eimId violates SIZE constraint");
         }

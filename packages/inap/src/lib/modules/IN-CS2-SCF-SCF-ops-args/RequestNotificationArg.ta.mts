@@ -3,7 +3,7 @@ import {
     ASN1Element as _Element
 } from "@wildboar/asn1";
 import * as $ from "@wildboar/asn1/functional";
-import { OPTIONALLY_PROTECTED, _get_decoder_for_OPTIONALLY_PROTECTED, _get_encoder_for_OPTIONALLY_PROTECTED } from "../EnhancedSecurity/OPTIONALLY-PROTECTED.ta.mjs";
+import { type OPTIONALLY_PROTECTED, _get_decoder_for_OPTIONALLY_PROTECTED, _get_encoder_for_OPTIONALLY_PROTECTED } from "../EnhancedSecurity/OPTIONALLY-PROTECTED.ta.mjs";
 // export { OPTIONALLY_PROTECTED, _get_decoder_for_OPTIONALLY_PROTECTED, _get_encoder_for_OPTIONALLY_PROTECTED } from "../EnhancedSecurity/OPTIONALLY-PROTECTED.ta.mjs";
 import { RequestNotificationArg_Type, _decode_RequestNotificationArg_Type, _encode_RequestNotificationArg_Type } from "../IN-CS2-SCF-SCF-ops-args/RequestNotificationArg-Type.ta.mjs";
 // export { RequestNotificationArg_Type, _decode_RequestNotificationArg_Type, _encode_RequestNotificationArg_Type } from "../IN-CS2-SCF-SCF-ops-args/RequestNotificationArg-Type.ta.mjs";

@@ -50,7 +50,7 @@ export class SignedDepositNoticeType {
    * @public
    * @readonly
    */
-  readonly digitalPostmark: DigitalPostmarkType;
+  public readonly digitalPostmark: DigitalPostmarkType;
   /**
    * @summary `envelopeInformation`.
    * @description Sender-built envelope hashes, Message-ID,
@@ -59,7 +59,7 @@ export class SignedDepositNoticeType {
    * @public
    * @readonly
    */
-  readonly envelopeInformation: EnvelopeInformationType;
+  public readonly envelopeInformation: EnvelopeInformationType;
 
   constructor(
     digitalPostmark: DigitalPostmarkType,

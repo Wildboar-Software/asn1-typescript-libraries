@@ -1,4 +1,5 @@
 /* eslint-disable */
+import { ASN1Element as _Element, ASN1ConstructionError as _ConstructionError } from "@wildboar/asn1";
 import * as $ from "@wildboar/asn1/functional";
 
 
@@ -53,7 +54,7 @@ type ErrorTreatment = _enum_for_ErrorTreatment;
  * @enum {number}
  */
 export
-const ErrorTreatment = _enum_for_ErrorTreatment;
+const ErrorTreatment: typeof _enum_for_ErrorTreatment = _enum_for_ErrorTreatment;
 
 /**
  * @summary ErrorTreatment_reportErrorToScf
@@ -61,7 +62,7 @@ const ErrorTreatment = _enum_for_ErrorTreatment;
  * @type {number}
  */
 export
-const ErrorTreatment_reportErrorToScf: ErrorTreatment = ErrorTreatment.reportErrorToScf; /* LONG_NAMED_ENUMERATED_VALUE */
+const ErrorTreatment_reportErrorToScf: _enum_for_ErrorTreatment.reportErrorToScf = ErrorTreatment.reportErrorToScf; /* LONG_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary reportErrorToScf
@@ -69,7 +70,7 @@ const ErrorTreatment_reportErrorToScf: ErrorTreatment = ErrorTreatment.reportErr
  * @type {number}
  */
 export
-const reportErrorToScf: ErrorTreatment = ErrorTreatment.reportErrorToScf; /* SHORT_NAMED_ENUMERATED_VALUE */
+const reportErrorToScf: _enum_for_ErrorTreatment.reportErrorToScf = ErrorTreatment.reportErrorToScf; /* SHORT_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary ErrorTreatment_help
@@ -77,7 +78,7 @@ const reportErrorToScf: ErrorTreatment = ErrorTreatment.reportErrorToScf; /* SHO
  * @type {number}
  */
 export
-const ErrorTreatment_help: ErrorTreatment = ErrorTreatment.help; /* LONG_NAMED_ENUMERATED_VALUE */
+const ErrorTreatment_help: _enum_for_ErrorTreatment.help = ErrorTreatment.help; /* LONG_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary help
@@ -85,7 +86,7 @@ const ErrorTreatment_help: ErrorTreatment = ErrorTreatment.help; /* LONG_NAMED_E
  * @type {number}
  */
 export
-const help: ErrorTreatment = ErrorTreatment.help; /* SHORT_NAMED_ENUMERATED_VALUE */
+const help: _enum_for_ErrorTreatment.help = ErrorTreatment.help; /* SHORT_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary ErrorTreatment_repeatPrompt
@@ -93,7 +94,7 @@ const help: ErrorTreatment = ErrorTreatment.help; /* SHORT_NAMED_ENUMERATED_VALU
  * @type {number}
  */
 export
-const ErrorTreatment_repeatPrompt: ErrorTreatment = ErrorTreatment.repeatPrompt; /* LONG_NAMED_ENUMERATED_VALUE */
+const ErrorTreatment_repeatPrompt: _enum_for_ErrorTreatment.repeatPrompt = ErrorTreatment.repeatPrompt; /* LONG_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary repeatPrompt
@@ -101,12 +102,24 @@ const ErrorTreatment_repeatPrompt: ErrorTreatment = ErrorTreatment.repeatPrompt;
  * @type {number}
  */
 export
-const repeatPrompt: ErrorTreatment = ErrorTreatment.repeatPrompt; /* SHORT_NAMED_ENUMERATED_VALUE */
+const repeatPrompt: _enum_for_ErrorTreatment.repeatPrompt = ErrorTreatment.repeatPrompt; /* SHORT_NAMED_ENUMERATED_VALUE */
 
 export
-const _decode_ErrorTreatment: $.ASN1Decoder<ErrorTreatment> = $._decodeEnumerated;
+function _decode_ErrorTreatment(el: _Element): ErrorTreatment {
+    const enumerated = $._decodeEnumerated(el);
+    switch (enumerated) {
+        case ErrorTreatment.reportErrorToScf: return ErrorTreatment.reportErrorToScf;
+        case ErrorTreatment.help: return ErrorTreatment.help;
+        case ErrorTreatment.repeatPrompt: return ErrorTreatment.repeatPrompt;
+        default:
+            throw new _ConstructionError(
+                "Invalid ENUMERATED value " + enumerated + " for ErrorTreatment.",
+                el,
+            );
+    }
+}
 
 export
-const _encode_ErrorTreatment: $.ASN1Encoder<ErrorTreatment> = $._encodeEnumerated;
+const _encode_ErrorTreatment: $.ASN1Encoder<ErrorTreatment> = $._encodeEnumerated as $.ASN1Encoder<ErrorTreatment>;
 
 /* eslint-enable */

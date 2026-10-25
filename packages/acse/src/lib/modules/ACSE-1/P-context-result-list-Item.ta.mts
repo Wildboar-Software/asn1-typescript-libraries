@@ -1,6 +1,6 @@
 /* eslint-disable */
 import {
-  OPTIONAL,
+  type OPTIONAL,
   ASN1Element as _Element,
   ASN1TagClass as _TagClass,
   ASN1Construction as _Construction,
@@ -12,17 +12,17 @@ import {
 } from '@wildboar/asn1';
 import * as $ from '@wildboar/asn1/functional';
 import {
-  Result,
+  type Result,
   _decode_Result,
   _encode_Result,
 } from '../ACSE-1/Result.ta.mjs';
 import {
-  Concrete_syntax_name,
+  type Concrete_syntax_name,
   _decode_Concrete_syntax_name,
   _encode_Concrete_syntax_name,
 } from '../ACSE-1/Concrete-syntax-name.ta.mjs';
 import {
-  P_context_result_list_Item_provider_reason,
+  type P_context_result_list_Item_provider_reason,
   _decode_P_context_result_list_Item_provider_reason,
   _encode_P_context_result_list_Item_provider_reason,
 } from '../ACSE-1/P-context-result-list-Item-provider-reason.ta.mjs';

@@ -1,6 +1,6 @@
 /* eslint-disable */
 import {
-    ASN1Element as _Element,
+    type ASN1Element as _Element,
     ASN1TagClass as _TagClass,
     ASN1Construction as _Construction,
     ASN1UniversalType as _UniversalType,
@@ -11,12 +11,12 @@ import {
 } from '@wildboar/asn1';
 import * as $ from '@wildboar/asn1/functional';
 import {
-    MessageDeliveryIdentifier,
+    type MessageDeliveryIdentifier,
     _decode_MessageDeliveryIdentifier,
     _encode_MessageDeliveryIdentifier,
 } from '../MTSAbstractService/MessageDeliveryIdentifier.ta.mjs';
 import {
-    MessageDeliveryTime,
+    type MessageDeliveryTime,
     _decode_MessageDeliveryTime,
     _encode_MessageDeliveryTime,
 } from '../MTSAbstractService/MessageDeliveryTime.ta.mjs';
@@ -43,26 +43,34 @@ import {
  *
  */
 export class MessageDeliveryEnvelope {
+    /**
+     * @summary `message_delivery_identifier`.
+     * @public
+     * @readonly
+     */
+    public readonly message_delivery_identifier: MessageDeliveryIdentifier;
+    /**
+     * @summary `message_delivery_time`.
+     * @public
+     * @readonly
+     */
+    public readonly message_delivery_time: MessageDeliveryTime;
+    /**
+     * @summary `other_fields`.
+     * @public
+     * @readonly
+     */
+    public readonly other_fields: OtherMessageDeliveryFields;
+
     constructor(
-        /**
-         * @summary `message_delivery_identifier`.
-         * @public
-         * @readonly
-         */
-        readonly message_delivery_identifier: MessageDeliveryIdentifier,
-        /**
-         * @summary `message_delivery_time`.
-         * @public
-         * @readonly
-         */
-        readonly message_delivery_time: MessageDeliveryTime,
-        /**
-         * @summary `other_fields`.
-         * @public
-         * @readonly
-         */
-        readonly other_fields: OtherMessageDeliveryFields
-    ) {}
+        message_delivery_identifier: MessageDeliveryIdentifier,
+        message_delivery_time: MessageDeliveryTime,
+        other_fields: OtherMessageDeliveryFields
+    ) {
+        this.message_delivery_identifier = message_delivery_identifier;
+        this.message_delivery_time = message_delivery_time;
+        this.other_fields = other_fields;
+    }
 
     /**
      * @summary Restructures an object into a MessageDeliveryEnvelope

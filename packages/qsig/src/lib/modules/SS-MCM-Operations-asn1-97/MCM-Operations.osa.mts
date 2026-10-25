@@ -1,5 +1,5 @@
 /* eslint-disable */
-import { OPERATION } from "../Remote-Operations-Information-Objects/OPERATION.oca.mjs";
+import { type OPERATION } from "../Remote-Operations-Information-Objects/OPERATION.oca.mjs";
 import { mCMNewMsg } from "../SS-MCM-Operations-asn1-97/mCMNewMsg.oa.mjs";
 import { mCMNoNewMsg } from "../SS-MCM-Operations-asn1-97/mCMNoNewMsg.oa.mjs";
 import { mCMUpdate } from "../SS-MCM-Operations-asn1-97/mCMUpdate.oa.mjs";

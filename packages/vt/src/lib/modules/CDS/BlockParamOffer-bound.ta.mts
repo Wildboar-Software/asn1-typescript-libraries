@@ -1,8 +1,8 @@
 /* eslint-disable */
 import {
-    OPTIONAL,
-    NULL,
-    ASN1Element as _Element,
+    type OPTIONAL,
+    type NULL,
+    type ASN1Element as _Element,
     ASN1TagClass as _TagClass,
     ASN1Construction as _Construction,
     ASN1UniversalType as _UniversalType,
@@ -35,25 +35,31 @@ import { _decode_IntegerOffer, _encode_IntegerOffer, type IntegerOffer } from ".
  */
 export
 class BlockParamOffer_bound {
+    /**
+     * @summary `unbounded`.
+     * @description
+     * Offer unbounded `b-bound`. ISO/IEC 9040:1997 §18.2.1.
+     * @public
+     * @readonly
+     */
+    public readonly unbounded?: OPTIONAL<NULL>;
+    /**
+     * @summary `limit`.
+     * @description
+     * Offered integer `b-bound`(s). Addressing/CREATE/DELETE
+     * invalid if b > bound. ISO/IEC 9040:1997 §18.2.1.
+     * @public
+     * @readonly
+     */
+    public readonly limit?: OPTIONAL<IntegerOffer>;
+
     constructor (
-        /**
-         * @summary `unbounded`.
-         * @description
-         * Offer unbounded `b-bound`. ISO/IEC 9040:1997 §18.2.1.
-         * @public
-         * @readonly
-         */
-        readonly unbounded?: OPTIONAL<NULL>,
-        /**
-         * @summary `limit`.
-         * @description
-         * Offered integer `b-bound`(s). Addressing/CREATE/DELETE
-         * invalid if b > bound. ISO/IEC 9040:1997 §18.2.1.
-         * @public
-         * @readonly
-         */
-        readonly limit?: OPTIONAL<IntegerOffer>
-    ) {}
+        unbounded?: OPTIONAL<NULL>,
+        limit?: OPTIONAL<IntegerOffer>
+    ) {
+        this.unbounded = unbounded;
+        this.limit = limit;
+    }
 
     /**
      * @summary Restructures an object into a BlockParamOffer_bound

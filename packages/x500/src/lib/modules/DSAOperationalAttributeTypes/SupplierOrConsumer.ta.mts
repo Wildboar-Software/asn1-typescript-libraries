@@ -1,12 +1,12 @@
 /* eslint-disable */
 import {
-    ASN1Element as _Element,
+    type ASN1Element as _Element,
     ASN1TagClass as _TagClass,
-    OPTIONAL,
+    type OPTIONAL,
 } from "@wildboar/asn1";
 import * as $ from "@wildboar/asn1/functional";
 import {
-    Name,
+    type Name,
     _decode_Name,
     _encode_Name,
 } from "../InformationFramework/Name.ta.mjs";
@@ -54,41 +54,54 @@ import {
  *
  */
 export class SupplierOrConsumer extends AccessPoint {
-    constructor(
-        /**
-         * @summary `ae_title`.
-         * @public
-         * @readonly
-         */
-        override readonly ae_title: Name /* REPLICATED_COMPONENT */,
-        /**
-         * @summary `address`.
-         * @public
-         * @readonly
-         */
-        override readonly address: PresentationAddress /* REPLICATED_COMPONENT */,
-        /**
-         * @summary `protocolInformation`.
-         * @public
-         * @readonly
-         */
-        override readonly protocolInformation: OPTIONAL<
+    /**
+     * @summary `ae_title`.
+     * @public
+     * @readonly
+     */
+    public override readonly ae_title: Name; /* REPLICATED_COMPONENT */
+    /**
+     * @summary `address`.
+     * @public
+     * @readonly
+     */
+    public override readonly address: PresentationAddress; /* REPLICATED_COMPONENT */
+    /**
+     * @summary `protocolInformation`.
+     * @public
+     * @readonly
+     */
+    public override readonly protocolInformation: OPTIONAL<
             ProtocolInformation[]
-        > /* REPLICATED_COMPONENT */,
-        /**
-         * @summary `agreementID`.
-         * @public
-         * @readonly
-         */
-        readonly agreementID: OperationalBindingID,
-        /**
-         * @summary Extensions that are not recognized.
-         * @public
-         * @readonly
-         */
-        override readonly _unrecognizedExtensionsList: _Element[] = []
+        >; /* REPLICATED_COMPONENT */
+    /**
+     * @summary `agreementID`.
+     * @public
+     * @readonly
+     */
+    public readonly agreementID: OperationalBindingID;
+    /**
+     * @summary Extensions that are not recognized.
+     * @public
+     * @readonly
+     */
+    public override readonly _unrecognizedExtensionsList: _Element[];
+
+    constructor(
+        ae_title: Name,
+        address: PresentationAddress,
+        protocolInformation: OPTIONAL<
+            ProtocolInformation[]
+        >,
+        agreementID: OperationalBindingID,
+        _unrecognizedExtensionsList: _Element[] = []
     ) {
         super(ae_title, address, protocolInformation);
+        this.ae_title = ae_title;
+        this.address = address;
+        this.protocolInformation = protocolInformation;
+        this.agreementID = agreementID;
+        this._unrecognizedExtensionsList = _unrecognizedExtensionsList;
     }
 
     /**

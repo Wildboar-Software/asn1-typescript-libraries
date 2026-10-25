@@ -1,12 +1,12 @@
 /* eslint-disable */
 import {
     ASN1ConstructionError as _ConstructionError,
-    ASN1Element as _Element,
+    type ASN1Element as _Element,
     ASN1TagClass as _TagClass
 } from "@wildboar/asn1";
 import * as $ from "@wildboar/asn1/functional";
 import { TariffPulseFormat, _decode_TariffPulseFormat, _encode_TariffPulseFormat } from "../Tariffing-Data-Types/TariffPulseFormat.ta.mjs";
-import { TariffSwitchoverTime, _decode_TariffSwitchoverTime, _encode_TariffSwitchoverTime } from "../Tariffing-Data-Types/TariffSwitchoverTime.ta.mjs";
+import { type TariffSwitchoverTime, _decode_TariffSwitchoverTime, _encode_TariffSwitchoverTime } from "../Tariffing-Data-Types/TariffSwitchoverTime.ta.mjs";
 
 
 /**

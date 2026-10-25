@@ -1,11 +1,11 @@
 /* eslint-disable */
 import {
-    ASN1Element as _Element,
+    type ASN1Element as _Element,
     ASN1TagClass as _TagClass
 } from "@wildboar/asn1";
 import * as $ from "@wildboar/asn1/functional";
 import { QueryExpression_term, _decode_QueryExpression_term, _encode_QueryExpression_term } from "../UserInfoFormat-searchResult-1/QueryExpression-term.ta.mjs";
-import { Query, _decode_Query, _encode_Query } from "../Z39-50-APDU-2001/Query.ta.mjs";
+import { type Query, _decode_Query, _encode_Query } from "../Z39-50-APDU-2001/Query.ta.mjs";
 
 
 /**

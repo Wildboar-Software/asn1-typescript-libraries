@@ -1,7 +1,7 @@
 /* eslint-disable */
 import {
-    ASN1Element as _Element,
-    ENUMERATED
+    type ASN1Element as _Element,
+    type ENUMERATED
 } from "@wildboar/asn1";
 import * as $ from "@wildboar/asn1/functional";
 
@@ -53,7 +53,7 @@ type NumberPortabilityStatus = _enum_for_NumberPortabilityStatus | ENUMERATED;
  * @type {number}
  */
 export
-const NumberPortabilityStatus_notKnownToBePorted: NumberPortabilityStatus = 0; /* LONG_NAMED_ENUMERATED_VALUE */
+const NumberPortabilityStatus_notKnownToBePorted: _enum_for_NumberPortabilityStatus.notKnownToBePorted = _enum_for_NumberPortabilityStatus.notKnownToBePorted; /* LONG_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary notKnownToBePorted
@@ -65,7 +65,7 @@ const NumberPortabilityStatus_notKnownToBePorted: NumberPortabilityStatus = 0; /
  * @type {number}
  */
 export
-const notKnownToBePorted: NumberPortabilityStatus = NumberPortabilityStatus_notKnownToBePorted; /* SHORT_NAMED_ENUMERATED_VALUE */
+const notKnownToBePorted: _enum_for_NumberPortabilityStatus.notKnownToBePorted = NumberPortabilityStatus_notKnownToBePorted; /* SHORT_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary NumberPortabilityStatus_ownNumberPortedOut
@@ -77,7 +77,7 @@ const notKnownToBePorted: NumberPortabilityStatus = NumberPortabilityStatus_notK
  * @type {number}
  */
 export
-const NumberPortabilityStatus_ownNumberPortedOut: NumberPortabilityStatus = 1; /* LONG_NAMED_ENUMERATED_VALUE */
+const NumberPortabilityStatus_ownNumberPortedOut: _enum_for_NumberPortabilityStatus.ownNumberPortedOut = _enum_for_NumberPortabilityStatus.ownNumberPortedOut; /* LONG_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary ownNumberPortedOut
@@ -89,7 +89,7 @@ const NumberPortabilityStatus_ownNumberPortedOut: NumberPortabilityStatus = 1; /
  * @type {number}
  */
 export
-const ownNumberPortedOut: NumberPortabilityStatus = NumberPortabilityStatus_ownNumberPortedOut; /* SHORT_NAMED_ENUMERATED_VALUE */
+const ownNumberPortedOut: _enum_for_NumberPortabilityStatus.ownNumberPortedOut = NumberPortabilityStatus_ownNumberPortedOut; /* SHORT_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary NumberPortabilityStatus_foreignNumberPortedToForeignNetwork
@@ -102,7 +102,7 @@ const ownNumberPortedOut: NumberPortabilityStatus = NumberPortabilityStatus_ownN
  * @type {number}
  */
 export
-const NumberPortabilityStatus_foreignNumberPortedToForeignNetwork: NumberPortabilityStatus = 2; /* LONG_NAMED_ENUMERATED_VALUE */
+const NumberPortabilityStatus_foreignNumberPortedToForeignNetwork: _enum_for_NumberPortabilityStatus.foreignNumberPortedToForeignNetwork = _enum_for_NumberPortabilityStatus.foreignNumberPortedToForeignNetwork; /* LONG_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary foreignNumberPortedToForeignNetwork
@@ -115,7 +115,7 @@ const NumberPortabilityStatus_foreignNumberPortedToForeignNetwork: NumberPortabi
  * @type {number}
  */
 export
-const foreignNumberPortedToForeignNetwork: NumberPortabilityStatus = NumberPortabilityStatus_foreignNumberPortedToForeignNetwork; /* SHORT_NAMED_ENUMERATED_VALUE */
+const foreignNumberPortedToForeignNetwork: _enum_for_NumberPortabilityStatus.foreignNumberPortedToForeignNetwork = NumberPortabilityStatus_foreignNumberPortedToForeignNetwork; /* SHORT_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary NumberPortabilityStatus_ownNumberNotPortedOut
@@ -128,7 +128,7 @@ const foreignNumberPortedToForeignNetwork: NumberPortabilityStatus = NumberPorta
  * @type {number}
  */
 export
-const NumberPortabilityStatus_ownNumberNotPortedOut: NumberPortabilityStatus = 4; /* LONG_NAMED_ENUMERATED_VALUE */
+const NumberPortabilityStatus_ownNumberNotPortedOut: _enum_for_NumberPortabilityStatus.ownNumberNotPortedOut = _enum_for_NumberPortabilityStatus.ownNumberNotPortedOut; /* LONG_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary ownNumberNotPortedOut
@@ -141,7 +141,7 @@ const NumberPortabilityStatus_ownNumberNotPortedOut: NumberPortabilityStatus = 4
  * @type {number}
  */
 export
-const ownNumberNotPortedOut: NumberPortabilityStatus = NumberPortabilityStatus_ownNumberNotPortedOut; /* SHORT_NAMED_ENUMERATED_VALUE */
+const ownNumberNotPortedOut: _enum_for_NumberPortabilityStatus.ownNumberNotPortedOut = NumberPortabilityStatus_ownNumberNotPortedOut; /* SHORT_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary NumberPortabilityStatus_foreignNumberPortedIn
@@ -154,7 +154,7 @@ const ownNumberNotPortedOut: NumberPortabilityStatus = NumberPortabilityStatus_o
  * @type {number}
  */
 export
-const NumberPortabilityStatus_foreignNumberPortedIn: NumberPortabilityStatus = 5; /* LONG_NAMED_ENUMERATED_VALUE */
+const NumberPortabilityStatus_foreignNumberPortedIn: _enum_for_NumberPortabilityStatus.foreignNumberPortedIn = _enum_for_NumberPortabilityStatus.foreignNumberPortedIn; /* LONG_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary foreignNumberPortedIn
@@ -167,7 +167,7 @@ const NumberPortabilityStatus_foreignNumberPortedIn: NumberPortabilityStatus = 5
  * @type {number}
  */
 export
-const foreignNumberPortedIn: NumberPortabilityStatus = NumberPortabilityStatus_foreignNumberPortedIn; /* SHORT_NAMED_ENUMERATED_VALUE */
+const foreignNumberPortedIn: _enum_for_NumberPortabilityStatus.foreignNumberPortedIn = NumberPortabilityStatus_foreignNumberPortedIn; /* SHORT_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary Decodes an ASN.1 element into a(n) NumberPortabilityStatus
@@ -175,7 +175,7 @@ const foreignNumberPortedIn: NumberPortabilityStatus = NumberPortabilityStatus_f
  * @param el The element being decoded.
  * @returns The decoded data structure.
  */
-export const _decode_NumberPortabilityStatus = $._decodeEnumerated;
+export const _decode_NumberPortabilityStatus: $.ASN1Decoder<number> = $._decodeEnumerated;
 
 /**
  * @summary Encodes a(n) NumberPortabilityStatus into an ASN.1 Element.
@@ -184,7 +184,7 @@ export const _decode_NumberPortabilityStatus = $._decodeEnumerated;
  * @param elGetter A function that can be used to get new ASN.1 elements.
  * @returns {_Element} The NumberPortabilityStatus, encoded as an ASN.1 Element.
  */
-export const _encode_NumberPortabilityStatus = $._encodeEnumerated;
+export const _encode_NumberPortabilityStatus: $.ASN1Encoder<number> = $._encodeEnumerated;
 
 
 /* eslint-enable */

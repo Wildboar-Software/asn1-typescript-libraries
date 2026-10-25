@@ -1,7 +1,7 @@
 /* eslint-disable */
 import {
-    ASN1Element as _Element,
-    OCTET_STRING,
+    type ASN1Element as _Element,
+    type OCTET_STRING,
     ASN1SizeError
 } from "@wildboar/asn1";
 import * as $ from "@wildboar/asn1/functional";
@@ -36,7 +36,7 @@ export const _decode_PkgdName = (el: _Element): PkgdName => {
     }
     return value;
 };
-export const _encode_PkgdName = $._encodeOctetString;
+export const _encode_PkgdName: $.ASN1Encoder<OCTET_STRING> = $._encodeOctetString;
 
 
 /* eslint-enable */

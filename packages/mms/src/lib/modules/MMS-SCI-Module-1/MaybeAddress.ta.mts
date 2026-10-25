@@ -1,7 +1,7 @@
 /* eslint-disable */
 import {
-    OPTIONAL,
-    ASN1Element as _Element,
+    type OPTIONAL,
+    type ASN1Element as _Element,
     ASN1TagClass as _TagClass,
     ASN1Construction as _Construction,
     ASN1UniversalType as _UniversalType,
@@ -11,7 +11,7 @@ import {
     ASN1ConstructionError as _ConstructionError,
 } from "@wildboar/asn1";
 import * as $ from "@wildboar/asn1/functional";
-import { Address, _decode_Address, _encode_Address } from "../MMS-Object-Module-1/Address.ta.mjs";
+import { type Address, _decode_Address, _encode_Address } from "../MMS-Object-Module-1/Address.ta.mjs";
 
 
 /**
@@ -36,19 +36,23 @@ import { Address, _decode_Address, _encode_Address } from "../MMS-Object-Module-
  */
 export
 class MaybeAddress {
+    /**
+     * @summary `address`.
+     * @description
+     *
+     * Unnamed-variable or public address. ISO 9506-1:2003 §14.1.2.1; ISO
+     * 9506-2:2003 Annex B.
+     *
+     * @public
+     * @readonly
+     */
+    public readonly address?: OPTIONAL<Address>;
+
     constructor (
-        /**
-         * @summary `address`.
-         * @description
-         *
-         * Unnamed-variable or public address. ISO 9506-1:2003 §14.1.2.1; ISO
-         * 9506-2:2003 Annex B.
-         *
-         * @public
-         * @readonly
-         */
-        readonly address?: OPTIONAL<Address>
-    ) {}
+        address?: OPTIONAL<Address>
+    ) {
+        this.address = address;
+    }
 
     /**
      * @summary Restructures an object into a MaybeAddress

@@ -1,7 +1,7 @@
 /* eslint-disable */
 import {
-    OPTIONAL,
-    ASN1Element as _Element,
+    type OPTIONAL,
+    type ASN1Element as _Element,
     ASN1TagClass as _TagClass
 } from "@wildboar/asn1";
 import * as $ from "@wildboar/asn1/functional";
@@ -82,7 +82,7 @@ class ManageTriggerDataResultArg {
          * @static
          */
 
-    public static _enum_for_actionPerformed = _enum_for_ActionPerformed;
+    public static _enum_for_actionPerformed: typeof _enum_for_ActionPerformed = _enum_for_ActionPerformed;
 }
 
 /**

@@ -1,6 +1,6 @@
 /* eslint-disable */
 import {
-  OPTIONAL,
+  type OPTIONAL,
   ASN1Element as _Element,
   ASN1TagClass as _TagClass,
   ASN1Construction as _Construction,
@@ -12,7 +12,7 @@ import {
 } from '@wildboar/asn1';
 import * as $ from '@wildboar/asn1/functional';
 import {
-  TicketFlags,
+  type TicketFlags,
   _decode_TicketFlags,
   _encode_TicketFlags,
 } from '../KerberosV5Spec2/TicketFlags.ta.mjs';
@@ -22,7 +22,7 @@ import {
   _encode_EncryptionKey,
 } from '../KerberosV5Spec2/EncryptionKey.ta.mjs';
 import {
-  Realm,
+  type Realm,
   _decode_Realm,
   _encode_Realm,
 } from '../KerberosV5Spec2/Realm.ta.mjs';
@@ -37,17 +37,17 @@ import {
   _encode_TransitedEncoding,
 } from '../KerberosV5Spec2/TransitedEncoding.ta.mjs';
 import {
-  KerberosTime,
+  type KerberosTime,
   _decode_KerberosTime,
   _encode_KerberosTime,
 } from '../KerberosV5Spec2/KerberosTime.ta.mjs';
 import {
-  HostAddresses,
+  type HostAddresses,
   _decode_HostAddresses,
   _encode_HostAddresses,
 } from '../KerberosV5Spec2/HostAddresses.ta.mjs';
 import {
-  AuthorizationData,
+  type AuthorizationData,
   _decode_AuthorizationData,
   _encode_AuthorizationData,
 } from '../KerberosV5Spec2/AuthorizationData.ta.mjs';
@@ -92,7 +92,7 @@ export class EncTicketPart {
    * @public
    * @readonly
    */
-  readonly flags: TicketFlags;
+  public readonly flags: TicketFlags;
   /**
    * @summary `key`.
    * @description
@@ -103,7 +103,7 @@ export class EncTicketPart {
    * @public
    * @readonly
    */
-  readonly key: EncryptionKey;
+  public readonly key: EncryptionKey;
   /**
    * @summary `crealm`.
    * @description
@@ -114,7 +114,7 @@ export class EncTicketPart {
    * @public
    * @readonly
    */
-  readonly crealm: Realm;
+  public readonly crealm: Realm;
   /**
    * @summary `cname`.
    * @description
@@ -124,7 +124,7 @@ export class EncTicketPart {
    * @public
    * @readonly
    */
-  readonly cname: PrincipalName;
+  public readonly cname: PrincipalName;
   /**
    * @summary `transited`.
    * @description
@@ -136,7 +136,7 @@ export class EncTicketPart {
    * @public
    * @readonly
    */
-  readonly transited: TransitedEncoding;
+  public readonly transited: TransitedEncoding;
   /**
    * @summary `authtime`.
    * @description
@@ -147,7 +147,7 @@ export class EncTicketPart {
    * @public
    * @readonly
    */
-  readonly authtime: KerberosTime;
+  public readonly authtime: KerberosTime;
   /**
    * @summary `starttime`.
    * @description
@@ -158,7 +158,7 @@ export class EncTicketPart {
    * @public
    * @readonly
    */
-  readonly starttime: OPTIONAL<KerberosTime>;
+  public readonly starttime: OPTIONAL<KerberosTime>;
   /**
    * @summary `endtime`.
    * @description
@@ -169,7 +169,7 @@ export class EncTicketPart {
    * @public
    * @readonly
    */
-  readonly endtime: KerberosTime;
+  public readonly endtime: KerberosTime;
   /**
    * @summary `renew_till`.
    * @description
@@ -180,7 +180,7 @@ export class EncTicketPart {
    * @public
    * @readonly
    */
-  readonly renew_till?: OPTIONAL<KerberosTime>;
+  public readonly renew_till?: OPTIONAL<KerberosTime>;
   /**
    * @summary `caddr`.
    * @description
@@ -192,7 +192,7 @@ export class EncTicketPart {
    * @public
    * @readonly
    */
-  readonly caddr?: OPTIONAL<HostAddresses>;
+  public readonly caddr?: OPTIONAL<HostAddresses>;
   /**
    * @summary `authorization_data`.
    * @description
@@ -205,7 +205,7 @@ export class EncTicketPart {
    * @public
    * @readonly
    */
-  readonly authorization_data?: OPTIONAL<AuthorizationData>;
+  public readonly authorization_data?: OPTIONAL<AuthorizationData>;
 
   constructor(
     flags: TicketFlags,

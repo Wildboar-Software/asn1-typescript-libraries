@@ -1,12 +1,12 @@
 /* eslint-disable */
 import {
-    ASN1Element as _Element,
+    type ASN1Element as _Element,
     ASN1TagClass as _TagClass,
-    OPTIONAL,
+    type OPTIONAL,
 } from "@wildboar/asn1";
 import * as $ from "@wildboar/asn1/functional";
 import {
-    Certificate,
+    type Certificate,
     _decode_Certificate,
     _encode_Certificate,
 } from "../AuthenticationFramework/Certificate.ta.mjs";
@@ -32,26 +32,34 @@ import {
  *
  */
 export class CertificatePair {
+    /**
+     * @summary `issuedToThisCA`.
+     * @public
+     * @readonly
+     */
+    public readonly issuedToThisCA?: OPTIONAL<Certificate>;
+    /**
+     * @summary `issuedByThisCA`.
+     * @public
+     * @readonly
+     */
+    public readonly issuedByThisCA?: OPTIONAL<Certificate>;
+    /**
+     * @summary Extensions that are not recognized.
+     * @public
+     * @readonly
+     */
+    public readonly _unrecognizedExtensionsList: _Element[];
+
     constructor(
-        /**
-         * @summary `issuedToThisCA`.
-         * @public
-         * @readonly
-         */
-        readonly issuedToThisCA?: OPTIONAL<Certificate>,
-        /**
-         * @summary `issuedByThisCA`.
-         * @public
-         * @readonly
-         */
-        readonly issuedByThisCA?: OPTIONAL<Certificate>,
-        /**
-         * @summary Extensions that are not recognized.
-         * @public
-         * @readonly
-         */
-        readonly _unrecognizedExtensionsList: _Element[] = []
-    ) {}
+        issuedToThisCA?: OPTIONAL<Certificate>,
+        issuedByThisCA?: OPTIONAL<Certificate>,
+        _unrecognizedExtensionsList: _Element[] = []
+    ) {
+        this.issuedToThisCA = issuedToThisCA;
+        this.issuedByThisCA = issuedByThisCA;
+        this._unrecognizedExtensionsList = _unrecognizedExtensionsList;
+    }
 
     /**
      * @summary Restructures an object into a CertificatePair

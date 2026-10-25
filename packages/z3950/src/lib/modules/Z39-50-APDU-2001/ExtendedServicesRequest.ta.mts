@@ -1,20 +1,20 @@
 /* eslint-disable */
 import {
-    EXTERNAL,
-    OBJECT_IDENTIFIER,
-    OPTIONAL,
-    ASN1Element as _Element,
+    type EXTERNAL,
+    type OBJECT_IDENTIFIER,
+    type OPTIONAL,
+    type ASN1Element as _Element,
     ASN1TagClass as _TagClass
 } from "@wildboar/asn1";
 import * as $ from "@wildboar/asn1/functional";
-import { ReferenceId, _decode_ReferenceId, _encode_ReferenceId } from "../Z39-50-APDU-2001/ReferenceId.ta.mjs";
-import { ExtendedServicesRequest_function, _decode_ExtendedServicesRequest_function, _encode_ExtendedServicesRequest_function } from "../Z39-50-APDU-2001/ExtendedServicesRequest-function.ta.mjs";
-import { InternationalString, _decode_InternationalString, _encode_InternationalString } from "../Z39-50-APDU-2001/InternationalString.ta.mjs";
+import { type ReferenceId, _decode_ReferenceId, _encode_ReferenceId } from "../Z39-50-APDU-2001/ReferenceId.ta.mjs";
+import { type ExtendedServicesRequest_function, _decode_ExtendedServicesRequest_function, _encode_ExtendedServicesRequest_function } from "../Z39-50-APDU-2001/ExtendedServicesRequest-function.ta.mjs";
+import { type InternationalString, _decode_InternationalString, _encode_InternationalString } from "../Z39-50-APDU-2001/InternationalString.ta.mjs";
 import { IntUnit, _decode_IntUnit, _encode_IntUnit } from "../Z39-50-APDU-2001/IntUnit.ta.mjs";
-import { Permissions, _decode_Permissions, _encode_Permissions } from "../Z39-50-APDU-2001/Permissions.ta.mjs";
-import { ExtendedServicesRequest_waitAction, _decode_ExtendedServicesRequest_waitAction, _encode_ExtendedServicesRequest_waitAction } from "../Z39-50-APDU-2001/ExtendedServicesRequest-waitAction.ta.mjs";
-import { ElementSetName, _decode_ElementSetName, _encode_ElementSetName } from "../Z39-50-APDU-2001/ElementSetName.ta.mjs";
-import { OtherInformation, _decode_OtherInformation, _encode_OtherInformation } from "../Z39-50-APDU-2001/OtherInformation.ta.mjs";
+import { type Permissions, _decode_Permissions, _encode_Permissions } from "../Z39-50-APDU-2001/Permissions.ta.mjs";
+import { type ExtendedServicesRequest_waitAction, _decode_ExtendedServicesRequest_waitAction, _encode_ExtendedServicesRequest_waitAction } from "../Z39-50-APDU-2001/ExtendedServicesRequest-waitAction.ta.mjs";
+import { type ElementSetName, _decode_ElementSetName, _encode_ElementSetName } from "../Z39-50-APDU-2001/ElementSetName.ta.mjs";
+import { type OtherInformation, _decode_OtherInformation, _encode_OtherInformation } from "../Z39-50-APDU-2001/OtherInformation.ta.mjs";
 
 
 /**

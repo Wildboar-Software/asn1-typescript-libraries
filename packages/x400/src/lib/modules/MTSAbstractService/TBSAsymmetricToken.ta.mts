@@ -1,7 +1,7 @@
 /* eslint-disable */
 import {
-    OPTIONAL,
-    ASN1Element as _Element,
+    type OPTIONAL,
+    type ASN1Element as _Element,
     ASN1TagClass as _TagClass,
     ASN1Construction as _Construction,
     ASN1UniversalType as _UniversalType,
@@ -17,12 +17,12 @@ import {
     _encode_AlgorithmIdentifier,
 } from '@wildboar/x500/AuthenticationFramework';
 import {
-    TBSAsymmetricToken_name,
+    type TBSAsymmetricToken_name,
     _decode_TBSAsymmetricToken_name,
     _encode_TBSAsymmetricToken_name,
 } from '../MTSAbstractService/TBSAsymmetricToken-name.ta.mjs';
 import {
-    Time,
+    type Time,
     _decode_Time,
     _encode_Time,
 } from '../MTSAbstractService/Time.ta.mjs';
@@ -32,7 +32,7 @@ import {
     _encode_TokenData,
 } from '../MTSAbstractService/TokenData.ta.mjs';
 import {
-    ENCRYPTED,
+    type ENCRYPTED,
     _get_decoder_for_ENCRYPTED,
     _get_encoder_for_ENCRYPTED,
 } from '@wildboar/x500/AuthenticationFramework';
@@ -59,44 +59,58 @@ import {
  *
  */
 export class TBSAsymmetricToken {
+    /**
+     * @summary `signature_algorithm_identifier`.
+     * @public
+     * @readonly
+     */
+    public readonly signature_algorithm_identifier: AlgorithmIdentifier;
+    /**
+     * @summary `name`.
+     * @public
+     * @readonly
+     */
+    public readonly name: TBSAsymmetricToken_name;
+    /**
+     * @summary `time`.
+     * @public
+     * @readonly
+     */
+    public readonly time: Time;
+    /**
+     * @summary `signed_data`.
+     * @public
+     * @readonly
+     */
+    public readonly signed_data?: OPTIONAL<TokenData>;
+    /**
+     * @summary `encryption_algorithm_identifier`.
+     * @public
+     * @readonly
+     */
+    public readonly encryption_algorithm_identifier?: OPTIONAL<AlgorithmIdentifier>;
+    /**
+     * @summary `encrypted_data`.
+     * @public
+     * @readonly
+     */
+    public readonly encrypted_data?: OPTIONAL<ENCRYPTED<TokenData>>;
+
     constructor(
-        /**
-         * @summary `signature_algorithm_identifier`.
-         * @public
-         * @readonly
-         */
-        readonly signature_algorithm_identifier: AlgorithmIdentifier,
-        /**
-         * @summary `name`.
-         * @public
-         * @readonly
-         */
-        readonly name: TBSAsymmetricToken_name,
-        /**
-         * @summary `time`.
-         * @public
-         * @readonly
-         */
-        readonly time: Time,
-        /**
-         * @summary `signed_data`.
-         * @public
-         * @readonly
-         */
-        readonly signed_data?: OPTIONAL<TokenData>,
-        /**
-         * @summary `encryption_algorithm_identifier`.
-         * @public
-         * @readonly
-         */
-        readonly encryption_algorithm_identifier?: OPTIONAL<AlgorithmIdentifier>,
-        /**
-         * @summary `encrypted_data`.
-         * @public
-         * @readonly
-         */
-        readonly encrypted_data?: OPTIONAL<ENCRYPTED<TokenData>>
-    ) {}
+        signature_algorithm_identifier: AlgorithmIdentifier,
+        name: TBSAsymmetricToken_name,
+        time: Time,
+        signed_data?: OPTIONAL<TokenData>,
+        encryption_algorithm_identifier?: OPTIONAL<AlgorithmIdentifier>,
+        encrypted_data?: OPTIONAL<ENCRYPTED<TokenData>>
+    ) {
+        this.signature_algorithm_identifier = signature_algorithm_identifier;
+        this.name = name;
+        this.time = time;
+        this.signed_data = signed_data;
+        this.encryption_algorithm_identifier = encryption_algorithm_identifier;
+        this.encrypted_data = encrypted_data;
+    }
 
     /**
      * @summary Restructures an object into a TBSAsymmetricToken

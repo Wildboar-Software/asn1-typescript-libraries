@@ -1,6 +1,6 @@
 /* eslint-disable */
 import {
-    ASN1Element as _Element,
+    type ASN1Element as _Element,
     ASN1TagClass as _TagClass,
     ASN1Construction as _Construction,
     ASN1UniversalType as _UniversalType,
@@ -77,7 +77,7 @@ type ReservationStatus = _enum_for_ReservationStatus;
  * @enum {number}
  */
 export
-const ReservationStatus = _enum_for_ReservationStatus;
+const ReservationStatus: typeof _enum_for_ReservationStatus = _enum_for_ReservationStatus;
 
 /**
  * @summary ReservationStatus_uncommitted
@@ -88,7 +88,7 @@ const ReservationStatus = _enum_for_ReservationStatus;
  * @type {number}
  */
 export
-const ReservationStatus_uncommitted: ReservationStatus = ReservationStatus.uncommitted; /* LONG_NAMED_ENUMERATED_VALUE */
+const ReservationStatus_uncommitted: _enum_for_ReservationStatus.uncommitted = ReservationStatus.uncommitted; /* LONG_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary uncommitted
@@ -99,7 +99,7 @@ const ReservationStatus_uncommitted: ReservationStatus = ReservationStatus.uncom
  * @type {number}
  */
 export
-const uncommitted: ReservationStatus = ReservationStatus.uncommitted; /* SHORT_NAMED_ENUMERATED_VALUE */
+const uncommitted: _enum_for_ReservationStatus.uncommitted = ReservationStatus.uncommitted; /* SHORT_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary ReservationStatus_committed
@@ -111,7 +111,7 @@ const uncommitted: ReservationStatus = ReservationStatus.uncommitted; /* SHORT_N
  * @type {number}
  */
 export
-const ReservationStatus_committed: ReservationStatus = ReservationStatus.committed; /* LONG_NAMED_ENUMERATED_VALUE */
+const ReservationStatus_committed: _enum_for_ReservationStatus.committed = ReservationStatus.committed; /* LONG_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary committed
@@ -123,9 +123,20 @@ const ReservationStatus_committed: ReservationStatus = ReservationStatus.committ
  * @type {number}
  */
 export
-const committed: ReservationStatus = ReservationStatus.committed; /* SHORT_NAMED_ENUMERATED_VALUE */
-export const _decode_ReservationStatus = $._decodeEnumerated;
-export const _encode_ReservationStatus = $._encodeEnumerated;
+const committed: _enum_for_ReservationStatus.committed = ReservationStatus.committed; /* SHORT_NAMED_ENUMERATED_VALUE */
+export function _decode_ReservationStatus(el: _Element): ReservationStatus {
+    const enumerated = $._decodeEnumerated(el);
+    switch (enumerated) {
+        case ReservationStatus.uncommitted: return ReservationStatus.uncommitted;
+        case ReservationStatus.committed: return ReservationStatus.committed;
+        default:
+            throw new _ConstructionError(
+                "Invalid ENUMERATED value " + enumerated + " for ReservationStatus.",
+                el,
+            );
+    }
+}
+export const _encode_ReservationStatus: $.ASN1Encoder<ReservationStatus> = $._encodeEnumerated as $.ASN1Encoder<ReservationStatus>;
 
 
 /* eslint-enable */

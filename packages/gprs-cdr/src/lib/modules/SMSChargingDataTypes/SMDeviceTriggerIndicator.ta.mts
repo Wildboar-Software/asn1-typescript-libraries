@@ -84,7 +84,7 @@ type SMDeviceTriggerIndicator = _enum_for_SMDeviceTriggerIndicator;
  * @enum {number}
  */
 export
-const SMDeviceTriggerIndicator = _enum_for_SMDeviceTriggerIndicator;
+const SMDeviceTriggerIndicator: typeof _enum_for_SMDeviceTriggerIndicator = _enum_for_SMDeviceTriggerIndicator;
 
 /**
  * @summary SMDeviceTriggerIndicator_notDeviceTrigger
@@ -97,7 +97,7 @@ const SMDeviceTriggerIndicator = _enum_for_SMDeviceTriggerIndicator;
  * @type {number}
  */
 export
-const SMDeviceTriggerIndicator_notDeviceTrigger: SMDeviceTriggerIndicator = SMDeviceTriggerIndicator.notDeviceTrigger; /* LONG_NAMED_ENUMERATED_VALUE */
+const SMDeviceTriggerIndicator_notDeviceTrigger: _enum_for_SMDeviceTriggerIndicator.notDeviceTrigger = SMDeviceTriggerIndicator.notDeviceTrigger; /* LONG_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary notDeviceTrigger
@@ -105,7 +105,7 @@ const SMDeviceTriggerIndicator_notDeviceTrigger: SMDeviceTriggerIndicator = SMDe
  * @type {number}
  */
 export
-const notDeviceTrigger: SMDeviceTriggerIndicator = SMDeviceTriggerIndicator.notDeviceTrigger; /* SHORT_NAMED_ENUMERATED_VALUE */
+const notDeviceTrigger: _enum_for_SMDeviceTriggerIndicator.notDeviceTrigger = SMDeviceTriggerIndicator.notDeviceTrigger; /* SHORT_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary SMDeviceTriggerIndicator_deviceTriggerRequest
@@ -118,7 +118,7 @@ const notDeviceTrigger: SMDeviceTriggerIndicator = SMDeviceTriggerIndicator.notD
  * @type {number}
  */
 export
-const SMDeviceTriggerIndicator_deviceTriggerRequest: SMDeviceTriggerIndicator = SMDeviceTriggerIndicator.deviceTriggerRequest; /* LONG_NAMED_ENUMERATED_VALUE */
+const SMDeviceTriggerIndicator_deviceTriggerRequest: _enum_for_SMDeviceTriggerIndicator.deviceTriggerRequest = SMDeviceTriggerIndicator.deviceTriggerRequest; /* LONG_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary deviceTriggerRequest
@@ -126,7 +126,7 @@ const SMDeviceTriggerIndicator_deviceTriggerRequest: SMDeviceTriggerIndicator = 
  * @type {number}
  */
 export
-const deviceTriggerRequest: SMDeviceTriggerIndicator = SMDeviceTriggerIndicator.deviceTriggerRequest; /* SHORT_NAMED_ENUMERATED_VALUE */
+const deviceTriggerRequest: _enum_for_SMDeviceTriggerIndicator.deviceTriggerRequest = SMDeviceTriggerIndicator.deviceTriggerRequest; /* SHORT_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary SMDeviceTriggerIndicator_deviceTriggerReplace
@@ -141,7 +141,7 @@ const deviceTriggerRequest: SMDeviceTriggerIndicator = SMDeviceTriggerIndicator.
  * @type {number}
  */
 export
-const SMDeviceTriggerIndicator_deviceTriggerReplace: SMDeviceTriggerIndicator = SMDeviceTriggerIndicator.deviceTriggerReplace; /* LONG_NAMED_ENUMERATED_VALUE */
+const SMDeviceTriggerIndicator_deviceTriggerReplace: _enum_for_SMDeviceTriggerIndicator.deviceTriggerReplace = SMDeviceTriggerIndicator.deviceTriggerReplace; /* LONG_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary deviceTriggerReplace
@@ -149,7 +149,7 @@ const SMDeviceTriggerIndicator_deviceTriggerReplace: SMDeviceTriggerIndicator = 
  * @type {number}
  */
 export
-const deviceTriggerReplace: SMDeviceTriggerIndicator = SMDeviceTriggerIndicator.deviceTriggerReplace; /* SHORT_NAMED_ENUMERATED_VALUE */
+const deviceTriggerReplace: _enum_for_SMDeviceTriggerIndicator.deviceTriggerReplace = SMDeviceTriggerIndicator.deviceTriggerReplace; /* SHORT_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary SMDeviceTriggerIndicator_deviceTriggerRecall
@@ -164,7 +164,7 @@ const deviceTriggerReplace: SMDeviceTriggerIndicator = SMDeviceTriggerIndicator.
  * @type {number}
  */
 export
-const SMDeviceTriggerIndicator_deviceTriggerRecall: SMDeviceTriggerIndicator = SMDeviceTriggerIndicator.deviceTriggerRecall; /* LONG_NAMED_ENUMERATED_VALUE */
+const SMDeviceTriggerIndicator_deviceTriggerRecall: _enum_for_SMDeviceTriggerIndicator.deviceTriggerRecall = SMDeviceTriggerIndicator.deviceTriggerRecall; /* LONG_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary deviceTriggerRecall
@@ -172,7 +172,7 @@ const SMDeviceTriggerIndicator_deviceTriggerRecall: SMDeviceTriggerIndicator = S
  * @type {number}
  */
 export
-const deviceTriggerRecall: SMDeviceTriggerIndicator = SMDeviceTriggerIndicator.deviceTriggerRecall; /* SHORT_NAMED_ENUMERATED_VALUE */
+const deviceTriggerRecall: _enum_for_SMDeviceTriggerIndicator.deviceTriggerRecall = SMDeviceTriggerIndicator.deviceTriggerRecall; /* SHORT_NAMED_ENUMERATED_VALUE */
 
 export
 const _decode_SMDeviceTriggerIndicator: $.ASN1Decoder<SMDeviceTriggerIndicator> = $._decodeEnumerated;

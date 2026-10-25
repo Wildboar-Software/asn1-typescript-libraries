@@ -1,9 +1,9 @@
 /* eslint-disable */
 import {
-    OPTIONAL,
-    BOOLEAN,
-    INTEGER,
-    ASN1Element as _Element,
+    type OPTIONAL,
+    type BOOLEAN,
+    type INTEGER,
+    type ASN1Element as _Element,
     ASN1TagClass as _TagClass,
     ASN1Construction as _Construction,
     ASN1UniversalType as _UniversalType,
@@ -14,14 +14,14 @@ import {
 } from "@wildboar/asn1";
 import * as $ from "@wildboar/asn1/functional";
 import { Access_Control_List_instance, _decode_Access_Control_List_instance, _encode_Access_Control_List_instance } from "../MMS-SCI-Module-1/Access-Control-List-instance.ta.mjs";
-import { EC_Class, _decode_EC_Class, _encode_EC_Class } from "../MMS-Object-Module-1/EC-Class.ta.mjs";
-import { EC_State, _decode_EC_State, _encode_EC_State } from "../MMS-Object-Module-1/EC-State.ta.mjs";
-import { Priority, _decode_Priority, _encode_Priority } from "../MMS-Object-Module-1/Priority.ta.mjs";
-import { Severity, _decode_Severity, _encode_Severity } from "../MMS-Object-Module-1/Severity.ta.mjs";
+import { type EC_Class, _decode_EC_Class, _encode_EC_Class } from "../MMS-Object-Module-1/EC-Class.ta.mjs";
+import { type EC_State, _decode_EC_State, _encode_EC_State } from "../MMS-Object-Module-1/EC-State.ta.mjs";
+import { type Priority, _decode_Priority, _encode_Priority } from "../MMS-Object-Module-1/Priority.ta.mjs";
+import { type Severity, _decode_Severity, _encode_Severity } from "../MMS-Object-Module-1/Severity.ta.mjs";
 import { Event_Enrollment_instance, _decode_Event_Enrollment_instance, _encode_Event_Enrollment_instance } from "../MMS-SCI-Module-1/Event-Enrollment-instance.ta.mjs";
-import { Event_Condition_instance_definition_details_monitoredVariable, _decode_Event_Condition_instance_definition_details_monitoredVariable, _encode_Event_Condition_instance_definition_details_monitoredVariable } from "../MMS-SCI-Module-1/Event-Condition-instance-definition-details-monitoredVariable.ta.mjs";
-import { Event_Condition_instance_definition_details_displayEnhancement, _decode_Event_Condition_instance_definition_details_displayEnhancement, _encode_Event_Condition_instance_definition_details_displayEnhancement } from "../MMS-SCI-Module-1/Event-Condition-instance-definition-details-displayEnhancement.ta.mjs";
-import { Event_Condition_instance_definition_details_group_Priority_Override, _decode_Event_Condition_instance_definition_details_group_Priority_Override, _encode_Event_Condition_instance_definition_details_group_Priority_Override } from "../MMS-SCI-Module-1/Event-Condition-instance-definition-details-group-Priority-Override.ta.mjs";
+import { type Event_Condition_instance_definition_details_monitoredVariable, _decode_Event_Condition_instance_definition_details_monitoredVariable, _encode_Event_Condition_instance_definition_details_monitoredVariable } from "../MMS-SCI-Module-1/Event-Condition-instance-definition-details-monitoredVariable.ta.mjs";
+import { type Event_Condition_instance_definition_details_displayEnhancement, _decode_Event_Condition_instance_definition_details_displayEnhancement, _encode_Event_Condition_instance_definition_details_displayEnhancement } from "../MMS-SCI-Module-1/Event-Condition-instance-definition-details-displayEnhancement.ta.mjs";
+import { type Event_Condition_instance_definition_details_group_Priority_Override, _decode_Event_Condition_instance_definition_details_group_Priority_Override, _encode_Event_Condition_instance_definition_details_group_Priority_Override } from "../MMS-SCI-Module-1/Event-Condition-instance-definition-details-group-Priority-Override.ta.mjs";
 import { Event_Condition_List_instance, _decode_Event_Condition_List_instance, _encode_Event_Condition_List_instance } from "../MMS-SCI-Module-1/Event-Condition-List-instance.ta.mjs";
 
 
@@ -73,150 +73,180 @@ import { Event_Condition_List_instance, _decode_Event_Condition_List_instance, _
  */
 export
 class Event_Condition_instance_definition_details {
+    /**
+     * @summary `accessControl`.
+     * @description
+     *
+     * SCI encoding of the object's ACL (ISO 9506-1:2003 §9). ISO
+     * 9506-2:2003 Annex B.
+     *
+     * @public
+     * @readonly
+     */
+    public readonly accessControl: Access_Control_List_instance;
+    /**
+     * @summary `ecClass`.
+     * @description
+     *
+     * network-triggered or monitored. ISO 9506-1:2003 §19.1.1.3; ISO
+     * 9506-2:2003 Annex B.1.12.
+     *
+     * @public
+     * @readonly
+     */
+    public readonly ecClass: EC_Class;
+    /**
+     * @summary `ecState`.
+     * @description
+     *
+     * disabled, idle, or active. ISO 9506-1:2003 §19.1.1.4; ISO 9506-2:2003
+     * Annex B.1.12.
+     *
+     * @public
+     * @readonly
+     */
+    public readonly ecState: EC_State;
+    /**
+     * @summary `priority`.
+     * @description
+     *
+     * 0..127 (0 highest, 64 normal). ISO 9506-1:2003 §19.1.1.5; ISO
+     * 9506-2:2003 Annex B.
+     *
+     * @public
+     * @readonly
+     */
+    public readonly priority: Priority;
+    /**
+     * @summary `severity`.
+     * @description
+     *
+     * 0..127 (0 most severe, 64 normal). ISO 9506-1:2003 §19.1.1.6; ISO
+     * 9506-2:2003 Annex B.1.12.
+     *
+     * @public
+     * @readonly
+     */
+    public readonly severity: Severity;
+    /**
+     * @summary `eventEnrollments`.
+     * @description
+     *
+     * Configured Event Enrollment instances. ISO 9506-2:2003 Annex B.1.14.
+     *
+     * @public
+     * @readonly
+     */
+    public readonly eventEnrollments: Event_Enrollment_instance[];
+    /**
+     * @summary `enabled`.
+     * @description
+     *
+     * Whether monitored-variable changes are processed. ISO 9506-1:2003
+     * §19.1.1.8; ISO 9506-2:2003 Annex B.1.12.
+     *
+     * @public
+     * @readonly
+     */
+    public readonly enabled: OPTIONAL<BOOLEAN>;
+    /**
+     * @summary `alarmSummaryReports`.
+     * @description
+     *
+     * Include in GetAlarmSummary regardless of state. ISO 9506-1:2003
+     * §19.1.1.9; ISO 9506-2:2003 Annex B.1.12.
+     *
+     * @public
+     * @readonly
+     */
+    public readonly alarmSummaryReports: OPTIONAL<BOOLEAN>;
+    /**
+     * @summary `monitoredVariable`.
+     * @description
+     *
+     * Named, unnamed, or unspecified. ISO 9506-1:2003 §19.1.1.10; ISO
+     * 9506-2:2003 Annex B.1.12.
+     *
+     * @public
+     * @readonly
+     */
+    public readonly monitoredVariable: OPTIONAL<Event_Condition_instance_definition_details_monitoredVariable>;
+    /**
+     * @summary `evaluationInterval`.
+     * @description
+     *
+     * Max ms between &ecState evaluations. ISO 9506-1:2003 §19.1.1.11; ISO
+     * 9506-2:2003 Annex B.1.12.
+     *
+     * @public
+     * @readonly
+     */
+    public readonly evaluationInterval: OPTIONAL<INTEGER>;
+    /**
+     * @summary `displayEnhancement`.
+     * @description
+     *
+     * text / number / none (cspi, des/dei). ISO 9506-2:2003 Annex B.
+     *
+     * @public
+     * @readonly
+     */
+    public readonly displayEnhancement: Event_Condition_instance_definition_details_displayEnhancement;
+    /**
+     * @summary `group_Priority_Override`.
+     * @public
+     * @readonly
+     */
+    public readonly group_Priority_Override: OPTIONAL<Event_Condition_instance_definition_details_group_Priority_Override>;
+    /**
+     * @summary `referencingEventConditionLists`.
+     * @description
+     *
+     * ECLs that include this condition. ISO 9506-1:2003 §19.1.1; ISO
+     * 9506-2:2003 Annex B.1.12.
+     *
+     * @public
+     * @readonly
+     */
+    public readonly referencingEventConditionLists: Event_Condition_List_instance[];
+    /**
+     * @summary Extensions that are not recognized.
+     * @public
+     * @readonly
+     */
+    public readonly _unrecognizedExtensionsList: _Element[];
+
     constructor (
-        /**
-         * @summary `accessControl`.
-         * @description
-         *
-         * SCI encoding of the object's ACL (ISO 9506-1:2003 §9). ISO
-         * 9506-2:2003 Annex B.
-         *
-         * @public
-         * @readonly
-         */
-        readonly accessControl: Access_Control_List_instance,
-        /**
-         * @summary `ecClass`.
-         * @description
-         *
-         * network-triggered or monitored. ISO 9506-1:2003 §19.1.1.3; ISO
-         * 9506-2:2003 Annex B.1.12.
-         *
-         * @public
-         * @readonly
-         */
-        readonly ecClass: EC_Class,
-        /**
-         * @summary `ecState`.
-         * @description
-         *
-         * disabled, idle, or active. ISO 9506-1:2003 §19.1.1.4; ISO 9506-2:2003
-         * Annex B.1.12.
-         *
-         * @public
-         * @readonly
-         */
-        readonly ecState: EC_State,
-        /**
-         * @summary `priority`.
-         * @description
-         *
-         * 0..127 (0 highest, 64 normal). ISO 9506-1:2003 §19.1.1.5; ISO
-         * 9506-2:2003 Annex B.
-         *
-         * @public
-         * @readonly
-         */
-        readonly priority: Priority,
-        /**
-         * @summary `severity`.
-         * @description
-         *
-         * 0..127 (0 most severe, 64 normal). ISO 9506-1:2003 §19.1.1.6; ISO
-         * 9506-2:2003 Annex B.1.12.
-         *
-         * @public
-         * @readonly
-         */
-        readonly severity: Severity,
-        /**
-         * @summary `eventEnrollments`.
-         * @description
-         *
-         * Configured Event Enrollment instances. ISO 9506-2:2003 Annex B.1.14.
-         *
-         * @public
-         * @readonly
-         */
-        readonly eventEnrollments: Event_Enrollment_instance[],
-        /**
-         * @summary `enabled`.
-         * @description
-         *
-         * Whether monitored-variable changes are processed. ISO 9506-1:2003
-         * §19.1.1.8; ISO 9506-2:2003 Annex B.1.12.
-         *
-         * @public
-         * @readonly
-         */
-        readonly enabled: OPTIONAL<BOOLEAN>,
-        /**
-         * @summary `alarmSummaryReports`.
-         * @description
-         *
-         * Include in GetAlarmSummary regardless of state. ISO 9506-1:2003
-         * §19.1.1.9; ISO 9506-2:2003 Annex B.1.12.
-         *
-         * @public
-         * @readonly
-         */
-        readonly alarmSummaryReports: OPTIONAL<BOOLEAN>,
-        /**
-         * @summary `monitoredVariable`.
-         * @description
-         *
-         * Named, unnamed, or unspecified. ISO 9506-1:2003 §19.1.1.10; ISO
-         * 9506-2:2003 Annex B.1.12.
-         *
-         * @public
-         * @readonly
-         */
-        readonly monitoredVariable: OPTIONAL<Event_Condition_instance_definition_details_monitoredVariable>,
-        /**
-         * @summary `evaluationInterval`.
-         * @description
-         *
-         * Max ms between &ecState evaluations. ISO 9506-1:2003 §19.1.1.11; ISO
-         * 9506-2:2003 Annex B.1.12.
-         *
-         * @public
-         * @readonly
-         */
-        readonly evaluationInterval: OPTIONAL<INTEGER>,
-        /**
-         * @summary `displayEnhancement`.
-         * @description
-         *
-         * text / number / none (cspi, des/dei). ISO 9506-2:2003 Annex B.
-         *
-         * @public
-         * @readonly
-         */
-        readonly displayEnhancement: Event_Condition_instance_definition_details_displayEnhancement,
-        /**
-         * @summary `group_Priority_Override`.
-         * @public
-         * @readonly
-         */
-        readonly group_Priority_Override: OPTIONAL<Event_Condition_instance_definition_details_group_Priority_Override>,
-        /**
-         * @summary `referencingEventConditionLists`.
-         * @description
-         *
-         * ECLs that include this condition. ISO 9506-1:2003 §19.1.1; ISO
-         * 9506-2:2003 Annex B.1.12.
-         *
-         * @public
-         * @readonly
-         */
-        readonly referencingEventConditionLists: Event_Condition_List_instance[],
-        /**
-         * @summary Extensions that are not recognized.
-         * @public
-         * @readonly
-         */
-        readonly _unrecognizedExtensionsList: _Element[] = []
-    ) {}
+        accessControl: Access_Control_List_instance,
+        ecClass: EC_Class,
+        ecState: EC_State,
+        priority: Priority,
+        severity: Severity,
+        eventEnrollments: Event_Enrollment_instance[],
+        enabled: OPTIONAL<BOOLEAN>,
+        alarmSummaryReports: OPTIONAL<BOOLEAN>,
+        monitoredVariable: OPTIONAL<Event_Condition_instance_definition_details_monitoredVariable>,
+        evaluationInterval: OPTIONAL<INTEGER>,
+        displayEnhancement: Event_Condition_instance_definition_details_displayEnhancement,
+        group_Priority_Override: OPTIONAL<Event_Condition_instance_definition_details_group_Priority_Override>,
+        referencingEventConditionLists: Event_Condition_List_instance[],
+        _unrecognizedExtensionsList: _Element[] = []
+    ) {
+        this.accessControl = accessControl;
+        this.ecClass = ecClass;
+        this.ecState = ecState;
+        this.priority = priority;
+        this.severity = severity;
+        this.eventEnrollments = eventEnrollments;
+        this.enabled = enabled;
+        this.alarmSummaryReports = alarmSummaryReports;
+        this.monitoredVariable = monitoredVariable;
+        this.evaluationInterval = evaluationInterval;
+        this.displayEnhancement = displayEnhancement;
+        this.group_Priority_Override = group_Priority_Override;
+        this.referencingEventConditionLists = referencingEventConditionLists;
+        this._unrecognizedExtensionsList = _unrecognizedExtensionsList;
+    }
 
     /**
      * @summary Restructures an object into a Event_Condition_instance_definition_details

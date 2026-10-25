@@ -1,14 +1,14 @@
 /* eslint-disable */
 import {
-    INTEGER,
-    OPTIONAL,
-    ASN1Element as _Element,
+    type INTEGER,
+    type OPTIONAL,
+    type ASN1Element as _Element,
     ASN1TagClass as _TagClass,
     ASN1OverflowError
 } from "@wildboar/asn1";
 import * as $ from "@wildboar/asn1/functional";
-import { MId, _decode_MId, _encode_MId } from "../MEDIA-GATEWAY-CONTROL/MId.ta.mjs";
-import { ServiceChangeAddress, _decode_ServiceChangeAddress, _encode_ServiceChangeAddress } from "../MEDIA-GATEWAY-CONTROL/ServiceChangeAddress.ta.mjs";
+import { type MId, _decode_MId, _encode_MId } from "../MEDIA-GATEWAY-CONTROL/MId.ta.mjs";
+import { type ServiceChangeAddress, _decode_ServiceChangeAddress, _encode_ServiceChangeAddress } from "../MEDIA-GATEWAY-CONTROL/ServiceChangeAddress.ta.mjs";
 import { ServiceChangeProfile, _decode_ServiceChangeProfile, _encode_ServiceChangeProfile } from "../MEDIA-GATEWAY-CONTROL/ServiceChangeProfile.ta.mjs";
 import { TimeNotation, _decode_TimeNotation, _encode_TimeNotation } from "../MEDIA-GATEWAY-CONTROL/TimeNotation.ta.mjs";
 
@@ -56,7 +56,7 @@ class ServiceChangeResParm {
      * @public
      * @readonly
      */
-    readonly serviceChangeMgcId?: OPTIONAL<MId>;
+    public readonly serviceChangeMgcId?: OPTIONAL<MId>;
     /**
      * @summary `serviceChangeAddress`.
      * @description
@@ -67,7 +67,7 @@ class ServiceChangeResParm {
      * @public
      * @readonly
      */
-    readonly serviceChangeAddress?: OPTIONAL<ServiceChangeAddress>;
+    public readonly serviceChangeAddress?: OPTIONAL<ServiceChangeAddress>;
     /**
      * @summary `serviceChangeVersion`.
      * @description
@@ -79,7 +79,7 @@ class ServiceChangeResParm {
      * @public
      * @readonly
      */
-    readonly serviceChangeVersion?: OPTIONAL<INTEGER>;
+    public readonly serviceChangeVersion?: OPTIONAL<INTEGER>;
     /**
      * @summary `serviceChangeProfile`.
      * @description
@@ -91,7 +91,7 @@ class ServiceChangeResParm {
      * @public
      * @readonly
      */
-    readonly serviceChangeProfile?: OPTIONAL<ServiceChangeProfile>;
+    public readonly serviceChangeProfile?: OPTIONAL<ServiceChangeProfile>;
     /**
      * @summary `timestamp`.
      * @description
@@ -102,7 +102,7 @@ class ServiceChangeResParm {
      * @public
      * @readonly
      */
-    readonly timestamp?: OPTIONAL<TimeNotation>;
+    public readonly timestamp?: OPTIONAL<TimeNotation>;
     /**
      * @summary Extensions that are not recognized.
      * @description
@@ -113,7 +113,7 @@ class ServiceChangeResParm {
      * @public
      * @readonly
      */
-    readonly _unrecognizedExtensionsList: _Element[];
+    public readonly _unrecognizedExtensionsList: _Element[];
 
     constructor (
         serviceChangeMgcId?: OPTIONAL<MId>,

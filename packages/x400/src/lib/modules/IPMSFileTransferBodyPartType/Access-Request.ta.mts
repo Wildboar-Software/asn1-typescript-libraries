@@ -1,7 +1,7 @@
 /* eslint-disable */
 import {
-    BIT_STRING,
-    ASN1Element as _Element,
+    type BIT_STRING,
+    type ASN1Element as _Element,
     ASN1TagClass as _TagClass,
     ASN1Construction as _Construction,
     ASN1UniversalType as _UniversalType,
@@ -125,10 +125,10 @@ export const Access_Request_delete_object: number = 7; /* LONG_NAMED_BIT */
 export const delete_object: number = Access_Request_delete_object; /* SHORT_NAMED_BIT */
 
 
-export const _decode_Access_Request = $._decodeBitString;
+export const _decode_Access_Request: $.ASN1Decoder<BIT_STRING> = $._decodeBitString;
 
 
-export const _encode_Access_Request = $._encodeBitString;
+export const _encode_Access_Request: $.ASN1Encoder<BIT_STRING> = $._encodeBitString;
 
 
 /* eslint-enable */

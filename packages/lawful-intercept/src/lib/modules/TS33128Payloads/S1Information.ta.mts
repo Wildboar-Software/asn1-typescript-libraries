@@ -1,22 +1,22 @@
 /* eslint-disable */
 import {
-    BOOLEAN,
-    OPTIONAL,
-    ASN1Element as _Element,
+    type BOOLEAN,
+    type OPTIONAL,
+    type ASN1Element as _Element,
     ASN1TagClass as _TagClass
 } from "@wildboar/asn1";
 import * as $ from "@wildboar/asn1/functional";
 import { GlobalRANNodeID, _decode_GlobalRANNodeID, _encode_GlobalRANNodeID } from "../TS33128Payloads/GlobalRANNodeID.ta.mjs";
 // export { GlobalRANNodeID, _decode_GlobalRANNodeID, _encode_GlobalRANNodeID } from "../TS33128Payloads/GlobalRANNodeID.ta.mjs";
-import { RANNodeName, _decode_RANNodeName, _encode_RANNodeName } from "../TS33128Payloads/RANNodeName.ta.mjs";
+import { type RANNodeName, _decode_RANNodeName, _encode_RANNodeName } from "../TS33128Payloads/RANNodeName.ta.mjs";
 // export { RANNodeName, _decode_RANNodeName, _encode_RANNodeName } from "../TS33128Payloads/RANNodeName.ta.mjs";
-import { SupportedTAList, _decode_SupportedTAList, _encode_SupportedTAList } from "../TS33128Payloads/SupportedTAList.ta.mjs";
+import { type SupportedTAList, _decode_SupportedTAList, _encode_SupportedTAList } from "../TS33128Payloads/SupportedTAList.ta.mjs";
 // export { SupportedTAList, _decode_SupportedTAList, _encode_SupportedTAList } from "../TS33128Payloads/SupportedTAList.ta.mjs";
-import { CSGIDList, _decode_CSGIDList, _encode_CSGIDList } from "../TS33128Payloads/CSGIDList.ta.mjs";
+import { type CSGIDList, _decode_CSGIDList, _encode_CSGIDList } from "../TS33128Payloads/CSGIDList.ta.mjs";
 // export { CSGIDList, _decode_CSGIDList, _encode_CSGIDList } from "../TS33128Payloads/CSGIDList.ta.mjs";
-import { ConnectedENGNBList, _decode_ConnectedENGNBList, _encode_ConnectedENGNBList } from "../TS33128Payloads/ConnectedENGNBList.ta.mjs";
+import { type ConnectedENGNBList, _decode_ConnectedENGNBList, _encode_ConnectedENGNBList } from "../TS33128Payloads/ConnectedENGNBList.ta.mjs";
 // export { ConnectedENGNBList, _decode_ConnectedENGNBList, _encode_ConnectedENGNBList } from "../TS33128Payloads/ConnectedENGNBList.ta.mjs";
-import { MMEServedGUMMEIList, _decode_MMEServedGUMMEIList, _encode_MMEServedGUMMEIList } from "../TS33128Payloads/MMEServedGUMMEIList.ta.mjs";
+import { type MMEServedGUMMEIList, _decode_MMEServedGUMMEIList, _encode_MMEServedGUMMEIList } from "../TS33128Payloads/MMEServedGUMMEIList.ta.mjs";
 // export { MMEServedGUMMEIList, _decode_MMEServedGUMMEIList, _encode_MMEServedGUMMEIList } from "../TS33128Payloads/MMEServedGUMMEIList.ta.mjs";
 
 

@@ -1,7 +1,7 @@
 /* eslint-disable */
 import {
-    INTEGER,
-    ASN1Element as _Element,
+    type INTEGER,
+    type ASN1Element as _Element,
     ASN1TagClass as _TagClass,
     ASN1Construction as _Construction,
     ASN1UniversalType as _UniversalType,
@@ -11,7 +11,7 @@ import {
     ASN1ConstructionError as _ConstructionError,
 } from "@wildboar/asn1";
 import * as $ from "@wildboar/asn1/functional";
-import { DistributionIntegerReal, _decode_DistributionIntegerReal, _encode_DistributionIntegerReal } from "../MachineReadableBiometricTestingAndReportingTestReport/DistributionIntegerReal.ta.mjs";
+import { type DistributionIntegerReal, _decode_DistributionIntegerReal, _encode_DistributionIntegerReal } from "../MachineReadableBiometricTestingAndReportingTestReport/DistributionIntegerReal.ta.mjs";
 
 
 /**
@@ -37,41 +37,49 @@ import { DistributionIntegerReal, _decode_DistributionIntegerReal, _encode_Distr
  */
 export
 class InfoCumulativeDistribution {
+    /**
+     * @summary `mean`.
+     * @description
+     *
+     * Mean over all `xValue`s in `cumulativeDistribution`
+     * (Clause 6.4.4.2).
+     *
+     * @public
+     * @readonly
+     */
+    public readonly mean: INTEGER;
+    /**
+     * @summary `median`.
+     * @description
+     *
+     * Median over all `xValue`s in `cumulativeDistribution`
+     * (Clause 6.4.4.2).
+     *
+     * @public
+     * @readonly
+     */
+    public readonly median: INTEGER;
+    /**
+     * @summary `cumulativeDistribution`.
+     * @description
+     *
+     * Pairs `(xValue, yValue)`: proportion of values ≤ `xValue` is
+     * `yValue`. Increasing `xValue` order (Clause 6.4.4.2).
+     *
+     * @public
+     * @readonly
+     */
+    public readonly cumulativeDistribution: DistributionIntegerReal;
+
     constructor (
-        /**
-         * @summary `mean`.
-         * @description
-         *
-         * Mean over all `xValue`s in `cumulativeDistribution`
-         * (Clause 6.4.4.2).
-         *
-         * @public
-         * @readonly
-         */
-        readonly mean: INTEGER,
-        /**
-         * @summary `median`.
-         * @description
-         *
-         * Median over all `xValue`s in `cumulativeDistribution`
-         * (Clause 6.4.4.2).
-         *
-         * @public
-         * @readonly
-         */
-        readonly median: INTEGER,
-        /**
-         * @summary `cumulativeDistribution`.
-         * @description
-         *
-         * Pairs `(xValue, yValue)`: proportion of values ≤ `xValue` is
-         * `yValue`. Increasing `xValue` order (Clause 6.4.4.2).
-         *
-         * @public
-         * @readonly
-         */
-        readonly cumulativeDistribution: DistributionIntegerReal
-    ) {}
+        mean: INTEGER,
+        median: INTEGER,
+        cumulativeDistribution: DistributionIntegerReal
+    ) {
+        this.mean = mean;
+        this.median = median;
+        this.cumulativeDistribution = cumulativeDistribution;
+    }
 
     /**
      * @summary Restructures an object into a InfoCumulativeDistribution

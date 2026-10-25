@@ -1,12 +1,12 @@
 /* eslint-disable */
 import {
-    OCTET_STRING,
-    OPTIONAL,
-    ASN1Element as _Element,
+    type OCTET_STRING,
+    type OPTIONAL,
+    type ASN1Element as _Element,
     ASN1TagClass as _TagClass
 } from "@wildboar/asn1";
 import * as $ from "@wildboar/asn1/functional";
-import { Name, _decode_Name, _encode_Name } from "@wildboar/pki-stub";
+import { type Name, _decode_Name, _encode_Name } from "@wildboar/pki-stub";
 import { IssuerAndSerialNumber, _decode_IssuerAndSerialNumber, _encode_IssuerAndSerialNumber } from "@wildboar/cms";
 
 
@@ -56,53 +56,63 @@ import { IssuerAndSerialNumber, _decode_IssuerAndSerialNumber, _encode_IssuerAnd
  */
 export
 class ExternalPrincipalIdentifier {
+    /**
+     * Distinguished name of the certificate subject, a PKIX
+     * `Name` per
+     * [RFC 3280](https://www.rfc-editor.org/rfc/rfc3280).
+     * RFC 4556 requires this when that certificate has a
+     * distinguished subject name. In this module the component
+     * is mandatory: the RFC's `OPTIONAL` survives only inside
+     * an ASN.1 comment.
+     *
+     * [RFC 4556, section 3.2.1](https://www.rfc-editor.org/rfc/rfc4556#section-3.2.1).
+     * @public
+     * @readonly
+     */
+    public readonly subjectName: Name;
+    /**
+     * CMS `IssuerAndSerialNumber` of one certificate of the
+     * subject. RFC 4556 requires it in
+     * {@link TD_INVALID_CERTIFICATES} and
+     * {@link TD_TRUSTED_CERTIFIERS}. In this module the
+     * component is mandatory for every use; the RFC's
+     * `OPTIONAL` survives only inside an ASN.1 comment.
+     *
+     * [RFC 4556, section 3.2.1](https://www.rfc-editor.org/rfc/rfc4556#section-3.2.1).
+     * @public
+     * @readonly
+     */
+    public readonly issuerAndSerialNumber: IssuerAndSerialNumber;
+    /**
+     * Key identifier for the subject's public key. For an X.509
+     * certificate this is the `subjectKeyIdentifier` extension.
+     * Other certificate formats must define the match
+     * themselves. Recommended in
+     * {@link TD_TRUSTED_CERTIFIERS}.
+     *
+     * [RFC 4556, section 3.2.1](https://www.rfc-editor.org/rfc/rfc4556#section-3.2.1).
+     * @public
+     * @readonly
+     */
+    public readonly subjectKeyIdentifier?: OPTIONAL<OCTET_STRING>;
+    /**
+     * @summary Extensions that are not recognized.
+     * @public
+     * @readonly
+     */
+    public readonly _unrecognizedExtensionsList: _Element[];
+
     constructor (
-        /**
-         * Distinguished name of the certificate subject, a PKIX
-         * `Name` per
-         * [RFC 3280](https://www.rfc-editor.org/rfc/rfc3280).
-         * RFC 4556 requires this when that certificate has a
-         * distinguished subject name. In this module the component
-         * is mandatory: the RFC's `OPTIONAL` survives only inside
-         * an ASN.1 comment.
-         *
-         * [RFC 4556, section 3.2.1](https://www.rfc-editor.org/rfc/rfc4556#section-3.2.1).
-         * @public
-         * @readonly
-         */
-        readonly subjectName: Name,
-        /**
-         * CMS `IssuerAndSerialNumber` of one certificate of the
-         * subject. RFC 4556 requires it in
-         * {@link TD_INVALID_CERTIFICATES} and
-         * {@link TD_TRUSTED_CERTIFIERS}. In this module the
-         * component is mandatory for every use; the RFC's
-         * `OPTIONAL` survives only inside an ASN.1 comment.
-         *
-         * [RFC 4556, section 3.2.1](https://www.rfc-editor.org/rfc/rfc4556#section-3.2.1).
-         * @public
-         * @readonly
-         */
-        readonly issuerAndSerialNumber: IssuerAndSerialNumber,
-        /**
-         * Key identifier for the subject's public key. For an X.509
-         * certificate this is the `subjectKeyIdentifier` extension.
-         * Other certificate formats must define the match
-         * themselves. Recommended in
-         * {@link TD_TRUSTED_CERTIFIERS}.
-         *
-         * [RFC 4556, section 3.2.1](https://www.rfc-editor.org/rfc/rfc4556#section-3.2.1).
-         * @public
-         * @readonly
-         */
-        readonly subjectKeyIdentifier?: OPTIONAL<OCTET_STRING>,
-        /**
-         * @summary Extensions that are not recognized.
-         * @public
-         * @readonly
-         */
-        readonly _unrecognizedExtensionsList: _Element[] = []
-    ) {}
+        subjectName: Name,
+        issuerAndSerialNumber: IssuerAndSerialNumber,
+        subjectKeyIdentifier?: OPTIONAL<OCTET_STRING>,
+        _unrecognizedExtensionsList: _Element[] = []
+    ) {
+        this.subjectName = subjectName;
+        this.issuerAndSerialNumber = issuerAndSerialNumber;
+        this.subjectKeyIdentifier = subjectKeyIdentifier;
+        this._unrecognizedExtensionsList = _unrecognizedExtensionsList;
+    }
 
     /**
      * @summary Restructures an object into a ExternalPrincipalIdentifier

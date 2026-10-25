@@ -2,10 +2,10 @@
 
 import * as $ from "@wildboar/asn1/functional";
 import {
-    OPTIONAL,
-    SEQUENCE,
-    SET,
-    ASN1Element as _Element,
+    type OPTIONAL,
+    type SEQUENCE,
+    type SET,
+    type ASN1Element as _Element,
     ASN1TagClass as _TagClass
 } from "@wildboar/asn1";
 import { CallControlEvtsList, _decode_CallControlEvtsList, _encode_CallControlEvtsList } from "../CSTA-capability-exchange/CallControlEvtsList.ta.mjs";
@@ -35,10 +35,10 @@ import { VoiceUnitEvtsList, _decode_VoiceUnitEvtsList, _encode_VoiceUnitEvtsList
  * 
  * ```asn1
  * LogDevEvtsList ::= SEQUENCE
- * {     callControlEvtsList         [0] IMPLICIT CallControlEvtsList         OPTIONAL,
- *     callAssociatedEvtsList         [1] IMPLICIT CallAssociatedEvtsList         OPTIONAL,
- *     logicalEvtsList         [2] IMPLICIT LogicalEvtsList             OPTIONAL,
- *     mediaEvtsList             [3] IMPLICIT MediaEvtsList             OPTIONAL,
+ * {     callControlEvtsList         [0] IMPLICIT CallControlEvtsList         type OPTIONAL,
+ *     callAssociatedEvtsList         [1] IMPLICIT CallAssociatedEvtsList         type OPTIONAL,
+ *     logicalEvtsList         [2] IMPLICIT LogicalEvtsList             type OPTIONAL,
+ *     mediaEvtsList             [3] IMPLICIT MediaEvtsList             type OPTIONAL,
  *     voiceUnitEvtsList         [4] IMPLICIT VoiceUnitEvtsList             OPTIONAL }
  * ```
  * 
@@ -46,53 +46,65 @@ import { VoiceUnitEvtsList, _decode_VoiceUnitEvtsList, _encode_VoiceUnitEvtsList
  */
 export
 class LogDevEvtsList {
+    /**
+     * @summary `callControlEvtsList`.
+     * @public
+     * @readonly
+     * @description
+     * Capability bitmaps for this event category at the logical device;
+     * omit if unsupported (ECMA-269 §13.1.2).
+     */
+    public readonly callControlEvtsList?: OPTIONAL<CallControlEvtsList>;
+    /**
+     * @summary `callAssociatedEvtsList`.
+     * @public
+     * @readonly
+     * @description
+     * Capability bitmaps for this event category at the logical device;
+     * omit if unsupported (ECMA-269 §13.1.2).
+     */
+    public readonly callAssociatedEvtsList?: OPTIONAL<CallAssociatedEvtsList>;
+    /**
+     * @summary `logicalEvtsList`.
+     * @public
+     * @readonly
+     * @description
+     * Capability bitmaps for this event category at the logical device;
+     * omit if unsupported (ECMA-269 §13.1.2).
+     */
+    public readonly logicalEvtsList?: OPTIONAL<LogicalEvtsList>;
+    /**
+     * @summary `mediaEvtsList`.
+     * @public
+     * @readonly
+     * @description
+     * Capability bitmaps for this event category at the logical device;
+     * omit if unsupported (ECMA-269 §13.1.2).
+     */
+    public readonly mediaEvtsList?: OPTIONAL<MediaEvtsList>;
+    /**
+     * @summary `voiceUnitEvtsList`.
+     * @public
+     * @readonly
+     * @description
+     * Capability bitmaps for this event category at the logical device;
+     * omit if unsupported (ECMA-269 §13.1.2).
+     */
+    public readonly voiceUnitEvtsList?: OPTIONAL<VoiceUnitEvtsList>;
+
     constructor (
-        /**
-         * @summary `callControlEvtsList`.
-         * @public
-         * @readonly
-         * @description
-         * Capability bitmaps for this event category at the logical device;
-         * omit if unsupported (ECMA-269 §13.1.2).
-         */
-        readonly callControlEvtsList?: OPTIONAL<CallControlEvtsList>,
-        /**
-         * @summary `callAssociatedEvtsList`.
-         * @public
-         * @readonly
-         * @description
-         * Capability bitmaps for this event category at the logical device;
-         * omit if unsupported (ECMA-269 §13.1.2).
-         */
-        readonly callAssociatedEvtsList?: OPTIONAL<CallAssociatedEvtsList>,
-        /**
-         * @summary `logicalEvtsList`.
-         * @public
-         * @readonly
-         * @description
-         * Capability bitmaps for this event category at the logical device;
-         * omit if unsupported (ECMA-269 §13.1.2).
-         */
-        readonly logicalEvtsList?: OPTIONAL<LogicalEvtsList>,
-        /**
-         * @summary `mediaEvtsList`.
-         * @public
-         * @readonly
-         * @description
-         * Capability bitmaps for this event category at the logical device;
-         * omit if unsupported (ECMA-269 §13.1.2).
-         */
-        readonly mediaEvtsList?: OPTIONAL<MediaEvtsList>,
-        /**
-         * @summary `voiceUnitEvtsList`.
-         * @public
-         * @readonly
-         * @description
-         * Capability bitmaps for this event category at the logical device;
-         * omit if unsupported (ECMA-269 §13.1.2).
-         */
-        readonly voiceUnitEvtsList?: OPTIONAL<VoiceUnitEvtsList>
-    ) {}
+        callControlEvtsList?: OPTIONAL<CallControlEvtsList>,
+        callAssociatedEvtsList?: OPTIONAL<CallAssociatedEvtsList>,
+        logicalEvtsList?: OPTIONAL<LogicalEvtsList>,
+        mediaEvtsList?: OPTIONAL<MediaEvtsList>,
+        voiceUnitEvtsList?: OPTIONAL<VoiceUnitEvtsList>
+    ) {
+        this.callControlEvtsList = callControlEvtsList;
+        this.callAssociatedEvtsList = callAssociatedEvtsList;
+        this.logicalEvtsList = logicalEvtsList;
+        this.mediaEvtsList = mediaEvtsList;
+        this.voiceUnitEvtsList = voiceUnitEvtsList;
+    }
 
     /**
      * @summary Restructures an object into a LogDevEvtsList

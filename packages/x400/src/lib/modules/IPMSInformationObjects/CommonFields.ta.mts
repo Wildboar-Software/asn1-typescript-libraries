@@ -1,7 +1,7 @@
 /* eslint-disable */
 import {
-    OPTIONAL,
-    ASN1Element as _Element,
+    type OPTIONAL,
+    type ASN1Element as _Element,
     ASN1TagClass as _TagClass,
     ASN1Construction as _Construction,
     ASN1UniversalType as _UniversalType,
@@ -12,27 +12,27 @@ import {
 } from '@wildboar/asn1';
 import * as $ from '@wildboar/asn1/functional';
 import {
-    SubjectIPMField,
+    type SubjectIPMField,
     _decode_SubjectIPMField,
     _encode_SubjectIPMField,
 } from '../IPMSInformationObjects/SubjectIPMField.ta.mjs';
 import {
-    IPNOriginatorField,
+    type IPNOriginatorField,
     _decode_IPNOriginatorField,
     _encode_IPNOriginatorField,
 } from '../IPMSInformationObjects/IPNOriginatorField.ta.mjs';
 import {
-    IPMIntendedRecipientField,
+    type IPMIntendedRecipientField,
     _decode_IPMIntendedRecipientField,
     _encode_IPMIntendedRecipientField,
 } from '../IPMSInformationObjects/IPMIntendedRecipientField.ta.mjs';
 import {
-    ConversionEITsField,
+    type ConversionEITsField,
     _decode_ConversionEITsField,
     _encode_ConversionEITsField,
 } from '../IPMSInformationObjects/ConversionEITsField.ta.mjs';
 import {
-    NotificationExtensionsField,
+    type NotificationExtensionsField,
     _decode_NotificationExtensionsField,
     _encode_NotificationExtensionsField,
 } from '../IPMSInformationObjects/NotificationExtensionsField.ta.mjs';
@@ -56,38 +56,50 @@ import {
  *
  */
 export class CommonFields {
+    /**
+     * @summary `subject_ipm`.
+     * @public
+     * @readonly
+     */
+    public readonly subject_ipm: SubjectIPMField;
+    /**
+     * @summary `ipn_originator`.
+     * @public
+     * @readonly
+     */
+    public readonly ipn_originator?: OPTIONAL<IPNOriginatorField>;
+    /**
+     * @summary `ipm_intended_recipient`.
+     * @public
+     * @readonly
+     */
+    public readonly ipm_intended_recipient?: OPTIONAL<IPMIntendedRecipientField>;
+    /**
+     * @summary `conversion_eits`.
+     * @public
+     * @readonly
+     */
+    public readonly conversion_eits?: OPTIONAL<ConversionEITsField>;
+    /**
+     * @summary `notification_extensions`.
+     * @public
+     * @readonly
+     */
+    public readonly notification_extensions?: OPTIONAL<NotificationExtensionsField>;
+
     constructor(
-        /**
-         * @summary `subject_ipm`.
-         * @public
-         * @readonly
-         */
-        readonly subject_ipm: SubjectIPMField,
-        /**
-         * @summary `ipn_originator`.
-         * @public
-         * @readonly
-         */
-        readonly ipn_originator?: OPTIONAL<IPNOriginatorField>,
-        /**
-         * @summary `ipm_intended_recipient`.
-         * @public
-         * @readonly
-         */
-        readonly ipm_intended_recipient?: OPTIONAL<IPMIntendedRecipientField>,
-        /**
-         * @summary `conversion_eits`.
-         * @public
-         * @readonly
-         */
-        readonly conversion_eits?: OPTIONAL<ConversionEITsField>,
-        /**
-         * @summary `notification_extensions`.
-         * @public
-         * @readonly
-         */
-        readonly notification_extensions?: OPTIONAL<NotificationExtensionsField>
-    ) {}
+        subject_ipm: SubjectIPMField,
+        ipn_originator?: OPTIONAL<IPNOriginatorField>,
+        ipm_intended_recipient?: OPTIONAL<IPMIntendedRecipientField>,
+        conversion_eits?: OPTIONAL<ConversionEITsField>,
+        notification_extensions?: OPTIONAL<NotificationExtensionsField>
+    ) {
+        this.subject_ipm = subject_ipm;
+        this.ipn_originator = ipn_originator;
+        this.ipm_intended_recipient = ipm_intended_recipient;
+        this.conversion_eits = conversion_eits;
+        this.notification_extensions = notification_extensions;
+    }
 
     /**
      * @summary Restructures an object into a CommonFields

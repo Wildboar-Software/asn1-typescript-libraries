@@ -1,6 +1,6 @@
 /* eslint-disable */
 import {
-    AttCertPath,
+    type AttCertPath,
     _decode_AttCertPath,
     _encode_AttCertPath,
 } from "../AttributeCertificateDefinitions/AttCertPath.ta.mjs";

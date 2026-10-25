@@ -1,19 +1,19 @@
 /* eslint-disable */
 import {
-    OPTIONAL,
-    ASN1Element as _Element,
+    type OPTIONAL,
+    type ASN1Element as _Element,
     ASN1TagClass as _TagClass
 } from "@wildboar/asn1";
 import * as $ from "@wildboar/asn1/functional";
-import { IMSI, _decode_IMSI, _encode_IMSI } from "../MAP-CommonDataTypes/IMSI.ta.mjs";
-import { ISDN_AddressString, _decode_ISDN_AddressString, _encode_ISDN_AddressString } from "../MAP-CommonDataTypes/ISDN-AddressString.ta.mjs";
+import { type IMSI, _decode_IMSI, _encode_IMSI } from "../MAP-CommonDataTypes/IMSI.ta.mjs";
+import { type ISDN_AddressString, _decode_ISDN_AddressString, _encode_ISDN_AddressString } from "../MAP-CommonDataTypes/ISDN-AddressString.ta.mjs";
 import { ExtensionContainer, _decode_ExtensionContainer, _encode_ExtensionContainer } from "../MAP-ExtensionDataTypes/ExtensionContainer.ta.mjs";
 import { LocationInformation, _decode_LocationInformation, _encode_LocationInformation } from "../MAP-MS-DataTypes/LocationInformation.ta.mjs";
 import { LocationInformationGPRS, _decode_LocationInformationGPRS, _encode_LocationInformationGPRS } from "../MAP-MS-DataTypes/LocationInformationGPRS.ta.mjs";
-import { MM_Code, _decode_MM_Code, _encode_MM_Code } from "../MAP-MS-DataTypes/MM-Code.ta.mjs";
-import { OfferedCamel4Functionalities, _decode_OfferedCamel4Functionalities, _encode_OfferedCamel4Functionalities } from "../MAP-MS-DataTypes/OfferedCamel4Functionalities.ta.mjs";
-import { ServiceKey, _decode_ServiceKey, _encode_ServiceKey } from "../MAP-MS-DataTypes/ServiceKey.ta.mjs";
-import { SupportedCamelPhases, _decode_SupportedCamelPhases, _encode_SupportedCamelPhases } from "../MAP-MS-DataTypes/SupportedCamelPhases.ta.mjs";
+import { type MM_Code, _decode_MM_Code, _encode_MM_Code } from "../MAP-MS-DataTypes/MM-Code.ta.mjs";
+import { type OfferedCamel4Functionalities, _decode_OfferedCamel4Functionalities, _encode_OfferedCamel4Functionalities } from "../MAP-MS-DataTypes/OfferedCamel4Functionalities.ta.mjs";
+import { type ServiceKey, _decode_ServiceKey, _encode_ServiceKey } from "../MAP-MS-DataTypes/ServiceKey.ta.mjs";
+import { type SupportedCamelPhases, _decode_SupportedCamelPhases, _encode_SupportedCamelPhases } from "../MAP-MS-DataTypes/SupportedCamelPhases.ta.mjs";
 
 
 /**
@@ -33,11 +33,11 @@ import { SupportedCamelPhases, _decode_SupportedCamelPhases, _encode_SupportedCa
  *     eventMet    [0]    MM-Code,
  *     imsi    [1]    IMSI,
  *     msisdn    [2]    ISDN-AddressString,
- *     locationInformation    [3]    LocationInformation    OPTIONAL,
- *     supportedCAMELPhases    [5]    SupportedCamelPhases    OPTIONAL,
- *     extensionContainer    [6]    ExtensionContainer    OPTIONAL,
+ *     locationInformation    [3]    LocationInformation    type OPTIONAL,
+ *     supportedCAMELPhases    [5]    SupportedCamelPhases    type OPTIONAL,
+ *     extensionContainer    [6]    ExtensionContainer    type OPTIONAL,
  *     ...,
- *     locationInformationGPRS    [7]    LocationInformationGPRS    OPTIONAL,
+ *     locationInformationGPRS    [7]    LocationInformationGPRS    type OPTIONAL,
  *     offeredCamel4Functionalities    [8] OfferedCamel4Functionalities    OPTIONAL
  * }
  * ```
@@ -46,107 +46,129 @@ import { SupportedCamelPhases, _decode_SupportedCamelPhases, _encode_SupportedCa
  */
 export
 class NoteMM_EventArg {
+    /**
+     * @summary `serviceKey`.
+     * @description
+     *
+     * Service key. (3GPP TS 29.002 V19.1.0 clause 8.1.8.3)
+     *
+     * @public
+     * @readonly
+     */
+    public readonly serviceKey: ServiceKey;
+    /**
+     * @summary `eventMet`.
+     * @description
+     *
+     * MM event that led to the notification (VLR or SGSN codes in clause
+     * 8.1.8.3). (3GPP TS 29.002 V19.1.0 clause 8.1.8.3)
+     *
+     * @public
+     * @readonly
+     */
+    public readonly eventMet: MM_Code;
+    /**
+     * @summary `imsi`.
+     * @description
+     *
+     * IMSI of the subscriber. (3GPP TS 29.002 V19.1.0 clauses 8.1.8.3 and
+     * 7.6.2.1)
+     *
+     * @public
+     * @readonly
+     */
+    public readonly imsi: IMSI;
+    /**
+     * @summary `msisdn`.
+     * @description
+     *
+     * Basic MSISDN. (3GPP TS 29.002 V19.1.0 clauses 8.1.8.3 and 7.6.2.17)
+     *
+     * @public
+     * @readonly
+     */
+    public readonly msisdn: ISDN_AddressString;
+    /**
+     * @summary `locationInformation`.
+     * @description
+     *
+     * CS-domain location of the served subscriber. (3GPP TS 29.002 V19.1.0
+     * clauses 8.1.8 and 7.6.2.30)
+     *
+     * @public
+     * @readonly
+     */
+    public readonly locationInformation?: OPTIONAL<LocationInformation>;
+    /**
+     * @summary `supportedCAMELPhases`.
+     * @description
+     *
+     * CAMEL phases supported by the reporting node. Mandatory in
+     * MAP_NOTE_MM_EVENT. (3GPP TS 29.002 V19.1.0 clauses 8.1.8.2 and
+     * 7.6.3.36H)
+     *
+     * @public
+     * @readonly
+     */
+    public readonly supportedCAMELPhases?: OPTIONAL<SupportedCamelPhases>;
+    /**
+     * @summary `extensionContainer`.
+     * @public
+     * @readonly
+     */
+    public readonly extensionContainer?: OPTIONAL<ExtensionContainer>;
+    /**
+     * @summary `locationInformationGPRS`.
+     * @description
+     *
+     * PS-domain location of the served subscriber. (3GPP TS 29.002 V19.1.0
+     * clauses 8.1.8 and 7.6.2.30a)
+     *
+     * @public
+     * @readonly
+     */
+    public readonly locationInformationGPRS?: OPTIONAL<LocationInformationGPRS>;
+    /**
+     * @summary `offeredCamel4Functionalities`.
+     * @description
+     *
+     * CAMEL phase 4 functionalities offered by the reporting node. (3GPP TS
+     * 29.002 V19.1.0 clauses 8.1.8 and 7.6.3.36G)
+     *
+     * @public
+     * @readonly
+     */
+    public readonly offeredCamel4Functionalities?: OPTIONAL<OfferedCamel4Functionalities>;
+    /**
+     * @summary Extensions that are not recognized.
+     * @public
+     * @readonly
+     */
+    public readonly _unrecognizedExtensionsList: _Element[];
+
     constructor (
-        /**
-         * @summary `serviceKey`.
-         * @description
-         *
-         * Service key. (3GPP TS 29.002 V19.1.0 clause 8.1.8.3)
-         *
-         * @public
-         * @readonly
-         */
-        readonly serviceKey: ServiceKey,
-        /**
-         * @summary `eventMet`.
-         * @description
-         *
-         * MM event that led to the notification (VLR or SGSN codes in clause
-         * 8.1.8.3). (3GPP TS 29.002 V19.1.0 clause 8.1.8.3)
-         *
-         * @public
-         * @readonly
-         */
-        readonly eventMet: MM_Code,
-        /**
-         * @summary `imsi`.
-         * @description
-         *
-         * IMSI of the subscriber. (3GPP TS 29.002 V19.1.0 clauses 8.1.8.3 and
-         * 7.6.2.1)
-         *
-         * @public
-         * @readonly
-         */
-        readonly imsi: IMSI,
-        /**
-         * @summary `msisdn`.
-         * @description
-         *
-         * Basic MSISDN. (3GPP TS 29.002 V19.1.0 clauses 8.1.8.3 and 7.6.2.17)
-         *
-         * @public
-         * @readonly
-         */
-        readonly msisdn: ISDN_AddressString,
-        /**
-         * @summary `locationInformation`.
-         * @description
-         *
-         * CS-domain location of the served subscriber. (3GPP TS 29.002 V19.1.0
-         * clauses 8.1.8 and 7.6.2.30)
-         *
-         * @public
-         * @readonly
-         */
-        readonly locationInformation?: OPTIONAL<LocationInformation>,
-        /**
-         * @summary `supportedCAMELPhases`.
-         * @description
-         *
-         * CAMEL phases supported by the reporting node. Mandatory in
-         * MAP_NOTE_MM_EVENT. (3GPP TS 29.002 V19.1.0 clauses 8.1.8.2 and
-         * 7.6.3.36H)
-         *
-         * @public
-         * @readonly
-         */
-        readonly supportedCAMELPhases?: OPTIONAL<SupportedCamelPhases>,
-        /**
-         * @summary `extensionContainer`.
-         * @public
-         * @readonly
-         */
-        readonly extensionContainer?: OPTIONAL<ExtensionContainer>,
-        /**
-         * @summary `locationInformationGPRS`.
-         * @description
-         *
-         * PS-domain location of the served subscriber. (3GPP TS 29.002 V19.1.0
-         * clauses 8.1.8 and 7.6.2.30a)
-         *
-         * @public
-         * @readonly
-         */
-        readonly locationInformationGPRS?: OPTIONAL<LocationInformationGPRS>,
-        /**
-         * @summary `offeredCamel4Functionalities`.
-         * @description
-         *
-         * CAMEL phase 4 functionalities offered by the reporting node. (3GPP TS
-         * 29.002 V19.1.0 clauses 8.1.8 and 7.6.3.36G)
-         *
-         * @public
-         * @readonly
-         */
-        readonly offeredCamel4Functionalities?: OPTIONAL<OfferedCamel4Functionalities>,
-        /**
-         * @summary Extensions that are not recognized.
-         * @public
-         * @readonly
-         */
-        readonly _unrecognizedExtensionsList: _Element[] = []
-    ) {}
+        serviceKey: ServiceKey,
+        eventMet: MM_Code,
+        imsi: IMSI,
+        msisdn: ISDN_AddressString,
+        locationInformation?: OPTIONAL<LocationInformation>,
+        supportedCAMELPhases?: OPTIONAL<SupportedCamelPhases>,
+        extensionContainer?: OPTIONAL<ExtensionContainer>,
+        locationInformationGPRS?: OPTIONAL<LocationInformationGPRS>,
+        offeredCamel4Functionalities?: OPTIONAL<OfferedCamel4Functionalities>,
+        _unrecognizedExtensionsList: _Element[] = []
+    ) {
+        this.serviceKey = serviceKey;
+        this.eventMet = eventMet;
+        this.imsi = imsi;
+        this.msisdn = msisdn;
+        this.locationInformation = locationInformation;
+        this.supportedCAMELPhases = supportedCAMELPhases;
+        this.extensionContainer = extensionContainer;
+        this.locationInformationGPRS = locationInformationGPRS;
+        this.offeredCamel4Functionalities = offeredCamel4Functionalities;
+        this._unrecognizedExtensionsList = _unrecognizedExtensionsList;
+    }
 
     /**
      * @summary Restructures an object into a NoteMM_EventArg

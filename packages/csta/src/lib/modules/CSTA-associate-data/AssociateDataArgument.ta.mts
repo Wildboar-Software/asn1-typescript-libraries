@@ -2,19 +2,19 @@
 
 import * as $ from "@wildboar/asn1/functional";
 import {
-    OPTIONAL,
-    SEQUENCE,
-    SET,
-    ASN1Element as _Element,
+    type OPTIONAL,
+    type SEQUENCE,
+    type SET,
+    type ASN1Element as _Element,
     ASN1TagClass as _TagClass
 } from "@wildboar/asn1";
-import { ConnectionID, _decode_ConnectionID, _encode_ConnectionID } from "../CSTA-call-connection-identifiers/ConnectionID.ta.mjs";
+import { type ConnectionID, _decode_ConnectionID, _encode_ConnectionID } from "../CSTA-call-connection-identifiers/ConnectionID.ta.mjs";
 
-import { CallQualifyingData, _decode_CallQualifyingData, _encode_CallQualifyingData } from "../CSTA-call-control/CallQualifyingData.ta.mjs";
+import { type CallQualifyingData, _decode_CallQualifyingData, _encode_CallQualifyingData } from "../CSTA-call-control/CallQualifyingData.ta.mjs";
 
-import { SubjectOfCall, _decode_SubjectOfCall, _encode_SubjectOfCall } from "../CSTA-device-feature-types/SubjectOfCall.ta.mjs";
+import { type SubjectOfCall, _decode_SubjectOfCall, _encode_SubjectOfCall } from "../CSTA-device-feature-types/SubjectOfCall.ta.mjs";
 
-import { LanguagePreferences, _decode_LanguagePreferences, _encode_LanguagePreferences } from "../CSTA-device-feature-types/LanguagePreferences.ta.mjs";
+import { type LanguagePreferences, _decode_LanguagePreferences, _encode_LanguagePreferences } from "../CSTA-device-feature-types/LanguagePreferences.ta.mjs";
 
 import { DeviceID, _decode_DeviceID, _encode_DeviceID } from "../CSTA-device-identifiers/DeviceID.ta.mjs";
 
@@ -22,13 +22,13 @@ import { CSTACommonArguments, _decode_CSTACommonArguments, _encode_CSTACommonArg
 
 
 
-import { AccountInfo, _decode_AccountInfo, _encode_AccountInfo } from "../CSTA-device-feature-types/AccountInfo.ta.mjs";
+import { type AccountInfo, _decode_AccountInfo, _encode_AccountInfo } from "../CSTA-device-feature-types/AccountInfo.ta.mjs";
 
-import { AuthCode, _decode_AuthCode, _encode_AuthCode } from "../CSTA-device-feature-types/AuthCode.ta.mjs";
+import { type AuthCode, _decode_AuthCode, _encode_AuthCode } from "../CSTA-device-feature-types/AuthCode.ta.mjs";
 
-import { CorrelatorData, _decode_CorrelatorData, _encode_CorrelatorData } from "../CSTA-device-feature-types/CorrelatorData.ta.mjs";
+import { type CorrelatorData, _decode_CorrelatorData, _encode_CorrelatorData } from "../CSTA-device-feature-types/CorrelatorData.ta.mjs";
 
-import { CallCharacteristics, _decode_CallCharacteristics, _encode_CallCharacteristics } from "../CSTA-call-control/CallCharacteristics.ta.mjs";
+import { type CallCharacteristics, _decode_CallCharacteristics, _encode_CallCharacteristics } from "../CSTA-call-control/CallCharacteristics.ta.mjs";
 
 /**
  * @summary AssociateDataArgument
@@ -44,14 +44,14 @@ import { CallCharacteristics, _decode_CallCharacteristics, _encode_CallCharacter
  * ```asn1
  * AssociateDataArgument ::= SEQUENCE
  * {    existingCall            ConnectionID,
- *     accountCode            [0] IMPLICIT AccountInfo        OPTIONAL,
- *     authCode            [1] IMPLICIT AuthCode            OPTIONAL,
- *     correlatorData            [2] IMPLICIT CorrelatorData        OPTIONAL,
- *     callQualifyingData        [3] IMPLICIT CallQualifyingData        OPTIONAL,
- *     callCharacteristics        [4] IMPLICIT CallCharacteristics    OPTIONAL,
- *     subjectOfCall            [5] IMPLICIT SubjectOfCall        OPTIONAL,
- *     languagePreferences        [6] IMPLICIT LanguagePreferences    OPTIONAL,
- *     deviceInfo            [7] IMPLICIT DeviceID            OPTIONAL,
+ *     accountCode            [0] IMPLICIT AccountInfo        type OPTIONAL,
+ *     authCode            [1] IMPLICIT AuthCode            type OPTIONAL,
+ *     correlatorData            [2] IMPLICIT CorrelatorData        type OPTIONAL,
+ *     callQualifyingData        [3] IMPLICIT CallQualifyingData        type OPTIONAL,
+ *     callCharacteristics        [4] IMPLICIT CallCharacteristics    type OPTIONAL,
+ *     subjectOfCall            [5] IMPLICIT SubjectOfCall        type OPTIONAL,
+ *     languagePreferences        [6] IMPLICIT LanguagePreferences    type OPTIONAL,
+ *     deviceInfo            [7] IMPLICIT DeviceID            type OPTIONAL,
  *     extensions            CSTACommonArguments            OPTIONAL }
  * ```
  * 
@@ -59,99 +59,121 @@ import { CallCharacteristics, _decode_CallCharacteristics, _encode_CallCharacter
  */
 export
 class AssociateDataArgument {
+    /**
+     * @summary `existingCall`.
+     * @description
+     *
+     * Connection identifying the call. Either endpoint is valid.
+     * @public
+     * @readonly
+     */
+    public readonly existingCall: ConnectionID;
+    /**
+     * @summary `accountCode`.
+     * @description
+     *
+     * Account information to associate with the call.
+     * @public
+     * @readonly
+     */
+    public readonly accountCode?: OPTIONAL<AccountInfo>;
+    /**
+     * @summary `authCode`.
+     * @description
+     *
+     * Authorisation code to associate with the call.
+     * @public
+     * @readonly
+     */
+    public readonly authCode?: OPTIONAL<AuthCode>;
+    /**
+     * @summary `correlatorData`.
+     * @description
+     *
+     * Correlator data to associate with the call.
+     * @public
+     * @readonly
+     */
+    public readonly correlatorData?: OPTIONAL<CorrelatorData>;
+    /**
+     * @summary `callQualifyingData`.
+     * @description
+     *
+     * Call-qualifying data to associate with the call.
+     * @public
+     * @readonly
+     */
+    public readonly callQualifyingData?: OPTIONAL<CallQualifyingData>;
+    /**
+     * @summary `callCharacteristics`.
+     * @description
+     *
+     * Call characterisation to associate with the call.
+     * @public
+     * @readonly
+     */
+    public readonly callCharacteristics?: OPTIONAL<CallCharacteristics>;
+    /**
+     * @summary `subjectOfCall`.
+     * @description
+     *
+     * Subject/topic to associate with the call.
+     * @public
+     * @readonly
+     */
+    public readonly subjectOfCall?: OPTIONAL<SubjectOfCall>;
+    /**
+     * @summary `languagePreferences`.
+     * @description
+     *
+     * Language preferences to associate with the call.
+     * @public
+     * @readonly
+     */
+    public readonly languagePreferences?: OPTIONAL<LanguagePreferences>;
+    /**
+     * @summary `deviceInfo`.
+     * @description
+     *
+     * Device information to associate with a device in the call.
+     * @public
+     * @readonly
+     */
+    public readonly deviceInfo?: OPTIONAL<DeviceID>;
+    /**
+     * @summary `extensions`.
+     * @description
+     *
+     * Optional security (timestamp, sequence, securityInfo) and
+     * privateData.
+     * @public
+     * @readonly
+     */
+    public readonly extensions?: OPTIONAL<CSTACommonArguments>;
+
     constructor (
-        /**
-         * @summary `existingCall`.
-         * @description
-         *
-         * Connection identifying the call. Either endpoint is valid.
-         * @public
-         * @readonly
-         */
-        readonly existingCall: ConnectionID,
-        /**
-         * @summary `accountCode`.
-         * @description
-         *
-         * Account information to associate with the call.
-         * @public
-         * @readonly
-         */
-        readonly accountCode?: OPTIONAL<AccountInfo>,
-        /**
-         * @summary `authCode`.
-         * @description
-         *
-         * Authorisation code to associate with the call.
-         * @public
-         * @readonly
-         */
-        readonly authCode?: OPTIONAL<AuthCode>,
-        /**
-         * @summary `correlatorData`.
-         * @description
-         *
-         * Correlator data to associate with the call.
-         * @public
-         * @readonly
-         */
-        readonly correlatorData?: OPTIONAL<CorrelatorData>,
-        /**
-         * @summary `callQualifyingData`.
-         * @description
-         *
-         * Call-qualifying data to associate with the call.
-         * @public
-         * @readonly
-         */
-        readonly callQualifyingData?: OPTIONAL<CallQualifyingData>,
-        /**
-         * @summary `callCharacteristics`.
-         * @description
-         *
-         * Call characterisation to associate with the call.
-         * @public
-         * @readonly
-         */
-        readonly callCharacteristics?: OPTIONAL<CallCharacteristics>,
-        /**
-         * @summary `subjectOfCall`.
-         * @description
-         *
-         * Subject/topic to associate with the call.
-         * @public
-         * @readonly
-         */
-        readonly subjectOfCall?: OPTIONAL<SubjectOfCall>,
-        /**
-         * @summary `languagePreferences`.
-         * @description
-         *
-         * Language preferences to associate with the call.
-         * @public
-         * @readonly
-         */
-        readonly languagePreferences?: OPTIONAL<LanguagePreferences>,
-        /**
-         * @summary `deviceInfo`.
-         * @description
-         *
-         * Device information to associate with a device in the call.
-         * @public
-         * @readonly
-         */
-        readonly deviceInfo?: OPTIONAL<DeviceID>,
-        /**
-         * @summary `extensions`.
-         * @description
-         *
-         * Optional security (timestamp, sequence, securityInfo) and
-         * privateData.
-         * @public
-         * @readonly
-         */
-        readonly extensions?: OPTIONAL<CSTACommonArguments>
-    ) {}
+        existingCall: ConnectionID,
+        accountCode?: OPTIONAL<AccountInfo>,
+        authCode?: OPTIONAL<AuthCode>,
+        correlatorData?: OPTIONAL<CorrelatorData>,
+        callQualifyingData?: OPTIONAL<CallQualifyingData>,
+        callCharacteristics?: OPTIONAL<CallCharacteristics>,
+        subjectOfCall?: OPTIONAL<SubjectOfCall>,
+        languagePreferences?: OPTIONAL<LanguagePreferences>,
+        deviceInfo?: OPTIONAL<DeviceID>,
+        extensions?: OPTIONAL<CSTACommonArguments>
+    ) {
+        this.existingCall = existingCall;
+        this.accountCode = accountCode;
+        this.authCode = authCode;
+        this.correlatorData = correlatorData;
+        this.callQualifyingData = callQualifyingData;
+        this.callCharacteristics = callCharacteristics;
+        this.subjectOfCall = subjectOfCall;
+        this.languagePreferences = languagePreferences;
+        this.deviceInfo = deviceInfo;
+        this.extensions = extensions;
+    }
 
     /**
      * @summary Restructures an object into a AssociateDataArgument

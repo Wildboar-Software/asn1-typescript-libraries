@@ -1,7 +1,7 @@
 /* eslint-disable */
 import {
-    OBJECT_IDENTIFIER,
-    ASN1Element as _Element,
+    type OBJECT_IDENTIFIER,
+    type ASN1Element as _Element,
     ASN1TagClass as _TagClass,
     ASN1Construction as _Construction,
     ASN1UniversalType as _UniversalType,
@@ -32,30 +32,36 @@ import * as $ from "@wildboar/asn1/functional";
  */
 export
 class OtherRevRefs {
+    /**
+     * @summary `otherRevRefType`.
+     * @description
+     *
+     * Object identifier selecting the syntax of
+     * `otherRevRefs`.
+     *
+     * @public
+     * @readonly
+     */
+    public readonly otherRevRefType: OBJECT_IDENTIFIER;
+    /**
+     * @summary `otherRevRefs`.
+     * @description
+     *
+     * Revocation-reference values whose syntax is defined by
+     * `otherRevRefType`.
+     *
+     * @public
+     * @readonly
+     */
+    public readonly otherRevRefs: _Element[];
+
     constructor (
-        /**
-         * @summary `otherRevRefType`.
-         * @description
-         *
-         * Object identifier selecting the syntax of
-         * `otherRevRefs`.
-         *
-         * @public
-         * @readonly
-         */
-        readonly otherRevRefType: OBJECT_IDENTIFIER,
-        /**
-         * @summary `otherRevRefs`.
-         * @description
-         *
-         * Revocation-reference values whose syntax is defined by
-         * `otherRevRefType`.
-         *
-         * @public
-         * @readonly
-         */
-        readonly otherRevRefs: _Element[]
-    ) {}
+        otherRevRefType: OBJECT_IDENTIFIER,
+        otherRevRefs: _Element[]
+    ) {
+        this.otherRevRefType = otherRevRefType;
+        this.otherRevRefs = otherRevRefs;
+    }
 
     /**
      * @summary Restructures an object into a OtherRevRefs

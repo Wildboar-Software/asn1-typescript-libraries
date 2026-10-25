@@ -1,8 +1,8 @@
 /* eslint-disable */
 import {
-    OPTIONAL,
-    BOOLEAN,
-    ASN1Element as _Element,
+    type OPTIONAL,
+    type BOOLEAN,
+    type ASN1Element as _Element,
     ASN1TagClass as _TagClass,
     ASN1Construction as _Construction,
     ASN1UniversalType as _UniversalType,
@@ -13,7 +13,7 @@ import {
 } from '@wildboar/asn1';
 import * as $ from '@wildboar/asn1/functional';
 import {
-    Filter,
+    type Filter,
     _decode_Filter,
     _encode_Filter,
 } from '../MSAbstractService/Filter.ta.mjs';
@@ -42,38 +42,50 @@ import {
  *
  */
 export class IPMAutoDiscardRegistrationParameter {
+    /**
+     * @summary `filter`.
+     * @public
+     * @readonly
+     */
+    public readonly filter: OPTIONAL<Filter>;
+    /**
+     * @summary `submission_options`.
+     * @public
+     * @readonly
+     */
+    public readonly submission_options: OPTIONAL<MSSubmissionOptions>;
+    /**
+     * @summary `auto_discard_expired_ipms`.
+     * @public
+     * @readonly
+     */
+    public readonly auto_discard_expired_ipms: BOOLEAN;
+    /**
+     * @summary `auto_discard_obsoleted_ipms`.
+     * @public
+     * @readonly
+     */
+    public readonly auto_discard_obsoleted_ipms: BOOLEAN;
+    /**
+     * @summary `restrict_obsoleting_to_originator`.
+     * @public
+     * @readonly
+     */
+    public readonly restrict_obsoleting_to_originator: BOOLEAN;
+
     constructor(
-        /**
-         * @summary `filter`.
-         * @public
-         * @readonly
-         */
-        readonly filter: OPTIONAL<Filter>,
-        /**
-         * @summary `submission_options`.
-         * @public
-         * @readonly
-         */
-        readonly submission_options: OPTIONAL<MSSubmissionOptions>,
-        /**
-         * @summary `auto_discard_expired_ipms`.
-         * @public
-         * @readonly
-         */
-        readonly auto_discard_expired_ipms: BOOLEAN,
-        /**
-         * @summary `auto_discard_obsoleted_ipms`.
-         * @public
-         * @readonly
-         */
-        readonly auto_discard_obsoleted_ipms: BOOLEAN,
-        /**
-         * @summary `restrict_obsoleting_to_originator`.
-         * @public
-         * @readonly
-         */
-        readonly restrict_obsoleting_to_originator: BOOLEAN
-    ) {}
+        filter: OPTIONAL<Filter>,
+        submission_options: OPTIONAL<MSSubmissionOptions>,
+        auto_discard_expired_ipms: BOOLEAN,
+        auto_discard_obsoleted_ipms: BOOLEAN,
+        restrict_obsoleting_to_originator: BOOLEAN
+    ) {
+        this.filter = filter;
+        this.submission_options = submission_options;
+        this.auto_discard_expired_ipms = auto_discard_expired_ipms;
+        this.auto_discard_obsoleted_ipms = auto_discard_obsoleted_ipms;
+        this.restrict_obsoleting_to_originator = restrict_obsoleting_to_originator;
+    }
 
     /**
      * @summary Restructures an object into a IPMAutoDiscardRegistrationParameter

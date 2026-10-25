@@ -1,6 +1,6 @@
 /* eslint-disable */
 import {
-    ASN1Element as _Element,
+    type ASN1Element as _Element,
     ASN1TagClass as _TagClass,
     ASN1Construction as _Construction,
     ASN1UniversalType as _UniversalType,
@@ -29,22 +29,13 @@ import {
  */
 export type SubmissionControlResult = Waiting; // DefinedType
 
-let _cached_decoder_for_SubmissionControlResult: $.ASN1Decoder<SubmissionControlResult> | null = null;
-
 /**
  * @summary Decodes an ASN.1 element into a(n) SubmissionControlResult
  * @function
  * @param {_Element} el The element being decoded.
  * @returns {SubmissionControlResult} The decoded data structure.
  */
-export function _decode_SubmissionControlResult(el: _Element): SubmissionControlResult {
-    if (!_cached_decoder_for_SubmissionControlResult) {
-        _cached_decoder_for_SubmissionControlResult = _decode_Waiting;
-    }
-    return _cached_decoder_for_SubmissionControlResult(el);
-}
-
-let _cached_encoder_for_SubmissionControlResult: $.ASN1Encoder<SubmissionControlResult> | null = null;
+export const _decode_SubmissionControlResult: $.ASN1Decoder<SubmissionControlResult> = _decode_Waiting;
 
 /**
  * @summary Encodes a(n) SubmissionControlResult into an ASN.1 Element.
@@ -53,15 +44,7 @@ let _cached_encoder_for_SubmissionControlResult: $.ASN1Encoder<SubmissionControl
  * @param elGetter A function that can be used to get new ASN.1 elements.
  * @returns {_Element} The SubmissionControlResult, encoded as an ASN.1 Element.
  */
-export function _encode_SubmissionControlResult(
-    value: SubmissionControlResult,
-    elGetter: $.ASN1Encoder<SubmissionControlResult>
-): _Element {
-    if (!_cached_encoder_for_SubmissionControlResult) {
-        _cached_encoder_for_SubmissionControlResult = _encode_Waiting;
-    }
-    return _cached_encoder_for_SubmissionControlResult(value, elGetter);
-}
+export const _encode_SubmissionControlResult: $.ASN1Encoder<SubmissionControlResult> = _encode_Waiting;
 
 
 /* eslint-enable */

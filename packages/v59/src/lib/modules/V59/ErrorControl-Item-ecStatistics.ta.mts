@@ -1,8 +1,8 @@
 /* eslint-disable */
 import {
-    OPTIONAL,
-    INTEGER,
-    ASN1Element as _Element,
+    type OPTIONAL,
+    type INTEGER,
+    type ASN1Element as _Element,
     ASN1TagClass as _TagClass,
     ASN1Construction as _Construction,
     ASN1UniversalType as _UniversalType,
@@ -42,7 +42,7 @@ class ErrorControl_Item_ecStatistics {
      * @public
      * @readonly
      */
-    readonly framesSentAck?: OPTIONAL<INTEGER>;
+    public readonly framesSentAck?: OPTIONAL<INTEGER>;
     /**
      * @summary `framesRetransmitted`.
      * @description
@@ -52,7 +52,7 @@ class ErrorControl_Item_ecStatistics {
      * @public
      * @readonly
      */
-    readonly framesRetransmitted?: OPTIONAL<INTEGER>;
+    public readonly framesRetransmitted?: OPTIONAL<INTEGER>;
     /**
      * @summary `framesReceivedAck`.
      * @description
@@ -62,7 +62,7 @@ class ErrorControl_Item_ecStatistics {
      * @public
      * @readonly
      */
-    readonly framesReceivedAck?: OPTIONAL<INTEGER>;
+    public readonly framesReceivedAck?: OPTIONAL<INTEGER>;
     /**
      * @summary `framesReceivedDiscard`.
      * @description
@@ -72,7 +72,7 @@ class ErrorControl_Item_ecStatistics {
      * @public
      * @readonly
      */
-    readonly framesReceivedDiscard?: OPTIONAL<INTEGER>;
+    public readonly framesReceivedDiscard?: OPTIONAL<INTEGER>;
 
     constructor (
         framesSentAck?: OPTIONAL<INTEGER>,

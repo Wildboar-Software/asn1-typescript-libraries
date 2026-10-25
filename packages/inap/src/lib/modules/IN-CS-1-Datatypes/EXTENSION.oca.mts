@@ -1,6 +1,6 @@
 /* eslint-disable */
 import * as $ from "@wildboar/asn1/functional";
-import { ExtensionType } from "../IN-CS-1-Datatypes/ExtensionType.ta.mjs";
+import { type ExtensionType } from "../IN-CS-1-Datatypes/ExtensionType.ta.mjs";
 // export { ExtensionType, _decode_ExtensionType, _encode_ExtensionType } from "../IN-CS-1-Datatypes/ExtensionType.ta.mjs";
 import { Criticality } from "../IN-CS-1-Datatypes/Criticality.ta.mjs";
 // export { Criticality, _enum_for_Criticality, Criticality_ignored /* IMPORTED_LONG_ENUMERATION_ITEM */, ignored /* IMPORTED_SHORT_ENUMERATION_ITEM */, Criticality_abort /* IMPORTED_LONG_ENUMERATION_ITEM */, abort /* IMPORTED_SHORT_ENUMERATION_ITEM */, _decode_Criticality, _encode_Criticality } from "../IN-CS-1-Datatypes/Criticality.ta.mjs";
@@ -15,7 +15,7 @@ import { Criticality } from "../IN-CS-1-Datatypes/Criticality.ta.mjs";
  * ```asn1
  * EXTENSION ::= CLASS {
  *   &id           ExtensionType UNIQUE,
- *   &Type         OPTIONAL,
+ *   &Type         type OPTIONAL,
  *   &absent       &Type OPTIONAL,
  *   &criticality  Criticality DEFAULT ignored
  * }

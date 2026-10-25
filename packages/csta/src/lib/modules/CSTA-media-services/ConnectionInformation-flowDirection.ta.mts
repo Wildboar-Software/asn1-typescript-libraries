@@ -1,7 +1,7 @@
 /* eslint-disable */
 
 import * as $ from "@wildboar/asn1/functional";
-import { ENUMERATED, ASN1Element as _Element } from "@wildboar/asn1";
+import { type ENUMERATED, ASN1Element as _Element } from "@wildboar/asn1";
 
 
 
@@ -83,7 +83,7 @@ type ConnectionInformation_flowDirection = _enum_for_ConnectionInformation_flowD
  * @enum {number}
  */
 export
-const ConnectionInformation_flowDirection = _enum_for_ConnectionInformation_flowDirection;
+const ConnectionInformation_flowDirection: typeof _enum_for_ConnectionInformation_flowDirection = _enum_for_ConnectionInformation_flowDirection;
 
 /**
  * @summary ConnectionInformation_flowDirection_transmit
@@ -95,7 +95,7 @@ const ConnectionInformation_flowDirection = _enum_for_ConnectionInformation_flow
  * @type {number}
  */
 export
-const ConnectionInformation_flowDirection_transmit: ConnectionInformation_flowDirection = ConnectionInformation_flowDirection.transmit; /* LONG_NAMED_ENUMERATED_VALUE */
+const ConnectionInformation_flowDirection_transmit: _enum_for_ConnectionInformation_flowDirection.transmit = ConnectionInformation_flowDirection.transmit; /* LONG_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary transmit
@@ -103,7 +103,7 @@ const ConnectionInformation_flowDirection_transmit: ConnectionInformation_flowDi
  * @type {number}
  */
 export
-const transmit: ConnectionInformation_flowDirection = ConnectionInformation_flowDirection.transmit; /* SHORT_NAMED_ENUMERATED_VALUE */
+const transmit: _enum_for_ConnectionInformation_flowDirection.transmit = ConnectionInformation_flowDirection.transmit; /* SHORT_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary ConnectionInformation_flowDirection_receive
@@ -115,7 +115,7 @@ const transmit: ConnectionInformation_flowDirection = ConnectionInformation_flow
  * @type {number}
  */
 export
-const ConnectionInformation_flowDirection_receive: ConnectionInformation_flowDirection = ConnectionInformation_flowDirection.receive; /* LONG_NAMED_ENUMERATED_VALUE */
+const ConnectionInformation_flowDirection_receive: _enum_for_ConnectionInformation_flowDirection.receive = ConnectionInformation_flowDirection.receive; /* LONG_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary receive
@@ -123,7 +123,7 @@ const ConnectionInformation_flowDirection_receive: ConnectionInformation_flowDir
  * @type {number}
  */
 export
-const receive: ConnectionInformation_flowDirection = ConnectionInformation_flowDirection.receive; /* SHORT_NAMED_ENUMERATED_VALUE */
+const receive: _enum_for_ConnectionInformation_flowDirection.receive = ConnectionInformation_flowDirection.receive; /* SHORT_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary ConnectionInformation_flowDirection_transmitAndReceive
@@ -135,7 +135,7 @@ const receive: ConnectionInformation_flowDirection = ConnectionInformation_flowD
  * @type {number}
  */
 export
-const ConnectionInformation_flowDirection_transmitAndReceive: ConnectionInformation_flowDirection = ConnectionInformation_flowDirection.transmitAndReceive; /* LONG_NAMED_ENUMERATED_VALUE */
+const ConnectionInformation_flowDirection_transmitAndReceive: _enum_for_ConnectionInformation_flowDirection.transmitAndReceive = ConnectionInformation_flowDirection.transmitAndReceive; /* LONG_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary transmitAndReceive
@@ -143,7 +143,7 @@ const ConnectionInformation_flowDirection_transmitAndReceive: ConnectionInformat
  * @type {number}
  */
 export
-const transmitAndReceive: ConnectionInformation_flowDirection = ConnectionInformation_flowDirection.transmitAndReceive; /* SHORT_NAMED_ENUMERATED_VALUE */
+const transmitAndReceive: _enum_for_ConnectionInformation_flowDirection.transmitAndReceive = ConnectionInformation_flowDirection.transmitAndReceive; /* SHORT_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary ConnectionInformation_flowDirection_none
@@ -155,7 +155,7 @@ const transmitAndReceive: ConnectionInformation_flowDirection = ConnectionInform
  * @type {number}
  */
 export
-const ConnectionInformation_flowDirection_none: ConnectionInformation_flowDirection = ConnectionInformation_flowDirection.none; /* LONG_NAMED_ENUMERATED_VALUE */
+const ConnectionInformation_flowDirection_none: _enum_for_ConnectionInformation_flowDirection.none = ConnectionInformation_flowDirection.none; /* LONG_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary none
@@ -163,7 +163,7 @@ const ConnectionInformation_flowDirection_none: ConnectionInformation_flowDirect
  * @type {number}
  */
 export
-const none: ConnectionInformation_flowDirection = ConnectionInformation_flowDirection.none; /* SHORT_NAMED_ENUMERATED_VALUE */
+const none: _enum_for_ConnectionInformation_flowDirection.none = ConnectionInformation_flowDirection.none; /* SHORT_NAMED_ENUMERATED_VALUE */
 
 let _cached_decoder_for_ConnectionInformation_flowDirection: $.ASN1Decoder<ConnectionInformation_flowDirection> | null = null;
 

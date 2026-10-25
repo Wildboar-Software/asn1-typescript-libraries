@@ -1,7 +1,7 @@
 /* eslint-disable */
 import {
-    OPTIONAL,
-    ASN1Element as _Element,
+    type OPTIONAL,
+    type ASN1Element as _Element,
     ASN1TagClass as _TagClass
 } from "@wildboar/asn1";
 import * as $ from "@wildboar/asn1/functional";
@@ -45,7 +45,7 @@ class IndAudStreamParms {
      * @public
      * @readonly
      */
-    readonly localControlDescriptor?: OPTIONAL<IndAudLocalControlDescriptor>;
+    public readonly localControlDescriptor?: OPTIONAL<IndAudLocalControlDescriptor>;
     /**
      * @summary `localDescriptor`.
      * @description
@@ -56,7 +56,7 @@ class IndAudStreamParms {
      * @public
      * @readonly
      */
-    readonly localDescriptor?: OPTIONAL<IndAudLocalRemoteDescriptor>;
+    public readonly localDescriptor?: OPTIONAL<IndAudLocalRemoteDescriptor>;
     /**
      * @summary `remoteDescriptor`.
      * @description
@@ -67,7 +67,7 @@ class IndAudStreamParms {
      * @public
      * @readonly
      */
-    readonly remoteDescriptor?: OPTIONAL<IndAudLocalRemoteDescriptor>;
+    public readonly remoteDescriptor?: OPTIONAL<IndAudLocalRemoteDescriptor>;
     /**
      * @summary `statisticsDescriptor`.
      * @description
@@ -78,7 +78,7 @@ class IndAudStreamParms {
      * @public
      * @readonly
      */
-    readonly statisticsDescriptor?: OPTIONAL<IndAudStatisticsDescriptor>;
+    public readonly statisticsDescriptor?: OPTIONAL<IndAudStatisticsDescriptor>;
     /**
      * @summary Extensions that are not recognized.
      * @description
@@ -89,7 +89,7 @@ class IndAudStreamParms {
      * @public
      * @readonly
      */
-    readonly _unrecognizedExtensionsList: _Element[];
+    public readonly _unrecognizedExtensionsList: _Element[];
 
     constructor (
         localControlDescriptor?: OPTIONAL<IndAudLocalControlDescriptor>,

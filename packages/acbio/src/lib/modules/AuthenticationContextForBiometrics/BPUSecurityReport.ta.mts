@@ -1,7 +1,7 @@
 /* eslint-disable */
 import {
-    OPTIONAL,
-    ASN1Element as _Element,
+    type OPTIONAL,
+    type ASN1Element as _Element,
     ASN1TagClass as _TagClass,
     ASN1Construction as _Construction,
     ASN1UniversalType as _UniversalType,
@@ -12,17 +12,17 @@ import {
 } from '@wildboar/asn1';
 import * as $ from '@wildboar/asn1/functional';
 import {
-    CryptoModuleSecurityInformation,
+    type CryptoModuleSecurityInformation,
     _decode_CryptoModuleSecurityInformation,
     _encode_CryptoModuleSecurityInformation,
 } from '../AuthenticationContextForBiometrics/CryptoModuleSecurityInformation.ta.mjs';
 import {
-    BiometricProcessSecurityInformation,
+    type BiometricProcessSecurityInformation,
     _decode_BiometricProcessSecurityInformation,
     _encode_BiometricProcessSecurityInformation,
 } from '../AuthenticationContextForBiometrics/BiometricProcessSecurityInformation.ta.mjs';
 import {
-    SecurityEvaluationExtensionInformation,
+    type SecurityEvaluationExtensionInformation,
     _decode_SecurityEvaluationExtensionInformation,
     _encode_SecurityEvaluationExtensionInformation,
 } from '../AuthenticationContextForBiometrics/SecurityEvaluationExtensionInformation.ta.mjs';
@@ -42,26 +42,34 @@ import {
  *
  */
 export class BPUSecurityReport {
+    /**
+     * @summary `cryptoModuleSecurityInformation`.
+     * @public
+     * @readonly
+     */
+    public readonly cryptoModuleSecurityInformation?: OPTIONAL<CryptoModuleSecurityInformation>;
+    /**
+     * @summary `biometricProcessSecurityInformation`.
+     * @public
+     * @readonly
+     */
+    public readonly biometricProcessSecurityInformation?: OPTIONAL<BiometricProcessSecurityInformation>;
+    /**
+     * @summary `securityEvaluationExtensionInformation`.
+     * @public
+     * @readonly
+     */
+    public readonly securityEvaluationExtensionInformation?: OPTIONAL<SecurityEvaluationExtensionInformation>;
+
     constructor(
-        /**
-         * @summary `cryptoModuleSecurityInformation`.
-         * @public
-         * @readonly
-         */
-        readonly cryptoModuleSecurityInformation?: OPTIONAL<CryptoModuleSecurityInformation>,
-        /**
-         * @summary `biometricProcessSecurityInformation`.
-         * @public
-         * @readonly
-         */
-        readonly biometricProcessSecurityInformation?: OPTIONAL<BiometricProcessSecurityInformation>,
-        /**
-         * @summary `securityEvaluationExtensionInformation`.
-         * @public
-         * @readonly
-         */
-        readonly securityEvaluationExtensionInformation?: OPTIONAL<SecurityEvaluationExtensionInformation>
-    ) {}
+        cryptoModuleSecurityInformation?: OPTIONAL<CryptoModuleSecurityInformation>,
+        biometricProcessSecurityInformation?: OPTIONAL<BiometricProcessSecurityInformation>,
+        securityEvaluationExtensionInformation?: OPTIONAL<SecurityEvaluationExtensionInformation>
+    ) {
+        this.cryptoModuleSecurityInformation = cryptoModuleSecurityInformation;
+        this.biometricProcessSecurityInformation = biometricProcessSecurityInformation;
+        this.securityEvaluationExtensionInformation = securityEvaluationExtensionInformation;
+    }
 
     /**
      * @summary Restructures an object into a BPUSecurityReport

@@ -1,23 +1,23 @@
 /* eslint-disable */
 import {
-    ASN1Element as _Element,
+    type ASN1Element as _Element,
     ASN1TagClass as _TagClass,
-    OPTIONAL,
+    type OPTIONAL,
 } from "@wildboar/asn1";
 import * as $ from "@wildboar/asn1/functional";
 import {
-    HashAlgorithm,
+    type HashAlgorithm,
     _decode_HashAlgorithm,
     _encode_HashAlgorithm,
 } from "../PKCS-1/HashAlgorithm.ta.mjs";
 import {
-    MaskGenAlgorithm,
+    type MaskGenAlgorithm,
     _decode_MaskGenAlgorithm,
     _encode_MaskGenAlgorithm,
 } from "../PKCS-1/MaskGenAlgorithm.ta.mjs";
 import { mgf1SHA1 } from "../PKCS-1/mgf1SHA1.va.mjs";
 import {
-    PSourceAlgorithm,
+    type PSourceAlgorithm,
     _decode_PSourceAlgorithm,
     _encode_PSourceAlgorithm,
 } from "../PKCS-1/PSourceAlgorithm.ta.mjs";
@@ -40,26 +40,34 @@ import { sha1 } from "../PKCS-1/sha1.va.mjs";
  *
  */
 export class RSAES_OAEP_params {
+    /**
+     * @summary `hashAlgorithm`.
+     * @public
+     * @readonly
+     */
+    public readonly hashAlgorithm?: OPTIONAL<HashAlgorithm>;
+    /**
+     * @summary `maskGenAlgorithm`.
+     * @public
+     * @readonly
+     */
+    public readonly maskGenAlgorithm?: OPTIONAL<MaskGenAlgorithm>;
+    /**
+     * @summary `pSourceAlgorithm`.
+     * @public
+     * @readonly
+     */
+    public readonly pSourceAlgorithm?: OPTIONAL<PSourceAlgorithm>;
+
     constructor(
-        /**
-         * @summary `hashAlgorithm`.
-         * @public
-         * @readonly
-         */
-        readonly hashAlgorithm?: OPTIONAL<HashAlgorithm>,
-        /**
-         * @summary `maskGenAlgorithm`.
-         * @public
-         * @readonly
-         */
-        readonly maskGenAlgorithm?: OPTIONAL<MaskGenAlgorithm>,
-        /**
-         * @summary `pSourceAlgorithm`.
-         * @public
-         * @readonly
-         */
-        readonly pSourceAlgorithm?: OPTIONAL<PSourceAlgorithm>
-    ) {}
+        hashAlgorithm?: OPTIONAL<HashAlgorithm>,
+        maskGenAlgorithm?: OPTIONAL<MaskGenAlgorithm>,
+        pSourceAlgorithm?: OPTIONAL<PSourceAlgorithm>
+    ) {
+        this.hashAlgorithm = hashAlgorithm;
+        this.maskGenAlgorithm = maskGenAlgorithm;
+        this.pSourceAlgorithm = pSourceAlgorithm;
+    }
 
     /**
      * @summary Restructures an object into a RSAES_OAEP_params

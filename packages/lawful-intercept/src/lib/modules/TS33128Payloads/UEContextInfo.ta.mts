@@ -1,12 +1,12 @@
 /* eslint-disable */
 import {
-    BOOLEAN,
-    OPTIONAL,
-    ASN1Element as _Element,
+    type BOOLEAN,
+    type OPTIONAL,
+    type ASN1Element as _Element,
     ASN1TagClass as _TagClass
 } from "@wildboar/asn1";
 import * as $ from "@wildboar/asn1/functional";
-import { Timestamp, _decode_Timestamp, _encode_Timestamp } from "../TS33128Payloads/Timestamp.ta.mjs";
+import { type Timestamp, _decode_Timestamp, _encode_Timestamp } from "../TS33128Payloads/Timestamp.ta.mjs";
 // export { Timestamp, _decode_Timestamp, _encode_Timestamp } from "../TS33128Payloads/Timestamp.ta.mjs";
 import { AccessType, _decode_AccessType, _encode_AccessType, _enum_for_AccessType } from "../TS33128Payloads/AccessType.ta.mjs";
 // export { AccessType, _enum_for_AccessType, AccessType_threeGPPAccess /* IMPORTED_LONG_ENUMERATION_ITEM */, threeGPPAccess /* IMPORTED_SHORT_ENUMERATION_ITEM */, AccessType_nonThreeGPPAccess /* IMPORTED_LONG_ENUMERATION_ITEM */, nonThreeGPPAccess /* IMPORTED_SHORT_ENUMERATION_ITEM */, AccessType_threeGPPandNonThreeGPPAccess /* IMPORTED_LONG_ENUMERATION_ITEM */, threeGPPandNonThreeGPPAccess /* IMPORTED_SHORT_ENUMERATION_ITEM */, _decode_AccessType, _encode_AccessType } from "../TS33128Payloads/AccessType.ta.mjs";
@@ -110,13 +110,13 @@ class UEContextInfo {
          * @static
          */
 
-    public static _enum_for_accessType = _enum_for_AccessType;        /**
+    public static _enum_for_accessType: typeof _enum_for_AccessType = _enum_for_AccessType;        /**
          * @summary The enum used as the type of the component `rATType`
          * @public
          * @static
          */
 
-    public static _enum_for_rATType = _enum_for_RATType;
+    public static _enum_for_rATType: typeof _enum_for_RATType = _enum_for_RATType;
 }
 
 /**

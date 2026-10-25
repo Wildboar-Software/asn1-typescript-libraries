@@ -1,7 +1,7 @@
 /* eslint-disable */
 import {
-    OPTIONAL,
-    ASN1Element as _Element,
+    type OPTIONAL,
+    type ASN1Element as _Element,
     ASN1TagClass as _TagClass
 } from "@wildboar/asn1";
 import * as $ from "@wildboar/asn1/functional";
@@ -97,13 +97,13 @@ class NRV2XServicesAuthorization {
          * @static
          */
 
-    public static _enum_for_v2XVehicleUEAuthorizationIndicator = _enum_for_V2XUEAuthorizationIndicator;        /**
+    public static _enum_for_v2XVehicleUEAuthorizationIndicator: typeof _enum_for_V2XUEAuthorizationIndicator = _enum_for_V2XUEAuthorizationIndicator;        /**
          * @summary The enum used as the type of the component `v2XPedestrianUEAuthorizationIndicator`
          * @public
          * @static
          */
 
-    public static _enum_for_v2XPedestrianUEAuthorizationIndicator = _enum_for_V2XUEAuthorizationIndicator;
+    public static _enum_for_v2XPedestrianUEAuthorizationIndicator: typeof _enum_for_V2XUEAuthorizationIndicator = _enum_for_V2XUEAuthorizationIndicator;
 }
 
 /**

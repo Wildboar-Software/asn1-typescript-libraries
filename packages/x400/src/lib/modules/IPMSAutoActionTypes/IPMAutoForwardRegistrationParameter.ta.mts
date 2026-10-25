@@ -1,7 +1,7 @@
 /* eslint-disable */
 import {
-    OPTIONAL,
-    ASN1Element as _Element,
+    type OPTIONAL,
+    type ASN1Element as _Element,
     ASN1TagClass as _TagClass,
     ASN1Construction as _Construction,
     ASN1UniversalType as _UniversalType,
@@ -12,7 +12,7 @@ import {
 } from '@wildboar/asn1';
 import * as $ from '@wildboar/asn1/functional';
 import {
-    Filter,
+    type Filter,
     _decode_Filter,
     _encode_Filter,
 } from '../MSAbstractService/Filter.ta.mjs';
@@ -27,7 +27,7 @@ import {
     _encode_Heading,
 } from '../IPMSInformationObjects/Heading.ta.mjs';
 import {
-    BodyPart,
+    type BodyPart,
     _decode_BodyPart,
     _encode_BodyPart,
 } from '../IPMSInformationObjects/BodyPart.ta.mjs';
@@ -37,12 +37,12 @@ import {
     _encode_MSSubmissionOptions,
 } from '../MSAbstractService/MSSubmissionOptions.ta.mjs';
 import {
-    AutoForwardComment,
+    type AutoForwardComment,
     _decode_AutoForwardComment,
     _encode_AutoForwardComment,
 } from '../IPMSInformationObjects/AutoForwardComment.ta.mjs';
 import {
-    IPMAutoForwardOptions,
+    type IPMAutoForwardOptions,
     _decode_IPMAutoForwardOptions,
     _encode_IPMAutoForwardOptions,
 } from '../IPMSAutoActionTypes/IPMAutoForwardOptions.ta.mjs';
@@ -68,50 +68,66 @@ import {
  *
  */
 export class IPMAutoForwardRegistrationParameter {
+    /**
+     * @summary `filter`.
+     * @public
+     * @readonly
+     */
+    public readonly filter: OPTIONAL<Filter>;
+    /**
+     * @summary `forwarding_envelope`.
+     * @public
+     * @readonly
+     */
+    public readonly forwarding_envelope: MessageSubmissionEnvelope;
+    /**
+     * @summary `forwarding_heading`.
+     * @public
+     * @readonly
+     */
+    public readonly forwarding_heading: Heading;
+    /**
+     * @summary `forwarding_cover_note`.
+     * @public
+     * @readonly
+     */
+    public readonly forwarding_cover_note?: OPTIONAL<BodyPart>;
+    /**
+     * @summary `submission_options`.
+     * @public
+     * @readonly
+     */
+    public readonly submission_options?: OPTIONAL<MSSubmissionOptions>;
+    /**
+     * @summary `nrn_comment`.
+     * @public
+     * @readonly
+     */
+    public readonly nrn_comment?: OPTIONAL<AutoForwardComment>;
+    /**
+     * @summary `ipm_auto_forward_options`.
+     * @public
+     * @readonly
+     */
+    public readonly ipm_auto_forward_options?: OPTIONAL<IPMAutoForwardOptions>;
+
     constructor(
-        /**
-         * @summary `filter`.
-         * @public
-         * @readonly
-         */
-        readonly filter: OPTIONAL<Filter>,
-        /**
-         * @summary `forwarding_envelope`.
-         * @public
-         * @readonly
-         */
-        readonly forwarding_envelope: MessageSubmissionEnvelope,
-        /**
-         * @summary `forwarding_heading`.
-         * @public
-         * @readonly
-         */
-        readonly forwarding_heading: Heading,
-        /**
-         * @summary `forwarding_cover_note`.
-         * @public
-         * @readonly
-         */
-        readonly forwarding_cover_note?: OPTIONAL<BodyPart>,
-        /**
-         * @summary `submission_options`.
-         * @public
-         * @readonly
-         */
-        readonly submission_options?: OPTIONAL<MSSubmissionOptions>,
-        /**
-         * @summary `nrn_comment`.
-         * @public
-         * @readonly
-         */
-        readonly nrn_comment?: OPTIONAL<AutoForwardComment>,
-        /**
-         * @summary `ipm_auto_forward_options`.
-         * @public
-         * @readonly
-         */
-        readonly ipm_auto_forward_options?: OPTIONAL<IPMAutoForwardOptions>
-    ) {}
+        filter: OPTIONAL<Filter>,
+        forwarding_envelope: MessageSubmissionEnvelope,
+        forwarding_heading: Heading,
+        forwarding_cover_note?: OPTIONAL<BodyPart>,
+        submission_options?: OPTIONAL<MSSubmissionOptions>,
+        nrn_comment?: OPTIONAL<AutoForwardComment>,
+        ipm_auto_forward_options?: OPTIONAL<IPMAutoForwardOptions>
+    ) {
+        this.filter = filter;
+        this.forwarding_envelope = forwarding_envelope;
+        this.forwarding_heading = forwarding_heading;
+        this.forwarding_cover_note = forwarding_cover_note;
+        this.submission_options = submission_options;
+        this.nrn_comment = nrn_comment;
+        this.ipm_auto_forward_options = ipm_auto_forward_options;
+    }
 
     /**
      * @summary Restructures an object into a IPMAutoForwardRegistrationParameter

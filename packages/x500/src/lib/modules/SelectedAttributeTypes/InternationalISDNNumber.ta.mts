@@ -1,5 +1,5 @@
 /* eslint-disable */
-import { ASN1Element as _Element, NumericString } from "@wildboar/asn1";
+import { ASN1Element as _Element, type NumericString } from "@wildboar/asn1";
 import * as $ from "@wildboar/asn1/functional";
 
 /**
@@ -19,10 +19,10 @@ import * as $ from "@wildboar/asn1/functional";
 export type InternationalISDNNumber = NumericString; // NumericString
 
 
-export const _decode_InternationalISDNNumber = $._decodeNumericString;
+export const _decode_InternationalISDNNumber: $.ASN1Decoder<string> = $._decodeNumericString;
 
 
-export const _encode_InternationalISDNNumber = $._encodeNumericString;
+export const _encode_InternationalISDNNumber: $.ASN1Encoder<string> = $._encodeNumericString;
 
 
 /* eslint-enable */

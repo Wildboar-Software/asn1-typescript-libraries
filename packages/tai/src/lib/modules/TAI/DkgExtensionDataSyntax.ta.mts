@@ -1,7 +1,7 @@
 /* eslint-disable */
 import {
-    OCTET_STRING,
-    ASN1Element as _Element,
+    type OCTET_STRING,
+    type ASN1Element as _Element,
     ASN1TagClass as _TagClass,
     ASN1Construction as _Construction,
     ASN1UniversalType as _UniversalType,
@@ -34,31 +34,37 @@ import * as $ from "@wildboar/asn1/functional";
  */
 export
 class DkgExtensionDataSyntax {
+    /**
+     * @summary `alignmentHelpData`.
+     * @description
+     *
+     * Not standardized. Typically adjustment information to
+     * improve matching on fingerprint-based systems.
+     * X.1089 §11.3.1.
+     *
+     * @public
+     * @readonly
+     */
+    public readonly alignmentHelpData: OCTET_STRING;
+    /**
+     * @summary `biometricKeyBindingData`.
+     * @description
+     *
+     * Not standardized. Key-generation reference between the
+     * BIT and a biometric digital key. X.1089 §11.3.1.
+     *
+     * @public
+     * @readonly
+     */
+    public readonly biometricKeyBindingData: OCTET_STRING;
+
     constructor (
-        /**
-         * @summary `alignmentHelpData`.
-         * @description
-         *
-         * Not standardized. Typically adjustment information to
-         * improve matching on fingerprint-based systems.
-         * X.1089 §11.3.1.
-         *
-         * @public
-         * @readonly
-         */
-        readonly alignmentHelpData: OCTET_STRING,
-        /**
-         * @summary `biometricKeyBindingData`.
-         * @description
-         *
-         * Not standardized. Key-generation reference between the
-         * BIT and a biometric digital key. X.1089 §11.3.1.
-         *
-         * @public
-         * @readonly
-         */
-        readonly biometricKeyBindingData: OCTET_STRING
-    ) {}
+        alignmentHelpData: OCTET_STRING,
+        biometricKeyBindingData: OCTET_STRING
+    ) {
+        this.alignmentHelpData = alignmentHelpData;
+        this.biometricKeyBindingData = biometricKeyBindingData;
+    }
 
     /**
      * @summary Restructures an object into a DkgExtensionDataSyntax

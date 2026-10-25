@@ -1,7 +1,7 @@
 /* eslint-disable */
 import {
-    INTEGER,
-    ASN1Element as _Element,
+    type INTEGER,
+    type ASN1Element as _Element,
     ASN1TagClass as _TagClass,
     ASN1Construction as _Construction,
     ASN1UniversalType as _UniversalType,
@@ -28,12 +28,12 @@ export type IOIndex = INTEGER;
 
 
 
-export const _decode_IOIndex = $._decodeInteger;
+export const _decode_IOIndex: $.ASN1Decoder<INTEGER> = $._decodeInteger;
 
 
 
 
-export const _encode_IOIndex = $._encodeInteger;
+export const _encode_IOIndex: $.ASN1Encoder<INTEGER> = $._encodeInteger;
 
 
 /* eslint-enable */

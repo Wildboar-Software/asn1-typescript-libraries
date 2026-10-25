@@ -1,8 +1,8 @@
 /* eslint-disable */
 import {
-    OPTIONAL,
-    BOOLEAN,
-    ASN1Element as _Element,
+    type OPTIONAL,
+    type BOOLEAN,
+    type ASN1Element as _Element,
     ASN1TagClass as _TagClass,
     ASN1Construction as _Construction,
     ASN1UniversalType as _UniversalType,
@@ -13,7 +13,7 @@ import {
 } from '@wildboar/asn1';
 import * as $ from '@wildboar/asn1/functional';
 import {
-    EntryModification_modification,
+    type EntryModification_modification,
     _decode_EntryModification_modification,
     _encode_EntryModification_modification,
 } from '../MSAbstractService/EntryModification-modification.ta.mjs';
@@ -38,20 +38,26 @@ import {
  *
  */
 export class EntryModification {
+    /**
+     * @summary `strict`.
+     * @public
+     * @readonly
+     */
+    public readonly strict: OPTIONAL<BOOLEAN>;
+    /**
+     * @summary `modification`.
+     * @public
+     * @readonly
+     */
+    public readonly modification: EntryModification_modification;
+
     constructor(
-        /**
-         * @summary `strict`.
-         * @public
-         * @readonly
-         */
-        readonly strict: OPTIONAL<BOOLEAN>,
-        /**
-         * @summary `modification`.
-         * @public
-         * @readonly
-         */
-        readonly modification: EntryModification_modification
-    ) {}
+        strict: OPTIONAL<BOOLEAN>,
+        modification: EntryModification_modification
+    ) {
+        this.strict = strict;
+        this.modification = modification;
+    }
 
     /**
      * @summary Restructures an object into a EntryModification

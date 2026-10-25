@@ -1,6 +1,6 @@
 /* eslint-disable */
 import {
-    ASN1Element as _Element,
+    type ASN1Element as _Element,
     ASN1TagClass as _TagClass,
     ASN1Construction as _Construction,
     ASN1UniversalType as _UniversalType,
@@ -10,7 +10,7 @@ import {
     ASN1ConstructionError as _ConstructionError,
 } from "@wildboar/asn1";
 import * as $ from "@wildboar/asn1/functional";
-import { ObservedValue, _decode_ObservedValue, _encode_ObservedValue } from "../Attribute-ASN1Module/ObservedValue.ta.mjs";
+import { type ObservedValue, _decode_ObservedValue, _encode_ObservedValue } from "../Attribute-ASN1Module/ObservedValue.ta.mjs";
 /**
  * @summary ThresholdLevelInd_down
  * @description
@@ -37,7 +37,7 @@ class ThresholdLevelInd_down {
      * @public
      * @readonly
      */
-    readonly high: ObservedValue;
+    public readonly high: ObservedValue;
     /**
      * @summary `low`.
      * @description
@@ -47,7 +47,7 @@ class ThresholdLevelInd_down {
      * @public
      * @readonly
      */
-    readonly low: ObservedValue;
+    public readonly low: ObservedValue;
 
     constructor (
         high: ObservedValue,

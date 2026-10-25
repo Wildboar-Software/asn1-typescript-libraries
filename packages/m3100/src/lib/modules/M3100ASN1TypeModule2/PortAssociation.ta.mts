@@ -1,6 +1,6 @@
 /* eslint-disable */
 import {
-    ASN1Element as _Element,
+    type ASN1Element as _Element,
     ASN1TagClass as _TagClass,
     ASN1Construction as _Construction,
     ASN1UniversalType as _UniversalType,
@@ -11,12 +11,12 @@ import {
 } from '@wildboar/asn1';
 import * as $ from '@wildboar/asn1/functional';
 import {
-    NameType,
+    type NameType,
     _decode_NameType,
     _encode_NameType,
 } from '../ASN1DefinedTypesModule/NameType.ta.mjs';
 import {
-    PointerOrNull,
+    type PointerOrNull,
     _decode_PointerOrNull,
     _encode_PointerOrNull,
 } from '../ASN1DefinedTypesModule/PointerOrNull.ta.mjs';
@@ -37,20 +37,26 @@ import {
  *
  */
 export class PortAssociation {
+    /**
+     * @summary `portId`.
+     * @public
+     * @readonly
+     */
+    public readonly portId: NameType;
+    /**
+     * @summary `portTrail`.
+     * @public
+     * @readonly
+     */
+    public readonly portTrail: PointerOrNull;
+
     constructor(
-        /**
-         * @summary `portId`.
-         * @public
-         * @readonly
-         */
-        readonly portId: NameType,
-        /**
-         * @summary `portTrail`.
-         * @public
-         * @readonly
-         */
-        readonly portTrail: PointerOrNull
-    ) {}
+        portId: NameType,
+        portTrail: PointerOrNull
+    ) {
+        this.portId = portId;
+        this.portTrail = portTrail;
+    }
 
     /**
      * @summary Restructures an object into a PortAssociation

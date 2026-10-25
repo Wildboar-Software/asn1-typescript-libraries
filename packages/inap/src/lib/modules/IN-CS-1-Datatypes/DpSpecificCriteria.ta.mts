@@ -1,12 +1,12 @@
 /* eslint-disable */
 import {
-    ASN1Element as _Element,
+    type ASN1Element as _Element,
     ASN1TagClass as _TagClass
 } from "@wildboar/asn1";
 import * as $ from "@wildboar/asn1/functional";
-import { NumberOfDigits, _decode_NumberOfDigits, _encode_NumberOfDigits } from "../IN-CS-1-Datatypes/NumberOfDigits.ta.mjs";
+import { type NumberOfDigits, _decode_NumberOfDigits, _encode_NumberOfDigits } from "../IN-CS-1-Datatypes/NumberOfDigits.ta.mjs";
 // export { NumberOfDigits, _decode_NumberOfDigits, _encode_NumberOfDigits } from "../IN-CS-1-Datatypes/NumberOfDigits.ta.mjs";
-import { ApplicationTimer, _decode_ApplicationTimer, _encode_ApplicationTimer } from "../IN-CS-1-Datatypes/ApplicationTimer.ta.mjs";
+import { type ApplicationTimer, _decode_ApplicationTimer, _encode_ApplicationTimer } from "../IN-CS-1-Datatypes/ApplicationTimer.ta.mjs";
 // export { ApplicationTimer, _decode_ApplicationTimer, _encode_ApplicationTimer } from "../IN-CS-1-Datatypes/ApplicationTimer.ta.mjs";
 
 

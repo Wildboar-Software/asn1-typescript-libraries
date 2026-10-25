@@ -1,6 +1,6 @@
 /* eslint-disable */
 import {
-    ASN1Element as _Element,
+    type ASN1Element as _Element,
     ASN1TagClass as _TagClass,
     ASN1Construction as _Construction,
     ASN1UniversalType as _UniversalType,
@@ -82,7 +82,7 @@ export type ResponseSync = _enum_for_ResponseSync;
  *
  * @enum {number}
  */
-export const ResponseSync = _enum_for_ResponseSync;
+export const ResponseSync: typeof _enum_for_ResponseSync = _enum_for_ResponseSync;
 
 /**
  * @summary ResponseSync_singleCast
@@ -94,7 +94,7 @@ export const ResponseSync = _enum_for_ResponseSync;
  * @constant
  * @type {number}
  */
-export const ResponseSync_singleCast: ResponseSync =
+export const ResponseSync_singleCast: _enum_for_ResponseSync.singleCast =
     ResponseSync.singleCast; /* LONG_NAMED_ENUMERATED_VALUE */
 
 /**
@@ -107,7 +107,7 @@ export const ResponseSync_singleCast: ResponseSync =
  * @constant
  * @type {number}
  */
-export const singleCast: ResponseSync =
+export const singleCast: _enum_for_ResponseSync.singleCast =
     ResponseSync.singleCast; /* SHORT_NAMED_ENUMERATED_VALUE */
 
 /**
@@ -120,7 +120,7 @@ export const singleCast: ResponseSync =
  * @constant
  * @type {number}
  */
-export const ResponseSync_bestEffort: ResponseSync =
+export const ResponseSync_bestEffort: _enum_for_ResponseSync.bestEffort =
     ResponseSync.bestEffort; /* LONG_NAMED_ENUMERATED_VALUE */
 
 /**
@@ -133,7 +133,7 @@ export const ResponseSync_bestEffort: ResponseSync =
  * @constant
  * @type {number}
  */
-export const bestEffort: ResponseSync =
+export const bestEffort: _enum_for_ResponseSync.bestEffort =
     ResponseSync.bestEffort; /* SHORT_NAMED_ENUMERATED_VALUE */
 
 /**
@@ -145,7 +145,7 @@ export const bestEffort: ResponseSync =
  * @constant
  * @type {number}
  */
-export const ResponseSync_atomic: ResponseSync =
+export const ResponseSync_atomic: _enum_for_ResponseSync.atomic =
     ResponseSync.atomic; /* LONG_NAMED_ENUMERATED_VALUE */
 
 /**
@@ -157,14 +157,26 @@ export const ResponseSync_atomic: ResponseSync =
  * @constant
  * @type {number}
  */
-export const atomic: ResponseSync =
+export const atomic: _enum_for_ResponseSync.atomic =
     ResponseSync.atomic; /* SHORT_NAMED_ENUMERATED_VALUE */
 
 
-export const _decode_ResponseSync = $._decodeEnumerated;
+export function _decode_ResponseSync(el: _Element): ResponseSync {
+    const enumerated = $._decodeEnumerated(el);
+    switch (enumerated) {
+        case ResponseSync.singleCast: return ResponseSync.singleCast;
+        case ResponseSync.bestEffort: return ResponseSync.bestEffort;
+        case ResponseSync.atomic: return ResponseSync.atomic;
+        default:
+            throw new _ConstructionError(
+                'Invalid ENUMERATED value ' + enumerated + ' for ResponseSync.',
+                el,
+            );
+    }
+}
 
 
-export const _encode_ResponseSync = $._encodeEnumerated;
+export const _encode_ResponseSync: $.ASN1Encoder<ResponseSync> = $._encodeEnumerated as $.ASN1Encoder<ResponseSync>;
 
 
 /* eslint-enable */

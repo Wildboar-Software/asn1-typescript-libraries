@@ -1,16 +1,16 @@
 /* eslint-disable */
 import {
-    OPTIONAL,
-    ASN1Element as _Element,
+    type OPTIONAL,
+    type ASN1Element as _Element,
     ASN1TagClass as _TagClass
 } from "@wildboar/asn1";
 import * as $ from "@wildboar/asn1/functional";
-import { EMLPP_Priority, _decode_EMLPP_Priority, _encode_EMLPP_Priority } from "../MAP-CommonDataTypes/EMLPP-Priority.ta.mjs";
-import { MaxMC_Bearers, _decode_MaxMC_Bearers, _encode_MaxMC_Bearers } from "../MAP-CommonDataTypes/MaxMC-Bearers.ta.mjs";
-import { MC_Bearers, _decode_MC_Bearers, _encode_MC_Bearers } from "../MAP-CommonDataTypes/MC-Bearers.ta.mjs";
-import { CCBS_FeatureList, _decode_CCBS_FeatureList, _encode_CCBS_FeatureList } from "../MAP-SS-DataTypes/CCBS-FeatureList.ta.mjs";
+import { type EMLPP_Priority, _decode_EMLPP_Priority, _encode_EMLPP_Priority } from "../MAP-CommonDataTypes/EMLPP-Priority.ta.mjs";
+import { type MaxMC_Bearers, _decode_MaxMC_Bearers, _encode_MaxMC_Bearers } from "../MAP-CommonDataTypes/MaxMC-Bearers.ta.mjs";
+import { type MC_Bearers, _decode_MC_Bearers, _encode_MC_Bearers } from "../MAP-CommonDataTypes/MC-Bearers.ta.mjs";
+import { type CCBS_FeatureList, _decode_CCBS_FeatureList, _encode_CCBS_FeatureList } from "../MAP-SS-DataTypes/CCBS-FeatureList.ta.mjs";
 import { CliRestrictionOption, _decode_CliRestrictionOption, _encode_CliRestrictionOption, _enum_for_CliRestrictionOption } from "../MAP-SS-DataTypes/CliRestrictionOption.ta.mjs";
-import { SS_Status, _decode_SS_Status, _encode_SS_Status } from "../MAP-SS-DataTypes/SS-Status.ta.mjs";
+import { type SS_Status, _decode_SS_Status, _encode_SS_Status } from "../MAP-SS-DataTypes/SS-Status.ta.mjs";
 
 
 /**
@@ -25,13 +25,13 @@ import { SS_Status, _decode_SS_Status, _encode_SS_Status } from "../MAP-SS-DataT
  * ```asn1
  * GenericServiceInfo ::= SEQUENCE {
  *     ss-Status    SS-Status,
- *     cliRestrictionOption    CliRestrictionOption    OPTIONAL,
+ *     cliRestrictionOption    CliRestrictionOption    type OPTIONAL,
  *     ...,
- *     maximumEntitledPriority    [0] EMLPP-Priority    OPTIONAL,
- *     defaultPriority    [1] EMLPP-Priority    OPTIONAL,
- *     ccbs-FeatureList    [2] CCBS-FeatureList    OPTIONAL,
- *     nbrSB    [3] MaxMC-Bearers    OPTIONAL,
- *     nbrUser    [4] MC-Bearers    OPTIONAL,
+ *     maximumEntitledPriority    [0] EMLPP-Priority    type OPTIONAL,
+ *     defaultPriority    [1] EMLPP-Priority    type OPTIONAL,
+ *     ccbs-FeatureList    [2] CCBS-FeatureList    type OPTIONAL,
+ *     nbrSB    [3] MaxMC-Bearers    type OPTIONAL,
+ *     nbrUser    [4] MC-Bearers    type OPTIONAL,
  *     nbrSN    [5] MC-Bearers    OPTIONAL }
  * ```
  * 
@@ -39,94 +39,114 @@ import { SS_Status, _decode_SS_Status, _encode_SS_Status } from "../MAP-SS-DataT
  */
 export
 class GenericServiceInfo {
+    /**
+     * @summary `ss_Status`.
+     * @description
+     *
+     * SS-Status (clause 7.6.4.2).
+     *
+     * @public
+     * @readonly
+     */
+    public readonly ss_Status: SS_Status;
+    /**
+     * @summary `cliRestrictionOption`.
+     * @description
+     *
+     * CLIR restriction mode (clause 7.6.4.5).
+     *
+     * @public
+     * @readonly
+     */
+    public readonly cliRestrictionOption?: OPTIONAL<CliRestrictionOption>;
+    /**
+     * @summary `maximumEntitledPriority`.
+     * @description
+     *
+     * Maximum entitled eMLPP priority.
+     *
+     * @public
+     * @readonly
+     */
+    public readonly maximumEntitledPriority?: OPTIONAL<EMLPP_Priority>;
+    /**
+     * @summary `defaultPriority`.
+     * @description
+     *
+     * Default eMLPP priority.
+     *
+     * @public
+     * @readonly
+     */
+    public readonly defaultPriority?: OPTIONAL<EMLPP_Priority>;
+    /**
+     * @summary `ccbs_FeatureList`.
+     * @description
+     *
+     * CCBS features, at most 5.
+     *
+     * @public
+     * @readonly
+     */
+    public readonly ccbs_FeatureList?: OPTIONAL<CCBS_FeatureList>;
+    /**
+     * @summary `nbrSB`.
+     * @description
+     *
+     * Maximum Multicall bearers.
+     *
+     * @public
+     * @readonly
+     */
+    public readonly nbrSB?: OPTIONAL<MaxMC_Bearers>;
+    /**
+     * @summary `nbrUser`.
+     * @description
+     *
+     * Multicall user bearers.
+     *
+     * @public
+     * @readonly
+     */
+    public readonly nbrUser?: OPTIONAL<MC_Bearers>;
+    /**
+     * @summary `nbrSN`.
+     * @description
+     *
+     * Multicall SN bearers.
+     *
+     * @public
+     * @readonly
+     */
+    public readonly nbrSN?: OPTIONAL<MC_Bearers>;
+    /**
+     * @summary Extensions that are not recognized.
+     * @public
+     * @readonly
+     */
+    public readonly _unrecognizedExtensionsList: _Element[];
+
     constructor (
-        /**
-         * @summary `ss_Status`.
-         * @description
-         *
-         * SS-Status (clause 7.6.4.2).
-         *
-         * @public
-         * @readonly
-         */
-        readonly ss_Status: SS_Status,
-        /**
-         * @summary `cliRestrictionOption`.
-         * @description
-         *
-         * CLIR restriction mode (clause 7.6.4.5).
-         *
-         * @public
-         * @readonly
-         */
-        readonly cliRestrictionOption?: OPTIONAL<CliRestrictionOption>,
-        /**
-         * @summary `maximumEntitledPriority`.
-         * @description
-         *
-         * Maximum entitled eMLPP priority.
-         *
-         * @public
-         * @readonly
-         */
-        readonly maximumEntitledPriority?: OPTIONAL<EMLPP_Priority>,
-        /**
-         * @summary `defaultPriority`.
-         * @description
-         *
-         * Default eMLPP priority.
-         *
-         * @public
-         * @readonly
-         */
-        readonly defaultPriority?: OPTIONAL<EMLPP_Priority>,
-        /**
-         * @summary `ccbs_FeatureList`.
-         * @description
-         *
-         * CCBS features, at most 5.
-         *
-         * @public
-         * @readonly
-         */
-        readonly ccbs_FeatureList?: OPTIONAL<CCBS_FeatureList>,
-        /**
-         * @summary `nbrSB`.
-         * @description
-         *
-         * Maximum Multicall bearers.
-         *
-         * @public
-         * @readonly
-         */
-        readonly nbrSB?: OPTIONAL<MaxMC_Bearers>,
-        /**
-         * @summary `nbrUser`.
-         * @description
-         *
-         * Multicall user bearers.
-         *
-         * @public
-         * @readonly
-         */
-        readonly nbrUser?: OPTIONAL<MC_Bearers>,
-        /**
-         * @summary `nbrSN`.
-         * @description
-         *
-         * Multicall SN bearers.
-         *
-         * @public
-         * @readonly
-         */
-        readonly nbrSN?: OPTIONAL<MC_Bearers>,
-        /**
-         * @summary Extensions that are not recognized.
-         * @public
-         * @readonly
-         */
-        readonly _unrecognizedExtensionsList: _Element[] = []
-    ) {}
+        ss_Status: SS_Status,
+        cliRestrictionOption?: OPTIONAL<CliRestrictionOption>,
+        maximumEntitledPriority?: OPTIONAL<EMLPP_Priority>,
+        defaultPriority?: OPTIONAL<EMLPP_Priority>,
+        ccbs_FeatureList?: OPTIONAL<CCBS_FeatureList>,
+        nbrSB?: OPTIONAL<MaxMC_Bearers>,
+        nbrUser?: OPTIONAL<MC_Bearers>,
+        nbrSN?: OPTIONAL<MC_Bearers>,
+        _unrecognizedExtensionsList: _Element[] = []
+    ) {
+        this.ss_Status = ss_Status;
+        this.cliRestrictionOption = cliRestrictionOption;
+        this.maximumEntitledPriority = maximumEntitledPriority;
+        this.defaultPriority = defaultPriority;
+        this.ccbs_FeatureList = ccbs_FeatureList;
+        this.nbrSB = nbrSB;
+        this.nbrUser = nbrUser;
+        this.nbrSN = nbrSN;
+        this._unrecognizedExtensionsList = _unrecognizedExtensionsList;
+    }
 
     /**
      * @summary Restructures an object into a GenericServiceInfo
@@ -150,7 +170,7 @@ class GenericServiceInfo {
          * @static
          */
 
-    public static _enum_for_cliRestrictionOption = _enum_for_CliRestrictionOption;
+    public static _enum_for_cliRestrictionOption: typeof _enum_for_CliRestrictionOption = _enum_for_CliRestrictionOption;
 }
 
 /**

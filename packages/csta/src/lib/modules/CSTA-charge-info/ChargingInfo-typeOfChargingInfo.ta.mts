@@ -1,7 +1,7 @@
 /* eslint-disable */
 
 import * as $ from "@wildboar/asn1/functional";
-import { ENUMERATED, ASN1Element as _Element } from "@wildboar/asn1";
+import { type ENUMERATED, ASN1Element as _Element } from "@wildboar/asn1";
 
 
 
@@ -75,7 +75,7 @@ type ChargingInfo_typeOfChargingInfo = _enum_for_ChargingInfo_typeOfChargingInfo
  * @enum {number}
  */
 export
-const ChargingInfo_typeOfChargingInfo = _enum_for_ChargingInfo_typeOfChargingInfo;
+const ChargingInfo_typeOfChargingInfo: typeof _enum_for_ChargingInfo_typeOfChargingInfo = _enum_for_ChargingInfo_typeOfChargingInfo;
 
 /**
  * @summary ChargingInfo_typeOfChargingInfo_subTotal
@@ -87,7 +87,7 @@ const ChargingInfo_typeOfChargingInfo = _enum_for_ChargingInfo_typeOfChargingInf
  * @type {number}
  */
 export
-const ChargingInfo_typeOfChargingInfo_subTotal: ChargingInfo_typeOfChargingInfo = ChargingInfo_typeOfChargingInfo.subTotal; /* LONG_NAMED_ENUMERATED_VALUE */
+const ChargingInfo_typeOfChargingInfo_subTotal: _enum_for_ChargingInfo_typeOfChargingInfo.subTotal = ChargingInfo_typeOfChargingInfo.subTotal; /* LONG_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary subTotal
@@ -95,7 +95,7 @@ const ChargingInfo_typeOfChargingInfo_subTotal: ChargingInfo_typeOfChargingInfo 
  * @type {number}
  */
 export
-const subTotal: ChargingInfo_typeOfChargingInfo = ChargingInfo_typeOfChargingInfo.subTotal; /* SHORT_NAMED_ENUMERATED_VALUE */
+const subTotal: _enum_for_ChargingInfo_typeOfChargingInfo.subTotal = ChargingInfo_typeOfChargingInfo.subTotal; /* SHORT_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary ChargingInfo_typeOfChargingInfo_total
@@ -107,7 +107,7 @@ const subTotal: ChargingInfo_typeOfChargingInfo = ChargingInfo_typeOfChargingInf
  * @type {number}
  */
 export
-const ChargingInfo_typeOfChargingInfo_total: ChargingInfo_typeOfChargingInfo = ChargingInfo_typeOfChargingInfo.total; /* LONG_NAMED_ENUMERATED_VALUE */
+const ChargingInfo_typeOfChargingInfo_total: _enum_for_ChargingInfo_typeOfChargingInfo.total = ChargingInfo_typeOfChargingInfo.total; /* LONG_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary total
@@ -115,7 +115,7 @@ const ChargingInfo_typeOfChargingInfo_total: ChargingInfo_typeOfChargingInfo = C
  * @type {number}
  */
 export
-const total: ChargingInfo_typeOfChargingInfo = ChargingInfo_typeOfChargingInfo.total; /* SHORT_NAMED_ENUMERATED_VALUE */
+const total: _enum_for_ChargingInfo_typeOfChargingInfo.total = ChargingInfo_typeOfChargingInfo.total; /* SHORT_NAMED_ENUMERATED_VALUE */
 
 let _cached_decoder_for_ChargingInfo_typeOfChargingInfo: $.ASN1Decoder<ChargingInfo_typeOfChargingInfo> | null = null;
 

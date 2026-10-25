@@ -1,7 +1,7 @@
 /* eslint-disable */
 import {
-    OPTIONAL,
-    ASN1Element as _Element,
+    type OPTIONAL,
+    type ASN1Element as _Element,
     ASN1TagClass as _TagClass,
     ASN1Construction as _Construction,
     ASN1UniversalType as _UniversalType,
@@ -12,17 +12,17 @@ import {
 } from '@wildboar/asn1';
 import * as $ from '@wildboar/asn1/functional';
 import {
-    EDINotificationRequests,
+    type EDINotificationRequests,
     _decode_EDINotificationRequests,
     _encode_EDINotificationRequests,
 } from '../EDIMSInformationObjects/EDINotificationRequests.ta.mjs';
 import {
-    EDINotificationSecurity,
+    type EDINotificationSecurity,
     _decode_EDINotificationSecurity,
     _encode_EDINotificationSecurity,
 } from '../EDIMSInformationObjects/EDINotificationSecurity.ta.mjs';
 import {
-    EDIReceptionSecurity,
+    type EDIReceptionSecurity,
     _decode_EDIReceptionSecurity,
     _encode_EDIReceptionSecurity,
 } from '../EDIMSInformationObjects/EDIReceptionSecurity.ta.mjs';
@@ -44,26 +44,34 @@ import {
  *
  */
 export class EDINotificationRequestsField {
+    /**
+     * @summary `edi_notification_requests`.
+     * @public
+     * @readonly
+     */
+    public readonly edi_notification_requests?: OPTIONAL<EDINotificationRequests>;
+    /**
+     * @summary `edi_notification_security`.
+     * @public
+     * @readonly
+     */
+    public readonly edi_notification_security?: OPTIONAL<EDINotificationSecurity>;
+    /**
+     * @summary `edi_reception_security`.
+     * @public
+     * @readonly
+     */
+    public readonly edi_reception_security?: OPTIONAL<EDIReceptionSecurity>;
+
     constructor(
-        /**
-         * @summary `edi_notification_requests`.
-         * @public
-         * @readonly
-         */
-        readonly edi_notification_requests?: OPTIONAL<EDINotificationRequests>,
-        /**
-         * @summary `edi_notification_security`.
-         * @public
-         * @readonly
-         */
-        readonly edi_notification_security?: OPTIONAL<EDINotificationSecurity>,
-        /**
-         * @summary `edi_reception_security`.
-         * @public
-         * @readonly
-         */
-        readonly edi_reception_security?: OPTIONAL<EDIReceptionSecurity>
-    ) {}
+        edi_notification_requests?: OPTIONAL<EDINotificationRequests>,
+        edi_notification_security?: OPTIONAL<EDINotificationSecurity>,
+        edi_reception_security?: OPTIONAL<EDIReceptionSecurity>
+    ) {
+        this.edi_notification_requests = edi_notification_requests;
+        this.edi_notification_security = edi_notification_security;
+        this.edi_reception_security = edi_reception_security;
+    }
 
     /**
      * @summary Restructures an object into a EDINotificationRequestsField

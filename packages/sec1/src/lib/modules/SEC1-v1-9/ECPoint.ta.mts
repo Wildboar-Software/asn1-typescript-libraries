@@ -1,7 +1,7 @@
 /* eslint-disable */
 import {
-    OCTET_STRING,
-    ASN1Element as _Element,
+    type OCTET_STRING,
+    type ASN1Element as _Element,
     ASN1TagClass as _TagClass,
     ASN1Construction as _Construction,
     ASN1UniversalType as _UniversalType,
@@ -33,10 +33,10 @@ export
 type ECPoint = OCTET_STRING; // OctetStringType
 
 
-export const _decode_ECPoint = $._decodeOctetString;
+export const _decode_ECPoint: $.ASN1Decoder<OCTET_STRING> = $._decodeOctetString;
 
 
-export const _encode_ECPoint = $._encodeOctetString;
+export const _encode_ECPoint: $.ASN1Encoder<OCTET_STRING> = $._encodeOctetString;
 
 
 /* eslint-enable */

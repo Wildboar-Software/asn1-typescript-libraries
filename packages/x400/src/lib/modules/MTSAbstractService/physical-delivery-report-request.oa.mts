@@ -1,7 +1,7 @@
 /* eslint-disable */
 import {
     TRUE_BIT,
-    ASN1Element as _Element,
+    type ASN1Element as _Element,
     ASN1TagClass as _TagClass,
     ASN1Construction as _Construction,
     ASN1UniversalType as _UniversalType,
@@ -20,7 +20,7 @@ import {
     _encode_Criticality,
 } from '../MTSAbstractService/Criticality.ta.mjs';
 import {
-    PhysicalDeliveryReportRequest,
+    type PhysicalDeliveryReportRequest,
     return_of_undeliverable_mail_by_PDS /* IMPORTED_SHORT_NAMED_INTEGER */,
     _decode_PhysicalDeliveryReportRequest,
     _encode_PhysicalDeliveryReportRequest,

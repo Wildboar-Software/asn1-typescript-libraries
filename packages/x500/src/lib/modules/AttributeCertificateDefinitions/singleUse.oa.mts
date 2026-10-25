@@ -1,5 +1,5 @@
 /* eslint-disable */
-import { NULL } from "@wildboar/asn1";
+import { type NULL } from "@wildboar/asn1";
 import * as $ from "@wildboar/asn1/functional";
 import { id_ce_singleUse } from "../AttributeCertificateDefinitions/id-ce-singleUse.va.mjs";
 import { type EXTENSION } from "../AuthenticationFramework/EXTENSION.oca.mjs";

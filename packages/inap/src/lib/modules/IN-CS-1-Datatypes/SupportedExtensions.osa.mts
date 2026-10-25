@@ -1,5 +1,5 @@
 /* eslint-disable */
-import { EXTENSION } from "../IN-CS-1-Datatypes/EXTENSION.oca.mjs";
+import { type EXTENSION } from "../IN-CS-1-Datatypes/EXTENSION.oca.mjs";
 // export { EXTENSION } from "../IN-CS-1-Datatypes/EXTENSION.oca.mjs";
 
 

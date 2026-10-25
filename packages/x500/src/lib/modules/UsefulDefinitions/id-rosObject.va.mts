@@ -1,5 +1,5 @@
 /* eslint-disable */
-import { ID } from "../UsefulDefinitions/ID.ta.mjs";
+import { type ID } from "../UsefulDefinitions/ID.ta.mjs";
 import { rosObject } from "../UsefulDefinitions/rosObject.va.mjs";
 /**
  * @summary id_rosObject

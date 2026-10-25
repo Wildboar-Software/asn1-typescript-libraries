@@ -1,11 +1,11 @@
 /* eslint-disable */
 import {
     ASN1ConstructionError as _ConstructionError,
-    ASN1Element as _Element,
+    type ASN1Element as _Element,
     ASN1TagClass as _TagClass
 } from "@wildboar/asn1";
 import * as $ from "@wildboar/asn1/functional";
-import { EncapsulatedMSRP, _decode_EncapsulatedMSRP, _encode_EncapsulatedMSRP } from "../TS33128Payloads/EncapsulatedMSRP.ta.mjs";
+import { type EncapsulatedMSRP, _decode_EncapsulatedMSRP, _encode_EncapsulatedMSRP } from "../TS33128Payloads/EncapsulatedMSRP.ta.mjs";
 // export { EncapsulatedMSRP, _decode_EncapsulatedMSRP, _encode_EncapsulatedMSRP } from "../TS33128Payloads/EncapsulatedMSRP.ta.mjs";
 
 

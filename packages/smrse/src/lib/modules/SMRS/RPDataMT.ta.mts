@@ -1,15 +1,15 @@
 /* eslint-disable */
 import {
-    BOOLEAN,
-    OPTIONAL,
-    ASN1Element as _Element,
+    type BOOLEAN,
+    type OPTIONAL,
+    type ASN1Element as _Element,
     ASN1TagClass as _TagClass
 } from "@wildboar/asn1";
 import * as $ from "@wildboar/asn1/functional";
-import { RP_MR, _decode_RP_MR, _encode_RP_MR } from "../SMRS/RP-MR.ta.mjs";
+import { type RP_MR, _decode_RP_MR, _encode_RP_MR } from "../SMRS/RP-MR.ta.mjs";
 import { SMS_Address, _decode_SMS_Address, _encode_SMS_Address } from "../SMRS/SMS-Address.ta.mjs";
-import { RP_UD, _decode_RP_UD, _encode_RP_UD } from "../SMRS/RP-UD.ta.mjs";
-import { SM_TC, _decode_SM_TC, _encode_SM_TC } from "../SMRS/SM-TC.ta.mjs";
+import { type RP_UD, _decode_RP_UD, _encode_RP_UD } from "../SMRS/RP-UD.ta.mjs";
+import { type SM_TC, _decode_SM_TC, _encode_SM_TC } from "../SMRS/SM-TC.ta.mjs";
 
 
 /**
@@ -60,7 +60,7 @@ class RPDataMT {
      * @public
      * @readonly
      */
-    readonly mt_priority_request: BOOLEAN;
+    public readonly mt_priority_request: BOOLEAN;
     /**
      * @summary `mt_mms`.
      * @description
@@ -74,7 +74,7 @@ class RPDataMT {
      * @public
      * @readonly
      */
-    readonly mt_mms: BOOLEAN;
+    public readonly mt_mms: BOOLEAN;
     /**
      * @summary `mt_message_reference`.
      * @description
@@ -86,7 +86,7 @@ class RPDataMT {
      * @public
      * @readonly
      */
-    readonly mt_message_reference: RP_MR;
+    public readonly mt_message_reference: RP_MR;
     /**
      * @summary `mt_originating_address`.
      * @description
@@ -97,7 +97,7 @@ class RPDataMT {
      * @public
      * @readonly
      */
-    readonly mt_originating_address: SMS_Address;
+    public readonly mt_originating_address: SMS_Address;
     /**
      * @summary `mt_destination_address`.
      * @description
@@ -108,7 +108,7 @@ class RPDataMT {
      * @public
      * @readonly
      */
-    readonly mt_destination_address: SMS_Address;
+    public readonly mt_destination_address: SMS_Address;
     /**
      * @summary `mt_user_data`.
      * @description
@@ -118,7 +118,7 @@ class RPDataMT {
      * @public
      * @readonly
      */
-    readonly mt_user_data: RP_UD;
+    public readonly mt_user_data: RP_UD;
     /**
      * @summary `mt_origVMSCAddr`.
      * @description
@@ -129,7 +129,7 @@ class RPDataMT {
      * @public
      * @readonly
      */
-    readonly mt_origVMSCAddr?: OPTIONAL<SMS_Address>;
+    public readonly mt_origVMSCAddr?: OPTIONAL<SMS_Address>;
     /**
      * @summary `mt_tariffClass`.
      * @description
@@ -140,7 +140,7 @@ class RPDataMT {
      * @public
      * @readonly
      */
-    readonly mt_tariffClass?: OPTIONAL<SM_TC>;
+    public readonly mt_tariffClass?: OPTIONAL<SM_TC>;
     /**
      * @summary Extensions that are not recognized.
      * @description
@@ -151,7 +151,7 @@ class RPDataMT {
      * @public
      * @readonly
      */
-    readonly _unrecognizedExtensionsList: _Element[];
+    public readonly _unrecognizedExtensionsList: _Element[];
 
     constructor (
         mt_priority_request: BOOLEAN,

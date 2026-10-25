@@ -1,17 +1,17 @@
 /* eslint-disable */
 import {
-    OPTIONAL,
-    INTEGER,
-    OBJECT_IDENTIFIER,
-    SEQUENCE,
-    SET,
-    ASN1Element as _Element,
+    type OPTIONAL,
+    type INTEGER,
+    type OBJECT_IDENTIFIER,
+    type SEQUENCE,
+    type SET,
+    type ASN1Element as _Element,
     ASN1TagClass as _TagClass,
     ASN1OverflowError,
 } from "@wildboar/asn1";
 import * as $ from "@wildboar/asn1/functional";
 import {
-    ObjectInstance,
+    type ObjectInstance,
     _decode_ObjectInstance,
     _encode_ObjectInstance,
 } from "../CMIP-1/ObjectInstance.ta.mjs";
@@ -36,26 +36,33 @@ import {
  */
 export
 class SuspectObject {
+    /**
+     * @summary `suspectObjectClass`.
+     * @public
+     * @readonly
+     */
+    public readonly suspectObjectClass: OBJECT_IDENTIFIER;
+    /**
+     * @summary `suspectObjectInstance`.
+     * @public
+     * @readonly
+     */
+    public readonly suspectObjectInstance: ObjectInstance;
+    /**
+     * @summary `failureProbability`.
+     * @public
+     * @readonly
+     */
+    public readonly failureProbability?: OPTIONAL<INTEGER>;
+
     constructor (
-        /**
-         * @summary `suspectObjectClass`.
-         * @public
-         * @readonly
-         */
-        readonly suspectObjectClass: OBJECT_IDENTIFIER,
-        /**
-         * @summary `suspectObjectInstance`.
-         * @public
-         * @readonly
-         */
-        readonly suspectObjectInstance: ObjectInstance,
-        /**
-         * @summary `failureProbability`.
-         * @public
-         * @readonly
-         */
-        readonly failureProbability?: OPTIONAL<INTEGER>
+        suspectObjectClass: OBJECT_IDENTIFIER,
+        suspectObjectInstance: ObjectInstance,
+        failureProbability?: OPTIONAL<INTEGER>
     ) {
+        this.suspectObjectClass = suspectObjectClass;
+        this.suspectObjectInstance = suspectObjectInstance;
+        this.failureProbability = failureProbability;
         if (this.failureProbability !== undefined) {
             const _n = typeof this.failureProbability === "bigint" ? Number(this.failureProbability) : this.failureProbability;
             if (_n < 0 || _n > 100) {

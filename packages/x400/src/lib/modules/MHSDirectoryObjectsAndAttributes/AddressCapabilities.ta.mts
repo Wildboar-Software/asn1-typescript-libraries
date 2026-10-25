@@ -1,8 +1,8 @@
 /* eslint-disable */
 import {
-    OPTIONAL,
-    GeneralString,
-    ASN1Element as _Element,
+    type OPTIONAL,
+    type GeneralString,
+    type ASN1Element as _Element,
     ASN1TagClass as _TagClass,
     ASN1Construction as _Construction,
     ASN1UniversalType as _UniversalType,
@@ -40,26 +40,34 @@ import {
  *
  */
 export class AddressCapabilities {
+    /**
+     * @summary `description`.
+     * @public
+     * @readonly
+     */
+    public readonly description: OPTIONAL<GeneralString>;
+    /**
+     * @summary `address`.
+     * @public
+     * @readonly
+     */
+    public readonly address: ORAddress;
+    /**
+     * @summary `capabilities`.
+     * @public
+     * @readonly
+     */
+    public readonly capabilities: Capability[];
+
     constructor(
-        /**
-         * @summary `description`.
-         * @public
-         * @readonly
-         */
-        readonly description: OPTIONAL<GeneralString>,
-        /**
-         * @summary `address`.
-         * @public
-         * @readonly
-         */
-        readonly address: ORAddress,
-        /**
-         * @summary `capabilities`.
-         * @public
-         * @readonly
-         */
-        readonly capabilities: Capability[]
-    ) {}
+        description: OPTIONAL<GeneralString>,
+        address: ORAddress,
+        capabilities: Capability[]
+    ) {
+        this.description = description;
+        this.address = address;
+        this.capabilities = capabilities;
+    }
 
     /**
      * @summary Restructures an object into a AddressCapabilities

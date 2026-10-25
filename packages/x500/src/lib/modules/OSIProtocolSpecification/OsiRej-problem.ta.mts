@@ -2,22 +2,22 @@
 import { ASN1Element as _Element, ASN1TagClass as _TagClass } from "@wildboar/asn1";
 import * as $ from "@wildboar/asn1/functional";
 import {
-    GeneralProblem,
+    type GeneralProblem,
     _decode_GeneralProblem,
     _encode_GeneralProblem,
 } from "../OSIProtocolSpecification/GeneralProblem.ta.mjs";
 import {
-    InvokeProblem,
+    type InvokeProblem,
     _decode_InvokeProblem,
     _encode_InvokeProblem,
 } from "../OSIProtocolSpecification/InvokeProblem.ta.mjs";
 import {
-    ReturnErrorProblem,
+    type ReturnErrorProblem,
     _decode_ReturnErrorProblem,
     _encode_ReturnErrorProblem,
 } from "../OSIProtocolSpecification/ReturnErrorProblem.ta.mjs";
 import {
-    ReturnResultProblem,
+    type ReturnResultProblem,
     _decode_ReturnResultProblem,
     _encode_ReturnResultProblem,
 } from "../OSIProtocolSpecification/ReturnResultProblem.ta.mjs";

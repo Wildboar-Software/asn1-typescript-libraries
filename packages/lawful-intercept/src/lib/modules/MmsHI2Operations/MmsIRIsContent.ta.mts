@@ -3,9 +3,9 @@ import {
     ASN1Element as _Element
 } from "@wildboar/asn1";
 import * as $ from "@wildboar/asn1/functional";
-import { MmsIRIContent, _decode_MmsIRIContent, _encode_MmsIRIContent } from "../MmsHI2Operations/MmsIRIContent.ta.mjs";
+import { type MmsIRIContent, _decode_MmsIRIContent, _encode_MmsIRIContent } from "../MmsHI2Operations/MmsIRIContent.ta.mjs";
 // export { MmsIRIContent, _decode_MmsIRIContent, _encode_MmsIRIContent } from "../MmsHI2Operations/MmsIRIContent.ta.mjs";
-import { MmsIRISequence, _decode_MmsIRISequence, _encode_MmsIRISequence } from "../MmsHI2Operations/MmsIRISequence.ta.mjs";
+import { type MmsIRISequence, _decode_MmsIRISequence, _encode_MmsIRISequence } from "../MmsHI2Operations/MmsIRISequence.ta.mjs";
 // export { MmsIRISequence, _decode_MmsIRISequence, _encode_MmsIRISequence } from "../MmsHI2Operations/MmsIRISequence.ta.mjs";
 
 

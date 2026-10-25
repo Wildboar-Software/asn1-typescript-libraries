@@ -1,8 +1,8 @@
 /* eslint-disable */
 import {
-    ASN1Element as _Element,
+    type ASN1Element as _Element,
     ASN1TagClass as _TagClass,
-    EXTERNAL,
+    type EXTERNAL,
 } from "@wildboar/asn1";
 import * as $ from "@wildboar/asn1/functional";
 import {
@@ -16,7 +16,7 @@ import {
     _encode_SimpleCredentials,
 } from "../DirectoryAbstractService/SimpleCredentials.ta.mjs";
 import {
-    SpkmCredentials,
+    type SpkmCredentials,
     _decode_SpkmCredentials,
     _encode_SpkmCredentials,
 } from "../DirectoryAbstractService/SpkmCredentials.ta.mjs";

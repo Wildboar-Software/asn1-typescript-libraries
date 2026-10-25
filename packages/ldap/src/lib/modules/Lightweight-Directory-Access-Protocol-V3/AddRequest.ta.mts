@@ -11,12 +11,12 @@ import {
 } from '@wildboar/asn1';
 import * as $ from '@wildboar/asn1/functional';
 import {
-  LDAPDN,
+  type LDAPDN,
   _decode_LDAPDN,
   _encode_LDAPDN,
 } from '../Lightweight-Directory-Access-Protocol-V3/LDAPDN.ta.mjs';
 import {
-  AttributeList,
+  type AttributeList,
   _decode_AttributeList,
   _encode_AttributeList,
 } from '../Lightweight-Directory-Access-Protocol-V3/AttributeList.ta.mjs';
@@ -52,7 +52,7 @@ export class AddRequest {
    * @public
    * @readonly
    */
-  readonly entry: LDAPDN;
+  public readonly entry: LDAPDN;
   /**
    * @summary `attributes`.
    * @description
@@ -63,13 +63,13 @@ export class AddRequest {
    * @public
    * @readonly
    */
-  readonly attributes: AttributeList;
+  public readonly attributes: AttributeList;
   /**
    * @summary Extensions that are not recognized.
    * @public
    * @readonly
    */
-  readonly _unrecognizedExtensionsList: _Element[];
+  public readonly _unrecognizedExtensionsList: _Element[];
 
   constructor(
     entry: LDAPDN,

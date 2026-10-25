@@ -1,7 +1,7 @@
 /* eslint-disable */
 import {
-    OPTIONAL,
-    ASN1Element as _Element,
+    type OPTIONAL,
+    type ASN1Element as _Element,
     ASN1TagClass as _TagClass,
     ASN1Construction as _Construction,
     ASN1UniversalType as _UniversalType,
@@ -17,7 +17,7 @@ import {
     _encode_BPUCertificateReferrerInformation,
 } from '../AuthenticationContextForBiometrics/BPUCertificateReferrerInformation.ta.mjs';
 import {
-    BPUReportInformation,
+    type BPUReportInformation,
     _decode_BPUReportInformation,
     _encode_BPUReportInformation,
 } from '../AuthenticationContextForBiometrics/BPUReportInformation.ta.mjs';
@@ -36,20 +36,26 @@ import {
  *
  */
 export class BPUInformation {
+    /**
+     * @summary `bpuCertificateReferrerInformation`.
+     * @public
+     * @readonly
+     */
+    public readonly bpuCertificateReferrerInformation: OPTIONAL<BPUCertificateReferrerInformation>;
+    /**
+     * @summary `bpuReportInformation`.
+     * @public
+     * @readonly
+     */
+    public readonly bpuReportInformation: BPUReportInformation;
+
     constructor(
-        /**
-         * @summary `bpuCertificateReferrerInformation`.
-         * @public
-         * @readonly
-         */
-        readonly bpuCertificateReferrerInformation: OPTIONAL<BPUCertificateReferrerInformation>,
-        /**
-         * @summary `bpuReportInformation`.
-         * @public
-         * @readonly
-         */
-        readonly bpuReportInformation: BPUReportInformation
-    ) {}
+        bpuCertificateReferrerInformation: OPTIONAL<BPUCertificateReferrerInformation>,
+        bpuReportInformation: BPUReportInformation
+    ) {
+        this.bpuCertificateReferrerInformation = bpuCertificateReferrerInformation;
+        this.bpuReportInformation = bpuReportInformation;
+    }
 
     /**
      * @summary Restructures an object into a BPUInformation

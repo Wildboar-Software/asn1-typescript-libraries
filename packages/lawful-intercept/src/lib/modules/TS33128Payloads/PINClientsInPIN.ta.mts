@@ -1,15 +1,15 @@
 /* eslint-disable */
 import {
     ASN1ConstructionError as _ConstructionError,
-    ASN1Element as _Element,
+    type ASN1Element as _Element,
     ASN1TagClass as _TagClass
 } from "@wildboar/asn1";
 import * as $ from "@wildboar/asn1/functional";
-import { PINID, _decode_PINID, _encode_PINID } from "../TS33128Payloads/PINID.ta.mjs";
+import { type PINID, _decode_PINID, _encode_PINID } from "../TS33128Payloads/PINID.ta.mjs";
 // export { PINID, _decode_PINID, _encode_PINID } from "../TS33128Payloads/PINID.ta.mjs";
-import { PINServerID, _decode_PINServerID, _encode_PINServerID } from "../TS33128Payloads/PINServerID.ta.mjs";
+import { type PINServerID, _decode_PINServerID, _encode_PINServerID } from "../TS33128Payloads/PINServerID.ta.mjs";
 // export { PINServerID, _decode_PINServerID, _encode_PINServerID } from "../TS33128Payloads/PINServerID.ta.mjs";
-import { PINClientProfile, _decode_PINClientProfile, _encode_PINClientProfile } from "../TS33128Payloads/PINClientProfile.ta.mjs";
+import { type PINClientProfile, _decode_PINClientProfile, _encode_PINClientProfile } from "../TS33128Payloads/PINClientProfile.ta.mjs";
 // export { PINClientProfile, _decode_PINClientProfile, _encode_PINClientProfile } from "../TS33128Payloads/PINClientProfile.ta.mjs";
 import { XMLType, _decode_XMLType, _encode_XMLType } from "../TS33128Payloads/XMLType.ta.mjs";
 // export { XMLType, _decode_XMLType, _encode_XMLType } from "../TS33128Payloads/XMLType.ta.mjs";

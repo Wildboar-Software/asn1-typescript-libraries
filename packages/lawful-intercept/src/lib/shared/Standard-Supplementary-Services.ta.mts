@@ -1,27 +1,27 @@
 /* eslint-disable */
 import {
-    OPTIONAL,
-    ASN1Element as _Element,
+    type OPTIONAL,
+    type ASN1Element as _Element,
     ASN1TagClass as _TagClass
 } from "@wildboar/asn1";
 import * as $ from "@wildboar/asn1/functional";
-import { ISUP_SS_parameters, _decode_ISUP_SS_parameters, _encode_ISUP_SS_parameters } from "./ISUP-SS-parameters.ta.mjs";
+import { type ISUP_SS_parameters, _decode_ISUP_SS_parameters, _encode_ISUP_SS_parameters } from "./ISUP-SS-parameters.ta.mjs";
 // export { ISUP_SS_parameters, _decode_ISUP_SS_parameters, _encode_ISUP_SS_parameters } from "./ISUP-SS-parameters.ta.mjs";
-import { DSS1_SS_parameters_codeset_0, _decode_DSS1_SS_parameters_codeset_0, _encode_DSS1_SS_parameters_codeset_0 } from "./DSS1-SS-parameters-codeset-0.ta.mjs";
+import { type DSS1_SS_parameters_codeset_0, _decode_DSS1_SS_parameters_codeset_0, _encode_DSS1_SS_parameters_codeset_0 } from "./DSS1-SS-parameters-codeset-0.ta.mjs";
 // export { DSS1_SS_parameters_codeset_0, _decode_DSS1_SS_parameters_codeset_0, _encode_DSS1_SS_parameters_codeset_0 } from "./DSS1-SS-parameters-codeset-0.ta.mjs";
-import { DSS1_SS_parameters_codeset_4, _decode_DSS1_SS_parameters_codeset_4, _encode_DSS1_SS_parameters_codeset_4 } from "./DSS1-SS-parameters-codeset-4.ta.mjs";
+import { type DSS1_SS_parameters_codeset_4, _decode_DSS1_SS_parameters_codeset_4, _encode_DSS1_SS_parameters_codeset_4 } from "./DSS1-SS-parameters-codeset-4.ta.mjs";
 // export { DSS1_SS_parameters_codeset_4, _decode_DSS1_SS_parameters_codeset_4, _encode_DSS1_SS_parameters_codeset_4 } from "./DSS1-SS-parameters-codeset-4.ta.mjs";
-import { DSS1_SS_parameters_codeset_5, _decode_DSS1_SS_parameters_codeset_5, _encode_DSS1_SS_parameters_codeset_5 } from "./DSS1-SS-parameters-codeset-5.ta.mjs";
+import { type DSS1_SS_parameters_codeset_5, _decode_DSS1_SS_parameters_codeset_5, _encode_DSS1_SS_parameters_codeset_5 } from "./DSS1-SS-parameters-codeset-5.ta.mjs";
 // export { DSS1_SS_parameters_codeset_5, _decode_DSS1_SS_parameters_codeset_5, _encode_DSS1_SS_parameters_codeset_5 } from "./DSS1-SS-parameters-codeset-5.ta.mjs";
-import { DSS1_SS_parameters_codeset_6, _decode_DSS1_SS_parameters_codeset_6, _encode_DSS1_SS_parameters_codeset_6 } from "./DSS1-SS-parameters-codeset-6.ta.mjs";
+import { type DSS1_SS_parameters_codeset_6, _decode_DSS1_SS_parameters_codeset_6, _encode_DSS1_SS_parameters_codeset_6 } from "./DSS1-SS-parameters-codeset-6.ta.mjs";
 // export { DSS1_SS_parameters_codeset_6, _decode_DSS1_SS_parameters_codeset_6, _encode_DSS1_SS_parameters_codeset_6 } from "./DSS1-SS-parameters-codeset-6.ta.mjs";
-import { DSS1_SS_parameters_codeset_7, _decode_DSS1_SS_parameters_codeset_7, _encode_DSS1_SS_parameters_codeset_7 } from "./DSS1-SS-parameters-codeset-7.ta.mjs";
+import { type DSS1_SS_parameters_codeset_7, _decode_DSS1_SS_parameters_codeset_7, _encode_DSS1_SS_parameters_codeset_7 } from "./DSS1-SS-parameters-codeset-7.ta.mjs";
 // export { DSS1_SS_parameters_codeset_7, _decode_DSS1_SS_parameters_codeset_7, _encode_DSS1_SS_parameters_codeset_7 } from "./DSS1-SS-parameters-codeset-7.ta.mjs";
-import { DSS1_SS_Invoke_Components, _decode_DSS1_SS_Invoke_Components, _encode_DSS1_SS_Invoke_Components } from "./DSS1-SS-Invoke-Components.ta.mjs";
+import { type DSS1_SS_Invoke_Components, _decode_DSS1_SS_Invoke_Components, _encode_DSS1_SS_Invoke_Components } from "./DSS1-SS-Invoke-Components.ta.mjs";
 // export { DSS1_SS_Invoke_Components, _decode_DSS1_SS_Invoke_Components, _encode_DSS1_SS_Invoke_Components } from "./DSS1-SS-Invoke-Components.ta.mjs";
-import { MAP_SS_Parameters, _decode_MAP_SS_Parameters, _encode_MAP_SS_Parameters } from "./MAP-SS-Parameters.ta.mjs";
+import { type MAP_SS_Parameters, _decode_MAP_SS_Parameters, _encode_MAP_SS_Parameters } from "./MAP-SS-Parameters.ta.mjs";
 // export { MAP_SS_Parameters, _decode_MAP_SS_Parameters, _encode_MAP_SS_Parameters } from "./MAP-SS-Parameters.ta.mjs";
-import { MAP_SS_Invoke_Components, _decode_MAP_SS_Invoke_Components, _encode_MAP_SS_Invoke_Components } from "./MAP-SS-Invoke-Components.ta.mjs";
+import { type MAP_SS_Invoke_Components, _decode_MAP_SS_Invoke_Components, _encode_MAP_SS_Invoke_Components } from "./MAP-SS-Invoke-Components.ta.mjs";
 // export { MAP_SS_Invoke_Components, _decode_MAP_SS_Invoke_Components, _encode_MAP_SS_Invoke_Components } from "./MAP-SS-Invoke-Components.ta.mjs";
 
 

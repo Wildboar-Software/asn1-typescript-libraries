@@ -1,7 +1,7 @@
 /* eslint-disable */
 import {
-    INTEGER,
-    ASN1Element as _Element,
+    type INTEGER,
+    type ASN1Element as _Element,
     ASN1TagClass as _TagClass,
     ASN1Construction as _Construction,
     ASN1UniversalType as _UniversalType,
@@ -47,7 +47,7 @@ type ReportSemaphoreEntryStatus_Request_state = INTEGER;
  * @type {number}
  */
 export
-const ReportSemaphoreEntryStatus_Request_state_queued: ReportSemaphoreEntryStatus_Request_state = 0; /* LONG_NAMED_INTEGER_VALUE */
+const ReportSemaphoreEntryStatus_Request_state_queued: 0 = 0 satisfies ReportSemaphoreEntryStatus_Request_state; /* LONG_NAMED_INTEGER_VALUE */
 
 /**
  * @summary ReportSemaphoreEntryStatus_Request_state_queued
@@ -59,7 +59,7 @@ const ReportSemaphoreEntryStatus_Request_state_queued: ReportSemaphoreEntryStatu
  * @type {number}
  */
 export
-const queued: ReportSemaphoreEntryStatus_Request_state = ReportSemaphoreEntryStatus_Request_state_queued; /* SHORT_NAMED_INTEGER_VALUE */
+const queued: 0 = ReportSemaphoreEntryStatus_Request_state_queued; /* SHORT_NAMED_INTEGER_VALUE */
 
 /**
  * @summary ReportSemaphoreEntryStatus_Request_state_owner
@@ -72,7 +72,7 @@ const queued: ReportSemaphoreEntryStatus_Request_state = ReportSemaphoreEntrySta
  * @type {number}
  */
 export
-const ReportSemaphoreEntryStatus_Request_state_owner: ReportSemaphoreEntryStatus_Request_state = 1; /* LONG_NAMED_INTEGER_VALUE */
+const ReportSemaphoreEntryStatus_Request_state_owner: 1 = 1 satisfies ReportSemaphoreEntryStatus_Request_state; /* LONG_NAMED_INTEGER_VALUE */
 
 /**
  * @summary ReportSemaphoreEntryStatus_Request_state_owner
@@ -85,7 +85,7 @@ const ReportSemaphoreEntryStatus_Request_state_owner: ReportSemaphoreEntryStatus
  * @type {number}
  */
 export
-const owner: ReportSemaphoreEntryStatus_Request_state = ReportSemaphoreEntryStatus_Request_state_owner; /* SHORT_NAMED_INTEGER_VALUE */
+const owner: 1 = ReportSemaphoreEntryStatus_Request_state_owner; /* SHORT_NAMED_INTEGER_VALUE */
 
 /**
  * @summary ReportSemaphoreEntryStatus_Request_state_hung
@@ -99,7 +99,7 @@ const owner: ReportSemaphoreEntryStatus_Request_state = ReportSemaphoreEntryStat
  * @type {number}
  */
 export
-const ReportSemaphoreEntryStatus_Request_state_hung: ReportSemaphoreEntryStatus_Request_state = 2; /* LONG_NAMED_INTEGER_VALUE */
+const ReportSemaphoreEntryStatus_Request_state_hung: 2 = 2 satisfies ReportSemaphoreEntryStatus_Request_state; /* LONG_NAMED_INTEGER_VALUE */
 
 /**
  * @summary ReportSemaphoreEntryStatus_Request_state_hung
@@ -113,9 +113,9 @@ const ReportSemaphoreEntryStatus_Request_state_hung: ReportSemaphoreEntryStatus_
  * @type {number}
  */
 export
-const hung: ReportSemaphoreEntryStatus_Request_state = ReportSemaphoreEntryStatus_Request_state_hung; /* SHORT_NAMED_INTEGER_VALUE */
-export const _decode_ReportSemaphoreEntryStatus_Request_state = $._decodeInteger;
-export const _encode_ReportSemaphoreEntryStatus_Request_state = $._encodeInteger;
+const hung: 2 = ReportSemaphoreEntryStatus_Request_state_hung; /* SHORT_NAMED_INTEGER_VALUE */
+export const _decode_ReportSemaphoreEntryStatus_Request_state: $.ASN1Decoder<INTEGER> = $._decodeInteger;
+export const _encode_ReportSemaphoreEntryStatus_Request_state: $.ASN1Encoder<INTEGER> = $._encodeInteger;
 
 
 /* eslint-enable */

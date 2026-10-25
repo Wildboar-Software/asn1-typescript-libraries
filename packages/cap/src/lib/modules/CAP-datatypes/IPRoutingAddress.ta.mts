@@ -1,8 +1,10 @@
 import {
-    ASN1Element as _Element,
+    type ASN1Element as _Element,
     ASN1TagClass as _TagClass,
+    type OCTET_STRING,
 } from "@wildboar/asn1";
 import { type CalledPartyNumber, _decode_CalledPartyNumber, _encode_CalledPartyNumber } from "./CalledPartyNumber.ta.mjs";
+import type { ASN1Decoder, ASN1Encoder } from "@wildboar/asn1/functional";
 
 /**
  * @summary IPRoutingAddress
@@ -19,5 +21,5 @@ import { type CalledPartyNumber, _decode_CalledPartyNumber, _encode_CalledPartyN
  *
  */
 export type IPRoutingAddress = CalledPartyNumber;
-export const _decode_IPRoutingAddress = _decode_CalledPartyNumber;
-export const _encode_IPRoutingAddress = _encode_CalledPartyNumber;
+export const _decode_IPRoutingAddress: ASN1Decoder<OCTET_STRING> = _decode_CalledPartyNumber;
+export const _encode_IPRoutingAddress: ASN1Encoder<OCTET_STRING> = _encode_CalledPartyNumber;

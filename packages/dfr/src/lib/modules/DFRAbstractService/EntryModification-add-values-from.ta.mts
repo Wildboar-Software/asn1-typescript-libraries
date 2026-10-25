@@ -1,7 +1,7 @@
 /* eslint-disable */
 import {
-    OPTIONAL,
-    ASN1Element as _Element,
+    type OPTIONAL,
+    type ASN1Element as _Element,
     ASN1TagClass as _TagClass,
     ASN1Construction as _Construction,
     ASN1UniversalType as _UniversalType,
@@ -11,8 +11,8 @@ import {
     ASN1ConstructionError as _ConstructionError,
 } from "@wildboar/asn1";
 import * as $ from "@wildboar/asn1/functional";
-import { SourceEntry, _decode_SourceEntry, _encode_SourceEntry } from "../DFRAbstractService/SourceEntry.ta.mjs";
-import { AttributeType, _decode_AttributeType, _encode_AttributeType } from "../InformationFramework/AttributeType.ta.mjs";
+import { type SourceEntry, _decode_SourceEntry, _encode_SourceEntry } from "../DFRAbstractService/SourceEntry.ta.mjs";
+import { type AttributeType, _decode_AttributeType, _encode_AttributeType } from "../InformationFramework/AttributeType.ta.mjs";
 
 
 /**
@@ -36,26 +36,32 @@ import { AttributeType, _decode_AttributeType, _encode_AttributeType } from "../
  */
 export
 class EntryModification_add_values_from {
+    /**
+     * @summary `source`.
+     * @description
+     *
+     * Where to take values from.
+     * @public
+     * @readonly
+     */
+    public readonly source: SourceEntry;
+    /**
+     * @summary `attribute_selection`.
+     * @description
+     *
+     * Which multi-valued types; omit for all.
+     * @public
+     * @readonly
+     */
+    public readonly attribute_selection?: OPTIONAL<AttributeType[]>;
+
     constructor (
-        /**
-         * @summary `source`.
-         * @description
-         *
-         * Where to take values from.
-         * @public
-         * @readonly
-         */
-        readonly source: SourceEntry,
-        /**
-         * @summary `attribute_selection`.
-         * @description
-         *
-         * Which multi-valued types; omit for all.
-         * @public
-         * @readonly
-         */
-        readonly attribute_selection?: OPTIONAL<AttributeType[]>
-    ) {}
+        source: SourceEntry,
+        attribute_selection?: OPTIONAL<AttributeType[]>
+    ) {
+        this.source = source;
+        this.attribute_selection = attribute_selection;
+    }
 
     /**
      * @summary Restructures an object into a EntryModification_add_values_from

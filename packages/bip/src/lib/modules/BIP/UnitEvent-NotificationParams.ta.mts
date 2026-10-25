@@ -1,6 +1,6 @@
 /* eslint-disable */
 import {
-  OPTIONAL,
+  type OPTIONAL,
   ASN1Element as _Element,
   ASN1TagClass as _TagClass,
   ASN1Construction as _Construction,
@@ -12,12 +12,12 @@ import {
 } from '@wildboar/asn1';
 import * as $ from '@wildboar/asn1/functional';
 import {
-  BioAPI_UUID,
+  type BioAPI_UUID,
   _decode_BioAPI_UUID,
   _encode_BioAPI_UUID,
 } from '../BIP/BioAPI-UUID.ta.mjs';
 import {
-  BioAPI_UNIT_ID,
+  type BioAPI_UNIT_ID,
   _decode_BioAPI_UNIT_ID,
   _encode_BioAPI_UNIT_ID,
 } from '../BIP/BioAPI-UNIT-ID.ta.mjs';
@@ -27,7 +27,7 @@ import {
   _encode_BioAPI_UNIT_SCHEMA,
 } from '../BIP/BioAPI-UNIT-SCHEMA.ta.mjs';
 import {
-  BioAPI_UNIT_EVENT_TYPE,
+  type BioAPI_UNIT_EVENT_TYPE,
   _enum_for_BioAPI_UNIT_EVENT_TYPE,
   _decode_BioAPI_UNIT_EVENT_TYPE,
   _encode_BioAPI_UNIT_EVENT_TYPE,
@@ -67,7 +67,7 @@ export class UnitEvent_NotificationParams {
    * @public
    * @readonly
    */
-  readonly bspProductUuid: BioAPI_UUID;
+  public readonly bspProductUuid: BioAPI_UUID;
   /**
    * @summary `unitID`.
    * @description
@@ -77,7 +77,7 @@ export class UnitEvent_NotificationParams {
    * @public
    * @readonly
    */
-  readonly unitID: BioAPI_UNIT_ID;
+  public readonly unitID: BioAPI_UNIT_ID;
   /**
    * @summary `unitSchema`.
    * @description
@@ -88,7 +88,7 @@ export class UnitEvent_NotificationParams {
    * @public
    * @readonly
    */
-  readonly unitSchema: OPTIONAL<BioAPI_UNIT_SCHEMA>;
+  public readonly unitSchema: OPTIONAL<BioAPI_UNIT_SCHEMA>;
   /**
    * @summary `unitEventType`.
    * @description
@@ -99,7 +99,7 @@ export class UnitEvent_NotificationParams {
    * @public
    * @readonly
    */
-  readonly unitEventType: BioAPI_UNIT_EVENT_TYPE;
+  public readonly unitEventType: BioAPI_UNIT_EVENT_TYPE;
 
   constructor(
     bspProductUuid: BioAPI_UUID,
@@ -144,7 +144,7 @@ export class UnitEvent_NotificationParams {
    * @static
    */
 
-  public static _enum_for_unitEventType = _enum_for_BioAPI_UNIT_EVENT_TYPE;
+  public static _enum_for_unitEventType: typeof _enum_for_BioAPI_UNIT_EVENT_TYPE = _enum_for_BioAPI_UNIT_EVENT_TYPE;
 }
 
 

@@ -1,6 +1,6 @@
 /* eslint-disable */
 import {
-    ASN1Element as _Element,
+    type ASN1Element as _Element,
     ASN1TagClass as _TagClass,
     ASN1Construction as _Construction,
     ASN1UniversalType as _UniversalType,
@@ -62,7 +62,7 @@ class ModeCapability_Item {
      * @public
      * @readonly
      */
-    readonly modulationMode: ModeCapability_Item_modulationMode;
+    public readonly modulationMode: ModeCapability_Item_modulationMode;
     /**
      * @summary `protocolmode`.
      * @description
@@ -73,13 +73,13 @@ class ModeCapability_Item {
      * @public
      * @readonly
      */
-    readonly protocolmode: ModeCapability_Item_protocolmode;
+    public readonly protocolmode: ModeCapability_Item_protocolmode;
     /**
      * @summary Extensions that are not recognized.
      * @public
      * @readonly
      */
-    readonly _unrecognizedExtensionsList: _Element[];
+    public readonly _unrecognizedExtensionsList: _Element[];
 
     constructor (
         modulationMode: ModeCapability_Item_modulationMode,

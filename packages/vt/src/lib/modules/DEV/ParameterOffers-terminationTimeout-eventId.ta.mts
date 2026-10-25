@@ -1,8 +1,8 @@
 /* eslint-disable */
 import {
-    OPTIONAL,
-    NULL,
-    ASN1Element as _Element,
+    type OPTIONAL,
+    type NULL,
+    type ASN1Element as _Element,
     ASN1TagClass as _TagClass,
     ASN1Construction as _Construction,
     ASN1UniversalType as _UniversalType,
@@ -35,25 +35,31 @@ import { _decode_IntegerOffer, _encode_IntegerOffer, type IntegerOffer } from ".
  */
 export
 class ParameterOffers_terminationTimeout_eventId {
+    /**
+     * @summary `integer`.
+     * @description
+     * Offered non-zero positive event-id values. ISO/IEC
+     * 9040:1997 §23.4.
+     * @public
+     * @readonly
+     */
+    public readonly integer?: OPTIONAL<IntegerOffer>;
+    /**
+     * @summary `nul`.
+     * @description
+     * Offer `"null"` as the event-id. ISO/IEC 9040:1997 §23.4.
+     * @public
+     * @readonly
+     */
+    public readonly nul?: OPTIONAL<NULL>;
+
     constructor (
-        /**
-         * @summary `integer`.
-         * @description
-         * Offered non-zero positive event-id values. ISO/IEC
-         * 9040:1997 §23.4.
-         * @public
-         * @readonly
-         */
-        readonly integer?: OPTIONAL<IntegerOffer>,
-        /**
-         * @summary `nul`.
-         * @description
-         * Offer `"null"` as the event-id. ISO/IEC 9040:1997 §23.4.
-         * @public
-         * @readonly
-         */
-        readonly nul?: OPTIONAL<NULL>
-    ) {}
+        integer?: OPTIONAL<IntegerOffer>,
+        nul?: OPTIONAL<NULL>
+    ) {
+        this.integer = integer;
+        this.nul = nul;
+    }
 
     /**
      * @summary Restructures an object into a ParameterOffers_terminationTimeout_eventId

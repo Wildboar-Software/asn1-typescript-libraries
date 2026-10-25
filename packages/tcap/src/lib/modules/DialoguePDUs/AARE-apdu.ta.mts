@@ -1,10 +1,10 @@
 /* eslint-disable */
 import {
-    OPTIONAL,
-    OBJECT_IDENTIFIER,
-    EXTERNAL,
+    type OPTIONAL,
+    type OBJECT_IDENTIFIER,
+    type EXTERNAL,
     TRUE_BIT,
-    ASN1Element as _Element,
+    type ASN1Element as _Element,
     ASN1TagClass as _TagClass,
     ASN1Construction as _Construction,
     ASN1UniversalType as _UniversalType,
@@ -12,22 +12,22 @@ import {
     External as _External,
     EmbeddedPDV as _PDV,
     ASN1ConstructionError as _ConstructionError,
-    BIT_STRING,
+    type BIT_STRING,
 } from '@wildboar/asn1';
 import * as $ from '@wildboar/asn1/functional';
 import {
-    AARE_apdu_protocol_version,
+    type AARE_apdu_protocol_version,
     AARE_apdu_protocol_version_version1 /* IMPORTED_LONG_NAMED_BIT */,
     _decode_AARE_apdu_protocol_version,
     _encode_AARE_apdu_protocol_version,
 } from '../DialoguePDUs/AARE-apdu-protocol-version.ta.mjs';
 import {
-    Associate_result,
+    type Associate_result,
     _decode_Associate_result,
     _encode_Associate_result,
 } from '../DialoguePDUs/Associate-result.ta.mjs';
 import {
-    Associate_source_diagnostic,
+    type Associate_source_diagnostic,
     _decode_Associate_source_diagnostic,
     _encode_Associate_source_diagnostic,
 } from '../DialoguePDUs/Associate-source-diagnostic.ta.mjs';
@@ -58,64 +58,76 @@ import {
  *
  */
 export class AARE_apdu {
+    /**
+     * @summary `protocol_version`.
+     * @description
+     *
+     * BIT STRING `{version1(0)}`. If this element is
+     * omitted, the default is version 1 (Table 39 note b).
+     * BIT STRING must be primitive (§4.1.1).
+     *
+     * @public
+     * @readonly
+     */
+    public readonly protocol_version: OPTIONAL<AARE_apdu_protocol_version>;
+    /**
+     * @summary `application_context_name`.
+     * @description
+     *
+     * Application context for this dialogue, as an OBJECT
+     * IDENTIFIER. Mandatory (Table 39).
+     *
+     * @public
+     * @readonly
+     */
+    public readonly application_context_name: OBJECT_IDENTIFIER;
+    /**
+     * @summary `result`.
+     * @description
+     *
+     * `accepted` (0) or `reject-permanent` (1)
+     * (Table 54). Mandatory.
+     *
+     * @public
+     * @readonly
+     */
+    public readonly result: Associate_result;
+    /**
+     * @summary `result_source_diagnostic`.
+     * @description
+     *
+     * Whether the user or the provider produced the
+     * result, and why (Tables 55–59). Mandatory.
+     *
+     * @public
+     * @readonly
+     */
+    public readonly result_source_diagnostic: Associate_source_diagnostic;
+    /**
+     * @summary `user_information`.
+     * @description
+     *
+     * Optional sequence of EXTERNALs identified by a
+     * user-defined abstract syntax name (§4.2.3).
+     *
+     * @public
+     * @readonly
+     */
+    public readonly user_information?: OPTIONAL<EXTERNAL[]>;
+
     constructor(
-        /**
-         * @summary `protocol_version`.
-         * @description
-         *
-         * BIT STRING `{version1(0)}`. If this element is
-         * omitted, the default is version 1 (Table 39 note b).
-         * BIT STRING must be primitive (§4.1.1).
-         *
-         * @public
-         * @readonly
-         */
-        readonly protocol_version: OPTIONAL<AARE_apdu_protocol_version>,
-        /**
-         * @summary `application_context_name`.
-         * @description
-         *
-         * Application context for this dialogue, as an OBJECT
-         * IDENTIFIER. Mandatory (Table 39).
-         *
-         * @public
-         * @readonly
-         */
-        readonly application_context_name: OBJECT_IDENTIFIER,
-        /**
-         * @summary `result`.
-         * @description
-         *
-         * `accepted` (0) or `reject-permanent` (1)
-         * (Table 54). Mandatory.
-         *
-         * @public
-         * @readonly
-         */
-        readonly result: Associate_result,
-        /**
-         * @summary `result_source_diagnostic`.
-         * @description
-         *
-         * Whether the user or the provider produced the
-         * result, and why (Tables 55–59). Mandatory.
-         *
-         * @public
-         * @readonly
-         */
-        readonly result_source_diagnostic: Associate_source_diagnostic,
-        /**
-         * @summary `user_information`.
-         * @description
-         *
-         * Optional sequence of EXTERNALs identified by a
-         * user-defined abstract syntax name (§4.2.3).
-         *
-         * @public
-         * @readonly
-         */
-        readonly user_information?: OPTIONAL<EXTERNAL[]>
-    ) {}
+        protocol_version: OPTIONAL<AARE_apdu_protocol_version>,
+        application_context_name: OBJECT_IDENTIFIER,
+        result: Associate_result,
+        result_source_diagnostic: Associate_source_diagnostic,
+        user_information?: OPTIONAL<EXTERNAL[]>
+    ) {
+        this.protocol_version = protocol_version;
+        this.application_context_name = application_context_name;
+        this.result = result;
+        this.result_source_diagnostic = result_source_diagnostic;
+        this.user_information = user_information;
+    }
 
     /**
      * @summary Restructures an object into a AARE_apdu

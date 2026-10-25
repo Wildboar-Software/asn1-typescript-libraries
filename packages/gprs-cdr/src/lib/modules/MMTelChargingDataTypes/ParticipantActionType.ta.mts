@@ -90,7 +90,7 @@ type ParticipantActionType = _enum_for_ParticipantActionType;
  * @enum {number}
  */
 export
-const ParticipantActionType = _enum_for_ParticipantActionType;
+const ParticipantActionType: typeof _enum_for_ParticipantActionType = _enum_for_ParticipantActionType;
 
 /**
  * @summary ParticipantActionType_cREATE_CONF
@@ -110,7 +110,7 @@ const ParticipantActionType = _enum_for_ParticipantActionType;
  * @type {number}
  */
 export
-const ParticipantActionType_cREATE_CONF: ParticipantActionType = ParticipantActionType.cREATE_CONF; /* LONG_NAMED_ENUMERATED_VALUE */
+const ParticipantActionType_cREATE_CONF: _enum_for_ParticipantActionType.cREATE_CONF = ParticipantActionType.cREATE_CONF; /* LONG_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary cREATE_CONF
@@ -123,7 +123,7 @@ const ParticipantActionType_cREATE_CONF: ParticipantActionType = ParticipantActi
  * @type {number}
  */
 export
-const cREATE_CONF: ParticipantActionType = ParticipantActionType.cREATE_CONF; /* SHORT_NAMED_ENUMERATED_VALUE */
+const cREATE_CONF: _enum_for_ParticipantActionType.cREATE_CONF = ParticipantActionType.cREATE_CONF; /* SHORT_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary ParticipantActionType_jOIN_CONF
@@ -141,7 +141,7 @@ const cREATE_CONF: ParticipantActionType = ParticipantActionType.cREATE_CONF; /*
  * @type {number}
  */
 export
-const ParticipantActionType_jOIN_CONF: ParticipantActionType = ParticipantActionType.jOIN_CONF; /* LONG_NAMED_ENUMERATED_VALUE */
+const ParticipantActionType_jOIN_CONF: _enum_for_ParticipantActionType.jOIN_CONF = ParticipantActionType.jOIN_CONF; /* LONG_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary jOIN_CONF
@@ -154,7 +154,7 @@ const ParticipantActionType_jOIN_CONF: ParticipantActionType = ParticipantAction
  * @type {number}
  */
 export
-const jOIN_CONF: ParticipantActionType = ParticipantActionType.jOIN_CONF; /* SHORT_NAMED_ENUMERATED_VALUE */
+const jOIN_CONF: _enum_for_ParticipantActionType.jOIN_CONF = ParticipantActionType.jOIN_CONF; /* SHORT_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary ParticipantActionType_iNVITED_INTO_CONF
@@ -173,7 +173,7 @@ const jOIN_CONF: ParticipantActionType = ParticipantActionType.jOIN_CONF; /* SHO
  * @type {number}
  */
 export
-const ParticipantActionType_iNVITED_INTO_CONF: ParticipantActionType = ParticipantActionType.iNVITED_INTO_CONF; /* LONG_NAMED_ENUMERATED_VALUE */
+const ParticipantActionType_iNVITED_INTO_CONF: _enum_for_ParticipantActionType.iNVITED_INTO_CONF = ParticipantActionType.iNVITED_INTO_CONF; /* LONG_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary iNVITED_INTO_CONF
@@ -186,7 +186,7 @@ const ParticipantActionType_iNVITED_INTO_CONF: ParticipantActionType = Participa
  * @type {number}
  */
 export
-const iNVITED_INTO_CONF: ParticipantActionType = ParticipantActionType.iNVITED_INTO_CONF; /* SHORT_NAMED_ENUMERATED_VALUE */
+const iNVITED_INTO_CONF: _enum_for_ParticipantActionType.iNVITED_INTO_CONF = ParticipantActionType.iNVITED_INTO_CONF; /* SHORT_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary ParticipantActionType_qUIT_CONF
@@ -207,7 +207,7 @@ const iNVITED_INTO_CONF: ParticipantActionType = ParticipantActionType.iNVITED_I
  * @type {number}
  */
 export
-const ParticipantActionType_qUIT_CONF: ParticipantActionType = ParticipantActionType.qUIT_CONF; /* LONG_NAMED_ENUMERATED_VALUE */
+const ParticipantActionType_qUIT_CONF: _enum_for_ParticipantActionType.qUIT_CONF = ParticipantActionType.qUIT_CONF; /* LONG_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary qUIT_CONF
@@ -220,7 +220,7 @@ const ParticipantActionType_qUIT_CONF: ParticipantActionType = ParticipantAction
  * @type {number}
  */
 export
-const qUIT_CONF: ParticipantActionType = ParticipantActionType.qUIT_CONF; /* SHORT_NAMED_ENUMERATED_VALUE */
+const qUIT_CONF: _enum_for_ParticipantActionType.qUIT_CONF = ParticipantActionType.qUIT_CONF; /* SHORT_NAMED_ENUMERATED_VALUE */
 
 export
 const _decode_ParticipantActionType: $.ASN1Decoder<ParticipantActionType> = $._decodeEnumerated;

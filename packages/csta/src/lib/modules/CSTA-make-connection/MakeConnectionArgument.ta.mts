@@ -2,11 +2,11 @@
 
 import * as $ from "@wildboar/asn1/functional";
 import {
-    OPTIONAL,
-    INTEGER,
-    SEQUENCE,
-    SET,
-    ASN1Element as _Element,
+    type OPTIONAL,
+    type INTEGER,
+    type SEQUENCE,
+    type SET,
+    type ASN1Element as _Element,
     ASN1TagClass as _TagClass
 } from "@wildboar/asn1";
 import { DeviceID, _decode_DeviceID, _encode_DeviceID } from "../CSTA-device-identifiers/DeviceID.ta.mjs";
@@ -20,15 +20,15 @@ import {
     _encode_AutoOriginate
 } from "../CSTA-call-control/AutoOriginate.ta.mjs";
 
-import { CallCharacteristics, _decode_CallCharacteristics, _encode_CallCharacteristics } from "../CSTA-call-control/CallCharacteristics.ta.mjs";
+import { type CallCharacteristics, _decode_CallCharacteristics, _encode_CallCharacteristics } from "../CSTA-call-control/CallCharacteristics.ta.mjs";
 
 import { MediaCallCharacteristics, _decode_MediaCallCharacteristics, _encode_MediaCallCharacteristics } from "../CSTA-media-services/MediaCallCharacteristics.ta.mjs";
 
 import { ConnectionInformation, _decode_ConnectionInformation, _encode_ConnectionInformation } from "../CSTA-media-services/ConnectionInformation.ta.mjs";
 
-import { SubjectOfCall, _decode_SubjectOfCall, _encode_SubjectOfCall } from "../CSTA-device-feature-types/SubjectOfCall.ta.mjs";
+import { type SubjectOfCall, _decode_SubjectOfCall, _encode_SubjectOfCall } from "../CSTA-device-feature-types/SubjectOfCall.ta.mjs";
 
-import { LanguagePreferences, _decode_LanguagePreferences, _encode_LanguagePreferences } from "../CSTA-device-feature-types/LanguagePreferences.ta.mjs";
+import { type LanguagePreferences, _decode_LanguagePreferences, _encode_LanguagePreferences } from "../CSTA-device-feature-types/LanguagePreferences.ta.mjs";
 
 import {
     EventCause,
@@ -37,17 +37,17 @@ import {
     _encode_EventCause
 } from "../CSTA-event-causes/EventCause.ta.mjs";
 
-import { TimeInfo, _decode_TimeInfo, _encode_TimeInfo } from "../CSTA-security/TimeInfo.ta.mjs";
+import { type TimeInfo, _decode_TimeInfo, _encode_TimeInfo } from "../CSTA-security/TimeInfo.ta.mjs";
 
 import { CSTACommonArguments, _decode_CSTACommonArguments, _encode_CSTACommonArguments } from "../CSTA-extension-types/CSTACommonArguments.ta.mjs";
 
 
 
-import { AccountInfo, _decode_AccountInfo, _encode_AccountInfo } from "../CSTA-device-feature-types/AccountInfo.ta.mjs";
+import { type AccountInfo, _decode_AccountInfo, _encode_AccountInfo } from "../CSTA-device-feature-types/AccountInfo.ta.mjs";
 
-import { AuthCode, _decode_AuthCode, _encode_AuthCode } from "../CSTA-device-feature-types/AuthCode.ta.mjs";
+import { type AuthCode, _decode_AuthCode, _encode_AuthCode } from "../CSTA-device-feature-types/AuthCode.ta.mjs";
 
-import { CorrelatorData, _decode_CorrelatorData, _encode_CorrelatorData } from "../CSTA-device-feature-types/CorrelatorData.ta.mjs";
+import { type CorrelatorData, _decode_CorrelatorData, _encode_CorrelatorData } from "../CSTA-device-feature-types/CorrelatorData.ta.mjs";
 
 /**
  * @summary MakeConnectionArgument
@@ -65,19 +65,19 @@ import { CorrelatorData, _decode_CorrelatorData, _encode_CorrelatorData } from "
  * ```asn1
  * MakeConnectionArgument ::= SEQUENCE
  * {     initiatingDevice         DeviceID,
- *     accountCode             [ 0] IMPLICIT AccountInfo             OPTIONAL,
- *     authCode             [ 1] IMPLICIT AuthCode                 OPTIONAL,
+ *     accountCode             [ 0] IMPLICIT AccountInfo             type OPTIONAL,
+ *     authCode             [ 1] IMPLICIT AuthCode                 type OPTIONAL,
  *     autoOriginate             [ 2] IMPLICIT AutoOriginate             DEFAULT prompt,
- *     correlatorData             [ 3] IMPLICIT CorrelatorData             OPTIONAL,
- *     callCharacteristics         [ 4] IMPLICIT CallCharacteristics         OPTIONAL,
- *     mediaCallCharacteristics     [ 5] IMPLICIT MediaCallCharacteristics         OPTIONAL,
- *     connectionInfo            [ 6] IMPLICIT ConnectionInformation        OPTIONAL,
- *     subjectOfCall            [ 7] IMPLICIT SubjectOfCall            OPTIONAL,
- *     languagePreferences        [ 8] IMPLICIT LanguagePreferences        OPTIONAL,
- *     reason                [ 9] IMPLICIT EventCause            OPTIONAL,
- *     maxDevices            [10] IMPLICIT INTEGER                OPTIONAL,
- *     startTime            [11] IMPLICIT TimeInfo                OPTIONAL,
- *     duration            [12] IMPLICIT INTEGER                OPTIONAL,
+ *     correlatorData             [ 3] IMPLICIT CorrelatorData             type OPTIONAL,
+ *     callCharacteristics         [ 4] IMPLICIT CallCharacteristics         type OPTIONAL,
+ *     mediaCallCharacteristics     [ 5] IMPLICIT MediaCallCharacteristics         type OPTIONAL,
+ *     connectionInfo            [ 6] IMPLICIT ConnectionInformation        type OPTIONAL,
+ *     subjectOfCall            [ 7] IMPLICIT SubjectOfCall            type OPTIONAL,
+ *     languagePreferences        [ 8] IMPLICIT LanguagePreferences        type OPTIONAL,
+ *     reason                [ 9] IMPLICIT EventCause            type OPTIONAL,
+ *     maxDevices            [10] IMPLICIT INTEGER                type OPTIONAL,
+ *     startTime            [11] IMPLICIT TimeInfo                type OPTIONAL,
+ *     duration            [12] IMPLICIT INTEGER                type OPTIONAL,
  *     extensions             CSTACommonArguments                 OPTIONAL }
  * ```
  * 
@@ -85,171 +85,203 @@ import { CorrelatorData, _decode_CorrelatorData, _encode_CorrelatorData } from "
  */
 export
 class MakeConnectionArgument {
+    /**
+     * @summary `initiatingDevice`.
+     * @description
+     *
+     * Mandatory. Device (or group) that originates the
+     * connection. May name a group; later events use the
+     * actual device, and Originated reports this value as
+     * `originatingDevice` (FR 10).
+     *
+     * @public
+     * @readonly
+     */
+    public readonly initiatingDevice: DeviceID;
+    /**
+     * @summary `accountCode`.
+     * @description
+     *
+     * Optional account code (§12.2.1).
+     *
+     * @public
+     * @readonly
+     */
+    public readonly accountCode?: OPTIONAL<AccountInfo>;
+    /**
+     * @summary `authCode`.
+     * @description
+     *
+     * Optional authorization code (§12.2.3).
+     *
+     * @public
+     * @readonly
+     */
+    public readonly authCode?: OPTIONAL<AuthCode>;
+    /**
+     * @summary `autoOriginate`.
+     * @description
+     *
+     * Default `prompt`. `doNotPrompt` is switching-function
+     * dependent if the device cannot auto-answer (FR 4).
+     *
+     * @public
+     * @readonly
+     */
+    public readonly autoOriginate?: OPTIONAL<AutoOriginate>;
+    /**
+     * @summary `correlatorData`.
+     * @description
+     *
+     * Optional correlator data attached before resulting state
+     * transitions (§12.2.10).
+     *
+     * @public
+     * @readonly
+     */
+    public readonly correlatorData?: OPTIONAL<CorrelatorData>;
+    /**
+     * @summary `callCharacteristics`.
+     * @description
+     *
+     * Optional call characteristics (§12.2.4).
+     *
+     * @public
+     * @readonly
+     */
+    public readonly callCharacteristics?: OPTIONAL<CallCharacteristics>;
+    /**
+     * @summary `mediaCallCharacteristics`.
+     * @description
+     *
+     * Optional media class/characteristics (§12.2.20). The
+     * switching function may adjust digital-data values
+     * (FR 8).
+     *
+     * @public
+     * @readonly
+     */
+    public readonly mediaCallCharacteristics?: OPTIONAL<MediaCallCharacteristics>;
+    /**
+     * @summary `connectionInfo`.
+     * @description
+     *
+     * Optional connection information (channels, flow)
+     * (§12.2.8).
+     *
+     * @public
+     * @readonly
+     */
+    public readonly connectionInfo?: OPTIONAL<ConnectionInformation>;
+    /**
+     * @summary `subjectOfCall`.
+     * @description
+     *
+     * Optional subject or intent (§12.2.27).
+     *
+     * @public
+     * @readonly
+     */
+    public readonly subjectOfCall?: OPTIONAL<SubjectOfCall>;
+    /**
+     * @summary `languagePreferences`.
+     * @description
+     *
+     * Optional preferred language(s) (§12.2.16).
+     *
+     * @public
+     * @readonly
+     */
+    public readonly languagePreferences?: OPTIONAL<LanguagePreferences>;
+    /**
+     * @summary `reason`.
+     * @description
+     *
+     * Optional `EventCause` for underlying signalling
+     * (§12.2.15).
+     *
+     * @public
+     * @readonly
+     */
+    public readonly reason?: OPTIONAL<EventCause>;
+    /**
+     * @summary `maxDevices`.
+     * @description
+     *
+     * Optional hint for future resource allocation. Unsupported
+     * values cause a negative response (FR 3, FR 5).
+     *
+     * @public
+     * @readonly
+     */
+    public readonly maxDevices?: OPTIONAL<INTEGER>;
+    /**
+     * @summary `startTime`.
+     * @description
+     *
+     * Optional planned start. Unsupported values cause a
+     * negative response (FR 3).
+     *
+     * @public
+     * @readonly
+     */
+    public readonly startTime?: OPTIONAL<TimeInfo>;
+    /**
+     * @summary `duration`.
+     * @description
+     *
+     * Optional planned duration. The switching function may
+     * still clear the connection earlier (FR 5).
+     *
+     * @public
+     * @readonly
+     */
+    public readonly duration?: OPTIONAL<INTEGER>;
+    /**
+     * @summary `extensions`.
+     * @description
+     *
+     * Optional `CSTACommonArguments` carrying the security and
+     * privateData parameters from the ECMA-269 service table.
+     *
+     * @public
+     * @readonly
+     */
+    public readonly extensions?: OPTIONAL<CSTACommonArguments>;
+
     constructor (
-        /**
-         * @summary `initiatingDevice`.
-         * @description
-         *
-         * Mandatory. Device (or group) that originates the
-         * connection. May name a group; later events use the
-         * actual device, and Originated reports this value as
-         * `originatingDevice` (FR 10).
-         *
-         * @public
-         * @readonly
-         */
-        readonly initiatingDevice: DeviceID,
-        /**
-         * @summary `accountCode`.
-         * @description
-         *
-         * Optional account code (§12.2.1).
-         *
-         * @public
-         * @readonly
-         */
-        readonly accountCode?: OPTIONAL<AccountInfo>,
-        /**
-         * @summary `authCode`.
-         * @description
-         *
-         * Optional authorization code (§12.2.3).
-         *
-         * @public
-         * @readonly
-         */
-        readonly authCode?: OPTIONAL<AuthCode>,
-        /**
-         * @summary `autoOriginate`.
-         * @description
-         *
-         * Default `prompt`. `doNotPrompt` is switching-function
-         * dependent if the device cannot auto-answer (FR 4).
-         *
-         * @public
-         * @readonly
-         */
-        readonly autoOriginate?: OPTIONAL<AutoOriginate>,
-        /**
-         * @summary `correlatorData`.
-         * @description
-         *
-         * Optional correlator data attached before resulting state
-         * transitions (§12.2.10).
-         *
-         * @public
-         * @readonly
-         */
-        readonly correlatorData?: OPTIONAL<CorrelatorData>,
-        /**
-         * @summary `callCharacteristics`.
-         * @description
-         *
-         * Optional call characteristics (§12.2.4).
-         *
-         * @public
-         * @readonly
-         */
-        readonly callCharacteristics?: OPTIONAL<CallCharacteristics>,
-        /**
-         * @summary `mediaCallCharacteristics`.
-         * @description
-         *
-         * Optional media class/characteristics (§12.2.20). The
-         * switching function may adjust digital-data values
-         * (FR 8).
-         *
-         * @public
-         * @readonly
-         */
-        readonly mediaCallCharacteristics?: OPTIONAL<MediaCallCharacteristics>,
-        /**
-         * @summary `connectionInfo`.
-         * @description
-         *
-         * Optional connection information (channels, flow)
-         * (§12.2.8).
-         *
-         * @public
-         * @readonly
-         */
-        readonly connectionInfo?: OPTIONAL<ConnectionInformation>,
-        /**
-         * @summary `subjectOfCall`.
-         * @description
-         *
-         * Optional subject or intent (§12.2.27).
-         *
-         * @public
-         * @readonly
-         */
-        readonly subjectOfCall?: OPTIONAL<SubjectOfCall>,
-        /**
-         * @summary `languagePreferences`.
-         * @description
-         *
-         * Optional preferred language(s) (§12.2.16).
-         *
-         * @public
-         * @readonly
-         */
-        readonly languagePreferences?: OPTIONAL<LanguagePreferences>,
-        /**
-         * @summary `reason`.
-         * @description
-         *
-         * Optional `EventCause` for underlying signalling
-         * (§12.2.15).
-         *
-         * @public
-         * @readonly
-         */
-        readonly reason?: OPTIONAL<EventCause>,
-        /**
-         * @summary `maxDevices`.
-         * @description
-         *
-         * Optional hint for future resource allocation. Unsupported
-         * values cause a negative response (FR 3, FR 5).
-         *
-         * @public
-         * @readonly
-         */
-        readonly maxDevices?: OPTIONAL<INTEGER>,
-        /**
-         * @summary `startTime`.
-         * @description
-         *
-         * Optional planned start. Unsupported values cause a
-         * negative response (FR 3).
-         *
-         * @public
-         * @readonly
-         */
-        readonly startTime?: OPTIONAL<TimeInfo>,
-        /**
-         * @summary `duration`.
-         * @description
-         *
-         * Optional planned duration. The switching function may
-         * still clear the connection earlier (FR 5).
-         *
-         * @public
-         * @readonly
-         */
-        readonly duration?: OPTIONAL<INTEGER>,
-        /**
-         * @summary `extensions`.
-         * @description
-         *
-         * Optional `CSTACommonArguments` carrying the security and
-         * privateData parameters from the ECMA-269 service table.
-         *
-         * @public
-         * @readonly
-         */
-        readonly extensions?: OPTIONAL<CSTACommonArguments>
-    ) {}
+        initiatingDevice: DeviceID,
+        accountCode?: OPTIONAL<AccountInfo>,
+        authCode?: OPTIONAL<AuthCode>,
+        autoOriginate?: OPTIONAL<AutoOriginate>,
+        correlatorData?: OPTIONAL<CorrelatorData>,
+        callCharacteristics?: OPTIONAL<CallCharacteristics>,
+        mediaCallCharacteristics?: OPTIONAL<MediaCallCharacteristics>,
+        connectionInfo?: OPTIONAL<ConnectionInformation>,
+        subjectOfCall?: OPTIONAL<SubjectOfCall>,
+        languagePreferences?: OPTIONAL<LanguagePreferences>,
+        reason?: OPTIONAL<EventCause>,
+        maxDevices?: OPTIONAL<INTEGER>,
+        startTime?: OPTIONAL<TimeInfo>,
+        duration?: OPTIONAL<INTEGER>,
+        extensions?: OPTIONAL<CSTACommonArguments>
+    ) {
+        this.initiatingDevice = initiatingDevice;
+        this.accountCode = accountCode;
+        this.authCode = authCode;
+        this.autoOriginate = autoOriginate;
+        this.correlatorData = correlatorData;
+        this.callCharacteristics = callCharacteristics;
+        this.mediaCallCharacteristics = mediaCallCharacteristics;
+        this.connectionInfo = connectionInfo;
+        this.subjectOfCall = subjectOfCall;
+        this.languagePreferences = languagePreferences;
+        this.reason = reason;
+        this.maxDevices = maxDevices;
+        this.startTime = startTime;
+        this.duration = duration;
+        this.extensions = extensions;
+    }
 
     /**
      * @summary Restructures an object into a MakeConnectionArgument
@@ -273,19 +305,19 @@ class MakeConnectionArgument {
      * @static
      * @method
      */
-    public static get _default_value_for_autoOriginate () { return AutoOriginate_prompt; }        /**
+    public static get _default_value_for_autoOriginate (): _enum_for_AutoOriginate.prompt { return AutoOriginate_prompt; }        /**
          * @summary The enum used as the type of the component `autoOriginate`
          * @public
          * @static
          */
 
-    public static _enum_for_autoOriginate = _enum_for_AutoOriginate;        /**
+    public static _enum_for_autoOriginate: typeof _enum_for_AutoOriginate = _enum_for_AutoOriginate;        /**
          * @summary The enum used as the type of the component `reason`
          * @public
          * @static
          */
 
-    public static _enum_for_reason = _enum_for_EventCause;
+    public static _enum_for_reason: typeof _enum_for_EventCause = _enum_for_EventCause;
 }
 
 /**

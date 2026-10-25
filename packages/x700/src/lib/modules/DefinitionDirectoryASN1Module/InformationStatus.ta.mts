@@ -1,6 +1,6 @@
 /* eslint-disable */
 import {
-    ASN1Element as _Element,
+    type ASN1Element as _Element,
     ASN1TagClass as _TagClass,
     ASN1Construction as _Construction,
     ASN1UniversalType as _UniversalType,
@@ -72,7 +72,7 @@ export type InformationStatus = _enum_for_InformationStatus;
  *
  * @enum {number}
  */
-export const InformationStatus = _enum_for_InformationStatus;
+export const InformationStatus: typeof _enum_for_InformationStatus = _enum_for_InformationStatus;
 
 /**
  * @summary InformationStatus_active
@@ -82,7 +82,7 @@ export const InformationStatus = _enum_for_InformationStatus;
  * @constant
  * @type {number}
  */
-export const InformationStatus_active: InformationStatus =
+export const InformationStatus_active: _enum_for_InformationStatus.active =
     InformationStatus.active; /* LONG_NAMED_ENUMERATED_VALUE */
 
 /**
@@ -93,7 +93,7 @@ export const InformationStatus_active: InformationStatus =
  * @constant
  * @type {number}
  */
-export const active: InformationStatus =
+export const active: _enum_for_InformationStatus.active =
     InformationStatus.active; /* SHORT_NAMED_ENUMERATED_VALUE */
 
 /**
@@ -104,7 +104,7 @@ export const active: InformationStatus =
  * @constant
  * @type {number}
  */
-export const InformationStatus_deleted: InformationStatus =
+export const InformationStatus_deleted: _enum_for_InformationStatus.deleted =
     InformationStatus.deleted; /* LONG_NAMED_ENUMERATED_VALUE */
 
 /**
@@ -115,7 +115,7 @@ export const InformationStatus_deleted: InformationStatus =
  * @constant
  * @type {number}
  */
-export const deleted: InformationStatus =
+export const deleted: _enum_for_InformationStatus.deleted =
     InformationStatus.deleted; /* SHORT_NAMED_ENUMERATED_VALUE */
 
 /**
@@ -126,7 +126,7 @@ export const deleted: InformationStatus =
  * @constant
  * @type {number}
  */
-export const InformationStatus_preliminary: InformationStatus =
+export const InformationStatus_preliminary: _enum_for_InformationStatus.preliminary =
     InformationStatus.preliminary; /* LONG_NAMED_ENUMERATED_VALUE */
 
 /**
@@ -137,14 +137,26 @@ export const InformationStatus_preliminary: InformationStatus =
  * @constant
  * @type {number}
  */
-export const preliminary: InformationStatus =
+export const preliminary: _enum_for_InformationStatus.preliminary =
     InformationStatus.preliminary; /* SHORT_NAMED_ENUMERATED_VALUE */
 
 
-export const _decode_InformationStatus = $._decodeEnumerated;
+export function _decode_InformationStatus(el: _Element): InformationStatus {
+    const enumerated = $._decodeEnumerated(el);
+    switch (enumerated) {
+        case InformationStatus.active: return InformationStatus.active;
+        case InformationStatus.deleted: return InformationStatus.deleted;
+        case InformationStatus.preliminary: return InformationStatus.preliminary;
+        default:
+            throw new _ConstructionError(
+                'Invalid ENUMERATED value ' + enumerated + ' for InformationStatus.',
+                el,
+            );
+    }
+}
 
 
-export const _encode_InformationStatus = $._encodeEnumerated;
+export const _encode_InformationStatus: $.ASN1Encoder<InformationStatus> = $._encodeEnumerated as $.ASN1Encoder<InformationStatus>;
 
 
 /* eslint-enable */

@@ -3,7 +3,7 @@ import {
     ASN1Element as _Element
 } from "@wildboar/asn1";
 import * as $ from "@wildboar/asn1/functional";
-import { LogicalPortName, _decode_LogicalPortName, _encode_LogicalPortName } from "../CCSDS-SLE-TRANSFER-SERVICE-BIND-TYPES/LogicalPortName.ta.mjs";
+import { type LogicalPortName, _decode_LogicalPortName, _encode_LogicalPortName } from "../CCSDS-SLE-TRANSFER-SERVICE-BIND-TYPES/LogicalPortName.ta.mjs";
 
 
 /**
@@ -26,21 +26,13 @@ import { LogicalPortName, _decode_LogicalPortName, _encode_LogicalPortName } fro
 export
 type PortId = LogicalPortName; // DefinedType
 
-let _cached_decoder_for_PortId: $.ASN1Decoder<PortId> | null = null;
-
 /**
  * @summary Decodes an ASN.1 element into a(n) PortId
  * @function
  * @param el The element being decoded.
  * @returns The decoded data structure.
  */
-export
-function _decode_PortId (el: _Element): PortId {
-    if (!_cached_decoder_for_PortId) { _cached_decoder_for_PortId = _decode_LogicalPortName; }
-    return _cached_decoder_for_PortId(el);
-}
-
-let _cached_encoder_for_PortId: $.ASN1Encoder<PortId> | null = null;
+export const _decode_PortId: $.ASN1Decoder<PortId> = _decode_LogicalPortName;
 
 /**
  * @summary Encodes a(n) PortId into an ASN.1 Element.
@@ -49,11 +41,7 @@ let _cached_encoder_for_PortId: $.ASN1Encoder<PortId> | null = null;
  * @param elGetter A function that can be used to get new ASN.1 elements.
  * @returns {_Element} The PortId, encoded as an ASN.1 Element.
  */
-export
-function _encode_PortId (value: PortId, elGetter: $.ASN1Encoder<any>): _Element {
-    if (!_cached_encoder_for_PortId) { _cached_encoder_for_PortId = _encode_LogicalPortName; }
-    return _cached_encoder_for_PortId(value, elGetter);
-}
+export const _encode_PortId: $.ASN1Encoder<PortId> = _encode_LogicalPortName;
 
 
 /* eslint-enable */

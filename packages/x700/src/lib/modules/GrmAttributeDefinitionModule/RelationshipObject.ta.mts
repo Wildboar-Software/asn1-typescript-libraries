@@ -1,7 +1,7 @@
 /* eslint-disable */
 import {
-    OPTIONAL,
-    ASN1Element as _Element,
+    type OPTIONAL,
+    type ASN1Element as _Element,
     ASN1TagClass as _TagClass,
     ASN1Construction as _Construction,
     ASN1UniversalType as _UniversalType,
@@ -17,7 +17,7 @@ import {
     _encode_TemplateLabel,
 } from '../DefinitionASN1Module/TemplateLabel.ta.mjs';
 import {
-    TemplateList,
+    type TemplateList,
     _decode_TemplateList,
     _encode_TemplateList,
 } from '../DefinitionASN1Module/TemplateList.ta.mjs';
@@ -44,30 +44,36 @@ import {
  *
  */
 export class RelationshipObject {
+    /**
+     * @summary `class_`.
+     * @description
+     *
+     * Label of the relationship-object class (or a subclass
+     * thereof in a real implementation). ITU-T Rec. X.725 (11/95)
+     * A.2.3.3.
+     * @public
+     * @readonly
+     */
+    public readonly class_: TemplateLabel;
+    /**
+     * @summary `qualifies`.
+     * @description
+     *
+     * Qualification attributes from the relationship class
+     * template realized by the relationship object. ITU-T Rec.
+     * X.725 (11/95) A.2.3.3.
+     * @public
+     * @readonly
+     */
+    public readonly qualifies?: OPTIONAL<TemplateList>;
+
     constructor(
-        /**
-         * @summary `class_`.
-         * @description
-         *
-         * Label of the relationship-object class (or a subclass
-         * thereof in a real implementation). ITU-T Rec. X.725 (11/95)
-         * A.2.3.3.
-         * @public
-         * @readonly
-         */
-        readonly class_: TemplateLabel,
-        /**
-         * @summary `qualifies`.
-         * @description
-         *
-         * Qualification attributes from the relationship class
-         * template realized by the relationship object. ITU-T Rec.
-         * X.725 (11/95) A.2.3.3.
-         * @public
-         * @readonly
-         */
-        readonly qualifies?: OPTIONAL<TemplateList>
-    ) {}
+        class_: TemplateLabel,
+        qualifies?: OPTIONAL<TemplateList>
+    ) {
+        this.class_ = class_;
+        this.qualifies = qualifies;
+    }
 
     /**
      * @summary Restructures an object into a RelationshipObject

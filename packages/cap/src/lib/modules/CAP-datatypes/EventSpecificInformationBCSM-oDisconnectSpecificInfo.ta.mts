@@ -1,6 +1,6 @@
 import {
-    OPTIONAL,
-    ASN1Element as _Element,
+    type OPTIONAL,
+    type ASN1Element as _Element,
     ASN1TagClass as _TagClass,
 } from "@wildboar/asn1";
 import * as $ from "@wildboar/asn1/functional";
@@ -24,19 +24,25 @@ import { type Cause, _decode_Cause, _encode_Cause } from "./Cause.ta.mjs";
  *
  */
 export class EventSpecificInformationBCSM_oDisconnectSpecificInfo {
+    /**
+     * @summary `releaseCause`.
+     * @description
+     *
+     * Present if available. (3GPP TS 29.078 V19.0.0 clause 11.18).
+     *
+     * @public
+     * @readonly
+     */
+    public readonly releaseCause?: OPTIONAL<Cause>;
+    public readonly _unrecognizedExtensionsList: _Element[];
+
     constructor (
-        /**
-         * @summary `releaseCause`.
-         * @description
-         *
-         * Present if available. (3GPP TS 29.078 V19.0.0 clause 11.18).
-         *
-         * @public
-         * @readonly
-         */
-        readonly releaseCause?: OPTIONAL<Cause>,
-        readonly _unrecognizedExtensionsList: _Element[] = [],
-    ) {}
+        releaseCause?: OPTIONAL<Cause>,
+        _unrecognizedExtensionsList: _Element[] = [],
+    ) {
+        this.releaseCause = releaseCause;
+        this._unrecognizedExtensionsList = _unrecognizedExtensionsList;
+    }
 
     public static _from_object (_o: { [_K in keyof (EventSpecificInformationBCSM_oDisconnectSpecificInfo)]: (EventSpecificInformationBCSM_oDisconnectSpecificInfo)[_K] }): EventSpecificInformationBCSM_oDisconnectSpecificInfo {
         return new EventSpecificInformationBCSM_oDisconnectSpecificInfo(_o.releaseCause, _o._unrecognizedExtensionsList);

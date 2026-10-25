@@ -1,6 +1,6 @@
 /* eslint-disable */
 import {
-  OPTIONAL,
+  type OPTIONAL,
   ASN1Element as _Element,
   ASN1TagClass as _TagClass,
   ASN1Construction as _Construction,
@@ -22,7 +22,7 @@ import {
   _encode_CertId,
 } from '@wildboar/crmf';
 import {
-    CertificateList,
+    type CertificateList,
     _decode_CertificateList,
     _encode_CertificateList,
 } from '@wildboar/x500/AuthenticationFramework';
@@ -51,41 +51,49 @@ import {
  *
  */
 export class RevRepContent {
+  /**
+   * @summary `status`.
+   * @description
+   *
+   * Status for each request, in the same order as `RevReqContent`
+   * ([RFC 4210 §5.3.10](https://datatracker.ietf.org/doc/html/rfc4210#section-5.3.10)).
+   *
+   * @public
+   * @readonly
+   */
+  public readonly status: PKIStatusInfo[];
+  /**
+   * @summary `revCerts`.
+   * @description
+   *
+   * Optional identifiers of revoked certificates (`CertId`), same order
+   * as `status` ([RFC 4210 §5.3.10](https://datatracker.ietf.org/doc/html/rfc4210#section-5.3.10)).
+   *
+   * @public
+   * @readonly
+   */
+  public readonly revCerts?: OPTIONAL<CertId[]>;
+  /**
+   * @summary `crls`.
+   * @description
+   *
+   * Optional CRLs that may have been modified as a result of the
+   * request(s) ([RFC 4210 §5.3.10](https://datatracker.ietf.org/doc/html/rfc4210#section-5.3.10)).
+   *
+   * @public
+   * @readonly
+   */
+  public readonly crls?: OPTIONAL<CertificateList[]>;
+
   constructor(
-    /**
-     * @summary `status`.
-     * @description
-     *
-     * Status for each request, in the same order as `RevReqContent`
-     * ([RFC 4210 §5.3.10](https://datatracker.ietf.org/doc/html/rfc4210#section-5.3.10)).
-     *
-     * @public
-     * @readonly
-     */
-    readonly status: PKIStatusInfo[],
-    /**
-     * @summary `revCerts`.
-     * @description
-     *
-     * Optional identifiers of revoked certificates (`CertId`), same order
-     * as `status` ([RFC 4210 §5.3.10](https://datatracker.ietf.org/doc/html/rfc4210#section-5.3.10)).
-     *
-     * @public
-     * @readonly
-     */
-    readonly revCerts?: OPTIONAL<CertId[]>,
-    /**
-     * @summary `crls`.
-     * @description
-     *
-     * Optional CRLs that may have been modified as a result of the
-     * request(s) ([RFC 4210 §5.3.10](https://datatracker.ietf.org/doc/html/rfc4210#section-5.3.10)).
-     *
-     * @public
-     * @readonly
-     */
-    readonly crls?: OPTIONAL<CertificateList[]>
-  ) {}
+    status: PKIStatusInfo[],
+    revCerts?: OPTIONAL<CertId[]>,
+    crls?: OPTIONAL<CertificateList[]>
+  ) {
+    this.status = status;
+    this.revCerts = revCerts;
+    this.crls = crls;
+  }
 
   /**
    * @summary Restructures an object into a RevRepContent

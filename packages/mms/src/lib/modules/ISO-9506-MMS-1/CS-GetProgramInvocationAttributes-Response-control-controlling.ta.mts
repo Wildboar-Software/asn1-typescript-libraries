@@ -1,8 +1,8 @@
 /* eslint-disable */
 import {
-    OPTIONAL,
-    VisibleString,
-    ASN1Element as _Element,
+    type OPTIONAL,
+    type VisibleString,
+    type ASN1Element as _Element,
     ASN1TagClass as _TagClass,
     ASN1Construction as _Construction,
     ASN1UniversalType as _UniversalType,
@@ -12,8 +12,8 @@ import {
     ASN1ConstructionError as _ConstructionError,
 } from "@wildboar/asn1";
 import * as $ from "@wildboar/asn1/functional";
-import { Identifier, _decode_Identifier, _encode_Identifier } from "../ISO-9506-MMS-1/Identifier.ta.mjs";
-import { CS_GetProgramInvocationAttributes_Response_control_controlling_runningMode, _decode_CS_GetProgramInvocationAttributes_Response_control_controlling_runningMode, _encode_CS_GetProgramInvocationAttributes_Response_control_controlling_runningMode } from "../ISO-9506-MMS-1/CS-GetProgramInvocationAttributes-Response-control-controlling-runningMode.ta.mjs";
+import { type Identifier, _decode_Identifier, _encode_Identifier } from "../ISO-9506-MMS-1/Identifier.ta.mjs";
+import { type CS_GetProgramInvocationAttributes_Response_control_controlling_runningMode, _decode_CS_GetProgramInvocationAttributes_Response_control_controlling_runningMode, _encode_CS_GetProgramInvocationAttributes_Response_control_controlling_runningMode } from "../ISO-9506-MMS-1/CS-GetProgramInvocationAttributes-Response-control-controlling-runningMode.ta.mjs";
 
 
 /**
@@ -41,40 +41,48 @@ import { CS_GetProgramInvocationAttributes_Response_control_controlling_runningM
  */
 export
 class CS_GetProgramInvocationAttributes_Response_control_controlling {
+    /**
+     * @summary `controlledPI`.
+     * @description
+     *
+     * Names in `&Controlled-Program-Invocations` (may be empty). ISO 9506-1:2003 §12.9.1.2.11.
+     *
+     * @public
+     * @readonly
+     */
+    public readonly controlledPI: Identifier[];
+    /**
+     * @summary `programLocation`.
+     * @description
+     *
+     * `&program-Location` for sequential languages; omit otherwise. CSI
+     * describes use. ISO 9506-1:2003 §12.9.1.2.12.
+     *
+     * @public
+     * @readonly
+     */
+    public readonly programLocation: OPTIONAL<VisibleString>;
+    /**
+     * @summary `runningMode`.
+     * @description
+     *
+     * `&running-Mode`: free-run, remaining cycle count, or remaining step
+     * count. ISO 9506-1:2003 §12.9.1.2.13–§12.9.1.2.16.
+     *
+     * @public
+     * @readonly
+     */
+    public readonly runningMode: CS_GetProgramInvocationAttributes_Response_control_controlling_runningMode;
+
     constructor (
-        /**
-         * @summary `controlledPI`.
-         * @description
-         *
-         * Names in `&Controlled-Program-Invocations` (may be empty). ISO 9506-1:2003 §12.9.1.2.11.
-         *
-         * @public
-         * @readonly
-         */
-        readonly controlledPI: Identifier[],
-        /**
-         * @summary `programLocation`.
-         * @description
-         *
-         * `&program-Location` for sequential languages; omit otherwise. CSI
-         * describes use. ISO 9506-1:2003 §12.9.1.2.12.
-         *
-         * @public
-         * @readonly
-         */
-        readonly programLocation: OPTIONAL<VisibleString>,
-        /**
-         * @summary `runningMode`.
-         * @description
-         *
-         * `&running-Mode`: free-run, remaining cycle count, or remaining step
-         * count. ISO 9506-1:2003 §12.9.1.2.13–§12.9.1.2.16.
-         *
-         * @public
-         * @readonly
-         */
-        readonly runningMode: CS_GetProgramInvocationAttributes_Response_control_controlling_runningMode
-    ) {}
+        controlledPI: Identifier[],
+        programLocation: OPTIONAL<VisibleString>,
+        runningMode: CS_GetProgramInvocationAttributes_Response_control_controlling_runningMode
+    ) {
+        this.controlledPI = controlledPI;
+        this.programLocation = programLocation;
+        this.runningMode = runningMode;
+    }
 
     /**
      * @summary Restructures an object into a CS_GetProgramInvocationAttributes_Response_control_controlling

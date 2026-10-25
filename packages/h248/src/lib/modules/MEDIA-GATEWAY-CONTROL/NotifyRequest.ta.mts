@@ -1,11 +1,11 @@
 /* eslint-disable */
 import {
-    OPTIONAL,
-    ASN1Element as _Element,
+    type OPTIONAL,
+    type ASN1Element as _Element,
     ASN1TagClass as _TagClass
 } from "@wildboar/asn1";
 import * as $ from "@wildboar/asn1/functional";
-import { TerminationIDList, _decode_TerminationIDList, _encode_TerminationIDList } from "../MEDIA-GATEWAY-CONTROL/TerminationIDList.ta.mjs";
+import { type TerminationIDList, _decode_TerminationIDList, _encode_TerminationIDList } from "../MEDIA-GATEWAY-CONTROL/TerminationIDList.ta.mjs";
 import { ObservedEventsDescriptor, _decode_ObservedEventsDescriptor, _encode_ObservedEventsDescriptor } from "../MEDIA-GATEWAY-CONTROL/ObservedEventsDescriptor.ta.mjs";
 import { ErrorDescriptor, _decode_ErrorDescriptor, _encode_ErrorDescriptor } from "../MEDIA-GATEWAY-CONTROL/ErrorDescriptor.ta.mjs";
 
@@ -49,7 +49,7 @@ class NotifyRequest {
      * @public
      * @readonly
      */
-    readonly terminationID: TerminationIDList;
+    public readonly terminationID: TerminationIDList;
     /**
      * @summary `observedEventsDescriptor`.
      * @description
@@ -61,7 +61,7 @@ class NotifyRequest {
      * @public
      * @readonly
      */
-    readonly observedEventsDescriptor: ObservedEventsDescriptor;
+    public readonly observedEventsDescriptor: ObservedEventsDescriptor;
     /**
      * @summary `errorDescriptor`.
      * @description
@@ -72,7 +72,7 @@ class NotifyRequest {
      * @public
      * @readonly
      */
-    readonly errorDescriptor?: OPTIONAL<ErrorDescriptor>;
+    public readonly errorDescriptor?: OPTIONAL<ErrorDescriptor>;
     /**
      * @summary Extensions that are not recognized.
      * @description
@@ -83,7 +83,7 @@ class NotifyRequest {
      * @public
      * @readonly
      */
-    readonly _unrecognizedExtensionsList: _Element[];
+    public readonly _unrecognizedExtensionsList: _Element[];
 
     constructor (
         terminationID: TerminationIDList,

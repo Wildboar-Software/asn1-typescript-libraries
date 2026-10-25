@@ -1,12 +1,12 @@
 /* eslint-disable */
 import {
-    ASN1Element as _Element,
+    type ASN1Element as _Element,
     ASN1TagClass as _TagClass,
-    OPTIONAL,
+    type OPTIONAL,
 } from "@wildboar/asn1";
 import * as $ from "@wildboar/asn1/functional";
 import {
-    Extensions,
+    type Extensions,
     _decode_Extensions,
     _encode_Extensions,
 } from "@wildboar/pki-stub";
@@ -36,31 +36,37 @@ import {
  *
  */
 export class Request {
+    /**
+     * @summary `reqCert`.
+     * @description
+     *
+     * Identifier of the target certificate
+     * ([RFC 6960 §4.1.1](https://datatracker.ietf.org/doc/html/rfc6960#section-4.1.1)).
+     *
+     * @public
+     * @readonly
+     */
+    public readonly reqCert: CertID;
+    /**
+     * @summary `singleRequestExtensions`.
+     * @description
+     *
+     * Optional extensions applicable to this single certificate
+     * status request (e.g. service locator). See
+     * [RFC 6960 §4.4](https://datatracker.ietf.org/doc/html/rfc6960#section-4.4).
+     *
+     * @public
+     * @readonly
+     */
+    public readonly singleRequestExtensions?: OPTIONAL<Extensions>;
+
     constructor(
-        /**
-         * @summary `reqCert`.
-         * @description
-         *
-         * Identifier of the target certificate
-         * ([RFC 6960 §4.1.1](https://datatracker.ietf.org/doc/html/rfc6960#section-4.1.1)).
-         *
-         * @public
-         * @readonly
-         */
-        readonly reqCert: CertID,
-        /**
-         * @summary `singleRequestExtensions`.
-         * @description
-         *
-         * Optional extensions applicable to this single certificate
-         * status request (e.g. service locator). See
-         * [RFC 6960 §4.4](https://datatracker.ietf.org/doc/html/rfc6960#section-4.4).
-         *
-         * @public
-         * @readonly
-         */
-        readonly singleRequestExtensions?: OPTIONAL<Extensions>
-    ) {}
+        reqCert: CertID,
+        singleRequestExtensions?: OPTIONAL<Extensions>
+    ) {
+        this.reqCert = reqCert;
+        this.singleRequestExtensions = singleRequestExtensions;
+    }
 
     /**
      * @summary Restructures an object into a Request

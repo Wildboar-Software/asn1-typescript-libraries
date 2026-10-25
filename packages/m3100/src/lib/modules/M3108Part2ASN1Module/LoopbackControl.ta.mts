@@ -1,7 +1,7 @@
 /* eslint-disable */
 import {
-    UTCTime,
-    ASN1Element as _Element,
+    type UTCTime,
+    type ASN1Element as _Element,
     ASN1TagClass as _TagClass,
     ASN1Construction as _Construction,
     ASN1UniversalType as _UniversalType,
@@ -35,26 +35,34 @@ import {
  *
  */
 export class LoopbackControl {
+    /**
+     * @summary `status`.
+     * @public
+     * @readonly
+     */
+    public readonly status: LoopbackControl_status;
+    /**
+     * @summary `terminationTime`.
+     * @public
+     * @readonly
+     */
+    public readonly terminationTime: UTCTime;
+    /**
+     * @summary Extensions that are not recognized.
+     * @public
+     * @readonly
+     */
+    public readonly _unrecognizedExtensionsList: _Element[];
+
     constructor(
-        /**
-         * @summary `status`.
-         * @public
-         * @readonly
-         */
-        readonly status: LoopbackControl_status,
-        /**
-         * @summary `terminationTime`.
-         * @public
-         * @readonly
-         */
-        readonly terminationTime: UTCTime,
-        /**
-         * @summary Extensions that are not recognized.
-         * @public
-         * @readonly
-         */
-        readonly _unrecognizedExtensionsList: _Element[] = []
-    ) {}
+        status: LoopbackControl_status,
+        terminationTime: UTCTime,
+        _unrecognizedExtensionsList: _Element[] = []
+    ) {
+        this.status = status;
+        this.terminationTime = terminationTime;
+        this._unrecognizedExtensionsList = _unrecognizedExtensionsList;
+    }
 
     /**
      * @summary Restructures an object into a LoopbackControl
@@ -84,7 +92,7 @@ export class LoopbackControl {
      * @static
      */
 
-    public static _enum_for_status = _enum_for_LoopbackControl_status;
+    public static _enum_for_status: typeof _enum_for_LoopbackControl_status = _enum_for_LoopbackControl_status;
 }
 
 

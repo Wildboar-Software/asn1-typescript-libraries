@@ -1,11 +1,11 @@
 /* eslint-disable */
 import {
-    NULL,
-    ASN1Element as _Element,
+    type NULL,
+    type ASN1Element as _Element,
     ASN1TagClass as _TagClass
 } from "@wildboar/asn1";
 import * as $ from "@wildboar/asn1/functional";
-import { ProtocolIdentifier, _decode_ProtocolIdentifier, _encode_ProtocolIdentifier } from "../Short-Message-Service-Operations-asn1-97/ProtocolIdentifier.ta.mjs";
+import { type ProtocolIdentifier, _decode_ProtocolIdentifier, _encode_ProtocolIdentifier } from "../Short-Message-Service-Operations-asn1-97/ProtocolIdentifier.ta.mjs";
 import { UserData, _decode_UserData, _encode_UserData } from "../Short-Message-Service-Operations-asn1-97/UserData.ta.mjs";
 import { ResChoiceSeq, _decode_ResChoiceSeq, _encode_ResChoiceSeq } from "../Short-Message-Service-Operations-asn1-97/ResChoiceSeq.ta.mjs";
 

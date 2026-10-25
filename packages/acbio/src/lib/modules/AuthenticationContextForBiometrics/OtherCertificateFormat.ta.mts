@@ -1,7 +1,7 @@
 /* eslint-disable */
 import {
-    OBJECT_IDENTIFIER,
-    ASN1Element as _Element,
+    type OBJECT_IDENTIFIER,
+    type ASN1Element as _Element,
     ASN1TagClass as _TagClass,
     ASN1Construction as _Construction,
     ASN1UniversalType as _UniversalType,
@@ -26,20 +26,26 @@ import * as $ from '@wildboar/asn1/functional';
  *
  */
 export class OtherCertificateFormat {
+    /**
+     * @summary `otherFormat`.
+     * @public
+     * @readonly
+     */
+    public readonly otherFormat: OBJECT_IDENTIFIER;
+    /**
+     * @summary `otherCert`.
+     * @public
+     * @readonly
+     */
+    public readonly otherCert: _Element;
+
     constructor(
-        /**
-         * @summary `otherFormat`.
-         * @public
-         * @readonly
-         */
-        readonly otherFormat: OBJECT_IDENTIFIER,
-        /**
-         * @summary `otherCert`.
-         * @public
-         * @readonly
-         */
-        readonly otherCert: _Element
-    ) {}
+        otherFormat: OBJECT_IDENTIFIER,
+        otherCert: _Element
+    ) {
+        this.otherFormat = otherFormat;
+        this.otherCert = otherCert;
+    }
 
     /**
      * @summary Restructures an object into a OtherCertificateFormat

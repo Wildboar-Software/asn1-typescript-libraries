@@ -1,8 +1,8 @@
 /* eslint-disable */
 import {
-    IA5String,
+    type IA5String,
     ASN1ConstructionError as _ConstructionError,
-    ASN1Element as _Element,
+    type ASN1Element as _Element,
     ASN1TagClass as _TagClass,
     ASN1SizeError
 } from "@wildboar/asn1";
@@ -44,7 +44,7 @@ class LogotypeReference {
      * @public
      * @readonly
      */
-    readonly refStructHash: HashAlgAndValue[];
+    public readonly refStructHash: HashAlgAndValue[];
     /**
      * Replicas of the same `.LTD` file. Every URI uses the `http`
      * or `ftp` scheme, and at least one uses `http`. Clients fetch
@@ -56,7 +56,7 @@ class LogotypeReference {
      * @public
      * @readonly
      */
-    readonly refStructURI: IA5String[];
+    public readonly refStructURI: IA5String[];
 
     constructor (
         refStructHash: HashAlgAndValue[],

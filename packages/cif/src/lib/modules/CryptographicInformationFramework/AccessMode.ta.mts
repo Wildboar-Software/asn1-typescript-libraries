@@ -1,7 +1,7 @@
 /* eslint-disable */
 import {
-    BIT_STRING,
-    ASN1Element as _Element,
+    type BIT_STRING,
+    type ASN1Element as _Element,
     ASN1TagClass as _TagClass,
     ASN1Construction as _Construction,
     ASN1UniversalType as _UniversalType,
@@ -220,8 +220,8 @@ const AccessMode_ext_auth: number = 10; /* LONG_NAMED_BIT */
  */
 export
 const ext_auth: number = AccessMode_ext_auth; /* SHORT_NAMED_BIT */
-export const _decode_AccessMode = $._decodeBitString;
-export const _encode_AccessMode = $._encodeBitString;
+export const _decode_AccessMode: $.ASN1Decoder<BIT_STRING> = $._decodeBitString;
+export const _encode_AccessMode: $.ASN1Encoder<BIT_STRING> = $._encodeBitString;
 
 
 /* eslint-enable */

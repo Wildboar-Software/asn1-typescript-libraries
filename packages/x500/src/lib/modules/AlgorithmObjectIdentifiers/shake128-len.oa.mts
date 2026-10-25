@@ -1,7 +1,7 @@
 /* eslint-disable */
 import { id_shake128_len } from "../AlgorithmObjectIdentifiers/id-shake128-len.va.mjs";
 import {
-    ShakeOutputLen,
+    type ShakeOutputLen,
     _decode_ShakeOutputLen,
     _encode_ShakeOutputLen,
 } from "../AlgorithmObjectIdentifiers/ShakeOutputLen.ta.mjs";

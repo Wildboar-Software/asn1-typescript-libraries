@@ -16,7 +16,7 @@ import {
   _encode_SecretQuestionType,
 } from '../CMAIL/SecretQuestionType.ta.mjs';
 import {
-  SignatureType,
+  type SignatureType,
   _decode_SignatureType,
   _encode_SignatureType,
 } from '../CMAIL/SignatureType.ta.mjs';
@@ -50,7 +50,7 @@ export class EntityChallengeType {
    * @public
    * @readonly
    */
-  readonly secretQuestion: SecretQuestionType;
+  public readonly secretQuestion: SecretQuestionType;
   /**
    * @summary `signature`.
    * @description Signature over the challenge. XSD uses
@@ -59,7 +59,7 @@ export class EntityChallengeType {
    * @public
    * @readonly
    */
-  readonly signature: SignatureType;
+  public readonly signature: SignatureType;
 
   constructor(
     secretQuestion: SecretQuestionType,

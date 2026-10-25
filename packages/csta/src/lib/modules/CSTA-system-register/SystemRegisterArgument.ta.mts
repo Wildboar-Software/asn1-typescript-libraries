@@ -2,15 +2,15 @@
 
 import * as $ from "@wildboar/asn1/functional";
 import {
-    OPTIONAL,
-    SEQUENCE,
-    SET,
-    ASN1Element as _Element,
+    type OPTIONAL,
+    type SEQUENCE,
+    type SET,
+    type ASN1Element as _Element,
     ASN1TagClass as _TagClass
 } from "@wildboar/asn1";
-import { RequestTypes, _decode_RequestTypes, _encode_RequestTypes } from "../CSTA-system-register/RequestTypes.ta.mjs";
+import { type RequestTypes, _decode_RequestTypes, _encode_RequestTypes } from "../CSTA-system-register/RequestTypes.ta.mjs";
 
-import { StatusFilter, _decode_StatusFilter, _encode_StatusFilter } from "../CSTA-system-register/StatusFilter.ta.mjs";
+import { type StatusFilter, _decode_StatusFilter, _encode_StatusFilter } from "../CSTA-system-register/StatusFilter.ta.mjs";
 
 import { CSTACommonArguments, _decode_CSTACommonArguments, _encode_CSTACommonArguments } from "../CSTA-extension-types/CSTACommonArguments.ta.mjs";
 
@@ -30,7 +30,7 @@ import { CSTACommonArguments, _decode_CSTACommonArguments, _encode_CSTACommonArg
  * ```asn1
  * SystemRegisterArgument ::= SEQUENCE
  * {     requestTypes             RequestTypes,
- *     requestedStatusFilter         StatusFilter             OPTIONAL,
+ *     requestedStatusFilter         StatusFilter             type OPTIONAL,
  *     extensions             CSTACommonArguments         OPTIONAL }
  * ```
  * 
@@ -38,39 +38,47 @@ import { CSTACommonArguments, _decode_CSTACommonArguments, _encode_CSTACommonArg
  */
 export
 class SystemRegisterArgument {
+    /**
+     * @summary `requestTypes`.
+     * @description
+     *
+     * Services being registered: systemStatus, requestSystemStatus,
+     * switchingFunctionCapsChanged, switchingFunctionDevicesChanged.
+     * @public
+     * @readonly
+     */
+    public readonly requestTypes: RequestTypes;
+    /**
+     * @summary `requestedStatusFilter`.
+     * @description
+     *
+     * System Status types to filter (not send). Mandatory if
+     * `requestTypes` includes System Status; otherwise shall not be
+     * provided.
+     * @public
+     * @readonly
+     */
+    public readonly requestedStatusFilter?: OPTIONAL<StatusFilter>;
+    /**
+     * @summary `extensions`.
+     * @description
+     *
+     * Optional security (timestamp, sequence, securityInfo) and
+     * privateData. ECMA-269 Table 14-4.
+     * @public
+     * @readonly
+     */
+    public readonly extensions?: OPTIONAL<CSTACommonArguments>;
+
     constructor (
-        /**
-         * @summary `requestTypes`.
-         * @description
-         *
-         * Services being registered: systemStatus, requestSystemStatus,
-         * switchingFunctionCapsChanged, switchingFunctionDevicesChanged.
-         * @public
-         * @readonly
-         */
-        readonly requestTypes: RequestTypes,
-        /**
-         * @summary `requestedStatusFilter`.
-         * @description
-         *
-         * System Status types to filter (not send). Mandatory if
-         * `requestTypes` includes System Status; otherwise shall not be
-         * provided.
-         * @public
-         * @readonly
-         */
-        readonly requestedStatusFilter?: OPTIONAL<StatusFilter>,
-        /**
-         * @summary `extensions`.
-         * @description
-         *
-         * Optional security (timestamp, sequence, securityInfo) and
-         * privateData. ECMA-269 Table 14-4.
-         * @public
-         * @readonly
-         */
-        readonly extensions?: OPTIONAL<CSTACommonArguments>
-    ) {}
+        requestTypes: RequestTypes,
+        requestedStatusFilter?: OPTIONAL<StatusFilter>,
+        extensions?: OPTIONAL<CSTACommonArguments>
+    ) {
+        this.requestTypes = requestTypes;
+        this.requestedStatusFilter = requestedStatusFilter;
+        this.extensions = extensions;
+    }
 
     /**
      * @summary Restructures an object into a SystemRegisterArgument

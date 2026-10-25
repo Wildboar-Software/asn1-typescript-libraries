@@ -1,18 +1,18 @@
 /* eslint-disable */
 import {
     ASN1ConstructionError as _ConstructionError,
-    ASN1Element as _Element,
+    type ASN1Element as _Element,
     ASN1TagClass as _TagClass,
-    OBJECT_IDENTIFIER,
+    type OBJECT_IDENTIFIER,
 } from "@wildboar/asn1";
 import * as $ from "@wildboar/asn1/functional";
 import {
-    Applied,
+    type Applied,
     _decode_Applied,
     _encode_Applied,
 } from "../SIOsAccessControl-MODULE/Applied.ta.mjs";
 import {
-    LabelAndCertValue,
+    type LabelAndCertValue,
     _decode_LabelAndCertValue,
     _encode_LabelAndCertValue,
 } from "../SIOsAccessControl-MODULE/LabelAndCertValue.ta.mjs";
@@ -38,41 +38,49 @@ import {
  *
  */
 export class EquivalentClassification {
+    /**
+     * @summary `securityPolicyId`.
+     * @description
+     *
+     * Other policy in which `labelAndCertValue` is defined.
+     * X.841 §6.2.2.6.
+     *
+     * @public
+     * @readonly
+     */
+    public readonly securityPolicyId: OBJECT_IDENTIFIER;
+    /**
+     * @summary `labelAndCertValue`.
+     * @description
+     *
+     * That other policy's classification value (and clearance
+     * `classList` bit) treated as equivalent. X.841 §6.2.2.6.
+     *
+     * @public
+     * @readonly
+     */
+    public readonly labelAndCertValue: LabelAndCertValue;
+    /**
+     * @summary `applied`.
+     * @description
+     *
+     * Whether the mapping applies when encrypting, decrypting,
+     * or both. X.841 §6.2.2.6.
+     *
+     * @public
+     * @readonly
+     */
+    public readonly applied: Applied;
+
     constructor(
-        /**
-         * @summary `securityPolicyId`.
-         * @description
-         *
-         * Other policy in which `labelAndCertValue` is defined.
-         * X.841 §6.2.2.6.
-         *
-         * @public
-         * @readonly
-         */
-        readonly securityPolicyId: OBJECT_IDENTIFIER,
-        /**
-         * @summary `labelAndCertValue`.
-         * @description
-         *
-         * That other policy's classification value (and clearance
-         * `classList` bit) treated as equivalent. X.841 §6.2.2.6.
-         *
-         * @public
-         * @readonly
-         */
-        readonly labelAndCertValue: LabelAndCertValue,
-        /**
-         * @summary `applied`.
-         * @description
-         *
-         * Whether the mapping applies when encrypting, decrypting,
-         * or both. X.841 §6.2.2.6.
-         *
-         * @public
-         * @readonly
-         */
-        readonly applied: Applied
-    ) {}
+        securityPolicyId: OBJECT_IDENTIFIER,
+        labelAndCertValue: LabelAndCertValue,
+        applied: Applied
+    ) {
+        this.securityPolicyId = securityPolicyId;
+        this.labelAndCertValue = labelAndCertValue;
+        this.applied = applied;
+    }
 
     /**
      * @summary Restructures an object into a EquivalentClassification

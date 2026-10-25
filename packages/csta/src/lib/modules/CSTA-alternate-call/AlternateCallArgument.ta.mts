@@ -2,14 +2,14 @@
 
 import * as $ from "@wildboar/asn1/functional";
 import {
-    OPTIONAL,
-    BOOLEAN,
-    SEQUENCE,
-    SET,
-    ASN1Element as _Element,
+    type OPTIONAL,
+    type BOOLEAN,
+    type SEQUENCE,
+    type SET,
+    type ASN1Element as _Element,
     ASN1TagClass as _TagClass
 } from "@wildboar/asn1";
-import { ConnectionID, _decode_ConnectionID, _encode_ConnectionID } from "../CSTA-call-connection-identifiers/ConnectionID.ta.mjs";
+import { type ConnectionID, _decode_ConnectionID, _encode_ConnectionID } from "../CSTA-call-connection-identifiers/ConnectionID.ta.mjs";
 
 import {
     ConsultOptions,
@@ -40,7 +40,7 @@ import { CSTACommonArguments, _decode_CSTACommonArguments, _encode_CSTACommonArg
  * AlternateCallArgument ::= SEQUENCE
  * {     heldCall             ConnectionID,
  *     activeCall             ConnectionID,
- *     connectionReservation         BOOLEAN             OPTIONAL,
+ *     connectionReservation         BOOLEAN             type OPTIONAL,
  *     consultOptions             ConsultOptions             DEFAULT unrestricted,
  *     extensions             CSTACommonArguments         OPTIONAL }
  * ```
@@ -49,64 +49,76 @@ import { CSTACommonArguments, _decode_CSTACommonArguments, _encode_CSTACommonArg
  */
 export
 class AlternateCallArgument {
+    /**
+     * @summary `heldCall`.
+     * @description
+     *
+     * Mandatory. Connection at the alternating device that is held,
+     * alerting, or queued; becomes Connected.
+     *
+     * @public
+     * @readonly
+     */
+    public readonly heldCall: ConnectionID;
+    /**
+     * @summary `activeCall`.
+     * @description
+     *
+     * Mandatory. Connected connection at the alternating device; becomes
+     * Hold.
+     *
+     * @public
+     * @readonly
+     */
+    public readonly activeCall: ConnectionID;
+    /**
+     * @summary `connectionReservation`.
+     * @description
+     *
+     * Optional. When TRUE, reserve the held call's media-stream channel(s)
+     * for later Retrieve, Reconnect, or Alternate.
+     *
+     * @public
+     * @readonly
+     */
+    public readonly connectionReservation?: OPTIONAL<BOOLEAN>;
+    /**
+     * @summary `consultOptions`.
+     * @description
+     *
+     * Default `unrestricted`. When supported, send a capability-advertised
+     * value so transfer/conference resources can be reserved. Does not
+     * restrict other services.
+     *
+     * @public
+     * @readonly
+     */
+    public readonly consultOptions?: OPTIONAL<ConsultOptions>;
+    /**
+     * @summary `extensions`.
+     * @description
+     *
+     * Optional `CSTACommonArguments` carrying the security and privateData
+     * parameters from the ECMA-269 service table.
+     *
+     * @public
+     * @readonly
+     */
+    public readonly extensions?: OPTIONAL<CSTACommonArguments>;
+
     constructor (
-        /**
-         * @summary `heldCall`.
-         * @description
-         *
-         * Mandatory. Connection at the alternating device that is held,
-         * alerting, or queued; becomes Connected.
-         *
-         * @public
-         * @readonly
-         */
-        readonly heldCall: ConnectionID,
-        /**
-         * @summary `activeCall`.
-         * @description
-         *
-         * Mandatory. Connected connection at the alternating device; becomes
-         * Hold.
-         *
-         * @public
-         * @readonly
-         */
-        readonly activeCall: ConnectionID,
-        /**
-         * @summary `connectionReservation`.
-         * @description
-         *
-         * Optional. When TRUE, reserve the held call's media-stream channel(s)
-         * for later Retrieve, Reconnect, or Alternate.
-         *
-         * @public
-         * @readonly
-         */
-        readonly connectionReservation?: OPTIONAL<BOOLEAN>,
-        /**
-         * @summary `consultOptions`.
-         * @description
-         *
-         * Default `unrestricted`. When supported, send a capability-advertised
-         * value so transfer/conference resources can be reserved. Does not
-         * restrict other services.
-         *
-         * @public
-         * @readonly
-         */
-        readonly consultOptions?: OPTIONAL<ConsultOptions>,
-        /**
-         * @summary `extensions`.
-         * @description
-         *
-         * Optional `CSTACommonArguments` carrying the security and privateData
-         * parameters from the ECMA-269 service table.
-         *
-         * @public
-         * @readonly
-         */
-        readonly extensions?: OPTIONAL<CSTACommonArguments>
-    ) {}
+        heldCall: ConnectionID,
+        activeCall: ConnectionID,
+        connectionReservation?: OPTIONAL<BOOLEAN>,
+        consultOptions?: OPTIONAL<ConsultOptions>,
+        extensions?: OPTIONAL<CSTACommonArguments>
+    ) {
+        this.heldCall = heldCall;
+        this.activeCall = activeCall;
+        this.connectionReservation = connectionReservation;
+        this.consultOptions = consultOptions;
+        this.extensions = extensions;
+    }
 
     /**
      * @summary Restructures an object into a AlternateCallArgument
@@ -130,14 +142,14 @@ class AlternateCallArgument {
      * @static
      * @method
      */
-    public static get _default_value_for_consultOptions () { return ConsultOptions_unrestricted; }        /**
+    public static get _default_value_for_consultOptions (): _enum_for_ConsultOptions { return ConsultOptions_unrestricted; }        /**
          * @summary The enum used as the type of the component `consultOptions`
          *
          * @public
          * @static
          */
 
-    public static _enum_for_consultOptions = _enum_for_ConsultOptions;
+    public static _enum_for_consultOptions: typeof _enum_for_ConsultOptions = _enum_for_ConsultOptions;
 }
 
 /**

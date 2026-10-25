@@ -1,7 +1,7 @@
 /* eslint-disable */
 import {
-    OPTIONAL,
-    ASN1Element as _Element,
+    type OPTIONAL,
+    type ASN1Element as _Element,
     ASN1TagClass as _TagClass,
     ASN1Construction as _Construction,
     ASN1UniversalType as _UniversalType,
@@ -11,15 +11,15 @@ import {
     ASN1ConstructionError as _ConstructionError,
 } from "@wildboar/asn1";
 import * as $ from "@wildboar/asn1/functional";
-import { EvidenceRecord_version, _decode_EvidenceRecord_version, _encode_EvidenceRecord_version } from "../ERS/EvidenceRecord-version.ta.mjs";
+import { type EvidenceRecord_version, _decode_EvidenceRecord_version, _encode_EvidenceRecord_version } from "../ERS/EvidenceRecord-version.ta.mjs";
 import {
     AlgorithmIdentifier,
     _decode_AlgorithmIdentifier,
     _encode_AlgorithmIdentifier,
 } from "@wildboar/pki-stub";
-import { CryptoInfos, _decode_CryptoInfos, _encode_CryptoInfos } from "../ERS/CryptoInfos.ta.mjs";
+import { type CryptoInfos, _decode_CryptoInfos, _encode_CryptoInfos } from "../ERS/CryptoInfos.ta.mjs";
 import { EncryptionInfo, _decode_EncryptionInfo, _encode_EncryptionInfo } from "../ERS/EncryptionInfo.ta.mjs";
-import { ArchiveTimeStampSequence, _decode_ArchiveTimeStampSequence, _encode_ArchiveTimeStampSequence } from "../ERS/ArchiveTimeStampSequence.ta.mjs";
+import { type ArchiveTimeStampSequence, _decode_ArchiveTimeStampSequence, _encode_ArchiveTimeStampSequence } from "../ERS/ArchiveTimeStampSequence.ta.mjs";
 
 /**
  * @summary EvidenceRecord
@@ -51,78 +51,90 @@ import { ArchiveTimeStampSequence, _decode_ArchiveTimeStampSequence, _encode_Arc
  */
 export
 class EvidenceRecord {
+    /**
+     * @summary `version`.
+     * @description
+     *
+     * Syntax version. Value `1` (`v1`) indicates this specification.
+     * Lower values indicate an earlier ERS version. An
+     * implementation conforming to RFC 4998 SHOULD reject a version
+     * value below 1. (RFC 4998 §3.1.)
+     *
+     * @public
+     * @readonly
+     */
+    public readonly version: EvidenceRecord_version;
+    /**
+     * @summary `digestAlgorithms`.
+     * @description
+     *
+     * Sequence of all hash algorithms used to hash the data object
+     * over the archival period: the union of all
+     * `digestAlgorithm` values from the `ArchiveTimeStamp`s in this
+     * record. Ordering is not relevant. (RFC 4998 §3.1.)
+     *
+     * @public
+     * @readonly
+     */
+    public readonly digestAlgorithms: AlgorithmIdentifier[];
+    /**
+     * @summary `cryptoInfos`.
+     * @description
+     *
+     * Optional data useful when validating
+     * `archiveTimeStampSequence` (e.g. trust anchors, certificates,
+     * revocation information, algorithm suitability). Policy may
+     * dictate what is included. (RFC 4998 §3.1.)
+     *
+     * > Since this data is not protected within any timestamp, the
+     * > data should be verifiable through other mechanisms. Such
+     * > verification is out of scope of this document.
+     *
+     * @public
+     * @readonly
+     */
+    public readonly cryptoInfos: OPTIONAL<CryptoInfos>;
+    /**
+     * @summary `encryptionInfo`.
+     * @description
+     *
+     * Optional parameters needed when archive data objects were
+     * encrypted before Archive Timestamps were generated but a
+     * non-repudiation proof for the unencrypted data is required.
+     * Absent means objects are not encrypted, or proof for
+     * unencrypted data is not required. See RFC 4998 §6 / §6.1.
+     * (RFC 4998 §3.1.)
+     *
+     * @public
+     * @readonly
+     */
+    public readonly encryptionInfo: OPTIONAL<EncryptionInfo>;
+    /**
+     * @summary `archiveTimeStampSequence`.
+     * @description
+     *
+     * Sequence of `ArchiveTimeStampChain` values covering the
+     * archived data over time, including renewals. See RFC 4998 §5.
+     * (RFC 4998 §3.1.)
+     *
+     * @public
+     * @readonly
+     */
+    public readonly archiveTimeStampSequence: ArchiveTimeStampSequence;
+
     constructor (
-        /**
-         * @summary `version`.
-         * @description
-         *
-         * Syntax version. Value `1` (`v1`) indicates this specification.
-         * Lower values indicate an earlier ERS version. An
-         * implementation conforming to RFC 4998 SHOULD reject a version
-         * value below 1. (RFC 4998 §3.1.)
-         *
-         * @public
-         * @readonly
-         */
-        readonly version: EvidenceRecord_version,
-        /**
-         * @summary `digestAlgorithms`.
-         * @description
-         *
-         * Sequence of all hash algorithms used to hash the data object
-         * over the archival period: the union of all
-         * `digestAlgorithm` values from the `ArchiveTimeStamp`s in this
-         * record. Ordering is not relevant. (RFC 4998 §3.1.)
-         *
-         * @public
-         * @readonly
-         */
-        readonly digestAlgorithms: AlgorithmIdentifier[],
-        /**
-         * @summary `cryptoInfos`.
-         * @description
-         *
-         * Optional data useful when validating
-         * `archiveTimeStampSequence` (e.g. trust anchors, certificates,
-         * revocation information, algorithm suitability). Policy may
-         * dictate what is included. (RFC 4998 §3.1.)
-         *
-         * > Since this data is not protected within any timestamp, the
-         * > data should be verifiable through other mechanisms. Such
-         * > verification is out of scope of this document.
-         *
-         * @public
-         * @readonly
-         */
-        readonly cryptoInfos: OPTIONAL<CryptoInfos>,
-        /**
-         * @summary `encryptionInfo`.
-         * @description
-         *
-         * Optional parameters needed when archive data objects were
-         * encrypted before Archive Timestamps were generated but a
-         * non-repudiation proof for the unencrypted data is required.
-         * Absent means objects are not encrypted, or proof for
-         * unencrypted data is not required. See RFC 4998 §6 / §6.1.
-         * (RFC 4998 §3.1.)
-         *
-         * @public
-         * @readonly
-         */
-        readonly encryptionInfo: OPTIONAL<EncryptionInfo>,
-        /**
-         * @summary `archiveTimeStampSequence`.
-         * @description
-         *
-         * Sequence of `ArchiveTimeStampChain` values covering the
-         * archived data over time, including renewals. See RFC 4998 §5.
-         * (RFC 4998 §3.1.)
-         *
-         * @public
-         * @readonly
-         */
-        readonly archiveTimeStampSequence: ArchiveTimeStampSequence
-    ) {}
+        version: EvidenceRecord_version,
+        digestAlgorithms: AlgorithmIdentifier[],
+        cryptoInfos: OPTIONAL<CryptoInfos>,
+        encryptionInfo: OPTIONAL<EncryptionInfo>,
+        archiveTimeStampSequence: ArchiveTimeStampSequence
+    ) {
+        this.version = version;
+        this.digestAlgorithms = digestAlgorithms;
+        this.cryptoInfos = cryptoInfos;
+        this.encryptionInfo = encryptionInfo;
+        this.archiveTimeStampSequence = archiveTimeStampSequence;
+    }
 
     /**
      * @summary Restructures an object into a EvidenceRecord

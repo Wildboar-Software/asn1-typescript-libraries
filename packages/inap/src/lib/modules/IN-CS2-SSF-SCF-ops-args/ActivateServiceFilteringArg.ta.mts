@@ -1,19 +1,19 @@
 /* eslint-disable */
 import {
-    OPTIONAL,
-    ASN1Element as _Element,
+    type OPTIONAL,
+    type ASN1Element as _Element,
     ASN1TagClass as _TagClass
 } from "@wildboar/asn1";
 import * as $ from "@wildboar/asn1/functional";
 import { FilteredCallTreatment, _decode_FilteredCallTreatment, _encode_FilteredCallTreatment } from "../IN-CS2-datatypes/FilteredCallTreatment.ta.mjs";
 // export { FilteredCallTreatment, _decode_FilteredCallTreatment, _encode_FilteredCallTreatment } from "../IN-CS2-datatypes/FilteredCallTreatment.ta.mjs";
-import { FilteringCharacteristics, _decode_FilteringCharacteristics, _encode_FilteringCharacteristics } from "../IN-CS2-datatypes/FilteringCharacteristics.ta.mjs";
+import { type FilteringCharacteristics, _decode_FilteringCharacteristics, _encode_FilteringCharacteristics } from "../IN-CS2-datatypes/FilteringCharacteristics.ta.mjs";
 // export { FilteringCharacteristics, _decode_FilteringCharacteristics, _encode_FilteringCharacteristics } from "../IN-CS2-datatypes/FilteringCharacteristics.ta.mjs";
-import { FilteringTimeOut, _decode_FilteringTimeOut, _encode_FilteringTimeOut } from "../IN-CS2-datatypes/FilteringTimeOut.ta.mjs";
+import { type FilteringTimeOut, _decode_FilteringTimeOut, _encode_FilteringTimeOut } from "../IN-CS2-datatypes/FilteringTimeOut.ta.mjs";
 // export { FilteringTimeOut, _decode_FilteringTimeOut, _encode_FilteringTimeOut } from "../IN-CS2-datatypes/FilteringTimeOut.ta.mjs";
-import { FilteringCriteria, _decode_FilteringCriteria, _encode_FilteringCriteria } from "../IN-CS2-datatypes/FilteringCriteria.ta.mjs";
+import { type FilteringCriteria, _decode_FilteringCriteria, _encode_FilteringCriteria } from "../IN-CS2-datatypes/FilteringCriteria.ta.mjs";
 // export { FilteringCriteria, _decode_FilteringCriteria, _encode_FilteringCriteria } from "../IN-CS2-datatypes/FilteringCriteria.ta.mjs";
-import { DateAndTime, _decode_DateAndTime, _encode_DateAndTime } from "../IN-CS2-datatypes/DateAndTime.ta.mjs";
+import { type DateAndTime, _decode_DateAndTime, _encode_DateAndTime } from "../IN-CS2-datatypes/DateAndTime.ta.mjs";
 // export { DateAndTime, _decode_DateAndTime, _encode_DateAndTime } from "../IN-CS2-datatypes/DateAndTime.ta.mjs";
 import { ExtensionField, _decode_ExtensionField, _encode_ExtensionField } from "../IN-CS2-datatypes/ExtensionField.ta.mjs";
 // export { ExtensionField, _decode_ExtensionField, _encode_ExtensionField } from "../IN-CS2-datatypes/ExtensionField.ta.mjs";

@@ -2,23 +2,23 @@
 
 import * as $ from "@wildboar/asn1/functional";
 import {
-    OPTIONAL,
-    SEQUENCE,
-    SET,
-    ASN1Element as _Element,
+    type OPTIONAL,
+    type SEQUENCE,
+    type SET,
+    type ASN1Element as _Element,
     ASN1TagClass as _TagClass
 } from "@wildboar/asn1";
-import { SubjectDeviceID, _decode_SubjectDeviceID, _encode_SubjectDeviceID } from "../CSTA-device-identifiers/SubjectDeviceID.ta.mjs";
+import { type SubjectDeviceID, _decode_SubjectDeviceID, _encode_SubjectDeviceID } from "../CSTA-device-identifiers/SubjectDeviceID.ta.mjs";
 
-import { ConnectionID, _decode_ConnectionID, _encode_ConnectionID } from "../CSTA-call-connection-identifiers/ConnectionID.ta.mjs";
+import { type ConnectionID, _decode_ConnectionID, _encode_ConnectionID } from "../CSTA-call-connection-identifiers/ConnectionID.ta.mjs";
 
 import { LocalConnectionState, _decode_LocalConnectionState, _encode_LocalConnectionState } from "../CSTA-connection-states/LocalConnectionState.ta.mjs";
 
 import { ServicesPermitted, _decode_ServicesPermitted, _encode_ServicesPermitted } from "../CSTA-call-control/ServicesPermitted.ta.mjs";
 
-import { CallMediaInfoList, _decode_CallMediaInfoList, _encode_CallMediaInfoList } from "../CSTA-status-reporting/CallMediaInfoList.ta.mjs";
+import { type CallMediaInfoList, _decode_CallMediaInfoList, _encode_CallMediaInfoList } from "../CSTA-status-reporting/CallMediaInfoList.ta.mjs";
 
-import { LocationInfoList, _decode_LocationInfoList, _encode_LocationInfoList } from "../CSTA-call-control/LocationInfoList.ta.mjs";
+import { type LocationInfoList, _decode_LocationInfoList, _encode_LocationInfoList } from "../CSTA-call-control/LocationInfoList.ta.mjs";
 
 
 
@@ -36,10 +36,10 @@ import { LocationInfoList, _decode_LocationInfoList, _encode_LocationInfoList } 
  * ```asn1
  * SnapshotCallResponseInfo ::= SEQUENCE
  * {     deviceOnCall             SubjectDeviceID,
- *     callIdentifier             ConnectionID                 OPTIONAL,
- *     localConnectionState         LocalConnectionState             OPTIONAL,
- *     servicesPermitted         [0] IMPLICIT ServicesPermitted         OPTIONAL,
- *     mediaServiceInfoList         [1] IMPLICIT CallMediaInfoList        OPTIONAL,
+ *     callIdentifier             ConnectionID                 type OPTIONAL,
+ *     localConnectionState         LocalConnectionState             type OPTIONAL,
+ *     servicesPermitted         [0] IMPLICIT ServicesPermitted         type OPTIONAL,
+ *     mediaServiceInfoList         [1] IMPLICIT CallMediaInfoList        type OPTIONAL,
  *     locationInfo             [2] IMPLICIT LocationInfoList        OPTIONAL }
  * ```
  * 
@@ -47,70 +47,84 @@ import { LocationInfoList, _decode_LocationInfoList, _encode_LocationInfoList } 
  */
 export
 class SnapshotCallResponseInfo {
+    /**
+     * @summary `deviceOnCall`.
+     * @description
+     *
+     * Device at this endpoint. ECMA-269 §16.1.3.
+     *
+     * @public
+     * @readonly
+     */
+    public readonly deviceOnCall: SubjectDeviceID;
+    /**
+     * @summary `callIdentifier`.
+     * @description
+     *
+     * Connection of the endpoint. Mandatory if the endpoint is in the
+     * switching sub-domain. ECMA-269 §16.1.3.
+     *
+     * @public
+     * @readonly
+     */
+    public readonly callIdentifier?: OPTIONAL<ConnectionID>;
+    /**
+     * @summary `localConnectionState`.
+     * @description
+     *
+     * Local connection state of this endpoint. ECMA-269 §16.1.3.
+     *
+     * @public
+     * @readonly
+     */
+    public readonly localConnectionState?: OPTIONAL<LocalConnectionState>;
+    /**
+     * @summary `servicesPermitted`.
+     * @description
+     *
+     * Mandatory if Dynamic Feature Availability is supported. ECMA-269
+     * §16.1.3, §12.2.25.
+     *
+     * @public
+     * @readonly
+     */
+    public readonly servicesPermitted?: OPTIONAL<ServicesPermitted>;
+    /**
+     * @summary `mediaServiceInfoList`.
+     * @description
+     *
+     * Media services bound to this connection. ECMA-269 §16.1.3.
+     *
+     * @public
+     * @readonly
+     */
+    public readonly mediaServiceInfoList?: OPTIONAL<CallMediaInfoList>;
+    /**
+     * @summary `locationInfo`.
+     * @description
+     *
+     * PIDF-LO location for the endpoint. ECMA-269 §16.1.3, §12.2.18.
+     *
+     * @public
+     * @readonly
+     */
+    public readonly locationInfo?: OPTIONAL<LocationInfoList>;
+
     constructor (
-        /**
-         * @summary `deviceOnCall`.
-         * @description
-         *
-         * Device at this endpoint. ECMA-269 §16.1.3.
-         *
-         * @public
-         * @readonly
-         */
-        readonly deviceOnCall: SubjectDeviceID,
-        /**
-         * @summary `callIdentifier`.
-         * @description
-         *
-         * Connection of the endpoint. Mandatory if the endpoint is in the
-         * switching sub-domain. ECMA-269 §16.1.3.
-         *
-         * @public
-         * @readonly
-         */
-        readonly callIdentifier?: OPTIONAL<ConnectionID>,
-        /**
-         * @summary `localConnectionState`.
-         * @description
-         *
-         * Local connection state of this endpoint. ECMA-269 §16.1.3.
-         *
-         * @public
-         * @readonly
-         */
-        readonly localConnectionState?: OPTIONAL<LocalConnectionState>,
-        /**
-         * @summary `servicesPermitted`.
-         * @description
-         *
-         * Mandatory if Dynamic Feature Availability is supported. ECMA-269
-         * §16.1.3, §12.2.25.
-         *
-         * @public
-         * @readonly
-         */
-        readonly servicesPermitted?: OPTIONAL<ServicesPermitted>,
-        /**
-         * @summary `mediaServiceInfoList`.
-         * @description
-         *
-         * Media services bound to this connection. ECMA-269 §16.1.3.
-         *
-         * @public
-         * @readonly
-         */
-        readonly mediaServiceInfoList?: OPTIONAL<CallMediaInfoList>,
-        /**
-         * @summary `locationInfo`.
-         * @description
-         *
-         * PIDF-LO location for the endpoint. ECMA-269 §16.1.3, §12.2.18.
-         *
-         * @public
-         * @readonly
-         */
-        readonly locationInfo?: OPTIONAL<LocationInfoList>
-    ) {}
+        deviceOnCall: SubjectDeviceID,
+        callIdentifier?: OPTIONAL<ConnectionID>,
+        localConnectionState?: OPTIONAL<LocalConnectionState>,
+        servicesPermitted?: OPTIONAL<ServicesPermitted>,
+        mediaServiceInfoList?: OPTIONAL<CallMediaInfoList>,
+        locationInfo?: OPTIONAL<LocationInfoList>
+    ) {
+        this.deviceOnCall = deviceOnCall;
+        this.callIdentifier = callIdentifier;
+        this.localConnectionState = localConnectionState;
+        this.servicesPermitted = servicesPermitted;
+        this.mediaServiceInfoList = mediaServiceInfoList;
+        this.locationInfo = locationInfo;
+    }
 
     /**
      * @summary Restructures an object into a SnapshotCallResponseInfo

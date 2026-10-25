@@ -1,12 +1,12 @@
 import type EqualityMatcher from "../../types/EqualityMatcher.mjs";
-import { ASN1Element, DERElement, FALSE_BIT, OBJECT_IDENTIFIER } from "@wildboar/asn1";
+import { ASN1Element, DERElement, FALSE_BIT, type OBJECT_IDENTIFIER } from "@wildboar/asn1";
 import { compareName } from "@wildboar/dn";
 import {
     EnhancedCertificateAssertion,
     _decode_EnhancedCertificateAssertion,
 } from "../../modules/CertificateExtensions/EnhancedCertificateAssertion.ta.mjs";
 import {
-    Certificate,
+    type Certificate,
     _decode_Certificate,
 } from "../../modules/AuthenticationFramework/Certificate.ta.mjs";
 import {
@@ -42,11 +42,11 @@ import {
     _decode_PrivateKeyUsagePeriod,
 } from "../../modules/CertificateExtensions/PrivateKeyUsagePeriod.ta.mjs";
 import {
-    KeyUsage,
+    type KeyUsage,
     _decode_KeyUsage,
 } from "../../modules/CertificateExtensions/KeyUsage.ta.mjs";
 import {
-    GeneralNames,
+    type GeneralNames,
     _decode_GeneralNames,
 } from "../../modules/CertificateExtensions/GeneralNames.ta.mjs";
 import {
@@ -63,7 +63,7 @@ import compareAuthorityKeyIdentifier from "../../comparators/compareAuthorityKey
 import { compareGeneralName } from "@wildboar/gn";
 import { getDateFromTime } from "@wildboar/pki-stub";
 import {
-    CertificatePoliciesSyntax,
+    type CertificatePoliciesSyntax,
     _decode_CertificatePoliciesSyntax,
 } from "../../modules/CertificateExtensions/CertificatePoliciesSyntax.ta.mjs";
 import {
@@ -430,7 +430,7 @@ function evaluateEnhancedCertificateAssertion (
  * `enhancedCertificateMatch` on a decoded assertion and certificate.
  * Alias of {@link evaluateEnhancedCertificateAssertion}.
  */
-export const enhancedCertificateMatchTyped = evaluateEnhancedCertificateAssertion;
+export const enhancedCertificateMatchTyped: typeof evaluateEnhancedCertificateAssertion = evaluateEnhancedCertificateAssertion;
 
 /**
  * Rec. ITU-T X.509 (10/2019), clause 13.3.10

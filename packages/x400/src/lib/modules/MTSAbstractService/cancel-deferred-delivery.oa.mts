@@ -1,6 +1,6 @@
 /* eslint-disable */
 import {
-    ASN1Element as _Element,
+    type ASN1Element as _Element,
     ASN1TagClass as _TagClass,
     ASN1Construction as _Construction,
     ASN1UniversalType as _UniversalType,
@@ -18,12 +18,12 @@ import {
     _encode_Code,
 } from '@wildboar/rose';
 import {
-    CancelDeferredDeliveryArgument,
+    type CancelDeferredDeliveryArgument,
     _decode_CancelDeferredDeliveryArgument,
     _encode_CancelDeferredDeliveryArgument,
 } from '../MTSAbstractService/CancelDeferredDeliveryArgument.ta.mjs';
 import {
-    CancelDeferredDeliveryResult,
+    type CancelDeferredDeliveryResult,
     _decode_CancelDeferredDeliveryResult,
     _encode_CancelDeferredDeliveryResult,
 } from '../MTSAbstractService/CancelDeferredDeliveryResult.ta.mjs';

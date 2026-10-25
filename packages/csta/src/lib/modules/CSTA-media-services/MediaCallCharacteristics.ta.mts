@@ -2,17 +2,17 @@
 
 import * as $ from "@wildboar/asn1/functional";
 import {
-    OPTIONAL,
-    INTEGER,
-    OCTET_STRING,
-    ENUMERATED,
-    SEQUENCE,
-    SET,
-    ASN1Element as _Element,
+    type OPTIONAL,
+    type INTEGER,
+    type OCTET_STRING,
+    type ENUMERATED,
+    type SEQUENCE,
+    type SET,
+    type ASN1Element as _Element,
     ASN1TagClass as _TagClass
 } from "@wildboar/asn1";
 import {
-    MediaClass,
+    type MediaClass,
     data /* IMPORTED_SHORT_NAMED_BIT */,
     _decode_MediaClass,
     _encode_MediaClass
@@ -58,21 +58,21 @@ import {
  * ```asn1
  * MediaCallCharacteristics ::= SEQUENCE
  * {     mediaClass                 MediaClass,
- *     connectionRate                 [0] IMPLICIT INTEGER             OPTIONAL,
+ *     connectionRate                 [0] IMPLICIT INTEGER             type OPTIONAL,
  *                                                 -- value 0 indicates that
  *                                                 -- the connection rate is
  *                                                 -- unknown
  *     bitRate                 [1] IMPLICIT ENUMERATED
  *                         {     constant     (0),
  *                             variable     (1) }         DEFAULT constant,
- *     delayTolerance                 [2] IMPLICIT INTEGER             OPTIONAL,
+ *     delayTolerance                 [2] IMPLICIT INTEGER             type OPTIONAL,
  *     switchingSubDomainCCIEType         [3] IMPLICIT ENUMERATED 
  *                         {    isdn         (0),
  *                             atm         (1),
  *                             isoEthernet     (2),
  *                             rsvp         (3),
  *                             other         (4),
- *                             sip        (5) }        OPTIONAL,
+ *                             sip        (5) }        type OPTIONAL,
  *     switchingSubDomainInformationElements     OCTET STRING                 OPTIONAL }
  * ```
  * 
@@ -80,76 +80,90 @@ import {
  */
 export
 class MediaCallCharacteristics {
+    /**
+     * @summary `mediaClass`.
+     * @description
+     *
+     * Bitmap of media classes. ECMA-269 §12.2.20.
+     *
+     * @public
+     * @readonly
+     */
+    public readonly mediaClass: MediaClass;
+    /**
+     * @summary `connectionRate`.
+     * @description
+     *
+     * Digital data connection rate. Switching-function specific; 0 means
+     * digital data with unknown rate. ECMA-269 §12.2.20.
+     *
+     * @public
+     * @readonly
+     */
+    public readonly connectionRate?: OPTIONAL<INTEGER>;
+    /**
+     * @summary `bitRate`.
+     * @description
+     *
+     * Constant (default) or variable bit rate. Absent means constant.
+     * ECMA-269 §12.2.20.
+     *
+     * @public
+     * @readonly
+     */
+    public readonly bitRate?: OPTIONAL<MediaCallCharacteristics_bitRate>;
+    /**
+     * @summary `delayTolerance`.
+     * @description
+     *
+     * Maximum tolerated media-stream delay. For constant bit rate this is
+     * the actual delay; for variable, the maximum allowed. Absent means
+     * unknown. ECMA-269 §12.2.20.
+     *
+     * @public
+     * @readonly
+     */
+    public readonly delayTolerance?: OPTIONAL<INTEGER>;
+    /**
+     * @summary `switchingSubDomainCCIEType`.
+     * @description
+     *
+     * Type of private call-control IEs in
+     * `switchingSubDomainInformationElements` (ISDN, ATM, ISO-Ethernet TDM,
+     * RSVP, SIP, other). Absent means there are none. ECMA-269 §12.2.20.
+     *
+     * @public
+     * @readonly
+     */
+    public readonly switchingSubDomainCCIEType?: OPTIONAL<MediaCallCharacteristics_switchingSubDomainCCIEType>;
+    /**
+     * @summary `switchingSubDomainInformationElements`.
+     * @description
+     *
+     * Private IEs from the switching sub-domain. Mandatory when
+     * `switchingSubDomainCCIEType` is present; ignore otherwise. ECMA-269
+     * §12.2.20.
+     *
+     * @public
+     * @readonly
+     */
+    public readonly switchingSubDomainInformationElements?: OPTIONAL<OCTET_STRING>;
+
     constructor (
-        /**
-         * @summary `mediaClass`.
-         * @description
-         *
-         * Bitmap of media classes. ECMA-269 §12.2.20.
-         *
-         * @public
-         * @readonly
-         */
-        readonly mediaClass: MediaClass,
-        /**
-         * @summary `connectionRate`.
-         * @description
-         *
-         * Digital data connection rate. Switching-function specific; 0 means
-         * digital data with unknown rate. ECMA-269 §12.2.20.
-         *
-         * @public
-         * @readonly
-         */
-        readonly connectionRate?: OPTIONAL<INTEGER>,
-        /**
-         * @summary `bitRate`.
-         * @description
-         *
-         * Constant (default) or variable bit rate. Absent means constant.
-         * ECMA-269 §12.2.20.
-         *
-         * @public
-         * @readonly
-         */
-        readonly bitRate?: OPTIONAL<MediaCallCharacteristics_bitRate>,
-        /**
-         * @summary `delayTolerance`.
-         * @description
-         *
-         * Maximum tolerated media-stream delay. For constant bit rate this is
-         * the actual delay; for variable, the maximum allowed. Absent means
-         * unknown. ECMA-269 §12.2.20.
-         *
-         * @public
-         * @readonly
-         */
-        readonly delayTolerance?: OPTIONAL<INTEGER>,
-        /**
-         * @summary `switchingSubDomainCCIEType`.
-         * @description
-         *
-         * Type of private call-control IEs in
-         * `switchingSubDomainInformationElements` (ISDN, ATM, ISO-Ethernet TDM,
-         * RSVP, SIP, other). Absent means there are none. ECMA-269 §12.2.20.
-         *
-         * @public
-         * @readonly
-         */
-        readonly switchingSubDomainCCIEType?: OPTIONAL<MediaCallCharacteristics_switchingSubDomainCCIEType>,
-        /**
-         * @summary `switchingSubDomainInformationElements`.
-         * @description
-         *
-         * Private IEs from the switching sub-domain. Mandatory when
-         * `switchingSubDomainCCIEType` is present; ignore otherwise. ECMA-269
-         * §12.2.20.
-         *
-         * @public
-         * @readonly
-         */
-        readonly switchingSubDomainInformationElements?: OPTIONAL<OCTET_STRING>
-    ) {}
+        mediaClass: MediaClass,
+        connectionRate?: OPTIONAL<INTEGER>,
+        bitRate?: OPTIONAL<MediaCallCharacteristics_bitRate>,
+        delayTolerance?: OPTIONAL<INTEGER>,
+        switchingSubDomainCCIEType?: OPTIONAL<MediaCallCharacteristics_switchingSubDomainCCIEType>,
+        switchingSubDomainInformationElements?: OPTIONAL<OCTET_STRING>
+    ) {
+        this.mediaClass = mediaClass;
+        this.connectionRate = connectionRate;
+        this.bitRate = bitRate;
+        this.delayTolerance = delayTolerance;
+        this.switchingSubDomainCCIEType = switchingSubDomainCCIEType;
+        this.switchingSubDomainInformationElements = switchingSubDomainInformationElements;
+    }
 
     /**
      * @summary Restructures an object into a MediaCallCharacteristics
@@ -173,19 +187,19 @@ class MediaCallCharacteristics {
      * @static
      * @method
      */
-    public static get _default_value_for_bitRate () { return MediaCallCharacteristics_bitRate_constant; }        /**
+    public static get _default_value_for_bitRate (): _enum_for_MediaCallCharacteristics_bitRate.constant { return MediaCallCharacteristics_bitRate_constant; }        /**
          * @summary The enum used as the type of the component `bitRate`
          * @public
          * @static
          */
 
-    public static _enum_for_bitRate = _enum_for_MediaCallCharacteristics_bitRate;        /**
+    public static _enum_for_bitRate: typeof _enum_for_MediaCallCharacteristics_bitRate = _enum_for_MediaCallCharacteristics_bitRate;        /**
          * @summary The enum used as the type of the component `switchingSubDomainCCIEType`
          * @public
          * @static
          */
 
-    public static _enum_for_switchingSubDomainCCIEType = _enum_for_MediaCallCharacteristics_switchingSubDomainCCIEType;
+    public static _enum_for_switchingSubDomainCCIEType: typeof _enum_for_MediaCallCharacteristics_switchingSubDomainCCIEType = _enum_for_MediaCallCharacteristics_switchingSubDomainCCIEType;
 }
 
 /**

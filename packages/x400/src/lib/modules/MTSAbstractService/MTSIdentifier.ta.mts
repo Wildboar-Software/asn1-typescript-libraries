@@ -1,6 +1,6 @@
 /* eslint-disable */
 import {
-    ASN1Element as _Element,
+    type ASN1Element as _Element,
     ASN1TagClass as _TagClass,
     ASN1Construction as _Construction,
     ASN1UniversalType as _UniversalType,
@@ -16,7 +16,7 @@ import {
     _encode_GlobalDomainIdentifier,
 } from '../MTSAbstractService/GlobalDomainIdentifier.ta.mjs';
 import {
-    LocalIdentifier,
+    type LocalIdentifier,
     _decode_LocalIdentifier,
     _encode_LocalIdentifier,
 } from '../MTSAbstractService/LocalIdentifier.ta.mjs';
@@ -42,20 +42,26 @@ import {
  *
  */
 export class MTSIdentifier {
+    /**
+     * @summary `global_domain_identifier`.
+     * @public
+     * @readonly
+     */
+    public readonly global_domain_identifier: GlobalDomainIdentifier;
+    /**
+     * @summary `local_identifier`.
+     * @public
+     * @readonly
+     */
+    public readonly local_identifier: LocalIdentifier;
+
     constructor(
-        /**
-         * @summary `global_domain_identifier`.
-         * @public
-         * @readonly
-         */
-        readonly global_domain_identifier: GlobalDomainIdentifier,
-        /**
-         * @summary `local_identifier`.
-         * @public
-         * @readonly
-         */
-        readonly local_identifier: LocalIdentifier
-    ) {}
+        global_domain_identifier: GlobalDomainIdentifier,
+        local_identifier: LocalIdentifier
+    ) {
+        this.global_domain_identifier = global_domain_identifier;
+        this.local_identifier = local_identifier;
+    }
 
     /**
      * @summary Restructures an object into a MTSIdentifier

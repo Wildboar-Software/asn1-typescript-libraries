@@ -1,17 +1,17 @@
 /* eslint-disable */
 import {
-    OPTIONAL,
-    ASN1Element as _Element,
+    type OPTIONAL,
+    type ASN1Element as _Element,
     ASN1TagClass as _TagClass
 } from "@wildboar/asn1";
 import * as $ from "@wildboar/asn1/functional";
-import { AuthChallenge, _decode_AuthChallenge, _encode_AuthChallenge } from "../CT-Authentication-Operations/AuthChallenge.ta.mjs";
+import { type AuthChallenge, _decode_AuthChallenge, _encode_AuthChallenge } from "../CT-Authentication-Operations/AuthChallenge.ta.mjs";
 // export { AuthChallenge, _decode_AuthChallenge, _encode_AuthChallenge } from "../CT-Authentication-Operations/AuthChallenge.ta.mjs";
-import { AuthResponse, _decode_AuthResponse, _encode_AuthResponse } from "../CT-Authentication-Operations/AuthResponse.ta.mjs";
+import { type AuthResponse, _decode_AuthResponse, _encode_AuthResponse } from "../CT-Authentication-Operations/AuthResponse.ta.mjs";
 // export { AuthResponse, _decode_AuthResponse, _encode_AuthResponse } from "../CT-Authentication-Operations/AuthResponse.ta.mjs";
-import { DerivedCipherKey, _decode_DerivedCipherKey, _encode_DerivedCipherKey } from "../CT-Authentication-Operations/DerivedCipherKey.ta.mjs";
+import { type DerivedCipherKey, _decode_DerivedCipherKey, _encode_DerivedCipherKey } from "../CT-Authentication-Operations/DerivedCipherKey.ta.mjs";
 // export { DerivedCipherKey, _decode_DerivedCipherKey, _encode_DerivedCipherKey } from "../CT-Authentication-Operations/DerivedCipherKey.ta.mjs";
-import { CalculationParam, _decode_CalculationParam, _encode_CalculationParam } from "../CT-Authentication-Operations/CalculationParam.ta.mjs";
+import { type CalculationParam, _decode_CalculationParam, _encode_CalculationParam } from "../CT-Authentication-Operations/CalculationParam.ta.mjs";
 // export { CalculationParam, _decode_CalculationParam, _encode_CalculationParam } from "../CT-Authentication-Operations/CalculationParam.ta.mjs";
 
 
@@ -201,7 +201,7 @@ let _cached_encoder_for_CalcCtatInfoUnit: $.ASN1Encoder<CalcCtatInfoUnit> | null
  */
 export
 function _encode_CalcCtatInfoUnit (value: CalcCtatInfoUnit, elGetter: $.ASN1Encoder<any>): _Element {
-    if (!_cached_encoder_for_CalcCtatInfoUnit) { _cached_encoder_for_CalcCtatInfoUnit = function (value: CalcCtatInfoUnit, elGetter: $.ASN1Encoder<CalcCtatInfoUnit>): _Element {
+    if (!_cached_encoder_for_CalcCtatInfoUnit) { _cached_encoder_for_CalcCtatInfoUnit = function (value: CalcCtatInfoUnit): _Element {
     const _components: _Element[] = [];
     _components.push(/* REQUIRED   */ _encode_AuthChallenge(value.authChallenge, $.BER));
     _components.push(/* REQUIRED   */ _encode_AuthResponse(value.authResponse, $.BER));

@@ -2,27 +2,27 @@
 
 import * as $ from "@wildboar/asn1/functional";
 import {
-    OPTIONAL,
-    SEQUENCE,
-    SET,
-    ASN1Element as _Element,
+    type OPTIONAL,
+    type SEQUENCE,
+    type SET,
+    type ASN1Element as _Element,
     ASN1TagClass as _TagClass
 } from "@wildboar/asn1";
-import { ConnectionID, _decode_ConnectionID, _encode_ConnectionID } from "../CSTA-call-connection-identifiers/ConnectionID.ta.mjs";
+import { type ConnectionID, _decode_ConnectionID, _encode_ConnectionID } from "../CSTA-call-connection-identifiers/ConnectionID.ta.mjs";
 
 import { ServicesPermitted, _decode_ServicesPermitted, _encode_ServicesPermitted } from "../CSTA-call-control/ServicesPermitted.ta.mjs";
 
-import { CallQualifyingData, _decode_CallQualifyingData, _encode_CallQualifyingData } from "../CSTA-call-control/CallQualifyingData.ta.mjs";
+import { type CallQualifyingData, _decode_CallQualifyingData, _encode_CallQualifyingData } from "../CSTA-call-control/CallQualifyingData.ta.mjs";
 
 import { ConnectionInformation, _decode_ConnectionInformation, _encode_ConnectionInformation } from "../CSTA-media-services/ConnectionInformation.ta.mjs";
 
 import { CallLinkageDataList, _decode_CallLinkageDataList, _encode_CallLinkageDataList } from "../CSTA-call-control/CallLinkageDataList.ta.mjs";
 
-import { CallCharacteristics, _decode_CallCharacteristics, _encode_CallCharacteristics } from "../CSTA-call-control/CallCharacteristics.ta.mjs";
+import { type CallCharacteristics, _decode_CallCharacteristics, _encode_CallCharacteristics } from "../CSTA-call-control/CallCharacteristics.ta.mjs";
 
-import { SubjectOfCall, _decode_SubjectOfCall, _encode_SubjectOfCall } from "../CSTA-device-feature-types/SubjectOfCall.ta.mjs";
+import { type SubjectOfCall, _decode_SubjectOfCall, _encode_SubjectOfCall } from "../CSTA-device-feature-types/SubjectOfCall.ta.mjs";
 
-import { LanguagePreferences, _decode_LanguagePreferences, _encode_LanguagePreferences } from "../CSTA-device-feature-types/LanguagePreferences.ta.mjs";
+import { type LanguagePreferences, _decode_LanguagePreferences, _encode_LanguagePreferences } from "../CSTA-device-feature-types/LanguagePreferences.ta.mjs";
 
 import { DeviceID, _decode_DeviceID, _encode_DeviceID } from "../CSTA-device-identifiers/DeviceID.ta.mjs";
 
@@ -30,17 +30,17 @@ import { CSTACommonArguments, _decode_CSTACommonArguments, _encode_CSTACommonArg
 
 
 
-import { SubjectDeviceID, _decode_SubjectDeviceID, _encode_SubjectDeviceID } from "../CSTA-device-identifiers/SubjectDeviceID.ta.mjs";
+import { type SubjectDeviceID, _decode_SubjectDeviceID, _encode_SubjectDeviceID } from "../CSTA-device-identifiers/SubjectDeviceID.ta.mjs";
 
-import { CallingDeviceID, _decode_CallingDeviceID, _encode_CallingDeviceID } from "../CSTA-device-identifiers/CallingDeviceID.ta.mjs";
+import { type CallingDeviceID, _decode_CallingDeviceID, _encode_CallingDeviceID } from "../CSTA-device-identifiers/CallingDeviceID.ta.mjs";
 
-import { AccountInfo, _decode_AccountInfo, _encode_AccountInfo } from "../CSTA-device-feature-types/AccountInfo.ta.mjs";
+import { type AccountInfo, _decode_AccountInfo, _encode_AccountInfo } from "../CSTA-device-feature-types/AccountInfo.ta.mjs";
 
-import { AuthCode, _decode_AuthCode, _encode_AuthCode } from "../CSTA-device-feature-types/AuthCode.ta.mjs";
+import { type AuthCode, _decode_AuthCode, _encode_AuthCode } from "../CSTA-device-feature-types/AuthCode.ta.mjs";
 
-import { CorrelatorData, _decode_CorrelatorData, _encode_CorrelatorData } from "../CSTA-device-feature-types/CorrelatorData.ta.mjs";
+import { type CorrelatorData, _decode_CorrelatorData, _encode_CorrelatorData } from "../CSTA-device-feature-types/CorrelatorData.ta.mjs";
 
-import { UserData, _decode_UserData, _encode_UserData } from "../CSTA-device-feature-types/UserData.ta.mjs";
+import { type UserData, _decode_UserData, _encode_UserData } from "../CSTA-device-feature-types/UserData.ta.mjs";
 
 /**
  * @summary CallInformationEvent
@@ -61,19 +61,19 @@ import { UserData, _decode_UserData, _encode_UserData } from "../CSTA-device-fea
  * CallInformationEvent ::= SEQUENCE
  * {    connection            ConnectionID,
  *     device                SubjectDeviceID,
- *     callingDevice            CallingDeviceID                OPTIONAL,
- *     accountInfo            [0] IMPLICIT AccountInfo        OPTIONAL,
- *     authCode            [1] IMPLICIT AuthCode            OPTIONAL,
- *     correlatorData            [2] IMPLICIT CorrelatorData        OPTIONAL,
- *     servicesPermitted        [3] IMPLICIT ServicesPermitted        OPTIONAL,
- *     userData            UserData                 OPTIONAL,
- *     callQualifyingData        [4] IMPLICIT CallQualifyingData        OPTIONAL,
- *     connectionInfo            ConnectionInformation            OPTIONAL,
- *     callLinkageDataList        [5] IMPLICIT CallLinkageDataList    OPTIONAL,
- *     callCharacteristics        [6] IMPLICIT CallCharacteristics    OPTIONAL,
- *     subjectOfCall            [7] IMPLICIT SubjectOfCall        OPTIONAL,
- *     languagePreferences        [8] IMPLICIT LanguagePreferences    OPTIONAL,
- *     deviceInfo            [9] IMPLICIT DeviceID            OPTIONAL,
+ *     callingDevice            CallingDeviceID                type OPTIONAL,
+ *     accountInfo            [0] IMPLICIT AccountInfo        type OPTIONAL,
+ *     authCode            [1] IMPLICIT AuthCode            type OPTIONAL,
+ *     correlatorData            [2] IMPLICIT CorrelatorData        type OPTIONAL,
+ *     servicesPermitted        [3] IMPLICIT ServicesPermitted        type OPTIONAL,
+ *     userData            UserData                 type OPTIONAL,
+ *     callQualifyingData        [4] IMPLICIT CallQualifyingData        type OPTIONAL,
+ *     connectionInfo            ConnectionInformation            type OPTIONAL,
+ *     callLinkageDataList        [5] IMPLICIT CallLinkageDataList    type OPTIONAL,
+ *     callCharacteristics        [6] IMPLICIT CallCharacteristics    type OPTIONAL,
+ *     subjectOfCall            [7] IMPLICIT SubjectOfCall        type OPTIONAL,
+ *     languagePreferences        [8] IMPLICIT LanguagePreferences    type OPTIONAL,
+ *     deviceInfo            [9] IMPLICIT DeviceID            type OPTIONAL,
  *     extensions             CSTACommonArguments             OPTIONAL }
  * ```
  * 
@@ -81,153 +81,187 @@ import { UserData, _decode_UserData, _encode_UserData } from "../CSTA-device-fea
  */
 export
 class CallInformationEvent {
+    /**
+     * @summary `connection`.
+     * @description
+     *
+     * Connection that is the focus of the update.
+     * @public
+     * @readonly
+     */
+    public readonly connection: ConnectionID;
+    /**
+     * @summary `device`.
+     * @description
+     *
+     * Subject device for the event.
+     * @public
+     * @readonly
+     */
+    public readonly device: SubjectDeviceID;
+    /**
+     * @summary `callingDevice`.
+     * @description
+     *
+     * Updated calling device / CallerID, if this is the change.
+     * @public
+     * @readonly
+     */
+    public readonly callingDevice?: OPTIONAL<CallingDeviceID>;
+    /**
+     * @summary `accountInfo`.
+     * @description
+     *
+     * Account information collected or updated.
+     * @public
+     * @readonly
+     */
+    public readonly accountInfo?: OPTIONAL<AccountInfo>;
+    /**
+     * @summary `authCode`.
+     * @description
+     *
+     * Authorisation code collected or updated.
+     * @public
+     * @readonly
+     */
+    public readonly authCode?: OPTIONAL<AuthCode>;
+    /**
+     * @summary `correlatorData`.
+     * @description
+     *
+     * Correlator data collected or updated.
+     * @public
+     * @readonly
+     */
+    public readonly correlatorData?: OPTIONAL<CorrelatorData>;
+    /**
+     * @summary `servicesPermitted`.
+     * @description
+     *
+     * Updated permitted services after a connection-state change.
+     * @public
+     * @readonly
+     */
+    public readonly servicesPermitted?: OPTIONAL<ServicesPermitted>;
+    /**
+     * @summary `userData`.
+     * @description
+     *
+     * User-to-user data received or updated.
+     * @public
+     * @readonly
+     */
+    public readonly userData?: OPTIONAL<UserData>;
+    /**
+     * @summary `callQualifyingData`.
+     * @description
+     *
+     * Call-qualifying data collected or updated.
+     * @public
+     * @readonly
+     */
+    public readonly callQualifyingData?: OPTIONAL<CallQualifyingData>;
+    /**
+     * @summary `connectionInfo`.
+     * @description
+     *
+     * Connection information associated with `connection`.
+     * @public
+     * @readonly
+     */
+    public readonly connectionInfo?: OPTIONAL<ConnectionInformation>;
+    /**
+     * @summary `callLinkageDataList`.
+     * @description
+     *
+     * Updated call-linkage data. See ECMA-269 §6.1.2.7.4.
+     * @public
+     * @readonly
+     */
+    public readonly callLinkageDataList?: OPTIONAL<CallLinkageDataList>;
+    /**
+     * @summary `callCharacteristics`.
+     * @description
+     *
+     * Updated call characterisation.
+     * @public
+     * @readonly
+     */
+    public readonly callCharacteristics?: OPTIONAL<CallCharacteristics>;
+    /**
+     * @summary `subjectOfCall`.
+     * @description
+     *
+     * Updated subject/topic.
+     * @public
+     * @readonly
+     */
+    public readonly subjectOfCall?: OPTIONAL<SubjectOfCall>;
+    /**
+     * @summary `languagePreferences`.
+     * @description
+     *
+     * Updated language preferences.
+     * @public
+     * @readonly
+     */
+    public readonly languagePreferences?: OPTIONAL<LanguagePreferences>;
+    /**
+     * @summary `deviceInfo`.
+     * @description
+     *
+     * Updated device information for a device in the call.
+     * @public
+     * @readonly
+     */
+    public readonly deviceInfo?: OPTIONAL<DeviceID>;
+    /**
+     * @summary `extensions`.
+     * @description
+     *
+     * Optional security (timestamp, sequence, securityInfo) and
+     * privateData.
+     * @public
+     * @readonly
+     */
+    public readonly extensions?: OPTIONAL<CSTACommonArguments>;
+
     constructor (
-        /**
-         * @summary `connection`.
-         * @description
-         *
-         * Connection that is the focus of the update.
-         * @public
-         * @readonly
-         */
-        readonly connection: ConnectionID,
-        /**
-         * @summary `device`.
-         * @description
-         *
-         * Subject device for the event.
-         * @public
-         * @readonly
-         */
-        readonly device: SubjectDeviceID,
-        /**
-         * @summary `callingDevice`.
-         * @description
-         *
-         * Updated calling device / CallerID, if this is the change.
-         * @public
-         * @readonly
-         */
-        readonly callingDevice?: OPTIONAL<CallingDeviceID>,
-        /**
-         * @summary `accountInfo`.
-         * @description
-         *
-         * Account information collected or updated.
-         * @public
-         * @readonly
-         */
-        readonly accountInfo?: OPTIONAL<AccountInfo>,
-        /**
-         * @summary `authCode`.
-         * @description
-         *
-         * Authorisation code collected or updated.
-         * @public
-         * @readonly
-         */
-        readonly authCode?: OPTIONAL<AuthCode>,
-        /**
-         * @summary `correlatorData`.
-         * @description
-         *
-         * Correlator data collected or updated.
-         * @public
-         * @readonly
-         */
-        readonly correlatorData?: OPTIONAL<CorrelatorData>,
-        /**
-         * @summary `servicesPermitted`.
-         * @description
-         *
-         * Updated permitted services after a connection-state change.
-         * @public
-         * @readonly
-         */
-        readonly servicesPermitted?: OPTIONAL<ServicesPermitted>,
-        /**
-         * @summary `userData`.
-         * @description
-         *
-         * User-to-user data received or updated.
-         * @public
-         * @readonly
-         */
-        readonly userData?: OPTIONAL<UserData>,
-        /**
-         * @summary `callQualifyingData`.
-         * @description
-         *
-         * Call-qualifying data collected or updated.
-         * @public
-         * @readonly
-         */
-        readonly callQualifyingData?: OPTIONAL<CallQualifyingData>,
-        /**
-         * @summary `connectionInfo`.
-         * @description
-         *
-         * Connection information associated with `connection`.
-         * @public
-         * @readonly
-         */
-        readonly connectionInfo?: OPTIONAL<ConnectionInformation>,
-        /**
-         * @summary `callLinkageDataList`.
-         * @description
-         *
-         * Updated call-linkage data. See ECMA-269 §6.1.2.7.4.
-         * @public
-         * @readonly
-         */
-        readonly callLinkageDataList?: OPTIONAL<CallLinkageDataList>,
-        /**
-         * @summary `callCharacteristics`.
-         * @description
-         *
-         * Updated call characterisation.
-         * @public
-         * @readonly
-         */
-        readonly callCharacteristics?: OPTIONAL<CallCharacteristics>,
-        /**
-         * @summary `subjectOfCall`.
-         * @description
-         *
-         * Updated subject/topic.
-         * @public
-         * @readonly
-         */
-        readonly subjectOfCall?: OPTIONAL<SubjectOfCall>,
-        /**
-         * @summary `languagePreferences`.
-         * @description
-         *
-         * Updated language preferences.
-         * @public
-         * @readonly
-         */
-        readonly languagePreferences?: OPTIONAL<LanguagePreferences>,
-        /**
-         * @summary `deviceInfo`.
-         * @description
-         *
-         * Updated device information for a device in the call.
-         * @public
-         * @readonly
-         */
-        readonly deviceInfo?: OPTIONAL<DeviceID>,
-        /**
-         * @summary `extensions`.
-         * @description
-         *
-         * Optional security (timestamp, sequence, securityInfo) and
-         * privateData.
-         * @public
-         * @readonly
-         */
-        readonly extensions?: OPTIONAL<CSTACommonArguments>
-    ) {}
+        connection: ConnectionID,
+        device: SubjectDeviceID,
+        callingDevice?: OPTIONAL<CallingDeviceID>,
+        accountInfo?: OPTIONAL<AccountInfo>,
+        authCode?: OPTIONAL<AuthCode>,
+        correlatorData?: OPTIONAL<CorrelatorData>,
+        servicesPermitted?: OPTIONAL<ServicesPermitted>,
+        userData?: OPTIONAL<UserData>,
+        callQualifyingData?: OPTIONAL<CallQualifyingData>,
+        connectionInfo?: OPTIONAL<ConnectionInformation>,
+        callLinkageDataList?: OPTIONAL<CallLinkageDataList>,
+        callCharacteristics?: OPTIONAL<CallCharacteristics>,
+        subjectOfCall?: OPTIONAL<SubjectOfCall>,
+        languagePreferences?: OPTIONAL<LanguagePreferences>,
+        deviceInfo?: OPTIONAL<DeviceID>,
+        extensions?: OPTIONAL<CSTACommonArguments>
+    ) {
+        this.connection = connection;
+        this.device = device;
+        this.callingDevice = callingDevice;
+        this.accountInfo = accountInfo;
+        this.authCode = authCode;
+        this.correlatorData = correlatorData;
+        this.servicesPermitted = servicesPermitted;
+        this.userData = userData;
+        this.callQualifyingData = callQualifyingData;
+        this.connectionInfo = connectionInfo;
+        this.callLinkageDataList = callLinkageDataList;
+        this.callCharacteristics = callCharacteristics;
+        this.subjectOfCall = subjectOfCall;
+        this.languagePreferences = languagePreferences;
+        this.deviceInfo = deviceInfo;
+        this.extensions = extensions;
+    }
 
     /**
      * @summary Restructures an object into a CallInformationEvent

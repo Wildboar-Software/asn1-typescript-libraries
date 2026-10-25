@@ -11,7 +11,7 @@ import {
 } from '@wildboar/asn1';
 import * as $ from '@wildboar/asn1/functional';
 import {
-  UnsignedShort,
+  type UnsignedShort,
   _decode_UnsignedShort,
   _encode_UnsignedShort,
 } from '../BIP/UnsignedShort.ta.mjs';
@@ -43,13 +43,13 @@ export class BioAPI_BIR_BIOMETRIC_PRODUCT_ID {
    * @public
    * @readonly
    */
-  readonly productOwner: UnsignedShort;
+  public readonly productOwner: UnsignedShort;
   /**
    * @summary `productType`.
    * @public
    * @readonly
    */
-  readonly productType: UnsignedShort;
+  public readonly productType: UnsignedShort;
 
   constructor(
     productOwner: UnsignedShort,

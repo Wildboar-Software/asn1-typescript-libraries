@@ -2,16 +2,16 @@
 
 import * as $ from "@wildboar/asn1/functional";
 import {
-    OPTIONAL,
-    ENUMERATED,
-    SEQUENCE,
-    SET,
-    ASN1Element as _Element,
+    type OPTIONAL,
+    type ENUMERATED,
+    type SEQUENCE,
+    type SET,
+    type ASN1Element as _Element,
     ASN1TagClass as _TagClass
 } from "@wildboar/asn1";
-import { SubjectDeviceID, _decode_SubjectDeviceID, _encode_SubjectDeviceID } from "../CSTA-device-identifiers/SubjectDeviceID.ta.mjs";
+import { type SubjectDeviceID, _decode_SubjectDeviceID, _encode_SubjectDeviceID } from "../CSTA-device-identifiers/SubjectDeviceID.ta.mjs";
 
-import { AgentID, _decode_AgentID, _encode_AgentID } from "../CSTA-device-feature-types/AgentID.ta.mjs";
+import { type AgentID, _decode_AgentID, _encode_AgentID } from "../CSTA-device-feature-types/AgentID.ta.mjs";
 
 import { DeviceID, _decode_DeviceID, _encode_DeviceID } from "../CSTA-device-identifiers/DeviceID.ta.mjs";
 
@@ -52,13 +52,13 @@ import { CSTACommonArguments, _decode_CSTACommonArguments, _encode_CSTACommonArg
  * ```asn1
  * AgentWorkingAfterCallEvent ::= SEQUENCE
  * {    agentDevice             SubjectDeviceID,
- *     agentID                AgentID                    OPTIONAL,
- *     acdGroup            DeviceID                OPTIONAL,
+ *     agentID                AgentID                    type OPTIONAL,
+ *     acdGroup            DeviceID                type OPTIONAL,
  *     pendingAgentState        [2] IMPLICIT ENUMERATED
  *     {    notReady        (0),
  *         ready            (1),
- *         null            (2) }                    OPTIONAL,
- *     cause                [3] IMPLICIT EventCause            OPTIONAL,
+ *         null            (2) }                    type OPTIONAL,
+ *     cause                [3] IMPLICIT EventCause            type OPTIONAL,
  *     extensions             CSTACommonArguments            OPTIONAL }
  * ```
  * 
@@ -66,65 +66,79 @@ import { CSTACommonArguments, _decode_CSTACommonArguments, _encode_CSTACommonArg
  */
 export
 class AgentWorkingAfterCallEvent {
+    /**
+     * @summary `agentDevice`.
+     * @description
+     *
+     * Device at which the agent entered workingAfterCall.
+     * @public
+     * @readonly
+     */
+    public readonly agentDevice: SubjectDeviceID;
+    /**
+     * @summary `agentID`.
+     * @description
+     *
+     * Required if multiple agentIDs exist at the agent device.
+     * @public
+     * @readonly
+     */
+    public readonly agentID?: OPTIONAL<AgentID>;
+    /**
+     * @summary `acdGroup`.
+     * @description
+     *
+     * Present iff the event is associated with ACD group activity
+     * (§6.1.1.6.5); otherwise absent.
+     * @public
+     * @readonly
+     */
+    public readonly acdGroup?: OPTIONAL<DeviceID>;
+    /**
+     * @summary `pendingAgentState`.
+     * @description
+     *
+     * Next state after Working After Call ends: Not Ready, Ready, or Null.
+     * Required if the SF delays that transition.
+     * @public
+     * @readonly
+     */
+    public readonly pendingAgentState?: OPTIONAL<AgentWorkingAfterCallEvent_pendingAgentState>;
+    /**
+     * @summary `cause`.
+     * @description
+     *
+     * Reason for the event.
+     * @public
+     * @readonly
+     */
+    public readonly cause?: OPTIONAL<EventCause>;
+    /**
+     * @summary `extensions`.
+     * @description
+     *
+     * Optional security (timestamp, sequence, securityInfo) and
+     * privateData.
+     * @public
+     * @readonly
+     */
+    public readonly extensions?: OPTIONAL<CSTACommonArguments>;
+
     constructor (
-        /**
-         * @summary `agentDevice`.
-         * @description
-         *
-         * Device at which the agent entered workingAfterCall.
-         * @public
-         * @readonly
-         */
-        readonly agentDevice: SubjectDeviceID,
-        /**
-         * @summary `agentID`.
-         * @description
-         *
-         * Required if multiple agentIDs exist at the agent device.
-         * @public
-         * @readonly
-         */
-        readonly agentID?: OPTIONAL<AgentID>,
-        /**
-         * @summary `acdGroup`.
-         * @description
-         *
-         * Present iff the event is associated with ACD group activity
-         * (§6.1.1.6.5); otherwise absent.
-         * @public
-         * @readonly
-         */
-        readonly acdGroup?: OPTIONAL<DeviceID>,
-        /**
-         * @summary `pendingAgentState`.
-         * @description
-         *
-         * Next state after Working After Call ends: Not Ready, Ready, or Null.
-         * Required if the SF delays that transition.
-         * @public
-         * @readonly
-         */
-        readonly pendingAgentState?: OPTIONAL<AgentWorkingAfterCallEvent_pendingAgentState>,
-        /**
-         * @summary `cause`.
-         * @description
-         *
-         * Reason for the event.
-         * @public
-         * @readonly
-         */
-        readonly cause?: OPTIONAL<EventCause>,
-        /**
-         * @summary `extensions`.
-         * @description
-         *
-         * Optional security (timestamp, sequence, securityInfo) and
-         * privateData.
-         * @public
-         * @readonly
-         */
-        readonly extensions?: OPTIONAL<CSTACommonArguments>
-    ) {}
+        agentDevice: SubjectDeviceID,
+        agentID?: OPTIONAL<AgentID>,
+        acdGroup?: OPTIONAL<DeviceID>,
+        pendingAgentState?: OPTIONAL<AgentWorkingAfterCallEvent_pendingAgentState>,
+        cause?: OPTIONAL<EventCause>,
+        extensions?: OPTIONAL<CSTACommonArguments>
+    ) {
+        this.agentDevice = agentDevice;
+        this.agentID = agentID;
+        this.acdGroup = acdGroup;
+        this.pendingAgentState = pendingAgentState;
+        this.cause = cause;
+        this.extensions = extensions;
+    }
 
     /**
      * @summary Restructures an object into a AgentWorkingAfterCallEvent
@@ -148,13 +162,13 @@ class AgentWorkingAfterCallEvent {
          * @static
          */
 
-    public static _enum_for_pendingAgentState = _enum_for_AgentWorkingAfterCallEvent_pendingAgentState;        /**
+    public static _enum_for_pendingAgentState: typeof _enum_for_AgentWorkingAfterCallEvent_pendingAgentState = _enum_for_AgentWorkingAfterCallEvent_pendingAgentState;        /**
          * @summary The enum used as the type of the component `cause`
          * @public
          * @static
          */
 
-    public static _enum_for_cause = _enum_for_EventCause;
+    public static _enum_for_cause: typeof _enum_for_EventCause = _enum_for_EventCause;
 }
 
 /**

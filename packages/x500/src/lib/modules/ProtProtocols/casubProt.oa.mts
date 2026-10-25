@@ -1,6 +1,6 @@
 /* eslint-disable */
 import {
-    CasubProt,
+    type CasubProt,
     _decode_CasubProt,
     _encode_CasubProt,
 } from "../CaSubscription/CasubProt.ta.mjs";

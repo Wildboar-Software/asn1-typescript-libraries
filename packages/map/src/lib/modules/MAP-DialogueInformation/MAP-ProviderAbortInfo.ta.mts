@@ -1,7 +1,7 @@
 /* eslint-disable */
 import {
-    OPTIONAL,
-    ASN1Element as _Element,
+    type OPTIONAL,
+    type ASN1Element as _Element,
     ASN1TagClass as _TagClass
 } from "@wildboar/asn1";
 import * as $ from "@wildboar/asn1/functional";
@@ -31,35 +31,43 @@ import { ExtensionContainer, _decode_ExtensionContainer, _encode_ExtensionContai
  */
 export
 class MAP_ProviderAbortInfo {
+    /**
+     * @summary `map_ProviderAbortReason`.
+     * @description
+     *
+     * Provider reason encoded in this PDU (3GPP TS 29.002 V19.1.0 clause
+     * 7.3.5).
+     *
+     * @public
+     * @readonly
+     */
+    public readonly map_ProviderAbortReason: MAP_ProviderAbortReason;
+    /**
+     * @summary `extensionContainer`.
+     * @description
+     *
+     * Must not be used in version 2 (3GPP TS 29.002 V19.1.0 clause 17.4).
+     *
+     * @public
+     * @readonly
+     */
+    public readonly extensionContainer?: OPTIONAL<ExtensionContainer>;
+    /**
+     * @summary Extensions that are not recognized.
+     * @public
+     * @readonly
+     */
+    public readonly _unrecognizedExtensionsList: _Element[];
+
     constructor (
-        /**
-         * @summary `map_ProviderAbortReason`.
-         * @description
-         *
-         * Provider reason encoded in this PDU (3GPP TS 29.002 V19.1.0 clause
-         * 7.3.5).
-         *
-         * @public
-         * @readonly
-         */
-        readonly map_ProviderAbortReason: MAP_ProviderAbortReason,
-        /**
-         * @summary `extensionContainer`.
-         * @description
-         *
-         * Must not be used in version 2 (3GPP TS 29.002 V19.1.0 clause 17.4).
-         *
-         * @public
-         * @readonly
-         */
-        readonly extensionContainer?: OPTIONAL<ExtensionContainer>,
-        /**
-         * @summary Extensions that are not recognized.
-         * @public
-         * @readonly
-         */
-        readonly _unrecognizedExtensionsList: _Element[] = []
-    ) {}
+        map_ProviderAbortReason: MAP_ProviderAbortReason,
+        extensionContainer?: OPTIONAL<ExtensionContainer>,
+        _unrecognizedExtensionsList: _Element[] = []
+    ) {
+        this.map_ProviderAbortReason = map_ProviderAbortReason;
+        this.extensionContainer = extensionContainer;
+        this._unrecognizedExtensionsList = _unrecognizedExtensionsList;
+    }
 
     /**
      * @summary Restructures an object into a MAP_ProviderAbortInfo
@@ -83,7 +91,7 @@ class MAP_ProviderAbortInfo {
          * @static
          */
 
-    public static _enum_for_map_ProviderAbortReason = _enum_for_MAP_ProviderAbortReason;
+    public static _enum_for_map_ProviderAbortReason: typeof _enum_for_MAP_ProviderAbortReason = _enum_for_MAP_ProviderAbortReason;
 }
 
 /**

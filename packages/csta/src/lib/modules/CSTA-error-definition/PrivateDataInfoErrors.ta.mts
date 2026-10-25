@@ -1,7 +1,7 @@
 /* eslint-disable */
 
 import * as $ from "@wildboar/asn1/functional";
-import { ENUMERATED, ASN1Element as _Element } from "@wildboar/asn1";
+import { type ENUMERATED, ASN1Element as _Element } from "@wildboar/asn1";
 
 
 
@@ -68,7 +68,7 @@ type PrivateDataInfoErrors = _enum_for_PrivateDataInfoErrors;
  * @enum {number}
  */
 export
-const PrivateDataInfoErrors = _enum_for_PrivateDataInfoErrors;
+const PrivateDataInfoErrors: typeof _enum_for_PrivateDataInfoErrors = _enum_for_PrivateDataInfoErrors;
 
 /**
  * @summary PrivateDataInfoErrors_cSTAPrivateDataInfoError
@@ -80,7 +80,7 @@ const PrivateDataInfoErrors = _enum_for_PrivateDataInfoErrors;
  * @see https://ecma-international.org/publications-and-standards/standards/ecma-269/
  */
 export
-const PrivateDataInfoErrors_cSTAPrivateDataInfoError: PrivateDataInfoErrors = PrivateDataInfoErrors.cSTAPrivateDataInfoError; /* LONG_NAMED_ENUMERATED_VALUE */
+const PrivateDataInfoErrors_cSTAPrivateDataInfoError: _enum_for_PrivateDataInfoErrors.cSTAPrivateDataInfoError = PrivateDataInfoErrors.cSTAPrivateDataInfoError; /* LONG_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary cSTAPrivateDataInfoError
@@ -89,7 +89,7 @@ const PrivateDataInfoErrors_cSTAPrivateDataInfoError: PrivateDataInfoErrors = Pr
  * @type {number}
  */
 export
-const cSTAPrivateDataInfoError: PrivateDataInfoErrors = PrivateDataInfoErrors.cSTAPrivateDataInfoError; /* SHORT_NAMED_ENUMERATED_VALUE */
+const cSTAPrivateDataInfoError: _enum_for_PrivateDataInfoErrors.cSTAPrivateDataInfoError = PrivateDataInfoErrors.cSTAPrivateDataInfoError; /* SHORT_NAMED_ENUMERATED_VALUE */
 
 let _cached_decoder_for_PrivateDataInfoErrors: $.ASN1Decoder<PrivateDataInfoErrors> | null = null;
 

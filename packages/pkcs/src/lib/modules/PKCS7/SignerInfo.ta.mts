@@ -1,36 +1,36 @@
 /* eslint-disable */
 import {
-    ASN1Element as _Element,
+    type ASN1Element as _Element,
     ASN1TagClass as _TagClass,
-    OPTIONAL,
+    type OPTIONAL,
 } from "@wildboar/asn1";
 import * as $ from "@wildboar/asn1/functional";
 import {
-    Attributes,
+    type Attributes,
     _decode_Attributes,
     _encode_Attributes,
 } from "../PKCS7/Attributes.ta.mjs";
 import {
-    DigestAlgorithmIdentifier,
+    type DigestAlgorithmIdentifier,
     _decode_DigestAlgorithmIdentifier,
     _encode_DigestAlgorithmIdentifier,
 } from "../PKCS7/DigestAlgorithmIdentifier.ta.mjs";
 import {
-    DigestEncryptionAlgorithmIdentifier,
+    type DigestEncryptionAlgorithmIdentifier,
     _decode_DigestEncryptionAlgorithmIdentifier,
     _encode_DigestEncryptionAlgorithmIdentifier,
 } from "../PKCS7/DigestEncryptionAlgorithmIdentifier.ta.mjs";
 import {
-    EncryptedDigest,
+    type EncryptedDigest,
     _decode_EncryptedDigest,
     _encode_EncryptedDigest,
 } from "../PKCS7/EncryptedDigest.ta.mjs";
 import {
-    SignerIdentifier,
+    type SignerIdentifier,
     _decode_SignerIdentifier,
     _encode_SignerIdentifier,
 } from "../PKCS7/SignerIdentifier.ta.mjs";
-import { Version, _decode_Version, _encode_Version } from "../PKCS7/Version.ta.mjs";
+import { type Version, _decode_Version, _encode_Version } from "../PKCS7/Version.ta.mjs";
 
 /**
  * @summary SignerInfo
@@ -52,50 +52,66 @@ import { Version, _decode_Version, _encode_Version } from "../PKCS7/Version.ta.m
  *
  */
 export class SignerInfo {
+    /**
+     * @summary `version`.
+     * @public
+     * @readonly
+     */
+    public readonly version: Version;
+    /**
+     * @summary `signerIdentifier`.
+     * @public
+     * @readonly
+     */
+    public readonly signerIdentifier: SignerIdentifier;
+    /**
+     * @summary `digestAlgorithm`.
+     * @public
+     * @readonly
+     */
+    public readonly digestAlgorithm: DigestAlgorithmIdentifier;
+    /**
+     * @summary `authenticatedAttributes`.
+     * @public
+     * @readonly
+     */
+    public readonly authenticatedAttributes: OPTIONAL<Attributes>;
+    /**
+     * @summary `digestEncryptionAlgorithm`.
+     * @public
+     * @readonly
+     */
+    public readonly digestEncryptionAlgorithm: DigestEncryptionAlgorithmIdentifier;
+    /**
+     * @summary `encryptedDigest`.
+     * @public
+     * @readonly
+     */
+    public readonly encryptedDigest: EncryptedDigest;
+    /**
+     * @summary `unauthenticatedAttributes`.
+     * @public
+     * @readonly
+     */
+    public readonly unauthenticatedAttributes?: OPTIONAL<Attributes>;
+
     constructor(
-        /**
-         * @summary `version`.
-         * @public
-         * @readonly
-         */
-        readonly version: Version,
-        /**
-         * @summary `signerIdentifier`.
-         * @public
-         * @readonly
-         */
-        readonly signerIdentifier: SignerIdentifier,
-        /**
-         * @summary `digestAlgorithm`.
-         * @public
-         * @readonly
-         */
-        readonly digestAlgorithm: DigestAlgorithmIdentifier,
-        /**
-         * @summary `authenticatedAttributes`.
-         * @public
-         * @readonly
-         */
-        readonly authenticatedAttributes: OPTIONAL<Attributes>,
-        /**
-         * @summary `digestEncryptionAlgorithm`.
-         * @public
-         * @readonly
-         */
-        readonly digestEncryptionAlgorithm: DigestEncryptionAlgorithmIdentifier,
-        /**
-         * @summary `encryptedDigest`.
-         * @public
-         * @readonly
-         */
-        readonly encryptedDigest: EncryptedDigest,
-        /**
-         * @summary `unauthenticatedAttributes`.
-         * @public
-         * @readonly
-         */
-        readonly unauthenticatedAttributes?: OPTIONAL<Attributes>
-    ) {}
+        version: Version,
+        signerIdentifier: SignerIdentifier,
+        digestAlgorithm: DigestAlgorithmIdentifier,
+        authenticatedAttributes: OPTIONAL<Attributes>,
+        digestEncryptionAlgorithm: DigestEncryptionAlgorithmIdentifier,
+        encryptedDigest: EncryptedDigest,
+        unauthenticatedAttributes?: OPTIONAL<Attributes>
+    ) {
+        this.version = version;
+        this.signerIdentifier = signerIdentifier;
+        this.digestAlgorithm = digestAlgorithm;
+        this.authenticatedAttributes = authenticatedAttributes;
+        this.digestEncryptionAlgorithm = digestEncryptionAlgorithm;
+        this.encryptedDigest = encryptedDigest;
+        this.unauthenticatedAttributes = unauthenticatedAttributes;
+    }
 
     /**
      * @summary Restructures an object into a SignerInfo

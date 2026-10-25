@@ -1,20 +1,20 @@
 /* eslint-disable */
 import {
-    BOOLEAN,
-    INTEGER,
-    OPTIONAL,
-    ASN1Element as _Element,
+    type BOOLEAN,
+    type INTEGER,
+    type OPTIONAL,
+    type ASN1Element as _Element,
     ASN1TagClass as _TagClass,
     ASN1OverflowError
 } from "@wildboar/asn1";
 import * as $ from "@wildboar/asn1/functional";
-import { SignalName, _decode_SignalName, _encode_SignalName } from "../MEDIA-GATEWAY-CONTROL/SignalName.ta.mjs";
-import { StreamID, _decode_StreamID, _encode_StreamID } from "../MEDIA-GATEWAY-CONTROL/StreamID.ta.mjs";
-import { SignalType, _decode_SignalType, _encode_SignalType, _enum_for_SignalType } from "../MEDIA-GATEWAY-CONTROL/SignalType.ta.mjs";
-import { NotifyCompletion, _decode_NotifyCompletion, _encode_NotifyCompletion } from "../MEDIA-GATEWAY-CONTROL/NotifyCompletion.ta.mjs";
+import { type SignalName, _decode_SignalName, _encode_SignalName } from "../MEDIA-GATEWAY-CONTROL/SignalName.ta.mjs";
+import { type StreamID, _decode_StreamID, _encode_StreamID } from "../MEDIA-GATEWAY-CONTROL/StreamID.ta.mjs";
+import { type SignalType, _decode_SignalType, _encode_SignalType, _enum_for_SignalType } from "../MEDIA-GATEWAY-CONTROL/SignalType.ta.mjs";
+import { type NotifyCompletion, _decode_NotifyCompletion, _encode_NotifyCompletion } from "../MEDIA-GATEWAY-CONTROL/NotifyCompletion.ta.mjs";
 import { SigParameter, _decode_SigParameter, _encode_SigParameter } from "../MEDIA-GATEWAY-CONTROL/SigParameter.ta.mjs";
-import { SignalDirection, _decode_SignalDirection, _encode_SignalDirection, _enum_for_SignalDirection } from "../MEDIA-GATEWAY-CONTROL/SignalDirection.ta.mjs";
-import { RequestID, _decode_RequestID, _encode_RequestID } from "../MEDIA-GATEWAY-CONTROL/RequestID.ta.mjs";
+import { type SignalDirection, _decode_SignalDirection, _encode_SignalDirection, _enum_for_SignalDirection } from "../MEDIA-GATEWAY-CONTROL/SignalDirection.ta.mjs";
+import { type RequestID, _decode_RequestID, _encode_RequestID } from "../MEDIA-GATEWAY-CONTROL/RequestID.ta.mjs";
 
 
 /**
@@ -64,7 +64,7 @@ class Signal {
      * @public
      * @readonly
      */
-    readonly signalName: SignalName;
+    public readonly signalName: SignalName;
     /**
      * @summary `streamID`.
      * @description
@@ -75,7 +75,7 @@ class Signal {
      * @public
      * @readonly
      */
-    readonly streamID: OPTIONAL<StreamID>;
+    public readonly streamID: OPTIONAL<StreamID>;
     /**
      * @summary `sigType`.
      * @description
@@ -86,7 +86,7 @@ class Signal {
      * @public
      * @readonly
      */
-    readonly sigType: OPTIONAL<SignalType>;
+    public readonly sigType: OPTIONAL<SignalType>;
     /**
      * @summary `duration`.
      * @description
@@ -98,7 +98,7 @@ class Signal {
      * @public
      * @readonly
      */
-    readonly duration: OPTIONAL<INTEGER>;
+    public readonly duration: OPTIONAL<INTEGER>;
     /**
      * @summary `notifyCompletion`.
      * @description
@@ -112,7 +112,7 @@ class Signal {
      * @public
      * @readonly
      */
-    readonly notifyCompletion: OPTIONAL<NotifyCompletion>;
+    public readonly notifyCompletion: OPTIONAL<NotifyCompletion>;
     /**
      * @summary `keepActive`.
      * @description
@@ -124,7 +124,7 @@ class Signal {
      * @public
      * @readonly
      */
-    readonly keepActive: OPTIONAL<BOOLEAN>;
+    public readonly keepActive: OPTIONAL<BOOLEAN>;
     /**
      * @summary `sigParList`.
      * @description
@@ -134,7 +134,7 @@ class Signal {
      * @public
      * @readonly
      */
-    readonly sigParList: SigParameter[];
+    public readonly sigParList: SigParameter[];
     /**
      * @summary `direction`.
      * @description
@@ -147,7 +147,7 @@ class Signal {
      * @public
      * @readonly
      */
-    readonly direction?: OPTIONAL<SignalDirection>;
+    public readonly direction?: OPTIONAL<SignalDirection>;
     /**
      * @summary `requestID`.
      * @description
@@ -159,7 +159,7 @@ class Signal {
      * @public
      * @readonly
      */
-    readonly requestID?: OPTIONAL<RequestID>;
+    public readonly requestID?: OPTIONAL<RequestID>;
     /**
      * @summary `intersigDelay`.
      * @description
@@ -173,7 +173,7 @@ class Signal {
      * @public
      * @readonly
      */
-    readonly intersigDelay?: OPTIONAL<INTEGER>;
+    public readonly intersigDelay?: OPTIONAL<INTEGER>;
     /**
      * @summary Extensions that are not recognized.
      * @description
@@ -184,7 +184,7 @@ class Signal {
      * @public
      * @readonly
      */
-    readonly _unrecognizedExtensionsList: _Element[];
+    public readonly _unrecognizedExtensionsList: _Element[];
 
     constructor (
         signalName: SignalName,
@@ -246,13 +246,13 @@ class Signal {
          * @static
          */
 
-    public static _enum_for_sigType = _enum_for_SignalType;        /**
+    public static _enum_for_sigType: typeof _enum_for_SignalType = _enum_for_SignalType;        /**
          * @summary The enum used as the type of the component `direction`
          * @public
          * @static
          */
 
-    public static _enum_for_direction = _enum_for_SignalDirection;
+    public static _enum_for_direction: typeof _enum_for_SignalDirection = _enum_for_SignalDirection;
 }
 
 /**

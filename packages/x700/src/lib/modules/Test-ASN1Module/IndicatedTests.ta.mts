@@ -1,6 +1,6 @@
 /* eslint-disable */
 import {
-    ASN1Element as _Element,
+    type ASN1Element as _Element,
     ASN1TagClass as _TagClass,
     ASN1Construction as _Construction,
     ASN1UniversalType as _UniversalType,
@@ -16,7 +16,7 @@ import {
     _encode_TestSessionId,
 } from '../Test-ASN1Module/TestSessionId.ta.mjs';
 import {
-    TestInvocationId,
+    type TestInvocationId,
     _decode_TestInvocationId,
     _encode_TestInvocationId,
 } from '../Test-ASN1Module/TestInvocationId.ta.mjs';

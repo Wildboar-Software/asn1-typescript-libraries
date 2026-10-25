@@ -1,8 +1,8 @@
 /* eslint-disable */
 import {
-    OCTET_STRING,
+    type OCTET_STRING,
     ASN1ConstructionError as _ConstructionError,
-    ASN1Element as _Element,
+    type ASN1Element as _Element,
     ASN1TagClass as _TagClass
 } from "@wildboar/asn1";
 import * as $ from "@wildboar/asn1/functional";
@@ -43,7 +43,7 @@ class AuthenticateResponseOk {
      * @public
      * @readonly
      */
-    readonly euiccSigned1: EuiccSigned1;
+    public readonly euiccSigned1: EuiccSigned1;
     /**
      * @summary `euiccSignature1`.
      * @description
@@ -53,7 +53,7 @@ class AuthenticateResponseOk {
      * @public
      * @readonly
      */
-    readonly euiccSignature1: OCTET_STRING;
+    public readonly euiccSignature1: OCTET_STRING;
     /**
      * @summary `euiccCertificate`.
      * @description
@@ -63,7 +63,7 @@ class AuthenticateResponseOk {
      * @public
      * @readonly
      */
-    readonly euiccCertificate: Certificate;
+    public readonly euiccCertificate: Certificate;
     /**
      * @summary `eumCertificate`.
      * @description
@@ -74,7 +74,7 @@ class AuthenticateResponseOk {
      * @public
      * @readonly
      */
-    readonly eumCertificate: Certificate;
+    public readonly eumCertificate: Certificate;
 
     constructor (
         euiccSigned1: EuiccSigned1,

@@ -1,6 +1,6 @@
 /* eslint-disable */
 import {
-    ASN1Element as _Element,
+    type ASN1Element as _Element,
     ASN1TagClass as _TagClass,
     ASN1Construction as _Construction,
     ASN1UniversalType as _UniversalType,
@@ -10,7 +10,7 @@ import {
     ASN1ConstructionError as _ConstructionError,
 } from "@wildboar/asn1";
 import * as $ from "@wildboar/asn1/functional";
-import { CertificateObject, _get_decoder_for_CertificateObject, _get_encoder_for_CertificateObject } from "../CryptographicInformationFramework/CertificateObject.ta.mjs";
+import { type CertificateObject, _get_decoder_for_CertificateObject, _get_encoder_for_CertificateObject } from "../CryptographicInformationFramework/CertificateObject.ta.mjs";
 import { X509CertificateAttributes, _decode_X509CertificateAttributes, _encode_X509CertificateAttributes } from "../CryptographicInformationFramework/X509CertificateAttributes.ta.mjs";
 import { X509AttributeCertificateAttributes, _decode_X509AttributeCertificateAttributes, _encode_X509AttributeCertificateAttributes } from "../CryptographicInformationFramework/X509AttributeCertificateAttributes.ta.mjs";
 import { SPKICertificateAttributes, _decode_SPKICertificateAttributes, _encode_SPKICertificateAttributes } from "../CryptographicInformationFramework/SPKICertificateAttributes.ta.mjs";

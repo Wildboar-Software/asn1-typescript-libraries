@@ -1,9 +1,9 @@
 /* eslint-disable */
 import {
-    ASN1Element as _Element,
+    type ASN1Element as _Element,
     ASN1TagClass as _TagClass,
-    BOOLEAN,
-    OPTIONAL,
+    type BOOLEAN,
+    type OPTIONAL,
 } from "@wildboar/asn1";
 import * as $ from "@wildboar/asn1/functional";
 import {
@@ -23,7 +23,7 @@ import {
     _encode_Attribute,
 } from "../InformationFramework/Attribute.ta.mjs";
 import {
-    DistinguishedName,
+    type DistinguishedName,
     _decode_DistinguishedName,
     _encode_DistinguishedName,
 } from "../InformationFramework/DistinguishedName.ta.mjs";
@@ -53,52 +53,66 @@ import {
  *
  */
 export class AbandonedData implements CommonResults {
+    /**
+     * @summary `problem`.
+     * @description
+     *
+     * Absent for Abandon. Shall be `pagingAbandoned` for `abandonQuery`.
+     *
+     * @public
+     * @readonly
+     */
+    public readonly problem?: OPTIONAL<AbandonedProblem>;
+    /**
+     * @summary Extensions that are not recognized.
+     * @public
+     * @readonly
+     */
+    public readonly _unrecognizedExtensionsList: _Element[];
+    /**
+     * @summary `securityParameters`.
+     * @description
+     *
+     * Required if this error is signed; absence ≡ empty.
+     *
+     * @public
+     * @readonly
+     */
+    public readonly securityParameters?: OPTIONAL<SecurityParameters>; /* REPLICATED_COMPONENT */
+    /**
+     * @summary `performer`.
+     * @public
+     * @readonly
+     */
+    public readonly performer?: OPTIONAL<DistinguishedName>; /* REPLICATED_COMPONENT */
+    /**
+     * @summary `aliasDereferenced`.
+     * @public
+     * @readonly
+     */
+    public readonly aliasDereferenced?: OPTIONAL<BOOLEAN>; /* REPLICATED_COMPONENT */
+    /**
+     * @summary `notification`.
+     * @public
+     * @readonly
+     */
+    public readonly notification?: OPTIONAL<Attribute[]>; /* REPLICATED_COMPONENT */
+
     constructor(
-        /**
-         * @summary `problem`.
-         * @description
-         *
-         * Absent for Abandon. Shall be `pagingAbandoned` for `abandonQuery`.
-         *
-         * @public
-         * @readonly
-         */
-        readonly problem?: OPTIONAL<AbandonedProblem>,
-        /**
-         * @summary Extensions that are not recognized.
-         * @public
-         * @readonly
-         */
-        readonly _unrecognizedExtensionsList: _Element[] = [],
-        /**
-         * @summary `securityParameters`.
-         * @description
-         *
-         * Required if this error is signed; absence ≡ empty.
-         *
-         * @public
-         * @readonly
-         */
-        readonly securityParameters?: OPTIONAL<SecurityParameters> /* REPLICATED_COMPONENT */,
-        /**
-         * @summary `performer`.
-         * @public
-         * @readonly
-         */
-        readonly performer?: OPTIONAL<DistinguishedName> /* REPLICATED_COMPONENT */,
-        /**
-         * @summary `aliasDereferenced`.
-         * @public
-         * @readonly
-         */
-        readonly aliasDereferenced?: OPTIONAL<BOOLEAN> /* REPLICATED_COMPONENT */,
-        /**
-         * @summary `notification`.
-         * @public
-         * @readonly
-         */
-        readonly notification?: OPTIONAL<Attribute[]> /* REPLICATED_COMPONENT */
-    ) {}
+        problem?: OPTIONAL<AbandonedProblem>,
+        _unrecognizedExtensionsList: _Element[] = [],
+        securityParameters?: OPTIONAL<SecurityParameters>,
+        performer?: OPTIONAL<DistinguishedName>,
+        aliasDereferenced?: OPTIONAL<BOOLEAN>,
+        notification?: OPTIONAL<Attribute[]>
+    ) {
+        this.problem = problem;
+        this._unrecognizedExtensionsList = _unrecognizedExtensionsList;
+        this.securityParameters = securityParameters;
+        this.performer = performer;
+        this.aliasDereferenced = aliasDereferenced;
+        this.notification = notification;
+    }
 
     /**
      * @summary Restructures an object into a AbandonedData
@@ -140,7 +154,7 @@ export class AbandonedData implements CommonResults {
      * @static
      */
 
-    public static _enum_for_problem = _enum_for_AbandonedProblem;
+    public static _enum_for_problem: typeof _enum_for_AbandonedProblem = _enum_for_AbandonedProblem;
 }
 
 /**

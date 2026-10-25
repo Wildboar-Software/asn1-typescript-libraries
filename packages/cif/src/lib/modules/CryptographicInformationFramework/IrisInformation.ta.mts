@@ -1,6 +1,6 @@
 /* eslint-disable */
 import {
-    ASN1Element as _Element,
+    type ASN1Element as _Element,
     ASN1TagClass as _TagClass,
     ASN1Construction as _Construction,
     ASN1UniversalType as _UniversalType,
@@ -32,22 +32,28 @@ import { IrisInformation_eye, _enum_for_IrisInformation_eye, _decode_IrisInforma
  */
 export
 class IrisInformation {
+    /**
+     * @summary `eye`.
+     * @description
+     * `left` or `right`. ISO/IEC 7816-15:2016 §8.9.3.
+     * @public
+     * @readonly
+     */
+    public readonly eye: IrisInformation_eye;
+    /**
+     * @summary Extensions that are not recognized.
+     * @public
+     * @readonly
+     */
+    public readonly _unrecognizedExtensionsList: _Element[];
+
     constructor (
-        /**
-         * @summary `eye`.
-         * @description
-         * `left` or `right`. ISO/IEC 7816-15:2016 §8.9.3.
-         * @public
-         * @readonly
-         */
-        readonly eye: IrisInformation_eye,
-        /**
-         * @summary Extensions that are not recognized.
-         * @public
-         * @readonly
-         */
-        readonly _unrecognizedExtensionsList: _Element[] = []
-    ) {}
+        eye: IrisInformation_eye,
+        _unrecognizedExtensionsList: _Element[] = []
+    ) {
+        this.eye = eye;
+        this._unrecognizedExtensionsList = _unrecognizedExtensionsList;
+    }
 
     /**
      * @summary Restructures an object into a IrisInformation
@@ -71,7 +77,7 @@ class IrisInformation {
          * @static
          */
 
-    public static _enum_for_eye = _enum_for_IrisInformation_eye;
+    public static _enum_for_eye: typeof _enum_for_IrisInformation_eye = _enum_for_IrisInformation_eye;
 }
 
 /**

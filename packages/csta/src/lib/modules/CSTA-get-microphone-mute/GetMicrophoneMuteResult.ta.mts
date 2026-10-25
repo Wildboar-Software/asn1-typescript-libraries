@@ -2,13 +2,13 @@
 
 import * as $ from "@wildboar/asn1/functional";
 import {
-    OPTIONAL,
-    SEQUENCE,
-    SET,
-    ASN1Element as _Element,
+    type OPTIONAL,
+    type SEQUENCE,
+    type SET,
+    type ASN1Element as _Element,
     ASN1TagClass as _TagClass
 } from "@wildboar/asn1";
-import { MicrophoneMuteList, _decode_MicrophoneMuteList, _encode_MicrophoneMuteList } from "../CSTA-get-microphone-mute/MicrophoneMuteList.ta.mjs";
+import { type MicrophoneMuteList, _decode_MicrophoneMuteList, _encode_MicrophoneMuteList } from "../CSTA-get-microphone-mute/MicrophoneMuteList.ta.mjs";
 
 import { CSTACommonArguments, _decode_CSTACommonArguments, _encode_CSTACommonArguments } from "../CSTA-extension-types/CSTACommonArguments.ta.mjs";
 
@@ -35,27 +35,33 @@ import { CSTACommonArguments, _decode_CSTACommonArguments, _encode_CSTACommonArg
  */
 export
 class GetMicrophoneMuteResult {
+    /**
+     * @summary `microphoneMuteList`.
+     * @description
+     *
+     * One entry per queried apparatus.
+     * @public
+     * @readonly
+     */
+    public readonly microphoneMuteList: MicrophoneMuteList;
+    /**
+     * @summary `extensions`.
+     * @description
+     *
+     * Optional security (timestamp, sequence, securityInfo) and
+     * privateData.
+     * @public
+     * @readonly
+     */
+    public readonly extensions?: OPTIONAL<CSTACommonArguments>;
+
     constructor (
-        /**
-         * @summary `microphoneMuteList`.
-         * @description
-         *
-         * One entry per queried apparatus.
-         * @public
-         * @readonly
-         */
-        readonly microphoneMuteList: MicrophoneMuteList,
-        /**
-         * @summary `extensions`.
-         * @description
-         *
-         * Optional security (timestamp, sequence, securityInfo) and
-         * privateData.
-         * @public
-         * @readonly
-         */
-        readonly extensions?: OPTIONAL<CSTACommonArguments>
-    ) {}
+        microphoneMuteList: MicrophoneMuteList,
+        extensions?: OPTIONAL<CSTACommonArguments>
+    ) {
+        this.microphoneMuteList = microphoneMuteList;
+        this.extensions = extensions;
+    }
 
     /**
      * @summary Restructures an object into a GetMicrophoneMuteResult

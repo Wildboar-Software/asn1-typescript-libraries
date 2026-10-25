@@ -1,6 +1,6 @@
 /* eslint-disable */
 import {
-  INTEGER,
+  type INTEGER,
   ASN1Element as _Element,
   ASN1TagClass as _TagClass,
   ASN1Construction as _Construction,
@@ -25,10 +25,10 @@ import * as $ from '@wildboar/asn1/functional';
 export type ThreeBit = INTEGER;
 
 
-export const _decode_ThreeBit = $._decodeInteger;
+export const _decode_ThreeBit: $.ASN1Decoder<INTEGER> = $._decodeInteger;
 
 
-export const _encode_ThreeBit = $._encodeInteger;
+export const _encode_ThreeBit: $.ASN1Encoder<INTEGER> = $._encodeInteger;
 
 
 /* eslint-enable */

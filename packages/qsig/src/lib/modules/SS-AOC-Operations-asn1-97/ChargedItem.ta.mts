@@ -92,7 +92,7 @@ type ChargedItem = _enum_for_ChargedItem;
  * @enum {number}
  */
 export
-const ChargedItem = _enum_for_ChargedItem;
+const ChargedItem: typeof _enum_for_ChargedItem = _enum_for_ChargedItem;
 
 /**
  * @summary ChargedItem_basicCommunication
@@ -108,7 +108,7 @@ const ChargedItem = _enum_for_ChargedItem;
  * @see https://ecma-international.org/publications-and-standards/standards/ecma-211/
  */
 export
-const ChargedItem_basicCommunication: ChargedItem = ChargedItem.basicCommunication; /* LONG_NAMED_ENUMERATED_VALUE */
+const ChargedItem_basicCommunication: _enum_for_ChargedItem.basicCommunication = ChargedItem.basicCommunication; /* LONG_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary basicCommunication
@@ -117,7 +117,7 @@ const ChargedItem_basicCommunication: ChargedItem = ChargedItem.basicCommunicati
  * @type {number}
  */
 export
-const basicCommunication: ChargedItem = ChargedItem.basicCommunication; /* SHORT_NAMED_ENUMERATED_VALUE */
+const basicCommunication: _enum_for_ChargedItem.basicCommunication = ChargedItem.basicCommunication; /* SHORT_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary ChargedItem_callAttempt
@@ -133,7 +133,7 @@ const basicCommunication: ChargedItem = ChargedItem.basicCommunication; /* SHORT
  * @see https://ecma-international.org/publications-and-standards/standards/ecma-211/
  */
 export
-const ChargedItem_callAttempt: ChargedItem = ChargedItem.callAttempt; /* LONG_NAMED_ENUMERATED_VALUE */
+const ChargedItem_callAttempt: _enum_for_ChargedItem.callAttempt = ChargedItem.callAttempt; /* LONG_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary callAttempt
@@ -142,7 +142,7 @@ const ChargedItem_callAttempt: ChargedItem = ChargedItem.callAttempt; /* LONG_NA
  * @type {number}
  */
 export
-const callAttempt: ChargedItem = ChargedItem.callAttempt; /* SHORT_NAMED_ENUMERATED_VALUE */
+const callAttempt: _enum_for_ChargedItem.callAttempt = ChargedItem.callAttempt; /* SHORT_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary ChargedItem_callSetup
@@ -159,7 +159,7 @@ const callAttempt: ChargedItem = ChargedItem.callAttempt; /* SHORT_NAMED_ENUMERA
  * @see https://ecma-international.org/publications-and-standards/standards/ecma-211/
  */
 export
-const ChargedItem_callSetup: ChargedItem = ChargedItem.callSetup; /* LONG_NAMED_ENUMERATED_VALUE */
+const ChargedItem_callSetup: _enum_for_ChargedItem.callSetup = ChargedItem.callSetup; /* LONG_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary callSetup
@@ -168,7 +168,7 @@ const ChargedItem_callSetup: ChargedItem = ChargedItem.callSetup; /* LONG_NAMED_
  * @type {number}
  */
 export
-const callSetup: ChargedItem = ChargedItem.callSetup; /* SHORT_NAMED_ENUMERATED_VALUE */
+const callSetup: _enum_for_ChargedItem.callSetup = ChargedItem.callSetup; /* SHORT_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary ChargedItem_userToUserInfo
@@ -185,7 +185,7 @@ const callSetup: ChargedItem = ChargedItem.callSetup; /* SHORT_NAMED_ENUMERATED_
  * @see https://ecma-international.org/publications-and-standards/standards/ecma-211/
  */
 export
-const ChargedItem_userToUserInfo: ChargedItem = ChargedItem.userToUserInfo; /* LONG_NAMED_ENUMERATED_VALUE */
+const ChargedItem_userToUserInfo: _enum_for_ChargedItem.userToUserInfo = ChargedItem.userToUserInfo; /* LONG_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary userToUserInfo
@@ -194,7 +194,7 @@ const ChargedItem_userToUserInfo: ChargedItem = ChargedItem.userToUserInfo; /* L
  * @type {number}
  */
 export
-const userToUserInfo: ChargedItem = ChargedItem.userToUserInfo; /* SHORT_NAMED_ENUMERATED_VALUE */
+const userToUserInfo: _enum_for_ChargedItem.userToUserInfo = ChargedItem.userToUserInfo; /* SHORT_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary ChargedItem_operationOfSupplementaryServ
@@ -210,7 +210,7 @@ const userToUserInfo: ChargedItem = ChargedItem.userToUserInfo; /* SHORT_NAMED_E
  * @see https://ecma-international.org/publications-and-standards/standards/ecma-211/
  */
 export
-const ChargedItem_operationOfSupplementaryServ: ChargedItem = ChargedItem.operationOfSupplementaryServ; /* LONG_NAMED_ENUMERATED_VALUE */
+const ChargedItem_operationOfSupplementaryServ: _enum_for_ChargedItem.operationOfSupplementaryServ = ChargedItem.operationOfSupplementaryServ; /* LONG_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary operationOfSupplementaryServ
@@ -219,7 +219,7 @@ const ChargedItem_operationOfSupplementaryServ: ChargedItem = ChargedItem.operat
  * @type {number}
  */
 export
-const operationOfSupplementaryServ: ChargedItem = ChargedItem.operationOfSupplementaryServ; /* SHORT_NAMED_ENUMERATED_VALUE */
+const operationOfSupplementaryServ: _enum_for_ChargedItem.operationOfSupplementaryServ = ChargedItem.operationOfSupplementaryServ; /* SHORT_NAMED_ENUMERATED_VALUE */
 
 export
 const _decode_ChargedItem: $.ASN1Decoder<ChargedItem> = $._decodeEnumerated;

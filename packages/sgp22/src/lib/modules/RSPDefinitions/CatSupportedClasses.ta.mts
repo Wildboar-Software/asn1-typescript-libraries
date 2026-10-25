@@ -1,7 +1,7 @@
 /* eslint-disable */
 import {
-    ASN1Element as _Element,
-    BIT_STRING
+    type ASN1Element as _Element,
+    type BIT_STRING
 } from "@wildboar/asn1";
 import * as $ from "@wildboar/asn1/functional";
 
@@ -25,8 +25,8 @@ import * as $ from "@wildboar/asn1/functional";
  */
 export
 type CatSupportedClasses = BIT_STRING;
-export const _decode_CatSupportedClasses = $._decodeBitString;
-export const _encode_CatSupportedClasses = $._encodeBitString;
+export const _decode_CatSupportedClasses: $.ASN1Decoder<BIT_STRING> = $._decodeBitString;
+export const _encode_CatSupportedClasses: $.ASN1Encoder<BIT_STRING> = $._encodeBitString;
 
 
 /* eslint-enable */

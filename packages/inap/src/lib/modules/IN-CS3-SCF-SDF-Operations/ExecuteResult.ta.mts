@@ -3,7 +3,7 @@ import {
     ASN1Element as _Element
 } from "@wildboar/asn1";
 import * as $ from "@wildboar/asn1/functional";
-import { OPTIONALLY_PROTECTED, _get_decoder_for_OPTIONALLY_PROTECTED, _get_encoder_for_OPTIONALLY_PROTECTED } from "../EnhancedSecurity/OPTIONALLY-PROTECTED.ta.mjs";
+import { type OPTIONALLY_PROTECTED, _get_decoder_for_OPTIONALLY_PROTECTED, _get_encoder_for_OPTIONALLY_PROTECTED } from "../EnhancedSecurity/OPTIONALLY-PROTECTED.ta.mjs";
 // export { OPTIONALLY_PROTECTED, _get_decoder_for_OPTIONALLY_PROTECTED, _get_encoder_for_OPTIONALLY_PROTECTED } from "../EnhancedSecurity/OPTIONALLY-PROTECTED.ta.mjs";
 import { ExecuteResult_Type, _decode_ExecuteResult_Type, _encode_ExecuteResult_Type } from "../IN-CS3-SCF-SDF-Operations/ExecuteResult-Type.ta.mjs";
 // export { ExecuteResult_Type, _decode_ExecuteResult_Type, _encode_ExecuteResult_Type } from "../IN-CS3-SCF-SDF-Operations/ExecuteResult-Type.ta.mjs";
@@ -28,19 +28,19 @@ import { ExecuteResult_Type, _decode_ExecuteResult_Type, _encode_ExecuteResult_T
  *                                SET OF
  *                                  METHOD.&OutputAttributes.&Type
  *                                    ({SupportedMethods}{@method-id, @.type})
- *                                  OPTIONAL,
+ *                                  type OPTIONAL,
  *                              valuesWithContext
  *                                [0]  SET OF
  *                                       METHOD.&OutputAttributes.&Type
  *                                         ({SupportedMethods}{@method-id, @.type})
- *                                  OPTIONAL,
+ *                                  type OPTIONAL,
  *                              contextList        [1]  SET OF Context} OPTIONAL,
  *           --EDITOR: there is no way (at the moment) in ASN.1 to reference a component
  *           --through a SET OF or SEQUENCE OF type. The inner SEQUENCE has been removed
  *           --for compilation purpose. Align the descriptive text/comments accordingly.
  *           specific-output
  *             [3]  METHOD.&SpecificOutput({SupportedMethods}{@method-id})
- *               OPTIONAL,
+ *               type OPTIONAL,
  *           COMPONENTS OF CommonResults}}
  * ```
  */

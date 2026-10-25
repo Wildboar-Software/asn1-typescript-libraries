@@ -1,22 +1,22 @@
 /* eslint-disable */
 import {
-    OPTIONAL,
-    UTF8String,
-    ASN1Element as _Element,
+    type OPTIONAL,
+    type UTF8String,
+    type ASN1Element as _Element,
     ASN1TagClass as _TagClass
 } from "@wildboar/asn1";
 import * as $ from "@wildboar/asn1/functional";
-import { MBMSinformation_mbms_Mode, _decode_MBMSinformation_mbms_Mode, _encode_MBMSinformation_mbms_Mode, _enum_for_MBMSinformation_mbms_Mode } from "../MBMSUmtsHI2Operations/MBMSinformation-mbms-Mode.ta.mjs";
+import { type MBMSinformation_mbms_Mode, _decode_MBMSinformation_mbms_Mode, _encode_MBMSinformation_mbms_Mode, _enum_for_MBMSinformation_mbms_Mode } from "../MBMSUmtsHI2Operations/MBMSinformation-mbms-Mode.ta.mjs";
 // export { MBMSinformation_mbms_Mode, _enum_for_MBMSinformation_mbms_Mode, MBMSinformation_mbms_Mode_multicast /* IMPORTED_LONG_ENUMERATION_ITEM */, multicast /* IMPORTED_SHORT_ENUMERATION_ITEM */, MBMSinformation_mbms_Mode_broadcast /* IMPORTED_LONG_ENUMERATION_ITEM */, broadcast /* IMPORTED_SHORT_ENUMERATION_ITEM */, _decode_MBMSinformation_mbms_Mode, _encode_MBMSinformation_mbms_Mode } from "../MBMSUmtsHI2Operations/MBMSinformation-mbms-Mode.ta.mjs";
 import { IPAddress, _decode_IPAddress, _encode_IPAddress } from "../HI2Operations/IPAddress.ta.mjs";
 // export { IPAddress, _decode_IPAddress, _encode_IPAddress } from "../HI2Operations/IPAddress.ta.mjs";
-import { MBMSinformation_mbmsLeavingReason, _decode_MBMSinformation_mbmsLeavingReason, _encode_MBMSinformation_mbmsLeavingReason, _enum_for_MBMSinformation_mbmsLeavingReason } from "../MBMSUmtsHI2Operations/MBMSinformation-mbmsLeavingReason.ta.mjs";
+import { type MBMSinformation_mbmsLeavingReason, _decode_MBMSinformation_mbmsLeavingReason, _encode_MBMSinformation_mbmsLeavingReason, _enum_for_MBMSinformation_mbmsLeavingReason } from "../MBMSUmtsHI2Operations/MBMSinformation-mbmsLeavingReason.ta.mjs";
 // export { MBMSinformation_mbmsLeavingReason, _enum_for_MBMSinformation_mbmsLeavingReason, MBMSinformation_mbmsLeavingReason_uEinitiatedRequested /* IMPORTED_LONG_ENUMERATION_ITEM */, uEinitiatedRequested /* IMPORTED_SHORT_ENUMERATION_ITEM */, MBMSinformation_mbmsLeavingReason_bMSCorNetworkTerminated /* IMPORTED_LONG_ENUMERATION_ITEM */, bMSCorNetworkTerminated /* IMPORTED_SHORT_ENUMERATION_ITEM */, _decode_MBMSinformation_mbmsLeavingReason, _encode_MBMSinformation_mbmsLeavingReason } from "../MBMSUmtsHI2Operations/MBMSinformation-mbmsLeavingReason.ta.mjs";
-import { MBMSinformation_mbmsSubsTermReason, _decode_MBMSinformation_mbmsSubsTermReason, _encode_MBMSinformation_mbmsSubsTermReason, _enum_for_MBMSinformation_mbmsSubsTermReason } from "../MBMSUmtsHI2Operations/MBMSinformation-mbmsSubsTermReason.ta.mjs";
+import { type MBMSinformation_mbmsSubsTermReason, _decode_MBMSinformation_mbmsSubsTermReason, _encode_MBMSinformation_mbmsSubsTermReason, _enum_for_MBMSinformation_mbmsSubsTermReason } from "../MBMSUmtsHI2Operations/MBMSinformation-mbmsSubsTermReason.ta.mjs";
 // export { MBMSinformation_mbmsSubsTermReason, _enum_for_MBMSinformation_mbmsSubsTermReason, MBMSinformation_mbmsSubsTermReason_userInitiated /* IMPORTED_LONG_ENUMERATION_ITEM */, userInitiated /* IMPORTED_SHORT_ENUMERATION_ITEM */, MBMSinformation_mbmsSubsTermReason_subscriptionExpired /* IMPORTED_LONG_ENUMERATION_ITEM */, subscriptionExpired /* IMPORTED_SHORT_ENUMERATION_ITEM */, _decode_MBMSinformation_mbmsSubsTermReason, _encode_MBMSinformation_mbmsSubsTermReason } from "../MBMSUmtsHI2Operations/MBMSinformation-mbmsSubsTermReason.ta.mjs";
-import { MBMSSerSubscriberList, _decode_MBMSSerSubscriberList, _encode_MBMSSerSubscriberList } from "../MBMSUmtsHI2Operations/MBMSSerSubscriberList.ta.mjs";
+import { type MBMSSerSubscriberList, _decode_MBMSSerSubscriberList, _encode_MBMSSerSubscriberList } from "../MBMSUmtsHI2Operations/MBMSSerSubscriberList.ta.mjs";
 // export { MBMSSerSubscriberList, _decode_MBMSSerSubscriberList, _encode_MBMSSerSubscriberList } from "../MBMSUmtsHI2Operations/MBMSSerSubscriberList.ta.mjs";
-import { MBMSNodeList, _decode_MBMSNodeList, _encode_MBMSNodeList } from "../MBMSUmtsHI2Operations/MBMSNodeList.ta.mjs";
+import { type MBMSNodeList, _decode_MBMSNodeList, _encode_MBMSNodeList } from "../MBMSUmtsHI2Operations/MBMSNodeList.ta.mjs";
 // export { MBMSNodeList, _decode_MBMSNodeList, _encode_MBMSNodeList } from "../MBMSUmtsHI2Operations/MBMSNodeList.ta.mjs";
 
 
@@ -34,15 +34,15 @@ import { MBMSNodeList, _decode_MBMSNodeList, _encode_MBMSNodeList } from "../MBM
  * ```asn1
  * MBMSinformation ::= SEQUENCE
  * {
- *     mbmsServiceName                     [1] UTF8String        OPTIONAL,
- *     mbms-join-time                      [2] UTF8String        OPTIONAL,
+ *     mbmsServiceName                     [1] UTF8String        type OPTIONAL,
+ *     mbms-join-time                      [2] UTF8String        type OPTIONAL,
  *     mbms-Mode                              [3] ENUMERATED            
  *     {
  *         multicast    (0),
  *         broadcast    (1),
  *     ...
  *     } OPTIONAL,
- *     mbmsIPIPv6Address                    [4]    IPAddress            OPTIONAL,
+ *     mbmsIPIPv6Address                    [4]    IPAddress            type OPTIONAL,
  *     mbmsLeavingReason                    [5]    ENUMERATED            
  *     {
  *         uEinitiatedRequested    (0),
@@ -55,12 +55,12 @@ import { MBMSNodeList, _decode_MBMSNodeList, _encode_MBMSNodeList } from "../MBM
  *         subscriptionExpired        (1),
  *     ...
  *     } OPTIONAL,
- *     mBMSapn                             [7] UTF8String                        OPTIONAL,    
+ *     mBMSapn                             [7] UTF8String                        type OPTIONAL,    
  *     -- The Access Point Name (APN) is coded in accordance with
  *         -- 3GPP TS 24.008 [9] without the APN IEI (only the last 100 octets are used).
  *         -- Octets are coded according to 3GPP TS 23.003 [25].
- *     mbmsSerSubscriberList                [8] MBMSSerSubscriberList            OPTIONAL,
- *     mbmsNodeList                        [9] MBMSNodeList                    OPTIONAL,
+ *     mbmsSerSubscriberList                [8] MBMSSerSubscriberList            type OPTIONAL,
+ *     mbmsNodeList                        [9] MBMSNodeList                    type OPTIONAL,
  * 
  * ...
  * 
@@ -270,19 +270,19 @@ class MBMSinformation {
          * @static
          */
 
-    public static _enum_for_mbms_Mode = _enum_for_MBMSinformation_mbms_Mode;        /**
+    public static _enum_for_mbms_Mode: typeof _enum_for_MBMSinformation_mbms_Mode = _enum_for_MBMSinformation_mbms_Mode;        /**
          * @summary The enum used as the type of the component `mbmsLeavingReason`
          * @public
          * @static
          */
 
-    public static _enum_for_mbmsLeavingReason = _enum_for_MBMSinformation_mbmsLeavingReason;        /**
+    public static _enum_for_mbmsLeavingReason: typeof _enum_for_MBMSinformation_mbmsLeavingReason = _enum_for_MBMSinformation_mbmsLeavingReason;        /**
          * @summary The enum used as the type of the component `mbmsSubsTermReason`
          * @public
          * @static
          */
 
-    public static _enum_for_mbmsSubsTermReason = _enum_for_MBMSinformation_mbmsSubsTermReason;
+    public static _enum_for_mbmsSubsTermReason: typeof _enum_for_MBMSinformation_mbmsSubsTermReason = _enum_for_MBMSinformation_mbmsSubsTermReason;
 }
 
 /**

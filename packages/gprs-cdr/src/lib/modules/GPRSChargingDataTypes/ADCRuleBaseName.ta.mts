@@ -1,6 +1,6 @@
 /* eslint-disable */
 import {
-    IA5String
+    type IA5String
 } from "@wildboar/asn1";
 import * as $ from "@wildboar/asn1/functional";
 

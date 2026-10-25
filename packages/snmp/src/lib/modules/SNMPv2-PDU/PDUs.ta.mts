@@ -1,6 +1,6 @@
 /* eslint-disable */
 import {
-    ASN1Element as _Element,
+    type ASN1Element as _Element,
     ASN1TagClass as _TagClass,
     ASN1Construction as _Construction,
     ASN1UniversalType as _UniversalType,
@@ -10,14 +10,14 @@ import {
     ASN1ConstructionError as _ConstructionError,
 } from "@wildboar/asn1";
 import * as $ from "@wildboar/asn1/functional";
-import { GetRequest_PDU, _decode_GetRequest_PDU, _encode_GetRequest_PDU } from "../SNMPv2-PDU/GetRequest-PDU.ta.mjs";
-import { GetNextRequest_PDU, _decode_GetNextRequest_PDU, _encode_GetNextRequest_PDU } from "../SNMPv2-PDU/GetNextRequest-PDU.ta.mjs";
-import { GetBulkRequest_PDU, _decode_GetBulkRequest_PDU, _encode_GetBulkRequest_PDU } from "../SNMPv2-PDU/GetBulkRequest-PDU.ta.mjs";
-import { Response_PDU, _decode_Response_PDU, _encode_Response_PDU } from "../SNMPv2-PDU/Response-PDU.ta.mjs";
-import { SetRequest_PDU, _decode_SetRequest_PDU, _encode_SetRequest_PDU } from "../SNMPv2-PDU/SetRequest-PDU.ta.mjs";
-import { InformRequest_PDU, _decode_InformRequest_PDU, _encode_InformRequest_PDU } from "../SNMPv2-PDU/InformRequest-PDU.ta.mjs";
-import { SNMPv2_Trap_PDU, _decode_SNMPv2_Trap_PDU, _encode_SNMPv2_Trap_PDU } from "../SNMPv2-PDU/SNMPv2-Trap-PDU.ta.mjs";
-import { Report_PDU, _decode_Report_PDU, _encode_Report_PDU } from "../SNMPv2-PDU/Report-PDU.ta.mjs";
+import { type GetRequest_PDU, _decode_GetRequest_PDU, _encode_GetRequest_PDU } from "../SNMPv2-PDU/GetRequest-PDU.ta.mjs";
+import { type GetNextRequest_PDU, _decode_GetNextRequest_PDU, _encode_GetNextRequest_PDU } from "../SNMPv2-PDU/GetNextRequest-PDU.ta.mjs";
+import { type GetBulkRequest_PDU, _decode_GetBulkRequest_PDU, _encode_GetBulkRequest_PDU } from "../SNMPv2-PDU/GetBulkRequest-PDU.ta.mjs";
+import { type Response_PDU, _decode_Response_PDU, _encode_Response_PDU } from "../SNMPv2-PDU/Response-PDU.ta.mjs";
+import { type SetRequest_PDU, _decode_SetRequest_PDU, _encode_SetRequest_PDU } from "../SNMPv2-PDU/SetRequest-PDU.ta.mjs";
+import { type InformRequest_PDU, _decode_InformRequest_PDU, _encode_InformRequest_PDU } from "../SNMPv2-PDU/InformRequest-PDU.ta.mjs";
+import { type SNMPv2_Trap_PDU, _decode_SNMPv2_Trap_PDU, _encode_SNMPv2_Trap_PDU } from "../SNMPv2-PDU/SNMPv2-Trap-PDU.ta.mjs";
+import { type Report_PDU, _decode_Report_PDU, _encode_Report_PDU } from "../SNMPv2-PDU/Report-PDU.ta.mjs";
 /**
  * @summary PDUs
  * @description

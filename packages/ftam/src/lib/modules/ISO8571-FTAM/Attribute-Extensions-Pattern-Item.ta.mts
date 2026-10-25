@@ -11,7 +11,7 @@ import {
 } from '@wildboar/asn1';
 import * as $ from '@wildboar/asn1/functional';
 import {
-  Extension_Set_Identifier,
+  type Extension_Set_Identifier,
   _decode_Extension_Set_Identifier,
   _encode_Extension_Set_Identifier,
 } from '../ISO8571-FTAM/Extension-Set-Identifier.ta.mjs';
@@ -45,7 +45,7 @@ export class Attribute_Extensions_Pattern_Item {
    * @public
    * @readonly
    */
-  readonly extension_set_identifier: Extension_Set_Identifier;
+  public readonly extension_set_identifier: Extension_Set_Identifier;
   /**
    * @summary `extension_set_attribute_Patterns`.
    * @description
@@ -55,7 +55,7 @@ export class Attribute_Extensions_Pattern_Item {
    * @public
    * @readonly
    */
-  readonly extension_set_attribute_Patterns: Attribute_Extensions_Pattern_Item_extension_set_attribute_Patterns_Item[];
+  public readonly extension_set_attribute_Patterns: Attribute_Extensions_Pattern_Item_extension_set_attribute_Patterns_Item[];
 
   constructor(
     extension_set_identifier: Extension_Set_Identifier,

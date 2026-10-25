@@ -2,12 +2,12 @@
 
 import * as $ from "@wildboar/asn1/functional";
 import {
-    INTEGER,
-    OCTET_STRING,
-    ENUMERATED,
-    SEQUENCE,
-    SET,
-    ASN1Element as _Element,
+    type INTEGER,
+    type OCTET_STRING,
+    type ENUMERATED,
+    type SEQUENCE,
+    type SET,
+    type ASN1Element as _Element,
     ASN1TagClass as _TagClass,
     ASN1ConstructionError as _ConstructionError
 } from "@wildboar/asn1";
@@ -58,39 +58,47 @@ import {
  */
 export
 class NumberOfCurrencyUnits {
+    /**
+     * @summary `currencyType`.
+     * @description
+     *
+     * Currency type; empty means the default. Network-dependent. ECMA-269
+     * §12.2.7.
+     *
+     * @public
+     * @readonly
+     */
+    public readonly currencyType: OCTET_STRING;
+    /**
+     * @summary `currencyAmount`.
+     * @description
+     *
+     * Cumulative currency units. ECMA-269 §12.2.7.
+     *
+     * @public
+     * @readonly
+     */
+    public readonly currencyAmount: INTEGER;
+    /**
+     * @summary `currencyMultiplier`.
+     * @description
+     *
+     * 0.001, 0.01, 0.1, 1, 10, 100, or 1000. ECMA-269 §12.2.7.
+     *
+     * @public
+     * @readonly
+     */
+    public readonly currencyMultiplier: NumberOfCurrencyUnits_currencyMultiplier;
+
     constructor (
-        /**
-         * @summary `currencyType`.
-         * @description
-         *
-         * Currency type; empty means the default. Network-dependent. ECMA-269
-         * §12.2.7.
-         *
-         * @public
-         * @readonly
-         */
-        readonly currencyType: OCTET_STRING,
-        /**
-         * @summary `currencyAmount`.
-         * @description
-         *
-         * Cumulative currency units. ECMA-269 §12.2.7.
-         *
-         * @public
-         * @readonly
-         */
-        readonly currencyAmount: INTEGER,
-        /**
-         * @summary `currencyMultiplier`.
-         * @description
-         *
-         * 0.001, 0.01, 0.1, 1, 10, 100, or 1000. ECMA-269 §12.2.7.
-         *
-         * @public
-         * @readonly
-         */
-        readonly currencyMultiplier: NumberOfCurrencyUnits_currencyMultiplier
-    ) {}
+        currencyType: OCTET_STRING,
+        currencyAmount: INTEGER,
+        currencyMultiplier: NumberOfCurrencyUnits_currencyMultiplier
+    ) {
+        this.currencyType = currencyType;
+        this.currencyAmount = currencyAmount;
+        this.currencyMultiplier = currencyMultiplier;
+    }
 
     /**
      * @summary Restructures an object into a NumberOfCurrencyUnits
@@ -114,7 +122,7 @@ class NumberOfCurrencyUnits {
          * @static
          */
 
-    public static _enum_for_currencyMultiplier = _enum_for_NumberOfCurrencyUnits_currencyMultiplier;
+    public static _enum_for_currencyMultiplier: typeof _enum_for_NumberOfCurrencyUnits_currencyMultiplier = _enum_for_NumberOfCurrencyUnits_currencyMultiplier;
 }
 
 /**

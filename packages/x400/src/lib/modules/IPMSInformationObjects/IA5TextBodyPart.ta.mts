@@ -1,6 +1,6 @@
 /* eslint-disable */
 import {
-    ASN1Element as _Element,
+    type ASN1Element as _Element,
     ASN1TagClass as _TagClass,
     ASN1Construction as _Construction,
     ASN1UniversalType as _UniversalType,
@@ -16,7 +16,7 @@ import {
     _encode_IA5TextParameters,
 } from '../IPMSInformationObjects/IA5TextParameters.ta.mjs';
 import {
-    IA5TextData,
+    type IA5TextData,
     _decode_IA5TextData,
     _encode_IA5TextData,
 } from '../IPMSInformationObjects/IA5TextData.ta.mjs';
@@ -37,20 +37,26 @@ import {
  *
  */
 export class IA5TextBodyPart {
+    /**
+     * @summary `parameters`.
+     * @public
+     * @readonly
+     */
+    public readonly parameters: IA5TextParameters;
+    /**
+     * @summary `data`.
+     * @public
+     * @readonly
+     */
+    public readonly data: IA5TextData;
+
     constructor(
-        /**
-         * @summary `parameters`.
-         * @public
-         * @readonly
-         */
-        readonly parameters: IA5TextParameters,
-        /**
-         * @summary `data`.
-         * @public
-         * @readonly
-         */
-        readonly data: IA5TextData
-    ) {}
+        parameters: IA5TextParameters,
+        data: IA5TextData
+    ) {
+        this.parameters = parameters;
+        this.data = data;
+    }
 
     /**
      * @summary Restructures an object into a IA5TextBodyPart

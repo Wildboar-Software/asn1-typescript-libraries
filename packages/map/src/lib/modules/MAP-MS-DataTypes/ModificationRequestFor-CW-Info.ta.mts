@@ -1,12 +1,12 @@
 /* eslint-disable */
 import {
-    OPTIONAL,
-    ASN1Element as _Element,
+    type OPTIONAL,
+    type ASN1Element as _Element,
     ASN1TagClass as _TagClass
 } from "@wildboar/asn1";
 import * as $ from "@wildboar/asn1/functional";
-import { Ext_BasicServiceCode, _decode_Ext_BasicServiceCode, _encode_Ext_BasicServiceCode } from "../MAP-CommonDataTypes/Ext-BasicServiceCode.ta.mjs";
-import { Ext_SS_Status, _decode_Ext_SS_Status, _encode_Ext_SS_Status } from "../MAP-CommonDataTypes/Ext-SS-Status.ta.mjs";
+import { type Ext_BasicServiceCode, _decode_Ext_BasicServiceCode, _encode_Ext_BasicServiceCode } from "../MAP-CommonDataTypes/Ext-BasicServiceCode.ta.mjs";
+import { type Ext_SS_Status, _decode_Ext_SS_Status, _encode_Ext_SS_Status } from "../MAP-CommonDataTypes/Ext-SS-Status.ta.mjs";
 import { ExtensionContainer, _decode_ExtensionContainer, _encode_ExtensionContainer } from "../MAP-ExtensionDataTypes/ExtensionContainer.ta.mjs";
 import { ModificationInstruction, _decode_ModificationInstruction, _encode_ModificationInstruction, _enum_for_ModificationInstruction } from "../MAP-MS-DataTypes/ModificationInstruction.ta.mjs";
 
@@ -23,10 +23,10 @@ import { ModificationInstruction, _decode_ModificationInstruction, _encode_Modif
  * 
  * ```asn1
  * ModificationRequestFor-CW-Info ::= SEQUENCE {
- *     basicService    [0]    Ext-BasicServiceCode    OPTIONAL,
- *     ss-Status    [1]    Ext-SS-Status    OPTIONAL,
- *     modifyNotificationToCSE    [2]    ModificationInstruction    OPTIONAL,
- *     extensionContainer    [3]    ExtensionContainer    OPTIONAL,
+ *     basicService    [0]    Ext-BasicServiceCode    type OPTIONAL,
+ *     ss-Status    [1]    Ext-SS-Status    type OPTIONAL,
+ *     modifyNotificationToCSE    [2]    ModificationInstruction    type OPTIONAL,
+ *     extensionContainer    [3]    ExtensionContainer    type OPTIONAL,
  *     ...}
  * ```
  * 
@@ -34,53 +34,65 @@ import { ModificationInstruction, _decode_ModificationInstruction, _encode_Modif
  */
 export
 class ModificationRequestFor_CW_Info {
+    /**
+     * @summary `basicService`.
+     * @description
+     *
+     * Extensible basic service group to which the modification applies.
+     * (3GPP TS 29.002 V19.1.0 clause 7.6.3.82)
+     *
+     * @public
+     * @readonly
+     */
+    public readonly basicService?: OPTIONAL<Ext_BasicServiceCode>;
+    /**
+     * @summary `ss_Status`.
+     * @description
+     *
+     * SS-Status of the supplementary service (clause 7.6.4.2). (3GPP TS
+     * 29.002 V19.1.0 clause 7.6.3.82)
+     *
+     * @public
+     * @readonly
+     */
+    public readonly ss_Status?: OPTIONAL<Ext_SS_Status>;
+    /**
+     * @summary `modifyNotificationToCSE`.
+     * @description
+     *
+     * Activate or deactivate notification to the CSE. (3GPP TS 29.002
+     * V19.1.0 clauses 7.6.3.82 and 8.11.4)
+     *
+     * @public
+     * @readonly
+     */
+    public readonly modifyNotificationToCSE?: OPTIONAL<ModificationInstruction>;
+    /**
+     * @summary `extensionContainer`.
+     * @public
+     * @readonly
+     */
+    public readonly extensionContainer?: OPTIONAL<ExtensionContainer>;
+    /**
+     * @summary Extensions that are not recognized.
+     * @public
+     * @readonly
+     */
+    public readonly _unrecognizedExtensionsList: _Element[];
+
     constructor (
-        /**
-         * @summary `basicService`.
-         * @description
-         *
-         * Extensible basic service group to which the modification applies.
-         * (3GPP TS 29.002 V19.1.0 clause 7.6.3.82)
-         *
-         * @public
-         * @readonly
-         */
-        readonly basicService?: OPTIONAL<Ext_BasicServiceCode>,
-        /**
-         * @summary `ss_Status`.
-         * @description
-         *
-         * SS-Status of the supplementary service (clause 7.6.4.2). (3GPP TS
-         * 29.002 V19.1.0 clause 7.6.3.82)
-         *
-         * @public
-         * @readonly
-         */
-        readonly ss_Status?: OPTIONAL<Ext_SS_Status>,
-        /**
-         * @summary `modifyNotificationToCSE`.
-         * @description
-         *
-         * Activate or deactivate notification to the CSE. (3GPP TS 29.002
-         * V19.1.0 clauses 7.6.3.82 and 8.11.4)
-         *
-         * @public
-         * @readonly
-         */
-        readonly modifyNotificationToCSE?: OPTIONAL<ModificationInstruction>,
-        /**
-         * @summary `extensionContainer`.
-         * @public
-         * @readonly
-         */
-        readonly extensionContainer?: OPTIONAL<ExtensionContainer>,
-        /**
-         * @summary Extensions that are not recognized.
-         * @public
-         * @readonly
-         */
-        readonly _unrecognizedExtensionsList: _Element[] = []
-    ) {}
+        basicService?: OPTIONAL<Ext_BasicServiceCode>,
+        ss_Status?: OPTIONAL<Ext_SS_Status>,
+        modifyNotificationToCSE?: OPTIONAL<ModificationInstruction>,
+        extensionContainer?: OPTIONAL<ExtensionContainer>,
+        _unrecognizedExtensionsList: _Element[] = []
+    ) {
+        this.basicService = basicService;
+        this.ss_Status = ss_Status;
+        this.modifyNotificationToCSE = modifyNotificationToCSE;
+        this.extensionContainer = extensionContainer;
+        this._unrecognizedExtensionsList = _unrecognizedExtensionsList;
+    }
 
     /**
      * @summary Restructures an object into a ModificationRequestFor_CW_Info
@@ -104,7 +116,7 @@ class ModificationRequestFor_CW_Info {
          * @static
          */
 
-    public static _enum_for_modifyNotificationToCSE = _enum_for_ModificationInstruction;
+    public static _enum_for_modifyNotificationToCSE: typeof _enum_for_ModificationInstruction = _enum_for_ModificationInstruction;
 }
 
 /**

@@ -1,7 +1,7 @@
 /* eslint-disable */
-import { OBJECT_IDENTIFIER } from "@wildboar/asn1";
+import { type OBJECT_IDENTIFIER } from "@wildboar/asn1";
 import * as $ from "@wildboar/asn1/functional";
-import { ParamOptions } from "../AlgorithmInformation-2009/ParamOptions.ta.mjs";
+import { type ParamOptions } from "../AlgorithmInformation-2009/ParamOptions.ta.mjs";
 import { type PUBLIC_KEY } from "../AlgorithmInformation-2009/PUBLIC-KEY.oca.mjs";
 import { type SMIME_CAPS } from "../AlgorithmInformation-2009/SMIME-CAPS.oca.mjs";
 /**
@@ -16,7 +16,7 @@ import { type SMIME_CAPS } from "../AlgorithmInformation-2009/SMIME-CAPS.oca.mjs
  * ```asn1
  * KEY-TRANSPORT ::= CLASS {
  * &id                OBJECT IDENTIFIER UNIQUE,
- * &Params        OPTIONAL,
+ * &Params        type OPTIONAL,
  * &paramPresence    ParamOptions DEFAULT absent,
  * &PublicKeySet    PUBLIC-KEY OPTIONAL,
  * &smimeCaps        SMIME-CAPS OPTIONAL

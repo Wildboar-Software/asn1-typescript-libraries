@@ -77,7 +77,7 @@ export type MetricType = _enum_for_MetricType;
  *
  * @enum {number}
  */
-export const MetricType = _enum_for_MetricType;
+export const MetricType: typeof _enum_for_MetricType = _enum_for_MetricType;
 
 /**
  * @summary MetricType_internal
@@ -91,7 +91,7 @@ export const MetricType = _enum_for_MetricType;
  * @constant
  * @type {number}
  */
-export const MetricType_internal: MetricType =
+export const MetricType_internal: 0 =
   MetricType.internal; /* LONG_NAMED_ENUMERATED_VALUE */
 
 /**
@@ -99,7 +99,7 @@ export const MetricType_internal: MetricType =
  * @constant
  * @type {number}
  */
-export const internal: MetricType =
+export const internal: 0 =
   MetricType.internal; /* SHORT_NAMED_ENUMERATED_VALUE */
 
 /**
@@ -113,7 +113,7 @@ export const internal: MetricType =
  * @constant
  * @type {number}
  */
-export const MetricType_external: MetricType =
+export const MetricType_external: 1 =
   MetricType.external; /* LONG_NAMED_ENUMERATED_VALUE */
 
 /**
@@ -121,14 +121,25 @@ export const MetricType_external: MetricType =
  * @constant
  * @type {number}
  */
-export const external: MetricType =
+export const external: 1 =
   MetricType.external; /* SHORT_NAMED_ENUMERATED_VALUE */
 
 
-export const _decode_MetricType = $._decodeEnumerated as $.ASN1Decoder<MetricType>;
+export function _decode_MetricType(el: _Element): MetricType {
+  const enumerated = $._decodeEnumerated(el);
+  switch (enumerated) {
+    case MetricType.internal: return MetricType.internal;
+    case MetricType.external: return MetricType.external;
+    default:
+      throw new _ConstructionError(
+        'Invalid ENUMERATED value ' + enumerated + ' for MetricType.',
+        el,
+      );
+  }
+}
 
 
-export const _encode_MetricType = $._encodeEnumerated as $.ASN1Encoder<MetricType>;
+export const _encode_MetricType: $.ASN1Encoder<MetricType> = $._encodeEnumerated as $.ASN1Encoder<MetricType>;
 
 
 /* eslint-enable */

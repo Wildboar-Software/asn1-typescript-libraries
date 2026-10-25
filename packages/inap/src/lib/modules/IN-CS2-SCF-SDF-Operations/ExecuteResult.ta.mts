@@ -3,7 +3,7 @@ import {
     ASN1Element as _Element
 } from "@wildboar/asn1";
 import * as $ from "@wildboar/asn1/functional";
-import { OPTIONALLY_PROTECTED, _get_decoder_for_OPTIONALLY_PROTECTED, _get_encoder_for_OPTIONALLY_PROTECTED } from "../EnhancedSecurity/OPTIONALLY-PROTECTED.ta.mjs";
+import { type OPTIONALLY_PROTECTED, _get_decoder_for_OPTIONALLY_PROTECTED, _get_encoder_for_OPTIONALLY_PROTECTED } from "../EnhancedSecurity/OPTIONALLY-PROTECTED.ta.mjs";
 // export { OPTIONALLY_PROTECTED, _get_decoder_for_OPTIONALLY_PROTECTED, _get_encoder_for_OPTIONALLY_PROTECTED } from "../EnhancedSecurity/OPTIONALLY-PROTECTED.ta.mjs";
 import { ExecuteResult_Type, _decode_ExecuteResult_Type, _encode_ExecuteResult_Type } from "../IN-CS2-SCF-SDF-Operations/ExecuteResult-Type.ta.mjs";
 // export { ExecuteResult_Type, _decode_ExecuteResult_Type, _encode_ExecuteResult_Type } from "../IN-CS2-SCF-SDF-Operations/ExecuteResult-Type.ta.mjs";
@@ -36,7 +36,7 @@ import { ExecuteResult_Type, _decode_ExecuteResult_Type, _encode_ExecuteResult_T
  *                                                            &Type
  *                                                          ({SupportedMethods}
  *                                                             {@method-id})
- *                                                     OPTIONAL,
+ *                                                     type OPTIONAL,
  *                                                 contextList
  *                                                   [1]  SET OF Context
  *                                       } OPTIONAL} OPTIONAL,

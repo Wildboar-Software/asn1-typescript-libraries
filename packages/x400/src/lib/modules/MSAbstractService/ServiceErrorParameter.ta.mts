@@ -1,8 +1,8 @@
 /* eslint-disable */
 import {
-    OPTIONAL,
-    GeneralString,
-    ASN1Element as _Element,
+    type OPTIONAL,
+    type GeneralString,
+    type ASN1Element as _Element,
     ASN1TagClass as _TagClass,
     ASN1Construction as _Construction,
     ASN1UniversalType as _UniversalType,
@@ -13,7 +13,7 @@ import {
 } from '@wildboar/asn1';
 import * as $ from '@wildboar/asn1/functional';
 import {
-    ServiceProblem,
+    type ServiceProblem,
     _decode_ServiceProblem,
     _encode_ServiceProblem,
 } from '../MSAbstractService/ServiceProblem.ta.mjs';
@@ -36,20 +36,26 @@ import {
  *
  */
 export class ServiceErrorParameter {
+    /**
+     * @summary `problem`.
+     * @public
+     * @readonly
+     */
+    public readonly problem: ServiceProblem;
+    /**
+     * @summary `supplementary_information`.
+     * @public
+     * @readonly
+     */
+    public readonly supplementary_information?: OPTIONAL<GeneralString>;
+
     constructor(
-        /**
-         * @summary `problem`.
-         * @public
-         * @readonly
-         */
-        readonly problem: ServiceProblem,
-        /**
-         * @summary `supplementary_information`.
-         * @public
-         * @readonly
-         */
-        readonly supplementary_information?: OPTIONAL<GeneralString>
-    ) {}
+        problem: ServiceProblem,
+        supplementary_information?: OPTIONAL<GeneralString>
+    ) {
+        this.problem = problem;
+        this.supplementary_information = supplementary_information;
+    }
 
     /**
      * @summary Restructures an object into a ServiceErrorParameter

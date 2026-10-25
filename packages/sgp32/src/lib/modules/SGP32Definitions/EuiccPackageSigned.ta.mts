@@ -1,16 +1,16 @@
 /* eslint-disable */
 import {
-    INTEGER,
-    OPTIONAL,
-    UTF8String,
-    ASN1Element as _Element,
+    type INTEGER,
+    type OPTIONAL,
+    type UTF8String,
+    type ASN1Element as _Element,
     ASN1TagClass as _TagClass
 } from "@wildboar/asn1";
 import { ASN1SizeError } from "@wildboar/asn1";
 import * as $ from "@wildboar/asn1/functional";
 import { type Octet16, _decode_Octet16, _encode_Octet16 } from "@wildboar/sgp22/RSPDefinitions";
 import { type TransactionId, _decode_TransactionId, _encode_TransactionId } from "@wildboar/sgp22/RSPDefinitions";
-import { EuiccPackage, _decode_EuiccPackage, _encode_EuiccPackage } from "../SGP32Definitions/EuiccPackage.ta.mjs";
+import { type EuiccPackage, _decode_EuiccPackage, _encode_EuiccPackage } from "../SGP32Definitions/EuiccPackage.ta.mjs";
 
 
 /**
@@ -40,63 +40,74 @@ import { EuiccPackage, _decode_EuiccPackage, _encode_EuiccPackage } from "../SGP
  */
 export
 class EuiccPackageSigned {
+    /**
+     * @summary `eimId`.
+     * @description
+     * Identifier of the eIM that issued this package, matching an Associated eIM
+     * stored on the eUICC (SGP.32 v1.2, sections 2.11.1.1 and 4.3). Length 1 to
+     * 128 bytes. An unknown value produces euiccPackageErrorUnsigned (section
+     * 5.9.1).
+     * @public
+     * @readonly
+     */
+    public readonly eimId: UTF8String;
+    /**
+     * @summary `eidValue`.
+     * @description
+     * EID of the eUICC this package targets (SGP.32 v1.2, section 2.11.1.1). The
+     * eUICC compares it with its own EID and returns the signed error invalidEid
+     * on a mismatch (section 5.9.1).
+     * @public
+     * @readonly
+     */
+    public readonly eidValue: Octet16;
+    /**
+     * @summary `counterValue`.
+     * @description
+     * Replay counter for this eIM. The eIM increments its counter by 1 for each
+     * package. The eUICC accepts the package only when this value is greater than
+     * the highest counter it has stored for this eIM, then stores this value once
+     * the signed execution result is produced (SGP.32 v1.2, sections 2.11.1.1 and
+     * 5.9.1). A smaller or equal value produces replayError. A value above the
+     * maximum the eUICC can store produces counterValueOutOfRange. The
+     * implementation handles at least 8388607 (0x7FFFFF) inclusive.
+     * @public
+     * @readonly
+     */
+    public readonly counterValue: INTEGER;
+    /**
+     * @summary `eimTransactionId`.
+     * @description
+     * Optional transaction identifier as defined in SGP.22, which SGP.32 cites
+     * (SGP.32 v1.2, section 2.11.1.1). When present, the eUICC echoes it in the
+     * signed result and in both the signed and unsigned errors (section 2.11.2.1).
+     * The eIM may use it to link this package to that result (section 3.3.1).
+     * @public
+     * @readonly
+     */
+    public readonly eimTransactionId: OPTIONAL<TransactionId>;
+    /**
+     * @summary `euiccPackage`.
+     * @description
+     * Either the PSMO list or the eCO list to execute, in order, after
+     * verification succeeds (SGP.32 v1.2, sections 2.11.1.1 and 5.9.1).
+     * @public
+     * @readonly
+     */
+    public readonly euiccPackage: EuiccPackage;
+
     constructor (
-        /**
-         * @summary `eimId`.
-         * @description
-         * Identifier of the eIM that issued this package, matching an Associated eIM
-         * stored on the eUICC (SGP.32 v1.2, sections 2.11.1.1 and 4.3). Length 1 to
-         * 128 bytes. An unknown value produces euiccPackageErrorUnsigned (section
-         * 5.9.1).
-         * @public
-         * @readonly
-         */
-        readonly eimId: UTF8String,
-        /**
-         * @summary `eidValue`.
-         * @description
-         * EID of the eUICC this package targets (SGP.32 v1.2, section 2.11.1.1). The
-         * eUICC compares it with its own EID and returns the signed error invalidEid
-         * on a mismatch (section 5.9.1).
-         * @public
-         * @readonly
-         */
-        readonly eidValue: Octet16,
-        /**
-         * @summary `counterValue`.
-         * @description
-         * Replay counter for this eIM. The eIM increments its counter by 1 for each
-         * package. The eUICC accepts the package only when this value is greater than
-         * the highest counter it has stored for this eIM, then stores this value once
-         * the signed execution result is produced (SGP.32 v1.2, sections 2.11.1.1 and
-         * 5.9.1). A smaller or equal value produces replayError. A value above the
-         * maximum the eUICC can store produces counterValueOutOfRange. The
-         * implementation handles at least 8388607 (0x7FFFFF) inclusive.
-         * @public
-         * @readonly
-         */
-        readonly counterValue: INTEGER,
-        /**
-         * @summary `eimTransactionId`.
-         * @description
-         * Optional transaction identifier as defined in SGP.22, which SGP.32 cites
-         * (SGP.32 v1.2, section 2.11.1.1). When present, the eUICC echoes it in the
-         * signed result and in both the signed and unsigned errors (section 2.11.2.1).
-         * The eIM may use it to link this package to that result (section 3.3.1).
-         * @public
-         * @readonly
-         */
-        readonly eimTransactionId: OPTIONAL<TransactionId>,
-        /**
-         * @summary `euiccPackage`.
-         * @description
-         * Either the PSMO list or the eCO list to execute, in order, after
-         * verification succeeds (SGP.32 v1.2, sections 2.11.1.1 and 5.9.1).
-         * @public
-         * @readonly
-         */
-        readonly euiccPackage: EuiccPackage
+        eimId: UTF8String,
+        eidValue: Octet16,
+        counterValue: INTEGER,
+        eimTransactionId: OPTIONAL<TransactionId>,
+        euiccPackage: EuiccPackage
     ) {
+        this.eimId = eimId;
+        this.eidValue = eidValue;
+        this.counterValue = counterValue;
+        this.eimTransactionId = eimTransactionId;
+        this.euiccPackage = euiccPackage;
         if (this.eimId.length < 1 || this.eimId.length > 128) {
             throw new ASN1SizeError("EuiccPackageSigned.eimId violates SIZE constraint");
         }

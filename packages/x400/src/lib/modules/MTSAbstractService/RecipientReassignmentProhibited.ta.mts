@@ -1,6 +1,6 @@
 /* eslint-disable */
 import {
-    ASN1Element as _Element,
+    type ASN1Element as _Element,
     ASN1TagClass as _TagClass,
     ASN1Construction as _Construction,
     ASN1UniversalType as _UniversalType,
@@ -64,14 +64,14 @@ export type RecipientReassignmentProhibited = _enum_for_RecipientReassignmentPro
  *
  * @enum {number}
  */
-export const RecipientReassignmentProhibited = _enum_for_RecipientReassignmentProhibited;
+export const RecipientReassignmentProhibited: typeof _enum_for_RecipientReassignmentProhibited = _enum_for_RecipientReassignmentProhibited;
 
 /**
  * @summary RecipientReassignmentProhibited_recipient_reassignment_allowed
  * @constant
  * @type {number}
  */
-export const RecipientReassignmentProhibited_recipient_reassignment_allowed: RecipientReassignmentProhibited =
+export const RecipientReassignmentProhibited_recipient_reassignment_allowed: _enum_for_RecipientReassignmentProhibited.recipient_reassignment_allowed =
     RecipientReassignmentProhibited.recipient_reassignment_allowed; /* LONG_NAMED_ENUMERATED_VALUE */
 
 /**
@@ -79,7 +79,7 @@ export const RecipientReassignmentProhibited_recipient_reassignment_allowed: Rec
  * @constant
  * @type {number}
  */
-export const recipient_reassignment_allowed: RecipientReassignmentProhibited =
+export const recipient_reassignment_allowed: _enum_for_RecipientReassignmentProhibited.recipient_reassignment_allowed =
     RecipientReassignmentProhibited.recipient_reassignment_allowed; /* SHORT_NAMED_ENUMERATED_VALUE */
 
 /**
@@ -87,7 +87,7 @@ export const recipient_reassignment_allowed: RecipientReassignmentProhibited =
  * @constant
  * @type {number}
  */
-export const RecipientReassignmentProhibited_recipient_reassignment_prohibited: RecipientReassignmentProhibited =
+export const RecipientReassignmentProhibited_recipient_reassignment_prohibited: _enum_for_RecipientReassignmentProhibited.recipient_reassignment_prohibited =
     RecipientReassignmentProhibited.recipient_reassignment_prohibited; /* LONG_NAMED_ENUMERATED_VALUE */
 
 /**
@@ -95,7 +95,7 @@ export const RecipientReassignmentProhibited_recipient_reassignment_prohibited: 
  * @constant
  * @type {number}
  */
-export const recipient_reassignment_prohibited: RecipientReassignmentProhibited =
+export const recipient_reassignment_prohibited: _enum_for_RecipientReassignmentProhibited.recipient_reassignment_prohibited =
     RecipientReassignmentProhibited.recipient_reassignment_prohibited; /* SHORT_NAMED_ENUMERATED_VALUE */
 
 let _cached_decoder_for_RecipientReassignmentProhibited: $.ASN1Decoder<RecipientReassignmentProhibited> | null = null;
@@ -109,7 +109,18 @@ let _cached_decoder_for_RecipientReassignmentProhibited: $.ASN1Decoder<Recipient
 export function _decode_RecipientReassignmentProhibited(el: _Element): RecipientReassignmentProhibited {
     if (!_cached_decoder_for_RecipientReassignmentProhibited) {
         _cached_decoder_for_RecipientReassignmentProhibited =
-            $._decodeEnumerated;
+            function (el: _Element): RecipientReassignmentProhibited {
+                const enumerated = $._decodeEnumerated(el);
+                switch (enumerated) {
+                    case RecipientReassignmentProhibited.recipient_reassignment_allowed: return RecipientReassignmentProhibited.recipient_reassignment_allowed;
+                    case RecipientReassignmentProhibited.recipient_reassignment_prohibited: return RecipientReassignmentProhibited.recipient_reassignment_prohibited;
+                    default:
+                        throw new _ConstructionError(
+                            'Invalid ENUMERATED value ' + enumerated + ' for RecipientReassignmentProhibited.',
+                            el,
+                        );
+                }
+            };
     }
     return _cached_decoder_for_RecipientReassignmentProhibited(el);
 }
@@ -129,7 +140,7 @@ export function _encode_RecipientReassignmentProhibited(
 ): _Element {
     if (!_cached_encoder_for_RecipientReassignmentProhibited) {
         _cached_encoder_for_RecipientReassignmentProhibited =
-            $._encodeEnumerated;
+            $._encodeEnumerated as $.ASN1Encoder<RecipientReassignmentProhibited>;
     }
     return _cached_encoder_for_RecipientReassignmentProhibited(value, elGetter);
 }

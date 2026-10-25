@@ -1,11 +1,11 @@
 /* eslint-disable */
 import {
-    OPTIONAL,
-    ASN1Element as _Element,
+    type OPTIONAL,
+    type ASN1Element as _Element,
     ASN1TagClass as _TagClass
 } from "@wildboar/asn1";
 import * as $ from "@wildboar/asn1/functional";
-import { PkgdName, _decode_PkgdName, _encode_PkgdName } from "../MEDIA-GATEWAY-CONTROL/PkgdName.ta.mjs";
+import { type PkgdName, _decode_PkgdName, _encode_PkgdName } from "../MEDIA-GATEWAY-CONTROL/PkgdName.ta.mjs";
 import { PropertyParm, _decode_PropertyParm, _encode_PropertyParm } from "../MEDIA-GATEWAY-CONTROL/PropertyParm.ta.mjs";
 
 
@@ -43,7 +43,7 @@ class IndAudPropertyParm {
      * @public
      * @readonly
      */
-    readonly name: PkgdName;
+    public readonly name: PkgdName;
     /**
      * @summary `propertyParms`.
      * @description
@@ -54,7 +54,7 @@ class IndAudPropertyParm {
      * @public
      * @readonly
      */
-    readonly propertyParms?: OPTIONAL<PropertyParm>;
+    public readonly propertyParms?: OPTIONAL<PropertyParm>;
     /**
      * @summary Extensions that are not recognized.
      * @description
@@ -65,7 +65,7 @@ class IndAudPropertyParm {
      * @public
      * @readonly
      */
-    readonly _unrecognizedExtensionsList: _Element[];
+    public readonly _unrecognizedExtensionsList: _Element[];
 
     constructor (
         name: PkgdName,

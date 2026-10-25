@@ -1,9 +1,9 @@
 /* eslint-disable */
 import {
     ASN1ConstructionError as _ConstructionError,
-    ASN1Element as _Element,
+    type ASN1Element as _Element,
     ASN1TagClass as _TagClass,
-    IA5String,
+    type IA5String,
     ASN1SizeError
 } from "@wildboar/asn1";
 import * as $ from "@wildboar/asn1/functional";
@@ -46,7 +46,7 @@ class TimeNotation {
      * @public
      * @readonly
      */
-    readonly date: IA5String;
+    public readonly date: IA5String;
     /**
      * @summary `time`.
      * @description
@@ -57,14 +57,14 @@ class TimeNotation {
      * @public
      * @readonly
      */
-    readonly time: IA5String;
+    public readonly time: IA5String;
 
     constructor (
         date: IA5String,
         time: IA5String
     ) {
-        this.date = date;
-        this.time = time;
+            this.date = date;
+            this.time = time;
             if (date.length !== 8) {
                 throw new ASN1SizeError("TimeNotation.date violates SIZE constraint");
             }

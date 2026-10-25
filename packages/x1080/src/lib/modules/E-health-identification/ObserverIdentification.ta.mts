@@ -1,8 +1,8 @@
 /* eslint-disable */
 import {
-    OPTIONAL,
-    OBJECT_IDENTIFIER,
-    ASN1Element as _Element,
+    type OPTIONAL,
+    type OBJECT_IDENTIFIER,
+    type ASN1Element as _Element,
     ASN1TagClass as _TagClass,
     ASN1Construction as _Construction,
     ASN1UniversalType as _UniversalType,
@@ -13,7 +13,7 @@ import {
 } from '@wildboar/asn1';
 import * as $ from '@wildboar/asn1/functional';
 import {
-    SchemeName,
+    type SchemeName,
     _decode_SchemeName,
     _encode_SchemeName,
 } from './SchemeName.ta.mjs';
@@ -35,46 +35,54 @@ import {
  * ObserverIdentification ::= SEQUENCE {
  *   scheme      MEDICAL-STAFF-SCHEME.&id ({MedicalStaffSchemes}),
  *   schemeName  MEDICAL-STAFF-SCHEME.&name ({MedicalStaffSchemes}{@.scheme})
- *               OPTIONAL,
+ *               type OPTIONAL,
  *   observerId  MEDICAL-STAFF-SCHEME.&Observer ({MedicalStaffSchemes}{@.scheme})}
  * ```
  *
  */
 export class ObserverIdentification {
+    /**
+     * @summary `scheme`.
+     * @description
+     *
+     * `MEDICAL-STAFF-SCHEME.&id` of the numbering scheme.
+     *
+     * @public
+     * @readonly
+     */
+    public readonly scheme: OBJECT_IDENTIFIER;
+    /**
+     * @summary `schemeName`.
+     * @description
+     *
+     * Optional `MEDICAL-STAFF-SCHEME.&name`. ISO646String is not
+     * necessarily unique.
+     *
+     * @public
+     * @readonly
+     */
+    public readonly schemeName: OPTIONAL<SchemeName>;
+    /**
+     * @summary `observerId`.
+     * @description
+     *
+     * `MEDICAL-STAFF-SCHEME.&Observer`. Normally role + name;
+     * unlikely to contain unique identification.
+     *
+     * @public
+     * @readonly
+     */
+    public readonly observerId: _Element;
+
     constructor(
-        /**
-         * @summary `scheme`.
-         * @description
-         *
-         * `MEDICAL-STAFF-SCHEME.&id` of the numbering scheme.
-         *
-         * @public
-         * @readonly
-         */
-        readonly scheme: OBJECT_IDENTIFIER,
-        /**
-         * @summary `schemeName`.
-         * @description
-         *
-         * Optional `MEDICAL-STAFF-SCHEME.&name`. ISO646String is not
-         * necessarily unique.
-         *
-         * @public
-         * @readonly
-         */
-        readonly schemeName: OPTIONAL<SchemeName>,
-        /**
-         * @summary `observerId`.
-         * @description
-         *
-         * `MEDICAL-STAFF-SCHEME.&Observer`. Normally role + name;
-         * unlikely to contain unique identification.
-         *
-         * @public
-         * @readonly
-         */
-        readonly observerId: _Element
-    ) {}
+        scheme: OBJECT_IDENTIFIER,
+        schemeName: OPTIONAL<SchemeName>,
+        observerId: _Element
+    ) {
+        this.scheme = scheme;
+        this.schemeName = schemeName;
+        this.observerId = observerId;
+    }
 
     /**
      * @summary Restructures an object into a ObserverIdentification

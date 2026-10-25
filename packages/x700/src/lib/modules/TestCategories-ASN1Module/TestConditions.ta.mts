@@ -1,7 +1,7 @@
 /* eslint-disable */
 import {
-    OPTIONAL,
-    ASN1Element as _Element,
+    type OPTIONAL,
+    type ASN1Element as _Element,
     ASN1TagClass as _TagClass,
     ASN1Construction as _Construction,
     ASN1UniversalType as _UniversalType,
@@ -12,12 +12,12 @@ import {
 } from '@wildboar/asn1';
 import * as $ from '@wildboar/asn1/functional';
 import {
-    TestConditions_first,
+    type TestConditions_first,
     _decode_TestConditions_first,
     _encode_TestConditions_first,
 } from '../TestCategories-ASN1Module/TestConditions-first.ta.mjs';
 import {
-    TestConditions_second,
+    type TestConditions_second,
     _decode_TestConditions_second,
     _encode_TestConditions_second,
 } from '../TestCategories-ASN1Module/TestConditions-second.ta.mjs';
@@ -44,28 +44,34 @@ import {
  *
  */
 export class TestConditions {
+    /**
+     * @summary `first`.
+     * @description
+     *
+     * Busy handling: run anyway, reject, or wait.
+     * X.737 §8.1.21, A.7.
+     * @public
+     * @readonly
+     */
+    public readonly first: TestConditions_first;
+    /**
+     * @summary `second`.
+     * @description
+     *
+     * Whether the MORT's user may override/abort
+     * the test. Optional. X.737 §8.1.21.
+     * @public
+     * @readonly
+     */
+    public readonly second?: OPTIONAL<TestConditions_second>;
+
     constructor(
-        /**
-         * @summary `first`.
-         * @description
-         *
-         * Busy handling: run anyway, reject, or wait.
-         * X.737 §8.1.21, A.7.
-         * @public
-         * @readonly
-         */
-        readonly first: TestConditions_first,
-        /**
-         * @summary `second`.
-         * @description
-         *
-         * Whether the MORT's user may override/abort
-         * the test. Optional. X.737 §8.1.21.
-         * @public
-         * @readonly
-         */
-        readonly second?: OPTIONAL<TestConditions_second>
-    ) {}
+        first: TestConditions_first,
+        second?: OPTIONAL<TestConditions_second>
+    ) {
+        this.first = first;
+        this.second = second;
+    }
 
     /**
      * @summary Restructures an object into a TestConditions

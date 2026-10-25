@@ -1,11 +1,11 @@
 /* eslint-disable */
 import {
-    ASN1Element as _Element,
+    type ASN1Element as _Element,
     ASN1TagClass as _TagClass
 } from "@wildboar/asn1";
 import * as $ from "@wildboar/asn1/functional";
 import { CancelSessionResponseOk, _decode_CancelSessionResponseOk, _encode_CancelSessionResponseOk } from "@wildboar/sgp22/RSPDefinitions";
-import { CancelSessionResponse_cancelSessionResponseError, _decode_CancelSessionResponse_cancelSessionResponseError, _encode_CancelSessionResponse_cancelSessionResponseError } from "../SGP32Definitions/CancelSessionResponse-cancelSessionResponseError.ta.mjs";
+import { type CancelSessionResponse_cancelSessionResponseError, _decode_CancelSessionResponse_cancelSessionResponseError, _encode_CancelSessionResponse_cancelSessionResponseError } from "../SGP32Definitions/CancelSessionResponse-cancelSessionResponseError.ta.mjs";
 import { CompactCancelSessionResponseOk, _decode_CompactCancelSessionResponseOk, _encode_CompactCancelSessionResponseOk } from "../SGP32Definitions/CompactCancelSessionResponseOk.ta.mjs";
 
 

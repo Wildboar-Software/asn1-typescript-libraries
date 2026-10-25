@@ -1,7 +1,7 @@
 /* eslint-disable */
 import { type SYNTAX_NAME } from "../InformationFramework/SYNTAX-NAME.oca.mjs";
 import {
-    CountryName,
+    type CountryName,
     _decode_CountryName,
     _encode_CountryName,
 } from "../SelectedAttributeTypes/CountryName.ta.mjs";

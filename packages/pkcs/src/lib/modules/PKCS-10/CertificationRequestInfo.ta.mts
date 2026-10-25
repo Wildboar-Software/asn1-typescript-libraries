@@ -1,22 +1,22 @@
 /* eslint-disable */
 import {
     ASN1ConstructionError as _ConstructionError,
-    ASN1Element as _Element,
+    type ASN1Element as _Element,
     ASN1TagClass as _TagClass,
 } from "@wildboar/asn1";
 import * as $ from "@wildboar/asn1/functional";
 import {
-    Name,
+    type Name,
     _decode_Name,
     _encode_Name,
 } from "@wildboar/dn";
 import {
-    Attributes,
+    type Attributes,
     _decode_Attributes,
     _encode_Attributes,
 } from "../PKCS-10/Attributes.ta.mjs";
 import {
-    CertificationRequestInfo_version,
+    type CertificationRequestInfo_version,
     _decode_CertificationRequestInfo_version,
     _encode_CertificationRequestInfo_version,
 } from "../PKCS-10/CertificationRequestInfo-version.ta.mjs";
@@ -44,32 +44,42 @@ import {
  *
  */
 export class CertificationRequestInfo {
+    /**
+     * @summary `version`.
+     * @public
+     * @readonly
+     */
+    public readonly version: CertificationRequestInfo_version;
+    /**
+     * @summary `subject`.
+     * @public
+     * @readonly
+     */
+    public readonly subject: Name;
+    /**
+     * @summary `subjectPKInfo`.
+     * @public
+     * @readonly
+     */
+    public readonly subjectPKInfo: SubjectPublicKeyInfo;
+    /**
+     * @summary `attributes`.
+     * @public
+     * @readonly
+     */
+    public readonly attributes: Attributes;
+
     constructor(
-        /**
-         * @summary `version`.
-         * @public
-         * @readonly
-         */
-        readonly version: CertificationRequestInfo_version,
-        /**
-         * @summary `subject`.
-         * @public
-         * @readonly
-         */
-        readonly subject: Name,
-        /**
-         * @summary `subjectPKInfo`.
-         * @public
-         * @readonly
-         */
-        readonly subjectPKInfo: SubjectPublicKeyInfo,
-        /**
-         * @summary `attributes`.
-         * @public
-         * @readonly
-         */
-        readonly attributes: Attributes
-    ) {}
+        version: CertificationRequestInfo_version,
+        subject: Name,
+        subjectPKInfo: SubjectPublicKeyInfo,
+        attributes: Attributes
+    ) {
+        this.version = version;
+        this.subject = subject;
+        this.subjectPKInfo = subjectPKInfo;
+        this.attributes = attributes;
+    }
 
     /**
      * @summary Restructures an object into a CertificationRequestInfo

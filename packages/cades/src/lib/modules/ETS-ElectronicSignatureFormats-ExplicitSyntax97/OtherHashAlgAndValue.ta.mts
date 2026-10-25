@@ -1,6 +1,6 @@
 /* eslint-disable */
 import {
-    ASN1Element as _Element,
+    type ASN1Element as _Element,
     ASN1TagClass as _TagClass,
     ASN1Construction as _Construction,
     ASN1UniversalType as _UniversalType,
@@ -13,7 +13,7 @@ import * as $ from "@wildboar/asn1/functional";
 import {
     AlgorithmIdentifier, _decode_AlgorithmIdentifier, _encode_AlgorithmIdentifier
 } from "@wildboar/x500/AuthenticationFramework";
-import { OtherHashValue, _decode_OtherHashValue, _encode_OtherHashValue } from "../ETS-ElectronicSignatureFormats-ExplicitSyntax97/OtherHashValue.ta.mjs";
+import { type OtherHashValue, _decode_OtherHashValue, _encode_OtherHashValue } from "../ETS-ElectronicSignatureFormats-ExplicitSyntax97/OtherHashValue.ta.mjs";
 /**
  * @summary OtherHashAlgAndValue
  * @description
@@ -34,29 +34,35 @@ import { OtherHashValue, _decode_OtherHashValue, _encode_OtherHashValue } from "
  */
 export
 class OtherHashAlgAndValue {
+    /**
+     * @summary `hashAlgorithm`.
+     * @description
+     *
+     * Algorithm used to compute `hashValue`.
+     *
+     * @public
+     * @readonly
+     */
+    public readonly hashAlgorithm: AlgorithmIdentifier;
+    /**
+     * @summary `hashValue`.
+     * @description
+     *
+     * Hash octets. For a signature policy, may be all zeros
+     * if the policy hash is not known.
+     *
+     * @public
+     * @readonly
+     */
+    public readonly hashValue: OtherHashValue;
+
     constructor (
-        /**
-         * @summary `hashAlgorithm`.
-         * @description
-         *
-         * Algorithm used to compute `hashValue`.
-         *
-         * @public
-         * @readonly
-         */
-        readonly hashAlgorithm: AlgorithmIdentifier,
-        /**
-         * @summary `hashValue`.
-         * @description
-         *
-         * Hash octets. For a signature policy, may be all zeros
-         * if the policy hash is not known.
-         *
-         * @public
-         * @readonly
-         */
-        readonly hashValue: OtherHashValue
-    ) {}
+        hashAlgorithm: AlgorithmIdentifier,
+        hashValue: OtherHashValue
+    ) {
+        this.hashAlgorithm = hashAlgorithm;
+        this.hashValue = hashValue;
+    }
 
     /**
      * @summary Restructures an object into a OtherHashAlgAndValue

@@ -1,50 +1,51 @@
 /* eslint-disable */
 import {
-    NULL,
-    OPTIONAL,
-    ASN1Element as _Element,
+    type NULL,
+    type OCTET_STRING,
+    type OPTIONAL,
+    type ASN1Element as _Element,
     ASN1TagClass as _TagClass
 } from "@wildboar/asn1";
 import * as $ from "@wildboar/asn1/functional";
-import { ContinueWithArgumentArg_legorCSID, _decode_ContinueWithArgumentArg_legorCSID, _encode_ContinueWithArgumentArg_legorCSID } from "../IN-SSF-SCF-ops-args/ContinueWithArgumentArg-legorCSID.ta.mjs";
+import { type ContinueWithArgumentArg_legorCSID, _decode_ContinueWithArgumentArg_legorCSID, _encode_ContinueWithArgumentArg_legorCSID } from "../IN-SSF-SCF-ops-args/ContinueWithArgumentArg-legorCSID.ta.mjs";
 // export { ContinueWithArgumentArg_legorCSID, _decode_ContinueWithArgumentArg_legorCSID, _encode_ContinueWithArgumentArg_legorCSID } from "../IN-SSF-SCF-ops-args/ContinueWithArgumentArg-legorCSID.ta.mjs";
 import { leg1 } from "../IN-SSF-SCF-datatypes/leg1.va.mjs";
 // export { leg1 } from "../IN-SSF-SCF-datatypes/leg1.va.mjs";
-import { AlertingPattern, _decode_AlertingPattern, _encode_AlertingPattern } from "../IN-SSF-SCF-datatypes/AlertingPattern.ta.mjs";
+import { type AlertingPattern, _decode_AlertingPattern, _encode_AlertingPattern } from "../IN-SSF-SCF-datatypes/AlertingPattern.ta.mjs";
 // export { AlertingPattern, _decode_AlertingPattern, _encode_AlertingPattern } from "../IN-SSF-SCF-datatypes/AlertingPattern.ta.mjs";
-import { GenericName, _decode_GenericName, _encode_GenericName } from "../IN-SSF-SCF-datatypes/GenericName.ta.mjs";
+import { type GenericName, _decode_GenericName, _encode_GenericName } from "../IN-SSF-SCF-datatypes/GenericName.ta.mjs";
 // export { GenericName, _decode_GenericName, _encode_GenericName } from "../IN-SSF-SCF-datatypes/GenericName.ta.mjs";
-import { INServiceCompatibilityResponse, _decode_INServiceCompatibilityResponse, _encode_INServiceCompatibilityResponse } from "../IN-SSF-SCF-datatypes/INServiceCompatibilityResponse.ta.mjs";
+import { type INServiceCompatibilityResponse, _decode_INServiceCompatibilityResponse, _encode_INServiceCompatibilityResponse } from "../IN-SSF-SCF-datatypes/INServiceCompatibilityResponse.ta.mjs";
 // export { INServiceCompatibilityResponse, _decode_INServiceCompatibilityResponse, _encode_INServiceCompatibilityResponse } from "../IN-SSF-SCF-datatypes/INServiceCompatibilityResponse.ta.mjs";
-import { ForwardGVNS, _decode_ForwardGVNS, _encode_ForwardGVNS } from "../IN-SSF-SCF-datatypes/ForwardGVNS.ta.mjs";
+import { type ForwardGVNS, _decode_ForwardGVNS, _encode_ForwardGVNS } from "../IN-SSF-SCF-datatypes/ForwardGVNS.ta.mjs";
 // export { ForwardGVNS, _decode_ForwardGVNS, _encode_ForwardGVNS } from "../IN-SSF-SCF-datatypes/ForwardGVNS.ta.mjs";
-import { BackwardGVNS, _decode_BackwardGVNS, _encode_BackwardGVNS } from "../IN-SSF-SCF-datatypes/BackwardGVNS.ta.mjs";
+import { type BackwardGVNS, _decode_BackwardGVNS, _encode_BackwardGVNS } from "../IN-SSF-SCF-datatypes/BackwardGVNS.ta.mjs";
 // export { BackwardGVNS, _decode_BackwardGVNS, _encode_BackwardGVNS } from "../IN-SSF-SCF-datatypes/BackwardGVNS.ta.mjs";
-import { Extensions, _decode_Extensions, _encode_Extensions } from "../IN-common-datatypes/Extensions.ta.mjs";
+import { type Extensions, _decode_Extensions, _encode_Extensions } from "../IN-common-datatypes/Extensions.ta.mjs";
 // export { Extensions, _decode_Extensions, _encode_Extensions } from "../IN-common-datatypes/Extensions.ta.mjs";
 import { ServiceInteractionIndicatorsTwo, _decode_ServiceInteractionIndicatorsTwo, _encode_ServiceInteractionIndicatorsTwo } from "../IN-SSF-SCF-datatypes/ServiceInteractionIndicatorsTwo.ta.mjs";
 // export { ServiceInteractionIndicatorsTwo, _decode_ServiceInteractionIndicatorsTwo, _encode_ServiceInteractionIndicatorsTwo } from "../IN-SSF-SCF-datatypes/ServiceInteractionIndicatorsTwo.ta.mjs";
-import { SDSSinformation, _decode_SDSSinformation, _encode_SDSSinformation } from "../IN-SSF-SCF-datatypes/SDSSinformation.ta.mjs";
+import { type SDSSinformation, _decode_SDSSinformation, _encode_SDSSinformation } from "../IN-SSF-SCF-datatypes/SDSSinformation.ta.mjs";
 // export { SDSSinformation, _decode_SDSSinformation, _encode_SDSSinformation } from "../IN-SSF-SCF-datatypes/SDSSinformation.ta.mjs";
-import { ConnectionIdentifier, _decode_ConnectionIdentifier, _encode_ConnectionIdentifier } from "../IN-SSF-SCF-datatypes/ConnectionIdentifier.ta.mjs";
+import { type ConnectionIdentifier, _decode_ConnectionIdentifier, _encode_ConnectionIdentifier } from "../IN-SSF-SCF-datatypes/ConnectionIdentifier.ta.mjs";
 // export { ConnectionIdentifier, _decode_ConnectionIdentifier, _encode_ConnectionIdentifier } from "../IN-SSF-SCF-datatypes/ConnectionIdentifier.ta.mjs";
-import { ISDNAccessRelatedInformation, _decode_ISDNAccessRelatedInformation, _encode_ISDNAccessRelatedInformation } from "../IN-SSF-SCF-datatypes/ISDNAccessRelatedInformation.ta.mjs";
+import { type ISDNAccessRelatedInformation, _decode_ISDNAccessRelatedInformation, _encode_ISDNAccessRelatedInformation } from "../IN-SSF-SCF-datatypes/ISDNAccessRelatedInformation.ta.mjs";
 // export { ISDNAccessRelatedInformation, _decode_ISDNAccessRelatedInformation, _encode_ISDNAccessRelatedInformation } from "../IN-SSF-SCF-datatypes/ISDNAccessRelatedInformation.ta.mjs";
-import { OriginalCalledPartyID, _decode_OriginalCalledPartyID, _encode_OriginalCalledPartyID } from "../IN-SSF-SCF-datatypes/OriginalCalledPartyID.ta.mjs";
+import { type OriginalCalledPartyID, _decode_OriginalCalledPartyID, _encode_OriginalCalledPartyID } from "../IN-SSF-SCF-datatypes/OriginalCalledPartyID.ta.mjs";
 // export { OriginalCalledPartyID, _decode_OriginalCalledPartyID, _encode_OriginalCalledPartyID } from "../IN-SSF-SCF-datatypes/OriginalCalledPartyID.ta.mjs";
-import { CallingPartyNumber, _decode_CallingPartyNumber, _encode_CallingPartyNumber } from "../IN-SSF-SCF-datatypes/CallingPartyNumber.ta.mjs";
+import { type CallingPartyNumber, _decode_CallingPartyNumber, _encode_CallingPartyNumber } from "../IN-SSF-SCF-datatypes/CallingPartyNumber.ta.mjs";
 // export { CallingPartyNumber, _decode_CallingPartyNumber, _encode_CallingPartyNumber } from "../IN-SSF-SCF-datatypes/CallingPartyNumber.ta.mjs";
-import { CallingPartysCategory, _decode_CallingPartysCategory, _encode_CallingPartysCategory } from "../IN-SSF-SCF-datatypes/CallingPartysCategory.ta.mjs";
+import { type CallingPartysCategory, _decode_CallingPartysCategory, _encode_CallingPartysCategory } from "../IN-SSF-SCF-datatypes/CallingPartysCategory.ta.mjs";
 // export { CallingPartysCategory, _decode_CallingPartysCategory, _encode_CallingPartysCategory } from "../IN-SSF-SCF-datatypes/CallingPartysCategory.ta.mjs";
-import { RedirectingPartyID, _decode_RedirectingPartyID, _encode_RedirectingPartyID } from "../IN-SSF-SCF-datatypes/RedirectingPartyID.ta.mjs";
+import { type RedirectingPartyID, _decode_RedirectingPartyID, _encode_RedirectingPartyID } from "../IN-SSF-SCF-datatypes/RedirectingPartyID.ta.mjs";
 // export { RedirectingPartyID, _decode_RedirectingPartyID, _encode_RedirectingPartyID } from "../IN-SSF-SCF-datatypes/RedirectingPartyID.ta.mjs";
-import { RedirectionInformation, _decode_RedirectionInformation, _encode_RedirectionInformation } from "../IN-SSF-SCF-datatypes/RedirectionInformation.ta.mjs";
+import { type RedirectionInformation, _decode_RedirectionInformation, _encode_RedirectionInformation } from "../IN-SSF-SCF-datatypes/RedirectionInformation.ta.mjs";
 // export { RedirectionInformation, _decode_RedirectionInformation, _encode_RedirectionInformation } from "../IN-SSF-SCF-datatypes/RedirectionInformation.ta.mjs";
-import { ForwardCallIndicators, _decode_ForwardCallIndicators, _encode_ForwardCallIndicators } from "../IN-SSF-SCF-datatypes/ForwardCallIndicators.ta.mjs";
+import { type ForwardCallIndicators, _decode_ForwardCallIndicators, _encode_ForwardCallIndicators } from "../IN-SSF-SCF-datatypes/ForwardCallIndicators.ta.mjs";
 // export { ForwardCallIndicators, _decode_ForwardCallIndicators, _encode_ForwardCallIndicators } from "../IN-SSF-SCF-datatypes/ForwardCallIndicators.ta.mjs";
-import { GenericNumbers, _decode_GenericNumbers, _encode_GenericNumbers } from "../IN-SSF-SCF-datatypes/GenericNumbers.ta.mjs";
+import { type GenericNumbers, _decode_GenericNumbers, _encode_GenericNumbers } from "../IN-SSF-SCF-datatypes/GenericNumbers.ta.mjs";
 // export { GenericNumbers, _decode_GenericNumbers, _encode_GenericNumbers } from "../IN-SSF-SCF-datatypes/GenericNumbers.ta.mjs";
-import { CUG_Interlock, _decode_CUG_Interlock, _encode_CUG_Interlock } from "../IN-SSF-SCF-datatypes/CUG-Interlock.ta.mjs";
+import { type CUG_Interlock, _decode_CUG_Interlock, _encode_CUG_Interlock } from "../IN-SSF-SCF-datatypes/CUG-Interlock.ta.mjs";
 // export { CUG_Interlock, _decode_CUG_Interlock, _encode_CUG_Interlock } from "../IN-SSF-SCF-datatypes/CUG-Interlock.ta.mjs";
 import { IPRelatedInformation, _decode_IPRelatedInformation, _encode_IPRelatedInformation } from "../IN-SSF-SCF-datatypes/IPRelatedInformation.ta.mjs";
 // export { IPRelatedInformation, _decode_IPRelatedInformation, _encode_IPRelatedInformation } from "../IN-SSF-SCF-datatypes/IPRelatedInformation.ta.mjs";
@@ -294,7 +295,11 @@ class ContinueWithArgumentArg {
      * @static
      * @method
      */
-    public static get _default_value_for_legorCSID () { return { legID: { sendingSideID: leg1 } }; }
+    public static get _default_value_for_legorCSID (): {
+        legID: {
+            sendingSideID: OCTET_STRING;
+        };
+    } { return { legID: { sendingSideID: leg1 } }; }
 }
 
 /**

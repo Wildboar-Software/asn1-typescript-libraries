@@ -1,6 +1,6 @@
 /* eslint-disable */
 import {
-    ASN1Element as _Element,
+    type ASN1Element as _Element,
     ASN1TagClass as _TagClass,
     ASN1Construction as _Construction,
     ASN1UniversalType as _UniversalType,
@@ -9,9 +9,9 @@ import {
     EmbeddedPDV as _PDV,
     ASN1ConstructionError as _ConstructionError } from "@wildboar/asn1";
 import * as $ from "@wildboar/asn1/functional";
-import { V8bisDiag_Item_ackNak_aCK, _decode_V8bisDiag_Item_ackNak_aCK, _encode_V8bisDiag_Item_ackNak_aCK } from "../V59/V8bisDiag-Item-ackNak-aCK.ta.mjs";
+import { type V8bisDiag_Item_ackNak_aCK, _decode_V8bisDiag_Item_ackNak_aCK, _encode_V8bisDiag_Item_ackNak_aCK } from "../V59/V8bisDiag-Item-ackNak-aCK.ta.mjs";
 
-import { V8bisDiag_Item_ackNak_nAK, _decode_V8bisDiag_Item_ackNak_nAK, _encode_V8bisDiag_Item_ackNak_nAK } from "../V59/V8bisDiag-Item-ackNak-nAK.ta.mjs";
+import { type V8bisDiag_Item_ackNak_nAK, _decode_V8bisDiag_Item_ackNak_nAK, _encode_V8bisDiag_Item_ackNak_nAK } from "../V59/V8bisDiag-Item-ackNak-nAK.ta.mjs";
 
 /**
  * @summary V8bisDiag_Item_ackNak
@@ -48,7 +48,7 @@ class V8bisDiag_Item_ackNak {
      * @public
      * @readonly
      */
-    readonly aCK: V8bisDiag_Item_ackNak_aCK;
+    public readonly aCK: V8bisDiag_Item_ackNak_aCK;
     /**
      * @summary `nAK`.
      * @description
@@ -59,7 +59,7 @@ class V8bisDiag_Item_ackNak {
      * @public
      * @readonly
      */
-    readonly nAK: V8bisDiag_Item_ackNak_nAK;
+    public readonly nAK: V8bisDiag_Item_ackNak_nAK;
 
     constructor (
         aCK: V8bisDiag_Item_ackNak_aCK,

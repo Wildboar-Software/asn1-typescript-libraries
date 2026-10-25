@@ -1,6 +1,6 @@
 /* eslint-disable */
 import {
-    ASN1Element as _Element,
+    type ASN1Element as _Element,
     ASN1TagClass as _TagClass,
     ASN1Construction as _Construction,
     ASN1UniversalType as _UniversalType,
@@ -11,7 +11,7 @@ import {
 } from "@wildboar/asn1";
 import { hello_request /* IMPORTED_SHORT_NAMED_INTEGER */, _decode_HandshakeType, _encode_HandshakeType } from "../TSM/HandshakeType.ta.mjs";
 
-import { HelloRequest, _decode_HelloRequest, _encode_HelloRequest } from "../TSM/HelloRequest.ta.mjs";
+import { type HelloRequest, _decode_HelloRequest, _encode_HelloRequest } from "../TSM/HelloRequest.ta.mjs";
 
 import { type HANDSHAKE } from "../TSM/HANDSHAKE.oca.mjs";
 

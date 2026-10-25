@@ -1,12 +1,12 @@
 /* eslint-disable */
 import {
-    ASN1Element as _Element,
+    type ASN1Element as _Element,
     ASN1TagClass as _TagClass,
-    OPTIONAL,
+    type OPTIONAL,
 } from "@wildboar/asn1";
 import * as $ from "@wildboar/asn1/functional";
 import {
-    DomainLocalID,
+    type DomainLocalID,
     _decode_DomainLocalID,
     _encode_DomainLocalID,
 } from "../DirectoryAbstractService/DomainLocalID.ta.mjs";
@@ -16,12 +16,12 @@ import {
     _encode_EntryInformationSelection,
 } from "../DirectoryAbstractService/EntryInformationSelection.ta.mjs";
 import {
-    Filter,
+    type Filter,
     _decode_Filter,
     _encode_Filter,
 } from "../DirectoryAbstractService/Filter.ta.mjs";
 import {
-    JoinArgument_joinSubset,
+    type JoinArgument_joinSubset,
     JoinArgument_joinSubset_baseObject /* IMPORTED_LONG_ENUMERATION_ITEM */,
     _decode_JoinArgument_joinSubset,
     _encode_JoinArgument_joinSubset,
@@ -33,7 +33,7 @@ import {
     _encode_JoinAttPair,
 } from "../DirectoryAbstractService/JoinAttPair.ta.mjs";
 import {
-    Name,
+    type Name,
     _decode_Name,
     _encode_Name,
 } from "../InformationFramework/Name.ta.mjs";
@@ -65,80 +65,96 @@ import {
  *
  */
 export class JoinArgument {
+    /**
+     * @summary `joinBaseObject`.
+     * @description
+     *
+     * Object (or root) relative to which the additional search runs.
+     * May be an alternative name with contexts.
+     *
+     * @public
+     * @readonly
+     */
+    public readonly joinBaseObject: Name;
+    /**
+     * @summary `domainLocalID`.
+     * @description
+     *
+     * Which DIT to start `joinBaseObject` in. Absent ⇒ all DITs the DSA
+     * knows.
+     *
+     * @public
+     * @readonly
+     */
+    public readonly domainLocalID: OPTIONAL<DomainLocalID>;
+    /**
+     * @summary `joinSubset`.
+     * @description
+     *
+     * DEFAULT `baseObject`. `baseObject` / `oneLevel` / `wholeSubtree`.
+     *
+     * @public
+     * @readonly
+     */
+    public readonly joinSubset: OPTIONAL<JoinArgument_joinSubset>;
+    /**
+     * @summary `joinFilter`.
+     * @description
+     *
+     * Absent ⇒ use the Search `filter` (or its DEFAULT `and:{}`).
+     * Treated as `extendedFilter`.
+     *
+     * @public
+     * @readonly
+     */
+    public readonly joinFilter: OPTIONAL<Filter>;
+    /**
+     * @summary `joinAttributes`.
+     * @description
+     *
+     * SEQUENCE SIZE (1..MAX) of join pairs. Invalid/empty:
+     * `innerJoin` ⇒ empty; `leftOuterJoin` ⇒ primary only;
+     * `fullOuterJoin` ⇒ primary + unjoined additional.
+     *
+     * @public
+     * @readonly
+     */
+    public readonly joinAttributes: OPTIONAL<JoinAttPair[]>;
+    /**
+     * @summary `joinSelection`.
+     * @description
+     *
+     * EIS for the additional search (strip uninteresting attrs from
+     * the intermediate).
+     *
+     * @public
+     * @readonly
+     */
+    public readonly joinSelection: EntryInformationSelection;
+    /**
+     * @summary Extensions that are not recognized.
+     * @public
+     * @readonly
+     */
+    public readonly _unrecognizedExtensionsList: _Element[];
+
     constructor(
-        /**
-         * @summary `joinBaseObject`.
-         * @description
-         *
-         * Object (or root) relative to which the additional search runs.
-         * May be an alternative name with contexts.
-         *
-         * @public
-         * @readonly
-         */
-        readonly joinBaseObject: Name,
-        /**
-         * @summary `domainLocalID`.
-         * @description
-         *
-         * Which DIT to start `joinBaseObject` in. Absent ⇒ all DITs the DSA
-         * knows.
-         *
-         * @public
-         * @readonly
-         */
-        readonly domainLocalID: OPTIONAL<DomainLocalID>,
-        /**
-         * @summary `joinSubset`.
-         * @description
-         *
-         * DEFAULT `baseObject`. `baseObject` / `oneLevel` / `wholeSubtree`.
-         *
-         * @public
-         * @readonly
-         */
-        readonly joinSubset: OPTIONAL<JoinArgument_joinSubset>,
-        /**
-         * @summary `joinFilter`.
-         * @description
-         *
-         * Absent ⇒ use the Search `filter` (or its DEFAULT `and:{}`).
-         * Treated as `extendedFilter`.
-         *
-         * @public
-         * @readonly
-         */
-        readonly joinFilter: OPTIONAL<Filter>,
-        /**
-         * @summary `joinAttributes`.
-         * @description
-         *
-         * SEQUENCE SIZE (1..MAX) of join pairs. Invalid/empty:
-         * `innerJoin` ⇒ empty; `leftOuterJoin` ⇒ primary only;
-         * `fullOuterJoin` ⇒ primary + unjoined additional.
-         *
-         * @public
-         * @readonly
-         */
-        readonly joinAttributes: OPTIONAL<JoinAttPair[]>,
-        /**
-         * @summary `joinSelection`.
-         * @description
-         *
-         * EIS for the additional search (strip uninteresting attrs from
-         * the intermediate).
-         *
-         * @public
-         * @readonly
-         */
-        readonly joinSelection: EntryInformationSelection,
-        /**
-         * @summary Extensions that are not recognized.
-         * @public
-         * @readonly
-         */
-        readonly _unrecognizedExtensionsList: _Element[] = []
-    ) {}
+        joinBaseObject: Name,
+        domainLocalID: OPTIONAL<DomainLocalID>,
+        joinSubset: OPTIONAL<JoinArgument_joinSubset>,
+        joinFilter: OPTIONAL<Filter>,
+        joinAttributes: OPTIONAL<JoinAttPair[]>,
+        joinSelection: EntryInformationSelection,
+        _unrecognizedExtensionsList: _Element[] = []
+    ) {
+        this.joinBaseObject = joinBaseObject;
+        this.domainLocalID = domainLocalID;
+        this.joinSubset = joinSubset;
+        this.joinFilter = joinFilter;
+        this.joinAttributes = joinAttributes;
+        this.joinSelection = joinSelection;
+        this._unrecognizedExtensionsList = _unrecognizedExtensionsList;
+    }
 
     /**
      * @summary Restructures an object into a JoinArgument
@@ -181,7 +197,7 @@ export class JoinArgument {
      * @static
      */
 
-    public static _enum_for_joinSubset = _enum_for_JoinArgument_joinSubset;
+    public static _enum_for_joinSubset: typeof _enum_for_JoinArgument_joinSubset = _enum_for_JoinArgument_joinSubset;
 }
 
 /**

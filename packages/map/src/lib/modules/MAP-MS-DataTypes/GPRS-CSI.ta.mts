@@ -1,14 +1,14 @@
 /* eslint-disable */
 import {
-    NULL,
-    OPTIONAL,
-    ASN1Element as _Element,
+    type NULL,
+    type OPTIONAL,
+    type ASN1Element as _Element,
     ASN1TagClass as _TagClass
 } from "@wildboar/asn1";
 import * as $ from "@wildboar/asn1/functional";
 import { ExtensionContainer, _decode_ExtensionContainer, _encode_ExtensionContainer } from "../MAP-ExtensionDataTypes/ExtensionContainer.ta.mjs";
-import { CamelCapabilityHandling, _decode_CamelCapabilityHandling, _encode_CamelCapabilityHandling } from "../MAP-MS-DataTypes/CamelCapabilityHandling.ta.mjs";
-import { GPRS_CamelTDPDataList, _decode_GPRS_CamelTDPDataList, _encode_GPRS_CamelTDPDataList } from "../MAP-MS-DataTypes/GPRS-CamelTDPDataList.ta.mjs";
+import { type CamelCapabilityHandling, _decode_CamelCapabilityHandling, _encode_CamelCapabilityHandling } from "../MAP-MS-DataTypes/CamelCapabilityHandling.ta.mjs";
+import { type GPRS_CamelTDPDataList, _decode_GPRS_CamelTDPDataList, _encode_GPRS_CamelTDPDataList } from "../MAP-MS-DataTypes/GPRS-CamelTDPDataList.ta.mjs";
 
 
 /**
@@ -28,11 +28,11 @@ import { GPRS_CamelTDPDataList, _decode_GPRS_CamelTDPDataList, _encode_GPRS_Came
  * 
  * ```asn1
  * GPRS-CSI ::= SEQUENCE {
- *     gprs-CamelTDPDataList    [0] GPRS-CamelTDPDataList    OPTIONAL,
- *     camelCapabilityHandling    [1] CamelCapabilityHandling    OPTIONAL,
- *     extensionContainer    [2] ExtensionContainer    OPTIONAL,
- *     notificationToCSE    [3]    NULL    OPTIONAL,
- *     csi-Active    [4]    NULL    OPTIONAL,
+ *     gprs-CamelTDPDataList    [0] GPRS-CamelTDPDataList    type OPTIONAL,
+ *     camelCapabilityHandling    [1] CamelCapabilityHandling    type OPTIONAL,
+ *     extensionContainer    [2] ExtensionContainer    type OPTIONAL,
+ *     notificationToCSE    [3]    NULL    type OPTIONAL,
+ *     csi-Active    [4]    NULL    type OPTIONAL,
  *     ...}
  * ```
  * 
@@ -40,66 +40,80 @@ import { GPRS_CamelTDPDataList, _decode_GPRS_CamelTDPDataList, _encode_GPRS_Came
  */
 export
 class GPRS_CSI {
+    /**
+     * @summary `gprs_CamelTDPDataList`.
+     * @description
+     *
+     * Shall be present in the GPRS-CSI sequence. If segmented, shall be
+     * present in the first segment. Shall not contain more than one
+     * instance with the same trigger detection point (3GPP TS 29.002
+     * V19.1.0 clause 17.7.1).
+     *
+     * @public
+     * @readonly
+     */
+    public readonly gprs_CamelTDPDataList?: OPTIONAL<GPRS_CamelTDPDataList>;
+    /**
+     * @summary `camelCapabilityHandling`.
+     * @description
+     *
+     * Shall be present in the GPRS-CSI sequence. If segmented, shall be
+     * present in the first segment (3GPP TS 29.002 V19.1.0 clause 17.7.1).
+     *
+     * @public
+     * @readonly
+     */
+    public readonly camelCapabilityHandling?: OPTIONAL<CamelCapabilityHandling>;
+    /**
+     * @summary `extensionContainer`.
+     * @public
+     * @readonly
+     */
+    public readonly extensionContainer?: OPTIONAL<ExtensionContainer>;
+    /**
+     * @summary `notificationToCSE`.
+     * @description
+     *
+     * Shall not be present when GPRS-CSI is sent to SGSN. May only be
+     * included in ATSI/ATM ack/NSDC (3GPP TS 29.002 V19.1.0 clause 17.7.1).
+     *
+     * @public
+     * @readonly
+     */
+    public readonly notificationToCSE?: OPTIONAL<NULL>;
+    /**
+     * @summary `csi_Active`.
+     * @description
+     *
+     * Shall not be present when GPRS-CSI is sent to SGSN. May only be
+     * included in ATSI/ATM ack/NSDC (3GPP TS 29.002 V19.1.0 clause 17.7.1).
+     *
+     * @public
+     * @readonly
+     */
+    public readonly csi_Active?: OPTIONAL<NULL>;
+    /**
+     * @summary Extensions that are not recognized.
+     * @public
+     * @readonly
+     */
+    public readonly _unrecognizedExtensionsList: _Element[];
+
     constructor (
-        /**
-         * @summary `gprs_CamelTDPDataList`.
-         * @description
-         *
-         * Shall be present in the GPRS-CSI sequence. If segmented, shall be
-         * present in the first segment. Shall not contain more than one
-         * instance with the same trigger detection point (3GPP TS 29.002
-         * V19.1.0 clause 17.7.1).
-         *
-         * @public
-         * @readonly
-         */
-        readonly gprs_CamelTDPDataList?: OPTIONAL<GPRS_CamelTDPDataList>,
-        /**
-         * @summary `camelCapabilityHandling`.
-         * @description
-         *
-         * Shall be present in the GPRS-CSI sequence. If segmented, shall be
-         * present in the first segment (3GPP TS 29.002 V19.1.0 clause 17.7.1).
-         *
-         * @public
-         * @readonly
-         */
-        readonly camelCapabilityHandling?: OPTIONAL<CamelCapabilityHandling>,
-        /**
-         * @summary `extensionContainer`.
-         * @public
-         * @readonly
-         */
-        readonly extensionContainer?: OPTIONAL<ExtensionContainer>,
-        /**
-         * @summary `notificationToCSE`.
-         * @description
-         *
-         * Shall not be present when GPRS-CSI is sent to SGSN. May only be
-         * included in ATSI/ATM ack/NSDC (3GPP TS 29.002 V19.1.0 clause 17.7.1).
-         *
-         * @public
-         * @readonly
-         */
-        readonly notificationToCSE?: OPTIONAL<NULL>,
-        /**
-         * @summary `csi_Active`.
-         * @description
-         *
-         * Shall not be present when GPRS-CSI is sent to SGSN. May only be
-         * included in ATSI/ATM ack/NSDC (3GPP TS 29.002 V19.1.0 clause 17.7.1).
-         *
-         * @public
-         * @readonly
-         */
-        readonly csi_Active?: OPTIONAL<NULL>,
-        /**
-         * @summary Extensions that are not recognized.
-         * @public
-         * @readonly
-         */
-        readonly _unrecognizedExtensionsList: _Element[] = []
-    ) {}
+        gprs_CamelTDPDataList?: OPTIONAL<GPRS_CamelTDPDataList>,
+        camelCapabilityHandling?: OPTIONAL<CamelCapabilityHandling>,
+        extensionContainer?: OPTIONAL<ExtensionContainer>,
+        notificationToCSE?: OPTIONAL<NULL>,
+        csi_Active?: OPTIONAL<NULL>,
+        _unrecognizedExtensionsList: _Element[] = []
+    ) {
+        this.gprs_CamelTDPDataList = gprs_CamelTDPDataList;
+        this.camelCapabilityHandling = camelCapabilityHandling;
+        this.extensionContainer = extensionContainer;
+        this.notificationToCSE = notificationToCSE;
+        this.csi_Active = csi_Active;
+        this._unrecognizedExtensionsList = _unrecognizedExtensionsList;
+    }
 
     /**
      * @summary Restructures an object into a GPRS_CSI

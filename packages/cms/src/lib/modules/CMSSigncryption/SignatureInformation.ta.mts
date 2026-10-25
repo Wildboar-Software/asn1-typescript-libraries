@@ -1,8 +1,8 @@
 /* eslint-disable */
 import {
-    ASN1Element as _Element,
+    type ASN1Element as _Element,
     ASN1TagClass as _TagClass,
-    OPTIONAL,
+    type OPTIONAL,
 } from "@wildboar/asn1";
 import * as $ from "@wildboar/asn1/functional";
 import {
@@ -11,17 +11,17 @@ import {
     _encode_ToBeSigned,
 } from "../CMSSigncryption/ToBeSigned.ta.mjs";
 import {
-    SignatureAlgorithmIdentifier,
+    type SignatureAlgorithmIdentifier,
     _decode_SignatureAlgorithmIdentifier,
     _encode_SignatureAlgorithmIdentifier,
 } from "../CryptographicMessageSyntax-2010/SignatureAlgorithmIdentifier.ta.mjs";
 import {
-    SignatureValue,
+    type SignatureValue,
     _decode_SignatureValue,
     _encode_SignatureValue,
 } from "../CryptographicMessageSyntax-2010/SignatureValue.ta.mjs";
 import {
-    SignerIdentifier,
+    type SignerIdentifier,
     _decode_SignerIdentifier,
     _encode_SignerIdentifier,
 } from "../CryptographicMessageSyntax-2010/SignerIdentifier.ta.mjs";
@@ -47,32 +47,42 @@ import {
  *
  */
 export class SignatureInformation {
+    /**
+     * @summary `signerIdentifier`.
+     * @public
+     * @readonly
+     */
+    public readonly signerIdentifier: OPTIONAL<SignerIdentifier>;
+    /**
+     * @summary `signatureAlgorithm`.
+     * @public
+     * @readonly
+     */
+    public readonly signatureAlgorithm: OPTIONAL<SignatureAlgorithmIdentifier>;
+    /**
+     * @summary `toBeSigned`.
+     * @public
+     * @readonly
+     */
+    public readonly toBeSigned: ToBeSigned;
+    /**
+     * @summary `signatureValue`.
+     * @public
+     * @readonly
+     */
+    public readonly signatureValue: SignatureValue;
+
     constructor(
-        /**
-         * @summary `signerIdentifier`.
-         * @public
-         * @readonly
-         */
-        readonly signerIdentifier: OPTIONAL<SignerIdentifier>,
-        /**
-         * @summary `signatureAlgorithm`.
-         * @public
-         * @readonly
-         */
-        readonly signatureAlgorithm: OPTIONAL<SignatureAlgorithmIdentifier>,
-        /**
-         * @summary `toBeSigned`.
-         * @public
-         * @readonly
-         */
-        readonly toBeSigned: ToBeSigned,
-        /**
-         * @summary `signatureValue`.
-         * @public
-         * @readonly
-         */
-        readonly signatureValue: SignatureValue
-    ) {}
+        signerIdentifier: OPTIONAL<SignerIdentifier>,
+        signatureAlgorithm: OPTIONAL<SignatureAlgorithmIdentifier>,
+        toBeSigned: ToBeSigned,
+        signatureValue: SignatureValue
+    ) {
+        this.signerIdentifier = signerIdentifier;
+        this.signatureAlgorithm = signatureAlgorithm;
+        this.toBeSigned = toBeSigned;
+        this.signatureValue = signatureValue;
+    }
 
     /**
      * @summary Restructures an object into a SignatureInformation

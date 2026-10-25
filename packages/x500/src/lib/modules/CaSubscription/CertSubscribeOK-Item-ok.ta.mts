@@ -1,23 +1,23 @@
 /* eslint-disable */
 import {
-    ASN1Element as _Element,
+    type ASN1Element as _Element,
     ASN1TagClass as _TagClass,
-    OPTIONAL,
+    type OPTIONAL,
 } from "@wildboar/asn1";
 import * as $ from "@wildboar/asn1/functional";
 import {
-    CertStatus,
+    type CertStatus,
     _decode_CertStatus,
     _encode_CertStatus,
     _enum_for_CertStatus,
 } from "../CaSubscription/CertStatus.ta.mjs";
 import {
-    Certificate,
+    type Certificate,
     _decode_Certificate,
     _encode_Certificate,
 } from "@wildboar/pki-stub";
 import {
-    CRLReason,
+    type CRLReason,
     _decode_CRLReason,
     _encode_CRLReason,
     _enum_for_CRLReason,
@@ -37,42 +37,52 @@ import {
  *
  */
 export class CertSubscribeOK_Item_ok {
+    /**
+     * @summary `cert`.
+     * @description
+     *
+     * The EE public-key certificate for the requested subject.
+     * @public
+     * @readonly
+     */
+    public readonly cert: Certificate;
+    /**
+     * @summary `status`.
+     * @description
+     *
+     * Current CertStatus of `cert`.
+     * @public
+     * @readonly
+     */
+    public readonly status: CertStatus;
+    /**
+     * @summary `revokeReason`.
+     * @description
+     *
+     * Present only if `status` is `revoked`; otherwise shall be absent.
+     * CRLReason as in X.509 9.5.3.1.
+     * @public
+     * @readonly
+     */
+    public readonly revokeReason?: OPTIONAL<CRLReason>;
+    /**
+     * @summary Extensions that are not recognized.
+     * @public
+     * @readonly
+     */
+    public readonly _unrecognizedExtensionsList: _Element[];
+
     constructor(
-        /**
-         * @summary `cert`.
-         * @description
-         *
-         * The EE public-key certificate for the requested subject.
-         * @public
-         * @readonly
-         */
-        readonly cert: Certificate,
-        /**
-         * @summary `status`.
-         * @description
-         *
-         * Current CertStatus of `cert`.
-         * @public
-         * @readonly
-         */
-        readonly status: CertStatus,
-        /**
-         * @summary `revokeReason`.
-         * @description
-         *
-         * Present only if `status` is `revoked`; otherwise shall be absent.
-         * CRLReason as in X.509 9.5.3.1.
-         * @public
-         * @readonly
-         */
-        readonly revokeReason?: OPTIONAL<CRLReason>,
-        /**
-         * @summary Extensions that are not recognized.
-         * @public
-         * @readonly
-         */
-        readonly _unrecognizedExtensionsList: _Element[] = []
-    ) {}
+        cert: Certificate,
+        status: CertStatus,
+        revokeReason?: OPTIONAL<CRLReason>,
+        _unrecognizedExtensionsList: _Element[] = []
+    ) {
+        this.cert = cert;
+        this.status = status;
+        this.revokeReason = revokeReason;
+        this._unrecognizedExtensionsList = _unrecognizedExtensionsList;
+    }
 
     /**
      * @summary Restructures an object into a CertSubscribeOK_Item_ok
@@ -105,14 +115,14 @@ export class CertSubscribeOK_Item_ok {
      * @static
      */
 
-    public static _enum_for_status = _enum_for_CertStatus;
+    public static _enum_for_status: typeof _enum_for_CertStatus = _enum_for_CertStatus;
     /**
      * @summary The enum used as the type of the component `revokeReason`
      * @public
      * @static
      */
 
-    public static _enum_for_revokeReason = _enum_for_CRLReason;
+    public static _enum_for_revokeReason: typeof _enum_for_CRLReason = _enum_for_CRLReason;
 }
 
 /**

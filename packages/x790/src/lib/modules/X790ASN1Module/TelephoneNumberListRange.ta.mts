@@ -1,12 +1,12 @@
 /* eslint-disable */
 import {
-    SET,
-    ASN1Element as _Element,
+    type SET,
+    type ASN1Element as _Element,
     ASN1SizeError,
 } from "@wildboar/asn1";
 import * as $ from "@wildboar/asn1/functional";
 import {
-    TelephoneNumber,
+    type TelephoneNumber,
     _decode_TelephoneNumber,
     _encode_TelephoneNumber,
 } from "../X790ASN1Module/TelephoneNumber.ta.mjs";

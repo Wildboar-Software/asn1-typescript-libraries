@@ -1,15 +1,15 @@
 /* eslint-disable */
 import {
     ASN1ConstructionError as _ConstructionError,
-    ASN1Element as _Element,
+    type ASN1Element as _Element,
     ASN1TagClass as _TagClass
 } from "@wildboar/asn1";
 import * as $ from "@wildboar/asn1/functional";
-import { AUTN, _decode_AUTN, _encode_AUTN } from "../MAP-MS-DataTypes/AUTN.ta.mjs";
-import { CK, _decode_CK, _encode_CK } from "../MAP-MS-DataTypes/CK.ta.mjs";
-import { IK, _decode_IK, _encode_IK } from "../MAP-MS-DataTypes/IK.ta.mjs";
-import { RAND, _decode_RAND, _encode_RAND } from "../MAP-MS-DataTypes/RAND.ta.mjs";
-import { XRES, _decode_XRES, _encode_XRES } from "../MAP-MS-DataTypes/XRES.ta.mjs";
+import { type AUTN, _decode_AUTN, _encode_AUTN } from "../MAP-MS-DataTypes/AUTN.ta.mjs";
+import { type CK, _decode_CK, _encode_CK } from "../MAP-MS-DataTypes/CK.ta.mjs";
+import { type IK, _decode_IK, _encode_IK } from "../MAP-MS-DataTypes/IK.ta.mjs";
+import { type RAND, _decode_RAND, _encode_RAND } from "../MAP-MS-DataTypes/RAND.ta.mjs";
+import { type XRES, _decode_XRES, _encode_XRES } from "../MAP-MS-DataTypes/XRES.ta.mjs";
 
 
 /**
@@ -38,66 +38,80 @@ import { XRES, _decode_XRES, _encode_XRES } from "../MAP-MS-DataTypes/XRES.ta.mj
  */
 export
 class AuthenticationQuintuplet {
+    /**
+     * @summary `rand`.
+     * @description
+     *
+     * Random number used for authentication (3GPP TS 29.002 V19.1.0 clause
+     * 7.6.7.2).
+     *
+     * @public
+     * @readonly
+     */
+    public readonly rand: RAND;
+    /**
+     * @summary `xres`.
+     * @description
+     *
+     * Expected response to a UMTS authentication request (3GPP TS 29.002
+     * V19.1.0 clause 7.6.7.5).
+     *
+     * @public
+     * @readonly
+     */
+    public readonly xres: XRES;
+    /**
+     * @summary `ck`.
+     * @description
+     *
+     * UMTS ciphering key (3GPP TS 29.002 V19.1.0 clause 7.6.7.5A).
+     *
+     * @public
+     * @readonly
+     */
+    public readonly ck: CK;
+    /**
+     * @summary `ik`.
+     * @description
+     *
+     * Integrity Key (3GPP TS 29.002 V19.1.0 clause 7.6.7.5B).
+     *
+     * @public
+     * @readonly
+     */
+    public readonly ik: IK;
+    /**
+     * @summary `autn`.
+     * @description
+     *
+     * Authentication Token (3GPP TS 29.002 V19.1.0 clause 7.6.7.5C).
+     *
+     * @public
+     * @readonly
+     */
+    public readonly autn: AUTN;
+    /**
+     * @summary Extensions that are not recognized.
+     * @public
+     * @readonly
+     */
+    public readonly _unrecognizedExtensionsList: _Element[];
+
     constructor (
-        /**
-         * @summary `rand`.
-         * @description
-         *
-         * Random number used for authentication (3GPP TS 29.002 V19.1.0 clause
-         * 7.6.7.2).
-         *
-         * @public
-         * @readonly
-         */
-        readonly rand: RAND,
-        /**
-         * @summary `xres`.
-         * @description
-         *
-         * Expected response to a UMTS authentication request (3GPP TS 29.002
-         * V19.1.0 clause 7.6.7.5).
-         *
-         * @public
-         * @readonly
-         */
-        readonly xres: XRES,
-        /**
-         * @summary `ck`.
-         * @description
-         *
-         * UMTS ciphering key (3GPP TS 29.002 V19.1.0 clause 7.6.7.5A).
-         *
-         * @public
-         * @readonly
-         */
-        readonly ck: CK,
-        /**
-         * @summary `ik`.
-         * @description
-         *
-         * Integrity Key (3GPP TS 29.002 V19.1.0 clause 7.6.7.5B).
-         *
-         * @public
-         * @readonly
-         */
-        readonly ik: IK,
-        /**
-         * @summary `autn`.
-         * @description
-         *
-         * Authentication Token (3GPP TS 29.002 V19.1.0 clause 7.6.7.5C).
-         *
-         * @public
-         * @readonly
-         */
-        readonly autn: AUTN,
-        /**
-         * @summary Extensions that are not recognized.
-         * @public
-         * @readonly
-         */
-        readonly _unrecognizedExtensionsList: _Element[] = []
-    ) {}
+        rand: RAND,
+        xres: XRES,
+        ck: CK,
+        ik: IK,
+        autn: AUTN,
+        _unrecognizedExtensionsList: _Element[] = []
+    ) {
+        this.rand = rand;
+        this.xres = xres;
+        this.ck = ck;
+        this.ik = ik;
+        this.autn = autn;
+        this._unrecognizedExtensionsList = _unrecognizedExtensionsList;
+    }
 
     /**
      * @summary Restructures an object into a AuthenticationQuintuplet

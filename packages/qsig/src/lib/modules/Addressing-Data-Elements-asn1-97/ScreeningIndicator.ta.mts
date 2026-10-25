@@ -106,7 +106,7 @@ type ScreeningIndicator = _enum_for_ScreeningIndicator;
  * @enum {number}
  */
 export
-const ScreeningIndicator = _enum_for_ScreeningIndicator;
+const ScreeningIndicator: typeof _enum_for_ScreeningIndicator = _enum_for_ScreeningIndicator;
 
 /**
  * @summary ScreeningIndicator_userProvidedNotScreened
@@ -120,7 +120,7 @@ const ScreeningIndicator = _enum_for_ScreeningIndicator;
  * @see https://ecma-international.org/publications-and-standards/standards/ecma-165/
  */
 export
-const ScreeningIndicator_userProvidedNotScreened: ScreeningIndicator = ScreeningIndicator.userProvidedNotScreened; /* LONG_NAMED_ENUMERATED_VALUE */
+const ScreeningIndicator_userProvidedNotScreened: _enum_for_ScreeningIndicator.userProvidedNotScreened = ScreeningIndicator.userProvidedNotScreened; /* LONG_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary userProvidedNotScreened
@@ -129,7 +129,7 @@ const ScreeningIndicator_userProvidedNotScreened: ScreeningIndicator = Screening
  * @type {number}
  */
 export
-const userProvidedNotScreened: ScreeningIndicator = ScreeningIndicator.userProvidedNotScreened; /* SHORT_NAMED_ENUMERATED_VALUE */
+const userProvidedNotScreened: _enum_for_ScreeningIndicator.userProvidedNotScreened = ScreeningIndicator.userProvidedNotScreened; /* SHORT_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary ScreeningIndicator_userProvidedVerifiedAndPassed
@@ -143,7 +143,7 @@ const userProvidedNotScreened: ScreeningIndicator = ScreeningIndicator.userProvi
  * @see https://ecma-international.org/publications-and-standards/standards/ecma-165/
  */
 export
-const ScreeningIndicator_userProvidedVerifiedAndPassed: ScreeningIndicator = ScreeningIndicator.userProvidedVerifiedAndPassed; /* LONG_NAMED_ENUMERATED_VALUE */
+const ScreeningIndicator_userProvidedVerifiedAndPassed: _enum_for_ScreeningIndicator.userProvidedVerifiedAndPassed = ScreeningIndicator.userProvidedVerifiedAndPassed; /* LONG_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary userProvidedVerifiedAndPassed
@@ -154,7 +154,7 @@ const ScreeningIndicator_userProvidedVerifiedAndPassed: ScreeningIndicator = Scr
  * @type {number}
  */
 export
-const userProvidedVerifiedAndPassed: ScreeningIndicator = ScreeningIndicator.userProvidedVerifiedAndPassed; /* SHORT_NAMED_ENUMERATED_VALUE */
+const userProvidedVerifiedAndPassed: _enum_for_ScreeningIndicator.userProvidedVerifiedAndPassed = ScreeningIndicator.userProvidedVerifiedAndPassed; /* SHORT_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary ScreeningIndicator_userProvidedVerifiedAndFailed
@@ -166,7 +166,7 @@ const userProvidedVerifiedAndPassed: ScreeningIndicator = ScreeningIndicator.use
  * @see https://ecma-international.org/publications-and-standards/standards/ecma-165/
  */
 export
-const ScreeningIndicator_userProvidedVerifiedAndFailed: ScreeningIndicator = ScreeningIndicator.userProvidedVerifiedAndFailed; /* LONG_NAMED_ENUMERATED_VALUE */
+const ScreeningIndicator_userProvidedVerifiedAndFailed: _enum_for_ScreeningIndicator.userProvidedVerifiedAndFailed = ScreeningIndicator.userProvidedVerifiedAndFailed; /* LONG_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary userProvidedVerifiedAndFailed
@@ -177,7 +177,7 @@ const ScreeningIndicator_userProvidedVerifiedAndFailed: ScreeningIndicator = Scr
  * @type {number}
  */
 export
-const userProvidedVerifiedAndFailed: ScreeningIndicator = ScreeningIndicator.userProvidedVerifiedAndFailed; /* SHORT_NAMED_ENUMERATED_VALUE */
+const userProvidedVerifiedAndFailed: _enum_for_ScreeningIndicator.userProvidedVerifiedAndFailed = ScreeningIndicator.userProvidedVerifiedAndFailed; /* SHORT_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary ScreeningIndicator_networkProvided
@@ -190,7 +190,7 @@ const userProvidedVerifiedAndFailed: ScreeningIndicator = ScreeningIndicator.use
  * @see https://ecma-international.org/publications-and-standards/standards/ecma-165/
  */
 export
-const ScreeningIndicator_networkProvided: ScreeningIndicator = ScreeningIndicator.networkProvided; /* LONG_NAMED_ENUMERATED_VALUE */
+const ScreeningIndicator_networkProvided: _enum_for_ScreeningIndicator.networkProvided = ScreeningIndicator.networkProvided; /* LONG_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary networkProvided
@@ -199,7 +199,7 @@ const ScreeningIndicator_networkProvided: ScreeningIndicator = ScreeningIndicato
  * @type {number}
  */
 export
-const networkProvided: ScreeningIndicator = ScreeningIndicator.networkProvided; /* SHORT_NAMED_ENUMERATED_VALUE */
+const networkProvided: _enum_for_ScreeningIndicator.networkProvided = ScreeningIndicator.networkProvided; /* SHORT_NAMED_ENUMERATED_VALUE */
 
 export
 const _decode_ScreeningIndicator: $.ASN1Decoder<ScreeningIndicator> = $._decodeEnumerated;

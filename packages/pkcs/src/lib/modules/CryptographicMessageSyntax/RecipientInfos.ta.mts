@@ -2,7 +2,7 @@
 import { ASN1Element as _Element } from "@wildboar/asn1";
 import * as $ from "@wildboar/asn1/functional";
 import {
-    RecipientInfo,
+    type RecipientInfo,
     _decode_RecipientInfo,
     _encode_RecipientInfo,
 } from "../CryptographicMessageSyntax/RecipientInfo.ta.mjs";

@@ -1,7 +1,7 @@
 /* eslint-disable */
 import {
     ASN1ConstructionError as _ConstructionError,
-    ASN1Element as _Element,
+    type ASN1Element as _Element,
     ASN1TagClass as _TagClass,
 } from "@wildboar/asn1";
 import * as $ from "@wildboar/asn1/functional";
@@ -10,14 +10,14 @@ import {
     _decode_AlgorithmIdentifier,
     _encode_AlgorithmIdentifier,
 } from "@wildboar/pki-stub";
-import { AssoID, _decode_AssoID, _encode_AssoID } from "../Wrapper/AssoID.ta.mjs";
+import { type AssoID, _decode_AssoID, _encode_AssoID } from "../Wrapper/AssoID.ta.mjs";
 import {
-    DER_PkiPath,
+    type DER_PkiPath,
     _decode_DER_PkiPath,
     _encode_DER_PkiPath,
 } from "../Wrapper/DER-PkiPath.ta.mjs";
 import {
-    TimeStamp,
+    type TimeStamp,
     _decode_TimeStamp,
     _encode_TimeStamp,
 } from "../Wrapper/TimeStamp.ta.mjs";
@@ -48,49 +48,63 @@ import {
  *
  */
 export class TbsHandshakeProAbort {
+    /**
+     * @summary `sigAlg`.
+     * @description Same algorithm as in the rejected `HandshakeAcc`. Signs this PDU; `altSignature` absent.
+     * @public
+     * @readonly
+     */
+    public readonly sigAlg: AlgorithmIdentifier;
+    /**
+     * @summary `assoID`.
+     * @description Same value as in the rejected `HandshakeAcc`.
+     * @public
+     * @readonly
+     */
+    public readonly assoID: AssoID;
+    /**
+     * @summary `time`.
+     * @description UTC GeneralizedTime of creation (clause 8.2).
+     * @public
+     * @readonly
+     */
+    public readonly time: TimeStamp;
+    /**
+     * @summary `pkiPath`.
+     * @description DER-encapsulated certification path verifying this signature.
+     * @public
+     * @readonly
+     */
+    public readonly pkiPath: DER_PkiPath;
+    /**
+     * @summary `applData`.
+     * @description Required. Protected-protocol PrPDU giving the reason for abort.
+     * @public
+     * @readonly
+     */
+    public readonly applData: WrappedProt;
+    /**
+     * @summary Extensions that are not recognized.
+     * @public
+     * @readonly
+     */
+    public readonly _unrecognizedExtensionsList: _Element[];
+
     constructor(
-        /**
-         * @summary `sigAlg`.
-         * @description Same algorithm as in the rejected `HandshakeAcc`. Signs this PDU; `altSignature` absent.
-         * @public
-         * @readonly
-         */
-        readonly sigAlg: AlgorithmIdentifier,
-        /**
-         * @summary `assoID`.
-         * @description Same value as in the rejected `HandshakeAcc`.
-         * @public
-         * @readonly
-         */
-        readonly assoID: AssoID,
-        /**
-         * @summary `time`.
-         * @description UTC GeneralizedTime of creation (clause 8.2).
-         * @public
-         * @readonly
-         */
-        readonly time: TimeStamp,
-        /**
-         * @summary `pkiPath`.
-         * @description DER-encapsulated certification path verifying this signature.
-         * @public
-         * @readonly
-         */
-        readonly pkiPath: DER_PkiPath,
-        /**
-         * @summary `applData`.
-         * @description Required. Protected-protocol PrPDU giving the reason for abort.
-         * @public
-         * @readonly
-         */
-        readonly applData: WrappedProt,
-        /**
-         * @summary Extensions that are not recognized.
-         * @public
-         * @readonly
-         */
-        readonly _unrecognizedExtensionsList: _Element[] = []
-    ) {}
+        sigAlg: AlgorithmIdentifier,
+        assoID: AssoID,
+        time: TimeStamp,
+        pkiPath: DER_PkiPath,
+        applData: WrappedProt,
+        _unrecognizedExtensionsList: _Element[] = []
+    ) {
+        this.sigAlg = sigAlg;
+        this.assoID = assoID;
+        this.time = time;
+        this.pkiPath = pkiPath;
+        this.applData = applData;
+        this._unrecognizedExtensionsList = _unrecognizedExtensionsList;
+    }
 
     /**
      * @summary Restructures an object into a TbsHandshakeProAbort

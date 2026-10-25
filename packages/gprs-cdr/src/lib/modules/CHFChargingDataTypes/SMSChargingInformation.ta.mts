@@ -1,9 +1,9 @@
 /* eslint-disable */
 import {
-    INTEGER,
-    OCTET_STRING,
-    OPTIONAL,
-    ASN1Element as _Element,
+    type INTEGER,
+    type OCTET_STRING,
+    type OPTIONAL,
+    type ASN1Element as _Element,
     ASN1TagClass as _TagClass,
     ASN1SizeError,
     ASN1OverflowError
@@ -14,8 +14,8 @@ import { RecipientInfos, _decode_RecipientInfos, _encode_RecipientInfos } from "
 import { SubscriberEquipmentNumber, _decode_SubscriberEquipmentNumber, _encode_SubscriberEquipmentNumber } from "../CHFChargingDataTypes/SubscriberEquipmentNumber.ta.mjs";
 import { SMSChargingInformation_sMMessageType, _decode_SMSChargingInformation_sMMessageType, _encode_SMSChargingInformation_sMMessageType, _enum_for_SMSChargingInformation_sMMessageType } from "../CHFChargingDataTypes/SMSChargingInformation-sMMessageType.ta.mjs";
 import { SMReplyPathRequested, _decode_SMReplyPathRequested, _encode_SMReplyPathRequested, _enum_for_SMReplyPathRequested } from "../CHFChargingDataTypes/SMReplyPathRequested.ta.mjs";
-import { SMServiceType, _decode_SMServiceType, _encode_SMServiceType } from "../CHFChargingDataTypes/SMServiceType.ta.mjs";
-import { Diagnostics, _decode_Diagnostics, _encode_Diagnostics } from "../CHFChargingDataTypes/Diagnostics.ta.mjs";
+import { type SMServiceType, _decode_SMServiceType, _encode_SMServiceType } from "../CHFChargingDataTypes/SMServiceType.ta.mjs";
+import { type Diagnostics, _decode_Diagnostics, _encode_Diagnostics } from "../CHFChargingDataTypes/Diagnostics.ta.mjs";
 import { SMSChargingInformation_sMPriority, _decode_SMSChargingInformation_sMPriority, _encode_SMSChargingInformation_sMPriority, _enum_for_SMSChargingInformation_sMPriority } from "../CHFChargingDataTypes/SMSChargingInformation-sMPriority.ta.mjs";
 import { SMSChargingInformation_messageClass, _decode_SMSChargingInformation_messageClass, _encode_SMSChargingInformation_messageClass, _enum_for_SMSChargingInformation_messageClass } from "../CHFChargingDataTypes/SMSChargingInformation-messageClass.ta.mjs";
 import { SMdeliveryReportRequested, _decode_SMdeliveryReportRequested, _encode_SMdeliveryReportRequested, _enum_for_SMdeliveryReportRequested } from "../CHFChargingDataTypes/SMdeliveryReportRequested.ta.mjs";
@@ -352,31 +352,31 @@ class SMSChargingInformation {
          * @static
          */
 
-    public static _enum_for_sMMessageType = _enum_for_SMSChargingInformation_sMMessageType;        /**
+    public static _enum_for_sMMessageType: typeof _enum_for_SMSChargingInformation_sMMessageType = _enum_for_SMSChargingInformation_sMMessageType;        /**
          * @summary The enum used as the type of the component `sMReplyPathRequested`
          * @public
          * @static
          */
 
-    public static _enum_for_sMReplyPathRequested = _enum_for_SMReplyPathRequested;        /**
+    public static _enum_for_sMReplyPathRequested: typeof _enum_for_SMReplyPathRequested = _enum_for_SMReplyPathRequested;        /**
          * @summary The enum used as the type of the component `sMPriority`
          * @public
          * @static
          */
 
-    public static _enum_for_sMPriority = _enum_for_SMSChargingInformation_sMPriority;        /**
+    public static _enum_for_sMPriority: typeof _enum_for_SMSChargingInformation_sMPriority = _enum_for_SMSChargingInformation_sMPriority;        /**
          * @summary The enum used as the type of the component `messageClass`
          * @public
          * @static
          */
 
-    public static _enum_for_messageClass = _enum_for_SMSChargingInformation_messageClass;        /**
+    public static _enum_for_messageClass: typeof _enum_for_SMSChargingInformation_messageClass = _enum_for_SMSChargingInformation_messageClass;        /**
          * @summary The enum used as the type of the component `sMdeliveryReportRequested`
          * @public
          * @static
          */
 
-    public static _enum_for_sMdeliveryReportRequested = _enum_for_SMdeliveryReportRequested;
+    public static _enum_for_sMdeliveryReportRequested: typeof _enum_for_SMdeliveryReportRequested = _enum_for_SMdeliveryReportRequested;
 }
 
 /**

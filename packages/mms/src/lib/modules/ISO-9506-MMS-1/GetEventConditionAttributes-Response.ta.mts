@@ -1,8 +1,8 @@
 /* eslint-disable */
 import {
-    OPTIONAL,
-    BOOLEAN,
-    ASN1Element as _Element,
+    type OPTIONAL,
+    type BOOLEAN,
+    type ASN1Element as _Element,
     ASN1TagClass as _TagClass,
     ASN1Construction as _Construction,
     ASN1UniversalType as _UniversalType,
@@ -10,16 +10,17 @@ import {
     External as _External,
     EmbeddedPDV as _PDV,
     ASN1ConstructionError as _ConstructionError,
+    type INTEGER,
 } from "@wildboar/asn1";
 import * as $ from "@wildboar/asn1/functional";
-import { EC_Class, _decode_EC_Class, _encode_EC_Class } from "../MMS-Object-Module-1/EC-Class.ta.mjs";
-import { Priority, _decode_Priority, _encode_Priority } from "../MMS-Object-Module-1/Priority.ta.mjs";
+import { type EC_Class, _decode_EC_Class, _encode_EC_Class } from "../MMS-Object-Module-1/EC-Class.ta.mjs";
+import { type Priority, _decode_Priority, _encode_Priority } from "../MMS-Object-Module-1/Priority.ta.mjs";
 import { normalPriority } from "../MMS-Object-Module-1/normalPriority.va.mjs";
-import { Unsigned8, _decode_Unsigned8, _encode_Unsigned8 } from "../ISO-9506-MMS-1/Unsigned8.ta.mjs";
+import { type Unsigned8, _decode_Unsigned8, _encode_Unsigned8 } from "../ISO-9506-MMS-1/Unsigned8.ta.mjs";
 import { normalSeverity } from "../MMS-Object-Module-1/normalSeverity.va.mjs";
-import { GetEventConditionAttributes_Response_monitoredVariable, _decode_GetEventConditionAttributes_Response_monitoredVariable, _encode_GetEventConditionAttributes_Response_monitoredVariable } from "../ISO-9506-MMS-1/GetEventConditionAttributes-Response-monitoredVariable.ta.mjs";
-import { Unsigned32, _decode_Unsigned32, _encode_Unsigned32 } from "../ISO-9506-MMS-1/Unsigned32.ta.mjs";
-import { Identifier, _decode_Identifier, _encode_Identifier } from "../ISO-9506-MMS-1/Identifier.ta.mjs";
+import { type GetEventConditionAttributes_Response_monitoredVariable, _decode_GetEventConditionAttributes_Response_monitoredVariable, _encode_GetEventConditionAttributes_Response_monitoredVariable } from "../ISO-9506-MMS-1/GetEventConditionAttributes-Response-monitoredVariable.ta.mjs";
+import { type Unsigned32, _decode_Unsigned32, _encode_Unsigned32 } from "../ISO-9506-MMS-1/Unsigned32.ta.mjs";
+import { type Identifier, _decode_Identifier, _encode_Identifier } from "../ISO-9506-MMS-1/Identifier.ta.mjs";
 
 
 /**
@@ -57,111 +58,129 @@ import { Identifier, _decode_Identifier, _encode_Identifier } from "../ISO-9506-
  */
 export
 class GetEventConditionAttributes_Response {
+    /**
+     * @summary `mmsDeletable`.
+     * @description
+     *
+     * Whether DeleteEventCondition may delete this object (see ISO 9506-1:2003
+     * §9.1.4). Default false.
+     *
+     * [ISO 9506-1:2003 §19.4.1.2.1]
+     *
+     * @public
+     * @readonly
+     */
+    public readonly mmsDeletable: OPTIONAL<BOOLEAN>;
+    /**
+     * @summary `class_`.
+     * @description
+     *
+     * `&ecClass`: `network-triggered` or `monitored`.
+     *
+     * [ISO 9506-1:2003 §19.4.1.2.2]
+     *
+     * @public
+     * @readonly
+     */
+    public readonly class_: EC_Class;
+    /**
+     * @summary `priority`.
+     * @description
+     *
+     * Current `&priority`. Default normalPriority.
+     *
+     * [ISO 9506-1:2003 §19.4.1.2.3]
+     *
+     * @public
+     * @readonly
+     */
+    public readonly priority?: OPTIONAL<Priority>;
+    /**
+     * @summary `severity`.
+     * @description
+     *
+     * `&severity`. Default normalSeverity.
+     *
+     * [ISO 9506-1:2003 §19.4.1.2.4]
+     *
+     * @public
+     * @readonly
+     */
+    public readonly severity?: OPTIONAL<Unsigned8>;
+    /**
+     * @summary `alarmSummaryReports`.
+     * @description
+     *
+     * Monitored: `&alarmSummaryReports`. Protocol sends false if class is not
+     * monitored.
+     *
+     * [ISO 9506-1:2003 §19.4.1.2.5]
+     * [ISO 9506-2:2003 §19.4.2.1]
+     *
+     * @public
+     * @readonly
+     */
+    public readonly alarmSummaryReports?: OPTIONAL<BOOLEAN>;
+    /**
+     * @summary `monitoredVariable`.
+     * @description
+     *
+     * Monitored: variable reference, or `undefined` if unavailable. Omitted if
+     * unspecified.
+     *
+     * [ISO 9506-1:2003 §19.4.1.2.6]
+     * [ISO 9506-2:2003 §19.4.2.2]
+     *
+     * @public
+     * @readonly
+     */
+    public readonly monitoredVariable?: OPTIONAL<GetEventConditionAttributes_Response_monitoredVariable>;
+    /**
+     * @summary `evaluationInterval`.
+     * @description
+     *
+     * Monitored: `&evaluationInterval` ms. Omitted for network-triggered.
+     *
+     * [ISO 9506-1:2003 §19.4.1.2.7]
+     *
+     * @public
+     * @readonly
+     */
+    public readonly evaluationInterval?: OPTIONAL<Unsigned32>;
+    /**
+     * @summary `accessControlList`.
+     * @description
+     *
+     * Name of the Access Control List. Iff `aco`. Shall not appear in minor
+     * version 1 or 2.
+     *
+     * [ISO 9506-1:2003 §19.4.1.2.8]
+     * [ISO 9506-2:2003 §19.4.2.3]
+     *
+     * @public
+     * @readonly
+     */
+    public readonly accessControlList?: OPTIONAL<Identifier>;
+
     constructor (
-        /**
-         * @summary `mmsDeletable`.
-         * @description
-         *
-         * Whether DeleteEventCondition may delete this object (see ISO 9506-1:2003
-         * §9.1.4). Default false.
-         *
-         * [ISO 9506-1:2003 §19.4.1.2.1]
-         *
-         * @public
-         * @readonly
-         */
-        readonly mmsDeletable: OPTIONAL<BOOLEAN>,
-        /**
-         * @summary `class_`.
-         * @description
-         *
-         * `&ecClass`: `network-triggered` or `monitored`.
-         *
-         * [ISO 9506-1:2003 §19.4.1.2.2]
-         *
-         * @public
-         * @readonly
-         */
-        readonly class_: EC_Class,
-        /**
-         * @summary `priority`.
-         * @description
-         *
-         * Current `&priority`. Default normalPriority.
-         *
-         * [ISO 9506-1:2003 §19.4.1.2.3]
-         *
-         * @public
-         * @readonly
-         */
-        readonly priority?: OPTIONAL<Priority>,
-        /**
-         * @summary `severity`.
-         * @description
-         *
-         * `&severity`. Default normalSeverity.
-         *
-         * [ISO 9506-1:2003 §19.4.1.2.4]
-         *
-         * @public
-         * @readonly
-         */
-        readonly severity?: OPTIONAL<Unsigned8>,
-        /**
-         * @summary `alarmSummaryReports`.
-         * @description
-         *
-         * Monitored: `&alarmSummaryReports`. Protocol sends false if class is not
-         * monitored.
-         *
-         * [ISO 9506-1:2003 §19.4.1.2.5]
-         * [ISO 9506-2:2003 §19.4.2.1]
-         *
-         * @public
-         * @readonly
-         */
-        readonly alarmSummaryReports?: OPTIONAL<BOOLEAN>,
-        /**
-         * @summary `monitoredVariable`.
-         * @description
-         *
-         * Monitored: variable reference, or `undefined` if unavailable. Omitted if
-         * unspecified.
-         *
-         * [ISO 9506-1:2003 §19.4.1.2.6]
-         * [ISO 9506-2:2003 §19.4.2.2]
-         *
-         * @public
-         * @readonly
-         */
-        readonly monitoredVariable?: OPTIONAL<GetEventConditionAttributes_Response_monitoredVariable>,
-        /**
-         * @summary `evaluationInterval`.
-         * @description
-         *
-         * Monitored: `&evaluationInterval` ms. Omitted for network-triggered.
-         *
-         * [ISO 9506-1:2003 §19.4.1.2.7]
-         *
-         * @public
-         * @readonly
-         */
-        readonly evaluationInterval?: OPTIONAL<Unsigned32>,
-        /**
-         * @summary `accessControlList`.
-         * @description
-         *
-         * Name of the Access Control List. Iff `aco`. Shall not appear in minor
-         * version 1 or 2.
-         *
-         * [ISO 9506-1:2003 §19.4.1.2.8]
-         * [ISO 9506-2:2003 §19.4.2.3]
-         *
-         * @public
-         * @readonly
-         */
-        readonly accessControlList?: OPTIONAL<Identifier>
-    ) {}
+        mmsDeletable: OPTIONAL<BOOLEAN>,
+        class_: EC_Class,
+        priority?: OPTIONAL<Priority>,
+        severity?: OPTIONAL<Unsigned8>,
+        alarmSummaryReports?: OPTIONAL<BOOLEAN>,
+        monitoredVariable?: OPTIONAL<GetEventConditionAttributes_Response_monitoredVariable>,
+        evaluationInterval?: OPTIONAL<Unsigned32>,
+        accessControlList?: OPTIONAL<Identifier>
+    ) {
+        this.mmsDeletable = mmsDeletable;
+        this.class_ = class_;
+        this.priority = priority;
+        this.severity = severity;
+        this.alarmSummaryReports = alarmSummaryReports;
+        this.monitoredVariable = monitoredVariable;
+        this.evaluationInterval = evaluationInterval;
+        this.accessControlList = accessControlList;
+    }
 
     /**
      * @summary Restructures an object into a GetEventConditionAttributes_Response
@@ -192,14 +211,14 @@ class GetEventConditionAttributes_Response {
      * @static
      * @method
      */
-    public static get _default_value_for_priority () { return normalPriority; }
+    public static get _default_value_for_priority (): INTEGER { return normalPriority; }
     /**
      * @summary Getter that returns the default value for `severity`.
      * @public
      * @static
      * @method
      */
-    public static get _default_value_for_severity () { return normalSeverity; }
+    public static get _default_value_for_severity (): INTEGER { return normalSeverity; }
     /**
      * @summary Getter that returns the default value for `alarmSummaryReports`.
      * @public

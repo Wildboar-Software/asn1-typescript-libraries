@@ -1,6 +1,6 @@
 /* eslint-disable */
 import {
-    ASN1Element as _Element,
+    type ASN1Element as _Element,
     ASN1TagClass as _TagClass,
     ASN1Construction as _Construction,
     ASN1UniversalType as _UniversalType,
@@ -58,14 +58,14 @@ export type IPMEntryType = _enum_for_IPMEntryType;
  *
  * @enum {number}
  */
-export const IPMEntryType = _enum_for_IPMEntryType;
+export const IPMEntryType: typeof _enum_for_IPMEntryType = _enum_for_IPMEntryType;
 
 /**
  * @summary IPMEntryType_ipm
  * @constant
  * @type {number}
  */
-export const IPMEntryType_ipm: IPMEntryType =
+export const IPMEntryType_ipm: _enum_for_IPMEntryType.ipm =
     IPMEntryType.ipm; /* LONG_NAMED_ENUMERATED_VALUE */
 
 /**
@@ -73,7 +73,7 @@ export const IPMEntryType_ipm: IPMEntryType =
  * @constant
  * @type {number}
  */
-export const ipm: IPMEntryType =
+export const ipm: _enum_for_IPMEntryType.ipm =
     IPMEntryType.ipm; /* SHORT_NAMED_ENUMERATED_VALUE */
 
 /**
@@ -81,7 +81,7 @@ export const ipm: IPMEntryType =
  * @constant
  * @type {number}
  */
-export const IPMEntryType_rn: IPMEntryType =
+export const IPMEntryType_rn: _enum_for_IPMEntryType.rn =
     IPMEntryType.rn; /* LONG_NAMED_ENUMERATED_VALUE */
 
 /**
@@ -89,7 +89,7 @@ export const IPMEntryType_rn: IPMEntryType =
  * @constant
  * @type {number}
  */
-export const rn: IPMEntryType =
+export const rn: _enum_for_IPMEntryType.rn =
     IPMEntryType.rn; /* SHORT_NAMED_ENUMERATED_VALUE */
 
 /**
@@ -97,7 +97,7 @@ export const rn: IPMEntryType =
  * @constant
  * @type {number}
  */
-export const IPMEntryType_nrn: IPMEntryType =
+export const IPMEntryType_nrn: _enum_for_IPMEntryType.nrn =
     IPMEntryType.nrn; /* LONG_NAMED_ENUMERATED_VALUE */
 
 /**
@@ -105,7 +105,7 @@ export const IPMEntryType_nrn: IPMEntryType =
  * @constant
  * @type {number}
  */
-export const nrn: IPMEntryType =
+export const nrn: _enum_for_IPMEntryType.nrn =
     IPMEntryType.nrn; /* SHORT_NAMED_ENUMERATED_VALUE */
 
 /**
@@ -113,7 +113,7 @@ export const nrn: IPMEntryType =
  * @constant
  * @type {number}
  */
-export const IPMEntryType_on: IPMEntryType =
+export const IPMEntryType_on: _enum_for_IPMEntryType.on =
     IPMEntryType.on; /* LONG_NAMED_ENUMERATED_VALUE */
 
 /**
@@ -121,14 +121,27 @@ export const IPMEntryType_on: IPMEntryType =
  * @constant
  * @type {number}
  */
-export const on: IPMEntryType =
+export const on: _enum_for_IPMEntryType.on =
     IPMEntryType.on; /* SHORT_NAMED_ENUMERATED_VALUE */
 
 
-export const _decode_IPMEntryType = $._decodeEnumerated;
+export function _decode_IPMEntryType(el: _Element): IPMEntryType {
+    const enumerated = $._decodeEnumerated(el);
+    switch (enumerated) {
+        case IPMEntryType.ipm: return IPMEntryType.ipm;
+        case IPMEntryType.rn: return IPMEntryType.rn;
+        case IPMEntryType.nrn: return IPMEntryType.nrn;
+        case IPMEntryType.on: return IPMEntryType.on;
+        default:
+            throw new _ConstructionError(
+                'Invalid ENUMERATED value ' + enumerated + ' for IPMEntryType.',
+                el,
+            );
+    }
+}
 
 
-export const _encode_IPMEntryType = $._encodeEnumerated;
+export const _encode_IPMEntryType: $.ASN1Encoder<IPMEntryType> = $._encodeEnumerated as $.ASN1Encoder<IPMEntryType>;
 
 
 /* eslint-enable */

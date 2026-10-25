@@ -76,7 +76,7 @@ type RDSAction = _enum_for_RDSAction;
  * @enum {number}
  */
 export
-const RDSAction = _enum_for_RDSAction;
+const RDSAction: typeof _enum_for_RDSAction = _enum_for_RDSAction;
 
 /**
  * @summary RDSAction_reservePort
@@ -84,7 +84,7 @@ const RDSAction = _enum_for_RDSAction;
  * @type {number}
  */
 export
-const RDSAction_reservePort: RDSAction = RDSAction.reservePort; /* LONG_NAMED_ENUMERATED_VALUE */
+const RDSAction_reservePort: _enum_for_RDSAction.reservePort = RDSAction.reservePort; /* LONG_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary reservePort
@@ -92,7 +92,7 @@ const RDSAction_reservePort: RDSAction = RDSAction.reservePort; /* LONG_NAMED_EN
  * @type {number}
  */
 export
-const reservePort: RDSAction = RDSAction.reservePort; /* SHORT_NAMED_ENUMERATED_VALUE */
+const reservePort: _enum_for_RDSAction.reservePort = RDSAction.reservePort; /* SHORT_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary RDSAction_releasePort
@@ -100,7 +100,7 @@ const reservePort: RDSAction = RDSAction.reservePort; /* SHORT_NAMED_ENUMERATED_
  * @type {number}
  */
 export
-const RDSAction_releasePort: RDSAction = RDSAction.releasePort; /* LONG_NAMED_ENUMERATED_VALUE */
+const RDSAction_releasePort: _enum_for_RDSAction.releasePort = RDSAction.releasePort; /* LONG_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary releasePort
@@ -108,7 +108,7 @@ const RDSAction_releasePort: RDSAction = RDSAction.releasePort; /* LONG_NAMED_EN
  * @type {number}
  */
 export
-const releasePort: RDSAction = RDSAction.releasePort; /* SHORT_NAMED_ENUMERATED_VALUE */
+const releasePort: _enum_for_RDSAction.releasePort = RDSAction.releasePort; /* SHORT_NAMED_ENUMERATED_VALUE */
 export const _decode_RDSAction: $.ASN1Decoder<RDSAction> = $._decodeEnumerated;
 export const _encode_RDSAction: $.ASN1Encoder<RDSAction> = $._encodeEnumerated;
 

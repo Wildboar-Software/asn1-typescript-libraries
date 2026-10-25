@@ -1,6 +1,6 @@
 /* eslint-disable */
 import {
-    ASN1Element as _Element,
+    type ASN1Element as _Element,
     ASN1TagClass as _TagClass,
     ASN1Construction as _Construction,
     ASN1UniversalType as _UniversalType,
@@ -10,11 +10,11 @@ import {
     ASN1ConstructionError as _ConstructionError,
 } from "@wildboar/asn1";
 import * as $ from "@wildboar/asn1/functional";
-import { ObjectName, _decode_ObjectName, _encode_ObjectName } from "../ISO-9506-MMS-1/ObjectName.ta.mjs";
-import { Identifier, _decode_Identifier, _encode_Identifier } from "../ISO-9506-MMS-1/Identifier.ta.mjs";
-import { TypeDescription, _decode_TypeDescription, _encode_TypeDescription } from "../MMS-Object-Module-1/TypeDescription.ta.mjs";
-import { Data, _decode_Data, _encode_Data } from "../ISO-9506-MMS-1/Data.ta.mjs";
-import { Address, _decode_Address, _encode_Address } from "../MMS-Object-Module-1/Address.ta.mjs";
+import { type ObjectName, _decode_ObjectName, _encode_ObjectName } from "../ISO-9506-MMS-1/ObjectName.ta.mjs";
+import { type Identifier, _decode_Identifier, _encode_Identifier } from "../ISO-9506-MMS-1/Identifier.ta.mjs";
+import { type TypeDescription, _decode_TypeDescription, _encode_TypeDescription } from "../MMS-Object-Module-1/TypeDescription.ta.mjs";
+import { type Data, _decode_Data, _encode_Data } from "../ISO-9506-MMS-1/Data.ta.mjs";
+import { type Address, _decode_Address, _encode_Address } from "../MMS-Object-Module-1/Address.ta.mjs";
 
 
 /**
@@ -168,7 +168,7 @@ type NAMED_VARIABLE_accessMethod = _enum_for_NAMED_VARIABLE_accessMethod;
  * @enum {number}
  */
 export
-const NAMED_VARIABLE_accessMethod = _enum_for_NAMED_VARIABLE_accessMethod;
+const NAMED_VARIABLE_accessMethod: typeof _enum_for_NAMED_VARIABLE_accessMethod = _enum_for_NAMED_VARIABLE_accessMethod;
 
 /**
  * @summary NAMED_VARIABLE_accessMethod_public
@@ -176,7 +176,7 @@ const NAMED_VARIABLE_accessMethod = _enum_for_NAMED_VARIABLE_accessMethod;
  * @type {number}
  */
 export
-const NAMED_VARIABLE_accessMethod_public: NAMED_VARIABLE_accessMethod = NAMED_VARIABLE_accessMethod.public; /* LONG_NAMED_ENUMERATED_VALUE */
+const NAMED_VARIABLE_accessMethod_public: _enum_for_NAMED_VARIABLE_accessMethod.public = NAMED_VARIABLE_accessMethod.public; /* LONG_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary NAMED_VARIABLE_accessMethod_anythingElse
@@ -184,7 +184,7 @@ const NAMED_VARIABLE_accessMethod_public: NAMED_VARIABLE_accessMethod = NAMED_VA
  * @type {number}
  */
 export
-const NAMED_VARIABLE_accessMethod_anythingElse: NAMED_VARIABLE_accessMethod = NAMED_VARIABLE_accessMethod.anythingElse; /* LONG_NAMED_ENUMERATED_VALUE */
+const NAMED_VARIABLE_accessMethod_anythingElse: _enum_for_NAMED_VARIABLE_accessMethod.anythingElse = NAMED_VARIABLE_accessMethod.anythingElse; /* LONG_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary anythingElse
@@ -192,6 +192,6 @@ const NAMED_VARIABLE_accessMethod_anythingElse: NAMED_VARIABLE_accessMethod = NA
  * @type {number}
  */
 export
-const anythingElse: NAMED_VARIABLE_accessMethod = NAMED_VARIABLE_accessMethod.anythingElse; /* SHORT_NAMED_ENUMERATED_VALUE */
+const anythingElse: _enum_for_NAMED_VARIABLE_accessMethod.anythingElse = NAMED_VARIABLE_accessMethod.anythingElse; /* SHORT_NAMED_ENUMERATED_VALUE */
 
 /* eslint-enable */

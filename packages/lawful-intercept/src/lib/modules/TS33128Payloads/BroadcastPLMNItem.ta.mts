@@ -1,15 +1,15 @@
 /* eslint-disable */
 import {
     ASN1ConstructionError as _ConstructionError,
-    ASN1Element as _Element,
+    type ASN1Element as _Element,
     ASN1TagClass as _TagClass
 } from "@wildboar/asn1";
 import * as $ from "@wildboar/asn1/functional";
 import { PLMNID, _decode_PLMNID, _encode_PLMNID } from "../TS33128Payloads/PLMNID.ta.mjs";
 // export { PLMNID, _decode_PLMNID, _encode_PLMNID } from "../TS33128Payloads/PLMNID.ta.mjs";
-import { TAISliceSupportList, _decode_TAISliceSupportList, _encode_TAISliceSupportList } from "../TS33128Payloads/TAISliceSupportList.ta.mjs";
+import { type TAISliceSupportList, _decode_TAISliceSupportList, _encode_TAISliceSupportList } from "../TS33128Payloads/TAISliceSupportList.ta.mjs";
 // export { TAISliceSupportList, _decode_TAISliceSupportList, _encode_TAISliceSupportList } from "../TS33128Payloads/TAISliceSupportList.ta.mjs";
-import { NID, _decode_NID, _encode_NID } from "../TS33128Payloads/NID.ta.mjs";
+import { type NID, _decode_NID, _encode_NID } from "../TS33128Payloads/NID.ta.mjs";
 // export { NID, _decode_NID, _encode_NID } from "../TS33128Payloads/NID.ta.mjs";
 
 

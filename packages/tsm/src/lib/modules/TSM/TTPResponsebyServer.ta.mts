@@ -1,7 +1,7 @@
 /* eslint-disable */
 import {
-    OPTIONAL,
-    ASN1Element as _Element,
+    type OPTIONAL,
+    type ASN1Element as _Element,
     ASN1TagClass as _TagClass,
     ASN1Construction as _Construction,
     ASN1UniversalType as _UniversalType,
@@ -11,17 +11,17 @@ import {
     ASN1ConstructionError as _ConstructionError,
 } from "@wildboar/asn1";
 import * as $ from "@wildboar/asn1/functional";
-import { BSP_BFP_Schemas, _decode_BSP_BFP_Schemas, _encode_BSP_BFP_Schemas } from "../TSM/BSP-BFP-Schemas.ta.mjs";
+import { type BSP_BFP_Schemas, _decode_BSP_BFP_Schemas, _encode_BSP_BFP_Schemas } from "../TSM/BSP-BFP-Schemas.ta.mjs";
 
 import { TemplateID, _decode_TemplateID, _encode_TemplateID } from "../TSM/TemplateID.ta.mjs";
 
-import { Quality, _decode_Quality, _encode_Quality } from "../TSM/Quality.ta.mjs";
+import { type Quality, _decode_Quality, _encode_Quality } from "../TSM/Quality.ta.mjs";
 
-import { BioAPI_FMR, _decode_BioAPI_FMR, _encode_BioAPI_FMR } from "../BIP/BioAPI-FMR.ta.mjs";
+import { type BioAPI_FMR, _decode_BioAPI_FMR, _encode_BioAPI_FMR } from "../BIP/BioAPI-FMR.ta.mjs";
 
 import { SignedData, _decode_SignedData, _encode_SignedData } from "../X9-84-CMS/SignedData.ta.mjs";
 
-import { ACBioContentInformation, _decode_ACBioContentInformation, _encode_ACBioContentInformation } from "../AuthenticationContextForBiometrics/ACBioContentInformation.ta.mjs";
+import { type ACBioContentInformation, _decode_ACBioContentInformation, _encode_ACBioContentInformation } from "../AuthenticationContextForBiometrics/ACBioContentInformation.ta.mjs";
 
 
 
@@ -50,72 +50,86 @@ import { ACBioContentInformation, _decode_ACBioContentInformation, _encode_ACBio
  */
 export
 class TTPResponsebyServer {
+    /**
+     * @summary `bFPSchema`.
+     * @description
+     *
+     * BSP/BFP schema(s) used for this process. X.1084 §11.1 Table 3.
+     *
+     * @public
+     * @readonly
+     */
+    public readonly bFPSchema: BSP_BFP_Schemas;
+    /**
+     * @summary `templateID`.
+     * @description
+     *
+     * Identifies the reference template (issuer, serial, metadata)
+     * for revocation without sending the template. X.1084 §11.1.
+     *
+     * @public
+     * @readonly
+     */
+    public readonly templateID: TemplateID;
+    /**
+     * @summary `sampleQuality`.
+     * @description
+     *
+     * Quality of the captured sample, `0..100`. X.1084 §11.1 item 3.
+     *
+     * @public
+     * @readonly
+     */
+    public readonly sampleQuality: Quality;
+    /**
+     * @summary `score`.
+     * @description
+     *
+     * Comparison score as BioAPI FMR. X.1084 §11.1 item 3.
+     *
+     * @public
+     * @readonly
+     */
+    public readonly score: BioAPI_FMR;
+    /**
+     * @summary `digitalSignature`.
+     * @description
+     *
+     * CMS `SignedData` (X9.84) over the biometric process or payload.
+     * Assures integrity of that party's processing. X.1084 §11.1 item 4.
+     *
+     * @public
+     * @readonly
+     */
+    public readonly digitalSignature: SignedData;
+    /**
+     * @summary `aCforBioOnTTP`.
+     * @description
+     *
+     * ISO/IEC 24761 ACBio for the TTP process. Optional except in
+     * `BDforRefOnTTPforLocalModel`, where Annex A requires it. X.1084
+     * §11.5.
+     *
+     * @public
+     * @readonly
+     */
+    public readonly aCforBioOnTTP?: OPTIONAL<ACBioContentInformation>;
+
     constructor (
-        /**
-         * @summary `bFPSchema`.
-         * @description
-         *
-         * BSP/BFP schema(s) used for this process. X.1084 §11.1 Table 3.
-         *
-         * @public
-         * @readonly
-         */
-        readonly bFPSchema: BSP_BFP_Schemas,
-        /**
-         * @summary `templateID`.
-         * @description
-         *
-         * Identifies the reference template (issuer, serial, metadata)
-         * for revocation without sending the template. X.1084 §11.1.
-         *
-         * @public
-         * @readonly
-         */
-        readonly templateID: TemplateID,
-        /**
-         * @summary `sampleQuality`.
-         * @description
-         *
-         * Quality of the captured sample, `0..100`. X.1084 §11.1 item 3.
-         *
-         * @public
-         * @readonly
-         */
-        readonly sampleQuality: Quality,
-        /**
-         * @summary `score`.
-         * @description
-         *
-         * Comparison score as BioAPI FMR. X.1084 §11.1 item 3.
-         *
-         * @public
-         * @readonly
-         */
-        readonly score: BioAPI_FMR,
-        /**
-         * @summary `digitalSignature`.
-         * @description
-         *
-         * CMS `SignedData` (X9.84) over the biometric process or payload.
-         * Assures integrity of that party's processing. X.1084 §11.1 item 4.
-         *
-         * @public
-         * @readonly
-         */
-        readonly digitalSignature: SignedData,
-        /**
-         * @summary `aCforBioOnTTP`.
-         * @description
-         *
-         * ISO/IEC 24761 ACBio for the TTP process. Optional except in
-         * `BDforRefOnTTPforLocalModel`, where Annex A requires it. X.1084
-         * §11.5.
-         *
-         * @public
-         * @readonly
-         */
-        readonly aCforBioOnTTP?: OPTIONAL<ACBioContentInformation>
-    ) {}
+        bFPSchema: BSP_BFP_Schemas,
+        templateID: TemplateID,
+        sampleQuality: Quality,
+        score: BioAPI_FMR,
+        digitalSignature: SignedData,
+        aCforBioOnTTP?: OPTIONAL<ACBioContentInformation>
+    ) {
+        this.bFPSchema = bFPSchema;
+        this.templateID = templateID;
+        this.sampleQuality = sampleQuality;
+        this.score = score;
+        this.digitalSignature = digitalSignature;
+        this.aCforBioOnTTP = aCforBioOnTTP;
+    }
 
     /**
      * @summary Restructures an object into a TTPResponsebyServer

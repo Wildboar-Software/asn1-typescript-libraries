@@ -1,5 +1,5 @@
 /* eslint-disable */
-import { BIT_STRING } from "@wildboar/asn1";
+import { type BIT_STRING } from "@wildboar/asn1";
 import * as $ from "@wildboar/asn1/functional";
 import { type SYNTAX_NAME } from "../InformationFramework/SYNTAX-NAME.oca.mjs";
 import { id_lsx_bitString } from "../SelectedAttributeTypes/id-lsx-bitString.va.mjs";

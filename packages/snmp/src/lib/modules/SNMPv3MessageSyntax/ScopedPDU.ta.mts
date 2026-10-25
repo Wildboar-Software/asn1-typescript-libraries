@@ -1,7 +1,7 @@
 /* eslint-disable */
 import {
-    OCTET_STRING,
-    ASN1Element as _Element,
+    type OCTET_STRING,
+    type ASN1Element as _Element,
     ASN1TagClass as _TagClass,
     ASN1Construction as _Construction,
     ASN1UniversalType as _UniversalType,
@@ -47,7 +47,7 @@ class ScopedPDU {
      * @public
      * @readonly
      */
-    readonly contextEngineID: OCTET_STRING;
+    public readonly contextEngineID: OCTET_STRING;
     /**
      * @summary `contextName`.
      * @description
@@ -59,7 +59,7 @@ class ScopedPDU {
      * @public
      * @readonly
      */
-    readonly contextName: OCTET_STRING;
+    public readonly contextName: OCTET_STRING;
     /**
      * @summary `data`.
      * @description
@@ -72,7 +72,7 @@ class ScopedPDU {
      * @public
      * @readonly
      */
-    readonly data: _Element;
+    public readonly data: _Element;
 
     constructor (
         contextEngineID: OCTET_STRING,

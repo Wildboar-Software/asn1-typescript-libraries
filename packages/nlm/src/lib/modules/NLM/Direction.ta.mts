@@ -1,6 +1,6 @@
 /* eslint-disable */
 import {
-    ASN1Element as _Element,
+    type ASN1Element as _Element,
     ASN1TagClass as _TagClass,
     ASN1Construction as _Construction,
     ASN1UniversalType as _UniversalType,
@@ -71,7 +71,7 @@ export type Direction = _enum_for_Direction;
  *
  * @enum {number}
  */
-export const Direction = _enum_for_Direction;
+export const Direction: typeof _enum_for_Direction = _enum_for_Direction;
 
 
 /**
@@ -85,7 +85,7 @@ export const Direction = _enum_for_Direction;
  * @constant
  * @type {number}
  */
-export const Direction_incoming: Direction =
+export const Direction_incoming: 0 =
     Direction.incoming; /* LONG_NAMED_ENUMERATED_VALUE */
 
 
@@ -100,7 +100,7 @@ export const Direction_incoming: Direction =
  * @constant
  * @type {number}
  */
-export const incoming: Direction =
+export const incoming: 0 =
     Direction.incoming; /* SHORT_NAMED_ENUMERATED_VALUE */
 
 
@@ -115,7 +115,7 @@ export const incoming: Direction =
  * @constant
  * @type {number}
  */
-export const Direction_outgoing: Direction =
+export const Direction_outgoing: 1 =
     Direction.outgoing; /* LONG_NAMED_ENUMERATED_VALUE */
 
 
@@ -130,18 +130,29 @@ export const Direction_outgoing: Direction =
  * @constant
  * @type {number}
  */
-export const outgoing: Direction =
+export const outgoing: 1 =
     Direction.outgoing; /* SHORT_NAMED_ENUMERATED_VALUE */
 
 
 
 
-export const _decode_Direction = $._decodeEnumerated as $.ASN1Decoder<Direction>;
+export function _decode_Direction(el: _Element): Direction {
+    const enumerated = $._decodeEnumerated(el);
+    switch (enumerated) {
+        case Direction.incoming: return Direction.incoming;
+        case Direction.outgoing: return Direction.outgoing;
+        default:
+            throw new _ConstructionError(
+                'Invalid ENUMERATED value ' + enumerated + ' for Direction.',
+                el,
+            );
+    }
+}
 
 
 
 
-export const _encode_Direction = $._encodeEnumerated as $.ASN1Encoder<Direction>;
+export const _encode_Direction: $.ASN1Encoder<Direction> = $._encodeEnumerated as $.ASN1Encoder<Direction>;
 
 
 /* eslint-enable */

@@ -1,10 +1,10 @@
 /* eslint-disable */
 import {
-    ASN1Element as _Element,
+    type ASN1Element as _Element,
     ASN1TagClass as _TagClass
 } from "@wildboar/asn1";
 import * as $ from "@wildboar/asn1/functional";
-import { Operand, _decode_Operand, _encode_Operand } from "../Z39-50-APDU-2001/Operand.ta.mjs";
+import { type Operand, _decode_Operand, _encode_Operand } from "../Z39-50-APDU-2001/Operand.ta.mjs";
 import { RPNStructure_rpnRpnOp, _decode_RPNStructure_rpnRpnOp, _encode_RPNStructure_rpnRpnOp } from "../Z39-50-APDU-2001/RPNStructure-rpnRpnOp.ta.mjs";
 
 

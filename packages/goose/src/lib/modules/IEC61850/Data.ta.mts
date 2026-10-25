@@ -1,20 +1,20 @@
 /* eslint-disable */
 import {
-    BIT_STRING,
-    BOOLEAN,
-    INTEGER,
-    OBJECT_IDENTIFIER,
-    OCTET_STRING,
-    REAL,
-    VisibleString,
-    ASN1Element as _Element,
+    type BIT_STRING,
+    type BOOLEAN,
+    type INTEGER,
+    type OBJECT_IDENTIFIER,
+    type OCTET_STRING,
+    type REAL,
+    type VisibleString,
+    type ASN1Element as _Element,
     ASN1TagClass as _TagClass
 } from "@wildboar/asn1";
 import * as $ from "@wildboar/asn1/functional";
-import { FloatingPoint, _decode_FloatingPoint, _encode_FloatingPoint } from "../IEC61850/FloatingPoint.ta.mjs";
-import { TimeOfDay, _decode_TimeOfDay, _encode_TimeOfDay } from "../IEC61850/TimeOfDay.ta.mjs";
-import { MMSString, _decode_MMSString, _encode_MMSString } from "../IEC61850/MMSString.ta.mjs";
-import { UtcTime, _decode_UtcTime, _encode_UtcTime } from "../IEC61850/UtcTime.ta.mjs";
+import { type FloatingPoint, _decode_FloatingPoint, _encode_FloatingPoint } from "../IEC61850/FloatingPoint.ta.mjs";
+import { type TimeOfDay, _decode_TimeOfDay, _encode_TimeOfDay } from "../IEC61850/TimeOfDay.ta.mjs";
+import { type MMSString, _decode_MMSString, _encode_MMSString } from "../IEC61850/MMSString.ta.mjs";
+import { type UtcTime, _decode_UtcTime, _encode_UtcTime } from "../IEC61850/UtcTime.ta.mjs";
 
 
 // TODO: CHECK_RECURSIVE_DEFINITION

@@ -1,7 +1,7 @@
 /* eslint-disable */
 import {
-    OPTIONAL,
-    ASN1Element as _Element,
+    type OPTIONAL,
+    type ASN1Element as _Element,
     ASN1TagClass as _TagClass,
     ASN1Construction as _Construction,
     ASN1UniversalType as _UniversalType,
@@ -11,9 +11,9 @@ import {
     ASN1ConstructionError as _ConstructionError,
 } from "@wildboar/asn1";
 import * as $ from "@wildboar/asn1/functional";
-import { EventTypeCharging, _decode_EventTypeCharging, _encode_EventTypeCharging } from "../Core-INAP-CS1-DataTypes/EventTypeCharging.ta.mjs";
-import { EventSpecificInformationCharging, _decode_EventSpecificInformationCharging, _encode_EventSpecificInformationCharging } from "../Core-INAP-CS1-DataTypes/EventSpecificInformationCharging.ta.mjs";
-import { LegID, _decode_LegID, _encode_LegID } from "../Core-INAP-CS1-DataTypes/LegID.ta.mjs";
+import { type EventTypeCharging, _decode_EventTypeCharging, _encode_EventTypeCharging } from "../Core-INAP-CS1-DataTypes/EventTypeCharging.ta.mjs";
+import { type EventSpecificInformationCharging, _decode_EventSpecificInformationCharging, _encode_EventSpecificInformationCharging } from "../Core-INAP-CS1-DataTypes/EventSpecificInformationCharging.ta.mjs";
+import { type LegID, _decode_LegID, _encode_LegID } from "../Core-INAP-CS1-DataTypes/LegID.ta.mjs";
 import { ExtensionField, _decode_ExtensionField, _encode_ExtensionField } from "../Core-INAP-CS1-DataTypes/ExtensionField.ta.mjs";
 import { MonitorMode, _enum_for_MonitorMode, MonitorMode_notifyAndContinue /* IMPORTED_LONG_ENUMERATION_ITEM */, _decode_MonitorMode, _encode_MonitorMode } from "../Core-INAP-CS1-DataTypes/MonitorMode.ta.mjs";
 
@@ -27,9 +27,9 @@ import { MonitorMode, _enum_for_MonitorMode, MonitorMode_notifyAndContinue /* IM
  * ```asn1
  * EventNotificationChargingArg ::= SEQUENCE {
  *      eventTypeCharging     [0] EventTypeCharging,
- *      eventSpecificInformationCharging     [1] EventSpecificInformationCharging     OPTIONAL,
- *      legID     [2] LegID     OPTIONAL,
- *      extensions     [3] SEQUENCE SIZE(1..numOfExtensions) OF ExtensionField     OPTIONAL,
+ *      eventSpecificInformationCharging     [1] EventSpecificInformationCharging     type OPTIONAL,
+ *      legID     [2] LegID     type OPTIONAL,
+ *      extensions     [3] SEQUENCE SIZE(1..numOfExtensions) OF ExtensionField     type OPTIONAL,
  *      monitorMode     [30] MonitorMode     DEFAULT notifyAndContinue
  * --  ...
  *      }
@@ -39,38 +39,50 @@ import { MonitorMode, _enum_for_MonitorMode, MonitorMode_notifyAndContinue /* IM
  */
 export
 class EventNotificationChargingArg {
+    /**
+     * @summary `eventTypeCharging`.
+     * @public
+     * @readonly
+     */
+    public readonly eventTypeCharging: EventTypeCharging;
+    /**
+     * @summary `eventSpecificInformationCharging`.
+     * @public
+     * @readonly
+     */
+    public readonly eventSpecificInformationCharging?: OPTIONAL<EventSpecificInformationCharging>;
+    /**
+     * @summary `legID`.
+     * @public
+     * @readonly
+     */
+    public readonly legID?: OPTIONAL<LegID>;
+    /**
+     * @summary `extensions`.
+     * @public
+     * @readonly
+     */
+    public readonly extensions?: OPTIONAL<ExtensionField[]>;
+    /**
+     * @summary `monitorMode`.
+     * @public
+     * @readonly
+     */
+    public readonly monitorMode?: OPTIONAL<MonitorMode>;
+
     constructor (
-        /**
-         * @summary `eventTypeCharging`.
-         * @public
-         * @readonly
-         */
-        readonly eventTypeCharging: EventTypeCharging,
-        /**
-         * @summary `eventSpecificInformationCharging`.
-         * @public
-         * @readonly
-         */
-        readonly eventSpecificInformationCharging?: OPTIONAL<EventSpecificInformationCharging>,
-        /**
-         * @summary `legID`.
-         * @public
-         * @readonly
-         */
-        readonly legID?: OPTIONAL<LegID>,
-        /**
-         * @summary `extensions`.
-         * @public
-         * @readonly
-         */
-        readonly extensions?: OPTIONAL<ExtensionField[]>,
-        /**
-         * @summary `monitorMode`.
-         * @public
-         * @readonly
-         */
-        readonly monitorMode?: OPTIONAL<MonitorMode>
-    ) {}
+        eventTypeCharging: EventTypeCharging,
+        eventSpecificInformationCharging?: OPTIONAL<EventSpecificInformationCharging>,
+        legID?: OPTIONAL<LegID>,
+        extensions?: OPTIONAL<ExtensionField[]>,
+        monitorMode?: OPTIONAL<MonitorMode>
+    ) {
+        this.eventTypeCharging = eventTypeCharging;
+        this.eventSpecificInformationCharging = eventSpecificInformationCharging;
+        this.legID = legID;
+        this.extensions = extensions;
+        this.monitorMode = monitorMode;
+    }
 
     /**
      * @summary Restructures an object into a EventNotificationChargingArg
@@ -94,13 +106,13 @@ class EventNotificationChargingArg {
      * @static
      * @method
      */
-    public static get _default_value_for_monitorMode () { return MonitorMode_notifyAndContinue; }        /**
+    public static get _default_value_for_monitorMode (): _enum_for_MonitorMode { return MonitorMode_notifyAndContinue; }        /**
          * @summary The enum used as the type of the component `monitorMode`
          * @public
          * @static
          */
 
-    public static _enum_for_monitorMode = _enum_for_MonitorMode;
+    public static _enum_for_monitorMode: typeof _enum_for_MonitorMode = _enum_for_MonitorMode;
 }
 
 /**

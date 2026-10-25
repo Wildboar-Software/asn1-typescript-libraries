@@ -1,6 +1,6 @@
 /* eslint-disable */
 import {
-    SMIMECapabilities,
+    type SMIMECapabilities,
     _decode_SMIMECapabilities,
     _encode_SMIMECapabilities,
 } from "../AlgorithmInformation-2009/SMIMECapabilities.ta.mjs";

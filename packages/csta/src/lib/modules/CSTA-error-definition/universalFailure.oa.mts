@@ -4,7 +4,7 @@
 
 
 
-import { UniversalFailure, _decode_UniversalFailure, _encode_UniversalFailure } from "../CSTA-error-definition/UniversalFailure.ta.mjs";
+import { type UniversalFailure, _decode_UniversalFailure, _encode_UniversalFailure } from "../CSTA-error-definition/UniversalFailure.ta.mjs";
 
 import { type ERROR } from "../Remote-Operations-Information-Objects/ERROR.oca.mjs";
 

@@ -1,6 +1,6 @@
 /* eslint-disable */
 import {
-  INTEGER,
+  type INTEGER,
   ASN1Element as _Element,
   ASN1TagClass as _TagClass,
   ASN1Construction as _Construction,
@@ -28,10 +28,10 @@ import * as $ from '@wildboar/asn1/functional';
 export type AE_invocation_identifier = INTEGER;
 
 
-export const _decode_AE_invocation_identifier = $._decodeInteger;
+export const _decode_AE_invocation_identifier: $.ASN1Decoder<INTEGER> = $._decodeInteger;
 
 
-export const _encode_AE_invocation_identifier = $._encodeInteger;
+export const _encode_AE_invocation_identifier: $.ASN1Encoder<INTEGER> = $._encodeInteger;
 
 
 /* eslint-enable */

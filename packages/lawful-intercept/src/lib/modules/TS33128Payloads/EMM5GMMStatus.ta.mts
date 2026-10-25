@@ -1,8 +1,8 @@
 /* eslint-disable */
 import {
-    ASN1Element as _Element,
+    type ASN1Element as _Element,
     ASN1TagClass as _TagClass,
-    OPTIONAL
+    type OPTIONAL
 } from "@wildboar/asn1";
 import * as $ from "@wildboar/asn1/functional";
 import { _decode_EMMRegStatus, _encode_EMMRegStatus, _enum_for_EMMRegStatus, EMMRegStatus } from "../TS33128Payloads/EMMRegStatus.ta.mjs";
@@ -103,13 +103,13 @@ class EMM5GMMStatus {
          * @static
          */
 
-    public static _enum_for_eMMRegStatus = _enum_for_EMMRegStatus;        /**
+    public static _enum_for_eMMRegStatus: typeof _enum_for_EMMRegStatus = _enum_for_EMMRegStatus;        /**
          * @summary The enum used as the type of the component `fiveGMMStatus`
          * @public
          * @static
          */
 
-    public static _enum_for_fiveGMMStatus = _enum_for_FiveGMMStatus;
+    public static _enum_for_fiveGMMStatus: typeof _enum_for_FiveGMMStatus = _enum_for_FiveGMMStatus;
 }
 
 /**

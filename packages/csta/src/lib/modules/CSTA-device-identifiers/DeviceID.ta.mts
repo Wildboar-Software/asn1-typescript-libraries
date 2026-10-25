@@ -2,16 +2,16 @@
 
 import * as $ from "@wildboar/asn1/functional";
 import {
-    OPTIONAL,
-    SEQUENCE,
-    SET,
-    IA5String,
-    ASN1Element as _Element,
+    type OPTIONAL,
+    type SEQUENCE,
+    type SET,
+    type IA5String,
+    type ASN1Element as _Element,
     ASN1TagClass as _TagClass
 } from "@wildboar/asn1";
-import { DeviceID_deviceIdentifier, _decode_DeviceID_deviceIdentifier, _encode_DeviceID_deviceIdentifier } from "../CSTA-device-identifiers/DeviceID-deviceIdentifier.ta.mjs";
+import { type DeviceID_deviceIdentifier, _decode_DeviceID_deviceIdentifier, _encode_DeviceID_deviceIdentifier } from "../CSTA-device-identifiers/DeviceID-deviceIdentifier.ta.mjs";
 
-import { NumberDigits, _decode_NumberDigits, _encode_NumberDigits } from "../CSTA-device-identifiers/NumberDigits.ta.mjs";
+import { type NumberDigits, _decode_NumberDigits, _encode_NumberDigits } from "../CSTA-device-identifiers/NumberDigits.ta.mjs";
 
 import { MediaCallCharacteristics, _decode_MediaCallCharacteristics, _encode_MediaCallCharacteristics } from "../CSTA-media-services/MediaCallCharacteristics.ta.mjs";
 
@@ -50,8 +50,8 @@ import { MediaCallCharacteristics, _decode_MediaCallCharacteristics, _encode_Med
  *         implicitPrivate         [ 4] IMPLICIT     NumberDigits,
  *         explicitPrivate         [ 5] PrivateTON,
  *         other                 [ 6] IMPLICIT     OtherPlan },
- *     privateNumber            [ 0] NumberDigits            OPTIONAL,
- *     privateName            [ 1] IA5String                OPTIONAL,
+ *     privateNumber            [ 0] NumberDigits            type OPTIONAL,
+ *     privateName            [ 1] IA5String                type OPTIONAL,
  *     mediaCallCharacteristics     MediaCallCharacteristics         OPTIONAL }
  * ```
  * 
@@ -59,54 +59,64 @@ import { MediaCallCharacteristics, _decode_MediaCallCharacteristics, _encode_Med
  */
 export
 class DeviceID {
+    /**
+     * @summary `deviceIdentifier`.
+     * @description
+     *
+     * Mandatory identifier in a Clause 10 format (diallable digits,
+     * switching-function representation, device number, or URI as a
+     * colon-containing string). See `DeviceID_deviceIdentifier`.
+     *
+     * @public
+     * @readonly
+     */
+    public readonly deviceIdentifier: DeviceID_deviceIdentifier;
+    /**
+     * @summary `privateNumber`.
+     * @description
+     *
+     * Number that is private and may be subject to presentation
+     * restriction (ECMA-269 §10.2). Distinct from the `restricted`
+     * status on role-specific device ID types.
+     *
+     * @public
+     * @readonly
+     */
+    public readonly privateNumber?: OPTIONAL<NumberDigits>;
+    /**
+     * @summary `privateName`.
+     * @description
+     *
+     * Name that is private and may be subject to presentation
+     * restriction (ECMA-269 §10.2).
+     *
+     * @public
+     * @readonly
+     */
+    public readonly privateName?: OPTIONAL<IA5String>;
+    /**
+     * @summary `mediaCallCharacteristics`.
+     * @description
+     *
+     * Optional media (voice, digital data, etc.) used to select a
+     * device or to report capability (ECMA-269 §12.3.11, §12.2.20).
+     *
+     * @public
+     * @readonly
+     */
+    public readonly mediaCallCharacteristics?: OPTIONAL<MediaCallCharacteristics>;
+
     constructor (
-        /**
-         * @summary `deviceIdentifier`.
-         * @description
-         *
-         * Mandatory identifier in a Clause 10 format (diallable digits,
-         * switching-function representation, device number, or URI as a
-         * colon-containing string). See `DeviceID_deviceIdentifier`.
-         *
-         * @public
-         * @readonly
-         */
-        readonly deviceIdentifier: DeviceID_deviceIdentifier,
-        /**
-         * @summary `privateNumber`.
-         * @description
-         *
-         * Number that is private and may be subject to presentation
-         * restriction (ECMA-269 §10.2). Distinct from the `restricted`
-         * status on role-specific device ID types.
-         *
-         * @public
-         * @readonly
-         */
-        readonly privateNumber?: OPTIONAL<NumberDigits>,
-        /**
-         * @summary `privateName`.
-         * @description
-         *
-         * Name that is private and may be subject to presentation
-         * restriction (ECMA-269 §10.2).
-         *
-         * @public
-         * @readonly
-         */
-        readonly privateName?: OPTIONAL<IA5String>,
-        /**
-         * @summary `mediaCallCharacteristics`.
-         * @description
-         *
-         * Optional media (voice, digital data, etc.) used to select a
-         * device or to report capability (ECMA-269 §12.3.11, §12.2.20).
-         *
-         * @public
-         * @readonly
-         */
-        readonly mediaCallCharacteristics?: OPTIONAL<MediaCallCharacteristics>
-    ) {}
+        deviceIdentifier: DeviceID_deviceIdentifier,
+        privateNumber?: OPTIONAL<NumberDigits>,
+        privateName?: OPTIONAL<IA5String>,
+        mediaCallCharacteristics?: OPTIONAL<MediaCallCharacteristics>
+    ) {
+        this.deviceIdentifier = deviceIdentifier;
+        this.privateNumber = privateNumber;
+        this.privateName = privateName;
+        this.mediaCallCharacteristics = mediaCallCharacteristics;
+    }
 
     /**
      * @summary Restructures an object into a DeviceID

@@ -1,7 +1,7 @@
 /* eslint-disable */
 import {
-    OPTIONAL,
-    ASN1Element as _Element,
+    type OPTIONAL,
+    type ASN1Element as _Element,
     ASN1TagClass as _TagClass,
     ASN1Construction as _Construction,
     ASN1UniversalType as _UniversalType,
@@ -11,9 +11,9 @@ import {
     ASN1ConstructionError as _ConstructionError,
 } from "@wildboar/asn1";
 import * as $ from "@wildboar/asn1/functional";
-import { V59String, _decode_V59String, _encode_V59String } from "../V59/V59String.ta.mjs";
+import { type V59String, _decode_V59String, _encode_V59String } from "../V59/V59String.ta.mjs";
 
-import { ModemIdentity_Item_multimediaMode, _decode_ModemIdentity_Item_multimediaMode, _encode_ModemIdentity_Item_multimediaMode } from "../V59/ModemIdentity-Item-multimediaMode.ta.mjs";
+import { type ModemIdentity_Item_multimediaMode, _decode_ModemIdentity_Item_multimediaMode, _encode_ModemIdentity_Item_multimediaMode } from "../V59/ModemIdentity-Item-multimediaMode.ta.mjs";
 
 /**
  * @summary ModemIdentity_Item
@@ -50,7 +50,7 @@ class ModemIdentity_Item {
      * @public
      * @readonly
      */
-    readonly manufacturer: V59String;
+    public readonly manufacturer: V59String;
     /**
      * @summary `model`.
      * @description
@@ -60,7 +60,7 @@ class ModemIdentity_Item {
      * @public
      * @readonly
      */
-    readonly model: V59String;
+    public readonly model: V59String;
     /**
      * @summary `firmwareVersion`.
      * @description
@@ -70,7 +70,7 @@ class ModemIdentity_Item {
      * @public
      * @readonly
      */
-    readonly firmwareVersion: V59String;
+    public readonly firmwareVersion: V59String;
     /**
      * @summary `diagnosticVersion`.
      * @description
@@ -81,7 +81,7 @@ class ModemIdentity_Item {
      * @public
      * @readonly
      */
-    readonly diagnosticVersion: V59String;
+    public readonly diagnosticVersion: V59String;
     /**
      * @summary `multimediaMode`.
      * @description
@@ -91,13 +91,13 @@ class ModemIdentity_Item {
      * @public
      * @readonly
      */
-    readonly multimediaMode?: OPTIONAL<ModemIdentity_Item_multimediaMode>;
+    public readonly multimediaMode?: OPTIONAL<ModemIdentity_Item_multimediaMode>;
     /**
      * @summary Extensions that are not recognized.
      * @public
      * @readonly
      */
-    readonly _unrecognizedExtensionsList: _Element[];
+    public readonly _unrecognizedExtensionsList: _Element[];
 
     constructor (
         manufacturer: V59String,

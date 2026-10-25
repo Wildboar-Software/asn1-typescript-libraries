@@ -1,6 +1,6 @@
 /* eslint-disable */
 import {
-  INTEGER,
+  type INTEGER,
   ASN1Element as _Element,
   ASN1TagClass as _TagClass,
   ASN1Construction as _Construction,
@@ -12,7 +12,7 @@ import {
 } from '@wildboar/asn1';
 import * as $ from '@wildboar/asn1/functional';
 import {
-  SecurityIdentity,
+  type SecurityIdentity,
   _decode_SecurityIdentity,
   _encode_SecurityIdentity,
 } from '../Notation/SecurityIdentity.ta.mjs';
@@ -32,30 +32,36 @@ import {
  *
  */
 export class symmetricKeyInformation_KiType {
+  /**
+   * @summary `entityId`.
+   * @description
+   *
+   * Entity associated with the symmetric key. ITU-T Rec.
+   * X.830 (04/95) Annex D.6.
+   *
+   * @public
+   * @readonly
+   */
+  public readonly entityId: SecurityIdentity;
+  /**
+   * @summary `keyIdentifier`.
+   * @description
+   *
+   * Identifies the symmetric key for that entity. ITU-T Rec.
+   * X.830 (04/95) Annex D.6.
+   *
+   * @public
+   * @readonly
+   */
+  public readonly keyIdentifier: INTEGER;
+
   constructor(
-    /**
-     * @summary `entityId`.
-     * @description
-     *
-     * Entity associated with the symmetric key. ITU-T Rec.
-     * X.830 (04/95) Annex D.6.
-     *
-     * @public
-     * @readonly
-     */
-    readonly entityId: SecurityIdentity,
-    /**
-     * @summary `keyIdentifier`.
-     * @description
-     *
-     * Identifies the symmetric key for that entity. ITU-T Rec.
-     * X.830 (04/95) Annex D.6.
-     *
-     * @public
-     * @readonly
-     */
-    readonly keyIdentifier: INTEGER
-  ) {}
+    entityId: SecurityIdentity,
+    keyIdentifier: INTEGER
+  ) {
+    this.entityId = entityId;
+    this.keyIdentifier = keyIdentifier;
+  }
 
   /**
    * @summary Restructures an object into a symmetricKeyInformation_KiType

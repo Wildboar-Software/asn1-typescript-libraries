@@ -1,5 +1,5 @@
 /* eslint-disable */
-import { ASN1Element as _Element, INTEGER } from "@wildboar/asn1";
+import { ASN1Element as _Element, type INTEGER } from "@wildboar/asn1";
 import * as $ from "@wildboar/asn1/functional";
 
 /**
@@ -26,7 +26,7 @@ export type ServiceControls_scopeOfReferral = INTEGER;
  * @constant
  * @type {number}
  */
-export const ServiceControls_scopeOfReferral_dmd: ServiceControls_scopeOfReferral = 0; /* LONG_NAMED_INTEGER_VALUE */
+export const ServiceControls_scopeOfReferral_dmd: 0 = 0 satisfies ServiceControls_scopeOfReferral; /* LONG_NAMED_INTEGER_VALUE */
 
 /**
  * @summary ServiceControls_scopeOfReferral_dmd
@@ -37,7 +37,7 @@ export const ServiceControls_scopeOfReferral_dmd: ServiceControls_scopeOfReferra
  * @constant
  * @type {number}
  */
-export const dmd: ServiceControls_scopeOfReferral = ServiceControls_scopeOfReferral_dmd; /* SHORT_NAMED_INTEGER_VALUE */
+export const dmd: 0 = ServiceControls_scopeOfReferral_dmd; /* SHORT_NAMED_INTEGER_VALUE */
 
 /**
  * @summary ServiceControls_scopeOfReferral_country
@@ -48,7 +48,7 @@ export const dmd: ServiceControls_scopeOfReferral = ServiceControls_scopeOfRefer
  * @constant
  * @type {number}
  */
-export const ServiceControls_scopeOfReferral_country: ServiceControls_scopeOfReferral = 1; /* LONG_NAMED_INTEGER_VALUE */
+export const ServiceControls_scopeOfReferral_country: 1 = 1 satisfies ServiceControls_scopeOfReferral; /* LONG_NAMED_INTEGER_VALUE */
 
 /**
  * @summary ServiceControls_scopeOfReferral_country
@@ -59,13 +59,13 @@ export const ServiceControls_scopeOfReferral_country: ServiceControls_scopeOfRef
  * @constant
  * @type {number}
  */
-export const country: ServiceControls_scopeOfReferral = ServiceControls_scopeOfReferral_country; /* SHORT_NAMED_INTEGER_VALUE */
+export const country: 1 = ServiceControls_scopeOfReferral_country; /* SHORT_NAMED_INTEGER_VALUE */
 
 
-export const _decode_ServiceControls_scopeOfReferral = $._decodeInteger;
+export const _decode_ServiceControls_scopeOfReferral: $.ASN1Decoder<INTEGER> = $._decodeInteger;
 
 
-export const _encode_ServiceControls_scopeOfReferral = $._encodeInteger;
+export const _encode_ServiceControls_scopeOfReferral: $.ASN1Encoder<INTEGER> = $._encodeInteger;
 
 
 /* eslint-enable */

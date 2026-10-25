@@ -1,14 +1,14 @@
 /* eslint-disable */
 import {
-    INTEGER,
-    OPTIONAL,
-    ASN1Element as _Element,
+    type INTEGER,
+    type OPTIONAL,
+    type ASN1Element as _Element,
     ASN1TagClass as _TagClass
 } from "@wildboar/asn1";
 import * as $ from "@wildboar/asn1/functional";
-import { MessageID, _decode_MessageID, _encode_MessageID } from "../IN-SCF-SRF-datatypes/MessageID.ta.mjs";
+import { type MessageID, _decode_MessageID, _encode_MessageID } from "../IN-SCF-SRF-datatypes/MessageID.ta.mjs";
 // export { MessageID, _decode_MessageID, _encode_MessageID } from "../IN-SCF-SRF-datatypes/MessageID.ta.mjs";
-import { Language, _decode_Language, _encode_Language } from "../IN-SCF-SRF-datatypes/Language.ta.mjs";
+import { type Language, _decode_Language, _encode_Language } from "../IN-SCF-SRF-datatypes/Language.ta.mjs";
 // export { Language, _decode_Language, _encode_Language } from "../IN-SCF-SRF-datatypes/Language.ta.mjs";
 
 

@@ -1,17 +1,17 @@
 /* eslint-disable */
 import {
-    ASN1Element as _Element,
+    type ASN1Element as _Element,
     ASN1TagClass as _TagClass,
-    OPTIONAL,
+    type OPTIONAL,
 } from "@wildboar/asn1";
 import * as $ from "@wildboar/asn1/functional";
 import {
-    TokenServiceProvider,
+    type TokenServiceProvider,
     _decode_TokenServiceProvider,
     _encode_TokenServiceProvider,
 } from "../TokenizationManifest/TokenServiceProvider.ta.mjs";
 import {
-    XPathSet,
+    type XPathSet,
     _decode_XPathSet,
     _encode_XPathSet,
 } from "../TokenizationManifest/XPathSet.ta.mjs";
@@ -34,20 +34,26 @@ import {
  *
  */
 export class XPathTokensSet {
+    /**
+     * @summary `tSP`.
+     * @public
+     * @readonly
+     */
+    public readonly tSP: OPTIONAL<TokenServiceProvider>;
+    /**
+     * @summary `xPathSet`.
+     * @public
+     * @readonly
+     */
+    public readonly xPathSet: XPathSet;
+
     constructor(
-        /**
-         * @summary `tSP`.
-         * @public
-         * @readonly
-         */
-        readonly tSP: OPTIONAL<TokenServiceProvider>,
-        /**
-         * @summary `xPathSet`.
-         * @public
-         * @readonly
-         */
-        readonly xPathSet: XPathSet
-    ) {}
+        tSP: OPTIONAL<TokenServiceProvider>,
+        xPathSet: XPathSet
+    ) {
+        this.tSP = tSP;
+        this.xPathSet = xPathSet;
+    }
 
     /**
      * @summary Restructures an object into a XPathTokensSet

@@ -2,18 +2,18 @@
 
 import * as $ from "@wildboar/asn1/functional";
 import {
-    OPTIONAL,
-    OCTET_STRING,
-    SEQUENCE,
-    SET,
-    ASN1Element as _Element,
+    type OPTIONAL,
+    type OCTET_STRING,
+    type SEQUENCE,
+    type SET,
+    type ASN1Element as _Element,
     ASN1TagClass as _TagClass
 } from "@wildboar/asn1";
-import { SubjectDeviceID, _decode_SubjectDeviceID, _encode_SubjectDeviceID } from "../CSTA-device-identifiers/SubjectDeviceID.ta.mjs";
+import { type SubjectDeviceID, _decode_SubjectDeviceID, _encode_SubjectDeviceID } from "../CSTA-device-identifiers/SubjectDeviceID.ta.mjs";
 
-import { PresenceState, _decode_PresenceState, _encode_PresenceState } from "../CSTA-device-feature-types/PresenceState.ta.mjs";
+import { type PresenceState, _decode_PresenceState, _encode_PresenceState } from "../CSTA-device-feature-types/PresenceState.ta.mjs";
 
-import { TimeInfo, _decode_TimeInfo, _encode_TimeInfo } from "../CSTA-security/TimeInfo.ta.mjs";
+import { type TimeInfo, _decode_TimeInfo, _encode_TimeInfo } from "../CSTA-security/TimeInfo.ta.mjs";
 
 import { CSTACommonArguments, _decode_CSTACommonArguments, _encode_CSTACommonArguments } from "../CSTA-extension-types/CSTACommonArguments.ta.mjs";
 
@@ -39,11 +39,11 @@ import { CSTACommonArguments, _decode_CSTACommonArguments, _encode_CSTACommonArg
  * PresenceStateEvent ::= SEQUENCE
  * {    device                 SubjectDeviceID,
  *     presenceState             PresenceState,
- *     fromTime            [0] IMPLICIT TimeInfo            OPTIONAL,
- *     untilTime            [1] IMPLICIT TimeInfo            OPTIONAL,
- *     place                [2] IMPLICIT OCTET STRING        OPTIONAL,
- *     mood                [3] IMPLICIT OCTET STRING        OPTIONAL,
- *     namedPresenceState         [4] IMPLICIT OCTET STRING        OPTIONAL,
+ *     fromTime            [0] IMPLICIT TimeInfo            type OPTIONAL,
+ *     untilTime            [1] IMPLICIT TimeInfo            type OPTIONAL,
+ *     place                [2] IMPLICIT OCTET STRING        type OPTIONAL,
+ *     mood                [3] IMPLICIT OCTET STRING        type OPTIONAL,
+ *     namedPresenceState         [4] IMPLICIT OCTET STRING        type OPTIONAL,
  *     extensions             CSTACommonArguments            OPTIONAL }
  * ```
  * 
@@ -51,83 +51,101 @@ import { CSTACommonArguments, _decode_CSTACommonArguments, _encode_CSTACommonArg
  */
 export
 class PresenceStateEvent {
+    /**
+     * @summary `device`.
+     * @description
+     *
+     * Logical device whose presence changed.
+     * @public
+     * @readonly
+     */
+    public readonly device: SubjectDeviceID;
+    /**
+     * @summary `presenceState`.
+     * @description
+     *
+     * Presence values (ECMA-269 §12.2.24): available, away, busy, calling,
+     * dnd, meeting, offline, unknown (default), vacation,
+     * applicationSpecified0–10. 9th-edition feature.
+     * @public
+     * @readonly
+     */
+    public readonly presenceState: PresenceState;
+    /**
+     * @summary `fromTime`.
+     * @description
+     *
+     * Start date and time of the presence state.
+     * @public
+     * @readonly
+     */
+    public readonly fromTime?: OPTIONAL<TimeInfo>;
+    /**
+     * @summary `untilTime`.
+     * @description
+     *
+     * End date and time of the presence state.
+     * @public
+     * @readonly
+     */
+    public readonly untilTime?: OPTIONAL<TimeInfo>;
+    /**
+     * @summary `place`.
+     * @description
+     *
+     * Natural-language description of current location.
+     * @public
+     * @readonly
+     */
+    public readonly place?: OPTIONAL<OCTET_STRING>;
+    /**
+     * @summary `mood`.
+     * @description
+     *
+     * Natural-language description of current mood.
+     * @public
+     * @readonly
+     */
+    public readonly mood?: OPTIONAL<OCTET_STRING>;
+    /**
+     * @summary `namedPresenceState`.
+     * @description
+     *
+     * Natural-language description of availability.
+     * @public
+     * @readonly
+     */
+    public readonly namedPresenceState?: OPTIONAL<OCTET_STRING>;
+    /**
+     * @summary `extensions`.
+     * @description
+     *
+     * Optional security (timestamp, sequence, securityInfo) and
+     * privateData.
+     * @public
+     * @readonly
+     */
+    public readonly extensions?: OPTIONAL<CSTACommonArguments>;
+
     constructor (
-        /**
-         * @summary `device`.
-         * @description
-         *
-         * Logical device whose presence changed.
-         * @public
-         * @readonly
-         */
-        readonly device: SubjectDeviceID,
-        /**
-         * @summary `presenceState`.
-         * @description
-         *
-         * Presence values (ECMA-269 §12.2.24): available, away, busy, calling,
-         * dnd, meeting, offline, unknown (default), vacation,
-         * applicationSpecified0–10. 9th-edition feature.
-         * @public
-         * @readonly
-         */
-        readonly presenceState: PresenceState,
-        /**
-         * @summary `fromTime`.
-         * @description
-         *
-         * Start date and time of the presence state.
-         * @public
-         * @readonly
-         */
-        readonly fromTime?: OPTIONAL<TimeInfo>,
-        /**
-         * @summary `untilTime`.
-         * @description
-         *
-         * End date and time of the presence state.
-         * @public
-         * @readonly
-         */
-        readonly untilTime?: OPTIONAL<TimeInfo>,
-        /**
-         * @summary `place`.
-         * @description
-         *
-         * Natural-language description of current location.
-         * @public
-         * @readonly
-         */
-        readonly place?: OPTIONAL<OCTET_STRING>,
-        /**
-         * @summary `mood`.
-         * @description
-         *
-         * Natural-language description of current mood.
-         * @public
-         * @readonly
-         */
-        readonly mood?: OPTIONAL<OCTET_STRING>,
-        /**
-         * @summary `namedPresenceState`.
-         * @description
-         *
-         * Natural-language description of availability.
-         * @public
-         * @readonly
-         */
-        readonly namedPresenceState?: OPTIONAL<OCTET_STRING>,
-        /**
-         * @summary `extensions`.
-         * @description
-         *
-         * Optional security (timestamp, sequence, securityInfo) and
-         * privateData.
-         * @public
-         * @readonly
-         */
-        readonly extensions?: OPTIONAL<CSTACommonArguments>
-    ) {}
+        device: SubjectDeviceID,
+        presenceState: PresenceState,
+        fromTime?: OPTIONAL<TimeInfo>,
+        untilTime?: OPTIONAL<TimeInfo>,
+        place?: OPTIONAL<OCTET_STRING>,
+        mood?: OPTIONAL<OCTET_STRING>,
+        namedPresenceState?: OPTIONAL<OCTET_STRING>,
+        extensions?: OPTIONAL<CSTACommonArguments>
+    ) {
+        this.device = device;
+        this.presenceState = presenceState;
+        this.fromTime = fromTime;
+        this.untilTime = untilTime;
+        this.place = place;
+        this.mood = mood;
+        this.namedPresenceState = namedPresenceState;
+        this.extensions = extensions;
+    }
 
     /**
      * @summary Restructures an object into a PresenceStateEvent

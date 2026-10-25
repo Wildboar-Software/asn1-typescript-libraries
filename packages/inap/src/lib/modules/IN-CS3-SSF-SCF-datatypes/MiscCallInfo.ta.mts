@@ -1,8 +1,8 @@
 /* eslint-disable */
 import {
-    ASN1Element as _Element,
+    type ASN1Element as _Element,
     ASN1TagClass as _TagClass,
-    OPTIONAL
+    type OPTIONAL
 } from "@wildboar/asn1";
 import * as $ from "@wildboar/asn1/functional";
 import { _decode_MiscCallInfo_messageType, _encode_MiscCallInfo_messageType, _enum_for_MiscCallInfo_messageType, MiscCallInfo_messageType } from "../IN-CS3-SSF-SCF-datatypes/MiscCallInfo-messageType.ta.mjs";
@@ -73,13 +73,13 @@ class MiscCallInfo {
          * @static
          */
 
-    public static _enum_for_messageType = _enum_for_MiscCallInfo_messageType;        /**
+    public static _enum_for_messageType: typeof _enum_for_MiscCallInfo_messageType = _enum_for_MiscCallInfo_messageType;        /**
          * @summary The enum used as the type of the component `dpAssignment`
          * @public
          * @static
          */
 
-    public static _enum_for_dpAssignment = _enum_for_MiscCallInfo_dpAssignment;
+    public static _enum_for_dpAssignment: typeof _enum_for_MiscCallInfo_dpAssignment = _enum_for_MiscCallInfo_dpAssignment;
 }
 
 /**

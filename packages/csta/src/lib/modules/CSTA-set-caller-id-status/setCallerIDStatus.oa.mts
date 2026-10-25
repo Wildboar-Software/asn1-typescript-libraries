@@ -8,7 +8,7 @@ import { type OPERATION } from "../Remote-Operations-Information-Objects/OPERATI
 
 import { SetCallerIDStatusArgument, _decode_SetCallerIDStatusArgument, _encode_SetCallerIDStatusArgument } from "../CSTA-set-caller-id-status/SetCallerIDStatusArgument.ta.mjs";
 
-import { SetCallerIDStatusResult, _decode_SetCallerIDStatusResult, _encode_SetCallerIDStatusResult } from "../CSTA-set-caller-id-status/SetCallerIDStatusResult.ta.mjs";
+import { type SetCallerIDStatusResult, _decode_SetCallerIDStatusResult, _encode_SetCallerIDStatusResult } from "../CSTA-set-caller-id-status/SetCallerIDStatusResult.ta.mjs";
 
 import { universalFailure } from "../CSTA-error-definition/universalFailure.oa.mjs";
 

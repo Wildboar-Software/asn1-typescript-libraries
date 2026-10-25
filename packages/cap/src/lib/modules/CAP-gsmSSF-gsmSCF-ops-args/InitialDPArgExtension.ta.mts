@@ -1,8 +1,8 @@
 /* eslint-disable */
 import {
-    OPTIONAL,
-    NULL,
-    ASN1Element as _Element,
+    type OPTIONAL,
+    type NULL,
+    type ASN1Element as _Element,
     ASN1TagClass as _TagClass,
     ASN1Construction as _Construction,
     ASN1UniversalType as _UniversalType,
@@ -15,13 +15,13 @@ import * as $ from "@wildboar/asn1/functional";
 import { type BearerCapability, _decode_BearerCapability, _encode_BearerCapability } from "../CAP-datatypes/BearerCapability.ta.mjs";
 import { type CalledPartyNumber, _decode_CalledPartyNumber, _encode_CalledPartyNumber } from "../CAP-datatypes/CalledPartyNumber.ta.mjs";
 import { type LowLayerCompatibility, _decode_LowLayerCompatibility, _encode_LowLayerCompatibility } from "../CAP-datatypes/LowLayerCompatibility.ta.mjs";
-import { ISDN_AddressString, _decode_ISDN_AddressString, _encode_ISDN_AddressString } from "../MAP-CommonDataTypes/ISDN-AddressString.ta.mjs";
-import { MS_Classmark2, _decode_MS_Classmark2, _encode_MS_Classmark2 } from "../MAP-MS-DataTypes/MS-Classmark2.ta.mjs";
-import { IMEI, _decode_IMEI, _encode_IMEI } from "../MAP-CommonDataTypes/IMEI.ta.mjs";
-import { SupportedCamelPhases, _decode_SupportedCamelPhases, _encode_SupportedCamelPhases } from "../MAP-MS-DataTypes/SupportedCamelPhases.ta.mjs";
-import { OfferedCamel4Functionalities, _decode_OfferedCamel4Functionalities, _encode_OfferedCamel4Functionalities } from "../MAP-MS-DataTypes/OfferedCamel4Functionalities.ta.mjs";
-import { Ext_BasicServiceCode, _decode_Ext_BasicServiceCode, _encode_Ext_BasicServiceCode } from "../MAP-CommonDataTypes/Ext-BasicServiceCode.ta.mjs";
-import { HighLayerCompatibility, _decode_HighLayerCompatibility, _encode_HighLayerCompatibility } from "../Core-INAP-CS1-DataTypes/HighLayerCompatibility.ta.mjs";
+import { type ISDN_AddressString, _decode_ISDN_AddressString, _encode_ISDN_AddressString } from "../MAP-CommonDataTypes/ISDN-AddressString.ta.mjs";
+import { type MS_Classmark2, _decode_MS_Classmark2, _encode_MS_Classmark2 } from "../MAP-MS-DataTypes/MS-Classmark2.ta.mjs";
+import { type IMEI, _decode_IMEI, _encode_IMEI } from "../MAP-CommonDataTypes/IMEI.ta.mjs";
+import { type SupportedCamelPhases, _decode_SupportedCamelPhases, _encode_SupportedCamelPhases } from "../MAP-MS-DataTypes/SupportedCamelPhases.ta.mjs";
+import { type OfferedCamel4Functionalities, _decode_OfferedCamel4Functionalities, _encode_OfferedCamel4Functionalities } from "../MAP-MS-DataTypes/OfferedCamel4Functionalities.ta.mjs";
+import { type Ext_BasicServiceCode, _decode_Ext_BasicServiceCode, _encode_Ext_BasicServiceCode } from "../MAP-CommonDataTypes/Ext-BasicServiceCode.ta.mjs";
+import { type HighLayerCompatibility, _decode_HighLayerCompatibility, _encode_HighLayerCompatibility } from "../Core-INAP-CS1-DataTypes/HighLayerCompatibility.ta.mjs";
 import { UU_Data, _decode_UU_Data, _encode_UU_Data } from "../MAP-CH-DataTypes/UU-Data.ta.mjs";
 
 
@@ -36,21 +36,21 @@ import { UU_Data, _decode_UU_Data, _encode_UU_Data } from "../MAP-CH-DataTypes/U
  * 
  * ```asn1
  * InitialDPArgExtension {PARAMETERS-BOUND : bound} ::= SEQUENCE {
- *     gmscAddress                [0] ISDN-AddressString            OPTIONAL,
- *     forwardingDestinationNumber        [1] CalledPartyNumber {bound}        OPTIONAL,
- *     ms-Classmark2            [2] MS-Classmark2                OPTIONAL,
- *     iMEI                [3] IMEI                    OPTIONAL,
- *     supportedCamelPhases        [4] SupportedCamelPhases            OPTIONAL,
- *     offeredCamel4Functionalities    [5] OfferedCamel4Functionalities        OPTIONAL,
- *     bearerCapability2            [6] BearerCapability {bound}        OPTIONAL,
- *     ext-basicServiceCode2        [7] Ext-BasicServiceCode            OPTIONAL,
- *     highLayerCompatibility2        [8] HighLayerCompatibility            OPTIONAL,
- *     lowLayerCompatibility        [9] LowLayerCompatibility {bound}        OPTIONAL,
- *     lowLayerCompatibility2        [10] LowLayerCompatibility {bound}        OPTIONAL,
+ *     gmscAddress                [0] ISDN-AddressString            type OPTIONAL,
+ *     forwardingDestinationNumber        [1] CalledPartyNumber {bound}        type OPTIONAL,
+ *     ms-Classmark2            [2] MS-Classmark2                type OPTIONAL,
+ *     iMEI                [3] IMEI                    type OPTIONAL,
+ *     supportedCamelPhases        [4] SupportedCamelPhases            type OPTIONAL,
+ *     offeredCamel4Functionalities    [5] OfferedCamel4Functionalities        type OPTIONAL,
+ *     bearerCapability2            [6] BearerCapability {bound}        type OPTIONAL,
+ *     ext-basicServiceCode2        [7] Ext-BasicServiceCode            type OPTIONAL,
+ *     highLayerCompatibility2        [8] HighLayerCompatibility            type OPTIONAL,
+ *     lowLayerCompatibility        [9] LowLayerCompatibility {bound}        type OPTIONAL,
+ *     lowLayerCompatibility2        [10] LowLayerCompatibility {bound}        type OPTIONAL,
  *     ...,
- *     enhancedDialledServicesAllowed    [11] NULL                    OPTIONAL,
- *     uu-Data                [12] UU-Data                OPTIONAL,
- *     collectInformationAllowed        [13] NULL                    OPTIONAL,
+ *     enhancedDialledServicesAllowed    [11] NULL                    type OPTIONAL,
+ *     uu-Data                [12] UU-Data                type OPTIONAL,
+ *     collectInformationAllowed        [13] NULL                    type OPTIONAL,
  *     releaseCallArgExtensionAllowed    [14] NULL                    OPTIONAL
  * }
  * ```
@@ -59,177 +59,211 @@ import { UU_Data, _decode_UU_Data, _encode_UU_Data } from "../MAP-CH-DataTypes/U
  */
 export
 class InitialDPArgExtension {
+    /**
+     * @summary `gmscAddress`.
+     * @description
+     *
+     * gmscId assigned to the GMSC. (3GPP TS 29.078 V19.0.0 clause
+     * 11.20.1.1).
+     *
+     * @public
+     * @readonly
+     */
+    public readonly gmscAddress?: OPTIONAL<ISDN_AddressString>;
+    /**
+     * @summary `forwardingDestinationNumber`.
+     * @description
+     *
+     * Forwarding destination. (3GPP TS 29.078 V19.0.0 clause 11.20.1.1).
+     *
+     * @public
+     * @readonly
+     */
+    public readonly forwardingDestinationNumber?: OPTIONAL<CalledPartyNumber>;
+    /**
+     * @summary `ms_Classmark2`.
+     * @description
+     *
+     * MS Classmark 2 of the mobile subscriber for which the service is
+     * invoked. (3GPP TS 29.078 V19.0.0 clause 11.20.1.1).
+     *
+     * @public
+     * @readonly
+     */
+    public readonly ms_Classmark2?: OPTIONAL<MS_Classmark2>;
+    /**
+     * @summary `iMEI`.
+     * @description
+     *
+     * IMEI (with software version) of the mobile subscriber for which the
+     * service is invoked. (3GPP TS 29.078 V19.0.0 clause 11.20.1.1).
+     *
+     * @public
+     * @readonly
+     */
+    public readonly iMEI?: OPTIONAL<IMEI>;
+    /**
+     * @summary `supportedCamelPhases`.
+     * @description
+     *
+     * CAMEL phases supported in the GMSC or VMSC sending InitialDP. (3GPP
+     * TS 29.078 V19.0.0 clause 11.20.1.1).
+     *
+     * @public
+     * @readonly
+     */
+    public readonly supportedCamelPhases?: OPTIONAL<SupportedCamelPhases>;
+    /**
+     * @summary `offeredCamel4Functionalities`.
+     * @description
+     *
+     * Offered CAMEL phase 4 functionalities. (3GPP TS 29.078 V19.0.0 clause
+     * 11.20.1.1).
+     *
+     * @public
+     * @readonly
+     */
+    public readonly offeredCamel4Functionalities?: OPTIONAL<OfferedCamel4Functionalities>;
+    /**
+     * @summary `bearerCapability2`.
+     * @description
+     *
+     * Bearer capability or transmission-medium requirements (second set).
+     * (3GPP TS 29.078 V19.0.0 clause 11.20.1.1).
+     *
+     * @public
+     * @readonly
+     */
+    public readonly bearerCapability2?: OPTIONAL<BearerCapability>;
+    /**
+     * @summary `ext_basicServiceCode2`.
+     * @description
+     *
+     * Basic Service Code 2. Spec name `extBasicServiceCode2`. (3GPP TS
+     * 29.078 V19.0.0 clause 11.20.1.1).
+     *
+     * @public
+     * @readonly
+     */
+    public readonly ext_basicServiceCode2?: OPTIONAL<Ext_BasicServiceCode>;
+    /**
+     * @summary `highLayerCompatibility2`.
+     * @description
+     *
+     * High layer compatibility 2 for a SCUDIF call. (3GPP TS 29.078 V19.0.0
+     * clause 11.20.1.1).
+     *
+     * @public
+     * @readonly
+     */
+    public readonly highLayerCompatibility2?: OPTIONAL<HighLayerCompatibility>;
+    /**
+     * @summary `lowLayerCompatibility`.
+     * @description
+     *
+     * Low layer compatibility. (3GPP TS 29.078 V19.0.0 clause 11.20.1.1).
+     *
+     * @public
+     * @readonly
+     */
+    public readonly lowLayerCompatibility?: OPTIONAL<LowLayerCompatibility>;
+    /**
+     * @summary `lowLayerCompatibility2`.
+     * @description
+     *
+     * Low layer compatibility 2 for a SCUDIF call. (3GPP TS 29.078 V19.0.0
+     * clause 11.20.1.1).
+     *
+     * @public
+     * @readonly
+     */
+    public readonly lowLayerCompatibility2?: OPTIONAL<LowLayerCompatibility>;
+    /**
+     * @summary `enhancedDialledServicesAllowed`.
+     * @description
+     *
+     * Presence means gsmSCF may use Enhanced Dialled Services (EDS) for
+     * this call. (3GPP TS 29.078 V19.0.0 clause 11.20.1.1).
+     *
+     * @public
+     * @readonly
+     */
+    public readonly enhancedDialledServicesAllowed?: OPTIONAL<NULL>;
+    /**
+     * @summary `uu_Data`.
+     * @description
+     *
+     * User-to-user signalling service related information. Spec name
+     * `UU-Data`. (3GPP TS 29.078 V19.0.0 clause 11.20.1.1).
+     *
+     * @public
+     * @readonly
+     */
+    public readonly uu_Data?: OPTIONAL<UU_Data>;
+    /**
+     * @summary `collectInformationAllowed`.
+     * @description
+     *
+     * Presence means gsmSCF may use CollectInformation for this call. (3GPP
+     * TS 29.078 V19.0.0 clause 11.20.1.1).
+     *
+     * @public
+     * @readonly
+     */
+    public readonly collectInformationAllowed?: OPTIONAL<NULL>;
+    /**
+     * @summary `releaseCallArgExtensionAllowed`.
+     * @description
+     *
+     * Presence means gsmSCF may use Extensions in ReleaseCall for this
+     * call. (3GPP TS 29.078 V19.0.0 clause 11.20.1.1).
+     *
+     * @public
+     * @readonly
+     */
+    public readonly releaseCallArgExtensionAllowed?: OPTIONAL<NULL>;
+    /**
+     * @summary Extensions that are not recognized.
+     * @public
+     * @readonly
+     */
+    public readonly _unrecognizedExtensionsList: _Element[];
+
     constructor (
-        /**
-         * @summary `gmscAddress`.
-         * @description
-         *
-         * gmscId assigned to the GMSC. (3GPP TS 29.078 V19.0.0 clause
-         * 11.20.1.1).
-         *
-         * @public
-         * @readonly
-         */
-        readonly gmscAddress?: OPTIONAL<ISDN_AddressString>,
-        /**
-         * @summary `forwardingDestinationNumber`.
-         * @description
-         *
-         * Forwarding destination. (3GPP TS 29.078 V19.0.0 clause 11.20.1.1).
-         *
-         * @public
-         * @readonly
-         */
-        readonly forwardingDestinationNumber?: OPTIONAL<CalledPartyNumber>,
-        /**
-         * @summary `ms_Classmark2`.
-         * @description
-         *
-         * MS Classmark 2 of the mobile subscriber for which the service is
-         * invoked. (3GPP TS 29.078 V19.0.0 clause 11.20.1.1).
-         *
-         * @public
-         * @readonly
-         */
-        readonly ms_Classmark2?: OPTIONAL<MS_Classmark2>,
-        /**
-         * @summary `iMEI`.
-         * @description
-         *
-         * IMEI (with software version) of the mobile subscriber for which the
-         * service is invoked. (3GPP TS 29.078 V19.0.0 clause 11.20.1.1).
-         *
-         * @public
-         * @readonly
-         */
-        readonly iMEI?: OPTIONAL<IMEI>,
-        /**
-         * @summary `supportedCamelPhases`.
-         * @description
-         *
-         * CAMEL phases supported in the GMSC or VMSC sending InitialDP. (3GPP
-         * TS 29.078 V19.0.0 clause 11.20.1.1).
-         *
-         * @public
-         * @readonly
-         */
-        readonly supportedCamelPhases?: OPTIONAL<SupportedCamelPhases>,
-        /**
-         * @summary `offeredCamel4Functionalities`.
-         * @description
-         *
-         * Offered CAMEL phase 4 functionalities. (3GPP TS 29.078 V19.0.0 clause
-         * 11.20.1.1).
-         *
-         * @public
-         * @readonly
-         */
-        readonly offeredCamel4Functionalities?: OPTIONAL<OfferedCamel4Functionalities>,
-        /**
-         * @summary `bearerCapability2`.
-         * @description
-         *
-         * Bearer capability or transmission-medium requirements (second set).
-         * (3GPP TS 29.078 V19.0.0 clause 11.20.1.1).
-         *
-         * @public
-         * @readonly
-         */
-        readonly bearerCapability2?: OPTIONAL<BearerCapability>,
-        /**
-         * @summary `ext_basicServiceCode2`.
-         * @description
-         *
-         * Basic Service Code 2. Spec name `extBasicServiceCode2`. (3GPP TS
-         * 29.078 V19.0.0 clause 11.20.1.1).
-         *
-         * @public
-         * @readonly
-         */
-        readonly ext_basicServiceCode2?: OPTIONAL<Ext_BasicServiceCode>,
-        /**
-         * @summary `highLayerCompatibility2`.
-         * @description
-         *
-         * High layer compatibility 2 for a SCUDIF call. (3GPP TS 29.078 V19.0.0
-         * clause 11.20.1.1).
-         *
-         * @public
-         * @readonly
-         */
-        readonly highLayerCompatibility2?: OPTIONAL<HighLayerCompatibility>,
-        /**
-         * @summary `lowLayerCompatibility`.
-         * @description
-         *
-         * Low layer compatibility. (3GPP TS 29.078 V19.0.0 clause 11.20.1.1).
-         *
-         * @public
-         * @readonly
-         */
-        readonly lowLayerCompatibility?: OPTIONAL<LowLayerCompatibility>,
-        /**
-         * @summary `lowLayerCompatibility2`.
-         * @description
-         *
-         * Low layer compatibility 2 for a SCUDIF call. (3GPP TS 29.078 V19.0.0
-         * clause 11.20.1.1).
-         *
-         * @public
-         * @readonly
-         */
-        readonly lowLayerCompatibility2?: OPTIONAL<LowLayerCompatibility>,
-        /**
-         * @summary `enhancedDialledServicesAllowed`.
-         * @description
-         *
-         * Presence means gsmSCF may use Enhanced Dialled Services (EDS) for
-         * this call. (3GPP TS 29.078 V19.0.0 clause 11.20.1.1).
-         *
-         * @public
-         * @readonly
-         */
-        readonly enhancedDialledServicesAllowed?: OPTIONAL<NULL>,
-        /**
-         * @summary `uu_Data`.
-         * @description
-         *
-         * User-to-user signalling service related information. Spec name
-         * `UU-Data`. (3GPP TS 29.078 V19.0.0 clause 11.20.1.1).
-         *
-         * @public
-         * @readonly
-         */
-        readonly uu_Data?: OPTIONAL<UU_Data>,
-        /**
-         * @summary `collectInformationAllowed`.
-         * @description
-         *
-         * Presence means gsmSCF may use CollectInformation for this call. (3GPP
-         * TS 29.078 V19.0.0 clause 11.20.1.1).
-         *
-         * @public
-         * @readonly
-         */
-        readonly collectInformationAllowed?: OPTIONAL<NULL>,
-        /**
-         * @summary `releaseCallArgExtensionAllowed`.
-         * @description
-         *
-         * Presence means gsmSCF may use Extensions in ReleaseCall for this
-         * call. (3GPP TS 29.078 V19.0.0 clause 11.20.1.1).
-         *
-         * @public
-         * @readonly
-         */
-        readonly releaseCallArgExtensionAllowed?: OPTIONAL<NULL>,
-        /**
-         * @summary Extensions that are not recognized.
-         * @public
-         * @readonly
-         */
-        readonly _unrecognizedExtensionsList: _Element[] = []
-    ) {}
+        gmscAddress?: OPTIONAL<ISDN_AddressString>,
+        forwardingDestinationNumber?: OPTIONAL<CalledPartyNumber>,
+        ms_Classmark2?: OPTIONAL<MS_Classmark2>,
+        iMEI?: OPTIONAL<IMEI>,
+        supportedCamelPhases?: OPTIONAL<SupportedCamelPhases>,
+        offeredCamel4Functionalities?: OPTIONAL<OfferedCamel4Functionalities>,
+        bearerCapability2?: OPTIONAL<BearerCapability>,
+        ext_basicServiceCode2?: OPTIONAL<Ext_BasicServiceCode>,
+        highLayerCompatibility2?: OPTIONAL<HighLayerCompatibility>,
+        lowLayerCompatibility?: OPTIONAL<LowLayerCompatibility>,
+        lowLayerCompatibility2?: OPTIONAL<LowLayerCompatibility>,
+        enhancedDialledServicesAllowed?: OPTIONAL<NULL>,
+        uu_Data?: OPTIONAL<UU_Data>,
+        collectInformationAllowed?: OPTIONAL<NULL>,
+        releaseCallArgExtensionAllowed?: OPTIONAL<NULL>,
+        _unrecognizedExtensionsList: _Element[] = []
+    ) {
+        this.gmscAddress = gmscAddress;
+        this.forwardingDestinationNumber = forwardingDestinationNumber;
+        this.ms_Classmark2 = ms_Classmark2;
+        this.iMEI = iMEI;
+        this.supportedCamelPhases = supportedCamelPhases;
+        this.offeredCamel4Functionalities = offeredCamel4Functionalities;
+        this.bearerCapability2 = bearerCapability2;
+        this.ext_basicServiceCode2 = ext_basicServiceCode2;
+        this.highLayerCompatibility2 = highLayerCompatibility2;
+        this.lowLayerCompatibility = lowLayerCompatibility;
+        this.lowLayerCompatibility2 = lowLayerCompatibility2;
+        this.enhancedDialledServicesAllowed = enhancedDialledServicesAllowed;
+        this.uu_Data = uu_Data;
+        this.collectInformationAllowed = collectInformationAllowed;
+        this.releaseCallArgExtensionAllowed = releaseCallArgExtensionAllowed;
+        this._unrecognizedExtensionsList = _unrecognizedExtensionsList;
+    }
 
     /**
      * @summary Restructures an object into a InitialDPArgExtension

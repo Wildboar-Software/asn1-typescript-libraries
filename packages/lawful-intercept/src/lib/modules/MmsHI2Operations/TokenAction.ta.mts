@@ -1,6 +1,6 @@
 /* eslint-disable */
 import {
-    ENUMERATED
+    type ENUMERATED
 } from "@wildboar/asn1";
 import * as $ from "@wildboar/asn1/functional";
 
@@ -48,7 +48,7 @@ type TokenAction = _enum_for_TokenAction | ENUMERATED;
  * @type {number}
  */
 export
-const TokenAction_addToken: TokenAction = 0; /* LONG_NAMED_ENUMERATED_VALUE */
+const TokenAction_addToken: _enum_for_TokenAction.addToken = _enum_for_TokenAction.addToken; /* LONG_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary addToken
@@ -59,7 +59,7 @@ const TokenAction_addToken: TokenAction = 0; /* LONG_NAMED_ENUMERATED_VALUE */
  * @type {number}
  */
 export
-const addToken: TokenAction = TokenAction_addToken; /* SHORT_NAMED_ENUMERATED_VALUE */
+const addToken: _enum_for_TokenAction.addToken = TokenAction_addToken; /* SHORT_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary TokenAction_removeToken
@@ -70,7 +70,7 @@ const addToken: TokenAction = TokenAction_addToken; /* SHORT_NAMED_ENUMERATED_VA
  * @type {number}
  */
 export
-const TokenAction_removeToken: TokenAction = 1; /* LONG_NAMED_ENUMERATED_VALUE */
+const TokenAction_removeToken: _enum_for_TokenAction.removeToken = _enum_for_TokenAction.removeToken; /* LONG_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary removeToken
@@ -81,7 +81,7 @@ const TokenAction_removeToken: TokenAction = 1; /* LONG_NAMED_ENUMERATED_VALUE *
  * @type {number}
  */
 export
-const removeToken: TokenAction = TokenAction_removeToken; /* SHORT_NAMED_ENUMERATED_VALUE */
+const removeToken: _enum_for_TokenAction.removeToken = TokenAction_removeToken; /* SHORT_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary TokenAction_filterToken
@@ -93,7 +93,7 @@ const removeToken: TokenAction = TokenAction_removeToken; /* SHORT_NAMED_ENUMERA
  * @type {number}
  */
 export
-const TokenAction_filterToken: TokenAction = 2; /* LONG_NAMED_ENUMERATED_VALUE */
+const TokenAction_filterToken: _enum_for_TokenAction.filterToken = _enum_for_TokenAction.filterToken; /* LONG_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary filterToken
@@ -104,7 +104,7 @@ const TokenAction_filterToken: TokenAction = 2; /* LONG_NAMED_ENUMERATED_VALUE *
  * @type {number}
  */
 export
-const filterToken: TokenAction = TokenAction_filterToken; /* SHORT_NAMED_ENUMERATED_VALUE */
+const filterToken: _enum_for_TokenAction.filterToken = TokenAction_filterToken; /* SHORT_NAMED_ENUMERATED_VALUE */
 export const _decode_TokenAction: $.ASN1Decoder<TokenAction> = $._decodeEnumerated;
 export const _encode_TokenAction: $.ASN1Encoder<TokenAction> = $._encodeEnumerated;
 

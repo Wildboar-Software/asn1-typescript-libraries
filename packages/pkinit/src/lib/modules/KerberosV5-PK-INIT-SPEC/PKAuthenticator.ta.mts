@@ -1,14 +1,14 @@
 /* eslint-disable */
 import {
     ASN1OverflowError,
-    INTEGER,
-    OCTET_STRING,
-    OPTIONAL,
-    ASN1Element as _Element,
+    type INTEGER,
+    type OCTET_STRING,
+    type OPTIONAL,
+    type ASN1Element as _Element,
     ASN1TagClass as _TagClass
 } from "@wildboar/asn1";
 import * as $ from "@wildboar/asn1/functional";
-import { KerberosTime, _decode_KerberosTime, _encode_KerberosTime } from "@wildboar/kerberos5";
+import { type KerberosTime, _decode_KerberosTime, _encode_KerberosTime } from "@wildboar/kerberos5";
 import { PAChecksum2, _decode_PAChecksum2, _encode_PAChecksum2 } from "../KerberosV5-PK-INIT-SPEC/PAChecksum2.ta.mjs";
 
 
@@ -57,76 +57,91 @@ import { PAChecksum2, _decode_PAChecksum2, _encode_PAChecksum2 } from "../Kerber
  */
 export
 class PKAuthenticator {
+    /**
+     * Microseconds, 0..999999, of the client timestamp. Used
+     * with `ctime`.
+     *
+     * [RFC 4556, section 3.2.1](https://www.rfc-editor.org/rfc/rfc4556#section-3.2.1).
+     * @public
+     * @readonly
+     */
+    public readonly cusec: INTEGER;
+    /**
+     * Current time on the client. Together with `cusec` this is
+     * the timestamp the KDC checks for replay and skew.
+     *
+     * [RFC 4556, section 3.2.1](https://www.rfc-editor.org/rfc/rfc4556#section-3.2.1).
+     * @public
+     * @readonly
+     */
+    public readonly ctime: KerberosTime;
+    /**
+     * Random integer in 0..4294967295. It does not have to equal
+     * the nonce in `KDC-REQ-BODY`. When Diffie-Hellman keys are
+     * not reused, {@link KDCDHKeyInfo.nonce} echoes this value;
+     * when they are reused, that field is 0.
+     *
+     * [RFC 4556, section 3.2.1](https://www.rfc-editor.org/rfc/rfc4556#section-3.2.1).
+     * @public
+     * @readonly
+     */
+    public readonly nonce: INTEGER;
+    /**
+     * SHA-1 digest of the `KDC-REQ-BODY` of this AS-REQ. A KDC
+     * conforming to RFC 4556 requires it and returns
+     * `KDC_ERR_PA_CHECKSUM_MUST_BE_INCLUDED` (79) when it is
+     * absent. The field is optional in the syntax so a later
+     * exchange can drop SHA-1. RFC 4556 does not define that
+     * exchange.
+     *
+     * [RFC 4556, section 3.2.3](https://www.rfc-editor.org/rfc/rfc4556#section-3.2.3).
+     * @public
+     * @readonly
+     */
+    public readonly paChecksum?: OPTIONAL<OCTET_STRING>;
+    /**
+     * Not defined by RFC 4556. The module comment says this is
+     * the `PA_AS_FRESHNESS` padata value received from the KDC,
+     * and that it must be present if the KDC sent one. The
+     * comment does not cite how that value is produced or
+     * checked.
+     * @public
+     * @readonly
+     */
+    public readonly freshnessToken?: OPTIONAL<OCTET_STRING>;
+    /**
+     * Not defined by RFC 4556. The module attributes it to
+     * MS-PKCA v20230920 section 2.2.3 and says Windows Server
+     * 2025 and newer may require it, depending on configuration
+     * and on the algorithms used to sign the `AuthPack`.
+     * See {@link PAChecksum2}.
+     * @public
+     * @readonly
+     */
+    public readonly paChecksum2?: OPTIONAL<PAChecksum2>;
+    /**
+     * @summary Extensions that are not recognized.
+     * @public
+     * @readonly
+     */
+    public readonly _unrecognizedExtensionsList: _Element[];
+
     constructor (
-        /**
-         * Microseconds, 0..999999, of the client timestamp. Used
-         * with `ctime`.
-         *
-         * [RFC 4556, section 3.2.1](https://www.rfc-editor.org/rfc/rfc4556#section-3.2.1).
-         * @public
-         * @readonly
-         */
-        readonly cusec: INTEGER,
-        /**
-         * Current time on the client. Together with `cusec` this is
-         * the timestamp the KDC checks for replay and skew.
-         *
-         * [RFC 4556, section 3.2.1](https://www.rfc-editor.org/rfc/rfc4556#section-3.2.1).
-         * @public
-         * @readonly
-         */
-        readonly ctime: KerberosTime,
-        /**
-         * Random integer in 0..4294967295. It does not have to equal
-         * the nonce in `KDC-REQ-BODY`. When Diffie-Hellman keys are
-         * not reused, {@link KDCDHKeyInfo.nonce} echoes this value;
-         * when they are reused, that field is 0.
-         *
-         * [RFC 4556, section 3.2.1](https://www.rfc-editor.org/rfc/rfc4556#section-3.2.1).
-         * @public
-         * @readonly
-         */
-        readonly nonce: INTEGER,
-        /**
-         * SHA-1 digest of the `KDC-REQ-BODY` of this AS-REQ. A KDC
-         * conforming to RFC 4556 requires it and returns
-         * `KDC_ERR_PA_CHECKSUM_MUST_BE_INCLUDED` (79) when it is
-         * absent. The field is optional in the syntax so a later
-         * exchange can drop SHA-1. RFC 4556 does not define that
-         * exchange.
-         *
-         * [RFC 4556, section 3.2.3](https://www.rfc-editor.org/rfc/rfc4556#section-3.2.3).
-         * @public
-         * @readonly
-         */
-        readonly paChecksum?: OPTIONAL<OCTET_STRING>,
-        /**
-         * Not defined by RFC 4556. The module comment says this is
-         * the `PA_AS_FRESHNESS` padata value received from the KDC,
-         * and that it must be present if the KDC sent one. The
-         * comment does not cite how that value is produced or
-         * checked.
-         * @public
-         * @readonly
-         */
-        readonly freshnessToken?: OPTIONAL<OCTET_STRING>,
-        /**
-         * Not defined by RFC 4556. The module attributes it to
-         * MS-PKCA v20230920 section 2.2.3 and says Windows Server
-         * 2025 and newer may require it, depending on configuration
-         * and on the algorithms used to sign the `AuthPack`.
-         * See {@link PAChecksum2}.
-         * @public
-         * @readonly
-         */
-        readonly paChecksum2?: OPTIONAL<PAChecksum2>,
-        /**
-         * @summary Extensions that are not recognized.
-         * @public
-         * @readonly
-         */
-        readonly _unrecognizedExtensionsList: _Element[] = []
+        cusec: INTEGER,
+        ctime: KerberosTime,
+        nonce: INTEGER,
+        paChecksum?: OPTIONAL<OCTET_STRING>,
+        freshnessToken?: OPTIONAL<OCTET_STRING>,
+        paChecksum2?: OPTIONAL<PAChecksum2>,
+        _unrecognizedExtensionsList: _Element[] = []
     ) {
+        this.cusec = cusec;
+        this.ctime = ctime;
+        this.nonce = nonce;
+        this.paChecksum = paChecksum;
+        this.freshnessToken = freshnessToken;
+        this.paChecksum2 = paChecksum2;
+        this._unrecognizedExtensionsList = _unrecognizedExtensionsList;
         const cusecNumber = typeof this.cusec === "bigint" ? Number(this.cusec) : this.cusec;
         if (cusecNumber < 0 || cusecNumber > 999999) {
             throw new ASN1OverflowError("PKAuthenticator.cusec violates INTEGER range");

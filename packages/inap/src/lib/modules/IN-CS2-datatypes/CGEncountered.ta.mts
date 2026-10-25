@@ -1,4 +1,5 @@
 /* eslint-disable */
+import { ASN1Element as _Element, ASN1ConstructionError as _ConstructionError } from "@wildboar/asn1";
 import * as $ from "@wildboar/asn1/functional";
 
 
@@ -53,7 +54,7 @@ type CGEncountered = _enum_for_CGEncountered;
  * @enum {number}
  */
 export
-const CGEncountered = _enum_for_CGEncountered;
+const CGEncountered: typeof _enum_for_CGEncountered = _enum_for_CGEncountered;
 
 /**
  * @summary CGEncountered_noCGencountered
@@ -61,7 +62,7 @@ const CGEncountered = _enum_for_CGEncountered;
  * @type {number}
  */
 export
-const CGEncountered_noCGencountered: CGEncountered = CGEncountered.noCGencountered; /* LONG_NAMED_ENUMERATED_VALUE */
+const CGEncountered_noCGencountered: _enum_for_CGEncountered.noCGencountered = CGEncountered.noCGencountered; /* LONG_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary noCGencountered
@@ -69,7 +70,7 @@ const CGEncountered_noCGencountered: CGEncountered = CGEncountered.noCGencounter
  * @type {number}
  */
 export
-const noCGencountered: CGEncountered = CGEncountered.noCGencountered; /* SHORT_NAMED_ENUMERATED_VALUE */
+const noCGencountered: _enum_for_CGEncountered.noCGencountered = CGEncountered.noCGencountered; /* SHORT_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary CGEncountered_manualCGencountered
@@ -77,7 +78,7 @@ const noCGencountered: CGEncountered = CGEncountered.noCGencountered; /* SHORT_N
  * @type {number}
  */
 export
-const CGEncountered_manualCGencountered: CGEncountered = CGEncountered.manualCGencountered; /* LONG_NAMED_ENUMERATED_VALUE */
+const CGEncountered_manualCGencountered: _enum_for_CGEncountered.manualCGencountered = CGEncountered.manualCGencountered; /* LONG_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary manualCGencountered
@@ -85,7 +86,7 @@ const CGEncountered_manualCGencountered: CGEncountered = CGEncountered.manualCGe
  * @type {number}
  */
 export
-const manualCGencountered: CGEncountered = CGEncountered.manualCGencountered; /* SHORT_NAMED_ENUMERATED_VALUE */
+const manualCGencountered: _enum_for_CGEncountered.manualCGencountered = CGEncountered.manualCGencountered; /* SHORT_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary CGEncountered_scpOverload
@@ -93,7 +94,7 @@ const manualCGencountered: CGEncountered = CGEncountered.manualCGencountered; /*
  * @type {number}
  */
 export
-const CGEncountered_scpOverload: CGEncountered = CGEncountered.scpOverload; /* LONG_NAMED_ENUMERATED_VALUE */
+const CGEncountered_scpOverload: _enum_for_CGEncountered.scpOverload = CGEncountered.scpOverload; /* LONG_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary scpOverload
@@ -101,12 +102,24 @@ const CGEncountered_scpOverload: CGEncountered = CGEncountered.scpOverload; /* L
  * @type {number}
  */
 export
-const scpOverload: CGEncountered = CGEncountered.scpOverload; /* SHORT_NAMED_ENUMERATED_VALUE */
+const scpOverload: _enum_for_CGEncountered.scpOverload = CGEncountered.scpOverload; /* SHORT_NAMED_ENUMERATED_VALUE */
 
 export
-const _decode_CGEncountered: $.ASN1Decoder<CGEncountered> = $._decodeEnumerated;
+function _decode_CGEncountered(el: _Element): CGEncountered {
+    const enumerated = $._decodeEnumerated(el);
+    switch (enumerated) {
+        case CGEncountered.noCGencountered: return CGEncountered.noCGencountered;
+        case CGEncountered.manualCGencountered: return CGEncountered.manualCGencountered;
+        case CGEncountered.scpOverload: return CGEncountered.scpOverload;
+        default:
+            throw new _ConstructionError(
+                "Invalid ENUMERATED value " + enumerated + " for CGEncountered.",
+                el,
+            );
+    }
+}
 
 export
-const _encode_CGEncountered: $.ASN1Encoder<CGEncountered> = $._encodeEnumerated;
+const _encode_CGEncountered: $.ASN1Encoder<CGEncountered> = $._encodeEnumerated as $.ASN1Encoder<CGEncountered>;
 
 /* eslint-enable */

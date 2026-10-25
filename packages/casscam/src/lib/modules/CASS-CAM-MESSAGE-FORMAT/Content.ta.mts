@@ -1,7 +1,7 @@
 /* eslint-disable */
 import {
-    OCTET_STRING,
-    ASN1Element as _Element,
+    type OCTET_STRING,
+    type ASN1Element as _Element,
     ASN1TagClass as _TagClass,
     ASN1Construction as _Construction,
     ASN1UniversalType as _UniversalType,
@@ -54,7 +54,7 @@ class Content {
      * @public
      * @readonly
      */
-    readonly cHK: OCTET_STRING;
+    public readonly cHK: OCTET_STRING;
     /**
      * @summary `iHK`.
      * @description
@@ -66,7 +66,7 @@ class Content {
      * @public
      * @readonly
      */
-    readonly iHK: OCTET_STRING;
+    public readonly iHK: OCTET_STRING;
     /**
      * @summary `rAND_AC_1`.
      * @description
@@ -80,7 +80,7 @@ class Content {
      * @public
      * @readonly
      */
-    readonly rAND_AC_1: OCTET_STRING;
+    public readonly rAND_AC_1: OCTET_STRING;
     /**
      * @summary `rAND_AC_2`.
      * @description
@@ -91,7 +91,7 @@ class Content {
      * @public
      * @readonly
      */
-    readonly rAND_AC_2: OCTET_STRING;
+    public readonly rAND_AC_2: OCTET_STRING;
     /**
      * @summary `rAND_AC_3`.
      * @description
@@ -102,7 +102,7 @@ class Content {
      * @public
      * @readonly
      */
-    readonly rAND_AC_3: OCTET_STRING;
+    public readonly rAND_AC_3: OCTET_STRING;
     /**
      * @summary `kPK`.
      * @description
@@ -114,7 +114,7 @@ class Content {
      * @public
      * @readonly
      */
-    readonly kPK: OCTET_STRING;
+    public readonly kPK: OCTET_STRING;
 
     constructor (
         cHK: OCTET_STRING,

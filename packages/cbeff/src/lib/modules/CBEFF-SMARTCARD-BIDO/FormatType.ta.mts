@@ -1,6 +1,6 @@
 /* eslint-disable */
 import {
-  OCTET_STRING,
+  type OCTET_STRING,
   ASN1Element as _Element,
   ASN1TagClass as _TagClass,
   ASN1Construction as _Construction,
@@ -25,10 +25,10 @@ import * as $ from '@wildboar/asn1/functional';
 export type FormatType = OCTET_STRING; // OctetStringType
 
 
-export const _decode_FormatType = $._decodeOctetString;
+export const _decode_FormatType: $.ASN1Decoder<OCTET_STRING> = $._decodeOctetString;
 
 
-export const _encode_FormatType = $._encodeOctetString;
+export const _encode_FormatType: $.ASN1Encoder<OCTET_STRING> = $._encodeOctetString;
 
 
 /* eslint-enable */

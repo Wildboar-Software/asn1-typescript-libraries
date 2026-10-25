@@ -74,7 +74,7 @@ export type DesignatedISChange = _enum_for_DesignatedISChange;
  *
  * @enum {number}
  */
-export const DesignatedISChange = _enum_for_DesignatedISChange;
+export const DesignatedISChange: typeof _enum_for_DesignatedISChange = _enum_for_DesignatedISChange;
 
 /**
  * @summary DesignatedISChange_resigned
@@ -87,7 +87,7 @@ export const DesignatedISChange = _enum_for_DesignatedISChange;
  * @constant
  * @type {number}
  */
-export const DesignatedISChange_resigned: DesignatedISChange =
+export const DesignatedISChange_resigned: 0 =
   DesignatedISChange.resigned; /* LONG_NAMED_ENUMERATED_VALUE */
 
 /**
@@ -95,7 +95,7 @@ export const DesignatedISChange_resigned: DesignatedISChange =
  * @constant
  * @type {number}
  */
-export const resigned: DesignatedISChange =
+export const resigned: 0 =
   DesignatedISChange.resigned; /* SHORT_NAMED_ENUMERATED_VALUE */
 
 /**
@@ -109,7 +109,7 @@ export const resigned: DesignatedISChange =
  * @constant
  * @type {number}
  */
-export const DesignatedISChange_elected: DesignatedISChange =
+export const DesignatedISChange_elected: 1 =
   DesignatedISChange.elected; /* LONG_NAMED_ENUMERATED_VALUE */
 
 /**
@@ -117,14 +117,25 @@ export const DesignatedISChange_elected: DesignatedISChange =
  * @constant
  * @type {number}
  */
-export const elected: DesignatedISChange =
+export const elected: 1 =
   DesignatedISChange.elected; /* SHORT_NAMED_ENUMERATED_VALUE */
 
 
-export const _decode_DesignatedISChange = $._decodeEnumerated as $.ASN1Decoder<DesignatedISChange>;
+export function _decode_DesignatedISChange(el: _Element): DesignatedISChange {
+  const enumerated = $._decodeEnumerated(el);
+  switch (enumerated) {
+    case DesignatedISChange.resigned: return DesignatedISChange.resigned;
+    case DesignatedISChange.elected: return DesignatedISChange.elected;
+    default:
+      throw new _ConstructionError(
+        'Invalid ENUMERATED value ' + enumerated + ' for DesignatedISChange.',
+        el,
+      );
+  }
+}
 
 
-export const _encode_DesignatedISChange = $._encodeEnumerated as $.ASN1Encoder<DesignatedISChange>;
+export const _encode_DesignatedISChange: $.ASN1Encoder<DesignatedISChange> = $._encodeEnumerated as $.ASN1Encoder<DesignatedISChange>;
 
 
 /* eslint-enable */

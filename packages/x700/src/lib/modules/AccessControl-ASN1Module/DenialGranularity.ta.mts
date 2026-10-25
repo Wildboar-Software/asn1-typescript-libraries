@@ -1,6 +1,6 @@
 /* eslint-disable */
 import {
-    ASN1Element as _Element,
+    type ASN1Element as _Element,
     ASN1TagClass as _TagClass,
     ASN1Construction as _Construction,
     ASN1UniversalType as _UniversalType,
@@ -115,7 +115,7 @@ export type DenialGranularity = _enum_for_DenialGranularity;
  *
  * @enum {number}
  */
-export const DenialGranularity = _enum_for_DenialGranularity;
+export const DenialGranularity: typeof _enum_for_DenialGranularity = _enum_for_DenialGranularity;
 
 /**
  * @summary DenialGranularity_request
@@ -129,7 +129,7 @@ export const DenialGranularity = _enum_for_DenialGranularity;
  * @constant
  * @type {number}
  */
-export const DenialGranularity_request: DenialGranularity =
+export const DenialGranularity_request: _enum_for_DenialGranularity.request =
     DenialGranularity.request; /* LONG_NAMED_ENUMERATED_VALUE */
 
 /**
@@ -142,7 +142,7 @@ export const DenialGranularity_request: DenialGranularity =
  * @constant
  * @type {number}
  */
-export const request: DenialGranularity =
+export const request: _enum_for_DenialGranularity.request =
     DenialGranularity.request; /* SHORT_NAMED_ENUMERATED_VALUE */
 
 /**
@@ -156,7 +156,7 @@ export const request: DenialGranularity =
  * @constant
  * @type {number}
  */
-export const DenialGranularity_object: DenialGranularity =
+export const DenialGranularity_object: _enum_for_DenialGranularity.object =
     DenialGranularity.object; /* LONG_NAMED_ENUMERATED_VALUE */
 
 /**
@@ -169,7 +169,7 @@ export const DenialGranularity_object: DenialGranularity =
  * @constant
  * @type {number}
  */
-export const object: DenialGranularity =
+export const object: _enum_for_DenialGranularity.object =
     DenialGranularity.object; /* SHORT_NAMED_ENUMERATED_VALUE */
 
 /**
@@ -182,7 +182,7 @@ export const object: DenialGranularity =
  * @constant
  * @type {number}
  */
-export const DenialGranularity_attribute: DenialGranularity =
+export const DenialGranularity_attribute: _enum_for_DenialGranularity.attribute =
     DenialGranularity.attribute; /* LONG_NAMED_ENUMERATED_VALUE */
 
 /**
@@ -194,14 +194,26 @@ export const DenialGranularity_attribute: DenialGranularity =
  * @constant
  * @type {number}
  */
-export const attribute: DenialGranularity =
+export const attribute: _enum_for_DenialGranularity.attribute =
     DenialGranularity.attribute; /* SHORT_NAMED_ENUMERATED_VALUE */
 
 
-export const _decode_DenialGranularity = $._decodeEnumerated;
+export function _decode_DenialGranularity(el: _Element): DenialGranularity {
+    const enumerated = $._decodeEnumerated(el);
+    switch (enumerated) {
+        case DenialGranularity.request: return DenialGranularity.request;
+        case DenialGranularity.object: return DenialGranularity.object;
+        case DenialGranularity.attribute: return DenialGranularity.attribute;
+        default:
+            throw new _ConstructionError(
+                'Invalid ENUMERATED value ' + enumerated + ' for DenialGranularity.',
+                el,
+            );
+    }
+}
 
 
-export const _encode_DenialGranularity = $._encodeEnumerated;
+export const _encode_DenialGranularity: $.ASN1Encoder<DenialGranularity> = $._encodeEnumerated as $.ASN1Encoder<DenialGranularity>;
 
 
 /* eslint-enable */

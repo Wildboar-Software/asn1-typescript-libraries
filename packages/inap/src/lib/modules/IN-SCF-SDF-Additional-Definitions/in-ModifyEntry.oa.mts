@@ -4,9 +4,9 @@ import { type ERROR } from "../Remote-Operations-Information-Objects/ERROR.oca.m
 import { type OPERATION } from "../Remote-Operations-Information-Objects/OPERATION.oca.mjs";
 // export { Priority, _decode_Priority, _encode_Priority } from "../Remote-Operations-Information-Objects/Priority.ta.mjs";
 // export { Code, _decode_Code, _encode_Code } from "../Remote-Operations-Information-Objects/Code.ta.mjs";
-import { IN_ModifyEntryArgument, _decode_IN_ModifyEntryArgument, _encode_IN_ModifyEntryArgument } from "../IN-SCF-SDF-Additional-Definitions/IN-ModifyEntryArgument.ta.mjs";
+import { type IN_ModifyEntryArgument, _decode_IN_ModifyEntryArgument, _encode_IN_ModifyEntryArgument } from "../IN-SCF-SDF-Additional-Definitions/IN-ModifyEntryArgument.ta.mjs";
 // export { IN_ModifyEntryArgument, _decode_IN_ModifyEntryArgument, _encode_IN_ModifyEntryArgument } from "../IN-SCF-SDF-Additional-Definitions/IN-ModifyEntryArgument.ta.mjs";
-import { IN_ModifyEntryResult, _decode_IN_ModifyEntryResult, _encode_IN_ModifyEntryResult } from "../IN-SCF-SDF-Additional-Definitions/IN-ModifyEntryResult.ta.mjs";
+import { type IN_ModifyEntryResult, _decode_IN_ModifyEntryResult, _encode_IN_ModifyEntryResult } from "../IN-SCF-SDF-Additional-Definitions/IN-ModifyEntryResult.ta.mjs";
 // export { IN_ModifyEntryResult, _decode_IN_ModifyEntryResult, _encode_IN_ModifyEntryResult } from "../IN-SCF-SDF-Additional-Definitions/IN-ModifyEntryResult.ta.mjs";
 import { nameError } from "../DirectoryAbstractService/nameError.oa.mjs";
 // export { nameError } from "../DirectoryAbstractService/nameError.oa.mjs";

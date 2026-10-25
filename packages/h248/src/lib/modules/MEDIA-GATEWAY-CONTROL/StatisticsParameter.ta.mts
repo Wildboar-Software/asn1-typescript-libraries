@@ -1,12 +1,12 @@
 /* eslint-disable */
 import {
-    OPTIONAL,
-    ASN1Element as _Element,
+    type OPTIONAL,
+    type ASN1Element as _Element,
     ASN1TagClass as _TagClass
 } from "@wildboar/asn1";
 import * as $ from "@wildboar/asn1/functional";
-import { PkgdName, _decode_PkgdName, _encode_PkgdName } from "../MEDIA-GATEWAY-CONTROL/PkgdName.ta.mjs";
-import { Value, _decode_Value, _encode_Value } from "../MEDIA-GATEWAY-CONTROL/Value.ta.mjs";
+import { type PkgdName, _decode_PkgdName, _encode_PkgdName } from "../MEDIA-GATEWAY-CONTROL/PkgdName.ta.mjs";
+import { type Value, _decode_Value, _encode_Value } from "../MEDIA-GATEWAY-CONTROL/Value.ta.mjs";
 
 
 /**
@@ -43,7 +43,7 @@ class StatisticsParameter {
      * @public
      * @readonly
      */
-    readonly statName: PkgdName;
+    public readonly statName: PkgdName;
     /**
      * @summary `statValue`.
      * @description
@@ -55,7 +55,7 @@ class StatisticsParameter {
      * @public
      * @readonly
      */
-    readonly statValue?: OPTIONAL<Value>;
+    public readonly statValue?: OPTIONAL<Value>;
 
     constructor (
         statName: PkgdName,

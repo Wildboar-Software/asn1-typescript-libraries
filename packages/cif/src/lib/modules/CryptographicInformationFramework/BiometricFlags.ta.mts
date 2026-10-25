@@ -1,7 +1,7 @@
 /* eslint-disable */
 import {
-    BIT_STRING,
-    ASN1Element as _Element,
+    type BIT_STRING,
+    type ASN1Element as _Element,
     ASN1TagClass as _TagClass,
     ASN1Construction as _Construction,
     ASN1UniversalType as _UniversalType,
@@ -149,8 +149,8 @@ const BiometricFlags_confidentiality_protected: number = 10; /* LONG_NAMED_BIT *
  */
 export
 const confidentiality_protected: number = BiometricFlags_confidentiality_protected; /* SHORT_NAMED_BIT */
-export const _decode_BiometricFlags = $._decodeBitString;
-export const _encode_BiometricFlags = $._encodeBitString;
+export const _decode_BiometricFlags: $.ASN1Decoder<BIT_STRING> = $._decodeBitString;
+export const _encode_BiometricFlags: $.ASN1Encoder<BIT_STRING> = $._encodeBitString;
 
 
 /* eslint-enable */

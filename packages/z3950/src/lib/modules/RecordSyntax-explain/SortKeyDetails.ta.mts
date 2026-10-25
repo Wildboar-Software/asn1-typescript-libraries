@@ -1,15 +1,15 @@
 /* eslint-disable */
 import {
-    OPTIONAL,
-    ASN1Element as _Element,
+    type OPTIONAL,
+    type ASN1Element as _Element,
     ASN1TagClass as _TagClass
 } from "@wildboar/asn1";
 import * as $ from "@wildboar/asn1/functional";
-import { HumanString, _decode_HumanString, _encode_HumanString } from "../RecordSyntax-explain/HumanString.ta.mjs";
+import { type HumanString, _decode_HumanString, _encode_HumanString } from "../RecordSyntax-explain/HumanString.ta.mjs";
 import { Specification, _decode_Specification, _encode_Specification } from "../Z39-50-APDU-2001/Specification.ta.mjs";
 import { AttributeCombinations, _decode_AttributeCombinations, _encode_AttributeCombinations } from "../RecordSyntax-explain/AttributeCombinations.ta.mjs";
-import { SortKeyDetails_sortType, _decode_SortKeyDetails_sortType, _encode_SortKeyDetails_sortType } from "../RecordSyntax-explain/SortKeyDetails-sortType.ta.mjs";
-import { SortKeyDetails_caseSensitivity, _decode_SortKeyDetails_caseSensitivity, _encode_SortKeyDetails_caseSensitivity } from "../RecordSyntax-explain/SortKeyDetails-caseSensitivity.ta.mjs";
+import { type SortKeyDetails_sortType, _decode_SortKeyDetails_sortType, _encode_SortKeyDetails_sortType } from "../RecordSyntax-explain/SortKeyDetails-sortType.ta.mjs";
+import { type SortKeyDetails_caseSensitivity, _decode_SortKeyDetails_caseSensitivity, _encode_SortKeyDetails_caseSensitivity } from "../RecordSyntax-explain/SortKeyDetails-caseSensitivity.ta.mjs";
 
 
 /**

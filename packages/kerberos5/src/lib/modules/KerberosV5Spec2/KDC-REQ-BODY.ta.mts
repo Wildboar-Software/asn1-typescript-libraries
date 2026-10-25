@@ -1,6 +1,6 @@
 /* eslint-disable */
 import {
-  OPTIONAL,
+  type OPTIONAL,
   ASN1Element as _Element,
   ASN1TagClass as _TagClass,
   ASN1Construction as _Construction,
@@ -12,7 +12,7 @@ import {
 } from '@wildboar/asn1';
 import * as $ from '@wildboar/asn1/functional';
 import {
-  KDCOptions,
+  type KDCOptions,
   _decode_KDCOptions,
   _encode_KDCOptions,
 } from '../KerberosV5Spec2/KDCOptions.ta.mjs';
@@ -22,27 +22,27 @@ import {
   _encode_PrincipalName,
 } from '../KerberosV5Spec2/PrincipalName.ta.mjs';
 import {
-  Realm,
+  type Realm,
   _decode_Realm,
   _encode_Realm,
 } from '../KerberosV5Spec2/Realm.ta.mjs';
 import {
-  KerberosTime,
+  type KerberosTime,
   _decode_KerberosTime,
   _encode_KerberosTime,
 } from '../KerberosV5Spec2/KerberosTime.ta.mjs';
 import {
-  UInt32,
+  type UInt32,
   _decode_UInt32,
   _encode_UInt32,
 } from '../KerberosV5Spec2/UInt32.ta.mjs';
 import {
-  Int32,
+  type Int32,
   _decode_Int32,
   _encode_Int32,
 } from '../KerberosV5Spec2/Int32.ta.mjs';
 import {
-  HostAddresses,
+  type HostAddresses,
   _decode_HostAddresses,
   _encode_HostAddresses,
 } from '../KerberosV5Spec2/HostAddresses.ta.mjs';
@@ -104,7 +104,7 @@ export class KDC_REQ_BODY {
    * @public
    * @readonly
    */
-  readonly kdc_options: KDCOptions;
+  public readonly kdc_options: KDCOptions;
   /**
    * @summary `cname`.
    * @description
@@ -114,7 +114,7 @@ export class KDC_REQ_BODY {
    * @public
    * @readonly
    */
-  readonly cname: OPTIONAL<PrincipalName>;
+  public readonly cname: OPTIONAL<PrincipalName>;
   /**
    * @summary `realm`.
    * @description
@@ -125,7 +125,7 @@ export class KDC_REQ_BODY {
    * @public
    * @readonly
    */
-  readonly realm: Realm;
+  public readonly realm: Realm;
   /**
    * @summary `sname`.
    * @description
@@ -137,7 +137,7 @@ export class KDC_REQ_BODY {
    * @public
    * @readonly
    */
-  readonly sname: OPTIONAL<PrincipalName>;
+  public readonly sname: OPTIONAL<PrincipalName>;
   /**
    * @summary `from_`.
    * @description
@@ -148,7 +148,7 @@ export class KDC_REQ_BODY {
    * @public
    * @readonly
    */
-  readonly from_: OPTIONAL<KerberosTime>;
+  public readonly from_: OPTIONAL<KerberosTime>;
   /**
    * @summary `till`.
    * @description
@@ -159,7 +159,7 @@ export class KDC_REQ_BODY {
    * @public
    * @readonly
    */
-  readonly till: KerberosTime;
+  public readonly till: KerberosTime;
   /**
    * @summary `rtime`.
    * @description
@@ -169,7 +169,7 @@ export class KDC_REQ_BODY {
    * @public
    * @readonly
    */
-  readonly rtime: OPTIONAL<KerberosTime>;
+  public readonly rtime: OPTIONAL<KerberosTime>;
   /**
    * @summary `nonce`.
    * @description
@@ -180,7 +180,7 @@ export class KDC_REQ_BODY {
    * @public
    * @readonly
    */
-  readonly nonce: UInt32;
+  public readonly nonce: UInt32;
   /**
    * @summary `etype`.
    * @description
@@ -191,7 +191,7 @@ export class KDC_REQ_BODY {
    * @public
    * @readonly
    */
-  readonly etype: Int32[];
+  public readonly etype: Int32[];
   /**
    * @summary `addresses`.
    * @description
@@ -202,7 +202,7 @@ export class KDC_REQ_BODY {
    * @public
    * @readonly
    */
-  readonly addresses?: OPTIONAL<HostAddresses>;
+  public readonly addresses?: OPTIONAL<HostAddresses>;
   /**
    * @summary `enc_authorization_data`.
    * @description
@@ -214,7 +214,7 @@ export class KDC_REQ_BODY {
    * @public
    * @readonly
    */
-  readonly enc_authorization_data?: OPTIONAL<EncryptedData>;
+  public readonly enc_authorization_data?: OPTIONAL<EncryptedData>;
   /**
    * @summary `additional_tickets`.
    * @description
@@ -225,7 +225,7 @@ export class KDC_REQ_BODY {
    * @public
    * @readonly
    */
-  readonly additional_tickets?: OPTIONAL<Ticket[]>;
+  public readonly additional_tickets?: OPTIONAL<Ticket[]>;
 
   constructor(
     kdc_options: KDCOptions,

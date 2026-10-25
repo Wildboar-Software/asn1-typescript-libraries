@@ -1,7 +1,7 @@
 /* eslint-disable */
 import {
-    OPTIONAL,
-    ASN1Element as _Element,
+    type OPTIONAL,
+    type ASN1Element as _Element,
     ASN1TagClass as _TagClass,
     ASN1Construction as _Construction,
     ASN1UniversalType as _UniversalType,
@@ -11,11 +11,11 @@ import {
     ASN1ConstructionError as _ConstructionError,
 } from "@wildboar/asn1";
 import * as $ from "@wildboar/asn1/functional";
-import { Capabilities, _decode_Capabilities, _encode_Capabilities } from "../V59/Capabilities.ta.mjs";
+import { type Capabilities, _decode_Capabilities, _encode_Capabilities } from "../V59/Capabilities.ta.mjs";
 
-import { V59String, _decode_V59String, _encode_V59String } from "../V59/V59String.ta.mjs";
+import { type V59String, _decode_V59String, _encode_V59String } from "../V59/V59String.ta.mjs";
 
-import { TxPowerLevel, _decode_TxPowerLevel, _encode_TxPowerLevel } from "../V59/TxPowerLevel.ta.mjs";
+import { type TxPowerLevel, _decode_TxPowerLevel, _encode_TxPowerLevel } from "../V59/TxPowerLevel.ta.mjs";
 
 import { V34HdxDiag_Item_cCrate, _enum_for_V34HdxDiag_Item_cCrate, _decode_V34HdxDiag_Item_cCrate, _encode_V34HdxDiag_Item_cCrate } from "../V59/V34HdxDiag-Item-cCrate.ta.mjs";
 
@@ -62,7 +62,7 @@ class V34HdxDiag_Item {
      * @public
      * @readonly
      */
-    readonly modeV34H: Capabilities;
+    public readonly modeV34H: Capabilities;
     /**
      * @summary `iNFO0Tx`.
      * @description
@@ -74,7 +74,7 @@ class V34HdxDiag_Item {
      * @public
      * @readonly
      */
-    readonly iNFO0Tx: V59String;
+    public readonly iNFO0Tx: V59String;
     /**
      * @summary `iNFO0Rx`.
      * @description
@@ -86,7 +86,7 @@ class V34HdxDiag_Item {
      * @public
      * @readonly
      */
-    readonly iNFO0Rx: V59String;
+    public readonly iNFO0Rx: V59String;
     /**
      * @summary `iNFOh`.
      * @description
@@ -98,7 +98,7 @@ class V34HdxDiag_Item {
      * @public
      * @readonly
      */
-    readonly iNFOh: V59String;
+    public readonly iNFOh: V59String;
     /**
      * @summary `mPh`.
      * @description
@@ -111,7 +111,7 @@ class V34HdxDiag_Item {
      * @public
      * @readonly
      */
-    readonly mPh: V59String;
+    public readonly mPh: V59String;
     /**
      * @summary `precodeCoeffTx`.
      * @description
@@ -125,7 +125,7 @@ class V34HdxDiag_Item {
      * @public
      * @readonly
      */
-    readonly precodeCoeffTx: OPTIONAL<V59String>;
+    public readonly precodeCoeffTx: OPTIONAL<V59String>;
     /**
      * @summary `v34TxLevel`.
      * @description
@@ -135,7 +135,7 @@ class V34HdxDiag_Item {
      * @public
      * @readonly
      */
-    readonly v34TxLevel: TxPowerLevel;
+    public readonly v34TxLevel: TxPowerLevel;
     /**
      * @summary `symbolRate`.
      * @description
@@ -145,7 +145,7 @@ class V34HdxDiag_Item {
      * @public
      * @readonly
      */
-    readonly symbolRate: OPTIONAL<V59String>;
+    public readonly symbolRate: OPTIONAL<V59String>;
     /**
      * @summary `carrierFreq`.
      * @description
@@ -155,7 +155,7 @@ class V34HdxDiag_Item {
      * @public
      * @readonly
      */
-    readonly carrierFreq: OPTIONAL<V59String>;
+    public readonly carrierFreq: OPTIONAL<V59String>;
     /**
      * @summary `dataHistory`.
      * @description
@@ -166,7 +166,7 @@ class V34HdxDiag_Item {
      * @public
      * @readonly
      */
-    readonly dataHistory: OPTIONAL<V59String>;
+    public readonly dataHistory: OPTIONAL<V59String>;
     /**
      * @summary `rxLevelEstimate`.
      * @description
@@ -177,7 +177,7 @@ class V34HdxDiag_Item {
      * @public
      * @readonly
      */
-    readonly rxLevelEstimate: OPTIONAL<V59String>;
+    public readonly rxLevelEstimate: OPTIONAL<V59String>;
     /**
      * @summary `noiseEstimate`.
      * @description
@@ -187,7 +187,7 @@ class V34HdxDiag_Item {
      * @public
      * @readonly
      */
-    readonly noiseEstimate: OPTIONAL<V59String>;
+    public readonly noiseEstimate: OPTIONAL<V59String>;
     /**
      * @summary `rxSignalQuality`.
      * @description
@@ -199,7 +199,7 @@ class V34HdxDiag_Item {
      * @public
      * @readonly
      */
-    readonly rxSignalQuality: OPTIONAL<V59String>;
+    public readonly rxSignalQuality: OPTIONAL<V59String>;
     /**
      * @summary `cCrate`.
      * @description
@@ -209,13 +209,13 @@ class V34HdxDiag_Item {
      * @public
      * @readonly
      */
-    readonly cCrate: V34HdxDiag_Item_cCrate;
+    public readonly cCrate: V34HdxDiag_Item_cCrate;
     /**
      * @summary Extensions that are not recognized.
      * @public
      * @readonly
      */
-    readonly _unrecognizedExtensionsList: _Element[];
+    public readonly _unrecognizedExtensionsList: _Element[];
 
     constructor (
         modeV34H: Capabilities,
@@ -273,7 +273,7 @@ class V34HdxDiag_Item {
          * @static
          */
 
-    public static _enum_for_cCrate = _enum_for_V34HdxDiag_Item_cCrate;
+    public static _enum_for_cCrate: typeof _enum_for_V34HdxDiag_Item_cCrate = _enum_for_V34HdxDiag_Item_cCrate;
 }
 
 /**

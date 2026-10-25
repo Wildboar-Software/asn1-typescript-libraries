@@ -1,6 +1,6 @@
 /* eslint-disable */
 import {
-    ASN1Element as _Element,
+    type ASN1Element as _Element,
     ASN1TagClass as _TagClass,
     ASN1Construction as _Construction,
     ASN1UniversalType as _UniversalType,
@@ -60,14 +60,14 @@ export type AutoSubmitted = _enum_for_AutoSubmitted;
  *
  * @enum {number}
  */
-export const AutoSubmitted = _enum_for_AutoSubmitted;
+export const AutoSubmitted: typeof _enum_for_AutoSubmitted = _enum_for_AutoSubmitted;
 
 /**
  * @summary AutoSubmitted_not_auto_submitted
  * @constant
  * @type {number}
  */
-export const AutoSubmitted_not_auto_submitted: AutoSubmitted =
+export const AutoSubmitted_not_auto_submitted: _enum_for_AutoSubmitted.not_auto_submitted =
     AutoSubmitted.not_auto_submitted; /* LONG_NAMED_ENUMERATED_VALUE */
 
 /**
@@ -75,7 +75,7 @@ export const AutoSubmitted_not_auto_submitted: AutoSubmitted =
  * @constant
  * @type {number}
  */
-export const not_auto_submitted: AutoSubmitted =
+export const not_auto_submitted: _enum_for_AutoSubmitted.not_auto_submitted =
     AutoSubmitted.not_auto_submitted; /* SHORT_NAMED_ENUMERATED_VALUE */
 
 /**
@@ -83,7 +83,7 @@ export const not_auto_submitted: AutoSubmitted =
  * @constant
  * @type {number}
  */
-export const AutoSubmitted_auto_generated: AutoSubmitted =
+export const AutoSubmitted_auto_generated: _enum_for_AutoSubmitted.auto_generated =
     AutoSubmitted.auto_generated; /* LONG_NAMED_ENUMERATED_VALUE */
 
 /**
@@ -91,7 +91,7 @@ export const AutoSubmitted_auto_generated: AutoSubmitted =
  * @constant
  * @type {number}
  */
-export const auto_generated: AutoSubmitted =
+export const auto_generated: _enum_for_AutoSubmitted.auto_generated =
     AutoSubmitted.auto_generated; /* SHORT_NAMED_ENUMERATED_VALUE */
 
 /**
@@ -99,7 +99,7 @@ export const auto_generated: AutoSubmitted =
  * @constant
  * @type {number}
  */
-export const AutoSubmitted_auto_replied: AutoSubmitted =
+export const AutoSubmitted_auto_replied: _enum_for_AutoSubmitted.auto_replied =
     AutoSubmitted.auto_replied; /* LONG_NAMED_ENUMERATED_VALUE */
 
 /**
@@ -107,14 +107,26 @@ export const AutoSubmitted_auto_replied: AutoSubmitted =
  * @constant
  * @type {number}
  */
-export const auto_replied: AutoSubmitted =
+export const auto_replied: _enum_for_AutoSubmitted.auto_replied =
     AutoSubmitted.auto_replied; /* SHORT_NAMED_ENUMERATED_VALUE */
 
 
-export const _decode_AutoSubmitted = $._decodeEnumerated;
+export function _decode_AutoSubmitted(el: _Element): AutoSubmitted {
+    const enumerated = $._decodeEnumerated(el);
+    switch (enumerated) {
+        case AutoSubmitted.not_auto_submitted: return AutoSubmitted.not_auto_submitted;
+        case AutoSubmitted.auto_generated: return AutoSubmitted.auto_generated;
+        case AutoSubmitted.auto_replied: return AutoSubmitted.auto_replied;
+        default:
+            throw new _ConstructionError(
+                'Invalid ENUMERATED value ' + enumerated + ' for AutoSubmitted.',
+                el,
+            );
+    }
+}
 
 
-export const _encode_AutoSubmitted = $._encodeEnumerated;
+export const _encode_AutoSubmitted: $.ASN1Encoder<AutoSubmitted> = $._encodeEnumerated as $.ASN1Encoder<AutoSubmitted>;
 
 
 /* eslint-enable */

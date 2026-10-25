@@ -1,12 +1,12 @@
 /* eslint-disable */
 import {
-    OPTIONAL,
-    ASN1Element as _Element,
+    type OPTIONAL,
+    type ASN1Element as _Element,
     ASN1TagClass as _TagClass
 } from "@wildboar/asn1";
 import * as $ from "@wildboar/asn1/functional";
-import { SMS_TriggerDetectionPoint, _decode_SMS_TriggerDetectionPoint, _encode_SMS_TriggerDetectionPoint, _enum_for_SMS_TriggerDetectionPoint } from "../MAP-MS-DataTypes/SMS-TriggerDetectionPoint.ta.mjs";
-import { TPDU_TypeCriterion, _decode_TPDU_TypeCriterion, _encode_TPDU_TypeCriterion } from "../MAP-MS-DataTypes/TPDU-TypeCriterion.ta.mjs";
+import { type SMS_TriggerDetectionPoint, _decode_SMS_TriggerDetectionPoint, _encode_SMS_TriggerDetectionPoint, _enum_for_SMS_TriggerDetectionPoint } from "../MAP-MS-DataTypes/SMS-TriggerDetectionPoint.ta.mjs";
+import { type TPDU_TypeCriterion, _decode_TPDU_TypeCriterion, _encode_TPDU_TypeCriterion } from "../MAP-MS-DataTypes/TPDU-TypeCriterion.ta.mjs";
 
 
 /**
@@ -21,7 +21,7 @@ import { TPDU_TypeCriterion, _decode_TPDU_TypeCriterion, _encode_TPDU_TypeCriter
  * ```asn1
  * MT-smsCAMELTDP-Criteria ::= SEQUENCE {
  *     sms-TriggerDetectionPoint    SMS-TriggerDetectionPoint,
- *     tpdu-TypeCriterion    [0]    TPDU-TypeCriterion    OPTIONAL,
+ *     tpdu-TypeCriterion    [0]    TPDU-TypeCriterion    type OPTIONAL,
  *     ... }
  * ```
  * 
@@ -29,36 +29,44 @@ import { TPDU_TypeCriterion, _decode_TPDU_TypeCriterion, _encode_TPDU_TypeCriter
  */
 export
 class MT_smsCAMELTDP_Criteria {
+    /**
+     * @summary `sms_TriggerDetectionPoint`.
+     * @description
+     *
+     * SMS trigger detection point. (3GPP TS 29.002 V19.1.0 clause 17.7.1)
+     *
+     * @public
+     * @readonly
+     */
+    public readonly sms_TriggerDetectionPoint: SMS_TriggerDetectionPoint;
+    /**
+     * @summary `tpdu_TypeCriterion`.
+     * @description
+     *
+     * MT-SMS TPDU types that trigger. Unknown values, or
+     * `sms-SUBMIT-REPORT` in CAMEL phase 4, cause the whole criterion to be
+     * ignored. (3GPP TS 29.002 V19.1.0 clause 17.7.1)
+     *
+     * @public
+     * @readonly
+     */
+    public readonly tpdu_TypeCriterion?: OPTIONAL<TPDU_TypeCriterion>;
+    /**
+     * @summary Extensions that are not recognized.
+     * @public
+     * @readonly
+     */
+    public readonly _unrecognizedExtensionsList: _Element[];
+
     constructor (
-        /**
-         * @summary `sms_TriggerDetectionPoint`.
-         * @description
-         *
-         * SMS trigger detection point. (3GPP TS 29.002 V19.1.0 clause 17.7.1)
-         *
-         * @public
-         * @readonly
-         */
-        readonly sms_TriggerDetectionPoint: SMS_TriggerDetectionPoint,
-        /**
-         * @summary `tpdu_TypeCriterion`.
-         * @description
-         *
-         * MT-SMS TPDU types that trigger. Unknown values, or
-         * `sms-SUBMIT-REPORT` in CAMEL phase 4, cause the whole criterion to be
-         * ignored. (3GPP TS 29.002 V19.1.0 clause 17.7.1)
-         *
-         * @public
-         * @readonly
-         */
-        readonly tpdu_TypeCriterion?: OPTIONAL<TPDU_TypeCriterion>,
-        /**
-         * @summary Extensions that are not recognized.
-         * @public
-         * @readonly
-         */
-        readonly _unrecognizedExtensionsList: _Element[] = []
-    ) {}
+        sms_TriggerDetectionPoint: SMS_TriggerDetectionPoint,
+        tpdu_TypeCriterion?: OPTIONAL<TPDU_TypeCriterion>,
+        _unrecognizedExtensionsList: _Element[] = []
+    ) {
+        this.sms_TriggerDetectionPoint = sms_TriggerDetectionPoint;
+        this.tpdu_TypeCriterion = tpdu_TypeCriterion;
+        this._unrecognizedExtensionsList = _unrecognizedExtensionsList;
+    }
 
     /**
      * @summary Restructures an object into a MT_smsCAMELTDP_Criteria
@@ -82,7 +90,7 @@ class MT_smsCAMELTDP_Criteria {
          * @static
          */
 
-    public static _enum_for_sms_TriggerDetectionPoint = _enum_for_SMS_TriggerDetectionPoint;
+    public static _enum_for_sms_TriggerDetectionPoint: typeof _enum_for_SMS_TriggerDetectionPoint = _enum_for_SMS_TriggerDetectionPoint;
 }
 
 /**

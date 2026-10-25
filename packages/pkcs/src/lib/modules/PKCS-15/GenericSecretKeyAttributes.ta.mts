@@ -1,12 +1,12 @@
 /* eslint-disable */
 import {
     ASN1ConstructionError as _ConstructionError,
-    ASN1Element as _Element,
-    OCTET_STRING,
+    type ASN1Element as _Element,
+    type OCTET_STRING,
 } from "@wildboar/asn1";
 import * as $ from "@wildboar/asn1/functional";
 import {
-    ObjectValue,
+    type ObjectValue,
     _get_decoder_for_ObjectValue,
     _get_encoder_for_ObjectValue,
 } from "../PKCS-15/ObjectValue.ta.mjs";
@@ -26,20 +26,26 @@ import {
  *
  */
 export class GenericSecretKeyAttributes {
+    /**
+     * @summary `value`.
+     * @public
+     * @readonly
+     */
+    public readonly value: ObjectValue<OCTET_STRING>;
+    /**
+     * @summary Extensions that are not recognized.
+     * @public
+     * @readonly
+     */
+    public readonly _unrecognizedExtensionsList: _Element[];
+
     constructor(
-        /**
-         * @summary `value`.
-         * @public
-         * @readonly
-         */
-        readonly value: ObjectValue<OCTET_STRING>,
-        /**
-         * @summary Extensions that are not recognized.
-         * @public
-         * @readonly
-         */
-        readonly _unrecognizedExtensionsList: _Element[] = []
-    ) {}
+        value: ObjectValue<OCTET_STRING>,
+        _unrecognizedExtensionsList: _Element[] = []
+    ) {
+        this.value = value;
+        this._unrecognizedExtensionsList = _unrecognizedExtensionsList;
+    }
 
     /**
      * @summary Restructures an object into a GenericSecretKeyAttributes

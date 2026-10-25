@@ -67,14 +67,14 @@ export type Purpose = _enum_for_Purpose;
  *
  * @enum {number}
  */
-export const Purpose = _enum_for_Purpose;
+export const Purpose: typeof _enum_for_Purpose = _enum_for_Purpose;
 
 /**
  * @summary Purpose_no_value_available
  * @constant
  * @type {number}
  */
-export const Purpose_no_value_available: Purpose =
+export const Purpose_no_value_available: 0 =
   Purpose.no_value_available; /* LONG_NAMED_ENUMERATED_VALUE */
 
 /**
@@ -82,7 +82,7 @@ export const Purpose_no_value_available: Purpose =
  * @constant
  * @type {number}
  */
-export const no_value_available: Purpose =
+export const no_value_available: 0 =
   Purpose.no_value_available; /* SHORT_NAMED_ENUMERATED_VALUE */
 
 /**
@@ -90,7 +90,7 @@ export const no_value_available: Purpose =
  * @constant
  * @type {number}
  */
-export const Purpose_verify: Purpose =
+export const Purpose_verify: 1 =
   Purpose.verify; /* LONG_NAMED_ENUMERATED_VALUE */
 
 /**
@@ -98,7 +98,7 @@ export const Purpose_verify: Purpose =
  * @constant
  * @type {number}
  */
-export const verify: Purpose =
+export const verify: 1 =
   Purpose.verify; /* SHORT_NAMED_ENUMERATED_VALUE */
 
 /**
@@ -106,7 +106,7 @@ export const verify: Purpose =
  * @constant
  * @type {number}
  */
-export const Purpose_identify: Purpose =
+export const Purpose_identify: 2 =
   Purpose.identify; /* LONG_NAMED_ENUMERATED_VALUE */
 
 /**
@@ -114,7 +114,7 @@ export const Purpose_identify: Purpose =
  * @constant
  * @type {number}
  */
-export const identify: Purpose =
+export const identify: 2 =
   Purpose.identify; /* SHORT_NAMED_ENUMERATED_VALUE */
 
 /**
@@ -122,7 +122,7 @@ export const identify: Purpose =
  * @constant
  * @type {number}
  */
-export const Purpose_enroll: Purpose =
+export const Purpose_enroll: 3 =
   Purpose.enroll; /* LONG_NAMED_ENUMERATED_VALUE */
 
 /**
@@ -130,7 +130,7 @@ export const Purpose_enroll: Purpose =
  * @constant
  * @type {number}
  */
-export const enroll: Purpose =
+export const enroll: 3 =
   Purpose.enroll; /* SHORT_NAMED_ENUMERATED_VALUE */
 
 /**
@@ -138,7 +138,7 @@ export const enroll: Purpose =
  * @constant
  * @type {number}
  */
-export const Purpose_enroll_verify: Purpose =
+export const Purpose_enroll_verify: 4 =
   Purpose.enroll_verify; /* LONG_NAMED_ENUMERATED_VALUE */
 
 /**
@@ -146,7 +146,7 @@ export const Purpose_enroll_verify: Purpose =
  * @constant
  * @type {number}
  */
-export const enroll_verify: Purpose =
+export const enroll_verify: 4 =
   Purpose.enroll_verify; /* SHORT_NAMED_ENUMERATED_VALUE */
 
 /**
@@ -154,7 +154,7 @@ export const enroll_verify: Purpose =
  * @constant
  * @type {number}
  */
-export const Purpose_enroll_identify: Purpose =
+export const Purpose_enroll_identify: 5 =
   Purpose.enroll_identify; /* LONG_NAMED_ENUMERATED_VALUE */
 
 /**
@@ -162,7 +162,7 @@ export const Purpose_enroll_identify: Purpose =
  * @constant
  * @type {number}
  */
-export const enroll_identify: Purpose =
+export const enroll_identify: 5 =
   Purpose.enroll_identify; /* SHORT_NAMED_ENUMERATED_VALUE */
 
 /**
@@ -170,7 +170,7 @@ export const enroll_identify: Purpose =
  * @constant
  * @type {number}
  */
-export const Purpose_audit: Purpose =
+export const Purpose_audit: 6 =
   Purpose.audit; /* LONG_NAMED_ENUMERATED_VALUE */
 
 /**
@@ -178,13 +178,13 @@ export const Purpose_audit: Purpose =
  * @constant
  * @type {number}
  */
-export const audit: Purpose = Purpose.audit; /* SHORT_NAMED_ENUMERATED_VALUE */
+export const audit: 6 = Purpose.audit; /* SHORT_NAMED_ENUMERATED_VALUE */
 
 
-export const _decode_Purpose = $._decodeEnumerated;
+export const _decode_Purpose: $.ASN1Decoder<Purpose> = $._decodeEnumerated as $.ASN1Decoder<Purpose>;
 
 
-export const _encode_Purpose = $._encodeEnumerated;
+export const _encode_Purpose: $.ASN1Encoder<Purpose> = $._encodeEnumerated as $.ASN1Encoder<Purpose>;
 
 
 /* eslint-enable */

@@ -1,6 +1,6 @@
 /* eslint-disable */
 import {
-    ASN1Element as _Element,
+    type ASN1Element as _Element,
     ASN1TagClass as _TagClass,
     ASN1Construction as _Construction,
     ASN1UniversalType as _UniversalType,
@@ -36,7 +36,8 @@ const _enum_for_LifecycleState = {
     pendingRemoval: 2,
 } as const;
 
-export type _enum_for_LifecycleState = (typeof _enum_for_LifecycleState)[keyof typeof _enum_for_LifecycleState];
+export
+type _enum_for_LifecycleState = (typeof _enum_for_LifecycleState)[keyof typeof _enum_for_LifecycleState];
 
 /**
  * @summary LifecycleState
@@ -74,7 +75,7 @@ type LifecycleState = _enum_for_LifecycleState;
  * @enum {number}
  */
 export
-const LifecycleState = _enum_for_LifecycleState;
+const LifecycleState: typeof _enum_for_LifecycleState = _enum_for_LifecycleState;
 
 /**
  * @summary LifecycleState_planned
@@ -87,7 +88,7 @@ const LifecycleState = _enum_for_LifecycleState;
  * @type {number}
  */
 export
-const LifecycleState_planned: LifecycleState = LifecycleState.planned; /* LONG_NAMED_ENUMERATED_VALUE */
+const LifecycleState_planned: 0 = LifecycleState.planned; /* LONG_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary planned
@@ -100,7 +101,7 @@ const LifecycleState_planned: LifecycleState = LifecycleState.planned; /* LONG_N
  * @type {number}
  */
 export
-const planned: LifecycleState = LifecycleState.planned; /* SHORT_NAMED_ENUMERATED_VALUE */
+const planned: 0 = LifecycleState.planned; /* SHORT_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary LifecycleState_installed
@@ -112,7 +113,7 @@ const planned: LifecycleState = LifecycleState.planned; /* SHORT_NAMED_ENUMERATE
  * @type {number}
  */
 export
-const LifecycleState_installed: LifecycleState = LifecycleState.installed; /* LONG_NAMED_ENUMERATED_VALUE */
+const LifecycleState_installed: 1 = LifecycleState.installed; /* LONG_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary installed
@@ -124,7 +125,7 @@ const LifecycleState_installed: LifecycleState = LifecycleState.installed; /* LO
  * @type {number}
  */
 export
-const installed: LifecycleState = LifecycleState.installed; /* SHORT_NAMED_ENUMERATED_VALUE */
+const installed: 1 = LifecycleState.installed; /* SHORT_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary LifecycleState_pendingRemoval
@@ -136,7 +137,7 @@ const installed: LifecycleState = LifecycleState.installed; /* SHORT_NAMED_ENUME
  * @type {number}
  */
 export
-const LifecycleState_pendingRemoval: LifecycleState = LifecycleState.pendingRemoval; /* LONG_NAMED_ENUMERATED_VALUE */
+const LifecycleState_pendingRemoval: 2 = LifecycleState.pendingRemoval; /* LONG_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary pendingRemoval
@@ -148,13 +149,25 @@ const LifecycleState_pendingRemoval: LifecycleState = LifecycleState.pendingRemo
  * @type {number}
  */
 export
-const pendingRemoval: LifecycleState = LifecycleState.pendingRemoval; /* SHORT_NAMED_ENUMERATED_VALUE */
+const pendingRemoval: 2 = LifecycleState.pendingRemoval; /* SHORT_NAMED_ENUMERATED_VALUE */
 
 
-export const _decode_LifecycleState = $._decodeEnumerated as $.ASN1Decoder<LifecycleState>;
+export function _decode_LifecycleState(el: _Element): LifecycleState {
+    const enumerated = $._decodeEnumerated(el);
+    switch (enumerated) {
+        case LifecycleState.planned: return LifecycleState.planned;
+        case LifecycleState.installed: return LifecycleState.installed;
+        case LifecycleState.pendingRemoval: return LifecycleState.pendingRemoval;
+        default:
+            throw new _ConstructionError(
+                "Invalid ENUMERATED value " + enumerated + " for LifecycleState.",
+                el,
+            );
+    }
+}
 
 
-export const _encode_LifecycleState = $._encodeEnumerated as $.ASN1Encoder<LifecycleState>;
+export const _encode_LifecycleState: $.ASN1Encoder<LifecycleState> = $._encodeEnumerated as $.ASN1Encoder<LifecycleState>;
 
 
 /* eslint-enable */

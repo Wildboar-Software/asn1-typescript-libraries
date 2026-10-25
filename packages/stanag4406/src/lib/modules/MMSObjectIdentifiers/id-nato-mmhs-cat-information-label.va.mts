@@ -2,7 +2,7 @@
 import {
     ObjectIdentifier as _OID
 } from "@wildboar/asn1";
-import { ID } from "../MMSObjectIdentifiers/ID.ta.mjs";
+import { type ID } from "../MMSObjectIdentifiers/ID.ta.mjs";
 import { id_cat } from "../MMSObjectIdentifiers/id-cat.va.mjs";
 
 

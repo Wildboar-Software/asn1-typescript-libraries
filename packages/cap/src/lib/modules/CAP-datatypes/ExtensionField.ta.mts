@@ -1,6 +1,6 @@
 import {
-    OPTIONAL,
-    ASN1Element as _Element,
+    type OPTIONAL,
+    type ASN1Element as _Element,
     ASN1TagClass as _TagClass,
 } from "@wildboar/asn1";
 import * as $ from "@wildboar/asn1/functional";
@@ -29,30 +29,40 @@ import { CriticalityType, _enum_for_CriticalityType, ignore, _decode_Criticality
  *
  */
 export class ExtensionField {
+    /**
+     * @summary `type`.
+     * @description
+     *
+     * Shall identify the value of an `EXTENSION` type. (3GPP TS 29.078
+     * V19.0.0 clause 5.1)
+     *
+     * @public
+     * @readonly
+     */
+    public readonly type_: Code;
+    public readonly criticality: OPTIONAL<CriticalityType>;
+    public readonly value: _Element;
+    public readonly _unrecognizedExtensionsList: _Element[];
+
     constructor (
-        /**
-         * @summary `type`.
-         * @description
-         *
-         * Shall identify the value of an `EXTENSION` type. (3GPP TS 29.078
-         * V19.0.0 clause 5.1)
-         *
-         * @public
-         * @readonly
-         */
-        readonly type_: Code,
-        readonly criticality: OPTIONAL<CriticalityType>,
-        readonly value: _Element,
-        readonly _unrecognizedExtensionsList: _Element[] = [],
-    ) {}
+        type_: Code,
+        criticality: OPTIONAL<CriticalityType>,
+        value: _Element,
+        _unrecognizedExtensionsList: _Element[] = [],
+    ) {
+        this.type_ = type_;
+        this.criticality = criticality;
+        this.value = value;
+        this._unrecognizedExtensionsList = _unrecognizedExtensionsList;
+    }
 
     public static _from_object (_o: { [_K in keyof (ExtensionField)]: (ExtensionField)[_K] }): ExtensionField {
         return new ExtensionField(_o.type_, _o.criticality, _o.value, _o._unrecognizedExtensionsList);
     }
 
-    public static get _default_value_for_criticality () { return ignore; }
+    public static get _default_value_for_criticality (): _enum_for_CriticalityType { return ignore; }
 
-    public static _enum_for_criticality = _enum_for_CriticalityType;
+    public static _enum_for_criticality: typeof _enum_for_CriticalityType = _enum_for_CriticalityType;
 }
 
 export const _root_component_type_list_1_spec_for_ExtensionField: $.ComponentSpec[] = [

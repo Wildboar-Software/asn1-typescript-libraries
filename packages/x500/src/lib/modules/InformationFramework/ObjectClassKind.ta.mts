@@ -1,5 +1,5 @@
 /* eslint-disable */
-import { ASN1Element as _Element } from "@wildboar/asn1";
+import { ASN1Element as _Element, ASN1ConstructionError as _ConstructionError } from "@wildboar/asn1";
 import * as $ from "@wildboar/asn1/functional";
 
 /**
@@ -65,14 +65,14 @@ export type ObjectClassKind = _enum_for_ObjectClassKind;
  *
  * @enum {number}
  */
-export const ObjectClassKind = _enum_for_ObjectClassKind;
+export const ObjectClassKind: typeof _enum_for_ObjectClassKind = _enum_for_ObjectClassKind;
 
 /**
  * @summary ObjectClassKind_abstract
  * @constant
  * @type {number}
  */
-export const ObjectClassKind_abstract: ObjectClassKind =
+export const ObjectClassKind_abstract: _enum_for_ObjectClassKind.abstract =
     ObjectClassKind.abstract; /* LONG_NAMED_ENUMERATED_VALUE */
 
 /**
@@ -80,7 +80,7 @@ export const ObjectClassKind_abstract: ObjectClassKind =
  * @constant
  * @type {number}
  */
-export const abstract: ObjectClassKind =
+export const abstract: _enum_for_ObjectClassKind.abstract =
     ObjectClassKind.abstract; /* SHORT_NAMED_ENUMERATED_VALUE */
 
 /**
@@ -88,7 +88,7 @@ export const abstract: ObjectClassKind =
  * @constant
  * @type {number}
  */
-export const ObjectClassKind_structural: ObjectClassKind =
+export const ObjectClassKind_structural: _enum_for_ObjectClassKind.structural =
     ObjectClassKind.structural; /* LONG_NAMED_ENUMERATED_VALUE */
 
 /**
@@ -96,7 +96,7 @@ export const ObjectClassKind_structural: ObjectClassKind =
  * @constant
  * @type {number}
  */
-export const structural: ObjectClassKind =
+export const structural: _enum_for_ObjectClassKind.structural =
     ObjectClassKind.structural; /* SHORT_NAMED_ENUMERATED_VALUE */
 
 /**
@@ -104,7 +104,7 @@ export const structural: ObjectClassKind =
  * @constant
  * @type {number}
  */
-export const ObjectClassKind_auxiliary: ObjectClassKind =
+export const ObjectClassKind_auxiliary: _enum_for_ObjectClassKind.auxiliary =
     ObjectClassKind.auxiliary; /* LONG_NAMED_ENUMERATED_VALUE */
 
 /**
@@ -112,14 +112,26 @@ export const ObjectClassKind_auxiliary: ObjectClassKind =
  * @constant
  * @type {number}
  */
-export const auxiliary: ObjectClassKind =
+export const auxiliary: _enum_for_ObjectClassKind.auxiliary =
     ObjectClassKind.auxiliary; /* SHORT_NAMED_ENUMERATED_VALUE */
 
 
-export const _decode_ObjectClassKind = $._decodeEnumerated;
+export function _decode_ObjectClassKind(el: _Element): ObjectClassKind {
+    const enumerated = $._decodeEnumerated(el);
+    switch (enumerated) {
+        case ObjectClassKind.abstract: return ObjectClassKind.abstract;
+        case ObjectClassKind.structural: return ObjectClassKind.structural;
+        case ObjectClassKind.auxiliary: return ObjectClassKind.auxiliary;
+        default:
+            throw new _ConstructionError(
+                "Invalid ENUMERATED value " + enumerated + " for ObjectClassKind.",
+                el,
+            );
+    }
+}
 
 
-export const _encode_ObjectClassKind = $._encodeEnumerated;
+export const _encode_ObjectClassKind: $.ASN1Encoder<ObjectClassKind> = $._encodeEnumerated as $.ASN1Encoder<ObjectClassKind>;
 
 
 /* eslint-enable */

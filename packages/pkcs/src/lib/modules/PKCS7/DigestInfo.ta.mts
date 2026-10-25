@@ -1,13 +1,13 @@
 /* eslint-disable */
 import {
     ASN1ConstructionError as _ConstructionError,
-    ASN1Element as _Element,
+    type ASN1Element as _Element,
     ASN1TagClass as _TagClass,
 } from "@wildboar/asn1";
 import * as $ from "@wildboar/asn1/functional";
-import { Digest, _decode_Digest, _encode_Digest } from "../PKCS7/Digest.ta.mjs";
+import { type Digest, _decode_Digest, _encode_Digest } from "../PKCS7/Digest.ta.mjs";
 import {
-    DigestAlgorithmIdentifier,
+    type DigestAlgorithmIdentifier,
     _decode_DigestAlgorithmIdentifier,
     _encode_DigestAlgorithmIdentifier,
 } from "../PKCS7/DigestAlgorithmIdentifier.ta.mjs";
@@ -27,20 +27,26 @@ import {
  *
  */
 export class DigestInfo {
+    /**
+     * @summary `digestAlgorithm`.
+     * @public
+     * @readonly
+     */
+    public readonly digestAlgorithm: DigestAlgorithmIdentifier;
+    /**
+     * @summary `digest`.
+     * @public
+     * @readonly
+     */
+    public readonly digest: Digest;
+
     constructor(
-        /**
-         * @summary `digestAlgorithm`.
-         * @public
-         * @readonly
-         */
-        readonly digestAlgorithm: DigestAlgorithmIdentifier,
-        /**
-         * @summary `digest`.
-         * @public
-         * @readonly
-         */
-        readonly digest: Digest
-    ) {}
+        digestAlgorithm: DigestAlgorithmIdentifier,
+        digest: Digest
+    ) {
+        this.digestAlgorithm = digestAlgorithm;
+        this.digest = digest;
+    }
 
     /**
      * @summary Restructures an object into a DigestInfo

@@ -1,7 +1,7 @@
 /* eslint-disable */
 import {
-    OPTIONAL,
-    ASN1Element as _Element,
+    type OPTIONAL,
+    type ASN1Element as _Element,
     ASN1TagClass as _TagClass,
     ASN1Construction as _Construction,
     ASN1UniversalType as _UniversalType,
@@ -12,17 +12,17 @@ import {
 } from '@wildboar/asn1';
 import * as $ from '@wildboar/asn1/functional';
 import {
-    DeferredTime,
+    type DeferredTime,
     _decode_DeferredTime,
     _encode_DeferredTime,
 } from '../MTAAbstractService/DeferredTime.ta.mjs';
 import {
-    ConvertedEncodedInformationTypes,
+    type ConvertedEncodedInformationTypes,
     _decode_ConvertedEncodedInformationTypes,
     _encode_ConvertedEncodedInformationTypes,
 } from '../MTSAbstractService/ConvertedEncodedInformationTypes.ta.mjs';
 import {
-    OtherActions,
+    type OtherActions,
     _decode_OtherActions,
     _encode_OtherActions,
 } from '../MTAAbstractService/OtherActions.ta.mjs';
@@ -45,26 +45,34 @@ import {
  *
  */
 export class AdditionalActions {
+    /**
+     * @summary `deferred_time`.
+     * @public
+     * @readonly
+     */
+    public readonly deferred_time?: OPTIONAL<DeferredTime>;
+    /**
+     * @summary `converted_encoded_information_types`.
+     * @public
+     * @readonly
+     */
+    public readonly converted_encoded_information_types?: OPTIONAL<ConvertedEncodedInformationTypes>;
+    /**
+     * @summary `other_actions`.
+     * @public
+     * @readonly
+     */
+    public readonly other_actions?: OPTIONAL<OtherActions>;
+
     constructor(
-        /**
-         * @summary `deferred_time`.
-         * @public
-         * @readonly
-         */
-        readonly deferred_time?: OPTIONAL<DeferredTime>,
-        /**
-         * @summary `converted_encoded_information_types`.
-         * @public
-         * @readonly
-         */
-        readonly converted_encoded_information_types?: OPTIONAL<ConvertedEncodedInformationTypes>,
-        /**
-         * @summary `other_actions`.
-         * @public
-         * @readonly
-         */
-        readonly other_actions?: OPTIONAL<OtherActions>
-    ) {}
+        deferred_time?: OPTIONAL<DeferredTime>,
+        converted_encoded_information_types?: OPTIONAL<ConvertedEncodedInformationTypes>,
+        other_actions?: OPTIONAL<OtherActions>
+    ) {
+        this.deferred_time = deferred_time;
+        this.converted_encoded_information_types = converted_encoded_information_types;
+        this.other_actions = other_actions;
+    }
 
     /**
      * @summary Restructures an object into a AdditionalActions

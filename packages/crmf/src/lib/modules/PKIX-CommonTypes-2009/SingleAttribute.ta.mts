@@ -1,9 +1,9 @@
 /* eslint-disable */
 import {
     ASN1ConstructionError as _ConstructionError,
-    ASN1Element as _Element,
+    type ASN1Element as _Element,
     ASN1TagClass as _TagClass,
-    OBJECT_IDENTIFIER,
+    type OBJECT_IDENTIFIER,
 } from "@wildboar/asn1";
 import * as $ from "@wildboar/asn1/functional";
 
@@ -30,30 +30,36 @@ import * as $ from "@wildboar/asn1/functional";
  *
  */
 export class SingleAttribute {
+    /**
+     * @summary `type_`.
+     * @description
+     *
+     * Attribute type OID (`ATTRIBUTE.&id` selected from `AttrSet`)
+     * ([RFC 5912 §2](https://datatracker.ietf.org/doc/html/rfc5912#section-2)).
+     *
+     * @public
+     * @readonly
+     */
+    public readonly type_: OBJECT_IDENTIFIER;
+    /**
+     * @summary `value`.
+     * @description
+     *
+     * Single attribute value (`ATTRIBUTE.&Type` for `type`)
+     * ([RFC 5912 §2](https://datatracker.ietf.org/doc/html/rfc5912#section-2)).
+     *
+     * @public
+     * @readonly
+     */
+    public readonly value: _Element;
+
     constructor(
-        /**
-         * @summary `type_`.
-         * @description
-         *
-         * Attribute type OID (`ATTRIBUTE.&id` selected from `AttrSet`)
-         * ([RFC 5912 §2](https://datatracker.ietf.org/doc/html/rfc5912#section-2)).
-         *
-         * @public
-         * @readonly
-         */
-        readonly type_: OBJECT_IDENTIFIER,
-        /**
-         * @summary `value`.
-         * @description
-         *
-         * Single attribute value (`ATTRIBUTE.&Type` for `type`)
-         * ([RFC 5912 §2](https://datatracker.ietf.org/doc/html/rfc5912#section-2)).
-         *
-         * @public
-         * @readonly
-         */
-        readonly value: _Element
-    ) {}
+        type_: OBJECT_IDENTIFIER,
+        value: _Element
+    ) {
+        this.type_ = type_;
+        this.value = value;
+    }
 
     /**
      * @summary Restructures an object into a SingleAttribute

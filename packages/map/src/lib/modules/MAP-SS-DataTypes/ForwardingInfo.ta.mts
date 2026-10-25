@@ -1,12 +1,12 @@
 /* eslint-disable */
 import {
-    OPTIONAL,
-    ASN1Element as _Element,
+    type OPTIONAL,
+    type ASN1Element as _Element,
     ASN1TagClass as _TagClass
 } from "@wildboar/asn1";
 import * as $ from "@wildboar/asn1/functional";
-import { SS_Code, _decode_SS_Code, _encode_SS_Code } from "../MAP-SS-Code/SS-Code.ta.mjs";
-import { ForwardingFeatureList, _decode_ForwardingFeatureList, _encode_ForwardingFeatureList } from "../MAP-SS-DataTypes/ForwardingFeatureList.ta.mjs";
+import { type SS_Code, _decode_SS_Code, _encode_SS_Code } from "../MAP-SS-Code/SS-Code.ta.mjs";
+import { type ForwardingFeatureList, _decode_ForwardingFeatureList, _encode_ForwardingFeatureList } from "../MAP-SS-DataTypes/ForwardingFeatureList.ta.mjs";
 
 
 /**
@@ -20,7 +20,7 @@ import { ForwardingFeatureList, _decode_ForwardingFeatureList, _encode_Forwardin
  * 
  * ```asn1
  * ForwardingInfo ::= SEQUENCE {
- *     ss-Code    SS-Code    OPTIONAL,
+ *     ss-Code    SS-Code    type OPTIONAL,
  *     forwardingFeatureList    ForwardingFeatureList,
  *     ...}
  * ```
@@ -29,34 +29,42 @@ import { ForwardingFeatureList, _decode_ForwardingFeatureList, _encode_Forwardin
  */
 export
 class ForwardingInfo {
+    /**
+     * @summary `ss_Code`.
+     * @description
+     *
+     * SS-Code of the call forwarding service (clause 7.6.4.1).
+     *
+     * @public
+     * @readonly
+     */
+    public readonly ss_Code: OPTIONAL<SS_Code>;
+    /**
+     * @summary `forwardingFeatureList`.
+     * @description
+     *
+     * One item per Basic Service Group (clause 7.6.4.15).
+     *
+     * @public
+     * @readonly
+     */
+    public readonly forwardingFeatureList: ForwardingFeatureList;
+    /**
+     * @summary Extensions that are not recognized.
+     * @public
+     * @readonly
+     */
+    public readonly _unrecognizedExtensionsList: _Element[];
+
     constructor (
-        /**
-         * @summary `ss_Code`.
-         * @description
-         *
-         * SS-Code of the call forwarding service (clause 7.6.4.1).
-         *
-         * @public
-         * @readonly
-         */
-        readonly ss_Code: OPTIONAL<SS_Code>,
-        /**
-         * @summary `forwardingFeatureList`.
-         * @description
-         *
-         * One item per Basic Service Group (clause 7.6.4.15).
-         *
-         * @public
-         * @readonly
-         */
-        readonly forwardingFeatureList: ForwardingFeatureList,
-        /**
-         * @summary Extensions that are not recognized.
-         * @public
-         * @readonly
-         */
-        readonly _unrecognizedExtensionsList: _Element[] = []
-    ) {}
+        ss_Code: OPTIONAL<SS_Code>,
+        forwardingFeatureList: ForwardingFeatureList,
+        _unrecognizedExtensionsList: _Element[] = []
+    ) {
+        this.ss_Code = ss_Code;
+        this.forwardingFeatureList = forwardingFeatureList;
+        this._unrecognizedExtensionsList = _unrecognizedExtensionsList;
+    }
 
     /**
      * @summary Restructures an object into a ForwardingInfo

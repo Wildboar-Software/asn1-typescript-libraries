@@ -1,7 +1,7 @@
 /* eslint-disable */
 import {
-    OPTIONAL,
-    ASN1Element as _Element,
+    type OPTIONAL,
+    type ASN1Element as _Element,
     ASN1TagClass as _TagClass,
     ASN1Construction as _Construction,
     ASN1UniversalType as _UniversalType,
@@ -12,17 +12,17 @@ import {
 } from '@wildboar/asn1';
 import * as $ from '@wildboar/asn1/functional';
 import {
-    SignalRate,
+    type SignalRate,
     _decode_SignalRate,
     _encode_SignalRate,
 } from '../M3100ASN1TypeModule2/SignalRate.ta.mjs';
 import {
-    MappingList,
+    type MappingList,
     _decode_MappingList,
     _encode_MappingList,
 } from '../M3100ASN1TypeModule2/MappingList.ta.mjs';
 import {
-    NameType,
+    type NameType,
     _encode_NameType,
     _decode_NameType,
 } from '../ASN1DefinedTypesModule/NameType.ta.mjs';
@@ -40,26 +40,34 @@ import {
  *
  */
 export class PortSignalRateAndMappingList_Item {
+    /**
+     * @summary `portId`.
+     * @public
+     * @readonly
+     */
+    public readonly portId: NameType;
+    /**
+     * @summary `signalRate`.
+     * @public
+     * @readonly
+     */
+    public readonly signalRate: SignalRate;
+    /**
+     * @summary `mappingList`.
+     * @public
+     * @readonly
+     */
+    public readonly mappingList?: OPTIONAL<MappingList>;
+
     constructor(
-        /**
-         * @summary `portId`.
-         * @public
-         * @readonly
-         */
-        readonly portId: NameType,
-        /**
-         * @summary `signalRate`.
-         * @public
-         * @readonly
-         */
-        readonly signalRate: SignalRate,
-        /**
-         * @summary `mappingList`.
-         * @public
-         * @readonly
-         */
-        readonly mappingList?: OPTIONAL<MappingList>
-    ) {}
+        portId: NameType,
+        signalRate: SignalRate,
+        mappingList?: OPTIONAL<MappingList>
+    ) {
+        this.portId = portId;
+        this.signalRate = signalRate;
+        this.mappingList = mappingList;
+    }
 
     /**
      * @summary Restructures an object into a PortSignalRateAndMappingList_Item

@@ -1,16 +1,16 @@
 /* eslint-disable */
 import {
-    BOOLEAN,
-    INTEGER,
-    OPTIONAL,
-    ASN1Element as _Element,
+    type BOOLEAN,
+    type INTEGER,
+    type OPTIONAL,
+    type ASN1Element as _Element,
     ASN1TagClass as _TagClass,
     ASN1OverflowError
 } from "@wildboar/asn1";
 import * as $ from "@wildboar/asn1/functional";
 import { TopologyRequest, _decode_TopologyRequest, _encode_TopologyRequest } from "../MEDIA-GATEWAY-CONTROL/TopologyRequest.ta.mjs";
 import { PropertyParm, _decode_PropertyParm, _encode_PropertyParm } from "../MEDIA-GATEWAY-CONTROL/PropertyParm.ta.mjs";
-import { ContextIDinList, _decode_ContextIDinList, _encode_ContextIDinList } from "../MEDIA-GATEWAY-CONTROL/ContextIDinList.ta.mjs";
+import { type ContextIDinList, _decode_ContextIDinList, _encode_ContextIDinList } from "../MEDIA-GATEWAY-CONTROL/ContextIDinList.ta.mjs";
 
 
 /**
@@ -60,7 +60,7 @@ class ContextRequest {
      * @public
      * @readonly
      */
-    readonly priority?: OPTIONAL<INTEGER>;
+    public readonly priority?: OPTIONAL<INTEGER>;
     /**
      * @summary `emergency`.
      * @description
@@ -71,7 +71,7 @@ class ContextRequest {
      * @public
      * @readonly
      */
-    readonly emergency?: OPTIONAL<BOOLEAN>;
+    public readonly emergency?: OPTIONAL<BOOLEAN>;
     /**
      * @summary `topologyReq`.
      * @description
@@ -85,7 +85,7 @@ class ContextRequest {
      * @public
      * @readonly
      */
-    readonly topologyReq?: OPTIONAL<TopologyRequest[]>;
+    public readonly topologyReq?: OPTIONAL<TopologyRequest[]>;
     /**
      * @summary `iepscallind`.
      * @description
@@ -97,7 +97,7 @@ class ContextRequest {
      * @public
      * @readonly
      */
-    readonly iepscallind?: OPTIONAL<BOOLEAN>;
+    public readonly iepscallind?: OPTIONAL<BOOLEAN>;
     /**
      * @summary `contextProp`.
      * @description
@@ -109,7 +109,7 @@ class ContextRequest {
      * @public
      * @readonly
      */
-    readonly contextProp?: OPTIONAL<PropertyParm[]>;
+    public readonly contextProp?: OPTIONAL<PropertyParm[]>;
     /**
      * @summary `contextList`.
      * @description
@@ -123,7 +123,7 @@ class ContextRequest {
      * @public
      * @readonly
      */
-    readonly contextList?: OPTIONAL<ContextIDinList[]>;
+    public readonly contextList?: OPTIONAL<ContextIDinList[]>;
     /**
      * @summary Extensions that are not recognized.
      * @description
@@ -134,7 +134,7 @@ class ContextRequest {
      * @public
      * @readonly
      */
-    readonly _unrecognizedExtensionsList: _Element[];
+    public readonly _unrecognizedExtensionsList: _Element[];
 
     constructor (
         priority?: OPTIONAL<INTEGER>,

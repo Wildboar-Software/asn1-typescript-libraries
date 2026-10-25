@@ -1,6 +1,6 @@
 /* eslint-disable */
 import {
-    ASN1Element as _Element,
+    type ASN1Element as _Element,
     ASN1TagClass as _TagClass,
     ASN1Construction as _Construction,
     ASN1UniversalType as _UniversalType,
@@ -16,7 +16,7 @@ import {
     _encode_GlobalDomainIdentifier,
 } from '../MTSAbstractService/GlobalDomainIdentifier.ta.mjs';
 import {
-    MTAName,
+    type MTAName,
     _decode_MTAName,
     _encode_MTAName,
 } from '../MTSAbstractService/MTAName.ta.mjs';
@@ -43,26 +43,34 @@ import {
  *
  */
 export class InternalTraceInformationElement {
+    /**
+     * @summary `global_domain_identifier`.
+     * @public
+     * @readonly
+     */
+    public readonly global_domain_identifier: GlobalDomainIdentifier;
+    /**
+     * @summary `mta_name`.
+     * @public
+     * @readonly
+     */
+    public readonly mta_name: MTAName;
+    /**
+     * @summary `mta_supplied_information`.
+     * @public
+     * @readonly
+     */
+    public readonly mta_supplied_information: MTASuppliedInformation;
+
     constructor(
-        /**
-         * @summary `global_domain_identifier`.
-         * @public
-         * @readonly
-         */
-        readonly global_domain_identifier: GlobalDomainIdentifier,
-        /**
-         * @summary `mta_name`.
-         * @public
-         * @readonly
-         */
-        readonly mta_name: MTAName,
-        /**
-         * @summary `mta_supplied_information`.
-         * @public
-         * @readonly
-         */
-        readonly mta_supplied_information: MTASuppliedInformation
-    ) {}
+        global_domain_identifier: GlobalDomainIdentifier,
+        mta_name: MTAName,
+        mta_supplied_information: MTASuppliedInformation
+    ) {
+        this.global_domain_identifier = global_domain_identifier;
+        this.mta_name = mta_name;
+        this.mta_supplied_information = mta_supplied_information;
+    }
 
     /**
      * @summary Restructures an object into a InternalTraceInformationElement

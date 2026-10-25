@@ -1,25 +1,25 @@
 /* eslint-disable */
 import {
-    ASN1Element as _Element,
+    type ASN1Element as _Element,
     ASN1TagClass as _TagClass,
-    INTEGER,
-    OPTIONAL,
+    type INTEGER,
+    type OPTIONAL,
 } from "@wildboar/asn1";
 import * as $ from "@wildboar/asn1/functional";
 import {
-    HashAlgorithm,
+    type HashAlgorithm,
     _decode_HashAlgorithm,
     _encode_HashAlgorithm,
 } from "../PKCS-1/HashAlgorithm.ta.mjs";
 import {
-    MaskGenAlgorithm,
+    type MaskGenAlgorithm,
     _decode_MaskGenAlgorithm,
     _encode_MaskGenAlgorithm,
 } from "../PKCS-1/MaskGenAlgorithm.ta.mjs";
 import { mgf1SHA1 } from "../PKCS-1/mgf1SHA1.va.mjs";
 import { sha1 } from "../PKCS-1/sha1.va.mjs";
 import {
-    TrailerField,
+    type TrailerField,
     trailerFieldBC /* IMPORTED_SHORT_NAMED_INTEGER */,
     _decode_TrailerField,
     _encode_TrailerField,
@@ -42,32 +42,42 @@ import {
  *
  */
 export class RSASSA_PSS_params {
+    /**
+     * @summary `hashAlgorithm`.
+     * @public
+     * @readonly
+     */
+    public readonly hashAlgorithm?: OPTIONAL<HashAlgorithm>;
+    /**
+     * @summary `maskGenAlgorithm`.
+     * @public
+     * @readonly
+     */
+    public readonly maskGenAlgorithm?: OPTIONAL<MaskGenAlgorithm>;
+    /**
+     * @summary `saltLength`.
+     * @public
+     * @readonly
+     */
+    public readonly saltLength?: OPTIONAL<INTEGER>;
+    /**
+     * @summary `trailerField`.
+     * @public
+     * @readonly
+     */
+    public readonly trailerField?: OPTIONAL<TrailerField>;
+
     constructor(
-        /**
-         * @summary `hashAlgorithm`.
-         * @public
-         * @readonly
-         */
-        readonly hashAlgorithm?: OPTIONAL<HashAlgorithm>,
-        /**
-         * @summary `maskGenAlgorithm`.
-         * @public
-         * @readonly
-         */
-        readonly maskGenAlgorithm?: OPTIONAL<MaskGenAlgorithm>,
-        /**
-         * @summary `saltLength`.
-         * @public
-         * @readonly
-         */
-        readonly saltLength?: OPTIONAL<INTEGER>,
-        /**
-         * @summary `trailerField`.
-         * @public
-         * @readonly
-         */
-        readonly trailerField?: OPTIONAL<TrailerField>
-    ) {}
+        hashAlgorithm?: OPTIONAL<HashAlgorithm>,
+        maskGenAlgorithm?: OPTIONAL<MaskGenAlgorithm>,
+        saltLength?: OPTIONAL<INTEGER>,
+        trailerField?: OPTIONAL<TrailerField>
+    ) {
+        this.hashAlgorithm = hashAlgorithm;
+        this.maskGenAlgorithm = maskGenAlgorithm;
+        this.saltLength = saltLength;
+        this.trailerField = trailerField;
+    }
 
     /**
      * @summary Restructures an object into a RSASSA_PSS_params

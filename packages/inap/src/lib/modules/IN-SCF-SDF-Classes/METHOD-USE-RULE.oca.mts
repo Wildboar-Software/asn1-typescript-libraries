@@ -1,10 +1,10 @@
 /* eslint-disable */
 import {
-    OBJECT_IDENTIFIER
+    type OBJECT_IDENTIFIER
 } from "@wildboar/asn1";
 import * as $ from "@wildboar/asn1/functional";
 // export { OBJECT_CLASS } from "../InformationFramework/OBJECT-CLASS.oca.mjs";
-import { METHOD } from "../IN-SCF-SDF-Classes/METHOD.oca.mjs";
+import { type METHOD } from "../IN-SCF-SDF-Classes/METHOD.oca.mjs";
 // export { METHOD } from "../IN-SCF-SDF-Classes/METHOD.oca.mjs";
 
 

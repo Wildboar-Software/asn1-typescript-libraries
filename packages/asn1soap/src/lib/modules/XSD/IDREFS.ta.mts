@@ -10,7 +10,7 @@ import {
   ASN1ConstructionError as _ConstructionError,
 } from '@wildboar/asn1';
 import * as $ from '@wildboar/asn1/functional';
-import { IDREF, _decode_IDREF, _encode_IDREF } from '../XSD/IDREF.ta.mjs';
+import { type IDREF, _decode_IDREF, _encode_IDREF } from '../XSD/IDREF.ta.mjs';
 
 /**
  * @summary IDREFS

@@ -1,6 +1,6 @@
 /* eslint-disable */
 import {
-    ASN1Element as _Element,
+    type ASN1Element as _Element,
     ASN1TagClass as _TagClass,
     ASN1Construction as _Construction,
     ASN1UniversalType as _UniversalType,
@@ -89,7 +89,7 @@ type TypeProvider = _enum_for_TypeProvider;
  * @enum {number}
  */
 export
-const TypeProvider = _enum_for_TypeProvider;
+const TypeProvider: typeof _enum_for_TypeProvider = _enum_for_TypeProvider;
 
 /**
  * @summary TypeProvider_non_profit
@@ -97,7 +97,7 @@ const TypeProvider = _enum_for_TypeProvider;
  * @type {number}
  */
 export
-const TypeProvider_non_profit: TypeProvider = TypeProvider.non_profit; /* LONG_NAMED_ENUMERATED_VALUE */
+const TypeProvider_non_profit: _enum_for_TypeProvider.non_profit = TypeProvider.non_profit; /* LONG_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary non_profit
@@ -105,7 +105,7 @@ const TypeProvider_non_profit: TypeProvider = TypeProvider.non_profit; /* LONG_N
  * @type {number}
  */
 export
-const non_profit: TypeProvider = TypeProvider.non_profit; /* SHORT_NAMED_ENUMERATED_VALUE */
+const non_profit: _enum_for_TypeProvider.non_profit = TypeProvider.non_profit; /* SHORT_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary TypeProvider_university
@@ -113,7 +113,7 @@ const non_profit: TypeProvider = TypeProvider.non_profit; /* SHORT_NAMED_ENUMERA
  * @type {number}
  */
 export
-const TypeProvider_university: TypeProvider = TypeProvider.university; /* LONG_NAMED_ENUMERATED_VALUE */
+const TypeProvider_university: _enum_for_TypeProvider.university = TypeProvider.university; /* LONG_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary university
@@ -121,7 +121,7 @@ const TypeProvider_university: TypeProvider = TypeProvider.university; /* LONG_N
  * @type {number}
  */
 export
-const university: TypeProvider = TypeProvider.university; /* SHORT_NAMED_ENUMERATED_VALUE */
+const university: _enum_for_TypeProvider.university = TypeProvider.university; /* SHORT_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary TypeProvider_corporation
@@ -129,7 +129,7 @@ const university: TypeProvider = TypeProvider.university; /* SHORT_NAMED_ENUMERA
  * @type {number}
  */
 export
-const TypeProvider_corporation: TypeProvider = TypeProvider.corporation; /* LONG_NAMED_ENUMERATED_VALUE */
+const TypeProvider_corporation: _enum_for_TypeProvider.corporation = TypeProvider.corporation; /* LONG_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary corporation
@@ -137,7 +137,7 @@ const TypeProvider_corporation: TypeProvider = TypeProvider.corporation; /* LONG
  * @type {number}
  */
 export
-const corporation: TypeProvider = TypeProvider.corporation; /* SHORT_NAMED_ENUMERATED_VALUE */
+const corporation: _enum_for_TypeProvider.corporation = TypeProvider.corporation; /* SHORT_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary TypeProvider_individual
@@ -145,7 +145,7 @@ const corporation: TypeProvider = TypeProvider.corporation; /* SHORT_NAMED_ENUME
  * @type {number}
  */
 export
-const TypeProvider_individual: TypeProvider = TypeProvider.individual; /* LONG_NAMED_ENUMERATED_VALUE */
+const TypeProvider_individual: _enum_for_TypeProvider.individual = TypeProvider.individual; /* LONG_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary individual
@@ -153,7 +153,7 @@ const TypeProvider_individual: TypeProvider = TypeProvider.individual; /* LONG_N
  * @type {number}
  */
 export
-const individual: TypeProvider = TypeProvider.individual; /* SHORT_NAMED_ENUMERATED_VALUE */
+const individual: _enum_for_TypeProvider.individual = TypeProvider.individual; /* SHORT_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary TypeProvider_government
@@ -161,7 +161,7 @@ const individual: TypeProvider = TypeProvider.individual; /* SHORT_NAMED_ENUMERA
  * @type {number}
  */
 export
-const TypeProvider_government: TypeProvider = TypeProvider.government; /* LONG_NAMED_ENUMERATED_VALUE */
+const TypeProvider_government: _enum_for_TypeProvider.government = TypeProvider.government; /* LONG_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary government
@@ -169,7 +169,7 @@ const TypeProvider_government: TypeProvider = TypeProvider.government; /* LONG_N
  * @type {number}
  */
 export
-const government: TypeProvider = TypeProvider.government; /* SHORT_NAMED_ENUMERATED_VALUE */
+const government: _enum_for_TypeProvider.government = TypeProvider.government; /* SHORT_NAMED_ENUMERATED_VALUE */
 
 
 /**
@@ -178,7 +178,7 @@ const government: TypeProvider = TypeProvider.government; /* SHORT_NAMED_ENUMERA
  * @param el The element being decoded.
  * @returns The decoded data structure.
  */
-export const _decode_TypeProvider = $._decodeEnumerated;
+export const _decode_TypeProvider: $.ASN1Decoder<number> = $._decodeEnumerated;
 
 
 /**
@@ -188,7 +188,7 @@ export const _decode_TypeProvider = $._decodeEnumerated;
  * @param elGetter A function that can be used to get new ASN.1 elements.
  * @returns {_Element} The TypeProvider, encoded as an ASN.1 Element.
  */
-export const _encode_TypeProvider = $._encodeEnumerated;
+export const _encode_TypeProvider: $.ASN1Encoder<number> = $._encodeEnumerated;
 
 
 /* eslint-enable */

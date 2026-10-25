@@ -1,6 +1,6 @@
 /* eslint-disable */
 import {
-    ASN1Element as _Element,
+    type ASN1Element as _Element,
     ASN1TagClass as _TagClass,
     ASN1Construction as _Construction,
     ASN1UniversalType as _UniversalType,
@@ -13,7 +13,7 @@ import { type OPERATION } from "../Remote-Operations-Information-Objects/OPERATI
 import { _decode_Priority, _encode_Priority } from "../Remote-Operations-Information-Objects/Priority.ta.mjs";
 import { _decode_Code, _encode_Code } from "../Remote-Operations-Information-Objects/Code.ta.mjs";
 import { ModifyArgument, _decode_ModifyArgument, _encode_ModifyArgument } from "../DFRAbstractService/ModifyArgument.ta.mjs";
-import { ModifyResult, _decode_ModifyResult, _encode_ModifyResult } from "../DFRAbstractService/ModifyResult.ta.mjs";
+import { type ModifyResult, _decode_ModifyResult, _encode_ModifyResult } from "../DFRAbstractService/ModifyResult.ta.mjs";
 import { abandoned } from "../DFRAbstractService/abandoned.oa.mjs";
 import { accessError } from "../DFRAbstractService/accessError.oa.mjs";
 import { attributeError } from "../DFRAbstractService/attributeError.oa.mjs";

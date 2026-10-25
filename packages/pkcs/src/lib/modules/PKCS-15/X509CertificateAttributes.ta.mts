@@ -1,27 +1,27 @@
 /* eslint-disable */
 import {
-    ASN1Element as _Element,
+    type ASN1Element as _Element,
     ASN1TagClass as _TagClass,
-    OPTIONAL,
+    type OPTIONAL,
 } from "@wildboar/asn1";
 import * as $ from "@wildboar/asn1/functional";
 import {
-    Certificate,
+    type Certificate,
     _decode_Certificate,
     _encode_Certificate,
 } from "@wildboar/x500/AuthenticationFramework";
 import {
-    CertificateSerialNumber,
+    type CertificateSerialNumber,
     _decode_CertificateSerialNumber,
     _encode_CertificateSerialNumber,
 } from "@wildboar/x500/AuthenticationFramework";
 import {
-    Name,
+    type Name,
     _decode_Name,
     _encode_Name,
 } from "@wildboar/dn";
 import {
-    ObjectValue,
+    type ObjectValue,
     _get_decoder_for_ObjectValue,
     _get_encoder_for_ObjectValue,
 } from "../PKCS-15/ObjectValue.ta.mjs";
@@ -45,38 +45,50 @@ import {
  *
  */
 export class X509CertificateAttributes {
+    /**
+     * @summary `value`.
+     * @public
+     * @readonly
+     */
+    public readonly value: ObjectValue<Certificate>;
+    /**
+     * @summary `subject`.
+     * @public
+     * @readonly
+     */
+    public readonly subject?: OPTIONAL<Name>;
+    /**
+     * @summary `issuer`.
+     * @public
+     * @readonly
+     */
+    public readonly issuer?: OPTIONAL<Name>;
+    /**
+     * @summary `serialNumber`.
+     * @public
+     * @readonly
+     */
+    public readonly serialNumber?: OPTIONAL<CertificateSerialNumber>;
+    /**
+     * @summary Extensions that are not recognized.
+     * @public
+     * @readonly
+     */
+    public readonly _unrecognizedExtensionsList: _Element[];
+
     constructor(
-        /**
-         * @summary `value`.
-         * @public
-         * @readonly
-         */
-        readonly value: ObjectValue<Certificate>,
-        /**
-         * @summary `subject`.
-         * @public
-         * @readonly
-         */
-        readonly subject?: OPTIONAL<Name>,
-        /**
-         * @summary `issuer`.
-         * @public
-         * @readonly
-         */
-        readonly issuer?: OPTIONAL<Name>,
-        /**
-         * @summary `serialNumber`.
-         * @public
-         * @readonly
-         */
-        readonly serialNumber?: OPTIONAL<CertificateSerialNumber>,
-        /**
-         * @summary Extensions that are not recognized.
-         * @public
-         * @readonly
-         */
-        readonly _unrecognizedExtensionsList: _Element[] = []
-    ) {}
+        value: ObjectValue<Certificate>,
+        subject?: OPTIONAL<Name>,
+        issuer?: OPTIONAL<Name>,
+        serialNumber?: OPTIONAL<CertificateSerialNumber>,
+        _unrecognizedExtensionsList: _Element[] = []
+    ) {
+        this.value = value;
+        this.subject = subject;
+        this.issuer = issuer;
+        this.serialNumber = serialNumber;
+        this._unrecognizedExtensionsList = _unrecognizedExtensionsList;
+    }
 
     /**
      * @summary Restructures an object into a X509CertificateAttributes

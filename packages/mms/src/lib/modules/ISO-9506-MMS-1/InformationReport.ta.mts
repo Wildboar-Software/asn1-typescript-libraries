@@ -1,6 +1,6 @@
 /* eslint-disable */
 import {
-    ASN1Element as _Element,
+    type ASN1Element as _Element,
     ASN1TagClass as _TagClass,
     ASN1Construction as _Construction,
     ASN1UniversalType as _UniversalType,
@@ -10,8 +10,8 @@ import {
     ASN1ConstructionError as _ConstructionError,
 } from "@wildboar/asn1";
 import * as $ from "@wildboar/asn1/functional";
-import { VariableAccessSpecification, _decode_VariableAccessSpecification, _encode_VariableAccessSpecification } from "../ISO-9506-MMS-1/VariableAccessSpecification.ta.mjs";
-import { AccessResult, _decode_AccessResult, _encode_AccessResult } from "../ISO-9506-MMS-1/AccessResult.ta.mjs";
+import { type VariableAccessSpecification, _decode_VariableAccessSpecification, _encode_VariableAccessSpecification } from "../ISO-9506-MMS-1/VariableAccessSpecification.ta.mjs";
+import { type AccessResult, _decode_AccessResult, _encode_AccessResult } from "../ISO-9506-MMS-1/AccessResult.ta.mjs";
 
 
 /**
@@ -38,30 +38,36 @@ import { AccessResult, _decode_AccessResult, _encode_AccessResult } from "../ISO
  */
 export
 class InformationReport {
+    /**
+     * @summary `variableAccessSpecification`.
+     * @description
+     *
+     * Variables whose values are reported.
+     * ISO 9506-1:2003 §14.8.1.1.1, §14.5.1.
+     *
+     * @public
+     * @readonly
+     */
+    public readonly variableAccessSpecification: VariableAccessSpecification;
+    /**
+     * @summary `listOfAccessResult`.
+     * @description
+     *
+     * Value or failure per variable, in VAS order.
+     * ISO 9506-1:2003 §14.8.1.1.2, §14.4.1.
+     *
+     * @public
+     * @readonly
+     */
+    public readonly listOfAccessResult: AccessResult[];
+
     constructor (
-        /**
-         * @summary `variableAccessSpecification`.
-         * @description
-         *
-         * Variables whose values are reported.
-         * ISO 9506-1:2003 §14.8.1.1.1, §14.5.1.
-         *
-         * @public
-         * @readonly
-         */
-        readonly variableAccessSpecification: VariableAccessSpecification,
-        /**
-         * @summary `listOfAccessResult`.
-         * @description
-         *
-         * Value or failure per variable, in VAS order.
-         * ISO 9506-1:2003 §14.8.1.1.2, §14.4.1.
-         *
-         * @public
-         * @readonly
-         */
-        readonly listOfAccessResult: AccessResult[]
-    ) {}
+        variableAccessSpecification: VariableAccessSpecification,
+        listOfAccessResult: AccessResult[]
+    ) {
+        this.variableAccessSpecification = variableAccessSpecification;
+        this.listOfAccessResult = listOfAccessResult;
+    }
 
     /**
      * @summary Restructures an object into a InformationReport

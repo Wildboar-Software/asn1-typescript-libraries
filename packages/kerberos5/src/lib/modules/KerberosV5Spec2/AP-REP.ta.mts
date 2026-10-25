@@ -1,6 +1,6 @@
 /* eslint-disable */
 import {
-  INTEGER,
+  type INTEGER,
   ASN1Element as _Element,
   ASN1TagClass as _TagClass,
   ASN1Construction as _Construction,
@@ -46,7 +46,7 @@ export class AP_REP {
    * @public
    * @readonly
    */
-  readonly pvno: INTEGER;
+  public readonly pvno: INTEGER;
   /**
    * @summary `msg_type`.
    * @description
@@ -56,7 +56,7 @@ export class AP_REP {
    * @public
    * @readonly
    */
-  readonly msg_type: INTEGER;
+  public readonly msg_type: INTEGER;
   /**
    * @summary `enc_part`.
    * @description
@@ -67,7 +67,7 @@ export class AP_REP {
    * @public
    * @readonly
    */
-  readonly enc_part: EncryptedData;
+  public readonly enc_part: EncryptedData;
 
   constructor(
     pvno: INTEGER,

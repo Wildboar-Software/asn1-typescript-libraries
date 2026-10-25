@@ -1,10 +1,10 @@
 /* eslint-disable */
 import {
-    ASN1Element as _Element,
+    type ASN1Element as _Element,
     ASN1TagClass as _TagClass,
-    BOOLEAN,
-    OBJECT_IDENTIFIER,
-    OPTIONAL,
+    type BOOLEAN,
+    type OBJECT_IDENTIFIER,
+    type OPTIONAL,
 } from "@wildboar/asn1";
 import * as $ from "@wildboar/asn1/functional";
 import {
@@ -23,12 +23,12 @@ import {
     _encode_Attribute,
 } from "../InformationFramework/Attribute.ta.mjs";
 import {
-    DistinguishedName,
+    type DistinguishedName,
     _decode_DistinguishedName,
     _encode_DistinguishedName,
 } from "../InformationFramework/DistinguishedName.ta.mjs";
 import {
-    EstablishOperationalBindingResultData_initiator,
+    type EstablishOperationalBindingResultData_initiator,
     _decode_EstablishOperationalBindingResultData_initiator,
     _encode_EstablishOperationalBindingResultData_initiator,
 } from "../OperationalBindingManagement/EstablishOperationalBindingResultData-initiator.ta.mjs";
@@ -73,62 +73,82 @@ import {
  *
  */
 export class EstablishOperationalBindingResultData implements CommonResultsSeq {
+    /**
+     * @summary `bindingType`.
+     * @public
+     * @readonly
+     */
+    public readonly bindingType: OBJECT_IDENTIFIER;
+    /**
+     * @summary `bindingID`.
+     * @public
+     * @readonly
+     */
+    public readonly bindingID: OPTIONAL<OperationalBindingID>;
+    /**
+     * @summary `accessPoint`.
+     * @public
+     * @readonly
+     */
+    public readonly accessPoint: AccessPoint;
+    /**
+     * @summary `initiator`.
+     * @public
+     * @readonly
+     */
+    public readonly initiator: EstablishOperationalBindingResultData_initiator;
+    /**
+     * @summary Extensions that are not recognized.
+     * @public
+     * @readonly
+     */
+    public readonly _unrecognizedExtensionsList: _Element[];
+    /**
+     * @summary `securityParameters`.
+     * @public
+     * @readonly
+     */
+    public readonly securityParameters?: OPTIONAL<SecurityParameters>; /* REPLICATED_COMPONENT */
+    /**
+     * @summary `performer`.
+     * @public
+     * @readonly
+     */
+    public readonly performer?: OPTIONAL<DistinguishedName>; /* REPLICATED_COMPONENT */
+    /**
+     * @summary `aliasDereferenced`.
+     * @public
+     * @readonly
+     */
+    public readonly aliasDereferenced?: OPTIONAL<BOOLEAN>; /* REPLICATED_COMPONENT */
+    /**
+     * @summary `notification`.
+     * @public
+     * @readonly
+     */
+    public readonly notification?: OPTIONAL<Attribute[]>; /* REPLICATED_COMPONENT */
+
     constructor(
-        /**
-         * @summary `bindingType`.
-         * @public
-         * @readonly
-         */
-        readonly bindingType: OBJECT_IDENTIFIER,
-        /**
-         * @summary `bindingID`.
-         * @public
-         * @readonly
-         */
-        readonly bindingID: OPTIONAL<OperationalBindingID>,
-        /**
-         * @summary `accessPoint`.
-         * @public
-         * @readonly
-         */
-        readonly accessPoint: AccessPoint,
-        /**
-         * @summary `initiator`.
-         * @public
-         * @readonly
-         */
-        readonly initiator: EstablishOperationalBindingResultData_initiator,
-        /**
-         * @summary Extensions that are not recognized.
-         * @public
-         * @readonly
-         */
-        readonly _unrecognizedExtensionsList: _Element[] = [],
-        /**
-         * @summary `securityParameters`.
-         * @public
-         * @readonly
-         */
-        readonly securityParameters?: OPTIONAL<SecurityParameters> /* REPLICATED_COMPONENT */,
-        /**
-         * @summary `performer`.
-         * @public
-         * @readonly
-         */
-        readonly performer?: OPTIONAL<DistinguishedName> /* REPLICATED_COMPONENT */,
-        /**
-         * @summary `aliasDereferenced`.
-         * @public
-         * @readonly
-         */
-        readonly aliasDereferenced?: OPTIONAL<BOOLEAN> /* REPLICATED_COMPONENT */,
-        /**
-         * @summary `notification`.
-         * @public
-         * @readonly
-         */
-        readonly notification?: OPTIONAL<Attribute[]> /* REPLICATED_COMPONENT */
-    ) {}
+        bindingType: OBJECT_IDENTIFIER,
+        bindingID: OPTIONAL<OperationalBindingID>,
+        accessPoint: AccessPoint,
+        initiator: EstablishOperationalBindingResultData_initiator,
+        _unrecognizedExtensionsList: _Element[] = [],
+        securityParameters?: OPTIONAL<SecurityParameters>,
+        performer?: OPTIONAL<DistinguishedName>,
+        aliasDereferenced?: OPTIONAL<BOOLEAN>,
+        notification?: OPTIONAL<Attribute[]>
+    ) {
+        this.bindingType = bindingType;
+        this.bindingID = bindingID;
+        this.accessPoint = accessPoint;
+        this.initiator = initiator;
+        this._unrecognizedExtensionsList = _unrecognizedExtensionsList;
+        this.securityParameters = securityParameters;
+        this.performer = performer;
+        this.aliasDereferenced = aliasDereferenced;
+        this.notification = notification;
+    }
 
     /**
      * @summary Restructures an object into a EstablishOperationalBindingResultData

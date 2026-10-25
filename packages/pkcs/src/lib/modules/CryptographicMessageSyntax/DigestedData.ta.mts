@@ -1,22 +1,22 @@
 /* eslint-disable */
 import {
     ASN1ConstructionError as _ConstructionError,
-    ASN1Element as _Element,
+    type ASN1Element as _Element,
     ASN1TagClass as _TagClass,
 } from "@wildboar/asn1";
 import * as $ from "@wildboar/asn1/functional";
 import {
-    CMSVersion,
+    type CMSVersion,
     _decode_CMSVersion,
     _encode_CMSVersion,
 } from "../CryptographicMessageSyntax/CMSVersion.ta.mjs";
 import {
-    Digest,
+    type Digest,
     _decode_Digest,
     _encode_Digest,
 } from "../CryptographicMessageSyntax/Digest.ta.mjs";
 import {
-    DigestAlgorithmIdentifier,
+    type DigestAlgorithmIdentifier,
     _decode_DigestAlgorithmIdentifier,
     _encode_DigestAlgorithmIdentifier,
 } from "../CryptographicMessageSyntax/DigestAlgorithmIdentifier.ta.mjs";
@@ -43,32 +43,42 @@ import {
  *
  */
 export class DigestedData {
+    /**
+     * @summary `version`.
+     * @public
+     * @readonly
+     */
+    public readonly version: CMSVersion;
+    /**
+     * @summary `digestAlgorithm`.
+     * @public
+     * @readonly
+     */
+    public readonly digestAlgorithm: DigestAlgorithmIdentifier;
+    /**
+     * @summary `encapContentInfo`.
+     * @public
+     * @readonly
+     */
+    public readonly encapContentInfo: EncapsulatedContentInfo;
+    /**
+     * @summary `digest`.
+     * @public
+     * @readonly
+     */
+    public readonly digest: Digest;
+
     constructor(
-        /**
-         * @summary `version`.
-         * @public
-         * @readonly
-         */
-        readonly version: CMSVersion,
-        /**
-         * @summary `digestAlgorithm`.
-         * @public
-         * @readonly
-         */
-        readonly digestAlgorithm: DigestAlgorithmIdentifier,
-        /**
-         * @summary `encapContentInfo`.
-         * @public
-         * @readonly
-         */
-        readonly encapContentInfo: EncapsulatedContentInfo,
-        /**
-         * @summary `digest`.
-         * @public
-         * @readonly
-         */
-        readonly digest: Digest
-    ) {}
+        version: CMSVersion,
+        digestAlgorithm: DigestAlgorithmIdentifier,
+        encapContentInfo: EncapsulatedContentInfo,
+        digest: Digest
+    ) {
+        this.version = version;
+        this.digestAlgorithm = digestAlgorithm;
+        this.encapContentInfo = encapContentInfo;
+        this.digest = digest;
+    }
 
     /**
      * @summary Restructures an object into a DigestedData

@@ -1,7 +1,7 @@
 /* eslint-disable */
 import {
-    INTEGER,
-    ASN1Element as _Element,
+    type INTEGER,
+    type ASN1Element as _Element,
     ASN1TagClass as _TagClass,
     ASN1Construction as _Construction,
     ASN1UniversalType as _UniversalType,
@@ -11,10 +11,10 @@ import {
     ASN1ConstructionError as _ConstructionError,
 } from "@wildboar/asn1";
 import * as $ from "@wildboar/asn1/functional";
-import { ObjectName, _decode_ObjectName, _encode_ObjectName } from "../ISO-9506-MMS-1/ObjectName.ta.mjs";
-import { Identifier, _decode_Identifier, _encode_Identifier } from "../ISO-9506-MMS-1/Identifier.ta.mjs";
-import { NAMED_TOKEN } from "../MMS-Object-Module-1/NAMED-TOKEN.oca.mjs";
-import { SEMAPHORE_ENTRY } from "../MMS-Object-Module-1/SEMAPHORE-ENTRY.oca.mjs";
+import { type ObjectName, _decode_ObjectName, _encode_ObjectName } from "../ISO-9506-MMS-1/ObjectName.ta.mjs";
+import { type Identifier, _decode_Identifier, _encode_Identifier } from "../ISO-9506-MMS-1/Identifier.ta.mjs";
+import { type NAMED_TOKEN } from "../MMS-Object-Module-1/NAMED-TOKEN.oca.mjs";
+import { type SEMAPHORE_ENTRY } from "../MMS-Object-Module-1/SEMAPHORE-ENTRY.oca.mjs";
 
 
 /**
@@ -182,7 +182,7 @@ type SEMAPHORE_class = _enum_for_SEMAPHORE_class;
  * @enum {number}
  */
 export
-const SEMAPHORE_class = _enum_for_SEMAPHORE_class;
+const SEMAPHORE_class: typeof _enum_for_SEMAPHORE_class = _enum_for_SEMAPHORE_class;
 
 /**
  * @summary SEMAPHORE_class_token
@@ -190,7 +190,7 @@ const SEMAPHORE_class = _enum_for_SEMAPHORE_class;
  * @type {number}
  */
 export
-const SEMAPHORE_class_token: SEMAPHORE_class = SEMAPHORE_class.token; /* LONG_NAMED_ENUMERATED_VALUE */
+const SEMAPHORE_class_token: _enum_for_SEMAPHORE_class.token = SEMAPHORE_class.token; /* LONG_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary SEMAPHORE_class_pool
@@ -198,6 +198,6 @@ const SEMAPHORE_class_token: SEMAPHORE_class = SEMAPHORE_class.token; /* LONG_NA
  * @type {number}
  */
 export
-const SEMAPHORE_class_pool: SEMAPHORE_class = SEMAPHORE_class.pool; /* LONG_NAMED_ENUMERATED_VALUE */
+const SEMAPHORE_class_pool: _enum_for_SEMAPHORE_class.pool = SEMAPHORE_class.pool; /* LONG_NAMED_ENUMERATED_VALUE */
 
 /* eslint-enable */

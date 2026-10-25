@@ -1,6 +1,6 @@
 /* eslint-disable */
 import {
-  BOOLEAN,
+  type BOOLEAN,
   ASN1Element as _Element,
   ASN1TagClass as _TagClass,
   ASN1Construction as _Construction,
@@ -51,7 +51,7 @@ export class BFPRegistrationEvent_NotificationParams {
    * @public
    * @readonly
    */
-  readonly bfpSchema: BioAPI_BFP_SCHEMA;
+  public readonly bfpSchema: BioAPI_BFP_SCHEMA;
   /**
    * @summary `update`.
    * @description
@@ -63,7 +63,7 @@ export class BFPRegistrationEvent_NotificationParams {
    * @public
    * @readonly
    */
-  readonly update: BOOLEAN;
+  public readonly update: BOOLEAN;
 
   constructor(
     bfpSchema: BioAPI_BFP_SCHEMA,

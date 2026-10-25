@@ -1,7 +1,7 @@
 /* eslint-disable */
 import {
-    OPTIONAL,
-    ASN1Element as _Element,
+    type OPTIONAL,
+    type ASN1Element as _Element,
     ASN1TagClass as _TagClass,
     ASN1Construction as _Construction,
     ASN1UniversalType as _UniversalType,
@@ -11,8 +11,8 @@ import {
     ASN1ConstructionError as _ConstructionError,
 } from "@wildboar/asn1";
 import * as $ from "@wildboar/asn1/functional";
-import { Identifier, _decode_Identifier, _encode_Identifier } from "../ISO-9506-MMS-1/Identifier.ta.mjs";
-import { StartCount, _decode_StartCount, _encode_StartCount } from "../ISO-9506-MMS-1/StartCount.ta.mjs";
+import { type Identifier, _decode_Identifier, _encode_Identifier } from "../ISO-9506-MMS-1/Identifier.ta.mjs";
+import { type StartCount, _decode_StartCount, _encode_StartCount } from "../ISO-9506-MMS-1/StartCount.ta.mjs";
 
 
 /**
@@ -34,30 +34,36 @@ import { StartCount, _decode_StartCount, _encode_StartCount } from "../ISO-9506-
  */
 export
 class AlterProgramInvocationAttributes_Request {
+    /**
+     * @summary `programInvocation`.
+     * @description
+     *
+     * Controlling Program Invocation whose running mode is altered. ISO 9506-1:2003 §12.11.1.1.1.
+     *
+     * @public
+     * @readonly
+     */
+    public readonly programInvocation: Identifier;
+    /**
+     * @summary `startCount`.
+     * @description
+     *
+     * New running mode: noLimit (`free-run`), cycleCount (`cycle-limited` +
+     * remaining cycles), or stepCount (`step-limited` + remaining steps).
+     * Default `cycleCount: 1`. ISO 9506-1:2003 §12.11.1.1.2. ISO 9506-2:2003 §12.11.
+     *
+     * @public
+     * @readonly
+     */
+    public readonly startCount?: OPTIONAL<StartCount>;
+
     constructor (
-        /**
-         * @summary `programInvocation`.
-         * @description
-         *
-         * Controlling Program Invocation whose running mode is altered. ISO 9506-1:2003 §12.11.1.1.1.
-         *
-         * @public
-         * @readonly
-         */
-        readonly programInvocation: Identifier,
-        /**
-         * @summary `startCount`.
-         * @description
-         *
-         * New running mode: noLimit (`free-run`), cycleCount (`cycle-limited` +
-         * remaining cycles), or stepCount (`step-limited` + remaining steps).
-         * Default `cycleCount: 1`. ISO 9506-1:2003 §12.11.1.1.2. ISO 9506-2:2003 §12.11.
-         *
-         * @public
-         * @readonly
-         */
-        readonly startCount?: OPTIONAL<StartCount>
-    ) {}
+        programInvocation: Identifier,
+        startCount?: OPTIONAL<StartCount>
+    ) {
+        this.programInvocation = programInvocation;
+        this.startCount = startCount;
+    }
 
     /**
      * @summary Restructures an object into a AlterProgramInvocationAttributes_Request

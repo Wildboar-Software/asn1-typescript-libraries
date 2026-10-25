@@ -1,5 +1,5 @@
 /* eslint-disable */
-import { OCTET_STRING } from "@wildboar/asn1";
+import { type OCTET_STRING } from "@wildboar/asn1";
 import * as $ from "@wildboar/asn1/functional";
 import type { EXTENSION } from "@wildboar/pki-stub";
 import { id_pkix_ocsp_nonce } from "../OCSP-2013-08/id-pkix-ocsp-nonce.va.mjs";

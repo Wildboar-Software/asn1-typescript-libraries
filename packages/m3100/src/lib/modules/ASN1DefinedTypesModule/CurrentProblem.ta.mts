@@ -1,6 +1,6 @@
 /* eslint-disable */
 import {
-    ASN1Element as _Element,
+    type ASN1Element as _Element,
     ASN1TagClass as _TagClass,
     ASN1Construction as _Construction,
     ASN1UniversalType as _UniversalType,
@@ -11,7 +11,7 @@ import {
 } from '@wildboar/asn1';
 import * as $ from '@wildboar/asn1/functional';
 import {
-    ProbableCause,
+    type ProbableCause,
     _decode_ProbableCause,
     _encode_ProbableCause,
 } from '@wildboar/attribute-asn1module';
@@ -37,20 +37,26 @@ import {
  *
  */
 export class CurrentProblem {
+    /**
+     * @summary `problem`.
+     * @public
+     * @readonly
+     */
+    public readonly problem: ProbableCause;
+    /**
+     * @summary `alarmStatus`.
+     * @public
+     * @readonly
+     */
+    public readonly alarmStatus: AlarmStatus;
+
     constructor(
-        /**
-         * @summary `problem`.
-         * @public
-         * @readonly
-         */
-        readonly problem: ProbableCause,
-        /**
-         * @summary `alarmStatus`.
-         * @public
-         * @readonly
-         */
-        readonly alarmStatus: AlarmStatus
-    ) {}
+        problem: ProbableCause,
+        alarmStatus: AlarmStatus
+    ) {
+        this.problem = problem;
+        this.alarmStatus = alarmStatus;
+    }
 
     /**
      * @summary Restructures an object into a CurrentProblem
@@ -76,7 +82,7 @@ export class CurrentProblem {
      * @static
      */
 
-    public static _enum_for_alarmStatus = _enum_for_AlarmStatus;
+    public static _enum_for_alarmStatus: typeof _enum_for_AlarmStatus = _enum_for_AlarmStatus;
 }
 
 

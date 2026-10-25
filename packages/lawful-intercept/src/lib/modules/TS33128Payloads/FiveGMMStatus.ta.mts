@@ -79,7 +79,7 @@ type FiveGMMStatus = _enum_for_FiveGMMStatus;
  * @enum {number}
  */
 export
-const FiveGMMStatus = _enum_for_FiveGMMStatus;
+const FiveGMMStatus: typeof _enum_for_FiveGMMStatus = _enum_for_FiveGMMStatus;
 
 /**
  * @summary FiveGMMStatus_uE5GMMRegistered
@@ -87,7 +87,7 @@ const FiveGMMStatus = _enum_for_FiveGMMStatus;
  * @type {number}
  */
 export
-const FiveGMMStatus_uE5GMMRegistered: FiveGMMStatus = FiveGMMStatus.uE5GMMRegistered; /* LONG_NAMED_ENUMERATED_VALUE */
+const FiveGMMStatus_uE5GMMRegistered: _enum_for_FiveGMMStatus.uE5GMMRegistered = FiveGMMStatus.uE5GMMRegistered; /* LONG_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary uE5GMMRegistered
@@ -95,7 +95,7 @@ const FiveGMMStatus_uE5GMMRegistered: FiveGMMStatus = FiveGMMStatus.uE5GMMRegist
  * @type {number}
  */
 export
-const uE5GMMRegistered: FiveGMMStatus = FiveGMMStatus.uE5GMMRegistered; /* SHORT_NAMED_ENUMERATED_VALUE */
+const uE5GMMRegistered: _enum_for_FiveGMMStatus.uE5GMMRegistered = FiveGMMStatus.uE5GMMRegistered; /* SHORT_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary FiveGMMStatus_uENot5GMMRegistered
@@ -103,7 +103,7 @@ const uE5GMMRegistered: FiveGMMStatus = FiveGMMStatus.uE5GMMRegistered; /* SHORT
  * @type {number}
  */
 export
-const FiveGMMStatus_uENot5GMMRegistered: FiveGMMStatus = FiveGMMStatus.uENot5GMMRegistered; /* LONG_NAMED_ENUMERATED_VALUE */
+const FiveGMMStatus_uENot5GMMRegistered: _enum_for_FiveGMMStatus.uENot5GMMRegistered = FiveGMMStatus.uENot5GMMRegistered; /* LONG_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary uENot5GMMRegistered
@@ -111,7 +111,7 @@ const FiveGMMStatus_uENot5GMMRegistered: FiveGMMStatus = FiveGMMStatus.uENot5GMM
  * @type {number}
  */
 export
-const uENot5GMMRegistered: FiveGMMStatus = FiveGMMStatus.uENot5GMMRegistered; /* SHORT_NAMED_ENUMERATED_VALUE */
+const uENot5GMMRegistered: _enum_for_FiveGMMStatus.uENot5GMMRegistered = FiveGMMStatus.uENot5GMMRegistered; /* SHORT_NAMED_ENUMERATED_VALUE */
 export const _decode_FiveGMMStatus: $.ASN1Decoder<FiveGMMStatus> = $._decodeEnumerated;
 export const _encode_FiveGMMStatus: $.ASN1Encoder<FiveGMMStatus> = $._encodeEnumerated;
 

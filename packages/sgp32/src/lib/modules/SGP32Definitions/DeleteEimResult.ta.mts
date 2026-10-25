@@ -1,7 +1,7 @@
 /* eslint-disable */
 import {
-    ASN1Element as _Element,
-    INTEGER
+    type ASN1Element as _Element,
+    type INTEGER
 } from "@wildboar/asn1";
 import * as $ from "@wildboar/asn1/functional";
 
@@ -46,7 +46,7 @@ type DeleteEimResult = INTEGER;
  * @type {number}
  */
 export
-const DeleteEimResult_ok: DeleteEimResult = 0; /* LONG_NAMED_INTEGER_VALUE */
+const DeleteEimResult_ok: 0 = 0 satisfies DeleteEimResult; /* LONG_NAMED_INTEGER_VALUE */
 
 /**
  * @summary DeleteEimResult_ok
@@ -58,7 +58,7 @@ const DeleteEimResult_ok: DeleteEimResult = 0; /* LONG_NAMED_INTEGER_VALUE */
  * @type {number}
  */
 export
-const ok: DeleteEimResult = DeleteEimResult_ok; /* SHORT_NAMED_INTEGER_VALUE */
+const ok: 0 = DeleteEimResult_ok; /* SHORT_NAMED_INTEGER_VALUE */
 
 /**
  * @summary DeleteEimResult_eimNotFound
@@ -71,7 +71,7 @@ const ok: DeleteEimResult = DeleteEimResult_ok; /* SHORT_NAMED_INTEGER_VALUE */
  * @type {number}
  */
 export
-const DeleteEimResult_eimNotFound: DeleteEimResult = 1; /* LONG_NAMED_INTEGER_VALUE */
+const DeleteEimResult_eimNotFound: 1 = 1 satisfies DeleteEimResult; /* LONG_NAMED_INTEGER_VALUE */
 
 /**
  * @summary DeleteEimResult_eimNotFound
@@ -83,7 +83,7 @@ const DeleteEimResult_eimNotFound: DeleteEimResult = 1; /* LONG_NAMED_INTEGER_VA
  * @type {number}
  */
 export
-const eimNotFound: DeleteEimResult = DeleteEimResult_eimNotFound; /* SHORT_NAMED_INTEGER_VALUE */
+const eimNotFound: 1 = DeleteEimResult_eimNotFound; /* SHORT_NAMED_INTEGER_VALUE */
 
 /**
  * @summary DeleteEimResult_lastEimDeleted
@@ -97,7 +97,7 @@ const eimNotFound: DeleteEimResult = DeleteEimResult_eimNotFound; /* SHORT_NAMED
  * @type {number}
  */
 export
-const DeleteEimResult_lastEimDeleted: DeleteEimResult = 2; /* LONG_NAMED_INTEGER_VALUE */
+const DeleteEimResult_lastEimDeleted: 2 = 2 satisfies DeleteEimResult; /* LONG_NAMED_INTEGER_VALUE */
 
 /**
  * @summary DeleteEimResult_lastEimDeleted
@@ -109,7 +109,7 @@ const DeleteEimResult_lastEimDeleted: DeleteEimResult = 2; /* LONG_NAMED_INTEGER
  * @type {number}
  */
 export
-const lastEimDeleted: DeleteEimResult = DeleteEimResult_lastEimDeleted; /* SHORT_NAMED_INTEGER_VALUE */
+const lastEimDeleted: 2 = DeleteEimResult_lastEimDeleted; /* SHORT_NAMED_INTEGER_VALUE */
 
 /**
  * @summary DeleteEimResult_commandError
@@ -122,7 +122,7 @@ const lastEimDeleted: DeleteEimResult = DeleteEimResult_lastEimDeleted; /* SHORT
  * @type {number}
  */
 export
-const DeleteEimResult_commandError: DeleteEimResult = 7; /* LONG_NAMED_INTEGER_VALUE */
+const DeleteEimResult_commandError: 7 = 7 satisfies DeleteEimResult; /* LONG_NAMED_INTEGER_VALUE */
 
 /**
  * @summary DeleteEimResult_commandError
@@ -133,7 +133,7 @@ const DeleteEimResult_commandError: DeleteEimResult = 7; /* LONG_NAMED_INTEGER_V
  * @type {number}
  */
 export
-const commandError: DeleteEimResult = DeleteEimResult_commandError; /* SHORT_NAMED_INTEGER_VALUE */
+const commandError: 7 = DeleteEimResult_commandError; /* SHORT_NAMED_INTEGER_VALUE */
 
 /**
  * @summary DeleteEimResult_undefinedError
@@ -146,7 +146,7 @@ const commandError: DeleteEimResult = DeleteEimResult_commandError; /* SHORT_NAM
  * @type {number}
  */
 export
-const DeleteEimResult_undefinedError: DeleteEimResult = 127; /* LONG_NAMED_INTEGER_VALUE */
+const DeleteEimResult_undefinedError: 127 = 127 satisfies DeleteEimResult; /* LONG_NAMED_INTEGER_VALUE */
 
 /**
  * @summary DeleteEimResult_undefinedError
@@ -157,7 +157,7 @@ const DeleteEimResult_undefinedError: DeleteEimResult = 127; /* LONG_NAMED_INTEG
  * @type {number}
  */
 export
-const undefinedError: DeleteEimResult = DeleteEimResult_undefinedError; /* SHORT_NAMED_INTEGER_VALUE */
+const undefinedError: 127 = DeleteEimResult_undefinedError; /* SHORT_NAMED_INTEGER_VALUE */
 export const _decode_DeleteEimResult: $.ASN1Decoder<DeleteEimResult> = $._decodeInteger;
 export const _encode_DeleteEimResult: $.ASN1Encoder<DeleteEimResult> = $._encodeInteger;
 

@@ -1,8 +1,8 @@
 /* eslint-disable */
 import {
-    OPTIONAL,
-    BOOLEAN,
-    ASN1Element as _Element,
+    type OPTIONAL,
+    type BOOLEAN,
+    type ASN1Element as _Element,
     ASN1TagClass as _TagClass,
     ASN1Construction as _Construction,
     ASN1UniversalType as _UniversalType,
@@ -13,7 +13,7 @@ import {
 } from '@wildboar/asn1';
 import * as $ from '@wildboar/asn1/functional';
 import {
-    DeliveryControls,
+    type DeliveryControls,
     _decode_DeliveryControls,
     _encode_DeliveryControls,
 } from '../MTSAbstractService/DeliveryControls.ta.mjs';
@@ -23,32 +23,32 @@ import {
     _encode_ExtensionField,
 } from '../MTSAbstractService/ExtensionField.ta.mjs';
 import {
-    Operations,
+    type Operations,
     _decode_Operations,
     _encode_Operations,
 } from '../MTSAbstractService/Operations.ta.mjs';
 import {
-    ContentLength,
+    type ContentLength,
     _decode_ContentLength,
     _encode_ContentLength,
 } from '../MTSAbstractService/ContentLength.ta.mjs';
 import {
-    Priority,
+    type Priority,
     _decode_Priority,
     _encode_Priority,
 } from '../MTSAbstractService/Priority.ta.mjs';
 import {
-    ContentTypes,
+    type ContentTypes,
     _decode_ContentTypes,
     _encode_ContentTypes,
 } from '../MTSAbstractService/ContentTypes.ta.mjs';
 import {
-    PermissibleEncodedInformationTypes,
+    type PermissibleEncodedInformationTypes,
     _decode_PermissibleEncodedInformationTypes,
     _encode_PermissibleEncodedInformationTypes,
 } from '../MTSAbstractService/PermissibleEncodedInformationTypes.ta.mjs';
 import {
-    SecurityContext,
+    type SecurityContext,
     _decode_SecurityContext,
     _encode_SecurityContext,
 } from '../MTSAbstractService/SecurityContext.ta.mjs';
@@ -79,56 +79,74 @@ import {
  *
  */
 export class DeliveryControlArgument implements DeliveryControls {
+    /**
+     * @summary `restrict`.
+     * @public
+     * @readonly
+     */
+    public readonly restrict?: OPTIONAL<BOOLEAN>; /* REPLICATED_COMPONENT */
+    /**
+     * @summary `permissible_operations`.
+     * @public
+     * @readonly
+     */
+    public readonly permissible_operations?: OPTIONAL<Operations>; /* REPLICATED_COMPONENT */
+    /**
+     * @summary `permissible_maximum_content_length`.
+     * @public
+     * @readonly
+     */
+    public readonly permissible_maximum_content_length?: OPTIONAL<ContentLength>; /* REPLICATED_COMPONENT */
+    /**
+     * @summary `permissible_lowest_priority`.
+     * @public
+     * @readonly
+     */
+    public readonly permissible_lowest_priority?: OPTIONAL<Priority>; /* REPLICATED_COMPONENT */
+    /**
+     * @summary `permissible_content_types`.
+     * @public
+     * @readonly
+     */
+    public readonly permissible_content_types?: OPTIONAL<ContentTypes>; /* REPLICATED_COMPONENT */
+    /**
+     * @summary `permissible_encoded_information_types`.
+     * @public
+     * @readonly
+     */
+    public readonly permissible_encoded_information_types?: OPTIONAL<PermissibleEncodedInformationTypes>; /* REPLICATED_COMPONENT */
+    /**
+     * @summary `permissible_security_context`.
+     * @public
+     * @readonly
+     */
+    public readonly permissible_security_context?: OPTIONAL<SecurityContext>; /* REPLICATED_COMPONENT */
+    /**
+     * @summary `extensions`.
+     * @public
+     * @readonly
+     */
+    public readonly extensions?: OPTIONAL<ExtensionField[]>;
+
     constructor(
-        /**
-         * @summary `restrict`.
-         * @public
-         * @readonly
-         */
-        readonly restrict?: OPTIONAL<BOOLEAN> /* REPLICATED_COMPONENT */,
-        /**
-         * @summary `permissible_operations`.
-         * @public
-         * @readonly
-         */
-        readonly permissible_operations?: OPTIONAL<Operations> /* REPLICATED_COMPONENT */,
-        /**
-         * @summary `permissible_maximum_content_length`.
-         * @public
-         * @readonly
-         */
-        readonly permissible_maximum_content_length?: OPTIONAL<ContentLength> /* REPLICATED_COMPONENT */,
-        /**
-         * @summary `permissible_lowest_priority`.
-         * @public
-         * @readonly
-         */
-        readonly permissible_lowest_priority?: OPTIONAL<Priority> /* REPLICATED_COMPONENT */,
-        /**
-         * @summary `permissible_content_types`.
-         * @public
-         * @readonly
-         */
-        readonly permissible_content_types?: OPTIONAL<ContentTypes> /* REPLICATED_COMPONENT */,
-        /**
-         * @summary `permissible_encoded_information_types`.
-         * @public
-         * @readonly
-         */
-        readonly permissible_encoded_information_types?: OPTIONAL<PermissibleEncodedInformationTypes> /* REPLICATED_COMPONENT */,
-        /**
-         * @summary `permissible_security_context`.
-         * @public
-         * @readonly
-         */
-        readonly permissible_security_context?: OPTIONAL<SecurityContext> /* REPLICATED_COMPONENT */,
-        /**
-         * @summary `extensions`.
-         * @public
-         * @readonly
-         */
-        readonly extensions?: OPTIONAL<ExtensionField[]>
-    ) {}
+        restrict?: OPTIONAL<BOOLEAN>,
+        permissible_operations?: OPTIONAL<Operations>,
+        permissible_maximum_content_length?: OPTIONAL<ContentLength>,
+        permissible_lowest_priority?: OPTIONAL<Priority>,
+        permissible_content_types?: OPTIONAL<ContentTypes>,
+        permissible_encoded_information_types?: OPTIONAL<PermissibleEncodedInformationTypes>,
+        permissible_security_context?: OPTIONAL<SecurityContext>,
+        extensions?: OPTIONAL<ExtensionField[]>
+    ) {
+        this.restrict = restrict;
+        this.permissible_operations = permissible_operations;
+        this.permissible_maximum_content_length = permissible_maximum_content_length;
+        this.permissible_lowest_priority = permissible_lowest_priority;
+        this.permissible_content_types = permissible_content_types;
+        this.permissible_encoded_information_types = permissible_encoded_information_types;
+        this.permissible_security_context = permissible_security_context;
+        this.extensions = extensions;
+    }
 
     /**
      * @summary Restructures an object into a DeliveryControlArgument

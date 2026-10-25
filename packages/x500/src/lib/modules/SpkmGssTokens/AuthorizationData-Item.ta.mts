@@ -1,10 +1,10 @@
 /* eslint-disable */
 import {
     ASN1ConstructionError as _ConstructionError,
-    ASN1Element as _Element,
+    type ASN1Element as _Element,
     ASN1TagClass as _TagClass,
-    INTEGER,
-    OCTET_STRING,
+    type INTEGER,
+    type OCTET_STRING,
 } from "@wildboar/asn1";
 import * as $ from "@wildboar/asn1/functional";
 
@@ -24,28 +24,34 @@ import * as $ from "@wildboar/asn1/functional";
  *
  */
 export class AuthorizationData_Item {
+    /**
+     * @summary `ad_type`.
+     * @description
+     *
+     * Authorization data type. Negative means optional if unrecognized.
+     *
+     * @public
+     * @readonly
+     */
+    public readonly ad_type: INTEGER;
+    /**
+     * @summary `ad_data`.
+     * @description
+     *
+     * Type-specific payload; empty is valid if the type allows it.
+     *
+     * @public
+     * @readonly
+     */
+    public readonly ad_data: OCTET_STRING;
+
     constructor(
-        /**
-         * @summary `ad_type`.
-         * @description
-         *
-         * Authorization data type. Negative means optional if unrecognized.
-         *
-         * @public
-         * @readonly
-         */
-        readonly ad_type: INTEGER,
-        /**
-         * @summary `ad_data`.
-         * @description
-         *
-         * Type-specific payload; empty is valid if the type allows it.
-         *
-         * @public
-         * @readonly
-         */
-        readonly ad_data: OCTET_STRING
-    ) {}
+        ad_type: INTEGER,
+        ad_data: OCTET_STRING
+    ) {
+        this.ad_type = ad_type;
+        this.ad_data = ad_data;
+    }
 
     /**
      * @summary Restructures an object into a AuthorizationData_Item

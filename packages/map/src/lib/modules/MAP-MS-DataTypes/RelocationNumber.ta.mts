@@ -1,12 +1,12 @@
 /* eslint-disable */
 import {
     ASN1ConstructionError as _ConstructionError,
-    ASN1Element as _Element,
+    type ASN1Element as _Element,
     ASN1TagClass as _TagClass
 } from "@wildboar/asn1";
 import * as $ from "@wildboar/asn1/functional";
-import { ISDN_AddressString, _decode_ISDN_AddressString, _encode_ISDN_AddressString } from "../MAP-CommonDataTypes/ISDN-AddressString.ta.mjs";
-import { RAB_Id, _decode_RAB_Id, _encode_RAB_Id } from "../MAP-MS-DataTypes/RAB-Id.ta.mjs";
+import { type ISDN_AddressString, _decode_ISDN_AddressString, _encode_ISDN_AddressString } from "../MAP-CommonDataTypes/ISDN-AddressString.ta.mjs";
+import { type RAB_Id, _decode_RAB_Id, _encode_RAB_Id } from "../MAP-MS-DataTypes/RAB-Id.ta.mjs";
 
 
 /**
@@ -32,38 +32,46 @@ import { RAB_Id, _decode_RAB_Id, _encode_RAB_Id } from "../MAP-MS-DataTypes/RAB-
  */
 export
 class RelocationNumber {
+    /**
+     * @summary `handoverNumber`.
+     * @description
+     *
+     * Number allocated for handover or relocation.
+     *
+     * (3GPP TS 29.002 V19.1.0 clause 7.6.2.21).
+     *
+     * @public
+     * @readonly
+     */
+    public readonly handoverNumber: ISDN_AddressString;
+    /**
+     * @summary `rab_Id`.
+     * @description
+     *
+     * Radio access bearer identifier as in 3GPP TS 25.413.
+     *
+     * (3GPP TS 29.002 V19.1.0 clause 7.6.2.57).
+     *
+     * @public
+     * @readonly
+     */
+    public readonly rab_Id: RAB_Id;
+    /**
+     * @summary Extensions that are not recognized.
+     * @public
+     * @readonly
+     */
+    public readonly _unrecognizedExtensionsList: _Element[];
+
     constructor (
-        /**
-         * @summary `handoverNumber`.
-         * @description
-         *
-         * Number allocated for handover or relocation.
-         *
-         * (3GPP TS 29.002 V19.1.0 clause 7.6.2.21).
-         *
-         * @public
-         * @readonly
-         */
-        readonly handoverNumber: ISDN_AddressString,
-        /**
-         * @summary `rab_Id`.
-         * @description
-         *
-         * Radio access bearer identifier as in 3GPP TS 25.413.
-         *
-         * (3GPP TS 29.002 V19.1.0 clause 7.6.2.57).
-         *
-         * @public
-         * @readonly
-         */
-        readonly rab_Id: RAB_Id,
-        /**
-         * @summary Extensions that are not recognized.
-         * @public
-         * @readonly
-         */
-        readonly _unrecognizedExtensionsList: _Element[] = []
-    ) {}
+        handoverNumber: ISDN_AddressString,
+        rab_Id: RAB_Id,
+        _unrecognizedExtensionsList: _Element[] = []
+    ) {
+        this.handoverNumber = handoverNumber;
+        this.rab_Id = rab_Id;
+        this._unrecognizedExtensionsList = _unrecognizedExtensionsList;
+    }
 
     /**
      * @summary Restructures an object into a RelocationNumber

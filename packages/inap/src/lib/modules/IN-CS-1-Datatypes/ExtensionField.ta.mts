@@ -1,11 +1,11 @@
 /* eslint-disable */
 import {
-    OPTIONAL,
-    ASN1Element as _Element,
+    type OPTIONAL,
+    type ASN1Element as _Element,
     ASN1TagClass as _TagClass
 } from "@wildboar/asn1";
 import * as $ from "@wildboar/asn1/functional";
-import { ExtensionType, _decode_ExtensionType, _encode_ExtensionType } from "../IN-CS-1-Datatypes/ExtensionType.ta.mjs";
+import { type ExtensionType, _decode_ExtensionType, _encode_ExtensionType } from "../IN-CS-1-Datatypes/ExtensionType.ta.mjs";
 // export { EXTENSION } from "../IN-CS-1-Datatypes/EXTENSION.oca.mjs";
 // export { SupportedExtensions } from "../IN-CS-1-Datatypes/SupportedExtensions.osa.mjs";
 import { Criticality, Criticality_ignored /* IMPORTED_LONG_ENUMERATION_ITEM */, _decode_Criticality, _encode_Criticality, _enum_for_Criticality } from "../IN-CS-1-Datatypes/Criticality.ta.mjs";
@@ -81,13 +81,13 @@ class ExtensionField {
      * @static
      * @method
      */
-    public static get _default_value_for_criticality () { return Criticality_ignored; }        /**
+    public static get _default_value_for_criticality (): _enum_for_Criticality.ignored { return Criticality_ignored; }        /**
          * @summary The enum used as the type of the component `criticality`
          * @public
          * @static
          */
 
-    public static _enum_for_criticality = _enum_for_Criticality;
+    public static _enum_for_criticality: typeof _enum_for_Criticality = _enum_for_Criticality;
 }
 
 /**

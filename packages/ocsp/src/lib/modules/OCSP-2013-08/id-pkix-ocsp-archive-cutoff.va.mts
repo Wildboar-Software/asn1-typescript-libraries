@@ -1,5 +1,5 @@
 /* eslint-disable */
-import { ObjectIdentifier as _OID, OBJECT_IDENTIFIER } from "@wildboar/asn1";
+import { ObjectIdentifier as _OID, type OBJECT_IDENTIFIER } from "@wildboar/asn1";
 import { id_pkix_ocsp } from "../OCSP-2013-08/id-pkix-ocsp.va.mjs";
 
 /**

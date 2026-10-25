@@ -1,6 +1,6 @@
 /* eslint-disable */
 import {
-  OPTIONAL,
+  type OPTIONAL,
   ASN1Element as _Element,
   ASN1TagClass as _TagClass,
   ASN1Construction as _Construction,
@@ -12,7 +12,7 @@ import {
 } from '@wildboar/asn1';
 import * as $ from '@wildboar/asn1/functional';
 import {
-  CertOrEncCert,
+  type CertOrEncCert,
   _decode_CertOrEncCert,
   _encode_CertOrEncCert,
 } from '../PKIXCMP-2009/CertOrEncCert.ta.mjs';
@@ -41,49 +41,57 @@ import {
  * ```asn1
  * CertifiedKeyPair ::= SEQUENCE {
  *     certOrEncCert       CertOrEncCert,
- *     privateKey      [0] EncryptedValue      OPTIONAL,
+ *     privateKey      [0] EncryptedValue      type OPTIONAL,
  *     -- see [RFC4211] for comment on encoding
  *     publicationInfo [1] PKIPublicationInfo  OPTIONAL }
  * ```
  *
  */
 export class CertifiedKeyPair {
+  /**
+   * @summary `certOrEncCert`.
+   * @description
+   *
+   * Either a cleartext certificate or an encrypted certificate
+   * ([RFC 4210 §5.3.4](https://datatracker.ietf.org/doc/html/rfc4210#section-5.3.4)). Encrypted form supports indirect POP
+   * ([RFC 4210 §5.2.8.2](https://datatracker.ietf.org/doc/html/rfc4210#section-5.2.8.2)).
+   *
+   * @public
+   * @readonly
+   */
+  public readonly certOrEncCert: CertOrEncCert;
+  /**
+   * @summary `privateKey`.
+   * @description
+   *
+   * Optional encrypted private key (`EncryptedValue`; see CRMF)
+   * ([RFC 4210 §5.3.4](https://datatracker.ietf.org/doc/html/rfc4210#section-5.3.4)).
+   *
+   * @public
+   * @readonly
+   */
+  public readonly privateKey?: OPTIONAL<EncryptedValue>;
+  /**
+   * @summary `publicationInfo`.
+   * @description
+   *
+   * Optional PKI publication information (`PKIPublicationInfo` from
+   * CRMF) ([RFC 4210 §5.3.4](https://datatracker.ietf.org/doc/html/rfc4210#section-5.3.4)).
+   *
+   * @public
+   * @readonly
+   */
+  public readonly publicationInfo?: OPTIONAL<PKIPublicationInfo>;
+
   constructor(
-    /**
-     * @summary `certOrEncCert`.
-     * @description
-     *
-     * Either a cleartext certificate or an encrypted certificate
-     * ([RFC 4210 §5.3.4](https://datatracker.ietf.org/doc/html/rfc4210#section-5.3.4)). Encrypted form supports indirect POP
-     * ([RFC 4210 §5.2.8.2](https://datatracker.ietf.org/doc/html/rfc4210#section-5.2.8.2)).
-     *
-     * @public
-     * @readonly
-     */
-    readonly certOrEncCert: CertOrEncCert,
-    /**
-     * @summary `privateKey`.
-     * @description
-     *
-     * Optional encrypted private key (`EncryptedValue`; see CRMF)
-     * ([RFC 4210 §5.3.4](https://datatracker.ietf.org/doc/html/rfc4210#section-5.3.4)).
-     *
-     * @public
-     * @readonly
-     */
-    readonly privateKey?: OPTIONAL<EncryptedValue>,
-    /**
-     * @summary `publicationInfo`.
-     * @description
-     *
-     * Optional PKI publication information (`PKIPublicationInfo` from
-     * CRMF) ([RFC 4210 §5.3.4](https://datatracker.ietf.org/doc/html/rfc4210#section-5.3.4)).
-     *
-     * @public
-     * @readonly
-     */
-    readonly publicationInfo?: OPTIONAL<PKIPublicationInfo>
-  ) {}
+    certOrEncCert: CertOrEncCert,
+    privateKey?: OPTIONAL<EncryptedValue>,
+    publicationInfo?: OPTIONAL<PKIPublicationInfo>
+  ) {
+    this.certOrEncCert = certOrEncCert;
+    this.privateKey = privateKey;
+    this.publicationInfo = publicationInfo;
+  }
 
   /**
    * @summary Restructures an object into a CertifiedKeyPair

@@ -1,5 +1,5 @@
 /* eslint-disable */
-import { ObjectIdentifier as _OID, OBJECT_IDENTIFIER } from "@wildboar/asn1";
+import { ObjectIdentifier as _OID, type OBJECT_IDENTIFIER } from "@wildboar/asn1";
 import { id_ce_certificatePolicies } from "../CertificateExtensions/id-ce-certificatePolicies.va.mjs";
 /**
  * @summary anyPolicy

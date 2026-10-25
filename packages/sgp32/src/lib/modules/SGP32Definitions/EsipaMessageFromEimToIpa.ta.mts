@@ -1,16 +1,16 @@
 /* eslint-disable */
 import {
-    ASN1Element as _Element,
+    type ASN1Element as _Element,
     ASN1TagClass as _TagClass
 } from "@wildboar/asn1";
 import * as $ from "@wildboar/asn1/functional";
-import { InitiateAuthenticationResponseEsipa, _decode_InitiateAuthenticationResponseEsipa, _encode_InitiateAuthenticationResponseEsipa } from "../SGP32Definitions/InitiateAuthenticationResponseEsipa.ta.mjs";
-import { AuthenticateClientResponseEsipa, _decode_AuthenticateClientResponseEsipa, _encode_AuthenticateClientResponseEsipa } from "../SGP32Definitions/AuthenticateClientResponseEsipa.ta.mjs";
-import { GetBoundProfilePackageResponseEsipa, _decode_GetBoundProfilePackageResponseEsipa, _encode_GetBoundProfilePackageResponseEsipa } from "../SGP32Definitions/GetBoundProfilePackageResponseEsipa.ta.mjs";
-import { CancelSessionResponseEsipa, _decode_CancelSessionResponseEsipa, _encode_CancelSessionResponseEsipa } from "../SGP32Definitions/CancelSessionResponseEsipa.ta.mjs";
-import { TransferEimPackageRequest, _decode_TransferEimPackageRequest, _encode_TransferEimPackageRequest } from "../SGP32Definitions/TransferEimPackageRequest.ta.mjs";
-import { GetEimPackageResponse, _decode_GetEimPackageResponse, _encode_GetEimPackageResponse } from "../SGP32Definitions/GetEimPackageResponse.ta.mjs";
-import { ProvideEimPackageResultResponse, _decode_ProvideEimPackageResultResponse, _encode_ProvideEimPackageResultResponse } from "../SGP32Definitions/ProvideEimPackageResultResponse.ta.mjs";
+import { type InitiateAuthenticationResponseEsipa, _decode_InitiateAuthenticationResponseEsipa, _encode_InitiateAuthenticationResponseEsipa } from "../SGP32Definitions/InitiateAuthenticationResponseEsipa.ta.mjs";
+import { type AuthenticateClientResponseEsipa, _decode_AuthenticateClientResponseEsipa, _encode_AuthenticateClientResponseEsipa } from "../SGP32Definitions/AuthenticateClientResponseEsipa.ta.mjs";
+import { type GetBoundProfilePackageResponseEsipa, _decode_GetBoundProfilePackageResponseEsipa, _encode_GetBoundProfilePackageResponseEsipa } from "../SGP32Definitions/GetBoundProfilePackageResponseEsipa.ta.mjs";
+import { type CancelSessionResponseEsipa, _decode_CancelSessionResponseEsipa, _encode_CancelSessionResponseEsipa } from "../SGP32Definitions/CancelSessionResponseEsipa.ta.mjs";
+import { type TransferEimPackageRequest, _decode_TransferEimPackageRequest, _encode_TransferEimPackageRequest } from "../SGP32Definitions/TransferEimPackageRequest.ta.mjs";
+import { type GetEimPackageResponse, _decode_GetEimPackageResponse, _encode_GetEimPackageResponse } from "../SGP32Definitions/GetEimPackageResponse.ta.mjs";
+import { type ProvideEimPackageResultResponse, _decode_ProvideEimPackageResultResponse, _encode_ProvideEimPackageResultResponse } from "../SGP32Definitions/ProvideEimPackageResultResponse.ta.mjs";
 
 
 /**

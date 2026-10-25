@@ -11,13 +11,13 @@ import {
 } from '@wildboar/asn1';
 import * as $ from '@wildboar/asn1/functional';
 import {
-  BioAPI_GUI_RESPONSE,
+  type BioAPI_GUI_RESPONSE,
   _enum_for_BioAPI_GUI_RESPONSE,
   _decode_BioAPI_GUI_RESPONSE,
   _encode_BioAPI_GUI_RESPONSE,
 } from '../BIP/BioAPI-GUI-RESPONSE.ta.mjs';
 import {
-  SignedInt,
+  type SignedInt,
   _decode_SignedInt,
   _encode_SignedInt,
 } from '../BIP/SignedInt.ta.mjs';
@@ -55,7 +55,7 @@ export class GUIStateEvent_AcknowledgementParams {
    * @public
    * @readonly
    */
-  readonly response: BioAPI_GUI_RESPONSE;
+  public readonly response: BioAPI_GUI_RESPONSE;
   /**
    * @summary `enrollSampleIndexToRecapture`.
    * @description
@@ -66,7 +66,7 @@ export class GUIStateEvent_AcknowledgementParams {
    * @public
    * @readonly
    */
-  readonly enrollSampleIndexToRecapture: SignedInt;
+  public readonly enrollSampleIndexToRecapture: SignedInt;
 
   constructor(
     response: BioAPI_GUI_RESPONSE,
@@ -105,7 +105,7 @@ export class GUIStateEvent_AcknowledgementParams {
    * @static
    */
 
-  public static _enum_for_response = _enum_for_BioAPI_GUI_RESPONSE;
+  public static _enum_for_response: typeof _enum_for_BioAPI_GUI_RESPONSE = _enum_for_BioAPI_GUI_RESPONSE;
 }
 
 

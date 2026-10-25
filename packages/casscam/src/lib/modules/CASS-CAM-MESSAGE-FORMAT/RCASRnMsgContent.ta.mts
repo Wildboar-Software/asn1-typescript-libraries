@@ -1,9 +1,9 @@
 /* eslint-disable */
 import {
-    OPTIONAL,
-    BOOLEAN,
-    OCTET_STRING,
-    ASN1Element as _Element,
+    type OPTIONAL,
+    type BOOLEAN,
+    type OCTET_STRING,
+    type ASN1Element as _Element,
     ASN1TagClass as _TagClass,
     ASN1Construction as _Construction,
     ASN1UniversalType as _UniversalType,
@@ -55,7 +55,7 @@ class RCASRnMsgContent {
      * @public
      * @readonly
      */
-    readonly downloadSchedule: OCTET_STRING;
+    public readonly downloadSchedule: OCTET_STRING;
     /**
      * @summary `keyRequest_Req`.
      * @description
@@ -66,7 +66,7 @@ class RCASRnMsgContent {
      * @public
      * @readonly
      */
-    readonly keyRequest_Req?: OPTIONAL<BOOLEAN>;
+    public readonly keyRequest_Req?: OPTIONAL<BOOLEAN>;
     /**
      * @summary `purchaseReport_Req`.
      * @description
@@ -77,7 +77,7 @@ class RCASRnMsgContent {
      * @public
      * @readonly
      */
-    readonly purchaseReport_Req?: OPTIONAL<BOOLEAN>;
+    public readonly purchaseReport_Req?: OPTIONAL<BOOLEAN>;
 
     constructor (
         downloadSchedule: OCTET_STRING,

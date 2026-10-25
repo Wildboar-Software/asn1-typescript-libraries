@@ -1,6 +1,6 @@
 /* eslint-disable */
 import {
-  BIT_STRING,
+  type BIT_STRING,
   ASN1Element as _Element,
   ASN1TagClass as _TagClass,
   ASN1Construction as _Construction,
@@ -156,12 +156,12 @@ export const cancelGet: number = FunctionalUnits_cancelGet; /* SHORT_NAMED_BIT *
 
 
 
-export const _decode_FunctionalUnits = $._decodeBitString;
+export const _decode_FunctionalUnits: $.ASN1Decoder<BIT_STRING> = $._decodeBitString;
 
 
 
 
-export const _encode_FunctionalUnits = $._encodeBitString;
+export const _encode_FunctionalUnits: $.ASN1Encoder<BIT_STRING> = $._encodeBitString;
 
 
 /* eslint-enable */

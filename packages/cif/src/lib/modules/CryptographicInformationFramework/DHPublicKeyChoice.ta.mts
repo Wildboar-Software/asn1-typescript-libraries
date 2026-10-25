@@ -1,6 +1,6 @@
 /* eslint-disable */
 import {
-    ASN1Element as _Element,
+    type ASN1Element as _Element,
     ASN1TagClass as _TagClass,
     ASN1Construction as _Construction,
     ASN1UniversalType as _UniversalType,
@@ -10,7 +10,7 @@ import {
     ASN1ConstructionError as _ConstructionError,
 } from "@wildboar/asn1";
 import * as $ from "@wildboar/asn1/functional";
-import { DHPublicNumber, _decode_DHPublicNumber, _encode_DHPublicNumber } from "../CryptographicInformationFramework/DHPublicNumber.ta.mjs";
+import { type DHPublicNumber, _decode_DHPublicNumber, _encode_DHPublicNumber } from "../CryptographicInformationFramework/DHPublicNumber.ta.mjs";
 import { SubjectPublicKeyInfo, _decode_SubjectPublicKeyInfo, _encode_SubjectPublicKeyInfo } from "../AuthenticationFramework/SubjectPublicKeyInfo.ta.mjs";
 
 

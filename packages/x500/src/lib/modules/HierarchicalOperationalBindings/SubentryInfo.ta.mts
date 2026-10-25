@@ -1,7 +1,7 @@
 /* eslint-disable */
 import {
     ASN1ConstructionError as _ConstructionError,
-    ASN1Element as _Element,
+    type ASN1Element as _Element,
     ASN1TagClass as _TagClass,
 } from "@wildboar/asn1";
 import * as $ from "@wildboar/asn1/functional";
@@ -11,7 +11,7 @@ import {
     _encode_Attribute,
 } from "../InformationFramework/Attribute.ta.mjs";
 import {
-    RelativeDistinguishedName,
+    type RelativeDistinguishedName,
     _decode_RelativeDistinguishedName,
     _encode_RelativeDistinguishedName,
 } from "../InformationFramework/RelativeDistinguishedName.ta.mjs";
@@ -32,35 +32,43 @@ import {
  *
  */
 export class SubentryInfo {
+    /**
+     * @summary `rdn`.
+     * @description
+     *
+     * Relative to the administrative point.
+     *
+     * @public
+     * @readonly
+     */
+    public readonly rdn: RelativeDistinguishedName;
+    /**
+     * @summary `info`.
+     * @description
+     *
+     * Subentry attributes. SET OF Attribute without SIZE (1..MAX) — empty
+     * SET is legal here, unlike most other attribute SETs in this module.
+     *
+     * @public
+     * @readonly
+     */
+    public readonly info: Attribute[];
+    /**
+     * @summary Extensions that are not recognized.
+     * @public
+     * @readonly
+     */
+    public readonly _unrecognizedExtensionsList: _Element[];
+
     constructor(
-        /**
-         * @summary `rdn`.
-         * @description
-         *
-         * Relative to the administrative point.
-         *
-         * @public
-         * @readonly
-         */
-        readonly rdn: RelativeDistinguishedName,
-        /**
-         * @summary `info`.
-         * @description
-         *
-         * Subentry attributes. SET OF Attribute without SIZE (1..MAX) — empty
-         * SET is legal here, unlike most other attribute SETs in this module.
-         *
-         * @public
-         * @readonly
-         */
-        readonly info: Attribute[],
-        /**
-         * @summary Extensions that are not recognized.
-         * @public
-         * @readonly
-         */
-        readonly _unrecognizedExtensionsList: _Element[] = []
-    ) {}
+        rdn: RelativeDistinguishedName,
+        info: Attribute[],
+        _unrecognizedExtensionsList: _Element[] = []
+    ) {
+        this.rdn = rdn;
+        this.info = info;
+        this._unrecognizedExtensionsList = _unrecognizedExtensionsList;
+    }
 
     /**
      * @summary Restructures an object into a SubentryInfo

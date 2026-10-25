@@ -1,7 +1,7 @@
 /* eslint-disable */
 import {
-    ASN1Element as _Element,
-    INTEGER
+    type ASN1Element as _Element,
+    type INTEGER
 } from "@wildboar/asn1";
 import * as $ from "@wildboar/asn1/functional";
 
@@ -38,7 +38,7 @@ type ProvideEimPackageResultResponse_provideEimPackageResultError = INTEGER;
  * @type {number}
  */
 export
-const ProvideEimPackageResultResponse_provideEimPackageResultError_eidNotFound: ProvideEimPackageResultResponse_provideEimPackageResultError = 2; /* LONG_NAMED_INTEGER_VALUE */
+const ProvideEimPackageResultResponse_provideEimPackageResultError_eidNotFound: 2 = 2 satisfies ProvideEimPackageResultResponse_provideEimPackageResultError; /* LONG_NAMED_INTEGER_VALUE */
 
 /**
  * @summary ProvideEimPackageResultResponse_provideEimPackageResultError_eidNotFound
@@ -48,7 +48,7 @@ const ProvideEimPackageResultResponse_provideEimPackageResultError_eidNotFound: 
  * @type {number}
  */
 export
-const eidNotFound: ProvideEimPackageResultResponse_provideEimPackageResultError = ProvideEimPackageResultResponse_provideEimPackageResultError_eidNotFound; /* SHORT_NAMED_INTEGER_VALUE */
+const eidNotFound: 2 = ProvideEimPackageResultResponse_provideEimPackageResultError_eidNotFound; /* SHORT_NAMED_INTEGER_VALUE */
 
 /**
  * @summary ProvideEimPackageResultResponse_provideEimPackageResultError_invalidEid
@@ -60,7 +60,7 @@ const eidNotFound: ProvideEimPackageResultResponse_provideEimPackageResultError 
  * @type {number}
  */
 export
-const ProvideEimPackageResultResponse_provideEimPackageResultError_invalidEid: ProvideEimPackageResultResponse_provideEimPackageResultError = 3; /* LONG_NAMED_INTEGER_VALUE */
+const ProvideEimPackageResultResponse_provideEimPackageResultError_invalidEid: 3 = 3 satisfies ProvideEimPackageResultResponse_provideEimPackageResultError; /* LONG_NAMED_INTEGER_VALUE */
 
 /**
  * @summary ProvideEimPackageResultResponse_provideEimPackageResultError_invalidEid
@@ -70,7 +70,7 @@ const ProvideEimPackageResultResponse_provideEimPackageResultError_invalidEid: P
  * @type {number}
  */
 export
-const invalidEid: ProvideEimPackageResultResponse_provideEimPackageResultError = ProvideEimPackageResultResponse_provideEimPackageResultError_invalidEid; /* SHORT_NAMED_INTEGER_VALUE */
+const invalidEid: 3 = ProvideEimPackageResultResponse_provideEimPackageResultError_invalidEid; /* SHORT_NAMED_INTEGER_VALUE */
 
 /**
  * @summary ProvideEimPackageResultResponse_provideEimPackageResultError_missingEid
@@ -82,7 +82,7 @@ const invalidEid: ProvideEimPackageResultResponse_provideEimPackageResultError =
  * @type {number}
  */
 export
-const ProvideEimPackageResultResponse_provideEimPackageResultError_missingEid: ProvideEimPackageResultResponse_provideEimPackageResultError = 4; /* LONG_NAMED_INTEGER_VALUE */
+const ProvideEimPackageResultResponse_provideEimPackageResultError_missingEid: 4 = 4 satisfies ProvideEimPackageResultResponse_provideEimPackageResultError; /* LONG_NAMED_INTEGER_VALUE */
 
 /**
  * @summary ProvideEimPackageResultResponse_provideEimPackageResultError_missingEid
@@ -93,7 +93,7 @@ const ProvideEimPackageResultResponse_provideEimPackageResultError_missingEid: P
  * @type {number}
  */
 export
-const missingEid: ProvideEimPackageResultResponse_provideEimPackageResultError = ProvideEimPackageResultResponse_provideEimPackageResultError_missingEid; /* SHORT_NAMED_INTEGER_VALUE */
+const missingEid: 4 = ProvideEimPackageResultResponse_provideEimPackageResultError_missingEid; /* SHORT_NAMED_INTEGER_VALUE */
 
 /**
  * @summary ProvideEimPackageResultResponse_provideEimPackageResultError_undefinedError
@@ -104,7 +104,7 @@ const missingEid: ProvideEimPackageResultResponse_provideEimPackageResultError =
  * @type {number}
  */
 export
-const ProvideEimPackageResultResponse_provideEimPackageResultError_undefinedError: ProvideEimPackageResultResponse_provideEimPackageResultError = 127; /* LONG_NAMED_INTEGER_VALUE */
+const ProvideEimPackageResultResponse_provideEimPackageResultError_undefinedError: 127 = 127 satisfies ProvideEimPackageResultResponse_provideEimPackageResultError; /* LONG_NAMED_INTEGER_VALUE */
 
 /**
  * @summary ProvideEimPackageResultResponse_provideEimPackageResultError_undefinedError
@@ -114,7 +114,7 @@ const ProvideEimPackageResultResponse_provideEimPackageResultError_undefinedErro
  * @type {number}
  */
 export
-const undefinedError: ProvideEimPackageResultResponse_provideEimPackageResultError = ProvideEimPackageResultResponse_provideEimPackageResultError_undefinedError; /* SHORT_NAMED_INTEGER_VALUE */
+const undefinedError: 127 = ProvideEimPackageResultResponse_provideEimPackageResultError_undefinedError; /* SHORT_NAMED_INTEGER_VALUE */
 export const _decode_ProvideEimPackageResultResponse_provideEimPackageResultError: $.ASN1Decoder<ProvideEimPackageResultResponse_provideEimPackageResultError> = $._decodeInteger;
 export const _encode_ProvideEimPackageResultResponse_provideEimPackageResultError: $.ASN1Encoder<ProvideEimPackageResultResponse_provideEimPackageResultError> = $._encodeInteger;
 

@@ -1,9 +1,9 @@
 /* eslint-disable */
 import {
-    OPTIONAL,
-    SEQUENCE,
-    SET,
-    ASN1Element as _Element,
+    type OPTIONAL,
+    type SEQUENCE,
+    type SET,
+    type ASN1Element as _Element,
     ASN1TagClass as _TagClass,
 } from "@wildboar/asn1";
 import * as $ from "@wildboar/asn1/functional";
@@ -22,7 +22,7 @@ import {
 } from "../ASN1DefinedTypesModule/AlarmStatus.ta.mjs";
 
 import {
-    ProbableCause,
+    type ProbableCause,
     _decode_ProbableCause,
     _encode_ProbableCause,
 } from "../Attribute-ASN1Module/ProbableCause.ta.mjs";
@@ -47,26 +47,34 @@ import {
  */
 export
 class AlarmSummaryInfo {
+    /**
+     * @summary `perceivedSeverity`.
+     * @public
+     * @readonly
+     */
+    public readonly perceivedSeverity?: OPTIONAL<PerceivedSeverity>;
+    /**
+     * @summary `alarmStatus`.
+     * @public
+     * @readonly
+     */
+    public readonly alarmStatus?: OPTIONAL<AlarmStatus>;
+    /**
+     * @summary `probableCause`.
+     * @public
+     * @readonly
+     */
+    public readonly probableCause?: OPTIONAL<ProbableCause>;
+
     constructor (
-        /**
-         * @summary `perceivedSeverity`.
-         * @public
-         * @readonly
-         */
-        readonly perceivedSeverity?: OPTIONAL<PerceivedSeverity>,
-        /**
-         * @summary `alarmStatus`.
-         * @public
-         * @readonly
-         */
-        readonly alarmStatus?: OPTIONAL<AlarmStatus>,
-        /**
-         * @summary `probableCause`.
-         * @public
-         * @readonly
-         */
-        readonly probableCause?: OPTIONAL<ProbableCause>
-    ) {}
+        perceivedSeverity?: OPTIONAL<PerceivedSeverity>,
+        alarmStatus?: OPTIONAL<AlarmStatus>,
+        probableCause?: OPTIONAL<ProbableCause>
+    ) {
+        this.perceivedSeverity = perceivedSeverity;
+        this.alarmStatus = alarmStatus;
+        this.probableCause = probableCause;
+    }
 
     /**
      * @summary Restructures an object into a AlarmSummaryInfo
@@ -90,13 +98,13 @@ class AlarmSummaryInfo {
          * @static
          */
 
-    public static _enum_for_perceivedSeverity = _enum_for_PerceivedSeverity;        /**
+    public static _enum_for_perceivedSeverity: typeof _enum_for_PerceivedSeverity = _enum_for_PerceivedSeverity;        /**
          * @summary The enum used as the type of the component `alarmStatus`
          * @public
          * @static
          */
 
-    public static _enum_for_alarmStatus = _enum_for_AlarmStatus;
+    public static _enum_for_alarmStatus: typeof _enum_for_AlarmStatus = _enum_for_AlarmStatus;
 }
 
 /**

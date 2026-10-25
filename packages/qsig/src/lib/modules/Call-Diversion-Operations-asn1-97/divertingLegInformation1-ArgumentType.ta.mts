@@ -1,14 +1,14 @@
 /* eslint-disable */
 import {
-    OPTIONAL,
-    ASN1Element as _Element,
+    type OPTIONAL,
+    type ASN1Element as _Element,
     ASN1TagClass as _TagClass
 } from "@wildboar/asn1";
 import * as $ from "@wildboar/asn1/functional";
 import { DiversionReason, _decode_DiversionReason, _encode_DiversionReason, _enum_for_DiversionReason } from "../Call-Diversion-Operations-asn1-97/DiversionReason.ta.mjs";
 import { SubscriptionOption, _decode_SubscriptionOption, _encode_SubscriptionOption, _enum_for_SubscriptionOption } from "../Call-Diversion-Operations-asn1-97/SubscriptionOption.ta.mjs";
-import { PartyNumber, _decode_PartyNumber, _encode_PartyNumber } from "../Addressing-Data-Elements-asn1-97/PartyNumber.ta.mjs";
-import { _decode_divertingLegInformation1_ArgumentType_extension, _encode_divertingLegInformation1_ArgumentType_extension, divertingLegInformation1_ArgumentType_extension } from "../Call-Diversion-Operations-asn1-97/divertingLegInformation1-ArgumentType-extension.ta.mjs";
+import { type PartyNumber, _decode_PartyNumber, _encode_PartyNumber } from "../Addressing-Data-Elements-asn1-97/PartyNumber.ta.mjs";
+import { _decode_divertingLegInformation1_ArgumentType_extension, _encode_divertingLegInformation1_ArgumentType_extension, type divertingLegInformation1_ArgumentType_extension } from "../Call-Diversion-Operations-asn1-97/divertingLegInformation1-ArgumentType-extension.ta.mjs";
 
 /**
  * @summary divertingLegInformation1_ArgumentType
@@ -117,13 +117,13 @@ class divertingLegInformation1_ArgumentType {
          * @static
          */
 
-    public static _enum_for_diversionReason = _enum_for_DiversionReason;        /**
+    public static _enum_for_diversionReason: typeof _enum_for_DiversionReason = _enum_for_DiversionReason;        /**
          * @summary The enum used as the type of the component `subscriptionOption`
          * @public
          * @static
          */
 
-    public static _enum_for_subscriptionOption = _enum_for_SubscriptionOption;
+    public static _enum_for_subscriptionOption: typeof _enum_for_SubscriptionOption = _enum_for_SubscriptionOption;
 }
 
 /**

@@ -1,15 +1,15 @@
 /* eslint-disable */
 import {
-    INTEGER,
-    OCTET_STRING,
-    OPTIONAL,
-    UTF8String,
-    ASN1Element as _Element,
+    type INTEGER,
+    type OCTET_STRING,
+    type OPTIONAL,
+    type UTF8String,
+    type ASN1Element as _Element,
     ASN1TagClass as _TagClass,
     ASN1SizeError
 } from "@wildboar/asn1";
 import * as $ from "@wildboar/asn1/functional";
-import { ProSeAppMask, _decode_ProSeAppMask, _encode_ProSeAppMask } from "../ProSeHI2Operations/ProSeAppMask.ta.mjs";
+import { type ProSeAppMask, _decode_ProSeAppMask, _encode_ProSeAppMask } from "../ProSeHI2Operations/ProSeAppMask.ta.mjs";
 // export { ProSeAppMask, _decode_ProSeAppMask, _encode_ProSeAppMask } from "../ProSeHI2Operations/ProSeAppMask.ta.mjs";
 
 

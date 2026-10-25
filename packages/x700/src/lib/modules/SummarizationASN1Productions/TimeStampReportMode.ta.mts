@@ -1,6 +1,6 @@
 /* eslint-disable */
 import {
-    ASN1Element as _Element,
+    type ASN1Element as _Element,
     ASN1TagClass as _TagClass,
     ASN1Construction as _Construction,
     ASN1UniversalType as _UniversalType,
@@ -84,7 +84,7 @@ export type TimeStampReportMode = _enum_for_TimeStampReportMode;
  *
  * @enum {number}
  */
-export const TimeStampReportMode = _enum_for_TimeStampReportMode;
+export const TimeStampReportMode: typeof _enum_for_TimeStampReportMode = _enum_for_TimeStampReportMode;
 
 /**
  * @summary TimeStampReportMode_timeStampingOff
@@ -96,7 +96,7 @@ export const TimeStampReportMode = _enum_for_TimeStampReportMode;
  * @constant
  * @type {number}
  */
-export const TimeStampReportMode_timeStampingOff: TimeStampReportMode =
+export const TimeStampReportMode_timeStampingOff: _enum_for_TimeStampReportMode.timeStampingOff =
     TimeStampReportMode.timeStampingOff; /* LONG_NAMED_ENUMERATED_VALUE */
 
 /**
@@ -109,7 +109,7 @@ export const TimeStampReportMode_timeStampingOff: TimeStampReportMode =
  * @constant
  * @type {number}
  */
-export const timeStampingOff: TimeStampReportMode =
+export const timeStampingOff: _enum_for_TimeStampReportMode.timeStampingOff =
     TimeStampReportMode.timeStampingOff; /* SHORT_NAMED_ENUMERATED_VALUE */
 
 /**
@@ -123,7 +123,7 @@ export const timeStampingOff: TimeStampReportMode =
  * @constant
  * @type {number}
  */
-export const TimeStampReportMode_globalTimeStampOnly: TimeStampReportMode =
+export const TimeStampReportMode_globalTimeStampOnly: _enum_for_TimeStampReportMode.globalTimeStampOnly =
     TimeStampReportMode.globalTimeStampOnly; /* LONG_NAMED_ENUMERATED_VALUE */
 
 /**
@@ -137,7 +137,7 @@ export const TimeStampReportMode_globalTimeStampOnly: TimeStampReportMode =
  * @constant
  * @type {number}
  */
-export const globalTimeStampOnly: TimeStampReportMode =
+export const globalTimeStampOnly: _enum_for_TimeStampReportMode.globalTimeStampOnly =
     TimeStampReportMode.globalTimeStampOnly; /* SHORT_NAMED_ENUMERATED_VALUE */
 
 /**
@@ -152,7 +152,7 @@ export const globalTimeStampOnly: TimeStampReportMode =
  * @constant
  * @type {number}
  */
-export const TimeStampReportMode_individualTimeStamping: TimeStampReportMode =
+export const TimeStampReportMode_individualTimeStamping: _enum_for_TimeStampReportMode.individualTimeStamping =
     TimeStampReportMode.individualTimeStamping; /* LONG_NAMED_ENUMERATED_VALUE */
 
 /**
@@ -165,14 +165,26 @@ export const TimeStampReportMode_individualTimeStamping: TimeStampReportMode =
  * @constant
  * @type {number}
  */
-export const individualTimeStamping: TimeStampReportMode =
+export const individualTimeStamping: _enum_for_TimeStampReportMode.individualTimeStamping =
     TimeStampReportMode.individualTimeStamping; /* SHORT_NAMED_ENUMERATED_VALUE */
 
 
-export const _decode_TimeStampReportMode = $._decodeEnumerated;
+export function _decode_TimeStampReportMode(el: _Element): TimeStampReportMode {
+    const enumerated = $._decodeEnumerated(el);
+    switch (enumerated) {
+        case TimeStampReportMode.timeStampingOff: return TimeStampReportMode.timeStampingOff;
+        case TimeStampReportMode.globalTimeStampOnly: return TimeStampReportMode.globalTimeStampOnly;
+        case TimeStampReportMode.individualTimeStamping: return TimeStampReportMode.individualTimeStamping;
+        default:
+            throw new _ConstructionError(
+                'Invalid ENUMERATED value ' + enumerated + ' for TimeStampReportMode.',
+                el,
+            );
+    }
+}
 
 
-export const _encode_TimeStampReportMode = $._encodeEnumerated;
+export const _encode_TimeStampReportMode: $.ASN1Encoder<TimeStampReportMode> = $._encodeEnumerated as $.ASN1Encoder<TimeStampReportMode>;
 
 
 /* eslint-enable */

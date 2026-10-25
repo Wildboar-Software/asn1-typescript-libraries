@@ -1,8 +1,8 @@
 /* eslint-disable */
 import {
-    ASN1Element as _Element,
+    type ASN1Element as _Element,
     ASN1OverflowError,
-    INTEGER
+    type INTEGER
 } from "@wildboar/asn1";
 import * as $ from "@wildboar/asn1/functional";
 
@@ -50,7 +50,7 @@ export const _decode_CurrencyScale = (el: _Element): CurrencyScale => {
     }
     return value;
 };
-export const _encode_CurrencyScale = $._encodeInteger;
+export const _encode_CurrencyScale: $.ASN1Encoder<INTEGER> = $._encodeInteger;
 
 
 /* eslint-enable */

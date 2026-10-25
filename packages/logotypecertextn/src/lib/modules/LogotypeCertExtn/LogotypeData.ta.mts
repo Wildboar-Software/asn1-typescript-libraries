@@ -1,7 +1,7 @@
 /* eslint-disable */
 import {
-    OPTIONAL,
-    ASN1Element as _Element,
+    type OPTIONAL,
+    type ASN1Element as _Element,
     ASN1TagClass as _TagClass
 } from "@wildboar/asn1";
 import * as $ from "@wildboar/asn1/functional";
@@ -54,7 +54,7 @@ class LogotypeData {
      * @public
      * @readonly
      */
-    readonly image?: OPTIONAL<LogotypeImage[]>;
+    public readonly image?: OPTIONAL<LogotypeImage[]>;
     /**
      * Audio-file variants of this logotype. Optional for the
      * certificate and optional for implementations. A client that
@@ -68,7 +68,7 @@ class LogotypeData {
      * @public
      * @readonly
      */
-    readonly audio?: OPTIONAL<LogotypeAudio[]>;
+    public readonly audio?: OPTIONAL<LogotypeAudio[]>;
 
     constructor (
         image?: OPTIONAL<LogotypeImage[]>,

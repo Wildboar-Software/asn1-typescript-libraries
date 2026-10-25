@@ -2,15 +2,15 @@
 
 import * as $ from "@wildboar/asn1/functional";
 import {
-    OPTIONAL,
-    BOOLEAN,
-    INTEGER,
-    SEQUENCE,
-    SET,
-    ASN1Element as _Element,
+    type OPTIONAL,
+    type BOOLEAN,
+    type INTEGER,
+    type SEQUENCE,
+    type SET,
+    type ASN1Element as _Element,
     ASN1TagClass as _TagClass
 } from "@wildboar/asn1";
-import { SubjectDeviceID, _decode_SubjectDeviceID, _encode_SubjectDeviceID } from "../CSTA-device-identifiers/SubjectDeviceID.ta.mjs";
+import { type SubjectDeviceID, _decode_SubjectDeviceID, _encode_SubjectDeviceID } from "../CSTA-device-identifiers/SubjectDeviceID.ta.mjs";
 
 import {
     ForwardingType,
@@ -51,12 +51,12 @@ import { CSTACommonArguments, _decode_CSTACommonArguments, _encode_CSTACommonArg
  * ```asn1
  * ForwardingEvent ::= SEQUENCE
  * {    device                 SubjectDeviceID,
- *     forwardingType             ForwardingType                OPTIONAL,
+ *     forwardingType             ForwardingType                type OPTIONAL,
  *     forwardStatus             BOOLEAN,
- *     forwardTo             DeviceID                OPTIONAL,
- *     forwardDefault             ForwardDefault                OPTIONAL,
- *     ringCount             INTEGER (1..100)            OPTIONAL,
- *     ringDuration            [4] IMPLICIT INTEGER            OPTIONAL,
+ *     forwardTo             DeviceID                type OPTIONAL,
+ *     forwardDefault             ForwardDefault                type OPTIONAL,
+ *     ringCount             INTEGER (1..100)            type OPTIONAL,
+ *     ringDuration            [4] IMPLICIT INTEGER            type OPTIONAL,
  *     extensions             CSTACommonArguments            OPTIONAL }
  * ```
  * 
@@ -64,84 +64,102 @@ import { CSTACommonArguments, _decode_CSTACommonArguments, _encode_CSTACommonArg
  */
 export
 class ForwardingEvent {
+    /**
+     * @summary `device`.
+     * @description
+     *
+     * Device whose forwarding feature changed.
+     * @public
+     * @readonly
+     */
+    public readonly device: SubjectDeviceID;
+    /**
+     * @summary `forwardingType`.
+     * @description
+     *
+     * Type that changed. User-specified: present. SF default settings:
+     * optional.
+     * @public
+     * @readonly
+     */
+    public readonly forwardingType: OPTIONAL<ForwardingType>;
+    /**
+     * @summary `forwardStatus`.
+     * @description
+     *
+     * FALSE = deactivated; TRUE = active.
+     * @public
+     * @readonly
+     */
+    public readonly forwardStatus: BOOLEAN;
+    /**
+     * @summary `forwardTo`.
+     * @description
+     *
+     * Forward destination (spec `forwardDN`). User settings: present; SF
+     * default: optional.
+     * @public
+     * @readonly
+     */
+    public readonly forwardTo?: OPTIONAL<DeviceID>;
+    /**
+     * @summary `forwardDefault`.
+     * @description
+     *
+     * defaultForwardingTypeAndForwardDN, defaultForwardingType, or
+     * defaultForwardDN. Absent (if supported): not a default setting.
+     * @public
+     * @readonly
+     */
+    public readonly forwardDefault?: OPTIONAL<ForwardDefault>;
+    /**
+     * @summary `ringCount`.
+     * @description
+     *
+     * Rings before forward-no-answer. Only for forwardNoAns{,Int,Ext}.
+     * @public
+     * @readonly
+     */
+    public readonly ringCount?: OPTIONAL<INTEGER>;
+    /**
+     * @summary `ringDuration`.
+     * @description
+     *
+     * Seconds before forward-no-answer. Omit if `ringCount` is provided.
+     * @public
+     * @readonly
+     */
+    public readonly ringDuration?: OPTIONAL<INTEGER>;
+    /**
+     * @summary `extensions`.
+     * @description
+     *
+     * Optional security (timestamp, sequence, securityInfo) and
+     * privateData.
+     * @public
+     * @readonly
+     */
+    public readonly extensions?: OPTIONAL<CSTACommonArguments>;
+
     constructor (
-        /**
-         * @summary `device`.
-         * @description
-         *
-         * Device whose forwarding feature changed.
-         * @public
-         * @readonly
-         */
-        readonly device: SubjectDeviceID,
-        /**
-         * @summary `forwardingType`.
-         * @description
-         *
-         * Type that changed. User-specified: present. SF default settings:
-         * optional.
-         * @public
-         * @readonly
-         */
-        readonly forwardingType: OPTIONAL<ForwardingType>,
-        /**
-         * @summary `forwardStatus`.
-         * @description
-         *
-         * FALSE = deactivated; TRUE = active.
-         * @public
-         * @readonly
-         */
-        readonly forwardStatus: BOOLEAN,
-        /**
-         * @summary `forwardTo`.
-         * @description
-         *
-         * Forward destination (spec `forwardDN`). User settings: present; SF
-         * default: optional.
-         * @public
-         * @readonly
-         */
-        readonly forwardTo?: OPTIONAL<DeviceID>,
-        /**
-         * @summary `forwardDefault`.
-         * @description
-         *
-         * defaultForwardingTypeAndForwardDN, defaultForwardingType, or
-         * defaultForwardDN. Absent (if supported): not a default setting.
-         * @public
-         * @readonly
-         */
-        readonly forwardDefault?: OPTIONAL<ForwardDefault>,
-        /**
-         * @summary `ringCount`.
-         * @description
-         *
-         * Rings before forward-no-answer. Only for forwardNoAns{,Int,Ext}.
-         * @public
-         * @readonly
-         */
-        readonly ringCount?: OPTIONAL<INTEGER>,
-        /**
-         * @summary `ringDuration`.
-         * @description
-         *
-         * Seconds before forward-no-answer. Omit if `ringCount` is provided.
-         * @public
-         * @readonly
-         */
-        readonly ringDuration?: OPTIONAL<INTEGER>,
-        /**
-         * @summary `extensions`.
-         * @description
-         *
-         * Optional security (timestamp, sequence, securityInfo) and
-         * privateData.
-         * @public
-         * @readonly
-         */
-        readonly extensions?: OPTIONAL<CSTACommonArguments>
-    ) {}
+        device: SubjectDeviceID,
+        forwardingType: OPTIONAL<ForwardingType>,
+        forwardStatus: BOOLEAN,
+        forwardTo?: OPTIONAL<DeviceID>,
+        forwardDefault?: OPTIONAL<ForwardDefault>,
+        ringCount?: OPTIONAL<INTEGER>,
+        ringDuration?: OPTIONAL<INTEGER>,
+        extensions?: OPTIONAL<CSTACommonArguments>
+    ) {
+        this.device = device;
+        this.forwardingType = forwardingType;
+        this.forwardStatus = forwardStatus;
+        this.forwardTo = forwardTo;
+        this.forwardDefault = forwardDefault;
+        this.ringCount = ringCount;
+        this.ringDuration = ringDuration;
+        this.extensions = extensions;
+    }
 
     /**
      * @summary Restructures an object into a ForwardingEvent
@@ -165,13 +183,13 @@ class ForwardingEvent {
          * @static
          */
 
-    public static _enum_for_forwardingType = _enum_for_ForwardingType;        /**
+    public static _enum_for_forwardingType: typeof _enum_for_ForwardingType = _enum_for_ForwardingType;        /**
          * @summary The enum used as the type of the component `forwardDefault`
          * @public
          * @static
          */
 
-    public static _enum_for_forwardDefault = _enum_for_ForwardDefault;
+    public static _enum_for_forwardDefault: typeof _enum_for_ForwardDefault = _enum_for_ForwardDefault;
 }
 
 /**

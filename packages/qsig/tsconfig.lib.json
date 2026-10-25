@@ -1,6 +1,7 @@
 {
   "extends": "../../tsconfig.base.json",
   "compilerOptions": {
+    "isolatedDeclarations": true,
     "rootDir": "src",
     "outDir": "../../dist/packages/qsig",
     "tsBuildInfoFile": "../../dist/packages/qsig/tsconfig.lib.tsbuildinfo",

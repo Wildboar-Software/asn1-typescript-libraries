@@ -1,7 +1,7 @@
 /* eslint-disable */
 import {
-  INTEGER,
-  OBJECT_IDENTIFIER,
+  type INTEGER,
+  type OBJECT_IDENTIFIER,
   ASN1Element as _Element,
   ASN1TagClass as _TagClass,
   ASN1Construction as _Construction,
@@ -29,30 +29,36 @@ import * as $ from '@wildboar/asn1/functional';
  *
  */
 export class IntermediateType_keyInformation {
+  /**
+   * @summary `kiClass`.
+   * @description
+   *
+   * Which `KEY-INFORMATION` object applies. ITU-T Rec.
+   * X.830 (04/95) Annex D.4.
+   *
+   * @public
+   * @readonly
+   */
+  public readonly kiClass: { local: INTEGER } | { global: OBJECT_IDENTIFIER };
+  /**
+   * @summary `keyInfo`.
+   * @description
+   *
+   * Value of that object's `&KiType`. ITU-T Rec. X.830
+   * (04/95) Annex D.4.
+   *
+   * @public
+   * @readonly
+   */
+  public readonly keyInfo: _Element;
+
   constructor(
-    /**
-     * @summary `kiClass`.
-     * @description
-     *
-     * Which `KEY-INFORMATION` object applies. ITU-T Rec.
-     * X.830 (04/95) Annex D.4.
-     *
-     * @public
-     * @readonly
-     */
-    readonly kiClass: { local: INTEGER } | { global: OBJECT_IDENTIFIER },
-    /**
-     * @summary `keyInfo`.
-     * @description
-     *
-     * Value of that object's `&KiType`. ITU-T Rec. X.830
-     * (04/95) Annex D.4.
-     *
-     * @public
-     * @readonly
-     */
-    readonly keyInfo: _Element
-  ) {}
+    kiClass: { local: INTEGER } | { global: OBJECT_IDENTIFIER },
+    keyInfo: _Element
+  ) {
+    this.kiClass = kiClass;
+    this.keyInfo = keyInfo;
+  }
 
   /**
    * @summary Restructures an object into a IntermediateType_keyInformation

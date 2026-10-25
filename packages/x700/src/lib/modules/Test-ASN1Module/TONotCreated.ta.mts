@@ -1,6 +1,6 @@
 /* eslint-disable */
 import {
-    ASN1Element as _Element,
+    type ASN1Element as _Element,
     ASN1TagClass as _TagClass,
     ASN1Construction as _Construction,
     ASN1UniversalType as _UniversalType,
@@ -17,7 +17,7 @@ import {
     _encode_TONotCreated_reason,
 } from '../Test-ASN1Module/TONotCreated-reason.ta.mjs';
 import {
-    AttributeList,
+    type AttributeList,
     _decode_AttributeList,
     _encode_AttributeList,
 } from '@wildboar/attribute-asn1module';

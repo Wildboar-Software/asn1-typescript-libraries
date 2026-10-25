@@ -4,7 +4,7 @@ import { type OPERATION } from "../Remote-Operations-Information-Objects/OPERATI
 // export { Code, _decode_Code, _encode_Code } from "../Remote-Operations-Information-Objects/Code.ta.mjs";
 import { ReconnectArg, _decode_ReconnectArg, _encode_ReconnectArg } from "../IN-CS-1-DataTypes-appendix/ReconnectArg.ta.mjs";
 // export { ReconnectArg, _decode_ReconnectArg, _encode_ReconnectArg } from "../IN-CS-1-DataTypes-appendix/ReconnectArg.ta.mjs";
-import { CallPartyHandlingResultsArg, _decode_CallPartyHandlingResultsArg, _encode_CallPartyHandlingResultsArg } from "../IN-CS-1-DataTypes-appendix/CallPartyHandlingResultsArg.ta.mjs";
+import { type CallPartyHandlingResultsArg, _decode_CallPartyHandlingResultsArg, _encode_CallPartyHandlingResultsArg } from "../IN-CS-1-DataTypes-appendix/CallPartyHandlingResultsArg.ta.mjs";
 // export { CallPartyHandlingResultsArg, _decode_CallPartyHandlingResultsArg, _encode_CallPartyHandlingResultsArg } from "../IN-CS-1-DataTypes-appendix/CallPartyHandlingResultsArg.ta.mjs";
 import { dataAlreadyExists } from "../IN-CS-1-Errors-appendix/dataAlreadyExists.oa.mjs";
 // export { dataAlreadyExists } from "../IN-CS-1-Errors-appendix/dataAlreadyExists.oa.mjs";

@@ -1,7 +1,7 @@
 /* eslint-disable */
 import {
-    INTEGER,
-    ASN1Element as _Element,
+    type INTEGER,
+    type ASN1Element as _Element,
     ASN1TagClass as _TagClass,
     ASN1Construction as _Construction,
     ASN1UniversalType as _UniversalType,
@@ -35,10 +35,10 @@ export
 type Count = INTEGER;
 
 
-export const _decode_Count = $._decodeInteger;
+export const _decode_Count: $.ASN1Decoder<INTEGER> = $._decodeInteger;
 
 
-export const _encode_Count = $._encodeInteger;
+export const _encode_Count: $.ASN1Encoder<INTEGER> = $._encodeInteger;
 
 
 /* eslint-enable */

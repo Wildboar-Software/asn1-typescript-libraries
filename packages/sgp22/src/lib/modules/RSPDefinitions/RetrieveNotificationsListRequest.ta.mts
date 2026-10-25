@@ -1,11 +1,11 @@
 /* eslint-disable */
 import {
-    OPTIONAL,
-    ASN1Element as _Element,
+    type OPTIONAL,
+    type ASN1Element as _Element,
     ASN1TagClass as _TagClass
 } from "@wildboar/asn1";
 import * as $ from "@wildboar/asn1/functional";
-import { RetrieveNotificationsListRequest_searchCriteria, _decode_RetrieveNotificationsListRequest_searchCriteria, _encode_RetrieveNotificationsListRequest_searchCriteria } from "../RSPDefinitions/RetrieveNotificationsListRequest-searchCriteria.ta.mjs";
+import { type RetrieveNotificationsListRequest_searchCriteria, _decode_RetrieveNotificationsListRequest_searchCriteria, _encode_RetrieveNotificationsListRequest_searchCriteria } from "../RSPDefinitions/RetrieveNotificationsListRequest-searchCriteria.ta.mjs";
 
 
 /**
@@ -41,7 +41,7 @@ class RetrieveNotificationsListRequest {
      * @public
      * @readonly
      */
-    readonly searchCriteria?: OPTIONAL<RetrieveNotificationsListRequest_searchCriteria>;
+    public readonly searchCriteria?: OPTIONAL<RetrieveNotificationsListRequest_searchCriteria>;
 
     constructor (
         searchCriteria?: OPTIONAL<RetrieveNotificationsListRequest_searchCriteria>

@@ -1,8 +1,8 @@
 /* eslint-disable */
 import {
-    OPTIONAL,
-    OCTET_STRING,
-    ASN1Element as _Element,
+    type OPTIONAL,
+    type OCTET_STRING,
+    type ASN1Element as _Element,
     ASN1TagClass as _TagClass,
     ASN1Construction as _Construction,
     ASN1UniversalType as _UniversalType,
@@ -48,56 +48,66 @@ import {
  */
 export
 class ATSHashIndex {
+    /**
+     * @summary `hashIndAlgorithm`.
+     * @description
+     *
+     * Hash algorithm used for the three index sequences.
+     * Defaults to SHA-256. Shall be the same algorithm as
+     * the archive time-stamp's message imprint.
+     *
+     * @public
+     * @readonly
+     */
+    public readonly hashIndAlgorithm: OPTIONAL<AlgorithmIdentifier>;
+    /**
+     * @summary `certificatesHashIndex`.
+     * @description
+     *
+     * Hash of every `CertificateChoices` in root
+     * `SignedData.certificates` at ATS request time, each
+     * over the entire encoded component (tag, length,
+     * value). No other hashes.
+     *
+     * @public
+     * @readonly
+     */
+    public readonly certificatesHashIndex: OCTET_STRING[];
+    /**
+     * @summary `crlsHashIndex`.
+     * @description
+     *
+     * Hash of every `RevocationInfoChoice` in root
+     * `SignedData.crls` at ATS request time (CRLs and/or
+     * OCSP).
+     *
+     * @public
+     * @readonly
+     */
+    public readonly crlsHashIndex: OCTET_STRING[];
+    /**
+     * @summary `unsignedAttrsHashIndex`.
+     * @description
+     *
+     * Hash of every unsigned `Attribute` in this
+     * `SignerInfo` at ATS request time.
+     *
+     * @public
+     * @readonly
+     */
+    public readonly unsignedAttrsHashIndex: OCTET_STRING[];
+
     constructor (
-        /**
-         * @summary `hashIndAlgorithm`.
-         * @description
-         *
-         * Hash algorithm used for the three index sequences.
-         * Defaults to SHA-256. Shall be the same algorithm as
-         * the archive time-stamp's message imprint.
-         *
-         * @public
-         * @readonly
-         */
-        readonly hashIndAlgorithm: OPTIONAL<AlgorithmIdentifier>,
-        /**
-         * @summary `certificatesHashIndex`.
-         * @description
-         *
-         * Hash of every `CertificateChoices` in root
-         * `SignedData.certificates` at ATS request time, each
-         * over the entire encoded component (tag, length,
-         * value). No other hashes.
-         *
-         * @public
-         * @readonly
-         */
-        readonly certificatesHashIndex: OCTET_STRING[],
-        /**
-         * @summary `crlsHashIndex`.
-         * @description
-         *
-         * Hash of every `RevocationInfoChoice` in root
-         * `SignedData.crls` at ATS request time (CRLs and/or
-         * OCSP).
-         *
-         * @public
-         * @readonly
-         */
-        readonly crlsHashIndex: OCTET_STRING[],
-        /**
-         * @summary `unsignedAttrsHashIndex`.
-         * @description
-         *
-         * Hash of every unsigned `Attribute` in this
-         * `SignerInfo` at ATS request time.
-         *
-         * @public
-         * @readonly
-         */
-        readonly unsignedAttrsHashIndex: OCTET_STRING[]
-    ) {}
+        hashIndAlgorithm: OPTIONAL<AlgorithmIdentifier>,
+        certificatesHashIndex: OCTET_STRING[],
+        crlsHashIndex: OCTET_STRING[],
+        unsignedAttrsHashIndex: OCTET_STRING[]
+    ) {
+        this.hashIndAlgorithm = hashIndAlgorithm;
+        this.certificatesHashIndex = certificatesHashIndex;
+        this.crlsHashIndex = crlsHashIndex;
+        this.unsignedAttrsHashIndex = unsignedAttrsHashIndex;
+    }
 
     /**
      * @summary Restructures an object into a ATSHashIndex

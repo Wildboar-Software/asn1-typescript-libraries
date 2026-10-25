@@ -1,7 +1,7 @@
 /* eslint-disable */
 import {
-    OPTIONAL,
-    ASN1Element as _Element,
+    type OPTIONAL,
+    type ASN1Element as _Element,
     ASN1TagClass as _TagClass,
     ASN1Construction as _Construction,
     ASN1UniversalType as _UniversalType,
@@ -11,9 +11,9 @@ import {
     ASN1ConstructionError as _ConstructionError,
 } from "@wildboar/asn1";
 import * as $ from "@wildboar/asn1/functional";
-import { Capabilities, _decode_Capabilities, _encode_Capabilities } from "../V59/Capabilities.ta.mjs";
+import { type Capabilities, _decode_Capabilities, _encode_Capabilities } from "../V59/Capabilities.ta.mjs";
 
-import { V59String, _decode_V59String, _encode_V59String } from "../V59/V59String.ta.mjs";
+import { type V59String, _decode_V59String, _encode_V59String } from "../V59/V59String.ta.mjs";
 
 /**
  * @summary ModeCapability_Item_modulationMode
@@ -58,7 +58,7 @@ class ModeCapability_Item_modulationMode {
      * @public
      * @readonly
      */
-    readonly modeV90: Capabilities;
+    public readonly modeV90: Capabilities;
     /**
      * @summary `modeV91`.
      * @description
@@ -69,7 +69,7 @@ class ModeCapability_Item_modulationMode {
      * @public
      * @readonly
      */
-    readonly modeV91: Capabilities;
+    public readonly modeV91: Capabilities;
     /**
      * @summary `modeV92`.
      * @description
@@ -80,7 +80,7 @@ class ModeCapability_Item_modulationMode {
      * @public
      * @readonly
      */
-    readonly modeV92: Capabilities;
+    public readonly modeV92: Capabilities;
     /**
      * @summary `modeV34`.
      * @description
@@ -92,7 +92,7 @@ class ModeCapability_Item_modulationMode {
      * @public
      * @readonly
      */
-    readonly modeV34: Capabilities;
+    public readonly modeV34: Capabilities;
     /**
      * @summary `modeV32B`.
      * @description
@@ -104,7 +104,7 @@ class ModeCapability_Item_modulationMode {
      * @public
      * @readonly
      */
-    readonly modeV32B: Capabilities;
+    public readonly modeV32B: Capabilities;
     /**
      * @summary `modeV22B`.
      * @description
@@ -116,7 +116,7 @@ class ModeCapability_Item_modulationMode {
      * @public
      * @readonly
      */
-    readonly modeV22B: Capabilities;
+    public readonly modeV22B: Capabilities;
     /**
      * @summary `modeV23`.
      * @description
@@ -127,7 +127,7 @@ class ModeCapability_Item_modulationMode {
      * @public
      * @readonly
      */
-    readonly modeV23: Capabilities;
+    public readonly modeV23: Capabilities;
     /**
      * @summary `modeV21`.
      * @description
@@ -138,7 +138,7 @@ class ModeCapability_Item_modulationMode {
      * @public
      * @readonly
      */
-    readonly modeV21: Capabilities;
+    public readonly modeV21: Capabilities;
     /**
      * @summary `modeV34H`.
      * @description
@@ -150,7 +150,7 @@ class ModeCapability_Item_modulationMode {
      * @public
      * @readonly
      */
-    readonly modeV34H: Capabilities;
+    public readonly modeV34H: Capabilities;
     /**
      * @summary `modeV17`.
      * @description
@@ -162,7 +162,7 @@ class ModeCapability_Item_modulationMode {
      * @public
      * @readonly
      */
-    readonly modeV17: Capabilities;
+    public readonly modeV17: Capabilities;
     /**
      * @summary `modeV29`.
      * @description
@@ -174,7 +174,7 @@ class ModeCapability_Item_modulationMode {
      * @public
      * @readonly
      */
-    readonly modeV29: Capabilities;
+    public readonly modeV29: Capabilities;
     /**
      * @summary `modeV27T`.
      * @description
@@ -186,7 +186,7 @@ class ModeCapability_Item_modulationMode {
      * @public
      * @readonly
      */
-    readonly modeV27T: Capabilities;
+    public readonly modeV27T: Capabilities;
     /**
      * @summary `modeV18`.
      * @description
@@ -198,7 +198,7 @@ class ModeCapability_Item_modulationMode {
      * @public
      * @readonly
      */
-    readonly modeV18: Capabilities;
+    public readonly modeV18: Capabilities;
     /**
      * @summary `otherModMode`.
      * @description
@@ -209,13 +209,13 @@ class ModeCapability_Item_modulationMode {
      * @public
      * @readonly
      */
-    readonly otherModMode?: OPTIONAL<V59String>;
+    public readonly otherModMode?: OPTIONAL<V59String>;
     /**
      * @summary Extensions that are not recognized.
      * @public
      * @readonly
      */
-    readonly _unrecognizedExtensionsList: _Element[];
+    public readonly _unrecognizedExtensionsList: _Element[];
 
     constructor (
         modeV90: Capabilities,

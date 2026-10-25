@@ -1,7 +1,7 @@
 /* eslint-disable */
 import {
     ASN1ConstructionError as _ConstructionError,
-    ASN1Element as _Element,
+    type ASN1Element as _Element,
     ASN1TagClass as _TagClass,
 } from "@wildboar/asn1";
 import * as $ from "@wildboar/asn1/functional";
@@ -29,25 +29,31 @@ import {
  *
  */
 export class ModificationParameter {
+    /**
+     * @summary `secondaryShadows`.
+     * @description
+     *
+     * Complete SET OF secondary-shadow access points. Empty = no
+     * secondary shadows. Unordered.
+     *
+     * @public
+     * @readonly
+     */
+    public readonly secondaryShadows: SupplierAndConsumers[];
+    /**
+     * @summary Extensions that are not recognized.
+     * @public
+     * @readonly
+     */
+    public readonly _unrecognizedExtensionsList: _Element[];
+
     constructor(
-        /**
-         * @summary `secondaryShadows`.
-         * @description
-         *
-         * Complete SET OF secondary-shadow access points. Empty = no
-         * secondary shadows. Unordered.
-         *
-         * @public
-         * @readonly
-         */
-        readonly secondaryShadows: SupplierAndConsumers[],
-        /**
-         * @summary Extensions that are not recognized.
-         * @public
-         * @readonly
-         */
-        readonly _unrecognizedExtensionsList: _Element[] = []
-    ) {}
+        secondaryShadows: SupplierAndConsumers[],
+        _unrecognizedExtensionsList: _Element[] = []
+    ) {
+        this.secondaryShadows = secondaryShadows;
+        this._unrecognizedExtensionsList = _unrecognizedExtensionsList;
+    }
 
     /**
      * @summary Restructures an object into a ModificationParameter

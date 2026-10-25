@@ -1,7 +1,7 @@
 /* eslint-disable */
 import {
-    OPTIONAL,
-    ASN1Element as _Element,
+    type OPTIONAL,
+    type ASN1Element as _Element,
     ASN1TagClass as _TagClass,
     ASN1Construction as _Construction,
     ASN1UniversalType as _UniversalType,
@@ -14,8 +14,8 @@ import * as $ from "@wildboar/asn1/functional";
 import { TestCrewInformation, _decode_TestCrewInformation, _encode_TestCrewInformation } from "../MachineReadableBiometricTestingAndReportingTestReport/TestCrewInformation.ta.mjs";
 import { LevelPolicyAssistance, _decode_LevelPolicyAssistance, _encode_LevelPolicyAssistance } from "../MachineReadableBiometricTestingAndReportingTestReport/LevelPolicyAssistance.ta.mjs";
 import { EnvironmentalInformation, _decode_EnvironmentalInformation, _encode_EnvironmentalInformation } from "../MachineReadableBiometricTestingAndReportingTestReport/EnvironmentalInformation.ta.mjs";
-import { Date, _decode_Date, _encode_Date } from "../MachineReadableBiometricTestingAndReportingTestReport/Date.ta.mjs";
-import { TestResult, _decode_TestResult, _encode_TestResult } from "../MachineReadableBiometricTestingAndReportingTestReport/TestResult.ta.mjs";
+import { type Date, _decode_Date, _encode_Date } from "../MachineReadableBiometricTestingAndReportingTestReport/Date.ta.mjs";
+import { type TestResult, _decode_TestResult, _encode_TestResult } from "../MachineReadableBiometricTestingAndReportingTestReport/TestResult.ta.mjs";
 
 
 /**
@@ -43,72 +43,86 @@ import { TestResult, _decode_TestResult, _encode_TestResult } from "../MachineRe
  */
 export
 class TestReportScenarioForOneCondition {
+    /**
+     * @summary `testCrewInfo`.
+     * @description
+     *
+     * Test crew identity, location, habituation, and statistics
+     * (Clause 6.5.2).
+     *
+     * @public
+     * @readonly
+     */
+    public readonly testCrewInfo: TestCrewInformation;
+    /**
+     * @summary `levelPolicyAssistance`.
+     * @description
+     *
+     * Effort, decision policy, assistance, and instructional mode.
+     * Policy is specified at the test level and enforced at the
+     * transaction level (Clause 6.5.2, Annex C.3).
+     *
+     * @public
+     * @readonly
+     */
+    public readonly levelPolicyAssistance: LevelPolicyAssistance;
+    /**
+     * @summary `environInfo`.
+     * @description
+     *
+     * Test-execution environment (Clause 6.5.2).
+     *
+     * @public
+     * @readonly
+     */
+    public readonly environInfo: EnvironmentalInformation;
+    /**
+     * @summary `dateStarted`.
+     * @description
+     *
+     * Date the test trials started (Clause 6.5.2).
+     *
+     * @public
+     * @readonly
+     */
+    public readonly dateStarted: OPTIONAL<Date>;
+    /**
+     * @summary `dateEnded`.
+     * @description
+     *
+     * Date the test trials ended (Clause 6.5.2).
+     *
+     * @public
+     * @readonly
+     */
+    public readonly dateEnded: OPTIONAL<Date>;
+    /**
+     * @summary `testResult`.
+     * @description
+     *
+     * Enrolment, acquisition, verification, and/or identification
+     * results for this condition (Clause 6.5.2).
+     *
+     * @public
+     * @readonly
+     */
+    public readonly testResult: TestResult[];
+
     constructor (
-        /**
-         * @summary `testCrewInfo`.
-         * @description
-         *
-         * Test crew identity, location, habituation, and statistics
-         * (Clause 6.5.2).
-         *
-         * @public
-         * @readonly
-         */
-        readonly testCrewInfo: TestCrewInformation,
-        /**
-         * @summary `levelPolicyAssistance`.
-         * @description
-         *
-         * Effort, decision policy, assistance, and instructional mode.
-         * Policy is specified at the test level and enforced at the
-         * transaction level (Clause 6.5.2, Annex C.3).
-         *
-         * @public
-         * @readonly
-         */
-        readonly levelPolicyAssistance: LevelPolicyAssistance,
-        /**
-         * @summary `environInfo`.
-         * @description
-         *
-         * Test-execution environment (Clause 6.5.2).
-         *
-         * @public
-         * @readonly
-         */
-        readonly environInfo: EnvironmentalInformation,
-        /**
-         * @summary `dateStarted`.
-         * @description
-         *
-         * Date the test trials started (Clause 6.5.2).
-         *
-         * @public
-         * @readonly
-         */
-        readonly dateStarted: OPTIONAL<Date>,
-        /**
-         * @summary `dateEnded`.
-         * @description
-         *
-         * Date the test trials ended (Clause 6.5.2).
-         *
-         * @public
-         * @readonly
-         */
-        readonly dateEnded: OPTIONAL<Date>,
-        /**
-         * @summary `testResult`.
-         * @description
-         *
-         * Enrolment, acquisition, verification, and/or identification
-         * results for this condition (Clause 6.5.2).
-         *
-         * @public
-         * @readonly
-         */
-        readonly testResult: TestResult[]
-    ) {}
+        testCrewInfo: TestCrewInformation,
+        levelPolicyAssistance: LevelPolicyAssistance,
+        environInfo: EnvironmentalInformation,
+        dateStarted: OPTIONAL<Date>,
+        dateEnded: OPTIONAL<Date>,
+        testResult: TestResult[]
+    ) {
+        this.testCrewInfo = testCrewInfo;
+        this.levelPolicyAssistance = levelPolicyAssistance;
+        this.environInfo = environInfo;
+        this.dateStarted = dateStarted;
+        this.dateEnded = dateEnded;
+        this.testResult = testResult;
+    }
 
     /**
      * @summary Restructures an object into a TestReportScenarioForOneCondition

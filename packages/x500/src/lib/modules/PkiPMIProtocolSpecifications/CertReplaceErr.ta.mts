@@ -1,11 +1,11 @@
 /* eslint-disable */
 import {
     ASN1ConstructionError as _ConstructionError,
-    ASN1Element as _Element,
+    type ASN1Element as _Element,
 } from "@wildboar/asn1";
 import * as $ from "@wildboar/asn1/functional";
 import {
-    CertReplaceErr_code,
+    type CertReplaceErr_code,
     _decode_CertReplaceErr_code,
     _encode_CertReplaceErr_code,
 } from "../PkiPMIProtocolSpecifications/CertReplaceErr-code.ta.mjs";
@@ -27,20 +27,26 @@ import {
  *
  */
 export class CertReplaceErr {
+    /**
+     * @summary `code`.
+     * @public
+     * @readonly
+     */
+    public readonly code: CertReplaceErr_code;
+    /**
+     * @summary Extensions that are not recognized.
+     * @public
+     * @readonly
+     */
+    public readonly _unrecognizedExtensionsList: _Element[];
+
     constructor(
-        /**
-         * @summary `code`.
-         * @public
-         * @readonly
-         */
-        readonly code: CertReplaceErr_code,
-        /**
-         * @summary Extensions that are not recognized.
-         * @public
-         * @readonly
-         */
-        readonly _unrecognizedExtensionsList: _Element[] = []
-    ) {}
+        code: CertReplaceErr_code,
+        _unrecognizedExtensionsList: _Element[] = []
+    ) {
+        this.code = code;
+        this._unrecognizedExtensionsList = _unrecognizedExtensionsList;
+    }
 
     /**
      * @summary Restructures an object into a CertReplaceErr

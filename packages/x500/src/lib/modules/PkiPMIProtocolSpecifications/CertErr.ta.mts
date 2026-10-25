@@ -1,17 +1,17 @@
 /* eslint-disable */
 import {
-    ASN1Element as _Element,
+    type ASN1Element as _Element,
     ASN1TagClass as _TagClass,
-    OPTIONAL,
+    type OPTIONAL,
 } from "@wildboar/asn1";
 import * as $ from "@wildboar/asn1/functional";
 import {
-    CertErr_notOK,
+    type CertErr_notOK,
     _decode_CertErr_notOK,
     _encode_CertErr_notOK,
 } from "../PkiPMIProtocolSpecifications/CertErr-notOK.ta.mjs";
 import {
-    Notifications,
+    type Notifications,
     _decode_Notifications,
     _encode_Notifications,
 } from "../PkiPMIProtocolSpecifications/Notifications.ta.mjs";
@@ -33,26 +33,34 @@ import {
  *
  */
 export class CertErr {
+    /**
+     * @summary `notOK`.
+     * @public
+     * @readonly
+     */
+    public readonly notOK: CertErr_notOK;
+    /**
+     * @summary `note`.
+     * @public
+     * @readonly
+     */
+    public readonly note?: OPTIONAL<Notifications>;
+    /**
+     * @summary Extensions that are not recognized.
+     * @public
+     * @readonly
+     */
+    public readonly _unrecognizedExtensionsList: _Element[];
+
     constructor(
-        /**
-         * @summary `notOK`.
-         * @public
-         * @readonly
-         */
-        readonly notOK: CertErr_notOK,
-        /**
-         * @summary `note`.
-         * @public
-         * @readonly
-         */
-        readonly note?: OPTIONAL<Notifications>,
-        /**
-         * @summary Extensions that are not recognized.
-         * @public
-         * @readonly
-         */
-        readonly _unrecognizedExtensionsList: _Element[] = []
-    ) {}
+        notOK: CertErr_notOK,
+        note?: OPTIONAL<Notifications>,
+        _unrecognizedExtensionsList: _Element[] = []
+    ) {
+        this.notOK = notOK;
+        this.note = note;
+        this._unrecognizedExtensionsList = _unrecognizedExtensionsList;
+    }
 
     /**
      * @summary Restructures an object into a CertErr

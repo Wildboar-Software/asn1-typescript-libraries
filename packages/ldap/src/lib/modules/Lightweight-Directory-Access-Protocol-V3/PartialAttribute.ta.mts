@@ -15,12 +15,12 @@ import {
 } from '@wildboar/asn1';
 import * as $ from '@wildboar/asn1/functional';
 import {
-  AttributeDescription,
+  type AttributeDescription,
   _decode_AttributeDescription,
   _encode_AttributeDescription,
 } from '../Lightweight-Directory-Access-Protocol-V3/AttributeDescription.ta.mjs';
 import {
-  AttributeValue,
+  type AttributeValue,
   _decode_AttributeValue,
   _encode_AttributeValue,
 } from '../Lightweight-Directory-Access-Protocol-V3/AttributeValue.ta.mjs';
@@ -55,7 +55,7 @@ export class PartialAttribute {
    * @public
    * @readonly
    */
-  readonly type_: AttributeDescription;
+  public readonly type_: AttributeDescription;
   /**
    * @summary `vals`.
    * @description
@@ -66,13 +66,13 @@ export class PartialAttribute {
    * @public
    * @readonly
    */
-  readonly vals: AttributeValue[];
+  public readonly vals: AttributeValue[];
   /**
    * @summary Extensions that are not recognized.
    * @public
    * @readonly
    */
-  readonly _unrecognizedExtensionsList: _Element[];
+  public readonly _unrecognizedExtensionsList: _Element[];
 
   constructor(
     type_: AttributeDescription,

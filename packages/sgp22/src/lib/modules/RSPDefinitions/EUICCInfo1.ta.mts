@@ -1,12 +1,12 @@
 /* eslint-disable */
 import {
     ASN1ConstructionError as _ConstructionError,
-    ASN1Element as _Element,
+    type ASN1Element as _Element,
     ASN1TagClass as _TagClass,
-    OCTET_STRING
+    type OCTET_STRING
 } from "@wildboar/asn1";
 import * as $ from "@wildboar/asn1/functional";
-import { VersionType, _decode_VersionType, _encode_VersionType } from "../RSPDefinitions/VersionType.ta.mjs";
+import { type VersionType, _decode_VersionType, _encode_VersionType } from "../RSPDefinitions/VersionType.ta.mjs";
 
 
 /**
@@ -47,7 +47,7 @@ class EUICCInfo1 {
      * @public
      * @readonly
      */
-    readonly svn: VersionType;
+    public readonly svn: VersionType;
     /**
      * @summary `euiccCiPKIdListForVerification`.
      * @description
@@ -60,7 +60,7 @@ class EUICCInfo1 {
      * @public
      * @readonly
      */
-    readonly euiccCiPKIdListForVerification: OCTET_STRING[];
+    public readonly euiccCiPKIdListForVerification: OCTET_STRING[];
     /**
      * @summary `euiccCiPKIdListForSigning`.
      * @description
@@ -74,7 +74,7 @@ class EUICCInfo1 {
      * @public
      * @readonly
      */
-    readonly euiccCiPKIdListForSigning: OCTET_STRING[];
+    public readonly euiccCiPKIdListForSigning: OCTET_STRING[];
 
     constructor (
         svn: VersionType,

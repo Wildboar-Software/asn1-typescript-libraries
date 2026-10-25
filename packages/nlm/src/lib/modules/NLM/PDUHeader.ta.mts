@@ -1,7 +1,7 @@
 /* eslint-disable */
 import {
-    OCTET_STRING,
-    ASN1Element as _Element,
+    type OCTET_STRING,
+    type ASN1Element as _Element,
     ASN1TagClass as _TagClass,
     ASN1Construction as _Construction,
     ASN1UniversalType as _UniversalType,
@@ -34,12 +34,12 @@ export type PDUHeader = OCTET_STRING; // OctetStringType
 
 
 
-export const _decode_PDUHeader = $._decodeOctetString;
+export const _decode_PDUHeader: $.ASN1Decoder<OCTET_STRING> = $._decodeOctetString;
 
 
 
 
-export const _encode_PDUHeader = $._encodeOctetString;
+export const _encode_PDUHeader: $.ASN1Encoder<OCTET_STRING> = $._encodeOctetString;
 
 
 /* eslint-enable */

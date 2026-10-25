@@ -1,6 +1,6 @@
 /* eslint-disable */
 import {
-    ASN1Element as _Element,
+    type ASN1Element as _Element,
     ASN1TagClass as _TagClass,
     ASN1Construction as _Construction,
     ASN1UniversalType as _UniversalType,
@@ -10,13 +10,13 @@ import {
     ASN1ConstructionError as _ConstructionError,
 } from "@wildboar/asn1";
 import * as $ from "@wildboar/asn1/functional";
-import { ProtocolIdentifier, _decode_ProtocolIdentifier, _encode_ProtocolIdentifier } from "../TSM/ProtocolIdentifier.ta.mjs";
+import { type ProtocolIdentifier, _decode_ProtocolIdentifier, _encode_ProtocolIdentifier } from "../TSM/ProtocolIdentifier.ta.mjs";
 
-import { ContentType, _enum_for_ContentType, _decode_ContentType, _encode_ContentType } from "../TSM/ContentType.ta.mjs";
+import { type ContentType, _enum_for_ContentType, _decode_ContentType, _encode_ContentType } from "../TSM/ContentType.ta.mjs";
 
 import { ProtocolVersion, _decode_ProtocolVersion, _encode_ProtocolVersion } from "../TSM/ProtocolVersion.ta.mjs";
 
-import { TSMCipherText_fragment, _decode_TSMCipherText_fragment, _encode_TSMCipherText_fragment } from "../TSM/TSMCipherText-fragment.ta.mjs";
+import { type TSMCipherText_fragment, _decode_TSMCipherText_fragment, _encode_TSMCipherText_fragment } from "../TSM/TSMCipherText-fragment.ta.mjs";
 
 
 
@@ -46,50 +46,60 @@ import { TSMCipherText_fragment, _decode_TSMCipherText_fragment, _encode_TSMCiph
  */
 export
 class TSMCipherText {
+    /**
+     * @summary `protocolID`.
+     * @description
+     *
+     * Same role as `TSMPlainText.protocolID`. X.1084 §10.3.1.
+     *
+     * @public
+     * @readonly
+     */
+    public readonly protocolID: ProtocolIdentifier;
+    /**
+     * @summary `type_`.
+     * @description
+     *
+     * TLS content type of the encrypted fragment (CCS 20, alert 21,
+     * handshake 22, application-data 23). X.1084 §10.3.1.
+     *
+     * @public
+     * @readonly
+     */
+    public readonly type_: ContentType;
+    /**
+     * @summary `version`.
+     * @description
+     *
+     * Same major/minor pair as TLS `ProtocolVersion`. X.1084 §10.3.1.
+     *
+     * @public
+     * @readonly
+     */
+    public readonly version: ProtocolVersion;
+    /**
+     * @summary `fragment`.
+     * @description
+     *
+     * `GenericStreamCipher` or `GenericBlockCipher` per the negotiated
+     * cipher suite. X.1084 Annex A.
+     *
+     * @public
+     * @readonly
+     */
+    public readonly fragment: TSMCipherText_fragment;
+
     constructor (
-        /**
-         * @summary `protocolID`.
-         * @description
-         *
-         * Same role as `TSMPlainText.protocolID`. X.1084 §10.3.1.
-         *
-         * @public
-         * @readonly
-         */
-        readonly protocolID: ProtocolIdentifier,
-        /**
-         * @summary `type_`.
-         * @description
-         *
-         * TLS content type of the encrypted fragment (CCS 20, alert 21,
-         * handshake 22, application-data 23). X.1084 §10.3.1.
-         *
-         * @public
-         * @readonly
-         */
-        readonly type_: ContentType,
-        /**
-         * @summary `version`.
-         * @description
-         *
-         * Same major/minor pair as TLS `ProtocolVersion`. X.1084 §10.3.1.
-         *
-         * @public
-         * @readonly
-         */
-        readonly version: ProtocolVersion,
-        /**
-         * @summary `fragment`.
-         * @description
-         *
-         * `GenericStreamCipher` or `GenericBlockCipher` per the negotiated
-         * cipher suite. X.1084 Annex A.
-         *
-         * @public
-         * @readonly
-         */
-        readonly fragment: TSMCipherText_fragment
-    ) {}
+        protocolID: ProtocolIdentifier,
+        type_: ContentType,
+        version: ProtocolVersion,
+        fragment: TSMCipherText_fragment
+    ) {
+        this.protocolID = protocolID;
+        this.type_ = type_;
+        this.version = version;
+        this.fragment = fragment;
+    }
 
     /**
      * @summary Restructures an object into a TSMCipherText
@@ -113,7 +123,7 @@ class TSMCipherText {
          * @static
          */
 
-    public static _enum_for_type_ = _enum_for_ContentType;
+    public static _enum_for_type_: typeof _enum_for_ContentType = _enum_for_ContentType;
 }
 
 /**

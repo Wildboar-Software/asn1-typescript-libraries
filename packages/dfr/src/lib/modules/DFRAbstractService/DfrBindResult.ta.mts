@@ -1,9 +1,9 @@
 /* eslint-disable */
 import {
-    OPTIONAL,
-    BOOLEAN,
-    INTEGER,
-    ASN1Element as _Element,
+    type OPTIONAL,
+    type BOOLEAN,
+    type INTEGER,
+    type ASN1Element as _Element,
     ASN1TagClass as _TagClass,
     ASN1Construction as _Construction,
     ASN1UniversalType as _UniversalType,
@@ -13,11 +13,11 @@ import {
     ASN1ConstructionError as _ConstructionError,
 } from "@wildboar/asn1";
 import * as $ from "@wildboar/asn1/functional";
-import { AuthenticationAttribute, _decode_AuthenticationAttribute, _encode_AuthenticationAttribute } from "../DFRAbstractService/AuthenticationAttribute.ta.mjs";
+import { type AuthenticationAttribute, _decode_AuthenticationAttribute, _encode_AuthenticationAttribute } from "../DFRAbstractService/AuthenticationAttribute.ta.mjs";
 import { ConstraintsType, _decode_ConstraintsType, _encode_ConstraintsType } from "../DFRAbstractService/ConstraintsType.ta.mjs";
 import { TypeAndAttribute, _decode_TypeAndAttribute, _encode_TypeAndAttribute } from "../DFRAbstractService/TypeAndAttribute.ta.mjs";
 import { FunctionSetType, _enum_for_FunctionSetType, _decode_FunctionSetType, _encode_FunctionSetType } from "../DFRAbstractService/FunctionSetType.ta.mjs";
-import { ROAProtocols, _decode_ROAProtocols, _encode_ROAProtocols } from "../DFRAbstractService/ROAProtocols.ta.mjs";
+import { type ROAProtocols, _decode_ROAProtocols, _encode_ROAProtocols } from "../DFRAbstractService/ROAProtocols.ta.mjs";
 
 
 /**
@@ -50,95 +50,115 @@ import { ROAProtocols, _decode_ROAProtocols, _encode_ROAProtocols } from "../DFR
  */
 export
 class DfrBindResult {
+    /**
+     * @summary `authentication_attributes`.
+     * @description
+     *
+     * Confirmation of authentication; unconstrained by DFR. Optional after
+     * ISO/IEC 10166-1:1991/Cor.1:1994.
+     * @public
+     * @readonly
+     */
+    public readonly authentication_attributes?: OPTIONAL<AuthenticationAttribute[]>;
+    /**
+     * @summary `constraints_supported`.
+     * @description
+     *
+     * Name and version uniqueness rules of this store. Only if
+     * configuration was requested. ISO/IEC 10166-1:1991 §7.1.2; ISO/IEC
+     * 10166-1:1991/Cor.1:1994.
+     * @public
+     * @readonly
+     */
+    public readonly constraints_supported?: OPTIONAL<ConstraintsType>;
+    /**
+     * @summary `dfr_document_types_supported`.
+     * @description
+     *
+     * Document-type OIDs and the extension attributes supported for each.
+     * Only if configuration was requested.
+     * @public
+     * @readonly
+     */
+    public readonly dfr_document_types_supported?: OPTIONAL<TypeAndAttribute[]>;
+    /**
+     * @summary `function_Set_supported`.
+     * @description
+     *
+     * Flat store, pre-defined groups, or full set. ISO/IEC 10166-1:1991
+     * §7.1.2, §8.4.
+     * @public
+     * @readonly
+     */
+    public readonly function_Set_supported?: OPTIONAL<FunctionSetType>;
+    /**
+     * @summary `maximum_length_supported`.
+     * @description
+     *
+     * Server maximum PDU length; ≤ the user's retrieve-restriction. Only
+     * if the user specified a maximum-length.
+     * @public
+     * @readonly
+     */
+    public readonly maximum_length_supported?: OPTIONAL<INTEGER>;
+    /**
+     * @summary `dor_for_produce_operations`.
+     * @description
+     *
+     * Server will produce a DOR if asked.
+     * @public
+     * @readonly
+     */
+    public readonly dor_for_produce_operations?: OPTIONAL<BOOLEAN>;
+    /**
+     * @summary `dor_for_consume_operations`.
+     * @description
+     *
+     * Server will accept a DOR in arguments.
+     * @public
+     * @readonly
+     */
+    public readonly dor_for_consume_operations?: OPTIONAL<BOOLEAN>;
+    /**
+     * @summary `rOA_protocols_accessee`.
+     * @description
+     *
+     * ROA application contexts this server supports as accessee.
+     * @public
+     * @readonly
+     */
+    public readonly rOA_protocols_accessee?: OPTIONAL<ROAProtocols>;
+    /**
+     * @summary `rOA_protocols_accessor`.
+     * @description
+     *
+     * ROA application contexts this server supports as accessor.
+     * @public
+     * @readonly
+     */
+    public readonly rOA_protocols_accessor?: OPTIONAL<ROAProtocols>;
+
     constructor (
-        /**
-         * @summary `authentication_attributes`.
-         * @description
-         *
-         * Confirmation of authentication; unconstrained by DFR. Optional after
-         * ISO/IEC 10166-1:1991/Cor.1:1994.
-         * @public
-         * @readonly
-         */
-        readonly authentication_attributes?: OPTIONAL<AuthenticationAttribute[]>,
-        /**
-         * @summary `constraints_supported`.
-         * @description
-         *
-         * Name and version uniqueness rules of this store. Only if
-         * configuration was requested. ISO/IEC 10166-1:1991 §7.1.2; ISO/IEC
-         * 10166-1:1991/Cor.1:1994.
-         * @public
-         * @readonly
-         */
-        readonly constraints_supported?: OPTIONAL<ConstraintsType>,
-        /**
-         * @summary `dfr_document_types_supported`.
-         * @description
-         *
-         * Document-type OIDs and the extension attributes supported for each.
-         * Only if configuration was requested.
-         * @public
-         * @readonly
-         */
-        readonly dfr_document_types_supported?: OPTIONAL<TypeAndAttribute[]>,
-        /**
-         * @summary `function_Set_supported`.
-         * @description
-         *
-         * Flat store, pre-defined groups, or full set. ISO/IEC 10166-1:1991
-         * §7.1.2, §8.4.
-         * @public
-         * @readonly
-         */
-        readonly function_Set_supported?: OPTIONAL<FunctionSetType>,
-        /**
-         * @summary `maximum_length_supported`.
-         * @description
-         *
-         * Server maximum PDU length; ≤ the user's retrieve-restriction. Only
-         * if the user specified a maximum-length.
-         * @public
-         * @readonly
-         */
-        readonly maximum_length_supported?: OPTIONAL<INTEGER>,
-        /**
-         * @summary `dor_for_produce_operations`.
-         * @description
-         *
-         * Server will produce a DOR if asked.
-         * @public
-         * @readonly
-         */
-        readonly dor_for_produce_operations?: OPTIONAL<BOOLEAN>,
-        /**
-         * @summary `dor_for_consume_operations`.
-         * @description
-         *
-         * Server will accept a DOR in arguments.
-         * @public
-         * @readonly
-         */
-        readonly dor_for_consume_operations?: OPTIONAL<BOOLEAN>,
-        /**
-         * @summary `rOA_protocols_accessee`.
-         * @description
-         *
-         * ROA application contexts this server supports as accessee.
-         * @public
-         * @readonly
-         */
-        readonly rOA_protocols_accessee?: OPTIONAL<ROAProtocols>,
-        /**
-         * @summary `rOA_protocols_accessor`.
-         * @description
-         *
-         * ROA application contexts this server supports as accessor.
-         * @public
-         * @readonly
-         */
-        readonly rOA_protocols_accessor?: OPTIONAL<ROAProtocols>
-    ) {}
+        authentication_attributes?: OPTIONAL<AuthenticationAttribute[]>,
+        constraints_supported?: OPTIONAL<ConstraintsType>,
+        dfr_document_types_supported?: OPTIONAL<TypeAndAttribute[]>,
+        function_Set_supported?: OPTIONAL<FunctionSetType>,
+        maximum_length_supported?: OPTIONAL<INTEGER>,
+        dor_for_produce_operations?: OPTIONAL<BOOLEAN>,
+        dor_for_consume_operations?: OPTIONAL<BOOLEAN>,
+        rOA_protocols_accessee?: OPTIONAL<ROAProtocols>,
+        rOA_protocols_accessor?: OPTIONAL<ROAProtocols>
+    ) {
+        this.authentication_attributes = authentication_attributes;
+        this.constraints_supported = constraints_supported;
+        this.dfr_document_types_supported = dfr_document_types_supported;
+        this.function_Set_supported = function_Set_supported;
+        this.maximum_length_supported = maximum_length_supported;
+        this.dor_for_produce_operations = dor_for_produce_operations;
+        this.dor_for_consume_operations = dor_for_consume_operations;
+        this.rOA_protocols_accessee = rOA_protocols_accessee;
+        this.rOA_protocols_accessor = rOA_protocols_accessor;
+    }
 
     /**
      * @summary Restructures an object into a DfrBindResult
@@ -175,7 +195,7 @@ class DfrBindResult {
          * @static
          */
 
-    public static _enum_for_function_Set_supported = _enum_for_FunctionSetType;
+    public static _enum_for_function_Set_supported: typeof _enum_for_FunctionSetType = _enum_for_FunctionSetType;
 }
 
 /**

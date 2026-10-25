@@ -1,8 +1,8 @@
 /* eslint-disable */
 import {
-    ASN1Element as _Element,
+    type ASN1Element as _Element,
     ASN1SizeError,
-    BIT_STRING
+    type BIT_STRING
 } from "@wildboar/asn1";
 import * as $ from "@wildboar/asn1/functional";
 
@@ -90,7 +90,7 @@ export const _decode_MGW_InterfaceList = (el: _Element): MGW_InterfaceList => {
  * @param elGetter A function that can be used to get new ASN.1 elements.
  * @returns {_Element} The MGW_InterfaceList, encoded as an ASN.1 Element.
  */
-export const _encode_MGW_InterfaceList = $._encodeBitString;
+export const _encode_MGW_InterfaceList: $.ASN1Encoder<BIT_STRING> = $._encodeBitString;
 
 
 /* eslint-enable */

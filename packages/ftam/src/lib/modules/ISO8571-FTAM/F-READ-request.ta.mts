@@ -1,7 +1,7 @@
 /* eslint-disable */
 import {
-  OPTIONAL,
-  INTEGER,
+  type OPTIONAL,
+  type INTEGER,
   ASN1Element as _Element,
   ASN1TagClass as _TagClass,
   ASN1Construction as _Construction,
@@ -13,7 +13,7 @@ import {
 } from '@wildboar/asn1';
 import * as $ from '@wildboar/asn1/functional';
 import {
-  FADU_Identity,
+  type FADU_Identity,
   _decode_FADU_Identity,
   _encode_FADU_Identity,
 } from '../ISO8571-FTAM/FADU-Identity.ta.mjs';
@@ -23,7 +23,7 @@ import {
   _encode_Access_Context,
 } from '../ISO8571-FTAM/Access-Context.ta.mjs';
 import {
-  FADU_Lock,
+  type FADU_Lock,
   _decode_FADU_Lock,
   _encode_FADU_Lock,
 } from '../ISO8571-FTAM/FADU-Lock.ta.mjs';
@@ -63,7 +63,7 @@ export class F_READ_request {
    * @public
    * @readonly
    */
-  readonly file_access_data_unit_identity: FADU_Identity;
+  public readonly file_access_data_unit_identity: FADU_Identity;
   /**
    * @summary `access_context`.
    * @description
@@ -74,7 +74,7 @@ export class F_READ_request {
    * @public
    * @readonly
    */
-  readonly access_context: Access_Context;
+  public readonly access_context: Access_Context;
   /**
    * @summary `fadu_lock`.
    * @description
@@ -85,7 +85,7 @@ export class F_READ_request {
    * @public
    * @readonly
    */
-  readonly fadu_lock?: OPTIONAL<FADU_Lock>;
+  public readonly fadu_lock?: OPTIONAL<FADU_Lock>;
   /**
    * @summary `transfer_number`.
    * @description
@@ -96,7 +96,7 @@ export class F_READ_request {
    * @public
    * @readonly
    */
-  readonly transfer_number?: OPTIONAL<INTEGER>;
+  public readonly transfer_number?: OPTIONAL<INTEGER>;
 
   constructor(
     file_access_data_unit_identity: FADU_Identity,

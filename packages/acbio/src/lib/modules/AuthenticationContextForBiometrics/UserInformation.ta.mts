@@ -1,8 +1,8 @@
 /* eslint-disable */
 import {
-    OPTIONAL,
-    OCTET_STRING,
-    ASN1Element as _Element,
+    type OPTIONAL,
+    type OCTET_STRING,
+    type ASN1Element as _Element,
     ASN1TagClass as _TagClass,
     ASN1Construction as _Construction,
     ASN1UniversalType as _UniversalType,
@@ -13,12 +13,12 @@ import {
 } from '@wildboar/asn1';
 import * as $ from '@wildboar/asn1/functional';
 import {
-    Name,
+    type Name,
     _decode_Name,
     _encode_Name,
 } from '@wildboar/dn';
 import {
-    UniqueIdentifier,
+    type UniqueIdentifier,
     _decode_UniqueIdentifier,
     _encode_UniqueIdentifier,
 } from '@wildboar/x500/SelectedAttributeTypes';
@@ -38,26 +38,34 @@ import {
  *
  */
 export class UserInformation {
+    /**
+     * @summary `userIdentifier`.
+     * @public
+     * @readonly
+     */
+    public readonly userIdentifier: OCTET_STRING;
+    /**
+     * @summary `userName`.
+     * @public
+     * @readonly
+     */
+    public readonly userName: Name;
+    /**
+     * @summary `userUniqueIdentifier`.
+     * @public
+     * @readonly
+     */
+    public readonly userUniqueIdentifier?: OPTIONAL<UniqueIdentifier>;
+
     constructor(
-        /**
-         * @summary `userIdentifier`.
-         * @public
-         * @readonly
-         */
-        readonly userIdentifier: OCTET_STRING,
-        /**
-         * @summary `userName`.
-         * @public
-         * @readonly
-         */
-        readonly userName: Name,
-        /**
-         * @summary `userUniqueIdentifier`.
-         * @public
-         * @readonly
-         */
-        readonly userUniqueIdentifier?: OPTIONAL<UniqueIdentifier>
-    ) {}
+        userIdentifier: OCTET_STRING,
+        userName: Name,
+        userUniqueIdentifier?: OPTIONAL<UniqueIdentifier>
+    ) {
+        this.userIdentifier = userIdentifier;
+        this.userName = userName;
+        this.userUniqueIdentifier = userUniqueIdentifier;
+    }
 
     /**
      * @summary Restructures an object into a UserInformation

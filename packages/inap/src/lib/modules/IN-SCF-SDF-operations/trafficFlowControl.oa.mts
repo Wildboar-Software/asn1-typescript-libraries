@@ -2,7 +2,7 @@
 import { type OPERATION } from "../Remote-Operations-Information-Objects/OPERATION.oca.mjs";
 // export { Priority, _decode_Priority, _encode_Priority } from "../Remote-Operations-Information-Objects/Priority.ta.mjs";
 // export { Code, _decode_Code, _encode_Code } from "../Remote-Operations-Information-Objects/Code.ta.mjs";
-import { TFCArgument, _decode_TFCArgument, _encode_TFCArgument } from "../IN-SCF-SDF-operations/TFCArgument.ta.mjs";
+import { type TFCArgument, _decode_TFCArgument, _encode_TFCArgument } from "../IN-SCF-SDF-operations/TFCArgument.ta.mjs";
 // export { TFCArgument, _decode_TFCArgument, _encode_TFCArgument } from "../IN-SCF-SDF-operations/TFCArgument.ta.mjs";
 import { opcode_trafficFlowControl } from "../IN-operationcodes/opcode-trafficFlowControl.va.mjs";
 // export { opcode_trafficFlowControl } from "../IN-operationcodes/opcode-trafficFlowControl.va.mjs";

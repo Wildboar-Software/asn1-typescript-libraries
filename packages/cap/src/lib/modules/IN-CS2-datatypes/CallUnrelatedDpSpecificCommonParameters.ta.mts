@@ -1,7 +1,7 @@
 /* eslint-disable */
 import {
-    OPTIONAL,
-    ASN1Element as _Element,
+    type OPTIONAL,
+    type ASN1Element as _Element,
     ASN1TagClass as _TagClass,
     ASN1Construction as _Construction,
     ASN1UniversalType as _UniversalType,
@@ -12,8 +12,8 @@ import {
 } from "@wildboar/asn1";
 import * as $ from "@wildboar/asn1/functional";
 import { ServiceAddressInformation, _decode_ServiceAddressInformation, _encode_ServiceAddressInformation } from "../IN-CS2-datatypes/ServiceAddressInformation.ta.mjs";
-import { CallingPartyNumber, _decode_CallingPartyNumber, _encode_CallingPartyNumber } from "../IN-CS2-datatypes/CallingPartyNumber.ta.mjs";
-import { LocationNumber, _decode_LocationNumber, _encode_LocationNumber } from "../IN-CS2-datatypes/LocationNumber.ta.mjs";
+import { type CallingPartyNumber, _decode_CallingPartyNumber, _encode_CallingPartyNumber } from "../IN-CS2-datatypes/CallingPartyNumber.ta.mjs";
+import { type LocationNumber, _decode_LocationNumber, _encode_LocationNumber } from "../IN-CS2-datatypes/LocationNumber.ta.mjs";
 import { TerminalType, _enum_for_TerminalType, TerminalType_isdn /* IMPORTED_LONG_ENUMERATION_ITEM */, _decode_TerminalType, _encode_TerminalType } from "../IN-CS2-datatypes/TerminalType.ta.mjs";
 import { ExtensionField, _decode_ExtensionField, _encode_ExtensionField } from "../IN-CS2-datatypes/ExtensionField.ta.mjs";
 
@@ -41,38 +41,50 @@ import { ExtensionField, _decode_ExtensionField, _encode_ExtensionField } from "
  */
 export
 class CallUnrelatedDpSpecificCommonParameters {
+    /**
+     * @summary `serviceAddressInformation`.
+     * @public
+     * @readonly
+     */
+    public readonly serviceAddressInformation: ServiceAddressInformation;
+    /**
+     * @summary `callingPartyNumber`.
+     * @public
+     * @readonly
+     */
+    public readonly callingPartyNumber?: OPTIONAL<CallingPartyNumber>;
+    /**
+     * @summary `locationNumber`.
+     * @public
+     * @readonly
+     */
+    public readonly locationNumber?: OPTIONAL<LocationNumber>;
+    /**
+     * @summary `terminalType`.
+     * @public
+     * @readonly
+     */
+    public readonly terminalType?: OPTIONAL<TerminalType>;
+    /**
+     * @summary `extensions`.
+     * @public
+     * @readonly
+     */
+    public readonly extensions?: OPTIONAL<ExtensionField[]>;
+
     constructor (
-        /**
-         * @summary `serviceAddressInformation`.
-         * @public
-         * @readonly
-         */
-        readonly serviceAddressInformation: ServiceAddressInformation,
-        /**
-         * @summary `callingPartyNumber`.
-         * @public
-         * @readonly
-         */
-        readonly callingPartyNumber?: OPTIONAL<CallingPartyNumber>,
-        /**
-         * @summary `locationNumber`.
-         * @public
-         * @readonly
-         */
-        readonly locationNumber?: OPTIONAL<LocationNumber>,
-        /**
-         * @summary `terminalType`.
-         * @public
-         * @readonly
-         */
-        readonly terminalType?: OPTIONAL<TerminalType>,
-        /**
-         * @summary `extensions`.
-         * @public
-         * @readonly
-         */
-        readonly extensions?: OPTIONAL<ExtensionField[]>
-    ) {}
+        serviceAddressInformation: ServiceAddressInformation,
+        callingPartyNumber?: OPTIONAL<CallingPartyNumber>,
+        locationNumber?: OPTIONAL<LocationNumber>,
+        terminalType?: OPTIONAL<TerminalType>,
+        extensions?: OPTIONAL<ExtensionField[]>
+    ) {
+        this.serviceAddressInformation = serviceAddressInformation;
+        this.callingPartyNumber = callingPartyNumber;
+        this.locationNumber = locationNumber;
+        this.terminalType = terminalType;
+        this.extensions = extensions;
+    }
 
     /**
      * @summary Restructures an object into a CallUnrelatedDpSpecificCommonParameters
@@ -96,13 +108,13 @@ class CallUnrelatedDpSpecificCommonParameters {
      * @static
      * @method
      */
-    public static get _default_value_for_terminalType () { return TerminalType_isdn; }        /**
+    public static get _default_value_for_terminalType (): _enum_for_TerminalType { return TerminalType_isdn; }        /**
          * @summary The enum used as the type of the component `terminalType`
          * @public
          * @static
          */
 
-    public static _enum_for_terminalType = _enum_for_TerminalType;
+    public static _enum_for_terminalType: typeof _enum_for_TerminalType = _enum_for_TerminalType;
 }
 
 /**

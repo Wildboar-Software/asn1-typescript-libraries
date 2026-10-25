@@ -1,8 +1,8 @@
 /* eslint-disable */
 import {
-    OPTIONAL,
-    BOOLEAN,
-    ASN1Element as _Element,
+    type OPTIONAL,
+    type BOOLEAN,
+    type ASN1Element as _Element,
     ASN1TagClass as _TagClass,
     ASN1Construction as _Construction,
     ASN1UniversalType as _UniversalType,
@@ -13,11 +13,11 @@ import {
 } from '@wildboar/asn1';
 import * as $ from '@wildboar/asn1/functional';
 import {
-    TimePeriod,
+    type TimePeriod,
     _decode_TimePeriod,
     _encode_TimePeriod,
 } from '../MetricModule/TimePeriod.ta.mjs';
-import { AttributeId, _decode_AttributeId, _encode_AttributeId } from '@wildboar/cmip';
+import { type AttributeId, _decode_AttributeId, _encode_AttributeId } from '@wildboar/cmip';
 
 /**
  * @summary AttributeMeasure
@@ -51,51 +51,61 @@ import { AttributeId, _decode_AttributeId, _encode_AttributeId } from '@wildboar
  *
  */
 export class AttributeMeasure {
+    /**
+     * @summary `attributeId`.
+     * @description
+     *
+     * Identifier of the scanned attribute. Cor.2: a
+     * `CMIP-ATTRIBUTE.&id` from `AttributeSet`. X.738
+     * A.9; Cor.2 A.9.
+     * @public
+     * @readonly
+     */
+    public readonly attributeId: AttributeId;
+    /**
+     * @summary `attributeValue`.
+     * @description
+     *
+     * Scanned value. Absence means missing data (object
+     * lacks the attribute, or the value could not be
+     * obtained). X.738 A.9, §8.1.2.3; Cor.2 A.9.
+     * @public
+     * @readonly
+     */
+    public readonly attributeValue?: OPTIONAL<_Element>;
+    /**
+     * @summary `timeStamp`.
+     * @description
+     *
+     * Offset forward from the report’s scan initiation
+     * time. Required if `timeStampReportMode` is 2.
+     * X.738 A.9, §8.1.12.4.
+     * @public
+     * @readonly
+     */
+    public readonly timeStamp?: OPTIONAL<TimePeriod>;
+    /**
+     * @summary `suspectFlag`.
+     * @description
+     *
+     * True when integrity of the value is in question.
+     * Default false. X.738 §8.1.8.3, A.9.
+     * @public
+     * @readonly
+     */
+    public readonly suspectFlag?: OPTIONAL<BOOLEAN>;
+
     constructor(
-        /**
-         * @summary `attributeId`.
-         * @description
-         *
-         * Identifier of the scanned attribute. Cor.2: a
-         * `CMIP-ATTRIBUTE.&id` from `AttributeSet`. X.738
-         * A.9; Cor.2 A.9.
-         * @public
-         * @readonly
-         */
-        readonly attributeId: AttributeId,
-        /**
-         * @summary `attributeValue`.
-         * @description
-         *
-         * Scanned value. Absence means missing data (object
-         * lacks the attribute, or the value could not be
-         * obtained). X.738 A.9, §8.1.2.3; Cor.2 A.9.
-         * @public
-         * @readonly
-         */
-        readonly attributeValue?: OPTIONAL<_Element>,
-        /**
-         * @summary `timeStamp`.
-         * @description
-         *
-         * Offset forward from the report’s scan initiation
-         * time. Required if `timeStampReportMode` is 2.
-         * X.738 A.9, §8.1.12.4.
-         * @public
-         * @readonly
-         */
-        readonly timeStamp?: OPTIONAL<TimePeriod>,
-        /**
-         * @summary `suspectFlag`.
-         * @description
-         *
-         * True when integrity of the value is in question.
-         * Default false. X.738 §8.1.8.3, A.9.
-         * @public
-         * @readonly
-         */
-        readonly suspectFlag?: OPTIONAL<BOOLEAN>
-    ) {}
+        attributeId: AttributeId,
+        attributeValue?: OPTIONAL<_Element>,
+        timeStamp?: OPTIONAL<TimePeriod>,
+        suspectFlag?: OPTIONAL<BOOLEAN>
+    ) {
+        this.attributeId = attributeId;
+        this.attributeValue = attributeValue;
+        this.timeStamp = timeStamp;
+        this.suspectFlag = suspectFlag;
+    }
 
     /**
      * @summary Restructures an object into a AttributeMeasure

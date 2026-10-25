@@ -1,13 +1,13 @@
 /* eslint-disable */
 import {
-    OPTIONAL,
-    ASN1Element as _Element,
+    type OPTIONAL,
+    type ASN1Element as _Element,
     ASN1TagClass as _TagClass
 } from "@wildboar/asn1";
 import * as $ from "@wildboar/asn1/functional";
 import { TerminationID, _decode_TerminationID, _encode_TerminationID } from "../MEDIA-GATEWAY-CONTROL/TerminationID.ta.mjs";
 import { AuditDescriptor, _decode_AuditDescriptor, _encode_AuditDescriptor } from "../MEDIA-GATEWAY-CONTROL/AuditDescriptor.ta.mjs";
-import { TerminationIDList, _decode_TerminationIDList, _encode_TerminationIDList } from "../MEDIA-GATEWAY-CONTROL/TerminationIDList.ta.mjs";
+import { type TerminationIDList, _decode_TerminationIDList, _encode_TerminationIDList } from "../MEDIA-GATEWAY-CONTROL/TerminationIDList.ta.mjs";
 
 
 /**
@@ -53,7 +53,7 @@ class AuditRequest {
      * @public
      * @readonly
      */
-    readonly terminationID: TerminationID;
+    public readonly terminationID: TerminationID;
     /**
      * @summary `auditDescriptor`.
      * @description
@@ -64,7 +64,7 @@ class AuditRequest {
      * @public
      * @readonly
      */
-    readonly auditDescriptor: AuditDescriptor;
+    public readonly auditDescriptor: AuditDescriptor;
     /**
      * @summary `terminationIDList`.
      * @description
@@ -75,7 +75,7 @@ class AuditRequest {
      * @public
      * @readonly
      */
-    readonly terminationIDList?: OPTIONAL<TerminationIDList>;
+    public readonly terminationIDList?: OPTIONAL<TerminationIDList>;
     /**
      * @summary Extensions that are not recognized.
      * @description
@@ -86,7 +86,7 @@ class AuditRequest {
      * @public
      * @readonly
      */
-    readonly _unrecognizedExtensionsList: _Element[];
+    public readonly _unrecognizedExtensionsList: _Element[];
 
     constructor (
         terminationID: TerminationID,

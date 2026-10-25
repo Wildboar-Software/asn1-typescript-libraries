@@ -2,17 +2,17 @@
 
 import * as $ from "@wildboar/asn1/functional";
 import {
-    OPTIONAL,
-    BOOLEAN,
-    INTEGER,
-    SEQUENCE,
-    SET,
-    ASN1Element as _Element,
+    type OPTIONAL,
+    type BOOLEAN,
+    type INTEGER,
+    type SEQUENCE,
+    type SET,
+    type ASN1Element as _Element,
     ASN1TagClass as _TagClass
 } from "@wildboar/asn1";
-import { CDRCrossRefID, _decode_CDRCrossRefID, _encode_CDRCrossRefID } from "../CSTA-call-detail-record/CDRCrossRefID.ta.mjs";
+import { type CDRCrossRefID, _decode_CDRCrossRefID, _encode_CDRCrossRefID } from "../CSTA-call-detail-record/CDRCrossRefID.ta.mjs";
 
-import { CDRInfo, _decode_CDRInfo, _encode_CDRInfo } from "../CSTA-call-detail-record/CDRInfo.ta.mjs";
+import { type CDRInfo, _decode_CDRInfo, _encode_CDRInfo } from "../CSTA-call-detail-record/CDRInfo.ta.mjs";
 
 import { CSTACommonArguments, _decode_CSTACommonArguments, _encode_CSTACommonArguments } from "../CSTA-extension-types/CSTACommonArguments.ta.mjs";
 
@@ -36,7 +36,7 @@ import { CSTACommonArguments, _decode_CSTACommonArguments, _encode_CSTACommonArg
  * {    cdrCrossRefID            CDRCrossRefID,           --corrected 06/2001
  *     numberOfRecordsSent        INTEGER (1..128),
  *     cdrInfo                CDRInfo,
- *     lastStoredCDRReportSent        BOOLEAN                    OPTIONAL,
+ *     lastStoredCDRReportSent        BOOLEAN                    type OPTIONAL,
  *     extensions            CSTACommonArguments            OPTIONAL }
  * ```
  * 
@@ -44,64 +44,76 @@ import { CSTACommonArguments, _decode_CSTACommonArguments, _encode_CSTACommonArg
  */
 export
 class CDRReportArgument {
+    /**
+     * @summary `cdrCrossRefID`.
+     * @description
+     *
+     * CDR transmission cross-reference from Start Call Detail Records
+     * Transmission (ECMA-269 §27.1.4).
+     *
+     * @public
+     * @readonly
+     */
+    public readonly cdrCrossRefID: CDRCrossRefID;
+    /**
+     * @summary `numberOfRecordsSent`.
+     * @description
+     *
+     * Count of records in this report, 1..128 (ECMA-269 §27.1.2.1).
+     *
+     * @public
+     * @readonly
+     */
+    public readonly numberOfRecordsSent: INTEGER;
+    /**
+     * @summary `cdrInfo`.
+     * @description
+     *
+     * CDR payload. Structure is defined in the call-detail-record module
+     * (ECMA-269 §27.1.2.1).
+     *
+     * @public
+     * @readonly
+     */
+    public readonly cdrInfo: CDRInfo;
+    /**
+     * @summary `lastStoredCDRReportSent`.
+     * @description
+     *
+     * Present only after Send Stored Call Detail Records: TRUE if this is
+     * the last stored report (further CDRs are stored until another Send
+     * Stored); FALSE if more stored reports will follow (ECMA-269
+     * §27.1.2.1).
+     *
+     * @public
+     * @readonly
+     */
+    public readonly lastStoredCDRReportSent?: OPTIONAL<BOOLEAN>;
+    /**
+     * @summary `extensions`.
+     * @description
+     *
+     * CSTACommonArguments carrying the service-table security and
+     * privateData parameters.
+     *
+     * @public
+     * @readonly
+     */
+    public readonly extensions?: OPTIONAL<CSTACommonArguments>;
+
     constructor (
-        /**
-         * @summary `cdrCrossRefID`.
-         * @description
-         *
-         * CDR transmission cross-reference from Start Call Detail Records
-         * Transmission (ECMA-269 §27.1.4).
-         *
-         * @public
-         * @readonly
-         */
-        readonly cdrCrossRefID: CDRCrossRefID,
-        /**
-         * @summary `numberOfRecordsSent`.
-         * @description
-         *
-         * Count of records in this report, 1..128 (ECMA-269 §27.1.2.1).
-         *
-         * @public
-         * @readonly
-         */
-        readonly numberOfRecordsSent: INTEGER,
-        /**
-         * @summary `cdrInfo`.
-         * @description
-         *
-         * CDR payload. Structure is defined in the call-detail-record module
-         * (ECMA-269 §27.1.2.1).
-         *
-         * @public
-         * @readonly
-         */
-        readonly cdrInfo: CDRInfo,
-        /**
-         * @summary `lastStoredCDRReportSent`.
-         * @description
-         *
-         * Present only after Send Stored Call Detail Records: TRUE if this is
-         * the last stored report (further CDRs are stored until another Send
-         * Stored); FALSE if more stored reports will follow (ECMA-269
-         * §27.1.2.1).
-         *
-         * @public
-         * @readonly
-         */
-        readonly lastStoredCDRReportSent?: OPTIONAL<BOOLEAN>,
-        /**
-         * @summary `extensions`.
-         * @description
-         *
-         * CSTACommonArguments carrying the service-table security and
-         * privateData parameters.
-         *
-         * @public
-         * @readonly
-         */
-        readonly extensions?: OPTIONAL<CSTACommonArguments>
-    ) {}
+        cdrCrossRefID: CDRCrossRefID,
+        numberOfRecordsSent: INTEGER,
+        cdrInfo: CDRInfo,
+        lastStoredCDRReportSent?: OPTIONAL<BOOLEAN>,
+        extensions?: OPTIONAL<CSTACommonArguments>
+    ) {
+        this.cdrCrossRefID = cdrCrossRefID;
+        this.numberOfRecordsSent = numberOfRecordsSent;
+        this.cdrInfo = cdrInfo;
+        this.lastStoredCDRReportSent = lastStoredCDRReportSent;
+        this.extensions = extensions;
+    }
 
     /**
      * @summary Restructures an object into a CDRReportArgument

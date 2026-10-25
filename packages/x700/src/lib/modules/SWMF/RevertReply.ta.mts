@@ -1,7 +1,7 @@
 /* eslint-disable */
 import {
-    OPTIONAL,
-    ASN1Element as _Element,
+    type OPTIONAL,
+    type ASN1Element as _Element,
     ASN1TagClass as _TagClass,
     ASN1Construction as _Construction,
     ASN1UniversalType as _UniversalType,
@@ -12,7 +12,7 @@ import {
 } from '@wildboar/asn1';
 import * as $ from '@wildboar/asn1/functional';
 import {
-    AppliedPatches,
+    type AppliedPatches,
     _decode_AppliedPatches,
     _encode_AppliedPatches,
 } from '../SWMF/AppliedPatches.ta.mjs';
@@ -42,29 +42,35 @@ import {
  *
  */
 export class RevertReply {
+    /**
+     * @summary `revertedPatches`.
+     * @description
+     *
+     * Patches that remain applied after the revert (Table 11
+     * "Applied patches"). ITU-T Rec. X.744 (10/96) §8.3.6,
+     * §9.7 Table 11.
+     * @public
+     * @readonly
+     */
+    public readonly revertedPatches: AppliedPatches;
+    /**
+     * @summary `additionalInfo`.
+     * @description
+     *
+     * Management extensions. User in Table 11. ITU-T Rec. X.744
+     * (10/96) §9.7 Table 11.
+     * @public
+     * @readonly
+     */
+    public readonly additionalInfo?: OPTIONAL<ManagementExtension[]>;
+
     constructor(
-        /**
-         * @summary `revertedPatches`.
-         * @description
-         *
-         * Patches that remain applied after the revert (Table 11
-         * "Applied patches"). ITU-T Rec. X.744 (10/96) §8.3.6,
-         * §9.7 Table 11.
-         * @public
-         * @readonly
-         */
-        readonly revertedPatches: AppliedPatches,
-        /**
-         * @summary `additionalInfo`.
-         * @description
-         *
-         * Management extensions. User in Table 11. ITU-T Rec. X.744
-         * (10/96) §9.7 Table 11.
-         * @public
-         * @readonly
-         */
-        readonly additionalInfo?: OPTIONAL<ManagementExtension[]>
-    ) {}
+        revertedPatches: AppliedPatches,
+        additionalInfo?: OPTIONAL<ManagementExtension[]>
+    ) {
+        this.revertedPatches = revertedPatches;
+        this.additionalInfo = additionalInfo;
+    }
 
     /**
      * @summary Restructures an object into a RevertReply

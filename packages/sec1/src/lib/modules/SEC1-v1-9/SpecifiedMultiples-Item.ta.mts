@@ -1,7 +1,7 @@
 /* eslint-disable */
 import {
-    INTEGER,
-    ASN1Element as _Element,
+    type INTEGER,
+    type ASN1Element as _Element,
     ASN1TagClass as _TagClass,
     ASN1Construction as _Construction,
     ASN1UniversalType as _UniversalType,
@@ -11,7 +11,7 @@ import {
     ASN1ConstructionError as _ConstructionError,
 } from "@wildboar/asn1";
 import * as $ from "@wildboar/asn1/functional";
-import { ECPoint, _decode_ECPoint, _encode_ECPoint } from "../SEC1-v1-9/ECPoint.ta.mjs";
+import { type ECPoint, _decode_ECPoint, _encode_ECPoint } from "../SEC1-v1-9/ECPoint.ta.mjs";
 /**
  * @summary SpecifiedMultiples_Item
  * @description
@@ -37,7 +37,7 @@ class SpecifiedMultiples_Item {
      * @public
      * @readonly
      */
-    readonly multiple: INTEGER;
+    public readonly multiple: INTEGER;
     /**
      * @summary `point`.
      * @description
@@ -47,7 +47,7 @@ class SpecifiedMultiples_Item {
      * @public
      * @readonly
      */
-    readonly point: ECPoint;
+    public readonly point: ECPoint;
 
     constructor (
         multiple: INTEGER,

@@ -1,6 +1,6 @@
 /* eslint-disable */
 import {
-    ASN1Element as _Element,
+    type ASN1Element as _Element,
     ASN1TagClass as _TagClass,
     ASN1Construction as _Construction,
     ASN1UniversalType as _UniversalType,
@@ -10,7 +10,7 @@ import {
     ASN1ConstructionError as _ConstructionError,
 } from "@wildboar/asn1";
 import * as $ from "@wildboar/asn1/functional";
-import { CompoundEmphasisOffer_Item, _decode_CompoundEmphasisOffer_Item, _encode_CompoundEmphasisOffer_Item } from "../CDS/CompoundEmphasisOffer-Item.ta.mjs";
+import { type CompoundEmphasisOffer_Item, _decode_CompoundEmphasisOffer_Item, _encode_CompoundEmphasisOffer_Item } from "../CDS/CompoundEmphasisOffer-Item.ta.mjs";
 
 
 /**

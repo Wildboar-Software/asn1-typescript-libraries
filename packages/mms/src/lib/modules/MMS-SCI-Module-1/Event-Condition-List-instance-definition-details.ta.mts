@@ -1,6 +1,6 @@
 /* eslint-disable */
 import {
-    ASN1Element as _Element,
+    type ASN1Element as _Element,
     ASN1TagClass as _TagClass,
     ASN1Construction as _Construction,
     ASN1UniversalType as _UniversalType,
@@ -39,51 +39,61 @@ import { Event_Condition_List_instance, _decode_Event_Condition_List_instance, _
  */
 export
 class Event_Condition_List_instance_definition_details {
+    /**
+     * @summary `accessControl`.
+     * @description
+     *
+     * SCI encoding of the object's ACL (ISO 9506-1:2003 §9). ISO
+     * 9506-2:2003 Annex B.
+     *
+     * @public
+     * @readonly
+     */
+    public readonly accessControl: Access_Control_List_instance;
+    /**
+     * @summary `eventConditions`.
+     * @description
+     *
+     * Configured Event Condition instances. ISO 9506-2:2003 Annex B.1.12.
+     *
+     * @public
+     * @readonly
+     */
+    public readonly eventConditions: Event_Condition_instance[];
+    /**
+     * @summary `eventConditionLists`.
+     * @description
+     *
+     * Configured Event Condition Lists (or NULL if not cspi). ISO
+     * 9506-2:2003 Annex B.1.15.
+     *
+     * @public
+     * @readonly
+     */
+    public readonly eventConditionLists: Event_Condition_List_instance[];
+    /**
+     * @summary `referencingEventConditionLists`.
+     * @description
+     *
+     * ECLs that include this condition. ISO 9506-1:2003 §19.1.1; ISO
+     * 9506-2:2003 Annex B.1.12.
+     *
+     * @public
+     * @readonly
+     */
+    public readonly referencingEventConditionLists: Event_Condition_List_instance[];
+
     constructor (
-        /**
-         * @summary `accessControl`.
-         * @description
-         *
-         * SCI encoding of the object's ACL (ISO 9506-1:2003 §9). ISO
-         * 9506-2:2003 Annex B.
-         *
-         * @public
-         * @readonly
-         */
-        readonly accessControl: Access_Control_List_instance,
-        /**
-         * @summary `eventConditions`.
-         * @description
-         *
-         * Configured Event Condition instances. ISO 9506-2:2003 Annex B.1.12.
-         *
-         * @public
-         * @readonly
-         */
-        readonly eventConditions: Event_Condition_instance[],
-        /**
-         * @summary `eventConditionLists`.
-         * @description
-         *
-         * Configured Event Condition Lists (or NULL if not cspi). ISO
-         * 9506-2:2003 Annex B.1.15.
-         *
-         * @public
-         * @readonly
-         */
-        readonly eventConditionLists: Event_Condition_List_instance[],
-        /**
-         * @summary `referencingEventConditionLists`.
-         * @description
-         *
-         * ECLs that include this condition. ISO 9506-1:2003 §19.1.1; ISO
-         * 9506-2:2003 Annex B.1.12.
-         *
-         * @public
-         * @readonly
-         */
-        readonly referencingEventConditionLists: Event_Condition_List_instance[]
-    ) {}
+        accessControl: Access_Control_List_instance,
+        eventConditions: Event_Condition_instance[],
+        eventConditionLists: Event_Condition_List_instance[],
+        referencingEventConditionLists: Event_Condition_List_instance[]
+    ) {
+        this.accessControl = accessControl;
+        this.eventConditions = eventConditions;
+        this.eventConditionLists = eventConditionLists;
+        this.referencingEventConditionLists = referencingEventConditionLists;
+    }
 
     /**
      * @summary Restructures an object into a Event_Condition_List_instance_definition_details

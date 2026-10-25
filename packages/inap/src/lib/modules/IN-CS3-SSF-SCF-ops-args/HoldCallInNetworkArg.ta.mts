@@ -1,11 +1,11 @@
 /* eslint-disable */
 import {
-    NULL,
-    ASN1Element as _Element,
+    type NULL,
+    type ASN1Element as _Element,
     ASN1TagClass as _TagClass
 } from "@wildboar/asn1";
 import * as $ from "@wildboar/asn1/functional";
-import { HoldCause, _decode_HoldCause, _encode_HoldCause } from "../IN-CS3-SSF-SCF-datatypes/HoldCause.ta.mjs";
+import { type HoldCause, _decode_HoldCause, _encode_HoldCause } from "../IN-CS3-SSF-SCF-datatypes/HoldCause.ta.mjs";
 // export { HoldCause, _decode_HoldCause, _encode_HoldCause } from "../IN-CS3-SSF-SCF-datatypes/HoldCause.ta.mjs";
 
 

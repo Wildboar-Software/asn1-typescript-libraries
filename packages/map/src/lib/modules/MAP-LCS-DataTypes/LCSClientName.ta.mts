@@ -1,13 +1,13 @@
 /* eslint-disable */
 import {
-    OPTIONAL,
-    ASN1Element as _Element,
+    type OPTIONAL,
+    type ASN1Element as _Element,
     ASN1TagClass as _TagClass
 } from "@wildboar/asn1";
 import * as $ from "@wildboar/asn1/functional";
-import { LCS_FormatIndicator, _decode_LCS_FormatIndicator, _encode_LCS_FormatIndicator, _enum_for_LCS_FormatIndicator } from "../MAP-LCS-DataTypes/LCS-FormatIndicator.ta.mjs";
-import { NameString, _decode_NameString, _encode_NameString } from "../MAP-LCS-DataTypes/NameString.ta.mjs";
-import { USSD_DataCodingScheme, _decode_USSD_DataCodingScheme, _encode_USSD_DataCodingScheme } from "../MAP-SS-DataTypes/USSD-DataCodingScheme.ta.mjs";
+import { type LCS_FormatIndicator, _decode_LCS_FormatIndicator, _encode_LCS_FormatIndicator, _enum_for_LCS_FormatIndicator } from "../MAP-LCS-DataTypes/LCS-FormatIndicator.ta.mjs";
+import { type NameString, _decode_NameString, _encode_NameString } from "../MAP-LCS-DataTypes/NameString.ta.mjs";
+import { type USSD_DataCodingScheme, _decode_USSD_DataCodingScheme, _encode_USSD_DataCodingScheme } from "../MAP-SS-DataTypes/USSD-DataCodingScheme.ta.mjs";
 
 
 /**
@@ -31,44 +31,54 @@ import { USSD_DataCodingScheme, _decode_USSD_DataCodingScheme, _encode_USSD_Data
  */
 export
 class LCSClientName {
+    /**
+     * @summary `dataCodingScheme`.
+     * @description
+     *
+     * Shall be default alphabet 00001111B (clause 17.7.13).
+     *
+     * @public
+     * @readonly
+     */
+    public readonly dataCodingScheme: USSD_DataCodingScheme;
+    /**
+     * @summary `nameString`.
+     * @description
+     *
+     * Client name string, 1..63.
+     *
+     * @public
+     * @readonly
+     */
+    public readonly nameString: NameString;
+    /**
+     * @summary `lcs_FormatIndicator`.
+     * @description
+     *
+     * logicalName, e-mail, MSISDN, URL or SIP URL.
+     *
+     * @public
+     * @readonly
+     */
+    public readonly lcs_FormatIndicator?: OPTIONAL<LCS_FormatIndicator>;
+    /**
+     * @summary Extensions that are not recognized.
+     * @public
+     * @readonly
+     */
+    public readonly _unrecognizedExtensionsList: _Element[];
+
     constructor (
-        /**
-         * @summary `dataCodingScheme`.
-         * @description
-         *
-         * Shall be default alphabet 00001111B (clause 17.7.13).
-         *
-         * @public
-         * @readonly
-         */
-        readonly dataCodingScheme: USSD_DataCodingScheme,
-        /**
-         * @summary `nameString`.
-         * @description
-         *
-         * Client name string, 1..63.
-         *
-         * @public
-         * @readonly
-         */
-        readonly nameString: NameString,
-        /**
-         * @summary `lcs_FormatIndicator`.
-         * @description
-         *
-         * logicalName, e-mail, MSISDN, URL or SIP URL.
-         *
-         * @public
-         * @readonly
-         */
-        readonly lcs_FormatIndicator?: OPTIONAL<LCS_FormatIndicator>,
-        /**
-         * @summary Extensions that are not recognized.
-         * @public
-         * @readonly
-         */
-        readonly _unrecognizedExtensionsList: _Element[] = []
-    ) {}
+        dataCodingScheme: USSD_DataCodingScheme,
+        nameString: NameString,
+        lcs_FormatIndicator?: OPTIONAL<LCS_FormatIndicator>,
+        _unrecognizedExtensionsList: _Element[] = []
+    ) {
+        this.dataCodingScheme = dataCodingScheme;
+        this.nameString = nameString;
+        this.lcs_FormatIndicator = lcs_FormatIndicator;
+        this._unrecognizedExtensionsList = _unrecognizedExtensionsList;
+    }
 
     /**
      * @summary Restructures an object into a LCSClientName
@@ -92,7 +102,7 @@ class LCSClientName {
          * @static
          */
 
-    public static _enum_for_lcs_FormatIndicator = _enum_for_LCS_FormatIndicator;
+    public static _enum_for_lcs_FormatIndicator: typeof _enum_for_LCS_FormatIndicator = _enum_for_LCS_FormatIndicator;
 }
 
 /**

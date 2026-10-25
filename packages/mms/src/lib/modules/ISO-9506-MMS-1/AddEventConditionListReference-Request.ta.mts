@@ -1,7 +1,7 @@
 /* eslint-disable */
 import {
-    OPTIONAL,
-    ASN1Element as _Element,
+    type OPTIONAL,
+    type ASN1Element as _Element,
     ASN1TagClass as _TagClass,
     ASN1Construction as _Construction,
     ASN1UniversalType as _UniversalType,
@@ -11,7 +11,7 @@ import {
     ASN1ConstructionError as _ConstructionError,
 } from "@wildboar/asn1";
 import * as $ from "@wildboar/asn1/functional";
-import { ObjectName, _decode_ObjectName, _encode_ObjectName } from "../ISO-9506-MMS-1/ObjectName.ta.mjs";
+import { type ObjectName, _decode_ObjectName, _encode_ObjectName } from "../ISO-9506-MMS-1/ObjectName.ta.mjs";
 
 
 /**
@@ -39,44 +39,52 @@ import { ObjectName, _decode_ObjectName, _encode_ObjectName } from "../ISO-9506-
  */
 export
 class AddEventConditionListReference_Request {
+    /**
+     * @summary `eventConditionListName`.
+     * @description
+     *
+     * List to update.
+     *
+     * [ISO 9506-1:2003 §22.4]
+     *
+     * @public
+     * @readonly
+     */
+    public readonly eventConditionListName: ObjectName;
+    /**
+     * @summary `listOfEventConditionName`.
+     * @description
+     *
+     * Event Conditions to add (skipped if already present).
+     *
+     * [ISO 9506-1:2003 §22.4]
+     *
+     * @public
+     * @readonly
+     */
+    public readonly listOfEventConditionName: ObjectName[];
+    /**
+     * @summary `listOfEventConditionListName`.
+     * @description
+     *
+     * Nested lists to add. Iff `recl`.
+     *
+     * [ISO 9506-2:2003 §22.4]
+     *
+     * @public
+     * @readonly
+     */
+    public readonly listOfEventConditionListName?: OPTIONAL<ObjectName[]>;
+
     constructor (
-        /**
-         * @summary `eventConditionListName`.
-         * @description
-         *
-         * List to update.
-         *
-         * [ISO 9506-1:2003 §22.4]
-         *
-         * @public
-         * @readonly
-         */
-        readonly eventConditionListName: ObjectName,
-        /**
-         * @summary `listOfEventConditionName`.
-         * @description
-         *
-         * Event Conditions to add (skipped if already present).
-         *
-         * [ISO 9506-1:2003 §22.4]
-         *
-         * @public
-         * @readonly
-         */
-        readonly listOfEventConditionName: ObjectName[],
-        /**
-         * @summary `listOfEventConditionListName`.
-         * @description
-         *
-         * Nested lists to add. Iff `recl`.
-         *
-         * [ISO 9506-2:2003 §22.4]
-         *
-         * @public
-         * @readonly
-         */
-        readonly listOfEventConditionListName?: OPTIONAL<ObjectName[]>
-    ) {}
+        eventConditionListName: ObjectName,
+        listOfEventConditionName: ObjectName[],
+        listOfEventConditionListName?: OPTIONAL<ObjectName[]>
+    ) {
+        this.eventConditionListName = eventConditionListName;
+        this.listOfEventConditionName = listOfEventConditionName;
+        this.listOfEventConditionListName = listOfEventConditionListName;
+    }
 
     /**
      * @summary Restructures an object into a AddEventConditionListReference_Request

@@ -1,10 +1,10 @@
 /* eslint-disable */
 import {
     ASN1SizeError,
-    BOOLEAN,
-    IA5String,
-    OPTIONAL,
-    ASN1Element as _Element,
+    type BOOLEAN,
+    type IA5String,
+    type OPTIONAL,
+    type ASN1Element as _Element,
     ASN1TagClass as _TagClass
 } from "@wildboar/asn1";
 import * as $ from "@wildboar/asn1/functional";
@@ -135,7 +135,7 @@ class FIPSLevel {
          * @static
          */
 
-    public static _enum_for_level = _enum_for_SecurityLevel;
+    public static _enum_for_level: typeof _enum_for_SecurityLevel = _enum_for_SecurityLevel;
 }
 
 /**

@@ -1,18 +1,18 @@
 /* eslint-disable */
 import {
-    ASN1Element as _Element,
+    type ASN1Element as _Element,
     ASN1TagClass as _TagClass,
-    BIT_STRING,
-    OPTIONAL,
+    type BIT_STRING,
+    type OPTIONAL,
 } from "@wildboar/asn1";
 import * as $ from "@wildboar/asn1/functional";
 import {
-    SimpleCredentials_validity_time1,
+    type SimpleCredentials_validity_time1,
     _decode_SimpleCredentials_validity_time1,
     _encode_SimpleCredentials_validity_time1,
 } from "../DirectoryAbstractService/SimpleCredentials-validity-time1.ta.mjs";
 import {
-    SimpleCredentials_validity_time2,
+    type SimpleCredentials_validity_time2,
     _decode_SimpleCredentials_validity_time2,
     _encode_SimpleCredentials_validity_time2,
 } from "../DirectoryAbstractService/SimpleCredentials-validity-time2.ta.mjs";
@@ -32,50 +32,60 @@ import {
  *
  */
 export class SimpleCredentials_validity {
+    /**
+     * @summary `time1`.
+     * @description
+     *
+     * Meaning is bilateral agreement. GeneralizedTime if v2+. UTCTime
+     * not after 2049.
+     *
+     * @public
+     * @readonly
+     */
+    public readonly time1?: OPTIONAL<SimpleCredentials_validity_time1>;
+    /**
+     * @summary `time2`.
+     * @description
+     *
+     * Meaning is bilateral agreement. GeneralizedTime if v2+. UTCTime
+     * not after 2049.
+     *
+     * @public
+     * @readonly
+     */
+    public readonly time2?: OPTIONAL<SimpleCredentials_validity_time2>;
+    /**
+     * @summary `random1`.
+     * @description
+     *
+     * Meaning is bilateral agreement (replay detection).
+     *
+     * @public
+     * @readonly
+     */
+    public readonly random1?: OPTIONAL<BIT_STRING>;
+    /**
+     * @summary `random2`.
+     * @description
+     *
+     * Meaning is bilateral agreement (replay detection).
+     *
+     * @public
+     * @readonly
+     */
+    public readonly random2?: OPTIONAL<BIT_STRING>;
+
     constructor(
-        /**
-         * @summary `time1`.
-         * @description
-         *
-         * Meaning is bilateral agreement. GeneralizedTime if v2+. UTCTime
-         * not after 2049.
-         *
-         * @public
-         * @readonly
-         */
-        readonly time1?: OPTIONAL<SimpleCredentials_validity_time1>,
-        /**
-         * @summary `time2`.
-         * @description
-         *
-         * Meaning is bilateral agreement. GeneralizedTime if v2+. UTCTime
-         * not after 2049.
-         *
-         * @public
-         * @readonly
-         */
-        readonly time2?: OPTIONAL<SimpleCredentials_validity_time2>,
-        /**
-         * @summary `random1`.
-         * @description
-         *
-         * Meaning is bilateral agreement (replay detection).
-         *
-         * @public
-         * @readonly
-         */
-        readonly random1?: OPTIONAL<BIT_STRING>,
-        /**
-         * @summary `random2`.
-         * @description
-         *
-         * Meaning is bilateral agreement (replay detection).
-         *
-         * @public
-         * @readonly
-         */
-        readonly random2?: OPTIONAL<BIT_STRING>
-    ) {}
+        time1?: OPTIONAL<SimpleCredentials_validity_time1>,
+        time2?: OPTIONAL<SimpleCredentials_validity_time2>,
+        random1?: OPTIONAL<BIT_STRING>,
+        random2?: OPTIONAL<BIT_STRING>
+    ) {
+        this.time1 = time1;
+        this.time2 = time2;
+        this.random1 = random1;
+        this.random2 = random2;
+    }
 
     /**
      * @summary Restructures an object into a SimpleCredentials_validity

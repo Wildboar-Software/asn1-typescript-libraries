@@ -1,14 +1,14 @@
 /* eslint-disable */
 import {
-    SEQUENCE,
-    SET,
-    ASN1Element as _Element,
+    type SEQUENCE,
+    type SET,
+    type ASN1Element as _Element,
     ASN1TagClass as _TagClass,
     ASN1ConstructionError as _ConstructionError,
 } from "@wildboar/asn1";
 import * as $ from "@wildboar/asn1/functional";
 import {
-    ObjectOfReference,
+    type ObjectOfReference,
     _decode_ObjectOfReference,
     _encode_ObjectOfReference,
 } from "../Q821-ASN1Module/ObjectOfReference.ta.mjs";
@@ -38,20 +38,26 @@ import {
  */
 export
 class ObjectAlarmSummary {
+    /**
+     * @summary `objectOfReference`.
+     * @public
+     * @readonly
+     */
+    public readonly objectOfReference: ObjectOfReference;
+    /**
+     * @summary `summaryInfo`.
+     * @public
+     * @readonly
+     */
+    public readonly summaryInfo: AlarmSummaryInfo[];
+
     constructor (
-        /**
-         * @summary `objectOfReference`.
-         * @public
-         * @readonly
-         */
-        readonly objectOfReference: ObjectOfReference,
-        /**
-         * @summary `summaryInfo`.
-         * @public
-         * @readonly
-         */
-        readonly summaryInfo: AlarmSummaryInfo[]
-    ) {}
+        objectOfReference: ObjectOfReference,
+        summaryInfo: AlarmSummaryInfo[]
+    ) {
+        this.objectOfReference = objectOfReference;
+        this.summaryInfo = summaryInfo;
+    }
 
     /**
      * @summary Restructures an object into a ObjectAlarmSummary

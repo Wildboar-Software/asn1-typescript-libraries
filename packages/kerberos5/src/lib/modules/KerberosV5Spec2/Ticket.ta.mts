@@ -1,6 +1,6 @@
 /* eslint-disable */
 import {
-  INTEGER,
+  type INTEGER,
   ASN1Element as _Element,
   ASN1TagClass as _TagClass,
   ASN1Construction as _Construction,
@@ -12,7 +12,7 @@ import {
 } from '@wildboar/asn1';
 import * as $ from '@wildboar/asn1/functional';
 import {
-  Realm,
+  type Realm,
   _decode_Realm,
   _encode_Realm,
 } from '../KerberosV5Spec2/Realm.ta.mjs';
@@ -58,7 +58,7 @@ export class Ticket {
    * @public
    * @readonly
    */
-  readonly tkt_vno: INTEGER;
+  public readonly tkt_vno: INTEGER;
   /**
    * @summary `realm`.
    * @description
@@ -70,7 +70,7 @@ export class Ticket {
    * @public
    * @readonly
    */
-  readonly realm: Realm;
+  public readonly realm: Realm;
   /**
    * @summary `sname`.
    * @description
@@ -81,7 +81,7 @@ export class Ticket {
    * @public
    * @readonly
    */
-  readonly sname: PrincipalName;
+  public readonly sname: PrincipalName;
   /**
    * @summary `enc_part`.
    * @description
@@ -92,7 +92,7 @@ export class Ticket {
    * @public
    * @readonly
    */
-  readonly enc_part: EncryptedData;
+  public readonly enc_part: EncryptedData;
 
   constructor(
     tkt_vno: INTEGER,

@@ -1,9 +1,9 @@
 /* eslint-disable */
 import {
     ASN1ConstructionError as _ConstructionError,
-    ASN1Element as _Element,
+    type ASN1Element as _Element,
     ASN1TagClass as _TagClass,
-    BIT_STRING,
+    type BIT_STRING,
 } from "@wildboar/asn1";
 import * as $ from "@wildboar/asn1/functional";
 import {
@@ -28,20 +28,26 @@ import {
  *
  */
 export class SubjectAltPublicKeyInfo {
+    /**
+     * @summary `algorithm`.
+     * @public
+     * @readonly
+     */
+    public readonly algorithm: AlgorithmIdentifier;
+    /**
+     * @summary `subjectAltPublicKey`.
+     * @public
+     * @readonly
+     */
+    public readonly subjectAltPublicKey: BIT_STRING;
+
     constructor(
-        /**
-         * @summary `algorithm`.
-         * @public
-         * @readonly
-         */
-        readonly algorithm: AlgorithmIdentifier,
-        /**
-         * @summary `subjectAltPublicKey`.
-         * @public
-         * @readonly
-         */
-        readonly subjectAltPublicKey: BIT_STRING
-    ) {}
+        algorithm: AlgorithmIdentifier,
+        subjectAltPublicKey: BIT_STRING
+    ) {
+        this.algorithm = algorithm;
+        this.subjectAltPublicKey = subjectAltPublicKey;
+    }
 
     /**
      * @summary Restructures an object into a SubjectAltPublicKeyInfo

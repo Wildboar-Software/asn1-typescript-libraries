@@ -1,6 +1,6 @@
 /* eslint-disable */
 import {
-    ASN1Element as _Element,
+    type ASN1Element as _Element,
     ASN1TagClass as _TagClass,
     ASN1Construction as _Construction,
     ASN1UniversalType as _UniversalType,
@@ -33,25 +33,31 @@ import { FingerPrintInformation_finger, _enum_for_FingerPrintInformation_finger,
  */
 export
 class FingerPrintInformation {
+    /**
+     * @summary `hand`.
+     * @description
+     * `left` or `right`. ISO/IEC 7816-15:2016 §8.9.3.
+     * @public
+     * @readonly
+     */
+    public readonly hand: FingerPrintInformation_hand;
+    /**
+     * @summary `finger`.
+     * @description
+     * thumb, pointerFinger, middleFinger, ringFinger, or littleFinger.
+     * ISO/IEC 7816-15:2016 §8.9.3.
+     * @public
+     * @readonly
+     */
+    public readonly finger: FingerPrintInformation_finger;
+
     constructor (
-        /**
-         * @summary `hand`.
-         * @description
-         * `left` or `right`. ISO/IEC 7816-15:2016 §8.9.3.
-         * @public
-         * @readonly
-         */
-        readonly hand: FingerPrintInformation_hand,
-        /**
-         * @summary `finger`.
-         * @description
-         * thumb, pointerFinger, middleFinger, ringFinger, or littleFinger.
-         * ISO/IEC 7816-15:2016 §8.9.3.
-         * @public
-         * @readonly
-         */
-        readonly finger: FingerPrintInformation_finger
-    ) {}
+        hand: FingerPrintInformation_hand,
+        finger: FingerPrintInformation_finger
+    ) {
+        this.hand = hand;
+        this.finger = finger;
+    }
 
     /**
      * @summary Restructures an object into a FingerPrintInformation
@@ -75,13 +81,13 @@ class FingerPrintInformation {
          * @static
          */
 
-    public static _enum_for_hand = _enum_for_FingerPrintInformation_hand;        /**
+    public static _enum_for_hand: typeof _enum_for_FingerPrintInformation_hand = _enum_for_FingerPrintInformation_hand;        /**
          * @summary The enum used as the type of the component `finger`
          * @public
          * @static
          */
 
-    public static _enum_for_finger = _enum_for_FingerPrintInformation_finger;
+    public static _enum_for_finger: typeof _enum_for_FingerPrintInformation_finger = _enum_for_FingerPrintInformation_finger;
 }
 
 /**

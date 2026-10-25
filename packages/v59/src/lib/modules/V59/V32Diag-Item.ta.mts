@@ -1,7 +1,7 @@
 /* eslint-disable */
 import {
-    OPTIONAL,
-    ASN1Element as _Element,
+    type OPTIONAL,
+    type ASN1Element as _Element,
     ASN1TagClass as _TagClass,
     ASN1Construction as _Construction,
     ASN1UniversalType as _UniversalType,
@@ -11,11 +11,11 @@ import {
     ASN1ConstructionError as _ConstructionError,
 } from "@wildboar/asn1";
 import * as $ from "@wildboar/asn1/functional";
-import { Capabilities, _decode_Capabilities, _encode_Capabilities } from "../V59/Capabilities.ta.mjs";
+import { type Capabilities, _decode_Capabilities, _encode_Capabilities } from "../V59/Capabilities.ta.mjs";
 
-import { TxPowerLevel, _decode_TxPowerLevel, _encode_TxPowerLevel } from "../V59/TxPowerLevel.ta.mjs";
+import { type TxPowerLevel, _decode_TxPowerLevel, _encode_TxPowerLevel } from "../V59/TxPowerLevel.ta.mjs";
 
-import { V59String, _decode_V59String, _encode_V59String } from "../V59/V59String.ta.mjs";
+import { type V59String, _decode_V59String, _encode_V59String } from "../V59/V59String.ta.mjs";
 
 /**
  * @summary V32Diag_Item
@@ -57,7 +57,7 @@ class V32Diag_Item {
      * @public
      * @readonly
      */
-    readonly modeV32B: Capabilities;
+    public readonly modeV32B: Capabilities;
     /**
      * @summary `v32TxLevel`.
      * @description
@@ -67,7 +67,7 @@ class V32Diag_Item {
      * @public
      * @readonly
      */
-    readonly v32TxLevel: TxPowerLevel;
+    public readonly v32TxLevel: TxPowerLevel;
     /**
      * @summary `v32txRateSeq`.
      * @description
@@ -79,7 +79,7 @@ class V32Diag_Item {
      * @public
      * @readonly
      */
-    readonly v32txRateSeq: V59String;
+    public readonly v32txRateSeq: V59String;
     /**
      * @summary `v32rxRateSeq`.
      * @description
@@ -91,7 +91,7 @@ class V32Diag_Item {
      * @public
      * @readonly
      */
-    readonly v32rxRateSeq: V59String;
+    public readonly v32rxRateSeq: V59String;
     /**
      * @summary `txDataHistory`.
      * @description
@@ -103,7 +103,7 @@ class V32Diag_Item {
      * @public
      * @readonly
      */
-    readonly txDataHistory: V59String;
+    public readonly txDataHistory: V59String;
     /**
      * @summary `rxDataHistory`.
      * @description
@@ -114,7 +114,7 @@ class V32Diag_Item {
      * @public
      * @readonly
      */
-    readonly rxDataHistory: V59String;
+    public readonly rxDataHistory: V59String;
     /**
      * @summary `rxLevelEstimate`.
      * @description
@@ -125,7 +125,7 @@ class V32Diag_Item {
      * @public
      * @readonly
      */
-    readonly rxLevelEstimate?: OPTIONAL<V59String>;
+    public readonly rxLevelEstimate?: OPTIONAL<V59String>;
     /**
      * @summary `noiseEstimate`.
      * @description
@@ -135,7 +135,7 @@ class V32Diag_Item {
      * @public
      * @readonly
      */
-    readonly noiseEstimate?: OPTIONAL<V59String>;
+    public readonly noiseEstimate?: OPTIONAL<V59String>;
     /**
      * @summary `rxSignalQuality`.
      * @description
@@ -147,7 +147,7 @@ class V32Diag_Item {
      * @public
      * @readonly
      */
-    readonly rxSignalQuality?: OPTIONAL<V59String>;
+    public readonly rxSignalQuality?: OPTIONAL<V59String>;
     /**
      * @summary `nearEchoEstimate`.
      * @description
@@ -158,7 +158,7 @@ class V32Diag_Item {
      * @public
      * @readonly
      */
-    readonly nearEchoEstimate?: OPTIONAL<V59String>;
+    public readonly nearEchoEstimate?: OPTIONAL<V59String>;
     /**
      * @summary `farEchoEstimate`.
      * @description
@@ -169,7 +169,7 @@ class V32Diag_Item {
      * @public
      * @readonly
      */
-    readonly farEchoEstimate?: OPTIONAL<V59String>;
+    public readonly farEchoEstimate?: OPTIONAL<V59String>;
     /**
      * @summary `roundTripDelay`.
      * @description
@@ -180,13 +180,13 @@ class V32Diag_Item {
      * @public
      * @readonly
      */
-    readonly roundTripDelay?: OPTIONAL<V59String>;
+    public readonly roundTripDelay?: OPTIONAL<V59String>;
     /**
      * @summary Extensions that are not recognized.
      * @public
      * @readonly
      */
-    readonly _unrecognizedExtensionsList: _Element[];
+    public readonly _unrecognizedExtensionsList: _Element[];
 
     constructor (
         modeV32B: Capabilities,

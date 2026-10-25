@@ -1,6 +1,6 @@
 /* eslint-disable */
 import {
-    ASN1Element as _Element,
+    type ASN1Element as _Element,
     ASN1TagClass as _TagClass,
     ASN1Construction as _Construction,
     ASN1UniversalType as _UniversalType,
@@ -25,20 +25,26 @@ import * as $ from '@wildboar/asn1/functional';
  *
  */
 export class ACBioInstance {
+    /**
+     * @summary `contentType`.
+     * @public
+     * @readonly
+     */
+    public readonly contentType: _Element; /* COULD_NOT_RESOLVE_OBJECT_CLASS_DEF */
+    /**
+     * @summary `content`.
+     * @public
+     * @readonly
+     */
+    public readonly content: _Element; /* COULD_NOT_RESOLVE_OBJECT_CLASS_DEF */
+
     constructor(
-        /**
-         * @summary `contentType`.
-         * @public
-         * @readonly
-         */
-        readonly contentType: _Element /* COULD_NOT_RESOLVE_OBJECT_CLASS_DEF */,
-        /**
-         * @summary `content`.
-         * @public
-         * @readonly
-         */
-        readonly content: _Element /* COULD_NOT_RESOLVE_OBJECT_CLASS_DEF */
-    ) {}
+        contentType: _Element,
+        content: _Element
+    ) {
+        this.contentType = contentType;
+        this.content = content;
+    }
 
     /**
      * @summary Restructures an object into a ACBioInstance

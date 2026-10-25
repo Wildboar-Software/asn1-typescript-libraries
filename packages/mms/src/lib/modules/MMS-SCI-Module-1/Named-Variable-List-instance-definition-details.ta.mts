@@ -1,6 +1,6 @@
 /* eslint-disable */
 import {
-    ASN1Element as _Element,
+    type ASN1Element as _Element,
     ASN1TagClass as _TagClass,
     ASN1Construction as _Construction,
     ASN1UniversalType as _UniversalType,
@@ -37,30 +37,36 @@ import { Variable_List_Item_instance, _decode_Variable_List_Item_instance, _enco
  */
 export
 class Named_Variable_List_instance_definition_details {
+    /**
+     * @summary `accessControl`.
+     * @description
+     *
+     * SCI encoding of the object's ACL (ISO 9506-1:2003 §9). ISO
+     * 9506-2:2003 Annex B.
+     *
+     * @public
+     * @readonly
+     */
+    public readonly accessControl: Access_Control_List_instance;
+    /**
+     * @summary `listOfVariables`.
+     * @description
+     *
+     * Configured variable-list items. ISO 9506-1:2003 §14.1.4.3; ISO
+     * 9506-2:2003 Annex B.1.7.
+     *
+     * @public
+     * @readonly
+     */
+    public readonly listOfVariables: Variable_List_Item_instance[];
+
     constructor (
-        /**
-         * @summary `accessControl`.
-         * @description
-         *
-         * SCI encoding of the object's ACL (ISO 9506-1:2003 §9). ISO
-         * 9506-2:2003 Annex B.
-         *
-         * @public
-         * @readonly
-         */
-        readonly accessControl: Access_Control_List_instance,
-        /**
-         * @summary `listOfVariables`.
-         * @description
-         *
-         * Configured variable-list items. ISO 9506-1:2003 §14.1.4.3; ISO
-         * 9506-2:2003 Annex B.1.7.
-         *
-         * @public
-         * @readonly
-         */
-        readonly listOfVariables: Variable_List_Item_instance[]
-    ) {}
+        accessControl: Access_Control_List_instance,
+        listOfVariables: Variable_List_Item_instance[]
+    ) {
+        this.accessControl = accessControl;
+        this.listOfVariables = listOfVariables;
+    }
 
     /**
      * @summary Restructures an object into a Named_Variable_List_instance_definition_details

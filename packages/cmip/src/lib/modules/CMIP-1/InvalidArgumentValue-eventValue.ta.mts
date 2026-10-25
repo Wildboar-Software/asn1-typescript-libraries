@@ -1,6 +1,6 @@
 /* eslint-disable */
 import {
-  OPTIONAL,
+  type OPTIONAL,
   ASN1Element as _Element,
   ASN1TagClass as _TagClass,
   ASN1Construction as _Construction,
@@ -12,7 +12,7 @@ import {
 } from '@wildboar/asn1';
 import * as $ from '@wildboar/asn1/functional';
 import {
-    EventTypeId,
+    type EventTypeId,
     _decode_EventTypeId,
     _encode_EventTypeId,
 } from '../CMIP-1/EventTypeId.ta.mjs';
@@ -43,7 +43,7 @@ export class InvalidArgumentValue_eventValue {
    * @public
    * @readonly
    */
-  readonly eventType: EventTypeId;
+  public readonly eventType: EventTypeId;
   /**
    * @summary `eventInfo`.
    * @description
@@ -53,7 +53,7 @@ export class InvalidArgumentValue_eventValue {
    * @public
    * @readonly
    */
-  readonly eventInfo?: OPTIONAL<_Element>;
+  public readonly eventInfo?: OPTIONAL<_Element>;
 
   constructor(
     eventType: EventTypeId,

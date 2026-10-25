@@ -1,6 +1,6 @@
 /* eslint-disable */
 import {
-  BOOLEAN,
+  type BOOLEAN,
   ASN1Element as _Element,
   ASN1TagClass as _TagClass,
   ASN1Construction as _Construction,
@@ -53,7 +53,7 @@ export class RegisterBSP_RequestParams {
    * @public
    * @readonly
    */
-  readonly bspSchema: BioAPI_BSP_SCHEMA;
+  public readonly bspSchema: BioAPI_BSP_SCHEMA;
   /**
    * @summary `update`.
    * @description
@@ -66,7 +66,7 @@ export class RegisterBSP_RequestParams {
    * @public
    * @readonly
    */
-  readonly update: BOOLEAN;
+  public readonly update: BOOLEAN;
 
   constructor(
     bspSchema: BioAPI_BSP_SCHEMA,

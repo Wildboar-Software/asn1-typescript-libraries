@@ -1,12 +1,12 @@
 /* eslint-disable */
 import {
-    OPTIONAL,
-    ASN1Element as _Element,
+    type OPTIONAL,
+    type ASN1Element as _Element,
     ASN1TagClass as _TagClass
 } from "@wildboar/asn1";
 import * as $ from "@wildboar/asn1/functional";
-import { VersionType, _decode_VersionType, _encode_VersionType } from "../RSPDefinitions/VersionType.ta.mjs";
-import { ISDRProprietaryApplicationTemplate_lpaeSupport, _decode_ISDRProprietaryApplicationTemplate_lpaeSupport, _encode_ISDRProprietaryApplicationTemplate_lpaeSupport } from "../RSPDefinitions/ISDRProprietaryApplicationTemplate-lpaeSupport.ta.mjs";
+import { type VersionType, _decode_VersionType, _encode_VersionType } from "../RSPDefinitions/VersionType.ta.mjs";
+import { type ISDRProprietaryApplicationTemplate_lpaeSupport, _decode_ISDRProprietaryApplicationTemplate_lpaeSupport, _encode_ISDRProprietaryApplicationTemplate_lpaeSupport } from "../RSPDefinitions/ISDRProprietaryApplicationTemplate-lpaeSupport.ta.mjs";
 
 
 /**
@@ -46,7 +46,7 @@ class ISDRProprietaryApplicationTemplate {
      * @public
      * @readonly
      */
-    readonly svn: VersionType;
+    public readonly svn: VersionType;
     /**
      * @summary `lpaeSupport`.
      * @description
@@ -57,7 +57,7 @@ class ISDRProprietaryApplicationTemplate {
      * @public
      * @readonly
      */
-    readonly lpaeSupport?: OPTIONAL<ISDRProprietaryApplicationTemplate_lpaeSupport>;
+    public readonly lpaeSupport?: OPTIONAL<ISDRProprietaryApplicationTemplate_lpaeSupport>;
 
     constructor (
         svn: VersionType,

@@ -1,12 +1,12 @@
 /* eslint-disable */
 import {
-    ASN1Element as _Element,
+    type ASN1Element as _Element,
     ASN1TagClass as _TagClass,
-    BOOLEAN,
-    INTEGER,
-    OCTET_STRING,
-    OPTIONAL,
-    RELATIVE_OID,
+    type BOOLEAN,
+    type INTEGER,
+    type OCTET_STRING,
+    type OPTIONAL,
+    type RELATIVE_OID,
     ASN1OverflowError
 } from "@wildboar/asn1";
 import * as $ from "@wildboar/asn1/functional";

@@ -1,6 +1,6 @@
 /* eslint-disable */
 import {
-    ASN1Element as _Element,
+    type ASN1Element as _Element,
     ASN1TagClass as _TagClass,
     ASN1Construction as _Construction,
     ASN1UniversalType as _UniversalType,
@@ -38,22 +38,13 @@ import {
  */
 export type NRN = IPN; // DefinedType
 
-let _cached_decoder_for_NRN: $.ASN1Decoder<NRN> | null = null;
-
 /**
  * @summary Decodes an ASN.1 element into a(n) NRN
  * @function
  * @param {_Element} el The element being decoded.
  * @returns {NRN} The decoded data structure.
  */
-export function _decode_NRN(el: _Element): NRN {
-    if (!_cached_decoder_for_NRN) {
-        _cached_decoder_for_NRN = _decode_IPN;
-    }
-    return _cached_decoder_for_NRN(el);
-}
-
-let _cached_encoder_for_NRN: $.ASN1Encoder<NRN> | null = null;
+export const _decode_NRN: $.ASN1Decoder<NRN> = _decode_IPN;
 
 /**
  * @summary Encodes a(n) NRN into an ASN.1 Element.
@@ -62,12 +53,7 @@ let _cached_encoder_for_NRN: $.ASN1Encoder<NRN> | null = null;
  * @param elGetter A function that can be used to get new ASN.1 elements.
  * @returns {_Element} The NRN, encoded as an ASN.1 Element.
  */
-export function _encode_NRN(value: NRN, elGetter: $.ASN1Encoder<NRN>): _Element {
-    if (!_cached_encoder_for_NRN) {
-        _cached_encoder_for_NRN = _encode_IPN;
-    }
-    return _cached_encoder_for_NRN(value, elGetter);
-}
+export const _encode_NRN: $.ASN1Encoder<NRN> = _encode_IPN;
 
 
 /* eslint-enable */

@@ -1,7 +1,7 @@
 /* eslint-disable */
 import {
-    OPTIONAL,
-    ASN1Element as _Element,
+    type OPTIONAL,
+    type ASN1Element as _Element,
     ASN1TagClass as _TagClass
 } from "@wildboar/asn1";
 import * as $ from "@wildboar/asn1/functional";
@@ -11,17 +11,17 @@ import { EventTypeBCSM, _decode_EventTypeBCSM, _encode_EventTypeBCSM, _enum_for_
 // export { EventTypeBCSM, _enum_for_EventTypeBCSM, EventTypeBCSM_origAttemptAuthorized /* IMPORTED_LONG_ENUMERATION_ITEM */, origAttemptAuthorized /* IMPORTED_SHORT_ENUMERATION_ITEM */, EventTypeBCSM_collectedInfo /* IMPORTED_LONG_ENUMERATION_ITEM */, collectedInfo /* IMPORTED_SHORT_ENUMERATION_ITEM */, EventTypeBCSM_analysedInformation /* IMPORTED_LONG_ENUMERATION_ITEM */, analysedInformation /* IMPORTED_SHORT_ENUMERATION_ITEM */, EventTypeBCSM_routeSelectFailure /* IMPORTED_LONG_ENUMERATION_ITEM */, routeSelectFailure /* IMPORTED_SHORT_ENUMERATION_ITEM */, EventTypeBCSM_oCalledPartyBusy /* IMPORTED_LONG_ENUMERATION_ITEM */, oCalledPartyBusy /* IMPORTED_SHORT_ENUMERATION_ITEM */, EventTypeBCSM_oNoAnswer /* IMPORTED_LONG_ENUMERATION_ITEM */, oNoAnswer /* IMPORTED_SHORT_ENUMERATION_ITEM */, EventTypeBCSM_oAnswer /* IMPORTED_LONG_ENUMERATION_ITEM */, oAnswer /* IMPORTED_SHORT_ENUMERATION_ITEM */, EventTypeBCSM_oMidCall /* IMPORTED_LONG_ENUMERATION_ITEM */, oMidCall /* IMPORTED_SHORT_ENUMERATION_ITEM */, EventTypeBCSM_oDisconnect /* IMPORTED_LONG_ENUMERATION_ITEM */, oDisconnect /* IMPORTED_SHORT_ENUMERATION_ITEM */, EventTypeBCSM_oAbandon /* IMPORTED_LONG_ENUMERATION_ITEM */, oAbandon /* IMPORTED_SHORT_ENUMERATION_ITEM */, EventTypeBCSM_termAttemptAuthorized /* IMPORTED_LONG_ENUMERATION_ITEM */, termAttemptAuthorized /* IMPORTED_SHORT_ENUMERATION_ITEM */, EventTypeBCSM_tBusy /* IMPORTED_LONG_ENUMERATION_ITEM */, tBusy /* IMPORTED_SHORT_ENUMERATION_ITEM */, EventTypeBCSM_tNoAnswer /* IMPORTED_LONG_ENUMERATION_ITEM */, tNoAnswer /* IMPORTED_SHORT_ENUMERATION_ITEM */, EventTypeBCSM_tAnswer /* IMPORTED_LONG_ENUMERATION_ITEM */, tAnswer /* IMPORTED_SHORT_ENUMERATION_ITEM */, EventTypeBCSM_tMidCall /* IMPORTED_LONG_ENUMERATION_ITEM */, tMidCall /* IMPORTED_SHORT_ENUMERATION_ITEM */, EventTypeBCSM_tDisconnect /* IMPORTED_LONG_ENUMERATION_ITEM */, tDisconnect /* IMPORTED_SHORT_ENUMERATION_ITEM */, EventTypeBCSM_tAbandon /* IMPORTED_LONG_ENUMERATION_ITEM */, tAbandon /* IMPORTED_SHORT_ENUMERATION_ITEM */, EventTypeBCSM_oTermSeized /* IMPORTED_LONG_ENUMERATION_ITEM */, oTermSeized /* IMPORTED_SHORT_ENUMERATION_ITEM */, EventTypeBCSM_oSuspend /* IMPORTED_LONG_ENUMERATION_ITEM */, oSuspend /* IMPORTED_SHORT_ENUMERATION_ITEM */, EventTypeBCSM_tSuspend /* IMPORTED_LONG_ENUMERATION_ITEM */, tSuspend /* IMPORTED_SHORT_ENUMERATION_ITEM */, EventTypeBCSM_origAttempt /* IMPORTED_LONG_ENUMERATION_ITEM */, origAttempt /* IMPORTED_SHORT_ENUMERATION_ITEM */, EventTypeBCSM_termAttempt /* IMPORTED_LONG_ENUMERATION_ITEM */, termAttempt /* IMPORTED_SHORT_ENUMERATION_ITEM */, EventTypeBCSM_oReAnswer /* IMPORTED_LONG_ENUMERATION_ITEM */, oReAnswer /* IMPORTED_SHORT_ENUMERATION_ITEM */, EventTypeBCSM_tReAnswer /* IMPORTED_LONG_ENUMERATION_ITEM */, tReAnswer /* IMPORTED_SHORT_ENUMERATION_ITEM */, EventTypeBCSM_facilitySelectedAndAvailable /* IMPORTED_LONG_ENUMERATION_ITEM */, facilitySelectedAndAvailable /* IMPORTED_SHORT_ENUMERATION_ITEM */, EventTypeBCSM_callAccepted /* IMPORTED_LONG_ENUMERATION_ITEM */, callAccepted /* IMPORTED_SHORT_ENUMERATION_ITEM */, EventTypeBCSM_authorizeRouteFailure /* IMPORTED_LONG_ENUMERATION_ITEM */, authorizeRouteFailure /* IMPORTED_SHORT_ENUMERATION_ITEM */, EventTypeBCSM_originationAttemptDenied /* IMPORTED_LONG_ENUMERATION_ITEM */, originationAttemptDenied /* IMPORTED_SHORT_ENUMERATION_ITEM */, EventTypeBCSM_terminationAttemptDenied /* IMPORTED_LONG_ENUMERATION_ITEM */, terminationAttemptDenied /* IMPORTED_SHORT_ENUMERATION_ITEM */, _decode_EventTypeBCSM, _encode_EventTypeBCSM } from "../IN-CS3-SSF-SCF-datatypes/EventTypeBCSM.ta.mjs";
 import { TriggerDPType, TriggerDPType_tdp_r /* IMPORTED_LONG_ENUMERATION_ITEM */, _decode_TriggerDPType, _encode_TriggerDPType, _enum_for_TriggerDPType } from "../IN-CS3-SSF-SCF-datatypes/TriggerDPType.ta.mjs";
 // export { TriggerDPType, _enum_for_TriggerDPType, TriggerDPType_tdp_r /* IMPORTED_LONG_ENUMERATION_ITEM */, tdp_r /* IMPORTED_SHORT_ENUMERATION_ITEM */, TriggerDPType_tdp_n /* IMPORTED_LONG_ENUMERATION_ITEM */, tdp_n /* IMPORTED_SHORT_ENUMERATION_ITEM */, _decode_TriggerDPType, _encode_TriggerDPType } from "../IN-CS3-SSF-SCF-datatypes/TriggerDPType.ta.mjs";
-import { ServiceKey, _decode_ServiceKey, _encode_ServiceKey } from "../IN-CS3-SSF-SCF-datatypes/ServiceKey.ta.mjs";
+import { type ServiceKey, _decode_ServiceKey, _encode_ServiceKey } from "../IN-CS3-SSF-SCF-datatypes/ServiceKey.ta.mjs";
 // export { ServiceKey, _decode_ServiceKey, _encode_ServiceKey } from "../IN-CS3-SSF-SCF-datatypes/ServiceKey.ta.mjs";
-import { ProfileIdentifier, _decode_ProfileIdentifier, _encode_ProfileIdentifier } from "../IN-CS3-SSF-SCF-datatypes/ProfileIdentifier.ta.mjs";
+import { type ProfileIdentifier, _decode_ProfileIdentifier, _encode_ProfileIdentifier } from "../IN-CS3-SSF-SCF-datatypes/ProfileIdentifier.ta.mjs";
 // export { ProfileIdentifier, _decode_ProfileIdentifier, _encode_ProfileIdentifier } from "../IN-CS3-SSF-SCF-datatypes/ProfileIdentifier.ta.mjs";
 import { TriggerData, _decode_TriggerData, _encode_TriggerData } from "../IN-CS3-SSF-SCF-datatypes/TriggerData.ta.mjs";
 // export { TriggerData, _decode_TriggerData, _encode_TriggerData } from "../IN-CS3-SSF-SCF-datatypes/TriggerData.ta.mjs";
 import { DefaultFaultHandling, _decode_DefaultFaultHandling, _encode_DefaultFaultHandling } from "../IN-CS3-SSF-SCF-datatypes/DefaultFaultHandling.ta.mjs";
 // export { DefaultFaultHandling, _decode_DefaultFaultHandling, _encode_DefaultFaultHandling } from "../IN-CS3-SSF-SCF-datatypes/DefaultFaultHandling.ta.mjs";
-import { TDPIdentifier, _decode_TDPIdentifier, _encode_TDPIdentifier } from "../IN-CS3-SSF-SCF-datatypes/TDPIdentifier.ta.mjs";
+import { type TDPIdentifier, _decode_TDPIdentifier, _encode_TDPIdentifier } from "../IN-CS3-SSF-SCF-datatypes/TDPIdentifier.ta.mjs";
 // export { TDPIdentifier, _decode_TDPIdentifier, _encode_TDPIdentifier } from "../IN-CS3-SSF-SCF-datatypes/TDPIdentifier.ta.mjs";
-import { Extensions, _decode_Extensions, _encode_Extensions } from "../IN-CS3-common-datatypes/Extensions.ta.mjs";
+import { type Extensions, _decode_Extensions, _encode_Extensions } from "../IN-CS3-common-datatypes/Extensions.ta.mjs";
 // export { Extensions, _decode_Extensions, _encode_Extensions } from "../IN-CS3-common-datatypes/Extensions.ta.mjs";
 
 
@@ -158,32 +158,32 @@ class CreateOrRemoveTriggerDataArg {
      * @static
      * @method
      */
-    public static get _default_value_for_createOrRemove () { return CreateOrRemoveIndicator_create; }
+    public static get _default_value_for_createOrRemove (): _enum_for_CreateOrRemoveIndicator.create { return CreateOrRemoveIndicator_create; }
     /**
      * @summary Getter that returns the default value for `triggerDPType`.
      * @public
      * @static
      * @method
      */
-    public static get _default_value_for_triggerDPType () { return TriggerDPType_tdp_r; }        /**
+    public static get _default_value_for_triggerDPType (): _enum_for_TriggerDPType.tdp_r { return TriggerDPType_tdp_r; }        /**
          * @summary The enum used as the type of the component `createOrRemove`
          * @public
          * @static
          */
 
-    public static _enum_for_createOrRemove = _enum_for_CreateOrRemoveIndicator;        /**
+    public static _enum_for_createOrRemove: typeof _enum_for_CreateOrRemoveIndicator = _enum_for_CreateOrRemoveIndicator;        /**
          * @summary The enum used as the type of the component `dPName`
          * @public
          * @static
          */
 
-    public static _enum_for_dPName = _enum_for_EventTypeBCSM;        /**
+    public static _enum_for_dPName: typeof _enum_for_EventTypeBCSM = _enum_for_EventTypeBCSM;        /**
          * @summary The enum used as the type of the component `triggerDPType`
          * @public
          * @static
          */
 
-    public static _enum_for_triggerDPType = _enum_for_TriggerDPType;
+    public static _enum_for_triggerDPType: typeof _enum_for_TriggerDPType = _enum_for_TriggerDPType;
 }
 
 /**

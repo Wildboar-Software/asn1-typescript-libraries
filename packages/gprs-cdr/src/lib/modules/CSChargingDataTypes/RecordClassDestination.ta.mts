@@ -1,11 +1,11 @@
 /* eslint-disable */
 import {
-    ASN1Element as _Element,
+    type ASN1Element as _Element,
     ASN1TagClass as _TagClass
 } from "@wildboar/asn1";
 import * as $ from "@wildboar/asn1/functional";
-import { OsApplication, _decode_OsApplication, _encode_OsApplication } from "../CSChargingDataTypes/OsApplication.ta.mjs";
-import { RecordClassDestination_fileType, _decode_RecordClassDestination_fileType, _encode_RecordClassDestination_fileType } from "../CSChargingDataTypes/RecordClassDestination-fileType.ta.mjs";
+import { type OsApplication, _decode_OsApplication, _encode_OsApplication } from "../CSChargingDataTypes/OsApplication.ta.mjs";
+import { type RecordClassDestination_fileType, _decode_RecordClassDestination_fileType, _encode_RecordClassDestination_fileType } from "../CSChargingDataTypes/RecordClassDestination-fileType.ta.mjs";
 
 
 /**

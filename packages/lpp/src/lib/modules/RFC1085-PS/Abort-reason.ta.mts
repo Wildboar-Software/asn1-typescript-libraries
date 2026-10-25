@@ -1,6 +1,6 @@
 /* eslint-disable */
 import {
-    INTEGER
+    type INTEGER
 } from "@wildboar/asn1";
 import * as $ from "@wildboar/asn1/functional";
 
@@ -48,7 +48,7 @@ type Abort_reason = INTEGER;
  * @type {number}
  */
 export
-const Abort_reason_unspecified: Abort_reason = 0; /* LONG_NAMED_INTEGER_VALUE */
+const Abort_reason_unspecified: 0 = 0 satisfies Abort_reason; /* LONG_NAMED_INTEGER_VALUE */
 
 /**
  * @summary unspecified
@@ -61,7 +61,7 @@ const Abort_reason_unspecified: Abort_reason = 0; /* LONG_NAMED_INTEGER_VALUE */
  * @type {number}
  */
 export
-const unspecified: Abort_reason = Abort_reason_unspecified; /* SHORT_NAMED_INTEGER_VALUE */
+const unspecified: 0 = Abort_reason_unspecified; /* SHORT_NAMED_INTEGER_VALUE */
 
 /**
  * @summary Abort_reason_unrecognized_ppdu
@@ -74,7 +74,7 @@ const unspecified: Abort_reason = Abort_reason_unspecified; /* SHORT_NAMED_INTEG
  * @type {number}
  */
 export
-const Abort_reason_unrecognized_ppdu: Abort_reason = 1; /* LONG_NAMED_INTEGER_VALUE */
+const Abort_reason_unrecognized_ppdu: 1 = 1 satisfies Abort_reason; /* LONG_NAMED_INTEGER_VALUE */
 
 /**
  * @summary unrecognized_ppdu
@@ -87,7 +87,7 @@ const Abort_reason_unrecognized_ppdu: Abort_reason = 1; /* LONG_NAMED_INTEGER_VA
  * @type {number}
  */
 export
-const unrecognized_ppdu: Abort_reason = Abort_reason_unrecognized_ppdu; /* SHORT_NAMED_INTEGER_VALUE */
+const unrecognized_ppdu: 1 = Abort_reason_unrecognized_ppdu; /* SHORT_NAMED_INTEGER_VALUE */
 
 /**
  * @summary Abort_reason_unexpected_ppdu
@@ -104,7 +104,7 @@ const unrecognized_ppdu: Abort_reason = Abort_reason_unrecognized_ppdu; /* SHORT
  * @type {number}
  */
 export
-const Abort_reason_unexpected_ppdu: Abort_reason = 2; /* LONG_NAMED_INTEGER_VALUE */
+const Abort_reason_unexpected_ppdu: 2 = 2 satisfies Abort_reason; /* LONG_NAMED_INTEGER_VALUE */
 
 /**
  * @summary unexpected_ppdu
@@ -121,7 +121,7 @@ const Abort_reason_unexpected_ppdu: Abort_reason = 2; /* LONG_NAMED_INTEGER_VALU
  * @type {number}
  */
 export
-const unexpected_ppdu: Abort_reason = Abort_reason_unexpected_ppdu; /* SHORT_NAMED_INTEGER_VALUE */
+const unexpected_ppdu: 2 = Abort_reason_unexpected_ppdu; /* SHORT_NAMED_INTEGER_VALUE */
 
 /**
  * @summary Abort_reason_unrecognized_ppdu_parameter
@@ -136,7 +136,7 @@ const unexpected_ppdu: Abort_reason = Abort_reason_unexpected_ppdu; /* SHORT_NAM
  * @type {number}
  */
 export
-const Abort_reason_unrecognized_ppdu_parameter: Abort_reason = 4; /* LONG_NAMED_INTEGER_VALUE */
+const Abort_reason_unrecognized_ppdu_parameter: 4 = 4 satisfies Abort_reason; /* LONG_NAMED_INTEGER_VALUE */
 
 /**
  * @summary unrecognized_ppdu_parameter
@@ -151,7 +151,7 @@ const Abort_reason_unrecognized_ppdu_parameter: Abort_reason = 4; /* LONG_NAMED_
  * @type {number}
  */
 export
-const unrecognized_ppdu_parameter: Abort_reason = Abort_reason_unrecognized_ppdu_parameter; /* SHORT_NAMED_INTEGER_VALUE */
+const unrecognized_ppdu_parameter: 4 = Abort_reason_unrecognized_ppdu_parameter; /* SHORT_NAMED_INTEGER_VALUE */
 
 /**
  * @summary Abort_reason_invalid_ppdu_parameter
@@ -164,7 +164,7 @@ const unrecognized_ppdu_parameter: Abort_reason = Abort_reason_unrecognized_ppdu
  * @type {number}
  */
 export
-const Abort_reason_invalid_ppdu_parameter: Abort_reason = 5; /* LONG_NAMED_INTEGER_VALUE */
+const Abort_reason_invalid_ppdu_parameter: 5 = 5 satisfies Abort_reason; /* LONG_NAMED_INTEGER_VALUE */
 
 /**
  * @summary invalid_ppdu_parameter
@@ -177,7 +177,7 @@ const Abort_reason_invalid_ppdu_parameter: Abort_reason = 5; /* LONG_NAMED_INTEG
  * @type {number}
  */
 export
-const invalid_ppdu_parameter: Abort_reason = Abort_reason_invalid_ppdu_parameter; /* SHORT_NAMED_INTEGER_VALUE */
+const invalid_ppdu_parameter: 5 = Abort_reason_invalid_ppdu_parameter; /* SHORT_NAMED_INTEGER_VALUE */
 
 /**
  * @summary Abort_reason_reference_mismatch
@@ -191,7 +191,7 @@ const invalid_ppdu_parameter: Abort_reason = Abort_reason_invalid_ppdu_parameter
  * @type {number}
  */
 export
-const Abort_reason_reference_mismatch: Abort_reason = 9; /* LONG_NAMED_INTEGER_VALUE */
+const Abort_reason_reference_mismatch: 9 = 9 satisfies Abort_reason; /* LONG_NAMED_INTEGER_VALUE */
 
 /**
  * @summary reference_mismatch
@@ -205,7 +205,7 @@ const Abort_reason_reference_mismatch: Abort_reason = 9; /* LONG_NAMED_INTEGER_V
  * @type {number}
  */
 export
-const reference_mismatch: Abort_reason = Abort_reason_reference_mismatch; /* SHORT_NAMED_INTEGER_VALUE */
+const reference_mismatch: 9 = Abort_reason_reference_mismatch; /* SHORT_NAMED_INTEGER_VALUE */
 export const _decode_Abort_reason: $.ASN1Decoder<Abort_reason> = $._decodeInteger;
 export const _encode_Abort_reason: $.ASN1Encoder<Abort_reason> = $._encodeInteger;
 

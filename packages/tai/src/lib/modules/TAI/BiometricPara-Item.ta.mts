@@ -1,9 +1,9 @@
 /* eslint-disable */
 import {
-    OPTIONAL,
-    INTEGER,
-    BIT_STRING,
-    ASN1Element as _Element,
+    type OPTIONAL,
+    type INTEGER,
+    type BIT_STRING,
+    type ASN1Element as _Element,
     ASN1TagClass as _TagClass,
     ASN1Construction as _Construction,
     ASN1UniversalType as _UniversalType,
@@ -34,60 +34,72 @@ import * as $ from "@wildboar/asn1/functional";
  */
 export
 class BiometricPara_Item {
+    /**
+     * @summary `biometricType`.
+     * @description
+     *
+     * CBEFF biometric type of the capture device
+     * (ISO/IEC 19785-3). X.1089 §9.10, §9.12.
+     *
+     * @public
+     * @readonly
+     */
+    public readonly biometricType: BIT_STRING;
+    /**
+     * @summary `fMR_Value`.
+     * @description
+     *
+     * False match rate used to set BPU match thresholds and
+     * thus whether success or failure is reported to the
+     * identity verifier. FNMR is not defined here. X.1089
+     * §9.14.
+     *
+     * @public
+     * @readonly
+     */
+    public readonly fMR_Value: INTEGER;
+    /**
+     * @summary `trialNumber`.
+     * @description
+     *
+     * Trials the BPU will allow on each biometric device at
+     * this security level. X.1089 §9.15.
+     *
+     * @public
+     * @readonly
+     */
+    public readonly trialNumber?: OPTIONAL<INTEGER>;
+    /**
+     * @summary `requestQuality`.
+     * @description
+     *
+     * Acceptable biometric data quality. See
+     * ISO/IEC 19784-1. X.1089 §9.16.
+     *
+     * @public
+     * @readonly
+     */
+    public readonly requestQuality?: OPTIONAL<INTEGER>;
+    /**
+     * @summary Extensions that are not recognized.
+     * @public
+     * @readonly
+     */
+    public readonly _unrecognizedExtensionsList: _Element[];
+
     constructor (
-        /**
-         * @summary `biometricType`.
-         * @description
-         *
-         * CBEFF biometric type of the capture device
-         * (ISO/IEC 19785-3). X.1089 §9.10, §9.12.
-         *
-         * @public
-         * @readonly
-         */
-        readonly biometricType: BIT_STRING,
-        /**
-         * @summary `fMR_Value`.
-         * @description
-         *
-         * False match rate used to set BPU match thresholds and
-         * thus whether success or failure is reported to the
-         * identity verifier. FNMR is not defined here. X.1089
-         * §9.14.
-         *
-         * @public
-         * @readonly
-         */
-        readonly fMR_Value: INTEGER,
-        /**
-         * @summary `trialNumber`.
-         * @description
-         *
-         * Trials the BPU will allow on each biometric device at
-         * this security level. X.1089 §9.15.
-         *
-         * @public
-         * @readonly
-         */
-        readonly trialNumber?: OPTIONAL<INTEGER>,
-        /**
-         * @summary `requestQuality`.
-         * @description
-         *
-         * Acceptable biometric data quality. See
-         * ISO/IEC 19784-1. X.1089 §9.16.
-         *
-         * @public
-         * @readonly
-         */
-        readonly requestQuality?: OPTIONAL<INTEGER>,
-        /**
-         * @summary Extensions that are not recognized.
-         * @public
-         * @readonly
-         */
-        readonly _unrecognizedExtensionsList: _Element[] = []
-    ) {}
+        biometricType: BIT_STRING,
+        fMR_Value: INTEGER,
+        trialNumber?: OPTIONAL<INTEGER>,
+        requestQuality?: OPTIONAL<INTEGER>,
+        _unrecognizedExtensionsList: _Element[] = []
+    ) {
+        this.biometricType = biometricType;
+        this.fMR_Value = fMR_Value;
+        this.trialNumber = trialNumber;
+        this.requestQuality = requestQuality;
+        this._unrecognizedExtensionsList = _unrecognizedExtensionsList;
+    }
 
     /**
      * @summary Restructures an object into a BiometricPara_Item

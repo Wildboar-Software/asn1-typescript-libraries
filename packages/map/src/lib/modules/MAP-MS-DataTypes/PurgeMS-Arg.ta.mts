@@ -1,12 +1,12 @@
 /* eslint-disable */
 import {
-    OPTIONAL,
-    ASN1Element as _Element,
+    type OPTIONAL,
+    type ASN1Element as _Element,
     ASN1TagClass as _TagClass
 } from "@wildboar/asn1";
 import * as $ from "@wildboar/asn1/functional";
-import { IMSI, _decode_IMSI, _encode_IMSI } from "../MAP-CommonDataTypes/IMSI.ta.mjs";
-import { ISDN_AddressString, _decode_ISDN_AddressString, _encode_ISDN_AddressString } from "../MAP-CommonDataTypes/ISDN-AddressString.ta.mjs";
+import { type IMSI, _decode_IMSI, _encode_IMSI } from "../MAP-CommonDataTypes/IMSI.ta.mjs";
+import { type ISDN_AddressString, _decode_ISDN_AddressString, _encode_ISDN_AddressString } from "../MAP-CommonDataTypes/ISDN-AddressString.ta.mjs";
 import { ExtensionContainer, _decode_ExtensionContainer, _encode_ExtensionContainer } from "../MAP-ExtensionDataTypes/ExtensionContainer.ta.mjs";
 import { LocationInformation, _decode_LocationInformation, _encode_LocationInformation } from "../MAP-MS-DataTypes/LocationInformation.ta.mjs";
 import { LocationInformationEPS, _decode_LocationInformationEPS, _encode_LocationInformationEPS } from "../MAP-MS-DataTypes/LocationInformationEPS.ta.mjs";
@@ -30,12 +30,12 @@ import { LocationInformationGPRS, _decode_LocationInformationGPRS, _encode_Locat
  * ```asn1
  * PurgeMS-Arg ::= [3] SEQUENCE {
  *     imsi    IMSI,
- *     vlr-Number    [0] ISDN-AddressString    OPTIONAL,
- *     sgsn-Number    [1]    ISDN-AddressString    OPTIONAL,
- *     extensionContainer    ExtensionContainer    OPTIONAL,
+ *     vlr-Number    [0] ISDN-AddressString    type OPTIONAL,
+ *     sgsn-Number    [1]    ISDN-AddressString    type OPTIONAL,
+ *     extensionContainer    ExtensionContainer    type OPTIONAL,
  *     ...,
- *     locationInformation    [2] LocationInformation    OPTIONAL,
- *     locationInformationGPRS    [3] LocationInformationGPRS    OPTIONAL,
+ *     locationInformation    [2] LocationInformation    type OPTIONAL,
+ *     locationInformationGPRS    [3] LocationInformationGPRS    type OPTIONAL,
  *     locationInformationEPS    [4] LocationInformationEPS    OPTIONAL }
  * ```
  * 
@@ -43,92 +43,110 @@ import { LocationInformationGPRS, _decode_LocationInformationGPRS, _encode_Locat
  */
 export
 class PurgeMS_Arg {
+    /**
+     * @summary `imsi`.
+     * @description
+     *
+     * International Mobile Subscriber Identity as in 3GPP TS 23.003.
+     *
+     * (3GPP TS 29.002 V19.1.0 clause 7.6.2.1).
+     *
+     * @public
+     * @readonly
+     */
+    public readonly imsi: IMSI;
+    /**
+     * @summary `vlr_Number`.
+     * @description
+     *
+     * ISDN number of a VLR.
+     *
+     * (3GPP TS 29.002 V19.1.0 clause 7.6.2.14).
+     *
+     * @public
+     * @readonly
+     */
+    public readonly vlr_Number?: OPTIONAL<ISDN_AddressString>;
+    /**
+     * @summary `sgsn_Number`.
+     * @description
+     *
+     * ISDN number of an SGSN. In EPS, may be an IWF number.
+     *
+     * (3GPP TS 29.002 V19.1.0 clause 7.6.2.38).
+     *
+     * @public
+     * @readonly
+     */
+    public readonly sgsn_Number?: OPTIONAL<ISDN_AddressString>;
+    /**
+     * @summary `extensionContainer`.
+     * @public
+     * @readonly
+     */
+    public readonly extensionContainer?: OPTIONAL<ExtensionContainer>;
+    /**
+     * @summary `locationInformation`.
+     * @description
+     *
+     * CS location of the served subscriber as in 3GPP TS 23.018.
+     *
+     * (3GPP TS 29.002 V19.1.0 clause 7.6.2.30).
+     *
+     * @public
+     * @readonly
+     */
+    public readonly locationInformation?: OPTIONAL<LocationInformation>;
+    /**
+     * @summary `locationInformationGPRS`.
+     * @description
+     *
+     * GPRS location of the served subscriber as in 3GPP TS 23.078.
+     *
+     * (3GPP TS 29.002 V19.1.0 clause 7.6.2.30a).
+     *
+     * @public
+     * @readonly
+     */
+    public readonly locationInformationGPRS?: OPTIONAL<LocationInformationGPRS>;
+    /**
+     * @summary `locationInformationEPS`.
+     * @description
+     *
+     * EPS location of the served subscriber, from the MME via IWF.
+     *
+     * (3GPP TS 29.002 V19.1.0 clause 7.6.2.30b).
+     *
+     * @public
+     * @readonly
+     */
+    public readonly locationInformationEPS?: OPTIONAL<LocationInformationEPS>;
+    /**
+     * @summary Extensions that are not recognized.
+     * @public
+     * @readonly
+     */
+    public readonly _unrecognizedExtensionsList: _Element[];
+
     constructor (
-        /**
-         * @summary `imsi`.
-         * @description
-         *
-         * International Mobile Subscriber Identity as in 3GPP TS 23.003.
-         *
-         * (3GPP TS 29.002 V19.1.0 clause 7.6.2.1).
-         *
-         * @public
-         * @readonly
-         */
-        readonly imsi: IMSI,
-        /**
-         * @summary `vlr_Number`.
-         * @description
-         *
-         * ISDN number of a VLR.
-         *
-         * (3GPP TS 29.002 V19.1.0 clause 7.6.2.14).
-         *
-         * @public
-         * @readonly
-         */
-        readonly vlr_Number?: OPTIONAL<ISDN_AddressString>,
-        /**
-         * @summary `sgsn_Number`.
-         * @description
-         *
-         * ISDN number of an SGSN. In EPS, may be an IWF number.
-         *
-         * (3GPP TS 29.002 V19.1.0 clause 7.6.2.38).
-         *
-         * @public
-         * @readonly
-         */
-        readonly sgsn_Number?: OPTIONAL<ISDN_AddressString>,
-        /**
-         * @summary `extensionContainer`.
-         * @public
-         * @readonly
-         */
-        readonly extensionContainer?: OPTIONAL<ExtensionContainer>,
-        /**
-         * @summary `locationInformation`.
-         * @description
-         *
-         * CS location of the served subscriber as in 3GPP TS 23.018.
-         *
-         * (3GPP TS 29.002 V19.1.0 clause 7.6.2.30).
-         *
-         * @public
-         * @readonly
-         */
-        readonly locationInformation?: OPTIONAL<LocationInformation>,
-        /**
-         * @summary `locationInformationGPRS`.
-         * @description
-         *
-         * GPRS location of the served subscriber as in 3GPP TS 23.078.
-         *
-         * (3GPP TS 29.002 V19.1.0 clause 7.6.2.30a).
-         *
-         * @public
-         * @readonly
-         */
-        readonly locationInformationGPRS?: OPTIONAL<LocationInformationGPRS>,
-        /**
-         * @summary `locationInformationEPS`.
-         * @description
-         *
-         * EPS location of the served subscriber, from the MME via IWF.
-         *
-         * (3GPP TS 29.002 V19.1.0 clause 7.6.2.30b).
-         *
-         * @public
-         * @readonly
-         */
-        readonly locationInformationEPS?: OPTIONAL<LocationInformationEPS>,
-        /**
-         * @summary Extensions that are not recognized.
-         * @public
-         * @readonly
-         */
-        readonly _unrecognizedExtensionsList: _Element[] = []
-    ) {}
+        imsi: IMSI,
+        vlr_Number?: OPTIONAL<ISDN_AddressString>,
+        sgsn_Number?: OPTIONAL<ISDN_AddressString>,
+        extensionContainer?: OPTIONAL<ExtensionContainer>,
+        locationInformation?: OPTIONAL<LocationInformation>,
+        locationInformationGPRS?: OPTIONAL<LocationInformationGPRS>,
+        locationInformationEPS?: OPTIONAL<LocationInformationEPS>,
+        _unrecognizedExtensionsList: _Element[] = []
+    ) {
+        this.imsi = imsi;
+        this.vlr_Number = vlr_Number;
+        this.sgsn_Number = sgsn_Number;
+        this.extensionContainer = extensionContainer;
+        this.locationInformation = locationInformation;
+        this.locationInformationGPRS = locationInformationGPRS;
+        this.locationInformationEPS = locationInformationEPS;
+        this._unrecognizedExtensionsList = _unrecognizedExtensionsList;
+    }
 
     /**
      * @summary Restructures an object into a PurgeMS_Arg

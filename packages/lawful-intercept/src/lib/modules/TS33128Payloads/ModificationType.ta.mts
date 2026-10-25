@@ -1,12 +1,12 @@
 /* eslint-disable */
 import {
-    BIT_STRING,
-    OCTET_STRING,
-    ASN1Element as _Element,
+    type BIT_STRING,
+    type OCTET_STRING,
+    type ASN1Element as _Element,
     ASN1TagClass as _TagClass
 } from "@wildboar/asn1";
 import * as $ from "@wildboar/asn1/functional";
-import { PayloadInformationRemoved, _decode_PayloadInformationRemoved, _encode_PayloadInformationRemoved } from "../TS33128Payloads/PayloadInformationRemoved.ta.mjs";
+import { type PayloadInformationRemoved, _decode_PayloadInformationRemoved, _encode_PayloadInformationRemoved } from "../TS33128Payloads/PayloadInformationRemoved.ta.mjs";
 // export { PayloadInformationRemoved, _decode_PayloadInformationRemoved, _encode_PayloadInformationRemoved } from "../TS33128Payloads/PayloadInformationRemoved.ta.mjs";
 import { PayloadInformationReplacedWithCharacters, _decode_PayloadInformationReplacedWithCharacters, _encode_PayloadInformationReplacedWithCharacters } from "../TS33128Payloads/PayloadInformationReplacedWithCharacters.ta.mjs";
 // export { PayloadInformationReplacedWithCharacters, _decode_PayloadInformationReplacedWithCharacters, _encode_PayloadInformationReplacedWithCharacters } from "../TS33128Payloads/PayloadInformationReplacedWithCharacters.ta.mjs";

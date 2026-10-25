@@ -1,6 +1,6 @@
 /* eslint-disable */
 import {
-  INTEGER,
+  type INTEGER,
   ASN1Element as _Element,
   ASN1TagClass as _TagClass,
   ASN1Construction as _Construction,
@@ -44,7 +44,7 @@ export class F_CHECK_request {
    * @public
    * @readonly
    */
-  readonly checkpoint_identifier: INTEGER;
+  public readonly checkpoint_identifier: INTEGER;
   /**
    * @summary `transfer_number`.
    * @description
@@ -54,7 +54,7 @@ export class F_CHECK_request {
    * @public
    * @readonly
    */
-  readonly transfer_number: INTEGER;
+  public readonly transfer_number: INTEGER;
 
   constructor(
     checkpoint_identifier: INTEGER,

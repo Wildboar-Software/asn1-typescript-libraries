@@ -1,7 +1,7 @@
 /* eslint-disable */
 import { type EXTENSION } from "../AuthenticationFramework/EXTENSION.oca.mjs";
 import {
-    BaseCRLNumber,
+    type BaseCRLNumber,
     _decode_BaseCRLNumber,
     _encode_BaseCRLNumber,
 } from "../CertificateExtensions/BaseCRLNumber.ta.mjs";

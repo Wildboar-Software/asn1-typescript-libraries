@@ -1,7 +1,7 @@
 /* eslint-disable */
 import {
-    OPTIONAL,
-    ASN1Element as _Element,
+    type OPTIONAL,
+    type ASN1Element as _Element,
     ASN1TagClass as _TagClass,
     ASN1Construction as _Construction,
     ASN1UniversalType as _UniversalType,
@@ -17,7 +17,7 @@ import {
     _encode_TemplateLabel,
 } from '../DefinitionASN1Module/TemplateLabel.ta.mjs';
 import {
-    TemplateList,
+    type TemplateList,
     _decode_TemplateList,
     _encode_TemplateList,
 } from '../DefinitionASN1Module/TemplateList.ta.mjs';
@@ -39,27 +39,33 @@ import {
  *
  */
 export class AttributeGroups_Item {
+    /**
+     * @summary `group`.
+     * @description
+     *
+     * Attribute-group template referenced by the package.
+     * @public
+     * @readonly
+     */
+    public readonly group: TemplateLabel;
+    /**
+     * @summary `attributes`.
+     * @description
+     *
+     * Extra members added to an extensible group in this package. Omitted
+     * for a fixed group.
+     * @public
+     * @readonly
+     */
+    public readonly attributes?: OPTIONAL<TemplateList>;
+
     constructor(
-        /**
-         * @summary `group`.
-         * @description
-         *
-         * Attribute-group template referenced by the package.
-         * @public
-         * @readonly
-         */
-        readonly group: TemplateLabel,
-        /**
-         * @summary `attributes`.
-         * @description
-         *
-         * Extra members added to an extensible group in this package. Omitted
-         * for a fixed group.
-         * @public
-         * @readonly
-         */
-        readonly attributes?: OPTIONAL<TemplateList>
-    ) {}
+        group: TemplateLabel,
+        attributes?: OPTIONAL<TemplateList>
+    ) {
+        this.group = group;
+        this.attributes = attributes;
+    }
 
     /**
      * @summary Restructures an object into a AttributeGroups_Item

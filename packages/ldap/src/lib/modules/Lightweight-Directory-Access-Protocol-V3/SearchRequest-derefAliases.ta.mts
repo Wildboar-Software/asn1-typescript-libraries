@@ -73,7 +73,7 @@ export type SearchRequest_derefAliases = _enum_for_SearchRequest_derefAliases;
  *
  * @enum {number}
  */
-export const SearchRequest_derefAliases = _enum_for_SearchRequest_derefAliases;
+export const SearchRequest_derefAliases: typeof _enum_for_SearchRequest_derefAliases = _enum_for_SearchRequest_derefAliases;
 
 
 /**
@@ -85,7 +85,7 @@ export const SearchRequest_derefAliases = _enum_for_SearchRequest_derefAliases;
  * @constant
  * @type {number}
  */
-export const SearchRequest_derefAliases_neverDerefAliases: SearchRequest_derefAliases =
+export const SearchRequest_derefAliases_neverDerefAliases: 0 =
   SearchRequest_derefAliases.neverDerefAliases; /* LONG_NAMED_ENUMERATED_VALUE */
 
 
@@ -98,7 +98,7 @@ export const SearchRequest_derefAliases_neverDerefAliases: SearchRequest_derefAl
  * @constant
  * @type {number}
  */
-export const neverDerefAliases: SearchRequest_derefAliases =
+export const neverDerefAliases: 0 =
   SearchRequest_derefAliases.neverDerefAliases; /* SHORT_NAMED_ENUMERATED_VALUE */
 
 
@@ -114,7 +114,7 @@ export const neverDerefAliases: SearchRequest_derefAliases =
  * @constant
  * @type {number}
  */
-export const SearchRequest_derefAliases_derefInSearching: SearchRequest_derefAliases =
+export const SearchRequest_derefAliases_derefInSearching: 1 =
   SearchRequest_derefAliases.derefInSearching; /* LONG_NAMED_ENUMERATED_VALUE */
 
 
@@ -130,7 +130,7 @@ export const SearchRequest_derefAliases_derefInSearching: SearchRequest_derefAli
  * @constant
  * @type {number}
  */
-export const derefInSearching: SearchRequest_derefAliases =
+export const derefInSearching: 1 =
   SearchRequest_derefAliases.derefInSearching; /* SHORT_NAMED_ENUMERATED_VALUE */
 
 
@@ -144,7 +144,7 @@ export const derefInSearching: SearchRequest_derefAliases =
  * @constant
  * @type {number}
  */
-export const SearchRequest_derefAliases_derefFindingBaseObj: SearchRequest_derefAliases =
+export const SearchRequest_derefAliases_derefFindingBaseObj: 2 =
   SearchRequest_derefAliases.derefFindingBaseObj; /* LONG_NAMED_ENUMERATED_VALUE */
 
 
@@ -158,7 +158,7 @@ export const SearchRequest_derefAliases_derefFindingBaseObj: SearchRequest_deref
  * @constant
  * @type {number}
  */
-export const derefFindingBaseObj: SearchRequest_derefAliases =
+export const derefFindingBaseObj: 2 =
   SearchRequest_derefAliases.derefFindingBaseObj; /* SHORT_NAMED_ENUMERATED_VALUE */
 
 
@@ -171,7 +171,7 @@ export const derefFindingBaseObj: SearchRequest_derefAliases =
  * @constant
  * @type {number}
  */
-export const SearchRequest_derefAliases_derefAlways: SearchRequest_derefAliases =
+export const SearchRequest_derefAliases_derefAlways: 3 =
   SearchRequest_derefAliases.derefAlways; /* LONG_NAMED_ENUMERATED_VALUE */
 
 
@@ -184,7 +184,7 @@ export const SearchRequest_derefAliases_derefAlways: SearchRequest_derefAliases 
  * @constant
  * @type {number}
  */
-export const derefAlways: SearchRequest_derefAliases =
+export const derefAlways: 3 =
   SearchRequest_derefAliases.derefAlways; /* SHORT_NAMED_ENUMERATED_VALUE */
 
 
@@ -195,7 +195,18 @@ export const derefAlways: SearchRequest_derefAliases =
  * @returns {SearchRequest_derefAliases} The decoded data structure.
  */
 export function _decode_SearchRequest_derefAliases(el: _Element): SearchRequest_derefAliases {
-  return $._decodeEnumerated(el) as SearchRequest_derefAliases;
+  const enumerated = $._decodeEnumerated(el);
+  switch (enumerated) {
+    case SearchRequest_derefAliases.neverDerefAliases: return SearchRequest_derefAliases.neverDerefAliases;
+    case SearchRequest_derefAliases.derefInSearching: return SearchRequest_derefAliases.derefInSearching;
+    case SearchRequest_derefAliases.derefFindingBaseObj: return SearchRequest_derefAliases.derefFindingBaseObj;
+    case SearchRequest_derefAliases.derefAlways: return SearchRequest_derefAliases.derefAlways;
+    default:
+      throw new _ConstructionError(
+        'Invalid ENUMERATED value ' + enumerated + ' for SearchRequest_derefAliases.',
+        el,
+      );
+  }
 }
 
 

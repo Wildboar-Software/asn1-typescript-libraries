@@ -3,7 +3,7 @@ import {
     ASN1Element as _Element
 } from "@wildboar/asn1";
 import * as $ from "@wildboar/asn1/functional";
-import { PCCRuleID, _decode_PCCRuleID, _encode_PCCRuleID } from "../TS33128Payloads/PCCRuleID.ta.mjs";
+import { type PCCRuleID, _decode_PCCRuleID, _encode_PCCRuleID } from "../TS33128Payloads/PCCRuleID.ta.mjs";
 // export { PCCRuleID, _decode_PCCRuleID, _encode_PCCRuleID } from "../TS33128Payloads/PCCRuleID.ta.mjs";
 
 

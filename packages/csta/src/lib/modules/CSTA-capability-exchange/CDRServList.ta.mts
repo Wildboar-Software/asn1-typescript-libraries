@@ -2,21 +2,21 @@
 
 import * as $ from "@wildboar/asn1/functional";
 import {
-    OPTIONAL,
-    SEQUENCE,
-    SET,
-    ASN1Element as _Element,
+    type OPTIONAL,
+    type SEQUENCE,
+    type SET,
+    type ASN1Element as _Element,
     ASN1TagClass as _TagClass
 } from "@wildboar/asn1";
-import { CdrNotification, _decode_CdrNotification, _encode_CdrNotification } from "../CSTA-capability-exchange/CdrNotification.ta.mjs";
+import { type CdrNotification, _decode_CdrNotification, _encode_CdrNotification } from "../CSTA-capability-exchange/CdrNotification.ta.mjs";
 
-import { CdrReport, _decode_CdrReport, _encode_CdrReport } from "../CSTA-capability-exchange/CdrReport.ta.mjs";
+import { type CdrReport, _decode_CdrReport, _encode_CdrReport } from "../CSTA-capability-exchange/CdrReport.ta.mjs";
 
-import { SendStoredCDRs, _decode_SendStoredCDRs, _encode_SendStoredCDRs } from "../CSTA-capability-exchange/SendStoredCDRs.ta.mjs";
+import { type SendStoredCDRs, _decode_SendStoredCDRs, _encode_SendStoredCDRs } from "../CSTA-capability-exchange/SendStoredCDRs.ta.mjs";
 
-import { StartCDRTransmission, _decode_StartCDRTransmission, _encode_StartCDRTransmission } from "../CSTA-capability-exchange/StartCDRTransmission.ta.mjs";
+import { type StartCDRTransmission, _decode_StartCDRTransmission, _encode_StartCDRTransmission } from "../CSTA-capability-exchange/StartCDRTransmission.ta.mjs";
 
-import { StopCDRTransmission, _decode_StopCDRTransmission, _encode_StopCDRTransmission } from "../CSTA-capability-exchange/StopCDRTransmission.ta.mjs";
+import { type StopCDRTransmission, _decode_StopCDRTransmission, _encode_StopCDRTransmission } from "../CSTA-capability-exchange/StopCDRTransmission.ta.mjs";
 
 
 
@@ -34,10 +34,10 @@ import { StopCDRTransmission, _decode_StopCDRTransmission, _encode_StopCDRTransm
  * 
  * ```asn1
  * CDRServList ::= SEQUENCE
- * {     cdrNotification         [ 0] IMPLICIT     CdrNotification         OPTIONAL,
- *     cdrReport             [ 1] IMPLICIT     CdrReport             OPTIONAL,
- *     sendStoredCDRs             [ 2] IMPLICIT     SendStoredCDRs             OPTIONAL,
- *     startCDRTransmission         [ 3] IMPLICIT     StartCDRTransmission         OPTIONAL,
+ * {     cdrNotification         [ 0] IMPLICIT     CdrNotification         type OPTIONAL,
+ *     cdrReport             [ 1] IMPLICIT     CdrReport             type OPTIONAL,
+ *     sendStoredCDRs             [ 2] IMPLICIT     SendStoredCDRs             type OPTIONAL,
+ *     startCDRTransmission         [ 3] IMPLICIT     StartCDRTransmission         type OPTIONAL,
  *     stopCDRTransmission         [ 4] IMPLICIT     StopCDRTransmission         OPTIONAL }
  * ```
  * 
@@ -45,53 +45,65 @@ import { StopCDRTransmission, _decode_StopCDRTransmission, _encode_StopCDRTransm
  */
 export
 class CDRServList {
+    /**
+     * @summary `cdrNotification`.
+     * @public
+     * @readonly
+     * @description
+     * Capability bitmap for this service; omit if the SF does not support
+     * it (ECMA-269 Annex C).
+     */
+    public readonly cdrNotification?: OPTIONAL<CdrNotification>;
+    /**
+     * @summary `cdrReport`.
+     * @public
+     * @readonly
+     * @description
+     * Capability bitmap for this service; omit if the SF does not support
+     * it (ECMA-269 Annex C).
+     */
+    public readonly cdrReport?: OPTIONAL<CdrReport>;
+    /**
+     * @summary `sendStoredCDRs`.
+     * @public
+     * @readonly
+     * @description
+     * Capability bitmap for this service; omit if the SF does not support
+     * it (ECMA-269 Annex C).
+     */
+    public readonly sendStoredCDRs?: OPTIONAL<SendStoredCDRs>;
+    /**
+     * @summary `startCDRTransmission`.
+     * @public
+     * @readonly
+     * @description
+     * Capability bitmap for this service; omit if the SF does not support
+     * it (ECMA-269 Annex C).
+     */
+    public readonly startCDRTransmission?: OPTIONAL<StartCDRTransmission>;
+    /**
+     * @summary `stopCDRTransmission`.
+     * @public
+     * @readonly
+     * @description
+     * Capability bitmap for this service; omit if the SF does not support
+     * it (ECMA-269 Annex C).
+     */
+    public readonly stopCDRTransmission?: OPTIONAL<StopCDRTransmission>;
+
     constructor (
-        /**
-         * @summary `cdrNotification`.
-         * @public
-         * @readonly
-         * @description
-         * Capability bitmap for this service; omit if the SF does not support
-         * it (ECMA-269 Annex C).
-         */
-        readonly cdrNotification?: OPTIONAL<CdrNotification>,
-        /**
-         * @summary `cdrReport`.
-         * @public
-         * @readonly
-         * @description
-         * Capability bitmap for this service; omit if the SF does not support
-         * it (ECMA-269 Annex C).
-         */
-        readonly cdrReport?: OPTIONAL<CdrReport>,
-        /**
-         * @summary `sendStoredCDRs`.
-         * @public
-         * @readonly
-         * @description
-         * Capability bitmap for this service; omit if the SF does not support
-         * it (ECMA-269 Annex C).
-         */
-        readonly sendStoredCDRs?: OPTIONAL<SendStoredCDRs>,
-        /**
-         * @summary `startCDRTransmission`.
-         * @public
-         * @readonly
-         * @description
-         * Capability bitmap for this service; omit if the SF does not support
-         * it (ECMA-269 Annex C).
-         */
-        readonly startCDRTransmission?: OPTIONAL<StartCDRTransmission>,
-        /**
-         * @summary `stopCDRTransmission`.
-         * @public
-         * @readonly
-         * @description
-         * Capability bitmap for this service; omit if the SF does not support
-         * it (ECMA-269 Annex C).
-         */
-        readonly stopCDRTransmission?: OPTIONAL<StopCDRTransmission>
-    ) {}
+        cdrNotification?: OPTIONAL<CdrNotification>,
+        cdrReport?: OPTIONAL<CdrReport>,
+        sendStoredCDRs?: OPTIONAL<SendStoredCDRs>,
+        startCDRTransmission?: OPTIONAL<StartCDRTransmission>,
+        stopCDRTransmission?: OPTIONAL<StopCDRTransmission>
+    ) {
+        this.cdrNotification = cdrNotification;
+        this.cdrReport = cdrReport;
+        this.sendStoredCDRs = sendStoredCDRs;
+        this.startCDRTransmission = startCDRTransmission;
+        this.stopCDRTransmission = stopCDRTransmission;
+    }
 
     /**
      * @summary Restructures an object into a CDRServList

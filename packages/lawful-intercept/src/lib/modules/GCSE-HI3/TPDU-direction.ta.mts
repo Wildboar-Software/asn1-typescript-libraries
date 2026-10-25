@@ -1,6 +1,6 @@
 /* eslint-disable */
 import {
-    ENUMERATED
+    type ENUMERATED
 } from "@wildboar/asn1";
 import * as $ from "@wildboar/asn1/functional";
 
@@ -51,7 +51,7 @@ type TPDU_direction = _enum_for_TPDU_direction | ENUMERATED;
  * @type {number}
  */
 export
-const TPDU_direction_from_target: TPDU_direction = 1; /* LONG_NAMED_ENUMERATED_VALUE */
+const TPDU_direction_from_target: _enum_for_TPDU_direction.from_target = _enum_for_TPDU_direction.from_target; /* LONG_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary from_target
@@ -62,7 +62,7 @@ const TPDU_direction_from_target: TPDU_direction = 1; /* LONG_NAMED_ENUMERATED_V
  * @type {number}
  */
 export
-const from_target: TPDU_direction = TPDU_direction_from_target; /* SHORT_NAMED_ENUMERATED_VALUE */
+const from_target: _enum_for_TPDU_direction.from_target = TPDU_direction_from_target; /* SHORT_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary TPDU_direction_to_target
@@ -74,7 +74,7 @@ const from_target: TPDU_direction = TPDU_direction_from_target; /* SHORT_NAMED_E
  * @type {number}
  */
 export
-const TPDU_direction_to_target: TPDU_direction = 2; /* LONG_NAMED_ENUMERATED_VALUE */
+const TPDU_direction_to_target: _enum_for_TPDU_direction.to_target = _enum_for_TPDU_direction.to_target; /* LONG_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary to_target
@@ -85,7 +85,7 @@ const TPDU_direction_to_target: TPDU_direction = 2; /* LONG_NAMED_ENUMERATED_VAL
  * @type {number}
  */
 export
-const to_target: TPDU_direction = TPDU_direction_to_target; /* SHORT_NAMED_ENUMERATED_VALUE */
+const to_target: _enum_for_TPDU_direction.to_target = TPDU_direction_to_target; /* SHORT_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary TPDU_direction_unknown
@@ -97,7 +97,7 @@ const to_target: TPDU_direction = TPDU_direction_to_target; /* SHORT_NAMED_ENUME
  * @type {number}
  */
 export
-const TPDU_direction_unknown: TPDU_direction = 3; /* LONG_NAMED_ENUMERATED_VALUE */
+const TPDU_direction_unknown: _enum_for_TPDU_direction.unknown = _enum_for_TPDU_direction.unknown; /* LONG_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary unknown
@@ -108,7 +108,7 @@ const TPDU_direction_unknown: TPDU_direction = 3; /* LONG_NAMED_ENUMERATED_VALUE
  * @type {number}
  */
 export
-const unknown: TPDU_direction = TPDU_direction_unknown; /* SHORT_NAMED_ENUMERATED_VALUE */
+const unknown: _enum_for_TPDU_direction.unknown = TPDU_direction_unknown; /* SHORT_NAMED_ENUMERATED_VALUE */
 export const _decode_TPDU_direction: $.ASN1Decoder<TPDU_direction> = $._decodeEnumerated;
 export const _encode_TPDU_direction: $.ASN1Encoder<TPDU_direction> = $._encodeEnumerated;
 

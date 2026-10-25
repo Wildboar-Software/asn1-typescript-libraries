@@ -1,6 +1,6 @@
 /* eslint-disable */
 import {
-    ASN1Element as _Element,
+    type ASN1Element as _Element,
     ASN1TagClass as _TagClass,
     ASN1Construction as _Construction,
     ASN1UniversalType as _UniversalType,
@@ -59,14 +59,14 @@ export type ImportanceField = _enum_for_ImportanceField;
  *
  * @enum {number}
  */
-export const ImportanceField = _enum_for_ImportanceField;
+export const ImportanceField: typeof _enum_for_ImportanceField = _enum_for_ImportanceField;
 
 /**
  * @summary ImportanceField_low
  * @constant
  * @type {number}
  */
-export const ImportanceField_low: ImportanceField =
+export const ImportanceField_low: _enum_for_ImportanceField.low =
     ImportanceField.low; /* LONG_NAMED_ENUMERATED_VALUE */
 
 /**
@@ -74,7 +74,7 @@ export const ImportanceField_low: ImportanceField =
  * @constant
  * @type {number}
  */
-export const low: ImportanceField =
+export const low: _enum_for_ImportanceField.low =
     ImportanceField.low; /* SHORT_NAMED_ENUMERATED_VALUE */
 
 /**
@@ -82,7 +82,7 @@ export const low: ImportanceField =
  * @constant
  * @type {number}
  */
-export const ImportanceField_normal: ImportanceField =
+export const ImportanceField_normal: _enum_for_ImportanceField.normal =
     ImportanceField.normal; /* LONG_NAMED_ENUMERATED_VALUE */
 
 /**
@@ -90,7 +90,7 @@ export const ImportanceField_normal: ImportanceField =
  * @constant
  * @type {number}
  */
-export const normal: ImportanceField =
+export const normal: _enum_for_ImportanceField.normal =
     ImportanceField.normal; /* SHORT_NAMED_ENUMERATED_VALUE */
 
 /**
@@ -98,7 +98,7 @@ export const normal: ImportanceField =
  * @constant
  * @type {number}
  */
-export const ImportanceField_high: ImportanceField =
+export const ImportanceField_high: _enum_for_ImportanceField.high =
     ImportanceField.high; /* LONG_NAMED_ENUMERATED_VALUE */
 
 /**
@@ -106,14 +106,26 @@ export const ImportanceField_high: ImportanceField =
  * @constant
  * @type {number}
  */
-export const high: ImportanceField =
+export const high: _enum_for_ImportanceField.high =
     ImportanceField.high; /* SHORT_NAMED_ENUMERATED_VALUE */
 
 
-export const _decode_ImportanceField = $._decodeEnumerated;
+export function _decode_ImportanceField(el: _Element): ImportanceField {
+    const enumerated = $._decodeEnumerated(el);
+    switch (enumerated) {
+        case ImportanceField.low: return ImportanceField.low;
+        case ImportanceField.normal: return ImportanceField.normal;
+        case ImportanceField.high: return ImportanceField.high;
+        default:
+            throw new _ConstructionError(
+                'Invalid ENUMERATED value ' + enumerated + ' for ImportanceField.',
+                el,
+            );
+    }
+}
 
 
-export const _encode_ImportanceField = $._encodeEnumerated;
+export const _encode_ImportanceField: $.ASN1Encoder<ImportanceField> = $._encodeEnumerated as $.ASN1Encoder<ImportanceField>;
 
 
 /* eslint-enable */

@@ -1,7 +1,7 @@
 /* eslint-disable */
 import {
-    OPTIONAL,
-    ASN1Element as _Element,
+    type OPTIONAL,
+    type ASN1Element as _Element,
     ASN1TagClass as _TagClass,
     ASN1Construction as _Construction,
     ASN1UniversalType as _UniversalType,
@@ -12,7 +12,7 @@ import {
 } from '@wildboar/asn1';
 import * as $ from '@wildboar/asn1/functional';
 import {
-    ObjectInstance,
+    type ObjectInstance,
     _decode_ObjectInstance,
     _encode_ObjectInstance,
 } from '@wildboar/cmip';
@@ -45,31 +45,37 @@ import {
  *
  */
 export class NonStatisticalScan {
+    /**
+     * @summary `objectInstance`.
+     * @description
+     *
+     * Name of the observed object. Omitted if
+     * `suppressObjectInstance` is true; required in the
+     * list if that attribute is false. X.738 §8.2.2.2.2,
+     * A.9, Table 3 note 1.
+     * @public
+     * @readonly
+     */
+    public readonly objectInstance?: OPTIONAL<ObjectInstance>;
+    /**
+     * @summary `attributeValues`.
+     * @description
+     *
+     * Scanned values with identifiers. Omitted if the
+     * scan-attribute list is empty. Missing attributes
+     * are indicated. X.738 §8.2.2.2.2, A.9.
+     * @public
+     * @readonly
+     */
+    public readonly attributeValues?: OPTIONAL<AttributeMeasure[]>;
+
     constructor(
-        /**
-         * @summary `objectInstance`.
-         * @description
-         *
-         * Name of the observed object. Omitted if
-         * `suppressObjectInstance` is true; required in the
-         * list if that attribute is false. X.738 §8.2.2.2.2,
-         * A.9, Table 3 note 1.
-         * @public
-         * @readonly
-         */
-        readonly objectInstance?: OPTIONAL<ObjectInstance>,
-        /**
-         * @summary `attributeValues`.
-         * @description
-         *
-         * Scanned values with identifiers. Omitted if the
-         * scan-attribute list is empty. Missing attributes
-         * are indicated. X.738 §8.2.2.2.2, A.9.
-         * @public
-         * @readonly
-         */
-        readonly attributeValues?: OPTIONAL<AttributeMeasure[]>
-    ) {}
+        objectInstance?: OPTIONAL<ObjectInstance>,
+        attributeValues?: OPTIONAL<AttributeMeasure[]>
+    ) {
+        this.objectInstance = objectInstance;
+        this.attributeValues = attributeValues;
+    }
 
     /**
      * @summary Restructures an object into a NonStatisticalScan

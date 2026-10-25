@@ -1,5 +1,5 @@
 /* eslint-disable */
-import { ASN1Element as _Element, INTEGER } from "@wildboar/asn1";
+import { ASN1Element as _Element, type INTEGER } from "@wildboar/asn1";
 import * as $ from "@wildboar/asn1/functional";
 
 
@@ -21,7 +21,7 @@ export type PFX_version = INTEGER;
  * @constant
  * @type {number}
  */
-export const PFX_version_v3: PFX_version = 3; /* LONG_NAMED_INTEGER_VALUE */
+export const PFX_version_v3: 3 = 3 satisfies PFX_version; /* LONG_NAMED_INTEGER_VALUE */
 
 
 /**
@@ -29,17 +29,17 @@ export const PFX_version_v3: PFX_version = 3; /* LONG_NAMED_INTEGER_VALUE */
  * @constant
  * @type {number}
  */
-export const v3: PFX_version = PFX_version_v3; /* SHORT_NAMED_INTEGER_VALUE */
+export const v3: 3 = PFX_version_v3; /* SHORT_NAMED_INTEGER_VALUE */
 
 
 
 
-export const _decode_PFX_version = $._decodeInteger;
+export const _decode_PFX_version: $.ASN1Decoder<INTEGER> = $._decodeInteger;
 
 
 
 
-export const _encode_PFX_version = $._encodeInteger;
+export const _encode_PFX_version: $.ASN1Encoder<INTEGER> = $._encodeInteger;
 
 
 /* eslint-enable */

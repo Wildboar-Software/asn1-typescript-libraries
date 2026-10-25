@@ -1,10 +1,10 @@
 /* eslint-disable */
 import {
-    ASN1Element as _Element,
+    type ASN1Element as _Element,
     ASN1SizeError
 } from "@wildboar/asn1";
 import * as $ from "@wildboar/asn1/functional";
-import { _decode_APN, _encode_APN, APN } from "../MAP-MS-DataTypes/APN.ta.mjs";
+import { _decode_APN, _encode_APN, type APN } from "../MAP-MS-DataTypes/APN.ta.mjs";
 
 
 import { maxNumOfLIPAAllowedAPN } from "./maxNumOfLIPAAllowedAPN.va.mjs";

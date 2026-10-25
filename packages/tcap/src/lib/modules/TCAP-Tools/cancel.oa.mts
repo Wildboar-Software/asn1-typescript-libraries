@@ -18,7 +18,7 @@ import {
   _encode_Code,
 } from '@wildboar/rose';
 import {
-  TCInvokeIdSet,
+  type TCInvokeIdSet,
   _decode_TCInvokeIdSet,
   _encode_TCInvokeIdSet,
 } from '../TCAPMessages/TCInvokeIdSet.ta.mjs';

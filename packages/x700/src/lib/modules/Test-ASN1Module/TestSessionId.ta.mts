@@ -1,8 +1,8 @@
 /* eslint-disable */
 import {
-    OPTIONAL,
-    INTEGER,
-    ASN1Element as _Element,
+    type OPTIONAL,
+    type INTEGER,
+    type ASN1Element as _Element,
     ASN1TagClass as _TagClass,
     ASN1Construction as _Construction,
     ASN1UniversalType as _UniversalType,
@@ -13,7 +13,7 @@ import {
 } from '@wildboar/asn1';
 import * as $ from '@wildboar/asn1/functional';
 import {
-    TestSessionId_globalRef,
+    type TestSessionId_globalRef,
     _decode_TestSessionId_globalRef,
     _encode_TestSessionId_globalRef,
 } from '../Test-ASN1Module/TestSessionId-globalRef.ta.mjs';
@@ -42,33 +42,39 @@ import {
  *
  */
 export class TestSessionId {
+    /**
+     * @summary `localId`.
+     * @description
+     *
+     * Integer part of the session identifier; always present. ITU-T Rec.
+     * X.745 (11/93) §8.1.6.
+     * [§8.1.6](https://www.itu.int/rec/T-REC-X.745-199311-I)
+     *
+     * @public
+     * @readonly
+     */
+    public readonly localId: INTEGER;
+    /**
+     * @summary `globalRef`.
+     * @description
+     *
+     * Optional global qualifier: a Distinguished Name or an OBJECT
+     * IDENTIFIER, for uniqueness across systems. ITU-T Rec. X.745 (11/93)
+     * §8.1.6.
+     * [§8.1.6](https://www.itu.int/rec/T-REC-X.745-199311-I)
+     *
+     * @public
+     * @readonly
+     */
+    public readonly globalRef?: OPTIONAL<TestSessionId_globalRef>;
+
     constructor(
-        /**
-         * @summary `localId`.
-         * @description
-         *
-         * Integer part of the session identifier; always present. ITU-T Rec.
-         * X.745 (11/93) §8.1.6.
-         * [§8.1.6](https://www.itu.int/rec/T-REC-X.745-199311-I)
-         *
-         * @public
-         * @readonly
-         */
-        readonly localId: INTEGER,
-        /**
-         * @summary `globalRef`.
-         * @description
-         *
-         * Optional global qualifier: a Distinguished Name or an OBJECT
-         * IDENTIFIER, for uniqueness across systems. ITU-T Rec. X.745 (11/93)
-         * §8.1.6.
-         * [§8.1.6](https://www.itu.int/rec/T-REC-X.745-199311-I)
-         *
-         * @public
-         * @readonly
-         */
-        readonly globalRef?: OPTIONAL<TestSessionId_globalRef>
-    ) {}
+        localId: INTEGER,
+        globalRef?: OPTIONAL<TestSessionId_globalRef>
+    ) {
+        this.localId = localId;
+        this.globalRef = globalRef;
+    }
 
     /**
      * @summary Restructures an object into a TestSessionId

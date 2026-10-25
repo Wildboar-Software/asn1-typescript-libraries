@@ -1,7 +1,7 @@
 /* eslint-disable */
 import {
-    UTF8String,
-    ASN1Element as _Element,
+    type UTF8String,
+    type ASN1Element as _Element,
     ASN1TagClass as _TagClass,
     ASN1Construction as _Construction,
     ASN1UniversalType as _UniversalType,
@@ -35,10 +35,10 @@ export
 type MimeType = UTF8String; // UTF8String
 
 
-export const _decode_MimeType = $._decodeUTF8String;
+export const _decode_MimeType: $.ASN1Decoder<string> = $._decodeUTF8String;
 
 
-export const _encode_MimeType = $._encodeUTF8String;
+export const _encode_MimeType: $.ASN1Encoder<string> = $._encodeUTF8String;
 
 
 /* eslint-enable */

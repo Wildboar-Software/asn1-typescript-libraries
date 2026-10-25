@@ -1,6 +1,6 @@
 /* eslint-disable */
 import {
-  ENUMERATED,
+  type ENUMERATED,
   ASN1Element as _Element,
   ASN1TagClass as _TagClass,
   ASN1Construction as _Construction,
@@ -51,7 +51,7 @@ export type ATOMIC_ACTION_IDENTIFIER_owners_name_side =
  * @constant
  * @type {number}
  */
-export const ATOMIC_ACTION_IDENTIFIER_owners_name_side_sender: ATOMIC_ACTION_IDENTIFIER_owners_name_side = 0; /* LONG_NAMED_ENUMERATED_VALUE */
+export const ATOMIC_ACTION_IDENTIFIER_owners_name_side_sender: 0 = _enum_for_ATOMIC_ACTION_IDENTIFIER_owners_name_side.sender; /* LONG_NAMED_ENUMERATED_VALUE */
 
 
 /**
@@ -59,7 +59,7 @@ export const ATOMIC_ACTION_IDENTIFIER_owners_name_side_sender: ATOMIC_ACTION_IDE
  * @constant
  * @type {number}
  */
-export const sender: ATOMIC_ACTION_IDENTIFIER_owners_name_side = ATOMIC_ACTION_IDENTIFIER_owners_name_side_sender; /* SHORT_NAMED_ENUMERATED_VALUE */
+export const sender: 0 = ATOMIC_ACTION_IDENTIFIER_owners_name_side_sender; /* SHORT_NAMED_ENUMERATED_VALUE */
 
 
 /**
@@ -68,7 +68,7 @@ export const sender: ATOMIC_ACTION_IDENTIFIER_owners_name_side = ATOMIC_ACTION_I
  * @constant
  * @type {number}
  */
-export const ATOMIC_ACTION_IDENTIFIER_owners_name_side_receiver: ATOMIC_ACTION_IDENTIFIER_owners_name_side = 1; /* LONG_NAMED_ENUMERATED_VALUE */
+export const ATOMIC_ACTION_IDENTIFIER_owners_name_side_receiver: 1 = _enum_for_ATOMIC_ACTION_IDENTIFIER_owners_name_side.receiver; /* LONG_NAMED_ENUMERATED_VALUE */
 
 
 /**
@@ -76,7 +76,7 @@ export const ATOMIC_ACTION_IDENTIFIER_owners_name_side_receiver: ATOMIC_ACTION_I
  * @constant
  * @type {number}
  */
-export const receiver: ATOMIC_ACTION_IDENTIFIER_owners_name_side = ATOMIC_ACTION_IDENTIFIER_owners_name_side_receiver; /* SHORT_NAMED_ENUMERATED_VALUE */
+export const receiver: 1 = ATOMIC_ACTION_IDENTIFIER_owners_name_side_receiver; /* SHORT_NAMED_ENUMERATED_VALUE */
 
 
 let _cached_decoder_for_ATOMIC_ACTION_IDENTIFIER_owners_name_side: $.ASN1Decoder<ATOMIC_ACTION_IDENTIFIER_owners_name_side> | null = null;

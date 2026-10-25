@@ -1,12 +1,12 @@
 /* eslint-disable */
 import {
-    ASN1Element as _Element,
+    type ASN1Element as _Element,
     ASN1TagClass as _TagClass,
-    OPTIONAL,
+    type OPTIONAL,
 } from "@wildboar/asn1";
 import * as $ from "@wildboar/asn1/functional";
 import {
-    Pointers,
+    type Pointers,
     _decode_Pointers,
     _encode_Pointers,
 } from "../CMSProfileAttributes/Pointers.ta.mjs";
@@ -27,7 +27,7 @@ import {
  *
  * ```asn1
  * HashPointer ::= SEQUENCE {
- * hash        DigestedData     OPTIONAL,
+ * hash        DigestedData     type OPTIONAL,
  * pointers    Pointers    OPTIONAL
  * } ((WITH COMPONENTS {...,hash PRESENT}) |
  *    (WITH COMPONENTS {...,pointers PRESENT}))
@@ -35,20 +35,26 @@ import {
  *
  */
 export class HashPointer {
+    /**
+     * @summary `hash`.
+     * @public
+     * @readonly
+     */
+    public readonly hash?: OPTIONAL<DigestedData>;
+    /**
+     * @summary `pointers`.
+     * @public
+     * @readonly
+     */
+    public readonly pointers?: OPTIONAL<Pointers>;
+
     constructor(
-        /**
-         * @summary `hash`.
-         * @public
-         * @readonly
-         */
-        readonly hash?: OPTIONAL<DigestedData>,
-        /**
-         * @summary `pointers`.
-         * @public
-         * @readonly
-         */
-        readonly pointers?: OPTIONAL<Pointers>
-    ) {}
+        hash?: OPTIONAL<DigestedData>,
+        pointers?: OPTIONAL<Pointers>
+    ) {
+        this.hash = hash;
+        this.pointers = pointers;
+    }
 
     /**
      * @summary Restructures an object into a HashPointer

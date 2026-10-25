@@ -1,6 +1,6 @@
 /* eslint-disable */
 import {
-    ASN1Element as _Element,
+    type ASN1Element as _Element,
     ASN1TagClass as _TagClass,
     ASN1Construction as _Construction,
     ASN1UniversalType as _UniversalType,
@@ -16,7 +16,7 @@ import {
     _encode_AlgorithmIdentifier,
 } from "../PKI-Stub/AlgorithmIdentifier.ta.mjs";
 import {
-    PublicKey,
+    type PublicKey,
     _decode_PublicKey,
     _encode_PublicKey,
 } from "../PKI-Stub/PublicKey.ta.mjs";

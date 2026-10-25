@@ -1,15 +1,15 @@
 /* eslint-disable */
 import {
     ASN1ConstructionError as _ConstructionError,
-    ASN1Element as _Element,
+    type ASN1Element as _Element,
     ASN1TagClass as _TagClass
 } from "@wildboar/asn1";
 import * as $ from "@wildboar/asn1/functional";
-import { HorizontalSpeed, _decode_HorizontalSpeed, _encode_HorizontalSpeed } from "../TS33128Payloads/HorizontalSpeed.ta.mjs";
+import { type HorizontalSpeed, _decode_HorizontalSpeed, _encode_HorizontalSpeed } from "../TS33128Payloads/HorizontalSpeed.ta.mjs";
 // export { HorizontalSpeed, _decode_HorizontalSpeed, _encode_HorizontalSpeed } from "../TS33128Payloads/HorizontalSpeed.ta.mjs";
-import { Angle, _decode_Angle, _encode_Angle } from "../TS33128Payloads/Angle.ta.mjs";
+import { type Angle, _decode_Angle, _encode_Angle } from "../TS33128Payloads/Angle.ta.mjs";
 // export { Angle, _decode_Angle, _encode_Angle } from "../TS33128Payloads/Angle.ta.mjs";
-import { VerticalSpeed, _decode_VerticalSpeed, _encode_VerticalSpeed } from "../TS33128Payloads/VerticalSpeed.ta.mjs";
+import { type VerticalSpeed, _decode_VerticalSpeed, _encode_VerticalSpeed } from "../TS33128Payloads/VerticalSpeed.ta.mjs";
 // export { VerticalSpeed, _decode_VerticalSpeed, _encode_VerticalSpeed } from "../TS33128Payloads/VerticalSpeed.ta.mjs";
 import { VerticalDirection, _decode_VerticalDirection, _encode_VerticalDirection, _enum_for_VerticalDirection } from "../TS33128Payloads/VerticalDirection.ta.mjs";
 // export { VerticalDirection, _enum_for_VerticalDirection, VerticalDirection_upward /* IMPORTED_LONG_ENUMERATION_ITEM */, upward /* IMPORTED_SHORT_ENUMERATION_ITEM */, VerticalDirection_downward /* IMPORTED_LONG_ENUMERATION_ITEM */, downward /* IMPORTED_SHORT_ENUMERATION_ITEM */, _decode_VerticalDirection, _encode_VerticalDirection } from "../TS33128Payloads/VerticalDirection.ta.mjs";
@@ -137,7 +137,7 @@ class HorizontalWithVerticalVelocity {
          * @static
          */
 
-    public static _enum_for_vDirection = _enum_for_VerticalDirection;
+    public static _enum_for_vDirection: typeof _enum_for_VerticalDirection = _enum_for_VerticalDirection;
 }
 
 /**

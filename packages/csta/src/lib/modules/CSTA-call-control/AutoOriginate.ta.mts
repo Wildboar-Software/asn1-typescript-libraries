@@ -1,7 +1,7 @@
 /* eslint-disable */
 
 import * as $ from "@wildboar/asn1/functional";
-import { ENUMERATED, ASN1Element as _Element } from "@wildboar/asn1";
+import { type ENUMERATED, ASN1Element as _Element } from "@wildboar/asn1";
 
 
 
@@ -75,7 +75,7 @@ type AutoOriginate = _enum_for_AutoOriginate;
  * @enum {number}
  */
 export
-const AutoOriginate = _enum_for_AutoOriginate;
+const AutoOriginate: typeof _enum_for_AutoOriginate = _enum_for_AutoOriginate;
 
 /**
  * @summary AutoOriginate_prompt
@@ -87,7 +87,7 @@ const AutoOriginate = _enum_for_AutoOriginate;
  * @type {number}
  */
 export
-const AutoOriginate_prompt: AutoOriginate = AutoOriginate.prompt; /* LONG_NAMED_ENUMERATED_VALUE */
+const AutoOriginate_prompt: _enum_for_AutoOriginate.prompt = AutoOriginate.prompt; /* LONG_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary prompt
@@ -95,7 +95,7 @@ const AutoOriginate_prompt: AutoOriginate = AutoOriginate.prompt; /* LONG_NAMED_
  * @type {number}
  */
 export
-const prompt: AutoOriginate = AutoOriginate.prompt; /* SHORT_NAMED_ENUMERATED_VALUE */
+const prompt: _enum_for_AutoOriginate.prompt = AutoOriginate.prompt; /* SHORT_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary AutoOriginate_doNotPrompt
@@ -107,7 +107,7 @@ const prompt: AutoOriginate = AutoOriginate.prompt; /* SHORT_NAMED_ENUMERATED_VA
  * @type {number}
  */
 export
-const AutoOriginate_doNotPrompt: AutoOriginate = AutoOriginate.doNotPrompt; /* LONG_NAMED_ENUMERATED_VALUE */
+const AutoOriginate_doNotPrompt: _enum_for_AutoOriginate.doNotPrompt = AutoOriginate.doNotPrompt; /* LONG_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary doNotPrompt
@@ -115,7 +115,7 @@ const AutoOriginate_doNotPrompt: AutoOriginate = AutoOriginate.doNotPrompt; /* L
  * @type {number}
  */
 export
-const doNotPrompt: AutoOriginate = AutoOriginate.doNotPrompt; /* SHORT_NAMED_ENUMERATED_VALUE */
+const doNotPrompt: _enum_for_AutoOriginate.doNotPrompt = AutoOriginate.doNotPrompt; /* SHORT_NAMED_ENUMERATED_VALUE */
 
 let _cached_decoder_for_AutoOriginate: $.ASN1Decoder<AutoOriginate> | null = null;
 

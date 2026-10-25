@@ -31,4 +31,4 @@ type ProtectedItem = {
         operational?: boolean;
     };
 
-export default ProtectedItem;
+export type { ProtectedItem as default };

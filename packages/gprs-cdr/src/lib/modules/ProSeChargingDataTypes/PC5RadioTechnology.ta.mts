@@ -98,7 +98,7 @@ type PC5RadioTechnology = _enum_for_PC5RadioTechnology;
  * @enum {number}
  */
 export
-const PC5RadioTechnology = _enum_for_PC5RadioTechnology;
+const PC5RadioTechnology: typeof _enum_for_PC5RadioTechnology = _enum_for_PC5RadioTechnology;
 
 /**
  * @summary PC5RadioTechnology_eUTRA
@@ -113,7 +113,7 @@ const PC5RadioTechnology = _enum_for_PC5RadioTechnology;
  * @type {number}
  */
 export
-const PC5RadioTechnology_eUTRA: PC5RadioTechnology = PC5RadioTechnology.eUTRA; /* LONG_NAMED_ENUMERATED_VALUE */
+const PC5RadioTechnology_eUTRA: _enum_for_PC5RadioTechnology.eUTRA = PC5RadioTechnology.eUTRA; /* LONG_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary eUTRA
@@ -125,7 +125,7 @@ const PC5RadioTechnology_eUTRA: PC5RadioTechnology = PC5RadioTechnology.eUTRA; /
  * @type {number}
  */
 export
-const eUTRA: PC5RadioTechnology = PC5RadioTechnology.eUTRA; /* SHORT_NAMED_ENUMERATED_VALUE */
+const eUTRA: _enum_for_PC5RadioTechnology.eUTRA = PC5RadioTechnology.eUTRA; /* SHORT_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary PC5RadioTechnology_wLAN
@@ -140,7 +140,7 @@ const eUTRA: PC5RadioTechnology = PC5RadioTechnology.eUTRA; /* SHORT_NAMED_ENUME
  * @type {number}
  */
 export
-const PC5RadioTechnology_wLAN: PC5RadioTechnology = PC5RadioTechnology.wLAN; /* LONG_NAMED_ENUMERATED_VALUE */
+const PC5RadioTechnology_wLAN: _enum_for_PC5RadioTechnology.wLAN = PC5RadioTechnology.wLAN; /* LONG_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary wLAN
@@ -152,7 +152,7 @@ const PC5RadioTechnology_wLAN: PC5RadioTechnology = PC5RadioTechnology.wLAN; /* 
  * @type {number}
  */
 export
-const wLAN: PC5RadioTechnology = PC5RadioTechnology.wLAN; /* SHORT_NAMED_ENUMERATED_VALUE */
+const wLAN: _enum_for_PC5RadioTechnology.wLAN = PC5RadioTechnology.wLAN; /* SHORT_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary PC5RadioTechnology_bothEUTRAAndWLAN
@@ -166,7 +166,7 @@ const wLAN: PC5RadioTechnology = PC5RadioTechnology.wLAN; /* SHORT_NAMED_ENUMERA
  * @type {number}
  */
 export
-const PC5RadioTechnology_bothEUTRAAndWLAN: PC5RadioTechnology = PC5RadioTechnology.bothEUTRAAndWLAN; /* LONG_NAMED_ENUMERATED_VALUE */
+const PC5RadioTechnology_bothEUTRAAndWLAN: _enum_for_PC5RadioTechnology.bothEUTRAAndWLAN = PC5RadioTechnology.bothEUTRAAndWLAN; /* LONG_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary bothEUTRAAndWLAN
@@ -178,7 +178,7 @@ const PC5RadioTechnology_bothEUTRAAndWLAN: PC5RadioTechnology = PC5RadioTechnolo
  * @type {number}
  */
 export
-const bothEUTRAAndWLAN: PC5RadioTechnology = PC5RadioTechnology.bothEUTRAAndWLAN; /* SHORT_NAMED_ENUMERATED_VALUE */
+const bothEUTRAAndWLAN: _enum_for_PC5RadioTechnology.bothEUTRAAndWLAN = PC5RadioTechnology.bothEUTRAAndWLAN; /* SHORT_NAMED_ENUMERATED_VALUE */
 
 export
 const _decode_PC5RadioTechnology: $.ASN1Decoder<PC5RadioTechnology> = $._decodeEnumerated;

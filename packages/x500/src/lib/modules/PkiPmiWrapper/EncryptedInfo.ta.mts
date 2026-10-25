@@ -1,7 +1,7 @@
 /* eslint-disable */
 import {
     ASN1ConstructionError as _ConstructionError,
-    ASN1Element as _Element,
+    type ASN1Element as _Element,
     ASN1TagClass as _TagClass,
 } from "@wildboar/asn1";
 import * as $ from "@wildboar/asn1/functional";
@@ -33,34 +33,42 @@ import {
  *
  */
 export class EncryptedInfo {
+    /**
+     * @summary `keyAgreement`.
+     * @description
+     *
+     * Sender DH info plus KEK algorithm (KDF/wrap of the content key).
+     *
+     * @public
+     * @readonly
+     */
+    public readonly keyAgreement: KeyAgreement;
+    /**
+     * @summary `encryptedPduInfo`.
+     * @description
+     *
+     * Optional wrapped CEK plus required encrypted PDU.
+     *
+     * @public
+     * @readonly
+     */
+    public readonly encryptedPduInfo: EncryptedPduInfo;
+    /**
+     * @summary Extensions that are not recognized.
+     * @public
+     * @readonly
+     */
+    public readonly _unrecognizedExtensionsList: _Element[];
+
     constructor(
-        /**
-         * @summary `keyAgreement`.
-         * @description
-         *
-         * Sender DH info plus KEK algorithm (KDF/wrap of the content key).
-         *
-         * @public
-         * @readonly
-         */
-        readonly keyAgreement: KeyAgreement,
-        /**
-         * @summary `encryptedPduInfo`.
-         * @description
-         *
-         * Optional wrapped CEK plus required encrypted PDU.
-         *
-         * @public
-         * @readonly
-         */
-        readonly encryptedPduInfo: EncryptedPduInfo,
-        /**
-         * @summary Extensions that are not recognized.
-         * @public
-         * @readonly
-         */
-        readonly _unrecognizedExtensionsList: _Element[] = []
-    ) {}
+        keyAgreement: KeyAgreement,
+        encryptedPduInfo: EncryptedPduInfo,
+        _unrecognizedExtensionsList: _Element[] = []
+    ) {
+        this.keyAgreement = keyAgreement;
+        this.encryptedPduInfo = encryptedPduInfo;
+        this._unrecognizedExtensionsList = _unrecognizedExtensionsList;
+    }
 
     /**
      * @summary Restructures an object into a EncryptedInfo

@@ -2,13 +2,13 @@
 
 import * as $ from "@wildboar/asn1/functional";
 import {
-    OPTIONAL,
-    SEQUENCE,
-    SET,
-    ASN1Element as _Element,
+    type OPTIONAL,
+    type SEQUENCE,
+    type SET,
+    type ASN1Element as _Element,
     ASN1TagClass as _TagClass
 } from "@wildboar/asn1";
-import { ConnectionID, _decode_ConnectionID, _encode_ConnectionID } from "../CSTA-call-connection-identifiers/ConnectionID.ta.mjs";
+import { type ConnectionID, _decode_ConnectionID, _encode_ConnectionID } from "../CSTA-call-connection-identifiers/ConnectionID.ta.mjs";
 
 import { CallLinkageData, _decode_CallLinkageData, _encode_CallLinkageData } from "../CSTA-call-control/CallLinkageData.ta.mjs";
 
@@ -31,8 +31,8 @@ import { CSTACommonArguments, _decode_CSTACommonArguments, _encode_CSTACommonArg
  * 
  * ```asn1
  * ParkCallResult ::= SEQUENCE
- * {     parkedTo             ConnectionID                 OPTIONAL,
- *     callLinkageData         [1] IMPLICIT CallLinkageData         OPTIONAL,
+ * {     parkedTo             ConnectionID                 type OPTIONAL,
+ *     callLinkageData         [1] IMPLICIT CallLinkageData         type OPTIONAL,
  *     extensions             CSTACommonArguments             OPTIONAL }
  * ```
  * 
@@ -40,39 +40,47 @@ import { CSTACommonArguments, _decode_CSTACommonArguments, _encode_CSTACommonArg
  */
 export
 class ParkCallResult {
+    /**
+     * @summary `parkedTo`.
+     * @description
+     *
+     * Optional. Connection at the park-to device (Queued).
+     *
+     * @public
+     * @readonly
+     */
+    public readonly parkedTo?: OPTIONAL<ConnectionID>;
+    /**
+     * @summary `callLinkageData`.
+     * @description
+     *
+     * Optional call-linkage identifiers (§12.2.5).
+     *
+     * @public
+     * @readonly
+     */
+    public readonly callLinkageData?: OPTIONAL<CallLinkageData>;
+    /**
+     * @summary `extensions`.
+     * @description
+     *
+     * Optional `CSTACommonArguments` carrying the security and
+     * privateData parameters from the ECMA-269 service table.
+     *
+     * @public
+     * @readonly
+     */
+    public readonly extensions?: OPTIONAL<CSTACommonArguments>;
+
     constructor (
-        /**
-         * @summary `parkedTo`.
-         * @description
-         *
-         * Optional. Connection at the park-to device (Queued).
-         *
-         * @public
-         * @readonly
-         */
-        readonly parkedTo?: OPTIONAL<ConnectionID>,
-        /**
-         * @summary `callLinkageData`.
-         * @description
-         *
-         * Optional call-linkage identifiers (§12.2.5).
-         *
-         * @public
-         * @readonly
-         */
-        readonly callLinkageData?: OPTIONAL<CallLinkageData>,
-        /**
-         * @summary `extensions`.
-         * @description
-         *
-         * Optional `CSTACommonArguments` carrying the security and
-         * privateData parameters from the ECMA-269 service table.
-         *
-         * @public
-         * @readonly
-         */
-        readonly extensions?: OPTIONAL<CSTACommonArguments>
-    ) {}
+        parkedTo?: OPTIONAL<ConnectionID>,
+        callLinkageData?: OPTIONAL<CallLinkageData>,
+        extensions?: OPTIONAL<CSTACommonArguments>
+    ) {
+        this.parkedTo = parkedTo;
+        this.callLinkageData = callLinkageData;
+        this.extensions = extensions;
+    }
 
     /**
      * @summary Restructures an object into a ParkCallResult

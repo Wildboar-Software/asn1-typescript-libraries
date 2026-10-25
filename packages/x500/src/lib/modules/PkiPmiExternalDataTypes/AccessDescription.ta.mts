@@ -1,13 +1,13 @@
 /* eslint-disable */
 import {
     ASN1ConstructionError as _ConstructionError,
-    ASN1Element as _Element,
+    type ASN1Element as _Element,
     ASN1TagClass as _TagClass,
-    OBJECT_IDENTIFIER,
+    type OBJECT_IDENTIFIER,
 } from "@wildboar/asn1";
 import * as $ from "@wildboar/asn1/functional";
 import {
-    GeneralName,
+    type GeneralName,
     _decode_GeneralName,
     _encode_GeneralName,
 } from "../CertificateExtensions/GeneralName.ta.mjs";
@@ -25,20 +25,26 @@ import {
  *
  */
 export class AccessDescription {
+    /**
+     * @summary `accessMethod`.
+     * @public
+     * @readonly
+     */
+    public readonly accessMethod: OBJECT_IDENTIFIER;
+    /**
+     * @summary `accessLocation`.
+     * @public
+     * @readonly
+     */
+    public readonly accessLocation: GeneralName;
+
     constructor(
-        /**
-         * @summary `accessMethod`.
-         * @public
-         * @readonly
-         */
-        readonly accessMethod: OBJECT_IDENTIFIER,
-        /**
-         * @summary `accessLocation`.
-         * @public
-         * @readonly
-         */
-        readonly accessLocation: GeneralName
-    ) {}
+        accessMethod: OBJECT_IDENTIFIER,
+        accessLocation: GeneralName
+    ) {
+        this.accessMethod = accessMethod;
+        this.accessLocation = accessLocation;
+    }
 
     /**
      * @summary Restructures an object into a AccessDescription

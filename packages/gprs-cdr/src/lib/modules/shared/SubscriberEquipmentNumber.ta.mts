@@ -1,7 +1,7 @@
 /* eslint-disable */
 import {
-    OCTET_STRING,
-    ASN1Element as _Element,
+    type OCTET_STRING,
+    type ASN1Element as _Element,
     ASN1TagClass as _TagClass
 } from "@wildboar/asn1";
 import * as $ from "@wildboar/asn1/functional";
@@ -71,7 +71,7 @@ class SubscriberEquipmentNumber {
          * @static
          */
 
-    public static _enum_for_subscriberEquipmentNumberType = _enum_for_SubscriberEquipmentNumber_subscriberEquipmentNumberType;
+    public static _enum_for_subscriberEquipmentNumberType: typeof _enum_for_SubscriberEquipmentNumber_subscriberEquipmentNumberType = _enum_for_SubscriberEquipmentNumber_subscriberEquipmentNumberType;
 }
 
 /**

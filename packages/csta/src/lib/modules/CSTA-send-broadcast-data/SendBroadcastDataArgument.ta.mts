@@ -2,11 +2,11 @@
 
 import * as $ from "@wildboar/asn1/functional";
 import {
-    OPTIONAL,
-    OCTET_STRING,
-    SEQUENCE,
-    SET,
-    ASN1Element as _Element,
+    type OPTIONAL,
+    type OCTET_STRING,
+    type SEQUENCE,
+    type SET,
+    type ASN1Element as _Element,
     ASN1TagClass as _TagClass
 } from "@wildboar/asn1";
 import {
@@ -37,8 +37,8 @@ import { CSTACommonArguments, _decode_CSTACommonArguments, _encode_CSTACommonArg
  * ```asn1
  * SendBroadcastDataArgument ::= SEQUENCE
  * {    ioData                OCTET STRING,
- *     dataPathType            DataPathType                OPTIONAL,
- *     displayAttributes        DisplayAttributeList            OPTIONAL,
+ *     dataPathType            DataPathType                type OPTIONAL,
+ *     displayAttributes        DisplayAttributeList            type OPTIONAL,
  *     extensions             CSTACommonArguments            OPTIONAL }
  * ```
  * 
@@ -46,51 +46,61 @@ import { CSTACommonArguments, _decode_CSTACommonArguments, _encode_CSTACommonArg
  */
 export
 class SendBroadcastDataArgument {
+    /**
+     * @summary `ioData`.
+     * @description
+     *
+     * Data to send (ECMA-269 §24.2.5.1).
+     *
+     * @public
+     * @readonly
+     */
+    public readonly ioData: OCTET_STRING;
+    /**
+     * @summary `dataPathType`.
+     * @description
+     *
+     * `text` (digitally encoded text) or `voice` (digitally encoded voice)
+     * (ECMA-269 §24.2.3.1).
+     *
+     * @public
+     * @readonly
+     */
+    public readonly dataPathType?: OPTIONAL<DataPathType>;
+    /**
+     * @summary `displayAttributes`.
+     * @description
+     *
+     * Only when sending to device displays. Broadcast omits per-device
+     * displayID (ECMA-269 §24.2.5.1).
+     *
+     * @public
+     * @readonly
+     */
+    public readonly displayAttributes?: OPTIONAL<DisplayAttributeList>;
+    /**
+     * @summary `extensions`.
+     * @description
+     *
+     * CSTACommonArguments carrying the service-table security and
+     * privateData parameters.
+     *
+     * @public
+     * @readonly
+     */
+    public readonly extensions?: OPTIONAL<CSTACommonArguments>;
+
     constructor (
-        /**
-         * @summary `ioData`.
-         * @description
-         *
-         * Data to send (ECMA-269 §24.2.5.1).
-         *
-         * @public
-         * @readonly
-         */
-        readonly ioData: OCTET_STRING,
-        /**
-         * @summary `dataPathType`.
-         * @description
-         *
-         * `text` (digitally encoded text) or `voice` (digitally encoded voice)
-         * (ECMA-269 §24.2.3.1).
-         *
-         * @public
-         * @readonly
-         */
-        readonly dataPathType?: OPTIONAL<DataPathType>,
-        /**
-         * @summary `displayAttributes`.
-         * @description
-         *
-         * Only when sending to device displays. Broadcast omits per-device
-         * displayID (ECMA-269 §24.2.5.1).
-         *
-         * @public
-         * @readonly
-         */
-        readonly displayAttributes?: OPTIONAL<DisplayAttributeList>,
-        /**
-         * @summary `extensions`.
-         * @description
-         *
-         * CSTACommonArguments carrying the service-table security and
-         * privateData parameters.
-         *
-         * @public
-         * @readonly
-         */
-        readonly extensions?: OPTIONAL<CSTACommonArguments>
-    ) {}
+        ioData: OCTET_STRING,
+        dataPathType?: OPTIONAL<DataPathType>,
+        displayAttributes?: OPTIONAL<DisplayAttributeList>,
+        extensions?: OPTIONAL<CSTACommonArguments>
+    ) {
+        this.ioData = ioData;
+        this.dataPathType = dataPathType;
+        this.displayAttributes = displayAttributes;
+        this.extensions = extensions;
+    }
 
     /**
      * @summary Restructures an object into a SendBroadcastDataArgument
@@ -114,7 +124,7 @@ class SendBroadcastDataArgument {
          * @static
          */
 
-    public static _enum_for_dataPathType = _enum_for_DataPathType;
+    public static _enum_for_dataPathType: typeof _enum_for_DataPathType = _enum_for_DataPathType;
 }
 
 /**

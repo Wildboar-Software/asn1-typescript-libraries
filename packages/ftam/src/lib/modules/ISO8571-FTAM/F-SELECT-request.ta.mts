@@ -1,6 +1,6 @@
 /* eslint-disable */
 import {
-  OPTIONAL,
+  type OPTIONAL,
   ASN1Element as _Element,
   ASN1TagClass as _TagClass,
   ASN1Construction as _Construction,
@@ -17,7 +17,7 @@ import {
   _encode_Select_Attributes,
 } from '../ISO8571-FTAM/Select-Attributes.ta.mjs';
 import {
-  Access_Request,
+  type Access_Request,
   _decode_Access_Request,
   _encode_Access_Request,
 } from '../ISO8571-FTAM/Access-Request.ta.mjs';
@@ -27,7 +27,7 @@ import {
   _encode_Access_Passwords,
 } from '../ISO8571-FTAM/Access-Passwords.ta.mjs';
 import {
-  Path_Access_Passwords,
+  type Path_Access_Passwords,
   _decode_Path_Access_Passwords,
   _encode_Path_Access_Passwords,
 } from '../ISO8571-FTAM/Path-Access-Passwords.ta.mjs';
@@ -37,12 +37,12 @@ import {
   _encode_Concurrency_Control,
 } from '../ISO8571-FTAM/Concurrency-Control.ta.mjs';
 import {
-  Shared_ASE_Information,
+  type Shared_ASE_Information,
   _decode_Shared_ASE_Information,
   _encode_Shared_ASE_Information,
 } from '../ISO8571-FTAM/Shared-ASE-Information.ta.mjs';
 import {
-  Account,
+  type Account,
   _decode_Account,
   _encode_Account,
 } from '../ISO8571-FTAM/Account.ta.mjs';
@@ -87,7 +87,7 @@ export class F_SELECT_request {
    * @public
    * @readonly
    */
-  readonly attributes: Select_Attributes;
+  public readonly attributes: Select_Attributes;
   /**
    * @summary `requested_access`.
    * @description
@@ -98,7 +98,7 @@ export class F_SELECT_request {
    * @public
    * @readonly
    */
-  readonly requested_access: Access_Request;
+  public readonly requested_access: Access_Request;
   /**
    * @summary `access_passwords`.
    * @description
@@ -110,7 +110,7 @@ export class F_SELECT_request {
    * @public
    * @readonly
    */
-  readonly access_passwords?: OPTIONAL<Access_Passwords>;
+  public readonly access_passwords?: OPTIONAL<Access_Passwords>;
   /**
    * @summary `path_access_passwords`.
    * @description
@@ -122,7 +122,7 @@ export class F_SELECT_request {
    * @public
    * @readonly
    */
-  readonly path_access_passwords?: OPTIONAL<Path_Access_Passwords>;
+  public readonly path_access_passwords?: OPTIONAL<Path_Access_Passwords>;
   /**
    * @summary `concurrency_control`.
    * @description
@@ -133,7 +133,7 @@ export class F_SELECT_request {
    * @public
    * @readonly
    */
-  readonly concurrency_control?: OPTIONAL<Concurrency_Control>;
+  public readonly concurrency_control?: OPTIONAL<Concurrency_Control>;
   /**
    * @summary `shared_ASE_information`.
    * @description
@@ -143,7 +143,7 @@ export class F_SELECT_request {
    * @public
    * @readonly
    */
-  readonly shared_ASE_information?: OPTIONAL<Shared_ASE_Information>;
+  public readonly shared_ASE_information?: OPTIONAL<Shared_ASE_Information>;
   /**
    * @summary `account`.
    * @description
@@ -154,7 +154,7 @@ export class F_SELECT_request {
    * @public
    * @readonly
    */
-  readonly account?: OPTIONAL<Account>;
+  public readonly account?: OPTIONAL<Account>;
 
   constructor(
     attributes: Select_Attributes,

@@ -1,10 +1,10 @@
 /* eslint-disable */
 import {
-    OPTIONAL,
-    OBJECT_IDENTIFIER,
-    EXTERNAL,
+    type OPTIONAL,
+    type OBJECT_IDENTIFIER,
+    type EXTERNAL,
     TRUE_BIT,
-    ASN1Element as _Element,
+    type ASN1Element as _Element,
     ASN1TagClass as _TagClass,
     ASN1Construction as _Construction,
     ASN1UniversalType as _UniversalType,
@@ -12,11 +12,11 @@ import {
     External as _External,
     EmbeddedPDV as _PDV,
     ASN1ConstructionError as _ConstructionError,
-    BIT_STRING,
+    type BIT_STRING,
 } from '@wildboar/asn1';
 import * as $ from '@wildboar/asn1/functional';
 import {
-    AUDT_apdu_protocol_version,
+    type AUDT_apdu_protocol_version,
     AUDT_apdu_protocol_version_version1 /* IMPORTED_LONG_NAMED_BIT */,
     _decode_AUDT_apdu_protocol_version,
     _encode_AUDT_apdu_protocol_version,
@@ -47,42 +47,50 @@ import {
  *
  */
 export class AUDT_apdu {
+    /**
+     * @summary `protocol_version`.
+     * @description
+     *
+     * BIT STRING `{version1(0)}`. If this element is
+     * omitted, the default is version 1 (Table 61 note b).
+     * BIT STRING must be primitive (§4.1.1).
+     *
+     * @public
+     * @readonly
+     */
+    public readonly protocol_version: OPTIONAL<AUDT_apdu_protocol_version>;
+    /**
+     * @summary `application_context_name`.
+     * @description
+     *
+     * Application context for this unstructured dialogue,
+     * as an OBJECT IDENTIFIER. Mandatory (Table 61).
+     *
+     * @public
+     * @readonly
+     */
+    public readonly application_context_name: OBJECT_IDENTIFIER;
+    /**
+     * @summary `user_information`.
+     * @description
+     *
+     * Optional sequence of EXTERNALs identified by a
+     * user-defined abstract syntax name (§4.2.3).
+     *
+     * @public
+     * @readonly
+     */
+    public readonly user_information?: OPTIONAL<EXTERNAL[]>;
+
     constructor(
-        /**
-         * @summary `protocol_version`.
-         * @description
-         *
-         * BIT STRING `{version1(0)}`. If this element is
-         * omitted, the default is version 1 (Table 61 note b).
-         * BIT STRING must be primitive (§4.1.1).
-         *
-         * @public
-         * @readonly
-         */
-        readonly protocol_version: OPTIONAL<AUDT_apdu_protocol_version>,
-        /**
-         * @summary `application_context_name`.
-         * @description
-         *
-         * Application context for this unstructured dialogue,
-         * as an OBJECT IDENTIFIER. Mandatory (Table 61).
-         *
-         * @public
-         * @readonly
-         */
-        readonly application_context_name: OBJECT_IDENTIFIER,
-        /**
-         * @summary `user_information`.
-         * @description
-         *
-         * Optional sequence of EXTERNALs identified by a
-         * user-defined abstract syntax name (§4.2.3).
-         *
-         * @public
-         * @readonly
-         */
-        readonly user_information?: OPTIONAL<EXTERNAL[]>
-    ) {}
+        protocol_version: OPTIONAL<AUDT_apdu_protocol_version>,
+        application_context_name: OBJECT_IDENTIFIER,
+        user_information?: OPTIONAL<EXTERNAL[]>
+    ) {
+        this.protocol_version = protocol_version;
+        this.application_context_name = application_context_name;
+        this.user_information = user_information;
+    }
 
     /**
      * @summary Restructures an object into a AUDT_apdu

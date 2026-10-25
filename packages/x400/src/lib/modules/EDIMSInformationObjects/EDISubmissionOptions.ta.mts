@@ -1,6 +1,6 @@
 /* eslint-disable */
 import {
-    ASN1Element as _Element,
+    type ASN1Element as _Element,
     ASN1TagClass as _TagClass,
     ASN1Construction as _Construction,
     ASN1UniversalType as _UniversalType,
@@ -11,7 +11,7 @@ import {
 } from '@wildboar/asn1';
 import * as $ from '@wildboar/asn1/functional';
 import {
-    BodyPartSpecifiers,
+    type BodyPartSpecifiers,
     _decode_BodyPartSpecifiers,
     _encode_BodyPartSpecifiers,
 } from '../EDIMSInformationObjects/BodyPartSpecifiers.ta.mjs';
@@ -33,14 +33,18 @@ import {
  *
  */
 export class EDISubmissionOptions {
+    /**
+     * @summary `assembly_instructions`.
+     * @public
+     * @readonly
+     */
+    public readonly assembly_instructions: BodyPartSpecifiers;
+
     constructor(
-        /**
-         * @summary `assembly_instructions`.
-         * @public
-         * @readonly
-         */
-        readonly assembly_instructions: BodyPartSpecifiers
-    ) {}
+        assembly_instructions: BodyPartSpecifiers
+    ) {
+        this.assembly_instructions = assembly_instructions;
+    }
 
     /**
      * @summary Restructures an object into a EDISubmissionOptions

@@ -1,7 +1,7 @@
 /* eslint-disable */
 import {
-  OPTIONAL,
-  INTEGER,
+  type OPTIONAL,
+  type INTEGER,
   ASN1Element as _Element,
   ASN1TagClass as _TagClass,
   ASN1Construction as _Construction,
@@ -18,7 +18,7 @@ import {
   _encode_PA_DATA,
 } from '../KerberosV5Spec2/PA-DATA.ta.mjs';
 import {
-  Realm,
+  type Realm,
   _decode_Realm,
   _encode_Realm,
 } from '../KerberosV5Spec2/Realm.ta.mjs';
@@ -73,7 +73,7 @@ export class KDC_REP {
    * @public
    * @readonly
    */
-  readonly pvno: INTEGER;
+  public readonly pvno: INTEGER;
   /**
    * @summary `msg_type`.
    * @description
@@ -83,7 +83,7 @@ export class KDC_REP {
    * @public
    * @readonly
    */
-  readonly msg_type: INTEGER;
+  public readonly msg_type: INTEGER;
   /**
    * @summary `padata`.
    * @description
@@ -94,7 +94,7 @@ export class KDC_REP {
    * @public
    * @readonly
    */
-  readonly padata: OPTIONAL<PA_DATA[]>;
+  public readonly padata: OPTIONAL<PA_DATA[]>;
   /**
    * @summary `crealm`.
    * @description
@@ -104,7 +104,7 @@ export class KDC_REP {
    * @public
    * @readonly
    */
-  readonly crealm: Realm;
+  public readonly crealm: Realm;
   /**
    * @summary `cname`.
    * @description
@@ -114,7 +114,7 @@ export class KDC_REP {
    * @public
    * @readonly
    */
-  readonly cname: PrincipalName;
+  public readonly cname: PrincipalName;
   /**
    * @summary `ticket`.
    * @description
@@ -124,7 +124,7 @@ export class KDC_REP {
    * @public
    * @readonly
    */
-  readonly ticket: Ticket;
+  public readonly ticket: Ticket;
   /**
    * @summary `enc_part`.
    * @description
@@ -136,7 +136,7 @@ export class KDC_REP {
    * @public
    * @readonly
    */
-  readonly enc_part: EncryptedData;
+  public readonly enc_part: EncryptedData;
 
   constructor(
     pvno: INTEGER,

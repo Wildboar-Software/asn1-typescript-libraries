@@ -1,7 +1,7 @@
 /* eslint-disable */
 import { type ATTRIBUTE } from "../InformationFramework/ATTRIBUTE.oca.mjs";
 import { userApplications /* IMPORTED_SHORT_ENUMERATION_ITEM */ } from "@wildboar/x500/InformationFramework";
-import { OriginatorPlad, _decode_OriginatorPlad, _encode_OriginatorPlad } from "../MMSHeadingExtensions/OriginatorPlad.ta.mjs";
+import { type OriginatorPlad, _decode_OriginatorPlad, _encode_OriginatorPlad } from "../MMSHeadingExtensions/OriginatorPlad.ta.mjs";
 import { id_nato_mmhs_hat_originator_plad } from "../MMSObjectIdentifiers/id-nato-mmhs-hat-originator-plad.va.mjs";
 
 

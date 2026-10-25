@@ -1,7 +1,7 @@
 /* eslint-disable */
 import {
-  OPTIONAL,
-  OCTET_STRING,
+  type OPTIONAL,
+  type OCTET_STRING,
   ASN1Element as _Element,
   ASN1TagClass as _TagClass,
   ASN1Construction as _Construction,
@@ -13,7 +13,7 @@ import {
 } from '@wildboar/asn1';
 import * as $ from '@wildboar/asn1/functional';
 import {
-  Identifier,
+  type Identifier,
   _decode_Identifier,
   _encode_Identifier,
 } from '../ASN1SOAP/Identifier.ta.mjs';
@@ -45,7 +45,7 @@ export class Content_encoded_value {
    * @public
    * @readonly
    */
-  readonly schema_identifier: OPTIONAL<OCTET_STRING>;
+  public readonly schema_identifier: OPTIONAL<OCTET_STRING>;
   /**
    * @summary `id`.
    * @description Identifies the ASN.1 type of `encoding`. If the
@@ -54,7 +54,7 @@ export class Content_encoded_value {
    * @public
    * @readonly
    */
-  readonly id: Identifier;
+  public readonly id: Identifier;
   /**
    * @summary `encoding`.
    * @description Basic Aligned PER of the identified ASN.1
@@ -62,7 +62,7 @@ export class Content_encoded_value {
    * @public
    * @readonly
    */
-  readonly encoding: OCTET_STRING;
+  public readonly encoding: OCTET_STRING;
 
   constructor(
     schema_identifier: OPTIONAL<OCTET_STRING>,

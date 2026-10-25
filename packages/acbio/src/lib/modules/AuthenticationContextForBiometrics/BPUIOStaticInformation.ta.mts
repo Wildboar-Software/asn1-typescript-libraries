@@ -1,7 +1,7 @@
 /* eslint-disable */
 import {
-    OPTIONAL,
-    ASN1Element as _Element,
+    type OPTIONAL,
+    type ASN1Element as _Element,
     ASN1TagClass as _TagClass,
     ASN1Construction as _Construction,
     ASN1UniversalType as _UniversalType,
@@ -12,10 +12,10 @@ import {
 } from '@wildboar/asn1';
 import * as $ from '@wildboar/asn1/functional';
 import {
-    BiometricType,
+    type BiometricType,
     _decode_BiometricType,
     _encode_BiometricType,
-    BiometricSubtype,
+    type BiometricSubtype,
     _decode_BiometricSubtype,
     _encode_BiometricSubtype,
 } from '@wildboar/cbeff';
@@ -25,7 +25,7 @@ import {
     _encode_DataType,
 } from '../AuthenticationContextForBiometrics/DataType.ta.mjs';
 import {
-    IOIndex,
+    type IOIndex,
     _decode_IOIndex,
     _encode_IOIndex,
 } from '../AuthenticationContextForBiometrics/IOIndex.ta.mjs';
@@ -47,32 +47,42 @@ import {
  *
  */
 export class BPUIOStaticInformation {
+    /**
+     * @summary `biometricType`.
+     * @public
+     * @readonly
+     */
+    public readonly biometricType: OPTIONAL<BiometricType>;
+    /**
+     * @summary `biometricSubtype`.
+     * @public
+     * @readonly
+     */
+    public readonly biometricSubtype: OPTIONAL<BiometricSubtype>;
+    /**
+     * @summary `dataType`.
+     * @public
+     * @readonly
+     */
+    public readonly dataType: DataType;
+    /**
+     * @summary `subprocessIOIndex`.
+     * @public
+     * @readonly
+     */
+    public readonly subprocessIOIndex: IOIndex;
+
     constructor(
-        /**
-         * @summary `biometricType`.
-         * @public
-         * @readonly
-         */
-        readonly biometricType: OPTIONAL<BiometricType>,
-        /**
-         * @summary `biometricSubtype`.
-         * @public
-         * @readonly
-         */
-        readonly biometricSubtype: OPTIONAL<BiometricSubtype>,
-        /**
-         * @summary `dataType`.
-         * @public
-         * @readonly
-         */
-        readonly dataType: DataType,
-        /**
-         * @summary `subprocessIOIndex`.
-         * @public
-         * @readonly
-         */
-        readonly subprocessIOIndex: IOIndex
-    ) {}
+        biometricType: OPTIONAL<BiometricType>,
+        biometricSubtype: OPTIONAL<BiometricSubtype>,
+        dataType: DataType,
+        subprocessIOIndex: IOIndex
+    ) {
+        this.biometricType = biometricType;
+        this.biometricSubtype = biometricSubtype;
+        this.dataType = dataType;
+        this.subprocessIOIndex = subprocessIOIndex;
+    }
 
     /**
      * @summary Restructures an object into a BPUIOStaticInformation

@@ -1,13 +1,13 @@
 /* eslint-disable */
 import {
-    OPTIONAL,
-    ASN1Element as _Element,
+    type OPTIONAL,
+    type ASN1Element as _Element,
     ASN1TagClass as _TagClass
 } from "@wildboar/asn1";
 import * as $ from "@wildboar/asn1/functional";
-import { PresentedAddressUnscreened, _decode_PresentedAddressUnscreened, _encode_PresentedAddressUnscreened } from "../Addressing-Data-Elements-asn1-97/PresentedAddressUnscreened.ta.mjs";
+import { type PresentedAddressUnscreened, _decode_PresentedAddressUnscreened, _encode_PresentedAddressUnscreened } from "../Addressing-Data-Elements-asn1-97/PresentedAddressUnscreened.ta.mjs";
 import { MessageType, _decode_MessageType, _encode_MessageType, _enum_for_MessageType } from "../SS-MCM-Operations-asn1-97/MessageType.ta.mjs";
-import { MsgCentreId, _decode_MsgCentreId, _encode_MsgCentreId } from "../SS-MCM-Operations-asn1-97/MsgCentreId.ta.mjs";
+import { type MsgCentreId, _decode_MsgCentreId, _encode_MsgCentreId } from "../SS-MCM-Operations-asn1-97/MsgCentreId.ta.mjs";
 
 /**
  * @summary PartyInfo
@@ -98,7 +98,7 @@ class PartyInfo {
          * @static
          */
 
-    public static _enum_for_messageType = _enum_for_MessageType;
+    public static _enum_for_messageType: typeof _enum_for_MessageType = _enum_for_MessageType;
 }
 
 /**

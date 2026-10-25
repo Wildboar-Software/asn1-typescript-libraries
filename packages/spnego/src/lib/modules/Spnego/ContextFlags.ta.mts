@@ -1,6 +1,6 @@
 /* eslint-disable */
 import {
-    BIT_STRING
+    type BIT_STRING
 } from "@wildboar/asn1";
 import * as $ from "@wildboar/asn1/functional";
 
@@ -124,8 +124,8 @@ const ContextFlags_integFlag: number = 6; /* LONG_NAMED_BIT */
  */
 export
 const integFlag: number = ContextFlags_integFlag; /* SHORT_NAMED_BIT */
-export const _decode_ContextFlags = $._decodeBitString;
-export const _encode_ContextFlags = $._encodeBitString;
+export const _decode_ContextFlags: $.ASN1Decoder<BIT_STRING> = $._decodeBitString;
+export const _encode_ContextFlags: $.ASN1Encoder<BIT_STRING> = $._encodeBitString;
 
 
 /* eslint-enable */

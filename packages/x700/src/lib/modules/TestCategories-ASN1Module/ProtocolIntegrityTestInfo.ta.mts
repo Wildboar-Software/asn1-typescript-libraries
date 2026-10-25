@@ -1,7 +1,7 @@
 /* eslint-disable */
 import {
-    OPTIONAL,
-    ASN1Element as _Element,
+    type OPTIONAL,
+    type ASN1Element as _Element,
     ASN1TagClass as _TagClass,
     ASN1Construction as _Construction,
     ASN1UniversalType as _UniversalType,
@@ -22,17 +22,17 @@ import {
     _encode_PDUReception,
 } from '../TestCategories-ASN1Module/PDUReception.ta.mjs';
 import {
-    WaitingInterval,
+    type WaitingInterval,
     _decode_WaitingInterval,
     _encode_WaitingInterval,
 } from '../TestCategories-ASN1Module/WaitingInterval.ta.mjs';
 import {
-    StartTime,
+    type StartTime,
     _decode_StartTime,
     _encode_StartTime,
 } from '@wildboar/attribute-asn1module';
 import {
-    StopTime,
+    type StopTime,
     _decode_StopTime,
     _encode_StopTime,
 } from '@wildboar/attribute-asn1module';
@@ -63,58 +63,70 @@ import {
  *
  */
 export class ProtocolIntegrityTestInfo {
+    /**
+     * @summary `pDUSequence`.
+     * @description
+     *
+     * PDU to transmit (type, parameters, continuation). X.737 §7.5.6.
+     * @public
+     * @readonly
+     */
+    public readonly pDUSequence: PDUSequence;
+    /**
+     * @summary `pDUReception`.
+     * @description
+     *
+     * Expected response PDU and when to
+     * proceed. Optional; mutually exclusive with `waitingInterval`.
+     * X.737 §7.5.6, A.7 comment.
+     * @public
+     * @readonly
+     */
+    public readonly pDUReception?: OPTIONAL<PDUReception>;
+    /**
+     * @summary `waitingInterval`.
+     * @description
+     *
+     * Fixed wait after the last emitted
+     * element before the next. Optional; mutually exclusive with
+     * `pDUReception`. X.737 §8.1.25, §7.5.6.
+     * @public
+     * @readonly
+     */
+    public readonly waitingInterval?: OPTIONAL<WaitingInterval>;
+    /**
+     * @summary `startTime`.
+     * @description
+     *
+     * When the first protocol element is sent.
+     * Optional. X.737 §7.5.2.
+     * @public
+     * @readonly
+     */
+    public readonly startTime?: OPTIONAL<StartTime>;
+    /**
+     * @summary `stopTime`.
+     * @description
+     *
+     * Optional stop time. Listed in Annex F; not detailed in §7.5.6.
+     * @public
+     * @readonly
+     */
+    public readonly stopTime?: OPTIONAL<StopTime>;
+
     constructor(
-        /**
-         * @summary `pDUSequence`.
-         * @description
-         *
-         * PDU to transmit (type, parameters, continuation). X.737 §7.5.6.
-         * @public
-         * @readonly
-         */
-        readonly pDUSequence: PDUSequence,
-        /**
-         * @summary `pDUReception`.
-         * @description
-         *
-         * Expected response PDU and when to
-         * proceed. Optional; mutually exclusive with `waitingInterval`.
-         * X.737 §7.5.6, A.7 comment.
-         * @public
-         * @readonly
-         */
-        readonly pDUReception?: OPTIONAL<PDUReception>,
-        /**
-         * @summary `waitingInterval`.
-         * @description
-         *
-         * Fixed wait after the last emitted
-         * element before the next. Optional; mutually exclusive with
-         * `pDUReception`. X.737 §8.1.25, §7.5.6.
-         * @public
-         * @readonly
-         */
-        readonly waitingInterval?: OPTIONAL<WaitingInterval>,
-        /**
-         * @summary `startTime`.
-         * @description
-         *
-         * When the first protocol element is sent.
-         * Optional. X.737 §7.5.2.
-         * @public
-         * @readonly
-         */
-        readonly startTime?: OPTIONAL<StartTime>,
-        /**
-         * @summary `stopTime`.
-         * @description
-         *
-         * Optional stop time. Listed in Annex F; not detailed in §7.5.6.
-         * @public
-         * @readonly
-         */
-        readonly stopTime?: OPTIONAL<StopTime>
-    ) {}
+        pDUSequence: PDUSequence,
+        pDUReception?: OPTIONAL<PDUReception>,
+        waitingInterval?: OPTIONAL<WaitingInterval>,
+        startTime?: OPTIONAL<StartTime>,
+        stopTime?: OPTIONAL<StopTime>
+    ) {
+        this.pDUSequence = pDUSequence;
+        this.pDUReception = pDUReception;
+        this.waitingInterval = waitingInterval;
+        this.startTime = startTime;
+        this.stopTime = stopTime;
+    }
 
     /**
      * @summary Restructures an object into a ProtocolIntegrityTestInfo

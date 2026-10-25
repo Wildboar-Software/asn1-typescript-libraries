@@ -1,17 +1,17 @@
 /* eslint-disable */
 import {
-    ASN1Element as _Element,
+    type ASN1Element as _Element,
     ASN1TagClass as _TagClass,
-    OPTIONAL,
+    type OPTIONAL,
 } from "@wildboar/asn1";
 import * as $ from "@wildboar/asn1/functional";
 import {
-    CertificateRevocationLists,
+    type CertificateRevocationLists,
     _decode_CertificateRevocationLists,
     _encode_CertificateRevocationLists,
 } from "../PKCS7/CertificateRevocationLists.ta.mjs";
 import {
-    CertificateSet,
+    type CertificateSet,
     _decode_CertificateSet,
     _encode_CertificateSet,
 } from "../PKCS7/CertificateSet.ta.mjs";
@@ -31,20 +31,26 @@ import {
  *
  */
 export class OriginatorInfo {
+    /**
+     * @summary `certificates`.
+     * @public
+     * @readonly
+     */
+    public readonly certificates?: OPTIONAL<CertificateSet>;
+    /**
+     * @summary `crls`.
+     * @public
+     * @readonly
+     */
+    public readonly crls?: OPTIONAL<CertificateRevocationLists>;
+
     constructor(
-        /**
-         * @summary `certificates`.
-         * @public
-         * @readonly
-         */
-        readonly certificates?: OPTIONAL<CertificateSet>,
-        /**
-         * @summary `crls`.
-         * @public
-         * @readonly
-         */
-        readonly crls?: OPTIONAL<CertificateRevocationLists>
-    ) {}
+        certificates?: OPTIONAL<CertificateSet>,
+        crls?: OPTIONAL<CertificateRevocationLists>
+    ) {
+        this.certificates = certificates;
+        this.crls = crls;
+    }
 
     /**
      * @summary Restructures an object into a OriginatorInfo

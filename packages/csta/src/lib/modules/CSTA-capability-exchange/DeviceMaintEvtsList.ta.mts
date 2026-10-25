@@ -2,19 +2,19 @@
 
 import * as $ from "@wildboar/asn1/functional";
 import {
-    OPTIONAL,
-    SEQUENCE,
-    SET,
-    ASN1Element as _Element,
+    type OPTIONAL,
+    type SEQUENCE,
+    type SET,
+    type ASN1Element as _Element,
     ASN1TagClass as _TagClass
 } from "@wildboar/asn1";
-import { BackInService, _decode_BackInService, _encode_BackInService } from "../CSTA-capability-exchange/BackInService.ta.mjs";
+import { type BackInService, _decode_BackInService, _encode_BackInService } from "../CSTA-capability-exchange/BackInService.ta.mjs";
 
-import { DeviceCapsChanged, _decode_DeviceCapsChanged, _encode_DeviceCapsChanged } from "../CSTA-capability-exchange/DeviceCapsChanged.ta.mjs";
+import { type DeviceCapsChanged, _decode_DeviceCapsChanged, _encode_DeviceCapsChanged } from "../CSTA-capability-exchange/DeviceCapsChanged.ta.mjs";
 
-import { OutOfService, _decode_OutOfService, _encode_OutOfService } from "../CSTA-capability-exchange/OutOfService.ta.mjs";
+import { type OutOfService, _decode_OutOfService, _encode_OutOfService } from "../CSTA-capability-exchange/OutOfService.ta.mjs";
 
-import { PartiallyInService, _decode_PartiallyInService, _encode_PartiallyInService } from "../CSTA-capability-exchange/PartiallyInService.ta.mjs";
+import { type PartiallyInService, _decode_PartiallyInService, _encode_PartiallyInService } from "../CSTA-capability-exchange/PartiallyInService.ta.mjs";
 
 
 
@@ -32,9 +32,9 @@ import { PartiallyInService, _decode_PartiallyInService, _encode_PartiallyInServ
  * 
  * ```asn1
  * DeviceMaintEvtsList ::= SEQUENCE
- * {     backInService             [0] IMPLICIT     BackInService         OPTIONAL,
- *     deviceCapsChanged         [1] IMPLICIT     DeviceCapsChanged     OPTIONAL,
- *     outOfService             [2] IMPLICIT     OutOfService         OPTIONAL,
+ * {     backInService             [0] IMPLICIT     BackInService         type OPTIONAL,
+ *     deviceCapsChanged         [1] IMPLICIT     DeviceCapsChanged     type OPTIONAL,
+ *     outOfService             [2] IMPLICIT     OutOfService         type OPTIONAL,
  *     partiallyInService        [3] IMPLICIT    PartiallyInService    OPTIONAL }
  * ```
  * 
@@ -42,44 +42,54 @@ import { PartiallyInService, _decode_PartiallyInService, _encode_PartiallyInServ
  */
 export
 class DeviceMaintEvtsList {
+    /**
+     * @summary `backInService`.
+     * @public
+     * @readonly
+     * @description
+     * Capability bitmap for this event; omit if the SF does not support it
+     * (ECMA-269 Annex C).
+     */
+    public readonly backInService?: OPTIONAL<BackInService>;
+    /**
+     * @summary `deviceCapsChanged`.
+     * @public
+     * @readonly
+     * @description
+     * Capability bitmap for this event; omit if the SF does not support it
+     * (ECMA-269 Annex C).
+     */
+    public readonly deviceCapsChanged?: OPTIONAL<DeviceCapsChanged>;
+    /**
+     * @summary `outOfService`.
+     * @public
+     * @readonly
+     * @description
+     * Capability bitmap for this event; omit if the SF does not support it
+     * (ECMA-269 Annex C).
+     */
+    public readonly outOfService?: OPTIONAL<OutOfService>;
+    /**
+     * @summary `partiallyInService`.
+     * @public
+     * @readonly
+     * @description
+     * Capability bitmap for this event; omit if the SF does not support it
+     * (ECMA-269 Annex C).
+     */
+    public readonly partiallyInService?: OPTIONAL<PartiallyInService>;
+
     constructor (
-        /**
-         * @summary `backInService`.
-         * @public
-         * @readonly
-         * @description
-         * Capability bitmap for this event; omit if the SF does not support it
-         * (ECMA-269 Annex C).
-         */
-        readonly backInService?: OPTIONAL<BackInService>,
-        /**
-         * @summary `deviceCapsChanged`.
-         * @public
-         * @readonly
-         * @description
-         * Capability bitmap for this event; omit if the SF does not support it
-         * (ECMA-269 Annex C).
-         */
-        readonly deviceCapsChanged?: OPTIONAL<DeviceCapsChanged>,
-        /**
-         * @summary `outOfService`.
-         * @public
-         * @readonly
-         * @description
-         * Capability bitmap for this event; omit if the SF does not support it
-         * (ECMA-269 Annex C).
-         */
-        readonly outOfService?: OPTIONAL<OutOfService>,
-        /**
-         * @summary `partiallyInService`.
-         * @public
-         * @readonly
-         * @description
-         * Capability bitmap for this event; omit if the SF does not support it
-         * (ECMA-269 Annex C).
-         */
-        readonly partiallyInService?: OPTIONAL<PartiallyInService>
-    ) {}
+        backInService?: OPTIONAL<BackInService>,
+        deviceCapsChanged?: OPTIONAL<DeviceCapsChanged>,
+        outOfService?: OPTIONAL<OutOfService>,
+        partiallyInService?: OPTIONAL<PartiallyInService>
+    ) {
+        this.backInService = backInService;
+        this.deviceCapsChanged = deviceCapsChanged;
+        this.outOfService = outOfService;
+        this.partiallyInService = partiallyInService;
+    }
 
     /**
      * @summary Restructures an object into a DeviceMaintEvtsList

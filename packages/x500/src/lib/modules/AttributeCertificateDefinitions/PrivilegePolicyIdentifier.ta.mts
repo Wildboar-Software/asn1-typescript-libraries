@@ -1,17 +1,17 @@
 /* eslint-disable */
 import {
     ASN1ConstructionError as _ConstructionError,
-    ASN1Element as _Element,
+    type ASN1Element as _Element,
     ASN1TagClass as _TagClass,
 } from "@wildboar/asn1";
 import * as $ from "@wildboar/asn1/functional";
 import {
-    PrivilegePolicy,
+    type PrivilegePolicy,
     _decode_PrivilegePolicy,
     _encode_PrivilegePolicy,
 } from "../AttributeCertificateDefinitions/PrivilegePolicy.ta.mjs";
 import {
-    InfoSyntax,
+    type InfoSyntax,
     _decode_InfoSyntax,
     _encode_InfoSyntax,
 } from "../AuthenticationFramework/InfoSyntax.ta.mjs";
@@ -33,26 +33,34 @@ import {
  *
  */
 export class PrivilegePolicyIdentifier {
+    /**
+     * @summary `privilegePolicy`.
+     * @public
+     * @readonly
+     */
+    public readonly privilegePolicy: PrivilegePolicy;
+    /**
+     * @summary `privPolSyntax`.
+     * @public
+     * @readonly
+     */
+    public readonly privPolSyntax: InfoSyntax;
+    /**
+     * @summary Extensions that are not recognized.
+     * @public
+     * @readonly
+     */
+    public readonly _unrecognizedExtensionsList: _Element[];
+
     constructor(
-        /**
-         * @summary `privilegePolicy`.
-         * @public
-         * @readonly
-         */
-        readonly privilegePolicy: PrivilegePolicy,
-        /**
-         * @summary `privPolSyntax`.
-         * @public
-         * @readonly
-         */
-        readonly privPolSyntax: InfoSyntax,
-        /**
-         * @summary Extensions that are not recognized.
-         * @public
-         * @readonly
-         */
-        readonly _unrecognizedExtensionsList: _Element[] = []
-    ) {}
+        privilegePolicy: PrivilegePolicy,
+        privPolSyntax: InfoSyntax,
+        _unrecognizedExtensionsList: _Element[] = []
+    ) {
+        this.privilegePolicy = privilegePolicy;
+        this.privPolSyntax = privPolSyntax;
+        this._unrecognizedExtensionsList = _unrecognizedExtensionsList;
+    }
 
     /**
      * @summary Restructures an object into a PrivilegePolicyIdentifier

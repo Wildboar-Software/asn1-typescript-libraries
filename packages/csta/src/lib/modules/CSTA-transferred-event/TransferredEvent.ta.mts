@@ -2,17 +2,17 @@
 
 import * as $ from "@wildboar/asn1/functional";
 import {
-    OPTIONAL,
-    SEQUENCE,
-    SET,
-    ASN1Element as _Element,
+    type OPTIONAL,
+    type SEQUENCE,
+    type SET,
+    type ASN1Element as _Element,
     ASN1TagClass as _TagClass
 } from "@wildboar/asn1";
-import { ConnectionID, _decode_ConnectionID, _encode_ConnectionID } from "../CSTA-call-connection-identifiers/ConnectionID.ta.mjs";
+import { type ConnectionID, _decode_ConnectionID, _encode_ConnectionID } from "../CSTA-call-connection-identifiers/ConnectionID.ta.mjs";
 
-import { SubjectDeviceID, _decode_SubjectDeviceID, _encode_SubjectDeviceID } from "../CSTA-device-identifiers/SubjectDeviceID.ta.mjs";
+import { type SubjectDeviceID, _decode_SubjectDeviceID, _encode_SubjectDeviceID } from "../CSTA-device-identifiers/SubjectDeviceID.ta.mjs";
 
-import { ConnectionList, _decode_ConnectionList, _encode_ConnectionList } from "../CSTA-connection-states/ConnectionList.ta.mjs";
+import { type ConnectionList, _decode_ConnectionList, _encode_ConnectionList } from "../CSTA-connection-states/ConnectionList.ta.mjs";
 
 import { LocalConnectionState, _decode_LocalConnectionState, _encode_LocalConnectionState } from "../CSTA-connection-states/LocalConnectionState.ta.mjs";
 
@@ -27,23 +27,23 @@ import {
 
 import { MediaCallCharacteristics, _decode_MediaCallCharacteristics, _encode_MediaCallCharacteristics } from "../CSTA-media-services/MediaCallCharacteristics.ta.mjs";
 
-import { LanguagePreferences, _decode_LanguagePreferences, _encode_LanguagePreferences } from "../CSTA-device-feature-types/LanguagePreferences.ta.mjs";
+import { type LanguagePreferences, _decode_LanguagePreferences, _encode_LanguagePreferences } from "../CSTA-device-feature-types/LanguagePreferences.ta.mjs";
 
 import { DeviceHistory, _decode_DeviceHistory, _encode_DeviceHistory } from "../CSTA-device-feature-types/DeviceHistory.ta.mjs";
 
-import { LocationInfoList, _decode_LocationInfoList, _encode_LocationInfoList } from "../CSTA-call-control/LocationInfoList.ta.mjs";
+import { type LocationInfoList, _decode_LocationInfoList, _encode_LocationInfoList } from "../CSTA-call-control/LocationInfoList.ta.mjs";
 
 import { CSTACommonArguments, _decode_CSTACommonArguments, _encode_CSTACommonArguments } from "../CSTA-extension-types/CSTACommonArguments.ta.mjs";
 
 
 
-import { CorrelatorData, _decode_CorrelatorData, _encode_CorrelatorData } from "../CSTA-device-feature-types/CorrelatorData.ta.mjs";
+import { type CorrelatorData, _decode_CorrelatorData, _encode_CorrelatorData } from "../CSTA-device-feature-types/CorrelatorData.ta.mjs";
 
-import { UserData, _decode_UserData, _encode_UserData } from "../CSTA-device-feature-types/UserData.ta.mjs";
+import { type UserData, _decode_UserData, _encode_UserData } from "../CSTA-device-feature-types/UserData.ta.mjs";
 
 import { ServicesPermitted, _decode_ServicesPermitted, _encode_ServicesPermitted } from "../CSTA-call-control/ServicesPermitted.ta.mjs";
 
-import { CallCharacteristics, _decode_CallCharacteristics, _encode_CallCharacteristics } from "../CSTA-call-control/CallCharacteristics.ta.mjs";
+import { type CallCharacteristics, _decode_CallCharacteristics, _encode_CallCharacteristics } from "../CSTA-call-control/CallCharacteristics.ta.mjs";
 
 import { CallLinkageDataList, _decode_CallLinkageDataList, _encode_CallLinkageDataList } from "../CSTA-call-control/CallLinkageDataList.ta.mjs";
 
@@ -63,22 +63,22 @@ import { CallLinkageDataList, _decode_CallLinkageDataList, _encode_CallLinkageDa
  * ```asn1
  * TransferredEvent ::= SEQUENCE
  * {    primaryOldCall            ConnectionID,
- *     secondaryOldCall        [ 0] IMPLICIT ConnectionID        OPTIONAL,
+ *     secondaryOldCall        [ 0] IMPLICIT ConnectionID        type OPTIONAL,
  *     transferringDevice        SubjectDeviceID,
  *     transferredToDevice        SubjectDeviceID,
  *     transferredConnections        [ 1] IMPLICIT ConnectionList,
- *     localConnectionInfo        LocalConnectionState            OPTIONAL,
- *     correlatorData            [ 2] IMPLICIT CorrelatorData        OPTIONAL,
- *     userData            UserData                OPTIONAL,
- *     chargingInfo            [ 3] IMPLICIT ChargingInfo        OPTIONAL,
+ *     localConnectionInfo        LocalConnectionState            type OPTIONAL,
+ *     correlatorData            [ 2] IMPLICIT CorrelatorData        type OPTIONAL,
+ *     userData            UserData                type OPTIONAL,
+ *     chargingInfo            [ 3] IMPLICIT ChargingInfo        type OPTIONAL,
  *     cause                EventCause,
- *     servicesPermitted        [ 4] IMPLICIT ServicesPermitted        OPTIONAL,
- *     mediaCallCharacteristics    [ 5] IMPLICIT MediaCallCharacteristics    OPTIONAL,
- *     callCharacteristics        [ 6] IMPLICIT CallCharacteristics    OPTIONAL,
- *     callLinkageDataList        [ 7] IMPLICIT CallLinkageDataList    OPTIONAL,
- *     languagePreferences        [ 8] IMPLICIT LanguagePreferences    OPTIONAL,
- *     deviceHistory            [ 9] IMPLICIT DeviceHistory        OPTIONAL,
- *     locationInfo            [10] IMPLICIT LocationInfoList        OPTIONAL,
+ *     servicesPermitted        [ 4] IMPLICIT ServicesPermitted        type OPTIONAL,
+ *     mediaCallCharacteristics    [ 5] IMPLICIT MediaCallCharacteristics    type OPTIONAL,
+ *     callCharacteristics        [ 6] IMPLICIT CallCharacteristics    type OPTIONAL,
+ *     callLinkageDataList        [ 7] IMPLICIT CallLinkageDataList    type OPTIONAL,
+ *     languagePreferences        [ 8] IMPLICIT LanguagePreferences    type OPTIONAL,
+ *     deviceHistory            [ 9] IMPLICIT DeviceHistory        type OPTIONAL,
+ *     locationInfo            [10] IMPLICIT LocationInfoList        type OPTIONAL,
  *     extensions            CSTACommonArguments            OPTIONAL }
  * ```
  * 
@@ -86,199 +86,237 @@ import { CallLinkageDataList, _decode_CallLinkageDataList, _encode_CallLinkageDa
  */
 export
 class TransferredEvent {
+    /**
+     * @summary `primaryOldCall`.
+     * @description
+     *
+     * Mandatory. Primary call before the transfer. Fixed versus local view
+     * is indicated by capability `connectionView` (FR 1).
+     *
+     * @public
+     * @readonly
+     */
+    public readonly primaryOldCall: ConnectionID;
+    /**
+     * @summary `secondaryOldCall`.
+     * @description
+     *
+     * Conditional. Secondary call before the transfer. Mandatory for the
+     * fixed-view option; for local-view, only when the monitored device saw
+     * two calls (Table 17-185, FR 1).
+     *
+     * @public
+     * @readonly
+     */
+    public readonly secondaryOldCall: OPTIONAL<ConnectionID>;
+    /**
+     * @summary `transferringDevice`.
+     * @description
+     *
+     * Mandatory. Device that transferred the call.
+     *
+     * @public
+     * @readonly
+     */
+    public readonly transferringDevice: SubjectDeviceID;
+    /**
+     * @summary `transferredToDevice`.
+     * @description
+     *
+     * Mandatory. Device that received the call.
+     *
+     * @public
+     * @readonly
+     */
+    public readonly transferredToDevice: SubjectDeviceID;
+    /**
+     * @summary `transferredConnections`.
+     * @description
+     *
+     * Mandatory. Each known device/ConnectionID in the resulting call.
+     * Links old versus new ConnectionIDs (§12.3.9 FR 8, §12.2.9).
+     *
+     * @public
+     * @readonly
+     */
+    public readonly transferredConnections: ConnectionList;
+    /**
+     * @summary `localConnectionInfo`.
+     * @description
+     *
+     * Device-type monitors only (§9.5.2, §12.2.17). For the transferring
+     * device: Null.
+     *
+     * @public
+     * @readonly
+     */
+    public readonly localConnectionInfo: OPTIONAL<LocalConnectionState>;
+    /**
+     * @summary `correlatorData`.
+     * @description
+     *
+     * Conditional. Present when correlator data is associated with the call
+     * (§12.2.10).
+     *
+     * @public
+     * @readonly
+     */
+    public readonly correlatorData: OPTIONAL<CorrelatorData>;
+    /**
+     * @summary `userData`.
+     * @description
+     *
+     * Conditional. Present when user data is sent and supported (§12.2.30).
+     *
+     * @public
+     * @readonly
+     */
+    public readonly userData: OPTIONAL<UserData>;
+    /**
+     * @summary `chargingInfo`.
+     * @description
+     *
+     * Optional total charging or currency units for the transferring
+     * device.
+     *
+     * @public
+     * @readonly
+     */
+    public readonly chargingInfo: OPTIONAL<ChargingInfo>;
+    /**
+     * @summary `cause`.
+     * @description
+     *
+     * Mandatory. Valid values are listed in Table 17-186.
+     *
+     * @public
+     * @readonly
+     */
+    public readonly cause: EventCause;
+    /**
+     * @summary `servicesPermitted`.
+     * @description
+     *
+     * Device-type monitors only (§9.5.2, §12.2.25). Mandatory if Dynamic
+     * Feature Availability is supported.
+     *
+     * @public
+     * @readonly
+     */
+    public readonly servicesPermitted?: OPTIONAL<ServicesPermitted>;
+    /**
+     * @summary `mediaCallCharacteristics`.
+     * @description
+     *
+     * Optional media class and characteristics (§12.2.20).
+     *
+     * @public
+     * @readonly
+     */
+    public readonly mediaCallCharacteristics?: OPTIONAL<MediaCallCharacteristics>;
+    /**
+     * @summary `callCharacteristics`.
+     * @description
+     *
+     * Optional high-level call characteristics (§12.2.4).
+     *
+     * @public
+     * @readonly
+     */
+    public readonly callCharacteristics?: OPTIONAL<CallCharacteristics>;
+    /**
+     * @summary `callLinkageDataList`.
+     * @description
+     *
+     * Conditional. Mandatory if call linkage is supported. Contains
+     * `newCallLinkageData` and discarded `oldCallLinkageData`.
+     *
+     * @public
+     * @readonly
+     */
+    public readonly callLinkageDataList?: OPTIONAL<CallLinkageDataList>;
+    /**
+     * @summary `languagePreferences`.
+     * @description
+     *
+     * Optional preferred language(s) (§12.2.16).
+     *
+     * @public
+     * @readonly
+     */
+    public readonly languagePreferences?: OPTIONAL<LanguagePreferences>;
+    /**
+     * @summary `deviceHistory`.
+     * @description
+     *
+     * Optional devices previously associated with the call (redirecting,
+     * transferring, clearing).
+     *
+     * @public
+     * @readonly
+     */
+    public readonly deviceHistory?: OPTIONAL<DeviceHistory>;
+    /**
+     * @summary `locationInfo`.
+     * @description
+     *
+     * Optional location information for devices in the call.
+     *
+     * @public
+     * @readonly
+     */
+    public readonly locationInfo?: OPTIONAL<LocationInfoList>;
+    /**
+     * @summary `extensions`.
+     * @description
+     *
+     * Optional `CSTACommonArguments` carrying the security and privateData
+     * parameters from the ECMA-269 event table.
+     *
+     * @public
+     * @readonly
+     */
+    public readonly extensions?: OPTIONAL<CSTACommonArguments>;
+
     constructor (
-        /**
-         * @summary `primaryOldCall`.
-         * @description
-         *
-         * Mandatory. Primary call before the transfer. Fixed versus local view
-         * is indicated by capability `connectionView` (FR 1).
-         *
-         * @public
-         * @readonly
-         */
-        readonly primaryOldCall: ConnectionID,
-        /**
-         * @summary `secondaryOldCall`.
-         * @description
-         *
-         * Conditional. Secondary call before the transfer. Mandatory for the
-         * fixed-view option; for local-view, only when the monitored device saw
-         * two calls (Table 17-185, FR 1).
-         *
-         * @public
-         * @readonly
-         */
-        readonly secondaryOldCall: OPTIONAL<ConnectionID>,
-        /**
-         * @summary `transferringDevice`.
-         * @description
-         *
-         * Mandatory. Device that transferred the call.
-         *
-         * @public
-         * @readonly
-         */
-        readonly transferringDevice: SubjectDeviceID,
-        /**
-         * @summary `transferredToDevice`.
-         * @description
-         *
-         * Mandatory. Device that received the call.
-         *
-         * @public
-         * @readonly
-         */
-        readonly transferredToDevice: SubjectDeviceID,
-        /**
-         * @summary `transferredConnections`.
-         * @description
-         *
-         * Mandatory. Each known device/ConnectionID in the resulting call.
-         * Links old versus new ConnectionIDs (§12.3.9 FR 8, §12.2.9).
-         *
-         * @public
-         * @readonly
-         */
-        readonly transferredConnections: ConnectionList,
-        /**
-         * @summary `localConnectionInfo`.
-         * @description
-         *
-         * Device-type monitors only (§9.5.2, §12.2.17). For the transferring
-         * device: Null.
-         *
-         * @public
-         * @readonly
-         */
-        readonly localConnectionInfo: OPTIONAL<LocalConnectionState>,
-        /**
-         * @summary `correlatorData`.
-         * @description
-         *
-         * Conditional. Present when correlator data is associated with the call
-         * (§12.2.10).
-         *
-         * @public
-         * @readonly
-         */
-        readonly correlatorData: OPTIONAL<CorrelatorData>,
-        /**
-         * @summary `userData`.
-         * @description
-         *
-         * Conditional. Present when user data is sent and supported (§12.2.30).
-         *
-         * @public
-         * @readonly
-         */
-        readonly userData: OPTIONAL<UserData>,
-        /**
-         * @summary `chargingInfo`.
-         * @description
-         *
-         * Optional total charging or currency units for the transferring
-         * device.
-         *
-         * @public
-         * @readonly
-         */
-        readonly chargingInfo: OPTIONAL<ChargingInfo>,
-        /**
-         * @summary `cause`.
-         * @description
-         *
-         * Mandatory. Valid values are listed in Table 17-186.
-         *
-         * @public
-         * @readonly
-         */
-        readonly cause: EventCause,
-        /**
-         * @summary `servicesPermitted`.
-         * @description
-         *
-         * Device-type monitors only (§9.5.2, §12.2.25). Mandatory if Dynamic
-         * Feature Availability is supported.
-         *
-         * @public
-         * @readonly
-         */
-        readonly servicesPermitted?: OPTIONAL<ServicesPermitted>,
-        /**
-         * @summary `mediaCallCharacteristics`.
-         * @description
-         *
-         * Optional media class and characteristics (§12.2.20).
-         *
-         * @public
-         * @readonly
-         */
-        readonly mediaCallCharacteristics?: OPTIONAL<MediaCallCharacteristics>,
-        /**
-         * @summary `callCharacteristics`.
-         * @description
-         *
-         * Optional high-level call characteristics (§12.2.4).
-         *
-         * @public
-         * @readonly
-         */
-        readonly callCharacteristics?: OPTIONAL<CallCharacteristics>,
-        /**
-         * @summary `callLinkageDataList`.
-         * @description
-         *
-         * Conditional. Mandatory if call linkage is supported. Contains
-         * `newCallLinkageData` and discarded `oldCallLinkageData`.
-         *
-         * @public
-         * @readonly
-         */
-        readonly callLinkageDataList?: OPTIONAL<CallLinkageDataList>,
-        /**
-         * @summary `languagePreferences`.
-         * @description
-         *
-         * Optional preferred language(s) (§12.2.16).
-         *
-         * @public
-         * @readonly
-         */
-        readonly languagePreferences?: OPTIONAL<LanguagePreferences>,
-        /**
-         * @summary `deviceHistory`.
-         * @description
-         *
-         * Optional devices previously associated with the call (redirecting,
-         * transferring, clearing).
-         *
-         * @public
-         * @readonly
-         */
-        readonly deviceHistory?: OPTIONAL<DeviceHistory>,
-        /**
-         * @summary `locationInfo`.
-         * @description
-         *
-         * Optional location information for devices in the call.
-         *
-         * @public
-         * @readonly
-         */
-        readonly locationInfo?: OPTIONAL<LocationInfoList>,
-        /**
-         * @summary `extensions`.
-         * @description
-         *
-         * Optional `CSTACommonArguments` carrying the security and privateData
-         * parameters from the ECMA-269 event table.
-         *
-         * @public
-         * @readonly
-         */
-        readonly extensions?: OPTIONAL<CSTACommonArguments>
-    ) {}
+        primaryOldCall: ConnectionID,
+        secondaryOldCall: OPTIONAL<ConnectionID>,
+        transferringDevice: SubjectDeviceID,
+        transferredToDevice: SubjectDeviceID,
+        transferredConnections: ConnectionList,
+        localConnectionInfo: OPTIONAL<LocalConnectionState>,
+        correlatorData: OPTIONAL<CorrelatorData>,
+        userData: OPTIONAL<UserData>,
+        chargingInfo: OPTIONAL<ChargingInfo>,
+        cause: EventCause,
+        servicesPermitted?: OPTIONAL<ServicesPermitted>,
+        mediaCallCharacteristics?: OPTIONAL<MediaCallCharacteristics>,
+        callCharacteristics?: OPTIONAL<CallCharacteristics>,
+        callLinkageDataList?: OPTIONAL<CallLinkageDataList>,
+        languagePreferences?: OPTIONAL<LanguagePreferences>,
+        deviceHistory?: OPTIONAL<DeviceHistory>,
+        locationInfo?: OPTIONAL<LocationInfoList>,
+        extensions?: OPTIONAL<CSTACommonArguments>
+    ) {
+        this.primaryOldCall = primaryOldCall;
+        this.secondaryOldCall = secondaryOldCall;
+        this.transferringDevice = transferringDevice;
+        this.transferredToDevice = transferredToDevice;
+        this.transferredConnections = transferredConnections;
+        this.localConnectionInfo = localConnectionInfo;
+        this.correlatorData = correlatorData;
+        this.userData = userData;
+        this.chargingInfo = chargingInfo;
+        this.cause = cause;
+        this.servicesPermitted = servicesPermitted;
+        this.mediaCallCharacteristics = mediaCallCharacteristics;
+        this.callCharacteristics = callCharacteristics;
+        this.callLinkageDataList = callLinkageDataList;
+        this.languagePreferences = languagePreferences;
+        this.deviceHistory = deviceHistory;
+        this.locationInfo = locationInfo;
+        this.extensions = extensions;
+    }
 
     /**
      * @summary Restructures an object into a TransferredEvent
@@ -302,7 +340,7 @@ class TransferredEvent {
          * @static
          */
 
-    public static _enum_for_cause = _enum_for_EventCause;
+    public static _enum_for_cause: typeof _enum_for_EventCause = _enum_for_EventCause;
 }
 
 /**

@@ -1,9 +1,9 @@
 /* eslint-disable */
 import {
-    INTEGER,
-    OCTET_STRING,
-    OPTIONAL,
-    ASN1Element as _Element,
+    type INTEGER,
+    type OCTET_STRING,
+    type OPTIONAL,
+    type ASN1Element as _Element,
     ASN1TagClass as _TagClass,
     ASN1OverflowError,
     ASN1SizeError
@@ -11,7 +11,7 @@ import {
 import * as $ from "@wildboar/asn1/functional";
 import { TLSPRFAlgorithm, _decode_TLSPRFAlgorithm, _encode_TLSPRFAlgorithm, _enum_for_TLSPRFAlgorithm } from "../TS33128Payloads/TLSPRFAlgorithm.ta.mjs";
 // export { TLSPRFAlgorithm, _enum_for_TLSPRFAlgorithm, TLSPRFAlgorithm_rfc5246 /* IMPORTED_LONG_ENUMERATION_ITEM */, rfc5246 /* IMPORTED_SHORT_ENUMERATION_ITEM */, _decode_TLSPRFAlgorithm, _encode_TLSPRFAlgorithm } from "../TS33128Payloads/TLSPRFAlgorithm.ta.mjs";
-import { TLSCipherSuite, _decode_TLSCipherSuite, _encode_TLSCipherSuite } from "../TS33128Payloads/TLSCipherSuite.ta.mjs";
+import { type TLSCipherSuite, _decode_TLSCipherSuite, _encode_TLSCipherSuite } from "../TS33128Payloads/TLSCipherSuite.ta.mjs";
 // export { TLSCipherSuite, _decode_TLSCipherSuite, _encode_TLSCipherSuite } from "../TS33128Payloads/TLSCipherSuite.ta.mjs";
 import { TLSCipherType, _decode_TLSCipherType, _encode_TLSCipherType, _enum_for_TLSCipherType } from "../TS33128Payloads/TLSCipherType.ta.mjs";
 // export { TLSCipherType, _enum_for_TLSCipherType, TLSCipherType_stream /* IMPORTED_LONG_ENUMERATION_ITEM */, stream /* IMPORTED_SHORT_ENUMERATION_ITEM */, TLSCipherType_block /* IMPORTED_LONG_ENUMERATION_ITEM */, block /* IMPORTED_SHORT_ENUMERATION_ITEM */, TLSCipherType_aead /* IMPORTED_LONG_ENUMERATION_ITEM */, aead /* IMPORTED_SHORT_ENUMERATION_ITEM */, _decode_TLSCipherType, _encode_TLSCipherType } from "../TS33128Payloads/TLSCipherType.ta.mjs";
@@ -241,19 +241,19 @@ class TLS12UAStarParams {
          * @static
          */
 
-    public static _enum_for_pRFAlgorithm = _enum_for_TLSPRFAlgorithm;        /**
+    public static _enum_for_pRFAlgorithm: typeof _enum_for_TLSPRFAlgorithm = _enum_for_TLSPRFAlgorithm;        /**
          * @summary The enum used as the type of the component `cipherType`
          * @public
          * @static
          */
 
-    public static _enum_for_cipherType = _enum_for_TLSCipherType;        /**
+    public static _enum_for_cipherType: typeof _enum_for_TLSCipherType = _enum_for_TLSCipherType;        /**
          * @summary The enum used as the type of the component `compressionAlgorithm`
          * @public
          * @static
          */
 
-    public static _enum_for_compressionAlgorithm = _enum_for_TLSCompressionAlgorithm;
+    public static _enum_for_compressionAlgorithm: typeof _enum_for_TLSCompressionAlgorithm = _enum_for_TLSCompressionAlgorithm;
 }
 
 /**

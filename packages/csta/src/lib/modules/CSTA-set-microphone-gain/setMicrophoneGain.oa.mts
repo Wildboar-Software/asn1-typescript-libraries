@@ -8,7 +8,7 @@ import { type OPERATION } from "../Remote-Operations-Information-Objects/OPERATI
 
 import { SetMicrophoneGainArgument, _decode_SetMicrophoneGainArgument, _encode_SetMicrophoneGainArgument } from "../CSTA-set-microphone-gain/SetMicrophoneGainArgument.ta.mjs";
 
-import { SetMicrophoneGainResult, _decode_SetMicrophoneGainResult, _encode_SetMicrophoneGainResult } from "../CSTA-set-microphone-gain/SetMicrophoneGainResult.ta.mjs";
+import { type SetMicrophoneGainResult, _decode_SetMicrophoneGainResult, _encode_SetMicrophoneGainResult } from "../CSTA-set-microphone-gain/SetMicrophoneGainResult.ta.mjs";
 
 import { universalFailure } from "../CSTA-error-definition/universalFailure.oa.mjs";
 

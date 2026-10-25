@@ -1,7 +1,7 @@
 /* eslint-disable */
 import {
-    OPTIONAL,
-    ASN1Element as _Element,
+    type OPTIONAL,
+    type ASN1Element as _Element,
     ASN1TagClass as _TagClass,
     ASN1Construction as _Construction,
     ASN1UniversalType as _UniversalType,
@@ -12,12 +12,12 @@ import {
 } from '@wildboar/asn1';
 import * as $ from '@wildboar/asn1/functional';
 import {
-    NonDeliveryReasonCode,
+    type NonDeliveryReasonCode,
     _decode_NonDeliveryReasonCode,
     _encode_NonDeliveryReasonCode,
 } from '../MTSAbstractService/NonDeliveryReasonCode.ta.mjs';
 import {
-    NonDeliveryDiagnosticCode,
+    type NonDeliveryDiagnosticCode,
     _decode_NonDeliveryDiagnosticCode,
     _encode_NonDeliveryDiagnosticCode,
 } from '../MTSAbstractService/NonDeliveryDiagnosticCode.ta.mjs';
@@ -38,20 +38,26 @@ import {
  *
  */
 export class NonDeliveryReport {
+    /**
+     * @summary `non_delivery_reason_code`.
+     * @public
+     * @readonly
+     */
+    public readonly non_delivery_reason_code: NonDeliveryReasonCode;
+    /**
+     * @summary `non_delivery_diagnostic_code`.
+     * @public
+     * @readonly
+     */
+    public readonly non_delivery_diagnostic_code?: OPTIONAL<NonDeliveryDiagnosticCode>;
+
     constructor(
-        /**
-         * @summary `non_delivery_reason_code`.
-         * @public
-         * @readonly
-         */
-        readonly non_delivery_reason_code: NonDeliveryReasonCode,
-        /**
-         * @summary `non_delivery_diagnostic_code`.
-         * @public
-         * @readonly
-         */
-        readonly non_delivery_diagnostic_code?: OPTIONAL<NonDeliveryDiagnosticCode>
-    ) {}
+        non_delivery_reason_code: NonDeliveryReasonCode,
+        non_delivery_diagnostic_code?: OPTIONAL<NonDeliveryDiagnosticCode>
+    ) {
+        this.non_delivery_reason_code = non_delivery_reason_code;
+        this.non_delivery_diagnostic_code = non_delivery_diagnostic_code;
+    }
 
     /**
      * @summary Restructures an object into a NonDeliveryReport

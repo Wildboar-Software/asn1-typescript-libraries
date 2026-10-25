@@ -1,9 +1,9 @@
 /* eslint-disable */
 import {
-    ASN1Element as _Element,
+    type ASN1Element as _Element,
     ASN1TagClass as _TagClass,
-    OCTET_STRING,
-    OPTIONAL
+    type OCTET_STRING,
+    type OPTIONAL
 } from "@wildboar/asn1";
 import * as $ from "@wildboar/asn1/functional";
 
@@ -33,21 +33,25 @@ import * as $ from "@wildboar/asn1/functional";
  */
 export
 class ConnectivityParameters {
+    /**
+     * @summary `httpParams`.
+     * @description
+     *
+     * Connectivity parameters for HTTP, also used for CoAP. The format is
+     * identical to Table 95 of SGP.02. Present when those parameters are
+     * available; otherwise the response is parametersNotAvailable.
+     *
+     * SGP.32 v1.2, section 5.9.24.
+     * @public
+     * @readonly
+     */
+    public readonly httpParams?: OPTIONAL<OCTET_STRING>;
+
     constructor (
-        /**
-         * @summary `httpParams`.
-         * @description
-         *
-         * Connectivity parameters for HTTP, also used for CoAP. The format is
-         * identical to Table 95 of SGP.02. Present when those parameters are
-         * available; otherwise the response is parametersNotAvailable.
-         *
-         * SGP.32 v1.2, section 5.9.24.
-         * @public
-         * @readonly
-         */
-        readonly httpParams?: OPTIONAL<OCTET_STRING>
-    ) {}
+        httpParams?: OPTIONAL<OCTET_STRING>
+    ) {
+        this.httpParams = httpParams;
+    }
 
     /**
      * @summary Restructures an object into a ConnectivityParameters

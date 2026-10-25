@@ -2,18 +2,18 @@
 
 import * as $ from "@wildboar/asn1/functional";
 import {
-    OPTIONAL,
-    INTEGER,
-    SEQUENCE,
-    SET,
-    ASN1Element as _Element,
+    type OPTIONAL,
+    type INTEGER,
+    type SEQUENCE,
+    type SET,
+    type ASN1Element as _Element,
     ASN1TagClass as _TagClass
 } from "@wildboar/asn1";
-import { ConnectionID, _decode_ConnectionID, _encode_ConnectionID } from "../CSTA-call-connection-identifiers/ConnectionID.ta.mjs";
+import { type ConnectionID, _decode_ConnectionID, _encode_ConnectionID } from "../CSTA-call-connection-identifiers/ConnectionID.ta.mjs";
 
-import { MessageID, _decode_MessageID, _encode_MessageID } from "../CSTA-device-feature-types/MessageID.ta.mjs";
+import { type MessageID, _decode_MessageID, _encode_MessageID } from "../CSTA-device-feature-types/MessageID.ta.mjs";
 
-import { ResourceID, _decode_ResourceID, _encode_ResourceID } from "../CSTA-device-feature-types/ResourceID.ta.mjs";
+import { type ResourceID, _decode_ResourceID, _encode_ResourceID } from "../CSTA-device-feature-types/ResourceID.ta.mjs";
 
 import { CSTACommonArguments, _decode_CSTACommonArguments, _encode_CSTACommonArguments } from "../CSTA-extension-types/CSTACommonArguments.ta.mjs";
 
@@ -34,9 +34,9 @@ import { CSTACommonArguments, _decode_CSTACommonArguments, _encode_CSTACommonArg
  * ```asn1
  * ResumeArgument ::= SEQUENCE
  * {    connection            ConnectionID,
- *     messageToResume            MessageID                OPTIONAL,   --corrected 06/2001
- *     resource            [0] IMPLICIT ResourceID            OPTIONAL,
- *     duration            INTEGER                    OPTIONAL,
+ *     messageToResume            MessageID                type OPTIONAL,   --corrected 06/2001
+ *     resource            [0] IMPLICIT ResourceID            type OPTIONAL,
+ *     duration            INTEGER                    type OPTIONAL,
  *     extensions            CSTACommonArguments            OPTIONAL }
  * ```
  * 
@@ -44,60 +44,72 @@ import { CSTACommonArguments, _decode_CSTACommonArguments, _encode_CSTACommonArg
  */
 export
 class ResumeArgument {
+    /**
+     * @summary `connection`.
+     * @description
+     *
+     * Connection on which to resume (ECMA-269 §26.1.11.1).
+     *
+     * @public
+     * @readonly
+     */
+    public readonly connection: ConnectionID;
+    /**
+     * @summary `messageToResume`.
+     * @description
+     *
+     * Message to resume when several are active (ECMA-269 §26.1.11.1).
+     *
+     * @public
+     * @readonly
+     */
+    public readonly messageToResume?: OPTIONAL<MessageID>;
+    /**
+     * @summary `resource`.
+     * @description
+     *
+     * Interactive voice resource. Required when more than one interactive
+     * voice resource exists on the connection.
+     *
+     * @public
+     * @readonly
+     */
+    public readonly resource?: OPTIONAL<ResourceID>;
+    /**
+     * @summary `duration`.
+     * @description
+     *
+     * Optional duration (ECMA-269 §26.1.11.1).
+     *
+     * @public
+     * @readonly
+     */
+    public readonly duration?: OPTIONAL<INTEGER>;
+    /**
+     * @summary `extensions`.
+     * @description
+     *
+     * CSTACommonArguments carrying the service-table security and
+     * privateData parameters.
+     *
+     * @public
+     * @readonly
+     */
+    public readonly extensions?: OPTIONAL<CSTACommonArguments>;
+
     constructor (
-        /**
-         * @summary `connection`.
-         * @description
-         *
-         * Connection on which to resume (ECMA-269 §26.1.11.1).
-         *
-         * @public
-         * @readonly
-         */
-        readonly connection: ConnectionID,
-        /**
-         * @summary `messageToResume`.
-         * @description
-         *
-         * Message to resume when several are active (ECMA-269 §26.1.11.1).
-         *
-         * @public
-         * @readonly
-         */
-        readonly messageToResume?: OPTIONAL<MessageID>,
-        /**
-         * @summary `resource`.
-         * @description
-         *
-         * Interactive voice resource. Required when more than one interactive
-         * voice resource exists on the connection.
-         *
-         * @public
-         * @readonly
-         */
-        readonly resource?: OPTIONAL<ResourceID>,
-        /**
-         * @summary `duration`.
-         * @description
-         *
-         * Optional duration (ECMA-269 §26.1.11.1).
-         *
-         * @public
-         * @readonly
-         */
-        readonly duration?: OPTIONAL<INTEGER>,
-        /**
-         * @summary `extensions`.
-         * @description
-         *
-         * CSTACommonArguments carrying the service-table security and
-         * privateData parameters.
-         *
-         * @public
-         * @readonly
-         */
-        readonly extensions?: OPTIONAL<CSTACommonArguments>
-    ) {}
+        connection: ConnectionID,
+        messageToResume?: OPTIONAL<MessageID>,
+        resource?: OPTIONAL<ResourceID>,
+        duration?: OPTIONAL<INTEGER>,
+        extensions?: OPTIONAL<CSTACommonArguments>
+    ) {
+        this.connection = connection;
+        this.messageToResume = messageToResume;
+        this.resource = resource;
+        this.duration = duration;
+        this.extensions = extensions;
+    }
 
     /**
      * @summary Restructures an object into a ResumeArgument

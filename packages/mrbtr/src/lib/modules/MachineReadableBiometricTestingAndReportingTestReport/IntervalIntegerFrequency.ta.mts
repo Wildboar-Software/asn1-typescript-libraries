@@ -1,7 +1,7 @@
 /* eslint-disable */
 import {
-    INTEGER,
-    ASN1Element as _Element,
+    type INTEGER,
+    type ASN1Element as _Element,
     ASN1TagClass as _TagClass,
     ASN1Construction as _Construction,
     ASN1UniversalType as _UniversalType,
@@ -34,39 +34,47 @@ import * as $ from "@wildboar/asn1/functional";
  */
 export
 class IntervalIntegerFrequency {
+    /**
+     * @summary `lowerLimit`.
+     * @description
+     *
+     * Lower bound of the interval. Sequence of bins shall be
+     * increasing in this field (Clause 6.4.4.3.4).
+     *
+     * @public
+     * @readonly
+     */
+    public readonly lowerLimit: INTEGER;
+    /**
+     * @summary `upperLimit`.
+     * @description
+     *
+     * Upper bound of the interval (Clause 6.4.4.3.4).
+     *
+     * @public
+     * @readonly
+     */
+    public readonly upperLimit: INTEGER;
+    /**
+     * @summary `frequency`.
+     * @description
+     *
+     * Count of observations in this interval (Clause 6.4.4.3.4).
+     *
+     * @public
+     * @readonly
+     */
+    public readonly frequency: INTEGER;
+
     constructor (
-        /**
-         * @summary `lowerLimit`.
-         * @description
-         *
-         * Lower bound of the interval. Sequence of bins shall be
-         * increasing in this field (Clause 6.4.4.3.4).
-         *
-         * @public
-         * @readonly
-         */
-        readonly lowerLimit: INTEGER,
-        /**
-         * @summary `upperLimit`.
-         * @description
-         *
-         * Upper bound of the interval (Clause 6.4.4.3.4).
-         *
-         * @public
-         * @readonly
-         */
-        readonly upperLimit: INTEGER,
-        /**
-         * @summary `frequency`.
-         * @description
-         *
-         * Count of observations in this interval (Clause 6.4.4.3.4).
-         *
-         * @public
-         * @readonly
-         */
-        readonly frequency: INTEGER
-    ) {}
+        lowerLimit: INTEGER,
+        upperLimit: INTEGER,
+        frequency: INTEGER
+    ) {
+        this.lowerLimit = lowerLimit;
+        this.upperLimit = upperLimit;
+        this.frequency = frequency;
+    }
 
     /**
      * @summary Restructures an object into a IntervalIntegerFrequency

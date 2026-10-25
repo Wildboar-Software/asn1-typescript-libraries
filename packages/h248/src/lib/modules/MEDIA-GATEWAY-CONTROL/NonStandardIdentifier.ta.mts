@@ -1,7 +1,7 @@
 /* eslint-disable */
 import {
-    IA5String,
-    OBJECT_IDENTIFIER,
+    type IA5String,
+    type OBJECT_IDENTIFIER,
     ASN1Element as _Element,
     ASN1TagClass as _TagClass,
     ASN1SizeError
@@ -55,7 +55,7 @@ function _decode_NonStandardIdentifier (el: _Element): NonStandardIdentifier {
     "CONTEXT 2": [ "experimental", $._decode_implicit<IA5String>(() => $._decodeIA5String) ]
 }); }
     const value = _cached_decoder_for_NonStandardIdentifier(el);
-    if (!(value instanceof _Element) && "experimental" in value) {
+    if (!(_Element.isElement(value)) && "experimental" in value) {
         if (value.experimental.length !== 8) {
             throw new ASN1SizeError("NonStandardIdentifier.experimental violates SIZE constraint");
         }

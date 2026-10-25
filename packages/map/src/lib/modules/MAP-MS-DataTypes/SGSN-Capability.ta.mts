@@ -1,20 +1,20 @@
 /* eslint-disable */
 import {
-    BOOLEAN,
-    NULL,
-    OPTIONAL,
-    ASN1Element as _Element,
+    type BOOLEAN,
+    type NULL,
+    type OPTIONAL,
+    type ASN1Element as _Element,
     ASN1TagClass as _TagClass
 } from "@wildboar/asn1";
 import * as $ from "@wildboar/asn1/functional";
 import { ExtensionContainer, _decode_ExtensionContainer, _encode_ExtensionContainer } from "../MAP-ExtensionDataTypes/ExtensionContainer.ta.mjs";
-import { Ext_SupportedFeatures, _decode_Ext_SupportedFeatures, _encode_Ext_SupportedFeatures } from "../MAP-MS-DataTypes/Ext-SupportedFeatures.ta.mjs";
-import { OfferedCamel4CSIs, _decode_OfferedCamel4CSIs, _encode_OfferedCamel4CSIs } from "../MAP-MS-DataTypes/OfferedCamel4CSIs.ta.mjs";
-import { SuperChargerInfo, _decode_SuperChargerInfo, _encode_SuperChargerInfo } from "../MAP-MS-DataTypes/SuperChargerInfo.ta.mjs";
-import { SupportedCamelPhases, _decode_SupportedCamelPhases, _encode_SupportedCamelPhases } from "../MAP-MS-DataTypes/SupportedCamelPhases.ta.mjs";
-import { SupportedFeatures, _decode_SupportedFeatures, _encode_SupportedFeatures } from "../MAP-MS-DataTypes/SupportedFeatures.ta.mjs";
-import { SupportedLCS_CapabilitySets, _decode_SupportedLCS_CapabilitySets, _encode_SupportedLCS_CapabilitySets } from "../MAP-MS-DataTypes/SupportedLCS-CapabilitySets.ta.mjs";
-import { SupportedRAT_Types, _decode_SupportedRAT_Types, _encode_SupportedRAT_Types } from "../MAP-MS-DataTypes/SupportedRAT-Types.ta.mjs";
+import { type Ext_SupportedFeatures, _decode_Ext_SupportedFeatures, _encode_Ext_SupportedFeatures } from "../MAP-MS-DataTypes/Ext-SupportedFeatures.ta.mjs";
+import { type OfferedCamel4CSIs, _decode_OfferedCamel4CSIs, _encode_OfferedCamel4CSIs } from "../MAP-MS-DataTypes/OfferedCamel4CSIs.ta.mjs";
+import { type SuperChargerInfo, _decode_SuperChargerInfo, _encode_SuperChargerInfo } from "../MAP-MS-DataTypes/SuperChargerInfo.ta.mjs";
+import { type SupportedCamelPhases, _decode_SupportedCamelPhases, _encode_SupportedCamelPhases } from "../MAP-MS-DataTypes/SupportedCamelPhases.ta.mjs";
+import { type SupportedFeatures, _decode_SupportedFeatures, _encode_SupportedFeatures } from "../MAP-MS-DataTypes/SupportedFeatures.ta.mjs";
+import { type SupportedLCS_CapabilitySets, _decode_SupportedLCS_CapabilitySets, _encode_SupportedLCS_CapabilitySets } from "../MAP-MS-DataTypes/SupportedLCS-CapabilitySets.ta.mjs";
+import { type SupportedRAT_Types, _decode_SupportedRAT_Types, _encode_SupportedRAT_Types } from "../MAP-MS-DataTypes/SupportedRAT-Types.ta.mjs";
 
 
 /**
@@ -33,24 +33,24 @@ import { SupportedRAT_Types, _decode_SupportedRAT_Types, _encode_SupportedRAT_Ty
  * 
  * ```asn1
  * SGSN-Capability ::= SEQUENCE{
- *     solsaSupportIndicator    NULL    OPTIONAL,
- *     extensionContainer    [1] ExtensionContainer    OPTIONAL,
+ *     solsaSupportIndicator    NULL    type OPTIONAL,
+ *     extensionContainer    [1] ExtensionContainer    type OPTIONAL,
  *     ... ,
  *     superChargerSupportedInServingNetworkEntity    [2] SuperChargerInfo    OPTIONAL ,
- *     gprsEnhancementsSupportIndicator    [3] NULL    OPTIONAL,
- *     supportedCamelPhases     [4] SupportedCamelPhases    OPTIONAL,
- *     supportedLCS-CapabilitySets    [5]  SupportedLCS-CapabilitySets    OPTIONAL,
- *     offeredCamel4CSIs    [6] OfferedCamel4CSIs    OPTIONAL,
- *     smsCallBarringSupportIndicator    [7]    NULL    OPTIONAL,    supportedRAT-TypesIndicator    [8]    SupportedRAT-Types    OPTIONAL,
- *     supportedFeatures    [9] SupportedFeatures    OPTIONAL,
- *     t-adsDataRetrieval    [10] NULL    OPTIONAL,
- *     homogeneousSupportOfIMSVoiceOverPSSessions [11] BOOLEAN    OPTIONAL,
+ *     gprsEnhancementsSupportIndicator    [3] NULL    type OPTIONAL,
+ *     supportedCamelPhases     [4] SupportedCamelPhases    type OPTIONAL,
+ *     supportedLCS-CapabilitySets    [5]  SupportedLCS-CapabilitySets    type OPTIONAL,
+ *     offeredCamel4CSIs    [6] OfferedCamel4CSIs    type OPTIONAL,
+ *     smsCallBarringSupportIndicator    [7]    NULL    type OPTIONAL,    supportedRAT-TypesIndicator    [8]    SupportedRAT-Types    type OPTIONAL,
+ *     supportedFeatures    [9] SupportedFeatures    type OPTIONAL,
+ *     t-adsDataRetrieval    [10] NULL    type OPTIONAL,
+ *     homogeneousSupportOfIMSVoiceOverPSSessions [11] BOOLEAN    type OPTIONAL,
  *     --    "true" indicates homogeneous support, "false" indicates homogeneous non-support
  *     --    in the complete SGSN or MME area
- *     cancellationTypeInitialAttach    [12]    NULL    OPTIONAL,
- *     msisdn-lessOperation-Supported    [14]    NULL    OPTIONAL,
- *     updateofHomogeneousSupportOfIMSVoiceOverPSSessions [15] NULL    OPTIONAL,
- *     reset-ids-Supported    [16]    NULL    OPTIONAL,
+ *     cancellationTypeInitialAttach    [12]    NULL    type OPTIONAL,
+ *     msisdn-lessOperation-Supported    [14]    NULL    type OPTIONAL,
+ *     updateofHomogeneousSupportOfIMSVoiceOverPSSessions [15] NULL    type OPTIONAL,
+ *     reset-ids-Supported    [16]    NULL    type OPTIONAL,
  *     ext-SupportedFeatures    [17]    Ext-SupportedFeatures    OPTIONAL
  *     }
  * ```
@@ -59,222 +59,260 @@ import { SupportedRAT_Types, _decode_SupportedRAT_Types, _encode_SupportedRAT_Ty
  */
 export
 class SGSN_Capability {
+    /**
+     * @summary `solsaSupportIndicator`.
+     * @description
+     *
+     * SoLSA is supported. If absent and the subscriber is allowed only in
+     * subscribed LSAs, HLR shall reject roaming.
+     *
+     * (3GPP TS 29.002 V19.1.0 clause 8.1.2.3).
+     *
+     * @public
+     * @readonly
+     */
+    public readonly solsaSupportIndicator?: OPTIONAL<NULL>;
+    /**
+     * @summary `extensionContainer`.
+     * @public
+     * @readonly
+     */
+    public readonly extensionContainer?: OPTIONAL<ExtensionContainer>;
+    /**
+     * @summary `superChargerSupportedInServingNetworkEntity`.
+     * @description
+     *
+     * Super-Charger support and whether subscription data were retained
+     * (Age Indicator) or data are required. Absent means Super-Charger is
+     * not supported.
+     *
+     * (3GPP TS 29.002 V19.1.0 clauses 7.6.3.71 and 8.1.2.3).
+     *
+     * @public
+     * @readonly
+     */
+    public readonly superChargerSupportedInServingNetworkEntity?: OPTIONAL<SuperChargerInfo>;
+    /**
+     * @summary `gprsEnhancementsSupportIndicator`.
+     * @description
+     *
+     * SGSN supports GPRS enhancements. If present, HLR may send extension
+     * QoS (and ext-2/3/4) in PDP contexts.
+     *
+     * (3GPP TS 29.002 V19.1.0 clauses 7.6.3.73 and 8.1.7.3).
+     *
+     * @public
+     * @readonly
+     */
+    public readonly gprsEnhancementsSupportIndicator?: OPTIONAL<NULL>;
+    /**
+     * @summary `supportedCamelPhases`.
+     * @description
+     *
+     * CAMEL phases supported. Present if a phase other than phase 1 is
+     * supported. SGSN can only support phase 3 or greater.
+     *
+     * (3GPP TS 29.002 V19.1.0 clauses 7.6.3.36, 8.1.2.3 and 8.1.7.3).
+     *
+     * @public
+     * @readonly
+     */
+    public readonly supportedCamelPhases?: OPTIONAL<SupportedCamelPhases>;
+    /**
+     * @summary `supportedLCS_CapabilitySets`.
+     * @description
+     *
+     * LCS capability sets supported. If sent with no set marked, LCS is not
+     * supported. If absent from a VLR, at most set1; if absent from an
+     * SGSN, no LCS. SGSN shall not indicate set1.
+     *
+     * (3GPP TS 29.002 V19.1.0 clauses 7.6.11.17 and 8.1.2.3).
+     *
+     * @public
+     * @readonly
+     */
+    public readonly supportedLCS_CapabilitySets?: OPTIONAL<SupportedLCS_CapabilitySets>;
+    /**
+     * @summary `offeredCamel4CSIs`.
+     * @description
+     *
+     * CAMEL phase 4 CSIs offered (3GPP TS 23.078).
+     *
+     * (3GPP TS 29.002 V19.1.0 clause 7.6.3.36D).
+     *
+     * @public
+     * @readonly
+     */
+    public readonly offeredCamel4CSIs?: OPTIONAL<OfferedCamel4CSIs>;
+    /**
+     * @summary `smsCallBarringSupportIndicator`.
+     * @description
+     *
+     * SGSN supports call barring for SMS.
+     *
+     * (3GPP TS 29.002 V19.1.0 clause 7.6.3.92).
+     *
+     * @public
+     * @readonly
+     */
+    public readonly smsCallBarringSupportIndicator?: OPTIONAL<NULL>;
+    /**
+     * @summary `supportedRAT_TypesIndicator`.
+     * @description
+     *
+     * Access technologies served by the MSC/VLR, SGSN, or MME.
+     *
+     * (3GPP TS 29.002 V19.1.0 clause 7.6.3.98).
+     *
+     * @public
+     * @readonly
+     */
+    public readonly supportedRAT_TypesIndicator?: OPTIONAL<SupportedRAT_Types>;
+    /**
+     * @summary `supportedFeatures`.
+     * @description
+     *
+     * Supported features as in 3GPP TS 29.272. Also applied to MME/IWF.
+     *
+     * (3GPP TS 29.002 V19.1.0 clause 17.7.1).
+     *
+     * @public
+     * @readonly
+     */
+    public readonly supportedFeatures?: OPTIONAL<SupportedFeatures>;
+    /**
+     * @summary `t_adsDataRetrieval`.
+     * @description
+     *
+     * Support of T-ADS data retrieval. Also applied to MME/IWF.
+     *
+     * (3GPP TS 29.002 V19.1.0 clause 17.7.1).
+     *
+     * @public
+     * @readonly
+     */
+    public readonly t_adsDataRetrieval?: OPTIONAL<NULL>;
+    /**
+     * @summary `homogeneousSupportOfIMSVoiceOverPSSessions`.
+     * @description
+     *
+     * `true`: homogeneous support of IMS VoPS in the complete SGSN or MME
+     * area; `false`: homogeneous non-support. Also applied to MME/IWF.
+     *
+     * (3GPP TS 29.002 V19.1.0 clause 17.7.1).
+     *
+     * @public
+     * @readonly
+     */
+    public readonly homogeneousSupportOfIMSVoiceOverPSSessions?: OPTIONAL<BOOLEAN>;
+    /**
+     * @summary `cancellationTypeInitialAttach`.
+     * @description
+     *
+     * SGSN/MME supports Cancel Location cancellation type
+     * `initialAttachProcedure`.
+     *
+     * (3GPP TS 29.002 V19.1.0 clause 7.6.3.52).
+     *
+     * @public
+     * @readonly
+     */
+    public readonly cancellationTypeInitialAttach?: OPTIONAL<NULL>;
+    /**
+     * @summary `msisdn_lessOperation_Supported`.
+     * @description
+     *
+     * Support of MSISDN-less operation.
+     *
+     * (3GPP TS 29.002 V19.1.0 clause 8.1.2.3).
+     *
+     * @public
+     * @readonly
+     */
+    public readonly msisdn_lessOperation_Supported?: OPTIONAL<NULL>;
+    /**
+     * @summary `updateofHomogeneousSupportOfIMSVoiceOverPSSessions`.
+     * @description
+     *
+     * Update of homogeneous IMS VoPS support. Also applied to MME/IWF.
+     *
+     * (3GPP TS 29.002 V19.1.0 clause 17.7.1).
+     *
+     * @public
+     * @readonly
+     */
+    public readonly updateofHomogeneousSupportOfIMSVoiceOverPSSessions?: OPTIONAL<NULL>;
+    /**
+     * @summary `reset_ids_Supported`.
+     * @description
+     *
+     * SGSN/MME supports Reset-Ids.
+     *
+     * (3GPP TS 29.002 V19.1.0 clause 8.1.7).
+     *
+     * @public
+     * @readonly
+     */
+    public readonly reset_ids_Supported?: OPTIONAL<NULL>;
+    /**
+     * @summary `ext_SupportedFeatures`.
+     * @description
+     *
+     * Additional supported features (e.g. unlicensed spectrum as secondary
+     * RAT). Also applied to MME/IWF.
+     *
+     * (3GPP TS 29.002 V19.1.0 clause 17.7.1).
+     *
+     * @public
+     * @readonly
+     */
+    public readonly ext_SupportedFeatures?: OPTIONAL<Ext_SupportedFeatures>;
+    /**
+     * @summary Extensions that are not recognized.
+     * @public
+     * @readonly
+     */
+    public readonly _unrecognizedExtensionsList: _Element[];
+
     constructor (
-        /**
-         * @summary `solsaSupportIndicator`.
-         * @description
-         *
-         * SoLSA is supported. If absent and the subscriber is allowed only in
-         * subscribed LSAs, HLR shall reject roaming.
-         *
-         * (3GPP TS 29.002 V19.1.0 clause 8.1.2.3).
-         *
-         * @public
-         * @readonly
-         */
-        readonly solsaSupportIndicator?: OPTIONAL<NULL>,
-        /**
-         * @summary `extensionContainer`.
-         * @public
-         * @readonly
-         */
-        readonly extensionContainer?: OPTIONAL<ExtensionContainer>,
-        /**
-         * @summary `superChargerSupportedInServingNetworkEntity`.
-         * @description
-         *
-         * Super-Charger support and whether subscription data were retained
-         * (Age Indicator) or data are required. Absent means Super-Charger is
-         * not supported.
-         *
-         * (3GPP TS 29.002 V19.1.0 clauses 7.6.3.71 and 8.1.2.3).
-         *
-         * @public
-         * @readonly
-         */
-        readonly superChargerSupportedInServingNetworkEntity?: OPTIONAL<SuperChargerInfo>,
-        /**
-         * @summary `gprsEnhancementsSupportIndicator`.
-         * @description
-         *
-         * SGSN supports GPRS enhancements. If present, HLR may send extension
-         * QoS (and ext-2/3/4) in PDP contexts.
-         *
-         * (3GPP TS 29.002 V19.1.0 clauses 7.6.3.73 and 8.1.7.3).
-         *
-         * @public
-         * @readonly
-         */
-        readonly gprsEnhancementsSupportIndicator?: OPTIONAL<NULL>,
-        /**
-         * @summary `supportedCamelPhases`.
-         * @description
-         *
-         * CAMEL phases supported. Present if a phase other than phase 1 is
-         * supported. SGSN can only support phase 3 or greater.
-         *
-         * (3GPP TS 29.002 V19.1.0 clauses 7.6.3.36, 8.1.2.3 and 8.1.7.3).
-         *
-         * @public
-         * @readonly
-         */
-        readonly supportedCamelPhases?: OPTIONAL<SupportedCamelPhases>,
-        /**
-         * @summary `supportedLCS_CapabilitySets`.
-         * @description
-         *
-         * LCS capability sets supported. If sent with no set marked, LCS is not
-         * supported. If absent from a VLR, at most set1; if absent from an
-         * SGSN, no LCS. SGSN shall not indicate set1.
-         *
-         * (3GPP TS 29.002 V19.1.0 clauses 7.6.11.17 and 8.1.2.3).
-         *
-         * @public
-         * @readonly
-         */
-        readonly supportedLCS_CapabilitySets?: OPTIONAL<SupportedLCS_CapabilitySets>,
-        /**
-         * @summary `offeredCamel4CSIs`.
-         * @description
-         *
-         * CAMEL phase 4 CSIs offered (3GPP TS 23.078).
-         *
-         * (3GPP TS 29.002 V19.1.0 clause 7.6.3.36D).
-         *
-         * @public
-         * @readonly
-         */
-        readonly offeredCamel4CSIs?: OPTIONAL<OfferedCamel4CSIs>,
-        /**
-         * @summary `smsCallBarringSupportIndicator`.
-         * @description
-         *
-         * SGSN supports call barring for SMS.
-         *
-         * (3GPP TS 29.002 V19.1.0 clause 7.6.3.92).
-         *
-         * @public
-         * @readonly
-         */
-        readonly smsCallBarringSupportIndicator?: OPTIONAL<NULL>,
-        /**
-         * @summary `supportedRAT_TypesIndicator`.
-         * @description
-         *
-         * Access technologies served by the MSC/VLR, SGSN, or MME.
-         *
-         * (3GPP TS 29.002 V19.1.0 clause 7.6.3.98).
-         *
-         * @public
-         * @readonly
-         */
-        readonly supportedRAT_TypesIndicator?: OPTIONAL<SupportedRAT_Types>,
-        /**
-         * @summary `supportedFeatures`.
-         * @description
-         *
-         * Supported features as in 3GPP TS 29.272. Also applied to MME/IWF.
-         *
-         * (3GPP TS 29.002 V19.1.0 clause 17.7.1).
-         *
-         * @public
-         * @readonly
-         */
-        readonly supportedFeatures?: OPTIONAL<SupportedFeatures>,
-        /**
-         * @summary `t_adsDataRetrieval`.
-         * @description
-         *
-         * Support of T-ADS data retrieval. Also applied to MME/IWF.
-         *
-         * (3GPP TS 29.002 V19.1.0 clause 17.7.1).
-         *
-         * @public
-         * @readonly
-         */
-        readonly t_adsDataRetrieval?: OPTIONAL<NULL>,
-        /**
-         * @summary `homogeneousSupportOfIMSVoiceOverPSSessions`.
-         * @description
-         *
-         * `true`: homogeneous support of IMS VoPS in the complete SGSN or MME
-         * area; `false`: homogeneous non-support. Also applied to MME/IWF.
-         *
-         * (3GPP TS 29.002 V19.1.0 clause 17.7.1).
-         *
-         * @public
-         * @readonly
-         */
-        readonly homogeneousSupportOfIMSVoiceOverPSSessions?: OPTIONAL<BOOLEAN>,
-        /**
-         * @summary `cancellationTypeInitialAttach`.
-         * @description
-         *
-         * SGSN/MME supports Cancel Location cancellation type
-         * `initialAttachProcedure`.
-         *
-         * (3GPP TS 29.002 V19.1.0 clause 7.6.3.52).
-         *
-         * @public
-         * @readonly
-         */
-        readonly cancellationTypeInitialAttach?: OPTIONAL<NULL>,
-        /**
-         * @summary `msisdn_lessOperation_Supported`.
-         * @description
-         *
-         * Support of MSISDN-less operation.
-         *
-         * (3GPP TS 29.002 V19.1.0 clause 8.1.2.3).
-         *
-         * @public
-         * @readonly
-         */
-        readonly msisdn_lessOperation_Supported?: OPTIONAL<NULL>,
-        /**
-         * @summary `updateofHomogeneousSupportOfIMSVoiceOverPSSessions`.
-         * @description
-         *
-         * Update of homogeneous IMS VoPS support. Also applied to MME/IWF.
-         *
-         * (3GPP TS 29.002 V19.1.0 clause 17.7.1).
-         *
-         * @public
-         * @readonly
-         */
-        readonly updateofHomogeneousSupportOfIMSVoiceOverPSSessions?: OPTIONAL<NULL>,
-        /**
-         * @summary `reset_ids_Supported`.
-         * @description
-         *
-         * SGSN/MME supports Reset-Ids.
-         *
-         * (3GPP TS 29.002 V19.1.0 clause 8.1.7).
-         *
-         * @public
-         * @readonly
-         */
-        readonly reset_ids_Supported?: OPTIONAL<NULL>,
-        /**
-         * @summary `ext_SupportedFeatures`.
-         * @description
-         *
-         * Additional supported features (e.g. unlicensed spectrum as secondary
-         * RAT). Also applied to MME/IWF.
-         *
-         * (3GPP TS 29.002 V19.1.0 clause 17.7.1).
-         *
-         * @public
-         * @readonly
-         */
-        readonly ext_SupportedFeatures?: OPTIONAL<Ext_SupportedFeatures>,
-        /**
-         * @summary Extensions that are not recognized.
-         * @public
-         * @readonly
-         */
-        readonly _unrecognizedExtensionsList: _Element[] = []
-    ) {}
+        solsaSupportIndicator?: OPTIONAL<NULL>,
+        extensionContainer?: OPTIONAL<ExtensionContainer>,
+        superChargerSupportedInServingNetworkEntity?: OPTIONAL<SuperChargerInfo>,
+        gprsEnhancementsSupportIndicator?: OPTIONAL<NULL>,
+        supportedCamelPhases?: OPTIONAL<SupportedCamelPhases>,
+        supportedLCS_CapabilitySets?: OPTIONAL<SupportedLCS_CapabilitySets>,
+        offeredCamel4CSIs?: OPTIONAL<OfferedCamel4CSIs>,
+        smsCallBarringSupportIndicator?: OPTIONAL<NULL>,
+        supportedRAT_TypesIndicator?: OPTIONAL<SupportedRAT_Types>,
+        supportedFeatures?: OPTIONAL<SupportedFeatures>,
+        t_adsDataRetrieval?: OPTIONAL<NULL>,
+        homogeneousSupportOfIMSVoiceOverPSSessions?: OPTIONAL<BOOLEAN>,
+        cancellationTypeInitialAttach?: OPTIONAL<NULL>,
+        msisdn_lessOperation_Supported?: OPTIONAL<NULL>,
+        updateofHomogeneousSupportOfIMSVoiceOverPSSessions?: OPTIONAL<NULL>,
+        reset_ids_Supported?: OPTIONAL<NULL>,
+        ext_SupportedFeatures?: OPTIONAL<Ext_SupportedFeatures>,
+        _unrecognizedExtensionsList: _Element[] = []
+    ) {
+        this.solsaSupportIndicator = solsaSupportIndicator;
+        this.extensionContainer = extensionContainer;
+        this.superChargerSupportedInServingNetworkEntity = superChargerSupportedInServingNetworkEntity;
+        this.gprsEnhancementsSupportIndicator = gprsEnhancementsSupportIndicator;
+        this.supportedCamelPhases = supportedCamelPhases;
+        this.supportedLCS_CapabilitySets = supportedLCS_CapabilitySets;
+        this.offeredCamel4CSIs = offeredCamel4CSIs;
+        this.smsCallBarringSupportIndicator = smsCallBarringSupportIndicator;
+        this.supportedRAT_TypesIndicator = supportedRAT_TypesIndicator;
+        this.supportedFeatures = supportedFeatures;
+        this.t_adsDataRetrieval = t_adsDataRetrieval;
+        this.homogeneousSupportOfIMSVoiceOverPSSessions = homogeneousSupportOfIMSVoiceOverPSSessions;
+        this.cancellationTypeInitialAttach = cancellationTypeInitialAttach;
+        this.msisdn_lessOperation_Supported = msisdn_lessOperation_Supported;
+        this.updateofHomogeneousSupportOfIMSVoiceOverPSSessions = updateofHomogeneousSupportOfIMSVoiceOverPSSessions;
+        this.reset_ids_Supported = reset_ids_Supported;
+        this.ext_SupportedFeatures = ext_SupportedFeatures;
+        this._unrecognizedExtensionsList = _unrecognizedExtensionsList;
+    }
 
     /**
      * @summary Restructures an object into a SGSN_Capability

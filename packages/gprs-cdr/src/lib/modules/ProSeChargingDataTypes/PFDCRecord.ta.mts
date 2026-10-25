@@ -1,18 +1,18 @@
 /* eslint-disable */
 import {
-    IA5String,
-    NULL,
-    OCTET_STRING,
-    OPTIONAL,
-    UTF8String,
-    ASN1Element as _Element,
+    type IA5String,
+    type NULL,
+    type OCTET_STRING,
+    type OPTIONAL,
+    type UTF8String,
+    type ASN1Element as _Element,
     ASN1TagClass as _TagClass,
     ASN1SizeError
 } from "@wildboar/asn1";
 import * as $ from "@wildboar/asn1/functional";
-import { RecordType, _decode_RecordType, _encode_RecordType } from "../ProSeChargingDataTypes/RecordType.ta.mjs";
-import { IPAddress, _decode_IPAddress, _encode_IPAddress } from "../ProSeChargingDataTypes/IPAddress.ta.mjs";
-import { ChChSelectionMode, _decode_ChChSelectionMode, _encode_ChChSelectionMode, _enum_for_ChChSelectionMode } from "../ProSeChargingDataTypes/ChChSelectionMode.ta.mjs";
+import { type RecordType, _decode_RecordType, _encode_RecordType } from "../ProSeChargingDataTypes/RecordType.ta.mjs";
+import { type IPAddress, _decode_IPAddress, _encode_IPAddress } from "../ProSeChargingDataTypes/IPAddress.ta.mjs";
+import { type ChChSelectionMode, _decode_ChChSelectionMode, _encode_ChChSelectionMode, _enum_for_ChChSelectionMode } from "../ProSeChargingDataTypes/ChChSelectionMode.ta.mjs";
 import { ManagementExtension, _decode_ManagementExtension, _encode_ManagementExtension } from "../ProSeChargingDataTypes/ManagementExtension.ta.mjs";
 import { CoverageInfo, _decode_CoverageInfo, _encode_CoverageInfo } from "../ProSeChargingDataTypes/CoverageInfo.ta.mjs";
 import { RadioParameterSetInfo, _decode_RadioParameterSetInfo, _encode_RadioParameterSetInfo } from "../ProSeChargingDataTypes/RadioParameterSetInfo.ta.mjs";
@@ -669,13 +669,13 @@ class PFDCRecord {
          * @static
          */
 
-    public static _enum_for_chChSelectionMode = _enum_for_ChChSelectionMode;        /**
+    public static _enum_for_chChSelectionMode: typeof _enum_for_ChChSelectionMode = _enum_for_ChChSelectionMode;        /**
          * @summary The enum used as the type of the component `causeForRecClosing`
          * @public
          * @static
          */
 
-    public static _enum_for_causeForRecClosing = _enum_for_ProSeCauseForRecClosing;
+    public static _enum_for_causeForRecClosing: typeof _enum_for_ProSeCauseForRecClosing = _enum_for_ProSeCauseForRecClosing;
 }
 
 /**

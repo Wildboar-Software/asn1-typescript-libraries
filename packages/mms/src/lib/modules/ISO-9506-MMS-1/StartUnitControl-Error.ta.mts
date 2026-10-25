@@ -1,7 +1,7 @@
 /* eslint-disable */
 import {
-    OPTIONAL,
-    ASN1Element as _Element,
+    type OPTIONAL,
+    type ASN1Element as _Element,
     ASN1TagClass as _TagClass,
     ASN1Construction as _Construction,
     ASN1UniversalType as _UniversalType,
@@ -11,8 +11,8 @@ import {
     ASN1ConstructionError as _ConstructionError,
 } from "@wildboar/asn1";
 import * as $ from "@wildboar/asn1/functional";
-import { Identifier, _decode_Identifier, _encode_Identifier } from "../ISO-9506-MMS-1/Identifier.ta.mjs";
-import { ProgramInvocationState, _decode_ProgramInvocationState, _encode_ProgramInvocationState } from "../MMS-Object-Module-1/ProgramInvocationState.ta.mjs";
+import { type Identifier, _decode_Identifier, _encode_Identifier } from "../ISO-9506-MMS-1/Identifier.ta.mjs";
+import { type ProgramInvocationState, _decode_ProgramInvocationState, _encode_ProgramInvocationState } from "../MMS-Object-Module-1/ProgramInvocationState.ta.mjs";
 
 
 /**
@@ -35,29 +35,35 @@ import { ProgramInvocationState, _decode_ProgramInvocationState, _encode_Program
  */
 export
 class StartUnitControl_Error {
+    /**
+     * @summary `programInvocationName`.
+     * @description
+     *
+     * PI whose Start failed. ISO 9506-1:2003 §13.6.1.3.1.1.
+     *
+     * @public
+     * @readonly
+     */
+    public readonly programInvocationName?: OPTIONAL<Identifier>;
+    /**
+     * @summary `programInvocationState`.
+     * @description
+     *
+     * That PI's state after the failed Start. ISO 9506-1:2003
+     * §13.6.1.3.1.2.
+     *
+     * @public
+     * @readonly
+     */
+    public readonly programInvocationState?: OPTIONAL<ProgramInvocationState>;
+
     constructor (
-        /**
-         * @summary `programInvocationName`.
-         * @description
-         *
-         * PI whose Start failed. ISO 9506-1:2003 §13.6.1.3.1.1.
-         *
-         * @public
-         * @readonly
-         */
-        readonly programInvocationName?: OPTIONAL<Identifier>,
-        /**
-         * @summary `programInvocationState`.
-         * @description
-         *
-         * That PI's state after the failed Start. ISO 9506-1:2003
-         * §13.6.1.3.1.2.
-         *
-         * @public
-         * @readonly
-         */
-        readonly programInvocationState?: OPTIONAL<ProgramInvocationState>
-    ) {}
+        programInvocationName?: OPTIONAL<Identifier>,
+        programInvocationState?: OPTIONAL<ProgramInvocationState>
+    ) {
+        this.programInvocationName = programInvocationName;
+        this.programInvocationState = programInvocationState;
+    }
 
     /**
      * @summary Restructures an object into a StartUnitControl_Error

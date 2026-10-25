@@ -1,7 +1,7 @@
 /* eslint-disable */
 import {
-    OPTIONAL,
-    ASN1Element as _Element,
+    type OPTIONAL,
+    type ASN1Element as _Element,
     ASN1TagClass as _TagClass,
     ASN1Construction as _Construction,
     ASN1UniversalType as _UniversalType,
@@ -12,12 +12,12 @@ import {
 } from '@wildboar/asn1';
 import * as $ from '@wildboar/asn1/functional';
 import {
-    ProbableCause,
+    type ProbableCause,
     _decode_ProbableCause,
     _encode_ProbableCause,
 } from '@wildboar/attribute-asn1module';
 import {
-    AlarmStatus,
+    type AlarmStatus,
     _decode_AlarmStatus,
     _encode_AlarmStatus,
 } from '@wildboar/attribute-asn1module';
@@ -28,7 +28,7 @@ import {
     _encode_PerceivedSeverity,
 } from '@wildboar/attribute-asn1module';
 import {
-    EventTime,
+    type EventTime,
     _decode_EventTime,
     _encode_EventTime,
 } from '@wildboar/attribute-asn1module';
@@ -52,32 +52,42 @@ import {
  *
  */
 export class ArcAlarmDetail {
+    /**
+     * @summary `problem`.
+     * @public
+     * @readonly
+     */
+    public readonly problem: ProbableCause;
+    /**
+     * @summary `alarmStatus`.
+     * @public
+     * @readonly
+     */
+    public readonly alarmStatus: AlarmStatus;
+    /**
+     * @summary `perceivedSeverity`.
+     * @public
+     * @readonly
+     */
+    public readonly perceivedSeverity?: OPTIONAL<PerceivedSeverity>;
+    /**
+     * @summary `eventTime`.
+     * @public
+     * @readonly
+     */
+    public readonly eventTime?: OPTIONAL<EventTime>;
+
     constructor(
-        /**
-         * @summary `problem`.
-         * @public
-         * @readonly
-         */
-        readonly problem: ProbableCause,
-        /**
-         * @summary `alarmStatus`.
-         * @public
-         * @readonly
-         */
-        readonly alarmStatus: AlarmStatus,
-        /**
-         * @summary `perceivedSeverity`.
-         * @public
-         * @readonly
-         */
-        readonly perceivedSeverity?: OPTIONAL<PerceivedSeverity>,
-        /**
-         * @summary `eventTime`.
-         * @public
-         * @readonly
-         */
-        readonly eventTime?: OPTIONAL<EventTime>
-    ) {}
+        problem: ProbableCause,
+        alarmStatus: AlarmStatus,
+        perceivedSeverity?: OPTIONAL<PerceivedSeverity>,
+        eventTime?: OPTIONAL<EventTime>
+    ) {
+        this.problem = problem;
+        this.alarmStatus = alarmStatus;
+        this.perceivedSeverity = perceivedSeverity;
+        this.eventTime = eventTime;
+    }
 
     /**
      * @summary Restructures an object into a ArcAlarmDetail
@@ -108,7 +118,7 @@ export class ArcAlarmDetail {
      * @static
      */
 
-    public static _enum_for_perceivedSeverity = _enum_for_PerceivedSeverity;
+    public static _enum_for_perceivedSeverity: typeof _enum_for_PerceivedSeverity = _enum_for_PerceivedSeverity;
 }
 
 

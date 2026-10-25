@@ -1,7 +1,7 @@
 /* eslint-disable */
 import {
-    ASN1Element as _Element,
-    ENUMERATED
+    type ASN1Element as _Element,
+    type ENUMERATED
 } from "@wildboar/asn1";
 import * as $ from "@wildboar/asn1/functional";
 
@@ -44,7 +44,7 @@ type SMSRegisterRequest = _enum_for_SMSRegisterRequest | ENUMERATED;
  * @type {number}
  */
 export
-const SMSRegisterRequest_sms_registration_required: SMSRegisterRequest = 0; /* LONG_NAMED_ENUMERATED_VALUE */
+const SMSRegisterRequest_sms_registration_required: _enum_for_SMSRegisterRequest.sms_registration_required = _enum_for_SMSRegisterRequest.sms_registration_required; /* LONG_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary sms_registration_required
@@ -52,7 +52,7 @@ const SMSRegisterRequest_sms_registration_required: SMSRegisterRequest = 0; /* L
  * @type {number}
  */
 export
-const sms_registration_required: SMSRegisterRequest = SMSRegisterRequest_sms_registration_required; /* SHORT_NAMED_ENUMERATED_VALUE */
+const sms_registration_required: _enum_for_SMSRegisterRequest.sms_registration_required = SMSRegisterRequest_sms_registration_required; /* SHORT_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary SMSRegisterRequest_sms_registration_not_preferred
@@ -60,7 +60,7 @@ const sms_registration_required: SMSRegisterRequest = SMSRegisterRequest_sms_reg
  * @type {number}
  */
 export
-const SMSRegisterRequest_sms_registration_not_preferred: SMSRegisterRequest = 1; /* LONG_NAMED_ENUMERATED_VALUE */
+const SMSRegisterRequest_sms_registration_not_preferred: _enum_for_SMSRegisterRequest.sms_registration_not_preferred = _enum_for_SMSRegisterRequest.sms_registration_not_preferred; /* LONG_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary sms_registration_not_preferred
@@ -68,7 +68,7 @@ const SMSRegisterRequest_sms_registration_not_preferred: SMSRegisterRequest = 1;
  * @type {number}
  */
 export
-const sms_registration_not_preferred: SMSRegisterRequest = SMSRegisterRequest_sms_registration_not_preferred; /* SHORT_NAMED_ENUMERATED_VALUE */
+const sms_registration_not_preferred: _enum_for_SMSRegisterRequest.sms_registration_not_preferred = SMSRegisterRequest_sms_registration_not_preferred; /* SHORT_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary SMSRegisterRequest_no_preference
@@ -76,7 +76,7 @@ const sms_registration_not_preferred: SMSRegisterRequest = SMSRegisterRequest_sm
  * @type {number}
  */
 export
-const SMSRegisterRequest_no_preference: SMSRegisterRequest = 2; /* LONG_NAMED_ENUMERATED_VALUE */
+const SMSRegisterRequest_no_preference: _enum_for_SMSRegisterRequest.no_preference = _enum_for_SMSRegisterRequest.no_preference; /* LONG_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary no_preference
@@ -84,7 +84,7 @@ const SMSRegisterRequest_no_preference: SMSRegisterRequest = 2; /* LONG_NAMED_EN
  * @type {number}
  */
 export
-const no_preference: SMSRegisterRequest = SMSRegisterRequest_no_preference; /* SHORT_NAMED_ENUMERATED_VALUE */
+const no_preference: _enum_for_SMSRegisterRequest.no_preference = SMSRegisterRequest_no_preference; /* SHORT_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary Decodes an ASN.1 element into a(n) SMSRegisterRequest
@@ -92,7 +92,7 @@ const no_preference: SMSRegisterRequest = SMSRegisterRequest_no_preference; /* S
  * @param el The element being decoded.
  * @returns The decoded data structure.
  */
-export const _decode_SMSRegisterRequest = $._decodeEnumerated;
+export const _decode_SMSRegisterRequest: $.ASN1Decoder<number> = $._decodeEnumerated;
 
 /**
  * @summary Encodes a(n) SMSRegisterRequest into an ASN.1 Element.
@@ -101,7 +101,7 @@ export const _decode_SMSRegisterRequest = $._decodeEnumerated;
  * @param elGetter A function that can be used to get new ASN.1 elements.
  * @returns {_Element} The SMSRegisterRequest, encoded as an ASN.1 Element.
  */
-export const _encode_SMSRegisterRequest = $._encodeEnumerated;
+export const _encode_SMSRegisterRequest: $.ASN1Encoder<number> = $._encodeEnumerated;
 
 
 /* eslint-enable */

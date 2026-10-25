@@ -1,18 +1,18 @@
 /* eslint-disable */
 import {
-    IA5String,
-    INTEGER,
-    NULL,
-    OCTET_STRING,
-    OPTIONAL,
-    UTF8String,
-    ASN1Element as _Element,
+    type IA5String,
+    type INTEGER,
+    type NULL,
+    type OCTET_STRING,
+    type OPTIONAL,
+    type UTF8String,
+    type ASN1Element as _Element,
     ASN1TagClass as _TagClass,
     ASN1SizeError,
     ASN1OverflowError
 } from "@wildboar/asn1";
 import * as $ from "@wildboar/asn1/functional";
-import { RecordType, _decode_RecordType, _encode_RecordType } from "../MONTEChargingDataTypes/RecordType.ta.mjs";
+import { type RecordType, _decode_RecordType, _encode_RecordType } from "../MONTEChargingDataTypes/RecordType.ta.mjs";
 import { MonitoringEventConfigurationActivity, _decode_MonitoringEventConfigurationActivity, _encode_MonitoringEventConfigurationActivity, _enum_for_MonitoringEventConfigurationActivity } from "../MONTEChargingDataTypes/MonitoringEventConfigurationActivity.ta.mjs";
 import { MonitoringType, _decode_MonitoringType, _encode_MonitoringType, _enum_for_MonitoringType } from "../MONTEChargingDataTypes/MonitoringType.ta.mjs";
 import { ReachabilityConfiguration, _decode_ReachabilityConfiguration, _encode_ReachabilityConfiguration } from "../MONTEChargingDataTypes/ReachabilityConfiguration.ta.mjs";
@@ -503,25 +503,25 @@ class MECORecord {
          * @static
          */
 
-    public static _enum_for_monitoringEventConfigurationActivity = _enum_for_MonitoringEventConfigurationActivity;        /**
+    public static _enum_for_monitoringEventConfigurationActivity: typeof _enum_for_MonitoringEventConfigurationActivity = _enum_for_MonitoringEventConfigurationActivity;        /**
          * @summary The enum used as the type of the component `monitoringType`
          * @public
          * @static
          */
 
-    public static _enum_for_monitoringType = _enum_for_MonitoringType;        /**
+    public static _enum_for_monitoringType: typeof _enum_for_MonitoringType = _enum_for_MonitoringType;        /**
          * @summary The enum used as the type of the component `locationType`
          * @public
          * @static
          */
 
-    public static _enum_for_locationType = _enum_for_LocationType;        /**
+    public static _enum_for_locationType: typeof _enum_for_LocationType = _enum_for_LocationType;        /**
          * @summary The enum used as the type of the component `accuracy`
          * @public
          * @static
          */
 
-    public static _enum_for_accuracy = _enum_for_Accuracy;
+    public static _enum_for_accuracy: typeof _enum_for_Accuracy = _enum_for_Accuracy;
 }
 
 /**

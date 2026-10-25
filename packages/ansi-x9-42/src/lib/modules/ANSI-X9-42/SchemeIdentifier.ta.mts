@@ -1,9 +1,9 @@
 /* eslint-disable */
 import {
-    ASN1Element as _Element,
+    type ASN1Element as _Element,
     ASN1TagClass as _TagClass,
-    OBJECT_IDENTIFIER,
-    OPTIONAL,
+    type OBJECT_IDENTIFIER,
+    type OPTIONAL,
 } from "@wildboar/asn1";
 import * as $ from "@wildboar/asn1/functional";
 
@@ -36,7 +36,7 @@ export class SchemeIdentifier {
      * @public
      * @readonly
      */
-    readonly scheme: OBJECT_IDENTIFIER;
+    public readonly scheme: OBJECT_IDENTIFIER;
     /**
      * @summary `parameters`.
      * @description
@@ -48,7 +48,7 @@ export class SchemeIdentifier {
      * @public
      * @readonly
      */
-    readonly parameters?: OPTIONAL<_Element>;
+    public readonly parameters?: OPTIONAL<_Element>;
 
     constructor(
         scheme: OBJECT_IDENTIFIER,

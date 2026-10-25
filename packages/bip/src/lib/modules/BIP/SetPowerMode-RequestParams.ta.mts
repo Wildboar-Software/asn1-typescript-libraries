@@ -11,17 +11,17 @@ import {
 } from '@wildboar/asn1';
 import * as $ from '@wildboar/asn1/functional';
 import {
-  BioAPI_HANDLE,
+  type BioAPI_HANDLE,
   _decode_BioAPI_HANDLE,
   _encode_BioAPI_HANDLE,
 } from '../BIP/BioAPI-HANDLE.ta.mjs';
 import {
-  BioAPI_UNIT_ID,
+  type BioAPI_UNIT_ID,
   _decode_BioAPI_UNIT_ID,
   _encode_BioAPI_UNIT_ID,
 } from '../BIP/BioAPI-UNIT-ID.ta.mjs';
 import {
-  BioAPI_POWER_MODE,
+  type BioAPI_POWER_MODE,
   _enum_for_BioAPI_POWER_MODE,
   _decode_BioAPI_POWER_MODE,
   _encode_BioAPI_POWER_MODE,
@@ -59,7 +59,7 @@ export class SetPowerMode_RequestParams {
    * @public
    * @readonly
    */
-  readonly originalBSPHandle: BioAPI_HANDLE;
+  public readonly originalBSPHandle: BioAPI_HANDLE;
   /**
    * @summary `unitID`.
    * @description
@@ -70,7 +70,7 @@ export class SetPowerMode_RequestParams {
    * @public
    * @readonly
    */
-  readonly unitID: BioAPI_UNIT_ID;
+  public readonly unitID: BioAPI_UNIT_ID;
   /**
    * @summary `powerMode`.
    * @description
@@ -81,7 +81,7 @@ export class SetPowerMode_RequestParams {
    * @public
    * @readonly
    */
-  readonly powerMode: BioAPI_POWER_MODE;
+  public readonly powerMode: BioAPI_POWER_MODE;
 
   constructor(
     originalBSPHandle: BioAPI_HANDLE,
@@ -123,7 +123,7 @@ export class SetPowerMode_RequestParams {
    * @static
    */
 
-  public static _enum_for_powerMode = _enum_for_BioAPI_POWER_MODE;
+  public static _enum_for_powerMode: typeof _enum_for_BioAPI_POWER_MODE = _enum_for_BioAPI_POWER_MODE;
 }
 
 

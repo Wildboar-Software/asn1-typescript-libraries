@@ -1,7 +1,7 @@
 /* eslint-disable */
 import {
-    GraphicString,
-    ASN1Element as _Element,
+    type GraphicString,
+    type ASN1Element as _Element,
     ASN1TagClass as _TagClass,
     ASN1Construction as _Construction,
     ASN1UniversalType as _UniversalType,
@@ -43,12 +43,12 @@ type CommunicationsEntityId = GraphicString; // GraphicString
 
 
 
-export const _decode_CommunicationsEntityId = $._decodeGraphicString;
+export const _decode_CommunicationsEntityId: $.ASN1Decoder<string> = $._decodeGraphicString;
 
 
 
 
-export const _encode_CommunicationsEntityId = $._encodeGraphicString;
+export const _encode_CommunicationsEntityId: $.ASN1Encoder<string> = $._encodeGraphicString;
 
 
 /* eslint-enable */

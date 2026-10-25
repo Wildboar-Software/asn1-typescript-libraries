@@ -1,6 +1,6 @@
 /* eslint-disable */
 import {
-    INTEGER
+    type INTEGER
 } from "@wildboar/asn1";
 import * as $ from "@wildboar/asn1/functional";
 
@@ -32,7 +32,7 @@ type RANSecondaryRATUsageReport_secondaryRATType = INTEGER;
  * @type {number}
  */
 export
-const RANSecondaryRATUsageReport_secondaryRATType_nR: RANSecondaryRATUsageReport_secondaryRATType = 0; /* LONG_NAMED_INTEGER_VALUE */
+const RANSecondaryRATUsageReport_secondaryRATType_nR: 0 = 0 satisfies RANSecondaryRATUsageReport_secondaryRATType; /* LONG_NAMED_INTEGER_VALUE */
 
 /**
  * @summary RANSecondaryRATUsageReport_secondaryRATType_nR
@@ -40,7 +40,7 @@ const RANSecondaryRATUsageReport_secondaryRATType_nR: RANSecondaryRATUsageReport
  * @type {number}
  */
 export
-const nR: RANSecondaryRATUsageReport_secondaryRATType = RANSecondaryRATUsageReport_secondaryRATType_nR; /* SHORT_NAMED_INTEGER_VALUE */
+const nR: 0 = RANSecondaryRATUsageReport_secondaryRATType_nR; /* SHORT_NAMED_INTEGER_VALUE */
 
 export
 const _decode_RANSecondaryRATUsageReport_secondaryRATType: $.ASN1Decoder<RANSecondaryRATUsageReport_secondaryRATType> = $._decodeInteger;

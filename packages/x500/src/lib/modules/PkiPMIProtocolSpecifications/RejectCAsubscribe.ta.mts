@@ -1,23 +1,23 @@
 /* eslint-disable */
 import {
-    ASN1Element as _Element,
+    type ASN1Element as _Element,
     ASN1TagClass as _TagClass,
-    OPTIONAL,
+    type OPTIONAL,
 } from "@wildboar/asn1";
 import * as $ from "@wildboar/asn1/functional";
 import {
-    CASP_error,
+    type CASP_error,
     _decode_CASP_error,
     _encode_CASP_error,
     _enum_for_CASP_error,
 } from "../PkiPMIProtocolSpecifications/CASP-error.ta.mjs";
 import {
-    CASPsequence,
+    type CASPsequence,
     _decode_CASPsequence,
     _encode_CASPsequence,
 } from "../PkiPMIProtocolSpecifications/CASPsequence.ta.mjs";
 import {
-    CASPversion,
+    type CASPversion,
     CASPversion_v1 /* IMPORTED_LONG_ENUMERATION_ITEM */,
     _decode_CASPversion,
     _encode_CASPversion,
@@ -43,32 +43,42 @@ import {
  *
  */
 export class RejectCAsubscribe implements CASPcommonComponents {
+    /**
+     * @summary `version`.
+     * @public
+     * @readonly
+     */
+    public readonly version: OPTIONAL<CASPversion>; /* REPLICATED_COMPONENT */
+    /**
+     * @summary `sequence`.
+     * @public
+     * @readonly
+     */
+    public readonly sequence: CASPsequence; /* REPLICATED_COMPONENT */
+    /**
+     * @summary `reason`.
+     * @public
+     * @readonly
+     */
+    public readonly reason: CASP_error;
+    /**
+     * @summary Extensions that are not recognized.
+     * @public
+     * @readonly
+     */
+    public readonly _unrecognizedExtensionsList: _Element[];
+
     constructor(
-        /**
-         * @summary `version`.
-         * @public
-         * @readonly
-         */
-        readonly version: OPTIONAL<CASPversion> /* REPLICATED_COMPONENT */,
-        /**
-         * @summary `sequence`.
-         * @public
-         * @readonly
-         */
-        readonly sequence: CASPsequence /* REPLICATED_COMPONENT */,
-        /**
-         * @summary `reason`.
-         * @public
-         * @readonly
-         */
-        readonly reason: CASP_error,
-        /**
-         * @summary Extensions that are not recognized.
-         * @public
-         * @readonly
-         */
-        readonly _unrecognizedExtensionsList: _Element[] = []
-    ) {}
+        version: OPTIONAL<CASPversion>,
+        sequence: CASPsequence,
+        reason: CASP_error,
+        _unrecognizedExtensionsList: _Element[] = []
+    ) {
+        this.version = version;
+        this.sequence = sequence;
+        this.reason = reason;
+        this._unrecognizedExtensionsList = _unrecognizedExtensionsList;
+    }
 
     /**
      * @summary Restructures an object into a RejectCAsubscribe
@@ -108,14 +118,14 @@ export class RejectCAsubscribe implements CASPcommonComponents {
      * @static
      */
 
-    public static _enum_for_version = _enum_for_CASPversion;
+    public static _enum_for_version: typeof _enum_for_CASPversion = _enum_for_CASPversion;
     /**
      * @summary The enum used as the type of the component `reason`
      * @public
      * @static
      */
 
-    public static _enum_for_reason = _enum_for_CASP_error;
+    public static _enum_for_reason: typeof _enum_for_CASP_error = _enum_for_CASP_error;
 }
 
 /**

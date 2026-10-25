@@ -1,6 +1,6 @@
 /* eslint-disable */
 import {
-    ASN1Element as _Element,
+    type ASN1Element as _Element,
     ASN1TagClass as _TagClass,
     ASN1Construction as _Construction,
     ASN1UniversalType as _UniversalType,
@@ -11,7 +11,7 @@ import {
 } from '@wildboar/asn1';
 import * as $ from '@wildboar/asn1/functional';
 import {
-    ObjectInstance,
+    type ObjectInstance,
     _decode_ObjectInstance,
     _encode_ObjectInstance,
 } from '@wildboar/cmip';
@@ -31,20 +31,26 @@ import {
  *
  */
 export class CoincidentUnprotectedUnidirectionalConnections {
+    /**
+     * @summary `xcA`.
+     * @public
+     * @readonly
+     */
+    public readonly xcA: ObjectInstance;
+    /**
+     * @summary `xcB`.
+     * @public
+     * @readonly
+     */
+    public readonly xcB: ObjectInstance;
+
     constructor(
-        /**
-         * @summary `xcA`.
-         * @public
-         * @readonly
-         */
-        readonly xcA: ObjectInstance,
-        /**
-         * @summary `xcB`.
-         * @public
-         * @readonly
-         */
-        readonly xcB: ObjectInstance
-    ) {}
+        xcA: ObjectInstance,
+        xcB: ObjectInstance
+    ) {
+        this.xcA = xcA;
+        this.xcB = xcB;
+    }
 
     /**
      * @summary Restructures an object into a CoincidentUnprotectedUnidirectionalConnections

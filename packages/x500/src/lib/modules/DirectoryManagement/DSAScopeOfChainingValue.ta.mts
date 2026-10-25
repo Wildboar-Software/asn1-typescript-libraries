@@ -1,5 +1,5 @@
 /* eslint-disable */
-import { ASN1Element as _Element, INTEGER } from "@wildboar/asn1";
+import { ASN1Element as _Element, type INTEGER } from "@wildboar/asn1";
 import * as $ from "@wildboar/asn1/functional";
 
 /**
@@ -29,7 +29,7 @@ export type DSAScopeOfChainingValue = INTEGER;
  * @constant
  * @type {number}
  */
-export const DSAScopeOfChainingValue_dmd: DSAScopeOfChainingValue = 0; /* LONG_NAMED_INTEGER_VALUE */
+export const DSAScopeOfChainingValue_dmd: 0 = 0 satisfies DSAScopeOfChainingValue; /* LONG_NAMED_INTEGER_VALUE */
 
 /**
  * @summary DSAScopeOfChainingValue_dmd
@@ -41,7 +41,7 @@ export const DSAScopeOfChainingValue_dmd: DSAScopeOfChainingValue = 0; /* LONG_N
  * @constant
  * @type {number}
  */
-export const dmd: DSAScopeOfChainingValue = DSAScopeOfChainingValue_dmd; /* SHORT_NAMED_INTEGER_VALUE */
+export const dmd: 0 = DSAScopeOfChainingValue_dmd; /* SHORT_NAMED_INTEGER_VALUE */
 
 /**
  * @summary DSAScopeOfChainingValue_country
@@ -52,7 +52,7 @@ export const dmd: DSAScopeOfChainingValue = DSAScopeOfChainingValue_dmd; /* SHOR
  * @constant
  * @type {number}
  */
-export const DSAScopeOfChainingValue_country: DSAScopeOfChainingValue = 1; /* LONG_NAMED_INTEGER_VALUE */
+export const DSAScopeOfChainingValue_country: 1 = 1 satisfies DSAScopeOfChainingValue; /* LONG_NAMED_INTEGER_VALUE */
 
 /**
  * @summary DSAScopeOfChainingValue_country
@@ -63,7 +63,7 @@ export const DSAScopeOfChainingValue_country: DSAScopeOfChainingValue = 1; /* LO
  * @constant
  * @type {number}
  */
-export const country: DSAScopeOfChainingValue = DSAScopeOfChainingValue_country; /* SHORT_NAMED_INTEGER_VALUE */
+export const country: 1 = DSAScopeOfChainingValue_country; /* SHORT_NAMED_INTEGER_VALUE */
 
 /**
  * @summary DSAScopeOfChainingValue_global
@@ -74,7 +74,7 @@ export const country: DSAScopeOfChainingValue = DSAScopeOfChainingValue_country;
  * @constant
  * @type {number}
  */
-export const DSAScopeOfChainingValue_global: DSAScopeOfChainingValue = 2; /* LONG_NAMED_INTEGER_VALUE */
+export const DSAScopeOfChainingValue_global: 2 = 2 satisfies DSAScopeOfChainingValue; /* LONG_NAMED_INTEGER_VALUE */
 
 /**
  * @summary DSAScopeOfChainingValue_global
@@ -85,13 +85,13 @@ export const DSAScopeOfChainingValue_global: DSAScopeOfChainingValue = 2; /* LON
  * @constant
  * @type {number}
  */
-export const global: DSAScopeOfChainingValue = DSAScopeOfChainingValue_global; /* SHORT_NAMED_INTEGER_VALUE */
+export const global: 2 = DSAScopeOfChainingValue_global; /* SHORT_NAMED_INTEGER_VALUE */
 
 
-export const _decode_DSAScopeOfChainingValue = $._decodeInteger;
+export const _decode_DSAScopeOfChainingValue: $.ASN1Decoder<INTEGER> = $._decodeInteger;
 
 
-export const _encode_DSAScopeOfChainingValue = $._encodeInteger;
+export const _encode_DSAScopeOfChainingValue: $.ASN1Encoder<INTEGER> = $._encodeInteger;
 
 
 /* eslint-enable */

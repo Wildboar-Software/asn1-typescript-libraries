@@ -1,6 +1,6 @@
 /* eslint-disable */
 import {
-    ASN1Element as _Element,
+    type ASN1Element as _Element,
     ASN1TagClass as _TagClass,
     ASN1Construction as _Construction,
     ASN1UniversalType as _UniversalType,
@@ -11,12 +11,12 @@ import {
 } from '@wildboar/asn1';
 import * as $ from '@wildboar/asn1/functional';
 import {
-    Abstract_syntax_name,
+    type Abstract_syntax_name,
     _decode_Abstract_syntax_name,
     _encode_Abstract_syntax_name,
 } from '../ISO8823-PRESENTATION/Abstract-syntax-name.ta.mjs';
 import {
-    Transfer_syntax_name,
+    type Transfer_syntax_name,
     _decode_Transfer_syntax_name,
     _encode_Transfer_syntax_name,
 } from '../ISO8823-PRESENTATION/Transfer-syntax-name.ta.mjs';

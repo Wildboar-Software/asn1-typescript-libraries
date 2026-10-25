@@ -1,19 +1,19 @@
 /* eslint-disable */
 import {
-    IA5String,
-    INTEGER,
-    NULL,
-    OCTET_STRING,
-    OPTIONAL,
-    UTF8String,
-    ASN1Element as _Element,
+    type IA5String,
+    type INTEGER,
+    type NULL,
+    type OCTET_STRING,
+    type OPTIONAL,
+    type UTF8String,
+    type ASN1Element as _Element,
     ASN1TagClass as _TagClass,
     ASN1SizeError
 } from "@wildboar/asn1";
 import * as $ from "@wildboar/asn1/functional";
-import { RecordType, _decode_RecordType, _encode_RecordType } from "../ProSeChargingDataTypes/RecordType.ta.mjs";
-import { IPAddress, _decode_IPAddress, _encode_IPAddress } from "../ProSeChargingDataTypes/IPAddress.ta.mjs";
-import { ChChSelectionMode, _decode_ChChSelectionMode, _encode_ChChSelectionMode, _enum_for_ChChSelectionMode } from "../ProSeChargingDataTypes/ChChSelectionMode.ta.mjs";
+import { type RecordType, _decode_RecordType, _encode_RecordType } from "../ProSeChargingDataTypes/RecordType.ta.mjs";
+import { type IPAddress, _decode_IPAddress, _encode_IPAddress } from "../ProSeChargingDataTypes/IPAddress.ta.mjs";
+import { type ChChSelectionMode, _decode_ChChSelectionMode, _encode_ChChSelectionMode, _enum_for_ChChSelectionMode } from "../ProSeChargingDataTypes/ChChSelectionMode.ta.mjs";
 import { ManagementExtension, _decode_ManagementExtension, _encode_ManagementExtension } from "../ProSeChargingDataTypes/ManagementExtension.ta.mjs";
 import { ProSeUERole, _decode_ProSeUERole, _encode_ProSeUERole, _enum_for_ProSeUERole } from "../ProSeChargingDataTypes/ProSeUERole.ta.mjs";
 import { ProSeFunctionRole, _decode_ProSeFunctionRole, _encode_ProSeFunctionRole, _enum_for_ProSeFunctionRole } from "../ProSeChargingDataTypes/ProSeFunctionRole.ta.mjs";
@@ -688,31 +688,31 @@ class PFDDRecord {
          * @static
          */
 
-    public static _enum_for_chChSelectionMode = _enum_for_ChChSelectionMode;        /**
+    public static _enum_for_chChSelectionMode: typeof _enum_for_ChChSelectionMode = _enum_for_ChChSelectionMode;        /**
          * @summary The enum used as the type of the component `roleofUE`
          * @public
          * @static
          */
 
-    public static _enum_for_roleofUE = _enum_for_ProSeUERole;        /**
+    public static _enum_for_roleofUE: typeof _enum_for_ProSeUERole = _enum_for_ProSeUERole;        /**
          * @summary The enum used as the type of the component `roleofProSeFunction`
          * @public
          * @static
          */
 
-    public static _enum_for_roleofProSeFunction = _enum_for_ProSeFunctionRole;        /**
+    public static _enum_for_roleofProSeFunction: typeof _enum_for_ProSeFunctionRole = _enum_for_ProSeFunctionRole;        /**
          * @summary The enum used as the type of the component `proSeEventType`
          * @public
          * @static
          */
 
-    public static _enum_for_proSeEventType = _enum_for_ProSeEventType;        /**
+    public static _enum_for_proSeEventType: typeof _enum_for_ProSeEventType = _enum_for_ProSeEventType;        /**
          * @summary The enum used as the type of the component `pc5RadioTechnology`
          * @public
          * @static
          */
 
-    public static _enum_for_pc5RadioTechnology = _enum_for_PC5RadioTechnology;
+    public static _enum_for_pc5RadioTechnology: typeof _enum_for_PC5RadioTechnology = _enum_for_PC5RadioTechnology;
 }
 
 /**

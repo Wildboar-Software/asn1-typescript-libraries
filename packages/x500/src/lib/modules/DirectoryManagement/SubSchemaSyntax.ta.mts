@@ -23,19 +23,19 @@ import {
  *               subSchema
  *                 [2]  SEQUENCE {structureRules
  *                                  [1]  SEQUENCE OF DITStructureRuleDescription
- *                                    OPTIONAL,
+ *                                    type OPTIONAL,
  *                                contentRules
  *                                  [2]  SEQUENCE OF DITContentRuleDescription
- *                                    OPTIONAL,
+ *                                    type OPTIONAL,
  *                                matchingRules
  *                                  [3]  SEQUENCE OF MatchingRuleDescription
- *                                    OPTIONAL,
+ *                                    type OPTIONAL,
  *                                attributeTypes
  *                                  [4]  SEQUENCE OF AttributeTypeDescription
- *                                    OPTIONAL,
+ *                                    type OPTIONAL,
  *                                objectClasses
  *                                  [5]  SEQUENCE OF ObjectClassDescription
- *                                    OPTIONAL,
+ *                                    type OPTIONAL,
  *                                nameForms
  *                                  [6]  SEQUENCE OF NameFormDescription OPTIONAL,
  *                                matchRuleUses

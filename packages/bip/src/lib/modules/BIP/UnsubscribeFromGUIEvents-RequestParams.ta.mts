@@ -1,7 +1,7 @@
 /* eslint-disable */
 import {
-  OPTIONAL,
-  BOOLEAN,
+  type OPTIONAL,
+  type BOOLEAN,
   ASN1Element as _Element,
   ASN1TagClass as _TagClass,
   ASN1Construction as _Construction,
@@ -13,12 +13,12 @@ import {
 } from '@wildboar/asn1';
 import * as $ from '@wildboar/asn1/functional';
 import {
-  BioAPI_UUID,
+  type BioAPI_UUID,
   _decode_BioAPI_UUID,
   _encode_BioAPI_UUID,
 } from '../BIP/BioAPI-UUID.ta.mjs';
 import {
-  BioAPI_HANDLE,
+  type BioAPI_HANDLE,
   _decode_BioAPI_HANDLE,
   _encode_BioAPI_HANDLE,
 } from '../BIP/BioAPI-HANDLE.ta.mjs';
@@ -64,7 +64,7 @@ export class UnsubscribeFromGUIEvents_RequestParams {
    * @public
    * @readonly
    */
-  readonly guiEventSubscriptionUuid: OPTIONAL<BioAPI_UUID>;
+  public readonly guiEventSubscriptionUuid: OPTIONAL<BioAPI_UUID>;
   /**
    * @summary `bspProductUuid`.
    * @description
@@ -76,7 +76,7 @@ export class UnsubscribeFromGUIEvents_RequestParams {
    * @public
    * @readonly
    */
-  readonly bspProductUuid: OPTIONAL<BioAPI_UUID>;
+  public readonly bspProductUuid: OPTIONAL<BioAPI_UUID>;
   /**
    * @summary `originalBSPHandle`.
    * @description
@@ -89,7 +89,7 @@ export class UnsubscribeFromGUIEvents_RequestParams {
    * @public
    * @readonly
    */
-  readonly originalBSPHandle: OPTIONAL<BioAPI_HANDLE>;
+  public readonly originalBSPHandle: OPTIONAL<BioAPI_HANDLE>;
   /**
    * @summary `guiSelectEventSubscribed`.
    * @description
@@ -101,7 +101,7 @@ export class UnsubscribeFromGUIEvents_RequestParams {
    * @public
    * @readonly
    */
-  readonly guiSelectEventSubscribed: BOOLEAN;
+  public readonly guiSelectEventSubscribed: BOOLEAN;
   /**
    * @summary `guiStateEventSubscribed`.
    * @description
@@ -112,7 +112,7 @@ export class UnsubscribeFromGUIEvents_RequestParams {
    * @public
    * @readonly
    */
-  readonly guiStateEventSubscribed: BOOLEAN;
+  public readonly guiStateEventSubscribed: BOOLEAN;
   /**
    * @summary `guiProgressEventSubscribed`.
    * @description
@@ -123,7 +123,7 @@ export class UnsubscribeFromGUIEvents_RequestParams {
    * @public
    * @readonly
    */
-  readonly guiProgressEventSubscribed: BOOLEAN;
+  public readonly guiProgressEventSubscribed: BOOLEAN;
 
   constructor(
     guiEventSubscriptionUuid: OPTIONAL<BioAPI_UUID>,

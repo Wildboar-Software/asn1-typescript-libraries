@@ -1,13 +1,13 @@
 /* eslint-disable */
 import {
-    OPTIONAL,
-    ASN1Element as _Element,
+    type OPTIONAL,
+    type ASN1Element as _Element,
     ASN1TagClass as _TagClass
 } from "@wildboar/asn1";
 import * as $ from "@wildboar/asn1/functional";
 import { ExtensionContainer, _decode_ExtensionContainer, _encode_ExtensionContainer } from "../MAP-ExtensionDataTypes/ExtensionContainer.ta.mjs";
-import { ODB_GeneralData, _decode_ODB_GeneralData, _encode_ODB_GeneralData } from "../MAP-MS-DataTypes/ODB-GeneralData.ta.mjs";
-import { ODB_HPLMN_Data, _decode_ODB_HPLMN_Data, _encode_ODB_HPLMN_Data } from "../MAP-MS-DataTypes/ODB-HPLMN-Data.ta.mjs";
+import { type ODB_GeneralData, _decode_ODB_GeneralData, _encode_ODB_GeneralData } from "../MAP-MS-DataTypes/ODB-GeneralData.ta.mjs";
+import { type ODB_HPLMN_Data, _decode_ODB_HPLMN_Data, _encode_ODB_HPLMN_Data } from "../MAP-MS-DataTypes/ODB-HPLMN-Data.ta.mjs";
 
 
 /**
@@ -24,8 +24,8 @@ import { ODB_HPLMN_Data, _decode_ODB_HPLMN_Data, _encode_ODB_HPLMN_Data } from "
  * ```asn1
  * ODB-Data ::= SEQUENCE {
  *     odb-GeneralData    ODB-GeneralData,
- *     odb-HPLMN-Data    ODB-HPLMN-Data    OPTIONAL,
- *     extensionContainer    ExtensionContainer    OPTIONAL,
+ *     odb-HPLMN-Data    ODB-HPLMN-Data    type OPTIONAL,
+ *     extensionContainer    ExtensionContainer    type OPTIONAL,
  *     ...}
  * ```
  * 
@@ -33,42 +33,52 @@ import { ODB_HPLMN_Data, _decode_ODB_HPLMN_Data, _encode_ODB_HPLMN_Data } from "
  */
 export
 class ODB_Data {
+    /**
+     * @summary `odb_GeneralData`.
+     * @description
+     *
+     * ODB categories applicable in any PLMN. (3GPP TS 29.002 V19.1.0 clause
+     * 7.6.3.9)
+     *
+     * @public
+     * @readonly
+     */
+    public readonly odb_GeneralData: ODB_GeneralData;
+    /**
+     * @summary `odb_HPLMN_Data`.
+     * @description
+     *
+     * HPLMN-specific ODB; present when the subscriber is in the HPLMN and
+     * those categories apply. (3GPP TS 29.002 V19.1.0 clause 7.6.3.10)
+     *
+     * @public
+     * @readonly
+     */
+    public readonly odb_HPLMN_Data?: OPTIONAL<ODB_HPLMN_Data>;
+    /**
+     * @summary `extensionContainer`.
+     * @public
+     * @readonly
+     */
+    public readonly extensionContainer?: OPTIONAL<ExtensionContainer>;
+    /**
+     * @summary Extensions that are not recognized.
+     * @public
+     * @readonly
+     */
+    public readonly _unrecognizedExtensionsList: _Element[];
+
     constructor (
-        /**
-         * @summary `odb_GeneralData`.
-         * @description
-         *
-         * ODB categories applicable in any PLMN. (3GPP TS 29.002 V19.1.0 clause
-         * 7.6.3.9)
-         *
-         * @public
-         * @readonly
-         */
-        readonly odb_GeneralData: ODB_GeneralData,
-        /**
-         * @summary `odb_HPLMN_Data`.
-         * @description
-         *
-         * HPLMN-specific ODB; present when the subscriber is in the HPLMN and
-         * those categories apply. (3GPP TS 29.002 V19.1.0 clause 7.6.3.10)
-         *
-         * @public
-         * @readonly
-         */
-        readonly odb_HPLMN_Data?: OPTIONAL<ODB_HPLMN_Data>,
-        /**
-         * @summary `extensionContainer`.
-         * @public
-         * @readonly
-         */
-        readonly extensionContainer?: OPTIONAL<ExtensionContainer>,
-        /**
-         * @summary Extensions that are not recognized.
-         * @public
-         * @readonly
-         */
-        readonly _unrecognizedExtensionsList: _Element[] = []
-    ) {}
+        odb_GeneralData: ODB_GeneralData,
+        odb_HPLMN_Data?: OPTIONAL<ODB_HPLMN_Data>,
+        extensionContainer?: OPTIONAL<ExtensionContainer>,
+        _unrecognizedExtensionsList: _Element[] = []
+    ) {
+        this.odb_GeneralData = odb_GeneralData;
+        this.odb_HPLMN_Data = odb_HPLMN_Data;
+        this.extensionContainer = extensionContainer;
+        this._unrecognizedExtensionsList = _unrecognizedExtensionsList;
+    }
 
     /**
      * @summary Restructures an object into a ODB_Data

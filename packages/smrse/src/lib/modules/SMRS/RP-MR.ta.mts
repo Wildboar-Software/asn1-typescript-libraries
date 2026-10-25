@@ -1,8 +1,8 @@
 /* eslint-disable */
 import {
-    ASN1Element as _Element,
+    type ASN1Element as _Element,
     ASN1OverflowError,
-    INTEGER
+    type INTEGER
 } from "@wildboar/asn1";
 import * as $ from "@wildboar/asn1/functional";
 
@@ -55,7 +55,7 @@ export const _decode_RP_MR = (el: _Element): RP_MR => {
  * @param elGetter A function that can be used to get new ASN.1 elements.
  * @returns {_Element} The RP_MR, encoded as an ASN.1 Element.
  */
-export const _encode_RP_MR = $._encodeInteger;
+export const _encode_RP_MR: $.ASN1Encoder<INTEGER> = $._encodeInteger;
 
 
 /* eslint-enable */

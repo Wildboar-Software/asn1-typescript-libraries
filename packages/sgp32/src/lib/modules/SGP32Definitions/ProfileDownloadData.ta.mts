@@ -1,8 +1,8 @@
 /* eslint-disable */
 import {
-    NULL,
-    UTF8String,
-    ASN1Element as _Element,
+    type NULL,
+    type UTF8String,
+    type ASN1Element as _Element,
     ASN1TagClass as _TagClass
 } from "@wildboar/asn1";
 import { ASN1SizeError } from "@wildboar/asn1";

@@ -1,6 +1,6 @@
 /* eslint-disable */
 import {
-    ASN1Element as _Element,
+    type ASN1Element as _Element,
     ASN1TagClass as _TagClass,
     ASN1Construction as _Construction,
     ASN1UniversalType as _UniversalType,
@@ -11,12 +11,12 @@ import {
 } from '@wildboar/asn1';
 import * as $ from '@wildboar/asn1/functional';
 import {
-    ClockAddress,
+    type ClockAddress,
     _decode_ClockAddress,
     _encode_ClockAddress,
 } from '../TimeMF/ClockAddress.ta.mjs';
 import {
-    ReferenceClockType,
+    type ReferenceClockType,
     _decode_ReferenceClockType,
     _encode_ReferenceClockType,
 } from '../TimeMF/ReferenceClockType.ta.mjs';

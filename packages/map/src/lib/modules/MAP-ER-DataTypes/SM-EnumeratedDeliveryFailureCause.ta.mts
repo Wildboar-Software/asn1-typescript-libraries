@@ -87,7 +87,7 @@ type SM_EnumeratedDeliveryFailureCause = _enum_for_SM_EnumeratedDeliveryFailureC
  * @enum {number}
  */
 export
-const SM_EnumeratedDeliveryFailureCause = _enum_for_SM_EnumeratedDeliveryFailureCause;
+const SM_EnumeratedDeliveryFailureCause: typeof _enum_for_SM_EnumeratedDeliveryFailureCause = _enum_for_SM_EnumeratedDeliveryFailureCause;
 
 /**
  * @summary SM_EnumeratedDeliveryFailureCause_memoryCapacityExceeded
@@ -99,7 +99,7 @@ const SM_EnumeratedDeliveryFailureCause = _enum_for_SM_EnumeratedDeliveryFailure
  * @type {number}
  */
 export
-const SM_EnumeratedDeliveryFailureCause_memoryCapacityExceeded: SM_EnumeratedDeliveryFailureCause = SM_EnumeratedDeliveryFailureCause.memoryCapacityExceeded; /* LONG_NAMED_ENUMERATED_VALUE */
+const SM_EnumeratedDeliveryFailureCause_memoryCapacityExceeded: _enum_for_SM_EnumeratedDeliveryFailureCause.memoryCapacityExceeded = SM_EnumeratedDeliveryFailureCause.memoryCapacityExceeded; /* LONG_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary memoryCapacityExceeded
@@ -111,7 +111,7 @@ const SM_EnumeratedDeliveryFailureCause_memoryCapacityExceeded: SM_EnumeratedDel
  * @type {number}
  */
 export
-const memoryCapacityExceeded: SM_EnumeratedDeliveryFailureCause = SM_EnumeratedDeliveryFailureCause.memoryCapacityExceeded; /* SHORT_NAMED_ENUMERATED_VALUE */
+const memoryCapacityExceeded: _enum_for_SM_EnumeratedDeliveryFailureCause.memoryCapacityExceeded = SM_EnumeratedDeliveryFailureCause.memoryCapacityExceeded; /* SHORT_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary SM_EnumeratedDeliveryFailureCause_equipmentProtocolError
@@ -123,7 +123,7 @@ const memoryCapacityExceeded: SM_EnumeratedDeliveryFailureCause = SM_EnumeratedD
  * @type {number}
  */
 export
-const SM_EnumeratedDeliveryFailureCause_equipmentProtocolError: SM_EnumeratedDeliveryFailureCause = SM_EnumeratedDeliveryFailureCause.equipmentProtocolError; /* LONG_NAMED_ENUMERATED_VALUE */
+const SM_EnumeratedDeliveryFailureCause_equipmentProtocolError: _enum_for_SM_EnumeratedDeliveryFailureCause.equipmentProtocolError = SM_EnumeratedDeliveryFailureCause.equipmentProtocolError; /* LONG_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary equipmentProtocolError
@@ -135,7 +135,7 @@ const SM_EnumeratedDeliveryFailureCause_equipmentProtocolError: SM_EnumeratedDel
  * @type {number}
  */
 export
-const equipmentProtocolError: SM_EnumeratedDeliveryFailureCause = SM_EnumeratedDeliveryFailureCause.equipmentProtocolError; /* SHORT_NAMED_ENUMERATED_VALUE */
+const equipmentProtocolError: _enum_for_SM_EnumeratedDeliveryFailureCause.equipmentProtocolError = SM_EnumeratedDeliveryFailureCause.equipmentProtocolError; /* SHORT_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary SM_EnumeratedDeliveryFailureCause_equipmentNotSM_Equipped
@@ -147,7 +147,7 @@ const equipmentProtocolError: SM_EnumeratedDeliveryFailureCause = SM_EnumeratedD
  * @type {number}
  */
 export
-const SM_EnumeratedDeliveryFailureCause_equipmentNotSM_Equipped: SM_EnumeratedDeliveryFailureCause = SM_EnumeratedDeliveryFailureCause.equipmentNotSM_Equipped; /* LONG_NAMED_ENUMERATED_VALUE */
+const SM_EnumeratedDeliveryFailureCause_equipmentNotSM_Equipped: _enum_for_SM_EnumeratedDeliveryFailureCause.equipmentNotSM_Equipped = SM_EnumeratedDeliveryFailureCause.equipmentNotSM_Equipped; /* LONG_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary equipmentNotSM_Equipped
@@ -159,7 +159,7 @@ const SM_EnumeratedDeliveryFailureCause_equipmentNotSM_Equipped: SM_EnumeratedDe
  * @type {number}
  */
 export
-const equipmentNotSM_Equipped: SM_EnumeratedDeliveryFailureCause = SM_EnumeratedDeliveryFailureCause.equipmentNotSM_Equipped; /* SHORT_NAMED_ENUMERATED_VALUE */
+const equipmentNotSM_Equipped: _enum_for_SM_EnumeratedDeliveryFailureCause.equipmentNotSM_Equipped = SM_EnumeratedDeliveryFailureCause.equipmentNotSM_Equipped; /* SHORT_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary SM_EnumeratedDeliveryFailureCause_unknownServiceCentre
@@ -171,7 +171,7 @@ const equipmentNotSM_Equipped: SM_EnumeratedDeliveryFailureCause = SM_Enumerated
  * @type {number}
  */
 export
-const SM_EnumeratedDeliveryFailureCause_unknownServiceCentre: SM_EnumeratedDeliveryFailureCause = SM_EnumeratedDeliveryFailureCause.unknownServiceCentre; /* LONG_NAMED_ENUMERATED_VALUE */
+const SM_EnumeratedDeliveryFailureCause_unknownServiceCentre: _enum_for_SM_EnumeratedDeliveryFailureCause.unknownServiceCentre = SM_EnumeratedDeliveryFailureCause.unknownServiceCentre; /* LONG_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary unknownServiceCentre
@@ -183,7 +183,7 @@ const SM_EnumeratedDeliveryFailureCause_unknownServiceCentre: SM_EnumeratedDeliv
  * @type {number}
  */
 export
-const unknownServiceCentre: SM_EnumeratedDeliveryFailureCause = SM_EnumeratedDeliveryFailureCause.unknownServiceCentre; /* SHORT_NAMED_ENUMERATED_VALUE */
+const unknownServiceCentre: _enum_for_SM_EnumeratedDeliveryFailureCause.unknownServiceCentre = SM_EnumeratedDeliveryFailureCause.unknownServiceCentre; /* SHORT_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary SM_EnumeratedDeliveryFailureCause_sc_Congestion
@@ -195,7 +195,7 @@ const unknownServiceCentre: SM_EnumeratedDeliveryFailureCause = SM_EnumeratedDel
  * @type {number}
  */
 export
-const SM_EnumeratedDeliveryFailureCause_sc_Congestion: SM_EnumeratedDeliveryFailureCause = SM_EnumeratedDeliveryFailureCause.sc_Congestion; /* LONG_NAMED_ENUMERATED_VALUE */
+const SM_EnumeratedDeliveryFailureCause_sc_Congestion: _enum_for_SM_EnumeratedDeliveryFailureCause.sc_Congestion = SM_EnumeratedDeliveryFailureCause.sc_Congestion; /* LONG_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary sc_Congestion
@@ -207,7 +207,7 @@ const SM_EnumeratedDeliveryFailureCause_sc_Congestion: SM_EnumeratedDeliveryFail
  * @type {number}
  */
 export
-const sc_Congestion: SM_EnumeratedDeliveryFailureCause = SM_EnumeratedDeliveryFailureCause.sc_Congestion; /* SHORT_NAMED_ENUMERATED_VALUE */
+const sc_Congestion: _enum_for_SM_EnumeratedDeliveryFailureCause.sc_Congestion = SM_EnumeratedDeliveryFailureCause.sc_Congestion; /* SHORT_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary SM_EnumeratedDeliveryFailureCause_invalidSME_Address
@@ -219,7 +219,7 @@ const sc_Congestion: SM_EnumeratedDeliveryFailureCause = SM_EnumeratedDeliveryFa
  * @type {number}
  */
 export
-const SM_EnumeratedDeliveryFailureCause_invalidSME_Address: SM_EnumeratedDeliveryFailureCause = SM_EnumeratedDeliveryFailureCause.invalidSME_Address; /* LONG_NAMED_ENUMERATED_VALUE */
+const SM_EnumeratedDeliveryFailureCause_invalidSME_Address: _enum_for_SM_EnumeratedDeliveryFailureCause.invalidSME_Address = SM_EnumeratedDeliveryFailureCause.invalidSME_Address; /* LONG_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary invalidSME_Address
@@ -231,7 +231,7 @@ const SM_EnumeratedDeliveryFailureCause_invalidSME_Address: SM_EnumeratedDeliver
  * @type {number}
  */
 export
-const invalidSME_Address: SM_EnumeratedDeliveryFailureCause = SM_EnumeratedDeliveryFailureCause.invalidSME_Address; /* SHORT_NAMED_ENUMERATED_VALUE */
+const invalidSME_Address: _enum_for_SM_EnumeratedDeliveryFailureCause.invalidSME_Address = SM_EnumeratedDeliveryFailureCause.invalidSME_Address; /* SHORT_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary SM_EnumeratedDeliveryFailureCause_subscriberNotSC_Subscriber
@@ -243,7 +243,7 @@ const invalidSME_Address: SM_EnumeratedDeliveryFailureCause = SM_EnumeratedDeliv
  * @type {number}
  */
 export
-const SM_EnumeratedDeliveryFailureCause_subscriberNotSC_Subscriber: SM_EnumeratedDeliveryFailureCause = SM_EnumeratedDeliveryFailureCause.subscriberNotSC_Subscriber; /* LONG_NAMED_ENUMERATED_VALUE */
+const SM_EnumeratedDeliveryFailureCause_subscriberNotSC_Subscriber: _enum_for_SM_EnumeratedDeliveryFailureCause.subscriberNotSC_Subscriber = SM_EnumeratedDeliveryFailureCause.subscriberNotSC_Subscriber; /* LONG_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary subscriberNotSC_Subscriber
@@ -255,7 +255,7 @@ const SM_EnumeratedDeliveryFailureCause_subscriberNotSC_Subscriber: SM_Enumerate
  * @type {number}
  */
 export
-const subscriberNotSC_Subscriber: SM_EnumeratedDeliveryFailureCause = SM_EnumeratedDeliveryFailureCause.subscriberNotSC_Subscriber; /* SHORT_NAMED_ENUMERATED_VALUE */
+const subscriberNotSC_Subscriber: _enum_for_SM_EnumeratedDeliveryFailureCause.subscriberNotSC_Subscriber = SM_EnumeratedDeliveryFailureCause.subscriberNotSC_Subscriber; /* SHORT_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary Decodes an ASN.1 element into a(n) SM_EnumeratedDeliveryFailureCause
@@ -263,7 +263,7 @@ const subscriberNotSC_Subscriber: SM_EnumeratedDeliveryFailureCause = SM_Enumera
  * @param el The element being decoded.
  * @returns The decoded data structure.
  */
-export const _decode_SM_EnumeratedDeliveryFailureCause = $._decodeEnumerated;
+export const _decode_SM_EnumeratedDeliveryFailureCause: $.ASN1Decoder<number> = $._decodeEnumerated;
 
 /**
  * @summary Encodes a(n) SM_EnumeratedDeliveryFailureCause into an ASN.1 Element.
@@ -272,7 +272,7 @@ export const _decode_SM_EnumeratedDeliveryFailureCause = $._decodeEnumerated;
  * @param elGetter A function that can be used to get new ASN.1 elements.
  * @returns {_Element} The SM_EnumeratedDeliveryFailureCause, encoded as an ASN.1 Element.
  */
-export const _encode_SM_EnumeratedDeliveryFailureCause = $._encodeEnumerated;
+export const _encode_SM_EnumeratedDeliveryFailureCause: $.ASN1Encoder<number> = $._encodeEnumerated;
 
 
 /* eslint-enable */

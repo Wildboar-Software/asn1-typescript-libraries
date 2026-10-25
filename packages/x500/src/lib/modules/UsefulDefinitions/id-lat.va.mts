@@ -1,5 +1,5 @@
 /* eslint-disable */
-import { ID } from "../UsefulDefinitions/ID.ta.mjs";
+import { type ID } from "../UsefulDefinitions/ID.ta.mjs";
 import { ldap_attr } from "../UsefulDefinitions/ldap-attr.va.mjs";
 /**
  * @summary id_lat

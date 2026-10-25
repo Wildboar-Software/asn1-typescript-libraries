@@ -1,6 +1,6 @@
 /* eslint-disable */
 import {
-    ENUMERATED
+    type ENUMERATED
 } from "@wildboar/asn1";
 import * as $ from "@wildboar/asn1/functional";
 
@@ -54,7 +54,7 @@ type MMSState = _enum_for_MMSState | ENUMERATED;
  * @type {number}
  */
 export
-const MMSState_draft: MMSState = 0; /* LONG_NAMED_ENUMERATED_VALUE */
+const MMSState_draft: _enum_for_MMSState.draft = _enum_for_MMSState.draft; /* LONG_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary draft
@@ -65,7 +65,7 @@ const MMSState_draft: MMSState = 0; /* LONG_NAMED_ENUMERATED_VALUE */
  * @type {number}
  */
 export
-const draft: MMSState = MMSState_draft; /* SHORT_NAMED_ENUMERATED_VALUE */
+const draft: _enum_for_MMSState.draft = MMSState_draft; /* SHORT_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary MMSState_sent
@@ -76,7 +76,7 @@ const draft: MMSState = MMSState_draft; /* SHORT_NAMED_ENUMERATED_VALUE */
  * @type {number}
  */
 export
-const MMSState_sent: MMSState = 1; /* LONG_NAMED_ENUMERATED_VALUE */
+const MMSState_sent: _enum_for_MMSState.sent = _enum_for_MMSState.sent; /* LONG_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary sent
@@ -87,7 +87,7 @@ const MMSState_sent: MMSState = 1; /* LONG_NAMED_ENUMERATED_VALUE */
  * @type {number}
  */
 export
-const sent: MMSState = MMSState_sent; /* SHORT_NAMED_ENUMERATED_VALUE */
+const sent: _enum_for_MMSState.sent = MMSState_sent; /* SHORT_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary MMSState_new_
@@ -98,7 +98,7 @@ const sent: MMSState = MMSState_sent; /* SHORT_NAMED_ENUMERATED_VALUE */
  * @type {number}
  */
 export
-const MMSState_new_: MMSState = 2; /* LONG_NAMED_ENUMERATED_VALUE */
+const MMSState_new_: _enum_for_MMSState.new_ = _enum_for_MMSState.new_; /* LONG_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary new_
@@ -109,7 +109,7 @@ const MMSState_new_: MMSState = 2; /* LONG_NAMED_ENUMERATED_VALUE */
  * @type {number}
  */
 export
-const new_: MMSState = MMSState_new_; /* SHORT_NAMED_ENUMERATED_VALUE */
+const new_: _enum_for_MMSState.new_ = MMSState_new_; /* SHORT_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary MMSState_retreived
@@ -121,7 +121,7 @@ const new_: MMSState = MMSState_new_; /* SHORT_NAMED_ENUMERATED_VALUE */
  * @type {number}
  */
 export
-const MMSState_retreived: MMSState = 3; /* LONG_NAMED_ENUMERATED_VALUE */
+const MMSState_retreived: _enum_for_MMSState.retreived = _enum_for_MMSState.retreived; /* LONG_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary retreived
@@ -133,7 +133,7 @@ const MMSState_retreived: MMSState = 3; /* LONG_NAMED_ENUMERATED_VALUE */
  * @type {number}
  */
 export
-const retreived: MMSState = MMSState_retreived; /* SHORT_NAMED_ENUMERATED_VALUE */
+const retreived: _enum_for_MMSState.retreived = MMSState_retreived; /* SHORT_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary MMSState_forwarded
@@ -144,7 +144,7 @@ const retreived: MMSState = MMSState_retreived; /* SHORT_NAMED_ENUMERATED_VALUE 
  * @type {number}
  */
 export
-const MMSState_forwarded: MMSState = 4; /* LONG_NAMED_ENUMERATED_VALUE */
+const MMSState_forwarded: _enum_for_MMSState.forwarded = _enum_for_MMSState.forwarded; /* LONG_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary forwarded
@@ -155,7 +155,7 @@ const MMSState_forwarded: MMSState = 4; /* LONG_NAMED_ENUMERATED_VALUE */
  * @type {number}
  */
 export
-const forwarded: MMSState = MMSState_forwarded; /* SHORT_NAMED_ENUMERATED_VALUE */
+const forwarded: _enum_for_MMSState.forwarded = MMSState_forwarded; /* SHORT_NAMED_ENUMERATED_VALUE */
 export const _decode_MMSState: $.ASN1Decoder<MMSState> = $._decodeEnumerated;
 export const _encode_MMSState: $.ASN1Encoder<MMSState> = $._encodeEnumerated;
 

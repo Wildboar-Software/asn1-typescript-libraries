@@ -93,7 +93,7 @@ type ActivityType_direction = _enum_for_ActivityType_direction;
  * @enum {number}
  */
 export
-const ActivityType_direction = _enum_for_ActivityType_direction;
+const ActivityType_direction: typeof _enum_for_ActivityType_direction = _enum_for_ActivityType_direction;
 
 /**
  * @summary ActivityType_direction_toTarget
@@ -108,7 +108,7 @@ const ActivityType_direction = _enum_for_ActivityType_direction;
  * @type {number}
  */
 export
-const ActivityType_direction_toTarget: ActivityType_direction = ActivityType_direction.toTarget; /* LONG_NAMED_ENUMERATED_VALUE */
+const ActivityType_direction_toTarget: _enum_for_ActivityType_direction.toTarget = ActivityType_direction.toTarget; /* LONG_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary toTarget
@@ -123,7 +123,7 @@ const ActivityType_direction_toTarget: ActivityType_direction = ActivityType_dir
  * @type {number}
  */
 export
-const toTarget: ActivityType_direction = ActivityType_direction.toTarget; /* SHORT_NAMED_ENUMERATED_VALUE */
+const toTarget: _enum_for_ActivityType_direction.toTarget = ActivityType_direction.toTarget; /* SHORT_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary ActivityType_direction_fromTarget
@@ -139,7 +139,7 @@ const toTarget: ActivityType_direction = ActivityType_direction.toTarget; /* SHO
  * @type {number}
  */
 export
-const ActivityType_direction_fromTarget: ActivityType_direction = ActivityType_direction.fromTarget; /* LONG_NAMED_ENUMERATED_VALUE */
+const ActivityType_direction_fromTarget: _enum_for_ActivityType_direction.fromTarget = ActivityType_direction.fromTarget; /* LONG_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary fromTarget
@@ -155,7 +155,7 @@ const ActivityType_direction_fromTarget: ActivityType_direction = ActivityType_d
  * @type {number}
  */
 export
-const fromTarget: ActivityType_direction = ActivityType_direction.fromTarget; /* SHORT_NAMED_ENUMERATED_VALUE */
+const fromTarget: _enum_for_ActivityType_direction.fromTarget = ActivityType_direction.fromTarget; /* SHORT_NAMED_ENUMERATED_VALUE */
 export const _decode_ActivityType_direction: $.ASN1Decoder<ActivityType_direction> = $._decodeEnumerated;
 export const _encode_ActivityType_direction: $.ASN1Encoder<ActivityType_direction> = $._encodeEnumerated;
 

@@ -1,6 +1,6 @@
 /* eslint-disable */
 import {
-    ASN1Element as _Element,
+    type ASN1Element as _Element,
     ASN1TagClass as _TagClass,
     ASN1Construction as _Construction,
     ASN1UniversalType as _UniversalType,
@@ -9,7 +9,7 @@ import {
     EmbeddedPDV as _PDV,
     ASN1ConstructionError as _ConstructionError,
 } from "@wildboar/asn1";
-import { KEY_IDENTIFIER } from "../CryptographicInformationFramework/KEY-IDENTIFIER.oca.mjs";
+import { type KEY_IDENTIFIER } from "../CryptographicInformationFramework/KEY-IDENTIFIER.oca.mjs";
 import { issuerAndSerialNumber } from "../CryptographicInformationFramework/issuerAndSerialNumber.oa.mjs";
 import { issuerAndSerialNumberHash } from "../CryptographicInformationFramework/issuerAndSerialNumberHash.oa.mjs";
 import { subjectKeyId } from "../CryptographicInformationFramework/subjectKeyId.oa.mjs";

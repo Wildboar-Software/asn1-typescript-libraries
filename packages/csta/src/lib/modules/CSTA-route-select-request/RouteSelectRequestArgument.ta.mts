@@ -2,22 +2,22 @@
 
 import * as $ from "@wildboar/asn1/functional";
 import {
-    OPTIONAL,
-    BOOLEAN,
-    SEQUENCE,
-    SET,
-    ASN1Element as _Element,
+    type OPTIONAL,
+    type BOOLEAN,
+    type SEQUENCE,
+    type SET,
+    type ASN1Element as _Element,
     ASN1TagClass as _TagClass
 } from "@wildboar/asn1";
-import { RouteingCrossRefID, _decode_RouteingCrossRefID, _encode_RouteingCrossRefID } from "../CSTA-device-feature-types/RouteingCrossRefID.ta.mjs";
+import { type RouteingCrossRefID, _decode_RouteingCrossRefID, _encode_RouteingCrossRefID } from "../CSTA-device-feature-types/RouteingCrossRefID.ta.mjs";
 
-import { RouteRegisterReqID, _decode_RouteRegisterReqID, _encode_RouteRegisterReqID } from "../CSTA-device-feature-types/RouteRegisterReqID.ta.mjs";
+import { type RouteRegisterReqID, _decode_RouteRegisterReqID, _encode_RouteRegisterReqID } from "../CSTA-device-feature-types/RouteRegisterReqID.ta.mjs";
 
 import { DeviceID, _decode_DeviceID, _encode_DeviceID } from "../CSTA-device-identifiers/DeviceID.ta.mjs";
 
-import { RetryValue, _decode_RetryValue, _encode_RetryValue } from "../CSTA-device-feature-types/RetryValue.ta.mjs";
+import { type RetryValue, _decode_RetryValue, _encode_RetryValue } from "../CSTA-device-feature-types/RetryValue.ta.mjs";
 
-import { CorrelatorData, _decode_CorrelatorData, _encode_CorrelatorData } from "../CSTA-device-feature-types/CorrelatorData.ta.mjs";
+import { type CorrelatorData, _decode_CorrelatorData, _encode_CorrelatorData } from "../CSTA-device-feature-types/CorrelatorData.ta.mjs";
 
 import { CSTACommonArguments, _decode_CSTACommonArguments, _encode_CSTACommonArguments } from "../CSTA-extension-types/CSTACommonArguments.ta.mjs";
 
@@ -37,12 +37,12 @@ import { CSTACommonArguments, _decode_CSTACommonArguments, _encode_CSTACommonArg
  * ```asn1
  * RouteSelectRequestArgument ::= SEQUENCE
  * {    crossRefIdentifier        RouteingCrossRefID,
- *     routeRegisterReqID        [ 0] IMPLICIT RouteRegisterReqID    OPTIONAL,
+ *     routeRegisterReqID        [ 0] IMPLICIT RouteRegisterReqID    type OPTIONAL,
  *     routeSelected            [ 1] DeviceID,
- *     alternateRoutes            [ 2] IMPLICIT SEQUENCE OF DeviceID    OPTIONAL,
- *     remainRetries            [ 3] RetryValue                OPTIONAL,
- *     routeUsedReq            [ 4] IMPLICIT BOOLEAN            OPTIONAL,
- *     correlatorData            [ 5] IMPLICIT CorrelatorData        OPTIONAL,
+ *     alternateRoutes            [ 2] IMPLICIT SEQUENCE OF DeviceID    type OPTIONAL,
+ *     remainRetries            [ 3] RetryValue                type OPTIONAL,
+ *     routeUsedReq            [ 4] IMPLICIT BOOLEAN            type OPTIONAL,
+ *     correlatorData            [ 5] IMPLICIT CorrelatorData        type OPTIONAL,
  *     extensions            CSTACommonArguments            OPTIONAL }
  * ```
  * 
@@ -50,82 +50,100 @@ import { CSTACommonArguments, _decode_CSTACommonArguments, _encode_CSTACommonArg
  */
 export
 class RouteSelectRequestArgument {
+    /**
+     * @summary `crossRefIdentifier`.
+     * @description
+     *
+     * Dialogue this destination answers.
+     * @public
+     * @readonly
+     */
+    public readonly crossRefIdentifier: RouteingCrossRefID;
+    /**
+     * @summary `routeRegisterReqID`.
+     * @description
+     *
+     * Registration for this dialogue, if registration is used.
+     * @public
+     * @readonly
+     */
+    public readonly routeRegisterReqID: OPTIONAL<RouteRegisterReqID>;
+    /**
+     * @summary `routeSelected`.
+     * @description
+     *
+     * Destination the SF should use.
+     * @public
+     * @readonly
+     */
+    public readonly routeSelected: DeviceID;
+    /**
+     * @summary `alternateRoutes`.
+     * @description
+     *
+     * Further destinations the SF may try.
+     * @public
+     * @readonly
+     */
+    public readonly alternateRoutes?: OPTIONAL<DeviceID[]>;
+    /**
+     * @summary `remainRetries`.
+     * @description
+     *
+     * Remaining routes CF can still offer, or an indication that no
+     * count is available.
+     * @public
+     * @readonly
+     */
+    public readonly remainRetries?: OPTIONAL<RetryValue>;
+    /**
+     * @summary `routeUsedReq`.
+     * @description
+     *
+     * TRUE: SF should send Route Used with the actual destination.
+     * @public
+     * @readonly
+     */
+    public readonly routeUsedReq?: OPTIONAL<BOOLEAN>;
+    /**
+     * @summary `correlatorData`.
+     * @description
+     *
+     * Correlator data to associate with the call.
+     * @public
+     * @readonly
+     */
+    public readonly correlatorData?: OPTIONAL<CorrelatorData>;
+    /**
+     * @summary `extensions`.
+     * @description
+     *
+     * Optional security (timestamp, sequence, securityInfo) and
+     * privateData.
+     * @public
+     * @readonly
+     */
+    public readonly extensions?: OPTIONAL<CSTACommonArguments>;
+
     constructor (
-        /**
-         * @summary `crossRefIdentifier`.
-         * @description
-         *
-         * Dialogue this destination answers.
-         * @public
-         * @readonly
-         */
-        readonly crossRefIdentifier: RouteingCrossRefID,
-        /**
-         * @summary `routeRegisterReqID`.
-         * @description
-         *
-         * Registration for this dialogue, if registration is used.
-         * @public
-         * @readonly
-         */
-        readonly routeRegisterReqID: OPTIONAL<RouteRegisterReqID>,
-        /**
-         * @summary `routeSelected`.
-         * @description
-         *
-         * Destination the SF should use.
-         * @public
-         * @readonly
-         */
-        readonly routeSelected: DeviceID,
-        /**
-         * @summary `alternateRoutes`.
-         * @description
-         *
-         * Further destinations the SF may try.
-         * @public
-         * @readonly
-         */
-        readonly alternateRoutes?: OPTIONAL<DeviceID[]>,
-        /**
-         * @summary `remainRetries`.
-         * @description
-         *
-         * Remaining routes CF can still offer, or an indication that no
-         * count is available.
-         * @public
-         * @readonly
-         */
-        readonly remainRetries?: OPTIONAL<RetryValue>,
-        /**
-         * @summary `routeUsedReq`.
-         * @description
-         *
-         * TRUE: SF should send Route Used with the actual destination.
-         * @public
-         * @readonly
-         */
-        readonly routeUsedReq?: OPTIONAL<BOOLEAN>,
-        /**
-         * @summary `correlatorData`.
-         * @description
-         *
-         * Correlator data to associate with the call.
-         * @public
-         * @readonly
-         */
-        readonly correlatorData?: OPTIONAL<CorrelatorData>,
-        /**
-         * @summary `extensions`.
-         * @description
-         *
-         * Optional security (timestamp, sequence, securityInfo) and
-         * privateData.
-         * @public
-         * @readonly
-         */
-        readonly extensions?: OPTIONAL<CSTACommonArguments>
-    ) {}
+        crossRefIdentifier: RouteingCrossRefID,
+        routeRegisterReqID: OPTIONAL<RouteRegisterReqID>,
+        routeSelected: DeviceID,
+        alternateRoutes?: OPTIONAL<DeviceID[]>,
+        remainRetries?: OPTIONAL<RetryValue>,
+        routeUsedReq?: OPTIONAL<BOOLEAN>,
+        correlatorData?: OPTIONAL<CorrelatorData>,
+        extensions?: OPTIONAL<CSTACommonArguments>
+    ) {
+        this.crossRefIdentifier = crossRefIdentifier;
+        this.routeRegisterReqID = routeRegisterReqID;
+        this.routeSelected = routeSelected;
+        this.alternateRoutes = alternateRoutes;
+        this.remainRetries = remainRetries;
+        this.routeUsedReq = routeUsedReq;
+        this.correlatorData = correlatorData;
+        this.extensions = extensions;
+    }
 
     /**
      * @summary Restructures an object into a RouteSelectRequestArgument

@@ -1,6 +1,6 @@
 /* eslint-disable */
 import {
-  INTEGER,
+  type INTEGER,
   ASN1Element as _Element,
   ASN1TagClass as _TagClass,
   ASN1Construction as _Construction,
@@ -52,7 +52,7 @@ export class KRB_CRED {
    * @public
    * @readonly
    */
-  readonly pvno: INTEGER;
+  public readonly pvno: INTEGER;
   /**
    * @summary `msg_type`.
    * @description
@@ -62,7 +62,7 @@ export class KRB_CRED {
    * @public
    * @readonly
    */
-  readonly msg_type: INTEGER;
+  public readonly msg_type: INTEGER;
   /**
    * @summary `tickets`.
    * @description
@@ -73,7 +73,7 @@ export class KRB_CRED {
    * @public
    * @readonly
    */
-  readonly tickets: Ticket[];
+  public readonly tickets: Ticket[];
   /**
    * @summary `enc_part`.
    * @description
@@ -84,7 +84,7 @@ export class KRB_CRED {
    * @public
    * @readonly
    */
-  readonly enc_part: EncryptedData;
+  public readonly enc_part: EncryptedData;
 
   constructor(
     pvno: INTEGER,

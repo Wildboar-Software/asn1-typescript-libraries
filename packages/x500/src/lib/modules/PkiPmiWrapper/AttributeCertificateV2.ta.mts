@@ -2,7 +2,7 @@
 import { ASN1Element as _Element } from "@wildboar/asn1";
 import * as $ from "@wildboar/asn1/functional";
 import {
-    AttributeCertificate,
+    type AttributeCertificate,
     _decode_AttributeCertificate,
     _encode_AttributeCertificate,
 } from "../AttributeCertificateDefinitions/AttributeCertificate.ta.mjs";
@@ -21,22 +21,13 @@ import {
  */
 export type AttributeCertificateV2 = AttributeCertificate; // DefinedType
 
-let _cached_decoder_for_AttributeCertificateV2: $.ASN1Decoder<AttributeCertificateV2> | null = null;
-
 /**
  * @summary Decodes an ASN.1 element into a(n) AttributeCertificateV2
  * @function
  * @param {_Element} el The element being decoded.
  * @returns {AttributeCertificateV2} The decoded data structure.
  */
-export function _decode_AttributeCertificateV2(el: _Element): AttributeCertificateV2 {
-    if (!_cached_decoder_for_AttributeCertificateV2) {
-        _cached_decoder_for_AttributeCertificateV2 = _decode_AttributeCertificate;
-    }
-    return _cached_decoder_for_AttributeCertificateV2(el);
-}
-
-let _cached_encoder_for_AttributeCertificateV2: $.ASN1Encoder<AttributeCertificateV2> | null = null;
+export const _decode_AttributeCertificateV2: $.ASN1Decoder<AttributeCertificateV2> = _decode_AttributeCertificate;
 
 /**
  * @summary Encodes a(n) AttributeCertificateV2 into an ASN.1 Element.
@@ -45,15 +36,7 @@ let _cached_encoder_for_AttributeCertificateV2: $.ASN1Encoder<AttributeCertifica
  * @param elGetter A function that can be used to get new ASN.1 elements.
  * @returns {_Element} The AttributeCertificateV2, encoded as an ASN.1 Element.
  */
-export function _encode_AttributeCertificateV2(
-    value: AttributeCertificateV2,
-    elGetter: $.ASN1Encoder<AttributeCertificateV2>
-): _Element {
-    if (!_cached_encoder_for_AttributeCertificateV2) {
-        _cached_encoder_for_AttributeCertificateV2 = _encode_AttributeCertificate;
-    }
-    return _cached_encoder_for_AttributeCertificateV2(value, elGetter);
-}
+export const _encode_AttributeCertificateV2: $.ASN1Encoder<AttributeCertificateV2> = _encode_AttributeCertificate;
 
 
 /* eslint-enable */

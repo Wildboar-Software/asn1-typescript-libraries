@@ -1,5 +1,5 @@
 /* eslint-disable */
-import { ID } from "../UsefulDefinitions/ID.ta.mjs";
+import { type ID } from "../UsefulDefinitions/ID.ta.mjs";
 import { keyPurposes } from "../UsefulDefinitions/keyPurposes.va.mjs";
 /**
  * @summary id_kp

@@ -1,9 +1,9 @@
 /* eslint-disable */
 import {
     ASN1ConstructionError as _ConstructionError,
-    ASN1Element as _Element,
+    type ASN1Element as _Element,
     ASN1TagClass as _TagClass,
-    OCTET_STRING
+    type OCTET_STRING
 } from "@wildboar/asn1";
 import * as $ from "@wildboar/asn1/functional";
 
@@ -48,7 +48,7 @@ class ReplaceSessionKeysRequest {
      * @public
      * @readonly
      */
-    readonly initialMacChainingValue: OCTET_STRING;
+    public readonly initialMacChainingValue: OCTET_STRING;
     /**
      * @summary `ppkEnc`.
      * @description
@@ -59,7 +59,7 @@ class ReplaceSessionKeysRequest {
      * @public
      * @readonly
      */
-    readonly ppkEnc: OCTET_STRING;
+    public readonly ppkEnc: OCTET_STRING;
     /**
      * @summary `ppkCmac`.
      * @description
@@ -70,7 +70,7 @@ class ReplaceSessionKeysRequest {
      * @public
      * @readonly
      */
-    readonly ppkCmac: OCTET_STRING;
+    public readonly ppkCmac: OCTET_STRING;
 
     constructor (
         initialMacChainingValue: OCTET_STRING,

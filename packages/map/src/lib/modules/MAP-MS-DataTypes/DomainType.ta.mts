@@ -1,7 +1,7 @@
 /* eslint-disable */
 import {
-    ASN1Element as _Element,
-    ENUMERATED
+    type ASN1Element as _Element,
+    type ENUMERATED
 } from "@wildboar/asn1";
 import * as $ from "@wildboar/asn1/functional";
 
@@ -41,7 +41,7 @@ type DomainType = _enum_for_DomainType | ENUMERATED;
  * @type {number}
  */
 export
-const DomainType_cs_Domain: DomainType = 0; /* LONG_NAMED_ENUMERATED_VALUE */
+const DomainType_cs_Domain: _enum_for_DomainType.cs_Domain = _enum_for_DomainType.cs_Domain; /* LONG_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary cs_Domain
@@ -49,7 +49,7 @@ const DomainType_cs_Domain: DomainType = 0; /* LONG_NAMED_ENUMERATED_VALUE */
  * @type {number}
  */
 export
-const cs_Domain: DomainType = DomainType_cs_Domain; /* SHORT_NAMED_ENUMERATED_VALUE */
+const cs_Domain: _enum_for_DomainType.cs_Domain = DomainType_cs_Domain; /* SHORT_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary DomainType_ps_Domain
@@ -57,7 +57,7 @@ const cs_Domain: DomainType = DomainType_cs_Domain; /* SHORT_NAMED_ENUMERATED_VA
  * @type {number}
  */
 export
-const DomainType_ps_Domain: DomainType = 1; /* LONG_NAMED_ENUMERATED_VALUE */
+const DomainType_ps_Domain: _enum_for_DomainType.ps_Domain = _enum_for_DomainType.ps_Domain; /* LONG_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary ps_Domain
@@ -65,7 +65,7 @@ const DomainType_ps_Domain: DomainType = 1; /* LONG_NAMED_ENUMERATED_VALUE */
  * @type {number}
  */
 export
-const ps_Domain: DomainType = DomainType_ps_Domain; /* SHORT_NAMED_ENUMERATED_VALUE */
+const ps_Domain: _enum_for_DomainType.ps_Domain = DomainType_ps_Domain; /* SHORT_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary Decodes an ASN.1 element into a(n) DomainType
@@ -73,7 +73,7 @@ const ps_Domain: DomainType = DomainType_ps_Domain; /* SHORT_NAMED_ENUMERATED_VA
  * @param el The element being decoded.
  * @returns The decoded data structure.
  */
-export const _decode_DomainType = $._decodeEnumerated;
+export const _decode_DomainType: $.ASN1Decoder<number> = $._decodeEnumerated;
 
 /**
  * @summary Encodes a(n) DomainType into an ASN.1 Element.
@@ -82,7 +82,7 @@ export const _decode_DomainType = $._decodeEnumerated;
  * @param elGetter A function that can be used to get new ASN.1 elements.
  * @returns {_Element} The DomainType, encoded as an ASN.1 Element.
  */
-export const _encode_DomainType = $._encodeEnumerated;
+export const _encode_DomainType: $.ASN1Encoder<number> = $._encodeEnumerated;
 
 
 /* eslint-enable */

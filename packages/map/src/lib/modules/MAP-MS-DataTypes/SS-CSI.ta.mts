@@ -1,8 +1,8 @@
 /* eslint-disable */
 import {
-    NULL,
-    OPTIONAL,
-    ASN1Element as _Element,
+    type NULL,
+    type OPTIONAL,
+    type ASN1Element as _Element,
     ASN1TagClass as _TagClass
 } from "@wildboar/asn1";
 import * as $ from "@wildboar/asn1/functional";
@@ -25,9 +25,9 @@ import { SS_CamelData, _decode_SS_CamelData, _encode_SS_CamelData } from "../MAP
  * ```asn1
  * SS-CSI ::= SEQUENCE {
  *     ss-CamelData    SS-CamelData,
- *     extensionContainer    ExtensionContainer    OPTIONAL,
+ *     extensionContainer    ExtensionContainer    type OPTIONAL,
  *     ...,
- *     notificationToCSE    [0]    NULL    OPTIONAL,
+ *     notificationToCSE    [0]    NULL    type OPTIONAL,
  *     csi-Active    [1]    NULL    OPTIONAL
  * --    notificationToCSE and csi-Active shall not be present when SS-CSI is sent to VLR.
  * --    They may only be included in ATSI/ATM ack/NSDC message.
@@ -38,58 +38,70 @@ import { SS_CamelData, _decode_SS_CamelData, _encode_SS_CamelData } from "../MAP
  */
 export
 class SS_CSI {
+    /**
+     * @summary `ss_CamelData`.
+     * @description
+     *
+     * SS event list and gsmSCF address for SS-CSI.
+     *
+     * (3GPP TS 29.002 V19.1.0 clause 17.7.1).
+     *
+     * @public
+     * @readonly
+     */
+    public readonly ss_CamelData: SS_CamelData;
+    /**
+     * @summary `extensionContainer`.
+     * @public
+     * @readonly
+     */
+    public readonly extensionContainer?: OPTIONAL<ExtensionContainer>;
+    /**
+     * @summary `notificationToCSE`.
+     * @description
+     *
+     * Shall not be present when this CSI is sent to VLR, SGSN, or GMSC. May
+     * be included only in ATSI/ATM ack/NSDC.
+     *
+     * (3GPP TS 29.002 V19.1.0 clause 17.7.1).
+     *
+     * @public
+     * @readonly
+     */
+    public readonly notificationToCSE?: OPTIONAL<NULL>;
+    /**
+     * @summary `csi_Active`.
+     * @description
+     *
+     * Shall not be present when this CSI is sent to VLR, SGSN, or GMSC. May
+     * be included only in ATSI/ATM ack/NSDC.
+     *
+     * (3GPP TS 29.002 V19.1.0 clause 17.7.1).
+     *
+     * @public
+     * @readonly
+     */
+    public readonly csi_Active?: OPTIONAL<NULL>;
+    /**
+     * @summary Extensions that are not recognized.
+     * @public
+     * @readonly
+     */
+    public readonly _unrecognizedExtensionsList: _Element[];
+
     constructor (
-        /**
-         * @summary `ss_CamelData`.
-         * @description
-         *
-         * SS event list and gsmSCF address for SS-CSI.
-         *
-         * (3GPP TS 29.002 V19.1.0 clause 17.7.1).
-         *
-         * @public
-         * @readonly
-         */
-        readonly ss_CamelData: SS_CamelData,
-        /**
-         * @summary `extensionContainer`.
-         * @public
-         * @readonly
-         */
-        readonly extensionContainer?: OPTIONAL<ExtensionContainer>,
-        /**
-         * @summary `notificationToCSE`.
-         * @description
-         *
-         * Shall not be present when this CSI is sent to VLR, SGSN, or GMSC. May
-         * be included only in ATSI/ATM ack/NSDC.
-         *
-         * (3GPP TS 29.002 V19.1.0 clause 17.7.1).
-         *
-         * @public
-         * @readonly
-         */
-        readonly notificationToCSE?: OPTIONAL<NULL>,
-        /**
-         * @summary `csi_Active`.
-         * @description
-         *
-         * Shall not be present when this CSI is sent to VLR, SGSN, or GMSC. May
-         * be included only in ATSI/ATM ack/NSDC.
-         *
-         * (3GPP TS 29.002 V19.1.0 clause 17.7.1).
-         *
-         * @public
-         * @readonly
-         */
-        readonly csi_Active?: OPTIONAL<NULL>,
-        /**
-         * @summary Extensions that are not recognized.
-         * @public
-         * @readonly
-         */
-        readonly _unrecognizedExtensionsList: _Element[] = []
-    ) {}
+        ss_CamelData: SS_CamelData,
+        extensionContainer?: OPTIONAL<ExtensionContainer>,
+        notificationToCSE?: OPTIONAL<NULL>,
+        csi_Active?: OPTIONAL<NULL>,
+        _unrecognizedExtensionsList: _Element[] = []
+    ) {
+        this.ss_CamelData = ss_CamelData;
+        this.extensionContainer = extensionContainer;
+        this.notificationToCSE = notificationToCSE;
+        this.csi_Active = csi_Active;
+        this._unrecognizedExtensionsList = _unrecognizedExtensionsList;
+    }
 
     /**
      * @summary Restructures an object into a SS_CSI

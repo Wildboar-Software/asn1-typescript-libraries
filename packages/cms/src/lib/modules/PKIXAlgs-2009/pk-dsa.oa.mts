@@ -9,7 +9,7 @@ import {
     _encode_DSA_Params,
 } from "../PKIXAlgs-2009/DSA-Params.ta.mjs";
 import {
-    DSAPublicKey,
+    type DSAPublicKey,
     _decode_DSAPublicKey,
     _encode_DSAPublicKey,
 } from "../PKIXAlgs-2009/DSAPublicKey.ta.mjs";

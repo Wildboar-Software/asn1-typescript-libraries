@@ -1,7 +1,7 @@
 /* eslint-disable */
 import {
-    BIT_STRING,
-    ASN1Element as _Element,
+    type BIT_STRING,
+    type ASN1Element as _Element,
     ASN1TagClass as _TagClass,
     ASN1Construction as _Construction,
     ASN1UniversalType as _UniversalType,
@@ -202,8 +202,8 @@ const KeyUsageFlags_nonRepudiation: number = 9; /* LONG_NAMED_BIT */
  */
 export
 const nonRepudiation: number = KeyUsageFlags_nonRepudiation; /* SHORT_NAMED_BIT */
-export const _decode_KeyUsageFlags = $._decodeBitString;
-export const _encode_KeyUsageFlags = $._encodeBitString;
+export const _decode_KeyUsageFlags: $.ASN1Decoder<BIT_STRING> = $._decodeBitString;
+export const _encode_KeyUsageFlags: $.ASN1Encoder<BIT_STRING> = $._encodeBitString;
 
 
 /* eslint-enable */

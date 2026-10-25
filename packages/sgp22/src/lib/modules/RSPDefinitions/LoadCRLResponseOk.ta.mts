@@ -1,9 +1,9 @@
 /* eslint-disable */
 import {
-    ASN1Element as _Element,
+    type ASN1Element as _Element,
     ASN1TagClass as _TagClass,
-    INTEGER,
-    OPTIONAL
+    type INTEGER,
+    type OPTIONAL
 } from "@wildboar/asn1";
 import * as $ from "@wildboar/asn1/functional";
 
@@ -41,7 +41,7 @@ class LoadCRLResponseOk {
      * @public
      * @readonly
      */
-    readonly missingParts?: OPTIONAL<INTEGER[]>;
+    public readonly missingParts?: OPTIONAL<INTEGER[]>;
 
     constructor (
         missingParts?: OPTIONAL<INTEGER[]>

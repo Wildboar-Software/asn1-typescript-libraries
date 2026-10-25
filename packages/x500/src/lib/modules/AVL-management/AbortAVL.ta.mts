@@ -1,18 +1,18 @@
 /* eslint-disable */
 import {
     ASN1ConstructionError as _ConstructionError,
-    ASN1Element as _Element,
+    type ASN1Element as _Element,
     ASN1TagClass as _TagClass,
 } from "@wildboar/asn1";
 import * as $ from "@wildboar/asn1/functional";
 import {
-    AVMP_error,
+    type AVMP_error,
     _decode_AVMP_error,
     _encode_AVMP_error,
     _enum_for_AVMP_error,
 } from "../AVL-management/AVMP-error.ta.mjs";
 import {
-    InvokeID,
+    type InvokeID,
     _decode_InvokeID,
     _encode_InvokeID,
 } from "../AVL-management/InvokeID.ta.mjs";
@@ -33,34 +33,42 @@ import {
  *
  */
 export class AbortAVL {
+    /**
+     * @summary `invokeID`.
+     * @description
+     *
+     * Same value as in the response being rejected (not a new interaction).
+     *
+     * @public
+     * @readonly
+     */
+    public readonly invokeID: InvokeID;
+    /**
+     * @summary `reason`.
+     * @description
+     *
+     * `noReason` for alerts (e.g. invalid AVL signature); otherwise a diagnostic `AVMP-error`.
+     *
+     * @public
+     * @readonly
+     */
+    public readonly reason: AVMP_error;
+    /**
+     * @summary Extensions that are not recognized.
+     * @public
+     * @readonly
+     */
+    public readonly _unrecognizedExtensionsList: _Element[];
+
     constructor(
-        /**
-         * @summary `invokeID`.
-         * @description
-         *
-         * Same value as in the response being rejected (not a new interaction).
-         *
-         * @public
-         * @readonly
-         */
-        readonly invokeID: InvokeID,
-        /**
-         * @summary `reason`.
-         * @description
-         *
-         * `noReason` for alerts (e.g. invalid AVL signature); otherwise a diagnostic `AVMP-error`.
-         *
-         * @public
-         * @readonly
-         */
-        readonly reason: AVMP_error,
-        /**
-         * @summary Extensions that are not recognized.
-         * @public
-         * @readonly
-         */
-        readonly _unrecognizedExtensionsList: _Element[] = []
-    ) {}
+        invokeID: InvokeID,
+        reason: AVMP_error,
+        _unrecognizedExtensionsList: _Element[] = []
+    ) {
+        this.invokeID = invokeID;
+        this.reason = reason;
+        this._unrecognizedExtensionsList = _unrecognizedExtensionsList;
+    }
 
     /**
      * @summary Restructures an object into a AbortAVL
@@ -90,7 +98,7 @@ export class AbortAVL {
      * @static
      */
 
-    public static _enum_for_reason = _enum_for_AVMP_error;
+    public static _enum_for_reason: typeof _enum_for_AVMP_error = _enum_for_AVMP_error;
 }
 
 /**

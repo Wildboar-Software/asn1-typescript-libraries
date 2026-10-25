@@ -1,8 +1,8 @@
 /* eslint-disable */
 import {
-    OPTIONAL,
-    INTEGER,
-    ASN1Element as _Element,
+    type OPTIONAL,
+    type INTEGER,
+    type ASN1Element as _Element,
     ASN1TagClass as _TagClass,
     ASN1Construction as _Construction,
     ASN1UniversalType as _UniversalType,
@@ -12,7 +12,7 @@ import {
     ASN1ConstructionError as _ConstructionError,
 } from "@wildboar/asn1";
 import * as $ from "@wildboar/asn1/functional";
-import { AuthMethod, _decode_AuthMethod, _encode_AuthMethod } from "../CryptographicInformationFramework/AuthMethod.ta.mjs";
+import { type AuthMethod, _decode_AuthMethod, _encode_AuthMethod } from "../CryptographicInformationFramework/AuthMethod.ta.mjs";
 
 
 /**
@@ -35,27 +35,33 @@ import { AuthMethod, _decode_AuthMethod, _encode_AuthMethod } from "../Cryptogra
  */
 export
 class AuthReference {
+    /**
+     * @summary `authMethod`.
+     * @description
+     * Class of authentication (SM, external, user, or always). ISO/IEC
+     * 7816-15:2016 §8.2.8.
+     * @public
+     * @readonly
+     */
+    public readonly authMethod: AuthMethod;
+    /**
+     * @summary `seIdentifier`.
+     * @description
+     * Security Environment identifier. Clause 8.2.8 types this as
+     * `Reference`; Annex A uses INTEGER. This module follows Annex A.
+     * ISO/IEC 7816-15:2016 §8.2.8, Annex A.2.8.
+     * @public
+     * @readonly
+     */
+    public readonly seIdentifier?: OPTIONAL<INTEGER>;
+
     constructor (
-        /**
-         * @summary `authMethod`.
-         * @description
-         * Class of authentication (SM, external, user, or always). ISO/IEC
-         * 7816-15:2016 §8.2.8.
-         * @public
-         * @readonly
-         */
-        readonly authMethod: AuthMethod,
-        /**
-         * @summary `seIdentifier`.
-         * @description
-         * Security Environment identifier. Clause 8.2.8 types this as
-         * `Reference`; Annex A uses INTEGER. This module follows Annex A.
-         * ISO/IEC 7816-15:2016 §8.2.8, Annex A.2.8.
-         * @public
-         * @readonly
-         */
-        readonly seIdentifier?: OPTIONAL<INTEGER>
-    ) {}
+        authMethod: AuthMethod,
+        seIdentifier?: OPTIONAL<INTEGER>
+    ) {
+        this.authMethod = authMethod;
+        this.seIdentifier = seIdentifier;
+    }
 
     /**
      * @summary Restructures an object into a AuthReference

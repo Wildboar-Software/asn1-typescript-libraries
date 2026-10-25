@@ -1,14 +1,14 @@
 /* eslint-disable */
 import {
     ASN1ConstructionError as _ConstructionError,
-    ASN1Element as _Element,
+    type ASN1Element as _Element,
     ASN1TagClass as _TagClass
 } from "@wildboar/asn1";
 import * as $ from "@wildboar/asn1/functional";
-import { Time, _decode_Time, _encode_Time } from "../modules/CCSDS-SLE-TRANSFER-SERVICE-COMMON-TYPES/Time.ta.mjs";
-import { CarrierLockStatus, _decode_CarrierLockStatus, _encode_CarrierLockStatus } from "./CarrierLockStatus.ta.mjs";
-import { LockStatus, _decode_LockStatus, _encode_LockStatus } from "./LockStatus.ta.mjs";
-import { SymbolLockStatus, _decode_SymbolLockStatus, _encode_SymbolLockStatus } from "./SymbolLockStatus.ta.mjs";
+import { type Time, _decode_Time, _encode_Time } from "../modules/CCSDS-SLE-TRANSFER-SERVICE-COMMON-TYPES/Time.ta.mjs";
+import { type CarrierLockStatus, _decode_CarrierLockStatus, _encode_CarrierLockStatus } from "./CarrierLockStatus.ta.mjs";
+import { type LockStatus, _decode_LockStatus, _encode_LockStatus } from "./LockStatus.ta.mjs";
+import { type SymbolLockStatus, _decode_SymbolLockStatus, _encode_SymbolLockStatus } from "./SymbolLockStatus.ta.mjs";
 
 
 /**

@@ -2,13 +2,13 @@
 
 import * as $ from "@wildboar/asn1/functional";
 import {
-    OPTIONAL,
-    SEQUENCE,
-    SET,
-    ASN1Element as _Element,
+    type OPTIONAL,
+    type SEQUENCE,
+    type SET,
+    type ASN1Element as _Element,
     ASN1TagClass as _TagClass
 } from "@wildboar/asn1";
-import { CallBackList, _decode_CallBackList, _encode_CallBackList } from "../CSTA-get-call-back/CallBackList.ta.mjs";
+import { type CallBackList, _decode_CallBackList, _encode_CallBackList } from "../CSTA-get-call-back/CallBackList.ta.mjs";
 
 import { CSTACommonArguments, _decode_CSTACommonArguments, _encode_CSTACommonArguments } from "../CSTA-extension-types/CSTACommonArguments.ta.mjs";
 
@@ -36,27 +36,33 @@ import { CSTACommonArguments, _decode_CSTACommonArguments, _encode_CSTACommonArg
  */
 export
 class GetCallBackResult {
+    /**
+     * @summary `callBackList`.
+     * @description
+     *
+     * Callbacks involving the requested device.
+     * @public
+     * @readonly
+     */
+    public readonly callBackList: CallBackList;
+    /**
+     * @summary `extensions`.
+     * @description
+     *
+     * Optional security (timestamp, sequence, securityInfo) and
+     * privateData.
+     * @public
+     * @readonly
+     */
+    public readonly extensions?: OPTIONAL<CSTACommonArguments>;
+
     constructor (
-        /**
-         * @summary `callBackList`.
-         * @description
-         *
-         * Callbacks involving the requested device.
-         * @public
-         * @readonly
-         */
-        readonly callBackList: CallBackList,
-        /**
-         * @summary `extensions`.
-         * @description
-         *
-         * Optional security (timestamp, sequence, securityInfo) and
-         * privateData.
-         * @public
-         * @readonly
-         */
-        readonly extensions?: OPTIONAL<CSTACommonArguments>
-    ) {}
+        callBackList: CallBackList,
+        extensions?: OPTIONAL<CSTACommonArguments>
+    ) {
+        this.callBackList = callBackList;
+        this.extensions = extensions;
+    }
 
     /**
      * @summary Restructures an object into a GetCallBackResult

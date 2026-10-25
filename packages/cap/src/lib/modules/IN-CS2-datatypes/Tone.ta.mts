@@ -1,7 +1,7 @@
 /* eslint-disable */
 import {
-    OPTIONAL,
-    ASN1Element as _Element,
+    type OPTIONAL,
+    type ASN1Element as _Element,
     ASN1TagClass as _TagClass,
     ASN1Construction as _Construction,
     ASN1UniversalType as _UniversalType,
@@ -11,7 +11,7 @@ import {
     ASN1ConstructionError as _ConstructionError,
 } from "@wildboar/asn1";
 import * as $ from "@wildboar/asn1/functional";
-import { Integer4, _decode_Integer4, _encode_Integer4 } from "../IN-CS2-datatypes/Integer4.ta.mjs";
+import { type Integer4, _decode_Integer4, _encode_Integer4 } from "../IN-CS2-datatypes/Integer4.ta.mjs";
 
 
 /**
@@ -30,20 +30,26 @@ import { Integer4, _decode_Integer4, _encode_Integer4 } from "../IN-CS2-datatype
  */
 export
 class Tone {
+    /**
+     * @summary `toneID`.
+     * @public
+     * @readonly
+     */
+    public readonly toneID: Integer4;
+    /**
+     * @summary `duration`.
+     * @public
+     * @readonly
+     */
+    public readonly duration?: OPTIONAL<Integer4>;
+
     constructor (
-        /**
-         * @summary `toneID`.
-         * @public
-         * @readonly
-         */
-        readonly toneID: Integer4,
-        /**
-         * @summary `duration`.
-         * @public
-         * @readonly
-         */
-        readonly duration?: OPTIONAL<Integer4>
-    ) {}
+        toneID: Integer4,
+        duration?: OPTIONAL<Integer4>
+    ) {
+        this.toneID = toneID;
+        this.duration = duration;
+    }
 
     /**
      * @summary Restructures an object into a Tone

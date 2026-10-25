@@ -1,8 +1,8 @@
 /* eslint-disable */
 import {
-    INTEGER,
-    OPTIONAL,
-    ASN1Element as _Element,
+    type INTEGER,
+    type OPTIONAL,
+    type ASN1Element as _Element,
     ASN1TagClass as _TagClass,
     ASN1OverflowError
 } from "@wildboar/asn1";
@@ -27,9 +27,9 @@ import { TPDU_direction, _decode_TPDU_direction, _encode_TPDU_direction, _enum_f
  * ```asn1
  * PacketDataHeaderMapped ::= SEQUENCE
  * {
- *     sourceIPAddress            [1] IPAddress    OPTIONAL,
+ *     sourceIPAddress            [1] IPAddress    type OPTIONAL,
  *     sourcePortNumber        [2] INTEGER (0..65535) OPTIONAL,    
- *     destinationIPAddress    [3] IPAddress    OPTIONAL,
+ *     destinationIPAddress    [3] IPAddress    type OPTIONAL,
  *     destinationPortNumber    [4] INTEGER (0..65535) OPTIONAL,
  *     transportProtocol        [5] INTEGER  OPTIONAL,
  *     -- For IPv4, report the "Protocol" field and for IPv6 report "Next Header" field.
@@ -218,7 +218,7 @@ class PacketDataHeaderMapped {
          * @static
          */
 
-    public static _enum_for_direction = _enum_for_TPDU_direction;
+    public static _enum_for_direction: typeof _enum_for_TPDU_direction = _enum_for_TPDU_direction;
 }
 
 /**

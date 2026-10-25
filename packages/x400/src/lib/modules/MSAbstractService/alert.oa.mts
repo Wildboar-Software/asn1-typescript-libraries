@@ -1,6 +1,6 @@
 /* eslint-disable */
 import {
-    ASN1Element as _Element,
+    type ASN1Element as _Element,
     ASN1TagClass as _TagClass,
     ASN1Construction as _Construction,
     ASN1UniversalType as _UniversalType,
@@ -23,7 +23,7 @@ import {
     _encode_AlertArgument,
 } from '../MSAbstractService/AlertArgument.ta.mjs';
 import {
-    AlertResult,
+    type AlertResult,
     _decode_AlertResult,
     _encode_AlertResult,
 } from '../MSAbstractService/AlertResult.ta.mjs';

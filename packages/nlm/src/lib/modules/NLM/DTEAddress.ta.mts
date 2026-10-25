@@ -1,7 +1,7 @@
 /* eslint-disable */
 import {
-    OCTET_STRING,
-    ASN1Element as _Element,
+    type OCTET_STRING,
+    type ASN1Element as _Element,
     ASN1TagClass as _TagClass,
     ASN1Construction as _Construction,
     ASN1UniversalType as _UniversalType,
@@ -52,7 +52,7 @@ export class DTEAddress {
      * @public
      * @readonly
      */
-    readonly numberingPlanId: DTEAddress_numberingPlanId;
+    public readonly numberingPlanId: DTEAddress_numberingPlanId;
     /**
      * @summary `addressDigits`.
      * @description
@@ -64,7 +64,7 @@ export class DTEAddress {
      * @public
      * @readonly
      */
-    readonly addressDigits: OCTET_STRING;
+    public readonly addressDigits: OCTET_STRING;
 
     constructor(
         numberingPlanId: DTEAddress_numberingPlanId,
@@ -98,7 +98,7 @@ export class DTEAddress {
      * @static
      */
 
-    public static _enum_for_numberingPlanId = _enum_for_DTEAddress_numberingPlanId;
+    public static _enum_for_numberingPlanId: typeof _enum_for_DTEAddress_numberingPlanId = _enum_for_DTEAddress_numberingPlanId;
 }
 
 

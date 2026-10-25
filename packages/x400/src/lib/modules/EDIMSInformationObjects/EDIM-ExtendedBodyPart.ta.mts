@@ -1,7 +1,7 @@
 /* eslint-disable */
 import {
-    OPTIONAL,
-    ASN1Element as _Element,
+    type OPTIONAL,
+    type ASN1Element as _Element,
     ASN1TagClass as _TagClass,
     ASN1Construction as _Construction,
     ASN1UniversalType as _UniversalType,
@@ -12,7 +12,7 @@ import {
 } from '@wildboar/asn1';
 import * as $ from '@wildboar/asn1/functional';
 import {
-    BodyPartReference,
+    type BodyPartReference,
     _decode_BodyPartReference,
     _encode_BodyPartReference,
 } from '../EDIMSInformationObjects/BodyPartReference.ta.mjs';
@@ -39,20 +39,26 @@ import {
  *
  */
 export class EDIM_ExtendedBodyPart {
+    /**
+     * @summary `body_part_reference`.
+     * @public
+     * @readonly
+     */
+    public readonly body_part_reference: OPTIONAL<BodyPartReference>;
+    /**
+     * @summary `extended_body_part`.
+     * @public
+     * @readonly
+     */
+    public readonly extended_body_part: ExtendedBodyPart;
+
     constructor(
-        /**
-         * @summary `body_part_reference`.
-         * @public
-         * @readonly
-         */
-        readonly body_part_reference: OPTIONAL<BodyPartReference>,
-        /**
-         * @summary `extended_body_part`.
-         * @public
-         * @readonly
-         */
-        readonly extended_body_part: ExtendedBodyPart
-    ) {}
+        body_part_reference: OPTIONAL<BodyPartReference>,
+        extended_body_part: ExtendedBodyPart
+    ) {
+        this.body_part_reference = body_part_reference;
+        this.extended_body_part = extended_body_part;
+    }
 
     /**
      * @summary Restructures an object into a EDIM_ExtendedBodyPart

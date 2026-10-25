@@ -1,8 +1,8 @@
 /* eslint-disable */
 import {
-  OPTIONAL,
-  INTEGER,
-  GraphicString,
+  type OPTIONAL,
+  type INTEGER,
+  type GraphicString,
   ASN1Element as _Element,
   ASN1TagClass as _TagClass,
   ASN1Construction as _Construction,
@@ -14,12 +14,12 @@ import {
 } from '@wildboar/asn1';
 import * as $ from '@wildboar/asn1/functional';
 import {
-  Diagnostic_Item_diagnostic_type,
+  type Diagnostic_Item_diagnostic_type,
   _decode_Diagnostic_Item_diagnostic_type,
   _encode_Diagnostic_Item_diagnostic_type,
 } from '../ISO8571-FTAM/Diagnostic-Item-diagnostic-type.ta.mjs';
 import {
-  Entity_Reference,
+  type Entity_Reference,
   _decode_Entity_Reference,
   _encode_Entity_Reference,
 } from '../ISO8571-FTAM/Entity-Reference.ta.mjs';
@@ -50,7 +50,7 @@ export class Diagnostic_Item {
    * @public
    * @readonly
    */
-  readonly diagnostic_type: Diagnostic_Item_diagnostic_type;
+  public readonly diagnostic_type: Diagnostic_Item_diagnostic_type;
   /**
    * @summary `error_identifier`.
    * @description
@@ -62,7 +62,7 @@ export class Diagnostic_Item {
    * @public
    * @readonly
    */
-  readonly error_identifier: INTEGER;
+  public readonly error_identifier: INTEGER;
   /**
    * @summary `error_observer`.
    * @description
@@ -73,7 +73,7 @@ export class Diagnostic_Item {
    * @public
    * @readonly
    */
-  readonly error_observer: Entity_Reference;
+  public readonly error_observer: Entity_Reference;
   /**
    * @summary `error_Source`.
    * @description
@@ -85,7 +85,7 @@ export class Diagnostic_Item {
    * @public
    * @readonly
    */
-  readonly error_Source: Entity_Reference;
+  public readonly error_Source: Entity_Reference;
   /**
    * @summary `suggested_delay`.
    * @description
@@ -96,7 +96,7 @@ export class Diagnostic_Item {
    * @public
    * @readonly
    */
-  readonly suggested_delay?: OPTIONAL<INTEGER>;
+  public readonly suggested_delay?: OPTIONAL<INTEGER>;
   /**
    * @summary `further_details`.
    * @description
@@ -106,7 +106,7 @@ export class Diagnostic_Item {
    * @public
    * @readonly
    */
-  readonly further_details?: OPTIONAL<GraphicString>;
+  public readonly further_details?: OPTIONAL<GraphicString>;
 
   constructor(
     diagnostic_type: Diagnostic_Item_diagnostic_type,

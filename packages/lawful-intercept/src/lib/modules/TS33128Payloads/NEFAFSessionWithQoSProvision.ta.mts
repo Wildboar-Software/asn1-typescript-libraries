@@ -1,13 +1,13 @@
 /* eslint-disable */
 import {
-    OPTIONAL,
-    ASN1Element as _Element,
+    type OPTIONAL,
+    type ASN1Element as _Element,
     ASN1TagClass as _TagClass
 } from "@wildboar/asn1";
 import * as $ from "@wildboar/asn1/functional";
-import { GPSI, _decode_GPSI, _encode_GPSI } from "../TS33128Payloads/GPSI.ta.mjs";
+import { type GPSI, _decode_GPSI, _encode_GPSI } from "../TS33128Payloads/GPSI.ta.mjs";
 // export { GPSI, _decode_GPSI, _encode_GPSI } from "../TS33128Payloads/GPSI.ta.mjs";
-import { AFID, _decode_AFID, _encode_AFID } from "../TS33128Payloads/AFID.ta.mjs";
+import { type AFID, _decode_AFID, _encode_AFID } from "../TS33128Payloads/AFID.ta.mjs";
 // export { AFID, _decode_AFID, _encode_AFID } from "../TS33128Payloads/AFID.ta.mjs";
 import { AForASSessionWithQoSOpType, _decode_AForASSessionWithQoSOpType, _encode_AForASSessionWithQoSOpType, _enum_for_AForASSessionWithQoSOpType } from "../TS33128Payloads/AForASSessionWithQoSOpType.ta.mjs";
 // export { AForASSessionWithQoSOpType, _enum_for_AForASSessionWithQoSOpType, AForASSessionWithQoSOpType_pOST /* IMPORTED_LONG_ENUMERATION_ITEM */, pOST /* IMPORTED_SHORT_ENUMERATION_ITEM */, AForASSessionWithQoSOpType_pUT /* IMPORTED_LONG_ENUMERATION_ITEM */, pUT /* IMPORTED_SHORT_ENUMERATION_ITEM */, AForASSessionWithQoSOpType_pATCH /* IMPORTED_LONG_ENUMERATION_ITEM */, pATCH /* IMPORTED_SHORT_ENUMERATION_ITEM */, AForASSessionWithQoSOpType_dELETE /* IMPORTED_LONG_ENUMERATION_ITEM */, dELETE /* IMPORTED_SHORT_ENUMERATION_ITEM */, _decode_AForASSessionWithQoSOpType, _encode_AForASSessionWithQoSOpType } from "../TS33128Payloads/AForASSessionWithQoSOpType.ta.mjs";
@@ -193,13 +193,13 @@ class NEFAFSessionWithQoSProvision {
          * @static
          */
 
-    public static _enum_for_aFSessionWithQoSOpType = _enum_for_AForASSessionWithQoSOpType;        /**
+    public static _enum_for_aFSessionWithQoSOpType: typeof _enum_for_AForASSessionWithQoSOpType = _enum_for_AForASSessionWithQoSOpType;        /**
          * @summary The enum used as the type of the component `aFSessionWithQoSResponseCode`
          * @public
          * @static
          */
 
-    public static _enum_for_aFSessionWithQoSResponseCode = _enum_for_AForASSessionWithQoSResponseCode;
+    public static _enum_for_aFSessionWithQoSResponseCode: typeof _enum_for_AForASSessionWithQoSResponseCode = _enum_for_AForASSessionWithQoSResponseCode;
 }
 
 /**

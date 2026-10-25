@@ -1,13 +1,13 @@
 /* eslint-disable */
 import {
-    ASN1Element as _Element,
+    type ASN1Element as _Element,
     ASN1TagClass as _TagClass,
-    BOOLEAN,
-    OPTIONAL,
+    type BOOLEAN,
+    type OPTIONAL,
 } from "@wildboar/asn1";
 import * as $ from "@wildboar/asn1/functional";
 import {
-    Identifier,
+    type Identifier,
     _decode_Identifier,
     _encode_Identifier,
 } from "../PKCS-15/Identifier.ta.mjs";
@@ -28,26 +28,34 @@ import {
  *
  */
 export class AuthKeyAttributes {
+    /**
+     * @summary `derivedKey`.
+     * @public
+     * @readonly
+     */
+    public readonly derivedKey: OPTIONAL<BOOLEAN>;
+    /**
+     * @summary `authKeyId`.
+     * @public
+     * @readonly
+     */
+    public readonly authKeyId: Identifier;
+    /**
+     * @summary Extensions that are not recognized.
+     * @public
+     * @readonly
+     */
+    public readonly _unrecognizedExtensionsList: _Element[];
+
     constructor(
-        /**
-         * @summary `derivedKey`.
-         * @public
-         * @readonly
-         */
-        readonly derivedKey: OPTIONAL<BOOLEAN>,
-        /**
-         * @summary `authKeyId`.
-         * @public
-         * @readonly
-         */
-        readonly authKeyId: Identifier,
-        /**
-         * @summary Extensions that are not recognized.
-         * @public
-         * @readonly
-         */
-        readonly _unrecognizedExtensionsList: _Element[] = []
-    ) {}
+        derivedKey: OPTIONAL<BOOLEAN>,
+        authKeyId: Identifier,
+        _unrecognizedExtensionsList: _Element[] = []
+    ) {
+        this.derivedKey = derivedKey;
+        this.authKeyId = authKeyId;
+        this._unrecognizedExtensionsList = _unrecognizedExtensionsList;
+    }
 
     /**
      * @summary Restructures an object into a AuthKeyAttributes

@@ -1,7 +1,7 @@
 /* eslint-disable */
 import {
-    OPTIONAL,
-    ASN1Element as _Element,
+    type OPTIONAL,
+    type ASN1Element as _Element,
     ASN1TagClass as _TagClass,
     ASN1Construction as _Construction,
     ASN1UniversalType as _UniversalType,
@@ -12,13 +12,13 @@ import {
 } from '@wildboar/asn1';
 import * as $ from '@wildboar/asn1/functional';
 import {
-    EntryClass,
+    type EntryClass,
     delivery /* IMPORTED_SHORT_NAMED_INTEGER */,
     _decode_EntryClass,
     _encode_EntryClass,
 } from '../MSAbstractService/EntryClass.ta.mjs';
 import {
-    ModifyArgument_entries,
+    type ModifyArgument_entries,
     _decode_ModifyArgument_entries,
     _encode_ModifyArgument_entries,
 } from '../MSAbstractService/ModifyArgument-entries.ta.mjs';
@@ -28,7 +28,7 @@ import {
     _encode_EntryModification,
 } from '../MSAbstractService/EntryModification.ta.mjs';
 import {
-    MSExtensions,
+    type MSExtensions,
     _decode_MSExtensions,
     _encode_MSExtensions,
 } from '../MSAbstractService/MSExtensions.ta.mjs';
@@ -55,32 +55,42 @@ import {
  *
  */
 export class ModifyArgument {
+    /**
+     * @summary `entry_class`.
+     * @public
+     * @readonly
+     */
+    public readonly entry_class: OPTIONAL<EntryClass>;
+    /**
+     * @summary `entries`.
+     * @public
+     * @readonly
+     */
+    public readonly entries: ModifyArgument_entries;
+    /**
+     * @summary `modifications`.
+     * @public
+     * @readonly
+     */
+    public readonly modifications: EntryModification[];
+    /**
+     * @summary `modify_extensions`.
+     * @public
+     * @readonly
+     */
+    public readonly modify_extensions?: OPTIONAL<MSExtensions>;
+
     constructor(
-        /**
-         * @summary `entry_class`.
-         * @public
-         * @readonly
-         */
-        readonly entry_class: OPTIONAL<EntryClass>,
-        /**
-         * @summary `entries`.
-         * @public
-         * @readonly
-         */
-        readonly entries: ModifyArgument_entries,
-        /**
-         * @summary `modifications`.
-         * @public
-         * @readonly
-         */
-        readonly modifications: EntryModification[],
-        /**
-         * @summary `modify_extensions`.
-         * @public
-         * @readonly
-         */
-        readonly modify_extensions?: OPTIONAL<MSExtensions>
-    ) {}
+        entry_class: OPTIONAL<EntryClass>,
+        entries: ModifyArgument_entries,
+        modifications: EntryModification[],
+        modify_extensions?: OPTIONAL<MSExtensions>
+    ) {
+        this.entry_class = entry_class;
+        this.entries = entries;
+        this.modifications = modifications;
+        this.modify_extensions = modify_extensions;
+    }
 
     /**
      * @summary Restructures an object into a ModifyArgument

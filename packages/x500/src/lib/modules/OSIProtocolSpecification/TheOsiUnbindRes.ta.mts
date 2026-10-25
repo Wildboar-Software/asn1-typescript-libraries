@@ -1,12 +1,12 @@
 /* eslint-disable */
 import {
-    ASN1Element as _Element,
+    type ASN1Element as _Element,
     ASN1TagClass as _TagClass,
-    OPTIONAL,
+    type OPTIONAL,
 } from "@wildboar/asn1";
 import * as $ from "@wildboar/asn1/functional";
 import {
-    Release_response_reason,
+    type Release_response_reason,
     _decode_Release_response_reason,
     _encode_Release_response_reason,
 } from "../OSIProtocolSpecification/Release-response-reason.ta.mjs";
@@ -23,14 +23,18 @@ import {
  *
  */
 export class TheOsiUnbindRes {
+    /**
+     * @summary `reason`.
+     * @public
+     * @readonly
+     */
+    public readonly reason?: OPTIONAL<Release_response_reason>;
+
     constructor(
-        /**
-         * @summary `reason`.
-         * @public
-         * @readonly
-         */
-        readonly reason?: OPTIONAL<Release_response_reason>
-    ) {}
+        reason?: OPTIONAL<Release_response_reason>
+    ) {
+        this.reason = reason;
+    }
 
     /**
      * @summary Restructures an object into a TheOsiUnbindRes

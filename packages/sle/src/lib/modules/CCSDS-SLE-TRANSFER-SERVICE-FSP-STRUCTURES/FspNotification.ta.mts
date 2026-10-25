@@ -1,16 +1,16 @@
 /* eslint-disable */
 import {
-    NULL,
-    ASN1Element as _Element,
+    type NULL,
+    type ASN1Element as _Element,
     ASN1TagClass as _TagClass
 } from "@wildboar/asn1";
 import * as $ from "@wildboar/asn1/functional";
-import { PacketIdentificationList, _decode_PacketIdentificationList, _encode_PacketIdentificationList } from "../CCSDS-SLE-TRANSFER-SERVICE-FSP-STRUCTURES/PacketIdentificationList.ta.mjs";
+import { type PacketIdentificationList, _decode_PacketIdentificationList, _encode_PacketIdentificationList } from "../CCSDS-SLE-TRANSFER-SERVICE-FSP-STRUCTURES/PacketIdentificationList.ta.mjs";
 import { PacketRadiatedInfo, _decode_PacketRadiatedInfo, _encode_PacketRadiatedInfo } from "../CCSDS-SLE-TRANSFER-SERVICE-FSP-STRUCTURES/PacketRadiatedInfo.ta.mjs";
-import { FopAlert, _decode_FopAlert, _encode_FopAlert } from "../CCSDS-SLE-TRANSFER-SERVICE-FSP-STRUCTURES/FopAlert.ta.mjs";
-import { DirectiveExecutedId, _decode_DirectiveExecutedId, _encode_DirectiveExecutedId } from "../CCSDS-SLE-TRANSFER-SERVICE-FSP-STRUCTURES/DirectiveExecutedId.ta.mjs";
+import { type FopAlert, _decode_FopAlert, _encode_FopAlert } from "../CCSDS-SLE-TRANSFER-SERVICE-FSP-STRUCTURES/FopAlert.ta.mjs";
+import { type DirectiveExecutedId, _decode_DirectiveExecutedId, _encode_DirectiveExecutedId } from "../CCSDS-SLE-TRANSFER-SERVICE-FSP-STRUCTURES/DirectiveExecutedId.ta.mjs";
 import { NegativeConfirmResponseToDirective, _decode_NegativeConfirmResponseToDirective, _encode_NegativeConfirmResponseToDirective } from "../CCSDS-SLE-TRANSFER-SERVICE-FSP-STRUCTURES/NegativeConfirmResponseToDirective.ta.mjs";
-import { EventInvocationId, _decode_EventInvocationId, _encode_EventInvocationId } from "../CCSDS-SLE-TRANSFER-SERVICE-FSP-STRUCTURES/EventInvocationId.ta.mjs";
+import { type EventInvocationId, _decode_EventInvocationId, _encode_EventInvocationId } from "../CCSDS-SLE-TRANSFER-SERVICE-FSP-STRUCTURES/EventInvocationId.ta.mjs";
 
 
 /**

@@ -1,12 +1,12 @@
 /* eslint-disable */
 import {
-    OPTIONAL,
-    ASN1Element as _Element,
+    type OPTIONAL,
+    type ASN1Element as _Element,
     ASN1TagClass as _TagClass
 } from "@wildboar/asn1";
 import * as $ from "@wildboar/asn1/functional";
 import { CheckResult, _decode_CheckResult, _encode_CheckResult, _enum_for_CheckResult } from "../WTM-Location-Registration-Operations-asn1-97/CheckResult.ta.mjs";
-import { LrExtension, _decode_LrExtension, _encode_LrExtension } from "../WTM-Location-Registration-Operations-asn1-97/LrExtension.ta.mjs";
+import { type LrExtension, _decode_LrExtension, _encode_LrExtension } from "../WTM-Location-Registration-Operations-asn1-97/LrExtension.ta.mjs";
 
 /**
  * @summary LocInfoCheckRes
@@ -84,7 +84,7 @@ class LocInfoCheckRes {
          * @static
          */
 
-    public static _enum_for_checkResult = _enum_for_CheckResult;
+    public static _enum_for_checkResult: typeof _enum_for_CheckResult = _enum_for_CheckResult;
 }
 
 /**

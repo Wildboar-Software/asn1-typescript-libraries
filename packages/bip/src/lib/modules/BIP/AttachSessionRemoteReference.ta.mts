@@ -11,17 +11,17 @@ import {
 } from '@wildboar/asn1';
 import * as $ from '@wildboar/asn1/functional';
 import {
-  EndpointIRI,
+  type EndpointIRI,
   _decode_EndpointIRI,
   _encode_EndpointIRI,
 } from '../BIP/EndpointIRI.ta.mjs';
 import {
-  BioAPI_UUID,
+  type BioAPI_UUID,
   _decode_BioAPI_UUID,
   _encode_BioAPI_UUID,
 } from '../BIP/BioAPI-UUID.ta.mjs';
 import {
-  BioAPI_HANDLE,
+  type BioAPI_HANDLE,
   _decode_BioAPI_HANDLE,
   _encode_BioAPI_HANDLE,
 } from '../BIP/BioAPI-HANDLE.ta.mjs';
@@ -61,7 +61,7 @@ export class AttachSessionRemoteReference {
    * @public
    * @readonly
    */
-  readonly referrerEndpointIRI: EndpointIRI;
+  public readonly referrerEndpointIRI: EndpointIRI;
   /**
    * @summary `bspProductUuid`.
    * @description
@@ -71,7 +71,7 @@ export class AttachSessionRemoteReference {
    * @public
    * @readonly
    */
-  readonly bspProductUuid: BioAPI_UUID;
+  public readonly bspProductUuid: BioAPI_UUID;
   /**
    * @summary `originalBSPHandle`.
    * @description
@@ -82,7 +82,7 @@ export class AttachSessionRemoteReference {
    * @public
    * @readonly
    */
-  readonly originalBSPHandle: BioAPI_HANDLE;
+  public readonly originalBSPHandle: BioAPI_HANDLE;
 
   constructor(
     referrerEndpointIRI: EndpointIRI,

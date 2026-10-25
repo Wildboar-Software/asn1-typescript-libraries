@@ -1,11 +1,11 @@
 /* eslint-disable */
 import {
     ASN1ConstructionError as _ConstructionError,
-    ASN1Element as _Element,
+    type ASN1Element as _Element,
     ASN1TagClass as _TagClass
 } from "@wildboar/asn1";
 import * as $ from "@wildboar/asn1/functional";
-import { PendingNotification, _decode_PendingNotification, _encode_PendingNotification } from "../RSPDefinitions/PendingNotification.ta.mjs";
+import { type PendingNotification, _decode_PendingNotification, _encode_PendingNotification } from "../RSPDefinitions/PendingNotification.ta.mjs";
 
 
 /**
@@ -40,7 +40,7 @@ class HandleNotification {
      * @public
      * @readonly
      */
-    readonly pendingNotification: PendingNotification;
+    public readonly pendingNotification: PendingNotification;
 
     constructor (
         pendingNotification: PendingNotification

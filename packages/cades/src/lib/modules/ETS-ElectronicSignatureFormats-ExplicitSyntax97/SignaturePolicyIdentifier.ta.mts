@@ -1,6 +1,6 @@
 /* eslint-disable */
 import {
-    ASN1Element as _Element,
+    type ASN1Element as _Element,
     ASN1TagClass as _TagClass,
     ASN1Construction as _Construction,
     ASN1UniversalType as _UniversalType,
@@ -11,7 +11,7 @@ import {
 } from "@wildboar/asn1";
 import * as $ from "@wildboar/asn1/functional";
 import { SignaturePolicyId, _decode_SignaturePolicyId, _encode_SignaturePolicyId } from "../ETS-ElectronicSignatureFormats-ExplicitSyntax97/SignaturePolicyId.ta.mjs";
-import { SignaturePolicyImplied, _decode_SignaturePolicyImplied, _encode_SignaturePolicyImplied } from "../ETS-ElectronicSignatureFormats-ExplicitSyntax97/SignaturePolicyImplied.ta.mjs";
+import { type SignaturePolicyImplied, _decode_SignaturePolicyImplied, _encode_SignaturePolicyImplied } from "../ETS-ElectronicSignatureFormats-ExplicitSyntax97/SignaturePolicyImplied.ta.mjs";
 /**
  * @summary SignaturePolicyIdentifier
  * @description

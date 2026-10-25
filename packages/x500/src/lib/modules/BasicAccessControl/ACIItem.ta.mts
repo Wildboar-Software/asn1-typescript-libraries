@@ -1,27 +1,27 @@
 /* eslint-disable */
 import {
     ASN1ConstructionError as _ConstructionError,
-    ASN1Element as _Element,
+    type ASN1Element as _Element,
     ASN1TagClass as _TagClass,
 } from "@wildboar/asn1";
 import * as $ from "@wildboar/asn1/functional";
 import {
-    ACIItem_itemOrUserFirst,
+    type ACIItem_itemOrUserFirst,
     _decode_ACIItem_itemOrUserFirst,
     _encode_ACIItem_itemOrUserFirst,
 } from "../BasicAccessControl/ACIItem-itemOrUserFirst.ta.mjs";
 import {
-    AuthenticationLevel,
+    type AuthenticationLevel,
     _decode_AuthenticationLevel,
     _encode_AuthenticationLevel,
 } from "../BasicAccessControl/AuthenticationLevel.ta.mjs";
 import {
-    Precedence,
+    type Precedence,
     _decode_Precedence,
     _encode_Precedence,
 } from "../BasicAccessControl/Precedence.ta.mjs";
 import {
-    UnboundedDirectoryString,
+    type UnboundedDirectoryString,
     _decode_UnboundedDirectoryString,
     _encode_UnboundedDirectoryString,
 } from "../SelectedAttributeTypes/UnboundedDirectoryString.ta.mjs";
@@ -59,42 +59,54 @@ import {
  *
  */
 export class ACIItem {
+    /**
+     * @summary `identificationTag`.
+     * @description Discriminates this ACIItem among siblings; not evaluated in access decisions.
+     * @public
+     * @readonly
+     */
+    public readonly identificationTag: UnboundedDirectoryString;
+    /**
+     * @summary `precedence`.
+     * @description INTEGER 0..255; higher number prevails. Inner permissions may override.
+     * @public
+     * @readonly
+     */
+    public readonly precedence: Precedence;
+    /**
+     * @summary `authenticationLevel`.
+     * @description Minimum requestor level; `none` < `simple` < `strong`.
+     * @public
+     * @readonly
+     */
+    public readonly authenticationLevel: AuthenticationLevel;
+    /**
+     * @summary `itemOrUserFirst`.
+     * @description Outer grouping: protected items first, or user classes first.
+     * @public
+     * @readonly
+     */
+    public readonly itemOrUserFirst: ACIItem_itemOrUserFirst;
+    /**
+     * @summary Extensions that are not recognized.
+     * @public
+     * @readonly
+     */
+    public readonly _unrecognizedExtensionsList: _Element[];
+
     constructor(
-        /**
-         * @summary `identificationTag`.
-         * @description Discriminates this ACIItem among siblings; not evaluated in access decisions.
-         * @public
-         * @readonly
-         */
-        readonly identificationTag: UnboundedDirectoryString,
-        /**
-         * @summary `precedence`.
-         * @description INTEGER 0..255; higher number prevails. Inner permissions may override.
-         * @public
-         * @readonly
-         */
-        readonly precedence: Precedence,
-        /**
-         * @summary `authenticationLevel`.
-         * @description Minimum requestor level; `none` < `simple` < `strong`.
-         * @public
-         * @readonly
-         */
-        readonly authenticationLevel: AuthenticationLevel,
-        /**
-         * @summary `itemOrUserFirst`.
-         * @description Outer grouping: protected items first, or user classes first.
-         * @public
-         * @readonly
-         */
-        readonly itemOrUserFirst: ACIItem_itemOrUserFirst,
-        /**
-         * @summary Extensions that are not recognized.
-         * @public
-         * @readonly
-         */
-        readonly _unrecognizedExtensionsList: _Element[] = []
-    ) {}
+        identificationTag: UnboundedDirectoryString,
+        precedence: Precedence,
+        authenticationLevel: AuthenticationLevel,
+        itemOrUserFirst: ACIItem_itemOrUserFirst,
+        _unrecognizedExtensionsList: _Element[] = []
+    ) {
+        this.identificationTag = identificationTag;
+        this.precedence = precedence;
+        this.authenticationLevel = authenticationLevel;
+        this.itemOrUserFirst = itemOrUserFirst;
+        this._unrecognizedExtensionsList = _unrecognizedExtensionsList;
+    }
 
     /**
      * @summary Restructures an object into a ACIItem

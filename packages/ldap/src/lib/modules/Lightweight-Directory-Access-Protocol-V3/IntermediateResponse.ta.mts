@@ -1,7 +1,7 @@
 /* eslint-disable */
 import {
-  OPTIONAL,
-  OCTET_STRING,
+  type OPTIONAL,
+  type OCTET_STRING,
   ASN1Element as _Element,
   ASN1TagClass as _TagClass,
   ASN1Construction as _Construction,
@@ -13,7 +13,7 @@ import {
 } from '@wildboar/asn1';
 import * as $ from '@wildboar/asn1/functional';
 import {
-  LDAPOID,
+  type LDAPOID,
   _decode_LDAPOID,
   _encode_LDAPOID,
 } from '../Lightweight-Directory-Access-Protocol-V3/LDAPOID.ta.mjs';
@@ -50,7 +50,7 @@ export class IntermediateResponse {
    * @public
    * @readonly
    */
-  readonly responseName?: OPTIONAL<LDAPOID>;
+  public readonly responseName?: OPTIONAL<LDAPOID>;
   /**
    * @summary `responseValue`.
    * @description
@@ -61,13 +61,13 @@ export class IntermediateResponse {
    * @public
    * @readonly
    */
-  readonly responseValue?: OPTIONAL<OCTET_STRING>;
+  public readonly responseValue?: OPTIONAL<OCTET_STRING>;
   /**
    * @summary Extensions that are not recognized.
    * @public
    * @readonly
    */
-  readonly _unrecognizedExtensionsList: _Element[];
+  public readonly _unrecognizedExtensionsList: _Element[];
 
   constructor(
     responseName?: OPTIONAL<LDAPOID>,

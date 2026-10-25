@@ -1,12 +1,12 @@
 /* eslint-disable */
 import {
-    OPTIONAL,
-    ASN1Element as _Element,
+    type OPTIONAL,
+    type ASN1Element as _Element,
     ASN1TagClass as _TagClass
 } from "@wildboar/asn1";
 import * as $ from "@wildboar/asn1/functional";
 import { MessageType, _decode_MessageType, _encode_MessageType, _enum_for_MessageType } from "../SS-MCM-Operations-asn1-97/MessageType.ta.mjs";
-import { MCMMode, _decode_MCMMode, _encode_MCMMode } from "../SS-MCM-Operations-asn1-97/MCMMode.ta.mjs";
+import { type MCMMode, _decode_MCMMode, _encode_MCMMode } from "../SS-MCM-Operations-asn1-97/MCMMode.ta.mjs";
 
 /**
  * @summary MCMServiceInfo
@@ -97,7 +97,7 @@ class MCMServiceInfo {
          * @static
          */
 
-    public static _enum_for_messageType = _enum_for_MessageType;
+    public static _enum_for_messageType: typeof _enum_for_MessageType = _enum_for_MessageType;
 }
 
 /**

@@ -1,6 +1,6 @@
 /* eslint-disable */
 import {
-  OPTIONAL,
+  type OPTIONAL,
   ASN1Element as _Element,
   ASN1TagClass as _TagClass,
   ASN1Construction as _Construction,
@@ -12,18 +12,18 @@ import {
 } from '@wildboar/asn1';
 import * as $ from '@wildboar/asn1/functional';
 import {
-  Action_Result,
+  type Action_Result,
     Action_Result_success,
   _decode_Action_Result,
   _encode_Action_Result,
 } from '../ISO8571-FTAM/Action-Result.ta.mjs';
 import {
-  Objects_Attributes_List,
+  type Objects_Attributes_List,
   _decode_Objects_Attributes_List,
   _encode_Objects_Attributes_List,
 } from '../ISO8571-FTAM/Objects-Attributes-List.ta.mjs';
 import {
-  Diagnostic,
+  type Diagnostic,
   _decode_Diagnostic,
   _encode_Diagnostic,
 } from '../ISO8571-FTAM/Diagnostic.ta.mjs';
@@ -59,7 +59,7 @@ export class F_LIST_response {
    * @public
    * @readonly
    */
-  readonly action_result?: OPTIONAL<Action_Result>;
+  public readonly action_result?: OPTIONAL<Action_Result>;
   /**
    * @summary `objects_attributes_list`.
    * @description
@@ -70,7 +70,7 @@ export class F_LIST_response {
    * @public
    * @readonly
    */
-  readonly objects_attributes_list?: OPTIONAL<Objects_Attributes_List>;
+  public readonly objects_attributes_list?: OPTIONAL<Objects_Attributes_List>;
   /**
    * @summary `diagnostic`.
    * @description
@@ -81,7 +81,7 @@ export class F_LIST_response {
    * @public
    * @readonly
    */
-  readonly diagnostic?: OPTIONAL<Diagnostic>;
+  public readonly diagnostic?: OPTIONAL<Diagnostic>;
 
   constructor(
     action_result?: OPTIONAL<Action_Result>,

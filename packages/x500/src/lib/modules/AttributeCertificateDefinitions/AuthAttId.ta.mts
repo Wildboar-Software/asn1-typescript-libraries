@@ -20,22 +20,13 @@ import {
  */
 export type AuthAttId = IssuerSerial; // DefinedType
 
-let _cached_decoder_for_AuthAttId: $.ASN1Decoder<AuthAttId> | null = null;
-
 /**
  * @summary Decodes an ASN.1 element into a(n) AuthAttId
  * @function
  * @param {_Element} el The element being decoded.
  * @returns {AuthAttId} The decoded data structure.
  */
-export function _decode_AuthAttId(el: _Element): AuthAttId {
-    if (!_cached_decoder_for_AuthAttId) {
-        _cached_decoder_for_AuthAttId = _decode_IssuerSerial;
-    }
-    return _cached_decoder_for_AuthAttId(el);
-}
-
-let _cached_encoder_for_AuthAttId: $.ASN1Encoder<AuthAttId> | null = null;
+export const _decode_AuthAttId: $.ASN1Decoder<AuthAttId> = _decode_IssuerSerial;
 
 /**
  * @summary Encodes a(n) AuthAttId into an ASN.1 Element.
@@ -44,15 +35,7 @@ let _cached_encoder_for_AuthAttId: $.ASN1Encoder<AuthAttId> | null = null;
  * @param elGetter A function that can be used to get new ASN.1 elements.
  * @returns {_Element} The AuthAttId, encoded as an ASN.1 Element.
  */
-export function _encode_AuthAttId(
-    value: AuthAttId,
-    elGetter: $.ASN1Encoder<AuthAttId>
-): _Element {
-    if (!_cached_encoder_for_AuthAttId) {
-        _cached_encoder_for_AuthAttId = _encode_IssuerSerial;
-    }
-    return _cached_encoder_for_AuthAttId(value, elGetter);
-}
+export const _encode_AuthAttId: $.ASN1Encoder<AuthAttId> = _encode_IssuerSerial;
 
 
 /* eslint-enable */

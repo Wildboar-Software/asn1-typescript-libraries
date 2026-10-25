@@ -1,6 +1,6 @@
 /* eslint-disable */
 import {
-    ENUMERATED
+    type ENUMERATED
 } from "@wildboar/asn1";
 import * as $ from "@wildboar/asn1/functional";
 
@@ -65,7 +65,7 @@ type Relation = _enum_for_Relation | ENUMERATED;
  * @type {number}
  */
 export
-const Relation_greaterThan: Relation = 0; /* LONG_NAMED_ENUMERATED_VALUE */
+const Relation_greaterThan: 0 = _enum_for_Relation.greaterThan; /* LONG_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary greaterThan
@@ -73,7 +73,7 @@ const Relation_greaterThan: Relation = 0; /* LONG_NAMED_ENUMERATED_VALUE */
  * @type {number}
  */
 export
-const greaterThan: Relation = Relation_greaterThan; /* SHORT_NAMED_ENUMERATED_VALUE */
+const greaterThan: 0 = Relation_greaterThan; /* SHORT_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary Relation_smallerThan
@@ -86,7 +86,7 @@ const greaterThan: Relation = Relation_greaterThan; /* SHORT_NAMED_ENUMERATED_VA
  * @type {number}
  */
 export
-const Relation_smallerThan: Relation = 1; /* LONG_NAMED_ENUMERATED_VALUE */
+const Relation_smallerThan: 1 = _enum_for_Relation.smallerThan; /* LONG_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary smallerThan
@@ -94,7 +94,7 @@ const Relation_smallerThan: Relation = 1; /* LONG_NAMED_ENUMERATED_VALUE */
  * @type {number}
  */
 export
-const smallerThan: Relation = Relation_smallerThan; /* SHORT_NAMED_ENUMERATED_VALUE */
+const smallerThan: 1 = Relation_smallerThan; /* SHORT_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary Relation_unequalTo
@@ -106,7 +106,7 @@ const smallerThan: Relation = Relation_smallerThan; /* SHORT_NAMED_ENUMERATED_VA
  * @type {number}
  */
 export
-const Relation_unequalTo: Relation = 2; /* LONG_NAMED_ENUMERATED_VALUE */
+const Relation_unequalTo: 2 = _enum_for_Relation.unequalTo; /* LONG_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary unequalTo
@@ -114,9 +114,9 @@ const Relation_unequalTo: Relation = 2; /* LONG_NAMED_ENUMERATED_VALUE */
  * @type {number}
  */
 export
-const unequalTo: Relation = Relation_unequalTo; /* SHORT_NAMED_ENUMERATED_VALUE */
-export const _decode_Relation = $._decodeEnumerated as $.ASN1Decoder<Relation>;
-export const _encode_Relation = $._encodeEnumerated as $.ASN1Encoder<Relation>;
+const unequalTo: 2 = Relation_unequalTo; /* SHORT_NAMED_ENUMERATED_VALUE */
+export const _decode_Relation: $.ASN1Decoder<Relation> = $._decodeEnumerated as $.ASN1Decoder<Relation>;
+export const _encode_Relation: $.ASN1Encoder<Relation> = $._encodeEnumerated as $.ASN1Encoder<Relation>;
 
 
 /* eslint-enable */

@@ -1,6 +1,6 @@
 /* eslint-disable */
 import {
-    ASN1Element as _Element,
+    type ASN1Element as _Element,
     ASN1TagClass as _TagClass,
     ASN1Construction as _Construction,
     ASN1UniversalType as _UniversalType,
@@ -10,7 +10,7 @@ import {
     ASN1ConstructionError as _ConstructionError,
 } from "@wildboar/asn1";
 import * as $ from "@wildboar/asn1/functional";
-import { SecurityLevelofPrivilege_bioSecLevel, _decode_SecurityLevelofPrivilege_bioSecLevel, _encode_SecurityLevelofPrivilege_bioSecLevel } from "../TAI/SecurityLevelofPrivilege-bioSecLevel.ta.mjs";
+import { type SecurityLevelofPrivilege_bioSecLevel, _decode_SecurityLevelofPrivilege_bioSecLevel, _encode_SecurityLevelofPrivilege_bioSecLevel } from "../TAI/SecurityLevelofPrivilege-bioSecLevel.ta.mjs";
 
 /**
  * @summary SecurityLevelofPrivilege
@@ -33,21 +33,25 @@ import { SecurityLevelofPrivilege_bioSecLevel, _decode_SecurityLevelofPrivilege_
  */
 export
 class SecurityLevelofPrivilege {
+    /**
+     * @summary `bioSecLevel`.
+     * @description
+     *
+     * Identifies the biometric-authentication result
+     * security level: an X.520 unique identifier of the
+     * biometric parameter info, or a simple integer assigned
+     * by the AC issuer. X.1089 §11.5.2–11.5.3.
+     *
+     * @public
+     * @readonly
+     */
+    public readonly bioSecLevel: SecurityLevelofPrivilege_bioSecLevel;
+
     constructor (
-        /**
-         * @summary `bioSecLevel`.
-         * @description
-         *
-         * Identifies the biometric-authentication result
-         * security level: an X.520 unique identifier of the
-         * biometric parameter info, or a simple integer assigned
-         * by the AC issuer. X.1089 §11.5.2–11.5.3.
-         *
-         * @public
-         * @readonly
-         */
-        readonly bioSecLevel: SecurityLevelofPrivilege_bioSecLevel
-    ) {}
+        bioSecLevel: SecurityLevelofPrivilege_bioSecLevel
+    ) {
+        this.bioSecLevel = bioSecLevel;
+    }
 
     /**
      * @summary Restructures an object into a SecurityLevelofPrivilege

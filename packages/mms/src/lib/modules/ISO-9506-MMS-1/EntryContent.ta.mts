@@ -1,6 +1,6 @@
 /* eslint-disable */
 import {
-    ASN1Element as _Element,
+    type ASN1Element as _Element,
     ASN1TagClass as _TagClass,
     ASN1Construction as _Construction,
     ASN1UniversalType as _UniversalType,
@@ -10,8 +10,8 @@ import {
     ASN1ConstructionError as _ConstructionError,
 } from "@wildboar/asn1";
 import * as $ from "@wildboar/asn1/functional";
-import { TimeOfDay, _decode_TimeOfDay, _encode_TimeOfDay } from "../ISO-9506-MMS-1/TimeOfDay.ta.mjs";
-import { EntryContent_entryForm, _decode_EntryContent_entryForm, _encode_EntryContent_entryForm } from "../ISO-9506-MMS-1/EntryContent-entryForm.ta.mjs";
+import { type TimeOfDay, _decode_TimeOfDay, _encode_TimeOfDay } from "../ISO-9506-MMS-1/TimeOfDay.ta.mjs";
+import { type EntryContent_entryForm, _decode_EntryContent_entryForm, _encode_EntryContent_entryForm } from "../ISO-9506-MMS-1/EntryContent-entryForm.ta.mjs";
 
 
 /**
@@ -44,31 +44,37 @@ import { EntryContent_entryForm, _decode_EntryContent_entryForm, _encode_EntryCo
  */
 export
 class EntryContent {
+    /**
+     * @summary `occurrenceTime`.
+     * @description
+     *
+     * Time associated with the entry (`&timeStamp`).
+     * ISO 9506-1:2003 §23.1.2.4, §23.3.1.1.2.1.
+     *
+     * @public
+     * @readonly
+     */
+    public readonly occurrenceTime: TimeOfDay;
+    /**
+     * @summary `entryForm`.
+     * @description
+     *
+     * `data` (event and/or journal variables) or `annotation`.
+     * ISO 9506-1:2003 §23.1.2.6, §23.3.1.1.2.2.
+     * ISO 9506-2:2003 §23.8.1.1.
+     *
+     * @public
+     * @readonly
+     */
+    public readonly entryForm: EntryContent_entryForm;
+
     constructor (
-        /**
-         * @summary `occurrenceTime`.
-         * @description
-         *
-         * Time associated with the entry (`&timeStamp`).
-         * ISO 9506-1:2003 §23.1.2.4, §23.3.1.1.2.1.
-         *
-         * @public
-         * @readonly
-         */
-        readonly occurrenceTime: TimeOfDay,
-        /**
-         * @summary `entryForm`.
-         * @description
-         *
-         * `data` (event and/or journal variables) or `annotation`.
-         * ISO 9506-1:2003 §23.1.2.6, §23.3.1.1.2.2.
-         * ISO 9506-2:2003 §23.8.1.1.
-         *
-         * @public
-         * @readonly
-         */
-        readonly entryForm: EntryContent_entryForm
-    ) {}
+        occurrenceTime: TimeOfDay,
+        entryForm: EntryContent_entryForm
+    ) {
+        this.occurrenceTime = occurrenceTime;
+        this.entryForm = entryForm;
+    }
 
     /**
      * @summary Restructures an object into a EntryContent

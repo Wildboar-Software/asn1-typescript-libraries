@@ -110,7 +110,7 @@ type RCSSessionEndpoints = _enum_for_RCSSessionEndpoints;
  * @enum {number}
  */
 export
-const RCSSessionEndpoints = _enum_for_RCSSessionEndpoints;
+const RCSSessionEndpoints: typeof _enum_for_RCSSessionEndpoints = _enum_for_RCSSessionEndpoints;
 
 /**
  * @summary RCSSessionEndpoints_remoteOnly
@@ -125,7 +125,7 @@ const RCSSessionEndpoints = _enum_for_RCSSessionEndpoints;
  * @type {number}
  */
 export
-const RCSSessionEndpoints_remoteOnly: RCSSessionEndpoints = RCSSessionEndpoints.remoteOnly; /* LONG_NAMED_ENUMERATED_VALUE */
+const RCSSessionEndpoints_remoteOnly: _enum_for_RCSSessionEndpoints.remoteOnly = RCSSessionEndpoints.remoteOnly; /* LONG_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary remoteOnly
@@ -140,7 +140,7 @@ const RCSSessionEndpoints_remoteOnly: RCSSessionEndpoints = RCSSessionEndpoints.
  * @type {number}
  */
 export
-const remoteOnly: RCSSessionEndpoints = RCSSessionEndpoints.remoteOnly; /* SHORT_NAMED_ENUMERATED_VALUE */
+const remoteOnly: _enum_for_RCSSessionEndpoints.remoteOnly = RCSSessionEndpoints.remoteOnly; /* SHORT_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary RCSSessionEndpoints_localOnly
@@ -155,7 +155,7 @@ const remoteOnly: RCSSessionEndpoints = RCSSessionEndpoints.remoteOnly; /* SHORT
  * @type {number}
  */
 export
-const RCSSessionEndpoints_localOnly: RCSSessionEndpoints = RCSSessionEndpoints.localOnly; /* LONG_NAMED_ENUMERATED_VALUE */
+const RCSSessionEndpoints_localOnly: _enum_for_RCSSessionEndpoints.localOnly = RCSSessionEndpoints.localOnly; /* LONG_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary localOnly
@@ -170,7 +170,7 @@ const RCSSessionEndpoints_localOnly: RCSSessionEndpoints = RCSSessionEndpoints.l
  * @type {number}
  */
 export
-const localOnly: RCSSessionEndpoints = RCSSessionEndpoints.localOnly; /* SHORT_NAMED_ENUMERATED_VALUE */
+const localOnly: _enum_for_RCSSessionEndpoints.localOnly = RCSSessionEndpoints.localOnly; /* SHORT_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary RCSSessionEndpoints_localAndRemote
@@ -185,7 +185,7 @@ const localOnly: RCSSessionEndpoints = RCSSessionEndpoints.localOnly; /* SHORT_N
  * @type {number}
  */
 export
-const RCSSessionEndpoints_localAndRemote: RCSSessionEndpoints = RCSSessionEndpoints.localAndRemote; /* LONG_NAMED_ENUMERATED_VALUE */
+const RCSSessionEndpoints_localAndRemote: _enum_for_RCSSessionEndpoints.localAndRemote = RCSSessionEndpoints.localAndRemote; /* LONG_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary localAndRemote
@@ -200,7 +200,7 @@ const RCSSessionEndpoints_localAndRemote: RCSSessionEndpoints = RCSSessionEndpoi
  * @type {number}
  */
 export
-const localAndRemote: RCSSessionEndpoints = RCSSessionEndpoints.localAndRemote; /* SHORT_NAMED_ENUMERATED_VALUE */
+const localAndRemote: _enum_for_RCSSessionEndpoints.localAndRemote = RCSSessionEndpoints.localAndRemote; /* SHORT_NAMED_ENUMERATED_VALUE */
 export const _decode_RCSSessionEndpoints: $.ASN1Decoder<RCSSessionEndpoints> = $._decodeEnumerated;
 export const _encode_RCSSessionEndpoints: $.ASN1Encoder<RCSSessionEndpoints> = $._encodeEnumerated;
 

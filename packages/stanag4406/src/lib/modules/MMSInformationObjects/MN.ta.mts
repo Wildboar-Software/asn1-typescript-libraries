@@ -1,25 +1,25 @@
 /* eslint-disable */
 import {
-    OPTIONAL,
-    ASN1Element as _Element,
+    type OPTIONAL,
+    type ASN1Element as _Element,
     ASN1TagClass as _TagClass,
 } from "@wildboar/asn1";
 import * as $ from "@wildboar/asn1/functional";
-import { MN_choice, _decode_MN_choice, _encode_MN_choice } from "../MMSInformationObjects/MN-choice.ta.mjs";
+import { type MN_choice, _decode_MN_choice, _encode_MN_choice } from "../MMSInformationObjects/MN-choice.ta.mjs";
 import {
-    ConversionEITsField,
+    type ConversionEITsField,
     _decode_ConversionEITsField,
     _encode_ConversionEITsField,
-    IPMIntendedRecipientField,
+    type IPMIntendedRecipientField,
     _decode_IPMIntendedRecipientField,
     _encode_IPMIntendedRecipientField,
-    IPNOriginatorField,
+    type IPNOriginatorField,
     _decode_IPNOriginatorField,
     _encode_IPNOriginatorField,
-    NotificationExtensionsField,
+    type NotificationExtensionsField,
     _decode_NotificationExtensionsField,
     _encode_NotificationExtensionsField,
-    SubjectIPMField,
+    type SubjectIPMField,
     _decode_SubjectIPMField,
     _encode_SubjectIPMField,
     _extension_additions_list_spec_for_CommonFields,

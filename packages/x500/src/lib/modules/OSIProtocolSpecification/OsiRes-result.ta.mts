@@ -1,11 +1,11 @@
 /* eslint-disable */
 import {
     ASN1ConstructionError as _ConstructionError,
-    ASN1Element as _Element,
+    type ASN1Element as _Element,
 } from "@wildboar/asn1";
 import * as $ from "@wildboar/asn1/functional";
 import {
-    Code,
+    type Code,
     _decode_Code,
     _encode_Code,
 } from "../CommonProtocolSpecification/Code.ta.mjs";
@@ -21,20 +21,26 @@ import {
  *
  */
 export class OsiRes_result {
+    /**
+     * @summary `opcode`.
+     * @public
+     * @readonly
+     */
+    public readonly opcode: Code;
+    /**
+     * @summary `result`.
+     * @public
+     * @readonly
+     */
+    public readonly result: _Element;
+
     constructor(
-        /**
-         * @summary `opcode`.
-         * @public
-         * @readonly
-         */
-        readonly opcode: Code,
-        /**
-         * @summary `result`.
-         * @public
-         * @readonly
-         */
-        readonly result: _Element
-    ) {}
+        opcode: Code,
+        result: _Element
+    ) {
+        this.opcode = opcode;
+        this.result = result;
+    }
 
     /**
      * @summary Restructures an object into a OsiRes_result

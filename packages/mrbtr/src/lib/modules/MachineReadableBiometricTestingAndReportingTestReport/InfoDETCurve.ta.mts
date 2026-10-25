@@ -1,7 +1,7 @@
 /* eslint-disable */
 import {
-    INTEGER,
-    ASN1Element as _Element,
+    type INTEGER,
+    type ASN1Element as _Element,
     ASN1TagClass as _TagClass,
     ASN1Construction as _Construction,
     ASN1UniversalType as _UniversalType,
@@ -11,7 +11,7 @@ import {
     ASN1ConstructionError as _ConstructionError,
 } from "@wildboar/asn1";
 import * as $ from "@wildboar/asn1/functional";
-import { ExpressionDETCurve, _decode_ExpressionDETCurve, _encode_ExpressionDETCurve } from "../MachineReadableBiometricTestingAndReportingTestReport/ExpressionDETCurve.ta.mjs";
+import { type ExpressionDETCurve, _decode_ExpressionDETCurve, _encode_ExpressionDETCurve } from "../MachineReadableBiometricTestingAndReportingTestReport/ExpressionDETCurve.ta.mjs";
 
 
 /**
@@ -36,41 +36,49 @@ import { ExpressionDETCurve, _decode_ExpressionDETCurve, _encode_ExpressionDETCu
  */
 export
 class InfoDETCurve {
+    /**
+     * @summary `numOfSamplesEstTypeIError`.
+     * @description
+     *
+     * Comparisons or transactions used to estimate the Type I error
+     * (Clause 6.4.4.3.3, Annex B.12).
+     *
+     * @public
+     * @readonly
+     */
+    public readonly numOfSamplesEstTypeIError: INTEGER;
+    /**
+     * @summary `numOfSamplesEstTypeIIError`.
+     * @description
+     *
+     * Comparisons or transactions used to estimate the Type II error
+     * (Clause 6.4.4.3.3, Annex B.12).
+     *
+     * @public
+     * @readonly
+     */
+    public readonly numOfSamplesEstTypeIIError: INTEGER;
+    /**
+     * @summary `expressionDETCurve`.
+     * @description
+     *
+     * DET points in increasing Type I error order
+     * (Clause 6.4.4.3.3).
+     *
+     * @public
+     * @readonly
+     */
+    public readonly expressionDETCurve: ExpressionDETCurve;
+
     constructor (
-        /**
-         * @summary `numOfSamplesEstTypeIError`.
-         * @description
-         *
-         * Comparisons or transactions used to estimate the Type I error
-         * (Clause 6.4.4.3.3, Annex B.12).
-         *
-         * @public
-         * @readonly
-         */
-        readonly numOfSamplesEstTypeIError: INTEGER,
-        /**
-         * @summary `numOfSamplesEstTypeIIError`.
-         * @description
-         *
-         * Comparisons or transactions used to estimate the Type II error
-         * (Clause 6.4.4.3.3, Annex B.12).
-         *
-         * @public
-         * @readonly
-         */
-        readonly numOfSamplesEstTypeIIError: INTEGER,
-        /**
-         * @summary `expressionDETCurve`.
-         * @description
-         *
-         * DET points in increasing Type I error order
-         * (Clause 6.4.4.3.3).
-         *
-         * @public
-         * @readonly
-         */
-        readonly expressionDETCurve: ExpressionDETCurve
-    ) {}
+        numOfSamplesEstTypeIError: INTEGER,
+        numOfSamplesEstTypeIIError: INTEGER,
+        expressionDETCurve: ExpressionDETCurve
+    ) {
+        this.numOfSamplesEstTypeIError = numOfSamplesEstTypeIError;
+        this.numOfSamplesEstTypeIIError = numOfSamplesEstTypeIIError;
+        this.expressionDETCurve = expressionDETCurve;
+    }
 
     /**
      * @summary Restructures an object into a InfoDETCurve

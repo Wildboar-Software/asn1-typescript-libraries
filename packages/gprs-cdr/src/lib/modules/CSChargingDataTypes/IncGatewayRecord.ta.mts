@@ -1,23 +1,23 @@
 /* eslint-disable */
 import {
-    BOOLEAN,
-    INTEGER,
-    OCTET_STRING,
-    OPTIONAL,
-    ASN1Element as _Element,
+    type BOOLEAN,
+    type INTEGER,
+    type OCTET_STRING,
+    type OPTIONAL,
+    type ASN1Element as _Element,
     ASN1TagClass as _TagClass,
     ASN1SizeError
 } from "@wildboar/asn1";
 import * as $ from "@wildboar/asn1/functional";
-import { RecordType, _decode_RecordType, _encode_RecordType } from "../CSChargingDataTypes/RecordType.ta.mjs";
-import { TrunkGroup, _decode_TrunkGroup, _encode_TrunkGroup } from "../CSChargingDataTypes/TrunkGroup.ta.mjs";
-import { CauseForTerm, _decode_CauseForTerm, _encode_CauseForTerm } from "../CSChargingDataTypes/CauseForTerm.ta.mjs";
-import { HLRIntResult, _decode_HLRIntResult, _encode_HLRIntResult } from "../CSChargingDataTypes/HLRIntResult.ta.mjs";
+import { type RecordType, _decode_RecordType, _encode_RecordType } from "../CSChargingDataTypes/RecordType.ta.mjs";
+import { type TrunkGroup, _decode_TrunkGroup, _encode_TrunkGroup } from "../CSChargingDataTypes/TrunkGroup.ta.mjs";
+import { type CauseForTerm, _decode_CauseForTerm, _encode_CauseForTerm } from "../CSChargingDataTypes/CauseForTerm.ta.mjs";
+import { type HLRIntResult, _decode_HLRIntResult, _encode_HLRIntResult } from "../CSChargingDataTypes/HLRIntResult.ta.mjs";
 import { ManagementExtension, _decode_ManagementExtension, _encode_ManagementExtension } from "../CSChargingDataTypes/ManagementExtension.ta.mjs";
-import { IncGatewayRecord_lrnSoInd, _decode_IncGatewayRecord_lrnSoInd, _encode_IncGatewayRecord_lrnSoInd } from "../CSChargingDataTypes/IncGatewayRecord-lrnSoInd.ta.mjs";
-import { IncGatewayRecord_lrnQuryStatus, _decode_IncGatewayRecord_lrnQuryStatus, _encode_IncGatewayRecord_lrnQuryStatus } from "../CSChargingDataTypes/IncGatewayRecord-lrnQuryStatus.ta.mjs";
-import { IncGatewayRecord_jIPSoInd, _decode_IncGatewayRecord_jIPSoInd, _encode_IncGatewayRecord_jIPSoInd } from "../CSChargingDataTypes/IncGatewayRecord-jIPSoInd.ta.mjs";
-import { IncGatewayRecord_jIPQuryStatus, _decode_IncGatewayRecord_jIPQuryStatus, _encode_IncGatewayRecord_jIPQuryStatus } from "../CSChargingDataTypes/IncGatewayRecord-jIPQuryStatus.ta.mjs";
+import { type IncGatewayRecord_lrnSoInd, _decode_IncGatewayRecord_lrnSoInd, _encode_IncGatewayRecord_lrnSoInd } from "../CSChargingDataTypes/IncGatewayRecord-lrnSoInd.ta.mjs";
+import { type IncGatewayRecord_lrnQuryStatus, _decode_IncGatewayRecord_lrnQuryStatus, _encode_IncGatewayRecord_lrnQuryStatus } from "../CSChargingDataTypes/IncGatewayRecord-lrnQuryStatus.ta.mjs";
+import { type IncGatewayRecord_jIPSoInd, _decode_IncGatewayRecord_jIPSoInd, _encode_IncGatewayRecord_jIPSoInd } from "../CSChargingDataTypes/IncGatewayRecord-jIPSoInd.ta.mjs";
+import { type IncGatewayRecord_jIPQuryStatus, _decode_IncGatewayRecord_jIPQuryStatus, _encode_IncGatewayRecord_jIPQuryStatus } from "../CSChargingDataTypes/IncGatewayRecord-jIPQuryStatus.ta.mjs";
 import { ReasonForServiceChange, _decode_ReasonForServiceChange, _encode_ReasonForServiceChange, _enum_for_ReasonForServiceChange } from "../CSChargingDataTypes/ReasonForServiceChange.ta.mjs";
 
 
@@ -596,7 +596,7 @@ class IncGatewayRecord {
          * @static
          */
 
-    public static _enum_for_reasonForServiceChange = _enum_for_ReasonForServiceChange;
+    public static _enum_for_reasonForServiceChange: typeof _enum_for_ReasonForServiceChange = _enum_for_ReasonForServiceChange;
 }
 
 /**

@@ -1,6 +1,6 @@
 /* eslint-disable */
 import {
-    ASN1Element as _Element,
+    type ASN1Element as _Element,
     ASN1TagClass as _TagClass,
     ASN1Construction as _Construction,
     ASN1UniversalType as _UniversalType,
@@ -11,7 +11,7 @@ import {
 } from '@wildboar/asn1';
 import * as $ from '@wildboar/asn1/functional';
 import {
-    ORAddressAndOptionalDirectoryName,
+    type ORAddressAndOptionalDirectoryName,
     _decode_ORAddressAndOptionalDirectoryName,
     _encode_ORAddressAndOptionalDirectoryName,
 } from '../MTSAbstractService/ORAddressAndOptionalDirectoryName.ta.mjs';
@@ -32,22 +32,13 @@ import {
  */
 export type PhysicalForwardingAddress = ORAddressAndOptionalDirectoryName; // DefinedType
 
-let _cached_decoder_for_PhysicalForwardingAddress: $.ASN1Decoder<PhysicalForwardingAddress> | null = null;
-
 /**
  * @summary Decodes an ASN.1 element into a(n) PhysicalForwardingAddress
  * @function
  * @param {_Element} el The element being decoded.
  * @returns {PhysicalForwardingAddress} The decoded data structure.
  */
-export function _decode_PhysicalForwardingAddress(el: _Element): PhysicalForwardingAddress {
-    if (!_cached_decoder_for_PhysicalForwardingAddress) {
-        _cached_decoder_for_PhysicalForwardingAddress = _decode_ORAddressAndOptionalDirectoryName;
-    }
-    return _cached_decoder_for_PhysicalForwardingAddress(el);
-}
-
-let _cached_encoder_for_PhysicalForwardingAddress: $.ASN1Encoder<PhysicalForwardingAddress> | null = null;
+export const _decode_PhysicalForwardingAddress: $.ASN1Decoder<PhysicalForwardingAddress> = _decode_ORAddressAndOptionalDirectoryName;
 
 /**
  * @summary Encodes a(n) PhysicalForwardingAddress into an ASN.1 Element.
@@ -56,15 +47,7 @@ let _cached_encoder_for_PhysicalForwardingAddress: $.ASN1Encoder<PhysicalForward
  * @param elGetter A function that can be used to get new ASN.1 elements.
  * @returns {_Element} The PhysicalForwardingAddress, encoded as an ASN.1 Element.
  */
-export function _encode_PhysicalForwardingAddress(
-    value: PhysicalForwardingAddress,
-    elGetter: $.ASN1Encoder<PhysicalForwardingAddress>
-): _Element {
-    if (!_cached_encoder_for_PhysicalForwardingAddress) {
-        _cached_encoder_for_PhysicalForwardingAddress = _encode_ORAddressAndOptionalDirectoryName;
-    }
-    return _cached_encoder_for_PhysicalForwardingAddress(value, elGetter);
-}
+export const _encode_PhysicalForwardingAddress: $.ASN1Encoder<PhysicalForwardingAddress> = _encode_ORAddressAndOptionalDirectoryName;
 
 
 /* eslint-enable */

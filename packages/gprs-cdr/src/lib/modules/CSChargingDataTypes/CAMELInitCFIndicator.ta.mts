@@ -79,7 +79,7 @@ type CAMELInitCFIndicator = _enum_for_CAMELInitCFIndicator;
  * @enum {number}
  */
 export
-const CAMELInitCFIndicator = _enum_for_CAMELInitCFIndicator;
+const CAMELInitCFIndicator: typeof _enum_for_CAMELInitCFIndicator = _enum_for_CAMELInitCFIndicator;
 
 /**
  * @summary CAMELInitCFIndicator_noCAMELCallForwarding
@@ -92,7 +92,7 @@ const CAMELInitCFIndicator = _enum_for_CAMELInitCFIndicator;
  * @type {number}
  */
 export
-const CAMELInitCFIndicator_noCAMELCallForwarding: CAMELInitCFIndicator = CAMELInitCFIndicator.noCAMELCallForwarding; /* LONG_NAMED_ENUMERATED_VALUE */
+const CAMELInitCFIndicator_noCAMELCallForwarding: _enum_for_CAMELInitCFIndicator.noCAMELCallForwarding = CAMELInitCFIndicator.noCAMELCallForwarding; /* LONG_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary noCAMELCallForwarding
@@ -105,7 +105,7 @@ const CAMELInitCFIndicator_noCAMELCallForwarding: CAMELInitCFIndicator = CAMELIn
  * @type {number}
  */
 export
-const noCAMELCallForwarding: CAMELInitCFIndicator = CAMELInitCFIndicator.noCAMELCallForwarding; /* SHORT_NAMED_ENUMERATED_VALUE */
+const noCAMELCallForwarding: _enum_for_CAMELInitCFIndicator.noCAMELCallForwarding = CAMELInitCFIndicator.noCAMELCallForwarding; /* SHORT_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary CAMELInitCFIndicator_cAMELCallForwarding
@@ -119,7 +119,7 @@ const noCAMELCallForwarding: CAMELInitCFIndicator = CAMELInitCFIndicator.noCAMEL
  * @type {number}
  */
 export
-const CAMELInitCFIndicator_cAMELCallForwarding: CAMELInitCFIndicator = CAMELInitCFIndicator.cAMELCallForwarding; /* LONG_NAMED_ENUMERATED_VALUE */
+const CAMELInitCFIndicator_cAMELCallForwarding: _enum_for_CAMELInitCFIndicator.cAMELCallForwarding = CAMELInitCFIndicator.cAMELCallForwarding; /* LONG_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary cAMELCallForwarding
@@ -133,7 +133,7 @@ const CAMELInitCFIndicator_cAMELCallForwarding: CAMELInitCFIndicator = CAMELInit
  * @type {number}
  */
 export
-const cAMELCallForwarding: CAMELInitCFIndicator = CAMELInitCFIndicator.cAMELCallForwarding; /* SHORT_NAMED_ENUMERATED_VALUE */
+const cAMELCallForwarding: _enum_for_CAMELInitCFIndicator.cAMELCallForwarding = CAMELInitCFIndicator.cAMELCallForwarding; /* SHORT_NAMED_ENUMERATED_VALUE */
 
 export
 const _decode_CAMELInitCFIndicator: $.ASN1Decoder<CAMELInitCFIndicator> = $._decodeEnumerated;

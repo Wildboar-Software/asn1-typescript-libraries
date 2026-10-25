@@ -1,16 +1,16 @@
 /* eslint-disable */
 import {
-    INTEGER,
-    OCTET_STRING,
-    OPTIONAL,
-    ASN1Element as _Element,
+    type INTEGER,
+    type OCTET_STRING,
+    type OPTIONAL,
+    type ASN1Element as _Element,
     ASN1TagClass as _TagClass
 } from "@wildboar/asn1";
 import * as $ from "@wildboar/asn1/functional";
 import { EndPointDescriptor, _decode_EndPointDescriptor, _encode_EndPointDescriptor } from "../GDT/EndPointDescriptor.ta.mjs";
-import { SequenceFlag, _decode_SequenceFlag, _encode_SequenceFlag } from "../GDT/SequenceFlag.ta.mjs";
+import { type SequenceFlag, _decode_SequenceFlag, _encode_SequenceFlag } from "../GDT/SequenceFlag.ta.mjs";
 import { HopInfo, _decode_HopInfo, _encode_HopInfo } from "../GDT/HopInfo.ta.mjs";
-import { ErrorCode, _decode_ErrorCode, _encode_ErrorCode } from "../GDT/ErrorCode.ta.mjs";
+import { type ErrorCode, _decode_ErrorCode, _encode_ErrorCode } from "../GDT/ErrorCode.ta.mjs";
 import { EncryptionInfo, _decode_EncryptionInfo, _encode_EncryptionInfo } from "../GDT/EncryptionInfo.ta.mjs";
 
 
@@ -44,61 +44,61 @@ class Header {
      * @public
      * @readonly
      */
-    readonly version: INTEGER;
+    public readonly version: INTEGER;
     /**
      * @summary `source`.
      * @public
      * @readonly
      */
-    readonly source: EndPointDescriptor;
+    public readonly source: EndPointDescriptor;
     /**
      * @summary `destination`.
      * @public
      * @readonly
      */
-    readonly destination: EndPointDescriptor;
+    public readonly destination: EndPointDescriptor;
     /**
      * @summary `uuid`.
      * @public
      * @readonly
      */
-    readonly uuid: OCTET_STRING;
+    public readonly uuid: OCTET_STRING;
     /**
      * @summary `sequence_num`.
      * @public
      * @readonly
      */
-    readonly sequence_num: INTEGER;
+    public readonly sequence_num: INTEGER;
     /**
      * @summary `sequence_flag`.
      * @public
      * @readonly
      */
-    readonly sequence_flag: SequenceFlag;
+    public readonly sequence_flag: SequenceFlag;
     /**
      * @summary `enc_info`.
      * @public
      * @readonly
      */
-    readonly enc_info?: OPTIONAL<EncryptionInfo>;
+    public readonly enc_info?: OPTIONAL<EncryptionInfo>;
     /**
      * @summary `hop_info`.
      * @public
      * @readonly
      */
-    readonly hop_info?: OPTIONAL<HopInfo>;
+    public readonly hop_info?: OPTIONAL<HopInfo>;
     /**
      * @summary `status`.
      * @public
      * @readonly
      */
-    readonly status?: OPTIONAL<ErrorCode>;
+    public readonly status?: OPTIONAL<ErrorCode>;
     /**
      * @summary Extensions that are not recognized.
      * @public
      * @readonly
      */
-    readonly _unrecognizedExtensionsList: _Element[];
+    public readonly _unrecognizedExtensionsList: _Element[];
 
     constructor (
         version: INTEGER,

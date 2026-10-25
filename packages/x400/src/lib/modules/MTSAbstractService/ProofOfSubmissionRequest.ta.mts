@@ -1,6 +1,6 @@
 /* eslint-disable */
 import {
-    ASN1Element as _Element,
+    type ASN1Element as _Element,
     ASN1TagClass as _TagClass,
     ASN1Construction as _Construction,
     ASN1UniversalType as _UniversalType,
@@ -67,14 +67,14 @@ export type ProofOfSubmissionRequest = _enum_for_ProofOfSubmissionRequest;
  *
  * @enum {number}
  */
-export const ProofOfSubmissionRequest = _enum_for_ProofOfSubmissionRequest;
+export const ProofOfSubmissionRequest: typeof _enum_for_ProofOfSubmissionRequest = _enum_for_ProofOfSubmissionRequest;
 
 /**
  * @summary ProofOfSubmissionRequest_proof_of_submission_not_requested
  * @constant
  * @type {number}
  */
-export const ProofOfSubmissionRequest_proof_of_submission_not_requested: ProofOfSubmissionRequest =
+export const ProofOfSubmissionRequest_proof_of_submission_not_requested: _enum_for_ProofOfSubmissionRequest.proof_of_submission_not_requested =
     ProofOfSubmissionRequest.proof_of_submission_not_requested; /* LONG_NAMED_ENUMERATED_VALUE */
 
 /**
@@ -82,7 +82,7 @@ export const ProofOfSubmissionRequest_proof_of_submission_not_requested: ProofOf
  * @constant
  * @type {number}
  */
-export const proof_of_submission_not_requested: ProofOfSubmissionRequest =
+export const proof_of_submission_not_requested: _enum_for_ProofOfSubmissionRequest.proof_of_submission_not_requested =
     ProofOfSubmissionRequest.proof_of_submission_not_requested; /* SHORT_NAMED_ENUMERATED_VALUE */
 
 /**
@@ -90,7 +90,7 @@ export const proof_of_submission_not_requested: ProofOfSubmissionRequest =
  * @constant
  * @type {number}
  */
-export const ProofOfSubmissionRequest_proof_of_submission_requested: ProofOfSubmissionRequest =
+export const ProofOfSubmissionRequest_proof_of_submission_requested: _enum_for_ProofOfSubmissionRequest.proof_of_submission_requested =
     ProofOfSubmissionRequest.proof_of_submission_requested; /* LONG_NAMED_ENUMERATED_VALUE */
 
 /**
@@ -98,14 +98,25 @@ export const ProofOfSubmissionRequest_proof_of_submission_requested: ProofOfSubm
  * @constant
  * @type {number}
  */
-export const proof_of_submission_requested: ProofOfSubmissionRequest =
+export const proof_of_submission_requested: _enum_for_ProofOfSubmissionRequest.proof_of_submission_requested =
     ProofOfSubmissionRequest.proof_of_submission_requested; /* SHORT_NAMED_ENUMERATED_VALUE */
 
 
-export const _decode_ProofOfSubmissionRequest = $._decodeEnumerated;
+export function _decode_ProofOfSubmissionRequest(el: _Element): ProofOfSubmissionRequest {
+    const enumerated = $._decodeEnumerated(el);
+    switch (enumerated) {
+        case ProofOfSubmissionRequest.proof_of_submission_not_requested: return ProofOfSubmissionRequest.proof_of_submission_not_requested;
+        case ProofOfSubmissionRequest.proof_of_submission_requested: return ProofOfSubmissionRequest.proof_of_submission_requested;
+        default:
+            throw new _ConstructionError(
+                'Invalid ENUMERATED value ' + enumerated + ' for ProofOfSubmissionRequest.',
+                el,
+            );
+    }
+}
 
 
-export const _encode_ProofOfSubmissionRequest = $._encodeEnumerated;
+export const _encode_ProofOfSubmissionRequest: $.ASN1Encoder<ProofOfSubmissionRequest> = $._encodeEnumerated as $.ASN1Encoder<ProofOfSubmissionRequest>;
 
 
 /* eslint-enable */

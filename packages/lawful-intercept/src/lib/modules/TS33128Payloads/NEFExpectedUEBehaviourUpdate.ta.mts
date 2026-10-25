@@ -1,12 +1,12 @@
 /* eslint-disable */
 import {
-    INTEGER,
-    OPTIONAL,
-    ASN1Element as _Element,
+    type INTEGER,
+    type OPTIONAL,
+    type ASN1Element as _Element,
     ASN1TagClass as _TagClass
 } from "@wildboar/asn1";
 import * as $ from "@wildboar/asn1/functional";
-import { GPSI, _decode_GPSI, _encode_GPSI } from "../TS33128Payloads/GPSI.ta.mjs";
+import { type GPSI, _decode_GPSI, _encode_GPSI } from "../TS33128Payloads/GPSI.ta.mjs";
 // export { GPSI, _decode_GPSI, _encode_GPSI } from "../TS33128Payloads/GPSI.ta.mjs";
 import { UMTLocationArea5G, _decode_UMTLocationArea5G, _encode_UMTLocationArea5G } from "../TS33128Payloads/UMTLocationArea5G.ta.mjs";
 // export { UMTLocationArea5G, _decode_UMTLocationArea5G, _encode_UMTLocationArea5G } from "../TS33128Payloads/UMTLocationArea5G.ta.mjs";
@@ -20,9 +20,9 @@ import { BatteryIndication, _decode_BatteryIndication, _encode_BatteryIndication
 // export { BatteryIndication, _enum_for_BatteryIndication, BatteryIndication_batteryRecharge /* IMPORTED_LONG_ENUMERATION_ITEM */, batteryRecharge /* IMPORTED_SHORT_ENUMERATION_ITEM */, BatteryIndication_batteryReplace /* IMPORTED_LONG_ENUMERATION_ITEM */, batteryReplace /* IMPORTED_SHORT_ENUMERATION_ITEM */, BatteryIndication_batteryNoRecharge /* IMPORTED_LONG_ENUMERATION_ITEM */, batteryNoRecharge /* IMPORTED_SHORT_ENUMERATION_ITEM */, BatteryIndication_batteryNoReplace /* IMPORTED_LONG_ENUMERATION_ITEM */, batteryNoReplace /* IMPORTED_SHORT_ENUMERATION_ITEM */, BatteryIndication_noBattery /* IMPORTED_LONG_ENUMERATION_ITEM */, noBattery /* IMPORTED_SHORT_ENUMERATION_ITEM */, _decode_BatteryIndication, _encode_BatteryIndication } from "../TS33128Payloads/BatteryIndication.ta.mjs";
 import { TrafficProfile, _decode_TrafficProfile, _encode_TrafficProfile, _enum_for_TrafficProfile } from "../TS33128Payloads/TrafficProfile.ta.mjs";
 // export { TrafficProfile, _enum_for_TrafficProfile, TrafficProfile_singleTransUL /* IMPORTED_LONG_ENUMERATION_ITEM */, singleTransUL /* IMPORTED_SHORT_ENUMERATION_ITEM */, TrafficProfile_singleTransDL /* IMPORTED_LONG_ENUMERATION_ITEM */, singleTransDL /* IMPORTED_SHORT_ENUMERATION_ITEM */, TrafficProfile_dualTransULFirst /* IMPORTED_LONG_ENUMERATION_ITEM */, dualTransULFirst /* IMPORTED_SHORT_ENUMERATION_ITEM */, TrafficProfile_dualTransDLFirst /* IMPORTED_LONG_ENUMERATION_ITEM */, dualTransDLFirst /* IMPORTED_SHORT_ENUMERATION_ITEM */, TrafficProfile_multiTrans /* IMPORTED_LONG_ENUMERATION_ITEM */, multiTrans /* IMPORTED_SHORT_ENUMERATION_ITEM */, _decode_TrafficProfile, _encode_TrafficProfile } from "../TS33128Payloads/TrafficProfile.ta.mjs";
-import { AFID, _decode_AFID, _encode_AFID } from "../TS33128Payloads/AFID.ta.mjs";
+import { type AFID, _decode_AFID, _encode_AFID } from "../TS33128Payloads/AFID.ta.mjs";
 // export { AFID, _decode_AFID, _encode_AFID } from "../TS33128Payloads/AFID.ta.mjs";
-import { Timestamp, _decode_Timestamp, _encode_Timestamp } from "../TS33128Payloads/Timestamp.ta.mjs";
+import { type Timestamp, _decode_Timestamp, _encode_Timestamp } from "../TS33128Payloads/Timestamp.ta.mjs";
 // export { Timestamp, _decode_Timestamp, _encode_Timestamp } from "../TS33128Payloads/Timestamp.ta.mjs";
 
 
@@ -185,25 +185,25 @@ class NEFExpectedUEBehaviourUpdate {
          * @static
          */
 
-    public static _enum_for_stationaryIndication = _enum_for_StationaryIndication;        /**
+    public static _enum_for_stationaryIndication: typeof _enum_for_StationaryIndication = _enum_for_StationaryIndication;        /**
          * @summary The enum used as the type of the component `scheduledCommunicationType`
          * @public
          * @static
          */
 
-    public static _enum_for_scheduledCommunicationType = _enum_for_ScheduledCommunicationType;        /**
+    public static _enum_for_scheduledCommunicationType: typeof _enum_for_ScheduledCommunicationType = _enum_for_ScheduledCommunicationType;        /**
          * @summary The enum used as the type of the component `batteryIndication`
          * @public
          * @static
          */
 
-    public static _enum_for_batteryIndication = _enum_for_BatteryIndication;        /**
+    public static _enum_for_batteryIndication: typeof _enum_for_BatteryIndication = _enum_for_BatteryIndication;        /**
          * @summary The enum used as the type of the component `trafficProfile`
          * @public
          * @static
          */
 
-    public static _enum_for_trafficProfile = _enum_for_TrafficProfile;
+    public static _enum_for_trafficProfile: typeof _enum_for_TrafficProfile = _enum_for_TrafficProfile;
 }
 
 /**

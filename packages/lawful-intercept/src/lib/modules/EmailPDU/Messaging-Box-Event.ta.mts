@@ -1,6 +1,6 @@
 /* eslint-disable */
 import {
-    ENUMERATED
+    type ENUMERATED
 } from "@wildboar/asn1";
 import * as $ from "@wildboar/asn1/functional";
 
@@ -296,7 +296,7 @@ type Messaging_Box_Event = _enum_for_Messaging_Box_Event | ENUMERATED;
  * @type {number}
  */
 export
-const Messaging_Box_Event_login: Messaging_Box_Event = 1; /* LONG_NAMED_ENUMERATED_VALUE */
+const Messaging_Box_Event_login: _enum_for_Messaging_Box_Event.login = _enum_for_Messaging_Box_Event.login; /* LONG_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary login
@@ -310,7 +310,7 @@ const Messaging_Box_Event_login: Messaging_Box_Event = 1; /* LONG_NAMED_ENUMERAT
  * @type {number}
  */
 export
-const login: Messaging_Box_Event = Messaging_Box_Event_login; /* SHORT_NAMED_ENUMERATED_VALUE */
+const login: _enum_for_Messaging_Box_Event.login = Messaging_Box_Event_login; /* SHORT_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary Messaging_Box_Event_logout
@@ -324,7 +324,7 @@ const login: Messaging_Box_Event = Messaging_Box_Event_login; /* SHORT_NAMED_ENU
  * @type {number}
  */
 export
-const Messaging_Box_Event_logout: Messaging_Box_Event = 2; /* LONG_NAMED_ENUMERATED_VALUE */
+const Messaging_Box_Event_logout: _enum_for_Messaging_Box_Event.logout = _enum_for_Messaging_Box_Event.logout; /* LONG_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary logout
@@ -338,7 +338,7 @@ const Messaging_Box_Event_logout: Messaging_Box_Event = 2; /* LONG_NAMED_ENUMERA
  * @type {number}
  */
 export
-const logout: Messaging_Box_Event = Messaging_Box_Event_logout; /* SHORT_NAMED_ENUMERATED_VALUE */
+const logout: _enum_for_Messaging_Box_Event.logout = Messaging_Box_Event_logout; /* SHORT_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary Messaging_Box_Event_lock
@@ -352,7 +352,7 @@ const logout: Messaging_Box_Event = Messaging_Box_Event_logout; /* SHORT_NAMED_E
  * @type {number}
  */
 export
-const Messaging_Box_Event_lock: Messaging_Box_Event = 3; /* LONG_NAMED_ENUMERATED_VALUE */
+const Messaging_Box_Event_lock: _enum_for_Messaging_Box_Event.lock = _enum_for_Messaging_Box_Event.lock; /* LONG_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary lock
@@ -366,7 +366,7 @@ const Messaging_Box_Event_lock: Messaging_Box_Event = 3; /* LONG_NAMED_ENUMERATE
  * @type {number}
  */
 export
-const lock: Messaging_Box_Event = Messaging_Box_Event_lock; /* SHORT_NAMED_ENUMERATED_VALUE */
+const lock: _enum_for_Messaging_Box_Event.lock = Messaging_Box_Event_lock; /* SHORT_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary Messaging_Box_Event_unlock
@@ -380,7 +380,7 @@ const lock: Messaging_Box_Event = Messaging_Box_Event_lock; /* SHORT_NAMED_ENUME
  * @type {number}
  */
 export
-const Messaging_Box_Event_unlock: Messaging_Box_Event = 4; /* LONG_NAMED_ENUMERATED_VALUE */
+const Messaging_Box_Event_unlock: _enum_for_Messaging_Box_Event.unlock = _enum_for_Messaging_Box_Event.unlock; /* LONG_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary unlock
@@ -394,7 +394,7 @@ const Messaging_Box_Event_unlock: Messaging_Box_Event = 4; /* LONG_NAMED_ENUMERA
  * @type {number}
  */
 export
-const unlock: Messaging_Box_Event = Messaging_Box_Event_unlock; /* SHORT_NAMED_ENUMERATED_VALUE */
+const unlock: _enum_for_Messaging_Box_Event.unlock = Messaging_Box_Event_unlock; /* SHORT_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary Messaging_Box_Event_activate
@@ -408,7 +408,7 @@ const unlock: Messaging_Box_Event = Messaging_Box_Event_unlock; /* SHORT_NAMED_E
  * @type {number}
  */
 export
-const Messaging_Box_Event_activate: Messaging_Box_Event = 5; /* LONG_NAMED_ENUMERATED_VALUE */
+const Messaging_Box_Event_activate: _enum_for_Messaging_Box_Event.activate = _enum_for_Messaging_Box_Event.activate; /* LONG_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary activate
@@ -422,7 +422,7 @@ const Messaging_Box_Event_activate: Messaging_Box_Event = 5; /* LONG_NAMED_ENUME
  * @type {number}
  */
 export
-const activate: Messaging_Box_Event = Messaging_Box_Event_activate; /* SHORT_NAMED_ENUMERATED_VALUE */
+const activate: _enum_for_Messaging_Box_Event.activate = Messaging_Box_Event_activate; /* SHORT_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary Messaging_Box_Event_deactivate
@@ -436,7 +436,7 @@ const activate: Messaging_Box_Event = Messaging_Box_Event_activate; /* SHORT_NAM
  * @type {number}
  */
 export
-const Messaging_Box_Event_deactivate: Messaging_Box_Event = 6; /* LONG_NAMED_ENUMERATED_VALUE */
+const Messaging_Box_Event_deactivate: _enum_for_Messaging_Box_Event.deactivate = _enum_for_Messaging_Box_Event.deactivate; /* LONG_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary deactivate
@@ -450,7 +450,7 @@ const Messaging_Box_Event_deactivate: Messaging_Box_Event = 6; /* LONG_NAMED_ENU
  * @type {number}
  */
 export
-const deactivate: Messaging_Box_Event = Messaging_Box_Event_deactivate; /* SHORT_NAMED_ENUMERATED_VALUE */
+const deactivate: _enum_for_Messaging_Box_Event.deactivate = Messaging_Box_Event_deactivate; /* SHORT_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary Messaging_Box_Event_delete_
@@ -465,7 +465,7 @@ const deactivate: Messaging_Box_Event = Messaging_Box_Event_deactivate; /* SHORT
  * @type {number}
  */
 export
-const Messaging_Box_Event_delete_: Messaging_Box_Event = 7; /* LONG_NAMED_ENUMERATED_VALUE */
+const Messaging_Box_Event_delete_: _enum_for_Messaging_Box_Event.delete_ = _enum_for_Messaging_Box_Event.delete_; /* LONG_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary delete_
@@ -480,7 +480,7 @@ const Messaging_Box_Event_delete_: Messaging_Box_Event = 7; /* LONG_NAMED_ENUMER
  * @type {number}
  */
 export
-const delete_: Messaging_Box_Event = Messaging_Box_Event_delete_; /* SHORT_NAMED_ENUMERATED_VALUE */
+const delete_: _enum_for_Messaging_Box_Event.delete_ = Messaging_Box_Event_delete_; /* SHORT_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary Messaging_Box_Event_pin_change
@@ -494,7 +494,7 @@ const delete_: Messaging_Box_Event = Messaging_Box_Event_delete_; /* SHORT_NAMED
  * @type {number}
  */
 export
-const Messaging_Box_Event_pin_change: Messaging_Box_Event = 8; /* LONG_NAMED_ENUMERATED_VALUE */
+const Messaging_Box_Event_pin_change: _enum_for_Messaging_Box_Event.pin_change = _enum_for_Messaging_Box_Event.pin_change; /* LONG_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary pin_change
@@ -508,7 +508,7 @@ const Messaging_Box_Event_pin_change: Messaging_Box_Event = 8; /* LONG_NAMED_ENU
  * @type {number}
  */
 export
-const pin_change: Messaging_Box_Event = Messaging_Box_Event_pin_change; /* SHORT_NAMED_ENUMERATED_VALUE */
+const pin_change: _enum_for_Messaging_Box_Event.pin_change = Messaging_Box_Event_pin_change; /* SHORT_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary Messaging_Box_Event_greeting_record
@@ -523,7 +523,7 @@ const pin_change: Messaging_Box_Event = Messaging_Box_Event_pin_change; /* SHORT
  * @type {number}
  */
 export
-const Messaging_Box_Event_greeting_record: Messaging_Box_Event = 9; /* LONG_NAMED_ENUMERATED_VALUE */
+const Messaging_Box_Event_greeting_record: _enum_for_Messaging_Box_Event.greeting_record = _enum_for_Messaging_Box_Event.greeting_record; /* LONG_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary greeting_record
@@ -538,7 +538,7 @@ const Messaging_Box_Event_greeting_record: Messaging_Box_Event = 9; /* LONG_NAME
  * @type {number}
  */
 export
-const greeting_record: Messaging_Box_Event = Messaging_Box_Event_greeting_record; /* SHORT_NAMED_ENUMERATED_VALUE */
+const greeting_record: _enum_for_Messaging_Box_Event.greeting_record = Messaging_Box_Event_greeting_record; /* SHORT_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary Messaging_Box_Event_greeting_change
@@ -553,7 +553,7 @@ const greeting_record: Messaging_Box_Event = Messaging_Box_Event_greeting_record
  * @type {number}
  */
 export
-const Messaging_Box_Event_greeting_change: Messaging_Box_Event = 10; /* LONG_NAMED_ENUMERATED_VALUE */
+const Messaging_Box_Event_greeting_change: _enum_for_Messaging_Box_Event.greeting_change = _enum_for_Messaging_Box_Event.greeting_change; /* LONG_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary greeting_change
@@ -568,7 +568,7 @@ const Messaging_Box_Event_greeting_change: Messaging_Box_Event = 10; /* LONG_NAM
  * @type {number}
  */
 export
-const greeting_change: Messaging_Box_Event = Messaging_Box_Event_greeting_change; /* SHORT_NAMED_ENUMERATED_VALUE */
+const greeting_change: _enum_for_Messaging_Box_Event.greeting_change = Messaging_Box_Event_greeting_change; /* SHORT_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary Messaging_Box_Event_greeting_delete
@@ -583,7 +583,7 @@ const greeting_change: Messaging_Box_Event = Messaging_Box_Event_greeting_change
  * @type {number}
  */
 export
-const Messaging_Box_Event_greeting_delete: Messaging_Box_Event = 11; /* LONG_NAMED_ENUMERATED_VALUE */
+const Messaging_Box_Event_greeting_delete: _enum_for_Messaging_Box_Event.greeting_delete = _enum_for_Messaging_Box_Event.greeting_delete; /* LONG_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary greeting_delete
@@ -598,7 +598,7 @@ const Messaging_Box_Event_greeting_delete: Messaging_Box_Event = 11; /* LONG_NAM
  * @type {number}
  */
 export
-const greeting_delete: Messaging_Box_Event = Messaging_Box_Event_greeting_delete; /* SHORT_NAMED_ENUMERATED_VALUE */
+const greeting_delete: _enum_for_Messaging_Box_Event.greeting_delete = Messaging_Box_Event_greeting_delete; /* SHORT_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary Messaging_Box_Event_greeting_enable
@@ -613,7 +613,7 @@ const greeting_delete: Messaging_Box_Event = Messaging_Box_Event_greeting_delete
  * @type {number}
  */
 export
-const Messaging_Box_Event_greeting_enable: Messaging_Box_Event = 12; /* LONG_NAMED_ENUMERATED_VALUE */
+const Messaging_Box_Event_greeting_enable: _enum_for_Messaging_Box_Event.greeting_enable = _enum_for_Messaging_Box_Event.greeting_enable; /* LONG_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary greeting_enable
@@ -628,7 +628,7 @@ const Messaging_Box_Event_greeting_enable: Messaging_Box_Event = 12; /* LONG_NAM
  * @type {number}
  */
 export
-const greeting_enable: Messaging_Box_Event = Messaging_Box_Event_greeting_enable; /* SHORT_NAMED_ENUMERATED_VALUE */
+const greeting_enable: _enum_for_Messaging_Box_Event.greeting_enable = Messaging_Box_Event_greeting_enable; /* SHORT_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary Messaging_Box_Event_greeting_disable
@@ -643,7 +643,7 @@ const greeting_enable: Messaging_Box_Event = Messaging_Box_Event_greeting_enable
  * @type {number}
  */
 export
-const Messaging_Box_Event_greeting_disable: Messaging_Box_Event = 13; /* LONG_NAMED_ENUMERATED_VALUE */
+const Messaging_Box_Event_greeting_disable: _enum_for_Messaging_Box_Event.greeting_disable = _enum_for_Messaging_Box_Event.greeting_disable; /* LONG_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary greeting_disable
@@ -658,7 +658,7 @@ const Messaging_Box_Event_greeting_disable: Messaging_Box_Event = 13; /* LONG_NA
  * @type {number}
  */
 export
-const greeting_disable: Messaging_Box_Event = Messaging_Box_Event_greeting_disable; /* SHORT_NAMED_ENUMERATED_VALUE */
+const greeting_disable: _enum_for_Messaging_Box_Event.greeting_disable = Messaging_Box_Event_greeting_disable; /* SHORT_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary Messaging_Box_Event_notification_enable
@@ -672,7 +672,7 @@ const greeting_disable: Messaging_Box_Event = Messaging_Box_Event_greeting_disab
  * @type {number}
  */
 export
-const Messaging_Box_Event_notification_enable: Messaging_Box_Event = 14; /* LONG_NAMED_ENUMERATED_VALUE */
+const Messaging_Box_Event_notification_enable: _enum_for_Messaging_Box_Event.notification_enable = _enum_for_Messaging_Box_Event.notification_enable; /* LONG_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary notification_enable
@@ -686,7 +686,7 @@ const Messaging_Box_Event_notification_enable: Messaging_Box_Event = 14; /* LONG
  * @type {number}
  */
 export
-const notification_enable: Messaging_Box_Event = Messaging_Box_Event_notification_enable; /* SHORT_NAMED_ENUMERATED_VALUE */
+const notification_enable: _enum_for_Messaging_Box_Event.notification_enable = Messaging_Box_Event_notification_enable; /* SHORT_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary Messaging_Box_Event_notification_disable
@@ -700,7 +700,7 @@ const notification_enable: Messaging_Box_Event = Messaging_Box_Event_notificatio
  * @type {number}
  */
 export
-const Messaging_Box_Event_notification_disable: Messaging_Box_Event = 15; /* LONG_NAMED_ENUMERATED_VALUE */
+const Messaging_Box_Event_notification_disable: _enum_for_Messaging_Box_Event.notification_disable = _enum_for_Messaging_Box_Event.notification_disable; /* LONG_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary notification_disable
@@ -714,7 +714,7 @@ const Messaging_Box_Event_notification_disable: Messaging_Box_Event = 15; /* LON
  * @type {number}
  */
 export
-const notification_disable: Messaging_Box_Event = Messaging_Box_Event_notification_disable; /* SHORT_NAMED_ENUMERATED_VALUE */
+const notification_disable: _enum_for_Messaging_Box_Event.notification_disable = Messaging_Box_Event_notification_disable; /* SHORT_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary Messaging_Box_Event_disconnect
@@ -728,7 +728,7 @@ const notification_disable: Messaging_Box_Event = Messaging_Box_Event_notificati
  * @type {number}
  */
 export
-const Messaging_Box_Event_disconnect: Messaging_Box_Event = 16; /* LONG_NAMED_ENUMERATED_VALUE */
+const Messaging_Box_Event_disconnect: _enum_for_Messaging_Box_Event.disconnect = _enum_for_Messaging_Box_Event.disconnect; /* LONG_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary disconnect
@@ -742,7 +742,7 @@ const Messaging_Box_Event_disconnect: Messaging_Box_Event = 16; /* LONG_NAMED_EN
  * @type {number}
  */
 export
-const disconnect: Messaging_Box_Event = Messaging_Box_Event_disconnect; /* SHORT_NAMED_ENUMERATED_VALUE */
+const disconnect: _enum_for_Messaging_Box_Event.disconnect = Messaging_Box_Event_disconnect; /* SHORT_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary Messaging_Box_Event_connect
@@ -758,7 +758,7 @@ const disconnect: Messaging_Box_Event = Messaging_Box_Event_disconnect; /* SHORT
  * @type {number}
  */
 export
-const Messaging_Box_Event_connect: Messaging_Box_Event = 17; /* LONG_NAMED_ENUMERATED_VALUE */
+const Messaging_Box_Event_connect: _enum_for_Messaging_Box_Event.connect = _enum_for_Messaging_Box_Event.connect; /* LONG_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary connect
@@ -774,7 +774,7 @@ const Messaging_Box_Event_connect: Messaging_Box_Event = 17; /* LONG_NAMED_ENUME
  * @type {number}
  */
 export
-const connect: Messaging_Box_Event = Messaging_Box_Event_connect; /* SHORT_NAMED_ENUMERATED_VALUE */
+const connect: _enum_for_Messaging_Box_Event.connect = Messaging_Box_Event_connect; /* SHORT_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary Messaging_Box_Event_unknown
@@ -788,7 +788,7 @@ const connect: Messaging_Box_Event = Messaging_Box_Event_connect; /* SHORT_NAMED
  * @type {number}
  */
 export
-const Messaging_Box_Event_unknown: Messaging_Box_Event = 0; /* LONG_NAMED_ENUMERATED_VALUE */
+const Messaging_Box_Event_unknown: _enum_for_Messaging_Box_Event.unknown = _enum_for_Messaging_Box_Event.unknown; /* LONG_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary unknown
@@ -802,7 +802,7 @@ const Messaging_Box_Event_unknown: Messaging_Box_Event = 0; /* LONG_NAMED_ENUMER
  * @type {number}
  */
 export
-const unknown: Messaging_Box_Event = Messaging_Box_Event_unknown; /* SHORT_NAMED_ENUMERATED_VALUE */
+const unknown: _enum_for_Messaging_Box_Event.unknown = Messaging_Box_Event_unknown; /* SHORT_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary Messaging_Box_Event_greeting_play
@@ -817,7 +817,7 @@ const unknown: Messaging_Box_Event = Messaging_Box_Event_unknown; /* SHORT_NAMED
  * @type {number}
  */
 export
-const Messaging_Box_Event_greeting_play: Messaging_Box_Event = 18; /* LONG_NAMED_ENUMERATED_VALUE */
+const Messaging_Box_Event_greeting_play: _enum_for_Messaging_Box_Event.greeting_play = _enum_for_Messaging_Box_Event.greeting_play; /* LONG_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary greeting_play
@@ -832,7 +832,7 @@ const Messaging_Box_Event_greeting_play: Messaging_Box_Event = 18; /* LONG_NAMED
  * @type {number}
  */
 export
-const greeting_play: Messaging_Box_Event = Messaging_Box_Event_greeting_play; /* SHORT_NAMED_ENUMERATED_VALUE */
+const greeting_play: _enum_for_Messaging_Box_Event.greeting_play = Messaging_Box_Event_greeting_play; /* SHORT_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary Messaging_Box_Event_language_change
@@ -846,7 +846,7 @@ const greeting_play: Messaging_Box_Event = Messaging_Box_Event_greeting_play; /*
  * @type {number}
  */
 export
-const Messaging_Box_Event_language_change: Messaging_Box_Event = 19; /* LONG_NAMED_ENUMERATED_VALUE */
+const Messaging_Box_Event_language_change: _enum_for_Messaging_Box_Event.language_change = _enum_for_Messaging_Box_Event.language_change; /* LONG_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary language_change
@@ -860,7 +860,7 @@ const Messaging_Box_Event_language_change: Messaging_Box_Event = 19; /* LONG_NAM
  * @type {number}
  */
 export
-const language_change: Messaging_Box_Event = Messaging_Box_Event_language_change; /* SHORT_NAMED_ENUMERATED_VALUE */
+const language_change: _enum_for_Messaging_Box_Event.language_change = Messaging_Box_Event_language_change; /* SHORT_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary Messaging_Box_Event_pin_security_enable
@@ -876,7 +876,7 @@ const language_change: Messaging_Box_Event = Messaging_Box_Event_language_change
  * @type {number}
  */
 export
-const Messaging_Box_Event_pin_security_enable: Messaging_Box_Event = 20; /* LONG_NAMED_ENUMERATED_VALUE */
+const Messaging_Box_Event_pin_security_enable: _enum_for_Messaging_Box_Event.pin_security_enable = _enum_for_Messaging_Box_Event.pin_security_enable; /* LONG_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary pin_security_enable
@@ -892,7 +892,7 @@ const Messaging_Box_Event_pin_security_enable: Messaging_Box_Event = 20; /* LONG
  * @type {number}
  */
 export
-const pin_security_enable: Messaging_Box_Event = Messaging_Box_Event_pin_security_enable; /* SHORT_NAMED_ENUMERATED_VALUE */
+const pin_security_enable: _enum_for_Messaging_Box_Event.pin_security_enable = Messaging_Box_Event_pin_security_enable; /* SHORT_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary Messaging_Box_Event_pin_security_disable
@@ -906,7 +906,7 @@ const pin_security_enable: Messaging_Box_Event = Messaging_Box_Event_pin_securit
  * @type {number}
  */
 export
-const Messaging_Box_Event_pin_security_disable: Messaging_Box_Event = 21; /* LONG_NAMED_ENUMERATED_VALUE */
+const Messaging_Box_Event_pin_security_disable: _enum_for_Messaging_Box_Event.pin_security_disable = _enum_for_Messaging_Box_Event.pin_security_disable; /* LONG_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary pin_security_disable
@@ -920,7 +920,7 @@ const Messaging_Box_Event_pin_security_disable: Messaging_Box_Event = 21; /* LON
  * @type {number}
  */
 export
-const pin_security_disable: Messaging_Box_Event = Messaging_Box_Event_pin_security_disable; /* SHORT_NAMED_ENUMERATED_VALUE */
+const pin_security_disable: _enum_for_Messaging_Box_Event.pin_security_disable = Messaging_Box_Event_pin_security_disable; /* SHORT_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary Messaging_Box_Event_personal_operator_add
@@ -934,7 +934,7 @@ const pin_security_disable: Messaging_Box_Event = Messaging_Box_Event_pin_securi
  * @type {number}
  */
 export
-const Messaging_Box_Event_personal_operator_add: Messaging_Box_Event = 22; /* LONG_NAMED_ENUMERATED_VALUE */
+const Messaging_Box_Event_personal_operator_add: _enum_for_Messaging_Box_Event.personal_operator_add = _enum_for_Messaging_Box_Event.personal_operator_add; /* LONG_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary personal_operator_add
@@ -948,7 +948,7 @@ const Messaging_Box_Event_personal_operator_add: Messaging_Box_Event = 22; /* LO
  * @type {number}
  */
 export
-const personal_operator_add: Messaging_Box_Event = Messaging_Box_Event_personal_operator_add; /* SHORT_NAMED_ENUMERATED_VALUE */
+const personal_operator_add: _enum_for_Messaging_Box_Event.personal_operator_add = Messaging_Box_Event_personal_operator_add; /* SHORT_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary Messaging_Box_Event_personal_operator_change
@@ -962,7 +962,7 @@ const personal_operator_add: Messaging_Box_Event = Messaging_Box_Event_personal_
  * @type {number}
  */
 export
-const Messaging_Box_Event_personal_operator_change: Messaging_Box_Event = 23; /* LONG_NAMED_ENUMERATED_VALUE */
+const Messaging_Box_Event_personal_operator_change: _enum_for_Messaging_Box_Event.personal_operator_change = _enum_for_Messaging_Box_Event.personal_operator_change; /* LONG_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary personal_operator_change
@@ -976,7 +976,7 @@ const Messaging_Box_Event_personal_operator_change: Messaging_Box_Event = 23; /*
  * @type {number}
  */
 export
-const personal_operator_change: Messaging_Box_Event = Messaging_Box_Event_personal_operator_change; /* SHORT_NAMED_ENUMERATED_VALUE */
+const personal_operator_change: _enum_for_Messaging_Box_Event.personal_operator_change = Messaging_Box_Event_personal_operator_change; /* SHORT_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary Messaging_Box_Event_personal_operator_remove
@@ -990,7 +990,7 @@ const personal_operator_change: Messaging_Box_Event = Messaging_Box_Event_person
  * @type {number}
  */
 export
-const Messaging_Box_Event_personal_operator_remove: Messaging_Box_Event = 24; /* LONG_NAMED_ENUMERATED_VALUE */
+const Messaging_Box_Event_personal_operator_remove: _enum_for_Messaging_Box_Event.personal_operator_remove = _enum_for_Messaging_Box_Event.personal_operator_remove; /* LONG_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary personal_operator_remove
@@ -1004,7 +1004,7 @@ const Messaging_Box_Event_personal_operator_remove: Messaging_Box_Event = 24; /*
  * @type {number}
  */
 export
-const personal_operator_remove: Messaging_Box_Event = Messaging_Box_Event_personal_operator_remove; /* SHORT_NAMED_ENUMERATED_VALUE */
+const personal_operator_remove: _enum_for_Messaging_Box_Event.personal_operator_remove = Messaging_Box_Event_personal_operator_remove; /* SHORT_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary Messaging_Box_Event_additional_destination_add
@@ -1018,7 +1018,7 @@ const personal_operator_remove: Messaging_Box_Event = Messaging_Box_Event_person
  * @type {number}
  */
 export
-const Messaging_Box_Event_additional_destination_add: Messaging_Box_Event = 25; /* LONG_NAMED_ENUMERATED_VALUE */
+const Messaging_Box_Event_additional_destination_add: _enum_for_Messaging_Box_Event.additional_destination_add = _enum_for_Messaging_Box_Event.additional_destination_add; /* LONG_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary additional_destination_add
@@ -1032,7 +1032,7 @@ const Messaging_Box_Event_additional_destination_add: Messaging_Box_Event = 25; 
  * @type {number}
  */
 export
-const additional_destination_add: Messaging_Box_Event = Messaging_Box_Event_additional_destination_add; /* SHORT_NAMED_ENUMERATED_VALUE */
+const additional_destination_add: _enum_for_Messaging_Box_Event.additional_destination_add = Messaging_Box_Event_additional_destination_add; /* SHORT_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary Messaging_Box_Event_additional_destination_change
@@ -1046,7 +1046,7 @@ const additional_destination_add: Messaging_Box_Event = Messaging_Box_Event_addi
  * @type {number}
  */
 export
-const Messaging_Box_Event_additional_destination_change: Messaging_Box_Event = 26; /* LONG_NAMED_ENUMERATED_VALUE */
+const Messaging_Box_Event_additional_destination_change: _enum_for_Messaging_Box_Event.additional_destination_change = _enum_for_Messaging_Box_Event.additional_destination_change; /* LONG_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary additional_destination_change
@@ -1060,7 +1060,7 @@ const Messaging_Box_Event_additional_destination_change: Messaging_Box_Event = 2
  * @type {number}
  */
 export
-const additional_destination_change: Messaging_Box_Event = Messaging_Box_Event_additional_destination_change; /* SHORT_NAMED_ENUMERATED_VALUE */
+const additional_destination_change: _enum_for_Messaging_Box_Event.additional_destination_change = Messaging_Box_Event_additional_destination_change; /* SHORT_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary Messaging_Box_Event_additional_destination_remove
@@ -1074,7 +1074,7 @@ const additional_destination_change: Messaging_Box_Event = Messaging_Box_Event_a
  * @type {number}
  */
 export
-const Messaging_Box_Event_additional_destination_remove: Messaging_Box_Event = 27; /* LONG_NAMED_ENUMERATED_VALUE */
+const Messaging_Box_Event_additional_destination_remove: _enum_for_Messaging_Box_Event.additional_destination_remove = _enum_for_Messaging_Box_Event.additional_destination_remove; /* LONG_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary additional_destination_remove
@@ -1088,7 +1088,7 @@ const Messaging_Box_Event_additional_destination_remove: Messaging_Box_Event = 2
  * @type {number}
  */
 export
-const additional_destination_remove: Messaging_Box_Event = Messaging_Box_Event_additional_destination_remove; /* SHORT_NAMED_ENUMERATED_VALUE */
+const additional_destination_remove: _enum_for_Messaging_Box_Event.additional_destination_remove = Messaging_Box_Event_additional_destination_remove; /* SHORT_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary Messaging_Box_Event_auto_play_enable
@@ -1103,7 +1103,7 @@ const additional_destination_remove: Messaging_Box_Event = Messaging_Box_Event_a
  * @type {number}
  */
 export
-const Messaging_Box_Event_auto_play_enable: Messaging_Box_Event = 28; /* LONG_NAMED_ENUMERATED_VALUE */
+const Messaging_Box_Event_auto_play_enable: _enum_for_Messaging_Box_Event.auto_play_enable = _enum_for_Messaging_Box_Event.auto_play_enable; /* LONG_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary auto_play_enable
@@ -1118,7 +1118,7 @@ const Messaging_Box_Event_auto_play_enable: Messaging_Box_Event = 28; /* LONG_NA
  * @type {number}
  */
 export
-const auto_play_enable: Messaging_Box_Event = Messaging_Box_Event_auto_play_enable; /* SHORT_NAMED_ENUMERATED_VALUE */
+const auto_play_enable: _enum_for_Messaging_Box_Event.auto_play_enable = Messaging_Box_Event_auto_play_enable; /* SHORT_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary Messaging_Box_Event_auto_play_disable
@@ -1132,7 +1132,7 @@ const auto_play_enable: Messaging_Box_Event = Messaging_Box_Event_auto_play_enab
  * @type {number}
  */
 export
-const Messaging_Box_Event_auto_play_disable: Messaging_Box_Event = 29; /* LONG_NAMED_ENUMERATED_VALUE */
+const Messaging_Box_Event_auto_play_disable: _enum_for_Messaging_Box_Event.auto_play_disable = _enum_for_Messaging_Box_Event.auto_play_disable; /* LONG_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary auto_play_disable
@@ -1146,7 +1146,7 @@ const Messaging_Box_Event_auto_play_disable: Messaging_Box_Event = 29; /* LONG_N
  * @type {number}
  */
 export
-const auto_play_disable: Messaging_Box_Event = Messaging_Box_Event_auto_play_disable; /* SHORT_NAMED_ENUMERATED_VALUE */
+const auto_play_disable: _enum_for_Messaging_Box_Event.auto_play_disable = Messaging_Box_Event_auto_play_disable; /* SHORT_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary Messaging_Box_Event_header_play_enable
@@ -1161,7 +1161,7 @@ const auto_play_disable: Messaging_Box_Event = Messaging_Box_Event_auto_play_dis
  * @type {number}
  */
 export
-const Messaging_Box_Event_header_play_enable: Messaging_Box_Event = 30; /* LONG_NAMED_ENUMERATED_VALUE */
+const Messaging_Box_Event_header_play_enable: _enum_for_Messaging_Box_Event.header_play_enable = _enum_for_Messaging_Box_Event.header_play_enable; /* LONG_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary header_play_enable
@@ -1176,7 +1176,7 @@ const Messaging_Box_Event_header_play_enable: Messaging_Box_Event = 30; /* LONG_
  * @type {number}
  */
 export
-const header_play_enable: Messaging_Box_Event = Messaging_Box_Event_header_play_enable; /* SHORT_NAMED_ENUMERATED_VALUE */
+const header_play_enable: _enum_for_Messaging_Box_Event.header_play_enable = Messaging_Box_Event_header_play_enable; /* SHORT_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary Messaging_Box_Event_header_play_disable
@@ -1190,7 +1190,7 @@ const header_play_enable: Messaging_Box_Event = Messaging_Box_Event_header_play_
  * @type {number}
  */
 export
-const Messaging_Box_Event_header_play_disable: Messaging_Box_Event = 31; /* LONG_NAMED_ENUMERATED_VALUE */
+const Messaging_Box_Event_header_play_disable: _enum_for_Messaging_Box_Event.header_play_disable = _enum_for_Messaging_Box_Event.header_play_disable; /* LONG_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary header_play_disable
@@ -1204,7 +1204,7 @@ const Messaging_Box_Event_header_play_disable: Messaging_Box_Event = 31; /* LONG
  * @type {number}
  */
 export
-const header_play_disable: Messaging_Box_Event = Messaging_Box_Event_header_play_disable; /* SHORT_NAMED_ENUMERATED_VALUE */
+const header_play_disable: _enum_for_Messaging_Box_Event.header_play_disable = Messaging_Box_Event_header_play_disable; /* SHORT_NAMED_ENUMERATED_VALUE */
 export const _decode_Messaging_Box_Event: $.ASN1Decoder<Messaging_Box_Event> = $._decodeEnumerated;
 export const _encode_Messaging_Box_Event: $.ASN1Encoder<Messaging_Box_Event> = $._encodeEnumerated;
 

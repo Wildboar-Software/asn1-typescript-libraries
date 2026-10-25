@@ -1,9 +1,9 @@
 /* eslint-disable */
 import {
-    OPTIONAL,
-    BOOLEAN,
-    OCTET_STRING,
-    ASN1Element as _Element,
+    type OPTIONAL,
+    type BOOLEAN,
+    type OCTET_STRING,
+    type ASN1Element as _Element,
     ASN1TagClass as _TagClass,
     ASN1Construction as _Construction,
     ASN1UniversalType as _UniversalType,
@@ -67,7 +67,7 @@ class RenewInfoMsgContent {
      * @public
      * @readonly
      */
-    readonly sessionID: OCTET_STRING;
+    public readonly sessionID: OCTET_STRING;
     /**
      * @summary `clientType`.
      * @description
@@ -80,7 +80,7 @@ class RenewInfoMsgContent {
      * @public
      * @readonly
      */
-    readonly clientType: OCTET_STRING;
+    public readonly clientType: OCTET_STRING;
     /**
      * @summary `imageFlag`.
      * @description
@@ -92,7 +92,7 @@ class RenewInfoMsgContent {
      * @public
      * @readonly
      */
-    readonly imageFlag: OCTET_STRING;
+    public readonly imageFlag: OCTET_STRING;
     /**
      * @summary `imageInfo`.
      * @description
@@ -103,7 +103,7 @@ class RenewInfoMsgContent {
      * @public
      * @readonly
      */
-    readonly imageInfo: ImageInfo[];
+    public readonly imageInfo: ImageInfo[];
     /**
      * @summary `purchaseReport_Req`.
      * @description
@@ -114,7 +114,7 @@ class RenewInfoMsgContent {
      * @public
      * @readonly
      */
-    readonly purchaseReport_Req: OPTIONAL<BOOLEAN>;
+    public readonly purchaseReport_Req: OPTIONAL<BOOLEAN>;
     /**
      * @summary `hashed_CCCI`.
      * @description
@@ -126,7 +126,7 @@ class RenewInfoMsgContent {
      * @public
      * @readonly
      */
-    readonly hashed_CCCI: OCTET_STRING;
+    public readonly hashed_CCCI: OCTET_STRING;
     /**
      * @summary `hashed_ICCI`.
      * @description
@@ -138,7 +138,7 @@ class RenewInfoMsgContent {
      * @public
      * @readonly
      */
-    readonly hashed_ICCI: OCTET_STRING;
+    public readonly hashed_ICCI: OCTET_STRING;
     /**
      * @summary `directives`.
      * @description
@@ -150,7 +150,7 @@ class RenewInfoMsgContent {
      * @public
      * @readonly
      */
-    readonly directives?: OPTIONAL<OCTET_STRING>;
+    public readonly directives?: OPTIONAL<OCTET_STRING>;
 
     constructor (
         sessionID: OCTET_STRING,

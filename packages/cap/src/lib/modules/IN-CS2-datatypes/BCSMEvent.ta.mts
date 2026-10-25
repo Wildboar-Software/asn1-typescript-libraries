@@ -1,7 +1,7 @@
 /* eslint-disable */
 import {
-    OPTIONAL,
-    ASN1Element as _Element,
+    type OPTIONAL,
+    type ASN1Element as _Element,
     ASN1TagClass as _TagClass,
     ASN1Construction as _Construction,
     ASN1UniversalType as _UniversalType,
@@ -13,8 +13,8 @@ import {
 import * as $ from "@wildboar/asn1/functional";
 import { EventTypeBCSM, _enum_for_EventTypeBCSM, _decode_EventTypeBCSM, _encode_EventTypeBCSM } from "../IN-CS2-datatypes/EventTypeBCSM.ta.mjs";
 import { MonitorMode, _enum_for_MonitorMode, _decode_MonitorMode, _encode_MonitorMode } from "../IN-CS2-datatypes/MonitorMode.ta.mjs";
-import { LegID, _decode_LegID, _encode_LegID } from "../IN-CS2-datatypes/LegID.ta.mjs";
-import { DpSpecificCriteria, _decode_DpSpecificCriteria, _encode_DpSpecificCriteria } from "../IN-CS2-datatypes/DpSpecificCriteria.ta.mjs";
+import { type LegID, _decode_LegID, _encode_LegID } from "../IN-CS2-datatypes/LegID.ta.mjs";
+import { type DpSpecificCriteria, _decode_DpSpecificCriteria, _encode_DpSpecificCriteria } from "../IN-CS2-datatypes/DpSpecificCriteria.ta.mjs";
 
 
 /**
@@ -36,32 +36,42 @@ import { DpSpecificCriteria, _decode_DpSpecificCriteria, _encode_DpSpecificCrite
  */
 export
 class BCSMEvent {
+    /**
+     * @summary `eventTypeBCSM`.
+     * @public
+     * @readonly
+     */
+    public readonly eventTypeBCSM: EventTypeBCSM;
+    /**
+     * @summary `monitorMode`.
+     * @public
+     * @readonly
+     */
+    public readonly monitorMode: MonitorMode;
+    /**
+     * @summary `legID`.
+     * @public
+     * @readonly
+     */
+    public readonly legID?: OPTIONAL<LegID>;
+    /**
+     * @summary `dpSpecificCriteria`.
+     * @public
+     * @readonly
+     */
+    public readonly dpSpecificCriteria?: OPTIONAL<DpSpecificCriteria>;
+
     constructor (
-        /**
-         * @summary `eventTypeBCSM`.
-         * @public
-         * @readonly
-         */
-        readonly eventTypeBCSM: EventTypeBCSM,
-        /**
-         * @summary `monitorMode`.
-         * @public
-         * @readonly
-         */
-        readonly monitorMode: MonitorMode,
-        /**
-         * @summary `legID`.
-         * @public
-         * @readonly
-         */
-        readonly legID?: OPTIONAL<LegID>,
-        /**
-         * @summary `dpSpecificCriteria`.
-         * @public
-         * @readonly
-         */
-        readonly dpSpecificCriteria?: OPTIONAL<DpSpecificCriteria>
-    ) {}
+        eventTypeBCSM: EventTypeBCSM,
+        monitorMode: MonitorMode,
+        legID?: OPTIONAL<LegID>,
+        dpSpecificCriteria?: OPTIONAL<DpSpecificCriteria>
+    ) {
+        this.eventTypeBCSM = eventTypeBCSM;
+        this.monitorMode = monitorMode;
+        this.legID = legID;
+        this.dpSpecificCriteria = dpSpecificCriteria;
+    }
 
     /**
      * @summary Restructures an object into a BCSMEvent
@@ -85,13 +95,13 @@ class BCSMEvent {
          * @static
          */
 
-    public static _enum_for_eventTypeBCSM = _enum_for_EventTypeBCSM;        /**
+    public static _enum_for_eventTypeBCSM: typeof _enum_for_EventTypeBCSM = _enum_for_EventTypeBCSM;        /**
          * @summary The enum used as the type of the component `monitorMode`
          * @public
          * @static
          */
 
-    public static _enum_for_monitorMode = _enum_for_MonitorMode;
+    public static _enum_for_monitorMode: typeof _enum_for_MonitorMode = _enum_for_MonitorMode;
 }
 
 /**

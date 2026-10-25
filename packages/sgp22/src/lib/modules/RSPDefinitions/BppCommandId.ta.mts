@@ -1,7 +1,7 @@
 /* eslint-disable */
 import {
-    ASN1Element as _Element,
-    INTEGER
+    type ASN1Element as _Element,
+    type INTEGER
 } from "@wildboar/asn1";
 import * as $ from "@wildboar/asn1/functional";
 
@@ -34,7 +34,7 @@ type BppCommandId = INTEGER;
  * @type {number}
  */
 export
-const BppCommandId_initialiseSecureChannel: BppCommandId = 0; /* LONG_NAMED_INTEGER_VALUE */
+const BppCommandId_initialiseSecureChannel: 0 = 0 satisfies BppCommandId; /* LONG_NAMED_INTEGER_VALUE */
 
 /**
  * @summary BppCommandId_initialiseSecureChannel
@@ -46,7 +46,7 @@ const BppCommandId_initialiseSecureChannel: BppCommandId = 0; /* LONG_NAMED_INTE
  * @type {number}
  */
 export
-const initialiseSecureChannel: BppCommandId = BppCommandId_initialiseSecureChannel; /* SHORT_NAMED_INTEGER_VALUE */
+const initialiseSecureChannel: 0 = BppCommandId_initialiseSecureChannel; /* SHORT_NAMED_INTEGER_VALUE */
 
 /**
  * @summary BppCommandId_configureISDP
@@ -58,7 +58,7 @@ const initialiseSecureChannel: BppCommandId = BppCommandId_initialiseSecureChann
  * @type {number}
  */
 export
-const BppCommandId_configureISDP: BppCommandId = 1; /* LONG_NAMED_INTEGER_VALUE */
+const BppCommandId_configureISDP: 1 = 1 satisfies BppCommandId; /* LONG_NAMED_INTEGER_VALUE */
 
 /**
  * @summary BppCommandId_configureISDP
@@ -70,7 +70,7 @@ const BppCommandId_configureISDP: BppCommandId = 1; /* LONG_NAMED_INTEGER_VALUE 
  * @type {number}
  */
 export
-const configureISDP: BppCommandId = BppCommandId_configureISDP; /* SHORT_NAMED_INTEGER_VALUE */
+const configureISDP: 1 = BppCommandId_configureISDP; /* SHORT_NAMED_INTEGER_VALUE */
 
 /**
  * @summary BppCommandId_storeMetadata
@@ -82,7 +82,7 @@ const configureISDP: BppCommandId = BppCommandId_configureISDP; /* SHORT_NAMED_I
  * @type {number}
  */
 export
-const BppCommandId_storeMetadata: BppCommandId = 2; /* LONG_NAMED_INTEGER_VALUE */
+const BppCommandId_storeMetadata: 2 = 2 satisfies BppCommandId; /* LONG_NAMED_INTEGER_VALUE */
 
 /**
  * @summary BppCommandId_storeMetadata
@@ -94,7 +94,7 @@ const BppCommandId_storeMetadata: BppCommandId = 2; /* LONG_NAMED_INTEGER_VALUE 
  * @type {number}
  */
 export
-const storeMetadata: BppCommandId = BppCommandId_storeMetadata; /* SHORT_NAMED_INTEGER_VALUE */
+const storeMetadata: 2 = BppCommandId_storeMetadata; /* SHORT_NAMED_INTEGER_VALUE */
 
 /**
  * @summary BppCommandId_storeMetadata2
@@ -107,7 +107,7 @@ const storeMetadata: BppCommandId = BppCommandId_storeMetadata; /* SHORT_NAMED_I
  * @type {number}
  */
 export
-const BppCommandId_storeMetadata2: BppCommandId = 3; /* LONG_NAMED_INTEGER_VALUE */
+const BppCommandId_storeMetadata2: 3 = 3 satisfies BppCommandId; /* LONG_NAMED_INTEGER_VALUE */
 
 /**
  * @summary BppCommandId_storeMetadata2
@@ -120,7 +120,7 @@ const BppCommandId_storeMetadata2: BppCommandId = 3; /* LONG_NAMED_INTEGER_VALUE
  * @type {number}
  */
 export
-const storeMetadata2: BppCommandId = BppCommandId_storeMetadata2; /* SHORT_NAMED_INTEGER_VALUE */
+const storeMetadata2: 3 = BppCommandId_storeMetadata2; /* SHORT_NAMED_INTEGER_VALUE */
 
 /**
  * @summary BppCommandId_replaceSessionKeys
@@ -132,7 +132,7 @@ const storeMetadata2: BppCommandId = BppCommandId_storeMetadata2; /* SHORT_NAMED
  * @type {number}
  */
 export
-const BppCommandId_replaceSessionKeys: BppCommandId = 4; /* LONG_NAMED_INTEGER_VALUE */
+const BppCommandId_replaceSessionKeys: 4 = 4 satisfies BppCommandId; /* LONG_NAMED_INTEGER_VALUE */
 
 /**
  * @summary BppCommandId_replaceSessionKeys
@@ -144,7 +144,7 @@ const BppCommandId_replaceSessionKeys: BppCommandId = 4; /* LONG_NAMED_INTEGER_V
  * @type {number}
  */
 export
-const replaceSessionKeys: BppCommandId = BppCommandId_replaceSessionKeys; /* SHORT_NAMED_INTEGER_VALUE */
+const replaceSessionKeys: 4 = BppCommandId_replaceSessionKeys; /* SHORT_NAMED_INTEGER_VALUE */
 
 /**
  * @summary BppCommandId_loadProfileElements
@@ -157,7 +157,7 @@ const replaceSessionKeys: BppCommandId = BppCommandId_replaceSessionKeys; /* SHO
  * @type {number}
  */
 export
-const BppCommandId_loadProfileElements: BppCommandId = 5; /* LONG_NAMED_INTEGER_VALUE */
+const BppCommandId_loadProfileElements: 5 = 5 satisfies BppCommandId; /* LONG_NAMED_INTEGER_VALUE */
 
 /**
  * @summary BppCommandId_loadProfileElements
@@ -170,9 +170,9 @@ const BppCommandId_loadProfileElements: BppCommandId = 5; /* LONG_NAMED_INTEGER_
  * @type {number}
  */
 export
-const loadProfileElements: BppCommandId = BppCommandId_loadProfileElements; /* SHORT_NAMED_INTEGER_VALUE */
-export const _decode_BppCommandId = $._decodeInteger;
-export const _encode_BppCommandId = $._encodeInteger;
+const loadProfileElements: 5 = BppCommandId_loadProfileElements; /* SHORT_NAMED_INTEGER_VALUE */
+export const _decode_BppCommandId: $.ASN1Decoder<INTEGER> = $._decodeInteger;
+export const _encode_BppCommandId: $.ASN1Encoder<INTEGER> = $._encodeInteger;
 
 
 /* eslint-enable */

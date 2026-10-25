@@ -1,6 +1,6 @@
 /* eslint-disable */
 import {
-    ASN1Element as _Element,
+    type ASN1Element as _Element,
     ASN1TagClass as _TagClass,
     ASN1Construction as _Construction,
     ASN1UniversalType as _UniversalType,
@@ -16,7 +16,7 @@ import {
     _encode_ObjectInformation,
 } from '../Pbact-access/ObjectInformation.ta.mjs';
 import {
-    AccessdErr,
+    type AccessdErr,
     _decode_AccessdErr,
     _encode_AccessdErr,
 } from '../Pbact-access/AccessdErr.ta.mjs';

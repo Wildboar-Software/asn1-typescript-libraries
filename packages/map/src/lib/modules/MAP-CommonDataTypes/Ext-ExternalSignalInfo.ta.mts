@@ -1,12 +1,12 @@
 /* eslint-disable */
 import {
-    OPTIONAL,
-    ASN1Element as _Element,
+    type OPTIONAL,
+    type ASN1Element as _Element,
     ASN1TagClass as _TagClass
 } from "@wildboar/asn1";
 import * as $ from "@wildboar/asn1/functional";
-import { Ext_ProtocolId, _decode_Ext_ProtocolId, _encode_Ext_ProtocolId, _enum_for_Ext_ProtocolId } from "../MAP-CommonDataTypes/Ext-ProtocolId.ta.mjs";
-import { SignalInfo, _decode_SignalInfo, _encode_SignalInfo } from "../MAP-CommonDataTypes/SignalInfo.ta.mjs";
+import { type Ext_ProtocolId, _decode_Ext_ProtocolId, _encode_Ext_ProtocolId, _enum_for_Ext_ProtocolId } from "../MAP-CommonDataTypes/Ext-ProtocolId.ta.mjs";
+import { type SignalInfo, _decode_SignalInfo, _encode_SignalInfo } from "../MAP-CommonDataTypes/SignalInfo.ta.mjs";
 import { ExtensionContainer, _decode_ExtensionContainer, _encode_ExtensionContainer } from "../MAP-ExtensionDataTypes/ExtensionContainer.ta.mjs";
 
 
@@ -32,7 +32,7 @@ import { ExtensionContainer, _decode_ExtensionContainer, _encode_ExtensionContai
  *     signalInfo    SignalInfo,
  *     -- Information about the internal structure is given in
  *     -- clause 7.6.9.10
- *     extensionContainer    ExtensionContainer    OPTIONAL,
+ *     extensionContainer    ExtensionContainer    type OPTIONAL,
  *     ...}
  * ```
  * 
@@ -40,48 +40,58 @@ import { ExtensionContainer, _decode_ExtensionContainer, _encode_ExtensionContai
  */
 export
 class Ext_ExternalSignalInfo {
+    /**
+     * @summary `ext_ProtocolId`.
+     * @description
+     *
+     * Shall be `ets-300356` for additional signal info. Any other value:
+     * ignore the whole sequence. (3GPP TS 29.002 V19.1.0 clauses 17.7.8 and
+     * 7.6.9.10).
+     *
+     * @public
+     * @readonly
+     */
+    public readonly ext_ProtocolId: Ext_ProtocolId;
+    /**
+     * @summary `signalInfo`.
+     * @description
+     *
+     * Additional signal information (clause 7.6.9.10): Calling Party Number
+     * and/or Generic Number as in ETS 300 356, in either order. (3GPP TS
+     * 29.002 V19.1.0 clause 7.6.9.10).
+     *
+     * @public
+     * @readonly
+     */
+    public readonly signalInfo: SignalInfo;
+    /**
+     * @summary `extensionContainer`.
+     * @description
+     *
+     * Private extensions. (3GPP TS 29.002 V19.1.0 clause 17.7.8).
+     *
+     * @public
+     * @readonly
+     */
+    public readonly extensionContainer?: OPTIONAL<ExtensionContainer>;
+    /**
+     * @summary Extensions that are not recognized.
+     * @public
+     * @readonly
+     */
+    public readonly _unrecognizedExtensionsList: _Element[];
+
     constructor (
-        /**
-         * @summary `ext_ProtocolId`.
-         * @description
-         *
-         * Shall be `ets-300356` for additional signal info. Any other value:
-         * ignore the whole sequence. (3GPP TS 29.002 V19.1.0 clauses 17.7.8 and
-         * 7.6.9.10).
-         *
-         * @public
-         * @readonly
-         */
-        readonly ext_ProtocolId: Ext_ProtocolId,
-        /**
-         * @summary `signalInfo`.
-         * @description
-         *
-         * Additional signal information (clause 7.6.9.10): Calling Party Number
-         * and/or Generic Number as in ETS 300 356, in either order. (3GPP TS
-         * 29.002 V19.1.0 clause 7.6.9.10).
-         *
-         * @public
-         * @readonly
-         */
-        readonly signalInfo: SignalInfo,
-        /**
-         * @summary `extensionContainer`.
-         * @description
-         *
-         * Private extensions. (3GPP TS 29.002 V19.1.0 clause 17.7.8).
-         *
-         * @public
-         * @readonly
-         */
-        readonly extensionContainer?: OPTIONAL<ExtensionContainer>,
-        /**
-         * @summary Extensions that are not recognized.
-         * @public
-         * @readonly
-         */
-        readonly _unrecognizedExtensionsList: _Element[] = []
-    ) {}
+        ext_ProtocolId: Ext_ProtocolId,
+        signalInfo: SignalInfo,
+        extensionContainer?: OPTIONAL<ExtensionContainer>,
+        _unrecognizedExtensionsList: _Element[] = []
+    ) {
+        this.ext_ProtocolId = ext_ProtocolId;
+        this.signalInfo = signalInfo;
+        this.extensionContainer = extensionContainer;
+        this._unrecognizedExtensionsList = _unrecognizedExtensionsList;
+    }
 
     /**
      * @summary Restructures an object into a Ext_ExternalSignalInfo
@@ -105,7 +115,7 @@ class Ext_ExternalSignalInfo {
          * @static
          */
 
-    public static _enum_for_ext_ProtocolId = _enum_for_Ext_ProtocolId;
+    public static _enum_for_ext_ProtocolId: typeof _enum_for_Ext_ProtocolId = _enum_for_Ext_ProtocolId;
 }
 
 /**

@@ -1,6 +1,6 @@
 /* eslint-disable */
 import {
-  INTEGER,
+  type INTEGER,
   ASN1Element as _Element,
   ASN1TagClass as _TagClass,
   ASN1Construction as _Construction,
@@ -36,7 +36,7 @@ export type ReturnResultProblem = INTEGER;
  * @constant
  * @type {number}
  */
-export const ReturnResultProblem_unrecognizedInvocation: ReturnResultProblem = 0; /* LONG_NAMED_INTEGER_VALUE */
+export const ReturnResultProblem_unrecognizedInvocation: 0 = 0 satisfies ReturnResultProblem; /* LONG_NAMED_INTEGER_VALUE */
 
 
 /**
@@ -45,7 +45,7 @@ export const ReturnResultProblem_unrecognizedInvocation: ReturnResultProblem = 0
  * @constant
  * @type {number}
  */
-export const unrecognizedInvocation: ReturnResultProblem = ReturnResultProblem_unrecognizedInvocation; /* SHORT_NAMED_INTEGER_VALUE */
+export const unrecognizedInvocation: 0 = ReturnResultProblem_unrecognizedInvocation; /* SHORT_NAMED_INTEGER_VALUE */
 
 
 /**
@@ -54,7 +54,7 @@ export const unrecognizedInvocation: ReturnResultProblem = ReturnResultProblem_u
  * @constant
  * @type {number}
  */
-export const ReturnResultProblem_resultResponseUnexpected: ReturnResultProblem = 1; /* LONG_NAMED_INTEGER_VALUE */
+export const ReturnResultProblem_resultResponseUnexpected: 1 = 1 satisfies ReturnResultProblem; /* LONG_NAMED_INTEGER_VALUE */
 
 
 /**
@@ -63,7 +63,7 @@ export const ReturnResultProblem_resultResponseUnexpected: ReturnResultProblem =
  * @constant
  * @type {number}
  */
-export const resultResponseUnexpected: ReturnResultProblem = ReturnResultProblem_resultResponseUnexpected; /* SHORT_NAMED_INTEGER_VALUE */
+export const resultResponseUnexpected: 1 = ReturnResultProblem_resultResponseUnexpected; /* SHORT_NAMED_INTEGER_VALUE */
 
 
 /**
@@ -72,7 +72,7 @@ export const resultResponseUnexpected: ReturnResultProblem = ReturnResultProblem
  * @constant
  * @type {number}
  */
-export const ReturnResultProblem_mistypedResult: ReturnResultProblem = 2; /* LONG_NAMED_INTEGER_VALUE */
+export const ReturnResultProblem_mistypedResult: 2 = 2 satisfies ReturnResultProblem; /* LONG_NAMED_INTEGER_VALUE */
 
 
 /**
@@ -81,17 +81,17 @@ export const ReturnResultProblem_mistypedResult: ReturnResultProblem = 2; /* LON
  * @constant
  * @type {number}
  */
-export const mistypedResult: ReturnResultProblem = ReturnResultProblem_mistypedResult; /* SHORT_NAMED_INTEGER_VALUE */
+export const mistypedResult: 2 = ReturnResultProblem_mistypedResult; /* SHORT_NAMED_INTEGER_VALUE */
 
 
 
 
-export const _decode_ReturnResultProblem = $._decodeInteger;
+export const _decode_ReturnResultProblem: $.ASN1Decoder<INTEGER> = $._decodeInteger;
 
 
 
 
-export const _encode_ReturnResultProblem = $._encodeInteger;
+export const _encode_ReturnResultProblem: $.ASN1Encoder<INTEGER> = $._encodeInteger;
 
 
 /* eslint-enable */

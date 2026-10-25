@@ -78,7 +78,7 @@ type CUG_RejectCause = _enum_for_CUG_RejectCause;
  * @enum {number}
  */
 export
-const CUG_RejectCause = _enum_for_CUG_RejectCause;
+const CUG_RejectCause: typeof _enum_for_CUG_RejectCause = _enum_for_CUG_RejectCause;
 
 /**
  * @summary CUG_RejectCause_incomingCallsBarredWithinCUG
@@ -91,7 +91,7 @@ const CUG_RejectCause = _enum_for_CUG_RejectCause;
  * @type {number}
  */
 export
-const CUG_RejectCause_incomingCallsBarredWithinCUG: CUG_RejectCause = CUG_RejectCause.incomingCallsBarredWithinCUG; /* LONG_NAMED_ENUMERATED_VALUE */
+const CUG_RejectCause_incomingCallsBarredWithinCUG: _enum_for_CUG_RejectCause.incomingCallsBarredWithinCUG = CUG_RejectCause.incomingCallsBarredWithinCUG; /* LONG_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary incomingCallsBarredWithinCUG
@@ -104,7 +104,7 @@ const CUG_RejectCause_incomingCallsBarredWithinCUG: CUG_RejectCause = CUG_Reject
  * @type {number}
  */
 export
-const incomingCallsBarredWithinCUG: CUG_RejectCause = CUG_RejectCause.incomingCallsBarredWithinCUG; /* SHORT_NAMED_ENUMERATED_VALUE */
+const incomingCallsBarredWithinCUG: _enum_for_CUG_RejectCause.incomingCallsBarredWithinCUG = CUG_RejectCause.incomingCallsBarredWithinCUG; /* SHORT_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary CUG_RejectCause_subscriberNotMemberOfCUG
@@ -116,7 +116,7 @@ const incomingCallsBarredWithinCUG: CUG_RejectCause = CUG_RejectCause.incomingCa
  * @type {number}
  */
 export
-const CUG_RejectCause_subscriberNotMemberOfCUG: CUG_RejectCause = CUG_RejectCause.subscriberNotMemberOfCUG; /* LONG_NAMED_ENUMERATED_VALUE */
+const CUG_RejectCause_subscriberNotMemberOfCUG: _enum_for_CUG_RejectCause.subscriberNotMemberOfCUG = CUG_RejectCause.subscriberNotMemberOfCUG; /* LONG_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary subscriberNotMemberOfCUG
@@ -128,7 +128,7 @@ const CUG_RejectCause_subscriberNotMemberOfCUG: CUG_RejectCause = CUG_RejectCaus
  * @type {number}
  */
 export
-const subscriberNotMemberOfCUG: CUG_RejectCause = CUG_RejectCause.subscriberNotMemberOfCUG; /* SHORT_NAMED_ENUMERATED_VALUE */
+const subscriberNotMemberOfCUG: _enum_for_CUG_RejectCause.subscriberNotMemberOfCUG = CUG_RejectCause.subscriberNotMemberOfCUG; /* SHORT_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary CUG_RejectCause_requestedBasicServiceViolatesCUG_Constraints
@@ -141,7 +141,7 @@ const subscriberNotMemberOfCUG: CUG_RejectCause = CUG_RejectCause.subscriberNotM
  * @type {number}
  */
 export
-const CUG_RejectCause_requestedBasicServiceViolatesCUG_Constraints: CUG_RejectCause = CUG_RejectCause.requestedBasicServiceViolatesCUG_Constraints; /* LONG_NAMED_ENUMERATED_VALUE */
+const CUG_RejectCause_requestedBasicServiceViolatesCUG_Constraints: _enum_for_CUG_RejectCause.requestedBasicServiceViolatesCUG_Constraints = CUG_RejectCause.requestedBasicServiceViolatesCUG_Constraints; /* LONG_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary requestedBasicServiceViolatesCUG_Constraints
@@ -154,7 +154,7 @@ const CUG_RejectCause_requestedBasicServiceViolatesCUG_Constraints: CUG_RejectCa
  * @type {number}
  */
 export
-const requestedBasicServiceViolatesCUG_Constraints: CUG_RejectCause = CUG_RejectCause.requestedBasicServiceViolatesCUG_Constraints; /* SHORT_NAMED_ENUMERATED_VALUE */
+const requestedBasicServiceViolatesCUG_Constraints: _enum_for_CUG_RejectCause.requestedBasicServiceViolatesCUG_Constraints = CUG_RejectCause.requestedBasicServiceViolatesCUG_Constraints; /* SHORT_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary CUG_RejectCause_calledPartySS_InteractionViolation
@@ -167,7 +167,7 @@ const requestedBasicServiceViolatesCUG_Constraints: CUG_RejectCause = CUG_Reject
  * @type {number}
  */
 export
-const CUG_RejectCause_calledPartySS_InteractionViolation: CUG_RejectCause = CUG_RejectCause.calledPartySS_InteractionViolation; /* LONG_NAMED_ENUMERATED_VALUE */
+const CUG_RejectCause_calledPartySS_InteractionViolation: _enum_for_CUG_RejectCause.calledPartySS_InteractionViolation = CUG_RejectCause.calledPartySS_InteractionViolation; /* LONG_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary calledPartySS_InteractionViolation
@@ -180,7 +180,7 @@ const CUG_RejectCause_calledPartySS_InteractionViolation: CUG_RejectCause = CUG_
  * @type {number}
  */
 export
-const calledPartySS_InteractionViolation: CUG_RejectCause = CUG_RejectCause.calledPartySS_InteractionViolation; /* SHORT_NAMED_ENUMERATED_VALUE */
+const calledPartySS_InteractionViolation: _enum_for_CUG_RejectCause.calledPartySS_InteractionViolation = CUG_RejectCause.calledPartySS_InteractionViolation; /* SHORT_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary Decodes an ASN.1 element into a(n) CUG_RejectCause
@@ -188,7 +188,7 @@ const calledPartySS_InteractionViolation: CUG_RejectCause = CUG_RejectCause.call
  * @param el The element being decoded.
  * @returns The decoded data structure.
  */
-export const _decode_CUG_RejectCause = $._decodeEnumerated;
+export const _decode_CUG_RejectCause: $.ASN1Decoder<number> = $._decodeEnumerated;
 
 /**
  * @summary Encodes a(n) CUG_RejectCause into an ASN.1 Element.
@@ -197,7 +197,7 @@ export const _decode_CUG_RejectCause = $._decodeEnumerated;
  * @param elGetter A function that can be used to get new ASN.1 elements.
  * @returns {_Element} The CUG_RejectCause, encoded as an ASN.1 Element.
  */
-export const _encode_CUG_RejectCause = $._encodeEnumerated;
+export const _encode_CUG_RejectCause: $.ASN1Encoder<number> = $._encodeEnumerated;
 
 
 /* eslint-enable */

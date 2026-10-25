@@ -1,18 +1,18 @@
 /* eslint-disable */
 import {
-    ASN1Element as _Element,
+    type ASN1Element as _Element,
     ASN1TagClass as _TagClass,
-    BOOLEAN,
-    OPTIONAL,
+    type BOOLEAN,
+    type OPTIONAL,
 } from "@wildboar/asn1";
 import * as $ from "@wildboar/asn1/functional";
 import {
-    InvokeId,
+    type InvokeId,
     _decode_InvokeId,
     _encode_InvokeId,
 } from "../CommonProtocolSpecification/InvokeId.ta.mjs";
 import {
-    AbandonProblem,
+    type AbandonProblem,
     _decode_AbandonProblem,
     _encode_AbandonProblem,
 } from "../DirectoryAbstractService/AbandonProblem.ta.mjs";
@@ -27,7 +27,7 @@ import {
     _encode_Attribute,
 } from "../InformationFramework/Attribute.ta.mjs";
 import {
-    DistinguishedName,
+    type DistinguishedName,
     _decode_DistinguishedName,
     _encode_DistinguishedName,
 } from "../InformationFramework/DistinguishedName.ta.mjs";
@@ -58,62 +58,78 @@ import {
  *
  */
 export class AbandonFailedData implements CommonResults {
+    /**
+     * @summary `problem`.
+     * @description
+     *
+     * `noSuchOperation` (1), `tooLate` (2), or `cannotAbandon` (3).
+     *
+     * @public
+     * @readonly
+     */
+    public readonly problem: AbandonProblem;
+    /**
+     * @summary `operation`.
+     * @description
+     *
+     * InvokeId of the operation that could not be abandoned.
+     *
+     * @public
+     * @readonly
+     */
+    public readonly operation: InvokeId;
+    /**
+     * @summary Extensions that are not recognized.
+     * @public
+     * @readonly
+     */
+    public readonly _unrecognizedExtensionsList: _Element[];
+    /**
+     * @summary `securityParameters`.
+     * @description
+     *
+     * Required if this error is signed; absence ≡ empty.
+     *
+     * @public
+     * @readonly
+     */
+    public readonly securityParameters?: OPTIONAL<SecurityParameters>; /* REPLICATED_COMPONENT */
+    /**
+     * @summary `performer`.
+     * @public
+     * @readonly
+     */
+    public readonly performer?: OPTIONAL<DistinguishedName>; /* REPLICATED_COMPONENT */
+    /**
+     * @summary `aliasDereferenced`.
+     * @public
+     * @readonly
+     */
+    public readonly aliasDereferenced?: OPTIONAL<BOOLEAN>; /* REPLICATED_COMPONENT */
+    /**
+     * @summary `notification`.
+     * @public
+     * @readonly
+     */
+    public readonly notification?: OPTIONAL<Attribute[]>; /* REPLICATED_COMPONENT */
+
     constructor(
-        /**
-         * @summary `problem`.
-         * @description
-         *
-         * `noSuchOperation` (1), `tooLate` (2), or `cannotAbandon` (3).
-         *
-         * @public
-         * @readonly
-         */
-        readonly problem: AbandonProblem,
-        /**
-         * @summary `operation`.
-         * @description
-         *
-         * InvokeId of the operation that could not be abandoned.
-         *
-         * @public
-         * @readonly
-         */
-        readonly operation: InvokeId,
-        /**
-         * @summary Extensions that are not recognized.
-         * @public
-         * @readonly
-         */
-        readonly _unrecognizedExtensionsList: _Element[] = [],
-        /**
-         * @summary `securityParameters`.
-         * @description
-         *
-         * Required if this error is signed; absence ≡ empty.
-         *
-         * @public
-         * @readonly
-         */
-        readonly securityParameters?: OPTIONAL<SecurityParameters> /* REPLICATED_COMPONENT */,
-        /**
-         * @summary `performer`.
-         * @public
-         * @readonly
-         */
-        readonly performer?: OPTIONAL<DistinguishedName> /* REPLICATED_COMPONENT */,
-        /**
-         * @summary `aliasDereferenced`.
-         * @public
-         * @readonly
-         */
-        readonly aliasDereferenced?: OPTIONAL<BOOLEAN> /* REPLICATED_COMPONENT */,
-        /**
-         * @summary `notification`.
-         * @public
-         * @readonly
-         */
-        readonly notification?: OPTIONAL<Attribute[]> /* REPLICATED_COMPONENT */
-    ) {}
+        problem: AbandonProblem,
+        operation: InvokeId,
+        _unrecognizedExtensionsList: _Element[] = [],
+        securityParameters?: OPTIONAL<SecurityParameters>,
+        performer?: OPTIONAL<DistinguishedName>,
+        aliasDereferenced?: OPTIONAL<BOOLEAN>,
+        notification?: OPTIONAL<Attribute[]>
+    ) {
+        this.problem = problem;
+        this.operation = operation;
+        this._unrecognizedExtensionsList = _unrecognizedExtensionsList;
+        this.securityParameters = securityParameters;
+        this.performer = performer;
+        this.aliasDereferenced = aliasDereferenced;
+        this.notification = notification;
+    }
 
     /**
      * @summary Restructures an object into a AbandonFailedData

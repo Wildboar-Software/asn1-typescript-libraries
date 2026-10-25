@@ -1,8 +1,8 @@
 /* eslint-disable */
 import {
-    OPTIONAL,
-    NULL,
-    ASN1Element as _Element,
+    type OPTIONAL,
+    type NULL,
+    type ASN1Element as _Element,
     ASN1TagClass as _TagClass,
     ASN1Construction as _Construction,
     ASN1UniversalType as _UniversalType,
@@ -36,26 +36,32 @@ import { _decode_IntegerOffer, _encode_IntegerOffer, type IntegerOffer } from ".
  */
 export
 class DimensionParamOffer_window {
+    /**
+     * @summary `unbounded`.
+     * @description
+     * Offer unbounded update-window-size. ISO/IEC 9040:1997
+     * §18.2.3, §19.1.1.3.
+     * @public
+     * @readonly
+     */
+    public readonly unbounded?: OPTIONAL<NULL>;
+    /**
+     * @summary `limit`.
+     * @description
+     * Offered integer update-window-size(s). ISO/IEC 9040:1997
+     * §18.2.3, §19.1.1.3.
+     * @public
+     * @readonly
+     */
+    public readonly limit?: OPTIONAL<IntegerOffer>;
+
     constructor (
-        /**
-         * @summary `unbounded`.
-         * @description
-         * Offer unbounded update-window-size. ISO/IEC 9040:1997
-         * §18.2.3, §19.1.1.3.
-         * @public
-         * @readonly
-         */
-        readonly unbounded?: OPTIONAL<NULL>,
-        /**
-         * @summary `limit`.
-         * @description
-         * Offered integer update-window-size(s). ISO/IEC 9040:1997
-         * §18.2.3, §19.1.1.3.
-         * @public
-         * @readonly
-         */
-        readonly limit?: OPTIONAL<IntegerOffer>
-    ) {}
+        unbounded?: OPTIONAL<NULL>,
+        limit?: OPTIONAL<IntegerOffer>
+    ) {
+        this.unbounded = unbounded;
+        this.limit = limit;
+    }
 
     /**
      * @summary Restructures an object into a DimensionParamOffer_window

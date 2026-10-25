@@ -1,7 +1,7 @@
 /* eslint-disable */
 import {
-    OPTIONAL,
-    ASN1Element as _Element,
+    type OPTIONAL,
+    type ASN1Element as _Element,
     ASN1TagClass as _TagClass,
     ASN1Construction as _Construction,
     ASN1UniversalType as _UniversalType,
@@ -12,12 +12,12 @@ import {
 } from '@wildboar/asn1';
 import * as $ from '@wildboar/asn1/functional';
 import {
-    TerminationPointInformation,
+    type TerminationPointInformation,
     _decode_TerminationPointInformation,
     _encode_TerminationPointInformation,
 } from '../ASN1DefinedTypesModule/TerminationPointInformation.ta.mjs';
 import {
-    ObjectInstance,
+    type ObjectInstance,
     _decode_ObjectInstance,
     _encode_ObjectInstance,
 } from '@wildboar/cmip';
@@ -34,20 +34,26 @@ import {
  *
  */
 export class AddTpsToGtpInformation_Item {
+    /**
+     * @summary `tpsAdded`.
+     * @public
+     * @readonly
+     */
+    public readonly tpsAdded: TerminationPointInformation[];
+    /**
+     * @summary `gtp`.
+     * @public
+     * @readonly
+     */
+    public readonly gtp?: OPTIONAL<ObjectInstance>;
+
     constructor(
-        /**
-         * @summary `tpsAdded`.
-         * @public
-         * @readonly
-         */
-        readonly tpsAdded: TerminationPointInformation[],
-        /**
-         * @summary `gtp`.
-         * @public
-         * @readonly
-         */
-        readonly gtp?: OPTIONAL<ObjectInstance>
-    ) {}
+        tpsAdded: TerminationPointInformation[],
+        gtp?: OPTIONAL<ObjectInstance>
+    ) {
+        this.tpsAdded = tpsAdded;
+        this.gtp = gtp;
+    }
 
     /**
      * @summary Restructures an object into a AddTpsToGtpInformation_Item

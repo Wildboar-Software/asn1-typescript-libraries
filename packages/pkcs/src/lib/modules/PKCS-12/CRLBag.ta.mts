@@ -1,9 +1,9 @@
 /* eslint-disable */
 import {
     ASN1ConstructionError as _ConstructionError,
-    ASN1Element as _Element,
+    type ASN1Element as _Element,
     ASN1TagClass as _TagClass,
-    OBJECT_IDENTIFIER,
+    type OBJECT_IDENTIFIER,
 } from "@wildboar/asn1";
 import * as $ from "@wildboar/asn1/functional";
 
@@ -22,20 +22,26 @@ import * as $ from "@wildboar/asn1/functional";
  *
  */
 export class CRLBag {
+    /**
+     * @summary `crlId`.
+     * @public
+     * @readonly
+     */
+    public readonly crlId: OBJECT_IDENTIFIER;
+    /**
+     * @summary `crltValue`.
+     * @public
+     * @readonly
+     */
+    public readonly crltValue: _Element;
+
     constructor(
-        /**
-         * @summary `crlId`.
-         * @public
-         * @readonly
-         */
-        readonly crlId: OBJECT_IDENTIFIER,
-        /**
-         * @summary `crltValue`.
-         * @public
-         * @readonly
-         */
-        readonly crltValue: _Element
-    ) {}
+        crlId: OBJECT_IDENTIFIER,
+        crltValue: _Element
+    ) {
+        this.crlId = crlId;
+        this.crltValue = crltValue;
+    }
 
     /**
      * @summary Restructures an object into a CRLBag

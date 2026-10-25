@@ -1,7 +1,7 @@
 /* eslint-disable */
 import {
-    OPTIONAL,
-    ASN1Element as _Element,
+    type OPTIONAL,
+    type ASN1Element as _Element,
     ASN1TagClass as _TagClass,
     ASN1Construction as _Construction,
     ASN1UniversalType as _UniversalType,
@@ -11,10 +11,10 @@ import {
     ASN1ConstructionError as _ConstructionError,
 } from "@wildboar/asn1";
 import * as $ from "@wildboar/asn1/functional";
-import { FieldParamOffer_capability, _decode_FieldParamOffer_capability, _encode_FieldParamOffer_capability } from "../CDS/FieldParamOffer-capability.ta.mjs";
+import { type FieldParamOffer_capability, _decode_FieldParamOffer_capability, _encode_FieldParamOffer_capability } from "../CDS/FieldParamOffer-capability.ta.mjs";
 import { FieldParamOffer_maxFields, _decode_FieldParamOffer_maxFields, _encode_FieldParamOffer_maxFields } from "../CDS/FieldParamOffer-maxFields.ta.mjs";
 import { FieldParamOffer_maxFieldElements, _decode_FieldParamOffer_maxFieldElements, _encode_FieldParamOffer_maxFieldElements } from "../CDS/FieldParamOffer-maxFieldElements.ta.mjs";
-import { FieldParamOffer_accessOutside, _decode_FieldParamOffer_accessOutside, _encode_FieldParamOffer_accessOutside } from "../CDS/FieldParamOffer-accessOutside.ta.mjs";
+import { type FieldParamOffer_accessOutside, _decode_FieldParamOffer_accessOutside, _encode_FieldParamOffer_accessOutside } from "../CDS/FieldParamOffer-accessOutside.ta.mjs";
 
 
 /**
@@ -46,45 +46,55 @@ import { FieldParamOffer_accessOutside, _decode_FieldParamOffer_accessOutside, _
  */
 export
 class FieldParamOffer {
+    /**
+     * @summary `capability`.
+     * @description
+     * Offered `field-definition-capability` (`yes`(0)/`no`(1);
+     * default `"no"`). ISO/IEC 9040:1997 §18.1, §18.2.2.
+     * @public
+     * @readonly
+     */
+    public readonly capability?: OPTIONAL<FieldParamOffer_capability>;
+    /**
+     * @summary `maxFields`.
+     * @description
+     * Offered `max-fields` (fields per Y-array; default 1).
+     * ISO/IEC 9040:1997 §18.2.2.
+     * @public
+     * @readonly
+     */
+    public readonly maxFields?: OPTIONAL<FieldParamOffer_maxFields>;
+    /**
+     * @summary `maxFieldElements`.
+     * @description
+     * Offered `max-field-elements` (field-elements per field;
+     * default 1). ISO/IEC 9040:1997 §18.2.2.
+     * @public
+     * @readonly
+     */
+    public readonly maxFieldElements?: OPTIONAL<FieldParamOffer_maxFieldElements>;
+    /**
+     * @summary `accessOutside`.
+     * @description
+     * Offered `access-outside-fields` (`allowed`(0) /
+     * `notAllowed`(1); default `"allowed"`). Restricts updates
+     * outside field extents. ISO/IEC 9040:1997 §18.2.2, §19.5.
+     * @public
+     * @readonly
+     */
+    public readonly accessOutside?: OPTIONAL<FieldParamOffer_accessOutside>;
+
     constructor (
-        /**
-         * @summary `capability`.
-         * @description
-         * Offered `field-definition-capability` (`yes`(0)/`no`(1);
-         * default `"no"`). ISO/IEC 9040:1997 §18.1, §18.2.2.
-         * @public
-         * @readonly
-         */
-        readonly capability?: OPTIONAL<FieldParamOffer_capability>,
-        /**
-         * @summary `maxFields`.
-         * @description
-         * Offered `max-fields` (fields per Y-array; default 1).
-         * ISO/IEC 9040:1997 §18.2.2.
-         * @public
-         * @readonly
-         */
-        readonly maxFields?: OPTIONAL<FieldParamOffer_maxFields>,
-        /**
-         * @summary `maxFieldElements`.
-         * @description
-         * Offered `max-field-elements` (field-elements per field;
-         * default 1). ISO/IEC 9040:1997 §18.2.2.
-         * @public
-         * @readonly
-         */
-        readonly maxFieldElements?: OPTIONAL<FieldParamOffer_maxFieldElements>,
-        /**
-         * @summary `accessOutside`.
-         * @description
-         * Offered `access-outside-fields` (`allowed`(0) /
-         * `notAllowed`(1); default `"allowed"`). Restricts updates
-         * outside field extents. ISO/IEC 9040:1997 §18.2.2, §19.5.
-         * @public
-         * @readonly
-         */
-        readonly accessOutside?: OPTIONAL<FieldParamOffer_accessOutside>
-    ) {}
+        capability?: OPTIONAL<FieldParamOffer_capability>,
+        maxFields?: OPTIONAL<FieldParamOffer_maxFields>,
+        maxFieldElements?: OPTIONAL<FieldParamOffer_maxFieldElements>,
+        accessOutside?: OPTIONAL<FieldParamOffer_accessOutside>
+    ) {
+        this.capability = capability;
+        this.maxFields = maxFields;
+        this.maxFieldElements = maxFieldElements;
+        this.accessOutside = accessOutside;
+    }
 
     /**
      * @summary Restructures an object into a FieldParamOffer

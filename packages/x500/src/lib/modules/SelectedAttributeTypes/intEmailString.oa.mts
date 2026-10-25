@@ -2,7 +2,7 @@
 import { type SYNTAX_NAME } from "../InformationFramework/SYNTAX-NAME.oca.mjs";
 import { id_asx_intEmailString } from "../SelectedAttributeTypes/id-asx-intEmailString.va.mjs";
 import {
-    IntEmail,
+    type IntEmail,
     _decode_IntEmail,
     _encode_IntEmail,
 } from "../SelectedAttributeTypes/IntEmail.ta.mjs";

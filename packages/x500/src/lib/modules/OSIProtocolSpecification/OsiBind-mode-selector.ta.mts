@@ -1,8 +1,8 @@
 /* eslint-disable */
 import {
-    ASN1Element as _Element,
+    type ASN1Element as _Element,
     ASN1TagClass as _TagClass,
-    INTEGER,
+    type INTEGER,
 } from "@wildboar/asn1";
 import * as $ from "@wildboar/asn1/functional";
 
@@ -18,14 +18,18 @@ import * as $ from "@wildboar/asn1/functional";
  *
  */
 export class OsiBind_mode_selector {
+    /**
+     * @summary `mode_value`.
+     * @public
+     * @readonly
+     */
+    public readonly mode_value: INTEGER;
+
     constructor(
-        /**
-         * @summary `mode_value`.
-         * @public
-         * @readonly
-         */
-        readonly mode_value: INTEGER
-    ) {}
+        mode_value: INTEGER
+    ) {
+        this.mode_value = mode_value;
+    }
 
     /**
      * @summary Restructures an object into a OsiBind_mode_selector

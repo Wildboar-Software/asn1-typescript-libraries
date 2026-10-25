@@ -1,20 +1,20 @@
 /* eslint-disable */
 import {
-    OBJECT_IDENTIFIER,
-    OCTET_STRING,
-    OPTIONAL,
-    PrintableString,
-    UTF8String,
-    ASN1Element as _Element,
+    type OBJECT_IDENTIFIER,
+    type OCTET_STRING,
+    type OPTIONAL,
+    type PrintableString,
+    type UTF8String,
+    type ASN1Element as _Element,
     ASN1TagClass as _TagClass,
     ASN1SizeError
 } from "@wildboar/asn1";
 import * as $ from "@wildboar/asn1/functional";
-import { LawfulInterceptionIdentifier, _decode_LawfulInterceptionIdentifier, _encode_LawfulInterceptionIdentifier } from "../HI2Operations/LawfulInterceptionIdentifier.ta.mjs";
+import { type LawfulInterceptionIdentifier, _decode_LawfulInterceptionIdentifier, _encode_LawfulInterceptionIdentifier } from "../HI2Operations/LawfulInterceptionIdentifier.ta.mjs";
 // export { LawfulInterceptionIdentifier, _decode_LawfulInterceptionIdentifier, _encode_LawfulInterceptionIdentifier } from "../HI2Operations/LawfulInterceptionIdentifier.ta.mjs";
-import { TimeStamp, _decode_TimeStamp, _encode_TimeStamp } from "../HI2Operations/TimeStamp.ta.mjs";
+import { type TimeStamp, _decode_TimeStamp, _encode_TimeStamp } from "../HI2Operations/TimeStamp.ta.mjs";
 // export { TimeStamp, _decode_TimeStamp, _encode_TimeStamp } from "../HI2Operations/TimeStamp.ta.mjs";
-import { IRI_Parameters_initiator, _decode_IRI_Parameters_initiator, _encode_IRI_Parameters_initiator, _enum_for_IRI_Parameters_initiator } from "../EpsHI2Operations/IRI-Parameters-initiator.ta.mjs";
+import { type IRI_Parameters_initiator, _decode_IRI_Parameters_initiator, _encode_IRI_Parameters_initiator, _enum_for_IRI_Parameters_initiator } from "../EpsHI2Operations/IRI-Parameters-initiator.ta.mjs";
 // export { IRI_Parameters_initiator, _enum_for_IRI_Parameters_initiator, IRI_Parameters_initiator_not_Available /* IMPORTED_LONG_ENUMERATION_ITEM */, not_Available /* IMPORTED_SHORT_ENUMERATION_ITEM */, IRI_Parameters_initiator_originating_Target /* IMPORTED_LONG_ENUMERATION_ITEM */, originating_Target /* IMPORTED_SHORT_ENUMERATION_ITEM */, IRI_Parameters_initiator_terminating_Target /* IMPORTED_LONG_ENUMERATION_ITEM */, terminating_Target /* IMPORTED_SHORT_ENUMERATION_ITEM */, _decode_IRI_Parameters_initiator, _encode_IRI_Parameters_initiator } from "../EpsHI2Operations/IRI-Parameters-initiator.ta.mjs";
 import { Location, _decode_Location, _encode_Location } from "../EpsHI2Operations/Location.ta.mjs";
 // export { Location, _decode_Location, _encode_Location } from "../EpsHI2Operations/Location.ta.mjs";
@@ -22,25 +22,25 @@ import { PartyInformation, _decode_PartyInformation, _encode_PartyInformation } 
 // export { PartyInformation, _decode_PartyInformation, _encode_PartyInformation } from "../EpsHI2Operations/PartyInformation.ta.mjs";
 import { SMS_report, _decode_SMS_report, _encode_SMS_report } from "../EpsHI2Operations/SMS-report.ta.mjs";
 // export { SMS_report, _decode_SMS_report, _encode_SMS_report } from "../EpsHI2Operations/SMS-report.ta.mjs";
-import { National_Parameters, _decode_National_Parameters, _encode_National_Parameters } from "../HI2Operations/National-Parameters.ta.mjs";
+import { type National_Parameters, _decode_National_Parameters, _encode_National_Parameters } from "../HI2Operations/National-Parameters.ta.mjs";
 // export { National_Parameters, _decode_National_Parameters, _encode_National_Parameters } from "../HI2Operations/National-Parameters.ta.mjs";
-import { EPSCorrelationNumber, _decode_EPSCorrelationNumber, _encode_EPSCorrelationNumber } from "../EpsHI2Operations/EPSCorrelationNumber.ta.mjs";
+import { type EPSCorrelationNumber, _decode_EPSCorrelationNumber, _encode_EPSCorrelationNumber } from "../EpsHI2Operations/EPSCorrelationNumber.ta.mjs";
 // export { EPSCorrelationNumber, _decode_EPSCorrelationNumber, _encode_EPSCorrelationNumber } from "../EpsHI2Operations/EPSCorrelationNumber.ta.mjs";
-import { EPSEvent, _decode_EPSEvent, _encode_EPSEvent, _enum_for_EPSEvent } from "../EpsHI2Operations/EPSEvent.ta.mjs";
+import { type EPSEvent, _decode_EPSEvent, _encode_EPSEvent, _enum_for_EPSEvent } from "../EpsHI2Operations/EPSEvent.ta.mjs";
 // export { EPSEvent, _enum_for_EPSEvent, EPSEvent_pDPContextActivation /* IMPORTED_LONG_ENUMERATION_ITEM */, pDPContextActivation /* IMPORTED_SHORT_ENUMERATION_ITEM */, EPSEvent_startOfInterceptionWithPDPContextActive /* IMPORTED_LONG_ENUMERATION_ITEM */, startOfInterceptionWithPDPContextActive /* IMPORTED_SHORT_ENUMERATION_ITEM */, EPSEvent_pDPContextDeactivation /* IMPORTED_LONG_ENUMERATION_ITEM */, pDPContextDeactivation /* IMPORTED_SHORT_ENUMERATION_ITEM */, EPSEvent_gPRSAttach /* IMPORTED_LONG_ENUMERATION_ITEM */, gPRSAttach /* IMPORTED_SHORT_ENUMERATION_ITEM */, EPSEvent_gPRSDetach /* IMPORTED_LONG_ENUMERATION_ITEM */, gPRSDetach /* IMPORTED_SHORT_ENUMERATION_ITEM */, EPSEvent_locationInfoUpdate /* IMPORTED_LONG_ENUMERATION_ITEM */, locationInfoUpdate /* IMPORTED_SHORT_ENUMERATION_ITEM */, EPSEvent_sMS /* IMPORTED_LONG_ENUMERATION_ITEM */, sMS /* IMPORTED_SHORT_ENUMERATION_ITEM */, EPSEvent_pDPContextModification /* IMPORTED_LONG_ENUMERATION_ITEM */, pDPContextModification /* IMPORTED_SHORT_ENUMERATION_ITEM */, EPSEvent_servingSystem /* IMPORTED_LONG_ENUMERATION_ITEM */, EPSEvent_startOfInterceptionWithMSAttached /* IMPORTED_LONG_ENUMERATION_ITEM */, startOfInterceptionWithMSAttached /* IMPORTED_SHORT_ENUMERATION_ITEM */, EPSEvent_e_UTRANAttach /* IMPORTED_LONG_ENUMERATION_ITEM */, e_UTRANAttach /* IMPORTED_SHORT_ENUMERATION_ITEM */, EPSEvent_e_UTRANDetach /* IMPORTED_LONG_ENUMERATION_ITEM */, e_UTRANDetach /* IMPORTED_SHORT_ENUMERATION_ITEM */, EPSEvent_bearerActivation /* IMPORTED_LONG_ENUMERATION_ITEM */, bearerActivation /* IMPORTED_SHORT_ENUMERATION_ITEM */, EPSEvent_startOfInterceptionWithActiveBearer /* IMPORTED_LONG_ENUMERATION_ITEM */, startOfInterceptionWithActiveBearer /* IMPORTED_SHORT_ENUMERATION_ITEM */, EPSEvent_bearerModification /* IMPORTED_LONG_ENUMERATION_ITEM */, bearerModification /* IMPORTED_SHORT_ENUMERATION_ITEM */, EPSEvent_bearerDeactivation /* IMPORTED_LONG_ENUMERATION_ITEM */, bearerDeactivation /* IMPORTED_SHORT_ENUMERATION_ITEM */, EPSEvent_uERequestedBearerResourceModification /* IMPORTED_LONG_ENUMERATION_ITEM */, uERequestedBearerResourceModification /* IMPORTED_SHORT_ENUMERATION_ITEM */, EPSEvent_uERequestedPDNConnectivity /* IMPORTED_LONG_ENUMERATION_ITEM */, uERequestedPDNConnectivity /* IMPORTED_SHORT_ENUMERATION_ITEM */, EPSEvent_uERequestedPDNDisconnection /* IMPORTED_LONG_ENUMERATION_ITEM */, uERequestedPDNDisconnection /* IMPORTED_SHORT_ENUMERATION_ITEM */, EPSEvent_trackingAreaEpsLocationUpdate /* IMPORTED_LONG_ENUMERATION_ITEM */, trackingAreaEpsLocationUpdate /* IMPORTED_SHORT_ENUMERATION_ITEM */, EPSEvent_servingEvolvedPacketSystem /* IMPORTED_LONG_ENUMERATION_ITEM */, servingEvolvedPacketSystem /* IMPORTED_SHORT_ENUMERATION_ITEM */, EPSEvent_pMIPAttachTunnelActivation /* IMPORTED_LONG_ENUMERATION_ITEM */, pMIPAttachTunnelActivation /* IMPORTED_SHORT_ENUMERATION_ITEM */, EPSEvent_pMIPDetachTunnelDeactivation /* IMPORTED_LONG_ENUMERATION_ITEM */, pMIPDetachTunnelDeactivation /* IMPORTED_SHORT_ENUMERATION_ITEM */, EPSEvent_startOfInterceptWithActivePMIPTunnel /* IMPORTED_LONG_ENUMERATION_ITEM */, startOfInterceptWithActivePMIPTunnel /* IMPORTED_SHORT_ENUMERATION_ITEM */, EPSEvent_pMIPPdnGwInitiatedPdnDisconnection /* IMPORTED_LONG_ENUMERATION_ITEM */, pMIPPdnGwInitiatedPdnDisconnection /* IMPORTED_SHORT_ENUMERATION_ITEM */, EPSEvent_mIPRegistrationTunnelActivation /* IMPORTED_LONG_ENUMERATION_ITEM */, mIPRegistrationTunnelActivation /* IMPORTED_SHORT_ENUMERATION_ITEM */, EPSEvent_mIPDeregistrationTunnelDeactivation /* IMPORTED_LONG_ENUMERATION_ITEM */, mIPDeregistrationTunnelDeactivation /* IMPORTED_SHORT_ENUMERATION_ITEM */, EPSEvent_startOfInterceptWithActiveMIPTunnel /* IMPORTED_LONG_ENUMERATION_ITEM */, startOfInterceptWithActiveMIPTunnel /* IMPORTED_SHORT_ENUMERATION_ITEM */, EPSEvent_dSMIPRegistrationTunnelActivation /* IMPORTED_LONG_ENUMERATION_ITEM */, dSMIPRegistrationTunnelActivation /* IMPORTED_SHORT_ENUMERATION_ITEM */, EPSEvent_dSMIPDeregistrationTunnelDeactivation /* IMPORTED_LONG_ENUMERATION_ITEM */, dSMIPDeregistrationTunnelDeactivation /* IMPORTED_SHORT_ENUMERATION_ITEM */, EPSEvent_startOfInterceptWithActiveDsmipTunnel /* IMPORTED_LONG_ENUMERATION_ITEM */, startOfInterceptWithActiveDsmipTunnel /* IMPORTED_SHORT_ENUMERATION_ITEM */, EPSEvent_dSMipHaSwitch /* IMPORTED_LONG_ENUMERATION_ITEM */, dSMipHaSwitch /* IMPORTED_SHORT_ENUMERATION_ITEM */, EPSEvent_pMIPResourceAllocationDeactivation /* IMPORTED_LONG_ENUMERATION_ITEM */, pMIPResourceAllocationDeactivation /* IMPORTED_SHORT_ENUMERATION_ITEM */, EPSEvent_mIPResourceAllocationDeactivation /* IMPORTED_LONG_ENUMERATION_ITEM */, mIPResourceAllocationDeactivation /* IMPORTED_SHORT_ENUMERATION_ITEM */, EPSEvent_pMIPsessionModification /* IMPORTED_LONG_ENUMERATION_ITEM */, pMIPsessionModification /* IMPORTED_SHORT_ENUMERATION_ITEM */, EPSEvent_startOfInterceptWithEUTRANAttachedUE /* IMPORTED_LONG_ENUMERATION_ITEM */, startOfInterceptWithEUTRANAttachedUE /* IMPORTED_SHORT_ENUMERATION_ITEM */, EPSEvent_dSMIPSessionModification /* IMPORTED_LONG_ENUMERATION_ITEM */, dSMIPSessionModification /* IMPORTED_SHORT_ENUMERATION_ITEM */, EPSEvent_packetDataHeaderInformation /* IMPORTED_LONG_ENUMERATION_ITEM */, packetDataHeaderInformation /* IMPORTED_SHORT_ENUMERATION_ITEM */, EPSEvent_hSS_Subscriber_Record_Change /* IMPORTED_LONG_ENUMERATION_ITEM */, hSS_Subscriber_Record_Change /* IMPORTED_SHORT_ENUMERATION_ITEM */, EPSEvent_registration_Termination /* IMPORTED_LONG_ENUMERATION_ITEM */, registration_Termination /* IMPORTED_SHORT_ENUMERATION_ITEM */, EPSEvent_location_Up_Date /* IMPORTED_LONG_ENUMERATION_ITEM */, location_Up_Date /* IMPORTED_SHORT_ENUMERATION_ITEM */, EPSEvent_cancel_Location /* IMPORTED_LONG_ENUMERATION_ITEM */, cancel_Location /* IMPORTED_SHORT_ENUMERATION_ITEM */, EPSEvent_register_Location /* IMPORTED_LONG_ENUMERATION_ITEM */, register_Location /* IMPORTED_SHORT_ENUMERATION_ITEM */, EPSEvent_location_Information_Request /* IMPORTED_LONG_ENUMERATION_ITEM */, location_Information_Request /* IMPORTED_SHORT_ENUMERATION_ITEM */, EPSEvent_proSeRemoteUEReport /* IMPORTED_LONG_ENUMERATION_ITEM */, proSeRemoteUEReport /* IMPORTED_SHORT_ENUMERATION_ITEM */, EPSEvent_proSeRemoteUEStartOfCommunication /* IMPORTED_LONG_ENUMERATION_ITEM */, proSeRemoteUEStartOfCommunication /* IMPORTED_SHORT_ENUMERATION_ITEM */, EPSEvent_proSeRemoteUEEndOfCommunication /* IMPORTED_LONG_ENUMERATION_ITEM */, proSeRemoteUEEndOfCommunication /* IMPORTED_SHORT_ENUMERATION_ITEM */, EPSEvent_startOfLIwithProSeRemoteUEOngoingComm /* IMPORTED_LONG_ENUMERATION_ITEM */, startOfLIwithProSeRemoteUEOngoingComm /* IMPORTED_SHORT_ENUMERATION_ITEM */, EPSEvent_startOfLIforProSeUEtoNWRelay /* IMPORTED_LONG_ENUMERATION_ITEM */, startOfLIforProSeUEtoNWRelay /* IMPORTED_SHORT_ENUMERATION_ITEM */, EPSEvent_scefRequestednonIPPDNDisconnection /* IMPORTED_LONG_ENUMERATION_ITEM */, scefRequestednonIPPDNDisconnection /* IMPORTED_SHORT_ENUMERATION_ITEM */, _decode_EPSEvent, _encode_EPSEvent } from "../EpsHI2Operations/EPSEvent.ta.mjs";
-import { DataNodeAddress, _decode_DataNodeAddress, _encode_DataNodeAddress } from "../HI2Operations/DataNodeAddress.ta.mjs";
+import { type DataNodeAddress, _decode_DataNodeAddress, _encode_DataNodeAddress } from "../HI2Operations/DataNodeAddress.ta.mjs";
 // export { DataNodeAddress, _decode_DataNodeAddress, _encode_DataNodeAddress } from "../HI2Operations/DataNodeAddress.ta.mjs";
-import { GPRSOperationErrorCode, _decode_GPRSOperationErrorCode, _encode_GPRSOperationErrorCode } from "../EpsHI2Operations/GPRSOperationErrorCode.ta.mjs";
+import { type GPRSOperationErrorCode, _decode_GPRSOperationErrorCode, _encode_GPRSOperationErrorCode } from "../EpsHI2Operations/GPRSOperationErrorCode.ta.mjs";
 // export { GPRSOperationErrorCode, _decode_GPRSOperationErrorCode, _encode_GPRSOperationErrorCode } from "../EpsHI2Operations/GPRSOperationErrorCode.ta.mjs";
-import { UmtsQos, _decode_UmtsQos, _encode_UmtsQos } from "../EpsHI2Operations/UmtsQos.ta.mjs";
+import { type UmtsQos, _decode_UmtsQos, _encode_UmtsQos } from "../EpsHI2Operations/UmtsQos.ta.mjs";
 // export { UmtsQos, _decode_UmtsQos, _encode_UmtsQos } from "../EpsHI2Operations/UmtsQos.ta.mjs";
 import { Network_Identifier, _decode_Network_Identifier, _encode_Network_Identifier } from "../HI2Operations/Network-Identifier.ta.mjs";
 // export { Network_Identifier, _decode_Network_Identifier, _encode_Network_Identifier } from "../HI2Operations/Network-Identifier.ta.mjs";
-import { IMSevent, _decode_IMSevent, _encode_IMSevent, _enum_for_IMSevent } from "../EpsHI2Operations/IMSevent.ta.mjs";
+import { type IMSevent, _decode_IMSevent, _encode_IMSevent, _enum_for_IMSevent } from "../EpsHI2Operations/IMSevent.ta.mjs";
 // export { IMSevent, _enum_for_IMSevent, IMSevent_unfilteredSIPmessage /* IMPORTED_LONG_ENUMERATION_ITEM */, unfilteredSIPmessage /* IMPORTED_SHORT_ENUMERATION_ITEM */, IMSevent_sIPheaderOnly /* IMPORTED_LONG_ENUMERATION_ITEM */, sIPheaderOnly /* IMPORTED_SHORT_ENUMERATION_ITEM */, IMSevent_decryptionKeysAvailable /* IMPORTED_LONG_ENUMERATION_ITEM */, decryptionKeysAvailable /* IMPORTED_SHORT_ENUMERATION_ITEM */, IMSevent_startOfInterceptionForIMSEstablishedSession /* IMPORTED_LONG_ENUMERATION_ITEM */, startOfInterceptionForIMSEstablishedSession /* IMPORTED_SHORT_ENUMERATION_ITEM */, IMSevent_xCAPRequest /* IMPORTED_LONG_ENUMERATION_ITEM */, xCAPRequest /* IMPORTED_SHORT_ENUMERATION_ITEM */, IMSevent_xCAPResponse /* IMPORTED_LONG_ENUMERATION_ITEM */, xCAPResponse /* IMPORTED_SHORT_ENUMERATION_ITEM */, IMSevent_ccUnavailable /* IMPORTED_LONG_ENUMERATION_ITEM */, ccUnavailable /* IMPORTED_SHORT_ENUMERATION_ITEM */, IMSevent_sMSOverIMS /* IMPORTED_LONG_ENUMERATION_ITEM */, sMSOverIMS /* IMPORTED_SHORT_ENUMERATION_ITEM */, IMSevent_servingSystem /* IMPORTED_LONG_ENUMERATION_ITEM */, IMSevent_subscriberRecordChange /* IMPORTED_LONG_ENUMERATION_ITEM */, subscriberRecordChange /* IMPORTED_SHORT_ENUMERATION_ITEM */, IMSevent_registrationTermination /* IMPORTED_LONG_ENUMERATION_ITEM */, registrationTermination /* IMPORTED_SHORT_ENUMERATION_ITEM */, IMSevent_locationInformationRequest /* IMPORTED_LONG_ENUMERATION_ITEM */, locationInformationRequest /* IMPORTED_SHORT_ENUMERATION_ITEM */, _decode_IMSevent, _encode_IMSevent } from "../EpsHI2Operations/IMSevent.ta.mjs";
-import { LDIevent, _decode_LDIevent, _encode_LDIevent, _enum_for_LDIevent } from "../EpsHI2Operations/LDIevent.ta.mjs";
+import { type LDIevent, _decode_LDIevent, _encode_LDIevent, _enum_for_LDIevent } from "../EpsHI2Operations/LDIevent.ta.mjs";
 // export { LDIevent, _enum_for_LDIevent, LDIevent_targetEntersIA /* IMPORTED_LONG_ENUMERATION_ITEM */, targetEntersIA /* IMPORTED_SHORT_ENUMERATION_ITEM */, LDIevent_targetLeavesIA /* IMPORTED_LONG_ENUMERATION_ITEM */, targetLeavesIA /* IMPORTED_SHORT_ENUMERATION_ITEM */, _decode_LDIevent, _encode_LDIevent } from "../EpsHI2Operations/LDIevent.ta.mjs";
-import { CorrelationValues, _decode_CorrelationValues, _encode_CorrelationValues } from "../EpsHI2Operations/CorrelationValues.ta.mjs";
+import { type CorrelationValues, _decode_CorrelationValues, _encode_CorrelationValues } from "../EpsHI2Operations/CorrelationValues.ta.mjs";
 // export { CorrelationValues, _decode_CorrelationValues, _encode_CorrelationValues } from "../EpsHI2Operations/CorrelationValues.ta.mjs";
 import { EPS_GTPV2_SpecificParameters, _decode_EPS_GTPV2_SpecificParameters, _encode_EPS_GTPV2_SpecificParameters } from "../EpsHI2Operations/EPS-GTPV2-SpecificParameters.ta.mjs";
 // export { EPS_GTPV2_SpecificParameters, _decode_EPS_GTPV2_SpecificParameters, _encode_EPS_GTPV2_SpecificParameters } from "../EpsHI2Operations/EPS-GTPV2-SpecificParameters.ta.mjs";
@@ -50,21 +50,21 @@ import { EPS_DSMIP_SpecificParameters, _decode_EPS_DSMIP_SpecificParameters, _en
 // export { EPS_DSMIP_SpecificParameters, _decode_EPS_DSMIP_SpecificParameters, _encode_EPS_DSMIP_SpecificParameters } from "../EpsHI2Operations/EPS-DSMIP-SpecificParameters.ta.mjs";
 import { EPS_MIP_SpecificParameters, _decode_EPS_MIP_SpecificParameters, _encode_EPS_MIP_SpecificParameters } from "../EpsHI2Operations/EPS-MIP-SpecificParameters.ta.mjs";
 // export { EPS_MIP_SpecificParameters, _decode_EPS_MIP_SpecificParameters, _encode_EPS_MIP_SpecificParameters } from "../EpsHI2Operations/EPS-MIP-SpecificParameters.ta.mjs";
-import { MediaDecryption_info, _decode_MediaDecryption_info, _encode_MediaDecryption_info } from "../EpsHI2Operations/MediaDecryption-info.ta.mjs";
+import { type MediaDecryption_info, _decode_MediaDecryption_info, _encode_MediaDecryption_info } from "../EpsHI2Operations/MediaDecryption-info.ta.mjs";
 // export { MediaDecryption_info, _decode_MediaDecryption_info, _encode_MediaDecryption_info } from "../EpsHI2Operations/MediaDecryption-info.ta.mjs";
-import { PacketDataHeaderInformation, _decode_PacketDataHeaderInformation, _encode_PacketDataHeaderInformation } from "../EpsHI2Operations/PacketDataHeaderInformation.ta.mjs";
+import { type PacketDataHeaderInformation, _decode_PacketDataHeaderInformation, _encode_PacketDataHeaderInformation } from "../EpsHI2Operations/PacketDataHeaderInformation.ta.mjs";
 // export { PacketDataHeaderInformation, _decode_PacketDataHeaderInformation, _encode_PacketDataHeaderInformation } from "../EpsHI2Operations/PacketDataHeaderInformation.ta.mjs";
-import { MediaSecFailureIndication, _decode_MediaSecFailureIndication, _encode_MediaSecFailureIndication, _enum_for_MediaSecFailureIndication } from "../EpsHI2Operations/MediaSecFailureIndication.ta.mjs";
+import { type MediaSecFailureIndication, _decode_MediaSecFailureIndication, _encode_MediaSecFailureIndication, _enum_for_MediaSecFailureIndication } from "../EpsHI2Operations/MediaSecFailureIndication.ta.mjs";
 // export { MediaSecFailureIndication, _enum_for_MediaSecFailureIndication, MediaSecFailureIndication_genericFailure /* IMPORTED_LONG_ENUMERATION_ITEM */, genericFailure /* IMPORTED_SHORT_ENUMERATION_ITEM */, _decode_MediaSecFailureIndication, _encode_MediaSecFailureIndication } from "../EpsHI2Operations/MediaSecFailureIndication.ta.mjs";
 import { IPAddress, _decode_IPAddress, _encode_IPAddress } from "../HI2Operations/IPAddress.ta.mjs";
 // export { IPAddress, _decode_IPAddress, _encode_IPAddress } from "../HI2Operations/IPAddress.ta.mjs";
-import { HeNBLocation, _decode_HeNBLocation, _encode_HeNBLocation } from "../EpsHI2Operations/HeNBLocation.ta.mjs";
+import { type HeNBLocation, _decode_HeNBLocation, _encode_HeNBLocation } from "../EpsHI2Operations/HeNBLocation.ta.mjs";
 // export { HeNBLocation, _decode_HeNBLocation, _encode_HeNBLocation } from "../EpsHI2Operations/HeNBLocation.ta.mjs";
-import { TunnelProtocol, _decode_TunnelProtocol, _encode_TunnelProtocol } from "../EpsHI2Operations/TunnelProtocol.ta.mjs";
+import { type TunnelProtocol, _decode_TunnelProtocol, _encode_TunnelProtocol } from "../EpsHI2Operations/TunnelProtocol.ta.mjs";
 // export { TunnelProtocol, _decode_TunnelProtocol, _encode_TunnelProtocol } from "../EpsHI2Operations/TunnelProtocol.ta.mjs";
 import { PANI_Header_Info, _decode_PANI_Header_Info, _encode_PANI_Header_Info } from "../EpsHI2Operations/PANI-Header-Info.ta.mjs";
 // export { PANI_Header_Info, _decode_PANI_Header_Info, _encode_PANI_Header_Info } from "../EpsHI2Operations/PANI-Header-Info.ta.mjs";
-import { IMS_VoIP_Correlation, _decode_IMS_VoIP_Correlation, _encode_IMS_VoIP_Correlation } from "../EpsHI2Operations/IMS-VoIP-Correlation.ta.mjs";
+import { type IMS_VoIP_Correlation, _decode_IMS_VoIP_Correlation, _encode_IMS_VoIP_Correlation } from "../EpsHI2Operations/IMS-VoIP-Correlation.ta.mjs";
 // export { IMS_VoIP_Correlation, _decode_IMS_VoIP_Correlation, _encode_IMS_VoIP_Correlation } from "../EpsHI2Operations/IMS-VoIP-Correlation.ta.mjs";
 import { DataNodeIdentifier, _decode_DataNodeIdentifier, _encode_DataNodeIdentifier } from "../EpsHI2Operations/DataNodeIdentifier.ta.mjs";
 // export { DataNodeIdentifier, _decode_DataNodeIdentifier, _encode_DataNodeIdentifier } from "../EpsHI2Operations/DataNodeIdentifier.ta.mjs";
@@ -72,19 +72,19 @@ import { Current_Previous_Systems, _decode_Current_Previous_Systems, _encode_Cur
 // export { Current_Previous_Systems, _decode_Current_Previous_Systems, _encode_Current_Previous_Systems } from "../EpsHI2Operations/Current-Previous-Systems.ta.mjs";
 import { Change_Of_Target_Identity, _decode_Change_Of_Target_Identity, _encode_Change_Of_Target_Identity } from "../EpsHI2Operations/Change-Of-Target-Identity.ta.mjs";
 // export { Change_Of_Target_Identity, _decode_Change_Of_Target_Identity, _encode_Change_Of_Target_Identity } from "../EpsHI2Operations/Change-Of-Target-Identity.ta.mjs";
-import { Requesting_Node_Type, _decode_Requesting_Node_Type, _encode_Requesting_Node_Type, _enum_for_Requesting_Node_Type } from "../EpsHI2Operations/Requesting-Node-Type.ta.mjs";
+import { type Requesting_Node_Type, _decode_Requesting_Node_Type, _encode_Requesting_Node_Type, _enum_for_Requesting_Node_Type } from "../EpsHI2Operations/Requesting-Node-Type.ta.mjs";
 // export { Requesting_Node_Type, _enum_for_Requesting_Node_Type, Requesting_Node_Type_mSC /* IMPORTED_LONG_ENUMERATION_ITEM */, mSC /* IMPORTED_SHORT_ENUMERATION_ITEM */, Requesting_Node_Type_sMS_Centre /* IMPORTED_LONG_ENUMERATION_ITEM */, sMS_Centre /* IMPORTED_SHORT_ENUMERATION_ITEM */, Requesting_Node_Type_gMLC /* IMPORTED_LONG_ENUMERATION_ITEM */, gMLC /* IMPORTED_SHORT_ENUMERATION_ITEM */, Requesting_Node_Type_mME /* IMPORTED_LONG_ENUMERATION_ITEM */, mME /* IMPORTED_SHORT_ENUMERATION_ITEM */, Requesting_Node_Type_sGSN /* IMPORTED_LONG_ENUMERATION_ITEM */, sGSN /* IMPORTED_SHORT_ENUMERATION_ITEM */, _decode_Requesting_Node_Type, _encode_Requesting_Node_Type } from "../EpsHI2Operations/Requesting-Node-Type.ta.mjs";
-import { ProSeTargetType, _decode_ProSeTargetType, _encode_ProSeTargetType, _enum_for_ProSeTargetType } from "../EpsHI2Operations/ProSeTargetType.ta.mjs";
+import { type ProSeTargetType, _decode_ProSeTargetType, _encode_ProSeTargetType, _enum_for_ProSeTargetType } from "../EpsHI2Operations/ProSeTargetType.ta.mjs";
 // export { ProSeTargetType, _enum_for_ProSeTargetType, ProSeTargetType_pRoSeRemoteUE /* IMPORTED_LONG_ENUMERATION_ITEM */, pRoSeRemoteUE /* IMPORTED_SHORT_ENUMERATION_ITEM */, ProSeTargetType_pRoSeUEtoNwRelay /* IMPORTED_LONG_ENUMERATION_ITEM */, pRoSeUEtoNwRelay /* IMPORTED_SHORT_ENUMERATION_ITEM */, _decode_ProSeTargetType, _encode_ProSeTargetType } from "../EpsHI2Operations/ProSeTargetType.ta.mjs";
 import { ExtendedLocParameters, _decode_ExtendedLocParameters, _encode_ExtendedLocParameters } from "../UmtsHI2Operations/ExtendedLocParameters.ta.mjs";
 // export { ExtendedLocParameters, _decode_ExtendedLocParameters, _encode_ExtendedLocParameters } from "../UmtsHI2Operations/ExtendedLocParameters.ta.mjs";
-import { LocationErrorCode, _decode_LocationErrorCode, _encode_LocationErrorCode } from "../UmtsHI2Operations/LocationErrorCode.ta.mjs";
+import { type LocationErrorCode, _decode_LocationErrorCode, _encode_LocationErrorCode } from "../UmtsHI2Operations/LocationErrorCode.ta.mjs";
 // export { LocationErrorCode, _decode_LocationErrorCode, _encode_LocationErrorCode } from "../UmtsHI2Operations/LocationErrorCode.ta.mjs";
-import { DeregistrationReason, _decode_DeregistrationReason, _encode_DeregistrationReason } from "../EpsHI2Operations/DeregistrationReason.ta.mjs";
+import { type DeregistrationReason, _decode_DeregistrationReason, _encode_DeregistrationReason } from "../EpsHI2Operations/DeregistrationReason.ta.mjs";
 // export { DeregistrationReason, _decode_DeregistrationReason, _encode_DeregistrationReason } from "../EpsHI2Operations/DeregistrationReason.ta.mjs";
-import { VoIPRoamingIndication, _decode_VoIPRoamingIndication, _encode_VoIPRoamingIndication, _enum_for_VoIPRoamingIndication } from "../EpsHI2Operations/VoIPRoamingIndication.ta.mjs";
+import { type VoIPRoamingIndication, _decode_VoIPRoamingIndication, _encode_VoIPRoamingIndication, _enum_for_VoIPRoamingIndication } from "../EpsHI2Operations/VoIPRoamingIndication.ta.mjs";
 // export { VoIPRoamingIndication, _enum_for_VoIPRoamingIndication, VoIPRoamingIndication_roamingLBO /* IMPORTED_LONG_ENUMERATION_ITEM */, roamingLBO /* IMPORTED_SHORT_ENUMERATION_ITEM */, VoIPRoamingIndication_roamingS8HR /* IMPORTED_LONG_ENUMERATION_ITEM */, roamingS8HR /* IMPORTED_SHORT_ENUMERATION_ITEM */, _decode_VoIPRoamingIndication, _encode_VoIPRoamingIndication } from "../EpsHI2Operations/VoIPRoamingIndication.ta.mjs";
-import { CSREvent, _decode_CSREvent, _encode_CSREvent, _enum_for_CSREvent } from "../EpsHI2Operations/CSREvent.ta.mjs";
+import { type CSREvent, _decode_CSREvent, _encode_CSREvent, _enum_for_CSREvent } from "../EpsHI2Operations/CSREvent.ta.mjs";
 // export { CSREvent, _enum_for_CSREvent, CSREvent_cSREventMessage /* IMPORTED_LONG_ENUMERATION_ITEM */, cSREventMessage /* IMPORTED_SHORT_ENUMERATION_ITEM */, _decode_CSREvent, _encode_CSREvent } from "../EpsHI2Operations/CSREvent.ta.mjs";
 import { PTC, _decode_PTC, _encode_PTC } from "../EpsHI2Operations/PTC.ta.mjs";
 // export { PTC, _decode_PTC, _encode_PTC } from "../EpsHI2Operations/PTC.ta.mjs";
@@ -170,8 +170,8 @@ import { National_HI2_ASN1parameters, _decode_National_HI2_ASN1parameters, _enco
  *     sMSTerminatingAddress     [28] DataNodeAddress OPTIONAL,
  *     iMSevent                [29] IMSevent OPTIONAL,
  *     sIPMessage                [30] OCTET STRING  OPTIONAL,
- *     servingSGSN-number        [31] OCTET STRING (SIZE (1..20))    OPTIONAL,
- *     servingSGSN-address        [32] OCTET STRING (SIZE (5..17))     OPTIONAL,
+ *     servingSGSN-number        [31] OCTET STRING (SIZE (1..20))    type OPTIONAL,
+ *     servingSGSN-address        [32] OCTET STRING (SIZE (5..17))     type OPTIONAL,
  *                                 -- Octets are coded according to 3GPP TS 23.003 [25]
  *     ...,
  *              -- Tag            [33] was taken into use by ETSI module in TS 101 671v2.13.1
@@ -185,10 +185,10 @@ import { National_HI2_ASN1parameters, _decode_National_HI2_ASN1parameters, _enco
  *          -- contains parameters to be used in case of DSMIP based intercepted messages
  *     ePS-MIP-SpecificParameters     [39] EPS-MIP-SpecificParameters OPTIONAL,
  *          -- contains parameters to be used in case of MIP based intercepted messages
- *     servingNodeAddress             [40] OCTET STRING               OPTIONAL,
+ *     servingNodeAddress             [40] OCTET STRING               type OPTIONAL,
  *          -- this parameter is kept for backward compatibility only and should not be used
  *          -- as it has been superseeded by parameter visitedNetworkId
- *     visitedNetworkId               [41] UTF8String                 OPTIONAL,
+ *     visitedNetworkId               [41] UTF8String                 type OPTIONAL,
  *          -- contains the visited network identifier inside the Serving System Update for
  *          -- non 3GPP access and IMS, coded according to [53] and 3GPP TS 29.229 [96]
  * 
@@ -206,7 +206,7 @@ import { National_HI2_ASN1parameters, _decode_National_HI2_ASN1parameters, _enco
  *     -- Coded according to 3GPP TS 29.060 [17]; The upper 4 octets shall carry the ULI Timestamp
  *     -- value; The lower 4 octets are undefined and shall be ignored by the receiver
  * 
- *     packetDataHeaderInformation           [49] PacketDataHeaderInformation    OPTIONAL,
+ *     packetDataHeaderInformation           [49] PacketDataHeaderInformation    type OPTIONAL,
  *     mediaSecFailureIndication          [50] MediaSecFailureIndication OPTIONAL,
  *     csgIdentity            [51] OCTET STRING (SIZE (4)) OPTIONAL,  -- Octets are coded
  *       -- according to 3GPP TS 23.003 [25].  The 27 bits specified in TS 23.003 shall be encoded as.
@@ -219,16 +219,16 @@ import { National_HI2_ASN1parameters, _decode_National_HI2_ASN1parameters, _enco
  *     heNBiPAddress        [53] IPAddress  OPTIONAL,
  *     heNBLocation            [54] HeNBLocation  OPTIONAL,
  *     tunnelProtocol        [55] TunnelProtocol  OPTIONAL,
- *     pANI-Header-Info        [56] SEQUENCE OF PANI-Header-Info        OPTIONAL,
+ *     pANI-Header-Info        [56] SEQUENCE OF PANI-Header-Info        type OPTIONAL,
  *     -- information extracted from P-Access-Network-Info headers of SIP message;
  *     -- described in TS 24.229 7.2A.4 [76]
- *     imsVoIP                 [57] IMS-VoIP-Correlation                    OPTIONAL,
+ *     imsVoIP                 [57] IMS-VoIP-Correlation                    type OPTIONAL,
  *     xCAPmessage            [58] OCTET STRING OPTIONAL,
  *     -- The HTTP message (HTPP header and any XCAP body) of any of the target's IMS supplementary
  *     -- service setting management or manipulation XCAP messages occuring through the Ut interface
  *     -- defined in the 3GPP TS 24 623 [77].
  *     logicalFunctionInformation    [59] DataNodeIdentifier OPTIONAL,
- *     ccUnavailableReason        [60] PrintableString    OPTIONAL,
+ *     ccUnavailableReason        [60] PrintableString    type OPTIONAL,
  *     carrierSpecificData                    [61] OCTET STRING OPTIONAL,
  *     -- Copy of raw data specified by the CSP or his vendor related to HSS.
  *     current-previous-systems            [62] Current-Previous-Systems OPTIONAL,
@@ -258,7 +258,7 @@ import { National_HI2_ASN1parameters, _decode_National_HI2_ASN1parameters, _enco
  *     otherIdentities                    [73] SEQUENCE OF PartyInformation OPTIONAL,
  *     deregistrationReason               [74] DeregistrationReason OPTIONAL,
  *     requesting-Node-Identifier         [75] OCTET STRING OPTIONAL,
- *     roamingIndication                  [76] VoIPRoamingIndication     OPTIONAL,
+ *     roamingIndication                  [76] VoIPRoamingIndication     type OPTIONAL,
  *     -- used for IMS events in the VPLMN.
  *     cSREvent                        [77]    CSREvent OPTIONAL,
  *     ptc                                [78]    PTC OPTIONAL,  -- PTC Events
@@ -1309,7 +1309,7 @@ class IRI_Parameters {
          * @static
          */
 
-    public static _enum_for_initiator = _enum_for_IRI_Parameters_initiator;        /**
+    public static _enum_for_initiator: typeof _enum_for_IRI_Parameters_initiator = _enum_for_IRI_Parameters_initiator;        /**
          * @summary The enum used as the type of the component `ePSevent`
          * @description
          * 
@@ -1321,7 +1321,7 @@ class IRI_Parameters {
          * @static
          */
 
-    public static _enum_for_ePSevent = _enum_for_EPSEvent;        /**
+    public static _enum_for_ePSevent: typeof _enum_for_EPSEvent = _enum_for_EPSEvent;        /**
          * @summary The enum used as the type of the component `iMSevent`
          * @description
          * 
@@ -1332,7 +1332,7 @@ class IRI_Parameters {
          * @static
          */
 
-    public static _enum_for_iMSevent = _enum_for_IMSevent;        /**
+    public static _enum_for_iMSevent: typeof _enum_for_IMSevent = _enum_for_IMSevent;        /**
          * @summary The enum used as the type of the component `ldiEvent`
          * @description
          * 
@@ -1344,7 +1344,7 @@ class IRI_Parameters {
          * @static
          */
 
-    public static _enum_for_ldiEvent = _enum_for_LDIevent;        /**
+    public static _enum_for_ldiEvent: typeof _enum_for_LDIevent = _enum_for_LDIevent;        /**
          * @summary The enum used as the type of the component `mediaSecFailureIndication`
          * @description
          * 
@@ -1355,7 +1355,7 @@ class IRI_Parameters {
          * @static
          */
 
-    public static _enum_for_mediaSecFailureIndication = _enum_for_MediaSecFailureIndication;        /**
+    public static _enum_for_mediaSecFailureIndication: typeof _enum_for_MediaSecFailureIndication = _enum_for_MediaSecFailureIndication;        /**
          * @summary The enum used as the type of the component `requesting_Node_Type`
          * @description
          * 
@@ -1366,7 +1366,7 @@ class IRI_Parameters {
          * @static
          */
 
-    public static _enum_for_requesting_Node_Type = _enum_for_Requesting_Node_Type;        /**
+    public static _enum_for_requesting_Node_Type: typeof _enum_for_Requesting_Node_Type = _enum_for_Requesting_Node_Type;        /**
          * @summary The enum used as the type of the component `proSeTargetType`
          * @description
          * 
@@ -1377,7 +1377,7 @@ class IRI_Parameters {
          * @static
          */
 
-    public static _enum_for_proSeTargetType = _enum_for_ProSeTargetType;        /**
+    public static _enum_for_proSeTargetType: typeof _enum_for_ProSeTargetType = _enum_for_ProSeTargetType;        /**
          * @summary The enum used as the type of the component `roamingIndication`
          * @description
          * 
@@ -1389,7 +1389,7 @@ class IRI_Parameters {
          * @static
          */
 
-    public static _enum_for_roamingIndication = _enum_for_VoIPRoamingIndication;        /**
+    public static _enum_for_roamingIndication: typeof _enum_for_VoIPRoamingIndication = _enum_for_VoIPRoamingIndication;        /**
          * @summary The enum used as the type of the component `cSREvent`
          * @description
          * 
@@ -1400,7 +1400,7 @@ class IRI_Parameters {
          * @static
          */
 
-    public static _enum_for_cSREvent = _enum_for_CSREvent;
+    public static _enum_for_cSREvent: typeof _enum_for_CSREvent = _enum_for_CSREvent;
 }
 
 /**

@@ -1,6 +1,6 @@
 /* eslint-disable */
 import {
-    ASN1Element as _Element,
+    type ASN1Element as _Element,
     ASN1TagClass as _TagClass,
     ASN1Construction as _Construction,
     ASN1UniversalType as _UniversalType,
@@ -91,7 +91,7 @@ export type DeniedMeteringAction = _enum_for_DeniedMeteringAction;
  *
  * @enum {number}
  */
-export const DeniedMeteringAction = _enum_for_DeniedMeteringAction;
+export const DeniedMeteringAction: typeof _enum_for_DeniedMeteringAction = _enum_for_DeniedMeteringAction;
 
 
 /**
@@ -104,7 +104,7 @@ export const DeniedMeteringAction = _enum_for_DeniedMeteringAction;
  * @constant
  * @type {number}
  */
-export const DeniedMeteringAction_canNotStart: DeniedMeteringAction =
+export const DeniedMeteringAction_canNotStart: _enum_for_DeniedMeteringAction.canNotStart =
     DeniedMeteringAction.canNotStart; /* LONG_NAMED_ENUMERATED_VALUE */
 
 
@@ -118,7 +118,7 @@ export const DeniedMeteringAction_canNotStart: DeniedMeteringAction =
  * @constant
  * @type {number}
  */
-export const canNotStart: DeniedMeteringAction =
+export const canNotStart: _enum_for_DeniedMeteringAction.canNotStart =
     DeniedMeteringAction.canNotStart; /* SHORT_NAMED_ENUMERATED_VALUE */
 
 
@@ -132,7 +132,7 @@ export const canNotStart: DeniedMeteringAction =
  * @constant
  * @type {number}
  */
-export const DeniedMeteringAction_canNotSuspend: DeniedMeteringAction =
+export const DeniedMeteringAction_canNotSuspend: _enum_for_DeniedMeteringAction.canNotSuspend =
     DeniedMeteringAction.canNotSuspend; /* LONG_NAMED_ENUMERATED_VALUE */
 
 
@@ -146,7 +146,7 @@ export const DeniedMeteringAction_canNotSuspend: DeniedMeteringAction =
  * @constant
  * @type {number}
  */
-export const canNotSuspend: DeniedMeteringAction =
+export const canNotSuspend: _enum_for_DeniedMeteringAction.canNotSuspend =
     DeniedMeteringAction.canNotSuspend; /* SHORT_NAMED_ENUMERATED_VALUE */
 
 
@@ -160,7 +160,7 @@ export const canNotSuspend: DeniedMeteringAction =
  * @constant
  * @type {number}
  */
-export const DeniedMeteringAction_canNotResume: DeniedMeteringAction =
+export const DeniedMeteringAction_canNotResume: _enum_for_DeniedMeteringAction.canNotResume =
     DeniedMeteringAction.canNotResume; /* LONG_NAMED_ENUMERATED_VALUE */
 
 
@@ -174,18 +174,30 @@ export const DeniedMeteringAction_canNotResume: DeniedMeteringAction =
  * @constant
  * @type {number}
  */
-export const canNotResume: DeniedMeteringAction =
+export const canNotResume: _enum_for_DeniedMeteringAction.canNotResume =
     DeniedMeteringAction.canNotResume; /* SHORT_NAMED_ENUMERATED_VALUE */
 
 
 
 
-export const _decode_DeniedMeteringAction = $._decodeEnumerated;
+export function _decode_DeniedMeteringAction(el: _Element): DeniedMeteringAction {
+    const enumerated = $._decodeEnumerated(el);
+    switch (enumerated) {
+        case DeniedMeteringAction.canNotStart: return DeniedMeteringAction.canNotStart;
+        case DeniedMeteringAction.canNotSuspend: return DeniedMeteringAction.canNotSuspend;
+        case DeniedMeteringAction.canNotResume: return DeniedMeteringAction.canNotResume;
+        default:
+            throw new _ConstructionError(
+                'Invalid ENUMERATED value ' + enumerated + ' for DeniedMeteringAction.',
+                el,
+            );
+    }
+}
 
 
 
 
-export const _encode_DeniedMeteringAction = $._encodeEnumerated;
+export const _encode_DeniedMeteringAction: $.ASN1Encoder<DeniedMeteringAction> = $._encodeEnumerated as $.ASN1Encoder<DeniedMeteringAction>;
 
 
 /* eslint-enable */

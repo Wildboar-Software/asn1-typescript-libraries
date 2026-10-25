@@ -1,6 +1,6 @@
 /* eslint-disable */
 import {
-    ASN1Element as _Element,
+    type ASN1Element as _Element,
     ASN1TagClass as _TagClass,
     ASN1Construction as _Construction,
     ASN1UniversalType as _UniversalType,
@@ -11,12 +11,12 @@ import {
 } from '@wildboar/asn1';
 import * as $ from '@wildboar/asn1/functional';
 import {
-    BindTokenSignedData,
+    type BindTokenSignedData,
     _decode_BindTokenSignedData,
     _encode_BindTokenSignedData,
 } from '../MTSAbstractService/BindTokenSignedData.ta.mjs';
 import {
-    BindTokenEncryptedData,
+    type BindTokenEncryptedData,
     _decode_BindTokenEncryptedData,
     _encode_BindTokenEncryptedData,
 } from '../MTSAbstractService/BindTokenEncryptedData.ta.mjs';

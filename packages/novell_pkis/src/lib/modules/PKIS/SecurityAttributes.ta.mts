@@ -2,12 +2,12 @@
 import {
     ASN1Error,
     ASN1SizeError,
-    BOOLEAN,
-    IA5String,
-    OCTET_STRING,
-    PrintableString,
+    type BOOLEAN,
+    type IA5String,
+    type OCTET_STRING,
+    type PrintableString,
     ASN1ConstructionError as _ConstructionError,
-    ASN1Element as _Element,
+    type ASN1Element as _Element,
     ASN1TagClass as _TagClass
 } from "@wildboar/asn1";
 import * as $ from "@wildboar/asn1/functional";

@@ -22,12 +22,12 @@ import {
     _encode_InitializationReq,
 } from "../TrustBroker/InitializationReq.ta.mjs";
 import {
-    TBrequest,
+    type TBrequest,
     _decode_TBrequest,
     _encode_TBrequest,
 } from "../TrustBroker/TBrequest.ta.mjs";
 import {
-    TBresponse,
+    type TBresponse,
     _decode_TBresponse,
     _encode_TBresponse,
 } from "../TrustBroker/TBresponse.ta.mjs";

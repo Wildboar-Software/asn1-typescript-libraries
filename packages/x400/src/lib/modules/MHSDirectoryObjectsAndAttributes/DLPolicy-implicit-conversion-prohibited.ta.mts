@@ -1,6 +1,6 @@
 /* eslint-disable */
 import {
-    ASN1Element as _Element,
+    type ASN1Element as _Element,
     ASN1TagClass as _TagClass,
     ASN1Construction as _Construction,
     ASN1UniversalType as _UniversalType,
@@ -57,14 +57,14 @@ export type DLPolicy_implicit_conversion_prohibited = _enum_for_DLPolicy_implici
  *
  * @enum {number}
  */
-export const DLPolicy_implicit_conversion_prohibited = _enum_for_DLPolicy_implicit_conversion_prohibited;
+export const DLPolicy_implicit_conversion_prohibited: typeof _enum_for_DLPolicy_implicit_conversion_prohibited = _enum_for_DLPolicy_implicit_conversion_prohibited;
 
 /**
  * @summary DLPolicy_implicit_conversion_prohibited_unchanged
  * @constant
  * @type {number}
  */
-export const DLPolicy_implicit_conversion_prohibited_unchanged: DLPolicy_implicit_conversion_prohibited =
+export const DLPolicy_implicit_conversion_prohibited_unchanged: _enum_for_DLPolicy_implicit_conversion_prohibited.unchanged =
     DLPolicy_implicit_conversion_prohibited.unchanged; /* LONG_NAMED_ENUMERATED_VALUE */
 
 /**
@@ -72,7 +72,7 @@ export const DLPolicy_implicit_conversion_prohibited_unchanged: DLPolicy_implici
  * @constant
  * @type {number}
  */
-export const unchanged: DLPolicy_implicit_conversion_prohibited =
+export const unchanged: _enum_for_DLPolicy_implicit_conversion_prohibited.unchanged =
     DLPolicy_implicit_conversion_prohibited.unchanged; /* SHORT_NAMED_ENUMERATED_VALUE */
 
 /**
@@ -80,7 +80,7 @@ export const unchanged: DLPolicy_implicit_conversion_prohibited =
  * @constant
  * @type {number}
  */
-export const DLPolicy_implicit_conversion_prohibited_implicit_conversion_allowed: DLPolicy_implicit_conversion_prohibited =
+export const DLPolicy_implicit_conversion_prohibited_implicit_conversion_allowed: _enum_for_DLPolicy_implicit_conversion_prohibited.implicit_conversion_allowed =
     DLPolicy_implicit_conversion_prohibited.implicit_conversion_allowed; /* LONG_NAMED_ENUMERATED_VALUE */
 
 /**
@@ -88,7 +88,7 @@ export const DLPolicy_implicit_conversion_prohibited_implicit_conversion_allowed
  * @constant
  * @type {number}
  */
-export const implicit_conversion_allowed: DLPolicy_implicit_conversion_prohibited =
+export const implicit_conversion_allowed: _enum_for_DLPolicy_implicit_conversion_prohibited.implicit_conversion_allowed =
     DLPolicy_implicit_conversion_prohibited.implicit_conversion_allowed; /* SHORT_NAMED_ENUMERATED_VALUE */
 
 /**
@@ -96,7 +96,7 @@ export const implicit_conversion_allowed: DLPolicy_implicit_conversion_prohibite
  * @constant
  * @type {number}
  */
-export const DLPolicy_implicit_conversion_prohibited_implicit_conversion_prohibited: DLPolicy_implicit_conversion_prohibited =
+export const DLPolicy_implicit_conversion_prohibited_implicit_conversion_prohibited: _enum_for_DLPolicy_implicit_conversion_prohibited.implicit_conversion_prohibited =
     DLPolicy_implicit_conversion_prohibited.implicit_conversion_prohibited; /* LONG_NAMED_ENUMERATED_VALUE */
 
 /**
@@ -104,7 +104,7 @@ export const DLPolicy_implicit_conversion_prohibited_implicit_conversion_prohibi
  * @constant
  * @type {number}
  */
-export const implicit_conversion_prohibited: DLPolicy_implicit_conversion_prohibited =
+export const implicit_conversion_prohibited: _enum_for_DLPolicy_implicit_conversion_prohibited.implicit_conversion_prohibited =
     DLPolicy_implicit_conversion_prohibited.implicit_conversion_prohibited; /* SHORT_NAMED_ENUMERATED_VALUE */
 
 let _cached_decoder_for_DLPolicy_implicit_conversion_prohibited: $.ASN1Decoder<DLPolicy_implicit_conversion_prohibited> | null = null;
@@ -118,7 +118,19 @@ let _cached_decoder_for_DLPolicy_implicit_conversion_prohibited: $.ASN1Decoder<D
 export function _decode_DLPolicy_implicit_conversion_prohibited(el: _Element): DLPolicy_implicit_conversion_prohibited {
     if (!_cached_decoder_for_DLPolicy_implicit_conversion_prohibited) {
         _cached_decoder_for_DLPolicy_implicit_conversion_prohibited =
-            $._decodeEnumerated;
+            function (el: _Element): DLPolicy_implicit_conversion_prohibited {
+                const enumerated = $._decodeEnumerated(el);
+                switch (enumerated) {
+                    case DLPolicy_implicit_conversion_prohibited.unchanged: return DLPolicy_implicit_conversion_prohibited.unchanged;
+                    case DLPolicy_implicit_conversion_prohibited.implicit_conversion_allowed: return DLPolicy_implicit_conversion_prohibited.implicit_conversion_allowed;
+                    case DLPolicy_implicit_conversion_prohibited.implicit_conversion_prohibited: return DLPolicy_implicit_conversion_prohibited.implicit_conversion_prohibited;
+                    default:
+                        throw new _ConstructionError(
+                            'Invalid ENUMERATED value ' + enumerated + ' for DLPolicy_implicit_conversion_prohibited.',
+                            el,
+                        );
+                }
+            };
     }
     return _cached_decoder_for_DLPolicy_implicit_conversion_prohibited(el);
 }
@@ -138,7 +150,7 @@ export function _encode_DLPolicy_implicit_conversion_prohibited(
 ): _Element {
     if (!_cached_encoder_for_DLPolicy_implicit_conversion_prohibited) {
         _cached_encoder_for_DLPolicy_implicit_conversion_prohibited =
-            $._encodeEnumerated;
+            $._encodeEnumerated as $.ASN1Encoder<DLPolicy_implicit_conversion_prohibited>;
     }
     return _cached_encoder_for_DLPolicy_implicit_conversion_prohibited(
         value,

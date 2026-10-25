@@ -1,6 +1,6 @@
 /* eslint-disable */
 import {
-  BOOLEAN,
+  type BOOLEAN,
   ASN1Element as _Element,
   ASN1TagClass as _TagClass,
   ASN1Construction as _Construction,
@@ -13,12 +13,12 @@ import {
 import * as $ from '@wildboar/asn1/functional';
 import { type ERROR } from '../Remote-Operations-Information-Objects/ERROR.oca.mjs';
 import {
-  Priority,
+  type Priority,
   _decode_Priority,
   _encode_Priority,
 } from '../Remote-Operations-Information-Objects/Priority.ta.mjs';
 import {
-  Code,
+  type Code,
   _decode_Code,
   _encode_Code,
 } from '../Remote-Operations-Information-Objects/Code.ta.mjs';
@@ -33,10 +33,10 @@ import {
  *
  * ```asn1
  * OPERATION ::= CLASS {
- *   &ArgumentType          OPTIONAL,
+ *   &ArgumentType          type OPTIONAL,
  *   &argumentTypeOptional  BOOLEAN OPTIONAL,
  *   &returnResult          BOOLEAN DEFAULT TRUE,
- *   &ResultType            OPTIONAL,
+ *   &ResultType            type OPTIONAL,
  *   &resultTypeOptional    BOOLEAN OPTIONAL,
  *   &Errors                ERROR OPTIONAL,
  *   &Linked                OPERATION OPTIONAL,

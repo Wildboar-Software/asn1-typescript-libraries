@@ -1,7 +1,7 @@
 /* eslint-disable */
 import {
-    OPTIONAL,
-    ASN1Element as _Element,
+    type OPTIONAL,
+    type ASN1Element as _Element,
     ASN1TagClass as _TagClass,
     ASN1Construction as _Construction,
     ASN1UniversalType as _UniversalType,
@@ -12,8 +12,8 @@ import {
 } from "@wildboar/asn1";
 import * as $ from "@wildboar/asn1/functional";
 import { AttributeProblem, _enum_for_AttributeProblem, _decode_AttributeProblem, _encode_AttributeProblem } from "../DFRAbstractService/AttributeProblem.ta.mjs";
-import { AttributeType, _decode_AttributeType, _encode_AttributeType } from "../InformationFramework/AttributeType.ta.mjs";
-import { AttributeValue, _decode_AttributeValue, _encode_AttributeValue } from "../InformationFramework/AttributeValue.ta.mjs";
+import { type AttributeType, _decode_AttributeType, _encode_AttributeType } from "../InformationFramework/AttributeType.ta.mjs";
+import { type AttributeValue, _decode_AttributeValue, _encode_AttributeValue } from "../InformationFramework/AttributeValue.ta.mjs";
 
 
 /**
@@ -36,35 +36,43 @@ import { AttributeValue, _decode_AttributeValue, _encode_AttributeValue } from "
  */
 export
 class attributeError_ParameterType_problems_Item {
+    /**
+     * @summary `problem`.
+     * @description
+     *
+     * Why the attribute failed.
+     * @public
+     * @readonly
+     */
+    public readonly problem: AttributeProblem;
+    /**
+     * @summary `type_`.
+     * @description
+     *
+     * Attribute type involved.
+     * @public
+     * @readonly
+     */
+    public readonly type_: AttributeType;
+    /**
+     * @summary `value`.
+     * @description
+     *
+     * Value, when needed to disambiguate.
+     * @public
+     * @readonly
+     */
+    public readonly value?: OPTIONAL<AttributeValue>;
+
     constructor (
-        /**
-         * @summary `problem`.
-         * @description
-         *
-         * Why the attribute failed.
-         * @public
-         * @readonly
-         */
-        readonly problem: AttributeProblem,
-        /**
-         * @summary `type_`.
-         * @description
-         *
-         * Attribute type involved.
-         * @public
-         * @readonly
-         */
-        readonly type_: AttributeType,
-        /**
-         * @summary `value`.
-         * @description
-         *
-         * Value, when needed to disambiguate.
-         * @public
-         * @readonly
-         */
-        readonly value?: OPTIONAL<AttributeValue>
-    ) {}
+        problem: AttributeProblem,
+        type_: AttributeType,
+        value?: OPTIONAL<AttributeValue>
+    ) {
+        this.problem = problem;
+        this.type_ = type_;
+        this.value = value;
+    }
 
     /**
      * @summary Restructures an object into a attributeError_ParameterType_problems_Item
@@ -88,7 +96,7 @@ class attributeError_ParameterType_problems_Item {
          * @static
          */
 
-    public static _enum_for_problem = _enum_for_AttributeProblem;
+    public static _enum_for_problem: typeof _enum_for_AttributeProblem = _enum_for_AttributeProblem;
 }
 
 /**

@@ -1,8 +1,8 @@
 /* eslint-disable */
 import {
-    NULL,
-    OPTIONAL,
-    ASN1Element as _Element,
+    type NULL,
+    type OPTIONAL,
+    type ASN1Element as _Element,
     ASN1TagClass as _TagClass
 } from "@wildboar/asn1";
 import * as $ from "@wildboar/asn1/functional";
@@ -22,9 +22,9 @@ import { ExtensionContainer, _decode_ExtensionContainer, _encode_ExtensionContai
  * 
  * ```asn1
  * FacilityNotSupParam ::= SEQUENCE {
- *     extensionContainer    ExtensionContainer    OPTIONAL,
+ *     extensionContainer    ExtensionContainer    type OPTIONAL,
  *     ...,
- *     shapeOfLocationEstimateNotSupported [0]    NULL    OPTIONAL,
+ *     shapeOfLocationEstimateNotSupported [0]    NULL    type OPTIONAL,
  *     neededLcsCapabilityNotSupportedInServingNode [1] NULL    OPTIONAL }
  * ```
  * 
@@ -32,42 +32,52 @@ import { ExtensionContainer, _decode_ExtensionContainer, _encode_ExtensionContai
  */
 export
 class FacilityNotSupParam {
+    /**
+     * @summary `extensionContainer`.
+     * @public
+     * @readonly
+     */
+    public readonly extensionContainer?: OPTIONAL<ExtensionContainer>;
+    /**
+     * @summary `shapeOfLocationEstimateNotSupported`.
+     * @description
+     *
+     * Requested facility not supported: Shape of location estimate not
+     * supported (3GPP TS 29.002 V19.1.0 clause 7.6.1.4).
+     *
+     * @public
+     * @readonly
+     */
+    public readonly shapeOfLocationEstimateNotSupported?: OPTIONAL<NULL>;
+    /**
+     * @summary `neededLcsCapabilityNotSupportedInServingNode`.
+     * @description
+     *
+     * Requested facility not supported: Needed LCS capability not supported
+     * in serving node (3GPP TS 29.002 V19.1.0 clause 7.6.1.4).
+     *
+     * @public
+     * @readonly
+     */
+    public readonly neededLcsCapabilityNotSupportedInServingNode?: OPTIONAL<NULL>;
+    /**
+     * @summary Extensions that are not recognized.
+     * @public
+     * @readonly
+     */
+    public readonly _unrecognizedExtensionsList: _Element[];
+
     constructor (
-        /**
-         * @summary `extensionContainer`.
-         * @public
-         * @readonly
-         */
-        readonly extensionContainer?: OPTIONAL<ExtensionContainer>,
-        /**
-         * @summary `shapeOfLocationEstimateNotSupported`.
-         * @description
-         *
-         * Requested facility not supported: Shape of location estimate not
-         * supported (3GPP TS 29.002 V19.1.0 clause 7.6.1.4).
-         *
-         * @public
-         * @readonly
-         */
-        readonly shapeOfLocationEstimateNotSupported?: OPTIONAL<NULL>,
-        /**
-         * @summary `neededLcsCapabilityNotSupportedInServingNode`.
-         * @description
-         *
-         * Requested facility not supported: Needed LCS capability not supported
-         * in serving node (3GPP TS 29.002 V19.1.0 clause 7.6.1.4).
-         *
-         * @public
-         * @readonly
-         */
-        readonly neededLcsCapabilityNotSupportedInServingNode?: OPTIONAL<NULL>,
-        /**
-         * @summary Extensions that are not recognized.
-         * @public
-         * @readonly
-         */
-        readonly _unrecognizedExtensionsList: _Element[] = []
-    ) {}
+        extensionContainer?: OPTIONAL<ExtensionContainer>,
+        shapeOfLocationEstimateNotSupported?: OPTIONAL<NULL>,
+        neededLcsCapabilityNotSupportedInServingNode?: OPTIONAL<NULL>,
+        _unrecognizedExtensionsList: _Element[] = []
+    ) {
+        this.extensionContainer = extensionContainer;
+        this.shapeOfLocationEstimateNotSupported = shapeOfLocationEstimateNotSupported;
+        this.neededLcsCapabilityNotSupportedInServingNode = neededLcsCapabilityNotSupportedInServingNode;
+        this._unrecognizedExtensionsList = _unrecognizedExtensionsList;
+    }
 
     /**
      * @summary Restructures an object into a FacilityNotSupParam

@@ -1,6 +1,6 @@
 /* eslint-disable */
 import {
-    ASN1Element as _Element,
+    type ASN1Element as _Element,
     ASN1TagClass as _TagClass,
     ASN1Construction as _Construction,
     ASN1UniversalType as _UniversalType,
@@ -11,7 +11,7 @@ import {
 } from '@wildboar/asn1';
 import * as $ from '@wildboar/asn1/functional';
 import {
-    RangeProblem,
+    type RangeProblem,
     _decode_RangeProblem,
     _encode_RangeProblem,
 } from '../MSAbstractService/RangeProblem.ta.mjs';
@@ -30,14 +30,18 @@ import {
  *
  */
 export class RangeError {
+    /**
+     * @summary `problem`.
+     * @public
+     * @readonly
+     */
+    public readonly problem: RangeProblem;
+
     constructor(
-        /**
-         * @summary `problem`.
-         * @public
-         * @readonly
-         */
-        readonly problem: RangeProblem
-    ) {}
+        problem: RangeProblem
+    ) {
+        this.problem = problem;
+    }
 
     /**
      * @summary Restructures an object into a RangeError

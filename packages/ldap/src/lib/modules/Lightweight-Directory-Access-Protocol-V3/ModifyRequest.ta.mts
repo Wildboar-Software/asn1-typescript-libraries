@@ -11,7 +11,7 @@ import {
 } from '@wildboar/asn1';
 import * as $ from '@wildboar/asn1/functional';
 import {
-  LDAPDN,
+  type LDAPDN,
   _decode_LDAPDN,
   _encode_LDAPDN,
 } from '../Lightweight-Directory-Access-Protocol-V3/LDAPDN.ta.mjs';
@@ -55,7 +55,7 @@ export class ModifyRequest {
    * @public
    * @readonly
    */
-  readonly object: LDAPDN;
+  public readonly object: LDAPDN;
   /**
    * @summary `changes`.
    * @description
@@ -66,13 +66,13 @@ export class ModifyRequest {
    * @public
    * @readonly
    */
-  readonly changes: ModifyRequest_changes_change[];
+  public readonly changes: ModifyRequest_changes_change[];
   /**
    * @summary Extensions that are not recognized.
    * @public
    * @readonly
    */
-  readonly _unrecognizedExtensionsList: _Element[];
+  public readonly _unrecognizedExtensionsList: _Element[];
 
   constructor(
     object: LDAPDN,

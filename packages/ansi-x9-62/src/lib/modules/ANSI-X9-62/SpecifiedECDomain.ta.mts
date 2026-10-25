@@ -1,14 +1,14 @@
 /* eslint-disable */
 import {
-    ASN1Element as _Element,
+    type ASN1Element as _Element,
     ASN1TagClass as _TagClass,
-    INTEGER,
-    OPTIONAL,
+    type INTEGER,
+    type OPTIONAL,
 } from "@wildboar/asn1";
 import * as $ from "@wildboar/asn1/functional";
 import { Curve, _decode_Curve, _encode_Curve } from "../ANSI-X9-62/Curve.ta.mjs";
 import {
-    ECPoint,
+    type ECPoint,
     _decode_ECPoint,
     _encode_ECPoint,
 } from "../ANSI-X9-62/ECPoint.ta.mjs";
@@ -18,12 +18,12 @@ import {
     _encode_FieldID,
 } from "../ANSI-X9-62/FieldID.ta.mjs";
 import {
-    HashAlgorithm,
+    type HashAlgorithm,
     _decode_HashAlgorithm,
     _encode_HashAlgorithm,
 } from "../ANSI-X9-62/HashAlgorithm.ta.mjs";
 import {
-    SpecifiedECDomainVersion,
+    type SpecifiedECDomainVersion,
     _decode_SpecifiedECDomainVersion,
     _encode_SpecifiedECDomainVersion,
 } from "../ANSI-X9-62/SpecifiedECDomainVersion.ta.mjs";
@@ -65,7 +65,7 @@ export class SpecifiedECDomain {
      * @public
      * @readonly
      */
-    readonly version: SpecifiedECDomainVersion;
+    public readonly version: SpecifiedECDomainVersion;
     /**
      * @summary `fieldID`.
      * @description
@@ -76,7 +76,7 @@ export class SpecifiedECDomain {
      * @public
      * @readonly
      */
-    readonly fieldID: FieldID;
+    public readonly fieldID: FieldID;
     /**
      * @summary `curve`.
      * @description
@@ -87,7 +87,7 @@ export class SpecifiedECDomain {
      * @public
      * @readonly
      */
-    readonly curve: Curve;
+    public readonly curve: Curve;
     /**
      * @summary `base`.
      * @description
@@ -97,7 +97,7 @@ export class SpecifiedECDomain {
      * @public
      * @readonly
      */
-    readonly base: ECPoint;
+    public readonly base: ECPoint;
     /**
      * @summary `order`.
      * @description
@@ -107,7 +107,7 @@ export class SpecifiedECDomain {
      * @public
      * @readonly
      */
-    readonly order: INTEGER;
+    public readonly order: INTEGER;
     /**
      * @summary `cofactor`.
      * @description
@@ -117,7 +117,7 @@ export class SpecifiedECDomain {
      * @public
      * @readonly
      */
-    readonly cofactor?: OPTIONAL<INTEGER>;
+    public readonly cofactor?: OPTIONAL<INTEGER>;
     /**
      * @summary `hash`.
      * @description
@@ -128,13 +128,13 @@ export class SpecifiedECDomain {
      * @public
      * @readonly
      */
-    readonly hash?: OPTIONAL<HashAlgorithm>;
+    public readonly hash?: OPTIONAL<HashAlgorithm>;
     /**
      * @summary Extensions that are not recognized.
      * @public
      * @readonly
      */
-    readonly _unrecognizedExtensionsList: _Element[];
+    public readonly _unrecognizedExtensionsList: _Element[];
 
     constructor(
         version: SpecifiedECDomainVersion,

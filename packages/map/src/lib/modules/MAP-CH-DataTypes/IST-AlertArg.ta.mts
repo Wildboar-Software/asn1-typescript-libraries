@@ -1,11 +1,11 @@
 /* eslint-disable */
 import {
-    OPTIONAL,
-    ASN1Element as _Element,
+    type OPTIONAL,
+    type ASN1Element as _Element,
     ASN1TagClass as _TagClass
 } from "@wildboar/asn1";
 import * as $ from "@wildboar/asn1/functional";
-import { IMSI, _decode_IMSI, _encode_IMSI } from "../MAP-CommonDataTypes/IMSI.ta.mjs";
+import { type IMSI, _decode_IMSI, _encode_IMSI } from "../MAP-CommonDataTypes/IMSI.ta.mjs";
 import { ExtensionContainer, _decode_ExtensionContainer, _encode_ExtensionContainer } from "../MAP-ExtensionDataTypes/ExtensionContainer.ta.mjs";
 
 
@@ -21,7 +21,7 @@ import { ExtensionContainer, _decode_ExtensionContainer, _encode_ExtensionContai
  * ```asn1
  * IST-AlertArg ::= SEQUENCE{
  *     imsi    [0]    IMSI,
- *     extensionContainer    [1]    ExtensionContainer    OPTIONAL,
+ *     extensionContainer    [1]    ExtensionContainer    type OPTIONAL,
  *     ...}
  * ```
  * 
@@ -29,34 +29,42 @@ import { ExtensionContainer, _decode_ExtensionContainer, _encode_ExtensionContai
  */
 export
 class IST_AlertArg {
+    /**
+     * @summary `imsi`.
+     * @description
+     *
+     * Subscriber IMSI.
+     *
+     * @public
+     * @readonly
+     */
+    public readonly imsi: IMSI;
+    /**
+     * @summary `extensionContainer`.
+     * @description
+     *
+     * Private or PCS extensions (3GPP TS 29.002 V19.1.0 clause 17.7.11).
+     *
+     * @public
+     * @readonly
+     */
+    public readonly extensionContainer?: OPTIONAL<ExtensionContainer>;
+    /**
+     * @summary Extensions that are not recognized.
+     * @public
+     * @readonly
+     */
+    public readonly _unrecognizedExtensionsList: _Element[];
+
     constructor (
-        /**
-         * @summary `imsi`.
-         * @description
-         *
-         * Subscriber IMSI.
-         *
-         * @public
-         * @readonly
-         */
-        readonly imsi: IMSI,
-        /**
-         * @summary `extensionContainer`.
-         * @description
-         *
-         * Private or PCS extensions (3GPP TS 29.002 V19.1.0 clause 17.7.11).
-         *
-         * @public
-         * @readonly
-         */
-        readonly extensionContainer?: OPTIONAL<ExtensionContainer>,
-        /**
-         * @summary Extensions that are not recognized.
-         * @public
-         * @readonly
-         */
-        readonly _unrecognizedExtensionsList: _Element[] = []
-    ) {}
+        imsi: IMSI,
+        extensionContainer?: OPTIONAL<ExtensionContainer>,
+        _unrecognizedExtensionsList: _Element[] = []
+    ) {
+        this.imsi = imsi;
+        this.extensionContainer = extensionContainer;
+        this._unrecognizedExtensionsList = _unrecognizedExtensionsList;
+    }
 
     /**
      * @summary Restructures an object into a IST_AlertArg

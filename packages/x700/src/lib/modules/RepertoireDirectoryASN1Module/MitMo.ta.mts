@@ -1,7 +1,7 @@
 /* eslint-disable */
 import {
-    OPTIONAL,
-    ASN1Element as _Element,
+    type OPTIONAL,
+    type ASN1Element as _Element,
     ASN1TagClass as _TagClass,
     ASN1Construction as _Construction,
     ASN1UniversalType as _UniversalType,
@@ -12,12 +12,12 @@ import {
 } from '@wildboar/asn1';
 import * as $ from '@wildboar/asn1/functional';
 import {
-    GdmoObjectClass,
+    type GdmoObjectClass,
     _decode_GdmoObjectClass,
     _encode_GdmoObjectClass,
 } from '../RepertoireASN1Module/GdmoObjectClass.ta.mjs';
 import {
-    InstanceIdList,
+    type InstanceIdList,
     _decode_InstanceIdList,
     _encode_InstanceIdList,
 } from '../RepertoireDirectoryASN1Module/InstanceIdList.ta.mjs';
@@ -41,29 +41,35 @@ import {
  *
  */
 export class MitMo {
+    /**
+     * @summary `objectClass`.
+     * @description
+     *
+     * GDMO class of the managed objects listed. ITU-T Rec. X.750
+     * (10/96) §8.6.1.
+     * @public
+     * @readonly
+     */
+    public readonly objectClass: GdmoObjectClass;
+    /**
+     * @summary `instances`.
+     * @description
+     *
+     * Instance names of long-lived objects of this class made
+     * visible by the SMAE. Omitted when only the class is
+     * registered. ITU-T Rec. X.750 (10/96) §8.6.1.
+     * @public
+     * @readonly
+     */
+    public readonly instances?: OPTIONAL<InstanceIdList>;
+
     constructor(
-        /**
-         * @summary `objectClass`.
-         * @description
-         *
-         * GDMO class of the managed objects listed. ITU-T Rec. X.750
-         * (10/96) §8.6.1.
-         * @public
-         * @readonly
-         */
-        readonly objectClass: GdmoObjectClass,
-        /**
-         * @summary `instances`.
-         * @description
-         *
-         * Instance names of long-lived objects of this class made
-         * visible by the SMAE. Omitted when only the class is
-         * registered. ITU-T Rec. X.750 (10/96) §8.6.1.
-         * @public
-         * @readonly
-         */
-        readonly instances?: OPTIONAL<InstanceIdList>
-    ) {}
+        objectClass: GdmoObjectClass,
+        instances?: OPTIONAL<InstanceIdList>
+    ) {
+        this.objectClass = objectClass;
+        this.instances = instances;
+    }
 
     /**
      * @summary Restructures an object into a MitMo

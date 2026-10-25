@@ -1,10 +1,10 @@
 /* eslint-disable */
 import {
-    OPTIONAL,
-    BOOLEAN,
-    OBJECT_IDENTIFIER,
-    IA5String,
-    ASN1Element as _Element,
+    type OPTIONAL,
+    type BOOLEAN,
+    type OBJECT_IDENTIFIER,
+    type IA5String,
+    type ASN1Element as _Element,
     ASN1TagClass as _TagClass,
     ASN1Construction as _Construction,
     ASN1UniversalType as _UniversalType,
@@ -52,110 +52,130 @@ import {
  */
 export
 class CommonCriteriaMeasures {
+    /**
+     * @summary `version`.
+     * @description
+     *
+     * Common Criteria version string, e.g. `"2.2"` or `"3.1"`.
+     * Future syntax is defined by CC. Bounded by `strmax`.
+     * §3.1.1.
+     *
+     * @public
+     * @readonly
+     */
+    public readonly version: IA5String;
+    /**
+     * @summary `assurancelevel`.
+     * @description
+     *
+     * Common Criteria Evaluation Assurance Level (EAL 1–7).
+     * §3.1.1.
+     *
+     * @public
+     * @readonly
+     */
+    public readonly assurancelevel: EvaluationAssuranceLevel;
+    /**
+     * @summary `evaluationStatus`.
+     * @description
+     *
+     * Whether the TBB is designed to meet, is undergoing, or has
+     * completed CC evaluation. §3.1.1.
+     *
+     * @public
+     * @readonly
+     */
+    public readonly evaluationStatus: EvaluationStatus;
+    /**
+     * @summary `plus`.
+     * @description
+     *
+     * Default `FALSE`. The profile lists this field but does not
+     * define further semantics. §3.1.1.
+     *
+     * @public
+     * @readonly
+     */
+    public readonly plus?: OPTIONAL<BOOLEAN>;
+    /**
+     * @summary `strengthOfFunction`.
+     * @description
+     *
+     * Common Criteria strength of function: basic, medium, or
+     * high. §3.1.1.
+     *
+     * @public
+     * @readonly
+     */
+    public readonly strengthOfFunction?: OPTIONAL<StrengthOfFunction>;
+    /**
+     * @summary `profileOid`.
+     * @description
+     *
+     * Protection profile as an OID. If `profileUri` is also
+     * present, both MUST represent consistent values. §3.1.1.
+     *
+     * @public
+     * @readonly
+     */
+    public readonly profileOid?: OPTIONAL<OBJECT_IDENTIFIER>;
+    /**
+     * @summary `profileUri`.
+     * @description
+     *
+     * Protection profile as a document URI (with optional hash).
+     * If `profileOid` is also present, both MUST represent
+     * consistent values. §3.1.1.
+     *
+     * @public
+     * @readonly
+     */
+    public readonly profileUri?: OPTIONAL<URIReference>;
+    /**
+     * @summary `targetOid`.
+     * @description
+     *
+     * Security target as an OID. If `targetUri` is also present,
+     * both MUST represent consistent values. §3.1.1.
+     *
+     * @public
+     * @readonly
+     */
+    public readonly targetOid?: OPTIONAL<OBJECT_IDENTIFIER>;
+    /**
+     * @summary `targetUri`.
+     * @description
+     *
+     * Security target as a document URI (with optional hash).
+     * If `targetOid` is also present, both MUST represent
+     * consistent values. §3.1.1.
+     *
+     * @public
+     * @readonly
+     */
+    public readonly targetUri?: OPTIONAL<URIReference>;
+
     constructor (
-        /**
-         * @summary `version`.
-         * @description
-         *
-         * Common Criteria version string, e.g. `"2.2"` or `"3.1"`.
-         * Future syntax is defined by CC. Bounded by `strmax`.
-         * §3.1.1.
-         *
-         * @public
-         * @readonly
-         */
-        readonly version: IA5String,
-        /**
-         * @summary `assurancelevel`.
-         * @description
-         *
-         * Common Criteria Evaluation Assurance Level (EAL 1–7).
-         * §3.1.1.
-         *
-         * @public
-         * @readonly
-         */
-        readonly assurancelevel: EvaluationAssuranceLevel,
-        /**
-         * @summary `evaluationStatus`.
-         * @description
-         *
-         * Whether the TBB is designed to meet, is undergoing, or has
-         * completed CC evaluation. §3.1.1.
-         *
-         * @public
-         * @readonly
-         */
-        readonly evaluationStatus: EvaluationStatus,
-        /**
-         * @summary `plus`.
-         * @description
-         *
-         * Default `FALSE`. The profile lists this field but does not
-         * define further semantics. §3.1.1.
-         *
-         * @public
-         * @readonly
-         */
-        readonly plus?: OPTIONAL<BOOLEAN>,
-        /**
-         * @summary `strengthOfFunction`.
-         * @description
-         *
-         * Common Criteria strength of function: basic, medium, or
-         * high. §3.1.1.
-         *
-         * @public
-         * @readonly
-         */
-        readonly strengthOfFunction?: OPTIONAL<StrengthOfFunction>,
-        /**
-         * @summary `profileOid`.
-         * @description
-         *
-         * Protection profile as an OID. If `profileUri` is also
-         * present, both MUST represent consistent values. §3.1.1.
-         *
-         * @public
-         * @readonly
-         */
-        readonly profileOid?: OPTIONAL<OBJECT_IDENTIFIER>,
-        /**
-         * @summary `profileUri`.
-         * @description
-         *
-         * Protection profile as a document URI (with optional hash).
-         * If `profileOid` is also present, both MUST represent
-         * consistent values. §3.1.1.
-         *
-         * @public
-         * @readonly
-         */
-        readonly profileUri?: OPTIONAL<URIReference>,
-        /**
-         * @summary `targetOid`.
-         * @description
-         *
-         * Security target as an OID. If `targetUri` is also present,
-         * both MUST represent consistent values. §3.1.1.
-         *
-         * @public
-         * @readonly
-         */
-        readonly targetOid?: OPTIONAL<OBJECT_IDENTIFIER>,
-        /**
-         * @summary `targetUri`.
-         * @description
-         *
-         * Security target as a document URI (with optional hash).
-         * If `targetOid` is also present, both MUST represent
-         * consistent values. §3.1.1.
-         *
-         * @public
-         * @readonly
-         */
-        readonly targetUri?: OPTIONAL<URIReference>
-    ) {}
+        version: IA5String,
+        assurancelevel: EvaluationAssuranceLevel,
+        evaluationStatus: EvaluationStatus,
+        plus?: OPTIONAL<BOOLEAN>,
+        strengthOfFunction?: OPTIONAL<StrengthOfFunction>,
+        profileOid?: OPTIONAL<OBJECT_IDENTIFIER>,
+        profileUri?: OPTIONAL<URIReference>,
+        targetOid?: OPTIONAL<OBJECT_IDENTIFIER>,
+        targetUri?: OPTIONAL<URIReference>
+    ) {
+        this.version = version;
+        this.assurancelevel = assurancelevel;
+        this.evaluationStatus = evaluationStatus;
+        this.plus = plus;
+        this.strengthOfFunction = strengthOfFunction;
+        this.profileOid = profileOid;
+        this.profileUri = profileUri;
+        this.targetOid = targetOid;
+        this.targetUri = targetUri;
+    }
 
     /**
      * @summary Restructures an object into a CommonCriteriaMeasures
@@ -185,13 +205,13 @@ class CommonCriteriaMeasures {
      * @public
      * @static
      */
-    public static _enum_for_assurancelevel = _enum_for_EvaluationAssuranceLevel;
+    public static _enum_for_assurancelevel: typeof _enum_for_EvaluationAssuranceLevel = _enum_for_EvaluationAssuranceLevel;
     /**
      * @summary The enum used as the type of the component `strengthOfFunction`
      * @public
      * @static
      */
-    public static _enum_for_strengthOfFunction = _enum_for_StrengthOfFunction;
+    public static _enum_for_strengthOfFunction: typeof _enum_for_StrengthOfFunction = _enum_for_StrengthOfFunction;
 }
 
 /**

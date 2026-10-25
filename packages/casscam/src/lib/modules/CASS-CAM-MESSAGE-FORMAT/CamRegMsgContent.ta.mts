@@ -1,7 +1,7 @@
 /* eslint-disable */
 import {
-    OCTET_STRING,
-    ASN1Element as _Element,
+    type OCTET_STRING,
+    type ASN1Element as _Element,
     ASN1TagClass as _TagClass,
     ASN1Construction as _Construction,
     ASN1UniversalType as _UniversalType,
@@ -52,7 +52,7 @@ class CamRegMsgContent {
      * @public
      * @readonly
      */
-    readonly sessionID: OCTET_STRING;
+    public readonly sessionID: OCTET_STRING;
     /**
      * @summary `nONCE_CAM`.
      * @description
@@ -64,7 +64,7 @@ class CamRegMsgContent {
      * @public
      * @readonly
      */
-    readonly nONCE_CAM: OCTET_STRING;
+    public readonly nONCE_CAM: OCTET_STRING;
     /**
      * @summary `cAMID`.
      * @description
@@ -77,7 +77,7 @@ class CamRegMsgContent {
      * @public
      * @readonly
      */
-    readonly cAMID: OCTET_STRING;
+    public readonly cAMID: OCTET_STRING;
     /**
      * @summary `hWVersion`.
      * @description
@@ -88,7 +88,7 @@ class CamRegMsgContent {
      * @public
      * @readonly
      */
-    readonly hWVersion: OCTET_STRING;
+    public readonly hWVersion: OCTET_STRING;
     /**
      * @summary `sWversion`.
      * @description
@@ -99,7 +99,7 @@ class CamRegMsgContent {
      * @public
      * @readonly
      */
-    readonly sWversion: OCTET_STRING;
+    public readonly sWversion: OCTET_STRING;
     /**
      * @summary `hashed_MEK_ICCIEK`.
      * @description
@@ -113,7 +113,7 @@ class CamRegMsgContent {
      * @public
      * @readonly
      */
-    readonly hashed_MEK_ICCIEK: OCTET_STRING;
+    public readonly hashed_MEK_ICCIEK: OCTET_STRING;
 
     constructor (
         sessionID: OCTET_STRING,

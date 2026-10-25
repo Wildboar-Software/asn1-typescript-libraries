@@ -1,8 +1,8 @@
 /* eslint-disable */
 import {
-    ASN1Element as _Element,
+    type ASN1Element as _Element,
     ASN1TagClass as _TagClass,
-    OPTIONAL,
+    type OPTIONAL,
 } from "@wildboar/asn1";
 import * as $ from "@wildboar/asn1/functional";
 import {
@@ -16,7 +16,7 @@ import {
     _encode_OriginatorInfo,
 } from "../CryptographicMessageSyntax/OriginatorInfo.ta.mjs";
 import {
-    RecipientInfos,
+    type RecipientInfos,
     _decode_RecipientInfos,
     _encode_RecipientInfos,
 } from "../CryptographicMessageSyntax/RecipientInfos.ta.mjs";
@@ -26,7 +26,7 @@ import {
     _get_encoder_for_EncryptedContentInfo,
 } from "../PKCS-15/EncryptedContentInfo.ta.mjs";
 import {
-    EnvelopedData_version,
+    type EnvelopedData_version,
     _get_decoder_for_EnvelopedData_version,
     _get_encoder_for_EnvelopedData_version,
 } from "../PKCS-15/EnvelopedData-version.ta.mjs";
@@ -50,38 +50,50 @@ import {
  *
  */
 export class EnvelopedData<Type> {
+    /**
+     * @summary `version`.
+     * @public
+     * @readonly
+     */
+    public readonly version: EnvelopedData_version;
+    /**
+     * @summary `originatorInfo`.
+     * @public
+     * @readonly
+     */
+    public readonly originatorInfo: OPTIONAL<OriginatorInfo>;
+    /**
+     * @summary `recipientInfos`.
+     * @public
+     * @readonly
+     */
+    public readonly recipientInfos: RecipientInfos;
+    /**
+     * @summary `encryptedContentInfo`.
+     * @public
+     * @readonly
+     */
+    public readonly encryptedContentInfo: EncryptedContentInfo<Type>;
+    /**
+     * @summary `unprotectedAttrs`.
+     * @public
+     * @readonly
+     */
+    public readonly unprotectedAttrs?: OPTIONAL<Attribute[]>;
+
     constructor(
-        /**
-         * @summary `version`.
-         * @public
-         * @readonly
-         */
-        readonly version: EnvelopedData_version,
-        /**
-         * @summary `originatorInfo`.
-         * @public
-         * @readonly
-         */
-        readonly originatorInfo: OPTIONAL<OriginatorInfo>,
-        /**
-         * @summary `recipientInfos`.
-         * @public
-         * @readonly
-         */
-        readonly recipientInfos: RecipientInfos,
-        /**
-         * @summary `encryptedContentInfo`.
-         * @public
-         * @readonly
-         */
-        readonly encryptedContentInfo: EncryptedContentInfo<Type>,
-        /**
-         * @summary `unprotectedAttrs`.
-         * @public
-         * @readonly
-         */
-        readonly unprotectedAttrs?: OPTIONAL<Attribute[]>
-    ) {}
+        version: EnvelopedData_version,
+        originatorInfo: OPTIONAL<OriginatorInfo>,
+        recipientInfos: RecipientInfos,
+        encryptedContentInfo: EncryptedContentInfo<Type>,
+        unprotectedAttrs?: OPTIONAL<Attribute[]>
+    ) {
+        this.version = version;
+        this.originatorInfo = originatorInfo;
+        this.recipientInfos = recipientInfos;
+        this.encryptedContentInfo = encryptedContentInfo;
+        this.unprotectedAttrs = unprotectedAttrs;
+    }
 
     /**
      * @summary Restructures an object into a EnvelopedData

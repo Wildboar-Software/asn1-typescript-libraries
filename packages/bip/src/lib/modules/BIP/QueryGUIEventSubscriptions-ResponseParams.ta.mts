@@ -52,7 +52,7 @@ export class QueryGUIEventSubscriptions_ResponseParams {
    * @public
    * @readonly
    */
-  readonly guiEventSubscriptions: BioAPI_GUI_EVENT_SUBSCRIPTION[];
+  public readonly guiEventSubscriptions: BioAPI_GUI_EVENT_SUBSCRIPTION[];
 
   constructor(
     guiEventSubscriptions: BioAPI_GUI_EVENT_SUBSCRIPTION[]

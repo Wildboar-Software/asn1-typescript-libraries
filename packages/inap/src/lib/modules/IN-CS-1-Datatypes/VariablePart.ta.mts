@@ -1,13 +1,13 @@
 /* eslint-disable */
 import {
-    OCTET_STRING,
-    ASN1Element as _Element,
+    type OCTET_STRING,
+    type ASN1Element as _Element,
     ASN1TagClass as _TagClass
 } from "@wildboar/asn1";
 import * as $ from "@wildboar/asn1/functional";
-import { Integer4, _decode_Integer4, _encode_Integer4 } from "../IN-CS-1-Datatypes/Integer4.ta.mjs";
+import { type Integer4, _decode_Integer4, _encode_Integer4 } from "../IN-CS-1-Datatypes/Integer4.ta.mjs";
 // export { Integer4, _decode_Integer4, _encode_Integer4 } from "../IN-CS-1-Datatypes/Integer4.ta.mjs";
-import { Digits, _decode_Digits, _encode_Digits } from "../IN-CS-1-Datatypes/Digits.ta.mjs";
+import { type Digits, _decode_Digits, _encode_Digits } from "../IN-CS-1-Datatypes/Digits.ta.mjs";
 // export { Digits, _decode_Digits, _encode_Digits } from "../IN-CS-1-Datatypes/Digits.ta.mjs";
 
 

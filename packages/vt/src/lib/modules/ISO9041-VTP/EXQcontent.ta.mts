@@ -1,7 +1,7 @@
 /* eslint-disable */
 import {
-    OPTIONAL,
-    ASN1Element as _Element,
+    type OPTIONAL,
+    type ASN1Element as _Element,
     ASN1TagClass as _TagClass,
     ASN1Construction as _Construction,
     ASN1UniversalType as _UniversalType,
@@ -11,7 +11,7 @@ import {
     ASN1ConstructionError as _ConstructionError,
 } from "@wildboar/asn1";
 import * as $ from "@wildboar/asn1/functional";
-import { EXQcontent_exceptionType, _decode_EXQcontent_exceptionType, _encode_EXQcontent_exceptionType } from "../ISO9041-VTP/EXQcontent-exceptionType.ta.mjs";
+import { type EXQcontent_exceptionType, _decode_EXQcontent_exceptionType, _encode_EXQcontent_exceptionType } from "../ISO9041-VTP/EXQcontent-exceptionType.ta.mjs";
 import { EXQcontent_standard, _decode_EXQcontent_standard, _encode_EXQcontent_standard } from "../ISO9041-VTP/EXQcontent-standard.ta.mjs";
 import { EXQcontent_profile_Item, _decode_EXQcontent_profile_Item, _encode_EXQcontent_profile_Item } from "../ISO9041-VTP/EXQcontent-profile-Item.ta.mjs";
 
@@ -55,35 +55,43 @@ import { EXQcontent_profile_Item, _decode_EXQcontent_profile_Item, _encode_EXQco
  */
 export
 class EXQcontent {
+    /**
+     * @summary `exceptionType`.
+     * @description
+     * Standard or profile-defined exception. ISO/IEC
+     * 9041-1:1997 §6.26.
+     * @public
+     * @readonly
+     */
+    public readonly exceptionType: EXQcontent_exceptionType;
+    /**
+     * @summary `standard`.
+     * @description
+     * Display and logical pointers, as for BKQ. ISO/IEC
+     * 9041-1:1997 §6.26.
+     * @public
+     * @readonly
+     */
+    public readonly standard?: OPTIONAL<EXQcontent_standard>;
+    /**
+     * @summary `profile`.
+     * @description
+     * Profile-defined tagged octets, as for BKQ. ISO/IEC
+     * 9041-1:1997 §6.26.
+     * @public
+     * @readonly
+     */
+    public readonly profile?: OPTIONAL<EXQcontent_profile_Item[]>;
+
     constructor (
-        /**
-         * @summary `exceptionType`.
-         * @description
-         * Standard or profile-defined exception. ISO/IEC
-         * 9041-1:1997 §6.26.
-         * @public
-         * @readonly
-         */
-        readonly exceptionType: EXQcontent_exceptionType,
-        /**
-         * @summary `standard`.
-         * @description
-         * Display and logical pointers, as for BKQ. ISO/IEC
-         * 9041-1:1997 §6.26.
-         * @public
-         * @readonly
-         */
-        readonly standard?: OPTIONAL<EXQcontent_standard>,
-        /**
-         * @summary `profile`.
-         * @description
-         * Profile-defined tagged octets, as for BKQ. ISO/IEC
-         * 9041-1:1997 §6.26.
-         * @public
-         * @readonly
-         */
-        readonly profile?: OPTIONAL<EXQcontent_profile_Item[]>
-    ) {}
+        exceptionType: EXQcontent_exceptionType,
+        standard?: OPTIONAL<EXQcontent_standard>,
+        profile?: OPTIONAL<EXQcontent_profile_Item[]>
+    ) {
+        this.exceptionType = exceptionType;
+        this.standard = standard;
+        this.profile = profile;
+    }
 
     /**
      * @summary Restructures an object into a EXQcontent

@@ -88,7 +88,7 @@ type PDUSessionType = _enum_for_PDUSessionType;
  * @enum {number}
  */
 export
-const PDUSessionType = _enum_for_PDUSessionType;
+const PDUSessionType: typeof _enum_for_PDUSessionType = _enum_for_PDUSessionType;
 
 /**
  * @summary PDUSessionType_iPv4
@@ -96,7 +96,7 @@ const PDUSessionType = _enum_for_PDUSessionType;
  * @type {number}
  */
 export
-const PDUSessionType_iPv4: PDUSessionType = PDUSessionType.iPv4; /* LONG_NAMED_ENUMERATED_VALUE */
+const PDUSessionType_iPv4: _enum_for_PDUSessionType.iPv4 = PDUSessionType.iPv4; /* LONG_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary iPv4
@@ -104,7 +104,7 @@ const PDUSessionType_iPv4: PDUSessionType = PDUSessionType.iPv4; /* LONG_NAMED_E
  * @type {number}
  */
 export
-const iPv4: PDUSessionType = PDUSessionType.iPv4; /* SHORT_NAMED_ENUMERATED_VALUE */
+const iPv4: _enum_for_PDUSessionType.iPv4 = PDUSessionType.iPv4; /* SHORT_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary PDUSessionType_iPv6
@@ -112,7 +112,7 @@ const iPv4: PDUSessionType = PDUSessionType.iPv4; /* SHORT_NAMED_ENUMERATED_VALU
  * @type {number}
  */
 export
-const PDUSessionType_iPv6: PDUSessionType = PDUSessionType.iPv6; /* LONG_NAMED_ENUMERATED_VALUE */
+const PDUSessionType_iPv6: _enum_for_PDUSessionType.iPv6 = PDUSessionType.iPv6; /* LONG_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary iPv6
@@ -120,7 +120,7 @@ const PDUSessionType_iPv6: PDUSessionType = PDUSessionType.iPv6; /* LONG_NAMED_E
  * @type {number}
  */
 export
-const iPv6: PDUSessionType = PDUSessionType.iPv6; /* SHORT_NAMED_ENUMERATED_VALUE */
+const iPv6: _enum_for_PDUSessionType.iPv6 = PDUSessionType.iPv6; /* SHORT_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary PDUSessionType_iPv4v6
@@ -128,7 +128,7 @@ const iPv6: PDUSessionType = PDUSessionType.iPv6; /* SHORT_NAMED_ENUMERATED_VALU
  * @type {number}
  */
 export
-const PDUSessionType_iPv4v6: PDUSessionType = PDUSessionType.iPv4v6; /* LONG_NAMED_ENUMERATED_VALUE */
+const PDUSessionType_iPv4v6: _enum_for_PDUSessionType.iPv4v6 = PDUSessionType.iPv4v6; /* LONG_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary iPv4v6
@@ -136,7 +136,7 @@ const PDUSessionType_iPv4v6: PDUSessionType = PDUSessionType.iPv4v6; /* LONG_NAM
  * @type {number}
  */
 export
-const iPv4v6: PDUSessionType = PDUSessionType.iPv4v6; /* SHORT_NAMED_ENUMERATED_VALUE */
+const iPv4v6: _enum_for_PDUSessionType.iPv4v6 = PDUSessionType.iPv4v6; /* SHORT_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary PDUSessionType_unstructured
@@ -144,7 +144,7 @@ const iPv4v6: PDUSessionType = PDUSessionType.iPv4v6; /* SHORT_NAMED_ENUMERATED_
  * @type {number}
  */
 export
-const PDUSessionType_unstructured: PDUSessionType = PDUSessionType.unstructured; /* LONG_NAMED_ENUMERATED_VALUE */
+const PDUSessionType_unstructured: _enum_for_PDUSessionType.unstructured = PDUSessionType.unstructured; /* LONG_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary unstructured
@@ -152,7 +152,7 @@ const PDUSessionType_unstructured: PDUSessionType = PDUSessionType.unstructured;
  * @type {number}
  */
 export
-const unstructured: PDUSessionType = PDUSessionType.unstructured; /* SHORT_NAMED_ENUMERATED_VALUE */
+const unstructured: _enum_for_PDUSessionType.unstructured = PDUSessionType.unstructured; /* SHORT_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary PDUSessionType_ethernet
@@ -160,7 +160,7 @@ const unstructured: PDUSessionType = PDUSessionType.unstructured; /* SHORT_NAMED
  * @type {number}
  */
 export
-const PDUSessionType_ethernet: PDUSessionType = PDUSessionType.ethernet; /* LONG_NAMED_ENUMERATED_VALUE */
+const PDUSessionType_ethernet: _enum_for_PDUSessionType.ethernet = PDUSessionType.ethernet; /* LONG_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary ethernet
@@ -168,7 +168,7 @@ const PDUSessionType_ethernet: PDUSessionType = PDUSessionType.ethernet; /* LONG
  * @type {number}
  */
 export
-const ethernet: PDUSessionType = PDUSessionType.ethernet; /* SHORT_NAMED_ENUMERATED_VALUE */
+const ethernet: _enum_for_PDUSessionType.ethernet = PDUSessionType.ethernet; /* SHORT_NAMED_ENUMERATED_VALUE */
 export const _decode_PDUSessionType: $.ASN1Decoder<PDUSessionType> = $._decodeEnumerated;
 export const _encode_PDUSessionType: $.ASN1Encoder<PDUSessionType> = $._encodeEnumerated;
 

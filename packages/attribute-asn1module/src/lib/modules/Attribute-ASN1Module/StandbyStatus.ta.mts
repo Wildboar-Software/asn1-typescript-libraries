@@ -1,7 +1,7 @@
 /* eslint-disable */
 import {
-    INTEGER,
-    ASN1Element as _Element,
+    type INTEGER,
+    type ASN1Element as _Element,
     ASN1TagClass as _TagClass,
     ASN1Construction as _Construction,
     ASN1UniversalType as _UniversalType,
@@ -42,7 +42,7 @@ type StandbyStatus = INTEGER;
  * @type {number}
  */
 export
-const StandbyStatus_hotStandby: StandbyStatus = 0; /* LONG_NAMED_INTEGER_VALUE */
+const StandbyStatus_hotStandby: 0 = 0 satisfies StandbyStatus; /* LONG_NAMED_INTEGER_VALUE */
 
 /**
  * @summary StandbyStatus_hotStandby
@@ -55,7 +55,7 @@ const StandbyStatus_hotStandby: StandbyStatus = 0; /* LONG_NAMED_INTEGER_VALUE *
  * @type {number}
  */
 export
-const hotStandby: StandbyStatus = StandbyStatus_hotStandby; /* SHORT_NAMED_INTEGER_VALUE */
+const hotStandby: 0 = StandbyStatus_hotStandby; /* SHORT_NAMED_INTEGER_VALUE */
 
 /**
  * @summary StandbyStatus_coldStandby
@@ -68,7 +68,7 @@ const hotStandby: StandbyStatus = StandbyStatus_hotStandby; /* SHORT_NAMED_INTEG
  * @type {number}
  */
 export
-const StandbyStatus_coldStandby: StandbyStatus = 1; /* LONG_NAMED_INTEGER_VALUE */
+const StandbyStatus_coldStandby: 1 = 1 satisfies StandbyStatus; /* LONG_NAMED_INTEGER_VALUE */
 
 /**
  * @summary StandbyStatus_coldStandby
@@ -81,7 +81,7 @@ const StandbyStatus_coldStandby: StandbyStatus = 1; /* LONG_NAMED_INTEGER_VALUE 
  * @type {number}
  */
 export
-const coldStandby: StandbyStatus = StandbyStatus_coldStandby; /* SHORT_NAMED_INTEGER_VALUE */
+const coldStandby: 1 = StandbyStatus_coldStandby; /* SHORT_NAMED_INTEGER_VALUE */
 
 /**
  * @summary StandbyStatus_providingService
@@ -94,7 +94,7 @@ const coldStandby: StandbyStatus = StandbyStatus_coldStandby; /* SHORT_NAMED_INT
  * @type {number}
  */
 export
-const StandbyStatus_providingService: StandbyStatus = 2; /* LONG_NAMED_INTEGER_VALUE */
+const StandbyStatus_providingService: 2 = 2 satisfies StandbyStatus; /* LONG_NAMED_INTEGER_VALUE */
 
 /**
  * @summary StandbyStatus_providingService
@@ -107,13 +107,13 @@ const StandbyStatus_providingService: StandbyStatus = 2; /* LONG_NAMED_INTEGER_V
  * @type {number}
  */
 export
-const providingService: StandbyStatus = StandbyStatus_providingService; /* SHORT_NAMED_INTEGER_VALUE */
+const providingService: 2 = StandbyStatus_providingService; /* SHORT_NAMED_INTEGER_VALUE */
 
 
-export const _decode_StandbyStatus = $._decodeInteger;
+export const _decode_StandbyStatus: $.ASN1Decoder<INTEGER> = $._decodeInteger;
 
 
-export const _encode_StandbyStatus = $._encodeInteger;
+export const _encode_StandbyStatus: $.ASN1Encoder<INTEGER> = $._encodeInteger;
 
 
 /* eslint-enable */

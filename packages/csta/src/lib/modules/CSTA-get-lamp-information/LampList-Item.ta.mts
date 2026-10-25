@@ -2,18 +2,18 @@
 
 import * as $ from "@wildboar/asn1/functional";
 import {
-    OPTIONAL,
-    OCTET_STRING,
-    SEQUENCE,
-    SET,
-    ASN1Element as _Element,
+    type OPTIONAL,
+    type OCTET_STRING,
+    type SEQUENCE,
+    type SET,
+    type ASN1Element as _Element,
     ASN1TagClass as _TagClass
 } from "@wildboar/asn1";
-import { LampID, _decode_LampID, _encode_LampID } from "../CSTA-physical-device-feature/LampID.ta.mjs";
+import { type LampID, _decode_LampID, _encode_LampID } from "../CSTA-physical-device-feature/LampID.ta.mjs";
 
-import { ButtonID, _decode_ButtonID, _encode_ButtonID } from "../CSTA-physical-device-feature/ButtonID.ta.mjs";
+import { type ButtonID, _decode_ButtonID, _encode_ButtonID } from "../CSTA-physical-device-feature/ButtonID.ta.mjs";
 
-import { LampColor, _decode_LampColor, _encode_LampColor } from "../CSTA-physical-device-feature/LampColor.ta.mjs";
+import { type LampColor, _decode_LampColor, _encode_LampColor } from "../CSTA-physical-device-feature/LampColor.ta.mjs";
 
 
 
@@ -41,47 +41,57 @@ import { LampColor, _decode_LampColor, _encode_LampColor } from "../CSTA-physica
  */
 export
 class LampList_Item {
+    /**
+     * @summary `lamp`.
+     * @description
+     *
+     * LampID of this lamp.
+     * @public
+     * @readonly
+     */
+    public readonly lamp: LampID;
+    /**
+     * @summary `lampLabel`.
+     * @description
+     *
+     * Label by which the lamp may be referenced. Max length from
+     * capabilities exchange.
+     * @public
+     * @readonly
+     */
+    public readonly lampLabel?: OPTIONAL<OCTET_STRING>;
+    /**
+     * @summary `button`.
+     * @description
+     *
+     * Associated button, if any.
+     * @public
+     * @readonly
+     */
+    public readonly button?: OPTIONAL<ButtonID>;
+    /**
+     * @summary `lampColor`.
+     * @description
+     *
+     * 0–100: 0 none, 1 red, 2 yellow, 3 green, 4 blue, 5 unknown (Get/Event
+     * default if absent) or unused (Set). 6–100 switching-function
+     * specific.
+     * @public
+     * @readonly
+     */
+    public readonly lampColor?: OPTIONAL<LampColor>;
+
     constructor (
-        /**
-         * @summary `lamp`.
-         * @description
-         *
-         * LampID of this lamp.
-         * @public
-         * @readonly
-         */
-        readonly lamp: LampID,
-        /**
-         * @summary `lampLabel`.
-         * @description
-         *
-         * Label by which the lamp may be referenced. Max length from
-         * capabilities exchange.
-         * @public
-         * @readonly
-         */
-        readonly lampLabel?: OPTIONAL<OCTET_STRING>,
-        /**
-         * @summary `button`.
-         * @description
-         *
-         * Associated button, if any.
-         * @public
-         * @readonly
-         */
-        readonly button?: OPTIONAL<ButtonID>,
-        /**
-         * @summary `lampColor`.
-         * @description
-         *
-         * 0–100: 0 none, 1 red, 2 yellow, 3 green, 4 blue, 5 unknown (Get/Event
-         * default if absent) or unused (Set). 6–100 switching-function
-         * specific.
-         * @public
-         * @readonly
-         */
-        readonly lampColor?: OPTIONAL<LampColor>
-    ) {}
+        lamp: LampID,
+        lampLabel?: OPTIONAL<OCTET_STRING>,
+        button?: OPTIONAL<ButtonID>,
+        lampColor?: OPTIONAL<LampColor>
+    ) {
+        this.lamp = lamp;
+        this.lampLabel = lampLabel;
+        this.button = button;
+        this.lampColor = lampColor;
+    }
 
     /**
      * @summary Restructures an object into a LampList_Item

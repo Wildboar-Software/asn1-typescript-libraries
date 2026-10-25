@@ -1,8 +1,8 @@
 /* eslint-disable */
 import {
-    OCTET_STRING,
+    type OCTET_STRING,
     ASN1ConstructionError as _ConstructionError,
-    ASN1Element as _Element,
+    type ASN1Element as _Element,
     ASN1TagClass as _TagClass
 } from "@wildboar/asn1";
 import * as $ from "@wildboar/asn1/functional";
@@ -32,33 +32,39 @@ import { EuiccPackageResultDataSigned, _decode_EuiccPackageResultDataSigned, _en
  */
 export
 class EuiccPackageResultSigned {
+    /**
+     * @summary `euiccPackageResultDataSigned`.
+     * @description
+     * Bytes covered by euiccSignEPR, together with the association token (SGP.32
+     * v1.2, section 2.11.2.1). Holds the echoed eimId, counter, optional
+     * transaction identifier, the sequence number, and one result per executed
+     * command.
+     * @public
+     * @readonly
+     */
+    public readonly euiccPackageResultDataSigned: EuiccPackageResultDataSigned;
+    /**
+     * @summary `euiccSignEPR`.
+     * @description
+     * eUICC signature, tag '5F37', created with SK.EUICC.ECDSA over
+     * euiccPackageResultDataSigned concatenated with the association token (SGP.32
+     * v1.2, section 2.11.2.1). When no token is configured, the value zero is
+     * used. If several signing keys exist, the key that chains to euiccCiPKId in
+     * that eIM's configuration is used. The eIM verifies the signature with
+     * PK.EUICC.ECDSA from CERT.EUICC.ECDSA and verifies that certificate (section
+     * 5.14.6).
+     * @public
+     * @readonly
+     */
+    public readonly euiccSignEPR: OCTET_STRING;
+
     constructor (
-        /**
-         * @summary `euiccPackageResultDataSigned`.
-         * @description
-         * Bytes covered by euiccSignEPR, together with the association token (SGP.32
-         * v1.2, section 2.11.2.1). Holds the echoed eimId, counter, optional
-         * transaction identifier, the sequence number, and one result per executed
-         * command.
-         * @public
-         * @readonly
-         */
-        readonly euiccPackageResultDataSigned: EuiccPackageResultDataSigned,
-        /**
-         * @summary `euiccSignEPR`.
-         * @description
-         * eUICC signature, tag '5F37', created with SK.EUICC.ECDSA over
-         * euiccPackageResultDataSigned concatenated with the association token (SGP.32
-         * v1.2, section 2.11.2.1). When no token is configured, the value zero is
-         * used. If several signing keys exist, the key that chains to euiccCiPKId in
-         * that eIM's configuration is used. The eIM verifies the signature with
-         * PK.EUICC.ECDSA from CERT.EUICC.ECDSA and verifies that certificate (section
-         * 5.14.6).
-         * @public
-         * @readonly
-         */
-        readonly euiccSignEPR: OCTET_STRING
-    ) {}
+        euiccPackageResultDataSigned: EuiccPackageResultDataSigned,
+        euiccSignEPR: OCTET_STRING
+    ) {
+        this.euiccPackageResultDataSigned = euiccPackageResultDataSigned;
+        this.euiccSignEPR = euiccSignEPR;
+    }
 
     /**
      * @summary Restructures an object into a EuiccPackageResultSigned

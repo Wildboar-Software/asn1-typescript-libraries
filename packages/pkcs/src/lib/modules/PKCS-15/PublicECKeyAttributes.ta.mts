@@ -1,28 +1,28 @@
 /* eslint-disable */
 import {
-    Parameters,
+    type Parameters,
     _decode_Parameters,
     _encode_Parameters,
 } from "@wildboar/ansi-x9-62";
-import { ASN1Element as _Element, OPTIONAL } from "@wildboar/asn1";
+import { ASN1Element as _Element, type OPTIONAL } from "@wildboar/asn1";
 import * as $ from "@wildboar/asn1/functional";
 import {
-    ECPublicKeyChoice,
+    type ECPublicKeyChoice,
     _decode_ECPublicKeyChoice,
     _encode_ECPublicKeyChoice,
 } from "../PKCS-15/ECPublicKeyChoice.ta.mjs";
 import {
-    KeyInfo,
+    type KeyInfo,
     _get_decoder_for_KeyInfo,
     _get_encoder_for_KeyInfo,
 } from "../PKCS-15/KeyInfo.ta.mjs";
 import {
-    ObjectValue,
+    type ObjectValue,
     _get_decoder_for_ObjectValue,
     _get_encoder_for_ObjectValue,
 } from "../PKCS-15/ObjectValue.ta.mjs";
 import {
-    PublicKeyOperations,
+    type PublicKeyOperations,
     _decode_PublicKeyOperations,
     _encode_PublicKeyOperations,
 } from "../PKCS-15/PublicKeyOperations.ta.mjs";
@@ -44,26 +44,34 @@ import {
  *
  */
 export class PublicECKeyAttributes {
+    /**
+     * @summary `value`.
+     * @public
+     * @readonly
+     */
+    public readonly value: ObjectValue<ECPublicKeyChoice>;
+    /**
+     * @summary `keyInfo`.
+     * @public
+     * @readonly
+     */
+    public readonly keyInfo?: OPTIONAL<KeyInfo<Parameters, PublicKeyOperations>>;
+    /**
+     * @summary Extensions that are not recognized.
+     * @public
+     * @readonly
+     */
+    public readonly _unrecognizedExtensionsList: _Element[];
+
     constructor(
-        /**
-         * @summary `value`.
-         * @public
-         * @readonly
-         */
-        readonly value: ObjectValue<ECPublicKeyChoice>,
-        /**
-         * @summary `keyInfo`.
-         * @public
-         * @readonly
-         */
-        readonly keyInfo?: OPTIONAL<KeyInfo<Parameters, PublicKeyOperations>>,
-        /**
-         * @summary Extensions that are not recognized.
-         * @public
-         * @readonly
-         */
-        readonly _unrecognizedExtensionsList: _Element[] = []
-    ) {}
+        value: ObjectValue<ECPublicKeyChoice>,
+        keyInfo?: OPTIONAL<KeyInfo<Parameters, PublicKeyOperations>>,
+        _unrecognizedExtensionsList: _Element[] = []
+    ) {
+        this.value = value;
+        this.keyInfo = keyInfo;
+        this._unrecognizedExtensionsList = _unrecognizedExtensionsList;
+    }
 
     /**
      * @summary Restructures an object into a PublicECKeyAttributes

@@ -1,6 +1,6 @@
 /* eslint-disable */
 import {
-    ASN1Element as _Element,
+    type ASN1Element as _Element,
     ASN1TagClass as _TagClass,
     ASN1Construction as _Construction,
     ASN1UniversalType as _UniversalType,
@@ -11,7 +11,7 @@ import {
 } from '@wildboar/asn1';
 import * as $ from '@wildboar/asn1/functional';
 import {
-    Presentation_context_deletion_result_list_Item,
+    type Presentation_context_deletion_result_list_Item,
     _decode_Presentation_context_deletion_result_list_Item,
     _encode_Presentation_context_deletion_result_list_Item,
 } from '../ISO8823-PRESENTATION/Presentation-context-deletion-result-list-Item.ta.mjs';

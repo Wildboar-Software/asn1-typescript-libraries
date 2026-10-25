@@ -1,5 +1,5 @@
 import { type OPERATION } from "../Remote-Operations-Information-Objects/OPERATION.oca.mjs";
-import { EntityReleasedArg, _decode_EntityReleasedArg, _encode_EntityReleasedArg } from "../CAP-gsmSSF-gsmSCF-ops-args/EntityReleasedArg.ta.mjs";
+import { type EntityReleasedArg, _decode_EntityReleasedArg, _encode_EntityReleasedArg } from "../CAP-gsmSSF-gsmSCF-ops-args/EntityReleasedArg.ta.mjs";
 import { opcode_entityReleased } from "../CAP-operationcodes/opcode-entityReleased.va.mjs";
 
 /**

@@ -1,7 +1,7 @@
 /* eslint-disable */
 import {
-    OPTIONAL,
-    ASN1Element as _Element,
+    type OPTIONAL,
+    type ASN1Element as _Element,
     ASN1TagClass as _TagClass,
     ASN1Construction as _Construction,
     ASN1UniversalType as _UniversalType,
@@ -11,7 +11,7 @@ import {
     ASN1ConstructionError as _ConstructionError,
 } from "@wildboar/asn1";
 import * as $ from "@wildboar/asn1/functional";
-import { CS_AlterEventConditionMonitoring_Request_changeDisplay, _decode_CS_AlterEventConditionMonitoring_Request_changeDisplay, _encode_CS_AlterEventConditionMonitoring_Request_changeDisplay } from "../ISO-9506-MMS-1/CS-AlterEventConditionMonitoring-Request-changeDisplay.ta.mjs";
+import { type CS_AlterEventConditionMonitoring_Request_changeDisplay, _decode_CS_AlterEventConditionMonitoring_Request_changeDisplay, _encode_CS_AlterEventConditionMonitoring_Request_changeDisplay } from "../ISO-9506-MMS-1/CS-AlterEventConditionMonitoring-Request-changeDisplay.ta.mjs";
 
 
 /**
@@ -39,21 +39,25 @@ import { CS_AlterEventConditionMonitoring_Request_changeDisplay, _decode_CS_Alte
  */
 export
 class CS_AlterEventConditionMonitoring_Request {
+    /**
+     * @summary `changeDisplay`.
+     * @description
+     *
+     * New `&displayEnhancement`. Omitted: leave display unchanged.
+     * `string`/`index`/`noEnhancement`.
+     *
+     * [ISO 9506-1:2003 §19.6.1.1.5.1]
+     *
+     * @public
+     * @readonly
+     */
+    public readonly changeDisplay?: OPTIONAL<CS_AlterEventConditionMonitoring_Request_changeDisplay>;
+
     constructor (
-        /**
-         * @summary `changeDisplay`.
-         * @description
-         *
-         * New `&displayEnhancement`. Omitted: leave display unchanged.
-         * `string`/`index`/`noEnhancement`.
-         *
-         * [ISO 9506-1:2003 §19.6.1.1.5.1]
-         *
-         * @public
-         * @readonly
-         */
-        readonly changeDisplay?: OPTIONAL<CS_AlterEventConditionMonitoring_Request_changeDisplay>
-    ) {}
+        changeDisplay?: OPTIONAL<CS_AlterEventConditionMonitoring_Request_changeDisplay>
+    ) {
+        this.changeDisplay = changeDisplay;
+    }
 
     /**
      * @summary Restructures an object into a CS_AlterEventConditionMonitoring_Request

@@ -1,5 +1,5 @@
 /* eslint-disable */
-import { ASN1Element as _Element, NULL } from "@wildboar/asn1";
+import { ASN1Element as _Element, type NULL } from "@wildboar/asn1";
 import * as $ from "@wildboar/asn1/functional";
 
 /**
@@ -20,10 +20,10 @@ import * as $ from "@wildboar/asn1/functional";
 export type Unbind = NULL; // NullType
 
 
-export const _decode_Unbind = $._decodeNull;
+export const _decode_Unbind: $.ASN1Decoder<null> = $._decodeNull;
 
 
-export const _encode_Unbind = $._encodeNull;
+export const _encode_Unbind: $.ASN1Encoder<null> = $._encodeNull;
 
 
 /* eslint-enable */

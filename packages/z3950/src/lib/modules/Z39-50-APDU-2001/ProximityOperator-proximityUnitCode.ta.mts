@@ -1,11 +1,11 @@
 /* eslint-disable */
 import {
-    INTEGER,
-    ASN1Element as _Element,
+    type INTEGER,
+    type ASN1Element as _Element,
     ASN1TagClass as _TagClass
 } from "@wildboar/asn1";
 import * as $ from "@wildboar/asn1/functional";
-import { KnownProximityUnit, _decode_KnownProximityUnit, _encode_KnownProximityUnit } from "../Z39-50-APDU-2001/KnownProximityUnit.ta.mjs";
+import { type KnownProximityUnit, _decode_KnownProximityUnit, _encode_KnownProximityUnit } from "../Z39-50-APDU-2001/KnownProximityUnit.ta.mjs";
 
 
 /**

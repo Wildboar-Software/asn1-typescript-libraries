@@ -1,12 +1,12 @@
 /* eslint-disable */
 import {
-    NULL,
-    ASN1Element as _Element,
+    type NULL,
+    type ASN1Element as _Element,
     ASN1TagClass as _TagClass
 } from "@wildboar/asn1";
 import * as $ from "@wildboar/asn1/functional";
 import { NotReachableReason, _decode_NotReachableReason, _encode_NotReachableReason } from "../MAP-MS-DataTypes/NotReachableReason.ta.mjs";
-import { PDP_ContextInfoList, _decode_PDP_ContextInfoList, _encode_PDP_ContextInfoList } from "../MAP-MS-DataTypes/PDP-ContextInfoList.ta.mjs";
+import { type PDP_ContextInfoList, _decode_PDP_ContextInfoList, _encode_PDP_ContextInfoList } from "../MAP-MS-DataTypes/PDP-ContextInfoList.ta.mjs";
 
 
 /**

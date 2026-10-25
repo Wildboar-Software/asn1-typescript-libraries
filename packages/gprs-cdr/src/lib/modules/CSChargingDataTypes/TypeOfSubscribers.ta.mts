@@ -59,7 +59,7 @@ type TypeOfSubscribers = _enum_for_TypeOfSubscribers;
  * @enum {number}
  */
 export
-const TypeOfSubscribers = _enum_for_TypeOfSubscribers;
+const TypeOfSubscribers: typeof _enum_for_TypeOfSubscribers = _enum_for_TypeOfSubscribers;
 
 /**
  * @summary TypeOfSubscribers_home
@@ -67,7 +67,7 @@ const TypeOfSubscribers = _enum_for_TypeOfSubscribers;
  * @type {number}
  */
 export
-const TypeOfSubscribers_home: TypeOfSubscribers = TypeOfSubscribers.home; /* LONG_NAMED_ENUMERATED_VALUE */
+const TypeOfSubscribers_home: _enum_for_TypeOfSubscribers.home = TypeOfSubscribers.home; /* LONG_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary home
@@ -75,7 +75,7 @@ const TypeOfSubscribers_home: TypeOfSubscribers = TypeOfSubscribers.home; /* LON
  * @type {number}
  */
 export
-const home: TypeOfSubscribers = TypeOfSubscribers.home; /* SHORT_NAMED_ENUMERATED_VALUE */
+const home: _enum_for_TypeOfSubscribers.home = TypeOfSubscribers.home; /* SHORT_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary TypeOfSubscribers_visiting
@@ -83,7 +83,7 @@ const home: TypeOfSubscribers = TypeOfSubscribers.home; /* SHORT_NAMED_ENUMERATE
  * @type {number}
  */
 export
-const TypeOfSubscribers_visiting: TypeOfSubscribers = TypeOfSubscribers.visiting; /* LONG_NAMED_ENUMERATED_VALUE */
+const TypeOfSubscribers_visiting: _enum_for_TypeOfSubscribers.visiting = TypeOfSubscribers.visiting; /* LONG_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary visiting
@@ -91,7 +91,7 @@ const TypeOfSubscribers_visiting: TypeOfSubscribers = TypeOfSubscribers.visiting
  * @type {number}
  */
 export
-const visiting: TypeOfSubscribers = TypeOfSubscribers.visiting; /* SHORT_NAMED_ENUMERATED_VALUE */
+const visiting: _enum_for_TypeOfSubscribers.visiting = TypeOfSubscribers.visiting; /* SHORT_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary TypeOfSubscribers_all
@@ -99,7 +99,7 @@ const visiting: TypeOfSubscribers = TypeOfSubscribers.visiting; /* SHORT_NAMED_E
  * @type {number}
  */
 export
-const TypeOfSubscribers_all: TypeOfSubscribers = TypeOfSubscribers.all; /* LONG_NAMED_ENUMERATED_VALUE */
+const TypeOfSubscribers_all: _enum_for_TypeOfSubscribers.all = TypeOfSubscribers.all; /* LONG_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary all
@@ -107,7 +107,7 @@ const TypeOfSubscribers_all: TypeOfSubscribers = TypeOfSubscribers.all; /* LONG_
  * @type {number}
  */
 export
-const all: TypeOfSubscribers = TypeOfSubscribers.all; /* SHORT_NAMED_ENUMERATED_VALUE */
+const all: _enum_for_TypeOfSubscribers.all = TypeOfSubscribers.all; /* SHORT_NAMED_ENUMERATED_VALUE */
 
 export
 const _decode_TypeOfSubscribers: $.ASN1Decoder<TypeOfSubscribers> = $._decodeEnumerated;

@@ -1,11 +1,11 @@
 /* eslint-disable */
 import {
-    OPTIONAL,
-    ASN1Element as _Element,
+    type OPTIONAL,
+    type ASN1Element as _Element,
     ASN1TagClass as _TagClass
 } from "@wildboar/asn1";
 import * as $ from "@wildboar/asn1/functional";
-import { DeviationListVersion, _decode_DeviationListVersion, _encode_DeviationListVersion } from "../DeviationList/DeviationListVersion.ta.mjs";
+import { type DeviationListVersion, _decode_DeviationListVersion, _encode_DeviationListVersion } from "../DeviationList/DeviationListVersion.ta.mjs";
 // export { DeviationListVersion, DeviationListVersion_v0 /* IMPORTED_LONG_NAMED_INTEGER */, v0 /* IMPORTED_SHORT_NAMED_INTEGER */, _decode_DeviationListVersion, _encode_DeviationListVersion } from "../DeviationList/DeviationListVersion.ta.mjs";
 import { AlgorithmIdentifier, _decode_AlgorithmIdentifier, _encode_AlgorithmIdentifier } from "../AuthenticationFramework/AlgorithmIdentifier.ta.mjs";
 // export { AlgorithmIdentifier, _decode_AlgorithmIdentifier, _encode_AlgorithmIdentifier } from "../AuthenticationFramework/AlgorithmIdentifier.ta.mjs";
@@ -51,31 +51,39 @@ import { Deviation, _decode_Deviation, _encode_Deviation } from "../DeviationLis
  */
 export
 class DeviationList {
+    /**
+     * List syntax version. Only `v0` is assigned.
+     * @summary `version`.
+     * @public
+     * @readonly
+     */
+    public readonly version: DeviationListVersion;
+    /**
+     * Algorithm for every `certificateDigest` alternative in this list.
+     * Required when that alternative is used. Omit the field otherwise.
+     * @summary `digestAlgorithm`.
+     * @public
+     * @readonly
+     */
+    public readonly digestAlgorithm: OPTIONAL<AlgorithmIdentifier>;
+    /**
+     * Deviation entries. Each entry combines its own document constraints
+     * with AND.
+     * @summary `deviations`.
+     * @public
+     * @readonly
+     */
+    public readonly deviations: Deviation[];
+
     constructor (
-        /**
-         * List syntax version. Only `v0` is assigned.
-         * @summary `version`.
-         * @public
-         * @readonly
-         */
-        readonly version: DeviationListVersion,
-        /**
-         * Algorithm for every `certificateDigest` alternative in this list.
-         * Required when that alternative is used. Omit the field otherwise.
-         * @summary `digestAlgorithm`.
-         * @public
-         * @readonly
-         */
-        readonly digestAlgorithm: OPTIONAL<AlgorithmIdentifier>,
-        /**
-         * Deviation entries. Each entry combines its own document constraints
-         * with AND.
-         * @summary `deviations`.
-         * @public
-         * @readonly
-         */
-        readonly deviations: Deviation[]
-    ) {}
+        version: DeviationListVersion,
+        digestAlgorithm: OPTIONAL<AlgorithmIdentifier>,
+        deviations: Deviation[]
+    ) {
+        this.version = version;
+        this.digestAlgorithm = digestAlgorithm;
+        this.deviations = deviations;
+    }
 
     /**
      * @summary Restructures an object into a DeviationList

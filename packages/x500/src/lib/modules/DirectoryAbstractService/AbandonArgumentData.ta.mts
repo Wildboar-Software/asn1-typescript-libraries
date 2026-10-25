@@ -1,12 +1,12 @@
 /* eslint-disable */
 import {
     ASN1ConstructionError as _ConstructionError,
-    ASN1Element as _Element,
+    type ASN1Element as _Element,
     ASN1TagClass as _TagClass,
 } from "@wildboar/asn1";
 import * as $ from "@wildboar/asn1/functional";
 import {
-    InvokeId,
+    type InvokeId,
     _decode_InvokeId,
     _encode_InvokeId,
 } from "../CommonProtocolSpecification/InvokeId.ta.mjs";
@@ -27,24 +27,30 @@ import {
  *
  */
 export class AbandonArgumentData {
+    /**
+     * @summary `invokeID`.
+     * @description
+     *
+     * InvokeId of the outstanding enquiry to abandon.
+     *
+     * @public
+     * @readonly
+     */
+    public readonly invokeID: InvokeId;
+    /**
+     * @summary Extensions that are not recognized.
+     * @public
+     * @readonly
+     */
+    public readonly _unrecognizedExtensionsList: _Element[];
+
     constructor(
-        /**
-         * @summary `invokeID`.
-         * @description
-         *
-         * InvokeId of the outstanding enquiry to abandon.
-         *
-         * @public
-         * @readonly
-         */
-        readonly invokeID: InvokeId,
-        /**
-         * @summary Extensions that are not recognized.
-         * @public
-         * @readonly
-         */
-        readonly _unrecognizedExtensionsList: _Element[] = []
-    ) {}
+        invokeID: InvokeId,
+        _unrecognizedExtensionsList: _Element[] = []
+    ) {
+        this.invokeID = invokeID;
+        this._unrecognizedExtensionsList = _unrecognizedExtensionsList;
+    }
 
     /**
      * @summary Restructures an object into a AbandonArgumentData

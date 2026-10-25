@@ -1,7 +1,7 @@
 /* eslint-disable */
 import {
-    OPTIONAL,
-    ASN1Element as _Element,
+    type OPTIONAL,
+    type ASN1Element as _Element,
     ASN1TagClass as _TagClass,
     ASN1Construction as _Construction,
     ASN1UniversalType as _UniversalType,
@@ -18,7 +18,7 @@ import {
     _encode_SystemTiming_sourceType,
 } from '../ASN1DefinedTypesModule/SystemTiming-sourceType.ta.mjs';
 import {
-    ObjectInstance,
+    type ObjectInstance,
     _decode_ObjectInstance,
     _encode_ObjectInstance,
 } from '@wildboar/cmip';
@@ -40,20 +40,26 @@ import {
  *
  */
 export class SystemTiming {
+    /**
+     * @summary `sourceType`.
+     * @public
+     * @readonly
+     */
+    public readonly sourceType: SystemTiming_sourceType;
+    /**
+     * @summary `sourceID`.
+     * @public
+     * @readonly
+     */
+    public readonly sourceID?: OPTIONAL<ObjectInstance>;
+
     constructor(
-        /**
-         * @summary `sourceType`.
-         * @public
-         * @readonly
-         */
-        readonly sourceType: SystemTiming_sourceType,
-        /**
-         * @summary `sourceID`.
-         * @public
-         * @readonly
-         */
-        readonly sourceID?: OPTIONAL<ObjectInstance>
-    ) {}
+        sourceType: SystemTiming_sourceType,
+        sourceID?: OPTIONAL<ObjectInstance>
+    ) {
+        this.sourceType = sourceType;
+        this.sourceID = sourceID;
+    }
 
     /**
      * @summary Restructures an object into a SystemTiming
@@ -79,7 +85,7 @@ export class SystemTiming {
      * @static
      */
 
-    public static _enum_for_sourceType = _enum_for_SystemTiming_sourceType;
+    public static _enum_for_sourceType: typeof _enum_for_SystemTiming_sourceType = _enum_for_SystemTiming_sourceType;
 }
 
 

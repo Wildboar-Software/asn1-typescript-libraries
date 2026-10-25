@@ -1,7 +1,7 @@
 /* eslint-disable */
 import {
-    OPTIONAL,
-    ASN1Element as _Element,
+    type OPTIONAL,
+    type ASN1Element as _Element,
     ASN1TagClass as _TagClass,
     ASN1Construction as _Construction,
     ASN1UniversalType as _UniversalType,
@@ -36,24 +36,30 @@ import { _decode_LogExpPointer, _encode_LogExpPointer, LogExpPointer } from "../
  */
 export
 class BKQcontent_standard {
+    /**
+     * @summary `pointer`.
+     * @description
+     * Display pointer. ISO/IEC 9040:1997 §34.1.3.2.
+     * @public
+     * @readonly
+     */
+    public readonly pointer?: OPTIONAL<ExplicitPointer>;
+    /**
+     * @summary `logPointer`.
+     * @description
+     * Logical pointer. ISO/IEC 9040:1997 §34.1.3.2.
+     * @public
+     * @readonly
+     */
+    public readonly logPointer?: OPTIONAL<LogExpPointer>;
+
     constructor (
-        /**
-         * @summary `pointer`.
-         * @description
-         * Display pointer. ISO/IEC 9040:1997 §34.1.3.2.
-         * @public
-         * @readonly
-         */
-        readonly pointer?: OPTIONAL<ExplicitPointer>,
-        /**
-         * @summary `logPointer`.
-         * @description
-         * Logical pointer. ISO/IEC 9040:1997 §34.1.3.2.
-         * @public
-         * @readonly
-         */
-        readonly logPointer?: OPTIONAL<LogExpPointer>
-    ) {}
+        pointer?: OPTIONAL<ExplicitPointer>,
+        logPointer?: OPTIONAL<LogExpPointer>
+    ) {
+        this.pointer = pointer;
+        this.logPointer = logPointer;
+    }
 
     /**
      * @summary Restructures an object into a BKQcontent_standard

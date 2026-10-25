@@ -1,6 +1,6 @@
 /* eslint-disable */
 import {
-    ASN1Element as _Element,
+    type ASN1Element as _Element,
     ASN1TagClass as _TagClass,
     ASN1Construction as _Construction,
     ASN1UniversalType as _UniversalType,
@@ -32,22 +32,13 @@ import {
  */
 export type ReportingMTACertificate = Certificates; // DefinedType
 
-let _cached_decoder_for_ReportingMTACertificate: $.ASN1Decoder<ReportingMTACertificate> | null = null;
-
 /**
  * @summary Decodes an ASN.1 element into a(n) ReportingMTACertificate
  * @function
  * @param {_Element} el The element being decoded.
  * @returns {ReportingMTACertificate} The decoded data structure.
  */
-export function _decode_ReportingMTACertificate(el: _Element): ReportingMTACertificate {
-    if (!_cached_decoder_for_ReportingMTACertificate) {
-        _cached_decoder_for_ReportingMTACertificate = _decode_Certificates;
-    }
-    return _cached_decoder_for_ReportingMTACertificate(el);
-}
-
-let _cached_encoder_for_ReportingMTACertificate: $.ASN1Encoder<ReportingMTACertificate> | null = null;
+export const _decode_ReportingMTACertificate: $.ASN1Decoder<ReportingMTACertificate> = _decode_Certificates;
 
 /**
  * @summary Encodes a(n) ReportingMTACertificate into an ASN.1 Element.
@@ -56,15 +47,7 @@ let _cached_encoder_for_ReportingMTACertificate: $.ASN1Encoder<ReportingMTACerti
  * @param elGetter A function that can be used to get new ASN.1 elements.
  * @returns {_Element} The ReportingMTACertificate, encoded as an ASN.1 Element.
  */
-export function _encode_ReportingMTACertificate(
-    value: ReportingMTACertificate,
-    elGetter: $.ASN1Encoder<ReportingMTACertificate>
-): _Element {
-    if (!_cached_encoder_for_ReportingMTACertificate) {
-        _cached_encoder_for_ReportingMTACertificate = _encode_Certificates;
-    }
-    return _cached_encoder_for_ReportingMTACertificate(value, elGetter);
-}
+export const _encode_ReportingMTACertificate: $.ASN1Encoder<ReportingMTACertificate> = _encode_Certificates;
 
 
 /* eslint-enable */

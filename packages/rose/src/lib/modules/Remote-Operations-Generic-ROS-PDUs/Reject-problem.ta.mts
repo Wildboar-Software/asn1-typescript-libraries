@@ -11,22 +11,22 @@ import {
 } from '@wildboar/asn1';
 import * as $ from '@wildboar/asn1/functional';
 import {
-  GeneralProblem,
+  type GeneralProblem,
   _decode_GeneralProblem,
   _encode_GeneralProblem,
 } from '../Remote-Operations-Generic-ROS-PDUs/GeneralProblem.ta.mjs';
 import {
-  InvokeProblem,
+  type InvokeProblem,
   _decode_InvokeProblem,
   _encode_InvokeProblem,
 } from '../Remote-Operations-Generic-ROS-PDUs/InvokeProblem.ta.mjs';
 import {
-  ReturnResultProblem,
+  type ReturnResultProblem,
   _decode_ReturnResultProblem,
   _encode_ReturnResultProblem,
 } from '../Remote-Operations-Generic-ROS-PDUs/ReturnResultProblem.ta.mjs';
 import {
-  ReturnErrorProblem,
+  type ReturnErrorProblem,
   _decode_ReturnErrorProblem,
   _encode_ReturnErrorProblem,
 } from '../Remote-Operations-Generic-ROS-PDUs/ReturnErrorProblem.ta.mjs';

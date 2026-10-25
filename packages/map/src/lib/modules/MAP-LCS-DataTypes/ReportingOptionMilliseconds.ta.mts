@@ -1,12 +1,12 @@
 /* eslint-disable */
 import {
     ASN1ConstructionError as _ConstructionError,
-    ASN1Element as _Element,
+    type ASN1Element as _Element,
     ASN1TagClass as _TagClass
 } from "@wildboar/asn1";
 import * as $ from "@wildboar/asn1/functional";
-import { ReportingAmountMilliseconds, _decode_ReportingAmountMilliseconds, _encode_ReportingAmountMilliseconds } from "../MAP-LCS-DataTypes/ReportingAmountMilliseconds.ta.mjs";
-import { ReportingIntervalMilliseconds, _decode_ReportingIntervalMilliseconds, _encode_ReportingIntervalMilliseconds } from "../MAP-LCS-DataTypes/ReportingIntervalMilliseconds.ta.mjs";
+import { type ReportingAmountMilliseconds, _decode_ReportingAmountMilliseconds, _encode_ReportingAmountMilliseconds } from "../MAP-LCS-DataTypes/ReportingAmountMilliseconds.ta.mjs";
+import { type ReportingIntervalMilliseconds, _decode_ReportingIntervalMilliseconds, _encode_ReportingIntervalMilliseconds } from "../MAP-LCS-DataTypes/ReportingIntervalMilliseconds.ta.mjs";
 
 
 /**
@@ -29,34 +29,42 @@ import { ReportingIntervalMilliseconds, _decode_ReportingIntervalMilliseconds, _
  */
 export
 class ReportingOptionMilliseconds {
+    /**
+     * @summary `reportingAmountMilliseconds`.
+     * @description
+     *
+     * 1..maxReportingAmountMilliseconds.
+     *
+     * @public
+     * @readonly
+     */
+    public readonly reportingAmountMilliseconds: ReportingAmountMilliseconds;
+    /**
+     * @summary `reportingIntervalMilliseconds`.
+     * @description
+     *
+     * 1..maxReportingIntervalMilliseconds.
+     *
+     * @public
+     * @readonly
+     */
+    public readonly reportingIntervalMilliseconds: ReportingIntervalMilliseconds;
+    /**
+     * @summary Extensions that are not recognized.
+     * @public
+     * @readonly
+     */
+    public readonly _unrecognizedExtensionsList: _Element[];
+
     constructor (
-        /**
-         * @summary `reportingAmountMilliseconds`.
-         * @description
-         *
-         * 1..maxReportingAmountMilliseconds.
-         *
-         * @public
-         * @readonly
-         */
-        readonly reportingAmountMilliseconds: ReportingAmountMilliseconds,
-        /**
-         * @summary `reportingIntervalMilliseconds`.
-         * @description
-         *
-         * 1..maxReportingIntervalMilliseconds.
-         *
-         * @public
-         * @readonly
-         */
-        readonly reportingIntervalMilliseconds: ReportingIntervalMilliseconds,
-        /**
-         * @summary Extensions that are not recognized.
-         * @public
-         * @readonly
-         */
-        readonly _unrecognizedExtensionsList: _Element[] = []
-    ) {}
+        reportingAmountMilliseconds: ReportingAmountMilliseconds,
+        reportingIntervalMilliseconds: ReportingIntervalMilliseconds,
+        _unrecognizedExtensionsList: _Element[] = []
+    ) {
+        this.reportingAmountMilliseconds = reportingAmountMilliseconds;
+        this.reportingIntervalMilliseconds = reportingIntervalMilliseconds;
+        this._unrecognizedExtensionsList = _unrecognizedExtensionsList;
+    }
 
     /**
      * @summary Restructures an object into a ReportingOptionMilliseconds

@@ -1,8 +1,8 @@
 /* eslint-disable */
 import {
-    OPTIONAL,
-    IA5String,
-    ASN1Element as _Element,
+    type OPTIONAL,
+    type IA5String,
+    type ASN1Element as _Element,
     ASN1TagClass as _TagClass,
     ASN1Construction as _Construction,
     ASN1UniversalType as _UniversalType,
@@ -11,7 +11,7 @@ import {
     EmbeddedPDV as _PDV,
     ASN1ConstructionError as _ConstructionError, ASN1SizeError } from "@wildboar/asn1";
 import * as $ from "@wildboar/asn1/functional";
-import { V59String, _decode_V59String, _encode_V59String } from "../V59/V59String.ta.mjs";
+import { type V59String, _decode_V59String, _encode_V59String } from "../V59/V59String.ta.mjs";
 
 /**
  * @summary NSMDiag_Item
@@ -43,7 +43,7 @@ class NSMDiag_Item {
      * @public
      * @readonly
      */
-    readonly proprietaryMode?: OPTIONAL<V59String>;
+    public readonly proprietaryMode?: OPTIONAL<V59String>;
     /**
      * @summary `fieldData`.
      * @description
@@ -53,13 +53,13 @@ class NSMDiag_Item {
      * @public
      * @readonly
      */
-    readonly fieldData?: OPTIONAL<IA5String>;
+    public readonly fieldData?: OPTIONAL<IA5String>;
     /**
      * @summary Extensions that are not recognized.
      * @public
      * @readonly
      */
-    readonly _unrecognizedExtensionsList: _Element[];
+    public readonly _unrecognizedExtensionsList: _Element[];
 
     constructor (
         proprietaryMode?: OPTIONAL<V59String>,

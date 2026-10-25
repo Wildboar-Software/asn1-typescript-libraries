@@ -2,15 +2,15 @@
 
 import * as $ from "@wildboar/asn1/functional";
 import {
-    OPTIONAL,
-    SEQUENCE,
-    SET,
-    ASN1Element as _Element,
+    type OPTIONAL,
+    type SEQUENCE,
+    type SET,
+    type ASN1Element as _Element,
     ASN1TagClass as _TagClass
 } from "@wildboar/asn1";
-import { ConnectionID, _decode_ConnectionID, _encode_ConnectionID } from "../CSTA-call-connection-identifiers/ConnectionID.ta.mjs";
+import { type ConnectionID, _decode_ConnectionID, _encode_ConnectionID } from "../CSTA-call-connection-identifiers/ConnectionID.ta.mjs";
 
-import { UserData, _decode_UserData, _encode_UserData } from "../CSTA-device-feature-types/UserData.ta.mjs";
+import { type UserData, _decode_UserData, _encode_UserData } from "../CSTA-device-feature-types/UserData.ta.mjs";
 
 import {
     EventCause,
@@ -39,8 +39,8 @@ import { CSTACommonArguments, _decode_CSTACommonArguments, _encode_CSTACommonArg
  * ```asn1
  * ClearCallArgument ::= SEQUENCE
  * {     callToBeCleared         ConnectionID,
- *     userData             UserData             OPTIONAL,
- *     reason                EventCause            OPTIONAL,
+ *     userData             UserData             type OPTIONAL,
+ *     reason                EventCause            type OPTIONAL,
  *     extensions             CSTACommonArguments         OPTIONAL }
  * ```
  * 
@@ -48,53 +48,63 @@ import { CSTACommonArguments, _decode_CSTACommonArguments, _encode_CSTACommonArg
  */
 export
 class ClearCallArgument {
+    /**
+     * @summary `callToBeCleared`.
+     * @description
+     *
+     * Mandatory. Any connection in the call to clear, or a
+     * Call-ID-only ConnectionID (FR 2).
+     *
+     * @public
+     * @readonly
+     */
+    public readonly callToBeCleared: ConnectionID;
+    /**
+     * @summary `userData`.
+     * @description
+     *
+     * Optional user data sent to parties in the call
+     * (§12.2.30). Not retained on a later conference or
+     * transferred call.
+     *
+     * @public
+     * @readonly
+     */
+    public readonly userData?: OPTIONAL<UserData>;
+    /**
+     * @summary `reason`.
+     * @description
+     *
+     * Optional `EventCause` for underlying signalling
+     * (§12.2.15).
+     *
+     * @public
+     * @readonly
+     */
+    public readonly reason?: OPTIONAL<EventCause>;
+    /**
+     * @summary `extensions`.
+     * @description
+     *
+     * Optional `CSTACommonArguments` carrying the security and
+     * privateData parameters from the ECMA-269 service table.
+     *
+     * @public
+     * @readonly
+     */
+    public readonly extensions?: OPTIONAL<CSTACommonArguments>;
+
     constructor (
-        /**
-         * @summary `callToBeCleared`.
-         * @description
-         *
-         * Mandatory. Any connection in the call to clear, or a
-         * Call-ID-only ConnectionID (FR 2).
-         *
-         * @public
-         * @readonly
-         */
-        readonly callToBeCleared: ConnectionID,
-        /**
-         * @summary `userData`.
-         * @description
-         *
-         * Optional user data sent to parties in the call
-         * (§12.2.30). Not retained on a later conference or
-         * transferred call.
-         *
-         * @public
-         * @readonly
-         */
-        readonly userData?: OPTIONAL<UserData>,
-        /**
-         * @summary `reason`.
-         * @description
-         *
-         * Optional `EventCause` for underlying signalling
-         * (§12.2.15).
-         *
-         * @public
-         * @readonly
-         */
-        readonly reason?: OPTIONAL<EventCause>,
-        /**
-         * @summary `extensions`.
-         * @description
-         *
-         * Optional `CSTACommonArguments` carrying the security and
-         * privateData parameters from the ECMA-269 service table.
-         *
-         * @public
-         * @readonly
-         */
-        readonly extensions?: OPTIONAL<CSTACommonArguments>
-    ) {}
+        callToBeCleared: ConnectionID,
+        userData?: OPTIONAL<UserData>,
+        reason?: OPTIONAL<EventCause>,
+        extensions?: OPTIONAL<CSTACommonArguments>
+    ) {
+        this.callToBeCleared = callToBeCleared;
+        this.userData = userData;
+        this.reason = reason;
+        this.extensions = extensions;
+    }
 
     /**
      * @summary Restructures an object into a ClearCallArgument
@@ -118,7 +128,7 @@ class ClearCallArgument {
          * @static
          */
 
-    public static _enum_for_reason = _enum_for_EventCause;
+    public static _enum_for_reason: typeof _enum_for_EventCause = _enum_for_EventCause;
 }
 
 /**

@@ -1,8 +1,8 @@
 /* eslint-disable */
 import {
-    OPTIONAL,
-    VisibleString,
-    ASN1Element as _Element,
+    type OPTIONAL,
+    type VisibleString,
+    type ASN1Element as _Element,
     ASN1TagClass as _TagClass,
     ASN1Construction as _Construction,
     ASN1UniversalType as _UniversalType,
@@ -12,7 +12,7 @@ import {
     ASN1ConstructionError as _ConstructionError,
 } from "@wildboar/asn1";
 import * as $ from "@wildboar/asn1/functional";
-import { StartCount, _decode_StartCount, _encode_StartCount } from "../ISO-9506-MMS-1/StartCount.ta.mjs";
+import { type StartCount, _decode_StartCount, _encode_StartCount } from "../ISO-9506-MMS-1/StartCount.ta.mjs";
 
 
 /**
@@ -35,30 +35,36 @@ import { StartCount, _decode_StartCount, _encode_StartCount } from "../ISO-9506-
  */
 export
 class CS_Start_Request_controlling {
+    /**
+     * @summary `startLocation`.
+     * @description
+     *
+     * Start of execution for a controlling PI; same format as
+     * `&program-Location` (CSI). Absent: first/default step. ISO 9506-1:2003 §12.4.1.1.3.
+     *
+     * @public
+     * @readonly
+     */
+    public readonly startLocation?: OPTIONAL<VisibleString>;
+    /**
+     * @summary `startCount`.
+     * @description
+     *
+     * Sets `&running-Mode` and remaining cycle/step count. Default
+     * `cycleCount: 1`. ISO 9506-1:2003 §12.4.1.1.4.
+     *
+     * @public
+     * @readonly
+     */
+    public readonly startCount?: OPTIONAL<StartCount>;
+
     constructor (
-        /**
-         * @summary `startLocation`.
-         * @description
-         *
-         * Start of execution for a controlling PI; same format as
-         * `&program-Location` (CSI). Absent: first/default step. ISO 9506-1:2003 §12.4.1.1.3.
-         *
-         * @public
-         * @readonly
-         */
-        readonly startLocation?: OPTIONAL<VisibleString>,
-        /**
-         * @summary `startCount`.
-         * @description
-         *
-         * Sets `&running-Mode` and remaining cycle/step count. Default
-         * `cycleCount: 1`. ISO 9506-1:2003 §12.4.1.1.4.
-         *
-         * @public
-         * @readonly
-         */
-        readonly startCount?: OPTIONAL<StartCount>
-    ) {}
+        startLocation?: OPTIONAL<VisibleString>,
+        startCount?: OPTIONAL<StartCount>
+    ) {
+        this.startLocation = startLocation;
+        this.startCount = startCount;
+    }
 
     /**
      * @summary Restructures an object into a CS_Start_Request_controlling

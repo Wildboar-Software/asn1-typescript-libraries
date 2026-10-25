@@ -1,7 +1,7 @@
 /* eslint-disable */
 import {
-    OPTIONAL,
-    ASN1Element as _Element,
+    type OPTIONAL,
+    type ASN1Element as _Element,
     ASN1TagClass as _TagClass
 } from "@wildboar/asn1";
 import * as $ from "@wildboar/asn1/functional";
@@ -11,7 +11,7 @@ import {
     _decode_ReportDeliveryEnvelope,
     _encode_ReportDeliveryEnvelope,
 } from "@wildboar/x400/MTSAbstractService";
-import { InformationObject, _decode_InformationObject, _encode_InformationObject } from "../MMSInformationObjects/InformationObject.ta.mjs";
+import { type InformationObject, _decode_InformationObject, _encode_InformationObject } from "../MMSInformationObjects/InformationObject.ta.mjs";
 
 
 /**

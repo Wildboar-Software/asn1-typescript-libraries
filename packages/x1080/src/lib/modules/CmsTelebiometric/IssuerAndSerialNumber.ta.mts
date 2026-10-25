@@ -1,6 +1,6 @@
 /* eslint-disable */
 import {
-    ASN1Element as _Element,
+    type ASN1Element as _Element,
     ASN1TagClass as _TagClass,
     ASN1Construction as _Construction,
     ASN1UniversalType as _UniversalType,
@@ -11,12 +11,12 @@ import {
 } from '@wildboar/asn1';
 import * as $ from '@wildboar/asn1/functional';
 import {
-    DistinguishedName,
+    type DistinguishedName,
     _decode_DistinguishedName,
     _encode_DistinguishedName,
 } from '@wildboar/dn';
 import {
-    CertificateSerialNumber,
+    type CertificateSerialNumber,
     _decode_CertificateSerialNumber,
     _encode_CertificateSerialNumber,
 } from '@wildboar/x500/AuthenticationFramework';
@@ -41,31 +41,37 @@ import {
  *
  */
 export class IssuerAndSerialNumber {
+    /**
+     * @summary `issuer`.
+     * @description
+     *
+     * Distinguished name of the issuing CA; equals `issuer` of
+     * the PKC in question.
+     * ITU-T Rec. X.1080.0 (2017) Cor.1 Annex B.3.3.
+     *
+     * @public
+     * @readonly
+     */
+    public readonly issuer: DistinguishedName;
+    /**
+     * @summary `serialNumber`.
+     * @description
+     *
+     * Serial number of the PKC in question.
+     * ITU-T Rec. X.1080.0 (2017) Cor.1 Annex B.3.3.
+     *
+     * @public
+     * @readonly
+     */
+    public readonly serialNumber: CertificateSerialNumber;
+
     constructor(
-        /**
-         * @summary `issuer`.
-         * @description
-         *
-         * Distinguished name of the issuing CA; equals `issuer` of
-         * the PKC in question.
-         * ITU-T Rec. X.1080.0 (2017) Cor.1 Annex B.3.3.
-         *
-         * @public
-         * @readonly
-         */
-        readonly issuer: DistinguishedName,
-        /**
-         * @summary `serialNumber`.
-         * @description
-         *
-         * Serial number of the PKC in question.
-         * ITU-T Rec. X.1080.0 (2017) Cor.1 Annex B.3.3.
-         *
-         * @public
-         * @readonly
-         */
-        readonly serialNumber: CertificateSerialNumber
-    ) {}
+        issuer: DistinguishedName,
+        serialNumber: CertificateSerialNumber
+    ) {
+        this.issuer = issuer;
+        this.serialNumber = serialNumber;
+    }
 
     /**
      * @summary Restructures an object into a IssuerAndSerialNumber

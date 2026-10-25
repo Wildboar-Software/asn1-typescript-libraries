@@ -1,7 +1,7 @@
 /* eslint-disable */
 import {
     ASN1ConstructionError as _ConstructionError,
-    ASN1Element as _Element,
+    type ASN1Element as _Element,
     ASN1TagClass as _TagClass,
 } from "@wildboar/asn1";
 import * as $ from "@wildboar/asn1/functional";
@@ -34,26 +34,34 @@ import {
  *
  */
 export class FingerPrint {
+    /**
+     * @summary `hand`.
+     * @public
+     * @readonly
+     */
+    public readonly hand: FingerPrint_hand;
+    /**
+     * @summary `finger`.
+     * @public
+     * @readonly
+     */
+    public readonly finger: FingerPrint_finger;
+    /**
+     * @summary Extensions that are not recognized.
+     * @public
+     * @readonly
+     */
+    public readonly _unrecognizedExtensionsList: _Element[];
+
     constructor(
-        /**
-         * @summary `hand`.
-         * @public
-         * @readonly
-         */
-        readonly hand: FingerPrint_hand,
-        /**
-         * @summary `finger`.
-         * @public
-         * @readonly
-         */
-        readonly finger: FingerPrint_finger,
-        /**
-         * @summary Extensions that are not recognized.
-         * @public
-         * @readonly
-         */
-        readonly _unrecognizedExtensionsList: _Element[] = []
-    ) {}
+        hand: FingerPrint_hand,
+        finger: FingerPrint_finger,
+        _unrecognizedExtensionsList: _Element[] = []
+    ) {
+        this.hand = hand;
+        this.finger = finger;
+        this._unrecognizedExtensionsList = _unrecognizedExtensionsList;
+    }
 
     /**
      * @summary Restructures an object into a FingerPrint
@@ -83,14 +91,14 @@ export class FingerPrint {
      * @static
      */
 
-    public static _enum_for_hand = _enum_for_FingerPrint_hand;
+    public static _enum_for_hand: typeof _enum_for_FingerPrint_hand = _enum_for_FingerPrint_hand;
     /**
      * @summary The enum used as the type of the component `finger`
      * @public
      * @static
      */
 
-    public static _enum_for_finger = _enum_for_FingerPrint_finger;
+    public static _enum_for_finger: typeof _enum_for_FingerPrint_finger = _enum_for_FingerPrint_finger;
 }
 
 

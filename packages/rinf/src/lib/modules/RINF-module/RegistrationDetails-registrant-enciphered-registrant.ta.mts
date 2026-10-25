@@ -1,6 +1,6 @@
 /* eslint-disable */
 import {
-  OCTET_STRING,
+  type OCTET_STRING,
   ASN1Element as _Element,
   ASN1TagClass as _TagClass,
   ASN1Construction as _Construction,
@@ -47,7 +47,7 @@ export class RegistrationDetails_registrant_enciphered_registrant {
    * @public
    * @readonly
    */
-  readonly algorithmIdentifier: AlgorithmIdentifier;
+  public readonly algorithmIdentifier: AlgorithmIdentifier;
   /**
    * @summary `enciphered`.
    * @description
@@ -58,7 +58,7 @@ export class RegistrationDetails_registrant_enciphered_registrant {
    * @public
    * @readonly
    */
-  readonly enciphered: OCTET_STRING;
+  public readonly enciphered: OCTET_STRING;
 
   constructor(
     algorithmIdentifier: AlgorithmIdentifier,

@@ -1,7 +1,7 @@
 /* eslint-disable */
 import {
-  OPTIONAL,
-  EXTERNAL,
+  type OPTIONAL,
+  type EXTERNAL,
   TRUE_BIT,
   ASN1Element as _Element,
   ASN1TagClass as _TagClass,
@@ -14,13 +14,13 @@ import {
 } from '@wildboar/asn1';
 import * as $ from '@wildboar/asn1/functional';
 import {
-  ProtocolVersion,
+  type ProtocolVersion,
   ProtocolVersion_version1 /* IMPORTED_LONG_NAMED_BIT */,
   _decode_ProtocolVersion,
   _encode_ProtocolVersion,
 } from '../CMIP-A-ASSOCIATE-Information/ProtocolVersion.ta.mjs';
 import {
-  FunctionalUnits,
+  type FunctionalUnits,
   _decode_FunctionalUnits,
   _encode_FunctionalUnits,
 } from '../CMIP-A-ASSOCIATE-Information/FunctionalUnits.ta.mjs';
@@ -65,7 +65,7 @@ export class CMIPUserInfo {
    * @public
    * @readonly
    */
-  readonly protocolVersion?: OPTIONAL<ProtocolVersion>;
+  public readonly protocolVersion?: OPTIONAL<ProtocolVersion>;
   /**
    * @summary `functionalUnits`.
    * @description
@@ -77,7 +77,7 @@ export class CMIPUserInfo {
    * @public
    * @readonly
    */
-  readonly functionalUnits?: OPTIONAL<FunctionalUnits>;
+  public readonly functionalUnits?: OPTIONAL<FunctionalUnits>;
   /**
    * @summary `accessControl`.
    * @description
@@ -91,7 +91,7 @@ export class CMIPUserInfo {
    * @public
    * @readonly
    */
-  readonly accessControl?: OPTIONAL<EXTERNAL>;
+  public readonly accessControl?: OPTIONAL<EXTERNAL>;
   /**
    * @summary `userInfo`.
    * @description
@@ -102,7 +102,7 @@ export class CMIPUserInfo {
    * @public
    * @readonly
    */
-  readonly userInfo?: OPTIONAL<EXTERNAL>;
+  public readonly userInfo?: OPTIONAL<EXTERNAL>;
 
   constructor(
     protocolVersion?: OPTIONAL<ProtocolVersion>,

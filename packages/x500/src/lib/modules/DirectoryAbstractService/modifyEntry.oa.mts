@@ -3,12 +3,12 @@ import { id_opcode_modifyEntry } from "../CommonProtocolSpecification/id-opcode-
 import { type OPERATION } from "../CommonProtocolSpecification/OPERATION.oca.mjs";
 import { attributeError } from "../DirectoryAbstractService/attributeError.oa.mjs";
 import {
-    ModifyEntryArgument,
+    type ModifyEntryArgument,
     _decode_ModifyEntryArgument,
     _encode_ModifyEntryArgument,
 } from "../DirectoryAbstractService/ModifyEntryArgument.ta.mjs";
 import {
-    ModifyEntryResult,
+    type ModifyEntryResult,
     _decode_ModifyEntryResult,
     _encode_ModifyEntryResult,
 } from "../DirectoryAbstractService/ModifyEntryResult.ta.mjs";

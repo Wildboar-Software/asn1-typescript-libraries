@@ -1,8 +1,8 @@
 /* eslint-disable */
 import {
-    OPTIONAL,
-    GeneralizedTime,
-    ASN1Element as _Element,
+    type OPTIONAL,
+    type GeneralizedTime,
+    type ASN1Element as _Element,
     ASN1TagClass as _TagClass,
     ASN1Construction as _Construction,
     ASN1UniversalType as _UniversalType,
@@ -13,32 +13,32 @@ import {
 } from '@wildboar/asn1';
 import * as $ from '@wildboar/asn1/functional';
 import {
-    NonStatisticalReportInformation,
+    type NonStatisticalReportInformation,
     _decode_NonStatisticalReportInformation,
     _encode_NonStatisticalReportInformation,
 } from '../SummarizationASN1Productions/NonStatisticalReportInformation.ta.mjs';
 import {
-    AlgorithmOutputBuffer,
+    type AlgorithmOutputBuffer,
     _decode_AlgorithmOutputBuffer,
     _encode_AlgorithmOutputBuffer,
 } from '../SummarizationASN1Productions/AlgorithmOutputBuffer.ta.mjs';
 import {
-    AlgorithmParameters,
+    type AlgorithmParameters,
     _decode_AlgorithmParameters,
     _encode_AlgorithmParameters,
 } from '../SummarizationASN1Productions/AlgorithmParameters.ta.mjs';
 import {
-    IncompleteScan,
+    type IncompleteScan,
     _decode_IncompleteScan,
     _encode_IncompleteScan,
 } from '../SummarizationASN1Productions/IncompleteScan.ta.mjs';
 import {
-    AdditionalText,
+    type AdditionalText,
     _decode_AdditionalText,
     _encode_AdditionalText,
 } from '@wildboar/attribute-asn1module';
 import {
-    AdditionalInformation,
+    type AdditionalInformation,
     _decode_AdditionalInformation,
     _encode_AdditionalInformation,
 } from '@wildboar/attribute-asn1module';
@@ -79,86 +79,102 @@ import {
  *
  */
 export class StatisticalScanReportInformation {
+    /**
+     * @summary `scanInitiationTime`.
+     * @description
+     *
+     * Date and time the reported scan was initiated.
+     * Required if `timeStampReportMode` is present with a
+     * non-zero value. X.738 §8.2.2.2.1, A.9.
+     * @public
+     * @readonly
+     */
+    public readonly scanInitiationTime: OPTIONAL<GeneralizedTime>;
+    /**
+     * @summary `observationReportList`.
+     * @description
+     *
+     * Objects that passed selection, with scan-attribute
+     * values. Omitted if object instances are suppressed
+     * and there are no scan attributes. If present and
+     * `suppressObjectInstance` is false, each entry shall
+     * include `objectInstance`. X.738 §8.2.2.2.2,
+     * §8.1.3.3, Table 3 note 1.
+     * @public
+     * @readonly
+     */
+    public readonly observationReportList: OPTIONAL<NonStatisticalReportInformation>;
+    /**
+     * @summary `algorithmOutputs`.
+     * @description
+     *
+     * Per-attribute ordered results of the statistical
+     * algorithm (sample count, mean, variance, etc.).
+     * Mandatory. X.738 §8.2.2.2.3, Table 3.
+     * @public
+     * @readonly
+     */
+    public readonly algorithmOutputs: AlgorithmOutputBuffer;
+    /**
+     * @summary `algorithmParameters`.
+     * @description
+     *
+     * Configurable algorithm parameters; present only if
+     * the algorithm has them. Positions are class-defined
+     * (percentile scanner: `j` first). X.738 §8.2.2.2.4,
+     * §8.1.6.2.
+     * @public
+     * @readonly
+     */
+    public readonly algorithmParameters?: OPTIONAL<AlgorithmParameters>;
+    /**
+     * @summary `incompleteScan`.
+     * @description
+     *
+     * Present if the scan could not be completed. X.738
+     * §8.2.2.2.5, Table 3 note 2.
+     * @public
+     * @readonly
+     */
+    public readonly incompleteScan?: OPTIONAL<IncompleteScan>;
+    /**
+     * @summary `additionalText`.
+     * @description
+     *
+     * Optional textual extension as in X.733. X.738
+     * §8.2.2.2.6.
+     * @public
+     * @readonly
+     */
+    public readonly additionalText?: OPTIONAL<AdditionalText>;
+    /**
+     * @summary `additionalInformation`.
+     * @description
+     *
+     * Optional structured extension as in X.733. X.738
+     * §8.2.2.2.7.
+     * @public
+     * @readonly
+     */
+    public readonly additionalInformation?: OPTIONAL<AdditionalInformation>;
+
     constructor(
-        /**
-         * @summary `scanInitiationTime`.
-         * @description
-         *
-         * Date and time the reported scan was initiated.
-         * Required if `timeStampReportMode` is present with a
-         * non-zero value. X.738 §8.2.2.2.1, A.9.
-         * @public
-         * @readonly
-         */
-        readonly scanInitiationTime: OPTIONAL<GeneralizedTime>,
-        /**
-         * @summary `observationReportList`.
-         * @description
-         *
-         * Objects that passed selection, with scan-attribute
-         * values. Omitted if object instances are suppressed
-         * and there are no scan attributes. If present and
-         * `suppressObjectInstance` is false, each entry shall
-         * include `objectInstance`. X.738 §8.2.2.2.2,
-         * §8.1.3.3, Table 3 note 1.
-         * @public
-         * @readonly
-         */
-        readonly observationReportList: OPTIONAL<NonStatisticalReportInformation>,
-        /**
-         * @summary `algorithmOutputs`.
-         * @description
-         *
-         * Per-attribute ordered results of the statistical
-         * algorithm (sample count, mean, variance, etc.).
-         * Mandatory. X.738 §8.2.2.2.3, Table 3.
-         * @public
-         * @readonly
-         */
-        readonly algorithmOutputs: AlgorithmOutputBuffer,
-        /**
-         * @summary `algorithmParameters`.
-         * @description
-         *
-         * Configurable algorithm parameters; present only if
-         * the algorithm has them. Positions are class-defined
-         * (percentile scanner: `j` first). X.738 §8.2.2.2.4,
-         * §8.1.6.2.
-         * @public
-         * @readonly
-         */
-        readonly algorithmParameters?: OPTIONAL<AlgorithmParameters>,
-        /**
-         * @summary `incompleteScan`.
-         * @description
-         *
-         * Present if the scan could not be completed. X.738
-         * §8.2.2.2.5, Table 3 note 2.
-         * @public
-         * @readonly
-         */
-        readonly incompleteScan?: OPTIONAL<IncompleteScan>,
-        /**
-         * @summary `additionalText`.
-         * @description
-         *
-         * Optional textual extension as in X.733. X.738
-         * §8.2.2.2.6.
-         * @public
-         * @readonly
-         */
-        readonly additionalText?: OPTIONAL<AdditionalText>,
-        /**
-         * @summary `additionalInformation`.
-         * @description
-         *
-         * Optional structured extension as in X.733. X.738
-         * §8.2.2.2.7.
-         * @public
-         * @readonly
-         */
-        readonly additionalInformation?: OPTIONAL<AdditionalInformation>
-    ) {}
+        scanInitiationTime: OPTIONAL<GeneralizedTime>,
+        observationReportList: OPTIONAL<NonStatisticalReportInformation>,
+        algorithmOutputs: AlgorithmOutputBuffer,
+        algorithmParameters?: OPTIONAL<AlgorithmParameters>,
+        incompleteScan?: OPTIONAL<IncompleteScan>,
+        additionalText?: OPTIONAL<AdditionalText>,
+        additionalInformation?: OPTIONAL<AdditionalInformation>
+    ) {
+        this.scanInitiationTime = scanInitiationTime;
+        this.observationReportList = observationReportList;
+        this.algorithmOutputs = algorithmOutputs;
+        this.algorithmParameters = algorithmParameters;
+        this.incompleteScan = incompleteScan;
+        this.additionalText = additionalText;
+        this.additionalInformation = additionalInformation;
+    }
 
     /**
      * @summary Restructures an object into a StatisticalScanReportInformation

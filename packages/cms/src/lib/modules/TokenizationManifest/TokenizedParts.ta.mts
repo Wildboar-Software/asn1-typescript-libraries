@@ -21,26 +21,13 @@ import {
  */
 export type TokenizedParts = Tokenized; // DefinedType
 
-
-let _cached_decoder_for_TokenizedParts: $.ASN1Decoder<TokenizedParts> | null = null;
-
-
 /**
  * @summary Decodes an ASN.1 element into a(n) TokenizedParts
  * @function
  * @param {_Element} el The element being decoded.
  * @returns {TokenizedParts} The decoded data structure.
  */
-export function _decode_TokenizedParts(el: _Element): TokenizedParts {
-    if (!_cached_decoder_for_TokenizedParts) {
-        _cached_decoder_for_TokenizedParts = _decode_Tokenized;
-    }
-    return _cached_decoder_for_TokenizedParts(el);
-}
-
-
-let _cached_encoder_for_TokenizedParts: $.ASN1Encoder<TokenizedParts> | null = null;
-
+export const _decode_TokenizedParts: $.ASN1Decoder<TokenizedParts> = _decode_Tokenized;
 
 /**
  * @summary Encodes a(n) TokenizedParts into an ASN.1 Element.
@@ -49,15 +36,7 @@ let _cached_encoder_for_TokenizedParts: $.ASN1Encoder<TokenizedParts> | null = n
  * @param elGetter A function that can be used to get new ASN.1 elements.
  * @returns {_Element} The TokenizedParts, encoded as an ASN.1 Element.
  */
-export function _encode_TokenizedParts(
-    value: TokenizedParts,
-    elGetter: $.ASN1Encoder<TokenizedParts>
-): _Element {
-    if (!_cached_encoder_for_TokenizedParts) {
-        _cached_encoder_for_TokenizedParts = _encode_Tokenized;
-    }
-    return _cached_encoder_for_TokenizedParts(value, elGetter);
-}
+export const _encode_TokenizedParts: $.ASN1Encoder<TokenizedParts> = _encode_Tokenized;
 
 
 /* eslint-enable */

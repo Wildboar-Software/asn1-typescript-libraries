@@ -1,7 +1,7 @@
 /* eslint-disable */
 import {
-    GeneralizedTime,
-    ASN1Element as _Element,
+    type GeneralizedTime,
+    type ASN1Element as _Element,
     ASN1TagClass as _TagClass,
     ASN1Construction as _Construction,
     ASN1UniversalType as _UniversalType,
@@ -11,7 +11,7 @@ import {
     ASN1ConstructionError as _ConstructionError,
 } from "@wildboar/asn1";
 import * as $ from "@wildboar/asn1/functional";
-import { TideMark, _decode_TideMark, _encode_TideMark } from "../Attribute-ASN1Module/TideMark.ta.mjs";
+import { type TideMark, _decode_TideMark, _encode_TideMark } from "../Attribute-ASN1Module/TideMark.ta.mjs";
 /**
  * @summary TideMarkInfo
  * @description
@@ -44,7 +44,7 @@ class TideMarkInfo {
      * @public
      * @readonly
      */
-    readonly currentTideMark: TideMark;
+    public readonly currentTideMark: TideMark;
     /**
      * @summary `previousTideMark`.
      * @description
@@ -55,7 +55,7 @@ class TideMarkInfo {
      * @public
      * @readonly
      */
-    readonly previousTideMark: TideMark;
+    public readonly previousTideMark: TideMark;
     /**
      * @summary `resetTime`.
      * @description
@@ -66,7 +66,7 @@ class TideMarkInfo {
      * @public
      * @readonly
      */
-    readonly resetTime: GeneralizedTime;
+    public readonly resetTime: GeneralizedTime;
 
     constructor (
         currentTideMark: TideMark,

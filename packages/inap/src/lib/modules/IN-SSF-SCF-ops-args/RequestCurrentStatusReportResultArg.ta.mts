@@ -1,15 +1,15 @@
 /* eslint-disable */
 import {
-    OPTIONAL,
-    ASN1Element as _Element,
+    type OPTIONAL,
+    type ASN1Element as _Element,
     ASN1TagClass as _TagClass
 } from "@wildboar/asn1";
 import * as $ from "@wildboar/asn1/functional";
 import { ResourceStatus, _decode_ResourceStatus, _encode_ResourceStatus, _enum_for_ResourceStatus } from "../IN-SSF-SCF-datatypes/ResourceStatus.ta.mjs";
 // export { ResourceStatus, _enum_for_ResourceStatus, ResourceStatus_busy /* IMPORTED_LONG_ENUMERATION_ITEM */, busy /* IMPORTED_SHORT_ENUMERATION_ITEM */, ResourceStatus_idle /* IMPORTED_LONG_ENUMERATION_ITEM */, idle /* IMPORTED_SHORT_ENUMERATION_ITEM */, _decode_ResourceStatus, _encode_ResourceStatus } from "../IN-SSF-SCF-datatypes/ResourceStatus.ta.mjs";
-import { ResourceID, _decode_ResourceID, _encode_ResourceID } from "../IN-SSF-SCF-datatypes/ResourceID.ta.mjs";
+import { type ResourceID, _decode_ResourceID, _encode_ResourceID } from "../IN-SSF-SCF-datatypes/ResourceID.ta.mjs";
 // export { ResourceID, _decode_ResourceID, _encode_ResourceID } from "../IN-SSF-SCF-datatypes/ResourceID.ta.mjs";
-import { Extensions, _decode_Extensions, _encode_Extensions } from "../IN-common-datatypes/Extensions.ta.mjs";
+import { type Extensions, _decode_Extensions, _encode_Extensions } from "../IN-common-datatypes/Extensions.ta.mjs";
 // export { Extensions, _decode_Extensions, _encode_Extensions } from "../IN-common-datatypes/Extensions.ta.mjs";
 
 
@@ -91,7 +91,7 @@ class RequestCurrentStatusReportResultArg {
          * @static
          */
 
-    public static _enum_for_resourceStatus = _enum_for_ResourceStatus;
+    public static _enum_for_resourceStatus: typeof _enum_for_ResourceStatus = _enum_for_ResourceStatus;
 }
 
 /**

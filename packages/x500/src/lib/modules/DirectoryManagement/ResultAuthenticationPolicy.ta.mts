@@ -2,7 +2,7 @@
 import { ASN1Element as _Element } from "@wildboar/asn1";
 import * as $ from "@wildboar/asn1/functional";
 import {
-    RequestAuthenticationPolicy,
+    type RequestAuthenticationPolicy,
     _decode_RequestAuthenticationPolicy,
     _encode_RequestAuthenticationPolicy,
 } from "../DirectoryManagement/RequestAuthenticationPolicy.ta.mjs";
@@ -21,22 +21,13 @@ import {
  */
 export type ResultAuthenticationPolicy = RequestAuthenticationPolicy; // DefinedType
 
-let _cached_decoder_for_ResultAuthenticationPolicy: $.ASN1Decoder<ResultAuthenticationPolicy> | null = null;
-
 /**
  * @summary Decodes an ASN.1 element into a(n) ResultAuthenticationPolicy
  * @function
  * @param {_Element} el The element being decoded.
  * @returns {ResultAuthenticationPolicy} The decoded data structure.
  */
-export function _decode_ResultAuthenticationPolicy(el: _Element): ResultAuthenticationPolicy {
-    if (!_cached_decoder_for_ResultAuthenticationPolicy) {
-        _cached_decoder_for_ResultAuthenticationPolicy = _decode_RequestAuthenticationPolicy;
-    }
-    return _cached_decoder_for_ResultAuthenticationPolicy(el);
-}
-
-let _cached_encoder_for_ResultAuthenticationPolicy: $.ASN1Encoder<ResultAuthenticationPolicy> | null = null;
+export const _decode_ResultAuthenticationPolicy: $.ASN1Decoder<ResultAuthenticationPolicy> = _decode_RequestAuthenticationPolicy;
 
 /**
  * @summary Encodes a(n) ResultAuthenticationPolicy into an ASN.1 Element.
@@ -45,15 +36,7 @@ let _cached_encoder_for_ResultAuthenticationPolicy: $.ASN1Encoder<ResultAuthenti
  * @param elGetter A function that can be used to get new ASN.1 elements.
  * @returns {_Element} The ResultAuthenticationPolicy, encoded as an ASN.1 Element.
  */
-export function _encode_ResultAuthenticationPolicy(
-    value: ResultAuthenticationPolicy,
-    elGetter: $.ASN1Encoder<ResultAuthenticationPolicy>
-): _Element {
-    if (!_cached_encoder_for_ResultAuthenticationPolicy) {
-        _cached_encoder_for_ResultAuthenticationPolicy = _encode_RequestAuthenticationPolicy;
-    }
-    return _cached_encoder_for_ResultAuthenticationPolicy(value, elGetter);
-}
+export const _encode_ResultAuthenticationPolicy: $.ASN1Encoder<ResultAuthenticationPolicy> = _encode_RequestAuthenticationPolicy;
 
 
 /* eslint-enable */

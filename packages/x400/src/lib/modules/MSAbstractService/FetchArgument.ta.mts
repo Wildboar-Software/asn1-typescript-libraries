@@ -1,7 +1,7 @@
 /* eslint-disable */
 import {
-    OPTIONAL,
-    ASN1Element as _Element,
+    type OPTIONAL,
+    type ASN1Element as _Element,
     ASN1TagClass as _TagClass,
     ASN1Construction as _Construction,
     ASN1UniversalType as _UniversalType,
@@ -12,23 +12,23 @@ import {
 } from '@wildboar/asn1';
 import * as $ from '@wildboar/asn1/functional';
 import {
-    EntryClass,
+    type EntryClass,
     delivery /* IMPORTED_SHORT_NAMED_INTEGER */,
     _decode_EntryClass,
     _encode_EntryClass,
 } from '../MSAbstractService/EntryClass.ta.mjs';
 import {
-    FetchArgument_item,
+    type FetchArgument_item,
     _decode_FetchArgument_item,
     _encode_FetchArgument_item,
 } from '../MSAbstractService/FetchArgument-item.ta.mjs';
 import {
-    EntryInformationSelection,
+    type EntryInformationSelection,
     _decode_EntryInformationSelection,
     _encode_EntryInformationSelection,
 } from '../MSAbstractService/EntryInformationSelection.ta.mjs';
 import {
-    MSExtensions,
+    type MSExtensions,
     _decode_MSExtensions,
     _encode_MSExtensions,
 } from '../MSAbstractService/MSExtensions.ta.mjs';
@@ -54,32 +54,42 @@ import {
  *
  */
 export class FetchArgument {
+    /**
+     * @summary `entry_class`.
+     * @public
+     * @readonly
+     */
+    public readonly entry_class: OPTIONAL<EntryClass>;
+    /**
+     * @summary `item`.
+     * @public
+     * @readonly
+     */
+    public readonly item: FetchArgument_item;
+    /**
+     * @summary `requested_attributes`.
+     * @public
+     * @readonly
+     */
+    public readonly requested_attributes?: OPTIONAL<EntryInformationSelection>;
+    /**
+     * @summary `fetch_extensions`.
+     * @public
+     * @readonly
+     */
+    public readonly fetch_extensions?: OPTIONAL<MSExtensions>;
+
     constructor(
-        /**
-         * @summary `entry_class`.
-         * @public
-         * @readonly
-         */
-        readonly entry_class: OPTIONAL<EntryClass>,
-        /**
-         * @summary `item`.
-         * @public
-         * @readonly
-         */
-        readonly item: FetchArgument_item,
-        /**
-         * @summary `requested_attributes`.
-         * @public
-         * @readonly
-         */
-        readonly requested_attributes?: OPTIONAL<EntryInformationSelection>,
-        /**
-         * @summary `fetch_extensions`.
-         * @public
-         * @readonly
-         */
-        readonly fetch_extensions?: OPTIONAL<MSExtensions>
-    ) {}
+        entry_class: OPTIONAL<EntryClass>,
+        item: FetchArgument_item,
+        requested_attributes?: OPTIONAL<EntryInformationSelection>,
+        fetch_extensions?: OPTIONAL<MSExtensions>
+    ) {
+        this.entry_class = entry_class;
+        this.item = item;
+        this.requested_attributes = requested_attributes;
+        this.fetch_extensions = fetch_extensions;
+    }
 
     /**
      * @summary Restructures an object into a FetchArgument

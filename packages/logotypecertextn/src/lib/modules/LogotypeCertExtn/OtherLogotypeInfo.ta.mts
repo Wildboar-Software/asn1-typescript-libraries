@@ -1,12 +1,12 @@
 /* eslint-disable */
 import {
-    OBJECT_IDENTIFIER,
+    type OBJECT_IDENTIFIER,
     ASN1ConstructionError as _ConstructionError,
-    ASN1Element as _Element,
+    type ASN1Element as _Element,
     ASN1TagClass as _TagClass
 } from "@wildboar/asn1";
 import * as $ from "@wildboar/asn1/functional";
-import { LogotypeInfo, _decode_LogotypeInfo, _encode_LogotypeInfo } from "../LogotypeCertExtn/LogotypeInfo.ta.mjs";
+import { type LogotypeInfo, _decode_LogotypeInfo, _encode_LogotypeInfo } from "../LogotypeCertExtn/LogotypeInfo.ta.mjs";
 // export { LogotypeInfo, _decode_LogotypeInfo, _encode_LogotypeInfo } from "../LogotypeCertExtn/LogotypeInfo.ta.mjs";
 
 
@@ -45,13 +45,13 @@ class OtherLogotypeInfo {
      * @public
      * @readonly
      */
-    readonly logotypeType: OBJECT_IDENTIFIER;
+    public readonly logotypeType: OBJECT_IDENTIFIER;
     /**
      * The logotype data, addressed directly or indirectly.
      * @public
      * @readonly
      */
-    readonly info: LogotypeInfo;
+    public readonly info: LogotypeInfo;
 
     constructor (
         logotypeType: OBJECT_IDENTIFIER,

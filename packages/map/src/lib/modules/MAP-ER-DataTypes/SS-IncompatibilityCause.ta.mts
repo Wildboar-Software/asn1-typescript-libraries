@@ -1,13 +1,13 @@
 /* eslint-disable */
 import {
-    OPTIONAL,
-    ASN1Element as _Element,
+    type OPTIONAL,
+    type ASN1Element as _Element,
     ASN1TagClass as _TagClass
 } from "@wildboar/asn1";
 import * as $ from "@wildboar/asn1/functional";
-import { BasicServiceCode, _decode_BasicServiceCode, _encode_BasicServiceCode } from "../MAP-CommonDataTypes/BasicServiceCode.ta.mjs";
-import { SS_Code, _decode_SS_Code, _encode_SS_Code } from "../MAP-SS-Code/SS-Code.ta.mjs";
-import { SS_Status, _decode_SS_Status, _encode_SS_Status } from "../MAP-SS-DataTypes/SS-Status.ta.mjs";
+import { type BasicServiceCode, _decode_BasicServiceCode, _encode_BasicServiceCode } from "../MAP-CommonDataTypes/BasicServiceCode.ta.mjs";
+import { type SS_Code, _decode_SS_Code, _encode_SS_Code } from "../MAP-SS-Code/SS-Code.ta.mjs";
+import { type SS_Status, _decode_SS_Status, _encode_SS_Status } from "../MAP-SS-DataTypes/SS-Status.ta.mjs";
 
 
 /**
@@ -22,9 +22,9 @@ import { SS_Status, _decode_SS_Status, _encode_SS_Status } from "../MAP-SS-DataT
  * 
  * ```asn1
  * SS-IncompatibilityCause ::= SEQUENCE {
- *     ss-Code    [1] SS-Code    OPTIONAL,
- *     basicService    BasicServiceCode    OPTIONAL,
- *     ss-Status    [4] SS-Status    OPTIONAL,
+ *     ss-Code    [1] SS-Code    type OPTIONAL,
+ *     basicService    BasicServiceCode    type OPTIONAL,
+ *     ss-Status    [4] SS-Status    type OPTIONAL,
  *     ...}
  * ```
  * 
@@ -32,48 +32,58 @@ import { SS_Status, _decode_SS_Status, _encode_SS_Status } from "../MAP-SS-DataT
  */
 export
 class SS_IncompatibilityCause {
+    /**
+     * @summary `ss_Code`.
+     * @description
+     *
+     * Supplementary-service code related to the incompatibility. SS errors
+     * are defined in 3GPP TS 24.080 (3GPP TS 29.002 V19.1.0 clause
+     * 7.6.1.4).
+     *
+     * @public
+     * @readonly
+     */
+    public readonly ss_Code?: OPTIONAL<SS_Code>;
+    /**
+     * @summary `basicService`.
+     * @description
+     *
+     * Basic service related to the incompatibility. SS errors are defined
+     * in 3GPP TS 24.080 (3GPP TS 29.002 V19.1.0 clause 7.6.1.4).
+     *
+     * @public
+     * @readonly
+     */
+    public readonly basicService?: OPTIONAL<BasicServiceCode>;
+    /**
+     * @summary `ss_Status`.
+     * @description
+     *
+     * SS-Status related to the incompatibility. SS errors are defined in
+     * 3GPP TS 24.080 (3GPP TS 29.002 V19.1.0 clause 7.6.1.4).
+     *
+     * @public
+     * @readonly
+     */
+    public readonly ss_Status?: OPTIONAL<SS_Status>;
+    /**
+     * @summary Extensions that are not recognized.
+     * @public
+     * @readonly
+     */
+    public readonly _unrecognizedExtensionsList: _Element[];
+
     constructor (
-        /**
-         * @summary `ss_Code`.
-         * @description
-         *
-         * Supplementary-service code related to the incompatibility. SS errors
-         * are defined in 3GPP TS 24.080 (3GPP TS 29.002 V19.1.0 clause
-         * 7.6.1.4).
-         *
-         * @public
-         * @readonly
-         */
-        readonly ss_Code?: OPTIONAL<SS_Code>,
-        /**
-         * @summary `basicService`.
-         * @description
-         *
-         * Basic service related to the incompatibility. SS errors are defined
-         * in 3GPP TS 24.080 (3GPP TS 29.002 V19.1.0 clause 7.6.1.4).
-         *
-         * @public
-         * @readonly
-         */
-        readonly basicService?: OPTIONAL<BasicServiceCode>,
-        /**
-         * @summary `ss_Status`.
-         * @description
-         *
-         * SS-Status related to the incompatibility. SS errors are defined in
-         * 3GPP TS 24.080 (3GPP TS 29.002 V19.1.0 clause 7.6.1.4).
-         *
-         * @public
-         * @readonly
-         */
-        readonly ss_Status?: OPTIONAL<SS_Status>,
-        /**
-         * @summary Extensions that are not recognized.
-         * @public
-         * @readonly
-         */
-        readonly _unrecognizedExtensionsList: _Element[] = []
-    ) {}
+        ss_Code?: OPTIONAL<SS_Code>,
+        basicService?: OPTIONAL<BasicServiceCode>,
+        ss_Status?: OPTIONAL<SS_Status>,
+        _unrecognizedExtensionsList: _Element[] = []
+    ) {
+        this.ss_Code = ss_Code;
+        this.basicService = basicService;
+        this.ss_Status = ss_Status;
+        this._unrecognizedExtensionsList = _unrecognizedExtensionsList;
+    }
 
     /**
      * @summary Restructures an object into a SS_IncompatibilityCause

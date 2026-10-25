@@ -1,15 +1,15 @@
 /* eslint-disable */
 import {
-    OPTIONAL,
-    ASN1Element as _Element,
+    type OPTIONAL,
+    type ASN1Element as _Element,
     ASN1TagClass as _TagClass
 } from "@wildboar/asn1";
 import * as $ from "@wildboar/asn1/functional";
 import { BasicService, _decode_BasicService, _encode_BasicService, _enum_for_BasicService } from "../Call-Diversion-Operations-asn1-97/BasicService.ta.mjs";
-import { PartyNumber, _decode_PartyNumber, _encode_PartyNumber } from "../Addressing-Data-Elements-asn1-97/PartyNumber.ta.mjs";
+import { type PartyNumber, _decode_PartyNumber, _encode_PartyNumber } from "../Addressing-Data-Elements-asn1-97/PartyNumber.ta.mjs";
 import { ServiceOption, _decode_ServiceOption, _encode_ServiceOption, _enum_for_ServiceOption } from "../PUM-Registration-Operations-asn1-97/ServiceOption.ta.mjs";
 import { SessionParams, _decode_SessionParams, _encode_SessionParams } from "../PUM-Registration-Operations-asn1-97/SessionParams.ta.mjs";
-import { PumrExtension, _decode_PumrExtension, _encode_PumrExtension } from "../PUM-Registration-Operations-asn1-97/PumrExtension.ta.mjs";
+import { type PumrExtension, _decode_PumrExtension, _encode_PumrExtension } from "../PUM-Registration-Operations-asn1-97/PumrExtension.ta.mjs";
 
 /**
  * @summary PumInterrogRes_Item
@@ -138,13 +138,13 @@ class PumInterrogRes_Item {
          * @static
          */
 
-    public static _enum_for_basicService = _enum_for_BasicService;        /**
+    public static _enum_for_basicService: typeof _enum_for_BasicService = _enum_for_BasicService;        /**
          * @summary The enum used as the type of the component `serviceOption`
          * @public
          * @static
          */
 
-    public static _enum_for_serviceOption = _enum_for_ServiceOption;
+    public static _enum_for_serviceOption: typeof _enum_for_ServiceOption = _enum_for_ServiceOption;
 }
 
 /**

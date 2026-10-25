@@ -1,18 +1,18 @@
 /* eslint-disable */
 import {
-    NULL,
-    OPTIONAL,
-    ASN1Element as _Element,
+    type NULL,
+    type OPTIONAL,
+    type ASN1Element as _Element,
     ASN1TagClass as _TagClass
 } from "@wildboar/asn1";
 import * as $ from "@wildboar/asn1/functional";
 import { ExtensionContainer, _decode_ExtensionContainer, _encode_ExtensionContainer } from "../MAP-ExtensionDataTypes/ExtensionContainer.ta.mjs";
-import { IST_SupportIndicator, _decode_IST_SupportIndicator, _encode_IST_SupportIndicator, _enum_for_IST_SupportIndicator } from "../MAP-MS-DataTypes/IST-SupportIndicator.ta.mjs";
-import { OfferedCamel4CSIs, _decode_OfferedCamel4CSIs, _encode_OfferedCamel4CSIs } from "../MAP-MS-DataTypes/OfferedCamel4CSIs.ta.mjs";
-import { SuperChargerInfo, _decode_SuperChargerInfo, _encode_SuperChargerInfo } from "../MAP-MS-DataTypes/SuperChargerInfo.ta.mjs";
-import { SupportedCamelPhases, _decode_SupportedCamelPhases, _encode_SupportedCamelPhases } from "../MAP-MS-DataTypes/SupportedCamelPhases.ta.mjs";
-import { SupportedLCS_CapabilitySets, _decode_SupportedLCS_CapabilitySets, _encode_SupportedLCS_CapabilitySets } from "../MAP-MS-DataTypes/SupportedLCS-CapabilitySets.ta.mjs";
-import { SupportedRAT_Types, _decode_SupportedRAT_Types, _encode_SupportedRAT_Types } from "../MAP-MS-DataTypes/SupportedRAT-Types.ta.mjs";
+import { type IST_SupportIndicator, _decode_IST_SupportIndicator, _encode_IST_SupportIndicator, _enum_for_IST_SupportIndicator } from "../MAP-MS-DataTypes/IST-SupportIndicator.ta.mjs";
+import { type OfferedCamel4CSIs, _decode_OfferedCamel4CSIs, _encode_OfferedCamel4CSIs } from "../MAP-MS-DataTypes/OfferedCamel4CSIs.ta.mjs";
+import { type SuperChargerInfo, _decode_SuperChargerInfo, _encode_SuperChargerInfo } from "../MAP-MS-DataTypes/SuperChargerInfo.ta.mjs";
+import { type SupportedCamelPhases, _decode_SupportedCamelPhases, _encode_SupportedCamelPhases } from "../MAP-MS-DataTypes/SupportedCamelPhases.ta.mjs";
+import { type SupportedLCS_CapabilitySets, _decode_SupportedLCS_CapabilitySets, _encode_SupportedLCS_CapabilitySets } from "../MAP-MS-DataTypes/SupportedLCS-CapabilitySets.ta.mjs";
+import { type SupportedRAT_Types, _decode_SupportedRAT_Types, _encode_SupportedRAT_Types } from "../MAP-MS-DataTypes/SupportedRAT-Types.ta.mjs";
 
 
 /**
@@ -29,19 +29,19 @@ import { SupportedRAT_Types, _decode_SupportedRAT_Types, _encode_SupportedRAT_Ty
  * 
  * ```asn1
  * VLR-Capability ::= SEQUENCE{
- *     supportedCamelPhases     [0] SupportedCamelPhases    OPTIONAL,
- *     extensionContainer    ExtensionContainer    OPTIONAL,
+ *     supportedCamelPhases     [0] SupportedCamelPhases    type OPTIONAL,
+ *     extensionContainer    ExtensionContainer    type OPTIONAL,
  *     ... ,
- *     solsaSupportIndicator    [2] NULL    OPTIONAL,
- *     istSupportIndicator    [1] IST-SupportIndicator    OPTIONAL,
- *     superChargerSupportedInServingNetworkEntity    [3] SuperChargerInfo    OPTIONAL,
- *     longFTN-Supported    [4]    NULL    OPTIONAL,
- *     supportedLCS-CapabilitySets    [5]    SupportedLCS-CapabilitySets    OPTIONAL,
- *     offeredCamel4CSIs    [6] OfferedCamel4CSIs    OPTIONAL,
- *     supportedRAT-TypesIndicator    [7]    SupportedRAT-Types    OPTIONAL,
- *     longGroupID-Supported    [8]    NULL    OPTIONAL,
- *     mtRoamingForwardingSupported    [9]    NULL    OPTIONAL,
- *     msisdn-lessOperation-Supported    [10]    NULL    OPTIONAL,
+ *     solsaSupportIndicator    [2] NULL    type OPTIONAL,
+ *     istSupportIndicator    [1] IST-SupportIndicator    type OPTIONAL,
+ *     superChargerSupportedInServingNetworkEntity    [3] SuperChargerInfo    type OPTIONAL,
+ *     longFTN-Supported    [4]    NULL    type OPTIONAL,
+ *     supportedLCS-CapabilitySets    [5]    SupportedLCS-CapabilitySets    type OPTIONAL,
+ *     offeredCamel4CSIs    [6] OfferedCamel4CSIs    type OPTIONAL,
+ *     supportedRAT-TypesIndicator    [7]    SupportedRAT-Types    type OPTIONAL,
+ *     longGroupID-Supported    [8]    NULL    type OPTIONAL,
+ *     mtRoamingForwardingSupported    [9]    NULL    type OPTIONAL,
+ *     msisdn-lessOperation-Supported    [10]    NULL    type OPTIONAL,
  *     reset-ids-Supported    [11]    NULL    OPTIONAL }
  * ```
  * 
@@ -49,171 +49,201 @@ import { SupportedRAT_Types, _decode_SupportedRAT_Types, _encode_SupportedRAT_Ty
  */
 export
 class VLR_Capability {
+    /**
+     * @summary `supportedCamelPhases`.
+     * @description
+     *
+     * CAMEL phases supported. Present if a phase other than phase 1 is
+     * supported. SGSN can only support phase 3 or greater.
+     *
+     * (3GPP TS 29.002 V19.1.0 clauses 7.6.3.36, 8.1.2.3 and 8.1.7.3).
+     *
+     * @public
+     * @readonly
+     */
+    public readonly supportedCamelPhases?: OPTIONAL<SupportedCamelPhases>;
+    /**
+     * @summary `extensionContainer`.
+     * @public
+     * @readonly
+     */
+    public readonly extensionContainer?: OPTIONAL<ExtensionContainer>;
+    /**
+     * @summary `solsaSupportIndicator`.
+     * @description
+     *
+     * SoLSA is supported. If absent and the subscriber is allowed only in
+     * subscribed LSAs, HLR shall reject roaming.
+     *
+     * (3GPP TS 29.002 V19.1.0 clause 8.1.2.3).
+     *
+     * @public
+     * @readonly
+     */
+    public readonly solsaSupportIndicator?: OPTIONAL<NULL>;
+    /**
+     * @summary `istSupportIndicator`.
+     * @description
+     *
+     * IST support: basic IST and optionally IST Command. If absent for an
+     * IST subscriber, HLR may limit service or accept the risk.
+     *
+     * (3GPP TS 29.002 V19.1.0 clauses 7.6.3.69 and 8.1.2.3).
+     *
+     * @public
+     * @readonly
+     */
+    public readonly istSupportIndicator?: OPTIONAL<IST_SupportIndicator>;
+    /**
+     * @summary `superChargerSupportedInServingNetworkEntity`.
+     * @description
+     *
+     * Super-Charger support and whether subscription data were retained
+     * (Age Indicator) or data are required. Absent means Super-Charger is
+     * not supported.
+     *
+     * (3GPP TS 29.002 V19.1.0 clauses 7.6.3.71 and 8.1.2.3).
+     *
+     * @public
+     * @readonly
+     */
+    public readonly superChargerSupportedInServingNetworkEntity?: OPTIONAL<SuperChargerInfo>;
+    /**
+     * @summary `longFTN_Supported`.
+     * @description
+     *
+     * VLR supports Long Forwarded-to Numbers.
+     *
+     * (3GPP TS 29.002 V19.1.0 clauses 7.6.2.22B and 8.1.2.3).
+     *
+     * @public
+     * @readonly
+     */
+    public readonly longFTN_Supported?: OPTIONAL<NULL>;
+    /**
+     * @summary `supportedLCS_CapabilitySets`.
+     * @description
+     *
+     * LCS capability sets supported. If sent with no set marked, LCS is not
+     * supported. If absent from a VLR, at most set1; if absent from an
+     * SGSN, no LCS. SGSN shall not indicate set1.
+     *
+     * (3GPP TS 29.002 V19.1.0 clauses 7.6.11.17 and 8.1.2.3).
+     *
+     * @public
+     * @readonly
+     */
+    public readonly supportedLCS_CapabilitySets?: OPTIONAL<SupportedLCS_CapabilitySets>;
+    /**
+     * @summary `offeredCamel4CSIs`.
+     * @description
+     *
+     * CAMEL phase 4 CSIs offered (3GPP TS 23.078).
+     *
+     * (3GPP TS 29.002 V19.1.0 clause 7.6.3.36D).
+     *
+     * @public
+     * @readonly
+     */
+    public readonly offeredCamel4CSIs?: OPTIONAL<OfferedCamel4CSIs>;
+    /**
+     * @summary `supportedRAT_TypesIndicator`.
+     * @description
+     *
+     * Access technologies served by the MSC/VLR, SGSN, or MME.
+     *
+     * (3GPP TS 29.002 V19.1.0 clause 7.6.3.98).
+     *
+     * @public
+     * @readonly
+     */
+    public readonly supportedRAT_TypesIndicator?: OPTIONAL<SupportedRAT_Types>;
+    /**
+     * @summary `longGroupID_Supported`.
+     * @description
+     *
+     * VLR supports long Group IDs for VGCS/VBS.
+     *
+     * (3GPP TS 29.002 V19.1.0 clause 17.7.1).
+     *
+     * @public
+     * @readonly
+     */
+    public readonly longGroupID_Supported?: OPTIONAL<NULL>;
+    /**
+     * @summary `mtRoamingForwardingSupported`.
+     * @description
+     *
+     * Entity supports MT Roaming Forwarding (3GPP TS 23.018 and 23.012).
+     *
+     * (3GPP TS 29.002 V19.1.0 clauses 7.6.5.20 and 8.1.2.3).
+     *
+     * @public
+     * @readonly
+     */
+    public readonly mtRoamingForwardingSupported?: OPTIONAL<NULL>;
+    /**
+     * @summary `msisdn_lessOperation_Supported`.
+     * @description
+     *
+     * Support of MSISDN-less operation (3GPP TS 23.012 clause 3.6.1.5).
+     *
+     * (3GPP TS 29.002 V19.1.0 clause 8.1.2.3).
+     *
+     * @public
+     * @readonly
+     */
+    public readonly msisdn_lessOperation_Supported?: OPTIONAL<NULL>;
+    /**
+     * @summary `reset_ids_Supported`.
+     * @description
+     *
+     * MSC/VLR supports Reset-Ids.
+     *
+     * (3GPP TS 29.002 V19.1.0 clause 8.1.2.3).
+     *
+     * @public
+     * @readonly
+     */
+    public readonly reset_ids_Supported?: OPTIONAL<NULL>;
+    /**
+     * @summary Extensions that are not recognized.
+     * @public
+     * @readonly
+     */
+    public readonly _unrecognizedExtensionsList: _Element[];
+
     constructor (
-        /**
-         * @summary `supportedCamelPhases`.
-         * @description
-         *
-         * CAMEL phases supported. Present if a phase other than phase 1 is
-         * supported. SGSN can only support phase 3 or greater.
-         *
-         * (3GPP TS 29.002 V19.1.0 clauses 7.6.3.36, 8.1.2.3 and 8.1.7.3).
-         *
-         * @public
-         * @readonly
-         */
-        readonly supportedCamelPhases?: OPTIONAL<SupportedCamelPhases>,
-        /**
-         * @summary `extensionContainer`.
-         * @public
-         * @readonly
-         */
-        readonly extensionContainer?: OPTIONAL<ExtensionContainer>,
-        /**
-         * @summary `solsaSupportIndicator`.
-         * @description
-         *
-         * SoLSA is supported. If absent and the subscriber is allowed only in
-         * subscribed LSAs, HLR shall reject roaming.
-         *
-         * (3GPP TS 29.002 V19.1.0 clause 8.1.2.3).
-         *
-         * @public
-         * @readonly
-         */
-        readonly solsaSupportIndicator?: OPTIONAL<NULL>,
-        /**
-         * @summary `istSupportIndicator`.
-         * @description
-         *
-         * IST support: basic IST and optionally IST Command. If absent for an
-         * IST subscriber, HLR may limit service or accept the risk.
-         *
-         * (3GPP TS 29.002 V19.1.0 clauses 7.6.3.69 and 8.1.2.3).
-         *
-         * @public
-         * @readonly
-         */
-        readonly istSupportIndicator?: OPTIONAL<IST_SupportIndicator>,
-        /**
-         * @summary `superChargerSupportedInServingNetworkEntity`.
-         * @description
-         *
-         * Super-Charger support and whether subscription data were retained
-         * (Age Indicator) or data are required. Absent means Super-Charger is
-         * not supported.
-         *
-         * (3GPP TS 29.002 V19.1.0 clauses 7.6.3.71 and 8.1.2.3).
-         *
-         * @public
-         * @readonly
-         */
-        readonly superChargerSupportedInServingNetworkEntity?: OPTIONAL<SuperChargerInfo>,
-        /**
-         * @summary `longFTN_Supported`.
-         * @description
-         *
-         * VLR supports Long Forwarded-to Numbers.
-         *
-         * (3GPP TS 29.002 V19.1.0 clauses 7.6.2.22B and 8.1.2.3).
-         *
-         * @public
-         * @readonly
-         */
-        readonly longFTN_Supported?: OPTIONAL<NULL>,
-        /**
-         * @summary `supportedLCS_CapabilitySets`.
-         * @description
-         *
-         * LCS capability sets supported. If sent with no set marked, LCS is not
-         * supported. If absent from a VLR, at most set1; if absent from an
-         * SGSN, no LCS. SGSN shall not indicate set1.
-         *
-         * (3GPP TS 29.002 V19.1.0 clauses 7.6.11.17 and 8.1.2.3).
-         *
-         * @public
-         * @readonly
-         */
-        readonly supportedLCS_CapabilitySets?: OPTIONAL<SupportedLCS_CapabilitySets>,
-        /**
-         * @summary `offeredCamel4CSIs`.
-         * @description
-         *
-         * CAMEL phase 4 CSIs offered (3GPP TS 23.078).
-         *
-         * (3GPP TS 29.002 V19.1.0 clause 7.6.3.36D).
-         *
-         * @public
-         * @readonly
-         */
-        readonly offeredCamel4CSIs?: OPTIONAL<OfferedCamel4CSIs>,
-        /**
-         * @summary `supportedRAT_TypesIndicator`.
-         * @description
-         *
-         * Access technologies served by the MSC/VLR, SGSN, or MME.
-         *
-         * (3GPP TS 29.002 V19.1.0 clause 7.6.3.98).
-         *
-         * @public
-         * @readonly
-         */
-        readonly supportedRAT_TypesIndicator?: OPTIONAL<SupportedRAT_Types>,
-        /**
-         * @summary `longGroupID_Supported`.
-         * @description
-         *
-         * VLR supports long Group IDs for VGCS/VBS.
-         *
-         * (3GPP TS 29.002 V19.1.0 clause 17.7.1).
-         *
-         * @public
-         * @readonly
-         */
-        readonly longGroupID_Supported?: OPTIONAL<NULL>,
-        /**
-         * @summary `mtRoamingForwardingSupported`.
-         * @description
-         *
-         * Entity supports MT Roaming Forwarding (3GPP TS 23.018 and 23.012).
-         *
-         * (3GPP TS 29.002 V19.1.0 clauses 7.6.5.20 and 8.1.2.3).
-         *
-         * @public
-         * @readonly
-         */
-        readonly mtRoamingForwardingSupported?: OPTIONAL<NULL>,
-        /**
-         * @summary `msisdn_lessOperation_Supported`.
-         * @description
-         *
-         * Support of MSISDN-less operation (3GPP TS 23.012 clause 3.6.1.5).
-         *
-         * (3GPP TS 29.002 V19.1.0 clause 8.1.2.3).
-         *
-         * @public
-         * @readonly
-         */
-        readonly msisdn_lessOperation_Supported?: OPTIONAL<NULL>,
-        /**
-         * @summary `reset_ids_Supported`.
-         * @description
-         *
-         * MSC/VLR supports Reset-Ids.
-         *
-         * (3GPP TS 29.002 V19.1.0 clause 8.1.2.3).
-         *
-         * @public
-         * @readonly
-         */
-        readonly reset_ids_Supported?: OPTIONAL<NULL>,
-        /**
-         * @summary Extensions that are not recognized.
-         * @public
-         * @readonly
-         */
-        readonly _unrecognizedExtensionsList: _Element[] = []
-    ) {}
+        supportedCamelPhases?: OPTIONAL<SupportedCamelPhases>,
+        extensionContainer?: OPTIONAL<ExtensionContainer>,
+        solsaSupportIndicator?: OPTIONAL<NULL>,
+        istSupportIndicator?: OPTIONAL<IST_SupportIndicator>,
+        superChargerSupportedInServingNetworkEntity?: OPTIONAL<SuperChargerInfo>,
+        longFTN_Supported?: OPTIONAL<NULL>,
+        supportedLCS_CapabilitySets?: OPTIONAL<SupportedLCS_CapabilitySets>,
+        offeredCamel4CSIs?: OPTIONAL<OfferedCamel4CSIs>,
+        supportedRAT_TypesIndicator?: OPTIONAL<SupportedRAT_Types>,
+        longGroupID_Supported?: OPTIONAL<NULL>,
+        mtRoamingForwardingSupported?: OPTIONAL<NULL>,
+        msisdn_lessOperation_Supported?: OPTIONAL<NULL>,
+        reset_ids_Supported?: OPTIONAL<NULL>,
+        _unrecognizedExtensionsList: _Element[] = []
+    ) {
+        this.supportedCamelPhases = supportedCamelPhases;
+        this.extensionContainer = extensionContainer;
+        this.solsaSupportIndicator = solsaSupportIndicator;
+        this.istSupportIndicator = istSupportIndicator;
+        this.superChargerSupportedInServingNetworkEntity = superChargerSupportedInServingNetworkEntity;
+        this.longFTN_Supported = longFTN_Supported;
+        this.supportedLCS_CapabilitySets = supportedLCS_CapabilitySets;
+        this.offeredCamel4CSIs = offeredCamel4CSIs;
+        this.supportedRAT_TypesIndicator = supportedRAT_TypesIndicator;
+        this.longGroupID_Supported = longGroupID_Supported;
+        this.mtRoamingForwardingSupported = mtRoamingForwardingSupported;
+        this.msisdn_lessOperation_Supported = msisdn_lessOperation_Supported;
+        this.reset_ids_Supported = reset_ids_Supported;
+        this._unrecognizedExtensionsList = _unrecognizedExtensionsList;
+    }
 
     /**
      * @summary Restructures an object into a VLR_Capability
@@ -237,7 +267,7 @@ class VLR_Capability {
          * @static
          */
 
-    public static _enum_for_istSupportIndicator = _enum_for_IST_SupportIndicator;
+    public static _enum_for_istSupportIndicator: typeof _enum_for_IST_SupportIndicator = _enum_for_IST_SupportIndicator;
 }
 
 /**

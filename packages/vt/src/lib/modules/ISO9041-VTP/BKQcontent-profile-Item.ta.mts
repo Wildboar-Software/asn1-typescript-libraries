@@ -1,8 +1,8 @@
 /* eslint-disable */
 import {
-    INTEGER,
-    OCTET_STRING,
-    ASN1Element as _Element,
+    type INTEGER,
+    type OCTET_STRING,
+    type ASN1Element as _Element,
     ASN1TagClass as _TagClass,
     ASN1Construction as _Construction,
     ASN1UniversalType as _UniversalType,
@@ -36,25 +36,31 @@ import * as $ from "@wildboar/asn1/functional";
  */
 export
 class BKQcontent_profile_Item {
+    /**
+     * @summary `ptag`.
+     * @description
+     * Profile-defined item-tag. ISO/IEC 9040:1997 §34.1.3.2.
+     * @public
+     * @readonly
+     */
+    public readonly ptag: INTEGER;
+    /**
+     * @summary `pvalue`.
+     * @description
+     * Profile-defined item-value octets. ISO/IEC 9040:1997
+     * §34.1.3.2.
+     * @public
+     * @readonly
+     */
+    public readonly pvalue: OCTET_STRING;
+
     constructor (
-        /**
-         * @summary `ptag`.
-         * @description
-         * Profile-defined item-tag. ISO/IEC 9040:1997 §34.1.3.2.
-         * @public
-         * @readonly
-         */
-        readonly ptag: INTEGER,
-        /**
-         * @summary `pvalue`.
-         * @description
-         * Profile-defined item-value octets. ISO/IEC 9040:1997
-         * §34.1.3.2.
-         * @public
-         * @readonly
-         */
-        readonly pvalue: OCTET_STRING
-    ) {}
+        ptag: INTEGER,
+        pvalue: OCTET_STRING
+    ) {
+        this.ptag = ptag;
+        this.pvalue = pvalue;
+    }
 
     /**
      * @summary Restructures an object into a BKQcontent_profile_Item

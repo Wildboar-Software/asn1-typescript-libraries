@@ -1,9 +1,9 @@
 /* eslint-disable */
 import {
-    UTF8String,
-    VisibleString,
-    BMPString,
-    ASN1Element as _Element,
+    type UTF8String,
+    type VisibleString,
+    type BMPString,
+    type ASN1Element as _Element,
     ASN1TagClass as _TagClass,
     ASN1Construction as _Construction,
     ASN1UniversalType as _UniversalType,

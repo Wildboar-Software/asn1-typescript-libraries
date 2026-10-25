@@ -1,10 +1,10 @@
 /* eslint-disable */
 import {
-    ASN1Element as _Element,
+    type ASN1Element as _Element,
     ASN1TagClass as _TagClass,
-    BIT_STRING,
-    OCTET_STRING,
-    OPTIONAL,
+    type BIT_STRING,
+    type OCTET_STRING,
+    type OPTIONAL,
 } from "@wildboar/asn1";
 import * as $ from "@wildboar/asn1/functional";
 import {
@@ -34,11 +34,11 @@ import {
  *     -- the intended algorithm for which the value will be used
  *     symmAlg       [1] AlgorithmIdentifier{ALGORITHM, {...}}  OPTIONAL,
  *     -- the symmetric algorithm used to encrypt the value
- *     encSymmKey    [2] BIT STRING           OPTIONAL,
+ *     encSymmKey    [2] BIT STRING           type OPTIONAL,
  *     -- the (encrypted) symmetric key used to encrypt the value
  *     keyAlg        [3] AlgorithmIdentifier{ALGORITHM, {...}}  OPTIONAL,
  *     -- algorithm used to encrypt the symmetric key
- *     valueHint     [4] OCTET STRING         OPTIONAL,
+ *     valueHint     [4] OCTET STRING         type OPTIONAL,
  *     -- a brief description or identifier of the encValue content
  *     -- (may be meaningful only to the sending entity, and used only
  *     -- if EncryptedValue might be re-examined by the sending entity
@@ -49,77 +49,91 @@ import {
  *
  */
 export class EncryptedValue {
+    /**
+     * @summary `intendedAlg`.
+     * @description
+     *
+     * Intended algorithm for which the value will be used; MUST
+     * identify the private-key algorithm OID when encrypting a
+     * private key ([RFC 4211 §6.4](https://datatracker.ietf.org/doc/html/rfc4211#section-6.4)).
+     *
+     * @public
+     * @readonly
+     */
+    public readonly intendedAlg: OPTIONAL<AlgorithmIdentifier>;
+    /**
+     * @summary `symmAlg`.
+     * @description
+     *
+     * Symmetric algorithm used to encrypt the value
+     * ([RFC 4211 §6.4](https://datatracker.ietf.org/doc/html/rfc4211#section-6.4)).
+     *
+     * @public
+     * @readonly
+     */
+    public readonly symmAlg: OPTIONAL<AlgorithmIdentifier>;
+    /**
+     * @summary `encSymmKey`.
+     * @description
+     *
+     * Encrypted symmetric key used to encrypt the value
+     * ([RFC 4211 §6.4](https://datatracker.ietf.org/doc/html/rfc4211#section-6.4)).
+     *
+     * @public
+     * @readonly
+     */
+    public readonly encSymmKey: OPTIONAL<BIT_STRING>;
+    /**
+     * @summary `keyAlg`.
+     * @description
+     *
+     * Algorithm used to encrypt the symmetric key
+     * ([RFC 4211 §6.4](https://datatracker.ietf.org/doc/html/rfc4211#section-6.4)).
+     *
+     * @public
+     * @readonly
+     */
+    public readonly keyAlg: OPTIONAL<AlgorithmIdentifier>;
+    /**
+     * @summary `valueHint`.
+     * @description
+     *
+     * Brief description/identifier of `encValue` content (may be
+     * meaningful only to the sender). First octet MAY indicate
+     * private-key format when not `PrivateKeyInfo`
+     * ([RFC 4211 §6.4](https://datatracker.ietf.org/doc/html/rfc4211#section-6.4)).
+     *
+     * @public
+     * @readonly
+     */
+    public readonly valueHint: OPTIONAL<OCTET_STRING>;
+    /**
+     * @summary `encValue`.
+     * @description
+     *
+     * Encrypted content (e.g. encrypted `PrivateKeyInfo`)
+     * ([RFC 4211 §6.4](https://datatracker.ietf.org/doc/html/rfc4211#section-6.4)).
+     *
+     * @public
+     * @readonly
+     */
+    public readonly encValue: BIT_STRING;
+
     constructor(
-        /**
-         * @summary `intendedAlg`.
-         * @description
-         *
-         * Intended algorithm for which the value will be used; MUST
-         * identify the private-key algorithm OID when encrypting a
-         * private key ([RFC 4211 §6.4](https://datatracker.ietf.org/doc/html/rfc4211#section-6.4)).
-         *
-         * @public
-         * @readonly
-         */
-        readonly intendedAlg: OPTIONAL<AlgorithmIdentifier>,
-        /**
-         * @summary `symmAlg`.
-         * @description
-         *
-         * Symmetric algorithm used to encrypt the value
-         * ([RFC 4211 §6.4](https://datatracker.ietf.org/doc/html/rfc4211#section-6.4)).
-         *
-         * @public
-         * @readonly
-         */
-        readonly symmAlg: OPTIONAL<AlgorithmIdentifier>,
-        /**
-         * @summary `encSymmKey`.
-         * @description
-         *
-         * Encrypted symmetric key used to encrypt the value
-         * ([RFC 4211 §6.4](https://datatracker.ietf.org/doc/html/rfc4211#section-6.4)).
-         *
-         * @public
-         * @readonly
-         */
-        readonly encSymmKey: OPTIONAL<BIT_STRING>,
-        /**
-         * @summary `keyAlg`.
-         * @description
-         *
-         * Algorithm used to encrypt the symmetric key
-         * ([RFC 4211 §6.4](https://datatracker.ietf.org/doc/html/rfc4211#section-6.4)).
-         *
-         * @public
-         * @readonly
-         */
-        readonly keyAlg: OPTIONAL<AlgorithmIdentifier>,
-        /**
-         * @summary `valueHint`.
-         * @description
-         *
-         * Brief description/identifier of `encValue` content (may be
-         * meaningful only to the sender). First octet MAY indicate
-         * private-key format when not `PrivateKeyInfo`
-         * ([RFC 4211 §6.4](https://datatracker.ietf.org/doc/html/rfc4211#section-6.4)).
-         *
-         * @public
-         * @readonly
-         */
-        readonly valueHint: OPTIONAL<OCTET_STRING>,
-        /**
-         * @summary `encValue`.
-         * @description
-         *
-         * Encrypted content (e.g. encrypted `PrivateKeyInfo`)
-         * ([RFC 4211 §6.4](https://datatracker.ietf.org/doc/html/rfc4211#section-6.4)).
-         *
-         * @public
-         * @readonly
-         */
-        readonly encValue: BIT_STRING
-    ) {}
+        intendedAlg: OPTIONAL<AlgorithmIdentifier>,
+        symmAlg: OPTIONAL<AlgorithmIdentifier>,
+        encSymmKey: OPTIONAL<BIT_STRING>,
+        keyAlg: OPTIONAL<AlgorithmIdentifier>,
+        valueHint: OPTIONAL<OCTET_STRING>,
+        encValue: BIT_STRING
+    ) {
+        this.intendedAlg = intendedAlg;
+        this.symmAlg = symmAlg;
+        this.encSymmKey = encSymmKey;
+        this.keyAlg = keyAlg;
+        this.valueHint = valueHint;
+        this.encValue = encValue;
+    }
 
     /**
      * @summary Restructures an object into a EncryptedValue

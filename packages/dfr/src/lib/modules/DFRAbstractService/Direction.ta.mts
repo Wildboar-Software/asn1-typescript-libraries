@@ -1,6 +1,6 @@
 /* eslint-disable */
 import {
-    ASN1Element as _Element,
+    type ASN1Element as _Element,
     ASN1TagClass as _TagClass,
     ASN1Construction as _Construction,
     ASN1UniversalType as _UniversalType,
@@ -77,7 +77,7 @@ type Direction = _enum_for_Direction;
  * @enum {number}
  */
 export
-const Direction = _enum_for_Direction;
+const Direction: typeof _enum_for_Direction = _enum_for_Direction;
 
 /**
  * @summary Direction_ascending
@@ -88,7 +88,7 @@ const Direction = _enum_for_Direction;
  * @type {number}
  */
 export
-const Direction_ascending: Direction = Direction.ascending; /* LONG_NAMED_ENUMERATED_VALUE */
+const Direction_ascending: _enum_for_Direction.ascending = Direction.ascending; /* LONG_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary ascending
@@ -99,7 +99,7 @@ const Direction_ascending: Direction = Direction.ascending; /* LONG_NAMED_ENUMER
  * @type {number}
  */
 export
-const ascending: Direction = Direction.ascending; /* SHORT_NAMED_ENUMERATED_VALUE */
+const ascending: _enum_for_Direction.ascending = Direction.ascending; /* SHORT_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary Direction_descending
@@ -110,7 +110,7 @@ const ascending: Direction = Direction.ascending; /* SHORT_NAMED_ENUMERATED_VALU
  * @type {number}
  */
 export
-const Direction_descending: Direction = Direction.descending; /* LONG_NAMED_ENUMERATED_VALUE */
+const Direction_descending: _enum_for_Direction.descending = Direction.descending; /* LONG_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary descending
@@ -121,9 +121,20 @@ const Direction_descending: Direction = Direction.descending; /* LONG_NAMED_ENUM
  * @type {number}
  */
 export
-const descending: Direction = Direction.descending; /* SHORT_NAMED_ENUMERATED_VALUE */
-export const _decode_Direction = $._decodeEnumerated;
-export const _encode_Direction = $._encodeEnumerated;
+const descending: _enum_for_Direction.descending = Direction.descending; /* SHORT_NAMED_ENUMERATED_VALUE */
+export function _decode_Direction(el: _Element): Direction {
+    const enumerated = $._decodeEnumerated(el);
+    switch (enumerated) {
+        case Direction.ascending: return Direction.ascending;
+        case Direction.descending: return Direction.descending;
+        default:
+            throw new _ConstructionError(
+                "Invalid ENUMERATED value " + enumerated + " for Direction.",
+                el,
+            );
+    }
+}
+export const _encode_Direction: $.ASN1Encoder<Direction> = $._encodeEnumerated as $.ASN1Encoder<Direction>;
 
 
 /* eslint-enable */

@@ -24,21 +24,13 @@ import { GcsePartyIdentity, _decode_GcsePartyIdentity, _encode_GcsePartyIdentity
 export
 type GcseGroupID = GcsePartyIdentity; // DefinedType
 
-let _cached_decoder_for_GcseGroupID: $.ASN1Decoder<GcseGroupID> | null = null;
-
 /**
  * @summary Decodes an ASN.1 element into a(n) GcseGroupID
  * @function
  * @param el The element being decoded.
  * @returns The decoded data structure.
  */
-export
-function _decode_GcseGroupID (el: _Element): GcseGroupID {
-    if (!_cached_decoder_for_GcseGroupID) { _cached_decoder_for_GcseGroupID = _decode_GcsePartyIdentity; }
-    return _cached_decoder_for_GcseGroupID(el);
-}
-
-let _cached_encoder_for_GcseGroupID: $.ASN1Encoder<GcseGroupID> | null = null;
+export const _decode_GcseGroupID: $.ASN1Decoder<GcseGroupID> = _decode_GcsePartyIdentity;
 
 /**
  * @summary Encodes a(n) GcseGroupID into an ASN.1 Element.
@@ -47,11 +39,7 @@ let _cached_encoder_for_GcseGroupID: $.ASN1Encoder<GcseGroupID> | null = null;
  * @param elGetter A function that can be used to get new ASN.1 elements.
  * @returns {_Element} The GcseGroupID, encoded as an ASN.1 Element.
  */
-export
-function _encode_GcseGroupID (value: GcseGroupID, elGetter: $.ASN1Encoder<any>): _Element {
-    if (!_cached_encoder_for_GcseGroupID) { _cached_encoder_for_GcseGroupID = _encode_GcsePartyIdentity; }
-    return _cached_encoder_for_GcseGroupID(value, elGetter);
-}
+export const _encode_GcseGroupID: $.ASN1Encoder<GcseGroupID> = _encode_GcsePartyIdentity;
 
 
 /* eslint-enable */

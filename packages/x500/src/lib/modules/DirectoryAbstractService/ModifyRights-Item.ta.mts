@@ -1,17 +1,17 @@
 /* eslint-disable */
 import {
     ASN1ConstructionError as _ConstructionError,
-    ASN1Element as _Element,
+    type ASN1Element as _Element,
     ASN1TagClass as _TagClass,
 } from "@wildboar/asn1";
 import * as $ from "@wildboar/asn1/functional";
 import {
-    ModifyRights_Item_item,
+    type ModifyRights_Item_item,
     _decode_ModifyRights_Item_item,
     _encode_ModifyRights_Item_item,
 } from "../DirectoryAbstractService/ModifyRights-Item-item.ta.mjs";
 import {
-    ModifyRights_Item_permission,
+    type ModifyRights_Item_permission,
     _decode_ModifyRights_Item_permission,
     _encode_ModifyRights_Item_permission,
 } from "../DirectoryAbstractService/ModifyRights-Item-permission.ta.mjs";
@@ -30,36 +30,44 @@ import {
  *
  */
 export class ModifyRights_Item {
+    /**
+     * @summary `item`.
+     * @description
+     *
+     * `entry`, `attribute`, or `value`. One `entry`; one `attribute` per
+     * user attribute the user may add/remove; one `value` per value whose
+     * rights differ from the attribute.
+     *
+     * @public
+     * @readonly
+     */
+    public readonly item: ModifyRights_Item_item;
+    /**
+     * @summary `permission`.
+     * @description
+     *
+     * Interpretation depends on `item` (`entry` vs `attribute`/`value`).
+     *
+     * @public
+     * @readonly
+     */
+    public readonly permission: ModifyRights_Item_permission;
+    /**
+     * @summary Extensions that are not recognized.
+     * @public
+     * @readonly
+     */
+    public readonly _unrecognizedExtensionsList: _Element[];
+
     constructor(
-        /**
-         * @summary `item`.
-         * @description
-         *
-         * `entry`, `attribute`, or `value`. One `entry`; one `attribute` per
-         * user attribute the user may add/remove; one `value` per value whose
-         * rights differ from the attribute.
-         *
-         * @public
-         * @readonly
-         */
-        readonly item: ModifyRights_Item_item,
-        /**
-         * @summary `permission`.
-         * @description
-         *
-         * Interpretation depends on `item` (`entry` vs `attribute`/`value`).
-         *
-         * @public
-         * @readonly
-         */
-        readonly permission: ModifyRights_Item_permission,
-        /**
-         * @summary Extensions that are not recognized.
-         * @public
-         * @readonly
-         */
-        readonly _unrecognizedExtensionsList: _Element[] = []
-    ) {}
+        item: ModifyRights_Item_item,
+        permission: ModifyRights_Item_permission,
+        _unrecognizedExtensionsList: _Element[] = []
+    ) {
+        this.item = item;
+        this.permission = permission;
+        this._unrecognizedExtensionsList = _unrecognizedExtensionsList;
+    }
 
     /**
      * @summary Restructures an object into a ModifyRights_Item

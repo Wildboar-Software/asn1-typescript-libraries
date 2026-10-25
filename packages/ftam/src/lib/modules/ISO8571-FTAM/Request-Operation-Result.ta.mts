@@ -1,6 +1,6 @@
 /* eslint-disable */
 import {
-  INTEGER,
+  type INTEGER,
   ASN1Element as _Element,
   ASN1TagClass as _TagClass,
   ASN1Construction as _Construction,
@@ -41,7 +41,7 @@ export type Request_Operation_Result = INTEGER;
  * @constant
  * @type {number}
  */
-export const Request_Operation_Result_summary: Request_Operation_Result = 0; /* LONG_NAMED_INTEGER_VALUE */
+export const Request_Operation_Result_summary: 0 = 0 satisfies Request_Operation_Result; /* LONG_NAMED_INTEGER_VALUE */
 
 
 /**
@@ -53,7 +53,7 @@ export const Request_Operation_Result_summary: Request_Operation_Result = 0; /* 
  * @constant
  * @type {number}
  */
-export const summary: Request_Operation_Result = Request_Operation_Result_summary; /* SHORT_NAMED_INTEGER_VALUE */
+export const summary: 0 = Request_Operation_Result_summary; /* SHORT_NAMED_INTEGER_VALUE */
 
 
 /**
@@ -66,7 +66,7 @@ export const summary: Request_Operation_Result = Request_Operation_Result_summar
  * @constant
  * @type {number}
  */
-export const Request_Operation_Result_fiii_list: Request_Operation_Result = 1; /* LONG_NAMED_INTEGER_VALUE */
+export const Request_Operation_Result_fiii_list: 1 = 1 satisfies Request_Operation_Result; /* LONG_NAMED_INTEGER_VALUE */
 
 
 /**
@@ -79,7 +79,7 @@ export const Request_Operation_Result_fiii_list: Request_Operation_Result = 1; /
  * @constant
  * @type {number}
  */
-export const fiii_list: Request_Operation_Result = Request_Operation_Result_fiii_list; /* SHORT_NAMED_INTEGER_VALUE */
+export const fiii_list: 1 = Request_Operation_Result_fiii_list; /* SHORT_NAMED_INTEGER_VALUE */
 
 
 let _cached_decoder_for_Request_Operation_Result: $.ASN1Decoder<Request_Operation_Result> | null = null;

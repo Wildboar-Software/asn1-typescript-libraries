@@ -1,5 +1,5 @@
 /* eslint-disable */
-import { ObjectIdentifier as _OID, OCTET_STRING } from "@wildboar/asn1";
+import { ObjectIdentifier as _OID, type OCTET_STRING } from "@wildboar/asn1";
 import * as $ from "@wildboar/asn1/functional";
 import { type BAG_TYPE } from "../PKCS-12/BAG-TYPE.oca.mjs";
 import { certTypes } from "../PKCS-9/certTypes.va.mjs";

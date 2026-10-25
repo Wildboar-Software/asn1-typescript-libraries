@@ -1,7 +1,7 @@
 /* eslint-disable */
 import {
-    BIT_STRING,
-    ASN1Element as _Element,
+    type BIT_STRING,
+    type ASN1Element as _Element,
     ASN1TagClass as _TagClass,
     ASN1Construction as _Construction,
     ASN1UniversalType as _UniversalType,
@@ -49,10 +49,10 @@ export const AARQ_apdu_protocol_version_version1: number = 0; /* LONG_NAMED_BIT 
 export const version1: number = AARQ_apdu_protocol_version_version1; /* SHORT_NAMED_BIT */
 
 
-export const _decode_AARQ_apdu_protocol_version = $._decodeBitString;
+export const _decode_AARQ_apdu_protocol_version: $.ASN1Decoder<BIT_STRING> = $._decodeBitString;
 
 
-export const _encode_AARQ_apdu_protocol_version = $._encodeBitString;
+export const _encode_AARQ_apdu_protocol_version: $.ASN1Encoder<BIT_STRING> = $._encodeBitString;
 
 
 /* eslint-enable */

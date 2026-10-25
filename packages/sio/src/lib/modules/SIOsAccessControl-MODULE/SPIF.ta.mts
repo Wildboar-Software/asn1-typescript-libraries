@@ -1,18 +1,18 @@
 /* eslint-disable */
 import {
-    ASN1Element as _Element,
+    type ASN1Element as _Element,
     ASN1TagClass as _TagClass,
-    OBJECT_IDENTIFIER,
-    OPTIONAL,
+    type OBJECT_IDENTIFIER,
+    type OPTIONAL,
 } from "@wildboar/asn1";
 import * as $ from "@wildboar/asn1/functional";
 import {
-    Extensions,
+    type Extensions,
     _decode_Extensions,
     _encode_Extensions,
 } from "@wildboar/x500/AuthenticationFramework";
 import {
-    EquivalentPolicies,
+    type EquivalentPolicies,
     _decode_EquivalentPolicies,
     _encode_EquivalentPolicies,
 } from "../SIOsAccessControl-MODULE/EquivalentPolicies.ta.mjs";
@@ -22,12 +22,12 @@ import {
     _encode_ObjectIdData,
 } from "../SIOsAccessControl-MODULE/ObjectIdData.ta.mjs";
 import {
-    SecurityClassifications,
+    type SecurityClassifications,
     _decode_SecurityClassifications,
     _encode_SecurityClassifications,
 } from "../SIOsAccessControl-MODULE/SecurityClassifications.ta.mjs";
 import {
-    SPIF_SecurityCategories,
+    type SPIF_SecurityCategories,
     _decode_SPIF_SecurityCategories,
     _encode_SPIF_SecurityCategories,
 } from "../SIOsAccessControl-MODULE/SPIF-SecurityCategories.ta.mjs";
@@ -38,7 +38,7 @@ import {
 } from "../SIOsAccessControl-MODULE/UpdateInformationData.ta.mjs";
 import {
     v1 /* IMPORTED_SHORT_NAMED_INTEGER */,
-    VersionInformationData,
+    type VersionInformationData,
     _decode_VersionInformationData,
     _encode_VersionInformationData,
 } from "../SIOsAccessControl-MODULE/VersionInformationData.ta.mjs";
@@ -76,131 +76,153 @@ import {
  *
  */
 export class SPIF {
+    /**
+     * @summary `versionInformation`.
+     * @description
+     *
+     * ASN.1 syntax version of this SPIF specification and the
+     * associated semantics. DEFAULT `v1` (0). X.841 §6.2.2.1.
+     *
+     * @public
+     * @readonly
+     */
+    public readonly versionInformation: OPTIONAL<VersionInformationData>;
+    /**
+     * @summary `updateInformation`.
+     * @description
+     *
+     * Currency of this SPIF: version number, creation time,
+     * signer name, and optional signing-key identifier.
+     * X.841 §6.2.2.2.
+     *
+     * @public
+     * @readonly
+     */
+    public readonly updateInformation: UpdateInformationData;
+    /**
+     * @summary `securityPolicyIdData`.
+     * @description
+     *
+     * Policy to which this SPIF applies (OID plus display name).
+     * X.841 §6.2.2.3.
+     *
+     * @public
+     * @readonly
+     */
+    public readonly securityPolicyIdData: ObjectIdData;
+    /**
+     * @summary `privilegeId`.
+     * @description
+     *
+     * OID of the syntax carried in the clearance attribute
+     * security category of relying certificates used with this
+     * SPIF. Must be consistent with `rbacId`. X.841 §6.2.2.4.
+     *
+     * @public
+     * @readonly
+     */
+    public readonly privilegeId: OBJECT_IDENTIFIER;
+    /**
+     * @summary `rbacId`.
+     * @description
+     *
+     * Rule-based access control OID of the syntax carried in
+     * security-label security categories used with this SPIF.
+     * Must be consistent with `privilegeId`. X.841 §6.2.2.5.
+     *
+     * @public
+     * @readonly
+     */
+    public readonly rbacId: OBJECT_IDENTIFIER;
+    /**
+     * @summary `securityClassifications`.
+     * @description
+     *
+     * One entry per classification of this policy: maps a label
+     * classification to a clearance `classList` bit and records
+     * equivalences, hierarchy, markings, and required
+     * categories. X.841 §6.2.2.6.
+     *
+     * @public
+     * @readonly
+     */
+    public readonly securityClassifications?: OPTIONAL<SecurityClassifications>;
+    /**
+     * @summary `securityCategories`.
+     * @description
+     *
+     * One `SecurityCategory` per category of this policy; maps
+     * label categories to clearance categories (and
+     * equivalences). `type` must be consistent with
+     * `privilegeId`, `rbacId`, and `optCatDataId`. X.841
+     * §6.2.2.7.
+     *
+     * @public
+     * @readonly
+     */
+    public readonly securityCategories?: OPTIONAL<SPIF_SecurityCategories>;
+    /**
+     * @summary `equivalentPolicies`.
+     * @description
+     *
+     * Every other policy for which this SPIF includes
+     * equivalent values. X.841 §6.2.2.8.
+     *
+     * @public
+     * @readonly
+     */
+    public readonly equivalentPolicies?: OPTIONAL<EquivalentPolicies>;
+    /**
+     * @summary `defaultSecurityPolicyIdData`.
+     * @description
+     *
+     * Policy that applies when data arrives with no security
+     * label (interop with systems that omit labels). Maps to a
+     * single classification; that classification's
+     * `equivalentClassifications` names this default policy.
+     * X.841 §6.2.2.9.
+     *
+     * @public
+     * @readonly
+     */
+    public readonly defaultSecurityPolicyIdData?: OPTIONAL<ObjectIdData>;
+    /**
+     * @summary `extensions`.
+     * @description
+     *
+     * X.509 `Extensions` for future SPIF capabilities. Unknown
+     * critical extensions MUST cause the SPIF to be rejected;
+     * unknown non-critical extensions MAY be ignored. X.841
+     * §6.2.2.10.
+     *
+     * @public
+     * @readonly
+     */
+    public readonly extensions?: OPTIONAL<Extensions>;
+
     constructor(
-        /**
-         * @summary `versionInformation`.
-         * @description
-         *
-         * ASN.1 syntax version of this SPIF specification and the
-         * associated semantics. DEFAULT `v1` (0). X.841 §6.2.2.1.
-         *
-         * @public
-         * @readonly
-         */
-        readonly versionInformation: OPTIONAL<VersionInformationData>,
-        /**
-         * @summary `updateInformation`.
-         * @description
-         *
-         * Currency of this SPIF: version number, creation time,
-         * signer name, and optional signing-key identifier.
-         * X.841 §6.2.2.2.
-         *
-         * @public
-         * @readonly
-         */
-        readonly updateInformation: UpdateInformationData,
-        /**
-         * @summary `securityPolicyIdData`.
-         * @description
-         *
-         * Policy to which this SPIF applies (OID plus display name).
-         * X.841 §6.2.2.3.
-         *
-         * @public
-         * @readonly
-         */
-        readonly securityPolicyIdData: ObjectIdData,
-        /**
-         * @summary `privilegeId`.
-         * @description
-         *
-         * OID of the syntax carried in the clearance attribute
-         * security category of relying certificates used with this
-         * SPIF. Must be consistent with `rbacId`. X.841 §6.2.2.4.
-         *
-         * @public
-         * @readonly
-         */
-        readonly privilegeId: OBJECT_IDENTIFIER,
-        /**
-         * @summary `rbacId`.
-         * @description
-         *
-         * Rule-based access control OID of the syntax carried in
-         * security-label security categories used with this SPIF.
-         * Must be consistent with `privilegeId`. X.841 §6.2.2.5.
-         *
-         * @public
-         * @readonly
-         */
-        readonly rbacId: OBJECT_IDENTIFIER,
-        /**
-         * @summary `securityClassifications`.
-         * @description
-         *
-         * One entry per classification of this policy: maps a label
-         * classification to a clearance `classList` bit and records
-         * equivalences, hierarchy, markings, and required
-         * categories. X.841 §6.2.2.6.
-         *
-         * @public
-         * @readonly
-         */
-        readonly securityClassifications?: OPTIONAL<SecurityClassifications>,
-        /**
-         * @summary `securityCategories`.
-         * @description
-         *
-         * One `SecurityCategory` per category of this policy; maps
-         * label categories to clearance categories (and
-         * equivalences). `type` must be consistent with
-         * `privilegeId`, `rbacId`, and `optCatDataId`. X.841
-         * §6.2.2.7.
-         *
-         * @public
-         * @readonly
-         */
-        readonly securityCategories?: OPTIONAL<SPIF_SecurityCategories>,
-        /**
-         * @summary `equivalentPolicies`.
-         * @description
-         *
-         * Every other policy for which this SPIF includes
-         * equivalent values. X.841 §6.2.2.8.
-         *
-         * @public
-         * @readonly
-         */
-        readonly equivalentPolicies?: OPTIONAL<EquivalentPolicies>,
-        /**
-         * @summary `defaultSecurityPolicyIdData`.
-         * @description
-         *
-         * Policy that applies when data arrives with no security
-         * label (interop with systems that omit labels). Maps to a
-         * single classification; that classification's
-         * `equivalentClassifications` names this default policy.
-         * X.841 §6.2.2.9.
-         *
-         * @public
-         * @readonly
-         */
-        readonly defaultSecurityPolicyIdData?: OPTIONAL<ObjectIdData>,
-        /**
-         * @summary `extensions`.
-         * @description
-         *
-         * X.509 `Extensions` for future SPIF capabilities. Unknown
-         * critical extensions MUST cause the SPIF to be rejected;
-         * unknown non-critical extensions MAY be ignored. X.841
-         * §6.2.2.10.
-         *
-         * @public
-         * @readonly
-         */
-        readonly extensions?: OPTIONAL<Extensions>
-    ) {}
+        versionInformation: OPTIONAL<VersionInformationData>,
+        updateInformation: UpdateInformationData,
+        securityPolicyIdData: ObjectIdData,
+        privilegeId: OBJECT_IDENTIFIER,
+        rbacId: OBJECT_IDENTIFIER,
+        securityClassifications?: OPTIONAL<SecurityClassifications>,
+        securityCategories?: OPTIONAL<SPIF_SecurityCategories>,
+        equivalentPolicies?: OPTIONAL<EquivalentPolicies>,
+        defaultSecurityPolicyIdData?: OPTIONAL<ObjectIdData>,
+        extensions?: OPTIONAL<Extensions>
+    ) {
+        this.versionInformation = versionInformation;
+        this.updateInformation = updateInformation;
+        this.securityPolicyIdData = securityPolicyIdData;
+        this.privilegeId = privilegeId;
+        this.rbacId = rbacId;
+        this.securityClassifications = securityClassifications;
+        this.securityCategories = securityCategories;
+        this.equivalentPolicies = equivalentPolicies;
+        this.defaultSecurityPolicyIdData = defaultSecurityPolicyIdData;
+        this.extensions = extensions;
+    }
 
     /**
      * @summary Restructures an object into a SPIF

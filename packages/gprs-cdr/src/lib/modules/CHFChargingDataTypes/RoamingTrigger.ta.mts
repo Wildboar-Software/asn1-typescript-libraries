@@ -1,12 +1,12 @@
 /* eslint-disable */
 import {
-    INTEGER,
-    OPTIONAL,
-    ASN1Element as _Element,
+    type INTEGER,
+    type OPTIONAL,
+    type ASN1Element as _Element,
     ASN1TagClass as _TagClass
 } from "@wildboar/asn1";
 import * as $ from "@wildboar/asn1/functional";
-import { SMFTrigger, _decode_SMFTrigger, _encode_SMFTrigger } from "../CHFChargingDataTypes/SMFTrigger.ta.mjs";
+import { type SMFTrigger, _decode_SMFTrigger, _encode_SMFTrigger } from "../CHFChargingDataTypes/SMFTrigger.ta.mjs";
 import { TriggerCategory, _decode_TriggerCategory, _encode_TriggerCategory, _enum_for_TriggerCategory } from "../CHFChargingDataTypes/TriggerCategory.ta.mjs";
 
 
@@ -96,7 +96,7 @@ class RoamingTrigger {
          * @static
          */
 
-    public static _enum_for_triggerCategory = _enum_for_TriggerCategory;
+    public static _enum_for_triggerCategory: typeof _enum_for_TriggerCategory = _enum_for_TriggerCategory;
 }
 
 /**

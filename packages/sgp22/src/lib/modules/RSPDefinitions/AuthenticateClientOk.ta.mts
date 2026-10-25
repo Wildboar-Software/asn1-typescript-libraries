@@ -1,12 +1,12 @@
 /* eslint-disable */
 import {
-    OCTET_STRING,
+    type OCTET_STRING,
     ASN1ConstructionError as _ConstructionError,
-    ASN1Element as _Element,
+    type ASN1Element as _Element,
     ASN1TagClass as _TagClass
 } from "@wildboar/asn1";
 import * as $ from "@wildboar/asn1/functional";
-import { TransactionId, _decode_TransactionId, _encode_TransactionId } from "../RSPDefinitions/TransactionId.ta.mjs";
+import { type TransactionId, _decode_TransactionId, _encode_TransactionId } from "../RSPDefinitions/TransactionId.ta.mjs";
 import { StoreMetadataRequest, _decode_StoreMetadataRequest, _encode_StoreMetadataRequest } from "../RSPDefinitions/StoreMetadataRequest.ta.mjs";
 import { SmdpSigned2, _decode_SmdpSigned2, _encode_SmdpSigned2 } from "../RSPDefinitions/SmdpSigned2.ta.mjs";
 import { type Certificate, _decode_Certificate, _encode_Certificate } from "@wildboar/pki-stub";
@@ -46,7 +46,7 @@ class AuthenticateClientOk {
      * @public
      * @readonly
      */
-    readonly transactionId: TransactionId;
+    public readonly transactionId: TransactionId;
     /**
      * @summary `profileMetaData`.
      * @description
@@ -57,7 +57,7 @@ class AuthenticateClientOk {
      * @public
      * @readonly
      */
-    readonly profileMetaData: StoreMetadataRequest;
+    public readonly profileMetaData: StoreMetadataRequest;
     /**
      * @summary `smdpSigned2`.
      * @description
@@ -68,7 +68,7 @@ class AuthenticateClientOk {
      * @public
      * @readonly
      */
-    readonly smdpSigned2: SmdpSigned2;
+    public readonly smdpSigned2: SmdpSigned2;
     /**
      * @summary `smdpSignature2`.
      * @description
@@ -78,7 +78,7 @@ class AuthenticateClientOk {
      * @public
      * @readonly
      */
-    readonly smdpSignature2: OCTET_STRING;
+    public readonly smdpSignature2: OCTET_STRING;
     /**
      * @summary `smdpCertificate`.
      * @description
@@ -88,7 +88,7 @@ class AuthenticateClientOk {
      * @public
      * @readonly
      */
-    readonly smdpCertificate: Certificate;
+    public readonly smdpCertificate: Certificate;
 
     constructor (
         transactionId: TransactionId,

@@ -1,7 +1,7 @@
 /* eslint-disable */
 import {
-    ENUMERATED,
-    ASN1Element as _Element,
+    type ENUMERATED,
+    type ASN1Element as _Element,
     ASN1TagClass as _TagClass,
     ASN1Construction as _Construction,
     ASN1UniversalType as _UniversalType,
@@ -41,7 +41,7 @@ export type RequestState = _enum_for_RequestState | ENUMERATED;
  * @constant
  * @type {number}
  */
-export const RequestState_requested: RequestState = 1; /* LONG_NAMED_ENUMERATED_VALUE */
+export const RequestState_requested: _enum_for_RequestState.requested = _enum_for_RequestState.requested; /* LONG_NAMED_ENUMERATED_VALUE */
 
 
 /**
@@ -49,7 +49,7 @@ export const RequestState_requested: RequestState = 1; /* LONG_NAMED_ENUMERATED_
  * @constant
  * @type {number}
  */
-export const requested: RequestState = RequestState_requested; /* SHORT_NAMED_ENUMERATED_VALUE */
+export const requested: _enum_for_RequestState.requested = RequestState_requested; /* SHORT_NAMED_ENUMERATED_VALUE */
 
 
 /**
@@ -57,7 +57,7 @@ export const requested: RequestState = RequestState_requested; /* SHORT_NAMED_EN
  * @constant
  * @type {number}
  */
-export const RequestState_provided: RequestState = 2; /* LONG_NAMED_ENUMERATED_VALUE */
+export const RequestState_provided: _enum_for_RequestState.provided = _enum_for_RequestState.provided; /* LONG_NAMED_ENUMERATED_VALUE */
 
 
 /**
@@ -65,7 +65,7 @@ export const RequestState_provided: RequestState = 2; /* LONG_NAMED_ENUMERATED_V
  * @constant
  * @type {number}
  */
-export const provided: RequestState = RequestState_provided; /* SHORT_NAMED_ENUMERATED_VALUE */
+export const provided: _enum_for_RequestState.provided = RequestState_provided; /* SHORT_NAMED_ENUMERATED_VALUE */
 
 
 /**
@@ -73,7 +73,7 @@ export const provided: RequestState = RequestState_provided; /* SHORT_NAMED_ENUM
  * @constant
  * @type {number}
  */
-export const RequestState_denied: RequestState = 3; /* LONG_NAMED_ENUMERATED_VALUE */
+export const RequestState_denied: _enum_for_RequestState.denied = _enum_for_RequestState.denied; /* LONG_NAMED_ENUMERATED_VALUE */
 
 
 /**
@@ -81,17 +81,17 @@ export const RequestState_denied: RequestState = 3; /* LONG_NAMED_ENUMERATED_VAL
  * @constant
  * @type {number}
  */
-export const denied: RequestState = RequestState_denied; /* SHORT_NAMED_ENUMERATED_VALUE */
+export const denied: _enum_for_RequestState.denied = RequestState_denied; /* SHORT_NAMED_ENUMERATED_VALUE */
 
 
 
 
-export const _decode_RequestState = $._decodeEnumerated;
+export const _decode_RequestState: $.ASN1Decoder<number> = $._decodeEnumerated;
 
 
 
 
-export const _encode_RequestState = $._encodeEnumerated;
+export const _encode_RequestState: $.ASN1Encoder<number> = $._encodeEnumerated;
 
 
 /* eslint-enable */

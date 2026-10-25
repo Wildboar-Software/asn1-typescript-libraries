@@ -1,7 +1,7 @@
 /* eslint-disable */
 import {
-    BOOLEAN,
-    ASN1Element as _Element,
+    type BOOLEAN,
+    type ASN1Element as _Element,
     ASN1TagClass as _TagClass,
     ASN1Construction as _Construction,
     ASN1UniversalType as _UniversalType,
@@ -27,10 +27,10 @@ import * as $ from '@wildboar/asn1/functional';
 export type ServiceFlag = BOOLEAN; // BooleanType
 
 
-export const _decode_ServiceFlag = $._decodeBoolean;
+export const _decode_ServiceFlag: $.ASN1Decoder<boolean> = $._decodeBoolean;
 
 
-export const _encode_ServiceFlag = $._encodeBoolean;
+export const _encode_ServiceFlag: $.ASN1Encoder<boolean> = $._encodeBoolean;
 
 
 /* eslint-enable */

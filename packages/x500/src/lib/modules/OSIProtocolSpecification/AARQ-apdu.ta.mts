@@ -1,49 +1,49 @@
 /* eslint-disable */
 import {
-    ASN1Element as _Element,
+    type ASN1Element as _Element,
     ASN1TagClass as _TagClass,
-    OPTIONAL,
+    type OPTIONAL,
     TRUE_BIT,
 } from "@wildboar/asn1";
 import * as $ from "@wildboar/asn1/functional";
 import {
-    Name,
+    type Name,
     _decode_Name,
     _encode_Name,
 } from "../InformationFramework/Name.ta.mjs";
 import {
-    RelativeDistinguishedName,
+    type RelativeDistinguishedName,
     _decode_RelativeDistinguishedName,
     _encode_RelativeDistinguishedName,
 } from "../InformationFramework/RelativeDistinguishedName.ta.mjs";
 import {
-    AARQ_apdu_protocol_version,
+    type AARQ_apdu_protocol_version,
     AARQ_apdu_protocol_version_version1 /* IMPORTED_LONG_NAMED_BIT */,
     _decode_AARQ_apdu_protocol_version,
     _encode_AARQ_apdu_protocol_version,
 } from "../OSIProtocolSpecification/AARQ-apdu-protocol-version.ta.mjs";
 import {
-    AE_invocation_identifier,
+    type AE_invocation_identifier,
     _decode_AE_invocation_identifier,
     _encode_AE_invocation_identifier,
 } from "../OSIProtocolSpecification/AE-invocation-identifier.ta.mjs";
 import {
-    AP_invocation_identifier,
+    type AP_invocation_identifier,
     _decode_AP_invocation_identifier,
     _encode_AP_invocation_identifier,
 } from "../OSIProtocolSpecification/AP-invocation-identifier.ta.mjs";
 import {
-    Application_context_name,
+    type Application_context_name,
     _decode_Application_context_name,
     _encode_Application_context_name,
 } from "../OSIProtocolSpecification/Application-context-name.ta.mjs";
 import {
-    Association_informationBind,
+    type Association_informationBind,
     _decode_Association_informationBind,
     _encode_Association_informationBind,
 } from "../OSIProtocolSpecification/Association-informationBind.ta.mjs";
 import {
-    Implementation_data,
+    type Implementation_data,
     _decode_Implementation_data,
     _encode_Implementation_data,
 } from "../OSIProtocolSpecification/Implementation-data.ta.mjs";
@@ -59,13 +59,13 @@ import {
  *                                              DEFAULT {version1},
  *   application-context-name          [1]  Application-context-name,
  *   called-AP-title                   [2]  Name OPTIONAL,
- *   called-AE-qualifier               [3]  RelativeDistinguishedName    OPTIONAL,
- *   called-AP-invocation-identifier   [4]  AP-invocation-identifier     OPTIONAL,
- *   called-AE-invocation-identifier   [5]  AE-invocation-identifier     OPTIONAL,
- *   calling-AP-title                  [6]  Name                         OPTIONAL,
- *   calling-AE-qualifier              [7]  RelativeDistinguishedName    OPTIONAL,
- *   calling-AP-invocation-identifier  [8]  AP-invocation-identifier     OPTIONAL,
- *   calling-AE-invocation-identifier  [9]  AE-invocation-identifier     OPTIONAL,
+ *   called-AE-qualifier               [3]  RelativeDistinguishedName    type OPTIONAL,
+ *   called-AP-invocation-identifier   [4]  AP-invocation-identifier     type OPTIONAL,
+ *   called-AE-invocation-identifier   [5]  AE-invocation-identifier     type OPTIONAL,
+ *   calling-AP-title                  [6]  Name                         type OPTIONAL,
+ *   calling-AE-qualifier              [7]  RelativeDistinguishedName    type OPTIONAL,
+ *   calling-AP-invocation-identifier  [8]  AP-invocation-identifier     type OPTIONAL,
+ *   calling-AE-invocation-identifier  [9]  AE-invocation-identifier     type OPTIONAL,
  *   implementation-information        [29] IMPLICIT Implementation-data OPTIONAL,
  *   user-information                  [30] IMPLICIT
  *                                            Association-informationBind{{Protocols}}}
@@ -73,80 +73,106 @@ import {
  *
  */
 export class AARQ_apdu {
+    /**
+     * @summary `protocol_version`.
+     * @public
+     * @readonly
+     */
+    public readonly protocol_version: OPTIONAL<AARQ_apdu_protocol_version>;
+    /**
+     * @summary `application_context_name`.
+     * @public
+     * @readonly
+     */
+    public readonly application_context_name: Application_context_name;
+    /**
+     * @summary `called_AP_title`.
+     * @public
+     * @readonly
+     */
+    public readonly called_AP_title: OPTIONAL<Name>;
+    /**
+     * @summary `called_AE_qualifier`.
+     * @public
+     * @readonly
+     */
+    public readonly called_AE_qualifier: OPTIONAL<RelativeDistinguishedName>;
+    /**
+     * @summary `called_AP_invocation_identifier`.
+     * @public
+     * @readonly
+     */
+    public readonly called_AP_invocation_identifier: OPTIONAL<AP_invocation_identifier>;
+    /**
+     * @summary `called_AE_invocation_identifier`.
+     * @public
+     * @readonly
+     */
+    public readonly called_AE_invocation_identifier: OPTIONAL<AE_invocation_identifier>;
+    /**
+     * @summary `calling_AP_title`.
+     * @public
+     * @readonly
+     */
+    public readonly calling_AP_title: OPTIONAL<Name>;
+    /**
+     * @summary `calling_AE_qualifier`.
+     * @public
+     * @readonly
+     */
+    public readonly calling_AE_qualifier: OPTIONAL<RelativeDistinguishedName>;
+    /**
+     * @summary `calling_AP_invocation_identifier`.
+     * @public
+     * @readonly
+     */
+    public readonly calling_AP_invocation_identifier: OPTIONAL<AP_invocation_identifier>;
+    /**
+     * @summary `calling_AE_invocation_identifier`.
+     * @public
+     * @readonly
+     */
+    public readonly calling_AE_invocation_identifier: OPTIONAL<AE_invocation_identifier>;
+    /**
+     * @summary `implementation_information`.
+     * @public
+     * @readonly
+     */
+    public readonly implementation_information: OPTIONAL<Implementation_data>;
+    /**
+     * @summary `user_information`.
+     * @public
+     * @readonly
+     */
+    public readonly user_information: Association_informationBind;
+
     constructor(
-        /**
-         * @summary `protocol_version`.
-         * @public
-         * @readonly
-         */
-        readonly protocol_version: OPTIONAL<AARQ_apdu_protocol_version>,
-        /**
-         * @summary `application_context_name`.
-         * @public
-         * @readonly
-         */
-        readonly application_context_name: Application_context_name,
-        /**
-         * @summary `called_AP_title`.
-         * @public
-         * @readonly
-         */
-        readonly called_AP_title: OPTIONAL<Name>,
-        /**
-         * @summary `called_AE_qualifier`.
-         * @public
-         * @readonly
-         */
-        readonly called_AE_qualifier: OPTIONAL<RelativeDistinguishedName>,
-        /**
-         * @summary `called_AP_invocation_identifier`.
-         * @public
-         * @readonly
-         */
-        readonly called_AP_invocation_identifier: OPTIONAL<AP_invocation_identifier>,
-        /**
-         * @summary `called_AE_invocation_identifier`.
-         * @public
-         * @readonly
-         */
-        readonly called_AE_invocation_identifier: OPTIONAL<AE_invocation_identifier>,
-        /**
-         * @summary `calling_AP_title`.
-         * @public
-         * @readonly
-         */
-        readonly calling_AP_title: OPTIONAL<Name>,
-        /**
-         * @summary `calling_AE_qualifier`.
-         * @public
-         * @readonly
-         */
-        readonly calling_AE_qualifier: OPTIONAL<RelativeDistinguishedName>,
-        /**
-         * @summary `calling_AP_invocation_identifier`.
-         * @public
-         * @readonly
-         */
-        readonly calling_AP_invocation_identifier: OPTIONAL<AP_invocation_identifier>,
-        /**
-         * @summary `calling_AE_invocation_identifier`.
-         * @public
-         * @readonly
-         */
-        readonly calling_AE_invocation_identifier: OPTIONAL<AE_invocation_identifier>,
-        /**
-         * @summary `implementation_information`.
-         * @public
-         * @readonly
-         */
-        readonly implementation_information: OPTIONAL<Implementation_data>,
-        /**
-         * @summary `user_information`.
-         * @public
-         * @readonly
-         */
-        readonly user_information: Association_informationBind
-    ) {}
+        protocol_version: OPTIONAL<AARQ_apdu_protocol_version>,
+        application_context_name: Application_context_name,
+        called_AP_title: OPTIONAL<Name>,
+        called_AE_qualifier: OPTIONAL<RelativeDistinguishedName>,
+        called_AP_invocation_identifier: OPTIONAL<AP_invocation_identifier>,
+        called_AE_invocation_identifier: OPTIONAL<AE_invocation_identifier>,
+        calling_AP_title: OPTIONAL<Name>,
+        calling_AE_qualifier: OPTIONAL<RelativeDistinguishedName>,
+        calling_AP_invocation_identifier: OPTIONAL<AP_invocation_identifier>,
+        calling_AE_invocation_identifier: OPTIONAL<AE_invocation_identifier>,
+        implementation_information: OPTIONAL<Implementation_data>,
+        user_information: Association_informationBind
+    ) {
+        this.protocol_version = protocol_version;
+        this.application_context_name = application_context_name;
+        this.called_AP_title = called_AP_title;
+        this.called_AE_qualifier = called_AE_qualifier;
+        this.called_AP_invocation_identifier = called_AP_invocation_identifier;
+        this.called_AE_invocation_identifier = called_AE_invocation_identifier;
+        this.calling_AP_title = calling_AP_title;
+        this.calling_AE_qualifier = calling_AE_qualifier;
+        this.calling_AP_invocation_identifier = calling_AP_invocation_identifier;
+        this.calling_AE_invocation_identifier = calling_AE_invocation_identifier;
+        this.implementation_information = implementation_information;
+        this.user_information = user_information;
+    }
 
     /**
      * @summary Restructures an object into a AARQ_apdu

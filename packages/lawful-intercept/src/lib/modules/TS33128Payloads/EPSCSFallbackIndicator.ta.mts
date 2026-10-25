@@ -96,7 +96,7 @@ type EPSCSFallbackIndicator = _enum_for_EPSCSFallbackIndicator;
  * @enum {number}
  */
 export
-const EPSCSFallbackIndicator = _enum_for_EPSCSFallbackIndicator;
+const EPSCSFallbackIndicator: typeof _enum_for_EPSCSFallbackIndicator = _enum_for_EPSCSFallbackIndicator;
 
 /**
  * @summary EPSCSFallbackIndicator_cSFallbackRequired
@@ -110,7 +110,7 @@ const EPSCSFallbackIndicator = _enum_for_EPSCSFallbackIndicator;
  * @type {number}
  */
 export
-const EPSCSFallbackIndicator_cSFallbackRequired: EPSCSFallbackIndicator = EPSCSFallbackIndicator.cSFallbackRequired; /* LONG_NAMED_ENUMERATED_VALUE */
+const EPSCSFallbackIndicator_cSFallbackRequired: _enum_for_EPSCSFallbackIndicator.cSFallbackRequired = EPSCSFallbackIndicator.cSFallbackRequired; /* LONG_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary cSFallbackRequired
@@ -124,7 +124,7 @@ const EPSCSFallbackIndicator_cSFallbackRequired: EPSCSFallbackIndicator = EPSCSF
  * @type {number}
  */
 export
-const cSFallbackRequired: EPSCSFallbackIndicator = EPSCSFallbackIndicator.cSFallbackRequired; /* SHORT_NAMED_ENUMERATED_VALUE */
+const cSFallbackRequired: _enum_for_EPSCSFallbackIndicator.cSFallbackRequired = EPSCSFallbackIndicator.cSFallbackRequired; /* SHORT_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary EPSCSFallbackIndicator_cSFallbackHighPriority
@@ -138,7 +138,7 @@ const cSFallbackRequired: EPSCSFallbackIndicator = EPSCSFallbackIndicator.cSFall
  * @type {number}
  */
 export
-const EPSCSFallbackIndicator_cSFallbackHighPriority: EPSCSFallbackIndicator = EPSCSFallbackIndicator.cSFallbackHighPriority; /* LONG_NAMED_ENUMERATED_VALUE */
+const EPSCSFallbackIndicator_cSFallbackHighPriority: _enum_for_EPSCSFallbackIndicator.cSFallbackHighPriority = EPSCSFallbackIndicator.cSFallbackHighPriority; /* LONG_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary cSFallbackHighPriority
@@ -152,7 +152,7 @@ const EPSCSFallbackIndicator_cSFallbackHighPriority: EPSCSFallbackIndicator = EP
  * @type {number}
  */
 export
-const cSFallbackHighPriority: EPSCSFallbackIndicator = EPSCSFallbackIndicator.cSFallbackHighPriority; /* SHORT_NAMED_ENUMERATED_VALUE */
+const cSFallbackHighPriority: _enum_for_EPSCSFallbackIndicator.cSFallbackHighPriority = EPSCSFallbackIndicator.cSFallbackHighPriority; /* SHORT_NAMED_ENUMERATED_VALUE */
 export const _decode_EPSCSFallbackIndicator: $.ASN1Decoder<EPSCSFallbackIndicator> = $._decodeEnumerated;
 export const _encode_EPSCSFallbackIndicator: $.ASN1Encoder<EPSCSFallbackIndicator> = $._encodeEnumerated;
 

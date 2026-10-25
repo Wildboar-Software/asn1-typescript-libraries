@@ -1,9 +1,9 @@
 /* eslint-disable */
 import {
-    OPTIONAL,
-    INTEGER,
-    PrintableString,
-    ASN1Element as _Element,
+    type OPTIONAL,
+    type INTEGER,
+    type PrintableString,
+    type ASN1Element as _Element,
     ASN1TagClass as _TagClass,
     ASN1Construction as _Construction,
     ASN1UniversalType as _UniversalType,
@@ -14,7 +14,7 @@ import {
 } from '@wildboar/asn1';
 import * as $ from '@wildboar/asn1/functional';
 import {
-    TimeoutPeriod,
+    type TimeoutPeriod,
     _decode_TimeoutPeriod,
     _encode_TimeoutPeriod,
 } from '../Test-ASN1Module/TimeoutPeriod.ta.mjs';
@@ -35,45 +35,55 @@ import {
  *
  */
 export class ResourceSelfTestResults_nonIntermediate {
+    /**
+     * @summary `phases`.
+     * @description
+     *
+     * Phases that were run. X.737 A.7.
+     * @public
+     * @readonly
+     */
+    public readonly phases: INTEGER[];
+    /**
+     * @summary `iteration`.
+     * @description
+     *
+     * Iterations performed. X.737 A.7.
+     * @public
+     * @readonly
+     */
+    public readonly iteration: INTEGER;
+    /**
+     * @summary `timeoutPeriod`.
+     * @description
+     *
+     * Time-out that applied. X.737 A.7.
+     * @public
+     * @readonly
+     */
+    public readonly timeoutPeriod: TimeoutPeriod;
+    /**
+     * @summary `finalResponse`.
+     * @description
+     *
+     * Printable additional result (exercise-
+     * specific info or follow-up). Optional. X.737 §7.7.8.
+     * @public
+     * @readonly
+     */
+    public readonly finalResponse?: OPTIONAL<PrintableString>;
+
     constructor(
-        /**
-         * @summary `phases`.
-         * @description
-         *
-         * Phases that were run. X.737 A.7.
-         * @public
-         * @readonly
-         */
-        readonly phases: INTEGER[],
-        /**
-         * @summary `iteration`.
-         * @description
-         *
-         * Iterations performed. X.737 A.7.
-         * @public
-         * @readonly
-         */
-        readonly iteration: INTEGER,
-        /**
-         * @summary `timeoutPeriod`.
-         * @description
-         *
-         * Time-out that applied. X.737 A.7.
-         * @public
-         * @readonly
-         */
-        readonly timeoutPeriod: TimeoutPeriod,
-        /**
-         * @summary `finalResponse`.
-         * @description
-         *
-         * Printable additional result (exercise-
-         * specific info or follow-up). Optional. X.737 §7.7.8.
-         * @public
-         * @readonly
-         */
-        readonly finalResponse?: OPTIONAL<PrintableString>
-    ) {}
+        phases: INTEGER[],
+        iteration: INTEGER,
+        timeoutPeriod: TimeoutPeriod,
+        finalResponse?: OPTIONAL<PrintableString>
+    ) {
+        this.phases = phases;
+        this.iteration = iteration;
+        this.timeoutPeriod = timeoutPeriod;
+        this.finalResponse = finalResponse;
+    }
 
     /**
      * @summary Restructures an object into a ResourceSelfTestResults_nonIntermediate

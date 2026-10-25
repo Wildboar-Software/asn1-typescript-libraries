@@ -1,7 +1,7 @@
 /* eslint-disable */
 import {
-  OPTIONAL,
-  INTEGER,
+  type OPTIONAL,
+  type INTEGER,
   ASN1Element as _Element,
   ASN1TagClass as _TagClass,
   ASN1Construction as _Construction,
@@ -50,7 +50,7 @@ export class NameSurrogate {
    * @public
    * @readonly
    */
-  readonly prefix_string_index: OPTIONAL<INTEGER>;
+  public readonly prefix_string_index: OPTIONAL<INTEGER>;
   /**
    * @summary `namespace_name_string_index`.
    * @description NAMESPACE NAME table index. Absent only
@@ -60,7 +60,7 @@ export class NameSurrogate {
    * @public
    * @readonly
    */
-  readonly namespace_name_string_index: OPTIONAL<INTEGER>;
+  public readonly namespace_name_string_index: OPTIONAL<INTEGER>;
   /**
    * @summary `local_name_string_index`.
    * @description LOCAL NAME table index; always present.
@@ -68,7 +68,7 @@ export class NameSurrogate {
    * @public
    * @readonly
    */
-  readonly local_name_string_index: INTEGER;
+  public readonly local_name_string_index: INTEGER;
 
   constructor(
     prefix_string_index: OPTIONAL<INTEGER>,

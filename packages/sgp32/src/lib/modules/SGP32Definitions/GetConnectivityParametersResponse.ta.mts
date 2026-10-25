@@ -1,11 +1,11 @@
 /* eslint-disable */
 import {
-    ASN1Element as _Element,
+    type ASN1Element as _Element,
     ASN1TagClass as _TagClass
 } from "@wildboar/asn1";
 import * as $ from "@wildboar/asn1/functional";
 import { ConnectivityParameters, _decode_ConnectivityParameters, _encode_ConnectivityParameters } from "../SGP32Definitions/ConnectivityParameters.ta.mjs";
-import { ConnectivityParametersError, _decode_ConnectivityParametersError, _encode_ConnectivityParametersError } from "../SGP32Definitions/ConnectivityParametersError.ta.mjs";
+import { type ConnectivityParametersError, _decode_ConnectivityParametersError, _encode_ConnectivityParametersError } from "../SGP32Definitions/ConnectivityParametersError.ta.mjs";
 
 
 /**

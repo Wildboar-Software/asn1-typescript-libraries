@@ -1,8 +1,8 @@
 /* eslint-disable */
 import {
-    OPTIONAL,
-    BOOLEAN,
-    ASN1Element as _Element,
+    type OPTIONAL,
+    type BOOLEAN,
+    type ASN1Element as _Element,
     ASN1TagClass as _TagClass,
     ASN1Construction as _Construction,
     ASN1UniversalType as _UniversalType,
@@ -12,7 +12,7 @@ import {
     ASN1ConstructionError as _ConstructionError,
 } from "@wildboar/asn1";
 import * as $ from "@wildboar/asn1/functional";
-import { ObjectName, _decode_ObjectName, _encode_ObjectName } from "../ISO-9506-MMS-1/ObjectName.ta.mjs";
+import { type ObjectName, _decode_ObjectName, _encode_ObjectName } from "../ISO-9506-MMS-1/ObjectName.ta.mjs";
 
 
 /**
@@ -38,31 +38,37 @@ import { ObjectName, _decode_ObjectName, _encode_ObjectName } from "../ISO-9506-
  */
 export
 class ReportAccessControlledObjects_Response {
+    /**
+     * @summary `listOfNames`.
+     * @description
+     *
+     * Names whose `&accessControl` identifies the requested ACL. Zero or
+     * more; ordered per ISO 9506-1:2003 §5.4.2. ISO 9506-1:2003 §9.5.1.2.1.
+     *
+     * @public
+     * @readonly
+     */
+    public readonly listOfNames: ObjectName[];
+    /**
+     * @summary `moreFollows`.
+     * @description
+     *
+     * True if further requests are needed to retrieve the rest. Shall be
+     * false when the list is empty or contains the last name. ASN.1 DEFAULT
+     * FALSE. ISO 9506-1:2003 §9.5.1.2.2; ISO 9506-2:2003 §9.5.
+     *
+     * @public
+     * @readonly
+     */
+    public readonly moreFollows?: OPTIONAL<BOOLEAN>;
+
     constructor (
-        /**
-         * @summary `listOfNames`.
-         * @description
-         *
-         * Names whose `&accessControl` identifies the requested ACL. Zero or
-         * more; ordered per ISO 9506-1:2003 §5.4.2. ISO 9506-1:2003 §9.5.1.2.1.
-         *
-         * @public
-         * @readonly
-         */
-        readonly listOfNames: ObjectName[],
-        /**
-         * @summary `moreFollows`.
-         * @description
-         *
-         * True if further requests are needed to retrieve the rest. Shall be
-         * false when the list is empty or contains the last name. ASN.1 DEFAULT
-         * FALSE. ISO 9506-1:2003 §9.5.1.2.2; ISO 9506-2:2003 §9.5.
-         *
-         * @public
-         * @readonly
-         */
-        readonly moreFollows?: OPTIONAL<BOOLEAN>
-    ) {}
+        listOfNames: ObjectName[],
+        moreFollows?: OPTIONAL<BOOLEAN>
+    ) {
+        this.listOfNames = listOfNames;
+        this.moreFollows = moreFollows;
+    }
 
     /**
      * @summary Restructures an object into a ReportAccessControlledObjects_Response

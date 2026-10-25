@@ -1,12 +1,12 @@
 /* eslint-disable */
 import {
-    NULL,
-    OPTIONAL,
-    ASN1Element as _Element,
+    type NULL,
+    type OPTIONAL,
+    type ASN1Element as _Element,
     ASN1TagClass as _TagClass
 } from "@wildboar/asn1";
 import * as $ from "@wildboar/asn1/functional";
-import { Ext_SS_Status, _decode_Ext_SS_Status, _encode_Ext_SS_Status } from "../MAP-CommonDataTypes/Ext-SS-Status.ta.mjs";
+import { type Ext_SS_Status, _decode_Ext_SS_Status, _encode_Ext_SS_Status } from "../MAP-CommonDataTypes/Ext-SS-Status.ta.mjs";
 import { OverrideCategory, _decode_OverrideCategory, _encode_OverrideCategory, _enum_for_OverrideCategory } from "../MAP-SS-DataTypes/OverrideCategory.ta.mjs";
 
 
@@ -24,7 +24,7 @@ import { OverrideCategory, _decode_OverrideCategory, _encode_OverrideCategory, _
  * ClipData ::= SEQUENCE {
  *     ss-Status    [1] Ext-SS-Status,
  *     overrideCategory    [2] OverrideCategory,
- *     notificationToCSE    [3] NULL    OPTIONAL,
+ *     notificationToCSE    [3] NULL    type OPTIONAL,
  *     ... }
  * ```
  * 
@@ -32,41 +32,51 @@ import { OverrideCategory, _decode_OverrideCategory, _encode_OverrideCategory, _
  */
 export
 class ClipData {
+    /**
+     * @summary `ss_Status`.
+     * @public
+     * @readonly
+     */
+    public readonly ss_Status: Ext_SS_Status;
+    /**
+     * @summary `overrideCategory`.
+     * @description
+     *
+     * CLIP override category (3GPP TS 29.002 V19.1.0 clauses 7.6.4.4 and
+     * 17.7.1).
+     *
+     * @public
+     * @readonly
+     */
+    public readonly overrideCategory: OverrideCategory;
+    /**
+     * @summary `notificationToCSE`.
+     * @description
+     *
+     * Notification to CSE flag (3GPP TS 29.002 V19.1.0 clause 17.7.1).
+     *
+     * @public
+     * @readonly
+     */
+    public readonly notificationToCSE?: OPTIONAL<NULL>;
+    /**
+     * @summary Extensions that are not recognized.
+     * @public
+     * @readonly
+     */
+    public readonly _unrecognizedExtensionsList: _Element[];
+
     constructor (
-        /**
-         * @summary `ss_Status`.
-         * @public
-         * @readonly
-         */
-        readonly ss_Status: Ext_SS_Status,
-        /**
-         * @summary `overrideCategory`.
-         * @description
-         *
-         * CLIP override category (3GPP TS 29.002 V19.1.0 clauses 7.6.4.4 and
-         * 17.7.1).
-         *
-         * @public
-         * @readonly
-         */
-        readonly overrideCategory: OverrideCategory,
-        /**
-         * @summary `notificationToCSE`.
-         * @description
-         *
-         * Notification to CSE flag (3GPP TS 29.002 V19.1.0 clause 17.7.1).
-         *
-         * @public
-         * @readonly
-         */
-        readonly notificationToCSE?: OPTIONAL<NULL>,
-        /**
-         * @summary Extensions that are not recognized.
-         * @public
-         * @readonly
-         */
-        readonly _unrecognizedExtensionsList: _Element[] = []
-    ) {}
+        ss_Status: Ext_SS_Status,
+        overrideCategory: OverrideCategory,
+        notificationToCSE?: OPTIONAL<NULL>,
+        _unrecognizedExtensionsList: _Element[] = []
+    ) {
+        this.ss_Status = ss_Status;
+        this.overrideCategory = overrideCategory;
+        this.notificationToCSE = notificationToCSE;
+        this._unrecognizedExtensionsList = _unrecognizedExtensionsList;
+    }
 
     /**
      * @summary Restructures an object into a ClipData
@@ -90,7 +100,7 @@ class ClipData {
          * @static
          */
 
-    public static _enum_for_overrideCategory = _enum_for_OverrideCategory;
+    public static _enum_for_overrideCategory: typeof _enum_for_OverrideCategory = _enum_for_OverrideCategory;
 }
 
 /**

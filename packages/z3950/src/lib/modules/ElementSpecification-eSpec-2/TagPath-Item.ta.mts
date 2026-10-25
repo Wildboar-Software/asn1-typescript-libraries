@@ -1,12 +1,12 @@
 /* eslint-disable */
 import {
-    NULL,
-    ASN1Element as _Element,
+    type NULL,
+    type ASN1Element as _Element,
     ASN1TagClass as _TagClass
 } from "@wildboar/asn1";
 import * as $ from "@wildboar/asn1/functional";
 import { TagPath_Item_specificTag, _decode_TagPath_Item_specificTag, _encode_TagPath_Item_specificTag } from "../ElementSpecification-eSpec-2/TagPath-Item-specificTag.ta.mjs";
-import { Occurrences, _decode_Occurrences, _encode_Occurrences } from "../ElementSpecification-eSpec-2/Occurrences.ta.mjs";
+import { type Occurrences, _decode_Occurrences, _encode_Occurrences } from "../ElementSpecification-eSpec-2/Occurrences.ta.mjs";
 
 
 /**

@@ -3,7 +3,7 @@ import {
     ASN1Element as _Element
 } from "@wildboar/asn1";
 import * as $ from "@wildboar/asn1/functional";
-import { Integer4, _decode_Integer4, _encode_Integer4 } from "../IN-common-datatypes/Integer4.ta.mjs";
+import { type Integer4, _decode_Integer4, _encode_Integer4 } from "../IN-common-datatypes/Integer4.ta.mjs";
 // export { Integer4, _decode_Integer4, _encode_Integer4 } from "../IN-common-datatypes/Integer4.ta.mjs";
 
 
@@ -20,21 +20,13 @@ import { Integer4, _decode_Integer4, _encode_Integer4 } from "../IN-common-datat
 export
 type RecordedMessageID = Integer4; // DefinedType
 
-let _cached_decoder_for_RecordedMessageID: $.ASN1Decoder<RecordedMessageID> | null = null;
-
 /**
  * @summary Decodes an ASN.1 element into a(n) RecordedMessageID
  * @function
  * @param el The element being decoded.
  * @returns The decoded data structure.
  */
-export
-function _decode_RecordedMessageID (el: _Element): RecordedMessageID {
-    if (!_cached_decoder_for_RecordedMessageID) { _cached_decoder_for_RecordedMessageID = _decode_Integer4; }
-    return _cached_decoder_for_RecordedMessageID(el);
-}
-
-let _cached_encoder_for_RecordedMessageID: $.ASN1Encoder<RecordedMessageID> | null = null;
+export const _decode_RecordedMessageID: $.ASN1Decoder<RecordedMessageID> = _decode_Integer4;
 
 /**
  * @summary Encodes a(n) RecordedMessageID into an ASN.1 Element.
@@ -43,11 +35,7 @@ let _cached_encoder_for_RecordedMessageID: $.ASN1Encoder<RecordedMessageID> | nu
  * @param elGetter A function that can be used to get new ASN.1 elements.
  * @returns {_Element} The RecordedMessageID, encoded as an ASN.1 Element.
  */
-export
-function _encode_RecordedMessageID (value: RecordedMessageID, elGetter: $.ASN1Encoder<any>): _Element {
-    if (!_cached_encoder_for_RecordedMessageID) { _cached_encoder_for_RecordedMessageID = _encode_Integer4; }
-    return _cached_encoder_for_RecordedMessageID(value, elGetter);
-}
+export const _encode_RecordedMessageID: $.ASN1Encoder<RecordedMessageID> = _encode_Integer4;
 
 
 /* eslint-enable */

@@ -12,7 +12,7 @@ import {
 } from '@wildboar/asn1';
 import * as $ from '@wildboar/asn1/functional';
 import {
-  LDAPString,
+  type LDAPString,
   _decode_LDAPString,
   _encode_LDAPString,
 } from '../Lightweight-Directory-Access-Protocol-V3/LDAPString.ta.mjs';

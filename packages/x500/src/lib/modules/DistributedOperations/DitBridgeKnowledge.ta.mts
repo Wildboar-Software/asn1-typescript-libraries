@@ -1,17 +1,17 @@
 /* eslint-disable */
 import {
-    ASN1Element as _Element,
+    type ASN1Element as _Element,
     ASN1TagClass as _TagClass,
-    OPTIONAL,
+    type OPTIONAL,
 } from "@wildboar/asn1";
 import * as $ from "@wildboar/asn1/functional";
 import {
-    MasterAndShadowAccessPoints,
+    type MasterAndShadowAccessPoints,
     _decode_MasterAndShadowAccessPoints,
     _encode_MasterAndShadowAccessPoints,
 } from "../DistributedOperations/MasterAndShadowAccessPoints.ta.mjs";
 import {
-    UnboundedDirectoryString,
+    type UnboundedDirectoryString,
     _decode_UnboundedDirectoryString,
     _encode_UnboundedDirectoryString,
 } from "../SelectedAttributeTypes/UnboundedDirectoryString.ta.mjs";
@@ -33,35 +33,43 @@ import {
  *
  */
 export class DitBridgeKnowledge {
+    /**
+     * @summary `domainLocalID`.
+     * @description
+     *
+     * Human-readable id of that DIT. Not a DN.
+     *
+     * @public
+     * @readonly
+     */
+    public readonly domainLocalID: OPTIONAL<UnboundedDirectoryString>;
+    /**
+     * @summary `accessPoints`.
+     * @description
+     *
+     * MasterAndShadowAccessPoints of the other DIT. Required; SIZE
+     * (1..MAX).
+     *
+     * @public
+     * @readonly
+     */
+    public readonly accessPoints: MasterAndShadowAccessPoints;
+    /**
+     * @summary Extensions that are not recognized.
+     * @public
+     * @readonly
+     */
+    public readonly _unrecognizedExtensionsList: _Element[];
+
     constructor(
-        /**
-         * @summary `domainLocalID`.
-         * @description
-         *
-         * Human-readable id of that DIT. Not a DN.
-         *
-         * @public
-         * @readonly
-         */
-        readonly domainLocalID: OPTIONAL<UnboundedDirectoryString>,
-        /**
-         * @summary `accessPoints`.
-         * @description
-         *
-         * MasterAndShadowAccessPoints of the other DIT. Required; SIZE
-         * (1..MAX).
-         *
-         * @public
-         * @readonly
-         */
-        readonly accessPoints: MasterAndShadowAccessPoints,
-        /**
-         * @summary Extensions that are not recognized.
-         * @public
-         * @readonly
-         */
-        readonly _unrecognizedExtensionsList: _Element[] = []
-    ) {}
+        domainLocalID: OPTIONAL<UnboundedDirectoryString>,
+        accessPoints: MasterAndShadowAccessPoints,
+        _unrecognizedExtensionsList: _Element[] = []
+    ) {
+        this.domainLocalID = domainLocalID;
+        this.accessPoints = accessPoints;
+        this._unrecognizedExtensionsList = _unrecognizedExtensionsList;
+    }
 
     /**
      * @summary Restructures an object into a DitBridgeKnowledge

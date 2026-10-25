@@ -1,8 +1,8 @@
 /* eslint-disable */
 import {
-    OPTIONAL,
-    BOOLEAN,
-    ASN1Element as _Element,
+    type OPTIONAL,
+    type BOOLEAN,
+    type ASN1Element as _Element,
     ASN1TagClass as _TagClass,
     ASN1Construction as _Construction,
     ASN1UniversalType as _UniversalType,
@@ -13,17 +13,17 @@ import {
 } from '@wildboar/asn1';
 import * as $ from '@wildboar/asn1/functional';
 import {
-    Filter,
+    type Filter,
     _decode_Filter,
     _encode_Filter,
 } from '../MSAbstractService/Filter.ta.mjs';
 import {
-    EDISupplementaryInformation,
+    type EDISupplementaryInformation,
     _decode_EDISupplementaryInformation,
     _encode_EDISupplementaryInformation,
 } from '../EDIMSInformationObjects/EDISupplementaryInformation.ta.mjs';
 import {
-    EDIAutoForwardRegistrationParameter_edi_forwarding_mode,
+    type EDIAutoForwardRegistrationParameter_edi_forwarding_mode,
     _decode_EDIAutoForwardRegistrationParameter_edi_forwarding_mode,
     _encode_EDIAutoForwardRegistrationParameter_edi_forwarding_mode,
 } from '../EDIMSAutoActionTypes/EDIAutoForwardRegistrationParameter-edi-forwarding-mode.ta.mjs';
@@ -61,44 +61,58 @@ import {
  *
  */
 export class EDIAutoForwardRegistrationParameter {
+    /**
+     * @summary `filter`.
+     * @public
+     * @readonly
+     */
+    public readonly filter: OPTIONAL<Filter>;
+    /**
+     * @summary `edi_supplementary_info`.
+     * @public
+     * @readonly
+     */
+    public readonly edi_supplementary_info: OPTIONAL<EDISupplementaryInformation>;
+    /**
+     * @summary `delete_after_forwarding`.
+     * @public
+     * @readonly
+     */
+    public readonly delete_after_forwarding: OPTIONAL<BOOLEAN>;
+    /**
+     * @summary `edi_forwarding_mode`.
+     * @public
+     * @readonly
+     */
+    public readonly edi_forwarding_mode: EDIAutoForwardRegistrationParameter_edi_forwarding_mode;
+    /**
+     * @summary `forwarding_envelope`.
+     * @public
+     * @readonly
+     */
+    public readonly forwarding_envelope: MessageSubmissionEnvelope;
+    /**
+     * @summary `submission_options`.
+     * @public
+     * @readonly
+     */
+    public readonly submission_options?: OPTIONAL<MSSubmissionOptions>;
+
     constructor(
-        /**
-         * @summary `filter`.
-         * @public
-         * @readonly
-         */
-        readonly filter: OPTIONAL<Filter>,
-        /**
-         * @summary `edi_supplementary_info`.
-         * @public
-         * @readonly
-         */
-        readonly edi_supplementary_info: OPTIONAL<EDISupplementaryInformation>,
-        /**
-         * @summary `delete_after_forwarding`.
-         * @public
-         * @readonly
-         */
-        readonly delete_after_forwarding: OPTIONAL<BOOLEAN>,
-        /**
-         * @summary `edi_forwarding_mode`.
-         * @public
-         * @readonly
-         */
-        readonly edi_forwarding_mode: EDIAutoForwardRegistrationParameter_edi_forwarding_mode,
-        /**
-         * @summary `forwarding_envelope`.
-         * @public
-         * @readonly
-         */
-        readonly forwarding_envelope: MessageSubmissionEnvelope,
-        /**
-         * @summary `submission_options`.
-         * @public
-         * @readonly
-         */
-        readonly submission_options?: OPTIONAL<MSSubmissionOptions>
-    ) {}
+        filter: OPTIONAL<Filter>,
+        edi_supplementary_info: OPTIONAL<EDISupplementaryInformation>,
+        delete_after_forwarding: OPTIONAL<BOOLEAN>,
+        edi_forwarding_mode: EDIAutoForwardRegistrationParameter_edi_forwarding_mode,
+        forwarding_envelope: MessageSubmissionEnvelope,
+        submission_options?: OPTIONAL<MSSubmissionOptions>
+    ) {
+        this.filter = filter;
+        this.edi_supplementary_info = edi_supplementary_info;
+        this.delete_after_forwarding = delete_after_forwarding;
+        this.edi_forwarding_mode = edi_forwarding_mode;
+        this.forwarding_envelope = forwarding_envelope;
+        this.submission_options = submission_options;
+    }
 
     /**
      * @summary Restructures an object into a EDIAutoForwardRegistrationParameter

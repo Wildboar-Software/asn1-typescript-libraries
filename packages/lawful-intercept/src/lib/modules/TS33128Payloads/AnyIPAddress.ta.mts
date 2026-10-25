@@ -57,7 +57,7 @@ type AnyIPAddress = _enum_for_AnyIPAddress;
  * @enum {number}
  */
 export
-const AnyIPAddress = _enum_for_AnyIPAddress;
+const AnyIPAddress: typeof _enum_for_AnyIPAddress = _enum_for_AnyIPAddress;
 
 /**
  * @summary AnyIPAddress_any_
@@ -65,7 +65,7 @@ const AnyIPAddress = _enum_for_AnyIPAddress;
  * @type {number}
  */
 export
-const AnyIPAddress_any_: AnyIPAddress = AnyIPAddress.any_; /* LONG_NAMED_ENUMERATED_VALUE */
+const AnyIPAddress_any_: _enum_for_AnyIPAddress.any_ = AnyIPAddress.any_; /* LONG_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary any_
@@ -73,7 +73,7 @@ const AnyIPAddress_any_: AnyIPAddress = AnyIPAddress.any_; /* LONG_NAMED_ENUMERA
  * @type {number}
  */
 export
-const any_: AnyIPAddress = AnyIPAddress.any_; /* SHORT_NAMED_ENUMERATED_VALUE */
+const any_: _enum_for_AnyIPAddress.any_ = AnyIPAddress.any_; /* SHORT_NAMED_ENUMERATED_VALUE */
 export const _decode_AnyIPAddress: $.ASN1Decoder<AnyIPAddress> = $._decodeEnumerated;
 export const _encode_AnyIPAddress: $.ASN1Encoder<AnyIPAddress> = $._encodeEnumerated;
 

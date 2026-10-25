@@ -1,7 +1,7 @@
 /* eslint-disable */
 import {
-    GeneralString,
-    ASN1Element as _Element,
+    type GeneralString,
+    type ASN1Element as _Element,
     ASN1TagClass as _TagClass,
     ASN1Construction as _Construction,
     ASN1UniversalType as _UniversalType,

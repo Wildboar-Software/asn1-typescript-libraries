@@ -1,8 +1,8 @@
 /* eslint-disable */
 import {
-    INTEGER,
+    type INTEGER,
     ASN1ConstructionError as _ConstructionError,
-    ASN1Element as _Element,
+    type ASN1Element as _Element,
     ASN1TagClass as _TagClass,
     ASN1OverflowError
 } from "@wildboar/asn1";
@@ -47,7 +47,7 @@ class SeqSigList {
      * @public
      * @readonly
      */
-    readonly id: INTEGER;
+    public readonly id: INTEGER;
     /**
      * @summary `signalList`.
      * @description
@@ -58,14 +58,14 @@ class SeqSigList {
      * @public
      * @readonly
      */
-    readonly signalList: Signal[];
+    public readonly signalList: Signal[];
 
     constructor (
         id: INTEGER,
         signalList: Signal[]
     ) {
-        this.id = id;
-        this.signalList = signalList;
+            this.id = id;
+            this.signalList = signalList;
             const n = typeof id === "bigint" ? id : BigInt(id);
             if (n < 0n || n > 65535n) {
                 throw new ASN1OverflowError("SeqSigList.id violates INTEGER range");

@@ -11,17 +11,17 @@ import {
 } from '@wildboar/asn1';
 import * as $ from '@wildboar/asn1/functional';
 import {
-  EndpointIRI,
+  type EndpointIRI,
   _decode_EndpointIRI,
   _encode_EndpointIRI,
 } from '../BIP/EndpointIRI.ta.mjs';
 import {
-  BioAPI_UUID,
+  type BioAPI_UUID,
   _decode_BioAPI_UUID,
   _encode_BioAPI_UUID,
 } from '../BIP/BioAPI-UUID.ta.mjs';
 import {
-  BioAPI_UNIT_EVENT_TYPE_MASK,
+  type BioAPI_UNIT_EVENT_TYPE_MASK,
   _decode_BioAPI_UNIT_EVENT_TYPE_MASK,
   _encode_BioAPI_UNIT_EVENT_TYPE_MASK,
 } from '../BIP/BioAPI-UNIT-EVENT-TYPE-MASK.ta.mjs';
@@ -63,7 +63,7 @@ export class UnitEventNotificationDisabler {
    * @public
    * @readonly
    */
-  readonly referrerEndpointIRI: EndpointIRI;
+  public readonly referrerEndpointIRI: EndpointIRI;
   /**
    * @summary `bspProductUuid`.
    * @description
@@ -74,7 +74,7 @@ export class UnitEventNotificationDisabler {
    * @public
    * @readonly
    */
-  readonly bspProductUuid: BioAPI_UUID;
+  public readonly bspProductUuid: BioAPI_UUID;
   /**
    * @summary `unitEventTypes`.
    * @description
@@ -86,7 +86,7 @@ export class UnitEventNotificationDisabler {
    * @public
    * @readonly
    */
-  readonly unitEventTypes: BioAPI_UNIT_EVENT_TYPE_MASK;
+  public readonly unitEventTypes: BioAPI_UNIT_EVENT_TYPE_MASK;
 
   constructor(
     referrerEndpointIRI: EndpointIRI,

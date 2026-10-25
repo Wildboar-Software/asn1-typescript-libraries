@@ -1,7 +1,7 @@
 /* eslint-disable */
 import {
-    OPTIONAL,
-    ASN1Element as _Element,
+    type OPTIONAL,
+    type ASN1Element as _Element,
     ASN1TagClass as _TagClass,
     ASN1Construction as _Construction,
     ASN1UniversalType as _UniversalType,
@@ -12,7 +12,7 @@ import {
 } from '@wildboar/asn1';
 import * as $ from '@wildboar/asn1/functional';
 import {
-    EstablishmentTime,
+    type EstablishmentTime,
     _decode_EstablishmentTime,
     _encode_EstablishmentTime,
 } from '../TestCategories-ASN1Module/EstablishmentTime.ta.mjs';
@@ -38,39 +38,47 @@ import {
  *
  */
 export class DataIntegrityTestResults_testResult {
+    /**
+     * @summary `establishmentTime`.
+     * @description
+     *
+     * Time for the data exchange (Pass)
+     * or time until fail/termination (Fail). Optional. X.737 §7.3.8.
+     * @public
+     * @readonly
+     */
+    public readonly establishmentTime: OPTIONAL<EstablishmentTime>;
+    /**
+     * @summary `originalData`.
+     * @description
+     *
+     * Data units used. Required in this
+     * alternative; returned if they were not supplied in the request
+     * and the test failed due to received data. X.737 §7.3.8, §8.1.5.
+     * @public
+     * @readonly
+     */
+    public readonly originalData: DataUnits;
+    /**
+     * @summary `corruptedData`.
+     * @description
+     *
+     * Data actually received when the test
+     * failed because of received data. Optional. X.737 §7.3.8.
+     * @public
+     * @readonly
+     */
+    public readonly corruptedData?: OPTIONAL<DataUnits>;
+
     constructor(
-        /**
-         * @summary `establishmentTime`.
-         * @description
-         *
-         * Time for the data exchange (Pass)
-         * or time until fail/termination (Fail). Optional. X.737 §7.3.8.
-         * @public
-         * @readonly
-         */
-        readonly establishmentTime: OPTIONAL<EstablishmentTime>,
-        /**
-         * @summary `originalData`.
-         * @description
-         *
-         * Data units used. Required in this
-         * alternative; returned if they were not supplied in the request
-         * and the test failed due to received data. X.737 §7.3.8, §8.1.5.
-         * @public
-         * @readonly
-         */
-        readonly originalData: DataUnits,
-        /**
-         * @summary `corruptedData`.
-         * @description
-         *
-         * Data actually received when the test
-         * failed because of received data. Optional. X.737 §7.3.8.
-         * @public
-         * @readonly
-         */
-        readonly corruptedData?: OPTIONAL<DataUnits>
-    ) {}
+        establishmentTime: OPTIONAL<EstablishmentTime>,
+        originalData: DataUnits,
+        corruptedData?: OPTIONAL<DataUnits>
+    ) {
+        this.establishmentTime = establishmentTime;
+        this.originalData = originalData;
+        this.corruptedData = corruptedData;
+    }
 
     /**
      * @summary Restructures an object into a DataIntegrityTestResults_testResult

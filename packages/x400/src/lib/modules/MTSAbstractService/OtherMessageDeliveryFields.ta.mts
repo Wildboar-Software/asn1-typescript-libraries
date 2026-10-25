@@ -1,7 +1,7 @@
 /* eslint-disable */
 import {
-    OPTIONAL,
-    ASN1Element as _Element,
+    type OPTIONAL,
+    type ASN1Element as _Element,
     ASN1TagClass as _TagClass,
     ASN1Construction as _Construction,
     ASN1UniversalType as _UniversalType,
@@ -12,58 +12,58 @@ import {
 } from '@wildboar/asn1';
 import * as $ from '@wildboar/asn1/functional';
 import {
-    DeliveredContentType,
+    type DeliveredContentType,
     _decode_DeliveredContentType,
     _encode_DeliveredContentType,
 } from '../MTSAbstractService/DeliveredContentType.ta.mjs';
 import {
-    DeliveredOriginatorName,
+    type DeliveredOriginatorName,
     _decode_DeliveredOriginatorName,
     _encode_DeliveredOriginatorName,
 } from '../MTSAbstractService/DeliveredOriginatorName.ta.mjs';
 import {
-    OriginalEncodedInformationTypes,
+    type OriginalEncodedInformationTypes,
     _decode_OriginalEncodedInformationTypes,
     _encode_OriginalEncodedInformationTypes,
 } from '../MTSAbstractService/OriginalEncodedInformationTypes.ta.mjs';
 import {
-    Priority,
+    type Priority,
     Priority_normal,
     _decode_Priority,
     _encode_Priority,
 } from '../MTSAbstractService/Priority.ta.mjs';
 import {
-    DeliveryFlags,
+    type DeliveryFlags,
     _decode_DeliveryFlags,
     _encode_DeliveryFlags,
 } from '../MTSAbstractService/DeliveryFlags.ta.mjs';
 import {
-    OtherRecipientNames,
+    type OtherRecipientNames,
     _decode_OtherRecipientNames,
     _encode_OtherRecipientNames,
 } from '../MTSAbstractService/OtherRecipientNames.ta.mjs';
 import {
-    ThisRecipientName,
+    type ThisRecipientName,
     _decode_ThisRecipientName,
     _encode_ThisRecipientName,
 } from '../MTSAbstractService/ThisRecipientName.ta.mjs';
 import {
-    OriginallyIntendedRecipientName,
+    type OriginallyIntendedRecipientName,
     _decode_OriginallyIntendedRecipientName,
     _encode_OriginallyIntendedRecipientName,
 } from '../MTSAbstractService/OriginallyIntendedRecipientName.ta.mjs';
 import {
-    ConvertedEncodedInformationTypes,
+    type ConvertedEncodedInformationTypes,
     _decode_ConvertedEncodedInformationTypes,
     _encode_ConvertedEncodedInformationTypes,
 } from '../MTSAbstractService/ConvertedEncodedInformationTypes.ta.mjs';
 import {
-    MessageSubmissionTime,
+    type MessageSubmissionTime,
     _decode_MessageSubmissionTime,
     _encode_MessageSubmissionTime,
 } from '../MTSAbstractService/MessageSubmissionTime.ta.mjs';
 import {
-    ContentIdentifier,
+    type ContentIdentifier,
     _decode_ContentIdentifier,
     _encode_ContentIdentifier,
 } from '../MTSAbstractService/ContentIdentifier.ta.mjs';
@@ -103,80 +103,106 @@ import {
  *
  */
 export class OtherMessageDeliveryFields {
+    /**
+     * @summary `content_type`.
+     * @public
+     * @readonly
+     */
+    public readonly content_type: DeliveredContentType;
+    /**
+     * @summary `originator_name`.
+     * @public
+     * @readonly
+     */
+    public readonly originator_name: DeliveredOriginatorName;
+    /**
+     * @summary `original_encoded_information_types`.
+     * @public
+     * @readonly
+     */
+    public readonly original_encoded_information_types: OPTIONAL<OriginalEncodedInformationTypes>;
+    /**
+     * @summary `priority`.
+     * @public
+     * @readonly
+     */
+    public readonly priority: OPTIONAL<Priority>;
+    /**
+     * @summary `delivery_flags`.
+     * @public
+     * @readonly
+     */
+    public readonly delivery_flags: OPTIONAL<DeliveryFlags>;
+    /**
+     * @summary `other_recipient_names`.
+     * @public
+     * @readonly
+     */
+    public readonly other_recipient_names: OPTIONAL<OtherRecipientNames>;
+    /**
+     * @summary `this_recipient_name`.
+     * @public
+     * @readonly
+     */
+    public readonly this_recipient_name: ThisRecipientName;
+    /**
+     * @summary `originally_intended_recipient_name`.
+     * @public
+     * @readonly
+     */
+    public readonly originally_intended_recipient_name: OPTIONAL<OriginallyIntendedRecipientName>;
+    /**
+     * @summary `converted_encoded_information_types`.
+     * @public
+     * @readonly
+     */
+    public readonly converted_encoded_information_types: OPTIONAL<ConvertedEncodedInformationTypes>;
+    /**
+     * @summary `message_submission_time`.
+     * @public
+     * @readonly
+     */
+    public readonly message_submission_time: MessageSubmissionTime;
+    /**
+     * @summary `content_identifier`.
+     * @public
+     * @readonly
+     */
+    public readonly content_identifier?: OPTIONAL<ContentIdentifier>;
+    /**
+     * @summary `extensions`.
+     * @public
+     * @readonly
+     */
+    public readonly extensions?: OPTIONAL<ExtensionField[]>;
+
     constructor(
-        /**
-         * @summary `content_type`.
-         * @public
-         * @readonly
-         */
-        readonly content_type: DeliveredContentType,
-        /**
-         * @summary `originator_name`.
-         * @public
-         * @readonly
-         */
-        readonly originator_name: DeliveredOriginatorName,
-        /**
-         * @summary `original_encoded_information_types`.
-         * @public
-         * @readonly
-         */
-        readonly original_encoded_information_types: OPTIONAL<OriginalEncodedInformationTypes>,
-        /**
-         * @summary `priority`.
-         * @public
-         * @readonly
-         */
-        readonly priority: OPTIONAL<Priority>,
-        /**
-         * @summary `delivery_flags`.
-         * @public
-         * @readonly
-         */
-        readonly delivery_flags: OPTIONAL<DeliveryFlags>,
-        /**
-         * @summary `other_recipient_names`.
-         * @public
-         * @readonly
-         */
-        readonly other_recipient_names: OPTIONAL<OtherRecipientNames>,
-        /**
-         * @summary `this_recipient_name`.
-         * @public
-         * @readonly
-         */
-        readonly this_recipient_name: ThisRecipientName,
-        /**
-         * @summary `originally_intended_recipient_name`.
-         * @public
-         * @readonly
-         */
-        readonly originally_intended_recipient_name: OPTIONAL<OriginallyIntendedRecipientName>,
-        /**
-         * @summary `converted_encoded_information_types`.
-         * @public
-         * @readonly
-         */
-        readonly converted_encoded_information_types: OPTIONAL<ConvertedEncodedInformationTypes>,
-        /**
-         * @summary `message_submission_time`.
-         * @public
-         * @readonly
-         */
-        readonly message_submission_time: MessageSubmissionTime,
-        /**
-         * @summary `content_identifier`.
-         * @public
-         * @readonly
-         */
-        readonly content_identifier?: OPTIONAL<ContentIdentifier>,
-        /**
-         * @summary `extensions`.
-         * @public
-         * @readonly
-         */
-        readonly extensions?: OPTIONAL<ExtensionField[]>
-    ) {}
+        content_type: DeliveredContentType,
+        originator_name: DeliveredOriginatorName,
+        original_encoded_information_types: OPTIONAL<OriginalEncodedInformationTypes>,
+        priority: OPTIONAL<Priority>,
+        delivery_flags: OPTIONAL<DeliveryFlags>,
+        other_recipient_names: OPTIONAL<OtherRecipientNames>,
+        this_recipient_name: ThisRecipientName,
+        originally_intended_recipient_name: OPTIONAL<OriginallyIntendedRecipientName>,
+        converted_encoded_information_types: OPTIONAL<ConvertedEncodedInformationTypes>,
+        message_submission_time: MessageSubmissionTime,
+        content_identifier?: OPTIONAL<ContentIdentifier>,
+        extensions?: OPTIONAL<ExtensionField[]>
+    ) {
+        this.content_type = content_type;
+        this.originator_name = originator_name;
+        this.original_encoded_information_types = original_encoded_information_types;
+        this.priority = priority;
+        this.delivery_flags = delivery_flags;
+        this.other_recipient_names = other_recipient_names;
+        this.this_recipient_name = this_recipient_name;
+        this.originally_intended_recipient_name = originally_intended_recipient_name;
+        this.converted_encoded_information_types = converted_encoded_information_types;
+        this.message_submission_time = message_submission_time;
+        this.content_identifier = content_identifier;
+        this.extensions = extensions;
+    }
 
     /**
      * @summary Restructures an object into a OtherMessageDeliveryFields

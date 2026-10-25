@@ -8,7 +8,7 @@ import { type OPERATION } from "../Remote-Operations-Information-Objects/OPERATI
 
 import { SetAutoWorkModeArgument, _decode_SetAutoWorkModeArgument, _encode_SetAutoWorkModeArgument } from "../CSTA-set-auto-work-mode/SetAutoWorkModeArgument.ta.mjs";
 
-import { SetAutoWorkModeResult, _decode_SetAutoWorkModeResult, _encode_SetAutoWorkModeResult } from "../CSTA-set-auto-work-mode/SetAutoWorkModeResult.ta.mjs";
+import { type SetAutoWorkModeResult, _decode_SetAutoWorkModeResult, _encode_SetAutoWorkModeResult } from "../CSTA-set-auto-work-mode/SetAutoWorkModeResult.ta.mjs";
 
 import { universalFailure } from "../CSTA-error-definition/universalFailure.oa.mjs";
 

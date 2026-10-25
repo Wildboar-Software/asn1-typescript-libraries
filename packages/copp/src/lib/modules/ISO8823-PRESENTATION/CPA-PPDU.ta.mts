@@ -1,7 +1,7 @@
 /* eslint-disable */
 import {
-    OPTIONAL,
-    ASN1Element as _Element,
+    type OPTIONAL,
+    type ASN1Element as _Element,
     ASN1TagClass as _TagClass,
     ASN1Construction as _Construction,
     ASN1UniversalType as _UniversalType,
@@ -54,10 +54,10 @@ import {
  *                              [0] IMPLICIT Protocol-version DEFAULT {version-1},
  *                            responding-presentation-selector
  *                              [3] IMPLICIT Responding-presentation-selector
- *                                OPTIONAL,
+ *                                type OPTIONAL,
  *                            presentation-context-definition-result-list
  *                              [5] IMPLICIT Presentation-context-definition-result-list
- *                                OPTIONAL,
+ *                                type OPTIONAL,
  *                            presentation-requirements
  *                              [8] IMPLICIT Presentation-requirements OPTIONAL,
  *                            user-session-requirements

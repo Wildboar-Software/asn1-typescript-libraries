@@ -1,7 +1,7 @@
 /* eslint-disable */
 import {
-    BOOLEAN,
-    ASN1Element as _Element,
+    type BOOLEAN,
+    type ASN1Element as _Element,
     ASN1TagClass as _TagClass,
     ASN1Construction as _Construction,
     ASN1UniversalType as _UniversalType,
@@ -12,7 +12,7 @@ import {
 } from '@wildboar/asn1';
 import * as $ from '@wildboar/asn1/functional';
 import {
-    CrossConnectionName,
+    type CrossConnectionName,
     _decode_CrossConnectionName,
     _encode_CrossConnectionName,
 } from '../ASN1DefinedTypesModule/CrossConnectionName.ta.mjs';
@@ -32,20 +32,26 @@ import {
  *
  */
 export class NamedCrossConnection {
+    /**
+     * @summary `redline`.
+     * @public
+     * @readonly
+     */
+    public readonly redline: BOOLEAN;
+    /**
+     * @summary `name`.
+     * @public
+     * @readonly
+     */
+    public readonly name: CrossConnectionName;
+
     constructor(
-        /**
-         * @summary `redline`.
-         * @public
-         * @readonly
-         */
-        readonly redline: BOOLEAN,
-        /**
-         * @summary `name`.
-         * @public
-         * @readonly
-         */
-        readonly name: CrossConnectionName
-    ) {}
+        redline: BOOLEAN,
+        name: CrossConnectionName
+    ) {
+        this.redline = redline;
+        this.name = name;
+    }
 
     /**
      * @summary Restructures an object into a NamedCrossConnection

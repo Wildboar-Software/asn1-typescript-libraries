@@ -1,6 +1,6 @@
 /* eslint-disable */
 import {
-    ASN1Element as _Element,
+    type ASN1Element as _Element,
     ASN1TagClass as _TagClass,
     ASN1Construction as _Construction,
     ASN1UniversalType as _UniversalType,
@@ -10,8 +10,8 @@ import {
     ASN1ConstructionError as _ConstructionError,
 } from "@wildboar/asn1";
 import * as $ from "@wildboar/asn1/functional";
-import { MMS255String, _decode_MMS255String, _encode_MMS255String } from "../ISO-9506-MMS-1/MMS255String.ta.mjs";
-import { Data, _decode_Data, _encode_Data } from "../ISO-9506-MMS-1/Data.ta.mjs";
+import { type MMS255String, _decode_MMS255String, _encode_MMS255String } from "../ISO-9506-MMS-1/MMS255String.ta.mjs";
+import { type Data, _decode_Data, _encode_Data } from "../ISO-9506-MMS-1/Data.ta.mjs";
 
 
 /**
@@ -36,30 +36,36 @@ import { Data, _decode_Data, _encode_Data } from "../ISO-9506-MMS-1/Data.ta.mjs"
  */
 export
 class Journal_Entry_instance_journalVariables_Item {
+    /**
+     * @summary `variableTag`.
+     * @description
+     *
+     * Variable tag, length ≤ 255. ISO 9506-1:2003 §23.1.2.9; ISO
+     * 9506-2:2003 Annex B.1.16.
+     *
+     * @public
+     * @readonly
+     */
+    public readonly variableTag: MMS255String;
+    /**
+     * @summary `valueSpecification`.
+     * @description
+     *
+     * Recorded Data value. ISO 9506-1:2003 §23.1.2.9; ISO 9506-2:2003 Annex
+     * B.1.16.
+     *
+     * @public
+     * @readonly
+     */
+    public readonly valueSpecification: Data;
+
     constructor (
-        /**
-         * @summary `variableTag`.
-         * @description
-         *
-         * Variable tag, length ≤ 255. ISO 9506-1:2003 §23.1.2.9; ISO
-         * 9506-2:2003 Annex B.1.16.
-         *
-         * @public
-         * @readonly
-         */
-        readonly variableTag: MMS255String,
-        /**
-         * @summary `valueSpecification`.
-         * @description
-         *
-         * Recorded Data value. ISO 9506-1:2003 §23.1.2.9; ISO 9506-2:2003 Annex
-         * B.1.16.
-         *
-         * @public
-         * @readonly
-         */
-        readonly valueSpecification: Data
-    ) {}
+        variableTag: MMS255String,
+        valueSpecification: Data
+    ) {
+        this.variableTag = variableTag;
+        this.valueSpecification = valueSpecification;
+    }
 
     /**
      * @summary Restructures an object into a Journal_Entry_instance_journalVariables_Item

@@ -1,5 +1,5 @@
 /* eslint-disable */
-import { ASN1Element as _Element, GeneralizedTime } from "@wildboar/asn1";
+import { ASN1Element as _Element, type GeneralizedTime } from "@wildboar/asn1";
 import * as $ from "@wildboar/asn1/functional";
 
 
@@ -28,12 +28,12 @@ export type ArchiveCutoff = GeneralizedTime; // GeneralizedTime
 
 
 
-export const _decode_ArchiveCutoff = $._decodeGeneralizedTime;
+export const _decode_ArchiveCutoff: $.ASN1Decoder<Date> = $._decodeGeneralizedTime;
 
 
 
 
-export const _encode_ArchiveCutoff = $._encodeGeneralizedTime;
+export const _encode_ArchiveCutoff: $.ASN1Encoder<Date> = $._encodeGeneralizedTime;
 
 
 /* eslint-enable */

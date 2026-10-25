@@ -1,7 +1,7 @@
 /* eslint-disable */
 import {
-    OPTIONAL,
-    ASN1Element as _Element,
+    type OPTIONAL,
+    type ASN1Element as _Element,
     ASN1TagClass as _TagClass,
     ASN1Construction as _Construction,
     ASN1UniversalType as _UniversalType,
@@ -12,12 +12,12 @@ import {
 } from '@wildboar/asn1';
 import * as $ from '@wildboar/asn1/functional';
 import {
-    SequenceNumber,
+    type SequenceNumber,
     _decode_SequenceNumber,
     _encode_SequenceNumber,
 } from '../MSAbstractService/SequenceNumber.ta.mjs';
 import {
-    MSExtensions,
+    type MSExtensions,
     _decode_MSExtensions,
     _encode_MSExtensions,
 } from '../MSAbstractService/MSExtensions.ta.mjs';
@@ -35,20 +35,26 @@ import {
  *
  */
 export class DeleteResult_delete_result_94 {
+    /**
+     * @summary `entries_deleted`.
+     * @public
+     * @readonly
+     */
+    public readonly entries_deleted?: OPTIONAL<SequenceNumber[]>;
+    /**
+     * @summary `delete_result_extensions`.
+     * @public
+     * @readonly
+     */
+    public readonly delete_result_extensions?: OPTIONAL<MSExtensions>;
+
     constructor(
-        /**
-         * @summary `entries_deleted`.
-         * @public
-         * @readonly
-         */
-        readonly entries_deleted?: OPTIONAL<SequenceNumber[]>,
-        /**
-         * @summary `delete_result_extensions`.
-         * @public
-         * @readonly
-         */
-        readonly delete_result_extensions?: OPTIONAL<MSExtensions>
-    ) {}
+        entries_deleted?: OPTIONAL<SequenceNumber[]>,
+        delete_result_extensions?: OPTIONAL<MSExtensions>
+    ) {
+        this.entries_deleted = entries_deleted;
+        this.delete_result_extensions = delete_result_extensions;
+    }
 
     /**
      * @summary Restructures an object into a DeleteResult_delete_result_94

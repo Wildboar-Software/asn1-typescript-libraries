@@ -2,10 +2,10 @@
 
 import * as $ from "@wildboar/asn1/functional";
 import {
-    OPTIONAL,
-    SEQUENCE,
-    SET,
-    ASN1Element as _Element,
+    type OPTIONAL,
+    type SEQUENCE,
+    type SET,
+    type ASN1Element as _Element,
     ASN1TagClass as _TagClass
 } from "@wildboar/asn1";
 import { DeviceID, _decode_DeviceID, _encode_DeviceID } from "../CSTA-device-identifiers/DeviceID.ta.mjs";
@@ -17,9 +17,9 @@ import {
     _encode_ReqAgentState
 } from "../CSTA-set-agent-state/ReqAgentState.ta.mjs";
 
-import { AgentID, _decode_AgentID, _encode_AgentID } from "../CSTA-device-feature-types/AgentID.ta.mjs";
+import { type AgentID, _decode_AgentID, _encode_AgentID } from "../CSTA-device-feature-types/AgentID.ta.mjs";
 
-import { AgentPassword, _decode_AgentPassword, _encode_AgentPassword } from "../CSTA-device-feature-types/AgentPassword.ta.mjs";
+import { type AgentPassword, _decode_AgentPassword, _encode_AgentPassword } from "../CSTA-device-feature-types/AgentPassword.ta.mjs";
 
 import { CSTACommonArguments, _decode_CSTACommonArguments, _encode_CSTACommonArguments } from "../CSTA-extension-types/CSTACommonArguments.ta.mjs";
 
@@ -40,9 +40,9 @@ import { CSTACommonArguments, _decode_CSTACommonArguments, _encode_CSTACommonArg
  * SetAgentStateArgument ::= SEQUENCE
  * {    device                 DeviceID,
  *     requestedAgentState        ReqAgentState,
- *     agentID                [2] IMPLICIT AgentID            OPTIONAL,
- *     password            [3] IMPLICIT AgentPassword        OPTIONAL,
- *     group                DeviceID                OPTIONAL,
+ *     agentID                [2] IMPLICIT AgentID            type OPTIONAL,
+ *     password            [3] IMPLICIT AgentPassword        type OPTIONAL,
+ *     group                DeviceID                type OPTIONAL,
  *     extensions            CSTACommonArguments            OPTIONAL }
  * ```
  * 
@@ -50,66 +50,80 @@ import { CSTACommonArguments, _decode_CSTACommonArguments, _encode_CSTACommonArg
  */
 export
 class SetAgentStateArgument {
+    /**
+     * @summary `device`.
+     * @description
+     *
+     * ACD agent, or ACD device/group if allowed by capabilities exchange.
+     * @public
+     * @readonly
+     */
+    public readonly device: DeviceID;
+    /**
+     * @summary `requestedAgentState`.
+     * @description
+     *
+     * loggedOn, loggedOff, notReady, ready, or workingAfterCall — not the
+     * Get Agent State list.
+     * @public
+     * @readonly
+     */
+    public readonly requestedAgentState: ReqAgentState;
+    /**
+     * @summary `agentID`.
+     * @description
+     *
+     * Required if multiple agentIDs exist at the device.
+     * @public
+     * @readonly
+     */
+    public readonly agentID?: OPTIONAL<AgentID>;
+    /**
+     * @summary `password`.
+     * @description
+     *
+     * Only with loggedOn or loggedOff. SF may omit it from subsequent
+     * events.
+     * @public
+     * @readonly
+     */
+    public readonly password?: OPTIONAL<AgentPassword>;
+    /**
+     * @summary `group`.
+     * @description
+     *
+     * ACD group for log-on/off. Presence selects the agent log-on model
+     * (§6.1.1.6).
+     * @public
+     * @readonly
+     */
+    public readonly group?: OPTIONAL<DeviceID>;
+    /**
+     * @summary `extensions`.
+     * @description
+     *
+     * Optional security (timestamp, sequence, securityInfo) and
+     * privateData.
+     * @public
+     * @readonly
+     */
+    public readonly extensions?: OPTIONAL<CSTACommonArguments>;
+
     constructor (
-        /**
-         * @summary `device`.
-         * @description
-         *
-         * ACD agent, or ACD device/group if allowed by capabilities exchange.
-         * @public
-         * @readonly
-         */
-        readonly device: DeviceID,
-        /**
-         * @summary `requestedAgentState`.
-         * @description
-         *
-         * loggedOn, loggedOff, notReady, ready, or workingAfterCall — not the
-         * Get Agent State list.
-         * @public
-         * @readonly
-         */
-        readonly requestedAgentState: ReqAgentState,
-        /**
-         * @summary `agentID`.
-         * @description
-         *
-         * Required if multiple agentIDs exist at the device.
-         * @public
-         * @readonly
-         */
-        readonly agentID?: OPTIONAL<AgentID>,
-        /**
-         * @summary `password`.
-         * @description
-         *
-         * Only with loggedOn or loggedOff. SF may omit it from subsequent
-         * events.
-         * @public
-         * @readonly
-         */
-        readonly password?: OPTIONAL<AgentPassword>,
-        /**
-         * @summary `group`.
-         * @description
-         *
-         * ACD group for log-on/off. Presence selects the agent log-on model
-         * (§6.1.1.6).
-         * @public
-         * @readonly
-         */
-        readonly group?: OPTIONAL<DeviceID>,
-        /**
-         * @summary `extensions`.
-         * @description
-         *
-         * Optional security (timestamp, sequence, securityInfo) and
-         * privateData.
-         * @public
-         * @readonly
-         */
-        readonly extensions?: OPTIONAL<CSTACommonArguments>
-    ) {}
+        device: DeviceID,
+        requestedAgentState: ReqAgentState,
+        agentID?: OPTIONAL<AgentID>,
+        password?: OPTIONAL<AgentPassword>,
+        group?: OPTIONAL<DeviceID>,
+        extensions?: OPTIONAL<CSTACommonArguments>
+    ) {
+        this.device = device;
+        this.requestedAgentState = requestedAgentState;
+        this.agentID = agentID;
+        this.password = password;
+        this.group = group;
+        this.extensions = extensions;
+    }
 
     /**
      * @summary Restructures an object into a SetAgentStateArgument
@@ -133,7 +147,7 @@ class SetAgentStateArgument {
          * @static
          */
 
-    public static _enum_for_requestedAgentState = _enum_for_ReqAgentState;
+    public static _enum_for_requestedAgentState: typeof _enum_for_ReqAgentState = _enum_for_ReqAgentState;
 }
 
 /**

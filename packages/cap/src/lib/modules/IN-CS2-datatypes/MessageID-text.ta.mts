@@ -1,9 +1,9 @@
 /* eslint-disable */
 import {
-    OPTIONAL,
-    OCTET_STRING,
-    IA5String,
-    ASN1Element as _Element,
+    type OPTIONAL,
+    type OCTET_STRING,
+    type IA5String,
+    type ASN1Element as _Element,
     ASN1TagClass as _TagClass,
     ASN1Construction as _Construction,
     ASN1UniversalType as _UniversalType,
@@ -39,20 +39,26 @@ import * as $ from "@wildboar/asn1/functional";
  */
 export
 class MessageID_text {
+    /**
+     * @summary `messageContent`.
+     * @public
+     * @readonly
+     */
+    public readonly messageContent: IA5String;
+    /**
+     * @summary `attributes`.
+     * @public
+     * @readonly
+     */
+    public readonly attributes?: OPTIONAL<OCTET_STRING>;
+
     constructor (
-        /**
-         * @summary `messageContent`.
-         * @public
-         * @readonly
-         */
-        readonly messageContent: IA5String,
-        /**
-         * @summary `attributes`.
-         * @public
-         * @readonly
-         */
-        readonly attributes?: OPTIONAL<OCTET_STRING>
-    ) {}
+        messageContent: IA5String,
+        attributes?: OPTIONAL<OCTET_STRING>
+    ) {
+        this.messageContent = messageContent;
+        this.attributes = attributes;
+    }
 
     /**
      * @summary Restructures an object into a MessageID_text

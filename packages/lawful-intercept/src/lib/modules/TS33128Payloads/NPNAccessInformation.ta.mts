@@ -1,10 +1,10 @@
 /* eslint-disable */
 import {
-    ASN1Element as _Element,
+    type ASN1Element as _Element,
     ASN1TagClass as _TagClass
 } from "@wildboar/asn1";
 import * as $ from "@wildboar/asn1/functional";
-import { CellCAGList, _decode_CellCAGList, _encode_CellCAGList } from "../TS33128Payloads/CellCAGList.ta.mjs";
+import { type CellCAGList, _decode_CellCAGList, _encode_CellCAGList } from "../TS33128Payloads/CellCAGList.ta.mjs";
 // export { CellCAGList, _decode_CellCAGList, _encode_CellCAGList } from "../TS33128Payloads/CellCAGList.ta.mjs";
 
 

@@ -1,8 +1,8 @@
 /* eslint-disable */
 import {
-    OPTIONAL,
-    INTEGER,
-    ASN1Element as _Element,
+    type OPTIONAL,
+    type INTEGER,
+    type ASN1Element as _Element,
     ASN1TagClass as _TagClass,
     ASN1Construction as _Construction,
     ASN1UniversalType as _UniversalType,
@@ -13,12 +13,12 @@ import {
 } from '@wildboar/asn1';
 import * as $ from '@wildboar/asn1/functional';
 import {
-    IndexOrOperSpec,
+    type IndexOrOperSpec,
     _decode_IndexOrOperSpec,
     _encode_IndexOrOperSpec,
 } from '../Schedulerev1-ASN1Module/IndexOrOperSpec.ta.mjs';
 import {
-    Schedule,
+    type Schedule,
     _decode_Schedule,
     _encode_Schedule,
 } from '../Schedulerev1-ASN1Module/Schedule.ta.mjs';
@@ -40,45 +40,53 @@ import {
  *
  */
 export class SchedulingData_Item {
+    /**
+     * @summary `indexOrOperSpec`.
+     * @description
+     *
+     * Index mapped by the SMO to an activity, or operations to
+     * perform. Interval scheduling allows only `index`. ITU-T
+     * Rec. X.746 (02/00)
+     * [A.1.11](https://www.itu.int/rec/T-REC-X.746-200002-I),
+     * 8.4.4.
+     * @public
+     * @readonly
+     */
+    public readonly indexOrOperSpec: IndexOrOperSpec;
+    /**
+     * @summary `schedule`.
+     * @description
+     *
+     * When this member is in force: daily, weekly, monthly, or
+     * type-of-day. ITU-T Rec. X.746 (02/00)
+     * [A.6](https://www.itu.int/rec/T-REC-X.746-200002-I).
+     * @public
+     * @readonly
+     */
+    public readonly schedule: Schedule;
+    /**
+     * @summary `priority`.
+     * @description
+     *
+     * Required when this member's intervals overlap another
+     * member's; higher numerical value takes precedence. Shall
+     * be absent for trigger scheduling. ITU-T Rec. X.746 (02/00)
+     * [A.4.6](https://www.itu.int/rec/T-REC-X.746-200002-I),
+     * 8.3.14.1.
+     * @public
+     * @readonly
+     */
+    public readonly priority?: OPTIONAL<INTEGER>;
+
     constructor(
-        /**
-         * @summary `indexOrOperSpec`.
-         * @description
-         *
-         * Index mapped by the SMO to an activity, or operations to
-         * perform. Interval scheduling allows only `index`. ITU-T
-         * Rec. X.746 (02/00)
-         * [A.1.11](https://www.itu.int/rec/T-REC-X.746-200002-I),
-         * 8.4.4.
-         * @public
-         * @readonly
-         */
-        readonly indexOrOperSpec: IndexOrOperSpec,
-        /**
-         * @summary `schedule`.
-         * @description
-         *
-         * When this member is in force: daily, weekly, monthly, or
-         * type-of-day. ITU-T Rec. X.746 (02/00)
-         * [A.6](https://www.itu.int/rec/T-REC-X.746-200002-I).
-         * @public
-         * @readonly
-         */
-        readonly schedule: Schedule,
-        /**
-         * @summary `priority`.
-         * @description
-         *
-         * Required when this member's intervals overlap another
-         * member's; higher numerical value takes precedence. Shall
-         * be absent for trigger scheduling. ITU-T Rec. X.746 (02/00)
-         * [A.4.6](https://www.itu.int/rec/T-REC-X.746-200002-I),
-         * 8.3.14.1.
-         * @public
-         * @readonly
-         */
-        readonly priority?: OPTIONAL<INTEGER>
-    ) {}
+        indexOrOperSpec: IndexOrOperSpec,
+        schedule: Schedule,
+        priority?: OPTIONAL<INTEGER>
+    ) {
+        this.indexOrOperSpec = indexOrOperSpec;
+        this.schedule = schedule;
+        this.priority = priority;
+    }
 
     /**
      * @summary Restructures an object into a SchedulingData_Item

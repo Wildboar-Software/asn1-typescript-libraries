@@ -1,7 +1,7 @@
 /* eslint-disable */
 import {
-    INTEGER,
-    ASN1Element as _Element,
+    type INTEGER,
+    type ASN1Element as _Element,
     ASN1TagClass as _TagClass,
     ASN1Construction as _Construction,
     ASN1UniversalType as _UniversalType,
@@ -45,7 +45,7 @@ type EE_Duration = INTEGER;
  * @type {number}
  */
 export
-const EE_Duration_current: EE_Duration = 0; /* LONG_NAMED_INTEGER_VALUE */
+const EE_Duration_current: 0 = 0 satisfies EE_Duration; /* LONG_NAMED_INTEGER_VALUE */
 
 /**
  * @summary EE_Duration_current
@@ -57,7 +57,7 @@ const EE_Duration_current: EE_Duration = 0; /* LONG_NAMED_INTEGER_VALUE */
  * @type {number}
  */
 export
-const current: EE_Duration = EE_Duration_current; /* SHORT_NAMED_INTEGER_VALUE */
+const current: 0 = EE_Duration_current; /* SHORT_NAMED_INTEGER_VALUE */
 
 /**
  * @summary EE_Duration_permanent
@@ -69,7 +69,7 @@ const current: EE_Duration = EE_Duration_current; /* SHORT_NAMED_INTEGER_VALUE *
  * @type {number}
  */
 export
-const EE_Duration_permanent: EE_Duration = 1; /* LONG_NAMED_INTEGER_VALUE */
+const EE_Duration_permanent: 1 = 1 satisfies EE_Duration; /* LONG_NAMED_INTEGER_VALUE */
 
 /**
  * @summary EE_Duration_permanent
@@ -81,9 +81,9 @@ const EE_Duration_permanent: EE_Duration = 1; /* LONG_NAMED_INTEGER_VALUE */
  * @type {number}
  */
 export
-const permanent: EE_Duration = EE_Duration_permanent; /* SHORT_NAMED_INTEGER_VALUE */
-export const _decode_EE_Duration = $._decodeInteger;
-export const _encode_EE_Duration = $._encodeInteger;
+const permanent: 1 = EE_Duration_permanent; /* SHORT_NAMED_INTEGER_VALUE */
+export const _decode_EE_Duration: $.ASN1Decoder<INTEGER> = $._decodeInteger;
+export const _encode_EE_Duration: $.ASN1Encoder<INTEGER> = $._encodeInteger;
 
 
 /* eslint-enable */

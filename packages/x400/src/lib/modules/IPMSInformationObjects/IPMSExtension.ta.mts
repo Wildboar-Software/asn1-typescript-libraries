@@ -1,8 +1,8 @@
 /* eslint-disable */
 import {
-    OPTIONAL,
-    OBJECT_IDENTIFIER,
-    ASN1Element as _Element,
+    type OPTIONAL,
+    type OBJECT_IDENTIFIER,
+    type ASN1Element as _Element,
     ASN1TagClass as _TagClass,
     ASN1Construction as _Construction,
     ASN1UniversalType as _UniversalType,
@@ -30,20 +30,26 @@ import * as $ from '@wildboar/asn1/functional';
  *
  */
 export class IPMSExtension {
+    /**
+     * @summary `type_`.
+     * @public
+     * @readonly
+     */
+    public readonly type_: OBJECT_IDENTIFIER;
+    /**
+     * @summary `value`.
+     * @public
+     * @readonly
+     */
+    public readonly value?: OPTIONAL<_Element>;
+
     constructor(
-        /**
-         * @summary `type_`.
-         * @public
-         * @readonly
-         */
-        readonly type_: OBJECT_IDENTIFIER,
-        /**
-         * @summary `value`.
-         * @public
-         * @readonly
-         */
-        readonly value?: OPTIONAL<_Element>
-    ) {}
+        type_: OBJECT_IDENTIFIER,
+        value?: OPTIONAL<_Element>
+    ) {
+        this.type_ = type_;
+        this.value = value;
+    }
 
     /**
      * @summary Restructures an object into a IPMSExtension

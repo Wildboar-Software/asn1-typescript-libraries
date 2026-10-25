@@ -1,7 +1,7 @@
 /* eslint-disable */
 import {
-    OPTIONAL,
-    ASN1Element as _Element,
+    type OPTIONAL,
+    type ASN1Element as _Element,
     ASN1TagClass as _TagClass,
     ASN1Construction as _Construction,
     ASN1UniversalType as _UniversalType,
@@ -11,11 +11,11 @@ import {
     ASN1ConstructionError as _ConstructionError,
 } from "@wildboar/asn1";
 import * as $ from "@wildboar/asn1/functional";
-import { DestinationRoutingAddress, _decode_DestinationRoutingAddress, _encode_DestinationRoutingAddress } from "../Core-INAP-CS1-DataTypes/DestinationRoutingAddress.ta.mjs";
-import { AlertingPattern, _decode_AlertingPattern, _encode_AlertingPattern } from "../Core-INAP-CS1-DataTypes/AlertingPattern.ta.mjs";
+import { type DestinationRoutingAddress, _decode_DestinationRoutingAddress, _encode_DestinationRoutingAddress } from "../Core-INAP-CS1-DataTypes/DestinationRoutingAddress.ta.mjs";
+import { type AlertingPattern, _decode_AlertingPattern, _encode_AlertingPattern } from "../Core-INAP-CS1-DataTypes/AlertingPattern.ta.mjs";
 import { ExtensionField, _decode_ExtensionField, _encode_ExtensionField } from "../Core-INAP-CS1-DataTypes/ExtensionField.ta.mjs";
-import { ServiceInteractionIndicators, _decode_ServiceInteractionIndicators, _encode_ServiceInteractionIndicators } from "../Core-INAP-CS1-DataTypes/ServiceInteractionIndicators.ta.mjs";
-import { CallingPartyNumber, _decode_CallingPartyNumber, _encode_CallingPartyNumber } from "../Core-INAP-CS1-DataTypes/CallingPartyNumber.ta.mjs";
+import { type ServiceInteractionIndicators, _decode_ServiceInteractionIndicators, _encode_ServiceInteractionIndicators } from "../Core-INAP-CS1-DataTypes/ServiceInteractionIndicators.ta.mjs";
+import { type CallingPartyNumber, _decode_CallingPartyNumber, _encode_CallingPartyNumber } from "../Core-INAP-CS1-DataTypes/CallingPartyNumber.ta.mjs";
 
 
 /**
@@ -27,9 +27,9 @@ import { CallingPartyNumber, _decode_CallingPartyNumber, _encode_CallingPartyNum
  * ```asn1
  * InitiateCallAttemptArg ::= SEQUENCE {
  *      destinationRoutingAddress     [0] DestinationRoutingAddress,
- *      alertingPattern     [1] AlertingPattern     OPTIONAL,
- *      extensions     [4] SEQUENCE SIZE(1..numOfExtensions) OF ExtensionField     OPTIONAL,
- *      serviceInteractionIndicators     [29] ServiceInteractionIndicators     OPTIONAL,
+ *      alertingPattern     [1] AlertingPattern     type OPTIONAL,
+ *      extensions     [4] SEQUENCE SIZE(1..numOfExtensions) OF ExtensionField     type OPTIONAL,
+ *      serviceInteractionIndicators     [29] ServiceInteractionIndicators     type OPTIONAL,
  *      callingPartyNumber     [30] CallingPartyNumber     OPTIONAL
  * --  ...
  *      }
@@ -39,38 +39,50 @@ import { CallingPartyNumber, _decode_CallingPartyNumber, _encode_CallingPartyNum
  */
 export
 class InitiateCallAttemptArg {
+    /**
+     * @summary `destinationRoutingAddress`.
+     * @public
+     * @readonly
+     */
+    public readonly destinationRoutingAddress: DestinationRoutingAddress;
+    /**
+     * @summary `alertingPattern`.
+     * @public
+     * @readonly
+     */
+    public readonly alertingPattern?: OPTIONAL<AlertingPattern>;
+    /**
+     * @summary `extensions`.
+     * @public
+     * @readonly
+     */
+    public readonly extensions?: OPTIONAL<ExtensionField[]>;
+    /**
+     * @summary `serviceInteractionIndicators`.
+     * @public
+     * @readonly
+     */
+    public readonly serviceInteractionIndicators?: OPTIONAL<ServiceInteractionIndicators>;
+    /**
+     * @summary `callingPartyNumber`.
+     * @public
+     * @readonly
+     */
+    public readonly callingPartyNumber?: OPTIONAL<CallingPartyNumber>;
+
     constructor (
-        /**
-         * @summary `destinationRoutingAddress`.
-         * @public
-         * @readonly
-         */
-        readonly destinationRoutingAddress: DestinationRoutingAddress,
-        /**
-         * @summary `alertingPattern`.
-         * @public
-         * @readonly
-         */
-        readonly alertingPattern?: OPTIONAL<AlertingPattern>,
-        /**
-         * @summary `extensions`.
-         * @public
-         * @readonly
-         */
-        readonly extensions?: OPTIONAL<ExtensionField[]>,
-        /**
-         * @summary `serviceInteractionIndicators`.
-         * @public
-         * @readonly
-         */
-        readonly serviceInteractionIndicators?: OPTIONAL<ServiceInteractionIndicators>,
-        /**
-         * @summary `callingPartyNumber`.
-         * @public
-         * @readonly
-         */
-        readonly callingPartyNumber?: OPTIONAL<CallingPartyNumber>
-    ) {}
+        destinationRoutingAddress: DestinationRoutingAddress,
+        alertingPattern?: OPTIONAL<AlertingPattern>,
+        extensions?: OPTIONAL<ExtensionField[]>,
+        serviceInteractionIndicators?: OPTIONAL<ServiceInteractionIndicators>,
+        callingPartyNumber?: OPTIONAL<CallingPartyNumber>
+    ) {
+        this.destinationRoutingAddress = destinationRoutingAddress;
+        this.alertingPattern = alertingPattern;
+        this.extensions = extensions;
+        this.serviceInteractionIndicators = serviceInteractionIndicators;
+        this.callingPartyNumber = callingPartyNumber;
+    }
 
     /**
      * @summary Restructures an object into a InitiateCallAttemptArg

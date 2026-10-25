@@ -1,14 +1,14 @@
 /* eslint-disable */
 import {
-    OPTIONAL,
-    ASN1Element as _Element,
+    type OPTIONAL,
+    type ASN1Element as _Element,
     ASN1TagClass as _TagClass
 } from "@wildboar/asn1";
 import * as $ from "@wildboar/asn1/functional";
-import { IMSI, _decode_IMSI, _encode_IMSI } from "../MAP-CommonDataTypes/IMSI.ta.mjs";
+import { type IMSI, _decode_IMSI, _encode_IMSI } from "../MAP-CommonDataTypes/IMSI.ta.mjs";
 import { ExtensionContainer, _decode_ExtensionContainer, _encode_ExtensionContainer } from "../MAP-ExtensionDataTypes/ExtensionContainer.ta.mjs";
 import { TalkerPriority, _decode_TalkerPriority, _encode_TalkerPriority, _enum_for_TalkerPriority } from "../MAP-GR-DataTypes/TalkerPriority.ta.mjs";
-import { AdditionalInfo, _decode_AdditionalInfo, _encode_AdditionalInfo } from "../MAP-MS-DataTypes/AdditionalInfo.ta.mjs";
+import { type AdditionalInfo, _decode_AdditionalInfo, _encode_AdditionalInfo } from "../MAP-MS-DataTypes/AdditionalInfo.ta.mjs";
 
 
 /**
@@ -23,10 +23,10 @@ import { AdditionalInfo, _decode_AdditionalInfo, _encode_AdditionalInfo } from "
  * 
  * ```asn1
  * SendGroupCallEndSignalArg ::= SEQUENCE {
- *     imsi    IMSI    OPTIONAL,
- *     extensionContainer    ExtensionContainer    OPTIONAL,
+ *     imsi    IMSI    type OPTIONAL,
+ *     extensionContainer    ExtensionContainer    type OPTIONAL,
  *     ...,
- *     talkerPriority    [0]TalkerPriority    OPTIONAL,
+ *     talkerPriority    [0]TalkerPriority    type OPTIONAL,
  *     additionalInfo    [1]AdditionalInfo    OPTIONAL }
  * ```
  * 
@@ -34,56 +34,68 @@ import { AdditionalInfo, _decode_AdditionalInfo, _encode_AdditionalInfo } from "
  */
 export
 class SendGroupCallEndSignalArg {
+    /**
+     * @summary `imsi`.
+     * @description
+     *
+     * Call originator allowed to terminate the call. Present if established
+     * by a service subscriber roaming in the Relay MSC area (clause
+     * 10.7.3).
+     *
+     * @public
+     * @readonly
+     */
+    public readonly imsi?: OPTIONAL<IMSI>;
+    /**
+     * @summary `extensionContainer`.
+     * @description
+     *
+     * Private or PCS extensions (3GPP TS 29.002 V19.1.0 clause 17.7.11).
+     *
+     * @public
+     * @readonly
+     */
+    public readonly extensionContainer?: OPTIONAL<ExtensionContainer>;
+    /**
+     * @summary `talkerPriority`.
+     * @description
+     *
+     * See 3GPP TS 43.068 (clause 10.7.3).
+     *
+     * @public
+     * @readonly
+     */
+    public readonly talkerPriority?: OPTIONAL<TalkerPriority>;
+    /**
+     * @summary `additionalInfo`.
+     * @description
+     *
+     * See 3GPP TS 43.068 (clause 10.7.3).
+     *
+     * @public
+     * @readonly
+     */
+    public readonly additionalInfo?: OPTIONAL<AdditionalInfo>;
+    /**
+     * @summary Extensions that are not recognized.
+     * @public
+     * @readonly
+     */
+    public readonly _unrecognizedExtensionsList: _Element[];
+
     constructor (
-        /**
-         * @summary `imsi`.
-         * @description
-         *
-         * Call originator allowed to terminate the call. Present if established
-         * by a service subscriber roaming in the Relay MSC area (clause
-         * 10.7.3).
-         *
-         * @public
-         * @readonly
-         */
-        readonly imsi?: OPTIONAL<IMSI>,
-        /**
-         * @summary `extensionContainer`.
-         * @description
-         *
-         * Private or PCS extensions (3GPP TS 29.002 V19.1.0 clause 17.7.11).
-         *
-         * @public
-         * @readonly
-         */
-        readonly extensionContainer?: OPTIONAL<ExtensionContainer>,
-        /**
-         * @summary `talkerPriority`.
-         * @description
-         *
-         * See 3GPP TS 43.068 (clause 10.7.3).
-         *
-         * @public
-         * @readonly
-         */
-        readonly talkerPriority?: OPTIONAL<TalkerPriority>,
-        /**
-         * @summary `additionalInfo`.
-         * @description
-         *
-         * See 3GPP TS 43.068 (clause 10.7.3).
-         *
-         * @public
-         * @readonly
-         */
-        readonly additionalInfo?: OPTIONAL<AdditionalInfo>,
-        /**
-         * @summary Extensions that are not recognized.
-         * @public
-         * @readonly
-         */
-        readonly _unrecognizedExtensionsList: _Element[] = []
-    ) {}
+        imsi?: OPTIONAL<IMSI>,
+        extensionContainer?: OPTIONAL<ExtensionContainer>,
+        talkerPriority?: OPTIONAL<TalkerPriority>,
+        additionalInfo?: OPTIONAL<AdditionalInfo>,
+        _unrecognizedExtensionsList: _Element[] = []
+    ) {
+        this.imsi = imsi;
+        this.extensionContainer = extensionContainer;
+        this.talkerPriority = talkerPriority;
+        this.additionalInfo = additionalInfo;
+        this._unrecognizedExtensionsList = _unrecognizedExtensionsList;
+    }
 
     /**
      * @summary Restructures an object into a SendGroupCallEndSignalArg
@@ -107,7 +119,7 @@ class SendGroupCallEndSignalArg {
          * @static
          */
 
-    public static _enum_for_talkerPriority = _enum_for_TalkerPriority;
+    public static _enum_for_talkerPriority: typeof _enum_for_TalkerPriority = _enum_for_TalkerPriority;
 }
 
 /**

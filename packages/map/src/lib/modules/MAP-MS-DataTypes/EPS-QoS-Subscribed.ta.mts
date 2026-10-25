@@ -1,13 +1,13 @@
 /* eslint-disable */
 import {
-    OPTIONAL,
-    ASN1Element as _Element,
+    type OPTIONAL,
+    type ASN1Element as _Element,
     ASN1TagClass as _TagClass
 } from "@wildboar/asn1";
 import * as $ from "@wildboar/asn1/functional";
 import { ExtensionContainer, _decode_ExtensionContainer, _encode_ExtensionContainer } from "../MAP-ExtensionDataTypes/ExtensionContainer.ta.mjs";
 import { Allocation_Retention_Priority, _decode_Allocation_Retention_Priority, _encode_Allocation_Retention_Priority } from "../MAP-MS-DataTypes/Allocation-Retention-Priority.ta.mjs";
-import { QoS_Class_Identifier, _decode_QoS_Class_Identifier, _encode_QoS_Class_Identifier } from "../MAP-MS-DataTypes/QoS-Class-Identifier.ta.mjs";
+import { type QoS_Class_Identifier, _decode_QoS_Class_Identifier, _encode_QoS_Class_Identifier } from "../MAP-MS-DataTypes/QoS-Class-Identifier.ta.mjs";
 
 
 /**
@@ -23,7 +23,7 @@ import { QoS_Class_Identifier, _decode_QoS_Class_Identifier, _encode_QoS_Class_I
  * EPS-QoS-Subscribed ::= SEQUENCE {
  *     qos-Class-Identifier    [0] QoS-Class-Identifier,
  *     allocation-Retention-Priority    [1] Allocation-Retention-Priority,
- *     extensionContainer    [2] ExtensionContainer    OPTIONAL,
+ *     extensionContainer    [2] ExtensionContainer    type OPTIONAL,
  *     ... }
  * ```
  * 
@@ -31,42 +31,52 @@ import { QoS_Class_Identifier, _decode_QoS_Class_Identifier, _encode_QoS_Class_I
  */
 export
 class EPS_QoS_Subscribed {
+    /**
+     * @summary `qos_Class_Identifier`.
+     * @description
+     *
+     * QoS Class Identifier; values are defined in 3GPP TS 29.212 (3GPP TS
+     * 29.002 V19.1.0 clause 17.7.1).
+     *
+     * @public
+     * @readonly
+     */
+    public readonly qos_Class_Identifier: QoS_Class_Identifier;
+    /**
+     * @summary `allocation_Retention_Priority`.
+     * @description
+     *
+     * EPS allocation/retention priority (3GPP TS 29.002 V19.1.0 clause
+     * 17.7.1).
+     *
+     * @public
+     * @readonly
+     */
+    public readonly allocation_Retention_Priority: Allocation_Retention_Priority;
+    /**
+     * @summary `extensionContainer`.
+     * @public
+     * @readonly
+     */
+    public readonly extensionContainer?: OPTIONAL<ExtensionContainer>;
+    /**
+     * @summary Extensions that are not recognized.
+     * @public
+     * @readonly
+     */
+    public readonly _unrecognizedExtensionsList: _Element[];
+
     constructor (
-        /**
-         * @summary `qos_Class_Identifier`.
-         * @description
-         *
-         * QoS Class Identifier; values are defined in 3GPP TS 29.212 (3GPP TS
-         * 29.002 V19.1.0 clause 17.7.1).
-         *
-         * @public
-         * @readonly
-         */
-        readonly qos_Class_Identifier: QoS_Class_Identifier,
-        /**
-         * @summary `allocation_Retention_Priority`.
-         * @description
-         *
-         * EPS allocation/retention priority (3GPP TS 29.002 V19.1.0 clause
-         * 17.7.1).
-         *
-         * @public
-         * @readonly
-         */
-        readonly allocation_Retention_Priority: Allocation_Retention_Priority,
-        /**
-         * @summary `extensionContainer`.
-         * @public
-         * @readonly
-         */
-        readonly extensionContainer?: OPTIONAL<ExtensionContainer>,
-        /**
-         * @summary Extensions that are not recognized.
-         * @public
-         * @readonly
-         */
-        readonly _unrecognizedExtensionsList: _Element[] = []
-    ) {}
+        qos_Class_Identifier: QoS_Class_Identifier,
+        allocation_Retention_Priority: Allocation_Retention_Priority,
+        extensionContainer?: OPTIONAL<ExtensionContainer>,
+        _unrecognizedExtensionsList: _Element[] = []
+    ) {
+        this.qos_Class_Identifier = qos_Class_Identifier;
+        this.allocation_Retention_Priority = allocation_Retention_Priority;
+        this.extensionContainer = extensionContainer;
+        this._unrecognizedExtensionsList = _unrecognizedExtensionsList;
+    }
 
     /**
      * @summary Restructures an object into a EPS_QoS_Subscribed

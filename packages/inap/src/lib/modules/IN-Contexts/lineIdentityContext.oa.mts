@@ -1,5 +1,5 @@
 /* eslint-disable */
-import { IsdnAddress, _decode_IsdnAddress, _encode_IsdnAddress } from "../IN-Contexts/IsdnAddress.ta.mjs";
+import { type IsdnAddress, _decode_IsdnAddress, _encode_IsdnAddress } from "../IN-Contexts/IsdnAddress.ta.mjs";
 // export { IsdnAddress, _decode_IsdnAddress, _encode_IsdnAddress } from "../IN-Contexts/IsdnAddress.ta.mjs";
 import { id_avc_lineIdentity } from "../IN-Contexts/id-avc-lineIdentity.va.mjs";
 // export { id_avc_lineIdentity } from "../IN-Contexts/id-avc-lineIdentity.va.mjs";

@@ -1,7 +1,7 @@
 /* eslint-disable */
 import {
-    OPTIONAL,
-    ASN1Element as _Element,
+    type OPTIONAL,
+    type ASN1Element as _Element,
     ASN1TagClass as _TagClass,
     ASN1Construction as _Construction,
     ASN1UniversalType as _UniversalType,
@@ -11,9 +11,9 @@ import {
     ASN1ConstructionError as _ConstructionError,
 } from "@wildboar/asn1";
 import * as $ from "@wildboar/asn1/functional";
-import { RandomNumber, _decode_RandomNumber, _encode_RandomNumber } from "../SASL-9798-3-1997/RandomNumber.ta.mjs";
+import { type RandomNumber, _decode_RandomNumber, _encode_RandomNumber } from "../SASL-9798-3-1997/RandomNumber.ta.mjs";
 import {
-    GeneralNames,
+    type GeneralNames,
     _decode_GeneralNames,
     _encode_GeneralNames,
 } from "@wildboar/gn";
@@ -45,53 +45,63 @@ import {
  */
 export
 class TBSDataBA {
+    /**
+     * @summary `randomB`.
+     * @description
+     *
+     * Server challenge R_B from `TokenBA1`. The client verifies this
+     * matches the value it received in step 1 (RFC 3163 §2.5).
+     *
+     * @public
+     * @readonly
+     */
+    public readonly randomB: RandomNumber;
+    /**
+     * @summary `randomA`.
+     * @description
+     *
+     * Echo of the client nonce R_A from `TokenAB`. The client
+     * verifies this matches the value it sent in step 2
+     * (RFC 3163 §2.5).
+     *
+     * @public
+     * @readonly
+     */
+    public readonly randomA: RandomNumber;
+    /**
+     * @summary `randomC`.
+     * @description
+     *
+     * Third server nonce R_C from `TokenBA2` (RFC 3163 §2.5 / §7).
+     *
+     * @public
+     * @readonly
+     */
+    public readonly randomC: RandomNumber;
+    /**
+     * @summary `entityA`.
+     * @description
+     *
+     * Optional client identity; presence must match
+     * `TokenBA2.entityA`. When present MUST be the client's name
+     * from their X.509 certificate (RFC 3163 §3.3).
+     *
+     * @public
+     * @readonly
+     */
+    public readonly entityA?: OPTIONAL<GeneralNames>;
+
     constructor (
-        /**
-         * @summary `randomB`.
-         * @description
-         *
-         * Server challenge R_B from `TokenBA1`. The client verifies this
-         * matches the value it received in step 1 (RFC 3163 §2.5).
-         *
-         * @public
-         * @readonly
-         */
-        readonly randomB: RandomNumber,
-        /**
-         * @summary `randomA`.
-         * @description
-         *
-         * Echo of the client nonce R_A from `TokenAB`. The client
-         * verifies this matches the value it sent in step 2
-         * (RFC 3163 §2.5).
-         *
-         * @public
-         * @readonly
-         */
-        readonly randomA: RandomNumber,
-        /**
-         * @summary `randomC`.
-         * @description
-         *
-         * Third server nonce R_C from `TokenBA2` (RFC 3163 §2.5 / §7).
-         *
-         * @public
-         * @readonly
-         */
-        readonly randomC: RandomNumber,
-        /**
-         * @summary `entityA`.
-         * @description
-         *
-         * Optional client identity; presence must match
-         * `TokenBA2.entityA`. When present MUST be the client's name
-         * from their X.509 certificate (RFC 3163 §3.3).
-         *
-         * @public
-         * @readonly
-         */
-        readonly entityA?: OPTIONAL<GeneralNames>
-    ) {}
+        randomB: RandomNumber,
+        randomA: RandomNumber,
+        randomC: RandomNumber,
+        entityA?: OPTIONAL<GeneralNames>
+    ) {
+        this.randomB = randomB;
+        this.randomA = randomA;
+        this.randomC = randomC;
+        this.entityA = entityA;
+    }
 
     /**
      * @summary Restructures an object into a TBSDataBA

@@ -1,7 +1,7 @@
 /* eslint-disable */
 import {
-    OPTIONAL,
-    ASN1Element as _Element,
+    type OPTIONAL,
+    type ASN1Element as _Element,
     ASN1TagClass as _TagClass,
     ASN1Construction as _Construction,
     ASN1UniversalType as _UniversalType,
@@ -12,7 +12,7 @@ import {
 } from '@wildboar/asn1';
 import * as $ from '@wildboar/asn1/functional';
 import {
-    ObjectOperations,
+    type ObjectOperations,
     _decode_ObjectOperations,
     _encode_ObjectOperations,
 } from '../Pbact-access/ObjectOperations.ta.mjs';
@@ -36,7 +36,7 @@ import {
  * ```asn1
  * TargetSelect ::= SEQUENCE {
  *   objOper   ObjectOperations OPTIONAL,
- *   attrSel   AttributeSel     OPTIONAL,
+ *   attrSel   AttributeSel     type OPTIONAL,
  *   ... }
  *   (WITH COMPONENTS {..., objOper  PRESENT } |
  *    WITH COMPONENTS {..., attrSel  PRESENT } )
@@ -44,38 +44,46 @@ import {
  *
  */
 export class TargetSelect {
+    /**
+     * @summary `objOper`.
+     * @description
+     *
+     * Operations on objects as a whole. Absent → none.
+     * ITU-T Rec. X.1080.0 (2017) Cor.1
+     * [§7.3.2](https://www.itu.int/rec/T-REC-X.1080.0-201703-I!Cor1).
+     *
+     * @public
+     * @readonly
+     */
+    public readonly objOper?: OPTIONAL<ObjectOperations>;
+    /**
+     * @summary `attrSel`.
+     * @description
+     *
+     * Operations on attributes. Absent → none.
+     * ITU-T Rec. X.1080.0 (2017) Cor.1
+     * [§7.3.2](https://www.itu.int/rec/T-REC-X.1080.0-201703-I!Cor1).
+     *
+     * @public
+     * @readonly
+     */
+    public readonly attrSel?: OPTIONAL<AttributeSel>;
+    /**
+     * @summary Extensions that are not recognized.
+     * @public
+     * @readonly
+     */
+    public readonly _unrecognizedExtensionsList: _Element[];
+
     constructor(
-        /**
-         * @summary `objOper`.
-         * @description
-         *
-         * Operations on objects as a whole. Absent → none.
-         * ITU-T Rec. X.1080.0 (2017) Cor.1
-         * [§7.3.2](https://www.itu.int/rec/T-REC-X.1080.0-201703-I!Cor1).
-         *
-         * @public
-         * @readonly
-         */
-        readonly objOper?: OPTIONAL<ObjectOperations>,
-        /**
-         * @summary `attrSel`.
-         * @description
-         *
-         * Operations on attributes. Absent → none.
-         * ITU-T Rec. X.1080.0 (2017) Cor.1
-         * [§7.3.2](https://www.itu.int/rec/T-REC-X.1080.0-201703-I!Cor1).
-         *
-         * @public
-         * @readonly
-         */
-        readonly attrSel?: OPTIONAL<AttributeSel>,
-        /**
-         * @summary Extensions that are not recognized.
-         * @public
-         * @readonly
-         */
-        readonly _unrecognizedExtensionsList: _Element[] = []
-    ) {}
+        objOper?: OPTIONAL<ObjectOperations>,
+        attrSel?: OPTIONAL<AttributeSel>,
+        _unrecognizedExtensionsList: _Element[] = []
+    ) {
+        this.objOper = objOper;
+        this.attrSel = attrSel;
+        this._unrecognizedExtensionsList = _unrecognizedExtensionsList;
+    }
 
     /**
      * @summary Restructures an object into a TargetSelect

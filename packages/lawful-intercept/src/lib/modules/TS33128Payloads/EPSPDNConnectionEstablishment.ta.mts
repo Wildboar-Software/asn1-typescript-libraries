@@ -1,25 +1,25 @@
 /* eslint-disable */
 import {
-    OPTIONAL,
-    ASN1Element as _Element,
+    type OPTIONAL,
+    type ASN1Element as _Element,
     ASN1TagClass as _TagClass
 } from "@wildboar/asn1";
 import * as $ from "@wildboar/asn1/functional";
 import { EPSSubscriberIDs, _decode_EPSSubscriberIDs, _encode_EPSSubscriberIDs } from "../TS33128Payloads/EPSSubscriberIDs.ta.mjs";
 // export { EPSSubscriberIDs, _decode_EPSSubscriberIDs, _encode_EPSSubscriberIDs } from "../TS33128Payloads/EPSSubscriberIDs.ta.mjs";
-import { IMSIUnauthenticatedIndication, _decode_IMSIUnauthenticatedIndication, _encode_IMSIUnauthenticatedIndication } from "../TS33128Payloads/IMSIUnauthenticatedIndication.ta.mjs";
+import { type IMSIUnauthenticatedIndication, _decode_IMSIUnauthenticatedIndication, _encode_IMSIUnauthenticatedIndication } from "../TS33128Payloads/IMSIUnauthenticatedIndication.ta.mjs";
 // export { IMSIUnauthenticatedIndication, _decode_IMSIUnauthenticatedIndication, _encode_IMSIUnauthenticatedIndication } from "../TS33128Payloads/IMSIUnauthenticatedIndication.ta.mjs";
-import { EPSBearerID, _decode_EPSBearerID, _encode_EPSBearerID } from "../TS33128Payloads/EPSBearerID.ta.mjs";
+import { type EPSBearerID, _decode_EPSBearerID, _encode_EPSBearerID } from "../TS33128Payloads/EPSBearerID.ta.mjs";
 // export { EPSBearerID, _decode_EPSBearerID, _encode_EPSBearerID } from "../TS33128Payloads/EPSBearerID.ta.mjs";
 import { GTPTunnelInfo, _decode_GTPTunnelInfo, _encode_GTPTunnelInfo } from "../TS33128Payloads/GTPTunnelInfo.ta.mjs";
 // export { GTPTunnelInfo, _decode_GTPTunnelInfo, _encode_GTPTunnelInfo } from "../TS33128Payloads/GTPTunnelInfo.ta.mjs";
 import { PDNConnectionType, _decode_PDNConnectionType, _encode_PDNConnectionType, _enum_for_PDNConnectionType } from "../TS33128Payloads/PDNConnectionType.ta.mjs";
 // export { PDNConnectionType, _enum_for_PDNConnectionType, PDNConnectionType_iPv4 /* IMPORTED_LONG_ENUMERATION_ITEM */, iPv4 /* IMPORTED_SHORT_ENUMERATION_ITEM */, PDNConnectionType_iPv6 /* IMPORTED_LONG_ENUMERATION_ITEM */, iPv6 /* IMPORTED_SHORT_ENUMERATION_ITEM */, PDNConnectionType_iPv4v6 /* IMPORTED_LONG_ENUMERATION_ITEM */, iPv4v6 /* IMPORTED_SHORT_ENUMERATION_ITEM */, PDNConnectionType_nonIP /* IMPORTED_LONG_ENUMERATION_ITEM */, nonIP /* IMPORTED_SHORT_ENUMERATION_ITEM */, PDNConnectionType_ethernet /* IMPORTED_LONG_ENUMERATION_ITEM */, ethernet /* IMPORTED_SHORT_ENUMERATION_ITEM */, _decode_PDNConnectionType, _encode_PDNConnectionType } from "../TS33128Payloads/PDNConnectionType.ta.mjs";
-import { UEEndpointAddress, _decode_UEEndpointAddress, _encode_UEEndpointAddress } from "../TS33128Payloads/UEEndpointAddress.ta.mjs";
+import { type UEEndpointAddress, _decode_UEEndpointAddress, _encode_UEEndpointAddress } from "../TS33128Payloads/UEEndpointAddress.ta.mjs";
 // export { UEEndpointAddress, _decode_UEEndpointAddress, _encode_UEEndpointAddress } from "../TS33128Payloads/UEEndpointAddress.ta.mjs";
 import { Location, _decode_Location, _encode_Location } from "../TS33128Payloads/Location.ta.mjs";
 // export { Location, _decode_Location, _encode_Location } from "../TS33128Payloads/Location.ta.mjs";
-import { APN, _decode_APN, _encode_APN } from "../TS33128Payloads/APN.ta.mjs";
+import { type APN, _decode_APN, _encode_APN } from "../TS33128Payloads/APN.ta.mjs";
 // export { APN, _decode_APN, _encode_APN } from "../TS33128Payloads/APN.ta.mjs";
 import { EPSPDNConnectionRequestType, _decode_EPSPDNConnectionRequestType, _encode_EPSPDNConnectionRequestType, _enum_for_EPSPDNConnectionRequestType } from "../TS33128Payloads/EPSPDNConnectionRequestType.ta.mjs";
 // export { EPSPDNConnectionRequestType, _enum_for_EPSPDNConnectionRequestType, EPSPDNConnectionRequestType_initialRequest /* IMPORTED_LONG_ENUMERATION_ITEM */, initialRequest /* IMPORTED_SHORT_ENUMERATION_ITEM */, EPSPDNConnectionRequestType_handover /* IMPORTED_LONG_ENUMERATION_ITEM */, handover /* IMPORTED_SHORT_ENUMERATION_ITEM */, EPSPDNConnectionRequestType_rLOS /* IMPORTED_LONG_ENUMERATION_ITEM */, rLOS /* IMPORTED_SHORT_ENUMERATION_ITEM */, EPSPDNConnectionRequestType_emergency /* IMPORTED_LONG_ENUMERATION_ITEM */, emergency /* IMPORTED_SHORT_ENUMERATION_ITEM */, EPSPDNConnectionRequestType_handoverOfEmergencyBearerServices /* IMPORTED_LONG_ENUMERATION_ITEM */, handoverOfEmergencyBearerServices /* IMPORTED_SHORT_ENUMERATION_ITEM */, EPSPDNConnectionRequestType_reserved /* IMPORTED_LONG_ENUMERATION_ITEM */, reserved /* IMPORTED_SHORT_ENUMERATION_ITEM */, _decode_EPSPDNConnectionRequestType, _encode_EPSPDNConnectionRequestType } from "../TS33128Payloads/EPSPDNConnectionRequestType.ta.mjs";
@@ -31,27 +31,27 @@ import { PDNProtocolConfigurationOptions, _decode_PDNProtocolConfigurationOption
 // export { PDNProtocolConfigurationOptions, _decode_PDNProtocolConfigurationOptions, _encode_PDNProtocolConfigurationOptions } from "../TS33128Payloads/PDNProtocolConfigurationOptions.ta.mjs";
 import { SMFServingNetwork, _decode_SMFServingNetwork, _encode_SMFServingNetwork } from "../TS33128Payloads/SMFServingNetwork.ta.mjs";
 // export { SMFServingNetwork, _decode_SMFServingNetwork, _encode_SMFServingNetwork } from "../TS33128Payloads/SMFServingNetwork.ta.mjs";
-import { SMPDUDNRequest, _decode_SMPDUDNRequest, _encode_SMPDUDNRequest } from "../TS33128Payloads/SMPDUDNRequest.ta.mjs";
+import { type SMPDUDNRequest, _decode_SMPDUDNRequest, _encode_SMPDUDNRequest } from "../TS33128Payloads/SMPDUDNRequest.ta.mjs";
 // export { SMPDUDNRequest, _decode_SMPDUDNRequest, _encode_SMPDUDNRequest } from "../TS33128Payloads/SMPDUDNRequest.ta.mjs";
 import { EPSBearerContextCreated, _decode_EPSBearerContextCreated, _encode_EPSBearerContextCreated } from "../TS33128Payloads/EPSBearerContextCreated.ta.mjs";
 // export { EPSBearerContextCreated, _decode_EPSBearerContextCreated, _encode_EPSBearerContextCreated } from "../TS33128Payloads/EPSBearerContextCreated.ta.mjs";
 import { EPSBearerContextForRemoval, _decode_EPSBearerContextForRemoval, _encode_EPSBearerContextForRemoval } from "../TS33128Payloads/EPSBearerContextForRemoval.ta.mjs";
 // export { EPSBearerContextForRemoval, _decode_EPSBearerContextForRemoval, _encode_EPSBearerContextForRemoval } from "../TS33128Payloads/EPSBearerContextForRemoval.ta.mjs";
-import { PDNConnectionIndicationFlags, _decode_PDNConnectionIndicationFlags, _encode_PDNConnectionIndicationFlags } from "../TS33128Payloads/PDNConnectionIndicationFlags.ta.mjs";
+import { type PDNConnectionIndicationFlags, _decode_PDNConnectionIndicationFlags, _encode_PDNConnectionIndicationFlags } from "../TS33128Payloads/PDNConnectionIndicationFlags.ta.mjs";
 // export { PDNConnectionIndicationFlags, _decode_PDNConnectionIndicationFlags, _encode_PDNConnectionIndicationFlags } from "../TS33128Payloads/PDNConnectionIndicationFlags.ta.mjs";
-import { PDNHandoverIndication, _decode_PDNHandoverIndication, _encode_PDNHandoverIndication } from "../TS33128Payloads/PDNHandoverIndication.ta.mjs";
+import { type PDNHandoverIndication, _decode_PDNHandoverIndication, _encode_PDNHandoverIndication } from "../TS33128Payloads/PDNHandoverIndication.ta.mjs";
 // export { PDNHandoverIndication, _decode_PDNHandoverIndication, _encode_PDNHandoverIndication } from "../TS33128Payloads/PDNHandoverIndication.ta.mjs";
-import { PDNNBIFOMSupport, _decode_PDNNBIFOMSupport, _encode_PDNNBIFOMSupport } from "../TS33128Payloads/PDNNBIFOMSupport.ta.mjs";
+import { type PDNNBIFOMSupport, _decode_PDNNBIFOMSupport, _encode_PDNNBIFOMSupport } from "../TS33128Payloads/PDNNBIFOMSupport.ta.mjs";
 // export { PDNNBIFOMSupport, _decode_PDNNBIFOMSupport, _encode_PDNNBIFOMSupport } from "../TS33128Payloads/PDNNBIFOMSupport.ta.mjs";
 import { FiveGSInterworkingInfo, _decode_FiveGSInterworkingInfo, _encode_FiveGSInterworkingInfo } from "../TS33128Payloads/FiveGSInterworkingInfo.ta.mjs";
 // export { FiveGSInterworkingInfo, _decode_FiveGSInterworkingInfo, _encode_FiveGSInterworkingInfo } from "../TS33128Payloads/FiveGSInterworkingInfo.ta.mjs";
-import { CSRMFI, _decode_CSRMFI, _encode_CSRMFI } from "../TS33128Payloads/CSRMFI.ta.mjs";
+import { type CSRMFI, _decode_CSRMFI, _encode_CSRMFI } from "../TS33128Payloads/CSRMFI.ta.mjs";
 // export { CSRMFI, _decode_CSRMFI, _encode_CSRMFI } from "../TS33128Payloads/CSRMFI.ta.mjs";
-import { RestorationOfPDNConnectionsSupport, _decode_RestorationOfPDNConnectionsSupport, _encode_RestorationOfPDNConnectionsSupport } from "../TS33128Payloads/RestorationOfPDNConnectionsSupport.ta.mjs";
+import { type RestorationOfPDNConnectionsSupport, _decode_RestorationOfPDNConnectionsSupport, _encode_RestorationOfPDNConnectionsSupport } from "../TS33128Payloads/RestorationOfPDNConnectionsSupport.ta.mjs";
 // export { RestorationOfPDNConnectionsSupport, _decode_RestorationOfPDNConnectionsSupport, _encode_RestorationOfPDNConnectionsSupport } from "../TS33128Payloads/RestorationOfPDNConnectionsSupport.ta.mjs";
-import { PGWChangeIndication, _decode_PGWChangeIndication, _encode_PGWChangeIndication } from "../TS33128Payloads/PGWChangeIndication.ta.mjs";
+import { type PGWChangeIndication, _decode_PGWChangeIndication, _encode_PGWChangeIndication } from "../TS33128Payloads/PGWChangeIndication.ta.mjs";
 // export { PGWChangeIndication, _decode_PGWChangeIndication, _encode_PGWChangeIndication } from "../TS33128Payloads/PGWChangeIndication.ta.mjs";
-import { PGWRNSI, _decode_PGWRNSI, _encode_PGWRNSI } from "../TS33128Payloads/PGWRNSI.ta.mjs";
+import { type PGWRNSI, _decode_PGWRNSI, _encode_PGWRNSI } from "../TS33128Payloads/PGWRNSI.ta.mjs";
 // export { PGWRNSI, _decode_PGWRNSI, _encode_PGWRNSI } from "../TS33128Payloads/PGWRNSI.ta.mjs";
 
 
@@ -593,25 +593,25 @@ class EPSPDNConnectionEstablishment {
          * @static
          */
 
-    public static _enum_for_pDNConnectionType = _enum_for_PDNConnectionType;        /**
+    public static _enum_for_pDNConnectionType: typeof _enum_for_PDNConnectionType = _enum_for_PDNConnectionType;        /**
          * @summary The enum used as the type of the component `requestType`
          * @public
          * @static
          */
 
-    public static _enum_for_requestType = _enum_for_EPSPDNConnectionRequestType;        /**
+    public static _enum_for_requestType: typeof _enum_for_EPSPDNConnectionRequestType = _enum_for_EPSPDNConnectionRequestType;        /**
          * @summary The enum used as the type of the component `accessType`
          * @public
          * @static
          */
 
-    public static _enum_for_accessType = _enum_for_AccessType;        /**
+    public static _enum_for_accessType: typeof _enum_for_AccessType = _enum_for_AccessType;        /**
          * @summary The enum used as the type of the component `rATType`
          * @public
          * @static
          */
 
-    public static _enum_for_rATType = _enum_for_RATType;
+    public static _enum_for_rATType: typeof _enum_for_RATType = _enum_for_RATType;
 }
 
 /**

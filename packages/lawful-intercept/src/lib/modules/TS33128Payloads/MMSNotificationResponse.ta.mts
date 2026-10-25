@@ -1,9 +1,9 @@
 /* eslint-disable */
 import {
-    BOOLEAN,
-    OPTIONAL,
-    UTF8String,
-    ASN1Element as _Element,
+    type BOOLEAN,
+    type OPTIONAL,
+    type UTF8String,
+    type ASN1Element as _Element,
     ASN1TagClass as _TagClass
 } from "@wildboar/asn1";
 import * as $ from "@wildboar/asn1/functional";
@@ -155,13 +155,13 @@ class MMSNotificationResponse {
          * @static
          */
 
-    public static _enum_for_direction = _enum_for_MMSDirection;        /**
+    public static _enum_for_direction: typeof _enum_for_MMSDirection = _enum_for_MMSDirection;        /**
          * @summary The enum used as the type of the component `status`
          * @public
          * @static
          */
 
-    public static _enum_for_status = _enum_for_MMStatus;
+    public static _enum_for_status: typeof _enum_for_MMStatus = _enum_for_MMStatus;
 }
 
 /**

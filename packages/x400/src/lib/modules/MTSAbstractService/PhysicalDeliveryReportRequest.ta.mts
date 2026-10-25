@@ -1,7 +1,7 @@
 /* eslint-disable */
 import {
-    INTEGER,
-    ASN1Element as _Element,
+    type INTEGER,
+    type ASN1Element as _Element,
     ASN1TagClass as _TagClass,
     ASN1Construction as _Construction,
     ASN1UniversalType as _UniversalType,
@@ -38,62 +38,62 @@ export type PhysicalDeliveryReportRequest = INTEGER;
  * @constant
  * @type {number}
  */
-export const PhysicalDeliveryReportRequest_return_of_undeliverable_mail_by_PDS: PhysicalDeliveryReportRequest = 0; /* LONG_NAMED_INTEGER_VALUE */
+export const PhysicalDeliveryReportRequest_return_of_undeliverable_mail_by_PDS: 0 = 0 satisfies PhysicalDeliveryReportRequest; /* LONG_NAMED_INTEGER_VALUE */
 
 /**
  * @summary PhysicalDeliveryReportRequest_return_of_undeliverable_mail_by_PDS
  * @constant
  * @type {number}
  */
-export const return_of_undeliverable_mail_by_PDS: PhysicalDeliveryReportRequest = PhysicalDeliveryReportRequest_return_of_undeliverable_mail_by_PDS; /* SHORT_NAMED_INTEGER_VALUE */
+export const return_of_undeliverable_mail_by_PDS: 0 = PhysicalDeliveryReportRequest_return_of_undeliverable_mail_by_PDS; /* SHORT_NAMED_INTEGER_VALUE */
 
 /**
  * @summary PhysicalDeliveryReportRequest_return_of_notification_by_PDS
  * @constant
  * @type {number}
  */
-export const PhysicalDeliveryReportRequest_return_of_notification_by_PDS: PhysicalDeliveryReportRequest = 1; /* LONG_NAMED_INTEGER_VALUE */
+export const PhysicalDeliveryReportRequest_return_of_notification_by_PDS: 1 = 1 satisfies PhysicalDeliveryReportRequest; /* LONG_NAMED_INTEGER_VALUE */
 
 /**
  * @summary PhysicalDeliveryReportRequest_return_of_notification_by_PDS
  * @constant
  * @type {number}
  */
-export const return_of_notification_by_PDS: PhysicalDeliveryReportRequest = PhysicalDeliveryReportRequest_return_of_notification_by_PDS; /* SHORT_NAMED_INTEGER_VALUE */
+export const return_of_notification_by_PDS: 1 = PhysicalDeliveryReportRequest_return_of_notification_by_PDS; /* SHORT_NAMED_INTEGER_VALUE */
 
 /**
  * @summary PhysicalDeliveryReportRequest_return_of_notification_by_MHS
  * @constant
  * @type {number}
  */
-export const PhysicalDeliveryReportRequest_return_of_notification_by_MHS: PhysicalDeliveryReportRequest = 2; /* LONG_NAMED_INTEGER_VALUE */
+export const PhysicalDeliveryReportRequest_return_of_notification_by_MHS: 2 = 2 satisfies PhysicalDeliveryReportRequest; /* LONG_NAMED_INTEGER_VALUE */
 
 /**
  * @summary PhysicalDeliveryReportRequest_return_of_notification_by_MHS
  * @constant
  * @type {number}
  */
-export const return_of_notification_by_MHS: PhysicalDeliveryReportRequest = PhysicalDeliveryReportRequest_return_of_notification_by_MHS; /* SHORT_NAMED_INTEGER_VALUE */
+export const return_of_notification_by_MHS: 2 = PhysicalDeliveryReportRequest_return_of_notification_by_MHS; /* SHORT_NAMED_INTEGER_VALUE */
 
 /**
  * @summary PhysicalDeliveryReportRequest_return_of_notification_by_MHS_and_PDS
  * @constant
  * @type {number}
  */
-export const PhysicalDeliveryReportRequest_return_of_notification_by_MHS_and_PDS: PhysicalDeliveryReportRequest = 3; /* LONG_NAMED_INTEGER_VALUE */
+export const PhysicalDeliveryReportRequest_return_of_notification_by_MHS_and_PDS: 3 = 3 satisfies PhysicalDeliveryReportRequest; /* LONG_NAMED_INTEGER_VALUE */
 
 /**
  * @summary PhysicalDeliveryReportRequest_return_of_notification_by_MHS_and_PDS
  * @constant
  * @type {number}
  */
-export const return_of_notification_by_MHS_and_PDS: PhysicalDeliveryReportRequest = PhysicalDeliveryReportRequest_return_of_notification_by_MHS_and_PDS; /* SHORT_NAMED_INTEGER_VALUE */
+export const return_of_notification_by_MHS_and_PDS: 3 = PhysicalDeliveryReportRequest_return_of_notification_by_MHS_and_PDS; /* SHORT_NAMED_INTEGER_VALUE */
 
 
-export const _decode_PhysicalDeliveryReportRequest = $._decodeInteger;
+export const _decode_PhysicalDeliveryReportRequest: $.ASN1Decoder<INTEGER> = $._decodeInteger;
 
 
-export const _encode_PhysicalDeliveryReportRequest = $._encodeInteger;
+export const _encode_PhysicalDeliveryReportRequest: $.ASN1Encoder<INTEGER> = $._encodeInteger;
 
 
 /* eslint-enable */

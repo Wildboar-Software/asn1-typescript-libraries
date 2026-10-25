@@ -1,11 +1,11 @@
 /* eslint-disable */
 import {
     ASN1ConstructionError as _ConstructionError,
-    ASN1Element as _Element,
+    type ASN1Element as _Element,
     ASN1Error,
     ASN1TagClass as _TagClass,
-    INTEGER,
-    OBJECT_IDENTIFIER
+    type INTEGER,
+    type OBJECT_IDENTIFIER
 } from "@wildboar/asn1";
 import * as $ from "@wildboar/asn1/functional";
 import { id_icao_mrtd_security_aaProtocolObject } from "../Doc-9303-Part-11-Module/id-icao-mrtd-security-aaProtocolObject.va.mjs";
@@ -46,29 +46,36 @@ import { id_icao_mrtd_security_aaProtocolObject } from "../Doc-9303-Part-11-Modu
  */
 export
 class ActiveAuthenticationInfo {
+    /**
+     * `id-icao-mrtd-security-aaProtocolObject`.
+     * @summary `protocol`.
+     * @public
+     * @readonly
+     */
+    public readonly protocol: OBJECT_IDENTIFIER;
+    /**
+     * Protocol version. This specification supports only version 1.
+     * @summary `version`.
+     * @public
+     * @readonly
+     */
+    public readonly version: INTEGER;
+    /**
+     * ECDSA object identifier from BSI TR-03111.
+     * @summary `signatureAlgorithm`.
+     * @public
+     * @readonly
+     */
+    public readonly signatureAlgorithm: OBJECT_IDENTIFIER;
+
     constructor (
-        /**
-         * `id-icao-mrtd-security-aaProtocolObject`.
-         * @summary `protocol`.
-         * @public
-         * @readonly
-         */
-        readonly protocol: OBJECT_IDENTIFIER,
-        /**
-         * Protocol version. This specification supports only version 1.
-         * @summary `version`.
-         * @public
-         * @readonly
-         */
-        readonly version: INTEGER,
-        /**
-         * ECDSA object identifier from BSI TR-03111.
-         * @summary `signatureAlgorithm`.
-         * @public
-         * @readonly
-         */
-        readonly signatureAlgorithm: OBJECT_IDENTIFIER
+        protocol: OBJECT_IDENTIFIER,
+        version: INTEGER,
+        signatureAlgorithm: OBJECT_IDENTIFIER
     ) {
+        this.protocol = protocol;
+        this.version = version;
+        this.signatureAlgorithm = signatureAlgorithm;
         if (!id_icao_mrtd_security_aaProtocolObject.isEqualTo(protocol)) {
             throw new ASN1Error("ActiveAuthenticationInfo.protocol violates permitted OBJECT IDENTIFIER constraint");
         }

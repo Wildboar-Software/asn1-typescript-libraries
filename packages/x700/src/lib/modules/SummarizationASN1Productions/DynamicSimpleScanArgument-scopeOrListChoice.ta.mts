@@ -1,6 +1,6 @@
 /* eslint-disable */
 import {
-    ASN1Element as _Element,
+    type ASN1Element as _Element,
     ASN1TagClass as _TagClass,
     ASN1Construction as _Construction,
     ASN1UniversalType as _UniversalType,
@@ -16,7 +16,7 @@ import {
     _encode_DynamicSimpleScanArgument_scopeOrListChoice_scopedSelection,
 } from '../SummarizationASN1Productions/DynamicSimpleScanArgument-scopeOrListChoice-scopedSelection.ta.mjs';
 import {
-    ObjectList,
+    type ObjectList,
     _decode_ObjectList,
     _encode_ObjectList,
 } from '../SummarizationASN1Productions/ObjectList.ta.mjs';

@@ -1,17 +1,17 @@
 /* eslint-disable */
 import {
     ASN1ConstructionError as _ConstructionError,
-    ASN1Element as _Element,
+    type ASN1Element as _Element,
     ASN1TagClass as _TagClass,
 } from "@wildboar/asn1";
 import * as $ from "@wildboar/asn1/functional";
 import {
-    EncryptedKey,
+    type EncryptedKey,
     _decode_EncryptedKey,
     _encode_EncryptedKey,
 } from "../CryptographicMessageSyntax/EncryptedKey.ta.mjs";
 import {
-    KeyAgreeRecipientIdentifier,
+    type KeyAgreeRecipientIdentifier,
     _decode_KeyAgreeRecipientIdentifier,
     _encode_KeyAgreeRecipientIdentifier,
 } from "../CryptographicMessageSyntax/KeyAgreeRecipientIdentifier.ta.mjs";
@@ -31,20 +31,26 @@ import {
  *
  */
 export class RecipientEncryptedKey {
+    /**
+     * @summary `rid`.
+     * @public
+     * @readonly
+     */
+    public readonly rid: KeyAgreeRecipientIdentifier;
+    /**
+     * @summary `encryptedKey`.
+     * @public
+     * @readonly
+     */
+    public readonly encryptedKey: EncryptedKey;
+
     constructor(
-        /**
-         * @summary `rid`.
-         * @public
-         * @readonly
-         */
-        readonly rid: KeyAgreeRecipientIdentifier,
-        /**
-         * @summary `encryptedKey`.
-         * @public
-         * @readonly
-         */
-        readonly encryptedKey: EncryptedKey
-    ) {}
+        rid: KeyAgreeRecipientIdentifier,
+        encryptedKey: EncryptedKey
+    ) {
+        this.rid = rid;
+        this.encryptedKey = encryptedKey;
+    }
 
     /**
      * @summary Restructures an object into a RecipientEncryptedKey

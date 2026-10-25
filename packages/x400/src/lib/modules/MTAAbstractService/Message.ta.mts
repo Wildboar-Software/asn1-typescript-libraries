@@ -1,6 +1,6 @@
 /* eslint-disable */
 import {
-    ASN1Element as _Element,
+    type ASN1Element as _Element,
     ASN1TagClass as _TagClass,
     ASN1Construction as _Construction,
     ASN1UniversalType as _UniversalType,
@@ -16,7 +16,7 @@ import {
     _encode_MessageTransferEnvelope,
 } from '../MTAAbstractService/MessageTransferEnvelope.ta.mjs';
 import {
-    Content,
+    type Content,
     _decode_Content,
     _encode_Content,
 } from '../MTSAbstractService/Content.ta.mjs';
@@ -38,20 +38,26 @@ import {
  *
  */
 export class Message {
+    /**
+     * @summary `envelope`.
+     * @public
+     * @readonly
+     */
+    public readonly envelope: MessageTransferEnvelope;
+    /**
+     * @summary `content`.
+     * @public
+     * @readonly
+     */
+    public readonly content: Content;
+
     constructor(
-        /**
-         * @summary `envelope`.
-         * @public
-         * @readonly
-         */
-        readonly envelope: MessageTransferEnvelope,
-        /**
-         * @summary `content`.
-         * @public
-         * @readonly
-         */
-        readonly content: Content
-    ) {}
+        envelope: MessageTransferEnvelope,
+        content: Content
+    ) {
+        this.envelope = envelope;
+        this.content = content;
+    }
 
     /**
      * @summary Restructures an object into a Message

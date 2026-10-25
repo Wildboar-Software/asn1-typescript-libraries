@@ -1,6 +1,6 @@
 /* eslint-disable */
 import {
-  OCTET_STRING,
+  type OCTET_STRING,
   ASN1Element as _Element,
   ASN1TagClass as _TagClass,
   ASN1Construction as _Construction,
@@ -32,12 +32,12 @@ export type MACAddress = OCTET_STRING; // OctetStringType
 
 
 
-export const _decode_MACAddress = $._decodeOctetString;
+export const _decode_MACAddress: $.ASN1Decoder<OCTET_STRING> = $._decodeOctetString;
 
 
 
 
-export const _encode_MACAddress = $._encodeOctetString;
+export const _encode_MACAddress: $.ASN1Encoder<OCTET_STRING> = $._encodeOctetString;
 
 
 /* eslint-enable */

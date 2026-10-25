@@ -1,7 +1,7 @@
 /* eslint-disable */
 import {
-    OPTIONAL,
-    ASN1Element as _Element,
+    type OPTIONAL,
+    type ASN1Element as _Element,
     ASN1TagClass as _TagClass,
     ASN1Construction as _Construction,
     ASN1UniversalType as _UniversalType,
@@ -36,25 +36,31 @@ import { ColourAssignment, _decode_ColourAssignment, _encode_ColourAssignment } 
  */
 export
 class CompoundColourOffer {
+    /**
+     * @summary `colourCapability`.
+     * @description
+     * Offered colour-capability (how many assignment slots;
+     * default 1). ISO/IEC 9040:1997 §18.1.
+     * @public
+     * @readonly
+     */
+    public readonly colourCapability?: OPTIONAL<IntegerOffer>;
+    /**
+     * @summary `colourValues`.
+     * @description
+     * Offered colour-assignment list. ISO/IEC 9040:1997 §18.2.5.
+     * @public
+     * @readonly
+     */
+    public readonly colourValues?: OPTIONAL<ColourAssignment[]>;
+
     constructor (
-        /**
-         * @summary `colourCapability`.
-         * @description
-         * Offered colour-capability (how many assignment slots;
-         * default 1). ISO/IEC 9040:1997 §18.1.
-         * @public
-         * @readonly
-         */
-        readonly colourCapability?: OPTIONAL<IntegerOffer>,
-        /**
-         * @summary `colourValues`.
-         * @description
-         * Offered colour-assignment list. ISO/IEC 9040:1997 §18.2.5.
-         * @public
-         * @readonly
-         */
-        readonly colourValues?: OPTIONAL<ColourAssignment[]>
-    ) {}
+        colourCapability?: OPTIONAL<IntegerOffer>,
+        colourValues?: OPTIONAL<ColourAssignment[]>
+    ) {
+        this.colourCapability = colourCapability;
+        this.colourValues = colourValues;
+    }
 
     /**
      * @summary Restructures an object into a CompoundColourOffer

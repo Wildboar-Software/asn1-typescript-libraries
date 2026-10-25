@@ -1,7 +1,7 @@
 /* eslint-disable */
 import {
-  OPTIONAL,
-  OBJECT_IDENTIFIER,
+  type OPTIONAL,
+  type OBJECT_IDENTIFIER,
   ASN1Element as _Element,
   ASN1TagClass as _TagClass,
   ASN1Construction as _Construction,
@@ -49,7 +49,7 @@ export class ActionReply {
    * @public
    * @readonly
    */
-  readonly responseCode: OBJECT_IDENTIFIER;
+  public readonly responseCode: OBJECT_IDENTIFIER;
   /**
    * @summary `responseArgs`.
    * @description
@@ -62,7 +62,7 @@ export class ActionReply {
    * @public
    * @readonly
    */
-  readonly responseArgs?: OPTIONAL<Parameter[]>;
+  public readonly responseArgs?: OPTIONAL<Parameter[]>;
 
   constructor(
     responseCode: OBJECT_IDENTIFIER,

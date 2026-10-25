@@ -8,7 +8,7 @@ import { type OPERATION } from "../Remote-Operations-Information-Objects/OPERATI
 
 import { CamponCallArgument, _decode_CamponCallArgument, _encode_CamponCallArgument } from "../CSTA-camp-on-call/CamponCallArgument.ta.mjs";
 
-import { CamponCallResult, _decode_CamponCallResult, _encode_CamponCallResult } from "../CSTA-camp-on-call/CamponCallResult.ta.mjs";
+import { type CamponCallResult, _decode_CamponCallResult, _encode_CamponCallResult } from "../CSTA-camp-on-call/CamponCallResult.ta.mjs";
 
 import { universalFailure } from "../CSTA-error-definition/universalFailure.oa.mjs";
 

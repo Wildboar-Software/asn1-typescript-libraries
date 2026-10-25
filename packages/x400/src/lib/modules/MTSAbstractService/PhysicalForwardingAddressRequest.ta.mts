@@ -1,6 +1,6 @@
 /* eslint-disable */
 import {
-    ASN1Element as _Element,
+    type ASN1Element as _Element,
     ASN1TagClass as _TagClass,
     ASN1Construction as _Construction,
     ASN1UniversalType as _UniversalType,
@@ -66,14 +66,14 @@ export type PhysicalForwardingAddressRequest = _enum_for_PhysicalForwardingAddre
  *
  * @enum {number}
  */
-export const PhysicalForwardingAddressRequest = _enum_for_PhysicalForwardingAddressRequest;
+export const PhysicalForwardingAddressRequest: typeof _enum_for_PhysicalForwardingAddressRequest = _enum_for_PhysicalForwardingAddressRequest;
 
 /**
  * @summary PhysicalForwardingAddressRequest_physical_forwarding_address_not_requested
  * @constant
  * @type {number}
  */
-export const PhysicalForwardingAddressRequest_physical_forwarding_address_not_requested: PhysicalForwardingAddressRequest =
+export const PhysicalForwardingAddressRequest_physical_forwarding_address_not_requested: _enum_for_PhysicalForwardingAddressRequest.physical_forwarding_address_not_requested =
     PhysicalForwardingAddressRequest.physical_forwarding_address_not_requested; /* LONG_NAMED_ENUMERATED_VALUE */
 
 /**
@@ -81,7 +81,7 @@ export const PhysicalForwardingAddressRequest_physical_forwarding_address_not_re
  * @constant
  * @type {number}
  */
-export const physical_forwarding_address_not_requested: PhysicalForwardingAddressRequest =
+export const physical_forwarding_address_not_requested: _enum_for_PhysicalForwardingAddressRequest.physical_forwarding_address_not_requested =
     PhysicalForwardingAddressRequest.physical_forwarding_address_not_requested; /* SHORT_NAMED_ENUMERATED_VALUE */
 
 /**
@@ -89,7 +89,7 @@ export const physical_forwarding_address_not_requested: PhysicalForwardingAddres
  * @constant
  * @type {number}
  */
-export const PhysicalForwardingAddressRequest_physical_forwarding_address_requested: PhysicalForwardingAddressRequest =
+export const PhysicalForwardingAddressRequest_physical_forwarding_address_requested: _enum_for_PhysicalForwardingAddressRequest.physical_forwarding_address_requested =
     PhysicalForwardingAddressRequest.physical_forwarding_address_requested; /* LONG_NAMED_ENUMERATED_VALUE */
 
 /**
@@ -97,7 +97,7 @@ export const PhysicalForwardingAddressRequest_physical_forwarding_address_reques
  * @constant
  * @type {number}
  */
-export const physical_forwarding_address_requested: PhysicalForwardingAddressRequest =
+export const physical_forwarding_address_requested: _enum_for_PhysicalForwardingAddressRequest.physical_forwarding_address_requested =
     PhysicalForwardingAddressRequest.physical_forwarding_address_requested; /* SHORT_NAMED_ENUMERATED_VALUE */
 
 let _cached_decoder_for_PhysicalForwardingAddressRequest: $.ASN1Decoder<PhysicalForwardingAddressRequest> | null = null;
@@ -111,7 +111,18 @@ let _cached_decoder_for_PhysicalForwardingAddressRequest: $.ASN1Decoder<Physical
 export function _decode_PhysicalForwardingAddressRequest(el: _Element): PhysicalForwardingAddressRequest {
     if (!_cached_decoder_for_PhysicalForwardingAddressRequest) {
         _cached_decoder_for_PhysicalForwardingAddressRequest =
-            $._decodeEnumerated;
+            function (el: _Element): PhysicalForwardingAddressRequest {
+                const enumerated = $._decodeEnumerated(el);
+                switch (enumerated) {
+                    case PhysicalForwardingAddressRequest.physical_forwarding_address_not_requested: return PhysicalForwardingAddressRequest.physical_forwarding_address_not_requested;
+                    case PhysicalForwardingAddressRequest.physical_forwarding_address_requested: return PhysicalForwardingAddressRequest.physical_forwarding_address_requested;
+                    default:
+                        throw new _ConstructionError(
+                            'Invalid ENUMERATED value ' + enumerated + ' for PhysicalForwardingAddressRequest.',
+                            el,
+                        );
+                }
+            };
     }
     return _cached_decoder_for_PhysicalForwardingAddressRequest(el);
 }
@@ -131,7 +142,7 @@ export function _encode_PhysicalForwardingAddressRequest(
 ): _Element {
     if (!_cached_encoder_for_PhysicalForwardingAddressRequest) {
         _cached_encoder_for_PhysicalForwardingAddressRequest =
-            $._encodeEnumerated;
+            $._encodeEnumerated as $.ASN1Encoder<PhysicalForwardingAddressRequest>;
     }
     return _cached_encoder_for_PhysicalForwardingAddressRequest(
         value,

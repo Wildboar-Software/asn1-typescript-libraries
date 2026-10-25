@@ -1,12 +1,12 @@
 /* eslint-disable */
 import {
-    OPTIONAL,
-    ASN1Element as _Element,
+    type OPTIONAL,
+    type ASN1Element as _Element,
     ASN1TagClass as _TagClass
 } from "@wildboar/asn1";
 import * as $ from "@wildboar/asn1/functional";
-import { SS_Code, _decode_SS_Code, _encode_SS_Code } from "../MAP-SS-Code/SS-Code.ta.mjs";
-import { SS_Status, _decode_SS_Status, _encode_SS_Status } from "../MAP-SS-DataTypes/SS-Status.ta.mjs";
+import { type SS_Code, _decode_SS_Code, _encode_SS_Code } from "../MAP-SS-Code/SS-Code.ta.mjs";
+import { type SS_Status, _decode_SS_Status, _encode_SS_Status } from "../MAP-SS-DataTypes/SS-Status.ta.mjs";
 
 
 /**
@@ -21,7 +21,7 @@ import { SS_Status, _decode_SS_Status, _encode_SS_Status } from "../MAP-SS-DataT
  * ```asn1
  * EraseCC-EntryRes ::= SEQUENCE {
  *     ss-Code    [0]    SS-Code,
- *     ss-Status    [1] SS-Status    OPTIONAL,
+ *     ss-Status    [1] SS-Status    type OPTIONAL,
  *     ...}
  * ```
  * 
@@ -29,34 +29,42 @@ import { SS_Status, _decode_SS_Status, _encode_SS_Status } from "../MAP-SS-DataT
  */
 export
 class EraseCC_EntryRes {
+    /**
+     * @summary `ss_Code`.
+     * @description
+     *
+     * SS-Code of the erased service.
+     *
+     * @public
+     * @readonly
+     */
+    public readonly ss_Code: SS_Code;
+    /**
+     * @summary `ss_Status`.
+     * @description
+     *
+     * Resulting SS-Status if present.
+     *
+     * @public
+     * @readonly
+     */
+    public readonly ss_Status?: OPTIONAL<SS_Status>;
+    /**
+     * @summary Extensions that are not recognized.
+     * @public
+     * @readonly
+     */
+    public readonly _unrecognizedExtensionsList: _Element[];
+
     constructor (
-        /**
-         * @summary `ss_Code`.
-         * @description
-         *
-         * SS-Code of the erased service.
-         *
-         * @public
-         * @readonly
-         */
-        readonly ss_Code: SS_Code,
-        /**
-         * @summary `ss_Status`.
-         * @description
-         *
-         * Resulting SS-Status if present.
-         *
-         * @public
-         * @readonly
-         */
-        readonly ss_Status?: OPTIONAL<SS_Status>,
-        /**
-         * @summary Extensions that are not recognized.
-         * @public
-         * @readonly
-         */
-        readonly _unrecognizedExtensionsList: _Element[] = []
-    ) {}
+        ss_Code: SS_Code,
+        ss_Status?: OPTIONAL<SS_Status>,
+        _unrecognizedExtensionsList: _Element[] = []
+    ) {
+        this.ss_Code = ss_Code;
+        this.ss_Status = ss_Status;
+        this._unrecognizedExtensionsList = _unrecognizedExtensionsList;
+    }
 
     /**
      * @summary Restructures an object into a EraseCC_EntryRes

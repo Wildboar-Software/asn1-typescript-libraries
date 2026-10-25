@@ -1,9 +1,9 @@
 /* eslint-disable */
 import {
-    ASN1Element as _Element,
+    type ASN1Element as _Element,
     ASN1TagClass as _TagClass,
-    IA5String,
-    OPTIONAL
+    type IA5String,
+    type OPTIONAL
 } from "@wildboar/asn1";
 import * as $ from "@wildboar/asn1/functional";
 
@@ -32,19 +32,19 @@ class EndPointDescriptor {
      * @public
      * @readonly
      */
-    readonly type_: IA5String;
+    public readonly type_: IA5String;
     /**
      * @summary `id`.
      * @public
      * @readonly
      */
-    readonly id?: OPTIONAL<IA5String>;
+    public readonly id?: OPTIONAL<IA5String>;
     /**
      * @summary Extensions that are not recognized.
      * @public
      * @readonly
      */
-    readonly _unrecognizedExtensionsList: _Element[];
+    public readonly _unrecognizedExtensionsList: _Element[];
 
     constructor (
         type_: IA5String,

@@ -2,17 +2,17 @@
 
 import * as $ from "@wildboar/asn1/functional";
 import {
-    OPTIONAL,
-    BOOLEAN,
-    INTEGER,
-    SEQUENCE,
-    SET,
-    ASN1Element as _Element,
+    type OPTIONAL,
+    type BOOLEAN,
+    type INTEGER,
+    type SEQUENCE,
+    type SET,
+    type ASN1Element as _Element,
     ASN1TagClass as _TagClass
 } from "@wildboar/asn1";
-import { ServiceCrossRefID, _decode_ServiceCrossRefID, _encode_ServiceCrossRefID } from "../CSTA-capability-exchange/ServiceCrossRefID.ta.mjs";
+import { type ServiceCrossRefID, _decode_ServiceCrossRefID, _encode_ServiceCrossRefID } from "../CSTA-capability-exchange/ServiceCrossRefID.ta.mjs";
 
-import { DeviceList, _decode_DeviceList, _encode_DeviceList } from "../CSTA-switching-function-devices/DeviceList.ta.mjs";
+import { type DeviceList, _decode_DeviceList, _encode_DeviceList } from "../CSTA-switching-function-devices/DeviceList.ta.mjs";
 
 import { CSTACommonArguments, _decode_CSTACommonArguments, _encode_CSTACommonArguments } from "../CSTA-extension-types/CSTACommonArguments.ta.mjs";
 
@@ -32,7 +32,7 @@ import { CSTACommonArguments, _decode_CSTACommonArguments, _encode_CSTACommonArg
  * ```asn1
  * SwitchingFunctionDevicesArgument ::= SEQUENCE
  * {     serviceCrossRefID         ServiceCrossRefID,
- *     segmentID             INTEGER             OPTIONAL,
+ *     segmentID             INTEGER             type OPTIONAL,
  *     lastSegment             BOOLEAN,
  *     deviceList             DeviceList,
  *     extensions             CSTACommonArguments         OPTIONAL }
@@ -42,55 +42,67 @@ import { CSTACommonArguments, _decode_CSTACommonArguments, _encode_CSTACommonArg
  */
 export
 class SwitchingFunctionDevicesArgument {
+    /**
+     * @summary `serviceCrossRefID`.
+     * @description
+     *
+     * Matches the Get Switching Function Devices positive ack.
+     * @public
+     * @readonly
+     */
+    public readonly serviceCrossRefID: ServiceCrossRefID;
+    /**
+     * @summary `segmentID`.
+     * @description
+     *
+     * Segment number; each successive segment increments by one.
+     * @public
+     * @readonly
+     */
+    public readonly segmentID: OPTIONAL<INTEGER>;
+    /**
+     * @summary `lastSegment`.
+     * @description
+     *
+     * TRUE if this is the last segment for the cross-ref.
+     * @public
+     * @readonly
+     */
+    public readonly lastSegment: BOOLEAN;
+    /**
+     * @summary `deviceList`.
+     * @description
+     *
+     * Devices that can be controlled and/or observed. Empty if none
+     * matched the original request.
+     * @public
+     * @readonly
+     */
+    public readonly deviceList: DeviceList;
+    /**
+     * @summary `extensions`.
+     * @description
+     *
+     * Optional security (timestamp, sequence, securityInfo) and
+     * privateData. ECMA-269 Table 13-12.
+     * @public
+     * @readonly
+     */
+    public readonly extensions?: OPTIONAL<CSTACommonArguments>;
+
     constructor (
-        /**
-         * @summary `serviceCrossRefID`.
-         * @description
-         *
-         * Matches the Get Switching Function Devices positive ack.
-         * @public
-         * @readonly
-         */
-        readonly serviceCrossRefID: ServiceCrossRefID,
-        /**
-         * @summary `segmentID`.
-         * @description
-         *
-         * Segment number; each successive segment increments by one.
-         * @public
-         * @readonly
-         */
-        readonly segmentID: OPTIONAL<INTEGER>,
-        /**
-         * @summary `lastSegment`.
-         * @description
-         *
-         * TRUE if this is the last segment for the cross-ref.
-         * @public
-         * @readonly
-         */
-        readonly lastSegment: BOOLEAN,
-        /**
-         * @summary `deviceList`.
-         * @description
-         *
-         * Devices that can be controlled and/or observed. Empty if none
-         * matched the original request.
-         * @public
-         * @readonly
-         */
-        readonly deviceList: DeviceList,
-        /**
-         * @summary `extensions`.
-         * @description
-         *
-         * Optional security (timestamp, sequence, securityInfo) and
-         * privateData. ECMA-269 Table 13-12.
-         * @public
-         * @readonly
-         */
-        readonly extensions?: OPTIONAL<CSTACommonArguments>
-    ) {}
+        serviceCrossRefID: ServiceCrossRefID,
+        segmentID: OPTIONAL<INTEGER>,
+        lastSegment: BOOLEAN,
+        deviceList: DeviceList,
+        extensions?: OPTIONAL<CSTACommonArguments>
+    ) {
+        this.serviceCrossRefID = serviceCrossRefID;
+        this.segmentID = segmentID;
+        this.lastSegment = lastSegment;
+        this.deviceList = deviceList;
+        this.extensions = extensions;
+    }
 
     /**
      * @summary Restructures an object into a SwitchingFunctionDevicesArgument

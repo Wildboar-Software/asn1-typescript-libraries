@@ -1,6 +1,6 @@
 /* eslint-disable */
 import {
-    ENUMERATED
+    type ENUMERATED
 } from "@wildboar/asn1";
 import * as $ from "@wildboar/asn1/functional";
 
@@ -44,7 +44,7 @@ type DefaultTransactionHandling = _enum_for_DefaultTransactionHandling | ENUMERA
  * @type {number}
  */
 export
-const DefaultTransactionHandling_continueTransaction: DefaultTransactionHandling = 0; /* LONG_NAMED_ENUMERATED_VALUE */
+const DefaultTransactionHandling_continueTransaction: _enum_for_DefaultTransactionHandling.continueTransaction = _enum_for_DefaultTransactionHandling.continueTransaction; /* LONG_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary continueTransaction
@@ -52,7 +52,7 @@ const DefaultTransactionHandling_continueTransaction: DefaultTransactionHandling
  * @type {number}
  */
 export
-const continueTransaction: DefaultTransactionHandling = DefaultTransactionHandling_continueTransaction; /* SHORT_NAMED_ENUMERATED_VALUE */
+const continueTransaction: _enum_for_DefaultTransactionHandling.continueTransaction = DefaultTransactionHandling_continueTransaction; /* SHORT_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary DefaultTransactionHandling_releaseTransaction
@@ -60,7 +60,7 @@ const continueTransaction: DefaultTransactionHandling = DefaultTransactionHandli
  * @type {number}
  */
 export
-const DefaultTransactionHandling_releaseTransaction: DefaultTransactionHandling = 1; /* LONG_NAMED_ENUMERATED_VALUE */
+const DefaultTransactionHandling_releaseTransaction: _enum_for_DefaultTransactionHandling.releaseTransaction = _enum_for_DefaultTransactionHandling.releaseTransaction; /* LONG_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary releaseTransaction
@@ -68,7 +68,7 @@ const DefaultTransactionHandling_releaseTransaction: DefaultTransactionHandling 
  * @type {number}
  */
 export
-const releaseTransaction: DefaultTransactionHandling = DefaultTransactionHandling_releaseTransaction; /* SHORT_NAMED_ENUMERATED_VALUE */
+const releaseTransaction: _enum_for_DefaultTransactionHandling.releaseTransaction = DefaultTransactionHandling_releaseTransaction; /* SHORT_NAMED_ENUMERATED_VALUE */
 
 export
 const _decode_DefaultTransactionHandling: $.ASN1Decoder<DefaultTransactionHandling> = $._decodeEnumerated;

@@ -1,7 +1,7 @@
 /* eslint-disable */
 import {
-    OPTIONAL,
-    ASN1Element as _Element,
+    type OPTIONAL,
+    type ASN1Element as _Element,
     ASN1TagClass as _TagClass,
     ASN1Construction as _Construction,
     ASN1UniversalType as _UniversalType,
@@ -11,10 +11,10 @@ import {
     ASN1ConstructionError as _ConstructionError,
 } from "@wildboar/asn1";
 import * as $ from "@wildboar/asn1/functional";
-import { ObjectValue, _get_decoder_for_ObjectValue, _get_encoder_for_ObjectValue } from "../CryptographicInformationFramework/ObjectValue.ta.mjs";
-import { Certificate, _decode_Certificate, _encode_Certificate } from "../AuthenticationFramework/Certificate.ta.mjs";
-import { Name, _decode_Name, _encode_Name } from "../InformationFramework/Name.ta.mjs";
-import { CertificateSerialNumber, _decode_CertificateSerialNumber, _encode_CertificateSerialNumber } from "../AuthenticationFramework/CertificateSerialNumber.ta.mjs";
+import { type ObjectValue, _get_decoder_for_ObjectValue, _get_encoder_for_ObjectValue } from "../CryptographicInformationFramework/ObjectValue.ta.mjs";
+import { type Certificate, _decode_Certificate, _encode_Certificate } from "../AuthenticationFramework/Certificate.ta.mjs";
+import { type Name, _decode_Name, _encode_Name } from "../InformationFramework/Name.ta.mjs";
+import { type CertificateSerialNumber, _decode_CertificateSerialNumber, _encode_CertificateSerialNumber } from "../AuthenticationFramework/CertificateSerialNumber.ta.mjs";
 
 
 /**
@@ -41,47 +41,59 @@ import { CertificateSerialNumber, _decode_CertificateSerialNumber, _encode_Certi
  */
 export
 class X509CertificateAttributes {
+    /**
+     * @summary `value`.
+     * @description
+     * `ReferencedValue`: file of a DER certificate or a URL where it can be
+     * fetched. ISO/IEC 7816-15:2016 §8.7.2.
+     * @public
+     * @readonly
+     */
+    public readonly value: ObjectValue<Certificate>;
+    /**
+     * @summary `subject`.
+     * @description
+     * Same as the certificate `subject`. ISO/IEC 7816-15:2016 §8.7.2.
+     * @public
+     * @readonly
+     */
+    public readonly subject?: OPTIONAL<Name>;
+    /**
+     * @summary `issuer`.
+     * @description
+     * Same as the certificate `issuer`. ISO/IEC 7816-15:2016 §8.7.2.
+     * @public
+     * @readonly
+     */
+    public readonly issuer?: OPTIONAL<Name>;
+    /**
+     * @summary `serialNumber`.
+     * @description
+     * Same as the certificate serial number. ISO/IEC 7816-15:2016 §8.7.2.
+     * @public
+     * @readonly
+     */
+    public readonly serialNumber?: OPTIONAL<CertificateSerialNumber>;
+    /**
+     * @summary Extensions that are not recognized.
+     * @public
+     * @readonly
+     */
+    public readonly _unrecognizedExtensionsList: _Element[];
+
     constructor (
-        /**
-         * @summary `value`.
-         * @description
-         * `ReferencedValue`: file of a DER certificate or a URL where it can be
-         * fetched. ISO/IEC 7816-15:2016 §8.7.2.
-         * @public
-         * @readonly
-         */
-        readonly value: ObjectValue<Certificate>,
-        /**
-         * @summary `subject`.
-         * @description
-         * Same as the certificate `subject`. ISO/IEC 7816-15:2016 §8.7.2.
-         * @public
-         * @readonly
-         */
-        readonly subject?: OPTIONAL<Name>,
-        /**
-         * @summary `issuer`.
-         * @description
-         * Same as the certificate `issuer`. ISO/IEC 7816-15:2016 §8.7.2.
-         * @public
-         * @readonly
-         */
-        readonly issuer?: OPTIONAL<Name>,
-        /**
-         * @summary `serialNumber`.
-         * @description
-         * Same as the certificate serial number. ISO/IEC 7816-15:2016 §8.7.2.
-         * @public
-         * @readonly
-         */
-        readonly serialNumber?: OPTIONAL<CertificateSerialNumber>,
-        /**
-         * @summary Extensions that are not recognized.
-         * @public
-         * @readonly
-         */
-        readonly _unrecognizedExtensionsList: _Element[] = []
-    ) {}
+        value: ObjectValue<Certificate>,
+        subject?: OPTIONAL<Name>,
+        issuer?: OPTIONAL<Name>,
+        serialNumber?: OPTIONAL<CertificateSerialNumber>,
+        _unrecognizedExtensionsList: _Element[] = []
+    ) {
+        this.value = value;
+        this.subject = subject;
+        this.issuer = issuer;
+        this.serialNumber = serialNumber;
+        this._unrecognizedExtensionsList = _unrecognizedExtensionsList;
+    }
 
     /**
      * @summary Restructures an object into a X509CertificateAttributes

@@ -1,13 +1,13 @@
 /* eslint-disable */
 import {
-    ASN1Element as _Element,
+    type ASN1Element as _Element,
     ASN1TagClass as _TagClass,
-    INTEGER,
-    OPTIONAL
+    type INTEGER,
+    type OPTIONAL
 } from "@wildboar/asn1";
 import * as $ from "@wildboar/asn1/functional";
 import { _decode_AdditionalExceptionReports, _encode_AdditionalExceptionReports, _enum_for_AdditionalExceptionReports, AdditionalExceptionReports } from "../GPRSChargingDataTypes/AdditionalExceptionReports.ta.mjs";
-import { _decode_APNRateControlParameters_rateControlTimeUnit, _encode_APNRateControlParameters_rateControlTimeUnit, APNRateControlParameters_rateControlTimeUnit } from "../GPRSChargingDataTypes/APNRateControlParameters-rateControlTimeUnit.ta.mjs";
+import { _decode_APNRateControlParameters_rateControlTimeUnit, _encode_APNRateControlParameters_rateControlTimeUnit, type APNRateControlParameters_rateControlTimeUnit } from "../GPRSChargingDataTypes/APNRateControlParameters-rateControlTimeUnit.ta.mjs";
 
 
 /**
@@ -98,7 +98,7 @@ class APNRateControlParameters {
          * @static
          */
 
-    public static _enum_for_additionalExceptionReports = _enum_for_AdditionalExceptionReports;
+    public static _enum_for_additionalExceptionReports: typeof _enum_for_AdditionalExceptionReports = _enum_for_AdditionalExceptionReports;
 }
 
 /**

@@ -1,7 +1,7 @@
 /* eslint-disable */
 import { id_signingTime } from "../CryptographicMessageSyntax-2010/id-signingTime.va.mjs";
 import {
-    SigningTime,
+    type SigningTime,
     _decode_SigningTime,
     _encode_SigningTime,
 } from "../CryptographicMessageSyntax-2010/SigningTime.ta.mjs";

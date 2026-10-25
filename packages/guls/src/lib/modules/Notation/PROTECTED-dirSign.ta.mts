@@ -1,7 +1,7 @@
 /* eslint-disable */
 import {
-  OPTIONAL,
-  BIT_STRING,
+  type OPTIONAL,
+  type BIT_STRING,
   ASN1Element as _Element,
   ASN1TagClass as _TagClass,
   ASN1Construction as _Construction,
@@ -36,42 +36,50 @@ import {
  *
  */
 export class PROTECTED_dirSign<BaseType> {
+  /**
+   * @summary `baseType`.
+   * @description
+   *
+   * Present for `dirSignedTransformation`; omitted for
+   * `dirSignatureTransformation`. ITU-T Rec. X.830 (04/95)
+   * §8.1, Annex A.
+   *
+   * @public
+   * @readonly
+   */
+  public readonly baseType: OPTIONAL<BaseType>;
+  /**
+   * @summary `algorithmId`.
+   * @description
+   *
+   * Hashing and encipherment algorithms used to compute the
+   * signature. ITU-T Rec. X.830 (04/95) §8.1, Annex D.2–D.3.
+   *
+   * @public
+   * @readonly
+   */
+  public readonly algorithmId: AlgorithmIdentifier;
+  /**
+   * @summary `encipheredHash`.
+   * @description
+   *
+   * Enciphered hash of a `BaseType` value. ITU-T Rec. X.830
+   * (04/95) §8.1, Annex D.2–D.3.
+   *
+   * @public
+   * @readonly
+   */
+  public readonly encipheredHash: BIT_STRING;
+
   constructor(
-    /**
-     * @summary `baseType`.
-     * @description
-     *
-     * Present for `dirSignedTransformation`; omitted for
-     * `dirSignatureTransformation`. ITU-T Rec. X.830 (04/95)
-     * §8.1, Annex A.
-     *
-     * @public
-     * @readonly
-     */
-    readonly baseType: OPTIONAL<BaseType>,
-    /**
-     * @summary `algorithmId`.
-     * @description
-     *
-     * Hashing and encipherment algorithms used to compute the
-     * signature. ITU-T Rec. X.830 (04/95) §8.1, Annex D.2–D.3.
-     *
-     * @public
-     * @readonly
-     */
-    readonly algorithmId: AlgorithmIdentifier,
-    /**
-     * @summary `encipheredHash`.
-     * @description
-     *
-     * Enciphered hash of a `BaseType` value. ITU-T Rec. X.830
-     * (04/95) §8.1, Annex D.2–D.3.
-     *
-     * @public
-     * @readonly
-     */
-    readonly encipheredHash: BIT_STRING
-  ) {}
+    baseType: OPTIONAL<BaseType>,
+    algorithmId: AlgorithmIdentifier,
+    encipheredHash: BIT_STRING
+  ) {
+    this.baseType = baseType;
+    this.algorithmId = algorithmId;
+    this.encipheredHash = encipheredHash;
+  }
 
   /**
    * @summary Restructures an object into a PROTECTED_dirSign

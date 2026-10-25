@@ -1,12 +1,12 @@
 /* eslint-disable */
 import {
-    OCTET_STRING,
+    type OCTET_STRING,
     ASN1ConstructionError as _ConstructionError,
-    ASN1Element as _Element,
+    type ASN1Element as _Element,
     ASN1TagClass as _TagClass
 } from "@wildboar/asn1";
 import * as $ from "@wildboar/asn1/functional";
-import { IconObject_Item_bodyType, _decode_IconObject_Item_bodyType, _encode_IconObject_Item_bodyType } from "../RecordSyntax-explain/IconObject-Item-bodyType.ta.mjs";
+import { type IconObject_Item_bodyType, _decode_IconObject_Item_bodyType, _encode_IconObject_Item_bodyType } from "../RecordSyntax-explain/IconObject-Item-bodyType.ta.mjs";
 
 
 /**

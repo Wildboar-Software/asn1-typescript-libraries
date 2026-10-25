@@ -24,28 +24,34 @@ import {
  *
  */
 export class Chained_ArgumentType_OPTIONALLY_PROTECTED_Parameter1 {
+    /**
+     * @summary `chainedArgument`.
+     * @description
+     *
+     * ChainingArguments supplementing the DAP `argument`.
+     *
+     * @public
+     * @readonly
+     */
+    public readonly chainedArgument: ChainingArguments;
+    /**
+     * @summary `argument`.
+     * @description
+     *
+     * Original DAP argument (`operation.&ArgumentType`) as `_Element`.
+     *
+     * @public
+     * @readonly
+     */
+    public readonly argument: _Element;
+
     constructor(
-        /**
-         * @summary `chainedArgument`.
-         * @description
-         *
-         * ChainingArguments supplementing the DAP `argument`.
-         *
-         * @public
-         * @readonly
-         */
-        readonly chainedArgument: ChainingArguments,
-        /**
-         * @summary `argument`.
-         * @description
-         *
-         * Original DAP argument (`operation.&ArgumentType`) as `_Element`.
-         *
-         * @public
-         * @readonly
-         */
-        readonly argument: _Element
-    ) {}
+        chainedArgument: ChainingArguments,
+        argument: _Element
+    ) {
+        this.chainedArgument = chainedArgument;
+        this.argument = argument;
+    }
 
     /**
      * @summary Restructures an object into a Chained_ArgumentType_OPTIONALLY_PROTECTED_Parameter1

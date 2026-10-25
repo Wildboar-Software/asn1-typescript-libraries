@@ -1,6 +1,6 @@
 /* eslint-disable */
 import {
-    ASN1Element as _Element,
+    type ASN1Element as _Element,
     ASN1TagClass as _TagClass,
     ASN1Construction as _Construction,
     ASN1UniversalType as _UniversalType,
@@ -74,7 +74,7 @@ export type ReachabilityChangeSyntax_reason = _enum_for_ReachabilityChangeSyntax
  *
  * @enum {number}
  */
-export const ReachabilityChangeSyntax_reason = _enum_for_ReachabilityChangeSyntax_reason;
+export const ReachabilityChangeSyntax_reason: typeof _enum_for_ReachabilityChangeSyntax_reason = _enum_for_ReachabilityChangeSyntax_reason;
 
 
 /**
@@ -88,7 +88,7 @@ export const ReachabilityChangeSyntax_reason = _enum_for_ReachabilityChangeSynta
  * @constant
  * @type {number}
  */
-export const ReachabilityChangeSyntax_reason_holdingTimerExpired: ReachabilityChangeSyntax_reason =
+export const ReachabilityChangeSyntax_reason_holdingTimerExpired: 0 =
     ReachabilityChangeSyntax_reason.holdingTimerExpired; /* LONG_NAMED_ENUMERATED_VALUE */
 
 
@@ -103,7 +103,7 @@ export const ReachabilityChangeSyntax_reason_holdingTimerExpired: ReachabilityCh
  * @constant
  * @type {number}
  */
-export const holdingTimerExpired: ReachabilityChangeSyntax_reason =
+export const holdingTimerExpired: 0 =
     ReachabilityChangeSyntax_reason.holdingTimerExpired; /* SHORT_NAMED_ENUMERATED_VALUE */
 
 
@@ -118,7 +118,7 @@ export const holdingTimerExpired: ReachabilityChangeSyntax_reason =
  * @constant
  * @type {number}
  */
-export const ReachabilityChangeSyntax_reason_circuitDisabled: ReachabilityChangeSyntax_reason =
+export const ReachabilityChangeSyntax_reason_circuitDisabled: 1 =
     ReachabilityChangeSyntax_reason.circuitDisabled; /* LONG_NAMED_ENUMERATED_VALUE */
 
 
@@ -133,7 +133,7 @@ export const ReachabilityChangeSyntax_reason_circuitDisabled: ReachabilityChange
  * @constant
  * @type {number}
  */
-export const circuitDisabled: ReachabilityChangeSyntax_reason =
+export const circuitDisabled: 1 =
     ReachabilityChangeSyntax_reason.circuitDisabled; /* SHORT_NAMED_ENUMERATED_VALUE */
 
 
@@ -149,7 +149,18 @@ let _cached_decoder_for_ReachabilityChangeSyntax_reason: $.ASN1Decoder<Reachabil
 export function _decode_ReachabilityChangeSyntax_reason(el: _Element): ReachabilityChangeSyntax_reason {
     if (!_cached_decoder_for_ReachabilityChangeSyntax_reason) {
         _cached_decoder_for_ReachabilityChangeSyntax_reason =
-            $._decodeEnumerated as $.ASN1Decoder<ReachabilityChangeSyntax_reason>;
+            function (el: _Element): ReachabilityChangeSyntax_reason {
+                const enumerated = $._decodeEnumerated(el);
+                switch (enumerated) {
+                    case ReachabilityChangeSyntax_reason.holdingTimerExpired: return ReachabilityChangeSyntax_reason.holdingTimerExpired;
+                    case ReachabilityChangeSyntax_reason.circuitDisabled: return ReachabilityChangeSyntax_reason.circuitDisabled;
+                    default:
+                        throw new _ConstructionError(
+                            'Invalid ENUMERATED value ' + enumerated + ' for ReachabilityChangeSyntax_reason.',
+                            el,
+                        );
+                }
+            };
     }
     return _cached_decoder_for_ReachabilityChangeSyntax_reason(el);
 }

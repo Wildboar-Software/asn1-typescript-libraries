@@ -1,12 +1,12 @@
 /* eslint-disable */
 import {
-    OPTIONAL,
-    ASN1Element as _Element,
+    type OPTIONAL,
+    type ASN1Element as _Element,
     ASN1TagClass as _TagClass
 } from "@wildboar/asn1";
 import * as $ from "@wildboar/asn1/functional";
-import { DestinationNumberLengthList, _decode_DestinationNumberLengthList, _encode_DestinationNumberLengthList } from "../MAP-MS-DataTypes/DestinationNumberLengthList.ta.mjs";
-import { DestinationNumberList, _decode_DestinationNumberList, _encode_DestinationNumberList } from "../MAP-MS-DataTypes/DestinationNumberList.ta.mjs";
+import { type DestinationNumberLengthList, _decode_DestinationNumberLengthList, _encode_DestinationNumberLengthList } from "../MAP-MS-DataTypes/DestinationNumberLengthList.ta.mjs";
+import { type DestinationNumberList, _decode_DestinationNumberList, _encode_DestinationNumberList } from "../MAP-MS-DataTypes/DestinationNumberList.ta.mjs";
 import { MatchType, _decode_MatchType, _encode_MatchType, _enum_for_MatchType } from "../MAP-MS-DataTypes/MatchType.ta.mjs";
 
 
@@ -24,8 +24,8 @@ import { MatchType, _decode_MatchType, _encode_MatchType, _enum_for_MatchType } 
  * ```asn1
  * DestinationNumberCriteria ::= SEQUENCE {
  *     matchType    [0] MatchType,
- *     destinationNumberList    [1] DestinationNumberList    OPTIONAL,
- *     destinationNumberLengthList    [2] DestinationNumberLengthList    OPTIONAL,
+ *     destinationNumberList    [1] DestinationNumberList    type OPTIONAL,
+ *     destinationNumberLengthList    [2] DestinationNumberLengthList    type OPTIONAL,
  *     -- one or both of destinationNumberList and destinationNumberLengthList 
  *     -- shall be present
  *     ...}
@@ -35,43 +35,53 @@ import { MatchType, _decode_MatchType, _encode_MatchType, _enum_for_MatchType } 
  */
 export
 class DestinationNumberCriteria {
+    /**
+     * @summary `matchType`.
+     * @public
+     * @readonly
+     */
+    public readonly matchType: MatchType;
+    /**
+     * @summary `destinationNumberList`.
+     * @description
+     *
+     * One or both of destinationNumberList and destinationNumberLengthList
+     * shall be present. The receiver shall not check number format (3GPP TS
+     * 29.002 V19.1.0 clause 17.7.1).
+     *
+     * @public
+     * @readonly
+     */
+    public readonly destinationNumberList?: OPTIONAL<DestinationNumberList>;
+    /**
+     * @summary `destinationNumberLengthList`.
+     * @description
+     *
+     * One or both of destinationNumberList and destinationNumberLengthList
+     * shall be present (3GPP TS 29.002 V19.1.0 clause 17.7.1).
+     *
+     * @public
+     * @readonly
+     */
+    public readonly destinationNumberLengthList?: OPTIONAL<DestinationNumberLengthList>;
+    /**
+     * @summary Extensions that are not recognized.
+     * @public
+     * @readonly
+     */
+    public readonly _unrecognizedExtensionsList: _Element[];
+
     constructor (
-        /**
-         * @summary `matchType`.
-         * @public
-         * @readonly
-         */
-        readonly matchType: MatchType,
-        /**
-         * @summary `destinationNumberList`.
-         * @description
-         *
-         * One or both of destinationNumberList and destinationNumberLengthList
-         * shall be present. The receiver shall not check number format (3GPP TS
-         * 29.002 V19.1.0 clause 17.7.1).
-         *
-         * @public
-         * @readonly
-         */
-        readonly destinationNumberList?: OPTIONAL<DestinationNumberList>,
-        /**
-         * @summary `destinationNumberLengthList`.
-         * @description
-         *
-         * One or both of destinationNumberList and destinationNumberLengthList
-         * shall be present (3GPP TS 29.002 V19.1.0 clause 17.7.1).
-         *
-         * @public
-         * @readonly
-         */
-        readonly destinationNumberLengthList?: OPTIONAL<DestinationNumberLengthList>,
-        /**
-         * @summary Extensions that are not recognized.
-         * @public
-         * @readonly
-         */
-        readonly _unrecognizedExtensionsList: _Element[] = []
-    ) {}
+        matchType: MatchType,
+        destinationNumberList?: OPTIONAL<DestinationNumberList>,
+        destinationNumberLengthList?: OPTIONAL<DestinationNumberLengthList>,
+        _unrecognizedExtensionsList: _Element[] = []
+    ) {
+        this.matchType = matchType;
+        this.destinationNumberList = destinationNumberList;
+        this.destinationNumberLengthList = destinationNumberLengthList;
+        this._unrecognizedExtensionsList = _unrecognizedExtensionsList;
+    }
 
     /**
      * @summary Restructures an object into a DestinationNumberCriteria
@@ -95,7 +105,7 @@ class DestinationNumberCriteria {
          * @static
          */
 
-    public static _enum_for_matchType = _enum_for_MatchType;
+    public static _enum_for_matchType: typeof _enum_for_MatchType = _enum_for_MatchType;
 }
 
 /**

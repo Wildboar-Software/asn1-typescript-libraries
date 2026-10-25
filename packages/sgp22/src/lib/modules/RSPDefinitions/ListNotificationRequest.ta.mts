@@ -1,11 +1,11 @@
 /* eslint-disable */
 import {
-    OPTIONAL,
-    ASN1Element as _Element,
+    type OPTIONAL,
+    type ASN1Element as _Element,
     ASN1TagClass as _TagClass
 } from "@wildboar/asn1";
 import * as $ from "@wildboar/asn1/functional";
-import { NotificationEvent, _decode_NotificationEvent, _encode_NotificationEvent } from "../RSPDefinitions/NotificationEvent.ta.mjs";
+import { type NotificationEvent, _decode_NotificationEvent, _encode_NotificationEvent } from "../RSPDefinitions/NotificationEvent.ta.mjs";
 
 
 /**
@@ -38,7 +38,7 @@ class ListNotificationRequest {
      * @public
      * @readonly
      */
-    readonly profileManagementOperation?: OPTIONAL<NotificationEvent>;
+    public readonly profileManagementOperation?: OPTIONAL<NotificationEvent>;
 
     constructor (
         profileManagementOperation?: OPTIONAL<NotificationEvent>

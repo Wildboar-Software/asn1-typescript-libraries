@@ -1,7 +1,7 @@
 /* eslint-disable */
 import {
-    OBJECT_IDENTIFIER,
-    ASN1Element as _Element,
+    type OBJECT_IDENTIFIER,
+    type ASN1Element as _Element,
     ASN1TagClass as _TagClass,
     ASN1Construction as _Construction,
     ASN1UniversalType as _UniversalType,
@@ -28,8 +28,8 @@ import * as $ from '@wildboar/asn1/functional';
  *
  * ```asn1
  * INFO-REPLY-IDENTIFIER ::= CLASS {
- *   &Info          OPTIONAL,
- *   &Reply         OPTIONAL,
+ *   &Info          type OPTIONAL,
+ *   &Reply         type OPTIONAL,
  *   &registeredAs  OBJECT IDENTIFIER UNIQUE
  * }WITH SYNTAX {INFO &Info
  *               REPLY &Reply

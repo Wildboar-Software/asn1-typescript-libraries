@@ -1,13 +1,13 @@
 /* eslint-disable */
 import {
-    OCTET_STRING,
-    OPTIONAL,
-    UTF8String,
-    ASN1Element as _Element,
+    type OCTET_STRING,
+    type OPTIONAL,
+    type UTF8String,
+    type ASN1Element as _Element,
     ASN1TagClass as _TagClass
 } from "@wildboar/asn1";
 import * as $ from "@wildboar/asn1/functional";
-import { HeaderFlags, _decode_HeaderFlags, _encode_HeaderFlags } from "../Spnego/HeaderFlags.ta.mjs";
+import { type HeaderFlags, _decode_HeaderFlags, _encode_HeaderFlags } from "../Spnego/HeaderFlags.ta.mjs";
 
 
 /**
@@ -41,25 +41,25 @@ class IAKERB_HEADER {
      * @public
      * @readonly
      */
-    readonly target_realm: UTF8String;
+    public readonly target_realm: UTF8String;
     /**
      * @summary `cookie`.
      * @public
      * @readonly
      */
-    readonly cookie?: OPTIONAL<OCTET_STRING>;
+    public readonly cookie?: OPTIONAL<OCTET_STRING>;
     /**
      * @summary `header_flags`.
      * @public
      * @readonly
      */
-    readonly header_flags?: OPTIONAL<HeaderFlags>;
+    public readonly header_flags?: OPTIONAL<HeaderFlags>;
     /**
      * @summary Extensions that are not recognized.
      * @public
      * @readonly
      */
-    readonly _unrecognizedExtensionsList: _Element[];
+    public readonly _unrecognizedExtensionsList: _Element[];
 
     constructor (
         target_realm: UTF8String,

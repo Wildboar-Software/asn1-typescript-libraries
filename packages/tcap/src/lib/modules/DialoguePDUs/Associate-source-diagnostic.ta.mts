@@ -1,6 +1,6 @@
 /* eslint-disable */
 import {
-    ASN1Element as _Element,
+    type ASN1Element as _Element,
     ASN1TagClass as _TagClass,
     ASN1Construction as _Construction,
     ASN1UniversalType as _UniversalType,
@@ -11,12 +11,12 @@ import {
 } from '@wildboar/asn1';
 import * as $ from '@wildboar/asn1/functional';
 import {
-    Associate_source_diagnostic_dialogue_service_user,
+    type Associate_source_diagnostic_dialogue_service_user,
     _decode_Associate_source_diagnostic_dialogue_service_user,
     _encode_Associate_source_diagnostic_dialogue_service_user,
 } from '../DialoguePDUs/Associate-source-diagnostic-dialogue-service-user.ta.mjs';
 import {
-    Associate_source_diagnostic_dialogue_service_provider,
+    type Associate_source_diagnostic_dialogue_service_provider,
     _decode_Associate_source_diagnostic_dialogue_service_provider,
     _encode_Associate_source_diagnostic_dialogue_service_provider,
 } from '../DialoguePDUs/Associate-source-diagnostic-dialogue-service-provider.ta.mjs';

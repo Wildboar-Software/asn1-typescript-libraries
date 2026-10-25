@@ -1,6 +1,6 @@
 /* eslint-disable */
 import {
-    ASN1Element as _Element,
+    type ASN1Element as _Element,
     ASN1TagClass as _TagClass,
     ASN1Construction as _Construction,
     ASN1UniversalType as _UniversalType,
@@ -66,7 +66,7 @@ export type TimeDifference_sign = _enum_for_TimeDifference_sign;
  *
  * @enum {number}
  */
-export const TimeDifference_sign = _enum_for_TimeDifference_sign;
+export const TimeDifference_sign: typeof _enum_for_TimeDifference_sign = _enum_for_TimeDifference_sign;
 
 /**
  * @summary TimeDifference_sign_positive
@@ -77,7 +77,7 @@ export const TimeDifference_sign = _enum_for_TimeDifference_sign;
  * @constant
  * @type {number}
  */
-export const TimeDifference_sign_positive: TimeDifference_sign =
+export const TimeDifference_sign_positive: _enum_for_TimeDifference_sign.positive =
     TimeDifference_sign.positive; /* LONG_NAMED_ENUMERATED_VALUE */
 
 /**
@@ -85,7 +85,7 @@ export const TimeDifference_sign_positive: TimeDifference_sign =
  * @constant
  * @type {number}
  */
-export const positive: TimeDifference_sign =
+export const positive: _enum_for_TimeDifference_sign.positive =
     TimeDifference_sign.positive; /* SHORT_NAMED_ENUMERATED_VALUE */
 
 /**
@@ -97,7 +97,7 @@ export const positive: TimeDifference_sign =
  * @constant
  * @type {number}
  */
-export const TimeDifference_sign_negative: TimeDifference_sign =
+export const TimeDifference_sign_negative: _enum_for_TimeDifference_sign.negative =
     TimeDifference_sign.negative; /* LONG_NAMED_ENUMERATED_VALUE */
 
 /**
@@ -105,14 +105,25 @@ export const TimeDifference_sign_negative: TimeDifference_sign =
  * @constant
  * @type {number}
  */
-export const negative: TimeDifference_sign =
+export const negative: _enum_for_TimeDifference_sign.negative =
     TimeDifference_sign.negative; /* SHORT_NAMED_ENUMERATED_VALUE */
 
 
-export const _decode_TimeDifference_sign = $._decodeEnumerated;
+export function _decode_TimeDifference_sign(el: _Element): TimeDifference_sign {
+    const enumerated = $._decodeEnumerated(el);
+    switch (enumerated) {
+        case TimeDifference_sign.positive: return TimeDifference_sign.positive;
+        case TimeDifference_sign.negative: return TimeDifference_sign.negative;
+        default:
+            throw new _ConstructionError(
+                'Invalid ENUMERATED value ' + enumerated + ' for TimeDifference_sign.',
+                el,
+            );
+    }
+}
 
 
-export const _encode_TimeDifference_sign = $._encodeEnumerated;
+export const _encode_TimeDifference_sign: $.ASN1Encoder<TimeDifference_sign> = $._encodeEnumerated as $.ASN1Encoder<TimeDifference_sign>;
 
 
 /* eslint-enable */

@@ -1,17 +1,17 @@
 /* eslint-disable */
 import {
-    ASN1Element as _Element,
+    type ASN1Element as _Element,
     ASN1TagClass as _TagClass,
-    OPTIONAL,
+    type OPTIONAL,
 } from "@wildboar/asn1";
 import * as $ from "@wildboar/asn1/functional";
 import {
-    Abort_reason,
+    type Abort_reason,
     _decode_Abort_reason,
     _encode_Abort_reason,
 } from "../OSIProtocolSpecification/Abort-reason.ta.mjs";
 import {
-    Event_identifier,
+    type Event_identifier,
     _decode_Event_identifier,
     _encode_Event_identifier,
 } from "../OSIProtocolSpecification/Event-identifier.ta.mjs";
@@ -29,20 +29,26 @@ import {
  *
  */
 export class ARP_PPDU {
+    /**
+     * @summary `provider_reason`.
+     * @public
+     * @readonly
+     */
+    public readonly provider_reason?: OPTIONAL<Abort_reason>;
+    /**
+     * @summary `event_identifier`.
+     * @public
+     * @readonly
+     */
+    public readonly event_identifier?: OPTIONAL<Event_identifier>;
+
     constructor(
-        /**
-         * @summary `provider_reason`.
-         * @public
-         * @readonly
-         */
-        readonly provider_reason?: OPTIONAL<Abort_reason>,
-        /**
-         * @summary `event_identifier`.
-         * @public
-         * @readonly
-         */
-        readonly event_identifier?: OPTIONAL<Event_identifier>
-    ) {}
+        provider_reason?: OPTIONAL<Abort_reason>,
+        event_identifier?: OPTIONAL<Event_identifier>
+    ) {
+        this.provider_reason = provider_reason;
+        this.event_identifier = event_identifier;
+    }
 
     /**
      * @summary Restructures an object into a ARP_PPDU

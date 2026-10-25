@@ -1,4 +1,5 @@
 /* eslint-disable */
+import { ASN1Element as _Element, ASN1ConstructionError as _ConstructionError } from "@wildboar/asn1";
 import * as $ from "@wildboar/asn1/functional";
 
 
@@ -53,7 +54,7 @@ type ReceivedStatus = _enum_for_ReceivedStatus;
  * @enum {number}
  */
 export
-const ReceivedStatus = _enum_for_ReceivedStatus;
+const ReceivedStatus: typeof _enum_for_ReceivedStatus = _enum_for_ReceivedStatus;
 
 /**
  * @summary ReceivedStatus_messageComplete
@@ -61,7 +62,7 @@ const ReceivedStatus = _enum_for_ReceivedStatus;
  * @type {number}
  */
 export
-const ReceivedStatus_messageComplete: ReceivedStatus = ReceivedStatus.messageComplete; /* LONG_NAMED_ENUMERATED_VALUE */
+const ReceivedStatus_messageComplete: _enum_for_ReceivedStatus.messageComplete = ReceivedStatus.messageComplete; /* LONG_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary messageComplete
@@ -69,7 +70,7 @@ const ReceivedStatus_messageComplete: ReceivedStatus = ReceivedStatus.messageCom
  * @type {number}
  */
 export
-const messageComplete: ReceivedStatus = ReceivedStatus.messageComplete; /* SHORT_NAMED_ENUMERATED_VALUE */
+const messageComplete: _enum_for_ReceivedStatus.messageComplete = ReceivedStatus.messageComplete; /* SHORT_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary ReceivedStatus_messageInterrupted
@@ -77,7 +78,7 @@ const messageComplete: ReceivedStatus = ReceivedStatus.messageComplete; /* SHORT
  * @type {number}
  */
 export
-const ReceivedStatus_messageInterrupted: ReceivedStatus = ReceivedStatus.messageInterrupted; /* LONG_NAMED_ENUMERATED_VALUE */
+const ReceivedStatus_messageInterrupted: _enum_for_ReceivedStatus.messageInterrupted = ReceivedStatus.messageInterrupted; /* LONG_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary messageInterrupted
@@ -85,7 +86,7 @@ const ReceivedStatus_messageInterrupted: ReceivedStatus = ReceivedStatus.message
  * @type {number}
  */
 export
-const messageInterrupted: ReceivedStatus = ReceivedStatus.messageInterrupted; /* SHORT_NAMED_ENUMERATED_VALUE */
+const messageInterrupted: _enum_for_ReceivedStatus.messageInterrupted = ReceivedStatus.messageInterrupted; /* SHORT_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary ReceivedStatus_messageTimeOut
@@ -93,7 +94,7 @@ const messageInterrupted: ReceivedStatus = ReceivedStatus.messageInterrupted; /*
  * @type {number}
  */
 export
-const ReceivedStatus_messageTimeOut: ReceivedStatus = ReceivedStatus.messageTimeOut; /* LONG_NAMED_ENUMERATED_VALUE */
+const ReceivedStatus_messageTimeOut: _enum_for_ReceivedStatus.messageTimeOut = ReceivedStatus.messageTimeOut; /* LONG_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary messageTimeOut
@@ -101,12 +102,24 @@ const ReceivedStatus_messageTimeOut: ReceivedStatus = ReceivedStatus.messageTime
  * @type {number}
  */
 export
-const messageTimeOut: ReceivedStatus = ReceivedStatus.messageTimeOut; /* SHORT_NAMED_ENUMERATED_VALUE */
+const messageTimeOut: _enum_for_ReceivedStatus.messageTimeOut = ReceivedStatus.messageTimeOut; /* SHORT_NAMED_ENUMERATED_VALUE */
 
 export
-const _decode_ReceivedStatus: $.ASN1Decoder<ReceivedStatus> = $._decodeEnumerated;
+function _decode_ReceivedStatus(el: _Element): ReceivedStatus {
+    const enumerated = $._decodeEnumerated(el);
+    switch (enumerated) {
+        case ReceivedStatus.messageComplete: return ReceivedStatus.messageComplete;
+        case ReceivedStatus.messageInterrupted: return ReceivedStatus.messageInterrupted;
+        case ReceivedStatus.messageTimeOut: return ReceivedStatus.messageTimeOut;
+        default:
+            throw new _ConstructionError(
+                "Invalid ENUMERATED value " + enumerated + " for ReceivedStatus.",
+                el,
+            );
+    }
+}
 
 export
-const _encode_ReceivedStatus: $.ASN1Encoder<ReceivedStatus> = $._encodeEnumerated;
+const _encode_ReceivedStatus: $.ASN1Encoder<ReceivedStatus> = $._encodeEnumerated as $.ASN1Encoder<ReceivedStatus>;
 
 /* eslint-enable */

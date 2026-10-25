@@ -1,6 +1,6 @@
 /* eslint-disable */
 import {
-    ASN1Element as _Element,
+    type ASN1Element as _Element,
     ASN1TagClass as _TagClass,
     ASN1Construction as _Construction,
     ASN1UniversalType as _UniversalType,
@@ -11,12 +11,12 @@ import {
 } from '@wildboar/asn1';
 import * as $ from '@wildboar/asn1/functional';
 import {
-    SequenceNumber,
+    type SequenceNumber,
     _decode_SequenceNumber,
     _encode_SequenceNumber,
 } from '../MSAbstractService/SequenceNumber.ta.mjs';
 import {
-    IPMSynopsis,
+    type IPMSynopsis,
     _decode_IPMSynopsis,
     _encode_IPMSynopsis,
 } from '../IPMSMessageStoreAttributes/IPMSynopsis.ta.mjs';
@@ -37,20 +37,26 @@ import {
  *
  */
 export class MessageBodyPartSynopsis {
+    /**
+     * @summary `number_`.
+     * @public
+     * @readonly
+     */
+    public readonly number_: SequenceNumber;
+    /**
+     * @summary `synopsis`.
+     * @public
+     * @readonly
+     */
+    public readonly synopsis: IPMSynopsis;
+
     constructor(
-        /**
-         * @summary `number_`.
-         * @public
-         * @readonly
-         */
-        readonly number_: SequenceNumber,
-        /**
-         * @summary `synopsis`.
-         * @public
-         * @readonly
-         */
-        readonly synopsis: IPMSynopsis
-    ) {}
+        number_: SequenceNumber,
+        synopsis: IPMSynopsis
+    ) {
+        this.number_ = number_;
+        this.synopsis = synopsis;
+    }
 
     /**
      * @summary Restructures an object into a MessageBodyPartSynopsis

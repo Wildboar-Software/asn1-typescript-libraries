@@ -1,7 +1,7 @@
 /* eslint-disable */
 import {
-  OPTIONAL,
-  INTEGER,
+  type OPTIONAL,
+  type INTEGER,
   ASN1Element as _Element,
   ASN1TagClass as _TagClass,
   ASN1Construction as _Construction,
@@ -13,7 +13,7 @@ import {
 } from '@wildboar/asn1';
 import * as $ from '@wildboar/asn1/functional';
 import {
-  Access_Context_access_context,
+  type Access_Context_access_context,
   _decode_Access_Context_access_context,
   _encode_Access_Context_access_context,
 } from '../ISO8571-FTAM/Access-Context-access-context.ta.mjs';
@@ -54,7 +54,7 @@ export class Access_Context {
    * @public
    * @readonly
    */
-  readonly access_context: Access_Context_access_context;
+  public readonly access_context: Access_Context_access_context;
   /**
    * @summary `level_number`.
    * @description
@@ -65,7 +65,7 @@ export class Access_Context {
    * @public
    * @readonly
    */
-  readonly level_number?: OPTIONAL<INTEGER>;
+  public readonly level_number?: OPTIONAL<INTEGER>;
 
   constructor(
     access_context: Access_Context_access_context,

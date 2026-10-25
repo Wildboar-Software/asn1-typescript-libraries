@@ -1,13 +1,13 @@
 /* eslint-disable */
 import {
-    OPTIONAL,
-    ASN1Element as _Element,
+    type OPTIONAL,
+    type ASN1Element as _Element,
     ASN1TagClass as _TagClass
 } from "@wildboar/asn1";
 import * as $ from "@wildboar/asn1/functional";
 import { ExtensionContainer, _decode_ExtensionContainer, _encode_ExtensionContainer } from "../MAP-ExtensionDataTypes/ExtensionContainer.ta.mjs";
-import { ChosenEncryptionAlgorithm, _decode_ChosenEncryptionAlgorithm, _encode_ChosenEncryptionAlgorithm } from "../MAP-MS-DataTypes/ChosenEncryptionAlgorithm.ta.mjs";
-import { ChosenIntegrityProtectionAlgorithm, _decode_ChosenIntegrityProtectionAlgorithm, _encode_ChosenIntegrityProtectionAlgorithm } from "../MAP-MS-DataTypes/ChosenIntegrityProtectionAlgorithm.ta.mjs";
+import { type ChosenEncryptionAlgorithm, _decode_ChosenEncryptionAlgorithm, _encode_ChosenEncryptionAlgorithm } from "../MAP-MS-DataTypes/ChosenEncryptionAlgorithm.ta.mjs";
+import { type ChosenIntegrityProtectionAlgorithm, _decode_ChosenIntegrityProtectionAlgorithm, _encode_ChosenIntegrityProtectionAlgorithm } from "../MAP-MS-DataTypes/ChosenIntegrityProtectionAlgorithm.ta.mjs";
 
 
 /**
@@ -23,9 +23,9 @@ import { ChosenIntegrityProtectionAlgorithm, _decode_ChosenIntegrityProtectionAl
  * 
  * ```asn1
  * SelectedUMTS-Algorithms ::= SEQUENCE {
- *     integrityProtectionAlgorithm    [0]    ChosenIntegrityProtectionAlgorithm    OPTIONAL,
- *     encryptionAlgorithm    [1]    ChosenEncryptionAlgorithm    OPTIONAL,
- *     extensionContainer    [2]    ExtensionContainer    OPTIONAL,
+ *     integrityProtectionAlgorithm    [0]    ChosenIntegrityProtectionAlgorithm    type OPTIONAL,
+ *     encryptionAlgorithm    [1]    ChosenEncryptionAlgorithm    type OPTIONAL,
+ *     extensionContainer    [2]    ExtensionContainer    type OPTIONAL,
  *     ...}
  * ```
  * 
@@ -33,44 +33,54 @@ import { ChosenIntegrityProtectionAlgorithm, _decode_ChosenIntegrityProtectionAl
  */
 export
 class SelectedUMTS_Algorithms {
+    /**
+     * @summary `integrityProtectionAlgorithm`.
+     * @description
+     *
+     * Selected UMTS integrity-protection algorithm.
+     *
+     * (3GPP TS 29.002 V19.1.0 clause 7.6.6.12).
+     *
+     * @public
+     * @readonly
+     */
+    public readonly integrityProtectionAlgorithm?: OPTIONAL<ChosenIntegrityProtectionAlgorithm>;
+    /**
+     * @summary `encryptionAlgorithm`.
+     * @description
+     *
+     * Selected UMTS encryption algorithm.
+     *
+     * (3GPP TS 29.002 V19.1.0 clause 7.6.6.12).
+     *
+     * @public
+     * @readonly
+     */
+    public readonly encryptionAlgorithm?: OPTIONAL<ChosenEncryptionAlgorithm>;
+    /**
+     * @summary `extensionContainer`.
+     * @public
+     * @readonly
+     */
+    public readonly extensionContainer?: OPTIONAL<ExtensionContainer>;
+    /**
+     * @summary Extensions that are not recognized.
+     * @public
+     * @readonly
+     */
+    public readonly _unrecognizedExtensionsList: _Element[];
+
     constructor (
-        /**
-         * @summary `integrityProtectionAlgorithm`.
-         * @description
-         *
-         * Selected UMTS integrity-protection algorithm.
-         *
-         * (3GPP TS 29.002 V19.1.0 clause 7.6.6.12).
-         *
-         * @public
-         * @readonly
-         */
-        readonly integrityProtectionAlgorithm?: OPTIONAL<ChosenIntegrityProtectionAlgorithm>,
-        /**
-         * @summary `encryptionAlgorithm`.
-         * @description
-         *
-         * Selected UMTS encryption algorithm.
-         *
-         * (3GPP TS 29.002 V19.1.0 clause 7.6.6.12).
-         *
-         * @public
-         * @readonly
-         */
-        readonly encryptionAlgorithm?: OPTIONAL<ChosenEncryptionAlgorithm>,
-        /**
-         * @summary `extensionContainer`.
-         * @public
-         * @readonly
-         */
-        readonly extensionContainer?: OPTIONAL<ExtensionContainer>,
-        /**
-         * @summary Extensions that are not recognized.
-         * @public
-         * @readonly
-         */
-        readonly _unrecognizedExtensionsList: _Element[] = []
-    ) {}
+        integrityProtectionAlgorithm?: OPTIONAL<ChosenIntegrityProtectionAlgorithm>,
+        encryptionAlgorithm?: OPTIONAL<ChosenEncryptionAlgorithm>,
+        extensionContainer?: OPTIONAL<ExtensionContainer>,
+        _unrecognizedExtensionsList: _Element[] = []
+    ) {
+        this.integrityProtectionAlgorithm = integrityProtectionAlgorithm;
+        this.encryptionAlgorithm = encryptionAlgorithm;
+        this.extensionContainer = extensionContainer;
+        this._unrecognizedExtensionsList = _unrecognizedExtensionsList;
+    }
 
     /**
      * @summary Restructures an object into a SelectedUMTS_Algorithms

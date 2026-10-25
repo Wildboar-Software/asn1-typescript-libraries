@@ -2,9 +2,9 @@
 
 import * as $ from "@wildboar/asn1/functional";
 import {
-    SEQUENCE,
-    SET,
-    ASN1Element as _Element,
+    type SEQUENCE,
+    type SET,
+    type ASN1Element as _Element,
     ASN1TagClass as _TagClass,
     ASN1ConstructionError as _ConstructionError
 } from "@wildboar/asn1";
@@ -48,32 +48,38 @@ import {
  */
 export
 class SignallingDetection {
+    /**
+     * @summary `signallingCondition`.
+     * @description
+     *
+     * Mandatory. `callDelivered` or `callEstablished`
+     * before the action is processed.
+     *
+     * @public
+     * @readonly
+     */
+    public readonly signallingCondition: SignallingCondition;
+    /**
+     * @summary `signallingConditionsAction`.
+     * @description
+     *
+     * Mandatory. `destinationDetection` follows
+     * `destinationDetection` entries;
+     * `remainConnected` keeps the called device and
+     * attempts the calling-device connection.
+     *
+     * @public
+     * @readonly
+     */
+    public readonly signallingConditionsAction: SignallingConditionsAction;
+
     constructor (
-        /**
-         * @summary `signallingCondition`.
-         * @description
-         *
-         * Mandatory. `callDelivered` or `callEstablished`
-         * before the action is processed.
-         *
-         * @public
-         * @readonly
-         */
-        readonly signallingCondition: SignallingCondition,
-        /**
-         * @summary `signallingConditionsAction`.
-         * @description
-         *
-         * Mandatory. `destinationDetection` follows
-         * `destinationDetection` entries;
-         * `remainConnected` keeps the called device and
-         * attempts the calling-device connection.
-         *
-         * @public
-         * @readonly
-         */
-        readonly signallingConditionsAction: SignallingConditionsAction
-    ) {}
+        signallingCondition: SignallingCondition,
+        signallingConditionsAction: SignallingConditionsAction
+    ) {
+        this.signallingCondition = signallingCondition;
+        this.signallingConditionsAction = signallingConditionsAction;
+    }
 
     /**
      * @summary Restructures an object into a SignallingDetection
@@ -97,13 +103,13 @@ class SignallingDetection {
          * @static
          */
 
-    public static _enum_for_signallingCondition = _enum_for_SignallingCondition;        /**
+    public static _enum_for_signallingCondition: typeof _enum_for_SignallingCondition = _enum_for_SignallingCondition;        /**
          * @summary The enum used as the type of the component `signallingConditionsAction`
          * @public
          * @static
          */
 
-    public static _enum_for_signallingConditionsAction = _enum_for_SignallingConditionsAction;
+    public static _enum_for_signallingConditionsAction: typeof _enum_for_SignallingConditionsAction = _enum_for_SignallingConditionsAction;
 }
 
 /**

@@ -1,8 +1,8 @@
 /* eslint-disable */
 import {
-    ASN1Element as _Element,
+    type ASN1Element as _Element,
     ASN1SizeError,
-    BIT_STRING
+    type BIT_STRING
 } from "@wildboar/asn1";
 import * as $ from "@wildboar/asn1/functional";
 import { maxAcknowledgementIndicatorsLen } from "../Tariffing-Data-Types/maxAcknowledgementIndicatorsLen.va.mjs";
@@ -76,7 +76,7 @@ export const _decode_ChargingAcknowledgementInformation_acknowledgementIndicator
     }
     return value;
 };
-export const _encode_ChargingAcknowledgementInformation_acknowledgementIndicators = $._encodeBitString;
+export const _encode_ChargingAcknowledgementInformation_acknowledgementIndicators: $.ASN1Encoder<BIT_STRING> = $._encodeBitString;
 
 
 /* eslint-enable */

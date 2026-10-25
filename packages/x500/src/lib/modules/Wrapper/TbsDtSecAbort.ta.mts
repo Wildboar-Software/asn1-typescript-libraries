@@ -1,8 +1,8 @@
 /* eslint-disable */
 import {
-    ASN1Element as _Element,
+    type ASN1Element as _Element,
     ASN1TagClass as _TagClass,
-    OPTIONAL,
+    type OPTIONAL,
 } from "@wildboar/asn1";
 import * as $ from "@wildboar/asn1/functional";
 import {
@@ -10,24 +10,24 @@ import {
     _decode_AlgorithmIdentifier,
     _encode_AlgorithmIdentifier,
 } from "@wildboar/pki-stub";
-import { AssoID, _decode_AssoID, _encode_AssoID } from "../Wrapper/AssoID.ta.mjs";
+import { type AssoID, _decode_AssoID, _encode_AssoID } from "../Wrapper/AssoID.ta.mjs";
 import {
-    DER_PkiPath,
+    type DER_PkiPath,
     _decode_DER_PkiPath,
     _encode_DER_PkiPath,
 } from "../Wrapper/DER-PkiPath.ta.mjs";
 import {
-    SequenceNumber,
+    type SequenceNumber,
     _decode_SequenceNumber,
     _encode_SequenceNumber,
 } from "../Wrapper/SequenceNumber.ta.mjs";
 import {
-    TimeStamp,
+    type TimeStamp,
     _decode_TimeStamp,
     _encode_TimeStamp,
 } from "../Wrapper/TimeStamp.ta.mjs";
 import {
-    WrpError,
+    type WrpError,
     _decode_WrpError,
     _encode_WrpError,
     _enum_for_WrpError,
@@ -55,56 +55,72 @@ import {
  *
  */
 export class TbsDtSecAbort {
+    /**
+     * @summary `sigAlg`.
+     * @description Signature algorithm selected at handshake (clause 9.3). Signs this PDU; `altSignature` absent.
+     * @public
+     * @readonly
+     */
+    public readonly sigAlg: AlgorithmIdentifier;
+    /**
+     * @summary `assoID`.
+     * @description Same value as in the corresponding `HandshakeReq`.
+     * @public
+     * @readonly
+     */
+    public readonly assoID: AssoID;
+    /**
+     * @summary `time`.
+     * @description UTC GeneralizedTime of creation (clause 8.2).
+     * @public
+     * @readonly
+     */
+    public readonly time: TimeStamp;
+    /**
+     * @summary `pkiPath`.
+     * @description DER-encapsulated certification path verifying this signature.
+     * @public
+     * @readonly
+     */
+    public readonly pkiPath: DER_PkiPath;
+    /**
+     * @summary `seq`.
+     * @description Sequence number of the data-transfer WrPDU that caused the exception.
+     * @public
+     * @readonly
+     */
+    public readonly seq: SequenceNumber;
+    /**
+     * @summary `diag`.
+     * @description `WrpError` when not an alert; **absent if alert**.
+     * @public
+     * @readonly
+     */
+    public readonly diag?: OPTIONAL<WrpError>;
+    /**
+     * @summary Extensions that are not recognized.
+     * @public
+     * @readonly
+     */
+    public readonly _unrecognizedExtensionsList: _Element[];
+
     constructor(
-        /**
-         * @summary `sigAlg`.
-         * @description Signature algorithm selected at handshake (clause 9.3). Signs this PDU; `altSignature` absent.
-         * @public
-         * @readonly
-         */
-        readonly sigAlg: AlgorithmIdentifier,
-        /**
-         * @summary `assoID`.
-         * @description Same value as in the corresponding `HandshakeReq`.
-         * @public
-         * @readonly
-         */
-        readonly assoID: AssoID,
-        /**
-         * @summary `time`.
-         * @description UTC GeneralizedTime of creation (clause 8.2).
-         * @public
-         * @readonly
-         */
-        readonly time: TimeStamp,
-        /**
-         * @summary `pkiPath`.
-         * @description DER-encapsulated certification path verifying this signature.
-         * @public
-         * @readonly
-         */
-        readonly pkiPath: DER_PkiPath,
-        /**
-         * @summary `seq`.
-         * @description Sequence number of the data-transfer WrPDU that caused the exception.
-         * @public
-         * @readonly
-         */
-        readonly seq: SequenceNumber,
-        /**
-         * @summary `diag`.
-         * @description `WrpError` when not an alert; **absent if alert**.
-         * @public
-         * @readonly
-         */
-        readonly diag?: OPTIONAL<WrpError>,
-        /**
-         * @summary Extensions that are not recognized.
-         * @public
-         * @readonly
-         */
-        readonly _unrecognizedExtensionsList: _Element[] = []
-    ) {}
+        sigAlg: AlgorithmIdentifier,
+        assoID: AssoID,
+        time: TimeStamp,
+        pkiPath: DER_PkiPath,
+        seq: SequenceNumber,
+        diag?: OPTIONAL<WrpError>,
+        _unrecognizedExtensionsList: _Element[] = []
+    ) {
+        this.sigAlg = sigAlg;
+        this.assoID = assoID;
+        this.time = time;
+        this.pkiPath = pkiPath;
+        this.seq = seq;
+        this.diag = diag;
+        this._unrecognizedExtensionsList = _unrecognizedExtensionsList;
+    }
 
     /**
      * @summary Restructures an object into a TbsDtSecAbort
@@ -138,7 +154,7 @@ export class TbsDtSecAbort {
      * @static
      */
 
-    public static _enum_for_diag = _enum_for_WrpError;
+    public static _enum_for_diag: typeof _enum_for_WrpError = _enum_for_WrpError;
 }
 
 /**

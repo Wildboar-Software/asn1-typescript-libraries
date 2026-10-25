@@ -1,9 +1,9 @@
 /* eslint-disable */
 import {
-    ASN1Element as _Element,
+    type ASN1Element as _Element,
     ASN1TagClass as _TagClass,
-    OBJECT_IDENTIFIER,
-    OPTIONAL
+    type OBJECT_IDENTIFIER,
+    type OPTIONAL
 } from "@wildboar/asn1";
 import * as $ from "@wildboar/asn1/functional";
 
@@ -29,31 +29,37 @@ import * as $ from "@wildboar/asn1/functional";
  */
 export
 class PrivateExtension {
+    /**
+     * @summary `extId`.
+     * @description
+     *
+     * `MAP-EXTENSION.&extensionId`. OID length shall not exceed 16 octets
+     * and shall not have more than 16 components (3GPP TS 29.002 V19.1.0
+     * clause 17.7.11).
+     *
+     * @public
+     * @readonly
+     */
+    public readonly extId: OBJECT_IDENTIFIER;
+    /**
+     * @summary `extType`.
+     * @description
+     *
+     * `MAP-EXTENSION.&ExtensionType` for `extId`, if present (3GPP TS
+     * 29.002 V19.1.0 clause 17.7.11).
+     *
+     * @public
+     * @readonly
+     */
+    public readonly extType?: OPTIONAL<_Element>;
+
     constructor (
-        /**
-         * @summary `extId`.
-         * @description
-         *
-         * `MAP-EXTENSION.&extensionId`. OID length shall not exceed 16 octets
-         * and shall not have more than 16 components (3GPP TS 29.002 V19.1.0
-         * clause 17.7.11).
-         *
-         * @public
-         * @readonly
-         */
-        readonly extId: OBJECT_IDENTIFIER,
-        /**
-         * @summary `extType`.
-         * @description
-         *
-         * `MAP-EXTENSION.&ExtensionType` for `extId`, if present (3GPP TS
-         * 29.002 V19.1.0 clause 17.7.11).
-         *
-         * @public
-         * @readonly
-         */
-        readonly extType?: OPTIONAL<_Element>
-    ) {}
+        extId: OBJECT_IDENTIFIER,
+        extType?: OPTIONAL<_Element>
+    ) {
+        this.extId = extId;
+        this.extType = extType;
+    }
 
     /**
      * @summary Restructures an object into a PrivateExtension

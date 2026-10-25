@@ -1,7 +1,7 @@
 /* eslint-disable */
 import {
-    INTEGER,
-    ASN1Element as _Element,
+    type INTEGER,
+    type ASN1Element as _Element,
     ASN1TagClass as _TagClass,
     ASN1Construction as _Construction,
     ASN1UniversalType as _UniversalType,
@@ -41,7 +41,7 @@ type ProceduralStatus_Item = INTEGER;
  * @type {number}
  */
 export
-const ProceduralStatus_Item_initializationRequired: ProceduralStatus_Item = 0; /* LONG_NAMED_INTEGER_VALUE */
+const ProceduralStatus_Item_initializationRequired: 0 = 0 satisfies ProceduralStatus_Item; /* LONG_NAMED_INTEGER_VALUE */
 
 /**
  * @summary ProceduralStatus_Item_initializationRequired
@@ -54,7 +54,7 @@ const ProceduralStatus_Item_initializationRequired: ProceduralStatus_Item = 0; /
  * @type {number}
  */
 export
-const initializationRequired: ProceduralStatus_Item = ProceduralStatus_Item_initializationRequired; /* SHORT_NAMED_INTEGER_VALUE */
+const initializationRequired: 0 = ProceduralStatus_Item_initializationRequired; /* SHORT_NAMED_INTEGER_VALUE */
 
 /**
  * @summary ProceduralStatus_Item_notInitialized
@@ -67,7 +67,7 @@ const initializationRequired: ProceduralStatus_Item = ProceduralStatus_Item_init
  * @type {number}
  */
 export
-const ProceduralStatus_Item_notInitialized: ProceduralStatus_Item = 1; /* LONG_NAMED_INTEGER_VALUE */
+const ProceduralStatus_Item_notInitialized: 1 = 1 satisfies ProceduralStatus_Item; /* LONG_NAMED_INTEGER_VALUE */
 
 /**
  * @summary ProceduralStatus_Item_notInitialized
@@ -80,7 +80,7 @@ const ProceduralStatus_Item_notInitialized: ProceduralStatus_Item = 1; /* LONG_N
  * @type {number}
  */
 export
-const notInitialized: ProceduralStatus_Item = ProceduralStatus_Item_notInitialized; /* SHORT_NAMED_INTEGER_VALUE */
+const notInitialized: 1 = ProceduralStatus_Item_notInitialized; /* SHORT_NAMED_INTEGER_VALUE */
 
 /**
  * @summary ProceduralStatus_Item_initializing
@@ -93,7 +93,7 @@ const notInitialized: ProceduralStatus_Item = ProceduralStatus_Item_notInitializ
  * @type {number}
  */
 export
-const ProceduralStatus_Item_initializing: ProceduralStatus_Item = 2; /* LONG_NAMED_INTEGER_VALUE */
+const ProceduralStatus_Item_initializing: 2 = 2 satisfies ProceduralStatus_Item; /* LONG_NAMED_INTEGER_VALUE */
 
 /**
  * @summary ProceduralStatus_Item_initializing
@@ -106,7 +106,7 @@ const ProceduralStatus_Item_initializing: ProceduralStatus_Item = 2; /* LONG_NAM
  * @type {number}
  */
 export
-const initializing: ProceduralStatus_Item = ProceduralStatus_Item_initializing; /* SHORT_NAMED_INTEGER_VALUE */
+const initializing: 2 = ProceduralStatus_Item_initializing; /* SHORT_NAMED_INTEGER_VALUE */
 
 /**
  * @summary ProceduralStatus_Item_reporting
@@ -119,7 +119,7 @@ const initializing: ProceduralStatus_Item = ProceduralStatus_Item_initializing; 
  * @type {number}
  */
 export
-const ProceduralStatus_Item_reporting: ProceduralStatus_Item = 3; /* LONG_NAMED_INTEGER_VALUE */
+const ProceduralStatus_Item_reporting: 3 = 3 satisfies ProceduralStatus_Item; /* LONG_NAMED_INTEGER_VALUE */
 
 /**
  * @summary ProceduralStatus_Item_reporting
@@ -132,7 +132,7 @@ const ProceduralStatus_Item_reporting: ProceduralStatus_Item = 3; /* LONG_NAMED_
  * @type {number}
  */
 export
-const reporting: ProceduralStatus_Item = ProceduralStatus_Item_reporting; /* SHORT_NAMED_INTEGER_VALUE */
+const reporting: 3 = ProceduralStatus_Item_reporting; /* SHORT_NAMED_INTEGER_VALUE */
 
 /**
  * @summary ProceduralStatus_Item_terminating
@@ -145,7 +145,7 @@ const reporting: ProceduralStatus_Item = ProceduralStatus_Item_reporting; /* SHO
  * @type {number}
  */
 export
-const ProceduralStatus_Item_terminating: ProceduralStatus_Item = 4; /* LONG_NAMED_INTEGER_VALUE */
+const ProceduralStatus_Item_terminating: 4 = 4 satisfies ProceduralStatus_Item; /* LONG_NAMED_INTEGER_VALUE */
 
 /**
  * @summary ProceduralStatus_Item_terminating
@@ -158,13 +158,13 @@ const ProceduralStatus_Item_terminating: ProceduralStatus_Item = 4; /* LONG_NAME
  * @type {number}
  */
 export
-const terminating: ProceduralStatus_Item = ProceduralStatus_Item_terminating; /* SHORT_NAMED_INTEGER_VALUE */
+const terminating: 4 = ProceduralStatus_Item_terminating; /* SHORT_NAMED_INTEGER_VALUE */
 
 
-export const _decode_ProceduralStatus_Item = $._decodeInteger;
+export const _decode_ProceduralStatus_Item: $.ASN1Decoder<INTEGER> = $._decodeInteger;
 
 
-export const _encode_ProceduralStatus_Item = $._encodeInteger;
+export const _encode_ProceduralStatus_Item: $.ASN1Encoder<INTEGER> = $._encodeInteger;
 
 
 /* eslint-enable */

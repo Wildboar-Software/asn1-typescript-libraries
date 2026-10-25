@@ -2,7 +2,7 @@
 import { type MATCHING_RULE } from "../InformationFramework/MATCHING-RULE.oca.mjs";
 import { dnsString } from "../SelectedAttributeTypes/dnsString.oa.mjs";
 import {
-    DomainName,
+    type DomainName,
     _decode_DomainName,
     _encode_DomainName,
 } from "../SelectedAttributeTypes/DomainName.ta.mjs";

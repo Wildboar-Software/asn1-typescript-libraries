@@ -1,7 +1,7 @@
 /* eslint-disable */
 import {
-    OPTIONAL,
-    ASN1Element as _Element,
+    type OPTIONAL,
+    type ASN1Element as _Element,
     ASN1TagClass as _TagClass,
     ASN1Construction as _Construction,
     ASN1UniversalType as _UniversalType,
@@ -17,7 +17,7 @@ import {
     _encode_TemplateLabel,
 } from '../DefinitionASN1Module/TemplateLabel.ta.mjs';
 import {
-    TemplateList,
+    type TemplateList,
     _decode_TemplateList,
     _encode_TemplateList,
 } from '../DefinitionASN1Module/TemplateList.ta.mjs';
@@ -39,27 +39,33 @@ import {
  *
  */
 export class Notifications_Item {
+    /**
+     * @summary `notification`.
+     * @description
+     *
+     * Notification template included in the package.
+     * @public
+     * @readonly
+     */
+    public readonly notification: TemplateLabel;
+    /**
+     * @summary `parameter`.
+     * @description
+     *
+     * Optional parameter templates for event information, reply, or
+     * processing failures of this notification.
+     * @public
+     * @readonly
+     */
+    public readonly parameter?: OPTIONAL<TemplateList>;
+
     constructor(
-        /**
-         * @summary `notification`.
-         * @description
-         *
-         * Notification template included in the package.
-         * @public
-         * @readonly
-         */
-        readonly notification: TemplateLabel,
-        /**
-         * @summary `parameter`.
-         * @description
-         *
-         * Optional parameter templates for event information, reply, or
-         * processing failures of this notification.
-         * @public
-         * @readonly
-         */
-        readonly parameter?: OPTIONAL<TemplateList>
-    ) {}
+        notification: TemplateLabel,
+        parameter?: OPTIONAL<TemplateList>
+    ) {
+        this.notification = notification;
+        this.parameter = parameter;
+    }
 
     /**
      * @summary Restructures an object into a Notifications_Item

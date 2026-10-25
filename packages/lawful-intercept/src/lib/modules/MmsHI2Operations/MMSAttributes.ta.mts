@@ -1,22 +1,22 @@
 /* eslint-disable */
 import {
-    GeneralizedTime,
-    INTEGER,
-    OCTET_STRING,
-    UTF8String,
-    ASN1Element as _Element,
+    type GeneralizedTime,
+    type INTEGER,
+    type OCTET_STRING,
+    type UTF8String,
+    type ASN1Element as _Element,
     ASN1TagClass as _TagClass
 } from "@wildboar/asn1";
 import * as $ from "@wildboar/asn1/functional";
-import { Address, _decode_Address, _encode_Address } from "../MmsHI2Operations/Address.ta.mjs";
+import { type Address, _decode_Address, _encode_Address } from "../MmsHI2Operations/Address.ta.mjs";
 // export { Address, _decode_Address, _encode_Address } from "../MmsHI2Operations/Address.ta.mjs";
-import { YesNo, _decode_YesNo, _encode_YesNo } from "../MmsHI2Operations/YesNo.ta.mjs";
+import { type YesNo, _decode_YesNo, _encode_YesNo } from "../MmsHI2Operations/YesNo.ta.mjs";
 // export { YesNo, _decode_YesNo, _encode_YesNo } from "../MmsHI2Operations/YesNo.ta.mjs";
-import { From, _decode_From, _encode_From } from "../MmsHI2Operations/From.ta.mjs";
+import { type From, _decode_From, _encode_From } from "../MmsHI2Operations/From.ta.mjs";
 // export { From, _decode_From, _encode_From } from "../MmsHI2Operations/From.ta.mjs";
-import { MessageClass, _decode_MessageClass, _encode_MessageClass } from "../MmsHI2Operations/MessageClass.ta.mjs";
+import { type MessageClass, _decode_MessageClass, _encode_MessageClass } from "../MmsHI2Operations/MessageClass.ta.mjs";
 // export { MessageClass, _decode_MessageClass, _encode_MessageClass } from "../MmsHI2Operations/MessageClass.ta.mjs";
-import { Priority, _decode_Priority, _encode_Priority } from "../MmsHI2Operations/Priority.ta.mjs";
+import { type Priority, _decode_Priority, _encode_Priority } from "../MmsHI2Operations/Priority.ta.mjs";
 // export { Priority, _enum_for_Priority, Priority_low /* IMPORTED_LONG_ENUMERATION_ITEM */, low /* IMPORTED_SHORT_ENUMERATION_ITEM */, Priority_normal /* IMPORTED_LONG_ENUMERATION_ITEM */, normal /* IMPORTED_SHORT_ENUMERATION_ITEM */, Priority_high /* IMPORTED_LONG_ENUMERATION_ITEM */, high /* IMPORTED_SHORT_ENUMERATION_ITEM */, _decode_Priority, _encode_Priority } from "../MmsHI2Operations/Priority.ta.mjs";
 import { PreviouslySentBy, _decode_PreviouslySentBy, _encode_PreviouslySentBy } from "../MmsHI2Operations/PreviouslySentBy.ta.mjs";
 // export { PreviouslySentBy, _decode_PreviouslySentBy, _encode_PreviouslySentBy } from "../MmsHI2Operations/PreviouslySentBy.ta.mjs";

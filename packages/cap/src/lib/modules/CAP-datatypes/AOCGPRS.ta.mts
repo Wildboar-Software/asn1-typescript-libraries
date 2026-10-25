@@ -1,6 +1,6 @@
 import {
-    OPTIONAL,
-    ASN1Element as _Element,
+    type OPTIONAL,
+    type ASN1Element as _Element,
     ASN1TagClass as _TagClass,
 } from "@wildboar/asn1";
 import * as $ from "@wildboar/asn1/functional";
@@ -22,34 +22,40 @@ import { AOCSubsequent, _decode_AOCSubsequent, _encode_AOCSubsequent } from "./A
  *
  */
 export class AOCGPRS {
+    /**
+     * @summary `aOCInitial`.
+     * @description
+     *
+     * CAI elements (3GPP TS 22.024) sent when Activate PDP Context Accept
+     * or Attach Accept is sent and a tariff switch has not yet occurred.
+     * May also be sent later (e.g. QoS or RAI change).
+     * (3GPP TS 29.078 V19.0.0 clause 13.14).
+     *
+     * @public
+     * @readonly
+     */
+    public readonly aOCInitial: CAI_GSM0224;
+    /**
+     * @summary `aOCSubsequent`.
+     * @description
+     *
+     * CAI sent when Activate PDP Context Accept or Attach Accept is
+     * detected and a tariff switch has already occurred, or when that
+     * accept was previously detected and a tariff switch occurs.
+     * (3GPP TS 29.078 V19.0.0 clause 13.14).
+     *
+     * @public
+     * @readonly
+     */
+    public readonly aOCSubsequent?: OPTIONAL<AOCSubsequent>;
+
     constructor (
-        /**
-         * @summary `aOCInitial`.
-         * @description
-         *
-         * CAI elements (3GPP TS 22.024) sent when Activate PDP Context Accept
-         * or Attach Accept is sent and a tariff switch has not yet occurred.
-         * May also be sent later (e.g. QoS or RAI change).
-         * (3GPP TS 29.078 V19.0.0 clause 13.14).
-         *
-         * @public
-         * @readonly
-         */
-        readonly aOCInitial: CAI_GSM0224,
-        /**
-         * @summary `aOCSubsequent`.
-         * @description
-         *
-         * CAI sent when Activate PDP Context Accept or Attach Accept is
-         * detected and a tariff switch has already occurred, or when that
-         * accept was previously detected and a tariff switch occurs.
-         * (3GPP TS 29.078 V19.0.0 clause 13.14).
-         *
-         * @public
-         * @readonly
-         */
-        readonly aOCSubsequent?: OPTIONAL<AOCSubsequent>,
-    ) {}
+        aOCInitial: CAI_GSM0224,
+        aOCSubsequent?: OPTIONAL<AOCSubsequent>,
+    ) {
+        this.aOCInitial = aOCInitial;
+        this.aOCSubsequent = aOCSubsequent;
+    }
 
     public static _from_object (_o: { [_K in keyof (AOCGPRS)]: (AOCGPRS)[_K] }): AOCGPRS {
         return new AOCGPRS(_o.aOCInitial, _o.aOCSubsequent);

@@ -1,7 +1,7 @@
 /* eslint-disable */
 import {
-    OPTIONAL,
-    ASN1Element as _Element,
+    type OPTIONAL,
+    type ASN1Element as _Element,
     ASN1TagClass as _TagClass,
     ASN1Construction as _Construction,
     ASN1UniversalType as _UniversalType,
@@ -39,20 +39,26 @@ import {
  *
  */
 export class EDIMBodyPart {
+    /**
+     * @summary `parameters`.
+     * @public
+     * @readonly
+     */
+    public readonly parameters: OPTIONAL<MessageParameters>;
+    /**
+     * @summary `data`.
+     * @public
+     * @readonly
+     */
+    public readonly data: MessageData;
+
     constructor(
-        /**
-         * @summary `parameters`.
-         * @public
-         * @readonly
-         */
-        readonly parameters: OPTIONAL<MessageParameters>,
-        /**
-         * @summary `data`.
-         * @public
-         * @readonly
-         */
-        readonly data: MessageData
-    ) {}
+        parameters: OPTIONAL<MessageParameters>,
+        data: MessageData
+    ) {
+        this.parameters = parameters;
+        this.data = data;
+    }
 
     /**
      * @summary Restructures an object into a EDIMBodyPart

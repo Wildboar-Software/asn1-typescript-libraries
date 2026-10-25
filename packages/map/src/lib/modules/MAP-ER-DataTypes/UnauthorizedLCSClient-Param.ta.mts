@@ -1,11 +1,11 @@
 /* eslint-disable */
 import {
-    OPTIONAL,
-    ASN1Element as _Element,
+    type OPTIONAL,
+    type ASN1Element as _Element,
     ASN1TagClass as _TagClass
 } from "@wildboar/asn1";
 import * as $ from "@wildboar/asn1/functional";
-import { UnauthorizedLCSClient_Diagnostic, _decode_UnauthorizedLCSClient_Diagnostic, _encode_UnauthorizedLCSClient_Diagnostic, _enum_for_UnauthorizedLCSClient_Diagnostic } from "../MAP-ER-DataTypes/UnauthorizedLCSClient-Diagnostic.ta.mjs";
+import { type UnauthorizedLCSClient_Diagnostic, _decode_UnauthorizedLCSClient_Diagnostic, _encode_UnauthorizedLCSClient_Diagnostic, _enum_for_UnauthorizedLCSClient_Diagnostic } from "../MAP-ER-DataTypes/UnauthorizedLCSClient-Diagnostic.ta.mjs";
 import { ExtensionContainer, _decode_ExtensionContainer, _encode_ExtensionContainer } from "../MAP-ExtensionDataTypes/ExtensionContainer.ta.mjs";
 
 
@@ -20,8 +20,8 @@ import { ExtensionContainer, _decode_ExtensionContainer, _encode_ExtensionContai
  * 
  * ```asn1
  * UnauthorizedLCSClient-Param ::= SEQUENCE {
- *     unauthorizedLCSClient-Diagnostic    [0] UnauthorizedLCSClient-Diagnostic    OPTIONAL,
- *     extensionContainer    [1] ExtensionContainer    OPTIONAL,
+ *     unauthorizedLCSClient-Diagnostic    [0] UnauthorizedLCSClient-Diagnostic    type OPTIONAL,
+ *     extensionContainer    [1] ExtensionContainer    type OPTIONAL,
  *     ... }
  * ```
  * 
@@ -29,31 +29,39 @@ import { ExtensionContainer, _decode_ExtensionContainer, _encode_ExtensionContai
  */
 export
 class UnauthorizedLCSClient_Param {
+    /**
+     * @summary `unauthorizedLCSClient_Diagnostic`.
+     * @description
+     *
+     * Detailed reason for unauthorised LCS client. Unrecognized values
+     * shall be ignored (3GPP TS 29.002 V19.1.0 clauses 7.6.1.4 and 17.7.7).
+     *
+     * @public
+     * @readonly
+     */
+    public readonly unauthorizedLCSClient_Diagnostic?: OPTIONAL<UnauthorizedLCSClient_Diagnostic>;
+    /**
+     * @summary `extensionContainer`.
+     * @public
+     * @readonly
+     */
+    public readonly extensionContainer?: OPTIONAL<ExtensionContainer>;
+    /**
+     * @summary Extensions that are not recognized.
+     * @public
+     * @readonly
+     */
+    public readonly _unrecognizedExtensionsList: _Element[];
+
     constructor (
-        /**
-         * @summary `unauthorizedLCSClient_Diagnostic`.
-         * @description
-         *
-         * Detailed reason for unauthorised LCS client. Unrecognized values
-         * shall be ignored (3GPP TS 29.002 V19.1.0 clauses 7.6.1.4 and 17.7.7).
-         *
-         * @public
-         * @readonly
-         */
-        readonly unauthorizedLCSClient_Diagnostic?: OPTIONAL<UnauthorizedLCSClient_Diagnostic>,
-        /**
-         * @summary `extensionContainer`.
-         * @public
-         * @readonly
-         */
-        readonly extensionContainer?: OPTIONAL<ExtensionContainer>,
-        /**
-         * @summary Extensions that are not recognized.
-         * @public
-         * @readonly
-         */
-        readonly _unrecognizedExtensionsList: _Element[] = []
-    ) {}
+        unauthorizedLCSClient_Diagnostic?: OPTIONAL<UnauthorizedLCSClient_Diagnostic>,
+        extensionContainer?: OPTIONAL<ExtensionContainer>,
+        _unrecognizedExtensionsList: _Element[] = []
+    ) {
+        this.unauthorizedLCSClient_Diagnostic = unauthorizedLCSClient_Diagnostic;
+        this.extensionContainer = extensionContainer;
+        this._unrecognizedExtensionsList = _unrecognizedExtensionsList;
+    }
 
     /**
      * @summary Restructures an object into a UnauthorizedLCSClient_Param
@@ -77,7 +85,7 @@ class UnauthorizedLCSClient_Param {
          * @static
          */
 
-    public static _enum_for_unauthorizedLCSClient_Diagnostic = _enum_for_UnauthorizedLCSClient_Diagnostic;
+    public static _enum_for_unauthorizedLCSClient_Diagnostic: typeof _enum_for_UnauthorizedLCSClient_Diagnostic = _enum_for_UnauthorizedLCSClient_Diagnostic;
 }
 
 /**

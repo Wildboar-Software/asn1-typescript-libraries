@@ -1,6 +1,6 @@
 /* eslint-disable */
 import {
-    INTEGER
+    type INTEGER
 } from "@wildboar/asn1";
 import * as $ from "@wildboar/asn1/functional";
 
@@ -35,7 +35,7 @@ type SortResponse_sortStatus = INTEGER;
  * @type {number}
  */
 export
-const SortResponse_sortStatus_success: SortResponse_sortStatus = 0; /* LONG_NAMED_INTEGER_VALUE */
+const SortResponse_sortStatus_success: 0 = 0 satisfies SortResponse_sortStatus; /* LONG_NAMED_INTEGER_VALUE */
 
 /**
  * @summary SortResponse_sortStatus_success
@@ -48,7 +48,7 @@ const SortResponse_sortStatus_success: SortResponse_sortStatus = 0; /* LONG_NAME
  * @type {number}
  */
 export
-const success: SortResponse_sortStatus = SortResponse_sortStatus_success; /* SHORT_NAMED_INTEGER_VALUE */
+const success: 0 = SortResponse_sortStatus_success; /* SHORT_NAMED_INTEGER_VALUE */
 
 /**
  * @summary SortResponse_sortStatus_partial_1
@@ -61,7 +61,7 @@ const success: SortResponse_sortStatus = SortResponse_sortStatus_success; /* SHO
  * @type {number}
  */
 export
-const SortResponse_sortStatus_partial_1: SortResponse_sortStatus = 1; /* LONG_NAMED_INTEGER_VALUE */
+const SortResponse_sortStatus_partial_1: 1 = 1 satisfies SortResponse_sortStatus; /* LONG_NAMED_INTEGER_VALUE */
 
 /**
  * @summary SortResponse_sortStatus_partial_1
@@ -74,7 +74,7 @@ const SortResponse_sortStatus_partial_1: SortResponse_sortStatus = 1; /* LONG_NA
  * @type {number}
  */
 export
-const partial_1: SortResponse_sortStatus = SortResponse_sortStatus_partial_1; /* SHORT_NAMED_INTEGER_VALUE */
+const partial_1: 1 = SortResponse_sortStatus_partial_1; /* SHORT_NAMED_INTEGER_VALUE */
 
 /**
  * @summary SortResponse_sortStatus_failure
@@ -87,7 +87,7 @@ const partial_1: SortResponse_sortStatus = SortResponse_sortStatus_partial_1; /*
  * @type {number}
  */
 export
-const SortResponse_sortStatus_failure: SortResponse_sortStatus = 2; /* LONG_NAMED_INTEGER_VALUE */
+const SortResponse_sortStatus_failure: 2 = 2 satisfies SortResponse_sortStatus; /* LONG_NAMED_INTEGER_VALUE */
 
 /**
  * @summary SortResponse_sortStatus_failure
@@ -100,7 +100,7 @@ const SortResponse_sortStatus_failure: SortResponse_sortStatus = 2; /* LONG_NAME
  * @type {number}
  */
 export
-const failure: SortResponse_sortStatus = SortResponse_sortStatus_failure; /* SHORT_NAMED_INTEGER_VALUE */
+const failure: 2 = SortResponse_sortStatus_failure; /* SHORT_NAMED_INTEGER_VALUE */
 export const _decode_SortResponse_sortStatus: $.ASN1Decoder<SortResponse_sortStatus> = $._decodeInteger;
 export const _encode_SortResponse_sortStatus: $.ASN1Encoder<SortResponse_sortStatus> = $._encodeInteger;
 

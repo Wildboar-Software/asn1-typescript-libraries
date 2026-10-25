@@ -11,12 +11,12 @@ import {
 } from '@wildboar/asn1';
 import * as $ from '@wildboar/asn1/functional';
 import {
-  QualifiedNameOrIndex,
+  type QualifiedNameOrIndex,
   _decode_QualifiedNameOrIndex,
   _encode_QualifiedNameOrIndex,
 } from '../FastInfoset/QualifiedNameOrIndex.ta.mjs';
 import {
-  NonIdentifyingStringOrIndex,
+  type NonIdentifyingStringOrIndex,
   _decode_NonIdentifyingStringOrIndex,
   _encode_NonIdentifyingStringOrIndex,
 } from '../FastInfoset/NonIdentifyingStringOrIndex.ta.mjs';
@@ -50,7 +50,7 @@ export class Attribute {
    * @public
    * @readonly
    */
-  readonly qualified_name: QualifiedNameOrIndex;
+  public readonly qualified_name: QualifiedNameOrIndex;
   /**
    * @summary `normalized_value`.
    * @description [normalized value]; ATTRIBUTE VALUE
@@ -59,7 +59,7 @@ export class Attribute {
    * @public
    * @readonly
    */
-  readonly normalized_value: NonIdentifyingStringOrIndex;
+  public readonly normalized_value: NonIdentifyingStringOrIndex;
 
   constructor(
     qualified_name: QualifiedNameOrIndex,

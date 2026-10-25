@@ -1,5 +1,5 @@
 /* eslint-disable */
-import { OPERATION } from "../Remote-Operations-Information-Objects/OPERATION.oca.mjs";
+import { type OPERATION } from "../Remote-Operations-Information-Objects/OPERATION.oca.mjs";
 import { activateDiversionQ } from "../Call-Diversion-Operations-asn1-97/activateDiversionQ.oa.mjs";
 import { deactivateDiversionQ } from "../Call-Diversion-Operations-asn1-97/deactivateDiversionQ.oa.mjs";
 import { interrogateDiversionQ } from "../Call-Diversion-Operations-asn1-97/interrogateDiversionQ.oa.mjs";

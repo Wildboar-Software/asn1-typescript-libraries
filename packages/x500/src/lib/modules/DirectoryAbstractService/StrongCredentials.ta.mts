@@ -1,8 +1,8 @@
 /* eslint-disable */
 import {
-    ASN1Element as _Element,
+    type ASN1Element as _Element,
     ASN1TagClass as _TagClass,
-    OPTIONAL,
+    type OPTIONAL,
 } from "@wildboar/asn1";
 import * as $ from "@wildboar/asn1/functional";
 import {
@@ -16,12 +16,12 @@ import {
     _encode_CertificationPath,
 } from "../AuthenticationFramework/CertificationPath.ta.mjs";
 import {
-    Token,
+    type Token,
     _decode_Token,
     _encode_Token,
 } from "../DirectoryAbstractService/Token.ta.mjs";
 import {
-    DistinguishedName,
+    type DistinguishedName,
     _decode_DistinguishedName,
     _encode_DistinguishedName,
 } from "../InformationFramework/DistinguishedName.ta.mjs";
@@ -45,50 +45,62 @@ import {
  *
  */
 export class StrongCredentials {
+    /**
+     * @summary `certification_path`.
+     * @description
+     *
+     * If present, a certification path as in X.509 7.6.
+     *
+     * @public
+     * @readonly
+     */
+    public readonly certification_path: OPTIONAL<CertificationPath>;
+    /**
+     * @summary `bind_token`.
+     * @description
+     *
+     * Required. SIGNED TokenContent.
+     *
+     * @public
+     * @readonly
+     */
+    public readonly bind_token: Token;
+    /**
+     * @summary `name`.
+     * @description
+     *
+     * Requester DN.
+     *
+     * @public
+     * @readonly
+     */
+    public readonly name?: OPTIONAL<DistinguishedName>;
+    /**
+     * @summary `attributeCertificationPath`.
+     * @public
+     * @readonly
+     */
+    public readonly attributeCertificationPath?: OPTIONAL<AttributeCertificationPath>;
+    /**
+     * @summary Extensions that are not recognized.
+     * @public
+     * @readonly
+     */
+    public readonly _unrecognizedExtensionsList: _Element[];
+
     constructor(
-        /**
-         * @summary `certification_path`.
-         * @description
-         *
-         * If present, a certification path as in X.509 7.6.
-         *
-         * @public
-         * @readonly
-         */
-        readonly certification_path: OPTIONAL<CertificationPath>,
-        /**
-         * @summary `bind_token`.
-         * @description
-         *
-         * Required. SIGNED TokenContent.
-         *
-         * @public
-         * @readonly
-         */
-        readonly bind_token: Token,
-        /**
-         * @summary `name`.
-         * @description
-         *
-         * Requester DN.
-         *
-         * @public
-         * @readonly
-         */
-        readonly name?: OPTIONAL<DistinguishedName>,
-        /**
-         * @summary `attributeCertificationPath`.
-         * @public
-         * @readonly
-         */
-        readonly attributeCertificationPath?: OPTIONAL<AttributeCertificationPath>,
-        /**
-         * @summary Extensions that are not recognized.
-         * @public
-         * @readonly
-         */
-        readonly _unrecognizedExtensionsList: _Element[] = []
-    ) {}
+        certification_path: OPTIONAL<CertificationPath>,
+        bind_token: Token,
+        name?: OPTIONAL<DistinguishedName>,
+        attributeCertificationPath?: OPTIONAL<AttributeCertificationPath>,
+        _unrecognizedExtensionsList: _Element[] = []
+    ) {
+        this.certification_path = certification_path;
+        this.bind_token = bind_token;
+        this.name = name;
+        this.attributeCertificationPath = attributeCertificationPath;
+        this._unrecognizedExtensionsList = _unrecognizedExtensionsList;
+    }
 
     /**
      * @summary Restructures an object into a StrongCredentials

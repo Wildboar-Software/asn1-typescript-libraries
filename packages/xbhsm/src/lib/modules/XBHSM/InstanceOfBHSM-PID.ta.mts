@@ -1,5 +1,5 @@
 /* eslint-disable */
-import { INSTANCE_OF } from "@wildboar/asn1";
+import { type INSTANCE_OF } from "@wildboar/asn1";
 import * as $ from "@wildboar/asn1/functional";
 
 /**

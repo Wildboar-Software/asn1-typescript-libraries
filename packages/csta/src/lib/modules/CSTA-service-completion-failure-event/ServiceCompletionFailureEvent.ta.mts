@@ -2,10 +2,10 @@
 
 import * as $ from "@wildboar/asn1/functional";
 import {
-    OPTIONAL,
-    SEQUENCE,
-    SET,
-    ASN1Element as _Element,
+    type OPTIONAL,
+    type SEQUENCE,
+    type SET,
+    type ASN1Element as _Element,
     ASN1TagClass as _TagClass
 } from "@wildboar/asn1";
 import { PrimaryOrSecondaryCall, _decode_PrimaryOrSecondaryCall, _encode_PrimaryOrSecondaryCall } from "../CSTA-service-completion-failure-event/PrimaryOrSecondaryCall.ta.mjs";
@@ -42,10 +42,10 @@ import { CSTACommonArguments, _decode_CSTACommonArguments, _encode_CSTACommonArg
  * ```asn1
  * ServiceCompletionFailureEvent ::= SEQUENCE
  * {    primaryCall            PrimaryOrSecondaryCall,
- *     secondaryCall            [0] IMPLICIT PrimaryOrSecondaryCall    OPTIONAL,
- *     otherDevsPrimaryCallList    [1] IMPLICIT SEQUENCE OF OtherCall    OPTIONAL,
- *     otherDevsSecondaryCallList    [2] IMPLICIT SEQUENCE OF OtherCall    OPTIONAL,
- *     mediaCallCharacteristics    [3] IMPLICIT MediaCallCharacteristics     OPTIONAL,
+ *     secondaryCall            [0] IMPLICIT PrimaryOrSecondaryCall    type OPTIONAL,
+ *     otherDevsPrimaryCallList    [1] IMPLICIT SEQUENCE OF OtherCall    type OPTIONAL,
+ *     otherDevsSecondaryCallList    [2] IMPLICIT SEQUENCE OF OtherCall    type OPTIONAL,
+ *     mediaCallCharacteristics    [3] IMPLICIT MediaCallCharacteristics     type OPTIONAL,
  *     cause                EventCause,
  *     extensions             CSTACommonArguments             OPTIONAL }
  * ```
@@ -54,72 +54,88 @@ import { CSTACommonArguments, _decode_CSTACommonArguments, _encode_CSTACommonArg
  */
 export
 class ServiceCompletionFailureEvent {
+    /**
+     * @summary `primaryCall`.
+     * @description
+     *
+     * Connection in the primary call of the failed service.
+     * @public
+     * @readonly
+     */
+    public readonly primaryCall: PrimaryOrSecondaryCall;
+    /**
+     * @summary `secondaryCall`.
+     * @description
+     *
+     * Connection in the secondary call, if the service had one.
+     * @public
+     * @readonly
+     */
+    public readonly secondaryCall: OPTIONAL<PrimaryOrSecondaryCall>;
+    /**
+     * @summary `otherDevsPrimaryCallList`.
+     * @description
+     *
+     * Other devices/connections on the primary call.
+     * @public
+     * @readonly
+     */
+    public readonly otherDevsPrimaryCallList: OPTIONAL<OtherCall[]>;
+    /**
+     * @summary `otherDevsSecondaryCallList`.
+     * @description
+     *
+     * Other devices/connections on the secondary call.
+     * @public
+     * @readonly
+     */
+    public readonly otherDevsSecondaryCallList: OPTIONAL<OtherCall[]>;
+    /**
+     * @summary `mediaCallCharacteristics`.
+     * @description
+     *
+     * Media characteristics of the affected call(s).
+     * @public
+     * @readonly
+     */
+    public readonly mediaCallCharacteristics: OPTIONAL<MediaCallCharacteristics>;
+    /**
+     * @summary `cause`.
+     * @description
+     *
+     * Why completion failed.
+     * @public
+     * @readonly
+     */
+    public readonly cause: EventCause;
+    /**
+     * @summary `extensions`.
+     * @description
+     *
+     * Optional security (timestamp, sequence, securityInfo) and
+     * privateData.
+     * @public
+     * @readonly
+     */
+    public readonly extensions?: OPTIONAL<CSTACommonArguments>;
+
     constructor (
-        /**
-         * @summary `primaryCall`.
-         * @description
-         *
-         * Connection in the primary call of the failed service.
-         * @public
-         * @readonly
-         */
-        readonly primaryCall: PrimaryOrSecondaryCall,
-        /**
-         * @summary `secondaryCall`.
-         * @description
-         *
-         * Connection in the secondary call, if the service had one.
-         * @public
-         * @readonly
-         */
-        readonly secondaryCall: OPTIONAL<PrimaryOrSecondaryCall>,
-        /**
-         * @summary `otherDevsPrimaryCallList`.
-         * @description
-         *
-         * Other devices/connections on the primary call.
-         * @public
-         * @readonly
-         */
-        readonly otherDevsPrimaryCallList: OPTIONAL<OtherCall[]>,
-        /**
-         * @summary `otherDevsSecondaryCallList`.
-         * @description
-         *
-         * Other devices/connections on the secondary call.
-         * @public
-         * @readonly
-         */
-        readonly otherDevsSecondaryCallList: OPTIONAL<OtherCall[]>,
-        /**
-         * @summary `mediaCallCharacteristics`.
-         * @description
-         *
-         * Media characteristics of the affected call(s).
-         * @public
-         * @readonly
-         */
-        readonly mediaCallCharacteristics: OPTIONAL<MediaCallCharacteristics>,
-        /**
-         * @summary `cause`.
-         * @description
-         *
-         * Why completion failed.
-         * @public
-         * @readonly
-         */
-        readonly cause: EventCause,
-        /**
-         * @summary `extensions`.
-         * @description
-         *
-         * Optional security (timestamp, sequence, securityInfo) and
-         * privateData.
-         * @public
-         * @readonly
-         */
-        readonly extensions?: OPTIONAL<CSTACommonArguments>
-    ) {}
+        primaryCall: PrimaryOrSecondaryCall,
+        secondaryCall: OPTIONAL<PrimaryOrSecondaryCall>,
+        otherDevsPrimaryCallList: OPTIONAL<OtherCall[]>,
+        otherDevsSecondaryCallList: OPTIONAL<OtherCall[]>,
+        mediaCallCharacteristics: OPTIONAL<MediaCallCharacteristics>,
+        cause: EventCause,
+        extensions?: OPTIONAL<CSTACommonArguments>
+    ) {
+        this.primaryCall = primaryCall;
+        this.secondaryCall = secondaryCall;
+        this.otherDevsPrimaryCallList = otherDevsPrimaryCallList;
+        this.otherDevsSecondaryCallList = otherDevsSecondaryCallList;
+        this.mediaCallCharacteristics = mediaCallCharacteristics;
+        this.cause = cause;
+        this.extensions = extensions;
+    }
 
     /**
      * @summary Restructures an object into a ServiceCompletionFailureEvent
@@ -143,7 +159,7 @@ class ServiceCompletionFailureEvent {
          * @static
          */
 
-    public static _enum_for_cause = _enum_for_EventCause;
+    public static _enum_for_cause: typeof _enum_for_EventCause = _enum_for_EventCause;
 }
 
 /**

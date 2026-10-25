@@ -1,7 +1,7 @@
 /* eslint-disable */
 import {
-    OPTIONAL,
-    ASN1Element as _Element,
+    type OPTIONAL,
+    type ASN1Element as _Element,
     ASN1TagClass as _TagClass,
     ASN1Construction as _Construction,
     ASN1UniversalType as _UniversalType,
@@ -12,7 +12,7 @@ import {
 } from '@wildboar/asn1';
 import * as $ from '@wildboar/asn1/functional';
 import {
-    ProcessedLevel,
+    type ProcessedLevel,
     _enum_for_ProcessedLevel,
     _decode_ProcessedLevel,
     _encode_ProcessedLevel,
@@ -38,20 +38,26 @@ import {
  *
  */
 export class DataType {
+    /**
+     * @summary `processedLevel`.
+     * @public
+     * @readonly
+     */
+    public readonly processedLevel: ProcessedLevel;
+    /**
+     * @summary `purpose`.
+     * @public
+     * @readonly
+     */
+    public readonly purpose?: OPTIONAL<Purpose>;
+
     constructor(
-        /**
-         * @summary `processedLevel`.
-         * @public
-         * @readonly
-         */
-        readonly processedLevel: ProcessedLevel,
-        /**
-         * @summary `purpose`.
-         * @public
-         * @readonly
-         */
-        readonly purpose?: OPTIONAL<Purpose>
-    ) {}
+        processedLevel: ProcessedLevel,
+        purpose?: OPTIONAL<Purpose>
+    ) {
+        this.processedLevel = processedLevel;
+        this.purpose = purpose;
+    }
 
     /**
      * @summary Restructures an object into a DataType
@@ -77,14 +83,14 @@ export class DataType {
      * @static
      */
 
-    public static _enum_for_processedLevel = _enum_for_ProcessedLevel;
+    public static _enum_for_processedLevel: typeof _enum_for_ProcessedLevel = _enum_for_ProcessedLevel;
     /**
      * @summary The enum used as the type of the component `purpose`
      * @public
      * @static
      */
 
-    public static _enum_for_purpose = _enum_for_Purpose;
+    public static _enum_for_purpose: typeof _enum_for_Purpose = _enum_for_Purpose;
 }
 
 

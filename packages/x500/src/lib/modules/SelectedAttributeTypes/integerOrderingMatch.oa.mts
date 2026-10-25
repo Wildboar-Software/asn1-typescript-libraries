@@ -4,6 +4,7 @@ import * as $ from "@wildboar/asn1/functional";
 import { type MATCHING_RULE } from "../InformationFramework/MATCHING-RULE.oca.mjs";
 import { id_mr_integerOrderingMatch } from "../SelectedAttributeTypes/id-mr-integerOrderingMatch.va.mjs";
 import { integer } from "../SelectedAttributeTypes/integer.oa.mjs";
+
 /**
  * @summary integerOrderingMatch
  * @description

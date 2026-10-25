@@ -1,15 +1,15 @@
 /* eslint-disable */
 import {
-    OPTIONAL,
-    ASN1Element as _Element,
+    type OPTIONAL,
+    type ASN1Element as _Element,
     ASN1TagClass as _TagClass
 } from "@wildboar/asn1";
 import * as $ from "@wildboar/asn1/functional";
-import { PartyNumber, _decode_PartyNumber, _encode_PartyNumber } from "../Addressing-Data-Elements-asn1-97/PartyNumber.ta.mjs";
+import { type PartyNumber, _decode_PartyNumber, _encode_PartyNumber } from "../Addressing-Data-Elements-asn1-97/PartyNumber.ta.mjs";
 // export { PartyNumber, _decode_PartyNumber, _encode_PartyNumber } from "../Addressing-Data-Elements-asn1-97/PartyNumber.ta.mjs";
-import { CalcCtatInfo, _decode_CalcCtatInfo, _encode_CalcCtatInfo } from "../CT-Authentication-Operations/CalcCtatInfo.ta.mjs";
+import { type CalcCtatInfo, _decode_CalcCtatInfo, _encode_CalcCtatInfo } from "../CT-Authentication-Operations/CalcCtatInfo.ta.mjs";
 // export { CalcCtatInfo, _decode_CalcCtatInfo, _encode_CalcCtatInfo } from "../CT-Authentication-Operations/CalcCtatInfo.ta.mjs";
-import { DummyExtension, _decode_DummyExtension, _encode_DummyExtension } from "../CT-Authentication-Operations/DummyExtension.ta.mjs";
+import { type DummyExtension, _decode_DummyExtension, _encode_DummyExtension } from "../CT-Authentication-Operations/DummyExtension.ta.mjs";
 // export { DummyExtension, _decode_DummyExtension, _encode_DummyExtension } from "../CT-Authentication-Operations/DummyExtension.ta.mjs";
 
 
@@ -183,7 +183,7 @@ let _cached_encoder_for_AuthCtmArg: $.ASN1Encoder<AuthCtmArg> | null = null;
  */
 export
 function _encode_AuthCtmArg (value: AuthCtmArg, elGetter: $.ASN1Encoder<any>): _Element {
-    if (!_cached_encoder_for_AuthCtmArg) { _cached_encoder_for_AuthCtmArg = function (value: AuthCtmArg, elGetter: $.ASN1Encoder<AuthCtmArg>): _Element {
+    if (!_cached_encoder_for_AuthCtmArg) { _cached_encoder_for_AuthCtmArg = function (value: AuthCtmArg): _Element {
     const _components: _Element[] = [];
     _components.push(/* REQUIRED   */ _encode_PartyNumber(value.pisnNumber, $.BER));
     if (value.calcCtatInfo !== undefined) {

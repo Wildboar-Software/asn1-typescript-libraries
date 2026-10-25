@@ -1,7 +1,7 @@
 /* eslint-disable */
 import {
     ASN1ConstructionError as _ConstructionError,
-    ASN1Element as _Element,
+    type ASN1Element as _Element,
     ASN1TagClass as _TagClass,
 } from "@wildboar/asn1";
 import * as $ from "@wildboar/asn1/functional";
@@ -11,7 +11,7 @@ import {
     _encode_AlgorithmIdentifier,
 } from "../AuthenticationFramework/AlgorithmIdentifier.ta.mjs";
 import {
-    Integrity,
+    type Integrity,
     _decode_Integrity,
     _encode_Integrity,
 } from "../SpkmGssTokens/Integrity.ta.mjs";
@@ -40,41 +40,49 @@ import {
  *
  */
 export class REQ_TOKEN {
+    /**
+     * @summary `req_contents`.
+     * @description
+     *
+     * The "token" over which `req_integrity` is computed.
+     *
+     * @public
+     * @readonly
+     */
+    public readonly req_contents: Req_contents;
+    /**
+     * @summary `algId`.
+     * @description
+     *
+     * Signature or MAC algorithm. For a MAC, must be one of the
+     * initiator's offered I-ALGs; the key is the corresponding subkey
+     * derived from the context key (RFC 2025 §2.4).
+     *
+     * @public
+     * @readonly
+     */
+    public readonly algId: AlgorithmIdentifier;
+    /**
+     * @summary `req_integrity`.
+     * @description
+     *
+     * Signature: sign(hash(DER(`req-contents`))) per `algId`. MAC:
+     * MAC(DER(`req-contents`)) with the derived I-ALG subkey.
+     *
+     * @public
+     * @readonly
+     */
+    public readonly req_integrity: Integrity;
+
     constructor(
-        /**
-         * @summary `req_contents`.
-         * @description
-         *
-         * The "token" over which `req_integrity` is computed.
-         *
-         * @public
-         * @readonly
-         */
-        readonly req_contents: Req_contents,
-        /**
-         * @summary `algId`.
-         * @description
-         *
-         * Signature or MAC algorithm. For a MAC, must be one of the
-         * initiator's offered I-ALGs; the key is the corresponding subkey
-         * derived from the context key (RFC 2025 §2.4).
-         *
-         * @public
-         * @readonly
-         */
-        readonly algId: AlgorithmIdentifier,
-        /**
-         * @summary `req_integrity`.
-         * @description
-         *
-         * Signature: sign(hash(DER(`req-contents`))) per `algId`. MAC:
-         * MAC(DER(`req-contents`)) with the derived I-ALG subkey.
-         *
-         * @public
-         * @readonly
-         */
-        readonly req_integrity: Integrity
-    ) {}
+        req_contents: Req_contents,
+        algId: AlgorithmIdentifier,
+        req_integrity: Integrity
+    ) {
+        this.req_contents = req_contents;
+        this.algId = algId;
+        this.req_integrity = req_integrity;
+    }
 
     /**
      * @summary Restructures an object into a REQ_TOKEN

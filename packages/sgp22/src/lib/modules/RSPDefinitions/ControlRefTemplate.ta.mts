@@ -1,12 +1,12 @@
 /* eslint-disable */
 import {
     ASN1ConstructionError as _ConstructionError,
-    ASN1Element as _Element,
+    type ASN1Element as _Element,
     ASN1TagClass as _TagClass
 } from "@wildboar/asn1";
 import * as $ from "@wildboar/asn1/functional";
-import { Octet1, _decode_Octet1, _encode_Octet1 } from "../RSPDefinitions/Octet1.ta.mjs";
-import { OctetTo16, _decode_OctetTo16, _encode_OctetTo16 } from "../RSPDefinitions/OctetTo16.ta.mjs";
+import { type Octet1, _decode_Octet1, _encode_Octet1 } from "../RSPDefinitions/Octet1.ta.mjs";
+import { type OctetTo16, _decode_OctetTo16, _encode_OctetTo16 } from "../RSPDefinitions/OctetTo16.ta.mjs";
 
 
 /**
@@ -45,7 +45,7 @@ class ControlRefTemplate {
      * @public
      * @readonly
      */
-    readonly keyType: Octet1;
+    public readonly keyType: Octet1;
     /**
      * @summary `keyLen`.
      * @description
@@ -56,7 +56,7 @@ class ControlRefTemplate {
      * @public
      * @readonly
      */
-    readonly keyLen: Octet1;
+    public readonly keyLen: Octet1;
     /**
      * @summary `hostId`.
      * @description
@@ -67,7 +67,7 @@ class ControlRefTemplate {
      * @public
      * @readonly
      */
-    readonly hostId: OctetTo16;
+    public readonly hostId: OctetTo16;
 
     constructor (
         keyType: Octet1,

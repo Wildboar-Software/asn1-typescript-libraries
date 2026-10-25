@@ -1,41 +1,41 @@
 /* eslint-disable */
 import {
-    OPTIONAL,
-    ASN1Element as _Element,
+    type OPTIONAL,
+    type ASN1Element as _Element,
     ASN1TagClass as _TagClass
 } from "@wildboar/asn1";
 import * as $ from "@wildboar/asn1/functional";
-import { ServiceKey, _decode_ServiceKey, _encode_ServiceKey } from "../IN-SSF-SCF-datatypes/ServiceKey.ta.mjs";
+import { type ServiceKey, _decode_ServiceKey, _encode_ServiceKey } from "../IN-SSF-SCF-datatypes/ServiceKey.ta.mjs";
 // export { ServiceKey, _decode_ServiceKey, _encode_ServiceKey } from "../IN-SSF-SCF-datatypes/ServiceKey.ta.mjs";
-import { CUApplicationInd, _decode_CUApplicationInd, _encode_CUApplicationInd } from "../IN-SCF-CUSF-Datatypes/CUApplicationInd.ta.mjs";
+import { type CUApplicationInd, _decode_CUApplicationInd, _encode_CUApplicationInd } from "../IN-SCF-CUSF-Datatypes/CUApplicationInd.ta.mjs";
 // export { CUApplicationInd, _decode_CUApplicationInd, _encode_CUApplicationInd } from "../IN-SCF-CUSF-Datatypes/CUApplicationInd.ta.mjs";
 import { MiscCallInfo, _decode_MiscCallInfo, _encode_MiscCallInfo } from "../IN-SSF-SCF-datatypes/MiscCallInfo.ta.mjs";
 // export { MiscCallInfo, _decode_MiscCallInfo, _encode_MiscCallInfo } from "../IN-SSF-SCF-datatypes/MiscCallInfo.ta.mjs";
 import { EventTypeBCUSM, _decode_EventTypeBCUSM, _encode_EventTypeBCUSM, _enum_for_EventTypeBCUSM } from "../IN-SCF-CUSF-Datatypes/EventTypeBCUSM.ta.mjs";
 // export { EventTypeBCUSM, _enum_for_EventTypeBCUSM, EventTypeBCUSM_componentReceived /* IMPORTED_LONG_ENUMERATION_ITEM */, componentReceived /* IMPORTED_SHORT_ENUMERATION_ITEM */, EventTypeBCUSM_associationReleaseRequested /* IMPORTED_LONG_ENUMERATION_ITEM */, associationReleaseRequested /* IMPORTED_SHORT_ENUMERATION_ITEM */, EventTypeBCUSM_activationReceivedAndAuthorized /* IMPORTED_LONG_ENUMERATION_ITEM */, activationReceivedAndAuthorized /* IMPORTED_SHORT_ENUMERATION_ITEM */, _decode_EventTypeBCUSM, _encode_EventTypeBCUSM } from "../IN-SCF-CUSF-Datatypes/EventTypeBCUSM.ta.mjs";
-import { CalledPartyNumber, _decode_CalledPartyNumber, _encode_CalledPartyNumber } from "../IN-SSF-SCF-datatypes/CalledPartyNumber.ta.mjs";
+import { type CalledPartyNumber, _decode_CalledPartyNumber, _encode_CalledPartyNumber } from "../IN-SSF-SCF-datatypes/CalledPartyNumber.ta.mjs";
 // export { CalledPartyNumber, _decode_CalledPartyNumber, _encode_CalledPartyNumber } from "../IN-SSF-SCF-datatypes/CalledPartyNumber.ta.mjs";
-import { CallingPartyNumber, _decode_CallingPartyNumber, _encode_CallingPartyNumber } from "../IN-SSF-SCF-datatypes/CallingPartyNumber.ta.mjs";
+import { type CallingPartyNumber, _decode_CallingPartyNumber, _encode_CallingPartyNumber } from "../IN-SSF-SCF-datatypes/CallingPartyNumber.ta.mjs";
 // export { CallingPartyNumber, _decode_CallingPartyNumber, _encode_CallingPartyNumber } from "../IN-SSF-SCF-datatypes/CallingPartyNumber.ta.mjs";
-import { CallingPartySubaddress, _decode_CallingPartySubaddress, _encode_CallingPartySubaddress } from "../IN-SSF-SCF-datatypes/CallingPartySubaddress.ta.mjs";
+import { type CallingPartySubaddress, _decode_CallingPartySubaddress, _encode_CallingPartySubaddress } from "../IN-SSF-SCF-datatypes/CallingPartySubaddress.ta.mjs";
 // export { CallingPartySubaddress, _decode_CallingPartySubaddress, _encode_CallingPartySubaddress } from "../IN-SSF-SCF-datatypes/CallingPartySubaddress.ta.mjs";
-import { HighLayerCompatibility, _decode_HighLayerCompatibility, _encode_HighLayerCompatibility } from "../IN-SSF-SCF-datatypes/HighLayerCompatibility.ta.mjs";
+import { type HighLayerCompatibility, _decode_HighLayerCompatibility, _encode_HighLayerCompatibility } from "../IN-SSF-SCF-datatypes/HighLayerCompatibility.ta.mjs";
 // export { HighLayerCompatibility, _decode_HighLayerCompatibility, _encode_HighLayerCompatibility } from "../IN-SSF-SCF-datatypes/HighLayerCompatibility.ta.mjs";
-import { BearerCapability, _decode_BearerCapability, _encode_BearerCapability } from "../IN-SSF-SCF-datatypes/BearerCapability.ta.mjs";
+import { type BearerCapability, _decode_BearerCapability, _encode_BearerCapability } from "../IN-SSF-SCF-datatypes/BearerCapability.ta.mjs";
 // export { BearerCapability, _decode_BearerCapability, _encode_BearerCapability } from "../IN-SSF-SCF-datatypes/BearerCapability.ta.mjs";
-import { USIServiceIndicator, _decode_USIServiceIndicator, _encode_USIServiceIndicator } from "../IN-SSF-SCF-datatypes/USIServiceIndicator.ta.mjs";
+import { type USIServiceIndicator, _decode_USIServiceIndicator, _encode_USIServiceIndicator } from "../IN-SSF-SCF-datatypes/USIServiceIndicator.ta.mjs";
 // export { USIServiceIndicator, _decode_USIServiceIndicator, _encode_USIServiceIndicator } from "../IN-SSF-SCF-datatypes/USIServiceIndicator.ta.mjs";
-import { USIInformation, _decode_USIInformation, _encode_USIInformation } from "../IN-SSF-SCF-datatypes/USIInformation.ta.mjs";
+import { type USIInformation, _decode_USIInformation, _encode_USIInformation } from "../IN-SSF-SCF-datatypes/USIInformation.ta.mjs";
 // export { USIInformation, _decode_USIInformation, _encode_USIInformation } from "../IN-SSF-SCF-datatypes/USIInformation.ta.mjs";
-import { Extensions, _decode_Extensions, _encode_Extensions } from "../IN-common-datatypes/Extensions.ta.mjs";
+import { type Extensions, _decode_Extensions, _encode_Extensions } from "../IN-common-datatypes/Extensions.ta.mjs";
 // export { Extensions, _decode_Extensions, _encode_Extensions } from "../IN-common-datatypes/Extensions.ta.mjs";
-import { GenericNumbers, _decode_GenericNumbers, _encode_GenericNumbers } from "../IN-SSF-SCF-datatypes/GenericNumbers.ta.mjs";
+import { type GenericNumbers, _decode_GenericNumbers, _encode_GenericNumbers } from "../IN-SSF-SCF-datatypes/GenericNumbers.ta.mjs";
 // export { GenericNumbers, _decode_GenericNumbers, _encode_GenericNumbers } from "../IN-SSF-SCF-datatypes/GenericNumbers.ta.mjs";
 import { ComponentType, _decode_ComponentType, _encode_ComponentType, _enum_for_ComponentType } from "../IN-SSF-SCF-datatypes/ComponentType.ta.mjs";
 // export { ComponentType, _enum_for_ComponentType, ComponentType_any /* IMPORTED_LONG_ENUMERATION_ITEM */, any_ /* IMPORTED_SHORT_ENUMERATION_ITEM */, ComponentType_invoke /* IMPORTED_LONG_ENUMERATION_ITEM */, invoke /* IMPORTED_SHORT_ENUMERATION_ITEM */, ComponentType_rResult /* IMPORTED_LONG_ENUMERATION_ITEM */, rResult /* IMPORTED_SHORT_ENUMERATION_ITEM */, ComponentType_rError /* IMPORTED_LONG_ENUMERATION_ITEM */, rError /* IMPORTED_SHORT_ENUMERATION_ITEM */, ComponentType_rReject /* IMPORTED_LONG_ENUMERATION_ITEM */, rReject /* IMPORTED_SHORT_ENUMERATION_ITEM */, _decode_ComponentType, _encode_ComponentType } from "../IN-SSF-SCF-datatypes/ComponentType.ta.mjs";
-import { ComponentCorrelationID, _decode_ComponentCorrelationID, _encode_ComponentCorrelationID } from "../IN-SSF-SCF-datatypes/ComponentCorrelationID.ta.mjs";
+import { type ComponentCorrelationID, _decode_ComponentCorrelationID, _encode_ComponentCorrelationID } from "../IN-SSF-SCF-datatypes/ComponentCorrelationID.ta.mjs";
 // export { ComponentCorrelationID, _decode_ComponentCorrelationID, _encode_ComponentCorrelationID } from "../IN-SSF-SCF-datatypes/ComponentCorrelationID.ta.mjs";
-import { Component, _decode_Component, _encode_Component } from "../IN-SSF-SCF-datatypes/Component.ta.mjs";
+import { type Component, _decode_Component, _encode_Component } from "../IN-SSF-SCF-datatypes/Component.ta.mjs";
 // export { Component, _decode_Component, _encode_Component } from "../IN-SSF-SCF-datatypes/Component.ta.mjs";
 
 
@@ -234,13 +234,13 @@ class InitialAssociationDPArg {
          * @static
          */
 
-    public static _enum_for_eventTypeBCUSM = _enum_for_EventTypeBCUSM;        /**
+    public static _enum_for_eventTypeBCUSM: typeof _enum_for_EventTypeBCUSM = _enum_for_EventTypeBCUSM;        /**
          * @summary The enum used as the type of the component `componentType`
          * @public
          * @static
          */
 
-    public static _enum_for_componentType = _enum_for_ComponentType;
+    public static _enum_for_componentType: typeof _enum_for_ComponentType = _enum_for_ComponentType;
 }
 
 /**

@@ -1,7 +1,7 @@
 /* eslint-disable */
 import {
-    ENUMERATED,
-    ASN1Element as _Element,
+    type ENUMERATED,
+    type ASN1Element as _Element,
     ASN1TagClass as _TagClass,
     ASN1Construction as _Construction,
     ASN1UniversalType as _UniversalType,
@@ -43,7 +43,7 @@ export type TerminateLoopbackError =
  * @constant
  * @type {number}
  */
-export const TerminateLoopbackError_loopbackNotSet: TerminateLoopbackError = 0; /* LONG_NAMED_ENUMERATED_VALUE */
+export const TerminateLoopbackError_loopbackNotSet: _enum_for_TerminateLoopbackError.loopbackNotSet = _enum_for_TerminateLoopbackError.loopbackNotSet; /* LONG_NAMED_ENUMERATED_VALUE */
 
 
 /**
@@ -51,7 +51,7 @@ export const TerminateLoopbackError_loopbackNotSet: TerminateLoopbackError = 0; 
  * @constant
  * @type {number}
  */
-export const loopbackNotSet: TerminateLoopbackError = TerminateLoopbackError_loopbackNotSet; /* SHORT_NAMED_ENUMERATED_VALUE */
+export const loopbackNotSet: _enum_for_TerminateLoopbackError.loopbackNotSet = TerminateLoopbackError_loopbackNotSet; /* SHORT_NAMED_ENUMERATED_VALUE */
 
 
 /**
@@ -59,7 +59,7 @@ export const loopbackNotSet: TerminateLoopbackError = TerminateLoopbackError_loo
  * @constant
  * @type {number}
  */
-export const TerminateLoopbackError_loopbackNotSupported: TerminateLoopbackError = 1; /* LONG_NAMED_ENUMERATED_VALUE */
+export const TerminateLoopbackError_loopbackNotSupported: _enum_for_TerminateLoopbackError.loopbackNotSupported = _enum_for_TerminateLoopbackError.loopbackNotSupported; /* LONG_NAMED_ENUMERATED_VALUE */
 
 
 /**
@@ -67,17 +67,17 @@ export const TerminateLoopbackError_loopbackNotSupported: TerminateLoopbackError
  * @constant
  * @type {number}
  */
-export const loopbackNotSupported: TerminateLoopbackError = TerminateLoopbackError_loopbackNotSupported; /* SHORT_NAMED_ENUMERATED_VALUE */
+export const loopbackNotSupported: _enum_for_TerminateLoopbackError.loopbackNotSupported = TerminateLoopbackError_loopbackNotSupported; /* SHORT_NAMED_ENUMERATED_VALUE */
 
 
 
 
-export const _decode_TerminateLoopbackError = $._decodeEnumerated;
+export const _decode_TerminateLoopbackError: $.ASN1Decoder<number> = $._decodeEnumerated;
 
 
 
 
-export const _encode_TerminateLoopbackError = $._encodeEnumerated;
+export const _encode_TerminateLoopbackError: $.ASN1Encoder<number> = $._encodeEnumerated;
 
 
 /* eslint-enable */

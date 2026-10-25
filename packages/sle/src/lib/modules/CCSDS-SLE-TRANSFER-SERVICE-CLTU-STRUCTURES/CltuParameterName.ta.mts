@@ -1,10 +1,10 @@
 /* eslint-disable */
 import {
-    ASN1Element as _Element,
+    type ASN1Element as _Element,
     ASN1Error
 } from "@wildboar/asn1";
 import * as $ from "@wildboar/asn1/functional";
-import { _decode_ParameterName, _encode_ParameterName, ParameterName,
+import { _decode_ParameterName, _encode_ParameterName, type ParameterName,
     ParameterName_acquisitionSequenceLength,
     ParameterName_bitLockRequired,
     ParameterName_clcwGlobalVcId,
@@ -110,8 +110,6 @@ function _decode_CltuParameterName (el: _Element): CltuParameterName {
     return _decoded;
 }
 
-let _cached_encoder_for_CltuParameterName: $.ASN1Encoder<CltuParameterName> | null = null;
-
 /**
  * @summary Encodes a(n) CltuParameterName into an ASN.1 Element.
  * @function
@@ -119,11 +117,7 @@ let _cached_encoder_for_CltuParameterName: $.ASN1Encoder<CltuParameterName> | nu
  * @param elGetter A function that can be used to get new ASN.1 elements.
  * @returns {_Element} The CltuParameterName, encoded as an ASN.1 Element.
  */
-export
-function _encode_CltuParameterName (value: CltuParameterName, elGetter: $.ASN1Encoder<any>): _Element {
-    if (!_cached_encoder_for_CltuParameterName) { _cached_encoder_for_CltuParameterName = _encode_ParameterName; }
-    return _cached_encoder_for_CltuParameterName(value, elGetter);
-}
+export const _encode_CltuParameterName: $.ASN1Encoder<CltuParameterName> = _encode_ParameterName;
 
 
 /* eslint-enable */

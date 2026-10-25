@@ -1,7 +1,7 @@
 /* eslint-disable */
 import {
-    OPTIONAL,
-    ASN1Element as _Element,
+    type OPTIONAL,
+    type ASN1Element as _Element,
     ASN1TagClass as _TagClass,
     ASN1Construction as _Construction,
     ASN1UniversalType as _UniversalType,
@@ -12,7 +12,7 @@ import {
 } from '@wildboar/asn1';
 import * as $ from '@wildboar/asn1/functional';
 import {
-    Access_Request,
+    type Access_Request,
     _decode_Access_Request,
     _encode_Access_Request,
 } from '../IPMSFileTransferBodyPartType/Access-Request.ta.mjs';
@@ -22,7 +22,7 @@ import {
     _encode_Concurrency_Access,
 } from '@wildboar/ftam';
 import {
-    User_Identity,
+    type User_Identity,
     _decode_User_Identity,
     _encode_User_Identity,
 } from '../IPMSFileTransferBodyPartType/User-Identity.ta.mjs';
@@ -56,38 +56,50 @@ import {
  *
  */
 export class Access_Control_Element {
+    /**
+     * @summary `action_list`.
+     * @public
+     * @readonly
+     */
+    public readonly action_list: Access_Request;
+    /**
+     * @summary `concurrency_access`.
+     * @public
+     * @readonly
+     */
+    public readonly concurrency_access?: OPTIONAL<Concurrency_Access>;
+    /**
+     * @summary `identity`.
+     * @public
+     * @readonly
+     */
+    public readonly identity?: OPTIONAL<User_Identity>;
+    /**
+     * @summary `passwords`.
+     * @public
+     * @readonly
+     */
+    public readonly passwords?: OPTIONAL<Access_Passwords>;
+    /**
+     * @summary `location`.
+     * @public
+     * @readonly
+     */
+    public readonly location?: OPTIONAL<Application_Entity_Title>;
+
     constructor(
-        /**
-         * @summary `action_list`.
-         * @public
-         * @readonly
-         */
-        readonly action_list: Access_Request,
-        /**
-         * @summary `concurrency_access`.
-         * @public
-         * @readonly
-         */
-        readonly concurrency_access?: OPTIONAL<Concurrency_Access>,
-        /**
-         * @summary `identity`.
-         * @public
-         * @readonly
-         */
-        readonly identity?: OPTIONAL<User_Identity>,
-        /**
-         * @summary `passwords`.
-         * @public
-         * @readonly
-         */
-        readonly passwords?: OPTIONAL<Access_Passwords>,
-        /**
-         * @summary `location`.
-         * @public
-         * @readonly
-         */
-        readonly location?: OPTIONAL<Application_Entity_Title>
-    ) {}
+        action_list: Access_Request,
+        concurrency_access?: OPTIONAL<Concurrency_Access>,
+        identity?: OPTIONAL<User_Identity>,
+        passwords?: OPTIONAL<Access_Passwords>,
+        location?: OPTIONAL<Application_Entity_Title>
+    ) {
+        this.action_list = action_list;
+        this.concurrency_access = concurrency_access;
+        this.identity = identity;
+        this.passwords = passwords;
+        this.location = location;
+    }
 
     /**
      * @summary Restructures an object into a Access_Control_Element

@@ -1,6 +1,6 @@
 /* eslint-disable */
 import {
-    ASN1Element as _Element,
+    type ASN1Element as _Element,
     ASN1TagClass as _TagClass,
     ASN1Construction as _Construction,
     ASN1UniversalType as _UniversalType,
@@ -57,7 +57,7 @@ export type Directionality = _enum_for_Directionality;
  *
  * @enum {number}
  */
-export const Directionality = _enum_for_Directionality;
+export const Directionality: typeof _enum_for_Directionality = _enum_for_Directionality;
 
 
 /**
@@ -65,7 +65,7 @@ export const Directionality = _enum_for_Directionality;
  * @constant
  * @type {number}
  */
-export const Directionality_unidirectional: Directionality =
+export const Directionality_unidirectional: _enum_for_Directionality.unidirectional =
     Directionality.unidirectional; /* LONG_NAMED_ENUMERATED_VALUE */
 
 
@@ -74,7 +74,7 @@ export const Directionality_unidirectional: Directionality =
  * @constant
  * @type {number}
  */
-export const unidirectional: Directionality =
+export const unidirectional: _enum_for_Directionality.unidirectional =
     Directionality.unidirectional; /* SHORT_NAMED_ENUMERATED_VALUE */
 
 
@@ -83,7 +83,7 @@ export const unidirectional: Directionality =
  * @constant
  * @type {number}
  */
-export const Directionality_bidirectional: Directionality =
+export const Directionality_bidirectional: _enum_for_Directionality.bidirectional =
     Directionality.bidirectional; /* LONG_NAMED_ENUMERATED_VALUE */
 
 
@@ -92,18 +92,29 @@ export const Directionality_bidirectional: Directionality =
  * @constant
  * @type {number}
  */
-export const bidirectional: Directionality =
+export const bidirectional: _enum_for_Directionality.bidirectional =
     Directionality.bidirectional; /* SHORT_NAMED_ENUMERATED_VALUE */
 
 
 
 
-export const _decode_Directionality = $._decodeEnumerated;
+export function _decode_Directionality(el: _Element): Directionality {
+    const enumerated = $._decodeEnumerated(el);
+    switch (enumerated) {
+        case Directionality.unidirectional: return Directionality.unidirectional;
+        case Directionality.bidirectional: return Directionality.bidirectional;
+        default:
+            throw new _ConstructionError(
+                'Invalid ENUMERATED value ' + enumerated + ' for Directionality.',
+                el,
+            );
+    }
+}
 
 
 
 
-export const _encode_Directionality = $._encodeEnumerated;
+export const _encode_Directionality: $.ASN1Encoder<Directionality> = $._encodeEnumerated as $.ASN1Encoder<Directionality>;
 
 
 /* eslint-enable */

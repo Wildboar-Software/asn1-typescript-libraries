@@ -2,12 +2,12 @@
 
 import * as $ from "@wildboar/asn1/functional";
 import {
-    OPTIONAL,
-    INTEGER,
-    SEQUENCE,
-    SET,
-    IA5String,
-    ASN1Element as _Element,
+    type OPTIONAL,
+    type INTEGER,
+    type SEQUENCE,
+    type SET,
+    type IA5String,
+    type ASN1Element as _Element,
     ASN1TagClass as _TagClass
 } from "@wildboar/asn1";
 
@@ -27,7 +27,7 @@ import {
  * ```asn1
  * MessageInfo ::= SEQUENCE
  * {     contents            IA5String,
- *     contentTypeAndSubtype        IA5String    OPTIONAL,
+ *     contentTypeAndSubtype        IA5String    type OPTIONAL,
  *     contentsLength            INTEGER        OPTIONAL }
  * ```
  * 
@@ -35,32 +35,40 @@ import {
  */
 export
 class MessageInfo {
+    /**
+     * @summary `contents`.
+     * @description
+     * Contents of this part. Empty (but present) in an event means contents
+     * exist but are not included; Snapshot Call can obtain them.
+     * @public
+     * @readonly
+     */
+    public readonly contents: IA5String;
+    /**
+     * @summary `contentTypeAndSubtype`.
+     * @description
+     * IANA media type and subtype. Default if omitted: `text/plain`.
+     * @public
+     * @readonly
+     */
+    public readonly contentTypeAndSubtype?: OPTIONAL<IA5String>;
+    /**
+     * @summary `contentsLength`.
+     * @description Length of the contents in bytes.
+     * @public
+     * @readonly
+     */
+    public readonly contentsLength?: OPTIONAL<INTEGER>;
+
     constructor (
-        /**
-         * @summary `contents`.
-         * @description
-         * Contents of this part. Empty (but present) in an event means contents
-         * exist but are not included; Snapshot Call can obtain them.
-         * @public
-         * @readonly
-         */
-        readonly contents: IA5String,
-        /**
-         * @summary `contentTypeAndSubtype`.
-         * @description
-         * IANA media type and subtype. Default if omitted: `text/plain`.
-         * @public
-         * @readonly
-         */
-        readonly contentTypeAndSubtype?: OPTIONAL<IA5String>,
-        /**
-         * @summary `contentsLength`.
-         * @description Length of the contents in bytes.
-         * @public
-         * @readonly
-         */
-        readonly contentsLength?: OPTIONAL<INTEGER>
-    ) {}
+        contents: IA5String,
+        contentTypeAndSubtype?: OPTIONAL<IA5String>,
+        contentsLength?: OPTIONAL<INTEGER>
+    ) {
+        this.contents = contents;
+        this.contentTypeAndSubtype = contentTypeAndSubtype;
+        this.contentsLength = contentsLength;
+    }
 
     /**
      * @summary Restructures an object into a MessageInfo

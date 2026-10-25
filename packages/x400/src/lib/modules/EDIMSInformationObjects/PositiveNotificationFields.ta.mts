@@ -1,7 +1,7 @@
 /* eslint-disable */
 import {
-    OPTIONAL,
-    ASN1Element as _Element,
+    type OPTIONAL,
+    type ASN1Element as _Element,
     ASN1TagClass as _TagClass,
     ASN1Construction as _Construction,
     ASN1UniversalType as _UniversalType,
@@ -17,12 +17,12 @@ import {
     _encode_CommonFields,
 } from '../EDIMSInformationObjects/CommonFields.ta.mjs';
 import {
-    EDISupplementaryInformation,
+    type EDISupplementaryInformation,
     _decode_EDISupplementaryInformation,
     _encode_EDISupplementaryInformation,
 } from '../EDIMSInformationObjects/EDISupplementaryInformation.ta.mjs';
 import {
-    PNExtensionsField,
+    type PNExtensionsField,
     _decode_PNExtensionsField,
     _encode_PNExtensionsField,
 } from '../EDIMSInformationObjects/PNExtensionsField.ta.mjs';
@@ -46,26 +46,34 @@ import {
  *
  */
 export class PositiveNotificationFields {
+    /**
+     * @summary `pn_common_fields`.
+     * @public
+     * @readonly
+     */
+    public readonly pn_common_fields: CommonFields;
+    /**
+     * @summary `pn_supplementary_information`.
+     * @public
+     * @readonly
+     */
+    public readonly pn_supplementary_information?: OPTIONAL<EDISupplementaryInformation>;
+    /**
+     * @summary `pn_extensions`.
+     * @public
+     * @readonly
+     */
+    public readonly pn_extensions?: OPTIONAL<PNExtensionsField>;
+
     constructor(
-        /**
-         * @summary `pn_common_fields`.
-         * @public
-         * @readonly
-         */
-        readonly pn_common_fields: CommonFields,
-        /**
-         * @summary `pn_supplementary_information`.
-         * @public
-         * @readonly
-         */
-        readonly pn_supplementary_information?: OPTIONAL<EDISupplementaryInformation>,
-        /**
-         * @summary `pn_extensions`.
-         * @public
-         * @readonly
-         */
-        readonly pn_extensions?: OPTIONAL<PNExtensionsField>
-    ) {}
+        pn_common_fields: CommonFields,
+        pn_supplementary_information?: OPTIONAL<EDISupplementaryInformation>,
+        pn_extensions?: OPTIONAL<PNExtensionsField>
+    ) {
+        this.pn_common_fields = pn_common_fields;
+        this.pn_supplementary_information = pn_supplementary_information;
+        this.pn_extensions = pn_extensions;
+    }
 
     /**
      * @summary Restructures an object into a PositiveNotificationFields

@@ -1,6 +1,6 @@
 /* eslint-disable */
 import {
-    ASN1Element as _Element,
+    type ASN1Element as _Element,
     ASN1TagClass as _TagClass,
     ASN1Construction as _Construction,
     ASN1UniversalType as _UniversalType,
@@ -9,7 +9,7 @@ import {
     EmbeddedPDV as _PDV,
     ASN1ConstructionError as _ConstructionError,
 } from "@wildboar/asn1";
-import { IV, _decode_IV, _encode_IV } from "../X9-84-CMS/IV.ta.mjs";
+import { type IV, _decode_IV, _encode_IV } from "../X9-84-CMS/IV.ta.mjs";
 
 import { type ALGORITHM } from "../X9-84-CMS/ALGORITHM.oca.mjs";
 import { des_ede3_cbc } from "../X9-84-CMS/X9-84-Identifiers.va.mjs";

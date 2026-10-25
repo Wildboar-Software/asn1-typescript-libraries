@@ -1,7 +1,7 @@
 /* eslint-disable */
 import {
-  OPTIONAL,
-  OBJECT_IDENTIFIER,
+  type OPTIONAL,
+  type OBJECT_IDENTIFIER,
   ASN1Element as _Element,
   ASN1TagClass as _TagClass,
   ASN1Construction as _Construction,
@@ -30,20 +30,26 @@ import * as $ from '@wildboar/asn1/functional';
  *
  */
 export class ValidationAlg {
+  /**
+   * @summary `valAlgId`.
+   * @public
+   * @readonly
+   */
+  public readonly valAlgId: OBJECT_IDENTIFIER;
+  /**
+   * @summary `parameters`.
+   * @public
+   * @readonly
+   */
+  public readonly parameters?: OPTIONAL<_Element>;
+
   constructor(
-    /**
-     * @summary `valAlgId`.
-     * @public
-     * @readonly
-     */
-    readonly valAlgId: OBJECT_IDENTIFIER,
-    /**
-     * @summary `parameters`.
-     * @public
-     * @readonly
-     */
-    readonly parameters?: OPTIONAL<_Element>
-  ) {}
+    valAlgId: OBJECT_IDENTIFIER,
+    parameters?: OPTIONAL<_Element>
+  ) {
+    this.valAlgId = valAlgId;
+    this.parameters = parameters;
+  }
 
   /**
    * @summary Restructures an object into a ValidationAlg

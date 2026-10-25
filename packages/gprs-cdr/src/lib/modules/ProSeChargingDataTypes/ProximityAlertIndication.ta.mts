@@ -79,7 +79,7 @@ type ProximityAlertIndication = _enum_for_ProximityAlertIndication;
  * @enum {number}
  */
 export
-const ProximityAlertIndication = _enum_for_ProximityAlertIndication;
+const ProximityAlertIndication: typeof _enum_for_ProximityAlertIndication = _enum_for_ProximityAlertIndication;
 
 /**
  * @summary ProximityAlertIndication_alerted
@@ -94,7 +94,7 @@ const ProximityAlertIndication = _enum_for_ProximityAlertIndication;
  * @type {number}
  */
 export
-const ProximityAlertIndication_alerted: ProximityAlertIndication = ProximityAlertIndication.alerted; /* LONG_NAMED_ENUMERATED_VALUE */
+const ProximityAlertIndication_alerted: _enum_for_ProximityAlertIndication.alerted = ProximityAlertIndication.alerted; /* LONG_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary alerted
@@ -106,7 +106,7 @@ const ProximityAlertIndication_alerted: ProximityAlertIndication = ProximityAler
  * @type {number}
  */
 export
-const alerted: ProximityAlertIndication = ProximityAlertIndication.alerted; /* SHORT_NAMED_ENUMERATED_VALUE */
+const alerted: _enum_for_ProximityAlertIndication.alerted = ProximityAlertIndication.alerted; /* SHORT_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary ProximityAlertIndication_noAlert
@@ -120,7 +120,7 @@ const alerted: ProximityAlertIndication = ProximityAlertIndication.alerted; /* S
  * @type {number}
  */
 export
-const ProximityAlertIndication_noAlert: ProximityAlertIndication = ProximityAlertIndication.noAlert; /* LONG_NAMED_ENUMERATED_VALUE */
+const ProximityAlertIndication_noAlert: _enum_for_ProximityAlertIndication.noAlert = ProximityAlertIndication.noAlert; /* LONG_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary noAlert
@@ -132,7 +132,7 @@ const ProximityAlertIndication_noAlert: ProximityAlertIndication = ProximityAler
  * @type {number}
  */
 export
-const noAlert: ProximityAlertIndication = ProximityAlertIndication.noAlert; /* SHORT_NAMED_ENUMERATED_VALUE */
+const noAlert: _enum_for_ProximityAlertIndication.noAlert = ProximityAlertIndication.noAlert; /* SHORT_NAMED_ENUMERATED_VALUE */
 
 export
 const _decode_ProximityAlertIndication: $.ASN1Decoder<ProximityAlertIndication> = $._decodeEnumerated;

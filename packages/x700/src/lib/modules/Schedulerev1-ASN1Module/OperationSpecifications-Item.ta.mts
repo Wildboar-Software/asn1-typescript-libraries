@@ -1,6 +1,6 @@
 /* eslint-disable */
 import {
-    ASN1Element as _Element,
+    type ASN1Element as _Element,
     ASN1TagClass as _TagClass,
     ASN1Construction as _Construction,
     ASN1UniversalType as _UniversalType,
@@ -11,12 +11,12 @@ import {
 } from '@wildboar/asn1';
 import * as $ from '@wildboar/asn1/functional';
 import {
-    ObjectInstance,
+    type ObjectInstance,
     _decode_ObjectInstance,
     _encode_ObjectInstance,
 } from '@wildboar/cmip';
 import {
-    OperationSpecifications_Item_scheduledOperations,
+    type OperationSpecifications_Item_scheduledOperations,
     _decode_OperationSpecifications_Item_scheduledOperations,
     _encode_OperationSpecifications_Item_scheduledOperations,
 } from '../Schedulerev1-ASN1Module/OperationSpecifications-Item-scheduledOperations.ta.mjs';
@@ -38,31 +38,37 @@ import {
  *
  */
 export class OperationSpecifications_Item {
+    /**
+     * @summary `scheduledObjects`.
+     * @description
+     *
+     * SMO instances on which the scheduled operation is
+     * performed. ITU-T Rec. X.746 (02/00)
+     * [§8.3.10.2](https://www.itu.int/rec/T-REC-X.746-200002-I).
+     * @public
+     * @readonly
+     */
+    public readonly scheduledObjects: ObjectInstance[];
+    /**
+     * @summary `scheduledOperations`.
+     * @description
+     *
+     * The CMIS SET, ACTION, or GET to request at each trigger.
+     * ITU-T Rec. X.746 (02/00)
+     * [§7.3.3](https://www.itu.int/rec/T-REC-X.746-200002-I),
+     * 8.2.6, A.6.
+     * @public
+     * @readonly
+     */
+    public readonly scheduledOperations: OperationSpecifications_Item_scheduledOperations;
+
     constructor(
-        /**
-         * @summary `scheduledObjects`.
-         * @description
-         *
-         * SMO instances on which the scheduled operation is
-         * performed. ITU-T Rec. X.746 (02/00)
-         * [§8.3.10.2](https://www.itu.int/rec/T-REC-X.746-200002-I).
-         * @public
-         * @readonly
-         */
-        readonly scheduledObjects: ObjectInstance[],
-        /**
-         * @summary `scheduledOperations`.
-         * @description
-         *
-         * The CMIS SET, ACTION, or GET to request at each trigger.
-         * ITU-T Rec. X.746 (02/00)
-         * [§7.3.3](https://www.itu.int/rec/T-REC-X.746-200002-I),
-         * 8.2.6, A.6.
-         * @public
-         * @readonly
-         */
-        readonly scheduledOperations: OperationSpecifications_Item_scheduledOperations
-    ) {}
+        scheduledObjects: ObjectInstance[],
+        scheduledOperations: OperationSpecifications_Item_scheduledOperations
+    ) {
+        this.scheduledObjects = scheduledObjects;
+        this.scheduledOperations = scheduledOperations;
+    }
 
     /**
      * @summary Restructures an object into a OperationSpecifications_Item

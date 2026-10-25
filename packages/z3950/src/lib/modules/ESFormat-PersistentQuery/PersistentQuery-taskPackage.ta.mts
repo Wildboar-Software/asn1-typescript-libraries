@@ -1,12 +1,12 @@
 /* eslint-disable */
 import {
-    OPTIONAL,
-    ASN1Element as _Element,
+    type OPTIONAL,
+    type ASN1Element as _Element,
     ASN1TagClass as _TagClass
 } from "@wildboar/asn1";
 import * as $ from "@wildboar/asn1/functional";
 import { ClientPartToKeep, _decode_ClientPartToKeep, _encode_ClientPartToKeep } from "../ESFormat-PersistentQuery/ClientPartToKeep.ta.mjs";
-import { ServerPart, _decode_ServerPart, _encode_ServerPart } from "../ESFormat-PersistentQuery/ServerPart.ta.mjs";
+import { type ServerPart, _decode_ServerPart, _encode_ServerPart } from "../ESFormat-PersistentQuery/ServerPart.ta.mjs";
 
 
 /**

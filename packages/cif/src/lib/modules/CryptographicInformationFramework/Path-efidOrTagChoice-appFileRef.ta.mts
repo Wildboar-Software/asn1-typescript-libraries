@@ -1,7 +1,7 @@
 /* eslint-disable */
 import {
-    OCTET_STRING,
-    ASN1Element as _Element,
+    type OCTET_STRING,
+    type ASN1Element as _Element,
     ASN1TagClass as _TagClass,
     ASN1Construction as _Construction,
     ASN1UniversalType as _UniversalType,
@@ -33,25 +33,31 @@ import * as $ from "@wildboar/asn1/functional";
  */
 export
 class Path_efidOrTagChoice_appFileRef {
+    /**
+     * @summary `aid`.
+     * @description
+     * ISO/IEC 7816-4 AID (`[APPLICATION 15]`). ISO/IEC 7816-15:2016 §8.2.5.
+     * @public
+     * @readonly
+     */
+    public readonly aid: OCTET_STRING;
+    /**
+     * @summary `efidOrpath`.
+     * @description
+     * EF identifier or path within that application. ISO/IEC 7816-15:2016
+     * §8.2.5.
+     * @public
+     * @readonly
+     */
+    public readonly efidOrpath: OCTET_STRING;
+
     constructor (
-        /**
-         * @summary `aid`.
-         * @description
-         * ISO/IEC 7816-4 AID (`[APPLICATION 15]`). ISO/IEC 7816-15:2016 §8.2.5.
-         * @public
-         * @readonly
-         */
-        readonly aid: OCTET_STRING,
-        /**
-         * @summary `efidOrpath`.
-         * @description
-         * EF identifier or path within that application. ISO/IEC 7816-15:2016
-         * §8.2.5.
-         * @public
-         * @readonly
-         */
-        readonly efidOrpath: OCTET_STRING
-    ) {}
+        aid: OCTET_STRING,
+        efidOrpath: OCTET_STRING
+    ) {
+        this.aid = aid;
+        this.efidOrpath = efidOrpath;
+    }
 
     /**
      * @summary Restructures an object into a Path_efidOrTagChoice_appFileRef

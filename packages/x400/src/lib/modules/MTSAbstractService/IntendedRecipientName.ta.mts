@@ -1,6 +1,6 @@
 /* eslint-disable */
 import {
-    ASN1Element as _Element,
+    type ASN1Element as _Element,
     ASN1TagClass as _TagClass,
     ASN1Construction as _Construction,
     ASN1UniversalType as _UniversalType,
@@ -11,12 +11,12 @@ import {
 } from '@wildboar/asn1';
 import * as $ from '@wildboar/asn1/functional';
 import {
-    ORAddressAndOptionalDirectoryName,
+    type ORAddressAndOptionalDirectoryName,
     _decode_ORAddressAndOptionalDirectoryName,
     _encode_ORAddressAndOptionalDirectoryName,
 } from '../MTSAbstractService/ORAddressAndOptionalDirectoryName.ta.mjs';
 import {
-    Time,
+    type Time,
     _decode_Time,
     _encode_Time,
 } from '../MTSAbstractService/Time.ta.mjs';
@@ -38,20 +38,26 @@ import {
  *
  */
 export class IntendedRecipientName {
+    /**
+     * @summary `intended_recipient`.
+     * @public
+     * @readonly
+     */
+    public readonly intended_recipient: ORAddressAndOptionalDirectoryName;
+    /**
+     * @summary `redirection_time`.
+     * @public
+     * @readonly
+     */
+    public readonly redirection_time: Time;
+
     constructor(
-        /**
-         * @summary `intended_recipient`.
-         * @public
-         * @readonly
-         */
-        readonly intended_recipient: ORAddressAndOptionalDirectoryName,
-        /**
-         * @summary `redirection_time`.
-         * @public
-         * @readonly
-         */
-        readonly redirection_time: Time
-    ) {}
+        intended_recipient: ORAddressAndOptionalDirectoryName,
+        redirection_time: Time
+    ) {
+        this.intended_recipient = intended_recipient;
+        this.redirection_time = redirection_time;
+    }
 
     /**
      * @summary Restructures an object into a IntendedRecipientName

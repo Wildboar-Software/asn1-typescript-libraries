@@ -10,7 +10,7 @@ import {
   ASN1ConstructionError as _ConstructionError,
 } from '@wildboar/asn1';
 import * as $ from '@wildboar/asn1/functional';
-import { String, _decode_String, _encode_String } from '../XSD/String.ta.mjs';
+import { type String, _decode_String, _encode_String } from '../XSD/String.ta.mjs';
 
 /**
  * @summary AnyType
@@ -48,7 +48,7 @@ export class AnyType {
    * @public
    * @readonly
    */
-  readonly embed_values: String[];
+  public readonly embed_values: String[];
   /**
    * @summary `attr`.
    * @description Wildcard attributes; each item is
@@ -56,7 +56,7 @@ export class AnyType {
    * @public
    * @readonly
    */
-  readonly attr: String[];
+  public readonly attr: String[];
   /**
    * @summary `elem_list`.
    * @description Wildcard child elements; each item is
@@ -64,7 +64,7 @@ export class AnyType {
    * @public
    * @readonly
    */
-  readonly elem_list: String[];
+  public readonly elem_list: String[];
 
   constructor(
     embed_values: String[],

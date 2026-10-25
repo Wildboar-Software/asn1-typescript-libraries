@@ -1,7 +1,7 @@
 /* eslint-disable */
 import {
-    OPTIONAL,
-    ASN1Element as _Element,
+    type OPTIONAL,
+    type ASN1Element as _Element,
     ASN1TagClass as _TagClass,
     ASN1Construction as _Construction,
     ASN1UniversalType as _UniversalType,
@@ -12,18 +12,18 @@ import {
 } from '@wildboar/asn1';
 import * as $ from '@wildboar/asn1/functional';
 import {
-    RequestState,
+    type RequestState,
     _enum_for_RequestState,
     _decode_RequestState,
     _encode_RequestState,
 } from '../X790ASN1Module/RequestState.ta.mjs';
 import {
-    ActivityType,
+    type ActivityType,
     _decode_ActivityType,
     _encode_ActivityType,
 } from '../X790ASN1Module/ActivityType.ta.mjs';
 import {
-    AuthorizationTime,
+    type AuthorizationTime,
     _decode_AuthorizationTime,
     _encode_AuthorizationTime,
 } from '../X790ASN1Module/AuthorizationTime.ta.mjs';
@@ -45,38 +45,50 @@ import {
  *
  */
 export class AuthorizationList_Item {
+    /**
+     * @summary `state`.
+     * @public
+     * @readonly
+     */
+    public readonly state: RequestState;
+    /**
+     * @summary `type_`.
+     * @public
+     * @readonly
+     */
+    public readonly type_: ActivityType;
+    /**
+     * @summary `authTime`.
+     * @public
+     * @readonly
+     */
+    public readonly authTime?: OPTIONAL<AuthorizationTime>;
+    /**
+     * @summary `authPerson`.
+     * @public
+     * @readonly
+     */
+    public readonly authPerson?: OPTIONAL<PersonReach>;
+    /**
+     * @summary Extensions that are not recognized.
+     * @public
+     * @readonly
+     */
+    public readonly _unrecognizedExtensionsList: _Element[];
+
     constructor(
-        /**
-         * @summary `state`.
-         * @public
-         * @readonly
-         */
-        readonly state: RequestState,
-        /**
-         * @summary `type_`.
-         * @public
-         * @readonly
-         */
-        readonly type_: ActivityType,
-        /**
-         * @summary `authTime`.
-         * @public
-         * @readonly
-         */
-        readonly authTime?: OPTIONAL<AuthorizationTime>,
-        /**
-         * @summary `authPerson`.
-         * @public
-         * @readonly
-         */
-        readonly authPerson?: OPTIONAL<PersonReach>,
-        /**
-         * @summary Extensions that are not recognized.
-         * @public
-         * @readonly
-         */
-        readonly _unrecognizedExtensionsList: _Element[] = []
-    ) {}
+        state: RequestState,
+        type_: ActivityType,
+        authTime?: OPTIONAL<AuthorizationTime>,
+        authPerson?: OPTIONAL<PersonReach>,
+        _unrecognizedExtensionsList: _Element[] = []
+    ) {
+        this.state = state;
+        this.type_ = type_;
+        this.authTime = authTime;
+        this.authPerson = authPerson;
+        this._unrecognizedExtensionsList = _unrecognizedExtensionsList;
+    }
 
     /**
      * @summary Restructures an object into a AuthorizationList_Item
@@ -108,7 +120,7 @@ export class AuthorizationList_Item {
      * @static
      */
 
-    public static _enum_for_state = _enum_for_RequestState;
+    public static _enum_for_state: typeof _enum_for_RequestState = _enum_for_RequestState;
 }
 
 

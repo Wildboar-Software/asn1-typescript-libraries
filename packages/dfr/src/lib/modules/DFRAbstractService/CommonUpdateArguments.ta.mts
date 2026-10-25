@@ -1,7 +1,7 @@
 /* eslint-disable */
 import {
-    OPTIONAL,
-    ASN1Element as _Element,
+    type OPTIONAL,
+    type ASN1Element as _Element,
     ASN1TagClass as _TagClass,
     ASN1Construction as _Construction,
     ASN1UniversalType as _UniversalType,
@@ -12,12 +12,12 @@ import {
 } from "@wildboar/asn1";
 import * as $ from "@wildboar/asn1/functional";
 import { DfrObjectClass, _enum_for_DfrObjectClass, _decode_DfrObjectClass, _encode_DfrObjectClass } from "../DFRAbstractService/DfrObjectClass.ta.mjs";
-import { CommonUpdateArguments_entry, _decode_CommonUpdateArguments_entry, _encode_CommonUpdateArguments_entry } from "../DFRAbstractService/CommonUpdateArguments-entry.ta.mjs";
-import { DfrEntryName, _decode_DfrEntryName, _encode_DfrEntryName } from "../DFRAbstractService/DfrEntryName.ta.mjs";
-import { GroupMemberPosition, _decode_GroupMemberPosition, _encode_GroupMemberPosition } from "../DFRAbstractService/GroupMemberPosition.ta.mjs";
-import { EntryModification, _decode_EntryModification, _encode_EntryModification } from "../DFRAbstractService/EntryModification.ta.mjs";
+import { type CommonUpdateArguments_entry, _decode_CommonUpdateArguments_entry, _encode_CommonUpdateArguments_entry } from "../DFRAbstractService/CommonUpdateArguments-entry.ta.mjs";
+import { type DfrEntryName, _decode_DfrEntryName, _encode_DfrEntryName } from "../DFRAbstractService/DfrEntryName.ta.mjs";
+import { type GroupMemberPosition, _decode_GroupMemberPosition, _encode_GroupMemberPosition } from "../DFRAbstractService/GroupMemberPosition.ta.mjs";
+import { type EntryModification, _decode_EntryModification, _encode_EntryModification } from "../DFRAbstractService/EntryModification.ta.mjs";
 import { EntryInformationSelection, _decode_EntryInformationSelection, _encode_EntryInformationSelection } from "../DFRAbstractService/EntryInformationSelection.ta.mjs";
-import { Requested_QoS_level, _decode_Requested_QoS_level, _encode_Requested_QoS_level } from "../DOR-definition/Requested-QoS-level.ta.mjs";
+import { type Requested_QoS_level, _decode_Requested_QoS_level, _encode_Requested_QoS_level } from "../DOR-definition/Requested-QoS-level.ta.mjs";
 
 
 /**
@@ -48,81 +48,97 @@ import { Requested_QoS_level, _decode_Requested_QoS_level, _encode_Requested_QoS
  */
 export
 class CommonUpdateArguments {
+    /**
+     * @summary `object_class`.
+     * @description
+     *
+     * Class of the DFR-Object. Mandatory on Create; optional elsewhere and
+     * then used only to validate the named entry. ISO/IEC 10166-1:1991
+     * §8.1.5.1.
+     * @public
+     * @readonly
+     */
+    public readonly object_class?: OPTIONAL<DfrObjectClass>;
+    /**
+     * @summary `entry`.
+     * @description
+     *
+     * Local name or DOR of the object to copy, move, read, modify, delete,
+     * list, reserve, etc. Absent on Create. ISO/IEC 10166-1:1991 §8.1.5.2.
+     * @public
+     * @readonly
+     */
+    public readonly entry?: OPTIONAL<CommonUpdateArguments_entry>;
+    /**
+     * @summary `destination`.
+     * @description
+     *
+     * Parent group that will hold the created, copied, or moved entry.
+     * Required for those operations. ISO/IEC 10166-1:1991 §8.1.5.3.
+     * @public
+     * @readonly
+     */
+    public readonly destination?: OPTIONAL<DfrEntryName>;
+    /**
+     * @summary `position`.
+     * @description
+     *
+     * Where to insert the new member in the destination group
+     * (`first`/`last`/`before`/`after`). Forbidden if the parent has
+     * `dfr-ordering`; the server then places the member by that rule.
+     * ISO/IEC 10166-1:1991 §8.1.5.4.
+     * @public
+     * @readonly
+     */
+    public readonly position?: OPTIONAL<GroupMemberPosition>;
+    /**
+     * @summary `modifications`.
+     * @description
+     *
+     * Ordered updates to attributes and/or content. Mandatory on Modify;
+     * optional on Create, Copy, and Move. ISO/IEC 10166-1:1991 §8.1.5.5.
+     * @public
+     * @readonly
+     */
+    public readonly modifications?: OPTIONAL<EntryModification[]>;
+    /**
+     * @summary `selection`.
+     * @description
+     *
+     * Which attributes and/or content (or a produced DOR) to read back in
+     * the result. Mandatory on Read. ISO/IEC 10166-1:1991 §8.1.5.6.
+     * @public
+     * @readonly
+     */
+    public readonly selection?: OPTIONAL<EntryInformationSelection>;
+    /**
+     * @summary `reference_qos`.
+     * @description
+     *
+     * Requested DOR quality of service when a DOR is to be produced.
+     * ISO/IEC 10166-1:1991 §8.1.5.7.
+     * @public
+     * @readonly
+     */
+    public readonly reference_qos?: OPTIONAL<Requested_QoS_level>;
+
     constructor (
-        /**
-         * @summary `object_class`.
-         * @description
-         *
-         * Class of the DFR-Object. Mandatory on Create; optional elsewhere and
-         * then used only to validate the named entry. ISO/IEC 10166-1:1991
-         * §8.1.5.1.
-         * @public
-         * @readonly
-         */
-        readonly object_class?: OPTIONAL<DfrObjectClass>,
-        /**
-         * @summary `entry`.
-         * @description
-         *
-         * Local name or DOR of the object to copy, move, read, modify, delete,
-         * list, reserve, etc. Absent on Create. ISO/IEC 10166-1:1991 §8.1.5.2.
-         * @public
-         * @readonly
-         */
-        readonly entry?: OPTIONAL<CommonUpdateArguments_entry>,
-        /**
-         * @summary `destination`.
-         * @description
-         *
-         * Parent group that will hold the created, copied, or moved entry.
-         * Required for those operations. ISO/IEC 10166-1:1991 §8.1.5.3.
-         * @public
-         * @readonly
-         */
-        readonly destination?: OPTIONAL<DfrEntryName>,
-        /**
-         * @summary `position`.
-         * @description
-         *
-         * Where to insert the new member in the destination group
-         * (`first`/`last`/`before`/`after`). Forbidden if the parent has
-         * `dfr-ordering`; the server then places the member by that rule.
-         * ISO/IEC 10166-1:1991 §8.1.5.4.
-         * @public
-         * @readonly
-         */
-        readonly position?: OPTIONAL<GroupMemberPosition>,
-        /**
-         * @summary `modifications`.
-         * @description
-         *
-         * Ordered updates to attributes and/or content. Mandatory on Modify;
-         * optional on Create, Copy, and Move. ISO/IEC 10166-1:1991 §8.1.5.5.
-         * @public
-         * @readonly
-         */
-        readonly modifications?: OPTIONAL<EntryModification[]>,
-        /**
-         * @summary `selection`.
-         * @description
-         *
-         * Which attributes and/or content (or a produced DOR) to read back in
-         * the result. Mandatory on Read. ISO/IEC 10166-1:1991 §8.1.5.6.
-         * @public
-         * @readonly
-         */
-        readonly selection?: OPTIONAL<EntryInformationSelection>,
-        /**
-         * @summary `reference_qos`.
-         * @description
-         *
-         * Requested DOR quality of service when a DOR is to be produced.
-         * ISO/IEC 10166-1:1991 §8.1.5.7.
-         * @public
-         * @readonly
-         */
-        readonly reference_qos?: OPTIONAL<Requested_QoS_level>
-    ) {}
+        object_class?: OPTIONAL<DfrObjectClass>,
+        entry?: OPTIONAL<CommonUpdateArguments_entry>,
+        destination?: OPTIONAL<DfrEntryName>,
+        position?: OPTIONAL<GroupMemberPosition>,
+        modifications?: OPTIONAL<EntryModification[]>,
+        selection?: OPTIONAL<EntryInformationSelection>,
+        reference_qos?: OPTIONAL<Requested_QoS_level>
+    ) {
+        this.object_class = object_class;
+        this.entry = entry;
+        this.destination = destination;
+        this.position = position;
+        this.modifications = modifications;
+        this.selection = selection;
+        this.reference_qos = reference_qos;
+    }
 
     /**
      * @summary Restructures an object into a CommonUpdateArguments
@@ -146,7 +162,7 @@ class CommonUpdateArguments {
          * @static
          */
 
-    public static _enum_for_object_class = _enum_for_DfrObjectClass;
+    public static _enum_for_object_class: typeof _enum_for_DfrObjectClass = _enum_for_DfrObjectClass;
 }
 
 /**

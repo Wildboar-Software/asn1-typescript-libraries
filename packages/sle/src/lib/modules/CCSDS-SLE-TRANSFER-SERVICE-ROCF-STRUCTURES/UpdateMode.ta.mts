@@ -1,10 +1,10 @@
 /* eslint-disable */
 import {
-    ASN1Element as _Element,
+    type ASN1Element as _Element,
     ASN1Error
 } from "@wildboar/asn1";
 import * as $ from "@wildboar/asn1/functional";
-import { RequestedUpdateMode, _decode_RequestedUpdateMode, _encode_RequestedUpdateMode,
+import { type RequestedUpdateMode, _decode_RequestedUpdateMode, _encode_RequestedUpdateMode,
     RequestedUpdateMode_continuous,
     RequestedUpdateMode_changeBased
 } from "../CCSDS-SLE-TRANSFER-SERVICE-ROCF-STRUCTURES/RequestedUpdateMode.ta.mjs";
@@ -54,8 +54,6 @@ function _decode_UpdateMode (el: _Element): UpdateMode {
     return _decoded;
 }
 
-let _cached_encoder_for_UpdateMode: $.ASN1Encoder<UpdateMode> | null = null;
-
 /**
  * @summary Encodes a(n) UpdateMode into an ASN.1 Element.
  * @function
@@ -63,11 +61,7 @@ let _cached_encoder_for_UpdateMode: $.ASN1Encoder<UpdateMode> | null = null;
  * @param elGetter A function that can be used to get new ASN.1 elements.
  * @returns {_Element} The UpdateMode, encoded as an ASN.1 Element.
  */
-export
-function _encode_UpdateMode (value: UpdateMode, elGetter: $.ASN1Encoder<any>): _Element {
-    if (!_cached_encoder_for_UpdateMode) { _cached_encoder_for_UpdateMode = _encode_RequestedUpdateMode; }
-    return _cached_encoder_for_UpdateMode(value, elGetter);
-}
+export const _encode_UpdateMode: $.ASN1Encoder<UpdateMode> = _encode_RequestedUpdateMode;
 
 
 /* eslint-enable */

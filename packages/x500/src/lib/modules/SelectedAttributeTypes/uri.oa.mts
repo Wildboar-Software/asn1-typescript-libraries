@@ -6,7 +6,7 @@ import {
 import { directoryString } from "../SelectedAttributeTypes/directoryString.oa.mjs";
 import { id_at_uri } from "../SelectedAttributeTypes/id-at-uri.va.mjs";
 import {
-    URI,
+    type URI,
     _decode_URI,
     _encode_URI,
 } from "../SelectedAttributeTypes/URI.ta.mjs";

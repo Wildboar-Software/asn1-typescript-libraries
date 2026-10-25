@@ -1,22 +1,22 @@
 /* eslint-disable */
 import {
-    BOOLEAN,
-    OCTET_STRING,
-    OPTIONAL,
-    UTF8String,
-    ASN1Element as _Element,
+    type BOOLEAN,
+    type OCTET_STRING,
+    type OPTIONAL,
+    type UTF8String,
+    type ASN1Element as _Element,
     ASN1TagClass as _TagClass
 } from "@wildboar/asn1";
 import { ASN1ConstructionError } from "@wildboar/asn1";
 import { ASN1SizeError } from "@wildboar/asn1";
 import * as $ from "@wildboar/asn1/functional";
-import { Iccid, _decode_Iccid, _encode_Iccid } from "../RSPDefinitions/Iccid.ta.mjs";
-import { IconType, _decode_IconType, _encode_IconType } from "../RSPDefinitions/IconType.ta.mjs";
-import { ProfileClass, _decode_ProfileClass, _encode_ProfileClass, operational /* IMPORTED_SHORT_NAMED_INTEGER */ } from "../RSPDefinitions/ProfileClass.ta.mjs";
+import { type Iccid, _decode_Iccid, _encode_Iccid } from "../RSPDefinitions/Iccid.ta.mjs";
+import { type IconType, _decode_IconType, _encode_IconType } from "../RSPDefinitions/IconType.ta.mjs";
+import { type ProfileClass, _decode_ProfileClass, _encode_ProfileClass, operational /* IMPORTED_SHORT_NAMED_INTEGER */ } from "../RSPDefinitions/ProfileClass.ta.mjs";
 import { NotificationConfigurationInformation, _decode_NotificationConfigurationInformation, _encode_NotificationConfigurationInformation } from "../RSPDefinitions/NotificationConfigurationInformation.ta.mjs";
 import { OperatorId, _decode_OperatorId, _encode_OperatorId } from "../RSPDefinitions/OperatorId.ta.mjs";
-import { PprIds, _decode_PprIds, _encode_PprIds } from "../RSPDefinitions/PprIds.ta.mjs";
-import { VendorSpecificExtension, _decode_VendorSpecificExtension, _encode_VendorSpecificExtension } from "../RSPDefinitions/VendorSpecificExtension.ta.mjs";
+import { type PprIds, _decode_PprIds, _encode_PprIds } from "../RSPDefinitions/PprIds.ta.mjs";
+import { type VendorSpecificExtension, _decode_VendorSpecificExtension, _encode_VendorSpecificExtension } from "../RSPDefinitions/VendorSpecificExtension.ta.mjs";
 import { StoreMetadataRequest_iotSpecificMetadata, _decode_StoreMetadataRequest_iotSpecificMetadata, _encode_StoreMetadataRequest_iotSpecificMetadata } from "../RSPDefinitions/StoreMetadataRequest-iotSpecificMetadata.ta.mjs";
 
 
@@ -70,7 +70,7 @@ class StoreMetadataRequest {
      * @public
      * @readonly
      */
-    readonly iccid: Iccid;
+    public readonly iccid: Iccid;
     /**
      * @summary `serviceProviderName`.
      * @description
@@ -81,7 +81,7 @@ class StoreMetadataRequest {
      * @public
      * @readonly
      */
-    readonly serviceProviderName: UTF8String;
+    public readonly serviceProviderName: UTF8String;
     /**
      * @summary `profileName`.
      * @description
@@ -92,7 +92,7 @@ class StoreMetadataRequest {
      * @public
      * @readonly
      */
-    readonly profileName: UTF8String;
+    public readonly profileName: UTF8String;
     /**
      * @summary `iconType`.
      * @description
@@ -102,7 +102,7 @@ class StoreMetadataRequest {
      * @public
      * @readonly
      */
-    readonly iconType?: OPTIONAL<IconType>;
+    public readonly iconType?: OPTIONAL<IconType>;
     /**
      * @summary `icon`.
      * @description
@@ -113,7 +113,7 @@ class StoreMetadataRequest {
      * @public
      * @readonly
      */
-    readonly icon?: OPTIONAL<OCTET_STRING>;
+    public readonly icon?: OPTIONAL<OCTET_STRING>;
     /**
      * @summary `profileClass`.
      * @description
@@ -124,7 +124,7 @@ class StoreMetadataRequest {
      * @public
      * @readonly
      */
-    readonly profileClass?: OPTIONAL<ProfileClass>;
+    public readonly profileClass?: OPTIONAL<ProfileClass>;
     /**
      * @summary `notificationConfigurationInfo`.
      * @description
@@ -136,7 +136,7 @@ class StoreMetadataRequest {
      * @public
      * @readonly
      */
-    readonly notificationConfigurationInfo?: OPTIONAL<NotificationConfigurationInformation[]>;
+    public readonly notificationConfigurationInfo?: OPTIONAL<NotificationConfigurationInformation[]>;
     /**
      * @summary `profileOwner`.
      * @description
@@ -149,7 +149,7 @@ class StoreMetadataRequest {
      * @public
      * @readonly
      */
-    readonly profileOwner?: OPTIONAL<OperatorId>;
+    public readonly profileOwner?: OPTIONAL<OperatorId>;
     /**
      * @summary `profilePolicyRules`.
      * @description
@@ -162,7 +162,7 @@ class StoreMetadataRequest {
      * @public
      * @readonly
      */
-    readonly profilePolicyRules?: OPTIONAL<PprIds>;
+    public readonly profilePolicyRules?: OPTIONAL<PprIds>;
     /**
      * @summary `serviceSpecificDataStoredInEuicc`.
      * @description
@@ -173,7 +173,7 @@ class StoreMetadataRequest {
      * @public
      * @readonly
      */
-    readonly serviceSpecificDataStoredInEuicc?: OPTIONAL<VendorSpecificExtension>;
+    public readonly serviceSpecificDataStoredInEuicc?: OPTIONAL<VendorSpecificExtension>;
     /**
      * @summary `serviceSpecificDataNotStoredInEuicc`.
      * @description
@@ -184,7 +184,7 @@ class StoreMetadataRequest {
      * @public
      * @readonly
      */
-    readonly serviceSpecificDataNotStoredInEuicc?: OPTIONAL<VendorSpecificExtension>;
+    public readonly serviceSpecificDataNotStoredInEuicc?: OPTIONAL<VendorSpecificExtension>;
     /**
      * @summary `ecallIndication`.
      * @description
@@ -195,7 +195,7 @@ class StoreMetadataRequest {
      * @public
      * @readonly
      */
-    readonly ecallIndication?: OPTIONAL<BOOLEAN>;
+    public readonly ecallIndication?: OPTIONAL<BOOLEAN>;
     /**
      * @summary `fallbackAllowed`.
      * @description
@@ -206,7 +206,7 @@ class StoreMetadataRequest {
      * @public
      * @readonly
      */
-    readonly fallbackAllowed?: OPTIONAL<BOOLEAN>;
+    public readonly fallbackAllowed?: OPTIONAL<BOOLEAN>;
     /**
      * @summary `iotSpecificMetadata`.
      * @description
@@ -217,7 +217,7 @@ class StoreMetadataRequest {
      * @public
      * @readonly
      */
-    readonly iotSpecificMetadata?: OPTIONAL<StoreMetadataRequest_iotSpecificMetadata>;
+    public readonly iotSpecificMetadata?: OPTIONAL<StoreMetadataRequest_iotSpecificMetadata>;
 
     constructor (
         iccid: Iccid,

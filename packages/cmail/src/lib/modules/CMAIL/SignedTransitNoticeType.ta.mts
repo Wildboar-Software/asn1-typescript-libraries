@@ -50,7 +50,7 @@ export class SignedTransitNoticeType {
    * @public
    * @readonly
    */
-  readonly digitalPostmark: DigitalPostmarkType;
+  public readonly digitalPostmark: DigitalPostmarkType;
   /**
    * @summary `envelopeInformation`.
    * @description Envelope hashes, Message-ID, and
@@ -59,7 +59,7 @@ export class SignedTransitNoticeType {
    * @public
    * @readonly
    */
-  readonly envelopeInformation: EnvelopeInformationType;
+  public readonly envelopeInformation: EnvelopeInformationType;
 
   constructor(
     digitalPostmark: DigitalPostmarkType,

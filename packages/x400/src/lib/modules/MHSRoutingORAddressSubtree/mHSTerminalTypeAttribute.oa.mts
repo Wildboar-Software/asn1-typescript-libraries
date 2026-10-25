@@ -1,6 +1,6 @@
 /* eslint-disable */
 import {
-    ASN1Element as _Element,
+    type ASN1Element as _Element,
     ASN1TagClass as _TagClass,
     ASN1Construction as _Construction,
     ASN1UniversalType as _UniversalType,
@@ -18,7 +18,7 @@ import {
 } from '@wildboar/x500/InformationFramework';
 import { oRAddressElementName } from '../MHSRoutingORAddressSubtree/oRAddressElementName.oa.mjs';
 import {
-    DirectoryString,
+    type DirectoryString,
     _decode_DirectoryString,
     _encode_DirectoryString,
 } from '@wildboar/x500/SelectedAttributeTypes';

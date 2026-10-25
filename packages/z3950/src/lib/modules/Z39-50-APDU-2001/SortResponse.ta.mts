@@ -1,16 +1,16 @@
 /* eslint-disable */
 import {
-    INTEGER,
-    OPTIONAL,
-    ASN1Element as _Element,
+    type INTEGER,
+    type OPTIONAL,
+    type ASN1Element as _Element,
     ASN1TagClass as _TagClass
 } from "@wildboar/asn1";
 import * as $ from "@wildboar/asn1/functional";
-import { ReferenceId, _decode_ReferenceId, _encode_ReferenceId } from "../Z39-50-APDU-2001/ReferenceId.ta.mjs";
-import { SortResponse_sortStatus, _decode_SortResponse_sortStatus, _encode_SortResponse_sortStatus } from "../Z39-50-APDU-2001/SortResponse-sortStatus.ta.mjs";
-import { SortResponse_resultSetStatus, _decode_SortResponse_resultSetStatus, _encode_SortResponse_resultSetStatus } from "../Z39-50-APDU-2001/SortResponse-resultSetStatus.ta.mjs";
-import { DiagRec, _decode_DiagRec, _encode_DiagRec } from "../Z39-50-APDU-2001/DiagRec.ta.mjs";
-import { OtherInformation, _decode_OtherInformation, _encode_OtherInformation } from "../Z39-50-APDU-2001/OtherInformation.ta.mjs";
+import { type ReferenceId, _decode_ReferenceId, _encode_ReferenceId } from "../Z39-50-APDU-2001/ReferenceId.ta.mjs";
+import { type SortResponse_sortStatus, _decode_SortResponse_sortStatus, _encode_SortResponse_sortStatus } from "../Z39-50-APDU-2001/SortResponse-sortStatus.ta.mjs";
+import { type SortResponse_resultSetStatus, _decode_SortResponse_resultSetStatus, _encode_SortResponse_resultSetStatus } from "../Z39-50-APDU-2001/SortResponse-resultSetStatus.ta.mjs";
+import { type DiagRec, _decode_DiagRec, _encode_DiagRec } from "../Z39-50-APDU-2001/DiagRec.ta.mjs";
+import { type OtherInformation, _decode_OtherInformation, _encode_OtherInformation } from "../Z39-50-APDU-2001/OtherInformation.ta.mjs";
 
 
 /**

@@ -3,7 +3,7 @@ import { ObjectIdentifier as _OID } from "@wildboar/asn1";
 import { type BAG_TYPE } from "../PKCS-12/BAG-TYPE.oca.mjs";
 import { bagtypes } from "../PKCS-12/bagtypes.va.mjs";
 import {
-    PKCS8ShroudedKeyBag,
+    type PKCS8ShroudedKeyBag,
     _decode_PKCS8ShroudedKeyBag,
     _encode_PKCS8ShroudedKeyBag,
 } from "../PKCS-12/PKCS8ShroudedKeyBag.ta.mjs";

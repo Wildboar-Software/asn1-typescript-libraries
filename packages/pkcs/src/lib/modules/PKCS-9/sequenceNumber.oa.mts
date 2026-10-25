@@ -6,7 +6,7 @@ import {
 import { integerMatch } from "@wildboar/x500/SelectedAttributeTypes";
 import { pkcs_9_at_sequenceNumber } from "../PKCS-9/pkcs-9-at-sequenceNumber.va.mjs";
 import {
-    SequenceNumber,
+    type SequenceNumber,
     _decode_SequenceNumber,
     _encode_SequenceNumber,
 } from "../PKCS-9/SequenceNumber.ta.mjs";

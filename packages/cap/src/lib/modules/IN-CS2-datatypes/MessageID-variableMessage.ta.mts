@@ -1,6 +1,6 @@
 /* eslint-disable */
 import {
-    ASN1Element as _Element,
+    type ASN1Element as _Element,
     ASN1TagClass as _TagClass,
     ASN1Construction as _Construction,
     ASN1UniversalType as _UniversalType,
@@ -11,8 +11,8 @@ import {
     ASN1SizeError,
 } from "@wildboar/asn1";
 import * as $ from "@wildboar/asn1/functional";
-import { Integer4, _decode_Integer4, _encode_Integer4 } from "../IN-CS2-datatypes/Integer4.ta.mjs";
-import { VariablePart, _decode_VariablePart, _encode_VariablePart } from "../IN-CS2-datatypes/VariablePart.ta.mjs";
+import { type Integer4, _decode_Integer4, _encode_Integer4 } from "../IN-CS2-datatypes/Integer4.ta.mjs";
+import { type VariablePart, _decode_VariablePart, _encode_VariablePart } from "../IN-CS2-datatypes/VariablePart.ta.mjs";
 
 
 /**
@@ -33,20 +33,25 @@ import { VariablePart, _decode_VariablePart, _encode_VariablePart } from "../IN-
  */
 export
 class MessageID_variableMessage {
+    /**
+     * @summary `elementaryMessageID`.
+     * @public
+     * @readonly
+     */
+    public readonly elementaryMessageID: Integer4;
+    /**
+     * @summary `variableParts`.
+     * @public
+     * @readonly
+     */
+    public readonly variableParts: VariablePart[];
+
     constructor (
-        /**
-         * @summary `elementaryMessageID`.
-         * @public
-         * @readonly
-         */
-        readonly elementaryMessageID: Integer4,
-        /**
-         * @summary `variableParts`.
-         * @public
-         * @readonly
-         */
-        readonly variableParts: VariablePart[]
+        elementaryMessageID: Integer4,
+        variableParts: VariablePart[]
     ) {
+        this.elementaryMessageID = elementaryMessageID;
+        this.variableParts = variableParts;
         if (variableParts.length < 1 || variableParts.length > 5) {
             throw new ASN1SizeError("MessageID_variableMessage.variableParts violates SIZE constraint");
         }

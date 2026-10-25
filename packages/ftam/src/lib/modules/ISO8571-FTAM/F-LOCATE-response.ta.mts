@@ -1,6 +1,6 @@
 /* eslint-disable */
 import {
-  OPTIONAL,
+  type OPTIONAL,
   ASN1Element as _Element,
   ASN1TagClass as _TagClass,
   ASN1Construction as _Construction,
@@ -12,18 +12,18 @@ import {
 } from '@wildboar/asn1';
 import * as $ from '@wildboar/asn1/functional';
 import {
-  Action_Result,
+  type Action_Result,
     Action_Result_success,
   _decode_Action_Result,
   _encode_Action_Result,
 } from '../ISO8571-FTAM/Action-Result.ta.mjs';
 import {
-  FADU_Identity,
+  type FADU_Identity,
   _decode_FADU_Identity,
   _encode_FADU_Identity,
 } from '../ISO8571-FTAM/FADU-Identity.ta.mjs';
 import {
-  Diagnostic,
+  type Diagnostic,
   _decode_Diagnostic,
   _encode_Diagnostic,
 } from '../ISO8571-FTAM/Diagnostic.ta.mjs';
@@ -57,7 +57,7 @@ export class F_LOCATE_response {
    * @public
    * @readonly
    */
-  readonly action_result?: OPTIONAL<Action_Result>;
+  public readonly action_result?: OPTIONAL<Action_Result>;
   /**
    * @summary `file_access_data_unit_identity`.
    * @description
@@ -68,7 +68,7 @@ export class F_LOCATE_response {
    * @public
    * @readonly
    */
-  readonly file_access_data_unit_identity?: OPTIONAL<FADU_Identity>;
+  public readonly file_access_data_unit_identity?: OPTIONAL<FADU_Identity>;
   /**
    * @summary `diagnostic`.
    * @description
@@ -78,7 +78,7 @@ export class F_LOCATE_response {
    * @public
    * @readonly
    */
-  readonly diagnostic?: OPTIONAL<Diagnostic>;
+  public readonly diagnostic?: OPTIONAL<Diagnostic>;
 
   constructor(
     action_result?: OPTIONAL<Action_Result>,

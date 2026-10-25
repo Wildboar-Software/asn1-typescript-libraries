@@ -1,16 +1,16 @@
 /* eslint-disable */
 import {
     ASN1ConstructionError as _ConstructionError,
-    ASN1Element as _Element,
+    type ASN1Element as _Element,
     ASN1TagClass as _TagClass,
     ASN1SizeError
 } from "@wildboar/asn1";
 import * as $ from "@wildboar/asn1/functional";
-import { UASTargetIdentifier, _decode_UASTargetIdentifier, _encode_UASTargetIdentifier } from "../TS33128Payloads/UASTargetIdentifier.ta.mjs";
+import { type UASTargetIdentifier, _decode_UASTargetIdentifier, _encode_UASTargetIdentifier } from "../TS33128Payloads/UASTargetIdentifier.ta.mjs";
 // export { UASTargetIdentifier, _decode_UASTargetIdentifier, _encode_UASTargetIdentifier } from "../TS33128Payloads/UASTargetIdentifier.ta.mjs";
 import { UASNFProcedure, _decode_UASNFProcedure, _encode_UASNFProcedure, _enum_for_UASNFProcedure } from "../TS33128Payloads/UASNFProcedure.ta.mjs";
 // export { UASNFProcedure, _enum_for_UASNFProcedure, UASNFProcedure_configurationCreate /* IMPORTED_LONG_ENUMERATION_ITEM */, configurationCreate /* IMPORTED_SHORT_ENUMERATION_ITEM */, UASNFProcedure_configurationRetrieve /* IMPORTED_LONG_ENUMERATION_ITEM */, configurationRetrieve /* IMPORTED_SHORT_ENUMERATION_ITEM */, UASNFProcedure_configurationUpdate /* IMPORTED_LONG_ENUMERATION_ITEM */, configurationUpdate /* IMPORTED_SHORT_ENUMERATION_ITEM */, UASNFProcedure_configurationModify /* IMPORTED_LONG_ENUMERATION_ITEM */, configurationModify /* IMPORTED_SHORT_ENUMERATION_ITEM */, UASNFProcedure_configurationDelete /* IMPORTED_LONG_ENUMERATION_ITEM */, configurationDelete /* IMPORTED_SHORT_ENUMERATION_ITEM */, UASNFProcedure_authenticationAuthorize /* IMPORTED_LONG_ENUMERATION_ITEM */, authenticationAuthorize /* IMPORTED_SHORT_ENUMERATION_ITEM */, UASNFProcedure_authenticationNotification /* IMPORTED_LONG_ENUMERATION_ITEM */, authenticationNotification /* IMPORTED_SHORT_ENUMERATION_ITEM */, _decode_UASNFProcedure, _encode_UASNFProcedure } from "../TS33128Payloads/UASNFProcedure.ta.mjs";
-import { UASNFUASInformation, _decode_UASNFUASInformation, _encode_UASNFUASInformation } from "../TS33128Payloads/UASNFUASInformation.ta.mjs";
+import { type UASNFUASInformation, _decode_UASNFUASInformation, _encode_UASNFUASInformation } from "../TS33128Payloads/UASNFUASInformation.ta.mjs";
 // export { UASNFUASInformation, _decode_UASNFUASInformation, _encode_UASNFUASInformation } from "../TS33128Payloads/UASNFUASInformation.ta.mjs";
 
 
@@ -142,7 +142,7 @@ class UASNFInformation {
          * @static
          */
 
-    public static _enum_for_uASNFProcedure = _enum_for_UASNFProcedure;
+    public static _enum_for_uASNFProcedure: typeof _enum_for_UASNFProcedure = _enum_for_UASNFProcedure;
 }
 
 /**

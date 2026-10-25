@@ -1,6 +1,6 @@
 /* eslint-disable */
 import {
-    CertificateList,
+    type CertificateList,
     _decode_CertificateList,
     _encode_CertificateList,
 } from "../AuthenticationFramework/CertificateList.ta.mjs";

@@ -1,6 +1,6 @@
 /* eslint-disable */
 import {
-    ASN1Element as _Element,
+    type ASN1Element as _Element,
     ASN1TagClass as _TagClass,
     ASN1Construction as _Construction,
     ASN1UniversalType as _UniversalType,
@@ -48,8 +48,6 @@ function _decode_ReadResult (el: _Element): ReadResult {
     return value;
 }
 
-let _cached_encoder_for_ReadResult: $.ASN1Encoder<ReadResult> | null = null;
-
 /**
  * @summary Encodes a(n) ReadResult into an ASN.1 Element.
  * @function
@@ -57,11 +55,7 @@ let _cached_encoder_for_ReadResult: $.ASN1Encoder<ReadResult> | null = null;
  * @param elGetter A function that can be used to get new ASN.1 elements.
  * @returns {_Element} The ReadResult, encoded as an ASN.1 Element.
  */
-export
-function _encode_ReadResult (value: ReadResult, elGetter: $.ASN1Encoder<any>): _Element {
-    if (!_cached_encoder_for_ReadResult) { _cached_encoder_for_ReadResult = _encode_CommonUpdateResult; }
-    return _cached_encoder_for_ReadResult(value, elGetter);
-}
+export const _encode_ReadResult: $.ASN1Encoder<ReadResult> = _encode_CommonUpdateResult;
 
 
 /* eslint-enable */

@@ -1,12 +1,12 @@
 /* eslint-disable */
 import {
-    ASN1Element as _Element,
+    type ASN1Element as _Element,
     ASN1TagClass as _TagClass
 } from "@wildboar/asn1";
 import * as $ from "@wildboar/asn1/functional";
-import { ProSeIRIContent, _decode_ProSeIRIContent, _encode_ProSeIRIContent } from "../ProSeHI2Operations/ProSeIRIContent.ta.mjs";
+import { type ProSeIRIContent, _decode_ProSeIRIContent, _encode_ProSeIRIContent } from "../ProSeHI2Operations/ProSeIRIContent.ta.mjs";
 // export { ProSeIRIContent, _decode_ProSeIRIContent, _encode_ProSeIRIContent } from "../ProSeHI2Operations/ProSeIRIContent.ta.mjs";
-import { ProSeIRISequence, _decode_ProSeIRISequence, _encode_ProSeIRISequence } from "../ProSeHI2Operations/ProSeIRISequence.ta.mjs";
+import { type ProSeIRISequence, _decode_ProSeIRISequence, _encode_ProSeIRISequence } from "../ProSeHI2Operations/ProSeIRISequence.ta.mjs";
 // export { ProSeIRISequence, _decode_ProSeIRISequence, _encode_ProSeIRISequence } from "../ProSeHI2Operations/ProSeIRISequence.ta.mjs";
 
 

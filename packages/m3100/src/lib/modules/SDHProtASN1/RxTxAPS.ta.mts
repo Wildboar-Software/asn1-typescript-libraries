@@ -1,7 +1,7 @@
 /* eslint-disable */
 import {
-    INTEGER,
-    ASN1Element as _Element,
+    type INTEGER,
+    type ASN1Element as _Element,
     ASN1TagClass as _TagClass,
     ASN1Construction as _Construction,
     ASN1UniversalType as _UniversalType,
@@ -27,20 +27,26 @@ import * as $ from '@wildboar/asn1/functional';
  *
  */
 export class RxTxAPS {
+    /**
+     * @summary `rxAPSvalue`.
+     * @public
+     * @readonly
+     */
+    public readonly rxAPSvalue: INTEGER;
+    /**
+     * @summary `txAPSvalue`.
+     * @public
+     * @readonly
+     */
+    public readonly txAPSvalue: INTEGER;
+
     constructor(
-        /**
-         * @summary `rxAPSvalue`.
-         * @public
-         * @readonly
-         */
-        readonly rxAPSvalue: INTEGER,
-        /**
-         * @summary `txAPSvalue`.
-         * @public
-         * @readonly
-         */
-        readonly txAPSvalue: INTEGER
-    ) {}
+        rxAPSvalue: INTEGER,
+        txAPSvalue: INTEGER
+    ) {
+        this.rxAPSvalue = rxAPSvalue;
+        this.txAPSvalue = txAPSvalue;
+    }
 
     /**
      * @summary Restructures an object into a RxTxAPS

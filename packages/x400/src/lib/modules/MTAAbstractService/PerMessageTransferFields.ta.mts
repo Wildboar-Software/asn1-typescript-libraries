@@ -1,7 +1,7 @@
 /* eslint-disable */
 import {
-    OPTIONAL,
-    ASN1Element as _Element,
+    type OPTIONAL,
+    type ASN1Element as _Element,
     ASN1TagClass as _TagClass,
     ASN1Construction as _Construction,
     ASN1UniversalType as _UniversalType,
@@ -12,43 +12,43 @@ import {
 } from '@wildboar/asn1';
 import * as $ from '@wildboar/asn1/functional';
 import {
-    MessageIdentifier,
+    type MessageIdentifier,
     _decode_MessageIdentifier,
     _encode_MessageIdentifier,
 } from '../MTAAbstractService/MessageIdentifier.ta.mjs';
 import {
-    OriginatorName,
+    type OriginatorName,
     _decode_OriginatorName,
     _encode_OriginatorName,
 } from '../MTAAbstractService/OriginatorName.ta.mjs';
 import {
-    OriginalEncodedInformationTypes,
+    type OriginalEncodedInformationTypes,
     _decode_OriginalEncodedInformationTypes,
     _encode_OriginalEncodedInformationTypes,
 } from '../MTSAbstractService/OriginalEncodedInformationTypes.ta.mjs';
 import {
-    ContentType,
+    type ContentType,
     _decode_ContentType,
     _encode_ContentType,
 } from '../MTSAbstractService/ContentType.ta.mjs';
 import {
-    ContentIdentifier,
+    type ContentIdentifier,
     _decode_ContentIdentifier,
     _encode_ContentIdentifier,
 } from '../MTSAbstractService/ContentIdentifier.ta.mjs';
 import {
-    Priority,
+    type Priority,
     Priority_normal,
     _decode_Priority,
     _encode_Priority,
 } from '../MTSAbstractService/Priority.ta.mjs';
 import {
-    PerMessageIndicators,
+    type PerMessageIndicators,
     _decode_PerMessageIndicators,
     _encode_PerMessageIndicators,
 } from '../MTSAbstractService/PerMessageIndicators.ta.mjs';
 import {
-    DeferredDeliveryTime,
+    type DeferredDeliveryTime,
     _decode_DeferredDeliveryTime,
     _encode_DeferredDeliveryTime,
 } from '../MTSAbstractService/DeferredDeliveryTime.ta.mjs';
@@ -58,7 +58,7 @@ import {
     _encode_PerDomainBilateralInformation,
 } from '../MTAAbstractService/PerDomainBilateralInformation.ta.mjs';
 import {
-    TraceInformation,
+    type TraceInformation,
     _decode_TraceInformation,
     _encode_TraceInformation,
 } from '../MTAAbstractService/TraceInformation.ta.mjs';
@@ -87,7 +87,7 @@ import {
  *   deferred-delivery-time              [0]  DeferredDeliveryTime OPTIONAL,
  *   per-domain-bilateral-information
  *     [1]  SEQUENCE SIZE (1..ub-transfers) OF PerDomainBilateralInformation
- *       OPTIONAL,
+ *       type OPTIONAL,
  *   trace-information                   TraceInformation,
  *   extensions
  *     [3]  SET OF ExtensionField{{MessageTransferExtensions}} DEFAULT {}
@@ -96,76 +96,102 @@ import {
  *
  */
 export class PerMessageTransferFields {
+    /**
+     * @summary `message_identifier`.
+     * @public
+     * @readonly
+     */
+    public readonly message_identifier: MessageIdentifier;
+    /**
+     * @summary `originator_name`.
+     * @public
+     * @readonly
+     */
+    public readonly originator_name: OriginatorName;
+    /**
+     * @summary `original_encoded_information_types`.
+     * @public
+     * @readonly
+     */
+    public readonly original_encoded_information_types: OPTIONAL<OriginalEncodedInformationTypes>;
+    /**
+     * @summary `content_type`.
+     * @public
+     * @readonly
+     */
+    public readonly content_type: ContentType;
+    /**
+     * @summary `content_identifier`.
+     * @public
+     * @readonly
+     */
+    public readonly content_identifier: OPTIONAL<ContentIdentifier>;
+    /**
+     * @summary `priority`.
+     * @public
+     * @readonly
+     */
+    public readonly priority: OPTIONAL<Priority>;
+    /**
+     * @summary `per_message_indicators`.
+     * @public
+     * @readonly
+     */
+    public readonly per_message_indicators: OPTIONAL<PerMessageIndicators>;
+    /**
+     * @summary `deferred_delivery_time`.
+     * @public
+     * @readonly
+     */
+    public readonly deferred_delivery_time: OPTIONAL<DeferredDeliveryTime>;
+    /**
+     * @summary `per_domain_bilateral_information`.
+     * @public
+     * @readonly
+     */
+    public readonly per_domain_bilateral_information: OPTIONAL<
+            PerDomainBilateralInformation[]
+        >;
+    /**
+     * @summary `trace_information`.
+     * @public
+     * @readonly
+     */
+    public readonly trace_information: TraceInformation;
+    /**
+     * @summary `extensions`.
+     * @public
+     * @readonly
+     */
+    public readonly extensions?: OPTIONAL<ExtensionField[]>;
+
     constructor(
-        /**
-         * @summary `message_identifier`.
-         * @public
-         * @readonly
-         */
-        readonly message_identifier: MessageIdentifier,
-        /**
-         * @summary `originator_name`.
-         * @public
-         * @readonly
-         */
-        readonly originator_name: OriginatorName,
-        /**
-         * @summary `original_encoded_information_types`.
-         * @public
-         * @readonly
-         */
-        readonly original_encoded_information_types: OPTIONAL<OriginalEncodedInformationTypes>,
-        /**
-         * @summary `content_type`.
-         * @public
-         * @readonly
-         */
-        readonly content_type: ContentType,
-        /**
-         * @summary `content_identifier`.
-         * @public
-         * @readonly
-         */
-        readonly content_identifier: OPTIONAL<ContentIdentifier>,
-        /**
-         * @summary `priority`.
-         * @public
-         * @readonly
-         */
-        readonly priority: OPTIONAL<Priority>,
-        /**
-         * @summary `per_message_indicators`.
-         * @public
-         * @readonly
-         */
-        readonly per_message_indicators: OPTIONAL<PerMessageIndicators>,
-        /**
-         * @summary `deferred_delivery_time`.
-         * @public
-         * @readonly
-         */
-        readonly deferred_delivery_time: OPTIONAL<DeferredDeliveryTime>,
-        /**
-         * @summary `per_domain_bilateral_information`.
-         * @public
-         * @readonly
-         */
-        readonly per_domain_bilateral_information: OPTIONAL<
+        message_identifier: MessageIdentifier,
+        originator_name: OriginatorName,
+        original_encoded_information_types: OPTIONAL<OriginalEncodedInformationTypes>,
+        content_type: ContentType,
+        content_identifier: OPTIONAL<ContentIdentifier>,
+        priority: OPTIONAL<Priority>,
+        per_message_indicators: OPTIONAL<PerMessageIndicators>,
+        deferred_delivery_time: OPTIONAL<DeferredDeliveryTime>,
+        per_domain_bilateral_information: OPTIONAL<
             PerDomainBilateralInformation[]
         >,
-        /**
-         * @summary `trace_information`.
-         * @public
-         * @readonly
-         */
-        readonly trace_information: TraceInformation,
-        /**
-         * @summary `extensions`.
-         * @public
-         * @readonly
-         */
-        readonly extensions?: OPTIONAL<ExtensionField[]>
-    ) {}
+        trace_information: TraceInformation,
+        extensions?: OPTIONAL<ExtensionField[]>
+    ) {
+        this.message_identifier = message_identifier;
+        this.originator_name = originator_name;
+        this.original_encoded_information_types = original_encoded_information_types;
+        this.content_type = content_type;
+        this.content_identifier = content_identifier;
+        this.priority = priority;
+        this.per_message_indicators = per_message_indicators;
+        this.deferred_delivery_time = deferred_delivery_time;
+        this.per_domain_bilateral_information = per_domain_bilateral_information;
+        this.trace_information = trace_information;
+        this.extensions = extensions;
+    }
 
     /**
      * @summary Restructures an object into a PerMessageTransferFields

@@ -11,12 +11,12 @@ import {
 } from '@wildboar/asn1';
 import * as $ from '@wildboar/asn1/functional';
 import {
-  BioAPI_HANDLE,
+  type BioAPI_HANDLE,
   _decode_BioAPI_HANDLE,
   _encode_BioAPI_HANDLE,
 } from '../BIP/BioAPI-HANDLE.ta.mjs';
 import {
-  BioAPI_UUID,
+  type BioAPI_UUID,
   _decode_BioAPI_UUID,
   _encode_BioAPI_UUID,
 } from '../BIP/BioAPI-UUID.ta.mjs';
@@ -61,7 +61,7 @@ export class Transform_RequestParams {
    * @public
    * @readonly
    */
-  readonly bspHandle: BioAPI_HANDLE;
+  public readonly bspHandle: BioAPI_HANDLE;
   /**
    * @summary `operationUuid`.
    * @description
@@ -72,7 +72,7 @@ export class Transform_RequestParams {
    * @public
    * @readonly
    */
-  readonly operationUuid: BioAPI_UUID;
+  public readonly operationUuid: BioAPI_UUID;
   /**
    * @summary `inputBIRs`.
    * @description
@@ -83,7 +83,7 @@ export class Transform_RequestParams {
    * @public
    * @readonly
    */
-  readonly inputBIRs: BioAPI_INPUT_BIR[];
+  public readonly inputBIRs: BioAPI_INPUT_BIR[];
 
   constructor(
     bspHandle: BioAPI_HANDLE,

@@ -1,13 +1,13 @@
 /* eslint-disable */
 import {
-    OPTIONAL,
-    ASN1Element as _Element,
+    type OPTIONAL,
+    type ASN1Element as _Element,
     ASN1TagClass as _TagClass
 } from "@wildboar/asn1";
 import * as $ from "@wildboar/asn1/functional";
 import { CtatParamInfo, _decode_CtatParamInfo, _encode_CtatParamInfo } from "../CT-Authentication-Operations/CtatParamInfo.ta.mjs";
 // export { CtatParamInfo, _decode_CtatParamInfo, _encode_CtatParamInfo } from "../CT-Authentication-Operations/CtatParamInfo.ta.mjs";
-import { DummyExtension, _decode_DummyExtension, _encode_DummyExtension } from "../CT-Authentication-Operations/DummyExtension.ta.mjs";
+import { type DummyExtension, _decode_DummyExtension, _encode_DummyExtension } from "../CT-Authentication-Operations/DummyExtension.ta.mjs";
 // export { DummyExtension, _decode_DummyExtension, _encode_DummyExtension } from "../CT-Authentication-Operations/DummyExtension.ta.mjs";
 
 
@@ -161,7 +161,7 @@ let _cached_encoder_for_transferAuthParam_ArgumentType: $.ASN1Encoder<transferAu
  */
 export
 function _encode_transferAuthParam_ArgumentType (value: transferAuthParam_ArgumentType, elGetter: $.ASN1Encoder<any>): _Element {
-    if (!_cached_encoder_for_transferAuthParam_ArgumentType) { _cached_encoder_for_transferAuthParam_ArgumentType = function (value: transferAuthParam_ArgumentType, elGetter: $.ASN1Encoder<transferAuthParam_ArgumentType>): _Element {
+    if (!_cached_encoder_for_transferAuthParam_ArgumentType) { _cached_encoder_for_transferAuthParam_ArgumentType = function (value: transferAuthParam_ArgumentType): _Element {
     const _components: _Element[] = [];
     _components.push(/* REQUIRED   */ _encode_CtatParamInfo(value.info, $.BER));
     if (value.dummyExtension !== undefined) {

@@ -11,7 +11,7 @@ import {
 } from '@wildboar/asn1';
 import * as $ from '@wildboar/asn1/functional';
 import {
-  BioAPI_GUI_RESPONSE,
+  type BioAPI_GUI_RESPONSE,
   _enum_for_BioAPI_GUI_RESPONSE,
   _decode_BioAPI_GUI_RESPONSE,
   _encode_BioAPI_GUI_RESPONSE,
@@ -48,7 +48,7 @@ export class GUIProgressEvent_AcknowledgementParams {
    * @public
    * @readonly
    */
-  readonly response: BioAPI_GUI_RESPONSE;
+  public readonly response: BioAPI_GUI_RESPONSE;
 
   constructor(
     response: BioAPI_GUI_RESPONSE
@@ -82,7 +82,7 @@ export class GUIProgressEvent_AcknowledgementParams {
    * @static
    */
 
-  public static _enum_for_response = _enum_for_BioAPI_GUI_RESPONSE;
+  public static _enum_for_response: typeof _enum_for_BioAPI_GUI_RESPONSE = _enum_for_BioAPI_GUI_RESPONSE;
 }
 
 

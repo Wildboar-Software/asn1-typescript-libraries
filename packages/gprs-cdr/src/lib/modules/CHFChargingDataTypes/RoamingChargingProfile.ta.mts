@@ -1,7 +1,7 @@
 /* eslint-disable */
 import {
-    OPTIONAL,
-    ASN1Element as _Element,
+    type OPTIONAL,
+    type ASN1Element as _Element,
     ASN1TagClass as _TagClass
 } from "@wildboar/asn1";
 import * as $ from "@wildboar/asn1/functional";
@@ -69,7 +69,7 @@ class RoamingChargingProfile {
          * @static
          */
 
-    public static _enum_for_partialRecordMethod = _enum_for_PartialRecordMethod;
+    public static _enum_for_partialRecordMethod: typeof _enum_for_PartialRecordMethod = _enum_for_PartialRecordMethod;
 }
 
 /**

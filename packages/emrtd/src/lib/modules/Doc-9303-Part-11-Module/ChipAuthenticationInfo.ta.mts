@@ -1,11 +1,11 @@
 /* eslint-disable */
 import {
-    ASN1Element as _Element,
+    type ASN1Element as _Element,
     ASN1Error,
     ASN1TagClass as _TagClass,
-    INTEGER,
-    OBJECT_IDENTIFIER,
-    OPTIONAL
+    type INTEGER,
+    type OBJECT_IDENTIFIER,
+    type OPTIONAL
 } from "@wildboar/asn1";
 import * as $ from "@wildboar/asn1/functional";
 import { id_CA_DH_3DES_CBC_CBC } from "../Doc-9303-Part-11-Module/id-CA-DH-3DES-CBC-CBC.va.mjs";
@@ -71,31 +71,38 @@ const _permitted_protocols_for_ChipAuthenticationInfo: OBJECT_IDENTIFIER[] = [
  */
 export
 class ChipAuthenticationInfo {
+    /**
+     * Key agreement, symmetric cipher, and MAC. One of the cipher-specific
+     * Chip Authentication object identifiers.
+     * @summary `protocol`.
+     * @public
+     * @readonly
+     */
+    public readonly protocol: OBJECT_IDENTIFIER;
+    /**
+     * Protocol version. This specification supports only version 1.
+     * @summary `version`.
+     * @public
+     * @readonly
+     */
+    public readonly version: INTEGER;
+    /**
+     * Local key identifier. Required when the chip has more than one Chip
+     * Authentication public key.
+     * @summary `keyId`.
+     * @public
+     * @readonly
+     */
+    public readonly keyId?: OPTIONAL<INTEGER>;
+
     constructor (
-        /**
-         * Key agreement, symmetric cipher, and MAC. One of the cipher-specific
-         * Chip Authentication object identifiers.
-         * @summary `protocol`.
-         * @public
-         * @readonly
-         */
-        readonly protocol: OBJECT_IDENTIFIER,
-        /**
-         * Protocol version. This specification supports only version 1.
-         * @summary `version`.
-         * @public
-         * @readonly
-         */
-        readonly version: INTEGER,
-        /**
-         * Local key identifier. Required when the chip has more than one Chip
-         * Authentication public key.
-         * @summary `keyId`.
-         * @public
-         * @readonly
-         */
-        readonly keyId?: OPTIONAL<INTEGER>
+        protocol: OBJECT_IDENTIFIER,
+        version: INTEGER,
+        keyId?: OPTIONAL<INTEGER>
     ) {
+        this.protocol = protocol;
+        this.version = version;
+        this.keyId = keyId;
         if (!_permitted_protocols_for_ChipAuthenticationInfo.some((id) => id.isEqualTo(protocol))) {
             throw new ASN1Error("ChipAuthenticationInfo.protocol violates permitted OBJECT IDENTIFIER constraint");
         }

@@ -1,6 +1,6 @@
 /* eslint-disable */
 import {
-    INTEGER
+    type INTEGER
 } from "@wildboar/asn1";
 import * as $ from "@wildboar/asn1/functional";
 
@@ -30,7 +30,7 @@ type DocumentTypeListVersion = INTEGER;
  * @type {number}
  */
 export
-const DocumentTypeListVersion_v0: DocumentTypeListVersion = 0; /* LONG_NAMED_INTEGER_VALUE */
+const DocumentTypeListVersion_v0: 0 = 0 satisfies DocumentTypeListVersion; /* LONG_NAMED_INTEGER_VALUE */
 
 /**
  * Short name for {@link DocumentTypeListVersion_v0}.
@@ -39,9 +39,9 @@ const DocumentTypeListVersion_v0: DocumentTypeListVersion = 0; /* LONG_NAMED_INT
  * @type {number}
  */
 export
-const v0: DocumentTypeListVersion = DocumentTypeListVersion_v0; /* SHORT_NAMED_INTEGER_VALUE */
-export const _decode_DocumentTypeListVersion = $._decodeInteger;
-export const _encode_DocumentTypeListVersion = $._encodeInteger;
+const v0: 0 = DocumentTypeListVersion_v0; /* SHORT_NAMED_INTEGER_VALUE */
+export const _decode_DocumentTypeListVersion: $.ASN1Decoder<INTEGER> = $._decodeInteger;
+export const _encode_DocumentTypeListVersion: $.ASN1Encoder<INTEGER> = $._encodeInteger;
 
 
 /* eslint-enable */

@@ -1,7 +1,7 @@
 /* eslint-disable */
 import {
-    OPTIONAL,
-    ASN1Element as _Element,
+    type OPTIONAL,
+    type ASN1Element as _Element,
     ASN1TagClass as _TagClass,
     ASN1Construction as _Construction,
     ASN1UniversalType as _UniversalType,
@@ -12,7 +12,7 @@ import {
 } from '@wildboar/asn1';
 import * as $ from '@wildboar/asn1/functional';
 import {
-    TestCategoryInformation,
+    type TestCategoryInformation,
     _decode_TestCategoryInformation,
     _encode_TestCategoryInformation,
 } from '../Test-ASN1Module/TestCategoryInformation.ta.mjs';
@@ -22,17 +22,17 @@ import {
     _encode_TestSessionId,
 } from '../Test-ASN1Module/TestSessionId.ta.mjs';
 import {
-    TimeoutPeriod,
+    type TimeoutPeriod,
     _decode_TimeoutPeriod,
     _encode_TimeoutPeriod,
 } from '../Test-ASN1Module/TimeoutPeriod.ta.mjs';
 import {
-    AssociatedObjects,
+    type AssociatedObjects,
     _decode_AssociatedObjects,
     _encode_AssociatedObjects,
 } from '../Test-ASN1Module/AssociatedObjects.ta.mjs';
 import {
-    ToBeTestedMORTs,
+    type ToBeTestedMORTs,
     _decode_ToBeTestedMORTs,
     _encode_ToBeTestedMORTs,
 } from '../Test-ASN1Module/ToBeTestedMORTs.ta.mjs';
@@ -60,67 +60,79 @@ import {
  *
  */
 export class TestRequestUncontrolledInfo {
+    /**
+     * @summary `testCategoryInformation`.
+     * @description
+     *
+     * Mandatory category-specific input. ITU-T Rec. X.745 (11/93) §8.4.2.4,
+     * 9.6.
+     * [§8.4.2.4](https://www.itu.int/rec/T-REC-X.745-199311-I)
+     *
+     * @public
+     * @readonly
+     */
+    public readonly testCategoryInformation: TestCategoryInformation;
+    /**
+     * @summary `testSessionId`.
+     * @description
+     *
+     * Optional; if present, echoed on the response (Table 3 C(=)). ITU-T
+     * Rec. X.745 (11/93) §7.3.2, 9.6.
+     * [§7.3.2](https://www.itu.int/rec/T-REC-X.745-199311-I)
+     *
+     * @public
+     * @readonly
+     */
+    public readonly testSessionId?: OPTIONAL<TestSessionId>;
+    /**
+     * @summary `timeoutPeriod`.
+     * @description
+     *
+     * Optional maximum instantiation time. ITU-T Rec. X.745 (11/93) §8.1.7.
+     * [§8.1.7](https://www.itu.int/rec/T-REC-X.745-199311-I)
+     *
+     * @public
+     * @readonly
+     */
+    public readonly timeoutPeriod?: OPTIONAL<TimeoutPeriod>;
+    /**
+     * @summary `associatedObjects`.
+     * @description
+     *
+     * Optional AOs; may also appear on the response (Table 3). ITU-T Rec.
+     * X.745 (11/93) §8.1.1, 9.6.
+     * [§8.1.1](https://www.itu.int/rec/T-REC-X.745-199311-I)
+     *
+     * @public
+     * @readonly
+     */
+    public readonly associatedObjects?: OPTIONAL<AssociatedObjects>;
+    /**
+     * @summary `toBeTestedMORTs`.
+     * @description
+     *
+     * Optional explicit MORTs (else implicit). ITU-T Rec. X.745 (11/93)
+     * §8.4.2.6.
+     * [§8.4.2.6](https://www.itu.int/rec/T-REC-X.745-199311-I)
+     *
+     * @public
+     * @readonly
+     */
+    public readonly toBeTestedMORTs?: OPTIONAL<ToBeTestedMORTs>;
+
     constructor(
-        /**
-         * @summary `testCategoryInformation`.
-         * @description
-         *
-         * Mandatory category-specific input. ITU-T Rec. X.745 (11/93) §8.4.2.4,
-         * 9.6.
-         * [§8.4.2.4](https://www.itu.int/rec/T-REC-X.745-199311-I)
-         *
-         * @public
-         * @readonly
-         */
-        readonly testCategoryInformation: TestCategoryInformation,
-        /**
-         * @summary `testSessionId`.
-         * @description
-         *
-         * Optional; if present, echoed on the response (Table 3 C(=)). ITU-T
-         * Rec. X.745 (11/93) §7.3.2, 9.6.
-         * [§7.3.2](https://www.itu.int/rec/T-REC-X.745-199311-I)
-         *
-         * @public
-         * @readonly
-         */
-        readonly testSessionId?: OPTIONAL<TestSessionId>,
-        /**
-         * @summary `timeoutPeriod`.
-         * @description
-         *
-         * Optional maximum instantiation time. ITU-T Rec. X.745 (11/93) §8.1.7.
-         * [§8.1.7](https://www.itu.int/rec/T-REC-X.745-199311-I)
-         *
-         * @public
-         * @readonly
-         */
-        readonly timeoutPeriod?: OPTIONAL<TimeoutPeriod>,
-        /**
-         * @summary `associatedObjects`.
-         * @description
-         *
-         * Optional AOs; may also appear on the response (Table 3). ITU-T Rec.
-         * X.745 (11/93) §8.1.1, 9.6.
-         * [§8.1.1](https://www.itu.int/rec/T-REC-X.745-199311-I)
-         *
-         * @public
-         * @readonly
-         */
-        readonly associatedObjects?: OPTIONAL<AssociatedObjects>,
-        /**
-         * @summary `toBeTestedMORTs`.
-         * @description
-         *
-         * Optional explicit MORTs (else implicit). ITU-T Rec. X.745 (11/93)
-         * §8.4.2.6.
-         * [§8.4.2.6](https://www.itu.int/rec/T-REC-X.745-199311-I)
-         *
-         * @public
-         * @readonly
-         */
-        readonly toBeTestedMORTs?: OPTIONAL<ToBeTestedMORTs>
-    ) {}
+        testCategoryInformation: TestCategoryInformation,
+        testSessionId?: OPTIONAL<TestSessionId>,
+        timeoutPeriod?: OPTIONAL<TimeoutPeriod>,
+        associatedObjects?: OPTIONAL<AssociatedObjects>,
+        toBeTestedMORTs?: OPTIONAL<ToBeTestedMORTs>
+    ) {
+        this.testCategoryInformation = testCategoryInformation;
+        this.testSessionId = testSessionId;
+        this.timeoutPeriod = timeoutPeriod;
+        this.associatedObjects = associatedObjects;
+        this.toBeTestedMORTs = toBeTestedMORTs;
+    }
 
     /**
      * @summary Restructures an object into a TestRequestUncontrolledInfo

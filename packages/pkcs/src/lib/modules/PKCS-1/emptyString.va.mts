@@ -1,5 +1,5 @@
 /* eslint-disable */
-import { EncodingParameters } from "../PKCS-1/EncodingParameters.ta.mjs";
+import { type EncodingParameters } from "../PKCS-1/EncodingParameters.ta.mjs";
 
 /**
  * @summary emptyString

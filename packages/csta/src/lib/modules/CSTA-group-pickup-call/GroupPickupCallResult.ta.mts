@@ -2,13 +2,13 @@
 
 import * as $ from "@wildboar/asn1/functional";
 import {
-    OPTIONAL,
-    SEQUENCE,
-    SET,
-    ASN1Element as _Element,
+    type OPTIONAL,
+    type SEQUENCE,
+    type SET,
+    type ASN1Element as _Element,
     ASN1TagClass as _TagClass
 } from "@wildboar/asn1";
-import { ConnectionID, _decode_ConnectionID, _encode_ConnectionID } from "../CSTA-call-connection-identifiers/ConnectionID.ta.mjs";
+import { type ConnectionID, _decode_ConnectionID, _encode_ConnectionID } from "../CSTA-call-connection-identifiers/ConnectionID.ta.mjs";
 
 import { ConnectionInformation, _decode_ConnectionInformation, _encode_ConnectionInformation } from "../CSTA-media-services/ConnectionInformation.ta.mjs";
 
@@ -33,9 +33,9 @@ import { CSTACommonArguments, _decode_CSTACommonArguments, _encode_CSTACommonArg
  * 
  * ```asn1
  * GroupPickupCallResult ::= SEQUENCE
- * {     pickedCall             ConnectionID             OPTIONAL,
- *     pickedCallInfo             ConnectionInformation         OPTIONAL,
- *     callLinkageData         [1] IMPLICIT CallLinkageData     OPTIONAL,
+ * {     pickedCall             ConnectionID             type OPTIONAL,
+ *     pickedCallInfo             ConnectionInformation         type OPTIONAL,
+ *     callLinkageData         [1] IMPLICIT CallLinkageData     type OPTIONAL,
  *     extensions             CSTACommonArguments         OPTIONAL }
  * ```
  * 
@@ -43,51 +43,61 @@ import { CSTACommonArguments, _decode_CSTACommonArguments, _encode_CSTACommonArg
  */
 export
 class GroupPickupCallResult {
+    /**
+     * @summary `pickedCall`.
+     * @description
+     *
+     * Optional. Destination device's connection in the picked
+     * call (Connected).
+     *
+     * @public
+     * @readonly
+     */
+    public readonly pickedCall?: OPTIONAL<ConnectionID>;
+    /**
+     * @summary `pickedCallInfo`.
+     * @description
+     *
+     * Optional connection information for `pickedCall`
+     * (§12.2.8).
+     *
+     * @public
+     * @readonly
+     */
+    public readonly pickedCallInfo?: OPTIONAL<ConnectionInformation>;
+    /**
+     * @summary `callLinkageData`.
+     * @description
+     *
+     * Optional call-linkage identifiers (§12.2.5).
+     *
+     * @public
+     * @readonly
+     */
+    public readonly callLinkageData?: OPTIONAL<CallLinkageData>;
+    /**
+     * @summary `extensions`.
+     * @description
+     *
+     * Optional `CSTACommonArguments` carrying the security and
+     * privateData parameters from the ECMA-269 service table.
+     *
+     * @public
+     * @readonly
+     */
+    public readonly extensions?: OPTIONAL<CSTACommonArguments>;
+
     constructor (
-        /**
-         * @summary `pickedCall`.
-         * @description
-         *
-         * Optional. Destination device's connection in the picked
-         * call (Connected).
-         *
-         * @public
-         * @readonly
-         */
-        readonly pickedCall?: OPTIONAL<ConnectionID>,
-        /**
-         * @summary `pickedCallInfo`.
-         * @description
-         *
-         * Optional connection information for `pickedCall`
-         * (§12.2.8).
-         *
-         * @public
-         * @readonly
-         */
-        readonly pickedCallInfo?: OPTIONAL<ConnectionInformation>,
-        /**
-         * @summary `callLinkageData`.
-         * @description
-         *
-         * Optional call-linkage identifiers (§12.2.5).
-         *
-         * @public
-         * @readonly
-         */
-        readonly callLinkageData?: OPTIONAL<CallLinkageData>,
-        /**
-         * @summary `extensions`.
-         * @description
-         *
-         * Optional `CSTACommonArguments` carrying the security and
-         * privateData parameters from the ECMA-269 service table.
-         *
-         * @public
-         * @readonly
-         */
-        readonly extensions?: OPTIONAL<CSTACommonArguments>
-    ) {}
+        pickedCall?: OPTIONAL<ConnectionID>,
+        pickedCallInfo?: OPTIONAL<ConnectionInformation>,
+        callLinkageData?: OPTIONAL<CallLinkageData>,
+        extensions?: OPTIONAL<CSTACommonArguments>
+    ) {
+        this.pickedCall = pickedCall;
+        this.pickedCallInfo = pickedCallInfo;
+        this.callLinkageData = callLinkageData;
+        this.extensions = extensions;
+    }
 
     /**
      * @summary Restructures an object into a GroupPickupCallResult

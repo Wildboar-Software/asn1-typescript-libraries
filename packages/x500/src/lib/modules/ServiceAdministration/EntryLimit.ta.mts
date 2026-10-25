@@ -1,9 +1,9 @@
 /* eslint-disable */
 import {
     ASN1ConstructionError as _ConstructionError,
-    ASN1Element as _Element,
+    type ASN1Element as _Element,
     ASN1TagClass as _TagClass,
-    INTEGER,
+    type INTEGER,
 } from "@wildboar/asn1";
 import * as $ from "@wildboar/asn1/functional";
 
@@ -26,26 +26,34 @@ import * as $ from "@wildboar/asn1/functional";
  *
  */
 export class EntryLimit {
+    /**
+     * @summary `default_`.
+     * @public
+     * @readonly
+     */
+    public readonly default_: INTEGER;
+    /**
+     * @summary `max`.
+     * @public
+     * @readonly
+     */
+    public readonly max: INTEGER;
+    /**
+     * @summary Extensions that are not recognized.
+     * @public
+     * @readonly
+     */
+    public readonly _unrecognizedExtensionsList: _Element[];
+
     constructor(
-        /**
-         * @summary `default_`.
-         * @public
-         * @readonly
-         */
-        readonly default_: INTEGER,
-        /**
-         * @summary `max`.
-         * @public
-         * @readonly
-         */
-        readonly max: INTEGER,
-        /**
-         * @summary Extensions that are not recognized.
-         * @public
-         * @readonly
-         */
-        readonly _unrecognizedExtensionsList: _Element[] = []
-    ) {}
+        default_: INTEGER,
+        max: INTEGER,
+        _unrecognizedExtensionsList: _Element[] = []
+    ) {
+        this.default_ = default_;
+        this.max = max;
+        this._unrecognizedExtensionsList = _unrecognizedExtensionsList;
+    }
 
     /**
      * @summary Restructures an object into a EntryLimit

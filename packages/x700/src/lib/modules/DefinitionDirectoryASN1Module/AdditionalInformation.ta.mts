@@ -1,9 +1,9 @@
 /* eslint-disable */
 import {
-    OPTIONAL,
-    GraphicString,
-    GeneralizedTime,
-    ASN1Element as _Element,
+    type OPTIONAL,
+    type GraphicString,
+    type GeneralizedTime,
+    type ASN1Element as _Element,
     ASN1TagClass as _TagClass,
     ASN1Construction as _Construction,
     ASN1UniversalType as _UniversalType,
@@ -35,26 +35,32 @@ import * as $ from '@wildboar/asn1/functional';
  *
  */
 export class AdditionalInformation {
+    /**
+     * @summary `creationDate`.
+     * @description
+     *
+     * When the definition information was created. Optional.
+     * @public
+     * @readonly
+     */
+    public readonly creationDate?: OPTIONAL<GeneralizedTime>;
+    /**
+     * @summary `comment`.
+     * @description
+     *
+     * Free-text comment on the definition. Optional.
+     * @public
+     * @readonly
+     */
+    public readonly comment?: OPTIONAL<GraphicString>;
+
     constructor(
-        /**
-         * @summary `creationDate`.
-         * @description
-         *
-         * When the definition information was created. Optional.
-         * @public
-         * @readonly
-         */
-        readonly creationDate?: OPTIONAL<GeneralizedTime>,
-        /**
-         * @summary `comment`.
-         * @description
-         *
-         * Free-text comment on the definition. Optional.
-         * @public
-         * @readonly
-         */
-        readonly comment?: OPTIONAL<GraphicString>
-    ) {}
+        creationDate?: OPTIONAL<GeneralizedTime>,
+        comment?: OPTIONAL<GraphicString>
+    ) {
+        this.creationDate = creationDate;
+        this.comment = comment;
+    }
 
     /**
      * @summary Restructures an object into a AdditionalInformation

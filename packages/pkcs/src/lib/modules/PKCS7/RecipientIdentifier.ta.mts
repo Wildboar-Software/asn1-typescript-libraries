@@ -7,7 +7,7 @@ import {
     _encode_IssuerAndSerialNumber,
 } from "../PKCS7/IssuerAndSerialNumber.ta.mjs";
 import {
-    SubjectKeyIdentifier,
+    type SubjectKeyIdentifier,
     _decode_SubjectKeyIdentifier,
     _encode_SubjectKeyIdentifier,
 } from "../PKCS7/SubjectKeyIdentifier.ta.mjs";

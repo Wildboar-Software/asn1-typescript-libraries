@@ -1,13 +1,13 @@
 /* eslint-disable */
 import {
-    OPTIONAL,
-    ASN1Element as _Element,
+    type OPTIONAL,
+    type ASN1Element as _Element,
     ASN1TagClass as _TagClass
 } from "@wildboar/asn1";
 import * as $ from "@wildboar/asn1/functional";
-import { AgreementFeatureIndicator, _decode_AgreementFeatureIndicator, _encode_AgreementFeatureIndicator } from "../IN-SCF-SCF-datatypes/AgreementFeatureIndicator.ta.mjs";
+import { type AgreementFeatureIndicator, _decode_AgreementFeatureIndicator, _encode_AgreementFeatureIndicator } from "../IN-SCF-SCF-datatypes/AgreementFeatureIndicator.ta.mjs";
 // export { AgreementFeatureIndicator, _decode_AgreementFeatureIndicator, _encode_AgreementFeatureIndicator } from "../IN-SCF-SCF-datatypes/AgreementFeatureIndicator.ta.mjs";
-import { STSIInformation, _decode_STSIInformation, _encode_STSIInformation } from "../IN-SCF-SCF-datatypes/STSIInformation.ta.mjs";
+import { type STSIInformation, _decode_STSIInformation, _encode_STSIInformation } from "../IN-SCF-SCF-datatypes/STSIInformation.ta.mjs";
 // export { STSIInformation, _decode_STSIInformation, _encode_STSIInformation } from "../IN-SCF-SCF-datatypes/STSIInformation.ta.mjs";
 
 

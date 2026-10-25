@@ -1,6 +1,6 @@
 /* eslint-disable */
 import {
-    ASN1Element as _Element,
+    type ASN1Element as _Element,
     ASN1TagClass as _TagClass,
     ASN1Construction as _Construction,
     ASN1UniversalType as _UniversalType,
@@ -28,20 +28,26 @@ import {
  *
  */
 export class WeekMask_intervalsOfDay_Item {
+    /**
+     * @summary `intervalStart`.
+     * @public
+     * @readonly
+     */
+    public readonly intervalStart: Time24;
+    /**
+     * @summary `intervalEnd`.
+     * @public
+     * @readonly
+     */
+    public readonly intervalEnd: Time24;
+
     constructor(
-        /**
-         * @summary `intervalStart`.
-         * @public
-         * @readonly
-         */
-        readonly intervalStart: Time24,
-        /**
-         * @summary `intervalEnd`.
-         * @public
-         * @readonly
-         */
-        readonly intervalEnd: Time24
-    ) {}
+        intervalStart: Time24,
+        intervalEnd: Time24
+    ) {
+        this.intervalStart = intervalStart;
+        this.intervalEnd = intervalEnd;
+    }
 
     /**
      * @summary Restructures an object into a WeekMask_intervalsOfDay_Item

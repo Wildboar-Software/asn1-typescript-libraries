@@ -1,6 +1,6 @@
 /* eslint-disable */
 import {
-  OBJECT_IDENTIFIER,
+  type OBJECT_IDENTIFIER,
   ASN1Element as _Element,
   ASN1TagClass as _TagClass,
   ASN1Construction as _Construction,
@@ -28,10 +28,10 @@ import * as $ from '@wildboar/asn1/functional';
 export type AuthPolicy = OBJECT_IDENTIFIER; // ObjectIdentifierType
 
 
-export const _decode_AuthPolicy = $._decodeObjectIdentifier;
+export const _decode_AuthPolicy: $.ASN1Decoder<_OID> = $._decodeObjectIdentifier;
 
 
-export const _encode_AuthPolicy = $._encodeObjectIdentifier;
+export const _encode_AuthPolicy: $.ASN1Encoder<_OID> = $._encodeObjectIdentifier;
 
 
 /* eslint-enable */

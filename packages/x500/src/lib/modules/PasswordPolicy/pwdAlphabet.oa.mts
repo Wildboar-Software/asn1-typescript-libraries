@@ -5,7 +5,7 @@ import {
 } from "../InformationFramework/AttributeUsage.ta.mjs";
 import { id_oa_pwdAlphabet } from "../PasswordPolicy/id-oa-pwdAlphabet.va.mjs";
 import {
-    PwdAlphabet,
+    type PwdAlphabet,
     _decode_PwdAlphabet,
     _encode_PwdAlphabet,
 } from "../PasswordPolicy/PwdAlphabet.ta.mjs";

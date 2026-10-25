@@ -2,33 +2,33 @@
 
 import * as $ from "@wildboar/asn1/functional";
 import {
-    OPTIONAL,
-    SEQUENCE,
-    SET,
-    ASN1Element as _Element,
+    type OPTIONAL,
+    type SEQUENCE,
+    type SET,
+    type ASN1Element as _Element,
     ASN1TagClass as _TagClass
 } from "@wildboar/asn1";
-import { ButtonInformation, _decode_ButtonInformation, _encode_ButtonInformation } from "../CSTA-capability-exchange/ButtonInformation.ta.mjs";
+import { type ButtonInformation, _decode_ButtonInformation, _encode_ButtonInformation } from "../CSTA-capability-exchange/ButtonInformation.ta.mjs";
 
-import { ButtonPressEvent, _decode_ButtonPressEvent, _encode_ButtonPressEvent } from "../CSTA-capability-exchange/ButtonPressEvent.ta.mjs";
+import { type ButtonPressEvent, _decode_ButtonPressEvent, _encode_ButtonPressEvent } from "../CSTA-capability-exchange/ButtonPressEvent.ta.mjs";
 
-import { DisplayUpdated, _decode_DisplayUpdated, _encode_DisplayUpdated } from "../CSTA-capability-exchange/DisplayUpdated.ta.mjs";
+import { type DisplayUpdated, _decode_DisplayUpdated, _encode_DisplayUpdated } from "../CSTA-capability-exchange/DisplayUpdated.ta.mjs";
 
-import { Hookswitch, _decode_Hookswitch, _encode_Hookswitch } from "../CSTA-capability-exchange/Hookswitch.ta.mjs";
+import { type Hookswitch, _decode_Hookswitch, _encode_Hookswitch } from "../CSTA-capability-exchange/Hookswitch.ta.mjs";
 
-import { LampMode, _decode_LampMode, _encode_LampMode } from "../CSTA-capability-exchange/LampMode.ta.mjs";
+import { type LampMode, _decode_LampMode, _encode_LampMode } from "../CSTA-capability-exchange/LampMode.ta.mjs";
 
-import { MessageWaiting, _decode_MessageWaiting, _encode_MessageWaiting } from "../CSTA-capability-exchange/MessageWaiting.ta.mjs";
+import { type MessageWaiting, _decode_MessageWaiting, _encode_MessageWaiting } from "../CSTA-capability-exchange/MessageWaiting.ta.mjs";
 
-import { MicrophoneGain, _decode_MicrophoneGain, _encode_MicrophoneGain } from "../CSTA-capability-exchange/MicrophoneGain.ta.mjs";
+import { type MicrophoneGain, _decode_MicrophoneGain, _encode_MicrophoneGain } from "../CSTA-capability-exchange/MicrophoneGain.ta.mjs";
 
-import { MicrophoneMute, _decode_MicrophoneMute, _encode_MicrophoneMute } from "../CSTA-capability-exchange/MicrophoneMute.ta.mjs";
+import { type MicrophoneMute, _decode_MicrophoneMute, _encode_MicrophoneMute } from "../CSTA-capability-exchange/MicrophoneMute.ta.mjs";
 
-import { RingerStatus, _decode_RingerStatus, _encode_RingerStatus } from "../CSTA-capability-exchange/RingerStatus.ta.mjs";
+import { type RingerStatus, _decode_RingerStatus, _encode_RingerStatus } from "../CSTA-capability-exchange/RingerStatus.ta.mjs";
 
-import { SpeakerMute, _decode_SpeakerMute, _encode_SpeakerMute } from "../CSTA-capability-exchange/SpeakerMute.ta.mjs";
+import { type SpeakerMute, _decode_SpeakerMute, _encode_SpeakerMute } from "../CSTA-capability-exchange/SpeakerMute.ta.mjs";
 
-import { SpeakerVolume, _decode_SpeakerVolume, _encode_SpeakerVolume } from "../CSTA-capability-exchange/SpeakerVolume.ta.mjs";
+import { type SpeakerVolume, _decode_SpeakerVolume, _encode_SpeakerVolume } from "../CSTA-capability-exchange/SpeakerVolume.ta.mjs";
 
 
 
@@ -46,16 +46,16 @@ import { SpeakerVolume, _decode_SpeakerVolume, _encode_SpeakerVolume } from "../
  * 
  * ```asn1
  * PhysDevEvtsList ::= SEQUENCE
- * {     buttonInformation         [ 0] IMPLICIT     ButtonInformation         OPTIONAL,
- *     buttonPress             [ 1] IMPLICIT     ButtonPressEvent         OPTIONAL,
- *     displayUpdated             [ 2] IMPLICIT     DisplayUpdated             OPTIONAL,
- *     hookswitch             [ 3] IMPLICIT     Hookswitch             OPTIONAL,
- *     lampMode             [ 4] IMPLICIT     LampMode             OPTIONAL,
- *     messageWaiting             [ 5] IMPLICIT     MessageWaiting             OPTIONAL,
- *     microphoneGain             [ 6] IMPLICIT     MicrophoneGain             OPTIONAL,
- *     microphoneMute             [ 7] IMPLICIT     MicrophoneMute             OPTIONAL,
- *     ringerStatus             [ 8] IMPLICIT     RingerStatus             OPTIONAL,
- *     speakerMute             [ 9] IMPLICIT     SpeakerMute             OPTIONAL,
+ * {     buttonInformation         [ 0] IMPLICIT     ButtonInformation         type OPTIONAL,
+ *     buttonPress             [ 1] IMPLICIT     ButtonPressEvent         type OPTIONAL,
+ *     displayUpdated             [ 2] IMPLICIT     DisplayUpdated             type OPTIONAL,
+ *     hookswitch             [ 3] IMPLICIT     Hookswitch             type OPTIONAL,
+ *     lampMode             [ 4] IMPLICIT     LampMode             type OPTIONAL,
+ *     messageWaiting             [ 5] IMPLICIT     MessageWaiting             type OPTIONAL,
+ *     microphoneGain             [ 6] IMPLICIT     MicrophoneGain             type OPTIONAL,
+ *     microphoneMute             [ 7] IMPLICIT     MicrophoneMute             type OPTIONAL,
+ *     ringerStatus             [ 8] IMPLICIT     RingerStatus             type OPTIONAL,
+ *     speakerMute             [ 9] IMPLICIT     SpeakerMute             type OPTIONAL,
  *     speakerVolume             [10] IMPLICIT     SpeakerVolume             OPTIONAL }
  * ```
  * 
@@ -63,107 +63,131 @@ import { SpeakerVolume, _decode_SpeakerVolume, _encode_SpeakerVolume } from "../
  */
 export
 class PhysDevEvtsList {
+    /**
+     * @summary `buttonInformation`.
+     * @public
+     * @readonly
+     * @description
+     * Capability bitmap for this event; omit if the SF does not support it
+     * (ECMA-269 Annex C).
+     */
+    public readonly buttonInformation?: OPTIONAL<ButtonInformation>;
+    /**
+     * @summary `buttonPress`.
+     * @public
+     * @readonly
+     * @description
+     * Capability bitmap for this event; omit if the SF does not support it
+     * (ECMA-269 Annex C).
+     */
+    public readonly buttonPress?: OPTIONAL<ButtonPressEvent>;
+    /**
+     * @summary `displayUpdated`.
+     * @public
+     * @readonly
+     * @description
+     * Capability bitmap for this event; omit if the SF does not support it
+     * (ECMA-269 Annex C).
+     */
+    public readonly displayUpdated?: OPTIONAL<DisplayUpdated>;
+    /**
+     * @summary `hookswitch`.
+     * @public
+     * @readonly
+     * @description
+     * Capability bitmap for this event; omit if the SF does not support it
+     * (ECMA-269 Annex C).
+     */
+    public readonly hookswitch?: OPTIONAL<Hookswitch>;
+    /**
+     * @summary `lampMode`.
+     * @public
+     * @readonly
+     * @description
+     * Capability bitmap for this event; omit if the SF does not support it
+     * (ECMA-269 Annex C).
+     */
+    public readonly lampMode?: OPTIONAL<LampMode>;
+    /**
+     * @summary `messageWaiting`.
+     * @public
+     * @readonly
+     * @description
+     * Capability bitmap for this event; omit if the SF does not support it
+     * (ECMA-269 Annex C).
+     */
+    public readonly messageWaiting?: OPTIONAL<MessageWaiting>;
+    /**
+     * @summary `microphoneGain`.
+     * @public
+     * @readonly
+     * @description
+     * Capability bitmap for this event; omit if the SF does not support it
+     * (ECMA-269 Annex C).
+     */
+    public readonly microphoneGain?: OPTIONAL<MicrophoneGain>;
+    /**
+     * @summary `microphoneMute`.
+     * @public
+     * @readonly
+     * @description
+     * Capability bitmap for this event; omit if the SF does not support it
+     * (ECMA-269 Annex C).
+     */
+    public readonly microphoneMute?: OPTIONAL<MicrophoneMute>;
+    /**
+     * @summary `ringerStatus`.
+     * @public
+     * @readonly
+     * @description
+     * Capability bitmap for this event; omit if the SF does not support it
+     * (ECMA-269 Annex C).
+     */
+    public readonly ringerStatus?: OPTIONAL<RingerStatus>;
+    /**
+     * @summary `speakerMute`.
+     * @public
+     * @readonly
+     * @description
+     * Capability bitmap for this event; omit if the SF does not support it
+     * (ECMA-269 Annex C).
+     */
+    public readonly speakerMute?: OPTIONAL<SpeakerMute>;
+    /**
+     * @summary `speakerVolume`.
+     * @public
+     * @readonly
+     * @description
+     * Capability bitmap for this event; omit if the SF does not support it
+     * (ECMA-269 Annex C).
+     */
+    public readonly speakerVolume?: OPTIONAL<SpeakerVolume>;
+
     constructor (
-        /**
-         * @summary `buttonInformation`.
-         * @public
-         * @readonly
-         * @description
-         * Capability bitmap for this event; omit if the SF does not support it
-         * (ECMA-269 Annex C).
-         */
-        readonly buttonInformation?: OPTIONAL<ButtonInformation>,
-        /**
-         * @summary `buttonPress`.
-         * @public
-         * @readonly
-         * @description
-         * Capability bitmap for this event; omit if the SF does not support it
-         * (ECMA-269 Annex C).
-         */
-        readonly buttonPress?: OPTIONAL<ButtonPressEvent>,
-        /**
-         * @summary `displayUpdated`.
-         * @public
-         * @readonly
-         * @description
-         * Capability bitmap for this event; omit if the SF does not support it
-         * (ECMA-269 Annex C).
-         */
-        readonly displayUpdated?: OPTIONAL<DisplayUpdated>,
-        /**
-         * @summary `hookswitch`.
-         * @public
-         * @readonly
-         * @description
-         * Capability bitmap for this event; omit if the SF does not support it
-         * (ECMA-269 Annex C).
-         */
-        readonly hookswitch?: OPTIONAL<Hookswitch>,
-        /**
-         * @summary `lampMode`.
-         * @public
-         * @readonly
-         * @description
-         * Capability bitmap for this event; omit if the SF does not support it
-         * (ECMA-269 Annex C).
-         */
-        readonly lampMode?: OPTIONAL<LampMode>,
-        /**
-         * @summary `messageWaiting`.
-         * @public
-         * @readonly
-         * @description
-         * Capability bitmap for this event; omit if the SF does not support it
-         * (ECMA-269 Annex C).
-         */
-        readonly messageWaiting?: OPTIONAL<MessageWaiting>,
-        /**
-         * @summary `microphoneGain`.
-         * @public
-         * @readonly
-         * @description
-         * Capability bitmap for this event; omit if the SF does not support it
-         * (ECMA-269 Annex C).
-         */
-        readonly microphoneGain?: OPTIONAL<MicrophoneGain>,
-        /**
-         * @summary `microphoneMute`.
-         * @public
-         * @readonly
-         * @description
-         * Capability bitmap for this event; omit if the SF does not support it
-         * (ECMA-269 Annex C).
-         */
-        readonly microphoneMute?: OPTIONAL<MicrophoneMute>,
-        /**
-         * @summary `ringerStatus`.
-         * @public
-         * @readonly
-         * @description
-         * Capability bitmap for this event; omit if the SF does not support it
-         * (ECMA-269 Annex C).
-         */
-        readonly ringerStatus?: OPTIONAL<RingerStatus>,
-        /**
-         * @summary `speakerMute`.
-         * @public
-         * @readonly
-         * @description
-         * Capability bitmap for this event; omit if the SF does not support it
-         * (ECMA-269 Annex C).
-         */
-        readonly speakerMute?: OPTIONAL<SpeakerMute>,
-        /**
-         * @summary `speakerVolume`.
-         * @public
-         * @readonly
-         * @description
-         * Capability bitmap for this event; omit if the SF does not support it
-         * (ECMA-269 Annex C).
-         */
-        readonly speakerVolume?: OPTIONAL<SpeakerVolume>
-    ) {}
+        buttonInformation?: OPTIONAL<ButtonInformation>,
+        buttonPress?: OPTIONAL<ButtonPressEvent>,
+        displayUpdated?: OPTIONAL<DisplayUpdated>,
+        hookswitch?: OPTIONAL<Hookswitch>,
+        lampMode?: OPTIONAL<LampMode>,
+        messageWaiting?: OPTIONAL<MessageWaiting>,
+        microphoneGain?: OPTIONAL<MicrophoneGain>,
+        microphoneMute?: OPTIONAL<MicrophoneMute>,
+        ringerStatus?: OPTIONAL<RingerStatus>,
+        speakerMute?: OPTIONAL<SpeakerMute>,
+        speakerVolume?: OPTIONAL<SpeakerVolume>
+    ) {
+        this.buttonInformation = buttonInformation;
+        this.buttonPress = buttonPress;
+        this.displayUpdated = displayUpdated;
+        this.hookswitch = hookswitch;
+        this.lampMode = lampMode;
+        this.messageWaiting = messageWaiting;
+        this.microphoneGain = microphoneGain;
+        this.microphoneMute = microphoneMute;
+        this.ringerStatus = ringerStatus;
+        this.speakerMute = speakerMute;
+        this.speakerVolume = speakerVolume;
+    }
 
     /**
      * @summary Restructures an object into a PhysDevEvtsList

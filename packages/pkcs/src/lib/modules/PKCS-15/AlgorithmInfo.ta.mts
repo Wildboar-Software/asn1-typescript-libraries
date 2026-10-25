@@ -1,14 +1,14 @@
 /* eslint-disable */
 import {
-    ASN1Element as _Element,
+    type ASN1Element as _Element,
     ASN1TagClass as _TagClass,
-    INTEGER,
-    OBJECT_IDENTIFIER,
-    OPTIONAL,
+    type INTEGER,
+    type OBJECT_IDENTIFIER,
+    type OPTIONAL,
 } from "@wildboar/asn1";
 import * as $ from "@wildboar/asn1/functional";
 import {
-    Reference,
+    type Reference,
     _decode_Reference,
     _encode_Reference,
 } from "../PKCS-15/Reference.ta.mjs";
@@ -32,44 +32,58 @@ import {
  *
  */
 export class AlgorithmInfo {
+    /**
+     * @summary `reference`.
+     * @public
+     * @readonly
+     */
+    public readonly reference: Reference;
+    /**
+     * @summary `algorithm`.
+     * @public
+     * @readonly
+     */
+    public readonly algorithm: INTEGER;
+    /**
+     * @summary `parameters`.
+     * @public
+     * @readonly
+     */
+    public readonly parameters: _Element;
+    /**
+     * @summary `supportedOperations`.
+     * @public
+     * @readonly
+     */
+    public readonly supportedOperations: _Element;
+    /**
+     * @summary `algId`.
+     * @public
+     * @readonly
+     */
+    public readonly algId?: OPTIONAL<OBJECT_IDENTIFIER>;
+    /**
+     * @summary `algRef`.
+     * @public
+     * @readonly
+     */
+    public readonly algRef?: OPTIONAL<Reference>;
+
     constructor(
-        /**
-         * @summary `reference`.
-         * @public
-         * @readonly
-         */
-        readonly reference: Reference,
-        /**
-         * @summary `algorithm`.
-         * @public
-         * @readonly
-         */
-        readonly algorithm: INTEGER,
-        /**
-         * @summary `parameters`.
-         * @public
-         * @readonly
-         */
-        readonly parameters: _Element,
-        /**
-         * @summary `supportedOperations`.
-         * @public
-         * @readonly
-         */
-        readonly supportedOperations: _Element,
-        /**
-         * @summary `algId`.
-         * @public
-         * @readonly
-         */
-        readonly algId?: OPTIONAL<OBJECT_IDENTIFIER>,
-        /**
-         * @summary `algRef`.
-         * @public
-         * @readonly
-         */
-        readonly algRef?: OPTIONAL<Reference>
-    ) {}
+        reference: Reference,
+        algorithm: INTEGER,
+        parameters: _Element,
+        supportedOperations: _Element,
+        algId?: OPTIONAL<OBJECT_IDENTIFIER>,
+        algRef?: OPTIONAL<Reference>
+    ) {
+        this.reference = reference;
+        this.algorithm = algorithm;
+        this.parameters = parameters;
+        this.supportedOperations = supportedOperations;
+        this.algId = algId;
+        this.algRef = algRef;
+    }
 
     /**
      * @summary Restructures an object into a AlgorithmInfo

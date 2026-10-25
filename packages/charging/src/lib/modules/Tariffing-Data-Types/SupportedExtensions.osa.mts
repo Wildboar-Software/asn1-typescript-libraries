@@ -1,5 +1,5 @@
 /* eslint-disable */
-import { EXTENSION } from "../Tariffing-Data-Types/EXTENSION.oca.mjs";
+import { type EXTENSION } from "../Tariffing-Data-Types/EXTENSION.oca.mjs";
 import { firstExtension } from "../Tariffing-Data-Types/firstExtension.oa.mjs";
 
 

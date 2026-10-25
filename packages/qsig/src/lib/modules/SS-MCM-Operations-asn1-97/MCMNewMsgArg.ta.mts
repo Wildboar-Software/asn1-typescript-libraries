@@ -1,18 +1,18 @@
 /* eslint-disable */
 import {
-    INTEGER,
-    OPTIONAL,
-    ASN1Element as _Element,
+    type INTEGER,
+    type OPTIONAL,
+    type ASN1Element as _Element,
     ASN1TagClass as _TagClass,
     ASN1OverflowError,
 } from "@wildboar/asn1";
 import * as $ from "@wildboar/asn1/functional";
-import { PartyNumber, _decode_PartyNumber, _encode_PartyNumber } from "../Addressing-Data-Elements-asn1-97/PartyNumber.ta.mjs";
+import { type PartyNumber, _decode_PartyNumber, _encode_PartyNumber } from "../Addressing-Data-Elements-asn1-97/PartyNumber.ta.mjs";
 import { MessageType, _decode_MessageType, _encode_MessageType, _enum_for_MessageType } from "../SS-MCM-Operations-asn1-97/MessageType.ta.mjs";
-import { MsgCentreId, _decode_MsgCentreId, _encode_MsgCentreId } from "../SS-MCM-Operations-asn1-97/MsgCentreId.ta.mjs";
-import { NrOfMessages, _decode_NrOfMessages, _encode_NrOfMessages } from "../SS-MCM-Operations-asn1-97/NrOfMessages.ta.mjs";
-import { TimeStamp, _decode_TimeStamp, _encode_TimeStamp } from "../SS-MCM-Operations-asn1-97/TimeStamp.ta.mjs";
-import { MCMNewMsgArg_argumentExt, _decode_MCMNewMsgArg_argumentExt, _encode_MCMNewMsgArg_argumentExt } from "../SS-MCM-Operations-asn1-97/MCMNewMsgArg-argumentExt.ta.mjs";
+import { type MsgCentreId, _decode_MsgCentreId, _encode_MsgCentreId } from "../SS-MCM-Operations-asn1-97/MsgCentreId.ta.mjs";
+import { type NrOfMessages, _decode_NrOfMessages, _encode_NrOfMessages } from "../SS-MCM-Operations-asn1-97/NrOfMessages.ta.mjs";
+import { type TimeStamp, _decode_TimeStamp, _encode_TimeStamp } from "../SS-MCM-Operations-asn1-97/TimeStamp.ta.mjs";
+import { type MCMNewMsgArg_argumentExt, _decode_MCMNewMsgArg_argumentExt, _encode_MCMNewMsgArg_argumentExt } from "../SS-MCM-Operations-asn1-97/MCMNewMsgArg-argumentExt.ta.mjs";
 
 /**
  * @summary MCMNewMsgArg
@@ -188,7 +188,7 @@ class MCMNewMsgArg {
          * @static
          */
 
-    public static _enum_for_specificMessageType = _enum_for_MessageType;
+    public static _enum_for_specificMessageType: typeof _enum_for_MessageType = _enum_for_MessageType;
 }
 
 /**

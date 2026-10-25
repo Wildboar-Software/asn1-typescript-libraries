@@ -1,5 +1,5 @@
 /* eslint-disable */
-import { ASN1Element as _Element, BIT_STRING } from "@wildboar/asn1";
+import { ASN1Element as _Element, type BIT_STRING } from "@wildboar/asn1";
 import * as $ from "@wildboar/asn1/functional";
 
 /**
@@ -248,10 +248,10 @@ export const HierarchySelections_all: number = 9; /* LONG_NAMED_BIT */
 export const all: number = HierarchySelections_all; /* SHORT_NAMED_BIT */
 
 
-export const _decode_HierarchySelections = $._decodeBitString;
+export const _decode_HierarchySelections: $.ASN1Decoder<BIT_STRING> = $._decodeBitString;
 
 
-export const _encode_HierarchySelections = $._encodeBitString;
+export const _encode_HierarchySelections: $.ASN1Encoder<BIT_STRING> = $._encodeBitString;
 
 
 /* eslint-enable */

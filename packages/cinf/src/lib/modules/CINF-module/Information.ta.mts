@@ -1,6 +1,6 @@
 /* eslint-disable */
 import {
-  INTEGER,
+  type INTEGER,
   ASN1Element as _Element,
   ASN1TagClass as _TagClass,
   ASN1Construction as _Construction,
@@ -49,7 +49,7 @@ export class Information {
    * @public
    * @readonly
    */
-  readonly disclosedChildren: ChildDetails[];
+  public readonly disclosedChildren: ChildDetails[];
   /**
    * @summary `otherChildren`.
    * @description
@@ -62,7 +62,7 @@ export class Information {
    * @public
    * @readonly
    */
-  readonly otherChildren: INTEGER;
+  public readonly otherChildren: INTEGER;
 
   constructor(
     disclosedChildren: ChildDetails[],

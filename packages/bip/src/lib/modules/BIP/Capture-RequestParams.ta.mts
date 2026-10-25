@@ -1,7 +1,7 @@
 /* eslint-disable */
 import {
-  OPTIONAL,
-  BOOLEAN,
+  type OPTIONAL,
+  type BOOLEAN,
   ASN1Element as _Element,
   ASN1TagClass as _TagClass,
   ASN1Construction as _Construction,
@@ -13,18 +13,18 @@ import {
 } from '@wildboar/asn1';
 import * as $ from '@wildboar/asn1/functional';
 import {
-  BioAPI_HANDLE,
+  type BioAPI_HANDLE,
   _decode_BioAPI_HANDLE,
   _encode_BioAPI_HANDLE,
 } from '../BIP/BioAPI-HANDLE.ta.mjs';
 import {
-  BioAPI_BIR_PURPOSE,
+  type BioAPI_BIR_PURPOSE,
   _enum_for_BioAPI_BIR_PURPOSE,
   _decode_BioAPI_BIR_PURPOSE,
   _encode_BioAPI_BIR_PURPOSE,
 } from '../BIP/BioAPI-BIR-PURPOSE.ta.mjs';
 import {
-  BioAPI_BIR_SUBTYPE,
+  type BioAPI_BIR_SUBTYPE,
   _decode_BioAPI_BIR_SUBTYPE,
   _encode_BioAPI_BIR_SUBTYPE,
 } from '../BIP/BioAPI-BIR-SUBTYPE.ta.mjs';
@@ -34,7 +34,7 @@ import {
   _encode_BioAPI_BIR_BIOMETRIC_DATA_FORMAT,
 } from '../BIP/BioAPI-BIR-BIOMETRIC-DATA-FORMAT.ta.mjs';
 import {
-  SignedInt,
+  type SignedInt,
   _decode_SignedInt,
   _encode_SignedInt,
 } from '../BIP/SignedInt.ta.mjs';
@@ -74,7 +74,7 @@ export class Capture_RequestParams {
    * @public
    * @readonly
    */
-  readonly originalBSPHandle: BioAPI_HANDLE;
+  public readonly originalBSPHandle: BioAPI_HANDLE;
   /**
    * @summary `purpose`.
    * @description
@@ -85,7 +85,7 @@ export class Capture_RequestParams {
    * @public
    * @readonly
    */
-  readonly purpose: BioAPI_BIR_PURPOSE;
+  public readonly purpose: BioAPI_BIR_PURPOSE;
   /**
    * @summary `subtype`.
    * @description
@@ -96,7 +96,7 @@ export class Capture_RequestParams {
    * @public
    * @readonly
    */
-  readonly subtype: BioAPI_BIR_SUBTYPE;
+  public readonly subtype: BioAPI_BIR_SUBTYPE;
   /**
    * @summary `outputFormat`.
    * @description
@@ -108,7 +108,7 @@ export class Capture_RequestParams {
    * @public
    * @readonly
    */
-  readonly outputFormat: OPTIONAL<BioAPI_BIR_BIOMETRIC_DATA_FORMAT>;
+  public readonly outputFormat: OPTIONAL<BioAPI_BIR_BIOMETRIC_DATA_FORMAT>;
   /**
    * @summary `timeout`.
    * @description
@@ -118,7 +118,7 @@ export class Capture_RequestParams {
    * @public
    * @readonly
    */
-  readonly timeout: SignedInt;
+  public readonly timeout: SignedInt;
   /**
    * @summary `no_auditData`.
    * @description
@@ -130,7 +130,7 @@ export class Capture_RequestParams {
    * @public
    * @readonly
    */
-  readonly no_auditData: BOOLEAN;
+  public readonly no_auditData: BOOLEAN;
 
   constructor(
     originalBSPHandle: BioAPI_HANDLE,
@@ -179,7 +179,7 @@ export class Capture_RequestParams {
    * @static
    */
 
-  public static _enum_for_purpose = _enum_for_BioAPI_BIR_PURPOSE;
+  public static _enum_for_purpose: typeof _enum_for_BioAPI_BIR_PURPOSE = _enum_for_BioAPI_BIR_PURPOSE;
 }
 
 

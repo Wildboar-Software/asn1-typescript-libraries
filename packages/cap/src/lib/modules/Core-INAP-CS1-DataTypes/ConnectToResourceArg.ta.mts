@@ -1,7 +1,7 @@
 /* eslint-disable */
 import {
-    OPTIONAL,
-    ASN1Element as _Element,
+    type OPTIONAL,
+    type ASN1Element as _Element,
     ASN1TagClass as _TagClass,
     ASN1Construction as _Construction,
     ASN1UniversalType as _UniversalType,
@@ -11,9 +11,9 @@ import {
     ASN1ConstructionError as _ConstructionError,
 } from "@wildboar/asn1";
 import * as $ from "@wildboar/asn1/functional";
-import { ConnectToResourceArg_resourceAddress, _decode_ConnectToResourceArg_resourceAddress, _encode_ConnectToResourceArg_resourceAddress } from "../Core-INAP-CS1-DataTypes/ConnectToResourceArg-resourceAddress.ta.mjs";
+import { type ConnectToResourceArg_resourceAddress, _decode_ConnectToResourceArg_resourceAddress, _encode_ConnectToResourceArg_resourceAddress } from "../Core-INAP-CS1-DataTypes/ConnectToResourceArg-resourceAddress.ta.mjs";
 import { ExtensionField, _decode_ExtensionField, _encode_ExtensionField } from "../Core-INAP-CS1-DataTypes/ExtensionField.ta.mjs";
-import { ServiceInteractionIndicators, _decode_ServiceInteractionIndicators, _encode_ServiceInteractionIndicators } from "../Core-INAP-CS1-DataTypes/ServiceInteractionIndicators.ta.mjs";
+import { type ServiceInteractionIndicators, _decode_ServiceInteractionIndicators, _encode_ServiceInteractionIndicators } from "../Core-INAP-CS1-DataTypes/ServiceInteractionIndicators.ta.mjs";
 
 
 /**
@@ -28,7 +28,7 @@ import { ServiceInteractionIndicators, _decode_ServiceInteractionIndicators, _en
  *           ipRoutingAddress     [0] IPRoutingAddress,
  *           none     [3] NULL
  *           },
- *      extensions     [4] SEQUENCE SIZE(1..numOfExtensions) OF ExtensionField     OPTIONAL,
+ *      extensions     [4] SEQUENCE SIZE(1..numOfExtensions) OF ExtensionField     type OPTIONAL,
  *      serviceInteractionIndicators     [30] ServiceInteractionIndicators     OPTIONAL
  * --  ...
  *      }
@@ -38,26 +38,34 @@ import { ServiceInteractionIndicators, _decode_ServiceInteractionIndicators, _en
  */
 export
 class ConnectToResourceArg {
+    /**
+     * @summary `resourceAddress`.
+     * @public
+     * @readonly
+     */
+    public readonly resourceAddress: ConnectToResourceArg_resourceAddress;
+    /**
+     * @summary `extensions`.
+     * @public
+     * @readonly
+     */
+    public readonly extensions?: OPTIONAL<ExtensionField[]>;
+    /**
+     * @summary `serviceInteractionIndicators`.
+     * @public
+     * @readonly
+     */
+    public readonly serviceInteractionIndicators?: OPTIONAL<ServiceInteractionIndicators>;
+
     constructor (
-        /**
-         * @summary `resourceAddress`.
-         * @public
-         * @readonly
-         */
-        readonly resourceAddress: ConnectToResourceArg_resourceAddress,
-        /**
-         * @summary `extensions`.
-         * @public
-         * @readonly
-         */
-        readonly extensions?: OPTIONAL<ExtensionField[]>,
-        /**
-         * @summary `serviceInteractionIndicators`.
-         * @public
-         * @readonly
-         */
-        readonly serviceInteractionIndicators?: OPTIONAL<ServiceInteractionIndicators>
-    ) {}
+        resourceAddress: ConnectToResourceArg_resourceAddress,
+        extensions?: OPTIONAL<ExtensionField[]>,
+        serviceInteractionIndicators?: OPTIONAL<ServiceInteractionIndicators>
+    ) {
+        this.resourceAddress = resourceAddress;
+        this.extensions = extensions;
+        this.serviceInteractionIndicators = serviceInteractionIndicators;
+    }
 
     /**
      * @summary Restructures an object into a ConnectToResourceArg

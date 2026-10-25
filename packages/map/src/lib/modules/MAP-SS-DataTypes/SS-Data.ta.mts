@@ -1,16 +1,16 @@
 /* eslint-disable */
 import {
-    OPTIONAL,
-    ASN1Element as _Element,
+    type OPTIONAL,
+    type ASN1Element as _Element,
     ASN1TagClass as _TagClass
 } from "@wildboar/asn1";
 import * as $ from "@wildboar/asn1/functional";
-import { EMLPP_Priority, _decode_EMLPP_Priority, _encode_EMLPP_Priority } from "../MAP-CommonDataTypes/EMLPP-Priority.ta.mjs";
-import { MC_Bearers, _decode_MC_Bearers, _encode_MC_Bearers } from "../MAP-CommonDataTypes/MC-Bearers.ta.mjs";
-import { SS_Code, _decode_SS_Code, _encode_SS_Code } from "../MAP-SS-Code/SS-Code.ta.mjs";
-import { BasicServiceGroupList, _decode_BasicServiceGroupList, _encode_BasicServiceGroupList } from "../MAP-SS-DataTypes/BasicServiceGroupList.ta.mjs";
-import { SS_Status, _decode_SS_Status, _encode_SS_Status } from "../MAP-SS-DataTypes/SS-Status.ta.mjs";
-import { SS_SubscriptionOption, _decode_SS_SubscriptionOption, _encode_SS_SubscriptionOption } from "../MAP-SS-DataTypes/SS-SubscriptionOption.ta.mjs";
+import { type EMLPP_Priority, _decode_EMLPP_Priority, _encode_EMLPP_Priority } from "../MAP-CommonDataTypes/EMLPP-Priority.ta.mjs";
+import { type MC_Bearers, _decode_MC_Bearers, _encode_MC_Bearers } from "../MAP-CommonDataTypes/MC-Bearers.ta.mjs";
+import { type SS_Code, _decode_SS_Code, _encode_SS_Code } from "../MAP-SS-Code/SS-Code.ta.mjs";
+import { type BasicServiceGroupList, _decode_BasicServiceGroupList, _encode_BasicServiceGroupList } from "../MAP-SS-DataTypes/BasicServiceGroupList.ta.mjs";
+import { type SS_Status, _decode_SS_Status, _encode_SS_Status } from "../MAP-SS-DataTypes/SS-Status.ta.mjs";
+import { type SS_SubscriptionOption, _decode_SS_SubscriptionOption, _encode_SS_SubscriptionOption } from "../MAP-SS-DataTypes/SS-SubscriptionOption.ta.mjs";
 
 
 /**
@@ -24,12 +24,12 @@ import { SS_SubscriptionOption, _decode_SS_SubscriptionOption, _encode_SS_Subscr
  * 
  * ```asn1
  * SS-Data ::= SEQUENCE {
- *     ss-Code    SS-Code    OPTIONAL,
- *     ss-Status    [4] SS-Status    OPTIONAL,
- *     ss-SubscriptionOption    SS-SubscriptionOption    OPTIONAL,
- *     basicServiceGroupList    BasicServiceGroupList    OPTIONAL,
+ *     ss-Code    SS-Code    type OPTIONAL,
+ *     ss-Status    [4] SS-Status    type OPTIONAL,
+ *     ss-SubscriptionOption    SS-SubscriptionOption    type OPTIONAL,
+ *     basicServiceGroupList    BasicServiceGroupList    type OPTIONAL,
  *     ...,
- *     defaultPriority    EMLPP-Priority    OPTIONAL,
+ *     defaultPriority    EMLPP-Priority    type OPTIONAL,
  *     nbrUser    [5] MC-Bearers    OPTIONAL
  *     }
  * ```
@@ -38,74 +38,90 @@ import { SS_SubscriptionOption, _decode_SS_SubscriptionOption, _encode_SS_Subscr
  */
 export
 class SS_Data {
+    /**
+     * @summary `ss_Code`.
+     * @description
+     *
+     * SS-Code (clause 7.6.4.1).
+     *
+     * @public
+     * @readonly
+     */
+    public readonly ss_Code?: OPTIONAL<SS_Code>;
+    /**
+     * @summary `ss_Status`.
+     * @description
+     *
+     * SS-Status if applicable (clause 7.6.4.2).
+     *
+     * @public
+     * @readonly
+     */
+    public readonly ss_Status?: OPTIONAL<SS_Status>;
+    /**
+     * @summary `ss_SubscriptionOption`.
+     * @description
+     *
+     * Override category or CLI restriction (clauses 7.6.4.4–7.6.4.5).
+     *
+     * @public
+     * @readonly
+     */
+    public readonly ss_SubscriptionOption?: OPTIONAL<SS_SubscriptionOption>;
+    /**
+     * @summary `basicServiceGroupList`.
+     * @description
+     *
+     * Basic Service Group codes (clause 7.6.4.40).
+     *
+     * @public
+     * @readonly
+     */
+    public readonly basicServiceGroupList?: OPTIONAL<BasicServiceGroupList>;
+    /**
+     * @summary `defaultPriority`.
+     * @description
+     *
+     * Default eMLPP priority.
+     *
+     * @public
+     * @readonly
+     */
+    public readonly defaultPriority?: OPTIONAL<EMLPP_Priority>;
+    /**
+     * @summary `nbrUser`.
+     * @description
+     *
+     * Multicall bearers.
+     *
+     * @public
+     * @readonly
+     */
+    public readonly nbrUser?: OPTIONAL<MC_Bearers>;
+    /**
+     * @summary Extensions that are not recognized.
+     * @public
+     * @readonly
+     */
+    public readonly _unrecognizedExtensionsList: _Element[];
+
     constructor (
-        /**
-         * @summary `ss_Code`.
-         * @description
-         *
-         * SS-Code (clause 7.6.4.1).
-         *
-         * @public
-         * @readonly
-         */
-        readonly ss_Code?: OPTIONAL<SS_Code>,
-        /**
-         * @summary `ss_Status`.
-         * @description
-         *
-         * SS-Status if applicable (clause 7.6.4.2).
-         *
-         * @public
-         * @readonly
-         */
-        readonly ss_Status?: OPTIONAL<SS_Status>,
-        /**
-         * @summary `ss_SubscriptionOption`.
-         * @description
-         *
-         * Override category or CLI restriction (clauses 7.6.4.4–7.6.4.5).
-         *
-         * @public
-         * @readonly
-         */
-        readonly ss_SubscriptionOption?: OPTIONAL<SS_SubscriptionOption>,
-        /**
-         * @summary `basicServiceGroupList`.
-         * @description
-         *
-         * Basic Service Group codes (clause 7.6.4.40).
-         *
-         * @public
-         * @readonly
-         */
-        readonly basicServiceGroupList?: OPTIONAL<BasicServiceGroupList>,
-        /**
-         * @summary `defaultPriority`.
-         * @description
-         *
-         * Default eMLPP priority.
-         *
-         * @public
-         * @readonly
-         */
-        readonly defaultPriority?: OPTIONAL<EMLPP_Priority>,
-        /**
-         * @summary `nbrUser`.
-         * @description
-         *
-         * Multicall bearers.
-         *
-         * @public
-         * @readonly
-         */
-        readonly nbrUser?: OPTIONAL<MC_Bearers>,
-        /**
-         * @summary Extensions that are not recognized.
-         * @public
-         * @readonly
-         */
-        readonly _unrecognizedExtensionsList: _Element[] = []
-    ) {}
+        ss_Code?: OPTIONAL<SS_Code>,
+        ss_Status?: OPTIONAL<SS_Status>,
+        ss_SubscriptionOption?: OPTIONAL<SS_SubscriptionOption>,
+        basicServiceGroupList?: OPTIONAL<BasicServiceGroupList>,
+        defaultPriority?: OPTIONAL<EMLPP_Priority>,
+        nbrUser?: OPTIONAL<MC_Bearers>,
+        _unrecognizedExtensionsList: _Element[] = []
+    ) {
+        this.ss_Code = ss_Code;
+        this.ss_Status = ss_Status;
+        this.ss_SubscriptionOption = ss_SubscriptionOption;
+        this.basicServiceGroupList = basicServiceGroupList;
+        this.defaultPriority = defaultPriority;
+        this.nbrUser = nbrUser;
+        this._unrecognizedExtensionsList = _unrecognizedExtensionsList;
+    }
 
     /**
      * @summary Restructures an object into a SS_Data

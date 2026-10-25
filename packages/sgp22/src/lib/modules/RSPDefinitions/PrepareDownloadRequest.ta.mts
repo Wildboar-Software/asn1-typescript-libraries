@@ -1,13 +1,13 @@
 /* eslint-disable */
 import {
-    OCTET_STRING,
-    OPTIONAL,
-    ASN1Element as _Element,
+    type OCTET_STRING,
+    type OPTIONAL,
+    type ASN1Element as _Element,
     ASN1TagClass as _TagClass
 } from "@wildboar/asn1";
 import * as $ from "@wildboar/asn1/functional";
 import { SmdpSigned2, _decode_SmdpSigned2, _encode_SmdpSigned2 } from "../RSPDefinitions/SmdpSigned2.ta.mjs";
-import { Octet32, _decode_Octet32, _encode_Octet32 } from "../RSPDefinitions/Octet32.ta.mjs";
+import { type Octet32, _decode_Octet32, _encode_Octet32 } from "../RSPDefinitions/Octet32.ta.mjs";
 import { type Certificate, _decode_Certificate, _encode_Certificate } from "@wildboar/pki-stub";
 
 
@@ -46,7 +46,7 @@ class PrepareDownloadRequest {
      * @public
      * @readonly
      */
-    readonly smdpSigned2: SmdpSigned2;
+    public readonly smdpSigned2: SmdpSigned2;
     /**
      * @summary `smdpSignature2`.
      * @description
@@ -57,7 +57,7 @@ class PrepareDownloadRequest {
      * @public
      * @readonly
      */
-    readonly smdpSignature2: OCTET_STRING;
+    public readonly smdpSignature2: OCTET_STRING;
     /**
      * @summary `hashCc`.
      * @description
@@ -69,7 +69,7 @@ class PrepareDownloadRequest {
      * @public
      * @readonly
      */
-    readonly hashCc: OPTIONAL<Octet32>;
+    public readonly hashCc: OPTIONAL<Octet32>;
     /**
      * @summary `smdpCertificate`.
      * @description
@@ -81,7 +81,7 @@ class PrepareDownloadRequest {
      * @public
      * @readonly
      */
-    readonly smdpCertificate: Certificate;
+    public readonly smdpCertificate: Certificate;
 
     constructor (
         smdpSigned2: SmdpSigned2,

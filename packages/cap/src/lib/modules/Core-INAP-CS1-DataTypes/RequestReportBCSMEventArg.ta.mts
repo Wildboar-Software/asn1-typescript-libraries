@@ -1,7 +1,7 @@
 /* eslint-disable */
 import {
-    OPTIONAL,
-    ASN1Element as _Element,
+    type OPTIONAL,
+    type ASN1Element as _Element,
     ASN1TagClass as _TagClass,
     ASN1Construction as _Construction,
     ASN1UniversalType as _UniversalType,
@@ -33,20 +33,26 @@ import { ExtensionField, _decode_ExtensionField, _encode_ExtensionField } from "
  */
 export
 class RequestReportBCSMEventArg {
+    /**
+     * @summary `bcsmEvents`.
+     * @public
+     * @readonly
+     */
+    public readonly bcsmEvents: BCSMEvent[];
+    /**
+     * @summary `extensions`.
+     * @public
+     * @readonly
+     */
+    public readonly extensions?: OPTIONAL<ExtensionField[]>;
+
     constructor (
-        /**
-         * @summary `bcsmEvents`.
-         * @public
-         * @readonly
-         */
-        readonly bcsmEvents: BCSMEvent[],
-        /**
-         * @summary `extensions`.
-         * @public
-         * @readonly
-         */
-        readonly extensions?: OPTIONAL<ExtensionField[]>
-    ) {}
+        bcsmEvents: BCSMEvent[],
+        extensions?: OPTIONAL<ExtensionField[]>
+    ) {
+        this.bcsmEvents = bcsmEvents;
+        this.extensions = extensions;
+    }
 
     /**
      * @summary Restructures an object into a RequestReportBCSMEventArg

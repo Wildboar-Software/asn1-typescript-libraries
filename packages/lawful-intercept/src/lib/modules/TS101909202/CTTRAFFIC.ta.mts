@@ -1,13 +1,13 @@
 /* eslint-disable */
 import {
-    BIT_STRING,
-    INTEGER,
-    OPTIONAL,
-    ASN1Element as _Element,
+    type BIT_STRING,
+    type INTEGER,
+    type OPTIONAL,
+    type ASN1Element as _Element,
     ASN1TagClass as _TagClass
 } from "@wildboar/asn1";
 import * as $ from "@wildboar/asn1/functional";
-import { LIIDType, _decode_LIIDType, _encode_LIIDType } from "../TS101909202/LIIDType.ta.mjs";
+import { type LIIDType, _decode_LIIDType, _encode_LIIDType } from "../TS101909202/LIIDType.ta.mjs";
 // export { LIIDType, _decode_LIIDType, _encode_LIIDType } from "../TS101909202/LIIDType.ta.mjs";
 
 

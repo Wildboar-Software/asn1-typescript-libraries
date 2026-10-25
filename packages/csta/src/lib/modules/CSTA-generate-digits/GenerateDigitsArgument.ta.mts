@@ -2,15 +2,15 @@
 
 import * as $ from "@wildboar/asn1/functional";
 import {
-    OPTIONAL,
-    INTEGER,
-    SEQUENCE,
-    SET,
-    IA5String,
-    ASN1Element as _Element,
+    type OPTIONAL,
+    type INTEGER,
+    type SEQUENCE,
+    type SET,
+    type IA5String,
+    type ASN1Element as _Element,
     ASN1TagClass as _TagClass
 } from "@wildboar/asn1";
-import { ConnectionID, _decode_ConnectionID, _encode_ConnectionID } from "../CSTA-call-connection-identifiers/ConnectionID.ta.mjs";
+import { type ConnectionID, _decode_ConnectionID, _encode_ConnectionID } from "../CSTA-call-connection-identifiers/ConnectionID.ta.mjs";
 
 import {
     DigitMode,
@@ -37,11 +37,11 @@ import { CSTACommonArguments, _decode_CSTACommonArguments, _encode_CSTACommonArg
  * ```asn1
  * GenerateDigitsArgument ::= SEQUENCE
  * {    connectionToSendDigits        ConnectionID,
- *     digitMode            DigitMode            OPTIONAL,
+ *     digitMode            DigitMode            type OPTIONAL,
  *     charactersToSend        IA5String,
- *     toneDuration            [0] IMPLICIT INTEGER        OPTIONAL,
- *     pulseRate            [1] IMPLICIT INTEGER        OPTIONAL,
- *     pauseDuration            [2] IMPLICIT INTEGER        OPTIONAL,
+ *     toneDuration            [0] IMPLICIT INTEGER        type OPTIONAL,
+ *     pulseRate            [1] IMPLICIT INTEGER        type OPTIONAL,
+ *     pauseDuration            [2] IMPLICIT INTEGER        type OPTIONAL,
  *     extensions            CSTACommonArguments        OPTIONAL }
  * ```
  * 
@@ -49,72 +49,88 @@ import { CSTACommonArguments, _decode_CSTACommonArguments, _encode_CSTACommonArg
  */
 export
 class GenerateDigitsArgument {
+    /**
+     * @summary `connectionToSendDigits`.
+     * @description
+     *
+     * Connection on whose behalf digits are generated.
+     * @public
+     * @readonly
+     */
+    public readonly connectionToSendDigits: ConnectionID;
+    /**
+     * @summary `digitMode`.
+     * @description
+     *
+     * rotaryPulse or dTMF. SF default if omitted.
+     * @public
+     * @readonly
+     */
+    public readonly digitMode: OPTIONAL<DigitMode>;
+    /**
+     * @summary `charactersToSend`.
+     * @description
+     *
+     * Digit string to generate (max length from capabilities).
+     * @public
+     * @readonly
+     */
+    public readonly charactersToSend: IA5String;
+    /**
+     * @summary `toneDuration`.
+     * @description
+     *
+     * Tone duration for DTMF generation, if applicable.
+     * @public
+     * @readonly
+     */
+    public readonly toneDuration?: OPTIONAL<INTEGER>;
+    /**
+     * @summary `pulseRate`.
+     * @description
+     *
+     * Pulse rate for rotary generation, if applicable.
+     * @public
+     * @readonly
+     */
+    public readonly pulseRate?: OPTIONAL<INTEGER>;
+    /**
+     * @summary `pauseDuration`.
+     * @description
+     *
+     * Pause duration between digits, if applicable.
+     * @public
+     * @readonly
+     */
+    public readonly pauseDuration?: OPTIONAL<INTEGER>;
+    /**
+     * @summary `extensions`.
+     * @description
+     *
+     * Optional security (timestamp, sequence, securityInfo) and
+     * privateData.
+     * @public
+     * @readonly
+     */
+    public readonly extensions?: OPTIONAL<CSTACommonArguments>;
+
     constructor (
-        /**
-         * @summary `connectionToSendDigits`.
-         * @description
-         *
-         * Connection on whose behalf digits are generated.
-         * @public
-         * @readonly
-         */
-        readonly connectionToSendDigits: ConnectionID,
-        /**
-         * @summary `digitMode`.
-         * @description
-         *
-         * rotaryPulse or dTMF. SF default if omitted.
-         * @public
-         * @readonly
-         */
-        readonly digitMode: OPTIONAL<DigitMode>,
-        /**
-         * @summary `charactersToSend`.
-         * @description
-         *
-         * Digit string to generate (max length from capabilities).
-         * @public
-         * @readonly
-         */
-        readonly charactersToSend: IA5String,
-        /**
-         * @summary `toneDuration`.
-         * @description
-         *
-         * Tone duration for DTMF generation, if applicable.
-         * @public
-         * @readonly
-         */
-        readonly toneDuration?: OPTIONAL<INTEGER>,
-        /**
-         * @summary `pulseRate`.
-         * @description
-         *
-         * Pulse rate for rotary generation, if applicable.
-         * @public
-         * @readonly
-         */
-        readonly pulseRate?: OPTIONAL<INTEGER>,
-        /**
-         * @summary `pauseDuration`.
-         * @description
-         *
-         * Pause duration between digits, if applicable.
-         * @public
-         * @readonly
-         */
-        readonly pauseDuration?: OPTIONAL<INTEGER>,
-        /**
-         * @summary `extensions`.
-         * @description
-         *
-         * Optional security (timestamp, sequence, securityInfo) and
-         * privateData.
-         * @public
-         * @readonly
-         */
-        readonly extensions?: OPTIONAL<CSTACommonArguments>
-    ) {}
+        connectionToSendDigits: ConnectionID,
+        digitMode: OPTIONAL<DigitMode>,
+        charactersToSend: IA5String,
+        toneDuration?: OPTIONAL<INTEGER>,
+        pulseRate?: OPTIONAL<INTEGER>,
+        pauseDuration?: OPTIONAL<INTEGER>,
+        extensions?: OPTIONAL<CSTACommonArguments>
+    ) {
+        this.connectionToSendDigits = connectionToSendDigits;
+        this.digitMode = digitMode;
+        this.charactersToSend = charactersToSend;
+        this.toneDuration = toneDuration;
+        this.pulseRate = pulseRate;
+        this.pauseDuration = pauseDuration;
+        this.extensions = extensions;
+    }
 
     /**
      * @summary Restructures an object into a GenerateDigitsArgument
@@ -138,7 +154,7 @@ class GenerateDigitsArgument {
          * @static
          */
 
-    public static _enum_for_digitMode = _enum_for_DigitMode;
+    public static _enum_for_digitMode: typeof _enum_for_DigitMode = _enum_for_DigitMode;
 }
 
 /**

@@ -1,7 +1,7 @@
 /* eslint-disable */
 import {
-    INTEGER,
-    ASN1Element as _Element,
+    type INTEGER,
+    type ASN1Element as _Element,
     ASN1TagClass as _TagClass,
     ASN1Construction as _Construction,
     ASN1UniversalType as _UniversalType,
@@ -32,14 +32,14 @@ export type AttCertVersion = INTEGER;
  * @constant
  * @type {number}
  */
-export const AttCertVersion_v2: AttCertVersion = 1; /* LONG_NAMED_INTEGER_VALUE */
+export const AttCertVersion_v2: 1 = 1 satisfies AttCertVersion; /* LONG_NAMED_INTEGER_VALUE */
 
 /**
  * @summary AttCertVersion_v2
  * @constant
  * @type {number}
  */
-export const v2: AttCertVersion =
+export const v2: 1 =
     AttCertVersion_v2; /* SHORT_NAMED_INTEGER_VALUE */
 
 /**

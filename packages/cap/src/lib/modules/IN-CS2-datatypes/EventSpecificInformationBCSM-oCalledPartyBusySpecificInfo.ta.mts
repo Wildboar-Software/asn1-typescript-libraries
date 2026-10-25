@@ -1,7 +1,7 @@
 /* eslint-disable */
 import {
-    OPTIONAL,
-    ASN1Element as _Element,
+    type OPTIONAL,
+    type ASN1Element as _Element,
     ASN1TagClass as _TagClass,
     ASN1Construction as _Construction,
     ASN1UniversalType as _UniversalType,
@@ -11,7 +11,7 @@ import {
     ASN1ConstructionError as _ConstructionError,
 } from "@wildboar/asn1";
 import * as $ from "@wildboar/asn1/functional";
-import { Cause, _decode_Cause, _encode_Cause } from "../IN-CS2-datatypes/Cause.ta.mjs";
+import { type Cause, _decode_Cause, _encode_Cause } from "../IN-CS2-datatypes/Cause.ta.mjs";
 
 
 /**
@@ -31,20 +31,26 @@ import { Cause, _decode_Cause, _encode_Cause } from "../IN-CS2-datatypes/Cause.t
  */
 export
 class EventSpecificInformationBCSM_oCalledPartyBusySpecificInfo {
+    /**
+     * @summary `busyCause`.
+     * @public
+     * @readonly
+     */
+    public readonly busyCause?: OPTIONAL<Cause>;
+    /**
+     * @summary Extensions that are not recognized.
+     * @public
+     * @readonly
+     */
+    public readonly _unrecognizedExtensionsList: _Element[];
+
     constructor (
-        /**
-         * @summary `busyCause`.
-         * @public
-         * @readonly
-         */
-        readonly busyCause?: OPTIONAL<Cause>,
-        /**
-         * @summary Extensions that are not recognized.
-         * @public
-         * @readonly
-         */
-        readonly _unrecognizedExtensionsList: _Element[] = []
-    ) {}
+        busyCause?: OPTIONAL<Cause>,
+        _unrecognizedExtensionsList: _Element[] = []
+    ) {
+        this.busyCause = busyCause;
+        this._unrecognizedExtensionsList = _unrecognizedExtensionsList;
+    }
 
     /**
      * @summary Restructures an object into a EventSpecificInformationBCSM_oCalledPartyBusySpecificInfo

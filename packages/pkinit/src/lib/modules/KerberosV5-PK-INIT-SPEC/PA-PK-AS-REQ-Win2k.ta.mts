@@ -1,13 +1,13 @@
 /* eslint-disable */
 import {
-    OCTET_STRING,
-    OPTIONAL,
-    ASN1Element as _Element,
+    type OCTET_STRING,
+    type OPTIONAL,
+    type ASN1Element as _Element,
     ASN1TagClass as _TagClass
 } from "@wildboar/asn1";
 import * as $ from "@wildboar/asn1/functional";
 import { ContentInfo, _decode_ContentInfo, _encode_ContentInfo } from "@wildboar/cms";
-import { TrustedCA, _decode_TrustedCA, _encode_TrustedCA } from "../KerberosV5-PK-INIT-SPEC/TrustedCA.ta.mjs";
+import { type TrustedCA, _decode_TrustedCA, _encode_TrustedCA } from "../KerberosV5-PK-INIT-SPEC/TrustedCA.ta.mjs";
 
 
 /**
@@ -39,45 +39,57 @@ import { TrustedCA, _decode_TrustedCA, _encode_TrustedCA } from "../KerberosV5-P
  */
 export
 class PA_PK_AS_REQ_Win2k {
+    /**
+     * CMS `ContentInfo`. RFC 4556's rules for
+     * {@link PA_PK_AS_REQ.signedAuthPack} apply to the standard
+     * type. This module does not say whether they apply here.
+     * @public
+     * @readonly
+     */
+    public readonly signed_auth_pack: ContentInfo;
+    /**
+     * Optional CA hints. Each entry is a {@link TrustedCA}, not
+     * an {@link ExternalPrincipalIdentifier}. The module ASN.1
+     * marks that difference with an `XXX` comment and does not
+     * resolve it.
+     * @public
+     * @readonly
+     */
+    public readonly trusted_certifiers?: OPTIONAL<TrustedCA[]>;
+    /**
+     * Opaque octet string. RFC 4556 does not define what is
+     * encoded here.
+     * @public
+     * @readonly
+     */
+    public readonly kdc_cert?: OPTIONAL<OCTET_STRING>;
+    /**
+     * Opaque octet string. RFC 4556 does not define what is
+     * encoded here.
+     * @public
+     * @readonly
+     */
+    public readonly encryption_cert?: OPTIONAL<OCTET_STRING>;
+    /**
+     * @summary Extensions that are not recognized.
+     * @public
+     * @readonly
+     */
+    public readonly _unrecognizedExtensionsList: _Element[];
+
     constructor (
-        /**
-         * CMS `ContentInfo`. RFC 4556's rules for
-         * {@link PA_PK_AS_REQ.signedAuthPack} apply to the standard
-         * type. This module does not say whether they apply here.
-         * @public
-         * @readonly
-         */
-        readonly signed_auth_pack: ContentInfo,
-        /**
-         * Optional CA hints. Each entry is a {@link TrustedCA}, not
-         * an {@link ExternalPrincipalIdentifier}. The module ASN.1
-         * marks that difference with an `XXX` comment and does not
-         * resolve it.
-         * @public
-         * @readonly
-         */
-        readonly trusted_certifiers?: OPTIONAL<TrustedCA[]>,
-        /**
-         * Opaque octet string. RFC 4556 does not define what is
-         * encoded here.
-         * @public
-         * @readonly
-         */
-        readonly kdc_cert?: OPTIONAL<OCTET_STRING>,
-        /**
-         * Opaque octet string. RFC 4556 does not define what is
-         * encoded here.
-         * @public
-         * @readonly
-         */
-        readonly encryption_cert?: OPTIONAL<OCTET_STRING>,
-        /**
-         * @summary Extensions that are not recognized.
-         * @public
-         * @readonly
-         */
-        readonly _unrecognizedExtensionsList: _Element[] = []
-    ) {}
+        signed_auth_pack: ContentInfo,
+        trusted_certifiers?: OPTIONAL<TrustedCA[]>,
+        kdc_cert?: OPTIONAL<OCTET_STRING>,
+        encryption_cert?: OPTIONAL<OCTET_STRING>,
+        _unrecognizedExtensionsList: _Element[] = []
+    ) {
+        this.signed_auth_pack = signed_auth_pack;
+        this.trusted_certifiers = trusted_certifiers;
+        this.kdc_cert = kdc_cert;
+        this.encryption_cert = encryption_cert;
+        this._unrecognizedExtensionsList = _unrecognizedExtensionsList;
+    }
 
     /**
      * @summary Restructures an object into a PA_PK_AS_REQ_Win2k

@@ -8,7 +8,7 @@ import { type OPERATION } from "../Remote-Operations-Information-Objects/OPERATI
 
 import { SystemRegisterCancelArgument, _decode_SystemRegisterCancelArgument, _encode_SystemRegisterCancelArgument } from "../CSTA-system-register-cancel/SystemRegisterCancelArgument.ta.mjs";
 
-import { SystemRegisterCancelResult, _decode_SystemRegisterCancelResult, _encode_SystemRegisterCancelResult } from "../CSTA-system-register-cancel/SystemRegisterCancelResult.ta.mjs";
+import { type SystemRegisterCancelResult, _decode_SystemRegisterCancelResult, _encode_SystemRegisterCancelResult } from "../CSTA-system-register-cancel/SystemRegisterCancelResult.ta.mjs";
 
 import { universalFailure } from "../CSTA-error-definition/universalFailure.oa.mjs";
 

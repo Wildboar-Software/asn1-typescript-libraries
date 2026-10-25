@@ -1,6 +1,6 @@
 /* eslint-disable */
 import {
-  OPTIONAL,
+  type OPTIONAL,
   ASN1Element as _Element,
   ASN1TagClass as _TagClass,
   ASN1Construction as _Construction,
@@ -12,72 +12,72 @@ import {
 } from '@wildboar/asn1';
 import * as $ from '@wildboar/asn1/functional';
 import {
-  Pathname_Attribute,
+  type Pathname_Attribute,
   _decode_Pathname_Attribute,
   _encode_Pathname_Attribute,
 } from '../ISO8571-FTAM/Pathname-Attribute.ta.mjs';
 import {
-  Object_Type_Attribute,
+  type Object_Type_Attribute,
   _decode_Object_Type_Attribute,
   _encode_Object_Type_Attribute,
 } from '../ISO8571-FTAM/Object-Type-Attribute.ta.mjs';
 import {
-  Permitted_Actions_Attribute,
+  type Permitted_Actions_Attribute,
   _decode_Permitted_Actions_Attribute,
   _encode_Permitted_Actions_Attribute,
 } from '../ISO8571-FTAM/Permitted-Actions-Attribute.ta.mjs';
 import {
-  Contents_Type_Attribute,
+  type Contents_Type_Attribute,
   _decode_Contents_Type_Attribute,
   _encode_Contents_Type_Attribute,
 } from '../ISO8571-FTAM/Contents-Type-Attribute.ta.mjs';
 import {
-  Child_Objects_Attribute,
+  type Child_Objects_Attribute,
   _decode_Child_Objects_Attribute,
   _encode_Child_Objects_Attribute,
 } from '../ISO8571-FTAM/Child-Objects-Attribute.ta.mjs';
 import {
-  Account_Attribute,
+  type Account_Attribute,
   _decode_Account_Attribute,
   _encode_Account_Attribute,
 } from '../ISO8571-FTAM/Account-Attribute.ta.mjs';
 import {
-  Date_and_Time_Attribute,
+  type Date_and_Time_Attribute,
   _decode_Date_and_Time_Attribute,
   _encode_Date_and_Time_Attribute,
 } from '../ISO8571-FTAM/Date-and-Time-Attribute.ta.mjs';
 import {
-  User_Identity_Attribute,
+  type User_Identity_Attribute,
   _decode_User_Identity_Attribute,
   _encode_User_Identity_Attribute,
 } from '../ISO8571-FTAM/User-Identity-Attribute.ta.mjs';
 import {
-  Object_Availability_Attribute,
+  type Object_Availability_Attribute,
   _decode_Object_Availability_Attribute,
   _encode_Object_Availability_Attribute,
 } from '../ISO8571-FTAM/Object-Availability-Attribute.ta.mjs';
 import {
-  Object_Size_Attribute,
+  type Object_Size_Attribute,
   _decode_Object_Size_Attribute,
   _encode_Object_Size_Attribute,
 } from '../ISO8571-FTAM/Object-Size-Attribute.ta.mjs';
 import {
-  Access_Control_Attribute,
+  type Access_Control_Attribute,
   _decode_Access_Control_Attribute,
   _encode_Access_Control_Attribute,
 } from '../ISO8571-FTAM/Access-Control-Attribute.ta.mjs';
 import {
-  Legal_Qualification_Attribute,
+  type Legal_Qualification_Attribute,
   _decode_Legal_Qualification_Attribute,
   _encode_Legal_Qualification_Attribute,
 } from '../ISO8571-FTAM/Legal-Qualification-Attribute.ta.mjs';
 import {
-  Private_Use_Attribute,
+  type Private_Use_Attribute,
   _decode_Private_Use_Attribute,
   _encode_Private_Use_Attribute,
 } from '../ISO8571-FTAM/Private-Use-Attribute.ta.mjs';
 import {
-  Attribute_Extensions,
+  type Attribute_Extensions,
   _decode_Attribute_Extensions,
   _encode_Attribute_Extensions,
 } from '../ISO8571-FTAM/Attribute-Extensions.ta.mjs';
@@ -172,7 +172,7 @@ export class Read_Attributes {
    * @public
    * @readonly
    */
-  readonly pathname?: OPTIONAL<Pathname_Attribute>;
+  public readonly pathname?: OPTIONAL<Pathname_Attribute>;
   /**
    * @summary `object_type`.
    * @description
@@ -183,7 +183,7 @@ export class Read_Attributes {
    * @public
    * @readonly
    */
-  readonly object_type?: OPTIONAL<Object_Type_Attribute>;
+  public readonly object_type?: OPTIONAL<Object_Type_Attribute>;
   /**
    * @summary `permitted_actions`.
    * @description
@@ -193,7 +193,7 @@ export class Read_Attributes {
    * @public
    * @readonly
    */
-  readonly permitted_actions?: OPTIONAL<Permitted_Actions_Attribute>;
+  public readonly permitted_actions?: OPTIONAL<Permitted_Actions_Attribute>;
   /**
    * @summary `contents_type`.
    * @description
@@ -203,7 +203,7 @@ export class Read_Attributes {
    * @public
    * @readonly
    */
-  readonly contents_type?: OPTIONAL<Contents_Type_Attribute>;
+  public readonly contents_type?: OPTIONAL<Contents_Type_Attribute>;
   /**
    * @summary `linked_Object`.
    * @description
@@ -214,7 +214,7 @@ export class Read_Attributes {
    * @public
    * @readonly
    */
-  readonly linked_Object?: OPTIONAL<Pathname_Attribute>;
+  public readonly linked_Object?: OPTIONAL<Pathname_Attribute>;
   /**
    * @summary `child_objects`.
    * @description
@@ -225,7 +225,7 @@ export class Read_Attributes {
    * @public
    * @readonly
    */
-  readonly child_objects?: OPTIONAL<Child_Objects_Attribute>;
+  public readonly child_objects?: OPTIONAL<Child_Objects_Attribute>;
   /**
    * @summary `primaty_pathname`.
    * @description
@@ -235,7 +235,7 @@ export class Read_Attributes {
    * @public
    * @readonly
    */
-  readonly primaty_pathname?: OPTIONAL<Pathname_Attribute>;
+  public readonly primaty_pathname?: OPTIONAL<Pathname_Attribute>;
   /**
    * @summary `storage_account`.
    * @description
@@ -245,7 +245,7 @@ export class Read_Attributes {
    * @public
    * @readonly
    */
-  readonly storage_account?: OPTIONAL<Account_Attribute>;
+  public readonly storage_account?: OPTIONAL<Account_Attribute>;
   /**
    * @summary `date_and_time_of_creation`.
    * @description
@@ -256,7 +256,7 @@ export class Read_Attributes {
    * @public
    * @readonly
    */
-  readonly date_and_time_of_creation?: OPTIONAL<Date_and_Time_Attribute>;
+  public readonly date_and_time_of_creation?: OPTIONAL<Date_and_Time_Attribute>;
   /**
    * @summary `date_and_time_of_last_modification`.
    * @description
@@ -267,7 +267,7 @@ export class Read_Attributes {
    * @public
    * @readonly
    */
-  readonly date_and_time_of_last_modification?: OPTIONAL<Date_and_Time_Attribute>;
+  public readonly date_and_time_of_last_modification?: OPTIONAL<Date_and_Time_Attribute>;
   /**
    * @summary `date_and_time_of_last_read_access`.
    * @description
@@ -278,7 +278,7 @@ export class Read_Attributes {
    * @public
    * @readonly
    */
-  readonly date_and_time_of_last_read_access?: OPTIONAL<Date_and_Time_Attribute>;
+  public readonly date_and_time_of_last_read_access?: OPTIONAL<Date_and_Time_Attribute>;
   /**
    * @summary `date_and_time_of_last_attribute_modification`.
    * @description
@@ -289,7 +289,7 @@ export class Read_Attributes {
    * @public
    * @readonly
    */
-  readonly date_and_time_of_last_attribute_modification?: OPTIONAL<Date_and_Time_Attribute>;
+  public readonly date_and_time_of_last_attribute_modification?: OPTIONAL<Date_and_Time_Attribute>;
   /**
    * @summary `identity_of_creator`.
    * @description
@@ -300,7 +300,7 @@ export class Read_Attributes {
    * @public
    * @readonly
    */
-  readonly identity_of_creator?: OPTIONAL<User_Identity_Attribute>;
+  public readonly identity_of_creator?: OPTIONAL<User_Identity_Attribute>;
   /**
    * @summary `identity_of_last_modifier`.
    * @description
@@ -311,7 +311,7 @@ export class Read_Attributes {
    * @public
    * @readonly
    */
-  readonly identity_of_last_modifier?: OPTIONAL<User_Identity_Attribute>;
+  public readonly identity_of_last_modifier?: OPTIONAL<User_Identity_Attribute>;
   /**
    * @summary `identity_of_last_reader`.
    * @description
@@ -322,7 +322,7 @@ export class Read_Attributes {
    * @public
    * @readonly
    */
-  readonly identity_of_last_reader?: OPTIONAL<User_Identity_Attribute>;
+  public readonly identity_of_last_reader?: OPTIONAL<User_Identity_Attribute>;
   /**
    * @summary `identity_last_attribute_modifier`.
    * @description
@@ -333,7 +333,7 @@ export class Read_Attributes {
    * @public
    * @readonly
    */
-  readonly identity_last_attribute_modifier?: OPTIONAL<User_Identity_Attribute>;
+  public readonly identity_last_attribute_modifier?: OPTIONAL<User_Identity_Attribute>;
   /**
    * @summary `object_availability`.
    * @description
@@ -344,7 +344,7 @@ export class Read_Attributes {
    * @public
    * @readonly
    */
-  readonly object_availability?: OPTIONAL<Object_Availability_Attribute>;
+  public readonly object_availability?: OPTIONAL<Object_Availability_Attribute>;
   /**
    * @summary `object_size`.
    * @description
@@ -355,7 +355,7 @@ export class Read_Attributes {
    * @public
    * @readonly
    */
-  readonly object_size?: OPTIONAL<Object_Size_Attribute>;
+  public readonly object_size?: OPTIONAL<Object_Size_Attribute>;
   /**
    * @summary `future_Object_size`.
    * @description
@@ -365,7 +365,7 @@ export class Read_Attributes {
    * @public
    * @readonly
    */
-  readonly future_Object_size?: OPTIONAL<Object_Size_Attribute>;
+  public readonly future_Object_size?: OPTIONAL<Object_Size_Attribute>;
   /**
    * @summary `access_control`.
    * @description
@@ -377,7 +377,7 @@ export class Read_Attributes {
    * @public
    * @readonly
    */
-  readonly access_control?: OPTIONAL<Access_Control_Attribute>;
+  public readonly access_control?: OPTIONAL<Access_Control_Attribute>;
   /**
    * @summary `path_access_control`.
    * @description
@@ -388,7 +388,7 @@ export class Read_Attributes {
    * @public
    * @readonly
    */
-  readonly path_access_control?: OPTIONAL<Access_Control_Attribute>;
+  public readonly path_access_control?: OPTIONAL<Access_Control_Attribute>;
   /**
    * @summary `legal_qualification`.
    * @description
@@ -398,7 +398,7 @@ export class Read_Attributes {
    * @public
    * @readonly
    */
-  readonly legal_qualification?: OPTIONAL<Legal_Qualification_Attribute>;
+  public readonly legal_qualification?: OPTIONAL<Legal_Qualification_Attribute>;
   /**
    * @summary `private_use`.
    * @description
@@ -408,7 +408,7 @@ export class Read_Attributes {
    * @public
    * @readonly
    */
-  readonly private_use?: OPTIONAL<Private_Use_Attribute>;
+  public readonly private_use?: OPTIONAL<Private_Use_Attribute>;
   /**
    * @summary `attribute_extensions`.
    * @description
@@ -418,7 +418,7 @@ export class Read_Attributes {
    * @public
    * @readonly
    */
-  readonly attribute_extensions?: OPTIONAL<Attribute_Extensions>;
+  public readonly attribute_extensions?: OPTIONAL<Attribute_Extensions>;
 
   constructor(
     pathname?: OPTIONAL<Pathname_Attribute>,

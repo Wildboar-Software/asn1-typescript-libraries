@@ -1,7 +1,7 @@
 /* eslint-disable */
 import {
-    ASN1Element as _Element,
-    INTEGER
+    type ASN1Element as _Element,
+    type INTEGER
 } from "@wildboar/asn1";
 import * as $ from "@wildboar/asn1/functional";
 
@@ -35,7 +35,7 @@ type ListNotificationResponse_listNotificationsResultError = INTEGER;
  * @type {number}
  */
 export
-const ListNotificationResponse_listNotificationsResultError_undefinedError: ListNotificationResponse_listNotificationsResultError = 127; /* LONG_NAMED_INTEGER_VALUE */
+const ListNotificationResponse_listNotificationsResultError_undefinedError: 127 = 127 satisfies ListNotificationResponse_listNotificationsResultError; /* LONG_NAMED_INTEGER_VALUE */
 
 /**
  * @summary ListNotificationResponse_listNotificationsResultError_undefinedError
@@ -47,9 +47,9 @@ const ListNotificationResponse_listNotificationsResultError_undefinedError: List
  * @type {number}
  */
 export
-const undefinedError: ListNotificationResponse_listNotificationsResultError = ListNotificationResponse_listNotificationsResultError_undefinedError; /* SHORT_NAMED_INTEGER_VALUE */
-export const _decode_ListNotificationResponse_listNotificationsResultError = $._decodeInteger;
-export const _encode_ListNotificationResponse_listNotificationsResultError = $._encodeInteger;
+const undefinedError: 127 = ListNotificationResponse_listNotificationsResultError_undefinedError; /* SHORT_NAMED_INTEGER_VALUE */
+export const _decode_ListNotificationResponse_listNotificationsResultError: $.ASN1Decoder<INTEGER> = $._decodeInteger;
+export const _encode_ListNotificationResponse_listNotificationsResultError: $.ASN1Encoder<INTEGER> = $._encodeInteger;
 
 
 /* eslint-enable */

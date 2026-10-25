@@ -8,7 +8,7 @@ import { type OPERATION } from "../Remote-Operations-Information-Objects/OPERATI
 
 import { CDRReportArgument, _decode_CDRReportArgument, _encode_CDRReportArgument } from "../CSTA-call-detail-records-report/CDRReportArgument.ta.mjs";
 
-import { CDRReportResult, _decode_CDRReportResult, _encode_CDRReportResult } from "../CSTA-call-detail-records-report/CDRReportResult.ta.mjs";
+import { type CDRReportResult, _decode_CDRReportResult, _encode_CDRReportResult } from "../CSTA-call-detail-records-report/CDRReportResult.ta.mjs";
 
 import { universalFailure } from "../CSTA-error-definition/universalFailure.oa.mjs";
 

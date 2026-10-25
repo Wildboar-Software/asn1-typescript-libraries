@@ -1,6 +1,6 @@
 /* eslint-disable */
 import {
-  OCTET_STRING,
+  type OCTET_STRING,
   ASN1Element as _Element,
   ASN1TagClass as _TagClass,
   ASN1Construction as _Construction,
@@ -32,10 +32,10 @@ import * as $ from '@wildboar/asn1/functional';
 export type AreaAddress = OCTET_STRING; // OctetStringType
 
 
-export const _decode_AreaAddress = $._decodeOctetString;
+export const _decode_AreaAddress: $.ASN1Decoder<OCTET_STRING> = $._decodeOctetString;
 
 
-export const _encode_AreaAddress = $._encodeOctetString;
+export const _encode_AreaAddress: $.ASN1Encoder<OCTET_STRING> = $._encodeOctetString;
 
 
 /* eslint-enable */

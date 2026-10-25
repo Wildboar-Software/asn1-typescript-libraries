@@ -2,13 +2,13 @@
 
 import * as $ from "@wildboar/asn1/functional";
 import {
-    OPTIONAL,
-    SEQUENCE,
-    SET,
-    ASN1Element as _Element,
+    type OPTIONAL,
+    type SEQUENCE,
+    type SET,
+    type ASN1Element as _Element,
     ASN1TagClass as _TagClass
 } from "@wildboar/asn1";
-import { MonitorObject, _decode_MonitorObject, _encode_MonitorObject } from "../CSTA-status-reporting/MonitorObject.ta.mjs";
+import { type MonitorObject, _decode_MonitorObject, _encode_MonitorObject } from "../CSTA-status-reporting/MonitorObject.ta.mjs";
 
 import { MonitorFilter, _decode_MonitorFilter, _encode_MonitorFilter } from "../CSTA-status-reporting/MonitorFilter.ta.mjs";
 
@@ -20,7 +20,7 @@ import {
 } from "../CSTA-status-reporting/MonitorType.ta.mjs";
 
 import {
-    MonitorMediaClass,
+    type MonitorMediaClass,
     data /* IMPORTED_SHORT_NAMED_BIT */,
     _decode_MonitorMediaClass,
     _encode_MonitorMediaClass
@@ -44,9 +44,9 @@ import { CSTACommonArguments, _decode_CSTACommonArguments, _encode_CSTACommonArg
  * ```asn1
  * MonitorStartArgument ::= SEQUENCE
  * {     monitorObject             MonitorObject,
- *     requestedMonitorFilter         [0] IMPLICIT MonitorFilter     OPTIONAL,
- *     monitorType             MonitorType             OPTIONAL,
- *     requestedMonitorMediaClass     [1] IMPLICIT MonitorMediaClass     OPTIONAL,
+ *     requestedMonitorFilter         [0] IMPLICIT MonitorFilter     type OPTIONAL,
+ *     monitorType             MonitorType             type OPTIONAL,
+ *     requestedMonitorMediaClass     [1] IMPLICIT MonitorMediaClass     type OPTIONAL,
  *     extensions             CSTACommonArguments         OPTIONAL }
  * ```
  * 
@@ -54,56 +54,68 @@ import { CSTACommonArguments, _decode_CSTACommonArguments, _encode_CSTACommonArg
  */
 export
 class MonitorStartArgument {
+    /**
+     * @summary `monitorObject`.
+     * @description
+     *
+     * Call (`ConnectionID`) or device (`DeviceID`) to monitor.
+     * @public
+     * @readonly
+     */
+    public readonly monitorObject: MonitorObject;
+    /**
+     * @summary `requestedMonitorFilter`.
+     * @description
+     *
+     * Events to filter out. Absent (or unsupported) means no
+     * filtering requested — all advertised events.
+     * @public
+     * @readonly
+     */
+    public readonly requestedMonitorFilter?: OPTIONAL<MonitorFilter>;
+    /**
+     * @summary `monitorType`.
+     * @description
+     *
+     * Call-type vs device-type monitor. See ECMA-269 §6.6.2.
+     * @public
+     * @readonly
+     */
+    public readonly monitorType?: OPTIONAL<MonitorType>;
+    /**
+     * @summary `requestedMonitorMediaClass`.
+     * @description
+     *
+     * Media classes to monitor. Absent: SF-dependent which classes
+     * are monitored.
+     * @public
+     * @readonly
+     */
+    public readonly requestedMonitorMediaClass?: OPTIONAL<MonitorMediaClass>;
+    /**
+     * @summary `extensions`.
+     * @description
+     *
+     * Optional security (timestamp, sequence, securityInfo) and
+     * privateData. ECMA-269 Table 15-4.
+     * @public
+     * @readonly
+     */
+    public readonly extensions?: OPTIONAL<CSTACommonArguments>;
+
     constructor (
-        /**
-         * @summary `monitorObject`.
-         * @description
-         *
-         * Call (`ConnectionID`) or device (`DeviceID`) to monitor.
-         * @public
-         * @readonly
-         */
-        readonly monitorObject: MonitorObject,
-        /**
-         * @summary `requestedMonitorFilter`.
-         * @description
-         *
-         * Events to filter out. Absent (or unsupported) means no
-         * filtering requested — all advertised events.
-         * @public
-         * @readonly
-         */
-        readonly requestedMonitorFilter?: OPTIONAL<MonitorFilter>,
-        /**
-         * @summary `monitorType`.
-         * @description
-         *
-         * Call-type vs device-type monitor. See ECMA-269 §6.6.2.
-         * @public
-         * @readonly
-         */
-        readonly monitorType?: OPTIONAL<MonitorType>,
-        /**
-         * @summary `requestedMonitorMediaClass`.
-         * @description
-         *
-         * Media classes to monitor. Absent: SF-dependent which classes
-         * are monitored.
-         * @public
-         * @readonly
-         */
-        readonly requestedMonitorMediaClass?: OPTIONAL<MonitorMediaClass>,
-        /**
-         * @summary `extensions`.
-         * @description
-         *
-         * Optional security (timestamp, sequence, securityInfo) and
-         * privateData. ECMA-269 Table 15-4.
-         * @public
-         * @readonly
-         */
-        readonly extensions?: OPTIONAL<CSTACommonArguments>
-    ) {}
+        monitorObject: MonitorObject,
+        requestedMonitorFilter?: OPTIONAL<MonitorFilter>,
+        monitorType?: OPTIONAL<MonitorType>,
+        requestedMonitorMediaClass?: OPTIONAL<MonitorMediaClass>,
+        extensions?: OPTIONAL<CSTACommonArguments>
+    ) {
+        this.monitorObject = monitorObject;
+        this.requestedMonitorFilter = requestedMonitorFilter;
+        this.monitorType = monitorType;
+        this.requestedMonitorMediaClass = requestedMonitorMediaClass;
+        this.extensions = extensions;
+    }
 
     /**
      * @summary Restructures an object into a MonitorStartArgument
@@ -127,7 +139,7 @@ class MonitorStartArgument {
          * @static
          */
 
-    public static _enum_for_monitorType = _enum_for_MonitorType;
+    public static _enum_for_monitorType: typeof _enum_for_MonitorType = _enum_for_MonitorType;
 }
 
 /**

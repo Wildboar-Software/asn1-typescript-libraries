@@ -71,7 +71,7 @@ type CliRestrictionOption = _enum_for_CliRestrictionOption;
  * @enum {number}
  */
 export
-const CliRestrictionOption = _enum_for_CliRestrictionOption;
+const CliRestrictionOption: typeof _enum_for_CliRestrictionOption = _enum_for_CliRestrictionOption;
 
 /**
  * @summary CliRestrictionOption_permanent
@@ -83,7 +83,7 @@ const CliRestrictionOption = _enum_for_CliRestrictionOption;
  * @type {number}
  */
 export
-const CliRestrictionOption_permanent: CliRestrictionOption = CliRestrictionOption.permanent; /* LONG_NAMED_ENUMERATED_VALUE */
+const CliRestrictionOption_permanent: _enum_for_CliRestrictionOption.permanent = CliRestrictionOption.permanent; /* LONG_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary permanent
@@ -95,7 +95,7 @@ const CliRestrictionOption_permanent: CliRestrictionOption = CliRestrictionOptio
  * @type {number}
  */
 export
-const permanent: CliRestrictionOption = CliRestrictionOption.permanent; /* SHORT_NAMED_ENUMERATED_VALUE */
+const permanent: _enum_for_CliRestrictionOption.permanent = CliRestrictionOption.permanent; /* SHORT_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary CliRestrictionOption_temporaryDefaultRestricted
@@ -107,7 +107,7 @@ const permanent: CliRestrictionOption = CliRestrictionOption.permanent; /* SHORT
  * @type {number}
  */
 export
-const CliRestrictionOption_temporaryDefaultRestricted: CliRestrictionOption = CliRestrictionOption.temporaryDefaultRestricted; /* LONG_NAMED_ENUMERATED_VALUE */
+const CliRestrictionOption_temporaryDefaultRestricted: _enum_for_CliRestrictionOption.temporaryDefaultRestricted = CliRestrictionOption.temporaryDefaultRestricted; /* LONG_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary temporaryDefaultRestricted
@@ -119,7 +119,7 @@ const CliRestrictionOption_temporaryDefaultRestricted: CliRestrictionOption = Cl
  * @type {number}
  */
 export
-const temporaryDefaultRestricted: CliRestrictionOption = CliRestrictionOption.temporaryDefaultRestricted; /* SHORT_NAMED_ENUMERATED_VALUE */
+const temporaryDefaultRestricted: _enum_for_CliRestrictionOption.temporaryDefaultRestricted = CliRestrictionOption.temporaryDefaultRestricted; /* SHORT_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary CliRestrictionOption_temporaryDefaultAllowed
@@ -131,7 +131,7 @@ const temporaryDefaultRestricted: CliRestrictionOption = CliRestrictionOption.te
  * @type {number}
  */
 export
-const CliRestrictionOption_temporaryDefaultAllowed: CliRestrictionOption = CliRestrictionOption.temporaryDefaultAllowed; /* LONG_NAMED_ENUMERATED_VALUE */
+const CliRestrictionOption_temporaryDefaultAllowed: _enum_for_CliRestrictionOption.temporaryDefaultAllowed = CliRestrictionOption.temporaryDefaultAllowed; /* LONG_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary temporaryDefaultAllowed
@@ -143,7 +143,7 @@ const CliRestrictionOption_temporaryDefaultAllowed: CliRestrictionOption = CliRe
  * @type {number}
  */
 export
-const temporaryDefaultAllowed: CliRestrictionOption = CliRestrictionOption.temporaryDefaultAllowed; /* SHORT_NAMED_ENUMERATED_VALUE */
+const temporaryDefaultAllowed: _enum_for_CliRestrictionOption.temporaryDefaultAllowed = CliRestrictionOption.temporaryDefaultAllowed; /* SHORT_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary Decodes an ASN.1 element into a(n) CliRestrictionOption
@@ -151,7 +151,7 @@ const temporaryDefaultAllowed: CliRestrictionOption = CliRestrictionOption.tempo
  * @param el The element being decoded.
  * @returns The decoded data structure.
  */
-export const _decode_CliRestrictionOption = $._decodeEnumerated;
+export const _decode_CliRestrictionOption: $.ASN1Decoder<number> = $._decodeEnumerated;
 
 /**
  * @summary Encodes a(n) CliRestrictionOption into an ASN.1 Element.
@@ -160,7 +160,7 @@ export const _decode_CliRestrictionOption = $._decodeEnumerated;
  * @param elGetter A function that can be used to get new ASN.1 elements.
  * @returns {_Element} The CliRestrictionOption, encoded as an ASN.1 Element.
  */
-export const _encode_CliRestrictionOption = $._encodeEnumerated;
+export const _encode_CliRestrictionOption: $.ASN1Encoder<number> = $._encodeEnumerated;
 
 
 /* eslint-enable */

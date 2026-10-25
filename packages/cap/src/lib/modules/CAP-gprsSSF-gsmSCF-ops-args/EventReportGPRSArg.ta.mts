@@ -1,7 +1,7 @@
 /* eslint-disable */
 import {
-    OPTIONAL,
-    ASN1Element as _Element,
+    type OPTIONAL,
+    type ASN1Element as _Element,
     ASN1TagClass as _TagClass,
     ASN1Construction as _Construction,
     ASN1UniversalType as _UniversalType,
@@ -31,7 +31,7 @@ import { MiscCallInfo, _decode_MiscCallInfo, _encode_MiscCallInfo } from "../IN-
  * EventReportGPRSArg {PARAMETERS-BOUND : bound} ::= SEQUENCE {
  *     gPRSEventType            [0] GPRSEventType,
  *     miscGPRSInfo            [1] MiscCallInfo DEFAULT {messageType request},
- *     gPRSEventSpecificInformation    [2]    GPRSEventSpecificInformation {bound}    OPTIONAL,
+ *     gPRSEventSpecificInformation    [2]    GPRSEventSpecificInformation {bound}    type OPTIONAL,
  *     pDPID                [3]    PDPID OPTIONAL,
  *     ...
  *     }
@@ -41,71 +41,83 @@ import { MiscCallInfo, _decode_MiscCallInfo, _encode_MiscCallInfo } from "../IN-
  */
 export
 class EventReportGPRSArg {
+    /**
+     * @summary `gPRSEventType`.
+     * @description
+     *
+     * Type of GPRS Session or PDP Context event being reported.
+     * (3GPP TS 29.078 V19.0.0 clause 13.8.1.1).
+     *
+     * @public
+     * @readonly
+     */
+    public readonly gPRSEventType: GPRSEventType;
+    /**
+     * @summary `miscGPRSInfo`.
+     * @description
+     *
+     * DP-related information. `messageType` is a request if
+     * RequestReportGPRSEvent used monitorMode interrupted, or a
+     * notification if notifyAndContinue. ASN.1 default
+     * `{messageType request}`.
+     * (3GPP TS 29.078 V19.0.0 clause 13.8.1.1).
+     *
+     * @public
+     * @readonly
+     */
+    public readonly miscGPRSInfo?: OPTIONAL<MiscCallInfo>;
+    /**
+     * @summary `gPRSEventSpecificInformation`.
+     * @description
+     *
+     * Event-specific information. Change of Position Session:
+     * locationInformationGPRS. Change of Position Context: APN,
+     * chargingID, location, endUserAddress, QoS, timeAndTimeZone,
+     * gGSNAddress, secondaryPDP-context. Detach / PDP Disconnect:
+     * initiatingEntity and conditionally routeingAreaUpdate.
+     * Establishment: APN, endUserAddress, pDPInitiationType, QoS
+     * (requested + subscribed), location, time, secondaryPDP-context.
+     * Establishment Ack: plus chargingID, negotiated QoS,
+     * gGSNAddress. Optional IEs per 3GPP TS 23.078 6.6.1.4 and
+     * 3GPP TS 22.078 annex "GPRS Information provided to the CSE".
+     * (3GPP TS 29.078 V19.0.0 clause 13.8.1.1).
+     *
+     * @public
+     * @readonly
+     */
+    public readonly gPRSEventSpecificInformation?: OPTIONAL<GPRSEventSpecificInformation>;
+    /**
+     * @summary `pDPID`.
+     * @description
+     *
+     * Identifies the PDP Context, within a GPRS Session dialogue,
+     * for which the event is reported. unknownPDPID if unknown.
+     * (3GPP TS 29.078 V19.0.0 clause 13.8.1.1).
+     *
+     * @public
+     * @readonly
+     */
+    public readonly pDPID?: OPTIONAL<PDPID>;
+    /**
+     * @summary Extensions that are not recognized.
+     * @public
+     * @readonly
+     */
+    public readonly _unrecognizedExtensionsList: _Element[];
+
     constructor (
-        /**
-         * @summary `gPRSEventType`.
-         * @description
-         *
-         * Type of GPRS Session or PDP Context event being reported.
-         * (3GPP TS 29.078 V19.0.0 clause 13.8.1.1).
-         *
-         * @public
-         * @readonly
-         */
-        readonly gPRSEventType: GPRSEventType,
-        /**
-         * @summary `miscGPRSInfo`.
-         * @description
-         *
-         * DP-related information. `messageType` is a request if
-         * RequestReportGPRSEvent used monitorMode interrupted, or a
-         * notification if notifyAndContinue. ASN.1 default
-         * `{messageType request}`.
-         * (3GPP TS 29.078 V19.0.0 clause 13.8.1.1).
-         *
-         * @public
-         * @readonly
-         */
-        readonly miscGPRSInfo?: OPTIONAL<MiscCallInfo>,
-        /**
-         * @summary `gPRSEventSpecificInformation`.
-         * @description
-         *
-         * Event-specific information. Change of Position Session:
-         * locationInformationGPRS. Change of Position Context: APN,
-         * chargingID, location, endUserAddress, QoS, timeAndTimeZone,
-         * gGSNAddress, secondaryPDP-context. Detach / PDP Disconnect:
-         * initiatingEntity and conditionally routeingAreaUpdate.
-         * Establishment: APN, endUserAddress, pDPInitiationType, QoS
-         * (requested + subscribed), location, time, secondaryPDP-context.
-         * Establishment Ack: plus chargingID, negotiated QoS,
-         * gGSNAddress. Optional IEs per 3GPP TS 23.078 6.6.1.4 and
-         * 3GPP TS 22.078 annex "GPRS Information provided to the CSE".
-         * (3GPP TS 29.078 V19.0.0 clause 13.8.1.1).
-         *
-         * @public
-         * @readonly
-         */
-        readonly gPRSEventSpecificInformation?: OPTIONAL<GPRSEventSpecificInformation>,
-        /**
-         * @summary `pDPID`.
-         * @description
-         *
-         * Identifies the PDP Context, within a GPRS Session dialogue,
-         * for which the event is reported. unknownPDPID if unknown.
-         * (3GPP TS 29.078 V19.0.0 clause 13.8.1.1).
-         *
-         * @public
-         * @readonly
-         */
-        readonly pDPID?: OPTIONAL<PDPID>,
-        /**
-         * @summary Extensions that are not recognized.
-         * @public
-         * @readonly
-         */
-        readonly _unrecognizedExtensionsList: _Element[] = []
-    ) {}
+        gPRSEventType: GPRSEventType,
+        miscGPRSInfo?: OPTIONAL<MiscCallInfo>,
+        gPRSEventSpecificInformation?: OPTIONAL<GPRSEventSpecificInformation>,
+        pDPID?: OPTIONAL<PDPID>,
+        _unrecognizedExtensionsList: _Element[] = []
+    ) {
+        this.gPRSEventType = gPRSEventType;
+        this.miscGPRSInfo = miscGPRSInfo;
+        this.gPRSEventSpecificInformation = gPRSEventSpecificInformation;
+        this.pDPID = pDPID;
+        this._unrecognizedExtensionsList = _unrecognizedExtensionsList;
+    }
 
     /**
      * @summary Restructures an object into a EventReportGPRSArg
@@ -129,7 +141,7 @@ class EventReportGPRSArg {
      * @static
      * @method
      */
-    public static get _default_value_for_miscGPRSInfo () { return MiscCallInfo._from_object({ messageType: MiscCallInfo._enum_for_messageType.request }); }
+    public static get _default_value_for_miscGPRSInfo (): MiscCallInfo { return MiscCallInfo._from_object({ messageType: MiscCallInfo._enum_for_messageType.request }); }
 }
 
 /**

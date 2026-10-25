@@ -1,7 +1,7 @@
 import {
-    OPTIONAL,
-    INTEGER,
-    ASN1Element as _Element,
+    type OPTIONAL,
+    type INTEGER,
+    type ASN1Element as _Element,
     ASN1OverflowError,
     ASN1TagClass as _TagClass,
 } from "@wildboar/asn1";
@@ -23,32 +23,37 @@ import { CAI_GSM0224, _decode_CAI_GSM0224, _encode_CAI_GSM0224 } from "./CAI-GSM
  *
  */
 export class AOCSubsequent {
+    /**
+     * @summary `cAI_GSM0224`.
+     * @description
+     *
+     * CAI elements (3GPP TS 22.024) sent after a tariff switch for CSE
+     * control of e-parameters. (3GPP TS 29.078 V19.0.0 clause 11.29).
+     *
+     * @public
+     * @readonly
+     */
+    public readonly cAI_GSM0224: CAI_GSM0224;
+    /**
+     * @summary `tariffSwitchInterval`.
+     * @description
+     *
+     * Time until the next tariff switch for CSE control of e-parameters.
+     * Measured in 1 second units. Measurement starts immediately after
+     * successful execution of the operation.
+     * (3GPP TS 29.078 V19.0.0 clauses 5.1 and 11.29).
+     *
+     * @public
+     * @readonly
+     */
+    public readonly tariffSwitchInterval?: OPTIONAL<INTEGER>;
+
     constructor (
-        /**
-         * @summary `cAI_GSM0224`.
-         * @description
-         *
-         * CAI elements (3GPP TS 22.024) sent after a tariff switch for CSE
-         * control of e-parameters. (3GPP TS 29.078 V19.0.0 clause 11.29).
-         *
-         * @public
-         * @readonly
-         */
-        readonly cAI_GSM0224: CAI_GSM0224,
-        /**
-         * @summary `tariffSwitchInterval`.
-         * @description
-         *
-         * Time until the next tariff switch for CSE control of e-parameters.
-         * Measured in 1 second units. Measurement starts immediately after
-         * successful execution of the operation.
-         * (3GPP TS 29.078 V19.0.0 clauses 5.1 and 11.29).
-         *
-         * @public
-         * @readonly
-         */
-        readonly tariffSwitchInterval?: OPTIONAL<INTEGER>,
+        cAI_GSM0224: CAI_GSM0224,
+        tariffSwitchInterval?: OPTIONAL<INTEGER>,
     ) {
+        this.cAI_GSM0224 = cAI_GSM0224;
+        this.tariffSwitchInterval = tariffSwitchInterval;
         if (tariffSwitchInterval !== undefined && (typeof tariffSwitchInterval === "bigint" ? (tariffSwitchInterval < 1n || tariffSwitchInterval > 86400n) : (tariffSwitchInterval < 1 || tariffSwitchInterval > 86400))) {
             throw new ASN1OverflowError("AOCSubsequent.tariffSwitchInterval violates INTEGER constraint");
         }

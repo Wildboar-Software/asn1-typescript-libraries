@@ -1,6 +1,6 @@
 /* eslint-disable */
 import {
-    ASN1Element as _Element,
+    type ASN1Element as _Element,
     ASN1TagClass as _TagClass,
     ASN1Construction as _Construction,
     ASN1UniversalType as _UniversalType,
@@ -63,7 +63,7 @@ export type ProtectionGroupType = _enum_for_ProtectionGroupType;
  *
  * @enum {number}
  */
-export const ProtectionGroupType = _enum_for_ProtectionGroupType;
+export const ProtectionGroupType: typeof _enum_for_ProtectionGroupType = _enum_for_ProtectionGroupType;
 
 
 /**
@@ -71,7 +71,7 @@ export const ProtectionGroupType = _enum_for_ProtectionGroupType;
  * @constant
  * @type {number}
  */
-export const ProtectionGroupType_plus: ProtectionGroupType =
+export const ProtectionGroupType_plus: _enum_for_ProtectionGroupType.plus =
     ProtectionGroupType.plus; /* LONG_NAMED_ENUMERATED_VALUE */
 
 
@@ -80,7 +80,7 @@ export const ProtectionGroupType_plus: ProtectionGroupType =
  * @constant
  * @type {number}
  */
-export const plus: ProtectionGroupType =
+export const plus: _enum_for_ProtectionGroupType.plus =
     ProtectionGroupType.plus; /* SHORT_NAMED_ENUMERATED_VALUE */
 
 
@@ -89,7 +89,7 @@ export const plus: ProtectionGroupType =
  * @constant
  * @type {number}
  */
-export const ProtectionGroupType_colon: ProtectionGroupType =
+export const ProtectionGroupType_colon: _enum_for_ProtectionGroupType.colon =
     ProtectionGroupType.colon; /* LONG_NAMED_ENUMERATED_VALUE */
 
 
@@ -98,18 +98,29 @@ export const ProtectionGroupType_colon: ProtectionGroupType =
  * @constant
  * @type {number}
  */
-export const colon: ProtectionGroupType =
+export const colon: _enum_for_ProtectionGroupType.colon =
     ProtectionGroupType.colon; /* SHORT_NAMED_ENUMERATED_VALUE */
 
 
 
 
-export const _decode_ProtectionGroupType = $._decodeEnumerated;
+export function _decode_ProtectionGroupType(el: _Element): ProtectionGroupType {
+    const enumerated = $._decodeEnumerated(el);
+    switch (enumerated) {
+        case ProtectionGroupType.plus: return ProtectionGroupType.plus;
+        case ProtectionGroupType.colon: return ProtectionGroupType.colon;
+        default:
+            throw new _ConstructionError(
+                'Invalid ENUMERATED value ' + enumerated + ' for ProtectionGroupType.',
+                el,
+            );
+    }
+}
 
 
 
 
-export const _encode_ProtectionGroupType = $._encodeEnumerated;
+export const _encode_ProtectionGroupType: $.ASN1Encoder<ProtectionGroupType> = $._encodeEnumerated as $.ASN1Encoder<ProtectionGroupType>;
 
 
 /* eslint-enable */

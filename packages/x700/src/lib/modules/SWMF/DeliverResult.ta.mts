@@ -1,7 +1,7 @@
 /* eslint-disable */
 import {
-    INTEGER,
-    ASN1Element as _Element,
+    type INTEGER,
+    type ASN1Element as _Element,
     ASN1TagClass as _TagClass,
     ASN1Construction as _Construction,
     ASN1UniversalType as _UniversalType,
@@ -57,126 +57,126 @@ export type DeliverResult = INTEGER;
  * @constant
  * @type {number}
  */
-export const DeliverResult_pass: DeliverResult = 0; /* LONG_NAMED_INTEGER_VALUE */
+export const DeliverResult_pass: 0 = 0 satisfies DeliverResult; /* LONG_NAMED_INTEGER_VALUE */
 
 /**
  * @summary DeliverResult_pass
  * @constant
  * @type {number}
  */
-export const pass: DeliverResult = DeliverResult_pass; /* SHORT_NAMED_INTEGER_VALUE */
+export const pass: 0 = DeliverResult_pass; /* SHORT_NAMED_INTEGER_VALUE */
 
 /**
  * @summary DeliverResult_communicationError
  * @constant
  * @type {number}
  */
-export const DeliverResult_communicationError: DeliverResult = 1; /* LONG_NAMED_INTEGER_VALUE */
+export const DeliverResult_communicationError: 1 = 1 satisfies DeliverResult; /* LONG_NAMED_INTEGER_VALUE */
 
 /**
  * @summary DeliverResult_communicationError
  * @constant
  * @type {number}
  */
-export const communicationError: DeliverResult = DeliverResult_communicationError; /* SHORT_NAMED_INTEGER_VALUE */
+export const communicationError: 1 = DeliverResult_communicationError; /* SHORT_NAMED_INTEGER_VALUE */
 
 /**
  * @summary DeliverResult_equipmentError
  * @constant
  * @type {number}
  */
-export const DeliverResult_equipmentError: DeliverResult = 2; /* LONG_NAMED_INTEGER_VALUE */
+export const DeliverResult_equipmentError: 2 = 2 satisfies DeliverResult; /* LONG_NAMED_INTEGER_VALUE */
 
 /**
  * @summary DeliverResult_equipmentError
  * @constant
  * @type {number}
  */
-export const equipmentError: DeliverResult = DeliverResult_equipmentError; /* SHORT_NAMED_INTEGER_VALUE */
+export const equipmentError: 2 = DeliverResult_equipmentError; /* SHORT_NAMED_INTEGER_VALUE */
 
 /**
  * @summary DeliverResult_qosError
  * @constant
  * @type {number}
  */
-export const DeliverResult_qosError: DeliverResult = 3; /* LONG_NAMED_INTEGER_VALUE */
+export const DeliverResult_qosError: 3 = 3 satisfies DeliverResult; /* LONG_NAMED_INTEGER_VALUE */
 
 /**
  * @summary DeliverResult_qosError
  * @constant
  * @type {number}
  */
-export const qosError: DeliverResult = DeliverResult_qosError; /* SHORT_NAMED_INTEGER_VALUE */
+export const qosError: 3 = DeliverResult_qosError; /* SHORT_NAMED_INTEGER_VALUE */
 
 /**
  * @summary DeliverResult_accessDenied
  * @constant
  * @type {number}
  */
-export const DeliverResult_accessDenied: DeliverResult = 4; /* LONG_NAMED_INTEGER_VALUE */
+export const DeliverResult_accessDenied: 4 = 4 satisfies DeliverResult; /* LONG_NAMED_INTEGER_VALUE */
 
 /**
  * @summary DeliverResult_accessDenied
  * @constant
  * @type {number}
  */
-export const accessDenied: DeliverResult = DeliverResult_accessDenied; /* SHORT_NAMED_INTEGER_VALUE */
+export const accessDenied: 4 = DeliverResult_accessDenied; /* SHORT_NAMED_INTEGER_VALUE */
 
 /**
  * @summary DeliverResult_notFound
  * @constant
  * @type {number}
  */
-export const DeliverResult_notFound: DeliverResult = 5; /* LONG_NAMED_INTEGER_VALUE */
+export const DeliverResult_notFound: 5 = 5 satisfies DeliverResult; /* LONG_NAMED_INTEGER_VALUE */
 
 /**
  * @summary DeliverResult_notFound
  * @constant
  * @type {number}
  */
-export const notFound: DeliverResult = DeliverResult_notFound; /* SHORT_NAMED_INTEGER_VALUE */
+export const notFound: 5 = DeliverResult_notFound; /* SHORT_NAMED_INTEGER_VALUE */
 
 /**
  * @summary DeliverResult_insufficientSpace
  * @constant
  * @type {number}
  */
-export const DeliverResult_insufficientSpace: DeliverResult = 6; /* LONG_NAMED_INTEGER_VALUE */
+export const DeliverResult_insufficientSpace: 6 = 6 satisfies DeliverResult; /* LONG_NAMED_INTEGER_VALUE */
 
 /**
  * @summary DeliverResult_insufficientSpace
  * @constant
  * @type {number}
  */
-export const insufficientSpace: DeliverResult = DeliverResult_insufficientSpace; /* SHORT_NAMED_INTEGER_VALUE */
+export const insufficientSpace: 6 = DeliverResult_insufficientSpace; /* SHORT_NAMED_INTEGER_VALUE */
 
 /**
  * @summary DeliverResult_alreadyDelivered
  * @constant
  * @type {number}
  */
-export const DeliverResult_alreadyDelivered: DeliverResult = 7; /* LONG_NAMED_INTEGER_VALUE */
+export const DeliverResult_alreadyDelivered: 7 = 7 satisfies DeliverResult; /* LONG_NAMED_INTEGER_VALUE */
 
 /**
  * @summary DeliverResult_alreadyDelivered
  * @constant
  * @type {number}
  */
-export const alreadyDelivered: DeliverResult = DeliverResult_alreadyDelivered; /* SHORT_NAMED_INTEGER_VALUE */
+export const alreadyDelivered: 7 = DeliverResult_alreadyDelivered; /* SHORT_NAMED_INTEGER_VALUE */
 
 /**
  * @summary DeliverResult_inProgress
  * @constant
  * @type {number}
  */
-export const DeliverResult_inProgress: DeliverResult = 8; /* LONG_NAMED_INTEGER_VALUE */
+export const DeliverResult_inProgress: 8 = 8 satisfies DeliverResult; /* LONG_NAMED_INTEGER_VALUE */
 
 /**
  * @summary DeliverResult_inProgress
  * @constant
  * @type {number}
  */
-export const inProgress: DeliverResult = DeliverResult_inProgress; /* SHORT_NAMED_INTEGER_VALUE */
+export const inProgress: 8 = DeliverResult_inProgress; /* SHORT_NAMED_INTEGER_VALUE */
 
 /**
  * @summary DeliverResult_unknown
@@ -186,20 +186,20 @@ export const inProgress: DeliverResult = DeliverResult_inProgress; /* SHORT_NAME
  * @constant
  * @type {number}
  */
-export const DeliverResult_unknown: DeliverResult = 9; /* LONG_NAMED_INTEGER_VALUE */
+export const DeliverResult_unknown: 9 = 9 satisfies DeliverResult; /* LONG_NAMED_INTEGER_VALUE */
 
 /**
  * @summary DeliverResult_unknown
  * @constant
  * @type {number}
  */
-export const unknown: DeliverResult = DeliverResult_unknown; /* SHORT_NAMED_INTEGER_VALUE */
+export const unknown: 9 = DeliverResult_unknown; /* SHORT_NAMED_INTEGER_VALUE */
 
 
-export const _decode_DeliverResult = $._decodeInteger;
+export const _decode_DeliverResult: $.ASN1Decoder<INTEGER> = $._decodeInteger;
 
 
-export const _encode_DeliverResult = $._encodeInteger;
+export const _encode_DeliverResult: $.ASN1Encoder<INTEGER> = $._encodeInteger;
 
 
 /* eslint-enable */

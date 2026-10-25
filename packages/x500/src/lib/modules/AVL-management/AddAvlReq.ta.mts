@@ -1,17 +1,17 @@
 /* eslint-disable */
 import {
     ASN1ConstructionError as _ConstructionError,
-    ASN1Element as _Element,
+    type ASN1Element as _Element,
     ASN1TagClass as _TagClass,
 } from "@wildboar/asn1";
 import * as $ from "@wildboar/asn1/functional";
 import {
-    InvokeID,
+    type InvokeID,
     _decode_InvokeID,
     _encode_InvokeID,
 } from "../AVL-management/InvokeID.ta.mjs";
 import {
-    CertAVL,
+    type CertAVL,
     _decode_CertAVL,
     _encode_CertAVL,
 } from "@wildboar/pki-stub";
@@ -32,34 +32,42 @@ import {
  *
  */
 export class AddAvlReq {
+    /**
+     * @summary `invokeID`.
+     * @description
+     *
+     * Pairs this request with `AddAvlRsp`. INTEGER (0..127); unique per pair until the interaction completes.
+     *
+     * @public
+     * @readonly
+     */
+    public readonly invokeID: InvokeID;
+    /**
+     * @summary `certlist`.
+     * @description
+     *
+     * The `CertAVL` to add. Entity checks signature, mandatory components, version, serial uniqueness, `constrained` vs capabilities, entry `idType`/`entityGroup`, and critical extensions (13.7).
+     *
+     * @public
+     * @readonly
+     */
+    public readonly certlist: CertAVL;
+    /**
+     * @summary Extensions that are not recognized.
+     * @public
+     * @readonly
+     */
+    public readonly _unrecognizedExtensionsList: _Element[];
+
     constructor(
-        /**
-         * @summary `invokeID`.
-         * @description
-         *
-         * Pairs this request with `AddAvlRsp`. INTEGER (0..127); unique per pair until the interaction completes.
-         *
-         * @public
-         * @readonly
-         */
-        readonly invokeID: InvokeID,
-        /**
-         * @summary `certlist`.
-         * @description
-         *
-         * The `CertAVL` to add. Entity checks signature, mandatory components, version, serial uniqueness, `constrained` vs capabilities, entry `idType`/`entityGroup`, and critical extensions (13.7).
-         *
-         * @public
-         * @readonly
-         */
-        readonly certlist: CertAVL,
-        /**
-         * @summary Extensions that are not recognized.
-         * @public
-         * @readonly
-         */
-        readonly _unrecognizedExtensionsList: _Element[] = []
-    ) {}
+        invokeID: InvokeID,
+        certlist: CertAVL,
+        _unrecognizedExtensionsList: _Element[] = []
+    ) {
+        this.invokeID = invokeID;
+        this.certlist = certlist;
+        this._unrecognizedExtensionsList = _unrecognizedExtensionsList;
+    }
 
     /**
      * @summary Restructures an object into a AddAvlReq

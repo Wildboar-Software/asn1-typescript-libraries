@@ -2,12 +2,12 @@
 
 import * as $ from "@wildboar/asn1/functional";
 import {
-    OPTIONAL,
-    INTEGER,
-    OCTET_STRING,
-    SEQUENCE,
-    SET,
-    ASN1Element as _Element,
+    type OPTIONAL,
+    type INTEGER,
+    type OCTET_STRING,
+    type SEQUENCE,
+    type SET,
+    type ASN1Element as _Element,
     ASN1TagClass as _TagClass
 } from "@wildboar/asn1";
 
@@ -34,28 +34,34 @@ import {
  */
 export
 class NumberOfChargingUnits_Item {
+    /**
+     * @summary `chargingUnits`.
+     * @description
+     *
+     * Number of charging units. ECMA-269 §12.2.7.
+     *
+     * @public
+     * @readonly
+     */
+    public readonly chargingUnits: INTEGER;
+    /**
+     * @summary `typeOfUnits`.
+     * @description
+     *
+     * Network-dependent type, to distinguish unit kinds. ECMA-269 §12.2.7.
+     *
+     * @public
+     * @readonly
+     */
+    public readonly typeOfUnits?: OPTIONAL<OCTET_STRING>;
+
     constructor (
-        /**
-         * @summary `chargingUnits`.
-         * @description
-         *
-         * Number of charging units. ECMA-269 §12.2.7.
-         *
-         * @public
-         * @readonly
-         */
-        readonly chargingUnits: INTEGER,
-        /**
-         * @summary `typeOfUnits`.
-         * @description
-         *
-         * Network-dependent type, to distinguish unit kinds. ECMA-269 §12.2.7.
-         *
-         * @public
-         * @readonly
-         */
-        readonly typeOfUnits?: OPTIONAL<OCTET_STRING>
-    ) {}
+        chargingUnits: INTEGER,
+        typeOfUnits?: OPTIONAL<OCTET_STRING>
+    ) {
+        this.chargingUnits = chargingUnits;
+        this.typeOfUnits = typeOfUnits;
+    }
 
     /**
      * @summary Restructures an object into a NumberOfChargingUnits_Item

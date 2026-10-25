@@ -1,5 +1,5 @@
 /* eslint-disable */
-import { ASN1Element as _Element, NumericString } from "@wildboar/asn1";
+import { ASN1Element as _Element, type NumericString } from "@wildboar/asn1";
 import * as $ from "@wildboar/asn1/functional";
 
 /**
@@ -17,10 +17,10 @@ import * as $ from "@wildboar/asn1/functional";
 export type CountryCode3n = NumericString; // NumericString
 
 
-export const _decode_CountryCode3n = $._decodeNumericString;
+export const _decode_CountryCode3n: $.ASN1Decoder<string> = $._decodeNumericString;
 
 
-export const _encode_CountryCode3n = $._encodeNumericString;
+export const _encode_CountryCode3n: $.ASN1Encoder<string> = $._encodeNumericString;
 
 
 /* eslint-enable */

@@ -1,6 +1,6 @@
 /* eslint-disable */
 import {
-    ASN1Element as _Element,
+    type ASN1Element as _Element,
     ASN1TagClass as _TagClass,
     ASN1Construction as _Construction,
     ASN1UniversalType as _UniversalType,
@@ -11,7 +11,7 @@ import {
 } from '@wildboar/asn1';
 import * as $ from '@wildboar/asn1/functional';
 import {
-    Credentials,
+    type Credentials,
     _decode_Credentials,
     _encode_Credentials,
 } from '../MTSAbstractService/Credentials.ta.mjs';
@@ -29,20 +29,26 @@ import {
  *
  */
 export class Register_MSArgument_change_credentials {
+    /**
+     * @summary `old_credentials`.
+     * @public
+     * @readonly
+     */
+    public readonly old_credentials: Credentials;
+    /**
+     * @summary `new_credentials`.
+     * @public
+     * @readonly
+     */
+    public readonly new_credentials: Credentials;
+
     constructor(
-        /**
-         * @summary `old_credentials`.
-         * @public
-         * @readonly
-         */
-        readonly old_credentials: Credentials,
-        /**
-         * @summary `new_credentials`.
-         * @public
-         * @readonly
-         */
-        readonly new_credentials: Credentials
-    ) {}
+        old_credentials: Credentials,
+        new_credentials: Credentials
+    ) {
+        this.old_credentials = old_credentials;
+        this.new_credentials = new_credentials;
+    }
 
     /**
      * @summary Restructures an object into a Register_MSArgument_change_credentials

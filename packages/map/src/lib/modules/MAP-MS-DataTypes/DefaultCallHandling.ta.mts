@@ -1,7 +1,7 @@
 /* eslint-disable */
 import {
-    ASN1Element as _Element,
-    ENUMERATED
+    type ASN1Element as _Element,
+    type ENUMERATED
 } from "@wildboar/asn1";
 import * as $ from "@wildboar/asn1/functional";
 
@@ -42,7 +42,7 @@ type DefaultCallHandling = _enum_for_DefaultCallHandling | ENUMERATED;
  * @type {number}
  */
 export
-const DefaultCallHandling_continueCall: DefaultCallHandling = 0; /* LONG_NAMED_ENUMERATED_VALUE */
+const DefaultCallHandling_continueCall: _enum_for_DefaultCallHandling.continueCall = _enum_for_DefaultCallHandling.continueCall; /* LONG_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary continueCall
@@ -50,7 +50,7 @@ const DefaultCallHandling_continueCall: DefaultCallHandling = 0; /* LONG_NAMED_E
  * @type {number}
  */
 export
-const continueCall: DefaultCallHandling = DefaultCallHandling_continueCall; /* SHORT_NAMED_ENUMERATED_VALUE */
+const continueCall: _enum_for_DefaultCallHandling.continueCall = DefaultCallHandling_continueCall; /* SHORT_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary DefaultCallHandling_releaseCall
@@ -58,7 +58,7 @@ const continueCall: DefaultCallHandling = DefaultCallHandling_continueCall; /* S
  * @type {number}
  */
 export
-const DefaultCallHandling_releaseCall: DefaultCallHandling = 1; /* LONG_NAMED_ENUMERATED_VALUE */
+const DefaultCallHandling_releaseCall: _enum_for_DefaultCallHandling.releaseCall = _enum_for_DefaultCallHandling.releaseCall; /* LONG_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary releaseCall
@@ -66,7 +66,7 @@ const DefaultCallHandling_releaseCall: DefaultCallHandling = 1; /* LONG_NAMED_EN
  * @type {number}
  */
 export
-const releaseCall: DefaultCallHandling = DefaultCallHandling_releaseCall; /* SHORT_NAMED_ENUMERATED_VALUE */
+const releaseCall: _enum_for_DefaultCallHandling.releaseCall = DefaultCallHandling_releaseCall; /* SHORT_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary Decodes an ASN.1 element into a(n) DefaultCallHandling
@@ -74,7 +74,7 @@ const releaseCall: DefaultCallHandling = DefaultCallHandling_releaseCall; /* SHO
  * @param el The element being decoded.
  * @returns The decoded data structure.
  */
-export const _decode_DefaultCallHandling = $._decodeEnumerated;
+export const _decode_DefaultCallHandling: $.ASN1Decoder<number> = $._decodeEnumerated;
 
 /**
  * @summary Encodes a(n) DefaultCallHandling into an ASN.1 Element.
@@ -83,7 +83,7 @@ export const _decode_DefaultCallHandling = $._decodeEnumerated;
  * @param elGetter A function that can be used to get new ASN.1 elements.
  * @returns {_Element} The DefaultCallHandling, encoded as an ASN.1 Element.
  */
-export const _encode_DefaultCallHandling = $._encodeEnumerated;
+export const _encode_DefaultCallHandling: $.ASN1Encoder<number> = $._encodeEnumerated;
 
 
 /* eslint-enable */

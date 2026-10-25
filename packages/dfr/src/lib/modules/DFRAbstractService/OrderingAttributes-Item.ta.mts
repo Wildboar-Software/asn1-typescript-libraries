@@ -1,6 +1,6 @@
 /* eslint-disable */
 import {
-    ASN1Element as _Element,
+    type ASN1Element as _Element,
     ASN1TagClass as _TagClass,
     ASN1Construction as _Construction,
     ASN1UniversalType as _UniversalType,
@@ -10,7 +10,7 @@ import {
     ASN1ConstructionError as _ConstructionError,
 } from "@wildboar/asn1";
 import * as $ from "@wildboar/asn1/functional";
-import { AttributeType, _decode_AttributeType, _encode_AttributeType } from "../InformationFramework/AttributeType.ta.mjs";
+import { type AttributeType, _decode_AttributeType, _encode_AttributeType } from "../InformationFramework/AttributeType.ta.mjs";
 import { Direction, _enum_for_Direction, _decode_Direction, _encode_Direction } from "../DFRAbstractService/Direction.ta.mjs";
 
 
@@ -33,26 +33,32 @@ import { Direction, _enum_for_Direction, _decode_Direction, _encode_Direction } 
  */
 export
 class OrderingAttributes_Item {
+    /**
+     * @summary `attribute`.
+     * @description
+     *
+     * Attribute type; must MATCH FOR ORDERING.
+     * @public
+     * @readonly
+     */
+    public readonly attribute: AttributeType;
+    /**
+     * @summary `direction`.
+     * @description
+     *
+     * ascending or descending.
+     * @public
+     * @readonly
+     */
+    public readonly direction: Direction;
+
     constructor (
-        /**
-         * @summary `attribute`.
-         * @description
-         *
-         * Attribute type; must MATCH FOR ORDERING.
-         * @public
-         * @readonly
-         */
-        readonly attribute: AttributeType,
-        /**
-         * @summary `direction`.
-         * @description
-         *
-         * ascending or descending.
-         * @public
-         * @readonly
-         */
-        readonly direction: Direction
-    ) {}
+        attribute: AttributeType,
+        direction: Direction
+    ) {
+        this.attribute = attribute;
+        this.direction = direction;
+    }
 
     /**
      * @summary Restructures an object into a OrderingAttributes_Item
@@ -76,7 +82,7 @@ class OrderingAttributes_Item {
          * @static
          */
 
-    public static _enum_for_direction = _enum_for_Direction;
+    public static _enum_for_direction: typeof _enum_for_Direction = _enum_for_Direction;
 }
 
 /**

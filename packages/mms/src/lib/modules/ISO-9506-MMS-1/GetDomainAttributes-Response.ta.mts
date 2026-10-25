@@ -1,8 +1,8 @@
 /* eslint-disable */
 import {
-    OPTIONAL,
-    BOOLEAN,
-    ASN1Element as _Element,
+    type OPTIONAL,
+    type BOOLEAN,
+    type ASN1Element as _Element,
     ASN1TagClass as _TagClass,
     ASN1Construction as _Construction,
     ASN1UniversalType as _UniversalType,
@@ -12,10 +12,10 @@ import {
     ASN1ConstructionError as _ConstructionError,
 } from "@wildboar/asn1";
 import * as $ from "@wildboar/asn1/functional";
-import { MMSString, _decode_MMSString, _encode_MMSString } from "../ISO-9506-MMS-1/MMSString.ta.mjs";
-import { DomainState, _decode_DomainState, _encode_DomainState } from "../MMS-Object-Module-1/DomainState.ta.mjs";
-import { Identifier, _decode_Identifier, _encode_Identifier } from "../ISO-9506-MMS-1/Identifier.ta.mjs";
-import { Integer8, _decode_Integer8, _encode_Integer8 } from "../ISO-9506-MMS-1/Integer8.ta.mjs";
+import { type MMSString, _decode_MMSString, _encode_MMSString } from "../ISO-9506-MMS-1/MMSString.ta.mjs";
+import { type DomainState, _decode_DomainState, _encode_DomainState } from "../MMS-Object-Module-1/DomainState.ta.mjs";
+import { type Identifier, _decode_Identifier, _encode_Identifier } from "../ISO-9506-MMS-1/Identifier.ta.mjs";
+import { type Integer8, _decode_Integer8, _encode_Integer8 } from "../ISO-9506-MMS-1/Integer8.ta.mjs";
 
 
 /**
@@ -45,83 +45,99 @@ import { Integer8, _decode_Integer8, _encode_Integer8 } from "../ISO-9506-MMS-1/
  */
 export
 class GetDomainAttributes_Response {
+    /**
+     * @summary `listOfCapabilities`.
+     * @description
+     *
+     * Domain `&Capabilities`. ISO 9506-1:2003 §11.13.1.2.1.
+     *
+     * @public
+     * @readonly
+     */
+    public readonly listOfCapabilities: MMSString[];
+    /**
+     * @summary `state`.
+     * @description
+     *
+     * Current Domain state, including transitory `d1`–`d9`. ISO 9506-1:2003
+     * §11.1.1.3, §11.13.1.2.2.
+     *
+     * @public
+     * @readonly
+     */
+    public readonly state: DomainState;
+    /**
+     * @summary `mmsDeletable`.
+     * @description
+     *
+     * Whether MMS services may delete this Domain. ISO 9506-1:2003 §9.1.4,
+     * §11.13.1.2.3.
+     *
+     * @public
+     * @readonly
+     */
+    public readonly mmsDeletable: BOOLEAN;
+    /**
+     * @summary `sharable`.
+     * @description
+     *
+     * True if the Domain may belong to more than one Program Invocation.
+     * ISO 9506-1:2003 §11.13.1.2.4.
+     *
+     * @public
+     * @readonly
+     */
+    public readonly sharable: BOOLEAN;
+    /**
+     * @summary `listOfProgramInvocations`.
+     * @description
+     *
+     * PIs bound to this Domain. At most one if not sharable. Empty unless
+     * `in-use`, `d5`, or `d6`. ISO 9506-1:2003 §11.13.1.2.5.
+     *
+     * @public
+     * @readonly
+     */
+    public readonly listOfProgramInvocations: Identifier[];
+    /**
+     * @summary `uploadInProgress`.
+     * @description
+     *
+     * Count of active ULSMs for this Domain; zero means none. ISO 9506-1:2003 §11.13.1.2.6.
+     *
+     * @public
+     * @readonly
+     */
+    public readonly uploadInProgress: Integer8;
+    /**
+     * @summary `accessControlList`.
+     * @description
+     *
+     * ACL name. Present only if `aco` was negotiated; not in minor version
+     * one or two. ISO 9506-1:2003 §11.13.1.2.7. ISO 9506-2:2003 §11.13.2.2.
+     *
+     * @public
+     * @readonly
+     */
+    public readonly accessControlList?: OPTIONAL<Identifier>;
+
     constructor (
-        /**
-         * @summary `listOfCapabilities`.
-         * @description
-         *
-         * Domain `&Capabilities`. ISO 9506-1:2003 §11.13.1.2.1.
-         *
-         * @public
-         * @readonly
-         */
-        readonly listOfCapabilities: MMSString[],
-        /**
-         * @summary `state`.
-         * @description
-         *
-         * Current Domain state, including transitory `d1`–`d9`. ISO 9506-1:2003
-         * §11.1.1.3, §11.13.1.2.2.
-         *
-         * @public
-         * @readonly
-         */
-        readonly state: DomainState,
-        /**
-         * @summary `mmsDeletable`.
-         * @description
-         *
-         * Whether MMS services may delete this Domain. ISO 9506-1:2003 §9.1.4,
-         * §11.13.1.2.3.
-         *
-         * @public
-         * @readonly
-         */
-        readonly mmsDeletable: BOOLEAN,
-        /**
-         * @summary `sharable`.
-         * @description
-         *
-         * True if the Domain may belong to more than one Program Invocation.
-         * ISO 9506-1:2003 §11.13.1.2.4.
-         *
-         * @public
-         * @readonly
-         */
-        readonly sharable: BOOLEAN,
-        /**
-         * @summary `listOfProgramInvocations`.
-         * @description
-         *
-         * PIs bound to this Domain. At most one if not sharable. Empty unless
-         * `in-use`, `d5`, or `d6`. ISO 9506-1:2003 §11.13.1.2.5.
-         *
-         * @public
-         * @readonly
-         */
-        readonly listOfProgramInvocations: Identifier[],
-        /**
-         * @summary `uploadInProgress`.
-         * @description
-         *
-         * Count of active ULSMs for this Domain; zero means none. ISO 9506-1:2003 §11.13.1.2.6.
-         *
-         * @public
-         * @readonly
-         */
-        readonly uploadInProgress: Integer8,
-        /**
-         * @summary `accessControlList`.
-         * @description
-         *
-         * ACL name. Present only if `aco` was negotiated; not in minor version
-         * one or two. ISO 9506-1:2003 §11.13.1.2.7. ISO 9506-2:2003 §11.13.2.2.
-         *
-         * @public
-         * @readonly
-         */
-        readonly accessControlList?: OPTIONAL<Identifier>
-    ) {}
+        listOfCapabilities: MMSString[],
+        state: DomainState,
+        mmsDeletable: BOOLEAN,
+        sharable: BOOLEAN,
+        listOfProgramInvocations: Identifier[],
+        uploadInProgress: Integer8,
+        accessControlList?: OPTIONAL<Identifier>
+    ) {
+        this.listOfCapabilities = listOfCapabilities;
+        this.state = state;
+        this.mmsDeletable = mmsDeletable;
+        this.sharable = sharable;
+        this.listOfProgramInvocations = listOfProgramInvocations;
+        this.uploadInProgress = uploadInProgress;
+        this.accessControlList = accessControlList;
+    }
 
     /**
      * @summary Restructures an object into a GetDomainAttributes_Response

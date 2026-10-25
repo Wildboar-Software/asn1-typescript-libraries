@@ -13,7 +13,7 @@ import {
     HandshakeType_hello_request,
 } from "./lib/modules/TSM/HandshakeType.ta.mjs";
 import {
-    HelloRequest,
+    type HelloRequest,
     _encode_HelloRequest,
 } from "./lib/modules/TSM/HelloRequest.ta.mjs";
 import {
@@ -29,7 +29,7 @@ import {
 } from "./lib/modules/X9-84-CMS/EncapsulatedContentInfo.ta.mjs";
 import { id_data } from "./lib/modules/X9-84-CMS/X9-84-Identifiers.va.mjs";
 import { SignerInfo } from "./lib/modules/X9-84-CMS/SignerInfo.ta.mjs";
-import { SignerIdentifier } from "./lib/modules/X9-84-CMS/SignerIdentifier.ta.mjs";
+import { type SignerIdentifier } from "./lib/modules/X9-84-CMS/SignerIdentifier.ta.mjs";
 import { AlgorithmIdentifier } from "./lib/modules/X9-84-CMS/AlgorithmIdentifier.ta.mjs";
 import { id_sha1, sha1WithRSAEncryption } from "./lib/modules/X9-84-CMS/X9-84-Identifiers.va.mjs";
 

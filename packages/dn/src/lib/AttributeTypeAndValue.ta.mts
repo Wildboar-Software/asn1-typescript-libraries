@@ -2,7 +2,7 @@
 import {
     ASN1Construction as _Construction,
     ASN1ConstructionError as _ConstructionError,
-    ASN1Element as _Element,
+    type ASN1Element as _Element,
     ASN1TagClass as _TagClass,
     ASN1UniversalType as _UniversalType,
     type OBJECT_IDENTIFIER,

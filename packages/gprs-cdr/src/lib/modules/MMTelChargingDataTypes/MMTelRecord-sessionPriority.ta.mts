@@ -70,7 +70,7 @@ type MMTelRecord_sessionPriority = _enum_for_MMTelRecord_sessionPriority;
  * @enum {number}
  */
 export
-const MMTelRecord_sessionPriority = _enum_for_MMTelRecord_sessionPriority;
+const MMTelRecord_sessionPriority: typeof _enum_for_MMTelRecord_sessionPriority = _enum_for_MMTelRecord_sessionPriority;
 
 /**
  * @summary MMTelRecord_sessionPriority_pRIORITY_0
@@ -78,7 +78,7 @@ const MMTelRecord_sessionPriority = _enum_for_MMTelRecord_sessionPriority;
  * @type {number}
  */
 export
-const MMTelRecord_sessionPriority_pRIORITY_0: MMTelRecord_sessionPriority = MMTelRecord_sessionPriority.pRIORITY_0; /* LONG_NAMED_ENUMERATED_VALUE */
+const MMTelRecord_sessionPriority_pRIORITY_0: _enum_for_MMTelRecord_sessionPriority.pRIORITY_0 = MMTelRecord_sessionPriority.pRIORITY_0; /* LONG_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary pRIORITY_0
@@ -86,7 +86,7 @@ const MMTelRecord_sessionPriority_pRIORITY_0: MMTelRecord_sessionPriority = MMTe
  * @type {number}
  */
 export
-const pRIORITY_0: MMTelRecord_sessionPriority = MMTelRecord_sessionPriority.pRIORITY_0; /* SHORT_NAMED_ENUMERATED_VALUE */
+const pRIORITY_0: _enum_for_MMTelRecord_sessionPriority.pRIORITY_0 = MMTelRecord_sessionPriority.pRIORITY_0; /* SHORT_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary MMTelRecord_sessionPriority_pRIORITY_1
@@ -94,7 +94,7 @@ const pRIORITY_0: MMTelRecord_sessionPriority = MMTelRecord_sessionPriority.pRIO
  * @type {number}
  */
 export
-const MMTelRecord_sessionPriority_pRIORITY_1: MMTelRecord_sessionPriority = MMTelRecord_sessionPriority.pRIORITY_1; /* LONG_NAMED_ENUMERATED_VALUE */
+const MMTelRecord_sessionPriority_pRIORITY_1: _enum_for_MMTelRecord_sessionPriority.pRIORITY_1 = MMTelRecord_sessionPriority.pRIORITY_1; /* LONG_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary pRIORITY_1
@@ -102,7 +102,7 @@ const MMTelRecord_sessionPriority_pRIORITY_1: MMTelRecord_sessionPriority = MMTe
  * @type {number}
  */
 export
-const pRIORITY_1: MMTelRecord_sessionPriority = MMTelRecord_sessionPriority.pRIORITY_1; /* SHORT_NAMED_ENUMERATED_VALUE */
+const pRIORITY_1: _enum_for_MMTelRecord_sessionPriority.pRIORITY_1 = MMTelRecord_sessionPriority.pRIORITY_1; /* SHORT_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary MMTelRecord_sessionPriority_pRIORITY_2
@@ -110,7 +110,7 @@ const pRIORITY_1: MMTelRecord_sessionPriority = MMTelRecord_sessionPriority.pRIO
  * @type {number}
  */
 export
-const MMTelRecord_sessionPriority_pRIORITY_2: MMTelRecord_sessionPriority = MMTelRecord_sessionPriority.pRIORITY_2; /* LONG_NAMED_ENUMERATED_VALUE */
+const MMTelRecord_sessionPriority_pRIORITY_2: _enum_for_MMTelRecord_sessionPriority.pRIORITY_2 = MMTelRecord_sessionPriority.pRIORITY_2; /* LONG_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary pRIORITY_2
@@ -118,7 +118,7 @@ const MMTelRecord_sessionPriority_pRIORITY_2: MMTelRecord_sessionPriority = MMTe
  * @type {number}
  */
 export
-const pRIORITY_2: MMTelRecord_sessionPriority = MMTelRecord_sessionPriority.pRIORITY_2; /* SHORT_NAMED_ENUMERATED_VALUE */
+const pRIORITY_2: _enum_for_MMTelRecord_sessionPriority.pRIORITY_2 = MMTelRecord_sessionPriority.pRIORITY_2; /* SHORT_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary MMTelRecord_sessionPriority_pRIORITY_3
@@ -126,7 +126,7 @@ const pRIORITY_2: MMTelRecord_sessionPriority = MMTelRecord_sessionPriority.pRIO
  * @type {number}
  */
 export
-const MMTelRecord_sessionPriority_pRIORITY_3: MMTelRecord_sessionPriority = MMTelRecord_sessionPriority.pRIORITY_3; /* LONG_NAMED_ENUMERATED_VALUE */
+const MMTelRecord_sessionPriority_pRIORITY_3: _enum_for_MMTelRecord_sessionPriority.pRIORITY_3 = MMTelRecord_sessionPriority.pRIORITY_3; /* LONG_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary pRIORITY_3
@@ -134,7 +134,7 @@ const MMTelRecord_sessionPriority_pRIORITY_3: MMTelRecord_sessionPriority = MMTe
  * @type {number}
  */
 export
-const pRIORITY_3: MMTelRecord_sessionPriority = MMTelRecord_sessionPriority.pRIORITY_3; /* SHORT_NAMED_ENUMERATED_VALUE */
+const pRIORITY_3: _enum_for_MMTelRecord_sessionPriority.pRIORITY_3 = MMTelRecord_sessionPriority.pRIORITY_3; /* SHORT_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary MMTelRecord_sessionPriority_pRIORITY_4
@@ -142,7 +142,7 @@ const pRIORITY_3: MMTelRecord_sessionPriority = MMTelRecord_sessionPriority.pRIO
  * @type {number}
  */
 export
-const MMTelRecord_sessionPriority_pRIORITY_4: MMTelRecord_sessionPriority = MMTelRecord_sessionPriority.pRIORITY_4; /* LONG_NAMED_ENUMERATED_VALUE */
+const MMTelRecord_sessionPriority_pRIORITY_4: _enum_for_MMTelRecord_sessionPriority.pRIORITY_4 = MMTelRecord_sessionPriority.pRIORITY_4; /* LONG_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary pRIORITY_4
@@ -150,7 +150,7 @@ const MMTelRecord_sessionPriority_pRIORITY_4: MMTelRecord_sessionPriority = MMTe
  * @type {number}
  */
 export
-const pRIORITY_4: MMTelRecord_sessionPriority = MMTelRecord_sessionPriority.pRIORITY_4; /* SHORT_NAMED_ENUMERATED_VALUE */
+const pRIORITY_4: _enum_for_MMTelRecord_sessionPriority.pRIORITY_4 = MMTelRecord_sessionPriority.pRIORITY_4; /* SHORT_NAMED_ENUMERATED_VALUE */
 
 export
 const _decode_MMTelRecord_sessionPriority: $.ASN1Decoder<MMTelRecord_sessionPriority> = $._decodeEnumerated;

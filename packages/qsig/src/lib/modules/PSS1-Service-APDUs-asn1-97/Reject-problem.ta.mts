@@ -1,13 +1,13 @@
 /* eslint-disable */
 import {
-    ASN1Element as _Element,
+    type ASN1Element as _Element,
     ASN1TagClass as _TagClass
 } from "@wildboar/asn1";
 import * as $ from "@wildboar/asn1/functional";
-import { GeneralProblem, _decode_GeneralProblem, _encode_GeneralProblem } from "../PSS1-Service-APDUs-asn1-97/GeneralProblem.ta.mjs";
-import { InvokeProblem, _decode_InvokeProblem, _encode_InvokeProblem } from "../PSS1-Service-APDUs-asn1-97/InvokeProblem.ta.mjs";
-import { ReturnResultProblem, _decode_ReturnResultProblem, _encode_ReturnResultProblem } from "../PSS1-Service-APDUs-asn1-97/ReturnResultProblem.ta.mjs";
-import { ReturnErrorProblem, _decode_ReturnErrorProblem, _encode_ReturnErrorProblem } from "../PSS1-Service-APDUs-asn1-97/ReturnErrorProblem.ta.mjs";
+import { type GeneralProblem, _decode_GeneralProblem, _encode_GeneralProblem } from "../PSS1-Service-APDUs-asn1-97/GeneralProblem.ta.mjs";
+import { type InvokeProblem, _decode_InvokeProblem, _encode_InvokeProblem } from "../PSS1-Service-APDUs-asn1-97/InvokeProblem.ta.mjs";
+import { type ReturnResultProblem, _decode_ReturnResultProblem, _encode_ReturnResultProblem } from "../PSS1-Service-APDUs-asn1-97/ReturnResultProblem.ta.mjs";
+import { type ReturnErrorProblem, _decode_ReturnErrorProblem, _encode_ReturnErrorProblem } from "../PSS1-Service-APDUs-asn1-97/ReturnErrorProblem.ta.mjs";
 
 /**
  * @summary Reject_problem

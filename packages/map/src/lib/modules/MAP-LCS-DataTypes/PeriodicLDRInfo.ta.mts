@@ -1,12 +1,12 @@
 /* eslint-disable */
 import {
-    OPTIONAL,
-    ASN1Element as _Element,
+    type OPTIONAL,
+    type ASN1Element as _Element,
     ASN1TagClass as _TagClass
 } from "@wildboar/asn1";
 import * as $ from "@wildboar/asn1/functional";
-import { ReportingAmount, _decode_ReportingAmount, _encode_ReportingAmount } from "../MAP-LCS-DataTypes/ReportingAmount.ta.mjs";
-import { ReportingInterval, _decode_ReportingInterval, _encode_ReportingInterval } from "../MAP-LCS-DataTypes/ReportingInterval.ta.mjs";
+import { type ReportingAmount, _decode_ReportingAmount, _encode_ReportingAmount } from "../MAP-LCS-DataTypes/ReportingAmount.ta.mjs";
+import { type ReportingInterval, _decode_ReportingInterval, _encode_ReportingInterval } from "../MAP-LCS-DataTypes/ReportingInterval.ta.mjs";
 import { ReportingOptionMilliseconds, _decode_ReportingOptionMilliseconds, _encode_ReportingOptionMilliseconds } from "../MAP-LCS-DataTypes/ReportingOptionMilliseconds.ta.mjs";
 
 
@@ -34,44 +34,54 @@ import { ReportingOptionMilliseconds, _decode_ReportingOptionMilliseconds, _enco
  */
 export
 class PeriodicLDRInfo {
+    /**
+     * @summary `reportingAmount`.
+     * @description
+     *
+     * 1..maxReportingAmount.
+     *
+     * @public
+     * @readonly
+     */
+    public readonly reportingAmount: ReportingAmount;
+    /**
+     * @summary `reportingInterval`.
+     * @description
+     *
+     * Seconds, 1..maxReportingInterval.
+     *
+     * @public
+     * @readonly
+     */
+    public readonly reportingInterval: ReportingInterval;
+    /**
+     * @summary `reportingOptionMilliseconds`.
+     * @description
+     *
+     * Millisecond reporting; if used, ignore second-based fields.
+     *
+     * @public
+     * @readonly
+     */
+    public readonly reportingOptionMilliseconds?: OPTIONAL<ReportingOptionMilliseconds>;
+    /**
+     * @summary Extensions that are not recognized.
+     * @public
+     * @readonly
+     */
+    public readonly _unrecognizedExtensionsList: _Element[];
+
     constructor (
-        /**
-         * @summary `reportingAmount`.
-         * @description
-         *
-         * 1..maxReportingAmount.
-         *
-         * @public
-         * @readonly
-         */
-        readonly reportingAmount: ReportingAmount,
-        /**
-         * @summary `reportingInterval`.
-         * @description
-         *
-         * Seconds, 1..maxReportingInterval.
-         *
-         * @public
-         * @readonly
-         */
-        readonly reportingInterval: ReportingInterval,
-        /**
-         * @summary `reportingOptionMilliseconds`.
-         * @description
-         *
-         * Millisecond reporting; if used, ignore second-based fields.
-         *
-         * @public
-         * @readonly
-         */
-        readonly reportingOptionMilliseconds?: OPTIONAL<ReportingOptionMilliseconds>,
-        /**
-         * @summary Extensions that are not recognized.
-         * @public
-         * @readonly
-         */
-        readonly _unrecognizedExtensionsList: _Element[] = []
-    ) {}
+        reportingAmount: ReportingAmount,
+        reportingInterval: ReportingInterval,
+        reportingOptionMilliseconds?: OPTIONAL<ReportingOptionMilliseconds>,
+        _unrecognizedExtensionsList: _Element[] = []
+    ) {
+        this.reportingAmount = reportingAmount;
+        this.reportingInterval = reportingInterval;
+        this.reportingOptionMilliseconds = reportingOptionMilliseconds;
+        this._unrecognizedExtensionsList = _unrecognizedExtensionsList;
+    }
 
     /**
      * @summary Restructures an object into a PeriodicLDRInfo

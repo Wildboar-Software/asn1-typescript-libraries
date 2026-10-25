@@ -1,7 +1,7 @@
 /* eslint-disable */
 import {
-  INTEGER,
-  GraphicString,
+  type INTEGER,
+  type GraphicString,
   ASN1Element as _Element,
   ASN1TagClass as _TagClass,
   ASN1Construction as _Construction,
@@ -40,7 +40,7 @@ export class Charging_Item {
    * @public
    * @readonly
    */
-  readonly resource_identifier: GraphicString;
+  public readonly resource_identifier: GraphicString;
   /**
    * @summary `charging_unit`.
    * @description
@@ -51,7 +51,7 @@ export class Charging_Item {
    * @public
    * @readonly
    */
-  readonly charging_unit: GraphicString;
+  public readonly charging_unit: GraphicString;
   /**
    * @summary `charging_value`.
    * @description
@@ -62,7 +62,7 @@ export class Charging_Item {
    * @public
    * @readonly
    */
-  readonly charging_value: INTEGER;
+  public readonly charging_value: INTEGER;
 
   constructor(
     resource_identifier: GraphicString,

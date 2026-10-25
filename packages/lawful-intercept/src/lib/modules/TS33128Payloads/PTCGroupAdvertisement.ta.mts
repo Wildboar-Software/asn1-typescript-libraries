@@ -1,8 +1,8 @@
 /* eslint-disable */
 import {
-    OPTIONAL,
-    UTF8String,
-    ASN1Element as _Element,
+    type OPTIONAL,
+    type UTF8String,
+    type ASN1Element as _Element,
     ASN1TagClass as _TagClass
 } from "@wildboar/asn1";
 import * as $ from "@wildboar/asn1/functional";
@@ -188,13 +188,13 @@ class PTCGroupAdvertisement {
          * @static
          */
 
-    public static _enum_for_pTCDirection = _enum_for_Direction;        /**
+    public static _enum_for_pTCDirection: typeof _enum_for_Direction = _enum_for_Direction;        /**
          * @summary The enum used as the type of the component `pTCGroupAuthRule`
          * @public
          * @static
          */
 
-    public static _enum_for_pTCGroupAuthRule = _enum_for_PTCGroupAuthRule;
+    public static _enum_for_pTCGroupAuthRule: typeof _enum_for_PTCGroupAuthRule = _enum_for_PTCGroupAuthRule;
 }
 
 /**

@@ -1,12 +1,12 @@
 /* eslint-disable */
 import {
     ASN1ConstructionError as _ConstructionError,
-    ASN1Element as _Element,
+    type ASN1Element as _Element,
     ASN1TagClass as _TagClass
 } from "@wildboar/asn1";
 import * as $ from "@wildboar/asn1/functional";
 import { TerminationID, _decode_TerminationID, _encode_TerminationID } from "../MEDIA-GATEWAY-CONTROL/TerminationID.ta.mjs";
-import { TerminationAudit, _decode_TerminationAudit, _encode_TerminationAudit } from "../MEDIA-GATEWAY-CONTROL/TerminationAudit.ta.mjs";
+import { type TerminationAudit, _decode_TerminationAudit, _encode_TerminationAudit } from "../MEDIA-GATEWAY-CONTROL/TerminationAudit.ta.mjs";
 
 
 /**
@@ -39,7 +39,7 @@ class AuditResult {
      * @public
      * @readonly
      */
-    readonly terminationID: TerminationID;
+    public readonly terminationID: TerminationID;
     /**
      * @summary `terminationAuditResult`.
      * @description
@@ -49,7 +49,7 @@ class AuditResult {
      * @public
      * @readonly
      */
-    readonly terminationAuditResult: TerminationAudit;
+    public readonly terminationAuditResult: TerminationAudit;
 
     constructor (
         terminationID: TerminationID,

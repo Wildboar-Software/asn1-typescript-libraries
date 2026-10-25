@@ -3,7 +3,7 @@ import { type ERROR } from "../Remote-Operations-Information-Objects/ERROR.oca.m
 import { type OPERATION } from "../Remote-Operations-Information-Objects/OPERATION.oca.mjs";
 // export { Priority, _decode_Priority, _encode_Priority } from "../Remote-Operations-Information-Objects/Priority.ta.mjs";
 // export { Code, _decode_Code, _encode_Code } from "../Remote-Operations-Information-Objects/Code.ta.mjs";
-import { TransferSTSIArg, _decode_TransferSTSIArg, _encode_TransferSTSIArg } from "../IN-CS3-SCF-SCF-ops-args/TransferSTSIArg.ta.mjs";
+import { type TransferSTSIArg, _decode_TransferSTSIArg, _encode_TransferSTSIArg } from "../IN-CS3-SCF-SCF-ops-args/TransferSTSIArg.ta.mjs";
 // export { TransferSTSIArg, _decode_TransferSTSIArg, _encode_TransferSTSIArg } from "../IN-CS3-SCF-SCF-ops-args/TransferSTSIArg.ta.mjs";
 import { missingParameter } from "../IN-CS3-errortypes/missingParameter.oa.mjs";
 // export { missingParameter } from "../IN-CS3-errortypes/missingParameter.oa.mjs";

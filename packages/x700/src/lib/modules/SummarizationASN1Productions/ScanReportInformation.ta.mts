@@ -1,8 +1,8 @@
 /* eslint-disable */
 import {
-    OPTIONAL,
-    GeneralizedTime,
-    ASN1Element as _Element,
+    type OPTIONAL,
+    type GeneralizedTime,
+    type ASN1Element as _Element,
     ASN1TagClass as _TagClass,
     ASN1Construction as _Construction,
     ASN1UniversalType as _UniversalType,
@@ -13,27 +13,27 @@ import {
 } from '@wildboar/asn1';
 import * as $ from '@wildboar/asn1/functional';
 import {
-    OnceReportAttributeList,
+    type OnceReportAttributeList,
     _decode_OnceReportAttributeList,
     _encode_OnceReportAttributeList,
 } from '../SummarizationASN1Productions/OnceReportAttributeList.ta.mjs';
 import {
-    ObservationScanList,
+    type ObservationScanList,
     _decode_ObservationScanList,
     _encode_ObservationScanList,
 } from '../SummarizationASN1Productions/ObservationScanList.ta.mjs';
 import {
-    IncompleteScan,
+    type IncompleteScan,
     _decode_IncompleteScan,
     _encode_IncompleteScan,
 } from '../SummarizationASN1Productions/IncompleteScan.ta.mjs';
 import {
-    AdditionalText,
+    type AdditionalText,
     _decode_AdditionalText,
     _encode_AdditionalText,
 } from '@wildboar/attribute-asn1module';
 import {
-    AdditionalInformation,
+    type AdditionalInformation,
     _decode_AdditionalInformation,
     _encode_AdditionalInformation,
 } from '@wildboar/attribute-asn1module';
@@ -68,71 +68,85 @@ import {
  *
  */
 export class ScanReportInformation {
+    /**
+     * @summary `scanInitiationTime`.
+     * @description
+     *
+     * Date and time the reported scan was initiated.
+     * Required if `timeStampReportMode` is present with a
+     * non-zero value. X.738 §8.2.2.1.1, A.9.
+     * @public
+     * @readonly
+     */
+    public readonly scanInitiationTime: OPTIONAL<GeneralizedTime>;
+    /**
+     * @summary `onceReportAttributeList`.
+     * @description
+     *
+     * Once-report attribute values that were the same
+     * across all observed objects. X.738 §8.2.2.1.2.
+     * @public
+     * @readonly
+     */
+    public readonly onceReportAttributeList: OPTIONAL<OnceReportAttributeList>;
+    /**
+     * @summary `observationScanList`.
+     * @description
+     *
+     * One entry per observed object: instance name
+     * (unless suppressed), scan-attribute measures, and
+     * numeric-value array. Mandatory. X.738 §8.2.2.1.3,
+     * Table 2.
+     * @public
+     * @readonly
+     */
+    public readonly observationScanList: ObservationScanList;
+    /**
+     * @summary `incompleteScan`.
+     * @description
+     *
+     * Present if the scan could not be completed; value
+     * is the reason. X.738 §8.2.2.1.4, Table 2 note 2.
+     * @public
+     * @readonly
+     */
+    public readonly incompleteScan?: OPTIONAL<IncompleteScan>;
+    /**
+     * @summary `additionalText`.
+     * @description
+     *
+     * Optional textual extension as in X.733 | ISO/IEC
+     * 10164-4. X.738 §8.2.2.2.6, §8.11.
+     * @public
+     * @readonly
+     */
+    public readonly additionalText?: OPTIONAL<AdditionalText>;
+    /**
+     * @summary `additionalInformation`.
+     * @description
+     *
+     * Optional structured extension as in X.733 | ISO/IEC
+     * 10164-4. X.738 §8.2.2.2.7, §8.11.
+     * @public
+     * @readonly
+     */
+    public readonly additionalInformation?: OPTIONAL<AdditionalInformation>;
+
     constructor(
-        /**
-         * @summary `scanInitiationTime`.
-         * @description
-         *
-         * Date and time the reported scan was initiated.
-         * Required if `timeStampReportMode` is present with a
-         * non-zero value. X.738 §8.2.2.1.1, A.9.
-         * @public
-         * @readonly
-         */
-        readonly scanInitiationTime: OPTIONAL<GeneralizedTime>,
-        /**
-         * @summary `onceReportAttributeList`.
-         * @description
-         *
-         * Once-report attribute values that were the same
-         * across all observed objects. X.738 §8.2.2.1.2.
-         * @public
-         * @readonly
-         */
-        readonly onceReportAttributeList: OPTIONAL<OnceReportAttributeList>,
-        /**
-         * @summary `observationScanList`.
-         * @description
-         *
-         * One entry per observed object: instance name
-         * (unless suppressed), scan-attribute measures, and
-         * numeric-value array. Mandatory. X.738 §8.2.2.1.3,
-         * Table 2.
-         * @public
-         * @readonly
-         */
-        readonly observationScanList: ObservationScanList,
-        /**
-         * @summary `incompleteScan`.
-         * @description
-         *
-         * Present if the scan could not be completed; value
-         * is the reason. X.738 §8.2.2.1.4, Table 2 note 2.
-         * @public
-         * @readonly
-         */
-        readonly incompleteScan?: OPTIONAL<IncompleteScan>,
-        /**
-         * @summary `additionalText`.
-         * @description
-         *
-         * Optional textual extension as in X.733 | ISO/IEC
-         * 10164-4. X.738 §8.2.2.2.6, §8.11.
-         * @public
-         * @readonly
-         */
-        readonly additionalText?: OPTIONAL<AdditionalText>,
-        /**
-         * @summary `additionalInformation`.
-         * @description
-         *
-         * Optional structured extension as in X.733 | ISO/IEC
-         * 10164-4. X.738 §8.2.2.2.7, §8.11.
-         * @public
-         * @readonly
-         */
-        readonly additionalInformation?: OPTIONAL<AdditionalInformation>
-    ) {}
+        scanInitiationTime: OPTIONAL<GeneralizedTime>,
+        onceReportAttributeList: OPTIONAL<OnceReportAttributeList>,
+        observationScanList: ObservationScanList,
+        incompleteScan?: OPTIONAL<IncompleteScan>,
+        additionalText?: OPTIONAL<AdditionalText>,
+        additionalInformation?: OPTIONAL<AdditionalInformation>
+    ) {
+        this.scanInitiationTime = scanInitiationTime;
+        this.onceReportAttributeList = onceReportAttributeList;
+        this.observationScanList = observationScanList;
+        this.incompleteScan = incompleteScan;
+        this.additionalText = additionalText;
+        this.additionalInformation = additionalInformation;
+    }
 
     /**
      * @summary Restructures an object into a ScanReportInformation

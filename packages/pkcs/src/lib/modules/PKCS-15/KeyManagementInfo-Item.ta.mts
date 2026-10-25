@@ -1,17 +1,17 @@
 /* eslint-disable */
 import {
     ASN1ConstructionError as _ConstructionError,
-    ASN1Element as _Element,
+    type ASN1Element as _Element,
     ASN1TagClass as _TagClass,
 } from "@wildboar/asn1";
 import * as $ from "@wildboar/asn1/functional";
 import {
-    Identifier,
+    type Identifier,
     _decode_Identifier,
     _encode_Identifier,
 } from "../PKCS-15/Identifier.ta.mjs";
 import {
-    KeyManagementInfo_Item_keyInfo,
+    type KeyManagementInfo_Item_keyInfo,
     _decode_KeyManagementInfo_Item_keyInfo,
     _encode_KeyManagementInfo_Item_keyInfo,
 } from "../PKCS-15/KeyManagementInfo-Item-keyInfo.ta.mjs";
@@ -28,20 +28,26 @@ import {
  *
  */
 export class KeyManagementInfo_Item {
+    /**
+     * @summary `keyId`.
+     * @public
+     * @readonly
+     */
+    public readonly keyId: Identifier;
+    /**
+     * @summary `keyInfo`.
+     * @public
+     * @readonly
+     */
+    public readonly keyInfo: KeyManagementInfo_Item_keyInfo;
+
     constructor(
-        /**
-         * @summary `keyId`.
-         * @public
-         * @readonly
-         */
-        readonly keyId: Identifier,
-        /**
-         * @summary `keyInfo`.
-         * @public
-         * @readonly
-         */
-        readonly keyInfo: KeyManagementInfo_Item_keyInfo
-    ) {}
+        keyId: Identifier,
+        keyInfo: KeyManagementInfo_Item_keyInfo
+    ) {
+        this.keyId = keyId;
+        this.keyInfo = keyInfo;
+    }
 
     /**
      * @summary Restructures an object into a KeyManagementInfo_Item

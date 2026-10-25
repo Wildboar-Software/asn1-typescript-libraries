@@ -8,7 +8,7 @@ import { type OPERATION } from "../Remote-Operations-Information-Objects/OPERATI
 
 import { ResumeArgument, _decode_ResumeArgument, _encode_ResumeArgument } from "../CSTA-resume/ResumeArgument.ta.mjs";
 
-import { ResumeResult, _decode_ResumeResult, _encode_ResumeResult } from "../CSTA-resume/ResumeResult.ta.mjs";
+import { type ResumeResult, _decode_ResumeResult, _encode_ResumeResult } from "../CSTA-resume/ResumeResult.ta.mjs";
 
 import { universalFailure } from "../CSTA-error-definition/universalFailure.oa.mjs";
 

@@ -1,8 +1,8 @@
 /* eslint-disable */
 import {
-    ASN1Element as _Element,
+    type ASN1Element as _Element,
     ASN1TagClass as _TagClass,
-    OPTIONAL,
+    type OPTIONAL,
 } from "@wildboar/asn1";
 import * as $ from "@wildboar/asn1/functional";
 import {
@@ -28,32 +28,42 @@ import {
  *
  */
 export class PKCS15Object<ClassAttributes, SubClassAttributes, TypeAttributes> {
+    /**
+     * @summary `commonObjectAttributes`.
+     * @public
+     * @readonly
+     */
+    public readonly commonObjectAttributes: CommonObjectAttributes;
+    /**
+     * @summary `classAttributes`.
+     * @public
+     * @readonly
+     */
+    public readonly classAttributes: ClassAttributes;
+    /**
+     * @summary `subClassAttributes`.
+     * @public
+     * @readonly
+     */
+    public readonly subClassAttributes: OPTIONAL<SubClassAttributes>;
+    /**
+     * @summary `typeAttributes`.
+     * @public
+     * @readonly
+     */
+    public readonly typeAttributes: TypeAttributes;
+
     constructor(
-        /**
-         * @summary `commonObjectAttributes`.
-         * @public
-         * @readonly
-         */
-        readonly commonObjectAttributes: CommonObjectAttributes,
-        /**
-         * @summary `classAttributes`.
-         * @public
-         * @readonly
-         */
-        readonly classAttributes: ClassAttributes,
-        /**
-         * @summary `subClassAttributes`.
-         * @public
-         * @readonly
-         */
-        readonly subClassAttributes: OPTIONAL<SubClassAttributes>,
-        /**
-         * @summary `typeAttributes`.
-         * @public
-         * @readonly
-         */
-        readonly typeAttributes: TypeAttributes
-    ) {}
+        commonObjectAttributes: CommonObjectAttributes,
+        classAttributes: ClassAttributes,
+        subClassAttributes: OPTIONAL<SubClassAttributes>,
+        typeAttributes: TypeAttributes
+    ) {
+        this.commonObjectAttributes = commonObjectAttributes;
+        this.classAttributes = classAttributes;
+        this.subClassAttributes = subClassAttributes;
+        this.typeAttributes = typeAttributes;
+    }
 
     /**
      * @summary Restructures an object into a PKCS15Object

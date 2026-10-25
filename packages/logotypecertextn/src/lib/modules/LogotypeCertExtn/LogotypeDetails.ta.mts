@@ -1,8 +1,8 @@
 /* eslint-disable */
 import {
-    IA5String,
+    type IA5String,
     ASN1ConstructionError as _ConstructionError,
-    ASN1Element as _Element,
+    type ASN1Element as _Element,
     ASN1TagClass as _TagClass,
     ASN1SizeError
 } from "@wildboar/asn1";
@@ -54,7 +54,7 @@ class LogotypeDetails {
      * @public
      * @readonly
      */
-    readonly mediaType: IA5String;
+    public readonly mediaType: IA5String;
     /**
      * One-way hashes of the entire referenced file. One of them is
      * SHA-1. Further algorithms may be included. The client
@@ -65,7 +65,7 @@ class LogotypeDetails {
      * @public
      * @readonly
      */
-    readonly logotypeHash: HashAlgAndValue[];
+    public readonly logotypeHash: HashAlgAndValue[];
     /**
      * Replicas of this same file. If one URI fails, try another in
      * the sequence. Every URI uses the `http` or `ftp` scheme, and
@@ -79,7 +79,7 @@ class LogotypeDetails {
      * @public
      * @readonly
      */
-    readonly logotypeURI: IA5String[];
+    public readonly logotypeURI: IA5String[];
 
     constructor (
         mediaType: IA5String,

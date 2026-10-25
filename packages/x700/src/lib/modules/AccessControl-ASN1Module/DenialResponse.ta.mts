@@ -1,6 +1,6 @@
 /* eslint-disable */
 import {
-    ASN1Element as _Element,
+    type ASN1Element as _Element,
     ASN1TagClass as _TagClass,
     ASN1Construction as _Construction,
     ASN1UniversalType as _UniversalType,
@@ -113,7 +113,7 @@ export type DenialResponse = _enum_for_DenialResponse;
  *
  * @enum {number}
  */
-export const DenialResponse = _enum_for_DenialResponse;
+export const DenialResponse: typeof _enum_for_DenialResponse = _enum_for_DenialResponse;
 
 /**
  * @summary DenialResponse_denyWithResponse
@@ -126,7 +126,7 @@ export const DenialResponse = _enum_for_DenialResponse;
  * @constant
  * @type {number}
  */
-export const DenialResponse_denyWithResponse: DenialResponse =
+export const DenialResponse_denyWithResponse: _enum_for_DenialResponse.denyWithResponse =
     DenialResponse.denyWithResponse; /* LONG_NAMED_ENUMERATED_VALUE */
 
 /**
@@ -138,7 +138,7 @@ export const DenialResponse_denyWithResponse: DenialResponse =
  * @constant
  * @type {number}
  */
-export const denyWithResponse: DenialResponse =
+export const denyWithResponse: _enum_for_DenialResponse.denyWithResponse =
     DenialResponse.denyWithResponse; /* SHORT_NAMED_ENUMERATED_VALUE */
 
 /**
@@ -150,7 +150,7 @@ export const denyWithResponse: DenialResponse =
  * @constant
  * @type {number}
  */
-export const DenialResponse_denyWithoutResponse: DenialResponse =
+export const DenialResponse_denyWithoutResponse: _enum_for_DenialResponse.denyWithoutResponse =
     DenialResponse.denyWithoutResponse; /* LONG_NAMED_ENUMERATED_VALUE */
 
 /**
@@ -162,7 +162,7 @@ export const DenialResponse_denyWithoutResponse: DenialResponse =
  * @constant
  * @type {number}
  */
-export const denyWithoutResponse: DenialResponse =
+export const denyWithoutResponse: _enum_for_DenialResponse.denyWithoutResponse =
     DenialResponse.denyWithoutResponse; /* SHORT_NAMED_ENUMERATED_VALUE */
 
 /**
@@ -174,7 +174,7 @@ export const denyWithoutResponse: DenialResponse =
  * @constant
  * @type {number}
  */
-export const DenialResponse_abortAssociation: DenialResponse =
+export const DenialResponse_abortAssociation: _enum_for_DenialResponse.abortAssociation =
     DenialResponse.abortAssociation; /* LONG_NAMED_ENUMERATED_VALUE */
 
 /**
@@ -186,7 +186,7 @@ export const DenialResponse_abortAssociation: DenialResponse =
  * @constant
  * @type {number}
  */
-export const abortAssociation: DenialResponse =
+export const abortAssociation: _enum_for_DenialResponse.abortAssociation =
     DenialResponse.abortAssociation; /* SHORT_NAMED_ENUMERATED_VALUE */
 
 /**
@@ -199,7 +199,7 @@ export const abortAssociation: DenialResponse =
  * @constant
  * @type {number}
  */
-export const DenialResponse_denyWithFalseResponse: DenialResponse =
+export const DenialResponse_denyWithFalseResponse: _enum_for_DenialResponse.denyWithFalseResponse =
     DenialResponse.denyWithFalseResponse; /* LONG_NAMED_ENUMERATED_VALUE */
 
 /**
@@ -212,14 +212,27 @@ export const DenialResponse_denyWithFalseResponse: DenialResponse =
  * @constant
  * @type {number}
  */
-export const denyWithFalseResponse: DenialResponse =
+export const denyWithFalseResponse: _enum_for_DenialResponse.denyWithFalseResponse =
     DenialResponse.denyWithFalseResponse; /* SHORT_NAMED_ENUMERATED_VALUE */
 
 
-export const _decode_DenialResponse = $._decodeEnumerated;
+export function _decode_DenialResponse(el: _Element): DenialResponse {
+    const enumerated = $._decodeEnumerated(el);
+    switch (enumerated) {
+        case DenialResponse.denyWithResponse: return DenialResponse.denyWithResponse;
+        case DenialResponse.denyWithoutResponse: return DenialResponse.denyWithoutResponse;
+        case DenialResponse.abortAssociation: return DenialResponse.abortAssociation;
+        case DenialResponse.denyWithFalseResponse: return DenialResponse.denyWithFalseResponse;
+        default:
+            throw new _ConstructionError(
+                'Invalid ENUMERATED value ' + enumerated + ' for DenialResponse.',
+                el,
+            );
+    }
+}
 
 
-export const _encode_DenialResponse = $._encodeEnumerated;
+export const _encode_DenialResponse: $.ASN1Encoder<DenialResponse> = $._encodeEnumerated as $.ASN1Encoder<DenialResponse>;
 
 
 /* eslint-enable */

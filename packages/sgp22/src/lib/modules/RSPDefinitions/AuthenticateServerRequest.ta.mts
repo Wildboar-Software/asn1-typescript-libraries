@@ -1,14 +1,14 @@
 /* eslint-disable */
 import {
-    OCTET_STRING,
+    type OCTET_STRING,
     ASN1ConstructionError as _ConstructionError,
-    ASN1Element as _Element,
+    type ASN1Element as _Element,
     ASN1TagClass as _TagClass
 } from "@wildboar/asn1";
 import * as $ from "@wildboar/asn1/functional";
 import { ServerSigned1, _decode_ServerSigned1, _encode_ServerSigned1 } from "../RSPDefinitions/ServerSigned1.ta.mjs";
 import { type Certificate, _decode_Certificate, _encode_Certificate } from "@wildboar/pki-stub";
-import { CtxParams1, _decode_CtxParams1, _encode_CtxParams1 } from "../RSPDefinitions/CtxParams1.ta.mjs";
+import { type CtxParams1, _decode_CtxParams1, _encode_CtxParams1 } from "../RSPDefinitions/CtxParams1.ta.mjs";
 
 
 /**
@@ -50,7 +50,7 @@ class AuthenticateServerRequest {
      * @public
      * @readonly
      */
-    readonly serverSigned1: ServerSigned1;
+    public readonly serverSigned1: ServerSigned1;
     /**
      * @summary `serverSignature1`.
      * @description
@@ -62,7 +62,7 @@ class AuthenticateServerRequest {
      * @public
      * @readonly
      */
-    readonly serverSignature1: OCTET_STRING;
+    public readonly serverSignature1: OCTET_STRING;
     /**
      * @summary `euiccCiPKIdToBeUsed`.
      * @description
@@ -75,7 +75,7 @@ class AuthenticateServerRequest {
      * @public
      * @readonly
      */
-    readonly euiccCiPKIdToBeUsed: OCTET_STRING;
+    public readonly euiccCiPKIdToBeUsed: OCTET_STRING;
     /**
      * @summary `serverCertificate`.
      * @description
@@ -87,7 +87,7 @@ class AuthenticateServerRequest {
      * @public
      * @readonly
      */
-    readonly serverCertificate: Certificate;
+    public readonly serverCertificate: Certificate;
     /**
      * @summary `ctxParams1`.
      * @description
@@ -99,7 +99,7 @@ class AuthenticateServerRequest {
      * @public
      * @readonly
      */
-    readonly ctxParams1: CtxParams1;
+    public readonly ctxParams1: CtxParams1;
 
     constructor (
         serverSigned1: ServerSigned1,

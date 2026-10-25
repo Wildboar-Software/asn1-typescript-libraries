@@ -1,6 +1,6 @@
 /* eslint-disable */
 import {
-    ASN1Element as _Element,
+    type ASN1Element as _Element,
     ASN1TagClass as _TagClass,
     ASN1Construction as _Construction,
     ASN1UniversalType as _UniversalType,
@@ -14,7 +14,7 @@ import {
     _encode_AttributeType,
 } from '../MSAbstractService/AttributeType.ta.mjs';
 import {
-    IPMLocation,
+    type IPMLocation,
     _decode_IPMLocation,
     _encode_IPMLocation,
 } from '../IPMSMessageStoreAttributes/IPMLocation.ta.mjs';

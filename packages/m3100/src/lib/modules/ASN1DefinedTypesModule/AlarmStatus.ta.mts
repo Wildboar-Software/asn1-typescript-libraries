@@ -1,6 +1,6 @@
 /* eslint-disable */
 import {
-    ASN1Element as _Element,
+    type ASN1Element as _Element,
     ASN1TagClass as _TagClass,
     ASN1Construction as _Construction,
     ASN1UniversalType as _UniversalType,
@@ -71,7 +71,7 @@ export type AlarmStatus = _enum_for_AlarmStatus;
  *
  * @enum {number}
  */
-export const AlarmStatus = _enum_for_AlarmStatus;
+export const AlarmStatus: typeof _enum_for_AlarmStatus = _enum_for_AlarmStatus;
 
 
 /**
@@ -79,7 +79,7 @@ export const AlarmStatus = _enum_for_AlarmStatus;
  * @constant
  * @type {number}
  */
-export const AlarmStatus_cleared: AlarmStatus =
+export const AlarmStatus_cleared: _enum_for_AlarmStatus.cleared =
     AlarmStatus.cleared; /* LONG_NAMED_ENUMERATED_VALUE */
 
 
@@ -88,7 +88,7 @@ export const AlarmStatus_cleared: AlarmStatus =
  * @constant
  * @type {number}
  */
-export const cleared: AlarmStatus =
+export const cleared: _enum_for_AlarmStatus.cleared =
     AlarmStatus.cleared; /* SHORT_NAMED_ENUMERATED_VALUE */
 
 
@@ -97,7 +97,7 @@ export const cleared: AlarmStatus =
  * @constant
  * @type {number}
  */
-export const AlarmStatus_activeReportable_Indeterminate: AlarmStatus =
+export const AlarmStatus_activeReportable_Indeterminate: _enum_for_AlarmStatus.activeReportable_Indeterminate =
     AlarmStatus.activeReportable_Indeterminate; /* LONG_NAMED_ENUMERATED_VALUE */
 
 
@@ -106,7 +106,7 @@ export const AlarmStatus_activeReportable_Indeterminate: AlarmStatus =
  * @constant
  * @type {number}
  */
-export const activeReportable_Indeterminate: AlarmStatus =
+export const activeReportable_Indeterminate: _enum_for_AlarmStatus.activeReportable_Indeterminate =
     AlarmStatus.activeReportable_Indeterminate; /* SHORT_NAMED_ENUMERATED_VALUE */
 
 
@@ -115,7 +115,7 @@ export const activeReportable_Indeterminate: AlarmStatus =
  * @constant
  * @type {number}
  */
-export const AlarmStatus_activeReportable_Warning: AlarmStatus =
+export const AlarmStatus_activeReportable_Warning: _enum_for_AlarmStatus.activeReportable_Warning =
     AlarmStatus.activeReportable_Warning; /* LONG_NAMED_ENUMERATED_VALUE */
 
 
@@ -124,7 +124,7 @@ export const AlarmStatus_activeReportable_Warning: AlarmStatus =
  * @constant
  * @type {number}
  */
-export const activeReportable_Warning: AlarmStatus =
+export const activeReportable_Warning: _enum_for_AlarmStatus.activeReportable_Warning =
     AlarmStatus.activeReportable_Warning; /* SHORT_NAMED_ENUMERATED_VALUE */
 
 
@@ -133,7 +133,7 @@ export const activeReportable_Warning: AlarmStatus =
  * @constant
  * @type {number}
  */
-export const AlarmStatus_activeReportable_Minor: AlarmStatus =
+export const AlarmStatus_activeReportable_Minor: _enum_for_AlarmStatus.activeReportable_Minor =
     AlarmStatus.activeReportable_Minor; /* LONG_NAMED_ENUMERATED_VALUE */
 
 
@@ -142,7 +142,7 @@ export const AlarmStatus_activeReportable_Minor: AlarmStatus =
  * @constant
  * @type {number}
  */
-export const activeReportable_Minor: AlarmStatus =
+export const activeReportable_Minor: _enum_for_AlarmStatus.activeReportable_Minor =
     AlarmStatus.activeReportable_Minor; /* SHORT_NAMED_ENUMERATED_VALUE */
 
 
@@ -151,7 +151,7 @@ export const activeReportable_Minor: AlarmStatus =
  * @constant
  * @type {number}
  */
-export const AlarmStatus_activeReportable_Major: AlarmStatus =
+export const AlarmStatus_activeReportable_Major: _enum_for_AlarmStatus.activeReportable_Major =
     AlarmStatus.activeReportable_Major; /* LONG_NAMED_ENUMERATED_VALUE */
 
 
@@ -160,7 +160,7 @@ export const AlarmStatus_activeReportable_Major: AlarmStatus =
  * @constant
  * @type {number}
  */
-export const activeReportable_Major: AlarmStatus =
+export const activeReportable_Major: _enum_for_AlarmStatus.activeReportable_Major =
     AlarmStatus.activeReportable_Major; /* SHORT_NAMED_ENUMERATED_VALUE */
 
 
@@ -169,7 +169,7 @@ export const activeReportable_Major: AlarmStatus =
  * @constant
  * @type {number}
  */
-export const AlarmStatus_activeReportable_Critical: AlarmStatus =
+export const AlarmStatus_activeReportable_Critical: _enum_for_AlarmStatus.activeReportable_Critical =
     AlarmStatus.activeReportable_Critical; /* LONG_NAMED_ENUMERATED_VALUE */
 
 
@@ -178,7 +178,7 @@ export const AlarmStatus_activeReportable_Critical: AlarmStatus =
  * @constant
  * @type {number}
  */
-export const activeReportable_Critical: AlarmStatus =
+export const activeReportable_Critical: _enum_for_AlarmStatus.activeReportable_Critical =
     AlarmStatus.activeReportable_Critical; /* SHORT_NAMED_ENUMERATED_VALUE */
 
 
@@ -187,7 +187,7 @@ export const activeReportable_Critical: AlarmStatus =
  * @constant
  * @type {number}
  */
-export const AlarmStatus_activePending: AlarmStatus =
+export const AlarmStatus_activePending: _enum_for_AlarmStatus.activePending =
     AlarmStatus.activePending; /* LONG_NAMED_ENUMERATED_VALUE */
 
 
@@ -196,18 +196,34 @@ export const AlarmStatus_activePending: AlarmStatus =
  * @constant
  * @type {number}
  */
-export const activePending: AlarmStatus =
+export const activePending: _enum_for_AlarmStatus.activePending =
     AlarmStatus.activePending; /* SHORT_NAMED_ENUMERATED_VALUE */
 
 
 
 
-export const _decode_AlarmStatus = $._decodeEnumerated;
+export function _decode_AlarmStatus(el: _Element): AlarmStatus {
+    const enumerated = $._decodeEnumerated(el);
+    switch (enumerated) {
+        case AlarmStatus.cleared: return AlarmStatus.cleared;
+        case AlarmStatus.activeReportable_Indeterminate: return AlarmStatus.activeReportable_Indeterminate;
+        case AlarmStatus.activeReportable_Warning: return AlarmStatus.activeReportable_Warning;
+        case AlarmStatus.activeReportable_Minor: return AlarmStatus.activeReportable_Minor;
+        case AlarmStatus.activeReportable_Major: return AlarmStatus.activeReportable_Major;
+        case AlarmStatus.activeReportable_Critical: return AlarmStatus.activeReportable_Critical;
+        case AlarmStatus.activePending: return AlarmStatus.activePending;
+        default:
+            throw new _ConstructionError(
+                'Invalid ENUMERATED value ' + enumerated + ' for AlarmStatus.',
+                el,
+            );
+    }
+}
 
 
 
 
-export const _encode_AlarmStatus = $._encodeEnumerated;
+export const _encode_AlarmStatus: $.ASN1Encoder<AlarmStatus> = $._encodeEnumerated as $.ASN1Encoder<AlarmStatus>;
 
 
 /* eslint-enable */

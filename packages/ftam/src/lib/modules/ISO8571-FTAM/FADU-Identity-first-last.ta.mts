@@ -1,6 +1,6 @@
 /* eslint-disable */
 import {
-  INTEGER,
+  type INTEGER,
   ASN1Element as _Element,
   ASN1TagClass as _TagClass,
   ASN1Construction as _Construction,
@@ -35,7 +35,7 @@ export type FADU_Identity_first_last = INTEGER;
  * @constant
  * @type {number}
  */
-export const FADU_Identity_first_last_first: FADU_Identity_first_last = 0; /* LONG_NAMED_INTEGER_VALUE */
+export const FADU_Identity_first_last_first: 0 = 0 satisfies FADU_Identity_first_last; /* LONG_NAMED_INTEGER_VALUE */
 
 
 /**
@@ -43,7 +43,7 @@ export const FADU_Identity_first_last_first: FADU_Identity_first_last = 0; /* LO
  * @constant
  * @type {number}
  */
-export const first: FADU_Identity_first_last = FADU_Identity_first_last_first; /* SHORT_NAMED_INTEGER_VALUE */
+export const first: 0 = FADU_Identity_first_last_first; /* SHORT_NAMED_INTEGER_VALUE */
 
 
 /**
@@ -53,7 +53,7 @@ export const first: FADU_Identity_first_last = FADU_Identity_first_last_first; /
  * @constant
  * @type {number}
  */
-export const FADU_Identity_first_last_last: FADU_Identity_first_last = 1; /* LONG_NAMED_INTEGER_VALUE */
+export const FADU_Identity_first_last_last: 1 = 1 satisfies FADU_Identity_first_last; /* LONG_NAMED_INTEGER_VALUE */
 
 
 /**
@@ -61,17 +61,17 @@ export const FADU_Identity_first_last_last: FADU_Identity_first_last = 1; /* LON
  * @constant
  * @type {number}
  */
-export const last: FADU_Identity_first_last = FADU_Identity_first_last_last; /* SHORT_NAMED_INTEGER_VALUE */
+export const last: 1 = FADU_Identity_first_last_last; /* SHORT_NAMED_INTEGER_VALUE */
 
 
 
 
-export const _decode_FADU_Identity_first_last = $._decodeInteger;
+export const _decode_FADU_Identity_first_last: $.ASN1Decoder<INTEGER> = $._decodeInteger;
 
 
 
 
-export const _encode_FADU_Identity_first_last = $._encodeInteger;
+export const _encode_FADU_Identity_first_last: $.ASN1Encoder<INTEGER> = $._encodeInteger;
 
 
 /* eslint-enable */

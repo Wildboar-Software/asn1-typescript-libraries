@@ -1,7 +1,7 @@
 /* eslint-disable */
 import {
-    UniversalString,
-    ASN1Element as _Element,
+    type UniversalString,
+    type ASN1Element as _Element,
     ASN1TagClass as _TagClass,
     ASN1Construction as _Construction,
     ASN1UniversalType as _UniversalType,
@@ -38,8 +38,8 @@ import * as $ from "@wildboar/asn1/functional";
  */
 export
 type ModalityPolicy = UniversalString; // UniversalString
-export const _decode_ModalityPolicy = $._decodeUniversalString;
-export const _encode_ModalityPolicy = $._encodeUniversalString;
+export const _decode_ModalityPolicy: $.ASN1Decoder<string> = $._decodeUniversalString;
+export const _encode_ModalityPolicy: $.ASN1Encoder<string> = $._encodeUniversalString;
 
 
 /* eslint-enable */

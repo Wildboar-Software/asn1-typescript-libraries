@@ -2,12 +2,12 @@
 
 import * as $ from "@wildboar/asn1/functional";
 import {
-    OPTIONAL,
-    BOOLEAN,
-    INTEGER,
-    SEQUENCE,
-    SET,
-    ASN1Element as _Element,
+    type OPTIONAL,
+    type BOOLEAN,
+    type INTEGER,
+    type SEQUENCE,
+    type SET,
+    type ASN1Element as _Element,
     ASN1TagClass as _TagClass
 } from "@wildboar/asn1";
 import { CSTACommonArguments, _decode_CSTACommonArguments, _encode_CSTACommonArguments } from "../CSTA-extension-types/CSTACommonArguments.ta.mjs";
@@ -28,7 +28,7 @@ import { CSTACommonArguments, _decode_CSTACommonArguments, _encode_CSTACommonArg
  * ```asn1
  * GetAutoAnswerResult ::= SEQUENCE
  * {    autoAnswerOn            BOOLEAN,
- *     numberOfRings            INTEGER                    OPTIONAL,
+ *     numberOfRings            INTEGER                    type OPTIONAL,
  *     extensions            CSTACommonArguments            OPTIONAL }
  * ```
  * 
@@ -36,36 +36,44 @@ import { CSTACommonArguments, _decode_CSTACommonArguments, _encode_CSTACommonArg
  */
 export
 class GetAutoAnswerResult {
+    /**
+     * @summary `autoAnswerOn`.
+     * @description
+     *
+     * FALSE = disabled; TRUE = enabled.
+     * @public
+     * @readonly
+     */
+    public readonly autoAnswerOn: BOOLEAN;
+    /**
+     * @summary `numberOfRings`.
+     * @description
+     *
+     * Rings before a call is auto-answered.
+     * @public
+     * @readonly
+     */
+    public readonly numberOfRings?: OPTIONAL<INTEGER>;
+    /**
+     * @summary `extensions`.
+     * @description
+     *
+     * Optional security (timestamp, sequence, securityInfo) and
+     * privateData.
+     * @public
+     * @readonly
+     */
+    public readonly extensions?: OPTIONAL<CSTACommonArguments>;
+
     constructor (
-        /**
-         * @summary `autoAnswerOn`.
-         * @description
-         *
-         * FALSE = disabled; TRUE = enabled.
-         * @public
-         * @readonly
-         */
-        readonly autoAnswerOn: BOOLEAN,
-        /**
-         * @summary `numberOfRings`.
-         * @description
-         *
-         * Rings before a call is auto-answered.
-         * @public
-         * @readonly
-         */
-        readonly numberOfRings?: OPTIONAL<INTEGER>,
-        /**
-         * @summary `extensions`.
-         * @description
-         *
-         * Optional security (timestamp, sequence, securityInfo) and
-         * privateData.
-         * @public
-         * @readonly
-         */
-        readonly extensions?: OPTIONAL<CSTACommonArguments>
-    ) {}
+        autoAnswerOn: BOOLEAN,
+        numberOfRings?: OPTIONAL<INTEGER>,
+        extensions?: OPTIONAL<CSTACommonArguments>
+    ) {
+        this.autoAnswerOn = autoAnswerOn;
+        this.numberOfRings = numberOfRings;
+        this.extensions = extensions;
+    }
 
     /**
      * @summary Restructures an object into a GetAutoAnswerResult

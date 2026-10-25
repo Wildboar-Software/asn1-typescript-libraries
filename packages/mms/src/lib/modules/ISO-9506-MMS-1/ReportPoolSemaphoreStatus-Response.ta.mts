@@ -1,8 +1,8 @@
 /* eslint-disable */
 import {
-    OPTIONAL,
-    BOOLEAN,
-    ASN1Element as _Element,
+    type OPTIONAL,
+    type BOOLEAN,
+    type ASN1Element as _Element,
     ASN1TagClass as _TagClass,
     ASN1Construction as _Construction,
     ASN1UniversalType as _UniversalType,
@@ -12,7 +12,7 @@ import {
     ASN1ConstructionError as _ConstructionError,
 } from "@wildboar/asn1";
 import * as $ from "@wildboar/asn1/functional";
-import { ReportPoolSemaphoreStatus_Response_listOfNamedTokens_Item, _decode_ReportPoolSemaphoreStatus_Response_listOfNamedTokens_Item, _encode_ReportPoolSemaphoreStatus_Response_listOfNamedTokens_Item } from "../ISO-9506-MMS-1/ReportPoolSemaphoreStatus-Response-listOfNamedTokens-Item.ta.mjs";
+import { type ReportPoolSemaphoreStatus_Response_listOfNamedTokens_Item, _decode_ReportPoolSemaphoreStatus_Response_listOfNamedTokens_Item, _encode_ReportPoolSemaphoreStatus_Response_listOfNamedTokens_Item } from "../ISO-9506-MMS-1/ReportPoolSemaphoreStatus-Response-listOfNamedTokens-Item.ta.mjs";
 
 
 /**
@@ -39,31 +39,37 @@ import { ReportPoolSemaphoreStatus_Response_listOfNamedTokens_Item, _decode_Repo
  */
 export
 class ReportPoolSemaphoreStatus_Response {
+    /**
+     * @summary `listOfNamedTokens`.
+     * @description
+     *
+     * Possibly empty. Each item is free, owned (not hung), or
+     * hung. ISO 9506-1:2003 §16.7.1.2.1.
+     *
+     * @public
+     * @readonly
+     */
+    public readonly listOfNamedTokens: ReportPoolSemaphoreStatus_Response_listOfNamedTokens_Item[];
+    /**
+     * @summary `moreFollows`.
+     * @description
+     *
+     * True if more named-tokens remain. False if this list holds
+     * the last item or is empty. Default true.
+     * ISO 9506-1:2003 §16.7.1.2.2.
+     *
+     * @public
+     * @readonly
+     */
+    public readonly moreFollows?: OPTIONAL<BOOLEAN>;
+
     constructor (
-        /**
-         * @summary `listOfNamedTokens`.
-         * @description
-         *
-         * Possibly empty. Each item is free, owned (not hung), or
-         * hung. ISO 9506-1:2003 §16.7.1.2.1.
-         *
-         * @public
-         * @readonly
-         */
-        readonly listOfNamedTokens: ReportPoolSemaphoreStatus_Response_listOfNamedTokens_Item[],
-        /**
-         * @summary `moreFollows`.
-         * @description
-         *
-         * True if more named-tokens remain. False if this list holds
-         * the last item or is empty. Default true.
-         * ISO 9506-1:2003 §16.7.1.2.2.
-         *
-         * @public
-         * @readonly
-         */
-        readonly moreFollows?: OPTIONAL<BOOLEAN>
-    ) {}
+        listOfNamedTokens: ReportPoolSemaphoreStatus_Response_listOfNamedTokens_Item[],
+        moreFollows?: OPTIONAL<BOOLEAN>
+    ) {
+        this.listOfNamedTokens = listOfNamedTokens;
+        this.moreFollows = moreFollows;
+    }
 
     /**
      * @summary Restructures an object into a ReportPoolSemaphoreStatus_Response

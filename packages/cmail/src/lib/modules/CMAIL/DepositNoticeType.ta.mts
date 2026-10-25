@@ -44,7 +44,7 @@ export class DepositNoticeType {
    * @public
    * @readonly
    */
-  readonly digitalPostmark: DigitalPostmarkType;
+  public readonly digitalPostmark: DigitalPostmarkType;
 
   constructor(
     digitalPostmark: DigitalPostmarkType

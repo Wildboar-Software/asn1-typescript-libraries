@@ -1,6 +1,6 @@
 /* eslint-disable */
 import {
-    ASN1Element as _Element,
+    type ASN1Element as _Element,
     ASN1TagClass as _TagClass,
     ASN1Construction as _Construction,
     ASN1UniversalType as _UniversalType,
@@ -11,7 +11,7 @@ import {
 } from "@wildboar/asn1";
 import * as $ from "@wildboar/asn1/functional";
 
-import { HandshakeType, _decode_HandshakeType, _encode_HandshakeType } from "../TSM/HandshakeType.ta.mjs";
+import { type HandshakeType, _decode_HandshakeType, _encode_HandshakeType } from "../TSM/HandshakeType.ta.mjs";
 
 
 
@@ -37,30 +37,36 @@ import { HandshakeType, _decode_HandshakeType, _encode_HandshakeType } from "../
  */
 export
 class Handshake {
+    /**
+     * @summary `type_`.
+     * @description
+     *
+     * `HANDSHAKE.&id` from `{Handshakes}`. TLS types 0–20 plus TSM
+     * biometric hellos 100 and 101 (Annex A).
+     *
+     * @public
+     * @readonly
+     */
+    public readonly type_: HandshakeType;
+    /**
+     * @summary `value`.
+     * @description
+     *
+     * Open type `HANDSHAKE.&Type({Handshakes}{@type})`. Decode with the
+     * information object selected by `type_`.
+     *
+     * @public
+     * @readonly
+     */
+    public readonly value: _Element;
+
     constructor (
-        /**
-         * @summary `type_`.
-         * @description
-         *
-         * `HANDSHAKE.&id` from `{Handshakes}`. TLS types 0–20 plus TSM
-         * biometric hellos 100 and 101 (Annex A).
-         *
-         * @public
-         * @readonly
-         */
-        readonly type_: HandshakeType,
-        /**
-         * @summary `value`.
-         * @description
-         *
-         * Open type `HANDSHAKE.&Type({Handshakes}{@type})`. Decode with the
-         * information object selected by `type_`.
-         *
-         * @public
-         * @readonly
-         */
-        readonly value: _Element
-    ) {}
+        type_: HandshakeType,
+        value: _Element
+    ) {
+        this.type_ = type_;
+        this.value = value;
+    }
 
     /**
      * @summary Restructures an object into a Handshake

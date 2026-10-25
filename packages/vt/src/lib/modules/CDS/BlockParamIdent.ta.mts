@@ -1,8 +1,8 @@
 /* eslint-disable */
 import {
-    OPTIONAL,
-    NULL,
-    ASN1Element as _Element,
+    type OPTIONAL,
+    type NULL,
+    type ASN1Element as _Element,
     ASN1TagClass as _TagClass,
     ASN1Construction as _Construction,
     ASN1UniversalType as _UniversalType,
@@ -36,26 +36,32 @@ import * as $ from "@wildboar/asn1/functional";
  */
 export
 class BlockParamIdent {
+    /**
+     * @summary `capability`.
+     * @description
+     * Invite `block-definition-capability` (default `"no"`).
+     * ISO/IEC 9040:1997 §18.1, §18.2.1.
+     * @public
+     * @readonly
+     */
+    public readonly capability?: OPTIONAL<NULL>;
+    /**
+     * @summary `bound`.
+     * @description
+     * Invite `b-bound` (max blocks per Y-array; default 1).
+     * ISO/IEC 9040:1997 §18.2.1.
+     * @public
+     * @readonly
+     */
+    public readonly bound?: OPTIONAL<NULL>;
+
     constructor (
-        /**
-         * @summary `capability`.
-         * @description
-         * Invite `block-definition-capability` (default `"no"`).
-         * ISO/IEC 9040:1997 §18.1, §18.2.1.
-         * @public
-         * @readonly
-         */
-        readonly capability?: OPTIONAL<NULL>,
-        /**
-         * @summary `bound`.
-         * @description
-         * Invite `b-bound` (max blocks per Y-array; default 1).
-         * ISO/IEC 9040:1997 §18.2.1.
-         * @public
-         * @readonly
-         */
-        readonly bound?: OPTIONAL<NULL>
-    ) {}
+        capability?: OPTIONAL<NULL>,
+        bound?: OPTIONAL<NULL>
+    ) {
+        this.capability = capability;
+        this.bound = bound;
+    }
 
     /**
      * @summary Restructures an object into a BlockParamIdent

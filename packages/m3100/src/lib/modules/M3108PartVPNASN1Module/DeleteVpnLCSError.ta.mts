@@ -1,7 +1,7 @@
 /* eslint-disable */
 import {
-    ENUMERATED,
-    ASN1Element as _Element,
+    type ENUMERATED,
+    type ASN1Element as _Element,
     ASN1TagClass as _TagClass,
     ASN1Construction as _Construction,
     ASN1UniversalType as _UniversalType,
@@ -48,7 +48,7 @@ export type DeleteVpnLCSError = _enum_for_DeleteVpnLCSError | ENUMERATED;
  * @constant
  * @type {number}
  */
-export const DeleteVpnLCSError_invalidServiceID: DeleteVpnLCSError = 1; /* LONG_NAMED_ENUMERATED_VALUE */
+export const DeleteVpnLCSError_invalidServiceID: _enum_for_DeleteVpnLCSError.invalidServiceID = _enum_for_DeleteVpnLCSError.invalidServiceID; /* LONG_NAMED_ENUMERATED_VALUE */
 
 
 /**
@@ -56,7 +56,7 @@ export const DeleteVpnLCSError_invalidServiceID: DeleteVpnLCSError = 1; /* LONG_
  * @constant
  * @type {number}
  */
-export const invalidServiceID: DeleteVpnLCSError = DeleteVpnLCSError_invalidServiceID; /* SHORT_NAMED_ENUMERATED_VALUE */
+export const invalidServiceID: _enum_for_DeleteVpnLCSError.invalidServiceID = DeleteVpnLCSError_invalidServiceID; /* SHORT_NAMED_ENUMERATED_VALUE */
 
 
 /**
@@ -64,7 +64,7 @@ export const invalidServiceID: DeleteVpnLCSError = DeleteVpnLCSError_invalidServ
  * @constant
  * @type {number}
  */
-export const DeleteVpnLCSError_unlockedAdministrativeState: DeleteVpnLCSError = 2; /* LONG_NAMED_ENUMERATED_VALUE */
+export const DeleteVpnLCSError_unlockedAdministrativeState: _enum_for_DeleteVpnLCSError.unlockedAdministrativeState = _enum_for_DeleteVpnLCSError.unlockedAdministrativeState; /* LONG_NAMED_ENUMERATED_VALUE */
 
 
 /**
@@ -72,7 +72,7 @@ export const DeleteVpnLCSError_unlockedAdministrativeState: DeleteVpnLCSError = 
  * @constant
  * @type {number}
  */
-export const unlockedAdministrativeState: DeleteVpnLCSError = DeleteVpnLCSError_unlockedAdministrativeState; /* SHORT_NAMED_ENUMERATED_VALUE */
+export const unlockedAdministrativeState: _enum_for_DeleteVpnLCSError.unlockedAdministrativeState = DeleteVpnLCSError_unlockedAdministrativeState; /* SHORT_NAMED_ENUMERATED_VALUE */
 
 
 /**
@@ -80,7 +80,7 @@ export const unlockedAdministrativeState: DeleteVpnLCSError = DeleteVpnLCSError_
  * @constant
  * @type {number}
  */
-export const DeleteVpnLCSError_alreadyDeleted: DeleteVpnLCSError = 3; /* LONG_NAMED_ENUMERATED_VALUE */
+export const DeleteVpnLCSError_alreadyDeleted: _enum_for_DeleteVpnLCSError.alreadyDeleted = _enum_for_DeleteVpnLCSError.alreadyDeleted; /* LONG_NAMED_ENUMERATED_VALUE */
 
 
 /**
@@ -88,7 +88,7 @@ export const DeleteVpnLCSError_alreadyDeleted: DeleteVpnLCSError = 3; /* LONG_NA
  * @constant
  * @type {number}
  */
-export const alreadyDeleted: DeleteVpnLCSError = DeleteVpnLCSError_alreadyDeleted; /* SHORT_NAMED_ENUMERATED_VALUE */
+export const alreadyDeleted: _enum_for_DeleteVpnLCSError.alreadyDeleted = DeleteVpnLCSError_alreadyDeleted; /* SHORT_NAMED_ENUMERATED_VALUE */
 
 
 /**
@@ -96,7 +96,7 @@ export const alreadyDeleted: DeleteVpnLCSError = DeleteVpnLCSError_alreadyDelete
  * @constant
  * @type {number}
  */
-export const DeleteVpnLCSError_invalidCircuitNumber: DeleteVpnLCSError = 4; /* LONG_NAMED_ENUMERATED_VALUE */
+export const DeleteVpnLCSError_invalidCircuitNumber: _enum_for_DeleteVpnLCSError.invalidCircuitNumber = _enum_for_DeleteVpnLCSError.invalidCircuitNumber; /* LONG_NAMED_ENUMERATED_VALUE */
 
 
 /**
@@ -104,7 +104,7 @@ export const DeleteVpnLCSError_invalidCircuitNumber: DeleteVpnLCSError = 4; /* L
  * @constant
  * @type {number}
  */
-export const invalidCircuitNumber: DeleteVpnLCSError = DeleteVpnLCSError_invalidCircuitNumber; /* SHORT_NAMED_ENUMERATED_VALUE */
+export const invalidCircuitNumber: _enum_for_DeleteVpnLCSError.invalidCircuitNumber = DeleteVpnLCSError_invalidCircuitNumber; /* SHORT_NAMED_ENUMERATED_VALUE */
 
 
 /**
@@ -112,7 +112,7 @@ export const invalidCircuitNumber: DeleteVpnLCSError = DeleteVpnLCSError_invalid
  * @constant
  * @type {number}
  */
-export const DeleteVpnLCSError_notBeinginAppropriateServiceAdministrativeState: DeleteVpnLCSError = 5; /* LONG_NAMED_ENUMERATED_VALUE */
+export const DeleteVpnLCSError_notBeinginAppropriateServiceAdministrativeState: _enum_for_DeleteVpnLCSError.notBeinginAppropriateServiceAdministrativeState = _enum_for_DeleteVpnLCSError.notBeinginAppropriateServiceAdministrativeState; /* LONG_NAMED_ENUMERATED_VALUE */
 
 
 /**
@@ -120,7 +120,7 @@ export const DeleteVpnLCSError_notBeinginAppropriateServiceAdministrativeState: 
  * @constant
  * @type {number}
  */
-export const notBeinginAppropriateServiceAdministrativeState: DeleteVpnLCSError = DeleteVpnLCSError_notBeinginAppropriateServiceAdministrativeState; /* SHORT_NAMED_ENUMERATED_VALUE */
+export const notBeinginAppropriateServiceAdministrativeState: _enum_for_DeleteVpnLCSError.notBeinginAppropriateServiceAdministrativeState = DeleteVpnLCSError_notBeinginAppropriateServiceAdministrativeState; /* SHORT_NAMED_ENUMERATED_VALUE */
 
 
 /**
@@ -128,7 +128,7 @@ export const notBeinginAppropriateServiceAdministrativeState: DeleteVpnLCSError 
  * @constant
  * @type {number}
  */
-export const DeleteVpnLCSError_contractViolation: DeleteVpnLCSError = 6; /* LONG_NAMED_ENUMERATED_VALUE */
+export const DeleteVpnLCSError_contractViolation: _enum_for_DeleteVpnLCSError.contractViolation = _enum_for_DeleteVpnLCSError.contractViolation; /* LONG_NAMED_ENUMERATED_VALUE */
 
 
 /**
@@ -136,7 +136,7 @@ export const DeleteVpnLCSError_contractViolation: DeleteVpnLCSError = 6; /* LONG
  * @constant
  * @type {number}
  */
-export const contractViolation: DeleteVpnLCSError = DeleteVpnLCSError_contractViolation; /* SHORT_NAMED_ENUMERATED_VALUE */
+export const contractViolation: _enum_for_DeleteVpnLCSError.contractViolation = DeleteVpnLCSError_contractViolation; /* SHORT_NAMED_ENUMERATED_VALUE */
 
 
 /**
@@ -144,7 +144,7 @@ export const contractViolation: DeleteVpnLCSError = DeleteVpnLCSError_contractVi
  * @constant
  * @type {number}
  */
-export const DeleteVpnLCSError_invalidVPNIdentifier: DeleteVpnLCSError = 7; /* LONG_NAMED_ENUMERATED_VALUE */
+export const DeleteVpnLCSError_invalidVPNIdentifier: _enum_for_DeleteVpnLCSError.invalidVPNIdentifier = _enum_for_DeleteVpnLCSError.invalidVPNIdentifier; /* LONG_NAMED_ENUMERATED_VALUE */
 
 
 /**
@@ -152,17 +152,17 @@ export const DeleteVpnLCSError_invalidVPNIdentifier: DeleteVpnLCSError = 7; /* L
  * @constant
  * @type {number}
  */
-export const invalidVPNIdentifier: DeleteVpnLCSError = DeleteVpnLCSError_invalidVPNIdentifier; /* SHORT_NAMED_ENUMERATED_VALUE */
+export const invalidVPNIdentifier: _enum_for_DeleteVpnLCSError.invalidVPNIdentifier = DeleteVpnLCSError_invalidVPNIdentifier; /* SHORT_NAMED_ENUMERATED_VALUE */
 
 
 
 
-export const _decode_DeleteVpnLCSError = $._decodeEnumerated;
+export const _decode_DeleteVpnLCSError: $.ASN1Decoder<number> = $._decodeEnumerated;
 
 
 
 
-export const _encode_DeleteVpnLCSError = $._encodeEnumerated;
+export const _encode_DeleteVpnLCSError: $.ASN1Encoder<number> = $._encodeEnumerated;
 
 
 /* eslint-enable */

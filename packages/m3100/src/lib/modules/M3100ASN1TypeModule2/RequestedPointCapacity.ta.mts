@@ -1,6 +1,6 @@
 /* eslint-disable */
 import {
-    ASN1Element as _Element,
+    type ASN1Element as _Element,
     ASN1TagClass as _TagClass,
     ASN1Construction as _Construction,
     ASN1UniversalType as _UniversalType,
@@ -11,12 +11,12 @@ import {
 } from '@wildboar/asn1';
 import * as $ from '@wildboar/asn1/functional';
 import {
-    NWTPList,
+    type NWTPList,
     _decode_NWTPList,
     _encode_NWTPList,
 } from '../M3100ASN1TypeModule2/NWTPList.ta.mjs';
 import {
-    PointCapacity,
+    type PointCapacity,
     _decode_PointCapacity,
     _encode_PointCapacity,
 } from '../M3100ASN1TypeModule2/PointCapacity.ta.mjs';

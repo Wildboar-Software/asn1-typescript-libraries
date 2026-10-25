@@ -1,7 +1,7 @@
 /* eslint-disable */
 import {
-  OPTIONAL,
-  INTEGER,
+  type OPTIONAL,
+  type INTEGER,
   ASN1Element as _Element,
   ASN1TagClass as _TagClass,
   ASN1Construction as _Construction,
@@ -33,13 +33,13 @@ export class Product {
    * @public
    * @readonly
    */
-  readonly product_owner?: OPTIONAL<INTEGER>;
+  public readonly product_owner?: OPTIONAL<INTEGER>;
   /**
    * @summary `product_type`.
    * @public
    * @readonly
    */
-  readonly product_type?: OPTIONAL<INTEGER>;
+  public readonly product_type?: OPTIONAL<INTEGER>;
 
   constructor(
     product_owner?: OPTIONAL<INTEGER>,

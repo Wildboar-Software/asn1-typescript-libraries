@@ -1,7 +1,7 @@
 /* eslint-disable */
 import {
-  OPTIONAL,
-  BOOLEAN,
+  type OPTIONAL,
+  type BOOLEAN,
   ASN1Element as _Element,
   ASN1TagClass as _TagClass,
   ASN1Construction as _Construction,
@@ -13,17 +13,17 @@ import {
 } from '@wildboar/asn1';
 import * as $ from '@wildboar/asn1/functional';
 import {
-  MatchingRuleId,
+  type MatchingRuleId,
   _decode_MatchingRuleId,
   _encode_MatchingRuleId,
 } from '../Lightweight-Directory-Access-Protocol-V3/MatchingRuleId.ta.mjs';
 import {
-  AttributeDescription,
+  type AttributeDescription,
   _decode_AttributeDescription,
   _encode_AttributeDescription,
 } from '../Lightweight-Directory-Access-Protocol-V3/AttributeDescription.ta.mjs';
 import {
-  AssertionValue,
+  type AssertionValue,
   _decode_AssertionValue,
   _encode_AssertionValue,
 } from '../Lightweight-Directory-Access-Protocol-V3/AssertionValue.ta.mjs';
@@ -62,7 +62,7 @@ export class MatchingRuleAssertion {
    * @public
    * @readonly
    */
-  readonly matchingRule: OPTIONAL<MatchingRuleId>;
+  public readonly matchingRule: OPTIONAL<MatchingRuleId>;
   /**
    * @summary `type_`.
    * @description
@@ -74,7 +74,7 @@ export class MatchingRuleAssertion {
    * @public
    * @readonly
    */
-  readonly type_: OPTIONAL<AttributeDescription>;
+  public readonly type_: OPTIONAL<AttributeDescription>;
   /**
    * @summary `matchValue`.
    * @description
@@ -84,7 +84,7 @@ export class MatchingRuleAssertion {
    * @public
    * @readonly
    */
-  readonly matchValue: AssertionValue;
+  public readonly matchValue: AssertionValue;
   /**
    * @summary `dnAttributes`.
    * @description
@@ -95,13 +95,13 @@ export class MatchingRuleAssertion {
    * @public
    * @readonly
    */
-  readonly dnAttributes?: OPTIONAL<BOOLEAN>;
+  public readonly dnAttributes?: OPTIONAL<BOOLEAN>;
   /**
    * @summary Extensions that are not recognized.
    * @public
    * @readonly
    */
-  readonly _unrecognizedExtensionsList: _Element[];
+  public readonly _unrecognizedExtensionsList: _Element[];
 
   constructor(
     matchingRule: OPTIONAL<MatchingRuleId>,

@@ -1,7 +1,7 @@
 /* eslint-disable */
 import {
-    OPTIONAL,
-    ASN1Element as _Element,
+    type OPTIONAL,
+    type ASN1Element as _Element,
     ASN1TagClass as _TagClass,
     ASN1Construction as _Construction,
     ASN1UniversalType as _UniversalType,
@@ -12,37 +12,37 @@ import {
 } from '@wildboar/asn1';
 import * as $ from '@wildboar/asn1/functional';
 import {
-    PersonNumber,
+    type PersonNumber,
     _decode_PersonNumber,
     _encode_PersonNumber,
 } from '../X790ASN1Module/PersonNumber.ta.mjs';
 import {
-    PersonName,
+    type PersonName,
     _decode_PersonName,
     _encode_PersonName,
 } from '../X790ASN1Module/PersonName.ta.mjs';
 import {
-    PersonPhone,
+    type PersonPhone,
     _decode_PersonPhone,
     _encode_PersonPhone,
 } from '../X790ASN1Module/PersonPhone.ta.mjs';
 import {
-    PersonLocation,
+    type PersonLocation,
     _decode_PersonLocation,
     _encode_PersonLocation,
 } from '../X790ASN1Module/PersonLocation.ta.mjs';
 import {
-    PersonEmail,
+    type PersonEmail,
     _decode_PersonEmail,
     _encode_PersonEmail,
 } from '../X790ASN1Module/PersonEmail.ta.mjs';
 import {
-    PersonFax,
+    type PersonFax,
     _decode_PersonFax,
     _encode_PersonFax,
 } from '../X790ASN1Module/PersonFax.ta.mjs';
 import {
-    PersonRespon,
+    type PersonRespon,
     _decode_PersonRespon,
     _encode_PersonRespon,
 } from '../X790ASN1Module/PersonRespon.ta.mjs';
@@ -68,56 +68,74 @@ import {
  *
  */
 export class PersonReach {
+    /**
+     * @summary `number_`.
+     * @public
+     * @readonly
+     */
+    public readonly number_?: OPTIONAL<PersonNumber>;
+    /**
+     * @summary `name`.
+     * @public
+     * @readonly
+     */
+    public readonly name?: OPTIONAL<PersonName>;
+    /**
+     * @summary `phone`.
+     * @public
+     * @readonly
+     */
+    public readonly phone?: OPTIONAL<PersonPhone>;
+    /**
+     * @summary `loc`.
+     * @public
+     * @readonly
+     */
+    public readonly loc?: OPTIONAL<PersonLocation>;
+    /**
+     * @summary `email`.
+     * @public
+     * @readonly
+     */
+    public readonly email?: OPTIONAL<PersonEmail>;
+    /**
+     * @summary `fax`.
+     * @public
+     * @readonly
+     */
+    public readonly fax?: OPTIONAL<PersonFax>;
+    /**
+     * @summary `respon`.
+     * @public
+     * @readonly
+     */
+    public readonly respon?: OPTIONAL<PersonRespon>;
+    /**
+     * @summary Extensions that are not recognized.
+     * @public
+     * @readonly
+     */
+    public readonly _unrecognizedExtensionsList: _Element[];
+
     constructor(
-        /**
-         * @summary `number_`.
-         * @public
-         * @readonly
-         */
-        readonly number_?: OPTIONAL<PersonNumber>,
-        /**
-         * @summary `name`.
-         * @public
-         * @readonly
-         */
-        readonly name?: OPTIONAL<PersonName>,
-        /**
-         * @summary `phone`.
-         * @public
-         * @readonly
-         */
-        readonly phone?: OPTIONAL<PersonPhone>,
-        /**
-         * @summary `loc`.
-         * @public
-         * @readonly
-         */
-        readonly loc?: OPTIONAL<PersonLocation>,
-        /**
-         * @summary `email`.
-         * @public
-         * @readonly
-         */
-        readonly email?: OPTIONAL<PersonEmail>,
-        /**
-         * @summary `fax`.
-         * @public
-         * @readonly
-         */
-        readonly fax?: OPTIONAL<PersonFax>,
-        /**
-         * @summary `respon`.
-         * @public
-         * @readonly
-         */
-        readonly respon?: OPTIONAL<PersonRespon>,
-        /**
-         * @summary Extensions that are not recognized.
-         * @public
-         * @readonly
-         */
-        readonly _unrecognizedExtensionsList: _Element[] = []
-    ) {}
+        number_?: OPTIONAL<PersonNumber>,
+        name?: OPTIONAL<PersonName>,
+        phone?: OPTIONAL<PersonPhone>,
+        loc?: OPTIONAL<PersonLocation>,
+        email?: OPTIONAL<PersonEmail>,
+        fax?: OPTIONAL<PersonFax>,
+        respon?: OPTIONAL<PersonRespon>,
+        _unrecognizedExtensionsList: _Element[] = []
+    ) {
+        this.number_ = number_;
+        this.name = name;
+        this.phone = phone;
+        this.loc = loc;
+        this.email = email;
+        this.fax = fax;
+        this.respon = respon;
+        this._unrecognizedExtensionsList = _unrecognizedExtensionsList;
+    }
 
     /**
      * @summary Restructures an object into a PersonReach

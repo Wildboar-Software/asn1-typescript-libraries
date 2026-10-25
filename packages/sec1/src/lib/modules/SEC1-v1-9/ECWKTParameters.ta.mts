@@ -1,7 +1,7 @@
 /* eslint-disable */
 import {
-    OPTIONAL,
-    ASN1Element as _Element,
+    type OPTIONAL,
+    type ASN1Element as _Element,
     ASN1TagClass as _TagClass,
     ASN1Construction as _Construction,
     ASN1UniversalType as _UniversalType,
@@ -11,8 +11,8 @@ import {
     ASN1ConstructionError as _ConstructionError,
 } from "@wildboar/asn1";
 import * as $ from "@wildboar/asn1/functional";
-import { KeyDerivationFunction, _decode_KeyDerivationFunction, _encode_KeyDerivationFunction } from "../SEC1-v1-9/KeyDerivationFunction.ta.mjs";
-import { KeyWrapFunction, _decode_KeyWrapFunction, _encode_KeyWrapFunction } from "../SEC1-v1-9/KeyWrapFunction.ta.mjs";
+import { type KeyDerivationFunction, _decode_KeyDerivationFunction, _encode_KeyDerivationFunction } from "../SEC1-v1-9/KeyDerivationFunction.ta.mjs";
+import { type KeyWrapFunction, _decode_KeyWrapFunction, _encode_KeyWrapFunction } from "../SEC1-v1-9/KeyWrapFunction.ta.mjs";
 /**
  * @summary ECWKTParameters
  * @description
@@ -43,7 +43,7 @@ class ECWKTParameters {
      * @public
      * @readonly
      */
-    readonly kdf?: OPTIONAL<KeyDerivationFunction>;
+    public readonly kdf?: OPTIONAL<KeyDerivationFunction>;
     /**
      * @summary `wrap`.
      * @description
@@ -54,7 +54,7 @@ class ECWKTParameters {
      * @public
      * @readonly
      */
-    readonly wrap?: OPTIONAL<KeyWrapFunction>;
+    public readonly wrap?: OPTIONAL<KeyWrapFunction>;
 
     constructor (
         kdf?: OPTIONAL<KeyDerivationFunction>,

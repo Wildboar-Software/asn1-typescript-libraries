@@ -1,13 +1,13 @@
 /* eslint-disable */
 import {
-    OPTIONAL,
-    ASN1Element as _Element,
+    type OPTIONAL,
+    type ASN1Element as _Element,
     ASN1TagClass as _TagClass
 } from "@wildboar/asn1";
 import * as $ from "@wildboar/asn1/functional";
 import { ExtensionContainer, _decode_ExtensionContainer, _encode_ExtensionContainer } from "../MAP-ExtensionDataTypes/ExtensionContainer.ta.mjs";
-import { CUG_FeatureList, _decode_CUG_FeatureList, _encode_CUG_FeatureList } from "../MAP-MS-DataTypes/CUG-FeatureList.ta.mjs";
-import { CUG_SubscriptionList, _decode_CUG_SubscriptionList, _encode_CUG_SubscriptionList } from "../MAP-MS-DataTypes/CUG-SubscriptionList.ta.mjs";
+import { type CUG_FeatureList, _decode_CUG_FeatureList, _encode_CUG_FeatureList } from "../MAP-MS-DataTypes/CUG-FeatureList.ta.mjs";
+import { type CUG_SubscriptionList, _decode_CUG_SubscriptionList, _encode_CUG_SubscriptionList } from "../MAP-MS-DataTypes/CUG-SubscriptionList.ta.mjs";
 
 
 /**
@@ -24,8 +24,8 @@ import { CUG_SubscriptionList, _decode_CUG_SubscriptionList, _encode_CUG_Subscri
  * ```asn1
  * CUG-Info ::= SEQUENCE {
  *     cug-SubscriptionList    CUG-SubscriptionList,
- *     cug-FeatureList    CUG-FeatureList    OPTIONAL,
- *     extensionContainer    [0] ExtensionContainer    OPTIONAL,
+ *     cug-FeatureList    CUG-FeatureList    type OPTIONAL,
+ *     extensionContainer    [0] ExtensionContainer    type OPTIONAL,
  *     ...}
  * ```
  * 
@@ -33,43 +33,53 @@ import { CUG_SubscriptionList, _decode_CUG_SubscriptionList, _encode_CUG_Subscri
  */
 export
 class CUG_Info {
+    /**
+     * @summary `cug_SubscriptionList`.
+     * @description
+     *
+     * Complete CUG subscription list; first ISD in a dialogue that contains
+     * CUG information shall include a non-empty list (3GPP TS 29.002
+     * V19.1.0 clause 8.8.1.3).
+     *
+     * @public
+     * @readonly
+     */
+    public readonly cug_SubscriptionList: CUG_SubscriptionList;
+    /**
+     * @summary `cug_FeatureList`.
+     * @description
+     *
+     * If omitted, VLR applies defaults: no outgoing access, no incoming
+     * access, no preferential CUG (3GPP TS 29.002 V19.1.0 clause 8.8.1.3).
+     *
+     * @public
+     * @readonly
+     */
+    public readonly cug_FeatureList?: OPTIONAL<CUG_FeatureList>;
+    /**
+     * @summary `extensionContainer`.
+     * @public
+     * @readonly
+     */
+    public readonly extensionContainer?: OPTIONAL<ExtensionContainer>;
+    /**
+     * @summary Extensions that are not recognized.
+     * @public
+     * @readonly
+     */
+    public readonly _unrecognizedExtensionsList: _Element[];
+
     constructor (
-        /**
-         * @summary `cug_SubscriptionList`.
-         * @description
-         *
-         * Complete CUG subscription list; first ISD in a dialogue that contains
-         * CUG information shall include a non-empty list (3GPP TS 29.002
-         * V19.1.0 clause 8.8.1.3).
-         *
-         * @public
-         * @readonly
-         */
-        readonly cug_SubscriptionList: CUG_SubscriptionList,
-        /**
-         * @summary `cug_FeatureList`.
-         * @description
-         *
-         * If omitted, VLR applies defaults: no outgoing access, no incoming
-         * access, no preferential CUG (3GPP TS 29.002 V19.1.0 clause 8.8.1.3).
-         *
-         * @public
-         * @readonly
-         */
-        readonly cug_FeatureList?: OPTIONAL<CUG_FeatureList>,
-        /**
-         * @summary `extensionContainer`.
-         * @public
-         * @readonly
-         */
-        readonly extensionContainer?: OPTIONAL<ExtensionContainer>,
-        /**
-         * @summary Extensions that are not recognized.
-         * @public
-         * @readonly
-         */
-        readonly _unrecognizedExtensionsList: _Element[] = []
-    ) {}
+        cug_SubscriptionList: CUG_SubscriptionList,
+        cug_FeatureList?: OPTIONAL<CUG_FeatureList>,
+        extensionContainer?: OPTIONAL<ExtensionContainer>,
+        _unrecognizedExtensionsList: _Element[] = []
+    ) {
+        this.cug_SubscriptionList = cug_SubscriptionList;
+        this.cug_FeatureList = cug_FeatureList;
+        this.extensionContainer = extensionContainer;
+        this._unrecognizedExtensionsList = _unrecognizedExtensionsList;
+    }
 
     /**
      * @summary Restructures an object into a CUG_Info

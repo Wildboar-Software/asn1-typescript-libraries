@@ -1,7 +1,7 @@
 /* eslint-disable */
 import {
-    OPTIONAL,
-    ASN1Element as _Element,
+    type OPTIONAL,
+    type ASN1Element as _Element,
     ASN1TagClass as _TagClass
 } from "@wildboar/asn1";
 import * as $ from "@wildboar/asn1/functional";
@@ -23,9 +23,9 @@ import { CodecList, _decode_CodecList, _encode_CodecList } from "../MAP-MS-DataT
  * 
  * ```asn1
  * SupportedCodecsList ::= SEQUENCE {
- *     utranCodecList    [0] CodecList    OPTIONAL,
- *     geranCodecList    [1] CodecList    OPTIONAL,
- *     extensionContainer    [2] ExtensionContainer    OPTIONAL,
+ *     utranCodecList    [0] CodecList    type OPTIONAL,
+ *     geranCodecList    [1] CodecList    type OPTIONAL,
+ *     extensionContainer    [2] ExtensionContainer    type OPTIONAL,
  *     ...}
  * ```
  * 
@@ -33,44 +33,54 @@ import { CodecList, _decode_CodecList, _encode_CodecList } from "../MAP-MS-DataT
  */
 export
 class SupportedCodecsList {
+    /**
+     * @summary `utranCodecList`.
+     * @description
+     *
+     * UTRAN codecs, associated modes in priority order.
+     *
+     * (3GPP TS 29.002 V19.1.0 clause 7.6.6.17).
+     *
+     * @public
+     * @readonly
+     */
+    public readonly utranCodecList?: OPTIONAL<CodecList>;
+    /**
+     * @summary `geranCodecList`.
+     * @description
+     *
+     * GERAN codecs, associated modes in priority order.
+     *
+     * (3GPP TS 29.002 V19.1.0 clause 7.6.6.17).
+     *
+     * @public
+     * @readonly
+     */
+    public readonly geranCodecList?: OPTIONAL<CodecList>;
+    /**
+     * @summary `extensionContainer`.
+     * @public
+     * @readonly
+     */
+    public readonly extensionContainer?: OPTIONAL<ExtensionContainer>;
+    /**
+     * @summary Extensions that are not recognized.
+     * @public
+     * @readonly
+     */
+    public readonly _unrecognizedExtensionsList: _Element[];
+
     constructor (
-        /**
-         * @summary `utranCodecList`.
-         * @description
-         *
-         * UTRAN codecs, associated modes in priority order.
-         *
-         * (3GPP TS 29.002 V19.1.0 clause 7.6.6.17).
-         *
-         * @public
-         * @readonly
-         */
-        readonly utranCodecList?: OPTIONAL<CodecList>,
-        /**
-         * @summary `geranCodecList`.
-         * @description
-         *
-         * GERAN codecs, associated modes in priority order.
-         *
-         * (3GPP TS 29.002 V19.1.0 clause 7.6.6.17).
-         *
-         * @public
-         * @readonly
-         */
-        readonly geranCodecList?: OPTIONAL<CodecList>,
-        /**
-         * @summary `extensionContainer`.
-         * @public
-         * @readonly
-         */
-        readonly extensionContainer?: OPTIONAL<ExtensionContainer>,
-        /**
-         * @summary Extensions that are not recognized.
-         * @public
-         * @readonly
-         */
-        readonly _unrecognizedExtensionsList: _Element[] = []
-    ) {}
+        utranCodecList?: OPTIONAL<CodecList>,
+        geranCodecList?: OPTIONAL<CodecList>,
+        extensionContainer?: OPTIONAL<ExtensionContainer>,
+        _unrecognizedExtensionsList: _Element[] = []
+    ) {
+        this.utranCodecList = utranCodecList;
+        this.geranCodecList = geranCodecList;
+        this.extensionContainer = extensionContainer;
+        this._unrecognizedExtensionsList = _unrecognizedExtensionsList;
+    }
 
     /**
      * @summary Restructures an object into a SupportedCodecsList

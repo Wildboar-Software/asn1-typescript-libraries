@@ -1,15 +1,16 @@
 /* eslint-disable */
 import {
-    OPTIONAL,
-    ASN1Element as _Element,
+    type OCTET_STRING,
+    type OPTIONAL,
+    type ASN1Element as _Element,
     ASN1TagClass as _TagClass
 } from "@wildboar/asn1";
 import * as $ from "@wildboar/asn1/functional";
-import { RequestedUTSIList, _decode_RequestedUTSIList, _encode_RequestedUTSIList } from "../IN-SSF-SCF-datatypes/RequestedUTSIList.ta.mjs";
+import { type RequestedUTSIList, _decode_RequestedUTSIList, _encode_RequestedUTSIList } from "../IN-SSF-SCF-datatypes/RequestedUTSIList.ta.mjs";
 // export { RequestedUTSIList, _decode_RequestedUTSIList, _encode_RequestedUTSIList } from "../IN-SSF-SCF-datatypes/RequestedUTSIList.ta.mjs";
-import { Extensions, _decode_Extensions, _encode_Extensions } from "../IN-common-datatypes/Extensions.ta.mjs";
+import { type Extensions, _decode_Extensions, _encode_Extensions } from "../IN-common-datatypes/Extensions.ta.mjs";
 // export { Extensions, _decode_Extensions, _encode_Extensions } from "../IN-common-datatypes/Extensions.ta.mjs";
-import { LegID, _decode_LegID, _encode_LegID } from "../IN-SSF-SCF-datatypes/LegID.ta.mjs";
+import { type LegID, _decode_LegID, _encode_LegID } from "../IN-SSF-SCF-datatypes/LegID.ta.mjs";
 // export { LegID, _decode_LegID, _encode_LegID } from "../IN-SSF-SCF-datatypes/LegID.ta.mjs";
 import { leg1 } from "../IN-SSF-SCF-datatypes/leg1.va.mjs";
 // export { leg1 } from "../IN-SSF-SCF-datatypes/leg1.va.mjs";
@@ -93,7 +94,9 @@ class RequestReportUTSIArg {
      * @static
      * @method
      */
-    public static get _default_value_for_legID () { return { sendingSideID: leg1 }; }
+    public static get _default_value_for_legID (): {
+        sendingSideID: OCTET_STRING;
+    } { return { sendingSideID: leg1 }; }
 }
 
 /**

@@ -1,7 +1,7 @@
 /* eslint-disable */
 import {
-  OPTIONAL,
-  INTEGER,
+  type OPTIONAL,
+  type INTEGER,
   ASN1Element as _Element,
   ASN1TagClass as _TagClass,
   ASN1Construction as _Construction,
@@ -13,17 +13,17 @@ import {
 } from '@wildboar/asn1';
 import * as $ from '@wildboar/asn1/functional';
 import {
-  F_WRITE_request_file_access_data_unit_Operation,
+  type F_WRITE_request_file_access_data_unit_Operation,
   _decode_F_WRITE_request_file_access_data_unit_Operation,
   _encode_F_WRITE_request_file_access_data_unit_Operation,
 } from '../ISO8571-FTAM/F-WRITE-request-file-access-data-unit-Operation.ta.mjs';
 import {
-  FADU_Identity,
+  type FADU_Identity,
   _decode_FADU_Identity,
   _encode_FADU_Identity,
 } from '../ISO8571-FTAM/FADU-Identity.ta.mjs';
 import {
-  FADU_Lock,
+  type FADU_Lock,
   _decode_FADU_Lock,
   _encode_FADU_Lock,
 } from '../ISO8571-FTAM/FADU-Lock.ta.mjs';
@@ -64,7 +64,7 @@ export class F_WRITE_request {
    * @public
    * @readonly
    */
-  readonly file_access_data_unit_Operation: F_WRITE_request_file_access_data_unit_Operation;
+  public readonly file_access_data_unit_Operation: F_WRITE_request_file_access_data_unit_Operation;
   /**
    * @summary `file_access_data_unit_identity`.
    * @description
@@ -75,7 +75,7 @@ export class F_WRITE_request {
    * @public
    * @readonly
    */
-  readonly file_access_data_unit_identity: FADU_Identity;
+  public readonly file_access_data_unit_identity: FADU_Identity;
   /**
    * @summary `fadu_lock`.
    * @description
@@ -85,7 +85,7 @@ export class F_WRITE_request {
    * @public
    * @readonly
    */
-  readonly fadu_lock?: OPTIONAL<FADU_Lock>;
+  public readonly fadu_lock?: OPTIONAL<FADU_Lock>;
   /**
    * @summary `transfer_number`.
    * @description
@@ -96,7 +96,7 @@ export class F_WRITE_request {
    * @public
    * @readonly
    */
-  readonly transfer_number?: OPTIONAL<INTEGER>;
+  public readonly transfer_number?: OPTIONAL<INTEGER>;
 
   constructor(
     file_access_data_unit_Operation: F_WRITE_request_file_access_data_unit_Operation,

@@ -1,7 +1,7 @@
 /* eslint-disable */
 import {
-    ASN1Element as _Element,
-    ENUMERATED
+    type ASN1Element as _Element,
+    type ENUMERATED
 } from "@wildboar/asn1";
 import * as $ from "@wildboar/asn1/functional";
 
@@ -52,7 +52,7 @@ type UnavailabilityCause = _enum_for_UnavailabilityCause | ENUMERATED;
  * @type {number}
  */
 export
-const UnavailabilityCause_bearerServiceNotProvisioned: UnavailabilityCause = 1; /* LONG_NAMED_ENUMERATED_VALUE */
+const UnavailabilityCause_bearerServiceNotProvisioned: _enum_for_UnavailabilityCause.bearerServiceNotProvisioned = _enum_for_UnavailabilityCause.bearerServiceNotProvisioned; /* LONG_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary bearerServiceNotProvisioned
@@ -64,7 +64,7 @@ const UnavailabilityCause_bearerServiceNotProvisioned: UnavailabilityCause = 1; 
  * @type {number}
  */
 export
-const bearerServiceNotProvisioned: UnavailabilityCause = UnavailabilityCause_bearerServiceNotProvisioned; /* SHORT_NAMED_ENUMERATED_VALUE */
+const bearerServiceNotProvisioned: _enum_for_UnavailabilityCause.bearerServiceNotProvisioned = UnavailabilityCause_bearerServiceNotProvisioned; /* SHORT_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary UnavailabilityCause_teleserviceNotProvisioned
@@ -76,7 +76,7 @@ const bearerServiceNotProvisioned: UnavailabilityCause = UnavailabilityCause_bea
  * @type {number}
  */
 export
-const UnavailabilityCause_teleserviceNotProvisioned: UnavailabilityCause = 2; /* LONG_NAMED_ENUMERATED_VALUE */
+const UnavailabilityCause_teleserviceNotProvisioned: _enum_for_UnavailabilityCause.teleserviceNotProvisioned = _enum_for_UnavailabilityCause.teleserviceNotProvisioned; /* LONG_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary teleserviceNotProvisioned
@@ -88,7 +88,7 @@ const UnavailabilityCause_teleserviceNotProvisioned: UnavailabilityCause = 2; /*
  * @type {number}
  */
 export
-const teleserviceNotProvisioned: UnavailabilityCause = UnavailabilityCause_teleserviceNotProvisioned; /* SHORT_NAMED_ENUMERATED_VALUE */
+const teleserviceNotProvisioned: _enum_for_UnavailabilityCause.teleserviceNotProvisioned = UnavailabilityCause_teleserviceNotProvisioned; /* SHORT_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary UnavailabilityCause_absentSubscriber
@@ -100,7 +100,7 @@ const teleserviceNotProvisioned: UnavailabilityCause = UnavailabilityCause_teles
  * @type {number}
  */
 export
-const UnavailabilityCause_absentSubscriber: UnavailabilityCause = 3; /* LONG_NAMED_ENUMERATED_VALUE */
+const UnavailabilityCause_absentSubscriber: _enum_for_UnavailabilityCause.absentSubscriber = _enum_for_UnavailabilityCause.absentSubscriber; /* LONG_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary absentSubscriber
@@ -112,7 +112,7 @@ const UnavailabilityCause_absentSubscriber: UnavailabilityCause = 3; /* LONG_NAM
  * @type {number}
  */
 export
-const absentSubscriber: UnavailabilityCause = UnavailabilityCause_absentSubscriber; /* SHORT_NAMED_ENUMERATED_VALUE */
+const absentSubscriber: _enum_for_UnavailabilityCause.absentSubscriber = UnavailabilityCause_absentSubscriber; /* SHORT_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary UnavailabilityCause_busySubscriber
@@ -124,7 +124,7 @@ const absentSubscriber: UnavailabilityCause = UnavailabilityCause_absentSubscrib
  * @type {number}
  */
 export
-const UnavailabilityCause_busySubscriber: UnavailabilityCause = 4; /* LONG_NAMED_ENUMERATED_VALUE */
+const UnavailabilityCause_busySubscriber: _enum_for_UnavailabilityCause.busySubscriber = _enum_for_UnavailabilityCause.busySubscriber; /* LONG_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary busySubscriber
@@ -136,7 +136,7 @@ const UnavailabilityCause_busySubscriber: UnavailabilityCause = 4; /* LONG_NAMED
  * @type {number}
  */
 export
-const busySubscriber: UnavailabilityCause = UnavailabilityCause_busySubscriber; /* SHORT_NAMED_ENUMERATED_VALUE */
+const busySubscriber: _enum_for_UnavailabilityCause.busySubscriber = UnavailabilityCause_busySubscriber; /* SHORT_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary UnavailabilityCause_callBarred
@@ -148,7 +148,7 @@ const busySubscriber: UnavailabilityCause = UnavailabilityCause_busySubscriber; 
  * @type {number}
  */
 export
-const UnavailabilityCause_callBarred: UnavailabilityCause = 5; /* LONG_NAMED_ENUMERATED_VALUE */
+const UnavailabilityCause_callBarred: _enum_for_UnavailabilityCause.callBarred = _enum_for_UnavailabilityCause.callBarred; /* LONG_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary callBarred
@@ -160,7 +160,7 @@ const UnavailabilityCause_callBarred: UnavailabilityCause = 5; /* LONG_NAMED_ENU
  * @type {number}
  */
 export
-const callBarred: UnavailabilityCause = UnavailabilityCause_callBarred; /* SHORT_NAMED_ENUMERATED_VALUE */
+const callBarred: _enum_for_UnavailabilityCause.callBarred = UnavailabilityCause_callBarred; /* SHORT_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary UnavailabilityCause_cug_Reject
@@ -172,7 +172,7 @@ const callBarred: UnavailabilityCause = UnavailabilityCause_callBarred; /* SHORT
  * @type {number}
  */
 export
-const UnavailabilityCause_cug_Reject: UnavailabilityCause = 6; /* LONG_NAMED_ENUMERATED_VALUE */
+const UnavailabilityCause_cug_Reject: _enum_for_UnavailabilityCause.cug_Reject = _enum_for_UnavailabilityCause.cug_Reject; /* LONG_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary cug_Reject
@@ -184,7 +184,7 @@ const UnavailabilityCause_cug_Reject: UnavailabilityCause = 6; /* LONG_NAMED_ENU
  * @type {number}
  */
 export
-const cug_Reject: UnavailabilityCause = UnavailabilityCause_cug_Reject; /* SHORT_NAMED_ENUMERATED_VALUE */
+const cug_Reject: _enum_for_UnavailabilityCause.cug_Reject = UnavailabilityCause_cug_Reject; /* SHORT_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary Decodes an ASN.1 element into a(n) UnavailabilityCause
@@ -192,7 +192,7 @@ const cug_Reject: UnavailabilityCause = UnavailabilityCause_cug_Reject; /* SHORT
  * @param el The element being decoded.
  * @returns The decoded data structure.
  */
-export const _decode_UnavailabilityCause = $._decodeEnumerated;
+export const _decode_UnavailabilityCause: $.ASN1Decoder<number> = $._decodeEnumerated;
 
 /**
  * @summary Encodes a(n) UnavailabilityCause into an ASN.1 Element.
@@ -201,7 +201,7 @@ export const _decode_UnavailabilityCause = $._decodeEnumerated;
  * @param elGetter A function that can be used to get new ASN.1 elements.
  * @returns {_Element} The UnavailabilityCause, encoded as an ASN.1 Element.
  */
-export const _encode_UnavailabilityCause = $._encodeEnumerated;
+export const _encode_UnavailabilityCause: $.ASN1Encoder<number> = $._encodeEnumerated;
 
 
 /* eslint-enable */

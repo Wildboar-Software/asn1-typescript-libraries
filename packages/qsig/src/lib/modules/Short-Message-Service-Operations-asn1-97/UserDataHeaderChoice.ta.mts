@@ -1,16 +1,16 @@
 /* eslint-disable */
 import {
-    ASN1Element as _Element,
+    type ASN1Element as _Element,
     ASN1TagClass as _TagClass
 } from "@wildboar/asn1";
 import * as $ from "@wildboar/asn1/functional";
-import { SmscControlParameterHeader, _decode_SmscControlParameterHeader, _encode_SmscControlParameterHeader } from "../Short-Message-Service-Operations-asn1-97/SmscControlParameterHeader.ta.mjs";
+import { type SmscControlParameterHeader, _decode_SmscControlParameterHeader, _encode_SmscControlParameterHeader } from "../Short-Message-Service-Operations-asn1-97/SmscControlParameterHeader.ta.mjs";
 import { Concatenated8BitSMHeader, _decode_Concatenated8BitSMHeader, _encode_Concatenated8BitSMHeader } from "../Short-Message-Service-Operations-asn1-97/Concatenated8BitSMHeader.ta.mjs";
 import { Concatenated16BitSMHeader, _decode_Concatenated16BitSMHeader, _encode_Concatenated16BitSMHeader } from "../Short-Message-Service-Operations-asn1-97/Concatenated16BitSMHeader.ta.mjs";
 import { ApplicationPort8BitHeader, _decode_ApplicationPort8BitHeader, _encode_ApplicationPort8BitHeader } from "../Short-Message-Service-Operations-asn1-97/ApplicationPort8BitHeader.ta.mjs";
 import { ApplicationPort16BitHeader, _decode_ApplicationPort16BitHeader, _encode_ApplicationPort16BitHeader } from "../Short-Message-Service-Operations-asn1-97/ApplicationPort16BitHeader.ta.mjs";
-import { DataHeaderSourceIndicator, _decode_DataHeaderSourceIndicator, _encode_DataHeaderSourceIndicator } from "../Short-Message-Service-Operations-asn1-97/DataHeaderSourceIndicator.ta.mjs";
-import { WirelessControlHeader, _decode_WirelessControlHeader, _encode_WirelessControlHeader } from "../Short-Message-Service-Operations-asn1-97/WirelessControlHeader.ta.mjs";
+import { type DataHeaderSourceIndicator, _decode_DataHeaderSourceIndicator, _encode_DataHeaderSourceIndicator } from "../Short-Message-Service-Operations-asn1-97/DataHeaderSourceIndicator.ta.mjs";
+import { type WirelessControlHeader, _decode_WirelessControlHeader, _encode_WirelessControlHeader } from "../Short-Message-Service-Operations-asn1-97/WirelessControlHeader.ta.mjs";
 import { GenericUserValue, _decode_GenericUserValue, _encode_GenericUserValue } from "../Short-Message-Service-Operations-asn1-97/GenericUserValue.ta.mjs";
 
 /**

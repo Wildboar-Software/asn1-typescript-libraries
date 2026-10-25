@@ -1,6 +1,6 @@
 /* eslint-disable */
 import {
-    ASN1Element as _Element,
+    type ASN1Element as _Element,
     ASN1TagClass as _TagClass,
     ASN1Construction as _Construction,
     ASN1UniversalType as _UniversalType,
@@ -11,7 +11,7 @@ import {
 } from '@wildboar/asn1';
 import * as $ from '@wildboar/asn1/functional';
 import {
-    CMSVersion,
+    type CMSVersion,
     _decode_CMSVersion,
     _encode_CMSVersion,
 } from '../CmsTelebiometric/CMSVersion.ta.mjs';
@@ -21,12 +21,12 @@ import {
     _encode_KEKIdentifier,
 } from '../CmsTelebiometric/KEKIdentifier.ta.mjs';
 import {
-    KeyEncryptionAlgorithmIdentifier,
+    type KeyEncryptionAlgorithmIdentifier,
     _decode_KeyEncryptionAlgorithmIdentifier,
     _encode_KeyEncryptionAlgorithmIdentifier,
 } from '../CmsTelebiometric/KeyEncryptionAlgorithmIdentifier.ta.mjs';
 import {
-    EncryptedKey,
+    type EncryptedKey,
     _decode_EncryptedKey,
     _encode_EncryptedKey,
 } from '../CmsTelebiometric/EncryptedKey.ta.mjs';
@@ -52,54 +52,64 @@ import {
  *
  */
 export class KEKRecipientInfo {
+    /**
+     * @summary `version`.
+     * @description
+     *
+     * Always `v4`.
+     * ITU-T Rec. X.1080.0 (2017) Cor.1 Annex B.4.2.
+     *
+     * @public
+     * @readonly
+     */
+    public readonly version: CMSVersion;
+    /**
+     * @summary `kekid`.
+     * @description
+     *
+     * Identifies the retained CEK (`keyIdentifier` from B.3.4).
+     * Other `KEKIdentifier` fields are not necessary.
+     * ITU-T Rec. X.1080.0 (2017) Cor.1 Annex B.4.2.
+     *
+     * @public
+     * @readonly
+     */
+    public readonly kekid: KEKIdentifier;
+    /**
+     * @summary `keyEncryptionAlgorithm`.
+     * @description
+     *
+     * Wrapping algorithm as in B.3.3. Same wrapping algorithm is
+     * recommended for the whole session.
+     * ITU-T Rec. X.1080.0 (2017) Cor.1 Annex B.4.2.
+     *
+     * @public
+     * @readonly
+     */
+    public readonly keyEncryptionAlgorithm: KeyEncryptionAlgorithmIdentifier;
+    /**
+     * @summary `encryptedKey`.
+     * @description
+     *
+     * Wrapped key material for this recipient.
+     * ITU-T Rec. X.1080.0 (2017) Cor.1 Annex B.4.2.
+     *
+     * @public
+     * @readonly
+     */
+    public readonly encryptedKey: EncryptedKey;
+
     constructor(
-        /**
-         * @summary `version`.
-         * @description
-         *
-         * Always `v4`.
-         * ITU-T Rec. X.1080.0 (2017) Cor.1 Annex B.4.2.
-         *
-         * @public
-         * @readonly
-         */
-        readonly version: CMSVersion,
-        /**
-         * @summary `kekid`.
-         * @description
-         *
-         * Identifies the retained CEK (`keyIdentifier` from B.3.4).
-         * Other `KEKIdentifier` fields are not necessary.
-         * ITU-T Rec. X.1080.0 (2017) Cor.1 Annex B.4.2.
-         *
-         * @public
-         * @readonly
-         */
-        readonly kekid: KEKIdentifier,
-        /**
-         * @summary `keyEncryptionAlgorithm`.
-         * @description
-         *
-         * Wrapping algorithm as in B.3.3. Same wrapping algorithm is
-         * recommended for the whole session.
-         * ITU-T Rec. X.1080.0 (2017) Cor.1 Annex B.4.2.
-         *
-         * @public
-         * @readonly
-         */
-        readonly keyEncryptionAlgorithm: KeyEncryptionAlgorithmIdentifier,
-        /**
-         * @summary `encryptedKey`.
-         * @description
-         *
-         * Wrapped key material for this recipient.
-         * ITU-T Rec. X.1080.0 (2017) Cor.1 Annex B.4.2.
-         *
-         * @public
-         * @readonly
-         */
-        readonly encryptedKey: EncryptedKey
-    ) {}
+        version: CMSVersion,
+        kekid: KEKIdentifier,
+        keyEncryptionAlgorithm: KeyEncryptionAlgorithmIdentifier,
+        encryptedKey: EncryptedKey
+    ) {
+        this.version = version;
+        this.kekid = kekid;
+        this.keyEncryptionAlgorithm = keyEncryptionAlgorithm;
+        this.encryptedKey = encryptedKey;
+    }
 
     /**
      * @summary Restructures an object into a KEKRecipientInfo

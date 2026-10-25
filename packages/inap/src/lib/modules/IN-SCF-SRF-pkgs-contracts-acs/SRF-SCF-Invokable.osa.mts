@@ -1,5 +1,5 @@
 /* eslint-disable */
-import { OPERATION } from "../Remote-Operations-Information-Objects/OPERATION.oca.mjs";
+import { type OPERATION } from "../Remote-Operations-Information-Objects/OPERATION.oca.mjs";
 // export { OPERATION } from "../Remote-Operations-Information-Objects/OPERATION.oca.mjs";
 import { assistRequestInstructions } from "../IN-SSF-SCF-ops-args/assistRequestInstructions.oa.mjs";
 // export { assistRequestInstructions } from "../IN-SSF-SCF-ops-args/assistRequestInstructions.oa.mjs";

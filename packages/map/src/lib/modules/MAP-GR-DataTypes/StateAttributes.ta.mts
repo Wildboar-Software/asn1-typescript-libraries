@@ -1,9 +1,9 @@
 /* eslint-disable */
 import {
-    ASN1Element as _Element,
+    type ASN1Element as _Element,
     ASN1TagClass as _TagClass,
-    NULL,
-    OPTIONAL
+    type NULL,
+    type OPTIONAL
 } from "@wildboar/asn1";
 import * as $ from "@wildboar/asn1/functional";
 
@@ -20,9 +20,9 @@ import * as $ from "@wildboar/asn1/functional";
  * 
  * ```asn1
  * StateAttributes ::= SEQUENCE {
- *     downlinkAttached    [5] NULL    OPTIONAL,
- *     uplinkAttached    [6] NULL    OPTIONAL,
- *     dualCommunication    [7] NULL    OPTIONAL,
+ *     downlinkAttached    [5] NULL    type OPTIONAL,
+ *     uplinkAttached    [6] NULL    type OPTIONAL,
+ *     dualCommunication    [7] NULL    type OPTIONAL,
  *     callOriginator    [8] NULL    OPTIONAL }
  * ```
  * 
@@ -30,48 +30,58 @@ import * as $ from "@wildboar/asn1/functional";
  */
 export
 class StateAttributes {
+    /**
+     * @summary `downlinkAttached`.
+     * @description
+     *
+     * See 3GPP TS 44.068 (clause 17.7.12).
+     *
+     * @public
+     * @readonly
+     */
+    public readonly downlinkAttached?: OPTIONAL<NULL>;
+    /**
+     * @summary `uplinkAttached`.
+     * @description
+     *
+     * See 3GPP TS 44.068 (clause 17.7.12).
+     *
+     * @public
+     * @readonly
+     */
+    public readonly uplinkAttached?: OPTIONAL<NULL>;
+    /**
+     * @summary `dualCommunication`.
+     * @description
+     *
+     * See 3GPP TS 44.068 (clause 17.7.12).
+     *
+     * @public
+     * @readonly
+     */
+    public readonly dualCommunication?: OPTIONAL<NULL>;
+    /**
+     * @summary `callOriginator`.
+     * @description
+     *
+     * See 3GPP TS 44.068 (clause 17.7.12).
+     *
+     * @public
+     * @readonly
+     */
+    public readonly callOriginator?: OPTIONAL<NULL>;
+
     constructor (
-        /**
-         * @summary `downlinkAttached`.
-         * @description
-         *
-         * See 3GPP TS 44.068 (clause 17.7.12).
-         *
-         * @public
-         * @readonly
-         */
-        readonly downlinkAttached?: OPTIONAL<NULL>,
-        /**
-         * @summary `uplinkAttached`.
-         * @description
-         *
-         * See 3GPP TS 44.068 (clause 17.7.12).
-         *
-         * @public
-         * @readonly
-         */
-        readonly uplinkAttached?: OPTIONAL<NULL>,
-        /**
-         * @summary `dualCommunication`.
-         * @description
-         *
-         * See 3GPP TS 44.068 (clause 17.7.12).
-         *
-         * @public
-         * @readonly
-         */
-        readonly dualCommunication?: OPTIONAL<NULL>,
-        /**
-         * @summary `callOriginator`.
-         * @description
-         *
-         * See 3GPP TS 44.068 (clause 17.7.12).
-         *
-         * @public
-         * @readonly
-         */
-        readonly callOriginator?: OPTIONAL<NULL>
-    ) {}
+        downlinkAttached?: OPTIONAL<NULL>,
+        uplinkAttached?: OPTIONAL<NULL>,
+        dualCommunication?: OPTIONAL<NULL>,
+        callOriginator?: OPTIONAL<NULL>
+    ) {
+        this.downlinkAttached = downlinkAttached;
+        this.uplinkAttached = uplinkAttached;
+        this.dualCommunication = dualCommunication;
+        this.callOriginator = callOriginator;
+    }
 
     /**
      * @summary Restructures an object into a StateAttributes

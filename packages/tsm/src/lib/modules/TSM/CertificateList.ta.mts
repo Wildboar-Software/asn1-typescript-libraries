@@ -1,6 +1,6 @@
 /* eslint-disable */
 import {
-    ASN1Element as _Element,
+    type ASN1Element as _Element,
     ASN1TagClass as _TagClass,
     ASN1Construction as _Construction,
     ASN1UniversalType as _UniversalType,
@@ -10,7 +10,7 @@ import {
     ASN1ConstructionError as _ConstructionError,
 } from "@wildboar/asn1";
 import * as $ from "@wildboar/asn1/functional";
-import { Certificates, _decode_Certificates, _encode_Certificates } from "../TSM/Certificates.ta.mjs";
+import { type Certificates, _decode_Certificates, _encode_Certificates } from "../TSM/Certificates.ta.mjs";
 
 
 
@@ -33,18 +33,22 @@ import { Certificates, _decode_Certificates, _encode_Certificates } from "../TSM
  */
 export
 class CertificateList {
+    /**
+     * @summary `certificates`.
+     * @description
+     *
+     * Certificate chain, leaf first. X.1084 Annex A.
+     *
+     * @public
+     * @readonly
+     */
+    public readonly certificates: Certificates;
+
     constructor (
-        /**
-         * @summary `certificates`.
-         * @description
-         *
-         * Certificate chain, leaf first. X.1084 Annex A.
-         *
-         * @public
-         * @readonly
-         */
-        readonly certificates: Certificates
-    ) {}
+        certificates: Certificates
+    ) {
+        this.certificates = certificates;
+    }
 
     /**
      * @summary Restructures an object into a CertificateList

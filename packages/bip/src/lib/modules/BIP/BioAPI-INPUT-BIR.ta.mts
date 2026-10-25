@@ -11,7 +11,7 @@ import {
 } from '@wildboar/asn1';
 import * as $ from '@wildboar/asn1/functional';
 import {
-  BioAPI_INPUT_BIR_inputBIR,
+  type BioAPI_INPUT_BIR_inputBIR,
   _decode_BioAPI_INPUT_BIR_inputBIR,
   _encode_BioAPI_INPUT_BIR_inputBIR,
 } from '../BIP/BioAPI-INPUT-BIR-inputBIR.ta.mjs';
@@ -50,7 +50,7 @@ export class BioAPI_INPUT_BIR {
    * @public
    * @readonly
    */
-  readonly inputBIR: BioAPI_INPUT_BIR_inputBIR;
+  public readonly inputBIR: BioAPI_INPUT_BIR_inputBIR;
 
   constructor(
     inputBIR: BioAPI_INPUT_BIR_inputBIR

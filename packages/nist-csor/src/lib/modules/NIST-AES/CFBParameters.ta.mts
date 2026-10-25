@@ -1,12 +1,12 @@
 /* eslint-disable */
 import {
     ASN1ConstructionError as _ConstructionError,
-    ASN1Element as _Element,
+    type ASN1Element as _Element,
     ASN1TagClass as _TagClass
 } from "@wildboar/asn1";
 import * as $ from "@wildboar/asn1/functional";
-import { AES_IV, _decode_AES_IV, _encode_AES_IV } from "../NIST-AES/AES-IV.ta.mjs";
-import { NumberOfBits, _decode_NumberOfBits, _encode_NumberOfBits } from "../NIST-AES/NumberOfBits.ta.mjs";
+import { type AES_IV, _decode_AES_IV, _encode_AES_IV } from "../NIST-AES/AES-IV.ta.mjs";
+import { type NumberOfBits, _decode_NumberOfBits, _encode_NumberOfBits } from "../NIST-AES/NumberOfBits.ta.mjs";
 
 
 /**
@@ -31,13 +31,13 @@ class CFBParameters {
      * @public
      * @readonly
      */
-    readonly aes_IV: AES_IV;
+    public readonly aes_IV: AES_IV;
     /**
      * @summary `numberOfBits`.
      * @public
      * @readonly
      */
-    readonly numberOfBits: NumberOfBits;
+    public readonly numberOfBits: NumberOfBits;
 
     constructor (
         aes_IV: AES_IV,

@@ -1,8 +1,8 @@
 /* eslint-disable */
 import {
-    OPTIONAL,
+    type OPTIONAL,
     TRUE_BIT,
-    ASN1Element as _Element,
+    type ASN1Element as _Element,
     ASN1TagClass as _TagClass,
     ASN1Construction as _Construction,
     ASN1UniversalType as _UniversalType,
@@ -13,23 +13,23 @@ import {
 } from '@wildboar/asn1';
 import * as $ from '@wildboar/asn1/functional';
 import {
-    Protocol_version,
+    type Protocol_version,
     Protocol_version_version_1 /* IMPORTED_LONG_NAMED_BIT */,
     _decode_Protocol_version,
     _encode_Protocol_version,
 } from '../ISO8823-PRESENTATION/Protocol-version.ta.mjs';
 import {
-    Calling_presentation_selector,
+    type Calling_presentation_selector,
     _decode_Calling_presentation_selector,
     _encode_Calling_presentation_selector,
 } from '../ISO8823-PRESENTATION/Calling-presentation-selector.ta.mjs';
 import {
-    Called_presentation_selector,
+    type Called_presentation_selector,
     _decode_Called_presentation_selector,
     _encode_Called_presentation_selector,
 } from '../ISO8823-PRESENTATION/Called-presentation-selector.ta.mjs';
 import {
-    Presentation_context_definition_list,
+    type Presentation_context_definition_list,
     _decode_Presentation_context_definition_list,
     _encode_Presentation_context_definition_list,
 } from '../ISO8823-PRESENTATION/Presentation-context-definition-list.ta.mjs';
@@ -39,22 +39,22 @@ import {
     _encode_Default_context_name,
 } from '../ISO8823-PRESENTATION/Default-context-name.ta.mjs';
 import {
-    Presentation_requirements,
+    type Presentation_requirements,
     _decode_Presentation_requirements,
     _encode_Presentation_requirements,
 } from '../ISO8823-PRESENTATION/Presentation-requirements.ta.mjs';
 import {
-    User_session_requirements,
+    type User_session_requirements,
     _decode_User_session_requirements,
     _encode_User_session_requirements,
 } from '../ISO8823-PRESENTATION/User-session-requirements.ta.mjs';
 import {
-    Protocol_options,
+    type Protocol_options,
     _decode_Protocol_options,
     _encode_Protocol_options,
 } from '../ISO8823-PRESENTATION/Protocol-options.ta.mjs';
 import {
-    Presentation_context_identifier,
+    type Presentation_context_identifier,
     _decode_Presentation_context_identifier,
     _encode_Presentation_context_identifier,
 } from '../ISO8823-PRESENTATION/Presentation-context-identifier.ta.mjs';
@@ -64,7 +64,7 @@ import {
     _encode_CP_type_normal_mode_parameters_extensions,
 } from '../ISO8823-PRESENTATION/CP-type-normal-mode-parameters-extensions.ta.mjs';
 import {
-    User_data,
+    type User_data,
     _decode_User_data,
     _encode_User_data,
 } from '../ISO8823-PRESENTATION/User-data.ta.mjs';

@@ -1,7 +1,7 @@
 /* eslint-disable */
 import {
-    OPTIONAL,
-    ASN1Element as _Element,
+    type OPTIONAL,
+    type ASN1Element as _Element,
     ASN1TagClass as _TagClass,
     ASN1Construction as _Construction,
     ASN1UniversalType as _UniversalType,
@@ -12,17 +12,17 @@ import {
 } from '@wildboar/asn1';
 import * as $ from '@wildboar/asn1/functional';
 import {
-    Operations,
+    type Operations,
     _decode_Operations,
     _encode_Operations,
 } from '../MTSAbstractService/Operations.ta.mjs';
 import {
-    WaitingMessages,
+    type WaitingMessages,
     _decode_WaitingMessages,
     _encode_WaitingMessages,
 } from '../MTSAbstractService/WaitingMessages.ta.mjs';
 import {
-    ContentType,
+    type ContentType,
     _decode_ContentType,
     _encode_ContentType,
 } from '../MTSAbstractService/ContentType.ta.mjs';
@@ -53,32 +53,42 @@ import {
  *
  */
 export class Waiting {
+    /**
+     * @summary `waiting_operations`.
+     * @public
+     * @readonly
+     */
+    public readonly waiting_operations?: OPTIONAL<Operations>;
+    /**
+     * @summary `waiting_messages`.
+     * @public
+     * @readonly
+     */
+    public readonly waiting_messages?: OPTIONAL<WaitingMessages>;
+    /**
+     * @summary `waiting_content_types`.
+     * @public
+     * @readonly
+     */
+    public readonly waiting_content_types?: OPTIONAL<ContentType[]>;
+    /**
+     * @summary `waiting_encoded_information_types`.
+     * @public
+     * @readonly
+     */
+    public readonly waiting_encoded_information_types?: OPTIONAL<EncodedInformationTypes>;
+
     constructor(
-        /**
-         * @summary `waiting_operations`.
-         * @public
-         * @readonly
-         */
-        readonly waiting_operations?: OPTIONAL<Operations>,
-        /**
-         * @summary `waiting_messages`.
-         * @public
-         * @readonly
-         */
-        readonly waiting_messages?: OPTIONAL<WaitingMessages>,
-        /**
-         * @summary `waiting_content_types`.
-         * @public
-         * @readonly
-         */
-        readonly waiting_content_types?: OPTIONAL<ContentType[]>,
-        /**
-         * @summary `waiting_encoded_information_types`.
-         * @public
-         * @readonly
-         */
-        readonly waiting_encoded_information_types?: OPTIONAL<EncodedInformationTypes>
-    ) {}
+        waiting_operations?: OPTIONAL<Operations>,
+        waiting_messages?: OPTIONAL<WaitingMessages>,
+        waiting_content_types?: OPTIONAL<ContentType[]>,
+        waiting_encoded_information_types?: OPTIONAL<EncodedInformationTypes>
+    ) {
+        this.waiting_operations = waiting_operations;
+        this.waiting_messages = waiting_messages;
+        this.waiting_content_types = waiting_content_types;
+        this.waiting_encoded_information_types = waiting_encoded_information_types;
+    }
 
     /**
      * @summary Restructures an object into a Waiting

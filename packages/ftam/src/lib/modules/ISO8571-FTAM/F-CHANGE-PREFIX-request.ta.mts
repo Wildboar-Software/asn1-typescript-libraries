@@ -1,7 +1,7 @@
 /* eslint-disable */
 import {
-  OPTIONAL,
-  BOOLEAN,
+  type OPTIONAL,
+  type BOOLEAN,
   ASN1Element as _Element,
   ASN1TagClass as _TagClass,
   ASN1Construction as _Construction,
@@ -13,7 +13,7 @@ import {
 } from '@wildboar/asn1';
 import * as $ from '@wildboar/asn1/functional';
 import {
-  Destination_File_Directory,
+  type Destination_File_Directory,
   _decode_Destination_File_Directory,
   _encode_Destination_File_Directory,
 } from '../ISO8571-FTAM/Destination-File-Directory.ta.mjs';
@@ -23,7 +23,7 @@ import {
   _encode_Access_Passwords,
 } from '../ISO8571-FTAM/Access-Passwords.ta.mjs';
 import {
-  Path_Access_Passwords,
+  type Path_Access_Passwords,
   _decode_Path_Access_Passwords,
   _encode_Path_Access_Passwords,
 } from '../ISO8571-FTAM/Path-Access-Passwords.ta.mjs';
@@ -59,7 +59,7 @@ export class F_CHANGE_PREFIX_request {
    * @public
    * @readonly
    */
-  readonly reset: OPTIONAL<BOOLEAN>;
+  public readonly reset: OPTIONAL<BOOLEAN>;
   /**
    * @summary `destination_file_directory`.
    * @description
@@ -70,7 +70,7 @@ export class F_CHANGE_PREFIX_request {
    * @public
    * @readonly
    */
-  readonly destination_file_directory: Destination_File_Directory;
+  public readonly destination_file_directory: Destination_File_Directory;
   /**
    * @summary `access_passwords`.
    * @description
@@ -82,7 +82,7 @@ export class F_CHANGE_PREFIX_request {
    * @public
    * @readonly
    */
-  readonly access_passwords?: OPTIONAL<Access_Passwords>;
+  public readonly access_passwords?: OPTIONAL<Access_Passwords>;
   /**
    * @summary `path_access_passwords`.
    * @description
@@ -95,7 +95,7 @@ export class F_CHANGE_PREFIX_request {
    * @public
    * @readonly
    */
-  readonly path_access_passwords?: OPTIONAL<Path_Access_Passwords>;
+  public readonly path_access_passwords?: OPTIONAL<Path_Access_Passwords>;
 
   constructor(
     reset: OPTIONAL<BOOLEAN>,

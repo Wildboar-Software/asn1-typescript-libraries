@@ -1,28 +1,28 @@
 /* eslint-disable */
 import {
-    ASN1Element as _Element,
+    type ASN1Element as _Element,
     ASN1TagClass as _TagClass,
-    OPTIONAL,
+    type OPTIONAL,
 } from "@wildboar/asn1";
 import * as $ from "@wildboar/asn1/functional";
 import { AlgorithmIdentifier, _decode_AlgorithmIdentifier, _encode_AlgorithmIdentifier } from "@wildboar/x500/AuthenticationFramework";
 import {
-    CMSVersion,
+    type CMSVersion,
     _decode_CMSVersion,
     _encode_CMSVersion,
 } from "../CryptographicMessageSyntax-2010/CMSVersion.ta.mjs";
 import {
-    OriginatorIdentifierOrKey,
+    type OriginatorIdentifierOrKey,
     _decode_OriginatorIdentifierOrKey,
     _encode_OriginatorIdentifierOrKey,
 } from "../CryptographicMessageSyntax-2010/OriginatorIdentifierOrKey.ta.mjs";
 import {
-    RecipientEncryptedKeys,
+    type RecipientEncryptedKeys,
     _decode_RecipientEncryptedKeys,
     _encode_RecipientEncryptedKeys,
 } from "../CryptographicMessageSyntax-2010/RecipientEncryptedKeys.ta.mjs";
 import {
-    UserKeyingMaterial,
+    type UserKeyingMaterial,
     _decode_UserKeyingMaterial,
     _encode_UserKeyingMaterial,
 } from "../CryptographicMessageSyntax-2010/UserKeyingMaterial.ta.mjs";
@@ -49,62 +49,74 @@ import {
  *
  */
 export class KeyAgreeRecipientInfo {
+    /**
+     * @summary `version`.
+     * @description
+     *
+     * MUST be 3 ([RFC 5652 §6.2.2](https://datatracker.ietf.org/doc/html/rfc5652#section-6.2.2)).
+     *
+     * @public
+     * @readonly
+     */
+    public readonly version: CMSVersion;
+    /**
+     * @summary `originator`.
+     * @description
+     *
+     * Originator public key identity or key material for key agreement
+     * ([RFC 5652 §6.2.2](https://datatracker.ietf.org/doc/html/rfc5652#section-6.2.2)).
+     *
+     * @public
+     * @readonly
+     */
+    public readonly originator: OriginatorIdentifierOrKey;
+    /**
+     * @summary `ukm`.
+     * @description
+     *
+     * Optional user keying material; when used, ensures distinct KEKs per
+     * message ([RFC 5652 §6.2.2](https://datatracker.ietf.org/doc/html/rfc5652#section-6.2.2)).
+     *
+     * @public
+     * @readonly
+     */
+    public readonly ukm: OPTIONAL<UserKeyingMaterial>;
+    /**
+     * @summary `keyEncryptionAlgorithm`.
+     * @description
+     *
+     * Key-encryption algorithm (typically a key-wrap algorithm with
+     * parameters) ([RFC 5652 §6.2.2](https://datatracker.ietf.org/doc/html/rfc5652#section-6.2.2)).
+     *
+     * @public
+     * @readonly
+     */
+    public readonly keyEncryptionAlgorithm: AlgorithmIdentifier;
+    /**
+     * @summary `recipientEncryptedKeys`.
+     * @description
+     *
+     * Per-recipient encrypted CEKs under the agreed KEK
+     * ([RFC 5652 §6.2.2](https://datatracker.ietf.org/doc/html/rfc5652#section-6.2.2)).
+     *
+     * @public
+     * @readonly
+     */
+    public readonly recipientEncryptedKeys: RecipientEncryptedKeys;
+
     constructor(
-        /**
-         * @summary `version`.
-         * @description
-         *
-         * MUST be 3 ([RFC 5652 §6.2.2](https://datatracker.ietf.org/doc/html/rfc5652#section-6.2.2)).
-         *
-         * @public
-         * @readonly
-         */
-        readonly version: CMSVersion,
-        /**
-         * @summary `originator`.
-         * @description
-         *
-         * Originator public key identity or key material for key agreement
-         * ([RFC 5652 §6.2.2](https://datatracker.ietf.org/doc/html/rfc5652#section-6.2.2)).
-         *
-         * @public
-         * @readonly
-         */
-        readonly originator: OriginatorIdentifierOrKey,
-        /**
-         * @summary `ukm`.
-         * @description
-         *
-         * Optional user keying material; when used, ensures distinct KEKs per
-         * message ([RFC 5652 §6.2.2](https://datatracker.ietf.org/doc/html/rfc5652#section-6.2.2)).
-         *
-         * @public
-         * @readonly
-         */
-        readonly ukm: OPTIONAL<UserKeyingMaterial>,
-        /**
-         * @summary `keyEncryptionAlgorithm`.
-         * @description
-         *
-         * Key-encryption algorithm (typically a key-wrap algorithm with
-         * parameters) ([RFC 5652 §6.2.2](https://datatracker.ietf.org/doc/html/rfc5652#section-6.2.2)).
-         *
-         * @public
-         * @readonly
-         */
-        readonly keyEncryptionAlgorithm: AlgorithmIdentifier,
-        /**
-         * @summary `recipientEncryptedKeys`.
-         * @description
-         *
-         * Per-recipient encrypted CEKs under the agreed KEK
-         * ([RFC 5652 §6.2.2](https://datatracker.ietf.org/doc/html/rfc5652#section-6.2.2)).
-         *
-         * @public
-         * @readonly
-         */
-        readonly recipientEncryptedKeys: RecipientEncryptedKeys
-    ) {}
+        version: CMSVersion,
+        originator: OriginatorIdentifierOrKey,
+        ukm: OPTIONAL<UserKeyingMaterial>,
+        keyEncryptionAlgorithm: AlgorithmIdentifier,
+        recipientEncryptedKeys: RecipientEncryptedKeys
+    ) {
+        this.version = version;
+        this.originator = originator;
+        this.ukm = ukm;
+        this.keyEncryptionAlgorithm = keyEncryptionAlgorithm;
+        this.recipientEncryptedKeys = recipientEncryptedKeys;
+    }
 
     /**
      * @summary Restructures an object into a KeyAgreeRecipientInfo

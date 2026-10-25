@@ -1,6 +1,6 @@
 /* eslint-disable */
 import {
-  OBJECT_IDENTIFIER,
+  type OBJECT_IDENTIFIER,
   ASN1Element as _Element,
   ASN1TagClass as _TagClass,
   ASN1Construction as _Construction,
@@ -12,7 +12,7 @@ import {
 } from '@wildboar/asn1';
 import * as $ from '@wildboar/asn1/functional';
 import {
-  Name,
+  type Name,
   _decode_Name,
   _encode_Name,
 } from '@wildboar/dn';

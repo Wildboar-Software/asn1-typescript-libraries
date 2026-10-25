@@ -3,12 +3,12 @@ import { id_opcode_updateShadow } from "../CommonProtocolSpecification/id-opcode
 import { type OPERATION } from "../CommonProtocolSpecification/OPERATION.oca.mjs";
 import { shadowError } from "../DirectoryShadowAbstractService/shadowError.oa.mjs";
 import {
-    UpdateShadowArgument,
+    type UpdateShadowArgument,
     _decode_UpdateShadowArgument,
     _encode_UpdateShadowArgument,
 } from "../DirectoryShadowAbstractService/UpdateShadowArgument.ta.mjs";
 import {
-    UpdateShadowResult,
+    type UpdateShadowResult,
     _decode_UpdateShadowResult,
     _encode_UpdateShadowResult,
 } from "../DirectoryShadowAbstractService/UpdateShadowResult.ta.mjs";

@@ -5,7 +5,7 @@ import {
 import * as $ from "@wildboar/asn1/functional";
 import { DetailedCivicAddress, _decode_DetailedCivicAddress, _encode_DetailedCivicAddress } from "../UmtsHI2Operations/DetailedCivicAddress.ta.mjs";
 // export { DetailedCivicAddress, _decode_DetailedCivicAddress, _encode_DetailedCivicAddress } from "../UmtsHI2Operations/DetailedCivicAddress.ta.mjs";
-import { XmlCivicAddress, _decode_XmlCivicAddress, _encode_XmlCivicAddress } from "../UmtsHI2Operations/XmlCivicAddress.ta.mjs";
+import { type XmlCivicAddress, _decode_XmlCivicAddress, _encode_XmlCivicAddress } from "../UmtsHI2Operations/XmlCivicAddress.ta.mjs";
 // export { XmlCivicAddress, _decode_XmlCivicAddress, _encode_XmlCivicAddress } from "../UmtsHI2Operations/XmlCivicAddress.ta.mjs";
 
 

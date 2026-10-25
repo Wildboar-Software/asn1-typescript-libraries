@@ -2,15 +2,15 @@
 
 import * as $ from "@wildboar/asn1/functional";
 import {
-    OPTIONAL,
-    INTEGER,
-    SEQUENCE,
-    SET,
-    IA5String,
-    ASN1Element as _Element,
+    type OPTIONAL,
+    type INTEGER,
+    type SEQUENCE,
+    type SET,
+    type IA5String,
+    type ASN1Element as _Element,
     ASN1TagClass as _TagClass
 } from "@wildboar/asn1";
-import { IOCrossRefID, _decode_IOCrossRefID, _encode_IOCrossRefID } from "../CSTA-device-feature-types/IOCrossRefID.ta.mjs";
+import { type IOCrossRefID, _decode_IOCrossRefID, _encode_IOCrossRefID } from "../CSTA-device-feature-types/IOCrossRefID.ta.mjs";
 
 import { CSTACommonArguments, _decode_CSTACommonArguments, _encode_CSTACommonArguments } from "../CSTA-extension-types/CSTACommonArguments.ta.mjs";
 
@@ -32,9 +32,9 @@ import { CSTACommonArguments, _decode_CSTACommonArguments, _encode_CSTACommonArg
  * ```asn1
  * StartDataPathResult ::= SEQUENCE
  * {    ioCrossRefID            IOCrossRefID,
- *     numberOfCharactersToCollect    [0] IMPLICIT INTEGER            OPTIONAL,
- *     terminationCharacter        IA5String(SIZE(1..1))            OPTIONAL,
- *     timeout                [1] IMPLICIT INTEGER            OPTIONAL,
+ *     numberOfCharactersToCollect    [0] IMPLICIT INTEGER            type OPTIONAL,
+ *     terminationCharacter        IA5String(SIZE(1..1))            type OPTIONAL,
+ *     timeout                [1] IMPLICIT INTEGER            type OPTIONAL,
  *     extensions            CSTACommonArguments            OPTIONAL }
  * ```
  * 
@@ -42,61 +42,73 @@ import { CSTACommonArguments, _decode_CSTACommonArguments, _encode_CSTACommonArg
  */
 export
 class StartDataPathResult {
+    /**
+     * @summary `ioCrossRefID`.
+     * @description
+     *
+     * Cross-reference for the created data path (ECMA-269 §24.2.8.2.1).
+     *
+     * @public
+     * @readonly
+     */
+    public readonly ioCrossRefID: IOCrossRefID;
+    /**
+     * @summary `numberOfCharactersToCollect`.
+     * @description
+     *
+     * Send collected characters after this many (ECMA-269 §24.2.8.1).
+     *
+     * @public
+     * @readonly
+     */
+    public readonly numberOfCharactersToCollect?: OPTIONAL<INTEGER>;
+    /**
+     * @summary `terminationCharacter`.
+     * @description
+     *
+     * IA5 character that flushes collected characters onto the path
+     * (ECMA-269 §24.2.8.1).
+     *
+     * @public
+     * @readonly
+     */
+    public readonly terminationCharacter?: OPTIONAL<IA5String>;
+    /**
+     * @summary `timeout`.
+     * @description
+     *
+     * Seconds after which collected characters are sent (ECMA-269
+     * §24.2.8.1).
+     *
+     * @public
+     * @readonly
+     */
+    public readonly timeout?: OPTIONAL<INTEGER>;
+    /**
+     * @summary `extensions`.
+     * @description
+     *
+     * CSTACommonArguments carrying the service-table security and
+     * privateData parameters.
+     *
+     * @public
+     * @readonly
+     */
+    public readonly extensions?: OPTIONAL<CSTACommonArguments>;
+
     constructor (
-        /**
-         * @summary `ioCrossRefID`.
-         * @description
-         *
-         * Cross-reference for the created data path (ECMA-269 §24.2.8.2.1).
-         *
-         * @public
-         * @readonly
-         */
-        readonly ioCrossRefID: IOCrossRefID,
-        /**
-         * @summary `numberOfCharactersToCollect`.
-         * @description
-         *
-         * Send collected characters after this many (ECMA-269 §24.2.8.1).
-         *
-         * @public
-         * @readonly
-         */
-        readonly numberOfCharactersToCollect?: OPTIONAL<INTEGER>,
-        /**
-         * @summary `terminationCharacter`.
-         * @description
-         *
-         * IA5 character that flushes collected characters onto the path
-         * (ECMA-269 §24.2.8.1).
-         *
-         * @public
-         * @readonly
-         */
-        readonly terminationCharacter?: OPTIONAL<IA5String>,
-        /**
-         * @summary `timeout`.
-         * @description
-         *
-         * Seconds after which collected characters are sent (ECMA-269
-         * §24.2.8.1).
-         *
-         * @public
-         * @readonly
-         */
-        readonly timeout?: OPTIONAL<INTEGER>,
-        /**
-         * @summary `extensions`.
-         * @description
-         *
-         * CSTACommonArguments carrying the service-table security and
-         * privateData parameters.
-         *
-         * @public
-         * @readonly
-         */
-        readonly extensions?: OPTIONAL<CSTACommonArguments>
-    ) {}
+        ioCrossRefID: IOCrossRefID,
+        numberOfCharactersToCollect?: OPTIONAL<INTEGER>,
+        terminationCharacter?: OPTIONAL<IA5String>,
+        timeout?: OPTIONAL<INTEGER>,
+        extensions?: OPTIONAL<CSTACommonArguments>
+    ) {
+        this.ioCrossRefID = ioCrossRefID;
+        this.numberOfCharactersToCollect = numberOfCharactersToCollect;
+        this.terminationCharacter = terminationCharacter;
+        this.timeout = timeout;
+        this.extensions = extensions;
+    }
 
     /**
      * @summary Restructures an object into a StartDataPathResult

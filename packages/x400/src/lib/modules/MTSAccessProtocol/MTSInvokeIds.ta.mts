@@ -1,6 +1,6 @@
 /* eslint-disable */
 import {
-    ASN1Element as _Element,
+    type ASN1Element as _Element,
     ASN1TagClass as _TagClass,
     ASN1Construction as _Construction,
     ASN1UniversalType as _UniversalType,
@@ -11,7 +11,7 @@ import {
 } from '@wildboar/asn1';
 import * as $ from '@wildboar/asn1/functional';
 import {
-    InvokeId,
+    type InvokeId,
     _decode_InvokeId,
     _encode_InvokeId,
 } from '@wildboar/rose';
@@ -29,22 +29,13 @@ import {
  */
 export type MTSInvokeIds = InvokeId; // DefinedType
 
-let _cached_decoder_for_MTSInvokeIds: $.ASN1Decoder<MTSInvokeIds> | null = null;
-
 /**
  * @summary Decodes an ASN.1 element into a(n) MTSInvokeIds
  * @function
  * @param {_Element} el The element being decoded.
  * @returns {MTSInvokeIds} The decoded data structure.
  */
-export function _decode_MTSInvokeIds(el: _Element): MTSInvokeIds {
-    if (!_cached_decoder_for_MTSInvokeIds) {
-        _cached_decoder_for_MTSInvokeIds = _decode_InvokeId;
-    }
-    return _cached_decoder_for_MTSInvokeIds(el);
-}
-
-let _cached_encoder_for_MTSInvokeIds: $.ASN1Encoder<MTSInvokeIds> | null = null;
+export const _decode_MTSInvokeIds: $.ASN1Decoder<MTSInvokeIds> = _decode_InvokeId;
 
 /**
  * @summary Encodes a(n) MTSInvokeIds into an ASN.1 Element.
@@ -53,15 +44,7 @@ let _cached_encoder_for_MTSInvokeIds: $.ASN1Encoder<MTSInvokeIds> | null = null;
  * @param elGetter A function that can be used to get new ASN.1 elements.
  * @returns {_Element} The MTSInvokeIds, encoded as an ASN.1 Element.
  */
-export function _encode_MTSInvokeIds(
-    value: MTSInvokeIds,
-    elGetter: $.ASN1Encoder<MTSInvokeIds>
-): _Element {
-    if (!_cached_encoder_for_MTSInvokeIds) {
-        _cached_encoder_for_MTSInvokeIds = _encode_InvokeId;
-    }
-    return _cached_encoder_for_MTSInvokeIds(value, elGetter);
-}
+export const _encode_MTSInvokeIds: $.ASN1Encoder<MTSInvokeIds> = _encode_InvokeId;
 
 
 /* eslint-enable */

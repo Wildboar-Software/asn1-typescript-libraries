@@ -1,6 +1,6 @@
 /* eslint-disable */
 import {
-    ASN1Element as _Element,
+    type ASN1Element as _Element,
     ASN1TagClass as _TagClass,
     ASN1Construction as _Construction,
     ASN1UniversalType as _UniversalType,
@@ -94,7 +94,7 @@ export type InvalidAccessControlFilter_errorId = _enum_for_InvalidAccessControlF
  *
  * @enum {number}
  */
-export const InvalidAccessControlFilter_errorId = _enum_for_InvalidAccessControlFilter_errorId;
+export const InvalidAccessControlFilter_errorId: typeof _enum_for_InvalidAccessControlFilter_errorId = _enum_for_InvalidAccessControlFilter_errorId;
 
 /**
  * @summary InvalidAccessControlFilter_errorId_duplicateId
@@ -106,7 +106,7 @@ export const InvalidAccessControlFilter_errorId = _enum_for_InvalidAccessControl
  * @constant
  * @type {number}
  */
-export const InvalidAccessControlFilter_errorId_duplicateId: InvalidAccessControlFilter_errorId =
+export const InvalidAccessControlFilter_errorId_duplicateId: _enum_for_InvalidAccessControlFilter_errorId.duplicateId =
     InvalidAccessControlFilter_errorId.duplicateId; /* LONG_NAMED_ENUMERATED_VALUE */
 
 /**
@@ -119,7 +119,7 @@ export const InvalidAccessControlFilter_errorId_duplicateId: InvalidAccessContro
  * @constant
  * @type {number}
  */
-export const duplicateId: InvalidAccessControlFilter_errorId =
+export const duplicateId: _enum_for_InvalidAccessControlFilter_errorId.duplicateId =
     InvalidAccessControlFilter_errorId.duplicateId; /* SHORT_NAMED_ENUMERATED_VALUE */
 
 /**
@@ -132,7 +132,7 @@ export const duplicateId: InvalidAccessControlFilter_errorId =
  * @constant
  * @type {number}
  */
-export const InvalidAccessControlFilter_errorId_heterogeneousId: InvalidAccessControlFilter_errorId =
+export const InvalidAccessControlFilter_errorId_heterogeneousId: _enum_for_InvalidAccessControlFilter_errorId.heterogeneousId =
     InvalidAccessControlFilter_errorId.heterogeneousId; /* LONG_NAMED_ENUMERATED_VALUE */
 
 /**
@@ -145,7 +145,7 @@ export const InvalidAccessControlFilter_errorId_heterogeneousId: InvalidAccessCo
  * @constant
  * @type {number}
  */
-export const heterogeneousId: InvalidAccessControlFilter_errorId =
+export const heterogeneousId: _enum_for_InvalidAccessControlFilter_errorId.heterogeneousId =
     InvalidAccessControlFilter_errorId.heterogeneousId; /* SHORT_NAMED_ENUMERATED_VALUE */
 
 /**
@@ -159,7 +159,7 @@ export const heterogeneousId: InvalidAccessControlFilter_errorId =
  * @constant
  * @type {number}
  */
-export const InvalidAccessControlFilter_errorId_invalidId: InvalidAccessControlFilter_errorId =
+export const InvalidAccessControlFilter_errorId_invalidId: _enum_for_InvalidAccessControlFilter_errorId.invalidId =
     InvalidAccessControlFilter_errorId.invalidId; /* LONG_NAMED_ENUMERATED_VALUE */
 
 /**
@@ -172,7 +172,7 @@ export const InvalidAccessControlFilter_errorId_invalidId: InvalidAccessControlF
  * @constant
  * @type {number}
  */
-export const invalidId: InvalidAccessControlFilter_errorId =
+export const invalidId: _enum_for_InvalidAccessControlFilter_errorId.invalidId =
     InvalidAccessControlFilter_errorId.invalidId; /* SHORT_NAMED_ENUMERATED_VALUE */
 
 let _cached_decoder_for_InvalidAccessControlFilter_errorId: $.ASN1Decoder<InvalidAccessControlFilter_errorId> | null = null;
@@ -186,7 +186,19 @@ let _cached_decoder_for_InvalidAccessControlFilter_errorId: $.ASN1Decoder<Invali
 export function _decode_InvalidAccessControlFilter_errorId(el: _Element): InvalidAccessControlFilter_errorId {
     if (!_cached_decoder_for_InvalidAccessControlFilter_errorId) {
         _cached_decoder_for_InvalidAccessControlFilter_errorId =
-            $._decodeEnumerated;
+            function (el: _Element): InvalidAccessControlFilter_errorId {
+                const enumerated = $._decodeEnumerated(el);
+                switch (enumerated) {
+                    case InvalidAccessControlFilter_errorId.duplicateId: return InvalidAccessControlFilter_errorId.duplicateId;
+                    case InvalidAccessControlFilter_errorId.heterogeneousId: return InvalidAccessControlFilter_errorId.heterogeneousId;
+                    case InvalidAccessControlFilter_errorId.invalidId: return InvalidAccessControlFilter_errorId.invalidId;
+                    default:
+                        throw new _ConstructionError(
+                            'Invalid ENUMERATED value ' + enumerated + ' for InvalidAccessControlFilter_errorId.',
+                            el,
+                        );
+                }
+            };
     }
     return _cached_decoder_for_InvalidAccessControlFilter_errorId(el);
 }
@@ -206,7 +218,7 @@ export function _encode_InvalidAccessControlFilter_errorId(
 ): _Element {
     if (!_cached_encoder_for_InvalidAccessControlFilter_errorId) {
         _cached_encoder_for_InvalidAccessControlFilter_errorId =
-            $._encodeEnumerated;
+            $._encodeEnumerated as $.ASN1Encoder<InvalidAccessControlFilter_errorId>;
     }
     return _cached_encoder_for_InvalidAccessControlFilter_errorId(
         value,

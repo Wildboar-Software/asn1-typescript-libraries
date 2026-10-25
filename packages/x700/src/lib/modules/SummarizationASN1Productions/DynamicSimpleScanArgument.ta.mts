@@ -1,7 +1,7 @@
 /* eslint-disable */
 import {
-    OPTIONAL,
-    ASN1Element as _Element,
+    type OPTIONAL,
+    type ASN1Element as _Element,
     ASN1TagClass as _TagClass,
     ASN1Construction as _Construction,
     ASN1UniversalType as _UniversalType,
@@ -12,27 +12,27 @@ import {
 } from '@wildboar/asn1';
 import * as $ from '@wildboar/asn1/functional';
 import {
-    ScanAttributeIdList,
+    type ScanAttributeIdList,
     _decode_ScanAttributeIdList,
     _encode_ScanAttributeIdList,
 } from '../SummarizationASN1Productions/ScanAttributeIdList.ta.mjs';
 import {
-    NumericAttributeIdArray,
+    type NumericAttributeIdArray,
     _decode_NumericAttributeIdArray,
     _encode_NumericAttributeIdArray,
 } from '../SummarizationASN1Productions/NumericAttributeIdArray.ta.mjs';
 import {
-    DynamicSimpleScanArgument_scopeOrListChoice,
+    type DynamicSimpleScanArgument_scopeOrListChoice,
     _decode_DynamicSimpleScanArgument_scopeOrListChoice,
     _encode_DynamicSimpleScanArgument_scopeOrListChoice,
 } from '../SummarizationASN1Productions/DynamicSimpleScanArgument-scopeOrListChoice.ta.mjs';
 import {
-    SuppressObjectInstance,
+    type SuppressObjectInstance,
     _decode_SuppressObjectInstance,
     _encode_SuppressObjectInstance,
 } from '../SummarizationASN1Productions/SuppressObjectInstance.ta.mjs';
 import {
-    OnceReportAttributeIdList,
+    type OnceReportAttributeIdList,
     _decode_OnceReportAttributeIdList,
     _encode_OnceReportAttributeIdList,
 } from '../SummarizationASN1Productions/OnceReportAttributeIdList.ta.mjs';
@@ -77,73 +77,87 @@ import {
  *
  */
 export class DynamicSimpleScanArgument {
+    /**
+     * @summary `scanAttributeIdList`.
+     * @description
+     *
+     * Attributes of any type reported with identifiers.
+     * If omitted, those values are not in the reply. If
+     * an object lacks an identified attribute, that
+     * value is absent. X.738 §8.3.1.1, §8.1.11.3.
+     * @public
+     * @readonly
+     */
+    public readonly scanAttributeIdList: OPTIONAL<ScanAttributeIdList>;
+    /**
+     * @summary `numericAttributeIdArray`.
+     * @description
+     *
+     * Ordered INTEGER/REAL attributes reported without
+     * identifiers. If an attribute is absent, `NULL` is
+     * reported. X.738 §8.3.1.2, §8.1.11.3.
+     * @public
+     * @readonly
+     */
+    public readonly numericAttributeIdArray: OPTIONAL<NumericAttributeIdArray>;
+    /**
+     * @summary `scopeOrListChoice`.
+     * @description
+     *
+     * Exactly one: CMIS-like scoped selection, or an
+     * explicit `objectList`. Named in Cor.1. X.738
+     * §8.1.11.3, §8.3.1.3–8.3.1.6; Cor.1 A.9.
+     * @public
+     * @readonly
+     */
+    public readonly scopeOrListChoice: DynamicSimpleScanArgument_scopeOrListChoice;
+    /**
+     * @summary `suppressObjectInstance`.
+     * @description
+     *
+     * If true, observed object names are omitted from
+     * the reply. X.738 §8.3.1.7, §8.1.11.3.
+     * @public
+     * @readonly
+     */
+    public readonly suppressObjectInstance?: OPTIONAL<SuppressObjectInstance>;
+    /**
+     * @summary `onceReportAttributeIdList`.
+     * @description
+     *
+     * Attributes reported once if they have the same
+     * value on every selected object. X.738 §8.3.1.8,
+     * §8.1.11.3, §8.1.12.2.
+     * @public
+     * @readonly
+     */
+    public readonly onceReportAttributeIdList?: OPTIONAL<OnceReportAttributeIdList>;
+    /**
+     * @summary `timeStampReportMode`.
+     * @description
+     *
+     * If present and non-zero, the reply is time-stamped
+     * in that mode. X.738 §8.3.1.9, §8.1.11.3.
+     * @public
+     * @readonly
+     */
+    public readonly timeStampReportMode?: OPTIONAL<TimeStampReportMode>;
+
     constructor(
-        /**
-         * @summary `scanAttributeIdList`.
-         * @description
-         *
-         * Attributes of any type reported with identifiers.
-         * If omitted, those values are not in the reply. If
-         * an object lacks an identified attribute, that
-         * value is absent. X.738 §8.3.1.1, §8.1.11.3.
-         * @public
-         * @readonly
-         */
-        readonly scanAttributeIdList: OPTIONAL<ScanAttributeIdList>,
-        /**
-         * @summary `numericAttributeIdArray`.
-         * @description
-         *
-         * Ordered INTEGER/REAL attributes reported without
-         * identifiers. If an attribute is absent, `NULL` is
-         * reported. X.738 §8.3.1.2, §8.1.11.3.
-         * @public
-         * @readonly
-         */
-        readonly numericAttributeIdArray: OPTIONAL<NumericAttributeIdArray>,
-        /**
-         * @summary `scopeOrListChoice`.
-         * @description
-         *
-         * Exactly one: CMIS-like scoped selection, or an
-         * explicit `objectList`. Named in Cor.1. X.738
-         * §8.1.11.3, §8.3.1.3–8.3.1.6; Cor.1 A.9.
-         * @public
-         * @readonly
-         */
-        readonly scopeOrListChoice: DynamicSimpleScanArgument_scopeOrListChoice,
-        /**
-         * @summary `suppressObjectInstance`.
-         * @description
-         *
-         * If true, observed object names are omitted from
-         * the reply. X.738 §8.3.1.7, §8.1.11.3.
-         * @public
-         * @readonly
-         */
-        readonly suppressObjectInstance?: OPTIONAL<SuppressObjectInstance>,
-        /**
-         * @summary `onceReportAttributeIdList`.
-         * @description
-         *
-         * Attributes reported once if they have the same
-         * value on every selected object. X.738 §8.3.1.8,
-         * §8.1.11.3, §8.1.12.2.
-         * @public
-         * @readonly
-         */
-        readonly onceReportAttributeIdList?: OPTIONAL<OnceReportAttributeIdList>,
-        /**
-         * @summary `timeStampReportMode`.
-         * @description
-         *
-         * If present and non-zero, the reply is time-stamped
-         * in that mode. X.738 §8.3.1.9, §8.1.11.3.
-         * @public
-         * @readonly
-         */
-        readonly timeStampReportMode?: OPTIONAL<TimeStampReportMode>
-    ) {}
+        scanAttributeIdList: OPTIONAL<ScanAttributeIdList>,
+        numericAttributeIdArray: OPTIONAL<NumericAttributeIdArray>,
+        scopeOrListChoice: DynamicSimpleScanArgument_scopeOrListChoice,
+        suppressObjectInstance?: OPTIONAL<SuppressObjectInstance>,
+        onceReportAttributeIdList?: OPTIONAL<OnceReportAttributeIdList>,
+        timeStampReportMode?: OPTIONAL<TimeStampReportMode>
+    ) {
+        this.scanAttributeIdList = scanAttributeIdList;
+        this.numericAttributeIdArray = numericAttributeIdArray;
+        this.scopeOrListChoice = scopeOrListChoice;
+        this.suppressObjectInstance = suppressObjectInstance;
+        this.onceReportAttributeIdList = onceReportAttributeIdList;
+        this.timeStampReportMode = timeStampReportMode;
+    }
 
     /**
      * @summary Restructures an object into a DynamicSimpleScanArgument
@@ -178,7 +192,7 @@ export class DynamicSimpleScanArgument {
      * @static
      */
 
-    public static _enum_for_timeStampReportMode = _enum_for_TimeStampReportMode;
+    public static _enum_for_timeStampReportMode: typeof _enum_for_TimeStampReportMode = _enum_for_TimeStampReportMode;
 }
 
 /**

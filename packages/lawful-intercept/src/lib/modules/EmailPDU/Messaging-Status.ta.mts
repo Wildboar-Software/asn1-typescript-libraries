@@ -1,6 +1,6 @@
 /* eslint-disable */
 import {
-    ENUMERATED
+    type ENUMERATED
 } from "@wildboar/asn1";
 import * as $ from "@wildboar/asn1/functional";
 
@@ -108,7 +108,7 @@ type Messaging_Status = _enum_for_Messaging_Status | ENUMERATED;
  * @type {number}
  */
 export
-const Messaging_Status_unknown: Messaging_Status = 0; /* LONG_NAMED_ENUMERATED_VALUE */
+const Messaging_Status_unknown: _enum_for_Messaging_Status.unknown = _enum_for_Messaging_Status.unknown; /* LONG_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary unknown
@@ -123,7 +123,7 @@ const Messaging_Status_unknown: Messaging_Status = 0; /* LONG_NAMED_ENUMERATED_V
  * @type {number}
  */
 export
-const unknown: Messaging_Status = Messaging_Status_unknown; /* SHORT_NAMED_ENUMERATED_VALUE */
+const unknown: _enum_for_Messaging_Status.unknown = Messaging_Status_unknown; /* SHORT_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary Messaging_Status_not_applicable
@@ -138,7 +138,7 @@ const unknown: Messaging_Status = Messaging_Status_unknown; /* SHORT_NAMED_ENUME
  * @type {number}
  */
 export
-const Messaging_Status_not_applicable: Messaging_Status = 1; /* LONG_NAMED_ENUMERATED_VALUE */
+const Messaging_Status_not_applicable: _enum_for_Messaging_Status.not_applicable = _enum_for_Messaging_Status.not_applicable; /* LONG_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary not_applicable
@@ -153,7 +153,7 @@ const Messaging_Status_not_applicable: Messaging_Status = 1; /* LONG_NAMED_ENUME
  * @type {number}
  */
 export
-const not_applicable: Messaging_Status = Messaging_Status_not_applicable; /* SHORT_NAMED_ENUMERATED_VALUE */
+const not_applicable: _enum_for_Messaging_Status.not_applicable = Messaging_Status_not_applicable; /* SHORT_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary Messaging_Status_operation_failed
@@ -167,7 +167,7 @@ const not_applicable: Messaging_Status = Messaging_Status_not_applicable; /* SHO
  * @type {number}
  */
 export
-const Messaging_Status_operation_failed: Messaging_Status = 2; /* LONG_NAMED_ENUMERATED_VALUE */
+const Messaging_Status_operation_failed: _enum_for_Messaging_Status.operation_failed = _enum_for_Messaging_Status.operation_failed; /* LONG_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary operation_failed
@@ -181,7 +181,7 @@ const Messaging_Status_operation_failed: Messaging_Status = 2; /* LONG_NAMED_ENU
  * @type {number}
  */
 export
-const operation_failed: Messaging_Status = Messaging_Status_operation_failed; /* SHORT_NAMED_ENUMERATED_VALUE */
+const operation_failed: _enum_for_Messaging_Status.operation_failed = Messaging_Status_operation_failed; /* SHORT_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary Messaging_Status_operation_succeeded
@@ -195,7 +195,7 @@ const operation_failed: Messaging_Status = Messaging_Status_operation_failed; /*
  * @type {number}
  */
 export
-const Messaging_Status_operation_succeeded: Messaging_Status = 3; /* LONG_NAMED_ENUMERATED_VALUE */
+const Messaging_Status_operation_succeeded: _enum_for_Messaging_Status.operation_succeeded = _enum_for_Messaging_Status.operation_succeeded; /* LONG_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary operation_succeeded
@@ -209,7 +209,7 @@ const Messaging_Status_operation_succeeded: Messaging_Status = 3; /* LONG_NAMED_
  * @type {number}
  */
 export
-const operation_succeeded: Messaging_Status = Messaging_Status_operation_succeeded; /* SHORT_NAMED_ENUMERATED_VALUE */
+const operation_succeeded: _enum_for_Messaging_Status.operation_succeeded = Messaging_Status_operation_succeeded; /* SHORT_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary Messaging_Status_operation_cancelled
@@ -224,7 +224,7 @@ const operation_succeeded: Messaging_Status = Messaging_Status_operation_succeed
  * @type {number}
  */
 export
-const Messaging_Status_operation_cancelled: Messaging_Status = 4; /* LONG_NAMED_ENUMERATED_VALUE */
+const Messaging_Status_operation_cancelled: _enum_for_Messaging_Status.operation_cancelled = _enum_for_Messaging_Status.operation_cancelled; /* LONG_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary operation_cancelled
@@ -239,7 +239,7 @@ const Messaging_Status_operation_cancelled: Messaging_Status = 4; /* LONG_NAMED_
  * @type {number}
  */
 export
-const operation_cancelled: Messaging_Status = Messaging_Status_operation_cancelled; /* SHORT_NAMED_ENUMERATED_VALUE */
+const operation_cancelled: _enum_for_Messaging_Status.operation_cancelled = Messaging_Status_operation_cancelled; /* SHORT_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary Messaging_Status_operation_started
@@ -254,7 +254,7 @@ const operation_cancelled: Messaging_Status = Messaging_Status_operation_cancell
  * @type {number}
  */
 export
-const Messaging_Status_operation_started: Messaging_Status = 5; /* LONG_NAMED_ENUMERATED_VALUE */
+const Messaging_Status_operation_started: _enum_for_Messaging_Status.operation_started = _enum_for_Messaging_Status.operation_started; /* LONG_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary operation_started
@@ -269,7 +269,7 @@ const Messaging_Status_operation_started: Messaging_Status = 5; /* LONG_NAMED_EN
  * @type {number}
  */
 export
-const operation_started: Messaging_Status = Messaging_Status_operation_started; /* SHORT_NAMED_ENUMERATED_VALUE */
+const operation_started: _enum_for_Messaging_Status.operation_started = Messaging_Status_operation_started; /* SHORT_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary Messaging_Status_operation_lost
@@ -284,7 +284,7 @@ const operation_started: Messaging_Status = Messaging_Status_operation_started; 
  * @type {number}
  */
 export
-const Messaging_Status_operation_lost: Messaging_Status = 6; /* LONG_NAMED_ENUMERATED_VALUE */
+const Messaging_Status_operation_lost: _enum_for_Messaging_Status.operation_lost = _enum_for_Messaging_Status.operation_lost; /* LONG_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary operation_lost
@@ -299,7 +299,7 @@ const Messaging_Status_operation_lost: Messaging_Status = 6; /* LONG_NAMED_ENUME
  * @type {number}
  */
 export
-const operation_lost: Messaging_Status = Messaging_Status_operation_lost; /* SHORT_NAMED_ENUMERATED_VALUE */
+const operation_lost: _enum_for_Messaging_Status.operation_lost = Messaging_Status_operation_lost; /* SHORT_NAMED_ENUMERATED_VALUE */
 export const _decode_Messaging_Status: $.ASN1Decoder<Messaging_Status> = $._decodeEnumerated;
 export const _encode_Messaging_Status: $.ASN1Encoder<Messaging_Status> = $._encodeEnumerated;
 

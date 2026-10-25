@@ -1,15 +1,15 @@
 /* eslint-disable */
 import {
-    NULL,
-    OPTIONAL,
-    ASN1Element as _Element,
+    type NULL,
+    type OPTIONAL,
+    type ASN1Element as _Element,
     ASN1TagClass as _TagClass
 } from "@wildboar/asn1";
 import * as $ from "@wildboar/asn1/functional";
-import { ISDN_AddressString, _decode_ISDN_AddressString, _encode_ISDN_AddressString } from "../MAP-CommonDataTypes/ISDN-AddressString.ta.mjs";
+import { type ISDN_AddressString, _decode_ISDN_AddressString, _encode_ISDN_AddressString } from "../MAP-CommonDataTypes/ISDN-AddressString.ta.mjs";
 import { ExtensionContainer, _decode_ExtensionContainer, _encode_ExtensionContainer } from "../MAP-ExtensionDataTypes/ExtensionContainer.ta.mjs";
-import { MobilityTriggers, _decode_MobilityTriggers, _encode_MobilityTriggers } from "../MAP-MS-DataTypes/MobilityTriggers.ta.mjs";
-import { ServiceKey, _decode_ServiceKey, _encode_ServiceKey } from "../MAP-MS-DataTypes/ServiceKey.ta.mjs";
+import { type MobilityTriggers, _decode_MobilityTriggers, _encode_MobilityTriggers } from "../MAP-MS-DataTypes/MobilityTriggers.ta.mjs";
+import { type ServiceKey, _decode_ServiceKey, _encode_ServiceKey } from "../MAP-MS-DataTypes/ServiceKey.ta.mjs";
 
 
 /**
@@ -29,9 +29,9 @@ import { ServiceKey, _decode_ServiceKey, _encode_ServiceKey } from "../MAP-MS-Da
  *     mobilityTriggers    MobilityTriggers,
  *     serviceKey    ServiceKey,
  *     gsmSCF-Address    [0]    ISDN-AddressString,
- *     extensionContainer    [1]    ExtensionContainer    OPTIONAL,
- *     notificationToCSE    [2] NULL    OPTIONAL,
- *     csi-Active    [3] NULL    OPTIONAL,
+ *     extensionContainer    [1]    ExtensionContainer    type OPTIONAL,
+ *     notificationToCSE    [2] NULL    type OPTIONAL,
+ *     csi-Active    [3] NULL    type OPTIONAL,
  *     ...}
  * ```
  * 
@@ -39,74 +39,90 @@ import { ServiceKey, _decode_ServiceKey, _encode_ServiceKey } from "../MAP-MS-Da
  */
 export
 class MG_CSI {
+    /**
+     * @summary `mobilityTriggers`.
+     * @description
+     *
+     * PS-domain MM events to report (CAMEL phase 4 MM-Code values). (3GPP
+     * TS 29.002 V19.1.0 clauses 8.1.8.3 and 17.7.1)
+     *
+     * @public
+     * @readonly
+     */
+    public readonly mobilityTriggers: MobilityTriggers;
+    /**
+     * @summary `serviceKey`.
+     * @description
+     *
+     * Service key for the gsmSCF. (3GPP TS 29.002 V19.1.0 clause 8.1.8.3)
+     *
+     * @public
+     * @readonly
+     */
+    public readonly serviceKey: ServiceKey;
+    /**
+     * @summary `gsmSCF_Address`.
+     * @description
+     *
+     * gsmSCF address to which MM events are reported. (3GPP TS 29.002
+     * V19.1.0 clause 8.1.8)
+     *
+     * @public
+     * @readonly
+     */
+    public readonly gsmSCF_Address: ISDN_AddressString;
+    /**
+     * @summary `extensionContainer`.
+     * @public
+     * @readonly
+     */
+    public readonly extensionContainer?: OPTIONAL<ExtensionContainer>;
+    /**
+     * @summary `notificationToCSE`.
+     * @description
+     *
+     * Shall not be present when MG-CSI is sent to the SGSN; may appear only
+     * in ATSI/ATM ack/NSDC. (3GPP TS 29.002 V19.1.0 clause 17.7.1)
+     *
+     * @public
+     * @readonly
+     */
+    public readonly notificationToCSE?: OPTIONAL<NULL>;
+    /**
+     * @summary `csi_Active`.
+     * @description
+     *
+     * Shall not be present when MG-CSI is sent to the SGSN; may appear only
+     * in ATSI/ATM ack/NSDC. (3GPP TS 29.002 V19.1.0 clause 17.7.1)
+     *
+     * @public
+     * @readonly
+     */
+    public readonly csi_Active?: OPTIONAL<NULL>;
+    /**
+     * @summary Extensions that are not recognized.
+     * @public
+     * @readonly
+     */
+    public readonly _unrecognizedExtensionsList: _Element[];
+
     constructor (
-        /**
-         * @summary `mobilityTriggers`.
-         * @description
-         *
-         * PS-domain MM events to report (CAMEL phase 4 MM-Code values). (3GPP
-         * TS 29.002 V19.1.0 clauses 8.1.8.3 and 17.7.1)
-         *
-         * @public
-         * @readonly
-         */
-        readonly mobilityTriggers: MobilityTriggers,
-        /**
-         * @summary `serviceKey`.
-         * @description
-         *
-         * Service key for the gsmSCF. (3GPP TS 29.002 V19.1.0 clause 8.1.8.3)
-         *
-         * @public
-         * @readonly
-         */
-        readonly serviceKey: ServiceKey,
-        /**
-         * @summary `gsmSCF_Address`.
-         * @description
-         *
-         * gsmSCF address to which MM events are reported. (3GPP TS 29.002
-         * V19.1.0 clause 8.1.8)
-         *
-         * @public
-         * @readonly
-         */
-        readonly gsmSCF_Address: ISDN_AddressString,
-        /**
-         * @summary `extensionContainer`.
-         * @public
-         * @readonly
-         */
-        readonly extensionContainer?: OPTIONAL<ExtensionContainer>,
-        /**
-         * @summary `notificationToCSE`.
-         * @description
-         *
-         * Shall not be present when MG-CSI is sent to the SGSN; may appear only
-         * in ATSI/ATM ack/NSDC. (3GPP TS 29.002 V19.1.0 clause 17.7.1)
-         *
-         * @public
-         * @readonly
-         */
-        readonly notificationToCSE?: OPTIONAL<NULL>,
-        /**
-         * @summary `csi_Active`.
-         * @description
-         *
-         * Shall not be present when MG-CSI is sent to the SGSN; may appear only
-         * in ATSI/ATM ack/NSDC. (3GPP TS 29.002 V19.1.0 clause 17.7.1)
-         *
-         * @public
-         * @readonly
-         */
-        readonly csi_Active?: OPTIONAL<NULL>,
-        /**
-         * @summary Extensions that are not recognized.
-         * @public
-         * @readonly
-         */
-        readonly _unrecognizedExtensionsList: _Element[] = []
-    ) {}
+        mobilityTriggers: MobilityTriggers,
+        serviceKey: ServiceKey,
+        gsmSCF_Address: ISDN_AddressString,
+        extensionContainer?: OPTIONAL<ExtensionContainer>,
+        notificationToCSE?: OPTIONAL<NULL>,
+        csi_Active?: OPTIONAL<NULL>,
+        _unrecognizedExtensionsList: _Element[] = []
+    ) {
+        this.mobilityTriggers = mobilityTriggers;
+        this.serviceKey = serviceKey;
+        this.gsmSCF_Address = gsmSCF_Address;
+        this.extensionContainer = extensionContainer;
+        this.notificationToCSE = notificationToCSE;
+        this.csi_Active = csi_Active;
+        this._unrecognizedExtensionsList = _unrecognizedExtensionsList;
+    }
 
     /**
      * @summary Restructures an object into a MG_CSI

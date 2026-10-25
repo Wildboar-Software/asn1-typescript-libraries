@@ -1,6 +1,6 @@
 /* eslint-disable */
 import {
-    ASN1Element as _Element,
+    type ASN1Element as _Element,
     ASN1TagClass as _TagClass,
     ASN1Construction as _Construction,
     ASN1UniversalType as _UniversalType,
@@ -78,7 +78,7 @@ type AbandonProblem = _enum_for_AbandonProblem;
  * @enum {number}
  */
 export
-const AbandonProblem = _enum_for_AbandonProblem;
+const AbandonProblem: typeof _enum_for_AbandonProblem = _enum_for_AbandonProblem;
 
 /**
  * @summary AbandonProblem_no_such_operation
@@ -89,7 +89,7 @@ const AbandonProblem = _enum_for_AbandonProblem;
  * @type {number}
  */
 export
-const AbandonProblem_no_such_operation: AbandonProblem = AbandonProblem.no_such_operation; /* LONG_NAMED_ENUMERATED_VALUE */
+const AbandonProblem_no_such_operation: _enum_for_AbandonProblem.no_such_operation = AbandonProblem.no_such_operation; /* LONG_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary no_such_operation
@@ -100,7 +100,7 @@ const AbandonProblem_no_such_operation: AbandonProblem = AbandonProblem.no_such_
  * @type {number}
  */
 export
-const no_such_operation: AbandonProblem = AbandonProblem.no_such_operation; /* SHORT_NAMED_ENUMERATED_VALUE */
+const no_such_operation: _enum_for_AbandonProblem.no_such_operation = AbandonProblem.no_such_operation; /* SHORT_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary AbandonProblem_too_late
@@ -111,7 +111,7 @@ const no_such_operation: AbandonProblem = AbandonProblem.no_such_operation; /* S
  * @type {number}
  */
 export
-const AbandonProblem_too_late: AbandonProblem = AbandonProblem.too_late; /* LONG_NAMED_ENUMERATED_VALUE */
+const AbandonProblem_too_late: _enum_for_AbandonProblem.too_late = AbandonProblem.too_late; /* LONG_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary too_late
@@ -122,7 +122,7 @@ const AbandonProblem_too_late: AbandonProblem = AbandonProblem.too_late; /* LONG
  * @type {number}
  */
 export
-const too_late: AbandonProblem = AbandonProblem.too_late; /* SHORT_NAMED_ENUMERATED_VALUE */
+const too_late: _enum_for_AbandonProblem.too_late = AbandonProblem.too_late; /* SHORT_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary AbandonProblem_cannot_abandon
@@ -133,7 +133,7 @@ const too_late: AbandonProblem = AbandonProblem.too_late; /* SHORT_NAMED_ENUMERA
  * @type {number}
  */
 export
-const AbandonProblem_cannot_abandon: AbandonProblem = AbandonProblem.cannot_abandon; /* LONG_NAMED_ENUMERATED_VALUE */
+const AbandonProblem_cannot_abandon: _enum_for_AbandonProblem.cannot_abandon = AbandonProblem.cannot_abandon; /* LONG_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary cannot_abandon
@@ -144,9 +144,21 @@ const AbandonProblem_cannot_abandon: AbandonProblem = AbandonProblem.cannot_aban
  * @type {number}
  */
 export
-const cannot_abandon: AbandonProblem = AbandonProblem.cannot_abandon; /* SHORT_NAMED_ENUMERATED_VALUE */
-export const _decode_AbandonProblem = $._decodeEnumerated;
-export const _encode_AbandonProblem = $._encodeEnumerated;
+const cannot_abandon: _enum_for_AbandonProblem.cannot_abandon = AbandonProblem.cannot_abandon; /* SHORT_NAMED_ENUMERATED_VALUE */
+export function _decode_AbandonProblem(el: _Element): AbandonProblem {
+    const enumerated = $._decodeEnumerated(el);
+    switch (enumerated) {
+        case AbandonProblem.no_such_operation: return AbandonProblem.no_such_operation;
+        case AbandonProblem.too_late: return AbandonProblem.too_late;
+        case AbandonProblem.cannot_abandon: return AbandonProblem.cannot_abandon;
+        default:
+            throw new _ConstructionError(
+                "Invalid ENUMERATED value " + enumerated + " for AbandonProblem.",
+                el,
+            );
+    }
+}
+export const _encode_AbandonProblem: $.ASN1Encoder<AbandonProblem> = $._encodeEnumerated as $.ASN1Encoder<AbandonProblem>;
 
 
 /* eslint-enable */

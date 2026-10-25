@@ -1,13 +1,13 @@
 /* eslint-disable */
 import {
     ASN1ConstructionError as _ConstructionError,
-    ASN1Element as _Element,
+    type ASN1Element as _Element,
     ASN1TagClass as _TagClass
 } from "@wildboar/asn1";
 import * as $ from "@wildboar/asn1/functional";
-import { TokenAction, _decode_TokenAction, _encode_TokenAction, _enum_for_TokenAction } from "../MmsHI2Operations/TokenAction.ta.mjs";
+import { type TokenAction, _decode_TokenAction, _encode_TokenAction, _enum_for_TokenAction } from "../MmsHI2Operations/TokenAction.ta.mjs";
 // export { TokenAction, _enum_for_TokenAction, TokenAction_addToken /* IMPORTED_LONG_ENUMERATION_ITEM */, addToken /* IMPORTED_SHORT_ENUMERATION_ITEM */, TokenAction_removeToken /* IMPORTED_LONG_ENUMERATION_ITEM */, removeToken /* IMPORTED_SHORT_ENUMERATION_ITEM */, TokenAction_filterToken /* IMPORTED_LONG_ENUMERATION_ITEM */, filterToken /* IMPORTED_SHORT_ENUMERATION_ITEM */, _decode_TokenAction, _encode_TokenAction } from "../MmsHI2Operations/TokenAction.ta.mjs";
-import { EncodedString, _decode_EncodedString, _encode_EncodedString } from "../MmsHI2Operations/EncodedString.ta.mjs";
+import { type EncodedString, _decode_EncodedString, _encode_EncodedString } from "../MmsHI2Operations/EncodedString.ta.mjs";
 // export { EncodedString, _decode_EncodedString, _encode_EncodedString } from "../MmsHI2Operations/EncodedString.ta.mjs";
 
 
@@ -93,7 +93,7 @@ class MMFlags {
          * @static
          */
 
-    public static _enum_for_tokenAction = _enum_for_TokenAction;
+    public static _enum_for_tokenAction: typeof _enum_for_TokenAction = _enum_for_TokenAction;
 }
 
 /**

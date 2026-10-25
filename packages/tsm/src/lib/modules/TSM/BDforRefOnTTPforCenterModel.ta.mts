@@ -1,8 +1,8 @@
 /* eslint-disable */
 import {
-    OPTIONAL,
-    UTF8String,
-    ASN1Element as _Element,
+    type OPTIONAL,
+    type UTF8String,
+    type ASN1Element as _Element,
     ASN1TagClass as _TagClass,
     ASN1Construction as _Construction,
     ASN1UniversalType as _UniversalType,
@@ -12,11 +12,11 @@ import {
     ASN1ConstructionError as _ConstructionError,
 } from "@wildboar/asn1";
 import * as $ from "@wildboar/asn1/functional";
-import { SampleData, _decode_SampleData, _encode_SampleData } from "../TSM/SampleData.ta.mjs";
+import { type SampleData, _decode_SampleData, _encode_SampleData } from "../TSM/SampleData.ta.mjs";
 
 import { SignedData, _decode_SignedData, _encode_SignedData } from "../X9-84-CMS/SignedData.ta.mjs";
 
-import { ACBioContentInformation, _decode_ACBioContentInformation, _encode_ACBioContentInformation } from "../AuthenticationContextForBiometrics/ACBioContentInformation.ta.mjs";
+import { type ACBioContentInformation, _decode_ACBioContentInformation, _encode_ACBioContentInformation } from "../AuthenticationContextForBiometrics/ACBioContentInformation.ta.mjs";
 
 
 
@@ -44,50 +44,60 @@ import { ACBioContentInformation, _decode_ACBioContentInformation, _encode_ACBio
  */
 export
 class BDforRefOnTTPforCenterModel {
+    /**
+     * @summary `thirdPartyInfo`.
+     * @description
+     *
+     * TTP network address as a URI ([IETF RFC 3986]). X.1084 §10.1.2.
+     *
+     * @public
+     * @readonly
+     */
+    public readonly thirdPartyInfo: UTF8String;
+    /**
+     * @summary `sampleData`.
+     * @description
+     *
+     * Captured sample as BioAPI BIR (includes BSP/device info).
+     * [ISO/IEC 19784-1]; X.1084 §11.3–§11.4.
+     *
+     * @public
+     * @readonly
+     */
+    public readonly sampleData: SampleData;
+    /**
+     * @summary `digitalSignature`.
+     * @description
+     *
+     * CMS `SignedData` (X9.84) over the biometric process or payload.
+     * Assures integrity of that party's processing. X.1084 §11.1 item 4.
+     *
+     * @public
+     * @readonly
+     */
+    public readonly digitalSignature: SignedData;
+    /**
+     * @summary `aCforBioOnClient`.
+     * @description
+     *
+     * Optional ISO/IEC 24761 ACBio for the client process. X.1084 §11.1.
+     *
+     * @public
+     * @readonly
+     */
+    public readonly aCforBioOnClient?: OPTIONAL<ACBioContentInformation>;
+
     constructor (
-        /**
-         * @summary `thirdPartyInfo`.
-         * @description
-         *
-         * TTP network address as a URI ([IETF RFC 3986]). X.1084 §10.1.2.
-         *
-         * @public
-         * @readonly
-         */
-        readonly thirdPartyInfo: UTF8String,
-        /**
-         * @summary `sampleData`.
-         * @description
-         *
-         * Captured sample as BioAPI BIR (includes BSP/device info).
-         * [ISO/IEC 19784-1]; X.1084 §11.3–§11.4.
-         *
-         * @public
-         * @readonly
-         */
-        readonly sampleData: SampleData,
-        /**
-         * @summary `digitalSignature`.
-         * @description
-         *
-         * CMS `SignedData` (X9.84) over the biometric process or payload.
-         * Assures integrity of that party's processing. X.1084 §11.1 item 4.
-         *
-         * @public
-         * @readonly
-         */
-        readonly digitalSignature: SignedData,
-        /**
-         * @summary `aCforBioOnClient`.
-         * @description
-         *
-         * Optional ISO/IEC 24761 ACBio for the client process. X.1084 §11.1.
-         *
-         * @public
-         * @readonly
-         */
-        readonly aCforBioOnClient?: OPTIONAL<ACBioContentInformation>
-    ) {}
+        thirdPartyInfo: UTF8String,
+        sampleData: SampleData,
+        digitalSignature: SignedData,
+        aCforBioOnClient?: OPTIONAL<ACBioContentInformation>
+    ) {
+        this.thirdPartyInfo = thirdPartyInfo;
+        this.sampleData = sampleData;
+        this.digitalSignature = digitalSignature;
+        this.aCforBioOnClient = aCforBioOnClient;
+    }
 
     /**
      * @summary Restructures an object into a BDforRefOnTTPforCenterModel

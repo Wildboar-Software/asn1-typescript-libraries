@@ -1,8 +1,8 @@
 /* eslint-disable */
 import {
-    OPTIONAL,
-    INTEGER,
-    ASN1Element as _Element,
+    type OPTIONAL,
+    type INTEGER,
+    type ASN1Element as _Element,
     ASN1TagClass as _TagClass,
     ASN1Construction as _Construction,
     ASN1UniversalType as _UniversalType,
@@ -26,20 +26,26 @@ import * as $ from '@wildboar/asn1/functional';
  *
  */
 export class OrderedAttribute_attribute_values_Item {
+    /**
+     * @summary `value`.
+     * @public
+     * @readonly
+     */
+    public readonly value?: OPTIONAL<_Element>;
+    /**
+     * @summary `position`.
+     * @public
+     * @readonly
+     */
+    public readonly position?: OPTIONAL<INTEGER>;
+
     constructor(
-        /**
-         * @summary `value`.
-         * @public
-         * @readonly
-         */
-        readonly value?: OPTIONAL<_Element>,
-        /**
-         * @summary `position`.
-         * @public
-         * @readonly
-         */
-        readonly position?: OPTIONAL<INTEGER>
-    ) {}
+        value?: OPTIONAL<_Element>,
+        position?: OPTIONAL<INTEGER>
+    ) {
+        this.value = value;
+        this.position = position;
+    }
 
     /**
      * @summary Restructures an object into a OrderedAttribute_attribute_values_Item

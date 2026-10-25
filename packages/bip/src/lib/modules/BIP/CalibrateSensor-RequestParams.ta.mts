@@ -11,12 +11,12 @@ import {
 } from '@wildboar/asn1';
 import * as $ from '@wildboar/asn1/functional';
 import {
-  BioAPI_HANDLE,
+  type BioAPI_HANDLE,
   _decode_BioAPI_HANDLE,
   _encode_BioAPI_HANDLE,
 } from '../BIP/BioAPI-HANDLE.ta.mjs';
 import {
-  SignedInt,
+  type SignedInt,
   _decode_SignedInt,
   _encode_SignedInt,
 } from '../BIP/SignedInt.ta.mjs';
@@ -52,7 +52,7 @@ export class CalibrateSensor_RequestParams {
    * @public
    * @readonly
    */
-  readonly originalBSPHandle: BioAPI_HANDLE;
+  public readonly originalBSPHandle: BioAPI_HANDLE;
   /**
    * @summary `timeout`.
    * @description
@@ -62,7 +62,7 @@ export class CalibrateSensor_RequestParams {
    * @public
    * @readonly
    */
-  readonly timeout: SignedInt;
+  public readonly timeout: SignedInt;
 
   constructor(
     originalBSPHandle: BioAPI_HANDLE,

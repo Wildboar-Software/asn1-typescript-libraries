@@ -1,12 +1,12 @@
 /* eslint-disable */
 import {
-    ASN1Element as _Element,
+    type ASN1Element as _Element,
     ASN1TagClass as _TagClass
 } from "@wildboar/asn1";
 import * as $ from "@wildboar/asn1/functional";
-import { MBMSUmtsIRIContent, _decode_MBMSUmtsIRIContent, _encode_MBMSUmtsIRIContent } from "../MBMSUmtsHI2Operations/MBMSUmtsIRIContent.ta.mjs";
+import { type MBMSUmtsIRIContent, _decode_MBMSUmtsIRIContent, _encode_MBMSUmtsIRIContent } from "../MBMSUmtsHI2Operations/MBMSUmtsIRIContent.ta.mjs";
 // export { MBMSUmtsIRIContent, _decode_MBMSUmtsIRIContent, _encode_MBMSUmtsIRIContent } from "../MBMSUmtsHI2Operations/MBMSUmtsIRIContent.ta.mjs";
-import { MBMSUmtsIRISequence, _decode_MBMSUmtsIRISequence, _encode_MBMSUmtsIRISequence } from "../MBMSUmtsHI2Operations/MBMSUmtsIRISequence.ta.mjs";
+import { type MBMSUmtsIRISequence, _decode_MBMSUmtsIRISequence, _encode_MBMSUmtsIRISequence } from "../MBMSUmtsHI2Operations/MBMSUmtsIRISequence.ta.mjs";
 // export { MBMSUmtsIRISequence, _decode_MBMSUmtsIRISequence, _encode_MBMSUmtsIRISequence } from "../MBMSUmtsHI2Operations/MBMSUmtsIRISequence.ta.mjs";
 
 

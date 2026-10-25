@@ -3,7 +3,7 @@ import {
     ASN1Element as _Element
 } from "@wildboar/asn1";
 import * as $ from "@wildboar/asn1/functional";
-import { Entry, _decode_Entry, _encode_Entry } from "../IN-CS3-SSF-SCF-datatypes/Entry.ta.mjs";
+import { type Entry, _decode_Entry, _encode_Entry } from "../IN-CS3-SSF-SCF-datatypes/Entry.ta.mjs";
 // export { Entry, _decode_Entry, _encode_Entry } from "../IN-CS3-SSF-SCF-datatypes/Entry.ta.mjs";
 
 
@@ -20,21 +20,13 @@ import { Entry, _decode_Entry, _encode_Entry } from "../IN-CS3-SSF-SCF-datatypes
 export
 type INServiceCompatibilityResponse = Entry; // DefinedType
 
-let _cached_decoder_for_INServiceCompatibilityResponse: $.ASN1Decoder<INServiceCompatibilityResponse> | null = null;
-
 /**
  * @summary Decodes an ASN.1 element into a(n) INServiceCompatibilityResponse
  * @function
  * @param el The element being decoded.
  * @returns The decoded data structure.
  */
-export
-function _decode_INServiceCompatibilityResponse (el: _Element): INServiceCompatibilityResponse {
-    if (!_cached_decoder_for_INServiceCompatibilityResponse) { _cached_decoder_for_INServiceCompatibilityResponse = _decode_Entry; }
-    return _cached_decoder_for_INServiceCompatibilityResponse(el);
-}
-
-let _cached_encoder_for_INServiceCompatibilityResponse: $.ASN1Encoder<INServiceCompatibilityResponse> | null = null;
+export const _decode_INServiceCompatibilityResponse: $.ASN1Decoder<INServiceCompatibilityResponse> = _decode_Entry;
 
 /**
  * @summary Encodes a(n) INServiceCompatibilityResponse into an ASN.1 Element.
@@ -43,11 +35,7 @@ let _cached_encoder_for_INServiceCompatibilityResponse: $.ASN1Encoder<INServiceC
  * @param elGetter A function that can be used to get new ASN.1 elements.
  * @returns {_Element} The INServiceCompatibilityResponse, encoded as an ASN.1 Element.
  */
-export
-function _encode_INServiceCompatibilityResponse (value: INServiceCompatibilityResponse, elGetter: $.ASN1Encoder<any>): _Element {
-    if (!_cached_encoder_for_INServiceCompatibilityResponse) { _cached_encoder_for_INServiceCompatibilityResponse = _encode_Entry; }
-    return _cached_encoder_for_INServiceCompatibilityResponse(value, elGetter);
-}
+export const _encode_INServiceCompatibilityResponse: $.ASN1Encoder<INServiceCompatibilityResponse> = _encode_Entry;
 
 
 /* eslint-enable */

@@ -1,13 +1,13 @@
 /* eslint-disable */
 import {
-    OPTIONAL,
-    ASN1Element as _Element,
+    type OPTIONAL,
+    type ASN1Element as _Element,
     ASN1TagClass as _TagClass
 } from "@wildboar/asn1";
 import * as $ from "@wildboar/asn1/functional";
-import { AuthResponse, _decode_AuthResponse, _encode_AuthResponse } from "../CT-Authentication-Operations/AuthResponse.ta.mjs";
+import { type AuthResponse, _decode_AuthResponse, _encode_AuthResponse } from "../CT-Authentication-Operations/AuthResponse.ta.mjs";
 // export { AuthResponse, _decode_AuthResponse, _encode_AuthResponse } from "../CT-Authentication-Operations/AuthResponse.ta.mjs";
-import { CalculationParam, _decode_CalculationParam, _encode_CalculationParam } from "../CT-Authentication-Operations/CalculationParam.ta.mjs";
+import { type CalculationParam, _decode_CalculationParam, _encode_CalculationParam } from "../CT-Authentication-Operations/CalculationParam.ta.mjs";
 // export { CalculationParam, _decode_CalculationParam, _encode_CalculationParam } from "../CT-Authentication-Operations/CalculationParam.ta.mjs";
 
 
@@ -163,7 +163,7 @@ let _cached_encoder_for_CalcCtanInfo: $.ASN1Encoder<CalcCtanInfo> | null = null;
  */
 export
 function _encode_CalcCtanInfo (value: CalcCtanInfo, elGetter: $.ASN1Encoder<any>): _Element {
-    if (!_cached_encoder_for_CalcCtanInfo) { _cached_encoder_for_CalcCtanInfo = function (value: CalcCtanInfo, elGetter: $.ASN1Encoder<CalcCtanInfo>): _Element {
+    if (!_cached_encoder_for_CalcCtanInfo) { _cached_encoder_for_CalcCtanInfo = function (value: CalcCtanInfo): _Element {
     const _components: _Element[] = [];
     _components.push(/* REQUIRED   */ _encode_AuthResponse(value.authResponse, $.BER));
     if (value.calculationParam !== undefined) {

@@ -1,8 +1,8 @@
 /* eslint-disable */
 import {
-    ASN1Element as _Element,
+    type ASN1Element as _Element,
     ASN1SizeError,
-    BIT_STRING
+    type BIT_STRING
 } from "@wildboar/asn1";
 import * as $ from "@wildboar/asn1/functional";
 import { maxSubTariffControlLen } from "../Tariffing-Data-Types/maxSubTariffControlLen.va.mjs";
@@ -65,7 +65,7 @@ export const _decode_SubTariffControl = (el: _Element): SubTariffControl => {
     }
     return value;
 };
-export const _encode_SubTariffControl = $._encodeBitString;
+export const _encode_SubTariffControl: $.ASN1Encoder<BIT_STRING> = $._encodeBitString;
 
 
 /* eslint-enable */

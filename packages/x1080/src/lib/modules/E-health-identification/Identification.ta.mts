@@ -1,7 +1,7 @@
 /* eslint-disable */
 import {
-    OBJECT_IDENTIFIER,
-    ASN1Element as _Element,
+    type OBJECT_IDENTIFIER,
+    type ASN1Element as _Element,
     ASN1TagClass as _TagClass,
     ASN1Construction as _Construction,
     ASN1UniversalType as _UniversalType,
@@ -30,28 +30,34 @@ import * as $ from '@wildboar/asn1/functional';
  *
  */
 export class Identification {
+    /**
+     * @summary `category`.
+     * @description
+     *
+     * `IDENTIFICATION.&category` from `Categories`.
+     *
+     * @public
+     * @readonly
+     */
+    public readonly category: OBJECT_IDENTIFIER;
+    /**
+     * @summary `identification`.
+     * @description
+     *
+     * `IDENTIFICATION.&Identification` selected by `category`.
+     *
+     * @public
+     * @readonly
+     */
+    public readonly identification: _Element;
+
     constructor(
-        /**
-         * @summary `category`.
-         * @description
-         *
-         * `IDENTIFICATION.&category` from `Categories`.
-         *
-         * @public
-         * @readonly
-         */
-        readonly category: OBJECT_IDENTIFIER,
-        /**
-         * @summary `identification`.
-         * @description
-         *
-         * `IDENTIFICATION.&Identification` selected by `category`.
-         *
-         * @public
-         * @readonly
-         */
-        readonly identification: _Element
-    ) {}
+        category: OBJECT_IDENTIFIER,
+        identification: _Element
+    ) {
+        this.category = category;
+        this.identification = identification;
+    }
 
     /**
      * @summary Restructures an object into a Identification

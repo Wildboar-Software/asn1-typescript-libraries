@@ -1,7 +1,7 @@
 /* eslint-disable */
 import {
-    OPTIONAL,
-    ASN1Element as _Element,
+    type OPTIONAL,
+    type ASN1Element as _Element,
     ASN1TagClass as _TagClass
 } from "@wildboar/asn1";
 import * as $ from "@wildboar/asn1/functional";
@@ -22,9 +22,9 @@ import { ODB_Data, _decode_ODB_Data, _encode_ODB_Data } from "../MAP-MS-DataType
  * 
  * ```asn1
  * ModificationRequestFor-ODB-data ::= SEQUENCE {
- *     odb-data    [0]    ODB-Data    OPTIONAL,
- *     modifyNotificationToCSE    [1]    ModificationInstruction    OPTIONAL,
- *     extensionContainer    [2]    ExtensionContainer    OPTIONAL,
+ *     odb-data    [0]    ODB-Data    type OPTIONAL,
+ *     modifyNotificationToCSE    [1]    ModificationInstruction    type OPTIONAL,
+ *     extensionContainer    [2]    ExtensionContainer    type OPTIONAL,
  *     ...}
  * ```
  * 
@@ -32,42 +32,52 @@ import { ODB_Data, _decode_ODB_Data, _encode_ODB_Data } from "../MAP-MS-DataType
  */
 export
 class ModificationRequestFor_ODB_data {
+    /**
+     * @summary `odb_data`.
+     * @description
+     *
+     * ODB data to be modified by the CSE. (3GPP TS 29.002 V19.1.0 clause
+     * 7.6.3.81a)
+     *
+     * @public
+     * @readonly
+     */
+    public readonly odb_data?: OPTIONAL<ODB_Data>;
+    /**
+     * @summary `modifyNotificationToCSE`.
+     * @description
+     *
+     * Activate or deactivate notification to the CSE for ODB data. (3GPP TS
+     * 29.002 V19.1.0 clause 7.6.3.81a)
+     *
+     * @public
+     * @readonly
+     */
+    public readonly modifyNotificationToCSE?: OPTIONAL<ModificationInstruction>;
+    /**
+     * @summary `extensionContainer`.
+     * @public
+     * @readonly
+     */
+    public readonly extensionContainer?: OPTIONAL<ExtensionContainer>;
+    /**
+     * @summary Extensions that are not recognized.
+     * @public
+     * @readonly
+     */
+    public readonly _unrecognizedExtensionsList: _Element[];
+
     constructor (
-        /**
-         * @summary `odb_data`.
-         * @description
-         *
-         * ODB data to be modified by the CSE. (3GPP TS 29.002 V19.1.0 clause
-         * 7.6.3.81a)
-         *
-         * @public
-         * @readonly
-         */
-        readonly odb_data?: OPTIONAL<ODB_Data>,
-        /**
-         * @summary `modifyNotificationToCSE`.
-         * @description
-         *
-         * Activate or deactivate notification to the CSE for ODB data. (3GPP TS
-         * 29.002 V19.1.0 clause 7.6.3.81a)
-         *
-         * @public
-         * @readonly
-         */
-        readonly modifyNotificationToCSE?: OPTIONAL<ModificationInstruction>,
-        /**
-         * @summary `extensionContainer`.
-         * @public
-         * @readonly
-         */
-        readonly extensionContainer?: OPTIONAL<ExtensionContainer>,
-        /**
-         * @summary Extensions that are not recognized.
-         * @public
-         * @readonly
-         */
-        readonly _unrecognizedExtensionsList: _Element[] = []
-    ) {}
+        odb_data?: OPTIONAL<ODB_Data>,
+        modifyNotificationToCSE?: OPTIONAL<ModificationInstruction>,
+        extensionContainer?: OPTIONAL<ExtensionContainer>,
+        _unrecognizedExtensionsList: _Element[] = []
+    ) {
+        this.odb_data = odb_data;
+        this.modifyNotificationToCSE = modifyNotificationToCSE;
+        this.extensionContainer = extensionContainer;
+        this._unrecognizedExtensionsList = _unrecognizedExtensionsList;
+    }
 
     /**
      * @summary Restructures an object into a ModificationRequestFor_ODB_data
@@ -91,7 +101,7 @@ class ModificationRequestFor_ODB_data {
          * @static
          */
 
-    public static _enum_for_modifyNotificationToCSE = _enum_for_ModificationInstruction;
+    public static _enum_for_modifyNotificationToCSE: typeof _enum_for_ModificationInstruction = _enum_for_ModificationInstruction;
 }
 
 /**

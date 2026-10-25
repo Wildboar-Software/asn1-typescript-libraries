@@ -1,7 +1,7 @@
 /* eslint-disable */
 import {
-  OPTIONAL,
-  OCTET_STRING,
+  type OPTIONAL,
+  type OCTET_STRING,
   ASN1Element as _Element,
   ASN1TagClass as _TagClass,
   ASN1Construction as _Construction,
@@ -18,7 +18,7 @@ import {
   _encode_SCVPIssuerSerial,
 } from '../SCVP-2009/SCVPIssuerSerial.ta.mjs';
 import {
-  HashAlgorithm,
+  type HashAlgorithm,
   _decode_HashAlgorithm,
   _encode_HashAlgorithm,
 } from '../SCVP-2009/HashAlgorithm.ta.mjs';
@@ -48,40 +48,48 @@ import { mda_sha1 } from '../PKIXAlgs-2009/mda-sha1.oa.mjs';
  *
  */
 export class SCVPCertID {
+  /**
+   * @summary `certHash`.
+   * @description
+   *
+   * Octet string hash of the DER-encoded certificate
+   * ([RFC 5055 §3.2.1](https://datatracker.ietf.org/doc/html/rfc5055#section-3.2.1)).
+   *
+   * @public
+   * @readonly
+   */
+  public readonly certHash: OCTET_STRING;
+  /**
+   * @summary `issuerSerial`.
+   * @description
+   *
+   * Issuer name(s) and serial number ([RFC 5055 §3.2.1](https://datatracker.ietf.org/doc/html/rfc5055#section-3.2.1)).
+   *
+   * @public
+   * @readonly
+   */
+  public readonly issuerSerial: SCVPIssuerSerial;
+  /**
+   * @summary `hashAlgorithm`.
+   * @description
+   *
+   * Hash algorithm for `certHash`; DEFAULT uses `mda-sha1.&id`
+   * ([RFC 5055 §3.2.1](https://datatracker.ietf.org/doc/html/rfc5055#section-3.2.1)).
+   *
+   * @public
+   * @readonly
+   */
+  public readonly hashAlgorithm?: OPTIONAL<HashAlgorithm>;
+
   constructor(
-    /**
-     * @summary `certHash`.
-     * @description
-     *
-     * Octet string hash of the DER-encoded certificate
-     * ([RFC 5055 §3.2.1](https://datatracker.ietf.org/doc/html/rfc5055#section-3.2.1)).
-     *
-     * @public
-     * @readonly
-     */
-    readonly certHash: OCTET_STRING,
-    /**
-     * @summary `issuerSerial`.
-     * @description
-     *
-     * Issuer name(s) and serial number ([RFC 5055 §3.2.1](https://datatracker.ietf.org/doc/html/rfc5055#section-3.2.1)).
-     *
-     * @public
-     * @readonly
-     */
-    readonly issuerSerial: SCVPIssuerSerial,
-    /**
-     * @summary `hashAlgorithm`.
-     * @description
-     *
-     * Hash algorithm for `certHash`; DEFAULT uses `mda-sha1.&id`
-     * ([RFC 5055 §3.2.1](https://datatracker.ietf.org/doc/html/rfc5055#section-3.2.1)).
-     *
-     * @public
-     * @readonly
-     */
-    readonly hashAlgorithm?: OPTIONAL<HashAlgorithm>
-  ) {}
+    certHash: OCTET_STRING,
+    issuerSerial: SCVPIssuerSerial,
+    hashAlgorithm?: OPTIONAL<HashAlgorithm>
+  ) {
+    this.certHash = certHash;
+    this.issuerSerial = issuerSerial;
+    this.hashAlgorithm = hashAlgorithm;
+  }
 
   /**
    * @summary Restructures an object into a SCVPCertID

@@ -2,7 +2,7 @@
 import { ASN1Element as _Element } from "@wildboar/asn1";
 import * as $ from "@wildboar/asn1/functional";
 import {
-    ContentEncryptionAlgorithmIdentifier,
+    type ContentEncryptionAlgorithmIdentifier,
     _decode_ContentEncryptionAlgorithmIdentifier,
     _encode_ContentEncryptionAlgorithmIdentifier,
 } from "../CryptographicMessageSyntax-2010/ContentEncryptionAlgorithmIdentifier.ta.mjs";

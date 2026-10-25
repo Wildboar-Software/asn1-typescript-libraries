@@ -1,6 +1,6 @@
 /* eslint-disable */
 import {
-  GraphicString,
+  type GraphicString,
   ASN1Element as _Element,
   ASN1TagClass as _TagClass,
   ASN1Construction as _Construction,
@@ -31,10 +31,10 @@ import * as $ from '@wildboar/asn1/functional';
 export type Version = GraphicString; // GraphicString
 
 
-export const _decode_Version = $._decodeGraphicString;
+export const _decode_Version: $.ASN1Decoder<string> = $._decodeGraphicString;
 
 
-export const _encode_Version = $._encodeGraphicString;
+export const _encode_Version: $.ASN1Encoder<string> = $._encodeGraphicString;
 
 
 /* eslint-enable */

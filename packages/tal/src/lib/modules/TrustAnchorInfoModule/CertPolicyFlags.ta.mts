@@ -1,7 +1,7 @@
 /* eslint-disable */
 import {
-    BIT_STRING,
-    ASN1Element as _Element,
+    type BIT_STRING,
+    type ASN1Element as _Element,
     ASN1TagClass as _TagClass,
     ASN1Construction as _Construction,
     ASN1UniversalType as _UniversalType,
@@ -114,10 +114,10 @@ export
 const inhibitAnyPolicy: number = CertPolicyFlags_inhibitAnyPolicy; /* SHORT_NAMED_BIT */
 
 
-export const _decode_CertPolicyFlags = $._decodeBitString;
+export const _decode_CertPolicyFlags: $.ASN1Decoder<BIT_STRING> = $._decodeBitString;
 
 
-export const _encode_CertPolicyFlags = $._encodeBitString;
+export const _encode_CertPolicyFlags: $.ASN1Encoder<BIT_STRING> = $._encodeBitString;
 
 
 /* eslint-enable */

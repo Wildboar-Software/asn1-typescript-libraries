@@ -1,6 +1,6 @@
 /* eslint-disable */
 import {
-    ASN1Element as _Element,
+    type ASN1Element as _Element,
     ASN1TagClass as _TagClass,
     ASN1Construction as _Construction,
     ASN1UniversalType as _UniversalType,
@@ -80,7 +80,7 @@ export type SystemType = _enum_for_SystemType;
  *
  * @enum {number}
  */
-export const SystemType = _enum_for_SystemType;
+export const SystemType: typeof _enum_for_SystemType = _enum_for_SystemType;
 
 
 /**
@@ -94,7 +94,7 @@ export const SystemType = _enum_for_SystemType;
  * @constant
  * @type {number}
  */
-export const SystemType_eS: SystemType =
+export const SystemType_eS: 1 =
     SystemType.eS; /* LONG_NAMED_ENUMERATED_VALUE */
 
 
@@ -109,7 +109,7 @@ export const SystemType_eS: SystemType =
  * @constant
  * @type {number}
  */
-export const eS: SystemType = SystemType.eS; /* SHORT_NAMED_ENUMERATED_VALUE */
+export const eS: 1 = SystemType.eS; /* SHORT_NAMED_ENUMERATED_VALUE */
 
 
 /**
@@ -123,7 +123,7 @@ export const eS: SystemType = SystemType.eS; /* SHORT_NAMED_ENUMERATED_VALUE */
  * @constant
  * @type {number}
  */
-export const SystemType_iS: SystemType =
+export const SystemType_iS: 2 =
     SystemType.iS; /* LONG_NAMED_ENUMERATED_VALUE */
 
 
@@ -138,17 +138,28 @@ export const SystemType_iS: SystemType =
  * @constant
  * @type {number}
  */
-export const iS: SystemType = SystemType.iS; /* SHORT_NAMED_ENUMERATED_VALUE */
+export const iS: 2 = SystemType.iS; /* SHORT_NAMED_ENUMERATED_VALUE */
 
 
 
 
-export const _decode_SystemType = $._decodeEnumerated as $.ASN1Decoder<SystemType>;
+export function _decode_SystemType(el: _Element): SystemType {
+    const enumerated = $._decodeEnumerated(el);
+    switch (enumerated) {
+        case SystemType.eS: return SystemType.eS;
+        case SystemType.iS: return SystemType.iS;
+        default:
+            throw new _ConstructionError(
+                'Invalid ENUMERATED value ' + enumerated + ' for SystemType.',
+                el,
+            );
+    }
+}
 
 
 
 
-export const _encode_SystemType = $._encodeEnumerated as $.ASN1Encoder<SystemType>;
+export const _encode_SystemType: $.ASN1Encoder<SystemType> = $._encodeEnumerated as $.ASN1Encoder<SystemType>;
 
 
 /* eslint-enable */

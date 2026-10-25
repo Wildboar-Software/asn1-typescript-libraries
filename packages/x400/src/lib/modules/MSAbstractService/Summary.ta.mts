@@ -1,8 +1,8 @@
 /* eslint-disable */
 import {
-    OPTIONAL,
-    INTEGER,
-    ASN1Element as _Element,
+    type OPTIONAL,
+    type INTEGER,
+    type ASN1Element as _Element,
     ASN1TagClass as _TagClass,
     ASN1Construction as _Construction,
     ASN1UniversalType as _UniversalType,
@@ -45,20 +45,26 @@ import {
  *
  */
 export class Summary {
+    /**
+     * @summary `absent`.
+     * @public
+     * @readonly
+     */
+    public readonly absent?: OPTIONAL<INTEGER>;
+    /**
+     * @summary `present`.
+     * @public
+     * @readonly
+     */
+    public readonly present?: OPTIONAL<Summary_present_Item[]>;
+
     constructor(
-        /**
-         * @summary `absent`.
-         * @public
-         * @readonly
-         */
-        readonly absent?: OPTIONAL<INTEGER>,
-        /**
-         * @summary `present`.
-         * @public
-         * @readonly
-         */
-        readonly present?: OPTIONAL<Summary_present_Item[]>
-    ) {}
+        absent?: OPTIONAL<INTEGER>,
+        present?: OPTIONAL<Summary_present_Item[]>
+    ) {
+        this.absent = absent;
+        this.present = present;
+    }
 
     /**
      * @summary Restructures an object into a Summary

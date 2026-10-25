@@ -1,10 +1,10 @@
 /* eslint-disable */
 import {
-    NULL,
+    type NULL,
     ASN1Element as _Element
 } from "@wildboar/asn1";
 import * as $ from "@wildboar/asn1/functional";
-import { ContextIdList, _decode_ContextIdList, _encode_ContextIdList } from "../MAP-MS-DataTypes/ContextIdList.ta.mjs";
+import { type ContextIdList, _decode_ContextIdList, _encode_ContextIdList } from "../MAP-MS-DataTypes/ContextIdList.ta.mjs";
 
 
 /**

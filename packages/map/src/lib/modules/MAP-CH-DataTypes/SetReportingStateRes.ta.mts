@@ -1,11 +1,11 @@
 /* eslint-disable */
 import {
-    OPTIONAL,
-    ASN1Element as _Element,
+    type OPTIONAL,
+    type ASN1Element as _Element,
     ASN1TagClass as _TagClass
 } from "@wildboar/asn1";
 import * as $ from "@wildboar/asn1/functional";
-import { CCBS_SubscriberStatus, _decode_CCBS_SubscriberStatus, _encode_CCBS_SubscriberStatus, _enum_for_CCBS_SubscriberStatus } from "../MAP-CH-DataTypes/CCBS-SubscriberStatus.ta.mjs";
+import { type CCBS_SubscriberStatus, _decode_CCBS_SubscriberStatus, _encode_CCBS_SubscriberStatus, _enum_for_CCBS_SubscriberStatus } from "../MAP-CH-DataTypes/CCBS-SubscriberStatus.ta.mjs";
 import { ExtensionContainer, _decode_ExtensionContainer, _encode_ExtensionContainer } from "../MAP-ExtensionDataTypes/ExtensionContainer.ta.mjs";
 
 
@@ -20,8 +20,8 @@ import { ExtensionContainer, _decode_ExtensionContainer, _encode_ExtensionContai
  * 
  * ```asn1
  * SetReportingStateRes ::= SEQUENCE{
- *     ccbs-SubscriberStatus    [0]    CCBS-SubscriberStatus    OPTIONAL,
- *     extensionContainer    [1]    ExtensionContainer    OPTIONAL,
+ *     ccbs-SubscriberStatus    [0]    CCBS-SubscriberStatus    type OPTIONAL,
+ *     extensionContainer    [1]    ExtensionContainer    type OPTIONAL,
  *     ...}
  * ```
  * 
@@ -29,34 +29,42 @@ import { ExtensionContainer, _decode_ExtensionContainer, _encode_ExtensionContai
  */
 export
 class SetReportingStateRes {
+    /**
+     * @summary `ccbs_SubscriberStatus`.
+     * @description
+     *
+     * CCBS idle / not idle / not reachable.
+     *
+     * @public
+     * @readonly
+     */
+    public readonly ccbs_SubscriberStatus?: OPTIONAL<CCBS_SubscriberStatus>;
+    /**
+     * @summary `extensionContainer`.
+     * @description
+     *
+     * Private or PCS extensions (3GPP TS 29.002 V19.1.0 clause 17.7.11).
+     *
+     * @public
+     * @readonly
+     */
+    public readonly extensionContainer?: OPTIONAL<ExtensionContainer>;
+    /**
+     * @summary Extensions that are not recognized.
+     * @public
+     * @readonly
+     */
+    public readonly _unrecognizedExtensionsList: _Element[];
+
     constructor (
-        /**
-         * @summary `ccbs_SubscriberStatus`.
-         * @description
-         *
-         * CCBS idle / not idle / not reachable.
-         *
-         * @public
-         * @readonly
-         */
-        readonly ccbs_SubscriberStatus?: OPTIONAL<CCBS_SubscriberStatus>,
-        /**
-         * @summary `extensionContainer`.
-         * @description
-         *
-         * Private or PCS extensions (3GPP TS 29.002 V19.1.0 clause 17.7.11).
-         *
-         * @public
-         * @readonly
-         */
-        readonly extensionContainer?: OPTIONAL<ExtensionContainer>,
-        /**
-         * @summary Extensions that are not recognized.
-         * @public
-         * @readonly
-         */
-        readonly _unrecognizedExtensionsList: _Element[] = []
-    ) {}
+        ccbs_SubscriberStatus?: OPTIONAL<CCBS_SubscriberStatus>,
+        extensionContainer?: OPTIONAL<ExtensionContainer>,
+        _unrecognizedExtensionsList: _Element[] = []
+    ) {
+        this.ccbs_SubscriberStatus = ccbs_SubscriberStatus;
+        this.extensionContainer = extensionContainer;
+        this._unrecognizedExtensionsList = _unrecognizedExtensionsList;
+    }
 
     /**
      * @summary Restructures an object into a SetReportingStateRes
@@ -80,7 +88,7 @@ class SetReportingStateRes {
          * @static
          */
 
-    public static _enum_for_ccbs_SubscriberStatus = _enum_for_CCBS_SubscriberStatus;
+    public static _enum_for_ccbs_SubscriberStatus: typeof _enum_for_CCBS_SubscriberStatus = _enum_for_CCBS_SubscriberStatus;
 }
 
 /**

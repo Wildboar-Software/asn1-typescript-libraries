@@ -1,8 +1,8 @@
 /* eslint-disable */
 import {
-    GraphicString,
-    OPTIONAL,
-    ASN1Element as _Element,
+    type GraphicString,
+    type OPTIONAL,
+    type ASN1Element as _Element,
     ASN1TagClass as _TagClass
 } from "@wildboar/asn1";
 import * as $ from "@wildboar/asn1/functional";
@@ -92,7 +92,7 @@ class SMInterface {
          * @static
          */
 
-    public static _enum_for_interfaceType = _enum_for_SMInterface_interfaceType;
+    public static _enum_for_interfaceType: typeof _enum_for_SMInterface_interfaceType = _enum_for_SMInterface_interfaceType;
 }
 
 /**

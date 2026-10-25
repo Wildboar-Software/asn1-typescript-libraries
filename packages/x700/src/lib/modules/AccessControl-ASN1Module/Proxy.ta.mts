@@ -1,7 +1,7 @@
 /* eslint-disable */
 import {
-    OBJECT_IDENTIFIER,
-    ASN1Element as _Element,
+    type OBJECT_IDENTIFIER,
+    type ASN1Element as _Element,
     ASN1TagClass as _TagClass,
     ASN1Construction as _Construction,
     ASN1UniversalType as _UniversalType,
@@ -37,28 +37,34 @@ import * as $ from '@wildboar/asn1/functional';
  *
  */
 export class Proxy {
+    /**
+     * @summary `proxyId`.
+     * @description
+     *
+     * `AC-PROXY.&id` from `ProxySet`; selects the syntax of
+     * `proxyValue`. X.741 Cor.3 A.6.
+     * @public
+     * @readonly
+     */
+    public readonly proxyId: OBJECT_IDENTIFIER;
+    /**
+     * @summary `proxyValue`.
+     * @description
+     *
+     * Value of the proxy identity, typed by `proxyId`. X.741
+     * Cor.3 A.6.
+     * @public
+     * @readonly
+     */
+    public readonly proxyValue: _Element;
+
     constructor(
-        /**
-         * @summary `proxyId`.
-         * @description
-         *
-         * `AC-PROXY.&id` from `ProxySet`; selects the syntax of
-         * `proxyValue`. X.741 Cor.3 A.6.
-         * @public
-         * @readonly
-         */
-        readonly proxyId: OBJECT_IDENTIFIER,
-        /**
-         * @summary `proxyValue`.
-         * @description
-         *
-         * Value of the proxy identity, typed by `proxyId`. X.741
-         * Cor.3 A.6.
-         * @public
-         * @readonly
-         */
-        readonly proxyValue: _Element
-    ) {}
+        proxyId: OBJECT_IDENTIFIER,
+        proxyValue: _Element
+    ) {
+        this.proxyId = proxyId;
+        this.proxyValue = proxyValue;
+    }
 
     /**
      * @summary Restructures an object into a Proxy

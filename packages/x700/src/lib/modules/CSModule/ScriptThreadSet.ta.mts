@@ -1,6 +1,6 @@
 /* eslint-disable */
 import {
-    ASN1Element as _Element,
+    type ASN1Element as _Element,
     ASN1TagClass as _TagClass,
     ASN1Construction as _Construction,
     ASN1UniversalType as _UniversalType,
@@ -11,12 +11,12 @@ import {
 } from '@wildboar/asn1';
 import * as $ from '@wildboar/asn1/functional';
 import {
-    ScriptId,
+    type ScriptId,
     _decode_ScriptId,
     _encode_ScriptId,
 } from '../CSModule/ScriptId.ta.mjs';
 import {
-    ThreadId,
+    type ThreadId,
     _decode_ThreadId,
     _encode_ThreadId,
 } from '../CSModule/ThreadId.ta.mjs';
@@ -39,29 +39,35 @@ import {
  *
  */
 export class ScriptThreadSet {
+    /**
+     * @summary `scriptId`.
+     * @description
+     *
+     * Launch-script instance this thread is executing. ITU-T
+     * Rec. X.753 (10/97) §8.1.2.3.2, A.4.
+     * @public
+     * @readonly
+     */
+    public readonly scriptId: ScriptId;
+    /**
+     * @summary `threadId`.
+     * @description
+     *
+     * Thread that was spawned for that script. Supply this to
+     * suspend/resume a suspendable thread. ITU-T Rec. X.753
+     * (10/97) §7.2, §8.3.1–§8.3.2, A.4.
+     * @public
+     * @readonly
+     */
+    public readonly threadId: ThreadId;
+
     constructor(
-        /**
-         * @summary `scriptId`.
-         * @description
-         *
-         * Launch-script instance this thread is executing. ITU-T
-         * Rec. X.753 (10/97) §8.1.2.3.2, A.4.
-         * @public
-         * @readonly
-         */
-        readonly scriptId: ScriptId,
-        /**
-         * @summary `threadId`.
-         * @description
-         *
-         * Thread that was spawned for that script. Supply this to
-         * suspend/resume a suspendable thread. ITU-T Rec. X.753
-         * (10/97) §7.2, §8.3.1–§8.3.2, A.4.
-         * @public
-         * @readonly
-         */
-        readonly threadId: ThreadId
-    ) {}
+        scriptId: ScriptId,
+        threadId: ThreadId
+    ) {
+        this.scriptId = scriptId;
+        this.threadId = threadId;
+    }
 
     /**
      * @summary Restructures an object into a ScriptThreadSet

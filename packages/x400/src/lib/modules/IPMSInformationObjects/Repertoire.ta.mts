@@ -1,6 +1,6 @@
 /* eslint-disable */
 import {
-    ASN1Element as _Element,
+    type ASN1Element as _Element,
     ASN1TagClass as _TagClass,
     ASN1Construction as _Construction,
     ASN1UniversalType as _UniversalType,
@@ -56,14 +56,14 @@ export type Repertoire = _enum_for_Repertoire;
  *
  * @enum {number}
  */
-export const Repertoire = _enum_for_Repertoire;
+export const Repertoire: typeof _enum_for_Repertoire = _enum_for_Repertoire;
 
 /**
  * @summary Repertoire_ita2
  * @constant
  * @type {number}
  */
-export const Repertoire_ita2: Repertoire =
+export const Repertoire_ita2: _enum_for_Repertoire.ita2 =
     Repertoire.ita2; /* LONG_NAMED_ENUMERATED_VALUE */
 
 /**
@@ -71,7 +71,7 @@ export const Repertoire_ita2: Repertoire =
  * @constant
  * @type {number}
  */
-export const ita2: Repertoire =
+export const ita2: _enum_for_Repertoire.ita2 =
     Repertoire.ita2; /* SHORT_NAMED_ENUMERATED_VALUE */
 
 /**
@@ -79,7 +79,7 @@ export const ita2: Repertoire =
  * @constant
  * @type {number}
  */
-export const Repertoire_ia5: Repertoire =
+export const Repertoire_ia5: _enum_for_Repertoire.ia5 =
     Repertoire.ia5; /* LONG_NAMED_ENUMERATED_VALUE */
 
 /**
@@ -87,14 +87,25 @@ export const Repertoire_ia5: Repertoire =
  * @constant
  * @type {number}
  */
-export const ia5: Repertoire =
+export const ia5: _enum_for_Repertoire.ia5 =
     Repertoire.ia5; /* SHORT_NAMED_ENUMERATED_VALUE */
 
 
-export const _decode_Repertoire = $._decodeEnumerated;
+export function _decode_Repertoire(el: _Element): Repertoire {
+    const enumerated = $._decodeEnumerated(el);
+    switch (enumerated) {
+        case Repertoire.ita2: return Repertoire.ita2;
+        case Repertoire.ia5: return Repertoire.ia5;
+        default:
+            throw new _ConstructionError(
+                'Invalid ENUMERATED value ' + enumerated + ' for Repertoire.',
+                el,
+            );
+    }
+}
 
 
-export const _encode_Repertoire = $._encodeEnumerated;
+export const _encode_Repertoire: $.ASN1Encoder<Repertoire> = $._encodeEnumerated as $.ASN1Encoder<Repertoire>;
 
 
 /* eslint-enable */

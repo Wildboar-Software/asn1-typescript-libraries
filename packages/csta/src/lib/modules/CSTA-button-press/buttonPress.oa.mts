@@ -8,7 +8,7 @@ import { type OPERATION } from "../Remote-Operations-Information-Objects/OPERATI
 
 import { ButtonPressArgument, _decode_ButtonPressArgument, _encode_ButtonPressArgument } from "../CSTA-button-press/ButtonPressArgument.ta.mjs";
 
-import { ButtonPressResult, _decode_ButtonPressResult, _encode_ButtonPressResult } from "../CSTA-button-press/ButtonPressResult.ta.mjs";
+import { type ButtonPressResult, _decode_ButtonPressResult, _encode_ButtonPressResult } from "../CSTA-button-press/ButtonPressResult.ta.mjs";
 
 import { universalFailure } from "../CSTA-error-definition/universalFailure.oa.mjs";
 

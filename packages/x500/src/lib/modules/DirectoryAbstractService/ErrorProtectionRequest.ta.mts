@@ -1,5 +1,5 @@
 /* eslint-disable */
-import { ASN1Element as _Element, INTEGER } from "@wildboar/asn1";
+import { ASN1Element as _Element, type INTEGER } from "@wildboar/asn1";
 import * as $ from "@wildboar/asn1/functional";
 
 /**
@@ -26,7 +26,7 @@ export type ErrorProtectionRequest = INTEGER;
  * @constant
  * @type {number}
  */
-export const ErrorProtectionRequest_none: ErrorProtectionRequest = 0; /* LONG_NAMED_INTEGER_VALUE */
+export const ErrorProtectionRequest_none: 0 = 0 satisfies ErrorProtectionRequest; /* LONG_NAMED_INTEGER_VALUE */
 
 /**
  * @summary ErrorProtectionRequest_none
@@ -37,7 +37,7 @@ export const ErrorProtectionRequest_none: ErrorProtectionRequest = 0; /* LONG_NA
  * @constant
  * @type {number}
  */
-export const none: ErrorProtectionRequest = ErrorProtectionRequest_none; /* SHORT_NAMED_INTEGER_VALUE */
+export const none: 0 = ErrorProtectionRequest_none; /* SHORT_NAMED_INTEGER_VALUE */
 
 /**
  * @summary ErrorProtectionRequest_signed
@@ -48,7 +48,7 @@ export const none: ErrorProtectionRequest = ErrorProtectionRequest_none; /* SHOR
  * @constant
  * @type {number}
  */
-export const ErrorProtectionRequest_signed: ErrorProtectionRequest = 1; /* LONG_NAMED_INTEGER_VALUE */
+export const ErrorProtectionRequest_signed: 1 = 1 satisfies ErrorProtectionRequest; /* LONG_NAMED_INTEGER_VALUE */
 
 /**
  * @summary ErrorProtectionRequest_signed
@@ -59,13 +59,13 @@ export const ErrorProtectionRequest_signed: ErrorProtectionRequest = 1; /* LONG_
  * @constant
  * @type {number}
  */
-export const signed: ErrorProtectionRequest = ErrorProtectionRequest_signed; /* SHORT_NAMED_INTEGER_VALUE */
+export const signed: 1 = ErrorProtectionRequest_signed; /* SHORT_NAMED_INTEGER_VALUE */
 
 
-export const _decode_ErrorProtectionRequest = $._decodeInteger;
+export const _decode_ErrorProtectionRequest: $.ASN1Decoder<INTEGER> = $._decodeInteger;
 
 
-export const _encode_ErrorProtectionRequest = $._encodeInteger;
+export const _encode_ErrorProtectionRequest: $.ASN1Encoder<INTEGER> = $._encodeInteger;
 
 
 /* eslint-enable */

@@ -1,7 +1,7 @@
 /* eslint-disable */
 import {
-    OPTIONAL,
-    ASN1Element as _Element,
+    type OPTIONAL,
+    type ASN1Element as _Element,
     ASN1TagClass as _TagClass,
     ASN1Construction as _Construction,
     ASN1UniversalType as _UniversalType,
@@ -33,20 +33,26 @@ import { MidCallControlInfo_Item_midCallReportType, _enum_for_MidCallControlInfo
  */
 export
 class MidCallControlInfo_Item {
+    /**
+     * @summary `midCallInfoType`.
+     * @public
+     * @readonly
+     */
+    public readonly midCallInfoType: MidCallInfoType;
+    /**
+     * @summary `midCallReportType`.
+     * @public
+     * @readonly
+     */
+    public readonly midCallReportType?: OPTIONAL<MidCallControlInfo_Item_midCallReportType>;
+
     constructor (
-        /**
-         * @summary `midCallInfoType`.
-         * @public
-         * @readonly
-         */
-        readonly midCallInfoType: MidCallInfoType,
-        /**
-         * @summary `midCallReportType`.
-         * @public
-         * @readonly
-         */
-        readonly midCallReportType?: OPTIONAL<MidCallControlInfo_Item_midCallReportType>
-    ) {}
+        midCallInfoType: MidCallInfoType,
+        midCallReportType?: OPTIONAL<MidCallControlInfo_Item_midCallReportType>
+    ) {
+        this.midCallInfoType = midCallInfoType;
+        this.midCallReportType = midCallReportType;
+    }
 
     /**
      * @summary Restructures an object into a MidCallControlInfo_Item
@@ -70,13 +76,13 @@ class MidCallControlInfo_Item {
      * @static
      * @method
      */
-    public static get _default_value_for_midCallReportType () { return MidCallControlInfo_Item_midCallReportType_inMonitoringState; }        /**
+    public static get _default_value_for_midCallReportType (): _enum_for_MidCallControlInfo_Item_midCallReportType.inMonitoringState { return MidCallControlInfo_Item_midCallReportType_inMonitoringState; }        /**
          * @summary The enum used as the type of the component `midCallReportType`
          * @public
          * @static
          */
 
-    public static _enum_for_midCallReportType = _enum_for_MidCallControlInfo_Item_midCallReportType;
+    public static _enum_for_midCallReportType: typeof _enum_for_MidCallControlInfo_Item_midCallReportType = _enum_for_MidCallControlInfo_Item_midCallReportType;
 }
 
 /**

@@ -1,8 +1,8 @@
 /* eslint-disable */
 import {
-    OPTIONAL,
-    BOOLEAN,
-    ASN1Element as _Element,
+    type OPTIONAL,
+    type BOOLEAN,
+    type ASN1Element as _Element,
     ASN1TagClass as _TagClass,
     ASN1Construction as _Construction,
     ASN1UniversalType as _UniversalType,
@@ -13,12 +13,12 @@ import {
 } from '@wildboar/asn1';
 import * as $ from '@wildboar/asn1/functional';
 import {
-    EDIApplicationSecurityElement,
+    type EDIApplicationSecurityElement,
     _decode_EDIApplicationSecurityElement,
     _encode_EDIApplicationSecurityElement,
 } from '../EDIMSInformationObjects/EDIApplicationSecurityElement.ta.mjs';
 import {
-    EDIApplicationSecurityExtensions,
+    type EDIApplicationSecurityExtensions,
     _decode_EDIApplicationSecurityExtensions,
     _encode_EDIApplicationSecurityExtensions,
 } from '../EDIMSInformationObjects/EDIApplicationSecurityExtensions.ta.mjs';
@@ -42,26 +42,34 @@ import {
  *
  */
 export class EDIApplicationSecurityElementsField {
+    /**
+     * @summary `edi_application_security_element`.
+     * @public
+     * @readonly
+     */
+    public readonly edi_application_security_element?: OPTIONAL<EDIApplicationSecurityElement>;
+    /**
+     * @summary `edi_encrypted_primary_bodypart`.
+     * @public
+     * @readonly
+     */
+    public readonly edi_encrypted_primary_bodypart?: OPTIONAL<BOOLEAN>;
+    /**
+     * @summary `edi_application_security_extensions`.
+     * @public
+     * @readonly
+     */
+    public readonly edi_application_security_extensions?: OPTIONAL<EDIApplicationSecurityExtensions>;
+
     constructor(
-        /**
-         * @summary `edi_application_security_element`.
-         * @public
-         * @readonly
-         */
-        readonly edi_application_security_element?: OPTIONAL<EDIApplicationSecurityElement>,
-        /**
-         * @summary `edi_encrypted_primary_bodypart`.
-         * @public
-         * @readonly
-         */
-        readonly edi_encrypted_primary_bodypart?: OPTIONAL<BOOLEAN>,
-        /**
-         * @summary `edi_application_security_extensions`.
-         * @public
-         * @readonly
-         */
-        readonly edi_application_security_extensions?: OPTIONAL<EDIApplicationSecurityExtensions>
-    ) {}
+        edi_application_security_element?: OPTIONAL<EDIApplicationSecurityElement>,
+        edi_encrypted_primary_bodypart?: OPTIONAL<BOOLEAN>,
+        edi_application_security_extensions?: OPTIONAL<EDIApplicationSecurityExtensions>
+    ) {
+        this.edi_application_security_element = edi_application_security_element;
+        this.edi_encrypted_primary_bodypart = edi_encrypted_primary_bodypart;
+        this.edi_application_security_extensions = edi_application_security_extensions;
+    }
 
     /**
      * @summary Restructures an object into a EDIApplicationSecurityElementsField

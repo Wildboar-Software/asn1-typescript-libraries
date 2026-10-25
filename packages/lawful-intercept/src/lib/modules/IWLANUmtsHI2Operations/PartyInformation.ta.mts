@@ -1,11 +1,11 @@
 /* eslint-disable */
 import {
-    OPTIONAL,
-    ASN1Element as _Element,
+    type OPTIONAL,
+    type ASN1Element as _Element,
     ASN1TagClass as _TagClass
 } from "@wildboar/asn1";
 import * as $ from "@wildboar/asn1/functional";
-import { PartyInformation_party_Qualifier, _decode_PartyInformation_party_Qualifier, _encode_PartyInformation_party_Qualifier, _enum_for_PartyInformation_party_Qualifier } from "../IWLANUmtsHI2Operations/PartyInformation-party-Qualifier.ta.mjs";
+import { type PartyInformation_party_Qualifier, _decode_PartyInformation_party_Qualifier, _encode_PartyInformation_party_Qualifier, _enum_for_PartyInformation_party_Qualifier } from "../IWLANUmtsHI2Operations/PartyInformation-party-Qualifier.ta.mjs";
 // export { PartyInformation_party_Qualifier, _enum_for_PartyInformation_party_Qualifier, PartyInformation_party_Qualifier_iWLAN_Target /* IMPORTED_LONG_ENUMERATION_ITEM */, iWLAN_Target /* IMPORTED_SHORT_ENUMERATION_ITEM */, _decode_PartyInformation_party_Qualifier, _encode_PartyInformation_party_Qualifier } from "../IWLANUmtsHI2Operations/PartyInformation-party-Qualifier.ta.mjs";
 import { PartyInformation_partyIdentity, _decode_PartyInformation_partyIdentity, _encode_PartyInformation_partyIdentity } from "../IWLANUmtsHI2Operations/PartyInformation-partyIdentity.ta.mjs";
 // export { PartyInformation_partyIdentity, _decode_PartyInformation_partyIdentity, _encode_PartyInformation_partyIdentity } from "../IWLANUmtsHI2Operations/PartyInformation-partyIdentity.ta.mjs";
@@ -140,7 +140,7 @@ class PartyInformation {
          * @static
          */
 
-    public static _enum_for_party_Qualifier = _enum_for_PartyInformation_party_Qualifier;
+    public static _enum_for_party_Qualifier: typeof _enum_for_PartyInformation_party_Qualifier = _enum_for_PartyInformation_party_Qualifier;
 }
 
 /**

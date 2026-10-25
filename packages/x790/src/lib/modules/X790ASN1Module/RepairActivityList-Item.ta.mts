@@ -1,11 +1,11 @@
 /* eslint-disable */
 import {
-    OPTIONAL,
-    SEQUENCE,
-    SET,
-    GraphicString,
-    GeneralizedTime,
-    ASN1Element as _Element,
+    type OPTIONAL,
+    type SEQUENCE,
+    type SET,
+    type GraphicString,
+    type GeneralizedTime,
+    type ASN1Element as _Element,
     ASN1TagClass as _TagClass,
 } from "@wildboar/asn1";
 import * as $ from "@wildboar/asn1/functional";
@@ -16,7 +16,7 @@ import {
 } from "../X790ASN1Module/PersonReach.ta.mjs";
 
 import {
-    ActivityCode,
+    type ActivityCode,
     _decode_ActivityCode,
     _encode_ActivityCode,
 } from "../X790ASN1Module/ActivityCode.ta.mjs";
@@ -43,38 +43,50 @@ import {
  */
 export
 class RepairActivityList_Item {
+    /**
+     * @summary `entryTime`.
+     * @public
+     * @readonly
+     */
+    public readonly entryTime: GeneralizedTime;
+    /**
+     * @summary `activityInfo`.
+     * @public
+     * @readonly
+     */
+    public readonly activityInfo: GraphicString;
+    /**
+     * @summary `activityPerson`.
+     * @public
+     * @readonly
+     */
+    public readonly activityPerson?: OPTIONAL<PersonReach>;
+    /**
+     * @summary `activityCode`.
+     * @public
+     * @readonly
+     */
+    public readonly activityCode?: OPTIONAL<ActivityCode>;
+    /**
+     * @summary Extensions that are not recognized.
+     * @public
+     * @readonly
+     */
+    public readonly _unrecognizedExtensionsList: _Element[];
+
     constructor (
-        /**
-         * @summary `entryTime`.
-         * @public
-         * @readonly
-         */
-        readonly entryTime: GeneralizedTime,
-        /**
-         * @summary `activityInfo`.
-         * @public
-         * @readonly
-         */
-        readonly activityInfo: GraphicString,
-        /**
-         * @summary `activityPerson`.
-         * @public
-         * @readonly
-         */
-        readonly activityPerson?: OPTIONAL<PersonReach>,
-        /**
-         * @summary `activityCode`.
-         * @public
-         * @readonly
-         */
-        readonly activityCode?: OPTIONAL<ActivityCode>,
-        /**
-         * @summary Extensions that are not recognized.
-         * @public
-         * @readonly
-         */
-        readonly _unrecognizedExtensionsList: _Element[] = []
-    ) {}
+        entryTime: GeneralizedTime,
+        activityInfo: GraphicString,
+        activityPerson?: OPTIONAL<PersonReach>,
+        activityCode?: OPTIONAL<ActivityCode>,
+        _unrecognizedExtensionsList: _Element[] = []
+    ) {
+        this.entryTime = entryTime;
+        this.activityInfo = activityInfo;
+        this.activityPerson = activityPerson;
+        this.activityCode = activityCode;
+        this._unrecognizedExtensionsList = _unrecognizedExtensionsList;
+    }
 
     /**
      * @summary Restructures an object into a RepairActivityList_Item

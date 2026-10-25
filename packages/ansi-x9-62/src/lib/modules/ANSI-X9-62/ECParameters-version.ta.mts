@@ -1,5 +1,5 @@
 /* eslint-disable */
-import { ASN1Element as _Element, INTEGER } from "@wildboar/asn1";
+import { ASN1Element as _Element, type INTEGER } from "@wildboar/asn1";
 import * as $ from "@wildboar/asn1/functional";
 
 /**
@@ -27,7 +27,7 @@ export type ECParameters_version = INTEGER;
  * @constant
  * @type {number}
  */
-export const ECParameters_version_ecpVerl: ECParameters_version = 1; /* LONG_NAMED_INTEGER_VALUE */
+export const ECParameters_version_ecpVerl: 1 = 1 satisfies ECParameters_version; /* LONG_NAMED_INTEGER_VALUE */
 
 /**
  * @summary ECParameters_version_ecpVerl
@@ -38,13 +38,13 @@ export const ECParameters_version_ecpVerl: ECParameters_version = 1; /* LONG_NAM
  * @constant
  * @type {number}
  */
-export const ecpVerl: ECParameters_version = ECParameters_version_ecpVerl; /* SHORT_NAMED_INTEGER_VALUE */
+export const ecpVerl: 1 = ECParameters_version_ecpVerl; /* SHORT_NAMED_INTEGER_VALUE */
 
 
-export const _decode_ECParameters_version = $._decodeInteger;
+export const _decode_ECParameters_version: $.ASN1Decoder<INTEGER> = $._decodeInteger;
 
 
-export const _encode_ECParameters_version = $._encodeInteger;
+export const _encode_ECParameters_version: $.ASN1Encoder<INTEGER> = $._encodeInteger;
 
 
 /* eslint-enable */

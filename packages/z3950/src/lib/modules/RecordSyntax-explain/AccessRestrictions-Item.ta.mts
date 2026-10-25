@@ -1,13 +1,13 @@
 /* eslint-disable */
 import {
-    OBJECT_IDENTIFIER,
-    OPTIONAL,
-    ASN1Element as _Element,
+    type OBJECT_IDENTIFIER,
+    type OPTIONAL,
+    type ASN1Element as _Element,
     ASN1TagClass as _TagClass
 } from "@wildboar/asn1";
 import * as $ from "@wildboar/asn1/functional";
-import { AccessRestrictions_Item_accessType, _decode_AccessRestrictions_Item_accessType, _encode_AccessRestrictions_Item_accessType } from "../RecordSyntax-explain/AccessRestrictions-Item-accessType.ta.mjs";
-import { HumanString, _decode_HumanString, _encode_HumanString } from "../RecordSyntax-explain/HumanString.ta.mjs";
+import { type AccessRestrictions_Item_accessType, _decode_AccessRestrictions_Item_accessType, _encode_AccessRestrictions_Item_accessType } from "../RecordSyntax-explain/AccessRestrictions-Item-accessType.ta.mjs";
+import { type HumanString, _decode_HumanString, _encode_HumanString } from "../RecordSyntax-explain/HumanString.ta.mjs";
 
 
 /**

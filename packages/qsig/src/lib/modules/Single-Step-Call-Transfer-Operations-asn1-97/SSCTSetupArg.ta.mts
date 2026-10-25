@@ -1,13 +1,13 @@
 /* eslint-disable */
 import {
-    OPTIONAL,
-    ASN1Element as _Element,
+    type OPTIONAL,
+    type ASN1Element as _Element,
     ASN1TagClass as _TagClass
 } from "@wildboar/asn1";
 import * as $ from "@wildboar/asn1/functional";
-import { PresentedAddressScreened, _decode_PresentedAddressScreened, _encode_PresentedAddressScreened } from "../Addressing-Data-Elements-asn1-97/PresentedAddressScreened.ta.mjs";
-import { Name, _decode_Name, _encode_Name } from "../Name-Operations-asn1-97/Name.ta.mjs";
-import { SSCTSetupArg_argumentExtension, _decode_SSCTSetupArg_argumentExtension, _encode_SSCTSetupArg_argumentExtension } from "../Single-Step-Call-Transfer-Operations-asn1-97/SSCTSetupArg-argumentExtension.ta.mjs";
+import { type PresentedAddressScreened, _decode_PresentedAddressScreened, _encode_PresentedAddressScreened } from "../Addressing-Data-Elements-asn1-97/PresentedAddressScreened.ta.mjs";
+import { type Name, _decode_Name, _encode_Name } from "../Name-Operations-asn1-97/Name.ta.mjs";
+import { type SSCTSetupArg_argumentExtension, _decode_SSCTSetupArg_argumentExtension, _encode_SSCTSetupArg_argumentExtension } from "../Single-Step-Call-Transfer-Operations-asn1-97/SSCTSetupArg-argumentExtension.ta.mjs";
 
 /**
  * @summary SSCTSetupArg

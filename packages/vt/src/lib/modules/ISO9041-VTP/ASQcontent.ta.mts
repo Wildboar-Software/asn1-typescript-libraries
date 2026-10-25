@@ -1,7 +1,7 @@
 /* eslint-disable */
 import {
-    OPTIONAL,
-    ASN1Element as _Element,
+    type OPTIONAL,
+    type ASN1Element as _Element,
     ASN1TagClass as _TagClass,
     ASN1Construction as _Construction,
     ASN1UniversalType as _UniversalType,
@@ -11,12 +11,12 @@ import {
     ASN1ConstructionError as _ConstructionError,
 } from "@wildboar/asn1";
 import * as $ from "@wildboar/asn1/functional";
-import { ASQcontent_class, _decode_ASQcontent_class, _encode_ASQcontent_class } from "../ISO9041-VTP/ASQcontent-class.ta.mjs";
+import { type ASQcontent_class, _decode_ASQcontent_class, _encode_ASQcontent_class } from "../ISO9041-VTP/ASQcontent-class.ta.mjs";
 import { _decode_ImplementationIdent, _encode_ImplementationIdent, ImplementationIdent } from "../G/ImplementationIdent.ta.mjs";
 import { _decode_FunctionalUnits, _encode_FunctionalUnits, type FunctionalUnits } from "../G/FunctionalUnits.ta.mjs";
 import { _decode_Profile, _encode_Profile, Profile } from "../G/Profile.ta.mjs";
 import { _decode_ProtocolVersion, _encode_ProtocolVersion, type ProtocolVersion } from "../G/ProtocolVersion.ta.mjs";
-import { ASQcontent_either, _decode_ASQcontent_either, _encode_ASQcontent_either } from "../ISO9041-VTP/ASQcontent-either.ta.mjs";
+import { type ASQcontent_either, _decode_ASQcontent_either, _encode_ASQcontent_either } from "../ISO9041-VTP/ASQcontent-either.ta.mjs";
 
 
 /**
@@ -44,69 +44,83 @@ import { ASQcontent_either, _decode_ASQcontent_either, _encode_ASQcontent_either
  */
 export
 class ASQcontent {
+    /**
+     * @summary `class_`.
+     * @description
+     * VT-class. Only `basic` (1) invokes ISO/IEC 9040. Other
+     * values are outside ISO/IEC 9041-1:1997. ISO/IEC
+     * 9041-1:1997 §6.2.
+     * @public
+     * @readonly
+     */
+    public readonly class_: ASQcontent_class;
+    /**
+     * @summary `implementation`.
+     * @description
+     * Optional implementor id/name/version for maintenance.
+     * ISO/IEC 9041-1:1997 §6.2.
+     * @public
+     * @readonly
+     */
+    public readonly implementation?: OPTIONAL<ImplementationIdent>;
+    /**
+     * @summary `functional_units`.
+     * @description
+     * Proposed FUs (bit=1 offered). MIN requires Switch
+     * Profile; Exceptions requires Break; Context Retention
+     * requires Switch Profile; Ripple requires Structured COs.
+     * ISO/IEC 9040:1997 §10. ISO/IEC 9041-1:1997 §6.2.
+     * @public
+     * @readonly
+     */
+    public readonly functional_units?: OPTIONAL<FunctionalUnits>;
+    /**
+     * @summary `profile`.
+     * @description
+     * VTE-profile name plus argument offers. Omitted means
+     * the default profile for the selected mode. ISO/IEC
+     * 9040:1997 annex A. ISO/IEC 9041-1:1997 §6.2.
+     * @public
+     * @readonly
+     */
+    public readonly profile?: OPTIONAL<Profile>;
+    /**
+     * @summary `protocol_version`.
+     * @description
+     * Bit string; bit 0 = version 1. Initiator may set
+     * multiple bits; last bit sent must be 1. Receiver
+     * ignores trailing bits above the latest version it
+     * supports. ISO/IEC 9041-1:1997 §6.2, §12.1.
+     * @public
+     * @readonly
+     */
+    public readonly protocol_version?: OPTIONAL<ProtocolVersion>;
+    /**
+     * @summary `either`.
+     * @description
+     * Present only if VT-mode is `"either-A"` or `"either-S"`;
+     * chooses A-mode (0) or S-mode (1) when mode-switching
+     * was offered. ISO/IEC 9041-1:1997 §6.2, §12.1.
+     * @public
+     * @readonly
+     */
+    public readonly either?: OPTIONAL<ASQcontent_either>;
+
     constructor (
-        /**
-         * @summary `class_`.
-         * @description
-         * VT-class. Only `basic` (1) invokes ISO/IEC 9040. Other
-         * values are outside ISO/IEC 9041-1:1997. ISO/IEC
-         * 9041-1:1997 §6.2.
-         * @public
-         * @readonly
-         */
-        readonly class_: ASQcontent_class,
-        /**
-         * @summary `implementation`.
-         * @description
-         * Optional implementor id/name/version for maintenance.
-         * ISO/IEC 9041-1:1997 §6.2.
-         * @public
-         * @readonly
-         */
-        readonly implementation?: OPTIONAL<ImplementationIdent>,
-        /**
-         * @summary `functional_units`.
-         * @description
-         * Proposed FUs (bit=1 offered). MIN requires Switch
-         * Profile; Exceptions requires Break; Context Retention
-         * requires Switch Profile; Ripple requires Structured COs.
-         * ISO/IEC 9040:1997 §10. ISO/IEC 9041-1:1997 §6.2.
-         * @public
-         * @readonly
-         */
-        readonly functional_units?: OPTIONAL<FunctionalUnits>,
-        /**
-         * @summary `profile`.
-         * @description
-         * VTE-profile name plus argument offers. Omitted means
-         * the default profile for the selected mode. ISO/IEC
-         * 9040:1997 annex A. ISO/IEC 9041-1:1997 §6.2.
-         * @public
-         * @readonly
-         */
-        readonly profile?: OPTIONAL<Profile>,
-        /**
-         * @summary `protocol_version`.
-         * @description
-         * Bit string; bit 0 = version 1. Initiator may set
-         * multiple bits; last bit sent must be 1. Receiver
-         * ignores trailing bits above the latest version it
-         * supports. ISO/IEC 9041-1:1997 §6.2, §12.1.
-         * @public
-         * @readonly
-         */
-        readonly protocol_version?: OPTIONAL<ProtocolVersion>,
-        /**
-         * @summary `either`.
-         * @description
-         * Present only if VT-mode is `"either-A"` or `"either-S"`;
-         * chooses A-mode (0) or S-mode (1) when mode-switching
-         * was offered. ISO/IEC 9041-1:1997 §6.2, §12.1.
-         * @public
-         * @readonly
-         */
-        readonly either?: OPTIONAL<ASQcontent_either>
-    ) {}
+        class_: ASQcontent_class,
+        implementation?: OPTIONAL<ImplementationIdent>,
+        functional_units?: OPTIONAL<FunctionalUnits>,
+        profile?: OPTIONAL<Profile>,
+        protocol_version?: OPTIONAL<ProtocolVersion>,
+        either?: OPTIONAL<ASQcontent_either>
+    ) {
+        this.class_ = class_;
+        this.implementation = implementation;
+        this.functional_units = functional_units;
+        this.profile = profile;
+        this.protocol_version = protocol_version;
+        this.either = either;
+    }
 
     /**
      * @summary Restructures an object into a ASQcontent

@@ -1,7 +1,7 @@
 /* eslint-disable */
 import {
-    OPTIONAL,
-    ASN1Element as _Element,
+    type OPTIONAL,
+    type ASN1Element as _Element,
     ASN1TagClass as _TagClass,
     ASN1Construction as _Construction,
     ASN1UniversalType as _UniversalType,
@@ -12,12 +12,12 @@ import {
 } from '@wildboar/asn1';
 import * as $ from '@wildboar/asn1/functional';
 import {
-    MessageDeliveryTime,
+    type MessageDeliveryTime,
     _decode_MessageDeliveryTime,
     _encode_MessageDeliveryTime,
 } from '../MTSAbstractService/MessageDeliveryTime.ta.mjs';
 import {
-    TypeOfMTSUser,
+    type TypeOfMTSUser,
     public_ /* IMPORTED_SHORT_NAMED_INTEGER */,
     _decode_TypeOfMTSUser,
     _encode_TypeOfMTSUser,
@@ -43,20 +43,26 @@ import {
  *
  */
 export class DeliveryReport {
+    /**
+     * @summary `message_delivery_time`.
+     * @public
+     * @readonly
+     */
+    public readonly message_delivery_time: MessageDeliveryTime;
+    /**
+     * @summary `type_of_MTS_user`.
+     * @public
+     * @readonly
+     */
+    public readonly type_of_MTS_user?: OPTIONAL<TypeOfMTSUser>;
+
     constructor(
-        /**
-         * @summary `message_delivery_time`.
-         * @public
-         * @readonly
-         */
-        readonly message_delivery_time: MessageDeliveryTime,
-        /**
-         * @summary `type_of_MTS_user`.
-         * @public
-         * @readonly
-         */
-        readonly type_of_MTS_user?: OPTIONAL<TypeOfMTSUser>
-    ) {}
+        message_delivery_time: MessageDeliveryTime,
+        type_of_MTS_user?: OPTIONAL<TypeOfMTSUser>
+    ) {
+        this.message_delivery_time = message_delivery_time;
+        this.type_of_MTS_user = type_of_MTS_user;
+    }
 
     /**
      * @summary Restructures an object into a DeliveryReport

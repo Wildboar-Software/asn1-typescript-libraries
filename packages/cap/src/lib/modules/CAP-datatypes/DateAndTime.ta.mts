@@ -1,6 +1,6 @@
 import {
-    OCTET_STRING,
-    ASN1Element as _Element,
+    type OCTET_STRING,
+    type ASN1Element as _Element,
     ASN1SizeError,
     ASN1TagClass as _TagClass,
 } from "@wildboar/asn1";
@@ -31,4 +31,4 @@ export const _decode_DateAndTime = (el: _Element): DateAndTime => {
     }
     return value;
 };
-export const _encode_DateAndTime = $._encodeOctetString;
+export const _encode_DateAndTime: $.ASN1Encoder<OCTET_STRING> = $._encodeOctetString;

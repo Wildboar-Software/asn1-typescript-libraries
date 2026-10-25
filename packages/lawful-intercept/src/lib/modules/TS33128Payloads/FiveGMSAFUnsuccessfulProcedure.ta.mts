@@ -1,11 +1,11 @@
 /* eslint-disable */
 import {
     ASN1ConstructionError as _ConstructionError,
-    ASN1Element as _Element,
+    type ASN1Element as _Element,
     ASN1TagClass as _TagClass
 } from "@wildboar/asn1";
 import * as $ from "@wildboar/asn1/functional";
-import { GPSI, _decode_GPSI, _encode_GPSI } from "../TS33128Payloads/GPSI.ta.mjs";
+import { type GPSI, _decode_GPSI, _encode_GPSI } from "../TS33128Payloads/GPSI.ta.mjs";
 // export { GPSI, _decode_GPSI, _encode_GPSI } from "../TS33128Payloads/GPSI.ta.mjs";
 import { FiveGMSAFUnsuccessfulOperation, _decode_FiveGMSAFUnsuccessfulOperation, _encode_FiveGMSAFUnsuccessfulOperation, _enum_for_FiveGMSAFUnsuccessfulOperation } from "../TS33128Payloads/FiveGMSAFUnsuccessfulOperation.ta.mjs";
 // export { FiveGMSAFUnsuccessfulOperation, _enum_for_FiveGMSAFUnsuccessfulOperation, FiveGMSAFUnsuccessfulOperation_retrieveServiceAccessInformation /* IMPORTED_LONG_ENUMERATION_ITEM */, retrieveServiceAccessInformation /* IMPORTED_SHORT_ENUMERATION_ITEM */, FiveGMSAFUnsuccessfulOperation_submitConsumptionReport /* IMPORTED_LONG_ENUMERATION_ITEM */, submitConsumptionReport /* IMPORTED_SHORT_ENUMERATION_ITEM */, FiveGMSAFUnsuccessfulOperation_submitMetricsReport /* IMPORTED_LONG_ENUMERATION_ITEM */, submitMetricsReport /* IMPORTED_SHORT_ENUMERATION_ITEM */, FiveGMSAFUnsuccessfulOperation_createDynamicPolicy /* IMPORTED_LONG_ENUMERATION_ITEM */, createDynamicPolicy /* IMPORTED_SHORT_ENUMERATION_ITEM */, FiveGMSAFUnsuccessfulOperation_retrieveDynamicPolicy /* IMPORTED_LONG_ENUMERATION_ITEM */, retrieveDynamicPolicy /* IMPORTED_SHORT_ENUMERATION_ITEM */, FiveGMSAFUnsuccessfulOperation_updateDynamicPolicy /* IMPORTED_LONG_ENUMERATION_ITEM */, updateDynamicPolicy /* IMPORTED_SHORT_ENUMERATION_ITEM */, FiveGMSAFUnsuccessfulOperation_patchDynamicPolicy /* IMPORTED_LONG_ENUMERATION_ITEM */, patchDynamicPolicy /* IMPORTED_SHORT_ENUMERATION_ITEM */, FiveGMSAFUnsuccessfulOperation_destroyDynamicPolicy /* IMPORTED_LONG_ENUMERATION_ITEM */, destroyDynamicPolicy /* IMPORTED_SHORT_ENUMERATION_ITEM */, FiveGMSAFUnsuccessfulOperation_createNetworkAssistanceSession /* IMPORTED_LONG_ENUMERATION_ITEM */, createNetworkAssistanceSession /* IMPORTED_SHORT_ENUMERATION_ITEM */, FiveGMSAFUnsuccessfulOperation_retrieveNetworkAssistanceSession /* IMPORTED_LONG_ENUMERATION_ITEM */, retrieveNetworkAssistanceSession /* IMPORTED_SHORT_ENUMERATION_ITEM */, FiveGMSAFUnsuccessfulOperation_updateNetworkAssistanceSession /* IMPORTED_LONG_ENUMERATION_ITEM */, updateNetworkAssistanceSession /* IMPORTED_SHORT_ENUMERATION_ITEM */, FiveGMSAFUnsuccessfulOperation_patchNetworkAssistanceSession /* IMPORTED_LONG_ENUMERATION_ITEM */, patchNetworkAssistanceSession /* IMPORTED_SHORT_ENUMERATION_ITEM */, FiveGMSAFUnsuccessfulOperation_destroyNetworkAssistanceSession /* IMPORTED_LONG_ENUMERATION_ITEM */, destroyNetworkAssistanceSession /* IMPORTED_SHORT_ENUMERATION_ITEM */, FiveGMSAFUnsuccessfulOperation_requestBitRateRecommendation /* IMPORTED_LONG_ENUMERATION_ITEM */, requestBitRateRecommendation /* IMPORTED_SHORT_ENUMERATION_ITEM */, FiveGMSAFUnsuccessfulOperation_requestDeliveryBoost /* IMPORTED_LONG_ENUMERATION_ITEM */, requestDeliveryBoost /* IMPORTED_SHORT_ENUMERATION_ITEM */, _decode_FiveGMSAFUnsuccessfulOperation, _encode_FiveGMSAFUnsuccessfulOperation } from "../TS33128Payloads/FiveGMSAFUnsuccessfulOperation.ta.mjs";
@@ -95,13 +95,13 @@ class FiveGMSAFUnsuccessfulProcedure {
          * @static
          */
 
-    public static _enum_for_fiveGMSAFUnsuccessfulOperation = _enum_for_FiveGMSAFUnsuccessfulOperation;        /**
+    public static _enum_for_fiveGMSAFUnsuccessfulOperation: typeof _enum_for_FiveGMSAFUnsuccessfulOperation = _enum_for_FiveGMSAFUnsuccessfulOperation;        /**
          * @summary The enum used as the type of the component `fiveGMSAFErrorCode`
          * @public
          * @static
          */
 
-    public static _enum_for_fiveGMSAFErrorCode = _enum_for_FiveGMSAFErrorCode;
+    public static _enum_for_fiveGMSAFErrorCode: typeof _enum_for_FiveGMSAFErrorCode = _enum_for_FiveGMSAFErrorCode;
 }
 
 /**

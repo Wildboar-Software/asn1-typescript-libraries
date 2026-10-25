@@ -1,6 +1,6 @@
 /* eslint-disable */
 import {
-    ASN1Element as _Element,
+    type ASN1Element as _Element,
     ASN1TagClass as _TagClass,
     ASN1Construction as _Construction,
     ASN1UniversalType as _UniversalType,
@@ -11,7 +11,7 @@ import {
 } from "@wildboar/asn1";
 import * as $ from "@wildboar/asn1/functional";
 import { RequestedInformationType, _enum_for_RequestedInformationType, _decode_RequestedInformationType, _encode_RequestedInformationType } from "../IN-CS2-datatypes/RequestedInformationType.ta.mjs";
-import { RequestedInformationValue, _decode_RequestedInformationValue, _encode_RequestedInformationValue } from "../IN-CS2-datatypes/RequestedInformationValue.ta.mjs";
+import { type RequestedInformationValue, _decode_RequestedInformationValue, _encode_RequestedInformationValue } from "../IN-CS2-datatypes/RequestedInformationValue.ta.mjs";
 
 
 /**
@@ -31,20 +31,26 @@ import { RequestedInformationValue, _decode_RequestedInformationValue, _encode_R
  */
 export
 class RequestedInformation {
+    /**
+     * @summary `requestedInformationType`.
+     * @public
+     * @readonly
+     */
+    public readonly requestedInformationType: RequestedInformationType;
+    /**
+     * @summary `requestedInformationValue`.
+     * @public
+     * @readonly
+     */
+    public readonly requestedInformationValue: RequestedInformationValue;
+
     constructor (
-        /**
-         * @summary `requestedInformationType`.
-         * @public
-         * @readonly
-         */
-        readonly requestedInformationType: RequestedInformationType,
-        /**
-         * @summary `requestedInformationValue`.
-         * @public
-         * @readonly
-         */
-        readonly requestedInformationValue: RequestedInformationValue
-    ) {}
+        requestedInformationType: RequestedInformationType,
+        requestedInformationValue: RequestedInformationValue
+    ) {
+        this.requestedInformationType = requestedInformationType;
+        this.requestedInformationValue = requestedInformationValue;
+    }
 
     /**
      * @summary Restructures an object into a RequestedInformation
@@ -68,7 +74,7 @@ class RequestedInformation {
          * @static
          */
 
-    public static _enum_for_requestedInformationType = _enum_for_RequestedInformationType;
+    public static _enum_for_requestedInformationType: typeof _enum_for_RequestedInformationType = _enum_for_RequestedInformationType;
 }
 
 /**

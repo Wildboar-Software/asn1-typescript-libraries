@@ -1,5 +1,5 @@
 /* eslint-disable */
-import { ASN1Element as _Element, ENUMERATED } from "@wildboar/asn1";
+import { ASN1Element as _Element, type ENUMERATED } from "@wildboar/asn1";
 import * as $ from "@wildboar/asn1/functional";
 
 export enum _enum_for_WrpError {
@@ -101,7 +101,7 @@ export type WrpError = _enum_for_WrpError | ENUMERATED;
  * @constant
  * @type {number}
  */
-export const WrpError_protocol_error: WrpError = 0; /* LONG_NAMED_ENUMERATED_VALUE */
+export const WrpError_protocol_error: _enum_for_WrpError.protocol_error = _enum_for_WrpError.protocol_error; /* LONG_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary protocol_error
@@ -109,7 +109,7 @@ export const WrpError_protocol_error: WrpError = 0; /* LONG_NAMED_ENUMERATED_VAL
  * @constant
  * @type {number}
  */
-export const protocol_error: WrpError = WrpError_protocol_error; /* SHORT_NAMED_ENUMERATED_VALUE */
+export const protocol_error: _enum_for_WrpError.protocol_error = WrpError_protocol_error; /* SHORT_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary WrpError_invalid_signatureAlgorithm
@@ -117,7 +117,7 @@ export const protocol_error: WrpError = WrpError_protocol_error; /* SHORT_NAMED_
  * @constant
  * @type {number}
  */
-export const WrpError_invalid_signatureAlgorithm: WrpError = 1; /* LONG_NAMED_ENUMERATED_VALUE */
+export const WrpError_invalid_signatureAlgorithm: _enum_for_WrpError.invalid_signatureAlgorithm = _enum_for_WrpError.invalid_signatureAlgorithm; /* LONG_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary invalid_signatureAlgorithm
@@ -125,7 +125,7 @@ export const WrpError_invalid_signatureAlgorithm: WrpError = 1; /* LONG_NAMED_EN
  * @constant
  * @type {number}
  */
-export const invalid_signatureAlgorithm: WrpError = WrpError_invalid_signatureAlgorithm; /* SHORT_NAMED_ENUMERATED_VALUE */
+export const invalid_signatureAlgorithm: _enum_for_WrpError.invalid_signatureAlgorithm = WrpError_invalid_signatureAlgorithm; /* SHORT_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary WrpError_unexpected_version
@@ -133,7 +133,7 @@ export const invalid_signatureAlgorithm: WrpError = WrpError_invalid_signatureAl
  * @constant
  * @type {number}
  */
-export const WrpError_unexpected_version: WrpError = 2; /* LONG_NAMED_ENUMERATED_VALUE */
+export const WrpError_unexpected_version: _enum_for_WrpError.unexpected_version = _enum_for_WrpError.unexpected_version; /* LONG_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary unexpected_version
@@ -141,7 +141,7 @@ export const WrpError_unexpected_version: WrpError = 2; /* LONG_NAMED_ENUMERATED
  * @constant
  * @type {number}
  */
-export const unexpected_version: WrpError = WrpError_unexpected_version; /* SHORT_NAMED_ENUMERATED_VALUE */
+export const unexpected_version: _enum_for_WrpError.unexpected_version = WrpError_unexpected_version; /* SHORT_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary WrpError_protected_protocol_not_supported
@@ -149,7 +149,7 @@ export const unexpected_version: WrpError = WrpError_unexpected_version; /* SHOR
  * @constant
  * @type {number}
  */
-export const WrpError_protected_protocol_not_supported: WrpError = 3; /* LONG_NAMED_ENUMERATED_VALUE */
+export const WrpError_protected_protocol_not_supported: _enum_for_WrpError.protected_protocol_not_supported = _enum_for_WrpError.protected_protocol_not_supported; /* LONG_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary protected_protocol_not_supported
@@ -157,7 +157,7 @@ export const WrpError_protected_protocol_not_supported: WrpError = 3; /* LONG_NA
  * @constant
  * @type {number}
  */
-export const protected_protocol_not_supported: WrpError = WrpError_protected_protocol_not_supported; /* SHORT_NAMED_ENUMERATED_VALUE */
+export const protected_protocol_not_supported: _enum_for_WrpError.protected_protocol_not_supported = WrpError_protected_protocol_not_supported; /* SHORT_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary WrpError_duplicate_assoID
@@ -165,7 +165,7 @@ export const protected_protocol_not_supported: WrpError = WrpError_protected_pro
  * @constant
  * @type {number}
  */
-export const WrpError_duplicate_assoID: WrpError = 4; /* LONG_NAMED_ENUMERATED_VALUE */
+export const WrpError_duplicate_assoID: _enum_for_WrpError.duplicate_assoID = _enum_for_WrpError.duplicate_assoID; /* LONG_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary duplicate_assoID
@@ -173,7 +173,7 @@ export const WrpError_duplicate_assoID: WrpError = 4; /* LONG_NAMED_ENUMERATED_V
  * @constant
  * @type {number}
  */
-export const duplicate_assoID: WrpError = WrpError_duplicate_assoID; /* SHORT_NAMED_ENUMERATED_VALUE */
+export const duplicate_assoID: _enum_for_WrpError.duplicate_assoID = WrpError_duplicate_assoID; /* SHORT_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary WrpError_invalid_time_value
@@ -181,7 +181,7 @@ export const duplicate_assoID: WrpError = WrpError_duplicate_assoID; /* SHORT_NA
  * @constant
  * @type {number}
  */
-export const WrpError_invalid_time_value: WrpError = 5; /* LONG_NAMED_ENUMERATED_VALUE */
+export const WrpError_invalid_time_value: _enum_for_WrpError.invalid_time_value = _enum_for_WrpError.invalid_time_value; /* LONG_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary invalid_time_value
@@ -189,7 +189,7 @@ export const WrpError_invalid_time_value: WrpError = 5; /* LONG_NAMED_ENUMERATED
  * @constant
  * @type {number}
  */
-export const invalid_time_value: WrpError = WrpError_invalid_time_value; /* SHORT_NAMED_ENUMERATED_VALUE */
+export const invalid_time_value: _enum_for_WrpError.invalid_time_value = WrpError_invalid_time_value; /* SHORT_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary WrpError_key_estab_algorithm_not_supported
@@ -197,7 +197,7 @@ export const invalid_time_value: WrpError = WrpError_invalid_time_value; /* SHOR
  * @constant
  * @type {number}
  */
-export const WrpError_key_estab_algorithm_not_supported: WrpError = 6; /* LONG_NAMED_ENUMERATED_VALUE */
+export const WrpError_key_estab_algorithm_not_supported: _enum_for_WrpError.key_estab_algorithm_not_supported = _enum_for_WrpError.key_estab_algorithm_not_supported; /* LONG_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary key_estab_algorithm_not_supported
@@ -205,7 +205,7 @@ export const WrpError_key_estab_algorithm_not_supported: WrpError = 6; /* LONG_N
  * @constant
  * @type {number}
  */
-export const key_estab_algorithm_not_supported: WrpError = WrpError_key_estab_algorithm_not_supported; /* SHORT_NAMED_ENUMERATED_VALUE */
+export const key_estab_algorithm_not_supported: _enum_for_WrpError.key_estab_algorithm_not_supported = WrpError_key_estab_algorithm_not_supported; /* SHORT_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary WrpError_encr_mode_aead_not_supported
@@ -213,7 +213,7 @@ export const key_estab_algorithm_not_supported: WrpError = WrpError_key_estab_al
  * @constant
  * @type {number}
  */
-export const WrpError_encr_mode_aead_not_supported: WrpError = 7; /* LONG_NAMED_ENUMERATED_VALUE */
+export const WrpError_encr_mode_aead_not_supported: _enum_for_WrpError.encr_mode_aead_not_supported = _enum_for_WrpError.encr_mode_aead_not_supported; /* LONG_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary encr_mode_aead_not_supported
@@ -221,7 +221,7 @@ export const WrpError_encr_mode_aead_not_supported: WrpError = 7; /* LONG_NAMED_
  * @constant
  * @type {number}
  */
-export const encr_mode_aead_not_supported: WrpError = WrpError_encr_mode_aead_not_supported; /* SHORT_NAMED_ENUMERATED_VALUE */
+export const encr_mode_aead_not_supported: _enum_for_WrpError.encr_mode_aead_not_supported = WrpError_encr_mode_aead_not_supported; /* SHORT_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary WrpError_encryption_not_supported
@@ -229,7 +229,7 @@ export const encr_mode_aead_not_supported: WrpError = WrpError_encr_mode_aead_no
  * @constant
  * @type {number}
  */
-export const WrpError_encryption_not_supported: WrpError = 8; /* LONG_NAMED_ENUMERATED_VALUE */
+export const WrpError_encryption_not_supported: _enum_for_WrpError.encryption_not_supported = _enum_for_WrpError.encryption_not_supported; /* LONG_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary encryption_not_supported
@@ -237,7 +237,7 @@ export const WrpError_encryption_not_supported: WrpError = 8; /* LONG_NAMED_ENUM
  * @constant
  * @type {number}
  */
-export const encryption_not_supported: WrpError = WrpError_encryption_not_supported; /* SHORT_NAMED_ENUMERATED_VALUE */
+export const encryption_not_supported: _enum_for_WrpError.encryption_not_supported = WrpError_encryption_not_supported; /* SHORT_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary WrpError_encryption_required
@@ -245,7 +245,7 @@ export const encryption_not_supported: WrpError = WrpError_encryption_not_suppor
  * @constant
  * @type {number}
  */
-export const WrpError_encryption_required: WrpError = 9; /* LONG_NAMED_ENUMERATED_VALUE */
+export const WrpError_encryption_required: _enum_for_WrpError.encryption_required = _enum_for_WrpError.encryption_required; /* LONG_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary encryption_required
@@ -253,7 +253,7 @@ export const WrpError_encryption_required: WrpError = 9; /* LONG_NAMED_ENUMERATE
  * @constant
  * @type {number}
  */
-export const encryption_required: WrpError = WrpError_encryption_required; /* SHORT_NAMED_ENUMERATED_VALUE */
+export const encryption_required: _enum_for_WrpError.encryption_required = WrpError_encryption_required; /* SHORT_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary WrpError_aead_algorithms_not_supported
@@ -261,7 +261,7 @@ export const encryption_required: WrpError = WrpError_encryption_required; /* SH
  * @constant
  * @type {number}
  */
-export const WrpError_aead_algorithms_not_supported: WrpError = 10; /* LONG_NAMED_ENUMERATED_VALUE */
+export const WrpError_aead_algorithms_not_supported: _enum_for_WrpError.aead_algorithms_not_supported = _enum_for_WrpError.aead_algorithms_not_supported; /* LONG_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary aead_algorithms_not_supported
@@ -269,7 +269,7 @@ export const WrpError_aead_algorithms_not_supported: WrpError = 10; /* LONG_NAME
  * @constant
  * @type {number}
  */
-export const aead_algorithms_not_supported: WrpError = WrpError_aead_algorithms_not_supported; /* SHORT_NAMED_ENUMERATED_VALUE */
+export const aead_algorithms_not_supported: _enum_for_WrpError.aead_algorithms_not_supported = WrpError_aead_algorithms_not_supported; /* SHORT_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary WrpError_aead_is_required
@@ -277,7 +277,7 @@ export const aead_algorithms_not_supported: WrpError = WrpError_aead_algorithms_
  * @constant
  * @type {number}
  */
-export const WrpError_aead_is_required: WrpError = 11; /* LONG_NAMED_ENUMERATED_VALUE */
+export const WrpError_aead_is_required: _enum_for_WrpError.aead_is_required = _enum_for_WrpError.aead_is_required; /* LONG_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary aead_is_required
@@ -285,7 +285,7 @@ export const WrpError_aead_is_required: WrpError = 11; /* LONG_NAMED_ENUMERATED_
  * @constant
  * @type {number}
  */
-export const aead_is_required: WrpError = WrpError_aead_is_required; /* SHORT_NAMED_ENUMERATED_VALUE */
+export const aead_is_required: _enum_for_WrpError.aead_is_required = WrpError_aead_is_required; /* SHORT_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary WrpError_symmetricKey_algorithms_not_supported
@@ -293,7 +293,7 @@ export const aead_is_required: WrpError = WrpError_aead_is_required; /* SHORT_NA
  * @constant
  * @type {number}
  */
-export const WrpError_symmetricKey_algorithms_not_supported: WrpError = 12; /* LONG_NAMED_ENUMERATED_VALUE */
+export const WrpError_symmetricKey_algorithms_not_supported: _enum_for_WrpError.symmetricKey_algorithms_not_supported = _enum_for_WrpError.symmetricKey_algorithms_not_supported; /* LONG_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary symmetricKey_algorithms_not_supported
@@ -301,7 +301,7 @@ export const WrpError_symmetricKey_algorithms_not_supported: WrpError = 12; /* L
  * @constant
  * @type {number}
  */
-export const symmetricKey_algorithms_not_supported: WrpError = WrpError_symmetricKey_algorithms_not_supported; /* SHORT_NAMED_ENUMERATED_VALUE */
+export const symmetricKey_algorithms_not_supported: _enum_for_WrpError.symmetricKey_algorithms_not_supported = WrpError_symmetricKey_algorithms_not_supported; /* SHORT_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary WrpError_icv_algorithms_not_supported
@@ -309,7 +309,7 @@ export const symmetricKey_algorithms_not_supported: WrpError = WrpError_symmetri
  * @constant
  * @type {number}
  */
-export const WrpError_icv_algorithms_not_supported: WrpError = 13; /* LONG_NAMED_ENUMERATED_VALUE */
+export const WrpError_icv_algorithms_not_supported: _enum_for_WrpError.icv_algorithms_not_supported = _enum_for_WrpError.icv_algorithms_not_supported; /* LONG_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary icv_algorithms_not_supported
@@ -317,7 +317,7 @@ export const WrpError_icv_algorithms_not_supported: WrpError = 13; /* LONG_NAMED
  * @constant
  * @type {number}
  */
-export const icv_algorithms_not_supported: WrpError = WrpError_icv_algorithms_not_supported; /* SHORT_NAMED_ENUMERATED_VALUE */
+export const icv_algorithms_not_supported: _enum_for_WrpError.icv_algorithms_not_supported = WrpError_icv_algorithms_not_supported; /* SHORT_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary WrpError_invalid_attribute_certificate
@@ -325,7 +325,7 @@ export const icv_algorithms_not_supported: WrpError = WrpError_icv_algorithms_no
  * @constant
  * @type {number}
  */
-export const WrpError_invalid_attribute_certificate: WrpError = 14; /* LONG_NAMED_ENUMERATED_VALUE */
+export const WrpError_invalid_attribute_certificate: _enum_for_WrpError.invalid_attribute_certificate = _enum_for_WrpError.invalid_attribute_certificate; /* LONG_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary invalid_attribute_certificate
@@ -333,7 +333,7 @@ export const WrpError_invalid_attribute_certificate: WrpError = 14; /* LONG_NAME
  * @constant
  * @type {number}
  */
-export const invalid_attribute_certificate: WrpError = WrpError_invalid_attribute_certificate; /* SHORT_NAMED_ENUMERATED_VALUE */
+export const invalid_attribute_certificate: _enum_for_WrpError.invalid_attribute_certificate = WrpError_invalid_attribute_certificate; /* SHORT_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary WrpError_alt_signature_not_allowed
@@ -341,7 +341,7 @@ export const invalid_attribute_certificate: WrpError = WrpError_invalid_attribut
  * @constant
  * @type {number}
  */
-export const WrpError_alt_signature_not_allowed: WrpError = 15; /* LONG_NAMED_ENUMERATED_VALUE */
+export const WrpError_alt_signature_not_allowed: _enum_for_WrpError.alt_signature_not_allowed = _enum_for_WrpError.alt_signature_not_allowed; /* LONG_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary alt_signature_not_allowed
@@ -349,7 +349,7 @@ export const WrpError_alt_signature_not_allowed: WrpError = 15; /* LONG_NAMED_EN
  * @constant
  * @type {number}
  */
-export const alt_signature_not_allowed: WrpError = WrpError_alt_signature_not_allowed; /* SHORT_NAMED_ENUMERATED_VALUE */
+export const alt_signature_not_allowed: _enum_for_WrpError.alt_signature_not_allowed = WrpError_alt_signature_not_allowed; /* SHORT_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary WrpError_only_one_version
@@ -357,7 +357,7 @@ export const alt_signature_not_allowed: WrpError = WrpError_alt_signature_not_al
  * @constant
  * @type {number}
  */
-export const WrpError_only_one_version: WrpError = 16; /* LONG_NAMED_ENUMERATED_VALUE */
+export const WrpError_only_one_version: _enum_for_WrpError.only_one_version = _enum_for_WrpError.only_one_version; /* LONG_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary only_one_version
@@ -365,7 +365,7 @@ export const WrpError_only_one_version: WrpError = 16; /* LONG_NAMED_ENUMERATED_
  * @constant
  * @type {number}
  */
-export const only_one_version: WrpError = WrpError_only_one_version; /* SHORT_NAMED_ENUMERATED_VALUE */
+export const only_one_version: _enum_for_WrpError.only_one_version = WrpError_only_one_version; /* SHORT_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary WrpError_invalid_key_estab_algorithm
@@ -373,7 +373,7 @@ export const only_one_version: WrpError = WrpError_only_one_version; /* SHORT_NA
  * @constant
  * @type {number}
  */
-export const WrpError_invalid_key_estab_algorithm: WrpError = 17; /* LONG_NAMED_ENUMERATED_VALUE */
+export const WrpError_invalid_key_estab_algorithm: _enum_for_WrpError.invalid_key_estab_algorithm = _enum_for_WrpError.invalid_key_estab_algorithm; /* LONG_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary invalid_key_estab_algorithm
@@ -381,7 +381,7 @@ export const WrpError_invalid_key_estab_algorithm: WrpError = 17; /* LONG_NAMED_
  * @constant
  * @type {number}
  */
-export const invalid_key_estab_algorithm: WrpError = WrpError_invalid_key_estab_algorithm; /* SHORT_NAMED_ENUMERATED_VALUE */
+export const invalid_key_estab_algorithm: _enum_for_WrpError.invalid_key_estab_algorithm = WrpError_invalid_key_estab_algorithm; /* SHORT_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary WrpError_invalid_alt_key_estab_algorithm
@@ -389,7 +389,7 @@ export const invalid_key_estab_algorithm: WrpError = WrpError_invalid_key_estab_
  * @constant
  * @type {number}
  */
-export const WrpError_invalid_alt_key_estab_algorithm: WrpError = 18; /* LONG_NAMED_ENUMERATED_VALUE */
+export const WrpError_invalid_alt_key_estab_algorithm: _enum_for_WrpError.invalid_alt_key_estab_algorithm = _enum_for_WrpError.invalid_alt_key_estab_algorithm; /* LONG_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary invalid_alt_key_estab_algorithm
@@ -397,7 +397,7 @@ export const WrpError_invalid_alt_key_estab_algorithm: WrpError = 18; /* LONG_NA
  * @constant
  * @type {number}
  */
-export const invalid_alt_key_estab_algorithm: WrpError = WrpError_invalid_alt_key_estab_algorithm; /* SHORT_NAMED_ENUMERATED_VALUE */
+export const invalid_alt_key_estab_algorithm: _enum_for_WrpError.invalid_alt_key_estab_algorithm = WrpError_invalid_alt_key_estab_algorithm; /* SHORT_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary WrpError_invalid_aead_algorithm
@@ -405,7 +405,7 @@ export const invalid_alt_key_estab_algorithm: WrpError = WrpError_invalid_alt_ke
  * @constant
  * @type {number}
  */
-export const WrpError_invalid_aead_algorithm: WrpError = 19; /* LONG_NAMED_ENUMERATED_VALUE */
+export const WrpError_invalid_aead_algorithm: _enum_for_WrpError.invalid_aead_algorithm = _enum_for_WrpError.invalid_aead_algorithm; /* LONG_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary invalid_aead_algorithm
@@ -413,7 +413,7 @@ export const WrpError_invalid_aead_algorithm: WrpError = 19; /* LONG_NAMED_ENUME
  * @constant
  * @type {number}
  */
-export const invalid_aead_algorithm: WrpError = WrpError_invalid_aead_algorithm; /* SHORT_NAMED_ENUMERATED_VALUE */
+export const invalid_aead_algorithm: _enum_for_WrpError.invalid_aead_algorithm = WrpError_invalid_aead_algorithm; /* SHORT_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary WrpError_aead_not_allowed
@@ -421,7 +421,7 @@ export const invalid_aead_algorithm: WrpError = WrpError_invalid_aead_algorithm;
  * @constant
  * @type {number}
  */
-export const WrpError_aead_not_allowed: WrpError = 20; /* LONG_NAMED_ENUMERATED_VALUE */
+export const WrpError_aead_not_allowed: _enum_for_WrpError.aead_not_allowed = _enum_for_WrpError.aead_not_allowed; /* LONG_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary aead_not_allowed
@@ -429,7 +429,7 @@ export const WrpError_aead_not_allowed: WrpError = 20; /* LONG_NAMED_ENUMERATED_
  * @constant
  * @type {number}
  */
-export const aead_not_allowed: WrpError = WrpError_aead_not_allowed; /* SHORT_NAMED_ENUMERATED_VALUE */
+export const aead_not_allowed: _enum_for_WrpError.aead_not_allowed = WrpError_aead_not_allowed; /* SHORT_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary WrpError_invalid_symmetricKey_algorithm
@@ -437,7 +437,7 @@ export const aead_not_allowed: WrpError = WrpError_aead_not_allowed; /* SHORT_NA
  * @constant
  * @type {number}
  */
-export const WrpError_invalid_symmetricKey_algorithm: WrpError = 21; /* LONG_NAMED_ENUMERATED_VALUE */
+export const WrpError_invalid_symmetricKey_algorithm: _enum_for_WrpError.invalid_symmetricKey_algorithm = _enum_for_WrpError.invalid_symmetricKey_algorithm; /* LONG_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary invalid_symmetricKey_algorithm
@@ -445,7 +445,7 @@ export const WrpError_invalid_symmetricKey_algorithm: WrpError = 21; /* LONG_NAM
  * @constant
  * @type {number}
  */
-export const invalid_symmetricKey_algorithm: WrpError = WrpError_invalid_symmetricKey_algorithm; /* SHORT_NAMED_ENUMERATED_VALUE */
+export const invalid_symmetricKey_algorithm: _enum_for_WrpError.invalid_symmetricKey_algorithm = WrpError_invalid_symmetricKey_algorithm; /* SHORT_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary WrpError_invalid_icv_algorithm
@@ -453,7 +453,7 @@ export const invalid_symmetricKey_algorithm: WrpError = WrpError_invalid_symmetr
  * @constant
  * @type {number}
  */
-export const WrpError_invalid_icv_algorithm: WrpError = 22; /* LONG_NAMED_ENUMERATED_VALUE */
+export const WrpError_invalid_icv_algorithm: _enum_for_WrpError.invalid_icv_algorithm = _enum_for_WrpError.invalid_icv_algorithm; /* LONG_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary invalid_icv_algorithm
@@ -461,7 +461,7 @@ export const WrpError_invalid_icv_algorithm: WrpError = 22; /* LONG_NAMED_ENUMER
  * @constant
  * @type {number}
  */
-export const invalid_icv_algorithm: WrpError = WrpError_invalid_icv_algorithm; /* SHORT_NAMED_ENUMERATED_VALUE */
+export const invalid_icv_algorithm: _enum_for_WrpError.invalid_icv_algorithm = WrpError_invalid_icv_algorithm; /* SHORT_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary WrpError_dynamic_aead_algo_parms_required
@@ -469,7 +469,7 @@ export const invalid_icv_algorithm: WrpError = WrpError_invalid_icv_algorithm; /
  * @constant
  * @type {number}
  */
-export const WrpError_dynamic_aead_algo_parms_required: WrpError = 23; /* LONG_NAMED_ENUMERATED_VALUE */
+export const WrpError_dynamic_aead_algo_parms_required: _enum_for_WrpError.dynamic_aead_algo_parms_required = _enum_for_WrpError.dynamic_aead_algo_parms_required; /* LONG_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary dynamic_aead_algo_parms_required
@@ -477,7 +477,7 @@ export const WrpError_dynamic_aead_algo_parms_required: WrpError = 23; /* LONG_N
  * @constant
  * @type {number}
  */
-export const dynamic_aead_algo_parms_required: WrpError = WrpError_dynamic_aead_algo_parms_required; /* SHORT_NAMED_ENUMERATED_VALUE */
+export const dynamic_aead_algo_parms_required: _enum_for_WrpError.dynamic_aead_algo_parms_required = WrpError_dynamic_aead_algo_parms_required; /* SHORT_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary WrpError_invalid_dynamic_aead_algo_parms
@@ -485,7 +485,7 @@ export const dynamic_aead_algo_parms_required: WrpError = WrpError_dynamic_aead_
  * @constant
  * @type {number}
  */
-export const WrpError_invalid_dynamic_aead_algo_parms: WrpError = 24; /* LONG_NAMED_ENUMERATED_VALUE */
+export const WrpError_invalid_dynamic_aead_algo_parms: _enum_for_WrpError.invalid_dynamic_aead_algo_parms = _enum_for_WrpError.invalid_dynamic_aead_algo_parms; /* LONG_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary invalid_dynamic_aead_algo_parms
@@ -493,7 +493,7 @@ export const WrpError_invalid_dynamic_aead_algo_parms: WrpError = 24; /* LONG_NA
  * @constant
  * @type {number}
  */
-export const invalid_dynamic_aead_algo_parms: WrpError = WrpError_invalid_dynamic_aead_algo_parms; /* SHORT_NAMED_ENUMERATED_VALUE */
+export const invalid_dynamic_aead_algo_parms: _enum_for_WrpError.invalid_dynamic_aead_algo_parms = WrpError_invalid_dynamic_aead_algo_parms; /* SHORT_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary WrpError_dynamic_aead_algo_parms_not_required
@@ -501,7 +501,7 @@ export const invalid_dynamic_aead_algo_parms: WrpError = WrpError_invalid_dynami
  * @constant
  * @type {number}
  */
-export const WrpError_dynamic_aead_algo_parms_not_required: WrpError = 25; /* LONG_NAMED_ENUMERATED_VALUE */
+export const WrpError_dynamic_aead_algo_parms_not_required: _enum_for_WrpError.dynamic_aead_algo_parms_not_required = _enum_for_WrpError.dynamic_aead_algo_parms_not_required; /* LONG_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary dynamic_aead_algo_parms_not_required
@@ -509,7 +509,7 @@ export const WrpError_dynamic_aead_algo_parms_not_required: WrpError = 25; /* LO
  * @constant
  * @type {number}
  */
-export const dynamic_aead_algo_parms_not_required: WrpError = WrpError_dynamic_aead_algo_parms_not_required; /* SHORT_NAMED_ENUMERATED_VALUE */
+export const dynamic_aead_algo_parms_not_required: _enum_for_WrpError.dynamic_aead_algo_parms_not_required = WrpError_dynamic_aead_algo_parms_not_required; /* SHORT_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary WrpError_dynamic_symKey_algo_parms_required
@@ -517,7 +517,7 @@ export const dynamic_aead_algo_parms_not_required: WrpError = WrpError_dynamic_a
  * @constant
  * @type {number}
  */
-export const WrpError_dynamic_symKey_algo_parms_required: WrpError = 26; /* LONG_NAMED_ENUMERATED_VALUE */
+export const WrpError_dynamic_symKey_algo_parms_required: _enum_for_WrpError.dynamic_symKey_algo_parms_required = _enum_for_WrpError.dynamic_symKey_algo_parms_required; /* LONG_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary dynamic_symKey_algo_parms_required
@@ -525,7 +525,7 @@ export const WrpError_dynamic_symKey_algo_parms_required: WrpError = 26; /* LONG
  * @constant
  * @type {number}
  */
-export const dynamic_symKey_algo_parms_required: WrpError = WrpError_dynamic_symKey_algo_parms_required; /* SHORT_NAMED_ENUMERATED_VALUE */
+export const dynamic_symKey_algo_parms_required: _enum_for_WrpError.dynamic_symKey_algo_parms_required = WrpError_dynamic_symKey_algo_parms_required; /* SHORT_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary WrpError_invalid_dynamic_symKey_algo_parms
@@ -533,7 +533,7 @@ export const dynamic_symKey_algo_parms_required: WrpError = WrpError_dynamic_sym
  * @constant
  * @type {number}
  */
-export const WrpError_invalid_dynamic_symKey_algo_parms: WrpError = 27; /* LONG_NAMED_ENUMERATED_VALUE */
+export const WrpError_invalid_dynamic_symKey_algo_parms: _enum_for_WrpError.invalid_dynamic_symKey_algo_parms = _enum_for_WrpError.invalid_dynamic_symKey_algo_parms; /* LONG_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary invalid_dynamic_symKey_algo_parms
@@ -541,7 +541,7 @@ export const WrpError_invalid_dynamic_symKey_algo_parms: WrpError = 27; /* LONG_
  * @constant
  * @type {number}
  */
-export const invalid_dynamic_symKey_algo_parms: WrpError = WrpError_invalid_dynamic_symKey_algo_parms; /* SHORT_NAMED_ENUMERATED_VALUE */
+export const invalid_dynamic_symKey_algo_parms: _enum_for_WrpError.invalid_dynamic_symKey_algo_parms = WrpError_invalid_dynamic_symKey_algo_parms; /* SHORT_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary WrpError_dynamic_symKey_algo_parms_not_required
@@ -549,7 +549,7 @@ export const invalid_dynamic_symKey_algo_parms: WrpError = WrpError_invalid_dyna
  * @constant
  * @type {number}
  */
-export const WrpError_dynamic_symKey_algo_parms_not_required: WrpError = 28; /* LONG_NAMED_ENUMERATED_VALUE */
+export const WrpError_dynamic_symKey_algo_parms_not_required: _enum_for_WrpError.dynamic_symKey_algo_parms_not_required = _enum_for_WrpError.dynamic_symKey_algo_parms_not_required; /* LONG_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary dynamic_symKey_algo_parms_not_required
@@ -557,7 +557,7 @@ export const WrpError_dynamic_symKey_algo_parms_not_required: WrpError = 28; /* 
  * @constant
  * @type {number}
  */
-export const dynamic_symKey_algo_parms_not_required: WrpError = WrpError_dynamic_symKey_algo_parms_not_required; /* SHORT_NAMED_ENUMERATED_VALUE */
+export const dynamic_symKey_algo_parms_not_required: _enum_for_WrpError.dynamic_symKey_algo_parms_not_required = WrpError_dynamic_symKey_algo_parms_not_required; /* SHORT_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary WrpError_dynamic_icv_algo_parms_required
@@ -565,7 +565,7 @@ export const dynamic_symKey_algo_parms_not_required: WrpError = WrpError_dynamic
  * @constant
  * @type {number}
  */
-export const WrpError_dynamic_icv_algo_parms_required: WrpError = 29; /* LONG_NAMED_ENUMERATED_VALUE */
+export const WrpError_dynamic_icv_algo_parms_required: _enum_for_WrpError.dynamic_icv_algo_parms_required = _enum_for_WrpError.dynamic_icv_algo_parms_required; /* LONG_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary dynamic_icv_algo_parms_required
@@ -573,7 +573,7 @@ export const WrpError_dynamic_icv_algo_parms_required: WrpError = 29; /* LONG_NA
  * @constant
  * @type {number}
  */
-export const dynamic_icv_algo_parms_required: WrpError = WrpError_dynamic_icv_algo_parms_required; /* SHORT_NAMED_ENUMERATED_VALUE */
+export const dynamic_icv_algo_parms_required: _enum_for_WrpError.dynamic_icv_algo_parms_required = WrpError_dynamic_icv_algo_parms_required; /* SHORT_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary WrpError_invalid_dynamic_icv_algo_parms
@@ -581,7 +581,7 @@ export const dynamic_icv_algo_parms_required: WrpError = WrpError_dynamic_icv_al
  * @constant
  * @type {number}
  */
-export const WrpError_invalid_dynamic_icv_algo_parms: WrpError = 30; /* LONG_NAMED_ENUMERATED_VALUE */
+export const WrpError_invalid_dynamic_icv_algo_parms: _enum_for_WrpError.invalid_dynamic_icv_algo_parms = _enum_for_WrpError.invalid_dynamic_icv_algo_parms; /* LONG_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary invalid_dynamic_icv_algo_parms
@@ -589,7 +589,7 @@ export const WrpError_invalid_dynamic_icv_algo_parms: WrpError = 30; /* LONG_NAM
  * @constant
  * @type {number}
  */
-export const invalid_dynamic_icv_algo_parms: WrpError = WrpError_invalid_dynamic_icv_algo_parms; /* SHORT_NAMED_ENUMERATED_VALUE */
+export const invalid_dynamic_icv_algo_parms: _enum_for_WrpError.invalid_dynamic_icv_algo_parms = WrpError_invalid_dynamic_icv_algo_parms; /* SHORT_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary WrpError_dynamic_icv_algo_parms_not_required
@@ -597,7 +597,7 @@ export const invalid_dynamic_icv_algo_parms: WrpError = WrpError_invalid_dynamic
  * @constant
  * @type {number}
  */
-export const WrpError_dynamic_icv_algo_parms_not_required: WrpError = 31; /* LONG_NAMED_ENUMERATED_VALUE */
+export const WrpError_dynamic_icv_algo_parms_not_required: _enum_for_WrpError.dynamic_icv_algo_parms_not_required = _enum_for_WrpError.dynamic_icv_algo_parms_not_required; /* LONG_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary dynamic_icv_algo_parms_not_required
@@ -605,7 +605,7 @@ export const WrpError_dynamic_icv_algo_parms_not_required: WrpError = 31; /* LON
  * @constant
  * @type {number}
  */
-export const dynamic_icv_algo_parms_not_required: WrpError = WrpError_dynamic_icv_algo_parms_not_required; /* SHORT_NAMED_ENUMERATED_VALUE */
+export const dynamic_icv_algo_parms_not_required: _enum_for_WrpError.dynamic_icv_algo_parms_not_required = WrpError_dynamic_icv_algo_parms_not_required; /* SHORT_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary WrpError_unexpected_invokeID_received
@@ -613,7 +613,7 @@ export const dynamic_icv_algo_parms_not_required: WrpError = WrpError_dynamic_ic
  * @constant
  * @type {number}
  */
-export const WrpError_unexpected_invokeID_received: WrpError = 32; /* LONG_NAMED_ENUMERATED_VALUE */
+export const WrpError_unexpected_invokeID_received: _enum_for_WrpError.unexpected_invokeID_received = _enum_for_WrpError.unexpected_invokeID_received; /* LONG_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary unexpected_invokeID_received
@@ -621,7 +621,7 @@ export const WrpError_unexpected_invokeID_received: WrpError = 32; /* LONG_NAMED
  * @constant
  * @type {number}
  */
-export const unexpected_invokeID_received: WrpError = WrpError_unexpected_invokeID_received; /* SHORT_NAMED_ENUMERATED_VALUE */
+export const unexpected_invokeID_received: _enum_for_WrpError.unexpected_invokeID_received = WrpError_unexpected_invokeID_received; /* SHORT_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary WrpError_rekey_out_of_sequence
@@ -629,7 +629,7 @@ export const unexpected_invokeID_received: WrpError = WrpError_unexpected_invoke
  * @constant
  * @type {number}
  */
-export const WrpError_rekey_out_of_sequence: WrpError = 33; /* LONG_NAMED_ENUMERATED_VALUE */
+export const WrpError_rekey_out_of_sequence: _enum_for_WrpError.rekey_out_of_sequence = _enum_for_WrpError.rekey_out_of_sequence; /* LONG_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary rekey_out_of_sequence
@@ -637,7 +637,7 @@ export const WrpError_rekey_out_of_sequence: WrpError = 33; /* LONG_NAMED_ENUMER
  * @constant
  * @type {number}
  */
-export const rekey_out_of_sequence: WrpError = WrpError_rekey_out_of_sequence; /* SHORT_NAMED_ENUMERATED_VALUE */
+export const rekey_out_of_sequence: _enum_for_WrpError.rekey_out_of_sequence = WrpError_rekey_out_of_sequence; /* SHORT_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary WrpError_invalid_dynamic_keyEst_algo_parms
@@ -645,7 +645,7 @@ export const rekey_out_of_sequence: WrpError = WrpError_rekey_out_of_sequence; /
  * @constant
  * @type {number}
  */
-export const WrpError_invalid_dynamic_keyEst_algo_parms: WrpError = 34; /* LONG_NAMED_ENUMERATED_VALUE */
+export const WrpError_invalid_dynamic_keyEst_algo_parms: _enum_for_WrpError.invalid_dynamic_keyEst_algo_parms = _enum_for_WrpError.invalid_dynamic_keyEst_algo_parms; /* LONG_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary invalid_dynamic_keyEst_algo_parms
@@ -653,7 +653,7 @@ export const WrpError_invalid_dynamic_keyEst_algo_parms: WrpError = 34; /* LONG_
  * @constant
  * @type {number}
  */
-export const invalid_dynamic_keyEst_algo_parms: WrpError = WrpError_invalid_dynamic_keyEst_algo_parms; /* SHORT_NAMED_ENUMERATED_VALUE */
+export const invalid_dynamic_keyEst_algo_parms: _enum_for_WrpError.invalid_dynamic_keyEst_algo_parms = WrpError_invalid_dynamic_keyEst_algo_parms; /* SHORT_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary WrpError_changedKey_out_of_sequence
@@ -661,7 +661,7 @@ export const invalid_dynamic_keyEst_algo_parms: WrpError = WrpError_invalid_dyna
  * @constant
  * @type {number}
  */
-export const WrpError_changedKey_out_of_sequence: WrpError = 35; /* LONG_NAMED_ENUMERATED_VALUE */
+export const WrpError_changedKey_out_of_sequence: _enum_for_WrpError.changedKey_out_of_sequence = _enum_for_WrpError.changedKey_out_of_sequence; /* LONG_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary changedKey_out_of_sequence
@@ -669,13 +669,13 @@ export const WrpError_changedKey_out_of_sequence: WrpError = 35; /* LONG_NAMED_E
  * @constant
  * @type {number}
  */
-export const changedKey_out_of_sequence: WrpError = WrpError_changedKey_out_of_sequence; /* SHORT_NAMED_ENUMERATED_VALUE */
+export const changedKey_out_of_sequence: _enum_for_WrpError.changedKey_out_of_sequence = WrpError_changedKey_out_of_sequence; /* SHORT_NAMED_ENUMERATED_VALUE */
 
 
-export const _decode_WrpError = $._decodeEnumerated;
+export const _decode_WrpError: $.ASN1Decoder<number> = $._decodeEnumerated;
 
 
-export const _encode_WrpError = $._encodeEnumerated;
+export const _encode_WrpError: $.ASN1Encoder<number> = $._encodeEnumerated;
 
 
 /* eslint-enable */

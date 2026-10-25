@@ -1,7 +1,7 @@
 /* eslint-disable */
 import {
-  OPTIONAL,
-  INTEGER,
+  type OPTIONAL,
+  type INTEGER,
   ASN1Element as _Element,
   ASN1TagClass as _TagClass,
   ASN1Construction as _Construction,
@@ -33,13 +33,13 @@ export class PatronFormat {
    * @public
    * @readonly
    */
-  readonly patron_format_owner?: OPTIONAL<INTEGER>;
+  public readonly patron_format_owner?: OPTIONAL<INTEGER>;
   /**
    * @summary `patron_format_type`.
    * @public
    * @readonly
    */
-  readonly patron_format_type?: OPTIONAL<INTEGER>;
+  public readonly patron_format_type?: OPTIONAL<INTEGER>;
 
   constructor(
     patron_format_owner?: OPTIONAL<INTEGER>,

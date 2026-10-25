@@ -3,7 +3,7 @@ import {
     ASN1Element as _Element
 } from "@wildboar/asn1";
 import * as $ from "@wildboar/asn1/functional";
-import { RequestedNotifications_Item, _decode_RequestedNotifications_Item, _encode_RequestedNotifications_Item } from "../IN-SCF-SCF-datatypes/RequestedNotifications-Item.ta.mjs";
+import { type RequestedNotifications_Item, _decode_RequestedNotifications_Item, _encode_RequestedNotifications_Item } from "../IN-SCF-SCF-datatypes/RequestedNotifications-Item.ta.mjs";
 // export { RequestedNotifications_Item, _decode_RequestedNotifications_Item, _encode_RequestedNotifications_Item } from "../IN-SCF-SCF-datatypes/RequestedNotifications-Item.ta.mjs";
 
 

@@ -1,11 +1,11 @@
 /* eslint-disable */
 import {
     ASN1ConstructionError as _ConstructionError,
-    ASN1Element as _Element,
+    type ASN1Element as _Element,
     ASN1TagClass as _TagClass
 } from "@wildboar/asn1";
 import * as $ from "@wildboar/asn1/functional";
-import { _decode_ImmediateEnableResponse_immediateEnableResult, _encode_ImmediateEnableResponse_immediateEnableResult, ImmediateEnableResponse_immediateEnableResult } from "../SGP32Definitions/ImmediateEnableResponse-immediateEnableResult.ta.mjs";
+import { _decode_ImmediateEnableResponse_immediateEnableResult, _encode_ImmediateEnableResponse_immediateEnableResult, type ImmediateEnableResponse_immediateEnableResult } from "../SGP32Definitions/ImmediateEnableResponse-immediateEnableResult.ta.mjs";
 
 
 /**
@@ -34,17 +34,21 @@ import { _decode_ImmediateEnableResponse_immediateEnableResult, _encode_Immediat
  */
 export
 class ImmediateEnableResponse {
+    /**
+     * @summary `immediateEnableResult`.
+     * @description
+     * Outcome of ES10b.ImmediateEnable. See the named codes. SGP.32 v1.2, section
+     * 5.9.15.
+     * @public
+     * @readonly
+     */
+    public readonly immediateEnableResult: ImmediateEnableResponse_immediateEnableResult;
+
     constructor (
-        /**
-         * @summary `immediateEnableResult`.
-         * @description
-         * Outcome of ES10b.ImmediateEnable. See the named codes. SGP.32 v1.2, section
-         * 5.9.15.
-         * @public
-         * @readonly
-         */
-        readonly immediateEnableResult: ImmediateEnableResponse_immediateEnableResult
-    ) {}
+        immediateEnableResult: ImmediateEnableResponse_immediateEnableResult
+    ) {
+        this.immediateEnableResult = immediateEnableResult;
+    }
 
     /**
      * @summary Restructures an object into a ImmediateEnableResponse

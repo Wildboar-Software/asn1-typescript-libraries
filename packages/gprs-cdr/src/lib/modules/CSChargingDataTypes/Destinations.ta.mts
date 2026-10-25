@@ -3,7 +3,7 @@ import {
     ASN1Element as _Element
 } from "@wildboar/asn1";
 import * as $ from "@wildboar/asn1/functional";
-import { OsApplication, _decode_OsApplication, _encode_OsApplication } from "../CSChargingDataTypes/OsApplication.ta.mjs";
+import { type OsApplication, _decode_OsApplication, _encode_OsApplication } from "../CSChargingDataTypes/OsApplication.ta.mjs";
 
 
 /**

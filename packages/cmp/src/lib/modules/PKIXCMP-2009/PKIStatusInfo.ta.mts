@@ -1,6 +1,6 @@
 /* eslint-disable */
 import {
-  OPTIONAL,
+  type OPTIONAL,
   ASN1Element as _Element,
   ASN1TagClass as _TagClass,
   ASN1Construction as _Construction,
@@ -12,17 +12,17 @@ import {
 } from '@wildboar/asn1';
 import * as $ from '@wildboar/asn1/functional';
 import {
-  PKIStatus,
+  type PKIStatus,
   _decode_PKIStatus,
   _encode_PKIStatus,
 } from '../PKIXCMP-2009/PKIStatus.ta.mjs';
 import {
-  PKIFreeText,
+  type PKIFreeText,
   _decode_PKIFreeText,
   _encode_PKIFreeText,
 } from '../PKIXCMP-2009/PKIFreeText.ta.mjs';
 import {
-  PKIFailureInfo,
+  type PKIFailureInfo,
   _decode_PKIFailureInfo,
   _encode_PKIFailureInfo,
 } from '../PKIXCMP-2009/PKIFailureInfo.ta.mjs';
@@ -40,46 +40,54 @@ import {
  * ```asn1
  * PKIStatusInfo ::= SEQUENCE {
  *     status        PKIStatus,
- *     statusString  PKIFreeText     OPTIONAL,
+ *     statusString  PKIFreeText     type OPTIONAL,
  *     failInfo      PKIFailureInfo  OPTIONAL }
  * ```
  *
  */
 export class PKIStatusInfo {
+  /**
+   * @summary `status`.
+   * @description
+   *
+   * Primary status code (`PKIStatus`) ([RFC 4210 §5.2.3](https://datatracker.ietf.org/doc/html/rfc4210#section-5.2.3)).
+   *
+   * @public
+   * @readonly
+   */
+  public readonly status: PKIStatus;
+  /**
+   * @summary `statusString`.
+   * @description
+   *
+   * Optional free-text status detail (`PKIFreeText`)
+   * ([RFC 4210 §5.2.3](https://datatracker.ietf.org/doc/html/rfc4210#section-5.2.3)).
+   *
+   * @public
+   * @readonly
+   */
+  public readonly statusString?: OPTIONAL<PKIFreeText>;
+  /**
+   * @summary `failInfo`.
+   * @description
+   *
+   * Optional failure bits (`PKIFailureInfo`) for more detail on
+   * failure cases ([RFC 4210 §5.2.3](https://datatracker.ietf.org/doc/html/rfc4210#section-5.2.3)).
+   *
+   * @public
+   * @readonly
+   */
+  public readonly failInfo?: OPTIONAL<PKIFailureInfo>;
+
   constructor(
-    /**
-     * @summary `status`.
-     * @description
-     *
-     * Primary status code (`PKIStatus`) ([RFC 4210 §5.2.3](https://datatracker.ietf.org/doc/html/rfc4210#section-5.2.3)).
-     *
-     * @public
-     * @readonly
-     */
-    readonly status: PKIStatus,
-    /**
-     * @summary `statusString`.
-     * @description
-     *
-     * Optional free-text status detail (`PKIFreeText`)
-     * ([RFC 4210 §5.2.3](https://datatracker.ietf.org/doc/html/rfc4210#section-5.2.3)).
-     *
-     * @public
-     * @readonly
-     */
-    readonly statusString?: OPTIONAL<PKIFreeText>,
-    /**
-     * @summary `failInfo`.
-     * @description
-     *
-     * Optional failure bits (`PKIFailureInfo`) for more detail on
-     * failure cases ([RFC 4210 §5.2.3](https://datatracker.ietf.org/doc/html/rfc4210#section-5.2.3)).
-     *
-     * @public
-     * @readonly
-     */
-    readonly failInfo?: OPTIONAL<PKIFailureInfo>
-  ) {}
+    status: PKIStatus,
+    statusString?: OPTIONAL<PKIFreeText>,
+    failInfo?: OPTIONAL<PKIFailureInfo>
+  ) {
+    this.status = status;
+    this.statusString = statusString;
+    this.failInfo = failInfo;
+  }
 
   /**
    * @summary Restructures an object into a PKIStatusInfo

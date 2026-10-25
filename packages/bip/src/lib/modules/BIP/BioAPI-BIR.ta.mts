@@ -1,6 +1,6 @@
 /* eslint-disable */
 import {
-  OCTET_STRING,
+  type OCTET_STRING,
   ASN1Element as _Element,
   ASN1TagClass as _TagClass,
   ASN1Construction as _Construction,
@@ -12,7 +12,7 @@ import {
 } from '@wildboar/asn1';
 import * as $ from '@wildboar/asn1/functional';
 import {
-  UnsignedShort,
+  type UnsignedShort,
   _decode_UnsignedShort,
   _encode_UnsignedShort,
 } from '../BIP/UnsignedShort.ta.mjs';
@@ -55,7 +55,7 @@ export class BioAPI_BIR {
    * @public
    * @readonly
    */
-  readonly patronFormatOwner: UnsignedShort;
+  public readonly patronFormatOwner: UnsignedShort;
   /**
    * @summary `patronFormatType`.
    * @description
@@ -66,7 +66,7 @@ export class BioAPI_BIR {
    * @public
    * @readonly
    */
-  readonly patronFormatType: UnsignedShort;
+  public readonly patronFormatType: UnsignedShort;
   /**
    * @summary `formattedBIR`.
    * @description
@@ -78,7 +78,7 @@ export class BioAPI_BIR {
    * @public
    * @readonly
    */
-  readonly formattedBIR: OCTET_STRING;
+  public readonly formattedBIR: OCTET_STRING;
 
   constructor(
     patronFormatOwner: UnsignedShort,

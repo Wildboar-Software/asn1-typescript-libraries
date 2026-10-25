@@ -1,7 +1,7 @@
 /* eslint-disable */
 import {
-    ASN1Element as _Element,
-    OCTET_STRING
+    type ASN1Element as _Element,
+    type OCTET_STRING
 } from "@wildboar/asn1";
 import * as $ from "@wildboar/asn1/functional";
 
@@ -29,7 +29,7 @@ type UtranCivicAddress = OCTET_STRING; // OctetStringType
  * @param el The element being decoded.
  * @returns The decoded data structure.
  */
-export const _decode_UtranCivicAddress = $._decodeOctetString;
+export const _decode_UtranCivicAddress: $.ASN1Decoder<OCTET_STRING> = $._decodeOctetString;
 
 /**
  * @summary Encodes a(n) UtranCivicAddress into an ASN.1 Element.
@@ -38,7 +38,7 @@ export const _decode_UtranCivicAddress = $._decodeOctetString;
  * @param elGetter A function that can be used to get new ASN.1 elements.
  * @returns {_Element} The UtranCivicAddress, encoded as an ASN.1 Element.
  */
-export const _encode_UtranCivicAddress = $._encodeOctetString;
+export const _encode_UtranCivicAddress: $.ASN1Encoder<OCTET_STRING> = $._encodeOctetString;
 
 
 /* eslint-enable */

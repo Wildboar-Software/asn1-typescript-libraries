@@ -1,7 +1,7 @@
 /* eslint-disable */
 import {
-    INTEGER,
-    ASN1Element as _Element,
+    type INTEGER,
+    type ASN1Element as _Element,
     ASN1TagClass as _TagClass,
     ASN1Construction as _Construction,
     ASN1UniversalType as _UniversalType,
@@ -12,7 +12,7 @@ import {
 } from '@wildboar/asn1';
 import * as $ from '@wildboar/asn1/functional';
 import {
-    PDUHeader,
+    type PDUHeader,
     _decode_PDUHeader,
     _encode_PDUHeader,
 } from '../NLM/PDUHeader.ta.mjs';
@@ -48,7 +48,7 @@ export class PDUOtherErrorSyntax {
      * @public
      * @readonly
      */
-    readonly errorCode: INTEGER;
+    public readonly errorCode: INTEGER;
     /**
      * @summary `header`.
      * @description
@@ -60,7 +60,7 @@ export class PDUOtherErrorSyntax {
      * @public
      * @readonly
      */
-    readonly header: PDUHeader;
+    public readonly header: PDUHeader;
 
     constructor(
         errorCode: INTEGER,

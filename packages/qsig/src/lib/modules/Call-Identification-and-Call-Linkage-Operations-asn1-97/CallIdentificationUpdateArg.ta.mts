@@ -1,12 +1,12 @@
 /* eslint-disable */
 import {
-    OPTIONAL,
-    ASN1Element as _Element,
+    type OPTIONAL,
+    type ASN1Element as _Element,
     ASN1TagClass as _TagClass
 } from "@wildboar/asn1";
 import * as $ from "@wildboar/asn1/functional";
 import { CallIdentificationData, _decode_CallIdentificationData, _encode_CallIdentificationData } from "../Call-Identification-and-Call-Linkage-Operations-asn1-97/CallIdentificationData.ta.mjs";
-import { ExtensionType, _decode_ExtensionType, _encode_ExtensionType } from "../Call-Identification-and-Call-Linkage-Operations-asn1-97/ExtensionType.ta.mjs";
+import { type ExtensionType, _decode_ExtensionType, _encode_ExtensionType } from "../Call-Identification-and-Call-Linkage-Operations-asn1-97/ExtensionType.ta.mjs";
 
 /**
  * @summary CallIdentificationUpdateArg

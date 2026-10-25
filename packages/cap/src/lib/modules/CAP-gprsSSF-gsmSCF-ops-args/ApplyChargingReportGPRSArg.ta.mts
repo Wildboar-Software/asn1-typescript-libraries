@@ -1,8 +1,8 @@
 /* eslint-disable */
 import {
-    OPTIONAL,
-    BOOLEAN,
-    ASN1Element as _Element,
+    type OPTIONAL,
+    type BOOLEAN,
+    type ASN1Element as _Element,
     ASN1TagClass as _TagClass,
     ASN1Construction as _Construction,
     ASN1UniversalType as _UniversalType,
@@ -33,9 +33,9 @@ import { QualityOfService, _decode_QualityOfService, _encode_QualityOfService } 
  * ```asn1
  * ApplyChargingReportGPRSArg ::= SEQUENCE {
  *     chargingResult            [0] ChargingResult,
- *     qualityOfService            [1] QualityOfService            OPTIONAL,
+ *     qualityOfService            [1] QualityOfService            type OPTIONAL,
  *     active                [2] BOOLEAN DEFAULT TRUE,
- *     pDPID                [3] PDPID                    OPTIONAL,
+ *     pDPID                [3] PDPID                    type OPTIONAL,
  *     ...,
  *     chargingRollOver            [4]    ChargingRollOver            OPTIONAL
  *     }
@@ -45,82 +45,96 @@ import { QualityOfService, _decode_QualityOfService, _encode_QualityOfService } 
  */
 export
 class ApplyChargingReportGPRSArg {
+    /**
+     * @summary `chargingResult`.
+     * @description
+     *
+     * Charging previously requested by ApplyChargingGPRS. Choice of
+     * `transferredVolume` (`volumeIfNoTariffSwitch`, or
+     * `volumeIfTariffSwitch` with volumeSinceLastTariffSwitch and
+     * optional VolumeTariffSwitchInterval) or `elapsedTime`
+     * (`timeGPRSIfNoTariffSwitch` or `timeGPRSIfTariffSwitch` with
+     * timeGPRSSinceLastTariffSwitch and optional
+     * timeGPRSTariffSwitchInterval).
+     * (3GPP TS 29.078 V19.0.0 clause 13.3.1.1).
+     *
+     * @public
+     * @readonly
+     */
+    public readonly chargingResult: ChargingResult;
+    /**
+     * @summary `qualityOfService`.
+     * @description
+     *
+     * QoS negotiated among user, SGSN, and GGSN. Present only when
+     * this report was triggered by a QoS change.
+     * `negotiated-QoS-Extension` may supplement `negotiated-QoS`.
+     * (3GPP TS 29.078 V19.0.0 clause 13.3.1.1).
+     *
+     * @public
+     * @readonly
+     */
+    public readonly qualityOfService?: OPTIONAL<QualityOfService>;
+    /**
+     * @summary `active`.
+     * @description
+     *
+     * Whether the GPRS Session or PDP Context is still active.
+     * ASN.1 default TRUE. (3GPP TS 29.078 V19.0.0 clause 13.3.1.1).
+     *
+     * @public
+     * @readonly
+     */
+    public readonly active?: OPTIONAL<BOOLEAN>;
+    /**
+     * @summary `pDPID`.
+     * @description
+     *
+     * Identifies the PDP Context, within a GPRS Session dialogue,
+     * for which this charging report is valid. unknownPDPID if
+     * unknown. (3GPP TS 29.078 V19.0.0 clause 13.3.1.1).
+     *
+     * @public
+     * @readonly
+     */
+    public readonly pDPID?: OPTIONAL<PDPID>;
+    /**
+     * @summary `chargingRollOver`.
+     * @description
+     *
+     * Rollovers of ChargingResult counters due to limited value
+     * ranges. Choice of transferredVolumeRollOver
+     * (rO-VolumeIfNoTariffSwitch or rO-VolumeIfTariffSwitch) or
+     * elapsedTimeRollOver (rO-TimeGPRSIfNoTariffSwitch or
+     * rO-TimeGPRSIfTariffSwitch). Absent subfields mean no
+     * rollover. (3GPP TS 29.078 V19.0.0 clause 13.3.1.1).
+     *
+     * @public
+     * @readonly
+     */
+    public readonly chargingRollOver?: OPTIONAL<ChargingRollOver>;
+    /**
+     * @summary Extensions that are not recognized.
+     * @public
+     * @readonly
+     */
+    public readonly _unrecognizedExtensionsList: _Element[];
+
     constructor (
-        /**
-         * @summary `chargingResult`.
-         * @description
-         *
-         * Charging previously requested by ApplyChargingGPRS. Choice of
-         * `transferredVolume` (`volumeIfNoTariffSwitch`, or
-         * `volumeIfTariffSwitch` with volumeSinceLastTariffSwitch and
-         * optional VolumeTariffSwitchInterval) or `elapsedTime`
-         * (`timeGPRSIfNoTariffSwitch` or `timeGPRSIfTariffSwitch` with
-         * timeGPRSSinceLastTariffSwitch and optional
-         * timeGPRSTariffSwitchInterval).
-         * (3GPP TS 29.078 V19.0.0 clause 13.3.1.1).
-         *
-         * @public
-         * @readonly
-         */
-        readonly chargingResult: ChargingResult,
-        /**
-         * @summary `qualityOfService`.
-         * @description
-         *
-         * QoS negotiated among user, SGSN, and GGSN. Present only when
-         * this report was triggered by a QoS change.
-         * `negotiated-QoS-Extension` may supplement `negotiated-QoS`.
-         * (3GPP TS 29.078 V19.0.0 clause 13.3.1.1).
-         *
-         * @public
-         * @readonly
-         */
-        readonly qualityOfService?: OPTIONAL<QualityOfService>,
-        /**
-         * @summary `active`.
-         * @description
-         *
-         * Whether the GPRS Session or PDP Context is still active.
-         * ASN.1 default TRUE. (3GPP TS 29.078 V19.0.0 clause 13.3.1.1).
-         *
-         * @public
-         * @readonly
-         */
-        readonly active?: OPTIONAL<BOOLEAN>,
-        /**
-         * @summary `pDPID`.
-         * @description
-         *
-         * Identifies the PDP Context, within a GPRS Session dialogue,
-         * for which this charging report is valid. unknownPDPID if
-         * unknown. (3GPP TS 29.078 V19.0.0 clause 13.3.1.1).
-         *
-         * @public
-         * @readonly
-         */
-        readonly pDPID?: OPTIONAL<PDPID>,
-        /**
-         * @summary `chargingRollOver`.
-         * @description
-         *
-         * Rollovers of ChargingResult counters due to limited value
-         * ranges. Choice of transferredVolumeRollOver
-         * (rO-VolumeIfNoTariffSwitch or rO-VolumeIfTariffSwitch) or
-         * elapsedTimeRollOver (rO-TimeGPRSIfNoTariffSwitch or
-         * rO-TimeGPRSIfTariffSwitch). Absent subfields mean no
-         * rollover. (3GPP TS 29.078 V19.0.0 clause 13.3.1.1).
-         *
-         * @public
-         * @readonly
-         */
-        readonly chargingRollOver?: OPTIONAL<ChargingRollOver>,
-        /**
-         * @summary Extensions that are not recognized.
-         * @public
-         * @readonly
-         */
-        readonly _unrecognizedExtensionsList: _Element[] = []
-    ) {}
+        chargingResult: ChargingResult,
+        qualityOfService?: OPTIONAL<QualityOfService>,
+        active?: OPTIONAL<BOOLEAN>,
+        pDPID?: OPTIONAL<PDPID>,
+        chargingRollOver?: OPTIONAL<ChargingRollOver>,
+        _unrecognizedExtensionsList: _Element[] = []
+    ) {
+        this.chargingResult = chargingResult;
+        this.qualityOfService = qualityOfService;
+        this.active = active;
+        this.pDPID = pDPID;
+        this.chargingRollOver = chargingRollOver;
+        this._unrecognizedExtensionsList = _unrecognizedExtensionsList;
+    }
 
     /**
      * @summary Restructures an object into a ApplyChargingReportGPRSArg

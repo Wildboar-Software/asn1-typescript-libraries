@@ -1,6 +1,6 @@
 /* eslint-disable */
 import {
-    ASN1Element as _Element,
+    type ASN1Element as _Element,
     ASN1TagClass as _TagClass,
     ASN1Construction as _Construction,
     ASN1UniversalType as _UniversalType,
@@ -10,7 +10,7 @@ import {
     ASN1ConstructionError as _ConstructionError,
 } from "@wildboar/asn1";
 import * as $ from "@wildboar/asn1/functional";
-import { AccessId, _decode_AccessId, _encode_AccessId } from "../DFRBasicAttributes/AccessId.ta.mjs";
+import { type AccessId, _decode_AccessId, _encode_AccessId } from "../DFRBasicAttributes/AccessId.ta.mjs";
 import { AccessRights, _enum_for_AccessRights, _decode_AccessRights, _encode_AccessRights } from "../DFRBasicAttributes/AccessRights.ta.mjs";
 
 
@@ -34,26 +34,32 @@ import { AccessRights, _enum_for_AccessRights, _decode_AccessRights, _encode_Acc
  */
 export
 class DfrAccessListElement {
+    /**
+     * @summary `access_id`.
+     * @description
+     *
+     * Distinguished name of the security subject.
+     * @public
+     * @readonly
+     */
+    public readonly access_id: AccessId;
+    /**
+     * @summary `access_rights`.
+     * @description
+     *
+     * Granted AccessRights.
+     * @public
+     * @readonly
+     */
+    public readonly access_rights: AccessRights;
+
     constructor (
-        /**
-         * @summary `access_id`.
-         * @description
-         *
-         * Distinguished name of the security subject.
-         * @public
-         * @readonly
-         */
-        readonly access_id: AccessId,
-        /**
-         * @summary `access_rights`.
-         * @description
-         *
-         * Granted AccessRights.
-         * @public
-         * @readonly
-         */
-        readonly access_rights: AccessRights
-    ) {}
+        access_id: AccessId,
+        access_rights: AccessRights
+    ) {
+        this.access_id = access_id;
+        this.access_rights = access_rights;
+    }
 
     /**
      * @summary Restructures an object into a DfrAccessListElement
@@ -77,7 +83,7 @@ class DfrAccessListElement {
          * @static
          */
 
-    public static _enum_for_access_rights = _enum_for_AccessRights;
+    public static _enum_for_access_rights: typeof _enum_for_AccessRights = _enum_for_AccessRights;
 }
 
 /**

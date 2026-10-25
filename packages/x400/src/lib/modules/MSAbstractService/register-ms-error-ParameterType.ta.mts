@@ -1,6 +1,6 @@
 /* eslint-disable */
 import {
-    ASN1Element as _Element,
+    type ASN1Element as _Element,
     ASN1TagClass as _TagClass,
     ASN1Construction as _Construction,
     ASN1UniversalType as _UniversalType,
@@ -11,7 +11,7 @@ import {
 } from '@wildboar/asn1';
 import * as $ from '@wildboar/asn1/functional';
 import {
-    RegistrationProblem,
+    type RegistrationProblem,
     _enum_for_RegistrationProblem,
     _decode_RegistrationProblem,
     _encode_RegistrationProblem,
@@ -35,20 +35,26 @@ import {
  *
  */
 export class register_ms_error_ParameterType {
+    /**
+     * @summary `problem`.
+     * @public
+     * @readonly
+     */
+    public readonly problem: RegistrationProblem;
+    /**
+     * @summary `registration_type`.
+     * @public
+     * @readonly
+     */
+    public readonly registration_type: RegistrationTypes;
+
     constructor(
-        /**
-         * @summary `problem`.
-         * @public
-         * @readonly
-         */
-        readonly problem: RegistrationProblem,
-        /**
-         * @summary `registration_type`.
-         * @public
-         * @readonly
-         */
-        readonly registration_type: RegistrationTypes
-    ) {}
+        problem: RegistrationProblem,
+        registration_type: RegistrationTypes
+    ) {
+        this.problem = problem;
+        this.registration_type = registration_type;
+    }
 
     /**
      * @summary Restructures an object into a register_ms_error_ParameterType
@@ -79,7 +85,7 @@ export class register_ms_error_ParameterType {
      * @static
      */
 
-    public static _enum_for_problem = _enum_for_RegistrationProblem;
+    public static _enum_for_problem: typeof _enum_for_RegistrationProblem = _enum_for_RegistrationProblem;
 }
 
 /**

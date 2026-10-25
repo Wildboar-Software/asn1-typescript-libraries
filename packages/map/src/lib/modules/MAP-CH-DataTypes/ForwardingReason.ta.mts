@@ -71,7 +71,7 @@ type ForwardingReason = _enum_for_ForwardingReason;
  * @enum {number}
  */
 export
-const ForwardingReason = _enum_for_ForwardingReason;
+const ForwardingReason: typeof _enum_for_ForwardingReason = _enum_for_ForwardingReason;
 
 /**
  * @summary ForwardingReason_notReachable
@@ -83,7 +83,7 @@ const ForwardingReason = _enum_for_ForwardingReason;
  * @type {number}
  */
 export
-const ForwardingReason_notReachable: ForwardingReason = ForwardingReason.notReachable; /* LONG_NAMED_ENUMERATED_VALUE */
+const ForwardingReason_notReachable: _enum_for_ForwardingReason.notReachable = ForwardingReason.notReachable; /* LONG_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary notReachable
@@ -95,7 +95,7 @@ const ForwardingReason_notReachable: ForwardingReason = ForwardingReason.notReac
  * @type {number}
  */
 export
-const notReachable: ForwardingReason = ForwardingReason.notReachable; /* SHORT_NAMED_ENUMERATED_VALUE */
+const notReachable: _enum_for_ForwardingReason.notReachable = ForwardingReason.notReachable; /* SHORT_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary ForwardingReason_busy
@@ -107,7 +107,7 @@ const notReachable: ForwardingReason = ForwardingReason.notReachable; /* SHORT_N
  * @type {number}
  */
 export
-const ForwardingReason_busy: ForwardingReason = ForwardingReason.busy; /* LONG_NAMED_ENUMERATED_VALUE */
+const ForwardingReason_busy: _enum_for_ForwardingReason.busy = ForwardingReason.busy; /* LONG_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary busy
@@ -119,7 +119,7 @@ const ForwardingReason_busy: ForwardingReason = ForwardingReason.busy; /* LONG_N
  * @type {number}
  */
 export
-const busy: ForwardingReason = ForwardingReason.busy; /* SHORT_NAMED_ENUMERATED_VALUE */
+const busy: _enum_for_ForwardingReason.busy = ForwardingReason.busy; /* SHORT_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary ForwardingReason_noReply
@@ -131,7 +131,7 @@ const busy: ForwardingReason = ForwardingReason.busy; /* SHORT_NAMED_ENUMERATED_
  * @type {number}
  */
 export
-const ForwardingReason_noReply: ForwardingReason = ForwardingReason.noReply; /* LONG_NAMED_ENUMERATED_VALUE */
+const ForwardingReason_noReply: _enum_for_ForwardingReason.noReply = ForwardingReason.noReply; /* LONG_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary noReply
@@ -143,7 +143,7 @@ const ForwardingReason_noReply: ForwardingReason = ForwardingReason.noReply; /* 
  * @type {number}
  */
 export
-const noReply: ForwardingReason = ForwardingReason.noReply; /* SHORT_NAMED_ENUMERATED_VALUE */
+const noReply: _enum_for_ForwardingReason.noReply = ForwardingReason.noReply; /* SHORT_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary Decodes an ASN.1 element into a(n) ForwardingReason
@@ -151,7 +151,7 @@ const noReply: ForwardingReason = ForwardingReason.noReply; /* SHORT_NAMED_ENUME
  * @param el The element being decoded.
  * @returns The decoded data structure.
  */
-export const _decode_ForwardingReason = $._decodeEnumerated;
+export const _decode_ForwardingReason: $.ASN1Decoder<number> = $._decodeEnumerated;
 
 /**
  * @summary Encodes a(n) ForwardingReason into an ASN.1 Element.
@@ -160,7 +160,7 @@ export const _decode_ForwardingReason = $._decodeEnumerated;
  * @param elGetter A function that can be used to get new ASN.1 elements.
  * @returns {_Element} The ForwardingReason, encoded as an ASN.1 Element.
  */
-export const _encode_ForwardingReason = $._encodeEnumerated;
+export const _encode_ForwardingReason: $.ASN1Encoder<number> = $._encodeEnumerated;
 
 
 /* eslint-enable */

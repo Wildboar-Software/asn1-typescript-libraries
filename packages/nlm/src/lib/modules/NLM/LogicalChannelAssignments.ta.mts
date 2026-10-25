@@ -1,7 +1,7 @@
 /* eslint-disable */
 import {
-    OPTIONAL,
-    ASN1Element as _Element,
+    type OPTIONAL,
+    type ASN1Element as _Element,
     ASN1TagClass as _TagClass,
     ASN1Construction as _Construction,
     ASN1UniversalType as _UniversalType,
@@ -12,7 +12,7 @@ import {
 } from '@wildboar/asn1';
 import * as $ from '@wildboar/asn1/functional';
 import {
-    LogicalChannelId,
+    type LogicalChannelId,
     _decode_LogicalChannelId,
     _encode_LogicalChannelId,
 } from '../NLM/LogicalChannelId.ta.mjs';
@@ -57,7 +57,7 @@ export class LogicalChannelAssignments {
      * @public
      * @readonly
      */
-    readonly pVC: LogicalChannelId[];
+    public readonly pVC: LogicalChannelId[];
     /**
      * @summary `incoming`.
      * @description
@@ -69,7 +69,7 @@ export class LogicalChannelAssignments {
      * @public
      * @readonly
      */
-    readonly incoming?: OPTIONAL<LogicalChannelRange>;
+    public readonly incoming?: OPTIONAL<LogicalChannelRange>;
     /**
      * @summary `twoWay`.
      * @description
@@ -81,7 +81,7 @@ export class LogicalChannelAssignments {
      * @public
      * @readonly
      */
-    readonly twoWay?: OPTIONAL<LogicalChannelRange>;
+    public readonly twoWay?: OPTIONAL<LogicalChannelRange>;
     /**
      * @summary `outgoing`.
      * @description
@@ -93,7 +93,7 @@ export class LogicalChannelAssignments {
      * @public
      * @readonly
      */
-    readonly outgoing?: OPTIONAL<LogicalChannelRange>;
+    public readonly outgoing?: OPTIONAL<LogicalChannelRange>;
 
     constructor(
         pVC: LogicalChannelId[],

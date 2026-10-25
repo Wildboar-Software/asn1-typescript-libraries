@@ -1,9 +1,9 @@
 /* eslint-disable */
 import {
-    ASN1Element as _Element,
+    type ASN1Element as _Element,
     ASN1TagClass as _TagClass,
-    BOOLEAN,
-    OPTIONAL,
+    type BOOLEAN,
+    type OPTIONAL,
 } from "@wildboar/asn1";
 import * as $ from "@wildboar/asn1/functional";
 import {
@@ -17,7 +17,7 @@ import {
     _encode_Attribute,
 } from "../InformationFramework/Attribute.ta.mjs";
 import {
-    DistinguishedName,
+    type DistinguishedName,
     _decode_DistinguishedName,
     _encode_DistinguishedName,
 } from "../InformationFramework/DistinguishedName.ta.mjs";
@@ -43,57 +43,69 @@ import {
  *
  */
 export class CommonResults {
+    /**
+     * @summary `securityParameters`.
+     * @description
+     *
+     * Required if the result/error is signed; absence ≡ empty set.
+     *
+     * @public
+     * @readonly
+     */
+    public readonly securityParameters?: OPTIONAL<SecurityParameters>;
+    /**
+     * @summary `performer`.
+     * @description
+     *
+     * DN of the DSA that signed; needed when the result is signed.
+     *
+     * @public
+     * @readonly
+     */
+    public readonly performer?: OPTIONAL<DistinguishedName>;
+    /**
+     * @summary `aliasDereferenced`.
+     * @description
+     *
+     * DEFAULT FALSE. TRUE if any alias in the purported name was
+     * dereferenced.
+     *
+     * @public
+     * @readonly
+     */
+    public readonly aliasDereferenced?: OPTIONAL<BOOLEAN>;
+    /**
+     * @summary `notification`.
+     * @description
+     *
+     * SEQUENCE SIZE (1..MAX). Qualifies the result/error; not
+     * necessarily stored attributes. Standard notification attrs in
+     * X.520 clause 6.13.
+     *
+     * @public
+     * @readonly
+     */
+    public readonly notification?: OPTIONAL<Attribute[]>;
+    /**
+     * @summary Extensions that are not recognized.
+     * @public
+     * @readonly
+     */
+    public readonly _unrecognizedExtensionsList: _Element[];
+
     constructor(
-        /**
-         * @summary `securityParameters`.
-         * @description
-         *
-         * Required if the result/error is signed; absence ≡ empty set.
-         *
-         * @public
-         * @readonly
-         */
-        readonly securityParameters?: OPTIONAL<SecurityParameters>,
-        /**
-         * @summary `performer`.
-         * @description
-         *
-         * DN of the DSA that signed; needed when the result is signed.
-         *
-         * @public
-         * @readonly
-         */
-        readonly performer?: OPTIONAL<DistinguishedName>,
-        /**
-         * @summary `aliasDereferenced`.
-         * @description
-         *
-         * DEFAULT FALSE. TRUE if any alias in the purported name was
-         * dereferenced.
-         *
-         * @public
-         * @readonly
-         */
-        readonly aliasDereferenced?: OPTIONAL<BOOLEAN>,
-        /**
-         * @summary `notification`.
-         * @description
-         *
-         * SEQUENCE SIZE (1..MAX). Qualifies the result/error; not
-         * necessarily stored attributes. Standard notification attrs in
-         * X.520 clause 6.13.
-         *
-         * @public
-         * @readonly
-         */
-        readonly notification?: OPTIONAL<Attribute[]>,
-        /**
-         * @summary Extensions that are not recognized.
-         * @public
-         * @readonly
-         */
-        readonly _unrecognizedExtensionsList: _Element[] = []
-    ) {}
+        securityParameters?: OPTIONAL<SecurityParameters>,
+        performer?: OPTIONAL<DistinguishedName>,
+        aliasDereferenced?: OPTIONAL<BOOLEAN>,
+        notification?: OPTIONAL<Attribute[]>,
+        _unrecognizedExtensionsList: _Element[] = []
+    ) {
+        this.securityParameters = securityParameters;
+        this.performer = performer;
+        this.aliasDereferenced = aliasDereferenced;
+        this.notification = notification;
+        this._unrecognizedExtensionsList = _unrecognizedExtensionsList;
+    }
 
     /**
      * @summary Restructures an object into a CommonResults

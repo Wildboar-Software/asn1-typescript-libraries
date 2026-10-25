@@ -11,7 +11,7 @@ import {
 } from '@wildboar/asn1';
 import * as $ from '@wildboar/asn1/functional';
 import {
-  Lock,
+  type Lock,
   _decode_Lock,
   _encode_Lock,
 } from '../ISO8571-FTAM/Lock.ta.mjs';
@@ -57,7 +57,7 @@ export class Concurrency_Control {
    * @public
    * @readonly
    */
-  readonly read: Lock;
+  public readonly read: Lock;
   /**
    * @summary `insert`.
    * @description
@@ -67,7 +67,7 @@ export class Concurrency_Control {
    * @public
    * @readonly
    */
-  readonly insert: Lock;
+  public readonly insert: Lock;
   /**
    * @summary `replace`.
    * @description
@@ -77,7 +77,7 @@ export class Concurrency_Control {
    * @public
    * @readonly
    */
-  readonly replace: Lock;
+  public readonly replace: Lock;
   /**
    * @summary `extend`.
    * @description
@@ -87,7 +87,7 @@ export class Concurrency_Control {
    * @public
    * @readonly
    */
-  readonly extend: Lock;
+  public readonly extend: Lock;
   /**
    * @summary `erase`.
    * @description
@@ -97,7 +97,7 @@ export class Concurrency_Control {
    * @public
    * @readonly
    */
-  readonly erase: Lock;
+  public readonly erase: Lock;
   /**
    * @summary `read_attribute`.
    * @description
@@ -107,7 +107,7 @@ export class Concurrency_Control {
    * @public
    * @readonly
    */
-  readonly read_attribute: Lock;
+  public readonly read_attribute: Lock;
   /**
    * @summary `change_attribute`.
    * @description
@@ -117,7 +117,7 @@ export class Concurrency_Control {
    * @public
    * @readonly
    */
-  readonly change_attribute: Lock;
+  public readonly change_attribute: Lock;
   /**
    * @summary `delete_Object`.
    * @description
@@ -128,7 +128,7 @@ export class Concurrency_Control {
    * @public
    * @readonly
    */
-  readonly delete_Object: Lock;
+  public readonly delete_Object: Lock;
 
   constructor(
     read: Lock,

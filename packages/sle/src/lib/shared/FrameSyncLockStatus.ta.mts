@@ -1,10 +1,10 @@
 /* eslint-disable */
 import {
-    ASN1Element as _Element,
+    type ASN1Element as _Element,
     ASN1Error
 } from "@wildboar/asn1";
 import * as $ from "@wildboar/asn1/functional";
-import { _decode_LockStatus, _encode_LockStatus, LockStatus,
+import { _decode_LockStatus, _encode_LockStatus, type LockStatus,
     LockStatus_inLock,
     LockStatus_outOfLock,
     LockStatus_unknown
@@ -57,8 +57,6 @@ function _decode_FrameSyncLockStatus (el: _Element): FrameSyncLockStatus {
     return _decoded;
 }
 
-let _cached_encoder_for_FrameSyncLockStatus: $.ASN1Encoder<FrameSyncLockStatus> | null = null;
-
 /**
  * @summary Encodes a(n) FrameSyncLockStatus into an ASN.1 Element.
  * @function
@@ -66,11 +64,7 @@ let _cached_encoder_for_FrameSyncLockStatus: $.ASN1Encoder<FrameSyncLockStatus> 
  * @param elGetter A function that can be used to get new ASN.1 elements.
  * @returns {_Element} The FrameSyncLockStatus, encoded as an ASN.1 Element.
  */
-export
-function _encode_FrameSyncLockStatus (value: FrameSyncLockStatus, elGetter: $.ASN1Encoder<any>): _Element {
-    if (!_cached_encoder_for_FrameSyncLockStatus) { _cached_encoder_for_FrameSyncLockStatus = _encode_LockStatus; }
-    return _cached_encoder_for_FrameSyncLockStatus(value, elGetter);
-}
+export const _encode_FrameSyncLockStatus: $.ASN1Encoder<FrameSyncLockStatus> = _encode_LockStatus;
 
 
 /* eslint-enable */

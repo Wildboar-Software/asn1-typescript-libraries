@@ -1,9 +1,9 @@
 /* eslint-disable */
 import {
-    OPTIONAL,
-    BOOLEAN,
-    INTEGER,
-    ASN1Element as _Element,
+    type OPTIONAL,
+    type BOOLEAN,
+    type INTEGER,
+    type ASN1Element as _Element,
     ASN1TagClass as _TagClass,
     ASN1Construction as _Construction,
     ASN1UniversalType as _UniversalType,
@@ -14,17 +14,17 @@ import {
 } from '@wildboar/asn1';
 import * as $ from '@wildboar/asn1/functional';
 import {
-    Range,
+    type Range,
     _decode_Range,
     _encode_Range,
 } from '../MSAbstractService/Range.ta.mjs';
 import {
-    Filter,
+    type Filter,
     _decode_Filter,
     _encode_Filter,
 } from '../MSAbstractService/Filter.ta.mjs';
 import {
-    OverrideRestrictions,
+    type OverrideRestrictions,
     _decode_OverrideRestrictions,
     _encode_OverrideRestrictions,
 } from '../MSAbstractService/OverrideRestrictions.ta.mjs';
@@ -52,38 +52,50 @@ import {
  *
  */
 export class Selector {
+    /**
+     * @summary `child_entries`.
+     * @public
+     * @readonly
+     */
+    public readonly child_entries?: OPTIONAL<BOOLEAN>;
+    /**
+     * @summary `range`.
+     * @public
+     * @readonly
+     */
+    public readonly range?: OPTIONAL<Range>;
+    /**
+     * @summary `filter`.
+     * @public
+     * @readonly
+     */
+    public readonly filter?: OPTIONAL<Filter>;
+    /**
+     * @summary `limit`.
+     * @public
+     * @readonly
+     */
+    public readonly limit?: OPTIONAL<INTEGER>;
+    /**
+     * @summary `override`.
+     * @public
+     * @readonly
+     */
+    public readonly override?: OPTIONAL<OverrideRestrictions>;
+
     constructor(
-        /**
-         * @summary `child_entries`.
-         * @public
-         * @readonly
-         */
-        readonly child_entries?: OPTIONAL<BOOLEAN>,
-        /**
-         * @summary `range`.
-         * @public
-         * @readonly
-         */
-        readonly range?: OPTIONAL<Range>,
-        /**
-         * @summary `filter`.
-         * @public
-         * @readonly
-         */
-        readonly filter?: OPTIONAL<Filter>,
-        /**
-         * @summary `limit`.
-         * @public
-         * @readonly
-         */
-        readonly limit?: OPTIONAL<INTEGER>,
-        /**
-         * @summary `override`.
-         * @public
-         * @readonly
-         */
-        readonly override?: OPTIONAL<OverrideRestrictions>
-    ) {}
+        child_entries?: OPTIONAL<BOOLEAN>,
+        range?: OPTIONAL<Range>,
+        filter?: OPTIONAL<Filter>,
+        limit?: OPTIONAL<INTEGER>,
+        override?: OPTIONAL<OverrideRestrictions>
+    ) {
+        this.child_entries = child_entries;
+        this.range = range;
+        this.filter = filter;
+        this.limit = limit;
+        this.override = override;
+    }
 
     /**
      * @summary Restructures an object into a Selector

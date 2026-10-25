@@ -1,6 +1,6 @@
 /* eslint-disable */
 import {
-    ASN1Element as _Element,
+    type ASN1Element as _Element,
     ASN1TagClass as _TagClass,
     ASN1Construction as _Construction,
     ASN1UniversalType as _UniversalType,
@@ -10,7 +10,7 @@ import {
     ASN1ConstructionError as _ConstructionError,
 } from "@wildboar/asn1";
 import * as $ from "@wildboar/asn1/functional";
-import { FileName, _decode_FileName, _encode_FileName } from "../ISO-9506-MMS-1/FileName.ta.mjs";
+import { type FileName, _decode_FileName, _encode_FileName } from "../ISO-9506-MMS-1/FileName.ta.mjs";
 
 
 /**
@@ -38,35 +38,41 @@ import { FileName, _decode_FileName, _encode_FileName } from "../ISO-9506-MMS-1/
  */
 export
 class FileRename_Request {
+    /**
+     * @summary `currentFileName`.
+     * @description
+     *
+     * Identifies a single file to rename in the
+     * server's virtual filestore. Wildcard
+     * resolution should yield a single name.
+     *
+     * [ISO 9506-1:2003 Annex D, D.6.1.1.1]
+     *
+     * @public
+     * @readonly
+     */
+    public readonly currentFileName: FileName;
+    /**
+     * @summary `newFileName`.
+     * @description
+     *
+     * New name of the designated file in the
+     * server's virtual filestore.
+     *
+     * [ISO 9506-1:2003 Annex D, D.6.1.1.2]
+     *
+     * @public
+     * @readonly
+     */
+    public readonly newFileName: FileName;
+
     constructor (
-        /**
-         * @summary `currentFileName`.
-         * @description
-         *
-         * Identifies a single file to rename in the
-         * server's virtual filestore. Wildcard
-         * resolution should yield a single name.
-         *
-         * [ISO 9506-1:2003 Annex D, D.6.1.1.1]
-         *
-         * @public
-         * @readonly
-         */
-        readonly currentFileName: FileName,
-        /**
-         * @summary `newFileName`.
-         * @description
-         *
-         * New name of the designated file in the
-         * server's virtual filestore.
-         *
-         * [ISO 9506-1:2003 Annex D, D.6.1.1.2]
-         *
-         * @public
-         * @readonly
-         */
-        readonly newFileName: FileName
-    ) {}
+        currentFileName: FileName,
+        newFileName: FileName
+    ) {
+        this.currentFileName = currentFileName;
+        this.newFileName = newFileName;
+    }
 
     /**
      * @summary Restructures an object into a FileRename_Request

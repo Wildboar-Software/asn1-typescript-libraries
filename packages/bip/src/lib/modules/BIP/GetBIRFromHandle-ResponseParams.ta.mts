@@ -44,7 +44,7 @@ export class GetBIRFromHandle_ResponseParams {
    * @public
    * @readonly
    */
-  readonly bir: BioAPI_BIR;
+  public readonly bir: BioAPI_BIR;
 
   constructor(
     bir: BioAPI_BIR

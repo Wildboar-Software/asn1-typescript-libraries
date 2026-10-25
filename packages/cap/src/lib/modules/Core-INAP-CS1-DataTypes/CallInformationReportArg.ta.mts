@@ -1,7 +1,7 @@
 /* eslint-disable */
 import {
-    OPTIONAL,
-    ASN1Element as _Element,
+    type OPTIONAL,
+    type ASN1Element as _Element,
     ASN1TagClass as _TagClass,
     ASN1Construction as _Construction,
     ASN1UniversalType as _UniversalType,
@@ -11,7 +11,7 @@ import {
     ASN1ConstructionError as _ConstructionError,
 } from "@wildboar/asn1";
 import * as $ from "@wildboar/asn1/functional";
-import { RequestedInformationList, _decode_RequestedInformationList, _encode_RequestedInformationList } from "../Core-INAP-CS1-DataTypes/RequestedInformationList.ta.mjs";
+import { type RequestedInformationList, _decode_RequestedInformationList, _encode_RequestedInformationList } from "../Core-INAP-CS1-DataTypes/RequestedInformationList.ta.mjs";
 import { ExtensionField, _decode_ExtensionField, _encode_ExtensionField } from "../Core-INAP-CS1-DataTypes/ExtensionField.ta.mjs";
 
 
@@ -33,20 +33,26 @@ import { ExtensionField, _decode_ExtensionField, _encode_ExtensionField } from "
  */
 export
 class CallInformationReportArg {
+    /**
+     * @summary `requestedInformationList`.
+     * @public
+     * @readonly
+     */
+    public readonly requestedInformationList: RequestedInformationList;
+    /**
+     * @summary `extensions`.
+     * @public
+     * @readonly
+     */
+    public readonly extensions?: OPTIONAL<ExtensionField[]>;
+
     constructor (
-        /**
-         * @summary `requestedInformationList`.
-         * @public
-         * @readonly
-         */
-        readonly requestedInformationList: RequestedInformationList,
-        /**
-         * @summary `extensions`.
-         * @public
-         * @readonly
-         */
-        readonly extensions?: OPTIONAL<ExtensionField[]>
-    ) {}
+        requestedInformationList: RequestedInformationList,
+        extensions?: OPTIONAL<ExtensionField[]>
+    ) {
+        this.requestedInformationList = requestedInformationList;
+        this.extensions = extensions;
+    }
 
     /**
      * @summary Restructures an object into a CallInformationReportArg

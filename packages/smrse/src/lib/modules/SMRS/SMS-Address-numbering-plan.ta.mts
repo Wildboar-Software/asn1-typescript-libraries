@@ -1,6 +1,6 @@
 /* eslint-disable */
 import {
-    INTEGER
+    type INTEGER
 } from "@wildboar/asn1";
 import * as $ from "@wildboar/asn1/functional";
 
@@ -39,7 +39,7 @@ type SMS_Address_numbering_plan = INTEGER;
  * @type {number}
  */
 export
-const SMS_Address_numbering_plan_unknown_numbering: SMS_Address_numbering_plan = 0; /* LONG_NAMED_INTEGER_VALUE */
+const SMS_Address_numbering_plan_unknown_numbering: 0 = 0 satisfies SMS_Address_numbering_plan; /* LONG_NAMED_INTEGER_VALUE */
 
 /**
  * @summary SMS_Address_numbering_plan_unknown_numbering
@@ -47,7 +47,7 @@ const SMS_Address_numbering_plan_unknown_numbering: SMS_Address_numbering_plan =
  * @type {number}
  */
 export
-const unknown_numbering: SMS_Address_numbering_plan = SMS_Address_numbering_plan_unknown_numbering; /* SHORT_NAMED_INTEGER_VALUE */
+const unknown_numbering: 0 = SMS_Address_numbering_plan_unknown_numbering; /* SHORT_NAMED_INTEGER_VALUE */
 
 /**
  * @summary SMS_Address_numbering_plan_iSDN_numbering
@@ -55,7 +55,7 @@ const unknown_numbering: SMS_Address_numbering_plan = SMS_Address_numbering_plan
  * @type {number}
  */
 export
-const SMS_Address_numbering_plan_iSDN_numbering: SMS_Address_numbering_plan = 1; /* LONG_NAMED_INTEGER_VALUE */
+const SMS_Address_numbering_plan_iSDN_numbering: 1 = 1 satisfies SMS_Address_numbering_plan; /* LONG_NAMED_INTEGER_VALUE */
 
 /**
  * @summary SMS_Address_numbering_plan_iSDN_numbering
@@ -63,7 +63,7 @@ const SMS_Address_numbering_plan_iSDN_numbering: SMS_Address_numbering_plan = 1;
  * @type {number}
  */
 export
-const iSDN_numbering: SMS_Address_numbering_plan = SMS_Address_numbering_plan_iSDN_numbering; /* SHORT_NAMED_INTEGER_VALUE */
+const iSDN_numbering: 1 = SMS_Address_numbering_plan_iSDN_numbering; /* SHORT_NAMED_INTEGER_VALUE */
 
 /**
  * @summary SMS_Address_numbering_plan_data_network_numbering
@@ -76,7 +76,7 @@ const iSDN_numbering: SMS_Address_numbering_plan = SMS_Address_numbering_plan_iS
  * @type {number}
  */
 export
-const SMS_Address_numbering_plan_data_network_numbering: SMS_Address_numbering_plan = 3; /* LONG_NAMED_INTEGER_VALUE */
+const SMS_Address_numbering_plan_data_network_numbering: 3 = 3 satisfies SMS_Address_numbering_plan; /* LONG_NAMED_INTEGER_VALUE */
 
 /**
  * @summary SMS_Address_numbering_plan_data_network_numbering
@@ -89,7 +89,7 @@ const SMS_Address_numbering_plan_data_network_numbering: SMS_Address_numbering_p
  * @type {number}
  */
 export
-const data_network_numbering: SMS_Address_numbering_plan = SMS_Address_numbering_plan_data_network_numbering; /* SHORT_NAMED_INTEGER_VALUE */
+const data_network_numbering: 3 = SMS_Address_numbering_plan_data_network_numbering; /* SHORT_NAMED_INTEGER_VALUE */
 
 /**
  * @summary SMS_Address_numbering_plan_telex_numbering
@@ -97,7 +97,7 @@ const data_network_numbering: SMS_Address_numbering_plan = SMS_Address_numbering
  * @type {number}
  */
 export
-const SMS_Address_numbering_plan_telex_numbering: SMS_Address_numbering_plan = 4; /* LONG_NAMED_INTEGER_VALUE */
+const SMS_Address_numbering_plan_telex_numbering: 4 = 4 satisfies SMS_Address_numbering_plan; /* LONG_NAMED_INTEGER_VALUE */
 
 /**
  * @summary SMS_Address_numbering_plan_telex_numbering
@@ -105,7 +105,7 @@ const SMS_Address_numbering_plan_telex_numbering: SMS_Address_numbering_plan = 4
  * @type {number}
  */
 export
-const telex_numbering: SMS_Address_numbering_plan = SMS_Address_numbering_plan_telex_numbering; /* SHORT_NAMED_INTEGER_VALUE */
+const telex_numbering: 4 = SMS_Address_numbering_plan_telex_numbering; /* SHORT_NAMED_INTEGER_VALUE */
 
 /**
  * @summary SMS_Address_numbering_plan_national_numbering
@@ -118,7 +118,7 @@ const telex_numbering: SMS_Address_numbering_plan = SMS_Address_numbering_plan_t
  * @type {number}
  */
 export
-const SMS_Address_numbering_plan_national_numbering: SMS_Address_numbering_plan = 8; /* LONG_NAMED_INTEGER_VALUE */
+const SMS_Address_numbering_plan_national_numbering: 8 = 8 satisfies SMS_Address_numbering_plan; /* LONG_NAMED_INTEGER_VALUE */
 
 /**
  * @summary SMS_Address_numbering_plan_national_numbering
@@ -131,7 +131,7 @@ const SMS_Address_numbering_plan_national_numbering: SMS_Address_numbering_plan 
  * @type {number}
  */
 export
-const national_numbering: SMS_Address_numbering_plan = SMS_Address_numbering_plan_national_numbering; /* SHORT_NAMED_INTEGER_VALUE */
+const national_numbering: 8 = SMS_Address_numbering_plan_national_numbering; /* SHORT_NAMED_INTEGER_VALUE */
 
 /**
  * @summary SMS_Address_numbering_plan_private_numbering
@@ -144,7 +144,7 @@ const national_numbering: SMS_Address_numbering_plan = SMS_Address_numbering_pla
  * @type {number}
  */
 export
-const SMS_Address_numbering_plan_private_numbering: SMS_Address_numbering_plan = 9; /* LONG_NAMED_INTEGER_VALUE */
+const SMS_Address_numbering_plan_private_numbering: 9 = 9 satisfies SMS_Address_numbering_plan; /* LONG_NAMED_INTEGER_VALUE */
 
 /**
  * @summary SMS_Address_numbering_plan_private_numbering
@@ -157,9 +157,9 @@ const SMS_Address_numbering_plan_private_numbering: SMS_Address_numbering_plan =
  * @type {number}
  */
 export
-const private_numbering: SMS_Address_numbering_plan = SMS_Address_numbering_plan_private_numbering; /* SHORT_NAMED_INTEGER_VALUE */
-export const _decode_SMS_Address_numbering_plan = $._decodeInteger;
-export const _encode_SMS_Address_numbering_plan = $._encodeInteger;
+const private_numbering: 9 = SMS_Address_numbering_plan_private_numbering; /* SHORT_NAMED_INTEGER_VALUE */
+export const _decode_SMS_Address_numbering_plan: $.ASN1Decoder<INTEGER> = $._decodeInteger;
+export const _encode_SMS_Address_numbering_plan: $.ASN1Encoder<INTEGER> = $._encodeInteger;
 
 
 /* eslint-enable */

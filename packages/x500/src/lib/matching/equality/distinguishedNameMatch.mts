@@ -3,7 +3,7 @@ import type { ASN1Element, OBJECT_IDENTIFIER } from "@wildboar/asn1";
 import { readDecoded } from "../readValue.mjs";
 import { compareRDNSequence } from "@wildboar/dn";
 import {
-    DistinguishedName,
+    type DistinguishedName,
     _decode_DistinguishedName,
 } from "../../modules/InformationFramework/DistinguishedName.ta.mjs";
 

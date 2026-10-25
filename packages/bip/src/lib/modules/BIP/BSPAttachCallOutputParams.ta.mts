@@ -11,7 +11,7 @@ import {
 } from '@wildboar/asn1';
 import * as $ from '@wildboar/asn1/functional';
 import {
-  BioAPI_HANDLE,
+  type BioAPI_HANDLE,
   _decode_BioAPI_HANDLE,
   _encode_BioAPI_HANDLE,
 } from '../BIP/BioAPI-HANDLE.ta.mjs';
@@ -48,7 +48,7 @@ export class BSPAttachCallOutputParams {
    * @public
    * @readonly
    */
-  readonly newBSPHandle: BioAPI_HANDLE;
+  public readonly newBSPHandle: BioAPI_HANDLE;
 
   constructor(
     newBSPHandle: BioAPI_HANDLE

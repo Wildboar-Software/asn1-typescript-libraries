@@ -116,7 +116,7 @@ type TraceRecordType = _enum_for_TraceRecordType;
  * @enum {number}
  */
 export
-const TraceRecordType = _enum_for_TraceRecordType;
+const TraceRecordType: typeof _enum_for_TraceRecordType = _enum_for_TraceRecordType;
 
 /**
  * @summary TraceRecordType_traceStart
@@ -130,7 +130,7 @@ const TraceRecordType = _enum_for_TraceRecordType;
  * @type {number}
  */
 export
-const TraceRecordType_traceStart: TraceRecordType = TraceRecordType.traceStart; /* LONG_NAMED_ENUMERATED_VALUE */
+const TraceRecordType_traceStart: _enum_for_TraceRecordType.traceStart = TraceRecordType.traceStart; /* LONG_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary traceStart
@@ -144,7 +144,7 @@ const TraceRecordType_traceStart: TraceRecordType = TraceRecordType.traceStart; 
  * @type {number}
  */
 export
-const traceStart: TraceRecordType = TraceRecordType.traceStart; /* SHORT_NAMED_ENUMERATED_VALUE */
+const traceStart: _enum_for_TraceRecordType.traceStart = TraceRecordType.traceStart; /* SHORT_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary TraceRecordType_cellTrafficTrace
@@ -158,7 +158,7 @@ const traceStart: TraceRecordType = TraceRecordType.traceStart; /* SHORT_NAMED_E
  * @type {number}
  */
 export
-const TraceRecordType_cellTrafficTrace: TraceRecordType = TraceRecordType.cellTrafficTrace; /* LONG_NAMED_ENUMERATED_VALUE */
+const TraceRecordType_cellTrafficTrace: _enum_for_TraceRecordType.cellTrafficTrace = TraceRecordType.cellTrafficTrace; /* LONG_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary cellTrafficTrace
@@ -172,7 +172,7 @@ const TraceRecordType_cellTrafficTrace: TraceRecordType = TraceRecordType.cellTr
  * @type {number}
  */
 export
-const cellTrafficTrace: TraceRecordType = TraceRecordType.cellTrafficTrace; /* SHORT_NAMED_ENUMERATED_VALUE */
+const cellTrafficTrace: _enum_for_TraceRecordType.cellTrafficTrace = TraceRecordType.cellTrafficTrace; /* SHORT_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary TraceRecordType_traceDataDelivery
@@ -187,7 +187,7 @@ const cellTrafficTrace: TraceRecordType = TraceRecordType.cellTrafficTrace; /* S
  * @type {number}
  */
 export
-const TraceRecordType_traceDataDelivery: TraceRecordType = TraceRecordType.traceDataDelivery; /* LONG_NAMED_ENUMERATED_VALUE */
+const TraceRecordType_traceDataDelivery: _enum_for_TraceRecordType.traceDataDelivery = TraceRecordType.traceDataDelivery; /* LONG_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary traceDataDelivery
@@ -202,7 +202,7 @@ const TraceRecordType_traceDataDelivery: TraceRecordType = TraceRecordType.trace
  * @type {number}
  */
 export
-const traceDataDelivery: TraceRecordType = TraceRecordType.traceDataDelivery; /* SHORT_NAMED_ENUMERATED_VALUE */
+const traceDataDelivery: _enum_for_TraceRecordType.traceDataDelivery = TraceRecordType.traceDataDelivery; /* SHORT_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary TraceRecordType_traceDeactivation
@@ -216,7 +216,7 @@ const traceDataDelivery: TraceRecordType = TraceRecordType.traceDataDelivery; /*
  * @type {number}
  */
 export
-const TraceRecordType_traceDeactivation: TraceRecordType = TraceRecordType.traceDeactivation; /* LONG_NAMED_ENUMERATED_VALUE */
+const TraceRecordType_traceDeactivation: _enum_for_TraceRecordType.traceDeactivation = TraceRecordType.traceDeactivation; /* LONG_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary traceDeactivation
@@ -230,7 +230,7 @@ const TraceRecordType_traceDeactivation: TraceRecordType = TraceRecordType.trace
  * @type {number}
  */
 export
-const traceDeactivation: TraceRecordType = TraceRecordType.traceDeactivation; /* SHORT_NAMED_ENUMERATED_VALUE */
+const traceDeactivation: _enum_for_TraceRecordType.traceDeactivation = TraceRecordType.traceDeactivation; /* SHORT_NAMED_ENUMERATED_VALUE */
 export const _decode_TraceRecordType: $.ASN1Decoder<TraceRecordType> = $._decodeEnumerated;
 export const _encode_TraceRecordType: $.ASN1Encoder<TraceRecordType> = $._encodeEnumerated;
 

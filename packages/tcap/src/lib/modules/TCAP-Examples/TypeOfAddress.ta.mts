@@ -1,6 +1,6 @@
 /* eslint-disable */
 import {
-    ASN1Element as _Element,
+    type ASN1Element as _Element,
     ASN1TagClass as _TagClass,
     ASN1Construction as _Construction,
     ASN1UniversalType as _UniversalType,
@@ -55,14 +55,14 @@ export type TypeOfAddress = _enum_for_TypeOfAddress;
  *
  * @enum {number}
  */
-export const TypeOfAddress = _enum_for_TypeOfAddress;
+export const TypeOfAddress: typeof _enum_for_TypeOfAddress = _enum_for_TypeOfAddress;
 
 /**
  * @summary TypeOfAddress_national
  * @constant
  * @type {number}
  */
-export const TypeOfAddress_national: TypeOfAddress =
+export const TypeOfAddress_national: _enum_for_TypeOfAddress.national =
     TypeOfAddress.national; /* LONG_NAMED_ENUMERATED_VALUE */
 
 /**
@@ -70,7 +70,7 @@ export const TypeOfAddress_national: TypeOfAddress =
  * @constant
  * @type {number}
  */
-export const national: TypeOfAddress =
+export const national: _enum_for_TypeOfAddress.national =
     TypeOfAddress.national; /* SHORT_NAMED_ENUMERATED_VALUE */
 
 /**
@@ -78,7 +78,7 @@ export const national: TypeOfAddress =
  * @constant
  * @type {number}
  */
-export const TypeOfAddress_international: TypeOfAddress =
+export const TypeOfAddress_international: _enum_for_TypeOfAddress.international =
     TypeOfAddress.international; /* LONG_NAMED_ENUMERATED_VALUE */
 
 /**
@@ -86,7 +86,7 @@ export const TypeOfAddress_international: TypeOfAddress =
  * @constant
  * @type {number}
  */
-export const international: TypeOfAddress =
+export const international: _enum_for_TypeOfAddress.international =
     TypeOfAddress.international; /* SHORT_NAMED_ENUMERATED_VALUE */
 
 /**
@@ -94,7 +94,7 @@ export const international: TypeOfAddress =
  * @constant
  * @type {number}
  */
-export const TypeOfAddress_private_: TypeOfAddress =
+export const TypeOfAddress_private_: _enum_for_TypeOfAddress.private_ =
     TypeOfAddress.private_; /* LONG_NAMED_ENUMERATED_VALUE */
 
 /**
@@ -102,14 +102,14 @@ export const TypeOfAddress_private_: TypeOfAddress =
  * @constant
  * @type {number}
  */
-export const private_: TypeOfAddress =
+export const private_: _enum_for_TypeOfAddress.private_ =
     TypeOfAddress.private_; /* SHORT_NAMED_ENUMERATED_VALUE */
 
 
-export const _decode_TypeOfAddress = $._decodeEnumerated;
+export const _decode_TypeOfAddress: $.ASN1Decoder<number> = $._decodeEnumerated;
 
 
-export const _encode_TypeOfAddress = $._encodeEnumerated;
+export const _encode_TypeOfAddress: $.ASN1Encoder<number> = $._encodeEnumerated;
 
 
 /* eslint-enable */

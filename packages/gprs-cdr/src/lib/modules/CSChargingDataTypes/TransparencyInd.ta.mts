@@ -76,7 +76,7 @@ type TransparencyInd = _enum_for_TransparencyInd;
  * @enum {number}
  */
 export
-const TransparencyInd = _enum_for_TransparencyInd;
+const TransparencyInd: typeof _enum_for_TransparencyInd = _enum_for_TransparencyInd;
 
 /**
  * @summary TransparencyInd_transparent
@@ -84,7 +84,7 @@ const TransparencyInd = _enum_for_TransparencyInd;
  * @type {number}
  */
 export
-const TransparencyInd_transparent: TransparencyInd = TransparencyInd.transparent; /* LONG_NAMED_ENUMERATED_VALUE */
+const TransparencyInd_transparent: _enum_for_TransparencyInd.transparent = TransparencyInd.transparent; /* LONG_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary transparent
@@ -92,7 +92,7 @@ const TransparencyInd_transparent: TransparencyInd = TransparencyInd.transparent
  * @type {number}
  */
 export
-const transparent: TransparencyInd = TransparencyInd.transparent; /* SHORT_NAMED_ENUMERATED_VALUE */
+const transparent: _enum_for_TransparencyInd.transparent = TransparencyInd.transparent; /* SHORT_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary TransparencyInd_nonTransparent
@@ -100,7 +100,7 @@ const transparent: TransparencyInd = TransparencyInd.transparent; /* SHORT_NAMED
  * @type {number}
  */
 export
-const TransparencyInd_nonTransparent: TransparencyInd = TransparencyInd.nonTransparent; /* LONG_NAMED_ENUMERATED_VALUE */
+const TransparencyInd_nonTransparent: _enum_for_TransparencyInd.nonTransparent = TransparencyInd.nonTransparent; /* LONG_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary nonTransparent
@@ -108,7 +108,7 @@ const TransparencyInd_nonTransparent: TransparencyInd = TransparencyInd.nonTrans
  * @type {number}
  */
 export
-const nonTransparent: TransparencyInd = TransparencyInd.nonTransparent; /* SHORT_NAMED_ENUMERATED_VALUE */
+const nonTransparent: _enum_for_TransparencyInd.nonTransparent = TransparencyInd.nonTransparent; /* SHORT_NAMED_ENUMERATED_VALUE */
 
 export
 const _decode_TransparencyInd: $.ASN1Decoder<TransparencyInd> = $._decodeEnumerated;

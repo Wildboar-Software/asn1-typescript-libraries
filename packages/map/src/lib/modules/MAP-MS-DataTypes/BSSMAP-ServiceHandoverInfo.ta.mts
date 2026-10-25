@@ -1,12 +1,12 @@
 /* eslint-disable */
 import {
     ASN1ConstructionError as _ConstructionError,
-    ASN1Element as _Element,
+    type ASN1Element as _Element,
     ASN1TagClass as _TagClass
 } from "@wildboar/asn1";
 import * as $ from "@wildboar/asn1/functional";
-import { BSSMAP_ServiceHandover, _decode_BSSMAP_ServiceHandover, _encode_BSSMAP_ServiceHandover } from "../MAP-MS-DataTypes/BSSMAP-ServiceHandover.ta.mjs";
-import { RAB_Id, _decode_RAB_Id, _encode_RAB_Id } from "../MAP-MS-DataTypes/RAB-Id.ta.mjs";
+import { type BSSMAP_ServiceHandover, _decode_BSSMAP_ServiceHandover, _encode_BSSMAP_ServiceHandover } from "../MAP-MS-DataTypes/BSSMAP-ServiceHandover.ta.mjs";
+import { type RAB_Id, _decode_RAB_Id, _encode_RAB_Id } from "../MAP-MS-DataTypes/RAB-Id.ta.mjs";
 
 
 /**
@@ -31,31 +31,39 @@ import { RAB_Id, _decode_RAB_Id, _encode_RAB_Id } from "../MAP-MS-DataTypes/RAB-
  */
 export
 class BSSMAP_ServiceHandoverInfo {
+    /**
+     * @summary `bssmap_ServiceHandover`.
+     * @public
+     * @readonly
+     */
+    public readonly bssmap_ServiceHandover: BSSMAP_ServiceHandover;
+    /**
+     * @summary `rab_Id`.
+     * @description
+     *
+     * RAB Identity needed to relate the service handover with the radio
+     * access bearer (3GPP TS 29.002 V19.1.0 clauses 7.6.2.57 and 17.7.1).
+     *
+     * @public
+     * @readonly
+     */
+    public readonly rab_Id: RAB_Id;
+    /**
+     * @summary Extensions that are not recognized.
+     * @public
+     * @readonly
+     */
+    public readonly _unrecognizedExtensionsList: _Element[];
+
     constructor (
-        /**
-         * @summary `bssmap_ServiceHandover`.
-         * @public
-         * @readonly
-         */
-        readonly bssmap_ServiceHandover: BSSMAP_ServiceHandover,
-        /**
-         * @summary `rab_Id`.
-         * @description
-         *
-         * RAB Identity needed to relate the service handover with the radio
-         * access bearer (3GPP TS 29.002 V19.1.0 clauses 7.6.2.57 and 17.7.1).
-         *
-         * @public
-         * @readonly
-         */
-        readonly rab_Id: RAB_Id,
-        /**
-         * @summary Extensions that are not recognized.
-         * @public
-         * @readonly
-         */
-        readonly _unrecognizedExtensionsList: _Element[] = []
-    ) {}
+        bssmap_ServiceHandover: BSSMAP_ServiceHandover,
+        rab_Id: RAB_Id,
+        _unrecognizedExtensionsList: _Element[] = []
+    ) {
+        this.bssmap_ServiceHandover = bssmap_ServiceHandover;
+        this.rab_Id = rab_Id;
+        this._unrecognizedExtensionsList = _unrecognizedExtensionsList;
+    }
 
     /**
      * @summary Restructures an object into a BSSMAP_ServiceHandoverInfo

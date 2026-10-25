@@ -11,7 +11,7 @@ import {
 } from '@wildboar/asn1';
 import * as $ from '@wildboar/asn1/functional';
 import {
-  NonIdentifyingStringOrIndex,
+  type NonIdentifyingStringOrIndex,
   _decode_NonIdentifyingStringOrIndex,
   _encode_NonIdentifyingStringOrIndex,
 } from '../FastInfoset/NonIdentifyingStringOrIndex.ta.mjs';
@@ -40,7 +40,7 @@ export class Comment {
    * @public
    * @readonly
    */
-  readonly content: NonIdentifyingStringOrIndex;
+  public readonly content: NonIdentifyingStringOrIndex;
 
   constructor(
     content: NonIdentifyingStringOrIndex

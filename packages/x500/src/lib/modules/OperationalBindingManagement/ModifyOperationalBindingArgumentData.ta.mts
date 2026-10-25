@@ -1,9 +1,9 @@
 /* eslint-disable */
 import {
-    ASN1Element as _Element,
+    type ASN1Element as _Element,
     ASN1TagClass as _TagClass,
-    OBJECT_IDENTIFIER,
-    OPTIONAL,
+    type OBJECT_IDENTIFIER,
+    type OPTIONAL,
 } from "@wildboar/asn1";
 import * as $ from "@wildboar/asn1/functional";
 import {
@@ -22,7 +22,7 @@ import {
     _encode_ModifiedValidity,
 } from "../OperationalBindingManagement/ModifiedValidity.ta.mjs";
 import {
-    ModifyOperationalBindingArgumentData_initiator,
+    type ModifyOperationalBindingArgumentData_initiator,
     _decode_ModifyOperationalBindingArgumentData_initiator,
     _encode_ModifyOperationalBindingArgumentData_initiator,
 } from "../OperationalBindingManagement/ModifyOperationalBindingArgumentData-initiator.ta.mjs";
@@ -68,62 +68,82 @@ import {
  *
  */
 export class ModifyOperationalBindingArgumentData {
+    /**
+     * @summary `bindingType`.
+     * @public
+     * @readonly
+     */
+    public readonly bindingType: OBJECT_IDENTIFIER;
+    /**
+     * @summary `bindingID`.
+     * @public
+     * @readonly
+     */
+    public readonly bindingID: OperationalBindingID;
+    /**
+     * @summary `accessPoint`.
+     * @public
+     * @readonly
+     */
+    public readonly accessPoint: OPTIONAL<AccessPoint>;
+    /**
+     * @summary `initiator`.
+     * @public
+     * @readonly
+     */
+    public readonly initiator: OPTIONAL<ModifyOperationalBindingArgumentData_initiator>;
+    /**
+     * @summary `newBindingID`.
+     * @public
+     * @readonly
+     */
+    public readonly newBindingID: OperationalBindingID;
+    /**
+     * @summary `newAgreement`.
+     * @public
+     * @readonly
+     */
+    public readonly newAgreement?: OPTIONAL<_Element>;
+    /**
+     * @summary `valid`.
+     * @public
+     * @readonly
+     */
+    public readonly valid?: OPTIONAL<ModifiedValidity>;
+    /**
+     * @summary `securityParameters`.
+     * @public
+     * @readonly
+     */
+    public readonly securityParameters?: OPTIONAL<SecurityParameters>;
+    /**
+     * @summary Extensions that are not recognized.
+     * @public
+     * @readonly
+     */
+    public readonly _unrecognizedExtensionsList: _Element[];
+
     constructor(
-        /**
-         * @summary `bindingType`.
-         * @public
-         * @readonly
-         */
-        readonly bindingType: OBJECT_IDENTIFIER,
-        /**
-         * @summary `bindingID`.
-         * @public
-         * @readonly
-         */
-        readonly bindingID: OperationalBindingID,
-        /**
-         * @summary `accessPoint`.
-         * @public
-         * @readonly
-         */
-        readonly accessPoint: OPTIONAL<AccessPoint>,
-        /**
-         * @summary `initiator`.
-         * @public
-         * @readonly
-         */
-        readonly initiator: OPTIONAL<ModifyOperationalBindingArgumentData_initiator>,
-        /**
-         * @summary `newBindingID`.
-         * @public
-         * @readonly
-         */
-        readonly newBindingID: OperationalBindingID,
-        /**
-         * @summary `newAgreement`.
-         * @public
-         * @readonly
-         */
-        readonly newAgreement?: OPTIONAL<_Element>,
-        /**
-         * @summary `valid`.
-         * @public
-         * @readonly
-         */
-        readonly valid?: OPTIONAL<ModifiedValidity>,
-        /**
-         * @summary `securityParameters`.
-         * @public
-         * @readonly
-         */
-        readonly securityParameters?: OPTIONAL<SecurityParameters>,
-        /**
-         * @summary Extensions that are not recognized.
-         * @public
-         * @readonly
-         */
-        readonly _unrecognizedExtensionsList: _Element[] = []
-    ) {}
+        bindingType: OBJECT_IDENTIFIER,
+        bindingID: OperationalBindingID,
+        accessPoint: OPTIONAL<AccessPoint>,
+        initiator: OPTIONAL<ModifyOperationalBindingArgumentData_initiator>,
+        newBindingID: OperationalBindingID,
+        newAgreement?: OPTIONAL<_Element>,
+        valid?: OPTIONAL<ModifiedValidity>,
+        securityParameters?: OPTIONAL<SecurityParameters>,
+        _unrecognizedExtensionsList: _Element[] = []
+    ) {
+        this.bindingType = bindingType;
+        this.bindingID = bindingID;
+        this.accessPoint = accessPoint;
+        this.initiator = initiator;
+        this.newBindingID = newBindingID;
+        this.newAgreement = newAgreement;
+        this.valid = valid;
+        this.securityParameters = securityParameters;
+        this._unrecognizedExtensionsList = _unrecognizedExtensionsList;
+    }
 
     /**
      * @summary Restructures an object into a ModifyOperationalBindingArgumentData

@@ -1,6 +1,6 @@
 /* eslint-disable */
 import {
-    ASN1Element as _Element,
+    type ASN1Element as _Element,
     ASN1TagClass as _TagClass,
     ASN1Construction as _Construction,
     ASN1UniversalType as _UniversalType,
@@ -62,7 +62,7 @@ type EventTypeBCUSM = _enum_for_EventTypeBCUSM;
  * @enum {number}
  */
 export
-const EventTypeBCUSM = _enum_for_EventTypeBCUSM;
+const EventTypeBCUSM: typeof _enum_for_EventTypeBCUSM = _enum_for_EventTypeBCUSM;
 
 /**
  * @summary EventTypeBCUSM_componentReceived
@@ -70,7 +70,7 @@ const EventTypeBCUSM = _enum_for_EventTypeBCUSM;
  * @type {number}
  */
 export
-const EventTypeBCUSM_componentReceived: EventTypeBCUSM = EventTypeBCUSM.componentReceived; /* LONG_NAMED_ENUMERATED_VALUE */
+const EventTypeBCUSM_componentReceived: _enum_for_EventTypeBCUSM.componentReceived = EventTypeBCUSM.componentReceived; /* LONG_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary componentReceived
@@ -78,7 +78,7 @@ const EventTypeBCUSM_componentReceived: EventTypeBCUSM = EventTypeBCUSM.componen
  * @type {number}
  */
 export
-const componentReceived: EventTypeBCUSM = EventTypeBCUSM.componentReceived; /* SHORT_NAMED_ENUMERATED_VALUE */
+const componentReceived: _enum_for_EventTypeBCUSM.componentReceived = EventTypeBCUSM.componentReceived; /* SHORT_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary EventTypeBCUSM_associationReleaseRequested
@@ -86,7 +86,7 @@ const componentReceived: EventTypeBCUSM = EventTypeBCUSM.componentReceived; /* S
  * @type {number}
  */
 export
-const EventTypeBCUSM_associationReleaseRequested: EventTypeBCUSM = EventTypeBCUSM.associationReleaseRequested; /* LONG_NAMED_ENUMERATED_VALUE */
+const EventTypeBCUSM_associationReleaseRequested: _enum_for_EventTypeBCUSM.associationReleaseRequested = EventTypeBCUSM.associationReleaseRequested; /* LONG_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary associationReleaseRequested
@@ -94,9 +94,9 @@ const EventTypeBCUSM_associationReleaseRequested: EventTypeBCUSM = EventTypeBCUS
  * @type {number}
  */
 export
-const associationReleaseRequested: EventTypeBCUSM = EventTypeBCUSM.associationReleaseRequested; /* SHORT_NAMED_ENUMERATED_VALUE */
-export const _decode_EventTypeBCUSM = $._decodeEnumerated;
-export const _encode_EventTypeBCUSM = $._encodeEnumerated;
+const associationReleaseRequested: _enum_for_EventTypeBCUSM.associationReleaseRequested = EventTypeBCUSM.associationReleaseRequested; /* SHORT_NAMED_ENUMERATED_VALUE */
+export const _decode_EventTypeBCUSM: $.ASN1Decoder<number> = $._decodeEnumerated;
+export const _encode_EventTypeBCUSM: $.ASN1Encoder<number> = $._encodeEnumerated;
 
 
 /* eslint-enable */

@@ -1,17 +1,17 @@
 /* eslint-disable */
 import {
     ASN1ConstructionError as _ConstructionError,
-    ASN1Element as _Element,
+    type ASN1Element as _Element,
     ASN1TagClass as _TagClass,
 } from "@wildboar/asn1";
 import * as $ from "@wildboar/asn1/functional";
 import {
-    CMSVersion,
+    type CMSVersion,
     _decode_CMSVersion,
     _encode_CMSVersion,
 } from "../CryptographicMessageSyntax-2010/CMSVersion.ta.mjs";
 import {
-    EncryptedKey,
+    type EncryptedKey,
     _decode_EncryptedKey,
     _encode_EncryptedKey,
 } from "../CryptographicMessageSyntax-2010/EncryptedKey.ta.mjs";
@@ -21,7 +21,7 @@ import {
     _encode_KEKIdentifier,
 } from "../CryptographicMessageSyntax-2010/KEKIdentifier.ta.mjs";
 import {
-    KeyEncryptionAlgorithmIdentifier,
+    type KeyEncryptionAlgorithmIdentifier,
     _decode_KeyEncryptionAlgorithmIdentifier,
     _encode_KeyEncryptionAlgorithmIdentifier,
 } from "../CryptographicMessageSyntax-2010/KeyEncryptionAlgorithmIdentifier.ta.mjs";
@@ -45,49 +45,59 @@ import {
  *
  */
 export class KEKRecipientInfo {
+    /**
+     * @summary `version`.
+     * @description
+     *
+     * MUST be 4 ([RFC 5652 §6.2.3](https://datatracker.ietf.org/doc/html/rfc5652#section-6.2.3)).
+     *
+     * @public
+     * @readonly
+     */
+    public readonly version: CMSVersion;
+    /**
+     * @summary `kekid`.
+     * @description
+     *
+     * Identifies the KEK; may include date and other key attribute
+     * ([RFC 5652 §6.2.3](https://datatracker.ietf.org/doc/html/rfc5652#section-6.2.3)).
+     *
+     * @public
+     * @readonly
+     */
+    public readonly kekid: KEKIdentifier;
+    /**
+     * @summary `keyEncryptionAlgorithm`.
+     * @description
+     *
+     * Key-encryption (wrap) algorithm ([RFC 5652 §6.2.3](https://datatracker.ietf.org/doc/html/rfc5652#section-6.2.3)).
+     *
+     * @public
+     * @readonly
+     */
+    public readonly keyEncryptionAlgorithm: KeyEncryptionAlgorithmIdentifier;
+    /**
+     * @summary `encryptedKey`.
+     * @description
+     *
+     * CEK encrypted with the KEK ([RFC 5652 §6.2.3](https://datatracker.ietf.org/doc/html/rfc5652#section-6.2.3)).
+     *
+     * @public
+     * @readonly
+     */
+    public readonly encryptedKey: EncryptedKey;
+
     constructor(
-        /**
-         * @summary `version`.
-         * @description
-         *
-         * MUST be 4 ([RFC 5652 §6.2.3](https://datatracker.ietf.org/doc/html/rfc5652#section-6.2.3)).
-         *
-         * @public
-         * @readonly
-         */
-        readonly version: CMSVersion,
-        /**
-         * @summary `kekid`.
-         * @description
-         *
-         * Identifies the KEK; may include date and other key attribute
-         * ([RFC 5652 §6.2.3](https://datatracker.ietf.org/doc/html/rfc5652#section-6.2.3)).
-         *
-         * @public
-         * @readonly
-         */
-        readonly kekid: KEKIdentifier,
-        /**
-         * @summary `keyEncryptionAlgorithm`.
-         * @description
-         *
-         * Key-encryption (wrap) algorithm ([RFC 5652 §6.2.3](https://datatracker.ietf.org/doc/html/rfc5652#section-6.2.3)).
-         *
-         * @public
-         * @readonly
-         */
-        readonly keyEncryptionAlgorithm: KeyEncryptionAlgorithmIdentifier,
-        /**
-         * @summary `encryptedKey`.
-         * @description
-         *
-         * CEK encrypted with the KEK ([RFC 5652 §6.2.3](https://datatracker.ietf.org/doc/html/rfc5652#section-6.2.3)).
-         *
-         * @public
-         * @readonly
-         */
-        readonly encryptedKey: EncryptedKey
-    ) {}
+        version: CMSVersion,
+        kekid: KEKIdentifier,
+        keyEncryptionAlgorithm: KeyEncryptionAlgorithmIdentifier,
+        encryptedKey: EncryptedKey
+    ) {
+        this.version = version;
+        this.kekid = kekid;
+        this.keyEncryptionAlgorithm = keyEncryptionAlgorithm;
+        this.encryptedKey = encryptedKey;
+    }
 
     /**
      * @summary Restructures an object into a KEKRecipientInfo

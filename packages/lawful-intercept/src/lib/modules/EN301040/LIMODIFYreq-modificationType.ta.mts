@@ -1,9 +1,9 @@
 /* eslint-disable */
 import {
-    BOOLEAN,
-    UTCTime,
-    VisibleString,
-    ASN1Element as _Element,
+    type BOOLEAN,
+    type UTCTime,
+    type VisibleString,
+    type ASN1Element as _Element,
     ASN1TagClass as _TagClass
 } from "@wildboar/asn1";
 import * as $ from "@wildboar/asn1/functional";

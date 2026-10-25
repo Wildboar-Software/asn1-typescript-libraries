@@ -1,11 +1,11 @@
 /* eslint-disable */
 import {
     ASN1ConstructionError as _ConstructionError,
-    ASN1Element as _Element,
+    type ASN1Element as _Element,
     ASN1TagClass as _TagClass
 } from "@wildboar/asn1";
 import * as $ from "@wildboar/asn1/functional";
-import { _decode_EuiccMemoryResetRequest_resetOptions, _encode_EuiccMemoryResetRequest_resetOptions, EuiccMemoryResetRequest_resetOptions } from "../SGP32Definitions/EuiccMemoryResetRequest-resetOptions.ta.mjs";
+import { _decode_EuiccMemoryResetRequest_resetOptions, _encode_EuiccMemoryResetRequest_resetOptions, type EuiccMemoryResetRequest_resetOptions } from "../SGP32Definitions/EuiccMemoryResetRequest-resetOptions.ta.mjs";
 
 
 /**
@@ -50,18 +50,22 @@ import { _decode_EuiccMemoryResetRequest_resetOptions, _encode_EuiccMemoryResetR
  */
 export
 class EuiccMemoryResetRequest {
+    /**
+     * @summary `resetOptions`.
+     * @description
+     * Bits that select Profile classes to delete and the optional address, eIM,
+     * and immediate-enable resets (SGP.32 v1.2, section 5.9.5). Any combination
+     * may be set.
+     * @public
+     * @readonly
+     */
+    public readonly resetOptions: EuiccMemoryResetRequest_resetOptions;
+
     constructor (
-        /**
-         * @summary `resetOptions`.
-         * @description
-         * Bits that select Profile classes to delete and the optional address, eIM,
-         * and immediate-enable resets (SGP.32 v1.2, section 5.9.5). Any combination
-         * may be set.
-         * @public
-         * @readonly
-         */
-        readonly resetOptions: EuiccMemoryResetRequest_resetOptions
-    ) {}
+        resetOptions: EuiccMemoryResetRequest_resetOptions
+    ) {
+        this.resetOptions = resetOptions;
+    }
 
     /**
      * @summary Restructures an object into a EuiccMemoryResetRequest

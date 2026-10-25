@@ -1,6 +1,6 @@
 /* eslint-disable */
 import {
-    ASN1Element as _Element,
+    type ASN1Element as _Element,
     ASN1TagClass as _TagClass,
     ASN1Construction as _Construction,
     ASN1UniversalType as _UniversalType,
@@ -37,14 +37,18 @@ import {
  *
  */
 export class FetchRestrictionError {
+    /**
+     * @summary `problems`.
+     * @public
+     * @readonly
+     */
+    public readonly problems: FetchRestrictionError_problems_Item[];
+
     constructor(
-        /**
-         * @summary `problems`.
-         * @public
-         * @readonly
-         */
-        readonly problems: FetchRestrictionError_problems_Item[]
-    ) {}
+        problems: FetchRestrictionError_problems_Item[]
+    ) {
+        this.problems = problems;
+    }
 
     /**
      * @summary Restructures an object into a FetchRestrictionError

@@ -1,8 +1,8 @@
 /* eslint-disable */
 import {
-    ASN1Element as _Element,
+    type ASN1Element as _Element,
     ASN1OverflowError,
-    INTEGER
+    type INTEGER
 } from "@wildboar/asn1";
 import * as $ from "@wildboar/asn1/functional";
 
@@ -49,7 +49,7 @@ export const _decode_MaxMC_Bearers = (el: _Element): MaxMC_Bearers => {
  * @param elGetter A function that can be used to get new ASN.1 elements.
  * @returns {_Element} The MaxMC_Bearers, encoded as an ASN.1 Element.
  */
-export const _encode_MaxMC_Bearers = $._encodeInteger;
+export const _encode_MaxMC_Bearers: $.ASN1Encoder<INTEGER> = $._encodeInteger;
 
 
 /* eslint-enable */

@@ -1,5 +1,5 @@
 /* eslint-disable */
-import { BOOLEAN } from "@wildboar/asn1";
+import { type BOOLEAN } from "@wildboar/asn1";
 import * as $ from "@wildboar/asn1/functional";
 
 /**
@@ -18,7 +18,7 @@ import * as $ from "@wildboar/asn1/functional";
  *   &establish                BOOLEAN DEFAULT FALSE,
  *   &EstablishParam,
  *   &modify                   BOOLEAN DEFAULT FALSE,
- *   &ModifyParam              OPTIONAL,
+ *   &ModifyParam              type OPTIONAL,
  *   &terminate                BOOLEAN DEFAULT FALSE,
  *   &TerminateParam           OPTIONAL }
  * WITH SYNTAX {

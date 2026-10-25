@@ -1,7 +1,7 @@
 /* eslint-disable */
 import {
     ASN1ConstructionError as _ConstructionError,
-    ASN1Element as _Element,
+    type ASN1Element as _Element,
     ASN1TagClass as _TagClass,
 } from "@wildboar/asn1";
 import * as $ from "@wildboar/asn1/functional";
@@ -11,7 +11,7 @@ import {
     _encode_CertReplaceReq_certs_Item,
 } from "../CaSubscription/CertReplaceReq-certs-Item.ta.mjs";
 import {
-    InvokeID,
+    type InvokeID,
     _decode_InvokeID,
     _encode_InvokeID,
 } from "../CaSubscription/InvokeID.ta.mjs";
@@ -37,32 +37,40 @@ import {
  *
  */
 export class CertReplaceReq {
+    /**
+     * @summary `invokeID`.
+     * @description
+     *
+     * Pairs this request with the matching response; unique per pair; reusable after completion.
+     * @public
+     * @readonly
+     */
+    public readonly invokeID: InvokeID;
+    /**
+     * @summary `certs`.
+     * @description
+     *
+     * SEQUENCE SIZE (1..MAX); empty is illegal. Same count and order in the response. Each item is `old`+`new_`.
+     * @public
+     * @readonly
+     */
+    public readonly certs: CertReplaceReq_certs_Item[];
+    /**
+     * @summary Extensions that are not recognized.
+     * @public
+     * @readonly
+     */
+    public readonly _unrecognizedExtensionsList: _Element[];
+
     constructor(
-        /**
-         * @summary `invokeID`.
-         * @description
-         *
-         * Pairs this request with the matching response; unique per pair; reusable after completion.
-         * @public
-         * @readonly
-         */
-        readonly invokeID: InvokeID,
-        /**
-         * @summary `certs`.
-         * @description
-         *
-         * SEQUENCE SIZE (1..MAX); empty is illegal. Same count and order in the response. Each item is `old`+`new_`.
-         * @public
-         * @readonly
-         */
-        readonly certs: CertReplaceReq_certs_Item[],
-        /**
-         * @summary Extensions that are not recognized.
-         * @public
-         * @readonly
-         */
-        readonly _unrecognizedExtensionsList: _Element[] = []
-    ) {}
+        invokeID: InvokeID,
+        certs: CertReplaceReq_certs_Item[],
+        _unrecognizedExtensionsList: _Element[] = []
+    ) {
+        this.invokeID = invokeID;
+        this.certs = certs;
+        this._unrecognizedExtensionsList = _unrecognizedExtensionsList;
+    }
 
     /**
      * @summary Restructures an object into a CertReplaceReq

@@ -1,6 +1,6 @@
 /* eslint-disable */
 import {
-    INTEGER
+    type INTEGER
 } from "@wildboar/asn1";
 import * as $ from "@wildboar/asn1/functional";
 
@@ -40,7 +40,7 @@ type StoreStatus = INTEGER;
  * @type {number}
  */
 export
-const StoreStatus_stored: StoreStatus = 0; /* LONG_NAMED_INTEGER_VALUE */
+const StoreStatus_stored: 0 = 0 satisfies StoreStatus; /* LONG_NAMED_INTEGER_VALUE */
 
 /**
  * @summary StoreStatus_stored
@@ -48,7 +48,7 @@ const StoreStatus_stored: StoreStatus = 0; /* LONG_NAMED_INTEGER_VALUE */
  * @type {number}
  */
 export
-const stored: StoreStatus = StoreStatus_stored; /* SHORT_NAMED_INTEGER_VALUE */
+const stored: 0 = StoreStatus_stored; /* SHORT_NAMED_INTEGER_VALUE */
 
 /**
  * @summary StoreStatus_errorTransientFailure
@@ -56,7 +56,7 @@ const stored: StoreStatus = StoreStatus_stored; /* SHORT_NAMED_INTEGER_VALUE */
  * @type {number}
  */
 export
-const StoreStatus_errorTransientFailure: StoreStatus = 1; /* LONG_NAMED_INTEGER_VALUE */
+const StoreStatus_errorTransientFailure: 1 = 1 satisfies StoreStatus; /* LONG_NAMED_INTEGER_VALUE */
 
 /**
  * @summary StoreStatus_errorTransientFailure
@@ -64,7 +64,7 @@ const StoreStatus_errorTransientFailure: StoreStatus = 1; /* LONG_NAMED_INTEGER_
  * @type {number}
  */
 export
-const errorTransientFailure: StoreStatus = StoreStatus_errorTransientFailure; /* SHORT_NAMED_INTEGER_VALUE */
+const errorTransientFailure: 1 = StoreStatus_errorTransientFailure; /* SHORT_NAMED_INTEGER_VALUE */
 
 /**
  * @summary StoreStatus_errorTransientMailboxFull
@@ -72,7 +72,7 @@ const errorTransientFailure: StoreStatus = StoreStatus_errorTransientFailure; /*
  * @type {number}
  */
 export
-const StoreStatus_errorTransientMailboxFull: StoreStatus = 2; /* LONG_NAMED_INTEGER_VALUE */
+const StoreStatus_errorTransientMailboxFull: 2 = 2 satisfies StoreStatus; /* LONG_NAMED_INTEGER_VALUE */
 
 /**
  * @summary StoreStatus_errorTransientMailboxFull
@@ -80,7 +80,7 @@ const StoreStatus_errorTransientMailboxFull: StoreStatus = 2; /* LONG_NAMED_INTE
  * @type {number}
  */
 export
-const errorTransientMailboxFull: StoreStatus = StoreStatus_errorTransientMailboxFull; /* SHORT_NAMED_INTEGER_VALUE */
+const errorTransientMailboxFull: 2 = StoreStatus_errorTransientMailboxFull; /* SHORT_NAMED_INTEGER_VALUE */
 
 /**
  * @summary StoreStatus_errorTransientNetworkProblems
@@ -88,7 +88,7 @@ const errorTransientMailboxFull: StoreStatus = StoreStatus_errorTransientMailbox
  * @type {number}
  */
 export
-const StoreStatus_errorTransientNetworkProblems: StoreStatus = 3; /* LONG_NAMED_INTEGER_VALUE */
+const StoreStatus_errorTransientNetworkProblems: 3 = 3 satisfies StoreStatus; /* LONG_NAMED_INTEGER_VALUE */
 
 /**
  * @summary StoreStatus_errorTransientNetworkProblems
@@ -96,7 +96,7 @@ const StoreStatus_errorTransientNetworkProblems: StoreStatus = 3; /* LONG_NAMED_
  * @type {number}
  */
 export
-const errorTransientNetworkProblems: StoreStatus = StoreStatus_errorTransientNetworkProblems; /* SHORT_NAMED_INTEGER_VALUE */
+const errorTransientNetworkProblems: 3 = StoreStatus_errorTransientNetworkProblems; /* SHORT_NAMED_INTEGER_VALUE */
 
 /**
  * @summary StoreStatus_errorPermanentFailure
@@ -104,7 +104,7 @@ const errorTransientNetworkProblems: StoreStatus = StoreStatus_errorTransientNet
  * @type {number}
  */
 export
-const StoreStatus_errorPermanentFailure: StoreStatus = 4; /* LONG_NAMED_INTEGER_VALUE */
+const StoreStatus_errorPermanentFailure: 4 = 4 satisfies StoreStatus; /* LONG_NAMED_INTEGER_VALUE */
 
 /**
  * @summary StoreStatus_errorPermanentFailure
@@ -112,7 +112,7 @@ const StoreStatus_errorPermanentFailure: StoreStatus = 4; /* LONG_NAMED_INTEGER_
  * @type {number}
  */
 export
-const errorPermanentFailure: StoreStatus = StoreStatus_errorPermanentFailure; /* SHORT_NAMED_INTEGER_VALUE */
+const errorPermanentFailure: 4 = StoreStatus_errorPermanentFailure; /* SHORT_NAMED_INTEGER_VALUE */
 
 /**
  * @summary StoreStatus_errorPermanentPermissionDenied
@@ -120,7 +120,7 @@ const errorPermanentFailure: StoreStatus = StoreStatus_errorPermanentFailure; /*
  * @type {number}
  */
 export
-const StoreStatus_errorPermanentPermissionDenied: StoreStatus = 5; /* LONG_NAMED_INTEGER_VALUE */
+const StoreStatus_errorPermanentPermissionDenied: 5 = 5 satisfies StoreStatus; /* LONG_NAMED_INTEGER_VALUE */
 
 /**
  * @summary StoreStatus_errorPermanentPermissionDenied
@@ -128,7 +128,7 @@ const StoreStatus_errorPermanentPermissionDenied: StoreStatus = 5; /* LONG_NAMED
  * @type {number}
  */
 export
-const errorPermanentPermissionDenied: StoreStatus = StoreStatus_errorPermanentPermissionDenied; /* SHORT_NAMED_INTEGER_VALUE */
+const errorPermanentPermissionDenied: 5 = StoreStatus_errorPermanentPermissionDenied; /* SHORT_NAMED_INTEGER_VALUE */
 
 /**
  * @summary StoreStatus_errorPermanentMessageFormat
@@ -136,7 +136,7 @@ const errorPermanentPermissionDenied: StoreStatus = StoreStatus_errorPermanentPe
  * @type {number}
  */
 export
-const StoreStatus_errorPermanentMessageFormat: StoreStatus = 6; /* LONG_NAMED_INTEGER_VALUE */
+const StoreStatus_errorPermanentMessageFormat: 6 = 6 satisfies StoreStatus; /* LONG_NAMED_INTEGER_VALUE */
 
 /**
  * @summary StoreStatus_errorPermanentMessageFormat
@@ -144,7 +144,7 @@ const StoreStatus_errorPermanentMessageFormat: StoreStatus = 6; /* LONG_NAMED_IN
  * @type {number}
  */
 export
-const errorPermanentMessageFormat: StoreStatus = StoreStatus_errorPermanentMessageFormat; /* SHORT_NAMED_INTEGER_VALUE */
+const errorPermanentMessageFormat: 6 = StoreStatus_errorPermanentMessageFormat; /* SHORT_NAMED_INTEGER_VALUE */
 
 /**
  * @summary StoreStatus_errorPermanentMessageNotFound
@@ -152,7 +152,7 @@ const errorPermanentMessageFormat: StoreStatus = StoreStatus_errorPermanentMessa
  * @type {number}
  */
 export
-const StoreStatus_errorPermanentMessageNotFound: StoreStatus = 7; /* LONG_NAMED_INTEGER_VALUE */
+const StoreStatus_errorPermanentMessageNotFound: 7 = 7 satisfies StoreStatus; /* LONG_NAMED_INTEGER_VALUE */
 
 /**
  * @summary StoreStatus_errorPermanentMessageNotFound
@@ -160,7 +160,7 @@ const StoreStatus_errorPermanentMessageNotFound: StoreStatus = 7; /* LONG_NAMED_
  * @type {number}
  */
 export
-const errorPermanentMessageNotFound: StoreStatus = StoreStatus_errorPermanentMessageNotFound; /* SHORT_NAMED_INTEGER_VALUE */
+const errorPermanentMessageNotFound: 7 = StoreStatus_errorPermanentMessageNotFound; /* SHORT_NAMED_INTEGER_VALUE */
 
 export
 const _decode_StoreStatus: $.ASN1Decoder<StoreStatus> = $._decodeInteger;

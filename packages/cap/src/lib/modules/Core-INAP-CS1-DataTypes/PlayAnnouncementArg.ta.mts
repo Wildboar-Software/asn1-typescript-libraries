@@ -1,8 +1,8 @@
 /* eslint-disable */
 import {
-    OPTIONAL,
-    BOOLEAN,
-    ASN1Element as _Element,
+    type OPTIONAL,
+    type BOOLEAN,
+    type ASN1Element as _Element,
     ASN1TagClass as _TagClass,
     ASN1Construction as _Construction,
     ASN1UniversalType as _UniversalType,
@@ -12,7 +12,7 @@ import {
     ASN1ConstructionError as _ConstructionError,
 } from "@wildboar/asn1";
 import * as $ from "@wildboar/asn1/functional";
-import { InformationToSend, _decode_InformationToSend, _encode_InformationToSend } from "../Core-INAP-CS1-DataTypes/InformationToSend.ta.mjs";
+import { type InformationToSend, _decode_InformationToSend, _encode_InformationToSend } from "../Core-INAP-CS1-DataTypes/InformationToSend.ta.mjs";
 import { ExtensionField, _decode_ExtensionField, _encode_ExtensionField } from "../Core-INAP-CS1-DataTypes/ExtensionField.ta.mjs";
 
 
@@ -36,32 +36,42 @@ import { ExtensionField, _decode_ExtensionField, _encode_ExtensionField } from "
  */
 export
 class PlayAnnouncementArg {
+    /**
+     * @summary `informationToSend`.
+     * @public
+     * @readonly
+     */
+    public readonly informationToSend: InformationToSend;
+    /**
+     * @summary `disconnectFromIPForbidden`.
+     * @public
+     * @readonly
+     */
+    public readonly disconnectFromIPForbidden?: OPTIONAL<BOOLEAN>;
+    /**
+     * @summary `requestAnnouncementComplete`.
+     * @public
+     * @readonly
+     */
+    public readonly requestAnnouncementComplete?: OPTIONAL<BOOLEAN>;
+    /**
+     * @summary `extensions`.
+     * @public
+     * @readonly
+     */
+    public readonly extensions?: OPTIONAL<ExtensionField[]>;
+
     constructor (
-        /**
-         * @summary `informationToSend`.
-         * @public
-         * @readonly
-         */
-        readonly informationToSend: InformationToSend,
-        /**
-         * @summary `disconnectFromIPForbidden`.
-         * @public
-         * @readonly
-         */
-        readonly disconnectFromIPForbidden?: OPTIONAL<BOOLEAN>,
-        /**
-         * @summary `requestAnnouncementComplete`.
-         * @public
-         * @readonly
-         */
-        readonly requestAnnouncementComplete?: OPTIONAL<BOOLEAN>,
-        /**
-         * @summary `extensions`.
-         * @public
-         * @readonly
-         */
-        readonly extensions?: OPTIONAL<ExtensionField[]>
-    ) {}
+        informationToSend: InformationToSend,
+        disconnectFromIPForbidden?: OPTIONAL<BOOLEAN>,
+        requestAnnouncementComplete?: OPTIONAL<BOOLEAN>,
+        extensions?: OPTIONAL<ExtensionField[]>
+    ) {
+        this.informationToSend = informationToSend;
+        this.disconnectFromIPForbidden = disconnectFromIPForbidden;
+        this.requestAnnouncementComplete = requestAnnouncementComplete;
+        this.extensions = extensions;
+    }
 
     /**
      * @summary Restructures an object into a PlayAnnouncementArg

@@ -1,6 +1,6 @@
 /* eslint-disable */
 import {
-  BIT_STRING,
+  type BIT_STRING,
   ASN1Element as _Element,
   ASN1TagClass as _TagClass,
   ASN1Construction as _Construction,
@@ -34,42 +34,50 @@ import {
  *
  */
 export class dirSignedTransformation_XformedDataType {
+  /**
+   * @summary `toBeSigned`.
+   * @description
+   *
+   * Unprotected item (the to-be-signed type). ITU-T Rec.
+   * X.830 (04/95) Annex D.2.
+   *
+   * @public
+   * @readonly
+   */
+  public readonly toBeSigned: _Element;
+  /**
+   * @summary `algorithmId`.
+   * @description
+   *
+   * Algorithms used to compute the signature. Carried
+   * unprotected; prefer local inputs for verification.
+   * ITU-T Rec. X.830 (04/95) Annex D.2.
+   *
+   * @public
+   * @readonly
+   */
+  public readonly algorithmId: AlgorithmIdentifier;
+  /**
+   * @summary `encipheredHash`.
+   * @description
+   *
+   * BER encoding of the hash, enciphered. ITU-T Rec. X.830
+   * (04/95) Annex D.2.
+   *
+   * @public
+   * @readonly
+   */
+  public readonly encipheredHash: BIT_STRING;
+
   constructor(
-    /**
-     * @summary `toBeSigned`.
-     * @description
-     *
-     * Unprotected item (the to-be-signed type). ITU-T Rec.
-     * X.830 (04/95) Annex D.2.
-     *
-     * @public
-     * @readonly
-     */
-    readonly toBeSigned: _Element,
-    /**
-     * @summary `algorithmId`.
-     * @description
-     *
-     * Algorithms used to compute the signature. Carried
-     * unprotected; prefer local inputs for verification.
-     * ITU-T Rec. X.830 (04/95) Annex D.2.
-     *
-     * @public
-     * @readonly
-     */
-    readonly algorithmId: AlgorithmIdentifier,
-    /**
-     * @summary `encipheredHash`.
-     * @description
-     *
-     * BER encoding of the hash, enciphered. ITU-T Rec. X.830
-     * (04/95) Annex D.2.
-     *
-     * @public
-     * @readonly
-     */
-    readonly encipheredHash: BIT_STRING
-  ) {}
+    toBeSigned: _Element,
+    algorithmId: AlgorithmIdentifier,
+    encipheredHash: BIT_STRING
+  ) {
+    this.toBeSigned = toBeSigned;
+    this.algorithmId = algorithmId;
+    this.encipheredHash = encipheredHash;
+  }
 
   /**
    * @summary Restructures an object into a dirSignedTransformation_XformedDataType

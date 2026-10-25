@@ -1,7 +1,7 @@
 /* eslint-disable */
 import {
-    ENUMERATED,
-    ASN1Element as _Element,
+    type ENUMERATED,
+    type ASN1Element as _Element,
     ASN1TagClass as _TagClass,
     ASN1Construction as _Construction,
     ASN1UniversalType as _UniversalType,
@@ -45,7 +45,7 @@ export type CloseOutVerification = _enum_for_CloseOutVerification | ENUMERATED;
  * @constant
  * @type {number}
  */
-export const CloseOutVerification_noAction: CloseOutVerification = 0; /* LONG_NAMED_ENUMERATED_VALUE */
+export const CloseOutVerification_noAction: _enum_for_CloseOutVerification.noAction = _enum_for_CloseOutVerification.noAction; /* LONG_NAMED_ENUMERATED_VALUE */
 
 
 /**
@@ -53,7 +53,7 @@ export const CloseOutVerification_noAction: CloseOutVerification = 0; /* LONG_NA
  * @constant
  * @type {number}
  */
-export const noAction: CloseOutVerification = CloseOutVerification_noAction; /* SHORT_NAMED_ENUMERATED_VALUE */
+export const noAction: _enum_for_CloseOutVerification.noAction = CloseOutVerification_noAction; /* SHORT_NAMED_ENUMERATED_VALUE */
 
 
 /**
@@ -61,7 +61,7 @@ export const noAction: CloseOutVerification = CloseOutVerification_noAction; /* 
  * @constant
  * @type {number}
  */
-export const CloseOutVerification_verified: CloseOutVerification = 1; /* LONG_NAMED_ENUMERATED_VALUE */
+export const CloseOutVerification_verified: _enum_for_CloseOutVerification.verified = _enum_for_CloseOutVerification.verified; /* LONG_NAMED_ENUMERATED_VALUE */
 
 
 /**
@@ -69,7 +69,7 @@ export const CloseOutVerification_verified: CloseOutVerification = 1; /* LONG_NA
  * @constant
  * @type {number}
  */
-export const verified: CloseOutVerification = CloseOutVerification_verified; /* SHORT_NAMED_ENUMERATED_VALUE */
+export const verified: _enum_for_CloseOutVerification.verified = CloseOutVerification_verified; /* SHORT_NAMED_ENUMERATED_VALUE */
 
 
 /**
@@ -77,7 +77,7 @@ export const verified: CloseOutVerification = CloseOutVerification_verified; /* 
  * @constant
  * @type {number}
  */
-export const CloseOutVerification_denied: CloseOutVerification = 2; /* LONG_NAMED_ENUMERATED_VALUE */
+export const CloseOutVerification_denied: _enum_for_CloseOutVerification.denied = _enum_for_CloseOutVerification.denied; /* LONG_NAMED_ENUMERATED_VALUE */
 
 
 /**
@@ -85,7 +85,7 @@ export const CloseOutVerification_denied: CloseOutVerification = 2; /* LONG_NAME
  * @constant
  * @type {number}
  */
-export const denied: CloseOutVerification = CloseOutVerification_denied; /* SHORT_NAMED_ENUMERATED_VALUE */
+export const denied: _enum_for_CloseOutVerification.denied = CloseOutVerification_denied; /* SHORT_NAMED_ENUMERATED_VALUE */
 
 
 /**
@@ -93,7 +93,7 @@ export const denied: CloseOutVerification = CloseOutVerification_denied; /* SHOR
  * @constant
  * @type {number}
  */
-export const CloseOutVerification_deniedActivityDurationDisputed: CloseOutVerification = 3; /* LONG_NAMED_ENUMERATED_VALUE */
+export const CloseOutVerification_deniedActivityDurationDisputed: _enum_for_CloseOutVerification.deniedActivityDurationDisputed = _enum_for_CloseOutVerification.deniedActivityDurationDisputed; /* LONG_NAMED_ENUMERATED_VALUE */
 
 
 /**
@@ -101,7 +101,7 @@ export const CloseOutVerification_deniedActivityDurationDisputed: CloseOutVerifi
  * @constant
  * @type {number}
  */
-export const deniedActivityDurationDisputed: CloseOutVerification = CloseOutVerification_deniedActivityDurationDisputed; /* SHORT_NAMED_ENUMERATED_VALUE */
+export const deniedActivityDurationDisputed: _enum_for_CloseOutVerification.deniedActivityDurationDisputed = CloseOutVerification_deniedActivityDurationDisputed; /* SHORT_NAMED_ENUMERATED_VALUE */
 
 
 /**
@@ -109,7 +109,7 @@ export const deniedActivityDurationDisputed: CloseOutVerification = CloseOutVeri
  * @constant
  * @type {number}
  */
-export const CloseOutVerification_deniedCloseOutNarrDisputed: CloseOutVerification = 4; /* LONG_NAMED_ENUMERATED_VALUE */
+export const CloseOutVerification_deniedCloseOutNarrDisputed: _enum_for_CloseOutVerification.deniedCloseOutNarrDisputed = _enum_for_CloseOutVerification.deniedCloseOutNarrDisputed; /* LONG_NAMED_ENUMERATED_VALUE */
 
 
 /**
@@ -117,17 +117,17 @@ export const CloseOutVerification_deniedCloseOutNarrDisputed: CloseOutVerificati
  * @constant
  * @type {number}
  */
-export const deniedCloseOutNarrDisputed: CloseOutVerification = CloseOutVerification_deniedCloseOutNarrDisputed; /* SHORT_NAMED_ENUMERATED_VALUE */
+export const deniedCloseOutNarrDisputed: _enum_for_CloseOutVerification.deniedCloseOutNarrDisputed = CloseOutVerification_deniedCloseOutNarrDisputed; /* SHORT_NAMED_ENUMERATED_VALUE */
 
 
 
 
-export const _decode_CloseOutVerification = $._decodeEnumerated;
+export const _decode_CloseOutVerification: $.ASN1Decoder<number> = $._decodeEnumerated;
 
 
 
 
-export const _encode_CloseOutVerification = $._encodeEnumerated;
+export const _encode_CloseOutVerification: $.ASN1Encoder<number> = $._encodeEnumerated;
 
 
 /* eslint-enable */

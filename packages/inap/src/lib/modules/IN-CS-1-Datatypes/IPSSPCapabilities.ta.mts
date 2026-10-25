@@ -1,7 +1,7 @@
 /* eslint-disable */
 import {
-    OCTET_STRING,
-    ASN1Element as _Element,
+    type OCTET_STRING,
+    type ASN1Element as _Element,
     ASN1SizeError,
 } from "@wildboar/asn1";
 import { maxIPSSPCapabilitiesLength } from "./maxIPSSPCapabilitiesLength.va.mjs";

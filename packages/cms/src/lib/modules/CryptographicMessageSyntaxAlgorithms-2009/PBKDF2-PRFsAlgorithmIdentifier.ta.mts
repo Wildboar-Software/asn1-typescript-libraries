@@ -18,26 +18,13 @@ import { AlgorithmIdentifier, _decode_AlgorithmIdentifier, _encode_AlgorithmIden
  */
 export type PBKDF2_PRFsAlgorithmIdentifier = AlgorithmIdentifier; // DefinedType
 
-
-let _cached_decoder_for_PBKDF2_PRFsAlgorithmIdentifier: $.ASN1Decoder<PBKDF2_PRFsAlgorithmIdentifier> | null = null;
-
-
 /**
  * @summary Decodes an ASN.1 element into a(n) PBKDF2_PRFsAlgorithmIdentifier
  * @function
  * @param {_Element} el The element being decoded.
  * @returns {PBKDF2_PRFsAlgorithmIdentifier} The decoded data structure.
  */
-export function _decode_PBKDF2_PRFsAlgorithmIdentifier(el: _Element): PBKDF2_PRFsAlgorithmIdentifier {
-    if (!_cached_decoder_for_PBKDF2_PRFsAlgorithmIdentifier) {
-        _cached_decoder_for_PBKDF2_PRFsAlgorithmIdentifier = _decode_AlgorithmIdentifier;
-    }
-    return _cached_decoder_for_PBKDF2_PRFsAlgorithmIdentifier(el);
-}
-
-
-let _cached_encoder_for_PBKDF2_PRFsAlgorithmIdentifier: $.ASN1Encoder<PBKDF2_PRFsAlgorithmIdentifier> | null = null;
-
+export const _decode_PBKDF2_PRFsAlgorithmIdentifier: $.ASN1Decoder<PBKDF2_PRFsAlgorithmIdentifier> = _decode_AlgorithmIdentifier;
 
 /**
  * @summary Encodes a(n) PBKDF2_PRFsAlgorithmIdentifier into an ASN.1 Element.
@@ -46,15 +33,7 @@ let _cached_encoder_for_PBKDF2_PRFsAlgorithmIdentifier: $.ASN1Encoder<PBKDF2_PRF
  * @param elGetter A function that can be used to get new ASN.1 elements.
  * @returns {_Element} The PBKDF2_PRFsAlgorithmIdentifier, encoded as an ASN.1 Element.
  */
-export function _encode_PBKDF2_PRFsAlgorithmIdentifier(
-    value: PBKDF2_PRFsAlgorithmIdentifier,
-    elGetter: $.ASN1Encoder<PBKDF2_PRFsAlgorithmIdentifier>
-): _Element {
-    if (!_cached_encoder_for_PBKDF2_PRFsAlgorithmIdentifier) {
-        _cached_encoder_for_PBKDF2_PRFsAlgorithmIdentifier = _encode_AlgorithmIdentifier;
-    }
-    return _cached_encoder_for_PBKDF2_PRFsAlgorithmIdentifier(value, elGetter);
-}
+export const _encode_PBKDF2_PRFsAlgorithmIdentifier: $.ASN1Encoder<PBKDF2_PRFsAlgorithmIdentifier> = _encode_AlgorithmIdentifier;
 
 
 /* eslint-enable */

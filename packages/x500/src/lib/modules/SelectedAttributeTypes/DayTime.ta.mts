@@ -1,9 +1,9 @@
 /* eslint-disable */
 import {
-    ASN1Element as _Element,
+    type ASN1Element as _Element,
     ASN1TagClass as _TagClass,
-    INTEGER,
-    OPTIONAL,
+    type INTEGER,
+    type OPTIONAL,
     type TIME_OF_DAY,
 } from "@wildboar/asn1";
 import * as $ from "@wildboar/asn1/functional";
@@ -32,44 +32,53 @@ import * as $ from "@wildboar/asn1/functional";
  *
  */
 export class DayTime {
+    /**
+     * @summary `hour`.
+     * @description
+     *
+     * 0..23.
+     *
+     * @public
+     * @readonly
+     */
+    public readonly hour: INTEGER;
+    /**
+     * @summary `minute`.
+     * @description
+     *
+     * DEFAULT 0; 0..59.
+     *
+     * @public
+     * @readonly
+     */
+    public readonly minute?: OPTIONAL<INTEGER>;
+    /**
+     * @summary `second`.
+     * @description
+     *
+     * DEFAULT 0; 0..59.
+     *
+     * @public
+     * @readonly
+     */
+    public readonly second?: OPTIONAL<INTEGER>;
+    /**
+     * @summary Extensions that are not recognized.
+     * @public
+     * @readonly
+     */
+    public readonly _unrecognizedExtensionsList: _Element[];
+
     constructor(
-        /**
-         * @summary `hour`.
-         * @description
-         *
-         * 0..23.
-         *
-         * @public
-         * @readonly
-         */
-        readonly hour: INTEGER,
-        /**
-         * @summary `minute`.
-         * @description
-         *
-         * DEFAULT 0; 0..59.
-         *
-         * @public
-         * @readonly
-         */
-        readonly minute?: OPTIONAL<INTEGER>,
-        /**
-         * @summary `second`.
-         * @description
-         *
-         * DEFAULT 0; 0..59.
-         *
-         * @public
-         * @readonly
-         */
-        readonly second?: OPTIONAL<INTEGER>,
-        /**
-         * @summary Extensions that are not recognized.
-         * @public
-         * @readonly
-         */
-        readonly _unrecognizedExtensionsList: _Element[] = []
+        hour: INTEGER,
+        minute?: OPTIONAL<INTEGER>,
+        second?: OPTIONAL<INTEGER>,
+        _unrecognizedExtensionsList: _Element[] = []
     ) {
+        this.hour = hour;
+        this.minute = minute;
+        this.second = second;
+        this._unrecognizedExtensionsList = _unrecognizedExtensionsList;
         if (
             !Number.isSafeInteger(this.hour)
             || ((this.minute !== undefined) && !Number.isSafeInteger(this.minute))

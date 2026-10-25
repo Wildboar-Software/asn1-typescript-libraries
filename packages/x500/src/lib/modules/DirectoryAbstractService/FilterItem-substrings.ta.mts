@@ -1,13 +1,13 @@
 /* eslint-disable */
 import {
     ASN1ConstructionError as _ConstructionError,
-    ASN1Element as _Element,
+    type ASN1Element as _Element,
     ASN1TagClass as _TagClass,
-    OBJECT_IDENTIFIER,
+    type OBJECT_IDENTIFIER,
 } from "@wildboar/asn1";
 import * as $ from "@wildboar/asn1/functional";
 import {
-    FilterItem_substrings_strings_Item,
+    type FilterItem_substrings_strings_Item,
     _decode_FilterItem_substrings_strings_Item,
     _encode_FilterItem_substrings_strings_Item,
 } from "../DirectoryAbstractService/FilterItem-substrings-strings-Item.ta.mjs";
@@ -27,36 +27,44 @@ import {
  *
  */
 export class FilterItem_substrings {
+    /**
+     * @summary `type_`.
+     * @description
+     *
+     * Attribute type whose substring MR is applied (subtypes unless
+     * `noSubtypeMatch`).
+     *
+     * @public
+     * @readonly
+     */
+    public readonly type_: OBJECT_IDENTIFIER;
+    /**
+     * @summary `strings`.
+     * @description
+     *
+     * SEQUENCE OF. At most one `initial` (first), at most one `final`
+     * (last), `any_` in between. `control` applies to following items.
+     *
+     * @public
+     * @readonly
+     */
+    public readonly strings: FilterItem_substrings_strings_Item[];
+    /**
+     * @summary Extensions that are not recognized.
+     * @public
+     * @readonly
+     */
+    public readonly _unrecognizedExtensionsList: _Element[];
+
     constructor(
-        /**
-         * @summary `type_`.
-         * @description
-         *
-         * Attribute type whose substring MR is applied (subtypes unless
-         * `noSubtypeMatch`).
-         *
-         * @public
-         * @readonly
-         */
-        readonly type_: OBJECT_IDENTIFIER,
-        /**
-         * @summary `strings`.
-         * @description
-         *
-         * SEQUENCE OF. At most one `initial` (first), at most one `final`
-         * (last), `any_` in between. `control` applies to following items.
-         *
-         * @public
-         * @readonly
-         */
-        readonly strings: FilterItem_substrings_strings_Item[],
-        /**
-         * @summary Extensions that are not recognized.
-         * @public
-         * @readonly
-         */
-        readonly _unrecognizedExtensionsList: _Element[] = []
-    ) {}
+        type_: OBJECT_IDENTIFIER,
+        strings: FilterItem_substrings_strings_Item[],
+        _unrecognizedExtensionsList: _Element[] = []
+    ) {
+        this.type_ = type_;
+        this.strings = strings;
+        this._unrecognizedExtensionsList = _unrecognizedExtensionsList;
+    }
 
     /**
      * @summary Restructures an object into a FilterItem_substrings

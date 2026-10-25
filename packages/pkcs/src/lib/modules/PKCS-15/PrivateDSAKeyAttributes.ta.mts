@@ -4,25 +4,25 @@ import {
     _decode_DomainParameters,
     _encode_DomainParameters,
 } from "@wildboar/ansi-x9-42";
-import { ASN1Element as _Element, OPTIONAL } from "@wildboar/asn1";
+import { ASN1Element as _Element, type OPTIONAL } from "@wildboar/asn1";
 import * as $ from "@wildboar/asn1/functional";
 import {
-    DSAPrivateKey,
+    type DSAPrivateKey,
     _decode_DSAPrivateKey,
     _encode_DSAPrivateKey,
 } from "../PKCS-15/DSAPrivateKey.ta.mjs";
 import {
-    KeyInfo,
+    type KeyInfo,
     _get_decoder_for_KeyInfo,
     _get_encoder_for_KeyInfo,
 } from "../PKCS-15/KeyInfo.ta.mjs";
 import {
-    ObjectValue,
+    type ObjectValue,
     _get_decoder_for_ObjectValue,
     _get_encoder_for_ObjectValue,
 } from "../PKCS-15/ObjectValue.ta.mjs";
 import {
-    PublicKeyOperations,
+    type PublicKeyOperations,
     _decode_PublicKeyOperations,
     _encode_PublicKeyOperations,
 } from "../PKCS-15/PublicKeyOperations.ta.mjs";
@@ -44,28 +44,38 @@ import {
  *
  */
 export class PrivateDSAKeyAttributes {
+    /**
+     * @summary `value`.
+     * @public
+     * @readonly
+     */
+    public readonly value: ObjectValue<DSAPrivateKey>;
+    /**
+     * @summary `keyInfo`.
+     * @public
+     * @readonly
+     */
+    public readonly keyInfo?: OPTIONAL<
+            KeyInfo<DomainParameters, PublicKeyOperations>
+        >;
+    /**
+     * @summary Extensions that are not recognized.
+     * @public
+     * @readonly
+     */
+    public readonly _unrecognizedExtensionsList: _Element[];
+
     constructor(
-        /**
-         * @summary `value`.
-         * @public
-         * @readonly
-         */
-        readonly value: ObjectValue<DSAPrivateKey>,
-        /**
-         * @summary `keyInfo`.
-         * @public
-         * @readonly
-         */
-        readonly keyInfo?: OPTIONAL<
+        value: ObjectValue<DSAPrivateKey>,
+        keyInfo?: OPTIONAL<
             KeyInfo<DomainParameters, PublicKeyOperations>
         >,
-        /**
-         * @summary Extensions that are not recognized.
-         * @public
-         * @readonly
-         */
-        readonly _unrecognizedExtensionsList: _Element[] = []
-    ) {}
+        _unrecognizedExtensionsList: _Element[] = []
+    ) {
+        this.value = value;
+        this.keyInfo = keyInfo;
+        this._unrecognizedExtensionsList = _unrecognizedExtensionsList;
+    }
 
     /**
      * @summary Restructures an object into a PrivateDSAKeyAttributes

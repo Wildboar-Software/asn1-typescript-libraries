@@ -1,5 +1,5 @@
 /* eslint-disable */
-import { OPERATION } from "../Remote-Operations-Information-Objects/OPERATION.oca.mjs";
+import { type OPERATION } from "../Remote-Operations-Information-Objects/OPERATION.oca.mjs";
 import { callInterruptionRequest } from "../Call-Interruption-Operations-asn1-97/callInterruptionRequest.oa.mjs";
 import { callProtectionRequest } from "../Call-Interruption-Operations-asn1-97/callProtectionRequest.oa.mjs";
 

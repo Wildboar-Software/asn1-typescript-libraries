@@ -1,8 +1,8 @@
 /* eslint-disable */
 import {
-    OPTIONAL,
-    INTEGER,
-    ASN1Element as _Element,
+    type OPTIONAL,
+    type INTEGER,
+    type ASN1Element as _Element,
     ASN1TagClass as _TagClass,
     ASN1Construction as _Construction,
     ASN1UniversalType as _UniversalType,
@@ -30,20 +30,26 @@ import * as $ from '@wildboar/asn1/functional';
  *
  */
 export class DeliveryQueue {
+    /**
+     * @summary `messages`.
+     * @public
+     * @readonly
+     */
+    public readonly messages: INTEGER;
+    /**
+     * @summary `octets`.
+     * @public
+     * @readonly
+     */
+    public readonly octets?: OPTIONAL<INTEGER>;
+
     constructor(
-        /**
-         * @summary `messages`.
-         * @public
-         * @readonly
-         */
-        readonly messages: INTEGER,
-        /**
-         * @summary `octets`.
-         * @public
-         * @readonly
-         */
-        readonly octets?: OPTIONAL<INTEGER>
-    ) {}
+        messages: INTEGER,
+        octets?: OPTIONAL<INTEGER>
+    ) {
+        this.messages = messages;
+        this.octets = octets;
+    }
 
     /**
      * @summary Restructures an object into a DeliveryQueue

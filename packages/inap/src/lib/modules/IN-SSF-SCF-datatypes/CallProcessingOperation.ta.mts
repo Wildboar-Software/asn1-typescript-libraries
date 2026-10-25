@@ -1,4 +1,5 @@
 /* eslint-disable */
+import { ASN1Element as _Element, ASN1ConstructionError as _ConstructionError } from "@wildboar/asn1";
 import * as $ from "@wildboar/asn1/functional";
 
 
@@ -60,7 +61,7 @@ type CallProcessingOperation = _enum_for_CallProcessingOperation;
  * @enum {number}
  */
 export
-const CallProcessingOperation = _enum_for_CallProcessingOperation;
+const CallProcessingOperation: typeof _enum_for_CallProcessingOperation = _enum_for_CallProcessingOperation;
 
 /**
  * @summary CallProcessingOperation_aLERTing
@@ -68,7 +69,7 @@ const CallProcessingOperation = _enum_for_CallProcessingOperation;
  * @type {number}
  */
 export
-const CallProcessingOperation_aLERTing: CallProcessingOperation = CallProcessingOperation.aLERTing; /* LONG_NAMED_ENUMERATED_VALUE */
+const CallProcessingOperation_aLERTing: _enum_for_CallProcessingOperation.aLERTing = CallProcessingOperation.aLERTing; /* LONG_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary aLERTing
@@ -76,7 +77,7 @@ const CallProcessingOperation_aLERTing: CallProcessingOperation = CallProcessing
  * @type {number}
  */
 export
-const aLERTing: CallProcessingOperation = CallProcessingOperation.aLERTing; /* SHORT_NAMED_ENUMERATED_VALUE */
+const aLERTing: _enum_for_CallProcessingOperation.aLERTing = CallProcessingOperation.aLERTing; /* SHORT_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary CallProcessingOperation_sETUP
@@ -84,7 +85,7 @@ const aLERTing: CallProcessingOperation = CallProcessingOperation.aLERTing; /* S
  * @type {number}
  */
 export
-const CallProcessingOperation_sETUP: CallProcessingOperation = CallProcessingOperation.sETUP; /* LONG_NAMED_ENUMERATED_VALUE */
+const CallProcessingOperation_sETUP: _enum_for_CallProcessingOperation.sETUP = CallProcessingOperation.sETUP; /* LONG_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary sETUP
@@ -92,7 +93,7 @@ const CallProcessingOperation_sETUP: CallProcessingOperation = CallProcessingOpe
  * @type {number}
  */
 export
-const sETUP: CallProcessingOperation = CallProcessingOperation.sETUP; /* SHORT_NAMED_ENUMERATED_VALUE */
+const sETUP: _enum_for_CallProcessingOperation.sETUP = CallProcessingOperation.sETUP; /* SHORT_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary CallProcessingOperation_cONNect
@@ -100,7 +101,7 @@ const sETUP: CallProcessingOperation = CallProcessingOperation.sETUP; /* SHORT_N
  * @type {number}
  */
 export
-const CallProcessingOperation_cONNect: CallProcessingOperation = CallProcessingOperation.cONNect; /* LONG_NAMED_ENUMERATED_VALUE */
+const CallProcessingOperation_cONNect: _enum_for_CallProcessingOperation.cONNect = CallProcessingOperation.cONNect; /* LONG_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary cONNect
@@ -108,7 +109,7 @@ const CallProcessingOperation_cONNect: CallProcessingOperation = CallProcessingO
  * @type {number}
  */
 export
-const cONNect: CallProcessingOperation = CallProcessingOperation.cONNect; /* SHORT_NAMED_ENUMERATED_VALUE */
+const cONNect: _enum_for_CallProcessingOperation.cONNect = CallProcessingOperation.cONNect; /* SHORT_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary CallProcessingOperation_dISConnect
@@ -116,7 +117,7 @@ const cONNect: CallProcessingOperation = CallProcessingOperation.cONNect; /* SHO
  * @type {number}
  */
 export
-const CallProcessingOperation_dISConnect: CallProcessingOperation = CallProcessingOperation.dISConnect; /* LONG_NAMED_ENUMERATED_VALUE */
+const CallProcessingOperation_dISConnect: _enum_for_CallProcessingOperation.dISConnect = CallProcessingOperation.dISConnect; /* LONG_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary dISConnect
@@ -124,7 +125,7 @@ const CallProcessingOperation_dISConnect: CallProcessingOperation = CallProcessi
  * @type {number}
  */
 export
-const dISConnect: CallProcessingOperation = CallProcessingOperation.dISConnect; /* SHORT_NAMED_ENUMERATED_VALUE */
+const dISConnect: _enum_for_CallProcessingOperation.dISConnect = CallProcessingOperation.dISConnect; /* SHORT_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary CallProcessingOperation_rELease
@@ -132,7 +133,7 @@ const dISConnect: CallProcessingOperation = CallProcessingOperation.dISConnect; 
  * @type {number}
  */
 export
-const CallProcessingOperation_rELease: CallProcessingOperation = CallProcessingOperation.rELease; /* LONG_NAMED_ENUMERATED_VALUE */
+const CallProcessingOperation_rELease: _enum_for_CallProcessingOperation.rELease = CallProcessingOperation.rELease; /* LONG_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary rELease
@@ -140,7 +141,7 @@ const CallProcessingOperation_rELease: CallProcessingOperation = CallProcessingO
  * @type {number}
  */
 export
-const rELease: CallProcessingOperation = CallProcessingOperation.rELease; /* SHORT_NAMED_ENUMERATED_VALUE */
+const rELease: _enum_for_CallProcessingOperation.rELease = CallProcessingOperation.rELease; /* SHORT_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary CallProcessingOperation_rELeaseCOMPlete
@@ -148,7 +149,7 @@ const rELease: CallProcessingOperation = CallProcessingOperation.rELease; /* SHO
  * @type {number}
  */
 export
-const CallProcessingOperation_rELeaseCOMPlete: CallProcessingOperation = CallProcessingOperation.rELeaseCOMPlete; /* LONG_NAMED_ENUMERATED_VALUE */
+const CallProcessingOperation_rELeaseCOMPlete: _enum_for_CallProcessingOperation.rELeaseCOMPlete = CallProcessingOperation.rELeaseCOMPlete; /* LONG_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary rELeaseCOMPlete
@@ -156,7 +157,7 @@ const CallProcessingOperation_rELeaseCOMPlete: CallProcessingOperation = CallPro
  * @type {number}
  */
 export
-const rELeaseCOMPlete: CallProcessingOperation = CallProcessingOperation.rELeaseCOMPlete; /* SHORT_NAMED_ENUMERATED_VALUE */
+const rELeaseCOMPlete: _enum_for_CallProcessingOperation.rELeaseCOMPlete = CallProcessingOperation.rELeaseCOMPlete; /* SHORT_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary CallProcessingOperation_fACility
@@ -164,7 +165,7 @@ const rELeaseCOMPlete: CallProcessingOperation = CallProcessingOperation.rELease
  * @type {number}
  */
 export
-const CallProcessingOperation_fACility: CallProcessingOperation = CallProcessingOperation.fACility; /* LONG_NAMED_ENUMERATED_VALUE */
+const CallProcessingOperation_fACility: _enum_for_CallProcessingOperation.fACility = CallProcessingOperation.fACility; /* LONG_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary fACility
@@ -172,12 +173,28 @@ const CallProcessingOperation_fACility: CallProcessingOperation = CallProcessing
  * @type {number}
  */
 export
-const fACility: CallProcessingOperation = CallProcessingOperation.fACility; /* SHORT_NAMED_ENUMERATED_VALUE */
+const fACility: _enum_for_CallProcessingOperation.fACility = CallProcessingOperation.fACility; /* SHORT_NAMED_ENUMERATED_VALUE */
 
 export
-const _decode_CallProcessingOperation: $.ASN1Decoder<CallProcessingOperation> = $._decodeEnumerated;
+function _decode_CallProcessingOperation(el: _Element): CallProcessingOperation {
+    const enumerated = $._decodeEnumerated(el);
+    switch (enumerated) {
+        case CallProcessingOperation.aLERTing: return CallProcessingOperation.aLERTing;
+        case CallProcessingOperation.sETUP: return CallProcessingOperation.sETUP;
+        case CallProcessingOperation.cONNect: return CallProcessingOperation.cONNect;
+        case CallProcessingOperation.dISConnect: return CallProcessingOperation.dISConnect;
+        case CallProcessingOperation.rELease: return CallProcessingOperation.rELease;
+        case CallProcessingOperation.rELeaseCOMPlete: return CallProcessingOperation.rELeaseCOMPlete;
+        case CallProcessingOperation.fACility: return CallProcessingOperation.fACility;
+        default:
+            throw new _ConstructionError(
+                "Invalid ENUMERATED value " + enumerated + " for CallProcessingOperation.",
+                el,
+            );
+    }
+}
 
 export
-const _encode_CallProcessingOperation: $.ASN1Encoder<CallProcessingOperation> = $._encodeEnumerated;
+const _encode_CallProcessingOperation: $.ASN1Encoder<CallProcessingOperation> = $._encodeEnumerated as $.ASN1Encoder<CallProcessingOperation>;
 
 /* eslint-enable */

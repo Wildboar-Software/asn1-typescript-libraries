@@ -1,5 +1,5 @@
 /* eslint-disable */
-import { ASN1Element as _Element, INTEGER } from "@wildboar/asn1";
+import { ASN1Element as _Element, type INTEGER } from "@wildboar/asn1";
 import * as $ from "@wildboar/asn1/functional";
 
 
@@ -21,12 +21,12 @@ export type DHPublicKey = INTEGER;
 
 
 
-export const _decode_DHPublicKey = $._decodeInteger;
+export const _decode_DHPublicKey: $.ASN1Decoder<INTEGER> = $._decodeInteger;
 
 
 
 
-export const _encode_DHPublicKey = $._encodeInteger;
+export const _encode_DHPublicKey: $.ASN1Encoder<INTEGER> = $._encodeInteger;
 
 
 /* eslint-enable */

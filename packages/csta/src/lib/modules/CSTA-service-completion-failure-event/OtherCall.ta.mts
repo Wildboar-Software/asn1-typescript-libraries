@@ -2,15 +2,15 @@
 
 import * as $ from "@wildboar/asn1/functional";
 import {
-    OPTIONAL,
-    SEQUENCE,
-    SET,
-    ASN1Element as _Element,
+    type OPTIONAL,
+    type SEQUENCE,
+    type SET,
+    type ASN1Element as _Element,
     ASN1TagClass as _TagClass
 } from "@wildboar/asn1";
 import { DeviceID, _decode_DeviceID, _encode_DeviceID } from "../CSTA-device-identifiers/DeviceID.ta.mjs";
 
-import { ConnectionID, _decode_ConnectionID, _encode_ConnectionID } from "../CSTA-call-connection-identifiers/ConnectionID.ta.mjs";
+import { type ConnectionID, _decode_ConnectionID, _encode_ConnectionID } from "../CSTA-call-connection-identifiers/ConnectionID.ta.mjs";
 
 import { LocalConnectionState, _decode_LocalConnectionState, _encode_LocalConnectionState } from "../CSTA-connection-states/LocalConnectionState.ta.mjs";
 
@@ -33,7 +33,7 @@ import { ConnectionInformation, _decode_ConnectionInformation, _encode_Connectio
  * OtherCall ::= SEQUENCE
  * {    deviceID             DeviceID,
  *     connectionID            ConnectionID,
- *     localConnectionState        LocalConnectionState            OPTIONAL,
+ *     localConnectionState        LocalConnectionState            type OPTIONAL,
  *     connectionInfo            ConnectionInformation            OPTIONAL }
  * ```
  * 
@@ -41,44 +41,54 @@ import { ConnectionInformation, _decode_ConnectionInformation, _encode_Connectio
  */
 export
 class OtherCall {
+    /**
+     * @summary `deviceID`.
+     * @description
+     *
+     * Other device on the call.
+     * @public
+     * @readonly
+     */
+    public readonly deviceID: DeviceID;
+    /**
+     * @summary `connectionID`.
+     * @description
+     *
+     * That device's connection.
+     * @public
+     * @readonly
+     */
+    public readonly connectionID: ConnectionID;
+    /**
+     * @summary `localConnectionState`.
+     * @description
+     *
+     * Local connection state, if known.
+     * @public
+     * @readonly
+     */
+    public readonly localConnectionState?: OPTIONAL<LocalConnectionState>;
+    /**
+     * @summary `connectionInfo`.
+     * @description
+     *
+     * Connection information, if provided.
+     * @public
+     * @readonly
+     */
+    public readonly connectionInfo?: OPTIONAL<ConnectionInformation>;
+
     constructor (
-        /**
-         * @summary `deviceID`.
-         * @description
-         *
-         * Other device on the call.
-         * @public
-         * @readonly
-         */
-        readonly deviceID: DeviceID,
-        /**
-         * @summary `connectionID`.
-         * @description
-         *
-         * That device's connection.
-         * @public
-         * @readonly
-         */
-        readonly connectionID: ConnectionID,
-        /**
-         * @summary `localConnectionState`.
-         * @description
-         *
-         * Local connection state, if known.
-         * @public
-         * @readonly
-         */
-        readonly localConnectionState?: OPTIONAL<LocalConnectionState>,
-        /**
-         * @summary `connectionInfo`.
-         * @description
-         *
-         * Connection information, if provided.
-         * @public
-         * @readonly
-         */
-        readonly connectionInfo?: OPTIONAL<ConnectionInformation>
-    ) {}
+        deviceID: DeviceID,
+        connectionID: ConnectionID,
+        localConnectionState?: OPTIONAL<LocalConnectionState>,
+        connectionInfo?: OPTIONAL<ConnectionInformation>
+    ) {
+        this.deviceID = deviceID;
+        this.connectionID = connectionID;
+        this.localConnectionState = localConnectionState;
+        this.connectionInfo = connectionInfo;
+    }
 
     /**
      * @summary Restructures an object into a OtherCall

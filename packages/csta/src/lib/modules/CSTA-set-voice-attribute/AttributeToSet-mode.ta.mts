@@ -1,7 +1,7 @@
 /* eslint-disable */
 
 import * as $ from "@wildboar/asn1/functional";
-import { ENUMERATED, ASN1Element as _Element } from "@wildboar/asn1";
+import { type ENUMERATED, ASN1Element as _Element } from "@wildboar/asn1";
 
 
 
@@ -82,7 +82,7 @@ type AttributeToSet_mode = _enum_for_AttributeToSet_mode;
  * @enum {number}
  */
 export
-const AttributeToSet_mode = _enum_for_AttributeToSet_mode;
+const AttributeToSet_mode: typeof _enum_for_AttributeToSet_mode = _enum_for_AttributeToSet_mode;
 
 /**
  * @summary AttributeToSet_mode_automatic
@@ -94,7 +94,7 @@ const AttributeToSet_mode = _enum_for_AttributeToSet_mode;
  * @type {number}
  */
 export
-const AttributeToSet_mode_automatic: AttributeToSet_mode = AttributeToSet_mode.automatic; /* LONG_NAMED_ENUMERATED_VALUE */
+const AttributeToSet_mode_automatic: _enum_for_AttributeToSet_mode.automatic = AttributeToSet_mode.automatic; /* LONG_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary automatic
@@ -106,7 +106,7 @@ const AttributeToSet_mode_automatic: AttributeToSet_mode = AttributeToSet_mode.a
  * @type {number}
  */
 export
-const automatic: AttributeToSet_mode = AttributeToSet_mode.automatic; /* SHORT_NAMED_ENUMERATED_VALUE */
+const automatic: _enum_for_AttributeToSet_mode.automatic = AttributeToSet_mode.automatic; /* SHORT_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary AttributeToSet_mode_single
@@ -118,7 +118,7 @@ const automatic: AttributeToSet_mode = AttributeToSet_mode.automatic; /* SHORT_N
  * @type {number}
  */
 export
-const AttributeToSet_mode_single: AttributeToSet_mode = AttributeToSet_mode.single; /* LONG_NAMED_ENUMERATED_VALUE */
+const AttributeToSet_mode_single: _enum_for_AttributeToSet_mode.single = AttributeToSet_mode.single; /* LONG_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary single
@@ -130,7 +130,7 @@ const AttributeToSet_mode_single: AttributeToSet_mode = AttributeToSet_mode.sing
  * @type {number}
  */
 export
-const single: AttributeToSet_mode = AttributeToSet_mode.single; /* SHORT_NAMED_ENUMERATED_VALUE */
+const single: _enum_for_AttributeToSet_mode.single = AttributeToSet_mode.single; /* SHORT_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary AttributeToSet_mode_multiple
@@ -142,7 +142,7 @@ const single: AttributeToSet_mode = AttributeToSet_mode.single; /* SHORT_NAMED_E
  * @type {number}
  */
 export
-const AttributeToSet_mode_multiple: AttributeToSet_mode = AttributeToSet_mode.multiple; /* LONG_NAMED_ENUMERATED_VALUE */
+const AttributeToSet_mode_multiple: _enum_for_AttributeToSet_mode.multiple = AttributeToSet_mode.multiple; /* LONG_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary multiple
@@ -154,7 +154,7 @@ const AttributeToSet_mode_multiple: AttributeToSet_mode = AttributeToSet_mode.mu
  * @type {number}
  */
 export
-const multiple: AttributeToSet_mode = AttributeToSet_mode.multiple; /* SHORT_NAMED_ENUMERATED_VALUE */
+const multiple: _enum_for_AttributeToSet_mode.multiple = AttributeToSet_mode.multiple; /* SHORT_NAMED_ENUMERATED_VALUE */
 
 let _cached_decoder_for_AttributeToSet_mode: $.ASN1Decoder<AttributeToSet_mode> | null = null;
 

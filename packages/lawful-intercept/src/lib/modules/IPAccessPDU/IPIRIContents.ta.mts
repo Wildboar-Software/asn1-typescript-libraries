@@ -1,35 +1,35 @@
 /* eslint-disable */
 import {
-    GeneralizedTime,
-    INTEGER,
-    OCTET_STRING,
-    OPTIONAL,
-    UTF8String,
-    ASN1Element as _Element,
+    type GeneralizedTime,
+    type INTEGER,
+    type OCTET_STRING,
+    type OPTIONAL,
+    type UTF8String,
+    type ASN1Element as _Element,
     ASN1TagClass as _TagClass,
     ASN1OverflowError,
     ASN1SizeError
 } from "@wildboar/asn1";
 import * as $ from "@wildboar/asn1/functional";
-import { AccessEventType, _decode_AccessEventType, _encode_AccessEventType, _enum_for_AccessEventType } from "../IPAccessPDU/AccessEventType.ta.mjs";
+import { type AccessEventType, _decode_AccessEventType, _encode_AccessEventType, _enum_for_AccessEventType } from "../IPAccessPDU/AccessEventType.ta.mjs";
 // export { AccessEventType, _enum_for_AccessEventType, AccessEventType_accessAttempt /* IMPORTED_LONG_ENUMERATION_ITEM */, accessAttempt /* IMPORTED_SHORT_ENUMERATION_ITEM */, AccessEventType_accessAccept /* IMPORTED_LONG_ENUMERATION_ITEM */, accessAccept /* IMPORTED_SHORT_ENUMERATION_ITEM */, AccessEventType_accessReject /* IMPORTED_LONG_ENUMERATION_ITEM */, accessReject /* IMPORTED_SHORT_ENUMERATION_ITEM */, AccessEventType_accessFailed /* IMPORTED_LONG_ENUMERATION_ITEM */, accessFailed /* IMPORTED_SHORT_ENUMERATION_ITEM */, AccessEventType_sessionStart /* IMPORTED_LONG_ENUMERATION_ITEM */, sessionStart /* IMPORTED_SHORT_ENUMERATION_ITEM */, AccessEventType_sessionEnd /* IMPORTED_LONG_ENUMERATION_ITEM */, sessionEnd /* IMPORTED_SHORT_ENUMERATION_ITEM */, AccessEventType_interimUpdate /* IMPORTED_LONG_ENUMERATION_ITEM */, interimUpdate /* IMPORTED_SHORT_ENUMERATION_ITEM */, AccessEventType_startOfInterceptionWithSessionActive /* IMPORTED_LONG_ENUMERATION_ITEM */, startOfInterceptionWithSessionActive /* IMPORTED_SHORT_ENUMERATION_ITEM */, AccessEventType_accessEnd /* IMPORTED_LONG_ENUMERATION_ITEM */, accessEnd /* IMPORTED_SHORT_ENUMERATION_ITEM */, AccessEventType_endOfInterceptionWithSessionActive /* IMPORTED_LONG_ENUMERATION_ITEM */, endOfInterceptionWithSessionActive /* IMPORTED_SHORT_ENUMERATION_ITEM */, AccessEventType_unknown /* IMPORTED_LONG_ENUMERATION_ITEM */, AccessEventType_startOfInterceptionWithoutNetworkSession /* IMPORTED_LONG_ENUMERATION_ITEM */, startOfInterceptionWithoutNetworkSession /* IMPORTED_SHORT_ENUMERATION_ITEM */, AccessEventType_endOfInterceptionWithoutNetworkSession /* IMPORTED_LONG_ENUMERATION_ITEM */, endOfInterceptionWithoutNetworkSession /* IMPORTED_SHORT_ENUMERATION_ITEM */, AccessEventType_sessionExpired /* IMPORTED_LONG_ENUMERATION_ITEM */, sessionExpired /* IMPORTED_SHORT_ENUMERATION_ITEM */, _decode_AccessEventType, _encode_AccessEventType } from "../IPAccessPDU/AccessEventType.ta.mjs";
-import { InternetAccessType, _decode_InternetAccessType, _encode_InternetAccessType, _enum_for_InternetAccessType } from "../IPAccessPDU/InternetAccessType.ta.mjs";
+import { type InternetAccessType, _decode_InternetAccessType, _encode_InternetAccessType, _enum_for_InternetAccessType } from "../IPAccessPDU/InternetAccessType.ta.mjs";
 // export { InternetAccessType, _enum_for_InternetAccessType, InternetAccessType_undefined /* IMPORTED_LONG_ENUMERATION_ITEM */, InternetAccessType_dialUp /* IMPORTED_LONG_ENUMERATION_ITEM */, dialUp /* IMPORTED_SHORT_ENUMERATION_ITEM */, InternetAccessType_xDSL /* IMPORTED_LONG_ENUMERATION_ITEM */, xDSL /* IMPORTED_SHORT_ENUMERATION_ITEM */, InternetAccessType_cableModem /* IMPORTED_LONG_ENUMERATION_ITEM */, cableModem /* IMPORTED_SHORT_ENUMERATION_ITEM */, InternetAccessType_lAN /* IMPORTED_LONG_ENUMERATION_ITEM */, lAN /* IMPORTED_SHORT_ENUMERATION_ITEM */, InternetAccessType_wirelessLAN /* IMPORTED_LONG_ENUMERATION_ITEM */, wirelessLAN /* IMPORTED_SHORT_ENUMERATION_ITEM */, InternetAccessType_fTTx /* IMPORTED_LONG_ENUMERATION_ITEM */, fTTx /* IMPORTED_SHORT_ENUMERATION_ITEM */, InternetAccessType_wIMAX_HIPERMAN /* IMPORTED_LONG_ENUMERATION_ITEM */, wIMAX_HIPERMAN /* IMPORTED_SHORT_ENUMERATION_ITEM */, InternetAccessType_satellite /* IMPORTED_LONG_ENUMERATION_ITEM */, satellite /* IMPORTED_SHORT_ENUMERATION_ITEM */, InternetAccessType_wireless_other /* IMPORTED_LONG_ENUMERATION_ITEM */, wireless_other /* IMPORTED_SHORT_ENUMERATION_ITEM */, _decode_InternetAccessType, _encode_InternetAccessType } from "../IPAccessPDU/InternetAccessType.ta.mjs";
-import { IPVersion, _decode_IPVersion, _encode_IPVersion, _enum_for_IPVersion } from "../IPAccessPDU/IPVersion.ta.mjs";
+import { type IPVersion, _decode_IPVersion, _encode_IPVersion, _enum_for_IPVersion } from "../IPAccessPDU/IPVersion.ta.mjs";
 // export { IPVersion, _enum_for_IPVersion, IPVersion_iPV4 /* IMPORTED_LONG_ENUMERATION_ITEM */, iPV4 /* IMPORTED_SHORT_ENUMERATION_ITEM */, IPVersion_iPV6 /* IMPORTED_LONG_ENUMERATION_ITEM */, iPV6 /* IMPORTED_SHORT_ENUMERATION_ITEM */, IPVersion_iPV4andV6 /* IMPORTED_LONG_ENUMERATION_ITEM */, iPV4andV6 /* IMPORTED_SHORT_ENUMERATION_ITEM */, _decode_IPVersion, _encode_IPVersion } from "../IPAccessPDU/IPVersion.ta.mjs";
 // export { IPAddress, _decode_IPAddress, _encode_IPAddress } from "../LI-PS-PDU/IPAddress.ta.mjs";
-import { EndReason, _decode_EndReason, _encode_EndReason, _enum_for_EndReason } from "../IPAccessPDU/EndReason.ta.mjs";
+import { type EndReason, _decode_EndReason, _encode_EndReason, _enum_for_EndReason } from "../IPAccessPDU/EndReason.ta.mjs";
 // export { EndReason, _enum_for_EndReason, EndReason_undefined /* IMPORTED_LONG_ENUMERATION_ITEM */, EndReason_regularLogoff /* IMPORTED_LONG_ENUMERATION_ITEM */, regularLogoff /* IMPORTED_SHORT_ENUMERATION_ITEM */, EndReason_connectionLoss /* IMPORTED_LONG_ENUMERATION_ITEM */, connectionLoss /* IMPORTED_SHORT_ENUMERATION_ITEM */, EndReason_connectionTimeout /* IMPORTED_LONG_ENUMERATION_ITEM */, connectionTimeout /* IMPORTED_SHORT_ENUMERATION_ITEM */, EndReason_leaseExpired /* IMPORTED_LONG_ENUMERATION_ITEM */, leaseExpired /* IMPORTED_SHORT_ENUMERATION_ITEM */, _decode_EndReason, _encode_EndReason } from "../IPAccessPDU/EndReason.ta.mjs";
-import { IPIRIIDType, _decode_IPIRIIDType, _encode_IPIRIIDType } from "../IPAccessPDU/IPIRIIDType.ta.mjs";
+import { type IPIRIIDType, _decode_IPIRIIDType, _encode_IPIRIIDType } from "../IPAccessPDU/IPIRIIDType.ta.mjs";
 // export { IPIRIIDType, _decode_IPIRIIDType, _encode_IPIRIIDType } from "../IPAccessPDU/IPIRIIDType.ta.mjs";
 import { NationalIPIRIParameters, _decode_NationalIPIRIParameters, _encode_NationalIPIRIParameters } from "../IPAccessPDU/NationalIPIRIParameters.ta.mjs";
 // export { NationalIPIRIParameters, _decode_NationalIPIRIParameters, _encode_NationalIPIRIParameters } from "../IPAccessPDU/NationalIPIRIParameters.ta.mjs";
-import { AuthenticationType, _decode_AuthenticationType, _encode_AuthenticationType, _enum_for_AuthenticationType } from "../IPAccessPDU/AuthenticationType.ta.mjs";
+import { type AuthenticationType, _decode_AuthenticationType, _encode_AuthenticationType, _enum_for_AuthenticationType } from "../IPAccessPDU/AuthenticationType.ta.mjs";
 // export { AuthenticationType, _enum_for_AuthenticationType, AuthenticationType_unknown /* IMPORTED_LONG_ENUMERATION_ITEM */, AuthenticationType_static /* IMPORTED_LONG_ENUMERATION_ITEM */, static_ /* IMPORTED_SHORT_ENUMERATION_ITEM */, AuthenticationType_radiusAAA /* IMPORTED_LONG_ENUMERATION_ITEM */, radiusAAA /* IMPORTED_SHORT_ENUMERATION_ITEM */, AuthenticationType_dhcpAAA /* IMPORTED_LONG_ENUMERATION_ITEM */, dhcpAAA /* IMPORTED_SHORT_ENUMERATION_ITEM */, AuthenticationType_diameterAAA /* IMPORTED_LONG_ENUMERATION_ITEM */, diameterAAA /* IMPORTED_SHORT_ENUMERATION_ITEM */, _decode_AuthenticationType, _encode_AuthenticationType } from "../IPAccessPDU/AuthenticationType.ta.mjs";
-import { OtherTargetIdentifiers, _decode_OtherTargetIdentifiers, _encode_OtherTargetIdentifiers } from "../IPAccessPDU/OtherTargetIdentifiers.ta.mjs";
+import { type OtherTargetIdentifiers, _decode_OtherTargetIdentifiers, _encode_OtherTargetIdentifiers } from "../IPAccessPDU/OtherTargetIdentifiers.ta.mjs";
 // export { OtherTargetIdentifiers, _decode_OtherTargetIdentifiers, _encode_OtherTargetIdentifiers } from "../IPAccessPDU/OtherTargetIdentifiers.ta.mjs";
 // export { Location, _decode_Location, _encode_Location } from "../LI-PS-PDU/Location.ta.mjs";
-import { FramedRoute, _decode_FramedRoute, _encode_FramedRoute } from "../IPAccessPDU/FramedRoute.ta.mjs";
+import { type FramedRoute, _decode_FramedRoute, _encode_FramedRoute } from "../IPAccessPDU/FramedRoute.ta.mjs";
 import * as LI_PS_PDU from "../LI-PS-PDU/index.mjs";
 // export { FramedRoute, _decode_FramedRoute, _encode_FramedRoute } from "../IPAccessPDU/FramedRoute.ta.mjs";
 
@@ -599,31 +599,31 @@ class IPIRIContents {
          * @static
          */
 
-    public static _enum_for_accessEventType = _enum_for_AccessEventType;        /**
+    public static _enum_for_accessEventType: typeof _enum_for_AccessEventType = _enum_for_AccessEventType;        /**
          * @summary The enum used as the type of the component `internetAccessType`
          * @public
          * @static
          */
 
-    public static _enum_for_internetAccessType = _enum_for_InternetAccessType;        /**
+    public static _enum_for_internetAccessType: typeof _enum_for_InternetAccessType = _enum_for_InternetAccessType;        /**
          * @summary The enum used as the type of the component `iPVersion`
          * @public
          * @static
          */
 
-    public static _enum_for_iPVersion = _enum_for_IPVersion;        /**
+    public static _enum_for_iPVersion: typeof _enum_for_IPVersion = _enum_for_IPVersion;        /**
          * @summary The enum used as the type of the component `endReason`
          * @public
          * @static
          */
 
-    public static _enum_for_endReason = _enum_for_EndReason;        /**
+    public static _enum_for_endReason: typeof _enum_for_EndReason = _enum_for_EndReason;        /**
          * @summary The enum used as the type of the component `authenticationType`
          * @public
          * @static
          */
 
-    public static _enum_for_authenticationType = _enum_for_AuthenticationType;
+    public static _enum_for_authenticationType: typeof _enum_for_AuthenticationType = _enum_for_AuthenticationType;
 }
 
 /**

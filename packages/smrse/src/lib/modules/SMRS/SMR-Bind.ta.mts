@@ -1,12 +1,12 @@
 /* eslint-disable */
 import {
     ASN1ConstructionError as _ConstructionError,
-    ASN1Element as _Element,
+    type ASN1Element as _Element,
     ASN1TagClass as _TagClass
 } from "@wildboar/asn1";
 import * as $ from "@wildboar/asn1/functional";
 import { SMS_Address, _decode_SMS_Address, _encode_SMS_Address } from "../SMRS/SMS-Address.ta.mjs";
-import { Password, _decode_Password, _encode_Password } from "../SMRS/Password.ta.mjs";
+import { type Password, _decode_Password, _encode_Password } from "../SMRS/Password.ta.mjs";
 
 
 /**
@@ -53,7 +53,7 @@ class SMR_Bind {
      * @public
      * @readonly
      */
-    readonly sc_address: SMS_Address;
+    public readonly sc_address: SMS_Address;
     /**
      * @summary `password`.
      * @description
@@ -66,7 +66,7 @@ class SMR_Bind {
      * @public
      * @readonly
      */
-    readonly password: Password;
+    public readonly password: Password;
     /**
      * @summary Extensions that are not recognized.
      * @description
@@ -77,7 +77,7 @@ class SMR_Bind {
      * @public
      * @readonly
      */
-    readonly _unrecognizedExtensionsList: _Element[];
+    public readonly _unrecognizedExtensionsList: _Element[];
 
     constructor (
         sc_address: SMS_Address,

@@ -1,12 +1,12 @@
 /* eslint-disable */
 import {
-    BOOLEAN,
-    OPTIONAL,
-    ASN1Element as _Element,
+    type BOOLEAN,
+    type OPTIONAL,
+    type ASN1Element as _Element,
     ASN1TagClass as _TagClass
 } from "@wildboar/asn1";
 import * as $ from "@wildboar/asn1/functional";
-import { StreamMode, _decode_StreamMode, _encode_StreamMode, _enum_for_StreamMode } from "../MEDIA-GATEWAY-CONTROL/StreamMode.ta.mjs";
+import { type StreamMode, _decode_StreamMode, _encode_StreamMode, _enum_for_StreamMode } from "../MEDIA-GATEWAY-CONTROL/StreamMode.ta.mjs";
 import { PropertyParm, _decode_PropertyParm, _encode_PropertyParm } from "../MEDIA-GATEWAY-CONTROL/PropertyParm.ta.mjs";
 
 
@@ -55,7 +55,7 @@ class LocalControlDescriptor {
      * @public
      * @readonly
      */
-    readonly streamMode: OPTIONAL<StreamMode>;
+    public readonly streamMode: OPTIONAL<StreamMode>;
     /**
      * @summary `reserveValue`.
      * @description
@@ -67,7 +67,7 @@ class LocalControlDescriptor {
      * @public
      * @readonly
      */
-    readonly reserveValue: OPTIONAL<BOOLEAN>;
+    public readonly reserveValue: OPTIONAL<BOOLEAN>;
     /**
      * @summary `reserveGroup`.
      * @description
@@ -80,7 +80,7 @@ class LocalControlDescriptor {
      * @public
      * @readonly
      */
-    readonly reserveGroup: OPTIONAL<BOOLEAN>;
+    public readonly reserveGroup: OPTIONAL<BOOLEAN>;
     /**
      * @summary `propertyParms`.
      * @description
@@ -91,7 +91,7 @@ class LocalControlDescriptor {
      * @public
      * @readonly
      */
-    readonly propertyParms: PropertyParm[];
+    public readonly propertyParms: PropertyParm[];
     /**
      * @summary Extensions that are not recognized.
      * @description
@@ -102,7 +102,7 @@ class LocalControlDescriptor {
      * @public
      * @readonly
      */
-    readonly _unrecognizedExtensionsList: _Element[];
+    public readonly _unrecognizedExtensionsList: _Element[];
 
     constructor (
         streamMode: OPTIONAL<StreamMode>,
@@ -140,7 +140,7 @@ class LocalControlDescriptor {
          * @static
          */
 
-    public static _enum_for_streamMode = _enum_for_StreamMode;
+    public static _enum_for_streamMode: typeof _enum_for_StreamMode = _enum_for_StreamMode;
 }
 
 /**

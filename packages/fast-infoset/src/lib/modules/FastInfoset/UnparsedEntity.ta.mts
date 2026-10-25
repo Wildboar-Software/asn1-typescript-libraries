@@ -1,6 +1,6 @@
 /* eslint-disable */
 import {
-  OPTIONAL,
+  type OPTIONAL,
   ASN1Element as _Element,
   ASN1TagClass as _TagClass,
   ASN1Construction as _Construction,
@@ -12,7 +12,7 @@ import {
 } from '@wildboar/asn1';
 import * as $ from '@wildboar/asn1/functional';
 import {
-  IdentifyingStringOrIndex,
+  type IdentifyingStringOrIndex,
   _decode_IdentifyingStringOrIndex,
   _encode_IdentifyingStringOrIndex,
 } from '../FastInfoset/IdentifyingStringOrIndex.ta.mjs';
@@ -46,7 +46,7 @@ export class UnparsedEntity {
    * @public
    * @readonly
    */
-  readonly name: IdentifyingStringOrIndex;
+  public readonly name: IdentifyingStringOrIndex;
   /**
    * @summary `system_identifier`.
    * @description [system identifier]; OTHER URI category.
@@ -54,7 +54,7 @@ export class UnparsedEntity {
    * @public
    * @readonly
    */
-  readonly system_identifier: IdentifyingStringOrIndex;
+  public readonly system_identifier: IdentifyingStringOrIndex;
   /**
    * @summary `public_identifier`.
    * @description [public identifier]; OTHER URI category.
@@ -63,7 +63,7 @@ export class UnparsedEntity {
    * @public
    * @readonly
    */
-  readonly public_identifier: OPTIONAL<IdentifyingStringOrIndex>;
+  public readonly public_identifier: OPTIONAL<IdentifyingStringOrIndex>;
   /**
    * @summary `notation_name`.
    * @description [notation name]; OTHER NCNAME category.
@@ -71,7 +71,7 @@ export class UnparsedEntity {
    * @public
    * @readonly
    */
-  readonly notation_name: IdentifyingStringOrIndex;
+  public readonly notation_name: IdentifyingStringOrIndex;
 
   constructor(
     name: IdentifyingStringOrIndex,

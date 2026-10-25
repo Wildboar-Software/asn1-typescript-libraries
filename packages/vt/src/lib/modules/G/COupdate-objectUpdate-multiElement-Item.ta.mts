@@ -1,7 +1,7 @@
 /* eslint-disable */
 import {
-    INTEGER,
-    ASN1Element as _Element,
+    type INTEGER,
+    type ASN1Element as _Element,
     ASN1TagClass as _TagClass,
     ASN1Construction as _Construction,
     ASN1UniversalType as _UniversalType,
@@ -11,7 +11,7 @@ import {
     ASN1ConstructionError as _ConstructionError,
 } from "@wildboar/asn1";
 import * as $ from "@wildboar/asn1/functional";
-import { COupdate_objectUpdate_multiElement_Item_update, _decode_COupdate_objectUpdate_multiElement_Item_update, _encode_COupdate_objectUpdate_multiElement_Item_update } from "../G/COupdate-objectUpdate-multiElement-Item-update.ta.mjs";
+import { type COupdate_objectUpdate_multiElement_Item_update, _decode_COupdate_objectUpdate_multiElement_Item_update, _encode_COupdate_objectUpdate_multiElement_Item_update } from "../G/COupdate-objectUpdate-multiElement-Item-update.ta.mjs";
 
 
 /**
@@ -44,26 +44,32 @@ import { COupdate_objectUpdate_multiElement_Item_update, _decode_COupdate_object
  */
 export
 class COupdate_objectUpdate_multiElement_Item {
+    /**
+     * @summary `identifier`.
+     * @description
+     * Data-element index within the parametric CO. ISO/IEC
+     * 9041-1:1997 §12.2.
+     * @public
+     * @readonly
+     */
+    public readonly identifier: INTEGER;
+    /**
+     * @summary `update`.
+     * @description
+     * Per-element character/boolean/symbolic/integer/bit-string
+     * update. ISO/IEC 9041-1:1997 §12.2.
+     * @public
+     * @readonly
+     */
+    public readonly update: COupdate_objectUpdate_multiElement_Item_update;
+
     constructor (
-        /**
-         * @summary `identifier`.
-         * @description
-         * Data-element index within the parametric CO. ISO/IEC
-         * 9041-1:1997 §12.2.
-         * @public
-         * @readonly
-         */
-        readonly identifier: INTEGER,
-        /**
-         * @summary `update`.
-         * @description
-         * Per-element character/boolean/symbolic/integer/bit-string
-         * update. ISO/IEC 9041-1:1997 §12.2.
-         * @public
-         * @readonly
-         */
-        readonly update: COupdate_objectUpdate_multiElement_Item_update
-    ) {}
+        identifier: INTEGER,
+        update: COupdate_objectUpdate_multiElement_Item_update
+    ) {
+        this.identifier = identifier;
+        this.update = update;
+    }
 
     /**
      * @summary Restructures an object into a COupdate_objectUpdate_multiElement_Item

@@ -1,7 +1,7 @@
 /* eslint-disable */
 import {
-    INTEGER,
-    ASN1Element as _Element,
+    type INTEGER,
+    type ASN1Element as _Element,
     ASN1TagClass as _TagClass,
     ASN1Construction as _Construction,
     ASN1UniversalType as _UniversalType,
@@ -57,7 +57,7 @@ type ObjectClass_basicObjectClass = INTEGER;
  * @type {number}
  */
 export
-const ObjectClass_basicObjectClass_namedVariable: ObjectClass_basicObjectClass = 0; /* LONG_NAMED_INTEGER_VALUE */
+const ObjectClass_basicObjectClass_namedVariable: 0 = 0 satisfies ObjectClass_basicObjectClass; /* LONG_NAMED_INTEGER_VALUE */
 
 /**
  * @summary ObjectClass_basicObjectClass_namedVariable
@@ -68,7 +68,7 @@ const ObjectClass_basicObjectClass_namedVariable: ObjectClass_basicObjectClass =
  * @type {number}
  */
 export
-const namedVariable: ObjectClass_basicObjectClass = ObjectClass_basicObjectClass_namedVariable; /* SHORT_NAMED_INTEGER_VALUE */
+const namedVariable: 0 = ObjectClass_basicObjectClass_namedVariable; /* SHORT_NAMED_INTEGER_VALUE */
 
 /**
  * @summary ObjectClass_basicObjectClass_scatteredAccess
@@ -80,7 +80,7 @@ const namedVariable: ObjectClass_basicObjectClass = ObjectClass_basicObjectClass
  * @type {number}
  */
 export
-const ObjectClass_basicObjectClass_scatteredAccess: ObjectClass_basicObjectClass = 1; /* LONG_NAMED_INTEGER_VALUE */
+const ObjectClass_basicObjectClass_scatteredAccess: 1 = 1 satisfies ObjectClass_basicObjectClass; /* LONG_NAMED_INTEGER_VALUE */
 
 /**
  * @summary ObjectClass_basicObjectClass_scatteredAccess
@@ -92,7 +92,7 @@ const ObjectClass_basicObjectClass_scatteredAccess: ObjectClass_basicObjectClass
  * @type {number}
  */
 export
-const scatteredAccess: ObjectClass_basicObjectClass = ObjectClass_basicObjectClass_scatteredAccess; /* SHORT_NAMED_INTEGER_VALUE */
+const scatteredAccess: 1 = ObjectClass_basicObjectClass_scatteredAccess; /* SHORT_NAMED_INTEGER_VALUE */
 
 /**
  * @summary ObjectClass_basicObjectClass_namedVariableList
@@ -104,7 +104,7 @@ const scatteredAccess: ObjectClass_basicObjectClass = ObjectClass_basicObjectCla
  * @type {number}
  */
 export
-const ObjectClass_basicObjectClass_namedVariableList: ObjectClass_basicObjectClass = 2; /* LONG_NAMED_INTEGER_VALUE */
+const ObjectClass_basicObjectClass_namedVariableList: 2 = 2 satisfies ObjectClass_basicObjectClass; /* LONG_NAMED_INTEGER_VALUE */
 
 /**
  * @summary ObjectClass_basicObjectClass_namedVariableList
@@ -116,7 +116,7 @@ const ObjectClass_basicObjectClass_namedVariableList: ObjectClass_basicObjectCla
  * @type {number}
  */
 export
-const namedVariableList: ObjectClass_basicObjectClass = ObjectClass_basicObjectClass_namedVariableList; /* SHORT_NAMED_INTEGER_VALUE */
+const namedVariableList: 2 = ObjectClass_basicObjectClass_namedVariableList; /* SHORT_NAMED_INTEGER_VALUE */
 
 /**
  * @summary ObjectClass_basicObjectClass_namedType
@@ -127,7 +127,7 @@ const namedVariableList: ObjectClass_basicObjectClass = ObjectClass_basicObjectC
  * @type {number}
  */
 export
-const ObjectClass_basicObjectClass_namedType: ObjectClass_basicObjectClass = 3; /* LONG_NAMED_INTEGER_VALUE */
+const ObjectClass_basicObjectClass_namedType: 3 = 3 satisfies ObjectClass_basicObjectClass; /* LONG_NAMED_INTEGER_VALUE */
 
 /**
  * @summary ObjectClass_basicObjectClass_namedType
@@ -138,7 +138,7 @@ const ObjectClass_basicObjectClass_namedType: ObjectClass_basicObjectClass = 3; 
  * @type {number}
  */
 export
-const namedType: ObjectClass_basicObjectClass = ObjectClass_basicObjectClass_namedType; /* SHORT_NAMED_INTEGER_VALUE */
+const namedType: 3 = ObjectClass_basicObjectClass_namedType; /* SHORT_NAMED_INTEGER_VALUE */
 
 /**
  * @summary ObjectClass_basicObjectClass_semaphore
@@ -150,7 +150,7 @@ const namedType: ObjectClass_basicObjectClass = ObjectClass_basicObjectClass_nam
  * @type {number}
  */
 export
-const ObjectClass_basicObjectClass_semaphore: ObjectClass_basicObjectClass = 4; /* LONG_NAMED_INTEGER_VALUE */
+const ObjectClass_basicObjectClass_semaphore: 4 = 4 satisfies ObjectClass_basicObjectClass; /* LONG_NAMED_INTEGER_VALUE */
 
 /**
  * @summary ObjectClass_basicObjectClass_semaphore
@@ -162,7 +162,7 @@ const ObjectClass_basicObjectClass_semaphore: ObjectClass_basicObjectClass = 4; 
  * @type {number}
  */
 export
-const semaphore: ObjectClass_basicObjectClass = ObjectClass_basicObjectClass_semaphore; /* SHORT_NAMED_INTEGER_VALUE */
+const semaphore: 4 = ObjectClass_basicObjectClass_semaphore; /* SHORT_NAMED_INTEGER_VALUE */
 
 /**
  * @summary ObjectClass_basicObjectClass_eventCondition
@@ -173,7 +173,7 @@ const semaphore: ObjectClass_basicObjectClass = ObjectClass_basicObjectClass_sem
  * @type {number}
  */
 export
-const ObjectClass_basicObjectClass_eventCondition: ObjectClass_basicObjectClass = 5; /* LONG_NAMED_INTEGER_VALUE */
+const ObjectClass_basicObjectClass_eventCondition: 5 = 5 satisfies ObjectClass_basicObjectClass; /* LONG_NAMED_INTEGER_VALUE */
 
 /**
  * @summary ObjectClass_basicObjectClass_eventCondition
@@ -184,7 +184,7 @@ const ObjectClass_basicObjectClass_eventCondition: ObjectClass_basicObjectClass 
  * @type {number}
  */
 export
-const eventCondition: ObjectClass_basicObjectClass = ObjectClass_basicObjectClass_eventCondition; /* SHORT_NAMED_INTEGER_VALUE */
+const eventCondition: 5 = ObjectClass_basicObjectClass_eventCondition; /* SHORT_NAMED_INTEGER_VALUE */
 
 /**
  * @summary ObjectClass_basicObjectClass_eventAction
@@ -195,7 +195,7 @@ const eventCondition: ObjectClass_basicObjectClass = ObjectClass_basicObjectClas
  * @type {number}
  */
 export
-const ObjectClass_basicObjectClass_eventAction: ObjectClass_basicObjectClass = 6; /* LONG_NAMED_INTEGER_VALUE */
+const ObjectClass_basicObjectClass_eventAction: 6 = 6 satisfies ObjectClass_basicObjectClass; /* LONG_NAMED_INTEGER_VALUE */
 
 /**
  * @summary ObjectClass_basicObjectClass_eventAction
@@ -206,7 +206,7 @@ const ObjectClass_basicObjectClass_eventAction: ObjectClass_basicObjectClass = 6
  * @type {number}
  */
 export
-const eventAction: ObjectClass_basicObjectClass = ObjectClass_basicObjectClass_eventAction; /* SHORT_NAMED_INTEGER_VALUE */
+const eventAction: 6 = ObjectClass_basicObjectClass_eventAction; /* SHORT_NAMED_INTEGER_VALUE */
 
 /**
  * @summary ObjectClass_basicObjectClass_eventEnrollment
@@ -217,7 +217,7 @@ const eventAction: ObjectClass_basicObjectClass = ObjectClass_basicObjectClass_e
  * @type {number}
  */
 export
-const ObjectClass_basicObjectClass_eventEnrollment: ObjectClass_basicObjectClass = 7; /* LONG_NAMED_INTEGER_VALUE */
+const ObjectClass_basicObjectClass_eventEnrollment: 7 = 7 satisfies ObjectClass_basicObjectClass; /* LONG_NAMED_INTEGER_VALUE */
 
 /**
  * @summary ObjectClass_basicObjectClass_eventEnrollment
@@ -228,7 +228,7 @@ const ObjectClass_basicObjectClass_eventEnrollment: ObjectClass_basicObjectClass
  * @type {number}
  */
 export
-const eventEnrollment: ObjectClass_basicObjectClass = ObjectClass_basicObjectClass_eventEnrollment; /* SHORT_NAMED_INTEGER_VALUE */
+const eventEnrollment: 7 = ObjectClass_basicObjectClass_eventEnrollment; /* SHORT_NAMED_INTEGER_VALUE */
 
 /**
  * @summary ObjectClass_basicObjectClass_journal
@@ -239,7 +239,7 @@ const eventEnrollment: ObjectClass_basicObjectClass = ObjectClass_basicObjectCla
  * @type {number}
  */
 export
-const ObjectClass_basicObjectClass_journal: ObjectClass_basicObjectClass = 8; /* LONG_NAMED_INTEGER_VALUE */
+const ObjectClass_basicObjectClass_journal: 8 = 8 satisfies ObjectClass_basicObjectClass; /* LONG_NAMED_INTEGER_VALUE */
 
 /**
  * @summary ObjectClass_basicObjectClass_journal
@@ -250,7 +250,7 @@ const ObjectClass_basicObjectClass_journal: ObjectClass_basicObjectClass = 8; /*
  * @type {number}
  */
 export
-const journal: ObjectClass_basicObjectClass = ObjectClass_basicObjectClass_journal; /* SHORT_NAMED_INTEGER_VALUE */
+const journal: 8 = ObjectClass_basicObjectClass_journal; /* SHORT_NAMED_INTEGER_VALUE */
 
 /**
  * @summary ObjectClass_basicObjectClass_domain
@@ -261,7 +261,7 @@ const journal: ObjectClass_basicObjectClass = ObjectClass_basicObjectClass_journ
  * @type {number}
  */
 export
-const ObjectClass_basicObjectClass_domain: ObjectClass_basicObjectClass = 9; /* LONG_NAMED_INTEGER_VALUE */
+const ObjectClass_basicObjectClass_domain: 9 = 9 satisfies ObjectClass_basicObjectClass; /* LONG_NAMED_INTEGER_VALUE */
 
 /**
  * @summary ObjectClass_basicObjectClass_domain
@@ -272,7 +272,7 @@ const ObjectClass_basicObjectClass_domain: ObjectClass_basicObjectClass = 9; /* 
  * @type {number}
  */
 export
-const domain: ObjectClass_basicObjectClass = ObjectClass_basicObjectClass_domain; /* SHORT_NAMED_INTEGER_VALUE */
+const domain: 9 = ObjectClass_basicObjectClass_domain; /* SHORT_NAMED_INTEGER_VALUE */
 
 /**
  * @summary ObjectClass_basicObjectClass_programInvocation
@@ -285,7 +285,7 @@ const domain: ObjectClass_basicObjectClass = ObjectClass_basicObjectClass_domain
  * @type {number}
  */
 export
-const ObjectClass_basicObjectClass_programInvocation: ObjectClass_basicObjectClass = 10; /* LONG_NAMED_INTEGER_VALUE */
+const ObjectClass_basicObjectClass_programInvocation: 10 = 10 satisfies ObjectClass_basicObjectClass; /* LONG_NAMED_INTEGER_VALUE */
 
 /**
  * @summary ObjectClass_basicObjectClass_programInvocation
@@ -298,7 +298,7 @@ const ObjectClass_basicObjectClass_programInvocation: ObjectClass_basicObjectCla
  * @type {number}
  */
 export
-const programInvocation: ObjectClass_basicObjectClass = ObjectClass_basicObjectClass_programInvocation; /* SHORT_NAMED_INTEGER_VALUE */
+const programInvocation: 10 = ObjectClass_basicObjectClass_programInvocation; /* SHORT_NAMED_INTEGER_VALUE */
 
 /**
  * @summary ObjectClass_basicObjectClass_operatorStation
@@ -309,7 +309,7 @@ const programInvocation: ObjectClass_basicObjectClass = ObjectClass_basicObjectC
  * @type {number}
  */
 export
-const ObjectClass_basicObjectClass_operatorStation: ObjectClass_basicObjectClass = 11; /* LONG_NAMED_INTEGER_VALUE */
+const ObjectClass_basicObjectClass_operatorStation: 11 = 11 satisfies ObjectClass_basicObjectClass; /* LONG_NAMED_INTEGER_VALUE */
 
 /**
  * @summary ObjectClass_basicObjectClass_operatorStation
@@ -320,7 +320,7 @@ const ObjectClass_basicObjectClass_operatorStation: ObjectClass_basicObjectClass
  * @type {number}
  */
 export
-const operatorStation: ObjectClass_basicObjectClass = ObjectClass_basicObjectClass_operatorStation; /* SHORT_NAMED_INTEGER_VALUE */
+const operatorStation: 11 = ObjectClass_basicObjectClass_operatorStation; /* SHORT_NAMED_INTEGER_VALUE */
 
 /**
  * @summary ObjectClass_basicObjectClass_dataExchange
@@ -332,7 +332,7 @@ const operatorStation: ObjectClass_basicObjectClass = ObjectClass_basicObjectCla
  * @type {number}
  */
 export
-const ObjectClass_basicObjectClass_dataExchange: ObjectClass_basicObjectClass = 12; /* LONG_NAMED_INTEGER_VALUE */
+const ObjectClass_basicObjectClass_dataExchange: 12 = 12 satisfies ObjectClass_basicObjectClass; /* LONG_NAMED_INTEGER_VALUE */
 
 /**
  * @summary ObjectClass_basicObjectClass_dataExchange
@@ -344,7 +344,7 @@ const ObjectClass_basicObjectClass_dataExchange: ObjectClass_basicObjectClass = 
  * @type {number}
  */
 export
-const dataExchange: ObjectClass_basicObjectClass = ObjectClass_basicObjectClass_dataExchange; /* SHORT_NAMED_INTEGER_VALUE */
+const dataExchange: 12 = ObjectClass_basicObjectClass_dataExchange; /* SHORT_NAMED_INTEGER_VALUE */
 
 /**
  * @summary ObjectClass_basicObjectClass_accessControlList
@@ -356,7 +356,7 @@ const dataExchange: ObjectClass_basicObjectClass = ObjectClass_basicObjectClass_
  * @type {number}
  */
 export
-const ObjectClass_basicObjectClass_accessControlList: ObjectClass_basicObjectClass = 13; /* LONG_NAMED_INTEGER_VALUE */
+const ObjectClass_basicObjectClass_accessControlList: 13 = 13 satisfies ObjectClass_basicObjectClass; /* LONG_NAMED_INTEGER_VALUE */
 
 /**
  * @summary ObjectClass_basicObjectClass_accessControlList
@@ -368,9 +368,9 @@ const ObjectClass_basicObjectClass_accessControlList: ObjectClass_basicObjectCla
  * @type {number}
  */
 export
-const accessControlList: ObjectClass_basicObjectClass = ObjectClass_basicObjectClass_accessControlList; /* SHORT_NAMED_INTEGER_VALUE */
-export const _decode_ObjectClass_basicObjectClass = $._decodeInteger;
-export const _encode_ObjectClass_basicObjectClass = $._encodeInteger;
+const accessControlList: 13 = ObjectClass_basicObjectClass_accessControlList; /* SHORT_NAMED_INTEGER_VALUE */
+export const _decode_ObjectClass_basicObjectClass: $.ASN1Decoder<INTEGER> = $._decodeInteger;
+export const _encode_ObjectClass_basicObjectClass: $.ASN1Encoder<INTEGER> = $._encodeInteger;
 
 
 /* eslint-enable */

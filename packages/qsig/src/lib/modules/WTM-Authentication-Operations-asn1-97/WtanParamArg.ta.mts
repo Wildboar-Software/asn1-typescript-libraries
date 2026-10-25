@@ -1,15 +1,15 @@
 /* eslint-disable */
 import {
-    OPTIONAL,
-    ASN1Element as _Element,
+    type OPTIONAL,
+    type ASN1Element as _Element,
     ASN1TagClass as _TagClass
 } from "@wildboar/asn1";
 import * as $ from "@wildboar/asn1/functional";
-import { WtmUserId, _decode_WtmUserId, _encode_WtmUserId } from "../WTM-Authentication-Operations-asn1-97/WtmUserId.ta.mjs";
-import { AuthChallenge, _decode_AuthChallenge, _encode_AuthChallenge } from "../WTM-Authentication-Operations-asn1-97/AuthChallenge.ta.mjs";
+import { type WtmUserId, _decode_WtmUserId, _encode_WtmUserId } from "../WTM-Authentication-Operations-asn1-97/WtmUserId.ta.mjs";
+import { type AuthChallenge, _decode_AuthChallenge, _encode_AuthChallenge } from "../WTM-Authentication-Operations-asn1-97/AuthChallenge.ta.mjs";
 import { AuthAlgorithm, _decode_AuthAlgorithm, _encode_AuthAlgorithm } from "../WTM-Authentication-Operations-asn1-97/AuthAlgorithm.ta.mjs";
-import { CanCompute, _decode_CanCompute, _encode_CanCompute } from "../WTM-Authentication-Operations-asn1-97/CanCompute.ta.mjs";
-import { DummyExtension, _decode_DummyExtension, _encode_DummyExtension } from "../WTM-Authentication-Operations-asn1-97/DummyExtension.ta.mjs";
+import { type CanCompute, _decode_CanCompute, _encode_CanCompute } from "../WTM-Authentication-Operations-asn1-97/CanCompute.ta.mjs";
+import { type DummyExtension, _decode_DummyExtension, _encode_DummyExtension } from "../WTM-Authentication-Operations-asn1-97/DummyExtension.ta.mjs";
 
 /**
  * @summary WtanParamArg

@@ -1,12 +1,12 @@
 /* eslint-disable */
 import {
-    OPTIONAL,
-    ASN1Element as _Element,
+    type OPTIONAL,
+    type ASN1Element as _Element,
     ASN1TagClass as _TagClass
 } from "@wildboar/asn1";
 import * as $ from "@wildboar/asn1/functional";
-import { GSN_Address, _decode_GSN_Address, _encode_GSN_Address } from "../MAP-CommonDataTypes/GSN-Address.ta.mjs";
-import { AbsentSubscriberDiagnosticSM, _decode_AbsentSubscriberDiagnosticSM, _encode_AbsentSubscriberDiagnosticSM } from "../MAP-ER-DataTypes/AbsentSubscriberDiagnosticSM.ta.mjs";
+import { type GSN_Address, _decode_GSN_Address, _encode_GSN_Address } from "../MAP-CommonDataTypes/GSN-Address.ta.mjs";
+import { type AbsentSubscriberDiagnosticSM, _decode_AbsentSubscriberDiagnosticSM, _encode_AbsentSubscriberDiagnosticSM } from "../MAP-ER-DataTypes/AbsentSubscriberDiagnosticSM.ta.mjs";
 import { ExtensionContainer, _decode_ExtensionContainer, _encode_ExtensionContainer } from "../MAP-ExtensionDataTypes/ExtensionContainer.ta.mjs";
 
 
@@ -24,9 +24,9 @@ import { ExtensionContainer, _decode_ExtensionContainer, _encode_ExtensionContai
  * ```asn1
  * SendRoutingInfoForGprsRes ::= SEQUENCE {
  *     sgsn-Address    [0] GSN-Address,
- *     ggsn-Address    [1]    GSN-Address    OPTIONAL,
- *     mobileNotReachableReason    [2]    AbsentSubscriberDiagnosticSM    OPTIONAL,
- *     extensionContainer    [3] ExtensionContainer    OPTIONAL,
+ *     ggsn-Address    [1]    GSN-Address    type OPTIONAL,
+ *     mobileNotReachableReason    [2]    AbsentSubscriberDiagnosticSM    type OPTIONAL,
+ *     extensionContainer    [3] ExtensionContainer    type OPTIONAL,
  *     ...}
  * ```
  * 
@@ -34,58 +34,70 @@ import { ExtensionContainer, _decode_ExtensionContainer, _encode_ExtensionContai
  */
 export
 class SendRoutingInfoForGprsRes {
+    /**
+     * @summary `sgsn_Address`.
+     * @description
+     *
+     * IP address of an SGSN as in 3GPP TS 23.003. In EPS, may be an IWF
+     * address.
+     *
+     * (3GPP TS 29.002 V19.1.0 clause 7.6.2.39).
+     *
+     * @public
+     * @readonly
+     */
+    public readonly sgsn_Address: GSN_Address;
+    /**
+     * @summary `ggsn_Address`.
+     * @description
+     *
+     * IP address of a GGSN as in 3GPP TS 23.003.
+     *
+     * (3GPP TS 29.002 V19.1.0 clause 7.6.2.40).
+     *
+     * @public
+     * @readonly
+     */
+    public readonly ggsn_Address?: OPTIONAL<GSN_Address>;
+    /**
+     * @summary `mobileNotReachableReason`.
+     * @description
+     *
+     * Reason the MS is absent when SM delivery failed at MSC, SGSN, or both
+     * (3GPP TS 23.040).
+     *
+     * (3GPP TS 29.002 V19.1.0 clause 7.6.3.51).
+     *
+     * @public
+     * @readonly
+     */
+    public readonly mobileNotReachableReason?: OPTIONAL<AbsentSubscriberDiagnosticSM>;
+    /**
+     * @summary `extensionContainer`.
+     * @public
+     * @readonly
+     */
+    public readonly extensionContainer?: OPTIONAL<ExtensionContainer>;
+    /**
+     * @summary Extensions that are not recognized.
+     * @public
+     * @readonly
+     */
+    public readonly _unrecognizedExtensionsList: _Element[];
+
     constructor (
-        /**
-         * @summary `sgsn_Address`.
-         * @description
-         *
-         * IP address of an SGSN as in 3GPP TS 23.003. In EPS, may be an IWF
-         * address.
-         *
-         * (3GPP TS 29.002 V19.1.0 clause 7.6.2.39).
-         *
-         * @public
-         * @readonly
-         */
-        readonly sgsn_Address: GSN_Address,
-        /**
-         * @summary `ggsn_Address`.
-         * @description
-         *
-         * IP address of a GGSN as in 3GPP TS 23.003.
-         *
-         * (3GPP TS 29.002 V19.1.0 clause 7.6.2.40).
-         *
-         * @public
-         * @readonly
-         */
-        readonly ggsn_Address?: OPTIONAL<GSN_Address>,
-        /**
-         * @summary `mobileNotReachableReason`.
-         * @description
-         *
-         * Reason the MS is absent when SM delivery failed at MSC, SGSN, or both
-         * (3GPP TS 23.040).
-         *
-         * (3GPP TS 29.002 V19.1.0 clause 7.6.3.51).
-         *
-         * @public
-         * @readonly
-         */
-        readonly mobileNotReachableReason?: OPTIONAL<AbsentSubscriberDiagnosticSM>,
-        /**
-         * @summary `extensionContainer`.
-         * @public
-         * @readonly
-         */
-        readonly extensionContainer?: OPTIONAL<ExtensionContainer>,
-        /**
-         * @summary Extensions that are not recognized.
-         * @public
-         * @readonly
-         */
-        readonly _unrecognizedExtensionsList: _Element[] = []
-    ) {}
+        sgsn_Address: GSN_Address,
+        ggsn_Address?: OPTIONAL<GSN_Address>,
+        mobileNotReachableReason?: OPTIONAL<AbsentSubscriberDiagnosticSM>,
+        extensionContainer?: OPTIONAL<ExtensionContainer>,
+        _unrecognizedExtensionsList: _Element[] = []
+    ) {
+        this.sgsn_Address = sgsn_Address;
+        this.ggsn_Address = ggsn_Address;
+        this.mobileNotReachableReason = mobileNotReachableReason;
+        this.extensionContainer = extensionContainer;
+        this._unrecognizedExtensionsList = _unrecognizedExtensionsList;
+    }
 
     /**
      * @summary Restructures an object into a SendRoutingInfoForGprsRes

@@ -110,7 +110,7 @@ type PositioningMode = _enum_for_PositioningMode;
  * @enum {number}
  */
 export
-const PositioningMode = _enum_for_PositioningMode;
+const PositioningMode: typeof _enum_for_PositioningMode = _enum_for_PositioningMode;
 
 /**
  * @summary PositioningMode_uEBased
@@ -124,7 +124,7 @@ const PositioningMode = _enum_for_PositioningMode;
  * @type {number}
  */
 export
-const PositioningMode_uEBased: PositioningMode = PositioningMode.uEBased; /* LONG_NAMED_ENUMERATED_VALUE */
+const PositioningMode_uEBased: _enum_for_PositioningMode.uEBased = PositioningMode.uEBased; /* LONG_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary uEBased
@@ -138,7 +138,7 @@ const PositioningMode_uEBased: PositioningMode = PositioningMode.uEBased; /* LON
  * @type {number}
  */
 export
-const uEBased: PositioningMode = PositioningMode.uEBased; /* SHORT_NAMED_ENUMERATED_VALUE */
+const uEBased: _enum_for_PositioningMode.uEBased = PositioningMode.uEBased; /* SHORT_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary PositioningMode_uEAssisted
@@ -152,7 +152,7 @@ const uEBased: PositioningMode = PositioningMode.uEBased; /* SHORT_NAMED_ENUMERA
  * @type {number}
  */
 export
-const PositioningMode_uEAssisted: PositioningMode = PositioningMode.uEAssisted; /* LONG_NAMED_ENUMERATED_VALUE */
+const PositioningMode_uEAssisted: _enum_for_PositioningMode.uEAssisted = PositioningMode.uEAssisted; /* LONG_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary uEAssisted
@@ -166,7 +166,7 @@ const PositioningMode_uEAssisted: PositioningMode = PositioningMode.uEAssisted; 
  * @type {number}
  */
 export
-const uEAssisted: PositioningMode = PositioningMode.uEAssisted; /* SHORT_NAMED_ENUMERATED_VALUE */
+const uEAssisted: _enum_for_PositioningMode.uEAssisted = PositioningMode.uEAssisted; /* SHORT_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary PositioningMode_conventional
@@ -180,7 +180,7 @@ const uEAssisted: PositioningMode = PositioningMode.uEAssisted; /* SHORT_NAMED_E
  * @type {number}
  */
 export
-const PositioningMode_conventional: PositioningMode = PositioningMode.conventional; /* LONG_NAMED_ENUMERATED_VALUE */
+const PositioningMode_conventional: _enum_for_PositioningMode.conventional = PositioningMode.conventional; /* LONG_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary conventional
@@ -194,7 +194,7 @@ const PositioningMode_conventional: PositioningMode = PositioningMode.convention
  * @type {number}
  */
 export
-const conventional: PositioningMode = PositioningMode.conventional; /* SHORT_NAMED_ENUMERATED_VALUE */
+const conventional: _enum_for_PositioningMode.conventional = PositioningMode.conventional; /* SHORT_NAMED_ENUMERATED_VALUE */
 export const _decode_PositioningMode: $.ASN1Decoder<PositioningMode> = $._decodeEnumerated;
 export const _encode_PositioningMode: $.ASN1Encoder<PositioningMode> = $._encodeEnumerated;
 

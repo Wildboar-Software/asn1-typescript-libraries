@@ -1,12 +1,12 @@
 /* eslint-disable */
 import {
     ASN1ConstructionError as _ConstructionError,
-    ASN1Element as _Element,
+    type ASN1Element as _Element,
     ASN1TagClass as _TagClass,
 } from "@wildboar/asn1";
 import * as $ from "@wildboar/asn1/functional";
 import {
-    Certificate,
+    type Certificate,
     _decode_Certificate,
     _encode_Certificate,
 } from "@wildboar/pki-stub";
@@ -26,24 +26,30 @@ import {
  *
  */
 export class CertOK {
+    /**
+     * @summary `dhCert`.
+     * @description
+     *
+     * A Diffie-Hellman certificate (not an arbitrary EE cert).
+     *
+     * @public
+     * @readonly
+     */
+    public readonly dhCert: Certificate;
+    /**
+     * @summary Extensions that are not recognized.
+     * @public
+     * @readonly
+     */
+    public readonly _unrecognizedExtensionsList: _Element[];
+
     constructor(
-        /**
-         * @summary `dhCert`.
-         * @description
-         *
-         * A Diffie-Hellman certificate (not an arbitrary EE cert).
-         *
-         * @public
-         * @readonly
-         */
-        readonly dhCert: Certificate,
-        /**
-         * @summary Extensions that are not recognized.
-         * @public
-         * @readonly
-         */
-        readonly _unrecognizedExtensionsList: _Element[] = []
-    ) {}
+        dhCert: Certificate,
+        _unrecognizedExtensionsList: _Element[] = []
+    ) {
+        this.dhCert = dhCert;
+        this._unrecognizedExtensionsList = _unrecognizedExtensionsList;
+    }
 
     /**
      * @summary Restructures an object into a CertOK

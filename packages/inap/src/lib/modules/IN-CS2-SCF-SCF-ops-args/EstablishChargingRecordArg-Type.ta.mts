@@ -1,12 +1,12 @@
 /* eslint-disable */
 import {
-    BOOLEAN,
-    OPTIONAL,
-    ASN1Element as _Element,
+    type BOOLEAN,
+    type OPTIONAL,
+    type ASN1Element as _Element,
     ASN1TagClass as _TagClass
 } from "@wildboar/asn1";
 import * as $ from "@wildboar/asn1/functional";
-import { UserCredit, _decode_UserCredit, _encode_UserCredit } from "../IN-CS2-datatypes/UserCredit.ta.mjs";
+import { type UserCredit, _decode_UserCredit, _encode_UserCredit } from "../IN-CS2-datatypes/UserCredit.ta.mjs";
 // export { UserCredit, _decode_UserCredit, _encode_UserCredit } from "../IN-CS2-datatypes/UserCredit.ta.mjs";
 import { ChargingParameters, _decode_ChargingParameters, _encode_ChargingParameters } from "../IN-CS2-datatypes/ChargingParameters.ta.mjs";
 // export { ChargingParameters, _decode_ChargingParameters, _encode_ChargingParameters } from "../IN-CS2-datatypes/ChargingParameters.ta.mjs";

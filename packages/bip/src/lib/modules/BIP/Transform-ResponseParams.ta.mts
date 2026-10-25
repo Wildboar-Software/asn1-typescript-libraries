@@ -11,7 +11,7 @@ import {
 } from '@wildboar/asn1';
 import * as $ from '@wildboar/asn1/functional';
 import {
-  BioAPI_BIR_HANDLE,
+  type BioAPI_BIR_HANDLE,
   _decode_BioAPI_BIR_HANDLE,
   _encode_BioAPI_BIR_HANDLE,
 } from '../BIP/BioAPI-BIR-HANDLE.ta.mjs';
@@ -46,7 +46,7 @@ export class Transform_ResponseParams {
    * @public
    * @readonly
    */
-  readonly outputBIRs: BioAPI_BIR_HANDLE[];
+  public readonly outputBIRs: BioAPI_BIR_HANDLE[];
 
   constructor(
     outputBIRs: BioAPI_BIR_HANDLE[]

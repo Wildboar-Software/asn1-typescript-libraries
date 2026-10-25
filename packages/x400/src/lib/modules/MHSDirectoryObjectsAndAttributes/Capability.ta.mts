@@ -1,7 +1,7 @@
 /* eslint-disable */
 import {
-    OPTIONAL,
-    ASN1Element as _Element,
+    type OPTIONAL,
+    type ASN1Element as _Element,
     ASN1TagClass as _TagClass,
     ASN1Construction as _Construction,
     ASN1UniversalType as _UniversalType,
@@ -12,12 +12,12 @@ import {
 } from '@wildboar/asn1';
 import * as $ from '@wildboar/asn1/functional';
 import {
-    ExtendedContentType,
+    type ExtendedContentType,
     _decode_ExtendedContentType,
     _encode_ExtendedContentType,
 } from '../MTSAbstractService/ExtendedContentType.ta.mjs';
 import {
-    ContentLength,
+    type ContentLength,
     _decode_ContentLength,
     _encode_ContentLength,
 } from '../MTSAbstractService/ContentLength.ta.mjs';
@@ -27,7 +27,7 @@ import {
     _encode_EncodedInformationTypesConstraints,
 } from '../MTSAbstractService/EncodedInformationTypesConstraints.ta.mjs';
 import {
-    SecurityContext,
+    type SecurityContext,
     _decode_SecurityContext,
     _encode_SecurityContext,
 } from '../MTSAbstractService/SecurityContext.ta.mjs';
@@ -53,38 +53,50 @@ import {
  *
  */
 export class Capability {
+    /**
+     * @summary `content_types`.
+     * @public
+     * @readonly
+     */
+    public readonly content_types?: OPTIONAL<ExtendedContentType[]>;
+    /**
+     * @summary `maximum_content_length`.
+     * @public
+     * @readonly
+     */
+    public readonly maximum_content_length?: OPTIONAL<ContentLength>;
+    /**
+     * @summary `encoded_information_types_constraints`.
+     * @public
+     * @readonly
+     */
+    public readonly encoded_information_types_constraints?: OPTIONAL<EncodedInformationTypesConstraints>;
+    /**
+     * @summary `security_labels`.
+     * @public
+     * @readonly
+     */
+    public readonly security_labels?: OPTIONAL<SecurityContext>;
+    /**
+     * @summary Extensions that are not recognized.
+     * @public
+     * @readonly
+     */
+    public readonly _unrecognizedExtensionsList: _Element[];
+
     constructor(
-        /**
-         * @summary `content_types`.
-         * @public
-         * @readonly
-         */
-        readonly content_types?: OPTIONAL<ExtendedContentType[]>,
-        /**
-         * @summary `maximum_content_length`.
-         * @public
-         * @readonly
-         */
-        readonly maximum_content_length?: OPTIONAL<ContentLength>,
-        /**
-         * @summary `encoded_information_types_constraints`.
-         * @public
-         * @readonly
-         */
-        readonly encoded_information_types_constraints?: OPTIONAL<EncodedInformationTypesConstraints>,
-        /**
-         * @summary `security_labels`.
-         * @public
-         * @readonly
-         */
-        readonly security_labels?: OPTIONAL<SecurityContext>,
-        /**
-         * @summary Extensions that are not recognized.
-         * @public
-         * @readonly
-         */
-        readonly _unrecognizedExtensionsList: _Element[] = []
-    ) {}
+        content_types?: OPTIONAL<ExtendedContentType[]>,
+        maximum_content_length?: OPTIONAL<ContentLength>,
+        encoded_information_types_constraints?: OPTIONAL<EncodedInformationTypesConstraints>,
+        security_labels?: OPTIONAL<SecurityContext>,
+        _unrecognizedExtensionsList: _Element[] = []
+    ) {
+        this.content_types = content_types;
+        this.maximum_content_length = maximum_content_length;
+        this.encoded_information_types_constraints = encoded_information_types_constraints;
+        this.security_labels = security_labels;
+        this._unrecognizedExtensionsList = _unrecognizedExtensionsList;
+    }
 
     /**
      * @summary Restructures an object into a Capability

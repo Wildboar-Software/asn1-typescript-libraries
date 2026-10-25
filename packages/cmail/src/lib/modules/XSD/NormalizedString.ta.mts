@@ -10,7 +10,7 @@ import {
   ASN1ConstructionError as _ConstructionError,
 } from '@wildboar/asn1';
 import * as $ from '@wildboar/asn1/functional';
-import { String, _decode_String, _encode_String } from '../XSD/String.ta.mjs';
+import { type String, _decode_String, _encode_String } from '../XSD/String.ta.mjs';
 
 /**
  * @summary NormalizedString
@@ -27,26 +27,13 @@ import { String, _decode_String, _encode_String } from '../XSD/String.ta.mjs';
  */
 export type NormalizedString = String; // DefinedType
 
-
-let _cached_decoder_for_NormalizedString: $.ASN1Decoder<NormalizedString> | null = null;
-
-
 /**
  * @summary Decodes an ASN.1 element into a(n) NormalizedString
  * @function
  * @param {_Element} el The element being decoded.
  * @returns {NormalizedString} The decoded data structure.
  */
-export function _decode_NormalizedString(el: _Element): NormalizedString {
-  if (!_cached_decoder_for_NormalizedString) {
-    _cached_decoder_for_NormalizedString = _decode_String;
-  }
-  return _cached_decoder_for_NormalizedString(el);
-}
-
-
-let _cached_encoder_for_NormalizedString: $.ASN1Encoder<NormalizedString> | null = null;
-
+export const _decode_NormalizedString: $.ASN1Decoder<NormalizedString> = _decode_String;
 
 /**
  * @summary Encodes a(n) NormalizedString into an ASN.1 Element.
@@ -55,15 +42,7 @@ let _cached_encoder_for_NormalizedString: $.ASN1Encoder<NormalizedString> | null
  * @param elGetter A function that can be used to get new ASN.1 elements.
  * @returns {_Element} The NormalizedString, encoded as an ASN.1 Element.
  */
-export function _encode_NormalizedString(
-  value: NormalizedString,
-  elGetter: $.ASN1Encoder<NormalizedString>
-): _Element {
-  if (!_cached_encoder_for_NormalizedString) {
-    _cached_encoder_for_NormalizedString = _encode_String;
-  }
-  return _cached_encoder_for_NormalizedString(value, elGetter);
-}
+export const _encode_NormalizedString: $.ASN1Encoder<NormalizedString> = _encode_String;
 
 
 /* eslint-enable */

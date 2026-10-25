@@ -1,9 +1,9 @@
 /* eslint-disable */
 import {
-    OPTIONAL,
-    OCTET_STRING,
-    PrintableString,
-    ASN1Element as _Element,
+    type OPTIONAL,
+    type OCTET_STRING,
+    type PrintableString,
+    type ASN1Element as _Element,
     ASN1TagClass as _TagClass,
     ASN1Construction as _Construction,
     ASN1UniversalType as _UniversalType,
@@ -60,7 +60,7 @@ class ImageInfo {
      * @public
      * @readonly
      */
-    readonly dSIP: OPTIONAL<OCTET_STRING>;
+    public readonly dSIP: OPTIONAL<OCTET_STRING>;
     /**
      * @summary `tm`.
      * @description
@@ -72,7 +72,7 @@ class ImageInfo {
      * @public
      * @readonly
      */
-    readonly tm: OCTET_STRING;
+    public readonly tm: OCTET_STRING;
     /**
      * @summary `fn`.
      * @description
@@ -83,7 +83,7 @@ class ImageInfo {
      * @public
      * @readonly
      */
-    readonly fn?: OPTIONAL<PrintableString>;
+    public readonly fn?: OPTIONAL<PrintableString>;
 
     constructor (
         dSIP: OPTIONAL<OCTET_STRING>,

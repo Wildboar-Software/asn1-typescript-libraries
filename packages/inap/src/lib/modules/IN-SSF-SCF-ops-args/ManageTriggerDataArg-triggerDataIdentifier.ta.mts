@@ -1,12 +1,12 @@
 /* eslint-disable */
 import {
-    ASN1Element as _Element,
+    type ASN1Element as _Element,
     ASN1TagClass as _TagClass
 } from "@wildboar/asn1";
 import * as $ from "@wildboar/asn1/functional";
 import { TriggerDataIdentifier, _decode_TriggerDataIdentifier, _encode_TriggerDataIdentifier } from "../IN-SSF-SCF-datatypes/TriggerDataIdentifier.ta.mjs";
 // export { TriggerDataIdentifier, _decode_TriggerDataIdentifier, _encode_TriggerDataIdentifier } from "../IN-SSF-SCF-datatypes/TriggerDataIdentifier.ta.mjs";
-import { ProfileIdentifier, _decode_ProfileIdentifier, _encode_ProfileIdentifier } from "../IN-SSF-SCF-datatypes/ProfileIdentifier.ta.mjs";
+import { type ProfileIdentifier, _decode_ProfileIdentifier, _encode_ProfileIdentifier } from "../IN-SSF-SCF-datatypes/ProfileIdentifier.ta.mjs";
 // export { ProfileIdentifier, _decode_ProfileIdentifier, _encode_ProfileIdentifier } from "../IN-SSF-SCF-datatypes/ProfileIdentifier.ta.mjs";
 
 

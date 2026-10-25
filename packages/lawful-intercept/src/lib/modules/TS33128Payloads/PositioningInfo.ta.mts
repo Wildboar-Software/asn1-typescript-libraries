@@ -1,13 +1,13 @@
 /* eslint-disable */
 import {
-    OPTIONAL,
-    ASN1Element as _Element,
+    type OPTIONAL,
+    type ASN1Element as _Element,
     ASN1TagClass as _TagClass
 } from "@wildboar/asn1";
 import * as $ from "@wildboar/asn1/functional";
 import { LocationData, _decode_LocationData, _encode_LocationData } from "../TS33128Payloads/LocationData.ta.mjs";
 // export { LocationData, _decode_LocationData, _encode_LocationData } from "../TS33128Payloads/LocationData.ta.mjs";
-import { RawMLPResponse, _decode_RawMLPResponse, _encode_RawMLPResponse } from "../TS33128Payloads/RawMLPResponse.ta.mjs";
+import { type RawMLPResponse, _decode_RawMLPResponse, _encode_RawMLPResponse } from "../TS33128Payloads/RawMLPResponse.ta.mjs";
 // export { RawMLPResponse, _decode_RawMLPResponse, _encode_RawMLPResponse } from "../TS33128Payloads/RawMLPResponse.ta.mjs";
 
 

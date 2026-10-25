@@ -8,7 +8,7 @@ import { type OPERATION } from "../Remote-Operations-Information-Objects/OPERATI
 
 import { AssociateDataArgument, _decode_AssociateDataArgument, _encode_AssociateDataArgument } from "../CSTA-associate-data/AssociateDataArgument.ta.mjs";
 
-import { AssociateDataResult, _decode_AssociateDataResult, _encode_AssociateDataResult } from "../CSTA-associate-data/AssociateDataResult.ta.mjs";
+import { type AssociateDataResult, _decode_AssociateDataResult, _encode_AssociateDataResult } from "../CSTA-associate-data/AssociateDataResult.ta.mjs";
 
 import { universalFailure } from "../CSTA-error-definition/universalFailure.oa.mjs";
 

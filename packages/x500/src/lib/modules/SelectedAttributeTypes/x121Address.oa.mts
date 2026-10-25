@@ -8,7 +8,7 @@ import { numericString } from "../SelectedAttributeTypes/numericString.oa.mjs";
 import { numericStringMatch } from "../SelectedAttributeTypes/numericStringMatch.oa.mjs";
 import { numericStringSubstringsMatch } from "../SelectedAttributeTypes/numericStringSubstringsMatch.oa.mjs";
 import {
-    X121Address,
+    type X121Address,
     _decode_X121Address,
     _encode_X121Address,
 } from "../SelectedAttributeTypes/X121Address.ta.mjs";

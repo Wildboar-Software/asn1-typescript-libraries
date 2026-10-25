@@ -1,7 +1,7 @@
 /* eslint-disable */
 import {
-    ASN1Element as _Element,
-    INTEGER
+    type ASN1Element as _Element,
+    type INTEGER
 } from "@wildboar/asn1";
 import * as $ from "@wildboar/asn1/functional";
 
@@ -41,7 +41,7 @@ type AuthenticateClientResponseEs11_authenticateClientError = INTEGER;
  * @type {number}
  */
 export
-const AuthenticateClientResponseEs11_authenticateClientError_eumCertificateInvalid: AuthenticateClientResponseEs11_authenticateClientError = 1; /* LONG_NAMED_INTEGER_VALUE */
+const AuthenticateClientResponseEs11_authenticateClientError_eumCertificateInvalid: 1 = 1 satisfies AuthenticateClientResponseEs11_authenticateClientError; /* LONG_NAMED_INTEGER_VALUE */
 
 /**
  * @summary AuthenticateClientResponseEs11_authenticateClientError_eumCertificateInvalid
@@ -53,7 +53,7 @@ const AuthenticateClientResponseEs11_authenticateClientError_eumCertificateInval
  * @type {number}
  */
 export
-const eumCertificateInvalid: AuthenticateClientResponseEs11_authenticateClientError = AuthenticateClientResponseEs11_authenticateClientError_eumCertificateInvalid; /* SHORT_NAMED_INTEGER_VALUE */
+const eumCertificateInvalid: 1 = AuthenticateClientResponseEs11_authenticateClientError_eumCertificateInvalid; /* SHORT_NAMED_INTEGER_VALUE */
 
 /**
  * @summary AuthenticateClientResponseEs11_authenticateClientError_eumCertificateExpired
@@ -65,7 +65,7 @@ const eumCertificateInvalid: AuthenticateClientResponseEs11_authenticateClientEr
  * @type {number}
  */
 export
-const AuthenticateClientResponseEs11_authenticateClientError_eumCertificateExpired: AuthenticateClientResponseEs11_authenticateClientError = 2; /* LONG_NAMED_INTEGER_VALUE */
+const AuthenticateClientResponseEs11_authenticateClientError_eumCertificateExpired: 2 = 2 satisfies AuthenticateClientResponseEs11_authenticateClientError; /* LONG_NAMED_INTEGER_VALUE */
 
 /**
  * @summary AuthenticateClientResponseEs11_authenticateClientError_eumCertificateExpired
@@ -77,7 +77,7 @@ const AuthenticateClientResponseEs11_authenticateClientError_eumCertificateExpir
  * @type {number}
  */
 export
-const eumCertificateExpired: AuthenticateClientResponseEs11_authenticateClientError = AuthenticateClientResponseEs11_authenticateClientError_eumCertificateExpired; /* SHORT_NAMED_INTEGER_VALUE */
+const eumCertificateExpired: 2 = AuthenticateClientResponseEs11_authenticateClientError_eumCertificateExpired; /* SHORT_NAMED_INTEGER_VALUE */
 
 /**
  * @summary AuthenticateClientResponseEs11_authenticateClientError_euiccCertificateInvalid
@@ -89,7 +89,7 @@ const eumCertificateExpired: AuthenticateClientResponseEs11_authenticateClientEr
  * @type {number}
  */
 export
-const AuthenticateClientResponseEs11_authenticateClientError_euiccCertificateInvalid: AuthenticateClientResponseEs11_authenticateClientError = 3; /* LONG_NAMED_INTEGER_VALUE */
+const AuthenticateClientResponseEs11_authenticateClientError_euiccCertificateInvalid: 3 = 3 satisfies AuthenticateClientResponseEs11_authenticateClientError; /* LONG_NAMED_INTEGER_VALUE */
 
 /**
  * @summary AuthenticateClientResponseEs11_authenticateClientError_euiccCertificateInvalid
@@ -101,7 +101,7 @@ const AuthenticateClientResponseEs11_authenticateClientError_euiccCertificateInv
  * @type {number}
  */
 export
-const euiccCertificateInvalid: AuthenticateClientResponseEs11_authenticateClientError = AuthenticateClientResponseEs11_authenticateClientError_euiccCertificateInvalid; /* SHORT_NAMED_INTEGER_VALUE */
+const euiccCertificateInvalid: 3 = AuthenticateClientResponseEs11_authenticateClientError_euiccCertificateInvalid; /* SHORT_NAMED_INTEGER_VALUE */
 
 /**
  * @summary AuthenticateClientResponseEs11_authenticateClientError_euiccCertificateExpired
@@ -113,7 +113,7 @@ const euiccCertificateInvalid: AuthenticateClientResponseEs11_authenticateClient
  * @type {number}
  */
 export
-const AuthenticateClientResponseEs11_authenticateClientError_euiccCertificateExpired: AuthenticateClientResponseEs11_authenticateClientError = 4; /* LONG_NAMED_INTEGER_VALUE */
+const AuthenticateClientResponseEs11_authenticateClientError_euiccCertificateExpired: 4 = 4 satisfies AuthenticateClientResponseEs11_authenticateClientError; /* LONG_NAMED_INTEGER_VALUE */
 
 /**
  * @summary AuthenticateClientResponseEs11_authenticateClientError_euiccCertificateExpired
@@ -125,7 +125,7 @@ const AuthenticateClientResponseEs11_authenticateClientError_euiccCertificateExp
  * @type {number}
  */
 export
-const euiccCertificateExpired: AuthenticateClientResponseEs11_authenticateClientError = AuthenticateClientResponseEs11_authenticateClientError_euiccCertificateExpired; /* SHORT_NAMED_INTEGER_VALUE */
+const euiccCertificateExpired: 4 = AuthenticateClientResponseEs11_authenticateClientError_euiccCertificateExpired; /* SHORT_NAMED_INTEGER_VALUE */
 
 /**
  * @summary AuthenticateClientResponseEs11_authenticateClientError_euiccSignatureInvalid
@@ -137,7 +137,7 @@ const euiccCertificateExpired: AuthenticateClientResponseEs11_authenticateClient
  * @type {number}
  */
 export
-const AuthenticateClientResponseEs11_authenticateClientError_euiccSignatureInvalid: AuthenticateClientResponseEs11_authenticateClientError = 5; /* LONG_NAMED_INTEGER_VALUE */
+const AuthenticateClientResponseEs11_authenticateClientError_euiccSignatureInvalid: 5 = 5 satisfies AuthenticateClientResponseEs11_authenticateClientError; /* LONG_NAMED_INTEGER_VALUE */
 
 /**
  * @summary AuthenticateClientResponseEs11_authenticateClientError_euiccSignatureInvalid
@@ -149,7 +149,7 @@ const AuthenticateClientResponseEs11_authenticateClientError_euiccSignatureInval
  * @type {number}
  */
 export
-const euiccSignatureInvalid: AuthenticateClientResponseEs11_authenticateClientError = AuthenticateClientResponseEs11_authenticateClientError_euiccSignatureInvalid; /* SHORT_NAMED_INTEGER_VALUE */
+const euiccSignatureInvalid: 5 = AuthenticateClientResponseEs11_authenticateClientError_euiccSignatureInvalid; /* SHORT_NAMED_INTEGER_VALUE */
 
 /**
  * @summary AuthenticateClientResponseEs11_authenticateClientError_eventIdUnknown
@@ -162,7 +162,7 @@ const euiccSignatureInvalid: AuthenticateClientResponseEs11_authenticateClientEr
  * @type {number}
  */
 export
-const AuthenticateClientResponseEs11_authenticateClientError_eventIdUnknown: AuthenticateClientResponseEs11_authenticateClientError = 6; /* LONG_NAMED_INTEGER_VALUE */
+const AuthenticateClientResponseEs11_authenticateClientError_eventIdUnknown: 6 = 6 satisfies AuthenticateClientResponseEs11_authenticateClientError; /* LONG_NAMED_INTEGER_VALUE */
 
 /**
  * @summary AuthenticateClientResponseEs11_authenticateClientError_eventIdUnknown
@@ -175,7 +175,7 @@ const AuthenticateClientResponseEs11_authenticateClientError_eventIdUnknown: Aut
  * @type {number}
  */
 export
-const eventIdUnknown: AuthenticateClientResponseEs11_authenticateClientError = AuthenticateClientResponseEs11_authenticateClientError_eventIdUnknown; /* SHORT_NAMED_INTEGER_VALUE */
+const eventIdUnknown: 6 = AuthenticateClientResponseEs11_authenticateClientError_eventIdUnknown; /* SHORT_NAMED_INTEGER_VALUE */
 
 /**
  * @summary AuthenticateClientResponseEs11_authenticateClientError_invalidTransactionId
@@ -187,7 +187,7 @@ const eventIdUnknown: AuthenticateClientResponseEs11_authenticateClientError = A
  * @type {number}
  */
 export
-const AuthenticateClientResponseEs11_authenticateClientError_invalidTransactionId: AuthenticateClientResponseEs11_authenticateClientError = 7; /* LONG_NAMED_INTEGER_VALUE */
+const AuthenticateClientResponseEs11_authenticateClientError_invalidTransactionId: 7 = 7 satisfies AuthenticateClientResponseEs11_authenticateClientError; /* LONG_NAMED_INTEGER_VALUE */
 
 /**
  * @summary AuthenticateClientResponseEs11_authenticateClientError_invalidTransactionId
@@ -199,7 +199,7 @@ const AuthenticateClientResponseEs11_authenticateClientError_invalidTransactionI
  * @type {number}
  */
 export
-const invalidTransactionId: AuthenticateClientResponseEs11_authenticateClientError = AuthenticateClientResponseEs11_authenticateClientError_invalidTransactionId; /* SHORT_NAMED_INTEGER_VALUE */
+const invalidTransactionId: 7 = AuthenticateClientResponseEs11_authenticateClientError_invalidTransactionId; /* SHORT_NAMED_INTEGER_VALUE */
 
 /**
  * @summary AuthenticateClientResponseEs11_authenticateClientError_undefinedError
@@ -211,7 +211,7 @@ const invalidTransactionId: AuthenticateClientResponseEs11_authenticateClientErr
  * @type {number}
  */
 export
-const AuthenticateClientResponseEs11_authenticateClientError_undefinedError: AuthenticateClientResponseEs11_authenticateClientError = 127; /* LONG_NAMED_INTEGER_VALUE */
+const AuthenticateClientResponseEs11_authenticateClientError_undefinedError: 127 = 127 satisfies AuthenticateClientResponseEs11_authenticateClientError; /* LONG_NAMED_INTEGER_VALUE */
 
 /**
  * @summary AuthenticateClientResponseEs11_authenticateClientError_undefinedError
@@ -223,9 +223,9 @@ const AuthenticateClientResponseEs11_authenticateClientError_undefinedError: Aut
  * @type {number}
  */
 export
-const undefinedError: AuthenticateClientResponseEs11_authenticateClientError = AuthenticateClientResponseEs11_authenticateClientError_undefinedError; /* SHORT_NAMED_INTEGER_VALUE */
-export const _decode_AuthenticateClientResponseEs11_authenticateClientError = $._decodeInteger;
-export const _encode_AuthenticateClientResponseEs11_authenticateClientError = $._encodeInteger;
+const undefinedError: 127 = AuthenticateClientResponseEs11_authenticateClientError_undefinedError; /* SHORT_NAMED_INTEGER_VALUE */
+export const _decode_AuthenticateClientResponseEs11_authenticateClientError: $.ASN1Decoder<INTEGER> = $._decodeInteger;
+export const _encode_AuthenticateClientResponseEs11_authenticateClientError: $.ASN1Encoder<INTEGER> = $._encodeInteger;
 
 
 /* eslint-enable */

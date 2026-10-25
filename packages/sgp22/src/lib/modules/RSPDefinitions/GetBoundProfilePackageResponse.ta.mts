@@ -1,11 +1,11 @@
 /* eslint-disable */
 import {
-    ASN1Element as _Element,
+    type ASN1Element as _Element,
     ASN1TagClass as _TagClass
 } from "@wildboar/asn1";
 import * as $ from "@wildboar/asn1/functional";
 import { GetBoundProfilePackageOk, _decode_GetBoundProfilePackageOk, _encode_GetBoundProfilePackageOk } from "../RSPDefinitions/GetBoundProfilePackageOk.ta.mjs";
-import { GetBoundProfilePackageResponse_getBoundProfilePackageError, _decode_GetBoundProfilePackageResponse_getBoundProfilePackageError, _encode_GetBoundProfilePackageResponse_getBoundProfilePackageError } from "../RSPDefinitions/GetBoundProfilePackageResponse-getBoundProfilePackageError.ta.mjs";
+import { type GetBoundProfilePackageResponse_getBoundProfilePackageError, _decode_GetBoundProfilePackageResponse_getBoundProfilePackageError, _encode_GetBoundProfilePackageResponse_getBoundProfilePackageError } from "../RSPDefinitions/GetBoundProfilePackageResponse-getBoundProfilePackageError.ta.mjs";
 
 
 /**

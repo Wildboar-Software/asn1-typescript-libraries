@@ -2,10 +2,10 @@
 
 import * as $ from "@wildboar/asn1/functional";
 import {
-    OPTIONAL,
-    SEQUENCE,
-    SET,
-    ASN1Element as _Element,
+    type OPTIONAL,
+    type SEQUENCE,
+    type SET,
+    type ASN1Element as _Element,
     ASN1TagClass as _TagClass
 } from "@wildboar/asn1";
 import { DeviceID, _decode_DeviceID, _encode_DeviceID } from "../CSTA-device-identifiers/DeviceID.ta.mjs";
@@ -46,9 +46,9 @@ import {
  * 
  * ```asn1
  * AgentInfo ::= SEQUENCE
- * {    acdGroup            DeviceID                OPTIONAL,
+ * {    acdGroup            DeviceID                type OPTIONAL,
  *     agentState            AgentState,
- *     pendingAgentState        [0] IMPLICIT PendingAgentState        OPTIONAL,
+ *     pendingAgentState        [0] IMPLICIT PendingAgentState        type OPTIONAL,
  *     agentStateCondition        [1] IMPLICIT AgentStateCondition    OPTIONAL }
  * ```
  * 
@@ -56,46 +56,56 @@ import {
  */
 export
 class AgentInfo {
+    /**
+     * @summary `acdGroup`.
+     * @description
+     *
+     * Mandatory in an entry when the list has more than one.
+     * @public
+     * @readonly
+     */
+    public readonly acdGroup: OPTIONAL<DeviceID>;
+    /**
+     * @summary `agentState`.
+     * @description
+     *
+     * Busy, Not Ready, Null, Ready, or Working After Call.
+     * @public
+     * @readonly
+     */
+    public readonly agentState: AgentState;
+    /**
+     * @summary `pendingAgentState`.
+     * @description
+     *
+     * Next state if `agentState` is Busy or Working After Call and the SF
+     * is delaying the transition: Working After Call, Not Ready, Ready, or
+     * Null.
+     * @public
+     * @readonly
+     */
+    public readonly pendingAgentState?: OPTIONAL<PendingAgentState>;
+    /**
+     * @summary `agentStateCondition`.
+     * @description
+     *
+     * Forced Pause or Other.
+     * @public
+     * @readonly
+     */
+    public readonly agentStateCondition?: OPTIONAL<AgentStateCondition>;
+
     constructor (
-        /**
-         * @summary `acdGroup`.
-         * @description
-         *
-         * Mandatory in an entry when the list has more than one.
-         * @public
-         * @readonly
-         */
-        readonly acdGroup: OPTIONAL<DeviceID>,
-        /**
-         * @summary `agentState`.
-         * @description
-         *
-         * Busy, Not Ready, Null, Ready, or Working After Call.
-         * @public
-         * @readonly
-         */
-        readonly agentState: AgentState,
-        /**
-         * @summary `pendingAgentState`.
-         * @description
-         *
-         * Next state if `agentState` is Busy or Working After Call and the SF
-         * is delaying the transition: Working After Call, Not Ready, Ready, or
-         * Null.
-         * @public
-         * @readonly
-         */
-        readonly pendingAgentState?: OPTIONAL<PendingAgentState>,
-        /**
-         * @summary `agentStateCondition`.
-         * @description
-         *
-         * Forced Pause or Other.
-         * @public
-         * @readonly
-         */
-        readonly agentStateCondition?: OPTIONAL<AgentStateCondition>
-    ) {}
+        acdGroup: OPTIONAL<DeviceID>,
+        agentState: AgentState,
+        pendingAgentState?: OPTIONAL<PendingAgentState>,
+        agentStateCondition?: OPTIONAL<AgentStateCondition>
+    ) {
+        this.acdGroup = acdGroup;
+        this.agentState = agentState;
+        this.pendingAgentState = pendingAgentState;
+        this.agentStateCondition = agentStateCondition;
+    }
 
     /**
      * @summary Restructures an object into a AgentInfo
@@ -119,19 +129,19 @@ class AgentInfo {
          * @static
          */
 
-    public static _enum_for_agentState = _enum_for_AgentState;        /**
+    public static _enum_for_agentState: typeof _enum_for_AgentState = _enum_for_AgentState;        /**
          * @summary The enum used as the type of the component `pendingAgentState`
          * @public
          * @static
          */
 
-    public static _enum_for_pendingAgentState = _enum_for_PendingAgentState;        /**
+    public static _enum_for_pendingAgentState: typeof _enum_for_PendingAgentState = _enum_for_PendingAgentState;        /**
          * @summary The enum used as the type of the component `agentStateCondition`
          * @public
          * @static
          */
 
-    public static _enum_for_agentStateCondition = _enum_for_AgentStateCondition;
+    public static _enum_for_agentStateCondition: typeof _enum_for_AgentStateCondition = _enum_for_AgentStateCondition;
 }
 
 /**

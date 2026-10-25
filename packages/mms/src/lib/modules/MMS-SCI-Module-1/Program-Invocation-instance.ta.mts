@@ -1,6 +1,6 @@
 /* eslint-disable */
 import {
-    ASN1Element as _Element,
+    type ASN1Element as _Element,
     ASN1TagClass as _TagClass,
     ASN1Construction as _Construction,
     ASN1UniversalType as _UniversalType,
@@ -10,8 +10,8 @@ import {
     ASN1ConstructionError as _ConstructionError,
 } from "@wildboar/asn1";
 import * as $ from "@wildboar/asn1/functional";
-import { Identifier, _decode_Identifier, _encode_Identifier } from "../ISO-9506-MMS-1/Identifier.ta.mjs";
-import { Program_Invocation_instance_definition, _decode_Program_Invocation_instance_definition, _encode_Program_Invocation_instance_definition } from "../MMS-SCI-Module-1/Program-Invocation-instance-definition.ta.mjs";
+import { type Identifier, _decode_Identifier, _encode_Identifier } from "../ISO-9506-MMS-1/Identifier.ta.mjs";
+import { type Program_Invocation_instance_definition, _decode_Program_Invocation_instance_definition, _encode_Program_Invocation_instance_definition } from "../MMS-SCI-Module-1/Program-Invocation-instance-definition.ta.mjs";
 
 
 /**
@@ -69,29 +69,35 @@ import { Program_Invocation_instance_definition, _decode_Program_Invocation_inst
  */
 export
 class Program_Invocation_instance {
+    /**
+     * @summary `name`.
+     * @description
+     *
+     * Configured object name in the SCI file. ISO 9506-2:2003 Annex B.
+     *
+     * @public
+     * @readonly
+     */
+    public readonly name: Identifier;
+    /**
+     * @summary `definition`.
+     * @description
+     *
+     * Standardized Name OID (`reference`) or inline `details`. ISO
+     * 9506-2:2003 Annex B.
+     *
+     * @public
+     * @readonly
+     */
+    public readonly definition: Program_Invocation_instance_definition;
+
     constructor (
-        /**
-         * @summary `name`.
-         * @description
-         *
-         * Configured object name in the SCI file. ISO 9506-2:2003 Annex B.
-         *
-         * @public
-         * @readonly
-         */
-        readonly name: Identifier,
-        /**
-         * @summary `definition`.
-         * @description
-         *
-         * Standardized Name OID (`reference`) or inline `details`. ISO
-         * 9506-2:2003 Annex B.
-         *
-         * @public
-         * @readonly
-         */
-        readonly definition: Program_Invocation_instance_definition
-    ) {}
+        name: Identifier,
+        definition: Program_Invocation_instance_definition
+    ) {
+        this.name = name;
+        this.definition = definition;
+    }
 
     /**
      * @summary Restructures an object into a Program_Invocation_instance

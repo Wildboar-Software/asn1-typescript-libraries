@@ -1,7 +1,7 @@
 /* eslint-disable */
 import {
-    OPTIONAL,
-    ASN1Element as _Element,
+    type OPTIONAL,
+    type ASN1Element as _Element,
     ASN1TagClass as _TagClass,
     ASN1Construction as _Construction,
     ASN1UniversalType as _UniversalType,
@@ -28,7 +28,7 @@ import { type PDPID, _decode_PDPID, _encode_PDPID } from "../CAP-datatypes/PDPID
  * ```asn1
  * RequestReportGPRSEventArg {PARAMETERS-BOUND : bound} ::= SEQUENCE {
  *     gPRSEvent                [0] SEQUENCE SIZE (1..bound.&numOfGPRSEvents) OF GPRSEvent,
- *     pDPID                [1]    PDPID                    OPTIONAL,
+ *     pDPID                [1]    PDPID                    type OPTIONAL,
  *     ...
  *     }
  * ```
@@ -37,40 +37,48 @@ import { type PDPID, _decode_PDPID, _encode_PDPID } from "../CAP-datatypes/PDPID
  */
 export
 class RequestReportGPRSEventArg {
+    /**
+     * @summary `gPRSEvent`.
+     * @description
+     *
+     * Event(s) for which a report is requested. Each `GPRSEvent`
+     * carries `gPRSEventType` and `monitorMode`: interrupted →
+     * report as request; notifyAndContinue → notification;
+     * transparent → do not report.
+     * (3GPP TS 29.078 V19.0.0 clause 13.12.1.1).
+     *
+     * @public
+     * @readonly
+     */
+    public readonly gPRSEvent: GPRSEvent[];
+    /**
+     * @summary `pDPID`.
+     * @description
+     *
+     * Identifies the PDP Context, within a GPRS Session dialogue,
+     * for which event reporting is requested. unknownPDPID if
+     * unknown. (3GPP TS 29.078 V19.0.0 clause 13.12.1.1).
+     *
+     * @public
+     * @readonly
+     */
+    public readonly pDPID?: OPTIONAL<PDPID>;
+    /**
+     * @summary Extensions that are not recognized.
+     * @public
+     * @readonly
+     */
+    public readonly _unrecognizedExtensionsList: _Element[];
+
     constructor (
-        /**
-         * @summary `gPRSEvent`.
-         * @description
-         *
-         * Event(s) for which a report is requested. Each `GPRSEvent`
-         * carries `gPRSEventType` and `monitorMode`: interrupted →
-         * report as request; notifyAndContinue → notification;
-         * transparent → do not report.
-         * (3GPP TS 29.078 V19.0.0 clause 13.12.1.1).
-         *
-         * @public
-         * @readonly
-         */
-        readonly gPRSEvent: GPRSEvent[],
-        /**
-         * @summary `pDPID`.
-         * @description
-         *
-         * Identifies the PDP Context, within a GPRS Session dialogue,
-         * for which event reporting is requested. unknownPDPID if
-         * unknown. (3GPP TS 29.078 V19.0.0 clause 13.12.1.1).
-         *
-         * @public
-         * @readonly
-         */
-        readonly pDPID?: OPTIONAL<PDPID>,
-        /**
-         * @summary Extensions that are not recognized.
-         * @public
-         * @readonly
-         */
-        readonly _unrecognizedExtensionsList: _Element[] = []
-    ) {}
+        gPRSEvent: GPRSEvent[],
+        pDPID?: OPTIONAL<PDPID>,
+        _unrecognizedExtensionsList: _Element[] = []
+    ) {
+        this.gPRSEvent = gPRSEvent;
+        this.pDPID = pDPID;
+        this._unrecognizedExtensionsList = _unrecognizedExtensionsList;
+    }
 
     /**
      * @summary Restructures an object into a RequestReportGPRSEventArg

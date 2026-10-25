@@ -1,6 +1,6 @@
 /* eslint-disable */
 import {
-  INTEGER,
+  type INTEGER,
   ASN1Element as _Element,
   ASN1TagClass as _TagClass,
   ASN1Construction as _Construction,
@@ -12,7 +12,7 @@ import {
 } from '@wildboar/asn1';
 import * as $ from '@wildboar/asn1/functional';
 import {
-  UDPTLPacket_error_recovery,
+  type UDPTLPacket_error_recovery,
   _decode_UDPTLPacket_error_recovery,
   _encode_UDPTLPacket_error_recovery,
 } from '../T38/UDPTLPacket-error-recovery.ta.mjs';
@@ -61,7 +61,7 @@ export class UDPTLPacket {
    * @public
    * @readonly
    */
-  readonly seq_number: INTEGER;
+  public readonly seq_number: INTEGER;
   /**
    * @summary `primary_ifp_packet`.
    * @description The IFP packet for `seq-number`, as an open
@@ -70,7 +70,7 @@ export class UDPTLPacket {
    * @public
    * @readonly
    */
-  readonly primary_ifp_packet: _Element;
+  public readonly primary_ifp_packet: _Element;
   /**
    * @summary `error_recovery`.
    * @description Either redundant prior primaries or parity
@@ -79,7 +79,7 @@ export class UDPTLPacket {
    * @public
    * @readonly
    */
-  readonly error_recovery: UDPTLPacket_error_recovery;
+  public readonly error_recovery: UDPTLPacket_error_recovery;
 
   constructor(
     seq_number: INTEGER,

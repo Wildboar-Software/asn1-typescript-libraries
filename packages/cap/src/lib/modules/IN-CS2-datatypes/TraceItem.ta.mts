@@ -1,6 +1,6 @@
 /* eslint-disable */
 import {
-    ASN1Element as _Element,
+    type ASN1Element as _Element,
     ASN1TagClass as _TagClass,
     ASN1Construction as _Construction,
     ASN1UniversalType as _UniversalType,
@@ -10,7 +10,7 @@ import {
     ASN1ConstructionError as _ConstructionError,
 } from "@wildboar/asn1";
 import * as $ from "@wildboar/asn1/functional";
-import { ScfID, _decode_ScfID, _encode_ScfID } from "../IN-CS2-datatypes/ScfID.ta.mjs";
+import { type ScfID, _decode_ScfID, _encode_ScfID } from "../IN-CS2-datatypes/ScfID.ta.mjs";
 
 
 /**
@@ -29,20 +29,26 @@ import { ScfID, _decode_ScfID, _encode_ScfID } from "../IN-CS2-datatypes/ScfID.t
  */
 export
 class TraceItem {
+    /**
+     * @summary `scf`.
+     * @public
+     * @readonly
+     */
+    public readonly scf: ScfID;
+    /**
+     * @summary Extensions that are not recognized.
+     * @public
+     * @readonly
+     */
+    public readonly _unrecognizedExtensionsList: _Element[];
+
     constructor (
-        /**
-         * @summary `scf`.
-         * @public
-         * @readonly
-         */
-        readonly scf: ScfID,
-        /**
-         * @summary Extensions that are not recognized.
-         * @public
-         * @readonly
-         */
-        readonly _unrecognizedExtensionsList: _Element[] = []
-    ) {}
+        scf: ScfID,
+        _unrecognizedExtensionsList: _Element[] = []
+    ) {
+        this.scf = scf;
+        this._unrecognizedExtensionsList = _unrecognizedExtensionsList;
+    }
 
     /**
      * @summary Restructures an object into a TraceItem

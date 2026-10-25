@@ -2,13 +2,13 @@
 
 import * as $ from "@wildboar/asn1/functional";
 import {
-    OPTIONAL,
-    SEQUENCE,
-    SET,
-    ASN1Element as _Element,
+    type OPTIONAL,
+    type SEQUENCE,
+    type SET,
+    type ASN1Element as _Element,
     ASN1TagClass as _TagClass
 } from "@wildboar/asn1";
-import { ButtonList, _decode_ButtonList, _encode_ButtonList } from "../CSTA-get-button-information/ButtonList.ta.mjs";
+import { type ButtonList, _decode_ButtonList, _encode_ButtonList } from "../CSTA-get-button-information/ButtonList.ta.mjs";
 
 import { CSTACommonArguments, _decode_CSTACommonArguments, _encode_CSTACommonArguments } from "../CSTA-extension-types/CSTACommonArguments.ta.mjs";
 
@@ -35,28 +35,34 @@ import { CSTACommonArguments, _decode_CSTACommonArguments, _encode_CSTACommonArg
  */
 export
 class GetButtonInformationResult {
+    /**
+     * @summary `buttonList`.
+     * @description
+     *
+     * One entry per button. Absent `button` in the request yields all
+     * buttons.
+     * @public
+     * @readonly
+     */
+    public readonly buttonList: ButtonList;
+    /**
+     * @summary `extensions`.
+     * @description
+     *
+     * Optional security (timestamp, sequence, securityInfo) and
+     * privateData.
+     * @public
+     * @readonly
+     */
+    public readonly extensions?: OPTIONAL<CSTACommonArguments>;
+
     constructor (
-        /**
-         * @summary `buttonList`.
-         * @description
-         *
-         * One entry per button. Absent `button` in the request yields all
-         * buttons.
-         * @public
-         * @readonly
-         */
-        readonly buttonList: ButtonList,
-        /**
-         * @summary `extensions`.
-         * @description
-         *
-         * Optional security (timestamp, sequence, securityInfo) and
-         * privateData.
-         * @public
-         * @readonly
-         */
-        readonly extensions?: OPTIONAL<CSTACommonArguments>
-    ) {}
+        buttonList: ButtonList,
+        extensions?: OPTIONAL<CSTACommonArguments>
+    ) {
+        this.buttonList = buttonList;
+        this.extensions = extensions;
+    }
 
     /**
      * @summary Restructures an object into a GetButtonInformationResult

@@ -1,6 +1,6 @@
 /* eslint-disable */
 import {
-    ASN1Element as _Element,
+    type ASN1Element as _Element,
     ASN1TagClass as _TagClass,
     ASN1Construction as _Construction,
     ASN1UniversalType as _UniversalType,
@@ -11,12 +11,12 @@ import {
 } from '@wildboar/asn1';
 import * as $ from '@wildboar/asn1/functional';
 import {
-    RoutingCollectiveName,
+    type RoutingCollectiveName,
     _decode_RoutingCollectiveName,
     _encode_RoutingCollectiveName,
 } from '../MHSRoutingDirectoryObjects/RoutingCollectiveName.ta.mjs';
 import {
-    Password,
+    type Password,
     _decode_Password,
     _encode_Password,
 } from '../MTSAbstractService/Password.ta.mjs';
@@ -40,26 +40,34 @@ import {
  *
  */
 export class SpecificPassword {
+    /**
+     * @summary `routing_collective_name`.
+     * @public
+     * @readonly
+     */
+    public readonly routing_collective_name: RoutingCollectiveName;
+    /**
+     * @summary `this_mta_password`.
+     * @public
+     * @readonly
+     */
+    public readonly this_mta_password: Password;
+    /**
+     * @summary `calling_mta_password`.
+     * @public
+     * @readonly
+     */
+    public readonly calling_mta_password: Password;
+
     constructor(
-        /**
-         * @summary `routing_collective_name`.
-         * @public
-         * @readonly
-         */
-        readonly routing_collective_name: RoutingCollectiveName,
-        /**
-         * @summary `this_mta_password`.
-         * @public
-         * @readonly
-         */
-        readonly this_mta_password: Password,
-        /**
-         * @summary `calling_mta_password`.
-         * @public
-         * @readonly
-         */
-        readonly calling_mta_password: Password
-    ) {}
+        routing_collective_name: RoutingCollectiveName,
+        this_mta_password: Password,
+        calling_mta_password: Password
+    ) {
+        this.routing_collective_name = routing_collective_name;
+        this.this_mta_password = this_mta_password;
+        this.calling_mta_password = calling_mta_password;
+    }
 
     /**
      * @summary Restructures an object into a SpecificPassword

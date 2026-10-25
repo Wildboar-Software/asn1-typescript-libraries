@@ -1,6 +1,6 @@
 /* eslint-disable */
 import {
-    ENUMERATED
+    type ENUMERATED
 } from "@wildboar/asn1";
 import * as $ from "@wildboar/asn1/functional";
 
@@ -90,7 +90,7 @@ type FlowDirection = _enum_for_FlowDirection | ENUMERATED;
  * @type {number}
  */
 export
-const FlowDirection_downstream: FlowDirection = 1; /* LONG_NAMED_ENUMERATED_VALUE */
+const FlowDirection_downstream: _enum_for_FlowDirection.downstream = _enum_for_FlowDirection.downstream; /* LONG_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary downstream
@@ -105,7 +105,7 @@ const FlowDirection_downstream: FlowDirection = 1; /* LONG_NAMED_ENUMERATED_VALU
  * @type {number}
  */
 export
-const downstream: FlowDirection = FlowDirection_downstream; /* SHORT_NAMED_ENUMERATED_VALUE */
+const downstream: _enum_for_FlowDirection.downstream = FlowDirection_downstream; /* SHORT_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary FlowDirection_upstream
@@ -120,7 +120,7 @@ const downstream: FlowDirection = FlowDirection_downstream; /* SHORT_NAMED_ENUME
  * @type {number}
  */
 export
-const FlowDirection_upstream: FlowDirection = 2; /* LONG_NAMED_ENUMERATED_VALUE */
+const FlowDirection_upstream: _enum_for_FlowDirection.upstream = _enum_for_FlowDirection.upstream; /* LONG_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary upstream
@@ -135,7 +135,7 @@ const FlowDirection_upstream: FlowDirection = 2; /* LONG_NAMED_ENUMERATED_VALUE 
  * @type {number}
  */
 export
-const upstream: FlowDirection = FlowDirection_upstream; /* SHORT_NAMED_ENUMERATED_VALUE */
+const upstream: _enum_for_FlowDirection.upstream = FlowDirection_upstream; /* SHORT_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary FlowDirection_downstream_and_upstream
@@ -150,7 +150,7 @@ const upstream: FlowDirection = FlowDirection_upstream; /* SHORT_NAMED_ENUMERATE
  * @type {number}
  */
 export
-const FlowDirection_downstream_and_upstream: FlowDirection = 3; /* LONG_NAMED_ENUMERATED_VALUE */
+const FlowDirection_downstream_and_upstream: _enum_for_FlowDirection.downstream_and_upstream = _enum_for_FlowDirection.downstream_and_upstream; /* LONG_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary downstream_and_upstream
@@ -165,7 +165,7 @@ const FlowDirection_downstream_and_upstream: FlowDirection = 3; /* LONG_NAMED_EN
  * @type {number}
  */
 export
-const downstream_and_upstream: FlowDirection = FlowDirection_downstream_and_upstream; /* SHORT_NAMED_ENUMERATED_VALUE */
+const downstream_and_upstream: _enum_for_FlowDirection.downstream_and_upstream = FlowDirection_downstream_and_upstream; /* SHORT_NAMED_ENUMERATED_VALUE */
 export const _decode_FlowDirection: $.ASN1Decoder<FlowDirection> = $._decodeEnumerated;
 export const _encode_FlowDirection: $.ASN1Encoder<FlowDirection> = $._encodeEnumerated;
 

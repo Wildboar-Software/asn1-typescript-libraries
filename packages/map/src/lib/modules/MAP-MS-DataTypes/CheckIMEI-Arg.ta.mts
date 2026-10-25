@@ -1,13 +1,13 @@
 /* eslint-disable */
 import {
-    OPTIONAL,
-    ASN1Element as _Element,
+    type OPTIONAL,
+    type ASN1Element as _Element,
     ASN1TagClass as _TagClass
 } from "@wildboar/asn1";
 import * as $ from "@wildboar/asn1/functional";
-import { IMEI, _decode_IMEI, _encode_IMEI } from "../MAP-CommonDataTypes/IMEI.ta.mjs";
+import { type IMEI, _decode_IMEI, _encode_IMEI } from "../MAP-CommonDataTypes/IMEI.ta.mjs";
 import { ExtensionContainer, _decode_ExtensionContainer, _encode_ExtensionContainer } from "../MAP-ExtensionDataTypes/ExtensionContainer.ta.mjs";
-import { RequestedEquipmentInfo, _decode_RequestedEquipmentInfo, _encode_RequestedEquipmentInfo } from "../MAP-MS-DataTypes/RequestedEquipmentInfo.ta.mjs";
+import { type RequestedEquipmentInfo, _decode_RequestedEquipmentInfo, _encode_RequestedEquipmentInfo } from "../MAP-MS-DataTypes/RequestedEquipmentInfo.ta.mjs";
 
 
 /**
@@ -28,7 +28,7 @@ import { RequestedEquipmentInfo, _decode_RequestedEquipmentInfo, _encode_Request
  * CheckIMEI-Arg ::= SEQUENCE {
  *     imei    IMEI,
  *     requestedEquipmentInfo    RequestedEquipmentInfo,
- *     extensionContainer    ExtensionContainer    OPTIONAL,
+ *     extensionContainer    ExtensionContainer    type OPTIONAL,
  *     ...}
  * ```
  * 
@@ -36,43 +36,53 @@ import { RequestedEquipmentInfo, _decode_RequestedEquipmentInfo, _encode_Request
  */
 export
 class CheckIMEI_Arg {
+    /**
+     * @summary `imei`.
+     * @description
+     *
+     * Shall not be included between VLR and MSC. One of IMEI and IMEISV is
+     * mandatory from MSC/SGSN/IWF to EIR (3GPP TS 29.002 V19.1.0 clauses
+     * 8.7.1.3 and 7.6.2.3).
+     *
+     * @public
+     * @readonly
+     */
+    public readonly imei: IMEI;
+    /**
+     * @summary `requestedEquipmentInfo`.
+     * @description
+     *
+     * Indicates whether Equipment Status or BMUEF or both is requested
+     * (3GPP TS 29.002 V19.1.0 clause 8.7.1.3).
+     *
+     * @public
+     * @readonly
+     */
+    public readonly requestedEquipmentInfo: RequestedEquipmentInfo;
+    /**
+     * @summary `extensionContainer`.
+     * @public
+     * @readonly
+     */
+    public readonly extensionContainer?: OPTIONAL<ExtensionContainer>;
+    /**
+     * @summary Extensions that are not recognized.
+     * @public
+     * @readonly
+     */
+    public readonly _unrecognizedExtensionsList: _Element[];
+
     constructor (
-        /**
-         * @summary `imei`.
-         * @description
-         *
-         * Shall not be included between VLR and MSC. One of IMEI and IMEISV is
-         * mandatory from MSC/SGSN/IWF to EIR (3GPP TS 29.002 V19.1.0 clauses
-         * 8.7.1.3 and 7.6.2.3).
-         *
-         * @public
-         * @readonly
-         */
-        readonly imei: IMEI,
-        /**
-         * @summary `requestedEquipmentInfo`.
-         * @description
-         *
-         * Indicates whether Equipment Status or BMUEF or both is requested
-         * (3GPP TS 29.002 V19.1.0 clause 8.7.1.3).
-         *
-         * @public
-         * @readonly
-         */
-        readonly requestedEquipmentInfo: RequestedEquipmentInfo,
-        /**
-         * @summary `extensionContainer`.
-         * @public
-         * @readonly
-         */
-        readonly extensionContainer?: OPTIONAL<ExtensionContainer>,
-        /**
-         * @summary Extensions that are not recognized.
-         * @public
-         * @readonly
-         */
-        readonly _unrecognizedExtensionsList: _Element[] = []
-    ) {}
+        imei: IMEI,
+        requestedEquipmentInfo: RequestedEquipmentInfo,
+        extensionContainer?: OPTIONAL<ExtensionContainer>,
+        _unrecognizedExtensionsList: _Element[] = []
+    ) {
+        this.imei = imei;
+        this.requestedEquipmentInfo = requestedEquipmentInfo;
+        this.extensionContainer = extensionContainer;
+        this._unrecognizedExtensionsList = _unrecognizedExtensionsList;
+    }
 
     /**
      * @summary Restructures an object into a CheckIMEI_Arg

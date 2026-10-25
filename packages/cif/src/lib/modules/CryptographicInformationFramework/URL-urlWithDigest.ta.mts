@@ -1,7 +1,7 @@
 /* eslint-disable */
 import {
-    IA5String,
-    ASN1Element as _Element,
+    type IA5String,
+    type ASN1Element as _Element,
     ASN1TagClass as _TagClass,
     ASN1Construction as _Construction,
     ASN1UniversalType as _UniversalType,
@@ -33,25 +33,31 @@ import { DigestInfoWithDefault, _decode_DigestInfoWithDefault, _encode_DigestInf
  */
 export
 class URL_urlWithDigest {
+    /**
+     * @summary `url`.
+     * @description
+     * IA5 URL (IETF RFC 3986). ISO/IEC 7816-15:2016 §8.2.5.
+     * @public
+     * @readonly
+     */
+    public readonly url: IA5String;
+    /**
+     * @summary `digest`.
+     * @description
+     * Hash of the externally stored object. Default digest algorithm is
+     * SHA-1. ISO/IEC 7816-15:2016 §8.2.5, Annex A.2.5.
+     * @public
+     * @readonly
+     */
+    public readonly digest: DigestInfoWithDefault;
+
     constructor (
-        /**
-         * @summary `url`.
-         * @description
-         * IA5 URL (IETF RFC 3986). ISO/IEC 7816-15:2016 §8.2.5.
-         * @public
-         * @readonly
-         */
-        readonly url: IA5String,
-        /**
-         * @summary `digest`.
-         * @description
-         * Hash of the externally stored object. Default digest algorithm is
-         * SHA-1. ISO/IEC 7816-15:2016 §8.2.5, Annex A.2.5.
-         * @public
-         * @readonly
-         */
-        readonly digest: DigestInfoWithDefault
-    ) {}
+        url: IA5String,
+        digest: DigestInfoWithDefault
+    ) {
+        this.url = url;
+        this.digest = digest;
+    }
 
     /**
      * @summary Restructures an object into a URL_urlWithDigest

@@ -1,7 +1,7 @@
 /* eslint-disable */
 import {
-    OPTIONAL,
-    ASN1Element as _Element,
+    type OPTIONAL,
+    type ASN1Element as _Element,
     ASN1TagClass as _TagClass,
     ASN1Construction as _Construction,
     ASN1UniversalType as _UniversalType,
@@ -12,7 +12,7 @@ import {
 } from "@wildboar/asn1";
 import * as $ from "@wildboar/asn1/functional";
 import { NoticeReference, _decode_NoticeReference, _encode_NoticeReference } from "../ETS-ElectronicSignatureFormats-ExplicitSyntax97/NoticeReference.ta.mjs";
-import { DisplayText, _decode_DisplayText, _encode_DisplayText } from "../ETS-ElectronicSignatureFormats-ExplicitSyntax97/DisplayText.ta.mjs";
+import { type DisplayText, _decode_DisplayText, _encode_DisplayText } from "../ETS-ElectronicSignatureFormats-ExplicitSyntax97/DisplayText.ta.mjs";
 /**
  * @summary SPUserNotice
  * @description
@@ -32,29 +32,35 @@ import { DisplayText, _decode_DisplayText, _encode_DisplayText } from "../ETS-El
  */
 export
 class SPUserNotice {
+    /**
+     * @summary `noticeRef`.
+     * @description
+     *
+     * Reference to a notice stored elsewhere (organization
+     * plus notice numbers).
+     *
+     * @public
+     * @readonly
+     */
+    public readonly noticeRef?: OPTIONAL<NoticeReference>;
+    /**
+     * @summary `explicitText`.
+     * @description
+     *
+     * Notice text to display, up to 200 characters.
+     *
+     * @public
+     * @readonly
+     */
+    public readonly explicitText?: OPTIONAL<DisplayText>;
+
     constructor (
-        /**
-         * @summary `noticeRef`.
-         * @description
-         *
-         * Reference to a notice stored elsewhere (organization
-         * plus notice numbers).
-         *
-         * @public
-         * @readonly
-         */
-        readonly noticeRef?: OPTIONAL<NoticeReference>,
-        /**
-         * @summary `explicitText`.
-         * @description
-         *
-         * Notice text to display, up to 200 characters.
-         *
-         * @public
-         * @readonly
-         */
-        readonly explicitText?: OPTIONAL<DisplayText>
-    ) {}
+        noticeRef?: OPTIONAL<NoticeReference>,
+        explicitText?: OPTIONAL<DisplayText>
+    ) {
+        this.noticeRef = noticeRef;
+        this.explicitText = explicitText;
+    }
 
     /**
      * @summary Restructures an object into a SPUserNotice

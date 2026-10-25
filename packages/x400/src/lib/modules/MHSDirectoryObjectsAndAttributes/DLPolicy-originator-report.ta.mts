@@ -1,7 +1,7 @@
 /* eslint-disable */
 import {
-    INTEGER,
-    ASN1Element as _Element,
+    type INTEGER,
+    type ASN1Element as _Element,
     ASN1TagClass as _TagClass,
     ASN1Construction as _Construction,
     ASN1UniversalType as _UniversalType,
@@ -31,62 +31,62 @@ export type DLPolicy_originator_report = INTEGER;
  * @constant
  * @type {number}
  */
-export const DLPolicy_originator_report_unchanged: DLPolicy_originator_report = 0; /* LONG_NAMED_INTEGER_VALUE */
+export const DLPolicy_originator_report_unchanged: 0 = 0 satisfies DLPolicy_originator_report; /* LONG_NAMED_INTEGER_VALUE */
 
 /**
  * @summary DLPolicy_originator_report_unchanged
  * @constant
  * @type {number}
  */
-export const unchanged: DLPolicy_originator_report = DLPolicy_originator_report_unchanged; /* SHORT_NAMED_INTEGER_VALUE */
+export const unchanged: 0 = DLPolicy_originator_report_unchanged; /* SHORT_NAMED_INTEGER_VALUE */
 
 /**
  * @summary DLPolicy_originator_report_no_report
  * @constant
  * @type {number}
  */
-export const DLPolicy_originator_report_no_report: DLPolicy_originator_report = 1; /* LONG_NAMED_INTEGER_VALUE */
+export const DLPolicy_originator_report_no_report: 1 = 1 satisfies DLPolicy_originator_report; /* LONG_NAMED_INTEGER_VALUE */
 
 /**
  * @summary DLPolicy_originator_report_no_report
  * @constant
  * @type {number}
  */
-export const no_report: DLPolicy_originator_report = DLPolicy_originator_report_no_report; /* SHORT_NAMED_INTEGER_VALUE */
+export const no_report: 1 = DLPolicy_originator_report_no_report; /* SHORT_NAMED_INTEGER_VALUE */
 
 /**
  * @summary DLPolicy_originator_report_report
  * @constant
  * @type {number}
  */
-export const DLPolicy_originator_report_report: DLPolicy_originator_report = 2; /* LONG_NAMED_INTEGER_VALUE */
+export const DLPolicy_originator_report_report: 2 = 2 satisfies DLPolicy_originator_report; /* LONG_NAMED_INTEGER_VALUE */
 
 /**
  * @summary DLPolicy_originator_report_report
  * @constant
  * @type {number}
  */
-export const report: DLPolicy_originator_report = DLPolicy_originator_report_report; /* SHORT_NAMED_INTEGER_VALUE */
+export const report: 2 = DLPolicy_originator_report_report; /* SHORT_NAMED_INTEGER_VALUE */
 
 /**
  * @summary DLPolicy_originator_report_non_delivery_report
  * @constant
  * @type {number}
  */
-export const DLPolicy_originator_report_non_delivery_report: DLPolicy_originator_report = 3; /* LONG_NAMED_INTEGER_VALUE */
+export const DLPolicy_originator_report_non_delivery_report: 3 = 3 satisfies DLPolicy_originator_report; /* LONG_NAMED_INTEGER_VALUE */
 
 /**
  * @summary DLPolicy_originator_report_non_delivery_report
  * @constant
  * @type {number}
  */
-export const non_delivery_report: DLPolicy_originator_report = DLPolicy_originator_report_non_delivery_report; /* SHORT_NAMED_INTEGER_VALUE */
+export const non_delivery_report: 3 = DLPolicy_originator_report_non_delivery_report; /* SHORT_NAMED_INTEGER_VALUE */
 
 
-export const _decode_DLPolicy_originator_report = $._decodeInteger;
+export const _decode_DLPolicy_originator_report: $.ASN1Decoder<INTEGER> = $._decodeInteger;
 
 
-export const _encode_DLPolicy_originator_report = $._encodeInteger;
+export const _encode_DLPolicy_originator_report: $.ASN1Encoder<INTEGER> = $._encodeInteger;
 
 
 /* eslint-enable */

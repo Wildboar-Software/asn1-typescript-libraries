@@ -1,6 +1,6 @@
 /* eslint-disable */
 import {
-  INTEGER,
+  type INTEGER,
   ASN1Element as _Element,
   ASN1TagClass as _TagClass,
   ASN1Construction as _Construction,
@@ -28,18 +28,22 @@ import * as $ from '@wildboar/asn1/functional';
  *
  */
 export class PollReqContent_Item {
+  /**
+   * @summary `certReqId`.
+   * @description
+   *
+   * Certificate request identifier being polled ([RFC 4210 §5.3.22](https://datatracker.ietf.org/doc/html/rfc4210#section-5.3.22)).
+   *
+   * @public
+   * @readonly
+   */
+  public readonly certReqId: INTEGER;
+
   constructor(
-    /**
-     * @summary `certReqId`.
-     * @description
-     *
-     * Certificate request identifier being polled ([RFC 4210 §5.3.22](https://datatracker.ietf.org/doc/html/rfc4210#section-5.3.22)).
-     *
-     * @public
-     * @readonly
-     */
-    readonly certReqId: INTEGER
-  ) {}
+    certReqId: INTEGER
+  ) {
+    this.certReqId = certReqId;
+  }
 
   /**
    * @summary Restructures an object into a PollReqContent_Item

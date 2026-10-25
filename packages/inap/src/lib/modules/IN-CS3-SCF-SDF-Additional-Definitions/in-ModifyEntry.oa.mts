@@ -4,9 +4,9 @@ import { type ERROR } from "../Remote-Operations-Information-Objects/ERROR.oca.m
 import { type OPERATION } from "../Remote-Operations-Information-Objects/OPERATION.oca.mjs";
 // export { Priority, _decode_Priority, _encode_Priority } from "../Remote-Operations-Information-Objects/Priority.ta.mjs";
 // export { Code, _decode_Code, _encode_Code } from "../Remote-Operations-Information-Objects/Code.ta.mjs";
-import { ModifyEntryArgument, _decode_ModifyEntryArgument, _encode_ModifyEntryArgument } from "../DirectoryAbstractService/ModifyEntryArgument.ta.mjs";
+import { type ModifyEntryArgument, _decode_ModifyEntryArgument, _encode_ModifyEntryArgument } from "../DirectoryAbstractService/ModifyEntryArgument.ta.mjs";
 // export { ModifyEntryArgument, _decode_ModifyEntryArgument, _encode_ModifyEntryArgument } from "../DirectoryAbstractService/ModifyEntryArgument.ta.mjs";
-import { ModifyEntryResult, _decode_ModifyEntryResult, _encode_ModifyEntryResult } from "../DirectoryAbstractService/ModifyEntryResult.ta.mjs";
+import { type ModifyEntryResult, _decode_ModifyEntryResult, _encode_ModifyEntryResult } from "../DirectoryAbstractService/ModifyEntryResult.ta.mjs";
 // export { ModifyEntryResult, _decode_ModifyEntryResult, _encode_ModifyEntryResult } from "../DirectoryAbstractService/ModifyEntryResult.ta.mjs";
 import { nameError } from "../DirectoryAbstractService/nameError.oa.mjs";
 // export { nameError } from "../DirectoryAbstractService/nameError.oa.mjs";

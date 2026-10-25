@@ -1,13 +1,13 @@
 /* eslint-disable */
 import {
-    ASN1Element as _Element,
+    type ASN1Element as _Element,
     ASN1TagClass as _TagClass,
-    INTEGER,
-    OPTIONAL,
+    type INTEGER,
+    type OPTIONAL,
 } from "@wildboar/asn1";
 import * as $ from "@wildboar/asn1/functional";
 import {
-    OperationProgress_nameResolutionPhase,
+    type OperationProgress_nameResolutionPhase,
     _decode_OperationProgress_nameResolutionPhase,
     _encode_OperationProgress_nameResolutionPhase,
     _enum_for_OperationProgress_nameResolutionPhase,
@@ -36,39 +36,47 @@ import {
  *
  */
 export class OperationProgress {
+    /**
+     * @summary `nameResolutionPhase`.
+     * @description
+     *
+     * `notStarted`(1) default: initial RDN(s) not yet reached.
+     * `proceeding`(2): `nextRDNToBeResolved` shall be present.
+     * `completed`(3): DSA holding the target reached;
+     * `nextRDNToBeResolved` shall be absent. Numbering starts at 1.
+     *
+     * @public
+     * @readonly
+     */
+    public readonly nameResolutionPhase: OperationProgress_nameResolutionPhase;
+    /**
+     * @summary `nextRDNToBeResolved`.
+     * @description
+     *
+     * Integer 1..N (N = RDNs in targetObject). 1-based. Present only
+     * when phase is `proceeding`; absent when `completed` or
+     * `notStarted`.
+     *
+     * @public
+     * @readonly
+     */
+    public readonly nextRDNToBeResolved?: OPTIONAL<INTEGER>;
+    /**
+     * @summary Extensions that are not recognized.
+     * @public
+     * @readonly
+     */
+    public readonly _unrecognizedExtensionsList: _Element[];
+
     constructor(
-        /**
-         * @summary `nameResolutionPhase`.
-         * @description
-         *
-         * `notStarted`(1) default: initial RDN(s) not yet reached.
-         * `proceeding`(2): `nextRDNToBeResolved` shall be present.
-         * `completed`(3): DSA holding the target reached;
-         * `nextRDNToBeResolved` shall be absent. Numbering starts at 1.
-         *
-         * @public
-         * @readonly
-         */
-        readonly nameResolutionPhase: OperationProgress_nameResolutionPhase,
-        /**
-         * @summary `nextRDNToBeResolved`.
-         * @description
-         *
-         * Integer 1..N (N = RDNs in targetObject). 1-based. Present only
-         * when phase is `proceeding`; absent when `completed` or
-         * `notStarted`.
-         *
-         * @public
-         * @readonly
-         */
-        readonly nextRDNToBeResolved?: OPTIONAL<INTEGER>,
-        /**
-         * @summary Extensions that are not recognized.
-         * @public
-         * @readonly
-         */
-        readonly _unrecognizedExtensionsList: _Element[] = []
-    ) {}
+        nameResolutionPhase: OperationProgress_nameResolutionPhase,
+        nextRDNToBeResolved?: OPTIONAL<INTEGER>,
+        _unrecognizedExtensionsList: _Element[] = []
+    ) {
+        this.nameResolutionPhase = nameResolutionPhase;
+        this.nextRDNToBeResolved = nextRDNToBeResolved;
+        this._unrecognizedExtensionsList = _unrecognizedExtensionsList;
+    }
 
     /**
      * @summary Restructures an object into a OperationProgress
@@ -98,7 +106,7 @@ export class OperationProgress {
      * @static
      */
 
-    public static _enum_for_nameResolutionPhase = _enum_for_OperationProgress_nameResolutionPhase;
+    public static _enum_for_nameResolutionPhase: typeof _enum_for_OperationProgress_nameResolutionPhase = _enum_for_OperationProgress_nameResolutionPhase;
 }
 
 /**

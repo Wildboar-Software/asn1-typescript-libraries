@@ -1,9 +1,9 @@
 /* eslint-disable */
 import {
-    OPTIONAL,
-    BOOLEAN,
-    INTEGER,
-    ASN1Element as _Element,
+    type OPTIONAL,
+    type BOOLEAN,
+    type INTEGER,
+    type ASN1Element as _Element,
     ASN1TagClass as _TagClass,
     ASN1Construction as _Construction,
     ASN1UniversalType as _UniversalType,
@@ -36,26 +36,34 @@ import {
  *
  */
 export class TeletexParameters {
+    /**
+     * @summary `number_of_pages`.
+     * @public
+     * @readonly
+     */
+    public readonly number_of_pages?: OPTIONAL<INTEGER>;
+    /**
+     * @summary `telex_compatible`.
+     * @public
+     * @readonly
+     */
+    public readonly telex_compatible?: OPTIONAL<BOOLEAN>;
+    /**
+     * @summary `non_basic_parameters`.
+     * @public
+     * @readonly
+     */
+    public readonly non_basic_parameters?: OPTIONAL<TeletexNonBasicParameters>;
+
     constructor(
-        /**
-         * @summary `number_of_pages`.
-         * @public
-         * @readonly
-         */
-        readonly number_of_pages?: OPTIONAL<INTEGER>,
-        /**
-         * @summary `telex_compatible`.
-         * @public
-         * @readonly
-         */
-        readonly telex_compatible?: OPTIONAL<BOOLEAN>,
-        /**
-         * @summary `non_basic_parameters`.
-         * @public
-         * @readonly
-         */
-        readonly non_basic_parameters?: OPTIONAL<TeletexNonBasicParameters>
-    ) {}
+        number_of_pages?: OPTIONAL<INTEGER>,
+        telex_compatible?: OPTIONAL<BOOLEAN>,
+        non_basic_parameters?: OPTIONAL<TeletexNonBasicParameters>
+    ) {
+        this.number_of_pages = number_of_pages;
+        this.telex_compatible = telex_compatible;
+        this.non_basic_parameters = non_basic_parameters;
+    }
 
     /**
      * @summary Restructures an object into a TeletexParameters

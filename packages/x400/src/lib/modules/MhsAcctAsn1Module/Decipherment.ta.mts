@@ -1,7 +1,7 @@
 /* eslint-disable */
 import {
-    INTEGER,
-    ASN1Element as _Element,
+    type INTEGER,
+    type ASN1Element as _Element,
     ASN1TagClass as _TagClass,
     ASN1Construction as _Construction,
     ASN1UniversalType as _UniversalType,
@@ -31,34 +31,34 @@ export type Decipherment = INTEGER;
  * @constant
  * @type {number}
  */
-export const Decipherment_success: Decipherment = 1; /* LONG_NAMED_INTEGER_VALUE */
+export const Decipherment_success: 1 = 1 satisfies Decipherment; /* LONG_NAMED_INTEGER_VALUE */
 
 /**
  * @summary Decipherment_success
  * @constant
  * @type {number}
  */
-export const success: Decipherment = Decipherment_success; /* SHORT_NAMED_INTEGER_VALUE */
+export const success: 1 = Decipherment_success; /* SHORT_NAMED_INTEGER_VALUE */
 
 /**
  * @summary Decipherment_failure
  * @constant
  * @type {number}
  */
-export const Decipherment_failure: Decipherment = 2; /* LONG_NAMED_INTEGER_VALUE */
+export const Decipherment_failure: 2 = 2 satisfies Decipherment; /* LONG_NAMED_INTEGER_VALUE */
 
 /**
  * @summary Decipherment_failure
  * @constant
  * @type {number}
  */
-export const failure: Decipherment = Decipherment_failure; /* SHORT_NAMED_INTEGER_VALUE */
+export const failure: 2 = Decipherment_failure; /* SHORT_NAMED_INTEGER_VALUE */
 
 
-export const _decode_Decipherment = $._decodeInteger;
+export const _decode_Decipherment: $.ASN1Decoder<INTEGER> = $._decodeInteger;
 
 
-export const _encode_Decipherment = $._encodeInteger;
+export const _encode_Decipherment: $.ASN1Encoder<INTEGER> = $._encodeInteger;
 
 
 /* eslint-enable */

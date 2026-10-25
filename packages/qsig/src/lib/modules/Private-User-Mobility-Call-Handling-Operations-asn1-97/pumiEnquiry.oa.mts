@@ -1,7 +1,7 @@
 /* eslint-disable */
 import { type OPERATION } from "../Remote-Operations-Information-Objects/OPERATION.oca.mjs";
 import { EnquiryArg, _decode_EnquiryArg, _encode_EnquiryArg } from "../Private-User-Mobility-Call-Handling-Operations-asn1-97/EnquiryArg.ta.mjs";
-import { EnquiryRes, _decode_EnquiryRes, _encode_EnquiryRes } from "../Private-User-Mobility-Call-Handling-Operations-asn1-97/EnquiryRes.ta.mjs";
+import { type EnquiryRes, _decode_EnquiryRes, _encode_EnquiryRes } from "../Private-User-Mobility-Call-Handling-Operations-asn1-97/EnquiryRes.ta.mjs";
 import { invalidServedUserNr } from "../General-Error-List/invalidServedUserNr.oa.mjs";
 import { locationNotKnown } from "../Private-User-Mobility-Call-Handling-Operations-asn1-97/locationNotKnown.oa.mjs";
 import { notAvailable } from "../General-Error-List/notAvailable.oa.mjs";

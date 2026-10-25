@@ -1,16 +1,16 @@
 /* eslint-disable */
 import {
-    OPTIONAL,
-    ASN1Element as _Element,
+    type OPTIONAL,
+    type ASN1Element as _Element,
     ASN1TagClass as _TagClass
 } from "@wildboar/asn1";
 import * as $ from "@wildboar/asn1/functional";
-import { IMSI, _decode_IMSI, _encode_IMSI } from "../MAP-CommonDataTypes/IMSI.ta.mjs";
-import { ISDN_AddressString, _decode_ISDN_AddressString, _encode_ISDN_AddressString } from "../MAP-CommonDataTypes/ISDN-AddressString.ta.mjs";
+import { type IMSI, _decode_IMSI, _encode_IMSI } from "../MAP-CommonDataTypes/IMSI.ta.mjs";
+import { type ISDN_AddressString, _decode_ISDN_AddressString, _encode_ISDN_AddressString } from "../MAP-CommonDataTypes/ISDN-AddressString.ta.mjs";
 import { ExtensionContainer, _decode_ExtensionContainer, _encode_ExtensionContainer } from "../MAP-ExtensionDataTypes/ExtensionContainer.ta.mjs";
-import { SS_Code, _decode_SS_Code, _encode_SS_Code } from "../MAP-SS-Code/SS-Code.ta.mjs";
+import { type SS_Code, _decode_SS_Code, _encode_SS_Code } from "../MAP-SS-Code/SS-Code.ta.mjs";
 import { CCBS_RequestState, _decode_CCBS_RequestState, _encode_CCBS_RequestState, _enum_for_CCBS_RequestState } from "../MAP-SS-DataTypes/CCBS-RequestState.ta.mjs";
-import { SS_EventSpecification, _decode_SS_EventSpecification, _encode_SS_EventSpecification } from "../MAP-SS-DataTypes/SS-EventSpecification.ta.mjs";
+import { type SS_EventSpecification, _decode_SS_EventSpecification, _encode_SS_EventSpecification } from "../MAP-SS-DataTypes/SS-EventSpecification.ta.mjs";
 
 
 /**
@@ -32,10 +32,10 @@ import { SS_EventSpecification, _decode_SS_EventSpecification, _encode_SS_EventS
  *     -- multiPTY    SS-Code ::= '01010001'B
  *     -- cd    SS-Code ::= '00100100'B
  *     -- ccbs    SS-Code ::= '01000100'B
- *     ss-EventSpecification    [3] SS-EventSpecification    OPTIONAL,
- *     extensionContainer    [4] ExtensionContainer    OPTIONAL,
+ *     ss-EventSpecification    [3] SS-EventSpecification    type OPTIONAL,
+ *     extensionContainer    [4] ExtensionContainer    type OPTIONAL,
  *     ...,
- *     b-subscriberNumber    [5]    ISDN-AddressString    OPTIONAL,
+ *     b-subscriberNumber    [5]    ISDN-AddressString    type OPTIONAL,
  *     ccbs-RequestState    [6]    CCBS-RequestState    OPTIONAL
  *     }
  * ```
@@ -44,85 +44,103 @@ import { SS_EventSpecification, _decode_SS_EventSpecification, _encode_SS_EventS
  */
 export
 class SS_InvocationNotificationArg {
+    /**
+     * @summary `imsi`.
+     * @description
+     *
+     * Subscriber IMSI.
+     *
+     * @public
+     * @readonly
+     */
+    public readonly imsi: IMSI;
+    /**
+     * @summary `msisdn`.
+     * @description
+     *
+     * Subscriber MSISDN.
+     *
+     * @public
+     * @readonly
+     */
+    public readonly msisdn: ISDN_AddressString;
+    /**
+     * @summary `ss_Event`.
+     * @description
+     *
+     * Allowed SS-Code values: ect `00110001`B, multiPTY `01010001`B, cd
+     * `00100100`B, ccbs `01000100`B (3GPP TS 29.002 V19.1.0 clause 17.7.4).
+     *
+     * @public
+     * @readonly
+     */
+    public readonly ss_Event: SS_Code;
+    /**
+     * @summary `ss_EventSpecification`.
+     * @description
+     *
+     * Event-specific addresses, at most 2.
+     *
+     * @public
+     * @readonly
+     */
+    public readonly ss_EventSpecification?: OPTIONAL<SS_EventSpecification>;
+    /**
+     * @summary `extensionContainer`.
+     * @description
+     *
+     * Private or PCS extensions (3GPP TS 29.002 V19.1.0 clause 17.7.11).
+     *
+     * @public
+     * @readonly
+     */
+    public readonly extensionContainer?: OPTIONAL<ExtensionContainer>;
+    /**
+     * @summary `b_subscriberNumber`.
+     * @description
+     *
+     * B-subscriber number when applicable.
+     *
+     * @public
+     * @readonly
+     */
+    public readonly b_subscriberNumber?: OPTIONAL<ISDN_AddressString>;
+    /**
+     * @summary `ccbs_RequestState`.
+     * @description
+     *
+     * CCBS request state when the event is CCBS.
+     *
+     * @public
+     * @readonly
+     */
+    public readonly ccbs_RequestState?: OPTIONAL<CCBS_RequestState>;
+    /**
+     * @summary Extensions that are not recognized.
+     * @public
+     * @readonly
+     */
+    public readonly _unrecognizedExtensionsList: _Element[];
+
     constructor (
-        /**
-         * @summary `imsi`.
-         * @description
-         *
-         * Subscriber IMSI.
-         *
-         * @public
-         * @readonly
-         */
-        readonly imsi: IMSI,
-        /**
-         * @summary `msisdn`.
-         * @description
-         *
-         * Subscriber MSISDN.
-         *
-         * @public
-         * @readonly
-         */
-        readonly msisdn: ISDN_AddressString,
-        /**
-         * @summary `ss_Event`.
-         * @description
-         *
-         * Allowed SS-Code values: ect `00110001`B, multiPTY `01010001`B, cd
-         * `00100100`B, ccbs `01000100`B (3GPP TS 29.002 V19.1.0 clause 17.7.4).
-         *
-         * @public
-         * @readonly
-         */
-        readonly ss_Event: SS_Code,
-        /**
-         * @summary `ss_EventSpecification`.
-         * @description
-         *
-         * Event-specific addresses, at most 2.
-         *
-         * @public
-         * @readonly
-         */
-        readonly ss_EventSpecification?: OPTIONAL<SS_EventSpecification>,
-        /**
-         * @summary `extensionContainer`.
-         * @description
-         *
-         * Private or PCS extensions (3GPP TS 29.002 V19.1.0 clause 17.7.11).
-         *
-         * @public
-         * @readonly
-         */
-        readonly extensionContainer?: OPTIONAL<ExtensionContainer>,
-        /**
-         * @summary `b_subscriberNumber`.
-         * @description
-         *
-         * B-subscriber number when applicable.
-         *
-         * @public
-         * @readonly
-         */
-        readonly b_subscriberNumber?: OPTIONAL<ISDN_AddressString>,
-        /**
-         * @summary `ccbs_RequestState`.
-         * @description
-         *
-         * CCBS request state when the event is CCBS.
-         *
-         * @public
-         * @readonly
-         */
-        readonly ccbs_RequestState?: OPTIONAL<CCBS_RequestState>,
-        /**
-         * @summary Extensions that are not recognized.
-         * @public
-         * @readonly
-         */
-        readonly _unrecognizedExtensionsList: _Element[] = []
-    ) {}
+        imsi: IMSI,
+        msisdn: ISDN_AddressString,
+        ss_Event: SS_Code,
+        ss_EventSpecification?: OPTIONAL<SS_EventSpecification>,
+        extensionContainer?: OPTIONAL<ExtensionContainer>,
+        b_subscriberNumber?: OPTIONAL<ISDN_AddressString>,
+        ccbs_RequestState?: OPTIONAL<CCBS_RequestState>,
+        _unrecognizedExtensionsList: _Element[] = []
+    ) {
+        this.imsi = imsi;
+        this.msisdn = msisdn;
+        this.ss_Event = ss_Event;
+        this.ss_EventSpecification = ss_EventSpecification;
+        this.extensionContainer = extensionContainer;
+        this.b_subscriberNumber = b_subscriberNumber;
+        this.ccbs_RequestState = ccbs_RequestState;
+        this._unrecognizedExtensionsList = _unrecognizedExtensionsList;
+    }
 
     /**
      * @summary Restructures an object into a SS_InvocationNotificationArg
@@ -146,7 +164,7 @@ class SS_InvocationNotificationArg {
          * @static
          */
 
-    public static _enum_for_ccbs_RequestState = _enum_for_CCBS_RequestState;
+    public static _enum_for_ccbs_RequestState: typeof _enum_for_CCBS_RequestState = _enum_for_CCBS_RequestState;
 }
 
 /**

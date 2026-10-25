@@ -1,7 +1,7 @@
 /* eslint-disable */
 import {
-    OPTIONAL,
-    ASN1Element as _Element,
+    type OPTIONAL,
+    type ASN1Element as _Element,
     ASN1TagClass as _TagClass,
     ASN1Construction as _Construction,
     ASN1UniversalType as _UniversalType,
@@ -11,8 +11,8 @@ import {
     ASN1ConstructionError as _ConstructionError,
 } from "@wildboar/asn1";
 import * as $ from "@wildboar/asn1/functional";
-import { SCIBillingChargingCharacteristics, _decode_SCIBillingChargingCharacteristics, _encode_SCIBillingChargingCharacteristics } from "../Core-INAP-CS1-DataTypes/SCIBillingChargingCharacteristics.ta.mjs";
-import { LegID, _decode_LegID, _encode_LegID } from "../Core-INAP-CS1-DataTypes/LegID.ta.mjs";
+import { type SCIBillingChargingCharacteristics, _decode_SCIBillingChargingCharacteristics, _encode_SCIBillingChargingCharacteristics } from "../Core-INAP-CS1-DataTypes/SCIBillingChargingCharacteristics.ta.mjs";
+import { type LegID, _decode_LegID, _encode_LegID } from "../Core-INAP-CS1-DataTypes/LegID.ta.mjs";
 import { ExtensionField, _decode_ExtensionField, _encode_ExtensionField } from "../Core-INAP-CS1-DataTypes/ExtensionField.ta.mjs";
 
 
@@ -35,26 +35,34 @@ import { ExtensionField, _decode_ExtensionField, _encode_ExtensionField } from "
  */
 export
 class SendChargingInformationArg {
+    /**
+     * @summary `sCIBillingChargingCharacteristics`.
+     * @public
+     * @readonly
+     */
+    public readonly sCIBillingChargingCharacteristics: SCIBillingChargingCharacteristics;
+    /**
+     * @summary `legID`.
+     * @public
+     * @readonly
+     */
+    public readonly legID: LegID;
+    /**
+     * @summary `extensions`.
+     * @public
+     * @readonly
+     */
+    public readonly extensions?: OPTIONAL<ExtensionField[]>;
+
     constructor (
-        /**
-         * @summary `sCIBillingChargingCharacteristics`.
-         * @public
-         * @readonly
-         */
-        readonly sCIBillingChargingCharacteristics: SCIBillingChargingCharacteristics,
-        /**
-         * @summary `legID`.
-         * @public
-         * @readonly
-         */
-        readonly legID: LegID,
-        /**
-         * @summary `extensions`.
-         * @public
-         * @readonly
-         */
-        readonly extensions?: OPTIONAL<ExtensionField[]>
-    ) {}
+        sCIBillingChargingCharacteristics: SCIBillingChargingCharacteristics,
+        legID: LegID,
+        extensions?: OPTIONAL<ExtensionField[]>
+    ) {
+        this.sCIBillingChargingCharacteristics = sCIBillingChargingCharacteristics;
+        this.legID = legID;
+        this.extensions = extensions;
+    }
 
     /**
      * @summary Restructures an object into a SendChargingInformationArg

@@ -1,6 +1,6 @@
 /* eslint-disable */
 import {
-    ASN1Element as _Element,
+    type ASN1Element as _Element,
     ASN1TagClass as _TagClass
 } from "@wildboar/asn1";
 import * as $ from "@wildboar/asn1/functional";
@@ -8,7 +8,7 @@ import { IssuerAndSerialNumber, _decode_IssuerAndSerialNumber, _encode_IssuerAnd
 // export { IssuerAndSerialNumber, _decode_IssuerAndSerialNumber, _encode_IssuerAndSerialNumber } from "../EnhancedSecurity/IssuerAndSerialNumber.ta.mjs";
 import { type SubjectKeyIdentifier, _decode_SubjectKeyIdentifier, _encode_SubjectKeyIdentifier } from "../CertificateExtensions/SubjectKeyIdentifier.ta.mjs";
 // export { SubjectKeyIdentifier, _decode_SubjectKeyIdentifier, _encode_SubjectKeyIdentifier } from "../CertificateExtensions/SubjectKeyIdentifier.ta.mjs";
-import { Digest, _decode_Digest, _encode_Digest } from "../DeviationList/Digest.ta.mjs";
+import { type Digest, _decode_Digest, _encode_Digest } from "../DeviationList/Digest.ta.mjs";
 // export { Digest, _decode_Digest, _encode_Digest } from "../DeviationList/Digest.ta.mjs";
 
 

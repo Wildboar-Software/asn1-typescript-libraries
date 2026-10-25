@@ -1,17 +1,17 @@
 /* eslint-disable */
 import {
-    OPTIONAL,
-    ASN1Element as _Element,
+    type OPTIONAL,
+    type ASN1Element as _Element,
     ASN1TagClass as _TagClass
 } from "@wildboar/asn1";
 import * as $ from "@wildboar/asn1/functional";
 import { TimerID, TimerID_tssf /* IMPORTED_LONG_ENUMERATION_ITEM */, _decode_TimerID, _encode_TimerID, _enum_for_TimerID } from "../IN-SSF-SCF-datatypes/TimerID.ta.mjs";
 // export { TimerID, _enum_for_TimerID, TimerID_tssf /* IMPORTED_LONG_ENUMERATION_ITEM */, tssf /* IMPORTED_SHORT_ENUMERATION_ITEM */, _decode_TimerID, _encode_TimerID } from "../IN-SSF-SCF-datatypes/TimerID.ta.mjs";
-import { TimerValue, _decode_TimerValue, _encode_TimerValue } from "../IN-SSF-SCF-datatypes/TimerValue.ta.mjs";
+import { type TimerValue, _decode_TimerValue, _encode_TimerValue } from "../IN-SSF-SCF-datatypes/TimerValue.ta.mjs";
 // export { TimerValue, _decode_TimerValue, _encode_TimerValue } from "../IN-SSF-SCF-datatypes/TimerValue.ta.mjs";
-import { Extensions, _decode_Extensions, _encode_Extensions } from "../IN-common-datatypes/Extensions.ta.mjs";
+import { type Extensions, _decode_Extensions, _encode_Extensions } from "../IN-common-datatypes/Extensions.ta.mjs";
 // export { Extensions, _decode_Extensions, _encode_Extensions } from "../IN-common-datatypes/Extensions.ta.mjs";
-import { CallSegmentID, _decode_CallSegmentID, _encode_CallSegmentID } from "../IN-SSF-SCF-datatypes/CallSegmentID.ta.mjs";
+import { type CallSegmentID, _decode_CallSegmentID, _encode_CallSegmentID } from "../IN-SSF-SCF-datatypes/CallSegmentID.ta.mjs";
 // export { CallSegmentID, _decode_CallSegmentID, _encode_CallSegmentID } from "../IN-SSF-SCF-datatypes/CallSegmentID.ta.mjs";
 
 
@@ -102,13 +102,13 @@ class ResetTimerArg {
      * @static
      * @method
      */
-    public static get _default_value_for_timerID () { return TimerID_tssf; }        /**
+    public static get _default_value_for_timerID (): _enum_for_TimerID { return TimerID_tssf; }        /**
          * @summary The enum used as the type of the component `timerID`
          * @public
          * @static
          */
 
-    public static _enum_for_timerID = _enum_for_TimerID;
+    public static _enum_for_timerID: typeof _enum_for_TimerID = _enum_for_TimerID;
 }
 
 /**

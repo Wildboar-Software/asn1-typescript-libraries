@@ -1,6 +1,6 @@
 /* eslint-disable */
 import {
-    ASN1Element as _Element,
+    type ASN1Element as _Element,
     ASN1TagClass as _TagClass,
     ASN1Construction as _Construction,
     ASN1UniversalType as _UniversalType,
@@ -95,7 +95,7 @@ type DfrObjectClass = _enum_for_DfrObjectClass;
  * @enum {number}
  */
 export
-const DfrObjectClass = _enum_for_DfrObjectClass;
+const DfrObjectClass: typeof _enum_for_DfrObjectClass = _enum_for_DfrObjectClass;
 
 /**
  * @summary DfrObjectClass_dfr_document
@@ -107,7 +107,7 @@ const DfrObjectClass = _enum_for_DfrObjectClass;
  * @type {number}
  */
 export
-const DfrObjectClass_dfr_document: DfrObjectClass = DfrObjectClass.dfr_document; /* LONG_NAMED_ENUMERATED_VALUE */
+const DfrObjectClass_dfr_document: _enum_for_DfrObjectClass.dfr_document = DfrObjectClass.dfr_document; /* LONG_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary dfr_document
@@ -119,7 +119,7 @@ const DfrObjectClass_dfr_document: DfrObjectClass = DfrObjectClass.dfr_document;
  * @type {number}
  */
 export
-const dfr_document: DfrObjectClass = DfrObjectClass.dfr_document; /* SHORT_NAMED_ENUMERATED_VALUE */
+const dfr_document: _enum_for_DfrObjectClass.dfr_document = DfrObjectClass.dfr_document; /* SHORT_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary DfrObjectClass_dfr_root_group
@@ -131,7 +131,7 @@ const dfr_document: DfrObjectClass = DfrObjectClass.dfr_document; /* SHORT_NAMED
  * @type {number}
  */
 export
-const DfrObjectClass_dfr_root_group: DfrObjectClass = DfrObjectClass.dfr_root_group; /* LONG_NAMED_ENUMERATED_VALUE */
+const DfrObjectClass_dfr_root_group: _enum_for_DfrObjectClass.dfr_root_group = DfrObjectClass.dfr_root_group; /* LONG_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary dfr_root_group
@@ -143,7 +143,7 @@ const DfrObjectClass_dfr_root_group: DfrObjectClass = DfrObjectClass.dfr_root_gr
  * @type {number}
  */
 export
-const dfr_root_group: DfrObjectClass = DfrObjectClass.dfr_root_group; /* SHORT_NAMED_ENUMERATED_VALUE */
+const dfr_root_group: _enum_for_DfrObjectClass.dfr_root_group = DfrObjectClass.dfr_root_group; /* SHORT_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary DfrObjectClass_dfr_proper_group
@@ -154,7 +154,7 @@ const dfr_root_group: DfrObjectClass = DfrObjectClass.dfr_root_group; /* SHORT_N
  * @type {number}
  */
 export
-const DfrObjectClass_dfr_proper_group: DfrObjectClass = DfrObjectClass.dfr_proper_group; /* LONG_NAMED_ENUMERATED_VALUE */
+const DfrObjectClass_dfr_proper_group: _enum_for_DfrObjectClass.dfr_proper_group = DfrObjectClass.dfr_proper_group; /* LONG_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary dfr_proper_group
@@ -165,7 +165,7 @@ const DfrObjectClass_dfr_proper_group: DfrObjectClass = DfrObjectClass.dfr_prope
  * @type {number}
  */
 export
-const dfr_proper_group: DfrObjectClass = DfrObjectClass.dfr_proper_group; /* SHORT_NAMED_ENUMERATED_VALUE */
+const dfr_proper_group: _enum_for_DfrObjectClass.dfr_proper_group = DfrObjectClass.dfr_proper_group; /* SHORT_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary DfrObjectClass_dfr_reference
@@ -177,7 +177,7 @@ const dfr_proper_group: DfrObjectClass = DfrObjectClass.dfr_proper_group; /* SHO
  * @type {number}
  */
 export
-const DfrObjectClass_dfr_reference: DfrObjectClass = DfrObjectClass.dfr_reference; /* LONG_NAMED_ENUMERATED_VALUE */
+const DfrObjectClass_dfr_reference: _enum_for_DfrObjectClass.dfr_reference = DfrObjectClass.dfr_reference; /* LONG_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary dfr_reference
@@ -189,7 +189,7 @@ const DfrObjectClass_dfr_reference: DfrObjectClass = DfrObjectClass.dfr_referenc
  * @type {number}
  */
 export
-const dfr_reference: DfrObjectClass = DfrObjectClass.dfr_reference; /* SHORT_NAMED_ENUMERATED_VALUE */
+const dfr_reference: _enum_for_DfrObjectClass.dfr_reference = DfrObjectClass.dfr_reference; /* SHORT_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary DfrObjectClass_dfr_search_result_list
@@ -201,7 +201,7 @@ const dfr_reference: DfrObjectClass = DfrObjectClass.dfr_reference; /* SHORT_NAM
  * @type {number}
  */
 export
-const DfrObjectClass_dfr_search_result_list: DfrObjectClass = DfrObjectClass.dfr_search_result_list; /* LONG_NAMED_ENUMERATED_VALUE */
+const DfrObjectClass_dfr_search_result_list: _enum_for_DfrObjectClass.dfr_search_result_list = DfrObjectClass.dfr_search_result_list; /* LONG_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary dfr_search_result_list
@@ -213,9 +213,23 @@ const DfrObjectClass_dfr_search_result_list: DfrObjectClass = DfrObjectClass.dfr
  * @type {number}
  */
 export
-const dfr_search_result_list: DfrObjectClass = DfrObjectClass.dfr_search_result_list; /* SHORT_NAMED_ENUMERATED_VALUE */
-export const _decode_DfrObjectClass = $._decodeEnumerated;
-export const _encode_DfrObjectClass = $._encodeEnumerated;
+const dfr_search_result_list: _enum_for_DfrObjectClass.dfr_search_result_list = DfrObjectClass.dfr_search_result_list; /* SHORT_NAMED_ENUMERATED_VALUE */
+export function _decode_DfrObjectClass(el: _Element): DfrObjectClass {
+    const enumerated = $._decodeEnumerated(el);
+    switch (enumerated) {
+        case DfrObjectClass.dfr_document: return DfrObjectClass.dfr_document;
+        case DfrObjectClass.dfr_root_group: return DfrObjectClass.dfr_root_group;
+        case DfrObjectClass.dfr_proper_group: return DfrObjectClass.dfr_proper_group;
+        case DfrObjectClass.dfr_reference: return DfrObjectClass.dfr_reference;
+        case DfrObjectClass.dfr_search_result_list: return DfrObjectClass.dfr_search_result_list;
+        default:
+            throw new _ConstructionError(
+                "Invalid ENUMERATED value " + enumerated + " for DfrObjectClass.",
+                el,
+            );
+    }
+}
+export const _encode_DfrObjectClass: $.ASN1Encoder<DfrObjectClass> = $._encodeEnumerated as $.ASN1Encoder<DfrObjectClass>;
 
 
 /* eslint-enable */

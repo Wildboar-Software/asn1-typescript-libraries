@@ -1,6 +1,6 @@
 /* eslint-disable */
 import {
-  TIME,
+  type TIME,
   ASN1Element as _Element,
   ASN1TagClass as _TagClass,
   ASN1Construction as _Construction,
@@ -34,12 +34,12 @@ export type Time = TIME; // TimeType
 
 
 
-export const _decode_Time = $._decodeTime;
+export const _decode_Time: $.ASN1Decoder<string> = $._decodeTime;
 
 
 
 
-export const _encode_Time = $._encodeTime;
+export const _encode_Time: $.ASN1Encoder<string> = $._encodeTime;
 
 
 /* eslint-enable */

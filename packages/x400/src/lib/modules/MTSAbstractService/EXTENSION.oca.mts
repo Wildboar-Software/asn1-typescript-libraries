@@ -1,6 +1,6 @@
 /* eslint-disable */
 import {
-    ASN1Element as _Element,
+    type ASN1Element as _Element,
     ASN1TagClass as _TagClass,
     ASN1Construction as _Construction,
     ASN1UniversalType as _UniversalType,
@@ -11,12 +11,12 @@ import {
 } from '@wildboar/asn1';
 import * as $ from '@wildboar/asn1/functional';
 import {
-    ExtensionType,
+    type ExtensionType,
     _decode_ExtensionType,
     _encode_ExtensionType,
 } from '../MTSAbstractService/ExtensionType.ta.mjs';
 import {
-    Criticality,
+    type Criticality,
     _decode_Criticality,
     _encode_Criticality,
 } from '../MTSAbstractService/Criticality.ta.mjs';
@@ -29,7 +29,7 @@ import {
  * ```asn1
  * EXTENSION ::= CLASS {
  *   &id           ExtensionType UNIQUE,
- *   &Type         OPTIONAL,
+ *   &Type         type OPTIONAL,
  *   &absent       &Type OPTIONAL,
  *   &recommended  Criticality DEFAULT {}
  * }

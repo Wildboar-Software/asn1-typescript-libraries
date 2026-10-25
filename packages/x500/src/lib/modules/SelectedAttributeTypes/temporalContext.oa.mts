@@ -3,7 +3,7 @@ import { TRUE } from "@wildboar/asn1";
 import { type CONTEXT } from "../InformationFramework/CONTEXT.oca.mjs";
 import { id_avc_temporal } from "../SelectedAttributeTypes/id-avc-temporal.va.mjs";
 import {
-    TimeAssertion,
+    type TimeAssertion,
     _decode_TimeAssertion,
     _encode_TimeAssertion,
 } from "../SelectedAttributeTypes/TimeAssertion.ta.mjs";

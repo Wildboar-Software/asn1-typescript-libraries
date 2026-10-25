@@ -1,7 +1,7 @@
 /* eslint-disable */
 import {
-    OPTIONAL,
-    ASN1Element as _Element,
+    type OPTIONAL,
+    type ASN1Element as _Element,
     ASN1TagClass as _TagClass,
     ASN1Construction as _Construction,
     ASN1UniversalType as _UniversalType,
@@ -11,8 +11,8 @@ import {
     ASN1ConstructionError as _ConstructionError,
 } from "@wildboar/asn1";
 import * as $ from "@wildboar/asn1/functional";
-import { Identifier, _decode_Identifier, _encode_Identifier } from "../ISO-9506-MMS-1/Identifier.ta.mjs";
-import { Start_Request_executionArgument, _decode_Start_Request_executionArgument, _encode_Start_Request_executionArgument } from "../ISO-9506-MMS-1/Start-Request-executionArgument.ta.mjs";
+import { type Identifier, _decode_Identifier, _encode_Identifier } from "../ISO-9506-MMS-1/Identifier.ta.mjs";
+import { type Start_Request_executionArgument, _decode_Start_Request_executionArgument, _encode_Start_Request_executionArgument } from "../ISO-9506-MMS-1/Start-Request-executionArgument.ta.mjs";
 
 
 /**
@@ -39,31 +39,37 @@ import { Start_Request_executionArgument, _decode_Start_Request_executionArgumen
  */
 export
 class Start_Request {
+    /**
+     * @summary `programInvocationName`.
+     * @description
+     *
+     * Program Invocation to start; must be `idle`. ISO 9506-1:2003
+     * §12.4.1.1.1.
+     *
+     * @public
+     * @readonly
+     */
+    public readonly programInvocationName: Identifier;
+    /**
+     * @summary `executionArgument`.
+     * @description
+     *
+     * Optional data passed into the PI; sets `&executionArgument` if
+     * present, else that field is unchanged. String or externally encoded.
+     * ISO 9506-1:2003 §12.1.1.10, §12.4.1.1.2. ISO 9506-2:2003 §12.4.1.1.
+     *
+     * @public
+     * @readonly
+     */
+    public readonly executionArgument?: OPTIONAL<Start_Request_executionArgument>;
+
     constructor (
-        /**
-         * @summary `programInvocationName`.
-         * @description
-         *
-         * Program Invocation to start; must be `idle`. ISO 9506-1:2003
-         * §12.4.1.1.1.
-         *
-         * @public
-         * @readonly
-         */
-        readonly programInvocationName: Identifier,
-        /**
-         * @summary `executionArgument`.
-         * @description
-         *
-         * Optional data passed into the PI; sets `&executionArgument` if
-         * present, else that field is unchanged. String or externally encoded.
-         * ISO 9506-1:2003 §12.1.1.10, §12.4.1.1.2. ISO 9506-2:2003 §12.4.1.1.
-         *
-         * @public
-         * @readonly
-         */
-        readonly executionArgument?: OPTIONAL<Start_Request_executionArgument>
-    ) {}
+        programInvocationName: Identifier,
+        executionArgument?: OPTIONAL<Start_Request_executionArgument>
+    ) {
+        this.programInvocationName = programInvocationName;
+        this.executionArgument = executionArgument;
+    }
 
     /**
      * @summary Restructures an object into a Start_Request

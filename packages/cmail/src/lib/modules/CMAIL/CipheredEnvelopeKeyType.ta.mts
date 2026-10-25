@@ -11,7 +11,7 @@ import {
 } from '@wildboar/asn1';
 import * as $ from '@wildboar/asn1/functional';
 import {
-    String,
+    type String,
     _decode_String,
     _encode_String,
 } from '../XSD/String.ta.mjs';
@@ -51,7 +51,7 @@ export class CipheredEnvelopeKeyType {
    * @public
    * @readonly
    */
-  readonly algorithm: String;
+  public readonly algorithm: String;
   /**
    * @summary `cipherededKey`.
    * @description ASN.1 spelling of XSD `CipheredKey`
@@ -62,7 +62,7 @@ export class CipheredEnvelopeKeyType {
    * @public
    * @readonly
    */
-  readonly cipherededKey: String;
+  public readonly cipherededKey: String;
   /**
    * @summary `encoding`.
    * @description Encoding of the wrapped key. The §8.15
@@ -71,7 +71,7 @@ export class CipheredEnvelopeKeyType {
    * @public
    * @readonly
    */
-  readonly encoding: String;
+  public readonly encoding: String;
   /**
    * @summary `keySize`.
    * @description Symmetric key size. The §8.15 example
@@ -81,7 +81,7 @@ export class CipheredEnvelopeKeyType {
    * @public
    * @readonly
    */
-  readonly keySize: String;
+  public readonly keySize: String;
 
   constructor(
     algorithm: String,

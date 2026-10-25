@@ -1,5 +1,5 @@
 import {
-    ASN1Element as _Element,
+    type ASN1Element as _Element,
 } from "@wildboar/asn1";
 import * as $ from "@wildboar/asn1/functional";
 
@@ -27,12 +27,12 @@ export enum _enum_for_ErrorTreatment {
     repeatPrompt = 2,
 }
 export type ErrorTreatment = _enum_for_ErrorTreatment;
-export const ErrorTreatment = _enum_for_ErrorTreatment;
-export const ErrorTreatment_stdErrorAndInfo: ErrorTreatment = ErrorTreatment.stdErrorAndInfo;
-export const stdErrorAndInfo: ErrorTreatment = ErrorTreatment.stdErrorAndInfo;
-export const ErrorTreatment_help: ErrorTreatment = ErrorTreatment.help;
-export const help: ErrorTreatment = ErrorTreatment.help;
-export const ErrorTreatment_repeatPrompt: ErrorTreatment = ErrorTreatment.repeatPrompt;
-export const repeatPrompt: ErrorTreatment = ErrorTreatment.repeatPrompt;
-export const _decode_ErrorTreatment = $._decodeEnumerated;
-export const _encode_ErrorTreatment = $._encodeEnumerated;
+export const ErrorTreatment: typeof _enum_for_ErrorTreatment = _enum_for_ErrorTreatment;
+export const ErrorTreatment_stdErrorAndInfo: _enum_for_ErrorTreatment.stdErrorAndInfo = ErrorTreatment.stdErrorAndInfo;
+export const stdErrorAndInfo: _enum_for_ErrorTreatment.stdErrorAndInfo = ErrorTreatment.stdErrorAndInfo;
+export const ErrorTreatment_help: _enum_for_ErrorTreatment.help = ErrorTreatment.help;
+export const help: _enum_for_ErrorTreatment.help = ErrorTreatment.help;
+export const ErrorTreatment_repeatPrompt: _enum_for_ErrorTreatment.repeatPrompt = ErrorTreatment.repeatPrompt;
+export const repeatPrompt: _enum_for_ErrorTreatment.repeatPrompt = ErrorTreatment.repeatPrompt;
+export const _decode_ErrorTreatment: $.ASN1Decoder<number> = $._decodeEnumerated;
+export const _encode_ErrorTreatment: $.ASN1Encoder<number> = $._encodeEnumerated;

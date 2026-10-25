@@ -1,6 +1,6 @@
 /* eslint-disable */
 import {
-    ASN1Element as _Element,
+    type ASN1Element as _Element,
     ASN1TagClass as _TagClass,
     ASN1Construction as _Construction,
     ASN1UniversalType as _UniversalType,
@@ -11,17 +11,17 @@ import {
 } from '@wildboar/asn1';
 import * as $ from '@wildboar/asn1/functional';
 import {
-    CirculationSignatureAlgorithmIdentifier,
+    type CirculationSignatureAlgorithmIdentifier,
     _decode_CirculationSignatureAlgorithmIdentifier,
     _encode_CirculationSignatureAlgorithmIdentifier,
 } from '../IPMSHeadingExtensions/CirculationSignatureAlgorithmIdentifier.ta.mjs';
 import {
-    ThisIPMField,
+    type ThisIPMField,
     _decode_ThisIPMField,
     _encode_ThisIPMField,
 } from '../IPMSInformationObjects/ThisIPMField.ta.mjs';
 import {
-    CirculationTime,
+    type CirculationTime,
     _decode_CirculationTime,
     _encode_CirculationTime,
 } from '../IPMSHeadingExtensions/CirculationTime.ta.mjs';
@@ -42,26 +42,34 @@ import {
  *
  */
 export class TBSCirculationSignature {
+    /**
+     * @summary `algorithm_identifier`.
+     * @public
+     * @readonly
+     */
+    public readonly algorithm_identifier: CirculationSignatureAlgorithmIdentifier;
+    /**
+     * @summary `this_IPM`.
+     * @public
+     * @readonly
+     */
+    public readonly this_IPM: ThisIPMField;
+    /**
+     * @summary `timestamp`.
+     * @public
+     * @readonly
+     */
+    public readonly timestamp: CirculationTime;
+
     constructor(
-        /**
-         * @summary `algorithm_identifier`.
-         * @public
-         * @readonly
-         */
-        readonly algorithm_identifier: CirculationSignatureAlgorithmIdentifier,
-        /**
-         * @summary `this_IPM`.
-         * @public
-         * @readonly
-         */
-        readonly this_IPM: ThisIPMField,
-        /**
-         * @summary `timestamp`.
-         * @public
-         * @readonly
-         */
-        readonly timestamp: CirculationTime
-    ) {}
+        algorithm_identifier: CirculationSignatureAlgorithmIdentifier,
+        this_IPM: ThisIPMField,
+        timestamp: CirculationTime
+    ) {
+        this.algorithm_identifier = algorithm_identifier;
+        this.this_IPM = this_IPM;
+        this.timestamp = timestamp;
+    }
 
     /**
      * @summary Restructures an object into a TBSCirculationSignature

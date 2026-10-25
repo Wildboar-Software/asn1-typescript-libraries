@@ -1,20 +1,20 @@
 /* eslint-disable */
 import {
-    INTEGER,
-    OBJECT_IDENTIFIER,
-    OPTIONAL,
-    ASN1Element as _Element,
+    type INTEGER,
+    type OBJECT_IDENTIFIER,
+    type OPTIONAL,
+    type ASN1Element as _Element,
     ASN1TagClass as _TagClass,
     ASN1OverflowError
 } from "@wildboar/asn1";
 import * as $ from "@wildboar/asn1/functional";
-import { LawfulInterceptionIdentifier, _decode_LawfulInterceptionIdentifier, _encode_LawfulInterceptionIdentifier } from "../HI2Operations/LawfulInterceptionIdentifier.ta.mjs";
+import { type LawfulInterceptionIdentifier, _decode_LawfulInterceptionIdentifier, _encode_LawfulInterceptionIdentifier } from "../HI2Operations/LawfulInterceptionIdentifier.ta.mjs";
 // export { LawfulInterceptionIdentifier, _decode_LawfulInterceptionIdentifier, _encode_LawfulInterceptionIdentifier } from "../HI2Operations/LawfulInterceptionIdentifier.ta.mjs";
 import { CommunicationIdentifier, _decode_CommunicationIdentifier, _encode_CommunicationIdentifier } from "../HI2Operations/CommunicationIdentifier.ta.mjs";
 // export { CommunicationIdentifier, _decode_CommunicationIdentifier, _encode_CommunicationIdentifier } from "../HI2Operations/CommunicationIdentifier.ta.mjs";
-import { CC_Link_Identifier, _decode_CC_Link_Identifier, _encode_CC_Link_Identifier } from "../HI2Operations/CC-Link-Identifier.ta.mjs";
+import { type CC_Link_Identifier, _decode_CC_Link_Identifier, _encode_CC_Link_Identifier } from "../HI2Operations/CC-Link-Identifier.ta.mjs";
 // export { CC_Link_Identifier, _decode_CC_Link_Identifier, _encode_CC_Link_Identifier } from "../HI2Operations/CC-Link-Identifier.ta.mjs";
-import { TimeStamp, _decode_TimeStamp, _encode_TimeStamp } from "../HI2Operations/TimeStamp.ta.mjs";
+import { type TimeStamp, _decode_TimeStamp, _encode_TimeStamp } from "../HI2Operations/TimeStamp.ta.mjs";
 // export { TimeStamp, _decode_TimeStamp, _encode_TimeStamp } from "../HI2Operations/TimeStamp.ta.mjs";
 import { TPDU_direction, _decode_TPDU_direction, _encode_TPDU_direction, _enum_for_TPDU_direction } from "../VoIP-HI3-IMS/TPDU-direction.ta.mjs";
 // export { TPDU_direction, _enum_for_TPDU_direction, TPDU_direction_from_target /* IMPORTED_LONG_ENUMERATION_ITEM */, from_target /* IMPORTED_SHORT_ENUMERATION_ITEM */, TPDU_direction_to_target /* IMPORTED_LONG_ENUMERATION_ITEM */, to_target /* IMPORTED_SHORT_ENUMERATION_ITEM */, TPDU_direction_combined /* IMPORTED_LONG_ENUMERATION_ITEM */, combined /* IMPORTED_SHORT_ENUMERATION_ITEM */, TPDU_direction_unknown /* IMPORTED_LONG_ENUMERATION_ITEM */, unknown /* IMPORTED_SHORT_ENUMERATION_ITEM */, _decode_TPDU_direction, _encode_TPDU_direction } from "../VoIP-HI3-IMS/TPDU-direction.ta.mjs";
@@ -45,7 +45,7 @@ import { Payload_description, _decode_Payload_description, _encode_Payload_descr
  *     lIID                        [1] LawfulInterceptionIdentifier OPTIONAL,
  *     communicationIdentifier        [2]    CommunicationIdentifier,
  *         -- contents same as the contents of similar field sent in the linked IRI messages
- *     ccLID                        [3]    CC-Link-Identifier    OPTIONAL,
+ *     ccLID                        [3]    CC-Link-Identifier    type OPTIONAL,
  *         -- Included only if the linked IRI messages have the similar field. When included,
  *         -- the content is same as the content of similar field sent in the linked IRI messages.
  *     timeStamp                    [4]    TimeStamp OPTIONAL,
@@ -213,7 +213,7 @@ class CSvoiceLIC_header {
          * @static
          */
 
-    public static _enum_for_t_PDU_direction = _enum_for_TPDU_direction;
+    public static _enum_for_t_PDU_direction: typeof _enum_for_TPDU_direction = _enum_for_TPDU_direction;
 }
 
 /**

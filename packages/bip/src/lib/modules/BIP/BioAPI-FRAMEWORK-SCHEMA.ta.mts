@@ -1,6 +1,6 @@
 /* eslint-disable */
 import {
-  UTF8String,
+  type UTF8String,
   ASN1Element as _Element,
   ASN1TagClass as _TagClass,
   ASN1Construction as _Construction,
@@ -12,12 +12,12 @@ import {
 } from '@wildboar/asn1';
 import * as $ from '@wildboar/asn1/functional';
 import {
-  BioAPI_UUID,
+  type BioAPI_UUID,
   _decode_BioAPI_UUID,
   _encode_BioAPI_UUID,
 } from '../BIP/BioAPI-UUID.ta.mjs';
 import {
-  BioAPI_STRING,
+  type BioAPI_STRING,
   _decode_BioAPI_STRING,
   _encode_BioAPI_STRING,
 } from '../BIP/BioAPI-STRING.ta.mjs';
@@ -27,12 +27,12 @@ import {
   _encode_BioAPI_VERSION,
 } from '../BIP/BioAPI-VERSION.ta.mjs';
 import {
-  BioAPI_DATA,
+  type BioAPI_DATA,
   _decode_BioAPI_DATA,
   _encode_BioAPI_DATA,
 } from '../BIP/BioAPI-DATA.ta.mjs';
 import {
-  EndpointIRI,
+  type EndpointIRI,
   _decode_EndpointIRI,
   _encode_EndpointIRI,
 } from '../BIP/EndpointIRI.ta.mjs';
@@ -75,13 +75,13 @@ export class BioAPI_FRAMEWORK_SCHEMA {
    * @public
    * @readonly
    */
-  readonly fwProductUuid: BioAPI_UUID;
+  public readonly fwProductUuid: BioAPI_UUID;
   /**
    * @summary `description`.
    * @public
    * @readonly
    */
-  readonly description: BioAPI_STRING;
+  public readonly description: BioAPI_STRING;
   /**
    * @summary `path`.
    * @description
@@ -92,37 +92,37 @@ export class BioAPI_FRAMEWORK_SCHEMA {
    * @public
    * @readonly
    */
-  readonly path: UTF8String;
+  public readonly path: UTF8String;
   /**
    * @summary `specVersion`.
    * @public
    * @readonly
    */
-  readonly specVersion: BioAPI_VERSION;
+  public readonly specVersion: BioAPI_VERSION;
   /**
    * @summary `productVersion`.
    * @public
    * @readonly
    */
-  readonly productVersion: BioAPI_STRING;
+  public readonly productVersion: BioAPI_STRING;
   /**
    * @summary `vendor`.
    * @public
    * @readonly
    */
-  readonly vendor: BioAPI_STRING;
+  public readonly vendor: BioAPI_STRING;
   /**
    * @summary `propertyUuid`.
    * @public
    * @readonly
    */
-  readonly propertyUuid: BioAPI_UUID;
+  public readonly propertyUuid: BioAPI_UUID;
   /**
    * @summary `property`.
    * @public
    * @readonly
    */
-  readonly property: BioAPI_DATA;
+  public readonly property: BioAPI_DATA;
   /**
    * @summary `hostingEndpointIRI`.
    * @description
@@ -133,7 +133,7 @@ export class BioAPI_FRAMEWORK_SCHEMA {
    * @public
    * @readonly
    */
-  readonly hostingEndpointIRI: EndpointIRI;
+  public readonly hostingEndpointIRI: EndpointIRI;
 
   constructor(
     fwProductUuid: BioAPI_UUID,

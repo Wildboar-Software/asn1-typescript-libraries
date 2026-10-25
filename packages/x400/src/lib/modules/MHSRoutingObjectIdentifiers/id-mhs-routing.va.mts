@@ -1,7 +1,7 @@
 /* eslint-disable */
 import {
     joint_iso_itu_t,
-    ASN1Element as _Element,
+    type ASN1Element as _Element,
     ASN1TagClass as _TagClass,
     ASN1Construction as _Construction,
     ASN1UniversalType as _UniversalType,
@@ -11,7 +11,7 @@ import {
     ASN1ConstructionError as _ConstructionError,
 } from '@wildboar/asn1';
 import {
-    ID,
+    type ID,
     _decode_ID,
     _encode_ID,
 } from '../MHSRoutingObjectIdentifiers/ID.ta.mjs';

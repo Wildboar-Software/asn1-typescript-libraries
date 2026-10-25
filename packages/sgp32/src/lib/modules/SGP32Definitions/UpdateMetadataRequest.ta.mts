@@ -1,10 +1,10 @@
 /* eslint-disable */
 import {
-    BOOLEAN,
-    OCTET_STRING,
-    OPTIONAL,
-    UTF8String,
-    ASN1Element as _Element,
+    type BOOLEAN,
+    type OCTET_STRING,
+    type OPTIONAL,
+    type UTF8String,
+    type ASN1Element as _Element,
     ASN1TagClass as _TagClass
 } from "@wildboar/asn1";
 import { ASN1SizeError } from "@wildboar/asn1";
@@ -39,71 +39,86 @@ import { type VendorSpecificExtension, _decode_VendorSpecificExtension, _encode_
  */
 export
 class UpdateMetadataRequest {
+    /**
+     * @summary `serviceProviderName`.
+     * @description
+     * SGP.32 v1.2 does not further define this field. UpdateMetadataRequest is
+     * absent from section 5.5 and from Annex C.
+     * @public
+     * @readonly
+     */
+    public readonly serviceProviderName?: OPTIONAL<UTF8String>;
+    /**
+     * @summary `profileName`.
+     * @description
+     * SGP.32 v1.2 does not further define this field. UpdateMetadataRequest is
+     * absent from section 5.5 and from Annex C.
+     * @public
+     * @readonly
+     */
+    public readonly profileName?: OPTIONAL<UTF8String>;
+    /**
+     * @summary `iconType`.
+     * @description
+     * SGP.32 v1.2 does not further define this field. UpdateMetadataRequest is
+     * absent from section 5.5 and from Annex C.
+     * @public
+     * @readonly
+     */
+    public readonly iconType?: OPTIONAL<IconType>;
+    /**
+     * @summary `icon`.
+     * @description
+     * SGP.32 v1.2 does not further define this field. UpdateMetadataRequest is
+     * absent from section 5.5 and from Annex C.
+     * @public
+     * @readonly
+     */
+    public readonly icon?: OPTIONAL<OCTET_STRING>;
+    /**
+     * @summary `profilePolicyRules`.
+     * @description
+     * SGP.32 v1.2 does not further define this field. UpdateMetadataRequest is
+     * absent from section 5.5 and from Annex C.
+     * @public
+     * @readonly
+     */
+    public readonly profilePolicyRules?: OPTIONAL<PprIds>;
+    /**
+     * @summary `serviceSpecificDataStoredInEuicc`.
+     * @description
+     * SGP.32 v1.2 does not further define this field. UpdateMetadataRequest is
+     * absent from section 5.5 and from Annex C.
+     * @public
+     * @readonly
+     */
+    public readonly serviceSpecificDataStoredInEuicc?: OPTIONAL<VendorSpecificExtension>;
+    /**
+     * @summary `fallbackAllowed`.
+     * @description
+     * SGP.32 v1.2 does not further define this field. UpdateMetadataRequest is
+     * absent from section 5.5 and from Annex C.
+     * @public
+     * @readonly
+     */
+    public readonly fallbackAllowed?: OPTIONAL<BOOLEAN>;
+
     constructor (
-        /**
-         * @summary `serviceProviderName`.
-         * @description
-         * SGP.32 v1.2 does not further define this field. UpdateMetadataRequest is
-         * absent from section 5.5 and from Annex C.
-         * @public
-         * @readonly
-         */
-        readonly serviceProviderName?: OPTIONAL<UTF8String>,
-        /**
-         * @summary `profileName`.
-         * @description
-         * SGP.32 v1.2 does not further define this field. UpdateMetadataRequest is
-         * absent from section 5.5 and from Annex C.
-         * @public
-         * @readonly
-         */
-        readonly profileName?: OPTIONAL<UTF8String>,
-        /**
-         * @summary `iconType`.
-         * @description
-         * SGP.32 v1.2 does not further define this field. UpdateMetadataRequest is
-         * absent from section 5.5 and from Annex C.
-         * @public
-         * @readonly
-         */
-        readonly iconType?: OPTIONAL<IconType>,
-        /**
-         * @summary `icon`.
-         * @description
-         * SGP.32 v1.2 does not further define this field. UpdateMetadataRequest is
-         * absent from section 5.5 and from Annex C.
-         * @public
-         * @readonly
-         */
-        readonly icon?: OPTIONAL<OCTET_STRING>,
-        /**
-         * @summary `profilePolicyRules`.
-         * @description
-         * SGP.32 v1.2 does not further define this field. UpdateMetadataRequest is
-         * absent from section 5.5 and from Annex C.
-         * @public
-         * @readonly
-         */
-        readonly profilePolicyRules?: OPTIONAL<PprIds>,
-        /**
-         * @summary `serviceSpecificDataStoredInEuicc`.
-         * @description
-         * SGP.32 v1.2 does not further define this field. UpdateMetadataRequest is
-         * absent from section 5.5 and from Annex C.
-         * @public
-         * @readonly
-         */
-        readonly serviceSpecificDataStoredInEuicc?: OPTIONAL<VendorSpecificExtension>,
-        /**
-         * @summary `fallbackAllowed`.
-         * @description
-         * SGP.32 v1.2 does not further define this field. UpdateMetadataRequest is
-         * absent from section 5.5 and from Annex C.
-         * @public
-         * @readonly
-         */
-        readonly fallbackAllowed?: OPTIONAL<BOOLEAN>
+        serviceProviderName?: OPTIONAL<UTF8String>,
+        profileName?: OPTIONAL<UTF8String>,
+        iconType?: OPTIONAL<IconType>,
+        icon?: OPTIONAL<OCTET_STRING>,
+        profilePolicyRules?: OPTIONAL<PprIds>,
+        serviceSpecificDataStoredInEuicc?: OPTIONAL<VendorSpecificExtension>,
+        fallbackAllowed?: OPTIONAL<BOOLEAN>
     ) {
+        this.serviceProviderName = serviceProviderName;
+        this.profileName = profileName;
+        this.iconType = iconType;
+        this.icon = icon;
+        this.profilePolicyRules = profilePolicyRules;
+        this.serviceSpecificDataStoredInEuicc = serviceSpecificDataStoredInEuicc;
+        this.fallbackAllowed = fallbackAllowed;
         if (this.serviceProviderName !== undefined && this.serviceProviderName.length > 32) {
             throw new ASN1SizeError("UpdateMetadataRequest.serviceProviderName violates SIZE constraint");
         }

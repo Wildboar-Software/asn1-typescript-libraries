@@ -1,14 +1,14 @@
 /* eslint-disable */
 import {
-    INTEGER,
-    OPTIONAL,
-    ASN1Element as _Element,
+    type INTEGER,
+    type OPTIONAL,
+    type ASN1Element as _Element,
     ASN1TagClass as _TagClass
 } from "@wildboar/asn1";
 import * as $ from "@wildboar/asn1/functional";
 import { TAI, _decode_TAI, _encode_TAI } from "../TS33128Payloads/TAI.ta.mjs";
 // export { TAI, _decode_TAI, _encode_TAI } from "../TS33128Payloads/TAI.ta.mjs";
-import { N3IWFIDNGAP, _decode_N3IWFIDNGAP, _encode_N3IWFIDNGAP } from "../TS33128Payloads/N3IWFIDNGAP.ta.mjs";
+import { type N3IWFIDNGAP, _decode_N3IWFIDNGAP, _encode_N3IWFIDNGAP } from "../TS33128Payloads/N3IWFIDNGAP.ta.mjs";
 // export { N3IWFIDNGAP, _decode_N3IWFIDNGAP, _encode_N3IWFIDNGAP } from "../TS33128Payloads/N3IWFIDNGAP.ta.mjs";
 import { IPAddr, _decode_IPAddr, _encode_IPAddr } from "../TS33128Payloads/IPAddr.ta.mjs";
 // export { IPAddr, _decode_IPAddr, _encode_IPAddr } from "../TS33128Payloads/IPAddr.ta.mjs";
@@ -16,17 +16,17 @@ import { TNAPID, _decode_TNAPID, _encode_TNAPID } from "../TS33128Payloads/TNAPI
 // export { TNAPID, _decode_TNAPID, _encode_TNAPID } from "../TS33128Payloads/TNAPID.ta.mjs";
 import { TWAPID, _decode_TWAPID, _encode_TWAPID } from "../TS33128Payloads/TWAPID.ta.mjs";
 // export { TWAPID, _decode_TWAPID, _encode_TWAPID } from "../TS33128Payloads/TWAPID.ta.mjs";
-import { HFCNodeID, _decode_HFCNodeID, _encode_HFCNodeID } from "../TS33128Payloads/HFCNodeID.ta.mjs";
+import { type HFCNodeID, _decode_HFCNodeID, _encode_HFCNodeID } from "../TS33128Payloads/HFCNodeID.ta.mjs";
 // export { HFCNodeID, _decode_HFCNodeID, _encode_HFCNodeID } from "../TS33128Payloads/HFCNodeID.ta.mjs";
-import { GLI, _decode_GLI, _encode_GLI } from "../TS33128Payloads/GLI.ta.mjs";
+import { type GLI, _decode_GLI, _encode_GLI } from "../TS33128Payloads/GLI.ta.mjs";
 // export { GLI, _decode_GLI, _encode_GLI } from "../TS33128Payloads/GLI.ta.mjs";
 import { W5GBANLineType, _decode_W5GBANLineType, _encode_W5GBANLineType, _enum_for_W5GBANLineType } from "../TS33128Payloads/W5GBANLineType.ta.mjs";
 // export { W5GBANLineType, _enum_for_W5GBANLineType, W5GBANLineType_dSL /* IMPORTED_LONG_ENUMERATION_ITEM */, dSL /* IMPORTED_SHORT_ENUMERATION_ITEM */, W5GBANLineType_pON /* IMPORTED_LONG_ENUMERATION_ITEM */, pON /* IMPORTED_SHORT_ENUMERATION_ITEM */, _decode_W5GBANLineType, _encode_W5GBANLineType } from "../TS33128Payloads/W5GBANLineType.ta.mjs";
-import { GCI, _decode_GCI, _encode_GCI } from "../TS33128Payloads/GCI.ta.mjs";
+import { type GCI, _decode_GCI, _encode_GCI } from "../TS33128Payloads/GCI.ta.mjs";
 // export { GCI, _decode_GCI, _encode_GCI } from "../TS33128Payloads/GCI.ta.mjs";
-import { AgeOfLocation, _decode_AgeOfLocation, _encode_AgeOfLocation } from "../TS33128Payloads/AgeOfLocation.ta.mjs";
+import { type AgeOfLocation, _decode_AgeOfLocation, _encode_AgeOfLocation } from "../TS33128Payloads/AgeOfLocation.ta.mjs";
 // export { AgeOfLocation, _decode_AgeOfLocation, _encode_AgeOfLocation } from "../TS33128Payloads/AgeOfLocation.ta.mjs";
-import { Timestamp, _decode_Timestamp, _encode_Timestamp } from "../TS33128Payloads/Timestamp.ta.mjs";
+import { type Timestamp, _decode_Timestamp, _encode_Timestamp } from "../TS33128Payloads/Timestamp.ta.mjs";
 // export { Timestamp, _decode_Timestamp, _encode_Timestamp } from "../TS33128Payloads/Timestamp.ta.mjs";
 import { TransportProtocol, _decode_TransportProtocol, _encode_TransportProtocol, _enum_for_TransportProtocol } from "../TS33128Payloads/TransportProtocol.ta.mjs";
 // export { TransportProtocol, _enum_for_TransportProtocol, TransportProtocol_uDP /* IMPORTED_LONG_ENUMERATION_ITEM */, uDP /* IMPORTED_SHORT_ENUMERATION_ITEM */, TransportProtocol_tCP /* IMPORTED_LONG_ENUMERATION_ITEM */, tCP /* IMPORTED_SHORT_ENUMERATION_ITEM */, _decode_TransportProtocol, _encode_TransportProtocol } from "../TS33128Payloads/TransportProtocol.ta.mjs";
@@ -302,13 +302,13 @@ class N3GALocation {
          * @static
          */
 
-    public static _enum_for_w5GBANLineType = _enum_for_W5GBANLineType;        /**
+    public static _enum_for_w5GBANLineType: typeof _enum_for_W5GBANLineType = _enum_for_W5GBANLineType;        /**
          * @summary The enum used as the type of the component `protocol`
          * @public
          * @static
          */
 
-    public static _enum_for_protocol = _enum_for_TransportProtocol;
+    public static _enum_for_protocol: typeof _enum_for_TransportProtocol = _enum_for_TransportProtocol;
 }
 
 /**

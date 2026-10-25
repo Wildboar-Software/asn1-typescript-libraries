@@ -1,6 +1,6 @@
 /* eslint-disable */
 import {
-    ASN1Element as _Element,
+    type ASN1Element as _Element,
     ASN1TagClass as _TagClass,
     ASN1Construction as _Construction,
     ASN1UniversalType as _UniversalType,
@@ -10,7 +10,7 @@ import {
     ASN1ConstructionError as _ConstructionError,
 } from "@wildboar/asn1";
 import * as $ from "@wildboar/asn1/functional";
-import { Identifier, _decode_Identifier, _encode_Identifier } from "../ISO-9506-MMS-1/Identifier.ta.mjs";
+import { type Identifier, _decode_Identifier, _encode_Identifier } from "../ISO-9506-MMS-1/Identifier.ta.mjs";
 
 
 /**
@@ -30,21 +30,13 @@ import { Identifier, _decode_Identifier, _encode_Identifier } from "../ISO-9506-
 export
 type DownloadSegment_Request = Identifier; // DefinedType
 
-let _cached_decoder_for_DownloadSegment_Request: $.ASN1Decoder<DownloadSegment_Request> | null = null;
-
 /**
  * @summary Decodes an ASN.1 element into a(n) DownloadSegment_Request
  * @function
  * @param el The element being decoded.
  * @returns The decoded data structure.
  */
-export
-function _decode_DownloadSegment_Request (el: _Element): DownloadSegment_Request {
-    if (!_cached_decoder_for_DownloadSegment_Request) { _cached_decoder_for_DownloadSegment_Request = _decode_Identifier; }
-    return _cached_decoder_for_DownloadSegment_Request(el);
-}
-
-let _cached_encoder_for_DownloadSegment_Request: $.ASN1Encoder<DownloadSegment_Request> | null = null;
+export const _decode_DownloadSegment_Request: $.ASN1Decoder<DownloadSegment_Request> = _decode_Identifier;
 
 /**
  * @summary Encodes a(n) DownloadSegment_Request into an ASN.1 Element.
@@ -53,11 +45,7 @@ let _cached_encoder_for_DownloadSegment_Request: $.ASN1Encoder<DownloadSegment_R
  * @param elGetter A function that can be used to get new ASN.1 elements.
  * @returns {_Element} The DownloadSegment_Request, encoded as an ASN.1 Element.
  */
-export
-function _encode_DownloadSegment_Request (value: DownloadSegment_Request, elGetter: $.ASN1Encoder<any>): _Element {
-    if (!_cached_encoder_for_DownloadSegment_Request) { _cached_encoder_for_DownloadSegment_Request = _encode_Identifier; }
-    return _cached_encoder_for_DownloadSegment_Request(value, elGetter);
-}
+export const _encode_DownloadSegment_Request: $.ASN1Encoder<DownloadSegment_Request> = _encode_Identifier;
 
 
 /* eslint-enable */

@@ -1,13 +1,13 @@
 /* eslint-disable */
 import {
-    OPTIONAL,
-    ASN1Element as _Element,
+    type OPTIONAL,
+    type ASN1Element as _Element,
     ASN1TagClass as _TagClass
 } from "@wildboar/asn1";
 import * as $ from "@wildboar/asn1/functional";
-import { PartyNumber, _decode_PartyNumber, _encode_PartyNumber } from "../Addressing-Data-Elements-asn1-97/PartyNumber.ta.mjs";
+import { type PartyNumber, _decode_PartyNumber, _encode_PartyNumber } from "../Addressing-Data-Elements-asn1-97/PartyNumber.ta.mjs";
 import { ScreeningIndicator, _decode_ScreeningIndicator, _encode_ScreeningIndicator, _enum_for_ScreeningIndicator } from "../Addressing-Data-Elements-asn1-97/ScreeningIndicator.ta.mjs";
-import { PartySubaddress, _decode_PartySubaddress, _encode_PartySubaddress } from "../Addressing-Data-Elements-asn1-97/PartySubaddress.ta.mjs";
+import { type PartySubaddress, _decode_PartySubaddress, _encode_PartySubaddress } from "../Addressing-Data-Elements-asn1-97/PartySubaddress.ta.mjs";
 
 /**
  * @summary AddressScreened
@@ -95,7 +95,7 @@ class AddressScreened {
          * @static
          */
 
-    public static _enum_for_screeningIndicator = _enum_for_ScreeningIndicator;
+    public static _enum_for_screeningIndicator: typeof _enum_for_ScreeningIndicator = _enum_for_ScreeningIndicator;
 }
 
 /**

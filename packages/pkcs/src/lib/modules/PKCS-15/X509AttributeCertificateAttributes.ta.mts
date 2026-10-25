@@ -1,28 +1,28 @@
 /* eslint-disable */
 import {
-    ASN1Element as _Element,
+    type ASN1Element as _Element,
     ASN1TagClass as _TagClass,
-    OBJECT_IDENTIFIER,
-    OPTIONAL,
+    type OBJECT_IDENTIFIER,
+    type OPTIONAL,
 } from "@wildboar/asn1";
 import * as $ from "@wildboar/asn1/functional";
 import {
-    AttributeCertificate,
+    type AttributeCertificate,
     _decode_AttributeCertificate,
     _encode_AttributeCertificate,
 } from "@wildboar/x500/AttributeCertificateDefinitions";
 import {
-    CertificateSerialNumber,
+    type CertificateSerialNumber,
     _decode_CertificateSerialNumber,
     _encode_CertificateSerialNumber,
 } from "@wildboar/x500/AuthenticationFramework";
 import {
-    GeneralNames,
+    type GeneralNames,
     _decode_GeneralNames,
     _encode_GeneralNames,
 } from "@wildboar/gn";
 import {
-    ObjectValue,
+    type ObjectValue,
     _get_decoder_for_ObjectValue,
     _get_encoder_for_ObjectValue,
 } from "../PKCS-15/ObjectValue.ta.mjs";
@@ -46,38 +46,50 @@ import {
  *
  */
 export class X509AttributeCertificateAttributes {
+    /**
+     * @summary `value`.
+     * @public
+     * @readonly
+     */
+    public readonly value: ObjectValue<AttributeCertificate>;
+    /**
+     * @summary `issuer`.
+     * @public
+     * @readonly
+     */
+    public readonly issuer?: OPTIONAL<GeneralNames>;
+    /**
+     * @summary `serialNumber`.
+     * @public
+     * @readonly
+     */
+    public readonly serialNumber?: OPTIONAL<CertificateSerialNumber>;
+    /**
+     * @summary `attrTypes`.
+     * @public
+     * @readonly
+     */
+    public readonly attrTypes?: OPTIONAL<OBJECT_IDENTIFIER[]>;
+    /**
+     * @summary Extensions that are not recognized.
+     * @public
+     * @readonly
+     */
+    public readonly _unrecognizedExtensionsList: _Element[];
+
     constructor(
-        /**
-         * @summary `value`.
-         * @public
-         * @readonly
-         */
-        readonly value: ObjectValue<AttributeCertificate>,
-        /**
-         * @summary `issuer`.
-         * @public
-         * @readonly
-         */
-        readonly issuer?: OPTIONAL<GeneralNames>,
-        /**
-         * @summary `serialNumber`.
-         * @public
-         * @readonly
-         */
-        readonly serialNumber?: OPTIONAL<CertificateSerialNumber>,
-        /**
-         * @summary `attrTypes`.
-         * @public
-         * @readonly
-         */
-        readonly attrTypes?: OPTIONAL<OBJECT_IDENTIFIER[]>,
-        /**
-         * @summary Extensions that are not recognized.
-         * @public
-         * @readonly
-         */
-        readonly _unrecognizedExtensionsList: _Element[] = []
-    ) {}
+        value: ObjectValue<AttributeCertificate>,
+        issuer?: OPTIONAL<GeneralNames>,
+        serialNumber?: OPTIONAL<CertificateSerialNumber>,
+        attrTypes?: OPTIONAL<OBJECT_IDENTIFIER[]>,
+        _unrecognizedExtensionsList: _Element[] = []
+    ) {
+        this.value = value;
+        this.issuer = issuer;
+        this.serialNumber = serialNumber;
+        this.attrTypes = attrTypes;
+        this._unrecognizedExtensionsList = _unrecognizedExtensionsList;
+    }
 
     /**
      * @summary Restructures an object into a X509AttributeCertificateAttributes

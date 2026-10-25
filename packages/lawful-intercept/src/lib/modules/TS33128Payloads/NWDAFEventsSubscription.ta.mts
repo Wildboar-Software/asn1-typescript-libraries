@@ -1,13 +1,13 @@
 /* eslint-disable */
 import {
-    OPTIONAL,
-    UTF8String,
-    ASN1Element as _Element,
+    type OPTIONAL,
+    type UTF8String,
+    type ASN1Element as _Element,
     ASN1TagClass as _TagClass,
     ASN1SizeError
 } from "@wildboar/asn1";
 import * as $ from "@wildboar/asn1/functional";
-import { SUPI, _decode_SUPI, _encode_SUPI } from "../TS33128Payloads/SUPI.ta.mjs";
+import { type SUPI, _decode_SUPI, _encode_SUPI } from "../TS33128Payloads/SUPI.ta.mjs";
 // export { SUPI, _decode_SUPI, _encode_SUPI } from "../TS33128Payloads/SUPI.ta.mjs";
 import { NWDAFConsumerNFType, _decode_NWDAFConsumerNFType, _encode_NWDAFConsumerNFType, _enum_for_NWDAFConsumerNFType } from "../TS33128Payloads/NWDAFConsumerNFType.ta.mjs";
 // export { NWDAFConsumerNFType, _enum_for_NWDAFConsumerNFType, NWDAFConsumerNFType_pCF /* IMPORTED_LONG_ENUMERATION_ITEM */, pCF /* IMPORTED_SHORT_ENUMERATION_ITEM */, NWDAFConsumerNFType_nSSF /* IMPORTED_LONG_ENUMERATION_ITEM */, nSSF /* IMPORTED_SHORT_ENUMERATION_ITEM */, NWDAFConsumerNFType_aMF /* IMPORTED_LONG_ENUMERATION_ITEM */, aMF /* IMPORTED_SHORT_ENUMERATION_ITEM */, NWDAFConsumerNFType_sMF /* IMPORTED_LONG_ENUMERATION_ITEM */, sMF /* IMPORTED_SHORT_ENUMERATION_ITEM */, NWDAFConsumerNFType_nEF /* IMPORTED_LONG_ENUMERATION_ITEM */, nEF /* IMPORTED_SHORT_ENUMERATION_ITEM */, NWDAFConsumerNFType_aF /* IMPORTED_LONG_ENUMERATION_ITEM */, aF /* IMPORTED_SHORT_ENUMERATION_ITEM */, NWDAFConsumerNFType_lMF /* IMPORTED_LONG_ENUMERATION_ITEM */, lMF /* IMPORTED_SHORT_ENUMERATION_ITEM */, NWDAFConsumerNFType_oAM /* IMPORTED_LONG_ENUMERATION_ITEM */, oAM /* IMPORTED_SHORT_ENUMERATION_ITEM */, NWDAFConsumerNFType_nWDAF /* IMPORTED_LONG_ENUMERATION_ITEM */, nWDAF /* IMPORTED_SHORT_ENUMERATION_ITEM */, NWDAFConsumerNFType_dCCF /* IMPORTED_LONG_ENUMERATION_ITEM */, dCCF /* IMPORTED_SHORT_ENUMERATION_ITEM */, NWDAFConsumerNFType_cEF /* IMPORTED_LONG_ENUMERATION_ITEM */, cEF /* IMPORTED_SHORT_ENUMERATION_ITEM */, _decode_NWDAFConsumerNFType, _encode_NWDAFConsumerNFType } from "../TS33128Payloads/NWDAFConsumerNFType.ta.mjs";
@@ -209,19 +209,19 @@ class NWDAFEventsSubscription {
          * @static
          */
 
-    public static _enum_for_nWDAFConsumerNFType = _enum_for_NWDAFConsumerNFType;        /**
+    public static _enum_for_nWDAFConsumerNFType: typeof _enum_for_NWDAFConsumerNFType = _enum_for_NWDAFConsumerNFType;        /**
          * @summary The enum used as the type of the component `nWDAFEventsSubscriptionOpType`
          * @public
          * @static
          */
 
-    public static _enum_for_nWDAFEventsSubscriptionOpType = _enum_for_NWDAFEventsSubscriptionOpType;        /**
+    public static _enum_for_nWDAFEventsSubscriptionOpType: typeof _enum_for_NWDAFEventsSubscriptionOpType = _enum_for_NWDAFEventsSubscriptionOpType;        /**
          * @summary The enum used as the type of the component `nWDAFEventsSubscriptionResponseCode`
          * @public
          * @static
          */
 
-    public static _enum_for_nWDAFEventsSubscriptionResponseCode = _enum_for_NWDAFEventsSubscriptionResponseCode;
+    public static _enum_for_nWDAFEventsSubscriptionResponseCode: typeof _enum_for_NWDAFEventsSubscriptionResponseCode = _enum_for_NWDAFEventsSubscriptionResponseCode;
 }
 
 /**

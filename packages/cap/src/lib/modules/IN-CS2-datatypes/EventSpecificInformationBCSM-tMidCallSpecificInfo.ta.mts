@@ -1,7 +1,7 @@
 /* eslint-disable */
 import {
-    OPTIONAL,
-    ASN1Element as _Element,
+    type OPTIONAL,
+    type ASN1Element as _Element,
     ASN1TagClass as _TagClass,
     ASN1Construction as _Construction,
     ASN1UniversalType as _UniversalType,
@@ -11,7 +11,7 @@ import {
     ASN1ConstructionError as _ConstructionError,
 } from "@wildboar/asn1";
 import * as $ from "@wildboar/asn1/functional";
-import { Integer4, _decode_Integer4, _encode_Integer4 } from "../IN-CS2-datatypes/Integer4.ta.mjs";
+import { type Integer4, _decode_Integer4, _encode_Integer4 } from "../IN-CS2-datatypes/Integer4.ta.mjs";
 import { MidCallInfo, _decode_MidCallInfo, _encode_MidCallInfo } from "../IN-CS2-datatypes/MidCallInfo.ta.mjs";
 
 
@@ -33,26 +33,34 @@ import { MidCallInfo, _decode_MidCallInfo, _encode_MidCallInfo } from "../IN-CS2
  */
 export
 class EventSpecificInformationBCSM_tMidCallSpecificInfo {
+    /**
+     * @summary `connectTime`.
+     * @public
+     * @readonly
+     */
+    public readonly connectTime?: OPTIONAL<Integer4>;
+    /**
+     * @summary `tMidCallInfo`.
+     * @public
+     * @readonly
+     */
+    public readonly tMidCallInfo?: OPTIONAL<MidCallInfo>;
+    /**
+     * @summary Extensions that are not recognized.
+     * @public
+     * @readonly
+     */
+    public readonly _unrecognizedExtensionsList: _Element[];
+
     constructor (
-        /**
-         * @summary `connectTime`.
-         * @public
-         * @readonly
-         */
-        readonly connectTime?: OPTIONAL<Integer4>,
-        /**
-         * @summary `tMidCallInfo`.
-         * @public
-         * @readonly
-         */
-        readonly tMidCallInfo?: OPTIONAL<MidCallInfo>,
-        /**
-         * @summary Extensions that are not recognized.
-         * @public
-         * @readonly
-         */
-        readonly _unrecognizedExtensionsList: _Element[] = []
-    ) {}
+        connectTime?: OPTIONAL<Integer4>,
+        tMidCallInfo?: OPTIONAL<MidCallInfo>,
+        _unrecognizedExtensionsList: _Element[] = []
+    ) {
+        this.connectTime = connectTime;
+        this.tMidCallInfo = tMidCallInfo;
+        this._unrecognizedExtensionsList = _unrecognizedExtensionsList;
+    }
 
     /**
      * @summary Restructures an object into a EventSpecificInformationBCSM_tMidCallSpecificInfo

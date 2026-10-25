@@ -1,6 +1,6 @@
 /* eslint-disable */
 import {
-    ASN1Element as _Element,
+    type ASN1Element as _Element,
     ASN1TagClass as _TagClass,
     ASN1Construction as _Construction,
     ASN1UniversalType as _UniversalType,
@@ -61,7 +61,7 @@ type IrisInformation_eye = _enum_for_IrisInformation_eye;
  * @enum {number}
  */
 export
-const IrisInformation_eye = _enum_for_IrisInformation_eye;
+const IrisInformation_eye: typeof _enum_for_IrisInformation_eye = _enum_for_IrisInformation_eye;
 
 /**
  * @summary IrisInformation_eye_left
@@ -69,7 +69,7 @@ const IrisInformation_eye = _enum_for_IrisInformation_eye;
  * @type {number}
  */
 export
-const IrisInformation_eye_left: IrisInformation_eye = IrisInformation_eye.left; /* LONG_NAMED_ENUMERATED_VALUE */
+const IrisInformation_eye_left: _enum_for_IrisInformation_eye.left = IrisInformation_eye.left; /* LONG_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary left
@@ -77,7 +77,7 @@ const IrisInformation_eye_left: IrisInformation_eye = IrisInformation_eye.left; 
  * @type {number}
  */
 export
-const left: IrisInformation_eye = IrisInformation_eye.left; /* SHORT_NAMED_ENUMERATED_VALUE */
+const left: _enum_for_IrisInformation_eye.left = IrisInformation_eye.left; /* SHORT_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary IrisInformation_eye_right
@@ -85,7 +85,7 @@ const left: IrisInformation_eye = IrisInformation_eye.left; /* SHORT_NAMED_ENUME
  * @type {number}
  */
 export
-const IrisInformation_eye_right: IrisInformation_eye = IrisInformation_eye.right; /* LONG_NAMED_ENUMERATED_VALUE */
+const IrisInformation_eye_right: _enum_for_IrisInformation_eye.right = IrisInformation_eye.right; /* LONG_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary right
@@ -93,9 +93,9 @@ const IrisInformation_eye_right: IrisInformation_eye = IrisInformation_eye.right
  * @type {number}
  */
 export
-const right: IrisInformation_eye = IrisInformation_eye.right; /* SHORT_NAMED_ENUMERATED_VALUE */
-export const _decode_IrisInformation_eye = $._decodeEnumerated;
-export const _encode_IrisInformation_eye = $._encodeEnumerated;
+const right: _enum_for_IrisInformation_eye.right = IrisInformation_eye.right; /* SHORT_NAMED_ENUMERATED_VALUE */
+export const _decode_IrisInformation_eye: $.ASN1Decoder<number> = $._decodeEnumerated;
+export const _encode_IrisInformation_eye: $.ASN1Encoder<number> = $._encodeEnumerated;
 
 
 /* eslint-enable */

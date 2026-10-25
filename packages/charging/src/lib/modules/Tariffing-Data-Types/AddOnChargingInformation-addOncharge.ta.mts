@@ -1,11 +1,11 @@
 /* eslint-disable */
 import {
-    ASN1Element as _Element,
+    type ASN1Element as _Element,
     ASN1TagClass as _TagClass
 } from "@wildboar/asn1";
 import * as $ from "@wildboar/asn1/functional";
 import { CurrencyFactorScale, _decode_CurrencyFactorScale, _encode_CurrencyFactorScale } from "../Tariffing-Data-Types/CurrencyFactorScale.ta.mjs";
-import { PulseUnits, _decode_PulseUnits, _encode_PulseUnits } from "../Tariffing-Data-Types/PulseUnits.ta.mjs";
+import { type PulseUnits, _decode_PulseUnits, _encode_PulseUnits } from "../Tariffing-Data-Types/PulseUnits.ta.mjs";
 
 
 /**

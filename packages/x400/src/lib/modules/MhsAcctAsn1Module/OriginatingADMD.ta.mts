@@ -1,6 +1,6 @@
 /* eslint-disable */
 import {
-    ASN1Element as _Element,
+    type ASN1Element as _Element,
     ASN1TagClass as _TagClass,
     ASN1Construction as _Construction,
     ASN1UniversalType as _UniversalType,
@@ -11,7 +11,7 @@ import {
 } from '@wildboar/asn1';
 import * as $ from '@wildboar/asn1/functional';
 import {
-    AdministrationDomainName,
+    type AdministrationDomainName,
     _decode_AdministrationDomainName,
     _encode_AdministrationDomainName,
 } from '../MTSAbstractService/AdministrationDomainName.ta.mjs';
@@ -29,22 +29,13 @@ import {
  */
 export type OriginatingADMD = AdministrationDomainName; // DefinedType
 
-let _cached_decoder_for_OriginatingADMD: $.ASN1Decoder<OriginatingADMD> | null = null;
-
 /**
  * @summary Decodes an ASN.1 element into a(n) OriginatingADMD
  * @function
  * @param {_Element} el The element being decoded.
  * @returns {OriginatingADMD} The decoded data structure.
  */
-export function _decode_OriginatingADMD(el: _Element): OriginatingADMD {
-    if (!_cached_decoder_for_OriginatingADMD) {
-        _cached_decoder_for_OriginatingADMD = _decode_AdministrationDomainName;
-    }
-    return _cached_decoder_for_OriginatingADMD(el);
-}
-
-let _cached_encoder_for_OriginatingADMD: $.ASN1Encoder<OriginatingADMD> | null = null;
+export const _decode_OriginatingADMD: $.ASN1Decoder<OriginatingADMD> = _decode_AdministrationDomainName;
 
 /**
  * @summary Encodes a(n) OriginatingADMD into an ASN.1 Element.
@@ -53,15 +44,7 @@ let _cached_encoder_for_OriginatingADMD: $.ASN1Encoder<OriginatingADMD> | null =
  * @param elGetter A function that can be used to get new ASN.1 elements.
  * @returns {_Element} The OriginatingADMD, encoded as an ASN.1 Element.
  */
-export function _encode_OriginatingADMD(
-    value: OriginatingADMD,
-    elGetter: $.ASN1Encoder<OriginatingADMD>
-): _Element {
-    if (!_cached_encoder_for_OriginatingADMD) {
-        _cached_encoder_for_OriginatingADMD = _encode_AdministrationDomainName;
-    }
-    return _cached_encoder_for_OriginatingADMD(value, elGetter);
-}
+export const _encode_OriginatingADMD: $.ASN1Encoder<OriginatingADMD> = _encode_AdministrationDomainName;
 
 
 /* eslint-enable */

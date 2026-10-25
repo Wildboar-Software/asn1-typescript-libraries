@@ -1,14 +1,14 @@
 /* eslint-disable */
 import {
-    OPTIONAL,
-    ASN1Element as _Element,
+    type OPTIONAL,
+    type ASN1Element as _Element,
     ASN1TagClass as _TagClass,
     ASN1SizeError,
 } from "@wildboar/asn1";
 import * as $ from "@wildboar/asn1/functional";
 import { CommunicationChargePulse, _decode_CommunicationChargePulse, _encode_CommunicationChargePulse } from "../Tariffing-Data-Types/CommunicationChargePulse.ta.mjs";
-import { TariffPulseFormat_tariffControlIndicators, _decode_TariffPulseFormat_tariffControlIndicators, _encode_TariffPulseFormat_tariffControlIndicators } from "../Tariffing-Data-Types/TariffPulseFormat-tariffControlIndicators.ta.mjs";
-import { PulseUnits, _decode_PulseUnits, _encode_PulseUnits } from "../Tariffing-Data-Types/PulseUnits.ta.mjs";
+import { type TariffPulseFormat_tariffControlIndicators, _decode_TariffPulseFormat_tariffControlIndicators, _encode_TariffPulseFormat_tariffControlIndicators } from "../Tariffing-Data-Types/TariffPulseFormat-tariffControlIndicators.ta.mjs";
+import { type PulseUnits, _decode_PulseUnits, _encode_PulseUnits } from "../Tariffing-Data-Types/PulseUnits.ta.mjs";
 import { maxCommunicationTariffNum } from "../Tariffing-Data-Types/maxCommunicationTariffNum.va.mjs";
 import { minCommunicationTariffNum } from "../Tariffing-Data-Types/minCommunicationTariffNum.va.mjs";
 

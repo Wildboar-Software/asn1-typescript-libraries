@@ -1,12 +1,12 @@
 /* eslint-disable */
 import {
-    UTF8String,
+    type UTF8String,
     ASN1ConstructionError as _ConstructionError,
-    ASN1Element as _Element,
+    type ASN1Element as _Element,
     ASN1TagClass as _TagClass
 } from "@wildboar/asn1";
 import * as $ from "@wildboar/asn1/functional";
-import { NotificationEvent, _decode_NotificationEvent, _encode_NotificationEvent } from "../RSPDefinitions/NotificationEvent.ta.mjs";
+import { type NotificationEvent, _decode_NotificationEvent, _encode_NotificationEvent } from "../RSPDefinitions/NotificationEvent.ta.mjs";
 
 
 /**
@@ -42,7 +42,7 @@ class NotificationConfigurationInformation {
      * @public
      * @readonly
      */
-    readonly profileManagementOperation: NotificationEvent;
+    public readonly profileManagementOperation: NotificationEvent;
     /**
      * @summary `notificationAddress`.
      * @description
@@ -52,7 +52,7 @@ class NotificationConfigurationInformation {
      * @public
      * @readonly
      */
-    readonly notificationAddress: UTF8String;
+    public readonly notificationAddress: UTF8String;
 
     constructor (
         profileManagementOperation: NotificationEvent,

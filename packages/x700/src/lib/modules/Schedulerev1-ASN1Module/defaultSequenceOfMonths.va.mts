@@ -1,6 +1,6 @@
 /* eslint-disable */
 import {
-    ASN1Element as _Element,
+    type ASN1Element as _Element,
     ASN1TagClass as _TagClass,
     ASN1Construction as _Construction,
     ASN1UniversalType as _UniversalType,
@@ -10,7 +10,7 @@ import {
     ASN1ConstructionError as _ConstructionError,
 } from '@wildboar/asn1';
 import {
-    SequenceOfMonths,
+    type SequenceOfMonths,
     _decode_SequenceOfMonths,
     _encode_SequenceOfMonths,
 } from '../Schedulerev1-ASN1Module/SequenceOfMonths.ta.mjs';

@@ -1,7 +1,7 @@
 /* eslint-disable */
 import {
-    OPTIONAL,
-    ASN1Element as _Element,
+    type OPTIONAL,
+    type ASN1Element as _Element,
     ASN1TagClass as _TagClass,
     ASN1Construction as _Construction,
     ASN1UniversalType as _UniversalType,
@@ -11,11 +11,11 @@ import {
     ASN1ConstructionError as _ConstructionError,
 } from "@wildboar/asn1";
 import * as $ from "@wildboar/asn1/functional";
-import { Capabilities, _decode_Capabilities, _encode_Capabilities } from "../V59/Capabilities.ta.mjs";
+import { type Capabilities, _decode_Capabilities, _encode_Capabilities } from "../V59/Capabilities.ta.mjs";
 
-import { V59String, _decode_V59String, _encode_V59String } from "../V59/V59String.ta.mjs";
+import { type V59String, _decode_V59String, _encode_V59String } from "../V59/V59String.ta.mjs";
 
-import { TxPowerLevel, _decode_TxPowerLevel, _encode_TxPowerLevel } from "../V59/TxPowerLevel.ta.mjs";
+import { type TxPowerLevel, _decode_TxPowerLevel, _encode_TxPowerLevel } from "../V59/TxPowerLevel.ta.mjs";
 
 /**
  * @summary V22Diag_Item
@@ -52,7 +52,7 @@ class V22Diag_Item {
      * @public
      * @readonly
      */
-    readonly modeV22B: Capabilities;
+    public readonly modeV22B: Capabilities;
     /**
      * @summary `dataRateHistory`.
      * @description
@@ -63,7 +63,7 @@ class V22Diag_Item {
      * @public
      * @readonly
      */
-    readonly dataRateHistory: V59String;
+    public readonly dataRateHistory: V59String;
     /**
      * @summary `v22TxLevel`.
      * @description
@@ -73,7 +73,7 @@ class V22Diag_Item {
      * @public
      * @readonly
      */
-    readonly v22TxLevel: TxPowerLevel;
+    public readonly v22TxLevel: TxPowerLevel;
     /**
      * @summary `v22RateSeq`.
      * @description
@@ -85,7 +85,7 @@ class V22Diag_Item {
      * @public
      * @readonly
      */
-    readonly v22RateSeq: V59String;
+    public readonly v22RateSeq: V59String;
     /**
      * @summary `rxLevelEstimate`.
      * @description
@@ -96,7 +96,7 @@ class V22Diag_Item {
      * @public
      * @readonly
      */
-    readonly rxLevelEstimate?: OPTIONAL<V59String>;
+    public readonly rxLevelEstimate?: OPTIONAL<V59String>;
     /**
      * @summary `noiseEstimate`.
      * @description
@@ -106,7 +106,7 @@ class V22Diag_Item {
      * @public
      * @readonly
      */
-    readonly noiseEstimate?: OPTIONAL<V59String>;
+    public readonly noiseEstimate?: OPTIONAL<V59String>;
     /**
      * @summary `rxSignalQuality`.
      * @description
@@ -118,13 +118,13 @@ class V22Diag_Item {
      * @public
      * @readonly
      */
-    readonly rxSignalQuality?: OPTIONAL<V59String>;
+    public readonly rxSignalQuality?: OPTIONAL<V59String>;
     /**
      * @summary Extensions that are not recognized.
      * @public
      * @readonly
      */
-    readonly _unrecognizedExtensionsList: _Element[];
+    public readonly _unrecognizedExtensionsList: _Element[];
 
     constructor (
         modeV22B: Capabilities,

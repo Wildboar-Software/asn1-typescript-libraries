@@ -8,7 +8,7 @@ import { type OPERATION } from "../Remote-Operations-Information-Objects/OPERATI
 
 import { RepositionArgument, _decode_RepositionArgument, _encode_RepositionArgument } from "../CSTA-reposition/RepositionArgument.ta.mjs";
 
-import { RepositionResult, _decode_RepositionResult, _encode_RepositionResult } from "../CSTA-reposition/RepositionResult.ta.mjs";
+import { type RepositionResult, _decode_RepositionResult, _encode_RepositionResult } from "../CSTA-reposition/RepositionResult.ta.mjs";
 
 import { universalFailure } from "../CSTA-error-definition/universalFailure.oa.mjs";
 

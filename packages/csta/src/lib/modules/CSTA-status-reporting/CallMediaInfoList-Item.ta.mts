@@ -2,11 +2,11 @@
 
 import * as $ from "@wildboar/asn1/functional";
 import {
-    OPTIONAL,
-    INTEGER,
-    SEQUENCE,
-    SET,
-    ASN1Element as _Element,
+    type OPTIONAL,
+    type INTEGER,
+    type SEQUENCE,
+    type SET,
+    type ASN1Element as _Element,
     ASN1TagClass as _TagClass
 } from "@wildboar/asn1";
 import {
@@ -16,9 +16,9 @@ import {
     _encode_MediaServiceType
 } from "../CSTA-media-services/MediaServiceType.ta.mjs";
 
-import { MediaServiceInstanceID, _decode_MediaServiceInstanceID, _encode_MediaServiceInstanceID } from "../CSTA-media-services/MediaServiceInstanceID.ta.mjs";
+import { type MediaServiceInstanceID, _decode_MediaServiceInstanceID, _encode_MediaServiceInstanceID } from "../CSTA-media-services/MediaServiceInstanceID.ta.mjs";
 
-import { MediaStreamID, _decode_MediaStreamID, _encode_MediaStreamID } from "../CSTA-media-services/MediaStreamID.ta.mjs";
+import { type MediaStreamID, _decode_MediaStreamID, _encode_MediaStreamID } from "../CSTA-media-services/MediaStreamID.ta.mjs";
 
 import { ConnectionInformation, _decode_ConnectionInformation, _encode_ConnectionInformation } from "../CSTA-media-services/ConnectionInformation.ta.mjs";
 
@@ -48,60 +48,72 @@ import { ConnectionInformation, _decode_ConnectionInformation, _encode_Connectio
  */
 export
 class CallMediaInfoList_Item {
+    /**
+     * @summary `mediaServiceType`.
+     * @description
+     *
+     * Media service type bound to the connection. ECMA-269 §16.1.3.
+     *
+     * @public
+     * @readonly
+     */
+    public readonly mediaServiceType: MediaServiceType;
+    /**
+     * @summary `mediaServiceVersion`.
+     * @description
+     *
+     * Version of the media service. ECMA-269 §16.1.3.
+     *
+     * @public
+     * @readonly
+     */
+    public readonly mediaServiceVersion?: OPTIONAL<INTEGER>;
+    /**
+     * @summary `mediaServiceInstance`.
+     * @description
+     *
+     * Media service instance bound to the connection. ECMA-269 §16.1.3.
+     *
+     * @public
+     * @readonly
+     */
+    public readonly mediaServiceInstance?: OPTIONAL<MediaServiceInstanceID>;
+    /**
+     * @summary `mediaStreamID`.
+     * @description
+     *
+     * Required if the switch provides mediaStreamID (capability exchange).
+     * ECMA-269 §16.1.3.
+     *
+     * @public
+     * @readonly
+     */
+    public readonly mediaStreamID?: OPTIONAL<MediaStreamID>;
+    /**
+     * @summary `connectionInformation`.
+     * @description
+     *
+     * Connection-level flow/channels for this binding. ECMA-269 §16.1.3,
+     * §12.2.8.
+     *
+     * @public
+     * @readonly
+     */
+    public readonly connectionInformation?: OPTIONAL<ConnectionInformation>;
+
     constructor (
-        /**
-         * @summary `mediaServiceType`.
-         * @description
-         *
-         * Media service type bound to the connection. ECMA-269 §16.1.3.
-         *
-         * @public
-         * @readonly
-         */
-        readonly mediaServiceType: MediaServiceType,
-        /**
-         * @summary `mediaServiceVersion`.
-         * @description
-         *
-         * Version of the media service. ECMA-269 §16.1.3.
-         *
-         * @public
-         * @readonly
-         */
-        readonly mediaServiceVersion?: OPTIONAL<INTEGER>,
-        /**
-         * @summary `mediaServiceInstance`.
-         * @description
-         *
-         * Media service instance bound to the connection. ECMA-269 §16.1.3.
-         *
-         * @public
-         * @readonly
-         */
-        readonly mediaServiceInstance?: OPTIONAL<MediaServiceInstanceID>,
-        /**
-         * @summary `mediaStreamID`.
-         * @description
-         *
-         * Required if the switch provides mediaStreamID (capability exchange).
-         * ECMA-269 §16.1.3.
-         *
-         * @public
-         * @readonly
-         */
-        readonly mediaStreamID?: OPTIONAL<MediaStreamID>,
-        /**
-         * @summary `connectionInformation`.
-         * @description
-         *
-         * Connection-level flow/channels for this binding. ECMA-269 §16.1.3,
-         * §12.2.8.
-         *
-         * @public
-         * @readonly
-         */
-        readonly connectionInformation?: OPTIONAL<ConnectionInformation>
-    ) {}
+        mediaServiceType: MediaServiceType,
+        mediaServiceVersion?: OPTIONAL<INTEGER>,
+        mediaServiceInstance?: OPTIONAL<MediaServiceInstanceID>,
+        mediaStreamID?: OPTIONAL<MediaStreamID>,
+        connectionInformation?: OPTIONAL<ConnectionInformation>
+    ) {
+        this.mediaServiceType = mediaServiceType;
+        this.mediaServiceVersion = mediaServiceVersion;
+        this.mediaServiceInstance = mediaServiceInstance;
+        this.mediaStreamID = mediaStreamID;
+        this.connectionInformation = connectionInformation;
+    }
 
     /**
      * @summary Restructures an object into a CallMediaInfoList_Item
@@ -125,7 +137,7 @@ class CallMediaInfoList_Item {
          * @static
          */
 
-    public static _enum_for_mediaServiceType = _enum_for_MediaServiceType;
+    public static _enum_for_mediaServiceType: typeof _enum_for_MediaServiceType = _enum_for_MediaServiceType;
 }
 
 /**

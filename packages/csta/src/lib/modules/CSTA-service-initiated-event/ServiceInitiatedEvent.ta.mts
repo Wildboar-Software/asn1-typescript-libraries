@@ -2,15 +2,15 @@
 
 import * as $ from "@wildboar/asn1/functional";
 import {
-    OPTIONAL,
-    SEQUENCE,
-    SET,
-    ASN1Element as _Element,
+    type OPTIONAL,
+    type SEQUENCE,
+    type SET,
+    type ASN1Element as _Element,
     ASN1TagClass as _TagClass
 } from "@wildboar/asn1";
-import { ConnectionID, _decode_ConnectionID, _encode_ConnectionID } from "../CSTA-call-connection-identifiers/ConnectionID.ta.mjs";
+import { type ConnectionID, _decode_ConnectionID, _encode_ConnectionID } from "../CSTA-call-connection-identifiers/ConnectionID.ta.mjs";
 
-import { CalledDeviceID, _decode_CalledDeviceID, _encode_CalledDeviceID } from "../CSTA-device-identifiers/CalledDeviceID.ta.mjs";
+import { type CalledDeviceID, _decode_CalledDeviceID, _encode_CalledDeviceID } from "../CSTA-device-identifiers/CalledDeviceID.ta.mjs";
 
 import { LocalConnectionState, _decode_LocalConnectionState, _encode_LocalConnectionState } from "../CSTA-connection-states/LocalConnectionState.ta.mjs";
 
@@ -25,31 +25,31 @@ import { MediaCallCharacteristics, _decode_MediaCallCharacteristics, _encode_Med
 
 import { ConnectionInformation, _decode_ConnectionInformation, _encode_ConnectionInformation } from "../CSTA-media-services/ConnectionInformation.ta.mjs";
 
-import { SubjectOfCall, _decode_SubjectOfCall, _encode_SubjectOfCall } from "../CSTA-device-feature-types/SubjectOfCall.ta.mjs";
+import { type SubjectOfCall, _decode_SubjectOfCall, _encode_SubjectOfCall } from "../CSTA-device-feature-types/SubjectOfCall.ta.mjs";
 
 import { MessageInfo, _decode_MessageInfo, _encode_MessageInfo } from "../CSTA-device-feature-types/MessageInfo.ta.mjs";
 
-import { LanguagePreferences, _decode_LanguagePreferences, _encode_LanguagePreferences } from "../CSTA-device-feature-types/LanguagePreferences.ta.mjs";
+import { type LanguagePreferences, _decode_LanguagePreferences, _encode_LanguagePreferences } from "../CSTA-device-feature-types/LanguagePreferences.ta.mjs";
 
-import { LocationInfoList, _decode_LocationInfoList, _encode_LocationInfoList } from "../CSTA-call-control/LocationInfoList.ta.mjs";
+import { type LocationInfoList, _decode_LocationInfoList, _encode_LocationInfoList } from "../CSTA-call-control/LocationInfoList.ta.mjs";
 
 import { CSTACommonArguments, _decode_CSTACommonArguments, _encode_CSTACommonArguments } from "../CSTA-extension-types/CSTACommonArguments.ta.mjs";
 
 
 
-import { SubjectDeviceID, _decode_SubjectDeviceID, _encode_SubjectDeviceID } from "../CSTA-device-identifiers/SubjectDeviceID.ta.mjs";
+import { type SubjectDeviceID, _decode_SubjectDeviceID, _encode_SubjectDeviceID } from "../CSTA-device-identifiers/SubjectDeviceID.ta.mjs";
 
-import { CorrelatorData, _decode_CorrelatorData, _encode_CorrelatorData } from "../CSTA-device-feature-types/CorrelatorData.ta.mjs";
+import { type CorrelatorData, _decode_CorrelatorData, _encode_CorrelatorData } from "../CSTA-device-feature-types/CorrelatorData.ta.mjs";
 
 import { ServicesPermitted, _decode_ServicesPermitted, _encode_ServicesPermitted } from "../CSTA-call-control/ServicesPermitted.ta.mjs";
 
-import { CallCharacteristics, _decode_CallCharacteristics, _encode_CallCharacteristics } from "../CSTA-call-control/CallCharacteristics.ta.mjs";
+import { type CallCharacteristics, _decode_CallCharacteristics, _encode_CallCharacteristics } from "../CSTA-call-control/CallCharacteristics.ta.mjs";
 
-import { NetworkCallingDeviceID, _decode_NetworkCallingDeviceID, _encode_NetworkCallingDeviceID } from "../CSTA-device-identifiers/NetworkCallingDeviceID.ta.mjs";
+import { type NetworkCallingDeviceID, _decode_NetworkCallingDeviceID, _encode_NetworkCallingDeviceID } from "../CSTA-device-identifiers/NetworkCallingDeviceID.ta.mjs";
 
-import { NetworkCalledDeviceID, _decode_NetworkCalledDeviceID, _encode_NetworkCalledDeviceID } from "../CSTA-device-identifiers/NetworkCalledDeviceID.ta.mjs";
+import { type NetworkCalledDeviceID, _decode_NetworkCalledDeviceID, _encode_NetworkCalledDeviceID } from "../CSTA-device-identifiers/NetworkCalledDeviceID.ta.mjs";
 
-import { AssociatedCallingDeviceID, _decode_AssociatedCallingDeviceID, _encode_AssociatedCallingDeviceID } from "../CSTA-device-identifiers/AssociatedCallingDeviceID.ta.mjs";
+import { type AssociatedCallingDeviceID, _decode_AssociatedCallingDeviceID, _encode_AssociatedCallingDeviceID } from "../CSTA-device-identifiers/AssociatedCallingDeviceID.ta.mjs";
 
 import { CallLinkageData, _decode_CallLinkageData, _encode_CallLinkageData } from "../CSTA-call-control/CallLinkageData.ta.mjs";
 
@@ -70,22 +70,22 @@ import { CallLinkageData, _decode_CallLinkageData, _encode_CallLinkageData } fro
  * ServiceInitiatedEvent ::= SEQUENCE
  * {    initiatedConnection        ConnectionID,
  *     initiatingDevice        SubjectDeviceID,
- *     calledDevice            CalledDeviceID                OPTIONAL,
- *     localConnectionInfo        LocalConnectionState            OPTIONAL,
- *     correlatorData            [ 0] IMPLICIT CorrelatorData        OPTIONAL,
+ *     calledDevice            CalledDeviceID                type OPTIONAL,
+ *     localConnectionInfo        LocalConnectionState            type OPTIONAL,
+ *     correlatorData            [ 0] IMPLICIT CorrelatorData        type OPTIONAL,
  *     cause                EventCause,
- *     servicesPermitted        [ 1] IMPLICIT ServicesPermitted        OPTIONAL,
- *     mediaCallCharacteristics    [ 2] IMPLICIT MediaCallCharacteristics    OPTIONAL,
- *     callCharacteristics        [ 3] IMPLICIT CallCharacteristics    OPTIONAL,
- *     initiatedConnectionInfo        [ 4] IMPLICIT ConnectionInformation    OPTIONAL,
- *     networkCallingDevice        NetworkCallingDeviceID            OPTIONAL,
- *     networkCalledDevice        NetworkCalledDeviceID            OPTIONAL,
- *     associatedCallingDevice    AssociatedCallingDeviceID            OPTIONAL,
- *     callLinkageData            [ 5] IMPLICIT CallLinkageData        OPTIONAL,
- *     subjectOfCall            [ 7] IMPLICIT SubjectOfCall        OPTIONAL,
- *     messageInfo            [ 8] IMPLICIT MessageInfo        OPTIONAL,
- *     languagePreferences        [ 9] IMPLICIT LanguagePreferences    OPTIONAL,
- *     locationInfo            [10] IMPLICIT LocationInfoList        OPTIONAL,
+ *     servicesPermitted        [ 1] IMPLICIT ServicesPermitted        type OPTIONAL,
+ *     mediaCallCharacteristics    [ 2] IMPLICIT MediaCallCharacteristics    type OPTIONAL,
+ *     callCharacteristics        [ 3] IMPLICIT CallCharacteristics    type OPTIONAL,
+ *     initiatedConnectionInfo        [ 4] IMPLICIT ConnectionInformation    type OPTIONAL,
+ *     networkCallingDevice        NetworkCallingDeviceID            type OPTIONAL,
+ *     networkCalledDevice        NetworkCalledDeviceID            type OPTIONAL,
+ *     associatedCallingDevice    AssociatedCallingDeviceID            type OPTIONAL,
+ *     callLinkageData            [ 5] IMPLICIT CallLinkageData        type OPTIONAL,
+ *     subjectOfCall            [ 7] IMPLICIT SubjectOfCall        type OPTIONAL,
+ *     messageInfo            [ 8] IMPLICIT MessageInfo        type OPTIONAL,
+ *     languagePreferences        [ 9] IMPLICIT LanguagePreferences    type OPTIONAL,
+ *     locationInfo            [10] IMPLICIT LocationInfoList        type OPTIONAL,
  *     extensions            CSTACommonArguments            OPTIONAL }
  * ```
  * 
@@ -93,207 +93,247 @@ import { CallLinkageData, _decode_CallLinkageData, _encode_CallLinkageData } fro
  */
 export
 class ServiceInitiatedEvent {
+    /**
+     * @summary `initiatedConnection`.
+     * @description
+     *
+     * Mandatory. Connection at which service was initiated.
+     *
+     * @public
+     * @readonly
+     */
+    public readonly initiatedConnection: ConnectionID;
+    /**
+     * @summary `initiatingDevice`.
+     * @description
+     *
+     * Mandatory. Initiating device.
+     *
+     * @public
+     * @readonly
+     */
+    public readonly initiatingDevice: SubjectDeviceID;
+    /**
+     * @summary `calledDevice`.
+     * @description
+     *
+     * Optional. Originally called device. For prompting, the device that
+     * will be called after the prompt is answered.
+     *
+     * @public
+     * @readonly
+     */
+    public readonly calledDevice: OPTIONAL<CalledDeviceID>;
+    /**
+     * @summary `localConnectionInfo`.
+     * @description
+     *
+     * Device-type monitors only (§9.5.2, §12.2.17). For the initiating
+     * device: Initiated.
+     *
+     * @public
+     * @readonly
+     */
+    public readonly localConnectionInfo: OPTIONAL<LocalConnectionState>;
+    /**
+     * @summary `correlatorData`.
+     * @description
+     *
+     * Conditional. Present when correlator data is associated with the call
+     * (§12.2.10).
+     *
+     * @public
+     * @readonly
+     */
+    public readonly correlatorData: OPTIONAL<CorrelatorData>;
+    /**
+     * @summary `cause`.
+     * @description
+     *
+     * Mandatory. Valid values are listed in Table 17-184.
+     *
+     * @public
+     * @readonly
+     */
+    public readonly cause: EventCause;
+    /**
+     * @summary `servicesPermitted`.
+     * @description
+     *
+     * Device-type monitors only (§9.5.2, §12.2.25). Mandatory if Dynamic
+     * Feature Availability is supported.
+     *
+     * @public
+     * @readonly
+     */
+    public readonly servicesPermitted?: OPTIONAL<ServicesPermitted>;
+    /**
+     * @summary `mediaCallCharacteristics`.
+     * @description
+     *
+     * Optional media class and characteristics (§12.2.20).
+     *
+     * @public
+     * @readonly
+     */
+    public readonly mediaCallCharacteristics?: OPTIONAL<MediaCallCharacteristics>;
+    /**
+     * @summary `callCharacteristics`.
+     * @description
+     *
+     * Optional high-level call characteristics (§12.2.4).
+     *
+     * @public
+     * @readonly
+     */
+    public readonly callCharacteristics?: OPTIONAL<CallCharacteristics>;
+    /**
+     * @summary `initiatedConnectionInfo`.
+     * @description
+     *
+     * Optional connection information. Omitted values are
+     * switching-function specific (§12.2.8).
+     *
+     * @public
+     * @readonly
+     */
+    public readonly initiatedConnectionInfo?: OPTIONAL<ConnectionInformation>;
+    /**
+     * @summary `networkCallingDevice`.
+     * @description
+     *
+     * Optional. Original calling device from the network, external incoming
+     * only. Does not change while `associatedCallingDevice` remains.
+     *
+     * @public
+     * @readonly
+     */
+    public readonly networkCallingDevice?: OPTIONAL<NetworkCallingDeviceID>;
+    /**
+     * @summary `networkCalledDevice`.
+     * @description
+     *
+     * Optional. Original called device from the network, external incoming
+     * only. Does not change while `associatedCallingDevice` remains.
+     *
+     * @public
+     * @readonly
+     */
+    public readonly networkCalledDevice?: OPTIONAL<NetworkCalledDeviceID>;
+    /**
+     * @summary `associatedCallingDevice`.
+     * @description
+     *
+     * Conditional. NID of the calling device for external incoming calls.
+     * Mandatory then; omitted otherwise.
+     *
+     * @public
+     * @readonly
+     */
+    public readonly associatedCallingDevice?: OPTIONAL<AssociatedCallingDeviceID>;
+    /**
+     * @summary `callLinkageData`.
+     * @description
+     *
+     * Conditional. Mandatory if call linkage is supported (§12.2.5).
+     *
+     * @public
+     * @readonly
+     */
+    public readonly callLinkageData?: OPTIONAL<CallLinkageData>;
+    /**
+     * @summary `subjectOfCall`.
+     * @description
+     *
+     * Optional subject or intent (§12.2.27).
+     *
+     * @public
+     * @readonly
+     */
+    public readonly subjectOfCall?: OPTIONAL<SubjectOfCall>;
+    /**
+     * @summary `messageInfo`.
+     * @description
+     *
+     * Optional message contents associated with the call.
+     *
+     * @public
+     * @readonly
+     */
+    public readonly messageInfo?: OPTIONAL<MessageInfo>;
+    /**
+     * @summary `languagePreferences`.
+     * @description
+     *
+     * Optional preferred language(s) (§12.2.16).
+     *
+     * @public
+     * @readonly
+     */
+    public readonly languagePreferences?: OPTIONAL<LanguagePreferences>;
+    /**
+     * @summary `locationInfo`.
+     * @description
+     *
+     * Optional location information for devices in the call.
+     *
+     * @public
+     * @readonly
+     */
+    public readonly locationInfo?: OPTIONAL<LocationInfoList>;
+    /**
+     * @summary `extensions`.
+     * @description
+     *
+     * Optional `CSTACommonArguments` carrying the security and privateData
+     * parameters from the ECMA-269 event table.
+     *
+     * @public
+     * @readonly
+     */
+    public readonly extensions?: OPTIONAL<CSTACommonArguments>;
+
     constructor (
-        /**
-         * @summary `initiatedConnection`.
-         * @description
-         *
-         * Mandatory. Connection at which service was initiated.
-         *
-         * @public
-         * @readonly
-         */
-        readonly initiatedConnection: ConnectionID,
-        /**
-         * @summary `initiatingDevice`.
-         * @description
-         *
-         * Mandatory. Initiating device.
-         *
-         * @public
-         * @readonly
-         */
-        readonly initiatingDevice: SubjectDeviceID,
-        /**
-         * @summary `calledDevice`.
-         * @description
-         *
-         * Optional. Originally called device. For prompting, the device that
-         * will be called after the prompt is answered.
-         *
-         * @public
-         * @readonly
-         */
-        readonly calledDevice: OPTIONAL<CalledDeviceID>,
-        /**
-         * @summary `localConnectionInfo`.
-         * @description
-         *
-         * Device-type monitors only (§9.5.2, §12.2.17). For the initiating
-         * device: Initiated.
-         *
-         * @public
-         * @readonly
-         */
-        readonly localConnectionInfo: OPTIONAL<LocalConnectionState>,
-        /**
-         * @summary `correlatorData`.
-         * @description
-         *
-         * Conditional. Present when correlator data is associated with the call
-         * (§12.2.10).
-         *
-         * @public
-         * @readonly
-         */
-        readonly correlatorData: OPTIONAL<CorrelatorData>,
-        /**
-         * @summary `cause`.
-         * @description
-         *
-         * Mandatory. Valid values are listed in Table 17-184.
-         *
-         * @public
-         * @readonly
-         */
-        readonly cause: EventCause,
-        /**
-         * @summary `servicesPermitted`.
-         * @description
-         *
-         * Device-type monitors only (§9.5.2, §12.2.25). Mandatory if Dynamic
-         * Feature Availability is supported.
-         *
-         * @public
-         * @readonly
-         */
-        readonly servicesPermitted?: OPTIONAL<ServicesPermitted>,
-        /**
-         * @summary `mediaCallCharacteristics`.
-         * @description
-         *
-         * Optional media class and characteristics (§12.2.20).
-         *
-         * @public
-         * @readonly
-         */
-        readonly mediaCallCharacteristics?: OPTIONAL<MediaCallCharacteristics>,
-        /**
-         * @summary `callCharacteristics`.
-         * @description
-         *
-         * Optional high-level call characteristics (§12.2.4).
-         *
-         * @public
-         * @readonly
-         */
-        readonly callCharacteristics?: OPTIONAL<CallCharacteristics>,
-        /**
-         * @summary `initiatedConnectionInfo`.
-         * @description
-         *
-         * Optional connection information. Omitted values are
-         * switching-function specific (§12.2.8).
-         *
-         * @public
-         * @readonly
-         */
-        readonly initiatedConnectionInfo?: OPTIONAL<ConnectionInformation>,
-        /**
-         * @summary `networkCallingDevice`.
-         * @description
-         *
-         * Optional. Original calling device from the network, external incoming
-         * only. Does not change while `associatedCallingDevice` remains.
-         *
-         * @public
-         * @readonly
-         */
-        readonly networkCallingDevice?: OPTIONAL<NetworkCallingDeviceID>,
-        /**
-         * @summary `networkCalledDevice`.
-         * @description
-         *
-         * Optional. Original called device from the network, external incoming
-         * only. Does not change while `associatedCallingDevice` remains.
-         *
-         * @public
-         * @readonly
-         */
-        readonly networkCalledDevice?: OPTIONAL<NetworkCalledDeviceID>,
-        /**
-         * @summary `associatedCallingDevice`.
-         * @description
-         *
-         * Conditional. NID of the calling device for external incoming calls.
-         * Mandatory then; omitted otherwise.
-         *
-         * @public
-         * @readonly
-         */
-        readonly associatedCallingDevice?: OPTIONAL<AssociatedCallingDeviceID>,
-        /**
-         * @summary `callLinkageData`.
-         * @description
-         *
-         * Conditional. Mandatory if call linkage is supported (§12.2.5).
-         *
-         * @public
-         * @readonly
-         */
-        readonly callLinkageData?: OPTIONAL<CallLinkageData>,
-        /**
-         * @summary `subjectOfCall`.
-         * @description
-         *
-         * Optional subject or intent (§12.2.27).
-         *
-         * @public
-         * @readonly
-         */
-        readonly subjectOfCall?: OPTIONAL<SubjectOfCall>,
-        /**
-         * @summary `messageInfo`.
-         * @description
-         *
-         * Optional message contents associated with the call.
-         *
-         * @public
-         * @readonly
-         */
-        readonly messageInfo?: OPTIONAL<MessageInfo>,
-        /**
-         * @summary `languagePreferences`.
-         * @description
-         *
-         * Optional preferred language(s) (§12.2.16).
-         *
-         * @public
-         * @readonly
-         */
-        readonly languagePreferences?: OPTIONAL<LanguagePreferences>,
-        /**
-         * @summary `locationInfo`.
-         * @description
-         *
-         * Optional location information for devices in the call.
-         *
-         * @public
-         * @readonly
-         */
-        readonly locationInfo?: OPTIONAL<LocationInfoList>,
-        /**
-         * @summary `extensions`.
-         * @description
-         *
-         * Optional `CSTACommonArguments` carrying the security and privateData
-         * parameters from the ECMA-269 event table.
-         *
-         * @public
-         * @readonly
-         */
-        readonly extensions?: OPTIONAL<CSTACommonArguments>
-    ) {}
+        initiatedConnection: ConnectionID,
+        initiatingDevice: SubjectDeviceID,
+        calledDevice: OPTIONAL<CalledDeviceID>,
+        localConnectionInfo: OPTIONAL<LocalConnectionState>,
+        correlatorData: OPTIONAL<CorrelatorData>,
+        cause: EventCause,
+        servicesPermitted?: OPTIONAL<ServicesPermitted>,
+        mediaCallCharacteristics?: OPTIONAL<MediaCallCharacteristics>,
+        callCharacteristics?: OPTIONAL<CallCharacteristics>,
+        initiatedConnectionInfo?: OPTIONAL<ConnectionInformation>,
+        networkCallingDevice?: OPTIONAL<NetworkCallingDeviceID>,
+        networkCalledDevice?: OPTIONAL<NetworkCalledDeviceID>,
+        associatedCallingDevice?: OPTIONAL<AssociatedCallingDeviceID>,
+        callLinkageData?: OPTIONAL<CallLinkageData>,
+        subjectOfCall?: OPTIONAL<SubjectOfCall>,
+        messageInfo?: OPTIONAL<MessageInfo>,
+        languagePreferences?: OPTIONAL<LanguagePreferences>,
+        locationInfo?: OPTIONAL<LocationInfoList>,
+        extensions?: OPTIONAL<CSTACommonArguments>
+    ) {
+        this.initiatedConnection = initiatedConnection;
+        this.initiatingDevice = initiatingDevice;
+        this.calledDevice = calledDevice;
+        this.localConnectionInfo = localConnectionInfo;
+        this.correlatorData = correlatorData;
+        this.cause = cause;
+        this.servicesPermitted = servicesPermitted;
+        this.mediaCallCharacteristics = mediaCallCharacteristics;
+        this.callCharacteristics = callCharacteristics;
+        this.initiatedConnectionInfo = initiatedConnectionInfo;
+        this.networkCallingDevice = networkCallingDevice;
+        this.networkCalledDevice = networkCalledDevice;
+        this.associatedCallingDevice = associatedCallingDevice;
+        this.callLinkageData = callLinkageData;
+        this.subjectOfCall = subjectOfCall;
+        this.messageInfo = messageInfo;
+        this.languagePreferences = languagePreferences;
+        this.locationInfo = locationInfo;
+        this.extensions = extensions;
+    }
 
     /**
      * @summary Restructures an object into a ServiceInitiatedEvent
@@ -317,7 +357,7 @@ class ServiceInitiatedEvent {
          * @static
          */
 
-    public static _enum_for_cause = _enum_for_EventCause;
+    public static _enum_for_cause: typeof _enum_for_EventCause = _enum_for_EventCause;
 }
 
 /**

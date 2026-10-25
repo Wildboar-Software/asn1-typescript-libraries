@@ -1,6 +1,6 @@
 /* eslint-disable */
 import {
-  OPTIONAL,
+  type OPTIONAL,
   ASN1Element as _Element,
   ASN1TagClass as _TagClass,
   ASN1Construction as _Construction,
@@ -13,9 +13,9 @@ import {
 import * as $ from '@wildboar/asn1/functional';
 import { Code, _decode_Code, _encode_Code } from '../ASN1SOAP/Code.ta.mjs';
 import { Text, _decode_Text, _encode_Text } from '../ASN1SOAP/Text.ta.mjs';
-import { AnyURI, _decode_AnyURI, _encode_AnyURI } from '../XSD/AnyURI.ta.mjs';
+import { type AnyURI, _decode_AnyURI, _encode_AnyURI } from '../XSD/AnyURI.ta.mjs';
 import {
-  Content,
+  type Content,
   _decode_Content,
   _encode_Content,
 } from '../ASN1SOAP/Content.ta.mjs';
@@ -52,7 +52,7 @@ export class Fault {
    * @public
    * @readonly
    */
-  readonly code: Code;
+  public readonly code: Code;
   /**
    * @summary `reason`.
    * @description Human-readable explanations; at least one
@@ -64,7 +64,7 @@ export class Fault {
    * @public
    * @readonly
    */
-  readonly reason: Text[];
+  public readonly reason: Text[];
   /**
    * @summary `node`.
    * @description URI of the SOAP node that generated the fault
@@ -74,7 +74,7 @@ export class Fault {
    * @public
    * @readonly
    */
-  readonly node?: OPTIONAL<AnyURI>;
+  public readonly node?: OPTIONAL<AnyURI>;
   /**
    * @summary `role`.
    * @description Role the faulting node was playing (SOAP Role).
@@ -84,7 +84,7 @@ export class Fault {
    * @public
    * @readonly
    */
-  readonly role?: OPTIONAL<AnyURI>;
+  public readonly role?: OPTIONAL<AnyURI>;
   /**
    * @summary `detail`.
    * @description Application-specific fault detail (SOAP Detail).
@@ -95,7 +95,7 @@ export class Fault {
    * @public
    * @readonly
    */
-  readonly detail?: OPTIONAL<Content>;
+  public readonly detail?: OPTIONAL<Content>;
 
   constructor(
     code: Code,

@@ -1,12 +1,12 @@
 /* eslint-disable */
 import {
     ASN1ConstructionError as _ConstructionError,
-    ASN1Element as _Element,
+    type ASN1Element as _Element,
     ASN1TagClass as _TagClass,
-    GeneralizedTime
+    type GeneralizedTime
 } from "@wildboar/asn1";
 import * as $ from "@wildboar/asn1/functional";
-import { _decode_LocalTimeStamp_winterSummerIndication, _encode_LocalTimeStamp_winterSummerIndication, _enum_for_LocalTimeStamp_winterSummerIndication, LocalTimeStamp_winterSummerIndication } from "./LocalTimeStamp-winterSummerIndication.ta.mjs";
+import { _decode_LocalTimeStamp_winterSummerIndication, _encode_LocalTimeStamp_winterSummerIndication, _enum_for_LocalTimeStamp_winterSummerIndication, type LocalTimeStamp_winterSummerIndication } from "./LocalTimeStamp-winterSummerIndication.ta.mjs";
 // export { LocalTimeStamp_winterSummerIndication, _enum_for_LocalTimeStamp_winterSummerIndication, LocalTimeStamp_winterSummerIndication_notProvided /* IMPORTED_LONG_ENUMERATION_ITEM */, notProvided /* IMPORTED_SHORT_ENUMERATION_ITEM */, LocalTimeStamp_winterSummerIndication_winterTime /* IMPORTED_LONG_ENUMERATION_ITEM */, winterTime /* IMPORTED_SHORT_ENUMERATION_ITEM */, LocalTimeStamp_winterSummerIndication_summerTime /* IMPORTED_LONG_ENUMERATION_ITEM */, summerTime /* IMPORTED_SHORT_ENUMERATION_ITEM */, _decode_LocalTimeStamp_winterSummerIndication, _encode_LocalTimeStamp_winterSummerIndication } from "./LocalTimeStamp-winterSummerIndication.ta.mjs";
 
 
@@ -119,7 +119,7 @@ class LocalTimeStamp {
          * @static
          */
 
-    public static _enum_for_winterSummerIndication = _enum_for_LocalTimeStamp_winterSummerIndication;
+    public static _enum_for_winterSummerIndication: typeof _enum_for_LocalTimeStamp_winterSummerIndication = _enum_for_LocalTimeStamp_winterSummerIndication;
 }
 
 /**

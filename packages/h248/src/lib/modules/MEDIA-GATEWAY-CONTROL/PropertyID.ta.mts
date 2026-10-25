@@ -1,6 +1,6 @@
 /* eslint-disable */
 import {
-    OCTET_STRING
+    type OCTET_STRING
 } from "@wildboar/asn1";
 import * as $ from "@wildboar/asn1/functional";
 
@@ -26,8 +26,8 @@ import * as $ from "@wildboar/asn1/functional";
  */
 export
 type PropertyID = OCTET_STRING; // OctetStringType
-export const _decode_PropertyID = $._decodeOctetString;
-export const _encode_PropertyID = $._encodeOctetString;
+export const _decode_PropertyID: $.ASN1Decoder<OCTET_STRING> = $._decodeOctetString;
+export const _encode_PropertyID: $.ASN1Encoder<OCTET_STRING> = $._encodeOctetString;
 
 
 /* eslint-enable */

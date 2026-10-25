@@ -1,11 +1,11 @@
 /* eslint-disable */
 import {
-    ASN1Element as _Element,
+    type ASN1Element as _Element,
     ASN1TagClass as _TagClass
 } from "@wildboar/asn1";
 import * as $ from "@wildboar/asn1/functional";
-import { QuintupletList, _decode_QuintupletList, _encode_QuintupletList } from "../MAP-MS-DataTypes/QuintupletList.ta.mjs";
-import { TripletList, _decode_TripletList, _encode_TripletList } from "../MAP-MS-DataTypes/TripletList.ta.mjs";
+import { type QuintupletList, _decode_QuintupletList, _encode_QuintupletList } from "../MAP-MS-DataTypes/QuintupletList.ta.mjs";
+import { type TripletList, _decode_TripletList, _encode_TripletList } from "../MAP-MS-DataTypes/TripletList.ta.mjs";
 
 
 /**

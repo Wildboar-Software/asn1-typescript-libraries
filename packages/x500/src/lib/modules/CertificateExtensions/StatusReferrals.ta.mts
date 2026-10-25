@@ -2,7 +2,7 @@
 import { ASN1Element as _Element } from "@wildboar/asn1";
 import * as $ from "@wildboar/asn1/functional";
 import {
-    StatusReferral,
+    type StatusReferral,
     _decode_StatusReferral,
     _encode_StatusReferral,
 } from "../CertificateExtensions/StatusReferral.ta.mjs";

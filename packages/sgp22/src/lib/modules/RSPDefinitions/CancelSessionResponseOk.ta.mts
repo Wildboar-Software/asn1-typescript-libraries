@@ -1,8 +1,8 @@
 /* eslint-disable */
 import {
-    OCTET_STRING,
+    type OCTET_STRING,
     ASN1ConstructionError as _ConstructionError,
-    ASN1Element as _Element,
+    type ASN1Element as _Element,
     ASN1TagClass as _TagClass
 } from "@wildboar/asn1";
 import * as $ from "@wildboar/asn1/functional";
@@ -38,7 +38,7 @@ class CancelSessionResponseOk {
      * @public
      * @readonly
      */
-    readonly euiccCancelSessionSigned: EuiccCancelSessionSigned;
+    public readonly euiccCancelSessionSigned: EuiccCancelSessionSigned;
     /**
      * @summary `euiccCancelSessionSignature`.
      * @description
@@ -48,7 +48,7 @@ class CancelSessionResponseOk {
      * @public
      * @readonly
      */
-    readonly euiccCancelSessionSignature: OCTET_STRING;
+    public readonly euiccCancelSessionSignature: OCTET_STRING;
 
     constructor (
         euiccCancelSessionSigned: EuiccCancelSessionSigned,

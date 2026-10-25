@@ -1,6 +1,6 @@
 /* eslint-disable */
 import {
-    ASN1Element as _Element,
+    type ASN1Element as _Element,
     ASN1TagClass as _TagClass,
     ASN1Construction as _Construction,
     ASN1UniversalType as _UniversalType,
@@ -64,7 +64,7 @@ export type PropertyList_addRemove = _enum_for_PropertyList_addRemove;
  *
  * @enum {number}
  */
-export const PropertyList_addRemove = _enum_for_PropertyList_addRemove;
+export const PropertyList_addRemove: typeof _enum_for_PropertyList_addRemove = _enum_for_PropertyList_addRemove;
 
 
 /**
@@ -75,7 +75,7 @@ export const PropertyList_addRemove = _enum_for_PropertyList_addRemove;
  * @constant
  * @type {number}
  */
-export const PropertyList_addRemove_aDD: PropertyList_addRemove =
+export const PropertyList_addRemove_aDD: _enum_for_PropertyList_addRemove.aDD =
     PropertyList_addRemove.aDD; /* LONG_NAMED_ENUMERATED_VALUE */
 
 
@@ -87,7 +87,7 @@ export const PropertyList_addRemove_aDD: PropertyList_addRemove =
  * @constant
  * @type {number}
  */
-export const aDD: PropertyList_addRemove =
+export const aDD: _enum_for_PropertyList_addRemove.aDD =
     PropertyList_addRemove.aDD; /* SHORT_NAMED_ENUMERATED_VALUE */
 
 
@@ -99,7 +99,7 @@ export const aDD: PropertyList_addRemove =
  * @constant
  * @type {number}
  */
-export const PropertyList_addRemove_rEMOVE: PropertyList_addRemove =
+export const PropertyList_addRemove_rEMOVE: _enum_for_PropertyList_addRemove.rEMOVE =
     PropertyList_addRemove.rEMOVE; /* LONG_NAMED_ENUMERATED_VALUE */
 
 
@@ -111,7 +111,7 @@ export const PropertyList_addRemove_rEMOVE: PropertyList_addRemove =
  * @constant
  * @type {number}
  */
-export const rEMOVE: PropertyList_addRemove =
+export const rEMOVE: _enum_for_PropertyList_addRemove.rEMOVE =
     PropertyList_addRemove.rEMOVE; /* SHORT_NAMED_ENUMERATED_VALUE */
 
 
@@ -123,7 +123,7 @@ export const rEMOVE: PropertyList_addRemove =
  * @constant
  * @type {number}
  */
-export const PropertyList_addRemove_aDD_REMOVE: PropertyList_addRemove =
+export const PropertyList_addRemove_aDD_REMOVE: _enum_for_PropertyList_addRemove.aDD_REMOVE =
     PropertyList_addRemove.aDD_REMOVE; /* LONG_NAMED_ENUMERATED_VALUE */
 
 
@@ -135,18 +135,30 @@ export const PropertyList_addRemove_aDD_REMOVE: PropertyList_addRemove =
  * @constant
  * @type {number}
  */
-export const aDD_REMOVE: PropertyList_addRemove =
+export const aDD_REMOVE: _enum_for_PropertyList_addRemove.aDD_REMOVE =
     PropertyList_addRemove.aDD_REMOVE; /* SHORT_NAMED_ENUMERATED_VALUE */
 
 
 
 
-export const _decode_PropertyList_addRemove = $._decodeEnumerated;
+export function _decode_PropertyList_addRemove(el: _Element): PropertyList_addRemove {
+    const enumerated = $._decodeEnumerated(el);
+    switch (enumerated) {
+        case PropertyList_addRemove.aDD: return PropertyList_addRemove.aDD;
+        case PropertyList_addRemove.rEMOVE: return PropertyList_addRemove.rEMOVE;
+        case PropertyList_addRemove.aDD_REMOVE: return PropertyList_addRemove.aDD_REMOVE;
+        default:
+            throw new _ConstructionError(
+                'Invalid ENUMERATED value ' + enumerated + ' for PropertyList_addRemove.',
+                el,
+            );
+    }
+}
 
 
 
 
-export const _encode_PropertyList_addRemove = $._encodeEnumerated;
+export const _encode_PropertyList_addRemove: $.ASN1Encoder<PropertyList_addRemove> = $._encodeEnumerated as $.ASN1Encoder<PropertyList_addRemove>;
 
 
 /* eslint-enable */

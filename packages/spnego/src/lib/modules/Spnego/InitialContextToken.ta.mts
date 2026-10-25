@@ -1,12 +1,12 @@
 /* eslint-disable */
 import {
     ASN1ConstructionError as _ConstructionError,
-    ASN1Element as _Element,
+    type ASN1Element as _Element,
     ASN1TagClass as _TagClass
 } from "@wildboar/asn1";
 import * as $ from "@wildboar/asn1/functional";
-import { MechType, _decode_MechType, _encode_MechType } from "../Spnego/MechType.ta.mjs";
-import { InnerContextToken, _decode_InnerContextToken, _encode_InnerContextToken } from "../Spnego/InnerContextToken.ta.mjs";
+import { type MechType, _decode_MechType, _encode_MechType } from "../Spnego/MechType.ta.mjs";
+import { type InnerContextToken, _decode_InnerContextToken, _encode_InnerContextToken } from "../Spnego/InnerContextToken.ta.mjs";
 
 
 /**
@@ -36,13 +36,13 @@ class InitialContextToken {
      * @public
      * @readonly
      */
-    readonly thisMech: MechType;
+    public readonly thisMech: MechType;
     /**
      * @summary `innerContextToken`.
      * @public
      * @readonly
      */
-    readonly innerContextToken: InnerContextToken;
+    public readonly innerContextToken: InnerContextToken;
 
     constructor (
         thisMech: MechType,

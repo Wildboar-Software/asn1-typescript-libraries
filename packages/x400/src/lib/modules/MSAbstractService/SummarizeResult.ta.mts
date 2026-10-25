@@ -1,8 +1,8 @@
 /* eslint-disable */
 import {
-    OPTIONAL,
-    INTEGER,
-    ASN1Element as _Element,
+    type OPTIONAL,
+    type INTEGER,
+    type ASN1Element as _Element,
     ASN1TagClass as _TagClass,
     ASN1Construction as _Construction,
     ASN1UniversalType as _UniversalType,
@@ -13,7 +13,7 @@ import {
 } from '@wildboar/asn1';
 import * as $ from '@wildboar/asn1/functional';
 import {
-    SequenceNumber,
+    type SequenceNumber,
     _decode_SequenceNumber,
     _encode_SequenceNumber,
 } from '../MSAbstractService/SequenceNumber.ta.mjs';
@@ -24,7 +24,7 @@ import {
     _encode_Summary,
 } from '../MSAbstractService/Summary.ta.mjs';
 import {
-    MSExtensions,
+    type MSExtensions,
     _decode_MSExtensions,
     _encode_MSExtensions,
 } from '../MSAbstractService/MSExtensions.ta.mjs';
@@ -52,38 +52,50 @@ import {
  *
  */
 export class SummarizeResult {
+    /**
+     * @summary `next`.
+     * @public
+     * @readonly
+     */
+    public readonly next: OPTIONAL<SequenceNumber>;
+    /**
+     * @summary `count`.
+     * @public
+     * @readonly
+     */
+    public readonly count: INTEGER;
+    /**
+     * @summary `span`.
+     * @public
+     * @readonly
+     */
+    public readonly span?: OPTIONAL<Span>;
+    /**
+     * @summary `summaries`.
+     * @public
+     * @readonly
+     */
+    public readonly summaries?: OPTIONAL<Summary[]>;
+    /**
+     * @summary `summarize_result_extensions`.
+     * @public
+     * @readonly
+     */
+    public readonly summarize_result_extensions?: OPTIONAL<MSExtensions>;
+
     constructor(
-        /**
-         * @summary `next`.
-         * @public
-         * @readonly
-         */
-        readonly next: OPTIONAL<SequenceNumber>,
-        /**
-         * @summary `count`.
-         * @public
-         * @readonly
-         */
-        readonly count: INTEGER,
-        /**
-         * @summary `span`.
-         * @public
-         * @readonly
-         */
-        readonly span?: OPTIONAL<Span>,
-        /**
-         * @summary `summaries`.
-         * @public
-         * @readonly
-         */
-        readonly summaries?: OPTIONAL<Summary[]>,
-        /**
-         * @summary `summarize_result_extensions`.
-         * @public
-         * @readonly
-         */
-        readonly summarize_result_extensions?: OPTIONAL<MSExtensions>
-    ) {}
+        next: OPTIONAL<SequenceNumber>,
+        count: INTEGER,
+        span?: OPTIONAL<Span>,
+        summaries?: OPTIONAL<Summary[]>,
+        summarize_result_extensions?: OPTIONAL<MSExtensions>
+    ) {
+        this.next = next;
+        this.count = count;
+        this.span = span;
+        this.summaries = summaries;
+        this.summarize_result_extensions = summarize_result_extensions;
+    }
 
     /**
      * @summary Restructures an object into a SummarizeResult

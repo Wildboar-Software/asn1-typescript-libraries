@@ -1,6 +1,6 @@
 /* eslint-disable */
 import {
-    INTEGER
+    type INTEGER
 } from "@wildboar/asn1";
 import * as $ from "@wildboar/asn1/functional";
 
@@ -66,7 +66,7 @@ type SMFTrigger = INTEGER;
  * @type {number}
  */
 export
-const SMFTrigger_startOfPDUSession: SMFTrigger = 1; /* LONG_NAMED_INTEGER_VALUE */
+const SMFTrigger_startOfPDUSession: 1 = 1 satisfies SMFTrigger; /* LONG_NAMED_INTEGER_VALUE */
 
 /**
  * @summary SMFTrigger_startOfPDUSession
@@ -74,7 +74,7 @@ const SMFTrigger_startOfPDUSession: SMFTrigger = 1; /* LONG_NAMED_INTEGER_VALUE 
  * @type {number}
  */
 export
-const startOfPDUSession: SMFTrigger = SMFTrigger_startOfPDUSession; /* SHORT_NAMED_INTEGER_VALUE */
+const startOfPDUSession: 1 = SMFTrigger_startOfPDUSession; /* SHORT_NAMED_INTEGER_VALUE */
 
 /**
  * @summary SMFTrigger_startOfServiceDataFlowNoSession
@@ -82,7 +82,7 @@ const startOfPDUSession: SMFTrigger = SMFTrigger_startOfPDUSession; /* SHORT_NAM
  * @type {number}
  */
 export
-const SMFTrigger_startOfServiceDataFlowNoSession: SMFTrigger = 2; /* LONG_NAMED_INTEGER_VALUE */
+const SMFTrigger_startOfServiceDataFlowNoSession: 2 = 2 satisfies SMFTrigger; /* LONG_NAMED_INTEGER_VALUE */
 
 /**
  * @summary SMFTrigger_startOfServiceDataFlowNoSession
@@ -90,7 +90,7 @@ const SMFTrigger_startOfServiceDataFlowNoSession: SMFTrigger = 2; /* LONG_NAMED_
  * @type {number}
  */
 export
-const startOfServiceDataFlowNoSession: SMFTrigger = SMFTrigger_startOfServiceDataFlowNoSession; /* SHORT_NAMED_INTEGER_VALUE */
+const startOfServiceDataFlowNoSession: 2 = SMFTrigger_startOfServiceDataFlowNoSession; /* SHORT_NAMED_INTEGER_VALUE */
 
 /**
  * @summary SMFTrigger_qoSChange
@@ -98,7 +98,7 @@ const startOfServiceDataFlowNoSession: SMFTrigger = SMFTrigger_startOfServiceDat
  * @type {number}
  */
 export
-const SMFTrigger_qoSChange: SMFTrigger = 100; /* LONG_NAMED_INTEGER_VALUE */
+const SMFTrigger_qoSChange: 100 = 100 satisfies SMFTrigger; /* LONG_NAMED_INTEGER_VALUE */
 
 /**
  * @summary SMFTrigger_qoSChange
@@ -106,7 +106,7 @@ const SMFTrigger_qoSChange: SMFTrigger = 100; /* LONG_NAMED_INTEGER_VALUE */
  * @type {number}
  */
 export
-const qoSChange: SMFTrigger = SMFTrigger_qoSChange; /* SHORT_NAMED_INTEGER_VALUE */
+const qoSChange: 100 = SMFTrigger_qoSChange; /* SHORT_NAMED_INTEGER_VALUE */
 
 /**
  * @summary SMFTrigger_userLocationChange
@@ -114,7 +114,7 @@ const qoSChange: SMFTrigger = SMFTrigger_qoSChange; /* SHORT_NAMED_INTEGER_VALUE
  * @type {number}
  */
 export
-const SMFTrigger_userLocationChange: SMFTrigger = 101; /* LONG_NAMED_INTEGER_VALUE */
+const SMFTrigger_userLocationChange: 101 = 101 satisfies SMFTrigger; /* LONG_NAMED_INTEGER_VALUE */
 
 /**
  * @summary SMFTrigger_userLocationChange
@@ -122,7 +122,7 @@ const SMFTrigger_userLocationChange: SMFTrigger = 101; /* LONG_NAMED_INTEGER_VAL
  * @type {number}
  */
 export
-const userLocationChange: SMFTrigger = SMFTrigger_userLocationChange; /* SHORT_NAMED_INTEGER_VALUE */
+const userLocationChange: 101 = SMFTrigger_userLocationChange; /* SHORT_NAMED_INTEGER_VALUE */
 
 /**
  * @summary SMFTrigger_servingNodeChange
@@ -130,7 +130,7 @@ const userLocationChange: SMFTrigger = SMFTrigger_userLocationChange; /* SHORT_N
  * @type {number}
  */
 export
-const SMFTrigger_servingNodeChange: SMFTrigger = 102; /* LONG_NAMED_INTEGER_VALUE */
+const SMFTrigger_servingNodeChange: 102 = 102 satisfies SMFTrigger; /* LONG_NAMED_INTEGER_VALUE */
 
 /**
  * @summary SMFTrigger_servingNodeChange
@@ -138,7 +138,7 @@ const SMFTrigger_servingNodeChange: SMFTrigger = 102; /* LONG_NAMED_INTEGER_VALU
  * @type {number}
  */
 export
-const servingNodeChange: SMFTrigger = SMFTrigger_servingNodeChange; /* SHORT_NAMED_INTEGER_VALUE */
+const servingNodeChange: 102 = SMFTrigger_servingNodeChange; /* SHORT_NAMED_INTEGER_VALUE */
 
 /**
  * @summary SMFTrigger_presenceReportingAreaChange
@@ -146,7 +146,7 @@ const servingNodeChange: SMFTrigger = SMFTrigger_servingNodeChange; /* SHORT_NAM
  * @type {number}
  */
 export
-const SMFTrigger_presenceReportingAreaChange: SMFTrigger = 103; /* LONG_NAMED_INTEGER_VALUE */
+const SMFTrigger_presenceReportingAreaChange: 103 = 103 satisfies SMFTrigger; /* LONG_NAMED_INTEGER_VALUE */
 
 /**
  * @summary SMFTrigger_presenceReportingAreaChange
@@ -154,7 +154,7 @@ const SMFTrigger_presenceReportingAreaChange: SMFTrigger = 103; /* LONG_NAMED_IN
  * @type {number}
  */
 export
-const presenceReportingAreaChange: SMFTrigger = SMFTrigger_presenceReportingAreaChange; /* SHORT_NAMED_INTEGER_VALUE */
+const presenceReportingAreaChange: 103 = SMFTrigger_presenceReportingAreaChange; /* SHORT_NAMED_INTEGER_VALUE */
 
 /**
  * @summary SMFTrigger_threeGPPPSDataOffStatusChange
@@ -162,7 +162,7 @@ const presenceReportingAreaChange: SMFTrigger = SMFTrigger_presenceReportingArea
  * @type {number}
  */
 export
-const SMFTrigger_threeGPPPSDataOffStatusChange: SMFTrigger = 104; /* LONG_NAMED_INTEGER_VALUE */
+const SMFTrigger_threeGPPPSDataOffStatusChange: 104 = 104 satisfies SMFTrigger; /* LONG_NAMED_INTEGER_VALUE */
 
 /**
  * @summary SMFTrigger_threeGPPPSDataOffStatusChange
@@ -170,7 +170,7 @@ const SMFTrigger_threeGPPPSDataOffStatusChange: SMFTrigger = 104; /* LONG_NAMED_
  * @type {number}
  */
 export
-const threeGPPPSDataOffStatusChange: SMFTrigger = SMFTrigger_threeGPPPSDataOffStatusChange; /* SHORT_NAMED_INTEGER_VALUE */
+const threeGPPPSDataOffStatusChange: 104 = SMFTrigger_threeGPPPSDataOffStatusChange; /* SHORT_NAMED_INTEGER_VALUE */
 
 /**
  * @summary SMFTrigger_tariffTimeChange
@@ -178,7 +178,7 @@ const threeGPPPSDataOffStatusChange: SMFTrigger = SMFTrigger_threeGPPPSDataOffSt
  * @type {number}
  */
 export
-const SMFTrigger_tariffTimeChange: SMFTrigger = 105; /* LONG_NAMED_INTEGER_VALUE */
+const SMFTrigger_tariffTimeChange: 105 = 105 satisfies SMFTrigger; /* LONG_NAMED_INTEGER_VALUE */
 
 /**
  * @summary SMFTrigger_tariffTimeChange
@@ -186,7 +186,7 @@ const SMFTrigger_tariffTimeChange: SMFTrigger = 105; /* LONG_NAMED_INTEGER_VALUE
  * @type {number}
  */
 export
-const tariffTimeChange: SMFTrigger = SMFTrigger_tariffTimeChange; /* SHORT_NAMED_INTEGER_VALUE */
+const tariffTimeChange: 105 = SMFTrigger_tariffTimeChange; /* SHORT_NAMED_INTEGER_VALUE */
 
 /**
  * @summary SMFTrigger_uETimeZoneChange
@@ -194,7 +194,7 @@ const tariffTimeChange: SMFTrigger = SMFTrigger_tariffTimeChange; /* SHORT_NAMED
  * @type {number}
  */
 export
-const SMFTrigger_uETimeZoneChange: SMFTrigger = 106; /* LONG_NAMED_INTEGER_VALUE */
+const SMFTrigger_uETimeZoneChange: 106 = 106 satisfies SMFTrigger; /* LONG_NAMED_INTEGER_VALUE */
 
 /**
  * @summary SMFTrigger_uETimeZoneChange
@@ -202,7 +202,7 @@ const SMFTrigger_uETimeZoneChange: SMFTrigger = 106; /* LONG_NAMED_INTEGER_VALUE
  * @type {number}
  */
 export
-const uETimeZoneChange: SMFTrigger = SMFTrigger_uETimeZoneChange; /* SHORT_NAMED_INTEGER_VALUE */
+const uETimeZoneChange: 106 = SMFTrigger_uETimeZoneChange; /* SHORT_NAMED_INTEGER_VALUE */
 
 /**
  * @summary SMFTrigger_pLMNChange
@@ -210,7 +210,7 @@ const uETimeZoneChange: SMFTrigger = SMFTrigger_uETimeZoneChange; /* SHORT_NAMED
  * @type {number}
  */
 export
-const SMFTrigger_pLMNChange: SMFTrigger = 107; /* LONG_NAMED_INTEGER_VALUE */
+const SMFTrigger_pLMNChange: 107 = 107 satisfies SMFTrigger; /* LONG_NAMED_INTEGER_VALUE */
 
 /**
  * @summary SMFTrigger_pLMNChange
@@ -218,7 +218,7 @@ const SMFTrigger_pLMNChange: SMFTrigger = 107; /* LONG_NAMED_INTEGER_VALUE */
  * @type {number}
  */
 export
-const pLMNChange: SMFTrigger = SMFTrigger_pLMNChange; /* SHORT_NAMED_INTEGER_VALUE */
+const pLMNChange: 107 = SMFTrigger_pLMNChange; /* SHORT_NAMED_INTEGER_VALUE */
 
 /**
  * @summary SMFTrigger_rATTypeChange
@@ -226,7 +226,7 @@ const pLMNChange: SMFTrigger = SMFTrigger_pLMNChange; /* SHORT_NAMED_INTEGER_VAL
  * @type {number}
  */
 export
-const SMFTrigger_rATTypeChange: SMFTrigger = 108; /* LONG_NAMED_INTEGER_VALUE */
+const SMFTrigger_rATTypeChange: 108 = 108 satisfies SMFTrigger; /* LONG_NAMED_INTEGER_VALUE */
 
 /**
  * @summary SMFTrigger_rATTypeChange
@@ -234,7 +234,7 @@ const SMFTrigger_rATTypeChange: SMFTrigger = 108; /* LONG_NAMED_INTEGER_VALUE */
  * @type {number}
  */
 export
-const rATTypeChange: SMFTrigger = SMFTrigger_rATTypeChange; /* SHORT_NAMED_INTEGER_VALUE */
+const rATTypeChange: 108 = SMFTrigger_rATTypeChange; /* SHORT_NAMED_INTEGER_VALUE */
 
 /**
  * @summary SMFTrigger_sessionAMBRChange
@@ -242,7 +242,7 @@ const rATTypeChange: SMFTrigger = SMFTrigger_rATTypeChange; /* SHORT_NAMED_INTEG
  * @type {number}
  */
 export
-const SMFTrigger_sessionAMBRChange: SMFTrigger = 109; /* LONG_NAMED_INTEGER_VALUE */
+const SMFTrigger_sessionAMBRChange: 109 = 109 satisfies SMFTrigger; /* LONG_NAMED_INTEGER_VALUE */
 
 /**
  * @summary SMFTrigger_sessionAMBRChange
@@ -250,7 +250,7 @@ const SMFTrigger_sessionAMBRChange: SMFTrigger = 109; /* LONG_NAMED_INTEGER_VALU
  * @type {number}
  */
 export
-const sessionAMBRChange: SMFTrigger = SMFTrigger_sessionAMBRChange; /* SHORT_NAMED_INTEGER_VALUE */
+const sessionAMBRChange: 109 = SMFTrigger_sessionAMBRChange; /* SHORT_NAMED_INTEGER_VALUE */
 
 /**
  * @summary SMFTrigger_additionOfUPF
@@ -258,7 +258,7 @@ const sessionAMBRChange: SMFTrigger = SMFTrigger_sessionAMBRChange; /* SHORT_NAM
  * @type {number}
  */
 export
-const SMFTrigger_additionOfUPF: SMFTrigger = 110; /* LONG_NAMED_INTEGER_VALUE */
+const SMFTrigger_additionOfUPF: 110 = 110 satisfies SMFTrigger; /* LONG_NAMED_INTEGER_VALUE */
 
 /**
  * @summary SMFTrigger_additionOfUPF
@@ -266,7 +266,7 @@ const SMFTrigger_additionOfUPF: SMFTrigger = 110; /* LONG_NAMED_INTEGER_VALUE */
  * @type {number}
  */
 export
-const additionOfUPF: SMFTrigger = SMFTrigger_additionOfUPF; /* SHORT_NAMED_INTEGER_VALUE */
+const additionOfUPF: 110 = SMFTrigger_additionOfUPF; /* SHORT_NAMED_INTEGER_VALUE */
 
 /**
  * @summary SMFTrigger_removalOfUPF
@@ -274,7 +274,7 @@ const additionOfUPF: SMFTrigger = SMFTrigger_additionOfUPF; /* SHORT_NAMED_INTEG
  * @type {number}
  */
 export
-const SMFTrigger_removalOfUPF: SMFTrigger = 111; /* LONG_NAMED_INTEGER_VALUE */
+const SMFTrigger_removalOfUPF: 111 = 111 satisfies SMFTrigger; /* LONG_NAMED_INTEGER_VALUE */
 
 /**
  * @summary SMFTrigger_removalOfUPF
@@ -282,7 +282,7 @@ const SMFTrigger_removalOfUPF: SMFTrigger = 111; /* LONG_NAMED_INTEGER_VALUE */
  * @type {number}
  */
 export
-const removalOfUPF: SMFTrigger = SMFTrigger_removalOfUPF; /* SHORT_NAMED_INTEGER_VALUE */
+const removalOfUPF: 111 = SMFTrigger_removalOfUPF; /* SHORT_NAMED_INTEGER_VALUE */
 
 /**
  * @summary SMFTrigger_gFBRGuaranteedStatusChange
@@ -290,7 +290,7 @@ const removalOfUPF: SMFTrigger = SMFTrigger_removalOfUPF; /* SHORT_NAMED_INTEGER
  * @type {number}
  */
 export
-const SMFTrigger_gFBRGuaranteedStatusChange: SMFTrigger = 115; /* LONG_NAMED_INTEGER_VALUE */
+const SMFTrigger_gFBRGuaranteedStatusChange: 115 = 115 satisfies SMFTrigger; /* LONG_NAMED_INTEGER_VALUE */
 
 /**
  * @summary SMFTrigger_gFBRGuaranteedStatusChange
@@ -298,7 +298,7 @@ const SMFTrigger_gFBRGuaranteedStatusChange: SMFTrigger = 115; /* LONG_NAMED_INT
  * @type {number}
  */
 export
-const gFBRGuaranteedStatusChange: SMFTrigger = SMFTrigger_gFBRGuaranteedStatusChange; /* SHORT_NAMED_INTEGER_VALUE */
+const gFBRGuaranteedStatusChange: 115 = SMFTrigger_gFBRGuaranteedStatusChange; /* SHORT_NAMED_INTEGER_VALUE */
 
 /**
  * @summary SMFTrigger_pDUSessionExpiryDataTimeLimit
@@ -306,7 +306,7 @@ const gFBRGuaranteedStatusChange: SMFTrigger = SMFTrigger_gFBRGuaranteedStatusCh
  * @type {number}
  */
 export
-const SMFTrigger_pDUSessionExpiryDataTimeLimit: SMFTrigger = 200; /* LONG_NAMED_INTEGER_VALUE */
+const SMFTrigger_pDUSessionExpiryDataTimeLimit: 200 = 200 satisfies SMFTrigger; /* LONG_NAMED_INTEGER_VALUE */
 
 /**
  * @summary SMFTrigger_pDUSessionExpiryDataTimeLimit
@@ -314,7 +314,7 @@ const SMFTrigger_pDUSessionExpiryDataTimeLimit: SMFTrigger = 200; /* LONG_NAMED_
  * @type {number}
  */
 export
-const pDUSessionExpiryDataTimeLimit: SMFTrigger = SMFTrigger_pDUSessionExpiryDataTimeLimit; /* SHORT_NAMED_INTEGER_VALUE */
+const pDUSessionExpiryDataTimeLimit: 200 = SMFTrigger_pDUSessionExpiryDataTimeLimit; /* SHORT_NAMED_INTEGER_VALUE */
 
 /**
  * @summary SMFTrigger_pDUSessionExpiryDataVolumeLimit
@@ -322,7 +322,7 @@ const pDUSessionExpiryDataTimeLimit: SMFTrigger = SMFTrigger_pDUSessionExpiryDat
  * @type {number}
  */
 export
-const SMFTrigger_pDUSessionExpiryDataVolumeLimit: SMFTrigger = 201; /* LONG_NAMED_INTEGER_VALUE */
+const SMFTrigger_pDUSessionExpiryDataVolumeLimit: 201 = 201 satisfies SMFTrigger; /* LONG_NAMED_INTEGER_VALUE */
 
 /**
  * @summary SMFTrigger_pDUSessionExpiryDataVolumeLimit
@@ -330,7 +330,7 @@ const SMFTrigger_pDUSessionExpiryDataVolumeLimit: SMFTrigger = 201; /* LONG_NAME
  * @type {number}
  */
 export
-const pDUSessionExpiryDataVolumeLimit: SMFTrigger = SMFTrigger_pDUSessionExpiryDataVolumeLimit; /* SHORT_NAMED_INTEGER_VALUE */
+const pDUSessionExpiryDataVolumeLimit: 201 = SMFTrigger_pDUSessionExpiryDataVolumeLimit; /* SHORT_NAMED_INTEGER_VALUE */
 
 /**
  * @summary SMFTrigger_pDUSessionExpiryDataEventLimit
@@ -338,7 +338,7 @@ const pDUSessionExpiryDataVolumeLimit: SMFTrigger = SMFTrigger_pDUSessionExpiryD
  * @type {number}
  */
 export
-const SMFTrigger_pDUSessionExpiryDataEventLimit: SMFTrigger = 202; /* LONG_NAMED_INTEGER_VALUE */
+const SMFTrigger_pDUSessionExpiryDataEventLimit: 202 = 202 satisfies SMFTrigger; /* LONG_NAMED_INTEGER_VALUE */
 
 /**
  * @summary SMFTrigger_pDUSessionExpiryDataEventLimit
@@ -346,7 +346,7 @@ const SMFTrigger_pDUSessionExpiryDataEventLimit: SMFTrigger = 202; /* LONG_NAMED
  * @type {number}
  */
 export
-const pDUSessionExpiryDataEventLimit: SMFTrigger = SMFTrigger_pDUSessionExpiryDataEventLimit; /* SHORT_NAMED_INTEGER_VALUE */
+const pDUSessionExpiryDataEventLimit: 202 = SMFTrigger_pDUSessionExpiryDataEventLimit; /* SHORT_NAMED_INTEGER_VALUE */
 
 /**
  * @summary SMFTrigger_pDUSessionExpiryChargingConditionChanges
@@ -354,7 +354,7 @@ const pDUSessionExpiryDataEventLimit: SMFTrigger = SMFTrigger_pDUSessionExpiryDa
  * @type {number}
  */
 export
-const SMFTrigger_pDUSessionExpiryChargingConditionChanges: SMFTrigger = 203; /* LONG_NAMED_INTEGER_VALUE */
+const SMFTrigger_pDUSessionExpiryChargingConditionChanges: 203 = 203 satisfies SMFTrigger; /* LONG_NAMED_INTEGER_VALUE */
 
 /**
  * @summary SMFTrigger_pDUSessionExpiryChargingConditionChanges
@@ -362,7 +362,7 @@ const SMFTrigger_pDUSessionExpiryChargingConditionChanges: SMFTrigger = 203; /* 
  * @type {number}
  */
 export
-const pDUSessionExpiryChargingConditionChanges: SMFTrigger = SMFTrigger_pDUSessionExpiryChargingConditionChanges; /* SHORT_NAMED_INTEGER_VALUE */
+const pDUSessionExpiryChargingConditionChanges: 203 = SMFTrigger_pDUSessionExpiryChargingConditionChanges; /* SHORT_NAMED_INTEGER_VALUE */
 
 /**
  * @summary SMFTrigger_ratingGroupDataTimeLimit
@@ -370,7 +370,7 @@ const pDUSessionExpiryChargingConditionChanges: SMFTrigger = SMFTrigger_pDUSessi
  * @type {number}
  */
 export
-const SMFTrigger_ratingGroupDataTimeLimit: SMFTrigger = 300; /* LONG_NAMED_INTEGER_VALUE */
+const SMFTrigger_ratingGroupDataTimeLimit: 300 = 300 satisfies SMFTrigger; /* LONG_NAMED_INTEGER_VALUE */
 
 /**
  * @summary SMFTrigger_ratingGroupDataTimeLimit
@@ -378,7 +378,7 @@ const SMFTrigger_ratingGroupDataTimeLimit: SMFTrigger = 300; /* LONG_NAMED_INTEG
  * @type {number}
  */
 export
-const ratingGroupDataTimeLimit: SMFTrigger = SMFTrigger_ratingGroupDataTimeLimit; /* SHORT_NAMED_INTEGER_VALUE */
+const ratingGroupDataTimeLimit: 300 = SMFTrigger_ratingGroupDataTimeLimit; /* SHORT_NAMED_INTEGER_VALUE */
 
 /**
  * @summary SMFTrigger_ratingGroupDataVolumeLimit
@@ -386,7 +386,7 @@ const ratingGroupDataTimeLimit: SMFTrigger = SMFTrigger_ratingGroupDataTimeLimit
  * @type {number}
  */
 export
-const SMFTrigger_ratingGroupDataVolumeLimit: SMFTrigger = 301; /* LONG_NAMED_INTEGER_VALUE */
+const SMFTrigger_ratingGroupDataVolumeLimit: 301 = 301 satisfies SMFTrigger; /* LONG_NAMED_INTEGER_VALUE */
 
 /**
  * @summary SMFTrigger_ratingGroupDataVolumeLimit
@@ -394,7 +394,7 @@ const SMFTrigger_ratingGroupDataVolumeLimit: SMFTrigger = 301; /* LONG_NAMED_INT
  * @type {number}
  */
 export
-const ratingGroupDataVolumeLimit: SMFTrigger = SMFTrigger_ratingGroupDataVolumeLimit; /* SHORT_NAMED_INTEGER_VALUE */
+const ratingGroupDataVolumeLimit: 301 = SMFTrigger_ratingGroupDataVolumeLimit; /* SHORT_NAMED_INTEGER_VALUE */
 
 /**
  * @summary SMFTrigger_ratingGroupDataEventLimit
@@ -402,7 +402,7 @@ const ratingGroupDataVolumeLimit: SMFTrigger = SMFTrigger_ratingGroupDataVolumeL
  * @type {number}
  */
 export
-const SMFTrigger_ratingGroupDataEventLimit: SMFTrigger = 302; /* LONG_NAMED_INTEGER_VALUE */
+const SMFTrigger_ratingGroupDataEventLimit: 302 = 302 satisfies SMFTrigger; /* LONG_NAMED_INTEGER_VALUE */
 
 /**
  * @summary SMFTrigger_ratingGroupDataEventLimit
@@ -410,7 +410,7 @@ const SMFTrigger_ratingGroupDataEventLimit: SMFTrigger = 302; /* LONG_NAMED_INTE
  * @type {number}
  */
 export
-const ratingGroupDataEventLimit: SMFTrigger = SMFTrigger_ratingGroupDataEventLimit; /* SHORT_NAMED_INTEGER_VALUE */
+const ratingGroupDataEventLimit: 302 = SMFTrigger_ratingGroupDataEventLimit; /* SHORT_NAMED_INTEGER_VALUE */
 
 /**
  * @summary SMFTrigger_timeThresholdReached
@@ -418,7 +418,7 @@ const ratingGroupDataEventLimit: SMFTrigger = SMFTrigger_ratingGroupDataEventLim
  * @type {number}
  */
 export
-const SMFTrigger_timeThresholdReached: SMFTrigger = 400; /* LONG_NAMED_INTEGER_VALUE */
+const SMFTrigger_timeThresholdReached: 400 = 400 satisfies SMFTrigger; /* LONG_NAMED_INTEGER_VALUE */
 
 /**
  * @summary SMFTrigger_timeThresholdReached
@@ -426,7 +426,7 @@ const SMFTrigger_timeThresholdReached: SMFTrigger = 400; /* LONG_NAMED_INTEGER_V
  * @type {number}
  */
 export
-const timeThresholdReached: SMFTrigger = SMFTrigger_timeThresholdReached; /* SHORT_NAMED_INTEGER_VALUE */
+const timeThresholdReached: 400 = SMFTrigger_timeThresholdReached; /* SHORT_NAMED_INTEGER_VALUE */
 
 /**
  * @summary SMFTrigger_volumeThresholdReached
@@ -434,7 +434,7 @@ const timeThresholdReached: SMFTrigger = SMFTrigger_timeThresholdReached; /* SHO
  * @type {number}
  */
 export
-const SMFTrigger_volumeThresholdReached: SMFTrigger = 401; /* LONG_NAMED_INTEGER_VALUE */
+const SMFTrigger_volumeThresholdReached: 401 = 401 satisfies SMFTrigger; /* LONG_NAMED_INTEGER_VALUE */
 
 /**
  * @summary SMFTrigger_volumeThresholdReached
@@ -442,7 +442,7 @@ const SMFTrigger_volumeThresholdReached: SMFTrigger = 401; /* LONG_NAMED_INTEGER
  * @type {number}
  */
 export
-const volumeThresholdReached: SMFTrigger = SMFTrigger_volumeThresholdReached; /* SHORT_NAMED_INTEGER_VALUE */
+const volumeThresholdReached: 401 = SMFTrigger_volumeThresholdReached; /* SHORT_NAMED_INTEGER_VALUE */
 
 /**
  * @summary SMFTrigger_unitThresholdReached
@@ -450,7 +450,7 @@ const volumeThresholdReached: SMFTrigger = SMFTrigger_volumeThresholdReached; /*
  * @type {number}
  */
 export
-const SMFTrigger_unitThresholdReached: SMFTrigger = 402; /* LONG_NAMED_INTEGER_VALUE */
+const SMFTrigger_unitThresholdReached: 402 = 402 satisfies SMFTrigger; /* LONG_NAMED_INTEGER_VALUE */
 
 /**
  * @summary SMFTrigger_unitThresholdReached
@@ -458,7 +458,7 @@ const SMFTrigger_unitThresholdReached: SMFTrigger = 402; /* LONG_NAMED_INTEGER_V
  * @type {number}
  */
 export
-const unitThresholdReached: SMFTrigger = SMFTrigger_unitThresholdReached; /* SHORT_NAMED_INTEGER_VALUE */
+const unitThresholdReached: 402 = SMFTrigger_unitThresholdReached; /* SHORT_NAMED_INTEGER_VALUE */
 
 /**
  * @summary SMFTrigger_timeQuotaExhausted
@@ -466,7 +466,7 @@ const unitThresholdReached: SMFTrigger = SMFTrigger_unitThresholdReached; /* SHO
  * @type {number}
  */
 export
-const SMFTrigger_timeQuotaExhausted: SMFTrigger = 403; /* LONG_NAMED_INTEGER_VALUE */
+const SMFTrigger_timeQuotaExhausted: 403 = 403 satisfies SMFTrigger; /* LONG_NAMED_INTEGER_VALUE */
 
 /**
  * @summary SMFTrigger_timeQuotaExhausted
@@ -474,7 +474,7 @@ const SMFTrigger_timeQuotaExhausted: SMFTrigger = 403; /* LONG_NAMED_INTEGER_VAL
  * @type {number}
  */
 export
-const timeQuotaExhausted: SMFTrigger = SMFTrigger_timeQuotaExhausted; /* SHORT_NAMED_INTEGER_VALUE */
+const timeQuotaExhausted: 403 = SMFTrigger_timeQuotaExhausted; /* SHORT_NAMED_INTEGER_VALUE */
 
 /**
  * @summary SMFTrigger_volumeQuotaExhausted
@@ -482,7 +482,7 @@ const timeQuotaExhausted: SMFTrigger = SMFTrigger_timeQuotaExhausted; /* SHORT_N
  * @type {number}
  */
 export
-const SMFTrigger_volumeQuotaExhausted: SMFTrigger = 404; /* LONG_NAMED_INTEGER_VALUE */
+const SMFTrigger_volumeQuotaExhausted: 404 = 404 satisfies SMFTrigger; /* LONG_NAMED_INTEGER_VALUE */
 
 /**
  * @summary SMFTrigger_volumeQuotaExhausted
@@ -490,7 +490,7 @@ const SMFTrigger_volumeQuotaExhausted: SMFTrigger = 404; /* LONG_NAMED_INTEGER_V
  * @type {number}
  */
 export
-const volumeQuotaExhausted: SMFTrigger = SMFTrigger_volumeQuotaExhausted; /* SHORT_NAMED_INTEGER_VALUE */
+const volumeQuotaExhausted: 404 = SMFTrigger_volumeQuotaExhausted; /* SHORT_NAMED_INTEGER_VALUE */
 
 /**
  * @summary SMFTrigger_unitQuotaExhausted
@@ -498,7 +498,7 @@ const volumeQuotaExhausted: SMFTrigger = SMFTrigger_volumeQuotaExhausted; /* SHO
  * @type {number}
  */
 export
-const SMFTrigger_unitQuotaExhausted: SMFTrigger = 405; /* LONG_NAMED_INTEGER_VALUE */
+const SMFTrigger_unitQuotaExhausted: 405 = 405 satisfies SMFTrigger; /* LONG_NAMED_INTEGER_VALUE */
 
 /**
  * @summary SMFTrigger_unitQuotaExhausted
@@ -506,7 +506,7 @@ const SMFTrigger_unitQuotaExhausted: SMFTrigger = 405; /* LONG_NAMED_INTEGER_VAL
  * @type {number}
  */
 export
-const unitQuotaExhausted: SMFTrigger = SMFTrigger_unitQuotaExhausted; /* SHORT_NAMED_INTEGER_VALUE */
+const unitQuotaExhausted: 405 = SMFTrigger_unitQuotaExhausted; /* SHORT_NAMED_INTEGER_VALUE */
 
 /**
  * @summary SMFTrigger_expiryOfQuotaValidityTime
@@ -514,7 +514,7 @@ const unitQuotaExhausted: SMFTrigger = SMFTrigger_unitQuotaExhausted; /* SHORT_N
  * @type {number}
  */
 export
-const SMFTrigger_expiryOfQuotaValidityTime: SMFTrigger = 406; /* LONG_NAMED_INTEGER_VALUE */
+const SMFTrigger_expiryOfQuotaValidityTime: 406 = 406 satisfies SMFTrigger; /* LONG_NAMED_INTEGER_VALUE */
 
 /**
  * @summary SMFTrigger_expiryOfQuotaValidityTime
@@ -522,7 +522,7 @@ const SMFTrigger_expiryOfQuotaValidityTime: SMFTrigger = 406; /* LONG_NAMED_INTE
  * @type {number}
  */
 export
-const expiryOfQuotaValidityTime: SMFTrigger = SMFTrigger_expiryOfQuotaValidityTime; /* SHORT_NAMED_INTEGER_VALUE */
+const expiryOfQuotaValidityTime: 406 = SMFTrigger_expiryOfQuotaValidityTime; /* SHORT_NAMED_INTEGER_VALUE */
 
 /**
  * @summary SMFTrigger_reAuthorizationRequest
@@ -530,7 +530,7 @@ const expiryOfQuotaValidityTime: SMFTrigger = SMFTrigger_expiryOfQuotaValidityTi
  * @type {number}
  */
 export
-const SMFTrigger_reAuthorizationRequest: SMFTrigger = 407; /* LONG_NAMED_INTEGER_VALUE */
+const SMFTrigger_reAuthorizationRequest: 407 = 407 satisfies SMFTrigger; /* LONG_NAMED_INTEGER_VALUE */
 
 /**
  * @summary SMFTrigger_reAuthorizationRequest
@@ -538,7 +538,7 @@ const SMFTrigger_reAuthorizationRequest: SMFTrigger = 407; /* LONG_NAMED_INTEGER
  * @type {number}
  */
 export
-const reAuthorizationRequest: SMFTrigger = SMFTrigger_reAuthorizationRequest; /* SHORT_NAMED_INTEGER_VALUE */
+const reAuthorizationRequest: 407 = SMFTrigger_reAuthorizationRequest; /* SHORT_NAMED_INTEGER_VALUE */
 
 /**
  * @summary SMFTrigger_startOfServiceDataFlowNoValidQuota
@@ -546,7 +546,7 @@ const reAuthorizationRequest: SMFTrigger = SMFTrigger_reAuthorizationRequest; /*
  * @type {number}
  */
 export
-const SMFTrigger_startOfServiceDataFlowNoValidQuota: SMFTrigger = 408; /* LONG_NAMED_INTEGER_VALUE */
+const SMFTrigger_startOfServiceDataFlowNoValidQuota: 408 = 408 satisfies SMFTrigger; /* LONG_NAMED_INTEGER_VALUE */
 
 /**
  * @summary SMFTrigger_startOfServiceDataFlowNoValidQuota
@@ -554,7 +554,7 @@ const SMFTrigger_startOfServiceDataFlowNoValidQuota: SMFTrigger = 408; /* LONG_N
  * @type {number}
  */
 export
-const startOfServiceDataFlowNoValidQuota: SMFTrigger = SMFTrigger_startOfServiceDataFlowNoValidQuota; /* SHORT_NAMED_INTEGER_VALUE */
+const startOfServiceDataFlowNoValidQuota: 408 = SMFTrigger_startOfServiceDataFlowNoValidQuota; /* SHORT_NAMED_INTEGER_VALUE */
 
 /**
  * @summary SMFTrigger_otherQuotaType
@@ -562,7 +562,7 @@ const startOfServiceDataFlowNoValidQuota: SMFTrigger = SMFTrigger_startOfService
  * @type {number}
  */
 export
-const SMFTrigger_otherQuotaType: SMFTrigger = 409; /* LONG_NAMED_INTEGER_VALUE */
+const SMFTrigger_otherQuotaType: 409 = 409 satisfies SMFTrigger; /* LONG_NAMED_INTEGER_VALUE */
 
 /**
  * @summary SMFTrigger_otherQuotaType
@@ -570,7 +570,7 @@ const SMFTrigger_otherQuotaType: SMFTrigger = 409; /* LONG_NAMED_INTEGER_VALUE *
  * @type {number}
  */
 export
-const otherQuotaType: SMFTrigger = SMFTrigger_otherQuotaType; /* SHORT_NAMED_INTEGER_VALUE */
+const otherQuotaType: 409 = SMFTrigger_otherQuotaType; /* SHORT_NAMED_INTEGER_VALUE */
 
 /**
  * @summary SMFTrigger_terminationOfServiceDataFlow
@@ -578,7 +578,7 @@ const otherQuotaType: SMFTrigger = SMFTrigger_otherQuotaType; /* SHORT_NAMED_INT
  * @type {number}
  */
 export
-const SMFTrigger_terminationOfServiceDataFlow: SMFTrigger = 500; /* LONG_NAMED_INTEGER_VALUE */
+const SMFTrigger_terminationOfServiceDataFlow: 500 = 500 satisfies SMFTrigger; /* LONG_NAMED_INTEGER_VALUE */
 
 /**
  * @summary SMFTrigger_terminationOfServiceDataFlow
@@ -586,7 +586,7 @@ const SMFTrigger_terminationOfServiceDataFlow: SMFTrigger = 500; /* LONG_NAMED_I
  * @type {number}
  */
 export
-const terminationOfServiceDataFlow: SMFTrigger = SMFTrigger_terminationOfServiceDataFlow; /* SHORT_NAMED_INTEGER_VALUE */
+const terminationOfServiceDataFlow: 500 = SMFTrigger_terminationOfServiceDataFlow; /* SHORT_NAMED_INTEGER_VALUE */
 
 /**
  * @summary SMFTrigger_managementIntervention
@@ -594,7 +594,7 @@ const terminationOfServiceDataFlow: SMFTrigger = SMFTrigger_terminationOfService
  * @type {number}
  */
 export
-const SMFTrigger_managementIntervention: SMFTrigger = 501; /* LONG_NAMED_INTEGER_VALUE */
+const SMFTrigger_managementIntervention: 501 = 501 satisfies SMFTrigger; /* LONG_NAMED_INTEGER_VALUE */
 
 /**
  * @summary SMFTrigger_managementIntervention
@@ -602,7 +602,7 @@ const SMFTrigger_managementIntervention: SMFTrigger = 501; /* LONG_NAMED_INTEGER
  * @type {number}
  */
 export
-const managementIntervention: SMFTrigger = SMFTrigger_managementIntervention; /* SHORT_NAMED_INTEGER_VALUE */
+const managementIntervention: 501 = SMFTrigger_managementIntervention; /* SHORT_NAMED_INTEGER_VALUE */
 
 /**
  * @summary SMFTrigger_unitCountInactivityTimer
@@ -610,7 +610,7 @@ const managementIntervention: SMFTrigger = SMFTrigger_managementIntervention; /*
  * @type {number}
  */
 export
-const SMFTrigger_unitCountInactivityTimer: SMFTrigger = 502; /* LONG_NAMED_INTEGER_VALUE */
+const SMFTrigger_unitCountInactivityTimer: 502 = 502 satisfies SMFTrigger; /* LONG_NAMED_INTEGER_VALUE */
 
 /**
  * @summary SMFTrigger_unitCountInactivityTimer
@@ -618,7 +618,7 @@ const SMFTrigger_unitCountInactivityTimer: SMFTrigger = 502; /* LONG_NAMED_INTEG
  * @type {number}
  */
 export
-const unitCountInactivityTimer: SMFTrigger = SMFTrigger_unitCountInactivityTimer; /* SHORT_NAMED_INTEGER_VALUE */
+const unitCountInactivityTimer: 502 = SMFTrigger_unitCountInactivityTimer; /* SHORT_NAMED_INTEGER_VALUE */
 
 /**
  * @summary SMFTrigger_endOfPDUSession
@@ -626,7 +626,7 @@ const unitCountInactivityTimer: SMFTrigger = SMFTrigger_unitCountInactivityTimer
  * @type {number}
  */
 export
-const SMFTrigger_endOfPDUSession: SMFTrigger = 503; /* LONG_NAMED_INTEGER_VALUE */
+const SMFTrigger_endOfPDUSession: 503 = 503 satisfies SMFTrigger; /* LONG_NAMED_INTEGER_VALUE */
 
 /**
  * @summary SMFTrigger_endOfPDUSession
@@ -634,7 +634,7 @@ const SMFTrigger_endOfPDUSession: SMFTrigger = 503; /* LONG_NAMED_INTEGER_VALUE 
  * @type {number}
  */
 export
-const endOfPDUSession: SMFTrigger = SMFTrigger_endOfPDUSession; /* SHORT_NAMED_INTEGER_VALUE */
+const endOfPDUSession: 503 = SMFTrigger_endOfPDUSession; /* SHORT_NAMED_INTEGER_VALUE */
 
 /**
  * @summary SMFTrigger_cHFResponseWithSessionTermination
@@ -642,7 +642,7 @@ const endOfPDUSession: SMFTrigger = SMFTrigger_endOfPDUSession; /* SHORT_NAMED_I
  * @type {number}
  */
 export
-const SMFTrigger_cHFResponseWithSessionTermination: SMFTrigger = 504; /* LONG_NAMED_INTEGER_VALUE */
+const SMFTrigger_cHFResponseWithSessionTermination: 504 = 504 satisfies SMFTrigger; /* LONG_NAMED_INTEGER_VALUE */
 
 /**
  * @summary SMFTrigger_cHFResponseWithSessionTermination
@@ -650,7 +650,7 @@ const SMFTrigger_cHFResponseWithSessionTermination: SMFTrigger = 504; /* LONG_NA
  * @type {number}
  */
 export
-const cHFResponseWithSessionTermination: SMFTrigger = SMFTrigger_cHFResponseWithSessionTermination; /* SHORT_NAMED_INTEGER_VALUE */
+const cHFResponseWithSessionTermination: 504 = SMFTrigger_cHFResponseWithSessionTermination; /* SHORT_NAMED_INTEGER_VALUE */
 
 /**
  * @summary SMFTrigger_cHFAbortRequest
@@ -658,7 +658,7 @@ const cHFResponseWithSessionTermination: SMFTrigger = SMFTrigger_cHFResponseWith
  * @type {number}
  */
 export
-const SMFTrigger_cHFAbortRequest: SMFTrigger = 505; /* LONG_NAMED_INTEGER_VALUE */
+const SMFTrigger_cHFAbortRequest: 505 = 505 satisfies SMFTrigger; /* LONG_NAMED_INTEGER_VALUE */
 
 /**
  * @summary SMFTrigger_cHFAbortRequest
@@ -666,7 +666,7 @@ const SMFTrigger_cHFAbortRequest: SMFTrigger = 505; /* LONG_NAMED_INTEGER_VALUE 
  * @type {number}
  */
 export
-const cHFAbortRequest: SMFTrigger = SMFTrigger_cHFAbortRequest; /* SHORT_NAMED_INTEGER_VALUE */
+const cHFAbortRequest: 505 = SMFTrigger_cHFAbortRequest; /* SHORT_NAMED_INTEGER_VALUE */
 
 /**
  * @summary SMFTrigger_abnormalRelease
@@ -674,7 +674,7 @@ const cHFAbortRequest: SMFTrigger = SMFTrigger_cHFAbortRequest; /* SHORT_NAMED_I
  * @type {number}
  */
 export
-const SMFTrigger_abnormalRelease: SMFTrigger = 506; /* LONG_NAMED_INTEGER_VALUE */
+const SMFTrigger_abnormalRelease: 506 = 506 satisfies SMFTrigger; /* LONG_NAMED_INTEGER_VALUE */
 
 /**
  * @summary SMFTrigger_abnormalRelease
@@ -682,7 +682,7 @@ const SMFTrigger_abnormalRelease: SMFTrigger = 506; /* LONG_NAMED_INTEGER_VALUE 
  * @type {number}
  */
 export
-const abnormalRelease: SMFTrigger = SMFTrigger_abnormalRelease; /* SHORT_NAMED_INTEGER_VALUE */
+const abnormalRelease: 506 = SMFTrigger_abnormalRelease; /* SHORT_NAMED_INTEGER_VALUE */
 
 /**
  * @summary SMFTrigger_qoSFlowExpiryDataTimeLimit
@@ -690,7 +690,7 @@ const abnormalRelease: SMFTrigger = SMFTrigger_abnormalRelease; /* SHORT_NAMED_I
  * @type {number}
  */
 export
-const SMFTrigger_qoSFlowExpiryDataTimeLimit: SMFTrigger = 600; /* LONG_NAMED_INTEGER_VALUE */
+const SMFTrigger_qoSFlowExpiryDataTimeLimit: 600 = 600 satisfies SMFTrigger; /* LONG_NAMED_INTEGER_VALUE */
 
 /**
  * @summary SMFTrigger_qoSFlowExpiryDataTimeLimit
@@ -698,7 +698,7 @@ const SMFTrigger_qoSFlowExpiryDataTimeLimit: SMFTrigger = 600; /* LONG_NAMED_INT
  * @type {number}
  */
 export
-const qoSFlowExpiryDataTimeLimit: SMFTrigger = SMFTrigger_qoSFlowExpiryDataTimeLimit; /* SHORT_NAMED_INTEGER_VALUE */
+const qoSFlowExpiryDataTimeLimit: 600 = SMFTrigger_qoSFlowExpiryDataTimeLimit; /* SHORT_NAMED_INTEGER_VALUE */
 
 /**
  * @summary SMFTrigger_qoSFlowExpiryDataVolumeLimit
@@ -706,7 +706,7 @@ const qoSFlowExpiryDataTimeLimit: SMFTrigger = SMFTrigger_qoSFlowExpiryDataTimeL
  * @type {number}
  */
 export
-const SMFTrigger_qoSFlowExpiryDataVolumeLimit: SMFTrigger = 601; /* LONG_NAMED_INTEGER_VALUE */
+const SMFTrigger_qoSFlowExpiryDataVolumeLimit: 601 = 601 satisfies SMFTrigger; /* LONG_NAMED_INTEGER_VALUE */
 
 /**
  * @summary SMFTrigger_qoSFlowExpiryDataVolumeLimit
@@ -714,7 +714,7 @@ const SMFTrigger_qoSFlowExpiryDataVolumeLimit: SMFTrigger = 601; /* LONG_NAMED_I
  * @type {number}
  */
 export
-const qoSFlowExpiryDataVolumeLimit: SMFTrigger = SMFTrigger_qoSFlowExpiryDataVolumeLimit; /* SHORT_NAMED_INTEGER_VALUE */
+const qoSFlowExpiryDataVolumeLimit: 601 = SMFTrigger_qoSFlowExpiryDataVolumeLimit; /* SHORT_NAMED_INTEGER_VALUE */
 
 export
 const _decode_SMFTrigger: $.ASN1Decoder<SMFTrigger> = $._decodeInteger;

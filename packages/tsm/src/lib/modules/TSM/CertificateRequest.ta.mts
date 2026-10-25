@@ -1,6 +1,6 @@
 /* eslint-disable */
 import {
-    ASN1Element as _Element,
+    type ASN1Element as _Element,
     ASN1TagClass as _TagClass,
     ASN1Construction as _Construction,
     ASN1UniversalType as _UniversalType,
@@ -10,9 +10,9 @@ import {
     ASN1ConstructionError as _ConstructionError,
 } from "@wildboar/asn1";
 import * as $ from "@wildboar/asn1/functional";
-import { ClientCertificateTypes, _decode_ClientCertificateTypes, _encode_ClientCertificateTypes } from "../TSM/ClientCertificateTypes.ta.mjs";
+import { type ClientCertificateTypes, _decode_ClientCertificateTypes, _encode_ClientCertificateTypes } from "../TSM/ClientCertificateTypes.ta.mjs";
 
-import { DistinguishedNames, _decode_DistinguishedNames, _encode_DistinguishedNames } from "../TSM/DistinguishedNames.ta.mjs";
+import { type DistinguishedNames, _decode_DistinguishedNames, _encode_DistinguishedNames } from "../TSM/DistinguishedNames.ta.mjs";
 
 
 
@@ -36,28 +36,34 @@ import { DistinguishedNames, _decode_DistinguishedNames, _encode_DistinguishedNa
  */
 export
 class CertificateRequest {
+    /**
+     * @summary `certificate_types`.
+     * @description
+     *
+     * Acceptable client certificate types. X.1084 Annex A.
+     *
+     * @public
+     * @readonly
+     */
+    public readonly certificate_types: ClientCertificateTypes;
+    /**
+     * @summary `certificate_authorities`.
+     * @description
+     *
+     * Acceptable CA distinguished names. X.1084 Annex A.
+     *
+     * @public
+     * @readonly
+     */
+    public readonly certificate_authorities: DistinguishedNames;
+
     constructor (
-        /**
-         * @summary `certificate_types`.
-         * @description
-         *
-         * Acceptable client certificate types. X.1084 Annex A.
-         *
-         * @public
-         * @readonly
-         */
-        readonly certificate_types: ClientCertificateTypes,
-        /**
-         * @summary `certificate_authorities`.
-         * @description
-         *
-         * Acceptable CA distinguished names. X.1084 Annex A.
-         *
-         * @public
-         * @readonly
-         */
-        readonly certificate_authorities: DistinguishedNames
-    ) {}
+        certificate_types: ClientCertificateTypes,
+        certificate_authorities: DistinguishedNames
+    ) {
+        this.certificate_types = certificate_types;
+        this.certificate_authorities = certificate_authorities;
+    }
 
     /**
      * @summary Restructures an object into a CertificateRequest

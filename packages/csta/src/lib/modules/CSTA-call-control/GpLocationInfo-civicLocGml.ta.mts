@@ -2,11 +2,11 @@
 
 import * as $ from "@wildboar/asn1/functional";
 import {
-    OPTIONAL,
-    OCTET_STRING,
-    SEQUENCE,
-    SET,
-    ASN1Element as _Element,
+    type OPTIONAL,
+    type OCTET_STRING,
+    type SEQUENCE,
+    type SET,
+    type ASN1Element as _Element,
     ASN1TagClass as _TagClass
 } from "@wildboar/asn1";
 import {
@@ -40,29 +40,35 @@ import {
  */
 export
 class GpLocationInfo_civicLocGml {
+    /**
+     * @summary `gmlFormat`.
+     * @description
+     *
+     * GML 3.0 document. ECMA-285 §9.9.
+     *
+     * @public
+     * @readonly
+     */
+    public readonly gmlFormat: OCTET_STRING;
+    /**
+     * @summary `civicLoc`.
+     * @description
+     *
+     * Civic-address types (RFC 4776 / IANA). ECMA-269
+     * §6.8.1.1.
+     *
+     * @public
+     * @readonly
+     */
+    public readonly civicLoc?: OPTIONAL<GpLocationInfo_civicLocGml_civicLoc>;
+
     constructor (
-        /**
-         * @summary `gmlFormat`.
-         * @description
-         *
-         * GML 3.0 document. ECMA-285 §9.9.
-         *
-         * @public
-         * @readonly
-         */
-        readonly gmlFormat: OCTET_STRING,
-        /**
-         * @summary `civicLoc`.
-         * @description
-         *
-         * Civic-address types (RFC 4776 / IANA). ECMA-269
-         * §6.8.1.1.
-         *
-         * @public
-         * @readonly
-         */
-        readonly civicLoc?: OPTIONAL<GpLocationInfo_civicLocGml_civicLoc>
-    ) {}
+        gmlFormat: OCTET_STRING,
+        civicLoc?: OPTIONAL<GpLocationInfo_civicLocGml_civicLoc>
+    ) {
+        this.gmlFormat = gmlFormat;
+        this.civicLoc = civicLoc;
+    }
 
     /**
      * @summary Restructures an object into a GpLocationInfo_civicLocGml

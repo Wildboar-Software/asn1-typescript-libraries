@@ -1,7 +1,7 @@
 /* eslint-disable */
 import {
-    OPTIONAL,
-    ASN1Element as _Element,
+    type OPTIONAL,
+    type ASN1Element as _Element,
     ASN1TagClass as _TagClass,
     ASN1Construction as _Construction,
     ASN1UniversalType as _UniversalType,
@@ -12,7 +12,7 @@ import {
 } from '@wildboar/asn1';
 import * as $ from '@wildboar/asn1/functional';
 import {
-    MessageDeliveryTime,
+    type MessageDeliveryTime,
     _decode_MessageDeliveryTime,
     _encode_MessageDeliveryTime,
 } from '../MTSAbstractService/MessageDeliveryTime.ta.mjs';
@@ -22,7 +22,7 @@ import {
     _encode_OtherMessageDeliveryFields,
 } from '../MTSAbstractService/OtherMessageDeliveryFields.ta.mjs';
 import {
-    EDISupplementaryInformation,
+    type EDISupplementaryInformation,
     _decode_EDISupplementaryInformation,
     _encode_EDISupplementaryInformation,
 } from '../EDIMSInformationObjects/EDISupplementaryInformation.ta.mjs';
@@ -44,26 +44,34 @@ import {
  *
  */
 export class MessageParameters {
+    /**
+     * @summary `delivery_time`.
+     * @public
+     * @readonly
+     */
+    public readonly delivery_time?: OPTIONAL<MessageDeliveryTime>;
+    /**
+     * @summary `delivery_envelope`.
+     * @public
+     * @readonly
+     */
+    public readonly delivery_envelope?: OPTIONAL<OtherMessageDeliveryFields>;
+    /**
+     * @summary `other_parameters`.
+     * @public
+     * @readonly
+     */
+    public readonly other_parameters?: OPTIONAL<EDISupplementaryInformation>;
+
     constructor(
-        /**
-         * @summary `delivery_time`.
-         * @public
-         * @readonly
-         */
-        readonly delivery_time?: OPTIONAL<MessageDeliveryTime>,
-        /**
-         * @summary `delivery_envelope`.
-         * @public
-         * @readonly
-         */
-        readonly delivery_envelope?: OPTIONAL<OtherMessageDeliveryFields>,
-        /**
-         * @summary `other_parameters`.
-         * @public
-         * @readonly
-         */
-        readonly other_parameters?: OPTIONAL<EDISupplementaryInformation>
-    ) {}
+        delivery_time?: OPTIONAL<MessageDeliveryTime>,
+        delivery_envelope?: OPTIONAL<OtherMessageDeliveryFields>,
+        other_parameters?: OPTIONAL<EDISupplementaryInformation>
+    ) {
+        this.delivery_time = delivery_time;
+        this.delivery_envelope = delivery_envelope;
+        this.other_parameters = other_parameters;
+    }
 
     /**
      * @summary Restructures an object into a MessageParameters

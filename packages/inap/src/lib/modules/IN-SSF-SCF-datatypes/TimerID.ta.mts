@@ -1,4 +1,5 @@
 /* eslint-disable */
+import { ASN1Element as _Element, ASN1ConstructionError as _ConstructionError } from "@wildboar/asn1";
 import * as $ from "@wildboar/asn1/functional";
 
 
@@ -48,7 +49,7 @@ type TimerID = _enum_for_TimerID;
  * @enum {number}
  */
 export
-const TimerID = _enum_for_TimerID;
+const TimerID: typeof _enum_for_TimerID = _enum_for_TimerID;
 
 /**
  * @summary TimerID_tssf
@@ -56,7 +57,7 @@ const TimerID = _enum_for_TimerID;
  * @type {number}
  */
 export
-const TimerID_tssf: TimerID = TimerID.tssf; /* LONG_NAMED_ENUMERATED_VALUE */
+const TimerID_tssf: _enum_for_TimerID.tssf = TimerID.tssf; /* LONG_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary tssf
@@ -64,12 +65,22 @@ const TimerID_tssf: TimerID = TimerID.tssf; /* LONG_NAMED_ENUMERATED_VALUE */
  * @type {number}
  */
 export
-const tssf: TimerID = TimerID.tssf; /* SHORT_NAMED_ENUMERATED_VALUE */
+const tssf: _enum_for_TimerID.tssf = TimerID.tssf; /* SHORT_NAMED_ENUMERATED_VALUE */
 
 export
-const _decode_TimerID: $.ASN1Decoder<TimerID> = $._decodeEnumerated;
+function _decode_TimerID(el: _Element): TimerID {
+    const enumerated = $._decodeEnumerated(el);
+    switch (enumerated) {
+        case TimerID.tssf: return TimerID.tssf;
+        default:
+            throw new _ConstructionError(
+                "Invalid ENUMERATED value " + enumerated + " for TimerID.",
+                el,
+            );
+    }
+}
 
 export
-const _encode_TimerID: $.ASN1Encoder<TimerID> = $._encodeEnumerated;
+const _encode_TimerID: $.ASN1Encoder<TimerID> = $._encodeEnumerated as $.ASN1Encoder<TimerID>;
 
 /* eslint-enable */

@@ -1,8 +1,8 @@
 /* eslint-disable */
 import {
-    OPTIONAL,
-    BOOLEAN,
-    ASN1Element as _Element,
+    type OPTIONAL,
+    type BOOLEAN,
+    type ASN1Element as _Element,
     ASN1TagClass as _TagClass,
     ASN1Construction as _Construction,
     ASN1UniversalType as _UniversalType,
@@ -34,9 +34,9 @@ import { type InformationToSend, _decode_InformationToSend, _encode_InformationT
  * PromptAndCollectUserInformationArg {PARAMETERS-BOUND : bound} ::= SEQUENCE {
  *     collectedInfo            [0] CollectedInfo,
  *     disconnectFromIPForbidden        [1] BOOLEAN    DEFAULT TRUE,
- *     informationToSend            [2] InformationToSend {bound}        OPTIONAL,
- *     extensions                [3] Extensions {bound}            OPTIONAL,
- *     callSegmentID            [4]    CallSegmentID {bound}            OPTIONAL,
+ *     informationToSend            [2] InformationToSend {bound}        type OPTIONAL,
+ *     extensions                [3] Extensions {bound}            type OPTIONAL,
+ *     callSegmentID            [4]    CallSegmentID {bound}            type OPTIONAL,
  *     requestAnnouncementStartedNotification [51] BOOLEAN DEFAULT FALSE,
  *     ...
  *     }
@@ -46,97 +46,113 @@ import { type InformationToSend, _decode_InformationToSend, _encode_InformationT
  */
 export
 class PromptAndCollectUserInformationArg {
+    /**
+     * @summary `collectedInfo`.
+     * @description
+     *
+     * Collection criteria (`collectedDigits`). Constraints:
+     * `maximumNbOfDigits` ≥ `minimumNbOfDigits` (else operation
+     * error). `endOfReplyDigit` / `cancelDigit` / `startDigit`
+     * as specified in clause 11.25.1.1. `firstDigitTimeOut`:
+     * first digit (or startDigit) must arrive before expiry;
+     * absent → gsmSRF default. `interDigitTimeOut`: subsequent
+     * digits; reset on each digit; expiry with fewer than min
+     * digits is unsuccessful, with min..max is successful;
+     * absent → gsmSRF default. `errorTreatment`:
+     * reportErrorToSCF → ImproperCallerResponse; help → network
+     * default announcement; repeatPrompt → repeat the prompt
+     * (help/repeatPrompt once per invoke).
+     * `interruptableAnnInd`: TRUE interrupts the announcement on
+     * first digit. `voiceInformation`: TRUE → speech (gsmSRF
+     * speech-to-digits); FALSE → DTMF. `voiceBack`: TRUE
+     * announces valid digits back (not invalid, not endOfReply).
+     * (3GPP TS 29.078 V19.0.0 clause 11.25.1.1).
+     *
+     * @public
+     * @readonly
+     */
+    public readonly collectedInfo: CollectedInfo;
+    /**
+     * @summary `disconnectFromIPForbidden`.
+     * @description
+     *
+     * TRUE (ASN.1 default): gsmSRF shall not initiate disconnect
+     * after the interaction. FALSE: gsmSRF may disconnect.
+     * (3GPP TS 29.078 V19.0.0 clause 11.25.1.1).
+     *
+     * @public
+     * @readonly
+     */
+    public readonly disconnectFromIPForbidden?: OPTIONAL<BOOLEAN>;
+    /**
+     * @summary `informationToSend`.
+     * @description
+     *
+     * Optional announcement or tone to play before/during
+     * collection. Same `inbandInfo` / `tone` structure as
+     * PlayAnnouncement: duration 0 = endless/infinite;
+     * interval only if numberOfRepetitions > 1.
+     * (3GPP TS 29.078 V19.0.0 clause 11.25.1.1).
+     *
+     * @public
+     * @readonly
+     */
+    public readonly informationToSend?: OPTIONAL<InformationToSend>;
+    /**
+     * @summary `extensions`.
+     * @public
+     * @readonly
+     */
+    public readonly extensions?: OPTIONAL<Extensions>;
+    /**
+     * @summary `callSegmentID`.
+     * @description
+     *
+     * Call Segment to which the user interaction applies.
+     * unknownCSID if the CSID is not known.
+     * (3GPP TS 29.078 V19.0.0 clause 11.25.1.1).
+     *
+     * @public
+     * @readonly
+     */
+    public readonly callSegmentID?: OPTIONAL<CallSegmentID>;
+    /**
+     * @summary `requestAnnouncementStartedNotification`.
+     * @description
+     *
+     * TRUE: send SpecializedResourceReport with
+     * `firstAnnouncementStarted` when the first announcement or
+     * tone has started. ASN.1 default FALSE.
+     * (3GPP TS 29.078 V19.0.0 clause 11.25.1.1).
+     *
+     * @public
+     * @readonly
+     */
+    public readonly requestAnnouncementStartedNotification?: OPTIONAL<BOOLEAN>;
+    /**
+     * @summary Extensions that are not recognized.
+     * @public
+     * @readonly
+     */
+    public readonly _unrecognizedExtensionsList: _Element[];
+
     constructor (
-        /**
-         * @summary `collectedInfo`.
-         * @description
-         *
-         * Collection criteria (`collectedDigits`). Constraints:
-         * `maximumNbOfDigits` ≥ `minimumNbOfDigits` (else operation
-         * error). `endOfReplyDigit` / `cancelDigit` / `startDigit`
-         * as specified in clause 11.25.1.1. `firstDigitTimeOut`:
-         * first digit (or startDigit) must arrive before expiry;
-         * absent → gsmSRF default. `interDigitTimeOut`: subsequent
-         * digits; reset on each digit; expiry with fewer than min
-         * digits is unsuccessful, with min..max is successful;
-         * absent → gsmSRF default. `errorTreatment`:
-         * reportErrorToSCF → ImproperCallerResponse; help → network
-         * default announcement; repeatPrompt → repeat the prompt
-         * (help/repeatPrompt once per invoke).
-         * `interruptableAnnInd`: TRUE interrupts the announcement on
-         * first digit. `voiceInformation`: TRUE → speech (gsmSRF
-         * speech-to-digits); FALSE → DTMF. `voiceBack`: TRUE
-         * announces valid digits back (not invalid, not endOfReply).
-         * (3GPP TS 29.078 V19.0.0 clause 11.25.1.1).
-         *
-         * @public
-         * @readonly
-         */
-        readonly collectedInfo: CollectedInfo,
-        /**
-         * @summary `disconnectFromIPForbidden`.
-         * @description
-         *
-         * TRUE (ASN.1 default): gsmSRF shall not initiate disconnect
-         * after the interaction. FALSE: gsmSRF may disconnect.
-         * (3GPP TS 29.078 V19.0.0 clause 11.25.1.1).
-         *
-         * @public
-         * @readonly
-         */
-        readonly disconnectFromIPForbidden?: OPTIONAL<BOOLEAN>,
-        /**
-         * @summary `informationToSend`.
-         * @description
-         *
-         * Optional announcement or tone to play before/during
-         * collection. Same `inbandInfo` / `tone` structure as
-         * PlayAnnouncement: duration 0 = endless/infinite;
-         * interval only if numberOfRepetitions > 1.
-         * (3GPP TS 29.078 V19.0.0 clause 11.25.1.1).
-         *
-         * @public
-         * @readonly
-         */
-        readonly informationToSend?: OPTIONAL<InformationToSend>,
-        /**
-         * @summary `extensions`.
-         * @public
-         * @readonly
-         */
-        readonly extensions?: OPTIONAL<Extensions>,
-        /**
-         * @summary `callSegmentID`.
-         * @description
-         *
-         * Call Segment to which the user interaction applies.
-         * unknownCSID if the CSID is not known.
-         * (3GPP TS 29.078 V19.0.0 clause 11.25.1.1).
-         *
-         * @public
-         * @readonly
-         */
-        readonly callSegmentID?: OPTIONAL<CallSegmentID>,
-        /**
-         * @summary `requestAnnouncementStartedNotification`.
-         * @description
-         *
-         * TRUE: send SpecializedResourceReport with
-         * `firstAnnouncementStarted` when the first announcement or
-         * tone has started. ASN.1 default FALSE.
-         * (3GPP TS 29.078 V19.0.0 clause 11.25.1.1).
-         *
-         * @public
-         * @readonly
-         */
-        readonly requestAnnouncementStartedNotification?: OPTIONAL<BOOLEAN>,
-        /**
-         * @summary Extensions that are not recognized.
-         * @public
-         * @readonly
-         */
-        readonly _unrecognizedExtensionsList: _Element[] = []
-    ) {}
+        collectedInfo: CollectedInfo,
+        disconnectFromIPForbidden?: OPTIONAL<BOOLEAN>,
+        informationToSend?: OPTIONAL<InformationToSend>,
+        extensions?: OPTIONAL<Extensions>,
+        callSegmentID?: OPTIONAL<CallSegmentID>,
+        requestAnnouncementStartedNotification?: OPTIONAL<BOOLEAN>,
+        _unrecognizedExtensionsList: _Element[] = []
+    ) {
+        this.collectedInfo = collectedInfo;
+        this.disconnectFromIPForbidden = disconnectFromIPForbidden;
+        this.informationToSend = informationToSend;
+        this.extensions = extensions;
+        this.callSegmentID = callSegmentID;
+        this.requestAnnouncementStartedNotification = requestAnnouncementStartedNotification;
+        this._unrecognizedExtensionsList = _unrecognizedExtensionsList;
+    }
 
     /**
      * @summary Restructures an object into a PromptAndCollectUserInformationArg

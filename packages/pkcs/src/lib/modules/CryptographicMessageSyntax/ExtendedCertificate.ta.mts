@@ -1,7 +1,7 @@
 /* eslint-disable */
 import {
     ASN1ConstructionError as _ConstructionError,
-    ASN1Element as _Element,
+    type ASN1Element as _Element,
     ASN1TagClass as _TagClass,
 } from "@wildboar/asn1";
 import * as $ from "@wildboar/asn1/functional";
@@ -11,12 +11,12 @@ import {
     _encode_ExtendedCertificateInfo,
 } from "../CryptographicMessageSyntax/ExtendedCertificateInfo.ta.mjs";
 import {
-    Signature,
+    type Signature,
     _decode_Signature,
     _encode_Signature,
 } from "../CryptographicMessageSyntax/Signature.ta.mjs";
 import {
-    SignatureAlgorithmIdentifier,
+    type SignatureAlgorithmIdentifier,
     _decode_SignatureAlgorithmIdentifier,
     _encode_SignatureAlgorithmIdentifier,
 } from "../CryptographicMessageSyntax/SignatureAlgorithmIdentifier.ta.mjs";
@@ -37,26 +37,34 @@ import {
  *
  */
 export class ExtendedCertificate {
+    /**
+     * @summary `extendedCertificateInfo`.
+     * @public
+     * @readonly
+     */
+    public readonly extendedCertificateInfo: ExtendedCertificateInfo;
+    /**
+     * @summary `signatureAlgorithm`.
+     * @public
+     * @readonly
+     */
+    public readonly signatureAlgorithm: SignatureAlgorithmIdentifier;
+    /**
+     * @summary `signature`.
+     * @public
+     * @readonly
+     */
+    public readonly signature: Signature;
+
     constructor(
-        /**
-         * @summary `extendedCertificateInfo`.
-         * @public
-         * @readonly
-         */
-        readonly extendedCertificateInfo: ExtendedCertificateInfo,
-        /**
-         * @summary `signatureAlgorithm`.
-         * @public
-         * @readonly
-         */
-        readonly signatureAlgorithm: SignatureAlgorithmIdentifier,
-        /**
-         * @summary `signature`.
-         * @public
-         * @readonly
-         */
-        readonly signature: Signature
-    ) {}
+        extendedCertificateInfo: ExtendedCertificateInfo,
+        signatureAlgorithm: SignatureAlgorithmIdentifier,
+        signature: Signature
+    ) {
+        this.extendedCertificateInfo = extendedCertificateInfo;
+        this.signatureAlgorithm = signatureAlgorithm;
+        this.signature = signature;
+    }
 
     /**
      * @summary Restructures an object into a ExtendedCertificate

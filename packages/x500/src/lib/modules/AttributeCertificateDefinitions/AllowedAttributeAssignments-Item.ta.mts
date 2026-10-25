@@ -1,17 +1,17 @@
 /* eslint-disable */
 import {
     ASN1ConstructionError as _ConstructionError,
-    ASN1Element as _Element,
+    type ASN1Element as _Element,
     ASN1TagClass as _TagClass,
 } from "@wildboar/asn1";
 import * as $ from "@wildboar/asn1/functional";
 import {
-    AllowedAttributeAssignments_Item_attributes_Item,
+    type AllowedAttributeAssignments_Item_attributes_Item,
     _decode_AllowedAttributeAssignments_Item_attributes_Item,
     _encode_AllowedAttributeAssignments_Item_attributes_Item,
 } from "../AttributeCertificateDefinitions/AllowedAttributeAssignments-Item-attributes-Item.ta.mjs";
 import {
-    GeneralName,
+    type GeneralName,
     _decode_GeneralName,
     _encode_GeneralName,
 } from "../CertificateExtensions/GeneralName.ta.mjs";
@@ -30,26 +30,34 @@ import {
  *
  */
 export class AllowedAttributeAssignments_Item {
+    /**
+     * @summary `attributes`.
+     * @public
+     * @readonly
+     */
+    public readonly attributes: AllowedAttributeAssignments_Item_attributes_Item[];
+    /**
+     * @summary `holderDomain`.
+     * @public
+     * @readonly
+     */
+    public readonly holderDomain: GeneralName;
+    /**
+     * @summary Extensions that are not recognized.
+     * @public
+     * @readonly
+     */
+    public readonly _unrecognizedExtensionsList: _Element[];
+
     constructor(
-        /**
-         * @summary `attributes`.
-         * @public
-         * @readonly
-         */
-        readonly attributes: AllowedAttributeAssignments_Item_attributes_Item[],
-        /**
-         * @summary `holderDomain`.
-         * @public
-         * @readonly
-         */
-        readonly holderDomain: GeneralName,
-        /**
-         * @summary Extensions that are not recognized.
-         * @public
-         * @readonly
-         */
-        readonly _unrecognizedExtensionsList: _Element[] = []
-    ) {}
+        attributes: AllowedAttributeAssignments_Item_attributes_Item[],
+        holderDomain: GeneralName,
+        _unrecognizedExtensionsList: _Element[] = []
+    ) {
+        this.attributes = attributes;
+        this.holderDomain = holderDomain;
+        this._unrecognizedExtensionsList = _unrecognizedExtensionsList;
+    }
 
     /**
      * @summary Restructures an object into a AllowedAttributeAssignments_Item

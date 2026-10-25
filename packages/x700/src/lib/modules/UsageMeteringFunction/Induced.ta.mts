@@ -1,6 +1,6 @@
 /* eslint-disable */
 import {
-    ASN1Element as _Element,
+    type ASN1Element as _Element,
     ASN1TagClass as _TagClass,
     ASN1Construction as _Construction,
     ASN1UniversalType as _UniversalType,
@@ -130,7 +130,7 @@ export type Induced = _enum_for_Induced;
  *
  * @enum {number}
  */
-export const Induced = _enum_for_Induced;
+export const Induced: typeof _enum_for_Induced = _enum_for_Induced;
 
 /**
  * @summary Induced_start
@@ -141,7 +141,7 @@ export const Induced = _enum_for_Induced;
  * @constant
  * @type {number}
  */
-export const Induced_start: Induced =
+export const Induced_start: _enum_for_Induced.start =
     Induced.start; /* LONG_NAMED_ENUMERATED_VALUE */
 
 /**
@@ -153,7 +153,7 @@ export const Induced_start: Induced =
  * @constant
  * @type {number}
  */
-export const start: Induced = Induced.start; /* SHORT_NAMED_ENUMERATED_VALUE */
+export const start: _enum_for_Induced.start = Induced.start; /* SHORT_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary Induced_suspend
@@ -164,7 +164,7 @@ export const start: Induced = Induced.start; /* SHORT_NAMED_ENUMERATED_VALUE */
  * @constant
  * @type {number}
  */
-export const Induced_suspend: Induced =
+export const Induced_suspend: _enum_for_Induced.suspend =
     Induced.suspend; /* LONG_NAMED_ENUMERATED_VALUE */
 
 /**
@@ -176,7 +176,7 @@ export const Induced_suspend: Induced =
  * @constant
  * @type {number}
  */
-export const suspend: Induced =
+export const suspend: _enum_for_Induced.suspend =
     Induced.suspend; /* SHORT_NAMED_ENUMERATED_VALUE */
 
 /**
@@ -188,7 +188,7 @@ export const suspend: Induced =
  * @constant
  * @type {number}
  */
-export const Induced_resume: Induced =
+export const Induced_resume: _enum_for_Induced.resume =
     Induced.resume; /* LONG_NAMED_ENUMERATED_VALUE */
 
 /**
@@ -200,7 +200,7 @@ export const Induced_resume: Induced =
  * @constant
  * @type {number}
  */
-export const resume: Induced =
+export const resume: _enum_for_Induced.resume =
     Induced.resume; /* SHORT_NAMED_ENUMERATED_VALUE */
 
 /**
@@ -213,7 +213,7 @@ export const resume: Induced =
  * @constant
  * @type {number}
  */
-export const Induced_delete_: Induced =
+export const Induced_delete_: _enum_for_Induced.delete_ =
     Induced.delete_; /* LONG_NAMED_ENUMERATED_VALUE */
 
 /**
@@ -226,7 +226,7 @@ export const Induced_delete_: Induced =
  * @constant
  * @type {number}
  */
-export const delete_: Induced =
+export const delete_: _enum_for_Induced.delete_ =
     Induced.delete_; /* SHORT_NAMED_ENUMERATED_VALUE */
 
 /**
@@ -239,7 +239,7 @@ export const delete_: Induced =
  * @constant
  * @type {number}
  */
-export const Induced_disabled: Induced =
+export const Induced_disabled: _enum_for_Induced.disabled =
     Induced.disabled; /* LONG_NAMED_ENUMERATED_VALUE */
 
 /**
@@ -252,7 +252,7 @@ export const Induced_disabled: Induced =
  * @constant
  * @type {number}
  */
-export const disabled: Induced =
+export const disabled: _enum_for_Induced.disabled =
     Induced.disabled; /* SHORT_NAMED_ENUMERATED_VALUE */
 
 /**
@@ -265,7 +265,7 @@ export const disabled: Induced =
  * @constant
  * @type {number}
  */
-export const Induced_enabled: Induced =
+export const Induced_enabled: _enum_for_Induced.enabled =
     Induced.enabled; /* LONG_NAMED_ENUMERATED_VALUE */
 
 /**
@@ -278,14 +278,29 @@ export const Induced_enabled: Induced =
  * @constant
  * @type {number}
  */
-export const enabled: Induced =
+export const enabled: _enum_for_Induced.enabled =
     Induced.enabled; /* SHORT_NAMED_ENUMERATED_VALUE */
 
 
-export const _decode_Induced = $._decodeEnumerated;
+export function _decode_Induced(el: _Element): Induced {
+    const enumerated = $._decodeEnumerated(el);
+    switch (enumerated) {
+        case Induced.start: return Induced.start;
+        case Induced.suspend: return Induced.suspend;
+        case Induced.resume: return Induced.resume;
+        case Induced.delete_: return Induced.delete_;
+        case Induced.disabled: return Induced.disabled;
+        case Induced.enabled: return Induced.enabled;
+        default:
+            throw new _ConstructionError(
+                'Invalid ENUMERATED value ' + enumerated + ' for Induced.',
+                el,
+            );
+    }
+}
 
 
-export const _encode_Induced = $._encodeEnumerated;
+export const _encode_Induced: $.ASN1Encoder<Induced> = $._encodeEnumerated as $.ASN1Encoder<Induced>;
 
 
 /* eslint-enable */

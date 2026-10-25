@@ -2,21 +2,21 @@
 
 import * as $ from "@wildboar/asn1/functional";
 import {
-    OPTIONAL,
-    SEQUENCE,
-    SET,
-    ASN1Element as _Element,
+    type OPTIONAL,
+    type SEQUENCE,
+    type SET,
+    type ASN1Element as _Element,
     ASN1TagClass as _TagClass
 } from "@wildboar/asn1";
-import { EscapeRegister, _decode_EscapeRegister, _encode_EscapeRegister } from "../CSTA-capability-exchange/EscapeRegister.ta.mjs";
+import { type EscapeRegister, _decode_EscapeRegister, _encode_EscapeRegister } from "../CSTA-capability-exchange/EscapeRegister.ta.mjs";
 
-import { EscapeRegisterCancel, _decode_EscapeRegisterCancel, _encode_EscapeRegisterCancel } from "../CSTA-capability-exchange/EscapeRegisterCancel.ta.mjs";
+import { type EscapeRegisterCancel, _decode_EscapeRegisterCancel, _encode_EscapeRegisterCancel } from "../CSTA-capability-exchange/EscapeRegisterCancel.ta.mjs";
 
-import { EscapeRegisterAbort, _decode_EscapeRegisterAbort, _encode_EscapeRegisterAbort } from "../CSTA-capability-exchange/EscapeRegisterAbort.ta.mjs";
+import { type EscapeRegisterAbort, _decode_EscapeRegisterAbort, _encode_EscapeRegisterAbort } from "../CSTA-capability-exchange/EscapeRegisterAbort.ta.mjs";
 
-import { Escape, _decode_Escape, _encode_Escape } from "../CSTA-capability-exchange/Escape.ta.mjs";
+import { type Escape, _decode_Escape, _encode_Escape } from "../CSTA-capability-exchange/Escape.ta.mjs";
 
-import { PrivateDataVersionSelection, _decode_PrivateDataVersionSelection, _encode_PrivateDataVersionSelection } from "../CSTA-capability-exchange/PrivateDataVersionSelection.ta.mjs";
+import { type PrivateDataVersionSelection, _decode_PrivateDataVersionSelection, _encode_PrivateDataVersionSelection } from "../CSTA-capability-exchange/PrivateDataVersionSelection.ta.mjs";
 
 
 
@@ -34,10 +34,10 @@ import { PrivateDataVersionSelection, _decode_PrivateDataVersionSelection, _enco
  * 
  * ```asn1
  * VendorSpecificServList ::= SEQUENCE
- * {     escapeRegister             [ 0] IMPLICIT     EscapeRegister             OPTIONAL,
- *     escapeRegisterCancel         [ 1] IMPLICIT     EscapeRegisterCancel         OPTIONAL,
- *     escapeRegisterAbort         [ 2] IMPLICIT     EscapeRegisterAbort         OPTIONAL,
- *     escape                 [ 3] IMPLICIT     Escape                 OPTIONAL,
+ * {     escapeRegister             [ 0] IMPLICIT     EscapeRegister             type OPTIONAL,
+ *     escapeRegisterCancel         [ 1] IMPLICIT     EscapeRegisterCancel         type OPTIONAL,
+ *     escapeRegisterAbort         [ 2] IMPLICIT     EscapeRegisterAbort         type OPTIONAL,
+ *     escape                 [ 3] IMPLICIT     Escape                 type OPTIONAL,
  *     privateDataVersionSelection     [ 4] IMPLICIT     PrivateDataVersionSelection     OPTIONAL }
  * ```
  * 
@@ -45,53 +45,65 @@ import { PrivateDataVersionSelection, _decode_PrivateDataVersionSelection, _enco
  */
 export
 class VendorSpecificServList {
+    /**
+     * @summary `escapeRegister`.
+     * @public
+     * @readonly
+     * @description
+     * Capability bitmap for this service; omit if the SF does not support
+     * it (ECMA-269 Annex C).
+     */
+    public readonly escapeRegister?: OPTIONAL<EscapeRegister>;
+    /**
+     * @summary `escapeRegisterCancel`.
+     * @public
+     * @readonly
+     * @description
+     * Capability bitmap for this service; omit if the SF does not support
+     * it (ECMA-269 Annex C).
+     */
+    public readonly escapeRegisterCancel?: OPTIONAL<EscapeRegisterCancel>;
+    /**
+     * @summary `escapeRegisterAbort`.
+     * @public
+     * @readonly
+     * @description
+     * Capability bitmap for this service; omit if the SF does not support
+     * it (ECMA-269 Annex C).
+     */
+    public readonly escapeRegisterAbort?: OPTIONAL<EscapeRegisterAbort>;
+    /**
+     * @summary `escape`.
+     * @public
+     * @readonly
+     * @description
+     * Capability bitmap for this service; omit if the SF does not support
+     * it (ECMA-269 Annex C).
+     */
+    public readonly escape?: OPTIONAL<Escape>;
+    /**
+     * @summary `privateDataVersionSelection`.
+     * @public
+     * @readonly
+     * @description
+     * Capability bitmap for this service; omit if the SF does not support
+     * it (ECMA-269 Annex C).
+     */
+    public readonly privateDataVersionSelection?: OPTIONAL<PrivateDataVersionSelection>;
+
     constructor (
-        /**
-         * @summary `escapeRegister`.
-         * @public
-         * @readonly
-         * @description
-         * Capability bitmap for this service; omit if the SF does not support
-         * it (ECMA-269 Annex C).
-         */
-        readonly escapeRegister?: OPTIONAL<EscapeRegister>,
-        /**
-         * @summary `escapeRegisterCancel`.
-         * @public
-         * @readonly
-         * @description
-         * Capability bitmap for this service; omit if the SF does not support
-         * it (ECMA-269 Annex C).
-         */
-        readonly escapeRegisterCancel?: OPTIONAL<EscapeRegisterCancel>,
-        /**
-         * @summary `escapeRegisterAbort`.
-         * @public
-         * @readonly
-         * @description
-         * Capability bitmap for this service; omit if the SF does not support
-         * it (ECMA-269 Annex C).
-         */
-        readonly escapeRegisterAbort?: OPTIONAL<EscapeRegisterAbort>,
-        /**
-         * @summary `escape`.
-         * @public
-         * @readonly
-         * @description
-         * Capability bitmap for this service; omit if the SF does not support
-         * it (ECMA-269 Annex C).
-         */
-        readonly escape?: OPTIONAL<Escape>,
-        /**
-         * @summary `privateDataVersionSelection`.
-         * @public
-         * @readonly
-         * @description
-         * Capability bitmap for this service; omit if the SF does not support
-         * it (ECMA-269 Annex C).
-         */
-        readonly privateDataVersionSelection?: OPTIONAL<PrivateDataVersionSelection>
-    ) {}
+        escapeRegister?: OPTIONAL<EscapeRegister>,
+        escapeRegisterCancel?: OPTIONAL<EscapeRegisterCancel>,
+        escapeRegisterAbort?: OPTIONAL<EscapeRegisterAbort>,
+        escape?: OPTIONAL<Escape>,
+        privateDataVersionSelection?: OPTIONAL<PrivateDataVersionSelection>
+    ) {
+        this.escapeRegister = escapeRegister;
+        this.escapeRegisterCancel = escapeRegisterCancel;
+        this.escapeRegisterAbort = escapeRegisterAbort;
+        this.escape = escape;
+        this.privateDataVersionSelection = privateDataVersionSelection;
+    }
 
     /**
      * @summary Restructures an object into a VendorSpecificServList

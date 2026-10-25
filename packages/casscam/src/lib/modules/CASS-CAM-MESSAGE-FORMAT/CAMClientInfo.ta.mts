@@ -1,7 +1,7 @@
 /* eslint-disable */
 import {
-    OCTET_STRING,
-    ASN1Element as _Element,
+    type OCTET_STRING,
+    type ASN1Element as _Element,
     ASN1TagClass as _TagClass,
     ASN1Construction as _Construction,
     ASN1UniversalType as _UniversalType,
@@ -56,7 +56,7 @@ class CAMClientInfo {
      * @public
      * @readonly
      */
-    readonly clientType: OCTET_STRING;
+    public readonly clientType: OCTET_STRING;
     /**
      * @summary `clientPriority`.
      * @description
@@ -67,7 +67,7 @@ class CAMClientInfo {
      * @public
      * @readonly
      */
-    readonly clientPriority: OCTET_STRING;
+    public readonly clientPriority: OCTET_STRING;
     /**
      * @summary `clientVendor`.
      * @description
@@ -78,7 +78,7 @@ class CAMClientInfo {
      * @public
      * @readonly
      */
-    readonly clientVendor: OCTET_STRING;
+    public readonly clientVendor: OCTET_STRING;
     /**
      * @summary `clientVersion`.
      * @description
@@ -89,7 +89,7 @@ class CAMClientInfo {
      * @public
      * @readonly
      */
-    readonly clientVersion: OCTET_STRING;
+    public readonly clientVersion: OCTET_STRING;
 
     constructor (
         clientType: OCTET_STRING,

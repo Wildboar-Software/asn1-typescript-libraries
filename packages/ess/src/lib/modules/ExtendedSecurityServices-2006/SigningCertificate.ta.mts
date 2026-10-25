@@ -1,8 +1,8 @@
 /* eslint-disable */
 import {
-    ASN1Element as _Element,
+    type ASN1Element as _Element,
     ASN1TagClass as _TagClass,
-    OPTIONAL,
+    type OPTIONAL,
 } from "@wildboar/asn1";
 import * as $ from "@wildboar/asn1/functional";
 import {
@@ -43,37 +43,43 @@ import {
  *
  */
 export class SigningCertificate {
+    /**
+     * @summary `certs`.
+     * @description
+     *
+     * Sequence of `ESSCertID`. The first MUST identify the certificate used
+     * to verify the signature; if that cert's hash does not match, the
+     * signature MUST be considered invalid. Encoding of the first
+     * `ESSCertID` SHOULD include `issuerSerial` (MAY omit if
+     * `issuerAndSerialNumber` is otherwise present in `SignerInfo`). Further
+     * entries limit authorization/path certificates; if only the signing
+     * cert is listed, authorization certs are unrestricted
+     * ([RFC 5035 §5](https://datatracker.ietf.org/doc/html/rfc5035#section-5)).
+     *
+     * @public
+     * @readonly
+     */
+    public readonly certs: ESSCertID[];
+    /**
+     * @summary `policies`.
+     * @description
+     *
+     * Optional certificate policies the signer asserts apply to the
+     * certificate and under which it should be relied upon; suggests a policy
+     * for path validation ([RFC 5035 §5](https://datatracker.ietf.org/doc/html/rfc5035#section-5)).
+     *
+     * @public
+     * @readonly
+     */
+    public readonly policies?: OPTIONAL<PolicyInformation[]>;
+
     constructor(
-        /**
-         * @summary `certs`.
-         * @description
-         *
-         * Sequence of `ESSCertID`. The first MUST identify the certificate used
-         * to verify the signature; if that cert's hash does not match, the
-         * signature MUST be considered invalid. Encoding of the first
-         * `ESSCertID` SHOULD include `issuerSerial` (MAY omit if
-         * `issuerAndSerialNumber` is otherwise present in `SignerInfo`). Further
-         * entries limit authorization/path certificates; if only the signing
-         * cert is listed, authorization certs are unrestricted
-         * ([RFC 5035 §5](https://datatracker.ietf.org/doc/html/rfc5035#section-5)).
-         *
-         * @public
-         * @readonly
-         */
-        readonly certs: ESSCertID[],
-        /**
-         * @summary `policies`.
-         * @description
-         *
-         * Optional certificate policies the signer asserts apply to the
-         * certificate and under which it should be relied upon; suggests a policy
-         * for path validation ([RFC 5035 §5](https://datatracker.ietf.org/doc/html/rfc5035#section-5)).
-         *
-         * @public
-         * @readonly
-         */
-        readonly policies?: OPTIONAL<PolicyInformation[]>
-    ) {}
+        certs: ESSCertID[],
+        policies?: OPTIONAL<PolicyInformation[]>
+    ) {
+        this.certs = certs;
+        this.policies = policies;
+    }
 
     /**
      * @summary Restructures an object into a SigningCertificate

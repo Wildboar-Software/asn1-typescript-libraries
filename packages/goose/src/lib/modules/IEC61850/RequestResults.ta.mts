@@ -1,12 +1,12 @@
 /* eslint-disable */
 import {
-    ASN1Element as _Element,
+    type ASN1Element as _Element,
     ASN1TagClass as _TagClass,
-    IA5String,
-    INTEGER
+    type IA5String,
+    type INTEGER
 } from "@wildboar/asn1";
 import * as $ from "@wildboar/asn1/functional";
-import { _decode_ErrorReason, _encode_ErrorReason, ErrorReason } from "../IEC61850/ErrorReason.ta.mjs";
+import { _decode_ErrorReason, _encode_ErrorReason, type ErrorReason } from "../IEC61850/ErrorReason.ta.mjs";
 
 
 /**

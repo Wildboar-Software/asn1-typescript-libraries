@@ -1,7 +1,7 @@
 /* eslint-disable */
 import {
-    GraphicString,
-    ASN1Element as _Element,
+    type GraphicString,
+    type ASN1Element as _Element,
     ASN1TagClass as _TagClass,
     ASN1Construction as _Construction,
     ASN1UniversalType as _UniversalType,
@@ -32,10 +32,10 @@ export
 type AdditionalText = GraphicString; // GraphicString
 
 
-export const _decode_AdditionalText = $._decodeGraphicString;
+export const _decode_AdditionalText: $.ASN1Decoder<string> = $._decodeGraphicString;
 
 
-export const _encode_AdditionalText = $._encodeGraphicString;
+export const _encode_AdditionalText: $.ASN1Encoder<string> = $._encodeGraphicString;
 
 
 /* eslint-enable */

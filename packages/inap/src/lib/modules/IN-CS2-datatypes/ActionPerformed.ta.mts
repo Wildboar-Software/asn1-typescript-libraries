@@ -1,4 +1,5 @@
 /* eslint-disable */
+import { ASN1Element as _Element, ASN1ConstructionError as _ConstructionError } from "@wildboar/asn1";
 import * as $ from "@wildboar/asn1/functional";
 
 
@@ -59,7 +60,7 @@ type ActionPerformed = _enum_for_ActionPerformed;
  * @enum {number}
  */
 export
-const ActionPerformed = _enum_for_ActionPerformed;
+const ActionPerformed: typeof _enum_for_ActionPerformed = _enum_for_ActionPerformed;
 
 /**
  * @summary ActionPerformed_activated
@@ -67,7 +68,7 @@ const ActionPerformed = _enum_for_ActionPerformed;
  * @type {number}
  */
 export
-const ActionPerformed_activated: ActionPerformed = ActionPerformed.activated; /* LONG_NAMED_ENUMERATED_VALUE */
+const ActionPerformed_activated: _enum_for_ActionPerformed.activated = ActionPerformed.activated; /* LONG_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary activated
@@ -75,7 +76,7 @@ const ActionPerformed_activated: ActionPerformed = ActionPerformed.activated; /*
  * @type {number}
  */
 export
-const activated: ActionPerformed = ActionPerformed.activated; /* SHORT_NAMED_ENUMERATED_VALUE */
+const activated: _enum_for_ActionPerformed.activated = ActionPerformed.activated; /* SHORT_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary ActionPerformed_deactivated
@@ -83,7 +84,7 @@ const activated: ActionPerformed = ActionPerformed.activated; /* SHORT_NAMED_ENU
  * @type {number}
  */
 export
-const ActionPerformed_deactivated: ActionPerformed = ActionPerformed.deactivated; /* LONG_NAMED_ENUMERATED_VALUE */
+const ActionPerformed_deactivated: _enum_for_ActionPerformed.deactivated = ActionPerformed.deactivated; /* LONG_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary deactivated
@@ -91,7 +92,7 @@ const ActionPerformed_deactivated: ActionPerformed = ActionPerformed.deactivated
  * @type {number}
  */
 export
-const deactivated: ActionPerformed = ActionPerformed.deactivated; /* SHORT_NAMED_ENUMERATED_VALUE */
+const deactivated: _enum_for_ActionPerformed.deactivated = ActionPerformed.deactivated; /* SHORT_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary ActionPerformed_alreadyActive
@@ -99,7 +100,7 @@ const deactivated: ActionPerformed = ActionPerformed.deactivated; /* SHORT_NAMED
  * @type {number}
  */
 export
-const ActionPerformed_alreadyActive: ActionPerformed = ActionPerformed.alreadyActive; /* LONG_NAMED_ENUMERATED_VALUE */
+const ActionPerformed_alreadyActive: _enum_for_ActionPerformed.alreadyActive = ActionPerformed.alreadyActive; /* LONG_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary alreadyActive
@@ -107,7 +108,7 @@ const ActionPerformed_alreadyActive: ActionPerformed = ActionPerformed.alreadyAc
  * @type {number}
  */
 export
-const alreadyActive: ActionPerformed = ActionPerformed.alreadyActive; /* SHORT_NAMED_ENUMERATED_VALUE */
+const alreadyActive: _enum_for_ActionPerformed.alreadyActive = ActionPerformed.alreadyActive; /* SHORT_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary ActionPerformed_alreadyInactive
@@ -115,7 +116,7 @@ const alreadyActive: ActionPerformed = ActionPerformed.alreadyActive; /* SHORT_N
  * @type {number}
  */
 export
-const ActionPerformed_alreadyInactive: ActionPerformed = ActionPerformed.alreadyInactive; /* LONG_NAMED_ENUMERATED_VALUE */
+const ActionPerformed_alreadyInactive: _enum_for_ActionPerformed.alreadyInactive = ActionPerformed.alreadyInactive; /* LONG_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary alreadyInactive
@@ -123,7 +124,7 @@ const ActionPerformed_alreadyInactive: ActionPerformed = ActionPerformed.already
  * @type {number}
  */
 export
-const alreadyInactive: ActionPerformed = ActionPerformed.alreadyInactive; /* SHORT_NAMED_ENUMERATED_VALUE */
+const alreadyInactive: _enum_for_ActionPerformed.alreadyInactive = ActionPerformed.alreadyInactive; /* SHORT_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary ActionPerformed_isActive
@@ -131,7 +132,7 @@ const alreadyInactive: ActionPerformed = ActionPerformed.alreadyInactive; /* SHO
  * @type {number}
  */
 export
-const ActionPerformed_isActive: ActionPerformed = ActionPerformed.isActive; /* LONG_NAMED_ENUMERATED_VALUE */
+const ActionPerformed_isActive: _enum_for_ActionPerformed.isActive = ActionPerformed.isActive; /* LONG_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary isActive
@@ -139,7 +140,7 @@ const ActionPerformed_isActive: ActionPerformed = ActionPerformed.isActive; /* L
  * @type {number}
  */
 export
-const isActive: ActionPerformed = ActionPerformed.isActive; /* SHORT_NAMED_ENUMERATED_VALUE */
+const isActive: _enum_for_ActionPerformed.isActive = ActionPerformed.isActive; /* SHORT_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary ActionPerformed_isInactive
@@ -147,7 +148,7 @@ const isActive: ActionPerformed = ActionPerformed.isActive; /* SHORT_NAMED_ENUME
  * @type {number}
  */
 export
-const ActionPerformed_isInactive: ActionPerformed = ActionPerformed.isInactive; /* LONG_NAMED_ENUMERATED_VALUE */
+const ActionPerformed_isInactive: _enum_for_ActionPerformed.isInactive = ActionPerformed.isInactive; /* LONG_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary isInactive
@@ -155,12 +156,27 @@ const ActionPerformed_isInactive: ActionPerformed = ActionPerformed.isInactive; 
  * @type {number}
  */
 export
-const isInactive: ActionPerformed = ActionPerformed.isInactive; /* SHORT_NAMED_ENUMERATED_VALUE */
+const isInactive: _enum_for_ActionPerformed.isInactive = ActionPerformed.isInactive; /* SHORT_NAMED_ENUMERATED_VALUE */
 
 export
-const _decode_ActionPerformed: $.ASN1Decoder<ActionPerformed> = $._decodeEnumerated;
+function _decode_ActionPerformed(el: _Element): ActionPerformed {
+    const enumerated = $._decodeEnumerated(el);
+    switch (enumerated) {
+        case ActionPerformed.activated: return ActionPerformed.activated;
+        case ActionPerformed.deactivated: return ActionPerformed.deactivated;
+        case ActionPerformed.alreadyActive: return ActionPerformed.alreadyActive;
+        case ActionPerformed.alreadyInactive: return ActionPerformed.alreadyInactive;
+        case ActionPerformed.isActive: return ActionPerformed.isActive;
+        case ActionPerformed.isInactive: return ActionPerformed.isInactive;
+        default:
+            throw new _ConstructionError(
+                "Invalid ENUMERATED value " + enumerated + " for ActionPerformed.",
+                el,
+            );
+    }
+}
 
 export
-const _encode_ActionPerformed: $.ASN1Encoder<ActionPerformed> = $._encodeEnumerated;
+const _encode_ActionPerformed: $.ASN1Encoder<ActionPerformed> = $._encodeEnumerated as $.ASN1Encoder<ActionPerformed>;
 
 /* eslint-enable */

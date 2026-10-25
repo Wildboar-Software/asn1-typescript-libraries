@@ -1,7 +1,7 @@
 /* eslint-disable */
 import {
-    OCTET_STRING,
-    ASN1Element as _Element,
+    type OCTET_STRING,
+    type ASN1Element as _Element,
     ASN1TagClass as _TagClass,
     ASN1Construction as _Construction,
     ASN1UniversalType as _UniversalType,
@@ -58,7 +58,7 @@ class CASSInfo {
      * @public
      * @readonly
      */
-    readonly cASSUniqueID: OCTET_STRING;
+    public readonly cASSUniqueID: OCTET_STRING;
     /**
      * @summary `cASSIPAddrType`.
      * @description
@@ -68,7 +68,7 @@ class CASSInfo {
      * @public
      * @readonly
      */
-    readonly cASSIPAddrType: OCTET_STRING;
+    public readonly cASSIPAddrType: OCTET_STRING;
     /**
      * @summary `cASSIPAddr`.
      * @description
@@ -80,7 +80,7 @@ class CASSInfo {
      * @public
      * @readonly
      */
-    readonly cASSIPAddr: OCTET_STRING;
+    public readonly cASSIPAddr: OCTET_STRING;
     /**
      * @summary `cASSConnectionType`.
      * @description
@@ -90,7 +90,7 @@ class CASSInfo {
      * @public
      * @readonly
      */
-    readonly cASSConnectionType: OCTET_STRING;
+    public readonly cASSConnectionType: OCTET_STRING;
     /**
      * @summary `cASSListeningPort`.
      * @description
@@ -100,7 +100,7 @@ class CASSInfo {
      * @public
      * @readonly
      */
-    readonly cASSListeningPort: OCTET_STRING;
+    public readonly cASSListeningPort: OCTET_STRING;
 
     constructor (
         cASSUniqueID: OCTET_STRING,

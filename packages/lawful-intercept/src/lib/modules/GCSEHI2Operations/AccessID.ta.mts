@@ -1,10 +1,10 @@
 /* eslint-disable */
 import {
-    ASN1Element as _Element,
+    type ASN1Element as _Element,
     ASN1TagClass as _TagClass
 } from "@wildboar/asn1";
 import * as $ from "@wildboar/asn1/functional";
-import { ReservedTMGI, _decode_ReservedTMGI, _encode_ReservedTMGI } from "../GCSEHI2Operations/ReservedTMGI.ta.mjs";
+import { type ReservedTMGI, _decode_ReservedTMGI, _encode_ReservedTMGI } from "../GCSEHI2Operations/ReservedTMGI.ta.mjs";
 // export { ReservedTMGI, _decode_ReservedTMGI, _encode_ReservedTMGI } from "../GCSEHI2Operations/ReservedTMGI.ta.mjs";
 import { IPAddress, _decode_IPAddress, _encode_IPAddress } from "../HI2Operations/IPAddress.ta.mjs";
 // export { IPAddress, _decode_IPAddress, _encode_IPAddress } from "../HI2Operations/IPAddress.ta.mjs";

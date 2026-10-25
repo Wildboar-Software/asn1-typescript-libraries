@@ -1,7 +1,7 @@
 /* eslint-disable */
 import {
-    OPTIONAL,
-    ASN1Element as _Element,
+    type OPTIONAL,
+    type ASN1Element as _Element,
     ASN1TagClass as _TagClass,
     ASN1Construction as _Construction,
     ASN1UniversalType as _UniversalType,
@@ -12,12 +12,12 @@ import {
 } from '@wildboar/asn1';
 import * as $ from '@wildboar/asn1/functional';
 import {
-    BPUSubprocessInformationList,
+    type BPUSubprocessInformationList,
     _decode_BPUSubprocessInformationList,
     _encode_BPUSubprocessInformationList,
 } from '../AuthenticationContextForBiometrics/BPUSubprocessInformationList.ta.mjs';
 import {
-    BPUIOStaticInformationList,
+    type BPUIOStaticInformationList,
     _decode_BPUIOStaticInformationList,
     _encode_BPUIOStaticInformationList,
 } from '../AuthenticationContextForBiometrics/BPUIOStaticInformationList.ta.mjs';
@@ -37,26 +37,34 @@ import {
  *
  */
 export class BPUFunctionReport {
+    /**
+     * @summary `bpuSubprocessInformationList`.
+     * @public
+     * @readonly
+     */
+    public readonly bpuSubprocessInformationList: BPUSubprocessInformationList;
+    /**
+     * @summary `bpuInputStaticInformationList`.
+     * @public
+     * @readonly
+     */
+    public readonly bpuInputStaticInformationList?: OPTIONAL<BPUIOStaticInformationList>;
+    /**
+     * @summary `bpuOutputStaticInformationList`.
+     * @public
+     * @readonly
+     */
+    public readonly bpuOutputStaticInformationList?: OPTIONAL<BPUIOStaticInformationList>;
+
     constructor(
-        /**
-         * @summary `bpuSubprocessInformationList`.
-         * @public
-         * @readonly
-         */
-        readonly bpuSubprocessInformationList: BPUSubprocessInformationList,
-        /**
-         * @summary `bpuInputStaticInformationList`.
-         * @public
-         * @readonly
-         */
-        readonly bpuInputStaticInformationList?: OPTIONAL<BPUIOStaticInformationList>,
-        /**
-         * @summary `bpuOutputStaticInformationList`.
-         * @public
-         * @readonly
-         */
-        readonly bpuOutputStaticInformationList?: OPTIONAL<BPUIOStaticInformationList>
-    ) {}
+        bpuSubprocessInformationList: BPUSubprocessInformationList,
+        bpuInputStaticInformationList?: OPTIONAL<BPUIOStaticInformationList>,
+        bpuOutputStaticInformationList?: OPTIONAL<BPUIOStaticInformationList>
+    ) {
+        this.bpuSubprocessInformationList = bpuSubprocessInformationList;
+        this.bpuInputStaticInformationList = bpuInputStaticInformationList;
+        this.bpuOutputStaticInformationList = bpuOutputStaticInformationList;
+    }
 
     /**
      * @summary Restructures an object into a BPUFunctionReport

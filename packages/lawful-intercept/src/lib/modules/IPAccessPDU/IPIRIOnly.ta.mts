@@ -1,15 +1,15 @@
 /* eslint-disable */
 import {
-    INTEGER,
-    OPTIONAL,
-    RELATIVE_OID,
-    ASN1Element as _Element,
+    type INTEGER,
+    type OPTIONAL,
+    type RELATIVE_OID,
+    type ASN1Element as _Element,
     ASN1TagClass as _TagClass
 } from "@wildboar/asn1";
 import * as $ from "@wildboar/asn1/functional";
-import { IPInformation, _decode_IPInformation, _encode_IPInformation } from "../IPAccessPDU/IPInformation.ta.mjs";
+import { type IPInformation, _decode_IPInformation, _encode_IPInformation } from "../IPAccessPDU/IPInformation.ta.mjs";
 // export { IPInformation, _decode_IPInformation, _encode_IPInformation } from "../IPAccessPDU/IPInformation.ta.mjs";
-import { ProtocolInformation, _decode_ProtocolInformation, _encode_ProtocolInformation } from "../IPAccessPDU/ProtocolInformation.ta.mjs";
+import { type ProtocolInformation, _decode_ProtocolInformation, _encode_ProtocolInformation } from "../IPAccessPDU/ProtocolInformation.ta.mjs";
 // export { ProtocolInformation, _decode_ProtocolInformation, _encode_ProtocolInformation } from "../IPAccessPDU/ProtocolInformation.ta.mjs";
 import { PDSRInformation, _decode_PDSRInformation, _encode_PDSRInformation } from "../IPAccessPDU/PDSRInformation.ta.mjs";
 // export { PDSRInformation, _decode_PDSRInformation, _encode_PDSRInformation } from "../IPAccessPDU/PDSRInformation.ta.mjs";

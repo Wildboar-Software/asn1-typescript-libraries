@@ -1,6 +1,6 @@
 /* eslint-disable */
 import {
-    ASN1Element as _Element,
+    type ASN1Element as _Element,
     ASN1TagClass as _TagClass,
     ASN1Construction as _Construction,
     ASN1UniversalType as _UniversalType,
@@ -81,7 +81,7 @@ export type TerminateValidationInfo = _enum_for_TerminateValidationInfo;
  *
  * @enum {number}
  */
-export const TerminateValidationInfo = _enum_for_TerminateValidationInfo;
+export const TerminateValidationInfo: typeof _enum_for_TerminateValidationInfo = _enum_for_TerminateValidationInfo;
 
 /**
  * @summary TerminateValidationInfo_cancel
@@ -93,7 +93,7 @@ export const TerminateValidationInfo = _enum_for_TerminateValidationInfo;
  * @constant
  * @type {number}
  */
-export const TerminateValidationInfo_cancel: TerminateValidationInfo =
+export const TerminateValidationInfo_cancel: _enum_for_TerminateValidationInfo.cancel =
     TerminateValidationInfo.cancel; /* LONG_NAMED_ENUMERATED_VALUE */
 
 /**
@@ -105,7 +105,7 @@ export const TerminateValidationInfo_cancel: TerminateValidationInfo =
  * @constant
  * @type {number}
  */
-export const cancel: TerminateValidationInfo =
+export const cancel: _enum_for_TerminateValidationInfo.cancel =
     TerminateValidationInfo.cancel; /* SHORT_NAMED_ENUMERATED_VALUE */
 
 /**
@@ -118,7 +118,7 @@ export const cancel: TerminateValidationInfo =
  * @constant
  * @type {number}
  */
-export const TerminateValidationInfo_truncate: TerminateValidationInfo =
+export const TerminateValidationInfo_truncate: _enum_for_TerminateValidationInfo.truncate =
     TerminateValidationInfo.truncate; /* LONG_NAMED_ENUMERATED_VALUE */
 
 /**
@@ -130,14 +130,25 @@ export const TerminateValidationInfo_truncate: TerminateValidationInfo =
  * @constant
  * @type {number}
  */
-export const truncate: TerminateValidationInfo =
+export const truncate: _enum_for_TerminateValidationInfo.truncate =
     TerminateValidationInfo.truncate; /* SHORT_NAMED_ENUMERATED_VALUE */
 
 
-export const _decode_TerminateValidationInfo = $._decodeEnumerated;
+export function _decode_TerminateValidationInfo(el: _Element): TerminateValidationInfo {
+    const enumerated = $._decodeEnumerated(el);
+    switch (enumerated) {
+        case TerminateValidationInfo.cancel: return TerminateValidationInfo.cancel;
+        case TerminateValidationInfo.truncate: return TerminateValidationInfo.truncate;
+        default:
+            throw new _ConstructionError(
+                'Invalid ENUMERATED value ' + enumerated + ' for TerminateValidationInfo.',
+                el,
+            );
+    }
+}
 
 
-export const _encode_TerminateValidationInfo = $._encodeEnumerated;
+export const _encode_TerminateValidationInfo: $.ASN1Encoder<TerminateValidationInfo> = $._encodeEnumerated as $.ASN1Encoder<TerminateValidationInfo>;
 
 
 /* eslint-enable */

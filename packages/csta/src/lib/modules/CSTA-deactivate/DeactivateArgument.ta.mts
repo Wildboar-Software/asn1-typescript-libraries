@@ -2,16 +2,16 @@
 
 import * as $ from "@wildboar/asn1/functional";
 import {
-    OPTIONAL,
-    SEQUENCE,
-    SET,
-    IA5String,
-    ASN1Element as _Element,
+    type OPTIONAL,
+    type SEQUENCE,
+    type SET,
+    type IA5String,
+    type ASN1Element as _Element,
     ASN1TagClass as _TagClass
 } from "@wildboar/asn1";
-import { ConnectionID, _decode_ConnectionID, _encode_ConnectionID } from "../CSTA-call-connection-identifiers/ConnectionID.ta.mjs";
+import { type ConnectionID, _decode_ConnectionID, _encode_ConnectionID } from "../CSTA-call-connection-identifiers/ConnectionID.ta.mjs";
 
-import { ResourceID, _decode_ResourceID, _encode_ResourceID } from "../CSTA-device-feature-types/ResourceID.ta.mjs";
+import { type ResourceID, _decode_ResourceID, _encode_ResourceID } from "../CSTA-device-feature-types/ResourceID.ta.mjs";
 
 import { CSTACommonArguments, _decode_CSTACommonArguments, _encode_CSTACommonArguments } from "../CSTA-extension-types/CSTACommonArguments.ta.mjs";
 
@@ -32,9 +32,9 @@ import { CSTACommonArguments, _decode_CSTACommonArguments, _encode_CSTACommonArg
  * ```asn1
  * DeactivateArgument ::= SEQUENCE
  * {    overConnection            ConnectionID,
- *     resource            [0] IMPLICIT ResourceID            OPTIONAL,
+ *     resource            [0] IMPLICIT ResourceID            type OPTIONAL,
  *     ruleName            IA5String,
- *     grammarName            [1] IMPLICIT IA5String            OPTIONAL,
+ *     grammarName            [1] IMPLICIT IA5String            type OPTIONAL,
  *     extensions            [2] IMPLICIT CSTACommonArguments    OPTIONAL }
  * ```
  * 
@@ -42,62 +42,74 @@ import { CSTACommonArguments, _decode_CSTACommonArguments, _encode_CSTACommonArg
  */
 export
 class DeactivateArgument {
+    /**
+     * @summary `overConnection`.
+     * @description
+     *
+     * Connection whose Listener grammar is deactivated (ECMA-269
+     * §26.1.4.1).
+     *
+     * @public
+     * @readonly
+     */
+    public readonly overConnection: ConnectionID;
+    /**
+     * @summary `resource`.
+     * @description
+     *
+     * Interactive voice resource. Required when more than one interactive
+     * voice resource exists on the connection.
+     *
+     * @public
+     * @readonly
+     */
+    public readonly resource: OPTIONAL<ResourceID>;
+    /**
+     * @summary `ruleName`.
+     * @description
+     *
+     * Grammar rule to deactivate (ECMA-269 §26.1.4.1).
+     *
+     * @public
+     * @readonly
+     */
+    public readonly ruleName: IA5String;
+    /**
+     * @summary `grammarName`.
+     * @description
+     *
+     * Grammar to deactivate; if absent, all grammars are affected (ECMA-269
+     * §26.1.4.1).
+     *
+     * @public
+     * @readonly
+     */
+    public readonly grammarName?: OPTIONAL<IA5String>;
+    /**
+     * @summary `extensions`.
+     * @description
+     *
+     * CSTACommonArguments carrying the service-table security and
+     * privateData parameters.
+     *
+     * @public
+     * @readonly
+     */
+    public readonly extensions?: OPTIONAL<CSTACommonArguments>;
+
     constructor (
-        /**
-         * @summary `overConnection`.
-         * @description
-         *
-         * Connection whose Listener grammar is deactivated (ECMA-269
-         * §26.1.4.1).
-         *
-         * @public
-         * @readonly
-         */
-        readonly overConnection: ConnectionID,
-        /**
-         * @summary `resource`.
-         * @description
-         *
-         * Interactive voice resource. Required when more than one interactive
-         * voice resource exists on the connection.
-         *
-         * @public
-         * @readonly
-         */
-        readonly resource: OPTIONAL<ResourceID>,
-        /**
-         * @summary `ruleName`.
-         * @description
-         *
-         * Grammar rule to deactivate (ECMA-269 §26.1.4.1).
-         *
-         * @public
-         * @readonly
-         */
-        readonly ruleName: IA5String,
-        /**
-         * @summary `grammarName`.
-         * @description
-         *
-         * Grammar to deactivate; if absent, all grammars are affected (ECMA-269
-         * §26.1.4.1).
-         *
-         * @public
-         * @readonly
-         */
-        readonly grammarName?: OPTIONAL<IA5String>,
-        /**
-         * @summary `extensions`.
-         * @description
-         *
-         * CSTACommonArguments carrying the service-table security and
-         * privateData parameters.
-         *
-         * @public
-         * @readonly
-         */
-        readonly extensions?: OPTIONAL<CSTACommonArguments>
-    ) {}
+        overConnection: ConnectionID,
+        resource: OPTIONAL<ResourceID>,
+        ruleName: IA5String,
+        grammarName?: OPTIONAL<IA5String>,
+        extensions?: OPTIONAL<CSTACommonArguments>
+    ) {
+        this.overConnection = overConnection;
+        this.resource = resource;
+        this.ruleName = ruleName;
+        this.grammarName = grammarName;
+        this.extensions = extensions;
+    }
 
     /**
      * @summary Restructures an object into a DeactivateArgument

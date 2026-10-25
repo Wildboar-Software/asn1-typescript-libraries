@@ -1,6 +1,6 @@
 /* eslint-disable */
 import {
-  OPTIONAL,
+  type OPTIONAL,
   ASN1Element as _Element,
   ASN1TagClass as _TagClass,
   ASN1Construction as _Construction,
@@ -12,12 +12,12 @@ import {
 } from '@wildboar/asn1';
 import * as $ from '@wildboar/asn1/functional';
 import {
-    Code,
+    type Code,
     _decode_Code,
     _encode_Code,
 } from '../Remote-Operations-Information-Objects/Code.ta.mjs';
 import {
-  InvokeId,
+  type InvokeId,
   _decode_InvokeId,
   _encode_InvokeId,
 } from '../Remote-Operations-Generic-ROS-PDUs/InvokeId.ta.mjs';

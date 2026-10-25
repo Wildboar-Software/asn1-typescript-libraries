@@ -1,7 +1,7 @@
 /* eslint-disable */
 import {
-    PrintableString,
-    ASN1Element as _Element,
+    type PrintableString,
+    type ASN1Element as _Element,
     ASN1SizeError,
 } from "@wildboar/asn1";
 import * as $ from "@wildboar/asn1/functional";
@@ -27,7 +27,7 @@ export function _decode_Text128 (el: _Element): Text128 {
     }
     return value;
 }
-export const _encode_Text128 = $._encodePrintableString;
+export const _encode_Text128: $.ASN1Encoder<string> = $._encodePrintableString;
 
 
 /* eslint-enable */

@@ -1,6 +1,6 @@
 /* eslint-disable */
 import {
-    ASN1Element as _Element,
+    type ASN1Element as _Element,
     ASN1TagClass as _TagClass,
     ASN1Construction as _Construction,
     ASN1UniversalType as _UniversalType,
@@ -38,7 +38,8 @@ const _enum_for_SourceIndicator = {
     unknown: 2,
 } as const;
 
-export type _enum_for_SourceIndicator = (typeof _enum_for_SourceIndicator)[keyof typeof _enum_for_SourceIndicator];
+export
+type _enum_for_SourceIndicator = (typeof _enum_for_SourceIndicator)[keyof typeof _enum_for_SourceIndicator];
 
 /**
  * @summary SourceIndicator
@@ -80,7 +81,7 @@ type SourceIndicator = _enum_for_SourceIndicator;
  * @enum {number}
  */
 export
-const SourceIndicator = _enum_for_SourceIndicator;
+const SourceIndicator: typeof _enum_for_SourceIndicator = _enum_for_SourceIndicator;
 
 /**
  * @summary SourceIndicator_resourceOperation
@@ -93,7 +94,7 @@ const SourceIndicator = _enum_for_SourceIndicator;
  * @type {number}
  */
 export
-const SourceIndicator_resourceOperation: SourceIndicator = SourceIndicator.resourceOperation; /* LONG_NAMED_ENUMERATED_VALUE */
+const SourceIndicator_resourceOperation: 0 = SourceIndicator.resourceOperation; /* LONG_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary resourceOperation
@@ -106,7 +107,7 @@ const SourceIndicator_resourceOperation: SourceIndicator = SourceIndicator.resou
  * @type {number}
  */
 export
-const resourceOperation: SourceIndicator = SourceIndicator.resourceOperation; /* SHORT_NAMED_ENUMERATED_VALUE */
+const resourceOperation: 0 = SourceIndicator.resourceOperation; /* SHORT_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary SourceIndicator_managementOperation
@@ -119,7 +120,7 @@ const resourceOperation: SourceIndicator = SourceIndicator.resourceOperation; /*
  * @type {number}
  */
 export
-const SourceIndicator_managementOperation: SourceIndicator = SourceIndicator.managementOperation; /* LONG_NAMED_ENUMERATED_VALUE */
+const SourceIndicator_managementOperation: 1 = SourceIndicator.managementOperation; /* LONG_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary managementOperation
@@ -132,7 +133,7 @@ const SourceIndicator_managementOperation: SourceIndicator = SourceIndicator.man
  * @type {number}
  */
 export
-const managementOperation: SourceIndicator = SourceIndicator.managementOperation; /* SHORT_NAMED_ENUMERATED_VALUE */
+const managementOperation: 1 = SourceIndicator.managementOperation; /* SHORT_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary SourceIndicator_unknown
@@ -144,7 +145,7 @@ const managementOperation: SourceIndicator = SourceIndicator.managementOperation
  * @type {number}
  */
 export
-const SourceIndicator_unknown: SourceIndicator = SourceIndicator.unknown; /* LONG_NAMED_ENUMERATED_VALUE */
+const SourceIndicator_unknown: 2 = SourceIndicator.unknown; /* LONG_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary unknown
@@ -156,13 +157,25 @@ const SourceIndicator_unknown: SourceIndicator = SourceIndicator.unknown; /* LON
  * @type {number}
  */
 export
-const unknown: SourceIndicator = SourceIndicator.unknown; /* SHORT_NAMED_ENUMERATED_VALUE */
+const unknown: 2 = SourceIndicator.unknown; /* SHORT_NAMED_ENUMERATED_VALUE */
 
 
-export const _decode_SourceIndicator = $._decodeEnumerated as $.ASN1Decoder<SourceIndicator>;
+export function _decode_SourceIndicator(el: _Element): SourceIndicator {
+    const enumerated = $._decodeEnumerated(el);
+    switch (enumerated) {
+        case SourceIndicator.resourceOperation: return SourceIndicator.resourceOperation;
+        case SourceIndicator.managementOperation: return SourceIndicator.managementOperation;
+        case SourceIndicator.unknown: return SourceIndicator.unknown;
+        default:
+            throw new _ConstructionError(
+                "Invalid ENUMERATED value " + enumerated + " for SourceIndicator.",
+                el,
+            );
+    }
+}
 
 
-export const _encode_SourceIndicator = $._encodeEnumerated as $.ASN1Encoder<SourceIndicator>;
+export const _encode_SourceIndicator: $.ASN1Encoder<SourceIndicator> = $._encodeEnumerated as $.ASN1Encoder<SourceIndicator>;
 
 
 /* eslint-enable */

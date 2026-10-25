@@ -1,7 +1,7 @@
 /* eslint-disable */
 import {
-    BOOLEAN,
-    ASN1Element as _Element,
+    type BOOLEAN,
+    type ASN1Element as _Element,
     ASN1TagClass as _TagClass,
     ASN1Construction as _Construction,
     ASN1UniversalType as _UniversalType,
@@ -11,7 +11,7 @@ import {
     ASN1ConstructionError as _ConstructionError,
 } from "@wildboar/asn1";
 import * as $ from "@wildboar/asn1/functional";
-import { MMSString, _decode_MMSString, _encode_MMSString } from "../ISO-9506-MMS-1/MMSString.ta.mjs";
+import { type MMSString, _decode_MMSString, _encode_MMSString } from "../ISO-9506-MMS-1/MMSString.ta.mjs";
 
 
 /**
@@ -38,41 +38,49 @@ import { MMSString, _decode_MMSString, _encode_MMSString } from "../ISO-9506-MMS
  */
 export
 class VariableAccessParameters {
+    /**
+     * @summary `uninterruptibleAccess`.
+     * @description
+     *
+     * Conditions under which uninterruptible variable access is guaranteed.
+     * ISO 9506-1:2003 §14.1.1.1; ISO 9506-2:2003 Annex B.2.5.
+     *
+     * @public
+     * @readonly
+     */
+    public readonly uninterruptibleAccess: MMSString;
+    /**
+     * @summary `singleMode`.
+     * @description
+     *
+     * Whether SINGLE Kind Of Variable is supported. ISO 9506-2:2003 Annex
+     * B.2.5.
+     *
+     * @public
+     * @readonly
+     */
+    public readonly singleMode: BOOLEAN;
+    /**
+     * @summary `unnamedMode`.
+     * @description
+     *
+     * Whether unnamed (address) access is supported. ISO 9506-2:2003 Annex
+     * B.2.5.
+     *
+     * @public
+     * @readonly
+     */
+    public readonly unnamedMode: BOOLEAN;
+
     constructor (
-        /**
-         * @summary `uninterruptibleAccess`.
-         * @description
-         *
-         * Conditions under which uninterruptible variable access is guaranteed.
-         * ISO 9506-1:2003 §14.1.1.1; ISO 9506-2:2003 Annex B.2.5.
-         *
-         * @public
-         * @readonly
-         */
-        readonly uninterruptibleAccess: MMSString,
-        /**
-         * @summary `singleMode`.
-         * @description
-         *
-         * Whether SINGLE Kind Of Variable is supported. ISO 9506-2:2003 Annex
-         * B.2.5.
-         *
-         * @public
-         * @readonly
-         */
-        readonly singleMode: BOOLEAN,
-        /**
-         * @summary `unnamedMode`.
-         * @description
-         *
-         * Whether unnamed (address) access is supported. ISO 9506-2:2003 Annex
-         * B.2.5.
-         *
-         * @public
-         * @readonly
-         */
-        readonly unnamedMode: BOOLEAN
-    ) {}
+        uninterruptibleAccess: MMSString,
+        singleMode: BOOLEAN,
+        unnamedMode: BOOLEAN
+    ) {
+        this.uninterruptibleAccess = uninterruptibleAccess;
+        this.singleMode = singleMode;
+        this.unnamedMode = unnamedMode;
+    }
 
     /**
      * @summary Restructures an object into a VariableAccessParameters

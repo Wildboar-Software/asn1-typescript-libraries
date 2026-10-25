@@ -1,7 +1,7 @@
 /* eslint-disable */
 import {
-    NULL,
-    ASN1Element as _Element,
+    type NULL,
+    type ASN1Element as _Element,
     ASN1TagClass as _TagClass,
     ASN1Construction as _Construction,
     ASN1UniversalType as _UniversalType,
@@ -11,7 +11,7 @@ import {
     ASN1ConstructionError as _ConstructionError,
 } from "@wildboar/asn1";
 import * as $ from "@wildboar/asn1/functional";
-import { Identifier, _decode_Identifier, _encode_Identifier } from "../ISO-9506-MMS-1/Identifier.ta.mjs";
+import { type Identifier, _decode_Identifier, _encode_Identifier } from "../ISO-9506-MMS-1/Identifier.ta.mjs";
 import { GetAccessControlListAttributes_Request_namedObject, _decode_GetAccessControlListAttributes_Request_namedObject, _encode_GetAccessControlListAttributes_Request_namedObject } from "../ISO-9506-MMS-1/GetAccessControlListAttributes-Request-namedObject.ta.mjs";
 
 

@@ -1,15 +1,15 @@
 /* eslint-disable */
 import {
-    IA5String,
-    INTEGER,
-    OPTIONAL,
-    ASN1Element as _Element,
+    type IA5String,
+    type INTEGER,
+    type OPTIONAL,
+    type ASN1Element as _Element,
     ASN1TagClass as _TagClass
 } from "@wildboar/asn1";
 import * as $ from "@wildboar/asn1/functional";
-import { LogotypeImageType, _decode_LogotypeImageType, _encode_LogotypeImageType, color /* IMPORTED_SHORT_NAMED_INTEGER */ } from "../LogotypeCertExtn/LogotypeImageType.ta.mjs";
+import { type LogotypeImageType, _decode_LogotypeImageType, _encode_LogotypeImageType, color /* IMPORTED_SHORT_NAMED_INTEGER */ } from "../LogotypeCertExtn/LogotypeImageType.ta.mjs";
 // export { LogotypeImageType, LogotypeImageType_grayScale /* IMPORTED_LONG_NAMED_INTEGER */, grayScale /* IMPORTED_SHORT_NAMED_INTEGER */, LogotypeImageType_color /* IMPORTED_LONG_NAMED_INTEGER */, color /* IMPORTED_SHORT_NAMED_INTEGER */, _decode_LogotypeImageType, _encode_LogotypeImageType } from "../LogotypeCertExtn/LogotypeImageType.ta.mjs";
-import { LogotypeImageResolution, _decode_LogotypeImageResolution, _encode_LogotypeImageResolution } from "../LogotypeCertExtn/LogotypeImageResolution.ta.mjs";
+import { type LogotypeImageResolution, _decode_LogotypeImageResolution, _encode_LogotypeImageResolution } from "../LogotypeCertExtn/LogotypeImageResolution.ta.mjs";
 // export { LogotypeImageResolution, _decode_LogotypeImageResolution, _encode_LogotypeImageResolution } from "../LogotypeCertExtn/LogotypeImageResolution.ta.mjs";
 
 
@@ -45,13 +45,13 @@ class LogotypeImageInfo {
      * @public
      * @readonly
      */
-    readonly type_: OPTIONAL<LogotypeImageType>;
+    public readonly type_: OPTIONAL<LogotypeImageType>;
     /**
      * Length of the image file, in octets.
      * @public
      * @readonly
      */
-    readonly fileSize: INTEGER;
+    public readonly fileSize: INTEGER;
     /**
      * Width in pixels. Together with `ySize`, at least one image
      * of the logotype should lie between 60×45 and 200×150.
@@ -60,13 +60,13 @@ class LogotypeImageInfo {
      * @public
      * @readonly
      */
-    readonly xSize: INTEGER;
+    public readonly xSize: INTEGER;
     /**
      * Height in pixels. See `xSize` for the recommended range.
      * @public
      * @readonly
      */
-    readonly ySize: INTEGER;
+    public readonly ySize: INTEGER;
     /**
      * Color or grayscale depth. Absent when the issuer does not
      * state it. RFC 3709 does not say whether to use `numBits` or
@@ -74,7 +74,7 @@ class LogotypeImageInfo {
      * @public
      * @readonly
      */
-    readonly resolution?: OPTIONAL<LogotypeImageResolution>;
+    public readonly resolution?: OPTIONAL<LogotypeImageResolution>;
     /**
      * Language of text in the image, as an
      * [RFC 3066](https://www.rfc-editor.org/rfc/rfc3066) language
@@ -84,7 +84,7 @@ class LogotypeImageInfo {
      * @public
      * @readonly
      */
-    readonly language?: OPTIONAL<IA5String>;
+    public readonly language?: OPTIONAL<IA5String>;
 
     constructor (
         type_: OPTIONAL<LogotypeImageType>,
@@ -124,7 +124,7 @@ class LogotypeImageInfo {
      * @static
      * @method
      */
-    public static get _default_value_for_type_ () { return color; }
+    public static get _default_value_for_type_ (): number { return color; }
 }
 
 /**

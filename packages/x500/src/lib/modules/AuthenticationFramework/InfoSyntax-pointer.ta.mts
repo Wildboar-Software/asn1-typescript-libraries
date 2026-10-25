@@ -1,8 +1,8 @@
 /* eslint-disable */
 import {
-    ASN1Element as _Element,
+    type ASN1Element as _Element,
     ASN1TagClass as _TagClass,
-    OPTIONAL,
+    type OPTIONAL,
 } from "@wildboar/asn1";
 import * as $ from "@wildboar/asn1/functional";
 import {
@@ -11,12 +11,12 @@ import {
     _get_encoder_for_HASH,
 } from "../AuthenticationFramework/HASH.ta.mjs";
 import {
-    HashedPolicyInfo,
+    type HashedPolicyInfo,
     _decode_HashedPolicyInfo,
     _encode_HashedPolicyInfo,
 } from "../AuthenticationFramework/HashedPolicyInfo.ta.mjs";
 import {
-    GeneralNames,
+    type GeneralNames,
     _decode_GeneralNames,
     _encode_GeneralNames,
 } from "../CertificateExtensions/GeneralNames.ta.mjs";
@@ -36,26 +36,34 @@ import {
  *
  */
 export class InfoSyntax_pointer {
+    /**
+     * @summary `name`.
+     * @public
+     * @readonly
+     */
+    public readonly name: GeneralNames;
+    /**
+     * @summary `hash`.
+     * @public
+     * @readonly
+     */
+    public readonly hash?: OPTIONAL<HASH<HashedPolicyInfo>>;
+    /**
+     * @summary Extensions that are not recognized.
+     * @public
+     * @readonly
+     */
+    public readonly _unrecognizedExtensionsList: _Element[];
+
     constructor(
-        /**
-         * @summary `name`.
-         * @public
-         * @readonly
-         */
-        readonly name: GeneralNames,
-        /**
-         * @summary `hash`.
-         * @public
-         * @readonly
-         */
-        readonly hash?: OPTIONAL<HASH<HashedPolicyInfo>>,
-        /**
-         * @summary Extensions that are not recognized.
-         * @public
-         * @readonly
-         */
-        readonly _unrecognizedExtensionsList: _Element[] = []
-    ) {}
+        name: GeneralNames,
+        hash?: OPTIONAL<HASH<HashedPolicyInfo>>,
+        _unrecognizedExtensionsList: _Element[] = []
+    ) {
+        this.name = name;
+        this.hash = hash;
+        this._unrecognizedExtensionsList = _unrecognizedExtensionsList;
+    }
 
     /**
      * @summary Restructures an object into a InfoSyntax_pointer

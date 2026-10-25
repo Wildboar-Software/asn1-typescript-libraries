@@ -1,7 +1,7 @@
 /* eslint-disable */
 
 import * as $ from "@wildboar/asn1/functional";
-import { ENUMERATED, ASN1Element as _Element } from "@wildboar/asn1";
+import { type ENUMERATED, ASN1Element as _Element } from "@wildboar/asn1";
 
 
 
@@ -75,7 +75,7 @@ type ReplaceMode = _enum_for_ReplaceMode;
  * @enum {number}
  */
 export
-const ReplaceMode = _enum_for_ReplaceMode;
+const ReplaceMode: typeof _enum_for_ReplaceMode = _enum_for_ReplaceMode;
 
 /**
  * @summary ReplaceMode_replaceAll
@@ -87,7 +87,7 @@ const ReplaceMode = _enum_for_ReplaceMode;
  * @type {number}
  */
 export
-const ReplaceMode_replaceAll: ReplaceMode = ReplaceMode.replaceAll; /* LONG_NAMED_ENUMERATED_VALUE */
+const ReplaceMode_replaceAll: _enum_for_ReplaceMode.replaceAll = ReplaceMode.replaceAll; /* LONG_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary replaceAll
@@ -99,7 +99,7 @@ const ReplaceMode_replaceAll: ReplaceMode = ReplaceMode.replaceAll; /* LONG_NAME
  * @type {number}
  */
 export
-const replaceAll: ReplaceMode = ReplaceMode.replaceAll; /* SHORT_NAMED_ENUMERATED_VALUE */
+const replaceAll: _enum_for_ReplaceMode.replaceAll = ReplaceMode.replaceAll; /* SHORT_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary ReplaceMode_replacePortion
@@ -112,7 +112,7 @@ const replaceAll: ReplaceMode = ReplaceMode.replaceAll; /* SHORT_NAMED_ENUMERATE
  * @type {number}
  */
 export
-const ReplaceMode_replacePortion: ReplaceMode = ReplaceMode.replacePortion; /* LONG_NAMED_ENUMERATED_VALUE */
+const ReplaceMode_replacePortion: _enum_for_ReplaceMode.replacePortion = ReplaceMode.replacePortion; /* LONG_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary replacePortion
@@ -125,7 +125,7 @@ const ReplaceMode_replacePortion: ReplaceMode = ReplaceMode.replacePortion; /* L
  * @type {number}
  */
 export
-const replacePortion: ReplaceMode = ReplaceMode.replacePortion; /* SHORT_NAMED_ENUMERATED_VALUE */
+const replacePortion: _enum_for_ReplaceMode.replacePortion = ReplaceMode.replacePortion; /* SHORT_NAMED_ENUMERATED_VALUE */
 
 let _cached_decoder_for_ReplaceMode: $.ASN1Decoder<ReplaceMode> | null = null;
 

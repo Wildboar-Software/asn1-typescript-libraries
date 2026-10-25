@@ -2,15 +2,15 @@
 
 import * as $ from "@wildboar/asn1/functional";
 import {
-    OPTIONAL,
-    SEQUENCE,
-    SET,
-    ASN1Element as _Element,
+    type OPTIONAL,
+    type SEQUENCE,
+    type SET,
+    type ASN1Element as _Element,
     ASN1TagClass as _TagClass
 } from "@wildboar/asn1";
 import { DeviceID, _decode_DeviceID, _encode_DeviceID } from "../CSTA-device-identifiers/DeviceID.ta.mjs";
 
-import { LocationInfo, _decode_LocationInfo, _encode_LocationInfo } from "../CSTA-call-control/LocationInfo.ta.mjs";
+import { type LocationInfo, _decode_LocationInfo, _encode_LocationInfo } from "../CSTA-call-control/LocationInfo.ta.mjs";
 
 import {
     ReplaceMode,
@@ -38,8 +38,8 @@ import { CSTACommonArguments, _decode_CSTACommonArguments, _encode_CSTACommonArg
  * ```asn1
  * SetLocationInformationArgument ::= SEQUENCE
  * {    device                DeviceID,
- *     locationInfo            LocationInfo                OPTIONAL,
- *     replaceMode            ReplaceMode                OPTIONAL,
+ *     locationInfo            LocationInfo                type OPTIONAL,
+ *     replaceMode            ReplaceMode                type OPTIONAL,
  *     extensions            CSTACommonArguments            OPTIONAL }
  * ```
  * 
@@ -47,52 +47,62 @@ import { CSTACommonArguments, _decode_CSTACommonArguments, _encode_CSTACommonArg
  */
 export
 class SetLocationInformationArgument {
+    /**
+     * @summary `device`.
+     * @description
+     *
+     * Device to which location is associated (ECMA-269 §28.1.2.1).
+     *
+     * @public
+     * @readonly
+     */
+    public readonly device: DeviceID;
+    /**
+     * @summary `locationInfo`.
+     * @description
+     *
+     * PIDF-LO to associate. If omitted, all existing location for the
+     * device is cleared (ECMA-269 §28.1.2.1).
+     *
+     * @public
+     * @readonly
+     */
+    public readonly locationInfo?: OPTIONAL<LocationInfo>;
+    /**
+     * @summary `replaceMode`.
+     * @description
+     *
+     * replaceAll (default) replaces all stored location; replacePortion
+     * replaces equivalent person/device/tuple components only (ECMA-269
+     * §28.1.2.1).
+     *
+     * @public
+     * @readonly
+     */
+    public readonly replaceMode?: OPTIONAL<ReplaceMode>;
+    /**
+     * @summary `extensions`.
+     * @description
+     *
+     * CSTACommonArguments carrying the service-table security and
+     * privateData parameters.
+     *
+     * @public
+     * @readonly
+     */
+    public readonly extensions?: OPTIONAL<CSTACommonArguments>;
+
     constructor (
-        /**
-         * @summary `device`.
-         * @description
-         *
-         * Device to which location is associated (ECMA-269 §28.1.2.1).
-         *
-         * @public
-         * @readonly
-         */
-        readonly device: DeviceID,
-        /**
-         * @summary `locationInfo`.
-         * @description
-         *
-         * PIDF-LO to associate. If omitted, all existing location for the
-         * device is cleared (ECMA-269 §28.1.2.1).
-         *
-         * @public
-         * @readonly
-         */
-        readonly locationInfo?: OPTIONAL<LocationInfo>,
-        /**
-         * @summary `replaceMode`.
-         * @description
-         *
-         * replaceAll (default) replaces all stored location; replacePortion
-         * replaces equivalent person/device/tuple components only (ECMA-269
-         * §28.1.2.1).
-         *
-         * @public
-         * @readonly
-         */
-        readonly replaceMode?: OPTIONAL<ReplaceMode>,
-        /**
-         * @summary `extensions`.
-         * @description
-         *
-         * CSTACommonArguments carrying the service-table security and
-         * privateData parameters.
-         *
-         * @public
-         * @readonly
-         */
-        readonly extensions?: OPTIONAL<CSTACommonArguments>
-    ) {}
+        device: DeviceID,
+        locationInfo?: OPTIONAL<LocationInfo>,
+        replaceMode?: OPTIONAL<ReplaceMode>,
+        extensions?: OPTIONAL<CSTACommonArguments>
+    ) {
+        this.device = device;
+        this.locationInfo = locationInfo;
+        this.replaceMode = replaceMode;
+        this.extensions = extensions;
+    }
 
     /**
      * @summary Restructures an object into a SetLocationInformationArgument
@@ -116,7 +126,7 @@ class SetLocationInformationArgument {
          * @static
          */
 
-    public static _enum_for_replaceMode = _enum_for_ReplaceMode;
+    public static _enum_for_replaceMode: typeof _enum_for_ReplaceMode = _enum_for_ReplaceMode;
 }
 
 /**

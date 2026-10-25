@@ -1,6 +1,6 @@
 /* eslint-disable */
 import {
-    ASN1Element as _Element,
+    type ASN1Element as _Element,
     ASN1TagClass as _TagClass,
     ASN1Construction as _Construction,
     ASN1UniversalType as _UniversalType,
@@ -9,7 +9,7 @@ import {
     EmbeddedPDV as _PDV,
     ASN1ConstructionError as _ConstructionError,
 } from "@wildboar/asn1";
-import { ALGORITHM_IDENTIFIER } from "../CryptographicInformationFramework/ALGORITHM-IDENTIFIER.oca.mjs";
+import { type ALGORITHM_IDENTIFIER } from "../CryptographicInformationFramework/ALGORITHM-IDENTIFIER.oca.mjs";
 import { DigestAlgorithms_Union0_Intersection0_Element } from "../CryptographicInformationFramework/DigestAlgorithms-Union0-Intersection0-Element.oa.mjs";
 
 

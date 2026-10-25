@@ -1,14 +1,14 @@
 /* eslint-disable */
 import {
-    INTEGER,
-    NULL,
-    OPTIONAL,
-    ASN1Element as _Element,
+    type INTEGER,
+    type NULL,
+    type OPTIONAL,
+    type ASN1Element as _Element,
     ASN1TagClass as _TagClass
 } from "@wildboar/asn1";
 import * as $ from "@wildboar/asn1/functional";
-import { AttributeSetId, _decode_AttributeSetId, _encode_AttributeSetId } from "../Z39-50-APDU-2001/AttributeSetId.ta.mjs";
-import { AttributeOccurrence_attributeValues, _decode_AttributeOccurrence_attributeValues, _encode_AttributeOccurrence_attributeValues } from "../RecordSyntax-explain/AttributeOccurrence-attributeValues.ta.mjs";
+import { type AttributeSetId, _decode_AttributeSetId, _encode_AttributeSetId } from "../Z39-50-APDU-2001/AttributeSetId.ta.mjs";
+import { type AttributeOccurrence_attributeValues, _decode_AttributeOccurrence_attributeValues, _encode_AttributeOccurrence_attributeValues } from "../RecordSyntax-explain/AttributeOccurrence-attributeValues.ta.mjs";
 
 
 /**

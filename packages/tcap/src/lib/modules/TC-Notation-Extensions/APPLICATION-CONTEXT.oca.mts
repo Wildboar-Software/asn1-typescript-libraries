@@ -1,9 +1,9 @@
 /* eslint-disable */
 import {
-    BOOLEAN,
-    OBJECT_IDENTIFIER,
-    ABSTRACT_SYNTAX,
-    ASN1Element as _Element,
+    type BOOLEAN,
+    type OBJECT_IDENTIFIER,
+    type ABSTRACT_SYNTAX,
+    type ASN1Element as _Element,
     ASN1TagClass as _TagClass,
     ASN1Construction as _Construction,
     ASN1UniversalType as _UniversalType,

@@ -1,7 +1,7 @@
 /* eslint-disable */
 import {
-    OPTIONAL,
-    ASN1Element as _Element,
+    type OPTIONAL,
+    type ASN1Element as _Element,
     ASN1TagClass as _TagClass,
     ASN1Construction as _Construction,
     ASN1UniversalType as _UniversalType,
@@ -17,22 +17,22 @@ import {
     _encode_CommonFields,
 } from '../EDIMSInformationObjects/CommonFields.ta.mjs';
 import {
-    ForwardedTo,
+    type ForwardedTo,
     _decode_ForwardedTo,
     _encode_ForwardedTo,
 } from '../EDIMSInformationObjects/ForwardedTo.ta.mjs';
 import {
-    FNReasonCodeField,
+    type FNReasonCodeField,
     _decode_FNReasonCodeField,
     _encode_FNReasonCodeField,
 } from '../EDIMSInformationObjects/FNReasonCodeField.ta.mjs';
 import {
-    EDISupplementaryInformation,
+    type EDISupplementaryInformation,
     _decode_EDISupplementaryInformation,
     _encode_EDISupplementaryInformation,
 } from '../EDIMSInformationObjects/EDISupplementaryInformation.ta.mjs';
 import {
-    FNExtensionsField,
+    type FNExtensionsField,
     _decode_FNExtensionsField,
     _encode_FNExtensionsField,
 } from '../EDIMSInformationObjects/FNExtensionsField.ta.mjs';
@@ -58,38 +58,50 @@ import {
  *
  */
 export class ForwardedNotificationFields {
+    /**
+     * @summary `fn_common_fields`.
+     * @public
+     * @readonly
+     */
+    public readonly fn_common_fields: CommonFields;
+    /**
+     * @summary `forwarded_to`.
+     * @public
+     * @readonly
+     */
+    public readonly forwarded_to: ForwardedTo;
+    /**
+     * @summary `fn_reason_code`.
+     * @public
+     * @readonly
+     */
+    public readonly fn_reason_code: FNReasonCodeField;
+    /**
+     * @summary `fn_supplementary_information`.
+     * @public
+     * @readonly
+     */
+    public readonly fn_supplementary_information?: OPTIONAL<EDISupplementaryInformation>;
+    /**
+     * @summary `fn_extensions`.
+     * @public
+     * @readonly
+     */
+    public readonly fn_extensions?: OPTIONAL<FNExtensionsField>;
+
     constructor(
-        /**
-         * @summary `fn_common_fields`.
-         * @public
-         * @readonly
-         */
-        readonly fn_common_fields: CommonFields,
-        /**
-         * @summary `forwarded_to`.
-         * @public
-         * @readonly
-         */
-        readonly forwarded_to: ForwardedTo,
-        /**
-         * @summary `fn_reason_code`.
-         * @public
-         * @readonly
-         */
-        readonly fn_reason_code: FNReasonCodeField,
-        /**
-         * @summary `fn_supplementary_information`.
-         * @public
-         * @readonly
-         */
-        readonly fn_supplementary_information?: OPTIONAL<EDISupplementaryInformation>,
-        /**
-         * @summary `fn_extensions`.
-         * @public
-         * @readonly
-         */
-        readonly fn_extensions?: OPTIONAL<FNExtensionsField>
-    ) {}
+        fn_common_fields: CommonFields,
+        forwarded_to: ForwardedTo,
+        fn_reason_code: FNReasonCodeField,
+        fn_supplementary_information?: OPTIONAL<EDISupplementaryInformation>,
+        fn_extensions?: OPTIONAL<FNExtensionsField>
+    ) {
+        this.fn_common_fields = fn_common_fields;
+        this.forwarded_to = forwarded_to;
+        this.fn_reason_code = fn_reason_code;
+        this.fn_supplementary_information = fn_supplementary_information;
+        this.fn_extensions = fn_extensions;
+    }
 
     /**
      * @summary Restructures an object into a ForwardedNotificationFields

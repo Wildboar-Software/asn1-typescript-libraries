@@ -1,7 +1,7 @@
 /* eslint-disable */
 import {
-  OPTIONAL,
-  BOOLEAN,
+  type OPTIONAL,
+  type BOOLEAN,
   ASN1Element as _Element,
   ASN1TagClass as _TagClass,
   ASN1Construction as _Construction,
@@ -13,22 +13,22 @@ import {
 } from '@wildboar/asn1';
 import * as $ from '@wildboar/asn1/functional';
 import {
-  BioAPI_UUID,
+  type BioAPI_UUID,
   _decode_BioAPI_UUID,
   _encode_BioAPI_UUID,
 } from '../BIP/BioAPI-UUID.ta.mjs';
 import {
-  EndpointIRI,
+  type EndpointIRI,
   _decode_EndpointIRI,
   _encode_EndpointIRI,
 } from '../BIP/EndpointIRI.ta.mjs';
 import {
-  BioAPI_HANDLE,
+  type BioAPI_HANDLE,
   _decode_BioAPI_HANDLE,
   _encode_BioAPI_HANDLE,
 } from '../BIP/BioAPI-HANDLE.ta.mjs';
 import {
-  MemoryAddress,
+  type MemoryAddress,
   _decode_MemoryAddress,
   _encode_MemoryAddress,
 } from '../BIP/MemoryAddress.ta.mjs';
@@ -77,7 +77,7 @@ export class GUIEventLocalSubscription {
    * @public
    * @readonly
    */
-  readonly guiEventSubscriptionUuid: OPTIONAL<BioAPI_UUID>;
+  public readonly guiEventSubscriptionUuid: OPTIONAL<BioAPI_UUID>;
   /**
    * @summary `hostingEndpointIRI`.
    * @description
@@ -88,7 +88,7 @@ export class GUIEventLocalSubscription {
    * @public
    * @readonly
    */
-  readonly hostingEndpointIRI: EndpointIRI;
+  public readonly hostingEndpointIRI: EndpointIRI;
   /**
    * @summary `bspProductUuid`.
    * @description
@@ -99,7 +99,7 @@ export class GUIEventLocalSubscription {
    * @public
    * @readonly
    */
-  readonly bspProductUuid: BioAPI_UUID;
+  public readonly bspProductUuid: BioAPI_UUID;
   /**
    * @summary `useBSPAccessUuid`.
    * @description
@@ -111,7 +111,7 @@ export class GUIEventLocalSubscription {
    * @public
    * @readonly
    */
-  readonly useBSPAccessUuid: BOOLEAN;
+  public readonly useBSPAccessUuid: BOOLEAN;
   /**
    * @summary `originalBSPHandle`.
    * @description
@@ -123,7 +123,7 @@ export class GUIEventLocalSubscription {
    * @public
    * @readonly
    */
-  readonly originalBSPHandle: OPTIONAL<BioAPI_HANDLE>;
+  public readonly originalBSPHandle: OPTIONAL<BioAPI_HANDLE>;
   /**
    * @summary `guiSelectEventHandlerAddress`.
    * @description
@@ -134,7 +134,7 @@ export class GUIEventLocalSubscription {
    * @public
    * @readonly
    */
-  readonly guiSelectEventHandlerAddress: MemoryAddress;
+  public readonly guiSelectEventHandlerAddress: MemoryAddress;
   /**
    * @summary `guiSelectEventHandlerContext`.
    * @description
@@ -145,7 +145,7 @@ export class GUIEventLocalSubscription {
    * @public
    * @readonly
    */
-  readonly guiSelectEventHandlerContext: MemoryAddress;
+  public readonly guiSelectEventHandlerContext: MemoryAddress;
   /**
    * @summary `guiStateEventHandlerAddress`.
    * @description
@@ -156,7 +156,7 @@ export class GUIEventLocalSubscription {
    * @public
    * @readonly
    */
-  readonly guiStateEventHandlerAddress: MemoryAddress;
+  public readonly guiStateEventHandlerAddress: MemoryAddress;
   /**
    * @summary `guiStateEventHandlerContext`.
    * @description
@@ -167,7 +167,7 @@ export class GUIEventLocalSubscription {
    * @public
    * @readonly
    */
-  readonly guiStateEventHandlerContext: MemoryAddress;
+  public readonly guiStateEventHandlerContext: MemoryAddress;
   /**
    * @summary `guiProgressEventHandlerAddress`.
    * @description
@@ -179,7 +179,7 @@ export class GUIEventLocalSubscription {
    * @public
    * @readonly
    */
-  readonly guiProgressEventHandlerAddress: MemoryAddress;
+  public readonly guiProgressEventHandlerAddress: MemoryAddress;
   /**
    * @summary `guiProgressEventHandlerContext`.
    * @description
@@ -190,7 +190,7 @@ export class GUIEventLocalSubscription {
    * @public
    * @readonly
    */
-  readonly guiProgressEventHandlerContext: MemoryAddress;
+  public readonly guiProgressEventHandlerContext: MemoryAddress;
 
   constructor(
     guiEventSubscriptionUuid: OPTIONAL<BioAPI_UUID>,

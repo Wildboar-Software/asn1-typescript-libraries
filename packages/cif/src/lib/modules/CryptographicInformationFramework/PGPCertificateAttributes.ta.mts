@@ -1,6 +1,6 @@
 /* eslint-disable */
 import {
-    ASN1Element as _Element,
+    type ASN1Element as _Element,
     ASN1TagClass as _TagClass,
     ASN1Construction as _Construction,
     ASN1UniversalType as _UniversalType,
@@ -10,7 +10,7 @@ import {
     ASN1ConstructionError as _ConstructionError,
 } from "@wildboar/asn1";
 import * as $ from "@wildboar/asn1/functional";
-import { ObjectValue, _get_decoder_for_ObjectValue, _get_encoder_for_ObjectValue } from "../CryptographicInformationFramework/ObjectValue.ta.mjs";
+import { type ObjectValue, _get_decoder_for_ObjectValue, _get_encoder_for_ObjectValue } from "../CryptographicInformationFramework/ObjectValue.ta.mjs";
 
 
 /**
@@ -32,23 +32,29 @@ import { ObjectValue, _get_decoder_for_ObjectValue, _get_encoder_for_ObjectValue
  */
 export
 class PGPCertificateAttributes {
+    /**
+     * @summary `value`.
+     * @description
+     * `ReferencedValue` to the PGP certificate file or URL. ISO/IEC
+     * 7816-15:2016 §8.7.5.
+     * @public
+     * @readonly
+     */
+    public readonly value: ObjectValue<_Element>;
+    /**
+     * @summary Extensions that are not recognized.
+     * @public
+     * @readonly
+     */
+    public readonly _unrecognizedExtensionsList: _Element[];
+
     constructor (
-        /**
-         * @summary `value`.
-         * @description
-         * `ReferencedValue` to the PGP certificate file or URL. ISO/IEC
-         * 7816-15:2016 §8.7.5.
-         * @public
-         * @readonly
-         */
-        readonly value: ObjectValue<_Element>,
-        /**
-         * @summary Extensions that are not recognized.
-         * @public
-         * @readonly
-         */
-        readonly _unrecognizedExtensionsList: _Element[] = []
-    ) {}
+        value: ObjectValue<_Element>,
+        _unrecognizedExtensionsList: _Element[] = []
+    ) {
+        this.value = value;
+        this._unrecognizedExtensionsList = _unrecognizedExtensionsList;
+    }
 
     /**
      * @summary Restructures an object into a PGPCertificateAttributes

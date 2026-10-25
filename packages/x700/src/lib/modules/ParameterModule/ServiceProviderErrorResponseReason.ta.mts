@@ -1,6 +1,6 @@
 /* eslint-disable */
 import {
-    ASN1Element as _Element,
+    type ASN1Element as _Element,
     ASN1TagClass as _TagClass,
     ASN1Construction as _Construction,
     ASN1UniversalType as _UniversalType,
@@ -95,14 +95,14 @@ export type ServiceProviderErrorResponseReason = _enum_for_ServiceProviderErrorR
  *
  * @enum {number}
  */
-export const ServiceProviderErrorResponseReason = _enum_for_ServiceProviderErrorResponseReason;
+export const ServiceProviderErrorResponseReason: typeof _enum_for_ServiceProviderErrorResponseReason = _enum_for_ServiceProviderErrorResponseReason;
 
 /**
  * @summary ServiceProviderErrorResponseReason_insufficientResources
  * @constant
  * @type {number}
  */
-export const ServiceProviderErrorResponseReason_insufficientResources: ServiceProviderErrorResponseReason =
+export const ServiceProviderErrorResponseReason_insufficientResources: _enum_for_ServiceProviderErrorResponseReason.insufficientResources =
     ServiceProviderErrorResponseReason.insufficientResources; /* LONG_NAMED_ENUMERATED_VALUE */
 
 /**
@@ -110,7 +110,7 @@ export const ServiceProviderErrorResponseReason_insufficientResources: ServicePr
  * @constant
  * @type {number}
  */
-export const insufficientResources: ServiceProviderErrorResponseReason =
+export const insufficientResources: _enum_for_ServiceProviderErrorResponseReason.insufficientResources =
     ServiceProviderErrorResponseReason.insufficientResources; /* SHORT_NAMED_ENUMERATED_VALUE */
 
 /**
@@ -118,7 +118,7 @@ export const insufficientResources: ServiceProviderErrorResponseReason =
  * @constant
  * @type {number}
  */
-export const ServiceProviderErrorResponseReason_providerDoesNotExist: ServiceProviderErrorResponseReason =
+export const ServiceProviderErrorResponseReason_providerDoesNotExist: _enum_for_ServiceProviderErrorResponseReason.providerDoesNotExist =
     ServiceProviderErrorResponseReason.providerDoesNotExist; /* LONG_NAMED_ENUMERATED_VALUE */
 
 /**
@@ -126,7 +126,7 @@ export const ServiceProviderErrorResponseReason_providerDoesNotExist: ServicePro
  * @constant
  * @type {number}
  */
-export const providerDoesNotExist: ServiceProviderErrorResponseReason =
+export const providerDoesNotExist: _enum_for_ServiceProviderErrorResponseReason.providerDoesNotExist =
     ServiceProviderErrorResponseReason.providerDoesNotExist; /* SHORT_NAMED_ENUMERATED_VALUE */
 
 /**
@@ -134,7 +134,7 @@ export const providerDoesNotExist: ServiceProviderErrorResponseReason =
  * @constant
  * @type {number}
  */
-export const ServiceProviderErrorResponseReason_providerNotAvailable: ServiceProviderErrorResponseReason =
+export const ServiceProviderErrorResponseReason_providerNotAvailable: _enum_for_ServiceProviderErrorResponseReason.providerNotAvailable =
     ServiceProviderErrorResponseReason.providerNotAvailable; /* LONG_NAMED_ENUMERATED_VALUE */
 
 /**
@@ -142,7 +142,7 @@ export const ServiceProviderErrorResponseReason_providerNotAvailable: ServicePro
  * @constant
  * @type {number}
  */
-export const providerNotAvailable: ServiceProviderErrorResponseReason =
+export const providerNotAvailable: _enum_for_ServiceProviderErrorResponseReason.providerNotAvailable =
     ServiceProviderErrorResponseReason.providerNotAvailable; /* SHORT_NAMED_ENUMERATED_VALUE */
 
 /**
@@ -150,7 +150,7 @@ export const providerNotAvailable: ServiceProviderErrorResponseReason =
  * @constant
  * @type {number}
  */
-export const ServiceProviderErrorResponseReason_requiredServiceNotAvailable: ServiceProviderErrorResponseReason =
+export const ServiceProviderErrorResponseReason_requiredServiceNotAvailable: _enum_for_ServiceProviderErrorResponseReason.requiredServiceNotAvailable =
     ServiceProviderErrorResponseReason.requiredServiceNotAvailable; /* LONG_NAMED_ENUMERATED_VALUE */
 
 /**
@@ -158,7 +158,7 @@ export const ServiceProviderErrorResponseReason_requiredServiceNotAvailable: Ser
  * @constant
  * @type {number}
  */
-export const requiredServiceNotAvailable: ServiceProviderErrorResponseReason =
+export const requiredServiceNotAvailable: _enum_for_ServiceProviderErrorResponseReason.requiredServiceNotAvailable =
     ServiceProviderErrorResponseReason.requiredServiceNotAvailable; /* SHORT_NAMED_ENUMERATED_VALUE */
 
 let _cached_decoder_for_ServiceProviderErrorResponseReason: $.ASN1Decoder<ServiceProviderErrorResponseReason> | null = null;
@@ -172,7 +172,20 @@ let _cached_decoder_for_ServiceProviderErrorResponseReason: $.ASN1Decoder<Servic
 export function _decode_ServiceProviderErrorResponseReason(el: _Element): ServiceProviderErrorResponseReason {
     if (!_cached_decoder_for_ServiceProviderErrorResponseReason) {
         _cached_decoder_for_ServiceProviderErrorResponseReason =
-            $._decodeEnumerated;
+            function (el: _Element): ServiceProviderErrorResponseReason {
+                const enumerated = $._decodeEnumerated(el);
+                switch (enumerated) {
+                    case ServiceProviderErrorResponseReason.insufficientResources: return ServiceProviderErrorResponseReason.insufficientResources;
+                    case ServiceProviderErrorResponseReason.providerDoesNotExist: return ServiceProviderErrorResponseReason.providerDoesNotExist;
+                    case ServiceProviderErrorResponseReason.providerNotAvailable: return ServiceProviderErrorResponseReason.providerNotAvailable;
+                    case ServiceProviderErrorResponseReason.requiredServiceNotAvailable: return ServiceProviderErrorResponseReason.requiredServiceNotAvailable;
+                    default:
+                        throw new _ConstructionError(
+                            'Invalid ENUMERATED value ' + enumerated + ' for ServiceProviderErrorResponseReason.',
+                            el,
+                        );
+                }
+            };
     }
     return _cached_decoder_for_ServiceProviderErrorResponseReason(el);
 }
@@ -192,7 +205,7 @@ export function _encode_ServiceProviderErrorResponseReason(
 ): _Element {
     if (!_cached_encoder_for_ServiceProviderErrorResponseReason) {
         _cached_encoder_for_ServiceProviderErrorResponseReason =
-            $._encodeEnumerated;
+            $._encodeEnumerated as $.ASN1Encoder<ServiceProviderErrorResponseReason>;
     }
     return _cached_encoder_for_ServiceProviderErrorResponseReason(
         value,

@@ -1,6 +1,6 @@
 /* eslint-disable */
 import {
-  OPTIONAL,
+  type OPTIONAL,
   ASN1Element as _Element,
   ASN1TagClass as _TagClass,
   ASN1Construction as _Construction,
@@ -12,12 +12,12 @@ import {
 } from '@wildboar/asn1';
 import * as $ from '@wildboar/asn1/functional';
 import {
-  InformationType,
+  type InformationType,
   _decode_InformationType,
   _encode_InformationType,
 } from '../CommonMgt/InformationType.ta.mjs';
 import {
-  InformationData,
+  type InformationData,
   _decode_InformationData,
   _encode_InformationData,
 } from '../CommonMgt/InformationData.ta.mjs';
@@ -55,7 +55,7 @@ export class CommunicationsInformation {
    * @public
    * @readonly
    */
-  readonly informationType: InformationType;
+  public readonly informationType: InformationType;
   /**
    * @summary `informationData`.
    * @description
@@ -67,7 +67,7 @@ export class CommunicationsInformation {
    * @public
    * @readonly
    */
-  readonly informationData?: OPTIONAL<InformationData>;
+  public readonly informationData?: OPTIONAL<InformationData>;
 
   constructor(
     informationType: InformationType,

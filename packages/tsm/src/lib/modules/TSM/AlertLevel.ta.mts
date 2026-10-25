@@ -1,6 +1,6 @@
 /* eslint-disable */
 import {
-    ASN1Element as _Element,
+    type ASN1Element as _Element,
     ASN1TagClass as _TagClass,
     ASN1Construction as _Construction,
     ASN1UniversalType as _UniversalType,
@@ -77,7 +77,7 @@ type AlertLevel = _enum_for_AlertLevel;
  * @enum {number}
  */
 export
-const AlertLevel = _enum_for_AlertLevel;
+const AlertLevel: typeof _enum_for_AlertLevel = _enum_for_AlertLevel;
 
 /**
  * @summary AlertLevel_warning
@@ -87,7 +87,7 @@ const AlertLevel = _enum_for_AlertLevel;
  * @type {number}
  */
 export
-const AlertLevel_warning: AlertLevel = AlertLevel.warning; /* LONG_NAMED_ENUMERATED_VALUE */
+const AlertLevel_warning: _enum_for_AlertLevel.warning = AlertLevel.warning; /* LONG_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary warning
@@ -97,7 +97,7 @@ const AlertLevel_warning: AlertLevel = AlertLevel.warning; /* LONG_NAMED_ENUMERA
  * @type {number}
  */
 export
-const warning: AlertLevel = AlertLevel.warning; /* SHORT_NAMED_ENUMERATED_VALUE */
+const warning: _enum_for_AlertLevel.warning = AlertLevel.warning; /* SHORT_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary AlertLevel_fatal
@@ -107,7 +107,7 @@ const warning: AlertLevel = AlertLevel.warning; /* SHORT_NAMED_ENUMERATED_VALUE 
  * @type {number}
  */
 export
-const AlertLevel_fatal: AlertLevel = AlertLevel.fatal; /* LONG_NAMED_ENUMERATED_VALUE */
+const AlertLevel_fatal: _enum_for_AlertLevel.fatal = AlertLevel.fatal; /* LONG_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary fatal
@@ -117,9 +117,20 @@ const AlertLevel_fatal: AlertLevel = AlertLevel.fatal; /* LONG_NAMED_ENUMERATED_
  * @type {number}
  */
 export
-const fatal: AlertLevel = AlertLevel.fatal; /* SHORT_NAMED_ENUMERATED_VALUE */
-export const _decode_AlertLevel = $._decodeEnumerated;
-export const _encode_AlertLevel = $._encodeEnumerated;
+const fatal: _enum_for_AlertLevel.fatal = AlertLevel.fatal; /* SHORT_NAMED_ENUMERATED_VALUE */
+export function _decode_AlertLevel(el: _Element): AlertLevel {
+    const enumerated = $._decodeEnumerated(el);
+    switch (enumerated) {
+        case AlertLevel.warning: return AlertLevel.warning;
+        case AlertLevel.fatal: return AlertLevel.fatal;
+        default:
+            throw new _ConstructionError(
+                "Invalid ENUMERATED value " + enumerated + " for AlertLevel.",
+                el,
+            );
+    }
+}
+export const _encode_AlertLevel: $.ASN1Encoder<AlertLevel> = $._encodeEnumerated as $.ASN1Encoder<AlertLevel>;
 
 
 /* eslint-enable */

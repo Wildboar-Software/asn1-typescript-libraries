@@ -1,13 +1,13 @@
 /* eslint-disable */
 import {
-    OCTET_STRING,
-    OPTIONAL,
-    ASN1Element as _Element,
+    type OCTET_STRING,
+    type OPTIONAL,
+    type ASN1Element as _Element,
     ASN1TagClass as _TagClass
 } from "@wildboar/asn1";
 import * as $ from "@wildboar/asn1/functional";
-import { MechTypeList, _decode_MechTypeList, _encode_MechTypeList } from "../Spnego/MechTypeList.ta.mjs";
-import { ContextFlags, _decode_ContextFlags, _encode_ContextFlags } from "../Spnego/ContextFlags.ta.mjs";
+import { type MechTypeList, _decode_MechTypeList, _encode_MechTypeList } from "../Spnego/MechTypeList.ta.mjs";
+import { type ContextFlags, _decode_ContextFlags, _encode_ContextFlags } from "../Spnego/ContextFlags.ta.mjs";
 
 
 /**
@@ -34,25 +34,25 @@ class NegTokenInit {
      * @public
      * @readonly
      */
-    readonly mechTypes?: OPTIONAL<MechTypeList>;
+    public readonly mechTypes?: OPTIONAL<MechTypeList>;
     /**
      * @summary `reqFlags`.
      * @public
      * @readonly
      */
-    readonly reqFlags?: OPTIONAL<ContextFlags>;
+    public readonly reqFlags?: OPTIONAL<ContextFlags>;
     /**
      * @summary `mechToken`.
      * @public
      * @readonly
      */
-    readonly mechToken?: OPTIONAL<OCTET_STRING>;
+    public readonly mechToken?: OPTIONAL<OCTET_STRING>;
     /**
      * @summary `mechListMIC`.
      * @public
      * @readonly
      */
-    readonly mechListMIC?: OPTIONAL<OCTET_STRING>;
+    public readonly mechListMIC?: OPTIONAL<OCTET_STRING>;
 
     constructor (
         mechTypes?: OPTIONAL<MechTypeList>,

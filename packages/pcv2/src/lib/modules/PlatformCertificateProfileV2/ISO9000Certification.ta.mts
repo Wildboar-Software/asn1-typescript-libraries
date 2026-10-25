@@ -1,11 +1,11 @@
 /* eslint-disable */
 import {
-    ASN1Element as _Element,
+    type ASN1Element as _Element,
     ASN1SizeError,
     ASN1TagClass as _TagClass,
-    BOOLEAN,
-    IA5String,
-    OPTIONAL
+    type BOOLEAN,
+    type IA5String,
+    type OPTIONAL
 } from "@wildboar/asn1";
 import * as $ from "@wildboar/asn1/functional";
 import { urimax } from "../PlatformCertificateProfileV2/urimax.va.mjs";

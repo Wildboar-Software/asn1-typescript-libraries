@@ -1,6 +1,6 @@
 /* eslint-disable */
 import {
-  OPTIONAL,
+  type OPTIONAL,
   ASN1Element as _Element,
   ASN1TagClass as _TagClass,
   ASN1Construction as _Construction,
@@ -12,12 +12,12 @@ import {
 } from '@wildboar/asn1';
 import * as $ from '@wildboar/asn1/functional';
 import {
-  Shared_ASE_Information,
+  type Shared_ASE_Information,
   _decode_Shared_ASE_Information,
   _encode_Shared_ASE_Information,
 } from '../ISO8571-FTAM/Shared-ASE-Information.ta.mjs';
 import {
-  Charging,
+  type Charging,
   _decode_Charging,
   _encode_Charging,
 } from '../ISO8571-FTAM/Charging.ta.mjs';
@@ -52,7 +52,7 @@ export class F_TERMINATE_response {
    * @public
    * @readonly
    */
-  readonly shared_ASE_information?: OPTIONAL<Shared_ASE_Information>;
+  public readonly shared_ASE_information?: OPTIONAL<Shared_ASE_Information>;
   /**
    * @summary `charging`.
    * @description
@@ -64,7 +64,7 @@ export class F_TERMINATE_response {
    * @public
    * @readonly
    */
-  readonly charging?: OPTIONAL<Charging>;
+  public readonly charging?: OPTIONAL<Charging>;
 
   constructor(
     shared_ASE_information?: OPTIONAL<Shared_ASE_Information>,

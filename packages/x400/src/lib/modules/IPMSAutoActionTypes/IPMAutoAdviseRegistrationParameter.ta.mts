@@ -1,8 +1,8 @@
 /* eslint-disable */
 import {
-    OPTIONAL,
-    BOOLEAN,
-    ASN1Element as _Element,
+    type OPTIONAL,
+    type BOOLEAN,
+    type ASN1Element as _Element,
     ASN1TagClass as _TagClass,
     ASN1Construction as _Construction,
     ASN1UniversalType as _UniversalType,
@@ -13,7 +13,7 @@ import {
 } from '@wildboar/asn1';
 import * as $ from '@wildboar/asn1/functional';
 import {
-    Filter,
+    type Filter,
     _decode_Filter,
     _encode_Filter,
 } from '../MSAbstractService/Filter.ta.mjs';
@@ -49,44 +49,58 @@ import {
  *
  */
 export class IPMAutoAdviseRegistrationParameter {
+    /**
+     * @summary `enabled`.
+     * @public
+     * @readonly
+     */
+    public readonly enabled: OPTIONAL<BOOLEAN>;
+    /**
+     * @summary `filter`.
+     * @public
+     * @readonly
+     */
+    public readonly filter: OPTIONAL<Filter>;
+    /**
+     * @summary `advice_notifications`.
+     * @public
+     * @readonly
+     */
+    public readonly advice_notifications: IPMSExtension[];
+    /**
+     * @summary `suppress_subsequent_notifications`.
+     * @public
+     * @readonly
+     */
+    public readonly suppress_subsequent_notifications?: OPTIONAL<BOOLEAN>;
+    /**
+     * @summary `use_ipm_if_an_not_supported`.
+     * @public
+     * @readonly
+     */
+    public readonly use_ipm_if_an_not_supported?: OPTIONAL<BOOLEAN>;
+    /**
+     * @summary `submission_options`.
+     * @public
+     * @readonly
+     */
+    public readonly submission_options?: OPTIONAL<MSSubmissionOptions>;
+
     constructor(
-        /**
-         * @summary `enabled`.
-         * @public
-         * @readonly
-         */
-        readonly enabled: OPTIONAL<BOOLEAN>,
-        /**
-         * @summary `filter`.
-         * @public
-         * @readonly
-         */
-        readonly filter: OPTIONAL<Filter>,
-        /**
-         * @summary `advice_notifications`.
-         * @public
-         * @readonly
-         */
-        readonly advice_notifications: IPMSExtension[],
-        /**
-         * @summary `suppress_subsequent_notifications`.
-         * @public
-         * @readonly
-         */
-        readonly suppress_subsequent_notifications?: OPTIONAL<BOOLEAN>,
-        /**
-         * @summary `use_ipm_if_an_not_supported`.
-         * @public
-         * @readonly
-         */
-        readonly use_ipm_if_an_not_supported?: OPTIONAL<BOOLEAN>,
-        /**
-         * @summary `submission_options`.
-         * @public
-         * @readonly
-         */
-        readonly submission_options?: OPTIONAL<MSSubmissionOptions>
-    ) {}
+        enabled: OPTIONAL<BOOLEAN>,
+        filter: OPTIONAL<Filter>,
+        advice_notifications: IPMSExtension[],
+        suppress_subsequent_notifications?: OPTIONAL<BOOLEAN>,
+        use_ipm_if_an_not_supported?: OPTIONAL<BOOLEAN>,
+        submission_options?: OPTIONAL<MSSubmissionOptions>
+    ) {
+        this.enabled = enabled;
+        this.filter = filter;
+        this.advice_notifications = advice_notifications;
+        this.suppress_subsequent_notifications = suppress_subsequent_notifications;
+        this.use_ipm_if_an_not_supported = use_ipm_if_an_not_supported;
+        this.submission_options = submission_options;
+    }
 
     /**
      * @summary Restructures an object into a IPMAutoAdviseRegistrationParameter

@@ -1,6 +1,6 @@
 /* eslint-disable */
 import {
-    ENUMERATED
+    type ENUMERATED
 } from "@wildboar/asn1";
 import * as $ from "@wildboar/asn1/functional";
 
@@ -45,7 +45,7 @@ type PartyInformation_party_Qualifier = _enum_for_PartyInformation_party_Qualifi
  * @type {number}
  */
 export
-const PartyInformation_party_Qualifier_gPRS_Target: PartyInformation_party_Qualifier = 3; /* LONG_NAMED_ENUMERATED_VALUE */
+const PartyInformation_party_Qualifier_gPRS_Target: _enum_for_PartyInformation_party_Qualifier.gPRS_Target = _enum_for_PartyInformation_party_Qualifier.gPRS_Target; /* LONG_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary gPRS_Target
@@ -57,7 +57,7 @@ const PartyInformation_party_Qualifier_gPRS_Target: PartyInformation_party_Quali
  * @type {number}
  */
 export
-const gPRS_Target: PartyInformation_party_Qualifier = PartyInformation_party_Qualifier_gPRS_Target; /* SHORT_NAMED_ENUMERATED_VALUE */
+const gPRS_Target: _enum_for_PartyInformation_party_Qualifier.gPRS_Target = PartyInformation_party_Qualifier_gPRS_Target; /* SHORT_NAMED_ENUMERATED_VALUE */
 export const _decode_PartyInformation_party_Qualifier: $.ASN1Decoder<PartyInformation_party_Qualifier> = $._decodeEnumerated;
 export const _encode_PartyInformation_party_Qualifier: $.ASN1Encoder<PartyInformation_party_Qualifier> = $._encodeEnumerated;
 

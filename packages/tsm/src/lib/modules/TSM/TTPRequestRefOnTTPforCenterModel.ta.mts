@@ -1,6 +1,6 @@
 /* eslint-disable */
 import {
-    ASN1Element as _Element,
+    type ASN1Element as _Element,
     ASN1TagClass as _TagClass,
     ASN1Construction as _Construction,
     ASN1UniversalType as _UniversalType,
@@ -34,19 +34,23 @@ import { TemplateID, _decode_TemplateID, _encode_TemplateID } from "../TSM/Templ
  */
 export
 class TTPRequestRefOnTTPforCenterModel {
+    /**
+     * @summary `templateID`.
+     * @description
+     *
+     * Identifies the reference template (issuer, serial, metadata)
+     * for revocation without sending the template. X.1084 §11.1.
+     *
+     * @public
+     * @readonly
+     */
+    public readonly templateID: TemplateID;
+
     constructor (
-        /**
-         * @summary `templateID`.
-         * @description
-         *
-         * Identifies the reference template (issuer, serial, metadata)
-         * for revocation without sending the template. X.1084 §11.1.
-         *
-         * @public
-         * @readonly
-         */
-        readonly templateID: TemplateID
-    ) {}
+        templateID: TemplateID
+    ) {
+        this.templateID = templateID;
+    }
 
     /**
      * @summary Restructures an object into a TTPRequestRefOnTTPforCenterModel

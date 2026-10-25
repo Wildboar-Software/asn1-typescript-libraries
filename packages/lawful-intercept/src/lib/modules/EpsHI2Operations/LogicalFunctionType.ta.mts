@@ -1,6 +1,6 @@
 /* eslint-disable */
 import {
-    ENUMERATED
+    type ENUMERATED
 } from "@wildboar/asn1";
 import * as $ from "@wildboar/asn1/functional";
 
@@ -52,7 +52,7 @@ type LogicalFunctionType = _enum_for_LogicalFunctionType | ENUMERATED;
  * @type {number}
  */
 export
-const LogicalFunctionType_pDNGW: LogicalFunctionType = 0; /* LONG_NAMED_ENUMERATED_VALUE */
+const LogicalFunctionType_pDNGW: _enum_for_LogicalFunctionType.pDNGW = _enum_for_LogicalFunctionType.pDNGW; /* LONG_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary pDNGW
@@ -64,7 +64,7 @@ const LogicalFunctionType_pDNGW: LogicalFunctionType = 0; /* LONG_NAMED_ENUMERAT
  * @type {number}
  */
 export
-const pDNGW: LogicalFunctionType = LogicalFunctionType_pDNGW; /* SHORT_NAMED_ENUMERATED_VALUE */
+const pDNGW: _enum_for_LogicalFunctionType.pDNGW = LogicalFunctionType_pDNGW; /* SHORT_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary LogicalFunctionType_mME
@@ -76,7 +76,7 @@ const pDNGW: LogicalFunctionType = LogicalFunctionType_pDNGW; /* SHORT_NAMED_ENU
  * @type {number}
  */
 export
-const LogicalFunctionType_mME: LogicalFunctionType = 1; /* LONG_NAMED_ENUMERATED_VALUE */
+const LogicalFunctionType_mME: _enum_for_LogicalFunctionType.mME = _enum_for_LogicalFunctionType.mME; /* LONG_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary mME
@@ -88,7 +88,7 @@ const LogicalFunctionType_mME: LogicalFunctionType = 1; /* LONG_NAMED_ENUMERATED
  * @type {number}
  */
 export
-const mME: LogicalFunctionType = LogicalFunctionType_mME; /* SHORT_NAMED_ENUMERATED_VALUE */
+const mME: _enum_for_LogicalFunctionType.mME = LogicalFunctionType_mME; /* SHORT_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary LogicalFunctionType_sGW
@@ -100,7 +100,7 @@ const mME: LogicalFunctionType = LogicalFunctionType_mME; /* SHORT_NAMED_ENUMERA
  * @type {number}
  */
 export
-const LogicalFunctionType_sGW: LogicalFunctionType = 2; /* LONG_NAMED_ENUMERATED_VALUE */
+const LogicalFunctionType_sGW: _enum_for_LogicalFunctionType.sGW = _enum_for_LogicalFunctionType.sGW; /* LONG_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary sGW
@@ -112,7 +112,7 @@ const LogicalFunctionType_sGW: LogicalFunctionType = 2; /* LONG_NAMED_ENUMERATED
  * @type {number}
  */
 export
-const sGW: LogicalFunctionType = LogicalFunctionType_sGW; /* SHORT_NAMED_ENUMERATED_VALUE */
+const sGW: _enum_for_LogicalFunctionType.sGW = LogicalFunctionType_sGW; /* SHORT_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary LogicalFunctionType_ePDG
@@ -126,7 +126,7 @@ const sGW: LogicalFunctionType = LogicalFunctionType_sGW; /* SHORT_NAMED_ENUMERA
  * @type {number}
  */
 export
-const LogicalFunctionType_ePDG: LogicalFunctionType = 3; /* LONG_NAMED_ENUMERATED_VALUE */
+const LogicalFunctionType_ePDG: _enum_for_LogicalFunctionType.ePDG = _enum_for_LogicalFunctionType.ePDG; /* LONG_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary ePDG
@@ -138,7 +138,7 @@ const LogicalFunctionType_ePDG: LogicalFunctionType = 3; /* LONG_NAMED_ENUMERATE
  * @type {number}
  */
 export
-const ePDG: LogicalFunctionType = LogicalFunctionType_ePDG; /* SHORT_NAMED_ENUMERATED_VALUE */
+const ePDG: _enum_for_LogicalFunctionType.ePDG = LogicalFunctionType_ePDG; /* SHORT_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary LogicalFunctionType_hSS
@@ -150,7 +150,7 @@ const ePDG: LogicalFunctionType = LogicalFunctionType_ePDG; /* SHORT_NAMED_ENUME
  * @type {number}
  */
 export
-const LogicalFunctionType_hSS: LogicalFunctionType = 4; /* LONG_NAMED_ENUMERATED_VALUE */
+const LogicalFunctionType_hSS: _enum_for_LogicalFunctionType.hSS = _enum_for_LogicalFunctionType.hSS; /* LONG_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary hSS
@@ -162,7 +162,7 @@ const LogicalFunctionType_hSS: LogicalFunctionType = 4; /* LONG_NAMED_ENUMERATED
  * @type {number}
  */
 export
-const hSS: LogicalFunctionType = LogicalFunctionType_hSS; /* SHORT_NAMED_ENUMERATED_VALUE */
+const hSS: _enum_for_LogicalFunctionType.hSS = LogicalFunctionType_hSS; /* SHORT_NAMED_ENUMERATED_VALUE */
 export const _decode_LogicalFunctionType: $.ASN1Decoder<LogicalFunctionType> = $._decodeEnumerated;
 export const _encode_LogicalFunctionType: $.ASN1Encoder<LogicalFunctionType> = $._encodeEnumerated;
 

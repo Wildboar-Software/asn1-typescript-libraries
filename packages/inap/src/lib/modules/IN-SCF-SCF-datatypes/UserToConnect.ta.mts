@@ -1,4 +1,5 @@
 /* eslint-disable */
+import { ASN1Element as _Element, ASN1ConstructionError as _ConstructionError } from "@wildboar/asn1";
 import * as $ from "@wildboar/asn1/functional";
 
 
@@ -51,7 +52,7 @@ type UserToConnect = _enum_for_UserToConnect;
  * @enum {number}
  */
 export
-const UserToConnect = _enum_for_UserToConnect;
+const UserToConnect: typeof _enum_for_UserToConnect = _enum_for_UserToConnect;
 
 /**
  * @summary UserToConnect_first
@@ -59,7 +60,7 @@ const UserToConnect = _enum_for_UserToConnect;
  * @type {number}
  */
 export
-const UserToConnect_first: UserToConnect = UserToConnect.first; /* LONG_NAMED_ENUMERATED_VALUE */
+const UserToConnect_first: _enum_for_UserToConnect.first = UserToConnect.first; /* LONG_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary first
@@ -67,7 +68,7 @@ const UserToConnect_first: UserToConnect = UserToConnect.first; /* LONG_NAMED_EN
  * @type {number}
  */
 export
-const first: UserToConnect = UserToConnect.first; /* SHORT_NAMED_ENUMERATED_VALUE */
+const first: _enum_for_UserToConnect.first = UserToConnect.first; /* SHORT_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary UserToConnect_nofirst
@@ -75,7 +76,7 @@ const first: UserToConnect = UserToConnect.first; /* SHORT_NAMED_ENUMERATED_VALU
  * @type {number}
  */
 export
-const UserToConnect_nofirst: UserToConnect = UserToConnect.nofirst; /* LONG_NAMED_ENUMERATED_VALUE */
+const UserToConnect_nofirst: _enum_for_UserToConnect.nofirst = UserToConnect.nofirst; /* LONG_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary nofirst
@@ -83,7 +84,7 @@ const UserToConnect_nofirst: UserToConnect = UserToConnect.nofirst; /* LONG_NAME
  * @type {number}
  */
 export
-const nofirst: UserToConnect = UserToConnect.nofirst; /* SHORT_NAMED_ENUMERATED_VALUE */
+const nofirst: _enum_for_UserToConnect.nofirst = UserToConnect.nofirst; /* SHORT_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary UserToConnect_newone
@@ -91,7 +92,7 @@ const nofirst: UserToConnect = UserToConnect.nofirst; /* SHORT_NAMED_ENUMERATED_
  * @type {number}
  */
 export
-const UserToConnect_newone: UserToConnect = UserToConnect.newone; /* LONG_NAMED_ENUMERATED_VALUE */
+const UserToConnect_newone: _enum_for_UserToConnect.newone = UserToConnect.newone; /* LONG_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary newone
@@ -99,7 +100,7 @@ const UserToConnect_newone: UserToConnect = UserToConnect.newone; /* LONG_NAMED_
  * @type {number}
  */
 export
-const newone: UserToConnect = UserToConnect.newone; /* SHORT_NAMED_ENUMERATED_VALUE */
+const newone: _enum_for_UserToConnect.newone = UserToConnect.newone; /* SHORT_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary UserToConnect_previous
@@ -107,7 +108,7 @@ const newone: UserToConnect = UserToConnect.newone; /* SHORT_NAMED_ENUMERATED_VA
  * @type {number}
  */
 export
-const UserToConnect_previous: UserToConnect = UserToConnect.previous; /* LONG_NAMED_ENUMERATED_VALUE */
+const UserToConnect_previous: _enum_for_UserToConnect.previous = UserToConnect.previous; /* LONG_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary previous
@@ -115,12 +116,25 @@ const UserToConnect_previous: UserToConnect = UserToConnect.previous; /* LONG_NA
  * @type {number}
  */
 export
-const previous: UserToConnect = UserToConnect.previous; /* SHORT_NAMED_ENUMERATED_VALUE */
+const previous: _enum_for_UserToConnect.previous = UserToConnect.previous; /* SHORT_NAMED_ENUMERATED_VALUE */
 
 export
-const _decode_UserToConnect: $.ASN1Decoder<UserToConnect> = $._decodeEnumerated;
+function _decode_UserToConnect(el: _Element): UserToConnect {
+    const enumerated = $._decodeEnumerated(el);
+    switch (enumerated) {
+        case UserToConnect.first: return UserToConnect.first;
+        case UserToConnect.nofirst: return UserToConnect.nofirst;
+        case UserToConnect.newone: return UserToConnect.newone;
+        case UserToConnect.previous: return UserToConnect.previous;
+        default:
+            throw new _ConstructionError(
+                "Invalid ENUMERATED value " + enumerated + " for UserToConnect.",
+                el,
+            );
+    }
+}
 
 export
-const _encode_UserToConnect: $.ASN1Encoder<UserToConnect> = $._encodeEnumerated;
+const _encode_UserToConnect: $.ASN1Encoder<UserToConnect> = $._encodeEnumerated as $.ASN1Encoder<UserToConnect>;
 
 /* eslint-enable */

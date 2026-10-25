@@ -1,6 +1,6 @@
 /* eslint-disable */
 import {
-    ASN1Element as _Element,
+    type ASN1Element as _Element,
     ASN1TagClass as _TagClass,
     ASN1Construction as _Construction,
     ASN1UniversalType as _UniversalType,
@@ -11,12 +11,12 @@ import {
 } from '@wildboar/asn1';
 import * as $ from '@wildboar/asn1/functional';
 import {
-    FilterItem_substrings_strings_Item,
+    type FilterItem_substrings_strings_Item,
     _decode_FilterItem_substrings_strings_Item,
     _encode_FilterItem_substrings_strings_Item,
 } from '../MSAbstractService/FilterItem-substrings-strings-Item.ta.mjs';
 import {
-    AttributeType,
+    type AttributeType,
     _decode_AttributeType,
     _encode_AttributeType,
 } from "./AttributeType.ta.mjs";
@@ -35,20 +35,26 @@ import {
  *
  */
 export class FilterItem_substrings {
+    /**
+     * @summary `type_`.
+     * @public
+     * @readonly
+     */
+    public readonly type_: AttributeType;
+    /**
+     * @summary `strings`.
+     * @public
+     * @readonly
+     */
+    public readonly strings: FilterItem_substrings_strings_Item[];
+
     constructor(
-        /**
-         * @summary `type_`.
-         * @public
-         * @readonly
-         */
-        readonly type_: AttributeType,
-        /**
-         * @summary `strings`.
-         * @public
-         * @readonly
-         */
-        readonly strings: FilterItem_substrings_strings_Item[]
-    ) {}
+        type_: AttributeType,
+        strings: FilterItem_substrings_strings_Item[]
+    ) {
+        this.type_ = type_;
+        this.strings = strings;
+    }
 
     /**
      * @summary Restructures an object into a FilterItem_substrings

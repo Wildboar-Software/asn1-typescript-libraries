@@ -1,7 +1,7 @@
 /* eslint-disable */
 import {
     ASN1ConstructionError as _ConstructionError,
-    ASN1Element as _Element,
+    type ASN1Element as _Element,
     ASN1TagClass as _TagClass,
 } from "@wildboar/asn1";
 import * as $ from "@wildboar/asn1/functional";
@@ -11,7 +11,7 @@ import {
     _encode_AlgorithmIdentifier,
 } from "../AuthenticationFramework/AlgorithmIdentifier.ta.mjs";
 import {
-    Integrity,
+    type Integrity,
     _decode_Integrity,
     _encode_Integrity,
 } from "../SpkmGssTokens/Integrity.ta.mjs";
@@ -41,38 +41,46 @@ import {
  *
  */
 export class SPKM_REP_IT {
+    /**
+     * @summary `responseToken`.
+     * @description
+     *
+     * The "token" over which `rep_it_integ` is computed.
+     *
+     * @public
+     * @readonly
+     */
+    public readonly responseToken: REP_IT_TOKEN;
+    /**
+     * @summary `algId`.
+     * @description
+     *
+     * Signature or MAC algorithm for `rep_it_integ`.
+     *
+     * @public
+     * @readonly
+     */
+    public readonly algId: AlgorithmIdentifier;
+    /**
+     * @summary `rep_it_integ`.
+     * @description
+     *
+     * Signature or MAC of DER(`REP-IT-TOKEN`) per `algId`.
+     *
+     * @public
+     * @readonly
+     */
+    public readonly rep_it_integ: Integrity;
+
     constructor(
-        /**
-         * @summary `responseToken`.
-         * @description
-         *
-         * The "token" over which `rep_it_integ` is computed.
-         *
-         * @public
-         * @readonly
-         */
-        readonly responseToken: REP_IT_TOKEN,
-        /**
-         * @summary `algId`.
-         * @description
-         *
-         * Signature or MAC algorithm for `rep_it_integ`.
-         *
-         * @public
-         * @readonly
-         */
-        readonly algId: AlgorithmIdentifier,
-        /**
-         * @summary `rep_it_integ`.
-         * @description
-         *
-         * Signature or MAC of DER(`REP-IT-TOKEN`) per `algId`.
-         *
-         * @public
-         * @readonly
-         */
-        readonly rep_it_integ: Integrity
-    ) {}
+        responseToken: REP_IT_TOKEN,
+        algId: AlgorithmIdentifier,
+        rep_it_integ: Integrity
+    ) {
+        this.responseToken = responseToken;
+        this.algId = algId;
+        this.rep_it_integ = rep_it_integ;
+    }
 
     /**
      * @summary Restructures an object into a SPKM_REP_IT

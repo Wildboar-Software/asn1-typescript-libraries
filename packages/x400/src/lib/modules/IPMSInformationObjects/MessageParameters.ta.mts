@@ -1,7 +1,7 @@
 /* eslint-disable */
 import {
-    OPTIONAL,
-    ASN1Element as _Element,
+    type OPTIONAL,
+    type ASN1Element as _Element,
     ASN1TagClass as _TagClass,
     ASN1Construction as _Construction,
     ASN1UniversalType as _UniversalType,
@@ -12,7 +12,7 @@ import {
 } from '@wildboar/asn1';
 import * as $ from '@wildboar/asn1/functional';
 import {
-    MessageDeliveryTime,
+    type MessageDeliveryTime,
     _decode_MessageDeliveryTime,
     _encode_MessageDeliveryTime,
 } from '../MTSAbstractService/MessageDeliveryTime.ta.mjs';
@@ -38,20 +38,26 @@ import {
  *
  */
 export class MessageParameters {
+    /**
+     * @summary `delivery_time`.
+     * @public
+     * @readonly
+     */
+    public readonly delivery_time?: OPTIONAL<MessageDeliveryTime>;
+    /**
+     * @summary `delivery_envelope`.
+     * @public
+     * @readonly
+     */
+    public readonly delivery_envelope?: OPTIONAL<OtherMessageDeliveryFields>;
+
     constructor(
-        /**
-         * @summary `delivery_time`.
-         * @public
-         * @readonly
-         */
-        readonly delivery_time?: OPTIONAL<MessageDeliveryTime>,
-        /**
-         * @summary `delivery_envelope`.
-         * @public
-         * @readonly
-         */
-        readonly delivery_envelope?: OPTIONAL<OtherMessageDeliveryFields>
-    ) {}
+        delivery_time?: OPTIONAL<MessageDeliveryTime>,
+        delivery_envelope?: OPTIONAL<OtherMessageDeliveryFields>
+    ) {
+        this.delivery_time = delivery_time;
+        this.delivery_envelope = delivery_envelope;
+    }
 
     /**
      * @summary Restructures an object into a MessageParameters

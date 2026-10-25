@@ -1,5 +1,5 @@
 /* eslint-disable */
-import { OBJECT_IDENTIFIER, UTF8String } from "@wildboar/asn1";
+import { type OBJECT_IDENTIFIER, type UTF8String } from "@wildboar/asn1";
 import * as $ from "@wildboar/asn1/functional";
 
 /**
@@ -15,7 +15,7 @@ import * as $ from "@wildboar/asn1/functional";
  * ```asn1
  * SYNTAX-NAME ::= CLASS {
  *   &ldapDesc               UTF8String,
- *   &Type                   OPTIONAL,
+ *   &Type                   type OPTIONAL,
  *   &id                     OBJECT IDENTIFIER UNIQUE }
  * WITH SYNTAX {
  *   LDAP-DESC               &ldapDesc

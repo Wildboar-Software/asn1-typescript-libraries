@@ -1,7 +1,7 @@
 /* eslint-disable */
 import {
-    GeneralizedTime,
-    ASN1Element as _Element,
+    type GeneralizedTime,
+    type ASN1Element as _Element,
     ASN1TagClass as _TagClass,
     ASN1Construction as _Construction,
     ASN1UniversalType as _UniversalType,
@@ -28,12 +28,12 @@ export type EscalationTime = GeneralizedTime; // GeneralizedTime
 
 
 
-export const _decode_EscalationTime = $._decodeGeneralizedTime;
+export const _decode_EscalationTime: $.ASN1Decoder<Date> = $._decodeGeneralizedTime;
 
 
 
 
-export const _encode_EscalationTime = $._encodeGeneralizedTime;
+export const _encode_EscalationTime: $.ASN1Encoder<Date> = $._encodeGeneralizedTime;
 
 
 /* eslint-enable */

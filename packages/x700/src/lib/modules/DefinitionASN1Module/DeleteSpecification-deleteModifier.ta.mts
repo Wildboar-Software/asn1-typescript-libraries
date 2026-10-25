@@ -1,6 +1,6 @@
 /* eslint-disable */
 import {
-    ASN1Element as _Element,
+    type ASN1Element as _Element,
     ASN1TagClass as _TagClass,
     ASN1Construction as _Construction,
     ASN1UniversalType as _UniversalType,
@@ -66,7 +66,7 @@ export type DeleteSpecification_deleteModifier = _enum_for_DeleteSpecification_d
  *
  * @enum {number}
  */
-export const DeleteSpecification_deleteModifier = _enum_for_DeleteSpecification_deleteModifier;
+export const DeleteSpecification_deleteModifier: typeof _enum_for_DeleteSpecification_deleteModifier = _enum_for_DeleteSpecification_deleteModifier;
 
 
 /**
@@ -78,7 +78,7 @@ export const DeleteSpecification_deleteModifier = _enum_for_DeleteSpecification_
  * @constant
  * @type {number}
  */
-export const DeleteSpecification_deleteModifier_onlyIfNoContainedObjects: DeleteSpecification_deleteModifier =
+export const DeleteSpecification_deleteModifier_onlyIfNoContainedObjects: _enum_for_DeleteSpecification_deleteModifier.onlyIfNoContainedObjects =
     DeleteSpecification_deleteModifier.onlyIfNoContainedObjects; /* LONG_NAMED_ENUMERATED_VALUE */
 
 
@@ -91,7 +91,7 @@ export const DeleteSpecification_deleteModifier_onlyIfNoContainedObjects: Delete
  * @constant
  * @type {number}
  */
-export const onlyIfNoContainedObjects: DeleteSpecification_deleteModifier =
+export const onlyIfNoContainedObjects: _enum_for_DeleteSpecification_deleteModifier.onlyIfNoContainedObjects =
     DeleteSpecification_deleteModifier.onlyIfNoContainedObjects; /* SHORT_NAMED_ENUMERATED_VALUE */
 
 
@@ -104,7 +104,7 @@ export const onlyIfNoContainedObjects: DeleteSpecification_deleteModifier =
  * @constant
  * @type {number}
  */
-export const DeleteSpecification_deleteModifier_deletesContainedObjects: DeleteSpecification_deleteModifier =
+export const DeleteSpecification_deleteModifier_deletesContainedObjects: _enum_for_DeleteSpecification_deleteModifier.deletesContainedObjects =
     DeleteSpecification_deleteModifier.deletesContainedObjects; /* LONG_NAMED_ENUMERATED_VALUE */
 
 
@@ -117,7 +117,7 @@ export const DeleteSpecification_deleteModifier_deletesContainedObjects: DeleteS
  * @constant
  * @type {number}
  */
-export const deletesContainedObjects: DeleteSpecification_deleteModifier =
+export const deletesContainedObjects: _enum_for_DeleteSpecification_deleteModifier.deletesContainedObjects =
     DeleteSpecification_deleteModifier.deletesContainedObjects; /* SHORT_NAMED_ENUMERATED_VALUE */
 
 
@@ -133,7 +133,18 @@ let _cached_decoder_for_DeleteSpecification_deleteModifier: $.ASN1Decoder<Delete
 export function _decode_DeleteSpecification_deleteModifier(el: _Element): DeleteSpecification_deleteModifier {
     if (!_cached_decoder_for_DeleteSpecification_deleteModifier) {
         _cached_decoder_for_DeleteSpecification_deleteModifier =
-            $._decodeEnumerated;
+            function (el: _Element): DeleteSpecification_deleteModifier {
+                const enumerated = $._decodeEnumerated(el);
+                switch (enumerated) {
+                    case DeleteSpecification_deleteModifier.onlyIfNoContainedObjects: return DeleteSpecification_deleteModifier.onlyIfNoContainedObjects;
+                    case DeleteSpecification_deleteModifier.deletesContainedObjects: return DeleteSpecification_deleteModifier.deletesContainedObjects;
+                    default:
+                        throw new _ConstructionError(
+                            'Invalid ENUMERATED value ' + enumerated + ' for DeleteSpecification_deleteModifier.',
+                            el,
+                        );
+                }
+            };
     }
     return _cached_decoder_for_DeleteSpecification_deleteModifier(el);
 }
@@ -155,7 +166,7 @@ export function _encode_DeleteSpecification_deleteModifier(
 ): _Element {
     if (!_cached_encoder_for_DeleteSpecification_deleteModifier) {
         _cached_encoder_for_DeleteSpecification_deleteModifier =
-            $._encodeEnumerated;
+            $._encodeEnumerated as $.ASN1Encoder<DeleteSpecification_deleteModifier>;
     }
     return _cached_encoder_for_DeleteSpecification_deleteModifier(
         value,

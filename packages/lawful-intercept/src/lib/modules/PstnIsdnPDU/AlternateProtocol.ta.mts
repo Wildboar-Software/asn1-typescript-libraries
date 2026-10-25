@@ -1,6 +1,6 @@
 /* eslint-disable */
 import {
-    ENUMERATED
+    type ENUMERATED
 } from "@wildboar/asn1";
 import * as $ from "@wildboar/asn1/functional";
 
@@ -69,7 +69,7 @@ type AlternateProtocol = _enum_for_AlternateProtocol | ENUMERATED;
  * @type {number}
  */
 export
-const AlternateProtocol_uDPTL: AlternateProtocol = 1; /* LONG_NAMED_ENUMERATED_VALUE */
+const AlternateProtocol_uDPTL: _enum_for_AlternateProtocol.uDPTL = _enum_for_AlternateProtocol.uDPTL; /* LONG_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary uDPTL
@@ -85,7 +85,7 @@ const AlternateProtocol_uDPTL: AlternateProtocol = 1; /* LONG_NAMED_ENUMERATED_V
  * @type {number}
  */
 export
-const uDPTL: AlternateProtocol = AlternateProtocol_uDPTL; /* SHORT_NAMED_ENUMERATED_VALUE */
+const uDPTL: _enum_for_AlternateProtocol.uDPTL = AlternateProtocol_uDPTL; /* SHORT_NAMED_ENUMERATED_VALUE */
 export const _decode_AlternateProtocol: $.ASN1Decoder<AlternateProtocol> = $._decodeEnumerated;
 export const _encode_AlternateProtocol: $.ASN1Encoder<AlternateProtocol> = $._encodeEnumerated;
 

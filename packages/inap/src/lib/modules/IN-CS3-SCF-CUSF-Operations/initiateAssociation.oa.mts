@@ -4,7 +4,7 @@ import { type OPERATION } from "../Remote-Operations-Information-Objects/OPERATI
 // export { Code, _decode_Code, _encode_Code } from "../Remote-Operations-Information-Objects/Code.ta.mjs";
 import { InitiateAssociationArg, _decode_InitiateAssociationArg, _encode_InitiateAssociationArg } from "../IN-CS3-SCF-CUSF-Operations/InitiateAssociationArg.ta.mjs";
 // export { InitiateAssociationArg, _decode_InitiateAssociationArg, _encode_InitiateAssociationArg } from "../IN-CS3-SCF-CUSF-Operations/InitiateAssociationArg.ta.mjs";
-import { InitiateAssociationResultArg, _decode_InitiateAssociationResultArg, _encode_InitiateAssociationResultArg } from "../IN-CS3-SCF-CUSF-Operations/InitiateAssociationResultArg.ta.mjs";
+import { type InitiateAssociationResultArg, _decode_InitiateAssociationResultArg, _encode_InitiateAssociationResultArg } from "../IN-CS3-SCF-CUSF-Operations/InitiateAssociationResultArg.ta.mjs";
 // export { InitiateAssociationResultArg, _decode_InitiateAssociationResultArg, _encode_InitiateAssociationResultArg } from "../IN-CS3-SCF-CUSF-Operations/InitiateAssociationResultArg.ta.mjs";
 import { missingParameter } from "../IN-CS3-errortypes/missingParameter.oa.mjs";
 // export { missingParameter } from "../IN-CS3-errortypes/missingParameter.oa.mjs";

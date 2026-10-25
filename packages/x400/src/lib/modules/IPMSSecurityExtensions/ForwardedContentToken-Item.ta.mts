@@ -1,6 +1,6 @@
 /* eslint-disable */
 import {
-    ASN1Element as _Element,
+    type ASN1Element as _Element,
     ASN1TagClass as _TagClass,
     ASN1Construction as _Construction,
     ASN1UniversalType as _UniversalType,
@@ -11,12 +11,12 @@ import {
 } from '@wildboar/asn1';
 import * as $ from '@wildboar/asn1/functional';
 import {
-    BodyPartNumber,
+    type BodyPartNumber,
     _decode_BodyPartNumber,
     _encode_BodyPartNumber,
 } from '../IPMSHeadingExtensions/BodyPartNumber.ta.mjs';
 import {
-    ForwardedContentToken_Item_body_part_choice,
+    type ForwardedContentToken_Item_body_part_choice,
     _decode_ForwardedContentToken_Item_body_part_choice,
     _encode_ForwardedContentToken_Item_body_part_choice,
 } from '../IPMSSecurityExtensions/ForwardedContentToken-Item-body-part-choice.ta.mjs';
@@ -34,20 +34,26 @@ import {
  *
  */
 export class ForwardedContentToken_Item {
+    /**
+     * @summary `body_part_number`.
+     * @public
+     * @readonly
+     */
+    public readonly body_part_number: BodyPartNumber;
+    /**
+     * @summary `body_part_choice`.
+     * @public
+     * @readonly
+     */
+    public readonly body_part_choice: ForwardedContentToken_Item_body_part_choice;
+
     constructor(
-        /**
-         * @summary `body_part_number`.
-         * @public
-         * @readonly
-         */
-        readonly body_part_number: BodyPartNumber,
-        /**
-         * @summary `body_part_choice`.
-         * @public
-         * @readonly
-         */
-        readonly body_part_choice: ForwardedContentToken_Item_body_part_choice
-    ) {}
+        body_part_number: BodyPartNumber,
+        body_part_choice: ForwardedContentToken_Item_body_part_choice
+    ) {
+        this.body_part_number = body_part_number;
+        this.body_part_choice = body_part_choice;
+    }
 
     /**
      * @summary Restructures an object into a ForwardedContentToken_Item

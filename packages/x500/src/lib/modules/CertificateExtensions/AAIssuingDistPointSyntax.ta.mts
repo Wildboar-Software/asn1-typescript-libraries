@@ -1,18 +1,18 @@
 /* eslint-disable */
 import {
-    ASN1Element as _Element,
+    type ASN1Element as _Element,
     ASN1TagClass as _TagClass,
-    BOOLEAN,
-    OPTIONAL,
+    type BOOLEAN,
+    type OPTIONAL,
 } from "@wildboar/asn1";
 import * as $ from "@wildboar/asn1/functional";
 import {
-    DistributionPointName,
+    type DistributionPointName,
     _decode_DistributionPointName,
     _encode_DistributionPointName,
 } from "../CertificateExtensions/DistributionPointName.ta.mjs";
 import {
-    ReasonFlags,
+    type ReasonFlags,
     _decode_ReasonFlags,
     _encode_ReasonFlags,
 } from "../CertificateExtensions/ReasonFlags.ta.mjs";
@@ -43,66 +43,82 @@ import {
  *
  */
 export class AAIssuingDistPointSyntax {
+    /**
+     * @summary `distributionPoint`.
+     * @public
+     * @readonly
+     */
+    public readonly distributionPoint?: OPTIONAL<DistributionPointName>;
+    /**
+     * @summary `onlySomeReasons`.
+     * @public
+     * @readonly
+     */
+    public readonly onlySomeReasons?: OPTIONAL<ReasonFlags>;
+    /**
+     * @summary `indirectCRL`.
+     * @description
+     *
+     * DEFAULT FALSE.
+     *
+     * @public
+     * @readonly
+     */
+    public readonly indirectCRL?: OPTIONAL<BOOLEAN>;
+    /**
+     * @summary `containsUserAttributeCerts`.
+     * @description
+     *
+     * DEFAULT TRUE. FALSE excludes end-entity ACs.
+     *
+     * @public
+     * @readonly
+     */
+    public readonly containsUserAttributeCerts?: OPTIONAL<BOOLEAN>;
+    /**
+     * @summary `containsAACerts`.
+     * @description
+     *
+     * DEFAULT TRUE. FALSE excludes AA certificates.
+     *
+     * @public
+     * @readonly
+     */
+    public readonly containsAACerts?: OPTIONAL<BOOLEAN>;
+    /**
+     * @summary `containsSOAPublicKeyCerts`.
+     * @description
+     *
+     * DEFAULT TRUE. FALSE excludes SOA public-key certs.
+     *
+     * @public
+     * @readonly
+     */
+    public readonly containsSOAPublicKeyCerts?: OPTIONAL<BOOLEAN>;
+    /**
+     * @summary Extensions that are not recognized.
+     * @public
+     * @readonly
+     */
+    public readonly _unrecognizedExtensionsList: _Element[];
+
     constructor(
-        /**
-         * @summary `distributionPoint`.
-         * @public
-         * @readonly
-         */
-        readonly distributionPoint?: OPTIONAL<DistributionPointName>,
-        /**
-         * @summary `onlySomeReasons`.
-         * @public
-         * @readonly
-         */
-        readonly onlySomeReasons?: OPTIONAL<ReasonFlags>,
-        /**
-         * @summary `indirectCRL`.
-         * @description
-         *
-         * DEFAULT FALSE.
-         *
-         * @public
-         * @readonly
-         */
-        readonly indirectCRL?: OPTIONAL<BOOLEAN>,
-        /**
-         * @summary `containsUserAttributeCerts`.
-         * @description
-         *
-         * DEFAULT TRUE. FALSE excludes end-entity ACs.
-         *
-         * @public
-         * @readonly
-         */
-        readonly containsUserAttributeCerts?: OPTIONAL<BOOLEAN>,
-        /**
-         * @summary `containsAACerts`.
-         * @description
-         *
-         * DEFAULT TRUE. FALSE excludes AA certificates.
-         *
-         * @public
-         * @readonly
-         */
-        readonly containsAACerts?: OPTIONAL<BOOLEAN>,
-        /**
-         * @summary `containsSOAPublicKeyCerts`.
-         * @description
-         *
-         * DEFAULT TRUE. FALSE excludes SOA public-key certs.
-         *
-         * @public
-         * @readonly
-         */
-        readonly containsSOAPublicKeyCerts?: OPTIONAL<BOOLEAN>,
-        /**
-         * @summary Extensions that are not recognized.
-         * @public
-         * @readonly
-         */
-        readonly _unrecognizedExtensionsList: _Element[] = []
-    ) {}
+        distributionPoint?: OPTIONAL<DistributionPointName>,
+        onlySomeReasons?: OPTIONAL<ReasonFlags>,
+        indirectCRL?: OPTIONAL<BOOLEAN>,
+        containsUserAttributeCerts?: OPTIONAL<BOOLEAN>,
+        containsAACerts?: OPTIONAL<BOOLEAN>,
+        containsSOAPublicKeyCerts?: OPTIONAL<BOOLEAN>,
+        _unrecognizedExtensionsList: _Element[] = []
+    ) {
+        this.distributionPoint = distributionPoint;
+        this.onlySomeReasons = onlySomeReasons;
+        this.indirectCRL = indirectCRL;
+        this.containsUserAttributeCerts = containsUserAttributeCerts;
+        this.containsAACerts = containsAACerts;
+        this.containsSOAPublicKeyCerts = containsSOAPublicKeyCerts;
+        this._unrecognizedExtensionsList = _unrecognizedExtensionsList;
+    }
 
     /**
      * @summary Restructures an object into a AAIssuingDistPointSyntax

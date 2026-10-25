@@ -1,19 +1,19 @@
 /* eslint-disable */
 import {
     ASN1ConstructionError as _ConstructionError,
-    ASN1Element as _Element,
+    type ASN1Element as _Element,
     ASN1TagClass as _TagClass
 } from "@wildboar/asn1";
 import * as $ from "@wildboar/asn1/functional";
-import { CaseId, _decode_CaseId, _encode_CaseId } from "../PCESP/CaseId.ta.mjs";
+import { type CaseId, _decode_CaseId, _encode_CaseId } from "../PCESP/CaseId.ta.mjs";
 // export { CaseId, _decode_CaseId, _encode_CaseId } from "../PCESP/CaseId.ta.mjs";
-import { AccessingElementId, _decode_AccessingElementId, _encode_AccessingElementId } from "../PCESP/AccessingElementId.ta.mjs";
+import { type AccessingElementId, _decode_AccessingElementId, _encode_AccessingElementId } from "../PCESP/AccessingElementId.ta.mjs";
 // export { AccessingElementId, _decode_AccessingElementId, _encode_AccessingElementId } from "../PCESP/AccessingElementId.ta.mjs";
-import { EventTime, _decode_EventTime, _encode_EventTime } from "../PCESP/EventTime.ta.mjs";
+import { type EventTime, _decode_EventTime, _encode_EventTime } from "../PCESP/EventTime.ta.mjs";
 // export { EventTime, _decode_EventTime, _encode_EventTime } from "../PCESP/EventTime.ta.mjs";
-import { CCCId, _decode_CCCId, _encode_CCCId } from "../PCESP/CCCId.ta.mjs";
+import { type CCCId, _decode_CCCId, _encode_CCCId } from "../PCESP/CCCId.ta.mjs";
 // export { CCCId, _decode_CCCId, _encode_CCCId } from "../PCESP/CCCId.ta.mjs";
-import { FlowDirection, _decode_FlowDirection, _encode_FlowDirection, _enum_for_FlowDirection } from "../PCESP/FlowDirection.ta.mjs";
+import { type FlowDirection, _decode_FlowDirection, _encode_FlowDirection, _enum_for_FlowDirection } from "../PCESP/FlowDirection.ta.mjs";
 // export { FlowDirection, _enum_for_FlowDirection, FlowDirection_downstream /* IMPORTED_LONG_ENUMERATION_ITEM */, downstream /* IMPORTED_SHORT_ENUMERATION_ITEM */, FlowDirection_upstream /* IMPORTED_LONG_ENUMERATION_ITEM */, upstream /* IMPORTED_SHORT_ENUMERATION_ITEM */, FlowDirection_downstream_and_upstream /* IMPORTED_LONG_ENUMERATION_ITEM */, downstream_and_upstream /* IMPORTED_SHORT_ENUMERATION_ITEM */, _decode_FlowDirection, _encode_FlowDirection } from "../PCESP/FlowDirection.ta.mjs";
 
 
@@ -159,7 +159,7 @@ class CCClose {
          * @static
          */
 
-    public static _enum_for_flowDirection = _enum_for_FlowDirection;
+    public static _enum_for_flowDirection: typeof _enum_for_FlowDirection = _enum_for_FlowDirection;
 }
 
 /**

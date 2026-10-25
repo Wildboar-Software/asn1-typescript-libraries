@@ -1,6 +1,6 @@
 /* eslint-disable */
 import {
-  NULL,
+  type NULL,
   ASN1Element as _Element,
   ASN1TagClass as _TagClass,
   ASN1Construction as _Construction,
@@ -32,12 +32,12 @@ export type DeleteMaster_RequestParams = NULL; // NullType
 
 
 
-export const _decode_DeleteMaster_RequestParams = $._decodeNull;
+export const _decode_DeleteMaster_RequestParams: $.ASN1Decoder<null> = $._decodeNull;
 
 
 
 
-export const _encode_DeleteMaster_RequestParams = $._encodeNull;
+export const _encode_DeleteMaster_RequestParams: $.ASN1Encoder<null> = $._encodeNull;
 
 
 /* eslint-enable */

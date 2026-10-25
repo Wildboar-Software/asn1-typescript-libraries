@@ -1,12 +1,12 @@
 /* eslint-disable */
 import {
     ASN1ConstructionError as _ConstructionError,
-    ASN1Element as _Element,
+    type ASN1Element as _Element,
     ASN1TagClass as _TagClass
 } from "@wildboar/asn1";
 import * as $ from "@wildboar/asn1/functional";
-import { DestinationDialogId, _decode_DestinationDialogId, _encode_DestinationDialogId } from "../Dialog-Service-Pdus-asn1-97/DestinationDialogId.ta.mjs";
-import { DialogAbortPDU_abortChoice, _decode_DialogAbortPDU_abortChoice, _encode_DialogAbortPDU_abortChoice } from "../Dialog-Service-Pdus-asn1-97/DialogAbortPDU-abortChoice.ta.mjs";
+import { type DestinationDialogId, _decode_DestinationDialogId, _encode_DestinationDialogId } from "../Dialog-Service-Pdus-asn1-97/DestinationDialogId.ta.mjs";
+import { type DialogAbortPDU_abortChoice, _decode_DialogAbortPDU_abortChoice, _encode_DialogAbortPDU_abortChoice } from "../Dialog-Service-Pdus-asn1-97/DialogAbortPDU-abortChoice.ta.mjs";
 
 /**
  * @summary DialogAbortPDU

@@ -2,11 +2,11 @@
 
 import * as $ from "@wildboar/asn1/functional";
 import {
-    OPTIONAL,
-    BOOLEAN,
-    SEQUENCE,
-    SET,
-    ASN1Element as _Element,
+    type OPTIONAL,
+    type BOOLEAN,
+    type SEQUENCE,
+    type SET,
+    type ASN1Element as _Element,
     ASN1TagClass as _TagClass
 } from "@wildboar/asn1";
 import { DeviceID, _decode_DeviceID, _encode_DeviceID } from "../CSTA-device-identifiers/DeviceID.ta.mjs";
@@ -37,36 +37,44 @@ import { CSTACommonArguments, _decode_CSTACommonArguments, _encode_CSTACommonArg
  */
 export
 class SetRouteingModeArgument {
+    /**
+     * @summary `device`.
+     * @description
+     *
+     * Logical device whose Route Mode is set.
+     * @public
+     * @readonly
+     */
+    public readonly device: DeviceID;
+    /**
+     * @summary `routeingMode`.
+     * @description
+     *
+     * TRUE: device may issue Route Request; FALSE: suspend.
+     * @public
+     * @readonly
+     */
+    public readonly routeingMode: BOOLEAN;
+    /**
+     * @summary `extensions`.
+     * @description
+     *
+     * Optional security (timestamp, sequence, securityInfo) and
+     * privateData.
+     * @public
+     * @readonly
+     */
+    public readonly extensions?: OPTIONAL<CSTACommonArguments>;
+
     constructor (
-        /**
-         * @summary `device`.
-         * @description
-         *
-         * Logical device whose Route Mode is set.
-         * @public
-         * @readonly
-         */
-        readonly device: DeviceID,
-        /**
-         * @summary `routeingMode`.
-         * @description
-         *
-         * TRUE: device may issue Route Request; FALSE: suspend.
-         * @public
-         * @readonly
-         */
-        readonly routeingMode: BOOLEAN,
-        /**
-         * @summary `extensions`.
-         * @description
-         *
-         * Optional security (timestamp, sequence, securityInfo) and
-         * privateData.
-         * @public
-         * @readonly
-         */
-        readonly extensions?: OPTIONAL<CSTACommonArguments>
-    ) {}
+        device: DeviceID,
+        routeingMode: BOOLEAN,
+        extensions?: OPTIONAL<CSTACommonArguments>
+    ) {
+        this.device = device;
+        this.routeingMode = routeingMode;
+        this.extensions = extensions;
+    }
 
     /**
      * @summary Restructures an object into a SetRouteingModeArgument

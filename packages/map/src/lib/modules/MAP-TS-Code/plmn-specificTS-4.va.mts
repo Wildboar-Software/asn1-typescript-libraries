@@ -1,5 +1,5 @@
 /* eslint-disable */
-import { TeleserviceCode } from "../MAP-TS-Code/TeleserviceCode.ta.mjs";
+import { type TeleserviceCode } from "../MAP-TS-Code/TeleserviceCode.ta.mjs";
 
 
 /**

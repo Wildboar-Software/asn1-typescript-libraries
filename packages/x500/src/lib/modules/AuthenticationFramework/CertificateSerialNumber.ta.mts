@@ -1,5 +1,5 @@
 /* eslint-disable */
-import { ASN1Element as _Element, OCTET_STRING } from "@wildboar/asn1";
+import { ASN1Element as _Element, type OCTET_STRING } from "@wildboar/asn1";
 import * as $ from "@wildboar/asn1/functional";
 
 /**
@@ -20,10 +20,10 @@ import * as $ from "@wildboar/asn1/functional";
 export type CertificateSerialNumber = OCTET_STRING;
 
 
-export const _decode_CertificateSerialNumber = $._decodeBigInt;
+export const _decode_CertificateSerialNumber: $.ASN1Decoder<OCTET_STRING> = $._decodeBigInt;
 
 
-export const _encode_CertificateSerialNumber = $._encodeBigInt;
+export const _encode_CertificateSerialNumber: $.ASN1Encoder<OCTET_STRING> = $._encodeBigInt;
 
 
 /* eslint-enable */

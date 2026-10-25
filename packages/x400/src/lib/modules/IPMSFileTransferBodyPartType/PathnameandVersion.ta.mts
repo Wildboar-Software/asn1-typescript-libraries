@@ -1,8 +1,8 @@
 /* eslint-disable */
 import {
-    OPTIONAL,
-    GraphicString,
-    ASN1Element as _Element,
+    type OPTIONAL,
+    type GraphicString,
+    type ASN1Element as _Element,
     ASN1TagClass as _TagClass,
     ASN1Construction as _Construction,
     ASN1UniversalType as _UniversalType,
@@ -13,7 +13,7 @@ import {
 } from '@wildboar/asn1';
 import * as $ from '@wildboar/asn1/functional';
 import {
-    Pathname_Attribute,
+    type Pathname_Attribute,
     _decode_Pathname_Attribute,
     _encode_Pathname_Attribute,
 } from '../IPMSFileTransferBodyPartType/Pathname-Attribute.ta.mjs';
@@ -34,20 +34,26 @@ import {
  *
  */
 export class PathnameandVersion {
+    /**
+     * @summary `pathname`.
+     * @public
+     * @readonly
+     */
+    public readonly pathname: Pathname_Attribute;
+    /**
+     * @summary `file_version`.
+     * @public
+     * @readonly
+     */
+    public readonly file_version?: OPTIONAL<GraphicString>;
+
     constructor(
-        /**
-         * @summary `pathname`.
-         * @public
-         * @readonly
-         */
-        readonly pathname: Pathname_Attribute,
-        /**
-         * @summary `file_version`.
-         * @public
-         * @readonly
-         */
-        readonly file_version?: OPTIONAL<GraphicString>
-    ) {}
+        pathname: Pathname_Attribute,
+        file_version?: OPTIONAL<GraphicString>
+    ) {
+        this.pathname = pathname;
+        this.file_version = file_version;
+    }
 
     /**
      * @summary Restructures an object into a PathnameandVersion

@@ -2,12 +2,12 @@
 import { ASN1Element as _Element, ASN1TagClass as _TagClass } from "@wildboar/asn1";
 import * as $ from "@wildboar/asn1/functional";
 import {
-    SecurityProblem,
+    type SecurityProblem,
     _decode_SecurityProblem,
     _encode_SecurityProblem,
 } from "../DirectoryAbstractService/SecurityProblem.ta.mjs";
 import {
-    ServiceProblem,
+    type ServiceProblem,
     _decode_ServiceProblem,
     _encode_ServiceProblem,
 } from "../DirectoryAbstractService/ServiceProblem.ta.mjs";

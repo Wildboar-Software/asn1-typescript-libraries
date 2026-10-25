@@ -1,29 +1,29 @@
 /* eslint-disable */
 import {
-    IA5String,
-    INTEGER,
-    NULL,
-    OCTET_STRING,
-    OPTIONAL,
-    ASN1Element as _Element,
+    type IA5String,
+    type INTEGER,
+    type NULL,
+    type OCTET_STRING,
+    type OPTIONAL,
+    type ASN1Element as _Element,
     ASN1TagClass as _TagClass,
     ASN1SizeError,
     ASN1OverflowError
 } from "@wildboar/asn1";
 import * as $ from "@wildboar/asn1/functional";
-import { InvolvedParty, _decode_InvolvedParty, _encode_InvolvedParty } from "../CHFChargingDataTypes/InvolvedParty.ta.mjs";
+import { type InvolvedParty, _decode_InvolvedParty, _encode_InvolvedParty } from "../CHFChargingDataTypes/InvolvedParty.ta.mjs";
 import { SubscriberEquipmentNumber, _decode_SubscriberEquipmentNumber, _encode_SubscriberEquipmentNumber } from "../CHFChargingDataTypes/SubscriberEquipmentNumber.ta.mjs";
 import { RoamerInOut, _decode_RoamerInOut, _encode_RoamerInOut, _enum_for_RoamerInOut } from "../CHFChargingDataTypes/RoamerInOut.ta.mjs";
 import { PresenceReportingAreaInfo, _decode_PresenceReportingAreaInfo, _encode_PresenceReportingAreaInfo } from "../CHFChargingDataTypes/PresenceReportingAreaInfo.ta.mjs";
 import { NetworkSliceInstanceID, _decode_NetworkSliceInstanceID, _encode_NetworkSliceInstanceID } from "../CHFChargingDataTypes/NetworkSliceInstanceID.ta.mjs";
 import { PDUSessionType, _decode_PDUSessionType, _encode_PDUSessionType, _enum_for_PDUSessionType } from "../CHFChargingDataTypes/PDUSessionType.ta.mjs";
-import { PDUSessionChargingInformation_sSCMode, _decode_PDUSessionChargingInformation_sSCMode, _encode_PDUSessionChargingInformation_sSCMode } from "../CHFChargingDataTypes/PDUSessionChargingInformation-sSCMode.ta.mjs";
+import { type PDUSessionChargingInformation_sSCMode, _decode_PDUSessionChargingInformation_sSCMode, _encode_PDUSessionChargingInformation_sSCMode } from "../CHFChargingDataTypes/PDUSessionChargingInformation-sSCMode.ta.mjs";
 import { ServingNetworkFunctionID, _decode_ServingNetworkFunctionID, _encode_ServingNetworkFunctionID } from "../CHFChargingDataTypes/ServingNetworkFunctionID.ta.mjs";
 import { PDUAddress, _decode_PDUAddress, _encode_PDUAddress } from "../CHFChargingDataTypes/PDUAddress.ta.mjs";
 import { AuthorizedQoSInformation, _decode_AuthorizedQoSInformation, _encode_AuthorizedQoSInformation } from "../CHFChargingDataTypes/AuthorizedQoSInformation.ta.mjs";
-import { Diagnostics, _decode_Diagnostics, _encode_Diagnostics } from "../CHFChargingDataTypes/Diagnostics.ta.mjs";
-import { ChChSelectionMode, _decode_ChChSelectionMode, _encode_ChChSelectionMode, _enum_for_ChChSelectionMode } from "../CHFChargingDataTypes/ChChSelectionMode.ta.mjs";
-import { ThreeGPPPSDataOffStatus, _decode_ThreeGPPPSDataOffStatus, _encode_ThreeGPPPSDataOffStatus, _enum_for_ThreeGPPPSDataOffStatus } from "../CHFChargingDataTypes/ThreeGPPPSDataOffStatus.ta.mjs";
+import { type Diagnostics, _decode_Diagnostics, _encode_Diagnostics } from "../CHFChargingDataTypes/Diagnostics.ta.mjs";
+import { type ChChSelectionMode, _decode_ChChSelectionMode, _encode_ChChSelectionMode, _enum_for_ChChSelectionMode } from "../CHFChargingDataTypes/ChChSelectionMode.ta.mjs";
+import { type ThreeGPPPSDataOffStatus, _decode_ThreeGPPPSDataOffStatus, _encode_ThreeGPPPSDataOffStatus, _enum_for_ThreeGPPPSDataOffStatus } from "../CHFChargingDataTypes/ThreeGPPPSDataOffStatus.ta.mjs";
 import { NGRANSecondaryRATUsageReport, _decode_NGRANSecondaryRATUsageReport, _encode_NGRANSecondaryRATUsageReport } from "../CHFChargingDataTypes/NGRANSecondaryRATUsageReport.ta.mjs";
 import { SubscribedQoSInformation, _decode_SubscribedQoSInformation, _encode_SubscribedQoSInformation } from "../CHFChargingDataTypes/SubscribedQoSInformation.ta.mjs";
 import { SessionAMBR, _decode_SessionAMBR, _encode_SessionAMBR } from "../CHFChargingDataTypes/SessionAMBR.ta.mjs";
@@ -404,31 +404,31 @@ class PDUSessionChargingInformation {
          * @static
          */
 
-    public static _enum_for_userRoamerInOut = _enum_for_RoamerInOut;        /**
+    public static _enum_for_userRoamerInOut: typeof _enum_for_RoamerInOut = _enum_for_RoamerInOut;        /**
          * @summary The enum used as the type of the component `pDUType`
          * @public
          * @static
          */
 
-    public static _enum_for_pDUType = _enum_for_PDUSessionType;        /**
+    public static _enum_for_pDUType: typeof _enum_for_PDUSessionType = _enum_for_PDUSessionType;        /**
          * @summary The enum used as the type of the component `chChSelectionMode`
          * @public
          * @static
          */
 
-    public static _enum_for_chChSelectionMode = _enum_for_ChChSelectionMode;        /**
+    public static _enum_for_chChSelectionMode: typeof _enum_for_ChChSelectionMode = _enum_for_ChChSelectionMode;        /**
          * @summary The enum used as the type of the component `threeGPPPSDataOffStatus`
          * @public
          * @static
          */
 
-    public static _enum_for_threeGPPPSDataOffStatus = _enum_for_ThreeGPPPSDataOffStatus;        /**
+    public static _enum_for_threeGPPPSDataOffStatus: typeof _enum_for_ThreeGPPPSDataOffStatus = _enum_for_ThreeGPPPSDataOffStatus;        /**
          * @summary The enum used as the type of the component `dNNSelectionMode`
          * @public
          * @static
          */
 
-    public static _enum_for_dNNSelectionMode = _enum_for_DNNSelectionMode;
+    public static _enum_for_dNNSelectionMode: typeof _enum_for_DNNSelectionMode = _enum_for_DNNSelectionMode;
 }
 
 /**

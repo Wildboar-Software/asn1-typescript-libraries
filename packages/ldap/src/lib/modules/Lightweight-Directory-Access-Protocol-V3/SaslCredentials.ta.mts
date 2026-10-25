@@ -1,7 +1,7 @@
 /* eslint-disable */
 import {
-  OPTIONAL,
-  OCTET_STRING,
+  type OPTIONAL,
+  type OCTET_STRING,
   ASN1Element as _Element,
   ASN1TagClass as _TagClass,
   ASN1Construction as _Construction,
@@ -13,7 +13,7 @@ import {
 } from '@wildboar/asn1';
 import * as $ from '@wildboar/asn1/functional';
 import {
-  LDAPString,
+  type LDAPString,
   _decode_LDAPString,
   _encode_LDAPString,
 } from '../Lightweight-Directory-Access-Protocol-V3/LDAPString.ta.mjs';
@@ -49,7 +49,7 @@ export class SaslCredentials {
    * @public
    * @readonly
    */
-  readonly mechanism: LDAPString;
+  public readonly mechanism: LDAPString;
   /**
    * @summary `credentials`.
    * @description
@@ -60,13 +60,13 @@ export class SaslCredentials {
    * @public
    * @readonly
    */
-  readonly credentials?: OPTIONAL<OCTET_STRING>;
+  public readonly credentials?: OPTIONAL<OCTET_STRING>;
   /**
    * @summary Extensions that are not recognized.
    * @public
    * @readonly
    */
-  readonly _unrecognizedExtensionsList: _Element[];
+  public readonly _unrecognizedExtensionsList: _Element[];
 
   constructor(
     mechanism: LDAPString,

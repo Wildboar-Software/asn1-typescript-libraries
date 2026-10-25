@@ -1,11 +1,11 @@
 /* eslint-disable */
 import {
-    OPTIONAL,
-    ASN1Element as _Element,
+    type OPTIONAL,
+    type ASN1Element as _Element,
     ASN1TagClass as _TagClass
 } from "@wildboar/asn1";
 import * as $ from "@wildboar/asn1/functional";
-import { PartyInformation_party_Qualifier, _decode_PartyInformation_party_Qualifier, _encode_PartyInformation_party_Qualifier, _enum_for_PartyInformation_party_Qualifier } from "../UmtsHI2Operations/PartyInformation-party-Qualifier.ta.mjs";
+import { type PartyInformation_party_Qualifier, _decode_PartyInformation_party_Qualifier, _encode_PartyInformation_party_Qualifier, _enum_for_PartyInformation_party_Qualifier } from "../UmtsHI2Operations/PartyInformation-party-Qualifier.ta.mjs";
 // export { PartyInformation_party_Qualifier, _enum_for_PartyInformation_party_Qualifier, PartyInformation_party_Qualifier_gPRS_Target /* IMPORTED_LONG_ENUMERATION_ITEM */, gPRS_Target /* IMPORTED_SHORT_ENUMERATION_ITEM */, _decode_PartyInformation_party_Qualifier, _encode_PartyInformation_party_Qualifier } from "../UmtsHI2Operations/PartyInformation-party-Qualifier.ta.mjs";
 import { PartyInformation_partyIdentity, _decode_PartyInformation_partyIdentity, _encode_PartyInformation_partyIdentity } from "../UmtsHI2Operations/PartyInformation-partyIdentity.ta.mjs";
 // export { PartyInformation_partyIdentity, _decode_PartyInformation_partyIdentity, _encode_PartyInformation_partyIdentity } from "../UmtsHI2Operations/PartyInformation-partyIdentity.ta.mjs";
@@ -52,13 +52,13 @@ import { Services_Data_Information, _decode_Services_Data_Information, _encode_S
  *             -- E164 address of the node in international format. Coded in the same format as
  *             -- the calling party number  parameter of the ISUP (parameter part:[29])
  * 
- *         sip-uri                    [8] OCTET STRING     OPTIONAL,
+ *         sip-uri                    [8] OCTET STRING     type OPTIONAL,
  *             -- See [26]
  * 
  *         ...,
- *         tel-uri                    [9] OCTET STRING     OPTIONAL,
+ *         tel-uri                    [9] OCTET STRING     type OPTIONAL,
  *             -- See [67]
- *         x-3GPP-Asserted-Identity [10] OCTET STRING     OPTIONAL,
+ *         x-3GPP-Asserted-Identity [10] OCTET STRING     type OPTIONAL,
  *         -- X-3GPP-Asserted-Identity header (3GPP TS 24.109 [79]) of the target, used in
  *         -- some XCAP transactions. This information complement SIP URI or Tel URI of the target.
  *         xUI                        [11] OCTET STRING     OPTIONAL
@@ -162,7 +162,7 @@ class PartyInformation {
          * @static
          */
 
-    public static _enum_for_party_Qualifier = _enum_for_PartyInformation_party_Qualifier;
+    public static _enum_for_party_Qualifier: typeof _enum_for_PartyInformation_party_Qualifier = _enum_for_PartyInformation_party_Qualifier;
 }
 
 /**

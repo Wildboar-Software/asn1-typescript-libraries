@@ -1,14 +1,14 @@
 /* eslint-disable */
 import {
-    OPTIONAL,
-    ASN1Element as _Element,
+    type OPTIONAL,
+    type ASN1Element as _Element,
     ASN1TagClass as _TagClass
 } from "@wildboar/asn1";
 import * as $ from "@wildboar/asn1/functional";
-import { PartyNumber, _decode_PartyNumber, _encode_PartyNumber } from "../Addressing-Data-Elements-asn1-97/PartyNumber.ta.mjs";
+import { type PartyNumber, _decode_PartyNumber, _encode_PartyNumber } from "../Addressing-Data-Elements-asn1-97/PartyNumber.ta.mjs";
 import { BasicService, _decode_BasicService, _encode_BasicService, _enum_for_BasicService } from "../MWI-Operations-asn1-97/BasicService.ta.mjs";
-import { MsgCentreId, _decode_MsgCentreId, _encode_MsgCentreId } from "../MWI-Operations-asn1-97/MsgCentreId.ta.mjs";
-import { MWIInterrogateArg_argumentExt, _decode_MWIInterrogateArg_argumentExt, _encode_MWIInterrogateArg_argumentExt } from "../MWI-Operations-asn1-97/MWIInterrogateArg-argumentExt.ta.mjs";
+import { type MsgCentreId, _decode_MsgCentreId, _encode_MsgCentreId } from "../MWI-Operations-asn1-97/MsgCentreId.ta.mjs";
+import { type MWIInterrogateArg_argumentExt, _decode_MWIInterrogateArg_argumentExt, _encode_MWIInterrogateArg_argumentExt } from "../MWI-Operations-asn1-97/MWIInterrogateArg-argumentExt.ta.mjs";
 
 /**
  * @summary MWIInterrogateArg
@@ -111,7 +111,7 @@ class MWIInterrogateArg {
          * @static
          */
 
-    public static _enum_for_basicService = _enum_for_BasicService;
+    public static _enum_for_basicService: typeof _enum_for_BasicService = _enum_for_BasicService;
 }
 
 /**

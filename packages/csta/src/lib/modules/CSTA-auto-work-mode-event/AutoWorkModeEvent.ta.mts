@@ -2,15 +2,15 @@
 
 import * as $ from "@wildboar/asn1/functional";
 import {
-    OPTIONAL,
-    BOOLEAN,
-    INTEGER,
-    SEQUENCE,
-    SET,
-    ASN1Element as _Element,
+    type OPTIONAL,
+    type BOOLEAN,
+    type INTEGER,
+    type SEQUENCE,
+    type SET,
+    type ASN1Element as _Element,
     ASN1TagClass as _TagClass
 } from "@wildboar/asn1";
-import { SubjectDeviceID, _decode_SubjectDeviceID, _encode_SubjectDeviceID } from "../CSTA-device-identifiers/SubjectDeviceID.ta.mjs";
+import { type SubjectDeviceID, _decode_SubjectDeviceID, _encode_SubjectDeviceID } from "../CSTA-device-identifiers/SubjectDeviceID.ta.mjs";
 
 import { CSTACommonArguments, _decode_CSTACommonArguments, _encode_CSTACommonArguments } from "../CSTA-extension-types/CSTACommonArguments.ta.mjs";
 
@@ -43,45 +43,55 @@ import { CSTACommonArguments, _decode_CSTACommonArguments, _encode_CSTACommonArg
  */
 export
 class AutoWorkModeEvent {
+    /**
+     * @summary `invokingDevice`.
+     * @description
+     *
+     * Device whose auto-work mode changed.
+     * @public
+     * @readonly
+     */
+    public readonly invokingDevice: SubjectDeviceID;
+    /**
+     * @summary `autoWorkOn`.
+     * @description
+     *
+     * FALSE = off; TRUE = on.
+     * @public
+     * @readonly
+     */
+    public readonly autoWorkOn: BOOLEAN;
+    /**
+     * @summary `autoWorkInterval`.
+     * @description
+     *
+     * Seconds in WorkingAfterCall. 0: do not auto-exit that state.
+     * @public
+     * @readonly
+     */
+    public readonly autoWorkInterval: INTEGER;
+    /**
+     * @summary `extensions`.
+     * @description
+     *
+     * Optional security (timestamp, sequence, securityInfo) and
+     * privateData.
+     * @public
+     * @readonly
+     */
+    public readonly extensions?: OPTIONAL<CSTACommonArguments>;
+
     constructor (
-        /**
-         * @summary `invokingDevice`.
-         * @description
-         *
-         * Device whose auto-work mode changed.
-         * @public
-         * @readonly
-         */
-        readonly invokingDevice: SubjectDeviceID,
-        /**
-         * @summary `autoWorkOn`.
-         * @description
-         *
-         * FALSE = off; TRUE = on.
-         * @public
-         * @readonly
-         */
-        readonly autoWorkOn: BOOLEAN,
-        /**
-         * @summary `autoWorkInterval`.
-         * @description
-         *
-         * Seconds in WorkingAfterCall. 0: do not auto-exit that state.
-         * @public
-         * @readonly
-         */
-        readonly autoWorkInterval: INTEGER,
-        /**
-         * @summary `extensions`.
-         * @description
-         *
-         * Optional security (timestamp, sequence, securityInfo) and
-         * privateData.
-         * @public
-         * @readonly
-         */
-        readonly extensions?: OPTIONAL<CSTACommonArguments>
-    ) {}
+        invokingDevice: SubjectDeviceID,
+        autoWorkOn: BOOLEAN,
+        autoWorkInterval: INTEGER,
+        extensions?: OPTIONAL<CSTACommonArguments>
+    ) {
+        this.invokingDevice = invokingDevice;
+        this.autoWorkOn = autoWorkOn;
+        this.autoWorkInterval = autoWorkInterval;
+        this.extensions = extensions;
+    }
 
     /**
      * @summary Restructures an object into a AutoWorkModeEvent

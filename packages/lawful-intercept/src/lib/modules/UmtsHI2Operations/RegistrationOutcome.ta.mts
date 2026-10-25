@@ -1,6 +1,6 @@
 /* eslint-disable */
 import {
-    ENUMERATED
+    type ENUMERATED
 } from "@wildboar/asn1";
 import * as $ from "@wildboar/asn1/functional";
 
@@ -50,7 +50,7 @@ type RegistrationOutcome = _enum_for_RegistrationOutcome | ENUMERATED;
  * @type {number}
  */
 export
-const RegistrationOutcome_success: RegistrationOutcome = 0; /* LONG_NAMED_ENUMERATED_VALUE */
+const RegistrationOutcome_success: _enum_for_RegistrationOutcome.success = _enum_for_RegistrationOutcome.success; /* LONG_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary success
@@ -62,7 +62,7 @@ const RegistrationOutcome_success: RegistrationOutcome = 0; /* LONG_NAMED_ENUMER
  * @type {number}
  */
 export
-const success: RegistrationOutcome = RegistrationOutcome_success; /* SHORT_NAMED_ENUMERATED_VALUE */
+const success: _enum_for_RegistrationOutcome.success = RegistrationOutcome_success; /* SHORT_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary RegistrationOutcome_failure
@@ -77,7 +77,7 @@ const success: RegistrationOutcome = RegistrationOutcome_success; /* SHORT_NAMED
  * @type {number}
  */
 export
-const RegistrationOutcome_failure: RegistrationOutcome = 1; /* LONG_NAMED_ENUMERATED_VALUE */
+const RegistrationOutcome_failure: _enum_for_RegistrationOutcome.failure = _enum_for_RegistrationOutcome.failure; /* LONG_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary failure
@@ -89,7 +89,7 @@ const RegistrationOutcome_failure: RegistrationOutcome = 1; /* LONG_NAMED_ENUMER
  * @type {number}
  */
 export
-const failure: RegistrationOutcome = RegistrationOutcome_failure; /* SHORT_NAMED_ENUMERATED_VALUE */
+const failure: _enum_for_RegistrationOutcome.failure = RegistrationOutcome_failure; /* SHORT_NAMED_ENUMERATED_VALUE */
 export const _decode_RegistrationOutcome: $.ASN1Decoder<RegistrationOutcome> = $._decodeEnumerated;
 export const _encode_RegistrationOutcome: $.ASN1Encoder<RegistrationOutcome> = $._encodeEnumerated;
 

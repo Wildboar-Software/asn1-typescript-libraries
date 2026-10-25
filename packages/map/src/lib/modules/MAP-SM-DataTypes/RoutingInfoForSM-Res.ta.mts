@@ -1,11 +1,11 @@
 /* eslint-disable */
 import {
-    OPTIONAL,
-    ASN1Element as _Element,
+    type OPTIONAL,
+    type ASN1Element as _Element,
     ASN1TagClass as _TagClass
 } from "@wildboar/asn1";
 import * as $ from "@wildboar/asn1/functional";
-import { IMSI, _decode_IMSI, _encode_IMSI } from "../MAP-CommonDataTypes/IMSI.ta.mjs";
+import { type IMSI, _decode_IMSI, _encode_IMSI } from "../MAP-CommonDataTypes/IMSI.ta.mjs";
 import { ExtensionContainer, _decode_ExtensionContainer, _encode_ExtensionContainer } from "../MAP-ExtensionDataTypes/ExtensionContainer.ta.mjs";
 import { IP_SM_GW_Guidance, _decode_IP_SM_GW_Guidance, _encode_IP_SM_GW_Guidance } from "../MAP-SM-DataTypes/IP-SM-GW-Guidance.ta.mjs";
 import { LocationInfoWithLMSI, _decode_LocationInfoWithLMSI, _encode_LocationInfoWithLMSI } from "../MAP-SM-DataTypes/LocationInfoWithLMSI.ta.mjs";
@@ -24,7 +24,7 @@ import { LocationInfoWithLMSI, _decode_LocationInfoWithLMSI, _encode_LocationInf
  * RoutingInfoForSM-Res ::= SEQUENCE {
  *     imsi    IMSI,
  *     locationInfoWithLMSI    [0] LocationInfoWithLMSI,
- *     extensionContainer    [4] ExtensionContainer    OPTIONAL,
+ *     extensionContainer    [4] ExtensionContainer    type OPTIONAL,
  *     ...,
  *     ip-sm-gwGuidance    [5] IP-SM-GW-Guidance    OPTIONAL }
  * ```
@@ -33,54 +33,66 @@ import { LocationInfoWithLMSI, _decode_LocationInfoWithLMSI, _encode_LocationInf
  */
 export
 class RoutingInfoForSM_Res {
+    /**
+     * @summary `imsi`.
+     * @description
+     *
+     * Subscriber IMSI.
+     *
+     * @public
+     * @readonly
+     */
+    public readonly imsi: IMSI;
+    /**
+     * @summary `locationInfoWithLMSI`.
+     * @description
+     *
+     * Serving node number(s) and optional LMSI.
+     *
+     * @public
+     * @readonly
+     */
+    public readonly locationInfoWithLMSI: LocationInfoWithLMSI;
+    /**
+     * @summary `extensionContainer`.
+     * @description
+     *
+     * Private or PCS extensions (3GPP TS 29.002 V19.1.0 clause 17.7.11).
+     *
+     * @public
+     * @readonly
+     */
+    public readonly extensionContainer?: OPTIONAL<ExtensionContainer>;
+    /**
+     * @summary `ip_sm_gwGuidance`.
+     * @description
+     *
+     * IP-SM-GW delivery timer guidance.
+     *
+     * @public
+     * @readonly
+     */
+    public readonly ip_sm_gwGuidance?: OPTIONAL<IP_SM_GW_Guidance>;
+    /**
+     * @summary Extensions that are not recognized.
+     * @public
+     * @readonly
+     */
+    public readonly _unrecognizedExtensionsList: _Element[];
+
     constructor (
-        /**
-         * @summary `imsi`.
-         * @description
-         *
-         * Subscriber IMSI.
-         *
-         * @public
-         * @readonly
-         */
-        readonly imsi: IMSI,
-        /**
-         * @summary `locationInfoWithLMSI`.
-         * @description
-         *
-         * Serving node number(s) and optional LMSI.
-         *
-         * @public
-         * @readonly
-         */
-        readonly locationInfoWithLMSI: LocationInfoWithLMSI,
-        /**
-         * @summary `extensionContainer`.
-         * @description
-         *
-         * Private or PCS extensions (3GPP TS 29.002 V19.1.0 clause 17.7.11).
-         *
-         * @public
-         * @readonly
-         */
-        readonly extensionContainer?: OPTIONAL<ExtensionContainer>,
-        /**
-         * @summary `ip_sm_gwGuidance`.
-         * @description
-         *
-         * IP-SM-GW delivery timer guidance.
-         *
-         * @public
-         * @readonly
-         */
-        readonly ip_sm_gwGuidance?: OPTIONAL<IP_SM_GW_Guidance>,
-        /**
-         * @summary Extensions that are not recognized.
-         * @public
-         * @readonly
-         */
-        readonly _unrecognizedExtensionsList: _Element[] = []
-    ) {}
+        imsi: IMSI,
+        locationInfoWithLMSI: LocationInfoWithLMSI,
+        extensionContainer?: OPTIONAL<ExtensionContainer>,
+        ip_sm_gwGuidance?: OPTIONAL<IP_SM_GW_Guidance>,
+        _unrecognizedExtensionsList: _Element[] = []
+    ) {
+        this.imsi = imsi;
+        this.locationInfoWithLMSI = locationInfoWithLMSI;
+        this.extensionContainer = extensionContainer;
+        this.ip_sm_gwGuidance = ip_sm_gwGuidance;
+        this._unrecognizedExtensionsList = _unrecognizedExtensionsList;
+    }
 
     /**
      * @summary Restructures an object into a RoutingInfoForSM_Res

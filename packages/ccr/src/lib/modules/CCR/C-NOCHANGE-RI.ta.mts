@@ -1,6 +1,6 @@
 /* eslint-disable */
 import {
-  OPTIONAL,
+  type OPTIONAL,
   ASN1Element as _Element,
   ASN1TagClass as _TagClass,
   ASN1Construction as _Construction,
@@ -12,14 +12,14 @@ import {
 } from '@wildboar/asn1';
 import * as $ from '@wildboar/asn1/functional';
 import {
-  C_NOCHANGE_RI_confirmation,
+  type C_NOCHANGE_RI_confirmation,
   _enum_for_C_NOCHANGE_RI_confirmation,
   C_NOCHANGE_RI_confirmation_result_requested /* IMPORTED_LONG_ENUMERATION_ITEM */,
   _decode_C_NOCHANGE_RI_confirmation,
   _encode_C_NOCHANGE_RI_confirmation,
 } from '../CCR/C-NOCHANGE-RI-confirmation.ta.mjs';
 import {
-  User_data,
+  type User_data,
   _decode_User_data,
   _encode_User_data,
 } from '../CCR/User-data.ta.mjs';
@@ -132,7 +132,7 @@ export class C_NOCHANGE_RI {
    * @static
    */
 
-  public static _enum_for_confirmation = _enum_for_C_NOCHANGE_RI_confirmation;
+  public static _enum_for_confirmation: typeof _enum_for_C_NOCHANGE_RI_confirmation = _enum_for_C_NOCHANGE_RI_confirmation;
 }
 
 

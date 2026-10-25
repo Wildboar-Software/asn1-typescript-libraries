@@ -1,12 +1,12 @@
 /* eslint-disable */
 import {
-    OPTIONAL,
-    ASN1Element as _Element,
+    type OPTIONAL,
+    type ASN1Element as _Element,
     ASN1TagClass as _TagClass
 } from "@wildboar/asn1";
 import * as $ from "@wildboar/asn1/functional";
 import { AdviceModeCombination, _decode_AdviceModeCombination, _encode_AdviceModeCombination, _enum_for_AdviceModeCombination } from "../SS-AOC-Operations-asn1-97/AdviceModeCombination.ta.mjs";
-import { ChargeRequestRes_chargeReqResExtension, _decode_ChargeRequestRes_chargeReqResExtension, _encode_ChargeRequestRes_chargeReqResExtension } from "../SS-AOC-Operations-asn1-97/ChargeRequestRes-chargeReqResExtension.ta.mjs";
+import { type ChargeRequestRes_chargeReqResExtension, _decode_ChargeRequestRes_chargeReqResExtension, _encode_ChargeRequestRes_chargeReqResExtension } from "../SS-AOC-Operations-asn1-97/ChargeRequestRes-chargeReqResExtension.ta.mjs";
 
 /**
  * @summary ChargeRequestRes
@@ -85,7 +85,7 @@ class ChargeRequestRes {
          * @static
          */
 
-    public static _enum_for_adviceModeCombination = _enum_for_AdviceModeCombination;
+    public static _enum_for_adviceModeCombination: typeof _enum_for_AdviceModeCombination = _enum_for_AdviceModeCombination;
 }
 
 /**

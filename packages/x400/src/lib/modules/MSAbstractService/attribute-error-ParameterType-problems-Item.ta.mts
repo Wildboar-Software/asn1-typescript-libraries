@@ -1,7 +1,7 @@
 /* eslint-disable */
 import {
-    OPTIONAL,
-    ASN1Element as _Element,
+    type OPTIONAL,
+    type ASN1Element as _Element,
     ASN1TagClass as _TagClass,
     ASN1Construction as _Construction,
     ASN1UniversalType as _UniversalType,
@@ -12,12 +12,12 @@ import {
 } from '@wildboar/asn1';
 import * as $ from '@wildboar/asn1/functional';
 import {
-    AttributeProblem,
+    type AttributeProblem,
     _decode_AttributeProblem,
     _encode_AttributeProblem,
 } from '../MSAbstractService/AttributeProblem.ta.mjs';
 import {
-    AttributeType,
+    type AttributeType,
     _decode_AttributeType,
     _encode_AttributeType,
 } from "./AttributeType.ta.mjs";
@@ -37,26 +37,34 @@ import {
  *
  */
 export class attribute_error_ParameterType_problems_Item {
+    /**
+     * @summary `problem`.
+     * @public
+     * @readonly
+     */
+    public readonly problem: AttributeProblem;
+    /**
+     * @summary `type_`.
+     * @public
+     * @readonly
+     */
+    public readonly type_: AttributeType;
+    /**
+     * @summary `value`.
+     * @public
+     * @readonly
+     */
+    public readonly value?: OPTIONAL<_Element>;
+
     constructor(
-        /**
-         * @summary `problem`.
-         * @public
-         * @readonly
-         */
-        readonly problem: AttributeProblem,
-        /**
-         * @summary `type_`.
-         * @public
-         * @readonly
-         */
-        readonly type_: AttributeType,
-        /**
-         * @summary `value`.
-         * @public
-         * @readonly
-         */
-        readonly value?: OPTIONAL<_Element>
-    ) {}
+        problem: AttributeProblem,
+        type_: AttributeType,
+        value?: OPTIONAL<_Element>
+    ) {
+        this.problem = problem;
+        this.type_ = type_;
+        this.value = value;
+    }
 
     /**
      * @summary Restructures an object into a attribute_error_ParameterType_problems_Item

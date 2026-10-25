@@ -1,31 +1,31 @@
 /* eslint-disable */
 import {
-    OPTIONAL,
-    ASN1Element as _Element,
+    type OPTIONAL,
+    type ASN1Element as _Element,
     ASN1TagClass as _TagClass
 } from "@wildboar/asn1";
 import * as $ from "@wildboar/asn1/functional";
-import { MMEUES1APID, _decode_MMEUES1APID, _encode_MMEUES1APID } from "../TS33128Payloads/MMEUES1APID.ta.mjs";
+import { type MMEUES1APID, _decode_MMEUES1APID, _encode_MMEUES1APID } from "../TS33128Payloads/MMEUES1APID.ta.mjs";
 // export { MMEUES1APID, _decode_MMEUES1APID, _encode_MMEUES1APID } from "../TS33128Payloads/MMEUES1APID.ta.mjs";
-import { RANUES1APID, _decode_RANUES1APID, _encode_RANUES1APID } from "../TS33128Payloads/RANUES1APID.ta.mjs";
+import { type RANUES1APID, _decode_RANUES1APID, _encode_RANUES1APID } from "../TS33128Payloads/RANUES1APID.ta.mjs";
 // export { RANUES1APID, _decode_RANUES1APID, _encode_RANUES1APID } from "../TS33128Payloads/RANUES1APID.ta.mjs";
-import { ERABContextList, _decode_ERABContextList, _encode_ERABContextList } from "../TS33128Payloads/ERABContextList.ta.mjs";
+import { type ERABContextList, _decode_ERABContextList, _encode_ERABContextList } from "../TS33128Payloads/ERABContextList.ta.mjs";
 // export { ERABContextList, _decode_ERABContextList, _encode_ERABContextList } from "../TS33128Payloads/ERABContextList.ta.mjs";
-import { EPSHandoverRestrictionList, _decode_EPSHandoverRestrictionList, _encode_EPSHandoverRestrictionList } from "../TS33128Payloads/EPSHandoverRestrictionList.ta.mjs";
+import { type EPSHandoverRestrictionList, _decode_EPSHandoverRestrictionList, _encode_EPSHandoverRestrictionList } from "../TS33128Payloads/EPSHandoverRestrictionList.ta.mjs";
 // export { EPSHandoverRestrictionList, _decode_EPSHandoverRestrictionList, _encode_EPSHandoverRestrictionList } from "../TS33128Payloads/EPSHandoverRestrictionList.ta.mjs";
-import { EPSUERadioCapability, _decode_EPSUERadioCapability, _encode_EPSUERadioCapability } from "../TS33128Payloads/EPSUERadioCapability.ta.mjs";
+import { type EPSUERadioCapability, _decode_EPSUERadioCapability, _encode_EPSUERadioCapability } from "../TS33128Payloads/EPSUERadioCapability.ta.mjs";
 // export { EPSUERadioCapability, _decode_EPSUERadioCapability, _encode_EPSUERadioCapability } from "../TS33128Payloads/EPSUERadioCapability.ta.mjs";
-import { RATFrequencySelectionPriority, _decode_RATFrequencySelectionPriority, _encode_RATFrequencySelectionPriority } from "../TS33128Payloads/RATFrequencySelectionPriority.ta.mjs";
+import { type RATFrequencySelectionPriority, _decode_RATFrequencySelectionPriority, _encode_RATFrequencySelectionPriority } from "../TS33128Payloads/RATFrequencySelectionPriority.ta.mjs";
 // export { RATFrequencySelectionPriority, _decode_RATFrequencySelectionPriority, _encode_RATFrequencySelectionPriority } from "../TS33128Payloads/RATFrequencySelectionPriority.ta.mjs";
 import { EPSCSFallbackIndicator, _decode_EPSCSFallbackIndicator, _encode_EPSCSFallbackIndicator, _enum_for_EPSCSFallbackIndicator } from "../TS33128Payloads/EPSCSFallbackIndicator.ta.mjs";
 // export { EPSCSFallbackIndicator, _enum_for_EPSCSFallbackIndicator, EPSCSFallbackIndicator_cSFallbackRequired /* IMPORTED_LONG_ENUMERATION_ITEM */, cSFallbackRequired /* IMPORTED_SHORT_ENUMERATION_ITEM */, EPSCSFallbackIndicator_cSFallbackHighPriority /* IMPORTED_LONG_ENUMERATION_ITEM */, cSFallbackHighPriority /* IMPORTED_SHORT_ENUMERATION_ITEM */, _decode_EPSCSFallbackIndicator, _encode_EPSCSFallbackIndicator } from "../TS33128Payloads/EPSCSFallbackIndicator.ta.mjs";
-import { EPSProSeAuthorization, _decode_EPSProSeAuthorization, _encode_EPSProSeAuthorization } from "../TS33128Payloads/EPSProSeAuthorization.ta.mjs";
+import { type EPSProSeAuthorization, _decode_EPSProSeAuthorization, _encode_EPSProSeAuthorization } from "../TS33128Payloads/EPSProSeAuthorization.ta.mjs";
 // export { EPSProSeAuthorization, _decode_EPSProSeAuthorization, _encode_EPSProSeAuthorization } from "../TS33128Payloads/EPSProSeAuthorization.ta.mjs";
 import { LTEV2XServiceAuthorization, _decode_LTEV2XServiceAuthorization, _encode_LTEV2XServiceAuthorization } from "../TS33128Payloads/LTEV2XServiceAuthorization.ta.mjs";
 // export { LTEV2XServiceAuthorization, _decode_LTEV2XServiceAuthorization, _encode_LTEV2XServiceAuthorization } from "../TS33128Payloads/LTEV2XServiceAuthorization.ta.mjs";
 import { AerialUESubscriptionIndicator, _decode_AerialUESubscriptionIndicator, _encode_AerialUESubscriptionIndicator, _enum_for_AerialUESubscriptionIndicator } from "../TS33128Payloads/AerialUESubscriptionIndicator.ta.mjs";
 // export { AerialUESubscriptionIndicator, _enum_for_AerialUESubscriptionIndicator, AerialUESubscriptionIndicator_authorized /* IMPORTED_LONG_ENUMERATION_ITEM */, AerialUESubscriptionIndicator_notAuthorized /* IMPORTED_LONG_ENUMERATION_ITEM */, _decode_AerialUESubscriptionIndicator, _encode_AerialUESubscriptionIndicator } from "../TS33128Payloads/AerialUESubscriptionIndicator.ta.mjs";
-import { EPSSubscriptionBasedUEDifferentiationIndication, _decode_EPSSubscriptionBasedUEDifferentiationIndication, _encode_EPSSubscriptionBasedUEDifferentiationIndication } from "../TS33128Payloads/EPSSubscriptionBasedUEDifferentiationIndication.ta.mjs";
+import { type EPSSubscriptionBasedUEDifferentiationIndication, _decode_EPSSubscriptionBasedUEDifferentiationIndication, _encode_EPSSubscriptionBasedUEDifferentiationIndication } from "../TS33128Payloads/EPSSubscriptionBasedUEDifferentiationIndication.ta.mjs";
 // export { EPSSubscriptionBasedUEDifferentiationIndication, _decode_EPSSubscriptionBasedUEDifferentiationIndication, _encode_EPSSubscriptionBasedUEDifferentiationIndication } from "../TS33128Payloads/EPSSubscriptionBasedUEDifferentiationIndication.ta.mjs";
 import { IABAuthorizedIndicator, _decode_IABAuthorizedIndicator, _encode_IABAuthorizedIndicator, _enum_for_IABAuthorizedIndicator } from "../TS33128Payloads/IABAuthorizedIndicator.ta.mjs";
 // export { IABAuthorizedIndicator, _enum_for_IABAuthorizedIndicator, IABAuthorizedIndicator_authorized /* IMPORTED_LONG_ENUMERATION_ITEM */, IABAuthorizedIndicator_notAuthorized /* IMPORTED_LONG_ENUMERATION_ITEM */, _decode_IABAuthorizedIndicator, _encode_IABAuthorizedIndicator } from "../TS33128Payloads/IABAuthorizedIndicator.ta.mjs";
@@ -312,19 +312,19 @@ class EPSRANUEContext {
          * @static
          */
 
-    public static _enum_for_cSFallbackIndicator = _enum_for_EPSCSFallbackIndicator;        /**
+    public static _enum_for_cSFallbackIndicator: typeof _enum_for_EPSCSFallbackIndicator = _enum_for_EPSCSFallbackIndicator;        /**
          * @summary The enum used as the type of the component `aerialUESubscription`
          * @public
          * @static
          */
 
-    public static _enum_for_aerialUESubscription = _enum_for_AerialUESubscriptionIndicator;        /**
+    public static _enum_for_aerialUESubscription: typeof _enum_for_AerialUESubscriptionIndicator = _enum_for_AerialUESubscriptionIndicator;        /**
          * @summary The enum used as the type of the component `iABAuthorizedIndicator`
          * @public
          * @static
          */
 
-    public static _enum_for_iABAuthorizedIndicator = _enum_for_IABAuthorizedIndicator;
+    public static _enum_for_iABAuthorizedIndicator: typeof _enum_for_IABAuthorizedIndicator = _enum_for_IABAuthorizedIndicator;
 }
 
 /**

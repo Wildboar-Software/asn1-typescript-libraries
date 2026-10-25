@@ -1,7 +1,7 @@
 /* eslint-disable */
 import {
-    INTEGER,
-    ASN1Element as _Element,
+    type INTEGER,
+    type ASN1Element as _Element,
     ASN1TagClass as _TagClass,
     ASN1Construction as _Construction,
     ASN1UniversalType as _UniversalType,
@@ -35,7 +35,7 @@ export type Result_list_Item_provider_reason = INTEGER;
  * @constant
  * @type {number}
  */
-export const Result_list_Item_provider_reason_reason_not_specified: Result_list_Item_provider_reason = 0; /* LONG_NAMED_INTEGER_VALUE */
+export const Result_list_Item_provider_reason_reason_not_specified: 0 = 0 satisfies Result_list_Item_provider_reason; /* LONG_NAMED_INTEGER_VALUE */
 
 
 /**
@@ -43,7 +43,7 @@ export const Result_list_Item_provider_reason_reason_not_specified: Result_list_
  * @constant
  * @type {number}
  */
-export const reason_not_specified: Result_list_Item_provider_reason = Result_list_Item_provider_reason_reason_not_specified; /* SHORT_NAMED_INTEGER_VALUE */
+export const reason_not_specified: 0 = Result_list_Item_provider_reason_reason_not_specified; /* SHORT_NAMED_INTEGER_VALUE */
 
 
 /**
@@ -56,7 +56,7 @@ export const reason_not_specified: Result_list_Item_provider_reason = Result_lis
  * @constant
  * @type {number}
  */
-export const Result_list_Item_provider_reason_abstract_syntax_not_supported: Result_list_Item_provider_reason = 1; /* LONG_NAMED_INTEGER_VALUE */
+export const Result_list_Item_provider_reason_abstract_syntax_not_supported: 1 = 1 satisfies Result_list_Item_provider_reason; /* LONG_NAMED_INTEGER_VALUE */
 
 
 /**
@@ -64,7 +64,7 @@ export const Result_list_Item_provider_reason_abstract_syntax_not_supported: Res
  * @constant
  * @type {number}
  */
-export const abstract_syntax_not_supported: Result_list_Item_provider_reason = Result_list_Item_provider_reason_abstract_syntax_not_supported; /* SHORT_NAMED_INTEGER_VALUE */
+export const abstract_syntax_not_supported: 1 = Result_list_Item_provider_reason_abstract_syntax_not_supported; /* SHORT_NAMED_INTEGER_VALUE */
 
 
 /**
@@ -73,7 +73,7 @@ export const abstract_syntax_not_supported: Result_list_Item_provider_reason = R
  * @constant
  * @type {number}
  */
-export const Result_list_Item_provider_reason_proposed_transfer_syntaxes_not_supported: Result_list_Item_provider_reason = 2; /* LONG_NAMED_INTEGER_VALUE */
+export const Result_list_Item_provider_reason_proposed_transfer_syntaxes_not_supported: 2 = 2 satisfies Result_list_Item_provider_reason; /* LONG_NAMED_INTEGER_VALUE */
 
 
 /**
@@ -81,7 +81,7 @@ export const Result_list_Item_provider_reason_proposed_transfer_syntaxes_not_sup
  * @constant
  * @type {number}
  */
-export const proposed_transfer_syntaxes_not_supported: Result_list_Item_provider_reason = Result_list_Item_provider_reason_proposed_transfer_syntaxes_not_supported; /* SHORT_NAMED_INTEGER_VALUE */
+export const proposed_transfer_syntaxes_not_supported: 2 = Result_list_Item_provider_reason_proposed_transfer_syntaxes_not_supported; /* SHORT_NAMED_INTEGER_VALUE */
 
 
 /**
@@ -90,7 +90,7 @@ export const proposed_transfer_syntaxes_not_supported: Result_list_Item_provider
  * @constant
  * @type {number}
  */
-export const Result_list_Item_provider_reason_local_limit_on_DCS_exceeded: Result_list_Item_provider_reason = 3; /* LONG_NAMED_INTEGER_VALUE */
+export const Result_list_Item_provider_reason_local_limit_on_DCS_exceeded: 3 = 3 satisfies Result_list_Item_provider_reason; /* LONG_NAMED_INTEGER_VALUE */
 
 
 /**
@@ -98,17 +98,17 @@ export const Result_list_Item_provider_reason_local_limit_on_DCS_exceeded: Resul
  * @constant
  * @type {number}
  */
-export const local_limit_on_DCS_exceeded: Result_list_Item_provider_reason = Result_list_Item_provider_reason_local_limit_on_DCS_exceeded; /* SHORT_NAMED_INTEGER_VALUE */
+export const local_limit_on_DCS_exceeded: 3 = Result_list_Item_provider_reason_local_limit_on_DCS_exceeded; /* SHORT_NAMED_INTEGER_VALUE */
 
 
 
 
-export const _decode_Result_list_Item_provider_reason = $._decodeInteger;
+export const _decode_Result_list_Item_provider_reason: $.ASN1Decoder<INTEGER> = $._decodeInteger;
 
 
 
 
-export const _encode_Result_list_Item_provider_reason = $._encodeInteger;
+export const _encode_Result_list_Item_provider_reason: $.ASN1Encoder<INTEGER> = $._encodeInteger;
 
 
 /* eslint-enable */

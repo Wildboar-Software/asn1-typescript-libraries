@@ -10,7 +10,7 @@ import {
   ASN1ConstructionError as _ConstructionError,
 } from '@wildboar/asn1';
 import * as $ from '@wildboar/asn1/functional';
-import { NCName, _decode_NCName, _encode_NCName } from '../XSD/NCName.ta.mjs';
+import { type NCName, _decode_NCName, _encode_NCName } from '../XSD/NCName.ta.mjs';
 
 /**
  * @summary ID
@@ -27,26 +27,13 @@ import { NCName, _decode_NCName, _encode_NCName } from '../XSD/NCName.ta.mjs';
  */
 export type ID = NCName; // DefinedType
 
-
-let _cached_decoder_for_ID: $.ASN1Decoder<ID> | null = null;
-
-
 /**
  * @summary Decodes an ASN.1 element into a(n) ID
  * @function
  * @param {_Element} el The element being decoded.
  * @returns {ID} The decoded data structure.
  */
-export function _decode_ID(el: _Element): ID {
-  if (!_cached_decoder_for_ID) {
-    _cached_decoder_for_ID = _decode_NCName;
-  }
-  return _cached_decoder_for_ID(el);
-}
-
-
-let _cached_encoder_for_ID: $.ASN1Encoder<ID> | null = null;
-
+export const _decode_ID: $.ASN1Decoder<ID> = _decode_NCName;
 
 /**
  * @summary Encodes a(n) ID into an ASN.1 Element.
@@ -55,12 +42,7 @@ let _cached_encoder_for_ID: $.ASN1Encoder<ID> | null = null;
  * @param elGetter A function that can be used to get new ASN.1 elements.
  * @returns {_Element} The ID, encoded as an ASN.1 Element.
  */
-export function _encode_ID(value: ID, elGetter: $.ASN1Encoder<ID>): _Element {
-  if (!_cached_encoder_for_ID) {
-    _cached_encoder_for_ID = _encode_NCName;
-  }
-  return _cached_encoder_for_ID(value, elGetter);
-}
+export const _encode_ID: $.ASN1Encoder<ID> = _encode_NCName;
 
 
 /* eslint-enable */

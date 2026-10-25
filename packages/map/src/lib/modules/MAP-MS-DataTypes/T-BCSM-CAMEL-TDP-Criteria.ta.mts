@@ -1,13 +1,13 @@
 /* eslint-disable */
 import {
-    OPTIONAL,
-    ASN1Element as _Element,
+    type OPTIONAL,
+    type ASN1Element as _Element,
     ASN1TagClass as _TagClass
 } from "@wildboar/asn1";
 import * as $ from "@wildboar/asn1/functional";
-import { BasicServiceCriteria, _decode_BasicServiceCriteria, _encode_BasicServiceCriteria } from "../MAP-MS-DataTypes/BasicServiceCriteria.ta.mjs";
-import { T_BcsmTriggerDetectionPoint, _decode_T_BcsmTriggerDetectionPoint, _encode_T_BcsmTriggerDetectionPoint, _enum_for_T_BcsmTriggerDetectionPoint } from "../MAP-MS-DataTypes/T-BcsmTriggerDetectionPoint.ta.mjs";
-import { T_CauseValueCriteria, _decode_T_CauseValueCriteria, _encode_T_CauseValueCriteria } from "../MAP-MS-DataTypes/T-CauseValueCriteria.ta.mjs";
+import { type BasicServiceCriteria, _decode_BasicServiceCriteria, _encode_BasicServiceCriteria } from "../MAP-MS-DataTypes/BasicServiceCriteria.ta.mjs";
+import { type T_BcsmTriggerDetectionPoint, _decode_T_BcsmTriggerDetectionPoint, _encode_T_BcsmTriggerDetectionPoint, _enum_for_T_BcsmTriggerDetectionPoint } from "../MAP-MS-DataTypes/T-BcsmTriggerDetectionPoint.ta.mjs";
+import { type T_CauseValueCriteria, _decode_T_CauseValueCriteria, _encode_T_CauseValueCriteria } from "../MAP-MS-DataTypes/T-CauseValueCriteria.ta.mjs";
 
 
 /**
@@ -24,8 +24,8 @@ import { T_CauseValueCriteria, _decode_T_CauseValueCriteria, _encode_T_CauseValu
  * ```asn1
  * T-BCSM-CAMEL-TDP-Criteria ::= SEQUENCE {
  *     t-BCSM-TriggerDetectionPoint    T-BcsmTriggerDetectionPoint,    
- *     basicServiceCriteria    [0] BasicServiceCriteria    OPTIONAL,
- *     t-CauseValueCriteria    [1] T-CauseValueCriteria    OPTIONAL,
+ *     basicServiceCriteria    [0] BasicServiceCriteria    type OPTIONAL,
+ *     t-CauseValueCriteria    [1] T-CauseValueCriteria    type OPTIONAL,
  *     ... }
  * ```
  * 
@@ -33,50 +33,60 @@ import { T_CauseValueCriteria, _decode_T_CauseValueCriteria, _encode_T_CauseValu
  */
 export
 class T_BCSM_CAMEL_TDP_Criteria {
+    /**
+     * @summary `t_BCSM_TriggerDetectionPoint`.
+     * @description
+     *
+     * Terminating BCSM TDP to which these criteria apply.
+     *
+     * (3GPP TS 29.002 V19.1.0 clause 17.7.1).
+     *
+     * @public
+     * @readonly
+     */
+    public readonly t_BCSM_TriggerDetectionPoint: T_BcsmTriggerDetectionPoint;
+    /**
+     * @summary `basicServiceCriteria`.
+     * @description
+     *
+     * Basic services that arm this TDP.
+     *
+     * (3GPP TS 29.002 V19.1.0 clause 17.7.1).
+     *
+     * @public
+     * @readonly
+     */
+    public readonly basicServiceCriteria?: OPTIONAL<BasicServiceCriteria>;
+    /**
+     * @summary `t_CauseValueCriteria`.
+     * @description
+     *
+     * Cause values that arm this TDP (ITU-T Q.850).
+     *
+     * (3GPP TS 29.002 V19.1.0 clause 17.7.1).
+     *
+     * @public
+     * @readonly
+     */
+    public readonly t_CauseValueCriteria?: OPTIONAL<T_CauseValueCriteria>;
+    /**
+     * @summary Extensions that are not recognized.
+     * @public
+     * @readonly
+     */
+    public readonly _unrecognizedExtensionsList: _Element[];
+
     constructor (
-        /**
-         * @summary `t_BCSM_TriggerDetectionPoint`.
-         * @description
-         *
-         * Terminating BCSM TDP to which these criteria apply.
-         *
-         * (3GPP TS 29.002 V19.1.0 clause 17.7.1).
-         *
-         * @public
-         * @readonly
-         */
-        readonly t_BCSM_TriggerDetectionPoint: T_BcsmTriggerDetectionPoint,
-        /**
-         * @summary `basicServiceCriteria`.
-         * @description
-         *
-         * Basic services that arm this TDP.
-         *
-         * (3GPP TS 29.002 V19.1.0 clause 17.7.1).
-         *
-         * @public
-         * @readonly
-         */
-        readonly basicServiceCriteria?: OPTIONAL<BasicServiceCriteria>,
-        /**
-         * @summary `t_CauseValueCriteria`.
-         * @description
-         *
-         * Cause values that arm this TDP (ITU-T Q.850).
-         *
-         * (3GPP TS 29.002 V19.1.0 clause 17.7.1).
-         *
-         * @public
-         * @readonly
-         */
-        readonly t_CauseValueCriteria?: OPTIONAL<T_CauseValueCriteria>,
-        /**
-         * @summary Extensions that are not recognized.
-         * @public
-         * @readonly
-         */
-        readonly _unrecognizedExtensionsList: _Element[] = []
-    ) {}
+        t_BCSM_TriggerDetectionPoint: T_BcsmTriggerDetectionPoint,
+        basicServiceCriteria?: OPTIONAL<BasicServiceCriteria>,
+        t_CauseValueCriteria?: OPTIONAL<T_CauseValueCriteria>,
+        _unrecognizedExtensionsList: _Element[] = []
+    ) {
+        this.t_BCSM_TriggerDetectionPoint = t_BCSM_TriggerDetectionPoint;
+        this.basicServiceCriteria = basicServiceCriteria;
+        this.t_CauseValueCriteria = t_CauseValueCriteria;
+        this._unrecognizedExtensionsList = _unrecognizedExtensionsList;
+    }
 
     /**
      * @summary Restructures an object into a T_BCSM_CAMEL_TDP_Criteria
@@ -100,7 +110,7 @@ class T_BCSM_CAMEL_TDP_Criteria {
          * @static
          */
 
-    public static _enum_for_t_BCSM_TriggerDetectionPoint = _enum_for_T_BcsmTriggerDetectionPoint;
+    public static _enum_for_t_BCSM_TriggerDetectionPoint: typeof _enum_for_T_BcsmTriggerDetectionPoint = _enum_for_T_BcsmTriggerDetectionPoint;
 }
 
 /**

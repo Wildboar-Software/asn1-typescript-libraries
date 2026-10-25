@@ -1,6 +1,6 @@
 /* eslint-disable */
 import {
-    ASN1Element as _Element,
+    type ASN1Element as _Element,
     ASN1TagClass as _TagClass,
     ASN1Construction as _Construction,
     ASN1UniversalType as _UniversalType,
@@ -11,7 +11,7 @@ import {
 } from "@wildboar/asn1";
 import { biometric_client_hello /* IMPORTED_SHORT_NAMED_INTEGER */, _decode_HandshakeType, _encode_HandshakeType } from "../TSM/HandshakeType.ta.mjs";
 
-import { BiometricClientHello, _decode_BiometricClientHello, _encode_BiometricClientHello } from "../TSM/BiometricClientHello.ta.mjs";
+import { type BiometricClientHello, _decode_BiometricClientHello, _encode_BiometricClientHello } from "../TSM/BiometricClientHello.ta.mjs";
 
 import { type HANDSHAKE } from "../TSM/HANDSHAKE.oca.mjs";
 

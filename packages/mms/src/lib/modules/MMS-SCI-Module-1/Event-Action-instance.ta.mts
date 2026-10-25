@@ -1,6 +1,6 @@
 /* eslint-disable */
 import {
-    ASN1Element as _Element,
+    type ASN1Element as _Element,
     ASN1TagClass as _TagClass,
     ASN1Construction as _Construction,
     ASN1UniversalType as _UniversalType,
@@ -10,8 +10,8 @@ import {
     ASN1ConstructionError as _ConstructionError,
 } from "@wildboar/asn1";
 import * as $ from "@wildboar/asn1/functional";
-import { ObjectName, _decode_ObjectName, _encode_ObjectName } from "../ISO-9506-MMS-1/ObjectName.ta.mjs";
-import { Event_Action_instance_definition, _decode_Event_Action_instance_definition, _encode_Event_Action_instance_definition } from "../MMS-SCI-Module-1/Event-Action-instance-definition.ta.mjs";
+import { type ObjectName, _decode_ObjectName, _encode_ObjectName } from "../ISO-9506-MMS-1/ObjectName.ta.mjs";
+import { type Event_Action_instance_definition, _decode_Event_Action_instance_definition, _encode_Event_Action_instance_definition } from "../MMS-SCI-Module-1/Event-Action-instance-definition.ta.mjs";
 
 
 /**
@@ -41,29 +41,35 @@ import { Event_Action_instance_definition, _decode_Event_Action_instance_definit
  */
 export
 class Event_Action_instance {
+    /**
+     * @summary `name`.
+     * @description
+     *
+     * Configured object name in the SCI file. ISO 9506-2:2003 Annex B.
+     *
+     * @public
+     * @readonly
+     */
+    public readonly name: ObjectName;
+    /**
+     * @summary `definition`.
+     * @description
+     *
+     * Standardized Name OID (`reference`) or inline `details`. ISO
+     * 9506-2:2003 Annex B.
+     *
+     * @public
+     * @readonly
+     */
+    public readonly definition: Event_Action_instance_definition;
+
     constructor (
-        /**
-         * @summary `name`.
-         * @description
-         *
-         * Configured object name in the SCI file. ISO 9506-2:2003 Annex B.
-         *
-         * @public
-         * @readonly
-         */
-        readonly name: ObjectName,
-        /**
-         * @summary `definition`.
-         * @description
-         *
-         * Standardized Name OID (`reference`) or inline `details`. ISO
-         * 9506-2:2003 Annex B.
-         *
-         * @public
-         * @readonly
-         */
-        readonly definition: Event_Action_instance_definition
-    ) {}
+        name: ObjectName,
+        definition: Event_Action_instance_definition
+    ) {
+        this.name = name;
+        this.definition = definition;
+    }
 
     /**
      * @summary Restructures an object into a Event_Action_instance

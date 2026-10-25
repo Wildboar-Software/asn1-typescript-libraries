@@ -2,11 +2,11 @@
 
 import * as $ from "@wildboar/asn1/functional";
 import {
-    OPTIONAL,
-    BOOLEAN,
-    SEQUENCE,
-    SET,
-    ASN1Element as _Element,
+    type OPTIONAL,
+    type BOOLEAN,
+    type SEQUENCE,
+    type SET,
+    type ASN1Element as _Element,
     ASN1TagClass as _TagClass
 } from "@wildboar/asn1";
 import { CSTACommonArguments, _decode_CSTACommonArguments, _encode_CSTACommonArguments } from "../CSTA-extension-types/CSTACommonArguments.ta.mjs";
@@ -34,27 +34,33 @@ import { CSTACommonArguments, _decode_CSTACommonArguments, _encode_CSTACommonArg
  */
 export
 class GetRouteingModeResult {
+    /**
+     * @summary `routeingMode`.
+     * @description
+     *
+     * TRUE if the device can make routeing requests to CF.
+     * @public
+     * @readonly
+     */
+    public readonly routeingMode: BOOLEAN;
+    /**
+     * @summary `extensions`.
+     * @description
+     *
+     * Optional security (timestamp, sequence, securityInfo) and
+     * privateData.
+     * @public
+     * @readonly
+     */
+    public readonly extensions?: OPTIONAL<CSTACommonArguments>;
+
     constructor (
-        /**
-         * @summary `routeingMode`.
-         * @description
-         *
-         * TRUE if the device can make routeing requests to CF.
-         * @public
-         * @readonly
-         */
-        readonly routeingMode: BOOLEAN,
-        /**
-         * @summary `extensions`.
-         * @description
-         *
-         * Optional security (timestamp, sequence, securityInfo) and
-         * privateData.
-         * @public
-         * @readonly
-         */
-        readonly extensions?: OPTIONAL<CSTACommonArguments>
-    ) {}
+        routeingMode: BOOLEAN,
+        extensions?: OPTIONAL<CSTACommonArguments>
+    ) {
+        this.routeingMode = routeingMode;
+        this.extensions = extensions;
+    }
 
     /**
      * @summary Restructures an object into a GetRouteingModeResult

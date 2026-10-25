@@ -1,8 +1,8 @@
 /* eslint-disable */
 import {
-    OPTIONAL,
-    INTEGER,
-    ASN1Element as _Element,
+    type OPTIONAL,
+    type INTEGER,
+    type ASN1Element as _Element,
     ASN1TagClass as _TagClass,
     ASN1Construction as _Construction,
     ASN1UniversalType as _UniversalType,
@@ -12,7 +12,7 @@ import {
     ASN1ConstructionError as _ConstructionError,
 } from "@wildboar/asn1";
 import * as $ from "@wildboar/asn1/functional";
-import { RepertoireFontValue, _decode_RepertoireFontValue, _encode_RepertoireFontValue } from "../CDS/RepertoireFontValue.ta.mjs";
+import { type RepertoireFontValue, _decode_RepertoireFontValue, _encode_RepertoireFontValue } from "../CDS/RepertoireFontValue.ta.mjs";
 
 
 /**
@@ -36,26 +36,32 @@ import { RepertoireFontValue, _decode_RepertoireFontValue, _encode_RepertoireFon
  */
 export
 class CompoundRepertoireValue {
+    /**
+     * @summary `repertoireCapability`.
+     * @description
+     * Selected `repertoire-capability` (1..N; default 1). ISO/IEC
+     * 9040:1997 §18.1.
+     * @public
+     * @readonly
+     */
+    public readonly repertoireCapability?: OPTIONAL<INTEGER>;
+    /**
+     * @summary `repertoireFontValues`.
+     * @description
+     * Selected per-slot repertoire and font assignments.
+     * ISO/IEC 9040:1997 §18.2.4, §18.3.
+     * @public
+     * @readonly
+     */
+    public readonly repertoireFontValues?: OPTIONAL<RepertoireFontValue[]>;
+
     constructor (
-        /**
-         * @summary `repertoireCapability`.
-         * @description
-         * Selected `repertoire-capability` (1..N; default 1). ISO/IEC
-         * 9040:1997 §18.1.
-         * @public
-         * @readonly
-         */
-        readonly repertoireCapability?: OPTIONAL<INTEGER>,
-        /**
-         * @summary `repertoireFontValues`.
-         * @description
-         * Selected per-slot repertoire and font assignments.
-         * ISO/IEC 9040:1997 §18.2.4, §18.3.
-         * @public
-         * @readonly
-         */
-        readonly repertoireFontValues?: OPTIONAL<RepertoireFontValue[]>
-    ) {}
+        repertoireCapability?: OPTIONAL<INTEGER>,
+        repertoireFontValues?: OPTIONAL<RepertoireFontValue[]>
+    ) {
+        this.repertoireCapability = repertoireCapability;
+        this.repertoireFontValues = repertoireFontValues;
+    }
 
     /**
      * @summary Restructures an object into a CompoundRepertoireValue

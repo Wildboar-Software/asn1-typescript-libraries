@@ -1,7 +1,7 @@
 /* eslint-disable */
 import {
-    BIT_STRING,
-    ASN1Element as _Element,
+    type BIT_STRING,
+    type ASN1Element as _Element,
     ASN1TagClass as _TagClass,
     ASN1Construction as _Construction,
     ASN1UniversalType as _UniversalType,
@@ -139,10 +139,10 @@ export const BuiltInEncodedInformationTypes_mixed_mode: number = 9; /* LONG_NAME
 export const mixed_mode: number = BuiltInEncodedInformationTypes_mixed_mode; /* SHORT_NAMED_BIT */
 
 
-export const _decode_BuiltInEncodedInformationTypes = $._decodeBitString;
+export const _decode_BuiltInEncodedInformationTypes: $.ASN1Decoder<BIT_STRING> = $._decodeBitString;
 
 
-export const _encode_BuiltInEncodedInformationTypes = $._encodeBitString;
+export const _encode_BuiltInEncodedInformationTypes: $.ASN1Encoder<BIT_STRING> = $._encodeBitString;
 
 
 /* eslint-enable */

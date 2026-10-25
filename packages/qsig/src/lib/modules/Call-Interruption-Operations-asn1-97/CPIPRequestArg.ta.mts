@@ -1,12 +1,12 @@
 /* eslint-disable */
 import {
-    OPTIONAL,
-    ASN1Element as _Element,
+    type OPTIONAL,
+    type ASN1Element as _Element,
     ASN1TagClass as _TagClass
 } from "@wildboar/asn1";
 import * as $ from "@wildboar/asn1/functional";
 import { CPIProtectionLevel, _decode_CPIProtectionLevel, _encode_CPIProtectionLevel, _enum_for_CPIProtectionLevel } from "../Call-Interruption-Operations-asn1-97/CPIProtectionLevel.ta.mjs";
-import { CPIPRequestArg_argumentExtension, _decode_CPIPRequestArg_argumentExtension, _encode_CPIPRequestArg_argumentExtension } from "../Call-Interruption-Operations-asn1-97/CPIPRequestArg-argumentExtension.ta.mjs";
+import { type CPIPRequestArg_argumentExtension, _decode_CPIPRequestArg_argumentExtension, _encode_CPIPRequestArg_argumentExtension } from "../Call-Interruption-Operations-asn1-97/CPIPRequestArg-argumentExtension.ta.mjs";
 
 /**
  * @summary CPIPRequestArg
@@ -86,7 +86,7 @@ class CPIPRequestArg {
          * @static
          */
 
-    public static _enum_for_cpiProtectionLevel = _enum_for_CPIProtectionLevel;
+    public static _enum_for_cpiProtectionLevel: typeof _enum_for_CPIProtectionLevel = _enum_for_CPIProtectionLevel;
 }
 
 /**

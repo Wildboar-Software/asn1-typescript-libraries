@@ -1,13 +1,13 @@
 /* eslint-disable */
 import {
-    ASN1Element as _Element,
+    type ASN1Element as _Element,
     ASN1TagClass as _TagClass,
-    OPTIONAL,
-    UTF8String,
+    type OPTIONAL,
+    type UTF8String,
     ASN1SizeError
 } from "@wildboar/asn1";
 import * as $ from "@wildboar/asn1/functional";
-import { _decode_AAAResult, _encode_AAAResult, _enum_for_AAAResult, AAAResult } from "../EmailPDU/AAAResult.ta.mjs";
+import { _decode_AAAResult, _encode_AAAResult, _enum_for_AAAResult, type AAAResult } from "../EmailPDU/AAAResult.ta.mjs";
 // export { AAAResult, _enum_for_AAAResult, AAAResult_resultUnknown /* IMPORTED_LONG_ENUMERATION_ITEM */, resultUnknown /* IMPORTED_SHORT_ENUMERATION_ITEM */, AAAResult_aAAFailed /* IMPORTED_LONG_ENUMERATION_ITEM */, aAAFailed /* IMPORTED_SHORT_ENUMERATION_ITEM */, AAAResult_aAASucceeded /* IMPORTED_LONG_ENUMERATION_ITEM */, aAASucceeded /* IMPORTED_SHORT_ENUMERATION_ITEM */, _decode_AAAResult, _encode_AAAResult } from "../EmailPDU/AAAResult.ta.mjs";
 
 
@@ -127,7 +127,7 @@ class POP3AAAInformation {
          * @static
          */
 
-    public static _enum_for_aAAResult = _enum_for_AAAResult;
+    public static _enum_for_aAAResult: typeof _enum_for_AAAResult = _enum_for_AAAResult;
 }
 
 /**

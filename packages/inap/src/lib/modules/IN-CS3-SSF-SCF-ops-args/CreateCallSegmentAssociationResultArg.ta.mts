@@ -1,13 +1,13 @@
 /* eslint-disable */
 import {
-    OPTIONAL,
-    ASN1Element as _Element,
+    type OPTIONAL,
+    type ASN1Element as _Element,
     ASN1TagClass as _TagClass
 } from "@wildboar/asn1";
 import * as $ from "@wildboar/asn1/functional";
-import { CSAID, _decode_CSAID, _encode_CSAID } from "../IN-CS3-SSF-SCF-datatypes/CSAID.ta.mjs";
+import { type CSAID, _decode_CSAID, _encode_CSAID } from "../IN-CS3-SSF-SCF-datatypes/CSAID.ta.mjs";
 // export { CSAID, _decode_CSAID, _encode_CSAID } from "../IN-CS3-SSF-SCF-datatypes/CSAID.ta.mjs";
-import { Extensions, _decode_Extensions, _encode_Extensions } from "../IN-CS3-common-datatypes/Extensions.ta.mjs";
+import { type Extensions, _decode_Extensions, _encode_Extensions } from "../IN-CS3-common-datatypes/Extensions.ta.mjs";
 // export { Extensions, _decode_Extensions, _encode_Extensions } from "../IN-CS3-common-datatypes/Extensions.ta.mjs";
 
 

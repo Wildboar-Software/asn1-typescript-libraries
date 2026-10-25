@@ -1,16 +1,16 @@
 /* eslint-disable */
 import {
-    OPTIONAL,
-    ASN1Element as _Element,
+    type OPTIONAL,
+    type ASN1Element as _Element,
     ASN1TagClass as _TagClass
 } from "@wildboar/asn1";
 import * as $ from "@wildboar/asn1/functional";
 import { ExtensionContainer, _decode_ExtensionContainer, _encode_ExtensionContainer } from "../MAP-ExtensionDataTypes/ExtensionContainer.ta.mjs";
-import { CGI_List, _decode_CGI_List, _encode_CGI_List } from "../MAP-OM-DataTypes/CGI-List.ta.mjs";
-import { E_UTRAN_CGI_List, _decode_E_UTRAN_CGI_List, _encode_E_UTRAN_CGI_List } from "../MAP-OM-DataTypes/E-UTRAN-CGI-List.ta.mjs";
-import { LocationAreaId_List, _decode_LocationAreaId_List, _encode_LocationAreaId_List } from "../MAP-OM-DataTypes/LocationAreaId-List.ta.mjs";
-import { RoutingAreaId_List, _decode_RoutingAreaId_List, _encode_RoutingAreaId_List } from "../MAP-OM-DataTypes/RoutingAreaId-List.ta.mjs";
-import { TrackingAreaId_List, _decode_TrackingAreaId_List, _encode_TrackingAreaId_List } from "../MAP-OM-DataTypes/TrackingAreaId-List.ta.mjs";
+import { type CGI_List, _decode_CGI_List, _encode_CGI_List } from "../MAP-OM-DataTypes/CGI-List.ta.mjs";
+import { type E_UTRAN_CGI_List, _decode_E_UTRAN_CGI_List, _encode_E_UTRAN_CGI_List } from "../MAP-OM-DataTypes/E-UTRAN-CGI-List.ta.mjs";
+import { type LocationAreaId_List, _decode_LocationAreaId_List, _encode_LocationAreaId_List } from "../MAP-OM-DataTypes/LocationAreaId-List.ta.mjs";
+import { type RoutingAreaId_List, _decode_RoutingAreaId_List, _encode_RoutingAreaId_List } from "../MAP-OM-DataTypes/RoutingAreaId-List.ta.mjs";
+import { type TrackingAreaId_List, _decode_TrackingAreaId_List, _encode_TrackingAreaId_List } from "../MAP-OM-DataTypes/TrackingAreaId-List.ta.mjs";
 
 
 /**
@@ -24,12 +24,12 @@ import { TrackingAreaId_List, _decode_TrackingAreaId_List, _encode_TrackingAreaI
  * 
  * ```asn1
  * AreaScope ::= SEQUENCE {
- *     cgi-List    [0] CGI-List    OPTIONAL,
- *     e-utran-cgi-List    [1] E-UTRAN-CGI-List    OPTIONAL,
- *     routingAreaId-List    [2] RoutingAreaId-List    OPTIONAL,
- *     locationAreaId-List    [3] LocationAreaId-List    OPTIONAL,
- *     trackingAreaId-List    [4] TrackingAreaId-List    OPTIONAL,
- *     extensionContainer    [5] ExtensionContainer    OPTIONAL,
+ *     cgi-List    [0] CGI-List    type OPTIONAL,
+ *     e-utran-cgi-List    [1] E-UTRAN-CGI-List    type OPTIONAL,
+ *     routingAreaId-List    [2] RoutingAreaId-List    type OPTIONAL,
+ *     locationAreaId-List    [3] LocationAreaId-List    type OPTIONAL,
+ *     trackingAreaId-List    [4] TrackingAreaId-List    type OPTIONAL,
+ *     extensionContainer    [5] ExtensionContainer    type OPTIONAL,
  *     ... }
  * ```
  * 
@@ -37,74 +37,90 @@ import { TrackingAreaId_List, _decode_TrackingAreaId_List, _encode_TrackingAreaI
  */
 export
 class AreaScope {
+    /**
+     * @summary `cgi_List`.
+     * @description
+     *
+     * Up to 32 GERAN cell IDs.
+     *
+     * @public
+     * @readonly
+     */
+    public readonly cgi_List?: OPTIONAL<CGI_List>;
+    /**
+     * @summary `e_utran_cgi_List`.
+     * @description
+     *
+     * Up to 32 E-UTRAN CGIs.
+     *
+     * @public
+     * @readonly
+     */
+    public readonly e_utran_cgi_List?: OPTIONAL<E_UTRAN_CGI_List>;
+    /**
+     * @summary `routingAreaId_List`.
+     * @description
+     *
+     * Up to 8 RAIs.
+     *
+     * @public
+     * @readonly
+     */
+    public readonly routingAreaId_List?: OPTIONAL<RoutingAreaId_List>;
+    /**
+     * @summary `locationAreaId_List`.
+     * @description
+     *
+     * Up to 8 LAIs.
+     *
+     * @public
+     * @readonly
+     */
+    public readonly locationAreaId_List?: OPTIONAL<LocationAreaId_List>;
+    /**
+     * @summary `trackingAreaId_List`.
+     * @description
+     *
+     * Up to 8 TAIs.
+     *
+     * @public
+     * @readonly
+     */
+    public readonly trackingAreaId_List?: OPTIONAL<TrackingAreaId_List>;
+    /**
+     * @summary `extensionContainer`.
+     * @description
+     *
+     * Private or PCS extensions (3GPP TS 29.002 V19.1.0 clause 17.7.11).
+     *
+     * @public
+     * @readonly
+     */
+    public readonly extensionContainer?: OPTIONAL<ExtensionContainer>;
+    /**
+     * @summary Extensions that are not recognized.
+     * @public
+     * @readonly
+     */
+    public readonly _unrecognizedExtensionsList: _Element[];
+
     constructor (
-        /**
-         * @summary `cgi_List`.
-         * @description
-         *
-         * Up to 32 GERAN cell IDs.
-         *
-         * @public
-         * @readonly
-         */
-        readonly cgi_List?: OPTIONAL<CGI_List>,
-        /**
-         * @summary `e_utran_cgi_List`.
-         * @description
-         *
-         * Up to 32 E-UTRAN CGIs.
-         *
-         * @public
-         * @readonly
-         */
-        readonly e_utran_cgi_List?: OPTIONAL<E_UTRAN_CGI_List>,
-        /**
-         * @summary `routingAreaId_List`.
-         * @description
-         *
-         * Up to 8 RAIs.
-         *
-         * @public
-         * @readonly
-         */
-        readonly routingAreaId_List?: OPTIONAL<RoutingAreaId_List>,
-        /**
-         * @summary `locationAreaId_List`.
-         * @description
-         *
-         * Up to 8 LAIs.
-         *
-         * @public
-         * @readonly
-         */
-        readonly locationAreaId_List?: OPTIONAL<LocationAreaId_List>,
-        /**
-         * @summary `trackingAreaId_List`.
-         * @description
-         *
-         * Up to 8 TAIs.
-         *
-         * @public
-         * @readonly
-         */
-        readonly trackingAreaId_List?: OPTIONAL<TrackingAreaId_List>,
-        /**
-         * @summary `extensionContainer`.
-         * @description
-         *
-         * Private or PCS extensions (3GPP TS 29.002 V19.1.0 clause 17.7.11).
-         *
-         * @public
-         * @readonly
-         */
-        readonly extensionContainer?: OPTIONAL<ExtensionContainer>,
-        /**
-         * @summary Extensions that are not recognized.
-         * @public
-         * @readonly
-         */
-        readonly _unrecognizedExtensionsList: _Element[] = []
-    ) {}
+        cgi_List?: OPTIONAL<CGI_List>,
+        e_utran_cgi_List?: OPTIONAL<E_UTRAN_CGI_List>,
+        routingAreaId_List?: OPTIONAL<RoutingAreaId_List>,
+        locationAreaId_List?: OPTIONAL<LocationAreaId_List>,
+        trackingAreaId_List?: OPTIONAL<TrackingAreaId_List>,
+        extensionContainer?: OPTIONAL<ExtensionContainer>,
+        _unrecognizedExtensionsList: _Element[] = []
+    ) {
+        this.cgi_List = cgi_List;
+        this.e_utran_cgi_List = e_utran_cgi_List;
+        this.routingAreaId_List = routingAreaId_List;
+        this.locationAreaId_List = locationAreaId_List;
+        this.trackingAreaId_List = trackingAreaId_List;
+        this.extensionContainer = extensionContainer;
+        this._unrecognizedExtensionsList = _unrecognizedExtensionsList;
+    }
 
     /**
      * @summary Restructures an object into a AreaScope

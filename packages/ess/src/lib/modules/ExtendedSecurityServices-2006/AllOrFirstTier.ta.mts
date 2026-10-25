@@ -1,5 +1,5 @@
 /* eslint-disable */
-import { ASN1Element as _Element, INTEGER } from "@wildboar/asn1";
+import { ASN1Element as _Element, type INTEGER } from "@wildboar/asn1";
 import * as $ from "@wildboar/asn1/functional";
 
 
@@ -32,7 +32,7 @@ export type AllOrFirstTier = INTEGER;
  * @constant
  * @type {number}
  */
-export const AllOrFirstTier_allReceipts: AllOrFirstTier = 0; /* LONG_NAMED_INTEGER_VALUE */
+export const AllOrFirstTier_allReceipts: 0 = 0 satisfies AllOrFirstTier; /* LONG_NAMED_INTEGER_VALUE */
 
 
 /**
@@ -40,7 +40,7 @@ export const AllOrFirstTier_allReceipts: AllOrFirstTier = 0; /* LONG_NAMED_INTEG
  * @constant
  * @type {number}
  */
-export const allReceipts: AllOrFirstTier = AllOrFirstTier_allReceipts; /* SHORT_NAMED_INTEGER_VALUE */
+export const allReceipts: 0 = AllOrFirstTier_allReceipts; /* SHORT_NAMED_INTEGER_VALUE */
 
 
 /**
@@ -48,7 +48,7 @@ export const allReceipts: AllOrFirstTier = AllOrFirstTier_allReceipts; /* SHORT_
  * @constant
  * @type {number}
  */
-export const AllOrFirstTier_firstTierRecipients: AllOrFirstTier = 1; /* LONG_NAMED_INTEGER_VALUE */
+export const AllOrFirstTier_firstTierRecipients: 1 = 1 satisfies AllOrFirstTier; /* LONG_NAMED_INTEGER_VALUE */
 
 
 /**
@@ -56,17 +56,17 @@ export const AllOrFirstTier_firstTierRecipients: AllOrFirstTier = 1; /* LONG_NAM
  * @constant
  * @type {number}
  */
-export const firstTierRecipients: AllOrFirstTier = AllOrFirstTier_firstTierRecipients; /* SHORT_NAMED_INTEGER_VALUE */
+export const firstTierRecipients: 1 = AllOrFirstTier_firstTierRecipients; /* SHORT_NAMED_INTEGER_VALUE */
 
 
 
 
-export const _decode_AllOrFirstTier = $._decodeInteger;
+export const _decode_AllOrFirstTier: $.ASN1Decoder<INTEGER> = $._decodeInteger;
 
 
 
 
-export const _encode_AllOrFirstTier = $._encodeInteger;
+export const _encode_AllOrFirstTier: $.ASN1Encoder<INTEGER> = $._encodeInteger;
 
 
 /* eslint-enable */

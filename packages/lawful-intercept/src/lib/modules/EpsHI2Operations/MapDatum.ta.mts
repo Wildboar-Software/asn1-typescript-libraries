@@ -1,6 +1,6 @@
 /* eslint-disable */
 import {
-    ENUMERATED
+    type ENUMERATED
 } from "@wildboar/asn1";
 import * as $ from "@wildboar/asn1/functional";
 
@@ -52,7 +52,7 @@ type MapDatum = _enum_for_MapDatum | ENUMERATED;
  * @type {number}
  */
 export
-const MapDatum_wGS84: MapDatum = 0; /* LONG_NAMED_ENUMERATED_VALUE */
+const MapDatum_wGS84: _enum_for_MapDatum.wGS84 = _enum_for_MapDatum.wGS84; /* LONG_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary wGS84
@@ -63,7 +63,7 @@ const MapDatum_wGS84: MapDatum = 0; /* LONG_NAMED_ENUMERATED_VALUE */
  * @type {number}
  */
 export
-const wGS84: MapDatum = MapDatum_wGS84; /* SHORT_NAMED_ENUMERATED_VALUE */
+const wGS84: _enum_for_MapDatum.wGS84 = MapDatum_wGS84; /* SHORT_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary MapDatum_wGS72
@@ -75,7 +75,7 @@ const wGS84: MapDatum = MapDatum_wGS84; /* SHORT_NAMED_ENUMERATED_VALUE */
  * @type {number}
  */
 export
-const MapDatum_wGS72: MapDatum = 1; /* LONG_NAMED_ENUMERATED_VALUE */
+const MapDatum_wGS72: _enum_for_MapDatum.wGS72 = _enum_for_MapDatum.wGS72; /* LONG_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary wGS72
@@ -86,7 +86,7 @@ const MapDatum_wGS72: MapDatum = 1; /* LONG_NAMED_ENUMERATED_VALUE */
  * @type {number}
  */
 export
-const wGS72: MapDatum = MapDatum_wGS72; /* SHORT_NAMED_ENUMERATED_VALUE */
+const wGS72: _enum_for_MapDatum.wGS72 = MapDatum_wGS72; /* SHORT_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary MapDatum_eD50
@@ -98,7 +98,7 @@ const wGS72: MapDatum = MapDatum_wGS72; /* SHORT_NAMED_ENUMERATED_VALUE */
  * @type {number}
  */
 export
-const MapDatum_eD50: MapDatum = 2; /* LONG_NAMED_ENUMERATED_VALUE */
+const MapDatum_eD50: _enum_for_MapDatum.eD50 = _enum_for_MapDatum.eD50; /* LONG_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary eD50
@@ -109,7 +109,7 @@ const MapDatum_eD50: MapDatum = 2; /* LONG_NAMED_ENUMERATED_VALUE */
  * @type {number}
  */
 export
-const eD50: MapDatum = MapDatum_eD50; /* SHORT_NAMED_ENUMERATED_VALUE */
+const eD50: _enum_for_MapDatum.eD50 = MapDatum_eD50; /* SHORT_NAMED_ENUMERATED_VALUE */
 export const _decode_MapDatum: $.ASN1Decoder<MapDatum> = $._decodeEnumerated;
 export const _encode_MapDatum: $.ASN1Encoder<MapDatum> = $._encodeEnumerated;
 

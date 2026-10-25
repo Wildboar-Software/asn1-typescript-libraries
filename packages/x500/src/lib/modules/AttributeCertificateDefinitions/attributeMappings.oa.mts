@@ -1,6 +1,6 @@
 /* eslint-disable */
 import {
-    AttributeMappings,
+    type AttributeMappings,
     _decode_AttributeMappings,
     _encode_AttributeMappings,
 } from "../AttributeCertificateDefinitions/AttributeMappings.ta.mjs";

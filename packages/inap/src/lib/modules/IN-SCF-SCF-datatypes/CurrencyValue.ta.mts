@@ -1,12 +1,12 @@
 /* eslint-disable */
 import {
-    INTEGER,
+    type INTEGER,
     ASN1ConstructionError as _ConstructionError,
-    ASN1Element as _Element,
+    type ASN1Element as _Element,
     ASN1TagClass as _TagClass
 } from "@wildboar/asn1";
 import * as $ from "@wildboar/asn1/functional";
-import { CurrencyID, _decode_CurrencyID, _encode_CurrencyID } from "../IN-SCF-SCF-datatypes/CurrencyID.ta.mjs";
+import { type CurrencyID, _decode_CurrencyID, _encode_CurrencyID } from "../IN-SCF-SCF-datatypes/CurrencyID.ta.mjs";
 // export { CurrencyID, _decode_CurrencyID, _encode_CurrencyID } from "../IN-SCF-SCF-datatypes/CurrencyID.ta.mjs";
 
 

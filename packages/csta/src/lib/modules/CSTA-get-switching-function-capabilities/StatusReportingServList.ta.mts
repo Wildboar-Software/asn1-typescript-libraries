@@ -2,10 +2,10 @@
 
 import * as $ from "@wildboar/asn1/functional";
 import {
-    OPTIONAL,
-    SEQUENCE,
-    SET,
-    ASN1Element as _Element,
+    type OPTIONAL,
+    type SEQUENCE,
+    type SET,
+    type ASN1Element as _Element,
     ASN1TagClass as _TagClass
 } from "@wildboar/asn1";
 import { MonitoringServList, _decode_MonitoringServList, _encode_MonitoringServList } from "../CSTA-capability-exchange/MonitoringServList.ta.mjs";
@@ -29,8 +29,8 @@ import { SystemStatusServList, _decode_SystemStatusServList, _encode_SystemStatu
  * 
  * ```asn1
  * StatusReportingServList ::= SEQUENCE
- * {     monitoringServices             [ 0] IMPLICIT     MonitoringServList         OPTIONAL,
- *     snapshotServices             [ 1] IMPLICIT     SnapshotServList         OPTIONAL,
+ * {     monitoringServices             [ 0] IMPLICIT     MonitoringServList         type OPTIONAL,
+ *     snapshotServices             [ 1] IMPLICIT     SnapshotServList         type OPTIONAL,
  *     systemServices                 [ 2] IMPLICIT     SystemStatusServList         OPTIONAL }
  * ```
  * 
@@ -38,35 +38,43 @@ import { SystemStatusServList, _decode_SystemStatusServList, _encode_SystemStatu
  */
 export
 class StatusReportingServList {
+    /**
+     * @summary `monitoringServices`.
+     * @description
+     *
+     * Monitoring services.
+     * @public
+     * @readonly
+     */
+    public readonly monitoringServices?: OPTIONAL<MonitoringServList>;
+    /**
+     * @summary `snapshotServices`.
+     * @description
+     *
+     * Snapshot services.
+     * @public
+     * @readonly
+     */
+    public readonly snapshotServices?: OPTIONAL<SnapshotServList>;
+    /**
+     * @summary `systemServices`.
+     * @description
+     *
+     * System status services.
+     * @public
+     * @readonly
+     */
+    public readonly systemServices?: OPTIONAL<SystemStatusServList>;
+
     constructor (
-        /**
-         * @summary `monitoringServices`.
-         * @description
-         *
-         * Monitoring services.
-         * @public
-         * @readonly
-         */
-        readonly monitoringServices?: OPTIONAL<MonitoringServList>,
-        /**
-         * @summary `snapshotServices`.
-         * @description
-         *
-         * Snapshot services.
-         * @public
-         * @readonly
-         */
-        readonly snapshotServices?: OPTIONAL<SnapshotServList>,
-        /**
-         * @summary `systemServices`.
-         * @description
-         *
-         * System status services.
-         * @public
-         * @readonly
-         */
-        readonly systemServices?: OPTIONAL<SystemStatusServList>
-    ) {}
+        monitoringServices?: OPTIONAL<MonitoringServList>,
+        snapshotServices?: OPTIONAL<SnapshotServList>,
+        systemServices?: OPTIONAL<SystemStatusServList>
+    ) {
+        this.monitoringServices = monitoringServices;
+        this.snapshotServices = snapshotServices;
+        this.systemServices = systemServices;
+    }
 
     /**
      * @summary Restructures an object into a StatusReportingServList

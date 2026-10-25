@@ -1,10 +1,10 @@
 /* eslint-disable */
 import {
     ASN1ConstructionError as _ConstructionError,
-    ASN1Element as _Element,
+    type ASN1Element as _Element,
     ASN1TagClass as _TagClass,
-    INTEGER,
-    OBJECT_IDENTIFIER,
+    type INTEGER,
+    type OBJECT_IDENTIFIER,
 } from "@wildboar/asn1";
 import * as $ from "@wildboar/asn1/functional";
 
@@ -25,26 +25,34 @@ import * as $ from "@wildboar/asn1/functional";
  *
  */
 export class SecurityEnvironmentInfo {
+    /**
+     * @summary `se`.
+     * @public
+     * @readonly
+     */
+    public readonly se: INTEGER;
+    /**
+     * @summary `owner`.
+     * @public
+     * @readonly
+     */
+    public readonly owner: OBJECT_IDENTIFIER;
+    /**
+     * @summary Extensions that are not recognized.
+     * @public
+     * @readonly
+     */
+    public readonly _unrecognizedExtensionsList: _Element[];
+
     constructor(
-        /**
-         * @summary `se`.
-         * @public
-         * @readonly
-         */
-        readonly se: INTEGER,
-        /**
-         * @summary `owner`.
-         * @public
-         * @readonly
-         */
-        readonly owner: OBJECT_IDENTIFIER,
-        /**
-         * @summary Extensions that are not recognized.
-         * @public
-         * @readonly
-         */
-        readonly _unrecognizedExtensionsList: _Element[] = []
-    ) {}
+        se: INTEGER,
+        owner: OBJECT_IDENTIFIER,
+        _unrecognizedExtensionsList: _Element[] = []
+    ) {
+        this.se = se;
+        this.owner = owner;
+        this._unrecognizedExtensionsList = _unrecognizedExtensionsList;
+    }
 
     /**
      * @summary Restructures an object into a SecurityEnvironmentInfo

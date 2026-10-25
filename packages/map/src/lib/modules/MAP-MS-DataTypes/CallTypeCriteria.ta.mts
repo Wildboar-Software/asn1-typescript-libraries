@@ -67,7 +67,7 @@ type CallTypeCriteria = _enum_for_CallTypeCriteria;
  * @enum {number}
  */
 export
-const CallTypeCriteria = _enum_for_CallTypeCriteria;
+const CallTypeCriteria: typeof _enum_for_CallTypeCriteria = _enum_for_CallTypeCriteria;
 
 /**
  * @summary CallTypeCriteria_forwarded
@@ -75,7 +75,7 @@ const CallTypeCriteria = _enum_for_CallTypeCriteria;
  * @type {number}
  */
 export
-const CallTypeCriteria_forwarded: CallTypeCriteria = CallTypeCriteria.forwarded; /* LONG_NAMED_ENUMERATED_VALUE */
+const CallTypeCriteria_forwarded: _enum_for_CallTypeCriteria.forwarded = CallTypeCriteria.forwarded; /* LONG_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary forwarded
@@ -83,7 +83,7 @@ const CallTypeCriteria_forwarded: CallTypeCriteria = CallTypeCriteria.forwarded;
  * @type {number}
  */
 export
-const forwarded: CallTypeCriteria = CallTypeCriteria.forwarded; /* SHORT_NAMED_ENUMERATED_VALUE */
+const forwarded: _enum_for_CallTypeCriteria.forwarded = CallTypeCriteria.forwarded; /* SHORT_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary CallTypeCriteria_notForwarded
@@ -91,7 +91,7 @@ const forwarded: CallTypeCriteria = CallTypeCriteria.forwarded; /* SHORT_NAMED_E
  * @type {number}
  */
 export
-const CallTypeCriteria_notForwarded: CallTypeCriteria = CallTypeCriteria.notForwarded; /* LONG_NAMED_ENUMERATED_VALUE */
+const CallTypeCriteria_notForwarded: _enum_for_CallTypeCriteria.notForwarded = CallTypeCriteria.notForwarded; /* LONG_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary notForwarded
@@ -99,7 +99,7 @@ const CallTypeCriteria_notForwarded: CallTypeCriteria = CallTypeCriteria.notForw
  * @type {number}
  */
 export
-const notForwarded: CallTypeCriteria = CallTypeCriteria.notForwarded; /* SHORT_NAMED_ENUMERATED_VALUE */
+const notForwarded: _enum_for_CallTypeCriteria.notForwarded = CallTypeCriteria.notForwarded; /* SHORT_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary Decodes an ASN.1 element into a(n) CallTypeCriteria
@@ -107,7 +107,7 @@ const notForwarded: CallTypeCriteria = CallTypeCriteria.notForwarded; /* SHORT_N
  * @param el The element being decoded.
  * @returns The decoded data structure.
  */
-export const _decode_CallTypeCriteria = $._decodeEnumerated;
+export const _decode_CallTypeCriteria: $.ASN1Decoder<number> = $._decodeEnumerated;
 
 /**
  * @summary Encodes a(n) CallTypeCriteria into an ASN.1 Element.
@@ -116,7 +116,7 @@ export const _decode_CallTypeCriteria = $._decodeEnumerated;
  * @param elGetter A function that can be used to get new ASN.1 elements.
  * @returns {_Element} The CallTypeCriteria, encoded as an ASN.1 Element.
  */
-export const _encode_CallTypeCriteria = $._encodeEnumerated;
+export const _encode_CallTypeCriteria: $.ASN1Encoder<number> = $._encodeEnumerated;
 
 
 /* eslint-enable */

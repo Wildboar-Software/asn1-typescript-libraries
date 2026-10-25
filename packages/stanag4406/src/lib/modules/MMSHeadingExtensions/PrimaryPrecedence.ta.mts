@@ -1,7 +1,7 @@
 /* eslint-disable */
 import {
-    ASN1Element as _Element,
-    INTEGER
+    type ASN1Element as _Element,
+    type INTEGER
 } from "@wildboar/asn1";
 import * as $ from "@wildboar/asn1/functional";
 
@@ -53,7 +53,7 @@ type PrimaryPrecedence = INTEGER;
  * @type {number}
  */
 export
-const PrimaryPrecedence_deferred: PrimaryPrecedence = 0; /* LONG_NAMED_INTEGER_VALUE */
+const PrimaryPrecedence_deferred: 0 = 0 satisfies PrimaryPrecedence; /* LONG_NAMED_INTEGER_VALUE */
 
 /**
  * @summary PrimaryPrecedence_deferred
@@ -65,7 +65,7 @@ const PrimaryPrecedence_deferred: PrimaryPrecedence = 0; /* LONG_NAMED_INTEGER_V
  * @type {number}
  */
 export
-const deferred: PrimaryPrecedence = PrimaryPrecedence_deferred; /* SHORT_NAMED_INTEGER_VALUE */
+const deferred: 0 = PrimaryPrecedence_deferred; /* SHORT_NAMED_INTEGER_VALUE */
 
 /**
  * @summary PrimaryPrecedence_routine
@@ -77,7 +77,7 @@ const deferred: PrimaryPrecedence = PrimaryPrecedence_deferred; /* SHORT_NAMED_I
  * @type {number}
  */
 export
-const PrimaryPrecedence_routine: PrimaryPrecedence = 1; /* LONG_NAMED_INTEGER_VALUE */
+const PrimaryPrecedence_routine: 1 = 1 satisfies PrimaryPrecedence; /* LONG_NAMED_INTEGER_VALUE */
 
 /**
  * @summary PrimaryPrecedence_routine
@@ -89,7 +89,7 @@ const PrimaryPrecedence_routine: PrimaryPrecedence = 1; /* LONG_NAMED_INTEGER_VA
  * @type {number}
  */
 export
-const routine: PrimaryPrecedence = PrimaryPrecedence_routine; /* SHORT_NAMED_INTEGER_VALUE */
+const routine: 1 = PrimaryPrecedence_routine; /* SHORT_NAMED_INTEGER_VALUE */
 
 /**
  * @summary PrimaryPrecedence_priority
@@ -102,7 +102,7 @@ const routine: PrimaryPrecedence = PrimaryPrecedence_routine; /* SHORT_NAMED_INT
  * @type {number}
  */
 export
-const PrimaryPrecedence_priority: PrimaryPrecedence = 2; /* LONG_NAMED_INTEGER_VALUE */
+const PrimaryPrecedence_priority: 2 = 2 satisfies PrimaryPrecedence; /* LONG_NAMED_INTEGER_VALUE */
 
 /**
  * @summary PrimaryPrecedence_priority
@@ -115,7 +115,7 @@ const PrimaryPrecedence_priority: PrimaryPrecedence = 2; /* LONG_NAMED_INTEGER_V
  * @type {number}
  */
 export
-const priority: PrimaryPrecedence = PrimaryPrecedence_priority; /* SHORT_NAMED_INTEGER_VALUE */
+const priority: 2 = PrimaryPrecedence_priority; /* SHORT_NAMED_INTEGER_VALUE */
 
 /**
  * @summary PrimaryPrecedence_immediate
@@ -127,7 +127,7 @@ const priority: PrimaryPrecedence = PrimaryPrecedence_priority; /* SHORT_NAMED_I
  * @type {number}
  */
 export
-const PrimaryPrecedence_immediate: PrimaryPrecedence = 3; /* LONG_NAMED_INTEGER_VALUE */
+const PrimaryPrecedence_immediate: 3 = 3 satisfies PrimaryPrecedence; /* LONG_NAMED_INTEGER_VALUE */
 
 /**
  * @summary PrimaryPrecedence_immediate
@@ -139,7 +139,7 @@ const PrimaryPrecedence_immediate: PrimaryPrecedence = 3; /* LONG_NAMED_INTEGER_
  * @type {number}
  */
 export
-const immediate: PrimaryPrecedence = PrimaryPrecedence_immediate; /* SHORT_NAMED_INTEGER_VALUE */
+const immediate: 3 = PrimaryPrecedence_immediate; /* SHORT_NAMED_INTEGER_VALUE */
 
 /**
  * @summary PrimaryPrecedence_flash
@@ -151,7 +151,7 @@ const immediate: PrimaryPrecedence = PrimaryPrecedence_immediate; /* SHORT_NAMED
  * @type {number}
  */
 export
-const PrimaryPrecedence_flash: PrimaryPrecedence = 4; /* LONG_NAMED_INTEGER_VALUE */
+const PrimaryPrecedence_flash: 4 = 4 satisfies PrimaryPrecedence; /* LONG_NAMED_INTEGER_VALUE */
 
 /**
  * @summary PrimaryPrecedence_flash
@@ -163,7 +163,7 @@ const PrimaryPrecedence_flash: PrimaryPrecedence = 4; /* LONG_NAMED_INTEGER_VALU
  * @type {number}
  */
 export
-const flash: PrimaryPrecedence = PrimaryPrecedence_flash; /* SHORT_NAMED_INTEGER_VALUE */
+const flash: 4 = PrimaryPrecedence_flash; /* SHORT_NAMED_INTEGER_VALUE */
 
 /**
  * @summary PrimaryPrecedence_override
@@ -175,7 +175,7 @@ const flash: PrimaryPrecedence = PrimaryPrecedence_flash; /* SHORT_NAMED_INTEGER
  * @type {number}
  */
 export
-const PrimaryPrecedence_override: PrimaryPrecedence = 5; /* LONG_NAMED_INTEGER_VALUE */
+const PrimaryPrecedence_override: 5 = 5 satisfies PrimaryPrecedence; /* LONG_NAMED_INTEGER_VALUE */
 
 /**
  * @summary PrimaryPrecedence_override
@@ -187,7 +187,7 @@ const PrimaryPrecedence_override: PrimaryPrecedence = 5; /* LONG_NAMED_INTEGER_V
  * @type {number}
  */
 export
-const override: PrimaryPrecedence = PrimaryPrecedence_override; /* SHORT_NAMED_INTEGER_VALUE */
+const override: 5 = PrimaryPrecedence_override; /* SHORT_NAMED_INTEGER_VALUE */
 
 /**
  * @summary PrimaryPrecedence_ecp
@@ -199,7 +199,7 @@ const override: PrimaryPrecedence = PrimaryPrecedence_override; /* SHORT_NAMED_I
  * @type {number}
  */
 export
-const PrimaryPrecedence_ecp: PrimaryPrecedence = 16; /* LONG_NAMED_INTEGER_VALUE */
+const PrimaryPrecedence_ecp: 16 = 16 satisfies PrimaryPrecedence; /* LONG_NAMED_INTEGER_VALUE */
 
 /**
  * @summary PrimaryPrecedence_ecp
@@ -211,7 +211,7 @@ const PrimaryPrecedence_ecp: PrimaryPrecedence = 16; /* LONG_NAMED_INTEGER_VALUE
  * @type {number}
  */
 export
-const ecp: PrimaryPrecedence = PrimaryPrecedence_ecp; /* SHORT_NAMED_INTEGER_VALUE */
+const ecp: 16 = PrimaryPrecedence_ecp; /* SHORT_NAMED_INTEGER_VALUE */
 
 /**
  * @summary PrimaryPrecedence_critic
@@ -223,7 +223,7 @@ const ecp: PrimaryPrecedence = PrimaryPrecedence_ecp; /* SHORT_NAMED_INTEGER_VAL
  * @type {number}
  */
 export
-const PrimaryPrecedence_critic: PrimaryPrecedence = 17; /* LONG_NAMED_INTEGER_VALUE */
+const PrimaryPrecedence_critic: 17 = 17 satisfies PrimaryPrecedence; /* LONG_NAMED_INTEGER_VALUE */
 
 /**
  * @summary PrimaryPrecedence_critic
@@ -235,7 +235,7 @@ const PrimaryPrecedence_critic: PrimaryPrecedence = 17; /* LONG_NAMED_INTEGER_VA
  * @type {number}
  */
 export
-const critic: PrimaryPrecedence = PrimaryPrecedence_critic; /* SHORT_NAMED_INTEGER_VALUE */
+const critic: 17 = PrimaryPrecedence_critic; /* SHORT_NAMED_INTEGER_VALUE */
 
 /**
  * @summary PrimaryPrecedence_override_2
@@ -247,7 +247,7 @@ const critic: PrimaryPrecedence = PrimaryPrecedence_critic; /* SHORT_NAMED_INTEG
  * @type {number}
  */
 export
-const PrimaryPrecedence_override_2: PrimaryPrecedence = 18; /* LONG_NAMED_INTEGER_VALUE */
+const PrimaryPrecedence_override_2: 18 = 18 satisfies PrimaryPrecedence; /* LONG_NAMED_INTEGER_VALUE */
 
 /**
  * @summary PrimaryPrecedence_override_2
@@ -259,7 +259,7 @@ const PrimaryPrecedence_override_2: PrimaryPrecedence = 18; /* LONG_NAMED_INTEGE
  * @type {number}
  */
 export
-const override_2: PrimaryPrecedence = PrimaryPrecedence_override_2; /* SHORT_NAMED_INTEGER_VALUE */
+const override_2: 18 = PrimaryPrecedence_override_2; /* SHORT_NAMED_INTEGER_VALUE */
 export const _decode_PrimaryPrecedence: $.ASN1Decoder<PrimaryPrecedence> = $._decodeInteger;
 export const _encode_PrimaryPrecedence: $.ASN1Encoder<PrimaryPrecedence> = $._encodeInteger;
 

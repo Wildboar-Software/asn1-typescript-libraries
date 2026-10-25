@@ -1,13 +1,13 @@
 /* eslint-disable */
 import {
-    NULL,
-    OPTIONAL,
-    ASN1Element as _Element,
+    type NULL,
+    type OPTIONAL,
+    type ASN1Element as _Element,
     ASN1TagClass as _TagClass
 } from "@wildboar/asn1";
 import * as $ from "@wildboar/asn1/functional";
-import { TransactionId, _decode_TransactionId, _encode_TransactionId } from "../RSPDefinitions/TransactionId.ta.mjs";
-import { AuthenticateServerResponse, _decode_AuthenticateServerResponse, _encode_AuthenticateServerResponse } from "../RSPDefinitions/AuthenticateServerResponse.ta.mjs";
+import { type TransactionId, _decode_TransactionId, _encode_TransactionId } from "../RSPDefinitions/TransactionId.ta.mjs";
+import { type AuthenticateServerResponse, _decode_AuthenticateServerResponse, _encode_AuthenticateServerResponse } from "../RSPDefinitions/AuthenticateServerResponse.ta.mjs";
 
 
 /**
@@ -48,7 +48,7 @@ class AuthenticateClientRequest {
      * @public
      * @readonly
      */
-    readonly transactionId: TransactionId;
+    public readonly transactionId: TransactionId;
     /**
      * @summary `authenticateServerResponse`.
      * @description
@@ -60,7 +60,7 @@ class AuthenticateClientRequest {
      * @public
      * @readonly
      */
-    readonly authenticateServerResponse: AuthenticateServerResponse;
+    public readonly authenticateServerResponse: AuthenticateServerResponse;
     /**
      * @summary `useMatchingIdForAcr`.
      * @description
@@ -72,7 +72,7 @@ class AuthenticateClientRequest {
      * @public
      * @readonly
      */
-    readonly useMatchingIdForAcr?: OPTIONAL<NULL>;
+    public readonly useMatchingIdForAcr?: OPTIONAL<NULL>;
 
     constructor (
         transactionId: TransactionId,

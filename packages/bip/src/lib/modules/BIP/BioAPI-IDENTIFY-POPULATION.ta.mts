@@ -11,7 +11,7 @@ import {
 } from '@wildboar/asn1';
 import * as $ from '@wildboar/asn1/functional';
 import {
-  BioAPI_IDENTIFY_POPULATION_birs,
+  type BioAPI_IDENTIFY_POPULATION_birs,
   _decode_BioAPI_IDENTIFY_POPULATION_birs,
   _encode_BioAPI_IDENTIFY_POPULATION_birs,
 } from '../BIP/BioAPI-IDENTIFY-POPULATION-birs.ta.mjs';
@@ -51,7 +51,7 @@ export class BioAPI_IDENTIFY_POPULATION {
    * @public
    * @readonly
    */
-  readonly birs: BioAPI_IDENTIFY_POPULATION_birs;
+  public readonly birs: BioAPI_IDENTIFY_POPULATION_birs;
 
   constructor(
     birs: BioAPI_IDENTIFY_POPULATION_birs

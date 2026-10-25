@@ -1,10 +1,10 @@
 /* eslint-disable */
 import {
-    OPTIONAL,
-    INTEGER,
-    OBJECT_IDENTIFIER,
-    IA5String,
-    ASN1Element as _Element,
+    type OPTIONAL,
+    type INTEGER,
+    type OBJECT_IDENTIFIER,
+    type IA5String,
+    type ASN1Element as _Element,
     ASN1TagClass as _TagClass,
     ASN1Construction as _Construction,
     ASN1UniversalType as _UniversalType,
@@ -33,26 +33,34 @@ import * as $ from '@wildboar/asn1/functional';
  *
  */
 export class VoiceParameters {
+    /**
+     * @summary `voice_message_duration`.
+     * @public
+     * @readonly
+     */
+    public readonly voice_message_duration: OPTIONAL<INTEGER>;
+    /**
+     * @summary `voice_encoding_type`.
+     * @public
+     * @readonly
+     */
+    public readonly voice_encoding_type: OBJECT_IDENTIFIER;
+    /**
+     * @summary `supplementary_information`.
+     * @public
+     * @readonly
+     */
+    public readonly supplementary_information?: OPTIONAL<IA5String>;
+
     constructor(
-        /**
-         * @summary `voice_message_duration`.
-         * @public
-         * @readonly
-         */
-        readonly voice_message_duration: OPTIONAL<INTEGER>,
-        /**
-         * @summary `voice_encoding_type`.
-         * @public
-         * @readonly
-         */
-        readonly voice_encoding_type: OBJECT_IDENTIFIER,
-        /**
-         * @summary `supplementary_information`.
-         * @public
-         * @readonly
-         */
-        readonly supplementary_information?: OPTIONAL<IA5String>
-    ) {}
+        voice_message_duration: OPTIONAL<INTEGER>,
+        voice_encoding_type: OBJECT_IDENTIFIER,
+        supplementary_information?: OPTIONAL<IA5String>
+    ) {
+        this.voice_message_duration = voice_message_duration;
+        this.voice_encoding_type = voice_encoding_type;
+        this.supplementary_information = supplementary_information;
+    }
 
     /**
      * @summary Restructures an object into a VoiceParameters

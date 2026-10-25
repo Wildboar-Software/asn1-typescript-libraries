@@ -82,7 +82,7 @@ type ASRecord_threeGPPPSDataOffStatus = _enum_for_ASRecord_threeGPPPSDataOffStat
  * @enum {number}
  */
 export
-const ASRecord_threeGPPPSDataOffStatus = _enum_for_ASRecord_threeGPPPSDataOffStatus;
+const ASRecord_threeGPPPSDataOffStatus: typeof _enum_for_ASRecord_threeGPPPSDataOffStatus = _enum_for_ASRecord_threeGPPPSDataOffStatus;
 
 /**
  * @summary ASRecord_threeGPPPSDataOffStatus_active
@@ -95,7 +95,7 @@ const ASRecord_threeGPPPSDataOffStatus = _enum_for_ASRecord_threeGPPPSDataOffSta
  * @type {number}
  */
 export
-const ASRecord_threeGPPPSDataOffStatus_active: ASRecord_threeGPPPSDataOffStatus = ASRecord_threeGPPPSDataOffStatus.active; /* LONG_NAMED_ENUMERATED_VALUE */
+const ASRecord_threeGPPPSDataOffStatus_active: _enum_for_ASRecord_threeGPPPSDataOffStatus.active = ASRecord_threeGPPPSDataOffStatus.active; /* LONG_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary active
@@ -108,7 +108,7 @@ const ASRecord_threeGPPPSDataOffStatus_active: ASRecord_threeGPPPSDataOffStatus 
  * @type {number}
  */
 export
-const active: ASRecord_threeGPPPSDataOffStatus = ASRecord_threeGPPPSDataOffStatus.active; /* SHORT_NAMED_ENUMERATED_VALUE */
+const active: _enum_for_ASRecord_threeGPPPSDataOffStatus.active = ASRecord_threeGPPPSDataOffStatus.active; /* SHORT_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary ASRecord_threeGPPPSDataOffStatus_inactive
@@ -123,7 +123,7 @@ const active: ASRecord_threeGPPPSDataOffStatus = ASRecord_threeGPPPSDataOffStatu
  * @type {number}
  */
 export
-const ASRecord_threeGPPPSDataOffStatus_inactive: ASRecord_threeGPPPSDataOffStatus = ASRecord_threeGPPPSDataOffStatus.inactive; /* LONG_NAMED_ENUMERATED_VALUE */
+const ASRecord_threeGPPPSDataOffStatus_inactive: _enum_for_ASRecord_threeGPPPSDataOffStatus.inactive = ASRecord_threeGPPPSDataOffStatus.inactive; /* LONG_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary inactive
@@ -138,7 +138,7 @@ const ASRecord_threeGPPPSDataOffStatus_inactive: ASRecord_threeGPPPSDataOffStatu
  * @type {number}
  */
 export
-const inactive: ASRecord_threeGPPPSDataOffStatus = ASRecord_threeGPPPSDataOffStatus.inactive; /* SHORT_NAMED_ENUMERATED_VALUE */
+const inactive: _enum_for_ASRecord_threeGPPPSDataOffStatus.inactive = ASRecord_threeGPPPSDataOffStatus.inactive; /* SHORT_NAMED_ENUMERATED_VALUE */
 
 export
 const _decode_ASRecord_threeGPPPSDataOffStatus: $.ASN1Decoder<ASRecord_threeGPPPSDataOffStatus> = $._decodeEnumerated;

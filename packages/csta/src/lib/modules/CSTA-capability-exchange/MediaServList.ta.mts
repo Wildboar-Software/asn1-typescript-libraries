@@ -2,15 +2,15 @@
 
 import * as $ from "@wildboar/asn1/functional";
 import {
-    OPTIONAL,
-    SEQUENCE,
-    SET,
-    ASN1Element as _Element,
+    type OPTIONAL,
+    type SEQUENCE,
+    type SET,
+    type ASN1Element as _Element,
     ASN1TagClass as _TagClass
 } from "@wildboar/asn1";
-import { AttachMediaService, _decode_AttachMediaService, _encode_AttachMediaService } from "../CSTA-capability-exchange/AttachMediaService.ta.mjs";
+import { type AttachMediaService, _decode_AttachMediaService, _encode_AttachMediaService } from "../CSTA-capability-exchange/AttachMediaService.ta.mjs";
 
-import { DetachMediaService, _decode_DetachMediaService, _encode_DetachMediaService } from "../CSTA-capability-exchange/DetachMediaService.ta.mjs";
+import { type DetachMediaService, _decode_DetachMediaService, _encode_DetachMediaService } from "../CSTA-capability-exchange/DetachMediaService.ta.mjs";
 
 
 
@@ -28,7 +28,7 @@ import { DetachMediaService, _decode_DetachMediaService, _encode_DetachMediaServ
  * 
  * ```asn1
  * MediaServList ::= SEQUENCE
- * {     attachMediaService         [0] IMPLICIT     AttachMediaService     OPTIONAL,
+ * {     attachMediaService         [0] IMPLICIT     AttachMediaService     type OPTIONAL,
  *     detachMediaService         [1] IMPLICIT     DetachMediaService     OPTIONAL }
  * ```
  * 
@@ -36,26 +36,32 @@ import { DetachMediaService, _decode_DetachMediaService, _encode_DetachMediaServ
  */
 export
 class MediaServList {
+    /**
+     * @summary `attachMediaService`.
+     * @public
+     * @readonly
+     * @description
+     * Capability bitmap for this service; omit if the SF does not support
+     * it (ECMA-269 Annex C).
+     */
+    public readonly attachMediaService?: OPTIONAL<AttachMediaService>;
+    /**
+     * @summary `detachMediaService`.
+     * @public
+     * @readonly
+     * @description
+     * Capability bitmap for this service; omit if the SF does not support
+     * it (ECMA-269 Annex C).
+     */
+    public readonly detachMediaService?: OPTIONAL<DetachMediaService>;
+
     constructor (
-        /**
-         * @summary `attachMediaService`.
-         * @public
-         * @readonly
-         * @description
-         * Capability bitmap for this service; omit if the SF does not support
-         * it (ECMA-269 Annex C).
-         */
-        readonly attachMediaService?: OPTIONAL<AttachMediaService>,
-        /**
-         * @summary `detachMediaService`.
-         * @public
-         * @readonly
-         * @description
-         * Capability bitmap for this service; omit if the SF does not support
-         * it (ECMA-269 Annex C).
-         */
-        readonly detachMediaService?: OPTIONAL<DetachMediaService>
-    ) {}
+        attachMediaService?: OPTIONAL<AttachMediaService>,
+        detachMediaService?: OPTIONAL<DetachMediaService>
+    ) {
+        this.attachMediaService = attachMediaService;
+        this.detachMediaService = detachMediaService;
+    }
 
     /**
      * @summary Restructures an object into a MediaServList

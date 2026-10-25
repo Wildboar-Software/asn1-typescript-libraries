@@ -1,16 +1,16 @@
 /* eslint-disable */
 import {
-    OPTIONAL,
-    ASN1Element as _Element,
+    type OPTIONAL,
+    type ASN1Element as _Element,
     ASN1TagClass as _TagClass
 } from "@wildboar/asn1";
 import * as $ from "@wildboar/asn1/functional";
-import { HLR_List, _decode_HLR_List, _encode_HLR_List } from "../MAP-CommonDataTypes/HLR-List.ta.mjs";
+import { type HLR_List, _decode_HLR_List, _encode_HLR_List } from "../MAP-CommonDataTypes/HLR-List.ta.mjs";
 import { ExtensionContainer, _decode_ExtensionContainer, _encode_ExtensionContainer } from "../MAP-ExtensionDataTypes/ExtensionContainer.ta.mjs";
 import { DeleteSubscriberDataArg, _decode_DeleteSubscriberDataArg, _encode_DeleteSubscriberDataArg } from "../MAP-MS-DataTypes/DeleteSubscriberDataArg.ta.mjs";
 import { InsertSubscriberDataArg, _decode_InsertSubscriberDataArg, _encode_InsertSubscriberDataArg } from "../MAP-MS-DataTypes/InsertSubscriberDataArg.ta.mjs";
-import { Reset_Id_List, _decode_Reset_Id_List, _encode_Reset_Id_List } from "../MAP-MS-DataTypes/Reset-Id-List.ta.mjs";
-import { SendingNode_Number, _decode_SendingNode_Number, _encode_SendingNode_Number } from "../MAP-MS-DataTypes/SendingNode-Number.ta.mjs";
+import { type Reset_Id_List, _decode_Reset_Id_List, _encode_Reset_Id_List } from "../MAP-MS-DataTypes/Reset-Id-List.ta.mjs";
+import { type SendingNode_Number, _decode_SendingNode_Number, _encode_SendingNode_Number } from "../MAP-MS-DataTypes/SendingNode-Number.ta.mjs";
 
 
 /**
@@ -29,12 +29,12 @@ import { SendingNode_Number, _decode_SendingNode_Number, _encode_SendingNode_Num
  * ```asn1
  * ResetArg ::= SEQUENCE {
  *     sendingNodenumber    SendingNode-Number,
- *     hlr-List    HLR-List    OPTIONAL,
+ *     hlr-List    HLR-List    type OPTIONAL,
  *     -- The hlr-List parameter shall only be applicable for a restart of the HSS/HLR.
- *     extensionContainer    [0] ExtensionContainer    OPTIONAL,
+ *     extensionContainer    [0] ExtensionContainer    type OPTIONAL,
  *     ...,
- *     reset-Id-List    [1]    Reset-Id-List    OPTIONAL,
- *     subscriptionData    [2]    InsertSubscriberDataArg    OPTIONAL,
+ *     reset-Id-List    [1]    Reset-Id-List    type OPTIONAL,
+ *     subscriptionData    [2]    InsertSubscriberDataArg    type OPTIONAL,
  *     subscriptionDataDeletion    [3]    DeleteSubscriberDataArg    OPTIONAL}
  * ```
  * 
@@ -42,85 +42,101 @@ import { SendingNode_Number, _decode_SendingNode_Number, _encode_SendingNode_Num
  */
 export
 class ResetArg {
+    /**
+     * @summary `sendingNodenumber`.
+     * @description
+     *
+     * HLR number for HLR/HSS restart, or CSS number for CSS restart.
+     *
+     * (3GPP TS 29.002 V19.1.0 clause 8.10.1.3).
+     *
+     * @public
+     * @readonly
+     */
+    public readonly sendingNodenumber: SendingNode_Number;
+    /**
+     * @summary `hlr_List`.
+     * @description
+     *
+     * HLR Ids. Affected subscribers are those whose IMSI leading digits
+     * match. Only for HSS/HLR restart. Shall not be present if Reset-Id
+     * list is present.
+     *
+     * (3GPP TS 29.002 V19.1.0 clause 8.10.1.3).
+     *
+     * @public
+     * @readonly
+     */
+    public readonly hlr_List?: OPTIONAL<HLR_List>;
+    /**
+     * @summary `extensionContainer`.
+     * @public
+     * @readonly
+     */
+    public readonly extensionContainer?: OPTIONAL<ExtensionContainer>;
+    /**
+     * @summary `reset_Id_List`.
+     * @description
+     *
+     * Reset-Ids of affected subscribers. Shall not be present if Reset-Ids
+     * are unsupported, or together with HLR Id list.
+     *
+     * (3GPP TS 29.002 V19.1.0 clause 8.10.1.3).
+     *
+     * @public
+     * @readonly
+     */
+    public readonly reset_Id_List?: OPTIONAL<Reset_Id_List>;
+    /**
+     * @summary `subscriptionData`.
+     * @description
+     *
+     * Shared subscription profile to add or replace. Absent if Subscription
+     * Data Deletion is present or Reset-Id list is absent.
+     *
+     * (3GPP TS 29.002 V19.1.0 clause 8.10.1.3).
+     *
+     * @public
+     * @readonly
+     */
+    public readonly subscriptionData?: OPTIONAL<InsertSubscriberDataArg>;
+    /**
+     * @summary `subscriptionDataDeletion`.
+     * @description
+     *
+     * Identifications of shared subscription data to delete. Absent if
+     * Subscription Data is present or Reset-Id list is absent.
+     *
+     * (3GPP TS 29.002 V19.1.0 clause 8.10.1.3).
+     *
+     * @public
+     * @readonly
+     */
+    public readonly subscriptionDataDeletion?: OPTIONAL<DeleteSubscriberDataArg>;
+    /**
+     * @summary Extensions that are not recognized.
+     * @public
+     * @readonly
+     */
+    public readonly _unrecognizedExtensionsList: _Element[];
+
     constructor (
-        /**
-         * @summary `sendingNodenumber`.
-         * @description
-         *
-         * HLR number for HLR/HSS restart, or CSS number for CSS restart.
-         *
-         * (3GPP TS 29.002 V19.1.0 clause 8.10.1.3).
-         *
-         * @public
-         * @readonly
-         */
-        readonly sendingNodenumber: SendingNode_Number,
-        /**
-         * @summary `hlr_List`.
-         * @description
-         *
-         * HLR Ids. Affected subscribers are those whose IMSI leading digits
-         * match. Only for HSS/HLR restart. Shall not be present if Reset-Id
-         * list is present.
-         *
-         * (3GPP TS 29.002 V19.1.0 clause 8.10.1.3).
-         *
-         * @public
-         * @readonly
-         */
-        readonly hlr_List?: OPTIONAL<HLR_List>,
-        /**
-         * @summary `extensionContainer`.
-         * @public
-         * @readonly
-         */
-        readonly extensionContainer?: OPTIONAL<ExtensionContainer>,
-        /**
-         * @summary `reset_Id_List`.
-         * @description
-         *
-         * Reset-Ids of affected subscribers. Shall not be present if Reset-Ids
-         * are unsupported, or together with HLR Id list.
-         *
-         * (3GPP TS 29.002 V19.1.0 clause 8.10.1.3).
-         *
-         * @public
-         * @readonly
-         */
-        readonly reset_Id_List?: OPTIONAL<Reset_Id_List>,
-        /**
-         * @summary `subscriptionData`.
-         * @description
-         *
-         * Shared subscription profile to add or replace. Absent if Subscription
-         * Data Deletion is present or Reset-Id list is absent.
-         *
-         * (3GPP TS 29.002 V19.1.0 clause 8.10.1.3).
-         *
-         * @public
-         * @readonly
-         */
-        readonly subscriptionData?: OPTIONAL<InsertSubscriberDataArg>,
-        /**
-         * @summary `subscriptionDataDeletion`.
-         * @description
-         *
-         * Identifications of shared subscription data to delete. Absent if
-         * Subscription Data is present or Reset-Id list is absent.
-         *
-         * (3GPP TS 29.002 V19.1.0 clause 8.10.1.3).
-         *
-         * @public
-         * @readonly
-         */
-        readonly subscriptionDataDeletion?: OPTIONAL<DeleteSubscriberDataArg>,
-        /**
-         * @summary Extensions that are not recognized.
-         * @public
-         * @readonly
-         */
-        readonly _unrecognizedExtensionsList: _Element[] = []
-    ) {}
+        sendingNodenumber: SendingNode_Number,
+        hlr_List?: OPTIONAL<HLR_List>,
+        extensionContainer?: OPTIONAL<ExtensionContainer>,
+        reset_Id_List?: OPTIONAL<Reset_Id_List>,
+        subscriptionData?: OPTIONAL<InsertSubscriberDataArg>,
+        subscriptionDataDeletion?: OPTIONAL<DeleteSubscriberDataArg>,
+        _unrecognizedExtensionsList: _Element[] = []
+    ) {
+        this.sendingNodenumber = sendingNodenumber;
+        this.hlr_List = hlr_List;
+        this.extensionContainer = extensionContainer;
+        this.reset_Id_List = reset_Id_List;
+        this.subscriptionData = subscriptionData;
+        this.subscriptionDataDeletion = subscriptionDataDeletion;
+        this._unrecognizedExtensionsList = _unrecognizedExtensionsList;
+    }
 
     /**
      * @summary Restructures an object into a ResetArg

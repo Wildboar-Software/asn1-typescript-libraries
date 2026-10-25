@@ -1,7 +1,7 @@
 /* eslint-disable */
 import {
-    OPTIONAL,
-    ASN1Element as _Element,
+    type OPTIONAL,
+    type ASN1Element as _Element,
     ASN1TagClass as _TagClass,
     ASN1Construction as _Construction,
     ASN1UniversalType as _UniversalType,
@@ -12,12 +12,12 @@ import {
 } from '@wildboar/asn1';
 import * as $ from '@wildboar/asn1/functional';
 import {
-    RecipientReference,
+    type RecipientReference,
     _decode_RecipientReference,
     _encode_RecipientReference,
 } from '../EDIMSInformationObjects/RecipientReference.ta.mjs';
 import {
-    RecipientReferenceQualifier,
+    type RecipientReferenceQualifier,
     _decode_RecipientReferenceQualifier,
     _encode_RecipientReferenceQualifier,
 } from '../EDIMSInformationObjects/RecipientReferenceQualifier.ta.mjs';
@@ -38,20 +38,26 @@ import {
  *
  */
 export class RecipientReferenceField {
+    /**
+     * @summary `recipient_reference`.
+     * @public
+     * @readonly
+     */
+    public readonly recipient_reference: RecipientReference;
+    /**
+     * @summary `recipient_reference_qualifier`.
+     * @public
+     * @readonly
+     */
+    public readonly recipient_reference_qualifier?: OPTIONAL<RecipientReferenceQualifier>;
+
     constructor(
-        /**
-         * @summary `recipient_reference`.
-         * @public
-         * @readonly
-         */
-        readonly recipient_reference: RecipientReference,
-        /**
-         * @summary `recipient_reference_qualifier`.
-         * @public
-         * @readonly
-         */
-        readonly recipient_reference_qualifier?: OPTIONAL<RecipientReferenceQualifier>
-    ) {}
+        recipient_reference: RecipientReference,
+        recipient_reference_qualifier?: OPTIONAL<RecipientReferenceQualifier>
+    ) {
+        this.recipient_reference = recipient_reference;
+        this.recipient_reference_qualifier = recipient_reference_qualifier;
+    }
 
     /**
      * @summary Restructures an object into a RecipientReferenceField

@@ -1,7 +1,7 @@
 /* eslint-disable */
 import {
-    ASN1Element as _Element,
-    ENUMERATED
+    type ASN1Element as _Element,
+    type ENUMERATED
 } from "@wildboar/asn1";
 import * as $ from "@wildboar/asn1/functional";
 
@@ -43,7 +43,7 @@ type MonitoringMode = _enum_for_MonitoringMode | ENUMERATED;
  * @type {number}
  */
 export
-const MonitoringMode_a_side: MonitoringMode = 0; /* LONG_NAMED_ENUMERATED_VALUE */
+const MonitoringMode_a_side: _enum_for_MonitoringMode.a_side = _enum_for_MonitoringMode.a_side; /* LONG_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary a_side
@@ -55,7 +55,7 @@ const MonitoringMode_a_side: MonitoringMode = 0; /* LONG_NAMED_ENUMERATED_VALUE 
  * @type {number}
  */
 export
-const a_side: MonitoringMode = MonitoringMode_a_side; /* SHORT_NAMED_ENUMERATED_VALUE */
+const a_side: _enum_for_MonitoringMode.a_side = MonitoringMode_a_side; /* SHORT_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary MonitoringMode_b_side
@@ -67,7 +67,7 @@ const a_side: MonitoringMode = MonitoringMode_a_side; /* SHORT_NAMED_ENUMERATED_
  * @type {number}
  */
 export
-const MonitoringMode_b_side: MonitoringMode = 1; /* LONG_NAMED_ENUMERATED_VALUE */
+const MonitoringMode_b_side: _enum_for_MonitoringMode.b_side = _enum_for_MonitoringMode.b_side; /* LONG_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary b_side
@@ -79,7 +79,7 @@ const MonitoringMode_b_side: MonitoringMode = 1; /* LONG_NAMED_ENUMERATED_VALUE 
  * @type {number}
  */
 export
-const b_side: MonitoringMode = MonitoringMode_b_side; /* SHORT_NAMED_ENUMERATED_VALUE */
+const b_side: _enum_for_MonitoringMode.b_side = MonitoringMode_b_side; /* SHORT_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary Decodes an ASN.1 element into a(n) MonitoringMode
@@ -87,7 +87,7 @@ const b_side: MonitoringMode = MonitoringMode_b_side; /* SHORT_NAMED_ENUMERATED_
  * @param el The element being decoded.
  * @returns The decoded data structure.
  */
-export const _decode_MonitoringMode = $._decodeEnumerated;
+export const _decode_MonitoringMode: $.ASN1Decoder<number> = $._decodeEnumerated;
 
 /**
  * @summary Encodes a(n) MonitoringMode into an ASN.1 Element.
@@ -96,7 +96,7 @@ export const _decode_MonitoringMode = $._decodeEnumerated;
  * @param elGetter A function that can be used to get new ASN.1 elements.
  * @returns {_Element} The MonitoringMode, encoded as an ASN.1 Element.
  */
-export const _encode_MonitoringMode = $._encodeEnumerated;
+export const _encode_MonitoringMode: $.ASN1Encoder<number> = $._encodeEnumerated;
 
 
 /* eslint-enable */

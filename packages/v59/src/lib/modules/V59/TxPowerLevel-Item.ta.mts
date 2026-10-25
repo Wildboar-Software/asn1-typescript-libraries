@@ -1,7 +1,7 @@
 /* eslint-disable */
 import {
-    OPTIONAL,
-    ASN1Element as _Element,
+    type OPTIONAL,
+    type ASN1Element as _Element,
     ASN1TagClass as _TagClass,
     ASN1Construction as _Construction,
     ASN1UniversalType as _UniversalType,
@@ -11,7 +11,7 @@ import {
     ASN1ConstructionError as _ConstructionError,
 } from "@wildboar/asn1";
 import * as $ from "@wildboar/asn1/functional";
-import { V59String, _decode_V59String, _encode_V59String } from "../V59/V59String.ta.mjs";
+import { type V59String, _decode_V59String, _encode_V59String } from "../V59/V59String.ta.mjs";
 
 /**
  * @summary TxPowerLevel_Item
@@ -43,7 +43,7 @@ class TxPowerLevel_Item {
      * @public
      * @readonly
      */
-    readonly initialTxPower: V59String;
+    public readonly initialTxPower: V59String;
     /**
      * @summary `txPowerDrop`.
      * @description
@@ -54,7 +54,7 @@ class TxPowerLevel_Item {
      * @public
      * @readonly
      */
-    readonly txPowerDrop?: OPTIONAL<V59String>;
+    public readonly txPowerDrop?: OPTIONAL<V59String>;
     /**
      * @summary `txPower`.
      * @description
@@ -64,13 +64,13 @@ class TxPowerLevel_Item {
      * @public
      * @readonly
      */
-    readonly txPower?: OPTIONAL<V59String>;
+    public readonly txPower?: OPTIONAL<V59String>;
     /**
      * @summary Extensions that are not recognized.
      * @public
      * @readonly
      */
-    readonly _unrecognizedExtensionsList: _Element[];
+    public readonly _unrecognizedExtensionsList: _Element[];
 
     constructor (
         initialTxPower: V59String,

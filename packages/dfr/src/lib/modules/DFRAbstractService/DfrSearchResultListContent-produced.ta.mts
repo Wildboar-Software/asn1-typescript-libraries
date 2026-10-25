@@ -1,8 +1,8 @@
 /* eslint-disable */
 import {
-    OPTIONAL,
-    GeneralizedTime,
-    ASN1Element as _Element,
+    type OPTIONAL,
+    type GeneralizedTime,
+    type ASN1Element as _Element,
     ASN1TagClass as _TagClass,
     ASN1Construction as _Construction,
     ASN1UniversalType as _UniversalType,
@@ -12,10 +12,10 @@ import {
     ASN1ConstructionError as _ConstructionError,
 } from "@wildboar/asn1";
 import * as $ from "@wildboar/asn1/functional";
-import { DfrEntryList, _decode_DfrEntryList, _encode_DfrEntryList } from "../DFRAbstractService/DfrEntryList.ta.mjs";
+import { type DfrEntryList, _decode_DfrEntryList, _encode_DfrEntryList } from "../DFRAbstractService/DfrEntryList.ta.mjs";
 import { OrderingRule, _decode_OrderingRule, _encode_OrderingRule } from "../DFRAbstractService/OrderingRule.ta.mjs";
-import { SearchDomain, _decode_SearchDomain, _encode_SearchDomain } from "../DFRAbstractService/SearchDomain.ta.mjs";
-import { SearchCriteria, _decode_SearchCriteria, _encode_SearchCriteria } from "../DFRAbstractService/SearchCriteria.ta.mjs";
+import { type SearchDomain, _decode_SearchDomain, _encode_SearchDomain } from "../DFRAbstractService/SearchDomain.ta.mjs";
+import { type SearchCriteria, _decode_SearchCriteria, _encode_SearchCriteria } from "../DFRAbstractService/SearchCriteria.ta.mjs";
 
 
 /**
@@ -42,62 +42,76 @@ import { SearchCriteria, _decode_SearchCriteria, _encode_SearchCriteria } from "
  */
 export
 class DfrSearchResultListContent_produced {
+    /**
+     * @summary `start_date_and_time`.
+     * @description
+     *
+     * When this search result was produced.
+     * @public
+     * @readonly
+     */
+    public readonly start_date_and_time: GeneralizedTime;
+    /**
+     * @summary `end_date_and_time`.
+     * @description
+     *
+     * When production of this result finished.
+     * @public
+     * @readonly
+     */
+    public readonly end_date_and_time: GeneralizedTime;
+    /**
+     * @summary `object_list`.
+     * @description
+     *
+     * Matching entries (UPI, class, optional keys).
+     * @public
+     * @readonly
+     */
+    public readonly object_list: DfrEntryList;
+    /**
+     * @summary `ordering`.
+     * @description
+     *
+     * Ordering stored with the result, if any.
+     * @public
+     * @readonly
+     */
+    public readonly ordering: OPTIONAL<OrderingRule>;
+    /**
+     * @summary `search_domain`.
+     * @description
+     *
+     * Domain that was searched.
+     * @public
+     * @readonly
+     */
+    public readonly search_domain: SearchDomain;
+    /**
+     * @summary `search_criteria`.
+     * @description
+     *
+     * Filter that selected the entries.
+     * @public
+     * @readonly
+     */
+    public readonly search_criteria: SearchCriteria;
+
     constructor (
-        /**
-         * @summary `start_date_and_time`.
-         * @description
-         *
-         * When this search result was produced.
-         * @public
-         * @readonly
-         */
-        readonly start_date_and_time: GeneralizedTime,
-        /**
-         * @summary `end_date_and_time`.
-         * @description
-         *
-         * When production of this result finished.
-         * @public
-         * @readonly
-         */
-        readonly end_date_and_time: GeneralizedTime,
-        /**
-         * @summary `object_list`.
-         * @description
-         *
-         * Matching entries (UPI, class, optional keys).
-         * @public
-         * @readonly
-         */
-        readonly object_list: DfrEntryList,
-        /**
-         * @summary `ordering`.
-         * @description
-         *
-         * Ordering stored with the result, if any.
-         * @public
-         * @readonly
-         */
-        readonly ordering: OPTIONAL<OrderingRule>,
-        /**
-         * @summary `search_domain`.
-         * @description
-         *
-         * Domain that was searched.
-         * @public
-         * @readonly
-         */
-        readonly search_domain: SearchDomain,
-        /**
-         * @summary `search_criteria`.
-         * @description
-         *
-         * Filter that selected the entries.
-         * @public
-         * @readonly
-         */
-        readonly search_criteria: SearchCriteria
-    ) {}
+        start_date_and_time: GeneralizedTime,
+        end_date_and_time: GeneralizedTime,
+        object_list: DfrEntryList,
+        ordering: OPTIONAL<OrderingRule>,
+        search_domain: SearchDomain,
+        search_criteria: SearchCriteria
+    ) {
+        this.start_date_and_time = start_date_and_time;
+        this.end_date_and_time = end_date_and_time;
+        this.object_list = object_list;
+        this.ordering = ordering;
+        this.search_domain = search_domain;
+        this.search_criteria = search_criteria;
+    }
 
     /**
      * @summary Restructures an object into a DfrSearchResultListContent_produced

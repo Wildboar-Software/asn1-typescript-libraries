@@ -1,7 +1,7 @@
 /* eslint-disable */
 import {
-    OPTIONAL,
-    ASN1Element as _Element,
+    type OPTIONAL,
+    type ASN1Element as _Element,
     ASN1TagClass as _TagClass,
     ASN1Construction as _Construction,
     ASN1UniversalType as _UniversalType,
@@ -11,11 +11,11 @@ import {
     ASN1ConstructionError as _ConstructionError,
 } from "@wildboar/asn1";
 import * as $ from "@wildboar/asn1/functional";
-import { ObjectValue, _get_decoder_for_ObjectValue, _get_encoder_for_ObjectValue } from "../CryptographicInformationFramework/ObjectValue.ta.mjs";
-import { ECPublicKeyChoice, _decode_ECPublicKeyChoice, _encode_ECPublicKeyChoice } from "../CryptographicInformationFramework/ECPublicKeyChoice.ta.mjs";
-import { KeyInfo, _get_decoder_for_KeyInfo, _get_encoder_for_KeyInfo } from "../CryptographicInformationFramework/KeyInfo.ta.mjs";
-import { Parameters, _decode_Parameters, _encode_Parameters } from "../ANSI-X9-62/Parameters.ta.mjs";
-import { PublicKeyOperations, _decode_PublicKeyOperations, _encode_PublicKeyOperations } from "../CryptographicInformationFramework/PublicKeyOperations.ta.mjs";
+import { type ObjectValue, _get_decoder_for_ObjectValue, _get_encoder_for_ObjectValue } from "../CryptographicInformationFramework/ObjectValue.ta.mjs";
+import { type ECPublicKeyChoice, _decode_ECPublicKeyChoice, _encode_ECPublicKeyChoice } from "../CryptographicInformationFramework/ECPublicKeyChoice.ta.mjs";
+import { type KeyInfo, _get_decoder_for_KeyInfo, _get_encoder_for_KeyInfo } from "../CryptographicInformationFramework/KeyInfo.ta.mjs";
+import { type Parameters, _decode_Parameters, _encode_Parameters } from "../ANSI-X9-62/Parameters.ta.mjs";
+import { type PublicKeyOperations, _decode_PublicKeyOperations, _encode_PublicKeyOperations } from "../CryptographicInformationFramework/PublicKeyOperations.ta.mjs";
 
 
 /**
@@ -38,33 +38,41 @@ import { PublicKeyOperations, _decode_PublicKeyOperations, _encode_PublicKeyOper
  */
 export
 class PublicECKeyAttributes {
+    /**
+     * @summary `value`.
+     * @description
+     * `ObjectValue` of `ECPublicKeyChoice` or a card-specific EC public
+     * key. ISO/IEC 7816-15:2016 §8.5.3.
+     * @public
+     * @readonly
+     */
+    public readonly value: ObjectValue<ECPublicKeyChoice>;
+    /**
+     * @summary `keyInfo`.
+     * @description
+     * If present, overrides `CIAInfo.supportedAlgorithms` referenced by
+     * `CommonKeyAttributes.algReference`. Omit when available by other
+     * means. ISO/IEC 7816-15:2016 §8.4.2.
+     * @public
+     * @readonly
+     */
+    public readonly keyInfo?: OPTIONAL<KeyInfo<Parameters, PublicKeyOperations>>;
+    /**
+     * @summary Extensions that are not recognized.
+     * @public
+     * @readonly
+     */
+    public readonly _unrecognizedExtensionsList: _Element[];
+
     constructor (
-        /**
-         * @summary `value`.
-         * @description
-         * `ObjectValue` of `ECPublicKeyChoice` or a card-specific EC public
-         * key. ISO/IEC 7816-15:2016 §8.5.3.
-         * @public
-         * @readonly
-         */
-        readonly value: ObjectValue<ECPublicKeyChoice>,
-        /**
-         * @summary `keyInfo`.
-         * @description
-         * If present, overrides `CIAInfo.supportedAlgorithms` referenced by
-         * `CommonKeyAttributes.algReference`. Omit when available by other
-         * means. ISO/IEC 7816-15:2016 §8.4.2.
-         * @public
-         * @readonly
-         */
-        readonly keyInfo?: OPTIONAL<KeyInfo<Parameters, PublicKeyOperations>>,
-        /**
-         * @summary Extensions that are not recognized.
-         * @public
-         * @readonly
-         */
-        readonly _unrecognizedExtensionsList: _Element[] = []
-    ) {}
+        value: ObjectValue<ECPublicKeyChoice>,
+        keyInfo?: OPTIONAL<KeyInfo<Parameters, PublicKeyOperations>>,
+        _unrecognizedExtensionsList: _Element[] = []
+    ) {
+        this.value = value;
+        this.keyInfo = keyInfo;
+        this._unrecognizedExtensionsList = _unrecognizedExtensionsList;
+    }
 
     /**
      * @summary Restructures an object into a PublicECKeyAttributes

@@ -1,7 +1,7 @@
 /* eslint-disable */
 import {
-    ENUMERATED,
-    ASN1Element as _Element,
+    type ENUMERATED,
+    type ASN1Element as _Element,
     ASN1TagClass as _TagClass,
     ASN1Construction as _Construction,
     ASN1UniversalType as _UniversalType,
@@ -44,7 +44,7 @@ export type IdentifyLockedLCSError =
  * @constant
  * @type {number}
  */
-export const IdentifyLockedLCSError_administrativeStateUnlocked: IdentifyLockedLCSError = 0; /* LONG_NAMED_ENUMERATED_VALUE */
+export const IdentifyLockedLCSError_administrativeStateUnlocked: _enum_for_IdentifyLockedLCSError.administrativeStateUnlocked = _enum_for_IdentifyLockedLCSError.administrativeStateUnlocked; /* LONG_NAMED_ENUMERATED_VALUE */
 
 
 /**
@@ -52,7 +52,7 @@ export const IdentifyLockedLCSError_administrativeStateUnlocked: IdentifyLockedL
  * @constant
  * @type {number}
  */
-export const administrativeStateUnlocked: IdentifyLockedLCSError = IdentifyLockedLCSError_administrativeStateUnlocked; /* SHORT_NAMED_ENUMERATED_VALUE */
+export const administrativeStateUnlocked: _enum_for_IdentifyLockedLCSError.administrativeStateUnlocked = IdentifyLockedLCSError_administrativeStateUnlocked; /* SHORT_NAMED_ENUMERATED_VALUE */
 
 
 /**
@@ -60,7 +60,7 @@ export const administrativeStateUnlocked: IdentifyLockedLCSError = IdentifyLocke
  * @constant
  * @type {number}
  */
-export const IdentifyLockedLCSError_nonExistentSAP: IdentifyLockedLCSError = 1; /* LONG_NAMED_ENUMERATED_VALUE */
+export const IdentifyLockedLCSError_nonExistentSAP: _enum_for_IdentifyLockedLCSError.nonExistentSAP = _enum_for_IdentifyLockedLCSError.nonExistentSAP; /* LONG_NAMED_ENUMERATED_VALUE */
 
 
 /**
@@ -68,7 +68,7 @@ export const IdentifyLockedLCSError_nonExistentSAP: IdentifyLockedLCSError = 1; 
  * @constant
  * @type {number}
  */
-export const nonExistentSAP: IdentifyLockedLCSError = IdentifyLockedLCSError_nonExistentSAP; /* SHORT_NAMED_ENUMERATED_VALUE */
+export const nonExistentSAP: _enum_for_IdentifyLockedLCSError.nonExistentSAP = IdentifyLockedLCSError_nonExistentSAP; /* SHORT_NAMED_ENUMERATED_VALUE */
 
 
 /**
@@ -76,7 +76,7 @@ export const nonExistentSAP: IdentifyLockedLCSError = IdentifyLockedLCSError_non
  * @constant
  * @type {number}
  */
-export const IdentifyLockedLCSError_unknownServiceType: IdentifyLockedLCSError = 2; /* LONG_NAMED_ENUMERATED_VALUE */
+export const IdentifyLockedLCSError_unknownServiceType: _enum_for_IdentifyLockedLCSError.unknownServiceType = _enum_for_IdentifyLockedLCSError.unknownServiceType; /* LONG_NAMED_ENUMERATED_VALUE */
 
 
 /**
@@ -84,17 +84,17 @@ export const IdentifyLockedLCSError_unknownServiceType: IdentifyLockedLCSError =
  * @constant
  * @type {number}
  */
-export const unknownServiceType: IdentifyLockedLCSError = IdentifyLockedLCSError_unknownServiceType; /* SHORT_NAMED_ENUMERATED_VALUE */
+export const unknownServiceType: _enum_for_IdentifyLockedLCSError.unknownServiceType = IdentifyLockedLCSError_unknownServiceType; /* SHORT_NAMED_ENUMERATED_VALUE */
 
 
 
 
-export const _decode_IdentifyLockedLCSError = $._decodeEnumerated;
+export const _decode_IdentifyLockedLCSError: $.ASN1Decoder<number> = $._decodeEnumerated;
 
 
 
 
-export const _encode_IdentifyLockedLCSError = $._encodeEnumerated;
+export const _encode_IdentifyLockedLCSError: $.ASN1Encoder<number> = $._encodeEnumerated;
 
 
 /* eslint-enable */

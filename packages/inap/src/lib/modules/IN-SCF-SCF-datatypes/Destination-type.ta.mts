@@ -1,4 +1,5 @@
 /* eslint-disable */
+import { ASN1Element as _Element, ASN1ConstructionError as _ConstructionError } from "@wildboar/asn1";
 import * as $ from "@wildboar/asn1/functional";
 
 
@@ -61,7 +62,7 @@ type Destination_type = _enum_for_Destination_type;
  * @enum {number}
  */
 export
-const Destination_type = _enum_for_Destination_type;
+const Destination_type: typeof _enum_for_Destination_type = _enum_for_Destination_type;
 
 /**
  * @summary Destination_type_e164
@@ -69,7 +70,7 @@ const Destination_type = _enum_for_Destination_type;
  * @type {number}
  */
 export
-const Destination_type_e164: Destination_type = Destination_type.e164; /* LONG_NAMED_ENUMERATED_VALUE */
+const Destination_type_e164: _enum_for_Destination_type.e164 = Destination_type.e164; /* LONG_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary e164
@@ -77,7 +78,7 @@ const Destination_type_e164: Destination_type = Destination_type.e164; /* LONG_N
  * @type {number}
  */
 export
-const e164: Destination_type = Destination_type.e164; /* SHORT_NAMED_ENUMERATED_VALUE */
+const e164: _enum_for_Destination_type.e164 = Destination_type.e164; /* SHORT_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary Destination_type_x121
@@ -85,7 +86,7 @@ const e164: Destination_type = Destination_type.e164; /* SHORT_NAMED_ENUMERATED_
  * @type {number}
  */
 export
-const Destination_type_x121: Destination_type = Destination_type.x121; /* LONG_NAMED_ENUMERATED_VALUE */
+const Destination_type_x121: _enum_for_Destination_type.x121 = Destination_type.x121; /* LONG_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary x121
@@ -93,12 +94,23 @@ const Destination_type_x121: Destination_type = Destination_type.x121; /* LONG_N
  * @type {number}
  */
 export
-const x121: Destination_type = Destination_type.x121; /* SHORT_NAMED_ENUMERATED_VALUE */
+const x121: _enum_for_Destination_type.x121 = Destination_type.x121; /* SHORT_NAMED_ENUMERATED_VALUE */
 
 export
-const _decode_Destination_type: $.ASN1Decoder<Destination_type> = $._decodeEnumerated;
+function _decode_Destination_type(el: _Element): Destination_type {
+    const enumerated = $._decodeEnumerated(el);
+    switch (enumerated) {
+        case Destination_type.e164: return Destination_type.e164;
+        case Destination_type.x121: return Destination_type.x121;
+        default:
+            throw new _ConstructionError(
+                "Invalid ENUMERATED value " + enumerated + " for Destination_type.",
+                el,
+            );
+    }
+}
 
 export
-const _encode_Destination_type: $.ASN1Encoder<Destination_type> = $._encodeEnumerated;
+const _encode_Destination_type: $.ASN1Encoder<Destination_type> = $._encodeEnumerated as $.ASN1Encoder<Destination_type>;
 
 /* eslint-enable */

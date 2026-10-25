@@ -1,8 +1,8 @@
 /* eslint-disable */
 import {
-    OPTIONAL,
-    OCTET_STRING,
-    ASN1Element as _Element,
+    type OPTIONAL,
+    type OCTET_STRING,
+    type ASN1Element as _Element,
     ASN1TagClass as _TagClass,
     ASN1Construction as _Construction,
     ASN1UniversalType as _UniversalType,
@@ -39,20 +39,25 @@ import * as $ from "@wildboar/asn1/functional";
  */
 export
 class BackwardServiceInteractionInd {
+    /**
+     * @summary `conferenceTreatmentIndicator`.
+     * @public
+     * @readonly
+     */
+    public readonly conferenceTreatmentIndicator?: OPTIONAL<OCTET_STRING>;
+    /**
+     * @summary `callCompletionTreatmentIndicator`.
+     * @public
+     * @readonly
+     */
+    public readonly callCompletionTreatmentIndicator?: OPTIONAL<OCTET_STRING>;
+
     constructor (
-        /**
-         * @summary `conferenceTreatmentIndicator`.
-         * @public
-         * @readonly
-         */
-        readonly conferenceTreatmentIndicator?: OPTIONAL<OCTET_STRING>,
-        /**
-         * @summary `callCompletionTreatmentIndicator`.
-         * @public
-         * @readonly
-         */
-        readonly callCompletionTreatmentIndicator?: OPTIONAL<OCTET_STRING>
+        conferenceTreatmentIndicator?: OPTIONAL<OCTET_STRING>,
+        callCompletionTreatmentIndicator?: OPTIONAL<OCTET_STRING>
     ) {
+        this.conferenceTreatmentIndicator = conferenceTreatmentIndicator;
+        this.callCompletionTreatmentIndicator = callCompletionTreatmentIndicator;
         if (conferenceTreatmentIndicator !== undefined && conferenceTreatmentIndicator.length !== 1) {
             throw new ASN1SizeError("BackwardServiceInteractionInd.conferenceTreatmentIndicator violates SIZE constraint");
         }

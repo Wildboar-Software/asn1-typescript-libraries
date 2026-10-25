@@ -1,7 +1,7 @@
 /* eslint-disable */
 import {
-    BIT_STRING,
-    ASN1Element as _Element,
+    type BIT_STRING,
+    type ASN1Element as _Element,
     ASN1TagClass as _TagClass,
     ASN1Construction as _Construction,
     ASN1UniversalType as _UniversalType,
@@ -70,8 +70,8 @@ const ProfileArgumOfferList_specialProfileArgums_Item_offeredValues_boolean_true
  */
 export
 const true_bit: number = ProfileArgumOfferList_specialProfileArgums_Item_offeredValues_boolean_true_bit; /* SHORT_NAMED_BIT */
-export const _decode_ProfileArgumOfferList_specialProfileArgums_Item_offeredValues_boolean = $._decodeBitString;
-export const _encode_ProfileArgumOfferList_specialProfileArgums_Item_offeredValues_boolean = $._encodeBitString;
+export const _decode_ProfileArgumOfferList_specialProfileArgums_Item_offeredValues_boolean: $.ASN1Decoder<BIT_STRING> = $._decodeBitString;
+export const _encode_ProfileArgumOfferList_specialProfileArgums_Item_offeredValues_boolean: $.ASN1Encoder<BIT_STRING> = $._encodeBitString;
 
 
 /* eslint-enable */

@@ -1,7 +1,7 @@
 /* eslint-disable */
 import type { ATTRIBUTE } from "@wildboar/x500/InformationFramework";
 import {
-    Authenticator,
+    type Authenticator,
     _decode_Authenticator,
     _encode_Authenticator,
 } from "../PKIXCRMF-2009/Authenticator.ta.mjs";

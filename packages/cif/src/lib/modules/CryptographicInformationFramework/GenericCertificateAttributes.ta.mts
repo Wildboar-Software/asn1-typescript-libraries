@@ -1,7 +1,7 @@
 /* eslint-disable */
 import {
-    OBJECT_IDENTIFIER,
-    ASN1Element as _Element,
+    type OBJECT_IDENTIFIER,
+    type ASN1Element as _Element,
     ASN1TagClass as _TagClass,
     ASN1Construction as _Construction,
     ASN1UniversalType as _UniversalType,
@@ -34,25 +34,31 @@ import * as $ from "@wildboar/asn1/functional";
  */
 export
 class GenericCertificateAttributes {
+    /**
+     * @summary `certType`.
+     * @description
+     * Certificate type id from `AllowedCertificates`. ISO/IEC 7816-15:2016
+     * §8.2.16.
+     * @public
+     * @readonly
+     */
+    public readonly certType: OBJECT_IDENTIFIER;
+    /**
+     * @summary `certAttr`.
+     * @description
+     * Type-specific attributes. ISO/IEC 7816-15:2016 §8.2.16.
+     * @public
+     * @readonly
+     */
+    public readonly certAttr: _Element;
+
     constructor (
-        /**
-         * @summary `certType`.
-         * @description
-         * Certificate type id from `AllowedCertificates`. ISO/IEC 7816-15:2016
-         * §8.2.16.
-         * @public
-         * @readonly
-         */
-        readonly certType: OBJECT_IDENTIFIER,
-        /**
-         * @summary `certAttr`.
-         * @description
-         * Type-specific attributes. ISO/IEC 7816-15:2016 §8.2.16.
-         * @public
-         * @readonly
-         */
-        readonly certAttr: _Element
-    ) {}
+        certType: OBJECT_IDENTIFIER,
+        certAttr: _Element
+    ) {
+        this.certType = certType;
+        this.certAttr = certAttr;
+    }
 
     /**
      * @summary Restructures an object into a GenericCertificateAttributes

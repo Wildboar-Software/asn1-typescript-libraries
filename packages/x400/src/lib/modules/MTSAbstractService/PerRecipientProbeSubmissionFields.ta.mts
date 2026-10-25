@@ -1,7 +1,7 @@
 /* eslint-disable */
 import {
-    OPTIONAL,
-    ASN1Element as _Element,
+    type OPTIONAL,
+    type ASN1Element as _Element,
     ASN1TagClass as _TagClass,
     ASN1Construction as _Construction,
     ASN1UniversalType as _UniversalType,
@@ -12,17 +12,17 @@ import {
 } from '@wildboar/asn1';
 import * as $ from '@wildboar/asn1/functional';
 import {
-    RecipientName,
+    type RecipientName,
     _decode_RecipientName,
     _encode_RecipientName,
 } from '../MTSAbstractService/RecipientName.ta.mjs';
 import {
-    OriginatorReportRequest,
+    type OriginatorReportRequest,
     _decode_OriginatorReportRequest,
     _encode_OriginatorReportRequest,
 } from '../MTSAbstractService/OriginatorReportRequest.ta.mjs';
 import {
-    ExplicitConversion,
+    type ExplicitConversion,
     _decode_ExplicitConversion,
     _encode_ExplicitConversion,
 } from '../MTSAbstractService/ExplicitConversion.ta.mjs';
@@ -52,32 +52,42 @@ import {
  *
  */
 export class PerRecipientProbeSubmissionFields {
+    /**
+     * @summary `recipient_name`.
+     * @public
+     * @readonly
+     */
+    public readonly recipient_name: RecipientName;
+    /**
+     * @summary `originator_report_request`.
+     * @public
+     * @readonly
+     */
+    public readonly originator_report_request: OriginatorReportRequest;
+    /**
+     * @summary `explicit_conversion`.
+     * @public
+     * @readonly
+     */
+    public readonly explicit_conversion?: OPTIONAL<ExplicitConversion>;
+    /**
+     * @summary `extensions`.
+     * @public
+     * @readonly
+     */
+    public readonly extensions?: OPTIONAL<ExtensionField[]>;
+
     constructor(
-        /**
-         * @summary `recipient_name`.
-         * @public
-         * @readonly
-         */
-        readonly recipient_name: RecipientName,
-        /**
-         * @summary `originator_report_request`.
-         * @public
-         * @readonly
-         */
-        readonly originator_report_request: OriginatorReportRequest,
-        /**
-         * @summary `explicit_conversion`.
-         * @public
-         * @readonly
-         */
-        readonly explicit_conversion?: OPTIONAL<ExplicitConversion>,
-        /**
-         * @summary `extensions`.
-         * @public
-         * @readonly
-         */
-        readonly extensions?: OPTIONAL<ExtensionField[]>
-    ) {}
+        recipient_name: RecipientName,
+        originator_report_request: OriginatorReportRequest,
+        explicit_conversion?: OPTIONAL<ExplicitConversion>,
+        extensions?: OPTIONAL<ExtensionField[]>
+    ) {
+        this.recipient_name = recipient_name;
+        this.originator_report_request = originator_report_request;
+        this.explicit_conversion = explicit_conversion;
+        this.extensions = extensions;
+    }
 
     /**
      * @summary Restructures an object into a PerRecipientProbeSubmissionFields

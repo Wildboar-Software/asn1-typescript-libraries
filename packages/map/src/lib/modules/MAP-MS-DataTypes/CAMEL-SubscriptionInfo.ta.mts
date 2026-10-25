@@ -1,8 +1,8 @@
 /* eslint-disable */
 import {
-    NULL,
-    OPTIONAL,
-    ASN1Element as _Element,
+    type NULL,
+    type OPTIONAL,
+    type ASN1Element as _Element,
     ASN1TagClass as _TagClass
 } from "@wildboar/asn1";
 import * as $ from "@wildboar/asn1/functional";
@@ -11,13 +11,13 @@ import { D_CSI, _decode_D_CSI, _encode_D_CSI } from "../MAP-MS-DataTypes/D-CSI.t
 import { GPRS_CSI, _decode_GPRS_CSI, _encode_GPRS_CSI } from "../MAP-MS-DataTypes/GPRS-CSI.ta.mjs";
 import { M_CSI, _decode_M_CSI, _encode_M_CSI } from "../MAP-MS-DataTypes/M-CSI.ta.mjs";
 import { MG_CSI, _decode_MG_CSI, _encode_MG_CSI } from "../MAP-MS-DataTypes/MG-CSI.ta.mjs";
-import { MT_smsCAMELTDP_CriteriaList, _decode_MT_smsCAMELTDP_CriteriaList, _encode_MT_smsCAMELTDP_CriteriaList } from "../MAP-MS-DataTypes/MT-smsCAMELTDP-CriteriaList.ta.mjs";
-import { O_BcsmCamelTDPCriteriaList, _decode_O_BcsmCamelTDPCriteriaList, _encode_O_BcsmCamelTDPCriteriaList } from "../MAP-MS-DataTypes/O-BcsmCamelTDPCriteriaList.ta.mjs";
+import { type MT_smsCAMELTDP_CriteriaList, _decode_MT_smsCAMELTDP_CriteriaList, _encode_MT_smsCAMELTDP_CriteriaList } from "../MAP-MS-DataTypes/MT-smsCAMELTDP-CriteriaList.ta.mjs";
+import { type O_BcsmCamelTDPCriteriaList, _decode_O_BcsmCamelTDPCriteriaList, _encode_O_BcsmCamelTDPCriteriaList } from "../MAP-MS-DataTypes/O-BcsmCamelTDPCriteriaList.ta.mjs";
 import { O_CSI, _decode_O_CSI, _encode_O_CSI } from "../MAP-MS-DataTypes/O-CSI.ta.mjs";
 import { SMS_CSI, _decode_SMS_CSI, _encode_SMS_CSI } from "../MAP-MS-DataTypes/SMS-CSI.ta.mjs";
-import { SpecificCSI_Withdraw, _decode_SpecificCSI_Withdraw, _encode_SpecificCSI_Withdraw } from "../MAP-MS-DataTypes/SpecificCSI-Withdraw.ta.mjs";
+import { type SpecificCSI_Withdraw, _decode_SpecificCSI_Withdraw, _encode_SpecificCSI_Withdraw } from "../MAP-MS-DataTypes/SpecificCSI-Withdraw.ta.mjs";
 import { SS_CSI, _decode_SS_CSI, _encode_SS_CSI } from "../MAP-MS-DataTypes/SS-CSI.ta.mjs";
-import { T_BCSM_CAMEL_TDP_CriteriaList, _decode_T_BCSM_CAMEL_TDP_CriteriaList, _encode_T_BCSM_CAMEL_TDP_CriteriaList } from "../MAP-MS-DataTypes/T-BCSM-CAMEL-TDP-CriteriaList.ta.mjs";
+import { type T_BCSM_CAMEL_TDP_CriteriaList, _decode_T_BCSM_CAMEL_TDP_CriteriaList, _encode_T_BCSM_CAMEL_TDP_CriteriaList } from "../MAP-MS-DataTypes/T-BCSM-CAMEL-TDP-CriteriaList.ta.mjs";
 import { T_CSI, _decode_T_CSI, _encode_T_CSI } from "../MAP-MS-DataTypes/T-CSI.ta.mjs";
 
 
@@ -33,29 +33,29 @@ import { T_CSI, _decode_T_CSI, _encode_T_CSI } from "../MAP-MS-DataTypes/T-CSI.t
  * 
  * ```asn1
  * CAMEL-SubscriptionInfo ::= SEQUENCE {
- *     o-CSI    [0]    O-CSI    OPTIONAL,
- *     o-BcsmCamelTDP-CriteriaList    [1]    O-BcsmCamelTDPCriteriaList    OPTIONAL, 
- *     d-CSI    [2]    D-CSI    OPTIONAL,
- *     t-CSI    [3]    T-CSI    OPTIONAL,
- *     t-BCSM-CAMEL-TDP-CriteriaList    [4]    T-BCSM-CAMEL-TDP-CriteriaList    OPTIONAL,
- *     vt-CSI    [5]    T-CSI    OPTIONAL,
- *     vt-BCSM-CAMEL-TDP-CriteriaList    [6]    T-BCSM-CAMEL-TDP-CriteriaList    OPTIONAL,
- *     tif-CSI    [7]    NULL    OPTIONAL,
- *     tif-CSI-NotificationToCSE    [8]    NULL    OPTIONAL,
- *     gprs-CSI    [9]    GPRS-CSI    OPTIONAL,
- *     mo-sms-CSI    [10]    SMS-CSI    OPTIONAL,
- *     ss-CSI    [11]    SS-CSI    OPTIONAL,
- *     m-CSI    [12]    M-CSI    OPTIONAL,
- *     extensionContainer    [13]    ExtensionContainer    OPTIONAL,
+ *     o-CSI    [0]    O-CSI    type OPTIONAL,
+ *     o-BcsmCamelTDP-CriteriaList    [1]    O-BcsmCamelTDPCriteriaList    type OPTIONAL, 
+ *     d-CSI    [2]    D-CSI    type OPTIONAL,
+ *     t-CSI    [3]    T-CSI    type OPTIONAL,
+ *     t-BCSM-CAMEL-TDP-CriteriaList    [4]    T-BCSM-CAMEL-TDP-CriteriaList    type OPTIONAL,
+ *     vt-CSI    [5]    T-CSI    type OPTIONAL,
+ *     vt-BCSM-CAMEL-TDP-CriteriaList    [6]    T-BCSM-CAMEL-TDP-CriteriaList    type OPTIONAL,
+ *     tif-CSI    [7]    NULL    type OPTIONAL,
+ *     tif-CSI-NotificationToCSE    [8]    NULL    type OPTIONAL,
+ *     gprs-CSI    [9]    GPRS-CSI    type OPTIONAL,
+ *     mo-sms-CSI    [10]    SMS-CSI    type OPTIONAL,
+ *     ss-CSI    [11]    SS-CSI    type OPTIONAL,
+ *     m-CSI    [12]    M-CSI    type OPTIONAL,
+ *     extensionContainer    [13]    ExtensionContainer    type OPTIONAL,
  *     ...,
- *     specificCSIDeletedList    [14]    SpecificCSI-Withdraw    OPTIONAL,
- *     mt-sms-CSI    [15]    SMS-CSI    OPTIONAL,
- *     mt-smsCAMELTDP-CriteriaList    [16]    MT-smsCAMELTDP-CriteriaList    OPTIONAL,
- *     mg-csi    [17]    MG-CSI    OPTIONAL,
- *     o-IM-CSI    [18] O-CSI    OPTIONAL,
- *     o-IM-BcsmCamelTDP-CriteriaList    [19] O-BcsmCamelTDPCriteriaList    OPTIONAL,
- *     d-IM-CSI    [20] D-CSI    OPTIONAL,
- *     vt-IM-CSI    [21] T-CSI    OPTIONAL,
+ *     specificCSIDeletedList    [14]    SpecificCSI-Withdraw    type OPTIONAL,
+ *     mt-sms-CSI    [15]    SMS-CSI    type OPTIONAL,
+ *     mt-smsCAMELTDP-CriteriaList    [16]    MT-smsCAMELTDP-CriteriaList    type OPTIONAL,
+ *     mg-csi    [17]    MG-CSI    type OPTIONAL,
+ *     o-IM-CSI    [18] O-CSI    type OPTIONAL,
+ *     o-IM-BcsmCamelTDP-CriteriaList    [19] O-BcsmCamelTDPCriteriaList    type OPTIONAL,
+ *     d-IM-CSI    [20] D-CSI    type OPTIONAL,
+ *     vt-IM-CSI    [21] T-CSI    type OPTIONAL,
  *     vt-IM-BCSM-CAMEL-TDP-CriteriaList    [22]    T-BCSM-CAMEL-TDP-CriteriaList    OPTIONAL
  *     }
  * ```
@@ -64,192 +64,242 @@ import { T_CSI, _decode_T_CSI, _encode_T_CSI } from "../MAP-MS-DataTypes/T-CSI.t
  */
 export
 class CAMEL_SubscriptionInfo {
+    /**
+     * @summary `o_CSI`.
+     * @description
+     *
+     * Originating CAMEL services as defined in 3GPP TS 23.078 (3GPP TS
+     * 29.002 V19.1.0 clause 7.6.5.7).
+     *
+     * @public
+     * @readonly
+     */
+    public readonly o_CSI?: OPTIONAL<O_CSI>;
+    /**
+     * @summary `o_BcsmCamelTDP_CriteriaList`.
+     * @public
+     * @readonly
+     */
+    public readonly o_BcsmCamelTDP_CriteriaList?: OPTIONAL<O_BcsmCamelTDPCriteriaList>;
+    /**
+     * @summary `d_CSI`.
+     * @description
+     *
+     * Originating CAMEL dialled services as defined in 3GPP TS 23.078 (3GPP
+     * TS 29.002 V19.1.0 clause 7.6.5.7A).
+     *
+     * @public
+     * @readonly
+     */
+    public readonly d_CSI?: OPTIONAL<D_CSI>;
+    /**
+     * @summary `t_CSI`.
+     * @description
+     *
+     * Terminating CAMEL services in the GMSC as defined in 3GPP TS 23.078
+     * (3GPP TS 29.002 V19.1.0 clause 7.6.5.7B).
+     *
+     * @public
+     * @readonly
+     */
+    public readonly t_CSI?: OPTIONAL<T_CSI>;
+    /**
+     * @summary `t_BCSM_CAMEL_TDP_CriteriaList`.
+     * @public
+     * @readonly
+     */
+    public readonly t_BCSM_CAMEL_TDP_CriteriaList?: OPTIONAL<T_BCSM_CAMEL_TDP_CriteriaList>;
+    /**
+     * @summary `vt_CSI`.
+     * @description
+     *
+     * Terminating CAMEL services in the VMSC as defined in 3GPP TS 23.078
+     * (3GPP TS 29.002 V19.1.0 clause 7.6.5.7C).
+     *
+     * @public
+     * @readonly
+     */
+    public readonly vt_CSI?: OPTIONAL<T_CSI>;
+    /**
+     * @summary `vt_BCSM_CAMEL_TDP_CriteriaList`.
+     * @public
+     * @readonly
+     */
+    public readonly vt_BCSM_CAMEL_TDP_CriteriaList?: OPTIONAL<T_BCSM_CAMEL_TDP_CriteriaList>;
+    /**
+     * @summary `tif_CSI`.
+     * @public
+     * @readonly
+     */
+    public readonly tif_CSI?: OPTIONAL<NULL>;
+    /**
+     * @summary `tif_CSI_NotificationToCSE`.
+     * @public
+     * @readonly
+     */
+    public readonly tif_CSI_NotificationToCSE?: OPTIONAL<NULL>;
+    /**
+     * @summary `gprs_CSI`.
+     * @description
+     *
+     * GPRS CAMEL services as defined in 3GPP TS 23.078 (3GPP TS 29.002
+     * V19.1.0 clause 7.6.3.77).
+     *
+     * @public
+     * @readonly
+     */
+    public readonly gprs_CSI?: OPTIONAL<GPRS_CSI>;
+    /**
+     * @summary `mo_sms_CSI`.
+     * @public
+     * @readonly
+     */
+    public readonly mo_sms_CSI?: OPTIONAL<SMS_CSI>;
+    /**
+     * @summary `ss_CSI`.
+     * @public
+     * @readonly
+     */
+    public readonly ss_CSI?: OPTIONAL<SS_CSI>;
+    /**
+     * @summary `m_CSI`.
+     * @public
+     * @readonly
+     */
+    public readonly m_CSI?: OPTIONAL<M_CSI>;
+    /**
+     * @summary `extensionContainer`.
+     * @public
+     * @readonly
+     */
+    public readonly extensionContainer?: OPTIONAL<ExtensionContainer>;
+    /**
+     * @summary `specificCSIDeletedList`.
+     * @public
+     * @readonly
+     */
+    public readonly specificCSIDeletedList?: OPTIONAL<SpecificCSI_Withdraw>;
+    /**
+     * @summary `mt_sms_CSI`.
+     * @public
+     * @readonly
+     */
+    public readonly mt_sms_CSI?: OPTIONAL<SMS_CSI>;
+    /**
+     * @summary `mt_smsCAMELTDP_CriteriaList`.
+     * @public
+     * @readonly
+     */
+    public readonly mt_smsCAMELTDP_CriteriaList?: OPTIONAL<MT_smsCAMELTDP_CriteriaList>;
+    /**
+     * @summary `mg_csi`.
+     * @public
+     * @readonly
+     */
+    public readonly mg_csi?: OPTIONAL<MG_CSI>;
+    /**
+     * @summary `o_IM_CSI`.
+     * @description
+     *
+     * Originating IM CN CAMEL services as defined in 3GPP TS 23.278 (3GPP
+     * TS 29.002 V19.1.0 clause 7.6.5.7D).
+     *
+     * @public
+     * @readonly
+     */
+    public readonly o_IM_CSI?: OPTIONAL<O_CSI>;
+    /**
+     * @summary `o_IM_BcsmCamelTDP_CriteriaList`.
+     * @public
+     * @readonly
+     */
+    public readonly o_IM_BcsmCamelTDP_CriteriaList?: OPTIONAL<O_BcsmCamelTDPCriteriaList>;
+    /**
+     * @summary `d_IM_CSI`.
+     * @description
+     *
+     * Originating IM CN CAMEL dialled services as defined in 3GPP TS 23.278
+     * (3GPP TS 29.002 V19.1.0 clause 7.6.5.7E).
+     *
+     * @public
+     * @readonly
+     */
+    public readonly d_IM_CSI?: OPTIONAL<D_CSI>;
+    /**
+     * @summary `vt_IM_CSI`.
+     * @description
+     *
+     * Terminating IM CN CAMEL services as defined in 3GPP TS 23.278 (3GPP
+     * TS 29.002 V19.1.0 clause 7.6.5.7F).
+     *
+     * @public
+     * @readonly
+     */
+    public readonly vt_IM_CSI?: OPTIONAL<T_CSI>;
+    /**
+     * @summary `vt_IM_BCSM_CAMEL_TDP_CriteriaList`.
+     * @public
+     * @readonly
+     */
+    public readonly vt_IM_BCSM_CAMEL_TDP_CriteriaList?: OPTIONAL<T_BCSM_CAMEL_TDP_CriteriaList>;
+    /**
+     * @summary Extensions that are not recognized.
+     * @public
+     * @readonly
+     */
+    public readonly _unrecognizedExtensionsList: _Element[];
+
     constructor (
-        /**
-         * @summary `o_CSI`.
-         * @description
-         *
-         * Originating CAMEL services as defined in 3GPP TS 23.078 (3GPP TS
-         * 29.002 V19.1.0 clause 7.6.5.7).
-         *
-         * @public
-         * @readonly
-         */
-        readonly o_CSI?: OPTIONAL<O_CSI>,
-        /**
-         * @summary `o_BcsmCamelTDP_CriteriaList`.
-         * @public
-         * @readonly
-         */
-        readonly o_BcsmCamelTDP_CriteriaList?: OPTIONAL<O_BcsmCamelTDPCriteriaList>,
-        /**
-         * @summary `d_CSI`.
-         * @description
-         *
-         * Originating CAMEL dialled services as defined in 3GPP TS 23.078 (3GPP
-         * TS 29.002 V19.1.0 clause 7.6.5.7A).
-         *
-         * @public
-         * @readonly
-         */
-        readonly d_CSI?: OPTIONAL<D_CSI>,
-        /**
-         * @summary `t_CSI`.
-         * @description
-         *
-         * Terminating CAMEL services in the GMSC as defined in 3GPP TS 23.078
-         * (3GPP TS 29.002 V19.1.0 clause 7.6.5.7B).
-         *
-         * @public
-         * @readonly
-         */
-        readonly t_CSI?: OPTIONAL<T_CSI>,
-        /**
-         * @summary `t_BCSM_CAMEL_TDP_CriteriaList`.
-         * @public
-         * @readonly
-         */
-        readonly t_BCSM_CAMEL_TDP_CriteriaList?: OPTIONAL<T_BCSM_CAMEL_TDP_CriteriaList>,
-        /**
-         * @summary `vt_CSI`.
-         * @description
-         *
-         * Terminating CAMEL services in the VMSC as defined in 3GPP TS 23.078
-         * (3GPP TS 29.002 V19.1.0 clause 7.6.5.7C).
-         *
-         * @public
-         * @readonly
-         */
-        readonly vt_CSI?: OPTIONAL<T_CSI>,
-        /**
-         * @summary `vt_BCSM_CAMEL_TDP_CriteriaList`.
-         * @public
-         * @readonly
-         */
-        readonly vt_BCSM_CAMEL_TDP_CriteriaList?: OPTIONAL<T_BCSM_CAMEL_TDP_CriteriaList>,
-        /**
-         * @summary `tif_CSI`.
-         * @public
-         * @readonly
-         */
-        readonly tif_CSI?: OPTIONAL<NULL>,
-        /**
-         * @summary `tif_CSI_NotificationToCSE`.
-         * @public
-         * @readonly
-         */
-        readonly tif_CSI_NotificationToCSE?: OPTIONAL<NULL>,
-        /**
-         * @summary `gprs_CSI`.
-         * @description
-         *
-         * GPRS CAMEL services as defined in 3GPP TS 23.078 (3GPP TS 29.002
-         * V19.1.0 clause 7.6.3.77).
-         *
-         * @public
-         * @readonly
-         */
-        readonly gprs_CSI?: OPTIONAL<GPRS_CSI>,
-        /**
-         * @summary `mo_sms_CSI`.
-         * @public
-         * @readonly
-         */
-        readonly mo_sms_CSI?: OPTIONAL<SMS_CSI>,
-        /**
-         * @summary `ss_CSI`.
-         * @public
-         * @readonly
-         */
-        readonly ss_CSI?: OPTIONAL<SS_CSI>,
-        /**
-         * @summary `m_CSI`.
-         * @public
-         * @readonly
-         */
-        readonly m_CSI?: OPTIONAL<M_CSI>,
-        /**
-         * @summary `extensionContainer`.
-         * @public
-         * @readonly
-         */
-        readonly extensionContainer?: OPTIONAL<ExtensionContainer>,
-        /**
-         * @summary `specificCSIDeletedList`.
-         * @public
-         * @readonly
-         */
-        readonly specificCSIDeletedList?: OPTIONAL<SpecificCSI_Withdraw>,
-        /**
-         * @summary `mt_sms_CSI`.
-         * @public
-         * @readonly
-         */
-        readonly mt_sms_CSI?: OPTIONAL<SMS_CSI>,
-        /**
-         * @summary `mt_smsCAMELTDP_CriteriaList`.
-         * @public
-         * @readonly
-         */
-        readonly mt_smsCAMELTDP_CriteriaList?: OPTIONAL<MT_smsCAMELTDP_CriteriaList>,
-        /**
-         * @summary `mg_csi`.
-         * @public
-         * @readonly
-         */
-        readonly mg_csi?: OPTIONAL<MG_CSI>,
-        /**
-         * @summary `o_IM_CSI`.
-         * @description
-         *
-         * Originating IM CN CAMEL services as defined in 3GPP TS 23.278 (3GPP
-         * TS 29.002 V19.1.0 clause 7.6.5.7D).
-         *
-         * @public
-         * @readonly
-         */
-        readonly o_IM_CSI?: OPTIONAL<O_CSI>,
-        /**
-         * @summary `o_IM_BcsmCamelTDP_CriteriaList`.
-         * @public
-         * @readonly
-         */
-        readonly o_IM_BcsmCamelTDP_CriteriaList?: OPTIONAL<O_BcsmCamelTDPCriteriaList>,
-        /**
-         * @summary `d_IM_CSI`.
-         * @description
-         *
-         * Originating IM CN CAMEL dialled services as defined in 3GPP TS 23.278
-         * (3GPP TS 29.002 V19.1.0 clause 7.6.5.7E).
-         *
-         * @public
-         * @readonly
-         */
-        readonly d_IM_CSI?: OPTIONAL<D_CSI>,
-        /**
-         * @summary `vt_IM_CSI`.
-         * @description
-         *
-         * Terminating IM CN CAMEL services as defined in 3GPP TS 23.278 (3GPP
-         * TS 29.002 V19.1.0 clause 7.6.5.7F).
-         *
-         * @public
-         * @readonly
-         */
-        readonly vt_IM_CSI?: OPTIONAL<T_CSI>,
-        /**
-         * @summary `vt_IM_BCSM_CAMEL_TDP_CriteriaList`.
-         * @public
-         * @readonly
-         */
-        readonly vt_IM_BCSM_CAMEL_TDP_CriteriaList?: OPTIONAL<T_BCSM_CAMEL_TDP_CriteriaList>,
-        /**
-         * @summary Extensions that are not recognized.
-         * @public
-         * @readonly
-         */
-        readonly _unrecognizedExtensionsList: _Element[] = []
-    ) {}
+        o_CSI?: OPTIONAL<O_CSI>,
+        o_BcsmCamelTDP_CriteriaList?: OPTIONAL<O_BcsmCamelTDPCriteriaList>,
+        d_CSI?: OPTIONAL<D_CSI>,
+        t_CSI?: OPTIONAL<T_CSI>,
+        t_BCSM_CAMEL_TDP_CriteriaList?: OPTIONAL<T_BCSM_CAMEL_TDP_CriteriaList>,
+        vt_CSI?: OPTIONAL<T_CSI>,
+        vt_BCSM_CAMEL_TDP_CriteriaList?: OPTIONAL<T_BCSM_CAMEL_TDP_CriteriaList>,
+        tif_CSI?: OPTIONAL<NULL>,
+        tif_CSI_NotificationToCSE?: OPTIONAL<NULL>,
+        gprs_CSI?: OPTIONAL<GPRS_CSI>,
+        mo_sms_CSI?: OPTIONAL<SMS_CSI>,
+        ss_CSI?: OPTIONAL<SS_CSI>,
+        m_CSI?: OPTIONAL<M_CSI>,
+        extensionContainer?: OPTIONAL<ExtensionContainer>,
+        specificCSIDeletedList?: OPTIONAL<SpecificCSI_Withdraw>,
+        mt_sms_CSI?: OPTIONAL<SMS_CSI>,
+        mt_smsCAMELTDP_CriteriaList?: OPTIONAL<MT_smsCAMELTDP_CriteriaList>,
+        mg_csi?: OPTIONAL<MG_CSI>,
+        o_IM_CSI?: OPTIONAL<O_CSI>,
+        o_IM_BcsmCamelTDP_CriteriaList?: OPTIONAL<O_BcsmCamelTDPCriteriaList>,
+        d_IM_CSI?: OPTIONAL<D_CSI>,
+        vt_IM_CSI?: OPTIONAL<T_CSI>,
+        vt_IM_BCSM_CAMEL_TDP_CriteriaList?: OPTIONAL<T_BCSM_CAMEL_TDP_CriteriaList>,
+        _unrecognizedExtensionsList: _Element[] = []
+    ) {
+        this.o_CSI = o_CSI;
+        this.o_BcsmCamelTDP_CriteriaList = o_BcsmCamelTDP_CriteriaList;
+        this.d_CSI = d_CSI;
+        this.t_CSI = t_CSI;
+        this.t_BCSM_CAMEL_TDP_CriteriaList = t_BCSM_CAMEL_TDP_CriteriaList;
+        this.vt_CSI = vt_CSI;
+        this.vt_BCSM_CAMEL_TDP_CriteriaList = vt_BCSM_CAMEL_TDP_CriteriaList;
+        this.tif_CSI = tif_CSI;
+        this.tif_CSI_NotificationToCSE = tif_CSI_NotificationToCSE;
+        this.gprs_CSI = gprs_CSI;
+        this.mo_sms_CSI = mo_sms_CSI;
+        this.ss_CSI = ss_CSI;
+        this.m_CSI = m_CSI;
+        this.extensionContainer = extensionContainer;
+        this.specificCSIDeletedList = specificCSIDeletedList;
+        this.mt_sms_CSI = mt_sms_CSI;
+        this.mt_smsCAMELTDP_CriteriaList = mt_smsCAMELTDP_CriteriaList;
+        this.mg_csi = mg_csi;
+        this.o_IM_CSI = o_IM_CSI;
+        this.o_IM_BcsmCamelTDP_CriteriaList = o_IM_BcsmCamelTDP_CriteriaList;
+        this.d_IM_CSI = d_IM_CSI;
+        this.vt_IM_CSI = vt_IM_CSI;
+        this.vt_IM_BCSM_CAMEL_TDP_CriteriaList = vt_IM_BCSM_CAMEL_TDP_CriteriaList;
+        this._unrecognizedExtensionsList = _unrecognizedExtensionsList;
+    }
 
     /**
      * @summary Restructures an object into a CAMEL_SubscriptionInfo

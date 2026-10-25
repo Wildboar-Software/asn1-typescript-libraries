@@ -1,7 +1,7 @@
 /* eslint-disable */
 import {
-    OPTIONAL,
-    ASN1Element as _Element,
+    type OPTIONAL,
+    type ASN1Element as _Element,
     ASN1TagClass as _TagClass,
     ASN1Construction as _Construction,
     ASN1UniversalType as _UniversalType,
@@ -12,17 +12,17 @@ import {
 } from '@wildboar/asn1';
 import * as $ from '@wildboar/asn1/functional';
 import {
-    ArrivalTime,
+    type ArrivalTime,
     _decode_ArrivalTime,
     _encode_ArrivalTime,
 } from '../MTAAbstractService/ArrivalTime.ta.mjs';
 import {
-    ConvertedEncodedInformationTypes,
+    type ConvertedEncodedInformationTypes,
     _decode_ConvertedEncodedInformationTypes,
     _encode_ConvertedEncodedInformationTypes,
 } from '../MTSAbstractService/ConvertedEncodedInformationTypes.ta.mjs';
 import {
-    ReportType,
+    type ReportType,
     _decode_ReportType,
     _encode_ReportType,
 } from '../MTSAbstractService/ReportType.ta.mjs';
@@ -48,26 +48,34 @@ import {
  *
  */
 export class LastTraceInformation {
+    /**
+     * @summary `arrival_time`.
+     * @public
+     * @readonly
+     */
+    public readonly arrival_time: ArrivalTime;
+    /**
+     * @summary `converted_encoded_information_types`.
+     * @public
+     * @readonly
+     */
+    public readonly converted_encoded_information_types: OPTIONAL<ConvertedEncodedInformationTypes>;
+    /**
+     * @summary `report_type`.
+     * @public
+     * @readonly
+     */
+    public readonly report_type: ReportType;
+
     constructor(
-        /**
-         * @summary `arrival_time`.
-         * @public
-         * @readonly
-         */
-        readonly arrival_time: ArrivalTime,
-        /**
-         * @summary `converted_encoded_information_types`.
-         * @public
-         * @readonly
-         */
-        readonly converted_encoded_information_types: OPTIONAL<ConvertedEncodedInformationTypes>,
-        /**
-         * @summary `report_type`.
-         * @public
-         * @readonly
-         */
-        readonly report_type: ReportType
-    ) {}
+        arrival_time: ArrivalTime,
+        converted_encoded_information_types: OPTIONAL<ConvertedEncodedInformationTypes>,
+        report_type: ReportType
+    ) {
+        this.arrival_time = arrival_time;
+        this.converted_encoded_information_types = converted_encoded_information_types;
+        this.report_type = report_type;
+    }
 
     /**
      * @summary Restructures an object into a LastTraceInformation

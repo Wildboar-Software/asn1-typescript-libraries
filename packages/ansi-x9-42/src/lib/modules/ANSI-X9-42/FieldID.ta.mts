@@ -1,9 +1,9 @@
 /* eslint-disable */
 import {
     ASN1ConstructionError as _ConstructionError,
-    ASN1Element as _Element,
+    type ASN1Element as _Element,
     ASN1TagClass as _TagClass,
-    OBJECT_IDENTIFIER,
+    type OBJECT_IDENTIFIER,
 } from "@wildboar/asn1";
 import * as $ from "@wildboar/asn1/functional";
 
@@ -36,7 +36,7 @@ export class FieldID {
      * @public
      * @readonly
      */
-    readonly fieldType: OBJECT_IDENTIFIER;
+    public readonly fieldType: OBJECT_IDENTIFIER;
     /**
      * @summary `parameters`.
      * @description
@@ -47,7 +47,7 @@ export class FieldID {
      * @public
      * @readonly
      */
-    readonly parameters: _Element;
+    public readonly parameters: _Element;
 
     constructor(
         fieldType: OBJECT_IDENTIFIER,

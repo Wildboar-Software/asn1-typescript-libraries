@@ -1,13 +1,13 @@
 /* eslint-disable */
 import {
-    OPTIONAL,
-    ASN1Element as _Element,
+    type OPTIONAL,
+    type ASN1Element as _Element,
     ASN1TagClass as _TagClass
 } from "@wildboar/asn1";
 import * as $ from "@wildboar/asn1/functional";
-import { EuiccMemoryResetResponse_resetResult, _decode_EuiccMemoryResetResponse_resetResult, _encode_EuiccMemoryResetResponse_resetResult } from "../SGP32Definitions/EuiccMemoryResetResponse-resetResult.ta.mjs";
-import { EuiccMemoryResetResponse_resetEimResult, _decode_EuiccMemoryResetResponse_resetEimResult, _encode_EuiccMemoryResetResponse_resetEimResult } from "../SGP32Definitions/EuiccMemoryResetResponse-resetEimResult.ta.mjs";
-import { EuiccMemoryResetResponse_resetImmediateEnableConfigResult, _decode_EuiccMemoryResetResponse_resetImmediateEnableConfigResult, _encode_EuiccMemoryResetResponse_resetImmediateEnableConfigResult } from "../SGP32Definitions/EuiccMemoryResetResponse-resetImmediateEnableConfigResult.ta.mjs";
+import { type EuiccMemoryResetResponse_resetResult, _decode_EuiccMemoryResetResponse_resetResult, _encode_EuiccMemoryResetResponse_resetResult } from "../SGP32Definitions/EuiccMemoryResetResponse-resetResult.ta.mjs";
+import { type EuiccMemoryResetResponse_resetEimResult, _decode_EuiccMemoryResetResponse_resetEimResult, _encode_EuiccMemoryResetResponse_resetEimResult } from "../SGP32Definitions/EuiccMemoryResetResponse-resetEimResult.ta.mjs";
+import { type EuiccMemoryResetResponse_resetImmediateEnableConfigResult, _decode_EuiccMemoryResetResponse_resetImmediateEnableConfigResult, _encode_EuiccMemoryResetResponse_resetImmediateEnableConfigResult } from "../SGP32Definitions/EuiccMemoryResetResponse-resetImmediateEnableConfigResult.ta.mjs";
 
 
 /**
@@ -34,39 +34,47 @@ import { EuiccMemoryResetResponse_resetImmediateEnableConfigResult, _decode_Euic
  */
 export
 class EuiccMemoryResetResponse {
+    /**
+     * @summary `resetResult`.
+     * @description
+     * Whether any selected Profile was deleted, or why Profile deletion stopped
+     * (SGP.32 v1.2, section 5.9.5). ok means at least one Profile was deleted.
+     * nothingToDelete means none was. Both of those also confirm a successful
+     * default SM-DP+ address reset when that bit was set.
+     * @public
+     * @readonly
+     */
+    public readonly resetResult: EuiccMemoryResetResponse_resetResult;
+    /**
+     * @summary `resetEimResult`.
+     * @description
+     * Result of removing every Associated eIM's configuration. Included only when
+     * resetEimConfigData was set and resetResult is ok or nothingToDelete (SGP.32
+     * v1.2, section 5.9.5).
+     * @public
+     * @readonly
+     */
+    public readonly resetEimResult?: OPTIONAL<EuiccMemoryResetResponse_resetEimResult>;
+    /**
+     * @summary `resetImmediateEnableConfigResult`.
+     * @description
+     * Result of clearing immediate Profile enabling. Included only when
+     * resetImmediateEnableConfig was set and resetResult is ok or nothingToDelete
+     * (SGP.32 v1.2, section 5.9.5).
+     * @public
+     * @readonly
+     */
+    public readonly resetImmediateEnableConfigResult?: OPTIONAL<EuiccMemoryResetResponse_resetImmediateEnableConfigResult>;
+
     constructor (
-        /**
-         * @summary `resetResult`.
-         * @description
-         * Whether any selected Profile was deleted, or why Profile deletion stopped
-         * (SGP.32 v1.2, section 5.9.5). ok means at least one Profile was deleted.
-         * nothingToDelete means none was. Both of those also confirm a successful
-         * default SM-DP+ address reset when that bit was set.
-         * @public
-         * @readonly
-         */
-        readonly resetResult: EuiccMemoryResetResponse_resetResult,
-        /**
-         * @summary `resetEimResult`.
-         * @description
-         * Result of removing every Associated eIM's configuration. Included only when
-         * resetEimConfigData was set and resetResult is ok or nothingToDelete (SGP.32
-         * v1.2, section 5.9.5).
-         * @public
-         * @readonly
-         */
-        readonly resetEimResult?: OPTIONAL<EuiccMemoryResetResponse_resetEimResult>,
-        /**
-         * @summary `resetImmediateEnableConfigResult`.
-         * @description
-         * Result of clearing immediate Profile enabling. Included only when
-         * resetImmediateEnableConfig was set and resetResult is ok or nothingToDelete
-         * (SGP.32 v1.2, section 5.9.5).
-         * @public
-         * @readonly
-         */
-        readonly resetImmediateEnableConfigResult?: OPTIONAL<EuiccMemoryResetResponse_resetImmediateEnableConfigResult>
-    ) {}
+        resetResult: EuiccMemoryResetResponse_resetResult,
+        resetEimResult?: OPTIONAL<EuiccMemoryResetResponse_resetEimResult>,
+        resetImmediateEnableConfigResult?: OPTIONAL<EuiccMemoryResetResponse_resetImmediateEnableConfigResult>
+    ) {
+        this.resetResult = resetResult;
+        this.resetEimResult = resetEimResult;
+        this.resetImmediateEnableConfigResult = resetImmediateEnableConfigResult;
+    }
 
     /**
      * @summary Restructures an object into a EuiccMemoryResetResponse

@@ -1,13 +1,13 @@
 /* eslint-disable */
 import {
-    OPTIONAL,
-    ASN1Element as _Element,
+    type OPTIONAL,
+    type ASN1Element as _Element,
     ASN1TagClass as _TagClass,
     ASN1SizeError,
 } from "@wildboar/asn1";
 import * as $ from "@wildboar/asn1/functional";
 import { AdviceModeCombination, _decode_AdviceModeCombination, _encode_AdviceModeCombination } from "../SS-AOC-Operations-asn1-97/AdviceModeCombination.ta.mjs";
-import { ChargeRequestArg_chargeReqArgExtension, _decode_ChargeRequestArg_chargeReqArgExtension, _encode_ChargeRequestArg_chargeReqArgExtension } from "../SS-AOC-Operations-asn1-97/ChargeRequestArg-chargeReqArgExtension.ta.mjs";
+import { type ChargeRequestArg_chargeReqArgExtension, _decode_ChargeRequestArg_chargeReqArgExtension, _encode_ChargeRequestArg_chargeReqArgExtension } from "../SS-AOC-Operations-asn1-97/ChargeRequestArg-chargeReqArgExtension.ta.mjs";
 
 /**
  * @summary ChargeRequestArg

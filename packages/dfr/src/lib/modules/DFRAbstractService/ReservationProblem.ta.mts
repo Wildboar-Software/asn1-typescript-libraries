@@ -1,6 +1,6 @@
 /* eslint-disable */
 import {
-    ASN1Element as _Element,
+    type ASN1Element as _Element,
     ASN1TagClass as _TagClass,
     ASN1Construction as _Construction,
     ASN1UniversalType as _UniversalType,
@@ -86,7 +86,7 @@ type ReservationProblem = _enum_for_ReservationProblem;
  * @enum {number}
  */
 export
-const ReservationProblem = _enum_for_ReservationProblem;
+const ReservationProblem: typeof _enum_for_ReservationProblem = _enum_for_ReservationProblem;
 
 /**
  * @summary ReservationProblem_cannot_reserve
@@ -97,7 +97,7 @@ const ReservationProblem = _enum_for_ReservationProblem;
  * @type {number}
  */
 export
-const ReservationProblem_cannot_reserve: ReservationProblem = ReservationProblem.cannot_reserve; /* LONG_NAMED_ENUMERATED_VALUE */
+const ReservationProblem_cannot_reserve: _enum_for_ReservationProblem.cannot_reserve = ReservationProblem.cannot_reserve; /* LONG_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary cannot_reserve
@@ -108,7 +108,7 @@ const ReservationProblem_cannot_reserve: ReservationProblem = ReservationProblem
  * @type {number}
  */
 export
-const cannot_reserve: ReservationProblem = ReservationProblem.cannot_reserve; /* SHORT_NAMED_ENUMERATED_VALUE */
+const cannot_reserve: _enum_for_ReservationProblem.cannot_reserve = ReservationProblem.cannot_reserve; /* SHORT_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary ReservationProblem_already_reserved
@@ -119,7 +119,7 @@ const cannot_reserve: ReservationProblem = ReservationProblem.cannot_reserve; /*
  * @type {number}
  */
 export
-const ReservationProblem_already_reserved: ReservationProblem = ReservationProblem.already_reserved; /* LONG_NAMED_ENUMERATED_VALUE */
+const ReservationProblem_already_reserved: _enum_for_ReservationProblem.already_reserved = ReservationProblem.already_reserved; /* LONG_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary already_reserved
@@ -130,7 +130,7 @@ const ReservationProblem_already_reserved: ReservationProblem = ReservationProbl
  * @type {number}
  */
 export
-const already_reserved: ReservationProblem = ReservationProblem.already_reserved; /* SHORT_NAMED_ENUMERATED_VALUE */
+const already_reserved: _enum_for_ReservationProblem.already_reserved = ReservationProblem.already_reserved; /* SHORT_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary ReservationProblem_not_yet_reserved
@@ -141,7 +141,7 @@ const already_reserved: ReservationProblem = ReservationProblem.already_reserved
  * @type {number}
  */
 export
-const ReservationProblem_not_yet_reserved: ReservationProblem = ReservationProblem.not_yet_reserved; /* LONG_NAMED_ENUMERATED_VALUE */
+const ReservationProblem_not_yet_reserved: _enum_for_ReservationProblem.not_yet_reserved = ReservationProblem.not_yet_reserved; /* LONG_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary not_yet_reserved
@@ -152,7 +152,7 @@ const ReservationProblem_not_yet_reserved: ReservationProblem = ReservationProbl
  * @type {number}
  */
 export
-const not_yet_reserved: ReservationProblem = ReservationProblem.not_yet_reserved; /* SHORT_NAMED_ENUMERATED_VALUE */
+const not_yet_reserved: _enum_for_ReservationProblem.not_yet_reserved = ReservationProblem.not_yet_reserved; /* SHORT_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary ReservationProblem_cannot_unreserve
@@ -163,7 +163,7 @@ const not_yet_reserved: ReservationProblem = ReservationProblem.not_yet_reserved
  * @type {number}
  */
 export
-const ReservationProblem_cannot_unreserve: ReservationProblem = ReservationProblem.cannot_unreserve; /* LONG_NAMED_ENUMERATED_VALUE */
+const ReservationProblem_cannot_unreserve: _enum_for_ReservationProblem.cannot_unreserve = ReservationProblem.cannot_unreserve; /* LONG_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary cannot_unreserve
@@ -174,7 +174,7 @@ const ReservationProblem_cannot_unreserve: ReservationProblem = ReservationProbl
  * @type {number}
  */
 export
-const cannot_unreserve: ReservationProblem = ReservationProblem.cannot_unreserve; /* SHORT_NAMED_ENUMERATED_VALUE */
+const cannot_unreserve: _enum_for_ReservationProblem.cannot_unreserve = ReservationProblem.cannot_unreserve; /* SHORT_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary ReservationProblem_reservation_not_changed
@@ -186,7 +186,7 @@ const cannot_unreserve: ReservationProblem = ReservationProblem.cannot_unreserve
  * @type {number}
  */
 export
-const ReservationProblem_reservation_not_changed: ReservationProblem = ReservationProblem.reservation_not_changed; /* LONG_NAMED_ENUMERATED_VALUE */
+const ReservationProblem_reservation_not_changed: _enum_for_ReservationProblem.reservation_not_changed = ReservationProblem.reservation_not_changed; /* LONG_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary reservation_not_changed
@@ -198,9 +198,23 @@ const ReservationProblem_reservation_not_changed: ReservationProblem = Reservati
  * @type {number}
  */
 export
-const reservation_not_changed: ReservationProblem = ReservationProblem.reservation_not_changed; /* SHORT_NAMED_ENUMERATED_VALUE */
-export const _decode_ReservationProblem = $._decodeEnumerated;
-export const _encode_ReservationProblem = $._encodeEnumerated;
+const reservation_not_changed: _enum_for_ReservationProblem.reservation_not_changed = ReservationProblem.reservation_not_changed; /* SHORT_NAMED_ENUMERATED_VALUE */
+export function _decode_ReservationProblem(el: _Element): ReservationProblem {
+    const enumerated = $._decodeEnumerated(el);
+    switch (enumerated) {
+        case ReservationProblem.cannot_reserve: return ReservationProblem.cannot_reserve;
+        case ReservationProblem.already_reserved: return ReservationProblem.already_reserved;
+        case ReservationProblem.not_yet_reserved: return ReservationProblem.not_yet_reserved;
+        case ReservationProblem.cannot_unreserve: return ReservationProblem.cannot_unreserve;
+        case ReservationProblem.reservation_not_changed: return ReservationProblem.reservation_not_changed;
+        default:
+            throw new _ConstructionError(
+                "Invalid ENUMERATED value " + enumerated + " for ReservationProblem.",
+                el,
+            );
+    }
+}
+export const _encode_ReservationProblem: $.ASN1Encoder<ReservationProblem> = $._encodeEnumerated as $.ASN1Encoder<ReservationProblem>;
 
 
 /* eslint-enable */

@@ -1,7 +1,7 @@
 /* eslint-disable */
 import {
-    OPTIONAL,
-    ASN1Element as _Element,
+    type OPTIONAL,
+    type ASN1Element as _Element,
     ASN1TagClass as _TagClass,
     ASN1Construction as _Construction,
     ASN1UniversalType as _UniversalType,
@@ -12,10 +12,10 @@ import {
 } from "@wildboar/asn1";
 import * as $ from "@wildboar/asn1/functional";
 import { FilteredCallTreatment, _decode_FilteredCallTreatment, _encode_FilteredCallTreatment } from "../Core-INAP-CS1-DataTypes/FilteredCallTreatment.ta.mjs";
-import { FilteringCharacteristics, _decode_FilteringCharacteristics, _encode_FilteringCharacteristics } from "../Core-INAP-CS1-DataTypes/FilteringCharacteristics.ta.mjs";
-import { FilteringTimeOut, _decode_FilteringTimeOut, _encode_FilteringTimeOut } from "../Core-INAP-CS1-DataTypes/FilteringTimeOut.ta.mjs";
-import { FilteringCriteria, _decode_FilteringCriteria, _encode_FilteringCriteria } from "../Core-INAP-CS1-DataTypes/FilteringCriteria.ta.mjs";
-import { DateAndTime, _decode_DateAndTime, _encode_DateAndTime } from "../Core-INAP-CS1-DataTypes/DateAndTime.ta.mjs";
+import { type FilteringCharacteristics, _decode_FilteringCharacteristics, _encode_FilteringCharacteristics } from "../Core-INAP-CS1-DataTypes/FilteringCharacteristics.ta.mjs";
+import { type FilteringTimeOut, _decode_FilteringTimeOut, _encode_FilteringTimeOut } from "../Core-INAP-CS1-DataTypes/FilteringTimeOut.ta.mjs";
+import { type FilteringCriteria, _decode_FilteringCriteria, _encode_FilteringCriteria } from "../Core-INAP-CS1-DataTypes/FilteringCriteria.ta.mjs";
+import { type DateAndTime, _decode_DateAndTime, _encode_DateAndTime } from "../Core-INAP-CS1-DataTypes/DateAndTime.ta.mjs";
 import { ExtensionField, _decode_ExtensionField, _encode_ExtensionField } from "../Core-INAP-CS1-DataTypes/ExtensionField.ta.mjs";
 
 
@@ -31,7 +31,7 @@ import { ExtensionField, _decode_ExtensionField, _encode_ExtensionField } from "
  *      filteringCharacteristics     [1] FilteringCharacteristics,
  *      filteringTimeOut     [2] FilteringTimeOut,
  *      filteringCriteria     [3] FilteringCriteria,
- *      startTime     [4] DateAndTime     OPTIONAL,
+ *      startTime     [4] DateAndTime     type OPTIONAL,
  *      extensions     [5] SEQUENCE SIZE(1..numOfExtensions) OF ExtensionField     OPTIONAL
  * --  ...
  *      }
@@ -41,44 +41,58 @@ import { ExtensionField, _decode_ExtensionField, _encode_ExtensionField } from "
  */
 export
 class ActivateServiceFilteringArg {
+    /**
+     * @summary `filteredCallTreatment`.
+     * @public
+     * @readonly
+     */
+    public readonly filteredCallTreatment: FilteredCallTreatment;
+    /**
+     * @summary `filteringCharacteristics`.
+     * @public
+     * @readonly
+     */
+    public readonly filteringCharacteristics: FilteringCharacteristics;
+    /**
+     * @summary `filteringTimeOut`.
+     * @public
+     * @readonly
+     */
+    public readonly filteringTimeOut: FilteringTimeOut;
+    /**
+     * @summary `filteringCriteria`.
+     * @public
+     * @readonly
+     */
+    public readonly filteringCriteria: FilteringCriteria;
+    /**
+     * @summary `startTime`.
+     * @public
+     * @readonly
+     */
+    public readonly startTime?: OPTIONAL<DateAndTime>;
+    /**
+     * @summary `extensions`.
+     * @public
+     * @readonly
+     */
+    public readonly extensions?: OPTIONAL<ExtensionField[]>;
+
     constructor (
-        /**
-         * @summary `filteredCallTreatment`.
-         * @public
-         * @readonly
-         */
-        readonly filteredCallTreatment: FilteredCallTreatment,
-        /**
-         * @summary `filteringCharacteristics`.
-         * @public
-         * @readonly
-         */
-        readonly filteringCharacteristics: FilteringCharacteristics,
-        /**
-         * @summary `filteringTimeOut`.
-         * @public
-         * @readonly
-         */
-        readonly filteringTimeOut: FilteringTimeOut,
-        /**
-         * @summary `filteringCriteria`.
-         * @public
-         * @readonly
-         */
-        readonly filteringCriteria: FilteringCriteria,
-        /**
-         * @summary `startTime`.
-         * @public
-         * @readonly
-         */
-        readonly startTime?: OPTIONAL<DateAndTime>,
-        /**
-         * @summary `extensions`.
-         * @public
-         * @readonly
-         */
-        readonly extensions?: OPTIONAL<ExtensionField[]>
-    ) {}
+        filteredCallTreatment: FilteredCallTreatment,
+        filteringCharacteristics: FilteringCharacteristics,
+        filteringTimeOut: FilteringTimeOut,
+        filteringCriteria: FilteringCriteria,
+        startTime?: OPTIONAL<DateAndTime>,
+        extensions?: OPTIONAL<ExtensionField[]>
+    ) {
+        this.filteredCallTreatment = filteredCallTreatment;
+        this.filteringCharacteristics = filteringCharacteristics;
+        this.filteringTimeOut = filteringTimeOut;
+        this.filteringCriteria = filteringCriteria;
+        this.startTime = startTime;
+        this.extensions = extensions;
+    }
 
     /**
      * @summary Restructures an object into a ActivateServiceFilteringArg

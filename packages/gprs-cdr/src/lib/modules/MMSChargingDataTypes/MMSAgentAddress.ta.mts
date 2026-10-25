@@ -1,11 +1,11 @@
 /* eslint-disable */
 import {
-    OPTIONAL,
-    ASN1Element as _Element,
+    type OPTIONAL,
+    type ASN1Element as _Element,
     ASN1TagClass as _TagClass
 } from "@wildboar/asn1";
 import * as $ from "@wildboar/asn1/functional";
-import { MMSAgentAddressData, _decode_MMSAgentAddressData, _encode_MMSAgentAddressData } from "../MMSChargingDataTypes/MMSAgentAddressData.ta.mjs";
+import { type MMSAgentAddressData, _decode_MMSAgentAddressData, _encode_MMSAgentAddressData } from "../MMSChargingDataTypes/MMSAgentAddressData.ta.mjs";
 import { MMSRecipientType, _decode_MMSRecipientType, _encode_MMSRecipientType } from "../MMSChargingDataTypes/MMSRecipientType.ta.mjs";
 
 

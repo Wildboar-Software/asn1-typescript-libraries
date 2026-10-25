@@ -1,7 +1,7 @@
 /* eslint-disable */
 import {
-    OCTET_STRING,
-    ASN1Element as _Element,
+    type OCTET_STRING,
+    type ASN1Element as _Element,
     ASN1TagClass as _TagClass,
     ASN1Construction as _Construction,
     ASN1UniversalType as _UniversalType,
@@ -34,7 +34,7 @@ export const _decode_ForwardCallIndicators = (el: _Element): ForwardCallIndicato
     }
     return value;
 };
-export const _encode_ForwardCallIndicators = $._encodeOctetString;
+export const _encode_ForwardCallIndicators: $.ASN1Encoder<OCTET_STRING> = $._encodeOctetString;
 
 
 /* eslint-enable */

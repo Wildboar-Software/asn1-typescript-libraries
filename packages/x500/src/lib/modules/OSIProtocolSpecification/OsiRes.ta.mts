@@ -1,12 +1,12 @@
 /* eslint-disable */
 import {
     ASN1ConstructionError as _ConstructionError,
-    ASN1Element as _Element,
+    type ASN1Element as _Element,
     ASN1TagClass as _TagClass,
 } from "@wildboar/asn1";
 import * as $ from "@wildboar/asn1/functional";
 import {
-    InvokeId,
+    type InvokeId,
     _decode_InvokeId,
     _encode_InvokeId,
 } from "../CommonProtocolSpecification/InvokeId.ta.mjs";
@@ -31,20 +31,26 @@ import {
  *
  */
 export class OsiRes {
+    /**
+     * @summary `invokeId`.
+     * @public
+     * @readonly
+     */
+    public readonly invokeId: InvokeId;
+    /**
+     * @summary `result`.
+     * @public
+     * @readonly
+     */
+    public readonly result: OsiRes_result;
+
     constructor(
-        /**
-         * @summary `invokeId`.
-         * @public
-         * @readonly
-         */
-        readonly invokeId: InvokeId,
-        /**
-         * @summary `result`.
-         * @public
-         * @readonly
-         */
-        readonly result: OsiRes_result
-    ) {}
+        invokeId: InvokeId,
+        result: OsiRes_result
+    ) {
+        this.invokeId = invokeId;
+        this.result = result;
+    }
 
     /**
      * @summary Restructures an object into a OsiRes

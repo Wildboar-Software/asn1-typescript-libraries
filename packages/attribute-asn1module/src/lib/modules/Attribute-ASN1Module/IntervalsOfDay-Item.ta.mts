@@ -1,6 +1,6 @@
 /* eslint-disable */
 import {
-    ASN1Element as _Element,
+    type ASN1Element as _Element,
     ASN1TagClass as _TagClass,
     ASN1Construction as _Construction,
     ASN1UniversalType as _UniversalType,
@@ -37,7 +37,7 @@ class IntervalsOfDay_Item {
      * @public
      * @readonly
      */
-    readonly intervalStart: Time24;
+    public readonly intervalStart: Time24;
     /**
      * @summary `intervalEnd`.
      * @description
@@ -47,7 +47,7 @@ class IntervalsOfDay_Item {
      * @public
      * @readonly
      */
-    readonly intervalEnd: Time24;
+    public readonly intervalEnd: Time24;
 
     constructor (
         intervalStart: Time24,

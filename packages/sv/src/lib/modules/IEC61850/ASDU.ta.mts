@@ -1,18 +1,18 @@
 /* eslint-disable */
 import {
-    INTEGER,
-    OPTIONAL,
-    VisibleString,
-    ASN1Element as _Element,
+    type INTEGER,
+    type OPTIONAL,
+    type VisibleString,
+    type ASN1Element as _Element,
     ASN1TagClass as _TagClass,
     ASN1OverflowError,
 } from "@wildboar/asn1";
 import * as $ from "@wildboar/asn1/functional";
-import { UtcTime, _decode_UtcTime, _encode_UtcTime } from "../IEC61850/UtcTime.ta.mjs";
-import { ASDU_smpSynch, _decode_ASDU_smpSynch, _encode_ASDU_smpSynch } from "../IEC61850/ASDU-smpSynch.ta.mjs";
-import { Data, _decode_Data, _encode_Data } from "../IEC61850/Data.ta.mjs";
-import { ASDU_smpMod, _decode_ASDU_smpMod, _encode_ASDU_smpMod } from "../IEC61850/ASDU-smpMod.ta.mjs";
-import { GmidData, _decode_GmidData, _encode_GmidData } from "../IEC61850/GmidData.ta.mjs";
+import { type UtcTime, _decode_UtcTime, _encode_UtcTime } from "../IEC61850/UtcTime.ta.mjs";
+import { type ASDU_smpSynch, _decode_ASDU_smpSynch, _encode_ASDU_smpSynch } from "../IEC61850/ASDU-smpSynch.ta.mjs";
+import { type Data, _decode_Data, _encode_Data } from "../IEC61850/Data.ta.mjs";
+import { type ASDU_smpMod, _decode_ASDU_smpMod, _encode_ASDU_smpMod } from "../IEC61850/ASDU-smpMod.ta.mjs";
+import { type GmidData, _decode_GmidData, _encode_GmidData } from "../IEC61850/GmidData.ta.mjs";
 
 
 /**
@@ -64,7 +64,7 @@ class ASDU {
      * @public
      * @readonly
      */
-    readonly svID: VisibleString;
+    public readonly svID: VisibleString;
     /**
      * @summary `datSet`.
      * @description
@@ -76,7 +76,7 @@ class ASDU {
      * @public
      * @readonly
      */
-    readonly datSet: OPTIONAL<VisibleString>;
+    public readonly datSet: OPTIONAL<VisibleString>;
     /**
      * @summary `smpCnt`.
      * @description
@@ -90,7 +90,7 @@ class ASDU {
      * @public
      * @readonly
      */
-    readonly smpCnt: INTEGER;
+    public readonly smpCnt: INTEGER;
     /**
      * @summary `confRev`.
      * @description
@@ -102,7 +102,7 @@ class ASDU {
      * @public
      * @readonly
      */
-    readonly confRev: INTEGER;
+    public readonly confRev: INTEGER;
     /**
      * @summary `refrTm`.
      * @description
@@ -114,7 +114,7 @@ class ASDU {
      * @public
      * @readonly
      */
-    readonly refrTm: OPTIONAL<UtcTime>;
+    public readonly refrTm: OPTIONAL<UtcTime>;
     /**
      * @summary `smpSynch`.
      * @description
@@ -127,7 +127,7 @@ class ASDU {
      * @public
      * @readonly
      */
-    readonly smpSynch: OPTIONAL<ASDU_smpSynch>;
+    public readonly smpSynch: OPTIONAL<ASDU_smpSynch>;
     /**
      * @summary `smpRate`.
      * @description
@@ -142,7 +142,7 @@ class ASDU {
      * @public
      * @readonly
      */
-    readonly smpRate: OPTIONAL<INTEGER>;
+    public readonly smpRate: OPTIONAL<INTEGER>;
     /**
      * @summary `seqData`.
      * @description
@@ -154,7 +154,7 @@ class ASDU {
      * @public
      * @readonly
      */
-    readonly seqData: Data;
+    public readonly seqData: Data;
     /**
      * @summary `smpMod`.
      * @description
@@ -165,7 +165,7 @@ class ASDU {
      * @public
      * @readonly
      */
-    readonly smpMod?: OPTIONAL<ASDU_smpMod>;
+    public readonly smpMod?: OPTIONAL<ASDU_smpMod>;
     /**
      * @summary `gmidData`.
      * @description
@@ -176,13 +176,13 @@ class ASDU {
      * @public
      * @readonly
      */
-    readonly gmidData?: OPTIONAL<GmidData>;
+    public readonly gmidData?: OPTIONAL<GmidData>;
     /**
      * @summary Extensions that are not recognized.
      * @public
      * @readonly
      */
-    readonly _unrecognizedExtensionsList: _Element[];
+    public readonly _unrecognizedExtensionsList: _Element[];
 
     constructor (
         svID: VisibleString,

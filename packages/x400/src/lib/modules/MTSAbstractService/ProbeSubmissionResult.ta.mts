@@ -1,7 +1,7 @@
 /* eslint-disable */
 import {
-    OPTIONAL,
-    ASN1Element as _Element,
+    type OPTIONAL,
+    type ASN1Element as _Element,
     ASN1TagClass as _TagClass,
     ASN1Construction as _Construction,
     ASN1UniversalType as _UniversalType,
@@ -12,17 +12,17 @@ import {
 } from '@wildboar/asn1';
 import * as $ from '@wildboar/asn1/functional';
 import {
-    ProbeSubmissionIdentifier,
+    type ProbeSubmissionIdentifier,
     _decode_ProbeSubmissionIdentifier,
     _encode_ProbeSubmissionIdentifier,
 } from '../MTSAbstractService/ProbeSubmissionIdentifier.ta.mjs';
 import {
-    ProbeSubmissionTime,
+    type ProbeSubmissionTime,
     _decode_ProbeSubmissionTime,
     _encode_ProbeSubmissionTime,
 } from '../MTSAbstractService/ProbeSubmissionTime.ta.mjs';
 import {
-    ContentIdentifier,
+    type ContentIdentifier,
     _decode_ContentIdentifier,
     _encode_ContentIdentifier,
 } from '../MTSAbstractService/ContentIdentifier.ta.mjs';
@@ -51,32 +51,42 @@ import {
  *
  */
 export class ProbeSubmissionResult {
+    /**
+     * @summary `probe_submission_identifier`.
+     * @public
+     * @readonly
+     */
+    public readonly probe_submission_identifier: ProbeSubmissionIdentifier;
+    /**
+     * @summary `probe_submission_time`.
+     * @public
+     * @readonly
+     */
+    public readonly probe_submission_time: ProbeSubmissionTime;
+    /**
+     * @summary `content_identifier`.
+     * @public
+     * @readonly
+     */
+    public readonly content_identifier?: OPTIONAL<ContentIdentifier>;
+    /**
+     * @summary `extensions`.
+     * @public
+     * @readonly
+     */
+    public readonly extensions?: OPTIONAL<ExtensionField[]>;
+
     constructor(
-        /**
-         * @summary `probe_submission_identifier`.
-         * @public
-         * @readonly
-         */
-        readonly probe_submission_identifier: ProbeSubmissionIdentifier,
-        /**
-         * @summary `probe_submission_time`.
-         * @public
-         * @readonly
-         */
-        readonly probe_submission_time: ProbeSubmissionTime,
-        /**
-         * @summary `content_identifier`.
-         * @public
-         * @readonly
-         */
-        readonly content_identifier?: OPTIONAL<ContentIdentifier>,
-        /**
-         * @summary `extensions`.
-         * @public
-         * @readonly
-         */
-        readonly extensions?: OPTIONAL<ExtensionField[]>
-    ) {}
+        probe_submission_identifier: ProbeSubmissionIdentifier,
+        probe_submission_time: ProbeSubmissionTime,
+        content_identifier?: OPTIONAL<ContentIdentifier>,
+        extensions?: OPTIONAL<ExtensionField[]>
+    ) {
+        this.probe_submission_identifier = probe_submission_identifier;
+        this.probe_submission_time = probe_submission_time;
+        this.content_identifier = content_identifier;
+        this.extensions = extensions;
+    }
 
     /**
      * @summary Restructures an object into a ProbeSubmissionResult

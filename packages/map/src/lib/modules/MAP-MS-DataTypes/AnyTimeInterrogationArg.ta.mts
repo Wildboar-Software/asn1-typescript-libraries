@@ -1,12 +1,12 @@
 /* eslint-disable */
 import {
-    OPTIONAL,
-    ASN1Element as _Element,
+    type OPTIONAL,
+    type ASN1Element as _Element,
     ASN1TagClass as _TagClass
 } from "@wildboar/asn1";
 import * as $ from "@wildboar/asn1/functional";
-import { ISDN_AddressString, _decode_ISDN_AddressString, _encode_ISDN_AddressString } from "../MAP-CommonDataTypes/ISDN-AddressString.ta.mjs";
-import { SubscriberIdentity, _decode_SubscriberIdentity, _encode_SubscriberIdentity } from "../MAP-CommonDataTypes/SubscriberIdentity.ta.mjs";
+import { type ISDN_AddressString, _decode_ISDN_AddressString, _encode_ISDN_AddressString } from "../MAP-CommonDataTypes/ISDN-AddressString.ta.mjs";
+import { type SubscriberIdentity, _decode_SubscriberIdentity, _encode_SubscriberIdentity } from "../MAP-CommonDataTypes/SubscriberIdentity.ta.mjs";
 import { ExtensionContainer, _decode_ExtensionContainer, _encode_ExtensionContainer } from "../MAP-ExtensionDataTypes/ExtensionContainer.ta.mjs";
 import { RequestedInfo, _decode_RequestedInfo, _encode_RequestedInfo } from "../MAP-MS-DataTypes/RequestedInfo.ta.mjs";
 
@@ -29,7 +29,7 @@ import { RequestedInfo, _decode_RequestedInfo, _encode_RequestedInfo } from "../
  *     subscriberIdentity    [0] SubscriberIdentity,
  *     requestedInfo    [1] RequestedInfo,
  *     gsmSCF-Address    [3] ISDN-AddressString,
- *     extensionContainer    [2] ExtensionContainer    OPTIONAL,
+ *     extensionContainer    [2] ExtensionContainer    type OPTIONAL,
  *     ...}
  * ```
  * 
@@ -37,57 +37,69 @@ import { RequestedInfo, _decode_RequestedInfo, _encode_RequestedInfo } from "../
  */
 export
 class AnyTimeInterrogationArg {
+    /**
+     * @summary `subscriberIdentity`.
+     * @description
+     *
+     * IMSI or MSISDN identifying the subscriber. One of IMSI and MSISDN is
+     * used according to 3GPP TS 23.018 / TS 23.078 (3GPP TS 29.002 V19.1.0
+     * clauses 8.11.1.2 and 7.6.2).
+     *
+     * @public
+     * @readonly
+     */
+    public readonly subscriberIdentity: SubscriberIdentity;
+    /**
+     * @summary `requestedInfo`.
+     * @description
+     *
+     * Information requested (state, location, T-ADS data, MNP, etc.). When
+     * used to the HLR, subscriber state, location, Time Zone or T-ADS data
+     * may be requested; to the GMLC only location; to the NPLR only MNP
+     * information (3GPP TS 29.002 V19.1.0 clauses 8.11.1.1 and 7.6.3.31).
+     *
+     * @public
+     * @readonly
+     */
+    public readonly requestedInfo: RequestedInfo;
+    /**
+     * @summary `gsmSCF_Address`.
+     * @description
+     *
+     * Address of the interrogating gsmSCF (international E.164). The HLR or
+     * GMLC may use it to screen the request. gsmSCF-Address is mandatory
+     * (3GPP TS 29.002 V19.1.0 clauses 8.11.1.2, 8.11.1.3 and 7.6.2.58).
+     *
+     * @public
+     * @readonly
+     */
+    public readonly gsmSCF_Address: ISDN_AddressString;
+    /**
+     * @summary `extensionContainer`.
+     * @public
+     * @readonly
+     */
+    public readonly extensionContainer?: OPTIONAL<ExtensionContainer>;
+    /**
+     * @summary Extensions that are not recognized.
+     * @public
+     * @readonly
+     */
+    public readonly _unrecognizedExtensionsList: _Element[];
+
     constructor (
-        /**
-         * @summary `subscriberIdentity`.
-         * @description
-         *
-         * IMSI or MSISDN identifying the subscriber. One of IMSI and MSISDN is
-         * used according to 3GPP TS 23.018 / TS 23.078 (3GPP TS 29.002 V19.1.0
-         * clauses 8.11.1.2 and 7.6.2).
-         *
-         * @public
-         * @readonly
-         */
-        readonly subscriberIdentity: SubscriberIdentity,
-        /**
-         * @summary `requestedInfo`.
-         * @description
-         *
-         * Information requested (state, location, T-ADS data, MNP, etc.). When
-         * used to the HLR, subscriber state, location, Time Zone or T-ADS data
-         * may be requested; to the GMLC only location; to the NPLR only MNP
-         * information (3GPP TS 29.002 V19.1.0 clauses 8.11.1.1 and 7.6.3.31).
-         *
-         * @public
-         * @readonly
-         */
-        readonly requestedInfo: RequestedInfo,
-        /**
-         * @summary `gsmSCF_Address`.
-         * @description
-         *
-         * Address of the interrogating gsmSCF (international E.164). The HLR or
-         * GMLC may use it to screen the request. gsmSCF-Address is mandatory
-         * (3GPP TS 29.002 V19.1.0 clauses 8.11.1.2, 8.11.1.3 and 7.6.2.58).
-         *
-         * @public
-         * @readonly
-         */
-        readonly gsmSCF_Address: ISDN_AddressString,
-        /**
-         * @summary `extensionContainer`.
-         * @public
-         * @readonly
-         */
-        readonly extensionContainer?: OPTIONAL<ExtensionContainer>,
-        /**
-         * @summary Extensions that are not recognized.
-         * @public
-         * @readonly
-         */
-        readonly _unrecognizedExtensionsList: _Element[] = []
-    ) {}
+        subscriberIdentity: SubscriberIdentity,
+        requestedInfo: RequestedInfo,
+        gsmSCF_Address: ISDN_AddressString,
+        extensionContainer?: OPTIONAL<ExtensionContainer>,
+        _unrecognizedExtensionsList: _Element[] = []
+    ) {
+        this.subscriberIdentity = subscriberIdentity;
+        this.requestedInfo = requestedInfo;
+        this.gsmSCF_Address = gsmSCF_Address;
+        this.extensionContainer = extensionContainer;
+        this._unrecognizedExtensionsList = _unrecognizedExtensionsList;
+    }
 
     /**
      * @summary Restructures an object into a AnyTimeInterrogationArg

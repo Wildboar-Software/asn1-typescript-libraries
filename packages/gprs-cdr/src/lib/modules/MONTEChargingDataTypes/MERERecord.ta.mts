@@ -1,18 +1,18 @@
 /* eslint-disable */
 import {
-    IA5String,
-    INTEGER,
-    NULL,
-    OCTET_STRING,
-    OPTIONAL,
-    UTF8String,
-    ASN1Element as _Element,
+    type IA5String,
+    type INTEGER,
+    type NULL,
+    type OCTET_STRING,
+    type OPTIONAL,
+    type UTF8String,
+    type ASN1Element as _Element,
     ASN1TagClass as _TagClass,
     ASN1SizeError,
     ASN1OverflowError
 } from "@wildboar/asn1";
 import * as $ from "@wildboar/asn1/functional";
-import { RecordType, _decode_RecordType, _encode_RecordType } from "../MONTEChargingDataTypes/RecordType.ta.mjs";
+import { type RecordType, _decode_RecordType, _encode_RecordType } from "../MONTEChargingDataTypes/RecordType.ta.mjs";
 import { MonitoringEventReportData, _decode_MonitoringEventReportData, _encode_MonitoringEventReportData } from "../MONTEChargingDataTypes/MonitoringEventReportData.ta.mjs";
 import { ManagementExtension, _decode_ManagementExtension, _encode_ManagementExtension } from "../MONTEChargingDataTypes/ManagementExtension.ta.mjs";
 

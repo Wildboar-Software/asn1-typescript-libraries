@@ -1,18 +1,18 @@
 /* eslint-disable */
 import {
-    OPTIONAL,
-    ASN1Element as _Element,
+    type OPTIONAL,
+    type ASN1Element as _Element,
     ASN1TagClass as _TagClass
 } from "@wildboar/asn1";
 import * as $ from "@wildboar/asn1/functional";
-import { AddressString, _decode_AddressString, _encode_AddressString } from "../MAP-CommonDataTypes/AddressString.ta.mjs";
-import { Ext_BasicServiceCode, _decode_Ext_BasicServiceCode, _encode_Ext_BasicServiceCode } from "../MAP-CommonDataTypes/Ext-BasicServiceCode.ta.mjs";
-import { Ext_SS_Status, _decode_Ext_SS_Status, _encode_Ext_SS_Status } from "../MAP-CommonDataTypes/Ext-SS-Status.ta.mjs";
-import { ISDN_SubaddressString, _decode_ISDN_SubaddressString, _encode_ISDN_SubaddressString } from "../MAP-CommonDataTypes/ISDN-SubaddressString.ta.mjs";
+import { type AddressString, _decode_AddressString, _encode_AddressString } from "../MAP-CommonDataTypes/AddressString.ta.mjs";
+import { type Ext_BasicServiceCode, _decode_Ext_BasicServiceCode, _encode_Ext_BasicServiceCode } from "../MAP-CommonDataTypes/Ext-BasicServiceCode.ta.mjs";
+import { type Ext_SS_Status, _decode_Ext_SS_Status, _encode_Ext_SS_Status } from "../MAP-CommonDataTypes/Ext-SS-Status.ta.mjs";
+import { type ISDN_SubaddressString, _decode_ISDN_SubaddressString, _encode_ISDN_SubaddressString } from "../MAP-CommonDataTypes/ISDN-SubaddressString.ta.mjs";
 import { ExtensionContainer, _decode_ExtensionContainer, _encode_ExtensionContainer } from "../MAP-ExtensionDataTypes/ExtensionContainer.ta.mjs";
-import { Ext_NoRepCondTime, _decode_Ext_NoRepCondTime, _encode_Ext_NoRepCondTime } from "../MAP-MS-DataTypes/Ext-NoRepCondTime.ta.mjs";
+import { type Ext_NoRepCondTime, _decode_Ext_NoRepCondTime, _encode_Ext_NoRepCondTime } from "../MAP-MS-DataTypes/Ext-NoRepCondTime.ta.mjs";
 import { ModificationInstruction, _decode_ModificationInstruction, _encode_ModificationInstruction, _enum_for_ModificationInstruction } from "../MAP-MS-DataTypes/ModificationInstruction.ta.mjs";
-import { SS_Code, _decode_SS_Code, _encode_SS_Code } from "../MAP-SS-Code/SS-Code.ta.mjs";
+import { type SS_Code, _decode_SS_Code, _encode_SS_Code } from "../MAP-SS-Code/SS-Code.ta.mjs";
 
 
 /**
@@ -28,13 +28,13 @@ import { SS_Code, _decode_SS_Code, _encode_SS_Code } from "../MAP-SS-Code/SS-Cod
  * ```asn1
  * ModificationRequestFor-CF-Info ::= SEQUENCE {
  *     ss-Code    [0]    SS-Code,
- *     basicService    [1]    Ext-BasicServiceCode    OPTIONAL,
- *     ss-Status    [2]    Ext-SS-Status    OPTIONAL,
- *     forwardedToNumber    [3]    AddressString    OPTIONAL,
- *     forwardedToSubaddress    [4]    ISDN-SubaddressString    OPTIONAL,
- *     noReplyConditionTime    [5]    Ext-NoRepCondTime    OPTIONAL,
- *     modifyNotificationToCSE    [6]    ModificationInstruction    OPTIONAL,
- *     extensionContainer    [7]    ExtensionContainer    OPTIONAL,
+ *     basicService    [1]    Ext-BasicServiceCode    type OPTIONAL,
+ *     ss-Status    [2]    Ext-SS-Status    type OPTIONAL,
+ *     forwardedToNumber    [3]    AddressString    type OPTIONAL,
+ *     forwardedToSubaddress    [4]    ISDN-SubaddressString    type OPTIONAL,
+ *     noReplyConditionTime    [5]    Ext-NoRepCondTime    type OPTIONAL,
+ *     modifyNotificationToCSE    [6]    ModificationInstruction    type OPTIONAL,
+ *     extensionContainer    [7]    ExtensionContainer    type OPTIONAL,
  *     ...}
  * ```
  * 
@@ -42,97 +42,117 @@ import { SS_Code, _decode_SS_Code, _encode_SS_Code } from "../MAP-SS-Code/SS-Cod
  */
 export
 class ModificationRequestFor_CF_Info {
+    /**
+     * @summary `ss_Code`.
+     * @description
+     *
+     * SS-Code of the supplementary service (clause 7.6.4.1). (3GPP TS
+     * 29.002 V19.1.0 clause 7.6.3.82)
+     *
+     * @public
+     * @readonly
+     */
+    public readonly ss_Code: SS_Code;
+    /**
+     * @summary `basicService`.
+     * @description
+     *
+     * Extensible basic service group to which the modification applies.
+     * (3GPP TS 29.002 V19.1.0 clause 7.6.3.82)
+     *
+     * @public
+     * @readonly
+     */
+    public readonly basicService?: OPTIONAL<Ext_BasicServiceCode>;
+    /**
+     * @summary `ss_Status`.
+     * @description
+     *
+     * SS-Status of the supplementary service (clause 7.6.4.2). (3GPP TS
+     * 29.002 V19.1.0 clause 7.6.3.82)
+     *
+     * @public
+     * @readonly
+     */
+    public readonly ss_Status?: OPTIONAL<Ext_SS_Status>;
+    /**
+     * @summary `forwardedToNumber`.
+     * @description
+     *
+     * Forwarded-to number. (3GPP TS 29.002 V19.1.0 clauses 7.6.2.22 and
+     * 7.6.3.82)
+     *
+     * @public
+     * @readonly
+     */
+    public readonly forwardedToNumber?: OPTIONAL<AddressString>;
+    /**
+     * @summary `forwardedToSubaddress`.
+     * @description
+     *
+     * Forwarded-to subaddress. (3GPP TS 29.002 V19.1.0 clauses 7.6.2.23 and
+     * 7.6.3.82)
+     *
+     * @public
+     * @readonly
+     */
+    public readonly forwardedToSubaddress?: OPTIONAL<ISDN_SubaddressString>;
+    /**
+     * @summary `noReplyConditionTime`.
+     * @description
+     *
+     * No-reply condition timer. (3GPP TS 29.002 V19.1.0 clauses 7.6.3.19
+     * and 7.6.3.82)
+     *
+     * @public
+     * @readonly
+     */
+    public readonly noReplyConditionTime?: OPTIONAL<Ext_NoRepCondTime>;
+    /**
+     * @summary `modifyNotificationToCSE`.
+     * @description
+     *
+     * Activate or deactivate notification to the CSE. (3GPP TS 29.002
+     * V19.1.0 clauses 7.6.3.82 and 8.11.4)
+     *
+     * @public
+     * @readonly
+     */
+    public readonly modifyNotificationToCSE?: OPTIONAL<ModificationInstruction>;
+    /**
+     * @summary `extensionContainer`.
+     * @public
+     * @readonly
+     */
+    public readonly extensionContainer?: OPTIONAL<ExtensionContainer>;
+    /**
+     * @summary Extensions that are not recognized.
+     * @public
+     * @readonly
+     */
+    public readonly _unrecognizedExtensionsList: _Element[];
+
     constructor (
-        /**
-         * @summary `ss_Code`.
-         * @description
-         *
-         * SS-Code of the supplementary service (clause 7.6.4.1). (3GPP TS
-         * 29.002 V19.1.0 clause 7.6.3.82)
-         *
-         * @public
-         * @readonly
-         */
-        readonly ss_Code: SS_Code,
-        /**
-         * @summary `basicService`.
-         * @description
-         *
-         * Extensible basic service group to which the modification applies.
-         * (3GPP TS 29.002 V19.1.0 clause 7.6.3.82)
-         *
-         * @public
-         * @readonly
-         */
-        readonly basicService?: OPTIONAL<Ext_BasicServiceCode>,
-        /**
-         * @summary `ss_Status`.
-         * @description
-         *
-         * SS-Status of the supplementary service (clause 7.6.4.2). (3GPP TS
-         * 29.002 V19.1.0 clause 7.6.3.82)
-         *
-         * @public
-         * @readonly
-         */
-        readonly ss_Status?: OPTIONAL<Ext_SS_Status>,
-        /**
-         * @summary `forwardedToNumber`.
-         * @description
-         *
-         * Forwarded-to number. (3GPP TS 29.002 V19.1.0 clauses 7.6.2.22 and
-         * 7.6.3.82)
-         *
-         * @public
-         * @readonly
-         */
-        readonly forwardedToNumber?: OPTIONAL<AddressString>,
-        /**
-         * @summary `forwardedToSubaddress`.
-         * @description
-         *
-         * Forwarded-to subaddress. (3GPP TS 29.002 V19.1.0 clauses 7.6.2.23 and
-         * 7.6.3.82)
-         *
-         * @public
-         * @readonly
-         */
-        readonly forwardedToSubaddress?: OPTIONAL<ISDN_SubaddressString>,
-        /**
-         * @summary `noReplyConditionTime`.
-         * @description
-         *
-         * No-reply condition timer. (3GPP TS 29.002 V19.1.0 clauses 7.6.3.19
-         * and 7.6.3.82)
-         *
-         * @public
-         * @readonly
-         */
-        readonly noReplyConditionTime?: OPTIONAL<Ext_NoRepCondTime>,
-        /**
-         * @summary `modifyNotificationToCSE`.
-         * @description
-         *
-         * Activate or deactivate notification to the CSE. (3GPP TS 29.002
-         * V19.1.0 clauses 7.6.3.82 and 8.11.4)
-         *
-         * @public
-         * @readonly
-         */
-        readonly modifyNotificationToCSE?: OPTIONAL<ModificationInstruction>,
-        /**
-         * @summary `extensionContainer`.
-         * @public
-         * @readonly
-         */
-        readonly extensionContainer?: OPTIONAL<ExtensionContainer>,
-        /**
-         * @summary Extensions that are not recognized.
-         * @public
-         * @readonly
-         */
-        readonly _unrecognizedExtensionsList: _Element[] = []
-    ) {}
+        ss_Code: SS_Code,
+        basicService?: OPTIONAL<Ext_BasicServiceCode>,
+        ss_Status?: OPTIONAL<Ext_SS_Status>,
+        forwardedToNumber?: OPTIONAL<AddressString>,
+        forwardedToSubaddress?: OPTIONAL<ISDN_SubaddressString>,
+        noReplyConditionTime?: OPTIONAL<Ext_NoRepCondTime>,
+        modifyNotificationToCSE?: OPTIONAL<ModificationInstruction>,
+        extensionContainer?: OPTIONAL<ExtensionContainer>,
+        _unrecognizedExtensionsList: _Element[] = []
+    ) {
+        this.ss_Code = ss_Code;
+        this.basicService = basicService;
+        this.ss_Status = ss_Status;
+        this.forwardedToNumber = forwardedToNumber;
+        this.forwardedToSubaddress = forwardedToSubaddress;
+        this.noReplyConditionTime = noReplyConditionTime;
+        this.modifyNotificationToCSE = modifyNotificationToCSE;
+        this.extensionContainer = extensionContainer;
+        this._unrecognizedExtensionsList = _unrecognizedExtensionsList;
+    }
 
     /**
      * @summary Restructures an object into a ModificationRequestFor_CF_Info
@@ -156,7 +176,7 @@ class ModificationRequestFor_CF_Info {
          * @static
          */
 
-    public static _enum_for_modifyNotificationToCSE = _enum_for_ModificationInstruction;
+    public static _enum_for_modifyNotificationToCSE: typeof _enum_for_ModificationInstruction = _enum_for_ModificationInstruction;
 }
 
 /**

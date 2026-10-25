@@ -107,7 +107,7 @@ type PrimaryAuthenticationType = _enum_for_PrimaryAuthenticationType;
  * @enum {number}
  */
 export
-const PrimaryAuthenticationType = _enum_for_PrimaryAuthenticationType;
+const PrimaryAuthenticationType: typeof _enum_for_PrimaryAuthenticationType = _enum_for_PrimaryAuthenticationType;
 
 /**
  * @summary PrimaryAuthenticationType_eAPAKAPrime
@@ -115,7 +115,7 @@ const PrimaryAuthenticationType = _enum_for_PrimaryAuthenticationType;
  * @type {number}
  */
 export
-const PrimaryAuthenticationType_eAPAKAPrime: PrimaryAuthenticationType = PrimaryAuthenticationType.eAPAKAPrime; /* LONG_NAMED_ENUMERATED_VALUE */
+const PrimaryAuthenticationType_eAPAKAPrime: _enum_for_PrimaryAuthenticationType.eAPAKAPrime = PrimaryAuthenticationType.eAPAKAPrime; /* LONG_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary eAPAKAPrime
@@ -123,7 +123,7 @@ const PrimaryAuthenticationType_eAPAKAPrime: PrimaryAuthenticationType = Primary
  * @type {number}
  */
 export
-const eAPAKAPrime: PrimaryAuthenticationType = PrimaryAuthenticationType.eAPAKAPrime; /* SHORT_NAMED_ENUMERATED_VALUE */
+const eAPAKAPrime: _enum_for_PrimaryAuthenticationType.eAPAKAPrime = PrimaryAuthenticationType.eAPAKAPrime; /* SHORT_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary PrimaryAuthenticationType_fiveGAKA
@@ -131,7 +131,7 @@ const eAPAKAPrime: PrimaryAuthenticationType = PrimaryAuthenticationType.eAPAKAP
  * @type {number}
  */
 export
-const PrimaryAuthenticationType_fiveGAKA: PrimaryAuthenticationType = PrimaryAuthenticationType.fiveGAKA; /* LONG_NAMED_ENUMERATED_VALUE */
+const PrimaryAuthenticationType_fiveGAKA: _enum_for_PrimaryAuthenticationType.fiveGAKA = PrimaryAuthenticationType.fiveGAKA; /* LONG_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary fiveGAKA
@@ -139,7 +139,7 @@ const PrimaryAuthenticationType_fiveGAKA: PrimaryAuthenticationType = PrimaryAut
  * @type {number}
  */
 export
-const fiveGAKA: PrimaryAuthenticationType = PrimaryAuthenticationType.fiveGAKA; /* SHORT_NAMED_ENUMERATED_VALUE */
+const fiveGAKA: _enum_for_PrimaryAuthenticationType.fiveGAKA = PrimaryAuthenticationType.fiveGAKA; /* SHORT_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary PrimaryAuthenticationType_eAPTLS
@@ -147,7 +147,7 @@ const fiveGAKA: PrimaryAuthenticationType = PrimaryAuthenticationType.fiveGAKA; 
  * @type {number}
  */
 export
-const PrimaryAuthenticationType_eAPTLS: PrimaryAuthenticationType = PrimaryAuthenticationType.eAPTLS; /* LONG_NAMED_ENUMERATED_VALUE */
+const PrimaryAuthenticationType_eAPTLS: _enum_for_PrimaryAuthenticationType.eAPTLS = PrimaryAuthenticationType.eAPTLS; /* LONG_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary eAPTLS
@@ -155,7 +155,7 @@ const PrimaryAuthenticationType_eAPTLS: PrimaryAuthenticationType = PrimaryAuthe
  * @type {number}
  */
 export
-const eAPTLS: PrimaryAuthenticationType = PrimaryAuthenticationType.eAPTLS; /* SHORT_NAMED_ENUMERATED_VALUE */
+const eAPTLS: _enum_for_PrimaryAuthenticationType.eAPTLS = PrimaryAuthenticationType.eAPTLS; /* SHORT_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary PrimaryAuthenticationType_none
@@ -163,7 +163,7 @@ const eAPTLS: PrimaryAuthenticationType = PrimaryAuthenticationType.eAPTLS; /* S
  * @type {number}
  */
 export
-const PrimaryAuthenticationType_none: PrimaryAuthenticationType = PrimaryAuthenticationType.none; /* LONG_NAMED_ENUMERATED_VALUE */
+const PrimaryAuthenticationType_none: _enum_for_PrimaryAuthenticationType.none = PrimaryAuthenticationType.none; /* LONG_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary none
@@ -171,7 +171,7 @@ const PrimaryAuthenticationType_none: PrimaryAuthenticationType = PrimaryAuthent
  * @type {number}
  */
 export
-const none: PrimaryAuthenticationType = PrimaryAuthenticationType.none; /* SHORT_NAMED_ENUMERATED_VALUE */
+const none: _enum_for_PrimaryAuthenticationType.none = PrimaryAuthenticationType.none; /* SHORT_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary PrimaryAuthenticationType_ePSAKA
@@ -179,7 +179,7 @@ const none: PrimaryAuthenticationType = PrimaryAuthenticationType.none; /* SHORT
  * @type {number}
  */
 export
-const PrimaryAuthenticationType_ePSAKA: PrimaryAuthenticationType = PrimaryAuthenticationType.ePSAKA; /* LONG_NAMED_ENUMERATED_VALUE */
+const PrimaryAuthenticationType_ePSAKA: _enum_for_PrimaryAuthenticationType.ePSAKA = PrimaryAuthenticationType.ePSAKA; /* LONG_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary ePSAKA
@@ -187,7 +187,7 @@ const PrimaryAuthenticationType_ePSAKA: PrimaryAuthenticationType = PrimaryAuthe
  * @type {number}
  */
 export
-const ePSAKA: PrimaryAuthenticationType = PrimaryAuthenticationType.ePSAKA; /* SHORT_NAMED_ENUMERATED_VALUE */
+const ePSAKA: _enum_for_PrimaryAuthenticationType.ePSAKA = PrimaryAuthenticationType.ePSAKA; /* SHORT_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary PrimaryAuthenticationType_eAPAKA
@@ -195,7 +195,7 @@ const ePSAKA: PrimaryAuthenticationType = PrimaryAuthenticationType.ePSAKA; /* S
  * @type {number}
  */
 export
-const PrimaryAuthenticationType_eAPAKA: PrimaryAuthenticationType = PrimaryAuthenticationType.eAPAKA; /* LONG_NAMED_ENUMERATED_VALUE */
+const PrimaryAuthenticationType_eAPAKA: _enum_for_PrimaryAuthenticationType.eAPAKA = PrimaryAuthenticationType.eAPAKA; /* LONG_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary eAPAKA
@@ -203,7 +203,7 @@ const PrimaryAuthenticationType_eAPAKA: PrimaryAuthenticationType = PrimaryAuthe
  * @type {number}
  */
 export
-const eAPAKA: PrimaryAuthenticationType = PrimaryAuthenticationType.eAPAKA; /* SHORT_NAMED_ENUMERATED_VALUE */
+const eAPAKA: _enum_for_PrimaryAuthenticationType.eAPAKA = PrimaryAuthenticationType.eAPAKA; /* SHORT_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary PrimaryAuthenticationType_iMSAKA
@@ -211,7 +211,7 @@ const eAPAKA: PrimaryAuthenticationType = PrimaryAuthenticationType.eAPAKA; /* S
  * @type {number}
  */
 export
-const PrimaryAuthenticationType_iMSAKA: PrimaryAuthenticationType = PrimaryAuthenticationType.iMSAKA; /* LONG_NAMED_ENUMERATED_VALUE */
+const PrimaryAuthenticationType_iMSAKA: _enum_for_PrimaryAuthenticationType.iMSAKA = PrimaryAuthenticationType.iMSAKA; /* LONG_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary iMSAKA
@@ -219,7 +219,7 @@ const PrimaryAuthenticationType_iMSAKA: PrimaryAuthenticationType = PrimaryAuthe
  * @type {number}
  */
 export
-const iMSAKA: PrimaryAuthenticationType = PrimaryAuthenticationType.iMSAKA; /* SHORT_NAMED_ENUMERATED_VALUE */
+const iMSAKA: _enum_for_PrimaryAuthenticationType.iMSAKA = PrimaryAuthenticationType.iMSAKA; /* SHORT_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary PrimaryAuthenticationType_gBAAKA
@@ -227,7 +227,7 @@ const iMSAKA: PrimaryAuthenticationType = PrimaryAuthenticationType.iMSAKA; /* S
  * @type {number}
  */
 export
-const PrimaryAuthenticationType_gBAAKA: PrimaryAuthenticationType = PrimaryAuthenticationType.gBAAKA; /* LONG_NAMED_ENUMERATED_VALUE */
+const PrimaryAuthenticationType_gBAAKA: _enum_for_PrimaryAuthenticationType.gBAAKA = PrimaryAuthenticationType.gBAAKA; /* LONG_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary gBAAKA
@@ -235,7 +235,7 @@ const PrimaryAuthenticationType_gBAAKA: PrimaryAuthenticationType = PrimaryAuthe
  * @type {number}
  */
 export
-const gBAAKA: PrimaryAuthenticationType = PrimaryAuthenticationType.gBAAKA; /* SHORT_NAMED_ENUMERATED_VALUE */
+const gBAAKA: _enum_for_PrimaryAuthenticationType.gBAAKA = PrimaryAuthenticationType.gBAAKA; /* SHORT_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary PrimaryAuthenticationType_uMTSAKA
@@ -243,7 +243,7 @@ const gBAAKA: PrimaryAuthenticationType = PrimaryAuthenticationType.gBAAKA; /* S
  * @type {number}
  */
 export
-const PrimaryAuthenticationType_uMTSAKA: PrimaryAuthenticationType = PrimaryAuthenticationType.uMTSAKA; /* LONG_NAMED_ENUMERATED_VALUE */
+const PrimaryAuthenticationType_uMTSAKA: _enum_for_PrimaryAuthenticationType.uMTSAKA = PrimaryAuthenticationType.uMTSAKA; /* LONG_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary uMTSAKA
@@ -251,7 +251,7 @@ const PrimaryAuthenticationType_uMTSAKA: PrimaryAuthenticationType = PrimaryAuth
  * @type {number}
  */
 export
-const uMTSAKA: PrimaryAuthenticationType = PrimaryAuthenticationType.uMTSAKA; /* SHORT_NAMED_ENUMERATED_VALUE */
+const uMTSAKA: _enum_for_PrimaryAuthenticationType.uMTSAKA = PrimaryAuthenticationType.uMTSAKA; /* SHORT_NAMED_ENUMERATED_VALUE */
 export const _decode_PrimaryAuthenticationType: $.ASN1Decoder<PrimaryAuthenticationType> = $._decodeEnumerated;
 export const _encode_PrimaryAuthenticationType: $.ASN1Encoder<PrimaryAuthenticationType> = $._encodeEnumerated;
 

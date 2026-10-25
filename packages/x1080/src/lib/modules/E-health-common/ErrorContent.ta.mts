@@ -1,7 +1,7 @@
 /* eslint-disable */
 import {
-    OBJECT_IDENTIFIER,
-    ASN1Element as _Element,
+    type OBJECT_IDENTIFIER,
+    type ASN1Element as _Element,
     ASN1TagClass as _TagClass,
     ASN1Construction as _Construction,
     ASN1UniversalType as _UniversalType,
@@ -41,36 +41,44 @@ import {
  *
  */
 export class ErrorContent {
+    /**
+     * @summary `contentType`.
+     * @description
+     *
+     * `INTERACTIVE-OPERATION.&content-err` for this error.
+     * ITU-T Rec. X.1080.1 (05/2018) §10.2.
+     *
+     * @public
+     * @readonly
+     */
+    public readonly contentType: OBJECT_IDENTIFIER;
+    /**
+     * @summary `content`.
+     * @description
+     *
+     * Inner error (invokId, session, error body).
+     * ITU-T Rec. X.1080.1 (05/2018) §10.2.
+     *
+     * @public
+     * @readonly
+     */
+    public readonly content: ErrorContent_content;
+    /**
+     * @summary Extensions that are not recognized.
+     * @public
+     * @readonly
+     */
+    public readonly _unrecognizedExtensionsList: _Element[];
+
     constructor(
-        /**
-         * @summary `contentType`.
-         * @description
-         *
-         * `INTERACTIVE-OPERATION.&content-err` for this error.
-         * ITU-T Rec. X.1080.1 (05/2018) §10.2.
-         *
-         * @public
-         * @readonly
-         */
-        readonly contentType: OBJECT_IDENTIFIER,
-        /**
-         * @summary `content`.
-         * @description
-         *
-         * Inner error (invokId, session, error body).
-         * ITU-T Rec. X.1080.1 (05/2018) §10.2.
-         *
-         * @public
-         * @readonly
-         */
-        readonly content: ErrorContent_content,
-        /**
-         * @summary Extensions that are not recognized.
-         * @public
-         * @readonly
-         */
-        readonly _unrecognizedExtensionsList: _Element[] = []
-    ) {}
+        contentType: OBJECT_IDENTIFIER,
+        content: ErrorContent_content,
+        _unrecognizedExtensionsList: _Element[] = []
+    ) {
+        this.contentType = contentType;
+        this.content = content;
+        this._unrecognizedExtensionsList = _unrecognizedExtensionsList;
+    }
 
     /**
      * @summary Restructures an object into a ErrorContent

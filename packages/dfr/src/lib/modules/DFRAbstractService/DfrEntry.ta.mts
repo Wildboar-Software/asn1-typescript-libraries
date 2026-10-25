@@ -1,6 +1,6 @@
 /* eslint-disable */
 import {
-    ASN1Element as _Element,
+    type ASN1Element as _Element,
     ASN1TagClass as _TagClass,
     ASN1Construction as _Construction,
     ASN1UniversalType as _UniversalType,
@@ -10,8 +10,8 @@ import {
     ASN1ConstructionError as _ConstructionError,
 } from "@wildboar/asn1";
 import * as $ from "@wildboar/asn1/functional";
-import { DfrEntryAttributes, _decode_DfrEntryAttributes, _encode_DfrEntryAttributes } from "../DFRAbstractService/DfrEntryAttributes.ta.mjs";
-import { DfrObjectContent, _decode_DfrObjectContent, _encode_DfrObjectContent } from "../DFRAbstractService/DfrObjectContent.ta.mjs";
+import { type DfrEntryAttributes, _decode_DfrEntryAttributes, _encode_DfrEntryAttributes } from "../DFRAbstractService/DfrEntryAttributes.ta.mjs";
+import { type DfrObjectContent, _decode_DfrObjectContent, _encode_DfrObjectContent } from "../DFRAbstractService/DfrObjectContent.ta.mjs";
 
 
 /**
@@ -37,26 +37,32 @@ import { DfrObjectContent, _decode_DfrObjectContent, _encode_DfrObjectContent } 
  */
 export
 class DfrEntry {
+    /**
+     * @summary `attributes`.
+     * @description
+     *
+     * Attributes of this entry, including hierarchy.
+     * @public
+     * @readonly
+     */
+    public readonly attributes: DfrEntryAttributes;
+    /**
+     * @summary `content`.
+     * @description
+     *
+     * Class-specific content (document, group, reference, or SRL).
+     * @public
+     * @readonly
+     */
+    public readonly content: DfrObjectContent;
+
     constructor (
-        /**
-         * @summary `attributes`.
-         * @description
-         *
-         * Attributes of this entry, including hierarchy.
-         * @public
-         * @readonly
-         */
-        readonly attributes: DfrEntryAttributes,
-        /**
-         * @summary `content`.
-         * @description
-         *
-         * Class-specific content (document, group, reference, or SRL).
-         * @public
-         * @readonly
-         */
-        readonly content: DfrObjectContent
-    ) {}
+        attributes: DfrEntryAttributes,
+        content: DfrObjectContent
+    ) {
+        this.attributes = attributes;
+        this.content = content;
+    }
 
     /**
      * @summary Restructures an object into a DfrEntry

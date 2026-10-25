@@ -1,6 +1,6 @@
 /* eslint-disable */
 import {
-    ASN1Element as _Element,
+    type ASN1Element as _Element,
     ASN1TagClass as _TagClass,
     ASN1Construction as _Construction,
     ASN1UniversalType as _UniversalType,
@@ -34,31 +34,37 @@ import {
  *
  */
 export class IntervalsOfDayWps_Item {
+    /**
+     * @summary `intervalStart`.
+     * @description
+     *
+     * Start of the interval. `{hour 0, minute 0}` is start of
+     * day. ITU-T Rec. X.746 (02/00)
+     * [§8.3.4.2](https://www.itu.int/rec/T-REC-X.746-200002-I).
+     * @public
+     * @readonly
+     */
+    public readonly intervalStart: Time24Wps;
+    /**
+     * @summary `intervalEnd`.
+     * @description
+     *
+     * End of the interval. `{hour 0, minute 0}` is end of day
+     * (24:00); may continue into the next day if that day's
+     * first start is 00:00. ITU-T Rec. X.746 (02/00)
+     * [§8.3.4.2](https://www.itu.int/rec/T-REC-X.746-200002-I).
+     * @public
+     * @readonly
+     */
+    public readonly intervalEnd: Time24Wps;
+
     constructor(
-        /**
-         * @summary `intervalStart`.
-         * @description
-         *
-         * Start of the interval. `{hour 0, minute 0}` is start of
-         * day. ITU-T Rec. X.746 (02/00)
-         * [§8.3.4.2](https://www.itu.int/rec/T-REC-X.746-200002-I).
-         * @public
-         * @readonly
-         */
-        readonly intervalStart: Time24Wps,
-        /**
-         * @summary `intervalEnd`.
-         * @description
-         *
-         * End of the interval. `{hour 0, minute 0}` is end of day
-         * (24:00); may continue into the next day if that day's
-         * first start is 00:00. ITU-T Rec. X.746 (02/00)
-         * [§8.3.4.2](https://www.itu.int/rec/T-REC-X.746-200002-I).
-         * @public
-         * @readonly
-         */
-        readonly intervalEnd: Time24Wps
-    ) {}
+        intervalStart: Time24Wps,
+        intervalEnd: Time24Wps
+    ) {
+        this.intervalStart = intervalStart;
+        this.intervalEnd = intervalEnd;
+    }
 
     /**
      * @summary Restructures an object into a IntervalsOfDayWps_Item

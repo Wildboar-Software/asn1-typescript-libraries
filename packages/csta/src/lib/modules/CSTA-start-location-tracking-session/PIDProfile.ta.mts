@@ -1,7 +1,7 @@
 /* eslint-disable */
 
 import * as $ from "@wildboar/asn1/functional";
-import { ENUMERATED, ASN1Element as _Element } from "@wildboar/asn1";
+import { type ENUMERATED, ASN1Element as _Element } from "@wildboar/asn1";
 
 
 
@@ -81,7 +81,7 @@ type PIDProfile = _enum_for_PIDProfile;
  * @enum {number}
  */
 export
-const PIDProfile = _enum_for_PIDProfile;
+const PIDProfile: typeof _enum_for_PIDProfile = _enum_for_PIDProfile;
 
 /**
  * @summary PIDProfile_pidProfileOption1
@@ -93,7 +93,7 @@ const PIDProfile = _enum_for_PIDProfile;
  * @type {number}
  */
 export
-const PIDProfile_pidProfileOption1: PIDProfile = PIDProfile.pidProfileOption1; /* LONG_NAMED_ENUMERATED_VALUE */
+const PIDProfile_pidProfileOption1: _enum_for_PIDProfile.pidProfileOption1 = PIDProfile.pidProfileOption1; /* LONG_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary pidProfileOption1
@@ -105,7 +105,7 @@ const PIDProfile_pidProfileOption1: PIDProfile = PIDProfile.pidProfileOption1; /
  * @type {number}
  */
 export
-const pidProfileOption1: PIDProfile = PIDProfile.pidProfileOption1; /* SHORT_NAMED_ENUMERATED_VALUE */
+const pidProfileOption1: _enum_for_PIDProfile.pidProfileOption1 = PIDProfile.pidProfileOption1; /* SHORT_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary PIDProfile_pidProfileOption2
@@ -117,7 +117,7 @@ const pidProfileOption1: PIDProfile = PIDProfile.pidProfileOption1; /* SHORT_NAM
  * @type {number}
  */
 export
-const PIDProfile_pidProfileOption2: PIDProfile = PIDProfile.pidProfileOption2; /* LONG_NAMED_ENUMERATED_VALUE */
+const PIDProfile_pidProfileOption2: _enum_for_PIDProfile.pidProfileOption2 = PIDProfile.pidProfileOption2; /* LONG_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary pidProfileOption2
@@ -129,7 +129,7 @@ const PIDProfile_pidProfileOption2: PIDProfile = PIDProfile.pidProfileOption2; /
  * @type {number}
  */
 export
-const pidProfileOption2: PIDProfile = PIDProfile.pidProfileOption2; /* SHORT_NAMED_ENUMERATED_VALUE */
+const pidProfileOption2: _enum_for_PIDProfile.pidProfileOption2 = PIDProfile.pidProfileOption2; /* SHORT_NAMED_ENUMERATED_VALUE */
 
 let _cached_decoder_for_PIDProfile: $.ASN1Decoder<PIDProfile> | null = null;
 

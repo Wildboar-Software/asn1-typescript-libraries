@@ -2,13 +2,13 @@
 
 import * as $ from "@wildboar/asn1/functional";
 import {
-    OPTIONAL,
-    SEQUENCE,
-    SET,
-    ASN1Element as _Element,
+    type OPTIONAL,
+    type SEQUENCE,
+    type SET,
+    type ASN1Element as _Element,
     ASN1TagClass as _TagClass
 } from "@wildboar/asn1";
-import { LocationInfo, _decode_LocationInfo, _encode_LocationInfo } from "../CSTA-call-control/LocationInfo.ta.mjs";
+import { type LocationInfo, _decode_LocationInfo, _encode_LocationInfo } from "../CSTA-call-control/LocationInfo.ta.mjs";
 
 import { CSTACommonArguments, _decode_CSTACommonArguments, _encode_CSTACommonArguments } from "../CSTA-extension-types/CSTACommonArguments.ta.mjs";
 
@@ -36,29 +36,35 @@ import { CSTACommonArguments, _decode_CSTACommonArguments, _encode_CSTACommonArg
  */
 export
 class GetLocationInformationResult {
+    /**
+     * @summary `locationInfo`.
+     * @description
+     *
+     * PIDF-LO for the device (ECMA-269 §12.2.18).
+     *
+     * @public
+     * @readonly
+     */
+    public readonly locationInfo: LocationInfo;
+    /**
+     * @summary `extensions`.
+     * @description
+     *
+     * CSTACommonArguments carrying the service-table security and
+     * privateData parameters.
+     *
+     * @public
+     * @readonly
+     */
+    public readonly extensions?: OPTIONAL<CSTACommonArguments>;
+
     constructor (
-        /**
-         * @summary `locationInfo`.
-         * @description
-         *
-         * PIDF-LO for the device (ECMA-269 §12.2.18).
-         *
-         * @public
-         * @readonly
-         */
-        readonly locationInfo: LocationInfo,
-        /**
-         * @summary `extensions`.
-         * @description
-         *
-         * CSTACommonArguments carrying the service-table security and
-         * privateData parameters.
-         *
-         * @public
-         * @readonly
-         */
-        readonly extensions?: OPTIONAL<CSTACommonArguments>
-    ) {}
+        locationInfo: LocationInfo,
+        extensions?: OPTIONAL<CSTACommonArguments>
+    ) {
+        this.locationInfo = locationInfo;
+        this.extensions = extensions;
+    }
 
     /**
      * @summary Restructures an object into a GetLocationInformationResult

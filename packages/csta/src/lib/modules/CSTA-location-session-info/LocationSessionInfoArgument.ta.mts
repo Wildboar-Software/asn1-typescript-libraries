@@ -2,17 +2,17 @@
 
 import * as $ from "@wildboar/asn1/functional";
 import {
-    OPTIONAL,
-    BOOLEAN,
-    INTEGER,
-    SEQUENCE,
-    SET,
-    ASN1Element as _Element,
+    type OPTIONAL,
+    type BOOLEAN,
+    type INTEGER,
+    type SEQUENCE,
+    type SET,
+    type ASN1Element as _Element,
     ASN1TagClass as _TagClass
 } from "@wildboar/asn1";
-import { ServiceCrossRefID, _decode_ServiceCrossRefID, _encode_ServiceCrossRefID } from "../CSTA-capability-exchange/ServiceCrossRefID.ta.mjs";
+import { type ServiceCrossRefID, _decode_ServiceCrossRefID, _encode_ServiceCrossRefID } from "../CSTA-capability-exchange/ServiceCrossRefID.ta.mjs";
 
-import { LocationSessionInfoList, _decode_LocationSessionInfoList, _encode_LocationSessionInfoList } from "../CSTA-status-reporting/LocationSessionInfoList.ta.mjs";
+import { type LocationSessionInfoList, _decode_LocationSessionInfoList, _encode_LocationSessionInfoList } from "../CSTA-status-reporting/LocationSessionInfoList.ta.mjs";
 
 import { CSTACommonArguments, _decode_CSTACommonArguments, _encode_CSTACommonArguments } from "../CSTA-extension-types/CSTACommonArguments.ta.mjs";
 
@@ -32,8 +32,8 @@ import { CSTACommonArguments, _decode_CSTACommonArguments, _encode_CSTACommonArg
  * 
  * ```asn1
  * LocationSessionInfoArgument ::= SEQUENCE
- * {    serviceCrossRefID        ServiceCrossRefID            OPTIONAL,
- *     segmentID            INTEGER                    OPTIONAL,
+ * {    serviceCrossRefID        ServiceCrossRefID            type OPTIONAL,
+ *     segmentID            INTEGER                    type OPTIONAL,
  *     lastSegment            BOOLEAN,
  *     locationSessionInfoList        LocationSessionInfoList,
  *     extensions            CSTACommonArguments            OPTIONAL }
@@ -43,59 +43,71 @@ import { CSTACommonArguments, _decode_CSTACommonArguments, _encode_CSTACommonArg
  */
 export
 class LocationSessionInfoArgument {
+    /**
+     * @summary `serviceCrossRefID`.
+     * @description
+     *
+     * Associates this segment with the original request. ECMA-269
+     * segmented-response model.
+     *
+     * @public
+     * @readonly
+     */
+    public readonly serviceCrossRefID: OPTIONAL<ServiceCrossRefID>;
+    /**
+     * @summary `segmentID`.
+     * @description
+     *
+     * Segment number; each successive segment increments by one. ECMA-269.
+     *
+     * @public
+     * @readonly
+     */
+    public readonly segmentID: OPTIONAL<INTEGER>;
+    /**
+     * @summary `lastSegment`.
+     * @description
+     *
+     * TRUE if this is the last segment for the serviceCrossRefID. ECMA-269.
+     *
+     * @public
+     * @readonly
+     */
+    public readonly lastSegment: BOOLEAN;
+    /**
+     * @summary `locationSessionInfoList`.
+     * @description
+     *
+     * Zero or more sessions (cross-ref and locDevice). ECMA-269 §28.1.12.
+     *
+     * @public
+     * @readonly
+     */
+    public readonly locationSessionInfoList: LocationSessionInfoList;
+    /**
+     * @summary `extensions`.
+     * @description
+     *
+     * CSTA common arguments (security, private data, timestamps). ECMA-269.
+     *
+     * @public
+     * @readonly
+     */
+    public readonly extensions?: OPTIONAL<CSTACommonArguments>;
+
     constructor (
-        /**
-         * @summary `serviceCrossRefID`.
-         * @description
-         *
-         * Associates this segment with the original request. ECMA-269
-         * segmented-response model.
-         *
-         * @public
-         * @readonly
-         */
-        readonly serviceCrossRefID: OPTIONAL<ServiceCrossRefID>,
-        /**
-         * @summary `segmentID`.
-         * @description
-         *
-         * Segment number; each successive segment increments by one. ECMA-269.
-         *
-         * @public
-         * @readonly
-         */
-        readonly segmentID: OPTIONAL<INTEGER>,
-        /**
-         * @summary `lastSegment`.
-         * @description
-         *
-         * TRUE if this is the last segment for the serviceCrossRefID. ECMA-269.
-         *
-         * @public
-         * @readonly
-         */
-        readonly lastSegment: BOOLEAN,
-        /**
-         * @summary `locationSessionInfoList`.
-         * @description
-         *
-         * Zero or more sessions (cross-ref and locDevice). ECMA-269 §28.1.12.
-         *
-         * @public
-         * @readonly
-         */
-        readonly locationSessionInfoList: LocationSessionInfoList,
-        /**
-         * @summary `extensions`.
-         * @description
-         *
-         * CSTA common arguments (security, private data, timestamps). ECMA-269.
-         *
-         * @public
-         * @readonly
-         */
-        readonly extensions?: OPTIONAL<CSTACommonArguments>
-    ) {}
+        serviceCrossRefID: OPTIONAL<ServiceCrossRefID>,
+        segmentID: OPTIONAL<INTEGER>,
+        lastSegment: BOOLEAN,
+        locationSessionInfoList: LocationSessionInfoList,
+        extensions?: OPTIONAL<CSTACommonArguments>
+    ) {
+        this.serviceCrossRefID = serviceCrossRefID;
+        this.segmentID = segmentID;
+        this.lastSegment = lastSegment;
+        this.locationSessionInfoList = locationSessionInfoList;
+        this.extensions = extensions;
+    }
 
     /**
      * @summary Restructures an object into a LocationSessionInfoArgument

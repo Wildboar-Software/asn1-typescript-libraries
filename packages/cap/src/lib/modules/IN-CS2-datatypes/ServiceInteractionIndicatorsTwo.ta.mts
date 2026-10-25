@@ -1,8 +1,8 @@
 /* eslint-disable */
 import {
-    OPTIONAL,
-    BOOLEAN,
-    ASN1Element as _Element,
+    type OPTIONAL,
+    type BOOLEAN,
+    type ASN1Element as _Element,
     ASN1TagClass as _TagClass,
     ASN1Construction as _Construction,
     ASN1UniversalType as _UniversalType,
@@ -15,7 +15,7 @@ import * as $ from "@wildboar/asn1/functional";
 import { ForwardServiceInteractionInd, _decode_ForwardServiceInteractionInd, _encode_ForwardServiceInteractionInd } from "../IN-CS2-datatypes/ForwardServiceInteractionInd.ta.mjs";
 import { BackwardServiceInteractionInd, _decode_BackwardServiceInteractionInd, _encode_BackwardServiceInteractionInd } from "../IN-CS2-datatypes/BackwardServiceInteractionInd.ta.mjs";
 import { BothwayThroughConnectionInd, _enum_for_BothwayThroughConnectionInd, _decode_BothwayThroughConnectionInd, _encode_BothwayThroughConnectionInd } from "../IN-CS2-datatypes/BothwayThroughConnectionInd.ta.mjs";
-import { SuspendTimer, _decode_SuspendTimer, _encode_SuspendTimer } from "../IN-CS2-datatypes/SuspendTimer.ta.mjs";
+import { type SuspendTimer, _decode_SuspendTimer, _encode_SuspendTimer } from "../IN-CS2-datatypes/SuspendTimer.ta.mjs";
 import { ConnectedNumberTreatmentInd, _enum_for_ConnectedNumberTreatmentInd, _decode_ConnectedNumberTreatmentInd, _encode_ConnectedNumberTreatmentInd } from "../IN-CS2-datatypes/ConnectedNumberTreatmentInd.ta.mjs";
 
 
@@ -59,68 +59,90 @@ import { ConnectedNumberTreatmentInd, _enum_for_ConnectedNumberTreatmentInd, _de
  */
 export
 class ServiceInteractionIndicatorsTwo {
+    /**
+     * @summary `forwardServiceInteractionInd`.
+     * @public
+     * @readonly
+     */
+    public readonly forwardServiceInteractionInd?: OPTIONAL<ForwardServiceInteractionInd>;
+    /**
+     * @summary `backwardServiceInteractionInd`.
+     * @public
+     * @readonly
+     */
+    public readonly backwardServiceInteractionInd?: OPTIONAL<BackwardServiceInteractionInd>;
+    /**
+     * @summary `bothwayThroughConnectionInd`.
+     * @public
+     * @readonly
+     */
+    public readonly bothwayThroughConnectionInd?: OPTIONAL<BothwayThroughConnectionInd>;
+    /**
+     * @summary `suspendTimer`.
+     * @public
+     * @readonly
+     */
+    public readonly suspendTimer?: OPTIONAL<SuspendTimer>;
+    /**
+     * @summary `connectedNumberTreatmentInd`.
+     * @public
+     * @readonly
+     */
+    public readonly connectedNumberTreatmentInd?: OPTIONAL<ConnectedNumberTreatmentInd>;
+    /**
+     * @summary `suppressCallDiversionNotification`.
+     * @public
+     * @readonly
+     */
+    public readonly suppressCallDiversionNotification?: OPTIONAL<BOOLEAN>;
+    /**
+     * @summary `suppressCallTransferNotification`.
+     * @public
+     * @readonly
+     */
+    public readonly suppressCallTransferNotification?: OPTIONAL<BOOLEAN>;
+    /**
+     * @summary `allowCdINNoPresentationInd`.
+     * @public
+     * @readonly
+     */
+    public readonly allowCdINNoPresentationInd?: OPTIONAL<BOOLEAN>;
+    /**
+     * @summary `userDialogueDurationInd`.
+     * @public
+     * @readonly
+     */
+    public readonly userDialogueDurationInd?: OPTIONAL<BOOLEAN>;
+    /**
+     * @summary Extensions that are not recognized.
+     * @public
+     * @readonly
+     */
+    public readonly _unrecognizedExtensionsList: _Element[];
+
     constructor (
-        /**
-         * @summary `forwardServiceInteractionInd`.
-         * @public
-         * @readonly
-         */
-        readonly forwardServiceInteractionInd?: OPTIONAL<ForwardServiceInteractionInd>,
-        /**
-         * @summary `backwardServiceInteractionInd`.
-         * @public
-         * @readonly
-         */
-        readonly backwardServiceInteractionInd?: OPTIONAL<BackwardServiceInteractionInd>,
-        /**
-         * @summary `bothwayThroughConnectionInd`.
-         * @public
-         * @readonly
-         */
-        readonly bothwayThroughConnectionInd?: OPTIONAL<BothwayThroughConnectionInd>,
-        /**
-         * @summary `suspendTimer`.
-         * @public
-         * @readonly
-         */
-        readonly suspendTimer?: OPTIONAL<SuspendTimer>,
-        /**
-         * @summary `connectedNumberTreatmentInd`.
-         * @public
-         * @readonly
-         */
-        readonly connectedNumberTreatmentInd?: OPTIONAL<ConnectedNumberTreatmentInd>,
-        /**
-         * @summary `suppressCallDiversionNotification`.
-         * @public
-         * @readonly
-         */
-        readonly suppressCallDiversionNotification?: OPTIONAL<BOOLEAN>,
-        /**
-         * @summary `suppressCallTransferNotification`.
-         * @public
-         * @readonly
-         */
-        readonly suppressCallTransferNotification?: OPTIONAL<BOOLEAN>,
-        /**
-         * @summary `allowCdINNoPresentationInd`.
-         * @public
-         * @readonly
-         */
-        readonly allowCdINNoPresentationInd?: OPTIONAL<BOOLEAN>,
-        /**
-         * @summary `userDialogueDurationInd`.
-         * @public
-         * @readonly
-         */
-        readonly userDialogueDurationInd?: OPTIONAL<BOOLEAN>,
-        /**
-         * @summary Extensions that are not recognized.
-         * @public
-         * @readonly
-         */
-        readonly _unrecognizedExtensionsList: _Element[] = []
-    ) {}
+        forwardServiceInteractionInd?: OPTIONAL<ForwardServiceInteractionInd>,
+        backwardServiceInteractionInd?: OPTIONAL<BackwardServiceInteractionInd>,
+        bothwayThroughConnectionInd?: OPTIONAL<BothwayThroughConnectionInd>,
+        suspendTimer?: OPTIONAL<SuspendTimer>,
+        connectedNumberTreatmentInd?: OPTIONAL<ConnectedNumberTreatmentInd>,
+        suppressCallDiversionNotification?: OPTIONAL<BOOLEAN>,
+        suppressCallTransferNotification?: OPTIONAL<BOOLEAN>,
+        allowCdINNoPresentationInd?: OPTIONAL<BOOLEAN>,
+        userDialogueDurationInd?: OPTIONAL<BOOLEAN>,
+        _unrecognizedExtensionsList: _Element[] = []
+    ) {
+        this.forwardServiceInteractionInd = forwardServiceInteractionInd;
+        this.backwardServiceInteractionInd = backwardServiceInteractionInd;
+        this.bothwayThroughConnectionInd = bothwayThroughConnectionInd;
+        this.suspendTimer = suspendTimer;
+        this.connectedNumberTreatmentInd = connectedNumberTreatmentInd;
+        this.suppressCallDiversionNotification = suppressCallDiversionNotification;
+        this.suppressCallTransferNotification = suppressCallTransferNotification;
+        this.allowCdINNoPresentationInd = allowCdINNoPresentationInd;
+        this.userDialogueDurationInd = userDialogueDurationInd;
+        this._unrecognizedExtensionsList = _unrecognizedExtensionsList;
+    }
 
     /**
      * @summary Restructures an object into a ServiceInteractionIndicatorsTwo
@@ -150,13 +172,13 @@ class ServiceInteractionIndicatorsTwo {
          * @static
          */
 
-    public static _enum_for_bothwayThroughConnectionInd = _enum_for_BothwayThroughConnectionInd;        /**
+    public static _enum_for_bothwayThroughConnectionInd: typeof _enum_for_BothwayThroughConnectionInd = _enum_for_BothwayThroughConnectionInd;        /**
          * @summary The enum used as the type of the component `connectedNumberTreatmentInd`
          * @public
          * @static
          */
 
-    public static _enum_for_connectedNumberTreatmentInd = _enum_for_ConnectedNumberTreatmentInd;
+    public static _enum_for_connectedNumberTreatmentInd: typeof _enum_for_ConnectedNumberTreatmentInd = _enum_for_ConnectedNumberTreatmentInd;
 }
 
 /**

@@ -1,7 +1,7 @@
 /* eslint-disable */
 import {
-    OPTIONAL,
-    ASN1Element as _Element,
+    type OPTIONAL,
+    type ASN1Element as _Element,
     ASN1TagClass as _TagClass,
     ASN1Construction as _Construction,
     ASN1UniversalType as _UniversalType,
@@ -12,12 +12,12 @@ import {
 } from '@wildboar/asn1';
 import * as $ from '@wildboar/asn1/functional';
 import {
-    TOName,
+    type TOName,
     _decode_TOName,
     _encode_TOName,
 } from '../Test-ASN1Module/TOName.ta.mjs';
 import {
-    AttributeList,
+    type AttributeList,
     _decode_AttributeList,
     _encode_AttributeList,
 } from '@wildboar/attribute-asn1module';
@@ -40,32 +40,38 @@ import {
  *
  */
 export class TestObjectResponse {
+    /**
+     * @summary `tOName`.
+     * @description
+     *
+     * Conductor-provided (NULL) or performer-assigned instance. ITU-T Rec.
+     * X.745 (11/93) §A.7.2.
+     * [§A.7.2](https://www.itu.int/rec/T-REC-X.745-199311-I)
+     *
+     * @public
+     * @readonly
+     */
+    public readonly tOName: TOName;
+    /**
+     * @summary `tOAttributeList`.
+     * @description
+     *
+     * Initial attributes the TO behaviour specifies to return. ITU-T Rec.
+     * X.745 (11/93) §9.5.
+     * [§9.5](https://www.itu.int/rec/T-REC-X.745-199311-I)
+     *
+     * @public
+     * @readonly
+     */
+    public readonly tOAttributeList?: OPTIONAL<AttributeList>;
+
     constructor(
-        /**
-         * @summary `tOName`.
-         * @description
-         *
-         * Conductor-provided (NULL) or performer-assigned instance. ITU-T Rec.
-         * X.745 (11/93) §A.7.2.
-         * [§A.7.2](https://www.itu.int/rec/T-REC-X.745-199311-I)
-         *
-         * @public
-         * @readonly
-         */
-        readonly tOName: TOName,
-        /**
-         * @summary `tOAttributeList`.
-         * @description
-         *
-         * Initial attributes the TO behaviour specifies to return. ITU-T Rec.
-         * X.745 (11/93) §9.5.
-         * [§9.5](https://www.itu.int/rec/T-REC-X.745-199311-I)
-         *
-         * @public
-         * @readonly
-         */
-        readonly tOAttributeList?: OPTIONAL<AttributeList>
-    ) {}
+        tOName: TOName,
+        tOAttributeList?: OPTIONAL<AttributeList>
+    ) {
+        this.tOName = tOName;
+        this.tOAttributeList = tOAttributeList;
+    }
 
     /**
      * @summary Restructures an object into a TestObjectResponse

@@ -1,6 +1,6 @@
 /* eslint-disable */
 import {
-    ASN1Element as _Element,
+    type ASN1Element as _Element,
     ASN1TagClass as _TagClass,
     ASN1Construction as _Construction,
     ASN1UniversalType as _UniversalType,
@@ -78,7 +78,7 @@ export type ControlledTestRequestType = _enum_for_ControlledTestRequestType;
  *
  * @enum {number}
  */
-export const ControlledTestRequestType = _enum_for_ControlledTestRequestType;
+export const ControlledTestRequestType: typeof _enum_for_ControlledTestRequestType = _enum_for_ControlledTestRequestType;
 
 /**
  * @summary ControlledTestRequestType_independent
@@ -91,7 +91,7 @@ export const ControlledTestRequestType = _enum_for_ControlledTestRequestType;
  * @constant
  * @type {number}
  */
-export const ControlledTestRequestType_independent: ControlledTestRequestType =
+export const ControlledTestRequestType_independent: _enum_for_ControlledTestRequestType.independent =
     ControlledTestRequestType.independent; /* LONG_NAMED_ENUMERATED_VALUE */
 
 /**
@@ -105,7 +105,7 @@ export const ControlledTestRequestType_independent: ControlledTestRequestType =
  * @constant
  * @type {number}
  */
-export const independent: ControlledTestRequestType =
+export const independent: _enum_for_ControlledTestRequestType.independent =
     ControlledTestRequestType.independent; /* SHORT_NAMED_ENUMERATED_VALUE */
 
 /**
@@ -120,7 +120,7 @@ export const independent: ControlledTestRequestType =
  * @constant
  * @type {number}
  */
-export const ControlledTestRequestType_related: ControlledTestRequestType =
+export const ControlledTestRequestType_related: _enum_for_ControlledTestRequestType.related =
     ControlledTestRequestType.related; /* LONG_NAMED_ENUMERATED_VALUE */
 
 /**
@@ -135,14 +135,25 @@ export const ControlledTestRequestType_related: ControlledTestRequestType =
  * @constant
  * @type {number}
  */
-export const related: ControlledTestRequestType =
+export const related: _enum_for_ControlledTestRequestType.related =
     ControlledTestRequestType.related; /* SHORT_NAMED_ENUMERATED_VALUE */
 
 
-export const _decode_ControlledTestRequestType = $._decodeEnumerated;
+export function _decode_ControlledTestRequestType(el: _Element): ControlledTestRequestType {
+    const enumerated = $._decodeEnumerated(el);
+    switch (enumerated) {
+        case ControlledTestRequestType.independent: return ControlledTestRequestType.independent;
+        case ControlledTestRequestType.related: return ControlledTestRequestType.related;
+        default:
+            throw new _ConstructionError(
+                'Invalid ENUMERATED value ' + enumerated + ' for ControlledTestRequestType.',
+                el,
+            );
+    }
+}
 
 
-export const _encode_ControlledTestRequestType = $._encodeEnumerated;
+export const _encode_ControlledTestRequestType: $.ASN1Encoder<ControlledTestRequestType> = $._encodeEnumerated as $.ASN1Encoder<ControlledTestRequestType>;
 
 
 /* eslint-enable */

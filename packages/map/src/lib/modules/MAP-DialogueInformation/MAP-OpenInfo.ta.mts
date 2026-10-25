@@ -1,11 +1,11 @@
 /* eslint-disable */
 import {
-    OPTIONAL,
-    ASN1Element as _Element,
+    type OPTIONAL,
+    type ASN1Element as _Element,
     ASN1TagClass as _TagClass
 } from "@wildboar/asn1";
 import * as $ from "@wildboar/asn1/functional";
-import { AddressString, _decode_AddressString, _encode_AddressString } from "../MAP-CommonDataTypes/AddressString.ta.mjs";
+import { type AddressString, _decode_AddressString, _encode_AddressString } from "../MAP-CommonDataTypes/AddressString.ta.mjs";
 import { ExtensionContainer, _decode_ExtensionContainer, _encode_ExtensionContainer } from "../MAP-ExtensionDataTypes/ExtensionContainer.ta.mjs";
 
 
@@ -22,8 +22,8 @@ import { ExtensionContainer, _decode_ExtensionContainer, _encode_ExtensionContai
  * 
  * ```asn1
  * MAP-OpenInfo ::= SEQUENCE {
- *     destinationReference    [0] AddressString    OPTIONAL,
- *     originationReference    [1] AddressString    OPTIONAL,
+ *     destinationReference    [0] AddressString    type OPTIONAL,
+ *     originationReference    [1] AddressString    type OPTIONAL,
  *     ...,
  *     extensionContainer    ExtensionContainer    OPTIONAL
  *     -- extensionContainer must not be used in version 2
@@ -34,51 +34,61 @@ import { ExtensionContainer, _decode_ExtensionContainer, _encode_ExtensionContai
  */
 export
 class MAP_OpenInfo {
+    /**
+     * @summary `destinationReference`.
+     * @description
+     *
+     * Reference that refines identification of the called process. It may
+     * equal the Destination address but is carried at MAP level. Table
+     * 7.3/2 lists the allowed MAP services (typically IMSI as subscriber
+     * identity; notes 1–3 for USSD and MT-SM). (3GPP TS 29.002 V19.1.0
+     * clause 7.3.1).
+     *
+     * @public
+     * @readonly
+     */
+    public readonly destinationReference?: OPTIONAL<AddressString>;
+    /**
+     * @summary `originationReference`.
+     * @description
+     *
+     * Reference that refines identification of the calling process. Table
+     * 7.3/3 lists the allowed MAP services (typically ISDN-Address-String
+     * as originated entity address). The receiver may use it to screen the
+     * service indication (3GPP TS 29.002 V19.1.0 clause 7.3.1).
+     *
+     * @public
+     * @readonly
+     */
+    public readonly originationReference?: OPTIONAL<AddressString>;
+    /**
+     * @summary `extensionContainer`.
+     * @description
+     *
+     * Must not be used in version 2 (3GPP TS 29.002 V19.1.0 clause 17.4).
+     *
+     * @public
+     * @readonly
+     */
+    public readonly extensionContainer?: OPTIONAL<ExtensionContainer>;
+    /**
+     * @summary Extensions that are not recognized.
+     * @public
+     * @readonly
+     */
+    public readonly _unrecognizedExtensionsList: _Element[];
+
     constructor (
-        /**
-         * @summary `destinationReference`.
-         * @description
-         *
-         * Reference that refines identification of the called process. It may
-         * equal the Destination address but is carried at MAP level. Table
-         * 7.3/2 lists the allowed MAP services (typically IMSI as subscriber
-         * identity; notes 1–3 for USSD and MT-SM). (3GPP TS 29.002 V19.1.0
-         * clause 7.3.1).
-         *
-         * @public
-         * @readonly
-         */
-        readonly destinationReference?: OPTIONAL<AddressString>,
-        /**
-         * @summary `originationReference`.
-         * @description
-         *
-         * Reference that refines identification of the calling process. Table
-         * 7.3/3 lists the allowed MAP services (typically ISDN-Address-String
-         * as originated entity address). The receiver may use it to screen the
-         * service indication (3GPP TS 29.002 V19.1.0 clause 7.3.1).
-         *
-         * @public
-         * @readonly
-         */
-        readonly originationReference?: OPTIONAL<AddressString>,
-        /**
-         * @summary `extensionContainer`.
-         * @description
-         *
-         * Must not be used in version 2 (3GPP TS 29.002 V19.1.0 clause 17.4).
-         *
-         * @public
-         * @readonly
-         */
-        readonly extensionContainer?: OPTIONAL<ExtensionContainer>,
-        /**
-         * @summary Extensions that are not recognized.
-         * @public
-         * @readonly
-         */
-        readonly _unrecognizedExtensionsList: _Element[] = []
-    ) {}
+        destinationReference?: OPTIONAL<AddressString>,
+        originationReference?: OPTIONAL<AddressString>,
+        extensionContainer?: OPTIONAL<ExtensionContainer>,
+        _unrecognizedExtensionsList: _Element[] = []
+    ) {
+        this.destinationReference = destinationReference;
+        this.originationReference = originationReference;
+        this.extensionContainer = extensionContainer;
+        this._unrecognizedExtensionsList = _unrecognizedExtensionsList;
+    }
 
     /**
      * @summary Restructures an object into a MAP_OpenInfo

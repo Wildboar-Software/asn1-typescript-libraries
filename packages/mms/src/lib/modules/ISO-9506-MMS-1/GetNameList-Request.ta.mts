@@ -1,7 +1,7 @@
 /* eslint-disable */
 import {
-    OPTIONAL,
-    ASN1Element as _Element,
+    type OPTIONAL,
+    type ASN1Element as _Element,
     ASN1TagClass as _TagClass,
     ASN1Construction as _Construction,
     ASN1UniversalType as _UniversalType,
@@ -11,9 +11,9 @@ import {
     ASN1ConstructionError as _ConstructionError,
 } from "@wildboar/asn1";
 import * as $ from "@wildboar/asn1/functional";
-import { ObjectClass, _decode_ObjectClass, _encode_ObjectClass } from "../ISO-9506-MMS-1/ObjectClass.ta.mjs";
-import { GetNameList_Request_objectScope, _decode_GetNameList_Request_objectScope, _encode_GetNameList_Request_objectScope } from "../ISO-9506-MMS-1/GetNameList-Request-objectScope.ta.mjs";
-import { Identifier, _decode_Identifier, _encode_Identifier } from "../ISO-9506-MMS-1/Identifier.ta.mjs";
+import { type ObjectClass, _decode_ObjectClass, _encode_ObjectClass } from "../ISO-9506-MMS-1/ObjectClass.ta.mjs";
+import { type GetNameList_Request_objectScope, _decode_GetNameList_Request_objectScope, _encode_GetNameList_Request_objectScope } from "../ISO-9506-MMS-1/GetNameList-Request-objectScope.ta.mjs";
+import { type Identifier, _decode_Identifier, _encode_Identifier } from "../ISO-9506-MMS-1/Identifier.ta.mjs";
 
 
 /**
@@ -41,42 +41,50 @@ import { Identifier, _decode_Identifier, _encode_Identifier } from "../ISO-9506-
  */
 export
 class GetNameList_Request {
+    /**
+     * @summary `objectClass`.
+     * @description
+     *
+     * Object class of names to return. ISO 9506-1:2003 §10.5.1.1.1.
+     *
+     * @public
+     * @readonly
+     */
+    public readonly objectClass: ObjectClass;
+    /**
+     * @summary `objectScope`.
+     * @description
+     *
+     * VMD-specific, Domain-specific, or AA-specific. ISO 9506-1:2003
+     * §10.5.1.1.2; ISO 9506-2:2003 §10.5.1.1.
+     *
+     * @public
+     * @readonly
+     */
+    public readonly objectScope: GetNameList_Request_objectScope;
+    /**
+     * @summary `continueAfter`.
+     * @description
+     *
+     * If present, the returned list begins after this Identifier of the
+     * requested class and scope. If it does not match, the server uses the
+     * collating sequence of ISO 9506-1:2003 §5.4.2. ISO 9506-1:2003
+     * §10.5.1.1.4.
+     *
+     * @public
+     * @readonly
+     */
+    public readonly continueAfter?: OPTIONAL<Identifier>;
+
     constructor (
-        /**
-         * @summary `objectClass`.
-         * @description
-         *
-         * Object class of names to return. ISO 9506-1:2003 §10.5.1.1.1.
-         *
-         * @public
-         * @readonly
-         */
-        readonly objectClass: ObjectClass,
-        /**
-         * @summary `objectScope`.
-         * @description
-         *
-         * VMD-specific, Domain-specific, or AA-specific. ISO 9506-1:2003
-         * §10.5.1.1.2; ISO 9506-2:2003 §10.5.1.1.
-         *
-         * @public
-         * @readonly
-         */
-        readonly objectScope: GetNameList_Request_objectScope,
-        /**
-         * @summary `continueAfter`.
-         * @description
-         *
-         * If present, the returned list begins after this Identifier of the
-         * requested class and scope. If it does not match, the server uses the
-         * collating sequence of ISO 9506-1:2003 §5.4.2. ISO 9506-1:2003
-         * §10.5.1.1.4.
-         *
-         * @public
-         * @readonly
-         */
-        readonly continueAfter?: OPTIONAL<Identifier>
-    ) {}
+        objectClass: ObjectClass,
+        objectScope: GetNameList_Request_objectScope,
+        continueAfter?: OPTIONAL<Identifier>
+    ) {
+        this.objectClass = objectClass;
+        this.objectScope = objectScope;
+        this.continueAfter = continueAfter;
+    }
 
     /**
      * @summary Restructures an object into a GetNameList_Request

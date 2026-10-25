@@ -1,4 +1,5 @@
 /* eslint-disable */
+import { ASN1Element as _Element, ASN1ConstructionError as _ConstructionError } from "@wildboar/asn1";
 import * as $ from "@wildboar/asn1/functional";
 
 
@@ -50,7 +51,7 @@ type ConsumedCreditAction = _enum_for_ConsumedCreditAction;
  * @enum {number}
  */
 export
-const ConsumedCreditAction = _enum_for_ConsumedCreditAction;
+const ConsumedCreditAction: typeof _enum_for_ConsumedCreditAction = _enum_for_ConsumedCreditAction;
 
 /**
  * @summary ConsumedCreditAction_disconnect
@@ -58,7 +59,7 @@ const ConsumedCreditAction = _enum_for_ConsumedCreditAction;
  * @type {number}
  */
 export
-const ConsumedCreditAction_disconnect: ConsumedCreditAction = ConsumedCreditAction.disconnect; /* LONG_NAMED_ENUMERATED_VALUE */
+const ConsumedCreditAction_disconnect: _enum_for_ConsumedCreditAction.disconnect = ConsumedCreditAction.disconnect; /* LONG_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary disconnect
@@ -66,7 +67,7 @@ const ConsumedCreditAction_disconnect: ConsumedCreditAction = ConsumedCreditActi
  * @type {number}
  */
 export
-const disconnect: ConsumedCreditAction = ConsumedCreditAction.disconnect; /* SHORT_NAMED_ENUMERATED_VALUE */
+const disconnect: _enum_for_ConsumedCreditAction.disconnect = ConsumedCreditAction.disconnect; /* SHORT_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary ConsumedCreditAction_message
@@ -74,7 +75,7 @@ const disconnect: ConsumedCreditAction = ConsumedCreditAction.disconnect; /* SHO
  * @type {number}
  */
 export
-const ConsumedCreditAction_message: ConsumedCreditAction = ConsumedCreditAction.message; /* LONG_NAMED_ENUMERATED_VALUE */
+const ConsumedCreditAction_message: _enum_for_ConsumedCreditAction.message = ConsumedCreditAction.message; /* LONG_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary message
@@ -82,7 +83,7 @@ const ConsumedCreditAction_message: ConsumedCreditAction = ConsumedCreditAction.
  * @type {number}
  */
 export
-const message: ConsumedCreditAction = ConsumedCreditAction.message; /* SHORT_NAMED_ENUMERATED_VALUE */
+const message: _enum_for_ConsumedCreditAction.message = ConsumedCreditAction.message; /* SHORT_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary ConsumedCreditAction_tone
@@ -90,7 +91,7 @@ const message: ConsumedCreditAction = ConsumedCreditAction.message; /* SHORT_NAM
  * @type {number}
  */
 export
-const ConsumedCreditAction_tone: ConsumedCreditAction = ConsumedCreditAction.tone; /* LONG_NAMED_ENUMERATED_VALUE */
+const ConsumedCreditAction_tone: _enum_for_ConsumedCreditAction.tone = ConsumedCreditAction.tone; /* LONG_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary tone
@@ -98,12 +99,24 @@ const ConsumedCreditAction_tone: ConsumedCreditAction = ConsumedCreditAction.ton
  * @type {number}
  */
 export
-const tone: ConsumedCreditAction = ConsumedCreditAction.tone; /* SHORT_NAMED_ENUMERATED_VALUE */
+const tone: _enum_for_ConsumedCreditAction.tone = ConsumedCreditAction.tone; /* SHORT_NAMED_ENUMERATED_VALUE */
 
 export
-const _decode_ConsumedCreditAction: $.ASN1Decoder<ConsumedCreditAction> = $._decodeEnumerated;
+function _decode_ConsumedCreditAction(el: _Element): ConsumedCreditAction {
+    const enumerated = $._decodeEnumerated(el);
+    switch (enumerated) {
+        case ConsumedCreditAction.disconnect: return ConsumedCreditAction.disconnect;
+        case ConsumedCreditAction.message: return ConsumedCreditAction.message;
+        case ConsumedCreditAction.tone: return ConsumedCreditAction.tone;
+        default:
+            throw new _ConstructionError(
+                "Invalid ENUMERATED value " + enumerated + " for ConsumedCreditAction.",
+                el,
+            );
+    }
+}
 
 export
-const _encode_ConsumedCreditAction: $.ASN1Encoder<ConsumedCreditAction> = $._encodeEnumerated;
+const _encode_ConsumedCreditAction: $.ASN1Encoder<ConsumedCreditAction> = $._encodeEnumerated as $.ASN1Encoder<ConsumedCreditAction>;
 
 /* eslint-enable */

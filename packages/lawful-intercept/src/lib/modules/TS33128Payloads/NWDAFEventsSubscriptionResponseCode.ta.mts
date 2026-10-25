@@ -125,7 +125,7 @@ type NWDAFEventsSubscriptionResponseCode = _enum_for_NWDAFEventsSubscriptionResp
  * @enum {number}
  */
 export
-const NWDAFEventsSubscriptionResponseCode = _enum_for_NWDAFEventsSubscriptionResponseCode;
+const NWDAFEventsSubscriptionResponseCode: typeof _enum_for_NWDAFEventsSubscriptionResponseCode = _enum_for_NWDAFEventsSubscriptionResponseCode;
 
 /**
  * @summary NWDAFEventsSubscriptionResponseCode_oK200
@@ -133,7 +133,7 @@ const NWDAFEventsSubscriptionResponseCode = _enum_for_NWDAFEventsSubscriptionRes
  * @type {number}
  */
 export
-const NWDAFEventsSubscriptionResponseCode_oK200: NWDAFEventsSubscriptionResponseCode = NWDAFEventsSubscriptionResponseCode.oK200; /* LONG_NAMED_ENUMERATED_VALUE */
+const NWDAFEventsSubscriptionResponseCode_oK200: _enum_for_NWDAFEventsSubscriptionResponseCode.oK200 = NWDAFEventsSubscriptionResponseCode.oK200; /* LONG_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary oK200
@@ -141,7 +141,7 @@ const NWDAFEventsSubscriptionResponseCode_oK200: NWDAFEventsSubscriptionResponse
  * @type {number}
  */
 export
-const oK200: NWDAFEventsSubscriptionResponseCode = NWDAFEventsSubscriptionResponseCode.oK200; /* SHORT_NAMED_ENUMERATED_VALUE */
+const oK200: _enum_for_NWDAFEventsSubscriptionResponseCode.oK200 = NWDAFEventsSubscriptionResponseCode.oK200; /* SHORT_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary NWDAFEventsSubscriptionResponseCode_created201
@@ -149,7 +149,7 @@ const oK200: NWDAFEventsSubscriptionResponseCode = NWDAFEventsSubscriptionRespon
  * @type {number}
  */
 export
-const NWDAFEventsSubscriptionResponseCode_created201: NWDAFEventsSubscriptionResponseCode = NWDAFEventsSubscriptionResponseCode.created201; /* LONG_NAMED_ENUMERATED_VALUE */
+const NWDAFEventsSubscriptionResponseCode_created201: _enum_for_NWDAFEventsSubscriptionResponseCode.created201 = NWDAFEventsSubscriptionResponseCode.created201; /* LONG_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary created201
@@ -157,7 +157,7 @@ const NWDAFEventsSubscriptionResponseCode_created201: NWDAFEventsSubscriptionRes
  * @type {number}
  */
 export
-const created201: NWDAFEventsSubscriptionResponseCode = NWDAFEventsSubscriptionResponseCode.created201; /* SHORT_NAMED_ENUMERATED_VALUE */
+const created201: _enum_for_NWDAFEventsSubscriptionResponseCode.created201 = NWDAFEventsSubscriptionResponseCode.created201; /* SHORT_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary NWDAFEventsSubscriptionResponseCode_noContent204
@@ -165,7 +165,7 @@ const created201: NWDAFEventsSubscriptionResponseCode = NWDAFEventsSubscriptionR
  * @type {number}
  */
 export
-const NWDAFEventsSubscriptionResponseCode_noContent204: NWDAFEventsSubscriptionResponseCode = NWDAFEventsSubscriptionResponseCode.noContent204; /* LONG_NAMED_ENUMERATED_VALUE */
+const NWDAFEventsSubscriptionResponseCode_noContent204: _enum_for_NWDAFEventsSubscriptionResponseCode.noContent204 = NWDAFEventsSubscriptionResponseCode.noContent204; /* LONG_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary noContent204
@@ -173,7 +173,7 @@ const NWDAFEventsSubscriptionResponseCode_noContent204: NWDAFEventsSubscriptionR
  * @type {number}
  */
 export
-const noContent204: NWDAFEventsSubscriptionResponseCode = NWDAFEventsSubscriptionResponseCode.noContent204; /* SHORT_NAMED_ENUMERATED_VALUE */
+const noContent204: _enum_for_NWDAFEventsSubscriptionResponseCode.noContent204 = NWDAFEventsSubscriptionResponseCode.noContent204; /* SHORT_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary NWDAFEventsSubscriptionResponseCode_temporaryRedirect307
@@ -181,7 +181,7 @@ const noContent204: NWDAFEventsSubscriptionResponseCode = NWDAFEventsSubscriptio
  * @type {number}
  */
 export
-const NWDAFEventsSubscriptionResponseCode_temporaryRedirect307: NWDAFEventsSubscriptionResponseCode = NWDAFEventsSubscriptionResponseCode.temporaryRedirect307; /* LONG_NAMED_ENUMERATED_VALUE */
+const NWDAFEventsSubscriptionResponseCode_temporaryRedirect307: _enum_for_NWDAFEventsSubscriptionResponseCode.temporaryRedirect307 = NWDAFEventsSubscriptionResponseCode.temporaryRedirect307; /* LONG_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary temporaryRedirect307
@@ -189,7 +189,7 @@ const NWDAFEventsSubscriptionResponseCode_temporaryRedirect307: NWDAFEventsSubsc
  * @type {number}
  */
 export
-const temporaryRedirect307: NWDAFEventsSubscriptionResponseCode = NWDAFEventsSubscriptionResponseCode.temporaryRedirect307; /* SHORT_NAMED_ENUMERATED_VALUE */
+const temporaryRedirect307: _enum_for_NWDAFEventsSubscriptionResponseCode.temporaryRedirect307 = NWDAFEventsSubscriptionResponseCode.temporaryRedirect307; /* SHORT_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary NWDAFEventsSubscriptionResponseCode_permanentRedirect308
@@ -197,7 +197,7 @@ const temporaryRedirect307: NWDAFEventsSubscriptionResponseCode = NWDAFEventsSub
  * @type {number}
  */
 export
-const NWDAFEventsSubscriptionResponseCode_permanentRedirect308: NWDAFEventsSubscriptionResponseCode = NWDAFEventsSubscriptionResponseCode.permanentRedirect308; /* LONG_NAMED_ENUMERATED_VALUE */
+const NWDAFEventsSubscriptionResponseCode_permanentRedirect308: _enum_for_NWDAFEventsSubscriptionResponseCode.permanentRedirect308 = NWDAFEventsSubscriptionResponseCode.permanentRedirect308; /* LONG_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary permanentRedirect308
@@ -205,7 +205,7 @@ const NWDAFEventsSubscriptionResponseCode_permanentRedirect308: NWDAFEventsSubsc
  * @type {number}
  */
 export
-const permanentRedirect308: NWDAFEventsSubscriptionResponseCode = NWDAFEventsSubscriptionResponseCode.permanentRedirect308; /* SHORT_NAMED_ENUMERATED_VALUE */
+const permanentRedirect308: _enum_for_NWDAFEventsSubscriptionResponseCode.permanentRedirect308 = NWDAFEventsSubscriptionResponseCode.permanentRedirect308; /* SHORT_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary NWDAFEventsSubscriptionResponseCode_badRequest400
@@ -213,7 +213,7 @@ const permanentRedirect308: NWDAFEventsSubscriptionResponseCode = NWDAFEventsSub
  * @type {number}
  */
 export
-const NWDAFEventsSubscriptionResponseCode_badRequest400: NWDAFEventsSubscriptionResponseCode = NWDAFEventsSubscriptionResponseCode.badRequest400; /* LONG_NAMED_ENUMERATED_VALUE */
+const NWDAFEventsSubscriptionResponseCode_badRequest400: _enum_for_NWDAFEventsSubscriptionResponseCode.badRequest400 = NWDAFEventsSubscriptionResponseCode.badRequest400; /* LONG_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary badRequest400
@@ -221,7 +221,7 @@ const NWDAFEventsSubscriptionResponseCode_badRequest400: NWDAFEventsSubscription
  * @type {number}
  */
 export
-const badRequest400: NWDAFEventsSubscriptionResponseCode = NWDAFEventsSubscriptionResponseCode.badRequest400; /* SHORT_NAMED_ENUMERATED_VALUE */
+const badRequest400: _enum_for_NWDAFEventsSubscriptionResponseCode.badRequest400 = NWDAFEventsSubscriptionResponseCode.badRequest400; /* SHORT_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary NWDAFEventsSubscriptionResponseCode_unauthorized401
@@ -229,7 +229,7 @@ const badRequest400: NWDAFEventsSubscriptionResponseCode = NWDAFEventsSubscripti
  * @type {number}
  */
 export
-const NWDAFEventsSubscriptionResponseCode_unauthorized401: NWDAFEventsSubscriptionResponseCode = NWDAFEventsSubscriptionResponseCode.unauthorized401; /* LONG_NAMED_ENUMERATED_VALUE */
+const NWDAFEventsSubscriptionResponseCode_unauthorized401: _enum_for_NWDAFEventsSubscriptionResponseCode.unauthorized401 = NWDAFEventsSubscriptionResponseCode.unauthorized401; /* LONG_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary unauthorized401
@@ -237,7 +237,7 @@ const NWDAFEventsSubscriptionResponseCode_unauthorized401: NWDAFEventsSubscripti
  * @type {number}
  */
 export
-const unauthorized401: NWDAFEventsSubscriptionResponseCode = NWDAFEventsSubscriptionResponseCode.unauthorized401; /* SHORT_NAMED_ENUMERATED_VALUE */
+const unauthorized401: _enum_for_NWDAFEventsSubscriptionResponseCode.unauthorized401 = NWDAFEventsSubscriptionResponseCode.unauthorized401; /* SHORT_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary NWDAFEventsSubscriptionResponseCode_forbidden403
@@ -245,7 +245,7 @@ const unauthorized401: NWDAFEventsSubscriptionResponseCode = NWDAFEventsSubscrip
  * @type {number}
  */
 export
-const NWDAFEventsSubscriptionResponseCode_forbidden403: NWDAFEventsSubscriptionResponseCode = NWDAFEventsSubscriptionResponseCode.forbidden403; /* LONG_NAMED_ENUMERATED_VALUE */
+const NWDAFEventsSubscriptionResponseCode_forbidden403: _enum_for_NWDAFEventsSubscriptionResponseCode.forbidden403 = NWDAFEventsSubscriptionResponseCode.forbidden403; /* LONG_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary forbidden403
@@ -253,7 +253,7 @@ const NWDAFEventsSubscriptionResponseCode_forbidden403: NWDAFEventsSubscriptionR
  * @type {number}
  */
 export
-const forbidden403: NWDAFEventsSubscriptionResponseCode = NWDAFEventsSubscriptionResponseCode.forbidden403; /* SHORT_NAMED_ENUMERATED_VALUE */
+const forbidden403: _enum_for_NWDAFEventsSubscriptionResponseCode.forbidden403 = NWDAFEventsSubscriptionResponseCode.forbidden403; /* SHORT_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary NWDAFEventsSubscriptionResponseCode_notFound404
@@ -261,7 +261,7 @@ const forbidden403: NWDAFEventsSubscriptionResponseCode = NWDAFEventsSubscriptio
  * @type {number}
  */
 export
-const NWDAFEventsSubscriptionResponseCode_notFound404: NWDAFEventsSubscriptionResponseCode = NWDAFEventsSubscriptionResponseCode.notFound404; /* LONG_NAMED_ENUMERATED_VALUE */
+const NWDAFEventsSubscriptionResponseCode_notFound404: _enum_for_NWDAFEventsSubscriptionResponseCode.notFound404 = NWDAFEventsSubscriptionResponseCode.notFound404; /* LONG_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary notFound404
@@ -269,7 +269,7 @@ const NWDAFEventsSubscriptionResponseCode_notFound404: NWDAFEventsSubscriptionRe
  * @type {number}
  */
 export
-const notFound404: NWDAFEventsSubscriptionResponseCode = NWDAFEventsSubscriptionResponseCode.notFound404; /* SHORT_NAMED_ENUMERATED_VALUE */
+const notFound404: _enum_for_NWDAFEventsSubscriptionResponseCode.notFound404 = NWDAFEventsSubscriptionResponseCode.notFound404; /* SHORT_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary NWDAFEventsSubscriptionResponseCode_notAcceptable406
@@ -277,7 +277,7 @@ const notFound404: NWDAFEventsSubscriptionResponseCode = NWDAFEventsSubscription
  * @type {number}
  */
 export
-const NWDAFEventsSubscriptionResponseCode_notAcceptable406: NWDAFEventsSubscriptionResponseCode = NWDAFEventsSubscriptionResponseCode.notAcceptable406; /* LONG_NAMED_ENUMERATED_VALUE */
+const NWDAFEventsSubscriptionResponseCode_notAcceptable406: _enum_for_NWDAFEventsSubscriptionResponseCode.notAcceptable406 = NWDAFEventsSubscriptionResponseCode.notAcceptable406; /* LONG_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary notAcceptable406
@@ -285,7 +285,7 @@ const NWDAFEventsSubscriptionResponseCode_notAcceptable406: NWDAFEventsSubscript
  * @type {number}
  */
 export
-const notAcceptable406: NWDAFEventsSubscriptionResponseCode = NWDAFEventsSubscriptionResponseCode.notAcceptable406; /* SHORT_NAMED_ENUMERATED_VALUE */
+const notAcceptable406: _enum_for_NWDAFEventsSubscriptionResponseCode.notAcceptable406 = NWDAFEventsSubscriptionResponseCode.notAcceptable406; /* SHORT_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary NWDAFEventsSubscriptionResponseCode_lengthRequired411
@@ -293,7 +293,7 @@ const notAcceptable406: NWDAFEventsSubscriptionResponseCode = NWDAFEventsSubscri
  * @type {number}
  */
 export
-const NWDAFEventsSubscriptionResponseCode_lengthRequired411: NWDAFEventsSubscriptionResponseCode = NWDAFEventsSubscriptionResponseCode.lengthRequired411; /* LONG_NAMED_ENUMERATED_VALUE */
+const NWDAFEventsSubscriptionResponseCode_lengthRequired411: _enum_for_NWDAFEventsSubscriptionResponseCode.lengthRequired411 = NWDAFEventsSubscriptionResponseCode.lengthRequired411; /* LONG_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary lengthRequired411
@@ -301,7 +301,7 @@ const NWDAFEventsSubscriptionResponseCode_lengthRequired411: NWDAFEventsSubscrip
  * @type {number}
  */
 export
-const lengthRequired411: NWDAFEventsSubscriptionResponseCode = NWDAFEventsSubscriptionResponseCode.lengthRequired411; /* SHORT_NAMED_ENUMERATED_VALUE */
+const lengthRequired411: _enum_for_NWDAFEventsSubscriptionResponseCode.lengthRequired411 = NWDAFEventsSubscriptionResponseCode.lengthRequired411; /* SHORT_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary NWDAFEventsSubscriptionResponseCode_payloadTooLarge413
@@ -309,7 +309,7 @@ const lengthRequired411: NWDAFEventsSubscriptionResponseCode = NWDAFEventsSubscr
  * @type {number}
  */
 export
-const NWDAFEventsSubscriptionResponseCode_payloadTooLarge413: NWDAFEventsSubscriptionResponseCode = NWDAFEventsSubscriptionResponseCode.payloadTooLarge413; /* LONG_NAMED_ENUMERATED_VALUE */
+const NWDAFEventsSubscriptionResponseCode_payloadTooLarge413: _enum_for_NWDAFEventsSubscriptionResponseCode.payloadTooLarge413 = NWDAFEventsSubscriptionResponseCode.payloadTooLarge413; /* LONG_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary payloadTooLarge413
@@ -317,7 +317,7 @@ const NWDAFEventsSubscriptionResponseCode_payloadTooLarge413: NWDAFEventsSubscri
  * @type {number}
  */
 export
-const payloadTooLarge413: NWDAFEventsSubscriptionResponseCode = NWDAFEventsSubscriptionResponseCode.payloadTooLarge413; /* SHORT_NAMED_ENUMERATED_VALUE */
+const payloadTooLarge413: _enum_for_NWDAFEventsSubscriptionResponseCode.payloadTooLarge413 = NWDAFEventsSubscriptionResponseCode.payloadTooLarge413; /* SHORT_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary NWDAFEventsSubscriptionResponseCode_unsupportedMediaType415
@@ -325,7 +325,7 @@ const payloadTooLarge413: NWDAFEventsSubscriptionResponseCode = NWDAFEventsSubsc
  * @type {number}
  */
 export
-const NWDAFEventsSubscriptionResponseCode_unsupportedMediaType415: NWDAFEventsSubscriptionResponseCode = NWDAFEventsSubscriptionResponseCode.unsupportedMediaType415; /* LONG_NAMED_ENUMERATED_VALUE */
+const NWDAFEventsSubscriptionResponseCode_unsupportedMediaType415: _enum_for_NWDAFEventsSubscriptionResponseCode.unsupportedMediaType415 = NWDAFEventsSubscriptionResponseCode.unsupportedMediaType415; /* LONG_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary unsupportedMediaType415
@@ -333,7 +333,7 @@ const NWDAFEventsSubscriptionResponseCode_unsupportedMediaType415: NWDAFEventsSu
  * @type {number}
  */
 export
-const unsupportedMediaType415: NWDAFEventsSubscriptionResponseCode = NWDAFEventsSubscriptionResponseCode.unsupportedMediaType415; /* SHORT_NAMED_ENUMERATED_VALUE */
+const unsupportedMediaType415: _enum_for_NWDAFEventsSubscriptionResponseCode.unsupportedMediaType415 = NWDAFEventsSubscriptionResponseCode.unsupportedMediaType415; /* SHORT_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary NWDAFEventsSubscriptionResponseCode_tooManyRequests429
@@ -341,7 +341,7 @@ const unsupportedMediaType415: NWDAFEventsSubscriptionResponseCode = NWDAFEvents
  * @type {number}
  */
 export
-const NWDAFEventsSubscriptionResponseCode_tooManyRequests429: NWDAFEventsSubscriptionResponseCode = NWDAFEventsSubscriptionResponseCode.tooManyRequests429; /* LONG_NAMED_ENUMERATED_VALUE */
+const NWDAFEventsSubscriptionResponseCode_tooManyRequests429: _enum_for_NWDAFEventsSubscriptionResponseCode.tooManyRequests429 = NWDAFEventsSubscriptionResponseCode.tooManyRequests429; /* LONG_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary tooManyRequests429
@@ -349,7 +349,7 @@ const NWDAFEventsSubscriptionResponseCode_tooManyRequests429: NWDAFEventsSubscri
  * @type {number}
  */
 export
-const tooManyRequests429: NWDAFEventsSubscriptionResponseCode = NWDAFEventsSubscriptionResponseCode.tooManyRequests429; /* SHORT_NAMED_ENUMERATED_VALUE */
+const tooManyRequests429: _enum_for_NWDAFEventsSubscriptionResponseCode.tooManyRequests429 = NWDAFEventsSubscriptionResponseCode.tooManyRequests429; /* SHORT_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary NWDAFEventsSubscriptionResponseCode_internalServerError500
@@ -357,7 +357,7 @@ const tooManyRequests429: NWDAFEventsSubscriptionResponseCode = NWDAFEventsSubsc
  * @type {number}
  */
 export
-const NWDAFEventsSubscriptionResponseCode_internalServerError500: NWDAFEventsSubscriptionResponseCode = NWDAFEventsSubscriptionResponseCode.internalServerError500; /* LONG_NAMED_ENUMERATED_VALUE */
+const NWDAFEventsSubscriptionResponseCode_internalServerError500: _enum_for_NWDAFEventsSubscriptionResponseCode.internalServerError500 = NWDAFEventsSubscriptionResponseCode.internalServerError500; /* LONG_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary internalServerError500
@@ -365,7 +365,7 @@ const NWDAFEventsSubscriptionResponseCode_internalServerError500: NWDAFEventsSub
  * @type {number}
  */
 export
-const internalServerError500: NWDAFEventsSubscriptionResponseCode = NWDAFEventsSubscriptionResponseCode.internalServerError500; /* SHORT_NAMED_ENUMERATED_VALUE */
+const internalServerError500: _enum_for_NWDAFEventsSubscriptionResponseCode.internalServerError500 = NWDAFEventsSubscriptionResponseCode.internalServerError500; /* SHORT_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary NWDAFEventsSubscriptionResponseCode_notImplemented501
@@ -373,7 +373,7 @@ const internalServerError500: NWDAFEventsSubscriptionResponseCode = NWDAFEventsS
  * @type {number}
  */
 export
-const NWDAFEventsSubscriptionResponseCode_notImplemented501: NWDAFEventsSubscriptionResponseCode = NWDAFEventsSubscriptionResponseCode.notImplemented501; /* LONG_NAMED_ENUMERATED_VALUE */
+const NWDAFEventsSubscriptionResponseCode_notImplemented501: _enum_for_NWDAFEventsSubscriptionResponseCode.notImplemented501 = NWDAFEventsSubscriptionResponseCode.notImplemented501; /* LONG_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary notImplemented501
@@ -381,7 +381,7 @@ const NWDAFEventsSubscriptionResponseCode_notImplemented501: NWDAFEventsSubscrip
  * @type {number}
  */
 export
-const notImplemented501: NWDAFEventsSubscriptionResponseCode = NWDAFEventsSubscriptionResponseCode.notImplemented501; /* SHORT_NAMED_ENUMERATED_VALUE */
+const notImplemented501: _enum_for_NWDAFEventsSubscriptionResponseCode.notImplemented501 = NWDAFEventsSubscriptionResponseCode.notImplemented501; /* SHORT_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary NWDAFEventsSubscriptionResponseCode_badGateway502
@@ -389,7 +389,7 @@ const notImplemented501: NWDAFEventsSubscriptionResponseCode = NWDAFEventsSubscr
  * @type {number}
  */
 export
-const NWDAFEventsSubscriptionResponseCode_badGateway502: NWDAFEventsSubscriptionResponseCode = NWDAFEventsSubscriptionResponseCode.badGateway502; /* LONG_NAMED_ENUMERATED_VALUE */
+const NWDAFEventsSubscriptionResponseCode_badGateway502: _enum_for_NWDAFEventsSubscriptionResponseCode.badGateway502 = NWDAFEventsSubscriptionResponseCode.badGateway502; /* LONG_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary badGateway502
@@ -397,7 +397,7 @@ const NWDAFEventsSubscriptionResponseCode_badGateway502: NWDAFEventsSubscription
  * @type {number}
  */
 export
-const badGateway502: NWDAFEventsSubscriptionResponseCode = NWDAFEventsSubscriptionResponseCode.badGateway502; /* SHORT_NAMED_ENUMERATED_VALUE */
+const badGateway502: _enum_for_NWDAFEventsSubscriptionResponseCode.badGateway502 = NWDAFEventsSubscriptionResponseCode.badGateway502; /* SHORT_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary NWDAFEventsSubscriptionResponseCode_serviceUnavailable503
@@ -405,7 +405,7 @@ const badGateway502: NWDAFEventsSubscriptionResponseCode = NWDAFEventsSubscripti
  * @type {number}
  */
 export
-const NWDAFEventsSubscriptionResponseCode_serviceUnavailable503: NWDAFEventsSubscriptionResponseCode = NWDAFEventsSubscriptionResponseCode.serviceUnavailable503; /* LONG_NAMED_ENUMERATED_VALUE */
+const NWDAFEventsSubscriptionResponseCode_serviceUnavailable503: _enum_for_NWDAFEventsSubscriptionResponseCode.serviceUnavailable503 = NWDAFEventsSubscriptionResponseCode.serviceUnavailable503; /* LONG_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary serviceUnavailable503
@@ -413,7 +413,7 @@ const NWDAFEventsSubscriptionResponseCode_serviceUnavailable503: NWDAFEventsSubs
  * @type {number}
  */
 export
-const serviceUnavailable503: NWDAFEventsSubscriptionResponseCode = NWDAFEventsSubscriptionResponseCode.serviceUnavailable503; /* SHORT_NAMED_ENUMERATED_VALUE */
+const serviceUnavailable503: _enum_for_NWDAFEventsSubscriptionResponseCode.serviceUnavailable503 = NWDAFEventsSubscriptionResponseCode.serviceUnavailable503; /* SHORT_NAMED_ENUMERATED_VALUE */
 export const _decode_NWDAFEventsSubscriptionResponseCode: $.ASN1Decoder<NWDAFEventsSubscriptionResponseCode> = $._decodeEnumerated;
 export const _encode_NWDAFEventsSubscriptionResponseCode: $.ASN1Encoder<NWDAFEventsSubscriptionResponseCode> = $._encodeEnumerated;
 

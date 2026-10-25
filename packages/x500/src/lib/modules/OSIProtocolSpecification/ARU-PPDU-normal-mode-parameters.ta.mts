@@ -1,17 +1,17 @@
 /* eslint-disable */
 import {
     ASN1ConstructionError as _ConstructionError,
-    ASN1Element as _Element,
+    type ASN1Element as _Element,
     ASN1TagClass as _TagClass,
 } from "@wildboar/asn1";
 import * as $ from "@wildboar/asn1/functional";
 import {
-    ARU_PPDU_normal_mode_parameters_user_data,
+    type ARU_PPDU_normal_mode_parameters_user_data,
     _decode_ARU_PPDU_normal_mode_parameters_user_data,
     _encode_ARU_PPDU_normal_mode_parameters_user_data,
 } from "../OSIProtocolSpecification/ARU-PPDU-normal-mode-parameters-user-data.ta.mjs";
 import {
-    Presentation_context_identifier_list,
+    type Presentation_context_identifier_list,
     _decode_Presentation_context_identifier_list,
     _encode_Presentation_context_identifier_list,
 } from "../OSIProtocolSpecification/Presentation-context-identifier-list.ta.mjs";
@@ -27,20 +27,26 @@ import {
  *
  */
 export class ARU_PPDU_normal_mode_parameters {
+    /**
+     * @summary `presentation_context_identifier_list`.
+     * @public
+     * @readonly
+     */
+    public readonly presentation_context_identifier_list: Presentation_context_identifier_list;
+    /**
+     * @summary `user_data`.
+     * @public
+     * @readonly
+     */
+    public readonly user_data: ARU_PPDU_normal_mode_parameters_user_data;
+
     constructor(
-        /**
-         * @summary `presentation_context_identifier_list`.
-         * @public
-         * @readonly
-         */
-        readonly presentation_context_identifier_list: Presentation_context_identifier_list,
-        /**
-         * @summary `user_data`.
-         * @public
-         * @readonly
-         */
-        readonly user_data: ARU_PPDU_normal_mode_parameters_user_data
-    ) {}
+        presentation_context_identifier_list: Presentation_context_identifier_list,
+        user_data: ARU_PPDU_normal_mode_parameters_user_data
+    ) {
+        this.presentation_context_identifier_list = presentation_context_identifier_list;
+        this.user_data = user_data;
+    }
 
     /**
      * @summary Restructures an object into a ARU_PPDU_normal_mode_parameters

@@ -1,8 +1,8 @@
 /* eslint-disable */
 import {
-    OPTIONAL,
-    OBJECT_IDENTIFIER,
-    ASN1Element as _Element,
+    type OPTIONAL,
+    type OBJECT_IDENTIFIER,
+    type ASN1Element as _Element,
     ASN1TagClass as _TagClass,
     ASN1Construction as _Construction,
     ASN1UniversalType as _UniversalType,
@@ -38,38 +38,46 @@ import * as $ from '@wildboar/asn1/functional';
  *
  */
 export class ContentInfo {
+    /**
+     * @summary `contentType`.
+     * @description
+     *
+     * OID from `TelebSupportedcontentTypes` (`signedData`,
+     * `envelopedData`, `ct-authEnvelopedData`, plus types from
+     * a referencing telebiometrics specification).
+     * ITU-T Rec. X.1080.0 (2017) Cor.1 Annex B.1.
+     *
+     * @public
+     * @readonly
+     */
+    public readonly contentType: OBJECT_IDENTIFIER;
+    /**
+     * @summary `content`.
+     * @description
+     *
+     * Abstract syntax bound to `contentType` by `CONTENT-TYPE`.
+     * ITU-T Rec. X.1080.0 (2017) Cor.1 Annex B.1.
+     *
+     * @public
+     * @readonly
+     */
+    public readonly content?: OPTIONAL<_Element>;
+    /**
+     * @summary Extensions that are not recognized.
+     * @public
+     * @readonly
+     */
+    public readonly _unrecognizedExtensionsList: _Element[];
+
     constructor(
-        /**
-         * @summary `contentType`.
-         * @description
-         *
-         * OID from `TelebSupportedcontentTypes` (`signedData`,
-         * `envelopedData`, `ct-authEnvelopedData`, plus types from
-         * a referencing telebiometrics specification).
-         * ITU-T Rec. X.1080.0 (2017) Cor.1 Annex B.1.
-         *
-         * @public
-         * @readonly
-         */
-        readonly contentType: OBJECT_IDENTIFIER,
-        /**
-         * @summary `content`.
-         * @description
-         *
-         * Abstract syntax bound to `contentType` by `CONTENT-TYPE`.
-         * ITU-T Rec. X.1080.0 (2017) Cor.1 Annex B.1.
-         *
-         * @public
-         * @readonly
-         */
-        readonly content?: OPTIONAL<_Element>,
-        /**
-         * @summary Extensions that are not recognized.
-         * @public
-         * @readonly
-         */
-        readonly _unrecognizedExtensionsList: _Element[] = []
-    ) {}
+        contentType: OBJECT_IDENTIFIER,
+        content?: OPTIONAL<_Element>,
+        _unrecognizedExtensionsList: _Element[] = []
+    ) {
+        this.contentType = contentType;
+        this.content = content;
+        this._unrecognizedExtensionsList = _unrecognizedExtensionsList;
+    }
 
     /**
      * @summary Restructures an object into a ContentInfo

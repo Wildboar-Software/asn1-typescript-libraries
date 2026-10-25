@@ -1,7 +1,7 @@
 /* eslint-disable */
 import {
-    PrintableString,
-    ASN1Element as _Element,
+    type PrintableString,
+    type ASN1Element as _Element,
     ASN1TagClass as _TagClass,
     ASN1Construction as _Construction,
     ASN1UniversalType as _UniversalType,
@@ -28,12 +28,12 @@ export type Text128 = PrintableString; // PrintableString
 
 
 
-export const _decode_Text128 = $._decodePrintableString;
+export const _decode_Text128: $.ASN1Decoder<string> = $._decodePrintableString;
 
 
 
 
-export const _encode_Text128 = $._encodePrintableString;
+export const _encode_Text128: $.ASN1Encoder<string> = $._encodePrintableString;
 
 
 /* eslint-enable */

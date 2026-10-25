@@ -1,6 +1,6 @@
 /* eslint-disable */
 import {
-    ASN1Element as _Element,
+    type ASN1Element as _Element,
     ASN1TagClass as _TagClass,
     ASN1Construction as _Construction,
     ASN1UniversalType as _UniversalType,
@@ -11,7 +11,7 @@ import {
 } from '@wildboar/asn1';
 import * as $ from '@wildboar/asn1/functional';
 import {
-    ObjectInstance,
+    type ObjectInstance,
     _decode_ObjectInstance,
     _encode_ObjectInstance,
 } from '@wildboar/cmip';
@@ -41,22 +41,13 @@ import {
  */
 export type LaunchPadId = ObjectInstance; // DefinedType
 
-let _cached_decoder_for_LaunchPadId: $.ASN1Decoder<LaunchPadId> | null = null;
-
 /**
  * @summary Decodes an ASN.1 element into a(n) LaunchPadId
  * @function
  * @param {_Element} el The element being decoded.
  * @returns {LaunchPadId} The decoded data structure.
  */
-export function _decode_LaunchPadId(el: _Element): LaunchPadId {
-    if (!_cached_decoder_for_LaunchPadId) {
-        _cached_decoder_for_LaunchPadId = _decode_ObjectInstance;
-    }
-    return _cached_decoder_for_LaunchPadId(el);
-}
-
-let _cached_encoder_for_LaunchPadId: $.ASN1Encoder<LaunchPadId> | null = null;
+export const _decode_LaunchPadId: $.ASN1Decoder<LaunchPadId> = _decode_ObjectInstance;
 
 /**
  * @summary Encodes a(n) LaunchPadId into an ASN.1 Element.
@@ -65,15 +56,7 @@ let _cached_encoder_for_LaunchPadId: $.ASN1Encoder<LaunchPadId> | null = null;
  * @param elGetter A function that can be used to get new ASN.1 elements.
  * @returns {_Element} The LaunchPadId, encoded as an ASN.1 Element.
  */
-export function _encode_LaunchPadId(
-    value: LaunchPadId,
-    elGetter: $.ASN1Encoder<LaunchPadId>
-): _Element {
-    if (!_cached_encoder_for_LaunchPadId) {
-        _cached_encoder_for_LaunchPadId = _encode_ObjectInstance;
-    }
-    return _cached_encoder_for_LaunchPadId(value, elGetter);
-}
+export const _encode_LaunchPadId: $.ASN1Encoder<LaunchPadId> = _encode_ObjectInstance;
 
 
 /* eslint-enable */

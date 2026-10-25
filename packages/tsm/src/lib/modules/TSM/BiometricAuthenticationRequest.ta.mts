@@ -1,8 +1,8 @@
 /* eslint-disable */
 import {
-    OPTIONAL,
-    INTEGER,
-    ASN1Element as _Element,
+    type OPTIONAL,
+    type INTEGER,
+    type ASN1Element as _Element,
     ASN1TagClass as _TagClass,
     ASN1Construction as _Construction,
     ASN1UniversalType as _UniversalType,
@@ -14,11 +14,11 @@ import {
 import * as $ from "@wildboar/asn1/functional";
 import { BiometricMethod, _decode_BiometricMethod, _encode_BiometricMethod } from "../TSM/BiometricMethod.ta.mjs";
 
-import { BioAPI_FMR, _decode_BioAPI_FMR, _encode_BioAPI_FMR } from "../BIP/BioAPI-FMR.ta.mjs";
+import { type BioAPI_FMR, _decode_BioAPI_FMR, _encode_BioAPI_FMR } from "../BIP/BioAPI-FMR.ta.mjs";
 
-import { Quality, _decode_Quality, _encode_Quality } from "../TSM/Quality.ta.mjs";
+import { type Quality, _decode_Quality, _encode_Quality } from "../TSM/Quality.ta.mjs";
 
-import { XtsmTemplate, _decode_XtsmTemplate, _encode_XtsmTemplate } from "../TSM/XtsmTemplate.ta.mjs";
+import { type XtsmTemplate, _decode_XtsmTemplate, _encode_XtsmTemplate } from "../TSM/XtsmTemplate.ta.mjs";
 
 
 
@@ -48,63 +48,75 @@ import { XtsmTemplate, _decode_XtsmTemplate, _encode_XtsmTemplate } from "../TSM
  */
 export
 class BiometricAuthenticationRequest {
+    /**
+     * @summary `biometricMethod`.
+     * @description
+     *
+     * Method chosen from the client's list. X.1084 §10.1.3.
+     *
+     * @public
+     * @readonly
+     */
+    public readonly biometricMethod: BiometricMethod;
+    /**
+     * @summary `requestFMR`.
+     * @description
+     *
+     * Requested false-match rate. Annex A comment:
+     * 32-bit integer `requestFMR / (2^31-1)` as in [ISO/IEC 19784-1].
+     * X.1084 §10.1.3.
+     *
+     * @public
+     * @readonly
+     */
+    public readonly requestFMR: BioAPI_FMR;
+    /**
+     * @summary `requestTrialNumber`.
+     * @description
+     *
+     * Allowed comparison attempts, `1..15`. Appendix I: decrement by one
+     * on retry with the same method. X.1084 §10.1.3, App. I.3.
+     *
+     * @public
+     * @readonly
+     */
+    public readonly requestTrialNumber: INTEGER;
+    /**
+     * @summary `requestQuality`.
+     * @description
+     *
+     * Minimum sample quality `0..100`. X.1084 §9, §10.1.3.
+     *
+     * @public
+     * @readonly
+     */
+    public readonly requestQuality: Quality;
+    /**
+     * @summary `requestTemplateData`.
+     * @description
+     *
+     * Present for download model: reference template sent verifier →
+     * client. Annex A notes "no value available" when unused. X.1084
+     * §11.2 Table 4.
+     *
+     * @public
+     * @readonly
+     */
+    public readonly requestTemplateData?: OPTIONAL<XtsmTemplate>;
+
     constructor (
-        /**
-         * @summary `biometricMethod`.
-         * @description
-         *
-         * Method chosen from the client's list. X.1084 §10.1.3.
-         *
-         * @public
-         * @readonly
-         */
-        readonly biometricMethod: BiometricMethod,
-        /**
-         * @summary `requestFMR`.
-         * @description
-         *
-         * Requested false-match rate. Annex A comment:
-         * 32-bit integer `requestFMR / (2^31-1)` as in [ISO/IEC 19784-1].
-         * X.1084 §10.1.3.
-         *
-         * @public
-         * @readonly
-         */
-        readonly requestFMR: BioAPI_FMR,
-        /**
-         * @summary `requestTrialNumber`.
-         * @description
-         *
-         * Allowed comparison attempts, `1..15`. Appendix I: decrement by one
-         * on retry with the same method. X.1084 §10.1.3, App. I.3.
-         *
-         * @public
-         * @readonly
-         */
-        readonly requestTrialNumber: INTEGER,
-        /**
-         * @summary `requestQuality`.
-         * @description
-         *
-         * Minimum sample quality `0..100`. X.1084 §9, §10.1.3.
-         *
-         * @public
-         * @readonly
-         */
-        readonly requestQuality: Quality,
-        /**
-         * @summary `requestTemplateData`.
-         * @description
-         *
-         * Present for download model: reference template sent verifier →
-         * client. Annex A notes "no value available" when unused. X.1084
-         * §11.2 Table 4.
-         *
-         * @public
-         * @readonly
-         */
-        readonly requestTemplateData?: OPTIONAL<XtsmTemplate>
-    ) {}
+        biometricMethod: BiometricMethod,
+        requestFMR: BioAPI_FMR,
+        requestTrialNumber: INTEGER,
+        requestQuality: Quality,
+        requestTemplateData?: OPTIONAL<XtsmTemplate>
+    ) {
+        this.biometricMethod = biometricMethod;
+        this.requestFMR = requestFMR;
+        this.requestTrialNumber = requestTrialNumber;
+        this.requestQuality = requestQuality;
+        this.requestTemplateData = requestTemplateData;
+    }
 
     /**
      * @summary Restructures an object into a BiometricAuthenticationRequest

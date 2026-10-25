@@ -1,6 +1,6 @@
 /* eslint-disable */
 import {
-    ENUMERATED
+    type ENUMERATED
 } from "@wildboar/asn1";
 import * as $ from "@wildboar/asn1/functional";
 
@@ -147,7 +147,7 @@ type EncryptionType = _enum_for_EncryptionType | ENUMERATED;
  * @type {number}
  */
 export
-const EncryptionType_none: EncryptionType = 1; /* LONG_NAMED_ENUMERATED_VALUE */
+const EncryptionType_none: _enum_for_EncryptionType.none = _enum_for_EncryptionType.none; /* LONG_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary none
@@ -165,7 +165,7 @@ const EncryptionType_none: EncryptionType = 1; /* LONG_NAMED_ENUMERATED_VALUE */
  * @type {number}
  */
 export
-const none: EncryptionType = EncryptionType_none; /* SHORT_NAMED_ENUMERATED_VALUE */
+const none: _enum_for_EncryptionType.none = EncryptionType_none; /* SHORT_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary EncryptionType_national_option
@@ -182,7 +182,7 @@ const none: EncryptionType = EncryptionType_none; /* SHORT_NAMED_ENUMERATED_VALU
  * @type {number}
  */
 export
-const EncryptionType_national_option: EncryptionType = 2; /* LONG_NAMED_ENUMERATED_VALUE */
+const EncryptionType_national_option: _enum_for_EncryptionType.national_option = _enum_for_EncryptionType.national_option; /* LONG_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary national_option
@@ -199,7 +199,7 @@ const EncryptionType_national_option: EncryptionType = 2; /* LONG_NAMED_ENUMERAT
  * @type {number}
  */
 export
-const national_option: EncryptionType = EncryptionType_national_option; /* SHORT_NAMED_ENUMERATED_VALUE */
+const national_option: _enum_for_EncryptionType.national_option = EncryptionType_national_option; /* SHORT_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary EncryptionType_aES_192_CBC
@@ -216,7 +216,7 @@ const national_option: EncryptionType = EncryptionType_national_option; /* SHORT
  * @type {number}
  */
 export
-const EncryptionType_aES_192_CBC: EncryptionType = 3; /* LONG_NAMED_ENUMERATED_VALUE */
+const EncryptionType_aES_192_CBC: _enum_for_EncryptionType.aES_192_CBC = _enum_for_EncryptionType.aES_192_CBC; /* LONG_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary aES_192_CBC
@@ -233,7 +233,7 @@ const EncryptionType_aES_192_CBC: EncryptionType = 3; /* LONG_NAMED_ENUMERATED_V
  * @type {number}
  */
 export
-const aES_192_CBC: EncryptionType = EncryptionType_aES_192_CBC; /* SHORT_NAMED_ENUMERATED_VALUE */
+const aES_192_CBC: _enum_for_EncryptionType.aES_192_CBC = EncryptionType_aES_192_CBC; /* SHORT_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary EncryptionType_aES_256_CBC
@@ -250,7 +250,7 @@ const aES_192_CBC: EncryptionType = EncryptionType_aES_192_CBC; /* SHORT_NAMED_E
  * @type {number}
  */
 export
-const EncryptionType_aES_256_CBC: EncryptionType = 4; /* LONG_NAMED_ENUMERATED_VALUE */
+const EncryptionType_aES_256_CBC: _enum_for_EncryptionType.aES_256_CBC = _enum_for_EncryptionType.aES_256_CBC; /* LONG_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary aES_256_CBC
@@ -267,7 +267,7 @@ const EncryptionType_aES_256_CBC: EncryptionType = 4; /* LONG_NAMED_ENUMERATED_V
  * @type {number}
  */
 export
-const aES_256_CBC: EncryptionType = EncryptionType_aES_256_CBC; /* SHORT_NAMED_ENUMERATED_VALUE */
+const aES_256_CBC: _enum_for_EncryptionType.aES_256_CBC = EncryptionType_aES_256_CBC; /* SHORT_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary EncryptionType_blowfish_192_CBC
@@ -285,7 +285,7 @@ const aES_256_CBC: EncryptionType = EncryptionType_aES_256_CBC; /* SHORT_NAMED_E
  * @type {number}
  */
 export
-const EncryptionType_blowfish_192_CBC: EncryptionType = 5; /* LONG_NAMED_ENUMERATED_VALUE */
+const EncryptionType_blowfish_192_CBC: _enum_for_EncryptionType.blowfish_192_CBC = _enum_for_EncryptionType.blowfish_192_CBC; /* LONG_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary blowfish_192_CBC
@@ -303,7 +303,7 @@ const EncryptionType_blowfish_192_CBC: EncryptionType = 5; /* LONG_NAMED_ENUMERA
  * @type {number}
  */
 export
-const blowfish_192_CBC: EncryptionType = EncryptionType_blowfish_192_CBC; /* SHORT_NAMED_ENUMERATED_VALUE */
+const blowfish_192_CBC: _enum_for_EncryptionType.blowfish_192_CBC = EncryptionType_blowfish_192_CBC; /* SHORT_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary EncryptionType_blowfish_256_CBC
@@ -320,7 +320,7 @@ const blowfish_192_CBC: EncryptionType = EncryptionType_blowfish_192_CBC; /* SHO
  * @type {number}
  */
 export
-const EncryptionType_blowfish_256_CBC: EncryptionType = 6; /* LONG_NAMED_ENUMERATED_VALUE */
+const EncryptionType_blowfish_256_CBC: _enum_for_EncryptionType.blowfish_256_CBC = _enum_for_EncryptionType.blowfish_256_CBC; /* LONG_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary blowfish_256_CBC
@@ -337,7 +337,7 @@ const EncryptionType_blowfish_256_CBC: EncryptionType = 6; /* LONG_NAMED_ENUMERA
  * @type {number}
  */
 export
-const blowfish_256_CBC: EncryptionType = EncryptionType_blowfish_256_CBC; /* SHORT_NAMED_ENUMERATED_VALUE */
+const blowfish_256_CBC: _enum_for_EncryptionType.blowfish_256_CBC = EncryptionType_blowfish_256_CBC; /* SHORT_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary EncryptionType_threedes_cbc
@@ -354,7 +354,7 @@ const blowfish_256_CBC: EncryptionType = EncryptionType_blowfish_256_CBC; /* SHO
  * @type {number}
  */
 export
-const EncryptionType_threedes_cbc: EncryptionType = 7; /* LONG_NAMED_ENUMERATED_VALUE */
+const EncryptionType_threedes_cbc: _enum_for_EncryptionType.threedes_cbc = _enum_for_EncryptionType.threedes_cbc; /* LONG_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary threedes_cbc
@@ -371,7 +371,7 @@ const EncryptionType_threedes_cbc: EncryptionType = 7; /* LONG_NAMED_ENUMERATED_
  * @type {number}
  */
 export
-const threedes_cbc: EncryptionType = EncryptionType_threedes_cbc; /* SHORT_NAMED_ENUMERATED_VALUE */
+const threedes_cbc: _enum_for_EncryptionType.threedes_cbc = EncryptionType_threedes_cbc; /* SHORT_NAMED_ENUMERATED_VALUE */
 export const _decode_EncryptionType: $.ASN1Decoder<EncryptionType> = $._decodeEnumerated;
 export const _encode_EncryptionType: $.ASN1Encoder<EncryptionType> = $._encodeEnumerated;
 

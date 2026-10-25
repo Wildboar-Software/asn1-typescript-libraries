@@ -1,7 +1,7 @@
 /* eslint-disable */
 import {
-    OPTIONAL,
-    ASN1Element as _Element,
+    type OPTIONAL,
+    type ASN1Element as _Element,
     ASN1TagClass as _TagClass,
     ASN1Construction as _Construction,
     ASN1UniversalType as _UniversalType,
@@ -17,17 +17,17 @@ import {
     _encode_CommonFields,
 } from '../EDIMSInformationObjects/CommonFields.ta.mjs';
 import {
-    NNReasonCodeField,
+    type NNReasonCodeField,
     _decode_NNReasonCodeField,
     _encode_NNReasonCodeField,
 } from '../EDIMSInformationObjects/NNReasonCodeField.ta.mjs';
 import {
-    EDISupplementaryInformation,
+    type EDISupplementaryInformation,
     _decode_EDISupplementaryInformation,
     _encode_EDISupplementaryInformation,
 } from '../EDIMSInformationObjects/EDISupplementaryInformation.ta.mjs';
 import {
-    NNExtensionsField,
+    type NNExtensionsField,
     _decode_NNExtensionsField,
     _encode_NNExtensionsField,
 } from '../EDIMSInformationObjects/NNExtensionsField.ta.mjs';
@@ -52,32 +52,42 @@ import {
  *
  */
 export class NegativeNotificationFields {
+    /**
+     * @summary `nn_common_fields`.
+     * @public
+     * @readonly
+     */
+    public readonly nn_common_fields: CommonFields;
+    /**
+     * @summary `nn_reason_code`.
+     * @public
+     * @readonly
+     */
+    public readonly nn_reason_code: NNReasonCodeField;
+    /**
+     * @summary `nn_supplementary_information`.
+     * @public
+     * @readonly
+     */
+    public readonly nn_supplementary_information?: OPTIONAL<EDISupplementaryInformation>;
+    /**
+     * @summary `nn_extensions`.
+     * @public
+     * @readonly
+     */
+    public readonly nn_extensions?: OPTIONAL<NNExtensionsField>;
+
     constructor(
-        /**
-         * @summary `nn_common_fields`.
-         * @public
-         * @readonly
-         */
-        readonly nn_common_fields: CommonFields,
-        /**
-         * @summary `nn_reason_code`.
-         * @public
-         * @readonly
-         */
-        readonly nn_reason_code: NNReasonCodeField,
-        /**
-         * @summary `nn_supplementary_information`.
-         * @public
-         * @readonly
-         */
-        readonly nn_supplementary_information?: OPTIONAL<EDISupplementaryInformation>,
-        /**
-         * @summary `nn_extensions`.
-         * @public
-         * @readonly
-         */
-        readonly nn_extensions?: OPTIONAL<NNExtensionsField>
-    ) {}
+        nn_common_fields: CommonFields,
+        nn_reason_code: NNReasonCodeField,
+        nn_supplementary_information?: OPTIONAL<EDISupplementaryInformation>,
+        nn_extensions?: OPTIONAL<NNExtensionsField>
+    ) {
+        this.nn_common_fields = nn_common_fields;
+        this.nn_reason_code = nn_reason_code;
+        this.nn_supplementary_information = nn_supplementary_information;
+        this.nn_extensions = nn_extensions;
+    }
 
     /**
      * @summary Restructures an object into a NegativeNotificationFields

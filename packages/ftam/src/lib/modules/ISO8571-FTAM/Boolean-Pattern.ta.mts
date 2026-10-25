@@ -1,6 +1,6 @@
 /* eslint-disable */
 import {
-  BOOLEAN,
+  type BOOLEAN,
   ASN1Element as _Element,
   ASN1TagClass as _TagClass,
   ASN1Construction as _Construction,
@@ -12,7 +12,7 @@ import {
 } from '@wildboar/asn1';
 import * as $ from '@wildboar/asn1/functional';
 import {
-  Equality_Comparision,
+  type Equality_Comparision,
   _decode_Equality_Comparision,
   _encode_Equality_Comparision,
 } from '../ISO8571-FTAM/Equality-Comparision.ta.mjs';
@@ -44,7 +44,7 @@ export class Boolean_Pattern {
    * @public
    * @readonly
    */
-  readonly equality_comparision: Equality_Comparision;
+  public readonly equality_comparision: Equality_Comparision;
   /**
    * @summary `boolean_value`.
    * @description
@@ -54,7 +54,7 @@ export class Boolean_Pattern {
    * @public
    * @readonly
    */
-  readonly boolean_value: BOOLEAN;
+  public readonly boolean_value: BOOLEAN;
 
   constructor(
     equality_comparision: Equality_Comparision,

@@ -11,12 +11,12 @@ import {
 } from '@wildboar/asn1';
 import * as $ from '@wildboar/asn1/functional';
 import {
-  BioAPI_BIR_SUBTYPE_anySubtype,
+  type BioAPI_BIR_SUBTYPE_anySubtype,
   _decode_BioAPI_BIR_SUBTYPE_anySubtype,
   _encode_BioAPI_BIR_SUBTYPE_anySubtype,
 } from '../BIP/BioAPI-BIR-SUBTYPE-anySubtype.ta.mjs';
 import {
-  BioAPI_BIR_SUBTYPE_vein_only_subtype,
+  type BioAPI_BIR_SUBTYPE_vein_only_subtype,
   _decode_BioAPI_BIR_SUBTYPE_vein_only_subtype,
   _encode_BioAPI_BIR_SUBTYPE_vein_only_subtype,
 } from '../BIP/BioAPI-BIR-SUBTYPE-vein-only-subtype.ta.mjs';

@@ -1,7 +1,7 @@
 /* eslint-disable */
 import {
-    INTEGER,
-    ASN1Element as _Element,
+    type INTEGER,
+    type ASN1Element as _Element,
     ASN1TagClass as _TagClass,
     ASN1Construction as _Construction,
     ASN1UniversalType as _UniversalType,
@@ -45,7 +45,7 @@ type RejectPDU_rejectReason_conclude_errorPDU = INTEGER;
  * @type {number}
  */
 export
-const RejectPDU_rejectReason_conclude_errorPDU_other: RejectPDU_rejectReason_conclude_errorPDU = 0; /* LONG_NAMED_INTEGER_VALUE */
+const RejectPDU_rejectReason_conclude_errorPDU_other: 0 = 0 satisfies RejectPDU_rejectReason_conclude_errorPDU; /* LONG_NAMED_INTEGER_VALUE */
 
 /**
  * @summary RejectPDU_rejectReason_conclude_errorPDU_other
@@ -57,7 +57,7 @@ const RejectPDU_rejectReason_conclude_errorPDU_other: RejectPDU_rejectReason_con
  * @type {number}
  */
 export
-const other: RejectPDU_rejectReason_conclude_errorPDU = RejectPDU_rejectReason_conclude_errorPDU_other; /* SHORT_NAMED_INTEGER_VALUE */
+const other: 0 = RejectPDU_rejectReason_conclude_errorPDU_other; /* SHORT_NAMED_INTEGER_VALUE */
 
 /**
  * @summary RejectPDU_rejectReason_conclude_errorPDU_invalid_serviceError
@@ -69,7 +69,7 @@ const other: RejectPDU_rejectReason_conclude_errorPDU = RejectPDU_rejectReason_c
  * @type {number}
  */
 export
-const RejectPDU_rejectReason_conclude_errorPDU_invalid_serviceError: RejectPDU_rejectReason_conclude_errorPDU = 1; /* LONG_NAMED_INTEGER_VALUE */
+const RejectPDU_rejectReason_conclude_errorPDU_invalid_serviceError: 1 = 1 satisfies RejectPDU_rejectReason_conclude_errorPDU; /* LONG_NAMED_INTEGER_VALUE */
 
 /**
  * @summary RejectPDU_rejectReason_conclude_errorPDU_invalid_serviceError
@@ -81,7 +81,7 @@ const RejectPDU_rejectReason_conclude_errorPDU_invalid_serviceError: RejectPDU_r
  * @type {number}
  */
 export
-const invalid_serviceError: RejectPDU_rejectReason_conclude_errorPDU = RejectPDU_rejectReason_conclude_errorPDU_invalid_serviceError; /* SHORT_NAMED_INTEGER_VALUE */
+const invalid_serviceError: 1 = RejectPDU_rejectReason_conclude_errorPDU_invalid_serviceError; /* SHORT_NAMED_INTEGER_VALUE */
 
 /**
  * @summary RejectPDU_rejectReason_conclude_errorPDU_value_out_of_range
@@ -93,7 +93,7 @@ const invalid_serviceError: RejectPDU_rejectReason_conclude_errorPDU = RejectPDU
  * @type {number}
  */
 export
-const RejectPDU_rejectReason_conclude_errorPDU_value_out_of_range: RejectPDU_rejectReason_conclude_errorPDU = 2; /* LONG_NAMED_INTEGER_VALUE */
+const RejectPDU_rejectReason_conclude_errorPDU_value_out_of_range: 2 = 2 satisfies RejectPDU_rejectReason_conclude_errorPDU; /* LONG_NAMED_INTEGER_VALUE */
 
 /**
  * @summary RejectPDU_rejectReason_conclude_errorPDU_value_out_of_range
@@ -105,9 +105,9 @@ const RejectPDU_rejectReason_conclude_errorPDU_value_out_of_range: RejectPDU_rej
  * @type {number}
  */
 export
-const value_out_of_range: RejectPDU_rejectReason_conclude_errorPDU = RejectPDU_rejectReason_conclude_errorPDU_value_out_of_range; /* SHORT_NAMED_INTEGER_VALUE */
-export const _decode_RejectPDU_rejectReason_conclude_errorPDU = $._decodeInteger;
-export const _encode_RejectPDU_rejectReason_conclude_errorPDU = $._encodeInteger;
+const value_out_of_range: 2 = RejectPDU_rejectReason_conclude_errorPDU_value_out_of_range; /* SHORT_NAMED_INTEGER_VALUE */
+export const _decode_RejectPDU_rejectReason_conclude_errorPDU: $.ASN1Decoder<INTEGER> = $._decodeInteger;
+export const _encode_RejectPDU_rejectReason_conclude_errorPDU: $.ASN1Encoder<INTEGER> = $._encodeInteger;
 
 
 /* eslint-enable */

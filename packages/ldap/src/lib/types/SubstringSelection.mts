@@ -13,6 +13,7 @@ const SubstringSelection = {
     final: 2,
 } as const;
 
-export type SubstringSelection = (typeof SubstringSelection)[keyof typeof SubstringSelection];
+export
+type SubstringSelection = (typeof SubstringSelection)[keyof typeof SubstringSelection];
 
 export default SubstringSelection;

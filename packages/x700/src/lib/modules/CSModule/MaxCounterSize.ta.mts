@@ -1,7 +1,7 @@
 /* eslint-disable */
 import {
-    INTEGER,
-    ASN1Element as _Element,
+    type INTEGER,
+    type ASN1Element as _Element,
     ASN1TagClass as _TagClass,
     ASN1Construction as _Construction,
     ASN1UniversalType as _UniversalType,
@@ -41,7 +41,7 @@ export type MaxCounterSize = INTEGER;
  * @constant
  * @type {number}
  */
-export const MaxCounterSize_unlimited: MaxCounterSize = 0; /* LONG_NAMED_INTEGER_VALUE */
+export const MaxCounterSize_unlimited: 0 = 0 satisfies MaxCounterSize; /* LONG_NAMED_INTEGER_VALUE */
 
 /**
  * @summary MaxCounterSize_unlimited
@@ -53,13 +53,13 @@ export const MaxCounterSize_unlimited: MaxCounterSize = 0; /* LONG_NAMED_INTEGER
  * @constant
  * @type {number}
  */
-export const unlimited: MaxCounterSize = MaxCounterSize_unlimited; /* SHORT_NAMED_INTEGER_VALUE */
+export const unlimited: 0 = MaxCounterSize_unlimited; /* SHORT_NAMED_INTEGER_VALUE */
 
 
-export const _decode_MaxCounterSize = $._decodeInteger;
+export const _decode_MaxCounterSize: $.ASN1Decoder<INTEGER> = $._decodeInteger;
 
 
-export const _encode_MaxCounterSize = $._encodeInteger;
+export const _encode_MaxCounterSize: $.ASN1Encoder<INTEGER> = $._encodeInteger;
 
 
 /* eslint-enable */

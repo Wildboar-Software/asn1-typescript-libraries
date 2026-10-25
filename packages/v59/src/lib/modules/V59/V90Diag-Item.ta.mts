@@ -1,8 +1,8 @@
 /* eslint-disable */
 import {
-    OPTIONAL,
-    BOOLEAN,
-    ASN1Element as _Element,
+    type OPTIONAL,
+    type BOOLEAN,
+    type ASN1Element as _Element,
     ASN1TagClass as _TagClass,
     ASN1Construction as _Construction,
     ASN1UniversalType as _UniversalType,
@@ -12,17 +12,17 @@ import {
     ASN1ConstructionError as _ConstructionError,
 } from "@wildboar/asn1";
 import * as $ from "@wildboar/asn1/functional";
-import { Capabilities, _decode_Capabilities, _encode_Capabilities } from "../V59/Capabilities.ta.mjs";
+import { type Capabilities, _decode_Capabilities, _encode_Capabilities } from "../V59/Capabilities.ta.mjs";
 
-import { V59String, _decode_V59String, _encode_V59String } from "../V59/V59String.ta.mjs";
+import { type V59String, _decode_V59String, _encode_V59String } from "../V59/V59String.ta.mjs";
 
-import { TxPowerLevel, _decode_TxPowerLevel, _encode_TxPowerLevel } from "../V59/TxPowerLevel.ta.mjs";
+import { type TxPowerLevel, _decode_TxPowerLevel, _encode_TxPowerLevel } from "../V59/TxPowerLevel.ta.mjs";
 
-import { SymbolRate, _decode_SymbolRate, _encode_SymbolRate } from "../V59/SymbolRate.ta.mjs";
+import { type SymbolRate, _decode_SymbolRate, _encode_SymbolRate } from "../V59/SymbolRate.ta.mjs";
 
-import { CarrierFreq, _decode_CarrierFreq, _encode_CarrierFreq } from "../V59/CarrierFreq.ta.mjs";
+import { type CarrierFreq, _decode_CarrierFreq, _encode_CarrierFreq } from "../V59/CarrierFreq.ta.mjs";
 
-import { RobBitPatt, _decode_RobBitPatt, _encode_RobBitPatt } from "../V59/RobBitPatt.ta.mjs";
+import { type RobBitPatt, _decode_RobBitPatt, _encode_RobBitPatt } from "../V59/RobBitPatt.ta.mjs";
 
 /**
  * @summary V90Diag_Item
@@ -77,7 +77,7 @@ class V90Diag_Item {
      * @public
      * @readonly
      */
-    readonly modeV90: Capabilities;
+    public readonly modeV90: Capabilities;
     /**
      * @summary `iNFO0Tx`.
      * @description
@@ -89,7 +89,7 @@ class V90Diag_Item {
      * @public
      * @readonly
      */
-    readonly iNFO0Tx: V59String;
+    public readonly iNFO0Tx: V59String;
     /**
      * @summary `iNFO0Rx`.
      * @description
@@ -101,7 +101,7 @@ class V90Diag_Item {
      * @public
      * @readonly
      */
-    readonly iNFO0Rx: V59String;
+    public readonly iNFO0Rx: V59String;
     /**
      * @summary `iNFO1A`.
      * @description
@@ -113,7 +113,7 @@ class V90Diag_Item {
      * @public
      * @readonly
      */
-    readonly iNFO1A: V59String;
+    public readonly iNFO1A: V59String;
     /**
      * @summary `iNFO1d`.
      * @description
@@ -126,7 +126,7 @@ class V90Diag_Item {
      * @public
      * @readonly
      */
-    readonly iNFO1d: V59String;
+    public readonly iNFO1d: V59String;
     /**
      * @summary `mP`.
      * @description
@@ -139,7 +139,7 @@ class V90Diag_Item {
      * @public
      * @readonly
      */
-    readonly mP: V59String;
+    public readonly mP: V59String;
     /**
      * @summary `cP`.
      * @description
@@ -150,7 +150,7 @@ class V90Diag_Item {
      * @public
      * @readonly
      */
-    readonly cP: V59String;
+    public readonly cP: V59String;
     /**
      * @summary `cPt`.
      * @description
@@ -162,7 +162,7 @@ class V90Diag_Item {
      * @public
      * @readonly
      */
-    readonly cPt: V59String;
+    public readonly cPt: V59String;
     /**
      * @summary `jAsequence`.
      * @description
@@ -174,7 +174,7 @@ class V90Diag_Item {
      * @public
      * @readonly
      */
-    readonly jAsequence: V59String;
+    public readonly jAsequence: V59String;
     /**
      * @summary `jDsequence`.
      * @description
@@ -186,7 +186,7 @@ class V90Diag_Item {
      * @public
      * @readonly
      */
-    readonly jDsequence: V59String;
+    public readonly jDsequence: V59String;
     /**
      * @summary `v90TxLevel`.
      * @description
@@ -196,7 +196,7 @@ class V90Diag_Item {
      * @public
      * @readonly
      */
-    readonly v90TxLevel: TxPowerLevel;
+    public readonly v90TxLevel: TxPowerLevel;
     /**
      * @summary `txSymbolRate`.
      * @description
@@ -206,7 +206,7 @@ class V90Diag_Item {
      * @public
      * @readonly
      */
-    readonly txSymbolRate: OPTIONAL<SymbolRate>;
+    public readonly txSymbolRate: OPTIONAL<SymbolRate>;
     /**
      * @summary `rxSymbolRate`.
      * @description
@@ -216,7 +216,7 @@ class V90Diag_Item {
      * @public
      * @readonly
      */
-    readonly rxSymbolRate: OPTIONAL<SymbolRate>;
+    public readonly rxSymbolRate: OPTIONAL<SymbolRate>;
     /**
      * @summary `txCarrierFreq`.
      * @description
@@ -226,7 +226,7 @@ class V90Diag_Item {
      * @public
      * @readonly
      */
-    readonly txCarrierFreq: OPTIONAL<CarrierFreq>;
+    public readonly txCarrierFreq: OPTIONAL<CarrierFreq>;
     /**
      * @summary `rxCarrierFreq`.
      * @description
@@ -236,7 +236,7 @@ class V90Diag_Item {
      * @public
      * @readonly
      */
-    readonly rxCarrierFreq: OPTIONAL<CarrierFreq>;
+    public readonly rxCarrierFreq: OPTIONAL<CarrierFreq>;
     /**
      * @summary `txDataHistory`.
      * @description
@@ -248,7 +248,7 @@ class V90Diag_Item {
      * @public
      * @readonly
      */
-    readonly txDataHistory: V59String;
+    public readonly txDataHistory: V59String;
     /**
      * @summary `rxDataHistory`.
      * @description
@@ -259,7 +259,7 @@ class V90Diag_Item {
      * @public
      * @readonly
      */
-    readonly rxDataHistory: V59String;
+    public readonly rxDataHistory: V59String;
     /**
      * @summary `rxLevelEstimate`.
      * @description
@@ -270,7 +270,7 @@ class V90Diag_Item {
      * @public
      * @readonly
      */
-    readonly rxLevelEstimate?: OPTIONAL<V59String>;
+    public readonly rxLevelEstimate?: OPTIONAL<V59String>;
     /**
      * @summary `noiseEstimate`.
      * @description
@@ -280,7 +280,7 @@ class V90Diag_Item {
      * @public
      * @readonly
      */
-    readonly noiseEstimate?: OPTIONAL<V59String>;
+    public readonly noiseEstimate?: OPTIONAL<V59String>;
     /**
      * @summary `rxSignalQuality`.
      * @description
@@ -292,7 +292,7 @@ class V90Diag_Item {
      * @public
      * @readonly
      */
-    readonly rxSignalQuality?: OPTIONAL<V59String>;
+    public readonly rxSignalQuality?: OPTIONAL<V59String>;
     /**
      * @summary `nearEchoEstimate`.
      * @description
@@ -303,7 +303,7 @@ class V90Diag_Item {
      * @public
      * @readonly
      */
-    readonly nearEchoEstimate?: OPTIONAL<V59String>;
+    public readonly nearEchoEstimate?: OPTIONAL<V59String>;
     /**
      * @summary `farEchoEstimate`.
      * @description
@@ -314,7 +314,7 @@ class V90Diag_Item {
      * @public
      * @readonly
      */
-    readonly farEchoEstimate?: OPTIONAL<V59String>;
+    public readonly farEchoEstimate?: OPTIONAL<V59String>;
     /**
      * @summary `roundTripDelay`.
      * @description
@@ -325,7 +325,7 @@ class V90Diag_Item {
      * @public
      * @readonly
      */
-    readonly roundTripDelay?: OPTIONAL<V59String>;
+    public readonly roundTripDelay?: OPTIONAL<V59String>;
     /**
      * @summary `rBSpattern`.
      * @description
@@ -337,7 +337,7 @@ class V90Diag_Item {
      * @public
      * @readonly
      */
-    readonly rBSpattern?: OPTIONAL<RobBitPatt>;
+    public readonly rBSpattern?: OPTIONAL<RobBitPatt>;
     /**
      * @summary `digitalPadLoss`.
      * @description
@@ -348,7 +348,7 @@ class V90Diag_Item {
      * @public
      * @readonly
      */
-    readonly digitalPadLoss?: OPTIONAL<V59String>;
+    public readonly digitalPadLoss?: OPTIONAL<V59String>;
     /**
      * @summary `codecLaw`.
      * @description
@@ -359,13 +359,13 @@ class V90Diag_Item {
      * @public
      * @readonly
      */
-    readonly codecLaw?: OPTIONAL<BOOLEAN>;
+    public readonly codecLaw?: OPTIONAL<BOOLEAN>;
     /**
      * @summary Extensions that are not recognized.
      * @public
      * @readonly
      */
-    readonly _unrecognizedExtensionsList: _Element[];
+    public readonly _unrecognizedExtensionsList: _Element[];
 
     constructor (
         modeV90: Capabilities,

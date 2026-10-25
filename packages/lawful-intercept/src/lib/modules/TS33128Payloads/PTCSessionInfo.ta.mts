@@ -1,8 +1,8 @@
 /* eslint-disable */
 import {
-    UTF8String,
+    type UTF8String,
     ASN1ConstructionError as _ConstructionError,
-    ASN1Element as _Element,
+    type ASN1Element as _Element,
     ASN1TagClass as _TagClass
 } from "@wildboar/asn1";
 import * as $ from "@wildboar/asn1/functional";
@@ -86,7 +86,7 @@ class PTCSessionInfo {
          * @static
          */
 
-    public static _enum_for_pTCSessionType = _enum_for_PTCSessionType;
+    public static _enum_for_pTCSessionType: typeof _enum_for_PTCSessionType = _enum_for_PTCSessionType;
 }
 
 /**

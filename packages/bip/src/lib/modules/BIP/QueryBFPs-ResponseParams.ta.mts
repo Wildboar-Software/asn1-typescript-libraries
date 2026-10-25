@@ -45,7 +45,7 @@ export class QueryBFPs_ResponseParams {
    * @public
    * @readonly
    */
-  readonly bfps: BioAPI_BFP_LIST_ELEMENT[];
+  public readonly bfps: BioAPI_BFP_LIST_ELEMENT[];
 
   constructor(
     bfps: BioAPI_BFP_LIST_ELEMENT[]

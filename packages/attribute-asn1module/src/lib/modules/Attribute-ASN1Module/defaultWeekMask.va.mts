@@ -1,6 +1,6 @@
 /* eslint-disable */
 import {
-    ASN1Element as _Element,
+    type ASN1Element as _Element,
     ASN1TagClass as _TagClass,
     ASN1Construction as _Construction,
     ASN1UniversalType as _UniversalType,
@@ -9,7 +9,7 @@ import {
     EmbeddedPDV as _PDV,
     ASN1ConstructionError as _ConstructionError,
 } from "@wildboar/asn1";
-import { WeekMask, _decode_WeekMask, _encode_WeekMask } from "../Attribute-ASN1Module/WeekMask.ta.mjs";
+import { type WeekMask, _decode_WeekMask, _encode_WeekMask } from "../Attribute-ASN1Module/WeekMask.ta.mjs";
 import { defaultIntervalsOfDay } from "../Attribute-ASN1Module/defaultIntervalsOfDay.va.mjs";
 import { WeekMask_Item } from "../Attribute-ASN1Module/WeekMask-Item.ta.mjs";
 

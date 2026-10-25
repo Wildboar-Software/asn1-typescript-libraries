@@ -1,9 +1,9 @@
 /* eslint-disable */
 import {
     ASN1ConstructionError as _ConstructionError,
-    ASN1Element as _Element,
+    type ASN1Element as _Element,
     ASN1TagClass as _TagClass,
-    OBJECT_IDENTIFIER,
+    type OBJECT_IDENTIFIER,
 } from "@wildboar/asn1";
 import * as $ from "@wildboar/asn1/functional";
 
@@ -23,20 +23,26 @@ import * as $ from "@wildboar/asn1/functional";
  *
  */
 export class SMIMECapability {
+    /**
+     * @summary `algorithm`.
+     * @public
+     * @readonly
+     */
+    public readonly algorithm: OBJECT_IDENTIFIER;
+    /**
+     * @summary `parameters`.
+     * @public
+     * @readonly
+     */
+    public readonly parameters: _Element;
+
     constructor(
-        /**
-         * @summary `algorithm`.
-         * @public
-         * @readonly
-         */
-        readonly algorithm: OBJECT_IDENTIFIER,
-        /**
-         * @summary `parameters`.
-         * @public
-         * @readonly
-         */
-        readonly parameters: _Element
-    ) {}
+        algorithm: OBJECT_IDENTIFIER,
+        parameters: _Element
+    ) {
+        this.algorithm = algorithm;
+        this.parameters = parameters;
+    }
 
     /**
      * @summary Restructures an object into a SMIMECapability

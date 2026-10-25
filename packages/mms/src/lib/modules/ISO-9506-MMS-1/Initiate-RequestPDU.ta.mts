@@ -1,7 +1,7 @@
 /* eslint-disable */
 import {
-    OPTIONAL,
-    ASN1Element as _Element,
+    type OPTIONAL,
+    type ASN1Element as _Element,
     ASN1TagClass as _TagClass,
     ASN1Construction as _Construction,
     ASN1UniversalType as _UniversalType,
@@ -11,9 +11,9 @@ import {
     ASN1ConstructionError as _ConstructionError,
 } from "@wildboar/asn1";
 import * as $ from "@wildboar/asn1/functional";
-import { Integer32, _decode_Integer32, _encode_Integer32 } from "../ISO-9506-MMS-1/Integer32.ta.mjs";
-import { Integer16, _decode_Integer16, _encode_Integer16 } from "../ISO-9506-MMS-1/Integer16.ta.mjs";
-import { Integer8, _decode_Integer8, _encode_Integer8 } from "../ISO-9506-MMS-1/Integer8.ta.mjs";
+import { type Integer32, _decode_Integer32, _encode_Integer32 } from "../ISO-9506-MMS-1/Integer32.ta.mjs";
+import { type Integer16, _decode_Integer16, _encode_Integer16 } from "../ISO-9506-MMS-1/Integer16.ta.mjs";
+import { type Integer8, _decode_Integer8, _encode_Integer8 } from "../ISO-9506-MMS-1/Integer8.ta.mjs";
 import { Initiate_RequestPDU_initRequestDetail, _decode_Initiate_RequestPDU_initRequestDetail, _encode_Initiate_RequestPDU_initRequestDetail } from "../ISO-9506-MMS-1/Initiate-RequestPDU-initRequestDetail.ta.mjs";
 
 
@@ -53,61 +53,73 @@ import { Initiate_RequestPDU_initRequestDetail, _decode_Initiate_RequestPDU_init
  */
 export
 class Initiate_RequestPDU {
+    /**
+     * @summary `localDetailCalling`.
+     * @description
+     *
+     * Calling implementation detail. Content is a local matter; not further
+     * standardized (ISO 9506-1:2003 §8.2.1.1.1).
+     * @public
+     * @readonly
+     */
+    public readonly localDetailCalling: OPTIONAL<Integer32>;
+    /**
+     * @summary `proposedMaxServOutstandingCalling`.
+     * @description
+     *
+     * Proposed maximum Transaction objects at the calling MMS-user. May be
+     * reduced by the provider; indication ≤ request; not less than zero
+     * (ISO 9506-1:2003 §8.2.1.1.2).
+     * @public
+     * @readonly
+     */
+    public readonly proposedMaxServOutstandingCalling: Integer16;
+    /**
+     * @summary `proposedMaxServOutstandingCalled`.
+     * @description
+     *
+     * Proposed maximum Transaction objects at the called MMS-user. May be
+     * reduced by the provider; indication ≤ request; not less than zero
+     * (ISO 9506-1:2003 §8.2.1.1.3).
+     * @public
+     * @readonly
+     */
+    public readonly proposedMaxServOutstandingCalled: Integer16;
+    /**
+     * @summary `proposedDataStructureNestingLevel`.
+     * @description
+     *
+     * Proposed maximum Type Specification nesting. Omit for unlimited. Zero
+     * means only simple types. Provider may reduce; indication ≤ request
+     * (ISO 9506-1:2003 §8.2.1.1.4).
+     * @public
+     * @readonly
+     */
+    public readonly proposedDataStructureNestingLevel: OPTIONAL<Integer8>;
+    /**
+     * @summary `initRequestDetail`.
+     * @description
+     *
+     * Proposed minor version, parameter CBBs, and services supported
+     * (ISO 9506-1:2003 §8.2; ISO 9506-2:2003 §8.2).
+     * @public
+     * @readonly
+     */
+    public readonly initRequestDetail: Initiate_RequestPDU_initRequestDetail;
+
     constructor (
-        /**
-         * @summary `localDetailCalling`.
-         * @description
-         *
-         * Calling implementation detail. Content is a local matter; not further
-         * standardized (ISO 9506-1:2003 §8.2.1.1.1).
-         * @public
-         * @readonly
-         */
-        readonly localDetailCalling: OPTIONAL<Integer32>,
-        /**
-         * @summary `proposedMaxServOutstandingCalling`.
-         * @description
-         *
-         * Proposed maximum Transaction objects at the calling MMS-user. May be
-         * reduced by the provider; indication ≤ request; not less than zero
-         * (ISO 9506-1:2003 §8.2.1.1.2).
-         * @public
-         * @readonly
-         */
-        readonly proposedMaxServOutstandingCalling: Integer16,
-        /**
-         * @summary `proposedMaxServOutstandingCalled`.
-         * @description
-         *
-         * Proposed maximum Transaction objects at the called MMS-user. May be
-         * reduced by the provider; indication ≤ request; not less than zero
-         * (ISO 9506-1:2003 §8.2.1.1.3).
-         * @public
-         * @readonly
-         */
-        readonly proposedMaxServOutstandingCalled: Integer16,
-        /**
-         * @summary `proposedDataStructureNestingLevel`.
-         * @description
-         *
-         * Proposed maximum Type Specification nesting. Omit for unlimited. Zero
-         * means only simple types. Provider may reduce; indication ≤ request
-         * (ISO 9506-1:2003 §8.2.1.1.4).
-         * @public
-         * @readonly
-         */
-        readonly proposedDataStructureNestingLevel: OPTIONAL<Integer8>,
-        /**
-         * @summary `initRequestDetail`.
-         * @description
-         *
-         * Proposed minor version, parameter CBBs, and services supported
-         * (ISO 9506-1:2003 §8.2; ISO 9506-2:2003 §8.2).
-         * @public
-         * @readonly
-         */
-        readonly initRequestDetail: Initiate_RequestPDU_initRequestDetail
-    ) {}
+        localDetailCalling: OPTIONAL<Integer32>,
+        proposedMaxServOutstandingCalling: Integer16,
+        proposedMaxServOutstandingCalled: Integer16,
+        proposedDataStructureNestingLevel: OPTIONAL<Integer8>,
+        initRequestDetail: Initiate_RequestPDU_initRequestDetail
+    ) {
+        this.localDetailCalling = localDetailCalling;
+        this.proposedMaxServOutstandingCalling = proposedMaxServOutstandingCalling;
+        this.proposedMaxServOutstandingCalled = proposedMaxServOutstandingCalled;
+        this.proposedDataStructureNestingLevel = proposedDataStructureNestingLevel;
+        this.initRequestDetail = initRequestDetail;
+    }
 
     /**
      * @summary Restructures an object into a Initiate_RequestPDU

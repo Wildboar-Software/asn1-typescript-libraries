@@ -1,7 +1,7 @@
 /* eslint-disable */
 import {
-    OPTIONAL,
-    ASN1Element as _Element,
+    type OPTIONAL,
+    type ASN1Element as _Element,
     ASN1TagClass as _TagClass,
     ASN1Construction as _Construction,
     ASN1UniversalType as _UniversalType,
@@ -11,7 +11,7 @@ import {
     ASN1ConstructionError as _ConstructionError,
 } from "@wildboar/asn1";
 import * as $ from "@wildboar/asn1/functional";
-import { V59String, _decode_V59String, _encode_V59String } from "../V59/V59String.ta.mjs";
+import { type V59String, _decode_V59String, _encode_V59String } from "../V59/V59String.ta.mjs";
 
 /**
  * @summary LineConDiag_Item
@@ -45,7 +45,7 @@ class LineConDiag_Item {
      * @public
      * @readonly
      */
-    readonly lineProbeValues?: OPTIONAL<V59String>;
+    public readonly lineProbeValues?: OPTIONAL<V59String>;
     /**
      * @summary `phaseJitter`.
      * @description
@@ -56,7 +56,7 @@ class LineConDiag_Item {
      * @public
      * @readonly
      */
-    readonly phaseJitter?: OPTIONAL<V59String>;
+    public readonly phaseJitter?: OPTIONAL<V59String>;
     /**
      * @summary `ampJitter`.
      * @description
@@ -67,7 +67,7 @@ class LineConDiag_Item {
      * @public
      * @readonly
      */
-    readonly ampJitter?: OPTIONAL<V59String>;
+    public readonly ampJitter?: OPTIONAL<V59String>;
     /**
      * @summary `nLD`.
      * @description
@@ -78,13 +78,13 @@ class LineConDiag_Item {
      * @public
      * @readonly
      */
-    readonly nLD?: OPTIONAL<V59String>;
+    public readonly nLD?: OPTIONAL<V59String>;
     /**
      * @summary Extensions that are not recognized.
      * @public
      * @readonly
      */
-    readonly _unrecognizedExtensionsList: _Element[];
+    public readonly _unrecognizedExtensionsList: _Element[];
 
     constructor (
         lineProbeValues?: OPTIONAL<V59String>,

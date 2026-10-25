@@ -1,7 +1,7 @@
 /* eslint-disable */
 import {
-    OPTIONAL,
-    ASN1Element as _Element,
+    type OPTIONAL,
+    type ASN1Element as _Element,
     ASN1TagClass as _TagClass,
     ASN1Construction as _Construction,
     ASN1UniversalType as _UniversalType,
@@ -11,9 +11,9 @@ import {
     ASN1ConstructionError as _ConstructionError,
 } from "@wildboar/asn1";
 import * as $ from "@wildboar/asn1/functional";
-import { Name, _decode_Name, _encode_Name } from "../InformationFramework/Name.ta.mjs";
+import { type Name, _decode_Name, _encode_Name } from "../InformationFramework/Name.ta.mjs";
 import { Usage, _decode_Usage, _encode_Usage } from "../CryptographicInformationFramework/Usage.ta.mjs";
-import { GeneralNames, _decode_GeneralNames, _encode_GeneralNames } from "../CertificateExtensions/GeneralNames.ta.mjs";
+import { type GeneralNames, _decode_GeneralNames, _encode_GeneralNames } from "../CertificateExtensions/GeneralNames.ta.mjs";
 import { CredentialIdentifier, _decode_CredentialIdentifier, _encode_CredentialIdentifier } from "../CryptographicInformationFramework/CredentialIdentifier.ta.mjs";
 
 
@@ -41,49 +41,61 @@ import { CredentialIdentifier, _decode_CredentialIdentifier, _encode_CredentialI
  */
 export
 class CommonPublicKeyAttributes {
+    /**
+     * @summary `name`.
+     * @description
+     * Owner of the key, as in a corresponding certificate `subject`.
+     * ISO/IEC 7816-15:2016 §8.2.11.
+     * @public
+     * @readonly
+     */
+    public readonly name?: OPTIONAL<Name>;
+    /**
+     * @summary `trustedUsage`.
+     * @description
+     * Purposes for which the cardholder trusts the public key. ISO/IEC
+     * 7816-15:2016 §8.2.11, §8.2.15.
+     * @public
+     * @readonly
+     */
+    public readonly trustedUsage?: OPTIONAL<Usage>;
+    /**
+     * @summary `generalName`.
+     * @description
+     * Additional owner names. ISO/IEC 7816-15:2016 §8.2.11.
+     * @public
+     * @readonly
+     */
+    public readonly generalName?: OPTIONAL<GeneralNames>;
+    /**
+     * @summary `keyIdentifiers`.
+     * @description
+     * External identifiers for this public key. ISO/IEC 7816-15:2016
+     * §8.2.11.
+     * @public
+     * @readonly
+     */
+    public readonly keyIdentifiers?: OPTIONAL<CredentialIdentifier[]>;
+    /**
+     * @summary Extensions that are not recognized.
+     * @public
+     * @readonly
+     */
+    public readonly _unrecognizedExtensionsList: _Element[];
+
     constructor (
-        /**
-         * @summary `name`.
-         * @description
-         * Owner of the key, as in a corresponding certificate `subject`.
-         * ISO/IEC 7816-15:2016 §8.2.11.
-         * @public
-         * @readonly
-         */
-        readonly name?: OPTIONAL<Name>,
-        /**
-         * @summary `trustedUsage`.
-         * @description
-         * Purposes for which the cardholder trusts the public key. ISO/IEC
-         * 7816-15:2016 §8.2.11, §8.2.15.
-         * @public
-         * @readonly
-         */
-        readonly trustedUsage?: OPTIONAL<Usage>,
-        /**
-         * @summary `generalName`.
-         * @description
-         * Additional owner names. ISO/IEC 7816-15:2016 §8.2.11.
-         * @public
-         * @readonly
-         */
-        readonly generalName?: OPTIONAL<GeneralNames>,
-        /**
-         * @summary `keyIdentifiers`.
-         * @description
-         * External identifiers for this public key. ISO/IEC 7816-15:2016
-         * §8.2.11.
-         * @public
-         * @readonly
-         */
-        readonly keyIdentifiers?: OPTIONAL<CredentialIdentifier[]>,
-        /**
-         * @summary Extensions that are not recognized.
-         * @public
-         * @readonly
-         */
-        readonly _unrecognizedExtensionsList: _Element[] = []
-    ) {}
+        name?: OPTIONAL<Name>,
+        trustedUsage?: OPTIONAL<Usage>,
+        generalName?: OPTIONAL<GeneralNames>,
+        keyIdentifiers?: OPTIONAL<CredentialIdentifier[]>,
+        _unrecognizedExtensionsList: _Element[] = []
+    ) {
+        this.name = name;
+        this.trustedUsage = trustedUsage;
+        this.generalName = generalName;
+        this.keyIdentifiers = keyIdentifiers;
+        this._unrecognizedExtensionsList = _unrecognizedExtensionsList;
+    }
 
     /**
      * @summary Restructures an object into a CommonPublicKeyAttributes

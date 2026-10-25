@@ -47,7 +47,7 @@ export class QueryUnits_ResponseParams {
    * @public
    * @readonly
    */
-  readonly unitSchemas: BioAPI_UNIT_SCHEMA[];
+  public readonly unitSchemas: BioAPI_UNIT_SCHEMA[];
 
   constructor(
     unitSchemas: BioAPI_UNIT_SCHEMA[]

@@ -1,6 +1,6 @@
 /* eslint-disable */
 import {
-    ENUMERATED
+    type ENUMERATED
 } from "@wildboar/asn1";
 import * as $ from "@wildboar/asn1/functional";
 
@@ -117,7 +117,7 @@ type Messaging_Event = _enum_for_Messaging_Event | ENUMERATED;
  * @type {number}
  */
 export
-const Messaging_Event_deposit: Messaging_Event = 1; /* LONG_NAMED_ENUMERATED_VALUE */
+const Messaging_Event_deposit: _enum_for_Messaging_Event.deposit = _enum_for_Messaging_Event.deposit; /* LONG_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary deposit
@@ -132,7 +132,7 @@ const Messaging_Event_deposit: Messaging_Event = 1; /* LONG_NAMED_ENUMERATED_VAL
  * @type {number}
  */
 export
-const deposit: Messaging_Event = Messaging_Event_deposit; /* SHORT_NAMED_ENUMERATED_VALUE */
+const deposit: _enum_for_Messaging_Event.deposit = Messaging_Event_deposit; /* SHORT_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary Messaging_Event_retrieve
@@ -147,7 +147,7 @@ const deposit: Messaging_Event = Messaging_Event_deposit; /* SHORT_NAMED_ENUMERA
  * @type {number}
  */
 export
-const Messaging_Event_retrieve: Messaging_Event = 2; /* LONG_NAMED_ENUMERATED_VALUE */
+const Messaging_Event_retrieve: _enum_for_Messaging_Event.retrieve = _enum_for_Messaging_Event.retrieve; /* LONG_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary retrieve
@@ -162,7 +162,7 @@ const Messaging_Event_retrieve: Messaging_Event = 2; /* LONG_NAMED_ENUMERATED_VA
  * @type {number}
  */
 export
-const retrieve: Messaging_Event = Messaging_Event_retrieve; /* SHORT_NAMED_ENUMERATED_VALUE */
+const retrieve: _enum_for_Messaging_Event.retrieve = Messaging_Event_retrieve; /* SHORT_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary Messaging_Event_delete_
@@ -177,7 +177,7 @@ const retrieve: Messaging_Event = Messaging_Event_retrieve; /* SHORT_NAMED_ENUME
  * @type {number}
  */
 export
-const Messaging_Event_delete_: Messaging_Event = 3; /* LONG_NAMED_ENUMERATED_VALUE */
+const Messaging_Event_delete_: _enum_for_Messaging_Event.delete_ = _enum_for_Messaging_Event.delete_; /* LONG_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary delete_
@@ -192,7 +192,7 @@ const Messaging_Event_delete_: Messaging_Event = 3; /* LONG_NAMED_ENUMERATED_VAL
  * @type {number}
  */
 export
-const delete_: Messaging_Event = Messaging_Event_delete_; /* SHORT_NAMED_ENUMERATED_VALUE */
+const delete_: _enum_for_Messaging_Event.delete_ = Messaging_Event_delete_; /* SHORT_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary Messaging_Event_save
@@ -207,7 +207,7 @@ const delete_: Messaging_Event = Messaging_Event_delete_; /* SHORT_NAMED_ENUMERA
  * @type {number}
  */
 export
-const Messaging_Event_save: Messaging_Event = 4; /* LONG_NAMED_ENUMERATED_VALUE */
+const Messaging_Event_save: _enum_for_Messaging_Event.save = _enum_for_Messaging_Event.save; /* LONG_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary save
@@ -222,7 +222,7 @@ const Messaging_Event_save: Messaging_Event = 4; /* LONG_NAMED_ENUMERATED_VALUE 
  * @type {number}
  */
 export
-const save: Messaging_Event = Messaging_Event_save; /* SHORT_NAMED_ENUMERATED_VALUE */
+const save: _enum_for_Messaging_Event.save = Messaging_Event_save; /* SHORT_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary Messaging_Event_slamdown
@@ -236,7 +236,7 @@ const save: Messaging_Event = Messaging_Event_save; /* SHORT_NAMED_ENUMERATED_VA
  * @type {number}
  */
 export
-const Messaging_Event_slamdown: Messaging_Event = 5; /* LONG_NAMED_ENUMERATED_VALUE */
+const Messaging_Event_slamdown: _enum_for_Messaging_Event.slamdown = _enum_for_Messaging_Event.slamdown; /* LONG_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary slamdown
@@ -250,7 +250,7 @@ const Messaging_Event_slamdown: Messaging_Event = 5; /* LONG_NAMED_ENUMERATED_VA
  * @type {number}
  */
 export
-const slamdown: Messaging_Event = Messaging_Event_slamdown; /* SHORT_NAMED_ENUMERATED_VALUE */
+const slamdown: _enum_for_Messaging_Event.slamdown = Messaging_Event_slamdown; /* SHORT_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary Messaging_Event_calendar
@@ -266,7 +266,7 @@ const slamdown: Messaging_Event = Messaging_Event_slamdown; /* SHORT_NAMED_ENUME
  * @type {number}
  */
 export
-const Messaging_Event_calendar: Messaging_Event = 6; /* LONG_NAMED_ENUMERATED_VALUE */
+const Messaging_Event_calendar: _enum_for_Messaging_Event.calendar = _enum_for_Messaging_Event.calendar; /* LONG_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary calendar
@@ -282,7 +282,7 @@ const Messaging_Event_calendar: Messaging_Event = 6; /* LONG_NAMED_ENUMERATED_VA
  * @type {number}
  */
 export
-const calendar: Messaging_Event = Messaging_Event_calendar; /* SHORT_NAMED_ENUMERATED_VALUE */
+const calendar: _enum_for_Messaging_Event.calendar = Messaging_Event_calendar; /* SHORT_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary Messaging_Event_contact
@@ -298,7 +298,7 @@ const calendar: Messaging_Event = Messaging_Event_calendar; /* SHORT_NAMED_ENUME
  * @type {number}
  */
 export
-const Messaging_Event_contact: Messaging_Event = 7; /* LONG_NAMED_ENUMERATED_VALUE */
+const Messaging_Event_contact: _enum_for_Messaging_Event.contact = _enum_for_Messaging_Event.contact; /* LONG_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary contact
@@ -314,7 +314,7 @@ const Messaging_Event_contact: Messaging_Event = 7; /* LONG_NAMED_ENUMERATED_VAL
  * @type {number}
  */
 export
-const contact: Messaging_Event = Messaging_Event_contact; /* SHORT_NAMED_ENUMERATED_VALUE */
+const contact: _enum_for_Messaging_Event.contact = Messaging_Event_contact; /* SHORT_NAMED_ENUMERATED_VALUE */
 export const _decode_Messaging_Event: $.ASN1Decoder<Messaging_Event> = $._decodeEnumerated;
 export const _encode_Messaging_Event: $.ASN1Encoder<Messaging_Event> = $._encodeEnumerated;
 

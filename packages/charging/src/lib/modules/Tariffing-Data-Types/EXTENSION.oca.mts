@@ -1,7 +1,7 @@
 /* eslint-disable */
 import * as $ from "@wildboar/asn1/functional";
 import { CriticalityType } from "../Tariffing-Data-Types/CriticalityType.ta.mjs";
-import { Code } from "../Tariffing-Data-Types/Code.ta.mjs";
+import { type Code } from "../Tariffing-Data-Types/Code.ta.mjs";
 
 
 /**

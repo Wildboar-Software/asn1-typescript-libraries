@@ -1,7 +1,7 @@
 /* eslint-disable */
 import {
-    OPTIONAL,
-    ASN1Element as _Element,
+    type OPTIONAL,
+    type ASN1Element as _Element,
     ASN1TagClass as _TagClass,
     ASN1Construction as _Construction,
     ASN1UniversalType as _UniversalType,
@@ -12,22 +12,22 @@ import {
 } from '@wildboar/asn1';
 import * as $ from '@wildboar/asn1/functional';
 import {
-    SubjectEDIMField,
+    type SubjectEDIMField,
     _decode_SubjectEDIMField,
     _encode_SubjectEDIMField,
 } from '../EDIMSInformationObjects/SubjectEDIMField.ta.mjs';
 import {
-    EDINOriginatorField,
+    type EDINOriginatorField,
     _decode_EDINOriginatorField,
     _encode_EDINOriginatorField,
 } from '../EDIMSInformationObjects/EDINOriginatorField.ta.mjs';
 import {
-    FirstRecipientField,
+    type FirstRecipientField,
     _decode_FirstRecipientField,
     _encode_FirstRecipientField,
 } from '../EDIMSInformationObjects/FirstRecipientField.ta.mjs';
 import {
-    NotificationTimeField,
+    type NotificationTimeField,
     _decode_NotificationTimeField,
     _encode_NotificationTimeField,
 } from '../EDIMSInformationObjects/NotificationTimeField.ta.mjs';
@@ -43,7 +43,7 @@ import {
     _encode_EDINInitiatorField,
 } from '../EDIMSInformationObjects/EDINInitiatorField.ta.mjs';
 import {
-    NotificationExtensionsField,
+    type NotificationExtensionsField,
     _decode_NotificationExtensionsField,
     _encode_NotificationExtensionsField,
 } from '../EDIMSInformationObjects/NotificationExtensionsField.ta.mjs';
@@ -69,50 +69,66 @@ import {
  *
  */
 export class CommonFields {
+    /**
+     * @summary `subject_edim`.
+     * @public
+     * @readonly
+     */
+    public readonly subject_edim: SubjectEDIMField;
+    /**
+     * @summary `edin_originator`.
+     * @public
+     * @readonly
+     */
+    public readonly edin_originator: EDINOriginatorField;
+    /**
+     * @summary `first_recipient`.
+     * @public
+     * @readonly
+     */
+    public readonly first_recipient: OPTIONAL<FirstRecipientField>;
+    /**
+     * @summary `notification_time`.
+     * @public
+     * @readonly
+     */
+    public readonly notification_time: NotificationTimeField;
+    /**
+     * @summary `notification_security_elements`.
+     * @public
+     * @readonly
+     */
+    public readonly notification_security_elements: OPTIONAL<SecurityElementsField>;
+    /**
+     * @summary `edin_initiator`.
+     * @public
+     * @readonly
+     */
+    public readonly edin_initiator: EDINInitiatorField;
+    /**
+     * @summary `notifications_extensions`.
+     * @public
+     * @readonly
+     */
+    public readonly notifications_extensions?: OPTIONAL<NotificationExtensionsField>;
+
     constructor(
-        /**
-         * @summary `subject_edim`.
-         * @public
-         * @readonly
-         */
-        readonly subject_edim: SubjectEDIMField,
-        /**
-         * @summary `edin_originator`.
-         * @public
-         * @readonly
-         */
-        readonly edin_originator: EDINOriginatorField,
-        /**
-         * @summary `first_recipient`.
-         * @public
-         * @readonly
-         */
-        readonly first_recipient: OPTIONAL<FirstRecipientField>,
-        /**
-         * @summary `notification_time`.
-         * @public
-         * @readonly
-         */
-        readonly notification_time: NotificationTimeField,
-        /**
-         * @summary `notification_security_elements`.
-         * @public
-         * @readonly
-         */
-        readonly notification_security_elements: OPTIONAL<SecurityElementsField>,
-        /**
-         * @summary `edin_initiator`.
-         * @public
-         * @readonly
-         */
-        readonly edin_initiator: EDINInitiatorField,
-        /**
-         * @summary `notifications_extensions`.
-         * @public
-         * @readonly
-         */
-        readonly notifications_extensions?: OPTIONAL<NotificationExtensionsField>
-    ) {}
+        subject_edim: SubjectEDIMField,
+        edin_originator: EDINOriginatorField,
+        first_recipient: OPTIONAL<FirstRecipientField>,
+        notification_time: NotificationTimeField,
+        notification_security_elements: OPTIONAL<SecurityElementsField>,
+        edin_initiator: EDINInitiatorField,
+        notifications_extensions?: OPTIONAL<NotificationExtensionsField>
+    ) {
+        this.subject_edim = subject_edim;
+        this.edin_originator = edin_originator;
+        this.first_recipient = first_recipient;
+        this.notification_time = notification_time;
+        this.notification_security_elements = notification_security_elements;
+        this.edin_initiator = edin_initiator;
+        this.notifications_extensions = notifications_extensions;
+    }
 
     /**
      * @summary Restructures an object into a CommonFields
@@ -146,7 +162,7 @@ export class CommonFields {
      * @static
      */
 
-    public static _enum_for_edin_initiator = _enum_for_EDINInitiatorField;
+    public static _enum_for_edin_initiator: typeof _enum_for_EDINInitiatorField = _enum_for_EDINInitiatorField;
 }
 
 /**

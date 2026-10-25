@@ -11,12 +11,12 @@ import {
 } from '@wildboar/asn1';
 import * as $ from '@wildboar/asn1/functional';
 import {
-  User_information,
+  type User_information,
   _decode_User_information,
   _encode_User_information,
 } from '../ACSE-1/User-information.ta.mjs';
 import {
-  Simply_encoded_data,
+  type Simply_encoded_data,
   _decode_Simply_encoded_data,
   _encode_Simply_encoded_data,
 } from '../ACSE-1/Simply-encoded-data.ta.mjs';

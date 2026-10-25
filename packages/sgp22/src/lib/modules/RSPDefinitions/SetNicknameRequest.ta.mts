@@ -1,13 +1,13 @@
 /* eslint-disable */
 import {
-    UTF8String,
+    type UTF8String,
     ASN1ConstructionError as _ConstructionError,
-    ASN1Element as _Element,
+    type ASN1Element as _Element,
     ASN1TagClass as _TagClass
 } from "@wildboar/asn1";
 import { ASN1SizeError } from "@wildboar/asn1";
 import * as $ from "@wildboar/asn1/functional";
-import { Iccid, _decode_Iccid, _encode_Iccid } from "../RSPDefinitions/Iccid.ta.mjs";
+import { type Iccid, _decode_Iccid, _encode_Iccid } from "../RSPDefinitions/Iccid.ta.mjs";
 
 
 /**
@@ -41,7 +41,7 @@ class SetNicknameRequest {
      * @public
      * @readonly
      */
-    readonly iccid: Iccid;
+    public readonly iccid: Iccid;
     /**
      * @summary `profileNickname`.
      * @description
@@ -51,7 +51,7 @@ class SetNicknameRequest {
      * @public
      * @readonly
      */
-    readonly profileNickname: UTF8String;
+    public readonly profileNickname: UTF8String;
 
     constructor (
         iccid: Iccid,

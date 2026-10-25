@@ -1,7 +1,7 @@
 /* eslint-disable */
 import {
-    VisibleString,
-    ASN1Element as _Element,
+    type VisibleString,
+    type ASN1Element as _Element,
     ASN1TagClass as _TagClass,
     ASN1Construction as _Construction,
     ASN1UniversalType as _UniversalType,
@@ -11,7 +11,7 @@ import {
     ASN1ConstructionError as _ConstructionError,
 } from "@wildboar/asn1";
 import * as $ from "@wildboar/asn1/functional";
-import { Date, _decode_Date, _encode_Date } from "../MachineReadableBiometricTestingAndReportingTestReport/Date.ta.mjs";
+import { type Date, _decode_Date, _encode_Date } from "../MachineReadableBiometricTestingAndReportingTestReport/Date.ta.mjs";
 
 
 /**
@@ -37,49 +37,59 @@ import { Date, _decode_Date, _encode_Date } from "../MachineReadableBiometricTes
  */
 export
 class StandardDescription {
+    /**
+     * @summary `standardName`.
+     * @description
+     *
+     * Name of the standard, e.g. "Biometric Testing and Reporting —
+     * Principles and Framework" (Clause 6.4.3).
+     *
+     * @public
+     * @readonly
+     */
+    public readonly standardName: VisibleString;
+    /**
+     * @summary `standardNumber`.
+     * @description
+     *
+     * Series number, e.g. `"19795"` (Clause 6.4.3).
+     *
+     * @public
+     * @readonly
+     */
+    public readonly standardNumber: VisibleString;
+    /**
+     * @summary `standardPart`.
+     * @description
+     *
+     * Part number of the standard series (Clause 6.4.3).
+     *
+     * @public
+     * @readonly
+     */
+    public readonly standardPart: VisibleString;
+    /**
+     * @summary `standardPublicationDate`.
+     * @description
+     *
+     * Publication date of the cited document (Clause 6.4.3).
+     *
+     * @public
+     * @readonly
+     */
+    public readonly standardPublicationDate: Date;
+
     constructor (
-        /**
-         * @summary `standardName`.
-         * @description
-         *
-         * Name of the standard, e.g. "Biometric Testing and Reporting —
-         * Principles and Framework" (Clause 6.4.3).
-         *
-         * @public
-         * @readonly
-         */
-        readonly standardName: VisibleString,
-        /**
-         * @summary `standardNumber`.
-         * @description
-         *
-         * Series number, e.g. `"19795"` (Clause 6.4.3).
-         *
-         * @public
-         * @readonly
-         */
-        readonly standardNumber: VisibleString,
-        /**
-         * @summary `standardPart`.
-         * @description
-         *
-         * Part number of the standard series (Clause 6.4.3).
-         *
-         * @public
-         * @readonly
-         */
-        readonly standardPart: VisibleString,
-        /**
-         * @summary `standardPublicationDate`.
-         * @description
-         *
-         * Publication date of the cited document (Clause 6.4.3).
-         *
-         * @public
-         * @readonly
-         */
-        readonly standardPublicationDate: Date
-    ) {}
+        standardName: VisibleString,
+        standardNumber: VisibleString,
+        standardPart: VisibleString,
+        standardPublicationDate: Date
+    ) {
+        this.standardName = standardName;
+        this.standardNumber = standardNumber;
+        this.standardPart = standardPart;
+        this.standardPublicationDate = standardPublicationDate;
+    }
 
     /**
      * @summary Restructures an object into a StandardDescription

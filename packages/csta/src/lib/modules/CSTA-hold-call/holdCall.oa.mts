@@ -8,7 +8,7 @@ import { type OPERATION } from "../Remote-Operations-Information-Objects/OPERATI
 
 import { HoldCallArgument, _decode_HoldCallArgument, _encode_HoldCallArgument } from "../CSTA-hold-call/HoldCallArgument.ta.mjs";
 
-import { HoldCallResult, _decode_HoldCallResult, _encode_HoldCallResult } from "../CSTA-hold-call/HoldCallResult.ta.mjs";
+import { type HoldCallResult, _decode_HoldCallResult, _encode_HoldCallResult } from "../CSTA-hold-call/HoldCallResult.ta.mjs";
 
 import { universalFailure } from "../CSTA-error-definition/universalFailure.oa.mjs";
 

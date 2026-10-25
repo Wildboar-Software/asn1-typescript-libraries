@@ -1,17 +1,17 @@
 /* eslint-disable */
 import {
     ASN1ConstructionError as _ConstructionError,
-    ASN1Element as _Element,
+    type ASN1Element as _Element,
     ASN1TagClass as _TagClass,
 } from "@wildboar/asn1";
 import * as $ from "@wildboar/asn1/functional";
 import {
-    AddAvlRsp_result,
+    type AddAvlRsp_result,
     _decode_AddAvlRsp_result,
     _encode_AddAvlRsp_result,
 } from "../AVL-management/AddAvlRsp-result.ta.mjs";
 import {
-    InvokeID,
+    type InvokeID,
     _decode_InvokeID,
     _encode_InvokeID,
 } from "../AVL-management/InvokeID.ta.mjs";
@@ -35,34 +35,42 @@ import {
  *
  */
 export class AddAvlRsp {
+    /**
+     * @summary `invokeID`.
+     * @description
+     *
+     * Same value as the corresponding `AddAvlReq`.
+     *
+     * @public
+     * @readonly
+     */
+    public readonly invokeID: InvokeID;
+    /**
+     * @summary `result`.
+     * @description
+     *
+     * `success` (`AddAvlOK`) or `failure` (`AddAvlErr`).
+     *
+     * @public
+     * @readonly
+     */
+    public readonly result: AddAvlRsp_result;
+    /**
+     * @summary Extensions that are not recognized.
+     * @public
+     * @readonly
+     */
+    public readonly _unrecognizedExtensionsList: _Element[];
+
     constructor(
-        /**
-         * @summary `invokeID`.
-         * @description
-         *
-         * Same value as the corresponding `AddAvlReq`.
-         *
-         * @public
-         * @readonly
-         */
-        readonly invokeID: InvokeID,
-        /**
-         * @summary `result`.
-         * @description
-         *
-         * `success` (`AddAvlOK`) or `failure` (`AddAvlErr`).
-         *
-         * @public
-         * @readonly
-         */
-        readonly result: AddAvlRsp_result,
-        /**
-         * @summary Extensions that are not recognized.
-         * @public
-         * @readonly
-         */
-        readonly _unrecognizedExtensionsList: _Element[] = []
-    ) {}
+        invokeID: InvokeID,
+        result: AddAvlRsp_result,
+        _unrecognizedExtensionsList: _Element[] = []
+    ) {
+        this.invokeID = invokeID;
+        this.result = result;
+        this._unrecognizedExtensionsList = _unrecognizedExtensionsList;
+    }
 
     /**
      * @summary Restructures an object into a AddAvlRsp

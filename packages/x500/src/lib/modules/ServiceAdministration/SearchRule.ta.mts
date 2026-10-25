@@ -1,14 +1,14 @@
 /* eslint-disable */
 import {
-    ASN1Element as _Element,
+    type ASN1Element as _Element,
     ASN1TagClass as _TagClass,
-    INTEGER,
-    OBJECT_IDENTIFIER,
-    OPTIONAL,
+    type INTEGER,
+    type OBJECT_IDENTIFIER,
+    type OPTIONAL,
 } from "@wildboar/asn1";
 import * as $ from "@wildboar/asn1/functional";
 import {
-    FamilyGrouping,
+    type FamilyGrouping,
     _decode_FamilyGrouping,
     _encode_FamilyGrouping,
     _enum_for_FamilyGrouping,
@@ -19,17 +19,17 @@ import {
     _encode_FamilyReturn,
 } from "../DirectoryAbstractService/FamilyReturn.ta.mjs";
 import {
-    AttributeType,
+    type AttributeType,
     _decode_AttributeType,
     _encode_AttributeType,
 } from "../InformationFramework/AttributeType.ta.mjs";
 import {
-    AllowedSubset,
+    type AllowedSubset,
     _decode_AllowedSubset,
     _encode_AllowedSubset,
 } from "../ServiceAdministration/AllowedSubset.ta.mjs";
 import {
-    AttributeCombination,
+    type AttributeCombination,
     _decode_AttributeCombination,
     _encode_AttributeCombination,
 } from "../ServiceAdministration/AttributeCombination.ta.mjs";
@@ -44,7 +44,7 @@ import {
     _encode_EntryLimit,
 } from "../ServiceAdministration/EntryLimit.ta.mjs";
 import {
-    ImposedSubset,
+    type ImposedSubset,
     _decode_ImposedSubset,
     _encode_ImposedSubset,
     _enum_for_ImposedSubset,
@@ -90,136 +90,174 @@ import {
  * ```asn1
  * SearchRule ::= SEQUENCE {
  *   COMPONENTS OF SearchRuleId,
- *   serviceType           [1]  OBJECT IDENTIFIER                          OPTIONAL,
- *   userClass             [2]  INTEGER                                    OPTIONAL,
+ *   serviceType           [1]  OBJECT IDENTIFIER                          type OPTIONAL,
+ *   userClass             [2]  INTEGER                                    type OPTIONAL,
  *   inputAttributeTypes   [3]  SEQUENCE SIZE (0..MAX) OF RequestAttribute OPTIONAL,
  *   attributeCombination  [4]  AttributeCombination                       DEFAULT and:{},
  *   outputAttributeTypes  [5]  SEQUENCE SIZE (1..MAX) OF ResultAttribute  OPTIONAL,
- *   defaultControls       [6]  ControlOptions                             OPTIONAL,
- *   mandatoryControls     [7]  ControlOptions                             OPTIONAL,
- *   searchRuleControls    [8]  ControlOptions                             OPTIONAL,
- *   familyGrouping        [9]  FamilyGrouping                             OPTIONAL,
- *   familyReturn          [10] FamilyReturn                               OPTIONAL,
- *   relaxation            [11] RelaxationPolicy                           OPTIONAL,
- *   additionalControl     [12] SEQUENCE SIZE (1..MAX) OF AttributeType    OPTIONAL,
+ *   defaultControls       [6]  ControlOptions                             type OPTIONAL,
+ *   mandatoryControls     [7]  ControlOptions                             type OPTIONAL,
+ *   searchRuleControls    [8]  ControlOptions                             type OPTIONAL,
+ *   familyGrouping        [9]  FamilyGrouping                             type OPTIONAL,
+ *   familyReturn          [10] FamilyReturn                               type OPTIONAL,
+ *   relaxation            [11] RelaxationPolicy                           type OPTIONAL,
+ *   additionalControl     [12] SEQUENCE SIZE (1..MAX) OF AttributeType    type OPTIONAL,
  *   allowedSubset         [13] AllowedSubset                              DEFAULT '111'B,
- *   imposedSubset         [14] ImposedSubset                              OPTIONAL,
- *   entryLimit            [15] EntryLimit                                 OPTIONAL,
+ *   imposedSubset         [14] ImposedSubset                              type OPTIONAL,
+ *   entryLimit            [15] EntryLimit                                 type OPTIONAL,
  *   ... }
  * ```
  *
  */
 export class SearchRule implements SearchRuleId {
+    /**
+     * @summary `id`.
+     * @public
+     * @readonly
+     */
+    public readonly id: INTEGER; /* REPLICATED_COMPONENT */
+    /**
+     * @summary `dmdId`.
+     * @public
+     * @readonly
+     */
+    public readonly dmdId: OBJECT_IDENTIFIER; /* REPLICATED_COMPONENT */
+    /**
+     * @summary `serviceType`.
+     * @public
+     * @readonly
+     */
+    public readonly serviceType?: OPTIONAL<OBJECT_IDENTIFIER>;
+    /**
+     * @summary `userClass`.
+     * @public
+     * @readonly
+     */
+    public readonly userClass?: OPTIONAL<INTEGER>;
+    /**
+     * @summary `inputAttributeTypes`.
+     * @public
+     * @readonly
+     */
+    public readonly inputAttributeTypes?: OPTIONAL<RequestAttribute[]>;
+    /**
+     * @summary `attributeCombination`.
+     * @public
+     * @readonly
+     */
+    public readonly attributeCombination?: OPTIONAL<AttributeCombination>;
+    /**
+     * @summary `outputAttributeTypes`.
+     * @public
+     * @readonly
+     */
+    public readonly outputAttributeTypes?: OPTIONAL<ResultAttribute[]>;
+    /**
+     * @summary `defaultControls`.
+     * @public
+     * @readonly
+     */
+    public readonly defaultControls?: OPTIONAL<ControlOptions>;
+    /**
+     * @summary `mandatoryControls`.
+     * @public
+     * @readonly
+     */
+    public readonly mandatoryControls?: OPTIONAL<ControlOptions>;
+    /**
+     * @summary `searchRuleControls`.
+     * @public
+     * @readonly
+     */
+    public readonly searchRuleControls?: OPTIONAL<ControlOptions>;
+    /**
+     * @summary `familyGrouping`.
+     * @public
+     * @readonly
+     */
+    public readonly familyGrouping?: OPTIONAL<FamilyGrouping>;
+    /**
+     * @summary `familyReturn`.
+     * @public
+     * @readonly
+     */
+    public readonly familyReturn?: OPTIONAL<FamilyReturn>;
+    /**
+     * @summary `relaxation`.
+     * @public
+     * @readonly
+     */
+    public readonly relaxation?: OPTIONAL<RelaxationPolicy>;
+    /**
+     * @summary `additionalControl`.
+     * @public
+     * @readonly
+     */
+    public readonly additionalControl?: OPTIONAL<AttributeType[]>;
+    /**
+     * @summary `allowedSubset`.
+     * @public
+     * @readonly
+     */
+    public readonly allowedSubset?: OPTIONAL<AllowedSubset>;
+    /**
+     * @summary `imposedSubset`.
+     * @public
+     * @readonly
+     */
+    public readonly imposedSubset?: OPTIONAL<ImposedSubset>;
+    /**
+     * @summary `entryLimit`.
+     * @public
+     * @readonly
+     */
+    public readonly entryLimit?: OPTIONAL<EntryLimit>;
+    /**
+     * @summary Extensions that are not recognized.
+     * @public
+     * @readonly
+     */
+    public readonly _unrecognizedExtensionsList: _Element[];
+
     constructor(
-        /**
-         * @summary `id`.
-         * @public
-         * @readonly
-         */
-        readonly id: INTEGER /* REPLICATED_COMPONENT */,
-        /**
-         * @summary `dmdId`.
-         * @public
-         * @readonly
-         */
-        readonly dmdId: OBJECT_IDENTIFIER /* REPLICATED_COMPONENT */,
-        /**
-         * @summary `serviceType`.
-         * @public
-         * @readonly
-         */
-        readonly serviceType?: OPTIONAL<OBJECT_IDENTIFIER>,
-        /**
-         * @summary `userClass`.
-         * @public
-         * @readonly
-         */
-        readonly userClass?: OPTIONAL<INTEGER>,
-        /**
-         * @summary `inputAttributeTypes`.
-         * @public
-         * @readonly
-         */
-        readonly inputAttributeTypes?: OPTIONAL<RequestAttribute[]>,
-        /**
-         * @summary `attributeCombination`.
-         * @public
-         * @readonly
-         */
-        readonly attributeCombination?: OPTIONAL<AttributeCombination>,
-        /**
-         * @summary `outputAttributeTypes`.
-         * @public
-         * @readonly
-         */
-        readonly outputAttributeTypes?: OPTIONAL<ResultAttribute[]>,
-        /**
-         * @summary `defaultControls`.
-         * @public
-         * @readonly
-         */
-        readonly defaultControls?: OPTIONAL<ControlOptions>,
-        /**
-         * @summary `mandatoryControls`.
-         * @public
-         * @readonly
-         */
-        readonly mandatoryControls?: OPTIONAL<ControlOptions>,
-        /**
-         * @summary `searchRuleControls`.
-         * @public
-         * @readonly
-         */
-        readonly searchRuleControls?: OPTIONAL<ControlOptions>,
-        /**
-         * @summary `familyGrouping`.
-         * @public
-         * @readonly
-         */
-        readonly familyGrouping?: OPTIONAL<FamilyGrouping>,
-        /**
-         * @summary `familyReturn`.
-         * @public
-         * @readonly
-         */
-        readonly familyReturn?: OPTIONAL<FamilyReturn>,
-        /**
-         * @summary `relaxation`.
-         * @public
-         * @readonly
-         */
-        readonly relaxation?: OPTIONAL<RelaxationPolicy>,
-        /**
-         * @summary `additionalControl`.
-         * @public
-         * @readonly
-         */
-        readonly additionalControl?: OPTIONAL<AttributeType[]>,
-        /**
-         * @summary `allowedSubset`.
-         * @public
-         * @readonly
-         */
-        readonly allowedSubset?: OPTIONAL<AllowedSubset>,
-        /**
-         * @summary `imposedSubset`.
-         * @public
-         * @readonly
-         */
-        readonly imposedSubset?: OPTIONAL<ImposedSubset>,
-        /**
-         * @summary `entryLimit`.
-         * @public
-         * @readonly
-         */
-        readonly entryLimit?: OPTIONAL<EntryLimit>,
-        /**
-         * @summary Extensions that are not recognized.
-         * @public
-         * @readonly
-         */
-        readonly _unrecognizedExtensionsList: _Element[] = []
-    ) {}
+        id: INTEGER,
+        dmdId: OBJECT_IDENTIFIER,
+        serviceType?: OPTIONAL<OBJECT_IDENTIFIER>,
+        userClass?: OPTIONAL<INTEGER>,
+        inputAttributeTypes?: OPTIONAL<RequestAttribute[]>,
+        attributeCombination?: OPTIONAL<AttributeCombination>,
+        outputAttributeTypes?: OPTIONAL<ResultAttribute[]>,
+        defaultControls?: OPTIONAL<ControlOptions>,
+        mandatoryControls?: OPTIONAL<ControlOptions>,
+        searchRuleControls?: OPTIONAL<ControlOptions>,
+        familyGrouping?: OPTIONAL<FamilyGrouping>,
+        familyReturn?: OPTIONAL<FamilyReturn>,
+        relaxation?: OPTIONAL<RelaxationPolicy>,
+        additionalControl?: OPTIONAL<AttributeType[]>,
+        allowedSubset?: OPTIONAL<AllowedSubset>,
+        imposedSubset?: OPTIONAL<ImposedSubset>,
+        entryLimit?: OPTIONAL<EntryLimit>,
+        _unrecognizedExtensionsList: _Element[] = []
+    ) {
+        this.id = id;
+        this.dmdId = dmdId;
+        this.serviceType = serviceType;
+        this.userClass = userClass;
+        this.inputAttributeTypes = inputAttributeTypes;
+        this.attributeCombination = attributeCombination;
+        this.outputAttributeTypes = outputAttributeTypes;
+        this.defaultControls = defaultControls;
+        this.mandatoryControls = mandatoryControls;
+        this.searchRuleControls = searchRuleControls;
+        this.familyGrouping = familyGrouping;
+        this.familyReturn = familyReturn;
+        this.relaxation = relaxation;
+        this.additionalControl = additionalControl;
+        this.allowedSubset = allowedSubset;
+        this.imposedSubset = imposedSubset;
+        this.entryLimit = entryLimit;
+        this._unrecognizedExtensionsList = _unrecognizedExtensionsList;
+    }
 
     /**
      * @summary Restructures an object into a SearchRule
@@ -282,14 +320,14 @@ export class SearchRule implements SearchRuleId {
      * @static
      */
 
-    public static _enum_for_familyGrouping = _enum_for_FamilyGrouping;
+    public static _enum_for_familyGrouping: typeof _enum_for_FamilyGrouping = _enum_for_FamilyGrouping;
     /**
      * @summary The enum used as the type of the component `imposedSubset`
      * @public
      * @static
      */
 
-    public static _enum_for_imposedSubset = _enum_for_ImposedSubset;
+    public static _enum_for_imposedSubset: typeof _enum_for_ImposedSubset = _enum_for_ImposedSubset;
 }
 
 /**

@@ -1,18 +1,18 @@
 /* eslint-disable */
 import {
-    ASN1Element as _Element,
+    type ASN1Element as _Element,
     ASN1TagClass as _TagClass,
-    OCTET_STRING,
-    OPTIONAL,
+    type OCTET_STRING,
+    type OPTIONAL,
 } from "@wildboar/asn1";
 import * as $ from "@wildboar/asn1/functional";
 import {
-    MasterKeyAlgorithmIdentifier,
+    type MasterKeyAlgorithmIdentifier,
     _decode_MasterKeyAlgorithmIdentifier,
     _encode_MasterKeyAlgorithmIdentifier,
 } from "../CMSDBKeyManagement/MasterKeyAlgorithmIdentifier.ta.mjs";
 import {
-    MessageAuthenticationCodeAlgorithm,
+    type MessageAuthenticationCodeAlgorithm,
     _decode_MessageAuthenticationCodeAlgorithm,
     _encode_MessageAuthenticationCodeAlgorithm,
 } from "../CryptographicMessageSyntax-2010/MessageAuthenticationCodeAlgorithm.ta.mjs";
@@ -36,26 +36,34 @@ import {
  *
  */
 export class MasterKeyEncryptedHMACkey {
+    /**
+     * @summary `masterKeyAID`.
+     * @public
+     * @readonly
+     */
+    public readonly masterKeyAID: OPTIONAL<MasterKeyAlgorithmIdentifier>;
+    /**
+     * @summary `hmacKeyAID`.
+     * @public
+     * @readonly
+     */
+    public readonly hmacKeyAID: OPTIONAL<MessageAuthenticationCodeAlgorithm>;
+    /**
+     * @summary `encryptedKey`.
+     * @public
+     * @readonly
+     */
+    public readonly encryptedKey: OCTET_STRING;
+
     constructor(
-        /**
-         * @summary `masterKeyAID`.
-         * @public
-         * @readonly
-         */
-        readonly masterKeyAID: OPTIONAL<MasterKeyAlgorithmIdentifier>,
-        /**
-         * @summary `hmacKeyAID`.
-         * @public
-         * @readonly
-         */
-        readonly hmacKeyAID: OPTIONAL<MessageAuthenticationCodeAlgorithm>,
-        /**
-         * @summary `encryptedKey`.
-         * @public
-         * @readonly
-         */
-        readonly encryptedKey: OCTET_STRING
-    ) {}
+        masterKeyAID: OPTIONAL<MasterKeyAlgorithmIdentifier>,
+        hmacKeyAID: OPTIONAL<MessageAuthenticationCodeAlgorithm>,
+        encryptedKey: OCTET_STRING
+    ) {
+        this.masterKeyAID = masterKeyAID;
+        this.hmacKeyAID = hmacKeyAID;
+        this.encryptedKey = encryptedKey;
+    }
 
     /**
      * @summary Restructures an object into a MasterKeyEncryptedHMACkey

@@ -1,7 +1,7 @@
 /* eslint-disable */
 import {
-    OPTIONAL,
-    ASN1Element as _Element,
+    type OPTIONAL,
+    type ASN1Element as _Element,
     ASN1TagClass as _TagClass,
     ASN1Construction as _Construction,
     ASN1UniversalType as _UniversalType,
@@ -12,7 +12,7 @@ import {
 } from '@wildboar/asn1';
 import * as $ from '@wildboar/asn1/functional';
 import {
-    RevertInfo,
+    type RevertInfo,
     _decode_RevertInfo,
     _encode_RevertInfo,
 } from '../SWMF/RevertInfo.ta.mjs';
@@ -44,28 +44,34 @@ import {
  *
  */
 export class RevertArgument {
+    /**
+     * @summary `revertInfo`.
+     * @description
+     *
+     * Patch or patches to revert (mandatory). ITU-T Rec. X.744
+     * (10/96) §8.3.6, §9.7 Table 11, A.5.4.
+     * @public
+     * @readonly
+     */
+    public readonly revertInfo: RevertInfo;
+    /**
+     * @summary `additionalInfo`.
+     * @description
+     *
+     * Management extensions. User in Table 11. ITU-T Rec. X.744
+     * (10/96) §9.7 Table 11.
+     * @public
+     * @readonly
+     */
+    public readonly additionalInfo?: OPTIONAL<ManagementExtension[]>;
+
     constructor(
-        /**
-         * @summary `revertInfo`.
-         * @description
-         *
-         * Patch or patches to revert (mandatory). ITU-T Rec. X.744
-         * (10/96) §8.3.6, §9.7 Table 11, A.5.4.
-         * @public
-         * @readonly
-         */
-        readonly revertInfo: RevertInfo,
-        /**
-         * @summary `additionalInfo`.
-         * @description
-         *
-         * Management extensions. User in Table 11. ITU-T Rec. X.744
-         * (10/96) §9.7 Table 11.
-         * @public
-         * @readonly
-         */
-        readonly additionalInfo?: OPTIONAL<ManagementExtension[]>
-    ) {}
+        revertInfo: RevertInfo,
+        additionalInfo?: OPTIONAL<ManagementExtension[]>
+    ) {
+        this.revertInfo = revertInfo;
+        this.additionalInfo = additionalInfo;
+    }
 
     /**
      * @summary Restructures an object into a RevertArgument

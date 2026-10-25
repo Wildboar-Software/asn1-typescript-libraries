@@ -1,12 +1,12 @@
 /* eslint-disable */
 import {
-    OCTET_STRING,
+    type OCTET_STRING,
     ASN1ConstructionError as _ConstructionError,
-    ASN1Element as _Element,
+    type ASN1Element as _Element,
     ASN1TagClass as _TagClass
 } from "@wildboar/asn1";
 import * as $ from "@wildboar/asn1/functional";
-import { TransactionId, _decode_TransactionId, _encode_TransactionId } from "../RSPDefinitions/TransactionId.ta.mjs";
+import { type TransactionId, _decode_TransactionId, _encode_TransactionId } from "../RSPDefinitions/TransactionId.ta.mjs";
 import { ServerSigned1, _decode_ServerSigned1, _encode_ServerSigned1 } from "../RSPDefinitions/ServerSigned1.ta.mjs";
 import { type Certificate, _decode_Certificate, _encode_Certificate } from "@wildboar/pki-stub";
 
@@ -47,7 +47,7 @@ class InitiateAuthenticationOkEs9 {
      * @public
      * @readonly
      */
-    readonly transactionId: TransactionId;
+    public readonly transactionId: TransactionId;
     /**
      * @summary `serverSigned1`.
      * @description
@@ -57,7 +57,7 @@ class InitiateAuthenticationOkEs9 {
      * @public
      * @readonly
      */
-    readonly serverSigned1: ServerSigned1;
+    public readonly serverSigned1: ServerSigned1;
     /**
      * @summary `serverSignature1`.
      * @description
@@ -67,7 +67,7 @@ class InitiateAuthenticationOkEs9 {
      * @public
      * @readonly
      */
-    readonly serverSignature1: OCTET_STRING;
+    public readonly serverSignature1: OCTET_STRING;
     /**
      * @summary `euiccCiPKIdToBeUsed`.
      * @description
@@ -79,7 +79,7 @@ class InitiateAuthenticationOkEs9 {
      * @public
      * @readonly
      */
-    readonly euiccCiPKIdToBeUsed: OCTET_STRING;
+    public readonly euiccCiPKIdToBeUsed: OCTET_STRING;
     /**
      * @summary `serverCertificate`.
      * @description
@@ -90,7 +90,7 @@ class InitiateAuthenticationOkEs9 {
      * @public
      * @readonly
      */
-    readonly serverCertificate: Certificate;
+    public readonly serverCertificate: Certificate;
 
     constructor (
         transactionId: TransactionId,

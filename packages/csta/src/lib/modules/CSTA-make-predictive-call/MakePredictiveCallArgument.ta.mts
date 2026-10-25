@@ -2,20 +2,20 @@
 
 import * as $ from "@wildboar/asn1/functional";
 import {
-    OPTIONAL,
-    INTEGER,
-    SEQUENCE,
-    SET,
-    ASN1Element as _Element,
+    type OPTIONAL,
+    type INTEGER,
+    type SEQUENCE,
+    type SET,
+    type ASN1Element as _Element,
     ASN1TagClass as _TagClass
 } from "@wildboar/asn1";
 import { DeviceID, _decode_DeviceID, _encode_DeviceID } from "../CSTA-device-identifiers/DeviceID.ta.mjs";
 
 import { SignallingDetection, _decode_SignallingDetection, _encode_SignallingDetection } from "../CSTA-make-predictive-call/SignallingDetection.ta.mjs";
 
-import { DestinationDetection, _decode_DestinationDetection, _encode_DestinationDetection } from "../CSTA-make-predictive-call/DestinationDetection.ta.mjs";
+import { type DestinationDetection, _decode_DestinationDetection, _encode_DestinationDetection } from "../CSTA-make-predictive-call/DestinationDetection.ta.mjs";
 
-import { DefaultAction, _decode_DefaultAction, _encode_DefaultAction } from "../CSTA-make-predictive-call/DefaultAction.ta.mjs";
+import { type DefaultAction, _decode_DefaultAction, _encode_DefaultAction } from "../CSTA-make-predictive-call/DefaultAction.ta.mjs";
 import { _enum_for_DetectionAction } from "../CSTA-make-predictive-call/DetectionAction.ta.mjs";
 
 import {
@@ -27,23 +27,23 @@ import {
     _encode_AutoOriginate
 } from "../CSTA-call-control/AutoOriginate.ta.mjs";
 
-import { CallCharacteristics, _decode_CallCharacteristics, _encode_CallCharacteristics } from "../CSTA-call-control/CallCharacteristics.ta.mjs";
+import { type CallCharacteristics, _decode_CallCharacteristics, _encode_CallCharacteristics } from "../CSTA-call-control/CallCharacteristics.ta.mjs";
 
-import { SubjectOfCall, _decode_SubjectOfCall, _encode_SubjectOfCall } from "../CSTA-device-feature-types/SubjectOfCall.ta.mjs";
+import { type SubjectOfCall, _decode_SubjectOfCall, _encode_SubjectOfCall } from "../CSTA-device-feature-types/SubjectOfCall.ta.mjs";
 
-import { LanguagePreferences, _decode_LanguagePreferences, _encode_LanguagePreferences } from "../CSTA-device-feature-types/LanguagePreferences.ta.mjs";
+import { type LanguagePreferences, _decode_LanguagePreferences, _encode_LanguagePreferences } from "../CSTA-device-feature-types/LanguagePreferences.ta.mjs";
 
 import { CSTACommonArguments, _decode_CSTACommonArguments, _encode_CSTACommonArguments } from "../CSTA-extension-types/CSTACommonArguments.ta.mjs";
 
 
 
-import { AccountInfo, _decode_AccountInfo, _encode_AccountInfo } from "../CSTA-device-feature-types/AccountInfo.ta.mjs";
+import { type AccountInfo, _decode_AccountInfo, _encode_AccountInfo } from "../CSTA-device-feature-types/AccountInfo.ta.mjs";
 
-import { AuthCode, _decode_AuthCode, _encode_AuthCode } from "../CSTA-device-feature-types/AuthCode.ta.mjs";
+import { type AuthCode, _decode_AuthCode, _encode_AuthCode } from "../CSTA-device-feature-types/AuthCode.ta.mjs";
 
-import { CorrelatorData, _decode_CorrelatorData, _encode_CorrelatorData } from "../CSTA-device-feature-types/CorrelatorData.ta.mjs";
+import { type CorrelatorData, _decode_CorrelatorData, _encode_CorrelatorData } from "../CSTA-device-feature-types/CorrelatorData.ta.mjs";
 
-import { UserData, _decode_UserData, _encode_UserData } from "../CSTA-device-feature-types/UserData.ta.mjs";
+import { type UserData, _decode_UserData, _encode_UserData } from "../CSTA-device-feature-types/UserData.ta.mjs";
 
 /**
  * @summary MakePredictiveCallArgument
@@ -62,18 +62,18 @@ import { UserData, _decode_UserData, _encode_UserData } from "../CSTA-device-fea
  * MakePredictiveCallArgument ::= SEQUENCE
  * {     callingDevice             DeviceID,
  *     calledDirectoryNumber         DeviceID,
- *     signallingDetection         [ 0] IMPLICIT SignallingDetection         OPTIONAL,
- *     destinationDetection         [ 1] IMPLICIT DestinationDetection        OPTIONAL,
- *     defaultAction             [ 2] IMPLICIT DefaultAction             OPTIONAL,
- *     accountCode             [ 3] IMPLICIT AccountInfo             OPTIONAL,
- *     authCode             [ 4] IMPLICIT AuthCode                 OPTIONAL,
+ *     signallingDetection         [ 0] IMPLICIT SignallingDetection         type OPTIONAL,
+ *     destinationDetection         [ 1] IMPLICIT DestinationDetection        type OPTIONAL,
+ *     defaultAction             [ 2] IMPLICIT DefaultAction             type OPTIONAL,
+ *     accountCode             [ 3] IMPLICIT AccountInfo             type OPTIONAL,
+ *     authCode             [ 4] IMPLICIT AuthCode                 type OPTIONAL,
  *     autoOriginate             [ 5] IMPLICIT AutoOriginate             DEFAULT prompt,
- *     alertTime             [ 6] IMPLICIT INTEGER                 OPTIONAL,
- *     correlatorData             [ 7] IMPLICIT CorrelatorData             OPTIONAL,
- *     callCharacteristics         [ 8] IMPLICIT CallCharacteristics         OPTIONAL,
- *     userData             UserData                     OPTIONAL, 
- *     subjectOfCall            [ 9] IMPLICIT SubjectOfCall            OPTIONAL,
- *     languagePreferences        [10] IMPLICIT LanguagePreferences        OPTIONAL,
+ *     alertTime             [ 6] IMPLICIT INTEGER                 type OPTIONAL,
+ *     correlatorData             [ 7] IMPLICIT CorrelatorData             type OPTIONAL,
+ *     callCharacteristics         [ 8] IMPLICIT CallCharacteristics         type OPTIONAL,
+ *     userData             UserData                     type OPTIONAL, 
+ *     subjectOfCall            [ 9] IMPLICIT SubjectOfCall            type OPTIONAL,
+ *     languagePreferences        [10] IMPLICIT LanguagePreferences        type OPTIONAL,
  *     extensions             CSTACommonArguments                 OPTIONAL }
  * ```
  * 
@@ -81,176 +81,208 @@ import { UserData, _decode_UserData, _encode_UserData } from "../CSTA-device-fea
  */
 export
 class MakePredictiveCallArgument {
+    /**
+     * @summary `callingDevice`.
+     * @description
+     *
+     * Mandatory. Device on whose behalf the call is
+     * originated. Often a group or ACD that later allocates
+     * the call (FR 2). Calling-device FWD/DND is not
+     * honoured (FR 7).
+     *
+     * @public
+     * @readonly
+     */
+    public readonly callingDevice: DeviceID;
+    /**
+     * @summary `calledDirectoryNumber`.
+     * @description
+     *
+     * Mandatory. Called device. Active features at this
+     * device are honoured (FR 8).
+     *
+     * @public
+     * @readonly
+     */
+    public readonly calledDirectoryNumber: DeviceID;
+    /**
+     * @summary `signallingDetection`.
+     * @description
+     *
+     * Optional. Call-progress condition and action at the
+     * called device or network (Table 17-110).
+     *
+     * @public
+     * @readonly
+     */
+    public readonly signallingDetection?: OPTIONAL<SignallingDetection>;
+    /**
+     * @summary `destinationDetection`.
+     * @description
+     *
+     * Optional list of destination-condition/action pairs
+     * used when
+     * `signallingConditionsAction` is
+     * `destinationDetection`. First matching condition
+     * wins (Table 17-110).
+     *
+     * @public
+     * @readonly
+     */
+    public readonly destinationDetection?: OPTIONAL<DestinationDetection>;
+    /**
+     * @summary `defaultAction`.
+     * @description
+     *
+     * Optional. Action when `signallingCondition` cannot be
+     * met (FR 4).
+     *
+     * @public
+     * @readonly
+     */
+    public readonly defaultAction?: OPTIONAL<DefaultAction>;
+    /**
+     * @summary `accountCode`.
+     * @description
+     *
+     * Optional account code for the new call (§12.2.1).
+     *
+     * @public
+     * @readonly
+     */
+    public readonly accountCode?: OPTIONAL<AccountInfo>;
+    /**
+     * @summary `authCode`.
+     * @description
+     *
+     * Optional authorization code (§12.2.3).
+     *
+     * @public
+     * @readonly
+     */
+    public readonly authCode?: OPTIONAL<AuthCode>;
+    /**
+     * @summary `autoOriginate`.
+     * @description
+     *
+     * Default `prompt`. Hands-free (`doNotPrompt`) handling
+     * is switching-function dependent if the calling device
+     * cannot auto-answer (FR 6).
+     *
+     * @public
+     * @readonly
+     */
+    public readonly autoOriginate?: OPTIONAL<AutoOriginate>;
+    /**
+     * @summary `alertTime`.
+     * @description
+     *
+     * Optional seconds the called device is alerted before
+     * the call is cleared.
+     *
+     * @public
+     * @readonly
+     */
+    public readonly alertTime?: OPTIONAL<INTEGER>;
+    /**
+     * @summary `correlatorData`.
+     * @description
+     *
+     * Optional correlator data attached to the call
+     * (§12.2.10).
+     *
+     * @public
+     * @readonly
+     */
+    public readonly correlatorData?: OPTIONAL<CorrelatorData>;
+    /**
+     * @summary `callCharacteristics`.
+     * @description
+     *
+     * Optional call characteristics (§12.2.4). Unsupported
+     * values cause a negative acknowledgement.
+     *
+     * @public
+     * @readonly
+     */
+    public readonly callCharacteristics?: OPTIONAL<CallCharacteristics>;
+    /**
+     * @summary `userData`.
+     * @description
+     *
+     * Optional user data sent to parties in the call
+     * (§12.2.30).
+     *
+     * @public
+     * @readonly
+     */
+    public readonly userData?: OPTIONAL<UserData>;
+    /**
+     * @summary `subjectOfCall`.
+     * @description
+     *
+     * Optional subject or intent (§12.2.27).
+     *
+     * @public
+     * @readonly
+     */
+    public readonly subjectOfCall?: OPTIONAL<SubjectOfCall>;
+    /**
+     * @summary `languagePreferences`.
+     * @description
+     *
+     * Optional preferred language(s) (§12.2.16).
+     *
+     * @public
+     * @readonly
+     */
+    public readonly languagePreferences?: OPTIONAL<LanguagePreferences>;
+    /**
+     * @summary `extensions`.
+     * @description
+     *
+     * Optional `CSTACommonArguments` carrying the security
+     * and privateData parameters from the ECMA-269 service
+     * table.
+     *
+     * @public
+     * @readonly
+     */
+    public readonly extensions?: OPTIONAL<CSTACommonArguments>;
+
     constructor (
-        /**
-         * @summary `callingDevice`.
-         * @description
-         *
-         * Mandatory. Device on whose behalf the call is
-         * originated. Often a group or ACD that later allocates
-         * the call (FR 2). Calling-device FWD/DND is not
-         * honoured (FR 7).
-         *
-         * @public
-         * @readonly
-         */
-        readonly callingDevice: DeviceID,
-        /**
-         * @summary `calledDirectoryNumber`.
-         * @description
-         *
-         * Mandatory. Called device. Active features at this
-         * device are honoured (FR 8).
-         *
-         * @public
-         * @readonly
-         */
-        readonly calledDirectoryNumber: DeviceID,
-        /**
-         * @summary `signallingDetection`.
-         * @description
-         *
-         * Optional. Call-progress condition and action at the
-         * called device or network (Table 17-110).
-         *
-         * @public
-         * @readonly
-         */
-        readonly signallingDetection?: OPTIONAL<SignallingDetection>,
-        /**
-         * @summary `destinationDetection`.
-         * @description
-         *
-         * Optional list of destination-condition/action pairs
-         * used when
-         * `signallingConditionsAction` is
-         * `destinationDetection`. First matching condition
-         * wins (Table 17-110).
-         *
-         * @public
-         * @readonly
-         */
-        readonly destinationDetection?: OPTIONAL<DestinationDetection>,
-        /**
-         * @summary `defaultAction`.
-         * @description
-         *
-         * Optional. Action when `signallingCondition` cannot be
-         * met (FR 4).
-         *
-         * @public
-         * @readonly
-         */
-        readonly defaultAction?: OPTIONAL<DefaultAction>,
-        /**
-         * @summary `accountCode`.
-         * @description
-         *
-         * Optional account code for the new call (§12.2.1).
-         *
-         * @public
-         * @readonly
-         */
-        readonly accountCode?: OPTIONAL<AccountInfo>,
-        /**
-         * @summary `authCode`.
-         * @description
-         *
-         * Optional authorization code (§12.2.3).
-         *
-         * @public
-         * @readonly
-         */
-        readonly authCode?: OPTIONAL<AuthCode>,
-        /**
-         * @summary `autoOriginate`.
-         * @description
-         *
-         * Default `prompt`. Hands-free (`doNotPrompt`) handling
-         * is switching-function dependent if the calling device
-         * cannot auto-answer (FR 6).
-         *
-         * @public
-         * @readonly
-         */
-        readonly autoOriginate?: OPTIONAL<AutoOriginate>,
-        /**
-         * @summary `alertTime`.
-         * @description
-         *
-         * Optional seconds the called device is alerted before
-         * the call is cleared.
-         *
-         * @public
-         * @readonly
-         */
-        readonly alertTime?: OPTIONAL<INTEGER>,
-        /**
-         * @summary `correlatorData`.
-         * @description
-         *
-         * Optional correlator data attached to the call
-         * (§12.2.10).
-         *
-         * @public
-         * @readonly
-         */
-        readonly correlatorData?: OPTIONAL<CorrelatorData>,
-        /**
-         * @summary `callCharacteristics`.
-         * @description
-         *
-         * Optional call characteristics (§12.2.4). Unsupported
-         * values cause a negative acknowledgement.
-         *
-         * @public
-         * @readonly
-         */
-        readonly callCharacteristics?: OPTIONAL<CallCharacteristics>,
-        /**
-         * @summary `userData`.
-         * @description
-         *
-         * Optional user data sent to parties in the call
-         * (§12.2.30).
-         *
-         * @public
-         * @readonly
-         */
-        readonly userData?: OPTIONAL<UserData>,
-        /**
-         * @summary `subjectOfCall`.
-         * @description
-         *
-         * Optional subject or intent (§12.2.27).
-         *
-         * @public
-         * @readonly
-         */
-        readonly subjectOfCall?: OPTIONAL<SubjectOfCall>,
-        /**
-         * @summary `languagePreferences`.
-         * @description
-         *
-         * Optional preferred language(s) (§12.2.16).
-         *
-         * @public
-         * @readonly
-         */
-        readonly languagePreferences?: OPTIONAL<LanguagePreferences>,
-        /**
-         * @summary `extensions`.
-         * @description
-         *
-         * Optional `CSTACommonArguments` carrying the security
-         * and privateData parameters from the ECMA-269 service
-         * table.
-         *
-         * @public
-         * @readonly
-         */
-        readonly extensions?: OPTIONAL<CSTACommonArguments>
-    ) {}
+        callingDevice: DeviceID,
+        calledDirectoryNumber: DeviceID,
+        signallingDetection?: OPTIONAL<SignallingDetection>,
+        destinationDetection?: OPTIONAL<DestinationDetection>,
+        defaultAction?: OPTIONAL<DefaultAction>,
+        accountCode?: OPTIONAL<AccountInfo>,
+        authCode?: OPTIONAL<AuthCode>,
+        autoOriginate?: OPTIONAL<AutoOriginate>,
+        alertTime?: OPTIONAL<INTEGER>,
+        correlatorData?: OPTIONAL<CorrelatorData>,
+        callCharacteristics?: OPTIONAL<CallCharacteristics>,
+        userData?: OPTIONAL<UserData>,
+        subjectOfCall?: OPTIONAL<SubjectOfCall>,
+        languagePreferences?: OPTIONAL<LanguagePreferences>,
+        extensions?: OPTIONAL<CSTACommonArguments>
+    ) {
+        this.callingDevice = callingDevice;
+        this.calledDirectoryNumber = calledDirectoryNumber;
+        this.signallingDetection = signallingDetection;
+        this.destinationDetection = destinationDetection;
+        this.defaultAction = defaultAction;
+        this.accountCode = accountCode;
+        this.authCode = authCode;
+        this.autoOriginate = autoOriginate;
+        this.alertTime = alertTime;
+        this.correlatorData = correlatorData;
+        this.callCharacteristics = callCharacteristics;
+        this.userData = userData;
+        this.subjectOfCall = subjectOfCall;
+        this.languagePreferences = languagePreferences;
+        this.extensions = extensions;
+    }
 
     /**
      * @summary Restructures an object into a MakePredictiveCallArgument
@@ -274,19 +306,19 @@ class MakePredictiveCallArgument {
      * @static
      * @method
      */
-    public static get _default_value_for_autoOriginate () { return AutoOriginate_prompt; }        /**
+    public static get _default_value_for_autoOriginate (): _enum_for_AutoOriginate.prompt { return AutoOriginate_prompt; }        /**
          * @summary The enum used as the type of the component `defaultAction`
          * @public
          * @static
          */
 
-    public static _enum_for_defaultAction = _enum_for_DetectionAction;        /**
+    public static _enum_for_defaultAction: typeof _enum_for_DetectionAction = _enum_for_DetectionAction;        /**
          * @summary The enum used as the type of the component `autoOriginate`
          * @public
          * @static
          */
 
-    public static _enum_for_autoOriginate = _enum_for_AutoOriginate;
+    public static _enum_for_autoOriginate: typeof _enum_for_AutoOriginate = _enum_for_AutoOriginate;
 }
 
 /**

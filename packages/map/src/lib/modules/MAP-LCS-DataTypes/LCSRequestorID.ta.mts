@@ -1,13 +1,13 @@
 /* eslint-disable */
 import {
-    OPTIONAL,
-    ASN1Element as _Element,
+    type OPTIONAL,
+    type ASN1Element as _Element,
     ASN1TagClass as _TagClass
 } from "@wildboar/asn1";
 import * as $ from "@wildboar/asn1/functional";
-import { LCS_FormatIndicator, _decode_LCS_FormatIndicator, _encode_LCS_FormatIndicator, _enum_for_LCS_FormatIndicator } from "../MAP-LCS-DataTypes/LCS-FormatIndicator.ta.mjs";
-import { RequestorIDString, _decode_RequestorIDString, _encode_RequestorIDString } from "../MAP-LCS-DataTypes/RequestorIDString.ta.mjs";
-import { USSD_DataCodingScheme, _decode_USSD_DataCodingScheme, _encode_USSD_DataCodingScheme } from "../MAP-SS-DataTypes/USSD-DataCodingScheme.ta.mjs";
+import { type LCS_FormatIndicator, _decode_LCS_FormatIndicator, _encode_LCS_FormatIndicator, _enum_for_LCS_FormatIndicator } from "../MAP-LCS-DataTypes/LCS-FormatIndicator.ta.mjs";
+import { type RequestorIDString, _decode_RequestorIDString, _encode_RequestorIDString } from "../MAP-LCS-DataTypes/RequestorIDString.ta.mjs";
+import { type USSD_DataCodingScheme, _decode_USSD_DataCodingScheme, _encode_USSD_DataCodingScheme } from "../MAP-SS-DataTypes/USSD-DataCodingScheme.ta.mjs";
 
 
 /**
@@ -30,44 +30,54 @@ import { USSD_DataCodingScheme, _decode_USSD_DataCodingScheme, _encode_USSD_Data
  */
 export
 class LCSRequestorID {
+    /**
+     * @summary `dataCodingScheme`.
+     * @description
+     *
+     * USSD DCS.
+     *
+     * @public
+     * @readonly
+     */
+    public readonly dataCodingScheme: USSD_DataCodingScheme;
+    /**
+     * @summary `requestorIDString`.
+     * @description
+     *
+     * Requestor ID string, 1..63.
+     *
+     * @public
+     * @readonly
+     */
+    public readonly requestorIDString: RequestorIDString;
+    /**
+     * @summary `lcs_FormatIndicator`.
+     * @description
+     *
+     * Format of the requestor ID.
+     *
+     * @public
+     * @readonly
+     */
+    public readonly lcs_FormatIndicator?: OPTIONAL<LCS_FormatIndicator>;
+    /**
+     * @summary Extensions that are not recognized.
+     * @public
+     * @readonly
+     */
+    public readonly _unrecognizedExtensionsList: _Element[];
+
     constructor (
-        /**
-         * @summary `dataCodingScheme`.
-         * @description
-         *
-         * USSD DCS.
-         *
-         * @public
-         * @readonly
-         */
-        readonly dataCodingScheme: USSD_DataCodingScheme,
-        /**
-         * @summary `requestorIDString`.
-         * @description
-         *
-         * Requestor ID string, 1..63.
-         *
-         * @public
-         * @readonly
-         */
-        readonly requestorIDString: RequestorIDString,
-        /**
-         * @summary `lcs_FormatIndicator`.
-         * @description
-         *
-         * Format of the requestor ID.
-         *
-         * @public
-         * @readonly
-         */
-        readonly lcs_FormatIndicator?: OPTIONAL<LCS_FormatIndicator>,
-        /**
-         * @summary Extensions that are not recognized.
-         * @public
-         * @readonly
-         */
-        readonly _unrecognizedExtensionsList: _Element[] = []
-    ) {}
+        dataCodingScheme: USSD_DataCodingScheme,
+        requestorIDString: RequestorIDString,
+        lcs_FormatIndicator?: OPTIONAL<LCS_FormatIndicator>,
+        _unrecognizedExtensionsList: _Element[] = []
+    ) {
+        this.dataCodingScheme = dataCodingScheme;
+        this.requestorIDString = requestorIDString;
+        this.lcs_FormatIndicator = lcs_FormatIndicator;
+        this._unrecognizedExtensionsList = _unrecognizedExtensionsList;
+    }
 
     /**
      * @summary Restructures an object into a LCSRequestorID
@@ -91,7 +101,7 @@ class LCSRequestorID {
          * @static
          */
 
-    public static _enum_for_lcs_FormatIndicator = _enum_for_LCS_FormatIndicator;
+    public static _enum_for_lcs_FormatIndicator: typeof _enum_for_LCS_FormatIndicator = _enum_for_LCS_FormatIndicator;
 }
 
 /**

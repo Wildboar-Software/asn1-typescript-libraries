@@ -1,30 +1,30 @@
 /* eslint-disable */
 import {
-    INTEGER,
-    OCTET_STRING,
-    OPTIONAL,
-    RELATIVE_OID,
-    UTF8String,
-    ASN1Element as _Element,
+    type INTEGER,
+    type OCTET_STRING,
+    type OPTIONAL,
+    type RELATIVE_OID,
+    type UTF8String,
+    type ASN1Element as _Element,
     ASN1TagClass as _TagClass,
     ASN1OverflowError,
     ASN1SizeError
 } from "@wildboar/asn1";
 import * as $ from "@wildboar/asn1/functional";
-import { E_mail_Event, _decode_E_mail_Event, _encode_E_mail_Event, _enum_for_E_mail_Event } from "../EmailPDU/E-mail-Event.ta.mjs";
+import { type E_mail_Event, _decode_E_mail_Event, _encode_E_mail_Event, _enum_for_E_mail_Event } from "../EmailPDU/E-mail-Event.ta.mjs";
 // export { E_mail_Event, _enum_for_E_mail_Event, E_mail_Event_e_mail_send /* IMPORTED_LONG_ENUMERATION_ITEM */, e_mail_send /* IMPORTED_SHORT_ENUMERATION_ITEM */, E_mail_Event_e_mail_receive /* IMPORTED_LONG_ENUMERATION_ITEM */, e_mail_receive /* IMPORTED_SHORT_ENUMERATION_ITEM */, E_mail_Event_e_mail_download /* IMPORTED_LONG_ENUMERATION_ITEM */, e_mail_download /* IMPORTED_SHORT_ENUMERATION_ITEM */, E_mail_Event_e_mail_logon_attempt /* IMPORTED_LONG_ENUMERATION_ITEM */, e_mail_logon_attempt /* IMPORTED_SHORT_ENUMERATION_ITEM */, E_mail_Event_e_mail_logon /* IMPORTED_LONG_ENUMERATION_ITEM */, e_mail_logon /* IMPORTED_SHORT_ENUMERATION_ITEM */, E_mail_Event_e_mail_logon_failure /* IMPORTED_LONG_ENUMERATION_ITEM */, e_mail_logon_failure /* IMPORTED_SHORT_ENUMERATION_ITEM */, E_mail_Event_e_mail_logoff /* IMPORTED_LONG_ENUMERATION_ITEM */, e_mail_logoff /* IMPORTED_SHORT_ENUMERATION_ITEM */, E_mail_Event_e_mail_partial_download /* IMPORTED_LONG_ENUMERATION_ITEM */, e_mail_partial_download /* IMPORTED_SHORT_ENUMERATION_ITEM */, E_mail_Event_e_mail_upload /* IMPORTED_LONG_ENUMERATION_ITEM */, e_mail_upload /* IMPORTED_SHORT_ENUMERATION_ITEM */, _decode_E_mail_Event, _encode_E_mail_Event } from "../EmailPDU/E-mail-Event.ta.mjs";
 // export { IPAddress, _decode_IPAddress, _encode_IPAddress } from "../LI-PS-PDU/IPAddress.ta.mjs";
-import { E_mail_Protocol, _decode_E_mail_Protocol, _encode_E_mail_Protocol, _enum_for_E_mail_Protocol } from "../EmailPDU/E-mail-Protocol.ta.mjs";
+import { type E_mail_Protocol, _decode_E_mail_Protocol, _encode_E_mail_Protocol, _enum_for_E_mail_Protocol } from "../EmailPDU/E-mail-Protocol.ta.mjs";
 // export { E_mail_Protocol, _enum_for_E_mail_Protocol, E_mail_Protocol_smtp /* IMPORTED_LONG_ENUMERATION_ITEM */, smtp /* IMPORTED_SHORT_ENUMERATION_ITEM */, E_mail_Protocol_pop3 /* IMPORTED_LONG_ENUMERATION_ITEM */, pop3 /* IMPORTED_SHORT_ENUMERATION_ITEM */, E_mail_Protocol_imap4 /* IMPORTED_LONG_ENUMERATION_ITEM */, imap4 /* IMPORTED_SHORT_ENUMERATION_ITEM */, E_mail_Protocol_webmail /* IMPORTED_LONG_ENUMERATION_ITEM */, webmail /* IMPORTED_SHORT_ENUMERATION_ITEM */, E_mail_Protocol_undefined /* IMPORTED_LONG_ENUMERATION_ITEM */, undefined /* IMPORTED_SHORT_ENUMERATION_ITEM */, _decode_E_mail_Protocol, _encode_E_mail_Protocol } from "../EmailPDU/E-mail-Protocol.ta.mjs";
-import { E_mail_Address_List, _decode_E_mail_Address_List, _encode_E_mail_Address_List } from "../EmailPDU/E-mail-Address-List.ta.mjs";
+import { type E_mail_Address_List, _decode_E_mail_Address_List, _encode_E_mail_Address_List } from "../EmailPDU/E-mail-Address-List.ta.mjs";
 // export { E_mail_Address_List, _decode_E_mail_Address_List, _encode_E_mail_Address_List } from "../EmailPDU/E-mail-Address-List.ta.mjs";
 import { E_mail_Status, _decode_E_mail_Status, _encode_E_mail_Status, _enum_for_E_mail_Status } from "../EmailPDU/E-mail-Status.ta.mjs";
 // export { E_mail_Status, _enum_for_E_mail_Status, E_mail_Status_status_unknown /* IMPORTED_LONG_ENUMERATION_ITEM */, status_unknown /* IMPORTED_SHORT_ENUMERATION_ITEM */, E_mail_Status_operation_failed /* IMPORTED_LONG_ENUMERATION_ITEM */, operation_failed /* IMPORTED_SHORT_ENUMERATION_ITEM */, E_mail_Status_operation_succeeded /* IMPORTED_LONG_ENUMERATION_ITEM */, operation_succeeded /* IMPORTED_SHORT_ENUMERATION_ITEM */, _decode_E_mail_Status, _encode_E_mail_Status } from "../EmailPDU/E-mail-Status.ta.mjs";
 import { National_EM_ASN1parameters, _decode_National_EM_ASN1parameters, _encode_National_EM_ASN1parameters } from "../EmailPDU/National-EM-ASN1parameters.ta.mjs";
 // export { National_EM_ASN1parameters, _decode_National_EM_ASN1parameters, _encode_National_EM_ASN1parameters } from "../EmailPDU/National-EM-ASN1parameters.ta.mjs";
-import { AAAInformation, _decode_AAAInformation, _encode_AAAInformation } from "../EmailPDU/AAAInformation.ta.mjs";
+import { type AAAInformation, _decode_AAAInformation, _encode_AAAInformation } from "../EmailPDU/AAAInformation.ta.mjs";
 // export { AAAInformation, _decode_AAAInformation, _encode_AAAInformation } from "../EmailPDU/AAAInformation.ta.mjs";
-import { EmailIRI_e_mail_Sender_Validity, _decode_EmailIRI_e_mail_Sender_Validity, _encode_EmailIRI_e_mail_Sender_Validity, _enum_for_EmailIRI_e_mail_Sender_Validity } from "../EmailPDU/EmailIRI-e-mail-Sender-Validity.ta.mjs";
+import { type EmailIRI_e_mail_Sender_Validity, _decode_EmailIRI_e_mail_Sender_Validity, _encode_EmailIRI_e_mail_Sender_Validity, _enum_for_EmailIRI_e_mail_Sender_Validity } from "../EmailPDU/EmailIRI-e-mail-Sender-Validity.ta.mjs";
 import * as LI_PS_PDU from "../LI-PS-PDU/index.mjs";
 // export { EmailIRI_e_mail_Sender_Validity, _enum_for_EmailIRI_e_mail_Sender_Validity, EmailIRI_e_mail_Sender_Validity_validated /* IMPORTED_LONG_ENUMERATION_ITEM */, validated /* IMPORTED_SHORT_ENUMERATION_ITEM */, EmailIRI_e_mail_Sender_Validity_nonvalidated /* IMPORTED_LONG_ENUMERATION_ITEM */, nonvalidated /* IMPORTED_SHORT_ENUMERATION_ITEM */, _decode_EmailIRI_e_mail_Sender_Validity, _encode_EmailIRI_e_mail_Sender_Validity } from "../EmailPDU/EmailIRI-e-mail-Sender-Validity.ta.mjs";
 
@@ -490,25 +490,25 @@ class EmailIRI {
          * @static
          */
 
-    public static _enum_for_eventType = _enum_for_E_mail_Event;        /**
+    public static _enum_for_eventType: typeof _enum_for_E_mail_Event = _enum_for_E_mail_Event;        /**
          * @summary The enum used as the type of the component `protocol_ID`
          * @public
          * @static
          */
 
-    public static _enum_for_protocol_ID = _enum_for_E_mail_Protocol;        /**
+    public static _enum_for_protocol_ID: typeof _enum_for_E_mail_Protocol = _enum_for_E_mail_Protocol;        /**
          * @summary The enum used as the type of the component `status`
          * @public
          * @static
          */
 
-    public static _enum_for_status = _enum_for_E_mail_Status;        /**
+    public static _enum_for_status: typeof _enum_for_E_mail_Status = _enum_for_E_mail_Status;        /**
          * @summary The enum used as the type of the component `e_mail_Sender_Validity`
          * @public
          * @static
          */
 
-    public static _enum_for_e_mail_Sender_Validity = _enum_for_EmailIRI_e_mail_Sender_Validity;
+    public static _enum_for_e_mail_Sender_Validity: typeof _enum_for_EmailIRI_e_mail_Sender_Validity = _enum_for_EmailIRI_e_mail_Sender_Validity;
 }
 
 /**

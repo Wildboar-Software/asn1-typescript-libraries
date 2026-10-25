@@ -1,8 +1,8 @@
 /* eslint-disable */
 import {
-    OPTIONAL,
-    INTEGER,
-    ASN1Element as _Element,
+    type OPTIONAL,
+    type INTEGER,
+    type ASN1Element as _Element,
     ASN1TagClass as _TagClass,
     ASN1Construction as _Construction,
     ASN1UniversalType as _UniversalType,
@@ -13,12 +13,12 @@ import {
 } from '@wildboar/asn1';
 import * as $ from '@wildboar/asn1/functional';
 import {
-    SequenceNumber,
+    type SequenceNumber,
     _decode_SequenceNumber,
     _encode_SequenceNumber,
 } from '../MSAbstractService/SequenceNumber.ta.mjs';
 import {
-    ModifyProblem,
+    type ModifyProblem,
     _decode_ModifyProblem,
     _encode_ModifyProblem,
 } from '../MSAbstractService/ModifyProblem.ta.mjs';
@@ -42,32 +42,42 @@ import {
  *
  */
 export class ModifyErrorParameter {
+    /**
+     * @summary `entries_modified`.
+     * @public
+     * @readonly
+     */
+    public readonly entries_modified: OPTIONAL<SequenceNumber[]>;
+    /**
+     * @summary `failing_entry`.
+     * @public
+     * @readonly
+     */
+    public readonly failing_entry: SequenceNumber;
+    /**
+     * @summary `modification_number`.
+     * @public
+     * @readonly
+     */
+    public readonly modification_number: INTEGER;
+    /**
+     * @summary `problem`.
+     * @public
+     * @readonly
+     */
+    public readonly problem: ModifyProblem;
+
     constructor(
-        /**
-         * @summary `entries_modified`.
-         * @public
-         * @readonly
-         */
-        readonly entries_modified: OPTIONAL<SequenceNumber[]>,
-        /**
-         * @summary `failing_entry`.
-         * @public
-         * @readonly
-         */
-        readonly failing_entry: SequenceNumber,
-        /**
-         * @summary `modification_number`.
-         * @public
-         * @readonly
-         */
-        readonly modification_number: INTEGER,
-        /**
-         * @summary `problem`.
-         * @public
-         * @readonly
-         */
-        readonly problem: ModifyProblem
-    ) {}
+        entries_modified: OPTIONAL<SequenceNumber[]>,
+        failing_entry: SequenceNumber,
+        modification_number: INTEGER,
+        problem: ModifyProblem
+    ) {
+        this.entries_modified = entries_modified;
+        this.failing_entry = failing_entry;
+        this.modification_number = modification_number;
+        this.problem = problem;
+    }
 
     /**
      * @summary Restructures an object into a ModifyErrorParameter

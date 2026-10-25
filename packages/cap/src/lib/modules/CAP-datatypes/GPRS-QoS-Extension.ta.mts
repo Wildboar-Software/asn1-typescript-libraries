@@ -1,6 +1,6 @@
 import {
-    OPTIONAL,
-    ASN1Element as _Element,
+    type OPTIONAL,
+    type ASN1Element as _Element,
     ASN1TagClass as _TagClass,
 } from "@wildboar/asn1";
 import * as $ from "@wildboar/asn1/functional";
@@ -31,36 +31,44 @@ import { type Ext3_QoS_Subscribed, _decode_Ext3_QoS_Subscribed, _encode_Ext3_QoS
  *
  */
 export class GPRS_QoS_Extension {
+    /**
+     * @summary `supplement_to_long_QoS_format`.
+     * @description
+     *
+     * `Ext2-QoS-Subscribed` supplement to long-format GPRS QoS.
+     * (3GPP TS 29.078 V19.0.0 clause 5.1).
+     *
+     * @public
+     * @readonly
+     */
+    public readonly supplement_to_long_QoS_format: Ext2_QoS_Subscribed;
+    /**
+     * @summary `additionalSupplement`.
+     * @description
+     *
+     * Optional `Ext3-QoS-Subscribed` further supplement.
+     * (3GPP TS 29.078 V19.0.0 clause 5.1).
+     *
+     * @public
+     * @readonly
+     */
+    public readonly additionalSupplement?: OPTIONAL<Ext3_QoS_Subscribed>;
+    /**
+     * @summary Extensions that are not recognized.
+     * @public
+     * @readonly
+     */
+    public readonly _unrecognizedExtensionsList: _Element[];
+
     constructor (
-        /**
-         * @summary `supplement_to_long_QoS_format`.
-         * @description
-         *
-         * `Ext2-QoS-Subscribed` supplement to long-format GPRS QoS.
-         * (3GPP TS 29.078 V19.0.0 clause 5.1).
-         *
-         * @public
-         * @readonly
-         */
-        readonly supplement_to_long_QoS_format: Ext2_QoS_Subscribed,
-        /**
-         * @summary `additionalSupplement`.
-         * @description
-         *
-         * Optional `Ext3-QoS-Subscribed` further supplement.
-         * (3GPP TS 29.078 V19.0.0 clause 5.1).
-         *
-         * @public
-         * @readonly
-         */
-        readonly additionalSupplement?: OPTIONAL<Ext3_QoS_Subscribed>,
-        /**
-         * @summary Extensions that are not recognized.
-         * @public
-         * @readonly
-         */
-        readonly _unrecognizedExtensionsList: _Element[] = [],
-    ) {}
+        supplement_to_long_QoS_format: Ext2_QoS_Subscribed,
+        additionalSupplement?: OPTIONAL<Ext3_QoS_Subscribed>,
+        _unrecognizedExtensionsList: _Element[] = [],
+    ) {
+        this.supplement_to_long_QoS_format = supplement_to_long_QoS_format;
+        this.additionalSupplement = additionalSupplement;
+        this._unrecognizedExtensionsList = _unrecognizedExtensionsList;
+    }
 
     public static _from_object (_o: { [_K in keyof (GPRS_QoS_Extension)]: (GPRS_QoS_Extension)[_K] }): GPRS_QoS_Extension {
         return new GPRS_QoS_Extension(_o.supplement_to_long_QoS_format, _o.additionalSupplement, _o._unrecognizedExtensionsList);

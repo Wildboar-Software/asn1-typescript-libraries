@@ -1,8 +1,8 @@
 /* eslint-disable */
 import {
-    ASN1Element as _Element,
+    type ASN1Element as _Element,
     ASN1SizeError,
-    OCTET_STRING
+    type OCTET_STRING
 } from "@wildboar/asn1";
 import * as $ from "@wildboar/asn1/functional";
 
@@ -38,7 +38,7 @@ export const _decode_PulseUnits = (el: _Element): PulseUnits => {
     }
     return value;
 };
-export const _encode_PulseUnits = $._encodeOctetString;
+export const _encode_PulseUnits: $.ASN1Encoder<OCTET_STRING> = $._encodeOctetString;
 
 
 /* eslint-enable */

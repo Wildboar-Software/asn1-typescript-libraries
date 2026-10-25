@@ -1,9 +1,9 @@
 /* eslint-disable */
 import {
     ASN1ConstructionError as _ConstructionError,
-    ASN1Element as _Element,
+    type ASN1Element as _Element,
     ASN1TagClass as _TagClass,
-    OCTET_STRING
+    type OCTET_STRING
 } from "@wildboar/asn1";
 import * as $ from "@wildboar/asn1/functional";
 import { _decode_TPDU_direction, _encode_TPDU_direction, _enum_for_TPDU_direction, TPDU_direction } from "../EpsHI2Operations/TPDU-direction.ta.mjs";
@@ -107,7 +107,7 @@ class PacketDataHeaderCopy {
          * @static
          */
 
-    public static _enum_for_direction = _enum_for_TPDU_direction;
+    public static _enum_for_direction: typeof _enum_for_TPDU_direction = _enum_for_TPDU_direction;
 }
 
 /**

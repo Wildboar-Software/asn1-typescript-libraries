@@ -1,8 +1,8 @@
 /* eslint-disable */
 import {
-  OPTIONAL,
-  UTF8String,
-  IA5String,
+  type OPTIONAL,
+  type UTF8String,
+  type IA5String,
   ASN1Element as _Element,
   ASN1TagClass as _TagClass,
   ASN1Construction as _Construction,
@@ -30,9 +30,9 @@ import * as $ from '@wildboar/asn1/functional';
  *
  * ```asn1
  * RegistrantContactDetails ::= SEQUENCE {
- *     familyNameOrOrganization     UTF8String    OPTIONAL,
- *     givenName            UTF8String    OPTIONAL,
- *     e-mailAddress            UTF8String    OPTIONAL,
+ *     familyNameOrOrganization     UTF8String    type OPTIONAL,
+ *     givenName            UTF8String    type OPTIONAL,
+ *     e-mailAddress            UTF8String    type OPTIONAL,
  *     phone                IA5String     OPTIONAL / * Starting with "+" * /,
  *     fax                IA5String     OPTIONAL / * Starting with "+" * /,
  *     postalAddress            SEQUENCE OF UTF8String OPTIONAL
@@ -46,19 +46,19 @@ export class RegistrantContactDetails {
    * @public
    * @readonly
    */
-  readonly familyNameOrOrganization?: OPTIONAL<UTF8String>;
+  public readonly familyNameOrOrganization?: OPTIONAL<UTF8String>;
   /**
    * @summary `givenName`.
    * @public
    * @readonly
    */
-  readonly givenName?: OPTIONAL<UTF8String>;
+  public readonly givenName?: OPTIONAL<UTF8String>;
   /**
    * @summary `e_mailAddress`.
    * @public
    * @readonly
    */
-  readonly e_mailAddress?: OPTIONAL<UTF8String>;
+  public readonly e_mailAddress?: OPTIONAL<UTF8String>;
   /**
    * @summary `phone`.
    * @description
@@ -68,7 +68,7 @@ export class RegistrantContactDetails {
    * @public
    * @readonly
    */
-  readonly phone?: OPTIONAL<IA5String>;
+  public readonly phone?: OPTIONAL<IA5String>;
   /**
    * @summary `fax`.
    * @description
@@ -78,13 +78,13 @@ export class RegistrantContactDetails {
    * @public
    * @readonly
    */
-  readonly fax?: OPTIONAL<IA5String>;
+  public readonly fax?: OPTIONAL<IA5String>;
   /**
    * @summary `postalAddress`.
    * @public
    * @readonly
    */
-  readonly postalAddress?: OPTIONAL<UTF8String[]>;
+  public readonly postalAddress?: OPTIONAL<UTF8String[]>;
 
   constructor(
     familyNameOrOrganization?: OPTIONAL<UTF8String>,

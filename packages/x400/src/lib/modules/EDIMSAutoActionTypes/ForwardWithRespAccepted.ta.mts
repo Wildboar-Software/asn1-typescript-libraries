@@ -1,7 +1,7 @@
 /* eslint-disable */
 import {
-    OPTIONAL,
-    ASN1Element as _Element,
+    type OPTIONAL,
+    type ASN1Element as _Element,
     ASN1TagClass as _TagClass,
     ASN1Construction as _Construction,
     ASN1UniversalType as _UniversalType,
@@ -12,7 +12,7 @@ import {
 } from '@wildboar/asn1';
 import * as $ from '@wildboar/asn1/functional';
 import {
-    RecipientField,
+    type RecipientField,
     _decode_RecipientField,
     _encode_RecipientField,
 } from '../EDIMSInformationObjects/RecipientField.ta.mjs';
@@ -39,20 +39,26 @@ import {
  *
  */
 export class ForwardWithRespAccepted {
+    /**
+     * @summary `new_edin_receiver_name`.
+     * @public
+     * @readonly
+     */
+    public readonly new_edin_receiver_name: OPTIONAL<RecipientField>;
+    /**
+     * @summary `per_recipient_heading_field`.
+     * @public
+     * @readonly
+     */
+    public readonly per_recipient_heading_field: NextRecipientFields[];
+
     constructor(
-        /**
-         * @summary `new_edin_receiver_name`.
-         * @public
-         * @readonly
-         */
-        readonly new_edin_receiver_name: OPTIONAL<RecipientField>,
-        /**
-         * @summary `per_recipient_heading_field`.
-         * @public
-         * @readonly
-         */
-        readonly per_recipient_heading_field: NextRecipientFields[]
-    ) {}
+        new_edin_receiver_name: OPTIONAL<RecipientField>,
+        per_recipient_heading_field: NextRecipientFields[]
+    ) {
+        this.new_edin_receiver_name = new_edin_receiver_name;
+        this.per_recipient_heading_field = per_recipient_heading_field;
+    }
 
     /**
      * @summary Restructures an object into a ForwardWithRespAccepted

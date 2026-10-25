@@ -1,6 +1,6 @@
 /* eslint-disable */
 import {
-    ASN1Element as _Element,
+    type ASN1Element as _Element,
     ASN1TagClass as _TagClass,
     ASN1Construction as _Construction,
     ASN1UniversalType as _UniversalType,
@@ -66,7 +66,7 @@ export type ErrorRatioReportType = _enum_for_ErrorRatioReportType;
  *
  * @enum {number}
  */
-export const ErrorRatioReportType = _enum_for_ErrorRatioReportType;
+export const ErrorRatioReportType: typeof _enum_for_ErrorRatioReportType = _enum_for_ErrorRatioReportType;
 
 /**
  * @summary ErrorRatioReportType_errorBitNumber
@@ -76,7 +76,7 @@ export const ErrorRatioReportType = _enum_for_ErrorRatioReportType;
  * @constant
  * @type {number}
  */
-export const ErrorRatioReportType_errorBitNumber: ErrorRatioReportType =
+export const ErrorRatioReportType_errorBitNumber: _enum_for_ErrorRatioReportType.errorBitNumber =
     ErrorRatioReportType.errorBitNumber; /* LONG_NAMED_ENUMERATED_VALUE */
 
 /**
@@ -87,7 +87,7 @@ export const ErrorRatioReportType_errorBitNumber: ErrorRatioReportType =
  * @constant
  * @type {number}
  */
-export const errorBitNumber: ErrorRatioReportType =
+export const errorBitNumber: _enum_for_ErrorRatioReportType.errorBitNumber =
     ErrorRatioReportType.errorBitNumber; /* SHORT_NAMED_ENUMERATED_VALUE */
 
 /**
@@ -98,7 +98,7 @@ export const errorBitNumber: ErrorRatioReportType =
  * @constant
  * @type {number}
  */
-export const ErrorRatioReportType_percentErrorSecond: ErrorRatioReportType =
+export const ErrorRatioReportType_percentErrorSecond: _enum_for_ErrorRatioReportType.percentErrorSecond =
     ErrorRatioReportType.percentErrorSecond; /* LONG_NAMED_ENUMERATED_VALUE */
 
 /**
@@ -109,14 +109,25 @@ export const ErrorRatioReportType_percentErrorSecond: ErrorRatioReportType =
  * @constant
  * @type {number}
  */
-export const percentErrorSecond: ErrorRatioReportType =
+export const percentErrorSecond: _enum_for_ErrorRatioReportType.percentErrorSecond =
     ErrorRatioReportType.percentErrorSecond; /* SHORT_NAMED_ENUMERATED_VALUE */
 
 
-export const _decode_ErrorRatioReportType = $._decodeEnumerated;
+export function _decode_ErrorRatioReportType(el: _Element): ErrorRatioReportType {
+    const enumerated = $._decodeEnumerated(el);
+    switch (enumerated) {
+        case ErrorRatioReportType.errorBitNumber: return ErrorRatioReportType.errorBitNumber;
+        case ErrorRatioReportType.percentErrorSecond: return ErrorRatioReportType.percentErrorSecond;
+        default:
+            throw new _ConstructionError(
+                'Invalid ENUMERATED value ' + enumerated + ' for ErrorRatioReportType.',
+                el,
+            );
+    }
+}
 
 
-export const _encode_ErrorRatioReportType = $._encodeEnumerated;
+export const _encode_ErrorRatioReportType: $.ASN1Encoder<ErrorRatioReportType> = $._encodeEnumerated as $.ASN1Encoder<ErrorRatioReportType>;
 
 
 /* eslint-enable */

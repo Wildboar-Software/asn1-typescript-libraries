@@ -1,8 +1,8 @@
 /* eslint-disable */
 import {
-    OPTIONAL,
-    EXTERNAL,
-    ASN1Element as _Element,
+    type OPTIONAL,
+    type EXTERNAL,
+    type ASN1Element as _Element,
     ASN1TagClass as _TagClass,
     ASN1Construction as _Construction,
     ASN1UniversalType as _UniversalType,
@@ -13,7 +13,7 @@ import {
 } from '@wildboar/asn1';
 import * as $ from '@wildboar/asn1/functional';
 import {
-    Release_response_reason,
+    type Release_response_reason,
     _decode_Release_response_reason,
     _encode_Release_response_reason,
 } from '../DialoguePDUs/Release-response-reason.ta.mjs';
@@ -36,30 +36,36 @@ import {
  *
  */
 export class RLRE_apdu {
+    /**
+     * @summary `reason`.
+     * @description
+     *
+     * Optional release-response reason. This APDU is not
+     * used in this Recommendation.
+     *
+     * @public
+     * @readonly
+     */
+    public readonly reason?: OPTIONAL<Release_response_reason>;
+    /**
+     * @summary `user_information`.
+     * @description
+     *
+     * Optional user information. This APDU is not used in
+     * this Recommendation.
+     *
+     * @public
+     * @readonly
+     */
+    public readonly user_information?: OPTIONAL<EXTERNAL[]>;
+
     constructor(
-        /**
-         * @summary `reason`.
-         * @description
-         *
-         * Optional release-response reason. This APDU is not
-         * used in this Recommendation.
-         *
-         * @public
-         * @readonly
-         */
-        readonly reason?: OPTIONAL<Release_response_reason>,
-        /**
-         * @summary `user_information`.
-         * @description
-         *
-         * Optional user information. This APDU is not used in
-         * this Recommendation.
-         *
-         * @public
-         * @readonly
-         */
-        readonly user_information?: OPTIONAL<EXTERNAL[]>
-    ) {}
+        reason?: OPTIONAL<Release_response_reason>,
+        user_information?: OPTIONAL<EXTERNAL[]>
+    ) {
+        this.reason = reason;
+        this.user_information = user_information;
+    }
 
     /**
      * @summary Restructures an object into a RLRE_apdu

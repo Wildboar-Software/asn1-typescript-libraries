@@ -1,6 +1,6 @@
 /* eslint-disable */
 import {
-  BIT_STRING,
+  type BIT_STRING,
   ASN1Element as _Element,
   ASN1TagClass as _TagClass,
   ASN1Construction as _Construction,
@@ -113,10 +113,10 @@ export const RevocationInfoTypes_oCSPResponses: number = 3; /* LONG_NAMED_BIT */
 export const oCSPResponses: number = RevocationInfoTypes_oCSPResponses; /* SHORT_NAMED_BIT */
 
 
-export const _decode_RevocationInfoTypes = $._decodeBitString;
+export const _decode_RevocationInfoTypes: $.ASN1Decoder<BIT_STRING> = $._decodeBitString;
 
 
-export const _encode_RevocationInfoTypes = $._encodeBitString;
+export const _encode_RevocationInfoTypes: $.ASN1Encoder<BIT_STRING> = $._encodeBitString;
 
 
 /* eslint-enable */

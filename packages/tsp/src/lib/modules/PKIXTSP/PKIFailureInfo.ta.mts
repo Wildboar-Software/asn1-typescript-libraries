@@ -1,5 +1,5 @@
 /* eslint-disable */
-import { ASN1Element as _Element, BIT_STRING } from "@wildboar/asn1";
+import { ASN1Element as _Element, type BIT_STRING } from "@wildboar/asn1";
 import * as $ from "@wildboar/asn1/functional";
 
 /**
@@ -224,10 +224,10 @@ export const PKIFailureInfo_systemFailure: number = 25; /* LONG_NAMED_BIT */
 export const systemFailure: number = PKIFailureInfo_systemFailure; /* SHORT_NAMED_BIT */
 
 
-export const _decode_PKIFailureInfo = $._decodeBitString;
+export const _decode_PKIFailureInfo: $.ASN1Decoder<BIT_STRING> = $._decodeBitString;
 
 
-export const _encode_PKIFailureInfo = $._encodeBitString;
+export const _encode_PKIFailureInfo: $.ASN1Encoder<BIT_STRING> = $._encodeBitString;
 
 
 /* eslint-enable */

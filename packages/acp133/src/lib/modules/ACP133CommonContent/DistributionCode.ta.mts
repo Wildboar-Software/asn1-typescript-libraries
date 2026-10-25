@@ -1,6 +1,6 @@
 /* eslint-disable */
 import {
-    PrintableString
+    type PrintableString
 } from "@wildboar/asn1";
 import * as $ from "@wildboar/asn1/functional";
 
@@ -32,8 +32,8 @@ import * as $ from "@wildboar/asn1/functional";
  */
 export
 type DistributionCode = PrintableString; // PrintableString
-export const _decode_DistributionCode = $._decodePrintableString;
-export const _encode_DistributionCode = $._encodePrintableString;
+export const _decode_DistributionCode: $.ASN1Decoder<string> = $._decodePrintableString;
+export const _encode_DistributionCode: $.ASN1Encoder<string> = $._encodePrintableString;
 
 
 /* eslint-enable */

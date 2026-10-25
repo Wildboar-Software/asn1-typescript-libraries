@@ -1,12 +1,12 @@
 /* eslint-disable */
 import {
     ASN1ConstructionError as _ConstructionError,
-    ASN1Element as _Element,
+    type ASN1Element as _Element,
     ASN1TagClass as _TagClass
 } from "@wildboar/asn1";
 import * as $ from "@wildboar/asn1/functional";
-import { TransactionId, _decode_TransactionId, _encode_TransactionId } from "../RSPDefinitions/TransactionId.ta.mjs";
-import { CancelSessionResponse, _decode_CancelSessionResponse, _encode_CancelSessionResponse } from "../RSPDefinitions/CancelSessionResponse.ta.mjs";
+import { type TransactionId, _decode_TransactionId, _encode_TransactionId } from "../RSPDefinitions/TransactionId.ta.mjs";
+import { type CancelSessionResponse, _decode_CancelSessionResponse, _encode_CancelSessionResponse } from "../RSPDefinitions/CancelSessionResponse.ta.mjs";
 
 
 /**
@@ -39,7 +39,7 @@ class CancelSessionRequestEs9 {
      * @public
      * @readonly
      */
-    readonly transactionId: TransactionId;
+    public readonly transactionId: TransactionId;
     /**
      * @summary `cancelSessionResponse`.
      * @description
@@ -50,7 +50,7 @@ class CancelSessionRequestEs9 {
      * @public
      * @readonly
      */
-    readonly cancelSessionResponse: CancelSessionResponse;
+    public readonly cancelSessionResponse: CancelSessionResponse;
 
     constructor (
         transactionId: TransactionId,

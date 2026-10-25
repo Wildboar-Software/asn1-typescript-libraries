@@ -1,17 +1,17 @@
 /* eslint-disable */
 import {
-    ASN1Element as _Element,
+    type ASN1Element as _Element,
     ASN1TagClass as _TagClass,
-    OPTIONAL,
+    type OPTIONAL,
 } from "@wildboar/asn1";
 import * as $ from "@wildboar/asn1/functional";
 import {
-    MarkingCodes,
+    type MarkingCodes,
     _decode_MarkingCodes,
     _encode_MarkingCodes,
 } from "../SIOsAccessControl-MODULE/MarkingCodes.ta.mjs";
 import {
-    MarkingPhrase,
+    type MarkingPhrase,
     _decode_MarkingPhrase,
     _encode_MarkingPhrase,
 } from "../SIOsAccessControl-MODULE/MarkingPhrase.ta.mjs";
@@ -37,30 +37,36 @@ import {
  *
  */
 export class MarkingData {
+    /**
+     * @summary `markingPhrase`.
+     * @description
+     *
+     * Text attached to the data object. If omitted, marking
+     * codes apply to `classificationName`. X.841 §6.2.2.6.
+     *
+     * @public
+     * @readonly
+     */
+    public readonly markingPhrase?: OPTIONAL<MarkingPhrase>;
+    /**
+     * @summary `markingCodes`.
+     * @description
+     *
+     * Where the marking is physically displayed (page top,
+     * bottom, document start/end, etc.). X.841 §6.2.2.6.
+     *
+     * @public
+     * @readonly
+     */
+    public readonly markingCodes?: OPTIONAL<MarkingCodes>;
+
     constructor(
-        /**
-         * @summary `markingPhrase`.
-         * @description
-         *
-         * Text attached to the data object. If omitted, marking
-         * codes apply to `classificationName`. X.841 §6.2.2.6.
-         *
-         * @public
-         * @readonly
-         */
-        readonly markingPhrase?: OPTIONAL<MarkingPhrase>,
-        /**
-         * @summary `markingCodes`.
-         * @description
-         *
-         * Where the marking is physically displayed (page top,
-         * bottom, document start/end, etc.). X.841 §6.2.2.6.
-         *
-         * @public
-         * @readonly
-         */
-        readonly markingCodes?: OPTIONAL<MarkingCodes>
-    ) {}
+        markingPhrase?: OPTIONAL<MarkingPhrase>,
+        markingCodes?: OPTIONAL<MarkingCodes>
+    ) {
+        this.markingPhrase = markingPhrase;
+        this.markingCodes = markingCodes;
+    }
 
     /**
      * @summary Restructures an object into a MarkingData

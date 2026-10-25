@@ -1,7 +1,7 @@
 /* eslint-disable */
 import {
-    OCTET_STRING,
-    ASN1Element as _Element,
+    type OCTET_STRING,
+    type ASN1Element as _Element,
     ASN1TagClass as _TagClass,
     ASN1Construction as _Construction,
     ASN1UniversalType as _UniversalType,
@@ -27,8 +27,8 @@ import * as $ from "@wildboar/asn1/functional";
  */
 export
 type EventSpecificInformationCharging = OCTET_STRING; // OctetStringType
-export const _decode_EventSpecificInformationCharging = $._decodeOctetString;
-export const _encode_EventSpecificInformationCharging = $._encodeOctetString;
+export const _decode_EventSpecificInformationCharging: $.ASN1Decoder<OCTET_STRING> = $._decodeOctetString;
+export const _encode_EventSpecificInformationCharging: $.ASN1Encoder<OCTET_STRING> = $._encodeOctetString;
 
 
 /* eslint-enable */

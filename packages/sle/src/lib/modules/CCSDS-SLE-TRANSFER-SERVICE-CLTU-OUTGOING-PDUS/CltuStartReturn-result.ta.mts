@@ -1,11 +1,11 @@
 /* eslint-disable */
 import {
-    ASN1Element as _Element,
+    type ASN1Element as _Element,
     ASN1TagClass as _TagClass
 } from "@wildboar/asn1";
 import * as $ from "@wildboar/asn1/functional";
 import { CltuStartReturn_result_positiveResult, _decode_CltuStartReturn_result_positiveResult, _encode_CltuStartReturn_result_positiveResult } from "../CCSDS-SLE-TRANSFER-SERVICE-CLTU-OUTGOING-PDUS/CltuStartReturn-result-positiveResult.ta.mjs";
-import { DiagnosticCltuStart, _decode_DiagnosticCltuStart, _encode_DiagnosticCltuStart } from "../CCSDS-SLE-TRANSFER-SERVICE-CLTU-STRUCTURES/DiagnosticCltuStart.ta.mjs";
+import { type DiagnosticCltuStart, _decode_DiagnosticCltuStart, _encode_DiagnosticCltuStart } from "../CCSDS-SLE-TRANSFER-SERVICE-CLTU-STRUCTURES/DiagnosticCltuStart.ta.mjs";
 
 
 /**

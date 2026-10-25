@@ -1,7 +1,7 @@
 /* eslint-disable */
 import {
-    ABSTRACT_SYNTAX,
-    ASN1Element as _Element,
+    type ABSTRACT_SYNTAX,
+    type ASN1Element as _Element,
     ASN1TagClass as _TagClass,
     ASN1Construction as _Construction,
     ASN1UniversalType as _UniversalType,
@@ -10,7 +10,7 @@ import {
     EmbeddedPDV as _PDV,
     ASN1ConstructionError as _ConstructionError,
 } from "@wildboar/asn1";
-import { DFR_PDUs, _decode_DFR_PDUs, _encode_DFR_PDUs } from "../DFRAccessProtocol/DFR-PDUs.ta.mjs";
+import { type DFR_PDUs, _decode_DFR_PDUs, _encode_DFR_PDUs } from "../DFRAccessProtocol/DFR-PDUs.ta.mjs";
 import { id_as_dfr_ext_attr } from "../DFRProtocolObjectIdentifiers/id-as-dfr-ext-attr.va.mjs";
 
 

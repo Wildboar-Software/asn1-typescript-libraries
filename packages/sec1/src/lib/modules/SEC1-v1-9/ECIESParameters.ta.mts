@@ -1,7 +1,7 @@
 /* eslint-disable */
 import {
-    OPTIONAL,
-    ASN1Element as _Element,
+    type OPTIONAL,
+    type ASN1Element as _Element,
     ASN1TagClass as _TagClass,
     ASN1Construction as _Construction,
     ASN1UniversalType as _UniversalType,
@@ -11,9 +11,9 @@ import {
     ASN1ConstructionError as _ConstructionError,
 } from "@wildboar/asn1";
 import * as $ from "@wildboar/asn1/functional";
-import { KeyDerivationFunction, _decode_KeyDerivationFunction, _encode_KeyDerivationFunction } from "../SEC1-v1-9/KeyDerivationFunction.ta.mjs";
-import { SymmetricEncryption, _decode_SymmetricEncryption, _encode_SymmetricEncryption } from "../SEC1-v1-9/SymmetricEncryption.ta.mjs";
-import { MessageAuthenticationCode, _decode_MessageAuthenticationCode, _encode_MessageAuthenticationCode } from "../SEC1-v1-9/MessageAuthenticationCode.ta.mjs";
+import { type KeyDerivationFunction, _decode_KeyDerivationFunction, _encode_KeyDerivationFunction } from "../SEC1-v1-9/KeyDerivationFunction.ta.mjs";
+import { type SymmetricEncryption, _decode_SymmetricEncryption, _encode_SymmetricEncryption } from "../SEC1-v1-9/SymmetricEncryption.ta.mjs";
+import { type MessageAuthenticationCode, _decode_MessageAuthenticationCode, _encode_MessageAuthenticationCode } from "../SEC1-v1-9/MessageAuthenticationCode.ta.mjs";
 /**
  * @summary ECIESParameters
  * @description
@@ -44,7 +44,7 @@ class ECIESParameters {
      * @public
      * @readonly
      */
-    readonly kdf?: OPTIONAL<KeyDerivationFunction>;
+    public readonly kdf?: OPTIONAL<KeyDerivationFunction>;
     /**
      * @summary `sym`.
      * @description
@@ -54,7 +54,7 @@ class ECIESParameters {
      * @public
      * @readonly
      */
-    readonly sym?: OPTIONAL<SymmetricEncryption>;
+    public readonly sym?: OPTIONAL<SymmetricEncryption>;
     /**
      * @summary `mac`.
      * @description
@@ -64,7 +64,7 @@ class ECIESParameters {
      * @public
      * @readonly
      */
-    readonly mac?: OPTIONAL<MessageAuthenticationCode>;
+    public readonly mac?: OPTIONAL<MessageAuthenticationCode>;
 
     constructor (
         kdf?: OPTIONAL<KeyDerivationFunction>,

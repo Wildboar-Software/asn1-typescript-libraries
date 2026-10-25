@@ -1,8 +1,8 @@
 /* eslint-disable */
 import {
-    OPTIONAL,
-    INTEGER,
-    ASN1Element as _Element,
+    type OPTIONAL,
+    type INTEGER,
+    type ASN1Element as _Element,
     ASN1TagClass as _TagClass,
     ASN1Construction as _Construction,
     ASN1UniversalType as _UniversalType,
@@ -12,7 +12,7 @@ import {
     ASN1ConstructionError as _ConstructionError,
 } from "@wildboar/asn1";
 import * as $ from "@wildboar/asn1/functional";
-import { DfrEntryName, _decode_DfrEntryName, _encode_DfrEntryName } from "../DFRAbstractService/DfrEntryName.ta.mjs";
+import { type DfrEntryName, _decode_DfrEntryName, _encode_DfrEntryName } from "../DFRAbstractService/DfrEntryName.ta.mjs";
 
 
 /**
@@ -40,35 +40,43 @@ import { DfrEntryName, _decode_DfrEntryName, _encode_DfrEntryName } from "../DFR
  */
 export
 class SearchDomain_Item_scope {
+    /**
+     * @summary `root`.
+     * @description
+     *
+     * Starting group.
+     * @public
+     * @readonly
+     */
+    public readonly root: DfrEntryName;
+    /**
+     * @summary `descent_depth`.
+     * @description
+     *
+     * Max descendant levels; omit for the whole tree.
+     * @public
+     * @readonly
+     */
+    public readonly descent_depth?: OPTIONAL<INTEGER>;
+    /**
+     * @summary `dereferencing_depth`.
+     * @description
+     *
+     * How many reference hops to follow (default 0).
+     * @public
+     * @readonly
+     */
+    public readonly dereferencing_depth?: OPTIONAL<INTEGER>;
+
     constructor (
-        /**
-         * @summary `root`.
-         * @description
-         *
-         * Starting group.
-         * @public
-         * @readonly
-         */
-        readonly root: DfrEntryName,
-        /**
-         * @summary `descent_depth`.
-         * @description
-         *
-         * Max descendant levels; omit for the whole tree.
-         * @public
-         * @readonly
-         */
-        readonly descent_depth?: OPTIONAL<INTEGER>,
-        /**
-         * @summary `dereferencing_depth`.
-         * @description
-         *
-         * How many reference hops to follow (default 0).
-         * @public
-         * @readonly
-         */
-        readonly dereferencing_depth?: OPTIONAL<INTEGER>
-    ) {}
+        root: DfrEntryName,
+        descent_depth?: OPTIONAL<INTEGER>,
+        dereferencing_depth?: OPTIONAL<INTEGER>
+    ) {
+        this.root = root;
+        this.descent_depth = descent_depth;
+        this.dereferencing_depth = dereferencing_depth;
+    }
 
     /**
      * @summary Restructures an object into a SearchDomain_Item_scope

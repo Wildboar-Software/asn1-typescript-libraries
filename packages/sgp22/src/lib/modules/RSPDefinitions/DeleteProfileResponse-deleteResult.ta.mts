@@ -1,7 +1,7 @@
 /* eslint-disable */
 import {
-    ASN1Element as _Element,
-    INTEGER
+    type ASN1Element as _Element,
+    type INTEGER
 } from "@wildboar/asn1";
 import * as $ from "@wildboar/asn1/functional";
 
@@ -39,7 +39,7 @@ type DeleteProfileResponse_deleteResult = INTEGER;
  * @type {number}
  */
 export
-const DeleteProfileResponse_deleteResult_ok: DeleteProfileResponse_deleteResult = 0; /* LONG_NAMED_INTEGER_VALUE */
+const DeleteProfileResponse_deleteResult_ok: 0 = 0 satisfies DeleteProfileResponse_deleteResult; /* LONG_NAMED_INTEGER_VALUE */
 
 /**
  * @summary DeleteProfileResponse_deleteResult_ok
@@ -52,7 +52,7 @@ const DeleteProfileResponse_deleteResult_ok: DeleteProfileResponse_deleteResult 
  * @type {number}
  */
 export
-const ok: DeleteProfileResponse_deleteResult = DeleteProfileResponse_deleteResult_ok; /* SHORT_NAMED_INTEGER_VALUE */
+const ok: 0 = DeleteProfileResponse_deleteResult_ok; /* SHORT_NAMED_INTEGER_VALUE */
 
 /**
  * @summary DeleteProfileResponse_deleteResult_iccidOrAidNotFound
@@ -64,7 +64,7 @@ const ok: DeleteProfileResponse_deleteResult = DeleteProfileResponse_deleteResul
  * @type {number}
  */
 export
-const DeleteProfileResponse_deleteResult_iccidOrAidNotFound: DeleteProfileResponse_deleteResult = 1; /* LONG_NAMED_INTEGER_VALUE */
+const DeleteProfileResponse_deleteResult_iccidOrAidNotFound: 1 = 1 satisfies DeleteProfileResponse_deleteResult; /* LONG_NAMED_INTEGER_VALUE */
 
 /**
  * @summary DeleteProfileResponse_deleteResult_iccidOrAidNotFound
@@ -76,7 +76,7 @@ const DeleteProfileResponse_deleteResult_iccidOrAidNotFound: DeleteProfileRespon
  * @type {number}
  */
 export
-const iccidOrAidNotFound: DeleteProfileResponse_deleteResult = DeleteProfileResponse_deleteResult_iccidOrAidNotFound; /* SHORT_NAMED_INTEGER_VALUE */
+const iccidOrAidNotFound: 1 = DeleteProfileResponse_deleteResult_iccidOrAidNotFound; /* SHORT_NAMED_INTEGER_VALUE */
 
 /**
  * @summary DeleteProfileResponse_deleteResult_profileNotInDisabledState
@@ -88,7 +88,7 @@ const iccidOrAidNotFound: DeleteProfileResponse_deleteResult = DeleteProfileResp
  * @type {number}
  */
 export
-const DeleteProfileResponse_deleteResult_profileNotInDisabledState: DeleteProfileResponse_deleteResult = 2; /* LONG_NAMED_INTEGER_VALUE */
+const DeleteProfileResponse_deleteResult_profileNotInDisabledState: 2 = 2 satisfies DeleteProfileResponse_deleteResult; /* LONG_NAMED_INTEGER_VALUE */
 
 /**
  * @summary DeleteProfileResponse_deleteResult_profileNotInDisabledState
@@ -100,7 +100,7 @@ const DeleteProfileResponse_deleteResult_profileNotInDisabledState: DeleteProfil
  * @type {number}
  */
 export
-const profileNotInDisabledState: DeleteProfileResponse_deleteResult = DeleteProfileResponse_deleteResult_profileNotInDisabledState; /* SHORT_NAMED_INTEGER_VALUE */
+const profileNotInDisabledState: 2 = DeleteProfileResponse_deleteResult_profileNotInDisabledState; /* SHORT_NAMED_INTEGER_VALUE */
 
 /**
  * @summary DeleteProfileResponse_deleteResult_disallowedByPolicy
@@ -112,7 +112,7 @@ const profileNotInDisabledState: DeleteProfileResponse_deleteResult = DeleteProf
  * @type {number}
  */
 export
-const DeleteProfileResponse_deleteResult_disallowedByPolicy: DeleteProfileResponse_deleteResult = 3; /* LONG_NAMED_INTEGER_VALUE */
+const DeleteProfileResponse_deleteResult_disallowedByPolicy: 3 = 3 satisfies DeleteProfileResponse_deleteResult; /* LONG_NAMED_INTEGER_VALUE */
 
 /**
  * @summary DeleteProfileResponse_deleteResult_disallowedByPolicy
@@ -124,7 +124,7 @@ const DeleteProfileResponse_deleteResult_disallowedByPolicy: DeleteProfileRespon
  * @type {number}
  */
 export
-const disallowedByPolicy: DeleteProfileResponse_deleteResult = DeleteProfileResponse_deleteResult_disallowedByPolicy; /* SHORT_NAMED_INTEGER_VALUE */
+const disallowedByPolicy: 3 = DeleteProfileResponse_deleteResult_disallowedByPolicy; /* SHORT_NAMED_INTEGER_VALUE */
 
 /**
  * @summary DeleteProfileResponse_deleteResult_undefinedError
@@ -136,7 +136,7 @@ const disallowedByPolicy: DeleteProfileResponse_deleteResult = DeleteProfileResp
  * @type {number}
  */
 export
-const DeleteProfileResponse_deleteResult_undefinedError: DeleteProfileResponse_deleteResult = 127; /* LONG_NAMED_INTEGER_VALUE */
+const DeleteProfileResponse_deleteResult_undefinedError: 127 = 127 satisfies DeleteProfileResponse_deleteResult; /* LONG_NAMED_INTEGER_VALUE */
 
 /**
  * @summary DeleteProfileResponse_deleteResult_undefinedError
@@ -148,9 +148,9 @@ const DeleteProfileResponse_deleteResult_undefinedError: DeleteProfileResponse_d
  * @type {number}
  */
 export
-const undefinedError: DeleteProfileResponse_deleteResult = DeleteProfileResponse_deleteResult_undefinedError; /* SHORT_NAMED_INTEGER_VALUE */
-export const _decode_DeleteProfileResponse_deleteResult = $._decodeInteger;
-export const _encode_DeleteProfileResponse_deleteResult = $._encodeInteger;
+const undefinedError: 127 = DeleteProfileResponse_deleteResult_undefinedError; /* SHORT_NAMED_INTEGER_VALUE */
+export const _decode_DeleteProfileResponse_deleteResult: $.ASN1Decoder<INTEGER> = $._decodeInteger;
+export const _encode_DeleteProfileResponse_deleteResult: $.ASN1Encoder<INTEGER> = $._encodeInteger;
 
 
 /* eslint-enable */

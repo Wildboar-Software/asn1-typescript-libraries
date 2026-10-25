@@ -1,5 +1,5 @@
 import {
-    ASN1Element as _Element,
+    type ASN1Element as _Element,
     ASN1SizeError,
 } from "@wildboar/asn1";
 import * as $ from "@wildboar/asn1/functional";
@@ -27,4 +27,4 @@ export const _decode_Extensions = (el: _Element): Extensions => {
     }
     return value;
 };
-export const _encode_Extensions = $._encodeSequenceOf<ExtensionField>(() => _encode_ExtensionField, $.BER);
+export const _encode_Extensions: $.SequenceOfEncoder<ExtensionField> = $._encodeSequenceOf<ExtensionField>(() => _encode_ExtensionField, $.BER);

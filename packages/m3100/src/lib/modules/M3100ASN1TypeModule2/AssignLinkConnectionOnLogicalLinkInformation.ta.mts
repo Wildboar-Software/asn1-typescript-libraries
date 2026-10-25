@@ -1,6 +1,6 @@
 /* eslint-disable */
 import {
-    ASN1Element as _Element,
+    type ASN1Element as _Element,
     ASN1TagClass as _TagClass,
     ASN1Construction as _Construction,
     ASN1UniversalType as _UniversalType,
@@ -11,12 +11,12 @@ import {
 } from '@wildboar/asn1';
 import * as $ from '@wildboar/asn1/functional';
 import {
-    ObjectInstance,
+    type ObjectInstance,
     _decode_ObjectInstance,
     _encode_ObjectInstance,
 } from '@wildboar/cmip';
 import {
-    LinkConnectionList,
+    type LinkConnectionList,
     _decode_LinkConnectionList,
     _encode_LinkConnectionList,
 } from '../M3100ASN1TypeModule2/LinkConnectionList.ta.mjs';
@@ -36,20 +36,26 @@ import {
  *
  */
 export class AssignLinkConnectionOnLogicalLinkInformation {
+    /**
+     * @summary `layerNetworkDomain`.
+     * @public
+     * @readonly
+     */
+    public readonly layerNetworkDomain: ObjectInstance;
+    /**
+     * @summary `requestedLinkConnections`.
+     * @public
+     * @readonly
+     */
+    public readonly requestedLinkConnections: LinkConnectionList;
+
     constructor(
-        /**
-         * @summary `layerNetworkDomain`.
-         * @public
-         * @readonly
-         */
-        readonly layerNetworkDomain: ObjectInstance,
-        /**
-         * @summary `requestedLinkConnections`.
-         * @public
-         * @readonly
-         */
-        readonly requestedLinkConnections: LinkConnectionList
-    ) {}
+        layerNetworkDomain: ObjectInstance,
+        requestedLinkConnections: LinkConnectionList
+    ) {
+        this.layerNetworkDomain = layerNetworkDomain;
+        this.requestedLinkConnections = requestedLinkConnections;
+    }
 
     /**
      * @summary Restructures an object into a AssignLinkConnectionOnLogicalLinkInformation

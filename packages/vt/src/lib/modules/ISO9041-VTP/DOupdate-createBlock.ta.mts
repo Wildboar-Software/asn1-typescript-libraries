@@ -1,6 +1,6 @@
 /* eslint-disable */
 import {
-    ASN1Element as _Element,
+    type ASN1Element as _Element,
     ASN1TagClass as _TagClass,
     ASN1Construction as _Construction,
     ASN1UniversalType as _UniversalType,
@@ -36,32 +36,40 @@ import { _decode_MeasurePair, _encode_MeasurePair, MeasurePair } from "../G/Meas
  */
 export
 class DOupdate_createBlock {
+    /**
+     * @summary `blockPosition`.
+     * @description
+     * Block coordinates (z,b). ISO/IEC 9040:1997 §19.4.1.5.1.
+     * @public
+     * @readonly
+     */
+    public readonly blockPosition: Block;
+    /**
+     * @summary `origin`.
+     * @description
+     * Block origin (x,y) in the Y-array. ISO/IEC 9040:1997 §19.4.1.5.1.
+     * @public
+     * @readonly
+     */
+    public readonly origin: MeasurePair;
+    /**
+     * @summary `dimension`.
+     * @description
+     * Block size (Dx,Dy). ISO/IEC 9040:1997 §19.4.1.5.1.
+     * @public
+     * @readonly
+     */
+    public readonly dimension: MeasurePair;
+
     constructor (
-        /**
-         * @summary `blockPosition`.
-         * @description
-         * Block coordinates (z,b). ISO/IEC 9040:1997 §19.4.1.5.1.
-         * @public
-         * @readonly
-         */
-        readonly blockPosition: Block,
-        /**
-         * @summary `origin`.
-         * @description
-         * Block origin (x,y) in the Y-array. ISO/IEC 9040:1997 §19.4.1.5.1.
-         * @public
-         * @readonly
-         */
-        readonly origin: MeasurePair,
-        /**
-         * @summary `dimension`.
-         * @description
-         * Block size (Dx,Dy). ISO/IEC 9040:1997 §19.4.1.5.1.
-         * @public
-         * @readonly
-         */
-        readonly dimension: MeasurePair
-    ) {}
+        blockPosition: Block,
+        origin: MeasurePair,
+        dimension: MeasurePair
+    ) {
+        this.blockPosition = blockPosition;
+        this.origin = origin;
+        this.dimension = dimension;
+    }
 
     /**
      * @summary Restructures an object into a DOupdate_createBlock

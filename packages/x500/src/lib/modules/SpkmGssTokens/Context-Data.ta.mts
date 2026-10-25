@@ -1,33 +1,33 @@
 /* eslint-disable */
 import {
-    ASN1Element as _Element,
+    type ASN1Element as _Element,
     ASN1TagClass as _TagClass,
-    INTEGER,
-    OPTIONAL,
+    type INTEGER,
+    type OPTIONAL,
 } from "@wildboar/asn1";
 import * as $ from "@wildboar/asn1/functional";
 import {
-    ChannelId,
+    type ChannelId,
     _decode_ChannelId,
     _encode_ChannelId,
 } from "../SpkmGssTokens/ChannelId.ta.mjs";
 import {
-    Conf_Algs,
+    type Conf_Algs,
     _decode_Conf_Algs,
     _encode_Conf_Algs,
 } from "../SpkmGssTokens/Conf-Algs.ta.mjs";
 import {
-    Intg_Algs,
+    type Intg_Algs,
     _decode_Intg_Algs,
     _encode_Intg_Algs,
 } from "../SpkmGssTokens/Intg-Algs.ta.mjs";
 import {
-    Options,
+    type Options,
     _decode_Options,
     _encode_Options,
 } from "../SpkmGssTokens/Options.ta.mjs";
 import {
-    OWF_Algs,
+    type OWF_Algs,
     _decode_OWF_Algs,
     _encode_OWF_Algs,
 } from "../SpkmGssTokens/OWF-Algs.ta.mjs";
@@ -55,76 +55,90 @@ import {
  *
  */
 export class Context_Data {
+    /**
+     * @summary `channelId`.
+     * @description
+     *
+     * Channel bindings. Absent = none; empty OCTET STRING is a present
+     * empty binding.
+     *
+     * @public
+     * @readonly
+     */
+    public readonly channelId: OPTIONAL<ChannelId>;
+    /**
+     * @summary `seq_number`.
+     * @description
+     *
+     * Initial per-message sequence number. Omit to use default 0.
+     * After each MIC/WRAP/DEL, the sender increments by 1. Higher than
+     * expected → gap; lower → duplicate/unseq/old; wrong `dir-ind` →
+     * unseq. Sequence numbers are not encrypted.
+     *
+     * @public
+     * @readonly
+     */
+    public readonly seq_number: OPTIONAL<INTEGER>;
+    /**
+     * @summary `options`.
+     * @description
+     *
+     * Context flags. See `Options` bits; bit 6 ignored for SPKM-2
+     * unilateral.
+     *
+     * @public
+     * @readonly
+     */
+    public readonly options: Options;
+    /**
+     * @summary `conf_alg`.
+     * @description
+     *
+     * Offered (REQ) or agreed (REP) C-ALGs. `null` = confidentiality
+     * unavailable.
+     *
+     * @public
+     * @readonly
+     */
+    public readonly conf_alg: Conf_Algs;
+    /**
+     * @summary `intg_alg`.
+     * @description
+     *
+     * Offered/agreed I-ALGs. Must include at least one signature and
+     * one MAC algorithm.
+     *
+     * @public
+     * @readonly
+     */
+    public readonly intg_alg: Intg_Algs;
+    /**
+     * @summary `owf_alg`.
+     * @description
+     *
+     * Subkey OWF. REQ: one alg for SPKM-2 unilateral, ≥1 otherwise.
+     * REP: always exactly one.
+     *
+     * @public
+     * @readonly
+     */
+    public readonly owf_alg: OWF_Algs;
+
     constructor(
-        /**
-         * @summary `channelId`.
-         * @description
-         *
-         * Channel bindings. Absent = none; empty OCTET STRING is a present
-         * empty binding.
-         *
-         * @public
-         * @readonly
-         */
-        readonly channelId: OPTIONAL<ChannelId>,
-        /**
-         * @summary `seq_number`.
-         * @description
-         *
-         * Initial per-message sequence number. Omit to use default 0.
-         * After each MIC/WRAP/DEL, the sender increments by 1. Higher than
-         * expected → gap; lower → duplicate/unseq/old; wrong `dir-ind` →
-         * unseq. Sequence numbers are not encrypted.
-         *
-         * @public
-         * @readonly
-         */
-        readonly seq_number: OPTIONAL<INTEGER>,
-        /**
-         * @summary `options`.
-         * @description
-         *
-         * Context flags. See `Options` bits; bit 6 ignored for SPKM-2
-         * unilateral.
-         *
-         * @public
-         * @readonly
-         */
-        readonly options: Options,
-        /**
-         * @summary `conf_alg`.
-         * @description
-         *
-         * Offered (REQ) or agreed (REP) C-ALGs. `null` = confidentiality
-         * unavailable.
-         *
-         * @public
-         * @readonly
-         */
-        readonly conf_alg: Conf_Algs,
-        /**
-         * @summary `intg_alg`.
-         * @description
-         *
-         * Offered/agreed I-ALGs. Must include at least one signature and
-         * one MAC algorithm.
-         *
-         * @public
-         * @readonly
-         */
-        readonly intg_alg: Intg_Algs,
-        /**
-         * @summary `owf_alg`.
-         * @description
-         *
-         * Subkey OWF. REQ: one alg for SPKM-2 unilateral, ≥1 otherwise.
-         * REP: always exactly one.
-         *
-         * @public
-         * @readonly
-         */
-        readonly owf_alg: OWF_Algs
-    ) {}
+        channelId: OPTIONAL<ChannelId>,
+        seq_number: OPTIONAL<INTEGER>,
+        options: Options,
+        conf_alg: Conf_Algs,
+        intg_alg: Intg_Algs,
+        owf_alg: OWF_Algs
+    ) {
+        this.channelId = channelId;
+        this.seq_number = seq_number;
+        this.options = options;
+        this.conf_alg = conf_alg;
+        this.intg_alg = intg_alg;
+        this.owf_alg = owf_alg;
+    }
 
     /**
      * @summary Restructures an object into a Context_Data

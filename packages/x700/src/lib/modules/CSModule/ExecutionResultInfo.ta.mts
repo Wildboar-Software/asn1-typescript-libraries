@@ -1,6 +1,6 @@
 /* eslint-disable */
 import {
-    ASN1Element as _Element,
+    type ASN1Element as _Element,
     ASN1TagClass as _TagClass,
     ASN1Construction as _Construction,
     ASN1UniversalType as _UniversalType,
@@ -11,27 +11,27 @@ import {
 } from '@wildboar/asn1';
 import * as $ from '@wildboar/asn1/functional';
 import {
-    TriggerId,
+    type TriggerId,
     _decode_TriggerId,
     _encode_TriggerId,
 } from '../CSModule/TriggerId.ta.mjs';
 import {
-    ScriptId,
+    type ScriptId,
     _decode_ScriptId,
     _encode_ScriptId,
 } from '../CSModule/ScriptId.ta.mjs';
 import {
-    ThreadId,
+    type ThreadId,
     _decode_ThreadId,
     _encode_ThreadId,
 } from '../CSModule/ThreadId.ta.mjs';
 import {
-    ErrorCode,
+    type ErrorCode,
     _decode_ErrorCode,
     _encode_ErrorCode,
 } from '../CSModule/ErrorCode.ta.mjs';
 import {
-    ExecutionResultType,
+    type ExecutionResultType,
     _decode_ExecutionResultType,
     _encode_ExecutionResultType,
 } from '../CSModule/ExecutionResultType.ta.mjs';
@@ -71,74 +71,88 @@ import {
  *
  */
 export class ExecutionResultInfo {
+    /**
+     * @summary `triggerId`.
+     * @description
+     *
+     * Trigger that caused this thread to be spawned. Mandatory
+     * in the execution-result service. ITU-T Rec. X.753 (10/97)
+     * §9.3.1 Table 6.
+     * @public
+     * @readonly
+     */
+    public readonly triggerId: TriggerId;
+    /**
+     * @summary `scriptId`.
+     * @description
+     *
+     * Launch script this thread executed. Mandatory in the
+     * execution-result service. ITU-T Rec. X.753 (10/97)
+     * §9.3.1 Table 6.
+     * @public
+     * @readonly
+     */
+    public readonly scriptId: ScriptId;
+    /**
+     * @summary `threadId`.
+     * @description
+     *
+     * Thread that produced this result. Mandatory in the
+     * execution-result service. ITU-T Rec. X.753 (10/97)
+     * §9.3.1 Table 6.
+     * @public
+     * @readonly
+     */
+    public readonly threadId: ThreadId;
+    /**
+     * @summary `errorCode`.
+     * @description
+     *
+     * Outcome: `{noError}` if successful, otherwise the
+     * applicable failure code(s). User-optional in Table 6;
+     * present in this SEQUENCE. ITU-T Rec. X.753 (10/97)
+     * §8.2.2, §9.3.1.
+     * @public
+     * @readonly
+     */
+    public readonly errorCode: ErrorCode;
+    /**
+     * @summary `executionResultType`.
+     * @description
+     *
+     * Type of `executionResult`; should match the script's
+     * `executionResultType` attribute. User-optional in
+     * Table 6. ITU-T Rec. X.753 (10/97) §7.2, §9.3.1.
+     * @public
+     * @readonly
+     */
+    public readonly executionResultType: ExecutionResultType;
+    /**
+     * @summary `executionResult`.
+     * @description
+     *
+     * Result attributes from the script. User-optional in
+     * Table 6. ITU-T Rec. X.753 (10/97) §7.2, §9.3.1.
+     * @public
+     * @readonly
+     */
+    public readonly executionResult: Attribute[];
+
     constructor(
-        /**
-         * @summary `triggerId`.
-         * @description
-         *
-         * Trigger that caused this thread to be spawned. Mandatory
-         * in the execution-result service. ITU-T Rec. X.753 (10/97)
-         * §9.3.1 Table 6.
-         * @public
-         * @readonly
-         */
-        readonly triggerId: TriggerId,
-        /**
-         * @summary `scriptId`.
-         * @description
-         *
-         * Launch script this thread executed. Mandatory in the
-         * execution-result service. ITU-T Rec. X.753 (10/97)
-         * §9.3.1 Table 6.
-         * @public
-         * @readonly
-         */
-        readonly scriptId: ScriptId,
-        /**
-         * @summary `threadId`.
-         * @description
-         *
-         * Thread that produced this result. Mandatory in the
-         * execution-result service. ITU-T Rec. X.753 (10/97)
-         * §9.3.1 Table 6.
-         * @public
-         * @readonly
-         */
-        readonly threadId: ThreadId,
-        /**
-         * @summary `errorCode`.
-         * @description
-         *
-         * Outcome: `{noError}` if successful, otherwise the
-         * applicable failure code(s). User-optional in Table 6;
-         * present in this SEQUENCE. ITU-T Rec. X.753 (10/97)
-         * §8.2.2, §9.3.1.
-         * @public
-         * @readonly
-         */
-        readonly errorCode: ErrorCode,
-        /**
-         * @summary `executionResultType`.
-         * @description
-         *
-         * Type of `executionResult`; should match the script's
-         * `executionResultType` attribute. User-optional in
-         * Table 6. ITU-T Rec. X.753 (10/97) §7.2, §9.3.1.
-         * @public
-         * @readonly
-         */
-        readonly executionResultType: ExecutionResultType,
-        /**
-         * @summary `executionResult`.
-         * @description
-         *
-         * Result attributes from the script. User-optional in
-         * Table 6. ITU-T Rec. X.753 (10/97) §7.2, §9.3.1.
-         * @public
-         * @readonly
-         */
-        readonly executionResult: Attribute[]
-    ) {}
+        triggerId: TriggerId,
+        scriptId: ScriptId,
+        threadId: ThreadId,
+        errorCode: ErrorCode,
+        executionResultType: ExecutionResultType,
+        executionResult: Attribute[]
+    ) {
+        this.triggerId = triggerId;
+        this.scriptId = scriptId;
+        this.threadId = threadId;
+        this.errorCode = errorCode;
+        this.executionResultType = executionResultType;
+        this.executionResult = executionResult;
+    }
 
     /**
      * @summary Restructures an object into a ExecutionResultInfo

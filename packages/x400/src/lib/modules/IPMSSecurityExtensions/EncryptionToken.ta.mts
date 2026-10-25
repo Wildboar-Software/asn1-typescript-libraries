@@ -1,7 +1,7 @@
 /* eslint-disable */
 import {
-    OPTIONAL,
-    ASN1Element as _Element,
+    type OPTIONAL,
+    type ASN1Element as _Element,
     ASN1TagClass as _TagClass,
     ASN1Construction as _Construction,
     ASN1UniversalType as _UniversalType,
@@ -17,12 +17,12 @@ import {
     _encode_AlgorithmIdentifier,
 } from '@wildboar/x500/AuthenticationFramework';
 import {
-    ENCRYPTED,
+    type ENCRYPTED,
     _get_decoder_for_ENCRYPTED,
     _get_encoder_for_ENCRYPTED,
 } from '@wildboar/x500/AuthenticationFramework';
 import {
-    EncryptionKey,
+    type EncryptionKey,
     _decode_EncryptionKey,
     _encode_EncryptionKey,
 } from '../MTSAbstractService/EncryptionKey.ta.mjs';
@@ -37,7 +37,7 @@ import {
     _encode_Certificates,
 } from '@wildboar/x500/AuthenticationFramework';
 import {
-    ExtendedCertificates,
+    type ExtendedCertificates,
     _decode_ExtendedCertificates,
     _encode_ExtendedCertificates,
 } from '../MTSAbstractService/ExtendedCertificates.ta.mjs';
@@ -66,50 +66,66 @@ import {
  *
  */
 export class EncryptionToken {
+    /**
+     * @summary `encryption_algorithm_identifier`.
+     * @public
+     * @readonly
+     */
+    public readonly encryption_algorithm_identifier: AlgorithmIdentifier;
+    /**
+     * @summary `encrypted_key`.
+     * @public
+     * @readonly
+     */
+    public readonly encrypted_key: ENCRYPTED<EncryptionKey>;
+    /**
+     * @summary `recipient_certificate_selector`.
+     * @public
+     * @readonly
+     */
+    public readonly recipient_certificate_selector?: OPTIONAL<CertificateAssertion>;
+    /**
+     * @summary `recipient_certificate`.
+     * @public
+     * @readonly
+     */
+    public readonly recipient_certificate?: OPTIONAL<Certificates>;
+    /**
+     * @summary `originator_certificate_selector`.
+     * @public
+     * @readonly
+     */
+    public readonly originator_certificate_selector?: OPTIONAL<CertificateAssertion>;
+    /**
+     * @summary `originator_certificates`.
+     * @public
+     * @readonly
+     */
+    public readonly originator_certificates?: OPTIONAL<ExtendedCertificates>;
+    /**
+     * @summary Extensions that are not recognized.
+     * @public
+     * @readonly
+     */
+    public readonly _unrecognizedExtensionsList: _Element[];
+
     constructor(
-        /**
-         * @summary `encryption_algorithm_identifier`.
-         * @public
-         * @readonly
-         */
-        readonly encryption_algorithm_identifier: AlgorithmIdentifier,
-        /**
-         * @summary `encrypted_key`.
-         * @public
-         * @readonly
-         */
-        readonly encrypted_key: ENCRYPTED<EncryptionKey>,
-        /**
-         * @summary `recipient_certificate_selector`.
-         * @public
-         * @readonly
-         */
-        readonly recipient_certificate_selector?: OPTIONAL<CertificateAssertion>,
-        /**
-         * @summary `recipient_certificate`.
-         * @public
-         * @readonly
-         */
-        readonly recipient_certificate?: OPTIONAL<Certificates>,
-        /**
-         * @summary `originator_certificate_selector`.
-         * @public
-         * @readonly
-         */
-        readonly originator_certificate_selector?: OPTIONAL<CertificateAssertion>,
-        /**
-         * @summary `originator_certificates`.
-         * @public
-         * @readonly
-         */
-        readonly originator_certificates?: OPTIONAL<ExtendedCertificates>,
-        /**
-         * @summary Extensions that are not recognized.
-         * @public
-         * @readonly
-         */
-        readonly _unrecognizedExtensionsList: _Element[] = []
-    ) {}
+        encryption_algorithm_identifier: AlgorithmIdentifier,
+        encrypted_key: ENCRYPTED<EncryptionKey>,
+        recipient_certificate_selector?: OPTIONAL<CertificateAssertion>,
+        recipient_certificate?: OPTIONAL<Certificates>,
+        originator_certificate_selector?: OPTIONAL<CertificateAssertion>,
+        originator_certificates?: OPTIONAL<ExtendedCertificates>,
+        _unrecognizedExtensionsList: _Element[] = []
+    ) {
+        this.encryption_algorithm_identifier = encryption_algorithm_identifier;
+        this.encrypted_key = encrypted_key;
+        this.recipient_certificate_selector = recipient_certificate_selector;
+        this.recipient_certificate = recipient_certificate;
+        this.originator_certificate_selector = originator_certificate_selector;
+        this.originator_certificates = originator_certificates;
+        this._unrecognizedExtensionsList = _unrecognizedExtensionsList;
+    }
 
     /**
      * @summary Restructures an object into a EncryptionToken

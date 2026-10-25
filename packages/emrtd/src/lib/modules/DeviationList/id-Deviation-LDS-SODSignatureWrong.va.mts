@@ -1,7 +1,7 @@
 /* eslint-disable */
 import {
     ObjectIdentifier as _OID,
-    OBJECT_IDENTIFIER
+    type OBJECT_IDENTIFIER
 } from "@wildboar/asn1";
 import { id_Deviation_LDS } from "../DeviationList/id-Deviation-LDS.va.mjs";
 // export { id_Deviation_LDS } from "../DeviationList/id-Deviation-LDS.va.mjs";

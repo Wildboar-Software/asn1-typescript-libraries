@@ -1,6 +1,6 @@
 /* eslint-disable */
 import {
-    ASN1Element as _Element,
+    type ASN1Element as _Element,
     ASN1TagClass as _TagClass,
     ASN1Construction as _Construction,
     ASN1UniversalType as _UniversalType,
@@ -57,14 +57,14 @@ export type DLPolicy_disclosure_of_other_recipients = _enum_for_DLPolicy_disclos
  *
  * @enum {number}
  */
-export const DLPolicy_disclosure_of_other_recipients = _enum_for_DLPolicy_disclosure_of_other_recipients;
+export const DLPolicy_disclosure_of_other_recipients: typeof _enum_for_DLPolicy_disclosure_of_other_recipients = _enum_for_DLPolicy_disclosure_of_other_recipients;
 
 /**
  * @summary DLPolicy_disclosure_of_other_recipients_unchanged
  * @constant
  * @type {number}
  */
-export const DLPolicy_disclosure_of_other_recipients_unchanged: DLPolicy_disclosure_of_other_recipients =
+export const DLPolicy_disclosure_of_other_recipients_unchanged: _enum_for_DLPolicy_disclosure_of_other_recipients.unchanged =
     DLPolicy_disclosure_of_other_recipients.unchanged; /* LONG_NAMED_ENUMERATED_VALUE */
 
 /**
@@ -72,7 +72,7 @@ export const DLPolicy_disclosure_of_other_recipients_unchanged: DLPolicy_disclos
  * @constant
  * @type {number}
  */
-export const unchanged: DLPolicy_disclosure_of_other_recipients =
+export const unchanged: _enum_for_DLPolicy_disclosure_of_other_recipients.unchanged =
     DLPolicy_disclosure_of_other_recipients.unchanged; /* SHORT_NAMED_ENUMERATED_VALUE */
 
 /**
@@ -80,7 +80,7 @@ export const unchanged: DLPolicy_disclosure_of_other_recipients =
  * @constant
  * @type {number}
  */
-export const DLPolicy_disclosure_of_other_recipients_disclosure_of_other_recipients_prohibited: DLPolicy_disclosure_of_other_recipients =
+export const DLPolicy_disclosure_of_other_recipients_disclosure_of_other_recipients_prohibited: _enum_for_DLPolicy_disclosure_of_other_recipients.disclosure_of_other_recipients_prohibited =
     DLPolicy_disclosure_of_other_recipients.disclosure_of_other_recipients_prohibited; /* LONG_NAMED_ENUMERATED_VALUE */
 
 /**
@@ -88,7 +88,7 @@ export const DLPolicy_disclosure_of_other_recipients_disclosure_of_other_recipie
  * @constant
  * @type {number}
  */
-export const disclosure_of_other_recipients_prohibited: DLPolicy_disclosure_of_other_recipients =
+export const disclosure_of_other_recipients_prohibited: _enum_for_DLPolicy_disclosure_of_other_recipients.disclosure_of_other_recipients_prohibited =
     DLPolicy_disclosure_of_other_recipients.disclosure_of_other_recipients_prohibited; /* SHORT_NAMED_ENUMERATED_VALUE */
 
 /**
@@ -96,7 +96,7 @@ export const disclosure_of_other_recipients_prohibited: DLPolicy_disclosure_of_o
  * @constant
  * @type {number}
  */
-export const DLPolicy_disclosure_of_other_recipients_disclosure_of_other_recipients_allowed: DLPolicy_disclosure_of_other_recipients =
+export const DLPolicy_disclosure_of_other_recipients_disclosure_of_other_recipients_allowed: _enum_for_DLPolicy_disclosure_of_other_recipients.disclosure_of_other_recipients_allowed =
     DLPolicy_disclosure_of_other_recipients.disclosure_of_other_recipients_allowed; /* LONG_NAMED_ENUMERATED_VALUE */
 
 /**
@@ -104,7 +104,7 @@ export const DLPolicy_disclosure_of_other_recipients_disclosure_of_other_recipie
  * @constant
  * @type {number}
  */
-export const disclosure_of_other_recipients_allowed: DLPolicy_disclosure_of_other_recipients =
+export const disclosure_of_other_recipients_allowed: _enum_for_DLPolicy_disclosure_of_other_recipients.disclosure_of_other_recipients_allowed =
     DLPolicy_disclosure_of_other_recipients.disclosure_of_other_recipients_allowed; /* SHORT_NAMED_ENUMERATED_VALUE */
 
 let _cached_decoder_for_DLPolicy_disclosure_of_other_recipients: $.ASN1Decoder<DLPolicy_disclosure_of_other_recipients> | null = null;
@@ -118,7 +118,19 @@ let _cached_decoder_for_DLPolicy_disclosure_of_other_recipients: $.ASN1Decoder<D
 export function _decode_DLPolicy_disclosure_of_other_recipients(el: _Element): DLPolicy_disclosure_of_other_recipients {
     if (!_cached_decoder_for_DLPolicy_disclosure_of_other_recipients) {
         _cached_decoder_for_DLPolicy_disclosure_of_other_recipients =
-            $._decodeEnumerated;
+            function (el: _Element): DLPolicy_disclosure_of_other_recipients {
+                const enumerated = $._decodeEnumerated(el);
+                switch (enumerated) {
+                    case DLPolicy_disclosure_of_other_recipients.unchanged: return DLPolicy_disclosure_of_other_recipients.unchanged;
+                    case DLPolicy_disclosure_of_other_recipients.disclosure_of_other_recipients_prohibited: return DLPolicy_disclosure_of_other_recipients.disclosure_of_other_recipients_prohibited;
+                    case DLPolicy_disclosure_of_other_recipients.disclosure_of_other_recipients_allowed: return DLPolicy_disclosure_of_other_recipients.disclosure_of_other_recipients_allowed;
+                    default:
+                        throw new _ConstructionError(
+                            'Invalid ENUMERATED value ' + enumerated + ' for DLPolicy_disclosure_of_other_recipients.',
+                            el,
+                        );
+                }
+            };
     }
     return _cached_decoder_for_DLPolicy_disclosure_of_other_recipients(el);
 }
@@ -138,7 +150,7 @@ export function _encode_DLPolicy_disclosure_of_other_recipients(
 ): _Element {
     if (!_cached_encoder_for_DLPolicy_disclosure_of_other_recipients) {
         _cached_encoder_for_DLPolicy_disclosure_of_other_recipients =
-            $._encodeEnumerated;
+            $._encodeEnumerated as $.ASN1Encoder<DLPolicy_disclosure_of_other_recipients>;
     }
     return _cached_encoder_for_DLPolicy_disclosure_of_other_recipients(
         value,

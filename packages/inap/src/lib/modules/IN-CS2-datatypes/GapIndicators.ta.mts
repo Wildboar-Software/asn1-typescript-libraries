@@ -1,13 +1,13 @@
 /* eslint-disable */
 import {
     ASN1ConstructionError as _ConstructionError,
-    ASN1Element as _Element,
+    type ASN1Element as _Element,
     ASN1TagClass as _TagClass
 } from "@wildboar/asn1";
 import * as $ from "@wildboar/asn1/functional";
-import { Duration, _decode_Duration, _encode_Duration } from "../IN-CS2-datatypes/Duration.ta.mjs";
+import { type Duration, _decode_Duration, _encode_Duration } from "../IN-CS2-datatypes/Duration.ta.mjs";
 // export { Duration, _decode_Duration, _encode_Duration } from "../IN-CS2-datatypes/Duration.ta.mjs";
-import { Interval, _decode_Interval, _encode_Interval } from "../IN-CS2-datatypes/Interval.ta.mjs";
+import { type Interval, _decode_Interval, _encode_Interval } from "../IN-CS2-datatypes/Interval.ta.mjs";
 // export { Interval, _decode_Interval, _encode_Interval } from "../IN-CS2-datatypes/Interval.ta.mjs";
 
 

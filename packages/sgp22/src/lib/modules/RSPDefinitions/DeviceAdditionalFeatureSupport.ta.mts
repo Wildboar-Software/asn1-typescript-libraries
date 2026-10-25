@@ -1,12 +1,12 @@
 /* eslint-disable */
 import {
-    OBJECT_IDENTIFIER,
-    OPTIONAL,
-    ASN1Element as _Element,
+    type OBJECT_IDENTIFIER,
+    type OPTIONAL,
+    type ASN1Element as _Element,
     ASN1TagClass as _TagClass
 } from "@wildboar/asn1";
 import * as $ from "@wildboar/asn1/functional";
-import { VersionType, _decode_VersionType, _encode_VersionType } from "../RSPDefinitions/VersionType.ta.mjs";
+import { type VersionType, _decode_VersionType, _encode_VersionType } from "../RSPDefinitions/VersionType.ta.mjs";
 
 
 /**
@@ -42,7 +42,7 @@ class DeviceAdditionalFeatureSupport {
      * @public
      * @readonly
      */
-    readonly naiSupport?: OPTIONAL<VersionType>;
+    public readonly naiSupport?: OPTIONAL<VersionType>;
     /**
      * @summary `groupOfDeviceManufacturerOid`.
      * @description
@@ -54,7 +54,7 @@ class DeviceAdditionalFeatureSupport {
      * @public
      * @readonly
      */
-    readonly groupOfDeviceManufacturerOid?: OPTIONAL<OBJECT_IDENTIFIER>;
+    public readonly groupOfDeviceManufacturerOid?: OPTIONAL<OBJECT_IDENTIFIER>;
 
     constructor (
         naiSupport?: OPTIONAL<VersionType>,

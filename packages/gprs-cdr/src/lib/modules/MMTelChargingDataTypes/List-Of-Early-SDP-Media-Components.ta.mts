@@ -1,16 +1,16 @@
 /* eslint-disable */
 import {
-    GraphicString,
-    NULL,
-    OCTET_STRING,
-    OPTIONAL,
-    ASN1Element as _Element,
+    type GraphicString,
+    type NULL,
+    type OCTET_STRING,
+    type OPTIONAL,
+    type ASN1Element as _Element,
     ASN1TagClass as _TagClass,
     ASN1SizeError
 } from "@wildboar/asn1";
 import * as $ from "@wildboar/asn1/functional";
 import { SDP_Media_Components, _decode_SDP_Media_Components, _encode_SDP_Media_Components } from "../MMTelChargingDataTypes/SDP-Media-Components.ta.mjs";
-import { SDP_Type, _decode_SDP_Type, _encode_SDP_Type, _enum_for_SDP_Type } from "../MMTelChargingDataTypes/SDP-Type.ta.mjs";
+import { type SDP_Type, _decode_SDP_Type, _encode_SDP_Type, _enum_for_SDP_Type } from "../MMTelChargingDataTypes/SDP-Type.ta.mjs";
 
 
 /**
@@ -138,7 +138,7 @@ class List_Of_Early_SDP_Media_Components {
          * @static
          */
 
-    public static _enum_for_sDP_Type = _enum_for_SDP_Type;
+    public static _enum_for_sDP_Type: typeof _enum_for_SDP_Type = _enum_for_SDP_Type;
 }
 
 /**

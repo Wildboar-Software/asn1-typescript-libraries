@@ -1,7 +1,7 @@
 /* eslint-disable */
 import {
-    ASN1Element as _Element,
-    INTEGER,
+    type ASN1Element as _Element,
+    type INTEGER,
     ASN1OverflowError
 } from "@wildboar/asn1";
 import * as $ from "@wildboar/asn1/functional";
@@ -34,7 +34,7 @@ export const _decode_StreamID = (el: _Element): StreamID => {
     }
     return value;
 };
-export const _encode_StreamID = $._encodeInteger;
+export const _encode_StreamID: $.ASN1Encoder<INTEGER> = $._encodeInteger;
 
 
 /* eslint-enable */

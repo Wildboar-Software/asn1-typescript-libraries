@@ -1,7 +1,7 @@
 /* eslint-disable */
 import {
-    ASN1Element as _Element,
-    ENUMERATED
+    type ASN1Element as _Element,
+    type ENUMERATED
 } from "@wildboar/asn1";
 import * as $ from "@wildboar/asn1/functional";
 
@@ -44,7 +44,7 @@ type ReportingState = _enum_for_ReportingState | ENUMERATED;
  * @type {number}
  */
 export
-const ReportingState_stopMonitoring: ReportingState = 0; /* LONG_NAMED_ENUMERATED_VALUE */
+const ReportingState_stopMonitoring: _enum_for_ReportingState.stopMonitoring = _enum_for_ReportingState.stopMonitoring; /* LONG_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary stopMonitoring
@@ -56,7 +56,7 @@ const ReportingState_stopMonitoring: ReportingState = 0; /* LONG_NAMED_ENUMERATE
  * @type {number}
  */
 export
-const stopMonitoring: ReportingState = ReportingState_stopMonitoring; /* SHORT_NAMED_ENUMERATED_VALUE */
+const stopMonitoring: _enum_for_ReportingState.stopMonitoring = ReportingState_stopMonitoring; /* SHORT_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary ReportingState_startMonitoring
@@ -68,7 +68,7 @@ const stopMonitoring: ReportingState = ReportingState_stopMonitoring; /* SHORT_N
  * @type {number}
  */
 export
-const ReportingState_startMonitoring: ReportingState = 1; /* LONG_NAMED_ENUMERATED_VALUE */
+const ReportingState_startMonitoring: _enum_for_ReportingState.startMonitoring = _enum_for_ReportingState.startMonitoring; /* LONG_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary startMonitoring
@@ -80,7 +80,7 @@ const ReportingState_startMonitoring: ReportingState = 1; /* LONG_NAMED_ENUMERAT
  * @type {number}
  */
 export
-const startMonitoring: ReportingState = ReportingState_startMonitoring; /* SHORT_NAMED_ENUMERATED_VALUE */
+const startMonitoring: _enum_for_ReportingState.startMonitoring = ReportingState_startMonitoring; /* SHORT_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary Decodes an ASN.1 element into a(n) ReportingState
@@ -88,7 +88,7 @@ const startMonitoring: ReportingState = ReportingState_startMonitoring; /* SHORT
  * @param el The element being decoded.
  * @returns The decoded data structure.
  */
-export const _decode_ReportingState = $._decodeEnumerated;
+export const _decode_ReportingState: $.ASN1Decoder<number> = $._decodeEnumerated;
 
 /**
  * @summary Encodes a(n) ReportingState into an ASN.1 Element.
@@ -97,7 +97,7 @@ export const _decode_ReportingState = $._decodeEnumerated;
  * @param elGetter A function that can be used to get new ASN.1 elements.
  * @returns {_Element} The ReportingState, encoded as an ASN.1 Element.
  */
-export const _encode_ReportingState = $._encodeEnumerated;
+export const _encode_ReportingState: $.ASN1Encoder<number> = $._encodeEnumerated;
 
 
 /* eslint-enable */

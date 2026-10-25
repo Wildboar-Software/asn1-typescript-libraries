@@ -1,6 +1,6 @@
 /* eslint-disable */
 import {
-    ASN1Element as _Element,
+    type ASN1Element as _Element,
     ASN1TagClass as _TagClass,
     ASN1Construction as _Construction,
     ASN1UniversalType as _UniversalType,
@@ -65,7 +65,7 @@ export type ControlResult = _enum_for_ControlResult;
  *
  * @enum {number}
  */
-export const ControlResult = _enum_for_ControlResult;
+export const ControlResult: typeof _enum_for_ControlResult = _enum_for_ControlResult;
 
 
 /**
@@ -73,7 +73,7 @@ export const ControlResult = _enum_for_ControlResult;
  * @constant
  * @type {number}
  */
-export const ControlResult_complete: ControlResult =
+export const ControlResult_complete: _enum_for_ControlResult.complete =
     ControlResult.complete; /* LONG_NAMED_ENUMERATED_VALUE */
 
 
@@ -82,7 +82,7 @@ export const ControlResult_complete: ControlResult =
  * @constant
  * @type {number}
  */
-export const complete: ControlResult =
+export const complete: _enum_for_ControlResult.complete =
     ControlResult.complete; /* SHORT_NAMED_ENUMERATED_VALUE */
 
 
@@ -91,7 +91,7 @@ export const complete: ControlResult =
  * @constant
  * @type {number}
  */
-export const ControlResult_alreadyInCondition: ControlResult =
+export const ControlResult_alreadyInCondition: _enum_for_ControlResult.alreadyInCondition =
     ControlResult.alreadyInCondition; /* LONG_NAMED_ENUMERATED_VALUE */
 
 
@@ -100,7 +100,7 @@ export const ControlResult_alreadyInCondition: ControlResult =
  * @constant
  * @type {number}
  */
-export const alreadyInCondition: ControlResult =
+export const alreadyInCondition: _enum_for_ControlResult.alreadyInCondition =
     ControlResult.alreadyInCondition; /* SHORT_NAMED_ENUMERATED_VALUE */
 
 
@@ -109,7 +109,7 @@ export const alreadyInCondition: ControlResult =
  * @constant
  * @type {number}
  */
-export const ControlResult_fail_InvalidControlActionType: ControlResult =
+export const ControlResult_fail_InvalidControlActionType: _enum_for_ControlResult.fail_InvalidControlActionType =
     ControlResult.fail_InvalidControlActionType; /* LONG_NAMED_ENUMERATED_VALUE */
 
 
@@ -118,7 +118,7 @@ export const ControlResult_fail_InvalidControlActionType: ControlResult =
  * @constant
  * @type {number}
  */
-export const fail_InvalidControlActionType: ControlResult =
+export const fail_InvalidControlActionType: _enum_for_ControlResult.fail_InvalidControlActionType =
     ControlResult.fail_InvalidControlActionType; /* SHORT_NAMED_ENUMERATED_VALUE */
 
 
@@ -127,7 +127,7 @@ export const fail_InvalidControlActionType: ControlResult =
  * @constant
  * @type {number}
  */
-export const ControlResult_fail_ReasonUnknown: ControlResult =
+export const ControlResult_fail_ReasonUnknown: _enum_for_ControlResult.fail_ReasonUnknown =
     ControlResult.fail_ReasonUnknown; /* LONG_NAMED_ENUMERATED_VALUE */
 
 
@@ -136,18 +136,31 @@ export const ControlResult_fail_ReasonUnknown: ControlResult =
  * @constant
  * @type {number}
  */
-export const fail_ReasonUnknown: ControlResult =
+export const fail_ReasonUnknown: _enum_for_ControlResult.fail_ReasonUnknown =
     ControlResult.fail_ReasonUnknown; /* SHORT_NAMED_ENUMERATED_VALUE */
 
 
 
 
-export const _decode_ControlResult = $._decodeEnumerated;
+export function _decode_ControlResult(el: _Element): ControlResult {
+    const enumerated = $._decodeEnumerated(el);
+    switch (enumerated) {
+        case ControlResult.complete: return ControlResult.complete;
+        case ControlResult.alreadyInCondition: return ControlResult.alreadyInCondition;
+        case ControlResult.fail_InvalidControlActionType: return ControlResult.fail_InvalidControlActionType;
+        case ControlResult.fail_ReasonUnknown: return ControlResult.fail_ReasonUnknown;
+        default:
+            throw new _ConstructionError(
+                'Invalid ENUMERATED value ' + enumerated + ' for ControlResult.',
+                el,
+            );
+    }
+}
 
 
 
 
-export const _encode_ControlResult = $._encodeEnumerated;
+export const _encode_ControlResult: $.ASN1Encoder<ControlResult> = $._encodeEnumerated as $.ASN1Encoder<ControlResult>;
 
 
 /* eslint-enable */

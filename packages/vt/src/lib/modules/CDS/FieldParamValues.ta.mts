@@ -1,8 +1,8 @@
 /* eslint-disable */
 import {
-    OPTIONAL,
-    BOOLEAN,
-    ASN1Element as _Element,
+    type OPTIONAL,
+    type BOOLEAN,
+    type ASN1Element as _Element,
     ASN1TagClass as _TagClass,
     ASN1Construction as _Construction,
     ASN1UniversalType as _UniversalType,
@@ -12,9 +12,9 @@ import {
     ASN1ConstructionError as _ConstructionError,
 } from "@wildboar/asn1";
 import * as $ from "@wildboar/asn1/functional";
-import { FieldParamValues_maxFields, _decode_FieldParamValues_maxFields, _encode_FieldParamValues_maxFields } from "../CDS/FieldParamValues-maxFields.ta.mjs";
-import { FieldParamValues_maxFieldElements, _decode_FieldParamValues_maxFieldElements, _encode_FieldParamValues_maxFieldElements } from "../CDS/FieldParamValues-maxFieldElements.ta.mjs";
-import { FieldParamValues_accessOutside, _decode_FieldParamValues_accessOutside, _encode_FieldParamValues_accessOutside } from "../CDS/FieldParamValues-accessOutside.ta.mjs";
+import { type FieldParamValues_maxFields, _decode_FieldParamValues_maxFields, _encode_FieldParamValues_maxFields } from "../CDS/FieldParamValues-maxFields.ta.mjs";
+import { type FieldParamValues_maxFieldElements, _decode_FieldParamValues_maxFieldElements, _encode_FieldParamValues_maxFieldElements } from "../CDS/FieldParamValues-maxFieldElements.ta.mjs";
+import { type FieldParamValues_accessOutside, _decode_FieldParamValues_accessOutside, _encode_FieldParamValues_accessOutside } from "../CDS/FieldParamValues-accessOutside.ta.mjs";
 
 
 /**
@@ -42,46 +42,56 @@ import { FieldParamValues_accessOutside, _decode_FieldParamValues_accessOutside,
  */
 export
 class FieldParamValues {
+    /**
+     * @summary `capability`.
+     * @description
+     * Selected `field-definition-capability`. `true` = `"yes"`;
+     * `false` or absent = `"no"`. ISO/IEC 9040:1997 §18.1,
+     * §18.2.2.
+     * @public
+     * @readonly
+     */
+    public readonly capability?: OPTIONAL<BOOLEAN>;
+    /**
+     * @summary `maxFields`.
+     * @description
+     * Selected `max-fields` (F-dimension bound; default 1). f < 1
+     * always invalid. ISO/IEC 9040:1997 §18.2.2.
+     * @public
+     * @readonly
+     */
+    public readonly maxFields?: OPTIONAL<FieldParamValues_maxFields>;
+    /**
+     * @summary `maxFieldElements`.
+     * @description
+     * Selected `max-field-elements` (default 1). ISO/IEC
+     * 9040:1997 §18.2.2.
+     * @public
+     * @readonly
+     */
+    public readonly maxFieldElements?: OPTIONAL<FieldParamValues_maxFieldElements>;
+    /**
+     * @summary `accessOutside`.
+     * @description
+     * Selected `access-outside-fields`. Absence implies
+     * `"allowed"`. ISO/IEC 9040:1997 §18.2.2, §19.5; ISO/IEC
+     * 9041-1:1997 §12.3.3.
+     * @public
+     * @readonly
+     */
+    public readonly accessOutside?: OPTIONAL<FieldParamValues_accessOutside>;
+
     constructor (
-        /**
-         * @summary `capability`.
-         * @description
-         * Selected `field-definition-capability`. `true` = `"yes"`;
-         * `false` or absent = `"no"`. ISO/IEC 9040:1997 §18.1,
-         * §18.2.2.
-         * @public
-         * @readonly
-         */
-        readonly capability?: OPTIONAL<BOOLEAN>,
-        /**
-         * @summary `maxFields`.
-         * @description
-         * Selected `max-fields` (F-dimension bound; default 1). f < 1
-         * always invalid. ISO/IEC 9040:1997 §18.2.2.
-         * @public
-         * @readonly
-         */
-        readonly maxFields?: OPTIONAL<FieldParamValues_maxFields>,
-        /**
-         * @summary `maxFieldElements`.
-         * @description
-         * Selected `max-field-elements` (default 1). ISO/IEC
-         * 9040:1997 §18.2.2.
-         * @public
-         * @readonly
-         */
-        readonly maxFieldElements?: OPTIONAL<FieldParamValues_maxFieldElements>,
-        /**
-         * @summary `accessOutside`.
-         * @description
-         * Selected `access-outside-fields`. Absence implies
-         * `"allowed"`. ISO/IEC 9040:1997 §18.2.2, §19.5; ISO/IEC
-         * 9041-1:1997 §12.3.3.
-         * @public
-         * @readonly
-         */
-        readonly accessOutside?: OPTIONAL<FieldParamValues_accessOutside>
-    ) {}
+        capability?: OPTIONAL<BOOLEAN>,
+        maxFields?: OPTIONAL<FieldParamValues_maxFields>,
+        maxFieldElements?: OPTIONAL<FieldParamValues_maxFieldElements>,
+        accessOutside?: OPTIONAL<FieldParamValues_accessOutside>
+    ) {
+        this.capability = capability;
+        this.maxFields = maxFields;
+        this.maxFieldElements = maxFieldElements;
+        this.accessOutside = accessOutside;
+    }
 
     /**
      * @summary Restructures an object into a FieldParamValues

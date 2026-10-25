@@ -2,13 +2,13 @@
 
 import * as $ from "@wildboar/asn1/functional";
 import {
-    OPTIONAL,
-    SEQUENCE,
-    SET,
-    ASN1Element as _Element,
+    type OPTIONAL,
+    type SEQUENCE,
+    type SET,
+    type ASN1Element as _Element,
     ASN1TagClass as _TagClass
 } from "@wildboar/asn1";
-import { SysStatRegisterID, _decode_SysStatRegisterID, _encode_SysStatRegisterID } from "../CSTA-device-feature-types/SysStatRegisterID.ta.mjs";
+import { type SysStatRegisterID, _decode_SysStatRegisterID, _encode_SysStatRegisterID } from "../CSTA-device-feature-types/SysStatRegisterID.ta.mjs";
 
 import { CSTACommonArguments, _decode_CSTACommonArguments, _encode_CSTACommonArguments } from "../CSTA-extension-types/CSTACommonArguments.ta.mjs";
 
@@ -27,7 +27,7 @@ import { CSTACommonArguments, _decode_CSTACommonArguments, _encode_CSTACommonArg
  * 
  * ```asn1
  * RequestSysStatArg ::= SEQUENCE
- * {     sysStatRegisterID         SysStatRegisterID         OPTIONAL,
+ * {     sysStatRegisterID         SysStatRegisterID         type OPTIONAL,
  *     extensions             CSTACommonArguments         OPTIONAL }
  * ```
  * 
@@ -35,28 +35,34 @@ import { CSTACommonArguments, _decode_CSTACommonArguments, _encode_CSTACommonArg
  */
 export
 class RequestSysStatArg {
+    /**
+     * @summary `sysStatRegisterID`.
+     * @description
+     *
+     * Mandatory if SF is the requester and registration is
+     * supported; otherwise absent.
+     * @public
+     * @readonly
+     */
+    public readonly sysStatRegisterID?: OPTIONAL<SysStatRegisterID>;
+    /**
+     * @summary `extensions`.
+     * @description
+     *
+     * Optional security (timestamp, sequence, securityInfo) and
+     * privateData. ECMA-269 Table 14-10.
+     * @public
+     * @readonly
+     */
+    public readonly extensions?: OPTIONAL<CSTACommonArguments>;
+
     constructor (
-        /**
-         * @summary `sysStatRegisterID`.
-         * @description
-         *
-         * Mandatory if SF is the requester and registration is
-         * supported; otherwise absent.
-         * @public
-         * @readonly
-         */
-        readonly sysStatRegisterID?: OPTIONAL<SysStatRegisterID>,
-        /**
-         * @summary `extensions`.
-         * @description
-         *
-         * Optional security (timestamp, sequence, securityInfo) and
-         * privateData. ECMA-269 Table 14-10.
-         * @public
-         * @readonly
-         */
-        readonly extensions?: OPTIONAL<CSTACommonArguments>
-    ) {}
+        sysStatRegisterID?: OPTIONAL<SysStatRegisterID>,
+        extensions?: OPTIONAL<CSTACommonArguments>
+    ) {
+        this.sysStatRegisterID = sysStatRegisterID;
+        this.extensions = extensions;
+    }
 
     /**
      * @summary Restructures an object into a RequestSysStatArg

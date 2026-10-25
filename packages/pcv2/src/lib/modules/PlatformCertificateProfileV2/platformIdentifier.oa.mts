@@ -1,7 +1,7 @@
 /* eslint-disable */
 import { type ATTRIBUTE } from "../InformationFramework/ATTRIBUTE.oca.mjs";
 import { userApplications /* IMPORTED_SHORT_ENUMERATION_ITEM */ } from "../InformationFramework/AttributeUsage.ta.mjs";
-import { PlatformIdentifier, _decode_PlatformIdentifier, _encode_PlatformIdentifier } from "../PlatformCertificateProfileV2/PlatformIdentifier.ta.mjs";
+import { type PlatformIdentifier, _decode_PlatformIdentifier, _encode_PlatformIdentifier } from "../PlatformCertificateProfileV2/PlatformIdentifier.ta.mjs";
 import { tcg_at_platformIdentifier } from "../PlatformCertificateProfileV2/tcg-at-platformIdentifier.va.mjs";
 
 

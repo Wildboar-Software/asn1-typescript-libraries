@@ -1,6 +1,6 @@
 /* eslint-disable */
 import {
-  OPTIONAL,
+  type OPTIONAL,
   ASN1Element as _Element,
   ASN1TagClass as _TagClass,
   ASN1Construction as _Construction,
@@ -42,7 +42,7 @@ export class Access_Control_Change_Attribute_actual_values {
    * @public
    * @readonly
    */
-  readonly insert_values?: OPTIONAL<Access_Control_Element[]>;
+  public readonly insert_values?: OPTIONAL<Access_Control_Element[]>;
   /**
    * @summary `delete_values`.
    * @description
@@ -54,7 +54,7 @@ export class Access_Control_Change_Attribute_actual_values {
    * @public
    * @readonly
    */
-  readonly delete_values?: OPTIONAL<Access_Control_Element[]>;
+  public readonly delete_values?: OPTIONAL<Access_Control_Element[]>;
 
   constructor(
     insert_values?: OPTIONAL<Access_Control_Element[]>,

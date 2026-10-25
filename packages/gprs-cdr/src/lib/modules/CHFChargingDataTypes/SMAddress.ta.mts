@@ -1,12 +1,12 @@
 /* eslint-disable */
 import {
-    GraphicString,
-    OPTIONAL,
-    ASN1Element as _Element,
+    type GraphicString,
+    type OPTIONAL,
+    type ASN1Element as _Element,
     ASN1TagClass as _TagClass
 } from "@wildboar/asn1";
 import * as $ from "@wildboar/asn1/functional";
-import { SMAddressType, _decode_SMAddressType, _encode_SMAddressType, _enum_for_SMAddressType } from "../CHFChargingDataTypes/SMAddressType.ta.mjs";
+import { type SMAddressType, _decode_SMAddressType, _encode_SMAddressType, _enum_for_SMAddressType } from "../CHFChargingDataTypes/SMAddressType.ta.mjs";
 import { SMAddressDomain, _decode_SMAddressDomain, _encode_SMAddressDomain } from "../CHFChargingDataTypes/SMAddressDomain.ta.mjs";
 
 
@@ -78,7 +78,7 @@ class SMAddress {
          * @static
          */
 
-    public static _enum_for_sMAddressType = _enum_for_SMAddressType;
+    public static _enum_for_sMAddressType: typeof _enum_for_SMAddressType = _enum_for_SMAddressType;
 }
 
 /**

@@ -1,6 +1,6 @@
 /* eslint-disable */
 import {
-    ASN1Element as _Element,
+    type ASN1Element as _Element,
     ASN1TagClass as _TagClass,
     ASN1Construction as _Construction,
     ASN1UniversalType as _UniversalType,
@@ -58,7 +58,7 @@ export type CircuitDirectionality = _enum_for_CircuitDirectionality;
  *
  * @enum {number}
  */
-export const CircuitDirectionality = _enum_for_CircuitDirectionality;
+export const CircuitDirectionality: typeof _enum_for_CircuitDirectionality = _enum_for_CircuitDirectionality;
 
 
 /**
@@ -66,7 +66,7 @@ export const CircuitDirectionality = _enum_for_CircuitDirectionality;
  * @constant
  * @type {number}
  */
-export const CircuitDirectionality_onewayOut: CircuitDirectionality =
+export const CircuitDirectionality_onewayOut: _enum_for_CircuitDirectionality.onewayOut =
     CircuitDirectionality.onewayOut; /* LONG_NAMED_ENUMERATED_VALUE */
 
 
@@ -75,7 +75,7 @@ export const CircuitDirectionality_onewayOut: CircuitDirectionality =
  * @constant
  * @type {number}
  */
-export const onewayOut: CircuitDirectionality =
+export const onewayOut: _enum_for_CircuitDirectionality.onewayOut =
     CircuitDirectionality.onewayOut; /* SHORT_NAMED_ENUMERATED_VALUE */
 
 
@@ -84,7 +84,7 @@ export const onewayOut: CircuitDirectionality =
  * @constant
  * @type {number}
  */
-export const CircuitDirectionality_onewayIn: CircuitDirectionality =
+export const CircuitDirectionality_onewayIn: _enum_for_CircuitDirectionality.onewayIn =
     CircuitDirectionality.onewayIn; /* LONG_NAMED_ENUMERATED_VALUE */
 
 
@@ -93,7 +93,7 @@ export const CircuitDirectionality_onewayIn: CircuitDirectionality =
  * @constant
  * @type {number}
  */
-export const onewayIn: CircuitDirectionality =
+export const onewayIn: _enum_for_CircuitDirectionality.onewayIn =
     CircuitDirectionality.onewayIn; /* SHORT_NAMED_ENUMERATED_VALUE */
 
 
@@ -102,7 +102,7 @@ export const onewayIn: CircuitDirectionality =
  * @constant
  * @type {number}
  */
-export const CircuitDirectionality_twoway: CircuitDirectionality =
+export const CircuitDirectionality_twoway: _enum_for_CircuitDirectionality.twoway =
     CircuitDirectionality.twoway; /* LONG_NAMED_ENUMERATED_VALUE */
 
 
@@ -111,18 +111,30 @@ export const CircuitDirectionality_twoway: CircuitDirectionality =
  * @constant
  * @type {number}
  */
-export const twoway: CircuitDirectionality =
+export const twoway: _enum_for_CircuitDirectionality.twoway =
     CircuitDirectionality.twoway; /* SHORT_NAMED_ENUMERATED_VALUE */
 
 
 
 
-export const _decode_CircuitDirectionality = $._decodeEnumerated;
+export function _decode_CircuitDirectionality(el: _Element): CircuitDirectionality {
+    const enumerated = $._decodeEnumerated(el);
+    switch (enumerated) {
+        case CircuitDirectionality.onewayOut: return CircuitDirectionality.onewayOut;
+        case CircuitDirectionality.onewayIn: return CircuitDirectionality.onewayIn;
+        case CircuitDirectionality.twoway: return CircuitDirectionality.twoway;
+        default:
+            throw new _ConstructionError(
+                'Invalid ENUMERATED value ' + enumerated + ' for CircuitDirectionality.',
+                el,
+            );
+    }
+}
 
 
 
 
-export const _encode_CircuitDirectionality = $._encodeEnumerated;
+export const _encode_CircuitDirectionality: $.ASN1Encoder<CircuitDirectionality> = $._encodeEnumerated as $.ASN1Encoder<CircuitDirectionality>;
 
 
 /* eslint-enable */

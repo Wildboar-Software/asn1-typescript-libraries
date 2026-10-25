@@ -1,7 +1,7 @@
 /* eslint-disable */
 import {
-    OPTIONAL,
-    ASN1Element as _Element,
+    type OPTIONAL,
+    type ASN1Element as _Element,
     ASN1TagClass as _TagClass,
     ASN1Construction as _Construction,
     ASN1UniversalType as _UniversalType,
@@ -11,9 +11,9 @@ import {
     ASN1ConstructionError as _ConstructionError,
 } from "@wildboar/asn1";
 import * as $ from "@wildboar/asn1/functional";
-import { ObjectName, _decode_ObjectName, _encode_ObjectName } from "../ISO-9506-MMS-1/ObjectName.ta.mjs";
-import { Transitions, _decode_Transitions, _encode_Transitions } from "../MMS-Object-Module-1/Transitions.ta.mjs";
-import { AlarmAckRule, _decode_AlarmAckRule, _encode_AlarmAckRule } from "../MMS-Object-Module-1/AlarmAckRule.ta.mjs";
+import { type ObjectName, _decode_ObjectName, _encode_ObjectName } from "../ISO-9506-MMS-1/ObjectName.ta.mjs";
+import { type Transitions, _decode_Transitions, _encode_Transitions } from "../MMS-Object-Module-1/Transitions.ta.mjs";
+import { type AlarmAckRule, _decode_AlarmAckRule, _encode_AlarmAckRule } from "../MMS-Object-Module-1/AlarmAckRule.ta.mjs";
 
 
 /**
@@ -40,44 +40,52 @@ import { AlarmAckRule, _decode_AlarmAckRule, _encode_AlarmAckRule } from "../MMS
  */
 export
 class AlterEventEnrollment_Request {
+    /**
+     * @summary `eventEnrollmentName`.
+     * @description
+     *
+     * Notification enrollment to alter.
+     *
+     * [ISO 9506-1:2003 §21.6.1.1.1]
+     *
+     * @public
+     * @readonly
+     */
+    public readonly eventEnrollmentName: ObjectName;
+    /**
+     * @summary `eventConditionTransitions`.
+     * @description
+     *
+     * Replacement `&ecTransitions`. Omitted: unchanged.
+     *
+     * [ISO 9506-1:2003 §21.6.1.1.2]
+     *
+     * @public
+     * @readonly
+     */
+    public readonly eventConditionTransitions?: OPTIONAL<Transitions>;
+    /**
+     * @summary `alarmAcknowledgmentRule`.
+     * @description
+     *
+     * Replacement `&aaRule`. Omitted: unchanged.
+     *
+     * [ISO 9506-1:2003 §21.6.1.1.3]
+     *
+     * @public
+     * @readonly
+     */
+    public readonly alarmAcknowledgmentRule?: OPTIONAL<AlarmAckRule>;
+
     constructor (
-        /**
-         * @summary `eventEnrollmentName`.
-         * @description
-         *
-         * Notification enrollment to alter.
-         *
-         * [ISO 9506-1:2003 §21.6.1.1.1]
-         *
-         * @public
-         * @readonly
-         */
-        readonly eventEnrollmentName: ObjectName,
-        /**
-         * @summary `eventConditionTransitions`.
-         * @description
-         *
-         * Replacement `&ecTransitions`. Omitted: unchanged.
-         *
-         * [ISO 9506-1:2003 §21.6.1.1.2]
-         *
-         * @public
-         * @readonly
-         */
-        readonly eventConditionTransitions?: OPTIONAL<Transitions>,
-        /**
-         * @summary `alarmAcknowledgmentRule`.
-         * @description
-         *
-         * Replacement `&aaRule`. Omitted: unchanged.
-         *
-         * [ISO 9506-1:2003 §21.6.1.1.3]
-         *
-         * @public
-         * @readonly
-         */
-        readonly alarmAcknowledgmentRule?: OPTIONAL<AlarmAckRule>
-    ) {}
+        eventEnrollmentName: ObjectName,
+        eventConditionTransitions?: OPTIONAL<Transitions>,
+        alarmAcknowledgmentRule?: OPTIONAL<AlarmAckRule>
+    ) {
+        this.eventEnrollmentName = eventEnrollmentName;
+        this.eventConditionTransitions = eventConditionTransitions;
+        this.alarmAcknowledgmentRule = alarmAcknowledgmentRule;
+    }
 
     /**
      * @summary Restructures an object into a AlterEventEnrollment_Request

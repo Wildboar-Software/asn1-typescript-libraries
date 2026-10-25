@@ -1,7 +1,7 @@
 /* eslint-disable */
 import {
-    OPTIONAL,
-    ASN1Element as _Element,
+    type OPTIONAL,
+    type ASN1Element as _Element,
     ASN1TagClass as _TagClass,
     ASN1Construction as _Construction,
     ASN1UniversalType as _UniversalType,
@@ -36,41 +36,49 @@ import { OtherRevRefs, _decode_OtherRevRefs, _encode_OtherRevRefs } from "../ETS
  */
 export
 class CrlOcspRef {
+    /**
+     * @summary `crlids`.
+     * @description
+     *
+     * CRL identifiers used for this certificate. If a Delta
+     * CRL is identified, references to the CRLs needed for a
+     * complete revocation list shall be included.
+     *
+     * @public
+     * @readonly
+     */
+    public readonly crlids?: OPTIONAL<CRLListID>;
+    /**
+     * @summary `ocspids`.
+     * @description
+     *
+     * OCSP response identifiers used for this certificate.
+     *
+     * @public
+     * @readonly
+     */
+    public readonly ocspids?: OPTIONAL<OcspListID>;
+    /**
+     * @summary `otherRev`.
+     * @description
+     *
+     * Other revocation-info references. Syntax is identified
+     * by `otherRevRefType` and is otherwise out of scope.
+     *
+     * @public
+     * @readonly
+     */
+    public readonly otherRev?: OPTIONAL<OtherRevRefs>;
+
     constructor (
-        /**
-         * @summary `crlids`.
-         * @description
-         *
-         * CRL identifiers used for this certificate. If a Delta
-         * CRL is identified, references to the CRLs needed for a
-         * complete revocation list shall be included.
-         *
-         * @public
-         * @readonly
-         */
-        readonly crlids?: OPTIONAL<CRLListID>,
-        /**
-         * @summary `ocspids`.
-         * @description
-         *
-         * OCSP response identifiers used for this certificate.
-         *
-         * @public
-         * @readonly
-         */
-        readonly ocspids?: OPTIONAL<OcspListID>,
-        /**
-         * @summary `otherRev`.
-         * @description
-         *
-         * Other revocation-info references. Syntax is identified
-         * by `otherRevRefType` and is otherwise out of scope.
-         *
-         * @public
-         * @readonly
-         */
-        readonly otherRev?: OPTIONAL<OtherRevRefs>
-    ) {}
+        crlids?: OPTIONAL<CRLListID>,
+        ocspids?: OPTIONAL<OcspListID>,
+        otherRev?: OPTIONAL<OtherRevRefs>
+    ) {
+        this.crlids = crlids;
+        this.ocspids = ocspids;
+        this.otherRev = otherRev;
+    }
 
     /**
      * @summary Restructures an object into a CrlOcspRef

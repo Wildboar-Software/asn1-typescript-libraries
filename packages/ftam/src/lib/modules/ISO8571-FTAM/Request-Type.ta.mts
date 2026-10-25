@@ -1,6 +1,6 @@
 /* eslint-disable */
 import {
-  INTEGER,
+  type INTEGER,
   ASN1Element as _Element,
   ASN1TagClass as _TagClass,
   ASN1Construction as _Construction,
@@ -35,7 +35,7 @@ export type Request_Type = INTEGER;
  * @constant
  * @type {number}
  */
-export const Request_Type_read: Request_Type = 0; /* LONG_NAMED_INTEGER_VALUE */
+export const Request_Type_read: 0 = 0 satisfies Request_Type; /* LONG_NAMED_INTEGER_VALUE */
 
 
 /**
@@ -43,7 +43,7 @@ export const Request_Type_read: Request_Type = 0; /* LONG_NAMED_INTEGER_VALUE */
  * @constant
  * @type {number}
  */
-export const read: Request_Type = Request_Type_read; /* SHORT_NAMED_INTEGER_VALUE */
+export const read: 0 = Request_Type_read; /* SHORT_NAMED_INTEGER_VALUE */
 
 
 /**
@@ -52,7 +52,7 @@ export const read: Request_Type = Request_Type_read; /* SHORT_NAMED_INTEGER_VALU
  * @constant
  * @type {number}
  */
-export const Request_Type_write: Request_Type = 1; /* LONG_NAMED_INTEGER_VALUE */
+export const Request_Type_write: 1 = 1 satisfies Request_Type; /* LONG_NAMED_INTEGER_VALUE */
 
 
 /**
@@ -60,7 +60,7 @@ export const Request_Type_write: Request_Type = 1; /* LONG_NAMED_INTEGER_VALUE *
  * @constant
  * @type {number}
  */
-export const write: Request_Type = Request_Type_write; /* SHORT_NAMED_INTEGER_VALUE */
+export const write: 1 = Request_Type_write; /* SHORT_NAMED_INTEGER_VALUE */
 
 
 let _cached_decoder_for_Request_Type: $.ASN1Decoder<Request_Type> | null = null;

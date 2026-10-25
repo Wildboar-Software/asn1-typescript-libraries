@@ -1,6 +1,6 @@
 /* eslint-disable */
 import {
-    ENUMERATED
+    type ENUMERATED
 } from "@wildboar/asn1";
 import * as $ from "@wildboar/asn1/functional";
 
@@ -49,7 +49,7 @@ type VoIPRoamingIndication = _enum_for_VoIPRoamingIndication | ENUMERATED;
  * @type {number}
  */
 export
-const VoIPRoamingIndication_roamingLBO: VoIPRoamingIndication = 1; /* LONG_NAMED_ENUMERATED_VALUE */
+const VoIPRoamingIndication_roamingLBO: _enum_for_VoIPRoamingIndication.roamingLBO = _enum_for_VoIPRoamingIndication.roamingLBO; /* LONG_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary roamingLBO
@@ -60,7 +60,7 @@ const VoIPRoamingIndication_roamingLBO: VoIPRoamingIndication = 1; /* LONG_NAMED
  * @type {number}
  */
 export
-const roamingLBO: VoIPRoamingIndication = VoIPRoamingIndication_roamingLBO; /* SHORT_NAMED_ENUMERATED_VALUE */
+const roamingLBO: _enum_for_VoIPRoamingIndication.roamingLBO = VoIPRoamingIndication_roamingLBO; /* SHORT_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary VoIPRoamingIndication_roamingS8HR
@@ -73,7 +73,7 @@ const roamingLBO: VoIPRoamingIndication = VoIPRoamingIndication_roamingLBO; /* S
  * @type {number}
  */
 export
-const VoIPRoamingIndication_roamingS8HR: VoIPRoamingIndication = 2; /* LONG_NAMED_ENUMERATED_VALUE */
+const VoIPRoamingIndication_roamingS8HR: _enum_for_VoIPRoamingIndication.roamingS8HR = _enum_for_VoIPRoamingIndication.roamingS8HR; /* LONG_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary roamingS8HR
@@ -84,7 +84,7 @@ const VoIPRoamingIndication_roamingS8HR: VoIPRoamingIndication = 2; /* LONG_NAME
  * @type {number}
  */
 export
-const roamingS8HR: VoIPRoamingIndication = VoIPRoamingIndication_roamingS8HR; /* SHORT_NAMED_ENUMERATED_VALUE */
+const roamingS8HR: _enum_for_VoIPRoamingIndication.roamingS8HR = VoIPRoamingIndication_roamingS8HR; /* SHORT_NAMED_ENUMERATED_VALUE */
 export const _decode_VoIPRoamingIndication: $.ASN1Decoder<VoIPRoamingIndication> = $._decodeEnumerated;
 export const _encode_VoIPRoamingIndication: $.ASN1Encoder<VoIPRoamingIndication> = $._encodeEnumerated;
 

@@ -1,7 +1,7 @@
 /* eslint-disable */
 import {
-    OPTIONAL,
-    ASN1Element as _Element,
+    type OPTIONAL,
+    type ASN1Element as _Element,
     ASN1TagClass as _TagClass,
     ASN1Construction as _Construction,
     ASN1UniversalType as _UniversalType,
@@ -12,12 +12,12 @@ import {
 } from '@wildboar/asn1';
 import * as $ from '@wildboar/asn1/functional';
 import {
-    RedirectionClass,
+    type RedirectionClass,
     _decode_RedirectionClass,
     _encode_RedirectionClass,
 } from '../MTSAbstractService/RedirectionClass.ta.mjs';
 import {
-    RecipientAssignedAlternateRecipient,
+    type RecipientAssignedAlternateRecipient,
     _decode_RecipientAssignedAlternateRecipient,
     _encode_RecipientAssignedAlternateRecipient,
 } from '../MTSAbstractService/RecipientAssignedAlternateRecipient.ta.mjs';
@@ -40,20 +40,26 @@ import {
  *
  */
 export class RecipientRedirection {
+    /**
+     * @summary `redirection_classes`.
+     * @public
+     * @readonly
+     */
+    public readonly redirection_classes?: OPTIONAL<RedirectionClass[]>;
+    /**
+     * @summary `recipient_assigned_alternate_recipient`.
+     * @public
+     * @readonly
+     */
+    public readonly recipient_assigned_alternate_recipient?: OPTIONAL<RecipientAssignedAlternateRecipient>;
+
     constructor(
-        /**
-         * @summary `redirection_classes`.
-         * @public
-         * @readonly
-         */
-        readonly redirection_classes?: OPTIONAL<RedirectionClass[]>,
-        /**
-         * @summary `recipient_assigned_alternate_recipient`.
-         * @public
-         * @readonly
-         */
-        readonly recipient_assigned_alternate_recipient?: OPTIONAL<RecipientAssignedAlternateRecipient>
-    ) {}
+        redirection_classes?: OPTIONAL<RedirectionClass[]>,
+        recipient_assigned_alternate_recipient?: OPTIONAL<RecipientAssignedAlternateRecipient>
+    ) {
+        this.redirection_classes = redirection_classes;
+        this.recipient_assigned_alternate_recipient = recipient_assigned_alternate_recipient;
+    }
 
     /**
      * @summary Restructures an object into a RecipientRedirection

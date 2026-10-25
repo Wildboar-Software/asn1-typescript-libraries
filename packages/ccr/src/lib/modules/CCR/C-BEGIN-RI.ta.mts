@@ -1,6 +1,6 @@
 /* eslint-disable */
 import {
-  OPTIONAL,
+  type OPTIONAL,
   ASN1Element as _Element,
   ASN1TagClass as _TagClass,
   ASN1Construction as _Construction,
@@ -17,12 +17,12 @@ import {
   _encode_ATOMIC_ACTION_IDENTIFIER,
 } from '../CCR/ATOMIC-ACTION-IDENTIFIER.ta.mjs';
 import {
-  C_BEGIN_RI_branch_suffix,
+  type C_BEGIN_RI_branch_suffix,
   _decode_C_BEGIN_RI_branch_suffix,
   _encode_C_BEGIN_RI_branch_suffix,
 } from '../CCR/C-BEGIN-RI-branch-suffix.ta.mjs';
 import {
-  User_data,
+  type User_data,
   _decode_User_data,
   _encode_User_data,
 } from '../CCR/User-data.ta.mjs';

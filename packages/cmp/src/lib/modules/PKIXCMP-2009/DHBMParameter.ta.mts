@@ -40,30 +40,36 @@ import {
  *
  */
 export class DHBMParameter {
+  /**
+   * @summary `owf`.
+   * @description
+   *
+   * AlgorithmIdentifier for a one-way function (SHA-1 recommended)
+   * ([RFC 4210 §5.1.3.2](https://datatracker.ietf.org/doc/html/rfc4210#section-5.1.3.2)).
+   *
+   * @public
+   * @readonly
+   */
+  public readonly owf: AlgorithmIdentifier;
+  /**
+   * @summary `mac`.
+   * @description
+   *
+   * MAC AlgorithmIdentifier (e.g., DES-MAC, Triple-DES-MAC, or HMAC)
+   * ([RFC 4210 §5.1.3.2](https://datatracker.ietf.org/doc/html/rfc4210#section-5.1.3.2)).
+   *
+   * @public
+   * @readonly
+   */
+  public readonly mac: AlgorithmIdentifier;
+
   constructor(
-    /**
-     * @summary `owf`.
-     * @description
-     *
-     * AlgorithmIdentifier for a one-way function (SHA-1 recommended)
-     * ([RFC 4210 §5.1.3.2](https://datatracker.ietf.org/doc/html/rfc4210#section-5.1.3.2)).
-     *
-     * @public
-     * @readonly
-     */
-    readonly owf: AlgorithmIdentifier,
-    /**
-     * @summary `mac`.
-     * @description
-     *
-     * MAC AlgorithmIdentifier (e.g., DES-MAC, Triple-DES-MAC, or HMAC)
-     * ([RFC 4210 §5.1.3.2](https://datatracker.ietf.org/doc/html/rfc4210#section-5.1.3.2)).
-     *
-     * @public
-     * @readonly
-     */
-    readonly mac: AlgorithmIdentifier
-  ) {}
+    owf: AlgorithmIdentifier,
+    mac: AlgorithmIdentifier
+  ) {
+    this.owf = owf;
+    this.mac = mac;
+  }
 
   /**
    * @summary Restructures an object into a DHBMParameter

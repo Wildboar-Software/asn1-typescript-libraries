@@ -1,7 +1,7 @@
 /* eslint-disable */
 import {
-  OPTIONAL,
-  INTEGER,
+  type OPTIONAL,
+  type INTEGER,
   ASN1Element as _Element,
   ASN1TagClass as _TagClass,
   ASN1Construction as _Construction,
@@ -33,13 +33,13 @@ export class SBFormat {
    * @public
    * @readonly
    */
-  readonly sb_owner?: OPTIONAL<INTEGER>;
+  public readonly sb_owner?: OPTIONAL<INTEGER>;
   /**
    * @summary `sb_type`.
    * @public
    * @readonly
    */
-  readonly sb_type?: OPTIONAL<INTEGER>;
+  public readonly sb_type?: OPTIONAL<INTEGER>;
 
   constructor(
     sb_owner?: OPTIONAL<INTEGER>,

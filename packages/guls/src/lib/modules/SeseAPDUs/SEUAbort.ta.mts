@@ -1,6 +1,6 @@
 /* eslint-disable */
 import {
-  OPTIONAL,
+  type OPTIONAL,
   ASN1Element as _Element,
   ASN1TagClass as _TagClass,
   ASN1Construction as _Construction,
@@ -12,7 +12,7 @@ import {
 } from '@wildboar/asn1';
 import * as $ from '@wildboar/asn1/functional';
 import {
-  InvocationId,
+  type InvocationId,
   _decode_InvocationId,
   _encode_InvocationId,
 } from '../SeseAPDUs/InvocationId.ta.mjs';
@@ -46,7 +46,7 @@ import {
  *          --  security exchange -- }) DEFAULT noInvocationId,
  *   itemIdentifier
  *     SECURITY-EXCHANGE.&SE-Items.&itemId({ValidSEs.&SE-Items})
- *       OPTIONAL,
+ *       type OPTIONAL,
  *   --  This component will only be present
  *   --  when the Abort is generated subsequent
  *   --  to receipt of a SETransfer APDU.
@@ -57,42 +57,50 @@ import {
  *
  */
 export class SEUAbort {
+  /**
+   * @summary `invocationId`.
+   * @description
+   *
+   * Must identify an active or just-completed security
+   * exchange. Default `noInvocationId`. ITU-T Rec. X.832
+   * (04/95) §7.1.
+   *
+   * @public
+   * @readonly
+   */
+  public readonly invocationId?: OPTIONAL<InvocationId>;
+  /**
+   * @summary `itemIdentifier`.
+   * @description
+   *
+   * Present only when the abort follows receipt of a
+   * SETransfer. ITU-T Rec. X.832 (04/95) §7.1.
+   *
+   * @public
+   * @readonly
+   */
+  public readonly itemIdentifier?: OPTIONAL<_Element>;
+  /**
+   * @summary `errors`.
+   * @description
+   *
+   * One or more SE-ERRORs (multiple codes possible).
+   * ITU-T Rec. X.832 (04/95) §7.1.
+   *
+   * @public
+   * @readonly
+   */
+  public readonly errors?: OPTIONAL<SEerror[]>;
+
   constructor(
-    /**
-     * @summary `invocationId`.
-     * @description
-     *
-     * Must identify an active or just-completed security
-     * exchange. Default `noInvocationId`. ITU-T Rec. X.832
-     * (04/95) §7.1.
-     *
-     * @public
-     * @readonly
-     */
-    readonly invocationId?: OPTIONAL<InvocationId>,
-    /**
-     * @summary `itemIdentifier`.
-     * @description
-     *
-     * Present only when the abort follows receipt of a
-     * SETransfer. ITU-T Rec. X.832 (04/95) §7.1.
-     *
-     * @public
-     * @readonly
-     */
-    readonly itemIdentifier?: OPTIONAL<_Element>,
-    /**
-     * @summary `errors`.
-     * @description
-     *
-     * One or more SE-ERRORs (multiple codes possible).
-     * ITU-T Rec. X.832 (04/95) §7.1.
-     *
-     * @public
-     * @readonly
-     */
-    readonly errors?: OPTIONAL<SEerror[]>
-  ) {}
+    invocationId?: OPTIONAL<InvocationId>,
+    itemIdentifier?: OPTIONAL<_Element>,
+    errors?: OPTIONAL<SEerror[]>
+  ) {
+    this.invocationId = invocationId;
+    this.itemIdentifier = itemIdentifier;
+    this.errors = errors;
+  }
 
   /**
    * @summary Restructures an object into a SEUAbort

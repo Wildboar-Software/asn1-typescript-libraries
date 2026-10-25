@@ -1,7 +1,7 @@
 /* eslint-disable */
 import {
-    ENUMERATED,
-    ASN1Element as _Element,
+    type ENUMERATED,
+    type ASN1Element as _Element,
     ASN1TagClass as _TagClass,
     ASN1Construction as _Construction,
     ASN1UniversalType as _UniversalType,
@@ -53,7 +53,7 @@ export type TerminateError = _enum_for_TerminateError | ENUMERATED;
  * @constant
  * @type {number}
  */
-export const TerminateError_terminationNotAllowed: TerminateError = 0; /* LONG_NAMED_ENUMERATED_VALUE */
+export const TerminateError_terminationNotAllowed: _enum_for_TerminateError.terminationNotAllowed = _enum_for_TerminateError.terminationNotAllowed; /* LONG_NAMED_ENUMERATED_VALUE */
 
 
 /**
@@ -66,7 +66,7 @@ export const TerminateError_terminationNotAllowed: TerminateError = 0; /* LONG_N
  * @constant
  * @type {number}
  */
-export const terminationNotAllowed: TerminateError = TerminateError_terminationNotAllowed; /* SHORT_NAMED_ENUMERATED_VALUE */
+export const terminationNotAllowed: _enum_for_TerminateError.terminationNotAllowed = TerminateError_terminationNotAllowed; /* SHORT_NAMED_ENUMERATED_VALUE */
 
 
 /**
@@ -79,7 +79,7 @@ export const terminationNotAllowed: TerminateError = TerminateError_terminationN
  * @constant
  * @type {number}
  */
-export const TerminateError_invalidSessionType: TerminateError = 1; /* LONG_NAMED_ENUMERATED_VALUE */
+export const TerminateError_invalidSessionType: _enum_for_TerminateError.invalidSessionType = _enum_for_TerminateError.invalidSessionType; /* LONG_NAMED_ENUMERATED_VALUE */
 
 
 /**
@@ -92,7 +92,7 @@ export const TerminateError_invalidSessionType: TerminateError = 1; /* LONG_NAME
  * @constant
  * @type {number}
  */
-export const invalidSessionType: TerminateError = TerminateError_invalidSessionType; /* SHORT_NAMED_ENUMERATED_VALUE */
+export const invalidSessionType: _enum_for_TerminateError.invalidSessionType = TerminateError_invalidSessionType; /* SHORT_NAMED_ENUMERATED_VALUE */
 
 
 /**
@@ -105,7 +105,7 @@ export const invalidSessionType: TerminateError = TerminateError_invalidSessionT
  * @constant
  * @type {number}
  */
-export const TerminateError_invalidSessionId: TerminateError = 2; /* LONG_NAMED_ENUMERATED_VALUE */
+export const TerminateError_invalidSessionId: _enum_for_TerminateError.invalidSessionId = _enum_for_TerminateError.invalidSessionId; /* LONG_NAMED_ENUMERATED_VALUE */
 
 
 /**
@@ -118,17 +118,17 @@ export const TerminateError_invalidSessionId: TerminateError = 2; /* LONG_NAMED_
  * @constant
  * @type {number}
  */
-export const invalidSessionId: TerminateError = TerminateError_invalidSessionId; /* SHORT_NAMED_ENUMERATED_VALUE */
+export const invalidSessionId: _enum_for_TerminateError.invalidSessionId = TerminateError_invalidSessionId; /* SHORT_NAMED_ENUMERATED_VALUE */
 
 
 
 
-export const _decode_TerminateError = $._decodeEnumerated;
+export const _decode_TerminateError: $.ASN1Decoder<number> = $._decodeEnumerated;
 
 
 
 
-export const _encode_TerminateError = $._encodeEnumerated;
+export const _encode_TerminateError: $.ASN1Encoder<number> = $._encodeEnumerated;
 
 
 /* eslint-enable */

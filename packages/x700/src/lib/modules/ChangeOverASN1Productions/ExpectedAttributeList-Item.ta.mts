@@ -1,7 +1,7 @@
 /* eslint-disable */
 import {
-    OPTIONAL,
-    ASN1Element as _Element,
+    type OPTIONAL,
+    type ASN1Element as _Element,
     ASN1TagClass as _TagClass,
     ASN1Construction as _Construction,
     ASN1UniversalType as _UniversalType,
@@ -12,12 +12,12 @@ import {
 } from '@wildboar/asn1';
 import * as $ from '@wildboar/asn1/functional';
 import {
-    ModifyOperator,
+    type ModifyOperator,
     replace /* IMPORTED_SHORT_NAMED_INTEGER */,
     _decode_ModifyOperator,
     _encode_ModifyOperator,
 } from '@wildboar/cmip';
-import { AttributeId, _encode_AttributeId, _decode_AttributeId } from '@wildboar/cmip';
+import { type AttributeId, _encode_AttributeId, _decode_AttributeId } from '@wildboar/cmip';
 
 /**
  * @summary ExpectedAttributeList_Item
@@ -36,40 +36,48 @@ import { AttributeId, _encode_AttributeId, _decode_AttributeId } from '@wildboar
  *
  */
 export class ExpectedAttributeList_Item {
+    /**
+     * @summary `modifyOperator`.
+     * @description
+     *
+     * How to apply `attributeValue` (default `replace`). ITU-T Rec.
+     * X.751 (11/95)
+     * [Annex B](https://www.itu.int/rec/T-REC-X.751-199511-I).
+     * @public
+     * @readonly
+     */
+    public readonly modifyOperator: OPTIONAL<ModifyOperator>;
+    /**
+     * @summary `attributeId`.
+     * @description
+     *
+     * Attribute to modify. ITU-T Rec. X.751 (11/95)
+     * [Annex B](https://www.itu.int/rec/T-REC-X.751-199511-I).
+     * @public
+     * @readonly
+     */
+    public readonly attributeId: AttributeId;
+    /**
+     * @summary `attributeValue`.
+     * @description
+     *
+     * New value; omitted when the operator does not require one.
+     * ITU-T Rec. X.751 (11/95)
+     * [Annex B](https://www.itu.int/rec/T-REC-X.751-199511-I).
+     * @public
+     * @readonly
+     */
+    public readonly attributeValue?: OPTIONAL<_Element>;
+
     constructor(
-        /**
-         * @summary `modifyOperator`.
-         * @description
-         *
-         * How to apply `attributeValue` (default `replace`). ITU-T Rec.
-         * X.751 (11/95)
-         * [Annex B](https://www.itu.int/rec/T-REC-X.751-199511-I).
-         * @public
-         * @readonly
-         */
-        readonly modifyOperator: OPTIONAL<ModifyOperator>,
-        /**
-         * @summary `attributeId`.
-         * @description
-         *
-         * Attribute to modify. ITU-T Rec. X.751 (11/95)
-         * [Annex B](https://www.itu.int/rec/T-REC-X.751-199511-I).
-         * @public
-         * @readonly
-         */
-        readonly attributeId: AttributeId,
-        /**
-         * @summary `attributeValue`.
-         * @description
-         *
-         * New value; omitted when the operator does not require one.
-         * ITU-T Rec. X.751 (11/95)
-         * [Annex B](https://www.itu.int/rec/T-REC-X.751-199511-I).
-         * @public
-         * @readonly
-         */
-        readonly attributeValue?: OPTIONAL<_Element>
-    ) {}
+        modifyOperator: OPTIONAL<ModifyOperator>,
+        attributeId: AttributeId,
+        attributeValue?: OPTIONAL<_Element>
+    ) {
+        this.modifyOperator = modifyOperator;
+        this.attributeId = attributeId;
+        this.attributeValue = attributeValue;
+    }
 
     /**
      * @summary Restructures an object into a ExpectedAttributeList_Item

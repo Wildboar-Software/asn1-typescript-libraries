@@ -1,6 +1,6 @@
 import {
-    OPTIONAL,
-    ASN1Element as _Element,
+    type OPTIONAL,
+    type ASN1Element as _Element,
     ASN1TagClass as _TagClass,
 } from "@wildboar/asn1";
 import * as $ from "@wildboar/asn1/functional";
@@ -24,22 +24,28 @@ import { type Cause, _decode_Cause, _encode_Cause } from "./Cause.ta.mjs";
  *
  */
 export class EventSpecificInformationBCSM_oCalledPartyBusySpecificInfo {
+    /**
+     * @summary `busyCause`.
+     * @description
+     *
+     * If triggered by ISUP release, a copy of that cause (e.g. subscriber
+     * absent 20, user busy 17). If triggered by a MAP error (e.g. Absent
+     * subscriber), mapped to the corresponding ISUP cause. If omitted,
+     * gsmSCF shall assume busy. (3GPP TS 29.078 V19.0.0 clause 11.18).
+     *
+     * @public
+     * @readonly
+     */
+    public readonly busyCause?: OPTIONAL<Cause>;
+    public readonly _unrecognizedExtensionsList: _Element[];
+
     constructor (
-        /**
-         * @summary `busyCause`.
-         * @description
-         *
-         * If triggered by ISUP release, a copy of that cause (e.g. subscriber
-         * absent 20, user busy 17). If triggered by a MAP error (e.g. Absent
-         * subscriber), mapped to the corresponding ISUP cause. If omitted,
-         * gsmSCF shall assume busy. (3GPP TS 29.078 V19.0.0 clause 11.18).
-         *
-         * @public
-         * @readonly
-         */
-        readonly busyCause?: OPTIONAL<Cause>,
-        readonly _unrecognizedExtensionsList: _Element[] = [],
-    ) {}
+        busyCause?: OPTIONAL<Cause>,
+        _unrecognizedExtensionsList: _Element[] = [],
+    ) {
+        this.busyCause = busyCause;
+        this._unrecognizedExtensionsList = _unrecognizedExtensionsList;
+    }
 
     public static _from_object (_o: { [_K in keyof (EventSpecificInformationBCSM_oCalledPartyBusySpecificInfo)]: (EventSpecificInformationBCSM_oCalledPartyBusySpecificInfo)[_K] }): EventSpecificInformationBCSM_oCalledPartyBusySpecificInfo {
         return new EventSpecificInformationBCSM_oCalledPartyBusySpecificInfo(_o.busyCause, _o._unrecognizedExtensionsList);

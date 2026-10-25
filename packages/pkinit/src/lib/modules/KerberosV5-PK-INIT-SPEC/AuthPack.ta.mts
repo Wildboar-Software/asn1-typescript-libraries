@@ -1,14 +1,14 @@
 /* eslint-disable */
 import {
-    OPTIONAL,
-    ASN1Element as _Element,
+    type OPTIONAL,
+    type ASN1Element as _Element,
     ASN1TagClass as _TagClass
 } from "@wildboar/asn1";
 import * as $ from "@wildboar/asn1/functional";
 import { PKAuthenticator, _decode_PKAuthenticator, _encode_PKAuthenticator } from "../KerberosV5-PK-INIT-SPEC/PKAuthenticator.ta.mjs";
 import { SubjectPublicKeyInfo, _decode_SubjectPublicKeyInfo, _encode_SubjectPublicKeyInfo } from "@wildboar/pki-stub";
 import { AlgorithmIdentifier, _decode_AlgorithmIdentifier, _encode_AlgorithmIdentifier } from "@wildboar/pki-stub";
-import { DHNonce, _decode_DHNonce, _encode_DHNonce } from "../KerberosV5-PK-INIT-SPEC/DHNonce.ta.mjs";
+import { type DHNonce, _decode_DHNonce, _encode_DHNonce } from "../KerberosV5-PK-INIT-SPEC/DHNonce.ta.mjs";
 import { KDFAlgorithmId, _decode_KDFAlgorithmId, _encode_KDFAlgorithmId } from "../KerberosV5-PK-INIT-SPEC/KDFAlgorithmId.ta.mjs";
 
 
@@ -38,7 +38,7 @@ import { KDFAlgorithmId, _decode_KDFAlgorithmId, _encode_KDFAlgorithmId } from "
  *             -- This field is present only if the client wishes
  *             -- to use the Diffie-Hellman key agreement method.
  *     supportedCMSTypes       [2] SEQUENCE OF AlgorithmIdentifier
- *                                 OPTIONAL,
+ *                                 type OPTIONAL,
  *             -- Type AlgorithmIdentifier is defined in
  *             -- [RFC3280].
  *             -- List of CMS algorithm [RFC3370] identifiers
@@ -60,91 +60,105 @@ import { KDFAlgorithmId, _decode_KDFAlgorithmId, _encode_KDFAlgorithmId } from "
  */
 export
 class AuthPack {
+    /**
+     * Binds this signature to a fresh client timestamp and to
+     * the AS-REQ body. See {@link PKAuthenticator}.
+     *
+     * [RFC 4556, section 3.2.1](https://www.rfc-editor.org/rfc/rfc4556#section-3.2.1).
+     * @public
+     * @readonly
+     */
+    public readonly pkAuthenticator: PKAuthenticator;
+    /**
+     * Present only when the client wants Diffie-Hellman key
+     * agreement. `algorithm` carries the domain parameters
+     * (IEEE 1363). The public value is the `subjectPublicKey`
+     * bit string, encoded as in
+     * [RFC 3279](https://www.rfc-editor.org/rfc/rfc3279).
+     *
+     * Implementations must support Oakley 1024-bit MODP group 2
+     * and 2048-bit MODP group 14, and should support 4096-bit
+     * MODP group 16. For MODP, exponents should have at least
+     * twice as many bits as the symmetric keys derived from
+     * them. If the KDC rejects the parameters it returns
+     * `KDC_ERR_DH_KEY_PARAMETERS_NOT_ACCEPTED` (65) with
+     * {@link TD_DH_PARAMETERS}.
+     *
+     * [RFC 4556, section 3.2.1](https://www.rfc-editor.org/rfc/rfc4556#section-3.2.1).
+     * @public
+     * @readonly
+     */
+    public readonly clientPublicValue?: OPTIONAL<SubjectPublicKeyInfo>;
+    /**
+     * CMS algorithm identifiers the client supports, most
+     * preferred first. Entries name a key-transport algorithm,
+     * a content-encryption algorithm, or a signature algorithm.
+     * Order among those three classes does not matter. Preference
+     * here overrides CMS type numbers 9 through 15 in the
+     * AS-REQ `etype` field. Those numbers are not Kerberos
+     * enctypes and must not appear in `EncryptedData`. Clients
+     * that want the algorithms in that table should still send
+     * the old numbers.
+     *
+     * On the public-key delivery path, the KDC should pick the
+     * first listed algorithm it supports. If it supports none,
+     * it returns `KDC_ERR_ETYPE_NOSUPP`. An empty sequence may
+     * be omitted or included.
+     *
+     * [RFC 4556, section 3.1.4](https://www.rfc-editor.org/rfc/rfc4556#section-3.1.4)
+     * and
+     * [section 3.2.3.2](https://www.rfc-editor.org/rfc/rfc4556#section-3.2.3.2).
+     * @public
+     * @readonly
+     */
+    public readonly supportedCMSTypes?: OPTIONAL<AlgorithmIdentifier[]>;
+    /**
+     * Present when the client is willing to reuse
+     * Diffie-Hellman keys, or to let the KDC do so. It must be
+     * chosen at random and be as long as the longest symmetric
+     * key type the client supports. The KDC should
+     * not reuse its keys unless this field is present. It is
+     * concatenated into the reply-key seed when keys are
+     * reused; see {@link DHRepInfo}.
+     *
+     * [RFC 4556, section 3.2.1](https://www.rfc-editor.org/rfc/rfc4556#section-3.2.1)
+     * and
+     * [section 3.2.3.1](https://www.rfc-editor.org/rfc/rfc4556#section-3.2.3.1).
+     * @public
+     * @readonly
+     */
+    public readonly clientDHNonce?: OPTIONAL<DHNonce>;
+    /**
+     * Key-derivation functions the client offers. RFC 4556 does
+     * not define this field. The module attributes it to
+     * RFC 8636 and does not include that specification's
+     * selection rules.
+     * @public
+     * @readonly
+     */
+    public readonly supportedKDFs?: OPTIONAL<KDFAlgorithmId[]>;
+    /**
+     * @summary Extensions that are not recognized.
+     * @public
+     * @readonly
+     */
+    public readonly _unrecognizedExtensionsList: _Element[];
+
     constructor (
-        /**
-         * Binds this signature to a fresh client timestamp and to
-         * the AS-REQ body. See {@link PKAuthenticator}.
-         *
-         * [RFC 4556, section 3.2.1](https://www.rfc-editor.org/rfc/rfc4556#section-3.2.1).
-         * @public
-         * @readonly
-         */
-        readonly pkAuthenticator: PKAuthenticator,
-        /**
-         * Present only when the client wants Diffie-Hellman key
-         * agreement. `algorithm` carries the domain parameters
-         * (IEEE 1363). The public value is the `subjectPublicKey`
-         * bit string, encoded as in
-         * [RFC 3279](https://www.rfc-editor.org/rfc/rfc3279).
-         *
-         * Implementations must support Oakley 1024-bit MODP group 2
-         * and 2048-bit MODP group 14, and should support 4096-bit
-         * MODP group 16. For MODP, exponents should have at least
-         * twice as many bits as the symmetric keys derived from
-         * them. If the KDC rejects the parameters it returns
-         * `KDC_ERR_DH_KEY_PARAMETERS_NOT_ACCEPTED` (65) with
-         * {@link TD_DH_PARAMETERS}.
-         *
-         * [RFC 4556, section 3.2.1](https://www.rfc-editor.org/rfc/rfc4556#section-3.2.1).
-         * @public
-         * @readonly
-         */
-        readonly clientPublicValue?: OPTIONAL<SubjectPublicKeyInfo>,
-        /**
-         * CMS algorithm identifiers the client supports, most
-         * preferred first. Entries name a key-transport algorithm,
-         * a content-encryption algorithm, or a signature algorithm.
-         * Order among those three classes does not matter. Preference
-         * here overrides CMS type numbers 9 through 15 in the
-         * AS-REQ `etype` field. Those numbers are not Kerberos
-         * enctypes and must not appear in `EncryptedData`. Clients
-         * that want the algorithms in that table should still send
-         * the old numbers.
-         *
-         * On the public-key delivery path, the KDC should pick the
-         * first listed algorithm it supports. If it supports none,
-         * it returns `KDC_ERR_ETYPE_NOSUPP`. An empty sequence may
-         * be omitted or included.
-         *
-         * [RFC 4556, section 3.1.4](https://www.rfc-editor.org/rfc/rfc4556#section-3.1.4)
-         * and
-         * [section 3.2.3.2](https://www.rfc-editor.org/rfc/rfc4556#section-3.2.3.2).
-         * @public
-         * @readonly
-         */
-        readonly supportedCMSTypes?: OPTIONAL<AlgorithmIdentifier[]>,
-        /**
-         * Present when the client is willing to reuse
-         * Diffie-Hellman keys, or to let the KDC do so. It must be
-         * chosen at random and be as long as the longest symmetric
-         * key type the client supports. The KDC should
-         * not reuse its keys unless this field is present. It is
-         * concatenated into the reply-key seed when keys are
-         * reused; see {@link DHRepInfo}.
-         *
-         * [RFC 4556, section 3.2.1](https://www.rfc-editor.org/rfc/rfc4556#section-3.2.1)
-         * and
-         * [section 3.2.3.1](https://www.rfc-editor.org/rfc/rfc4556#section-3.2.3.1).
-         * @public
-         * @readonly
-         */
-        readonly clientDHNonce?: OPTIONAL<DHNonce>,
-        /**
-         * Key-derivation functions the client offers. RFC 4556 does
-         * not define this field. The module attributes it to
-         * RFC 8636 and does not include that specification's
-         * selection rules.
-         * @public
-         * @readonly
-         */
-        readonly supportedKDFs?: OPTIONAL<KDFAlgorithmId[]>,
-        /**
-         * @summary Extensions that are not recognized.
-         * @public
-         * @readonly
-         */
-        readonly _unrecognizedExtensionsList: _Element[] = []
-    ) {}
+        pkAuthenticator: PKAuthenticator,
+        clientPublicValue?: OPTIONAL<SubjectPublicKeyInfo>,
+        supportedCMSTypes?: OPTIONAL<AlgorithmIdentifier[]>,
+        clientDHNonce?: OPTIONAL<DHNonce>,
+        supportedKDFs?: OPTIONAL<KDFAlgorithmId[]>,
+        _unrecognizedExtensionsList: _Element[] = []
+    ) {
+        this.pkAuthenticator = pkAuthenticator;
+        this.clientPublicValue = clientPublicValue;
+        this.supportedCMSTypes = supportedCMSTypes;
+        this.clientDHNonce = clientDHNonce;
+        this.supportedKDFs = supportedKDFs;
+        this._unrecognizedExtensionsList = _unrecognizedExtensionsList;
+    }
 
     /**
      * @summary Restructures an object into a AuthPack

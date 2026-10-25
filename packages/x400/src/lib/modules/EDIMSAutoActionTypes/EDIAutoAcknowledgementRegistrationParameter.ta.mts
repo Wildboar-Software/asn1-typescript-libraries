@@ -1,7 +1,7 @@
 /* eslint-disable */
 import {
-    OPTIONAL,
-    ASN1Element as _Element,
+    type OPTIONAL,
+    type ASN1Element as _Element,
     ASN1TagClass as _TagClass,
     ASN1Construction as _Construction,
     ASN1UniversalType as _UniversalType,
@@ -12,7 +12,7 @@ import {
 } from '@wildboar/asn1';
 import * as $ from '@wildboar/asn1/functional';
 import {
-    EDISupplementaryInformation,
+    type EDISupplementaryInformation,
     _decode_EDISupplementaryInformation,
     _encode_EDISupplementaryInformation,
 } from '../EDIMSInformationObjects/EDISupplementaryInformation.ta.mjs';
@@ -39,20 +39,26 @@ import {
  *
  */
 export class EDIAutoAcknowledgementRegistrationParameter {
+    /**
+     * @summary `auto_acknowledge_suppl_receipt_info`.
+     * @public
+     * @readonly
+     */
+    public readonly auto_acknowledge_suppl_receipt_info?: OPTIONAL<EDISupplementaryInformation>;
+    /**
+     * @summary `submission_options`.
+     * @public
+     * @readonly
+     */
+    public readonly submission_options?: OPTIONAL<MSSubmissionOptions>;
+
     constructor(
-        /**
-         * @summary `auto_acknowledge_suppl_receipt_info`.
-         * @public
-         * @readonly
-         */
-        readonly auto_acknowledge_suppl_receipt_info?: OPTIONAL<EDISupplementaryInformation>,
-        /**
-         * @summary `submission_options`.
-         * @public
-         * @readonly
-         */
-        readonly submission_options?: OPTIONAL<MSSubmissionOptions>
-    ) {}
+        auto_acknowledge_suppl_receipt_info?: OPTIONAL<EDISupplementaryInformation>,
+        submission_options?: OPTIONAL<MSSubmissionOptions>
+    ) {
+        this.auto_acknowledge_suppl_receipt_info = auto_acknowledge_suppl_receipt_info;
+        this.submission_options = submission_options;
+    }
 
     /**
      * @summary Restructures an object into a EDIAutoAcknowledgementRegistrationParameter

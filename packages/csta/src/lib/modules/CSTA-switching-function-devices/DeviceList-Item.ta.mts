@@ -2,11 +2,11 @@
 
 import * as $ from "@wildboar/asn1/functional";
 import {
-    OPTIONAL,
-    SEQUENCE,
-    SET,
-    IA5String,
-    ASN1Element as _Element,
+    type OPTIONAL,
+    type SEQUENCE,
+    type SET,
+    type IA5String,
+    type ASN1Element as _Element,
     ASN1TagClass as _TagClass
 } from "@wildboar/asn1";
 import { DeviceID, _decode_DeviceID, _encode_DeviceID } from "../CSTA-device-identifiers/DeviceID.ta.mjs";
@@ -26,7 +26,7 @@ import {
     _encode_NamedDeviceTypes
 } from "../CSTA-capability-exchange/NamedDeviceTypes.ta.mjs";
 
-import { DeviceAttributes, _decode_DeviceAttributes, _encode_DeviceAttributes } from "../CSTA-switching-function-devices/DeviceAttributes.ta.mjs";
+import { type DeviceAttributes, _decode_DeviceAttributes, _encode_DeviceAttributes } from "../CSTA-switching-function-devices/DeviceAttributes.ta.mjs";
 
 
 
@@ -56,65 +56,79 @@ import { DeviceAttributes, _decode_DeviceAttributes, _encode_DeviceAttributes } 
  */
 export
 class DeviceList_Item {
+    /**
+     * @summary `deviceID`.
+     * @description
+     *
+     * Device identifier for this entry. Mandatory.
+     * @public
+     * @readonly
+     */
+    public readonly deviceID: DeviceID;
+    /**
+     * @summary `deviceCategory`.
+     * @description
+     *
+     * Category; defaults to station.
+     * @public
+     * @readonly
+     */
+    public readonly deviceCategory?: OPTIONAL<DeviceCategory>;
+    /**
+     * @summary `namedDeviceTypes`.
+     * @description
+     *
+     * Named device type, if assigned.
+     * @public
+     * @readonly
+     */
+    public readonly namedDeviceTypes?: OPTIONAL<NamedDeviceTypes>;
+    /**
+     * @summary `deviceAttributes`.
+     * @description
+     *
+     * Additional bits: media-access device, routeing device, group
+     * ACD/hunt/pick.
+     * @public
+     * @readonly
+     */
+    public readonly deviceAttributes?: OPTIONAL<DeviceAttributes>;
+    /**
+     * @summary `deviceModelName`.
+     * @description
+     *
+     * SF-specific model name.
+     * @public
+     * @readonly
+     */
+    public readonly deviceModelName?: OPTIONAL<IA5String>;
+    /**
+     * @summary `nidGroup`.
+     * @description
+     *
+     * NID group (e.g. trunk group) associated with a Network
+     * Interface device. Only when `deviceCategory` is Network
+     * Interface.
+     * @public
+     * @readonly
+     */
+    public readonly nidGroup?: OPTIONAL<DeviceID>;
+
     constructor (
-        /**
-         * @summary `deviceID`.
-         * @description
-         *
-         * Device identifier for this entry. Mandatory.
-         * @public
-         * @readonly
-         */
-        readonly deviceID: DeviceID,
-        /**
-         * @summary `deviceCategory`.
-         * @description
-         *
-         * Category; defaults to station.
-         * @public
-         * @readonly
-         */
-        readonly deviceCategory?: OPTIONAL<DeviceCategory>,
-        /**
-         * @summary `namedDeviceTypes`.
-         * @description
-         *
-         * Named device type, if assigned.
-         * @public
-         * @readonly
-         */
-        readonly namedDeviceTypes?: OPTIONAL<NamedDeviceTypes>,
-        /**
-         * @summary `deviceAttributes`.
-         * @description
-         *
-         * Additional bits: media-access device, routeing device, group
-         * ACD/hunt/pick.
-         * @public
-         * @readonly
-         */
-        readonly deviceAttributes?: OPTIONAL<DeviceAttributes>,
-        /**
-         * @summary `deviceModelName`.
-         * @description
-         *
-         * SF-specific model name.
-         * @public
-         * @readonly
-         */
-        readonly deviceModelName?: OPTIONAL<IA5String>,
-        /**
-         * @summary `nidGroup`.
-         * @description
-         *
-         * NID group (e.g. trunk group) associated with a Network
-         * Interface device. Only when `deviceCategory` is Network
-         * Interface.
-         * @public
-         * @readonly
-         */
-        readonly nidGroup?: OPTIONAL<DeviceID>
-    ) {}
+        deviceID: DeviceID,
+        deviceCategory?: OPTIONAL<DeviceCategory>,
+        namedDeviceTypes?: OPTIONAL<NamedDeviceTypes>,
+        deviceAttributes?: OPTIONAL<DeviceAttributes>,
+        deviceModelName?: OPTIONAL<IA5String>,
+        nidGroup?: OPTIONAL<DeviceID>
+    ) {
+        this.deviceID = deviceID;
+        this.deviceCategory = deviceCategory;
+        this.namedDeviceTypes = namedDeviceTypes;
+        this.deviceAttributes = deviceAttributes;
+        this.deviceModelName = deviceModelName;
+        this.nidGroup = nidGroup;
+    }
 
     /**
      * @summary Restructures an object into a DeviceList_Item
@@ -138,19 +152,19 @@ class DeviceList_Item {
      * @static
      * @method
      */
-    public static get _default_value_for_deviceCategory () { return DeviceCategory_station; }        /**
+    public static get _default_value_for_deviceCategory (): _enum_for_DeviceCategory.station { return DeviceCategory_station; }        /**
          * @summary The enum used as the type of the component `deviceCategory`
          * @public
          * @static
          */
 
-    public static _enum_for_deviceCategory = _enum_for_DeviceCategory;        /**
+    public static _enum_for_deviceCategory: typeof _enum_for_DeviceCategory = _enum_for_DeviceCategory;        /**
          * @summary The enum used as the type of the component `namedDeviceTypes`
          * @public
          * @static
          */
 
-    public static _enum_for_namedDeviceTypes = _enum_for_NamedDeviceTypes;
+    public static _enum_for_namedDeviceTypes: typeof _enum_for_NamedDeviceTypes = _enum_for_NamedDeviceTypes;
 }
 
 /**

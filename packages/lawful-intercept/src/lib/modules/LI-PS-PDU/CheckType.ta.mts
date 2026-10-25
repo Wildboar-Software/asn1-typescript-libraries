@@ -1,6 +1,6 @@
 /* eslint-disable */
 import {
-    ENUMERATED
+    type ENUMERATED
 } from "@wildboar/asn1";
 import * as $ from "@wildboar/asn1/functional";
 
@@ -87,7 +87,7 @@ type CheckType = _enum_for_CheckType | ENUMERATED;
  * @type {number}
  */
 export
-const CheckType_hash: CheckType = 1; /* LONG_NAMED_ENUMERATED_VALUE */
+const CheckType_hash: _enum_for_CheckType.hash = _enum_for_CheckType.hash; /* LONG_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary hash
@@ -104,7 +104,7 @@ const CheckType_hash: CheckType = 1; /* LONG_NAMED_ENUMERATED_VALUE */
  * @type {number}
  */
 export
-const hash: CheckType = CheckType_hash; /* SHORT_NAMED_ENUMERATED_VALUE */
+const hash: _enum_for_CheckType.hash = CheckType_hash; /* SHORT_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary CheckType_signature
@@ -123,7 +123,7 @@ const hash: CheckType = CheckType_hash; /* SHORT_NAMED_ENUMERATED_VALUE */
  * @type {number}
  */
 export
-const CheckType_signature: CheckType = 2; /* LONG_NAMED_ENUMERATED_VALUE */
+const CheckType_signature: _enum_for_CheckType.signature = _enum_for_CheckType.signature; /* LONG_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary signature
@@ -142,7 +142,7 @@ const CheckType_signature: CheckType = 2; /* LONG_NAMED_ENUMERATED_VALUE */
  * @type {number}
  */
 export
-const signature: CheckType = CheckType_signature; /* SHORT_NAMED_ENUMERATED_VALUE */
+const signature: _enum_for_CheckType.signature = CheckType_signature; /* SHORT_NAMED_ENUMERATED_VALUE */
 export const _decode_CheckType: $.ASN1Decoder<CheckType> = $._decodeEnumerated;
 export const _encode_CheckType: $.ASN1Encoder<CheckType> = $._encodeEnumerated;
 

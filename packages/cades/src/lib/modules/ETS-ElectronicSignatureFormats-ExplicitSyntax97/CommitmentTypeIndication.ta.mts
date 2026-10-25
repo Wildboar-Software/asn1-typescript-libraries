@@ -1,7 +1,7 @@
 /* eslint-disable */
 import {
-    OPTIONAL,
-    ASN1Element as _Element,
+    type OPTIONAL,
+    type ASN1Element as _Element,
     ASN1TagClass as _TagClass,
     ASN1Construction as _Construction,
     ASN1UniversalType as _UniversalType,
@@ -11,7 +11,7 @@ import {
     ASN1ConstructionError as _ConstructionError,
 } from "@wildboar/asn1";
 import * as $ from "@wildboar/asn1/functional";
-import { CommitmentTypeIdentifier, _decode_CommitmentTypeIdentifier, _encode_CommitmentTypeIdentifier } from "../ETS-ElectronicSignatureFormats-ExplicitSyntax97/CommitmentTypeIdentifier.ta.mjs";
+import { type CommitmentTypeIdentifier, _decode_CommitmentTypeIdentifier, _encode_CommitmentTypeIdentifier } from "../ETS-ElectronicSignatureFormats-ExplicitSyntax97/CommitmentTypeIdentifier.ta.mjs";
 import { CommitmentTypeQualifier, _decode_CommitmentTypeQualifier, _encode_CommitmentTypeQualifier } from "../ETS-ElectronicSignatureFormats-ExplicitSyntax97/CommitmentTypeQualifier.ta.mjs";
 /**
  * @summary CommitmentTypeIndication
@@ -34,29 +34,35 @@ import { CommitmentTypeQualifier, _decode_CommitmentTypeQualifier, _encode_Commi
  */
 export
 class CommitmentTypeIndication {
+    /**
+     * @summary `commitmentTypeId`.
+     * @description
+     *
+     * Commitment type, e.g. `id-cti-ets-proofOfOrigin`.
+     *
+     * @public
+     * @readonly
+     */
+    public readonly commitmentTypeId: CommitmentTypeIdentifier;
+    /**
+     * @summary `commitmentTypeQualifier`.
+     * @description
+     *
+     * Optional qualifiers of the commitment. Their use is
+     * outside the scope of TS 101 733.
+     *
+     * @public
+     * @readonly
+     */
+    public readonly commitmentTypeQualifier?: OPTIONAL<CommitmentTypeQualifier[]>;
+
     constructor (
-        /**
-         * @summary `commitmentTypeId`.
-         * @description
-         *
-         * Commitment type, e.g. `id-cti-ets-proofOfOrigin`.
-         *
-         * @public
-         * @readonly
-         */
-        readonly commitmentTypeId: CommitmentTypeIdentifier,
-        /**
-         * @summary `commitmentTypeQualifier`.
-         * @description
-         *
-         * Optional qualifiers of the commitment. Their use is
-         * outside the scope of TS 101 733.
-         *
-         * @public
-         * @readonly
-         */
-        readonly commitmentTypeQualifier?: OPTIONAL<CommitmentTypeQualifier[]>
-    ) {}
+        commitmentTypeId: CommitmentTypeIdentifier,
+        commitmentTypeQualifier?: OPTIONAL<CommitmentTypeQualifier[]>
+    ) {
+        this.commitmentTypeId = commitmentTypeId;
+        this.commitmentTypeQualifier = commitmentTypeQualifier;
+    }
 
     /**
      * @summary Restructures an object into a CommitmentTypeIndication

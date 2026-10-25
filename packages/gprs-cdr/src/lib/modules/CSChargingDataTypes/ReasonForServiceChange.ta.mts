@@ -96,7 +96,7 @@ type ReasonForServiceChange = _enum_for_ReasonForServiceChange;
  * @enum {number}
  */
 export
-const ReasonForServiceChange = _enum_for_ReasonForServiceChange;
+const ReasonForServiceChange: typeof _enum_for_ReasonForServiceChange = _enum_for_ReasonForServiceChange;
 
 /**
  * @summary ReasonForServiceChange_msubInitiated
@@ -110,7 +110,7 @@ const ReasonForServiceChange = _enum_for_ReasonForServiceChange;
  * @type {number}
  */
 export
-const ReasonForServiceChange_msubInitiated: ReasonForServiceChange = ReasonForServiceChange.msubInitiated; /* LONG_NAMED_ENUMERATED_VALUE */
+const ReasonForServiceChange_msubInitiated: _enum_for_ReasonForServiceChange.msubInitiated = ReasonForServiceChange.msubInitiated; /* LONG_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary msubInitiated
@@ -124,7 +124,7 @@ const ReasonForServiceChange_msubInitiated: ReasonForServiceChange = ReasonForSe
  * @type {number}
  */
 export
-const msubInitiated: ReasonForServiceChange = ReasonForServiceChange.msubInitiated; /* SHORT_NAMED_ENUMERATED_VALUE */
+const msubInitiated: _enum_for_ReasonForServiceChange.msubInitiated = ReasonForServiceChange.msubInitiated; /* SHORT_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary ReasonForServiceChange_mscInitiated
@@ -137,7 +137,7 @@ const msubInitiated: ReasonForServiceChange = ReasonForServiceChange.msubInitiat
  * @type {number}
  */
 export
-const ReasonForServiceChange_mscInitiated: ReasonForServiceChange = ReasonForServiceChange.mscInitiated; /* LONG_NAMED_ENUMERATED_VALUE */
+const ReasonForServiceChange_mscInitiated: _enum_for_ReasonForServiceChange.mscInitiated = ReasonForServiceChange.mscInitiated; /* LONG_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary mscInitiated
@@ -150,7 +150,7 @@ const ReasonForServiceChange_mscInitiated: ReasonForServiceChange = ReasonForSer
  * @type {number}
  */
 export
-const mscInitiated: ReasonForServiceChange = ReasonForServiceChange.mscInitiated; /* SHORT_NAMED_ENUMERATED_VALUE */
+const mscInitiated: _enum_for_ReasonForServiceChange.mscInitiated = ReasonForServiceChange.mscInitiated; /* SHORT_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary ReasonForServiceChange_callSetupFallBack
@@ -165,7 +165,7 @@ const mscInitiated: ReasonForServiceChange = ReasonForServiceChange.mscInitiated
  * @type {number}
  */
 export
-const ReasonForServiceChange_callSetupFallBack: ReasonForServiceChange = ReasonForServiceChange.callSetupFallBack; /* LONG_NAMED_ENUMERATED_VALUE */
+const ReasonForServiceChange_callSetupFallBack: _enum_for_ReasonForServiceChange.callSetupFallBack = ReasonForServiceChange.callSetupFallBack; /* LONG_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary callSetupFallBack
@@ -180,7 +180,7 @@ const ReasonForServiceChange_callSetupFallBack: ReasonForServiceChange = ReasonF
  * @type {number}
  */
 export
-const callSetupFallBack: ReasonForServiceChange = ReasonForServiceChange.callSetupFallBack; /* SHORT_NAMED_ENUMERATED_VALUE */
+const callSetupFallBack: _enum_for_ReasonForServiceChange.callSetupFallBack = ReasonForServiceChange.callSetupFallBack; /* SHORT_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary ReasonForServiceChange_callSetupChangeOrder
@@ -194,7 +194,7 @@ const callSetupFallBack: ReasonForServiceChange = ReasonForServiceChange.callSet
  * @type {number}
  */
 export
-const ReasonForServiceChange_callSetupChangeOrder: ReasonForServiceChange = ReasonForServiceChange.callSetupChangeOrder; /* LONG_NAMED_ENUMERATED_VALUE */
+const ReasonForServiceChange_callSetupChangeOrder: _enum_for_ReasonForServiceChange.callSetupChangeOrder = ReasonForServiceChange.callSetupChangeOrder; /* LONG_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary callSetupChangeOrder
@@ -208,7 +208,7 @@ const ReasonForServiceChange_callSetupChangeOrder: ReasonForServiceChange = Reas
  * @type {number}
  */
 export
-const callSetupChangeOrder: ReasonForServiceChange = ReasonForServiceChange.callSetupChangeOrder; /* SHORT_NAMED_ENUMERATED_VALUE */
+const callSetupChangeOrder: _enum_for_ReasonForServiceChange.callSetupChangeOrder = ReasonForServiceChange.callSetupChangeOrder; /* SHORT_NAMED_ENUMERATED_VALUE */
 
 export
 const _decode_ReasonForServiceChange: $.ASN1Decoder<ReasonForServiceChange> = $._decodeEnumerated;

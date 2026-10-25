@@ -1,8 +1,8 @@
 /* eslint-disable */
 import {
-    ABSTRACT_SYNTAX
+    type ABSTRACT_SYNTAX
 } from "@wildboar/asn1";
-import { AssistHandoffSSF_SCF_PDUs, _decode_AssistHandoffSSF_SCF_PDUs, _encode_AssistHandoffSSF_SCF_PDUs } from "../IN-CS2-SSF-SCF-pkgs-contracts-acs/AssistHandoffSSF-SCF-PDUs.ta.mjs";
+import { type AssistHandoffSSF_SCF_PDUs, _decode_AssistHandoffSSF_SCF_PDUs, _encode_AssistHandoffSSF_SCF_PDUs } from "../IN-CS2-SSF-SCF-pkgs-contracts-acs/AssistHandoffSSF-SCF-PDUs.ta.mjs";
 // export { AssistHandoffSSF_SCF_PDUs, _decode_AssistHandoffSSF_SCF_PDUs, _encode_AssistHandoffSSF_SCF_PDUs } from "../IN-CS2-SSF-SCF-pkgs-contracts-acs/AssistHandoffSSF-SCF-PDUs.ta.mjs";
 import { id_as_assistHandoff_ssf_scfAS } from "../IN-CS2-object-identifiers/id-as-assistHandoff-ssf-scfAS.va.mjs";
 // export { id_as_assistHandoff_ssf_scfAS } from "../IN-CS2-object-identifiers/id-as-assistHandoff-ssf-scfAS.va.mjs";

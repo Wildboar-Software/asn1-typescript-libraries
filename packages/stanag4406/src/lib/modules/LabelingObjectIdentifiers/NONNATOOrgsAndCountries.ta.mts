@@ -1,7 +1,7 @@
 /* eslint-disable */
 import {
-    ASN1Element as _Element,
-    INTEGER
+    type ASN1Element as _Element,
+    type INTEGER
 } from "@wildboar/asn1";
 import * as $ from "@wildboar/asn1/functional";
 
@@ -70,7 +70,7 @@ type NONNATOOrgsAndCountries = INTEGER;
  * @type {number}
  */
 export
-const NONNATOOrgsAndCountries_albania: NONNATOOrgsAndCountries = 8; /* LONG_NAMED_INTEGER_VALUE */
+const NONNATOOrgsAndCountries_albania: 8 = 8 satisfies NONNATOOrgsAndCountries; /* LONG_NAMED_INTEGER_VALUE */
 
 /**
  * @summary NONNATOOrgsAndCountries_albania
@@ -83,7 +83,7 @@ const NONNATOOrgsAndCountries_albania: NONNATOOrgsAndCountries = 8; /* LONG_NAME
  * @type {number}
  */
 export
-const albania: NONNATOOrgsAndCountries = NONNATOOrgsAndCountries_albania; /* SHORT_NAMED_INTEGER_VALUE */
+const albania: 8 = NONNATOOrgsAndCountries_albania; /* SHORT_NAMED_INTEGER_VALUE */
 
 /**
  * @summary NONNATOOrgsAndCountries_armenia
@@ -96,7 +96,7 @@ const albania: NONNATOOrgsAndCountries = NONNATOOrgsAndCountries_albania; /* SHO
  * @type {number}
  */
 export
-const NONNATOOrgsAndCountries_armenia: NONNATOOrgsAndCountries = 16; /* LONG_NAMED_INTEGER_VALUE */
+const NONNATOOrgsAndCountries_armenia: 16 = 16 satisfies NONNATOOrgsAndCountries; /* LONG_NAMED_INTEGER_VALUE */
 
 /**
  * @summary NONNATOOrgsAndCountries_armenia
@@ -109,7 +109,7 @@ const NONNATOOrgsAndCountries_armenia: NONNATOOrgsAndCountries = 16; /* LONG_NAM
  * @type {number}
  */
 export
-const armenia: NONNATOOrgsAndCountries = NONNATOOrgsAndCountries_armenia; /* SHORT_NAMED_INTEGER_VALUE */
+const armenia: 16 = NONNATOOrgsAndCountries_armenia; /* SHORT_NAMED_INTEGER_VALUE */
 
 /**
  * @summary NONNATOOrgsAndCountries_austria
@@ -122,7 +122,7 @@ const armenia: NONNATOOrgsAndCountries = NONNATOOrgsAndCountries_armenia; /* SHO
  * @type {number}
  */
 export
-const NONNATOOrgsAndCountries_austria: NONNATOOrgsAndCountries = 40; /* LONG_NAMED_INTEGER_VALUE */
+const NONNATOOrgsAndCountries_austria: 40 = 40 satisfies NONNATOOrgsAndCountries; /* LONG_NAMED_INTEGER_VALUE */
 
 /**
  * @summary NONNATOOrgsAndCountries_austria
@@ -135,7 +135,7 @@ const NONNATOOrgsAndCountries_austria: NONNATOOrgsAndCountries = 40; /* LONG_NAM
  * @type {number}
  */
 export
-const austria: NONNATOOrgsAndCountries = NONNATOOrgsAndCountries_austria; /* SHORT_NAMED_INTEGER_VALUE */
+const austria: 40 = NONNATOOrgsAndCountries_austria; /* SHORT_NAMED_INTEGER_VALUE */
 
 /**
  * @summary NONNATOOrgsAndCountries_azerbaijan
@@ -148,7 +148,7 @@ const austria: NONNATOOrgsAndCountries = NONNATOOrgsAndCountries_austria; /* SHO
  * @type {number}
  */
 export
-const NONNATOOrgsAndCountries_azerbaijan: NONNATOOrgsAndCountries = 31; /* LONG_NAMED_INTEGER_VALUE */
+const NONNATOOrgsAndCountries_azerbaijan: 31 = 31 satisfies NONNATOOrgsAndCountries; /* LONG_NAMED_INTEGER_VALUE */
 
 /**
  * @summary NONNATOOrgsAndCountries_azerbaijan
@@ -161,7 +161,7 @@ const NONNATOOrgsAndCountries_azerbaijan: NONNATOOrgsAndCountries = 31; /* LONG_
  * @type {number}
  */
 export
-const azerbaijan: NONNATOOrgsAndCountries = NONNATOOrgsAndCountries_azerbaijan; /* SHORT_NAMED_INTEGER_VALUE */
+const azerbaijan: 31 = NONNATOOrgsAndCountries_azerbaijan; /* SHORT_NAMED_INTEGER_VALUE */
 
 /**
  * @summary NONNATOOrgsAndCountries_belarus
@@ -174,7 +174,7 @@ const azerbaijan: NONNATOOrgsAndCountries = NONNATOOrgsAndCountries_azerbaijan; 
  * @type {number}
  */
 export
-const NONNATOOrgsAndCountries_belarus: NONNATOOrgsAndCountries = 112; /* LONG_NAMED_INTEGER_VALUE */
+const NONNATOOrgsAndCountries_belarus: 112 = 112 satisfies NONNATOOrgsAndCountries; /* LONG_NAMED_INTEGER_VALUE */
 
 /**
  * @summary NONNATOOrgsAndCountries_belarus
@@ -187,7 +187,7 @@ const NONNATOOrgsAndCountries_belarus: NONNATOOrgsAndCountries = 112; /* LONG_NA
  * @type {number}
  */
 export
-const belarus: NONNATOOrgsAndCountries = NONNATOOrgsAndCountries_belarus; /* SHORT_NAMED_INTEGER_VALUE */
+const belarus: 112 = NONNATOOrgsAndCountries_belarus; /* SHORT_NAMED_INTEGER_VALUE */
 
 /**
  * @summary NONNATOOrgsAndCountries_bulgaria
@@ -200,7 +200,7 @@ const belarus: NONNATOOrgsAndCountries = NONNATOOrgsAndCountries_belarus; /* SHO
  * @type {number}
  */
 export
-const NONNATOOrgsAndCountries_bulgaria: NONNATOOrgsAndCountries = 100; /* LONG_NAMED_INTEGER_VALUE */
+const NONNATOOrgsAndCountries_bulgaria: 100 = 100 satisfies NONNATOOrgsAndCountries; /* LONG_NAMED_INTEGER_VALUE */
 
 /**
  * @summary NONNATOOrgsAndCountries_bulgaria
@@ -213,7 +213,7 @@ const NONNATOOrgsAndCountries_bulgaria: NONNATOOrgsAndCountries = 100; /* LONG_N
  * @type {number}
  */
 export
-const bulgaria: NONNATOOrgsAndCountries = NONNATOOrgsAndCountries_bulgaria; /* SHORT_NAMED_INTEGER_VALUE */
+const bulgaria: 100 = NONNATOOrgsAndCountries_bulgaria; /* SHORT_NAMED_INTEGER_VALUE */
 
 /**
  * @summary NONNATOOrgsAndCountries_estonia
@@ -226,7 +226,7 @@ const bulgaria: NONNATOOrgsAndCountries = NONNATOOrgsAndCountries_bulgaria; /* S
  * @type {number}
  */
 export
-const NONNATOOrgsAndCountries_estonia: NONNATOOrgsAndCountries = 233; /* LONG_NAMED_INTEGER_VALUE */
+const NONNATOOrgsAndCountries_estonia: 233 = 233 satisfies NONNATOOrgsAndCountries; /* LONG_NAMED_INTEGER_VALUE */
 
 /**
  * @summary NONNATOOrgsAndCountries_estonia
@@ -239,7 +239,7 @@ const NONNATOOrgsAndCountries_estonia: NONNATOOrgsAndCountries = 233; /* LONG_NA
  * @type {number}
  */
 export
-const estonia: NONNATOOrgsAndCountries = NONNATOOrgsAndCountries_estonia; /* SHORT_NAMED_INTEGER_VALUE */
+const estonia: 233 = NONNATOOrgsAndCountries_estonia; /* SHORT_NAMED_INTEGER_VALUE */
 
 /**
  * @summary NONNATOOrgsAndCountries_finland
@@ -252,7 +252,7 @@ const estonia: NONNATOOrgsAndCountries = NONNATOOrgsAndCountries_estonia; /* SHO
  * @type {number}
  */
 export
-const NONNATOOrgsAndCountries_finland: NONNATOOrgsAndCountries = 246; /* LONG_NAMED_INTEGER_VALUE */
+const NONNATOOrgsAndCountries_finland: 246 = 246 satisfies NONNATOOrgsAndCountries; /* LONG_NAMED_INTEGER_VALUE */
 
 /**
  * @summary NONNATOOrgsAndCountries_finland
@@ -265,7 +265,7 @@ const NONNATOOrgsAndCountries_finland: NONNATOOrgsAndCountries = 246; /* LONG_NA
  * @type {number}
  */
 export
-const finland: NONNATOOrgsAndCountries = NONNATOOrgsAndCountries_finland; /* SHORT_NAMED_INTEGER_VALUE */
+const finland: 246 = NONNATOOrgsAndCountries_finland; /* SHORT_NAMED_INTEGER_VALUE */
 
 /**
  * @summary NONNATOOrgsAndCountries_georgia
@@ -278,7 +278,7 @@ const finland: NONNATOOrgsAndCountries = NONNATOOrgsAndCountries_finland; /* SHO
  * @type {number}
  */
 export
-const NONNATOOrgsAndCountries_georgia: NONNATOOrgsAndCountries = 268; /* LONG_NAMED_INTEGER_VALUE */
+const NONNATOOrgsAndCountries_georgia: 268 = 268 satisfies NONNATOOrgsAndCountries; /* LONG_NAMED_INTEGER_VALUE */
 
 /**
  * @summary NONNATOOrgsAndCountries_georgia
@@ -291,7 +291,7 @@ const NONNATOOrgsAndCountries_georgia: NONNATOOrgsAndCountries = 268; /* LONG_NA
  * @type {number}
  */
 export
-const georgia: NONNATOOrgsAndCountries = NONNATOOrgsAndCountries_georgia; /* SHORT_NAMED_INTEGER_VALUE */
+const georgia: 268 = NONNATOOrgsAndCountries_georgia; /* SHORT_NAMED_INTEGER_VALUE */
 
 /**
  * @summary NONNATOOrgsAndCountries_kazakhstan
@@ -304,7 +304,7 @@ const georgia: NONNATOOrgsAndCountries = NONNATOOrgsAndCountries_georgia; /* SHO
  * @type {number}
  */
 export
-const NONNATOOrgsAndCountries_kazakhstan: NONNATOOrgsAndCountries = 398; /* LONG_NAMED_INTEGER_VALUE */
+const NONNATOOrgsAndCountries_kazakhstan: 398 = 398 satisfies NONNATOOrgsAndCountries; /* LONG_NAMED_INTEGER_VALUE */
 
 /**
  * @summary NONNATOOrgsAndCountries_kazakhstan
@@ -317,7 +317,7 @@ const NONNATOOrgsAndCountries_kazakhstan: NONNATOOrgsAndCountries = 398; /* LONG
  * @type {number}
  */
 export
-const kazakhstan: NONNATOOrgsAndCountries = NONNATOOrgsAndCountries_kazakhstan; /* SHORT_NAMED_INTEGER_VALUE */
+const kazakhstan: 398 = NONNATOOrgsAndCountries_kazakhstan; /* SHORT_NAMED_INTEGER_VALUE */
 
 /**
  * @summary NONNATOOrgsAndCountries_kyrghyz_Republic
@@ -330,7 +330,7 @@ const kazakhstan: NONNATOOrgsAndCountries = NONNATOOrgsAndCountries_kazakhstan; 
  * @type {number}
  */
 export
-const NONNATOOrgsAndCountries_kyrghyz_Republic: NONNATOOrgsAndCountries = 417; /* LONG_NAMED_INTEGER_VALUE */
+const NONNATOOrgsAndCountries_kyrghyz_Republic: 417 = 417 satisfies NONNATOOrgsAndCountries; /* LONG_NAMED_INTEGER_VALUE */
 
 /**
  * @summary NONNATOOrgsAndCountries_kyrghyz_Republic
@@ -343,7 +343,7 @@ const NONNATOOrgsAndCountries_kyrghyz_Republic: NONNATOOrgsAndCountries = 417; /
  * @type {number}
  */
 export
-const kyrghyz_Republic: NONNATOOrgsAndCountries = NONNATOOrgsAndCountries_kyrghyz_Republic; /* SHORT_NAMED_INTEGER_VALUE */
+const kyrghyz_Republic: 417 = NONNATOOrgsAndCountries_kyrghyz_Republic; /* SHORT_NAMED_INTEGER_VALUE */
 
 /**
  * @summary NONNATOOrgsAndCountries_latvia
@@ -356,7 +356,7 @@ const kyrghyz_Republic: NONNATOOrgsAndCountries = NONNATOOrgsAndCountries_kyrghy
  * @type {number}
  */
 export
-const NONNATOOrgsAndCountries_latvia: NONNATOOrgsAndCountries = 428; /* LONG_NAMED_INTEGER_VALUE */
+const NONNATOOrgsAndCountries_latvia: 428 = 428 satisfies NONNATOOrgsAndCountries; /* LONG_NAMED_INTEGER_VALUE */
 
 /**
  * @summary NONNATOOrgsAndCountries_latvia
@@ -369,7 +369,7 @@ const NONNATOOrgsAndCountries_latvia: NONNATOOrgsAndCountries = 428; /* LONG_NAM
  * @type {number}
  */
 export
-const latvia: NONNATOOrgsAndCountries = NONNATOOrgsAndCountries_latvia; /* SHORT_NAMED_INTEGER_VALUE */
+const latvia: 428 = NONNATOOrgsAndCountries_latvia; /* SHORT_NAMED_INTEGER_VALUE */
 
 /**
  * @summary NONNATOOrgsAndCountries_lithuania
@@ -382,7 +382,7 @@ const latvia: NONNATOOrgsAndCountries = NONNATOOrgsAndCountries_latvia; /* SHORT
  * @type {number}
  */
 export
-const NONNATOOrgsAndCountries_lithuania: NONNATOOrgsAndCountries = 440; /* LONG_NAMED_INTEGER_VALUE */
+const NONNATOOrgsAndCountries_lithuania: 440 = 440 satisfies NONNATOOrgsAndCountries; /* LONG_NAMED_INTEGER_VALUE */
 
 /**
  * @summary NONNATOOrgsAndCountries_lithuania
@@ -395,7 +395,7 @@ const NONNATOOrgsAndCountries_lithuania: NONNATOOrgsAndCountries = 440; /* LONG_
  * @type {number}
  */
 export
-const lithuania: NONNATOOrgsAndCountries = NONNATOOrgsAndCountries_lithuania; /* SHORT_NAMED_INTEGER_VALUE */
+const lithuania: 440 = NONNATOOrgsAndCountries_lithuania; /* SHORT_NAMED_INTEGER_VALUE */
 
 /**
  * @summary NONNATOOrgsAndCountries_malta
@@ -408,7 +408,7 @@ const lithuania: NONNATOOrgsAndCountries = NONNATOOrgsAndCountries_lithuania; /*
  * @type {number}
  */
 export
-const NONNATOOrgsAndCountries_malta: NONNATOOrgsAndCountries = 470; /* LONG_NAMED_INTEGER_VALUE */
+const NONNATOOrgsAndCountries_malta: 470 = 470 satisfies NONNATOOrgsAndCountries; /* LONG_NAMED_INTEGER_VALUE */
 
 /**
  * @summary NONNATOOrgsAndCountries_malta
@@ -421,7 +421,7 @@ const NONNATOOrgsAndCountries_malta: NONNATOOrgsAndCountries = 470; /* LONG_NAME
  * @type {number}
  */
 export
-const malta: NONNATOOrgsAndCountries = NONNATOOrgsAndCountries_malta; /* SHORT_NAMED_INTEGER_VALUE */
+const malta: 470 = NONNATOOrgsAndCountries_malta; /* SHORT_NAMED_INTEGER_VALUE */
 
 /**
  * @summary NONNATOOrgsAndCountries_moldova
@@ -434,7 +434,7 @@ const malta: NONNATOOrgsAndCountries = NONNATOOrgsAndCountries_malta; /* SHORT_N
  * @type {number}
  */
 export
-const NONNATOOrgsAndCountries_moldova: NONNATOOrgsAndCountries = 498; /* LONG_NAMED_INTEGER_VALUE */
+const NONNATOOrgsAndCountries_moldova: 498 = 498 satisfies NONNATOOrgsAndCountries; /* LONG_NAMED_INTEGER_VALUE */
 
 /**
  * @summary NONNATOOrgsAndCountries_moldova
@@ -447,7 +447,7 @@ const NONNATOOrgsAndCountries_moldova: NONNATOOrgsAndCountries = 498; /* LONG_NA
  * @type {number}
  */
 export
-const moldova: NONNATOOrgsAndCountries = NONNATOOrgsAndCountries_moldova; /* SHORT_NAMED_INTEGER_VALUE */
+const moldova: 498 = NONNATOOrgsAndCountries_moldova; /* SHORT_NAMED_INTEGER_VALUE */
 
 /**
  * @summary NONNATOOrgsAndCountries_romania
@@ -460,7 +460,7 @@ const moldova: NONNATOOrgsAndCountries = NONNATOOrgsAndCountries_moldova; /* SHO
  * @type {number}
  */
 export
-const NONNATOOrgsAndCountries_romania: NONNATOOrgsAndCountries = 642; /* LONG_NAMED_INTEGER_VALUE */
+const NONNATOOrgsAndCountries_romania: 642 = 642 satisfies NONNATOOrgsAndCountries; /* LONG_NAMED_INTEGER_VALUE */
 
 /**
  * @summary NONNATOOrgsAndCountries_romania
@@ -473,7 +473,7 @@ const NONNATOOrgsAndCountries_romania: NONNATOOrgsAndCountries = 642; /* LONG_NA
  * @type {number}
  */
 export
-const romania: NONNATOOrgsAndCountries = NONNATOOrgsAndCountries_romania; /* SHORT_NAMED_INTEGER_VALUE */
+const romania: 642 = NONNATOOrgsAndCountries_romania; /* SHORT_NAMED_INTEGER_VALUE */
 
 /**
  * @summary NONNATOOrgsAndCountries_russia
@@ -486,7 +486,7 @@ const romania: NONNATOOrgsAndCountries = NONNATOOrgsAndCountries_romania; /* SHO
  * @type {number}
  */
 export
-const NONNATOOrgsAndCountries_russia: NONNATOOrgsAndCountries = 643; /* LONG_NAMED_INTEGER_VALUE */
+const NONNATOOrgsAndCountries_russia: 643 = 643 satisfies NONNATOOrgsAndCountries; /* LONG_NAMED_INTEGER_VALUE */
 
 /**
  * @summary NONNATOOrgsAndCountries_russia
@@ -499,7 +499,7 @@ const NONNATOOrgsAndCountries_russia: NONNATOOrgsAndCountries = 643; /* LONG_NAM
  * @type {number}
  */
 export
-const russia: NONNATOOrgsAndCountries = NONNATOOrgsAndCountries_russia; /* SHORT_NAMED_INTEGER_VALUE */
+const russia: 643 = NONNATOOrgsAndCountries_russia; /* SHORT_NAMED_INTEGER_VALUE */
 
 /**
  * @summary NONNATOOrgsAndCountries_slovak_Republic
@@ -512,7 +512,7 @@ const russia: NONNATOOrgsAndCountries = NONNATOOrgsAndCountries_russia; /* SHORT
  * @type {number}
  */
 export
-const NONNATOOrgsAndCountries_slovak_Republic: NONNATOOrgsAndCountries = 703; /* LONG_NAMED_INTEGER_VALUE */
+const NONNATOOrgsAndCountries_slovak_Republic: 703 = 703 satisfies NONNATOOrgsAndCountries; /* LONG_NAMED_INTEGER_VALUE */
 
 /**
  * @summary NONNATOOrgsAndCountries_slovak_Republic
@@ -525,7 +525,7 @@ const NONNATOOrgsAndCountries_slovak_Republic: NONNATOOrgsAndCountries = 703; /*
  * @type {number}
  */
 export
-const slovak_Republic: NONNATOOrgsAndCountries = NONNATOOrgsAndCountries_slovak_Republic; /* SHORT_NAMED_INTEGER_VALUE */
+const slovak_Republic: 703 = NONNATOOrgsAndCountries_slovak_Republic; /* SHORT_NAMED_INTEGER_VALUE */
 
 /**
  * @summary NONNATOOrgsAndCountries_slovenia
@@ -538,7 +538,7 @@ const slovak_Republic: NONNATOOrgsAndCountries = NONNATOOrgsAndCountries_slovak_
  * @type {number}
  */
 export
-const NONNATOOrgsAndCountries_slovenia: NONNATOOrgsAndCountries = 705; /* LONG_NAMED_INTEGER_VALUE */
+const NONNATOOrgsAndCountries_slovenia: 705 = 705 satisfies NONNATOOrgsAndCountries; /* LONG_NAMED_INTEGER_VALUE */
 
 /**
  * @summary NONNATOOrgsAndCountries_slovenia
@@ -551,7 +551,7 @@ const NONNATOOrgsAndCountries_slovenia: NONNATOOrgsAndCountries = 705; /* LONG_N
  * @type {number}
  */
 export
-const slovenia: NONNATOOrgsAndCountries = NONNATOOrgsAndCountries_slovenia; /* SHORT_NAMED_INTEGER_VALUE */
+const slovenia: 705 = NONNATOOrgsAndCountries_slovenia; /* SHORT_NAMED_INTEGER_VALUE */
 
 /**
  * @summary NONNATOOrgsAndCountries_sweden
@@ -564,7 +564,7 @@ const slovenia: NONNATOOrgsAndCountries = NONNATOOrgsAndCountries_slovenia; /* S
  * @type {number}
  */
 export
-const NONNATOOrgsAndCountries_sweden: NONNATOOrgsAndCountries = 752; /* LONG_NAMED_INTEGER_VALUE */
+const NONNATOOrgsAndCountries_sweden: 752 = 752 satisfies NONNATOOrgsAndCountries; /* LONG_NAMED_INTEGER_VALUE */
 
 /**
  * @summary NONNATOOrgsAndCountries_sweden
@@ -577,7 +577,7 @@ const NONNATOOrgsAndCountries_sweden: NONNATOOrgsAndCountries = 752; /* LONG_NAM
  * @type {number}
  */
 export
-const sweden: NONNATOOrgsAndCountries = NONNATOOrgsAndCountries_sweden; /* SHORT_NAMED_INTEGER_VALUE */
+const sweden: 752 = NONNATOOrgsAndCountries_sweden; /* SHORT_NAMED_INTEGER_VALUE */
 
 /**
  * @summary NONNATOOrgsAndCountries_switzerland
@@ -590,7 +590,7 @@ const sweden: NONNATOOrgsAndCountries = NONNATOOrgsAndCountries_sweden; /* SHORT
  * @type {number}
  */
 export
-const NONNATOOrgsAndCountries_switzerland: NONNATOOrgsAndCountries = 756; /* LONG_NAMED_INTEGER_VALUE */
+const NONNATOOrgsAndCountries_switzerland: 756 = 756 satisfies NONNATOOrgsAndCountries; /* LONG_NAMED_INTEGER_VALUE */
 
 /**
  * @summary NONNATOOrgsAndCountries_switzerland
@@ -603,7 +603,7 @@ const NONNATOOrgsAndCountries_switzerland: NONNATOOrgsAndCountries = 756; /* LON
  * @type {number}
  */
 export
-const switzerland: NONNATOOrgsAndCountries = NONNATOOrgsAndCountries_switzerland; /* SHORT_NAMED_INTEGER_VALUE */
+const switzerland: 756 = NONNATOOrgsAndCountries_switzerland; /* SHORT_NAMED_INTEGER_VALUE */
 
 /**
  * @summary NONNATOOrgsAndCountries_tajikistan
@@ -616,7 +616,7 @@ const switzerland: NONNATOOrgsAndCountries = NONNATOOrgsAndCountries_switzerland
  * @type {number}
  */
 export
-const NONNATOOrgsAndCountries_tajikistan: NONNATOOrgsAndCountries = 762; /* LONG_NAMED_INTEGER_VALUE */
+const NONNATOOrgsAndCountries_tajikistan: 762 = 762 satisfies NONNATOOrgsAndCountries; /* LONG_NAMED_INTEGER_VALUE */
 
 /**
  * @summary NONNATOOrgsAndCountries_tajikistan
@@ -629,7 +629,7 @@ const NONNATOOrgsAndCountries_tajikistan: NONNATOOrgsAndCountries = 762; /* LONG
  * @type {number}
  */
 export
-const tajikistan: NONNATOOrgsAndCountries = NONNATOOrgsAndCountries_tajikistan; /* SHORT_NAMED_INTEGER_VALUE */
+const tajikistan: 762 = NONNATOOrgsAndCountries_tajikistan; /* SHORT_NAMED_INTEGER_VALUE */
 
 /**
  * @summary NONNATOOrgsAndCountries_macedonia_Former_Yugoslav_Republic
@@ -642,7 +642,7 @@ const tajikistan: NONNATOOrgsAndCountries = NONNATOOrgsAndCountries_tajikistan; 
  * @type {number}
  */
 export
-const NONNATOOrgsAndCountries_macedonia_Former_Yugoslav_Republic: NONNATOOrgsAndCountries = 807; /* LONG_NAMED_INTEGER_VALUE */
+const NONNATOOrgsAndCountries_macedonia_Former_Yugoslav_Republic: 807 = 807 satisfies NONNATOOrgsAndCountries; /* LONG_NAMED_INTEGER_VALUE */
 
 /**
  * @summary NONNATOOrgsAndCountries_macedonia_Former_Yugoslav_Republic
@@ -655,7 +655,7 @@ const NONNATOOrgsAndCountries_macedonia_Former_Yugoslav_Republic: NONNATOOrgsAnd
  * @type {number}
  */
 export
-const macedonia_Former_Yugoslav_Republic: NONNATOOrgsAndCountries = NONNATOOrgsAndCountries_macedonia_Former_Yugoslav_Republic; /* SHORT_NAMED_INTEGER_VALUE */
+const macedonia_Former_Yugoslav_Republic: 807 = NONNATOOrgsAndCountries_macedonia_Former_Yugoslav_Republic; /* SHORT_NAMED_INTEGER_VALUE */
 
 /**
  * @summary NONNATOOrgsAndCountries_turkmenistan
@@ -668,7 +668,7 @@ const macedonia_Former_Yugoslav_Republic: NONNATOOrgsAndCountries = NONNATOOrgsA
  * @type {number}
  */
 export
-const NONNATOOrgsAndCountries_turkmenistan: NONNATOOrgsAndCountries = 795; /* LONG_NAMED_INTEGER_VALUE */
+const NONNATOOrgsAndCountries_turkmenistan: 795 = 795 satisfies NONNATOOrgsAndCountries; /* LONG_NAMED_INTEGER_VALUE */
 
 /**
  * @summary NONNATOOrgsAndCountries_turkmenistan
@@ -681,7 +681,7 @@ const NONNATOOrgsAndCountries_turkmenistan: NONNATOOrgsAndCountries = 795; /* LO
  * @type {number}
  */
 export
-const turkmenistan: NONNATOOrgsAndCountries = NONNATOOrgsAndCountries_turkmenistan; /* SHORT_NAMED_INTEGER_VALUE */
+const turkmenistan: 795 = NONNATOOrgsAndCountries_turkmenistan; /* SHORT_NAMED_INTEGER_VALUE */
 
 /**
  * @summary NONNATOOrgsAndCountries_ukraine
@@ -694,7 +694,7 @@ const turkmenistan: NONNATOOrgsAndCountries = NONNATOOrgsAndCountries_turkmenist
  * @type {number}
  */
 export
-const NONNATOOrgsAndCountries_ukraine: NONNATOOrgsAndCountries = 804; /* LONG_NAMED_INTEGER_VALUE */
+const NONNATOOrgsAndCountries_ukraine: 804 = 804 satisfies NONNATOOrgsAndCountries; /* LONG_NAMED_INTEGER_VALUE */
 
 /**
  * @summary NONNATOOrgsAndCountries_ukraine
@@ -707,7 +707,7 @@ const NONNATOOrgsAndCountries_ukraine: NONNATOOrgsAndCountries = 804; /* LONG_NA
  * @type {number}
  */
 export
-const ukraine: NONNATOOrgsAndCountries = NONNATOOrgsAndCountries_ukraine; /* SHORT_NAMED_INTEGER_VALUE */
+const ukraine: 804 = NONNATOOrgsAndCountries_ukraine; /* SHORT_NAMED_INTEGER_VALUE */
 
 /**
  * @summary NONNATOOrgsAndCountries_uzbekistan
@@ -720,7 +720,7 @@ const ukraine: NONNATOOrgsAndCountries = NONNATOOrgsAndCountries_ukraine; /* SHO
  * @type {number}
  */
 export
-const NONNATOOrgsAndCountries_uzbekistan: NONNATOOrgsAndCountries = 860; /* LONG_NAMED_INTEGER_VALUE */
+const NONNATOOrgsAndCountries_uzbekistan: 860 = 860 satisfies NONNATOOrgsAndCountries; /* LONG_NAMED_INTEGER_VALUE */
 
 /**
  * @summary NONNATOOrgsAndCountries_uzbekistan
@@ -733,7 +733,7 @@ const NONNATOOrgsAndCountries_uzbekistan: NONNATOOrgsAndCountries = 860; /* LONG
  * @type {number}
  */
 export
-const uzbekistan: NONNATOOrgsAndCountries = NONNATOOrgsAndCountries_uzbekistan; /* SHORT_NAMED_INTEGER_VALUE */
+const uzbekistan: 860 = NONNATOOrgsAndCountries_uzbekistan; /* SHORT_NAMED_INTEGER_VALUE */
 
 /**
  * @summary NONNATOOrgsAndCountries_united_Nations
@@ -746,7 +746,7 @@ const uzbekistan: NONNATOOrgsAndCountries = NONNATOOrgsAndCountries_uzbekistan; 
  * @type {number}
  */
 export
-const NONNATOOrgsAndCountries_united_Nations: NONNATOOrgsAndCountries = 9999; /* LONG_NAMED_INTEGER_VALUE */
+const NONNATOOrgsAndCountries_united_Nations: 9999 = 9999 satisfies NONNATOOrgsAndCountries; /* LONG_NAMED_INTEGER_VALUE */
 
 /**
  * @summary NONNATOOrgsAndCountries_united_Nations
@@ -759,7 +759,7 @@ const NONNATOOrgsAndCountries_united_Nations: NONNATOOrgsAndCountries = 9999; /*
  * @type {number}
  */
 export
-const united_Nations: NONNATOOrgsAndCountries = NONNATOOrgsAndCountries_united_Nations; /* SHORT_NAMED_INTEGER_VALUE */
+const united_Nations: 9999 = NONNATOOrgsAndCountries_united_Nations; /* SHORT_NAMED_INTEGER_VALUE */
 
 /**
  * @summary NONNATOOrgsAndCountries_central_Europe_Initiativ
@@ -773,7 +773,7 @@ const united_Nations: NONNATOOrgsAndCountries = NONNATOOrgsAndCountries_united_N
  * @type {number}
  */
 export
-const NONNATOOrgsAndCountries_central_Europe_Initiativ: NONNATOOrgsAndCountries = 9998; /* LONG_NAMED_INTEGER_VALUE */
+const NONNATOOrgsAndCountries_central_Europe_Initiativ: 9998 = 9998 satisfies NONNATOOrgsAndCountries; /* LONG_NAMED_INTEGER_VALUE */
 
 /**
  * @summary NONNATOOrgsAndCountries_central_Europe_Initiativ
@@ -787,7 +787,7 @@ const NONNATOOrgsAndCountries_central_Europe_Initiativ: NONNATOOrgsAndCountries 
  * @type {number}
  */
 export
-const central_Europe_Initiativ: NONNATOOrgsAndCountries = NONNATOOrgsAndCountries_central_Europe_Initiativ; /* SHORT_NAMED_INTEGER_VALUE */
+const central_Europe_Initiativ: 9998 = NONNATOOrgsAndCountries_central_Europe_Initiativ; /* SHORT_NAMED_INTEGER_VALUE */
 
 /**
  * @summary NONNATOOrgsAndCountries_commonwealth_of_Independent_States
@@ -800,7 +800,7 @@ const central_Europe_Initiativ: NONNATOOrgsAndCountries = NONNATOOrgsAndCountrie
  * @type {number}
  */
 export
-const NONNATOOrgsAndCountries_commonwealth_of_Independent_States: NONNATOOrgsAndCountries = 9997; /* LONG_NAMED_INTEGER_VALUE */
+const NONNATOOrgsAndCountries_commonwealth_of_Independent_States: 9997 = 9997 satisfies NONNATOOrgsAndCountries; /* LONG_NAMED_INTEGER_VALUE */
 
 /**
  * @summary NONNATOOrgsAndCountries_commonwealth_of_Independent_States
@@ -813,7 +813,7 @@ const NONNATOOrgsAndCountries_commonwealth_of_Independent_States: NONNATOOrgsAnd
  * @type {number}
  */
 export
-const commonwealth_of_Independent_States: NONNATOOrgsAndCountries = NONNATOOrgsAndCountries_commonwealth_of_Independent_States; /* SHORT_NAMED_INTEGER_VALUE */
+const commonwealth_of_Independent_States: 9997 = NONNATOOrgsAndCountries_commonwealth_of_Independent_States; /* SHORT_NAMED_INTEGER_VALUE */
 
 /**
  * @summary NONNATOOrgsAndCountries_council_for_Security_and_Cooperation_in_Europe
@@ -826,7 +826,7 @@ const commonwealth_of_Independent_States: NONNATOOrgsAndCountries = NONNATOOrgsA
  * @type {number}
  */
 export
-const NONNATOOrgsAndCountries_council_for_Security_and_Cooperation_in_Europe: NONNATOOrgsAndCountries = 9996; /* LONG_NAMED_INTEGER_VALUE */
+const NONNATOOrgsAndCountries_council_for_Security_and_Cooperation_in_Europe: 9996 = 9996 satisfies NONNATOOrgsAndCountries; /* LONG_NAMED_INTEGER_VALUE */
 
 /**
  * @summary NONNATOOrgsAndCountries_council_for_Security_and_Cooperation_in_Europe
@@ -839,7 +839,7 @@ const NONNATOOrgsAndCountries_council_for_Security_and_Cooperation_in_Europe: NO
  * @type {number}
  */
 export
-const council_for_Security_and_Cooperation_in_Europe: NONNATOOrgsAndCountries = NONNATOOrgsAndCountries_council_for_Security_and_Cooperation_in_Europe; /* SHORT_NAMED_INTEGER_VALUE */
+const council_for_Security_and_Cooperation_in_Europe: 9996 = NONNATOOrgsAndCountries_council_for_Security_and_Cooperation_in_Europe; /* SHORT_NAMED_INTEGER_VALUE */
 
 /**
  * @summary NONNATOOrgsAndCountries_european_Union
@@ -852,7 +852,7 @@ const council_for_Security_and_Cooperation_in_Europe: NONNATOOrgsAndCountries = 
  * @type {number}
  */
 export
-const NONNATOOrgsAndCountries_european_Union: NONNATOOrgsAndCountries = 9995; /* LONG_NAMED_INTEGER_VALUE */
+const NONNATOOrgsAndCountries_european_Union: 9995 = 9995 satisfies NONNATOOrgsAndCountries; /* LONG_NAMED_INTEGER_VALUE */
 
 /**
  * @summary NONNATOOrgsAndCountries_european_Union
@@ -865,7 +865,7 @@ const NONNATOOrgsAndCountries_european_Union: NONNATOOrgsAndCountries = 9995; /*
  * @type {number}
  */
 export
-const european_Union: NONNATOOrgsAndCountries = NONNATOOrgsAndCountries_european_Union; /* SHORT_NAMED_INTEGER_VALUE */
+const european_Union: 9995 = NONNATOOrgsAndCountries_european_Union; /* SHORT_NAMED_INTEGER_VALUE */
 
 /**
  * @summary NONNATOOrgsAndCountries_western_European_Union
@@ -878,7 +878,7 @@ const european_Union: NONNATOOrgsAndCountries = NONNATOOrgsAndCountries_european
  * @type {number}
  */
 export
-const NONNATOOrgsAndCountries_western_European_Union: NONNATOOrgsAndCountries = 9994; /* LONG_NAMED_INTEGER_VALUE */
+const NONNATOOrgsAndCountries_western_European_Union: 9994 = 9994 satisfies NONNATOOrgsAndCountries; /* LONG_NAMED_INTEGER_VALUE */
 
 /**
  * @summary NONNATOOrgsAndCountries_western_European_Union
@@ -891,7 +891,7 @@ const NONNATOOrgsAndCountries_western_European_Union: NONNATOOrgsAndCountries = 
  * @type {number}
  */
 export
-const western_European_Union: NONNATOOrgsAndCountries = NONNATOOrgsAndCountries_western_European_Union; /* SHORT_NAMED_INTEGER_VALUE */
+const western_European_Union: 9994 = NONNATOOrgsAndCountries_western_European_Union; /* SHORT_NAMED_INTEGER_VALUE */
 export const _decode_NONNATOOrgsAndCountries: $.ASN1Decoder<NONNATOOrgsAndCountries> = $._decodeInteger;
 export const _encode_NONNATOOrgsAndCountries: $.ASN1Encoder<NONNATOOrgsAndCountries> = $._encodeInteger;
 

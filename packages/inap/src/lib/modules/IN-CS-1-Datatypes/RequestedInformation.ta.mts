@@ -1,13 +1,13 @@
 /* eslint-disable */
 import {
     ASN1ConstructionError as _ConstructionError,
-    ASN1Element as _Element,
+    type ASN1Element as _Element,
     ASN1TagClass as _TagClass
 } from "@wildboar/asn1";
 import * as $ from "@wildboar/asn1/functional";
 import { RequestedInformationType, _decode_RequestedInformationType, _encode_RequestedInformationType, _enum_for_RequestedInformationType } from "../IN-CS-1-Datatypes/RequestedInformationType.ta.mjs";
 // export { RequestedInformationType, _enum_for_RequestedInformationType, RequestedInformationType_callAttemptElapsedTime /* IMPORTED_LONG_ENUMERATION_ITEM */, callAttemptElapsedTime /* IMPORTED_SHORT_ENUMERATION_ITEM */, RequestedInformationType_callStopTime /* IMPORTED_LONG_ENUMERATION_ITEM */, callStopTime /* IMPORTED_SHORT_ENUMERATION_ITEM */, RequestedInformationType_callConnectedElapsedTime /* IMPORTED_LONG_ENUMERATION_ITEM */, callConnectedElapsedTime /* IMPORTED_SHORT_ENUMERATION_ITEM */, RequestedInformationType_calledAddress /* IMPORTED_LONG_ENUMERATION_ITEM */, calledAddress /* IMPORTED_SHORT_ENUMERATION_ITEM */, RequestedInformationType_releaseCause /* IMPORTED_LONG_ENUMERATION_ITEM */, releaseCause /* IMPORTED_SHORT_ENUMERATION_ITEM */, _decode_RequestedInformationType, _encode_RequestedInformationType } from "../IN-CS-1-Datatypes/RequestedInformationType.ta.mjs";
-import { RequestedInformationValue, _decode_RequestedInformationValue, _encode_RequestedInformationValue } from "../IN-CS-1-Datatypes/RequestedInformationValue.ta.mjs";
+import { type RequestedInformationValue, _decode_RequestedInformationValue, _encode_RequestedInformationValue } from "../IN-CS-1-Datatypes/RequestedInformationValue.ta.mjs";
 // export { RequestedInformationValue, _decode_RequestedInformationValue, _encode_RequestedInformationValue } from "../IN-CS-1-Datatypes/RequestedInformationValue.ta.mjs";
 
 
@@ -71,7 +71,7 @@ class RequestedInformation {
          * @static
          */
 
-    public static _enum_for_requestedInformationType = _enum_for_RequestedInformationType;
+    public static _enum_for_requestedInformationType: typeof _enum_for_RequestedInformationType = _enum_for_RequestedInformationType;
 }
 
 /**

@@ -1,8 +1,8 @@
 /* eslint-disable */
 import {
-    OCTET_STRING,
+    type OCTET_STRING,
     ASN1ConstructionError as _ConstructionError,
-    ASN1Element as _Element,
+    type ASN1Element as _Element,
     ASN1TagClass as _TagClass
 } from "@wildboar/asn1";
 import * as $ from "@wildboar/asn1/functional";
@@ -32,31 +32,37 @@ import { EuiccPackageErrorDataSigned, _decode_EuiccPackageErrorDataSigned, _enco
  */
 export
 class EuiccPackageErrorSigned {
+    /**
+     * @summary `euiccPackageErrorDataSigned`.
+     * @description
+     * Bytes covered by euiccSignEPE, together with the association token (SGP.32
+     * v1.2, section 2.11.2.1). Echoes eimId, counterValue, and any
+     * eimTransactionId from the request.
+     * @public
+     * @readonly
+     */
+    public readonly euiccPackageErrorDataSigned: EuiccPackageErrorDataSigned;
+    /**
+     * @summary `euiccSignEPE`.
+     * @description
+     * eUICC signature, tag '5F37', created with SK.EUICC.ECDSA over
+     * euiccPackageErrorDataSigned concatenated with the association token (SGP.32
+     * v1.2, section 2.11.2.1). When no token is configured, the value zero is
+     * used. If several signing keys exist, the key that chains to euiccCiPKId in
+     * that eIM's configuration is used. The eIM verifies the signature with
+     * PK.EUICC.ECDSA from CERT.EUICC.ECDSA and verifies that certificate.
+     * @public
+     * @readonly
+     */
+    public readonly euiccSignEPE: OCTET_STRING;
+
     constructor (
-        /**
-         * @summary `euiccPackageErrorDataSigned`.
-         * @description
-         * Bytes covered by euiccSignEPE, together with the association token (SGP.32
-         * v1.2, section 2.11.2.1). Echoes eimId, counterValue, and any
-         * eimTransactionId from the request.
-         * @public
-         * @readonly
-         */
-        readonly euiccPackageErrorDataSigned: EuiccPackageErrorDataSigned,
-        /**
-         * @summary `euiccSignEPE`.
-         * @description
-         * eUICC signature, tag '5F37', created with SK.EUICC.ECDSA over
-         * euiccPackageErrorDataSigned concatenated with the association token (SGP.32
-         * v1.2, section 2.11.2.1). When no token is configured, the value zero is
-         * used. If several signing keys exist, the key that chains to euiccCiPKId in
-         * that eIM's configuration is used. The eIM verifies the signature with
-         * PK.EUICC.ECDSA from CERT.EUICC.ECDSA and verifies that certificate.
-         * @public
-         * @readonly
-         */
-        readonly euiccSignEPE: OCTET_STRING
-    ) {}
+        euiccPackageErrorDataSigned: EuiccPackageErrorDataSigned,
+        euiccSignEPE: OCTET_STRING
+    ) {
+        this.euiccPackageErrorDataSigned = euiccPackageErrorDataSigned;
+        this.euiccSignEPE = euiccSignEPE;
+    }
 
     /**
      * @summary Restructures an object into a EuiccPackageErrorSigned

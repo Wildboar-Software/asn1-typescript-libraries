@@ -1,7 +1,7 @@
 /* eslint-disable */
 import {
-    IA5String,
-    ASN1Element as _Element,
+    type IA5String,
+    type ASN1Element as _Element,
     ASN1SizeError
 } from "@wildboar/asn1";
 import * as $ from "@wildboar/asn1/functional";

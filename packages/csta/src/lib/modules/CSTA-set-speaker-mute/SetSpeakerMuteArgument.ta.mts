@@ -2,16 +2,16 @@
 
 import * as $ from "@wildboar/asn1/functional";
 import {
-    OPTIONAL,
-    BOOLEAN,
-    SEQUENCE,
-    SET,
-    ASN1Element as _Element,
+    type OPTIONAL,
+    type BOOLEAN,
+    type SEQUENCE,
+    type SET,
+    type ASN1Element as _Element,
     ASN1TagClass as _TagClass
 } from "@wildboar/asn1";
 import { DeviceID, _decode_DeviceID, _encode_DeviceID } from "../CSTA-device-identifiers/DeviceID.ta.mjs";
 
-import { AuditoryApparatusID, _decode_AuditoryApparatusID, _encode_AuditoryApparatusID } from "../CSTA-physical-device-feature/AuditoryApparatusID.ta.mjs";
+import { type AuditoryApparatusID, _decode_AuditoryApparatusID, _encode_AuditoryApparatusID } from "../CSTA-physical-device-feature/AuditoryApparatusID.ta.mjs";
 
 import { CSTACommonArguments, _decode_CSTACommonArguments, _encode_CSTACommonArguments } from "../CSTA-extension-types/CSTACommonArguments.ta.mjs";
 
@@ -40,46 +40,56 @@ import { CSTACommonArguments, _decode_CSTACommonArguments, _encode_CSTACommonArg
  */
 export
 class SetSpeakerMuteArgument {
+    /**
+     * @summary `device`.
+     * @description
+     *
+     * Physical-element DeviceID; other IDs are rejected (ECMA-269 §21 FR
+     * 1).
+     * @public
+     * @readonly
+     */
+    public readonly device: DeviceID;
+    /**
+     * @summary `auditoryApparatus`.
+     * @description
+     *
+     * Auditory apparatus at the device on which to set the feature.
+     * @public
+     * @readonly
+     */
+    public readonly auditoryApparatus: AuditoryApparatusID;
+    /**
+     * @summary `speakerMuteOn`.
+     * @description
+     *
+     * FALSE = speaker activated; TRUE = muted.
+     * @public
+     * @readonly
+     */
+    public readonly speakerMuteOn: BOOLEAN;
+    /**
+     * @summary `extensions`.
+     * @description
+     *
+     * Optional security (timestamp, sequence, securityInfo) and
+     * privateData.
+     * @public
+     * @readonly
+     */
+    public readonly extensions?: OPTIONAL<CSTACommonArguments>;
+
     constructor (
-        /**
-         * @summary `device`.
-         * @description
-         *
-         * Physical-element DeviceID; other IDs are rejected (ECMA-269 §21 FR
-         * 1).
-         * @public
-         * @readonly
-         */
-        readonly device: DeviceID,
-        /**
-         * @summary `auditoryApparatus`.
-         * @description
-         *
-         * Auditory apparatus at the device on which to set the feature.
-         * @public
-         * @readonly
-         */
-        readonly auditoryApparatus: AuditoryApparatusID,
-        /**
-         * @summary `speakerMuteOn`.
-         * @description
-         *
-         * FALSE = speaker activated; TRUE = muted.
-         * @public
-         * @readonly
-         */
-        readonly speakerMuteOn: BOOLEAN,
-        /**
-         * @summary `extensions`.
-         * @description
-         *
-         * Optional security (timestamp, sequence, securityInfo) and
-         * privateData.
-         * @public
-         * @readonly
-         */
-        readonly extensions?: OPTIONAL<CSTACommonArguments>
-    ) {}
+        device: DeviceID,
+        auditoryApparatus: AuditoryApparatusID,
+        speakerMuteOn: BOOLEAN,
+        extensions?: OPTIONAL<CSTACommonArguments>
+    ) {
+        this.device = device;
+        this.auditoryApparatus = auditoryApparatus;
+        this.speakerMuteOn = speakerMuteOn;
+        this.extensions = extensions;
+    }
 
     /**
      * @summary Restructures an object into a SetSpeakerMuteArgument

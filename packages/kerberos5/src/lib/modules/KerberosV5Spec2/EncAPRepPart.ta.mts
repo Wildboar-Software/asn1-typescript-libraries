@@ -1,6 +1,6 @@
 /* eslint-disable */
 import {
-  OPTIONAL,
+  type OPTIONAL,
   ASN1Element as _Element,
   ASN1TagClass as _TagClass,
   ASN1Construction as _Construction,
@@ -12,12 +12,12 @@ import {
 } from '@wildboar/asn1';
 import * as $ from '@wildboar/asn1/functional';
 import {
-  KerberosTime,
+  type KerberosTime,
   _decode_KerberosTime,
   _encode_KerberosTime,
 } from '../KerberosV5Spec2/KerberosTime.ta.mjs';
 import {
-  Microseconds,
+  type Microseconds,
   _decode_Microseconds,
   _encode_Microseconds,
 } from '../KerberosV5Spec2/Microseconds.ta.mjs';
@@ -27,7 +27,7 @@ import {
   _encode_EncryptionKey,
 } from '../KerberosV5Spec2/EncryptionKey.ta.mjs';
 import {
-  UInt32,
+  type UInt32,
   _decode_UInt32,
   _encode_UInt32,
 } from '../KerberosV5Spec2/UInt32.ta.mjs';
@@ -61,7 +61,7 @@ export class EncAPRepPart {
    * @public
    * @readonly
    */
-  readonly ctime: KerberosTime;
+  public readonly ctime: KerberosTime;
   /**
    * @summary `cusec`.
    * @description
@@ -71,7 +71,7 @@ export class EncAPRepPart {
    * @public
    * @readonly
    */
-  readonly cusec: Microseconds;
+  public readonly cusec: Microseconds;
   /**
    * @summary `subkey`.
    * @description
@@ -83,7 +83,7 @@ export class EncAPRepPart {
    * @public
    * @readonly
    */
-  readonly subkey?: OPTIONAL<EncryptionKey>;
+  public readonly subkey?: OPTIONAL<EncryptionKey>;
   /**
    * @summary `seq_number`.
    * @description
@@ -94,7 +94,7 @@ export class EncAPRepPart {
    * @public
    * @readonly
    */
-  readonly seq_number?: OPTIONAL<UInt32>;
+  public readonly seq_number?: OPTIONAL<UInt32>;
 
   constructor(
     ctime: KerberosTime,

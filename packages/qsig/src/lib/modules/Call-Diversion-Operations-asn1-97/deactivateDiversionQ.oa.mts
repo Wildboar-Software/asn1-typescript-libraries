@@ -1,7 +1,7 @@
 /* eslint-disable */
 import { type OPERATION } from "../Remote-Operations-Information-Objects/OPERATION.oca.mjs";
 import { _decode_deactivateDiversionQ_ArgumentType, _encode_deactivateDiversionQ_ArgumentType, deactivateDiversionQ_ArgumentType } from "../Call-Diversion-Operations-asn1-97/deactivateDiversionQ-ArgumentType.ta.mjs";
-import { _decode_deactivateDiversionQ_ResultType, _encode_deactivateDiversionQ_ResultType, deactivateDiversionQ_ResultType } from "../Call-Diversion-Operations-asn1-97/deactivateDiversionQ-ResultType.ta.mjs";
+import { _decode_deactivateDiversionQ_ResultType, _encode_deactivateDiversionQ_ResultType, type deactivateDiversionQ_ResultType } from "../Call-Diversion-Operations-asn1-97/deactivateDiversionQ-ResultType.ta.mjs";
 import { userNotSubscribed } from "../General-Error-List/userNotSubscribed.oa.mjs";
 import { notAvailable } from "../General-Error-List/notAvailable.oa.mjs";
 import { invalidServedUserNr } from "../General-Error-List/invalidServedUserNr.oa.mjs";

@@ -1,6 +1,6 @@
 /* eslint-disable */
 import {
-    ENUMERATED
+    type ENUMERATED
 } from "@wildboar/asn1";
 import * as $ from "@wildboar/asn1/functional";
 
@@ -227,7 +227,7 @@ type E_mail_Event = _enum_for_E_mail_Event | ENUMERATED;
  * @type {number}
  */
 export
-const E_mail_Event_e_mail_send: E_mail_Event = 1; /* LONG_NAMED_ENUMERATED_VALUE */
+const E_mail_Event_e_mail_send: _enum_for_E_mail_Event.e_mail_send = _enum_for_E_mail_Event.e_mail_send; /* LONG_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary e_mail_send
@@ -253,7 +253,7 @@ const E_mail_Event_e_mail_send: E_mail_Event = 1; /* LONG_NAMED_ENUMERATED_VALUE
  * @type {number}
  */
 export
-const e_mail_send: E_mail_Event = E_mail_Event_e_mail_send; /* SHORT_NAMED_ENUMERATED_VALUE */
+const e_mail_send: _enum_for_E_mail_Event.e_mail_send = E_mail_Event_e_mail_send; /* SHORT_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary E_mail_Event_e_mail_receive
@@ -277,7 +277,7 @@ const e_mail_send: E_mail_Event = E_mail_Event_e_mail_send; /* SHORT_NAMED_ENUME
  * @type {number}
  */
 export
-const E_mail_Event_e_mail_receive: E_mail_Event = 2; /* LONG_NAMED_ENUMERATED_VALUE */
+const E_mail_Event_e_mail_receive: _enum_for_E_mail_Event.e_mail_receive = _enum_for_E_mail_Event.e_mail_receive; /* LONG_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary e_mail_receive
@@ -301,7 +301,7 @@ const E_mail_Event_e_mail_receive: E_mail_Event = 2; /* LONG_NAMED_ENUMERATED_VA
  * @type {number}
  */
 export
-const e_mail_receive: E_mail_Event = E_mail_Event_e_mail_receive; /* SHORT_NAMED_ENUMERATED_VALUE */
+const e_mail_receive: _enum_for_E_mail_Event.e_mail_receive = E_mail_Event_e_mail_receive; /* SHORT_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary E_mail_Event_e_mail_download
@@ -329,7 +329,7 @@ const e_mail_receive: E_mail_Event = E_mail_Event_e_mail_receive; /* SHORT_NAMED
  * @type {number}
  */
 export
-const E_mail_Event_e_mail_download: E_mail_Event = 3; /* LONG_NAMED_ENUMERATED_VALUE */
+const E_mail_Event_e_mail_download: _enum_for_E_mail_Event.e_mail_download = _enum_for_E_mail_Event.e_mail_download; /* LONG_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary e_mail_download
@@ -357,7 +357,7 @@ const E_mail_Event_e_mail_download: E_mail_Event = 3; /* LONG_NAMED_ENUMERATED_V
  * @type {number}
  */
 export
-const e_mail_download: E_mail_Event = E_mail_Event_e_mail_download; /* SHORT_NAMED_ENUMERATED_VALUE */
+const e_mail_download: _enum_for_E_mail_Event.e_mail_download = E_mail_Event_e_mail_download; /* SHORT_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary E_mail_Event_e_mail_logon_attempt
@@ -377,7 +377,7 @@ const e_mail_download: E_mail_Event = E_mail_Event_e_mail_download; /* SHORT_NAM
  * @type {number}
  */
 export
-const E_mail_Event_e_mail_logon_attempt: E_mail_Event = 4; /* LONG_NAMED_ENUMERATED_VALUE */
+const E_mail_Event_e_mail_logon_attempt: _enum_for_E_mail_Event.e_mail_logon_attempt = _enum_for_E_mail_Event.e_mail_logon_attempt; /* LONG_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary e_mail_logon_attempt
@@ -397,7 +397,7 @@ const E_mail_Event_e_mail_logon_attempt: E_mail_Event = 4; /* LONG_NAMED_ENUMERA
  * @type {number}
  */
 export
-const e_mail_logon_attempt: E_mail_Event = E_mail_Event_e_mail_logon_attempt; /* SHORT_NAMED_ENUMERATED_VALUE */
+const e_mail_logon_attempt: _enum_for_E_mail_Event.e_mail_logon_attempt = E_mail_Event_e_mail_logon_attempt; /* SHORT_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary E_mail_Event_e_mail_logon
@@ -424,7 +424,7 @@ const e_mail_logon_attempt: E_mail_Event = E_mail_Event_e_mail_logon_attempt; /*
  * @type {number}
  */
 export
-const E_mail_Event_e_mail_logon: E_mail_Event = 5; /* LONG_NAMED_ENUMERATED_VALUE */
+const E_mail_Event_e_mail_logon: _enum_for_E_mail_Event.e_mail_logon = _enum_for_E_mail_Event.e_mail_logon; /* LONG_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary e_mail_logon
@@ -451,7 +451,7 @@ const E_mail_Event_e_mail_logon: E_mail_Event = 5; /* LONG_NAMED_ENUMERATED_VALU
  * @type {number}
  */
 export
-const e_mail_logon: E_mail_Event = E_mail_Event_e_mail_logon; /* SHORT_NAMED_ENUMERATED_VALUE */
+const e_mail_logon: _enum_for_E_mail_Event.e_mail_logon = E_mail_Event_e_mail_logon; /* SHORT_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary E_mail_Event_e_mail_logon_failure
@@ -474,7 +474,7 @@ const e_mail_logon: E_mail_Event = E_mail_Event_e_mail_logon; /* SHORT_NAMED_ENU
  * @type {number}
  */
 export
-const E_mail_Event_e_mail_logon_failure: E_mail_Event = 6; /* LONG_NAMED_ENUMERATED_VALUE */
+const E_mail_Event_e_mail_logon_failure: _enum_for_E_mail_Event.e_mail_logon_failure = _enum_for_E_mail_Event.e_mail_logon_failure; /* LONG_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary e_mail_logon_failure
@@ -497,7 +497,7 @@ const E_mail_Event_e_mail_logon_failure: E_mail_Event = 6; /* LONG_NAMED_ENUMERA
  * @type {number}
  */
 export
-const e_mail_logon_failure: E_mail_Event = E_mail_Event_e_mail_logon_failure; /* SHORT_NAMED_ENUMERATED_VALUE */
+const e_mail_logon_failure: _enum_for_E_mail_Event.e_mail_logon_failure = E_mail_Event_e_mail_logon_failure; /* SHORT_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary E_mail_Event_e_mail_logoff
@@ -519,7 +519,7 @@ const e_mail_logon_failure: E_mail_Event = E_mail_Event_e_mail_logon_failure; /*
  * @type {number}
  */
 export
-const E_mail_Event_e_mail_logoff: E_mail_Event = 7; /* LONG_NAMED_ENUMERATED_VALUE */
+const E_mail_Event_e_mail_logoff: _enum_for_E_mail_Event.e_mail_logoff = _enum_for_E_mail_Event.e_mail_logoff; /* LONG_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary e_mail_logoff
@@ -541,7 +541,7 @@ const E_mail_Event_e_mail_logoff: E_mail_Event = 7; /* LONG_NAMED_ENUMERATED_VAL
  * @type {number}
  */
 export
-const e_mail_logoff: E_mail_Event = E_mail_Event_e_mail_logoff; /* SHORT_NAMED_ENUMERATED_VALUE */
+const e_mail_logoff: _enum_for_E_mail_Event.e_mail_logoff = E_mail_Event_e_mail_logoff; /* SHORT_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary E_mail_Event_e_mail_partial_download
@@ -564,7 +564,7 @@ const e_mail_logoff: E_mail_Event = E_mail_Event_e_mail_logoff; /* SHORT_NAMED_E
  * @type {number}
  */
 export
-const E_mail_Event_e_mail_partial_download: E_mail_Event = 8; /* LONG_NAMED_ENUMERATED_VALUE */
+const E_mail_Event_e_mail_partial_download: _enum_for_E_mail_Event.e_mail_partial_download = _enum_for_E_mail_Event.e_mail_partial_download; /* LONG_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary e_mail_partial_download
@@ -587,7 +587,7 @@ const E_mail_Event_e_mail_partial_download: E_mail_Event = 8; /* LONG_NAMED_ENUM
  * @type {number}
  */
 export
-const e_mail_partial_download: E_mail_Event = E_mail_Event_e_mail_partial_download; /* SHORT_NAMED_ENUMERATED_VALUE */
+const e_mail_partial_download: _enum_for_E_mail_Event.e_mail_partial_download = E_mail_Event_e_mail_partial_download; /* SHORT_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary E_mail_Event_e_mail_upload
@@ -603,7 +603,7 @@ const e_mail_partial_download: E_mail_Event = E_mail_Event_e_mail_partial_downlo
  * @type {number}
  */
 export
-const E_mail_Event_e_mail_upload: E_mail_Event = 9; /* LONG_NAMED_ENUMERATED_VALUE */
+const E_mail_Event_e_mail_upload: _enum_for_E_mail_Event.e_mail_upload = _enum_for_E_mail_Event.e_mail_upload; /* LONG_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary e_mail_upload
@@ -619,7 +619,7 @@ const E_mail_Event_e_mail_upload: E_mail_Event = 9; /* LONG_NAMED_ENUMERATED_VAL
  * @type {number}
  */
 export
-const e_mail_upload: E_mail_Event = E_mail_Event_e_mail_upload; /* SHORT_NAMED_ENUMERATED_VALUE */
+const e_mail_upload: _enum_for_E_mail_Event.e_mail_upload = E_mail_Event_e_mail_upload; /* SHORT_NAMED_ENUMERATED_VALUE */
 export const _decode_E_mail_Event: $.ASN1Decoder<E_mail_Event> = $._decodeEnumerated;
 export const _encode_E_mail_Event: $.ASN1Encoder<E_mail_Event> = $._encodeEnumerated;
 

@@ -1,6 +1,6 @@
 /* eslint-disable */
 import {
-  INTEGER,
+  type INTEGER,
   ASN1Element as _Element,
   ASN1TagClass as _TagClass,
   ASN1Construction as _Construction,
@@ -46,7 +46,7 @@ export class BioAPI_TIME {
    * @public
    * @readonly
    */
-  readonly hour: INTEGER;
+  public readonly hour: INTEGER;
   /**
    * @summary `minute`.
    * @description
@@ -57,7 +57,7 @@ export class BioAPI_TIME {
    * @public
    * @readonly
    */
-  readonly minute: INTEGER;
+  public readonly minute: INTEGER;
   /**
    * @summary `second`.
    * @description
@@ -68,7 +68,7 @@ export class BioAPI_TIME {
    * @public
    * @readonly
    */
-  readonly second: INTEGER;
+  public readonly second: INTEGER;
 
   constructor(
     hour: INTEGER,

@@ -1,20 +1,20 @@
 /* eslint-disable */
 import {
-    BOOLEAN,
-    NULL,
-    OPTIONAL,
-    ASN1Element as _Element,
+    type BOOLEAN,
+    type NULL,
+    type OPTIONAL,
+    type ASN1Element as _Element,
     ASN1TagClass as _TagClass
 } from "@wildboar/asn1";
 import * as $ from "@wildboar/asn1/functional";
-import { AddressString, _decode_AddressString, _encode_AddressString } from "../MAP-CommonDataTypes/AddressString.ta.mjs";
-import { IMSI, _decode_IMSI, _encode_IMSI } from "../MAP-CommonDataTypes/IMSI.ta.mjs";
-import { ISDN_AddressString, _decode_ISDN_AddressString, _encode_ISDN_AddressString } from "../MAP-CommonDataTypes/ISDN-AddressString.ta.mjs";
+import { type AddressString, _decode_AddressString, _encode_AddressString } from "../MAP-CommonDataTypes/AddressString.ta.mjs";
+import { type IMSI, _decode_IMSI, _encode_IMSI } from "../MAP-CommonDataTypes/IMSI.ta.mjs";
+import { type ISDN_AddressString, _decode_ISDN_AddressString, _encode_ISDN_AddressString } from "../MAP-CommonDataTypes/ISDN-AddressString.ta.mjs";
 import { ExtensionContainer, _decode_ExtensionContainer, _encode_ExtensionContainer } from "../MAP-ExtensionDataTypes/ExtensionContainer.ta.mjs";
 import { CorrelationID, _decode_CorrelationID, _encode_CorrelationID } from "../MAP-SM-DataTypes/CorrelationID.ta.mjs";
-import { SM_DeliveryNotIntended, _decode_SM_DeliveryNotIntended, _encode_SM_DeliveryNotIntended, _enum_for_SM_DeliveryNotIntended } from "../MAP-SM-DataTypes/SM-DeliveryNotIntended.ta.mjs";
-import { SM_RP_MTI, _decode_SM_RP_MTI, _encode_SM_RP_MTI } from "../MAP-SM-DataTypes/SM-RP-MTI.ta.mjs";
-import { SM_RP_SMEA, _decode_SM_RP_SMEA, _encode_SM_RP_SMEA } from "../MAP-SM-DataTypes/SM-RP-SMEA.ta.mjs";
+import { type SM_DeliveryNotIntended, _decode_SM_DeliveryNotIntended, _encode_SM_DeliveryNotIntended, _enum_for_SM_DeliveryNotIntended } from "../MAP-SM-DataTypes/SM-DeliveryNotIntended.ta.mjs";
+import { type SM_RP_MTI, _decode_SM_RP_MTI, _encode_SM_RP_MTI } from "../MAP-SM-DataTypes/SM-RP-MTI.ta.mjs";
+import { type SM_RP_SMEA, _decode_SM_RP_SMEA, _encode_SM_RP_SMEA } from "../MAP-SM-DataTypes/SM-RP-SMEA.ta.mjs";
 
 
 /**
@@ -32,19 +32,19 @@ import { SM_RP_SMEA, _decode_SM_RP_SMEA, _encode_SM_RP_SMEA } from "../MAP-SM-Da
  *     msisdn    [0] ISDN-AddressString,
  *     sm-RP-PRI    [1] BOOLEAN,
  *     serviceCentreAddress    [2] AddressString,
- *     extensionContainer    [6] ExtensionContainer    OPTIONAL,
+ *     extensionContainer    [6] ExtensionContainer    type OPTIONAL,
  *     ... ,
- *     gprsSupportIndicator    [7]    NULL    OPTIONAL,
+ *     gprsSupportIndicator    [7]    NULL    type OPTIONAL,
  *     -- gprsSupportIndicator is set only if the SMS-GMSC supports
  *     -- receiving of two numbers from the HLR
- *     sm-RP-MTI    [8] SM-RP-MTI    OPTIONAL,
- *     sm-RP-SMEA    [9] SM-RP-SMEA    OPTIONAL,
- *     sm-deliveryNotIntended    [10] SM-DeliveryNotIntended    OPTIONAL,
- *     ip-sm-gwGuidanceIndicator    [11] NULL    OPTIONAL,
- *     imsi    [12] IMSI    OPTIONAL,
- *     t4-Trigger-Indicator    [14] NULL    OPTIONAL,
- *     singleAttemptDelivery    [13]    NULL    OPTIONAL,
- *     correlationID    [15] CorrelationID    OPTIONAL,
+ *     sm-RP-MTI    [8] SM-RP-MTI    type OPTIONAL,
+ *     sm-RP-SMEA    [9] SM-RP-SMEA    type OPTIONAL,
+ *     sm-deliveryNotIntended    [10] SM-DeliveryNotIntended    type OPTIONAL,
+ *     ip-sm-gwGuidanceIndicator    [11] NULL    type OPTIONAL,
+ *     imsi    [12] IMSI    type OPTIONAL,
+ *     t4-Trigger-Indicator    [14] NULL    type OPTIONAL,
+ *     singleAttemptDelivery    [13]    NULL    type OPTIONAL,
+ *     correlationID    [15] CorrelationID    type OPTIONAL,
  *     smsf-supportIndicator    [16] NULL    OPTIONAL }
  * ```
  * 
@@ -52,158 +52,190 @@ import { SM_RP_SMEA, _decode_SM_RP_SMEA, _encode_SM_RP_SMEA } from "../MAP-SM-Da
  */
 export
 class RoutingInfoForSM_Arg {
+    /**
+     * @summary `msisdn`.
+     * @description
+     *
+     * Called subscriber MSISDN (clause 12.1).
+     *
+     * @public
+     * @readonly
+     */
+    public readonly msisdn: ISDN_AddressString;
+    /**
+     * @summary `sm_RP_PRI`.
+     * @description
+     *
+     * SM-RP priority.
+     *
+     * @public
+     * @readonly
+     */
+    public readonly sm_RP_PRI: BOOLEAN;
+    /**
+     * @summary `serviceCentreAddress`.
+     * @description
+     *
+     * Service Centre address.
+     *
+     * @public
+     * @readonly
+     */
+    public readonly serviceCentreAddress: AddressString;
+    /**
+     * @summary `extensionContainer`.
+     * @description
+     *
+     * Private or PCS extensions (3GPP TS 29.002 V19.1.0 clause 17.7.11).
+     *
+     * @public
+     * @readonly
+     */
+    public readonly extensionContainer?: OPTIONAL<ExtensionContainer>;
+    /**
+     * @summary `gprsSupportIndicator`.
+     * @description
+     *
+     * Set only if the SMS-GMSC supports receiving two numbers from the HLR
+     * (clause 17.7.6).
+     *
+     * @public
+     * @readonly
+     */
+    public readonly gprsSupportIndicator?: OPTIONAL<NULL>;
+    /**
+     * @summary `sm_RP_MTI`.
+     * @description
+     *
+     * 0 = SMS Deliver, 1 = SMS Status Report; other values reserved and
+     * discarded if received (3GPP TS 29.002 V19.1.0 clause 17.7.6).
+     *
+     * @public
+     * @readonly
+     */
+    public readonly sm_RP_MTI?: OPTIONAL<SM_RP_MTI>;
+    /**
+     * @summary `sm_RP_SMEA`.
+     * @description
+     *
+     * Address field as in 3GPP TS 23.040: address-length, type-of-address,
+     * address-value (3GPP TS 29.002 V19.1.0 clause 17.7.6).
+     *
+     * @public
+     * @readonly
+     */
+    public readonly sm_RP_SMEA?: OPTIONAL<SM_RP_SMEA>;
+    /**
+     * @summary `sm_deliveryNotIntended`.
+     * @description
+     *
+     * Delivery not intended; only IMSI or MCC-MNC requested.
+     *
+     * @public
+     * @readonly
+     */
+    public readonly sm_deliveryNotIntended?: OPTIONAL<SM_DeliveryNotIntended>;
+    /**
+     * @summary `ip_sm_gwGuidanceIndicator`.
+     * @description
+     *
+     * Request IP-SM-GW guidance.
+     *
+     * @public
+     * @readonly
+     */
+    public readonly ip_sm_gwGuidanceIndicator?: OPTIONAL<NULL>;
+    /**
+     * @summary `imsi`.
+     * @description
+     *
+     * IMSI when known.
+     *
+     * @public
+     * @readonly
+     */
+    public readonly imsi?: OPTIONAL<IMSI>;
+    /**
+     * @summary `t4_Trigger_Indicator`.
+     * @description
+     *
+     * T4-device triggering via IMS.
+     *
+     * @public
+     * @readonly
+     */
+    public readonly t4_Trigger_Indicator?: OPTIONAL<NULL>;
+    /**
+     * @summary `singleAttemptDelivery`.
+     * @description
+     *
+     * Single-attempt delivery.
+     *
+     * @public
+     * @readonly
+     */
+    public readonly singleAttemptDelivery?: OPTIONAL<NULL>;
+    /**
+     * @summary `correlationID`.
+     * @description
+     *
+     * HLR / SIP URI correlation.
+     *
+     * @public
+     * @readonly
+     */
+    public readonly correlationID?: OPTIONAL<CorrelationID>;
+    /**
+     * @summary `smsf_supportIndicator`.
+     * @description
+     *
+     * If absent in the request, SMSF numbers/indicators shall be absent in
+     * the result (clause 17.7.6).
+     *
+     * @public
+     * @readonly
+     */
+    public readonly smsf_supportIndicator?: OPTIONAL<NULL>;
+    /**
+     * @summary Extensions that are not recognized.
+     * @public
+     * @readonly
+     */
+    public readonly _unrecognizedExtensionsList: _Element[];
+
     constructor (
-        /**
-         * @summary `msisdn`.
-         * @description
-         *
-         * Called subscriber MSISDN (clause 12.1).
-         *
-         * @public
-         * @readonly
-         */
-        readonly msisdn: ISDN_AddressString,
-        /**
-         * @summary `sm_RP_PRI`.
-         * @description
-         *
-         * SM-RP priority.
-         *
-         * @public
-         * @readonly
-         */
-        readonly sm_RP_PRI: BOOLEAN,
-        /**
-         * @summary `serviceCentreAddress`.
-         * @description
-         *
-         * Service Centre address.
-         *
-         * @public
-         * @readonly
-         */
-        readonly serviceCentreAddress: AddressString,
-        /**
-         * @summary `extensionContainer`.
-         * @description
-         *
-         * Private or PCS extensions (3GPP TS 29.002 V19.1.0 clause 17.7.11).
-         *
-         * @public
-         * @readonly
-         */
-        readonly extensionContainer?: OPTIONAL<ExtensionContainer>,
-        /**
-         * @summary `gprsSupportIndicator`.
-         * @description
-         *
-         * Set only if the SMS-GMSC supports receiving two numbers from the HLR
-         * (clause 17.7.6).
-         *
-         * @public
-         * @readonly
-         */
-        readonly gprsSupportIndicator?: OPTIONAL<NULL>,
-        /**
-         * @summary `sm_RP_MTI`.
-         * @description
-         *
-         * 0 = SMS Deliver, 1 = SMS Status Report; other values reserved and
-         * discarded if received (3GPP TS 29.002 V19.1.0 clause 17.7.6).
-         *
-         * @public
-         * @readonly
-         */
-        readonly sm_RP_MTI?: OPTIONAL<SM_RP_MTI>,
-        /**
-         * @summary `sm_RP_SMEA`.
-         * @description
-         *
-         * Address field as in 3GPP TS 23.040: address-length, type-of-address,
-         * address-value (3GPP TS 29.002 V19.1.0 clause 17.7.6).
-         *
-         * @public
-         * @readonly
-         */
-        readonly sm_RP_SMEA?: OPTIONAL<SM_RP_SMEA>,
-        /**
-         * @summary `sm_deliveryNotIntended`.
-         * @description
-         *
-         * Delivery not intended; only IMSI or MCC-MNC requested.
-         *
-         * @public
-         * @readonly
-         */
-        readonly sm_deliveryNotIntended?: OPTIONAL<SM_DeliveryNotIntended>,
-        /**
-         * @summary `ip_sm_gwGuidanceIndicator`.
-         * @description
-         *
-         * Request IP-SM-GW guidance.
-         *
-         * @public
-         * @readonly
-         */
-        readonly ip_sm_gwGuidanceIndicator?: OPTIONAL<NULL>,
-        /**
-         * @summary `imsi`.
-         * @description
-         *
-         * IMSI when known.
-         *
-         * @public
-         * @readonly
-         */
-        readonly imsi?: OPTIONAL<IMSI>,
-        /**
-         * @summary `t4_Trigger_Indicator`.
-         * @description
-         *
-         * T4-device triggering via IMS.
-         *
-         * @public
-         * @readonly
-         */
-        readonly t4_Trigger_Indicator?: OPTIONAL<NULL>,
-        /**
-         * @summary `singleAttemptDelivery`.
-         * @description
-         *
-         * Single-attempt delivery.
-         *
-         * @public
-         * @readonly
-         */
-        readonly singleAttemptDelivery?: OPTIONAL<NULL>,
-        /**
-         * @summary `correlationID`.
-         * @description
-         *
-         * HLR / SIP URI correlation.
-         *
-         * @public
-         * @readonly
-         */
-        readonly correlationID?: OPTIONAL<CorrelationID>,
-        /**
-         * @summary `smsf_supportIndicator`.
-         * @description
-         *
-         * If absent in the request, SMSF numbers/indicators shall be absent in
-         * the result (clause 17.7.6).
-         *
-         * @public
-         * @readonly
-         */
-        readonly smsf_supportIndicator?: OPTIONAL<NULL>,
-        /**
-         * @summary Extensions that are not recognized.
-         * @public
-         * @readonly
-         */
-        readonly _unrecognizedExtensionsList: _Element[] = []
-    ) {}
+        msisdn: ISDN_AddressString,
+        sm_RP_PRI: BOOLEAN,
+        serviceCentreAddress: AddressString,
+        extensionContainer?: OPTIONAL<ExtensionContainer>,
+        gprsSupportIndicator?: OPTIONAL<NULL>,
+        sm_RP_MTI?: OPTIONAL<SM_RP_MTI>,
+        sm_RP_SMEA?: OPTIONAL<SM_RP_SMEA>,
+        sm_deliveryNotIntended?: OPTIONAL<SM_DeliveryNotIntended>,
+        ip_sm_gwGuidanceIndicator?: OPTIONAL<NULL>,
+        imsi?: OPTIONAL<IMSI>,
+        t4_Trigger_Indicator?: OPTIONAL<NULL>,
+        singleAttemptDelivery?: OPTIONAL<NULL>,
+        correlationID?: OPTIONAL<CorrelationID>,
+        smsf_supportIndicator?: OPTIONAL<NULL>,
+        _unrecognizedExtensionsList: _Element[] = []
+    ) {
+        this.msisdn = msisdn;
+        this.sm_RP_PRI = sm_RP_PRI;
+        this.serviceCentreAddress = serviceCentreAddress;
+        this.extensionContainer = extensionContainer;
+        this.gprsSupportIndicator = gprsSupportIndicator;
+        this.sm_RP_MTI = sm_RP_MTI;
+        this.sm_RP_SMEA = sm_RP_SMEA;
+        this.sm_deliveryNotIntended = sm_deliveryNotIntended;
+        this.ip_sm_gwGuidanceIndicator = ip_sm_gwGuidanceIndicator;
+        this.imsi = imsi;
+        this.t4_Trigger_Indicator = t4_Trigger_Indicator;
+        this.singleAttemptDelivery = singleAttemptDelivery;
+        this.correlationID = correlationID;
+        this.smsf_supportIndicator = smsf_supportIndicator;
+        this._unrecognizedExtensionsList = _unrecognizedExtensionsList;
+    }
 
     /**
      * @summary Restructures an object into a RoutingInfoForSM_Arg
@@ -227,7 +259,7 @@ class RoutingInfoForSM_Arg {
          * @static
          */
 
-    public static _enum_for_sm_deliveryNotIntended = _enum_for_SM_DeliveryNotIntended;
+    public static _enum_for_sm_deliveryNotIntended: typeof _enum_for_SM_DeliveryNotIntended = _enum_for_SM_DeliveryNotIntended;
 }
 
 /**

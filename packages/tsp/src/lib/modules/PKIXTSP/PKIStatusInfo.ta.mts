@@ -1,22 +1,22 @@
 /* eslint-disable */
 import {
-    ASN1Element as _Element,
+    type ASN1Element as _Element,
     ASN1TagClass as _TagClass,
-    OPTIONAL,
+    type OPTIONAL,
 } from "@wildboar/asn1";
 import * as $ from "@wildboar/asn1/functional";
 import {
-    PKIFreeText,
+    type PKIFreeText,
     _decode_PKIFreeText,
     _encode_PKIFreeText,
 } from "../PKIXCMP/PKIFreeText.ta.mjs";
 import {
-    PKIFailureInfo,
+    type PKIFailureInfo,
     _decode_PKIFailureInfo,
     _encode_PKIFailureInfo,
 } from "../PKIXTSP/PKIFailureInfo.ta.mjs";
 import {
-    PKIStatus,
+    type PKIStatus,
     _decode_PKIStatus,
     _encode_PKIStatus,
 } from "../PKIXTSP/PKIStatus.ta.mjs";
@@ -40,54 +40,62 @@ import {
  * ```asn1
  * PKIStatusInfo ::= SEQUENCE {
  *     status        PKIStatus,
- *     statusString  PKIFreeText     OPTIONAL,
+ *     statusString  PKIFreeText     type OPTIONAL,
  *     failInfo      PKIFailureInfo  OPTIONAL  }
  * ```
  *
  */
 export class PKIStatusInfo {
+    /**
+     * @summary `status`.
+     * @description
+     *
+     * One of the `PKIStatus` values defined for TSP. Compliant
+     * servers SHOULD NOT produce other values; compliant clients
+     * MUST error on unrecognized values
+     * ([RFC 3161 §2.4.2](https://datatracker.ietf.org/doc/html/rfc3161#section-2.4.2)).
+     *
+     * @public
+     * @readonly
+     */
+    public readonly status: PKIStatus;
+    /**
+     * @summary `statusString`.
+     * @description
+     *
+     * Optional human-readable reason text (e.g.,
+     * `"messageImprint field is not correctly formatted"`)
+     * ([RFC 3161 §2.4.2](https://datatracker.ietf.org/doc/html/rfc3161#section-2.4.2)).
+     * Type is `PKIFreeText` from PKIXCMP
+     * ([RFC 2510](https://datatracker.ietf.org/doc/html/rfc2510) §3.1.1).
+     *
+     * @public
+     * @readonly
+     */
+    public readonly statusString?: OPTIONAL<PKIFreeText>;
+    /**
+     * @summary `failInfo`.
+     * @description
+     *
+     * When no `TimeStampToken` is present, reason the request was
+     * rejected. Only the `PKIFailureInfo` bits listed in
+     * [RFC 3161 §2.4.2](https://datatracker.ietf.org/doc/html/rfc3161#section-2.4.2)
+     * SHALL be supported.
+     *
+     * @public
+     * @readonly
+     */
+    public readonly failInfo?: OPTIONAL<PKIFailureInfo>;
+
     constructor(
-        /**
-         * @summary `status`.
-         * @description
-         *
-         * One of the `PKIStatus` values defined for TSP. Compliant
-         * servers SHOULD NOT produce other values; compliant clients
-         * MUST error on unrecognized values
-         * ([RFC 3161 §2.4.2](https://datatracker.ietf.org/doc/html/rfc3161#section-2.4.2)).
-         *
-         * @public
-         * @readonly
-         */
-        readonly status: PKIStatus,
-        /**
-         * @summary `statusString`.
-         * @description
-         *
-         * Optional human-readable reason text (e.g.,
-         * `"messageImprint field is not correctly formatted"`)
-         * ([RFC 3161 §2.4.2](https://datatracker.ietf.org/doc/html/rfc3161#section-2.4.2)).
-         * Type is `PKIFreeText` from PKIXCMP
-         * ([RFC 2510](https://datatracker.ietf.org/doc/html/rfc2510) §3.1.1).
-         *
-         * @public
-         * @readonly
-         */
-        readonly statusString?: OPTIONAL<PKIFreeText>,
-        /**
-         * @summary `failInfo`.
-         * @description
-         *
-         * When no `TimeStampToken` is present, reason the request was
-         * rejected. Only the `PKIFailureInfo` bits listed in
-         * [RFC 3161 §2.4.2](https://datatracker.ietf.org/doc/html/rfc3161#section-2.4.2)
-         * SHALL be supported.
-         *
-         * @public
-         * @readonly
-         */
-        readonly failInfo?: OPTIONAL<PKIFailureInfo>
-    ) {}
+        status: PKIStatus,
+        statusString?: OPTIONAL<PKIFreeText>,
+        failInfo?: OPTIONAL<PKIFailureInfo>
+    ) {
+        this.status = status;
+        this.statusString = statusString;
+        this.failInfo = failInfo;
+    }
 
     /**
      * @summary Restructures an object into a PKIStatusInfo

@@ -1,6 +1,6 @@
 /* eslint-disable */
 import {
-    ASN1Element as _Element,
+    type ASN1Element as _Element,
     ASN1TagClass as _TagClass,
     ASN1Construction as _Construction,
     ASN1UniversalType as _UniversalType,
@@ -85,7 +85,7 @@ export type ScannerActionError = _enum_for_ScannerActionError;
  *
  * @enum {number}
  */
-export const ScannerActionError = _enum_for_ScannerActionError;
+export const ScannerActionError: typeof _enum_for_ScannerActionError = _enum_for_ScannerActionError;
 
 /**
  * @summary ScannerActionError_unspecified
@@ -98,7 +98,7 @@ export const ScannerActionError = _enum_for_ScannerActionError;
  * @constant
  * @type {number}
  */
-export const ScannerActionError_unspecified: ScannerActionError =
+export const ScannerActionError_unspecified: _enum_for_ScannerActionError.unspecified =
     ScannerActionError.unspecified; /* LONG_NAMED_ENUMERATED_VALUE */
 
 /**
@@ -112,7 +112,7 @@ export const ScannerActionError_unspecified: ScannerActionError =
  * @constant
  * @type {number}
  */
-export const unspecified: ScannerActionError =
+export const unspecified: _enum_for_ScannerActionError.unspecified =
     ScannerActionError.unspecified; /* SHORT_NAMED_ENUMERATED_VALUE */
 
 /**
@@ -125,7 +125,7 @@ export const unspecified: ScannerActionError =
  * @constant
  * @type {number}
  */
-export const ScannerActionError_administrativeStateLocked: ScannerActionError =
+export const ScannerActionError_administrativeStateLocked: _enum_for_ScannerActionError.administrativeStateLocked =
     ScannerActionError.administrativeStateLocked; /* LONG_NAMED_ENUMERATED_VALUE */
 
 /**
@@ -138,7 +138,7 @@ export const ScannerActionError_administrativeStateLocked: ScannerActionError =
  * @constant
  * @type {number}
  */
-export const administrativeStateLocked: ScannerActionError =
+export const administrativeStateLocked: _enum_for_ScannerActionError.administrativeStateLocked =
     ScannerActionError.administrativeStateLocked; /* SHORT_NAMED_ENUMERATED_VALUE */
 
 /**
@@ -152,7 +152,7 @@ export const administrativeStateLocked: ScannerActionError =
  * @constant
  * @type {number}
  */
-export const ScannerActionError_administrativeStateShuttingDown: ScannerActionError =
+export const ScannerActionError_administrativeStateShuttingDown: _enum_for_ScannerActionError.administrativeStateShuttingDown =
     ScannerActionError.administrativeStateShuttingDown; /* LONG_NAMED_ENUMERATED_VALUE */
 
 /**
@@ -166,7 +166,7 @@ export const ScannerActionError_administrativeStateShuttingDown: ScannerActionEr
  * @constant
  * @type {number}
  */
-export const administrativeStateShuttingDown: ScannerActionError =
+export const administrativeStateShuttingDown: _enum_for_ScannerActionError.administrativeStateShuttingDown =
     ScannerActionError.administrativeStateShuttingDown; /* SHORT_NAMED_ENUMERATED_VALUE */
 
 /**
@@ -180,7 +180,7 @@ export const administrativeStateShuttingDown: ScannerActionError =
  * @constant
  * @type {number}
  */
-export const ScannerActionError_scanTerminated: ScannerActionError =
+export const ScannerActionError_scanTerminated: _enum_for_ScannerActionError.scanTerminated =
     ScannerActionError.scanTerminated; /* LONG_NAMED_ENUMERATED_VALUE */
 
 /**
@@ -194,14 +194,27 @@ export const ScannerActionError_scanTerminated: ScannerActionError =
  * @constant
  * @type {number}
  */
-export const scanTerminated: ScannerActionError =
+export const scanTerminated: _enum_for_ScannerActionError.scanTerminated =
     ScannerActionError.scanTerminated; /* SHORT_NAMED_ENUMERATED_VALUE */
 
 
-export const _decode_ScannerActionError = $._decodeEnumerated;
+export function _decode_ScannerActionError(el: _Element): ScannerActionError {
+    const enumerated = $._decodeEnumerated(el);
+    switch (enumerated) {
+        case ScannerActionError.unspecified: return ScannerActionError.unspecified;
+        case ScannerActionError.administrativeStateLocked: return ScannerActionError.administrativeStateLocked;
+        case ScannerActionError.administrativeStateShuttingDown: return ScannerActionError.administrativeStateShuttingDown;
+        case ScannerActionError.scanTerminated: return ScannerActionError.scanTerminated;
+        default:
+            throw new _ConstructionError(
+                'Invalid ENUMERATED value ' + enumerated + ' for ScannerActionError.',
+                el,
+            );
+    }
+}
 
 
-export const _encode_ScannerActionError = $._encodeEnumerated;
+export const _encode_ScannerActionError: $.ASN1Encoder<ScannerActionError> = $._encodeEnumerated as $.ASN1Encoder<ScannerActionError>;
 
 
 /* eslint-enable */

@@ -1,6 +1,6 @@
 /* eslint-disable */
 import {
-    ASN1Element as _Element,
+    type ASN1Element as _Element,
     ASN1TagClass as _TagClass,
     ASN1Construction as _Construction,
     ASN1UniversalType as _UniversalType,
@@ -11,12 +11,12 @@ import {
 } from '@wildboar/asn1';
 import * as $ from '@wildboar/asn1/functional';
 import {
-    ORAddressAndOptionalDirectoryName,
+    type ORAddressAndOptionalDirectoryName,
     _decode_ORAddressAndOptionalDirectoryName,
     _encode_ORAddressAndOptionalDirectoryName,
 } from '../MTSAbstractService/ORAddressAndOptionalDirectoryName.ta.mjs';
 import {
-    Time,
+    type Time,
     _decode_Time,
     _encode_Time,
 } from '../MTSAbstractService/Time.ta.mjs';
@@ -42,20 +42,26 @@ import {
  *
  */
 export class OriginatorAndDLExpansion {
+    /**
+     * @summary `originator_or_dl_name`.
+     * @public
+     * @readonly
+     */
+    public readonly originator_or_dl_name: ORAddressAndOptionalDirectoryName;
+    /**
+     * @summary `origination_or_expansion_time`.
+     * @public
+     * @readonly
+     */
+    public readonly origination_or_expansion_time: Time;
+
     constructor(
-        /**
-         * @summary `originator_or_dl_name`.
-         * @public
-         * @readonly
-         */
-        readonly originator_or_dl_name: ORAddressAndOptionalDirectoryName,
-        /**
-         * @summary `origination_or_expansion_time`.
-         * @public
-         * @readonly
-         */
-        readonly origination_or_expansion_time: Time
-    ) {}
+        originator_or_dl_name: ORAddressAndOptionalDirectoryName,
+        origination_or_expansion_time: Time
+    ) {
+        this.originator_or_dl_name = originator_or_dl_name;
+        this.origination_or_expansion_time = origination_or_expansion_time;
+    }
 
     /**
      * @summary Restructures an object into a OriginatorAndDLExpansion

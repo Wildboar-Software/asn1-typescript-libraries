@@ -2,10 +2,10 @@
 
 import * as $ from "@wildboar/asn1/functional";
 import {
-    OPTIONAL,
-    BOOLEAN,
-    SEQUENCE,
-    IA5String,
+    type OPTIONAL,
+    type BOOLEAN,
+    type SEQUENCE,
+    type IA5String,
     ASN1Element as _Element
 } from "@wildboar/asn1";
 import { ButtonList_Item, _decode_ButtonList_Item, _encode_ButtonList_Item } from "../CSTA-get-button-information/ButtonList-Item.ta.mjs";
@@ -27,12 +27,12 @@ import { ButtonList_Item, _decode_ButtonList_Item, _encode_ButtonList_Item } fro
  * ```asn1
  * ButtonList  ::=  SEQUENCE OF SEQUENCE
  * {    button                ButtonID,
- *     buttonLabel            [0] IMPLICIT IA5String            OPTIONAL,
- *     buttonLabelSettable        [1] IMPLICIT BOOLEAN            OPTIONAL,
- *     buttonFunction            [2] IMPLICIT IA5String            OPTIONAL,
- *     buttonAssociatedNumber        [3] IMPLICIT DeviceID            OPTIONAL,
- *     buttonAssociatedNumberSettable    [4] IMPLICIT BOOLEAN            OPTIONAL,
- *     buttonPressIndicator        [5] IMPLICIT BOOLEAN            OPTIONAL,
+ *     buttonLabel            [0] IMPLICIT IA5String            type OPTIONAL,
+ *     buttonLabelSettable        [1] IMPLICIT BOOLEAN            type OPTIONAL,
+ *     buttonFunction            [2] IMPLICIT IA5String            type OPTIONAL,
+ *     buttonAssociatedNumber        [3] IMPLICIT DeviceID            type OPTIONAL,
+ *     buttonAssociatedNumberSettable    [4] IMPLICIT BOOLEAN            type OPTIONAL,
+ *     buttonPressIndicator        [5] IMPLICIT BOOLEAN            type OPTIONAL,
  *     lampList              SEQUENCE OF LampID            OPTIONAL }
  * ```
  */

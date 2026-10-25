@@ -1,11 +1,11 @@
 /* eslint-disable */
 import {
-    OPTIONAL,
-    ASN1Element as _Element,
+    type OPTIONAL,
+    type ASN1Element as _Element,
     ASN1TagClass as _TagClass
 } from "@wildboar/asn1";
 import * as $ from "@wildboar/asn1/functional";
-import { GetEimConfigurationDataRequest_searchCriteria, _decode_GetEimConfigurationDataRequest_searchCriteria, _encode_GetEimConfigurationDataRequest_searchCriteria } from "../SGP32Definitions/GetEimConfigurationDataRequest-searchCriteria.ta.mjs";
+import { type GetEimConfigurationDataRequest_searchCriteria, _decode_GetEimConfigurationDataRequest_searchCriteria, _encode_GetEimConfigurationDataRequest_searchCriteria } from "../SGP32Definitions/GetEimConfigurationDataRequest-searchCriteria.ta.mjs";
 
 
 /**
@@ -30,17 +30,21 @@ import { GetEimConfigurationDataRequest_searchCriteria, _decode_GetEimConfigurat
  */
 export
 class GetEimConfigurationDataRequest {
+    /**
+     * @summary `searchCriteria`.
+     * @description
+     * Optional filter. Omit it to receive every stored eIM Configuration Data
+     * entry. SGP.32 v1.2, section 5.9.18.
+     * @public
+     * @readonly
+     */
+    public readonly searchCriteria?: OPTIONAL<GetEimConfigurationDataRequest_searchCriteria>;
+
     constructor (
-        /**
-         * @summary `searchCriteria`.
-         * @description
-         * Optional filter. Omit it to receive every stored eIM Configuration Data
-         * entry. SGP.32 v1.2, section 5.9.18.
-         * @public
-         * @readonly
-         */
-        readonly searchCriteria?: OPTIONAL<GetEimConfigurationDataRequest_searchCriteria>
-    ) {}
+        searchCriteria?: OPTIONAL<GetEimConfigurationDataRequest_searchCriteria>
+    ) {
+        this.searchCriteria = searchCriteria;
+    }
 
     /**
      * @summary Restructures an object into a GetEimConfigurationDataRequest

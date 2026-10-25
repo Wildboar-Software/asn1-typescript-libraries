@@ -1,6 +1,6 @@
 /* eslint-disable */
 import {
-    ASN1Element as _Element,
+    type ASN1Element as _Element,
     ASN1TagClass as _TagClass,
     ASN1Construction as _Construction,
     ASN1UniversalType as _UniversalType,
@@ -11,12 +11,12 @@ import {
 } from '@wildboar/asn1';
 import * as $ from '@wildboar/asn1/functional';
 import {
-    ORAddressAndOptionalDirectoryName,
+    type ORAddressAndOptionalDirectoryName,
     _decode_ORAddressAndOptionalDirectoryName,
     _encode_ORAddressAndOptionalDirectoryName,
 } from '../MTSAbstractService/ORAddressAndOptionalDirectoryName.ta.mjs';
 import {
-    Time,
+    type Time,
     _decode_Time,
     _encode_Time,
 } from '../MTSAbstractService/Time.ta.mjs';
@@ -42,20 +42,26 @@ import {
  *
  */
 export class DLExpansion {
+    /**
+     * @summary `dl`.
+     * @public
+     * @readonly
+     */
+    public readonly dl: ORAddressAndOptionalDirectoryName;
+    /**
+     * @summary `dl_expansion_time`.
+     * @public
+     * @readonly
+     */
+    public readonly dl_expansion_time: Time;
+
     constructor(
-        /**
-         * @summary `dl`.
-         * @public
-         * @readonly
-         */
-        readonly dl: ORAddressAndOptionalDirectoryName,
-        /**
-         * @summary `dl_expansion_time`.
-         * @public
-         * @readonly
-         */
-        readonly dl_expansion_time: Time
-    ) {}
+        dl: ORAddressAndOptionalDirectoryName,
+        dl_expansion_time: Time
+    ) {
+        this.dl = dl;
+        this.dl_expansion_time = dl_expansion_time;
+    }
 
     /**
      * @summary Restructures an object into a DLExpansion

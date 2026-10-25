@@ -1,9 +1,9 @@
 /* eslint-disable */
 import {
-    OPTIONAL,
-    REAL,
-    VisibleString,
-    ASN1Element as _Element,
+    type OPTIONAL,
+    type REAL,
+    type VisibleString,
+    type ASN1Element as _Element,
     ASN1TagClass as _TagClass,
     ASN1Construction as _Construction,
     ASN1UniversalType as _UniversalType,
@@ -39,49 +39,59 @@ import * as $ from "@wildboar/asn1/functional";
  */
 export
 class EnvironmentalInformation {
+    /**
+     * @summary `exceptionalCondition`.
+     * @description
+     *
+     * Free-text keywords that the collection environment was
+     * adverse (e.g. outdoors, snow, noisy) (Clause 6.4.4.2).
+     *
+     * @public
+     * @readonly
+     */
+    public readonly exceptionalCondition: VisibleString;
+    /**
+     * @summary `celsiusTemp`.
+     * @description
+     *
+     * Collection temperature in Celsius (Clause 6.4.4.2).
+     *
+     * @public
+     * @readonly
+     */
+    public readonly celsiusTemp?: OPTIONAL<REAL>;
+    /**
+     * @summary `dBNoise`.
+     * @description
+     *
+     * Ambient noise in dB (Clause 6.4.4.2).
+     *
+     * @public
+     * @readonly
+     */
+    public readonly dBNoise?: OPTIONAL<REAL>;
+    /**
+     * @summary `lightingInfo`.
+     * @description
+     *
+     * Free-text lighting information (Clause 6.4.4.2).
+     *
+     * @public
+     * @readonly
+     */
+    public readonly lightingInfo?: OPTIONAL<VisibleString>;
+
     constructor (
-        /**
-         * @summary `exceptionalCondition`.
-         * @description
-         *
-         * Free-text keywords that the collection environment was
-         * adverse (e.g. outdoors, snow, noisy) (Clause 6.4.4.2).
-         *
-         * @public
-         * @readonly
-         */
-        readonly exceptionalCondition: VisibleString,
-        /**
-         * @summary `celsiusTemp`.
-         * @description
-         *
-         * Collection temperature in Celsius (Clause 6.4.4.2).
-         *
-         * @public
-         * @readonly
-         */
-        readonly celsiusTemp?: OPTIONAL<REAL>,
-        /**
-         * @summary `dBNoise`.
-         * @description
-         *
-         * Ambient noise in dB (Clause 6.4.4.2).
-         *
-         * @public
-         * @readonly
-         */
-        readonly dBNoise?: OPTIONAL<REAL>,
-        /**
-         * @summary `lightingInfo`.
-         * @description
-         *
-         * Free-text lighting information (Clause 6.4.4.2).
-         *
-         * @public
-         * @readonly
-         */
-        readonly lightingInfo?: OPTIONAL<VisibleString>
-    ) {}
+        exceptionalCondition: VisibleString,
+        celsiusTemp?: OPTIONAL<REAL>,
+        dBNoise?: OPTIONAL<REAL>,
+        lightingInfo?: OPTIONAL<VisibleString>
+    ) {
+        this.exceptionalCondition = exceptionalCondition;
+        this.celsiusTemp = celsiusTemp;
+        this.dBNoise = dBNoise;
+        this.lightingInfo = lightingInfo;
+    }
 
     /**
      * @summary Restructures an object into a EnvironmentalInformation

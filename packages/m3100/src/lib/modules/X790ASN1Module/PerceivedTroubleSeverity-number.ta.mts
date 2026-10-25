@@ -1,7 +1,7 @@
 /* eslint-disable */
 import {
-    INTEGER,
-    ASN1Element as _Element,
+    type INTEGER,
+    type ASN1Element as _Element,
     ASN1TagClass as _TagClass,
     ASN1Construction as _Construction,
     ASN1UniversalType as _UniversalType,
@@ -31,7 +31,7 @@ export type PerceivedTroubleSeverity_number = INTEGER;
  * @constant
  * @type {number}
  */
-export const PerceivedTroubleSeverity_number_outOfService: PerceivedTroubleSeverity_number = 0; /* LONG_NAMED_INTEGER_VALUE */
+export const PerceivedTroubleSeverity_number_outOfService: 0 = 0 satisfies PerceivedTroubleSeverity_number; /* LONG_NAMED_INTEGER_VALUE */
 
 
 /**
@@ -39,7 +39,7 @@ export const PerceivedTroubleSeverity_number_outOfService: PerceivedTroubleSever
  * @constant
  * @type {number}
  */
-export const outOfService: PerceivedTroubleSeverity_number = PerceivedTroubleSeverity_number_outOfService; /* SHORT_NAMED_INTEGER_VALUE */
+export const outOfService: 0 = PerceivedTroubleSeverity_number_outOfService; /* SHORT_NAMED_INTEGER_VALUE */
 
 
 /**
@@ -47,7 +47,7 @@ export const outOfService: PerceivedTroubleSeverity_number = PerceivedTroubleSev
  * @constant
  * @type {number}
  */
-export const PerceivedTroubleSeverity_number_backInService: PerceivedTroubleSeverity_number = 1; /* LONG_NAMED_INTEGER_VALUE */
+export const PerceivedTroubleSeverity_number_backInService: 1 = 1 satisfies PerceivedTroubleSeverity_number; /* LONG_NAMED_INTEGER_VALUE */
 
 
 /**
@@ -55,7 +55,7 @@ export const PerceivedTroubleSeverity_number_backInService: PerceivedTroubleSeve
  * @constant
  * @type {number}
  */
-export const backInService: PerceivedTroubleSeverity_number = PerceivedTroubleSeverity_number_backInService; /* SHORT_NAMED_INTEGER_VALUE */
+export const backInService: 1 = PerceivedTroubleSeverity_number_backInService; /* SHORT_NAMED_INTEGER_VALUE */
 
 
 /**
@@ -63,7 +63,7 @@ export const backInService: PerceivedTroubleSeverity_number = PerceivedTroubleSe
  * @constant
  * @type {number}
  */
-export const PerceivedTroubleSeverity_number_serviceImpairment: PerceivedTroubleSeverity_number = 2; /* LONG_NAMED_INTEGER_VALUE */
+export const PerceivedTroubleSeverity_number_serviceImpairment: 2 = 2 satisfies PerceivedTroubleSeverity_number; /* LONG_NAMED_INTEGER_VALUE */
 
 
 /**
@@ -71,7 +71,7 @@ export const PerceivedTroubleSeverity_number_serviceImpairment: PerceivedTrouble
  * @constant
  * @type {number}
  */
-export const serviceImpairment: PerceivedTroubleSeverity_number = PerceivedTroubleSeverity_number_serviceImpairment; /* SHORT_NAMED_INTEGER_VALUE */
+export const serviceImpairment: 2 = PerceivedTroubleSeverity_number_serviceImpairment; /* SHORT_NAMED_INTEGER_VALUE */
 
 
 /**
@@ -79,7 +79,7 @@ export const serviceImpairment: PerceivedTroubleSeverity_number = PerceivedTroub
  * @constant
  * @type {number}
  */
-export const PerceivedTroubleSeverity_number_nonServiceAffectingTrouble: PerceivedTroubleSeverity_number = 3; /* LONG_NAMED_INTEGER_VALUE */
+export const PerceivedTroubleSeverity_number_nonServiceAffectingTrouble: 3 = 3 satisfies PerceivedTroubleSeverity_number; /* LONG_NAMED_INTEGER_VALUE */
 
 
 /**
@@ -87,17 +87,17 @@ export const PerceivedTroubleSeverity_number_nonServiceAffectingTrouble: Perceiv
  * @constant
  * @type {number}
  */
-export const nonServiceAffectingTrouble: PerceivedTroubleSeverity_number = PerceivedTroubleSeverity_number_nonServiceAffectingTrouble; /* SHORT_NAMED_INTEGER_VALUE */
+export const nonServiceAffectingTrouble: 3 = PerceivedTroubleSeverity_number_nonServiceAffectingTrouble; /* SHORT_NAMED_INTEGER_VALUE */
 
 
 
 
-export const _decode_PerceivedTroubleSeverity_number = $._decodeInteger;
+export const _decode_PerceivedTroubleSeverity_number: $.ASN1Decoder<INTEGER> = $._decodeInteger;
 
 
 
 
-export const _encode_PerceivedTroubleSeverity_number = $._encodeInteger;
+export const _encode_PerceivedTroubleSeverity_number: $.ASN1Encoder<INTEGER> = $._encodeInteger;
 
 
 /* eslint-enable */

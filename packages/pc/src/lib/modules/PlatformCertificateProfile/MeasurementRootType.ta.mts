@@ -1,6 +1,6 @@
 /* eslint-disable */
 import {
-    ASN1Element as _Element,
+    type ASN1Element as _Element,
     ASN1TagClass as _TagClass,
     ASN1Construction as _Construction,
     ASN1UniversalType as _UniversalType,
@@ -38,14 +38,17 @@ import * as $ from "@wildboar/asn1/functional";
  * @enum {number}
  */
 export
-enum _enum_for_MeasurementRootType {
-    static_ = 0,
-    dynamic = 1,
-    nonHost = 2,
-    hybrid = 3,
-    physical = 4,
-    virtual = 5,
-}
+const _enum_for_MeasurementRootType = {
+    static_: 0,
+    dynamic: 1,
+    nonHost: 2,
+    hybrid: 3,
+    physical: 4,
+    virtual: 5,
+} as const;
+
+export
+type _enum_for_MeasurementRootType = (typeof _enum_for_MeasurementRootType)[keyof typeof _enum_for_MeasurementRootType];
 
 /**
  * @summary MeasurementRootType
@@ -99,7 +102,7 @@ type MeasurementRootType = _enum_for_MeasurementRootType;
  * @enum {number}
  */
 export
-const MeasurementRootType = _enum_for_MeasurementRootType;
+const MeasurementRootType: typeof _enum_for_MeasurementRootType = _enum_for_MeasurementRootType;
 
 /**
  * @summary MeasurementRootType_static_
@@ -111,7 +114,7 @@ const MeasurementRootType = _enum_for_MeasurementRootType;
  * @type {number}
  */
 export
-const MeasurementRootType_static_: MeasurementRootType = MeasurementRootType.static_; /* LONG_NAMED_ENUMERATED_VALUE */
+const MeasurementRootType_static_: 0 = MeasurementRootType.static_; /* LONG_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary static_
@@ -123,7 +126,7 @@ const MeasurementRootType_static_: MeasurementRootType = MeasurementRootType.sta
  * @type {number}
  */
 export
-const static_: MeasurementRootType = MeasurementRootType.static_; /* SHORT_NAMED_ENUMERATED_VALUE */
+const static_: 0 = MeasurementRootType.static_; /* SHORT_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary MeasurementRootType_dynamic
@@ -135,7 +138,7 @@ const static_: MeasurementRootType = MeasurementRootType.static_; /* SHORT_NAMED
  * @type {number}
  */
 export
-const MeasurementRootType_dynamic: MeasurementRootType = MeasurementRootType.dynamic; /* LONG_NAMED_ENUMERATED_VALUE */
+const MeasurementRootType_dynamic: 1 = MeasurementRootType.dynamic; /* LONG_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary dynamic
@@ -147,7 +150,7 @@ const MeasurementRootType_dynamic: MeasurementRootType = MeasurementRootType.dyn
  * @type {number}
  */
 export
-const dynamic: MeasurementRootType = MeasurementRootType.dynamic; /* SHORT_NAMED_ENUMERATED_VALUE */
+const dynamic: 1 = MeasurementRootType.dynamic; /* SHORT_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary MeasurementRootType_nonHost
@@ -160,7 +163,7 @@ const dynamic: MeasurementRootType = MeasurementRootType.dynamic; /* SHORT_NAMED
  * @type {number}
  */
 export
-const MeasurementRootType_nonHost: MeasurementRootType = MeasurementRootType.nonHost; /* LONG_NAMED_ENUMERATED_VALUE */
+const MeasurementRootType_nonHost: 2 = MeasurementRootType.nonHost; /* LONG_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary nonHost
@@ -173,7 +176,7 @@ const MeasurementRootType_nonHost: MeasurementRootType = MeasurementRootType.non
  * @type {number}
  */
 export
-const nonHost: MeasurementRootType = MeasurementRootType.nonHost; /* SHORT_NAMED_ENUMERATED_VALUE */
+const nonHost: 2 = MeasurementRootType.nonHost; /* SHORT_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary MeasurementRootType_hybrid
@@ -185,7 +188,7 @@ const nonHost: MeasurementRootType = MeasurementRootType.nonHost; /* SHORT_NAMED
  * @type {number}
  */
 export
-const MeasurementRootType_hybrid: MeasurementRootType = MeasurementRootType.hybrid; /* LONG_NAMED_ENUMERATED_VALUE */
+const MeasurementRootType_hybrid: 3 = MeasurementRootType.hybrid; /* LONG_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary hybrid
@@ -197,7 +200,7 @@ const MeasurementRootType_hybrid: MeasurementRootType = MeasurementRootType.hybr
  * @type {number}
  */
 export
-const hybrid: MeasurementRootType = MeasurementRootType.hybrid; /* SHORT_NAMED_ENUMERATED_VALUE */
+const hybrid: 3 = MeasurementRootType.hybrid; /* SHORT_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary MeasurementRootType_physical
@@ -209,7 +212,7 @@ const hybrid: MeasurementRootType = MeasurementRootType.hybrid; /* SHORT_NAMED_E
  * @type {number}
  */
 export
-const MeasurementRootType_physical: MeasurementRootType = MeasurementRootType.physical; /* LONG_NAMED_ENUMERATED_VALUE */
+const MeasurementRootType_physical: 4 = MeasurementRootType.physical; /* LONG_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary physical
@@ -221,7 +224,7 @@ const MeasurementRootType_physical: MeasurementRootType = MeasurementRootType.ph
  * @type {number}
  */
 export
-const physical: MeasurementRootType = MeasurementRootType.physical; /* SHORT_NAMED_ENUMERATED_VALUE */
+const physical: 4 = MeasurementRootType.physical; /* SHORT_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary MeasurementRootType_virtual
@@ -233,7 +236,7 @@ const physical: MeasurementRootType = MeasurementRootType.physical; /* SHORT_NAM
  * @type {number}
  */
 export
-const MeasurementRootType_virtual: MeasurementRootType = MeasurementRootType.virtual; /* LONG_NAMED_ENUMERATED_VALUE */
+const MeasurementRootType_virtual: 5 = MeasurementRootType.virtual; /* LONG_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary virtual
@@ -245,13 +248,28 @@ const MeasurementRootType_virtual: MeasurementRootType = MeasurementRootType.vir
  * @type {number}
  */
 export
-const virtual: MeasurementRootType = MeasurementRootType.virtual; /* SHORT_NAMED_ENUMERATED_VALUE */
+const virtual: 5 = MeasurementRootType.virtual; /* SHORT_NAMED_ENUMERATED_VALUE */
 
 
-export const _decode_MeasurementRootType = $._decodeEnumerated;
+export function _decode_MeasurementRootType(el: _Element): MeasurementRootType {
+    const enumerated = $._decodeEnumerated(el);
+    switch (enumerated) {
+        case MeasurementRootType.static_: return MeasurementRootType.static_;
+        case MeasurementRootType.dynamic: return MeasurementRootType.dynamic;
+        case MeasurementRootType.nonHost: return MeasurementRootType.nonHost;
+        case MeasurementRootType.hybrid: return MeasurementRootType.hybrid;
+        case MeasurementRootType.physical: return MeasurementRootType.physical;
+        case MeasurementRootType.virtual: return MeasurementRootType.virtual;
+        default:
+            throw new _ConstructionError(
+                "Invalid ENUMERATED value " + enumerated + " for MeasurementRootType.",
+                el,
+            );
+    }
+}
 
 
-export const _encode_MeasurementRootType = $._encodeEnumerated;
+export const _encode_MeasurementRootType: $.ASN1Encoder<MeasurementRootType> = $._encodeEnumerated as $.ASN1Encoder<MeasurementRootType>;
 
 
 /* eslint-enable */

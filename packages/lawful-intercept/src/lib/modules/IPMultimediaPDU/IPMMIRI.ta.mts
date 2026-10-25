@@ -1,15 +1,15 @@
 /* eslint-disable */
 import {
-    OPTIONAL,
-    RELATIVE_OID,
-    ASN1Element as _Element,
+    type OPTIONAL,
+    type RELATIVE_OID,
+    type ASN1Element as _Element,
     ASN1TagClass as _TagClass
 } from "@wildboar/asn1";
 import * as $ from "@wildboar/asn1/functional";
-import { IPIRIContents, _decode_IPIRIContents, _encode_IPIRIContents } from "../IPMultimediaPDU/IPIRIContents.ta.mjs";
+import { type IPIRIContents, _decode_IPIRIContents, _encode_IPIRIContents } from "../IPMultimediaPDU/IPIRIContents.ta.mjs";
 // export { IPIRIContents, _decode_IPIRIContents, _encode_IPIRIContents } from "../IPMultimediaPDU/IPIRIContents.ta.mjs";
 // export { Location, _decode_Location, _encode_Location } from "../LI-PS-PDU/Location.ta.mjs";
-import { AdditionalSignalling, _decode_AdditionalSignalling, _encode_AdditionalSignalling } from "../IPMultimediaPDU/AdditionalSignalling.ta.mjs";
+import { type AdditionalSignalling, _decode_AdditionalSignalling, _encode_AdditionalSignalling } from "../IPMultimediaPDU/AdditionalSignalling.ta.mjs";
 import * as LI_PS_PDU from "../LI-PS-PDU/index.mjs";
 // export { AdditionalSignalling, _decode_AdditionalSignalling, _encode_AdditionalSignalling } from "../IPMultimediaPDU/AdditionalSignalling.ta.mjs";
 

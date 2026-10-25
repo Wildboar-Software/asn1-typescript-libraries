@@ -1,7 +1,7 @@
 /* eslint-disable */
 import {
     ASN1ConstructionError as _ConstructionError,
-    ASN1Element as _Element,
+    type ASN1Element as _Element,
     ASN1TagClass as _TagClass,
 } from "@wildboar/asn1";
 import * as $ from "@wildboar/asn1/functional";
@@ -27,20 +27,26 @@ import {
  *
  */
 export class IrisScan {
+    /**
+     * @summary `eye`.
+     * @public
+     * @readonly
+     */
+    public readonly eye: IrisScan_eye;
+    /**
+     * @summary Extensions that are not recognized.
+     * @public
+     * @readonly
+     */
+    public readonly _unrecognizedExtensionsList: _Element[];
+
     constructor(
-        /**
-         * @summary `eye`.
-         * @public
-         * @readonly
-         */
-        readonly eye: IrisScan_eye,
-        /**
-         * @summary Extensions that are not recognized.
-         * @public
-         * @readonly
-         */
-        readonly _unrecognizedExtensionsList: _Element[] = []
-    ) {}
+        eye: IrisScan_eye,
+        _unrecognizedExtensionsList: _Element[] = []
+    ) {
+        this.eye = eye;
+        this._unrecognizedExtensionsList = _unrecognizedExtensionsList;
+    }
 
     /**
      * @summary Restructures an object into a IrisScan
@@ -66,7 +72,7 @@ export class IrisScan {
      * @static
      */
 
-    public static _enum_for_eye = _enum_for_IrisScan_eye;
+    public static _enum_for_eye: typeof _enum_for_IrisScan_eye = _enum_for_IrisScan_eye;
 }
 
 

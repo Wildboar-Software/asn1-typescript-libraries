@@ -1,13 +1,13 @@
 /* eslint-disable */
 import {
-    OCTET_STRING,
+    type OCTET_STRING,
     ASN1ConstructionError as _ConstructionError,
-    ASN1Element as _Element,
+    type ASN1Element as _Element,
     ASN1TagClass as _TagClass,
     ASN1SizeError
 } from "@wildboar/asn1";
 import * as $ from "@wildboar/asn1/functional";
-import { IMSIorIMEI, _decode_IMSIorIMEI, _encode_IMSIorIMEI } from "../CSChargingDataTypes/IMSIorIMEI.ta.mjs";
+import { type IMSIorIMEI, _decode_IMSIorIMEI, _encode_IMSIorIMEI } from "../CSChargingDataTypes/IMSIorIMEI.ta.mjs";
 
 
 /**

@@ -2,14 +2,14 @@
 
 import * as $ from "@wildboar/asn1/functional";
 import {
-    BOOLEAN,
-    SEQUENCE,
-    SET,
-    ASN1Element as _Element,
+    type BOOLEAN,
+    type SEQUENCE,
+    type SET,
+    type ASN1Element as _Element,
     ASN1TagClass as _TagClass,
     ASN1ConstructionError as _ConstructionError
 } from "@wildboar/asn1";
-import { AuditoryApparatusID, _decode_AuditoryApparatusID, _encode_AuditoryApparatusID } from "../CSTA-physical-device-feature/AuditoryApparatusID.ta.mjs";
+import { type AuditoryApparatusID, _decode_AuditoryApparatusID, _encode_AuditoryApparatusID } from "../CSTA-physical-device-feature/AuditoryApparatusID.ta.mjs";
 
 
 
@@ -35,26 +35,32 @@ import { AuditoryApparatusID, _decode_AuditoryApparatusID, _encode_AuditoryAppar
  */
 export
 class SpeakerMuteList_Item {
+    /**
+     * @summary `auditoryApparatus`.
+     * @description
+     *
+     * Apparatus that owns the speaker.
+     * @public
+     * @readonly
+     */
+    public readonly auditoryApparatus: AuditoryApparatusID;
+    /**
+     * @summary `speakerMuteOn`.
+     * @description
+     *
+     * FALSE = speaker activated; TRUE = muted.
+     * @public
+     * @readonly
+     */
+    public readonly speakerMuteOn: BOOLEAN;
+
     constructor (
-        /**
-         * @summary `auditoryApparatus`.
-         * @description
-         *
-         * Apparatus that owns the speaker.
-         * @public
-         * @readonly
-         */
-        readonly auditoryApparatus: AuditoryApparatusID,
-        /**
-         * @summary `speakerMuteOn`.
-         * @description
-         *
-         * FALSE = speaker activated; TRUE = muted.
-         * @public
-         * @readonly
-         */
-        readonly speakerMuteOn: BOOLEAN
-    ) {}
+        auditoryApparatus: AuditoryApparatusID,
+        speakerMuteOn: BOOLEAN
+    ) {
+        this.auditoryApparatus = auditoryApparatus;
+        this.speakerMuteOn = speakerMuteOn;
+    }
 
     /**
      * @summary Restructures an object into a SpeakerMuteList_Item

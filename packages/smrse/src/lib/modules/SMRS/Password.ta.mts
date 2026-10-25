@@ -1,6 +1,6 @@
 /* eslint-disable */
 import {
-    PrintableString
+    type PrintableString
 } from "@wildboar/asn1";
 import * as $ from "@wildboar/asn1/functional";
 
@@ -25,8 +25,8 @@ import * as $ from "@wildboar/asn1/functional";
  */
 export
 type Password = PrintableString; // PrintableString
-export const _decode_Password = $._decodePrintableString;
-export const _encode_Password = $._encodePrintableString;
+export const _decode_Password: $.ASN1Decoder<string> = $._decodePrintableString;
+export const _encode_Password: $.ASN1Encoder<string> = $._encodePrintableString;
 
 
 /* eslint-enable */

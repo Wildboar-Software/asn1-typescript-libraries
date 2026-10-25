@@ -1,12 +1,12 @@
 /* eslint-disable */
 import {
     ASN1ConstructionError as _ConstructionError,
-    ASN1Element as _Element,
+    type ASN1Element as _Element,
     ASN1TagClass as _TagClass
 } from "@wildboar/asn1";
 import * as $ from "@wildboar/asn1/functional";
 import { PublicTypeOfNumber, _decode_PublicTypeOfNumber, _encode_PublicTypeOfNumber, _enum_for_PublicTypeOfNumber } from "../Addressing-Data-Elements-asn1-97/PublicTypeOfNumber.ta.mjs";
-import { NumberDigits, _decode_NumberDigits, _encode_NumberDigits } from "../Addressing-Data-Elements-asn1-97/NumberDigits.ta.mjs";
+import { type NumberDigits, _decode_NumberDigits, _encode_NumberDigits } from "../Addressing-Data-Elements-asn1-97/NumberDigits.ta.mjs";
 
 /**
  * @summary PublicPartyNumber
@@ -81,7 +81,7 @@ class PublicPartyNumber {
          * @static
          */
 
-    public static _enum_for_publicTypeOfNumber = _enum_for_PublicTypeOfNumber;
+    public static _enum_for_publicTypeOfNumber: typeof _enum_for_PublicTypeOfNumber = _enum_for_PublicTypeOfNumber;
 }
 
 /**

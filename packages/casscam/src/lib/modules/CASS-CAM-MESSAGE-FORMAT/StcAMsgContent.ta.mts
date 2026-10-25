@@ -1,7 +1,7 @@
 /* eslint-disable */
 import {
-    OCTET_STRING,
-    ASN1Element as _Element,
+    type OCTET_STRING,
+    type ASN1Element as _Element,
     ASN1TagClass as _TagClass,
     ASN1Construction as _Construction,
     ASN1UniversalType as _UniversalType,
@@ -52,7 +52,7 @@ class StcAMsgContent {
      * @public
      * @readonly
      */
-    readonly sessionID: OCTET_STRING;
+    public readonly sessionID: OCTET_STRING;
     /**
      * @summary `statusInfo`.
      * @description
@@ -67,7 +67,7 @@ class StcAMsgContent {
      * @public
      * @readonly
      */
-    readonly statusInfo: OCTET_STRING;
+    public readonly statusInfo: OCTET_STRING;
 
     constructor (
         sessionID: OCTET_STRING,

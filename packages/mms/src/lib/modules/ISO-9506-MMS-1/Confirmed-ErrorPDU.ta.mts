@@ -1,7 +1,7 @@
 /* eslint-disable */
 import {
-    OPTIONAL,
-    ASN1Element as _Element,
+    type OPTIONAL,
+    type ASN1Element as _Element,
     ASN1TagClass as _TagClass,
     ASN1Construction as _Construction,
     ASN1UniversalType as _UniversalType,
@@ -11,7 +11,7 @@ import {
     ASN1ConstructionError as _ConstructionError,
 } from "@wildboar/asn1";
 import * as $ from "@wildboar/asn1/functional";
-import { Unsigned32, _decode_Unsigned32, _encode_Unsigned32 } from "../ISO-9506-MMS-1/Unsigned32.ta.mjs";
+import { type Unsigned32, _decode_Unsigned32, _encode_Unsigned32 } from "../ISO-9506-MMS-1/Unsigned32.ta.mjs";
 import { ServiceError, _decode_ServiceError, _encode_ServiceError } from "../ISO-9506-MMS-1/ServiceError.ta.mjs";
 
 
@@ -38,40 +38,48 @@ import { ServiceError, _decode_ServiceError, _encode_ServiceError } from "../ISO
  */
 export
 class Confirmed_ErrorPDU {
+    /**
+     * @summary `invokeID`.
+     * @description
+     *
+     * Same value as the corresponding Confirmed-RequestPDU (ISO 9506-1:2003
+     * §5.5; ISO 9506-2:2003 §7.4).
+     * @public
+     * @readonly
+     */
+    public readonly invokeID: Unsigned32;
+    /**
+     * @summary `modifierPosition`.
+     * @description
+     *
+     * Index of the modifier in the request's `listOfModifiers` that caused
+     * the error. Omit when the error is from the service itself
+     * (ISO 9506-2:2003 §7.4). Service-specific error information is not returned
+     * when a modifier fails.
+     * @public
+     * @readonly
+     */
+    public readonly modifierPosition: OPTIONAL<Unsigned32>;
+    /**
+     * @summary `serviceError`.
+     * @description
+     *
+     * Error class and code for the failed modifier or confirmed service
+     * (ISO 9506-1:2003 clause 24; ISO 9506-2:2003 §7.4.1).
+     * @public
+     * @readonly
+     */
+    public readonly serviceError: ServiceError;
+
     constructor (
-        /**
-         * @summary `invokeID`.
-         * @description
-         *
-         * Same value as the corresponding Confirmed-RequestPDU (ISO 9506-1:2003
-         * §5.5; ISO 9506-2:2003 §7.4).
-         * @public
-         * @readonly
-         */
-        readonly invokeID: Unsigned32,
-        /**
-         * @summary `modifierPosition`.
-         * @description
-         *
-         * Index of the modifier in the request's `listOfModifiers` that caused
-         * the error. Omit when the error is from the service itself
-         * (ISO 9506-2:2003 §7.4). Service-specific error information is not returned
-         * when a modifier fails.
-         * @public
-         * @readonly
-         */
-        readonly modifierPosition: OPTIONAL<Unsigned32>,
-        /**
-         * @summary `serviceError`.
-         * @description
-         *
-         * Error class and code for the failed modifier or confirmed service
-         * (ISO 9506-1:2003 clause 24; ISO 9506-2:2003 §7.4.1).
-         * @public
-         * @readonly
-         */
-        readonly serviceError: ServiceError
-    ) {}
+        invokeID: Unsigned32,
+        modifierPosition: OPTIONAL<Unsigned32>,
+        serviceError: ServiceError
+    ) {
+        this.invokeID = invokeID;
+        this.modifierPosition = modifierPosition;
+        this.serviceError = serviceError;
+    }
 
     /**
      * @summary Restructures an object into a Confirmed_ErrorPDU

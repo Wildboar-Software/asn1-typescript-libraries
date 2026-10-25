@@ -1,5 +1,5 @@
 /* eslint-disable */
-import { ASN1Element as _Element, NULL, OBJECT_IDENTIFIER } from "@wildboar/asn1";
+import { ASN1Element as _Element, type NULL, type OBJECT_IDENTIFIER } from "@wildboar/asn1";
 import * as $ from "@wildboar/asn1/functional";
 import { ContextProfile } from "../ServiceAdministration/ContextProfile.ta.mjs";
 /**
@@ -17,7 +17,7 @@ import { ContextProfile } from "../ServiceAdministration/ContextProfile.ta.mjs";
  *   &attributeType         ATTRIBUTE.&id,
  *   &outputValues          CHOICE {
  *     selectedValues         SEQUENCE OF ATTRIBUTE.&Type,
- *     matchedValuesOnly      NULL }                      OPTIONAL,
+ *     matchedValuesOnly      NULL }                      type OPTIONAL,
  *   &contexts              ContextProfile                  OPTIONAL }
  * WITH SYNTAX {
  *   ATTRIBUTE TYPE        &attributeType

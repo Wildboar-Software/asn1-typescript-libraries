@@ -1,8 +1,8 @@
 /* eslint-disable */
 import {
-    BOOLEAN,
+    type BOOLEAN,
     ASN1ConstructionError as _ConstructionError,
-    ASN1Element as _Element,
+    type ASN1Element as _Element,
     ASN1TagClass as _TagClass
 } from "@wildboar/asn1";
 import * as $ from "@wildboar/asn1/functional";
@@ -103,7 +103,7 @@ class PTCParticipantPresenceStatus {
          * @static
          */
 
-    public static _enum_for_presenceType = _enum_for_PTCPresenceType;
+    public static _enum_for_presenceType: typeof _enum_for_PTCPresenceType = _enum_for_PTCPresenceType;
 }
 
 /**

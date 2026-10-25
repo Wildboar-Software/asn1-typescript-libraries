@@ -2,11 +2,11 @@
 
 import * as $ from "@wildboar/asn1/functional";
 import {
-    OPTIONAL,
-    INTEGER,
-    SEQUENCE,
-    SET,
-    ASN1Element as _Element,
+    type OPTIONAL,
+    type INTEGER,
+    type SEQUENCE,
+    type SET,
+    type ASN1Element as _Element,
     ASN1TagClass as _TagClass
 } from "@wildboar/asn1";
 import { DeviceID, _decode_DeviceID, _encode_DeviceID } from "../CSTA-device-identifiers/DeviceID.ta.mjs";
@@ -47,13 +47,13 @@ import { CSTACommonArguments, _decode_CSTACommonArguments, _encode_CSTACommonArg
  * ```asn1
  * StartLocationTrackingSessionArgument ::= SEQUENCE
  * {    locDevice            DeviceID,
- *     collectionType            [0] IMPLICIT CollectionType        OPTIONAL,
- *     collectionInterval        [1] IMPLICIT INTEGER            OPTIONAL,
- *     maxCollections            [2] IMPLICIT INTEGER            OPTIONAL,
- *     collectionFilter        [3] IMPLICIT CollectionFilter        OPTIONAL,
- *     reportingType            [4] IMPLICIT ReportingType        OPTIONAL,
- *     reportingInterval        [5] IMPLICIT INTEGER            OPTIONAL,
- *     reportingCount            [6] IMPLICIT INTEGER            OPTIONAL,
+ *     collectionType            [0] IMPLICIT CollectionType        type OPTIONAL,
+ *     collectionInterval        [1] IMPLICIT INTEGER            type OPTIONAL,
+ *     maxCollections            [2] IMPLICIT INTEGER            type OPTIONAL,
+ *     collectionFilter        [3] IMPLICIT CollectionFilter        type OPTIONAL,
+ *     reportingType            [4] IMPLICIT ReportingType        type OPTIONAL,
+ *     reportingInterval        [5] IMPLICIT INTEGER            type OPTIONAL,
+ *     reportingCount            [6] IMPLICIT INTEGER            type OPTIONAL,
  *     extensions            CSTACommonArguments            OPTIONAL }
  * ```
  * 
@@ -61,104 +61,124 @@ import { CSTACommonArguments, _decode_CSTACommonArguments, _encode_CSTACommonArg
  */
 export
 class StartLocationTrackingSessionArgument {
+    /**
+     * @summary `locDevice`.
+     * @description
+     *
+     * Device whose location is tracked (ECMA-269 §28.1.7.1).
+     *
+     * @public
+     * @readonly
+     */
+    public readonly locDevice: DeviceID;
+    /**
+     * @summary `collectionType`.
+     * @description
+     *
+     * How the SF collects location; default if omitted (ECMA-269
+     * §28.1.7.1).
+     *
+     * @public
+     * @readonly
+     */
+    public readonly collectionType?: OPTIONAL<CollectionType>;
+    /**
+     * @summary `collectionInterval`.
+     * @description
+     *
+     * Seconds between collections when type is periodic or
+     * periodicWithUpdates (ECMA-269 §28.1.7.1).
+     *
+     * @public
+     * @readonly
+     */
+    public readonly collectionInterval?: OPTIONAL<INTEGER>;
+    /**
+     * @summary `maxCollections`.
+     * @description
+     *
+     * Maximum collections per hour; excess is not collected until the next
+     * hour (ECMA-269 §28.1.7.1).
+     *
+     * @public
+     * @readonly
+     */
+    public readonly maxCollections?: OPTIONAL<INTEGER>;
+    /**
+     * @summary `collectionFilter`.
+     * @description
+     *
+     * Movement/civic filters; any match collects (ECMA-269 §28.1.7.1).
+     *
+     * @public
+     * @readonly
+     */
+    public readonly collectionFilter?: OPTIONAL<CollectionFilter>;
+    /**
+     * @summary `reportingType`.
+     * @description
+     *
+     * When collected location is reported (ECMA-269 §28.1.7.1).
+     *
+     * @public
+     * @readonly
+     */
+    public readonly reportingType?: OPTIONAL<ReportingType>;
+    /**
+     * @summary `reportingInterval`.
+     * @description
+     *
+     * Seconds between reports when reportingType is periodic (ECMA-269
+     * §28.1.7.1).
+     *
+     * @public
+     * @readonly
+     */
+    public readonly reportingInterval?: OPTIONAL<INTEGER>;
+    /**
+     * @summary `reportingCount`.
+     * @description
+     *
+     * Number of collected records before a report when reportingType is
+     * count (ECMA-269 §28.1.7.1).
+     *
+     * @public
+     * @readonly
+     */
+    public readonly reportingCount?: OPTIONAL<INTEGER>;
+    /**
+     * @summary `extensions`.
+     * @description
+     *
+     * CSTACommonArguments carrying the service-table security and
+     * privateData parameters.
+     *
+     * @public
+     * @readonly
+     */
+    public readonly extensions?: OPTIONAL<CSTACommonArguments>;
+
     constructor (
-        /**
-         * @summary `locDevice`.
-         * @description
-         *
-         * Device whose location is tracked (ECMA-269 §28.1.7.1).
-         *
-         * @public
-         * @readonly
-         */
-        readonly locDevice: DeviceID,
-        /**
-         * @summary `collectionType`.
-         * @description
-         *
-         * How the SF collects location; default if omitted (ECMA-269
-         * §28.1.7.1).
-         *
-         * @public
-         * @readonly
-         */
-        readonly collectionType?: OPTIONAL<CollectionType>,
-        /**
-         * @summary `collectionInterval`.
-         * @description
-         *
-         * Seconds between collections when type is periodic or
-         * periodicWithUpdates (ECMA-269 §28.1.7.1).
-         *
-         * @public
-         * @readonly
-         */
-        readonly collectionInterval?: OPTIONAL<INTEGER>,
-        /**
-         * @summary `maxCollections`.
-         * @description
-         *
-         * Maximum collections per hour; excess is not collected until the next
-         * hour (ECMA-269 §28.1.7.1).
-         *
-         * @public
-         * @readonly
-         */
-        readonly maxCollections?: OPTIONAL<INTEGER>,
-        /**
-         * @summary `collectionFilter`.
-         * @description
-         *
-         * Movement/civic filters; any match collects (ECMA-269 §28.1.7.1).
-         *
-         * @public
-         * @readonly
-         */
-        readonly collectionFilter?: OPTIONAL<CollectionFilter>,
-        /**
-         * @summary `reportingType`.
-         * @description
-         *
-         * When collected location is reported (ECMA-269 §28.1.7.1).
-         *
-         * @public
-         * @readonly
-         */
-        readonly reportingType?: OPTIONAL<ReportingType>,
-        /**
-         * @summary `reportingInterval`.
-         * @description
-         *
-         * Seconds between reports when reportingType is periodic (ECMA-269
-         * §28.1.7.1).
-         *
-         * @public
-         * @readonly
-         */
-        readonly reportingInterval?: OPTIONAL<INTEGER>,
-        /**
-         * @summary `reportingCount`.
-         * @description
-         *
-         * Number of collected records before a report when reportingType is
-         * count (ECMA-269 §28.1.7.1).
-         *
-         * @public
-         * @readonly
-         */
-        readonly reportingCount?: OPTIONAL<INTEGER>,
-        /**
-         * @summary `extensions`.
-         * @description
-         *
-         * CSTACommonArguments carrying the service-table security and
-         * privateData parameters.
-         *
-         * @public
-         * @readonly
-         */
-        readonly extensions?: OPTIONAL<CSTACommonArguments>
-    ) {}
+        locDevice: DeviceID,
+        collectionType?: OPTIONAL<CollectionType>,
+        collectionInterval?: OPTIONAL<INTEGER>,
+        maxCollections?: OPTIONAL<INTEGER>,
+        collectionFilter?: OPTIONAL<CollectionFilter>,
+        reportingType?: OPTIONAL<ReportingType>,
+        reportingInterval?: OPTIONAL<INTEGER>,
+        reportingCount?: OPTIONAL<INTEGER>,
+        extensions?: OPTIONAL<CSTACommonArguments>
+    ) {
+        this.locDevice = locDevice;
+        this.collectionType = collectionType;
+        this.collectionInterval = collectionInterval;
+        this.maxCollections = maxCollections;
+        this.collectionFilter = collectionFilter;
+        this.reportingType = reportingType;
+        this.reportingInterval = reportingInterval;
+        this.reportingCount = reportingCount;
+        this.extensions = extensions;
+    }
 
     /**
      * @summary Restructures an object into a StartLocationTrackingSessionArgument
@@ -182,13 +202,13 @@ class StartLocationTrackingSessionArgument {
          * @static
          */
 
-    public static _enum_for_collectionType = _enum_for_CollectionType;        /**
+    public static _enum_for_collectionType: typeof _enum_for_CollectionType = _enum_for_CollectionType;        /**
          * @summary The enum used as the type of the component `reportingType`
          * @public
          * @static
          */
 
-    public static _enum_for_reportingType = _enum_for_ReportingType;
+    public static _enum_for_reportingType: typeof _enum_for_ReportingType = _enum_for_ReportingType;
 }
 
 /**

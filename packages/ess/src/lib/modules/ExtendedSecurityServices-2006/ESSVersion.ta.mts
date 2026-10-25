@@ -1,5 +1,5 @@
 /* eslint-disable */
-import { ASN1Element as _Element, INTEGER } from "@wildboar/asn1";
+import { ASN1Element as _Element, type INTEGER } from "@wildboar/asn1";
 import * as $ from "@wildboar/asn1/functional";
 
 
@@ -24,7 +24,7 @@ export type ESSVersion = INTEGER;
  * @constant
  * @type {number}
  */
-export const ESSVersion_v1: ESSVersion = 1; /* LONG_NAMED_INTEGER_VALUE */
+export const ESSVersion_v1: 1 = 1 satisfies ESSVersion; /* LONG_NAMED_INTEGER_VALUE */
 
 
 /**
@@ -32,17 +32,17 @@ export const ESSVersion_v1: ESSVersion = 1; /* LONG_NAMED_INTEGER_VALUE */
  * @constant
  * @type {number}
  */
-export const v1: ESSVersion = ESSVersion_v1; /* SHORT_NAMED_INTEGER_VALUE */
+export const v1: 1 = ESSVersion_v1; /* SHORT_NAMED_INTEGER_VALUE */
 
 
 
 
-export const _decode_ESSVersion = $._decodeInteger;
+export const _decode_ESSVersion: $.ASN1Decoder<INTEGER> = $._decodeInteger;
 
 
 
 
-export const _encode_ESSVersion = $._encodeInteger;
+export const _encode_ESSVersion: $.ASN1Encoder<INTEGER> = $._encodeInteger;
 
 
 /* eslint-enable */

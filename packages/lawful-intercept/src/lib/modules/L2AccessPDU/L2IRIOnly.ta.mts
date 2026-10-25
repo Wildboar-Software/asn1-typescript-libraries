@@ -1,13 +1,13 @@
 /* eslint-disable */
 import {
-    INTEGER,
-    OPTIONAL,
-    RELATIVE_OID,
-    ASN1Element as _Element,
+    type INTEGER,
+    type OPTIONAL,
+    type RELATIVE_OID,
+    type ASN1Element as _Element,
     ASN1TagClass as _TagClass
 } from "@wildboar/asn1";
 import * as $ from "@wildboar/asn1/functional";
-import { L2ProtocolInformation, _decode_L2ProtocolInformation, _encode_L2ProtocolInformation } from "../L2AccessPDU/L2ProtocolInformation.ta.mjs";
+import { type L2ProtocolInformation, _decode_L2ProtocolInformation, _encode_L2ProtocolInformation } from "../L2AccessPDU/L2ProtocolInformation.ta.mjs";
 
 
 /**

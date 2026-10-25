@@ -1,5 +1,5 @@
 /* eslint-disable */
-import { ASN1Element as _Element, ENUMERATED } from "@wildboar/asn1";
+import { ASN1Element as _Element, type ENUMERATED } from "@wildboar/asn1";
 import * as $ from "@wildboar/asn1/functional";
 
 export enum _enum_for_PwdResponseValue_error {
@@ -36,7 +36,7 @@ export type PwdResponseValue_error =
  * @constant
  * @type {number}
  */
-export const PwdResponseValue_error_passwordExpired: PwdResponseValue_error = 0; /* LONG_NAMED_ENUMERATED_VALUE */
+export const PwdResponseValue_error_passwordExpired: _enum_for_PwdResponseValue_error.passwordExpired = _enum_for_PwdResponseValue_error.passwordExpired; /* LONG_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary passwordExpired
@@ -48,7 +48,7 @@ export const PwdResponseValue_error_passwordExpired: PwdResponseValue_error = 0;
  * @constant
  * @type {number}
  */
-export const passwordExpired: PwdResponseValue_error = PwdResponseValue_error_passwordExpired; /* SHORT_NAMED_ENUMERATED_VALUE */
+export const passwordExpired: _enum_for_PwdResponseValue_error.passwordExpired = PwdResponseValue_error_passwordExpired; /* SHORT_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary PwdResponseValue_error_changeAfterReset
@@ -59,7 +59,7 @@ export const passwordExpired: PwdResponseValue_error = PwdResponseValue_error_pa
  * @constant
  * @type {number}
  */
-export const PwdResponseValue_error_changeAfterReset: PwdResponseValue_error = 1; /* LONG_NAMED_ENUMERATED_VALUE */
+export const PwdResponseValue_error_changeAfterReset: _enum_for_PwdResponseValue_error.changeAfterReset = _enum_for_PwdResponseValue_error.changeAfterReset; /* LONG_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary changeAfterReset
@@ -70,13 +70,13 @@ export const PwdResponseValue_error_changeAfterReset: PwdResponseValue_error = 1
  * @constant
  * @type {number}
  */
-export const changeAfterReset: PwdResponseValue_error = PwdResponseValue_error_changeAfterReset; /* SHORT_NAMED_ENUMERATED_VALUE */
+export const changeAfterReset: _enum_for_PwdResponseValue_error.changeAfterReset = PwdResponseValue_error_changeAfterReset; /* SHORT_NAMED_ENUMERATED_VALUE */
 
 
-export const _decode_PwdResponseValue_error = $._decodeEnumerated;
+export const _decode_PwdResponseValue_error: $.ASN1Decoder<number> = $._decodeEnumerated;
 
 
-export const _encode_PwdResponseValue_error = $._encodeEnumerated;
+export const _encode_PwdResponseValue_error: $.ASN1Encoder<number> = $._encodeEnumerated;
 
 
 /* eslint-enable */

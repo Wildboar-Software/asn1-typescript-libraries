@@ -1,7 +1,7 @@
 /* eslint-disable */
 import {
-    OPTIONAL,
-    ASN1Element as _Element,
+    type OPTIONAL,
+    type ASN1Element as _Element,
     ASN1TagClass as _TagClass,
     ASN1Construction as _Construction,
     ASN1UniversalType as _UniversalType,
@@ -55,108 +55,130 @@ import {
  *
  */
 export class DefaultAccess {
+    /**
+     * @summary `action`.
+     * @description
+     *
+     * Default enforcement for `action` (0). DEFAULT `deny`.
+     * X.741 §8.1.2.1.1, A.5.8.
+     * @public
+     * @readonly
+     */
+    public readonly action?: OPTIONAL<EnforcementAction>;
+    /**
+     * @summary `create`.
+     * @description
+     *
+     * Default enforcement for `create` (1). DEFAULT `deny`.
+     * X.741 §8.1.2.1.1, A.5.8.
+     * @public
+     * @readonly
+     */
+    public readonly create?: OPTIONAL<EnforcementAction>;
+    /**
+     * @summary `delete_`.
+     * @description
+     *
+     * Default enforcement for `delete` (2). DEFAULT `deny`.
+     * X.741 §8.1.2.1.1, A.5.8.
+     * @public
+     * @readonly
+     */
+    public readonly delete_?: OPTIONAL<EnforcementAction>;
+    /**
+     * @summary `get_`.
+     * @description
+     *
+     * Default enforcement for `get` (3). DEFAULT `deny`.
+     * X.741 §8.1.2.1.1, A.5.8.
+     * @public
+     * @readonly
+     */
+    public readonly get_?: OPTIONAL<EnforcementAction>;
+    /**
+     * @summary `replace`.
+     * @description
+     *
+     * Default enforcement for `replace` (4). DEFAULT `deny`.
+     * X.741 §8.1.2.1.1, A.5.8.
+     * @public
+     * @readonly
+     */
+    public readonly replace?: OPTIONAL<EnforcementAction>;
+    /**
+     * @summary `addMember`.
+     * @description
+     *
+     * Default enforcement for `addMember` (5). DEFAULT
+     * `deny`. X.741 §8.1.2.1.1, A.5.8.
+     * @public
+     * @readonly
+     */
+    public readonly addMember?: OPTIONAL<EnforcementAction>;
+    /**
+     * @summary `removeMember`.
+     * @description
+     *
+     * Default enforcement for `removeMember` (6). DEFAULT
+     * `deny`. X.741 §8.1.2.1.1, A.5.8.
+     * @public
+     * @readonly
+     */
+    public readonly removeMember?: OPTIONAL<EnforcementAction>;
+    /**
+     * @summary `replaceWithDefault`.
+     * @description
+     *
+     * Default enforcement for `replaceWithDefault` (7).
+     * DEFAULT `deny`. X.741 §8.1.2.1.1, A.5.8.
+     * @public
+     * @readonly
+     */
+    public readonly replaceWithDefault?: OPTIONAL<EnforcementAction>;
+    /**
+     * @summary `multipleObjectSelection`.
+     * @description
+     *
+     * Default enforcement for `multipleObjectSelection` (8).
+     * DEFAULT `deny`. X.741 §8.1.2.1.1, A.5.8.
+     * @public
+     * @readonly
+     */
+    public readonly multipleObjectSelection?: OPTIONAL<EnforcementAction>;
+    /**
+     * @summary `filter`.
+     * @description
+     *
+     * Default enforcement for `filter` (9). DEFAULT `deny`.
+     * X.741 §8.1.2.1.1, A.5.8.
+     * @public
+     * @readonly
+     */
+    public readonly filter?: OPTIONAL<EnforcementAction>;
+
     constructor(
-        /**
-         * @summary `action`.
-         * @description
-         *
-         * Default enforcement for `action` (0). DEFAULT `deny`.
-         * X.741 §8.1.2.1.1, A.5.8.
-         * @public
-         * @readonly
-         */
-        readonly action?: OPTIONAL<EnforcementAction>,
-        /**
-         * @summary `create`.
-         * @description
-         *
-         * Default enforcement for `create` (1). DEFAULT `deny`.
-         * X.741 §8.1.2.1.1, A.5.8.
-         * @public
-         * @readonly
-         */
-        readonly create?: OPTIONAL<EnforcementAction>,
-        /**
-         * @summary `delete_`.
-         * @description
-         *
-         * Default enforcement for `delete` (2). DEFAULT `deny`.
-         * X.741 §8.1.2.1.1, A.5.8.
-         * @public
-         * @readonly
-         */
-        readonly delete_?: OPTIONAL<EnforcementAction>,
-        /**
-         * @summary `get_`.
-         * @description
-         *
-         * Default enforcement for `get` (3). DEFAULT `deny`.
-         * X.741 §8.1.2.1.1, A.5.8.
-         * @public
-         * @readonly
-         */
-        readonly get_?: OPTIONAL<EnforcementAction>,
-        /**
-         * @summary `replace`.
-         * @description
-         *
-         * Default enforcement for `replace` (4). DEFAULT `deny`.
-         * X.741 §8.1.2.1.1, A.5.8.
-         * @public
-         * @readonly
-         */
-        readonly replace?: OPTIONAL<EnforcementAction>,
-        /**
-         * @summary `addMember`.
-         * @description
-         *
-         * Default enforcement for `addMember` (5). DEFAULT
-         * `deny`. X.741 §8.1.2.1.1, A.5.8.
-         * @public
-         * @readonly
-         */
-        readonly addMember?: OPTIONAL<EnforcementAction>,
-        /**
-         * @summary `removeMember`.
-         * @description
-         *
-         * Default enforcement for `removeMember` (6). DEFAULT
-         * `deny`. X.741 §8.1.2.1.1, A.5.8.
-         * @public
-         * @readonly
-         */
-        readonly removeMember?: OPTIONAL<EnforcementAction>,
-        /**
-         * @summary `replaceWithDefault`.
-         * @description
-         *
-         * Default enforcement for `replaceWithDefault` (7).
-         * DEFAULT `deny`. X.741 §8.1.2.1.1, A.5.8.
-         * @public
-         * @readonly
-         */
-        readonly replaceWithDefault?: OPTIONAL<EnforcementAction>,
-        /**
-         * @summary `multipleObjectSelection`.
-         * @description
-         *
-         * Default enforcement for `multipleObjectSelection` (8).
-         * DEFAULT `deny`. X.741 §8.1.2.1.1, A.5.8.
-         * @public
-         * @readonly
-         */
-        readonly multipleObjectSelection?: OPTIONAL<EnforcementAction>,
-        /**
-         * @summary `filter`.
-         * @description
-         *
-         * Default enforcement for `filter` (9). DEFAULT `deny`.
-         * X.741 §8.1.2.1.1, A.5.8.
-         * @public
-         * @readonly
-         */
-        readonly filter?: OPTIONAL<EnforcementAction>
-    ) {}
+        action?: OPTIONAL<EnforcementAction>,
+        create?: OPTIONAL<EnforcementAction>,
+        delete_?: OPTIONAL<EnforcementAction>,
+        get_?: OPTIONAL<EnforcementAction>,
+        replace?: OPTIONAL<EnforcementAction>,
+        addMember?: OPTIONAL<EnforcementAction>,
+        removeMember?: OPTIONAL<EnforcementAction>,
+        replaceWithDefault?: OPTIONAL<EnforcementAction>,
+        multipleObjectSelection?: OPTIONAL<EnforcementAction>,
+        filter?: OPTIONAL<EnforcementAction>
+    ) {
+        this.action = action;
+        this.create = create;
+        this.delete_ = delete_;
+        this.get_ = get_;
+        this.replace = replace;
+        this.addMember = addMember;
+        this.removeMember = removeMember;
+        this.replaceWithDefault = replaceWithDefault;
+        this.multipleObjectSelection = multipleObjectSelection;
+        this.filter = filter;
+    }
 
     /**
      * @summary Restructures an object into a DefaultAccess
@@ -283,70 +305,70 @@ export class DefaultAccess {
      * @static
      */
 
-    public static _enum_for_action = _enum_for_EnforcementAction;
+    public static _enum_for_action: typeof _enum_for_EnforcementAction = _enum_for_EnforcementAction;
     /**
      * @summary The enum used as the type of the component `create`
      * @public
      * @static
      */
 
-    public static _enum_for_create = _enum_for_EnforcementAction;
+    public static _enum_for_create: typeof _enum_for_EnforcementAction = _enum_for_EnforcementAction;
     /**
      * @summary The enum used as the type of the component `delete_`
      * @public
      * @static
      */
 
-    public static _enum_for_delete_ = _enum_for_EnforcementAction;
+    public static _enum_for_delete_: typeof _enum_for_EnforcementAction = _enum_for_EnforcementAction;
     /**
      * @summary The enum used as the type of the component `get_`
      * @public
      * @static
      */
 
-    public static _enum_for_get_ = _enum_for_EnforcementAction;
+    public static _enum_for_get_: typeof _enum_for_EnforcementAction = _enum_for_EnforcementAction;
     /**
      * @summary The enum used as the type of the component `replace`
      * @public
      * @static
      */
 
-    public static _enum_for_replace = _enum_for_EnforcementAction;
+    public static _enum_for_replace: typeof _enum_for_EnforcementAction = _enum_for_EnforcementAction;
     /**
      * @summary The enum used as the type of the component `addMember`
      * @public
      * @static
      */
 
-    public static _enum_for_addMember = _enum_for_EnforcementAction;
+    public static _enum_for_addMember: typeof _enum_for_EnforcementAction = _enum_for_EnforcementAction;
     /**
      * @summary The enum used as the type of the component `removeMember`
      * @public
      * @static
      */
 
-    public static _enum_for_removeMember = _enum_for_EnforcementAction;
+    public static _enum_for_removeMember: typeof _enum_for_EnforcementAction = _enum_for_EnforcementAction;
     /**
      * @summary The enum used as the type of the component `replaceWithDefault`
      * @public
      * @static
      */
 
-    public static _enum_for_replaceWithDefault = _enum_for_EnforcementAction;
+    public static _enum_for_replaceWithDefault: typeof _enum_for_EnforcementAction = _enum_for_EnforcementAction;
     /**
      * @summary The enum used as the type of the component `multipleObjectSelection`
      * @public
      * @static
      */
 
-    public static _enum_for_multipleObjectSelection = _enum_for_EnforcementAction;
+    public static _enum_for_multipleObjectSelection: typeof _enum_for_EnforcementAction = _enum_for_EnforcementAction;
     /**
      * @summary The enum used as the type of the component `filter`
      * @public
      * @static
      */
 
-    public static _enum_for_filter = _enum_for_EnforcementAction;
+    public static _enum_for_filter: typeof _enum_for_EnforcementAction = _enum_for_EnforcementAction;
 }
 
 /**

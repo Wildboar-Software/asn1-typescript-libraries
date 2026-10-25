@@ -1,8 +1,8 @@
 /* eslint-disable */
 import {
-    OPTIONAL,
-    OCTET_STRING,
-    ASN1Element as _Element,
+    type OPTIONAL,
+    type OCTET_STRING,
+    type ASN1Element as _Element,
     ASN1TagClass as _TagClass,
     ASN1Construction as _Construction,
     ASN1UniversalType as _UniversalType,
@@ -12,16 +12,16 @@ import {
     ASN1ConstructionError as _ConstructionError,
 } from "@wildboar/asn1";
 import * as $ from "@wildboar/asn1/functional";
-import { PatronHeaderVersion, _decode_PatronHeaderVersion, _encode_PatronHeaderVersion } from "../CBEFF-SMARTCARD-BIDO/PatronHeaderVersion.ta.mjs";
-import { BiometricType, _decode_BiometricType, _encode_BiometricType } from "../CBEFF-SMARTCARD-BIDO/BiometricType.ta.mjs";
-import { BiometricSubType, _decode_BiometricSubType, _encode_BiometricSubType } from "../CBEFF-SMARTCARD-BIDO/BiometricSubType.ta.mjs";
-import { BCDTime, _decode_BCDTime, _encode_BCDTime } from "../CBEFF-SMARTCARD-BIDO/BCDTime.ta.mjs";
-import { Creator, _decode_Creator, _encode_Creator } from "../CBEFF-SMARTCARD-BIDO/Creator.ta.mjs";
-import { BCDDatePeriod, _decode_BCDDatePeriod, _encode_BCDDatePeriod } from "../CBEFF-SMARTCARD-BIDO/BCDDatePeriod.ta.mjs";
-import { ProductID, _decode_ProductID, _encode_ProductID } from "../CBEFF-SMARTCARD-BIDO/ProductID.ta.mjs";
-import { FormatOwner, _decode_FormatOwner, _encode_FormatOwner } from "../CBEFF-SMARTCARD-BIDO/FormatOwner.ta.mjs";
-import { FormatType, _decode_FormatType, _encode_FormatType } from "../CBEFF-SMARTCARD-BIDO/FormatType.ta.mjs";
-import { BIRIndex, _decode_BIRIndex, _encode_BIRIndex } from "../CBEFF-SMARTCARD-BIDO/BIRIndex.ta.mjs";
+import { type PatronHeaderVersion, _decode_PatronHeaderVersion, _encode_PatronHeaderVersion } from "../CBEFF-SMARTCARD-BIDO/PatronHeaderVersion.ta.mjs";
+import { type BiometricType, _decode_BiometricType, _encode_BiometricType } from "../CBEFF-SMARTCARD-BIDO/BiometricType.ta.mjs";
+import { type BiometricSubType, _decode_BiometricSubType, _encode_BiometricSubType } from "../CBEFF-SMARTCARD-BIDO/BiometricSubType.ta.mjs";
+import { type BCDTime, _decode_BCDTime, _encode_BCDTime } from "../CBEFF-SMARTCARD-BIDO/BCDTime.ta.mjs";
+import { type Creator, _decode_Creator, _encode_Creator } from "../CBEFF-SMARTCARD-BIDO/Creator.ta.mjs";
+import { type BCDDatePeriod, _decode_BCDDatePeriod, _encode_BCDDatePeriod } from "../CBEFF-SMARTCARD-BIDO/BCDDatePeriod.ta.mjs";
+import { type ProductID, _decode_ProductID, _encode_ProductID } from "../CBEFF-SMARTCARD-BIDO/ProductID.ta.mjs";
+import { type FormatOwner, _decode_FormatOwner, _encode_FormatOwner } from "../CBEFF-SMARTCARD-BIDO/FormatOwner.ta.mjs";
+import { type FormatType, _decode_FormatType, _encode_FormatType } from "../CBEFF-SMARTCARD-BIDO/FormatType.ta.mjs";
+import { type BIRIndex, _decode_BIRIndex, _encode_BIRIndex } from "../CBEFF-SMARTCARD-BIDO/BIRIndex.ta.mjs";
 /**
  * @summary BiometricHeaderTemplate
  * @description
@@ -56,67 +56,67 @@ class BiometricHeaderTemplate {
      * @public
      * @readonly
      */
-    readonly patronHeaderVersion: OPTIONAL<PatronHeaderVersion>;
+    public readonly patronHeaderVersion: OPTIONAL<PatronHeaderVersion>;
     /**
      * @summary `bdbBiometricType`.
      * @public
      * @readonly
      */
-    readonly bdbBiometricType: OPTIONAL<BiometricType>;
+    public readonly bdbBiometricType: OPTIONAL<BiometricType>;
     /**
      * @summary `bdbBiometricSubType`.
      * @public
      * @readonly
      */
-    readonly bdbBiometricSubType: OPTIONAL<BiometricSubType>;
+    public readonly bdbBiometricSubType: OPTIONAL<BiometricSubType>;
     /**
      * @summary `bdbCreationDate`.
      * @public
      * @readonly
      */
-    readonly bdbCreationDate: OPTIONAL<BCDTime>;
+    public readonly bdbCreationDate: OPTIONAL<BCDTime>;
     /**
      * @summary `birCreator`.
      * @public
      * @readonly
      */
-    readonly birCreator: OPTIONAL<Creator>;
+    public readonly birCreator: OPTIONAL<Creator>;
     /**
      * @summary `bdbValidityPeriod`.
      * @public
      * @readonly
      */
-    readonly bdbValidityPeriod: OPTIONAL<BCDDatePeriod>;
+    public readonly bdbValidityPeriod: OPTIONAL<BCDDatePeriod>;
     /**
      * @summary `bdbPID`.
      * @public
      * @readonly
      */
-    readonly bdbPID: OPTIONAL<ProductID>;
+    public readonly bdbPID: OPTIONAL<ProductID>;
     /**
      * @summary `bdbFormatOwner`.
      * @public
      * @readonly
      */
-    readonly bdbFormatOwner: FormatOwner;
+    public readonly bdbFormatOwner: FormatOwner;
     /**
      * @summary `bdbFormatType`.
      * @public
      * @readonly
      */
-    readonly bdbFormatType: FormatType;
+    public readonly bdbFormatType: FormatType;
     /**
      * @summary `birIndex`.
      * @public
      * @readonly
      */
-    readonly birIndex?: OPTIONAL<BIRIndex>;
+    public readonly birIndex?: OPTIONAL<BIRIndex>;
     /**
      * @summary `matchingAlgParameters`.
      * @public
      * @readonly
      */
-    readonly matchingAlgParameters?: OPTIONAL<OCTET_STRING>;
+    public readonly matchingAlgParameters?: OPTIONAL<OCTET_STRING>;
 
     constructor (
         patronHeaderVersion: OPTIONAL<PatronHeaderVersion>,

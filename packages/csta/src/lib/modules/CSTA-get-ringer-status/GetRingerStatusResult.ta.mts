@@ -2,13 +2,13 @@
 
 import * as $ from "@wildboar/asn1/functional";
 import {
-    OPTIONAL,
-    SEQUENCE,
-    SET,
-    ASN1Element as _Element,
+    type OPTIONAL,
+    type SEQUENCE,
+    type SET,
+    type ASN1Element as _Element,
     ASN1TagClass as _TagClass
 } from "@wildboar/asn1";
-import { RingerStatusList, _decode_RingerStatusList, _encode_RingerStatusList } from "../CSTA-get-ringer-status/RingerStatusList.ta.mjs";
+import { type RingerStatusList, _decode_RingerStatusList, _encode_RingerStatusList } from "../CSTA-get-ringer-status/RingerStatusList.ta.mjs";
 
 import { CSTACommonArguments, _decode_CSTACommonArguments, _encode_CSTACommonArguments } from "../CSTA-extension-types/CSTACommonArguments.ta.mjs";
 
@@ -35,27 +35,33 @@ import { CSTACommonArguments, _decode_CSTACommonArguments, _encode_CSTACommonArg
  */
 export
 class GetRingerStatusResult {
+    /**
+     * @summary `ringerStatusList`.
+     * @description
+     *
+     * One entry per queried ringer.
+     * @public
+     * @readonly
+     */
+    public readonly ringerStatusList: RingerStatusList;
+    /**
+     * @summary `extensions`.
+     * @description
+     *
+     * Optional security (timestamp, sequence, securityInfo) and
+     * privateData.
+     * @public
+     * @readonly
+     */
+    public readonly extensions?: OPTIONAL<CSTACommonArguments>;
+
     constructor (
-        /**
-         * @summary `ringerStatusList`.
-         * @description
-         *
-         * One entry per queried ringer.
-         * @public
-         * @readonly
-         */
-        readonly ringerStatusList: RingerStatusList,
-        /**
-         * @summary `extensions`.
-         * @description
-         *
-         * Optional security (timestamp, sequence, securityInfo) and
-         * privateData.
-         * @public
-         * @readonly
-         */
-        readonly extensions?: OPTIONAL<CSTACommonArguments>
-    ) {}
+        ringerStatusList: RingerStatusList,
+        extensions?: OPTIONAL<CSTACommonArguments>
+    ) {
+        this.ringerStatusList = ringerStatusList;
+        this.extensions = extensions;
+    }
 
     /**
      * @summary Restructures an object into a GetRingerStatusResult

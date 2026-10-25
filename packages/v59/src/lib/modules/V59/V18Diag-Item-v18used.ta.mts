@@ -1,6 +1,6 @@
 /* eslint-disable */
 import {
-    ASN1Element as _Element,
+    type ASN1Element as _Element,
     ASN1TagClass as _TagClass,
     ASN1Construction as _Construction,
     ASN1UniversalType as _UniversalType,
@@ -54,7 +54,8 @@ const _enum_for_V18Diag_Item_v18used = {
     bellLo: 15,
 } as const;
 
-export type _enum_for_V18Diag_Item_v18used = (typeof _enum_for_V18Diag_Item_v18used)[keyof typeof _enum_for_V18Diag_Item_v18used];
+export
+type _enum_for_V18Diag_Item_v18used = (typeof _enum_for_V18Diag_Item_v18used)[keyof typeof _enum_for_V18Diag_Item_v18used];
 
 /**
  * @summary V18Diag_Item_v18used
@@ -106,7 +107,7 @@ type V18Diag_Item_v18used = _enum_for_V18Diag_Item_v18used;
  * @enum {number}
  */
 export
-const V18Diag_Item_v18used = _enum_for_V18Diag_Item_v18used;
+const V18Diag_Item_v18used: typeof _enum_for_V18Diag_Item_v18used = _enum_for_V18Diag_Item_v18used;
 
 /**
  * @summary V18Diag_Item_v18used_none
@@ -117,7 +118,7 @@ const V18Diag_Item_v18used = _enum_for_V18Diag_Item_v18used;
  * @type {number}
  */
 export
-const V18Diag_Item_v18used_none: V18Diag_Item_v18used = V18Diag_Item_v18used.none; /* LONG_NAMED_ENUMERATED_VALUE */
+const V18Diag_Item_v18used_none: 0 = V18Diag_Item_v18used.none; /* LONG_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary none
@@ -125,7 +126,7 @@ const V18Diag_Item_v18used_none: V18Diag_Item_v18used = V18Diag_Item_v18used.non
  * @type {number}
  */
 export
-const none: V18Diag_Item_v18used = V18Diag_Item_v18used.none; /* SHORT_NAMED_ENUMERATED_VALUE */
+const none: 0 = V18Diag_Item_v18used.none; /* SHORT_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary V18Diag_Item_v18used_v18_V21Hi
@@ -137,7 +138,7 @@ const none: V18Diag_Item_v18used = V18Diag_Item_v18used.none; /* SHORT_NAMED_ENU
  * @type {number}
  */
 export
-const V18Diag_Item_v18used_v18_V21Hi: V18Diag_Item_v18used = V18Diag_Item_v18used.v18_V21Hi; /* LONG_NAMED_ENUMERATED_VALUE */
+const V18Diag_Item_v18used_v18_V21Hi: 1 = V18Diag_Item_v18used.v18_V21Hi; /* LONG_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary v18_V21Hi
@@ -145,7 +146,7 @@ const V18Diag_Item_v18used_v18_V21Hi: V18Diag_Item_v18used = V18Diag_Item_v18use
  * @type {number}
  */
 export
-const v18_V21Hi: V18Diag_Item_v18used = V18Diag_Item_v18used.v18_V21Hi; /* SHORT_NAMED_ENUMERATED_VALUE */
+const v18_V21Hi: 1 = V18Diag_Item_v18used.v18_V21Hi; /* SHORT_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary V18Diag_Item_v18used_v18_V21Lo
@@ -157,7 +158,7 @@ const v18_V21Hi: V18Diag_Item_v18used = V18Diag_Item_v18used.v18_V21Hi; /* SHORT
  * @type {number}
  */
 export
-const V18Diag_Item_v18used_v18_V21Lo: V18Diag_Item_v18used = V18Diag_Item_v18used.v18_V21Lo; /* LONG_NAMED_ENUMERATED_VALUE */
+const V18Diag_Item_v18used_v18_V21Lo: 2 = V18Diag_Item_v18used.v18_V21Lo; /* LONG_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary v18_V21Lo
@@ -165,7 +166,7 @@ const V18Diag_Item_v18used_v18_V21Lo: V18Diag_Item_v18used = V18Diag_Item_v18use
  * @type {number}
  */
 export
-const v18_V21Lo: V18Diag_Item_v18used = V18Diag_Item_v18used.v18_V21Lo; /* SHORT_NAMED_ENUMERATED_VALUE */
+const v18_V21Lo: 2 = V18Diag_Item_v18used.v18_V21Lo; /* SHORT_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary V18Diag_Item_v18used_v18_V61C
@@ -177,7 +178,7 @@ const v18_V21Lo: V18Diag_Item_v18used = V18Diag_Item_v18used.v18_V21Lo; /* SHORT
  * @type {number}
  */
 export
-const V18Diag_Item_v18used_v18_V61C: V18Diag_Item_v18used = V18Diag_Item_v18used.v18_V61C; /* LONG_NAMED_ENUMERATED_VALUE */
+const V18Diag_Item_v18used_v18_V61C: 3 = V18Diag_Item_v18used.v18_V61C; /* LONG_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary v18_V61C
@@ -185,7 +186,7 @@ const V18Diag_Item_v18used_v18_V61C: V18Diag_Item_v18used = V18Diag_Item_v18used
  * @type {number}
  */
 export
-const v18_V61C: V18Diag_Item_v18used = V18Diag_Item_v18used.v18_V61C; /* SHORT_NAMED_ENUMERATED_VALUE */
+const v18_V61C: 3 = V18Diag_Item_v18used.v18_V61C; /* SHORT_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary V18Diag_Item_v18used_v18_V61A
@@ -197,7 +198,7 @@ const v18_V61C: V18Diag_Item_v18used = V18Diag_Item_v18used.v18_V61C; /* SHORT_N
  * @type {number}
  */
 export
-const V18Diag_Item_v18used_v18_V61A: V18Diag_Item_v18used = V18Diag_Item_v18used.v18_V61A; /* LONG_NAMED_ENUMERATED_VALUE */
+const V18Diag_Item_v18used_v18_V61A: 4 = V18Diag_Item_v18used.v18_V61A; /* LONG_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary v18_V61A
@@ -205,7 +206,7 @@ const V18Diag_Item_v18used_v18_V61A: V18Diag_Item_v18used = V18Diag_Item_v18used
  * @type {number}
  */
 export
-const v18_V61A: V18Diag_Item_v18used = V18Diag_Item_v18used.v18_V61A; /* SHORT_NAMED_ENUMERATED_VALUE */
+const v18_V61A: 4 = V18Diag_Item_v18used.v18_V61A; /* SHORT_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary V18Diag_Item_v18used_v21Hi
@@ -217,7 +218,7 @@ const v18_V61A: V18Diag_Item_v18used = V18Diag_Item_v18used.v18_V61A; /* SHORT_N
  * @type {number}
  */
 export
-const V18Diag_Item_v18used_v21Hi: V18Diag_Item_v18used = V18Diag_Item_v18used.v21Hi; /* LONG_NAMED_ENUMERATED_VALUE */
+const V18Diag_Item_v18used_v21Hi: 5 = V18Diag_Item_v18used.v21Hi; /* LONG_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary v21Hi
@@ -225,7 +226,7 @@ const V18Diag_Item_v18used_v21Hi: V18Diag_Item_v18used = V18Diag_Item_v18used.v2
  * @type {number}
  */
 export
-const v21Hi: V18Diag_Item_v18used = V18Diag_Item_v18used.v21Hi; /* SHORT_NAMED_ENUMERATED_VALUE */
+const v21Hi: 5 = V18Diag_Item_v18used.v21Hi; /* SHORT_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary V18Diag_Item_v18used_v21Lo
@@ -237,7 +238,7 @@ const v21Hi: V18Diag_Item_v18used = V18Diag_Item_v18used.v21Hi; /* SHORT_NAMED_E
  * @type {number}
  */
 export
-const V18Diag_Item_v18used_v21Lo: V18Diag_Item_v18used = V18Diag_Item_v18used.v21Lo; /* LONG_NAMED_ENUMERATED_VALUE */
+const V18Diag_Item_v18used_v21Lo: 6 = V18Diag_Item_v18used.v21Lo; /* LONG_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary v21Lo
@@ -245,7 +246,7 @@ const V18Diag_Item_v18used_v21Lo: V18Diag_Item_v18used = V18Diag_Item_v18used.v2
  * @type {number}
  */
 export
-const v21Lo: V18Diag_Item_v18used = V18Diag_Item_v18used.v21Lo; /* SHORT_NAMED_ENUMERATED_VALUE */
+const v21Lo: 6 = V18Diag_Item_v18used.v21Lo; /* SHORT_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary V18Diag_Item_v18used_dTMF
@@ -256,7 +257,7 @@ const v21Lo: V18Diag_Item_v18used = V18Diag_Item_v18used.v21Lo; /* SHORT_NAMED_E
  * @type {number}
  */
 export
-const V18Diag_Item_v18used_dTMF: V18Diag_Item_v18used = V18Diag_Item_v18used.dTMF; /* LONG_NAMED_ENUMERATED_VALUE */
+const V18Diag_Item_v18used_dTMF: 7 = V18Diag_Item_v18used.dTMF; /* LONG_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary dTMF
@@ -264,7 +265,7 @@ const V18Diag_Item_v18used_dTMF: V18Diag_Item_v18used = V18Diag_Item_v18used.dTM
  * @type {number}
  */
 export
-const dTMF: V18Diag_Item_v18used = V18Diag_Item_v18used.dTMF; /* SHORT_NAMED_ENUMERATED_VALUE */
+const dTMF: 7 = V18Diag_Item_v18used.dTMF; /* SHORT_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary V18Diag_Item_v18used_eDT
@@ -276,7 +277,7 @@ const dTMF: V18Diag_Item_v18used = V18Diag_Item_v18used.dTMF; /* SHORT_NAMED_ENU
  * @type {number}
  */
 export
-const V18Diag_Item_v18used_eDT: V18Diag_Item_v18used = V18Diag_Item_v18used.eDT; /* LONG_NAMED_ENUMERATED_VALUE */
+const V18Diag_Item_v18used_eDT: 8 = V18Diag_Item_v18used.eDT; /* LONG_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary eDT
@@ -284,7 +285,7 @@ const V18Diag_Item_v18used_eDT: V18Diag_Item_v18used = V18Diag_Item_v18used.eDT;
  * @type {number}
  */
 export
-const eDT: V18Diag_Item_v18used = V18Diag_Item_v18used.eDT; /* SHORT_NAMED_ENUMERATED_VALUE */
+const eDT: 8 = V18Diag_Item_v18used.eDT; /* SHORT_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary V18Diag_Item_v18used_baudot45
@@ -295,7 +296,7 @@ const eDT: V18Diag_Item_v18used = V18Diag_Item_v18used.eDT; /* SHORT_NAMED_ENUME
  * @type {number}
  */
 export
-const V18Diag_Item_v18used_baudot45: V18Diag_Item_v18used = V18Diag_Item_v18used.baudot45; /* LONG_NAMED_ENUMERATED_VALUE */
+const V18Diag_Item_v18used_baudot45: 9 = V18Diag_Item_v18used.baudot45; /* LONG_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary baudot45
@@ -303,7 +304,7 @@ const V18Diag_Item_v18used_baudot45: V18Diag_Item_v18used = V18Diag_Item_v18used
  * @type {number}
  */
 export
-const baudot45: V18Diag_Item_v18used = V18Diag_Item_v18used.baudot45; /* SHORT_NAMED_ENUMERATED_VALUE */
+const baudot45: 9 = V18Diag_Item_v18used.baudot45; /* SHORT_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary V18Diag_Item_v18used_baudot47
@@ -315,7 +316,7 @@ const baudot45: V18Diag_Item_v18used = V18Diag_Item_v18used.baudot45; /* SHORT_N
  * @type {number}
  */
 export
-const V18Diag_Item_v18used_baudot47: V18Diag_Item_v18used = V18Diag_Item_v18used.baudot47; /* LONG_NAMED_ENUMERATED_VALUE */
+const V18Diag_Item_v18used_baudot47: 10 = V18Diag_Item_v18used.baudot47; /* LONG_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary baudot47
@@ -323,7 +324,7 @@ const V18Diag_Item_v18used_baudot47: V18Diag_Item_v18used = V18Diag_Item_v18used
  * @type {number}
  */
 export
-const baudot47: V18Diag_Item_v18used = V18Diag_Item_v18used.baudot47; /* SHORT_NAMED_ENUMERATED_VALUE */
+const baudot47: 10 = V18Diag_Item_v18used.baudot47; /* SHORT_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary V18Diag_Item_v18used_baudot50
@@ -334,7 +335,7 @@ const baudot47: V18Diag_Item_v18used = V18Diag_Item_v18used.baudot47; /* SHORT_N
  * @type {number}
  */
 export
-const V18Diag_Item_v18used_baudot50: V18Diag_Item_v18used = V18Diag_Item_v18used.baudot50; /* LONG_NAMED_ENUMERATED_VALUE */
+const V18Diag_Item_v18used_baudot50: 11 = V18Diag_Item_v18used.baudot50; /* LONG_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary baudot50
@@ -342,7 +343,7 @@ const V18Diag_Item_v18used_baudot50: V18Diag_Item_v18used = V18Diag_Item_v18used
  * @type {number}
  */
 export
-const baudot50: V18Diag_Item_v18used = V18Diag_Item_v18used.baudot50; /* SHORT_NAMED_ENUMERATED_VALUE */
+const baudot50: 11 = V18Diag_Item_v18used.baudot50; /* SHORT_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary V18Diag_Item_v18used_v23Hi
@@ -354,7 +355,7 @@ const baudot50: V18Diag_Item_v18used = V18Diag_Item_v18used.baudot50; /* SHORT_N
  * @type {number}
  */
 export
-const V18Diag_Item_v18used_v23Hi: V18Diag_Item_v18used = V18Diag_Item_v18used.v23Hi; /* LONG_NAMED_ENUMERATED_VALUE */
+const V18Diag_Item_v18used_v23Hi: 12 = V18Diag_Item_v18used.v23Hi; /* LONG_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary v23Hi
@@ -362,7 +363,7 @@ const V18Diag_Item_v18used_v23Hi: V18Diag_Item_v18used = V18Diag_Item_v18used.v2
  * @type {number}
  */
 export
-const v23Hi: V18Diag_Item_v18used = V18Diag_Item_v18used.v23Hi; /* SHORT_NAMED_ENUMERATED_VALUE */
+const v23Hi: 12 = V18Diag_Item_v18used.v23Hi; /* SHORT_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary V18Diag_Item_v18used_v23Lo
@@ -374,7 +375,7 @@ const v23Hi: V18Diag_Item_v18used = V18Diag_Item_v18used.v23Hi; /* SHORT_NAMED_E
  * @type {number}
  */
 export
-const V18Diag_Item_v18used_v23Lo: V18Diag_Item_v18used = V18Diag_Item_v18used.v23Lo; /* LONG_NAMED_ENUMERATED_VALUE */
+const V18Diag_Item_v18used_v23Lo: 13 = V18Diag_Item_v18used.v23Lo; /* LONG_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary v23Lo
@@ -382,7 +383,7 @@ const V18Diag_Item_v18used_v23Lo: V18Diag_Item_v18used = V18Diag_Item_v18used.v2
  * @type {number}
  */
 export
-const v23Lo: V18Diag_Item_v18used = V18Diag_Item_v18used.v23Lo; /* SHORT_NAMED_ENUMERATED_VALUE */
+const v23Lo: 13 = V18Diag_Item_v18used.v23Lo; /* SHORT_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary V18Diag_Item_v18used_bellHi
@@ -394,7 +395,7 @@ const v23Lo: V18Diag_Item_v18used = V18Diag_Item_v18used.v23Lo; /* SHORT_NAMED_E
  * @type {number}
  */
 export
-const V18Diag_Item_v18used_bellHi: V18Diag_Item_v18used = V18Diag_Item_v18used.bellHi; /* LONG_NAMED_ENUMERATED_VALUE */
+const V18Diag_Item_v18used_bellHi: 14 = V18Diag_Item_v18used.bellHi; /* LONG_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary bellHi
@@ -402,7 +403,7 @@ const V18Diag_Item_v18used_bellHi: V18Diag_Item_v18used = V18Diag_Item_v18used.b
  * @type {number}
  */
 export
-const bellHi: V18Diag_Item_v18used = V18Diag_Item_v18used.bellHi; /* SHORT_NAMED_ENUMERATED_VALUE */
+const bellHi: 14 = V18Diag_Item_v18used.bellHi; /* SHORT_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary V18Diag_Item_v18used_bellLo
@@ -414,7 +415,7 @@ const bellHi: V18Diag_Item_v18used = V18Diag_Item_v18used.bellHi; /* SHORT_NAMED
  * @type {number}
  */
 export
-const V18Diag_Item_v18used_bellLo: V18Diag_Item_v18used = V18Diag_Item_v18used.bellLo; /* LONG_NAMED_ENUMERATED_VALUE */
+const V18Diag_Item_v18used_bellLo: 15 = V18Diag_Item_v18used.bellLo; /* LONG_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary bellLo
@@ -422,8 +423,33 @@ const V18Diag_Item_v18used_bellLo: V18Diag_Item_v18used = V18Diag_Item_v18used.b
  * @type {number}
  */
 export
-const bellLo: V18Diag_Item_v18used = V18Diag_Item_v18used.bellLo; /* SHORT_NAMED_ENUMERATED_VALUE */
-export const _decode_V18Diag_Item_v18used = $._decodeEnumerated as $.ASN1Decoder<V18Diag_Item_v18used>;
-export const _encode_V18Diag_Item_v18used = $._encodeEnumerated as $.ASN1Encoder<V18Diag_Item_v18used>;
+const bellLo: 15 = V18Diag_Item_v18used.bellLo; /* SHORT_NAMED_ENUMERATED_VALUE */
+export function _decode_V18Diag_Item_v18used(el: _Element): V18Diag_Item_v18used {
+    const enumerated = $._decodeEnumerated(el);
+    switch (enumerated) {
+        case V18Diag_Item_v18used.none: return V18Diag_Item_v18used.none;
+        case V18Diag_Item_v18used.v18_V21Hi: return V18Diag_Item_v18used.v18_V21Hi;
+        case V18Diag_Item_v18used.v18_V21Lo: return V18Diag_Item_v18used.v18_V21Lo;
+        case V18Diag_Item_v18used.v18_V61C: return V18Diag_Item_v18used.v18_V61C;
+        case V18Diag_Item_v18used.v18_V61A: return V18Diag_Item_v18used.v18_V61A;
+        case V18Diag_Item_v18used.v21Hi: return V18Diag_Item_v18used.v21Hi;
+        case V18Diag_Item_v18used.v21Lo: return V18Diag_Item_v18used.v21Lo;
+        case V18Diag_Item_v18used.dTMF: return V18Diag_Item_v18used.dTMF;
+        case V18Diag_Item_v18used.eDT: return V18Diag_Item_v18used.eDT;
+        case V18Diag_Item_v18used.baudot45: return V18Diag_Item_v18used.baudot45;
+        case V18Diag_Item_v18used.baudot47: return V18Diag_Item_v18used.baudot47;
+        case V18Diag_Item_v18used.baudot50: return V18Diag_Item_v18used.baudot50;
+        case V18Diag_Item_v18used.v23Hi: return V18Diag_Item_v18used.v23Hi;
+        case V18Diag_Item_v18used.v23Lo: return V18Diag_Item_v18used.v23Lo;
+        case V18Diag_Item_v18used.bellHi: return V18Diag_Item_v18used.bellHi;
+        case V18Diag_Item_v18used.bellLo: return V18Diag_Item_v18used.bellLo;
+        default:
+            throw new _ConstructionError(
+                "Invalid ENUMERATED value " + enumerated + " for V18Diag_Item_v18used.",
+                el,
+            );
+    }
+}
+export const _encode_V18Diag_Item_v18used: $.ASN1Encoder<V18Diag_Item_v18used> = $._encodeEnumerated as $.ASN1Encoder<V18Diag_Item_v18used>;
 
 /* eslint-enable */

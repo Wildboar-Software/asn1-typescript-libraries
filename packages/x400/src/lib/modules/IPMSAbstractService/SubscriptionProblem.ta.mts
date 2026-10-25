@@ -1,6 +1,6 @@
 /* eslint-disable */
 import {
-    ASN1Element as _Element,
+    type ASN1Element as _Element,
     ASN1TagClass as _TagClass,
     ASN1Construction as _Construction,
     ASN1UniversalType as _UniversalType,
@@ -59,14 +59,14 @@ export type SubscriptionProblem = _enum_for_SubscriptionProblem;
  *
  * @enum {number}
  */
-export const SubscriptionProblem = _enum_for_SubscriptionProblem;
+export const SubscriptionProblem: typeof _enum_for_SubscriptionProblem = _enum_for_SubscriptionProblem;
 
 /**
  * @summary SubscriptionProblem_ipms_eos_not_subscribed
  * @constant
  * @type {number}
  */
-export const SubscriptionProblem_ipms_eos_not_subscribed: SubscriptionProblem =
+export const SubscriptionProblem_ipms_eos_not_subscribed: _enum_for_SubscriptionProblem.ipms_eos_not_subscribed =
     SubscriptionProblem.ipms_eos_not_subscribed; /* LONG_NAMED_ENUMERATED_VALUE */
 
 /**
@@ -74,7 +74,7 @@ export const SubscriptionProblem_ipms_eos_not_subscribed: SubscriptionProblem =
  * @constant
  * @type {number}
  */
-export const ipms_eos_not_subscribed: SubscriptionProblem =
+export const ipms_eos_not_subscribed: _enum_for_SubscriptionProblem.ipms_eos_not_subscribed =
     SubscriptionProblem.ipms_eos_not_subscribed; /* SHORT_NAMED_ENUMERATED_VALUE */
 
 /**
@@ -82,7 +82,7 @@ export const ipms_eos_not_subscribed: SubscriptionProblem =
  * @constant
  * @type {number}
  */
-export const SubscriptionProblem_mts_eos_not_subscribed: SubscriptionProblem =
+export const SubscriptionProblem_mts_eos_not_subscribed: _enum_for_SubscriptionProblem.mts_eos_not_subscribed =
     SubscriptionProblem.mts_eos_not_subscribed; /* LONG_NAMED_ENUMERATED_VALUE */
 
 /**
@@ -90,14 +90,25 @@ export const SubscriptionProblem_mts_eos_not_subscribed: SubscriptionProblem =
  * @constant
  * @type {number}
  */
-export const mts_eos_not_subscribed: SubscriptionProblem =
+export const mts_eos_not_subscribed: _enum_for_SubscriptionProblem.mts_eos_not_subscribed =
     SubscriptionProblem.mts_eos_not_subscribed; /* SHORT_NAMED_ENUMERATED_VALUE */
 
 
-export const _decode_SubscriptionProblem = $._decodeEnumerated;
+export function _decode_SubscriptionProblem(el: _Element): SubscriptionProblem {
+    const enumerated = $._decodeEnumerated(el);
+    switch (enumerated) {
+        case SubscriptionProblem.ipms_eos_not_subscribed: return SubscriptionProblem.ipms_eos_not_subscribed;
+        case SubscriptionProblem.mts_eos_not_subscribed: return SubscriptionProblem.mts_eos_not_subscribed;
+        default:
+            throw new _ConstructionError(
+                'Invalid ENUMERATED value ' + enumerated + ' for SubscriptionProblem.',
+                el,
+            );
+    }
+}
 
 
-export const _encode_SubscriptionProblem = $._encodeEnumerated;
+export const _encode_SubscriptionProblem: $.ASN1Encoder<SubscriptionProblem> = $._encodeEnumerated as $.ASN1Encoder<SubscriptionProblem>;
 
 
 /* eslint-enable */

@@ -1,12 +1,12 @@
 /* eslint-disable */
 import {
     ASN1ConstructionError as _ConstructionError,
-    ASN1Element as _Element,
+    type ASN1Element as _Element,
     ASN1TagClass as _TagClass
 } from "@wildboar/asn1";
 import * as $ from "@wildboar/asn1/functional";
-import { USSD_DataCodingScheme, _decode_USSD_DataCodingScheme, _encode_USSD_DataCodingScheme } from "../MAP-SS-DataTypes/USSD-DataCodingScheme.ta.mjs";
-import { USSD_String, _decode_USSD_String, _encode_USSD_String } from "../MAP-SS-DataTypes/USSD-String.ta.mjs";
+import { type USSD_DataCodingScheme, _decode_USSD_DataCodingScheme, _encode_USSD_DataCodingScheme } from "../MAP-SS-DataTypes/USSD-DataCodingScheme.ta.mjs";
+import { type USSD_String, _decode_USSD_String, _encode_USSD_String } from "../MAP-SS-DataTypes/USSD-String.ta.mjs";
 
 
 /**
@@ -29,36 +29,44 @@ import { USSD_String, _decode_USSD_String, _encode_USSD_String } from "../MAP-SS
  */
 export
 class USSD_Res {
+    /**
+     * @summary `ussd_DataCodingScheme`.
+     * @description
+     *
+     * Cell Broadcast DCS as in 3GPP TS 23.038 (3GPP TS 29.002 V19.1.0
+     * clauses 7.6.4.36 and 17.7.4).
+     *
+     * @public
+     * @readonly
+     */
+    public readonly ussd_DataCodingScheme: USSD_DataCodingScheme;
+    /**
+     * @summary `ussd_String`.
+     * @description
+     *
+     * Unstructured information; structure depends on the DCS (3GPP TS
+     * 23.038) (3GPP TS 29.002 V19.1.0 clauses 7.6.4.37 and 17.7.4).
+     *
+     * @public
+     * @readonly
+     */
+    public readonly ussd_String: USSD_String;
+    /**
+     * @summary Extensions that are not recognized.
+     * @public
+     * @readonly
+     */
+    public readonly _unrecognizedExtensionsList: _Element[];
+
     constructor (
-        /**
-         * @summary `ussd_DataCodingScheme`.
-         * @description
-         *
-         * Cell Broadcast DCS as in 3GPP TS 23.038 (3GPP TS 29.002 V19.1.0
-         * clauses 7.6.4.36 and 17.7.4).
-         *
-         * @public
-         * @readonly
-         */
-        readonly ussd_DataCodingScheme: USSD_DataCodingScheme,
-        /**
-         * @summary `ussd_String`.
-         * @description
-         *
-         * Unstructured information; structure depends on the DCS (3GPP TS
-         * 23.038) (3GPP TS 29.002 V19.1.0 clauses 7.6.4.37 and 17.7.4).
-         *
-         * @public
-         * @readonly
-         */
-        readonly ussd_String: USSD_String,
-        /**
-         * @summary Extensions that are not recognized.
-         * @public
-         * @readonly
-         */
-        readonly _unrecognizedExtensionsList: _Element[] = []
-    ) {}
+        ussd_DataCodingScheme: USSD_DataCodingScheme,
+        ussd_String: USSD_String,
+        _unrecognizedExtensionsList: _Element[] = []
+    ) {
+        this.ussd_DataCodingScheme = ussd_DataCodingScheme;
+        this.ussd_String = ussd_String;
+        this._unrecognizedExtensionsList = _unrecognizedExtensionsList;
+    }
 
     /**
      * @summary Restructures an object into a USSD_Res

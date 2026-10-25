@@ -1,6 +1,6 @@
 /* eslint-disable */
 import {
-    ASN1Element as _Element,
+    type ASN1Element as _Element,
     ASN1TagClass as _TagClass,
     ASN1Construction as _Construction,
     ASN1UniversalType as _UniversalType,
@@ -126,7 +126,7 @@ export type EnforcementAction = _enum_for_EnforcementAction;
  *
  * @enum {number}
  */
-export const EnforcementAction = _enum_for_EnforcementAction;
+export const EnforcementAction: typeof _enum_for_EnforcementAction = _enum_for_EnforcementAction;
 
 /**
  * @summary EnforcementAction_denyWithResponse
@@ -139,7 +139,7 @@ export const EnforcementAction = _enum_for_EnforcementAction;
  * @constant
  * @type {number}
  */
-export const EnforcementAction_denyWithResponse: EnforcementAction =
+export const EnforcementAction_denyWithResponse: _enum_for_EnforcementAction.denyWithResponse =
     EnforcementAction.denyWithResponse; /* LONG_NAMED_ENUMERATED_VALUE */
 
 /**
@@ -152,7 +152,7 @@ export const EnforcementAction_denyWithResponse: EnforcementAction =
  * @constant
  * @type {number}
  */
-export const denyWithResponse: EnforcementAction =
+export const denyWithResponse: _enum_for_EnforcementAction.denyWithResponse =
     EnforcementAction.denyWithResponse; /* SHORT_NAMED_ENUMERATED_VALUE */
 
 /**
@@ -165,7 +165,7 @@ export const denyWithResponse: EnforcementAction =
  * @constant
  * @type {number}
  */
-export const EnforcementAction_denyWithoutResponse: EnforcementAction =
+export const EnforcementAction_denyWithoutResponse: _enum_for_EnforcementAction.denyWithoutResponse =
     EnforcementAction.denyWithoutResponse; /* LONG_NAMED_ENUMERATED_VALUE */
 
 /**
@@ -177,7 +177,7 @@ export const EnforcementAction_denyWithoutResponse: EnforcementAction =
  * @constant
  * @type {number}
  */
-export const denyWithoutResponse: EnforcementAction =
+export const denyWithoutResponse: _enum_for_EnforcementAction.denyWithoutResponse =
     EnforcementAction.denyWithoutResponse; /* SHORT_NAMED_ENUMERATED_VALUE */
 
 /**
@@ -190,7 +190,7 @@ export const denyWithoutResponse: EnforcementAction =
  * @constant
  * @type {number}
  */
-export const EnforcementAction_abortAssociation: EnforcementAction =
+export const EnforcementAction_abortAssociation: _enum_for_EnforcementAction.abortAssociation =
     EnforcementAction.abortAssociation; /* LONG_NAMED_ENUMERATED_VALUE */
 
 /**
@@ -202,7 +202,7 @@ export const EnforcementAction_abortAssociation: EnforcementAction =
  * @constant
  * @type {number}
  */
-export const abortAssociation: EnforcementAction =
+export const abortAssociation: _enum_for_EnforcementAction.abortAssociation =
     EnforcementAction.abortAssociation; /* SHORT_NAMED_ENUMERATED_VALUE */
 
 /**
@@ -216,7 +216,7 @@ export const abortAssociation: EnforcementAction =
  * @constant
  * @type {number}
  */
-export const EnforcementAction_denyWithFalseResponse: EnforcementAction =
+export const EnforcementAction_denyWithFalseResponse: _enum_for_EnforcementAction.denyWithFalseResponse =
     EnforcementAction.denyWithFalseResponse; /* LONG_NAMED_ENUMERATED_VALUE */
 
 /**
@@ -229,7 +229,7 @@ export const EnforcementAction_denyWithFalseResponse: EnforcementAction =
  * @constant
  * @type {number}
  */
-export const denyWithFalseResponse: EnforcementAction =
+export const denyWithFalseResponse: _enum_for_EnforcementAction.denyWithFalseResponse =
     EnforcementAction.denyWithFalseResponse; /* SHORT_NAMED_ENUMERATED_VALUE */
 
 /**
@@ -243,7 +243,7 @@ export const denyWithFalseResponse: EnforcementAction =
  * @constant
  * @type {number}
  */
-export const EnforcementAction_allow: EnforcementAction =
+export const EnforcementAction_allow: _enum_for_EnforcementAction.allow =
     EnforcementAction.allow; /* LONG_NAMED_ENUMERATED_VALUE */
 
 /**
@@ -255,14 +255,28 @@ export const EnforcementAction_allow: EnforcementAction =
  * @constant
  * @type {number}
  */
-export const allow: EnforcementAction =
+export const allow: _enum_for_EnforcementAction.allow =
     EnforcementAction.allow; /* SHORT_NAMED_ENUMERATED_VALUE */
 
 
-export const _decode_EnforcementAction = $._decodeEnumerated;
+export function _decode_EnforcementAction(el: _Element): EnforcementAction {
+    const enumerated = $._decodeEnumerated(el);
+    switch (enumerated) {
+        case EnforcementAction.denyWithResponse: return EnforcementAction.denyWithResponse;
+        case EnforcementAction.denyWithoutResponse: return EnforcementAction.denyWithoutResponse;
+        case EnforcementAction.abortAssociation: return EnforcementAction.abortAssociation;
+        case EnforcementAction.denyWithFalseResponse: return EnforcementAction.denyWithFalseResponse;
+        case EnforcementAction.allow: return EnforcementAction.allow;
+        default:
+            throw new _ConstructionError(
+                'Invalid ENUMERATED value ' + enumerated + ' for EnforcementAction.',
+                el,
+            );
+    }
+}
 
 
-export const _encode_EnforcementAction = $._encodeEnumerated;
+export const _encode_EnforcementAction: $.ASN1Encoder<EnforcementAction> = $._encodeEnumerated as $.ASN1Encoder<EnforcementAction>;
 
 
 /* eslint-enable */

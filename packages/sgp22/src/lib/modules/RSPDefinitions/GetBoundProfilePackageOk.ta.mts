@@ -1,11 +1,11 @@
 /* eslint-disable */
 import {
     ASN1ConstructionError as _ConstructionError,
-    ASN1Element as _Element,
+    type ASN1Element as _Element,
     ASN1TagClass as _TagClass
 } from "@wildboar/asn1";
 import * as $ from "@wildboar/asn1/functional";
-import { TransactionId, _decode_TransactionId, _encode_TransactionId } from "../RSPDefinitions/TransactionId.ta.mjs";
+import { type TransactionId, _decode_TransactionId, _encode_TransactionId } from "../RSPDefinitions/TransactionId.ta.mjs";
 import { BoundProfilePackage, _decode_BoundProfilePackage, _encode_BoundProfilePackage } from "../RSPDefinitions/BoundProfilePackage.ta.mjs";
 
 
@@ -38,7 +38,7 @@ class GetBoundProfilePackageOk {
      * @public
      * @readonly
      */
-    readonly transactionId: TransactionId;
+    public readonly transactionId: TransactionId;
     /**
      * @summary `boundProfilePackage`.
      * @description
@@ -49,7 +49,7 @@ class GetBoundProfilePackageOk {
      * @public
      * @readonly
      */
-    readonly boundProfilePackage: BoundProfilePackage;
+    public readonly boundProfilePackage: BoundProfilePackage;
 
     constructor (
         transactionId: TransactionId,

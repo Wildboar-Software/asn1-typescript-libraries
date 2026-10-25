@@ -1,7 +1,7 @@
 /* eslint-disable */
 import {
-    OPTIONAL,
-    ASN1Element as _Element,
+    type OPTIONAL,
+    type ASN1Element as _Element,
     ASN1TagClass as _TagClass,
     ASN1Construction as _Construction,
     ASN1UniversalType as _UniversalType,
@@ -12,17 +12,17 @@ import {
 } from '@wildboar/asn1';
 import * as $ from '@wildboar/asn1/functional';
 import {
-    IdentificationCode,
+    type IdentificationCode,
     _decode_IdentificationCode,
     _encode_IdentificationCode,
 } from '../EDIMSInformationObjects/IdentificationCode.ta.mjs';
 import {
-    IdentificationCodeQualifier,
+    type IdentificationCodeQualifier,
     _decode_IdentificationCodeQualifier,
     _encode_IdentificationCodeQualifier,
 } from '../EDIMSInformationObjects/IdentificationCodeQualifier.ta.mjs';
 import {
-    RoutingAddress,
+    type RoutingAddress,
     _decode_RoutingAddress,
     _encode_RoutingAddress,
 } from '../EDIMSInformationObjects/RoutingAddress.ta.mjs';
@@ -44,26 +44,34 @@ import {
  *
  */
 export class InterchangeSenderField {
+    /**
+     * @summary `sender_identification`.
+     * @public
+     * @readonly
+     */
+    public readonly sender_identification: IdentificationCode;
+    /**
+     * @summary `identification_code_qualifier`.
+     * @public
+     * @readonly
+     */
+    public readonly identification_code_qualifier?: OPTIONAL<IdentificationCodeQualifier>;
+    /**
+     * @summary `address_for_reverse_routing`.
+     * @public
+     * @readonly
+     */
+    public readonly address_for_reverse_routing?: OPTIONAL<RoutingAddress>;
+
     constructor(
-        /**
-         * @summary `sender_identification`.
-         * @public
-         * @readonly
-         */
-        readonly sender_identification: IdentificationCode,
-        /**
-         * @summary `identification_code_qualifier`.
-         * @public
-         * @readonly
-         */
-        readonly identification_code_qualifier?: OPTIONAL<IdentificationCodeQualifier>,
-        /**
-         * @summary `address_for_reverse_routing`.
-         * @public
-         * @readonly
-         */
-        readonly address_for_reverse_routing?: OPTIONAL<RoutingAddress>
-    ) {}
+        sender_identification: IdentificationCode,
+        identification_code_qualifier?: OPTIONAL<IdentificationCodeQualifier>,
+        address_for_reverse_routing?: OPTIONAL<RoutingAddress>
+    ) {
+        this.sender_identification = sender_identification;
+        this.identification_code_qualifier = identification_code_qualifier;
+        this.address_for_reverse_routing = address_for_reverse_routing;
+    }
 
     /**
      * @summary Restructures an object into a InterchangeSenderField

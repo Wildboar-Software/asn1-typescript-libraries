@@ -1,9 +1,9 @@
 /* eslint-disable */
 import {
     ASN1ConstructionError as _ConstructionError,
-    ASN1Element as _Element,
+    type ASN1Element as _Element,
     ASN1TagClass as _TagClass,
-    BOOLEAN
+    type BOOLEAN
 } from "@wildboar/asn1";
 import * as $ from "@wildboar/asn1/functional";
 
@@ -31,21 +31,25 @@ import * as $ from "@wildboar/asn1/functional";
  */
 export
 class ReturnFromFallbackRequest {
+    /**
+     * @summary `refreshFlag`.
+     * @description
+     * FALSE performs the swap in this call. TRUE marks the Fallback Profile to be
+     * disabled and the previously enabled Profile to be enabled, returns ok, and
+     * sends REFRESH in eUICC Profile State Change mode when the IoT Device
+     * supports it, otherwise UICC Reset mode, per ETSI TS 102 223. A proactive
+     * session already open may yield catBusy. If the eUICC continues, it ends that
+     * session. SGP.32 v1.2, section 5.9.21.
+     * @public
+     * @readonly
+     */
+    public readonly refreshFlag: BOOLEAN;
+
     constructor (
-        /**
-         * @summary `refreshFlag`.
-         * @description
-         * FALSE performs the swap in this call. TRUE marks the Fallback Profile to be
-         * disabled and the previously enabled Profile to be enabled, returns ok, and
-         * sends REFRESH in eUICC Profile State Change mode when the IoT Device
-         * supports it, otherwise UICC Reset mode, per ETSI TS 102 223. A proactive
-         * session already open may yield catBusy. If the eUICC continues, it ends that
-         * session. SGP.32 v1.2, section 5.9.21.
-         * @public
-         * @readonly
-         */
-        readonly refreshFlag: BOOLEAN
-    ) {}
+        refreshFlag: BOOLEAN
+    ) {
+        this.refreshFlag = refreshFlag;
+    }
 
     /**
      * @summary Restructures an object into a ReturnFromFallbackRequest

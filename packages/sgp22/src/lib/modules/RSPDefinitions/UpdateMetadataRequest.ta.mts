@@ -1,18 +1,18 @@
 /* eslint-disable */
 import {
-    BOOLEAN,
-    OCTET_STRING,
-    OPTIONAL,
-    UTF8String,
-    ASN1Element as _Element,
+    type BOOLEAN,
+    type OCTET_STRING,
+    type OPTIONAL,
+    type UTF8String,
+    type ASN1Element as _Element,
     ASN1TagClass as _TagClass
 } from "@wildboar/asn1";
 import { ASN1ConstructionError } from "@wildboar/asn1";
 import { ASN1SizeError } from "@wildboar/asn1";
 import * as $ from "@wildboar/asn1/functional";
-import { IconType, _decode_IconType, _encode_IconType } from "../RSPDefinitions/IconType.ta.mjs";
-import { PprIds, _decode_PprIds, _encode_PprIds } from "../RSPDefinitions/PprIds.ta.mjs";
-import { VendorSpecificExtension, _decode_VendorSpecificExtension, _encode_VendorSpecificExtension } from "../RSPDefinitions/VendorSpecificExtension.ta.mjs";
+import { type IconType, _decode_IconType, _encode_IconType } from "../RSPDefinitions/IconType.ta.mjs";
+import { type PprIds, _decode_PprIds, _encode_PprIds } from "../RSPDefinitions/PprIds.ta.mjs";
+import { type VendorSpecificExtension, _decode_VendorSpecificExtension, _encode_VendorSpecificExtension } from "../RSPDefinitions/VendorSpecificExtension.ta.mjs";
 
 
 /**
@@ -57,7 +57,7 @@ class UpdateMetadataRequest {
      * @public
      * @readonly
      */
-    readonly serviceProviderName?: OPTIONAL<UTF8String>;
+    public readonly serviceProviderName?: OPTIONAL<UTF8String>;
     /**
      * @summary `profileName`.
      * @description
@@ -68,7 +68,7 @@ class UpdateMetadataRequest {
      * @public
      * @readonly
      */
-    readonly profileName?: OPTIONAL<UTF8String>;
+    public readonly profileName?: OPTIONAL<UTF8String>;
     /**
      * @summary `iconType`.
      * @description
@@ -78,7 +78,7 @@ class UpdateMetadataRequest {
      * @public
      * @readonly
      */
-    readonly iconType?: OPTIONAL<IconType>;
+    public readonly iconType?: OPTIONAL<IconType>;
     /**
      * @summary `icon`.
      * @description
@@ -89,7 +89,7 @@ class UpdateMetadataRequest {
      * @public
      * @readonly
      */
-    readonly icon?: OPTIONAL<OCTET_STRING>;
+    public readonly icon?: OPTIONAL<OCTET_STRING>;
     /**
      * @summary `profilePolicyRules`.
      * @description
@@ -102,7 +102,7 @@ class UpdateMetadataRequest {
      * @public
      * @readonly
      */
-    readonly profilePolicyRules?: OPTIONAL<PprIds>;
+    public readonly profilePolicyRules?: OPTIONAL<PprIds>;
     /**
      * @summary `serviceSpecificDataStoredInEuicc`.
      * @description
@@ -113,7 +113,7 @@ class UpdateMetadataRequest {
      * @public
      * @readonly
      */
-    readonly serviceSpecificDataStoredInEuicc?: OPTIONAL<VendorSpecificExtension>;
+    public readonly serviceSpecificDataStoredInEuicc?: OPTIONAL<VendorSpecificExtension>;
     /**
      * @summary `reserved103`.
      * @description
@@ -124,7 +124,7 @@ class UpdateMetadataRequest {
      * @public
      * @readonly
      */
-    readonly reserved103?: OPTIONAL<BOOLEAN>;
+    public readonly reserved103?: OPTIONAL<BOOLEAN>;
 
     constructor (
         serviceProviderName?: OPTIONAL<UTF8String>,

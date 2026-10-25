@@ -1,8 +1,8 @@
 /* eslint-disable */
 import {
-    INTEGER,
-    OPTIONAL,
-    ASN1Element as _Element,
+    type INTEGER,
+    type OPTIONAL,
+    type ASN1Element as _Element,
     ASN1TagClass as _TagClass,
     ASN1OverflowError
 } from "@wildboar/asn1";
@@ -132,7 +132,7 @@ class InformationAppliesTo {
          * @static
          */
 
-    public static _enum_for_payloadDirection = _enum_for_PayloadDirection;
+    public static _enum_for_payloadDirection: typeof _enum_for_PayloadDirection = _enum_for_PayloadDirection;
 }
 
 /**

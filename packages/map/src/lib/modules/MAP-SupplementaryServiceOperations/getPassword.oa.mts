@@ -1,6 +1,6 @@
 /* eslint-disable */
 import { GuidanceInfo, _decode_GuidanceInfo, _encode_GuidanceInfo } from "../MAP-SS-DataTypes/GuidanceInfo.ta.mjs";
-import { Password, _decode_Password, _encode_Password } from "../MAP-SS-DataTypes/Password.ta.mjs";
+import { type Password, _decode_Password, _encode_Password } from "../MAP-SS-DataTypes/Password.ta.mjs";
 import { type OPERATION } from "../Remote-Operations-Information-Objects/OPERATION.oca.mjs";
 
 

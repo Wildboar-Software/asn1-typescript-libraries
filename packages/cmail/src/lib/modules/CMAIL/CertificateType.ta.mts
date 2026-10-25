@@ -11,7 +11,7 @@ import {
 } from '@wildboar/asn1';
 import * as $ from '@wildboar/asn1/functional';
 import {
-    String,
+    type String,
     _decode_String,
     _encode_String,
 } from '../XSD/String.ta.mjs';
@@ -47,7 +47,7 @@ export class CertificateType {
    * @public
    * @readonly
    */
-  readonly encoding: String;
+  public readonly encoding: String;
 
   constructor(
     encoding: String

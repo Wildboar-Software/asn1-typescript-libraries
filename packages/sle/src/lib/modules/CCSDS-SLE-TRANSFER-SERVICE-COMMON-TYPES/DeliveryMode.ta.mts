@@ -1,6 +1,6 @@
 /* eslint-disable */
 import {
-    INTEGER
+    type INTEGER
 } from "@wildboar/asn1";
 import * as $ from "@wildboar/asn1/functional";
 
@@ -47,7 +47,7 @@ type DeliveryMode = INTEGER;
  * @type {number}
  */
 export
-const DeliveryMode_rtnTimelyOnline: DeliveryMode = 0; /* LONG_NAMED_INTEGER_VALUE */
+const DeliveryMode_rtnTimelyOnline: 0 = 0 satisfies DeliveryMode; /* LONG_NAMED_INTEGER_VALUE */
 
 /**
  * @summary DeliveryMode_rtnTimelyOnline
@@ -59,7 +59,7 @@ const DeliveryMode_rtnTimelyOnline: DeliveryMode = 0; /* LONG_NAMED_INTEGER_VALU
  * @type {number}
  */
 export
-const rtnTimelyOnline: DeliveryMode = DeliveryMode_rtnTimelyOnline; /* SHORT_NAMED_INTEGER_VALUE */
+const rtnTimelyOnline: 0 = DeliveryMode_rtnTimelyOnline; /* SHORT_NAMED_INTEGER_VALUE */
 
 /**
  * @summary DeliveryMode_rtnCompleteOnline
@@ -78,7 +78,7 @@ const rtnTimelyOnline: DeliveryMode = DeliveryMode_rtnTimelyOnline; /* SHORT_NAM
  * @type {number}
  */
 export
-const DeliveryMode_rtnCompleteOnline: DeliveryMode = 1; /* LONG_NAMED_INTEGER_VALUE */
+const DeliveryMode_rtnCompleteOnline: 1 = 1 satisfies DeliveryMode; /* LONG_NAMED_INTEGER_VALUE */
 
 /**
  * @summary DeliveryMode_rtnCompleteOnline
@@ -90,7 +90,7 @@ const DeliveryMode_rtnCompleteOnline: DeliveryMode = 1; /* LONG_NAMED_INTEGER_VA
  * @type {number}
  */
 export
-const rtnCompleteOnline: DeliveryMode = DeliveryMode_rtnCompleteOnline; /* SHORT_NAMED_INTEGER_VALUE */
+const rtnCompleteOnline: 1 = DeliveryMode_rtnCompleteOnline; /* SHORT_NAMED_INTEGER_VALUE */
 
 /**
  * @summary DeliveryMode_rtnOffline
@@ -108,7 +108,7 @@ const rtnCompleteOnline: DeliveryMode = DeliveryMode_rtnCompleteOnline; /* SHORT
  * @type {number}
  */
 export
-const DeliveryMode_rtnOffline: DeliveryMode = 2; /* LONG_NAMED_INTEGER_VALUE */
+const DeliveryMode_rtnOffline: 2 = 2 satisfies DeliveryMode; /* LONG_NAMED_INTEGER_VALUE */
 
 /**
  * @summary DeliveryMode_rtnOffline
@@ -120,7 +120,7 @@ const DeliveryMode_rtnOffline: DeliveryMode = 2; /* LONG_NAMED_INTEGER_VALUE */
  * @type {number}
  */
 export
-const rtnOffline: DeliveryMode = DeliveryMode_rtnOffline; /* SHORT_NAMED_INTEGER_VALUE */
+const rtnOffline: 2 = DeliveryMode_rtnOffline; /* SHORT_NAMED_INTEGER_VALUE */
 
 /**
  * @summary DeliveryMode_fwdOnline
@@ -134,7 +134,7 @@ const rtnOffline: DeliveryMode = DeliveryMode_rtnOffline; /* SHORT_NAMED_INTEGER
  * @type {number}
  */
 export
-const DeliveryMode_fwdOnline: DeliveryMode = 3; /* LONG_NAMED_INTEGER_VALUE */
+const DeliveryMode_fwdOnline: 3 = 3 satisfies DeliveryMode; /* LONG_NAMED_INTEGER_VALUE */
 
 /**
  * @summary DeliveryMode_fwdOnline
@@ -146,7 +146,7 @@ const DeliveryMode_fwdOnline: DeliveryMode = 3; /* LONG_NAMED_INTEGER_VALUE */
  * @type {number}
  */
 export
-const fwdOnline: DeliveryMode = DeliveryMode_fwdOnline; /* SHORT_NAMED_INTEGER_VALUE */
+const fwdOnline: 3 = DeliveryMode_fwdOnline; /* SHORT_NAMED_INTEGER_VALUE */
 
 /**
  * @summary DeliveryMode_fwdOffline
@@ -160,7 +160,7 @@ const fwdOnline: DeliveryMode = DeliveryMode_fwdOnline; /* SHORT_NAMED_INTEGER_V
  * @type {number}
  */
 export
-const DeliveryMode_fwdOffline: DeliveryMode = 4; /* LONG_NAMED_INTEGER_VALUE */
+const DeliveryMode_fwdOffline: 4 = 4 satisfies DeliveryMode; /* LONG_NAMED_INTEGER_VALUE */
 
 /**
  * @summary DeliveryMode_fwdOffline
@@ -172,7 +172,7 @@ const DeliveryMode_fwdOffline: DeliveryMode = 4; /* LONG_NAMED_INTEGER_VALUE */
  * @type {number}
  */
 export
-const fwdOffline: DeliveryMode = DeliveryMode_fwdOffline; /* SHORT_NAMED_INTEGER_VALUE */
+const fwdOffline: 4 = DeliveryMode_fwdOffline; /* SHORT_NAMED_INTEGER_VALUE */
 export const _decode_DeliveryMode: $.ASN1Decoder<DeliveryMode> = $._decodeInteger;
 export const _encode_DeliveryMode: $.ASN1Encoder<DeliveryMode> = $._encodeInteger;
 

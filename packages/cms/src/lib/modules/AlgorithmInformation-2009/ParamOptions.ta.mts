@@ -1,5 +1,5 @@
 /* eslint-disable */
-import { ASN1Element as _Element, ENUMERATED } from "@wildboar/asn1";
+import { ASN1Element as _Element, type ENUMERATED } from "@wildboar/asn1";
 import * as $ from "@wildboar/asn1/functional";
 
 
@@ -48,7 +48,7 @@ export type ParamOptions = _enum_for_ParamOptions | ENUMERATED;
  * @constant
  * @type {number}
  */
-export const ParamOptions_required: ParamOptions = 0; /* LONG_NAMED_ENUMERATED_VALUE */
+export const ParamOptions_required: _enum_for_ParamOptions.required = _enum_for_ParamOptions.required; /* LONG_NAMED_ENUMERATED_VALUE */
 
 
 /**
@@ -56,7 +56,7 @@ export const ParamOptions_required: ParamOptions = 0; /* LONG_NAMED_ENUMERATED_V
  * @constant
  * @type {number}
  */
-export const required: ParamOptions = ParamOptions_required; /* SHORT_NAMED_ENUMERATED_VALUE */
+export const required: _enum_for_ParamOptions.required = ParamOptions_required; /* SHORT_NAMED_ENUMERATED_VALUE */
 
 
 /**
@@ -64,7 +64,7 @@ export const required: ParamOptions = ParamOptions_required; /* SHORT_NAMED_ENUM
  * @constant
  * @type {number}
  */
-export const ParamOptions_preferredPresent: ParamOptions = 1; /* LONG_NAMED_ENUMERATED_VALUE */
+export const ParamOptions_preferredPresent: _enum_for_ParamOptions.preferredPresent = _enum_for_ParamOptions.preferredPresent; /* LONG_NAMED_ENUMERATED_VALUE */
 
 
 /**
@@ -72,7 +72,7 @@ export const ParamOptions_preferredPresent: ParamOptions = 1; /* LONG_NAMED_ENUM
  * @constant
  * @type {number}
  */
-export const preferredPresent: ParamOptions = ParamOptions_preferredPresent; /* SHORT_NAMED_ENUMERATED_VALUE */
+export const preferredPresent: _enum_for_ParamOptions.preferredPresent = ParamOptions_preferredPresent; /* SHORT_NAMED_ENUMERATED_VALUE */
 
 
 /**
@@ -80,7 +80,7 @@ export const preferredPresent: ParamOptions = ParamOptions_preferredPresent; /* 
  * @constant
  * @type {number}
  */
-export const ParamOptions_preferredAbsent: ParamOptions = 2; /* LONG_NAMED_ENUMERATED_VALUE */
+export const ParamOptions_preferredAbsent: _enum_for_ParamOptions.preferredAbsent = _enum_for_ParamOptions.preferredAbsent; /* LONG_NAMED_ENUMERATED_VALUE */
 
 
 /**
@@ -88,7 +88,7 @@ export const ParamOptions_preferredAbsent: ParamOptions = 2; /* LONG_NAMED_ENUME
  * @constant
  * @type {number}
  */
-export const preferredAbsent: ParamOptions = ParamOptions_preferredAbsent; /* SHORT_NAMED_ENUMERATED_VALUE */
+export const preferredAbsent: _enum_for_ParamOptions.preferredAbsent = ParamOptions_preferredAbsent; /* SHORT_NAMED_ENUMERATED_VALUE */
 
 
 /**
@@ -96,7 +96,7 @@ export const preferredAbsent: ParamOptions = ParamOptions_preferredAbsent; /* SH
  * @constant
  * @type {number}
  */
-export const ParamOptions_absent: ParamOptions = 3; /* LONG_NAMED_ENUMERATED_VALUE */
+export const ParamOptions_absent: _enum_for_ParamOptions.absent = _enum_for_ParamOptions.absent; /* LONG_NAMED_ENUMERATED_VALUE */
 
 
 /**
@@ -104,7 +104,7 @@ export const ParamOptions_absent: ParamOptions = 3; /* LONG_NAMED_ENUMERATED_VAL
  * @constant
  * @type {number}
  */
-export const absent: ParamOptions = ParamOptions_absent; /* SHORT_NAMED_ENUMERATED_VALUE */
+export const absent: _enum_for_ParamOptions.absent = ParamOptions_absent; /* SHORT_NAMED_ENUMERATED_VALUE */
 
 
 /**
@@ -112,7 +112,7 @@ export const absent: ParamOptions = ParamOptions_absent; /* SHORT_NAMED_ENUMERAT
  * @constant
  * @type {number}
  */
-export const ParamOptions_inheritable: ParamOptions = 4; /* LONG_NAMED_ENUMERATED_VALUE */
+export const ParamOptions_inheritable: _enum_for_ParamOptions.inheritable = _enum_for_ParamOptions.inheritable; /* LONG_NAMED_ENUMERATED_VALUE */
 
 
 /**
@@ -120,7 +120,7 @@ export const ParamOptions_inheritable: ParamOptions = 4; /* LONG_NAMED_ENUMERATE
  * @constant
  * @type {number}
  */
-export const inheritable: ParamOptions = ParamOptions_inheritable; /* SHORT_NAMED_ENUMERATED_VALUE */
+export const inheritable: _enum_for_ParamOptions.inheritable = ParamOptions_inheritable; /* SHORT_NAMED_ENUMERATED_VALUE */
 
 
 /**
@@ -128,7 +128,7 @@ export const inheritable: ParamOptions = ParamOptions_inheritable; /* SHORT_NAME
  * @constant
  * @type {number}
  */
-export const ParamOptions_optional: ParamOptions = 5; /* LONG_NAMED_ENUMERATED_VALUE */
+export const ParamOptions_optional: _enum_for_ParamOptions.optional = _enum_for_ParamOptions.optional; /* LONG_NAMED_ENUMERATED_VALUE */
 
 
 /**
@@ -136,17 +136,17 @@ export const ParamOptions_optional: ParamOptions = 5; /* LONG_NAMED_ENUMERATED_V
  * @constant
  * @type {number}
  */
-export const optional: ParamOptions = ParamOptions_optional; /* SHORT_NAMED_ENUMERATED_VALUE */
+export const optional: _enum_for_ParamOptions.optional = ParamOptions_optional; /* SHORT_NAMED_ENUMERATED_VALUE */
 
 
 
 
-export const _decode_ParamOptions = $._decodeEnumerated;
+export const _decode_ParamOptions: $.ASN1Decoder<number> = $._decodeEnumerated;
 
 
 
 
-export const _encode_ParamOptions = $._encodeEnumerated;
+export const _encode_ParamOptions: $.ASN1Encoder<number> = $._encodeEnumerated;
 
 
 /* eslint-enable */

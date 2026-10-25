@@ -1,11 +1,11 @@
 /* eslint-disable */
 import {
-    NULL,
-    ASN1Element as _Element,
+    type NULL,
+    type ASN1Element as _Element,
     ASN1TagClass as _TagClass
 } from "@wildboar/asn1";
 import * as $ from "@wildboar/asn1/functional";
-import { Digits, _decode_Digits, _encode_Digits } from "../IN-CS2-datatypes/Digits.ta.mjs";
+import { type Digits, _decode_Digits, _encode_Digits } from "../IN-CS2-datatypes/Digits.ta.mjs";
 // export { Digits, _decode_Digits, _encode_Digits } from "../IN-CS2-datatypes/Digits.ta.mjs";
 import { GapOnService, _decode_GapOnService, _encode_GapOnService } from "../IN-CS2-datatypes/GapOnService.ta.mjs";
 // export { GapOnService, _decode_GapOnService, _encode_GapOnService } from "../IN-CS2-datatypes/GapOnService.ta.mjs";

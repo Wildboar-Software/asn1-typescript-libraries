@@ -1,8 +1,8 @@
 /* eslint-disable */
 import {
-    OPTIONAL,
-    BOOLEAN,
-    ASN1Element as _Element,
+    type OPTIONAL,
+    type BOOLEAN,
+    type ASN1Element as _Element,
     ASN1TagClass as _TagClass,
     ASN1Construction as _Construction,
     ASN1UniversalType as _UniversalType,
@@ -12,10 +12,10 @@ import {
     ASN1ConstructionError as _ConstructionError,
 } from "@wildboar/asn1";
 import * as $ from "@wildboar/asn1/functional";
-import { Transitions, _decode_Transitions, _encode_Transitions } from "../MMS-Object-Module-1/Transitions.ta.mjs";
-import { EE_Duration, _decode_EE_Duration, _encode_EE_Duration } from "../MMS-Object-Module-1/EE-Duration.ta.mjs";
-import { AlarmAckRule, _decode_AlarmAckRule, _encode_AlarmAckRule } from "../MMS-Object-Module-1/AlarmAckRule.ta.mjs";
-import { EE_State, _decode_EE_State, _encode_EE_State } from "../ISO-9506-MMS-1/EE-State.ta.mjs";
+import { type Transitions, _decode_Transitions, _encode_Transitions } from "../MMS-Object-Module-1/Transitions.ta.mjs";
+import { type EE_Duration, _decode_EE_Duration, _encode_EE_Duration } from "../MMS-Object-Module-1/EE-Duration.ta.mjs";
+import { type AlarmAckRule, _decode_AlarmAckRule, _encode_AlarmAckRule } from "../MMS-Object-Module-1/AlarmAckRule.ta.mjs";
+import { type EE_State, _decode_EE_State, _encode_EE_State } from "../ISO-9506-MMS-1/EE-State.ta.mjs";
 
 
 /**
@@ -43,69 +43,81 @@ import { EE_State, _decode_EE_State, _encode_EE_State } from "../ISO-9506-MMS-1/
  */
 export
 class ReportEventEnrollmentStatus_Response {
+    /**
+     * @summary `eventConditionTransitions`.
+     * @description
+     *
+     * Current `&ecTransitions`.
+     *
+     * [ISO 9506-1:2003 §21.5.1.2.1]
+     *
+     * @public
+     * @readonly
+     */
+    public readonly eventConditionTransitions: Transitions;
+    /**
+     * @summary `notificationLost`.
+     * @description
+     *
+     * `&notificationLost`. True if prior notifications were dropped. Default
+     * false.
+     *
+     * [ISO 9506-1:2003 §21.5.1.2.2]
+     *
+     * @public
+     * @readonly
+     */
+    public readonly notificationLost: OPTIONAL<BOOLEAN>;
+    /**
+     * @summary `duration`.
+     * @description
+     *
+     * `current` or `permanent`.
+     *
+     * [ISO 9506-1:2003 §21.5.1.2.3]
+     *
+     * @public
+     * @readonly
+     */
+    public readonly duration: EE_Duration;
+    /**
+     * @summary `alarmAcknowledgmentRule`.
+     * @description
+     *
+     * `&aaRule` if present (notification + monitored).
+     *
+     * [ISO 9506-1:2003 §21.5.1.2.4]
+     *
+     * @public
+     * @readonly
+     */
+    public readonly alarmAcknowledgmentRule: OPTIONAL<AlarmAckRule>;
+    /**
+     * @summary `currentState`.
+     * @description
+     *
+     * EE-State mapping of ISO 9506-1:2003 §21.5.1.2.5.
+     *
+     * [ISO 9506-1:2003 §21.5.1.2.5]
+     *
+     * @public
+     * @readonly
+     */
+    public readonly currentState: EE_State;
+
     constructor (
-        /**
-         * @summary `eventConditionTransitions`.
-         * @description
-         *
-         * Current `&ecTransitions`.
-         *
-         * [ISO 9506-1:2003 §21.5.1.2.1]
-         *
-         * @public
-         * @readonly
-         */
-        readonly eventConditionTransitions: Transitions,
-        /**
-         * @summary `notificationLost`.
-         * @description
-         *
-         * `&notificationLost`. True if prior notifications were dropped. Default
-         * false.
-         *
-         * [ISO 9506-1:2003 §21.5.1.2.2]
-         *
-         * @public
-         * @readonly
-         */
-        readonly notificationLost: OPTIONAL<BOOLEAN>,
-        /**
-         * @summary `duration`.
-         * @description
-         *
-         * `current` or `permanent`.
-         *
-         * [ISO 9506-1:2003 §21.5.1.2.3]
-         *
-         * @public
-         * @readonly
-         */
-        readonly duration: EE_Duration,
-        /**
-         * @summary `alarmAcknowledgmentRule`.
-         * @description
-         *
-         * `&aaRule` if present (notification + monitored).
-         *
-         * [ISO 9506-1:2003 §21.5.1.2.4]
-         *
-         * @public
-         * @readonly
-         */
-        readonly alarmAcknowledgmentRule: OPTIONAL<AlarmAckRule>,
-        /**
-         * @summary `currentState`.
-         * @description
-         *
-         * EE-State mapping of ISO 9506-1:2003 §21.5.1.2.5.
-         *
-         * [ISO 9506-1:2003 §21.5.1.2.5]
-         *
-         * @public
-         * @readonly
-         */
-        readonly currentState: EE_State
-    ) {}
+        eventConditionTransitions: Transitions,
+        notificationLost: OPTIONAL<BOOLEAN>,
+        duration: EE_Duration,
+        alarmAcknowledgmentRule: OPTIONAL<AlarmAckRule>,
+        currentState: EE_State
+    ) {
+        this.eventConditionTransitions = eventConditionTransitions;
+        this.notificationLost = notificationLost;
+        this.duration = duration;
+        this.alarmAcknowledgmentRule = alarmAcknowledgmentRule;
+        this.currentState = currentState;
+    }
 
     /**
      * @summary Restructures an object into a ReportEventEnrollmentStatus_Response

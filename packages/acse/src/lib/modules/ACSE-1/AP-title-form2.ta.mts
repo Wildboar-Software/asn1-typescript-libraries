@@ -1,6 +1,6 @@
 /* eslint-disable */
 import {
-  OBJECT_IDENTIFIER,
+  type OBJECT_IDENTIFIER,
   ASN1Element as _Element,
   ASN1TagClass as _TagClass,
   ASN1Construction as _Construction,
@@ -29,10 +29,10 @@ import * as $ from '@wildboar/asn1/functional';
 export type AP_title_form2 = OBJECT_IDENTIFIER; // ObjectIdentifierType
 
 
-export const _decode_AP_title_form2 = $._decodeObjectIdentifier;
+export const _decode_AP_title_form2: $.ASN1Decoder<_OID> = $._decodeObjectIdentifier;
 
 
-export const _encode_AP_title_form2 = $._encodeObjectIdentifier;
+export const _encode_AP_title_form2: $.ASN1Encoder<_OID> = $._encodeObjectIdentifier;
 
 
 /* eslint-enable */

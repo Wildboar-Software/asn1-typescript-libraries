@@ -61,7 +61,7 @@ type ACREventIDs = _enum_for_ACREventIDs;
  * @enum {number}
  */
 export
-const ACREventIDs = _enum_for_ACREventIDs;
+const ACREventIDs: typeof _enum_for_ACREventIDs = _enum_for_ACREventIDs;
 
 /**
  * @summary ACREventIDs_targetInformation
@@ -69,7 +69,7 @@ const ACREventIDs = _enum_for_ACREventIDs;
  * @type {number}
  */
 export
-const ACREventIDs_targetInformation: ACREventIDs = ACREventIDs.targetInformation; /* LONG_NAMED_ENUMERATED_VALUE */
+const ACREventIDs_targetInformation: _enum_for_ACREventIDs.targetInformation = ACREventIDs.targetInformation; /* LONG_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary targetInformation
@@ -77,7 +77,7 @@ const ACREventIDs_targetInformation: ACREventIDs = ACREventIDs.targetInformation
  * @type {number}
  */
 export
-const targetInformation: ACREventIDs = ACREventIDs.targetInformation; /* SHORT_NAMED_ENUMERATED_VALUE */
+const targetInformation: _enum_for_ACREventIDs.targetInformation = ACREventIDs.targetInformation; /* SHORT_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary ACREventIDs_aCRComplete
@@ -85,7 +85,7 @@ const targetInformation: ACREventIDs = ACREventIDs.targetInformation; /* SHORT_N
  * @type {number}
  */
 export
-const ACREventIDs_aCRComplete: ACREventIDs = ACREventIDs.aCRComplete; /* LONG_NAMED_ENUMERATED_VALUE */
+const ACREventIDs_aCRComplete: _enum_for_ACREventIDs.aCRComplete = ACREventIDs.aCRComplete; /* LONG_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary aCRComplete
@@ -93,7 +93,7 @@ const ACREventIDs_aCRComplete: ACREventIDs = ACREventIDs.aCRComplete; /* LONG_NA
  * @type {number}
  */
 export
-const aCRComplete: ACREventIDs = ACREventIDs.aCRComplete; /* SHORT_NAMED_ENUMERATED_VALUE */
+const aCRComplete: _enum_for_ACREventIDs.aCRComplete = ACREventIDs.aCRComplete; /* SHORT_NAMED_ENUMERATED_VALUE */
 export const _decode_ACREventIDs: $.ASN1Decoder<ACREventIDs> = $._decodeEnumerated;
 export const _encode_ACREventIDs: $.ASN1Encoder<ACREventIDs> = $._encodeEnumerated;
 

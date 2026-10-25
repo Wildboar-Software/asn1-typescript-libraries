@@ -1,8 +1,8 @@
 /* eslint-disable */
 import {
-    EXTERNAL,
-    OCTET_STRING,
-    ASN1Element as _Element,
+    type EXTERNAL,
+    type OCTET_STRING,
+    type ASN1Element as _Element,
     ASN1TagClass as _TagClass
 } from "@wildboar/asn1";
 import * as $ from "@wildboar/asn1/functional";

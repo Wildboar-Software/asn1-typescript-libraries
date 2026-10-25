@@ -1,6 +1,6 @@
 import {
-    OPTIONAL,
-    ASN1Element as _Element,
+    type OPTIONAL,
+    type ASN1Element as _Element,
     ASN1TagClass as _TagClass,
 } from "@wildboar/asn1";
 import * as $ from "@wildboar/asn1/functional";
@@ -23,31 +23,39 @@ import { type PDPID, _decode_PDPID, _encode_PDPID } from "./PDPID.ta.mjs";
  *
  */
 export class CAMEL_SCIGPRSBillingChargingCharacteristics {
+    /**
+     * @summary `aOCGPRS`.
+     * @description
+     *
+     * Advice of Charge information to send to the MS (if the SGSN supports
+     * AoC). (3GPP TS 29.078 V19.0.0 clause 13.14).
+     *
+     * @public
+     * @readonly
+     */
+    public readonly aOCGPRS: AOCGPRS;
+    /**
+     * @summary `pDPID`.
+     * @description
+     *
+     * PDP Context within the GPRS session dialogue for which the AoC
+     * instruction applies. (3GPP TS 29.078 V19.0.0 clause 13.14).
+     *
+     * @public
+     * @readonly
+     */
+    public readonly pDPID?: OPTIONAL<PDPID>;
+    public readonly _unrecognizedExtensionsList: _Element[];
+
     constructor (
-        /**
-         * @summary `aOCGPRS`.
-         * @description
-         *
-         * Advice of Charge information to send to the MS (if the SGSN supports
-         * AoC). (3GPP TS 29.078 V19.0.0 clause 13.14).
-         *
-         * @public
-         * @readonly
-         */
-        readonly aOCGPRS: AOCGPRS,
-        /**
-         * @summary `pDPID`.
-         * @description
-         *
-         * PDP Context within the GPRS session dialogue for which the AoC
-         * instruction applies. (3GPP TS 29.078 V19.0.0 clause 13.14).
-         *
-         * @public
-         * @readonly
-         */
-        readonly pDPID?: OPTIONAL<PDPID>,
-        readonly _unrecognizedExtensionsList: _Element[] = [],
-    ) {}
+        aOCGPRS: AOCGPRS,
+        pDPID?: OPTIONAL<PDPID>,
+        _unrecognizedExtensionsList: _Element[] = [],
+    ) {
+        this.aOCGPRS = aOCGPRS;
+        this.pDPID = pDPID;
+        this._unrecognizedExtensionsList = _unrecognizedExtensionsList;
+    }
 
     public static _from_object (_o: { [_K in keyof (CAMEL_SCIGPRSBillingChargingCharacteristics)]: (CAMEL_SCIGPRSBillingChargingCharacteristics)[_K] }): CAMEL_SCIGPRSBillingChargingCharacteristics {
         return new CAMEL_SCIGPRSBillingChargingCharacteristics(_o.aOCGPRS, _o.pDPID, _o._unrecognizedExtensionsList);

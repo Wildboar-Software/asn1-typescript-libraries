@@ -1,6 +1,6 @@
 /* eslint-disable */
 import {
-    ASN1Element as _Element,
+    type ASN1Element as _Element,
     ASN1TagClass as _TagClass,
     ASN1Construction as _Construction,
     ASN1UniversalType as _UniversalType,
@@ -11,7 +11,7 @@ import {
 } from '@wildboar/asn1';
 import * as $ from '@wildboar/asn1/functional';
 import {
-    BodyPartReferences,
+    type BodyPartReferences,
     _decode_BodyPartReferences,
     _encode_BodyPartReferences,
 } from '../IPMSInformationObjects/BodyPartReferences.ta.mjs';
@@ -32,14 +32,18 @@ import {
  *
  */
 export class IPMAssemblyInstructions {
+    /**
+     * @summary `assembly_instructions`.
+     * @public
+     * @readonly
+     */
+    public readonly assembly_instructions: BodyPartReferences;
+
     constructor(
-        /**
-         * @summary `assembly_instructions`.
-         * @public
-         * @readonly
-         */
-        readonly assembly_instructions: BodyPartReferences
-    ) {}
+        assembly_instructions: BodyPartReferences
+    ) {
+        this.assembly_instructions = assembly_instructions;
+    }
 
     /**
      * @summary Restructures an object into a IPMAssemblyInstructions

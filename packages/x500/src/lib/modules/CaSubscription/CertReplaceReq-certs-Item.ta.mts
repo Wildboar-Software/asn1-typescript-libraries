@@ -1,17 +1,17 @@
 /* eslint-disable */
 import {
     ASN1ConstructionError as _ConstructionError,
-    ASN1Element as _Element,
+    type ASN1Element as _Element,
     ASN1TagClass as _TagClass,
 } from "@wildboar/asn1";
 import * as $ from "@wildboar/asn1/functional";
 import {
-    Certificate,
+    type Certificate,
     _decode_Certificate,
     _encode_Certificate,
 } from "@wildboar/pki-stub";
 import {
-    CertificateSerialNumber,
+    type CertificateSerialNumber,
     _decode_CertificateSerialNumber,
     _encode_CertificateSerialNumber,
 } from "@wildboar/pki-stub";
@@ -30,32 +30,40 @@ import {
  *
  */
 export class CertReplaceReq_certs_Item {
+    /**
+     * @summary `old`.
+     * @description
+     *
+     * Serial of the cert to replace.
+     * @public
+     * @readonly
+     */
+    public readonly old: CertificateSerialNumber;
+    /**
+     * @summary `new_`.
+     * @description
+     *
+     * Replacement Certificate (ASN.1 `new`).
+     * @public
+     * @readonly
+     */
+    public readonly new_: Certificate;
+    /**
+     * @summary Extensions that are not recognized.
+     * @public
+     * @readonly
+     */
+    public readonly _unrecognizedExtensionsList: _Element[];
+
     constructor(
-        /**
-         * @summary `old`.
-         * @description
-         *
-         * Serial of the cert to replace.
-         * @public
-         * @readonly
-         */
-        readonly old: CertificateSerialNumber,
-        /**
-         * @summary `new_`.
-         * @description
-         *
-         * Replacement Certificate (ASN.1 `new`).
-         * @public
-         * @readonly
-         */
-        readonly new_: Certificate,
-        /**
-         * @summary Extensions that are not recognized.
-         * @public
-         * @readonly
-         */
-        readonly _unrecognizedExtensionsList: _Element[] = []
-    ) {}
+        old: CertificateSerialNumber,
+        new_: Certificate,
+        _unrecognizedExtensionsList: _Element[] = []
+    ) {
+        this.old = old;
+        this.new_ = new_;
+        this._unrecognizedExtensionsList = _unrecognizedExtensionsList;
+    }
 
     /**
      * @summary Restructures an object into a CertReplaceReq_certs_Item

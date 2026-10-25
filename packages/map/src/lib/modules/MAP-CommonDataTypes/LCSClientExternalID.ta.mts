@@ -1,11 +1,11 @@
 /* eslint-disable */
 import {
-    OPTIONAL,
-    ASN1Element as _Element,
+    type OPTIONAL,
+    type ASN1Element as _Element,
     ASN1TagClass as _TagClass
 } from "@wildboar/asn1";
 import * as $ from "@wildboar/asn1/functional";
-import { ISDN_AddressString, _decode_ISDN_AddressString, _encode_ISDN_AddressString } from "../MAP-CommonDataTypes/ISDN-AddressString.ta.mjs";
+import { type ISDN_AddressString, _decode_ISDN_AddressString, _encode_ISDN_AddressString } from "../MAP-CommonDataTypes/ISDN-AddressString.ta.mjs";
 import { ExtensionContainer, _decode_ExtensionContainer, _encode_ExtensionContainer } from "../MAP-ExtensionDataTypes/ExtensionContainer.ta.mjs";
 
 
@@ -21,8 +21,8 @@ import { ExtensionContainer, _decode_ExtensionContainer, _encode_ExtensionContai
  * 
  * ```asn1
  * LCSClientExternalID ::= SEQUENCE {
- *     externalAddress    [0] ISDN-AddressString    OPTIONAL,
- *     extensionContainer    [1] ExtensionContainer    OPTIONAL,
+ *     externalAddress    [0] ISDN-AddressString    type OPTIONAL,
+ *     extensionContainer    [1] ExtensionContainer    type OPTIONAL,
  *     ... }
  * ```
  * 
@@ -30,35 +30,43 @@ import { ExtensionContainer, _decode_ExtensionContainer, _encode_ExtensionContai
  */
 export
 class LCSClientExternalID {
+    /**
+     * @summary `externalAddress`.
+     * @description
+     *
+     * Optional ISDN address of the external LCS client. (3GPP TS 29.002
+     * V19.1.0 clauses 17.7.8 and 7.6.11.4).
+     *
+     * @public
+     * @readonly
+     */
+    public readonly externalAddress?: OPTIONAL<ISDN_AddressString>;
+    /**
+     * @summary `extensionContainer`.
+     * @description
+     *
+     * Private extensions. (3GPP TS 29.002 V19.1.0 clause 17.7.8).
+     *
+     * @public
+     * @readonly
+     */
+    public readonly extensionContainer?: OPTIONAL<ExtensionContainer>;
+    /**
+     * @summary Extensions that are not recognized.
+     * @public
+     * @readonly
+     */
+    public readonly _unrecognizedExtensionsList: _Element[];
+
     constructor (
-        /**
-         * @summary `externalAddress`.
-         * @description
-         *
-         * Optional ISDN address of the external LCS client. (3GPP TS 29.002
-         * V19.1.0 clauses 17.7.8 and 7.6.11.4).
-         *
-         * @public
-         * @readonly
-         */
-        readonly externalAddress?: OPTIONAL<ISDN_AddressString>,
-        /**
-         * @summary `extensionContainer`.
-         * @description
-         *
-         * Private extensions. (3GPP TS 29.002 V19.1.0 clause 17.7.8).
-         *
-         * @public
-         * @readonly
-         */
-        readonly extensionContainer?: OPTIONAL<ExtensionContainer>,
-        /**
-         * @summary Extensions that are not recognized.
-         * @public
-         * @readonly
-         */
-        readonly _unrecognizedExtensionsList: _Element[] = []
-    ) {}
+        externalAddress?: OPTIONAL<ISDN_AddressString>,
+        extensionContainer?: OPTIONAL<ExtensionContainer>,
+        _unrecognizedExtensionsList: _Element[] = []
+    ) {
+        this.externalAddress = externalAddress;
+        this.extensionContainer = extensionContainer;
+        this._unrecognizedExtensionsList = _unrecognizedExtensionsList;
+    }
 
     /**
      * @summary Restructures an object into a LCSClientExternalID

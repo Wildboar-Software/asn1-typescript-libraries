@@ -2,15 +2,15 @@
 
 import * as $ from "@wildboar/asn1/functional";
 import {
-    SEQUENCE,
-    SET,
-    ASN1Element as _Element,
+    type SEQUENCE,
+    type SET,
+    type ASN1Element as _Element,
     ASN1TagClass as _TagClass,
     ASN1ConstructionError as _ConstructionError
 } from "@wildboar/asn1";
-import { MonitorCrossRefID, _decode_MonitorCrossRefID, _encode_MonitorCrossRefID } from "../CSTA-status-reporting/MonitorCrossRefID.ta.mjs";
+import { type MonitorCrossRefID, _decode_MonitorCrossRefID, _encode_MonitorCrossRefID } from "../CSTA-status-reporting/MonitorCrossRefID.ta.mjs";
 
-import { EventSpecificInfo, _decode_EventSpecificInfo, _encode_EventSpecificInfo } from "../CSTA-event-report-definitions/EventSpecificInfo.ta.mjs";
+import { type EventSpecificInfo, _decode_EventSpecificInfo, _encode_EventSpecificInfo } from "../CSTA-event-report-definitions/EventSpecificInfo.ta.mjs";
 
 
 
@@ -35,24 +35,30 @@ import { EventSpecificInfo, _decode_EventSpecificInfo, _encode_EventSpecificInfo
  */
 export
 class CSTAEventReportArgument {
+    /**
+     * @summary `crossRefIdentifier`.
+     * @description
+     * MonitorCrossRefID correlating this report to a Monitor request or
+     * CSTA object (ECMA-285 §5.4).
+     * @public
+     * @readonly
+     */
+    public readonly crossRefIdentifier: MonitorCrossRefID;
+    /**
+     * @summary `eventSpecificInfo`.
+     * @description CHOICE selecting the event body.
+     * @public
+     * @readonly
+     */
+    public readonly eventSpecificInfo: EventSpecificInfo;
+
     constructor (
-        /**
-         * @summary `crossRefIdentifier`.
-         * @description
-         * MonitorCrossRefID correlating this report to a Monitor request or
-         * CSTA object (ECMA-285 §5.4).
-         * @public
-         * @readonly
-         */
-        readonly crossRefIdentifier: MonitorCrossRefID,
-        /**
-         * @summary `eventSpecificInfo`.
-         * @description CHOICE selecting the event body.
-         * @public
-         * @readonly
-         */
-        readonly eventSpecificInfo: EventSpecificInfo
-    ) {}
+        crossRefIdentifier: MonitorCrossRefID,
+        eventSpecificInfo: EventSpecificInfo
+    ) {
+        this.crossRefIdentifier = crossRefIdentifier;
+        this.eventSpecificInfo = eventSpecificInfo;
+    }
 
     /**
      * @summary Restructures an object into a CSTAEventReportArgument

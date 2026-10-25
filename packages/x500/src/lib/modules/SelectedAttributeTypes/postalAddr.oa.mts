@@ -2,7 +2,7 @@
 import { type SYNTAX_NAME } from "../InformationFramework/SYNTAX-NAME.oca.mjs";
 import { id_lsx_postalAddr } from "../SelectedAttributeTypes/id-lsx-postalAddr.va.mjs";
 import {
-    PostalAddress,
+    type PostalAddress,
     _decode_PostalAddress,
     _encode_PostalAddress,
 } from "../SelectedAttributeTypes/PostalAddress.ta.mjs";

@@ -11,7 +11,7 @@ import {
 } from '@wildboar/asn1';
 import * as $ from '@wildboar/asn1/functional';
 import {
-  ModifyRequest_changes_change_operation,
+  type ModifyRequest_changes_change_operation,
   _enum_for_ModifyRequest_changes_change_operation,
   _decode_ModifyRequest_changes_change_operation,
   _encode_ModifyRequest_changes_change_operation,
@@ -47,7 +47,7 @@ export class ModifyRequest_changes_change {
    * @public
    * @readonly
    */
-  readonly operation: ModifyRequest_changes_change_operation;
+  public readonly operation: ModifyRequest_changes_change_operation;
   /**
    * @summary `modification`.
    * @description
@@ -58,13 +58,13 @@ export class ModifyRequest_changes_change {
    * @public
    * @readonly
    */
-  readonly modification: PartialAttribute;
+  public readonly modification: PartialAttribute;
   /**
    * @summary Extensions that are not recognized.
    * @public
    * @readonly
    */
-  readonly _unrecognizedExtensionsList: _Element[];
+  public readonly _unrecognizedExtensionsList: _Element[];
 
   constructor(
     operation: ModifyRequest_changes_change_operation,
@@ -106,7 +106,7 @@ export class ModifyRequest_changes_change {
    * @static
    */
 
-  public static _enum_for_operation = _enum_for_ModifyRequest_changes_change_operation;
+  public static _enum_for_operation: typeof _enum_for_ModifyRequest_changes_change_operation = _enum_for_ModifyRequest_changes_change_operation;
 }
 
 

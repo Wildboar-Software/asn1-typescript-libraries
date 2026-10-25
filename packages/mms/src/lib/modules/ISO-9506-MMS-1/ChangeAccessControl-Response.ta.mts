@@ -1,6 +1,6 @@
 /* eslint-disable */
 import {
-    ASN1Element as _Element,
+    type ASN1Element as _Element,
     ASN1TagClass as _TagClass,
     ASN1Construction as _Construction,
     ASN1UniversalType as _UniversalType,
@@ -10,7 +10,7 @@ import {
     ASN1ConstructionError as _ConstructionError,
 } from "@wildboar/asn1";
 import * as $ from "@wildboar/asn1/functional";
-import { Unsigned32, _decode_Unsigned32, _encode_Unsigned32 } from "../ISO-9506-MMS-1/Unsigned32.ta.mjs";
+import { type Unsigned32, _decode_Unsigned32, _encode_Unsigned32 } from "../ISO-9506-MMS-1/Unsigned32.ta.mjs";
 
 
 /**
@@ -38,31 +38,37 @@ import { Unsigned32, _decode_Unsigned32, _encode_Unsigned32 } from "../ISO-9506-
  */
 export
 class ChangeAccessControl_Response {
+    /**
+     * @summary `numberMatched`.
+     * @description
+     *
+     * Count of named objects that matched the request. One if the VMD
+     * choice was selected. ISO 9506-1:2003 §9.7.1.2.1.
+     *
+     * @public
+     * @readonly
+     */
+    public readonly numberMatched: Unsigned32;
+    /**
+     * @summary `numberChanged`.
+     * @description
+     *
+     * Count whose `&accessControl` was actually changed. Difference from
+     * Number Matched is objects skipped for unsatisfied EDIT or because
+     * DELETE=NEVER would have been lost. ISO 9506-1:2003 §9.7.1.2.2.
+     *
+     * @public
+     * @readonly
+     */
+    public readonly numberChanged: Unsigned32;
+
     constructor (
-        /**
-         * @summary `numberMatched`.
-         * @description
-         *
-         * Count of named objects that matched the request. One if the VMD
-         * choice was selected. ISO 9506-1:2003 §9.7.1.2.1.
-         *
-         * @public
-         * @readonly
-         */
-        readonly numberMatched: Unsigned32,
-        /**
-         * @summary `numberChanged`.
-         * @description
-         *
-         * Count whose `&accessControl` was actually changed. Difference from
-         * Number Matched is objects skipped for unsatisfied EDIT or because
-         * DELETE=NEVER would have been lost. ISO 9506-1:2003 §9.7.1.2.2.
-         *
-         * @public
-         * @readonly
-         */
-        readonly numberChanged: Unsigned32
-    ) {}
+        numberMatched: Unsigned32,
+        numberChanged: Unsigned32
+    ) {
+        this.numberMatched = numberMatched;
+        this.numberChanged = numberChanged;
+    }
 
     /**
      * @summary Restructures an object into a ChangeAccessControl_Response

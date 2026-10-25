@@ -1,7 +1,7 @@
 /* eslint-disable */
 import {
     ObjectIdentifier as _OID,
-    OBJECT_IDENTIFIER
+    type OBJECT_IDENTIFIER
 } from "@wildboar/asn1";
 import { id_rosObject } from "../IN-CS2-object-identifiers/id-rosObject.va.mjs";
 // export { id_rosObject } from "../IN-CS2-object-identifiers/id-rosObject.va.mjs";

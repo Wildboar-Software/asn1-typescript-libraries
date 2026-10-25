@@ -1,8 +1,8 @@
 /* eslint-disable */
 import {
-    OCTET_STRING,
-    OPTIONAL,
-    ASN1Element as _Element,
+    type OCTET_STRING,
+    type OPTIONAL,
+    type ASN1Element as _Element,
     ASN1TagClass as _TagClass
 } from "@wildboar/asn1";
 import * as $ from "@wildboar/asn1/functional";
@@ -32,32 +32,38 @@ import { type CtxParams1, _decode_CtxParams1, _encode_CtxParams1 } from "@wildbo
  */
 export
 class CompactEuiccSigned1 {
+    /**
+     * @summary `extCardResource`.
+     * @description
+     *
+     * Extended Card Resource Information according to ETSI TS 102 226, extracted
+     * from euiccInfo2.
+     *
+     * SGP.32 v1.2, section 5.14.3.
+     * @public
+     * @readonly
+     */
+    public readonly extCardResource: OCTET_STRING;
+    /**
+     * @summary `ctxParams1`.
+     * @description
+     *
+     * ctxParams1 from EuiccSigned1. The IPA may omit it when the eIM already sent
+     * ctxParams1 to the IPA.
+     *
+     * SGP.32 v1.2, section 5.14.3.
+     * @public
+     * @readonly
+     */
+    public readonly ctxParams1?: OPTIONAL<CtxParams1>;
+
     constructor (
-        /**
-         * @summary `extCardResource`.
-         * @description
-         *
-         * Extended Card Resource Information according to ETSI TS 102 226, extracted
-         * from euiccInfo2.
-         *
-         * SGP.32 v1.2, section 5.14.3.
-         * @public
-         * @readonly
-         */
-        readonly extCardResource: OCTET_STRING,
-        /**
-         * @summary `ctxParams1`.
-         * @description
-         *
-         * ctxParams1 from EuiccSigned1. The IPA may omit it when the eIM already sent
-         * ctxParams1 to the IPA.
-         *
-         * SGP.32 v1.2, section 5.14.3.
-         * @public
-         * @readonly
-         */
-        readonly ctxParams1?: OPTIONAL<CtxParams1>
-    ) {}
+        extCardResource: OCTET_STRING,
+        ctxParams1?: OPTIONAL<CtxParams1>
+    ) {
+        this.extCardResource = extCardResource;
+        this.ctxParams1 = ctxParams1;
+    }
 
     /**
      * @summary Restructures an object into a CompactEuiccSigned1

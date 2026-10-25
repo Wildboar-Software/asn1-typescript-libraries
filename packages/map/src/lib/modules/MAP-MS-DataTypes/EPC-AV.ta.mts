@@ -1,15 +1,15 @@
 /* eslint-disable */
 import {
-    OPTIONAL,
-    ASN1Element as _Element,
+    type OPTIONAL,
+    type ASN1Element as _Element,
     ASN1TagClass as _TagClass
 } from "@wildboar/asn1";
 import * as $ from "@wildboar/asn1/functional";
 import { ExtensionContainer, _decode_ExtensionContainer, _encode_ExtensionContainer } from "../MAP-ExtensionDataTypes/ExtensionContainer.ta.mjs";
-import { AUTN, _decode_AUTN, _encode_AUTN } from "../MAP-MS-DataTypes/AUTN.ta.mjs";
-import { KASME, _decode_KASME, _encode_KASME } from "../MAP-MS-DataTypes/KASME.ta.mjs";
-import { RAND, _decode_RAND, _encode_RAND } from "../MAP-MS-DataTypes/RAND.ta.mjs";
-import { XRES, _decode_XRES, _encode_XRES } from "../MAP-MS-DataTypes/XRES.ta.mjs";
+import { type AUTN, _decode_AUTN, _encode_AUTN } from "../MAP-MS-DataTypes/AUTN.ta.mjs";
+import { type KASME, _decode_KASME, _encode_KASME } from "../MAP-MS-DataTypes/KASME.ta.mjs";
+import { type RAND, _decode_RAND, _encode_RAND } from "../MAP-MS-DataTypes/RAND.ta.mjs";
+import { type XRES, _decode_XRES, _encode_XRES } from "../MAP-MS-DataTypes/XRES.ta.mjs";
 
 
 /**
@@ -29,7 +29,7 @@ import { XRES, _decode_XRES, _encode_XRES } from "../MAP-MS-DataTypes/XRES.ta.mj
  *     xres    XRES,
  *     autn    AUTN,
  *     kasme    KASME,
- *     extensionContainer    ExtensionContainer    OPTIONAL,
+ *     extensionContainer    ExtensionContainer    type OPTIONAL,
  *     ...}
  * ```
  * 
@@ -37,63 +37,77 @@ import { XRES, _decode_XRES, _encode_XRES } from "../MAP-MS-DataTypes/XRES.ta.mj
  */
 export
 class EPC_AV {
+    /**
+     * @summary `rand`.
+     * @description
+     *
+     * Random number used for authentication (3GPP TS 29.002 V19.1.0 clause
+     * 7.6.7.2).
+     *
+     * @public
+     * @readonly
+     */
+    public readonly rand: RAND;
+    /**
+     * @summary `xres`.
+     * @description
+     *
+     * Expected response to the authentication request (3GPP TS 29.002
+     * V19.1.0 clause 7.6.7.5).
+     *
+     * @public
+     * @readonly
+     */
+    public readonly xres: XRES;
+    /**
+     * @summary `autn`.
+     * @description
+     *
+     * Authentication Token (3GPP TS 29.002 V19.1.0 clause 7.6.7.5C).
+     *
+     * @public
+     * @readonly
+     */
+    public readonly autn: AUTN;
+    /**
+     * @summary `kasme`.
+     * @description
+     *
+     * Key for the Access Security Management Entity (3GPP TS 29.002 V19.1.0
+     * clause 7.6.7.5D).
+     *
+     * @public
+     * @readonly
+     */
+    public readonly kasme: KASME;
+    /**
+     * @summary `extensionContainer`.
+     * @public
+     * @readonly
+     */
+    public readonly extensionContainer?: OPTIONAL<ExtensionContainer>;
+    /**
+     * @summary Extensions that are not recognized.
+     * @public
+     * @readonly
+     */
+    public readonly _unrecognizedExtensionsList: _Element[];
+
     constructor (
-        /**
-         * @summary `rand`.
-         * @description
-         *
-         * Random number used for authentication (3GPP TS 29.002 V19.1.0 clause
-         * 7.6.7.2).
-         *
-         * @public
-         * @readonly
-         */
-        readonly rand: RAND,
-        /**
-         * @summary `xres`.
-         * @description
-         *
-         * Expected response to the authentication request (3GPP TS 29.002
-         * V19.1.0 clause 7.6.7.5).
-         *
-         * @public
-         * @readonly
-         */
-        readonly xres: XRES,
-        /**
-         * @summary `autn`.
-         * @description
-         *
-         * Authentication Token (3GPP TS 29.002 V19.1.0 clause 7.6.7.5C).
-         *
-         * @public
-         * @readonly
-         */
-        readonly autn: AUTN,
-        /**
-         * @summary `kasme`.
-         * @description
-         *
-         * Key for the Access Security Management Entity (3GPP TS 29.002 V19.1.0
-         * clause 7.6.7.5D).
-         *
-         * @public
-         * @readonly
-         */
-        readonly kasme: KASME,
-        /**
-         * @summary `extensionContainer`.
-         * @public
-         * @readonly
-         */
-        readonly extensionContainer?: OPTIONAL<ExtensionContainer>,
-        /**
-         * @summary Extensions that are not recognized.
-         * @public
-         * @readonly
-         */
-        readonly _unrecognizedExtensionsList: _Element[] = []
-    ) {}
+        rand: RAND,
+        xres: XRES,
+        autn: AUTN,
+        kasme: KASME,
+        extensionContainer?: OPTIONAL<ExtensionContainer>,
+        _unrecognizedExtensionsList: _Element[] = []
+    ) {
+        this.rand = rand;
+        this.xres = xres;
+        this.autn = autn;
+        this.kasme = kasme;
+        this.extensionContainer = extensionContainer;
+        this._unrecognizedExtensionsList = _unrecognizedExtensionsList;
+    }
 
     /**
      * @summary Restructures an object into a EPC_AV

@@ -1,7 +1,7 @@
 /* eslint-disable */
 import {
-    OPTIONAL,
-    ASN1Element as _Element,
+    type OPTIONAL,
+    type ASN1Element as _Element,
     ASN1TagClass as _TagClass,
     ASN1Construction as _Construction,
     ASN1UniversalType as _UniversalType,
@@ -12,17 +12,17 @@ import {
 } from '@wildboar/asn1';
 import * as $ from '@wildboar/asn1/functional';
 import {
-    Presentation_context_addition_result_list,
+    type Presentation_context_addition_result_list,
     _decode_Presentation_context_addition_result_list,
     _encode_Presentation_context_addition_result_list,
 } from '../ISO8823-PRESENTATION/Presentation-context-addition-result-list.ta.mjs';
 import {
-    Presentation_context_deletion_result_list,
+    type Presentation_context_deletion_result_list,
     _decode_Presentation_context_deletion_result_list,
     _encode_Presentation_context_deletion_result_list,
 } from '../ISO8823-PRESENTATION/Presentation-context-deletion-result-list.ta.mjs';
 import {
-    User_data,
+    type User_data,
     _decode_User_data,
     _encode_User_data,
 } from '../ISO8823-PRESENTATION/User-data.ta.mjs';

@@ -1,4 +1,5 @@
 /* eslint-disable */
+import { ASN1Element as _Element, ASN1ConstructionError as _ConstructionError } from "@wildboar/asn1";
 import * as $ from "@wildboar/asn1/functional";
 
 
@@ -49,7 +50,7 @@ type Criticality = _enum_for_Criticality;
  * @enum {number}
  */
 export
-const Criticality = _enum_for_Criticality;
+const Criticality: typeof _enum_for_Criticality = _enum_for_Criticality;
 
 /**
  * @summary Criticality_ignored
@@ -57,7 +58,7 @@ const Criticality = _enum_for_Criticality;
  * @type {number}
  */
 export
-const Criticality_ignored: Criticality = Criticality.ignored; /* LONG_NAMED_ENUMERATED_VALUE */
+const Criticality_ignored: _enum_for_Criticality.ignored = Criticality.ignored; /* LONG_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary ignored
@@ -65,7 +66,7 @@ const Criticality_ignored: Criticality = Criticality.ignored; /* LONG_NAMED_ENUM
  * @type {number}
  */
 export
-const ignored: Criticality = Criticality.ignored; /* SHORT_NAMED_ENUMERATED_VALUE */
+const ignored: _enum_for_Criticality.ignored = Criticality.ignored; /* SHORT_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary Criticality_abort
@@ -73,7 +74,7 @@ const ignored: Criticality = Criticality.ignored; /* SHORT_NAMED_ENUMERATED_VALU
  * @type {number}
  */
 export
-const Criticality_abort: Criticality = Criticality.abort; /* LONG_NAMED_ENUMERATED_VALUE */
+const Criticality_abort: _enum_for_Criticality.abort = Criticality.abort; /* LONG_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary abort
@@ -81,12 +82,23 @@ const Criticality_abort: Criticality = Criticality.abort; /* LONG_NAMED_ENUMERAT
  * @type {number}
  */
 export
-const abort: Criticality = Criticality.abort; /* SHORT_NAMED_ENUMERATED_VALUE */
+const abort: _enum_for_Criticality.abort = Criticality.abort; /* SHORT_NAMED_ENUMERATED_VALUE */
 
 export
-const _decode_Criticality: $.ASN1Decoder<Criticality> = $._decodeEnumerated;
+function _decode_Criticality(el: _Element): Criticality {
+    const enumerated = $._decodeEnumerated(el);
+    switch (enumerated) {
+        case Criticality.ignored: return Criticality.ignored;
+        case Criticality.abort: return Criticality.abort;
+        default:
+            throw new _ConstructionError(
+                "Invalid ENUMERATED value " + enumerated + " for Criticality.",
+                el,
+            );
+    }
+}
 
 export
-const _encode_Criticality: $.ASN1Encoder<Criticality> = $._encodeEnumerated;
+const _encode_Criticality: $.ASN1Encoder<Criticality> = $._encodeEnumerated as $.ASN1Encoder<Criticality>;
 
 /* eslint-enable */

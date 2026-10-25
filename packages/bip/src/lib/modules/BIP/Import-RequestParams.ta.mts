@@ -1,6 +1,6 @@
 /* eslint-disable */
 import {
-  OPTIONAL,
+  type OPTIONAL,
   ASN1Element as _Element,
   ASN1TagClass as _TagClass,
   ASN1Construction as _Construction,
@@ -12,12 +12,12 @@ import {
 } from '@wildboar/asn1';
 import * as $ from '@wildboar/asn1/functional';
 import {
-  BioAPI_HANDLE,
+  type BioAPI_HANDLE,
   _decode_BioAPI_HANDLE,
   _encode_BioAPI_HANDLE,
 } from '../BIP/BioAPI-HANDLE.ta.mjs';
 import {
-  BioAPI_DATA,
+  type BioAPI_DATA,
   _decode_BioAPI_DATA,
   _encode_BioAPI_DATA,
 } from '../BIP/BioAPI-DATA.ta.mjs';
@@ -27,7 +27,7 @@ import {
   _encode_BioAPI_BIR_BIOMETRIC_DATA_FORMAT,
 } from '../BIP/BioAPI-BIR-BIOMETRIC-DATA-FORMAT.ta.mjs';
 import {
-  BioAPI_BIR_PURPOSE,
+  type BioAPI_BIR_PURPOSE,
   _enum_for_BioAPI_BIR_PURPOSE,
   _decode_BioAPI_BIR_PURPOSE,
   _encode_BioAPI_BIR_PURPOSE,
@@ -67,7 +67,7 @@ export class Import_RequestParams {
    * @public
    * @readonly
    */
-  readonly originalBSPHandle: BioAPI_HANDLE;
+  public readonly originalBSPHandle: BioAPI_HANDLE;
   /**
    * @summary `inputData`.
    * @description
@@ -78,7 +78,7 @@ export class Import_RequestParams {
    * @public
    * @readonly
    */
-  readonly inputData: BioAPI_DATA;
+  public readonly inputData: BioAPI_DATA;
   /**
    * @summary `inputFormat`.
    * @description
@@ -89,7 +89,7 @@ export class Import_RequestParams {
    * @public
    * @readonly
    */
-  readonly inputFormat: BioAPI_BIR_BIOMETRIC_DATA_FORMAT;
+  public readonly inputFormat: BioAPI_BIR_BIOMETRIC_DATA_FORMAT;
   /**
    * @summary `outputFormat`.
    * @description
@@ -100,7 +100,7 @@ export class Import_RequestParams {
    * @public
    * @readonly
    */
-  readonly outputFormat: OPTIONAL<BioAPI_BIR_BIOMETRIC_DATA_FORMAT>;
+  public readonly outputFormat: OPTIONAL<BioAPI_BIR_BIOMETRIC_DATA_FORMAT>;
   /**
    * @summary `purpose`.
    * @description
@@ -111,7 +111,7 @@ export class Import_RequestParams {
    * @public
    * @readonly
    */
-  readonly purpose: BioAPI_BIR_PURPOSE;
+  public readonly purpose: BioAPI_BIR_PURPOSE;
 
   constructor(
     originalBSPHandle: BioAPI_HANDLE,
@@ -157,7 +157,7 @@ export class Import_RequestParams {
    * @static
    */
 
-  public static _enum_for_purpose = _enum_for_BioAPI_BIR_PURPOSE;
+  public static _enum_for_purpose: typeof _enum_for_BioAPI_BIR_PURPOSE = _enum_for_BioAPI_BIR_PURPOSE;
 }
 
 

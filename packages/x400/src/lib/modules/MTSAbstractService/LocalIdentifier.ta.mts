@@ -1,7 +1,7 @@
 /* eslint-disable */
 import {
-    IA5String,
-    ASN1Element as _Element,
+    type IA5String,
+    type ASN1Element as _Element,
     ASN1TagClass as _TagClass,
     ASN1Construction as _Construction,
     ASN1UniversalType as _UniversalType,
@@ -27,10 +27,10 @@ import * as $ from '@wildboar/asn1/functional';
 export type LocalIdentifier = IA5String; // IA5String
 
 
-export const _decode_LocalIdentifier = $._decodeIA5String;
+export const _decode_LocalIdentifier: $.ASN1Decoder<string> = $._decodeIA5String;
 
 
-export const _encode_LocalIdentifier = $._encodeIA5String;
+export const _encode_LocalIdentifier: $.ASN1Encoder<string> = $._encodeIA5String;
 
 
 /* eslint-enable */

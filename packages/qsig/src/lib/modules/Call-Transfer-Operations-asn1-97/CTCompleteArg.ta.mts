@@ -1,16 +1,16 @@
 /* eslint-disable */
 import {
-    OPTIONAL,
-    ASN1Element as _Element,
+    type OPTIONAL,
+    type ASN1Element as _Element,
     ASN1TagClass as _TagClass
 } from "@wildboar/asn1";
 import * as $ from "@wildboar/asn1/functional";
 import { EndDesignation, _decode_EndDesignation, _encode_EndDesignation, _enum_for_EndDesignation } from "../Call-Transfer-Operations-asn1-97/EndDesignation.ta.mjs";
-import { PresentedNumberScreened, _decode_PresentedNumberScreened, _encode_PresentedNumberScreened } from "../Addressing-Data-Elements-asn1-97/PresentedNumberScreened.ta.mjs";
-import { PSS1InformationElement, _decode_PSS1InformationElement, _encode_PSS1InformationElement } from "../PSS1-generic-parameters-definition-asn1-97/PSS1InformationElement.ta.mjs";
-import { Name, _decode_Name, _encode_Name } from "../Name-Operations-asn1-97/Name.ta.mjs";
+import { type PresentedNumberScreened, _decode_PresentedNumberScreened, _encode_PresentedNumberScreened } from "../Addressing-Data-Elements-asn1-97/PresentedNumberScreened.ta.mjs";
+import { type PSS1InformationElement, _decode_PSS1InformationElement, _encode_PSS1InformationElement } from "../PSS1-generic-parameters-definition-asn1-97/PSS1InformationElement.ta.mjs";
+import { type Name, _decode_Name, _encode_Name } from "../Name-Operations-asn1-97/Name.ta.mjs";
 import { CallStatus, CallStatus_answered /* IMPORTED_LONG_ENUMERATION_ITEM */, _decode_CallStatus, _encode_CallStatus, _enum_for_CallStatus } from "../Call-Transfer-Operations-asn1-97/CallStatus.ta.mjs";
-import { CTCompleteArg_argumentExtension, _decode_CTCompleteArg_argumentExtension, _encode_CTCompleteArg_argumentExtension } from "../Call-Transfer-Operations-asn1-97/CTCompleteArg-argumentExtension.ta.mjs";
+import { type CTCompleteArg_argumentExtension, _decode_CTCompleteArg_argumentExtension, _encode_CTCompleteArg_argumentExtension } from "../Call-Transfer-Operations-asn1-97/CTCompleteArg-argumentExtension.ta.mjs";
 
 /**
  * @summary CTCompleteArg
@@ -150,19 +150,19 @@ class CTCompleteArg {
      * @static
      * @method
      */
-    public static get _default_value_for_callStatus () { return CallStatus_answered; }        /**
+    public static get _default_value_for_callStatus (): _enum_for_CallStatus { return CallStatus_answered; }        /**
          * @summary The enum used as the type of the component `endDesignation`
          * @public
          * @static
          */
 
-    public static _enum_for_endDesignation = _enum_for_EndDesignation;        /**
+    public static _enum_for_endDesignation: typeof _enum_for_EndDesignation = _enum_for_EndDesignation;        /**
          * @summary The enum used as the type of the component `callStatus`
          * @public
          * @static
          */
 
-    public static _enum_for_callStatus = _enum_for_CallStatus;
+    public static _enum_for_callStatus: typeof _enum_for_CallStatus = _enum_for_CallStatus;
 }
 
 /**

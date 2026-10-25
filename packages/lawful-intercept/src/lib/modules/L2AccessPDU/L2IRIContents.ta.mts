@@ -1,20 +1,20 @@
 /* eslint-disable */
 import {
-    GeneralizedTime,
-    INTEGER,
-    OCTET_STRING,
-    OPTIONAL,
-    UTF8String,
-    ASN1Element as _Element,
+    type GeneralizedTime,
+    type INTEGER,
+    type OCTET_STRING,
+    type OPTIONAL,
+    type UTF8String,
+    type ASN1Element as _Element,
     ASN1TagClass as _TagClass,
     ASN1OverflowError,
     ASN1SizeError
 } from "@wildboar/asn1";
 import * as $ from "@wildboar/asn1/functional";
-import { AccessEventType, _decode_AccessEventType, _encode_AccessEventType } from "../L2AccessPDU/AccessEventType.ta.mjs";
-import { InternetAccessType, _decode_InternetAccessType, _encode_InternetAccessType } from "../L2AccessPDU/InternetAccessType.ta.mjs";
-import { EndReason, _decode_EndReason, _encode_EndReason } from "../L2AccessPDU/EndReason.ta.mjs";
-import { AuthenticationType, _decode_AuthenticationType, _encode_AuthenticationType } from "../L2AccessPDU/AuthenticationType.ta.mjs";
+import { type AccessEventType, _decode_AccessEventType, _encode_AccessEventType } from "../L2AccessPDU/AccessEventType.ta.mjs";
+import { type InternetAccessType, _decode_InternetAccessType, _encode_InternetAccessType } from "../L2AccessPDU/InternetAccessType.ta.mjs";
+import { type EndReason, _decode_EndReason, _encode_EndReason } from "../L2AccessPDU/EndReason.ta.mjs";
+import { type AuthenticationType, _decode_AuthenticationType, _encode_AuthenticationType } from "../L2AccessPDU/AuthenticationType.ta.mjs";
 
 
 /**

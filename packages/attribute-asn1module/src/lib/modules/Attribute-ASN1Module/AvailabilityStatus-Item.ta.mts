@@ -1,7 +1,7 @@
 /* eslint-disable */
 import {
-    INTEGER,
-    ASN1Element as _Element,
+    type INTEGER,
+    type ASN1Element as _Element,
     ASN1TagClass as _TagClass,
     ASN1Construction as _Construction,
     ASN1UniversalType as _UniversalType,
@@ -41,7 +41,7 @@ type AvailabilityStatus_Item = INTEGER;
  * @type {number}
  */
 export
-const AvailabilityStatus_Item_inTest: AvailabilityStatus_Item = 0; /* LONG_NAMED_INTEGER_VALUE */
+const AvailabilityStatus_Item_inTest: 0 = 0 satisfies AvailabilityStatus_Item; /* LONG_NAMED_INTEGER_VALUE */
 
 /**
  * @summary AvailabilityStatus_Item_inTest
@@ -54,7 +54,7 @@ const AvailabilityStatus_Item_inTest: AvailabilityStatus_Item = 0; /* LONG_NAMED
  * @type {number}
  */
 export
-const inTest: AvailabilityStatus_Item = AvailabilityStatus_Item_inTest; /* SHORT_NAMED_INTEGER_VALUE */
+const inTest: 0 = AvailabilityStatus_Item_inTest; /* SHORT_NAMED_INTEGER_VALUE */
 
 /**
  * @summary AvailabilityStatus_Item_failed
@@ -67,7 +67,7 @@ const inTest: AvailabilityStatus_Item = AvailabilityStatus_Item_inTest; /* SHORT
  * @type {number}
  */
 export
-const AvailabilityStatus_Item_failed: AvailabilityStatus_Item = 1; /* LONG_NAMED_INTEGER_VALUE */
+const AvailabilityStatus_Item_failed: 1 = 1 satisfies AvailabilityStatus_Item; /* LONG_NAMED_INTEGER_VALUE */
 
 /**
  * @summary AvailabilityStatus_Item_failed
@@ -80,7 +80,7 @@ const AvailabilityStatus_Item_failed: AvailabilityStatus_Item = 1; /* LONG_NAMED
  * @type {number}
  */
 export
-const failed: AvailabilityStatus_Item = AvailabilityStatus_Item_failed; /* SHORT_NAMED_INTEGER_VALUE */
+const failed: 1 = AvailabilityStatus_Item_failed; /* SHORT_NAMED_INTEGER_VALUE */
 
 /**
  * @summary AvailabilityStatus_Item_powerOff
@@ -93,7 +93,7 @@ const failed: AvailabilityStatus_Item = AvailabilityStatus_Item_failed; /* SHORT
  * @type {number}
  */
 export
-const AvailabilityStatus_Item_powerOff: AvailabilityStatus_Item = 2; /* LONG_NAMED_INTEGER_VALUE */
+const AvailabilityStatus_Item_powerOff: 2 = 2 satisfies AvailabilityStatus_Item; /* LONG_NAMED_INTEGER_VALUE */
 
 /**
  * @summary AvailabilityStatus_Item_powerOff
@@ -106,7 +106,7 @@ const AvailabilityStatus_Item_powerOff: AvailabilityStatus_Item = 2; /* LONG_NAM
  * @type {number}
  */
 export
-const powerOff: AvailabilityStatus_Item = AvailabilityStatus_Item_powerOff; /* SHORT_NAMED_INTEGER_VALUE */
+const powerOff: 2 = AvailabilityStatus_Item_powerOff; /* SHORT_NAMED_INTEGER_VALUE */
 
 /**
  * @summary AvailabilityStatus_Item_offLine
@@ -119,7 +119,7 @@ const powerOff: AvailabilityStatus_Item = AvailabilityStatus_Item_powerOff; /* S
  * @type {number}
  */
 export
-const AvailabilityStatus_Item_offLine: AvailabilityStatus_Item = 3; /* LONG_NAMED_INTEGER_VALUE */
+const AvailabilityStatus_Item_offLine: 3 = 3 satisfies AvailabilityStatus_Item; /* LONG_NAMED_INTEGER_VALUE */
 
 /**
  * @summary AvailabilityStatus_Item_offLine
@@ -132,7 +132,7 @@ const AvailabilityStatus_Item_offLine: AvailabilityStatus_Item = 3; /* LONG_NAME
  * @type {number}
  */
 export
-const offLine: AvailabilityStatus_Item = AvailabilityStatus_Item_offLine; /* SHORT_NAMED_INTEGER_VALUE */
+const offLine: 3 = AvailabilityStatus_Item_offLine; /* SHORT_NAMED_INTEGER_VALUE */
 
 /**
  * @summary AvailabilityStatus_Item_offDuty
@@ -146,7 +146,7 @@ const offLine: AvailabilityStatus_Item = AvailabilityStatus_Item_offLine; /* SHO
  * @type {number}
  */
 export
-const AvailabilityStatus_Item_offDuty: AvailabilityStatus_Item = 4; /* LONG_NAMED_INTEGER_VALUE */
+const AvailabilityStatus_Item_offDuty: 4 = 4 satisfies AvailabilityStatus_Item; /* LONG_NAMED_INTEGER_VALUE */
 
 /**
  * @summary AvailabilityStatus_Item_offDuty
@@ -160,7 +160,7 @@ const AvailabilityStatus_Item_offDuty: AvailabilityStatus_Item = 4; /* LONG_NAME
  * @type {number}
  */
 export
-const offDuty: AvailabilityStatus_Item = AvailabilityStatus_Item_offDuty; /* SHORT_NAMED_INTEGER_VALUE */
+const offDuty: 4 = AvailabilityStatus_Item_offDuty; /* SHORT_NAMED_INTEGER_VALUE */
 
 /**
  * @summary AvailabilityStatus_Item_dependency
@@ -173,7 +173,7 @@ const offDuty: AvailabilityStatus_Item = AvailabilityStatus_Item_offDuty; /* SHO
  * @type {number}
  */
 export
-const AvailabilityStatus_Item_dependency: AvailabilityStatus_Item = 5; /* LONG_NAMED_INTEGER_VALUE */
+const AvailabilityStatus_Item_dependency: 5 = 5 satisfies AvailabilityStatus_Item; /* LONG_NAMED_INTEGER_VALUE */
 
 /**
  * @summary AvailabilityStatus_Item_dependency
@@ -186,7 +186,7 @@ const AvailabilityStatus_Item_dependency: AvailabilityStatus_Item = 5; /* LONG_N
  * @type {number}
  */
 export
-const dependency: AvailabilityStatus_Item = AvailabilityStatus_Item_dependency; /* SHORT_NAMED_INTEGER_VALUE */
+const dependency: 5 = AvailabilityStatus_Item_dependency; /* SHORT_NAMED_INTEGER_VALUE */
 
 /**
  * @summary AvailabilityStatus_Item_degraded
@@ -199,7 +199,7 @@ const dependency: AvailabilityStatus_Item = AvailabilityStatus_Item_dependency; 
  * @type {number}
  */
 export
-const AvailabilityStatus_Item_degraded: AvailabilityStatus_Item = 6; /* LONG_NAMED_INTEGER_VALUE */
+const AvailabilityStatus_Item_degraded: 6 = 6 satisfies AvailabilityStatus_Item; /* LONG_NAMED_INTEGER_VALUE */
 
 /**
  * @summary AvailabilityStatus_Item_degraded
@@ -212,7 +212,7 @@ const AvailabilityStatus_Item_degraded: AvailabilityStatus_Item = 6; /* LONG_NAM
  * @type {number}
  */
 export
-const degraded: AvailabilityStatus_Item = AvailabilityStatus_Item_degraded; /* SHORT_NAMED_INTEGER_VALUE */
+const degraded: 6 = AvailabilityStatus_Item_degraded; /* SHORT_NAMED_INTEGER_VALUE */
 
 /**
  * @summary AvailabilityStatus_Item_notInstalled
@@ -225,7 +225,7 @@ const degraded: AvailabilityStatus_Item = AvailabilityStatus_Item_degraded; /* S
  * @type {number}
  */
 export
-const AvailabilityStatus_Item_notInstalled: AvailabilityStatus_Item = 7; /* LONG_NAMED_INTEGER_VALUE */
+const AvailabilityStatus_Item_notInstalled: 7 = 7 satisfies AvailabilityStatus_Item; /* LONG_NAMED_INTEGER_VALUE */
 
 /**
  * @summary AvailabilityStatus_Item_notInstalled
@@ -238,7 +238,7 @@ const AvailabilityStatus_Item_notInstalled: AvailabilityStatus_Item = 7; /* LONG
  * @type {number}
  */
 export
-const notInstalled: AvailabilityStatus_Item = AvailabilityStatus_Item_notInstalled; /* SHORT_NAMED_INTEGER_VALUE */
+const notInstalled: 7 = AvailabilityStatus_Item_notInstalled; /* SHORT_NAMED_INTEGER_VALUE */
 
 /**
  * @summary AvailabilityStatus_Item_logFull
@@ -251,7 +251,7 @@ const notInstalled: AvailabilityStatus_Item = AvailabilityStatus_Item_notInstall
  * @type {number}
  */
 export
-const AvailabilityStatus_Item_logFull: AvailabilityStatus_Item = 8; /* LONG_NAMED_INTEGER_VALUE */
+const AvailabilityStatus_Item_logFull: 8 = 8 satisfies AvailabilityStatus_Item; /* LONG_NAMED_INTEGER_VALUE */
 
 /**
  * @summary AvailabilityStatus_Item_logFull
@@ -264,13 +264,13 @@ const AvailabilityStatus_Item_logFull: AvailabilityStatus_Item = 8; /* LONG_NAME
  * @type {number}
  */
 export
-const logFull: AvailabilityStatus_Item = AvailabilityStatus_Item_logFull; /* SHORT_NAMED_INTEGER_VALUE */
+const logFull: 8 = AvailabilityStatus_Item_logFull; /* SHORT_NAMED_INTEGER_VALUE */
 
 
-export const _decode_AvailabilityStatus_Item = $._decodeInteger;
+export const _decode_AvailabilityStatus_Item: $.ASN1Decoder<INTEGER> = $._decodeInteger;
 
 
-export const _encode_AvailabilityStatus_Item = $._encodeInteger;
+export const _encode_AvailabilityStatus_Item: $.ASN1Encoder<INTEGER> = $._encodeInteger;
 
 
 /* eslint-enable */

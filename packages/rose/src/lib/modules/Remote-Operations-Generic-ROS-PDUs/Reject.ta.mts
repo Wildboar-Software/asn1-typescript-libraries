@@ -11,12 +11,12 @@ import {
 } from '@wildboar/asn1';
 import * as $ from '@wildboar/asn1/functional';
 import {
-  InvokeId,
+  type InvokeId,
   _decode_InvokeId,
   _encode_InvokeId,
 } from '../Remote-Operations-Generic-ROS-PDUs/InvokeId.ta.mjs';
 import {
-  Reject_problem,
+  type Reject_problem,
   _decode_Reject_problem,
   _encode_Reject_problem,
 } from '../Remote-Operations-Generic-ROS-PDUs/Reject-problem.ta.mjs';

@@ -1,15 +1,15 @@
 /* eslint-disable */
 import {
-    ASN1Element as _Element,
+    type ASN1Element as _Element,
     ASN1TagClass as _TagClass
 } from "@wildboar/asn1";
 import * as $ from "@wildboar/asn1/functional";
 
 import {
-    ProbeSubmissionIdentifier,
+    type ProbeSubmissionIdentifier,
     _decode_ProbeSubmissionIdentifier,
     _encode_ProbeSubmissionIdentifier,
-    ProbeSubmissionTime,
+    type ProbeSubmissionTime,
     _decode_ProbeSubmissionTime,
     _encode_ProbeSubmissionTime,
 } from "@wildboar/x400/MTSAbstractService";

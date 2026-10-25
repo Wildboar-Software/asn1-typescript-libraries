@@ -1,10 +1,10 @@
 /* eslint-disable */
 import {
-    ASN1Element as _Element,
+    type ASN1Element as _Element,
     ASN1TagClass as _TagClass,
-    INTEGER,
-    OCTET_STRING,
-    OPTIONAL,
+    type INTEGER,
+    type OCTET_STRING,
+    type OPTIONAL,
     ASN1OverflowError,
     ASN1SizeError
 } from "@wildboar/asn1";
@@ -42,7 +42,7 @@ class IP6Address {
      * @public
      * @readonly
      */
-    readonly address: OCTET_STRING;
+    public readonly address: OCTET_STRING;
     /**
      * @summary `portNumber`.
      * @description
@@ -54,14 +54,14 @@ class IP6Address {
      * @public
      * @readonly
      */
-    readonly portNumber?: OPTIONAL<INTEGER>;
+    public readonly portNumber?: OPTIONAL<INTEGER>;
 
     constructor (
         address: OCTET_STRING,
         portNumber?: OPTIONAL<INTEGER>
     ) {
-        this.address = address;
-        this.portNumber = portNumber;
+            this.address = address;
+            this.portNumber = portNumber;
             if (address.length !== 16) {
                 throw new ASN1SizeError("IP6Address.address violates SIZE constraint");
             }

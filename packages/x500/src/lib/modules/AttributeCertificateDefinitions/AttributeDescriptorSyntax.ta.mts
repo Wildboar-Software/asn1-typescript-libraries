@@ -1,23 +1,23 @@
 /* eslint-disable */
 import {
-    ASN1Element as _Element,
+    type ASN1Element as _Element,
     ASN1TagClass as _TagClass,
-    OCTET_STRING,
-    OPTIONAL,
+    type OCTET_STRING,
+    type OPTIONAL,
 } from "@wildboar/asn1";
 import * as $ from "@wildboar/asn1/functional";
 import {
-    AttributeDescription,
+    type AttributeDescription,
     _decode_AttributeDescription,
     _encode_AttributeDescription,
 } from "../AttributeCertificateDefinitions/AttributeDescription.ta.mjs";
 import {
-    AttributeIdentifier,
+    type AttributeIdentifier,
     _decode_AttributeIdentifier,
     _encode_AttributeIdentifier,
 } from "../AttributeCertificateDefinitions/AttributeIdentifier.ta.mjs";
 import {
-    AttributeName,
+    type AttributeName,
     _decode_AttributeName,
     _encode_AttributeName,
 } from "../AttributeCertificateDefinitions/AttributeName.ta.mjs";
@@ -49,44 +49,58 @@ import {
  *
  */
 export class AttributeDescriptorSyntax {
+    /**
+     * @summary `identifier`.
+     * @public
+     * @readonly
+     */
+    public readonly identifier: AttributeIdentifier;
+    /**
+     * @summary `attributeSyntax`.
+     * @public
+     * @readonly
+     */
+    public readonly attributeSyntax: OCTET_STRING;
+    /**
+     * @summary `name`.
+     * @public
+     * @readonly
+     */
+    public readonly name: OPTIONAL<AttributeName>;
+    /**
+     * @summary `description`.
+     * @public
+     * @readonly
+     */
+    public readonly description: OPTIONAL<AttributeDescription>;
+    /**
+     * @summary `dominationRule`.
+     * @public
+     * @readonly
+     */
+    public readonly dominationRule: PrivilegePolicyIdentifier;
+    /**
+     * @summary Extensions that are not recognized.
+     * @public
+     * @readonly
+     */
+    public readonly _unrecognizedExtensionsList: _Element[];
+
     constructor(
-        /**
-         * @summary `identifier`.
-         * @public
-         * @readonly
-         */
-        readonly identifier: AttributeIdentifier,
-        /**
-         * @summary `attributeSyntax`.
-         * @public
-         * @readonly
-         */
-        readonly attributeSyntax: OCTET_STRING,
-        /**
-         * @summary `name`.
-         * @public
-         * @readonly
-         */
-        readonly name: OPTIONAL<AttributeName>,
-        /**
-         * @summary `description`.
-         * @public
-         * @readonly
-         */
-        readonly description: OPTIONAL<AttributeDescription>,
-        /**
-         * @summary `dominationRule`.
-         * @public
-         * @readonly
-         */
-        readonly dominationRule: PrivilegePolicyIdentifier,
-        /**
-         * @summary Extensions that are not recognized.
-         * @public
-         * @readonly
-         */
-        readonly _unrecognizedExtensionsList: _Element[] = []
-    ) {}
+        identifier: AttributeIdentifier,
+        attributeSyntax: OCTET_STRING,
+        name: OPTIONAL<AttributeName>,
+        description: OPTIONAL<AttributeDescription>,
+        dominationRule: PrivilegePolicyIdentifier,
+        _unrecognizedExtensionsList: _Element[] = []
+    ) {
+        this.identifier = identifier;
+        this.attributeSyntax = attributeSyntax;
+        this.name = name;
+        this.description = description;
+        this.dominationRule = dominationRule;
+        this._unrecognizedExtensionsList = _unrecognizedExtensionsList;
+    }
 
     /**
      * @summary Restructures an object into a AttributeDescriptorSyntax

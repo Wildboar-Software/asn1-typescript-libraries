@@ -1,9 +1,9 @@
 /* eslint-disable */
 import {
-    OCTET_STRING,
-    OPTIONAL,
-    UTF8String,
-    ASN1Element as _Element,
+    type OCTET_STRING,
+    type OPTIONAL,
+    type UTF8String,
+    type ASN1Element as _Element,
     ASN1TagClass as _TagClass
 } from "@wildboar/asn1";
 import { ASN1SizeError } from "@wildboar/asn1";
@@ -11,11 +11,11 @@ import * as $ from "@wildboar/asn1/functional";
 import { type VersionType, _decode_VersionType, _encode_VersionType } from "@wildboar/sgp22/RSPDefinitions";
 import { type RspCapability, _decode_RspCapability, _encode_RspCapability } from "@wildboar/sgp22/RSPDefinitions";
 import { type SubjectKeyIdentifier, _decode_SubjectKeyIdentifier, _encode_SubjectKeyIdentifier } from "@wildboar/x500/CertificateExtensions";
-import { EUICCInfo2_euiccCategory, _decode_EUICCInfo2_euiccCategory, _encode_EUICCInfo2_euiccCategory } from "../SGP32Definitions/EUICCInfo2-euiccCategory.ta.mjs";
+import { type EUICCInfo2_euiccCategory, _decode_EUICCInfo2_euiccCategory, _encode_EUICCInfo2_euiccCategory } from "../SGP32Definitions/EUICCInfo2-euiccCategory.ta.mjs";
 import { type PprIds, _decode_PprIds, _encode_PprIds } from "@wildboar/sgp22/RSPDefinitions";
 import { CertificationDataObject, _decode_CertificationDataObject, _encode_CertificationDataObject } from "@wildboar/sgp22/RSPDefinitions";
-import { EUICCInfo2_treProperties, _decode_EUICCInfo2_treProperties, _encode_EUICCInfo2_treProperties } from "../SGP32Definitions/EUICCInfo2-treProperties.ta.mjs";
-import { IpaMode, _decode_IpaMode, _encode_IpaMode } from "../SGP32Definitions/IpaMode.ta.mjs";
+import { type EUICCInfo2_treProperties, _decode_EUICCInfo2_treProperties, _encode_EUICCInfo2_treProperties } from "../SGP32Definitions/EUICCInfo2-treProperties.ta.mjs";
+import { type IpaMode, _decode_IpaMode, _encode_IpaMode } from "../SGP32Definitions/IpaMode.ta.mjs";
 import { IoTSpecificInfo, _decode_IoTSpecificInfo, _encode_IoTSpecificInfo } from "../SGP32Definitions/IoTSpecificInfo.ta.mjs";
 import { type UICCCapability, _decode_UICCCapability, _encode_UICCCapability } from "@wildboar/sgp22/PEDefinitions";
 
@@ -78,274 +78,323 @@ import { type UICCCapability, _decode_UICCCapability, _encode_UICCCapability } f
  */
 export
 class EUICCInfo2 {
+    /**
+     * @summary `profileVersion`.
+     * @description
+     *
+     * Base eUICC Profile package version supported. SGP.32 v1.2 section 5.9.2
+     * places the versioning procedures in SGP.22 section 5.7.8. SGP.22 v3.1
+     * section 5.7.8 points to section 4.3, where the corresponding field is the
+     * lowest major version and the associated highest minor version of the TCA
+     * eUICC Profile Package specification supported by the eUICC.
+     * @public
+     * @readonly
+     */
+    public readonly profileVersion: VersionType;
+    /**
+     * @summary `svn`.
+     * @description
+     *
+     * GSMA SGP.22 version supported (SVN) referenced by SGP.32.
+     *
+     * SGP.32 v1.2, section 5.9.2.
+     * @public
+     * @readonly
+     */
+    public readonly svn: VersionType;
+    /**
+     * @summary `euiccFirmwareVer`.
+     * @description
+     *
+     * eUICC firmware version.
+     *
+     * SGP.32 v1.2, section 5.9.2.
+     * @public
+     * @readonly
+     */
+    public readonly euiccFirmwareVer: VersionType;
+    /**
+     * @summary `extCardResource`.
+     * @description
+     *
+     * Extended Card Resource Information according to ETSI TS 102 226.
+     *
+     * SGP.32 v1.2, section 5.9.2.
+     * @public
+     * @readonly
+     */
+    public readonly extCardResource: OCTET_STRING;
+    /**
+     * @summary `uiccCapability`.
+     * @description
+     *
+     * UICC capabilities of the eUICC. SGP.32 v1.2 section 5.9.2 places the related
+     * procedures in SGP.22 section 5.7.8. SGP.22 v3.1 section 4.3, reached from
+     * that section, says the field contains the UICC capabilities supported by the
+     * eUICC and that the type is imported from the TCA eUICC Profile Package
+     * specification.
+     * @public
+     * @readonly
+     */
+    public readonly uiccCapability: UICCCapability;
+    /**
+     * @summary `ts102241Version`.
+     * @description
+     *
+     * SGP.32 v1.2 does not further define this field. Annex C.
+     * @public
+     * @readonly
+     */
+    public readonly ts102241Version: OPTIONAL<VersionType>;
+    /**
+     * @summary `globalplatformVersion`.
+     * @description
+     *
+     * SGP.32 v1.2 does not further define this field. Annex C.
+     * @public
+     * @readonly
+     */
+    public readonly globalplatformVersion: OPTIONAL<VersionType>;
+    /**
+     * @summary `rspCapability`.
+     * @description
+     *
+     * SGP.32 v1.2 does not further define this field. Annex C.
+     * @public
+     * @readonly
+     */
+    public readonly rspCapability: RspCapability;
+    /**
+     * @summary `euiccCiPKIdListForVerification`.
+     * @description
+     *
+     * CI public key identifiers supported on the eUICC for signature verification.
+     *
+     * SGP.32 v1.2, section 5.9.2.
+     * @public
+     * @readonly
+     */
+    public readonly euiccCiPKIdListForVerification: SubjectKeyIdentifier[];
+    /**
+     * @summary `euiccCiPKIdListForSigning`.
+     * @description
+     *
+     * CI public key identifiers supported on the eUICC for signature creation.
+     * When an Associated eIM has no euiccCiPKId, the eUICC uses the first entry of
+     * this list.
+     *
+     * SGP.32 v1.2, sections 2.11.1.1 and 5.9.2.
+     * @public
+     * @readonly
+     */
+    public readonly euiccCiPKIdListForSigning: SubjectKeyIdentifier[];
+    /**
+     * @summary `euiccCategory`.
+     * @description
+     *
+     * Optional eUICC category. SGP.32 v1.2 does not further define the values.
+     * Annex C.
+     * @public
+     * @readonly
+     */
+    public readonly euiccCategory: OPTIONAL<EUICCInfo2_euiccCategory>;
+    /**
+     * @summary `forbiddenProfilePolicyRules`.
+     * @description
+     *
+     * SGP.32 v1.2 does not further define this field. Annex C.
+     * @public
+     * @readonly
+     */
+    public readonly forbiddenProfilePolicyRules: OPTIONAL<PprIds>;
+    /**
+     * @summary `ppVersion`.
+     * @description
+     *
+     * Protection Profile version.
+     *
+     * SGP.32 v1.2, section 5.9.2.
+     * @public
+     * @readonly
+     */
+    public readonly ppVersion: VersionType;
+    /**
+     * @summary `sasAcreditationNumber`.
+     * @description
+     *
+     * SGP.32 v1.2 does not further define this field. Annex C.
+     * @public
+     * @readonly
+     */
+    public readonly sasAcreditationNumber: UTF8String;
+    /**
+     * @summary `certificationDataObject`.
+     * @description
+     *
+     * SGP.32 v1.2 does not further define this field. Annex C.
+     * @public
+     * @readonly
+     */
+    public readonly certificationDataObject?: OPTIONAL<CertificationDataObject>;
+    /**
+     * @summary `treProperties`.
+     * @description
+     *
+     * Optional TRE properties. usesRemoteMemory means remote memory protected by
+     * the Remote Memory Protection Function described in SGP.21. SGP.32 v1.2 does
+     * not further define isDiscrete or isIntegrated.
+     *
+     * SGP.32 v1.2, section 5.9.2.
+     * @public
+     * @readonly
+     */
+    public readonly treProperties?: OPTIONAL<EUICCInfo2_treProperties>;
+    /**
+     * @summary `treProductReference`.
+     * @description
+     *
+     * Platform_Label as defined in the GlobalPlatform DLOA specification [57].
+     *
+     * SGP.32 v1.2, section 5.9.2.
+     * @public
+     * @readonly
+     */
+    public readonly treProductReference?: OPTIONAL<UTF8String>;
+    /**
+     * @summary `additionalEuiccProfilePackageVersions`.
+     * @description
+     *
+     * Additional eUICC Profile package versions. SGP.32 v1.2 section 5.9.2 places
+     * the procedures in SGP.22 section 5.7.8. SGP.22 v3.1 section 4.3 describes
+     * the corresponding field as further major versions, each with its highest
+     * minor version, present when a major version higher than the base version is
+     * supported.
+     * @public
+     * @readonly
+     */
+    public readonly additionalEuiccProfilePackageVersions?: OPTIONAL<VersionType[]>;
+    /**
+     * @summary `ipaMode`.
+     * @description
+     *
+     * Which IPA is active. Mandatory in SGP.32. ipad means IPAd is active. ipae
+     * means IPAe is active.
+     *
+     * SGP.32 v1.2, section 5.9.2.
+     * @public
+     * @readonly
+     */
+    public readonly ipaMode?: OPTIONAL<IpaMode>;
+    /**
+     * @summary `euiccCiPKIdListForSigningV3`.
+     * @description
+     *
+     * Unused in SGP.32 v1.2. The eUICC omits it. An SM-DP+ ignores it if it
+     * arrives together with iotSpecificInfo.
+     *
+     * SGP.32 v1.2, section 5.9.2.
+     * @public
+     * @readonly
+     */
+    public readonly euiccCiPKIdListForSigningV3?: OPTIONAL<SubjectKeyIdentifier[]>;
+    /**
+     * @summary `additionalEuiccInfo`.
+     * @description
+     *
+     * Unused in SGP.32 v1.2. The eUICC omits it. An SM-DP+ ignores it if it
+     * arrives together with iotSpecificInfo.
+     *
+     * SGP.32 v1.2, section 5.9.2.
+     * @public
+     * @readonly
+     */
+    public readonly additionalEuiccInfo?: OPTIONAL<OCTET_STRING>;
+    /**
+     * @summary `highestSvn`.
+     * @description
+     *
+     * Unused in SGP.32 v1.2. The eUICC omits it. An SM-DP+ ignores it if it
+     * arrives together with iotSpecificInfo.
+     *
+     * SGP.32 v1.2, section 5.9.2.
+     * @public
+     * @readonly
+     */
+    public readonly highestSvn?: OPTIONAL<VersionType>;
+    /**
+     * @summary `iotSpecificInfo`.
+     * @description
+     *
+     * IoT-specific information. Required in SGP.32. ecallSupported is present;
+     * when that flag is set, the eUICC supports the Emergency Mechanism.
+     * fallbackSupported is present when the eUICC supports the Fallback Mechanism.
+     *
+     * SGP.32 v1.2, section 5.9.2.
+     * @public
+     * @readonly
+     */
+    public readonly iotSpecificInfo?: OPTIONAL<IoTSpecificInfo>;
+    /**
+     * @summary `euiccMinimumSecurityLevel`.
+     * @description
+     *
+     * SGP.32 v1.2 section 5.9.2 and Annex C omit this field, so v1.2 does not
+     * further define it.
+     * @public
+     * @readonly
+     */
+    public readonly euiccMinimumSecurityLevel?: OPTIONAL<OCTET_STRING>;
+
     constructor (
-        /**
-         * @summary `profileVersion`.
-         * @description
-         *
-         * Base eUICC Profile package version supported. SGP.32 v1.2 section 5.9.2
-         * places the versioning procedures in SGP.22 section 5.7.8. SGP.22 v3.1
-         * section 5.7.8 points to section 4.3, where the corresponding field is the
-         * lowest major version and the associated highest minor version of the TCA
-         * eUICC Profile Package specification supported by the eUICC.
-         * @public
-         * @readonly
-         */
-        readonly profileVersion: VersionType,
-        /**
-         * @summary `svn`.
-         * @description
-         *
-         * GSMA SGP.22 version supported (SVN) referenced by SGP.32.
-         *
-         * SGP.32 v1.2, section 5.9.2.
-         * @public
-         * @readonly
-         */
-        readonly svn: VersionType,
-        /**
-         * @summary `euiccFirmwareVer`.
-         * @description
-         *
-         * eUICC firmware version.
-         *
-         * SGP.32 v1.2, section 5.9.2.
-         * @public
-         * @readonly
-         */
-        readonly euiccFirmwareVer: VersionType,
-        /**
-         * @summary `extCardResource`.
-         * @description
-         *
-         * Extended Card Resource Information according to ETSI TS 102 226.
-         *
-         * SGP.32 v1.2, section 5.9.2.
-         * @public
-         * @readonly
-         */
-        readonly extCardResource: OCTET_STRING,
-        /**
-         * @summary `uiccCapability`.
-         * @description
-         *
-         * UICC capabilities of the eUICC. SGP.32 v1.2 section 5.9.2 places the related
-         * procedures in SGP.22 section 5.7.8. SGP.22 v3.1 section 4.3, reached from
-         * that section, says the field contains the UICC capabilities supported by the
-         * eUICC and that the type is imported from the TCA eUICC Profile Package
-         * specification.
-         * @public
-         * @readonly
-         */
-        readonly uiccCapability: UICCCapability,
-        /**
-         * @summary `ts102241Version`.
-         * @description
-         *
-         * SGP.32 v1.2 does not further define this field. Annex C.
-         * @public
-         * @readonly
-         */
-        readonly ts102241Version: OPTIONAL<VersionType>,
-        /**
-         * @summary `globalplatformVersion`.
-         * @description
-         *
-         * SGP.32 v1.2 does not further define this field. Annex C.
-         * @public
-         * @readonly
-         */
-        readonly globalplatformVersion: OPTIONAL<VersionType>,
-        /**
-         * @summary `rspCapability`.
-         * @description
-         *
-         * SGP.32 v1.2 does not further define this field. Annex C.
-         * @public
-         * @readonly
-         */
-        readonly rspCapability: RspCapability,
-        /**
-         * @summary `euiccCiPKIdListForVerification`.
-         * @description
-         *
-         * CI public key identifiers supported on the eUICC for signature verification.
-         *
-         * SGP.32 v1.2, section 5.9.2.
-         * @public
-         * @readonly
-         */
-        readonly euiccCiPKIdListForVerification: SubjectKeyIdentifier[],
-        /**
-         * @summary `euiccCiPKIdListForSigning`.
-         * @description
-         *
-         * CI public key identifiers supported on the eUICC for signature creation.
-         * When an Associated eIM has no euiccCiPKId, the eUICC uses the first entry of
-         * this list.
-         *
-         * SGP.32 v1.2, sections 2.11.1.1 and 5.9.2.
-         * @public
-         * @readonly
-         */
-        readonly euiccCiPKIdListForSigning: SubjectKeyIdentifier[],
-        /**
-         * @summary `euiccCategory`.
-         * @description
-         *
-         * Optional eUICC category. SGP.32 v1.2 does not further define the values.
-         * Annex C.
-         * @public
-         * @readonly
-         */
-        readonly euiccCategory: OPTIONAL<EUICCInfo2_euiccCategory>,
-        /**
-         * @summary `forbiddenProfilePolicyRules`.
-         * @description
-         *
-         * SGP.32 v1.2 does not further define this field. Annex C.
-         * @public
-         * @readonly
-         */
-        readonly forbiddenProfilePolicyRules: OPTIONAL<PprIds>,
-        /**
-         * @summary `ppVersion`.
-         * @description
-         *
-         * Protection Profile version.
-         *
-         * SGP.32 v1.2, section 5.9.2.
-         * @public
-         * @readonly
-         */
-        readonly ppVersion: VersionType,
-        /**
-         * @summary `sasAcreditationNumber`.
-         * @description
-         *
-         * SGP.32 v1.2 does not further define this field. Annex C.
-         * @public
-         * @readonly
-         */
-        readonly sasAcreditationNumber: UTF8String,
-        /**
-         * @summary `certificationDataObject`.
-         * @description
-         *
-         * SGP.32 v1.2 does not further define this field. Annex C.
-         * @public
-         * @readonly
-         */
-        readonly certificationDataObject?: OPTIONAL<CertificationDataObject>,
-        /**
-         * @summary `treProperties`.
-         * @description
-         *
-         * Optional TRE properties. usesRemoteMemory means remote memory protected by
-         * the Remote Memory Protection Function described in SGP.21. SGP.32 v1.2 does
-         * not further define isDiscrete or isIntegrated.
-         *
-         * SGP.32 v1.2, section 5.9.2.
-         * @public
-         * @readonly
-         */
-        readonly treProperties?: OPTIONAL<EUICCInfo2_treProperties>,
-        /**
-         * @summary `treProductReference`.
-         * @description
-         *
-         * Platform_Label as defined in the GlobalPlatform DLOA specification [57].
-         *
-         * SGP.32 v1.2, section 5.9.2.
-         * @public
-         * @readonly
-         */
-        readonly treProductReference?: OPTIONAL<UTF8String>,
-        /**
-         * @summary `additionalEuiccProfilePackageVersions`.
-         * @description
-         *
-         * Additional eUICC Profile package versions. SGP.32 v1.2 section 5.9.2 places
-         * the procedures in SGP.22 section 5.7.8. SGP.22 v3.1 section 4.3 describes
-         * the corresponding field as further major versions, each with its highest
-         * minor version, present when a major version higher than the base version is
-         * supported.
-         * @public
-         * @readonly
-         */
-        readonly additionalEuiccProfilePackageVersions?: OPTIONAL<VersionType[]>,
-        /**
-         * @summary `ipaMode`.
-         * @description
-         *
-         * Which IPA is active. Mandatory in SGP.32. ipad means IPAd is active. ipae
-         * means IPAe is active.
-         *
-         * SGP.32 v1.2, section 5.9.2.
-         * @public
-         * @readonly
-         */
-        readonly ipaMode?: OPTIONAL<IpaMode>,
-        /**
-         * @summary `euiccCiPKIdListForSigningV3`.
-         * @description
-         *
-         * Unused in SGP.32 v1.2. The eUICC omits it. An SM-DP+ ignores it if it
-         * arrives together with iotSpecificInfo.
-         *
-         * SGP.32 v1.2, section 5.9.2.
-         * @public
-         * @readonly
-         */
-        readonly euiccCiPKIdListForSigningV3?: OPTIONAL<SubjectKeyIdentifier[]>,
-        /**
-         * @summary `additionalEuiccInfo`.
-         * @description
-         *
-         * Unused in SGP.32 v1.2. The eUICC omits it. An SM-DP+ ignores it if it
-         * arrives together with iotSpecificInfo.
-         *
-         * SGP.32 v1.2, section 5.9.2.
-         * @public
-         * @readonly
-         */
-        readonly additionalEuiccInfo?: OPTIONAL<OCTET_STRING>,
-        /**
-         * @summary `highestSvn`.
-         * @description
-         *
-         * Unused in SGP.32 v1.2. The eUICC omits it. An SM-DP+ ignores it if it
-         * arrives together with iotSpecificInfo.
-         *
-         * SGP.32 v1.2, section 5.9.2.
-         * @public
-         * @readonly
-         */
-        readonly highestSvn?: OPTIONAL<VersionType>,
-        /**
-         * @summary `iotSpecificInfo`.
-         * @description
-         *
-         * IoT-specific information. Required in SGP.32. ecallSupported is present;
-         * when that flag is set, the eUICC supports the Emergency Mechanism.
-         * fallbackSupported is present when the eUICC supports the Fallback Mechanism.
-         *
-         * SGP.32 v1.2, section 5.9.2.
-         * @public
-         * @readonly
-         */
-        readonly iotSpecificInfo?: OPTIONAL<IoTSpecificInfo>,
-        /**
-         * @summary `euiccMinimumSecurityLevel`.
-         * @description
-         *
-         * SGP.32 v1.2 section 5.9.2 and Annex C omit this field, so v1.2 does not
-         * further define it.
-         * @public
-         * @readonly
-         */
-        readonly euiccMinimumSecurityLevel?: OPTIONAL<OCTET_STRING>
+        profileVersion: VersionType,
+        svn: VersionType,
+        euiccFirmwareVer: VersionType,
+        extCardResource: OCTET_STRING,
+        uiccCapability: UICCCapability,
+        ts102241Version: OPTIONAL<VersionType>,
+        globalplatformVersion: OPTIONAL<VersionType>,
+        rspCapability: RspCapability,
+        euiccCiPKIdListForVerification: SubjectKeyIdentifier[],
+        euiccCiPKIdListForSigning: SubjectKeyIdentifier[],
+        euiccCategory: OPTIONAL<EUICCInfo2_euiccCategory>,
+        forbiddenProfilePolicyRules: OPTIONAL<PprIds>,
+        ppVersion: VersionType,
+        sasAcreditationNumber: UTF8String,
+        certificationDataObject?: OPTIONAL<CertificationDataObject>,
+        treProperties?: OPTIONAL<EUICCInfo2_treProperties>,
+        treProductReference?: OPTIONAL<UTF8String>,
+        additionalEuiccProfilePackageVersions?: OPTIONAL<VersionType[]>,
+        ipaMode?: OPTIONAL<IpaMode>,
+        euiccCiPKIdListForSigningV3?: OPTIONAL<SubjectKeyIdentifier[]>,
+        additionalEuiccInfo?: OPTIONAL<OCTET_STRING>,
+        highestSvn?: OPTIONAL<VersionType>,
+        iotSpecificInfo?: OPTIONAL<IoTSpecificInfo>,
+        euiccMinimumSecurityLevel?: OPTIONAL<OCTET_STRING>
     ) {
+        this.profileVersion = profileVersion;
+        this.svn = svn;
+        this.euiccFirmwareVer = euiccFirmwareVer;
+        this.extCardResource = extCardResource;
+        this.uiccCapability = uiccCapability;
+        this.ts102241Version = ts102241Version;
+        this.globalplatformVersion = globalplatformVersion;
+        this.rspCapability = rspCapability;
+        this.euiccCiPKIdListForVerification = euiccCiPKIdListForVerification;
+        this.euiccCiPKIdListForSigning = euiccCiPKIdListForSigning;
+        this.euiccCategory = euiccCategory;
+        this.forbiddenProfilePolicyRules = forbiddenProfilePolicyRules;
+        this.ppVersion = ppVersion;
+        this.sasAcreditationNumber = sasAcreditationNumber;
+        this.certificationDataObject = certificationDataObject;
+        this.treProperties = treProperties;
+        this.treProductReference = treProductReference;
+        this.additionalEuiccProfilePackageVersions = additionalEuiccProfilePackageVersions;
+        this.ipaMode = ipaMode;
+        this.euiccCiPKIdListForSigningV3 = euiccCiPKIdListForSigningV3;
+        this.additionalEuiccInfo = additionalEuiccInfo;
+        this.highestSvn = highestSvn;
+        this.iotSpecificInfo = iotSpecificInfo;
+        this.euiccMinimumSecurityLevel = euiccMinimumSecurityLevel;
         if (this.sasAcreditationNumber.length > 64) {
             throw new ASN1SizeError("EUICCInfo2.sasAcreditationNumber violates SIZE constraint");
         }

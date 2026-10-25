@@ -1,10 +1,10 @@
 /* eslint-disable */
 import {
-    ASN1Element as _Element,
+    type ASN1Element as _Element,
     ASN1TagClass as _TagClass,
-    INTEGER,
-    OPTIONAL,
-    UTF8String,
+    type INTEGER,
+    type OPTIONAL,
+    type UTF8String,
 } from "@wildboar/asn1";
 import * as $ from "@wildboar/asn1/functional";
 import {
@@ -32,57 +32,67 @@ import {
  *       numericPad     (0),
  *       numeric        (1),
  *       alpha7bits     (2) } DEFAULT numericPad },
- *   digitShift  [0] INTEGER                        OPTIONAL,
- *   checkCalc   [1] INTEGER                        OPTIONAL,
+ *   digitShift  [0] INTEGER                        type OPTIONAL,
+ *   checkCalc   [1] INTEGER                        type OPTIONAL,
  *   urnPrefix       UTF8String                     OPTIONAL }
  * ```
  *
  */
 export class EpcFormat {
+    /**
+     * @summary `fields`.
+     * @description
+     *
+     * SIZE (1..MAX); order is bit-field order.
+     *
+     * @public
+     * @readonly
+     */
+    public readonly fields: EpcFormat_fields_Item[];
+    /**
+     * @summary `digitShift`.
+     * @description
+     *
+     * Position of numeric character to move to front (not when
+     * producing a URN).
+     *
+     * @public
+     * @readonly
+     */
+    public readonly digitShift?: OPTIONAL<INTEGER>;
+    /**
+     * @summary `checkCalc`.
+     * @description
+     *
+     * How many initial numeric characters generate the check digit
+     * (not for URN).
+     *
+     * @public
+     * @readonly
+     */
+    public readonly checkCalc?: OPTIONAL<INTEGER>;
+    /**
+     * @summary `urnPrefix`.
+     * @description
+     *
+     * Optional URN prefix for global uniqueness.
+     *
+     * @public
+     * @readonly
+     */
+    public readonly urnPrefix?: OPTIONAL<UTF8String>;
+
     constructor(
-        /**
-         * @summary `fields`.
-         * @description
-         *
-         * SIZE (1..MAX); order is bit-field order.
-         *
-         * @public
-         * @readonly
-         */
-        readonly fields: EpcFormat_fields_Item[],
-        /**
-         * @summary `digitShift`.
-         * @description
-         *
-         * Position of numeric character to move to front (not when
-         * producing a URN).
-         *
-         * @public
-         * @readonly
-         */
-        readonly digitShift?: OPTIONAL<INTEGER>,
-        /**
-         * @summary `checkCalc`.
-         * @description
-         *
-         * How many initial numeric characters generate the check digit
-         * (not for URN).
-         *
-         * @public
-         * @readonly
-         */
-        readonly checkCalc?: OPTIONAL<INTEGER>,
-        /**
-         * @summary `urnPrefix`.
-         * @description
-         *
-         * Optional URN prefix for global uniqueness.
-         *
-         * @public
-         * @readonly
-         */
-        readonly urnPrefix?: OPTIONAL<UTF8String>
-    ) {}
+        fields: EpcFormat_fields_Item[],
+        digitShift?: OPTIONAL<INTEGER>,
+        checkCalc?: OPTIONAL<INTEGER>,
+        urnPrefix?: OPTIONAL<UTF8String>
+    ) {
+        this.fields = fields;
+        this.digitShift = digitShift;
+        this.checkCalc = checkCalc;
+        this.urnPrefix = urnPrefix;
+    }
 
     /**
      * @summary Restructures an object into a EpcFormat

@@ -1,7 +1,7 @@
 /* eslint-disable */
 import {
-    BOOLEAN,
-    ASN1Element as _Element,
+    type BOOLEAN,
+    type ASN1Element as _Element,
     ASN1TagClass as _TagClass,
     ASN1Construction as _Construction,
     ASN1UniversalType as _UniversalType,
@@ -28,20 +28,26 @@ import * as $ from '@wildboar/asn1/functional';
  *
  */
 export class ProtectionMismatchStatus {
+    /**
+     * @summary `uniBi`.
+     * @public
+     * @readonly
+     */
+    public readonly uniBi: BOOLEAN;
+    /**
+     * @summary `plusColon`.
+     * @public
+     * @readonly
+     */
+    public readonly plusColon: BOOLEAN;
+
     constructor(
-        /**
-         * @summary `uniBi`.
-         * @public
-         * @readonly
-         */
-        readonly uniBi: BOOLEAN,
-        /**
-         * @summary `plusColon`.
-         * @public
-         * @readonly
-         */
-        readonly plusColon: BOOLEAN
-    ) {}
+        uniBi: BOOLEAN,
+        plusColon: BOOLEAN
+    ) {
+        this.uniBi = uniBi;
+        this.plusColon = plusColon;
+    }
 
     /**
      * @summary Restructures an object into a ProtectionMismatchStatus

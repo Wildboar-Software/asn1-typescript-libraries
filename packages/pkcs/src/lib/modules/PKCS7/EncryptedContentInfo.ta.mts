@@ -1,18 +1,18 @@
 /* eslint-disable */
 import {
-    ASN1Element as _Element,
+    type ASN1Element as _Element,
     ASN1TagClass as _TagClass,
-    OBJECT_IDENTIFIER,
-    OPTIONAL,
+    type OBJECT_IDENTIFIER,
+    type OPTIONAL,
 } from "@wildboar/asn1";
 import * as $ from "@wildboar/asn1/functional";
 import {
-    ContentEncryptionAlgorithmIdentifier,
+    type ContentEncryptionAlgorithmIdentifier,
     _decode_ContentEncryptionAlgorithmIdentifier,
     _encode_ContentEncryptionAlgorithmIdentifier,
 } from "../PKCS7/ContentEncryptionAlgorithmIdentifier.ta.mjs";
 import {
-    ENCRYPTED,
+    type ENCRYPTED,
     _get_decoder_for_ENCRYPTED,
     _get_encoder_for_ENCRYPTED,
 } from "../PKCS7/ENCRYPTED.ta.mjs";
@@ -35,26 +35,34 @@ import {
  *
  */
 export class EncryptedContentInfo {
+    /**
+     * @summary `contentType`.
+     * @public
+     * @readonly
+     */
+    public readonly contentType: OBJECT_IDENTIFIER;
+    /**
+     * @summary `contentEncryptionAlgorithm`.
+     * @public
+     * @readonly
+     */
+    public readonly contentEncryptionAlgorithm: ContentEncryptionAlgorithmIdentifier;
+    /**
+     * @summary `encryptedContent`.
+     * @public
+     * @readonly
+     */
+    public readonly encryptedContent?: OPTIONAL<ENCRYPTED<_Element>>;
+
     constructor(
-        /**
-         * @summary `contentType`.
-         * @public
-         * @readonly
-         */
-        readonly contentType: OBJECT_IDENTIFIER,
-        /**
-         * @summary `contentEncryptionAlgorithm`.
-         * @public
-         * @readonly
-         */
-        readonly contentEncryptionAlgorithm: ContentEncryptionAlgorithmIdentifier,
-        /**
-         * @summary `encryptedContent`.
-         * @public
-         * @readonly
-         */
-        readonly encryptedContent?: OPTIONAL<ENCRYPTED<_Element>>
-    ) {}
+        contentType: OBJECT_IDENTIFIER,
+        contentEncryptionAlgorithm: ContentEncryptionAlgorithmIdentifier,
+        encryptedContent?: OPTIONAL<ENCRYPTED<_Element>>
+    ) {
+        this.contentType = contentType;
+        this.contentEncryptionAlgorithm = contentEncryptionAlgorithm;
+        this.encryptedContent = encryptedContent;
+    }
 
     /**
      * @summary Restructures an object into a EncryptedContentInfo

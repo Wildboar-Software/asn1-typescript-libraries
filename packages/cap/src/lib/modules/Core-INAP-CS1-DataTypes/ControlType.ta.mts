@@ -1,6 +1,6 @@
 /* eslint-disable */
 import {
-    ASN1Element as _Element,
+    type ASN1Element as _Element,
     ASN1TagClass as _TagClass,
     ASN1Construction as _Construction,
     ASN1UniversalType as _UniversalType,
@@ -71,7 +71,7 @@ type ControlType = _enum_for_ControlType;
  * @enum {number}
  */
 export
-const ControlType = _enum_for_ControlType;
+const ControlType: typeof _enum_for_ControlType = _enum_for_ControlType;
 
 /**
  * @summary ControlType_sCPOverloaded
@@ -79,7 +79,7 @@ const ControlType = _enum_for_ControlType;
  * @type {number}
  */
 export
-const ControlType_sCPOverloaded: ControlType = ControlType.sCPOverloaded; /* LONG_NAMED_ENUMERATED_VALUE */
+const ControlType_sCPOverloaded: _enum_for_ControlType.sCPOverloaded = ControlType.sCPOverloaded; /* LONG_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary sCPOverloaded
@@ -87,7 +87,7 @@ const ControlType_sCPOverloaded: ControlType = ControlType.sCPOverloaded; /* LON
  * @type {number}
  */
 export
-const sCPOverloaded: ControlType = ControlType.sCPOverloaded; /* SHORT_NAMED_ENUMERATED_VALUE */
+const sCPOverloaded: _enum_for_ControlType.sCPOverloaded = ControlType.sCPOverloaded; /* SHORT_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary ControlType_manuallyInitiated
@@ -95,7 +95,7 @@ const sCPOverloaded: ControlType = ControlType.sCPOverloaded; /* SHORT_NAMED_ENU
  * @type {number}
  */
 export
-const ControlType_manuallyInitiated: ControlType = ControlType.manuallyInitiated; /* LONG_NAMED_ENUMERATED_VALUE */
+const ControlType_manuallyInitiated: _enum_for_ControlType.manuallyInitiated = ControlType.manuallyInitiated; /* LONG_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary manuallyInitiated
@@ -103,9 +103,9 @@ const ControlType_manuallyInitiated: ControlType = ControlType.manuallyInitiated
  * @type {number}
  */
 export
-const manuallyInitiated: ControlType = ControlType.manuallyInitiated; /* SHORT_NAMED_ENUMERATED_VALUE */
-export const _decode_ControlType = $._decodeEnumerated;
-export const _encode_ControlType = $._encodeEnumerated;
+const manuallyInitiated: _enum_for_ControlType.manuallyInitiated = ControlType.manuallyInitiated; /* SHORT_NAMED_ENUMERATED_VALUE */
+export const _decode_ControlType: $.ASN1Decoder<number> = $._decodeEnumerated;
+export const _encode_ControlType: $.ASN1Encoder<number> = $._encodeEnumerated;
 
 
 /* eslint-enable */

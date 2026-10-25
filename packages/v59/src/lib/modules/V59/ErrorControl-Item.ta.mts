@@ -1,8 +1,8 @@
 /* eslint-disable */
 import {
-    OPTIONAL,
-    INTEGER,
-    ASN1Element as _Element,
+    type OPTIONAL,
+    type INTEGER,
+    type ASN1Element as _Element,
     ASN1TagClass as _TagClass,
     ASN1Construction as _Construction,
     ASN1UniversalType as _UniversalType,
@@ -11,9 +11,9 @@ import {
     EmbeddedPDV as _PDV,
     ASN1ConstructionError as _ConstructionError, ASN1OverflowError } from "@wildboar/asn1";
 import * as $ from "@wildboar/asn1/functional";
-import { ErrorControl_Item_protocolNegotiation, _enum_for_ErrorControl_Item_protocolNegotiation, _decode_ErrorControl_Item_protocolNegotiation, _encode_ErrorControl_Item_protocolNegotiation } from "../V59/ErrorControl-Item-protocolNegotiation.ta.mjs";
+import { type ErrorControl_Item_protocolNegotiation, _enum_for_ErrorControl_Item_protocolNegotiation, _decode_ErrorControl_Item_protocolNegotiation, _encode_ErrorControl_Item_protocolNegotiation } from "../V59/ErrorControl-Item-protocolNegotiation.ta.mjs";
 
-import { ErrorControl_Item_v42featureNegotiation, _decode_ErrorControl_Item_v42featureNegotiation, _encode_ErrorControl_Item_v42featureNegotiation } from "../V59/ErrorControl-Item-v42featureNegotiation.ta.mjs";
+import { type ErrorControl_Item_v42featureNegotiation, _decode_ErrorControl_Item_v42featureNegotiation, _encode_ErrorControl_Item_v42featureNegotiation } from "../V59/ErrorControl-Item-v42featureNegotiation.ta.mjs";
 
 import { ErrorControl_Item_ecStatistics, _decode_ErrorControl_Item_ecStatistics, _encode_ErrorControl_Item_ecStatistics } from "../V59/ErrorControl-Item-ecStatistics.ta.mjs";
 
@@ -68,7 +68,7 @@ class ErrorControl_Item {
      * @public
      * @readonly
      */
-    readonly protocolNegotiation: ErrorControl_Item_protocolNegotiation;
+    public readonly protocolNegotiation: ErrorControl_Item_protocolNegotiation;
     /**
      * @summary `v42featureNegotiation`.
      * @description
@@ -80,7 +80,7 @@ class ErrorControl_Item {
      * @public
      * @readonly
      */
-    readonly v42featureNegotiation: ErrorControl_Item_v42featureNegotiation;
+    public readonly v42featureNegotiation: ErrorControl_Item_v42featureNegotiation;
     /**
      * @summary `txFrameSize`.
      * @description
@@ -90,7 +90,7 @@ class ErrorControl_Item {
      * @public
      * @readonly
      */
-    readonly txFrameSize: INTEGER;
+    public readonly txFrameSize: INTEGER;
     /**
      * @summary `rxFrameSize`.
      * @description
@@ -100,7 +100,7 @@ class ErrorControl_Item {
      * @public
      * @readonly
      */
-    readonly rxFrameSize: INTEGER;
+    public readonly rxFrameSize: INTEGER;
     /**
      * @summary `txWindow`.
      * @description
@@ -110,7 +110,7 @@ class ErrorControl_Item {
      * @public
      * @readonly
      */
-    readonly txWindow: INTEGER;
+    public readonly txWindow: INTEGER;
     /**
      * @summary `rxWindow`.
      * @description
@@ -120,7 +120,7 @@ class ErrorControl_Item {
      * @public
      * @readonly
      */
-    readonly rxWindow: INTEGER;
+    public readonly rxWindow: INTEGER;
     /**
      * @summary `linkTimeout`.
      * @description
@@ -130,7 +130,7 @@ class ErrorControl_Item {
      * @public
      * @readonly
      */
-    readonly linkTimeout: OPTIONAL<INTEGER>;
+    public readonly linkTimeout: OPTIONAL<INTEGER>;
     /**
      * @summary `ecStatistics`.
      * @description
@@ -140,7 +140,7 @@ class ErrorControl_Item {
      * @public
      * @readonly
      */
-    readonly ecStatistics: ErrorControl_Item_ecStatistics;
+    public readonly ecStatistics: ErrorControl_Item_ecStatistics;
     /**
      * @summary `txErrors`.
      * @description
@@ -150,7 +150,7 @@ class ErrorControl_Item {
      * @public
      * @readonly
      */
-    readonly txErrors?: OPTIONAL<INTEGER>;
+    public readonly txErrors?: OPTIONAL<INTEGER>;
     /**
      * @summary `rxErrors`.
      * @description
@@ -160,7 +160,7 @@ class ErrorControl_Item {
      * @public
      * @readonly
      */
-    readonly rxErrors?: OPTIONAL<INTEGER>;
+    public readonly rxErrors?: OPTIONAL<INTEGER>;
     /**
      * @summary `txThroughput`.
      * @description
@@ -172,7 +172,7 @@ class ErrorControl_Item {
      * @public
      * @readonly
      */
-    readonly txThroughput?: OPTIONAL<INTEGER>;
+    public readonly txThroughput?: OPTIONAL<INTEGER>;
     /**
      * @summary `rxThroughput`.
      * @description
@@ -182,13 +182,13 @@ class ErrorControl_Item {
      * @public
      * @readonly
      */
-    readonly rxThroughput?: OPTIONAL<INTEGER>;
+    public readonly rxThroughput?: OPTIONAL<INTEGER>;
     /**
      * @summary Extensions that are not recognized.
      * @public
      * @readonly
      */
-    readonly _unrecognizedExtensionsList: _Element[];
+    public readonly _unrecognizedExtensionsList: _Element[];
 
     constructor (
         protocolNegotiation: ErrorControl_Item_protocolNegotiation,
@@ -302,7 +302,7 @@ class ErrorControl_Item {
          * @static
          */
 
-    public static _enum_for_protocolNegotiation = _enum_for_ErrorControl_Item_protocolNegotiation;
+    public static _enum_for_protocolNegotiation: typeof _enum_for_ErrorControl_Item_protocolNegotiation = _enum_for_ErrorControl_Item_protocolNegotiation;
 }
 
 /**

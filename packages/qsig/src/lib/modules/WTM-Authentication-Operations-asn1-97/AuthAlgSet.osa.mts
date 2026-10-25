@@ -1,5 +1,5 @@
 /* eslint-disable */
-import { AUTH_ALG } from "../WTM-Authentication-Operations-asn1-97/AUTH-ALG.oca.mjs";
+import { type AUTH_ALG } from "../WTM-Authentication-Operations-asn1-97/AUTH-ALG.oca.mjs";
 
 /**
  * @summary AuthAlgSet

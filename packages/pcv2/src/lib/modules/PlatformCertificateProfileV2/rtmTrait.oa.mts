@@ -1,5 +1,5 @@
 /* eslint-disable */
-import { RTMTypes, _decode_RTMTypes, _encode_RTMTypes } from "../PlatformCertificateProfileV2/RTMTypes.ta.mjs";
+import { type RTMTypes, _decode_RTMTypes, _encode_RTMTypes } from "../PlatformCertificateProfileV2/RTMTypes.ta.mjs";
 import { tcg_tr_ID_RTM } from "../PlatformCertificateProfileV2/tcg-tr-ID-RTM.va.mjs";
 import { type TRAIT } from "../PlatformCertificateProfileV2/TRAIT.oca.mjs";
 

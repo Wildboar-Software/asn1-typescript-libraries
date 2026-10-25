@@ -1,7 +1,7 @@
 /* eslint-disable */
 import {
-    ASN1Element as _Element,
-    INTEGER
+    type ASN1Element as _Element,
+    type INTEGER
 } from "@wildboar/asn1";
 import * as $ from "@wildboar/asn1/functional";
 
@@ -24,8 +24,8 @@ import * as $ from "@wildboar/asn1/functional";
  */
 export
 type EuiccFormFactorType = INTEGER;
-export const _decode_EuiccFormFactorType = $._decodeInteger;
-export const _encode_EuiccFormFactorType = $._encodeInteger;
+export const _decode_EuiccFormFactorType: $.ASN1Decoder<INTEGER> = $._decodeInteger;
+export const _encode_EuiccFormFactorType: $.ASN1Encoder<INTEGER> = $._encodeInteger;
 
 
 /* eslint-enable */

@@ -1,11 +1,11 @@
 /* eslint-disable */
 import {
-    ASN1Element as _Element,
+    type ASN1Element as _Element,
     ASN1TagClass as _TagClass
 } from "@wildboar/asn1";
 import * as $ from "@wildboar/asn1/functional";
-import { AddInitialEimResponse_addInitialEimOk_Item, _decode_AddInitialEimResponse_addInitialEimOk_Item, _encode_AddInitialEimResponse_addInitialEimOk_Item } from "../SGP32Definitions/AddInitialEimResponse-addInitialEimOk-Item.ta.mjs";
-import { AddInitialEimResponse_addInitialEimError, _decode_AddInitialEimResponse_addInitialEimError, _encode_AddInitialEimResponse_addInitialEimError } from "../SGP32Definitions/AddInitialEimResponse-addInitialEimError.ta.mjs";
+import { type AddInitialEimResponse_addInitialEimOk_Item, _decode_AddInitialEimResponse_addInitialEimOk_Item, _encode_AddInitialEimResponse_addInitialEimOk_Item } from "../SGP32Definitions/AddInitialEimResponse-addInitialEimOk-Item.ta.mjs";
+import { type AddInitialEimResponse_addInitialEimError, _decode_AddInitialEimResponse_addInitialEimError, _encode_AddInitialEimResponse_addInitialEimError } from "../SGP32Definitions/AddInitialEimResponse-addInitialEimError.ta.mjs";
 
 
 /**

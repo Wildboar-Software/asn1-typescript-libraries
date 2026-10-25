@@ -11,7 +11,7 @@ import {
 } from '@wildboar/asn1';
 import * as $ from '@wildboar/asn1/functional';
 import {
-  Pathname_Attribute,
+  type Pathname_Attribute,
   _decode_Pathname_Attribute,
   _encode_Pathname_Attribute,
 } from '../ISO8571-FTAM/Pathname-Attribute.ta.mjs';
@@ -46,7 +46,7 @@ export class Select_Attributes {
    * @public
    * @readonly
    */
-  readonly pathname: Pathname_Attribute;
+  public readonly pathname: Pathname_Attribute;
 
   constructor(
     pathname: Pathname_Attribute

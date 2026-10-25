@@ -1,9 +1,9 @@
 /* eslint-disable */
 import {
     ASN1ConstructionError as _ConstructionError,
-    ASN1Element as _Element,
+    type ASN1Element as _Element,
     ASN1TagClass as _TagClass,
-    BIT_STRING,
+    type BIT_STRING,
 } from "@wildboar/asn1";
 import * as $ from "@wildboar/asn1/functional";
 import {
@@ -34,30 +34,36 @@ import {
  *
  */
 export class PKMACValue {
+    /**
+     * @summary `algId`.
+     * @description
+     *
+     * MAC algorithm; MUST support `id-PasswordBasedMAC`
+     * ([RFC 4211 §4.1](https://datatracker.ietf.org/doc/html/rfc4211#section-4.1), §4.4).
+     *
+     * @public
+     * @readonly
+     */
+    public readonly algId: AlgorithmIdentifier;
+    /**
+     * @summary `value`.
+     * @description
+     *
+     * Computed MAC over the DER-encoded public key of the
+     * certificate subject ([RFC 4211 §4.1](https://datatracker.ietf.org/doc/html/rfc4211#section-4.1)).
+     *
+     * @public
+     * @readonly
+     */
+    public readonly value: BIT_STRING;
+
     constructor(
-        /**
-         * @summary `algId`.
-         * @description
-         *
-         * MAC algorithm; MUST support `id-PasswordBasedMAC`
-         * ([RFC 4211 §4.1](https://datatracker.ietf.org/doc/html/rfc4211#section-4.1), §4.4).
-         *
-         * @public
-         * @readonly
-         */
-        readonly algId: AlgorithmIdentifier,
-        /**
-         * @summary `value`.
-         * @description
-         *
-         * Computed MAC over the DER-encoded public key of the
-         * certificate subject ([RFC 4211 §4.1](https://datatracker.ietf.org/doc/html/rfc4211#section-4.1)).
-         *
-         * @public
-         * @readonly
-         */
-        readonly value: BIT_STRING
-    ) {}
+        algId: AlgorithmIdentifier,
+        value: BIT_STRING
+    ) {
+        this.algId = algId;
+        this.value = value;
+    }
 
     /**
      * @summary Restructures an object into a PKMACValue

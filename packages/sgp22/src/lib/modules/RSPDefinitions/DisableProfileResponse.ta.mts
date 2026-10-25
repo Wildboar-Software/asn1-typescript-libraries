@@ -1,11 +1,11 @@
 /* eslint-disable */
 import {
     ASN1ConstructionError as _ConstructionError,
-    ASN1Element as _Element,
+    type ASN1Element as _Element,
     ASN1TagClass as _TagClass
 } from "@wildboar/asn1";
 import * as $ from "@wildboar/asn1/functional";
-import { _decode_DisableProfileResponse_disableResult, _encode_DisableProfileResponse_disableResult, DisableProfileResponse_disableResult } from "../RSPDefinitions/DisableProfileResponse-disableResult.ta.mjs";
+import { _decode_DisableProfileResponse_disableResult, _encode_DisableProfileResponse_disableResult, type DisableProfileResponse_disableResult } from "../RSPDefinitions/DisableProfileResponse-disableResult.ta.mjs";
 
 
 /**
@@ -36,7 +36,7 @@ class DisableProfileResponse {
      * @public
      * @readonly
      */
-    readonly disableResult: DisableProfileResponse_disableResult;
+    public readonly disableResult: DisableProfileResponse_disableResult;
 
     constructor (
         disableResult: DisableProfileResponse_disableResult

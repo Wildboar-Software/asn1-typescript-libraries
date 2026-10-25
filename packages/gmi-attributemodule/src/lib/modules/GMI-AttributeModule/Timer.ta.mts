@@ -1,7 +1,7 @@
 /* eslint-disable */
 import {
-    INTEGER,
-    ASN1Element as _Element,
+    type INTEGER,
+    type ASN1Element as _Element,
     ASN1TagClass as _TagClass,
     ASN1Construction as _Construction,
     ASN1UniversalType as _UniversalType,
@@ -51,7 +51,7 @@ class Timer {
      * @public
      * @readonly
      */
-    readonly exponent: INTEGER;
+    public readonly exponent: INTEGER;
     /**
      * @summary `mantissa`.
      * @description
@@ -62,7 +62,7 @@ class Timer {
      * @public
      * @readonly
      */
-    readonly mantissa: INTEGER;
+    public readonly mantissa: INTEGER;
 
     constructor (
         exponent: INTEGER,

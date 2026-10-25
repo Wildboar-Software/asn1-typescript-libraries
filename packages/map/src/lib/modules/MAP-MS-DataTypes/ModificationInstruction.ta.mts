@@ -70,7 +70,7 @@ type ModificationInstruction = _enum_for_ModificationInstruction;
  * @enum {number}
  */
 export
-const ModificationInstruction = _enum_for_ModificationInstruction;
+const ModificationInstruction: typeof _enum_for_ModificationInstruction = _enum_for_ModificationInstruction;
 
 /**
  * @summary ModificationInstruction_deactivate
@@ -82,7 +82,7 @@ const ModificationInstruction = _enum_for_ModificationInstruction;
  * @type {number}
  */
 export
-const ModificationInstruction_deactivate: ModificationInstruction = ModificationInstruction.deactivate; /* LONG_NAMED_ENUMERATED_VALUE */
+const ModificationInstruction_deactivate: _enum_for_ModificationInstruction.deactivate = ModificationInstruction.deactivate; /* LONG_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary deactivate
@@ -94,7 +94,7 @@ const ModificationInstruction_deactivate: ModificationInstruction = Modification
  * @type {number}
  */
 export
-const deactivate: ModificationInstruction = ModificationInstruction.deactivate; /* SHORT_NAMED_ENUMERATED_VALUE */
+const deactivate: _enum_for_ModificationInstruction.deactivate = ModificationInstruction.deactivate; /* SHORT_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary ModificationInstruction_activate
@@ -106,7 +106,7 @@ const deactivate: ModificationInstruction = ModificationInstruction.deactivate; 
  * @type {number}
  */
 export
-const ModificationInstruction_activate: ModificationInstruction = ModificationInstruction.activate; /* LONG_NAMED_ENUMERATED_VALUE */
+const ModificationInstruction_activate: _enum_for_ModificationInstruction.activate = ModificationInstruction.activate; /* LONG_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary activate
@@ -118,7 +118,7 @@ const ModificationInstruction_activate: ModificationInstruction = ModificationIn
  * @type {number}
  */
 export
-const activate: ModificationInstruction = ModificationInstruction.activate; /* SHORT_NAMED_ENUMERATED_VALUE */
+const activate: _enum_for_ModificationInstruction.activate = ModificationInstruction.activate; /* SHORT_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary Decodes an ASN.1 element into a(n) ModificationInstruction
@@ -126,7 +126,7 @@ const activate: ModificationInstruction = ModificationInstruction.activate; /* S
  * @param el The element being decoded.
  * @returns The decoded data structure.
  */
-export const _decode_ModificationInstruction = $._decodeEnumerated;
+export const _decode_ModificationInstruction: $.ASN1Decoder<number> = $._decodeEnumerated;
 
 /**
  * @summary Encodes a(n) ModificationInstruction into an ASN.1 Element.
@@ -135,7 +135,7 @@ export const _decode_ModificationInstruction = $._decodeEnumerated;
  * @param elGetter A function that can be used to get new ASN.1 elements.
  * @returns {_Element} The ModificationInstruction, encoded as an ASN.1 Element.
  */
-export const _encode_ModificationInstruction = $._encodeEnumerated;
+export const _encode_ModificationInstruction: $.ASN1Encoder<number> = $._encodeEnumerated;
 
 
 /* eslint-enable */

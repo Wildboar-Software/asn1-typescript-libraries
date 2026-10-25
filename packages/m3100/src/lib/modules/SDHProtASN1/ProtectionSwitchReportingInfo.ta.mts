@@ -1,6 +1,6 @@
 /* eslint-disable */
 import {
-    ASN1Element as _Element,
+    type ASN1Element as _Element,
     ASN1TagClass as _TagClass,
     ASN1Construction as _Construction,
     ASN1UniversalType as _UniversalType,
@@ -11,12 +11,12 @@ import {
 } from '@wildboar/asn1';
 import * as $ from '@wildboar/asn1/functional';
 import {
-    RelativeDistinguishedName,
+    type RelativeDistinguishedName,
     _decode_RelativeDistinguishedName,
     _encode_RelativeDistinguishedName,
 } from '@wildboar/dn';
 import {
-    AdditionalInformation,
+    type AdditionalInformation,
     _decode_AdditionalInformation,
     _encode_AdditionalInformation,
 } from '@wildboar/attribute-asn1module';
@@ -36,20 +36,26 @@ import {
  *
  */
 export class ProtectionSwitchReportingInfo {
+    /**
+     * @summary `protectingUnit`.
+     * @public
+     * @readonly
+     */
+    public readonly protectingUnit: RelativeDistinguishedName;
+    /**
+     * @summary `additionalInfo`.
+     * @public
+     * @readonly
+     */
+    public readonly additionalInfo: AdditionalInformation;
+
     constructor(
-        /**
-         * @summary `protectingUnit`.
-         * @public
-         * @readonly
-         */
-        readonly protectingUnit: RelativeDistinguishedName,
-        /**
-         * @summary `additionalInfo`.
-         * @public
-         * @readonly
-         */
-        readonly additionalInfo: AdditionalInformation
-    ) {}
+        protectingUnit: RelativeDistinguishedName,
+        additionalInfo: AdditionalInformation
+    ) {
+        this.protectingUnit = protectingUnit;
+        this.additionalInfo = additionalInfo;
+    }
 
     /**
      * @summary Restructures an object into a ProtectionSwitchReportingInfo

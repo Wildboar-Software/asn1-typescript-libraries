@@ -1,6 +1,6 @@
 /* eslint-disable */
 import {
-    ASN1Element as _Element,
+    type ASN1Element as _Element,
     ASN1TagClass as _TagClass,
     ASN1Construction as _Construction,
     ASN1UniversalType as _UniversalType,
@@ -11,12 +11,12 @@ import {
 } from '@wildboar/asn1';
 import * as $ from '@wildboar/asn1/functional';
 import {
-    SyntaxIdentifier,
+    type SyntaxIdentifier,
     _decode_SyntaxIdentifier,
     _encode_SyntaxIdentifier,
 } from '../EDIMSInformationObjects/SyntaxIdentifier.ta.mjs';
 import {
-    SyntaxVersion,
+    type SyntaxVersion,
     _decode_SyntaxVersion,
     _encode_SyntaxVersion,
 } from '../EDIMSInformationObjects/SyntaxVersion.ta.mjs';
@@ -37,20 +37,26 @@ import {
  *
  */
 export class SyntaxIdentifierField {
+    /**
+     * @summary `syntax_identifier`.
+     * @public
+     * @readonly
+     */
+    public readonly syntax_identifier: SyntaxIdentifier;
+    /**
+     * @summary `syntax_version`.
+     * @public
+     * @readonly
+     */
+    public readonly syntax_version: SyntaxVersion;
+
     constructor(
-        /**
-         * @summary `syntax_identifier`.
-         * @public
-         * @readonly
-         */
-        readonly syntax_identifier: SyntaxIdentifier,
-        /**
-         * @summary `syntax_version`.
-         * @public
-         * @readonly
-         */
-        readonly syntax_version: SyntaxVersion
-    ) {}
+        syntax_identifier: SyntaxIdentifier,
+        syntax_version: SyntaxVersion
+    ) {
+        this.syntax_identifier = syntax_identifier;
+        this.syntax_version = syntax_version;
+    }
 
     /**
      * @summary Restructures an object into a SyntaxIdentifierField

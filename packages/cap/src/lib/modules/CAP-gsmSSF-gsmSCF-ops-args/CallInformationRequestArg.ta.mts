@@ -1,7 +1,7 @@
 /* eslint-disable */
 import {
-    OPTIONAL,
-    ASN1Element as _Element,
+    type OPTIONAL,
+    type ASN1Element as _Element,
     ASN1TagClass as _TagClass,
     ASN1Construction as _Construction,
     ASN1UniversalType as _UniversalType,
@@ -9,6 +9,7 @@ import {
     External as _External,
     EmbeddedPDV as _PDV,
     ASN1ConstructionError as _ConstructionError,
+    type OCTET_STRING,
 } from "@wildboar/asn1";
 import * as $ from "@wildboar/asn1/functional";
 import { type Extensions, _decode_Extensions, _encode_Extensions } from "../CAP-datatypes/Extensions.ta.mjs";
@@ -30,7 +31,7 @@ import { leg2 } from "../Core-INAP-CS1-DataTypes/leg2.va.mjs";
  * ```asn1
  * CallInformationRequestArg {PARAMETERS-BOUND : bound} ::= SEQUENCE {
  *     requestedInformationTypeList    [0] RequestedInformationTypeList,
- *     extensions                [2] Extensions {bound}            OPTIONAL,
+ *     extensions                [2] Extensions {bound}            type OPTIONAL,
  *     legID                [3] SendingSideID DEFAULT sendingSideID:leg2,
  *     ...
  *     }
@@ -40,48 +41,58 @@ import { leg2 } from "../Core-INAP-CS1-DataTypes/leg2.va.mjs";
  */
 export
 class CallInformationRequestArg {
+    /**
+     * @summary `requestedInformationTypeList`.
+     * @description
+     *
+     * Items to record. `callAttemptElapsedTime`: from end of CAP processing
+     * of Connect/Continue/ContinueWithArgument to answer (0 if requested
+     * for the calling party; unsuccessful setup stops the measurement).
+     * `callStopTime`: timestamp when the connection is released.
+     * `callConnectedElapsedTime`: called party, answer to release; calling
+     * party, InitialDP to release of that party. `releaseCause`: release
+     * cause for the call. (3GPP TS 29.078 V19.0.0 clause 11.7.1.1).
+     *
+     * @public
+     * @readonly
+     */
+    public readonly requestedInformationTypeList: RequestedInformationTypeList;
+    /**
+     * @summary `extensions`.
+     * @public
+     * @readonly
+     */
+    public readonly extensions?: OPTIONAL<Extensions>;
+    /**
+     * @summary `legID`.
+     * @description
+     *
+     * Party for which information shall be collected. Sending Side LegID
+     * (gsmSCF → gsmSSF). Default `sendingSideID:leg2`. (3GPP TS 29.078
+     * V19.0.0 clauses 4.1.5 and 11.7.1.1).
+     *
+     * @public
+     * @readonly
+     */
+    public readonly legID?: OPTIONAL<SendingSideID>;
+    /**
+     * @summary Extensions that are not recognized.
+     * @public
+     * @readonly
+     */
+    public readonly _unrecognizedExtensionsList: _Element[];
+
     constructor (
-        /**
-         * @summary `requestedInformationTypeList`.
-         * @description
-         *
-         * Items to record. `callAttemptElapsedTime`: from end of CAP processing
-         * of Connect/Continue/ContinueWithArgument to answer (0 if requested
-         * for the calling party; unsuccessful setup stops the measurement).
-         * `callStopTime`: timestamp when the connection is released.
-         * `callConnectedElapsedTime`: called party, answer to release; calling
-         * party, InitialDP to release of that party. `releaseCause`: release
-         * cause for the call. (3GPP TS 29.078 V19.0.0 clause 11.7.1.1).
-         *
-         * @public
-         * @readonly
-         */
-        readonly requestedInformationTypeList: RequestedInformationTypeList,
-        /**
-         * @summary `extensions`.
-         * @public
-         * @readonly
-         */
-        readonly extensions?: OPTIONAL<Extensions>,
-        /**
-         * @summary `legID`.
-         * @description
-         *
-         * Party for which information shall be collected. Sending Side LegID
-         * (gsmSCF → gsmSSF). Default `sendingSideID:leg2`. (3GPP TS 29.078
-         * V19.0.0 clauses 4.1.5 and 11.7.1.1).
-         *
-         * @public
-         * @readonly
-         */
-        readonly legID?: OPTIONAL<SendingSideID>,
-        /**
-         * @summary Extensions that are not recognized.
-         * @public
-         * @readonly
-         */
-        readonly _unrecognizedExtensionsList: _Element[] = []
-    ) {}
+        requestedInformationTypeList: RequestedInformationTypeList,
+        extensions?: OPTIONAL<Extensions>,
+        legID?: OPTIONAL<SendingSideID>,
+        _unrecognizedExtensionsList: _Element[] = []
+    ) {
+        this.requestedInformationTypeList = requestedInformationTypeList;
+        this.extensions = extensions;
+        this.legID = legID;
+        this._unrecognizedExtensionsList = _unrecognizedExtensionsList;
+    }
 
     /**
      * @summary Restructures an object into a CallInformationRequestArg
@@ -105,7 +116,9 @@ class CallInformationRequestArg {
      * @static
      * @method
      */
-    public static get _default_value_for_legID () { return { sendingSideID: leg2 }; }
+    public static get _default_value_for_legID (): {
+        sendingSideID: OCTET_STRING;
+    } { return { sendingSideID: leg2 }; }
 }
 
 /**

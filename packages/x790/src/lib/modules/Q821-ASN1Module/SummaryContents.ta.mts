@@ -1,6 +1,6 @@
 /* eslint-disable */
 import {
-    BIT_STRING,
+    type BIT_STRING,
 } from "@wildboar/asn1";
 import * as $ from "@wildboar/asn1/functional";
 
@@ -62,8 +62,8 @@ const SummaryContents_includeProbableCause: number = 2; /* LONG_NAMED_BIT */
  */
 export
 const includeProbableCause: number = SummaryContents_includeProbableCause; /* SHORT_NAMED_BIT */
-export const _decode_SummaryContents = $._decodeBitString;
-export const _encode_SummaryContents = $._encodeBitString;
+export const _decode_SummaryContents: $.ASN1Decoder<BIT_STRING> = $._decodeBitString;
+export const _encode_SummaryContents: $.ASN1Encoder<BIT_STRING> = $._encodeBitString;
 
 
 /* eslint-enable */

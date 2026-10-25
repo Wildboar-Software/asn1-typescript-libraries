@@ -1,13 +1,13 @@
 /* eslint-disable */
 import {
-    OPTIONAL,
-    ASN1Element as _Element,
+    type OPTIONAL,
+    type ASN1Element as _Element,
     ASN1TagClass as _TagClass
 } from "@wildboar/asn1";
 import * as $ from "@wildboar/asn1/functional";
 import { TimerID, TimerID_tssf /* IMPORTED_LONG_ENUMERATION_ITEM */, _decode_TimerID, _encode_TimerID, _enum_for_TimerID } from "../IN-CS-1-Datatypes/TimerID.ta.mjs";
 // export { TimerID, _enum_for_TimerID, TimerID_tssf /* IMPORTED_LONG_ENUMERATION_ITEM */, tssf /* IMPORTED_SHORT_ENUMERATION_ITEM */, _decode_TimerID, _encode_TimerID } from "../IN-CS-1-Datatypes/TimerID.ta.mjs";
-import { TimerValue, _decode_TimerValue, _encode_TimerValue } from "../IN-CS-1-Datatypes/TimerValue.ta.mjs";
+import { type TimerValue, _decode_TimerValue, _encode_TimerValue } from "../IN-CS-1-Datatypes/TimerValue.ta.mjs";
 // export { TimerValue, _decode_TimerValue, _encode_TimerValue } from "../IN-CS-1-Datatypes/TimerValue.ta.mjs";
 import { ExtensionField, _decode_ExtensionField, _encode_ExtensionField } from "../IN-CS-1-Datatypes/ExtensionField.ta.mjs";
 // export { ExtensionField, _decode_ExtensionField, _encode_ExtensionField } from "../IN-CS-1-Datatypes/ExtensionField.ta.mjs";
@@ -93,13 +93,13 @@ class ResetTimerArg {
      * @static
      * @method
      */
-    public static get _default_value_for_timerID () { return TimerID_tssf; }        /**
+    public static get _default_value_for_timerID (): _enum_for_TimerID { return TimerID_tssf; }        /**
          * @summary The enum used as the type of the component `timerID`
          * @public
          * @static
          */
 
-    public static _enum_for_timerID = _enum_for_TimerID;
+    public static _enum_for_timerID: typeof _enum_for_TimerID = _enum_for_TimerID;
 }
 
 /**

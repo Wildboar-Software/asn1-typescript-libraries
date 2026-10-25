@@ -11,7 +11,7 @@ import {
 } from '@wildboar/asn1';
 import * as $ from '@wildboar/asn1/functional';
 import {
-  FADU_Identity,
+  type FADU_Identity,
   _decode_FADU_Identity,
   _encode_FADU_Identity,
 } from '../ISO8571-FTAM/FADU-Identity.ta.mjs';
@@ -44,7 +44,7 @@ export class F_ERASE_request {
    * @public
    * @readonly
    */
-  readonly file_access_data_unit_identity: FADU_Identity;
+  public readonly file_access_data_unit_identity: FADU_Identity;
 
   constructor(
     file_access_data_unit_identity: FADU_Identity

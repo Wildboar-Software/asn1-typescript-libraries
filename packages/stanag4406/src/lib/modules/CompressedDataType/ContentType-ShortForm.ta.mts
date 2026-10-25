@@ -1,7 +1,7 @@
 /* eslint-disable */
 import {
-    ASN1Element as _Element,
-    INTEGER
+    type ASN1Element as _Element,
+    type INTEGER
 } from "@wildboar/asn1";
 import * as $ from "@wildboar/asn1/functional";
 
@@ -39,7 +39,7 @@ type ContentType_ShortForm = INTEGER;
  * @type {number}
  */
 export
-const ContentType_ShortForm_unidentified: ContentType_ShortForm = 0; /* LONG_NAMED_INTEGER_VALUE */
+const ContentType_ShortForm_unidentified: 0 = 0 satisfies ContentType_ShortForm; /* LONG_NAMED_INTEGER_VALUE */
 
 /**
  * @summary ContentType_ShortForm_unidentified
@@ -51,7 +51,7 @@ const ContentType_ShortForm_unidentified: ContentType_ShortForm = 0; /* LONG_NAM
  * @type {number}
  */
 export
-const unidentified: ContentType_ShortForm = ContentType_ShortForm_unidentified; /* SHORT_NAMED_INTEGER_VALUE */
+const unidentified: 0 = ContentType_ShortForm_unidentified; /* SHORT_NAMED_INTEGER_VALUE */
 
 /**
  * @summary ContentType_ShortForm_external
@@ -63,7 +63,7 @@ const unidentified: ContentType_ShortForm = ContentType_ShortForm_unidentified; 
  * @type {number}
  */
 export
-const ContentType_ShortForm_external: ContentType_ShortForm = 1; /* LONG_NAMED_INTEGER_VALUE */
+const ContentType_ShortForm_external: 1 = 1 satisfies ContentType_ShortForm; /* LONG_NAMED_INTEGER_VALUE */
 
 /**
  * @summary ContentType_ShortForm_external
@@ -75,7 +75,7 @@ const ContentType_ShortForm_external: ContentType_ShortForm = 1; /* LONG_NAMED_I
  * @type {number}
  */
 export
-const external: ContentType_ShortForm = ContentType_ShortForm_external; /* SHORT_NAMED_INTEGER_VALUE */
+const external: 1 = ContentType_ShortForm_external; /* SHORT_NAMED_INTEGER_VALUE */
 
 /**
  * @summary ContentType_ShortForm_p1
@@ -87,7 +87,7 @@ const external: ContentType_ShortForm = ContentType_ShortForm_external; /* SHORT
  * @type {number}
  */
 export
-const ContentType_ShortForm_p1: ContentType_ShortForm = 2; /* LONG_NAMED_INTEGER_VALUE */
+const ContentType_ShortForm_p1: 2 = 2 satisfies ContentType_ShortForm; /* LONG_NAMED_INTEGER_VALUE */
 
 /**
  * @summary ContentType_ShortForm_p1
@@ -99,7 +99,7 @@ const ContentType_ShortForm_p1: ContentType_ShortForm = 2; /* LONG_NAMED_INTEGER
  * @type {number}
  */
 export
-const p1: ContentType_ShortForm = ContentType_ShortForm_p1; /* SHORT_NAMED_INTEGER_VALUE */
+const p1: 2 = ContentType_ShortForm_p1; /* SHORT_NAMED_INTEGER_VALUE */
 
 /**
  * @summary ContentType_ShortForm_p3
@@ -111,7 +111,7 @@ const p1: ContentType_ShortForm = ContentType_ShortForm_p1; /* SHORT_NAMED_INTEG
  * @type {number}
  */
 export
-const ContentType_ShortForm_p3: ContentType_ShortForm = 3; /* LONG_NAMED_INTEGER_VALUE */
+const ContentType_ShortForm_p3: 3 = 3 satisfies ContentType_ShortForm; /* LONG_NAMED_INTEGER_VALUE */
 
 /**
  * @summary ContentType_ShortForm_p3
@@ -123,7 +123,7 @@ const ContentType_ShortForm_p3: ContentType_ShortForm = 3; /* LONG_NAMED_INTEGER
  * @type {number}
  */
 export
-const p3: ContentType_ShortForm = ContentType_ShortForm_p3; /* SHORT_NAMED_INTEGER_VALUE */
+const p3: 3 = ContentType_ShortForm_p3; /* SHORT_NAMED_INTEGER_VALUE */
 
 /**
  * @summary ContentType_ShortForm_p7
@@ -135,7 +135,7 @@ const p3: ContentType_ShortForm = ContentType_ShortForm_p3; /* SHORT_NAMED_INTEG
  * @type {number}
  */
 export
-const ContentType_ShortForm_p7: ContentType_ShortForm = 4; /* LONG_NAMED_INTEGER_VALUE */
+const ContentType_ShortForm_p7: 4 = 4 satisfies ContentType_ShortForm; /* LONG_NAMED_INTEGER_VALUE */
 
 /**
  * @summary ContentType_ShortForm_p7
@@ -147,7 +147,7 @@ const ContentType_ShortForm_p7: ContentType_ShortForm = 4; /* LONG_NAMED_INTEGER
  * @type {number}
  */
 export
-const p7: ContentType_ShortForm = ContentType_ShortForm_p7; /* SHORT_NAMED_INTEGER_VALUE */
+const p7: 4 = ContentType_ShortForm_p7; /* SHORT_NAMED_INTEGER_VALUE */
 export const _decode_ContentType_ShortForm: $.ASN1Decoder<ContentType_ShortForm> = $._decodeInteger;
 export const _encode_ContentType_ShortForm: $.ASN1Encoder<ContentType_ShortForm> = $._encodeInteger;
 

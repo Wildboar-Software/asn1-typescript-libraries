@@ -1,12 +1,12 @@
 /* eslint-disable */
 import {
     ASN1ConstructionError as _ConstructionError,
-    ASN1Element as _Element,
+    type ASN1Element as _Element,
     ASN1TagClass as _TagClass
 } from "@wildboar/asn1";
 import * as $ from "@wildboar/asn1/functional";
-import { IMSI, _decode_IMSI, _encode_IMSI } from "../MAP-CommonDataTypes/IMSI.ta.mjs";
-import { LMSI, _decode_LMSI, _encode_LMSI } from "../MAP-CommonDataTypes/LMSI.ta.mjs";
+import { type IMSI, _decode_IMSI, _encode_IMSI } from "../MAP-CommonDataTypes/IMSI.ta.mjs";
+import { type LMSI, _decode_LMSI, _encode_LMSI } from "../MAP-CommonDataTypes/LMSI.ta.mjs";
 
 
 /**
@@ -32,37 +32,45 @@ import { LMSI, _decode_LMSI, _encode_LMSI } from "../MAP-CommonDataTypes/LMSI.ta
  */
 export
 class IMSI_WithLMSI {
+    /**
+     * @summary `imsi`.
+     * @description
+     *
+     * IMSI of the subscriber (3GPP TS 23.003). (3GPP TS 29.002 V19.1.0
+     * clause 7.6.2.1).
+     *
+     * @public
+     * @readonly
+     */
+    public readonly imsi: IMSI;
+    /**
+     * @summary `lmsi`.
+     * @description
+     *
+     * VLR-allocated LMSI. Value `00000000` means LMSI is not in use. Shall
+     * not be sent to the SGSN. (3GPP TS 29.002 V19.1.0 clauses 17.7.8 and
+     * 7.6.2.16).
+     *
+     * @public
+     * @readonly
+     */
+    public readonly lmsi: LMSI;
+    /**
+     * @summary Extensions that are not recognized.
+     * @public
+     * @readonly
+     */
+    public readonly _unrecognizedExtensionsList: _Element[];
+
     constructor (
-        /**
-         * @summary `imsi`.
-         * @description
-         *
-         * IMSI of the subscriber (3GPP TS 23.003). (3GPP TS 29.002 V19.1.0
-         * clause 7.6.2.1).
-         *
-         * @public
-         * @readonly
-         */
-        readonly imsi: IMSI,
-        /**
-         * @summary `lmsi`.
-         * @description
-         *
-         * VLR-allocated LMSI. Value `00000000` means LMSI is not in use. Shall
-         * not be sent to the SGSN. (3GPP TS 29.002 V19.1.0 clauses 17.7.8 and
-         * 7.6.2.16).
-         *
-         * @public
-         * @readonly
-         */
-        readonly lmsi: LMSI,
-        /**
-         * @summary Extensions that are not recognized.
-         * @public
-         * @readonly
-         */
-        readonly _unrecognizedExtensionsList: _Element[] = []
-    ) {}
+        imsi: IMSI,
+        lmsi: LMSI,
+        _unrecognizedExtensionsList: _Element[] = []
+    ) {
+        this.imsi = imsi;
+        this.lmsi = lmsi;
+        this._unrecognizedExtensionsList = _unrecognizedExtensionsList;
+    }
 
     /**
      * @summary Restructures an object into a IMSI_WithLMSI

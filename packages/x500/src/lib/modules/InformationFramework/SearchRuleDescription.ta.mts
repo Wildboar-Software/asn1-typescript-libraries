@@ -1,14 +1,14 @@
 /* eslint-disable */
 import {
-    ASN1Element as _Element,
+    type ASN1Element as _Element,
     ASN1TagClass as _TagClass,
-    INTEGER,
-    OBJECT_IDENTIFIER,
-    OPTIONAL,
+    type INTEGER,
+    type OBJECT_IDENTIFIER,
+    type OPTIONAL,
 } from "@wildboar/asn1";
 import * as $ from "@wildboar/asn1/functional";
 import {
-    FamilyGrouping,
+    type FamilyGrouping,
     _decode_FamilyGrouping,
     _encode_FamilyGrouping,
     _enum_for_FamilyGrouping,
@@ -19,22 +19,22 @@ import {
     _encode_FamilyReturn,
 } from "../DirectoryAbstractService/FamilyReturn.ta.mjs";
 import {
-    AttributeType,
+    type AttributeType,
     _decode_AttributeType,
     _encode_AttributeType,
 } from "../InformationFramework/AttributeType.ta.mjs";
 import {
-    UnboundedDirectoryString,
+    type UnboundedDirectoryString,
     _decode_UnboundedDirectoryString,
     _encode_UnboundedDirectoryString,
 } from "../SelectedAttributeTypes/UnboundedDirectoryString.ta.mjs";
 import {
-    AllowedSubset,
+    type AllowedSubset,
     _decode_AllowedSubset,
     _encode_AllowedSubset,
 } from "../ServiceAdministration/AllowedSubset.ta.mjs";
 import {
-    AttributeCombination,
+    type AttributeCombination,
     _decode_AttributeCombination,
     _encode_AttributeCombination,
 } from "../ServiceAdministration/AttributeCombination.ta.mjs";
@@ -49,7 +49,7 @@ import {
     _encode_EntryLimit,
 } from "../ServiceAdministration/EntryLimit.ta.mjs";
 import {
-    ImposedSubset,
+    type ImposedSubset,
     _decode_ImposedSubset,
     _encode_ImposedSubset,
     _enum_for_ImposedSubset,
@@ -308,13 +308,13 @@ export class SearchRuleDescription extends SearchRule {
      * @public
      * @static
      */
-    public static override _enum_for_familyGrouping = _enum_for_FamilyGrouping;
+    public static override _enum_for_familyGrouping: typeof _enum_for_FamilyGrouping = _enum_for_FamilyGrouping;
     /**
      * @summary The enum used as the type of the component `imposedSubset`
      * @public
      * @static
      */
-    public static override _enum_for_imposedSubset = _enum_for_ImposedSubset;
+    public static override _enum_for_imposedSubset: typeof _enum_for_ImposedSubset = _enum_for_ImposedSubset;
 }
 
 /**

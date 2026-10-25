@@ -1,11 +1,11 @@
 /* eslint-disable */
 import {
-    OPTIONAL,
-    ASN1Element as _Element,
+    type OPTIONAL,
+    type ASN1Element as _Element,
     ASN1TagClass as _TagClass
 } from "@wildboar/asn1";
 import * as $ from "@wildboar/asn1/functional";
-import { MAP_UserAbortChoice, _decode_MAP_UserAbortChoice, _encode_MAP_UserAbortChoice } from "../MAP-DialogueInformation/MAP-UserAbortChoice.ta.mjs";
+import { type MAP_UserAbortChoice, _decode_MAP_UserAbortChoice, _encode_MAP_UserAbortChoice } from "../MAP-DialogueInformation/MAP-UserAbortChoice.ta.mjs";
 import { ExtensionContainer, _decode_ExtensionContainer, _encode_ExtensionContainer } from "../MAP-ExtensionDataTypes/ExtensionContainer.ta.mjs";
 
 
@@ -31,34 +31,42 @@ import { ExtensionContainer, _decode_ExtensionContainer, _encode_ExtensionContai
  */
 export
 class MAP_UserAbortInfo {
+    /**
+     * @summary `map_UserAbortChoice`.
+     * @description
+     *
+     * User reason of MAP-U-ABORT (3GPP TS 29.002 V19.1.0 clause 7.3.4).
+     *
+     * @public
+     * @readonly
+     */
+    public readonly map_UserAbortChoice: MAP_UserAbortChoice;
+    /**
+     * @summary `extensionContainer`.
+     * @description
+     *
+     * Must not be used in version 2 (3GPP TS 29.002 V19.1.0 clause 17.4).
+     *
+     * @public
+     * @readonly
+     */
+    public readonly extensionContainer?: OPTIONAL<ExtensionContainer>;
+    /**
+     * @summary Extensions that are not recognized.
+     * @public
+     * @readonly
+     */
+    public readonly _unrecognizedExtensionsList: _Element[];
+
     constructor (
-        /**
-         * @summary `map_UserAbortChoice`.
-         * @description
-         *
-         * User reason of MAP-U-ABORT (3GPP TS 29.002 V19.1.0 clause 7.3.4).
-         *
-         * @public
-         * @readonly
-         */
-        readonly map_UserAbortChoice: MAP_UserAbortChoice,
-        /**
-         * @summary `extensionContainer`.
-         * @description
-         *
-         * Must not be used in version 2 (3GPP TS 29.002 V19.1.0 clause 17.4).
-         *
-         * @public
-         * @readonly
-         */
-        readonly extensionContainer?: OPTIONAL<ExtensionContainer>,
-        /**
-         * @summary Extensions that are not recognized.
-         * @public
-         * @readonly
-         */
-        readonly _unrecognizedExtensionsList: _Element[] = []
-    ) {}
+        map_UserAbortChoice: MAP_UserAbortChoice,
+        extensionContainer?: OPTIONAL<ExtensionContainer>,
+        _unrecognizedExtensionsList: _Element[] = []
+    ) {
+        this.map_UserAbortChoice = map_UserAbortChoice;
+        this.extensionContainer = extensionContainer;
+        this._unrecognizedExtensionsList = _unrecognizedExtensionsList;
+    }
 
     /**
      * @summary Restructures an object into a MAP_UserAbortInfo

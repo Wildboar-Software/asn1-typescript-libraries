@@ -1,9 +1,9 @@
 /* eslint-disable */
 import {
     ASN1ConstructionError as _ConstructionError,
-    ASN1Element as _Element,
+    type ASN1Element as _Element,
     ASN1TagClass as _TagClass,
-    OCTET_STRING
+    type OCTET_STRING
 } from "@wildboar/asn1";
 import { ASN1SizeError } from "@wildboar/asn1";
 import * as $ from "@wildboar/asn1/functional";
@@ -42,7 +42,7 @@ class SuccessResult {
      * @public
      * @readonly
      */
-    readonly aid: OCTET_STRING;
+    public readonly aid: OCTET_STRING;
     /**
      * @summary `simaResponse`.
      * @description
@@ -53,7 +53,7 @@ class SuccessResult {
      * @public
      * @readonly
      */
-    readonly simaResponse: OCTET_STRING;
+    public readonly simaResponse: OCTET_STRING;
 
     constructor (
         aid: OCTET_STRING,

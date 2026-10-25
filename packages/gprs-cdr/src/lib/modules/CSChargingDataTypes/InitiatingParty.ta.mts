@@ -55,7 +55,7 @@ type InitiatingParty = _enum_for_InitiatingParty;
  * @enum {number}
  */
 export
-const InitiatingParty = _enum_for_InitiatingParty;
+const InitiatingParty: typeof _enum_for_InitiatingParty = _enum_for_InitiatingParty;
 
 /**
  * @summary InitiatingParty_network
@@ -63,7 +63,7 @@ const InitiatingParty = _enum_for_InitiatingParty;
  * @type {number}
  */
 export
-const InitiatingParty_network: InitiatingParty = InitiatingParty.network; /* LONG_NAMED_ENUMERATED_VALUE */
+const InitiatingParty_network: _enum_for_InitiatingParty.network = InitiatingParty.network; /* LONG_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary network
@@ -71,7 +71,7 @@ const InitiatingParty_network: InitiatingParty = InitiatingParty.network; /* LON
  * @type {number}
  */
 export
-const network: InitiatingParty = InitiatingParty.network; /* SHORT_NAMED_ENUMERATED_VALUE */
+const network: _enum_for_InitiatingParty.network = InitiatingParty.network; /* SHORT_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary InitiatingParty_subscriber
@@ -79,7 +79,7 @@ const network: InitiatingParty = InitiatingParty.network; /* SHORT_NAMED_ENUMERA
  * @type {number}
  */
 export
-const InitiatingParty_subscriber: InitiatingParty = InitiatingParty.subscriber; /* LONG_NAMED_ENUMERATED_VALUE */
+const InitiatingParty_subscriber: _enum_for_InitiatingParty.subscriber = InitiatingParty.subscriber; /* LONG_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary subscriber
@@ -87,7 +87,7 @@ const InitiatingParty_subscriber: InitiatingParty = InitiatingParty.subscriber; 
  * @type {number}
  */
 export
-const subscriber: InitiatingParty = InitiatingParty.subscriber; /* SHORT_NAMED_ENUMERATED_VALUE */
+const subscriber: _enum_for_InitiatingParty.subscriber = InitiatingParty.subscriber; /* SHORT_NAMED_ENUMERATED_VALUE */
 
 export
 const _decode_InitiatingParty: $.ASN1Decoder<InitiatingParty> = $._decodeEnumerated;

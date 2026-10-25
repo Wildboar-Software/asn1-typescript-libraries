@@ -76,7 +76,7 @@ export type ResponseTypes = _enum_for_ResponseTypes;
  *
  * @enum {number}
  */
-export const ResponseTypes = _enum_for_ResponseTypes;
+export const ResponseTypes: typeof _enum_for_ResponseTypes = _enum_for_ResponseTypes;
 
 /**
  * @summary ResponseTypes_cached_only
@@ -87,7 +87,7 @@ export const ResponseTypes = _enum_for_ResponseTypes;
  * @constant
  * @type {number}
  */
-export const ResponseTypes_cached_only: ResponseTypes =
+export const ResponseTypes_cached_only: _enum_for_ResponseTypes.cached_only =
   ResponseTypes.cached_only; /* LONG_NAMED_ENUMERATED_VALUE */
 
 /**
@@ -99,7 +99,7 @@ export const ResponseTypes_cached_only: ResponseTypes =
  * @constant
  * @type {number}
  */
-export const cached_only: ResponseTypes =
+export const cached_only: _enum_for_ResponseTypes.cached_only =
   ResponseTypes.cached_only; /* SHORT_NAMED_ENUMERATED_VALUE */
 
 /**
@@ -111,7 +111,7 @@ export const cached_only: ResponseTypes =
  * @constant
  * @type {number}
  */
-export const ResponseTypes_non_cached_only: ResponseTypes =
+export const ResponseTypes_non_cached_only: _enum_for_ResponseTypes.non_cached_only =
   ResponseTypes.non_cached_only; /* LONG_NAMED_ENUMERATED_VALUE */
 
 /**
@@ -123,7 +123,7 @@ export const ResponseTypes_non_cached_only: ResponseTypes =
  * @constant
  * @type {number}
  */
-export const non_cached_only: ResponseTypes =
+export const non_cached_only: _enum_for_ResponseTypes.non_cached_only =
   ResponseTypes.non_cached_only; /* SHORT_NAMED_ENUMERATED_VALUE */
 
 /**
@@ -135,7 +135,7 @@ export const non_cached_only: ResponseTypes =
  * @constant
  * @type {number}
  */
-export const ResponseTypes_cached_and_non_cached: ResponseTypes =
+export const ResponseTypes_cached_and_non_cached: _enum_for_ResponseTypes.cached_and_non_cached =
   ResponseTypes.cached_and_non_cached; /* LONG_NAMED_ENUMERATED_VALUE */
 
 /**
@@ -147,14 +147,26 @@ export const ResponseTypes_cached_and_non_cached: ResponseTypes =
  * @constant
  * @type {number}
  */
-export const cached_and_non_cached: ResponseTypes =
+export const cached_and_non_cached: _enum_for_ResponseTypes.cached_and_non_cached =
   ResponseTypes.cached_and_non_cached; /* SHORT_NAMED_ENUMERATED_VALUE */
 
 
-export const _decode_ResponseTypes = $._decodeEnumerated;
+export function _decode_ResponseTypes(el: _Element): ResponseTypes {
+  const enumerated = $._decodeEnumerated(el);
+  switch (enumerated) {
+    case ResponseTypes.cached_only: return ResponseTypes.cached_only;
+    case ResponseTypes.non_cached_only: return ResponseTypes.non_cached_only;
+    case ResponseTypes.cached_and_non_cached: return ResponseTypes.cached_and_non_cached;
+    default:
+      throw new _ConstructionError(
+        'Invalid ENUMERATED value ' + enumerated + ' for ResponseTypes.',
+        el,
+      );
+  }
+}
 
 
-export const _encode_ResponseTypes = $._encodeEnumerated;
+export const _encode_ResponseTypes: $.ASN1Encoder<ResponseTypes> = $._encodeEnumerated as $.ASN1Encoder<ResponseTypes>;
 
 
 /* eslint-enable */

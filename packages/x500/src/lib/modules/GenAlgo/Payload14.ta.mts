@@ -1,9 +1,9 @@
 /* eslint-disable */
 import {
     ASN1ConstructionError as _ConstructionError,
-    ASN1Element as _Element,
+    type ASN1Element as _Element,
     ASN1TagClass as _TagClass,
-    OCTET_STRING,
+    type OCTET_STRING,
 } from "@wildboar/asn1";
 import * as $ from "@wildboar/asn1/functional";
 
@@ -28,36 +28,44 @@ import * as $ from "@wildboar/asn1/functional";
  *
  */
 export class Payload14 {
+    /**
+     * @summary `dhPublicKey`.
+     * @description
+     *
+     * SIZE 256. New DH pair per association; client new pair each rekey;
+     * server retains DH private for rekey.
+     *
+     * @public
+     * @readonly
+     */
+    public readonly dhPublicKey: OCTET_STRING;
+    /**
+     * @summary `nonce`.
+     * @description
+     *
+     * SIZE 32. New value each establishment. HKDF salt; IKM=DH secret;
+     * info=empty.
+     *
+     * @public
+     * @readonly
+     */
+    public readonly nonce: OCTET_STRING;
+    /**
+     * @summary Extensions that are not recognized.
+     * @public
+     * @readonly
+     */
+    public readonly _unrecognizedExtensionsList: _Element[];
+
     constructor(
-        /**
-         * @summary `dhPublicKey`.
-         * @description
-         *
-         * SIZE 256. New DH pair per association; client new pair each rekey;
-         * server retains DH private for rekey.
-         *
-         * @public
-         * @readonly
-         */
-        readonly dhPublicKey: OCTET_STRING,
-        /**
-         * @summary `nonce`.
-         * @description
-         *
-         * SIZE 32. New value each establishment. HKDF salt; IKM=DH secret;
-         * info=empty.
-         *
-         * @public
-         * @readonly
-         */
-        readonly nonce: OCTET_STRING,
-        /**
-         * @summary Extensions that are not recognized.
-         * @public
-         * @readonly
-         */
-        readonly _unrecognizedExtensionsList: _Element[] = []
-    ) {}
+        dhPublicKey: OCTET_STRING,
+        nonce: OCTET_STRING,
+        _unrecognizedExtensionsList: _Element[] = []
+    ) {
+        this.dhPublicKey = dhPublicKey;
+        this.nonce = nonce;
+        this._unrecognizedExtensionsList = _unrecognizedExtensionsList;
+    }
 
     /**
      * @summary Restructures an object into a Payload14

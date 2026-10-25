@@ -1,12 +1,12 @@
 /* eslint-disable */
 import {
-    ASN1Element as _Element,
+    type ASN1Element as _Element,
     ASN1TagClass as _TagClass,
-    OPTIONAL,
+    type OPTIONAL,
 } from "@wildboar/asn1";
 import * as $ from "@wildboar/asn1/functional";
 import {
-    IncrementalStepRefresh_sDSEChanges,
+    type IncrementalStepRefresh_sDSEChanges,
     _decode_IncrementalStepRefresh_sDSEChanges,
     _encode_IncrementalStepRefresh_sDSEChanges,
 } from "../DirectoryShadowAbstractService/IncrementalStepRefresh-sDSEChanges.ta.mjs";
@@ -37,33 +37,39 @@ import {
  *
  */
 export class IncrementalStepRefresh {
+    /**
+     * @summary `sDSEChanges`.
+     * @description
+     *
+     * Change to *this* SDSE: `add` (full content; existing DSE of this
+     * name is replaced and its subordinates deleted), `remove` (this
+     * SDSE and all subordinates disappear), or `modify`. Absent = no
+     * change at this node (only subordinates).
+     *
+     * @public
+     * @readonly
+     */
+    public readonly sDSEChanges?: OPTIONAL<IncrementalStepRefresh_sDSEChanges>;
+    /**
+     * @summary `subordinateUpdates`.
+     * @description
+     *
+     * Changes to subordinates, applied in the order given (DN reuse).
+     * SIZE (1..MAX) — omit if none. The same subordinate may also
+     * appear in later `IncrementalStepRefresh` elements.
+     *
+     * @public
+     * @readonly
+     */
+    public readonly subordinateUpdates?: OPTIONAL<SubordinateChanges[]>;
+
     constructor(
-        /**
-         * @summary `sDSEChanges`.
-         * @description
-         *
-         * Change to *this* SDSE: `add` (full content; existing DSE of this
-         * name is replaced and its subordinates deleted), `remove` (this
-         * SDSE and all subordinates disappear), or `modify`. Absent = no
-         * change at this node (only subordinates).
-         *
-         * @public
-         * @readonly
-         */
-        readonly sDSEChanges?: OPTIONAL<IncrementalStepRefresh_sDSEChanges>,
-        /**
-         * @summary `subordinateUpdates`.
-         * @description
-         *
-         * Changes to subordinates, applied in the order given (DN reuse).
-         * SIZE (1..MAX) — omit if none. The same subordinate may also
-         * appear in later `IncrementalStepRefresh` elements.
-         *
-         * @public
-         * @readonly
-         */
-        readonly subordinateUpdates?: OPTIONAL<SubordinateChanges[]>
-    ) {}
+        sDSEChanges?: OPTIONAL<IncrementalStepRefresh_sDSEChanges>,
+        subordinateUpdates?: OPTIONAL<SubordinateChanges[]>
+    ) {
+        this.sDSEChanges = sDSEChanges;
+        this.subordinateUpdates = subordinateUpdates;
+    }
 
     /**
      * @summary Restructures an object into a IncrementalStepRefresh

@@ -1,7 +1,7 @@
 /* eslint-disable */
 import {
-    VideotexString,
-    ASN1Element as _Element,
+    type VideotexString,
+    type ASN1Element as _Element,
     ASN1TagClass as _TagClass,
     ASN1Construction as _Construction,
     ASN1UniversalType as _UniversalType,
@@ -27,10 +27,10 @@ import * as $ from '@wildboar/asn1/functional';
 export type VideotexData = VideotexString; // VideotexString
 
 
-export const _decode_VideotexData = $._decodeVideotexString;
+export const _decode_VideotexData: $.ASN1Decoder<VideotexString> = $._decodeVideotexString;
 
 
-export const _encode_VideotexData = $._encodeVideotexString;
+export const _encode_VideotexData: $.ASN1Encoder<VideotexString> = $._encodeVideotexString;
 
 
 /* eslint-enable */

@@ -1,22 +1,22 @@
 /* eslint-disable */
 import {
-    ASN1Element as _Element,
+    type ASN1Element as _Element,
     ASN1TagClass as _TagClass,
-    OPTIONAL,
+    type OPTIONAL,
 } from "@wildboar/asn1";
 import * as $ from "@wildboar/asn1/functional";
 import {
-    DomainMaintenanceLevel,
+    type DomainMaintenanceLevel,
     _decode_DomainMaintenanceLevel,
     _encode_DomainMaintenanceLevel,
 } from "../CMSCKMKeyManagement/DomainMaintenanceLevel.ta.mjs";
 import {
-    DomainName,
+    type DomainName,
     _decode_DomainName,
     _encode_DomainName,
 } from "../CMSCKMKeyManagement/DomainName.ta.mjs";
 import {
-    DomainParams,
+    type DomainParams,
     _decode_DomainParams,
     _encode_DomainParams,
 } from "../CMSCKMKeyManagement/DomainParams.ta.mjs";
@@ -40,26 +40,34 @@ import {
  *
  */
 export class KeyConstructionDomain {
+    /**
+     * @summary `domainName`.
+     * @public
+     * @readonly
+     */
+    public readonly domainName: DomainName;
+    /**
+     * @summary `domainMaintenanceLevel`.
+     * @public
+     * @readonly
+     */
+    public readonly domainMaintenanceLevel: DomainMaintenanceLevel;
+    /**
+     * @summary `domainParams`.
+     * @public
+     * @readonly
+     */
+    public readonly domainParams?: OPTIONAL<DomainParams>;
+
     constructor(
-        /**
-         * @summary `domainName`.
-         * @public
-         * @readonly
-         */
-        readonly domainName: DomainName,
-        /**
-         * @summary `domainMaintenanceLevel`.
-         * @public
-         * @readonly
-         */
-        readonly domainMaintenanceLevel: DomainMaintenanceLevel,
-        /**
-         * @summary `domainParams`.
-         * @public
-         * @readonly
-         */
-        readonly domainParams?: OPTIONAL<DomainParams>
-    ) {}
+        domainName: DomainName,
+        domainMaintenanceLevel: DomainMaintenanceLevel,
+        domainParams?: OPTIONAL<DomainParams>
+    ) {
+        this.domainName = domainName;
+        this.domainMaintenanceLevel = domainMaintenanceLevel;
+        this.domainParams = domainParams;
+    }
 
     /**
      * @summary Restructures an object into a KeyConstructionDomain

@@ -1,6 +1,6 @@
 /* eslint-disable */
 import {
-    ASN1Element as _Element,
+    type ASN1Element as _Element,
     ASN1TagClass as _TagClass,
     ASN1Construction as _Construction,
     ASN1UniversalType as _UniversalType,
@@ -10,7 +10,7 @@ import {
     ASN1ConstructionError as _ConstructionError,
 } from "@wildboar/asn1";
 import * as $ from "@wildboar/asn1/functional";
-import { DfrEntryName, _decode_DfrEntryName, _encode_DfrEntryName } from "../DFRAbstractService/DfrEntryName.ta.mjs";
+import { type DfrEntryName, _decode_DfrEntryName, _encode_DfrEntryName } from "../DFRAbstractService/DfrEntryName.ta.mjs";
 import { UpdateProblem, _enum_for_UpdateProblem, _decode_UpdateProblem, _encode_UpdateProblem } from "../DFRAbstractService/UpdateProblem.ta.mjs";
 
 
@@ -33,26 +33,32 @@ import { UpdateProblem, _enum_for_UpdateProblem, _decode_UpdateProblem, _encode_
  */
 export
 class updateError_ParameterType {
+    /**
+     * @summary `entry`.
+     * @description
+     *
+     * Entry that could not be updated.
+     * @public
+     * @readonly
+     */
+    public readonly entry: DfrEntryName;
+    /**
+     * @summary `problem`.
+     * @description
+     *
+     * Why.
+     * @public
+     * @readonly
+     */
+    public readonly problem: UpdateProblem;
+
     constructor (
-        /**
-         * @summary `entry`.
-         * @description
-         *
-         * Entry that could not be updated.
-         * @public
-         * @readonly
-         */
-        readonly entry: DfrEntryName,
-        /**
-         * @summary `problem`.
-         * @description
-         *
-         * Why.
-         * @public
-         * @readonly
-         */
-        readonly problem: UpdateProblem
-    ) {}
+        entry: DfrEntryName,
+        problem: UpdateProblem
+    ) {
+        this.entry = entry;
+        this.problem = problem;
+    }
 
     /**
      * @summary Restructures an object into a updateError_ParameterType
@@ -76,7 +82,7 @@ class updateError_ParameterType {
          * @static
          */
 
-    public static _enum_for_problem = _enum_for_UpdateProblem;
+    public static _enum_for_problem: typeof _enum_for_UpdateProblem = _enum_for_UpdateProblem;
 }
 
 /**

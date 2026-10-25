@@ -1,6 +1,6 @@
 /* eslint-disable */
 import {
-    ASN1Element as _Element,
+    type ASN1Element as _Element,
     ASN1TagClass as _TagClass,
     ASN1Construction as _Construction,
     ASN1UniversalType as _UniversalType,
@@ -10,8 +10,8 @@ import {
     ASN1ConstructionError as _ConstructionError,
 } from "@wildboar/asn1";
 import * as $ from "@wildboar/asn1/functional";
-import { ObjectName, _decode_ObjectName, _encode_ObjectName } from "../ISO-9506-MMS-1/ObjectName.ta.mjs";
-import { Unsigned16, _decode_Unsigned16, _encode_Unsigned16 } from "../ISO-9506-MMS-1/Unsigned16.ta.mjs";
+import { type ObjectName, _decode_ObjectName, _encode_ObjectName } from "../ISO-9506-MMS-1/ObjectName.ta.mjs";
+import { type Unsigned16, _decode_Unsigned16, _encode_Unsigned16 } from "../ISO-9506-MMS-1/Unsigned16.ta.mjs";
 
 
 /**
@@ -35,30 +35,36 @@ import { Unsigned16, _decode_Unsigned16, _encode_Unsigned16 } from "../ISO-9506-
  */
 export
 class DefineSemaphore_Request {
+    /**
+     * @summary `semaphoreName`.
+     * @description
+     *
+     * VMD-specific name of the token semaphore to create.
+     * ISO 9506-1:2003 §16.4.1.1.1.
+     *
+     * @public
+     * @readonly
+     */
+    public readonly semaphoreName: ObjectName;
+    /**
+     * @summary `numberOfTokens`.
+     * @description
+     *
+     * Maximum simultaneous owners. One token is mutual exclusion.
+     * ISO 9506-1:2003 §16.1.5, §16.4.1.1.2.
+     *
+     * @public
+     * @readonly
+     */
+    public readonly numberOfTokens: Unsigned16;
+
     constructor (
-        /**
-         * @summary `semaphoreName`.
-         * @description
-         *
-         * VMD-specific name of the token semaphore to create.
-         * ISO 9506-1:2003 §16.4.1.1.1.
-         *
-         * @public
-         * @readonly
-         */
-        readonly semaphoreName: ObjectName,
-        /**
-         * @summary `numberOfTokens`.
-         * @description
-         *
-         * Maximum simultaneous owners. One token is mutual exclusion.
-         * ISO 9506-1:2003 §16.1.5, §16.4.1.1.2.
-         *
-         * @public
-         * @readonly
-         */
-        readonly numberOfTokens: Unsigned16
-    ) {}
+        semaphoreName: ObjectName,
+        numberOfTokens: Unsigned16
+    ) {
+        this.semaphoreName = semaphoreName;
+        this.numberOfTokens = numberOfTokens;
+    }
 
     /**
      * @summary Restructures an object into a DefineSemaphore_Request

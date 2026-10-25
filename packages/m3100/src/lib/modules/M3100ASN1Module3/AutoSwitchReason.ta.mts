@@ -1,6 +1,6 @@
 /* eslint-disable */
 import {
-    ASN1Element as _Element,
+    type ASN1Element as _Element,
     ASN1TagClass as _TagClass,
     ASN1Construction as _Construction,
     ASN1UniversalType as _UniversalType,
@@ -61,7 +61,7 @@ export type AutoSwitchReason = _enum_for_AutoSwitchReason;
  *
  * @enum {number}
  */
-export const AutoSwitchReason = _enum_for_AutoSwitchReason;
+export const AutoSwitchReason: typeof _enum_for_AutoSwitchReason = _enum_for_AutoSwitchReason;
 
 
 /**
@@ -69,7 +69,7 @@ export const AutoSwitchReason = _enum_for_AutoSwitchReason;
  * @constant
  * @type {number}
  */
-export const AutoSwitchReason_waitToRestore: AutoSwitchReason =
+export const AutoSwitchReason_waitToRestore: _enum_for_AutoSwitchReason.waitToRestore =
     AutoSwitchReason.waitToRestore; /* LONG_NAMED_ENUMERATED_VALUE */
 
 
@@ -78,7 +78,7 @@ export const AutoSwitchReason_waitToRestore: AutoSwitchReason =
  * @constant
  * @type {number}
  */
-export const waitToRestore: AutoSwitchReason =
+export const waitToRestore: _enum_for_AutoSwitchReason.waitToRestore =
     AutoSwitchReason.waitToRestore; /* SHORT_NAMED_ENUMERATED_VALUE */
 
 
@@ -87,7 +87,7 @@ export const waitToRestore: AutoSwitchReason =
  * @constant
  * @type {number}
  */
-export const AutoSwitchReason_resourceDegrade: AutoSwitchReason =
+export const AutoSwitchReason_resourceDegrade: _enum_for_AutoSwitchReason.resourceDegrade =
     AutoSwitchReason.resourceDegrade; /* LONG_NAMED_ENUMERATED_VALUE */
 
 
@@ -96,7 +96,7 @@ export const AutoSwitchReason_resourceDegrade: AutoSwitchReason =
  * @constant
  * @type {number}
  */
-export const resourceDegrade: AutoSwitchReason =
+export const resourceDegrade: _enum_for_AutoSwitchReason.resourceDegrade =
     AutoSwitchReason.resourceDegrade; /* SHORT_NAMED_ENUMERATED_VALUE */
 
 
@@ -105,7 +105,7 @@ export const resourceDegrade: AutoSwitchReason =
  * @constant
  * @type {number}
  */
-export const AutoSwitchReason_resourceFailed: AutoSwitchReason =
+export const AutoSwitchReason_resourceFailed: _enum_for_AutoSwitchReason.resourceFailed =
     AutoSwitchReason.resourceFailed; /* LONG_NAMED_ENUMERATED_VALUE */
 
 
@@ -114,18 +114,30 @@ export const AutoSwitchReason_resourceFailed: AutoSwitchReason =
  * @constant
  * @type {number}
  */
-export const resourceFailed: AutoSwitchReason =
+export const resourceFailed: _enum_for_AutoSwitchReason.resourceFailed =
     AutoSwitchReason.resourceFailed; /* SHORT_NAMED_ENUMERATED_VALUE */
 
 
 
 
-export const _decode_AutoSwitchReason = $._decodeEnumerated;
+export function _decode_AutoSwitchReason(el: _Element): AutoSwitchReason {
+    const enumerated = $._decodeEnumerated(el);
+    switch (enumerated) {
+        case AutoSwitchReason.waitToRestore: return AutoSwitchReason.waitToRestore;
+        case AutoSwitchReason.resourceDegrade: return AutoSwitchReason.resourceDegrade;
+        case AutoSwitchReason.resourceFailed: return AutoSwitchReason.resourceFailed;
+        default:
+            throw new _ConstructionError(
+                'Invalid ENUMERATED value ' + enumerated + ' for AutoSwitchReason.',
+                el,
+            );
+    }
+}
 
 
 
 
-export const _encode_AutoSwitchReason = $._encodeEnumerated;
+export const _encode_AutoSwitchReason: $.ASN1Encoder<AutoSwitchReason> = $._encodeEnumerated as $.ASN1Encoder<AutoSwitchReason>;
 
 
 /* eslint-enable */

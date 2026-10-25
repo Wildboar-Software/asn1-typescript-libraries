@@ -1,7 +1,7 @@
 /* eslint-disable */
 import {
-    ASN1Element as _Element,
-    ENUMERATED
+    type ASN1Element as _Element,
+    type ENUMERATED
 } from "@wildboar/asn1";
 import * as $ from "@wildboar/asn1/functional";
 
@@ -52,7 +52,7 @@ type CancellationType = _enum_for_CancellationType | ENUMERATED;
  * @type {number}
  */
 export
-const CancellationType_updateProcedure: CancellationType = 0; /* LONG_NAMED_ENUMERATED_VALUE */
+const CancellationType_updateProcedure: _enum_for_CancellationType.updateProcedure = _enum_for_CancellationType.updateProcedure; /* LONG_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary updateProcedure
@@ -60,7 +60,7 @@ const CancellationType_updateProcedure: CancellationType = 0; /* LONG_NAMED_ENUM
  * @type {number}
  */
 export
-const updateProcedure: CancellationType = CancellationType_updateProcedure; /* SHORT_NAMED_ENUMERATED_VALUE */
+const updateProcedure: _enum_for_CancellationType.updateProcedure = CancellationType_updateProcedure; /* SHORT_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary CancellationType_subscriptionWithdraw
@@ -68,7 +68,7 @@ const updateProcedure: CancellationType = CancellationType_updateProcedure; /* S
  * @type {number}
  */
 export
-const CancellationType_subscriptionWithdraw: CancellationType = 1; /* LONG_NAMED_ENUMERATED_VALUE */
+const CancellationType_subscriptionWithdraw: _enum_for_CancellationType.subscriptionWithdraw = _enum_for_CancellationType.subscriptionWithdraw; /* LONG_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary subscriptionWithdraw
@@ -76,7 +76,7 @@ const CancellationType_subscriptionWithdraw: CancellationType = 1; /* LONG_NAMED
  * @type {number}
  */
 export
-const subscriptionWithdraw: CancellationType = CancellationType_subscriptionWithdraw; /* SHORT_NAMED_ENUMERATED_VALUE */
+const subscriptionWithdraw: _enum_for_CancellationType.subscriptionWithdraw = CancellationType_subscriptionWithdraw; /* SHORT_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary CancellationType_initialAttachProcedure
@@ -84,7 +84,7 @@ const subscriptionWithdraw: CancellationType = CancellationType_subscriptionWith
  * @type {number}
  */
 export
-const CancellationType_initialAttachProcedure: CancellationType = 2; /* LONG_NAMED_ENUMERATED_VALUE */
+const CancellationType_initialAttachProcedure: _enum_for_CancellationType.initialAttachProcedure = _enum_for_CancellationType.initialAttachProcedure; /* LONG_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary initialAttachProcedure
@@ -92,7 +92,7 @@ const CancellationType_initialAttachProcedure: CancellationType = 2; /* LONG_NAM
  * @type {number}
  */
 export
-const initialAttachProcedure: CancellationType = CancellationType_initialAttachProcedure; /* SHORT_NAMED_ENUMERATED_VALUE */
+const initialAttachProcedure: _enum_for_CancellationType.initialAttachProcedure = CancellationType_initialAttachProcedure; /* SHORT_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary Decodes an ASN.1 element into a(n) CancellationType
@@ -100,7 +100,7 @@ const initialAttachProcedure: CancellationType = CancellationType_initialAttachP
  * @param el The element being decoded.
  * @returns The decoded data structure.
  */
-export const _decode_CancellationType = $._decodeEnumerated;
+export const _decode_CancellationType: $.ASN1Decoder<number> = $._decodeEnumerated;
 
 /**
  * @summary Encodes a(n) CancellationType into an ASN.1 Element.
@@ -109,7 +109,7 @@ export const _decode_CancellationType = $._decodeEnumerated;
  * @param elGetter A function that can be used to get new ASN.1 elements.
  * @returns {_Element} The CancellationType, encoded as an ASN.1 Element.
  */
-export const _encode_CancellationType = $._encodeEnumerated;
+export const _encode_CancellationType: $.ASN1Encoder<number> = $._encodeEnumerated;
 
 
 /* eslint-enable */

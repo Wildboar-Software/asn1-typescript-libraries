@@ -1,6 +1,6 @@
 /* eslint-disable */
 import {
-    ASN1Element as _Element,
+    type ASN1Element as _Element,
     ASN1TagClass as _TagClass,
     ASN1Construction as _Construction,
     ASN1UniversalType as _UniversalType,
@@ -35,7 +35,8 @@ const _enum_for_LogFullAction = {
     halt: 1,
 } as const;
 
-export type _enum_for_LogFullAction = (typeof _enum_for_LogFullAction)[keyof typeof _enum_for_LogFullAction];
+export
+type _enum_for_LogFullAction = (typeof _enum_for_LogFullAction)[keyof typeof _enum_for_LogFullAction];
 
 /**
  * @summary LogFullAction
@@ -73,7 +74,7 @@ type LogFullAction = _enum_for_LogFullAction;
  * @enum {number}
  */
 export
-const LogFullAction = _enum_for_LogFullAction;
+const LogFullAction: typeof _enum_for_LogFullAction = _enum_for_LogFullAction;
 
 /**
  * @summary LogFullAction_wrap
@@ -86,7 +87,7 @@ const LogFullAction = _enum_for_LogFullAction;
  * @type {number}
  */
 export
-const LogFullAction_wrap: LogFullAction = LogFullAction.wrap; /* LONG_NAMED_ENUMERATED_VALUE */
+const LogFullAction_wrap: 0 = LogFullAction.wrap; /* LONG_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary wrap
@@ -99,7 +100,7 @@ const LogFullAction_wrap: LogFullAction = LogFullAction.wrap; /* LONG_NAMED_ENUM
  * @type {number}
  */
 export
-const wrap: LogFullAction = LogFullAction.wrap; /* SHORT_NAMED_ENUMERATED_VALUE */
+const wrap: 0 = LogFullAction.wrap; /* SHORT_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary LogFullAction_halt
@@ -112,7 +113,7 @@ const wrap: LogFullAction = LogFullAction.wrap; /* SHORT_NAMED_ENUMERATED_VALUE 
  * @type {number}
  */
 export
-const LogFullAction_halt: LogFullAction = LogFullAction.halt; /* LONG_NAMED_ENUMERATED_VALUE */
+const LogFullAction_halt: 1 = LogFullAction.halt; /* LONG_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary halt
@@ -125,13 +126,24 @@ const LogFullAction_halt: LogFullAction = LogFullAction.halt; /* LONG_NAMED_ENUM
  * @type {number}
  */
 export
-const halt: LogFullAction = LogFullAction.halt; /* SHORT_NAMED_ENUMERATED_VALUE */
+const halt: 1 = LogFullAction.halt; /* SHORT_NAMED_ENUMERATED_VALUE */
 
 
-export const _decode_LogFullAction = $._decodeEnumerated as $.ASN1Decoder<LogFullAction>;
+export function _decode_LogFullAction(el: _Element): LogFullAction {
+    const enumerated = $._decodeEnumerated(el);
+    switch (enumerated) {
+        case LogFullAction.wrap: return LogFullAction.wrap;
+        case LogFullAction.halt: return LogFullAction.halt;
+        default:
+            throw new _ConstructionError(
+                "Invalid ENUMERATED value " + enumerated + " for LogFullAction.",
+                el,
+            );
+    }
+}
 
 
-export const _encode_LogFullAction = $._encodeEnumerated as $.ASN1Encoder<LogFullAction>;
+export const _encode_LogFullAction: $.ASN1Encoder<LogFullAction> = $._encodeEnumerated as $.ASN1Encoder<LogFullAction>;
 
 
 /* eslint-enable */

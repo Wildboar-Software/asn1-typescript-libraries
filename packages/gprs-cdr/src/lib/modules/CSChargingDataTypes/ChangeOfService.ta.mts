@@ -1,13 +1,13 @@
 /* eslint-disable */
 import {
-    OCTET_STRING,
-    OPTIONAL,
-    ASN1Element as _Element,
+    type OCTET_STRING,
+    type OPTIONAL,
+    type ASN1Element as _Element,
     ASN1TagClass as _TagClass,
     ASN1SizeError
 } from "@wildboar/asn1";
 import * as $ from "@wildboar/asn1/functional";
-import { BasicService, _decode_BasicService, _encode_BasicService } from "../CSChargingDataTypes/BasicService.ta.mjs";
+import { type BasicService, _decode_BasicService, _encode_BasicService } from "../CSChargingDataTypes/BasicService.ta.mjs";
 import { TransparencyInd, _decode_TransparencyInd, _encode_TransparencyInd, _enum_for_TransparencyInd } from "../CSChargingDataTypes/TransparencyInd.ta.mjs";
 import { Fnur, _decode_Fnur, _encode_Fnur, _enum_for_Fnur } from "../CSChargingDataTypes/Fnur.ta.mjs";
 
@@ -135,13 +135,13 @@ class ChangeOfService {
          * @static
          */
 
-    public static _enum_for_transparencyInd = _enum_for_TransparencyInd;        /**
+    public static _enum_for_transparencyInd: typeof _enum_for_TransparencyInd = _enum_for_TransparencyInd;        /**
          * @summary The enum used as the type of the component `fnur`
          * @public
          * @static
          */
 
-    public static _enum_for_fnur = _enum_for_Fnur;
+    public static _enum_for_fnur: typeof _enum_for_Fnur = _enum_for_Fnur;
 }
 
 /**

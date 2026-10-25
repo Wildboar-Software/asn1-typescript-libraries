@@ -1,7 +1,7 @@
 /* eslint-disable */
 import {
-    OPTIONAL,
-    ASN1Element as _Element,
+    type OPTIONAL,
+    type ASN1Element as _Element,
     ASN1TagClass as _TagClass,
     ASN1Construction as _Construction,
     ASN1UniversalType as _UniversalType,
@@ -22,38 +22,38 @@ import {
     _encode_PerRecipientMessageSubmissionFields,
 } from '../MTSAbstractService/PerRecipientMessageSubmissionFields.ta.mjs';
 import {
-    OriginatorName,
+    type OriginatorName,
     _decode_OriginatorName,
     _encode_OriginatorName,
 } from '../MTSAbstractService/OriginatorName.ta.mjs';
 import {
-    OriginalEncodedInformationTypes,
+    type OriginalEncodedInformationTypes,
     _decode_OriginalEncodedInformationTypes,
     _encode_OriginalEncodedInformationTypes,
 } from '../MTSAbstractService/OriginalEncodedInformationTypes.ta.mjs';
 import {
-    ContentType,
+    type ContentType,
     _decode_ContentType,
     _encode_ContentType,
 } from '../MTSAbstractService/ContentType.ta.mjs';
 import {
-    ContentIdentifier,
+    type ContentIdentifier,
     _decode_ContentIdentifier,
     _encode_ContentIdentifier,
 } from '../MTSAbstractService/ContentIdentifier.ta.mjs';
 import {
-    Priority,
+    type Priority,
     Priority_normal,
     _decode_Priority,
     _encode_Priority,
 } from '../MTSAbstractService/Priority.ta.mjs';
 import {
-    PerMessageIndicators,
+    type PerMessageIndicators,
     _decode_PerMessageIndicators,
     _encode_PerMessageIndicators,
 } from '../MTSAbstractService/PerMessageIndicators.ta.mjs';
 import {
-    DeferredDeliveryTime,
+    type DeferredDeliveryTime,
     _decode_DeferredDeliveryTime,
     _encode_DeferredDeliveryTime,
 } from '../MTSAbstractService/DeferredDeliveryTime.ta.mjs';
@@ -87,64 +87,86 @@ import {
  *
  */
 export class MessageSubmissionEnvelope implements PerMessageSubmissionFields {
-    constructor(
-        /**
-         * @summary `originator_name`.
-         * @public
-         * @readonly
-         */
-        readonly originator_name: OriginatorName /* REPLICATED_COMPONENT */,
-        /**
-         * @summary `original_encoded_information_types`.
-         * @public
-         * @readonly
-         */
-        readonly original_encoded_information_types: OPTIONAL<OriginalEncodedInformationTypes> /* REPLICATED_COMPONENT */,
-        /**
-         * @summary `content_type`.
-         * @public
-         * @readonly
-         */
-        readonly content_type: ContentType /* REPLICATED_COMPONENT */,
-        /**
-         * @summary `content_identifier`.
-         * @public
-         * @readonly
-         */
-        readonly content_identifier: OPTIONAL<ContentIdentifier> /* REPLICATED_COMPONENT */,
-        /**
-         * @summary `priority`.
-         * @public
-         * @readonly
-         */
-        readonly priority: OPTIONAL<Priority> /* REPLICATED_COMPONENT */,
-        /**
-         * @summary `per_message_indicators`.
-         * @public
-         * @readonly
-         */
-        readonly per_message_indicators: OPTIONAL<PerMessageIndicators> /* REPLICATED_COMPONENT */,
-        /**
-         * @summary `deferred_delivery_time`.
-         * @public
-         * @readonly
-         */
-        readonly deferred_delivery_time: OPTIONAL<DeferredDeliveryTime> /* REPLICATED_COMPONENT */,
-        /**
-         * @summary `extensions`.
-         * @public
-         * @readonly
-         */
-        readonly extensions: OPTIONAL<
+    /**
+     * @summary `originator_name`.
+     * @public
+     * @readonly
+     */
+    public readonly originator_name: OriginatorName; /* REPLICATED_COMPONENT */
+    /**
+     * @summary `original_encoded_information_types`.
+     * @public
+     * @readonly
+     */
+    public readonly original_encoded_information_types: OPTIONAL<OriginalEncodedInformationTypes>; /* REPLICATED_COMPONENT */
+    /**
+     * @summary `content_type`.
+     * @public
+     * @readonly
+     */
+    public readonly content_type: ContentType; /* REPLICATED_COMPONENT */
+    /**
+     * @summary `content_identifier`.
+     * @public
+     * @readonly
+     */
+    public readonly content_identifier: OPTIONAL<ContentIdentifier>; /* REPLICATED_COMPONENT */
+    /**
+     * @summary `priority`.
+     * @public
+     * @readonly
+     */
+    public readonly priority: OPTIONAL<Priority>; /* REPLICATED_COMPONENT */
+    /**
+     * @summary `per_message_indicators`.
+     * @public
+     * @readonly
+     */
+    public readonly per_message_indicators: OPTIONAL<PerMessageIndicators>; /* REPLICATED_COMPONENT */
+    /**
+     * @summary `deferred_delivery_time`.
+     * @public
+     * @readonly
+     */
+    public readonly deferred_delivery_time: OPTIONAL<DeferredDeliveryTime>; /* REPLICATED_COMPONENT */
+    /**
+     * @summary `extensions`.
+     * @public
+     * @readonly
+     */
+    public readonly extensions: OPTIONAL<
             ExtensionField[]
-        > /* REPLICATED_COMPONENT */,
-        /**
-         * @summary `per_recipient_fields`.
-         * @public
-         * @readonly
-         */
-        readonly per_recipient_fields: PerRecipientMessageSubmissionFields[]
-    ) {}
+        >; /* REPLICATED_COMPONENT */
+    /**
+     * @summary `per_recipient_fields`.
+     * @public
+     * @readonly
+     */
+    public readonly per_recipient_fields: PerRecipientMessageSubmissionFields[];
+
+    constructor(
+        originator_name: OriginatorName,
+        original_encoded_information_types: OPTIONAL<OriginalEncodedInformationTypes>,
+        content_type: ContentType,
+        content_identifier: OPTIONAL<ContentIdentifier>,
+        priority: OPTIONAL<Priority>,
+        per_message_indicators: OPTIONAL<PerMessageIndicators>,
+        deferred_delivery_time: OPTIONAL<DeferredDeliveryTime>,
+        extensions: OPTIONAL<
+            ExtensionField[]
+        >,
+        per_recipient_fields: PerRecipientMessageSubmissionFields[]
+    ) {
+        this.originator_name = originator_name;
+        this.original_encoded_information_types = original_encoded_information_types;
+        this.content_type = content_type;
+        this.content_identifier = content_identifier;
+        this.priority = priority;
+        this.per_message_indicators = per_message_indicators;
+        this.deferred_delivery_time = deferred_delivery_time;
+        this.extensions = extensions;
+        this.per_recipient_fields = per_recipient_fields;
+    }
 
     /**
      * @summary Restructures an object into a MessageSubmissionEnvelope

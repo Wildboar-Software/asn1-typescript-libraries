@@ -1,6 +1,6 @@
 /* eslint-disable */
 import {
-    ASN1Element as _Element,
+    type ASN1Element as _Element,
     ASN1TagClass as _TagClass,
     ASN1Construction as _Construction,
     ASN1UniversalType as _UniversalType,
@@ -10,7 +10,7 @@ import {
     ASN1ConstructionError as _ConstructionError,
 } from "@wildboar/asn1";
 import * as $ from "@wildboar/asn1/functional";
-import { Opaque, _decode_Opaque, _encode_Opaque } from "../TSM/Opaque.ta.mjs";
+import { type Opaque, _decode_Opaque, _encode_Opaque } from "../TSM/Opaque.ta.mjs";
 
 
 
@@ -34,18 +34,22 @@ import { Opaque, _decode_Opaque, _encode_Opaque } from "../TSM/Opaque.ta.mjs";
  */
 export
 class Finished {
+    /**
+     * @summary `verify_data`.
+     * @description
+     *
+     * 12-octet TLS Finished verify-data. X.1084 Annex A.
+     *
+     * @public
+     * @readonly
+     */
+    public readonly verify_data: Opaque;
+
     constructor (
-        /**
-         * @summary `verify_data`.
-         * @description
-         *
-         * 12-octet TLS Finished verify-data. X.1084 Annex A.
-         *
-         * @public
-         * @readonly
-         */
-        readonly verify_data: Opaque
-    ) {}
+        verify_data: Opaque
+    ) {
+        this.verify_data = verify_data;
+    }
 
     /**
      * @summary Restructures an object into a Finished

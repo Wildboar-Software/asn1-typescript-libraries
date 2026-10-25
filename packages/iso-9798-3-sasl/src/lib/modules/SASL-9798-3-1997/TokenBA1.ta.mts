@@ -1,7 +1,7 @@
 /* eslint-disable */
 import {
-    OPTIONAL,
-    ASN1Element as _Element,
+    type OPTIONAL,
+    type ASN1Element as _Element,
     ASN1TagClass as _TagClass,
     ASN1Construction as _Construction,
     ASN1UniversalType as _UniversalType,
@@ -11,10 +11,10 @@ import {
     ASN1ConstructionError as _ConstructionError,
 } from "@wildboar/asn1";
 import * as $ from "@wildboar/asn1/functional";
-import { RandomNumber, _decode_RandomNumber, _encode_RandomNumber } from "../SASL-9798-3-1997/RandomNumber.ta.mjs";
-import { TrustedAuth, _decode_TrustedAuth, _encode_TrustedAuth } from "../SASL-9798-3-1997/TrustedAuth.ta.mjs";
+import { type RandomNumber, _decode_RandomNumber, _encode_RandomNumber } from "../SASL-9798-3-1997/RandomNumber.ta.mjs";
+import { type TrustedAuth, _decode_TrustedAuth, _encode_TrustedAuth } from "../SASL-9798-3-1997/TrustedAuth.ta.mjs";
 import {
-    GeneralNames,
+    type GeneralNames,
     _decode_GeneralNames,
     _encode_GeneralNames,
 } from "@wildboar/gn";
@@ -44,45 +44,53 @@ import {
  */
 export
 class TokenBA1 {
+    /**
+     * @summary `randomB`.
+     * @description
+     *
+     * Server challenge R_B. The client includes this value in the
+     * signed `TBSDataAB` of `TokenAB` so the server can verify the
+     * echo (RFC 3163 §2.4 / §2.5). MUST be from a cryptographically
+     * strong RNG (RFC 3163 §7).
+     *
+     * @public
+     * @readonly
+     */
+    public readonly randomB: RandomNumber;
+    /**
+     * @summary `entityB`.
+     * @description
+     *
+     * Optional server distinguishing name(s). When present in a
+     * later `TokenAB`, the client SHOULD echo the identity it
+     * believes belongs to the server (RFC 3163 §3.1–§3.2).
+     *
+     * @public
+     * @readonly
+     */
+    public readonly entityB?: OPTIONAL<GeneralNames>;
+    /**
+     * @summary `certPref`.
+     * @description
+     *
+     * Ordered preferences for certificates / public-key pairs the
+     * client should use; each element is a `TrustedAuth`
+     * (RFC 3163 §3.1 / §3.4).
+     *
+     * @public
+     * @readonly
+     */
+    public readonly certPref?: OPTIONAL<TrustedAuth[]>;
+
     constructor (
-        /**
-         * @summary `randomB`.
-         * @description
-         *
-         * Server challenge R_B. The client includes this value in the
-         * signed `TBSDataAB` of `TokenAB` so the server can verify the
-         * echo (RFC 3163 §2.4 / §2.5). MUST be from a cryptographically
-         * strong RNG (RFC 3163 §7).
-         *
-         * @public
-         * @readonly
-         */
-        readonly randomB: RandomNumber,
-        /**
-         * @summary `entityB`.
-         * @description
-         *
-         * Optional server distinguishing name(s). When present in a
-         * later `TokenAB`, the client SHOULD echo the identity it
-         * believes belongs to the server (RFC 3163 §3.1–§3.2).
-         *
-         * @public
-         * @readonly
-         */
-        readonly entityB?: OPTIONAL<GeneralNames>,
-        /**
-         * @summary `certPref`.
-         * @description
-         *
-         * Ordered preferences for certificates / public-key pairs the
-         * client should use; each element is a `TrustedAuth`
-         * (RFC 3163 §3.1 / §3.4).
-         *
-         * @public
-         * @readonly
-         */
-        readonly certPref?: OPTIONAL<TrustedAuth[]>
-    ) {}
+        randomB: RandomNumber,
+        entityB?: OPTIONAL<GeneralNames>,
+        certPref?: OPTIONAL<TrustedAuth[]>
+    ) {
+        this.randomB = randomB;
+        this.entityB = entityB;
+        this.certPref = certPref;
+    }
 
     /**
      * @summary Restructures an object into a TokenBA1

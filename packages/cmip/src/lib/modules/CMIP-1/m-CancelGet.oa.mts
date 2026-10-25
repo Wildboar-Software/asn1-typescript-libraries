@@ -17,7 +17,7 @@ import {
   _encode_Code,
 } from '@wildboar/rose';
 import {
-  InvokeIDType,
+  type InvokeIDType,
   _decode_InvokeIDType,
   _encode_InvokeIDType,
 } from '../CMIP-1/InvokeIDType.ta.mjs';

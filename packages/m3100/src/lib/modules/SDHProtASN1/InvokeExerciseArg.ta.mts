@@ -1,7 +1,7 @@
 /* eslint-disable */
 import {
-    OPTIONAL,
-    ASN1Element as _Element,
+    type OPTIONAL,
+    type ASN1Element as _Element,
     ASN1TagClass as _TagClass,
     ASN1Construction as _Construction,
     ASN1UniversalType as _UniversalType,
@@ -37,20 +37,26 @@ import {
  *
  */
 export class InvokeExerciseArg {
+    /**
+     * @summary `protectionEntity`.
+     * @public
+     * @readonly
+     */
+    public readonly protectionEntity?: OPTIONAL<ProtectionEntity>;
+    /**
+     * @summary `otherInfo`.
+     * @public
+     * @readonly
+     */
+    public readonly otherInfo?: OPTIONAL<ManagementExtension[]>;
+
     constructor(
-        /**
-         * @summary `protectionEntity`.
-         * @public
-         * @readonly
-         */
-        readonly protectionEntity?: OPTIONAL<ProtectionEntity>,
-        /**
-         * @summary `otherInfo`.
-         * @public
-         * @readonly
-         */
-        readonly otherInfo?: OPTIONAL<ManagementExtension[]>
-    ) {}
+        protectionEntity?: OPTIONAL<ProtectionEntity>,
+        otherInfo?: OPTIONAL<ManagementExtension[]>
+    ) {
+        this.protectionEntity = protectionEntity;
+        this.otherInfo = otherInfo;
+    }
 
     /**
      * @summary Restructures an object into a InvokeExerciseArg

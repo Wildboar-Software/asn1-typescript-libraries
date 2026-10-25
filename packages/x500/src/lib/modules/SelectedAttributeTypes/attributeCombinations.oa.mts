@@ -5,7 +5,7 @@ import {
 } from "../InformationFramework/AttributeUsage.ta.mjs";
 import { id_not_attributeCombinations } from "../SelectedAttributeTypes/id-not-attributeCombinations.va.mjs";
 import {
-    AttributeCombination,
+    type AttributeCombination,
     _decode_AttributeCombination,
     _encode_AttributeCombination,
 } from "../ServiceAdministration/AttributeCombination.ta.mjs";

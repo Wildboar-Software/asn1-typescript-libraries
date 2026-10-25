@@ -1,9 +1,9 @@
 /* eslint-disable */
 import {
-    OPTIONAL,
-    OBJECT_IDENTIFIER,
-    GraphicString,
-    ASN1Element as _Element,
+    type OPTIONAL,
+    type OBJECT_IDENTIFIER,
+    type GraphicString,
+    type ASN1Element as _Element,
     ASN1TagClass as _TagClass,
     ASN1Construction as _Construction,
     ASN1UniversalType as _UniversalType,
@@ -14,7 +14,7 @@ import {
 } from '@wildboar/asn1';
 import * as $ from '@wildboar/asn1/functional';
 import {
-    GeneralIdentifier,
+    type GeneralIdentifier,
     _decode_GeneralIdentifier,
     _encode_GeneralIdentifier,
 } from '../IPMSFileTransferBodyPartType/GeneralIdentifier.ta.mjs';
@@ -39,32 +39,42 @@ import {
  *
  */
 export class EnvironmentParameter {
+    /**
+     * @summary `application_reference`.
+     * @public
+     * @readonly
+     */
+    public readonly application_reference?: OPTIONAL<GeneralIdentifier>;
+    /**
+     * @summary `machine`.
+     * @public
+     * @readonly
+     */
+    public readonly machine?: OPTIONAL<GeneralIdentifier>;
+    /**
+     * @summary `operating_system`.
+     * @public
+     * @readonly
+     */
+    public readonly operating_system?: OPTIONAL<OBJECT_IDENTIFIER>;
+    /**
+     * @summary `user_visible_string`.
+     * @public
+     * @readonly
+     */
+    public readonly user_visible_string?: OPTIONAL<GraphicString[]>;
+
     constructor(
-        /**
-         * @summary `application_reference`.
-         * @public
-         * @readonly
-         */
-        readonly application_reference?: OPTIONAL<GeneralIdentifier>,
-        /**
-         * @summary `machine`.
-         * @public
-         * @readonly
-         */
-        readonly machine?: OPTIONAL<GeneralIdentifier>,
-        /**
-         * @summary `operating_system`.
-         * @public
-         * @readonly
-         */
-        readonly operating_system?: OPTIONAL<OBJECT_IDENTIFIER>,
-        /**
-         * @summary `user_visible_string`.
-         * @public
-         * @readonly
-         */
-        readonly user_visible_string?: OPTIONAL<GraphicString[]>
-    ) {}
+        application_reference?: OPTIONAL<GeneralIdentifier>,
+        machine?: OPTIONAL<GeneralIdentifier>,
+        operating_system?: OPTIONAL<OBJECT_IDENTIFIER>,
+        user_visible_string?: OPTIONAL<GraphicString[]>
+    ) {
+        this.application_reference = application_reference;
+        this.machine = machine;
+        this.operating_system = operating_system;
+        this.user_visible_string = user_visible_string;
+    }
 
     /**
      * @summary Restructures an object into a EnvironmentParameter

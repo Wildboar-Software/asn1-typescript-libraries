@@ -1,6 +1,6 @@
 /* eslint-disable */
 import {
-    GeneralizedTime,
+    type GeneralizedTime,
 } from "@wildboar/asn1";
 import * as $ from "@wildboar/asn1/functional";
 
@@ -18,8 +18,8 @@ import * as $ from "@wildboar/asn1/functional";
  */
 export
 type EntryTime = GeneralizedTime; // GeneralizedTime
-export const _decode_EntryTime = $._decodeGeneralizedTime;
-export const _encode_EntryTime = $._encodeGeneralizedTime;
+export const _decode_EntryTime: $.ASN1Decoder<Date> = $._decodeGeneralizedTime;
+export const _encode_EntryTime: $.ASN1Encoder<Date> = $._encodeGeneralizedTime;
 
 
 /* eslint-enable */

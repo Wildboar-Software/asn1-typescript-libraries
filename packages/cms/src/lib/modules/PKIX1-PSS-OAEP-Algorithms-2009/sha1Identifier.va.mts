@@ -1,5 +1,5 @@
 /* eslint-disable */
-import { HashAlgorithm } from "../PKIX1-PSS-OAEP-Algorithms-2009/HashAlgorithm.ta.mjs";
+import { type HashAlgorithm } from "../PKIX1-PSS-OAEP-Algorithms-2009/HashAlgorithm.ta.mjs";
 import { id_sha1 } from "../PKIXAlgs-2009/id-sha1.va.mjs";
 import {
     AlgorithmIdentifier,

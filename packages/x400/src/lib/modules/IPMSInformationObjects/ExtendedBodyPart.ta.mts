@@ -1,8 +1,8 @@
 /* eslint-disable */
 import {
-    OPTIONAL,
-    INSTANCE_OF,
-    ASN1Element as _Element,
+    type OPTIONAL,
+    type INSTANCE_OF,
+    type ASN1Element as _Element,
     ASN1TagClass as _TagClass,
     ASN1Construction as _Construction,
     ASN1UniversalType as _UniversalType,
@@ -34,20 +34,26 @@ import * as $ from '@wildboar/asn1/functional';
  *
  */
 export class ExtendedBodyPart {
+    /**
+     * @summary `parameters`.
+     * @public
+     * @readonly
+     */
+    public readonly parameters: OPTIONAL<INSTANCE_OF>;
+    /**
+     * @summary `data`.
+     * @public
+     * @readonly
+     */
+    public readonly data: INSTANCE_OF;
+
     constructor(
-        /**
-         * @summary `parameters`.
-         * @public
-         * @readonly
-         */
-        readonly parameters: OPTIONAL<INSTANCE_OF>,
-        /**
-         * @summary `data`.
-         * @public
-         * @readonly
-         */
-        readonly data: INSTANCE_OF
-    ) {}
+        parameters: OPTIONAL<INSTANCE_OF>,
+        data: INSTANCE_OF
+    ) {
+        this.parameters = parameters;
+        this.data = data;
+    }
 
     /**
      * @summary Restructures an object into a ExtendedBodyPart

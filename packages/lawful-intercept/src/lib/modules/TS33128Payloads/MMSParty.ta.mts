@@ -1,11 +1,11 @@
 /* eslint-disable */
 import {
     ASN1ConstructionError as _ConstructionError,
-    ASN1Element as _Element,
+    type ASN1Element as _Element,
     ASN1TagClass as _TagClass
 } from "@wildboar/asn1";
 import * as $ from "@wildboar/asn1/functional";
-import { MMSPartyID, _decode_MMSPartyID, _encode_MMSPartyID } from "../TS33128Payloads/MMSPartyID.ta.mjs";
+import { type MMSPartyID, _decode_MMSPartyID, _encode_MMSPartyID } from "../TS33128Payloads/MMSPartyID.ta.mjs";
 // export { MMSPartyID, _decode_MMSPartyID, _encode_MMSPartyID } from "../TS33128Payloads/MMSPartyID.ta.mjs";
 import { NonLocalID, _decode_NonLocalID, _encode_NonLocalID, _enum_for_NonLocalID } from "../TS33128Payloads/NonLocalID.ta.mjs";
 // export { NonLocalID, _enum_for_NonLocalID, NonLocalID_local /* IMPORTED_LONG_ENUMERATION_ITEM */, local /* IMPORTED_SHORT_ENUMERATION_ITEM */, NonLocalID_nonLocal /* IMPORTED_LONG_ENUMERATION_ITEM */, nonLocal /* IMPORTED_SHORT_ENUMERATION_ITEM */, _decode_NonLocalID, _encode_NonLocalID } from "../TS33128Payloads/NonLocalID.ta.mjs";
@@ -91,7 +91,7 @@ class MMSParty {
          * @static
          */
 
-    public static _enum_for_nonLocalID = _enum_for_NonLocalID;
+    public static _enum_for_nonLocalID: typeof _enum_for_NonLocalID = _enum_for_NonLocalID;
 }
 
 /**

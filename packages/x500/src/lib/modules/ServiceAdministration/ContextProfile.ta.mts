@@ -1,9 +1,9 @@
 /* eslint-disable */
 import {
-    ASN1Element as _Element,
+    type ASN1Element as _Element,
     ASN1TagClass as _TagClass,
-    OBJECT_IDENTIFIER,
-    OPTIONAL,
+    type OBJECT_IDENTIFIER,
+    type OPTIONAL,
 } from "@wildboar/asn1";
 import * as $ from "@wildboar/asn1/functional";
 /**
@@ -28,26 +28,34 @@ import * as $ from "@wildboar/asn1/functional";
  *
  */
 export class ContextProfile {
+    /**
+     * @summary `contextType`.
+     * @public
+     * @readonly
+     */
+    public readonly contextType: OBJECT_IDENTIFIER;
+    /**
+     * @summary `contextValue`.
+     * @public
+     * @readonly
+     */
+    public readonly contextValue?: OPTIONAL<_Element[]>;
+    /**
+     * @summary Extensions that are not recognized.
+     * @public
+     * @readonly
+     */
+    public readonly _unrecognizedExtensionsList: _Element[];
+
     constructor(
-        /**
-         * @summary `contextType`.
-         * @public
-         * @readonly
-         */
-        readonly contextType: OBJECT_IDENTIFIER,
-        /**
-         * @summary `contextValue`.
-         * @public
-         * @readonly
-         */
-        readonly contextValue?: OPTIONAL<_Element[]>,
-        /**
-         * @summary Extensions that are not recognized.
-         * @public
-         * @readonly
-         */
-        readonly _unrecognizedExtensionsList: _Element[] = []
-    ) {}
+        contextType: OBJECT_IDENTIFIER,
+        contextValue?: OPTIONAL<_Element[]>,
+        _unrecognizedExtensionsList: _Element[] = []
+    ) {
+        this.contextType = contextType;
+        this.contextValue = contextValue;
+        this._unrecognizedExtensionsList = _unrecognizedExtensionsList;
+    }
 
     /**
      * @summary Restructures an object into a ContextProfile

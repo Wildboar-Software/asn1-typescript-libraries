@@ -1,12 +1,12 @@
 /* eslint-disable */
 import {
-    OPTIONAL,
-    ASN1Element as _Element,
+    type OPTIONAL,
+    type ASN1Element as _Element,
     ASN1TagClass as _TagClass
 } from "@wildboar/asn1";
 import * as $ from "@wildboar/asn1/functional";
-import { HLR_Id, _decode_HLR_Id, _encode_HLR_Id } from "../MAP-CommonDataTypes/HLR-Id.ta.mjs";
-import { SIP_URI, _decode_SIP_URI, _encode_SIP_URI } from "../MAP-SM-DataTypes/SIP-URI.ta.mjs";
+import { type HLR_Id, _decode_HLR_Id, _encode_HLR_Id } from "../MAP-CommonDataTypes/HLR-Id.ta.mjs";
+import { type SIP_URI, _decode_SIP_URI, _encode_SIP_URI } from "../MAP-SM-DataTypes/SIP-URI.ta.mjs";
 
 
 /**
@@ -20,8 +20,8 @@ import { SIP_URI, _decode_SIP_URI, _encode_SIP_URI } from "../MAP-SM-DataTypes/S
  * 
  * ```asn1
  * CorrelationID ::= SEQUENCE {
- *     hlr-id    [0] HLR-Id    OPTIONAL,
- *     sip-uri-A    [1] SIP-URI    OPTIONAL,
+ *     hlr-id    [0] HLR-Id    type OPTIONAL,
+ *     sip-uri-A    [1] SIP-URI    type OPTIONAL,
  *     sip-uri-B    [2] SIP-URI}
  * ```
  * 
@@ -29,38 +29,46 @@ import { SIP_URI, _decode_SIP_URI, _encode_SIP_URI } from "../MAP-SM-DataTypes/S
  */
 export
 class CorrelationID {
+    /**
+     * @summary `hlr_id`.
+     * @description
+     *
+     * HLR identity.
+     *
+     * @public
+     * @readonly
+     */
+    public readonly hlr_id: OPTIONAL<HLR_Id>;
+    /**
+     * @summary `sip_uri_A`.
+     * @description
+     *
+     * SIP URI A; octets as in IETF RFC 3261.
+     *
+     * @public
+     * @readonly
+     */
+    public readonly sip_uri_A: OPTIONAL<SIP_URI>;
+    /**
+     * @summary `sip_uri_B`.
+     * @description
+     *
+     * SIP URI B; octets as in IETF RFC 3261.
+     *
+     * @public
+     * @readonly
+     */
+    public readonly sip_uri_B: SIP_URI;
+
     constructor (
-        /**
-         * @summary `hlr_id`.
-         * @description
-         *
-         * HLR identity.
-         *
-         * @public
-         * @readonly
-         */
-        readonly hlr_id: OPTIONAL<HLR_Id>,
-        /**
-         * @summary `sip_uri_A`.
-         * @description
-         *
-         * SIP URI A; octets as in IETF RFC 3261.
-         *
-         * @public
-         * @readonly
-         */
-        readonly sip_uri_A: OPTIONAL<SIP_URI>,
-        /**
-         * @summary `sip_uri_B`.
-         * @description
-         *
-         * SIP URI B; octets as in IETF RFC 3261.
-         *
-         * @public
-         * @readonly
-         */
-        readonly sip_uri_B: SIP_URI
-    ) {}
+        hlr_id: OPTIONAL<HLR_Id>,
+        sip_uri_A: OPTIONAL<SIP_URI>,
+        sip_uri_B: SIP_URI
+    ) {
+        this.hlr_id = hlr_id;
+        this.sip_uri_A = sip_uri_A;
+        this.sip_uri_B = sip_uri_B;
+    }
 
     /**
      * @summary Restructures an object into a CorrelationID

@@ -75,7 +75,7 @@ export type TransferProblem = _enum_for_TransferProblem;
  *
  * @enum {number}
  */
-export const TransferProblem = _enum_for_TransferProblem;
+export const TransferProblem: typeof _enum_for_TransferProblem = _enum_for_TransferProblem;
 
 
 /**
@@ -88,7 +88,7 @@ export const TransferProblem = _enum_for_TransferProblem;
  * @constant
  * @type {number}
  */
-export const TransferProblem_duplicateInvocationId: TransferProblem =
+export const TransferProblem_duplicateInvocationId: _enum_for_TransferProblem.duplicateInvocationId =
   TransferProblem.duplicateInvocationId; /* LONG_NAMED_ENUMERATED_VALUE */
 
 
@@ -97,7 +97,7 @@ export const TransferProblem_duplicateInvocationId: TransferProblem =
  * @constant
  * @type {number}
  */
-export const duplicateInvocationId: TransferProblem =
+export const duplicateInvocationId: _enum_for_TransferProblem.duplicateInvocationId =
   TransferProblem.duplicateInvocationId; /* SHORT_NAMED_ENUMERATED_VALUE */
 
 
@@ -112,7 +112,7 @@ export const duplicateInvocationId: TransferProblem =
  * @constant
  * @type {number}
  */
-export const TransferProblem_unrecognizedSecurityExchange: TransferProblem =
+export const TransferProblem_unrecognizedSecurityExchange: _enum_for_TransferProblem.unrecognizedSecurityExchange =
   TransferProblem.unrecognizedSecurityExchange; /* LONG_NAMED_ENUMERATED_VALUE */
 
 
@@ -121,7 +121,7 @@ export const TransferProblem_unrecognizedSecurityExchange: TransferProblem =
  * @constant
  * @type {number}
  */
-export const unrecognizedSecurityExchange: TransferProblem =
+export const unrecognizedSecurityExchange: _enum_for_TransferProblem.unrecognizedSecurityExchange =
   TransferProblem.unrecognizedSecurityExchange; /* SHORT_NAMED_ENUMERATED_VALUE */
 
 
@@ -135,7 +135,7 @@ export const unrecognizedSecurityExchange: TransferProblem =
  * @constant
  * @type {number}
  */
-export const TransferProblem_mistypedItem: TransferProblem =
+export const TransferProblem_mistypedItem: _enum_for_TransferProblem.mistypedItem =
   TransferProblem.mistypedItem; /* LONG_NAMED_ENUMERATED_VALUE */
 
 
@@ -144,7 +144,7 @@ export const TransferProblem_mistypedItem: TransferProblem =
  * @constant
  * @type {number}
  */
-export const mistypedItem: TransferProblem =
+export const mistypedItem: _enum_for_TransferProblem.mistypedItem =
   TransferProblem.mistypedItem; /* SHORT_NAMED_ENUMERATED_VALUE */
 
 
@@ -159,7 +159,7 @@ export const mistypedItem: TransferProblem =
  * @constant
  * @type {number}
  */
-export const TransferProblem_inappropriateInvocationId: TransferProblem =
+export const TransferProblem_inappropriateInvocationId: _enum_for_TransferProblem.inappropriateInvocationId =
   TransferProblem.inappropriateInvocationId; /* LONG_NAMED_ENUMERATED_VALUE */
 
 
@@ -168,7 +168,7 @@ export const TransferProblem_inappropriateInvocationId: TransferProblem =
  * @constant
  * @type {number}
  */
-export const inappropriateInvocationId: TransferProblem =
+export const inappropriateInvocationId: _enum_for_TransferProblem.inappropriateInvocationId =
   TransferProblem.inappropriateInvocationId; /* SHORT_NAMED_ENUMERATED_VALUE */
 
 
@@ -183,7 +183,7 @@ export const inappropriateInvocationId: TransferProblem =
  * @constant
  * @type {number}
  */
-export const TransferProblem_alternatingSequenceError: TransferProblem =
+export const TransferProblem_alternatingSequenceError: _enum_for_TransferProblem.alternatingSequenceError =
   TransferProblem.alternatingSequenceError; /* LONG_NAMED_ENUMERATED_VALUE */
 
 
@@ -192,18 +192,32 @@ export const TransferProblem_alternatingSequenceError: TransferProblem =
  * @constant
  * @type {number}
  */
-export const alternatingSequenceError: TransferProblem =
+export const alternatingSequenceError: _enum_for_TransferProblem.alternatingSequenceError =
   TransferProblem.alternatingSequenceError; /* SHORT_NAMED_ENUMERATED_VALUE */
 
 
 
 
-export const _decode_TransferProblem = $._decodeEnumerated;
+export function _decode_TransferProblem(el: _Element): TransferProblem {
+  const enumerated = $._decodeEnumerated(el);
+  switch (enumerated) {
+    case TransferProblem.duplicateInvocationId: return TransferProblem.duplicateInvocationId;
+    case TransferProblem.unrecognizedSecurityExchange: return TransferProblem.unrecognizedSecurityExchange;
+    case TransferProblem.mistypedItem: return TransferProblem.mistypedItem;
+    case TransferProblem.inappropriateInvocationId: return TransferProblem.inappropriateInvocationId;
+    case TransferProblem.alternatingSequenceError: return TransferProblem.alternatingSequenceError;
+    default:
+      throw new _ConstructionError(
+        'Invalid ENUMERATED value ' + enumerated + ' for TransferProblem.',
+        el,
+      );
+  }
+}
 
 
 
 
-export const _encode_TransferProblem = $._encodeEnumerated;
+export const _encode_TransferProblem: $.ASN1Encoder<TransferProblem> = $._encodeEnumerated as $.ASN1Encoder<TransferProblem>;
 
 
 /* eslint-enable */

@@ -1,16 +1,16 @@
 /* eslint-disable */
 import {
-    OPTIONAL,
-    INTEGER,
-    OBJECT_IDENTIFIER,
-    SEQUENCE,
-    SET,
-    ASN1Element as _Element,
+    type OPTIONAL,
+    type INTEGER,
+    type OBJECT_IDENTIFIER,
+    type SEQUENCE,
+    type SET,
+    type ASN1Element as _Element,
     ASN1TagClass as _TagClass,
 } from "@wildboar/asn1";
 import * as $ from "@wildboar/asn1/functional";
 import {
-    ObjectInstance,
+    type ObjectInstance,
     _decode_ObjectInstance,
     _encode_ObjectInstance,
 } from "../CMIP-1/ObjectInstance.ta.mjs";
@@ -37,32 +37,42 @@ import {
  */
 export
 class SuspectObject {
+    /**
+     * @summary `suspectObjectClass`.
+     * @public
+     * @readonly
+     */
+    public readonly suspectObjectClass: OBJECT_IDENTIFIER;
+    /**
+     * @summary `suspectObjectInstance`.
+     * @public
+     * @readonly
+     */
+    public readonly suspectObjectInstance: ObjectInstance;
+    /**
+     * @summary `failureProbability`.
+     * @public
+     * @readonly
+     */
+    public readonly failureProbability?: OPTIONAL<INTEGER>;
+    /**
+     * @summary Extensions that are not recognized.
+     * @public
+     * @readonly
+     */
+    public readonly _unrecognizedExtensionsList: _Element[];
+
     constructor (
-        /**
-         * @summary `suspectObjectClass`.
-         * @public
-         * @readonly
-         */
-        readonly suspectObjectClass: OBJECT_IDENTIFIER,
-        /**
-         * @summary `suspectObjectInstance`.
-         * @public
-         * @readonly
-         */
-        readonly suspectObjectInstance: ObjectInstance,
-        /**
-         * @summary `failureProbability`.
-         * @public
-         * @readonly
-         */
-        readonly failureProbability?: OPTIONAL<INTEGER>,
-        /**
-         * @summary Extensions that are not recognized.
-         * @public
-         * @readonly
-         */
-        readonly _unrecognizedExtensionsList: _Element[] = []
-    ) {}
+        suspectObjectClass: OBJECT_IDENTIFIER,
+        suspectObjectInstance: ObjectInstance,
+        failureProbability?: OPTIONAL<INTEGER>,
+        _unrecognizedExtensionsList: _Element[] = []
+    ) {
+        this.suspectObjectClass = suspectObjectClass;
+        this.suspectObjectInstance = suspectObjectInstance;
+        this.failureProbability = failureProbability;
+        this._unrecognizedExtensionsList = _unrecognizedExtensionsList;
+    }
 
     /**
      * @summary Restructures an object into a SuspectObject

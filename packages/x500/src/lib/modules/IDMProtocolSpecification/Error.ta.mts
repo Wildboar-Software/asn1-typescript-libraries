@@ -1,13 +1,13 @@
 /* eslint-disable */
 import {
     ASN1ConstructionError as _ConstructionError,
-    ASN1Element as _Element,
+    type ASN1Element as _Element,
     ASN1TagClass as _TagClass,
-    INTEGER,
+    type INTEGER,
 } from "@wildboar/asn1";
 import * as $ from "@wildboar/asn1/functional";
 import {
-    Code,
+    type Code,
     _encode_Code,
     _decode_Code,
 } from "../CommonProtocolSpecification/Code.ta.mjs";
@@ -32,46 +32,56 @@ import {
  *
  */
 export class Error {
+    /**
+     * @summary `invokeID`.
+     * @description
+     *
+     * Shall equal the Request. Unknown ⇒ reject `unknownInvokeIDError`.
+     *
+     * @public
+     * @readonly
+     */
+    public readonly invokeID: INTEGER;
+    /**
+     * @summary `errcode`.
+     * @description
+     *
+     * Must be an error of that operation/protocol; otherwise reject
+     * `unknownError`. No `opcode` field on this PDU (unlike Result).
+     *
+     * @public
+     * @readonly
+     */
+    public readonly errcode: Code;
+    /**
+     * @summary `error`.
+     * @description
+     *
+     * ERROR.&ParameterType for `errcode`. Malformed ⇒ reject
+     * `mistypedParameterError`.
+     *
+     * @public
+     * @readonly
+     */
+    public readonly error: _Element;
+    /**
+     * @summary Extensions that are not recognized.
+     * @public
+     * @readonly
+     */
+    public readonly _unrecognizedExtensionsList: _Element[];
+
     constructor(
-        /**
-         * @summary `invokeID`.
-         * @description
-         *
-         * Shall equal the Request. Unknown ⇒ reject `unknownInvokeIDError`.
-         *
-         * @public
-         * @readonly
-         */
-        readonly invokeID: INTEGER,
-        /**
-         * @summary `errcode`.
-         * @description
-         *
-         * Must be an error of that operation/protocol; otherwise reject
-         * `unknownError`. No `opcode` field on this PDU (unlike Result).
-         *
-         * @public
-         * @readonly
-         */
-        readonly errcode: Code,
-        /**
-         * @summary `error`.
-         * @description
-         *
-         * ERROR.&ParameterType for `errcode`. Malformed ⇒ reject
-         * `mistypedParameterError`.
-         *
-         * @public
-         * @readonly
-         */
-        readonly error: _Element,
-        /**
-         * @summary Extensions that are not recognized.
-         * @public
-         * @readonly
-         */
-        readonly _unrecognizedExtensionsList: _Element[] = []
-    ) {}
+        invokeID: INTEGER,
+        errcode: Code,
+        error: _Element,
+        _unrecognizedExtensionsList: _Element[] = []
+    ) {
+        this.invokeID = invokeID;
+        this.errcode = errcode;
+        this.error = error;
+        this._unrecognizedExtensionsList = _unrecognizedExtensionsList;
+    }
 
     /**
      * @summary Restructures an object into a Error

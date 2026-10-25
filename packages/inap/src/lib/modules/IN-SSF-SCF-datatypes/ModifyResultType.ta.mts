@@ -1,4 +1,5 @@
 /* eslint-disable */
+import { ASN1Element as _Element, ASN1ConstructionError as _ConstructionError } from "@wildboar/asn1";
 import * as $ from "@wildboar/asn1/functional";
 
 
@@ -52,7 +53,7 @@ type ModifyResultType = _enum_for_ModifyResultType;
  * @enum {number}
  */
 export
-const ModifyResultType = _enum_for_ModifyResultType;
+const ModifyResultType: typeof _enum_for_ModifyResultType = _enum_for_ModifyResultType;
 
 /**
  * @summary ModifyResultType_modifyAcknowledge
@@ -60,7 +61,7 @@ const ModifyResultType = _enum_for_ModifyResultType;
  * @type {number}
  */
 export
-const ModifyResultType_modifyAcknowledge: ModifyResultType = ModifyResultType.modifyAcknowledge; /* LONG_NAMED_ENUMERATED_VALUE */
+const ModifyResultType_modifyAcknowledge: _enum_for_ModifyResultType.modifyAcknowledge = ModifyResultType.modifyAcknowledge; /* LONG_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary modifyAcknowledge
@@ -68,7 +69,7 @@ const ModifyResultType_modifyAcknowledge: ModifyResultType = ModifyResultType.mo
  * @type {number}
  */
 export
-const modifyAcknowledge: ModifyResultType = ModifyResultType.modifyAcknowledge; /* SHORT_NAMED_ENUMERATED_VALUE */
+const modifyAcknowledge: _enum_for_ModifyResultType.modifyAcknowledge = ModifyResultType.modifyAcknowledge; /* SHORT_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary ModifyResultType_modifyReject
@@ -76,7 +77,7 @@ const modifyAcknowledge: ModifyResultType = ModifyResultType.modifyAcknowledge; 
  * @type {number}
  */
 export
-const ModifyResultType_modifyReject: ModifyResultType = ModifyResultType.modifyReject; /* LONG_NAMED_ENUMERATED_VALUE */
+const ModifyResultType_modifyReject: _enum_for_ModifyResultType.modifyReject = ModifyResultType.modifyReject; /* LONG_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary modifyReject
@@ -84,12 +85,23 @@ const ModifyResultType_modifyReject: ModifyResultType = ModifyResultType.modifyR
  * @type {number}
  */
 export
-const modifyReject: ModifyResultType = ModifyResultType.modifyReject; /* SHORT_NAMED_ENUMERATED_VALUE */
+const modifyReject: _enum_for_ModifyResultType.modifyReject = ModifyResultType.modifyReject; /* SHORT_NAMED_ENUMERATED_VALUE */
 
 export
-const _decode_ModifyResultType: $.ASN1Decoder<ModifyResultType> = $._decodeEnumerated;
+function _decode_ModifyResultType(el: _Element): ModifyResultType {
+    const enumerated = $._decodeEnumerated(el);
+    switch (enumerated) {
+        case ModifyResultType.modifyAcknowledge: return ModifyResultType.modifyAcknowledge;
+        case ModifyResultType.modifyReject: return ModifyResultType.modifyReject;
+        default:
+            throw new _ConstructionError(
+                "Invalid ENUMERATED value " + enumerated + " for ModifyResultType.",
+                el,
+            );
+    }
+}
 
 export
-const _encode_ModifyResultType: $.ASN1Encoder<ModifyResultType> = $._encodeEnumerated;
+const _encode_ModifyResultType: $.ASN1Encoder<ModifyResultType> = $._encodeEnumerated as $.ASN1Encoder<ModifyResultType>;
 
 /* eslint-enable */

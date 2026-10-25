@@ -1,6 +1,6 @@
 /* eslint-disable */
 import {
-    ASN1Element as _Element,
+    type ASN1Element as _Element,
     ASN1TagClass as _TagClass
 } from "@wildboar/asn1";
 import * as $ from "@wildboar/asn1/functional";
@@ -8,7 +8,7 @@ import { InbandInfo, _decode_InbandInfo, _encode_InbandInfo } from "../IN-CS2-SC
 // export { InbandInfo, _decode_InbandInfo, _encode_InbandInfo } from "../IN-CS2-SCF-SCF-ops-args/InbandInfo.ta.mjs";
 import { Tone, _decode_Tone, _encode_Tone } from "../IN-CS2-SCF-SCF-ops-args/Tone.ta.mjs";
 // export { Tone, _decode_Tone, _encode_Tone } from "../IN-CS2-SCF-SCF-ops-args/Tone.ta.mjs";
-import { DisplayInformation, _decode_DisplayInformation, _encode_DisplayInformation } from "../IN-CS2-datatypes/DisplayInformation.ta.mjs";
+import { type DisplayInformation, _decode_DisplayInformation, _encode_DisplayInformation } from "../IN-CS2-datatypes/DisplayInformation.ta.mjs";
 // export { DisplayInformation, _decode_DisplayInformation, _encode_DisplayInformation } from "../IN-CS2-datatypes/DisplayInformation.ta.mjs";
 
 

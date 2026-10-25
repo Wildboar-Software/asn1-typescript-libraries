@@ -1,17 +1,17 @@
 /* eslint-disable */
 import {
-    ASN1Element as _Element,
+    type ASN1Element as _Element,
     ASN1TagClass as _TagClass,
-    OPTIONAL,
+    type OPTIONAL,
 } from "@wildboar/asn1";
 import * as $ from "@wildboar/asn1/functional";
 import {
-    JoinContextType,
+    type JoinContextType,
     _decode_JoinContextType,
     _encode_JoinContextType,
 } from "../DirectoryAbstractService/JoinContextType.ta.mjs";
 import {
-    AttributeType,
+    type AttributeType,
     _decode_AttributeType,
     _encode_AttributeType,
 } from "../InformationFramework/AttributeType.ta.mjs";
@@ -36,48 +36,58 @@ import {
  *
  */
 export class JoinAttPair {
+    /**
+     * @summary `baseAtt`.
+     * @description
+     *
+     * Type on the primary entry. Subtypes ignored. Same type as
+     * `joinAtt` ⇒ that equality MR; different type same syntax ⇒ this
+     * type's equality MR.
+     *
+     * @public
+     * @readonly
+     */
+    public readonly baseAtt: AttributeType;
+    /**
+     * @summary `joinAtt`.
+     * @description
+     *
+     * Type on the additional entry. Subtypes ignored. Only the
+     * explicitly named type.
+     *
+     * @public
+     * @readonly
+     */
+    public readonly joinAtt: AttributeType;
+    /**
+     * @summary `joinContext`.
+     * @description
+     *
+     * SEQUENCE SIZE (1..MAX). If present, only those context types; if
+     * absent, all contexts.
+     *
+     * @public
+     * @readonly
+     */
+    public readonly joinContext?: OPTIONAL<JoinContextType[]>;
+    /**
+     * @summary Extensions that are not recognized.
+     * @public
+     * @readonly
+     */
+    public readonly _unrecognizedExtensionsList: _Element[];
+
     constructor(
-        /**
-         * @summary `baseAtt`.
-         * @description
-         *
-         * Type on the primary entry. Subtypes ignored. Same type as
-         * `joinAtt` ⇒ that equality MR; different type same syntax ⇒ this
-         * type's equality MR.
-         *
-         * @public
-         * @readonly
-         */
-        readonly baseAtt: AttributeType,
-        /**
-         * @summary `joinAtt`.
-         * @description
-         *
-         * Type on the additional entry. Subtypes ignored. Only the
-         * explicitly named type.
-         *
-         * @public
-         * @readonly
-         */
-        readonly joinAtt: AttributeType,
-        /**
-         * @summary `joinContext`.
-         * @description
-         *
-         * SEQUENCE SIZE (1..MAX). If present, only those context types; if
-         * absent, all contexts.
-         *
-         * @public
-         * @readonly
-         */
-        readonly joinContext?: OPTIONAL<JoinContextType[]>,
-        /**
-         * @summary Extensions that are not recognized.
-         * @public
-         * @readonly
-         */
-        readonly _unrecognizedExtensionsList: _Element[] = []
-    ) {}
+        baseAtt: AttributeType,
+        joinAtt: AttributeType,
+        joinContext?: OPTIONAL<JoinContextType[]>,
+        _unrecognizedExtensionsList: _Element[] = []
+    ) {
+        this.baseAtt = baseAtt;
+        this.joinAtt = joinAtt;
+        this.joinContext = joinContext;
+        this._unrecognizedExtensionsList = _unrecognizedExtensionsList;
+    }
 
     /**
      * @summary Restructures an object into a JoinAttPair

@@ -1,12 +1,12 @@
 /* eslint-disable */
 import {
-    OPTIONAL,
-    ASN1Element as _Element,
+    type OPTIONAL,
+    type ASN1Element as _Element,
     ASN1TagClass as _TagClass
 } from "@wildboar/asn1";
 import * as $ from "@wildboar/asn1/functional";
-import { PartySubaddress, _decode_PartySubaddress, _encode_PartySubaddress } from "../Addressing-Data-Elements-asn1-97/PartySubaddress.ta.mjs";
-import { SubaddressTransferArg_argumentExtension, _decode_SubaddressTransferArg_argumentExtension, _encode_SubaddressTransferArg_argumentExtension } from "../Call-Transfer-Operations-asn1-97/SubaddressTransferArg-argumentExtension.ta.mjs";
+import { type PartySubaddress, _decode_PartySubaddress, _encode_PartySubaddress } from "../Addressing-Data-Elements-asn1-97/PartySubaddress.ta.mjs";
+import { type SubaddressTransferArg_argumentExtension, _decode_SubaddressTransferArg_argumentExtension, _encode_SubaddressTransferArg_argumentExtension } from "../Call-Transfer-Operations-asn1-97/SubaddressTransferArg-argumentExtension.ta.mjs";
 
 /**
  * @summary SubaddressTransferArg

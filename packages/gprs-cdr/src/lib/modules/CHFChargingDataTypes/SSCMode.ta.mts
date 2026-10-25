@@ -1,6 +1,6 @@
 /* eslint-disable */
 import {
-    INTEGER
+    type INTEGER
 } from "@wildboar/asn1";
 import * as $ from "@wildboar/asn1/functional";
 
@@ -28,7 +28,7 @@ type SSCMode = INTEGER;
  * @type {number}
  */
 export
-const SSCMode_sSCMode1: SSCMode = 1; /* LONG_NAMED_INTEGER_VALUE */
+const SSCMode_sSCMode1: 1 = 1 satisfies SSCMode; /* LONG_NAMED_INTEGER_VALUE */
 
 /**
  * @summary SSCMode_sSCMode1
@@ -36,7 +36,7 @@ const SSCMode_sSCMode1: SSCMode = 1; /* LONG_NAMED_INTEGER_VALUE */
  * @type {number}
  */
 export
-const sSCMode1: SSCMode = SSCMode_sSCMode1; /* SHORT_NAMED_INTEGER_VALUE */
+const sSCMode1: 1 = SSCMode_sSCMode1; /* SHORT_NAMED_INTEGER_VALUE */
 
 /**
  * @summary SSCMode_sSCMode2
@@ -44,7 +44,7 @@ const sSCMode1: SSCMode = SSCMode_sSCMode1; /* SHORT_NAMED_INTEGER_VALUE */
  * @type {number}
  */
 export
-const SSCMode_sSCMode2: SSCMode = 2; /* LONG_NAMED_INTEGER_VALUE */
+const SSCMode_sSCMode2: 2 = 2 satisfies SSCMode; /* LONG_NAMED_INTEGER_VALUE */
 
 /**
  * @summary SSCMode_sSCMode2
@@ -52,7 +52,7 @@ const SSCMode_sSCMode2: SSCMode = 2; /* LONG_NAMED_INTEGER_VALUE */
  * @type {number}
  */
 export
-const sSCMode2: SSCMode = SSCMode_sSCMode2; /* SHORT_NAMED_INTEGER_VALUE */
+const sSCMode2: 2 = SSCMode_sSCMode2; /* SHORT_NAMED_INTEGER_VALUE */
 
 /**
  * @summary SSCMode_sSCMode3
@@ -60,7 +60,7 @@ const sSCMode2: SSCMode = SSCMode_sSCMode2; /* SHORT_NAMED_INTEGER_VALUE */
  * @type {number}
  */
 export
-const SSCMode_sSCMode3: SSCMode = 3; /* LONG_NAMED_INTEGER_VALUE */
+const SSCMode_sSCMode3: 3 = 3 satisfies SSCMode; /* LONG_NAMED_INTEGER_VALUE */
 
 /**
  * @summary SSCMode_sSCMode3
@@ -68,7 +68,7 @@ const SSCMode_sSCMode3: SSCMode = 3; /* LONG_NAMED_INTEGER_VALUE */
  * @type {number}
  */
 export
-const sSCMode3: SSCMode = SSCMode_sSCMode3; /* SHORT_NAMED_INTEGER_VALUE */
+const sSCMode3: 3 = SSCMode_sSCMode3; /* SHORT_NAMED_INTEGER_VALUE */
 
 export
 const _decode_SSCMode: $.ASN1Decoder<SSCMode> = $._decodeInteger;

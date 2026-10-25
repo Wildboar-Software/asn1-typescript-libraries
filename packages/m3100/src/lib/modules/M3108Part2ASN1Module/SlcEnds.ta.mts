@@ -1,6 +1,6 @@
 /* eslint-disable */
 import {
-    ASN1Element as _Element,
+    type ASN1Element as _Element,
     ASN1TagClass as _TagClass,
     ASN1Construction as _Construction,
     ASN1UniversalType as _UniversalType,
@@ -31,20 +31,26 @@ import {
  *
  */
 export class SlcEnds {
+    /**
+     * @summary `endA`.
+     * @public
+     * @readonly
+     */
+    public readonly endA: LinkEndCharacteristics;
+    /**
+     * @summary `endB`.
+     * @public
+     * @readonly
+     */
+    public readonly endB: LinkEndCharacteristics;
+
     constructor(
-        /**
-         * @summary `endA`.
-         * @public
-         * @readonly
-         */
-        readonly endA: LinkEndCharacteristics,
-        /**
-         * @summary `endB`.
-         * @public
-         * @readonly
-         */
-        readonly endB: LinkEndCharacteristics
-    ) {}
+        endA: LinkEndCharacteristics,
+        endB: LinkEndCharacteristics
+    ) {
+        this.endA = endA;
+        this.endB = endB;
+    }
 
     /**
      * @summary Restructures an object into a SlcEnds

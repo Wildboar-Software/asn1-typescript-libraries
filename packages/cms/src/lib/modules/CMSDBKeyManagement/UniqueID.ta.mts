@@ -1,9 +1,9 @@
 /* eslint-disable */
 import {
-    ASN1Element as _Element,
+    type ASN1Element as _Element,
     ASN1TagClass as _TagClass,
-    OBJECT_IDENTIFIER,
-    OPTIONAL,
+    type OBJECT_IDENTIFIER,
+    type OPTIONAL,
 } from "@wildboar/asn1";
 import * as $ from "@wildboar/asn1/functional";
 
@@ -24,20 +24,26 @@ import * as $ from "@wildboar/asn1/functional";
  *
  */
 export class UniqueID {
+    /**
+     * @summary `name`.
+     * @public
+     * @readonly
+     */
+    public readonly name: OBJECT_IDENTIFIER;
+    /**
+     * @summary `type_`.
+     * @public
+     * @readonly
+     */
+    public readonly type_?: OPTIONAL<_Element>;
+
     constructor(
-        /**
-         * @summary `name`.
-         * @public
-         * @readonly
-         */
-        readonly name: OBJECT_IDENTIFIER,
-        /**
-         * @summary `type_`.
-         * @public
-         * @readonly
-         */
-        readonly type_?: OPTIONAL<_Element>
-    ) {}
+        name: OBJECT_IDENTIFIER,
+        type_?: OPTIONAL<_Element>
+    ) {
+        this.name = name;
+        this.type_ = type_;
+    }
 
     /**
      * @summary Restructures an object into a UniqueID

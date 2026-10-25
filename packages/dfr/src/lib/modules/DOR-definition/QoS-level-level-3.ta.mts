@@ -1,7 +1,7 @@
 /* eslint-disable */
 import {
-    GeneralizedTime,
-    ASN1Element as _Element,
+    type GeneralizedTime,
+    type ASN1Element as _Element,
     ASN1TagClass as _TagClass,
     ASN1Construction as _Construction,
     ASN1UniversalType as _UniversalType,
@@ -33,20 +33,26 @@ import * as $ from "@wildboar/asn1/functional";
  */
 export
 class QoS_level_level_3 {
+    /**
+     * @summary `produce_time`.
+     * @public
+     * @readonly
+     */
+    public readonly produce_time: GeneralizedTime;
+    /**
+     * @summary `fidelity_time`.
+     * @public
+     * @readonly
+     */
+    public readonly fidelity_time: GeneralizedTime;
+
     constructor (
-        /**
-         * @summary `produce_time`.
-         * @public
-         * @readonly
-         */
-        readonly produce_time: GeneralizedTime,
-        /**
-         * @summary `fidelity_time`.
-         * @public
-         * @readonly
-         */
-        readonly fidelity_time: GeneralizedTime
-    ) {}
+        produce_time: GeneralizedTime,
+        fidelity_time: GeneralizedTime
+    ) {
+        this.produce_time = produce_time;
+        this.fidelity_time = fidelity_time;
+    }
 
     /**
      * @summary Restructures an object into a QoS_level_level_3

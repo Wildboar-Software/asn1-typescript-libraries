@@ -1,7 +1,7 @@
 /* eslint-disable */
 import {
-    UTF8String,
-    ASN1Element as _Element,
+    type UTF8String,
+    type ASN1Element as _Element,
     ASN1TagClass as _TagClass,
     ASN1Construction as _Construction,
     ASN1UniversalType as _UniversalType,
@@ -11,11 +11,11 @@ import {
     ASN1ConstructionError as _ConstructionError,
 } from "@wildboar/asn1";
 import * as $ from "@wildboar/asn1/functional";
-import { BiometricType, _decode_BiometricType, _encode_BiometricType } from "../TSM/BiometricType.ta.mjs";
+import { type BiometricType, _decode_BiometricType, _encode_BiometricType } from "../TSM/BiometricType.ta.mjs";
 
-import { BSP_BFP_Schema, _decode_BSP_BFP_Schema, _encode_BSP_BFP_Schema } from "../TSM/BSP-BFP-Schema.ta.mjs";
+import { type BSP_BFP_Schema, _decode_BSP_BFP_Schema, _encode_BSP_BFP_Schema } from "../TSM/BSP-BFP-Schema.ta.mjs";
 
-import { CertificateIDInformation, _decode_CertificateIDInformation, _encode_CertificateIDInformation } from "../TSM/CertificateIDInformation.ta.mjs";
+import { type CertificateIDInformation, _decode_CertificateIDInformation, _encode_CertificateIDInformation } from "../TSM/CertificateIDInformation.ta.mjs";
 
 
 
@@ -43,50 +43,60 @@ import { CertificateIDInformation, _decode_CertificateIDInformation, _encode_Cer
  */
 export
 class TemplateInfo {
+    /**
+     * @summary `biometricType`.
+     * @description
+     *
+     * BioAPI biometric type of this template. X.1084 §11.1.
+     *
+     * @public
+     * @readonly
+     */
+    public readonly biometricType: BiometricType;
+    /**
+     * @summary `creator`.
+     * @description
+     *
+     * Party that created the reference template. X.1084 §11.1.
+     *
+     * @public
+     * @readonly
+     */
+    public readonly creator: UTF8String;
+    /**
+     * @summary `createdBFPSchema`.
+     * @description
+     *
+     * BSP/BFP that produced the template. [ISO/IEC 19784-1];
+     * X.1084 §11.1.
+     *
+     * @public
+     * @readonly
+     */
+    public readonly createdBFPSchema: BSP_BFP_Schema;
+    /**
+     * @summary `templateID`.
+     * @description
+     *
+     * Certificate serial of this template (Annex A: "such as
+     * CertificateSerialNumber (no value available)"). X.1084 §11.1.
+     *
+     * @public
+     * @readonly
+     */
+    public readonly templateID: CertificateIDInformation;
+
     constructor (
-        /**
-         * @summary `biometricType`.
-         * @description
-         *
-         * BioAPI biometric type of this template. X.1084 §11.1.
-         *
-         * @public
-         * @readonly
-         */
-        readonly biometricType: BiometricType,
-        /**
-         * @summary `creator`.
-         * @description
-         *
-         * Party that created the reference template. X.1084 §11.1.
-         *
-         * @public
-         * @readonly
-         */
-        readonly creator: UTF8String,
-        /**
-         * @summary `createdBFPSchema`.
-         * @description
-         *
-         * BSP/BFP that produced the template. [ISO/IEC 19784-1];
-         * X.1084 §11.1.
-         *
-         * @public
-         * @readonly
-         */
-        readonly createdBFPSchema: BSP_BFP_Schema,
-        /**
-         * @summary `templateID`.
-         * @description
-         *
-         * Certificate serial of this template (Annex A: "such as
-         * CertificateSerialNumber (no value available)"). X.1084 §11.1.
-         *
-         * @public
-         * @readonly
-         */
-        readonly templateID: CertificateIDInformation
-    ) {}
+        biometricType: BiometricType,
+        creator: UTF8String,
+        createdBFPSchema: BSP_BFP_Schema,
+        templateID: CertificateIDInformation
+    ) {
+        this.biometricType = biometricType;
+        this.creator = creator;
+        this.createdBFPSchema = createdBFPSchema;
+        this.templateID = templateID;
+    }
 
     /**
      * @summary Restructures an object into a TemplateInfo

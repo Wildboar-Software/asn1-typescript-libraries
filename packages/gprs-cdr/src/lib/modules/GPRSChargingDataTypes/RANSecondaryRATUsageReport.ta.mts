@@ -1,15 +1,15 @@
 /* eslint-disable */
 import {
-    INTEGER,
-    OCTET_STRING,
-    OPTIONAL,
-    ASN1Element as _Element,
+    type INTEGER,
+    type OCTET_STRING,
+    type OPTIONAL,
+    type ASN1Element as _Element,
     ASN1TagClass as _TagClass,
     ASN1SizeError,
     ASN1OverflowError
 } from "@wildboar/asn1";
 import * as $ from "@wildboar/asn1/functional";
-import { RANSecondaryRATUsageReport_secondaryRATType, _decode_RANSecondaryRATUsageReport_secondaryRATType, _encode_RANSecondaryRATUsageReport_secondaryRATType } from "../GPRSChargingDataTypes/RANSecondaryRATUsageReport-secondaryRATType.ta.mjs";
+import { type RANSecondaryRATUsageReport_secondaryRATType, _decode_RANSecondaryRATUsageReport_secondaryRATType, _encode_RANSecondaryRATUsageReport_secondaryRATType } from "../GPRSChargingDataTypes/RANSecondaryRATUsageReport-secondaryRATType.ta.mjs";
 
 
 /**

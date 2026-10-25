@@ -1,8 +1,8 @@
 /* eslint-disable */
 import {
-    OPTIONAL,
-    OBJECT_IDENTIFIER,
-    ASN1Element as _Element,
+    type OPTIONAL,
+    type OBJECT_IDENTIFIER,
+    type ASN1Element as _Element,
     ASN1TagClass as _TagClass,
     ASN1Construction as _Construction,
     ASN1UniversalType as _UniversalType,
@@ -41,7 +41,7 @@ class AlgorithmIdentifier {
      * @public
      * @readonly
      */
-    readonly algorithm: OBJECT_IDENTIFIER;
+    public readonly algorithm: OBJECT_IDENTIFIER;
     /**
      * @summary `parameters`.
      * @description
@@ -52,7 +52,7 @@ class AlgorithmIdentifier {
      * @public
      * @readonly
      */
-    readonly parameters?: OPTIONAL<_Element>;
+    public readonly parameters?: OPTIONAL<_Element>;
 
     constructor (
         algorithm: OBJECT_IDENTIFIER,

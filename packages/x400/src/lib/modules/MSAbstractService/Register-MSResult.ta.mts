@@ -1,7 +1,7 @@
 /* eslint-disable */
 import {
-    NULL,
-    ASN1Element as _Element,
+    type NULL,
+    type ASN1Element as _Element,
     ASN1TagClass as _TagClass,
     ASN1Construction as _Construction,
     ASN1UniversalType as _UniversalType,
@@ -32,7 +32,7 @@ import {
  *   registered-information
  *     SET {auto-action-registrations
  *            [0]  SET SIZE (1..ub-auto-registrations) OF AutoActionRegistration
- *              OPTIONAL,
+ *              type OPTIONAL,
  *          list-attribute-defaults
  *            [1]  SET SIZE (1..ub-default-registrations) OF
  *                   X413ATTRIBUTE.&id({AttributeTable}) OPTIONAL,

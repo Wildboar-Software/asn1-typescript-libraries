@@ -1,7 +1,7 @@
 /* eslint-disable */
 import {
-    OPTIONAL,
-    ASN1Element as _Element,
+    type OPTIONAL,
+    type ASN1Element as _Element,
     ASN1TagClass as _TagClass,
     ASN1Construction as _Construction,
     ASN1UniversalType as _UniversalType,
@@ -12,7 +12,7 @@ import {
 } from '@wildboar/asn1';
 import * as $ from '@wildboar/asn1/functional';
 import {
-    RegistrationIdentifier,
+    type RegistrationIdentifier,
     _decode_RegistrationIdentifier,
     _encode_RegistrationIdentifier,
 } from '../MSAbstractService/RegistrationIdentifier.ta.mjs';
@@ -22,12 +22,12 @@ import {
     _encode_MSSubmissionOptions,
 } from '../MSAbstractService/MSSubmissionOptions.ta.mjs';
 import {
-    MSExtensions,
+    type MSExtensions,
     _decode_MSExtensions,
     _encode_MSExtensions,
 } from '../MSAbstractService/MSExtensions.ta.mjs';
 import {
-    AttributeType,
+    type AttributeType,
     _decode_AttributeType,
     _encode_AttributeType,
 } from "./AttributeType.ta.mjs";
@@ -56,38 +56,50 @@ import {
  *
  */
 export class UARegistration {
+    /**
+     * @summary `ua_registration_identifier`.
+     * @public
+     * @readonly
+     */
+    public readonly ua_registration_identifier: RegistrationIdentifier;
+    /**
+     * @summary `ua_list_attribute_defaults`.
+     * @public
+     * @readonly
+     */
+    public readonly ua_list_attribute_defaults?: OPTIONAL<AttributeType[]>;
+    /**
+     * @summary `ua_fetch_attribute_defaults`.
+     * @public
+     * @readonly
+     */
+    public readonly ua_fetch_attribute_defaults?: OPTIONAL<AttributeType[]>;
+    /**
+     * @summary `ua_submission_defaults`.
+     * @public
+     * @readonly
+     */
+    public readonly ua_submission_defaults?: OPTIONAL<MSSubmissionOptions>;
+    /**
+     * @summary `content_specific_defaults`.
+     * @public
+     * @readonly
+     */
+    public readonly content_specific_defaults?: OPTIONAL<MSExtensions>;
+
     constructor(
-        /**
-         * @summary `ua_registration_identifier`.
-         * @public
-         * @readonly
-         */
-        readonly ua_registration_identifier: RegistrationIdentifier,
-        /**
-         * @summary `ua_list_attribute_defaults`.
-         * @public
-         * @readonly
-         */
-        readonly ua_list_attribute_defaults?: OPTIONAL<AttributeType[]>,
-        /**
-         * @summary `ua_fetch_attribute_defaults`.
-         * @public
-         * @readonly
-         */
-        readonly ua_fetch_attribute_defaults?: OPTIONAL<AttributeType[]>,
-        /**
-         * @summary `ua_submission_defaults`.
-         * @public
-         * @readonly
-         */
-        readonly ua_submission_defaults?: OPTIONAL<MSSubmissionOptions>,
-        /**
-         * @summary `content_specific_defaults`.
-         * @public
-         * @readonly
-         */
-        readonly content_specific_defaults?: OPTIONAL<MSExtensions>
-    ) {}
+        ua_registration_identifier: RegistrationIdentifier,
+        ua_list_attribute_defaults?: OPTIONAL<AttributeType[]>,
+        ua_fetch_attribute_defaults?: OPTIONAL<AttributeType[]>,
+        ua_submission_defaults?: OPTIONAL<MSSubmissionOptions>,
+        content_specific_defaults?: OPTIONAL<MSExtensions>
+    ) {
+        this.ua_registration_identifier = ua_registration_identifier;
+        this.ua_list_attribute_defaults = ua_list_attribute_defaults;
+        this.ua_fetch_attribute_defaults = ua_fetch_attribute_defaults;
+        this.ua_submission_defaults = ua_submission_defaults;
+        this.content_specific_defaults = content_specific_defaults;
+    }
 
     /**
      * @summary Restructures an object into a UARegistration

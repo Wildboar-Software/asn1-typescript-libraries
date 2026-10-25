@@ -1,7 +1,7 @@
 import {
-    OPTIONAL,
-    INTEGER,
-    ASN1Element as _Element,
+    type OPTIONAL,
+    type INTEGER,
+    type ASN1Element as _Element,
     ASN1OverflowError,
     ASN1TagClass as _TagClass,
 } from "@wildboar/asn1";
@@ -26,30 +26,35 @@ import * as $ from "@wildboar/asn1/functional";
  *
  */
 export class TimeIfTariffSwitch {
+    /**
+     * @summary `timeSinceTariffSwitch`.
+     * @description
+     *
+     * Measured in 100 millisecond intervals. (3GPP TS 29.078 V19.0.0 clause
+     * 5.1)
+     *
+     * @public
+     * @readonly
+     */
+    public readonly timeSinceTariffSwitch: INTEGER;
+    /**
+     * @summary `tariffSwitchInterval`.
+     * @description
+     *
+     * Measured in 100 millisecond intervals. (3GPP TS 29.078 V19.0.0 clause
+     * 5.1)
+     *
+     * @public
+     * @readonly
+     */
+    public readonly tariffSwitchInterval?: OPTIONAL<INTEGER>;
+
     constructor (
-        /**
-         * @summary `timeSinceTariffSwitch`.
-         * @description
-         *
-         * Measured in 100 millisecond intervals. (3GPP TS 29.078 V19.0.0 clause
-         * 5.1)
-         *
-         * @public
-         * @readonly
-         */
-        readonly timeSinceTariffSwitch: INTEGER,
-        /**
-         * @summary `tariffSwitchInterval`.
-         * @description
-         *
-         * Measured in 100 millisecond intervals. (3GPP TS 29.078 V19.0.0 clause
-         * 5.1)
-         *
-         * @public
-         * @readonly
-         */
-        readonly tariffSwitchInterval?: OPTIONAL<INTEGER>,
+        timeSinceTariffSwitch: INTEGER,
+        tariffSwitchInterval?: OPTIONAL<INTEGER>,
     ) {
+        this.timeSinceTariffSwitch = timeSinceTariffSwitch;
+        this.tariffSwitchInterval = tariffSwitchInterval;
         if ((typeof timeSinceTariffSwitch === "bigint" ? (timeSinceTariffSwitch < 0n || timeSinceTariffSwitch > 864000n) : (timeSinceTariffSwitch < 0 || timeSinceTariffSwitch > 864000))) {
             throw new ASN1OverflowError("TimeIfTariffSwitch.timeSinceTariffSwitch violates INTEGER constraint");
         }

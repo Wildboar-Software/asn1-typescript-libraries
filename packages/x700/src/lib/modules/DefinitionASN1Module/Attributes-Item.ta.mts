@@ -1,7 +1,7 @@
 /* eslint-disable */
 import {
-    OPTIONAL,
-    ASN1Element as _Element,
+    type OPTIONAL,
+    type ASN1Element as _Element,
     ASN1TagClass as _TagClass,
     ASN1Construction as _Construction,
     ASN1UniversalType as _UniversalType,
@@ -22,7 +22,7 @@ import {
     _encode_PropertyList,
 } from '../DefinitionASN1Module/PropertyList.ta.mjs';
 import {
-    TemplateList,
+    type TemplateList,
     _decode_TemplateList,
     _encode_TemplateList,
 } from '../DefinitionASN1Module/TemplateList.ta.mjs';
@@ -43,37 +43,45 @@ import {
  *
  */
 export class Attributes_Item {
+    /**
+     * @summary `attributeLabel`.
+     * @description
+     *
+     * Attribute template included in the package.
+     * @public
+     * @readonly
+     */
+    public readonly attributeLabel: TemplateLabel;
+    /**
+     * @summary `property`.
+     * @description
+     *
+     * Operations and value constraints that apply to this attribute in the
+     * package (GDMO propertylist).
+     * @public
+     * @readonly
+     */
+    public readonly property: PropertyList;
+    /**
+     * @summary `parameterLabel`.
+     * @description
+     *
+     * Optional processing-failure parameters for management operations on
+     * this attribute.
+     * @public
+     * @readonly
+     */
+    public readonly parameterLabel?: OPTIONAL<TemplateList>;
+
     constructor(
-        /**
-         * @summary `attributeLabel`.
-         * @description
-         *
-         * Attribute template included in the package.
-         * @public
-         * @readonly
-         */
-        readonly attributeLabel: TemplateLabel,
-        /**
-         * @summary `property`.
-         * @description
-         *
-         * Operations and value constraints that apply to this attribute in the
-         * package (GDMO propertylist).
-         * @public
-         * @readonly
-         */
-        readonly property: PropertyList,
-        /**
-         * @summary `parameterLabel`.
-         * @description
-         *
-         * Optional processing-failure parameters for management operations on
-         * this attribute.
-         * @public
-         * @readonly
-         */
-        readonly parameterLabel?: OPTIONAL<TemplateList>
-    ) {}
+        attributeLabel: TemplateLabel,
+        property: PropertyList,
+        parameterLabel?: OPTIONAL<TemplateList>
+    ) {
+        this.attributeLabel = attributeLabel;
+        this.property = property;
+        this.parameterLabel = parameterLabel;
+    }
 
     /**
      * @summary Restructures an object into a Attributes_Item

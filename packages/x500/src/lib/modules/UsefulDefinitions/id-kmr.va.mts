@@ -1,5 +1,5 @@
 /* eslint-disable */
-import { ID } from "../UsefulDefinitions/ID.ta.mjs";
+import { type ID } from "../UsefulDefinitions/ID.ta.mjs";
 import { knowledgeMatchingRule } from "../UsefulDefinitions/knowledgeMatchingRule.va.mjs";
 /**
  * @summary id_kmr

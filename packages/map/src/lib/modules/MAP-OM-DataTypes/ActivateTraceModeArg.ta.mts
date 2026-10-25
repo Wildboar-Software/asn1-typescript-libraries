@@ -1,22 +1,22 @@
 /* eslint-disable */
 import {
-    OPTIONAL,
-    ASN1Element as _Element,
+    type OPTIONAL,
+    type ASN1Element as _Element,
     ASN1TagClass as _TagClass
 } from "@wildboar/asn1";
 import * as $ from "@wildboar/asn1/functional";
-import { AddressString, _decode_AddressString, _encode_AddressString } from "../MAP-CommonDataTypes/AddressString.ta.mjs";
-import { GSN_Address, _decode_GSN_Address, _encode_GSN_Address } from "../MAP-CommonDataTypes/GSN-Address.ta.mjs";
-import { IMSI, _decode_IMSI, _encode_IMSI } from "../MAP-CommonDataTypes/IMSI.ta.mjs";
+import { type AddressString, _decode_AddressString, _encode_AddressString } from "../MAP-CommonDataTypes/AddressString.ta.mjs";
+import { type GSN_Address, _decode_GSN_Address, _encode_GSN_Address } from "../MAP-CommonDataTypes/GSN-Address.ta.mjs";
+import { type IMSI, _decode_IMSI, _encode_IMSI } from "../MAP-CommonDataTypes/IMSI.ta.mjs";
 import { ExtensionContainer, _decode_ExtensionContainer, _encode_ExtensionContainer } from "../MAP-ExtensionDataTypes/ExtensionContainer.ta.mjs";
 import { MDT_Configuration, _decode_MDT_Configuration, _encode_MDT_Configuration } from "../MAP-OM-DataTypes/MDT-Configuration.ta.mjs";
 import { TraceDepthList, _decode_TraceDepthList, _encode_TraceDepthList } from "../MAP-OM-DataTypes/TraceDepthList.ta.mjs";
 import { TraceEventList, _decode_TraceEventList, _encode_TraceEventList } from "../MAP-OM-DataTypes/TraceEventList.ta.mjs";
 import { TraceInterfaceList, _decode_TraceInterfaceList, _encode_TraceInterfaceList } from "../MAP-OM-DataTypes/TraceInterfaceList.ta.mjs";
-import { TraceNE_TypeList, _decode_TraceNE_TypeList, _encode_TraceNE_TypeList } from "../MAP-OM-DataTypes/TraceNE-TypeList.ta.mjs";
-import { TraceReference, _decode_TraceReference, _encode_TraceReference } from "../MAP-OM-DataTypes/TraceReference.ta.mjs";
-import { TraceReference2, _decode_TraceReference2, _encode_TraceReference2 } from "../MAP-OM-DataTypes/TraceReference2.ta.mjs";
-import { TraceType, _decode_TraceType, _encode_TraceType } from "../MAP-OM-DataTypes/TraceType.ta.mjs";
+import { type TraceNE_TypeList, _decode_TraceNE_TypeList, _encode_TraceNE_TypeList } from "../MAP-OM-DataTypes/TraceNE-TypeList.ta.mjs";
+import { type TraceReference, _decode_TraceReference, _encode_TraceReference } from "../MAP-OM-DataTypes/TraceReference.ta.mjs";
+import { type TraceReference2, _decode_TraceReference2, _encode_TraceReference2 } from "../MAP-OM-DataTypes/TraceReference2.ta.mjs";
+import { type TraceType, _decode_TraceType, _encode_TraceType } from "../MAP-OM-DataTypes/TraceType.ta.mjs";
 
 
 /**
@@ -30,18 +30,18 @@ import { TraceType, _decode_TraceType, _encode_TraceType } from "../MAP-OM-DataT
  * 
  * ```asn1
  * ActivateTraceModeArg ::= SEQUENCE {
- *     imsi    [0] IMSI    OPTIONAL,
+ *     imsi    [0] IMSI    type OPTIONAL,
  *     traceReference    [1] TraceReference,
  *     traceType    [2] TraceType,
- *     omc-Id    [3] AddressString    OPTIONAL,
- *     extensionContainer    [4] ExtensionContainer    OPTIONAL,
+ *     omc-Id    [3] AddressString    type OPTIONAL,
+ *     extensionContainer    [4] ExtensionContainer    type OPTIONAL,
  *     ...,
- *     traceReference2    [5] TraceReference2    OPTIONAL,
- *     traceDepthList    [6] TraceDepthList    OPTIONAL,
- *     traceNE-TypeList    [7] TraceNE-TypeList    OPTIONAL,
- *     traceInterfaceList    [8] TraceInterfaceList    OPTIONAL,
- *     traceEventList    [9] TraceEventList    OPTIONAL,
- *     traceCollectionEntity    [10] GSN-Address    OPTIONAL,
+ *     traceReference2    [5] TraceReference2    type OPTIONAL,
+ *     traceDepthList    [6] TraceDepthList    type OPTIONAL,
+ *     traceNE-TypeList    [7] TraceNE-TypeList    type OPTIONAL,
+ *     traceInterfaceList    [8] TraceInterfaceList    type OPTIONAL,
+ *     traceEventList    [9] TraceEventList    type OPTIONAL,
+ *     traceCollectionEntity    [10] GSN-Address    type OPTIONAL,
  *     mdt-Configuration    [11] MDT-Configuration    OPTIONAL
  *     }
  * ```
@@ -50,144 +50,172 @@ import { TraceType, _decode_TraceType, _encode_TraceType } from "../MAP-OM-DataT
  */
 export
 class ActivateTraceModeArg {
+    /**
+     * @summary `imsi`.
+     * @description
+     *
+     * Mandatory in a stand-alone operation (clause 9.1.1.3).
+     *
+     * @public
+     * @readonly
+     */
+    public readonly imsi: OPTIONAL<IMSI>;
+    /**
+     * @summary `traceReference`.
+     * @description
+     *
+     * GSM-only tracing request as in 3GPP TS 52.008; managed by OMC/EM
+     * (3GPP TS 29.002 V19.1.0 clauses 7.6.10.2 and 9.1.1.3).
+     *
+     * @public
+     * @readonly
+     */
+    public readonly traceReference: TraceReference;
+    /**
+     * @summary `traceType`.
+     * @description
+     *
+     * GSM-only trace type as in 3GPP TS 52.008. If activation is UMTS-only:
+     * MSC Record Type 'No MSC Trace' and BSS Record Type 'No BSS Trace'
+     * (3GPP TS 29.002 V19.1.0 clauses 7.6.10.3 and 9.1.1.3).
+     *
+     * @public
+     * @readonly
+     */
+    public readonly traceType: TraceType;
+    /**
+     * @summary `omc_Id`.
+     * @description
+     *
+     * Operator option (clause 9.1.1.3).
+     *
+     * @public
+     * @readonly
+     */
+    public readonly omc_Id?: OPTIONAL<AddressString>;
+    /**
+     * @summary `extensionContainer`.
+     * @description
+     *
+     * Private or PCS extensions (3GPP TS 29.002 V19.1.0 clause 17.7.11).
+     *
+     * @public
+     * @readonly
+     */
+    public readonly extensionContainer?: OPTIONAL<ExtensionContainer>;
+    /**
+     * @summary `traceReference2`.
+     * @description
+     *
+     * UMTS trace as in 3GPP TS 32.421 and 32.422; managed by EM. Shall be
+     * used for UMTS trace activation (3GPP TS 29.002 V19.1.0 clauses
+     * 7.6.10.2A and 9.1.1.3).
+     *
+     * @public
+     * @readonly
+     */
+    public readonly traceReference2?: OPTIONAL<TraceReference2>;
+    /**
+     * @summary `traceDepthList`.
+     * @description
+     *
+     * Shall be used for UMTS trace activation (clauses 7.6.10.5 and
+     * 9.1.1.3).
+     *
+     * @public
+     * @readonly
+     */
+    public readonly traceDepthList?: OPTIONAL<TraceDepthList>;
+    /**
+     * @summary `traceNE_TypeList`.
+     * @description
+     *
+     * Shall be used for UMTS trace activation (clauses 7.6.10.6 and
+     * 9.1.1.3).
+     *
+     * @public
+     * @readonly
+     */
+    public readonly traceNE_TypeList?: OPTIONAL<TraceNE_TypeList>;
+    /**
+     * @summary `traceInterfaceList`.
+     * @description
+     *
+     * Shall be used for UMTS trace activation (clauses 7.6.10.7 and
+     * 9.1.1.3).
+     *
+     * @public
+     * @readonly
+     */
+    public readonly traceInterfaceList?: OPTIONAL<TraceInterfaceList>;
+    /**
+     * @summary `traceEventList`.
+     * @description
+     *
+     * Shall be used for UMTS trace activation (clauses 7.6.10.8 and
+     * 9.1.1.3).
+     *
+     * @public
+     * @readonly
+     */
+    public readonly traceEventList?: OPTIONAL<TraceEventList>;
+    /**
+     * @summary `traceCollectionEntity`.
+     * @description
+     *
+     * Trace collection entity address.
+     *
+     * @public
+     * @readonly
+     */
+    public readonly traceCollectionEntity?: OPTIONAL<GSN_Address>;
+    /**
+     * @summary `mdt_Configuration`.
+     * @description
+     *
+     * MDT configuration as in 3GPP TS 32.422 (3GPP TS 29.002 V19.1.0
+     * clauses 7.6.10.11 and 9.1.1.3).
+     *
+     * @public
+     * @readonly
+     */
+    public readonly mdt_Configuration?: OPTIONAL<MDT_Configuration>;
+    /**
+     * @summary Extensions that are not recognized.
+     * @public
+     * @readonly
+     */
+    public readonly _unrecognizedExtensionsList: _Element[];
+
     constructor (
-        /**
-         * @summary `imsi`.
-         * @description
-         *
-         * Mandatory in a stand-alone operation (clause 9.1.1.3).
-         *
-         * @public
-         * @readonly
-         */
-        readonly imsi: OPTIONAL<IMSI>,
-        /**
-         * @summary `traceReference`.
-         * @description
-         *
-         * GSM-only tracing request as in 3GPP TS 52.008; managed by OMC/EM
-         * (3GPP TS 29.002 V19.1.0 clauses 7.6.10.2 and 9.1.1.3).
-         *
-         * @public
-         * @readonly
-         */
-        readonly traceReference: TraceReference,
-        /**
-         * @summary `traceType`.
-         * @description
-         *
-         * GSM-only trace type as in 3GPP TS 52.008. If activation is UMTS-only:
-         * MSC Record Type 'No MSC Trace' and BSS Record Type 'No BSS Trace'
-         * (3GPP TS 29.002 V19.1.0 clauses 7.6.10.3 and 9.1.1.3).
-         *
-         * @public
-         * @readonly
-         */
-        readonly traceType: TraceType,
-        /**
-         * @summary `omc_Id`.
-         * @description
-         *
-         * Operator option (clause 9.1.1.3).
-         *
-         * @public
-         * @readonly
-         */
-        readonly omc_Id?: OPTIONAL<AddressString>,
-        /**
-         * @summary `extensionContainer`.
-         * @description
-         *
-         * Private or PCS extensions (3GPP TS 29.002 V19.1.0 clause 17.7.11).
-         *
-         * @public
-         * @readonly
-         */
-        readonly extensionContainer?: OPTIONAL<ExtensionContainer>,
-        /**
-         * @summary `traceReference2`.
-         * @description
-         *
-         * UMTS trace as in 3GPP TS 32.421 and 32.422; managed by EM. Shall be
-         * used for UMTS trace activation (3GPP TS 29.002 V19.1.0 clauses
-         * 7.6.10.2A and 9.1.1.3).
-         *
-         * @public
-         * @readonly
-         */
-        readonly traceReference2?: OPTIONAL<TraceReference2>,
-        /**
-         * @summary `traceDepthList`.
-         * @description
-         *
-         * Shall be used for UMTS trace activation (clauses 7.6.10.5 and
-         * 9.1.1.3).
-         *
-         * @public
-         * @readonly
-         */
-        readonly traceDepthList?: OPTIONAL<TraceDepthList>,
-        /**
-         * @summary `traceNE_TypeList`.
-         * @description
-         *
-         * Shall be used for UMTS trace activation (clauses 7.6.10.6 and
-         * 9.1.1.3).
-         *
-         * @public
-         * @readonly
-         */
-        readonly traceNE_TypeList?: OPTIONAL<TraceNE_TypeList>,
-        /**
-         * @summary `traceInterfaceList`.
-         * @description
-         *
-         * Shall be used for UMTS trace activation (clauses 7.6.10.7 and
-         * 9.1.1.3).
-         *
-         * @public
-         * @readonly
-         */
-        readonly traceInterfaceList?: OPTIONAL<TraceInterfaceList>,
-        /**
-         * @summary `traceEventList`.
-         * @description
-         *
-         * Shall be used for UMTS trace activation (clauses 7.6.10.8 and
-         * 9.1.1.3).
-         *
-         * @public
-         * @readonly
-         */
-        readonly traceEventList?: OPTIONAL<TraceEventList>,
-        /**
-         * @summary `traceCollectionEntity`.
-         * @description
-         *
-         * Trace collection entity address.
-         *
-         * @public
-         * @readonly
-         */
-        readonly traceCollectionEntity?: OPTIONAL<GSN_Address>,
-        /**
-         * @summary `mdt_Configuration`.
-         * @description
-         *
-         * MDT configuration as in 3GPP TS 32.422 (3GPP TS 29.002 V19.1.0
-         * clauses 7.6.10.11 and 9.1.1.3).
-         *
-         * @public
-         * @readonly
-         */
-        readonly mdt_Configuration?: OPTIONAL<MDT_Configuration>,
-        /**
-         * @summary Extensions that are not recognized.
-         * @public
-         * @readonly
-         */
-        readonly _unrecognizedExtensionsList: _Element[] = []
-    ) {}
+        imsi: OPTIONAL<IMSI>,
+        traceReference: TraceReference,
+        traceType: TraceType,
+        omc_Id?: OPTIONAL<AddressString>,
+        extensionContainer?: OPTIONAL<ExtensionContainer>,
+        traceReference2?: OPTIONAL<TraceReference2>,
+        traceDepthList?: OPTIONAL<TraceDepthList>,
+        traceNE_TypeList?: OPTIONAL<TraceNE_TypeList>,
+        traceInterfaceList?: OPTIONAL<TraceInterfaceList>,
+        traceEventList?: OPTIONAL<TraceEventList>,
+        traceCollectionEntity?: OPTIONAL<GSN_Address>,
+        mdt_Configuration?: OPTIONAL<MDT_Configuration>,
+        _unrecognizedExtensionsList: _Element[] = []
+    ) {
+        this.imsi = imsi;
+        this.traceReference = traceReference;
+        this.traceType = traceType;
+        this.omc_Id = omc_Id;
+        this.extensionContainer = extensionContainer;
+        this.traceReference2 = traceReference2;
+        this.traceDepthList = traceDepthList;
+        this.traceNE_TypeList = traceNE_TypeList;
+        this.traceInterfaceList = traceInterfaceList;
+        this.traceEventList = traceEventList;
+        this.traceCollectionEntity = traceCollectionEntity;
+        this.mdt_Configuration = mdt_Configuration;
+        this._unrecognizedExtensionsList = _unrecognizedExtensionsList;
+    }
 
     /**
      * @summary Restructures an object into a ActivateTraceModeArg

@@ -1,7 +1,7 @@
 /* eslint-disable */
 import {
-    GeneralizedTime,
-    ASN1Element as _Element,
+    type GeneralizedTime,
+    type ASN1Element as _Element,
     ASN1TagClass as _TagClass,
     ASN1Construction as _Construction,
     ASN1UniversalType as _UniversalType,
@@ -11,7 +11,7 @@ import {
     ASN1ConstructionError as _ConstructionError,
 } from "@wildboar/asn1";
 import * as $ from "@wildboar/asn1/functional";
-import { ResponderID, _decode_ResponderID, _encode_ResponderID } from "@wildboar/ocsp";
+import { type ResponderID, _decode_ResponderID, _encode_ResponderID } from "@wildboar/ocsp";
 /**
  * @summary OcspIdentifier
  * @description
@@ -32,29 +32,35 @@ import { ResponderID, _decode_ResponderID, _encode_ResponderID } from "@wildboar
  */
 export
 class OcspIdentifier {
+    /**
+     * @summary `ocspResponderID`.
+     * @description
+     *
+     * OCSP `ResponderID` as in the response data.
+     *
+     * @public
+     * @readonly
+     */
+    public readonly ocspResponderID: ResponderID;
+    /**
+     * @summary `producedAt`.
+     * @description
+     *
+     * Time of issue; shall match `producedAt` in the OCSP
+     * response.
+     *
+     * @public
+     * @readonly
+     */
+    public readonly producedAt: GeneralizedTime;
+
     constructor (
-        /**
-         * @summary `ocspResponderID`.
-         * @description
-         *
-         * OCSP `ResponderID` as in the response data.
-         *
-         * @public
-         * @readonly
-         */
-        readonly ocspResponderID: ResponderID,
-        /**
-         * @summary `producedAt`.
-         * @description
-         *
-         * Time of issue; shall match `producedAt` in the OCSP
-         * response.
-         *
-         * @public
-         * @readonly
-         */
-        readonly producedAt: GeneralizedTime
-    ) {}
+        ocspResponderID: ResponderID,
+        producedAt: GeneralizedTime
+    ) {
+        this.ocspResponderID = ocspResponderID;
+        this.producedAt = producedAt;
+    }
 
     /**
      * @summary Restructures an object into a OcspIdentifier

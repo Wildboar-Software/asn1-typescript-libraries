@@ -58,7 +58,7 @@ export class EntityEnvelopeInformationType {
    * @public
    * @readonly
    */
-  readonly bodyEnvelopeInformation: ContentEnvelopeInformationType;
+  public readonly bodyEnvelopeInformation: ContentEnvelopeInformationType;
   /**
    * @summary `entity`.
    * @description Recipient `Entity` copied from the
@@ -68,7 +68,7 @@ export class EntityEnvelopeInformationType {
    * @public
    * @readonly
    */
-  readonly entity: EntityType;
+  public readonly entity: EntityType;
   /**
    * @summary `entityChallenge`.
    * @description Secret question plus signature for the
@@ -77,7 +77,7 @@ export class EntityEnvelopeInformationType {
    * @public
    * @readonly
    */
-  readonly entityChallenge: EntityChallengeType;
+  public readonly entityChallenge: EntityChallengeType;
 
   constructor(
     bodyEnvelopeInformation: ContentEnvelopeInformationType,

@@ -1,7 +1,7 @@
 /* eslint-disable */
 import { type ATTRIBUTE } from "../InformationFramework/ATTRIBUTE.oca.mjs";
 import { userApplications /* IMPORTED_SHORT_ENUMERATION_ITEM */ } from "@wildboar/x500/InformationFramework";
-import { CodressMessage, _decode_CodressMessage, _encode_CodressMessage } from "../MMSHeadingExtensions/CodressMessage.ta.mjs";
+import { type CodressMessage, _decode_CodressMessage, _encode_CodressMessage } from "../MMSHeadingExtensions/CodressMessage.ta.mjs";
 import { id_nato_mmhs_hat_codress_message } from "../MMSObjectIdentifiers/id-nato-mmhs-hat-codress-message.va.mjs";
 
 

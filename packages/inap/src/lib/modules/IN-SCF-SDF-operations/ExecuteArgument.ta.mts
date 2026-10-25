@@ -3,7 +3,7 @@ import {
     ASN1Element as _Element
 } from "@wildboar/asn1";
 import * as $ from "@wildboar/asn1/functional";
-import { OPTIONALLY_PROTECTED, _get_decoder_for_OPTIONALLY_PROTECTED, _get_encoder_for_OPTIONALLY_PROTECTED } from "../EnhancedSecurity/OPTIONALLY-PROTECTED.ta.mjs";
+import { type OPTIONALLY_PROTECTED, _get_decoder_for_OPTIONALLY_PROTECTED, _get_encoder_for_OPTIONALLY_PROTECTED } from "../EnhancedSecurity/OPTIONALLY-PROTECTED.ta.mjs";
 // export { OPTIONALLY_PROTECTED, _get_decoder_for_OPTIONALLY_PROTECTED, _get_encoder_for_OPTIONALLY_PROTECTED } from "../EnhancedSecurity/OPTIONALLY-PROTECTED.ta.mjs";
 import { ExecuteArgument_Type, _decode_ExecuteArgument_Type, _encode_ExecuteArgument_Type } from "../IN-SCF-SDF-operations/ExecuteArgument-Type.ta.mjs";
 // export { ExecuteArgument_Type, _decode_ExecuteArgument_Type, _encode_ExecuteArgument_Type } from "../IN-SCF-SDF-operations/ExecuteArgument-Type.ta.mjs";
@@ -29,7 +29,7 @@ import { ExecuteArgument_Type, _decode_ExecuteArgument_Type, _encode_ExecuteArgu
  *                                SET OF
  *                                  METHOD.&InputAttributes.&Type
  *                                    ({SupportedMethods}{@method-id, @.type})
- *                                  OPTIONAL,
+ *                                  type OPTIONAL,
  *                              valuesWithContext
  *                                [0]  SET OF
  *                                       SEQUENCE {value
@@ -39,13 +39,13 @@ import { ExecuteArgument_Type, _decode_ExecuteArgument_Type, _encode_ExecuteArgu
  *                                                          ({SupportedMethods}
  *                                                             {@method-id, @...
  *                                                                     type})
- *                                                     OPTIONAL,
+ *                                                     type OPTIONAL,
  *                                                 contextList
  *                                                   [1]  SET OF Context
  *                                       } OPTIONAL} OPTIONAL,
  *           specific-input
  *             [3]  METHOD.&SpecificInput({SupportedMethods}{@method-id})
- *               OPTIONAL,
+ *               type OPTIONAL,
  *           COMPONENTS OF CommonArguments}}
  * ```
  */

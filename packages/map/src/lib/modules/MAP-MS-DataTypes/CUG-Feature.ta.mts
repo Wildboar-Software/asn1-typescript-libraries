@@ -1,14 +1,14 @@
 /* eslint-disable */
 import {
-    OPTIONAL,
-    ASN1Element as _Element,
+    type OPTIONAL,
+    type ASN1Element as _Element,
     ASN1TagClass as _TagClass
 } from "@wildboar/asn1";
 import * as $ from "@wildboar/asn1/functional";
-import { Ext_BasicServiceCode, _decode_Ext_BasicServiceCode, _encode_Ext_BasicServiceCode } from "../MAP-CommonDataTypes/Ext-BasicServiceCode.ta.mjs";
+import { type Ext_BasicServiceCode, _decode_Ext_BasicServiceCode, _encode_Ext_BasicServiceCode } from "../MAP-CommonDataTypes/Ext-BasicServiceCode.ta.mjs";
 import { ExtensionContainer, _decode_ExtensionContainer, _encode_ExtensionContainer } from "../MAP-ExtensionDataTypes/ExtensionContainer.ta.mjs";
-import { CUG_Index, _decode_CUG_Index, _encode_CUG_Index } from "../MAP-MS-DataTypes/CUG-Index.ta.mjs";
-import { InterCUG_Restrictions, _decode_InterCUG_Restrictions, _encode_InterCUG_Restrictions } from "../MAP-MS-DataTypes/InterCUG-Restrictions.ta.mjs";
+import { type CUG_Index, _decode_CUG_Index, _encode_CUG_Index } from "../MAP-MS-DataTypes/CUG-Index.ta.mjs";
+import { type InterCUG_Restrictions, _decode_InterCUG_Restrictions, _encode_InterCUG_Restrictions } from "../MAP-MS-DataTypes/InterCUG-Restrictions.ta.mjs";
 
 
 /**
@@ -25,10 +25,10 @@ import { InterCUG_Restrictions, _decode_InterCUG_Restrictions, _encode_InterCUG_
  * 
  * ```asn1
  * CUG-Feature ::= SEQUENCE {
- *     basicService    Ext-BasicServiceCode    OPTIONAL,
- *     preferentialCUG-Indicator    CUG-Index    OPTIONAL,
+ *     basicService    Ext-BasicServiceCode    type OPTIONAL,
+ *     preferentialCUG-Indicator    CUG-Index    type OPTIONAL,
  *     interCUG-Restrictions    InterCUG-Restrictions,
- *     extensionContainer    ExtensionContainer    OPTIONAL,
+ *     extensionContainer    ExtensionContainer    type OPTIONAL,
  *     ...}
  * ```
  * 
@@ -36,56 +36,68 @@ import { InterCUG_Restrictions, _decode_InterCUG_Restrictions, _encode_InterCUG_
  */
 export
 class CUG_Feature {
+    /**
+     * @summary `basicService`.
+     * @description
+     *
+     * If absent the feature applies to all Basic Services (3GPP TS 29.002
+     * V19.1.0 clause 7.6.3.26).
+     *
+     * @public
+     * @readonly
+     */
+    public readonly basicService: OPTIONAL<Ext_BasicServiceCode>;
+    /**
+     * @summary `preferentialCUG_Indicator`.
+     * @description
+     *
+     * CUG index to use at outgoing call set-up for the associated Basic
+     * Service Group. If CUG-Feature is received without preferential CUG,
+     * no preferential CUG applies (3GPP TS 29.002 V19.1.0 clauses 7.6.3.26
+     * and 8.8.1.3).
+     *
+     * @public
+     * @readonly
+     */
+    public readonly preferentialCUG_Indicator: OPTIONAL<CUG_Index>;
+    /**
+     * @summary `interCUG_Restrictions`.
+     * @description
+     *
+     * Whether outgoing calls outside the CUG and incoming calls are allowed
+     * for the associated Basic Service Group (3GPP TS 29.002 V19.1.0 clause
+     * 7.6.3.26).
+     *
+     * @public
+     * @readonly
+     */
+    public readonly interCUG_Restrictions: InterCUG_Restrictions;
+    /**
+     * @summary `extensionContainer`.
+     * @public
+     * @readonly
+     */
+    public readonly extensionContainer?: OPTIONAL<ExtensionContainer>;
+    /**
+     * @summary Extensions that are not recognized.
+     * @public
+     * @readonly
+     */
+    public readonly _unrecognizedExtensionsList: _Element[];
+
     constructor (
-        /**
-         * @summary `basicService`.
-         * @description
-         *
-         * If absent the feature applies to all Basic Services (3GPP TS 29.002
-         * V19.1.0 clause 7.6.3.26).
-         *
-         * @public
-         * @readonly
-         */
-        readonly basicService: OPTIONAL<Ext_BasicServiceCode>,
-        /**
-         * @summary `preferentialCUG_Indicator`.
-         * @description
-         *
-         * CUG index to use at outgoing call set-up for the associated Basic
-         * Service Group. If CUG-Feature is received without preferential CUG,
-         * no preferential CUG applies (3GPP TS 29.002 V19.1.0 clauses 7.6.3.26
-         * and 8.8.1.3).
-         *
-         * @public
-         * @readonly
-         */
-        readonly preferentialCUG_Indicator: OPTIONAL<CUG_Index>,
-        /**
-         * @summary `interCUG_Restrictions`.
-         * @description
-         *
-         * Whether outgoing calls outside the CUG and incoming calls are allowed
-         * for the associated Basic Service Group (3GPP TS 29.002 V19.1.0 clause
-         * 7.6.3.26).
-         *
-         * @public
-         * @readonly
-         */
-        readonly interCUG_Restrictions: InterCUG_Restrictions,
-        /**
-         * @summary `extensionContainer`.
-         * @public
-         * @readonly
-         */
-        readonly extensionContainer?: OPTIONAL<ExtensionContainer>,
-        /**
-         * @summary Extensions that are not recognized.
-         * @public
-         * @readonly
-         */
-        readonly _unrecognizedExtensionsList: _Element[] = []
-    ) {}
+        basicService: OPTIONAL<Ext_BasicServiceCode>,
+        preferentialCUG_Indicator: OPTIONAL<CUG_Index>,
+        interCUG_Restrictions: InterCUG_Restrictions,
+        extensionContainer?: OPTIONAL<ExtensionContainer>,
+        _unrecognizedExtensionsList: _Element[] = []
+    ) {
+        this.basicService = basicService;
+        this.preferentialCUG_Indicator = preferentialCUG_Indicator;
+        this.interCUG_Restrictions = interCUG_Restrictions;
+        this.extensionContainer = extensionContainer;
+        this._unrecognizedExtensionsList = _unrecognizedExtensionsList;
+    }
 
     /**
      * @summary Restructures an object into a CUG_Feature

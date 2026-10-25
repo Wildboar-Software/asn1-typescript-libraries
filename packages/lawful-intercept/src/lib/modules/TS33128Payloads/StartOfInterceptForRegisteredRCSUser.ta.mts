@@ -1,15 +1,15 @@
 /* eslint-disable */
 import {
-    BOOLEAN,
-    OPTIONAL,
-    ASN1Element as _Element,
+    type BOOLEAN,
+    type OPTIONAL,
+    type ASN1Element as _Element,
     ASN1TagClass as _TagClass,
     ASN1SizeError
 } from "@wildboar/asn1";
 import * as $ from "@wildboar/asn1/functional";
-import { RCSIdentity, _decode_RCSIdentity, _encode_RCSIdentity } from "../TS33128Payloads/RCSIdentity.ta.mjs";
+import { type RCSIdentity, _decode_RCSIdentity, _encode_RCSIdentity } from "../TS33128Payloads/RCSIdentity.ta.mjs";
 // export { RCSIdentity, _decode_RCSIdentity, _encode_RCSIdentity } from "../TS33128Payloads/RCSIdentity.ta.mjs";
-import { RCSRegistrationInformation, _decode_RCSRegistrationInformation, _encode_RCSRegistrationInformation } from "../TS33128Payloads/RCSRegistrationInformation.ta.mjs";
+import { type RCSRegistrationInformation, _decode_RCSRegistrationInformation, _encode_RCSRegistrationInformation } from "../TS33128Payloads/RCSRegistrationInformation.ta.mjs";
 // export { RCSRegistrationInformation, _decode_RCSRegistrationInformation, _encode_RCSRegistrationInformation } from "../TS33128Payloads/RCSRegistrationInformation.ta.mjs";
 import { Location, _decode_Location, _encode_Location } from "../TS33128Payloads/Location.ta.mjs";
 // export { Location, _decode_Location, _encode_Location } from "../TS33128Payloads/Location.ta.mjs";

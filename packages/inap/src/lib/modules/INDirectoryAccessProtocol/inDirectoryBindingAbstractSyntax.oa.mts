@@ -1,8 +1,8 @@
 /* eslint-disable */
 import {
-    ABSTRACT_SYNTAX
+    type ABSTRACT_SYNTAX
 } from "@wildboar/asn1";
-import { DAPBinding_PDUs, _decode_DAPBinding_PDUs, _encode_DAPBinding_PDUs } from "../INDirectoryAccessProtocol/DAPBinding-PDUs.ta.mjs";
+import { type DAPBinding_PDUs, _decode_DAPBinding_PDUs, _encode_DAPBinding_PDUs } from "../INDirectoryAccessProtocol/DAPBinding-PDUs.ta.mjs";
 // export { DAPBinding_PDUs, _decode_DAPBinding_PDUs, _encode_DAPBinding_PDUs } from "../INDirectoryAccessProtocol/DAPBinding-PDUs.ta.mjs";
 import { id_as_directoryBindingAS } from "../SDFProtocolObjectIdentifiers/id-as-directoryBindingAS.va.mjs";
 // export { id_as_directoryBindingAS } from "../SDFProtocolObjectIdentifiers/id-as-directoryBindingAS.va.mjs";

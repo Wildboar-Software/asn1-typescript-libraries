@@ -1,5 +1,5 @@
 /* eslint-disable */
-import { OCTET_STRING } from "@wildboar/asn1";
+import { type OCTET_STRING } from "@wildboar/asn1";
 import * as $ from "@wildboar/asn1/functional";
 
 
@@ -19,8 +19,8 @@ import * as $ from "@wildboar/asn1/functional";
  */
 export
 type UtcTime = OCTET_STRING; // OctetStringType
-export const _decode_UtcTime = $._decodeOctetString;
-export const _encode_UtcTime = $._encodeOctetString;
+export const _decode_UtcTime: $.ASN1Decoder<OCTET_STRING> = $._decodeOctetString;
+export const _encode_UtcTime: $.ASN1Encoder<OCTET_STRING> = $._encodeOctetString;
 
 
 /* eslint-enable */

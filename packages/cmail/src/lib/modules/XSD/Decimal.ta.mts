@@ -1,6 +1,6 @@
 /* eslint-disable */
 import {
-  REAL,
+  type REAL,
   ASN1Element as _Element,
   ASN1TagClass as _TagClass,
   ASN1Construction as _Construction,
@@ -28,12 +28,12 @@ export type Decimal = REAL; // RealType
 
 
 
-export const _decode_Decimal = $._decodeReal;
+export const _decode_Decimal: $.ASN1Decoder<number> = $._decodeReal;
 
 
 
 
-export const _encode_Decimal = $._encodeReal;
+export const _encode_Decimal: $.ASN1Encoder<number> = $._encodeReal;
 
 
 /* eslint-enable */

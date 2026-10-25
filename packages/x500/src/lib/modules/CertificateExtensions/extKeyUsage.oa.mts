@@ -3,7 +3,7 @@ import * as $ from "@wildboar/asn1/functional";
 import { type EXTENSION } from "../AuthenticationFramework/EXTENSION.oca.mjs";
 import { id_ce_extKeyUsage } from "../CertificateExtensions/id-ce-extKeyUsage.va.mjs";
 import {
-    KeyPurposeId,
+    type KeyPurposeId,
     _decode_KeyPurposeId,
     _encode_KeyPurposeId,
 } from "../CertificateExtensions/KeyPurposeId.ta.mjs";

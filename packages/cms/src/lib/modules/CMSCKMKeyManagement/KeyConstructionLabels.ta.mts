@@ -2,7 +2,7 @@
 import { ASN1Element as _Element } from "@wildboar/asn1";
 import * as $ from "@wildboar/asn1/functional";
 import {
-    KeyConstructionLabel,
+    type KeyConstructionLabel,
     _decode_KeyConstructionLabel,
     _encode_KeyConstructionLabel,
 } from "../CMSCKMKeyManagement/KeyConstructionLabel.ta.mjs";

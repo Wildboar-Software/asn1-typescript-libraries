@@ -1,11 +1,11 @@
 /* eslint-disable */
 import {
     ASN1ConstructionError as _ConstructionError,
-    ASN1Element as _Element,
+    type ASN1Element as _Element,
     ASN1TagClass as _TagClass
 } from "@wildboar/asn1";
 import * as $ from "@wildboar/asn1/functional";
-import { ServiceList, _decode_ServiceList, _encode_ServiceList } from "../Call-Offer-Operations-asn1-97/ServiceList.ta.mjs";
+import { type ServiceList, _decode_ServiceList, _encode_ServiceList } from "../Call-Offer-Operations-asn1-97/ServiceList.ta.mjs";
 import { Extension, _decode_Extension, _encode_Extension } from "../Manufacturer-specific-service-extension-class-asn1-97/Extension.ta.mjs";
 
 /**

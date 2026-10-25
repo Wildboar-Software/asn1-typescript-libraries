@@ -1,6 +1,6 @@
 /* eslint-disable */
 import {
-    ASN1Element as _Element,
+    type ASN1Element as _Element,
     ASN1TagClass as _TagClass,
     ASN1Construction as _Construction,
     ASN1UniversalType as _UniversalType,
@@ -32,11 +32,14 @@ import * as $ from "@wildboar/asn1/functional";
  * @enum {number}
  */
 export
-enum _enum_for_EvaluationStatus {
-    designedToMeet = 0,
-    evaluationInProgress = 1,
-    evaluationCompleted = 2,
-}
+const _enum_for_EvaluationStatus = {
+    designedToMeet: 0,
+    evaluationInProgress: 1,
+    evaluationCompleted: 2,
+} as const;
+
+export
+type _enum_for_EvaluationStatus = (typeof _enum_for_EvaluationStatus)[keyof typeof _enum_for_EvaluationStatus];
 
 /**
  * @summary EvaluationStatus
@@ -78,7 +81,7 @@ type EvaluationStatus = _enum_for_EvaluationStatus;
  * @enum {number}
  */
 export
-const EvaluationStatus = _enum_for_EvaluationStatus;
+const EvaluationStatus: typeof _enum_for_EvaluationStatus = _enum_for_EvaluationStatus;
 
 /**
  * @summary EvaluationStatus_designedToMeet
@@ -90,7 +93,7 @@ const EvaluationStatus = _enum_for_EvaluationStatus;
  * @type {number}
  */
 export
-const EvaluationStatus_designedToMeet: EvaluationStatus = EvaluationStatus.designedToMeet; /* LONG_NAMED_ENUMERATED_VALUE */
+const EvaluationStatus_designedToMeet: 0 = EvaluationStatus.designedToMeet; /* LONG_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary designedToMeet
@@ -102,7 +105,7 @@ const EvaluationStatus_designedToMeet: EvaluationStatus = EvaluationStatus.desig
  * @type {number}
  */
 export
-const designedToMeet: EvaluationStatus = EvaluationStatus.designedToMeet; /* SHORT_NAMED_ENUMERATED_VALUE */
+const designedToMeet: 0 = EvaluationStatus.designedToMeet; /* SHORT_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary EvaluationStatus_evaluationInProgress
@@ -114,7 +117,7 @@ const designedToMeet: EvaluationStatus = EvaluationStatus.designedToMeet; /* SHO
  * @type {number}
  */
 export
-const EvaluationStatus_evaluationInProgress: EvaluationStatus = EvaluationStatus.evaluationInProgress; /* LONG_NAMED_ENUMERATED_VALUE */
+const EvaluationStatus_evaluationInProgress: 1 = EvaluationStatus.evaluationInProgress; /* LONG_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary evaluationInProgress
@@ -126,7 +129,7 @@ const EvaluationStatus_evaluationInProgress: EvaluationStatus = EvaluationStatus
  * @type {number}
  */
 export
-const evaluationInProgress: EvaluationStatus = EvaluationStatus.evaluationInProgress; /* SHORT_NAMED_ENUMERATED_VALUE */
+const evaluationInProgress: 1 = EvaluationStatus.evaluationInProgress; /* SHORT_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary EvaluationStatus_evaluationCompleted
@@ -138,7 +141,7 @@ const evaluationInProgress: EvaluationStatus = EvaluationStatus.evaluationInProg
  * @type {number}
  */
 export
-const EvaluationStatus_evaluationCompleted: EvaluationStatus = EvaluationStatus.evaluationCompleted; /* LONG_NAMED_ENUMERATED_VALUE */
+const EvaluationStatus_evaluationCompleted: 2 = EvaluationStatus.evaluationCompleted; /* LONG_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary evaluationCompleted
@@ -150,13 +153,25 @@ const EvaluationStatus_evaluationCompleted: EvaluationStatus = EvaluationStatus.
  * @type {number}
  */
 export
-const evaluationCompleted: EvaluationStatus = EvaluationStatus.evaluationCompleted; /* SHORT_NAMED_ENUMERATED_VALUE */
+const evaluationCompleted: 2 = EvaluationStatus.evaluationCompleted; /* SHORT_NAMED_ENUMERATED_VALUE */
 
 
-export const _decode_EvaluationStatus = $._decodeEnumerated;
+export function _decode_EvaluationStatus(el: _Element): EvaluationStatus {
+    const enumerated = $._decodeEnumerated(el);
+    switch (enumerated) {
+        case EvaluationStatus.designedToMeet: return EvaluationStatus.designedToMeet;
+        case EvaluationStatus.evaluationInProgress: return EvaluationStatus.evaluationInProgress;
+        case EvaluationStatus.evaluationCompleted: return EvaluationStatus.evaluationCompleted;
+        default:
+            throw new _ConstructionError(
+                "Invalid ENUMERATED value " + enumerated + " for EvaluationStatus.",
+                el,
+            );
+    }
+}
 
 
-export const _encode_EvaluationStatus = $._encodeEnumerated;
+export const _encode_EvaluationStatus: $.ASN1Encoder<EvaluationStatus> = $._encodeEnumerated as $.ASN1Encoder<EvaluationStatus>;
 
 
 /* eslint-enable */

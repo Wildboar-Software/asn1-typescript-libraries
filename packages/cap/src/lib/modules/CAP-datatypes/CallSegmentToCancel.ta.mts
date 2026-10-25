@@ -1,6 +1,6 @@
 import {
-    OPTIONAL,
-    ASN1Element as _Element,
+    type OPTIONAL,
+    type ASN1Element as _Element,
     ASN1TagClass as _TagClass,
 } from "@wildboar/asn1";
 import * as $ from "@wildboar/asn1/functional";
@@ -23,31 +23,39 @@ import { type CallSegmentID, _decode_CallSegmentID, _encode_CallSegmentID } from
  *
  */
 export class CallSegmentToCancel {
+    /**
+     * @summary `invokeID`.
+     * @description
+     *
+     * PlayAnnouncement or PromptAndCollectUserInformation invocation to
+     * cancel. (3GPP TS 29.078 V19.0.0 clause 11.8).
+     *
+     * @public
+     * @readonly
+     */
+    public readonly invokeID?: OPTIONAL<InvokeID>;
+    /**
+     * @summary `callSegmentID`.
+     * @description
+     *
+     * Call Segment to which cancellation of the user-interaction operation
+     * applies. (3GPP TS 29.078 V19.0.0 clause 11.8).
+     *
+     * @public
+     * @readonly
+     */
+    public readonly callSegmentID?: OPTIONAL<CallSegmentID>;
+    public readonly _unrecognizedExtensionsList: _Element[];
+
     constructor (
-        /**
-         * @summary `invokeID`.
-         * @description
-         *
-         * PlayAnnouncement or PromptAndCollectUserInformation invocation to
-         * cancel. (3GPP TS 29.078 V19.0.0 clause 11.8).
-         *
-         * @public
-         * @readonly
-         */
-        readonly invokeID?: OPTIONAL<InvokeID>,
-        /**
-         * @summary `callSegmentID`.
-         * @description
-         *
-         * Call Segment to which cancellation of the user-interaction operation
-         * applies. (3GPP TS 29.078 V19.0.0 clause 11.8).
-         *
-         * @public
-         * @readonly
-         */
-        readonly callSegmentID?: OPTIONAL<CallSegmentID>,
-        readonly _unrecognizedExtensionsList: _Element[] = [],
-    ) {}
+        invokeID?: OPTIONAL<InvokeID>,
+        callSegmentID?: OPTIONAL<CallSegmentID>,
+        _unrecognizedExtensionsList: _Element[] = [],
+    ) {
+        this.invokeID = invokeID;
+        this.callSegmentID = callSegmentID;
+        this._unrecognizedExtensionsList = _unrecognizedExtensionsList;
+    }
 
     public static _from_object (_o: { [_K in keyof (CallSegmentToCancel)]: (CallSegmentToCancel)[_K] }): CallSegmentToCancel {
         return new CallSegmentToCancel(_o.invokeID, _o.callSegmentID, _o._unrecognizedExtensionsList);

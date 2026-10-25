@@ -1,12 +1,12 @@
 /* eslint-disable */
 import {
-    NULL,
-    OPTIONAL,
-    ASN1Element as _Element,
+    type NULL,
+    type OPTIONAL,
+    type ASN1Element as _Element,
     ASN1TagClass as _TagClass
 } from "@wildboar/asn1";
 import * as $ from "@wildboar/asn1/functional";
-import { IMEI, _decode_IMEI, _encode_IMEI } from "../MAP-CommonDataTypes/IMEI.ta.mjs";
+import { type IMEI, _decode_IMEI, _encode_IMEI } from "../MAP-CommonDataTypes/IMEI.ta.mjs";
 
 
 /**
@@ -23,7 +23,7 @@ import { IMEI, _decode_IMEI, _encode_IMEI } from "../MAP-CommonDataTypes/IMEI.ta
  * ```asn1
  * ADD-Info ::= SEQUENCE {
  *     imeisv    [0] IMEI,
- *     skipSubscriberDataUpdate    [1] NULL    OPTIONAL,
+ *     skipSubscriberDataUpdate    [1] NULL    type OPTIONAL,
  *     -- The skipSubscriberDataUpdate parameter in the UpdateLocationArg and the ADD-Info
  *     -- structures carry the same semantic.
  *     ...}
@@ -33,40 +33,48 @@ import { IMEI, _decode_IMEI, _encode_IMEI } from "../MAP-CommonDataTypes/IMEI.ta
  */
 export
 class ADD_Info {
+    /**
+     * @summary `imeisv`.
+     * @description
+     *
+     * IMEISV to notify to the HLR when ADD is supported and a new IMEISV is
+     * reported. Presence requirements are in 3GPP TS 23.012 / TS 23.060 and
+     * 3GPP TS 22.101 clause 7.4 (3GPP TS 29.002 V19.1.0 clauses 8.1.2.3 and
+     * 8.1.7.3).
+     *
+     * @public
+     * @readonly
+     */
+    public readonly imeisv: IMEI;
+    /**
+     * @summary `skipSubscriberDataUpdate`.
+     * @description
+     *
+     * Same semantics as skipSubscriberDataUpdate in UpdateLocationArg /
+     * UpdateGprsLocationArg: the service is used to inform the HLR about
+     * IMEISV (or paging area) change and subscriber data download may be
+     * skipped (3GPP TS 29.002 V19.1.0 clauses 8.1.2.3, 8.1.7.3 and 17.7.1).
+     *
+     * @public
+     * @readonly
+     */
+    public readonly skipSubscriberDataUpdate?: OPTIONAL<NULL>;
+    /**
+     * @summary Extensions that are not recognized.
+     * @public
+     * @readonly
+     */
+    public readonly _unrecognizedExtensionsList: _Element[];
+
     constructor (
-        /**
-         * @summary `imeisv`.
-         * @description
-         *
-         * IMEISV to notify to the HLR when ADD is supported and a new IMEISV is
-         * reported. Presence requirements are in 3GPP TS 23.012 / TS 23.060 and
-         * 3GPP TS 22.101 clause 7.4 (3GPP TS 29.002 V19.1.0 clauses 8.1.2.3 and
-         * 8.1.7.3).
-         *
-         * @public
-         * @readonly
-         */
-        readonly imeisv: IMEI,
-        /**
-         * @summary `skipSubscriberDataUpdate`.
-         * @description
-         *
-         * Same semantics as skipSubscriberDataUpdate in UpdateLocationArg /
-         * UpdateGprsLocationArg: the service is used to inform the HLR about
-         * IMEISV (or paging area) change and subscriber data download may be
-         * skipped (3GPP TS 29.002 V19.1.0 clauses 8.1.2.3, 8.1.7.3 and 17.7.1).
-         *
-         * @public
-         * @readonly
-         */
-        readonly skipSubscriberDataUpdate?: OPTIONAL<NULL>,
-        /**
-         * @summary Extensions that are not recognized.
-         * @public
-         * @readonly
-         */
-        readonly _unrecognizedExtensionsList: _Element[] = []
-    ) {}
+        imeisv: IMEI,
+        skipSubscriberDataUpdate?: OPTIONAL<NULL>,
+        _unrecognizedExtensionsList: _Element[] = []
+    ) {
+        this.imeisv = imeisv;
+        this.skipSubscriberDataUpdate = skipSubscriberDataUpdate;
+        this._unrecognizedExtensionsList = _unrecognizedExtensionsList;
+    }
 
     /**
      * @summary Restructures an object into a ADD_Info

@@ -1,7 +1,7 @@
 /* eslint-disable */
 import {
-    PrintableString,
-    ASN1Element as _Element,
+    type PrintableString,
+    type ASN1Element as _Element,
     ASN1TagClass as _TagClass,
     ASN1Construction as _Construction,
     ASN1UniversalType as _UniversalType,
@@ -27,10 +27,10 @@ import * as $ from '@wildboar/asn1/functional';
 export type Currency = PrintableString; // PrintableString
 
 
-export const _decode_Currency = $._decodePrintableString;
+export const _decode_Currency: $.ASN1Decoder<string> = $._decodePrintableString;
 
 
-export const _encode_Currency = $._encodePrintableString;
+export const _encode_Currency: $.ASN1Encoder<string> = $._encodePrintableString;
 
 
 /* eslint-enable */

@@ -1,6 +1,6 @@
 /* eslint-disable */
 import {
-    ASN1Element as _Element,
+    type ASN1Element as _Element,
     ASN1TagClass as _TagClass,
     ASN1Construction as _Construction,
     ASN1UniversalType as _UniversalType,
@@ -10,7 +10,7 @@ import {
     ASN1ConstructionError as _ConstructionError,
 } from "@wildboar/asn1";
 import * as $ from "@wildboar/asn1/functional";
-import { FileName, _decode_FileName, _encode_FileName } from "../ISO-9506-MMS-1/FileName.ta.mjs";
+import { type FileName, _decode_FileName, _encode_FileName } from "../ISO-9506-MMS-1/FileName.ta.mjs";
 import { FileAttributes, _decode_FileAttributes, _encode_FileAttributes } from "../ISO-9506-MMS-1A/FileAttributes.ta.mjs";
 
 
@@ -37,33 +37,39 @@ import { FileAttributes, _decode_FileAttributes, _encode_FileAttributes } from "
  */
 export
 class DirectoryEntry {
+    /**
+     * @summary `fileName`.
+     * @description
+     *
+     * Name of the file whose attributes follow.
+     *
+     * [ISO 9506-1:2003 Annex D, D.8.1.2.1.1]
+     *
+     * @public
+     * @readonly
+     */
+    public readonly fileName: FileName;
+    /**
+     * @summary `fileAttributes`.
+     * @description
+     *
+     * Size and last-modified of the selected
+     * file. See D.9.
+     *
+     * [ISO 9506-1:2003 Annex D, D.8.1.2.1.2]
+     *
+     * @public
+     * @readonly
+     */
+    public readonly fileAttributes: FileAttributes;
+
     constructor (
-        /**
-         * @summary `fileName`.
-         * @description
-         *
-         * Name of the file whose attributes follow.
-         *
-         * [ISO 9506-1:2003 Annex D, D.8.1.2.1.1]
-         *
-         * @public
-         * @readonly
-         */
-        readonly fileName: FileName,
-        /**
-         * @summary `fileAttributes`.
-         * @description
-         *
-         * Size and last-modified of the selected
-         * file. See D.9.
-         *
-         * [ISO 9506-1:2003 Annex D, D.8.1.2.1.2]
-         *
-         * @public
-         * @readonly
-         */
-        readonly fileAttributes: FileAttributes
-    ) {}
+        fileName: FileName,
+        fileAttributes: FileAttributes
+    ) {
+        this.fileName = fileName;
+        this.fileAttributes = fileAttributes;
+    }
 
     /**
      * @summary Restructures an object into a DirectoryEntry

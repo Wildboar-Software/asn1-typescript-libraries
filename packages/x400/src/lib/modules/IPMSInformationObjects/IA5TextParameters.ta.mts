@@ -1,7 +1,7 @@
 /* eslint-disable */
 import {
-    OPTIONAL,
-    ASN1Element as _Element,
+    type OPTIONAL,
+    type ASN1Element as _Element,
     ASN1TagClass as _TagClass,
     ASN1Construction as _Construction,
     ASN1UniversalType as _UniversalType,
@@ -33,14 +33,18 @@ import {
  *
  */
 export class IA5TextParameters {
+    /**
+     * @summary `repertoire`.
+     * @public
+     * @readonly
+     */
+    public readonly repertoire?: OPTIONAL<Repertoire>;
+
     constructor(
-        /**
-         * @summary `repertoire`.
-         * @public
-         * @readonly
-         */
-        readonly repertoire?: OPTIONAL<Repertoire>
-    ) {}
+        repertoire?: OPTIONAL<Repertoire>
+    ) {
+        this.repertoire = repertoire;
+    }
 
     /**
      * @summary Restructures an object into a IA5TextParameters
@@ -75,7 +79,7 @@ export class IA5TextParameters {
      * @static
      */
 
-    public static _enum_for_repertoire = _enum_for_Repertoire;
+    public static _enum_for_repertoire: typeof _enum_for_Repertoire = _enum_for_Repertoire;
 }
 
 /**

@@ -16,7 +16,7 @@ import {
   _encode_HashValueType,
 } from '../CMAIL/HashValueType.ta.mjs';
 import {
-    String,
+    type String,
     _decode_String,
     _encode_String,
 } from '../XSD/String.ta.mjs';
@@ -51,7 +51,7 @@ export class ContentEnvelopeInformationType {
    * @public
    * @readonly
    */
-  readonly uncipheredEnvelopeHash: HashValueType;
+  public readonly uncipheredEnvelopeHash: HashValueType;
   /**
    * @summary `cipheredEnvelopeHash`.
    * @description Hash of the ciphered ENVELOPE. Annex B's
@@ -60,7 +60,7 @@ export class ContentEnvelopeInformationType {
    * @public
    * @readonly
    */
-  readonly cipheredEnvelopeHash: HashValueType;
+  public readonly cipheredEnvelopeHash: HashValueType;
   /**
    * @summary `messageId`.
    * @description MIME Message-ID of the ENVELOPE. XER
@@ -69,7 +69,7 @@ export class ContentEnvelopeInformationType {
    * @public
    * @readonly
    */
-  readonly messageId: String;
+  public readonly messageId: String;
 
   constructor(
     uncipheredEnvelopeHash: HashValueType,

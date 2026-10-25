@@ -1,13 +1,13 @@
 /* eslint-disable */
 import {
-    NULL,
-    OPTIONAL,
-    ASN1Element as _Element,
+    type NULL,
+    type OPTIONAL,
+    type ASN1Element as _Element,
     ASN1TagClass as _TagClass
 } from "@wildboar/asn1";
 import * as $ from "@wildboar/asn1/functional";
 import { IndAudPropertyParm, _decode_IndAudPropertyParm, _encode_IndAudPropertyParm } from "../MEDIA-GATEWAY-CONTROL/IndAudPropertyParm.ta.mjs";
-import { ServiceState, _decode_ServiceState, _encode_ServiceState, _enum_for_ServiceState } from "../MEDIA-GATEWAY-CONTROL/ServiceState.ta.mjs";
+import { type ServiceState, _decode_ServiceState, _encode_ServiceState, _enum_for_ServiceState } from "../MEDIA-GATEWAY-CONTROL/ServiceState.ta.mjs";
 
 
 /**
@@ -45,7 +45,7 @@ class IndAudTerminationStateDescriptor {
      * @public
      * @readonly
      */
-    readonly propertyParms: IndAudPropertyParm[];
+    public readonly propertyParms: IndAudPropertyParm[];
     /**
      * @summary `eventBufferControl`.
      * @description
@@ -55,7 +55,7 @@ class IndAudTerminationStateDescriptor {
      * @public
      * @readonly
      */
-    readonly eventBufferControl?: OPTIONAL<NULL>;
+    public readonly eventBufferControl?: OPTIONAL<NULL>;
     /**
      * @summary `serviceState`.
      * @description
@@ -65,7 +65,7 @@ class IndAudTerminationStateDescriptor {
      * @public
      * @readonly
      */
-    readonly serviceState?: OPTIONAL<NULL>;
+    public readonly serviceState?: OPTIONAL<NULL>;
     /**
      * @summary `serviceStateSel`.
      * @description
@@ -77,7 +77,7 @@ class IndAudTerminationStateDescriptor {
      * @public
      * @readonly
      */
-    readonly serviceStateSel?: OPTIONAL<ServiceState>;
+    public readonly serviceStateSel?: OPTIONAL<ServiceState>;
     /**
      * @summary Extensions that are not recognized.
      * @description
@@ -88,7 +88,7 @@ class IndAudTerminationStateDescriptor {
      * @public
      * @readonly
      */
-    readonly _unrecognizedExtensionsList: _Element[];
+    public readonly _unrecognizedExtensionsList: _Element[];
 
     constructor (
         propertyParms: IndAudPropertyParm[],
@@ -126,7 +126,7 @@ class IndAudTerminationStateDescriptor {
          * @static
          */
 
-    public static _enum_for_serviceStateSel = _enum_for_ServiceState;
+    public static _enum_for_serviceStateSel: typeof _enum_for_ServiceState = _enum_for_ServiceState;
 }
 
 /**

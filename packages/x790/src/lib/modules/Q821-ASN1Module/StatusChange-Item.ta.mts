@@ -1,10 +1,10 @@
 /* eslint-disable */
 import {
-    OPTIONAL,
-    OBJECT_IDENTIFIER,
-    SEQUENCE,
-    SET,
-    ASN1Element as _Element,
+    type OPTIONAL,
+    type OBJECT_IDENTIFIER,
+    type SEQUENCE,
+    type SET,
+    type ASN1Element as _Element,
     ASN1TagClass as _TagClass,
 } from "@wildboar/asn1";
 import * as $ from "@wildboar/asn1/functional";
@@ -33,26 +33,34 @@ import {
  */
 export
 class StatusChange_Item {
+    /**
+     * @summary `statusAttributeID`.
+     * @public
+     * @readonly
+     */
+    public readonly statusAttributeID: OBJECT_IDENTIFIER;
+    /**
+     * @summary `oldStatusValue`.
+     * @public
+     * @readonly
+     */
+    public readonly oldStatusValue: OPTIONAL<_Element>;
+    /**
+     * @summary `newStatusValue`.
+     * @public
+     * @readonly
+     */
+    public readonly newStatusValue: _Element;
+
     constructor (
-        /**
-         * @summary `statusAttributeID`.
-         * @public
-         * @readonly
-         */
-        readonly statusAttributeID: OBJECT_IDENTIFIER,
-        /**
-         * @summary `oldStatusValue`.
-         * @public
-         * @readonly
-         */
-        readonly oldStatusValue: OPTIONAL<_Element>,
-        /**
-         * @summary `newStatusValue`.
-         * @public
-         * @readonly
-         */
-        readonly newStatusValue: _Element
-    ) {}
+        statusAttributeID: OBJECT_IDENTIFIER,
+        oldStatusValue: OPTIONAL<_Element>,
+        newStatusValue: _Element
+    ) {
+        this.statusAttributeID = statusAttributeID;
+        this.oldStatusValue = oldStatusValue;
+        this.newStatusValue = newStatusValue;
+    }
 
     /**
      * @summary Restructures an object into a StatusChange_Item

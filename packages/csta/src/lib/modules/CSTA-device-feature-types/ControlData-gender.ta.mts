@@ -1,7 +1,7 @@
 /* eslint-disable */
 
 import * as $ from "@wildboar/asn1/functional";
-import { ENUMERATED, ASN1Element as _Element } from "@wildboar/asn1";
+import { type ENUMERATED, ASN1Element as _Element } from "@wildboar/asn1";
 
 
 
@@ -72,7 +72,7 @@ type ControlData_gender = _enum_for_ControlData_gender;
  * @enum {number}
  */
 export
-const ControlData_gender = _enum_for_ControlData_gender;
+const ControlData_gender: typeof _enum_for_ControlData_gender = _enum_for_ControlData_gender;
 
 /**
  * @summary ControlData_gender_male
@@ -82,7 +82,7 @@ const ControlData_gender = _enum_for_ControlData_gender;
  * @see https://ecma-international.org/publications-and-standards/standards/ecma-269/
  */
 export
-const ControlData_gender_male: ControlData_gender = ControlData_gender.male; /* LONG_NAMED_ENUMERATED_VALUE */
+const ControlData_gender_male: _enum_for_ControlData_gender.male = ControlData_gender.male; /* LONG_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary male
@@ -91,7 +91,7 @@ const ControlData_gender_male: ControlData_gender = ControlData_gender.male; /* 
  * @type {number}
  */
 export
-const male: ControlData_gender = ControlData_gender.male; /* SHORT_NAMED_ENUMERATED_VALUE */
+const male: _enum_for_ControlData_gender.male = ControlData_gender.male; /* SHORT_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary ControlData_gender_female
@@ -101,7 +101,7 @@ const male: ControlData_gender = ControlData_gender.male; /* SHORT_NAMED_ENUMERA
  * @see https://ecma-international.org/publications-and-standards/standards/ecma-269/
  */
 export
-const ControlData_gender_female: ControlData_gender = ControlData_gender.female; /* LONG_NAMED_ENUMERATED_VALUE */
+const ControlData_gender_female: _enum_for_ControlData_gender.female = ControlData_gender.female; /* LONG_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary female
@@ -110,7 +110,7 @@ const ControlData_gender_female: ControlData_gender = ControlData_gender.female;
  * @type {number}
  */
 export
-const female: ControlData_gender = ControlData_gender.female; /* SHORT_NAMED_ENUMERATED_VALUE */
+const female: _enum_for_ControlData_gender.female = ControlData_gender.female; /* SHORT_NAMED_ENUMERATED_VALUE */
 
 let _cached_decoder_for_ControlData_gender: $.ASN1Decoder<ControlData_gender> | null = null;
 

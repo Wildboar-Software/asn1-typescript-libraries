@@ -1,7 +1,7 @@
 /* eslint-disable */
 import {
     TRUE_BIT,
-    ASN1Element as _Element,
+    type ASN1Element as _Element,
     ASN1TagClass as _TagClass,
     ASN1Construction as _Construction,
     ASN1UniversalType as _UniversalType,
@@ -20,7 +20,7 @@ import {
     _encode_Criticality,
 } from '../MTSAbstractService/Criticality.ta.mjs';
 import {
-    RecipientNumberForAdvice,
+    type RecipientNumberForAdvice,
     _decode_RecipientNumberForAdvice,
     _encode_RecipientNumberForAdvice,
 } from '../MTSAbstractService/RecipientNumberForAdvice.ta.mjs';

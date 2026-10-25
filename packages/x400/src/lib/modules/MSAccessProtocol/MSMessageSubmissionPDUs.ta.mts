@@ -1,6 +1,6 @@
 /* eslint-disable */
 import {
-    ASN1Element as _Element,
+    type ASN1Element as _Element,
     ASN1TagClass as _TagClass,
     ASN1Construction as _Construction,
     ASN1UniversalType as _UniversalType,
@@ -11,7 +11,7 @@ import {
 } from '@wildboar/asn1';
 import * as $ from '@wildboar/asn1/functional';
 import {
-    ROS_SingleAS,
+    type ROS_SingleAS,
     _decode_ROS_SingleAS,
     _encode_ROS_SingleAS,
 } from '@wildboar/rose';
@@ -29,22 +29,13 @@ import {
  */
 export type MSMessageSubmissionPDUs = ROS_SingleAS; // DefinedType
 
-let _cached_decoder_for_MSMessageSubmissionPDUs: $.ASN1Decoder<MSMessageSubmissionPDUs> | null = null;
-
 /**
  * @summary Decodes an ASN.1 element into a(n) MSMessageSubmissionPDUs
  * @function
  * @param {_Element} el The element being decoded.
  * @returns {MSMessageSubmissionPDUs} The decoded data structure.
  */
-export function _decode_MSMessageSubmissionPDUs(el: _Element): MSMessageSubmissionPDUs {
-    if (!_cached_decoder_for_MSMessageSubmissionPDUs) {
-        _cached_decoder_for_MSMessageSubmissionPDUs = _decode_ROS_SingleAS;
-    }
-    return _cached_decoder_for_MSMessageSubmissionPDUs(el);
-}
-
-let _cached_encoder_for_MSMessageSubmissionPDUs: $.ASN1Encoder<MSMessageSubmissionPDUs> | null = null;
+export const _decode_MSMessageSubmissionPDUs: $.ASN1Decoder<MSMessageSubmissionPDUs> = _decode_ROS_SingleAS;
 
 /**
  * @summary Encodes a(n) MSMessageSubmissionPDUs into an ASN.1 Element.
@@ -53,15 +44,7 @@ let _cached_encoder_for_MSMessageSubmissionPDUs: $.ASN1Encoder<MSMessageSubmissi
  * @param elGetter A function that can be used to get new ASN.1 elements.
  * @returns {_Element} The MSMessageSubmissionPDUs, encoded as an ASN.1 Element.
  */
-export function _encode_MSMessageSubmissionPDUs(
-    value: MSMessageSubmissionPDUs,
-    elGetter: $.ASN1Encoder<MSMessageSubmissionPDUs>
-): _Element {
-    if (!_cached_encoder_for_MSMessageSubmissionPDUs) {
-        _cached_encoder_for_MSMessageSubmissionPDUs = _encode_ROS_SingleAS;
-    }
-    return _cached_encoder_for_MSMessageSubmissionPDUs(value, elGetter);
-}
+export const _encode_MSMessageSubmissionPDUs: $.ASN1Encoder<MSMessageSubmissionPDUs> = _encode_ROS_SingleAS;
 
 
 /* eslint-enable */

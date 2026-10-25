@@ -2,13 +2,13 @@
 
 import * as $ from "@wildboar/asn1/functional";
 import {
-    OPTIONAL,
-    SEQUENCE,
-    SET,
-    ASN1Element as _Element,
+    type OPTIONAL,
+    type SEQUENCE,
+    type SET,
+    type ASN1Element as _Element,
     ASN1TagClass as _TagClass
 } from "@wildboar/asn1";
-import { ConnectionID, _decode_ConnectionID, _encode_ConnectionID } from "../CSTA-call-connection-identifiers/ConnectionID.ta.mjs";
+import { type ConnectionID, _decode_ConnectionID, _encode_ConnectionID } from "../CSTA-call-connection-identifiers/ConnectionID.ta.mjs";
 
 import { CSTACommonArguments, _decode_CSTACommonArguments, _encode_CSTACommonArguments } from "../CSTA-extension-types/CSTACommonArguments.ta.mjs";
 
@@ -37,30 +37,36 @@ import { CSTACommonArguments, _decode_CSTACommonArguments, _encode_CSTACommonArg
  */
 export
 class CallBackMessageArgument {
+    /**
+     * @summary `callbackMessageConnection`.
+     * @description
+     *
+     * Mandatory. Calling device's connection in the original
+     * call (Connected; becomes Null, possibly via Fail).
+     *
+     * @public
+     * @readonly
+     */
+    public readonly callbackMessageConnection: ConnectionID;
+    /**
+     * @summary `extensions`.
+     * @description
+     *
+     * Optional `CSTACommonArguments` carrying the security and
+     * privateData parameters from the ECMA-269 service table.
+     *
+     * @public
+     * @readonly
+     */
+    public readonly extensions?: OPTIONAL<CSTACommonArguments>;
+
     constructor (
-        /**
-         * @summary `callbackMessageConnection`.
-         * @description
-         *
-         * Mandatory. Calling device's connection in the original
-         * call (Connected; becomes Null, possibly via Fail).
-         *
-         * @public
-         * @readonly
-         */
-        readonly callbackMessageConnection: ConnectionID,
-        /**
-         * @summary `extensions`.
-         * @description
-         *
-         * Optional `CSTACommonArguments` carrying the security and
-         * privateData parameters from the ECMA-269 service table.
-         *
-         * @public
-         * @readonly
-         */
-        readonly extensions?: OPTIONAL<CSTACommonArguments>
-    ) {}
+        callbackMessageConnection: ConnectionID,
+        extensions?: OPTIONAL<CSTACommonArguments>
+    ) {
+        this.callbackMessageConnection = callbackMessageConnection;
+        this.extensions = extensions;
+    }
 
     /**
      * @summary Restructures an object into a CallBackMessageArgument

@@ -1,6 +1,6 @@
 /* eslint-disable */
 import {
-    INTEGER
+    type INTEGER
 } from "@wildboar/asn1";
 import * as $ from "@wildboar/asn1/functional";
 
@@ -30,7 +30,7 @@ type DataRetentionAction = INTEGER;
  * @type {number}
  */
 export
-const DataRetentionAction_ra_store: DataRetentionAction = 0; /* LONG_NAMED_INTEGER_VALUE */
+const DataRetentionAction_ra_store: 0 = 0 satisfies DataRetentionAction; /* LONG_NAMED_INTEGER_VALUE */
 
 /**
  * @summary DataRetentionAction_ra_store
@@ -38,7 +38,7 @@ const DataRetentionAction_ra_store: DataRetentionAction = 0; /* LONG_NAMED_INTEG
  * @type {number}
  */
 export
-const ra_store: DataRetentionAction = DataRetentionAction_ra_store; /* SHORT_NAMED_INTEGER_VALUE */
+const ra_store: 0 = DataRetentionAction_ra_store; /* SHORT_NAMED_INTEGER_VALUE */
 
 /**
  * @summary DataRetentionAction_ra_delete
@@ -46,7 +46,7 @@ const ra_store: DataRetentionAction = DataRetentionAction_ra_store; /* SHORT_NAM
  * @type {number}
  */
 export
-const DataRetentionAction_ra_delete: DataRetentionAction = 1; /* LONG_NAMED_INTEGER_VALUE */
+const DataRetentionAction_ra_delete: 1 = 1 satisfies DataRetentionAction; /* LONG_NAMED_INTEGER_VALUE */
 
 /**
  * @summary DataRetentionAction_ra_delete
@@ -54,7 +54,7 @@ const DataRetentionAction_ra_delete: DataRetentionAction = 1; /* LONG_NAMED_INTE
  * @type {number}
  */
 export
-const ra_delete: DataRetentionAction = DataRetentionAction_ra_delete; /* SHORT_NAMED_INTEGER_VALUE */
+const ra_delete: 1 = DataRetentionAction_ra_delete; /* SHORT_NAMED_INTEGER_VALUE */
 
 /**
  * @summary DataRetentionAction_ra_fetch
@@ -62,7 +62,7 @@ const ra_delete: DataRetentionAction = DataRetentionAction_ra_delete; /* SHORT_N
  * @type {number}
  */
 export
-const DataRetentionAction_ra_fetch: DataRetentionAction = 2; /* LONG_NAMED_INTEGER_VALUE */
+const DataRetentionAction_ra_fetch: 2 = 2 satisfies DataRetentionAction; /* LONG_NAMED_INTEGER_VALUE */
 
 /**
  * @summary DataRetentionAction_ra_fetch
@@ -70,7 +70,7 @@ const DataRetentionAction_ra_fetch: DataRetentionAction = 2; /* LONG_NAMED_INTEG
  * @type {number}
  */
 export
-const ra_fetch: DataRetentionAction = DataRetentionAction_ra_fetch; /* SHORT_NAMED_INTEGER_VALUE */
+const ra_fetch: 2 = DataRetentionAction_ra_fetch; /* SHORT_NAMED_INTEGER_VALUE */
 
 /**
  * @summary DataRetentionAction_ra_result
@@ -78,7 +78,7 @@ const ra_fetch: DataRetentionAction = DataRetentionAction_ra_fetch; /* SHORT_NAM
  * @type {number}
  */
 export
-const DataRetentionAction_ra_result: DataRetentionAction = 3; /* LONG_NAMED_INTEGER_VALUE */
+const DataRetentionAction_ra_result: 3 = 3 satisfies DataRetentionAction; /* LONG_NAMED_INTEGER_VALUE */
 
 /**
  * @summary DataRetentionAction_ra_result
@@ -86,9 +86,9 @@ const DataRetentionAction_ra_result: DataRetentionAction = 3; /* LONG_NAMED_INTE
  * @type {number}
  */
 export
-const ra_result: DataRetentionAction = DataRetentionAction_ra_result; /* SHORT_NAMED_INTEGER_VALUE */
-export const _decode_DataRetentionAction = $._decodeInteger;
-export const _encode_DataRetentionAction = $._encodeInteger;
+const ra_result: 3 = DataRetentionAction_ra_result; /* SHORT_NAMED_INTEGER_VALUE */
+export const _decode_DataRetentionAction: $.ASN1Decoder<INTEGER> = $._decodeInteger;
+export const _encode_DataRetentionAction: $.ASN1Encoder<INTEGER> = $._encodeInteger;
 
 
 /* eslint-enable */

@@ -5,12 +5,12 @@ import { abandoned } from "../DirectoryAbstractService/abandoned.oa.mjs";
 import { attributeError } from "../DirectoryAbstractService/attributeError.oa.mjs";
 import { nameError } from "../DirectoryAbstractService/nameError.oa.mjs";
 import {
-    ReadArgument,
+    type ReadArgument,
     _decode_ReadArgument,
     _encode_ReadArgument,
 } from "../DirectoryAbstractService/ReadArgument.ta.mjs";
 import {
-    ReadResult,
+    type ReadResult,
     _decode_ReadResult,
     _encode_ReadResult,
 } from "../DirectoryAbstractService/ReadResult.ta.mjs";

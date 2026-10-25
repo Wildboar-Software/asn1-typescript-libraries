@@ -1,12 +1,12 @@
 /* eslint-disable */
 import {
     ASN1ConstructionError as _ConstructionError,
-    ASN1Element as _Element,
+    type ASN1Element as _Element,
     ASN1TagClass as _TagClass,
 } from "@wildboar/asn1";
 import * as $ from "@wildboar/asn1/functional";
 import {
-    UUID,
+    type UUID,
     _decode_UUID,
     _encode_UUID,
 } from "../SelectedAttributeTypes/UUID.ta.mjs";
@@ -28,34 +28,42 @@ import {
  *
  */
 export class UUIDPair {
+    /**
+     * @summary `issuerUUID`.
+     * @description
+     *
+     * Issuer UUID (16 octets). First; both components must match.
+     *
+     * @public
+     * @readonly
+     */
+    public readonly issuerUUID: UUID;
+    /**
+     * @summary `subjectUUID`.
+     * @description
+     *
+     * Subject UUID (16 octets). Second; both components must match.
+     *
+     * @public
+     * @readonly
+     */
+    public readonly subjectUUID: UUID;
+    /**
+     * @summary Extensions that are not recognized.
+     * @public
+     * @readonly
+     */
+    public readonly _unrecognizedExtensionsList: _Element[];
+
     constructor(
-        /**
-         * @summary `issuerUUID`.
-         * @description
-         *
-         * Issuer UUID (16 octets). First; both components must match.
-         *
-         * @public
-         * @readonly
-         */
-        readonly issuerUUID: UUID,
-        /**
-         * @summary `subjectUUID`.
-         * @description
-         *
-         * Subject UUID (16 octets). Second; both components must match.
-         *
-         * @public
-         * @readonly
-         */
-        readonly subjectUUID: UUID,
-        /**
-         * @summary Extensions that are not recognized.
-         * @public
-         * @readonly
-         */
-        readonly _unrecognizedExtensionsList: _Element[] = []
-    ) {}
+        issuerUUID: UUID,
+        subjectUUID: UUID,
+        _unrecognizedExtensionsList: _Element[] = []
+    ) {
+        this.issuerUUID = issuerUUID;
+        this.subjectUUID = subjectUUID;
+        this._unrecognizedExtensionsList = _unrecognizedExtensionsList;
+    }
 
     /**
      * @summary Restructures an object into a UUIDPair

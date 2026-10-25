@@ -61,7 +61,7 @@ type CauseTransport = _enum_for_CauseTransport;
  * @enum {number}
  */
 export
-const CauseTransport = _enum_for_CauseTransport;
+const CauseTransport: typeof _enum_for_CauseTransport = _enum_for_CauseTransport;
 
 /**
  * @summary CauseTransport_transportResourceUnavailable
@@ -69,7 +69,7 @@ const CauseTransport = _enum_for_CauseTransport;
  * @type {number}
  */
 export
-const CauseTransport_transportResourceUnavailable: CauseTransport = CauseTransport.transportResourceUnavailable; /* LONG_NAMED_ENUMERATED_VALUE */
+const CauseTransport_transportResourceUnavailable: _enum_for_CauseTransport.transportResourceUnavailable = CauseTransport.transportResourceUnavailable; /* LONG_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary transportResourceUnavailable
@@ -77,7 +77,7 @@ const CauseTransport_transportResourceUnavailable: CauseTransport = CauseTranspo
  * @type {number}
  */
 export
-const transportResourceUnavailable: CauseTransport = CauseTransport.transportResourceUnavailable; /* SHORT_NAMED_ENUMERATED_VALUE */
+const transportResourceUnavailable: _enum_for_CauseTransport.transportResourceUnavailable = CauseTransport.transportResourceUnavailable; /* SHORT_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary CauseTransport_unspecified
@@ -85,7 +85,7 @@ const transportResourceUnavailable: CauseTransport = CauseTransport.transportRes
  * @type {number}
  */
 export
-const CauseTransport_unspecified: CauseTransport = CauseTransport.unspecified; /* LONG_NAMED_ENUMERATED_VALUE */
+const CauseTransport_unspecified: _enum_for_CauseTransport.unspecified = CauseTransport.unspecified; /* LONG_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary unspecified
@@ -93,7 +93,7 @@ const CauseTransport_unspecified: CauseTransport = CauseTransport.unspecified; /
  * @type {number}
  */
 export
-const unspecified: CauseTransport = CauseTransport.unspecified; /* SHORT_NAMED_ENUMERATED_VALUE */
+const unspecified: _enum_for_CauseTransport.unspecified = CauseTransport.unspecified; /* SHORT_NAMED_ENUMERATED_VALUE */
 export const _decode_CauseTransport: $.ASN1Decoder<CauseTransport> = $._decodeEnumerated;
 export const _encode_CauseTransport: $.ASN1Encoder<CauseTransport> = $._encodeEnumerated;
 

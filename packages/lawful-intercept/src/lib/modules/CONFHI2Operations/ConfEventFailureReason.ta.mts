@@ -1,10 +1,10 @@
 /* eslint-disable */
 import {
-    ASN1Element as _Element,
+    type ASN1Element as _Element,
     ASN1TagClass as _TagClass
 } from "@wildboar/asn1";
 import * as $ from "@wildboar/asn1/functional";
-import { Reason, _decode_Reason, _encode_Reason } from "../CONFHI2Operations/Reason.ta.mjs";
+import { type Reason, _decode_Reason, _encode_Reason } from "../CONFHI2Operations/Reason.ta.mjs";
 // export { Reason, _decode_Reason, _encode_Reason } from "../CONFHI2Operations/Reason.ta.mjs";
 
 

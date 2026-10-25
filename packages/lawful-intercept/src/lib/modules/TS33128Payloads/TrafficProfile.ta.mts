@@ -103,7 +103,7 @@ type TrafficProfile = _enum_for_TrafficProfile;
  * @enum {number}
  */
 export
-const TrafficProfile = _enum_for_TrafficProfile;
+const TrafficProfile: typeof _enum_for_TrafficProfile = _enum_for_TrafficProfile;
 
 /**
  * @summary TrafficProfile_singleTransUL
@@ -111,7 +111,7 @@ const TrafficProfile = _enum_for_TrafficProfile;
  * @type {number}
  */
 export
-const TrafficProfile_singleTransUL: TrafficProfile = TrafficProfile.singleTransUL; /* LONG_NAMED_ENUMERATED_VALUE */
+const TrafficProfile_singleTransUL: _enum_for_TrafficProfile.singleTransUL = TrafficProfile.singleTransUL; /* LONG_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary singleTransUL
@@ -119,7 +119,7 @@ const TrafficProfile_singleTransUL: TrafficProfile = TrafficProfile.singleTransU
  * @type {number}
  */
 export
-const singleTransUL: TrafficProfile = TrafficProfile.singleTransUL; /* SHORT_NAMED_ENUMERATED_VALUE */
+const singleTransUL: _enum_for_TrafficProfile.singleTransUL = TrafficProfile.singleTransUL; /* SHORT_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary TrafficProfile_singleTransDL
@@ -127,7 +127,7 @@ const singleTransUL: TrafficProfile = TrafficProfile.singleTransUL; /* SHORT_NAM
  * @type {number}
  */
 export
-const TrafficProfile_singleTransDL: TrafficProfile = TrafficProfile.singleTransDL; /* LONG_NAMED_ENUMERATED_VALUE */
+const TrafficProfile_singleTransDL: _enum_for_TrafficProfile.singleTransDL = TrafficProfile.singleTransDL; /* LONG_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary singleTransDL
@@ -135,7 +135,7 @@ const TrafficProfile_singleTransDL: TrafficProfile = TrafficProfile.singleTransD
  * @type {number}
  */
 export
-const singleTransDL: TrafficProfile = TrafficProfile.singleTransDL; /* SHORT_NAMED_ENUMERATED_VALUE */
+const singleTransDL: _enum_for_TrafficProfile.singleTransDL = TrafficProfile.singleTransDL; /* SHORT_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary TrafficProfile_dualTransULFirst
@@ -143,7 +143,7 @@ const singleTransDL: TrafficProfile = TrafficProfile.singleTransDL; /* SHORT_NAM
  * @type {number}
  */
 export
-const TrafficProfile_dualTransULFirst: TrafficProfile = TrafficProfile.dualTransULFirst; /* LONG_NAMED_ENUMERATED_VALUE */
+const TrafficProfile_dualTransULFirst: _enum_for_TrafficProfile.dualTransULFirst = TrafficProfile.dualTransULFirst; /* LONG_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary dualTransULFirst
@@ -151,7 +151,7 @@ const TrafficProfile_dualTransULFirst: TrafficProfile = TrafficProfile.dualTrans
  * @type {number}
  */
 export
-const dualTransULFirst: TrafficProfile = TrafficProfile.dualTransULFirst; /* SHORT_NAMED_ENUMERATED_VALUE */
+const dualTransULFirst: _enum_for_TrafficProfile.dualTransULFirst = TrafficProfile.dualTransULFirst; /* SHORT_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary TrafficProfile_dualTransDLFirst
@@ -159,7 +159,7 @@ const dualTransULFirst: TrafficProfile = TrafficProfile.dualTransULFirst; /* SHO
  * @type {number}
  */
 export
-const TrafficProfile_dualTransDLFirst: TrafficProfile = TrafficProfile.dualTransDLFirst; /* LONG_NAMED_ENUMERATED_VALUE */
+const TrafficProfile_dualTransDLFirst: _enum_for_TrafficProfile.dualTransDLFirst = TrafficProfile.dualTransDLFirst; /* LONG_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary dualTransDLFirst
@@ -167,7 +167,7 @@ const TrafficProfile_dualTransDLFirst: TrafficProfile = TrafficProfile.dualTrans
  * @type {number}
  */
 export
-const dualTransDLFirst: TrafficProfile = TrafficProfile.dualTransDLFirst; /* SHORT_NAMED_ENUMERATED_VALUE */
+const dualTransDLFirst: _enum_for_TrafficProfile.dualTransDLFirst = TrafficProfile.dualTransDLFirst; /* SHORT_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary TrafficProfile_multiTrans
@@ -175,7 +175,7 @@ const dualTransDLFirst: TrafficProfile = TrafficProfile.dualTransDLFirst; /* SHO
  * @type {number}
  */
 export
-const TrafficProfile_multiTrans: TrafficProfile = TrafficProfile.multiTrans; /* LONG_NAMED_ENUMERATED_VALUE */
+const TrafficProfile_multiTrans: _enum_for_TrafficProfile.multiTrans = TrafficProfile.multiTrans; /* LONG_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary multiTrans
@@ -183,7 +183,7 @@ const TrafficProfile_multiTrans: TrafficProfile = TrafficProfile.multiTrans; /* 
  * @type {number}
  */
 export
-const multiTrans: TrafficProfile = TrafficProfile.multiTrans; /* SHORT_NAMED_ENUMERATED_VALUE */
+const multiTrans: _enum_for_TrafficProfile.multiTrans = TrafficProfile.multiTrans; /* SHORT_NAMED_ENUMERATED_VALUE */
 export const _decode_TrafficProfile: $.ASN1Decoder<TrafficProfile> = $._decodeEnumerated;
 export const _encode_TrafficProfile: $.ASN1Encoder<TrafficProfile> = $._encodeEnumerated;
 

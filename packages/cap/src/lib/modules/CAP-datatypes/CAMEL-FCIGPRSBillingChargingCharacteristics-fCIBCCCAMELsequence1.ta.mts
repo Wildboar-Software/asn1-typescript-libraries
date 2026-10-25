@@ -1,7 +1,7 @@
 import {
-    OPTIONAL,
-    OCTET_STRING,
-    ASN1Element as _Element,
+    type OPTIONAL,
+    type OCTET_STRING,
+    type ASN1Element as _Element,
     ASN1TagClass as _TagClass,
 } from "@wildboar/asn1";
 import * as $ from "@wildboar/asn1/functional";
@@ -26,51 +26,61 @@ import { AppendFreeFormatData, _enum_for_AppendFreeFormatData, overwrite, _decod
  *
  */
 export class CAMEL_FCIGPRSBillingChargingCharacteristics_fCIBCCCAMELsequence1 {
+    /**
+     * @summary `freeFormatData`.
+     * @description
+     *
+     * Free-format billing and/or charging characteristics.
+     * (3GPP TS 29.078 V19.0.0 clause 13.9).
+     *
+     * @public
+     * @readonly
+     */
+    public readonly freeFormatData: OCTET_STRING;
+    /**
+     * @summary `pDPID`.
+     * @description
+     *
+     * PDP Context Logical GPRS record to which the free format data
+     * belongs. (3GPP TS 29.078 V19.0.0 clause 13.9).
+     *
+     * @public
+     * @readonly
+     */
+    public readonly pDPID?: OPTIONAL<PDPID>;
+    /**
+     * @summary `appendFreeFormatData`.
+     * @description
+     *
+     * Whether previous FCI free format data is appended or overwritten.
+     * Default `overwrite`. Refer to 3GPP TS 23.078.
+     * (3GPP TS 29.078 V19.0.0 clause 13.9).
+     *
+     * @public
+     * @readonly
+     */
+    public readonly appendFreeFormatData?: OPTIONAL<AppendFreeFormatData>;
+    public readonly _unrecognizedExtensionsList: _Element[];
+
     constructor (
-        /**
-         * @summary `freeFormatData`.
-         * @description
-         *
-         * Free-format billing and/or charging characteristics.
-         * (3GPP TS 29.078 V19.0.0 clause 13.9).
-         *
-         * @public
-         * @readonly
-         */
-        readonly freeFormatData: OCTET_STRING,
-        /**
-         * @summary `pDPID`.
-         * @description
-         *
-         * PDP Context Logical GPRS record to which the free format data
-         * belongs. (3GPP TS 29.078 V19.0.0 clause 13.9).
-         *
-         * @public
-         * @readonly
-         */
-        readonly pDPID?: OPTIONAL<PDPID>,
-        /**
-         * @summary `appendFreeFormatData`.
-         * @description
-         *
-         * Whether previous FCI free format data is appended or overwritten.
-         * Default `overwrite`. Refer to 3GPP TS 23.078.
-         * (3GPP TS 29.078 V19.0.0 clause 13.9).
-         *
-         * @public
-         * @readonly
-         */
-        readonly appendFreeFormatData?: OPTIONAL<AppendFreeFormatData>,
-        readonly _unrecognizedExtensionsList: _Element[] = [],
-    ) {}
+        freeFormatData: OCTET_STRING,
+        pDPID?: OPTIONAL<PDPID>,
+        appendFreeFormatData?: OPTIONAL<AppendFreeFormatData>,
+        _unrecognizedExtensionsList: _Element[] = [],
+    ) {
+        this.freeFormatData = freeFormatData;
+        this.pDPID = pDPID;
+        this.appendFreeFormatData = appendFreeFormatData;
+        this._unrecognizedExtensionsList = _unrecognizedExtensionsList;
+    }
 
     public static _from_object (_o: { [_K in keyof (CAMEL_FCIGPRSBillingChargingCharacteristics_fCIBCCCAMELsequence1)]: (CAMEL_FCIGPRSBillingChargingCharacteristics_fCIBCCCAMELsequence1)[_K] }): CAMEL_FCIGPRSBillingChargingCharacteristics_fCIBCCCAMELsequence1 {
         return new CAMEL_FCIGPRSBillingChargingCharacteristics_fCIBCCCAMELsequence1(_o.freeFormatData, _o.pDPID, _o.appendFreeFormatData, _o._unrecognizedExtensionsList);
     }
 
-    public static get _default_value_for_appendFreeFormatData () { return overwrite; }
+    public static get _default_value_for_appendFreeFormatData (): _enum_for_AppendFreeFormatData.overwrite { return overwrite; }
 
-    public static _enum_for_appendFreeFormatData = _enum_for_AppendFreeFormatData;
+    public static _enum_for_appendFreeFormatData: typeof _enum_for_AppendFreeFormatData = _enum_for_AppendFreeFormatData;
 }
 
 export const _root_component_type_list_1_spec_for_CAMEL_FCIGPRSBillingChargingCharacteristics_fCIBCCCAMELsequence1: $.ComponentSpec[] = [

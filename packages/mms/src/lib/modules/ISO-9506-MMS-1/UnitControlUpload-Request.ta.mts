@@ -1,7 +1,7 @@
 /* eslint-disable */
 import {
-    OPTIONAL,
-    ASN1Element as _Element,
+    type OPTIONAL,
+    type ASN1Element as _Element,
     ASN1TagClass as _TagClass,
     ASN1Construction as _Construction,
     ASN1UniversalType as _UniversalType,
@@ -11,8 +11,8 @@ import {
     ASN1ConstructionError as _ConstructionError,
 } from "@wildboar/asn1";
 import * as $ from "@wildboar/asn1/functional";
-import { Identifier, _decode_Identifier, _encode_Identifier } from "../ISO-9506-MMS-1/Identifier.ta.mjs";
-import { UnitControlUpload_Request_continueAfter, _decode_UnitControlUpload_Request_continueAfter, _encode_UnitControlUpload_Request_continueAfter } from "../ISO-9506-MMS-1/UnitControlUpload-Request-continueAfter.ta.mjs";
+import { type Identifier, _decode_Identifier, _encode_Identifier } from "../ISO-9506-MMS-1/Identifier.ta.mjs";
+import { type UnitControlUpload_Request_continueAfter, _decode_UnitControlUpload_Request_continueAfter, _encode_UnitControlUpload_Request_continueAfter } from "../ISO-9506-MMS-1/UnitControlUpload-Request-continueAfter.ta.mjs";
 
 
 /**
@@ -40,29 +40,35 @@ import { UnitControlUpload_Request_continueAfter, _decode_UnitControlUpload_Requ
  */
 export
 class UnitControlUpload_Request {
+    /**
+     * @summary `unitControlName`.
+     * @description
+     *
+     * Unit Control object to upload. ISO 9506-1:2003 §13.5.1.1.1.
+     *
+     * @public
+     * @readonly
+     */
+    public readonly unitControlName: Identifier;
+    /**
+     * @summary `continueAfter`.
+     * @description
+     *
+     * Resume point: next Domain, open ULSM, or next PI. Absent: start at
+     * the beginning. ISO 9506-1:2003 §13.5.1.1.2.
+     *
+     * @public
+     * @readonly
+     */
+    public readonly continueAfter?: OPTIONAL<UnitControlUpload_Request_continueAfter>;
+
     constructor (
-        /**
-         * @summary `unitControlName`.
-         * @description
-         *
-         * Unit Control object to upload. ISO 9506-1:2003 §13.5.1.1.1.
-         *
-         * @public
-         * @readonly
-         */
-        readonly unitControlName: Identifier,
-        /**
-         * @summary `continueAfter`.
-         * @description
-         *
-         * Resume point: next Domain, open ULSM, or next PI. Absent: start at
-         * the beginning. ISO 9506-1:2003 §13.5.1.1.2.
-         *
-         * @public
-         * @readonly
-         */
-        readonly continueAfter?: OPTIONAL<UnitControlUpload_Request_continueAfter>
-    ) {}
+        unitControlName: Identifier,
+        continueAfter?: OPTIONAL<UnitControlUpload_Request_continueAfter>
+    ) {
+        this.unitControlName = unitControlName;
+        this.continueAfter = continueAfter;
+    }
 
     /**
      * @summary Restructures an object into a UnitControlUpload_Request

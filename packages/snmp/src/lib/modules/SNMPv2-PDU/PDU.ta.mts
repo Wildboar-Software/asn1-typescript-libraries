@@ -1,7 +1,7 @@
 /* eslint-disable */
 import {
-    INTEGER,
-    ASN1Element as _Element,
+    type INTEGER,
+    type ASN1Element as _Element,
     ASN1TagClass as _TagClass,
     ASN1Construction as _Construction,
     ASN1UniversalType as _UniversalType,
@@ -12,12 +12,12 @@ import {
 } from "@wildboar/asn1";
 import * as $ from "@wildboar/asn1/functional";
 import {
-    PDU_error_status,
+    type PDU_error_status,
     _decode_PDU_error_status,
     _encode_PDU_error_status
 } from "../SNMPv2-PDU/PDU-error-status.ta.mjs";
 import {
-    VarBindList,
+    type VarBindList,
     _decode_VarBindList,
     _encode_VarBindList,
 } from "../SNMPv2-PDU/VarBindList.ta.mjs";
@@ -87,7 +87,7 @@ class PDU {
      * @public
      * @readonly
      */
-    readonly request_id: INTEGER;
+    public readonly request_id: INTEGER;
     /**
      * @summary `error_status`.
      * @description
@@ -99,7 +99,7 @@ class PDU {
      * @public
      * @readonly
      */
-    readonly error_status: PDU_error_status;
+    public readonly error_status: PDU_error_status;
     /**
      * @summary `error_index`.
      * @description
@@ -114,7 +114,7 @@ class PDU {
      * @public
      * @readonly
      */
-    readonly error_index: INTEGER;
+    public readonly error_index: INTEGER;
     /**
      * @summary `variable_bindings`.
      * @description
@@ -127,7 +127,7 @@ class PDU {
      * @public
      * @readonly
      */
-    readonly variable_bindings: VarBindList;
+    public readonly variable_bindings: VarBindList;
 
     constructor (
         request_id: INTEGER,

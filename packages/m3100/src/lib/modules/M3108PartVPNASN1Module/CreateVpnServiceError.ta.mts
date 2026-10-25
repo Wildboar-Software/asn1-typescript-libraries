@@ -1,7 +1,7 @@
 /* eslint-disable */
 import {
-    ENUMERATED,
-    ASN1Element as _Element,
+    type ENUMERATED,
+    type ASN1Element as _Element,
     ASN1TagClass as _TagClass,
     ASN1Construction as _Construction,
     ASN1UniversalType as _UniversalType,
@@ -44,7 +44,7 @@ export type CreateVpnServiceError =
  * @constant
  * @type {number}
  */
-export const CreateVpnServiceError_invalidServiceClasses: CreateVpnServiceError = 1; /* LONG_NAMED_ENUMERATED_VALUE */
+export const CreateVpnServiceError_invalidServiceClasses: _enum_for_CreateVpnServiceError.invalidServiceClasses = _enum_for_CreateVpnServiceError.invalidServiceClasses; /* LONG_NAMED_ENUMERATED_VALUE */
 
 
 /**
@@ -52,7 +52,7 @@ export const CreateVpnServiceError_invalidServiceClasses: CreateVpnServiceError 
  * @constant
  * @type {number}
  */
-export const invalidServiceClasses: CreateVpnServiceError = CreateVpnServiceError_invalidServiceClasses; /* SHORT_NAMED_ENUMERATED_VALUE */
+export const invalidServiceClasses: _enum_for_CreateVpnServiceError.invalidServiceClasses = CreateVpnServiceError_invalidServiceClasses; /* SHORT_NAMED_ENUMERATED_VALUE */
 
 
 /**
@@ -60,7 +60,7 @@ export const invalidServiceClasses: CreateVpnServiceError = CreateVpnServiceErro
  * @constant
  * @type {number}
  */
-export const CreateVpnServiceError_duplicatedVPNIdentifier: CreateVpnServiceError = 2; /* LONG_NAMED_ENUMERATED_VALUE */
+export const CreateVpnServiceError_duplicatedVPNIdentifier: _enum_for_CreateVpnServiceError.duplicatedVPNIdentifier = _enum_for_CreateVpnServiceError.duplicatedVPNIdentifier; /* LONG_NAMED_ENUMERATED_VALUE */
 
 
 /**
@@ -68,7 +68,7 @@ export const CreateVpnServiceError_duplicatedVPNIdentifier: CreateVpnServiceErro
  * @constant
  * @type {number}
  */
-export const duplicatedVPNIdentifier: CreateVpnServiceError = CreateVpnServiceError_duplicatedVPNIdentifier; /* SHORT_NAMED_ENUMERATED_VALUE */
+export const duplicatedVPNIdentifier: _enum_for_CreateVpnServiceError.duplicatedVPNIdentifier = CreateVpnServiceError_duplicatedVPNIdentifier; /* SHORT_NAMED_ENUMERATED_VALUE */
 
 
 /**
@@ -76,7 +76,7 @@ export const duplicatedVPNIdentifier: CreateVpnServiceError = CreateVpnServiceEr
  * @constant
  * @type {number}
  */
-export const CreateVpnServiceError_invalidSAG: CreateVpnServiceError = 3; /* LONG_NAMED_ENUMERATED_VALUE */
+export const CreateVpnServiceError_invalidSAG: _enum_for_CreateVpnServiceError.invalidSAG = _enum_for_CreateVpnServiceError.invalidSAG; /* LONG_NAMED_ENUMERATED_VALUE */
 
 
 /**
@@ -84,17 +84,17 @@ export const CreateVpnServiceError_invalidSAG: CreateVpnServiceError = 3; /* LON
  * @constant
  * @type {number}
  */
-export const invalidSAG: CreateVpnServiceError = CreateVpnServiceError_invalidSAG; /* SHORT_NAMED_ENUMERATED_VALUE */
+export const invalidSAG: _enum_for_CreateVpnServiceError.invalidSAG = CreateVpnServiceError_invalidSAG; /* SHORT_NAMED_ENUMERATED_VALUE */
 
 
 
 
-export const _decode_CreateVpnServiceError = $._decodeEnumerated;
+export const _decode_CreateVpnServiceError: $.ASN1Decoder<number> = $._decodeEnumerated;
 
 
 
 
-export const _encode_CreateVpnServiceError = $._encodeEnumerated;
+export const _encode_CreateVpnServiceError: $.ASN1Encoder<number> = $._encodeEnumerated;
 
 
 /* eslint-enable */

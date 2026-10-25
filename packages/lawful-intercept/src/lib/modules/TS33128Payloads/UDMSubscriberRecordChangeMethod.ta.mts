@@ -135,7 +135,7 @@ type UDMSubscriberRecordChangeMethod = _enum_for_UDMSubscriberRecordChangeMethod
  * @enum {number}
  */
 export
-const UDMSubscriberRecordChangeMethod = _enum_for_UDMSubscriberRecordChangeMethod;
+const UDMSubscriberRecordChangeMethod: typeof _enum_for_UDMSubscriberRecordChangeMethod = _enum_for_UDMSubscriberRecordChangeMethod;
 
 /**
  * @summary UDMSubscriberRecordChangeMethod_pEIChange
@@ -150,7 +150,7 @@ const UDMSubscriberRecordChangeMethod = _enum_for_UDMSubscriberRecordChangeMetho
  * @type {number}
  */
 export
-const UDMSubscriberRecordChangeMethod_pEIChange: UDMSubscriberRecordChangeMethod = UDMSubscriberRecordChangeMethod.pEIChange; /* LONG_NAMED_ENUMERATED_VALUE */
+const UDMSubscriberRecordChangeMethod_pEIChange: _enum_for_UDMSubscriberRecordChangeMethod.pEIChange = UDMSubscriberRecordChangeMethod.pEIChange; /* LONG_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary pEIChange
@@ -165,7 +165,7 @@ const UDMSubscriberRecordChangeMethod_pEIChange: UDMSubscriberRecordChangeMethod
  * @type {number}
  */
 export
-const pEIChange: UDMSubscriberRecordChangeMethod = UDMSubscriberRecordChangeMethod.pEIChange; /* SHORT_NAMED_ENUMERATED_VALUE */
+const pEIChange: _enum_for_UDMSubscriberRecordChangeMethod.pEIChange = UDMSubscriberRecordChangeMethod.pEIChange; /* SHORT_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary UDMSubscriberRecordChangeMethod_sUPIChange
@@ -180,7 +180,7 @@ const pEIChange: UDMSubscriberRecordChangeMethod = UDMSubscriberRecordChangeMeth
  * @type {number}
  */
 export
-const UDMSubscriberRecordChangeMethod_sUPIChange: UDMSubscriberRecordChangeMethod = UDMSubscriberRecordChangeMethod.sUPIChange; /* LONG_NAMED_ENUMERATED_VALUE */
+const UDMSubscriberRecordChangeMethod_sUPIChange: _enum_for_UDMSubscriberRecordChangeMethod.sUPIChange = UDMSubscriberRecordChangeMethod.sUPIChange; /* LONG_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary sUPIChange
@@ -195,7 +195,7 @@ const UDMSubscriberRecordChangeMethod_sUPIChange: UDMSubscriberRecordChangeMetho
  * @type {number}
  */
 export
-const sUPIChange: UDMSubscriberRecordChangeMethod = UDMSubscriberRecordChangeMethod.sUPIChange; /* SHORT_NAMED_ENUMERATED_VALUE */
+const sUPIChange: _enum_for_UDMSubscriberRecordChangeMethod.sUPIChange = UDMSubscriberRecordChangeMethod.sUPIChange; /* SHORT_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary UDMSubscriberRecordChangeMethod_gPSIChange
@@ -210,7 +210,7 @@ const sUPIChange: UDMSubscriberRecordChangeMethod = UDMSubscriberRecordChangeMet
  * @type {number}
  */
 export
-const UDMSubscriberRecordChangeMethod_gPSIChange: UDMSubscriberRecordChangeMethod = UDMSubscriberRecordChangeMethod.gPSIChange; /* LONG_NAMED_ENUMERATED_VALUE */
+const UDMSubscriberRecordChangeMethod_gPSIChange: _enum_for_UDMSubscriberRecordChangeMethod.gPSIChange = UDMSubscriberRecordChangeMethod.gPSIChange; /* LONG_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary gPSIChange
@@ -225,7 +225,7 @@ const UDMSubscriberRecordChangeMethod_gPSIChange: UDMSubscriberRecordChangeMetho
  * @type {number}
  */
 export
-const gPSIChange: UDMSubscriberRecordChangeMethod = UDMSubscriberRecordChangeMethod.gPSIChange; /* SHORT_NAMED_ENUMERATED_VALUE */
+const gPSIChange: _enum_for_UDMSubscriberRecordChangeMethod.gPSIChange = UDMSubscriberRecordChangeMethod.gPSIChange; /* SHORT_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary UDMSubscriberRecordChangeMethod_uEDeprovisioning
@@ -239,7 +239,7 @@ const gPSIChange: UDMSubscriberRecordChangeMethod = UDMSubscriberRecordChangeMet
  * @type {number}
  */
 export
-const UDMSubscriberRecordChangeMethod_uEDeprovisioning: UDMSubscriberRecordChangeMethod = UDMSubscriberRecordChangeMethod.uEDeprovisioning; /* LONG_NAMED_ENUMERATED_VALUE */
+const UDMSubscriberRecordChangeMethod_uEDeprovisioning: _enum_for_UDMSubscriberRecordChangeMethod.uEDeprovisioning = UDMSubscriberRecordChangeMethod.uEDeprovisioning; /* LONG_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary uEDeprovisioning
@@ -253,7 +253,7 @@ const UDMSubscriberRecordChangeMethod_uEDeprovisioning: UDMSubscriberRecordChang
  * @type {number}
  */
 export
-const uEDeprovisioning: UDMSubscriberRecordChangeMethod = UDMSubscriberRecordChangeMethod.uEDeprovisioning; /* SHORT_NAMED_ENUMERATED_VALUE */
+const uEDeprovisioning: _enum_for_UDMSubscriberRecordChangeMethod.uEDeprovisioning = UDMSubscriberRecordChangeMethod.uEDeprovisioning; /* SHORT_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary UDMSubscriberRecordChangeMethod_unknown
@@ -267,7 +267,7 @@ const uEDeprovisioning: UDMSubscriberRecordChangeMethod = UDMSubscriberRecordCha
  * @type {number}
  */
 export
-const UDMSubscriberRecordChangeMethod_unknown: UDMSubscriberRecordChangeMethod = UDMSubscriberRecordChangeMethod.unknown; /* LONG_NAMED_ENUMERATED_VALUE */
+const UDMSubscriberRecordChangeMethod_unknown: _enum_for_UDMSubscriberRecordChangeMethod.unknown = UDMSubscriberRecordChangeMethod.unknown; /* LONG_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary unknown
@@ -281,7 +281,7 @@ const UDMSubscriberRecordChangeMethod_unknown: UDMSubscriberRecordChangeMethod =
  * @type {number}
  */
 export
-const unknown: UDMSubscriberRecordChangeMethod = UDMSubscriberRecordChangeMethod.unknown; /* SHORT_NAMED_ENUMERATED_VALUE */
+const unknown: _enum_for_UDMSubscriberRecordChangeMethod.unknown = UDMSubscriberRecordChangeMethod.unknown; /* SHORT_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary UDMSubscriberRecordChangeMethod_serviceIDChange
@@ -295,7 +295,7 @@ const unknown: UDMSubscriberRecordChangeMethod = UDMSubscriberRecordChangeMethod
  * @type {number}
  */
 export
-const UDMSubscriberRecordChangeMethod_serviceIDChange: UDMSubscriberRecordChangeMethod = UDMSubscriberRecordChangeMethod.serviceIDChange; /* LONG_NAMED_ENUMERATED_VALUE */
+const UDMSubscriberRecordChangeMethod_serviceIDChange: _enum_for_UDMSubscriberRecordChangeMethod.serviceIDChange = UDMSubscriberRecordChangeMethod.serviceIDChange; /* LONG_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary serviceIDChange
@@ -309,7 +309,7 @@ const UDMSubscriberRecordChangeMethod_serviceIDChange: UDMSubscriberRecordChange
  * @type {number}
  */
 export
-const serviceIDChange: UDMSubscriberRecordChangeMethod = UDMSubscriberRecordChangeMethod.serviceIDChange; /* SHORT_NAMED_ENUMERATED_VALUE */
+const serviceIDChange: _enum_for_UDMSubscriberRecordChangeMethod.serviceIDChange = UDMSubscriberRecordChangeMethod.serviceIDChange; /* SHORT_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary UDMSubscriberRecordChangeMethod_multipleIDChanges
@@ -324,7 +324,7 @@ const serviceIDChange: UDMSubscriberRecordChangeMethod = UDMSubscriberRecordChan
  * @type {number}
  */
 export
-const UDMSubscriberRecordChangeMethod_multipleIDChanges: UDMSubscriberRecordChangeMethod = UDMSubscriberRecordChangeMethod.multipleIDChanges; /* LONG_NAMED_ENUMERATED_VALUE */
+const UDMSubscriberRecordChangeMethod_multipleIDChanges: _enum_for_UDMSubscriberRecordChangeMethod.multipleIDChanges = UDMSubscriberRecordChangeMethod.multipleIDChanges; /* LONG_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary multipleIDChanges
@@ -339,7 +339,7 @@ const UDMSubscriberRecordChangeMethod_multipleIDChanges: UDMSubscriberRecordChan
  * @type {number}
  */
 export
-const multipleIDChanges: UDMSubscriberRecordChangeMethod = UDMSubscriberRecordChangeMethod.multipleIDChanges; /* SHORT_NAMED_ENUMERATED_VALUE */
+const multipleIDChanges: _enum_for_UDMSubscriberRecordChangeMethod.multipleIDChanges = UDMSubscriberRecordChangeMethod.multipleIDChanges; /* SHORT_NAMED_ENUMERATED_VALUE */
 export const _decode_UDMSubscriberRecordChangeMethod: $.ASN1Decoder<UDMSubscriberRecordChangeMethod> = $._decodeEnumerated;
 export const _encode_UDMSubscriberRecordChangeMethod: $.ASN1Encoder<UDMSubscriberRecordChangeMethod> = $._encodeEnumerated;
 

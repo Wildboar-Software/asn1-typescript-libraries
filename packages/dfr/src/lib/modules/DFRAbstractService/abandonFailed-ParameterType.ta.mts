@@ -1,6 +1,6 @@
 /* eslint-disable */
 import {
-    ASN1Element as _Element,
+    type ASN1Element as _Element,
     ASN1TagClass as _TagClass,
     ASN1Construction as _Construction,
     ASN1UniversalType as _UniversalType,
@@ -38,26 +38,32 @@ import {
  */
 export
 class abandonFailed_ParameterType {
+    /**
+     * @summary `problem`.
+     * @description
+     *
+     * Why abandon failed.
+     * @public
+     * @readonly
+     */
+    public readonly problem: AbandonProblem;
+    /**
+     * @summary `operation`.
+     * @description
+     *
+     * Invoke-id of the operation that was not abandoned.
+     * @public
+     * @readonly
+     */
+    public readonly operation: InvokeId;
+
     constructor (
-        /**
-         * @summary `problem`.
-         * @description
-         *
-         * Why abandon failed.
-         * @public
-         * @readonly
-         */
-        readonly problem: AbandonProblem,
-        /**
-         * @summary `operation`.
-         * @description
-         *
-         * Invoke-id of the operation that was not abandoned.
-         * @public
-         * @readonly
-         */
-        readonly operation: InvokeId
-    ) {}
+        problem: AbandonProblem,
+        operation: InvokeId
+    ) {
+        this.problem = problem;
+        this.operation = operation;
+    }
 
     /**
      * @summary Restructures an object into a abandonFailed_ParameterType
@@ -81,7 +87,7 @@ class abandonFailed_ParameterType {
          * @static
          */
 
-    public static _enum_for_problem = _enum_for_AbandonProblem;
+    public static _enum_for_problem: typeof _enum_for_AbandonProblem = _enum_for_AbandonProblem;
 }
 
 /**

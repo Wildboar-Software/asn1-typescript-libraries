@@ -1,11 +1,11 @@
 /* eslint-disable */
 import {
-    ASN1Element as _Element,
+    type ASN1Element as _Element,
     ASN1TagClass as _TagClass
 } from "@wildboar/asn1";
 import * as $ from "@wildboar/asn1/functional";
-import { PartyNumber, _decode_PartyNumber, _encode_PartyNumber } from "../Addressing-Data-Elements-asn1-97/PartyNumber.ta.mjs";
-import { ChargeIdentifier, _decode_ChargeIdentifier, _encode_ChargeIdentifier } from "../SS-AOC-Operations-asn1-97/ChargeIdentifier.ta.mjs";
+import { type PartyNumber, _decode_PartyNumber, _encode_PartyNumber } from "../Addressing-Data-Elements-asn1-97/PartyNumber.ta.mjs";
+import { type ChargeIdentifier, _decode_ChargeIdentifier, _encode_ChargeIdentifier } from "../SS-AOC-Operations-asn1-97/ChargeIdentifier.ta.mjs";
 
 /**
  * @summary ChargingAssociation

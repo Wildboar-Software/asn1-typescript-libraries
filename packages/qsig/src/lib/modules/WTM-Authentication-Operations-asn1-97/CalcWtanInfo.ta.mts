@@ -1,12 +1,12 @@
 /* eslint-disable */
 import {
-    OPTIONAL,
-    ASN1Element as _Element,
+    type OPTIONAL,
+    type ASN1Element as _Element,
     ASN1TagClass as _TagClass
 } from "@wildboar/asn1";
 import * as $ from "@wildboar/asn1/functional";
-import { AuthResponse, _decode_AuthResponse, _encode_AuthResponse } from "../WTM-Authentication-Operations-asn1-97/AuthResponse.ta.mjs";
-import { CalculationParam, _decode_CalculationParam, _encode_CalculationParam } from "../WTM-Authentication-Operations-asn1-97/CalculationParam.ta.mjs";
+import { type AuthResponse, _decode_AuthResponse, _encode_AuthResponse } from "../WTM-Authentication-Operations-asn1-97/AuthResponse.ta.mjs";
+import { type CalculationParam, _decode_CalculationParam, _encode_CalculationParam } from "../WTM-Authentication-Operations-asn1-97/CalculationParam.ta.mjs";
 
 /**
  * @summary CalcWtanInfo

@@ -1,7 +1,7 @@
 /* eslint-disable */
 import {
-    OPTIONAL,
-    ASN1Element as _Element,
+    type OPTIONAL,
+    type ASN1Element as _Element,
     ASN1TagClass as _TagClass,
     ASN1Construction as _Construction,
     ASN1UniversalType as _UniversalType,
@@ -11,9 +11,9 @@ import {
     ASN1ConstructionError as _ConstructionError,
 } from "@wildboar/asn1";
 import * as $ from "@wildboar/asn1/functional";
-import { CS_GetEventConditionAttributes_Response_groupPriorityOverride, _decode_CS_GetEventConditionAttributes_Response_groupPriorityOverride, _encode_CS_GetEventConditionAttributes_Response_groupPriorityOverride } from "../ISO-9506-MMS-1/CS-GetEventConditionAttributes-Response-groupPriorityOverride.ta.mjs";
-import { ObjectName, _decode_ObjectName, _encode_ObjectName } from "../ISO-9506-MMS-1/ObjectName.ta.mjs";
-import { CS_GetEventConditionAttributes_Response_displayEnhancement, _decode_CS_GetEventConditionAttributes_Response_displayEnhancement, _encode_CS_GetEventConditionAttributes_Response_displayEnhancement } from "../ISO-9506-MMS-1/CS-GetEventConditionAttributes-Response-displayEnhancement.ta.mjs";
+import { type CS_GetEventConditionAttributes_Response_groupPriorityOverride, _decode_CS_GetEventConditionAttributes_Response_groupPriorityOverride, _encode_CS_GetEventConditionAttributes_Response_groupPriorityOverride } from "../ISO-9506-MMS-1/CS-GetEventConditionAttributes-Response-groupPriorityOverride.ta.mjs";
+import { type ObjectName, _decode_ObjectName, _encode_ObjectName } from "../ISO-9506-MMS-1/ObjectName.ta.mjs";
+import { type CS_GetEventConditionAttributes_Response_displayEnhancement, _decode_CS_GetEventConditionAttributes_Response_displayEnhancement, _encode_CS_GetEventConditionAttributes_Response_displayEnhancement } from "../ISO-9506-MMS-1/CS-GetEventConditionAttributes-Response-displayEnhancement.ta.mjs";
 
 
 /**
@@ -47,46 +47,54 @@ import { CS_GetEventConditionAttributes_Response_displayEnhancement, _decode_CS_
  */
 export
 class CS_GetEventConditionAttributes_Response {
+    /**
+     * @summary `groupPriorityOverride`.
+     * @description
+     *
+     * Replacement priority for this condition when defined; else use `&priority`.
+     * Present only if `cspi`. Need not be implemented without ECL support.
+     *
+     * [ISO 9506-1:2003 §19.1.1.15]
+     *
+     * @public
+     * @readonly
+     */
+    public readonly groupPriorityOverride: OPTIONAL<CS_GetEventConditionAttributes_Response_groupPriorityOverride>;
+    /**
+     * @summary `listOfReferencingECL`.
+     * @description
+     *
+     * Event Condition Lists that reference this condition. `cspi`. Need not be
+     * implemented without ECL support.
+     *
+     * [ISO 9506-1:2003 §19.1.1.16]
+     *
+     * @public
+     * @readonly
+     */
+    public readonly listOfReferencingECL: OPTIONAL<ObjectName[]>;
+    /**
+     * @summary `displayEnhancement`.
+     * @description
+     *
+     * Event Condition `&displayEnhancement`. `string`/`index`/`noEnhancement`.
+     *
+     * [ISO 9506-1:2003 §19.4.1.2.11]
+     *
+     * @public
+     * @readonly
+     */
+    public readonly displayEnhancement: CS_GetEventConditionAttributes_Response_displayEnhancement;
+
     constructor (
-        /**
-         * @summary `groupPriorityOverride`.
-         * @description
-         *
-         * Replacement priority for this condition when defined; else use `&priority`.
-         * Present only if `cspi`. Need not be implemented without ECL support.
-         *
-         * [ISO 9506-1:2003 §19.1.1.15]
-         *
-         * @public
-         * @readonly
-         */
-        readonly groupPriorityOverride: OPTIONAL<CS_GetEventConditionAttributes_Response_groupPriorityOverride>,
-        /**
-         * @summary `listOfReferencingECL`.
-         * @description
-         *
-         * Event Condition Lists that reference this condition. `cspi`. Need not be
-         * implemented without ECL support.
-         *
-         * [ISO 9506-1:2003 §19.1.1.16]
-         *
-         * @public
-         * @readonly
-         */
-        readonly listOfReferencingECL: OPTIONAL<ObjectName[]>,
-        /**
-         * @summary `displayEnhancement`.
-         * @description
-         *
-         * Event Condition `&displayEnhancement`. `string`/`index`/`noEnhancement`.
-         *
-         * [ISO 9506-1:2003 §19.4.1.2.11]
-         *
-         * @public
-         * @readonly
-         */
-        readonly displayEnhancement: CS_GetEventConditionAttributes_Response_displayEnhancement
-    ) {}
+        groupPriorityOverride: OPTIONAL<CS_GetEventConditionAttributes_Response_groupPriorityOverride>,
+        listOfReferencingECL: OPTIONAL<ObjectName[]>,
+        displayEnhancement: CS_GetEventConditionAttributes_Response_displayEnhancement
+    ) {
+        this.groupPriorityOverride = groupPriorityOverride;
+        this.listOfReferencingECL = listOfReferencingECL;
+        this.displayEnhancement = displayEnhancement;
+    }
 
     /**
      * @summary Restructures an object into a CS_GetEventConditionAttributes_Response

@@ -1,7 +1,7 @@
 /* eslint-disable */
 import {
-    OPTIONAL,
-    ASN1Element as _Element,
+    type OPTIONAL,
+    type ASN1Element as _Element,
     ASN1TagClass as _TagClass,
     ASN1Construction as _Construction,
     ASN1UniversalType as _UniversalType,
@@ -12,7 +12,7 @@ import {
 } from '@wildboar/asn1';
 import * as $ from '@wildboar/asn1/functional';
 import {
-    Document_Type_Name,
+    type Document_Type_Name,
     _decode_Document_Type_Name,
     _encode_Document_Type_Name,
 } from '../IPMSFileTransferBodyPartType/Document-Type-Name.ta.mjs';
@@ -30,20 +30,26 @@ import {
  *
  */
 export class Contents_Type_Attribute_document_type {
+    /**
+     * @summary `document_type_name`.
+     * @public
+     * @readonly
+     */
+    public readonly document_type_name: Document_Type_Name;
+    /**
+     * @summary `parameter`.
+     * @public
+     * @readonly
+     */
+    public readonly parameter?: OPTIONAL<_Element>;
+
     constructor(
-        /**
-         * @summary `document_type_name`.
-         * @public
-         * @readonly
-         */
-        readonly document_type_name: Document_Type_Name,
-        /**
-         * @summary `parameter`.
-         * @public
-         * @readonly
-         */
-        readonly parameter?: OPTIONAL<_Element>
-    ) {}
+        document_type_name: Document_Type_Name,
+        parameter?: OPTIONAL<_Element>
+    ) {
+        this.document_type_name = document_type_name;
+        this.parameter = parameter;
+    }
 
     /**
      * @summary Restructures an object into a Contents_Type_Attribute_document_type

@@ -1,5 +1,5 @@
 /* eslint-disable */
-import { ASN1Element as _Element, GeneralizedTime } from "@wildboar/asn1";
+import { ASN1Element as _Element, type GeneralizedTime } from "@wildboar/asn1";
 import * as $ from "@wildboar/asn1/functional";
 
 /**
@@ -18,10 +18,10 @@ import * as $ from "@wildboar/asn1/functional";
 export type MgtGeneralizedTime = GeneralizedTime; // GeneralizedTime
 
 
-export const _decode_MgtGeneralizedTime = $._decodeGeneralizedTime;
+export const _decode_MgtGeneralizedTime: $.ASN1Decoder<Date> = $._decodeGeneralizedTime;
 
 
-export const _encode_MgtGeneralizedTime = $._encodeGeneralizedTime;
+export const _encode_MgtGeneralizedTime: $.ASN1Encoder<Date> = $._encodeGeneralizedTime;
 
 
 /* eslint-enable */

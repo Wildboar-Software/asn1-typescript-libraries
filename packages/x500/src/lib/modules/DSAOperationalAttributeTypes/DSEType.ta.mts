@@ -1,5 +1,5 @@
 /* eslint-disable */
-import { ASN1Element as _Element, BIT_STRING } from "@wildboar/asn1";
+import { ASN1Element as _Element, type BIT_STRING } from "@wildboar/asn1";
 import * as $ from "@wildboar/asn1/functional";
 
 /**
@@ -257,10 +257,10 @@ export const DSEType_ditBridge: number = 18; /* LONG_NAMED_BIT */
 export const ditBridge: number = DSEType_ditBridge; /* SHORT_NAMED_BIT */
 
 
-export const _decode_DSEType = $._decodeBitString;
+export const _decode_DSEType: $.ASN1Decoder<BIT_STRING> = $._decodeBitString;
 
 
-export const _encode_DSEType = $._encodeBitString;
+export const _encode_DSEType: $.ASN1Encoder<BIT_STRING> = $._encodeBitString;
 
 
 /* eslint-enable */

@@ -1,6 +1,6 @@
 /* eslint-disable */
 import {
-    ASN1Element as _Element,
+    type ASN1Element as _Element,
     ASN1TagClass as _TagClass,
     ASN1Construction as _Construction,
     ASN1UniversalType as _UniversalType,
@@ -76,7 +76,7 @@ export type InformationTransferCapabilities = _enum_for_InformationTransferCapab
  *
  * @enum {number}
  */
-export const InformationTransferCapabilities = _enum_for_InformationTransferCapabilities;
+export const InformationTransferCapabilities: typeof _enum_for_InformationTransferCapabilities = _enum_for_InformationTransferCapabilities;
 
 
 /**
@@ -84,7 +84,7 @@ export const InformationTransferCapabilities = _enum_for_InformationTransferCapa
  * @constant
  * @type {number}
  */
-export const InformationTransferCapabilities_speech: InformationTransferCapabilities =
+export const InformationTransferCapabilities_speech: _enum_for_InformationTransferCapabilities.speech =
     InformationTransferCapabilities.speech; /* LONG_NAMED_ENUMERATED_VALUE */
 
 
@@ -93,7 +93,7 @@ export const InformationTransferCapabilities_speech: InformationTransferCapabili
  * @constant
  * @type {number}
  */
-export const speech: InformationTransferCapabilities =
+export const speech: _enum_for_InformationTransferCapabilities.speech =
     InformationTransferCapabilities.speech; /* SHORT_NAMED_ENUMERATED_VALUE */
 
 
@@ -102,7 +102,7 @@ export const speech: InformationTransferCapabilities =
  * @constant
  * @type {number}
  */
-export const InformationTransferCapabilities_audio3pt1: InformationTransferCapabilities =
+export const InformationTransferCapabilities_audio3pt1: _enum_for_InformationTransferCapabilities.audio3pt1 =
     InformationTransferCapabilities.audio3pt1; /* LONG_NAMED_ENUMERATED_VALUE */
 
 
@@ -111,7 +111,7 @@ export const InformationTransferCapabilities_audio3pt1: InformationTransferCapab
  * @constant
  * @type {number}
  */
-export const audio3pt1: InformationTransferCapabilities =
+export const audio3pt1: _enum_for_InformationTransferCapabilities.audio3pt1 =
     InformationTransferCapabilities.audio3pt1; /* SHORT_NAMED_ENUMERATED_VALUE */
 
 
@@ -120,7 +120,7 @@ export const audio3pt1: InformationTransferCapabilities =
  * @constant
  * @type {number}
  */
-export const InformationTransferCapabilities_audio7: InformationTransferCapabilities =
+export const InformationTransferCapabilities_audio7: _enum_for_InformationTransferCapabilities.audio7 =
     InformationTransferCapabilities.audio7; /* LONG_NAMED_ENUMERATED_VALUE */
 
 
@@ -129,7 +129,7 @@ export const InformationTransferCapabilities_audio7: InformationTransferCapabili
  * @constant
  * @type {number}
  */
-export const audio7: InformationTransferCapabilities =
+export const audio7: _enum_for_InformationTransferCapabilities.audio7 =
     InformationTransferCapabilities.audio7; /* SHORT_NAMED_ENUMERATED_VALUE */
 
 
@@ -138,7 +138,7 @@ export const audio7: InformationTransferCapabilities =
  * @constant
  * @type {number}
  */
-export const InformationTransferCapabilities_audioComb: InformationTransferCapabilities =
+export const InformationTransferCapabilities_audioComb: _enum_for_InformationTransferCapabilities.audioComb =
     InformationTransferCapabilities.audioComb; /* LONG_NAMED_ENUMERATED_VALUE */
 
 
@@ -147,7 +147,7 @@ export const InformationTransferCapabilities_audioComb: InformationTransferCapab
  * @constant
  * @type {number}
  */
-export const audioComb: InformationTransferCapabilities =
+export const audioComb: _enum_for_InformationTransferCapabilities.audioComb =
     InformationTransferCapabilities.audioComb; /* SHORT_NAMED_ENUMERATED_VALUE */
 
 
@@ -156,7 +156,7 @@ export const audioComb: InformationTransferCapabilities =
  * @constant
  * @type {number}
  */
-export const InformationTransferCapabilities_digitalRestricted56: InformationTransferCapabilities =
+export const InformationTransferCapabilities_digitalRestricted56: _enum_for_InformationTransferCapabilities.digitalRestricted56 =
     InformationTransferCapabilities.digitalRestricted56; /* LONG_NAMED_ENUMERATED_VALUE */
 
 
@@ -165,7 +165,7 @@ export const InformationTransferCapabilities_digitalRestricted56: InformationTra
  * @constant
  * @type {number}
  */
-export const digitalRestricted56: InformationTransferCapabilities =
+export const digitalRestricted56: _enum_for_InformationTransferCapabilities.digitalRestricted56 =
     InformationTransferCapabilities.digitalRestricted56; /* SHORT_NAMED_ENUMERATED_VALUE */
 
 
@@ -174,7 +174,7 @@ export const digitalRestricted56: InformationTransferCapabilities =
  * @constant
  * @type {number}
  */
-export const InformationTransferCapabilities_digitalUnrestricted64: InformationTransferCapabilities =
+export const InformationTransferCapabilities_digitalUnrestricted64: _enum_for_InformationTransferCapabilities.digitalUnrestricted64 =
     InformationTransferCapabilities.digitalUnrestricted64; /* LONG_NAMED_ENUMERATED_VALUE */
 
 
@@ -183,7 +183,7 @@ export const InformationTransferCapabilities_digitalUnrestricted64: InformationT
  * @constant
  * @type {number}
  */
-export const digitalUnrestricted64: InformationTransferCapabilities =
+export const digitalUnrestricted64: _enum_for_InformationTransferCapabilities.digitalUnrestricted64 =
     InformationTransferCapabilities.digitalUnrestricted64; /* SHORT_NAMED_ENUMERATED_VALUE */
 
 
@@ -199,7 +199,22 @@ let _cached_decoder_for_InformationTransferCapabilities: $.ASN1Decoder<Informati
 export function _decode_InformationTransferCapabilities(el: _Element): InformationTransferCapabilities {
     if (!_cached_decoder_for_InformationTransferCapabilities) {
         _cached_decoder_for_InformationTransferCapabilities =
-            $._decodeEnumerated;
+            function (el: _Element): InformationTransferCapabilities {
+                const enumerated = $._decodeEnumerated(el);
+                switch (enumerated) {
+                    case InformationTransferCapabilities.speech: return InformationTransferCapabilities.speech;
+                    case InformationTransferCapabilities.audio3pt1: return InformationTransferCapabilities.audio3pt1;
+                    case InformationTransferCapabilities.audio7: return InformationTransferCapabilities.audio7;
+                    case InformationTransferCapabilities.audioComb: return InformationTransferCapabilities.audioComb;
+                    case InformationTransferCapabilities.digitalRestricted56: return InformationTransferCapabilities.digitalRestricted56;
+                    case InformationTransferCapabilities.digitalUnrestricted64: return InformationTransferCapabilities.digitalUnrestricted64;
+                    default:
+                        throw new _ConstructionError(
+                            'Invalid ENUMERATED value ' + enumerated + ' for InformationTransferCapabilities.',
+                            el,
+                        );
+                }
+            };
     }
     return _cached_decoder_for_InformationTransferCapabilities(el);
 }
@@ -221,7 +236,7 @@ export function _encode_InformationTransferCapabilities(
 ): _Element {
     if (!_cached_encoder_for_InformationTransferCapabilities) {
         _cached_encoder_for_InformationTransferCapabilities =
-            $._encodeEnumerated;
+            $._encodeEnumerated as $.ASN1Encoder<InformationTransferCapabilities>;
     }
     return _cached_encoder_for_InformationTransferCapabilities(value, elGetter);
 }

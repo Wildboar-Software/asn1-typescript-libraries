@@ -1,7 +1,7 @@
 /* eslint-disable */
 import {
-    OPTIONAL,
-    ASN1Element as _Element,
+    type OPTIONAL,
+    type ASN1Element as _Element,
     ASN1TagClass as _TagClass,
     ASN1Construction as _Construction,
     ASN1UniversalType as _UniversalType,
@@ -11,11 +11,11 @@ import {
     ASN1ConstructionError as _ConstructionError,
 } from "@wildboar/asn1";
 import * as $ from "@wildboar/asn1/functional";
-import { AssistingSSPIPRoutingAddress, _decode_AssistingSSPIPRoutingAddress, _encode_AssistingSSPIPRoutingAddress } from "../Core-INAP-CS1-DataTypes/AssistingSSPIPRoutingAddress.ta.mjs";
-import { CorrelationID, _decode_CorrelationID, _encode_CorrelationID } from "../Core-INAP-CS1-DataTypes/CorrelationID.ta.mjs";
-import { ScfID, _decode_ScfID, _encode_ScfID } from "../Core-INAP-CS1-DataTypes/ScfID.ta.mjs";
+import { type AssistingSSPIPRoutingAddress, _decode_AssistingSSPIPRoutingAddress, _encode_AssistingSSPIPRoutingAddress } from "../Core-INAP-CS1-DataTypes/AssistingSSPIPRoutingAddress.ta.mjs";
+import { type CorrelationID, _decode_CorrelationID, _encode_CorrelationID } from "../Core-INAP-CS1-DataTypes/CorrelationID.ta.mjs";
+import { type ScfID, _decode_ScfID, _encode_ScfID } from "../Core-INAP-CS1-DataTypes/ScfID.ta.mjs";
 import { ExtensionField, _decode_ExtensionField, _encode_ExtensionField } from "../Core-INAP-CS1-DataTypes/ExtensionField.ta.mjs";
-import { ServiceInteractionIndicators, _decode_ServiceInteractionIndicators, _encode_ServiceInteractionIndicators } from "../Core-INAP-CS1-DataTypes/ServiceInteractionIndicators.ta.mjs";
+import { type ServiceInteractionIndicators, _decode_ServiceInteractionIndicators, _encode_ServiceInteractionIndicators } from "../Core-INAP-CS1-DataTypes/ServiceInteractionIndicators.ta.mjs";
 
 
 /**
@@ -27,9 +27,9 @@ import { ServiceInteractionIndicators, _decode_ServiceInteractionIndicators, _en
  * ```asn1
  * EstablishTemporaryConnectionArg ::= SEQUENCE {
  *      assistingSSPIPRoutingAddress     [0] AssistingSSPIPRoutingAddress,
- *      correlationID     [1] CorrelationID     OPTIONAL,
- *      scfID     [3] ScfID     OPTIONAL,
- *      extensions     [4] SEQUENCE SIZE(1..numOfExtensions) OF ExtensionField     OPTIONAL,
+ *      correlationID     [1] CorrelationID     type OPTIONAL,
+ *      scfID     [3] ScfID     type OPTIONAL,
+ *      extensions     [4] SEQUENCE SIZE(1..numOfExtensions) OF ExtensionField     type OPTIONAL,
  *      serviceInteractionIndicators     [30] ServiceInteractionIndicators     OPTIONAL
  * --  ...
  *      }
@@ -39,38 +39,50 @@ import { ServiceInteractionIndicators, _decode_ServiceInteractionIndicators, _en
  */
 export
 class EstablishTemporaryConnectionArg {
+    /**
+     * @summary `assistingSSPIPRoutingAddress`.
+     * @public
+     * @readonly
+     */
+    public readonly assistingSSPIPRoutingAddress: AssistingSSPIPRoutingAddress;
+    /**
+     * @summary `correlationID`.
+     * @public
+     * @readonly
+     */
+    public readonly correlationID?: OPTIONAL<CorrelationID>;
+    /**
+     * @summary `scfID`.
+     * @public
+     * @readonly
+     */
+    public readonly scfID?: OPTIONAL<ScfID>;
+    /**
+     * @summary `extensions`.
+     * @public
+     * @readonly
+     */
+    public readonly extensions?: OPTIONAL<ExtensionField[]>;
+    /**
+     * @summary `serviceInteractionIndicators`.
+     * @public
+     * @readonly
+     */
+    public readonly serviceInteractionIndicators?: OPTIONAL<ServiceInteractionIndicators>;
+
     constructor (
-        /**
-         * @summary `assistingSSPIPRoutingAddress`.
-         * @public
-         * @readonly
-         */
-        readonly assistingSSPIPRoutingAddress: AssistingSSPIPRoutingAddress,
-        /**
-         * @summary `correlationID`.
-         * @public
-         * @readonly
-         */
-        readonly correlationID?: OPTIONAL<CorrelationID>,
-        /**
-         * @summary `scfID`.
-         * @public
-         * @readonly
-         */
-        readonly scfID?: OPTIONAL<ScfID>,
-        /**
-         * @summary `extensions`.
-         * @public
-         * @readonly
-         */
-        readonly extensions?: OPTIONAL<ExtensionField[]>,
-        /**
-         * @summary `serviceInteractionIndicators`.
-         * @public
-         * @readonly
-         */
-        readonly serviceInteractionIndicators?: OPTIONAL<ServiceInteractionIndicators>
-    ) {}
+        assistingSSPIPRoutingAddress: AssistingSSPIPRoutingAddress,
+        correlationID?: OPTIONAL<CorrelationID>,
+        scfID?: OPTIONAL<ScfID>,
+        extensions?: OPTIONAL<ExtensionField[]>,
+        serviceInteractionIndicators?: OPTIONAL<ServiceInteractionIndicators>
+    ) {
+        this.assistingSSPIPRoutingAddress = assistingSSPIPRoutingAddress;
+        this.correlationID = correlationID;
+        this.scfID = scfID;
+        this.extensions = extensions;
+        this.serviceInteractionIndicators = serviceInteractionIndicators;
+    }
 
     /**
      * @summary Restructures an object into a EstablishTemporaryConnectionArg

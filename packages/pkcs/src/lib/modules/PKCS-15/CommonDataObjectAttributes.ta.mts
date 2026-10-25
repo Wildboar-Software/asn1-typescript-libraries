@@ -1,12 +1,12 @@
 /* eslint-disable */
 import {
-    ASN1Element as _Element,
+    type ASN1Element as _Element,
     ASN1TagClass as _TagClass,
-    OBJECT_IDENTIFIER,
-    OPTIONAL,
+    type OBJECT_IDENTIFIER,
+    type OPTIONAL,
 } from "@wildboar/asn1";
 import * as $ from "@wildboar/asn1/functional";
-import { Label, _decode_Label, _encode_Label } from "../PKCS-15/Label.ta.mjs";
+import { type Label, _decode_Label, _encode_Label } from "../PKCS-15/Label.ta.mjs";
 
 /**
  * @summary CommonDataObjectAttributes
@@ -24,26 +24,34 @@ import { Label, _decode_Label, _encode_Label } from "../PKCS-15/Label.ta.mjs";
  *
  */
 export class CommonDataObjectAttributes {
+    /**
+     * @summary `applicationName`.
+     * @public
+     * @readonly
+     */
+    public readonly applicationName?: OPTIONAL<Label>;
+    /**
+     * @summary `applicationOID`.
+     * @public
+     * @readonly
+     */
+    public readonly applicationOID?: OPTIONAL<OBJECT_IDENTIFIER>;
+    /**
+     * @summary Extensions that are not recognized.
+     * @public
+     * @readonly
+     */
+    public readonly _unrecognizedExtensionsList: _Element[];
+
     constructor(
-        /**
-         * @summary `applicationName`.
-         * @public
-         * @readonly
-         */
-        readonly applicationName?: OPTIONAL<Label>,
-        /**
-         * @summary `applicationOID`.
-         * @public
-         * @readonly
-         */
-        readonly applicationOID?: OPTIONAL<OBJECT_IDENTIFIER>,
-        /**
-         * @summary Extensions that are not recognized.
-         * @public
-         * @readonly
-         */
-        readonly _unrecognizedExtensionsList: _Element[] = []
-    ) {}
+        applicationName?: OPTIONAL<Label>,
+        applicationOID?: OPTIONAL<OBJECT_IDENTIFIER>,
+        _unrecognizedExtensionsList: _Element[] = []
+    ) {
+        this.applicationName = applicationName;
+        this.applicationOID = applicationOID;
+        this._unrecognizedExtensionsList = _unrecognizedExtensionsList;
+    }
 
     /**
      * @summary Restructures an object into a CommonDataObjectAttributes

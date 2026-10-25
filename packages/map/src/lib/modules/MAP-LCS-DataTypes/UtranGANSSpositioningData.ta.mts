@@ -1,8 +1,8 @@
 /* eslint-disable */
 import {
-    ASN1Element as _Element,
+    type ASN1Element as _Element,
     ASN1SizeError,
-    OCTET_STRING
+    type OCTET_STRING
 } from "@wildboar/asn1";
 import * as $ from "@wildboar/asn1/functional";
 
@@ -47,7 +47,7 @@ export const _decode_UtranGANSSpositioningData = (el: _Element): UtranGANSSposit
  * @param elGetter A function that can be used to get new ASN.1 elements.
  * @returns {_Element} The UtranGANSSpositioningData, encoded as an ASN.1 Element.
  */
-export const _encode_UtranGANSSpositioningData = $._encodeOctetString;
+export const _encode_UtranGANSSpositioningData: $.ASN1Encoder<OCTET_STRING> = $._encodeOctetString;
 
 
 /* eslint-enable */

@@ -1,7 +1,7 @@
 /* eslint-disable */
 import {
     ASN1ConstructionError as _ConstructionError,
-    ASN1Element as _Element,
+    type ASN1Element as _Element,
     ASN1TagClass as _TagClass
 } from "@wildboar/asn1";
 import * as $ from "@wildboar/asn1/functional";
@@ -33,19 +33,23 @@ import { type Iccid, _decode_Iccid, _encode_Iccid } from "@wildboar/sgp22/RSPDef
  */
 export
 class Psmo_disable {
+    /**
+     * @summary `iccid`.
+     * @description
+     * ICCID of the Profile to disable, as defined in SGP.22. SGP.32 v1.2, section
+     * 2.11.1.1. Section 3.4.2 stops with a PSMO failure when that ICCID matches no
+     * installed Profile, and when the Profile is in any state other than Enabled.
+     * Section 3.4.2 does not name those result codes.
+     * @public
+     * @readonly
+     */
+    public readonly iccid: Iccid;
+
     constructor (
-        /**
-         * @summary `iccid`.
-         * @description
-         * ICCID of the Profile to disable, as defined in SGP.22. SGP.32 v1.2, section
-         * 2.11.1.1. Section 3.4.2 stops with a PSMO failure when that ICCID matches no
-         * installed Profile, and when the Profile is in any state other than Enabled.
-         * Section 3.4.2 does not name those result codes.
-         * @public
-         * @readonly
-         */
-        readonly iccid: Iccid
-    ) {}
+        iccid: Iccid
+    ) {
+        this.iccid = iccid;
+    }
 
     /**
      * @summary Restructures an object into a Psmo_disable

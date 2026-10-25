@@ -1,8 +1,8 @@
 /* eslint-disable */
 import {
     ASN1SizeError,
-    VisibleString,
-    ASN1Element as _Element,
+    type VisibleString,
+    type ASN1Element as _Element,
 } from "@wildboar/asn1";
 import * as $ from "@wildboar/asn1/functional";
 
@@ -47,7 +47,7 @@ export function _decode_URI (el: _Element): URI {
  * @param elGetter A function that can be used to get new ASN.1 elements.
  * @returns {_Element} The URI, encoded as an ASN.1 Element.
  */
-export const _encode_URI = $._encodeVisibleString;
+export const _encode_URI: $.ASN1Encoder<string> = $._encodeVisibleString;
 
 
 /* eslint-enable */

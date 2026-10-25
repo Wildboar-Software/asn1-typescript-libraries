@@ -1,6 +1,6 @@
 /* eslint-disable */
 import {
-    ASN1Element as _Element,
+    type ASN1Element as _Element,
     ASN1TagClass as _TagClass,
     ASN1Construction as _Construction,
     ASN1UniversalType as _UniversalType,
@@ -10,9 +10,9 @@ import {
     ASN1ConstructionError as _ConstructionError,
 } from "@wildboar/asn1";
 import * as $ from "@wildboar/asn1/functional";
-import { ErrorControl, _decode_ErrorControl, _encode_ErrorControl } from "../V59/ErrorControl.ta.mjs";
+import { type ErrorControl, _decode_ErrorControl, _encode_ErrorControl } from "../V59/ErrorControl.ta.mjs";
 
-import { Compression, _decode_Compression, _encode_Compression } from "../V59/Compression.ta.mjs";
+import { type Compression, _decode_Compression, _encode_Compression } from "../V59/Compression.ta.mjs";
 
 /**
  * @summary Protocol_Item
@@ -42,7 +42,7 @@ class Protocol_Item {
      * @public
      * @readonly
      */
-    readonly errorControlStat: ErrorControl;
+    public readonly errorControlStat: ErrorControl;
     /**
      * @summary `compStat`.
      * @description
@@ -52,13 +52,13 @@ class Protocol_Item {
      * @public
      * @readonly
      */
-    readonly compStat: Compression;
+    public readonly compStat: Compression;
     /**
      * @summary Extensions that are not recognized.
      * @public
      * @readonly
      */
-    readonly _unrecognizedExtensionsList: _Element[];
+    public readonly _unrecognizedExtensionsList: _Element[];
 
     constructor (
         errorControlStat: ErrorControl,

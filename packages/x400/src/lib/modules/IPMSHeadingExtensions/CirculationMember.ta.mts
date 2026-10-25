@@ -1,7 +1,7 @@
 /* eslint-disable */
 import {
-    OPTIONAL,
-    ASN1Element as _Element,
+    type OPTIONAL,
+    type ASN1Element as _Element,
     ASN1TagClass as _TagClass,
     ASN1Construction as _Construction,
     ASN1UniversalType as _UniversalType,
@@ -17,7 +17,7 @@ import {
     _encode_RecipientSpecifier,
 } from '../IPMSInformationObjects/RecipientSpecifier.ta.mjs';
 import {
-    Checkmark,
+    type Checkmark,
     _decode_Checkmark,
     _encode_Checkmark,
 } from '../IPMSHeadingExtensions/Checkmark.ta.mjs';
@@ -46,20 +46,26 @@ import {
  *
  */
 export class CirculationMember {
+    /**
+     * @summary `circulation_recipient`.
+     * @public
+     * @readonly
+     */
+    public readonly circulation_recipient: RecipientSpecifier;
+    /**
+     * @summary `checked`.
+     * @public
+     * @readonly
+     */
+    public readonly checked?: OPTIONAL<Checkmark>;
+
     constructor(
-        /**
-         * @summary `circulation_recipient`.
-         * @public
-         * @readonly
-         */
-        readonly circulation_recipient: RecipientSpecifier,
-        /**
-         * @summary `checked`.
-         * @public
-         * @readonly
-         */
-        readonly checked?: OPTIONAL<Checkmark>
-    ) {}
+        circulation_recipient: RecipientSpecifier,
+        checked?: OPTIONAL<Checkmark>
+    ) {
+        this.circulation_recipient = circulation_recipient;
+        this.checked = checked;
+    }
 
     /**
      * @summary Restructures an object into a CirculationMember

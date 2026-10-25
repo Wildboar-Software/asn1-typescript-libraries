@@ -1,6 +1,6 @@
 /* eslint-disable */
 import {
-    ASN1Element as _Element,
+    type ASN1Element as _Element,
     ASN1TagClass as _TagClass,
     ASN1Construction as _Construction,
     ASN1UniversalType as _UniversalType,
@@ -75,7 +75,7 @@ export type ResultReportIndicator = _enum_for_ResultReportIndicator;
  *
  * @enum {number}
  */
-export const ResultReportIndicator = _enum_for_ResultReportIndicator;
+export const ResultReportIndicator: typeof _enum_for_ResultReportIndicator = _enum_for_ResultReportIndicator;
 
 /**
  * @summary ResultReportIndicator_resultReportForPassedSequences
@@ -85,7 +85,7 @@ export const ResultReportIndicator = _enum_for_ResultReportIndicator;
  * @constant
  * @type {number}
  */
-export const ResultReportIndicator_resultReportForPassedSequences: ResultReportIndicator =
+export const ResultReportIndicator_resultReportForPassedSequences: _enum_for_ResultReportIndicator.resultReportForPassedSequences =
     ResultReportIndicator.resultReportForPassedSequences; /* LONG_NAMED_ENUMERATED_VALUE */
 
 /**
@@ -96,7 +96,7 @@ export const ResultReportIndicator_resultReportForPassedSequences: ResultReportI
  * @constant
  * @type {number}
  */
-export const resultReportForPassedSequences: ResultReportIndicator =
+export const resultReportForPassedSequences: _enum_for_ResultReportIndicator.resultReportForPassedSequences =
     ResultReportIndicator.resultReportForPassedSequences; /* SHORT_NAMED_ENUMERATED_VALUE */
 
 /**
@@ -107,7 +107,7 @@ export const resultReportForPassedSequences: ResultReportIndicator =
  * @constant
  * @type {number}
  */
-export const ResultReportIndicator_noResultReportForPassedSequences: ResultReportIndicator =
+export const ResultReportIndicator_noResultReportForPassedSequences: _enum_for_ResultReportIndicator.noResultReportForPassedSequences =
     ResultReportIndicator.noResultReportForPassedSequences; /* LONG_NAMED_ENUMERATED_VALUE */
 
 /**
@@ -118,14 +118,25 @@ export const ResultReportIndicator_noResultReportForPassedSequences: ResultRepor
  * @constant
  * @type {number}
  */
-export const noResultReportForPassedSequences: ResultReportIndicator =
+export const noResultReportForPassedSequences: _enum_for_ResultReportIndicator.noResultReportForPassedSequences =
     ResultReportIndicator.noResultReportForPassedSequences; /* SHORT_NAMED_ENUMERATED_VALUE */
 
 
-export const _decode_ResultReportIndicator = $._decodeEnumerated;
+export function _decode_ResultReportIndicator(el: _Element): ResultReportIndicator {
+    const enumerated = $._decodeEnumerated(el);
+    switch (enumerated) {
+        case ResultReportIndicator.resultReportForPassedSequences: return ResultReportIndicator.resultReportForPassedSequences;
+        case ResultReportIndicator.noResultReportForPassedSequences: return ResultReportIndicator.noResultReportForPassedSequences;
+        default:
+            throw new _ConstructionError(
+                'Invalid ENUMERATED value ' + enumerated + ' for ResultReportIndicator.',
+                el,
+            );
+    }
+}
 
 
-export const _encode_ResultReportIndicator = $._encodeEnumerated;
+export const _encode_ResultReportIndicator: $.ASN1Encoder<ResultReportIndicator> = $._encodeEnumerated as $.ASN1Encoder<ResultReportIndicator>;
 
 
 /* eslint-enable */

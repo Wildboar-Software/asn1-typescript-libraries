@@ -1,6 +1,6 @@
 /* eslint-disable */
 import {
-  OPTIONAL,
+  type OPTIONAL,
   ASN1Element as _Element,
   ASN1TagClass as _TagClass,
   ASN1Construction as _Construction,
@@ -12,18 +12,18 @@ import {
 } from '@wildboar/asn1';
 import * as $ from '@wildboar/asn1/functional';
 import {
-  Action_Result,
+  type Action_Result,
     Action_Result_success,
   _decode_Action_Result,
   _encode_Action_Result,
 } from '../ISO8571-FTAM/Action-Result.ta.mjs';
 import {
-  Destination_File_Directory,
+  type Destination_File_Directory,
   _decode_Destination_File_Directory,
   _encode_Destination_File_Directory,
 } from '../ISO8571-FTAM/Destination-File-Directory.ta.mjs';
 import {
-  Diagnostic,
+  type Diagnostic,
   _decode_Diagnostic,
   _encode_Diagnostic,
 } from '../ISO8571-FTAM/Diagnostic.ta.mjs';
@@ -59,7 +59,7 @@ export class F_CHANGE_PREFIX_response {
    * @public
    * @readonly
    */
-  readonly action_result?: OPTIONAL<Action_Result>;
+  public readonly action_result?: OPTIONAL<Action_Result>;
   /**
    * @summary `destination_file_directory`.
    * @description
@@ -70,7 +70,7 @@ export class F_CHANGE_PREFIX_response {
    * @public
    * @readonly
    */
-  readonly destination_file_directory?: OPTIONAL<Destination_File_Directory>;
+  public readonly destination_file_directory?: OPTIONAL<Destination_File_Directory>;
   /**
    * @summary `diagnostic`.
    * @description
@@ -81,7 +81,7 @@ export class F_CHANGE_PREFIX_response {
    * @public
    * @readonly
    */
-  readonly diagnostic?: OPTIONAL<Diagnostic>;
+  public readonly diagnostic?: OPTIONAL<Diagnostic>;
 
   constructor(
     action_result?: OPTIONAL<Action_Result>,

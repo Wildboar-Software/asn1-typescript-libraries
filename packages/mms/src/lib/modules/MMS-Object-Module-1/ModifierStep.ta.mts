@@ -1,7 +1,7 @@
 /* eslint-disable */
 import {
-    INTEGER,
-    ASN1Element as _Element,
+    type INTEGER,
+    type ASN1Element as _Element,
     ASN1TagClass as _TagClass,
     ASN1Construction as _Construction,
     ASN1UniversalType as _UniversalType,
@@ -11,7 +11,7 @@ import {
     ASN1ConstructionError as _ConstructionError,
 } from "@wildboar/asn1";
 import * as $ from "@wildboar/asn1/functional";
-import { Modifier, _decode_Modifier, _encode_Modifier } from "../MMS-Object-Module-1/Modifier.ta.mjs";
+import { type Modifier, _decode_Modifier, _encode_Modifier } from "../MMS-Object-Module-1/Modifier.ta.mjs";
 
 
 /**
@@ -35,30 +35,36 @@ import { Modifier, _decode_Modifier, _encode_Modifier } from "../MMS-Object-Modu
  */
 export
 class ModifierStep {
+    /**
+     * @summary `modifierID`.
+     * @description
+     *
+     * Step index; 1 is the first pre-execution modifier. ISO 9506-1:2003
+     * §7.3.1.2, §7.3.3.
+     *
+     * @public
+     * @readonly
+     */
+    public readonly modifierID: INTEGER;
+    /**
+     * @summary `modifier`.
+     * @description
+     *
+     * AttachToEventCondition or AttachToSemaphore. ISO 9506-1:2003
+     * §7.3.1.2.
+     *
+     * @public
+     * @readonly
+     */
+    public readonly modifier: Modifier;
+
     constructor (
-        /**
-         * @summary `modifierID`.
-         * @description
-         *
-         * Step index; 1 is the first pre-execution modifier. ISO 9506-1:2003
-         * §7.3.1.2, §7.3.3.
-         *
-         * @public
-         * @readonly
-         */
-        readonly modifierID: INTEGER,
-        /**
-         * @summary `modifier`.
-         * @description
-         *
-         * AttachToEventCondition or AttachToSemaphore. ISO 9506-1:2003
-         * §7.3.1.2.
-         *
-         * @public
-         * @readonly
-         */
-        readonly modifier: Modifier
-    ) {}
+        modifierID: INTEGER,
+        modifier: Modifier
+    ) {
+        this.modifierID = modifierID;
+        this.modifier = modifier;
+    }
 
     /**
      * @summary Restructures an object into a ModifierStep

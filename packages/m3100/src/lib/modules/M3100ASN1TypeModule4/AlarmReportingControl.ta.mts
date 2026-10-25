@@ -1,8 +1,8 @@
 /* eslint-disable */
 import {
-    OPTIONAL,
-    INTEGER,
-    ASN1Element as _Element,
+    type OPTIONAL,
+    type INTEGER,
+    type ASN1Element as _Element,
     ASN1TagClass as _TagClass,
     ASN1Construction as _Construction,
     ASN1UniversalType as _UniversalType,
@@ -13,12 +13,12 @@ import {
 } from '@wildboar/asn1';
 import * as $ from '@wildboar/asn1/functional';
 import {
-    ObjectInstance,
+    type ObjectInstance,
     _decode_ObjectInstance,
     _encode_ObjectInstance,
 } from '@wildboar/cmip';
 import {
-    ProbableCause,
+    type ProbableCause,
     _decode_ProbableCause,
     _encode_ProbableCause,
 } from '@wildboar/attribute-asn1module';
@@ -46,32 +46,42 @@ import {
  *
  */
 export class AlarmReportingControl {
+    /**
+     * @summary `controlledEntity`.
+     * @public
+     * @readonly
+     */
+    public readonly controlledEntity: ObjectInstance;
+    /**
+     * @summary `arcProbableCauseList`.
+     * @public
+     * @readonly
+     */
+    public readonly arcProbableCauseList: ProbableCause[];
+    /**
+     * @summary `arcState`.
+     * @public
+     * @readonly
+     */
+    public readonly arcState: ArcState;
+    /**
+     * @summary `timeRemainingInARCState`.
+     * @public
+     * @readonly
+     */
+    public readonly timeRemainingInARCState?: OPTIONAL<INTEGER>;
+
     constructor(
-        /**
-         * @summary `controlledEntity`.
-         * @public
-         * @readonly
-         */
-        readonly controlledEntity: ObjectInstance,
-        /**
-         * @summary `arcProbableCauseList`.
-         * @public
-         * @readonly
-         */
-        readonly arcProbableCauseList: ProbableCause[],
-        /**
-         * @summary `arcState`.
-         * @public
-         * @readonly
-         */
-        readonly arcState: ArcState,
-        /**
-         * @summary `timeRemainingInARCState`.
-         * @public
-         * @readonly
-         */
-        readonly timeRemainingInARCState?: OPTIONAL<INTEGER>
-    ) {}
+        controlledEntity: ObjectInstance,
+        arcProbableCauseList: ProbableCause[],
+        arcState: ArcState,
+        timeRemainingInARCState?: OPTIONAL<INTEGER>
+    ) {
+        this.controlledEntity = controlledEntity;
+        this.arcProbableCauseList = arcProbableCauseList;
+        this.arcState = arcState;
+        this.timeRemainingInARCState = timeRemainingInARCState;
+    }
 
     /**
      * @summary Restructures an object into a AlarmReportingControl
@@ -102,7 +112,7 @@ export class AlarmReportingControl {
      * @static
      */
 
-    public static _enum_for_arcState = _enum_for_ArcState;
+    public static _enum_for_arcState: typeof _enum_for_ArcState = _enum_for_ArcState;
 }
 
 

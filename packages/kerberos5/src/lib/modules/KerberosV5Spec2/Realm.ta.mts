@@ -11,7 +11,7 @@ import {
 } from '@wildboar/asn1';
 import * as $ from '@wildboar/asn1/functional';
 import {
-  KerberosString,
+  type KerberosString,
   _decode_KerberosString,
   _encode_KerberosString,
 } from '../KerberosV5Spec2/KerberosString.ta.mjs';
@@ -33,26 +33,13 @@ import {
  */
 export type Realm = KerberosString; // DefinedType
 
-
-let _cached_decoder_for_Realm: $.ASN1Decoder<Realm> | null = null;
-
-
 /**
  * @summary Decodes an ASN.1 element into a(n) Realm
  * @function
  * @param {_Element} el The element being decoded.
  * @returns {Realm} The decoded data structure.
  */
-export function _decode_Realm(el: _Element): Realm {
-  if (!_cached_decoder_for_Realm) {
-    _cached_decoder_for_Realm = _decode_KerberosString;
-  }
-  return _cached_decoder_for_Realm(el);
-}
-
-
-let _cached_encoder_for_Realm: $.ASN1Encoder<Realm> | null = null;
-
+export const _decode_Realm: $.ASN1Decoder<Realm> = _decode_KerberosString;
 
 /**
  * @summary Encodes a(n) Realm into an ASN.1 Element.
@@ -61,12 +48,7 @@ let _cached_encoder_for_Realm: $.ASN1Encoder<Realm> | null = null;
  * @param elGetter A function that can be used to get new ASN.1 elements.
  * @returns {_Element} The Realm, encoded as an ASN.1 Element.
  */
-export function _encode_Realm(value: Realm, elGetter: $.ASN1Encoder<Realm>): _Element {
-  if (!_cached_encoder_for_Realm) {
-    _cached_encoder_for_Realm = _encode_KerberosString;
-  }
-  return _cached_encoder_for_Realm(value, elGetter);
-}
+export const _encode_Realm: $.ASN1Encoder<Realm> = _encode_KerberosString;
 
 
 /* eslint-enable */

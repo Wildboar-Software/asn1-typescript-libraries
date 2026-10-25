@@ -1,18 +1,18 @@
 /* eslint-disable */
 import {
-    ASN1Element as _Element,
+    type ASN1Element as _Element,
     ASN1TagClass as _TagClass,
-    OPTIONAL,
+    type OPTIONAL,
     TRUE_BIT,
 } from "@wildboar/asn1";
 import * as $ from "@wildboar/asn1/functional";
 import {
-    Credentials,
+    type Credentials,
     _decode_Credentials,
     _encode_Credentials,
 } from "../DirectoryAbstractService/Credentials.ta.mjs";
 import {
-    Versions,
+    type Versions,
     Versions_v1 /* IMPORTED_LONG_NAMED_BIT */,
     _decode_Versions,
     _encode_Versions,
@@ -38,37 +38,45 @@ import {
  *
  */
 export class DirectoryBindArgument {
+    /**
+     * @summary `credentials`.
+     * @description
+     *
+     * CHOICE simple/strong/externalProcedure/spkm/sasl. Empty SASL
+     * `mechanism` ⇒ `inappropriateAuthentication`.
+     *
+     * @public
+     * @readonly
+     */
+    public readonly credentials?: OPTIONAL<Credentials>;
+    /**
+     * @summary `versions`.
+     * @description
+     *
+     * DEFAULT `{v1}`. v1=bit 0, v2=bit 1. v2 required for
+     * `alterValues`/`resetValue`, non-NULL modify results, and signed
+     * update errors/results.
+     *
+     * @public
+     * @readonly
+     */
+    public readonly versions?: OPTIONAL<Versions>;
+    /**
+     * @summary Extensions that are not recognized.
+     * @public
+     * @readonly
+     */
+    public readonly _unrecognizedExtensionsList: _Element[];
+
     constructor(
-        /**
-         * @summary `credentials`.
-         * @description
-         *
-         * CHOICE simple/strong/externalProcedure/spkm/sasl. Empty SASL
-         * `mechanism` ⇒ `inappropriateAuthentication`.
-         *
-         * @public
-         * @readonly
-         */
-        readonly credentials?: OPTIONAL<Credentials>,
-        /**
-         * @summary `versions`.
-         * @description
-         *
-         * DEFAULT `{v1}`. v1=bit 0, v2=bit 1. v2 required for
-         * `alterValues`/`resetValue`, non-NULL modify results, and signed
-         * update errors/results.
-         *
-         * @public
-         * @readonly
-         */
-        readonly versions?: OPTIONAL<Versions>,
-        /**
-         * @summary Extensions that are not recognized.
-         * @public
-         * @readonly
-         */
-        readonly _unrecognizedExtensionsList: _Element[] = []
-    ) {}
+        credentials?: OPTIONAL<Credentials>,
+        versions?: OPTIONAL<Versions>,
+        _unrecognizedExtensionsList: _Element[] = []
+    ) {
+        this.credentials = credentials;
+        this.versions = versions;
+        this._unrecognizedExtensionsList = _unrecognizedExtensionsList;
+    }
 
     /**
      * @summary Restructures an object into a DirectoryBindArgument

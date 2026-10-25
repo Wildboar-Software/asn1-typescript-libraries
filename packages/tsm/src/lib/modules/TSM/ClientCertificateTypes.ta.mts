@@ -1,6 +1,6 @@
 /* eslint-disable */
 import {
-    ASN1Element as _Element,
+    type ASN1Element as _Element,
     ASN1TagClass as _TagClass,
     ASN1Construction as _Construction,
     ASN1UniversalType as _UniversalType,
@@ -10,7 +10,7 @@ import {
     ASN1ConstructionError as _ConstructionError,
 } from "@wildboar/asn1";
 import * as $ from "@wildboar/asn1/functional";
-import { ClientCertificateType, _enum_for_ClientCertificateType, _decode_ClientCertificateType, _encode_ClientCertificateType } from "../TSM/ClientCertificateType.ta.mjs";
+import { type ClientCertificateType, _enum_for_ClientCertificateType, _decode_ClientCertificateType, _encode_ClientCertificateType } from "../TSM/ClientCertificateType.ta.mjs";
 
 
 

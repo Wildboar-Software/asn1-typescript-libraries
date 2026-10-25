@@ -1,8 +1,8 @@
 /* eslint-disable */
 import {
-    NULL,
-    GeneralizedTime,
-    ASN1Element as _Element,
+    type NULL,
+    type GeneralizedTime,
+    type ASN1Element as _Element,
     ASN1TagClass as _TagClass,
     ASN1Construction as _Construction,
     ASN1UniversalType as _UniversalType,
@@ -13,7 +13,7 @@ import {
 } from '@wildboar/asn1';
 import * as $ from '@wildboar/asn1/functional';
 import {
-    Timespec,
+    type Timespec,
     _decode_Timespec,
     _encode_Timespec,
 } from '../Test-ASN1Module/Timespec.ta.mjs';

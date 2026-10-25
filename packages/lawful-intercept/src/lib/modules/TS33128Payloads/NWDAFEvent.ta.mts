@@ -96,7 +96,7 @@ type NWDAFEvent = _enum_for_NWDAFEvent;
  * @enum {number}
  */
 export
-const NWDAFEvent = _enum_for_NWDAFEvent;
+const NWDAFEvent: typeof _enum_for_NWDAFEvent = _enum_for_NWDAFEvent;
 
 /**
  * @summary NWDAFEvent_serviceExperience
@@ -104,7 +104,7 @@ const NWDAFEvent = _enum_for_NWDAFEvent;
  * @type {number}
  */
 export
-const NWDAFEvent_serviceExperience: NWDAFEvent = NWDAFEvent.serviceExperience; /* LONG_NAMED_ENUMERATED_VALUE */
+const NWDAFEvent_serviceExperience: _enum_for_NWDAFEvent.serviceExperience = NWDAFEvent.serviceExperience; /* LONG_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary serviceExperience
@@ -112,7 +112,7 @@ const NWDAFEvent_serviceExperience: NWDAFEvent = NWDAFEvent.serviceExperience; /
  * @type {number}
  */
 export
-const serviceExperience: NWDAFEvent = NWDAFEvent.serviceExperience; /* SHORT_NAMED_ENUMERATED_VALUE */
+const serviceExperience: _enum_for_NWDAFEvent.serviceExperience = NWDAFEvent.serviceExperience; /* SHORT_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary NWDAFEvent_uEMobility
@@ -120,7 +120,7 @@ const serviceExperience: NWDAFEvent = NWDAFEvent.serviceExperience; /* SHORT_NAM
  * @type {number}
  */
 export
-const NWDAFEvent_uEMobility: NWDAFEvent = NWDAFEvent.uEMobility; /* LONG_NAMED_ENUMERATED_VALUE */
+const NWDAFEvent_uEMobility: _enum_for_NWDAFEvent.uEMobility = NWDAFEvent.uEMobility; /* LONG_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary uEMobility
@@ -128,7 +128,7 @@ const NWDAFEvent_uEMobility: NWDAFEvent = NWDAFEvent.uEMobility; /* LONG_NAMED_E
  * @type {number}
  */
 export
-const uEMobility: NWDAFEvent = NWDAFEvent.uEMobility; /* SHORT_NAMED_ENUMERATED_VALUE */
+const uEMobility: _enum_for_NWDAFEvent.uEMobility = NWDAFEvent.uEMobility; /* SHORT_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary NWDAFEvent_uEComm
@@ -136,7 +136,7 @@ const uEMobility: NWDAFEvent = NWDAFEvent.uEMobility; /* SHORT_NAMED_ENUMERATED_
  * @type {number}
  */
 export
-const NWDAFEvent_uEComm: NWDAFEvent = NWDAFEvent.uEComm; /* LONG_NAMED_ENUMERATED_VALUE */
+const NWDAFEvent_uEComm: _enum_for_NWDAFEvent.uEComm = NWDAFEvent.uEComm; /* LONG_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary uEComm
@@ -144,7 +144,7 @@ const NWDAFEvent_uEComm: NWDAFEvent = NWDAFEvent.uEComm; /* LONG_NAMED_ENUMERATE
  * @type {number}
  */
 export
-const uEComm: NWDAFEvent = NWDAFEvent.uEComm; /* SHORT_NAMED_ENUMERATED_VALUE */
+const uEComm: _enum_for_NWDAFEvent.uEComm = NWDAFEvent.uEComm; /* SHORT_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary NWDAFEvent_abnormalBehaviour
@@ -152,7 +152,7 @@ const uEComm: NWDAFEvent = NWDAFEvent.uEComm; /* SHORT_NAMED_ENUMERATED_VALUE */
  * @type {number}
  */
 export
-const NWDAFEvent_abnormalBehaviour: NWDAFEvent = NWDAFEvent.abnormalBehaviour; /* LONG_NAMED_ENUMERATED_VALUE */
+const NWDAFEvent_abnormalBehaviour: _enum_for_NWDAFEvent.abnormalBehaviour = NWDAFEvent.abnormalBehaviour; /* LONG_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary abnormalBehaviour
@@ -160,7 +160,7 @@ const NWDAFEvent_abnormalBehaviour: NWDAFEvent = NWDAFEvent.abnormalBehaviour; /
  * @type {number}
  */
 export
-const abnormalBehaviour: NWDAFEvent = NWDAFEvent.abnormalBehaviour; /* SHORT_NAMED_ENUMERATED_VALUE */
+const abnormalBehaviour: _enum_for_NWDAFEvent.abnormalBehaviour = NWDAFEvent.abnormalBehaviour; /* SHORT_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary NWDAFEvent_dispersion
@@ -168,7 +168,7 @@ const abnormalBehaviour: NWDAFEvent = NWDAFEvent.abnormalBehaviour; /* SHORT_NAM
  * @type {number}
  */
 export
-const NWDAFEvent_dispersion: NWDAFEvent = NWDAFEvent.dispersion; /* LONG_NAMED_ENUMERATED_VALUE */
+const NWDAFEvent_dispersion: _enum_for_NWDAFEvent.dispersion = NWDAFEvent.dispersion; /* LONG_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary dispersion
@@ -176,7 +176,7 @@ const NWDAFEvent_dispersion: NWDAFEvent = NWDAFEvent.dispersion; /* LONG_NAMED_E
  * @type {number}
  */
 export
-const dispersion: NWDAFEvent = NWDAFEvent.dispersion; /* SHORT_NAMED_ENUMERATED_VALUE */
+const dispersion: _enum_for_NWDAFEvent.dispersion = NWDAFEvent.dispersion; /* SHORT_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary NWDAFEvent_relativeProximity
@@ -184,7 +184,7 @@ const dispersion: NWDAFEvent = NWDAFEvent.dispersion; /* SHORT_NAMED_ENUMERATED_
  * @type {number}
  */
 export
-const NWDAFEvent_relativeProximity: NWDAFEvent = NWDAFEvent.relativeProximity; /* LONG_NAMED_ENUMERATED_VALUE */
+const NWDAFEvent_relativeProximity: _enum_for_NWDAFEvent.relativeProximity = NWDAFEvent.relativeProximity; /* LONG_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary relativeProximity
@@ -192,7 +192,7 @@ const NWDAFEvent_relativeProximity: NWDAFEvent = NWDAFEvent.relativeProximity; /
  * @type {number}
  */
 export
-const relativeProximity: NWDAFEvent = NWDAFEvent.relativeProximity; /* SHORT_NAMED_ENUMERATED_VALUE */
+const relativeProximity: _enum_for_NWDAFEvent.relativeProximity = NWDAFEvent.relativeProximity; /* SHORT_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary NWDAFEvent_pDUSessionTraffic
@@ -200,7 +200,7 @@ const relativeProximity: NWDAFEvent = NWDAFEvent.relativeProximity; /* SHORT_NAM
  * @type {number}
  */
 export
-const NWDAFEvent_pDUSessionTraffic: NWDAFEvent = NWDAFEvent.pDUSessionTraffic; /* LONG_NAMED_ENUMERATED_VALUE */
+const NWDAFEvent_pDUSessionTraffic: _enum_for_NWDAFEvent.pDUSessionTraffic = NWDAFEvent.pDUSessionTraffic; /* LONG_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary pDUSessionTraffic
@@ -208,7 +208,7 @@ const NWDAFEvent_pDUSessionTraffic: NWDAFEvent = NWDAFEvent.pDUSessionTraffic; /
  * @type {number}
  */
 export
-const pDUSessionTraffic: NWDAFEvent = NWDAFEvent.pDUSessionTraffic; /* SHORT_NAMED_ENUMERATED_VALUE */
+const pDUSessionTraffic: _enum_for_NWDAFEvent.pDUSessionTraffic = NWDAFEvent.pDUSessionTraffic; /* SHORT_NAMED_ENUMERATED_VALUE */
 export const _decode_NWDAFEvent: $.ASN1Decoder<NWDAFEvent> = $._decodeEnumerated;
 export const _encode_NWDAFEvent: $.ASN1Encoder<NWDAFEvent> = $._encodeEnumerated;
 

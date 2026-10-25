@@ -1,6 +1,6 @@
 /* eslint-disable */
 import {
-    ASN1Element as _Element,
+    type ASN1Element as _Element,
     ASN1TagClass as _TagClass,
     ASN1Construction as _Construction,
     ASN1UniversalType as _UniversalType,
@@ -74,7 +74,7 @@ type VersionManagementProblem = _enum_for_VersionManagementProblem;
  * @enum {number}
  */
 export
-const VersionManagementProblem = _enum_for_VersionManagementProblem;
+const VersionManagementProblem: typeof _enum_for_VersionManagementProblem = _enum_for_VersionManagementProblem;
 
 /**
  * @summary VersionManagementProblem_inappropriate_object_class
@@ -85,7 +85,7 @@ const VersionManagementProblem = _enum_for_VersionManagementProblem;
  * @type {number}
  */
 export
-const VersionManagementProblem_inappropriate_object_class: VersionManagementProblem = VersionManagementProblem.inappropriate_object_class; /* LONG_NAMED_ENUMERATED_VALUE */
+const VersionManagementProblem_inappropriate_object_class: _enum_for_VersionManagementProblem.inappropriate_object_class = VersionManagementProblem.inappropriate_object_class; /* LONG_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary inappropriate_object_class
@@ -96,7 +96,7 @@ const VersionManagementProblem_inappropriate_object_class: VersionManagementProb
  * @type {number}
  */
 export
-const inappropriate_object_class: VersionManagementProblem = VersionManagementProblem.inappropriate_object_class; /* SHORT_NAMED_ENUMERATED_VALUE */
+const inappropriate_object_class: _enum_for_VersionManagementProblem.inappropriate_object_class = VersionManagementProblem.inappropriate_object_class; /* SHORT_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary VersionManagementProblem_belongs_to_another_conceptual_document
@@ -108,7 +108,7 @@ const inappropriate_object_class: VersionManagementProblem = VersionManagementPr
  * @type {number}
  */
 export
-const VersionManagementProblem_belongs_to_another_conceptual_document: VersionManagementProblem = VersionManagementProblem.belongs_to_another_conceptual_document; /* LONG_NAMED_ENUMERATED_VALUE */
+const VersionManagementProblem_belongs_to_another_conceptual_document: _enum_for_VersionManagementProblem.belongs_to_another_conceptual_document = VersionManagementProblem.belongs_to_another_conceptual_document; /* LONG_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary belongs_to_another_conceptual_document
@@ -120,9 +120,20 @@ const VersionManagementProblem_belongs_to_another_conceptual_document: VersionMa
  * @type {number}
  */
 export
-const belongs_to_another_conceptual_document: VersionManagementProblem = VersionManagementProblem.belongs_to_another_conceptual_document; /* SHORT_NAMED_ENUMERATED_VALUE */
-export const _decode_VersionManagementProblem = $._decodeEnumerated;
-export const _encode_VersionManagementProblem = $._encodeEnumerated;
+const belongs_to_another_conceptual_document: _enum_for_VersionManagementProblem.belongs_to_another_conceptual_document = VersionManagementProblem.belongs_to_another_conceptual_document; /* SHORT_NAMED_ENUMERATED_VALUE */
+export function _decode_VersionManagementProblem(el: _Element): VersionManagementProblem {
+    const enumerated = $._decodeEnumerated(el);
+    switch (enumerated) {
+        case VersionManagementProblem.inappropriate_object_class: return VersionManagementProblem.inappropriate_object_class;
+        case VersionManagementProblem.belongs_to_another_conceptual_document: return VersionManagementProblem.belongs_to_another_conceptual_document;
+        default:
+            throw new _ConstructionError(
+                "Invalid ENUMERATED value " + enumerated + " for VersionManagementProblem.",
+                el,
+            );
+    }
+}
+export const _encode_VersionManagementProblem: $.ASN1Encoder<VersionManagementProblem> = $._encodeEnumerated as $.ASN1Encoder<VersionManagementProblem>;
 
 
 /* eslint-enable */

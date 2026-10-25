@@ -61,7 +61,7 @@ type MDTConfiguration = _enum_for_MDTConfiguration;
  * @enum {number}
  */
 export
-const MDTConfiguration = _enum_for_MDTConfiguration;
+const MDTConfiguration: typeof _enum_for_MDTConfiguration = _enum_for_MDTConfiguration;
 
 /**
  * @summary MDTConfiguration_mDTConfigurationNR
@@ -69,7 +69,7 @@ const MDTConfiguration = _enum_for_MDTConfiguration;
  * @type {number}
  */
 export
-const MDTConfiguration_mDTConfigurationNR: MDTConfiguration = MDTConfiguration.mDTConfigurationNR; /* LONG_NAMED_ENUMERATED_VALUE */
+const MDTConfiguration_mDTConfigurationNR: _enum_for_MDTConfiguration.mDTConfigurationNR = MDTConfiguration.mDTConfigurationNR; /* LONG_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary mDTConfigurationNR
@@ -77,7 +77,7 @@ const MDTConfiguration_mDTConfigurationNR: MDTConfiguration = MDTConfiguration.m
  * @type {number}
  */
 export
-const mDTConfigurationNR: MDTConfiguration = MDTConfiguration.mDTConfigurationNR; /* SHORT_NAMED_ENUMERATED_VALUE */
+const mDTConfigurationNR: _enum_for_MDTConfiguration.mDTConfigurationNR = MDTConfiguration.mDTConfigurationNR; /* SHORT_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary MDTConfiguration_mDTConfigurationEUTRA
@@ -85,7 +85,7 @@ const mDTConfigurationNR: MDTConfiguration = MDTConfiguration.mDTConfigurationNR
  * @type {number}
  */
 export
-const MDTConfiguration_mDTConfigurationEUTRA: MDTConfiguration = MDTConfiguration.mDTConfigurationEUTRA; /* LONG_NAMED_ENUMERATED_VALUE */
+const MDTConfiguration_mDTConfigurationEUTRA: _enum_for_MDTConfiguration.mDTConfigurationEUTRA = MDTConfiguration.mDTConfigurationEUTRA; /* LONG_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary mDTConfigurationEUTRA
@@ -93,7 +93,7 @@ const MDTConfiguration_mDTConfigurationEUTRA: MDTConfiguration = MDTConfiguratio
  * @type {number}
  */
 export
-const mDTConfigurationEUTRA: MDTConfiguration = MDTConfiguration.mDTConfigurationEUTRA; /* SHORT_NAMED_ENUMERATED_VALUE */
+const mDTConfigurationEUTRA: _enum_for_MDTConfiguration.mDTConfigurationEUTRA = MDTConfiguration.mDTConfigurationEUTRA; /* SHORT_NAMED_ENUMERATED_VALUE */
 export const _decode_MDTConfiguration: $.ASN1Decoder<MDTConfiguration> = $._decodeEnumerated;
 export const _encode_MDTConfiguration: $.ASN1Encoder<MDTConfiguration> = $._encodeEnumerated;
 

@@ -1,18 +1,18 @@
 /* eslint-disable */
 import {
-    ASN1Element as _Element,
+    type ASN1Element as _Element,
     ASN1TagClass as _TagClass,
-    BOOLEAN,
-    OPTIONAL,
+    type BOOLEAN,
+    type OPTIONAL,
 } from "@wildboar/asn1";
 import * as $ from "@wildboar/asn1/functional";
 import {
-    DistributionPointName,
+    type DistributionPointName,
     _decode_DistributionPointName,
     _encode_DistributionPointName,
 } from "../CertificateExtensions/DistributionPointName.ta.mjs";
 import {
-    ReasonFlags,
+    type ReasonFlags,
     _decode_ReasonFlags,
     _encode_ReasonFlags,
 } from "../CertificateExtensions/ReasonFlags.ta.mjs";
@@ -44,74 +44,90 @@ import {
  *
  */
 export class IssuingDistPointSyntax {
+    /**
+     * @summary `distributionPoint`.
+     * @public
+     * @readonly
+     */
+    public readonly distributionPoint?: OPTIONAL<DistributionPointName>;
+    /**
+     * @summary `onlyContainsUserPublicKeyCerts`.
+     * @description
+     *
+     * DEFAULT FALSE. Must not both be TRUE with onlyContainsCACerts. Both
+     * FALSE = both PKI types.
+     *
+     * @public
+     * @readonly
+     */
+    public readonly onlyContainsUserPublicKeyCerts?: OPTIONAL<BOOLEAN>;
+    /**
+     * @summary `onlyContainsCACerts`.
+     * @description
+     *
+     * DEFAULT FALSE. Must not both be TRUE with
+     * onlyContainsUserPublicKeyCerts.
+     *
+     * @public
+     * @readonly
+     */
+    public readonly onlyContainsCACerts?: OPTIONAL<BOOLEAN>;
+    /**
+     * @summary `onlySomeReasons`.
+     * @description
+     *
+     * Omitted = all reasons.
+     *
+     * @public
+     * @readonly
+     */
+    public readonly onlySomeReasons?: OPTIONAL<ReasonFlags>;
+    /**
+     * @summary `indirectCRL`.
+     * @description
+     *
+     * DEFAULT FALSE. TRUE => certificateIssuer entry extension names the
+     * cert issuer.
+     *
+     * @public
+     * @readonly
+     */
+    public readonly indirectCRL?: OPTIONAL<BOOLEAN>;
+    /**
+     * @summary `onlyContainsAttributeCerts`.
+     * @description
+     *
+     * Deprecated; use AA issuing DP. Must not mix with the PKI-only flags as
+     * TRUE together.
+     *
+     * @public
+     * @readonly
+     */
+    public readonly onlyContainsAttributeCerts?: OPTIONAL<BOOLEAN>;
+    /**
+     * @summary Extensions that are not recognized.
+     * @public
+     * @readonly
+     */
+    public readonly _unrecognizedExtensionsList: _Element[];
+
     constructor(
-        /**
-         * @summary `distributionPoint`.
-         * @public
-         * @readonly
-         */
-        readonly distributionPoint?: OPTIONAL<DistributionPointName>,
-        /**
-         * @summary `onlyContainsUserPublicKeyCerts`.
-         * @description
-         *
-         * DEFAULT FALSE. Must not both be TRUE with onlyContainsCACerts. Both
-         * FALSE = both PKI types.
-         *
-         * @public
-         * @readonly
-         */
-        readonly onlyContainsUserPublicKeyCerts?: OPTIONAL<BOOLEAN>,
-        /**
-         * @summary `onlyContainsCACerts`.
-         * @description
-         *
-         * DEFAULT FALSE. Must not both be TRUE with
-         * onlyContainsUserPublicKeyCerts.
-         *
-         * @public
-         * @readonly
-         */
-        readonly onlyContainsCACerts?: OPTIONAL<BOOLEAN>,
-        /**
-         * @summary `onlySomeReasons`.
-         * @description
-         *
-         * Omitted = all reasons.
-         *
-         * @public
-         * @readonly
-         */
-        readonly onlySomeReasons?: OPTIONAL<ReasonFlags>,
-        /**
-         * @summary `indirectCRL`.
-         * @description
-         *
-         * DEFAULT FALSE. TRUE => certificateIssuer entry extension names the
-         * cert issuer.
-         *
-         * @public
-         * @readonly
-         */
-        readonly indirectCRL?: OPTIONAL<BOOLEAN>,
-        /**
-         * @summary `onlyContainsAttributeCerts`.
-         * @description
-         *
-         * Deprecated; use AA issuing DP. Must not mix with the PKI-only flags as
-         * TRUE together.
-         *
-         * @public
-         * @readonly
-         */
-        readonly onlyContainsAttributeCerts?: OPTIONAL<BOOLEAN>,
-        /**
-         * @summary Extensions that are not recognized.
-         * @public
-         * @readonly
-         */
-        readonly _unrecognizedExtensionsList: _Element[] = []
-    ) {}
+        distributionPoint?: OPTIONAL<DistributionPointName>,
+        onlyContainsUserPublicKeyCerts?: OPTIONAL<BOOLEAN>,
+        onlyContainsCACerts?: OPTIONAL<BOOLEAN>,
+        onlySomeReasons?: OPTIONAL<ReasonFlags>,
+        indirectCRL?: OPTIONAL<BOOLEAN>,
+        onlyContainsAttributeCerts?: OPTIONAL<BOOLEAN>,
+        _unrecognizedExtensionsList: _Element[] = []
+    ) {
+        this.distributionPoint = distributionPoint;
+        this.onlyContainsUserPublicKeyCerts = onlyContainsUserPublicKeyCerts;
+        this.onlyContainsCACerts = onlyContainsCACerts;
+        this.onlySomeReasons = onlySomeReasons;
+        this.indirectCRL = indirectCRL;
+        this.onlyContainsAttributeCerts = onlyContainsAttributeCerts;
+        this._unrecognizedExtensionsList = _unrecognizedExtensionsList;
+    }
 
     /**
      * @summary Restructures an object into a IssuingDistPointSyntax

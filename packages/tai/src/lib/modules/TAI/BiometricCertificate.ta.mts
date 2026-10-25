@@ -1,6 +1,6 @@
 /* eslint-disable */
 import {
-    ASN1Element as _Element,
+    type ASN1Element as _Element,
     ASN1TagClass as _TagClass,
     ASN1Construction as _Construction,
     ASN1UniversalType as _UniversalType,
@@ -11,7 +11,7 @@ import {
 } from "@wildboar/asn1";
 import * as $ from "@wildboar/asn1/functional";
 import { SIGNED, _get_decoder_for_SIGNED, _get_encoder_for_SIGNED } from "@wildboar/x500/AuthenticationFramework";
-import { BiometricCertificateInfo, _decode_BiometricCertificateInfo, _encode_BiometricCertificateInfo } from "../TAI/BiometricCertificateInfo.ta.mjs";
+import { type BiometricCertificateInfo, _decode_BiometricCertificateInfo, _encode_BiometricCertificateInfo } from "../TAI/BiometricCertificateInfo.ta.mjs";
 /**
  * @summary BiometricCertificate
  * @description

@@ -1,7 +1,7 @@
 /* eslint-disable */
 import {
-    OPTIONAL,
-    ASN1Element as _Element,
+    type OPTIONAL,
+    type ASN1Element as _Element,
     ASN1TagClass as _TagClass,
     ASN1Construction as _Construction,
     ASN1UniversalType as _UniversalType,
@@ -12,7 +12,7 @@ import {
 } from '@wildboar/asn1';
 import * as $ from '@wildboar/asn1/functional';
 import {
-    RestoreSource,
+    type RestoreSource,
     _decode_RestoreSource,
     _encode_RestoreSource,
 } from '../BackupRestoreASN1Module/RestoreSource.ta.mjs';
@@ -47,30 +47,36 @@ import {
  *
  */
 export class RestoreArgument {
+    /**
+     * @summary `restoreSource`.
+     * @description
+     *
+     * Where the copy is read from (local object, in-line BIT
+     * STRING from the manager, or off-line remote system).
+     * Mandatory. ITU-T Rec. X.744 (10/96) §8.3.5, §9.6 Table 10,
+     * A.9.2.
+     * @public
+     * @readonly
+     */
+    public readonly restoreSource: RestoreSource;
+    /**
+     * @summary `additionalInfo`.
+     * @description
+     *
+     * Management extensions. User in Table 10. ITU-T Rec. X.744
+     * (10/96) §9.6 Table 10.
+     * @public
+     * @readonly
+     */
+    public readonly additionalInfo?: OPTIONAL<ManagementExtension[]>;
+
     constructor(
-        /**
-         * @summary `restoreSource`.
-         * @description
-         *
-         * Where the copy is read from (local object, in-line BIT
-         * STRING from the manager, or off-line remote system).
-         * Mandatory. ITU-T Rec. X.744 (10/96) §8.3.5, §9.6 Table 10,
-         * A.9.2.
-         * @public
-         * @readonly
-         */
-        readonly restoreSource: RestoreSource,
-        /**
-         * @summary `additionalInfo`.
-         * @description
-         *
-         * Management extensions. User in Table 10. ITU-T Rec. X.744
-         * (10/96) §9.6 Table 10.
-         * @public
-         * @readonly
-         */
-        readonly additionalInfo?: OPTIONAL<ManagementExtension[]>
-    ) {}
+        restoreSource: RestoreSource,
+        additionalInfo?: OPTIONAL<ManagementExtension[]>
+    ) {
+        this.restoreSource = restoreSource;
+        this.additionalInfo = additionalInfo;
+    }
 
     /**
      * @summary Restructures an object into a RestoreArgument

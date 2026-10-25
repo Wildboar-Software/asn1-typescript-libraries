@@ -1,14 +1,14 @@
 /* eslint-disable */
 import {
-    INTEGER,
-    OPTIONAL,
-    ASN1Element as _Element,
+    type INTEGER,
+    type OPTIONAL,
+    type ASN1Element as _Element,
     ASN1TagClass as _TagClass
 } from "@wildboar/asn1";
 import * as $ from "@wildboar/asn1/functional";
-import { MSISDN, _decode_MSISDN, _encode_MSISDN } from "../TS33128Payloads/MSISDN.ta.mjs";
+import { type MSISDN, _decode_MSISDN, _encode_MSISDN } from "../TS33128Payloads/MSISDN.ta.mjs";
 // export { MSISDN, _decode_MSISDN, _encode_MSISDN } from "../TS33128Payloads/MSISDN.ta.mjs";
-import { NAI, _decode_NAI, _encode_NAI } from "../TS33128Payloads/NAI.ta.mjs";
+import { type NAI, _decode_NAI, _encode_NAI } from "../TS33128Payloads/NAI.ta.mjs";
 // export { NAI, _decode_NAI, _encode_NAI } from "../TS33128Payloads/NAI.ta.mjs";
 import { PeriodicCommunicationIndicator, _decode_PeriodicCommunicationIndicator, _encode_PeriodicCommunicationIndicator, _enum_for_PeriodicCommunicationIndicator } from "../TS33128Payloads/PeriodicCommunicationIndicator.ta.mjs";
 // export { PeriodicCommunicationIndicator, _enum_for_PeriodicCommunicationIndicator, PeriodicCommunicationIndicator_periodic /* IMPORTED_LONG_ENUMERATION_ITEM */, periodic /* IMPORTED_SHORT_ENUMERATION_ITEM */, PeriodicCommunicationIndicator_nonPeriodic /* IMPORTED_LONG_ENUMERATION_ITEM */, nonPeriodic /* IMPORTED_SHORT_ENUMERATION_ITEM */, _decode_PeriodicCommunicationIndicator, _encode_PeriodicCommunicationIndicator } from "../TS33128Payloads/PeriodicCommunicationIndicator.ta.mjs";
@@ -24,9 +24,9 @@ import { TrafficProfile, _decode_TrafficProfile, _encode_TrafficProfile, _enum_f
 // export { TrafficProfile, _enum_for_TrafficProfile, TrafficProfile_singleTransUL /* IMPORTED_LONG_ENUMERATION_ITEM */, singleTransUL /* IMPORTED_SHORT_ENUMERATION_ITEM */, TrafficProfile_singleTransDL /* IMPORTED_LONG_ENUMERATION_ITEM */, singleTransDL /* IMPORTED_SHORT_ENUMERATION_ITEM */, TrafficProfile_dualTransULFirst /* IMPORTED_LONG_ENUMERATION_ITEM */, dualTransULFirst /* IMPORTED_SHORT_ENUMERATION_ITEM */, TrafficProfile_dualTransDLFirst /* IMPORTED_LONG_ENUMERATION_ITEM */, dualTransDLFirst /* IMPORTED_SHORT_ENUMERATION_ITEM */, TrafficProfile_multiTrans /* IMPORTED_LONG_ENUMERATION_ITEM */, multiTrans /* IMPORTED_SHORT_ENUMERATION_ITEM */, _decode_TrafficProfile, _encode_TrafficProfile } from "../TS33128Payloads/TrafficProfile.ta.mjs";
 import { UMTLocationArea5G, _decode_UMTLocationArea5G, _encode_UMTLocationArea5G } from "../TS33128Payloads/UMTLocationArea5G.ta.mjs";
 // export { UMTLocationArea5G, _decode_UMTLocationArea5G, _encode_UMTLocationArea5G } from "../TS33128Payloads/UMTLocationArea5G.ta.mjs";
-import { SCSASID, _decode_SCSASID, _encode_SCSASID } from "../TS33128Payloads/SCSASID.ta.mjs";
+import { type SCSASID, _decode_SCSASID, _encode_SCSASID } from "../TS33128Payloads/SCSASID.ta.mjs";
 // export { SCSASID, _decode_SCSASID, _encode_SCSASID } from "../TS33128Payloads/SCSASID.ta.mjs";
-import { Timestamp, _decode_Timestamp, _encode_Timestamp } from "../TS33128Payloads/Timestamp.ta.mjs";
+import { type Timestamp, _decode_Timestamp, _encode_Timestamp } from "../TS33128Payloads/Timestamp.ta.mjs";
 // export { Timestamp, _decode_Timestamp, _encode_Timestamp } from "../TS33128Payloads/Timestamp.ta.mjs";
 
 
@@ -300,31 +300,31 @@ class SCEFCommunicationPatternUpdate {
          * @static
          */
 
-    public static _enum_for_periodicCommunicationIndicator = _enum_for_PeriodicCommunicationIndicator;        /**
+    public static _enum_for_periodicCommunicationIndicator: typeof _enum_for_PeriodicCommunicationIndicator = _enum_for_PeriodicCommunicationIndicator;        /**
          * @summary The enum used as the type of the component `scheduledCommunicationType`
          * @public
          * @static
          */
 
-    public static _enum_for_scheduledCommunicationType = _enum_for_ScheduledCommunicationType;        /**
+    public static _enum_for_scheduledCommunicationType: typeof _enum_for_ScheduledCommunicationType = _enum_for_ScheduledCommunicationType;        /**
          * @summary The enum used as the type of the component `stationaryIndication`
          * @public
          * @static
          */
 
-    public static _enum_for_stationaryIndication = _enum_for_StationaryIndication;        /**
+    public static _enum_for_stationaryIndication: typeof _enum_for_StationaryIndication = _enum_for_StationaryIndication;        /**
          * @summary The enum used as the type of the component `batteryIndication`
          * @public
          * @static
          */
 
-    public static _enum_for_batteryIndication = _enum_for_BatteryIndication;        /**
+    public static _enum_for_batteryIndication: typeof _enum_for_BatteryIndication = _enum_for_BatteryIndication;        /**
          * @summary The enum used as the type of the component `trafficProfile`
          * @public
          * @static
          */
 
-    public static _enum_for_trafficProfile = _enum_for_TrafficProfile;
+    public static _enum_for_trafficProfile: typeof _enum_for_TrafficProfile = _enum_for_TrafficProfile;
 }
 
 /**

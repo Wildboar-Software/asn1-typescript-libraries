@@ -1,9 +1,9 @@
 /* eslint-disable */
 import {
-    OPTIONAL,
-    OCTET_STRING,
-    OBJECT_IDENTIFIER,
-    ASN1Element as _Element,
+    type OPTIONAL,
+    type OCTET_STRING,
+    type OBJECT_IDENTIFIER,
+    type ASN1Element as _Element,
     ASN1TagClass as _TagClass,
     ASN1Construction as _Construction,
     ASN1UniversalType as _UniversalType,
@@ -36,33 +36,39 @@ import * as $ from '@wildboar/asn1/functional';
  *
  */
 export class EncapsulatedContentInfo {
+    /**
+     * @summary `eContentType`.
+     * @description
+     *
+     * OID of the encapsulated type (`IncludedContent`):
+     * `id-envelopedData` if encryption is required, else a
+     * telebiometrics content type.
+     * ITU-T Rec. X.1080.0 (2017) Cor.1 Annex B.2.
+     *
+     * @public
+     * @readonly
+     */
+    public readonly eContentType: OBJECT_IDENTIFIER;
+    /**
+     * @summary `eContent`.
+     * @description
+     *
+     * Encapsulated content in an OCTET STRING. Shall always be
+     * present in this profile (ASN.1 marks it OPTIONAL).
+     * ITU-T Rec. X.1080.0 (2017) Cor.1 Annex B.2.
+     *
+     * @public
+     * @readonly
+     */
+    public readonly eContent?: OPTIONAL<OCTET_STRING>;
+
     constructor(
-        /**
-         * @summary `eContentType`.
-         * @description
-         *
-         * OID of the encapsulated type (`IncludedContent`):
-         * `id-envelopedData` if encryption is required, else a
-         * telebiometrics content type.
-         * ITU-T Rec. X.1080.0 (2017) Cor.1 Annex B.2.
-         *
-         * @public
-         * @readonly
-         */
-        readonly eContentType: OBJECT_IDENTIFIER,
-        /**
-         * @summary `eContent`.
-         * @description
-         *
-         * Encapsulated content in an OCTET STRING. Shall always be
-         * present in this profile (ASN.1 marks it OPTIONAL).
-         * ITU-T Rec. X.1080.0 (2017) Cor.1 Annex B.2.
-         *
-         * @public
-         * @readonly
-         */
-        readonly eContent?: OPTIONAL<OCTET_STRING>
-    ) {}
+        eContentType: OBJECT_IDENTIFIER,
+        eContent?: OPTIONAL<OCTET_STRING>
+    ) {
+        this.eContentType = eContentType;
+        this.eContent = eContent;
+    }
 
     /**
      * @summary Restructures an object into a EncapsulatedContentInfo

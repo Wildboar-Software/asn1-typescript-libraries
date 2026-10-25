@@ -1,7 +1,7 @@
 /* eslint-disable */
 import {
-    OPTIONAL,
-    ASN1Element as _Element,
+    type OPTIONAL,
+    type ASN1Element as _Element,
     ASN1TagClass as _TagClass,
     ASN1Construction as _Construction,
     ASN1UniversalType as _UniversalType,
@@ -12,7 +12,7 @@ import {
 } from '@wildboar/asn1';
 import * as $ from '@wildboar/asn1/functional';
 import {
-    CMSVersion,
+    type CMSVersion,
     _decode_CMSVersion,
     _encode_CMSVersion,
 } from '../CmsTelebiometric/CMSVersion.ta.mjs';
@@ -27,12 +27,12 @@ import {
     _encode_EncapsulatedContentInfo,
 } from '../CmsTelebiometric/EncapsulatedContentInfo.ta.mjs';
 import {
-    Certificate,
+    type Certificate,
     _decode_Certificate,
     _encode_Certificate,
 } from '@wildboar/x500/AuthenticationFramework';
 import {
-    SignerInfos,
+    type SignerInfos,
     _decode_SignerInfos,
     _encode_SignerInfos,
 } from '../CmsTelebiometric/SignerInfos.ta.mjs';
@@ -63,72 +63,86 @@ import {
  *
  */
 export class SignedData {
+    /**
+     * @summary `version`.
+     * @description
+     *
+     * Always `v3` (RFC 5652 clause 5.1).
+     * ITU-T Rec. X.1080.0 (2017) Cor.1 Annex B.2.
+     *
+     * @public
+     * @readonly
+     */
+    public readonly version: CMSVersion;
+    /**
+     * @summary `digestAlgorithms`.
+     * @description
+     *
+     * Exactly one hash (`SIZE (1)`). Multiple signatures are not
+     * used. Algorithms from `Teleb-Hash-Algorithms` (extensible;
+     * this profile does not mandate a hash).
+     * ITU-T Rec. X.1080.0 (2017) Cor.1 Annex B.2.
+     *
+     * @public
+     * @readonly
+     */
+    public readonly digestAlgorithms: AlgorithmIdentifier[];
+    /**
+     * @summary `encapContentInfo`.
+     * @description
+     *
+     * Encapsulated content. Type is `id-envelopedData` if
+     * encryption is required, else a telebiometrics content type.
+     * ITU-T Rec. X.1080.0 (2017) Cor.1 Annex B.2.
+     *
+     * @public
+     * @readonly
+     */
+    public readonly encapContentInfo: EncapsulatedContentInfo;
+    /**
+     * @summary `certificates`.
+     * @description
+     *
+     * PKCs sufficient to establish a single `PkiPath` (X.509).
+     * ITU-T Rec. X.1080.0 (2017) Cor.1 Annex B.2.
+     *
+     * @public
+     * @readonly
+     */
+    public readonly certificates: OPTIONAL<Certificate[]>;
+    /**
+     * @summary `signerInfos`.
+     * @description
+     *
+     * Exactly one signer (`SIZE (1)`).
+     * ITU-T Rec. X.1080.0 (2017) Cor.1 Annex B.2.
+     *
+     * @public
+     * @readonly
+     */
+    public readonly signerInfos: SignerInfos;
+    /**
+     * @summary Extensions that are not recognized.
+     * @public
+     * @readonly
+     */
+    public readonly _unrecognizedExtensionsList: _Element[];
+
     constructor(
-        /**
-         * @summary `version`.
-         * @description
-         *
-         * Always `v3` (RFC 5652 clause 5.1).
-         * ITU-T Rec. X.1080.0 (2017) Cor.1 Annex B.2.
-         *
-         * @public
-         * @readonly
-         */
-        readonly version: CMSVersion,
-        /**
-         * @summary `digestAlgorithms`.
-         * @description
-         *
-         * Exactly one hash (`SIZE (1)`). Multiple signatures are not
-         * used. Algorithms from `Teleb-Hash-Algorithms` (extensible;
-         * this profile does not mandate a hash).
-         * ITU-T Rec. X.1080.0 (2017) Cor.1 Annex B.2.
-         *
-         * @public
-         * @readonly
-         */
-        readonly digestAlgorithms: AlgorithmIdentifier[],
-        /**
-         * @summary `encapContentInfo`.
-         * @description
-         *
-         * Encapsulated content. Type is `id-envelopedData` if
-         * encryption is required, else a telebiometrics content type.
-         * ITU-T Rec. X.1080.0 (2017) Cor.1 Annex B.2.
-         *
-         * @public
-         * @readonly
-         */
-        readonly encapContentInfo: EncapsulatedContentInfo,
-        /**
-         * @summary `certificates`.
-         * @description
-         *
-         * PKCs sufficient to establish a single `PkiPath` (X.509).
-         * ITU-T Rec. X.1080.0 (2017) Cor.1 Annex B.2.
-         *
-         * @public
-         * @readonly
-         */
-        readonly certificates: OPTIONAL<Certificate[]>,
-        /**
-         * @summary `signerInfos`.
-         * @description
-         *
-         * Exactly one signer (`SIZE (1)`).
-         * ITU-T Rec. X.1080.0 (2017) Cor.1 Annex B.2.
-         *
-         * @public
-         * @readonly
-         */
-        readonly signerInfos: SignerInfos,
-        /**
-         * @summary Extensions that are not recognized.
-         * @public
-         * @readonly
-         */
-        readonly _unrecognizedExtensionsList: _Element[] = []
-    ) {}
+        version: CMSVersion,
+        digestAlgorithms: AlgorithmIdentifier[],
+        encapContentInfo: EncapsulatedContentInfo,
+        certificates: OPTIONAL<Certificate[]>,
+        signerInfos: SignerInfos,
+        _unrecognizedExtensionsList: _Element[] = []
+    ) {
+        this.version = version;
+        this.digestAlgorithms = digestAlgorithms;
+        this.encapContentInfo = encapContentInfo;
+        this.certificates = certificates;
+        this.signerInfos = signerInfos;
+        this._unrecognizedExtensionsList = _unrecognizedExtensionsList;
+    }
 
     /**
      * @summary Restructures an object into a SignedData

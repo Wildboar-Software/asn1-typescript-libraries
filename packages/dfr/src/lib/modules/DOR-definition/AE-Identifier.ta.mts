@@ -1,7 +1,7 @@
 /* eslint-disable */
 import {
-    OPTIONAL,
-    ASN1Element as _Element,
+    type OPTIONAL,
+    type ASN1Element as _Element,
     ASN1TagClass as _TagClass,
     ASN1Construction as _Construction,
     ASN1UniversalType as _UniversalType,
@@ -12,7 +12,7 @@ import {
 } from "@wildboar/asn1";
 import * as $ from "@wildboar/asn1/functional";
 import { Locational_identifier, _decode_Locational_identifier, _encode_Locational_identifier } from "../DOR-definition/Locational-identifier.ta.mjs";
-import { DistinguishedName, _decode_DistinguishedName, _encode_DistinguishedName } from "../InformationFramework/DistinguishedName.ta.mjs";
+import { type DistinguishedName, _decode_DistinguishedName, _encode_DistinguishedName } from "../InformationFramework/DistinguishedName.ta.mjs";
 
 
 /**
@@ -37,26 +37,33 @@ import { DistinguishedName, _decode_DistinguishedName, _encode_DistinguishedName
  */
 export
 class AE_Identifier {
+    /**
+     * @summary `locational_identifier`.
+     * @public
+     * @readonly
+     */
+    public readonly locational_identifier?: OPTIONAL<Locational_identifier>;
+    /**
+     * @summary `direct_logical_identifier`.
+     * @public
+     * @readonly
+     */
+    public readonly direct_logical_identifier?: OPTIONAL<DistinguishedName>;
+    /**
+     * @summary `indirect_logical_identifier`.
+     * @public
+     * @readonly
+     */
+    public readonly indirect_logical_identifier?: OPTIONAL<DistinguishedName>;
+
     constructor (
-        /**
-         * @summary `locational_identifier`.
-         * @public
-         * @readonly
-         */
-        readonly locational_identifier?: OPTIONAL<Locational_identifier>,
-        /**
-         * @summary `direct_logical_identifier`.
-         * @public
-         * @readonly
-         */
-        readonly direct_logical_identifier?: OPTIONAL<DistinguishedName>,
-        /**
-         * @summary `indirect_logical_identifier`.
-         * @public
-         * @readonly
-         */
-        readonly indirect_logical_identifier?: OPTIONAL<DistinguishedName>
+        locational_identifier?: OPTIONAL<Locational_identifier>,
+        direct_logical_identifier?: OPTIONAL<DistinguishedName>,
+        indirect_logical_identifier?: OPTIONAL<DistinguishedName>
     ) {
+        this.locational_identifier = locational_identifier;
+        this.direct_logical_identifier = direct_logical_identifier;
+        this.indirect_logical_identifier = indirect_logical_identifier;
         if (locational_identifier === undefined && direct_logical_identifier === undefined && indirect_logical_identifier === undefined) {
             throw new _ConstructionError("AE-Identifier shall contain at least one component");
         }

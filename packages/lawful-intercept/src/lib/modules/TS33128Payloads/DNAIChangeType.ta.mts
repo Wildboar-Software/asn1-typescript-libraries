@@ -65,7 +65,7 @@ type DNAIChangeType = _enum_for_DNAIChangeType;
  * @enum {number}
  */
 export
-const DNAIChangeType = _enum_for_DNAIChangeType;
+const DNAIChangeType: typeof _enum_for_DNAIChangeType = _enum_for_DNAIChangeType;
 
 /**
  * @summary DNAIChangeType_early
@@ -73,7 +73,7 @@ const DNAIChangeType = _enum_for_DNAIChangeType;
  * @type {number}
  */
 export
-const DNAIChangeType_early: DNAIChangeType = DNAIChangeType.early; /* LONG_NAMED_ENUMERATED_VALUE */
+const DNAIChangeType_early: _enum_for_DNAIChangeType.early = DNAIChangeType.early; /* LONG_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary early
@@ -81,7 +81,7 @@ const DNAIChangeType_early: DNAIChangeType = DNAIChangeType.early; /* LONG_NAMED
  * @type {number}
  */
 export
-const early: DNAIChangeType = DNAIChangeType.early; /* SHORT_NAMED_ENUMERATED_VALUE */
+const early: _enum_for_DNAIChangeType.early = DNAIChangeType.early; /* SHORT_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary DNAIChangeType_earlyAndLate
@@ -89,7 +89,7 @@ const early: DNAIChangeType = DNAIChangeType.early; /* SHORT_NAMED_ENUMERATED_VA
  * @type {number}
  */
 export
-const DNAIChangeType_earlyAndLate: DNAIChangeType = DNAIChangeType.earlyAndLate; /* LONG_NAMED_ENUMERATED_VALUE */
+const DNAIChangeType_earlyAndLate: _enum_for_DNAIChangeType.earlyAndLate = DNAIChangeType.earlyAndLate; /* LONG_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary earlyAndLate
@@ -97,7 +97,7 @@ const DNAIChangeType_earlyAndLate: DNAIChangeType = DNAIChangeType.earlyAndLate;
  * @type {number}
  */
 export
-const earlyAndLate: DNAIChangeType = DNAIChangeType.earlyAndLate; /* SHORT_NAMED_ENUMERATED_VALUE */
+const earlyAndLate: _enum_for_DNAIChangeType.earlyAndLate = DNAIChangeType.earlyAndLate; /* SHORT_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary DNAIChangeType_late
@@ -105,7 +105,7 @@ const earlyAndLate: DNAIChangeType = DNAIChangeType.earlyAndLate; /* SHORT_NAMED
  * @type {number}
  */
 export
-const DNAIChangeType_late: DNAIChangeType = DNAIChangeType.late; /* LONG_NAMED_ENUMERATED_VALUE */
+const DNAIChangeType_late: _enum_for_DNAIChangeType.late = DNAIChangeType.late; /* LONG_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary late
@@ -113,7 +113,7 @@ const DNAIChangeType_late: DNAIChangeType = DNAIChangeType.late; /* LONG_NAMED_E
  * @type {number}
  */
 export
-const late: DNAIChangeType = DNAIChangeType.late; /* SHORT_NAMED_ENUMERATED_VALUE */
+const late: _enum_for_DNAIChangeType.late = DNAIChangeType.late; /* SHORT_NAMED_ENUMERATED_VALUE */
 export const _decode_DNAIChangeType: $.ASN1Decoder<DNAIChangeType> = $._decodeEnumerated;
 export const _encode_DNAIChangeType: $.ASN1Encoder<DNAIChangeType> = $._encodeEnumerated;
 

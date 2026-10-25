@@ -1,8 +1,8 @@
 /* eslint-disable */
 import {
-    OPTIONAL,
-    BOOLEAN,
-    ASN1Element as _Element,
+    type OPTIONAL,
+    type BOOLEAN,
+    type ASN1Element as _Element,
     ASN1TagClass as _TagClass,
     ASN1Construction as _Construction,
     ASN1UniversalType as _UniversalType,
@@ -12,7 +12,7 @@ import {
     ASN1ConstructionError as _ConstructionError,
 } from "@wildboar/asn1";
 import * as $ from "@wildboar/asn1/functional";
-import { BlockParamValues_bound, _decode_BlockParamValues_bound, _encode_BlockParamValues_bound } from "../CDS/BlockParamValues-bound.ta.mjs";
+import { type BlockParamValues_bound, _decode_BlockParamValues_bound, _encode_BlockParamValues_bound } from "../CDS/BlockParamValues-bound.ta.mjs";
 
 
 /**
@@ -36,27 +36,33 @@ import { BlockParamValues_bound, _decode_BlockParamValues_bound, _encode_BlockPa
  */
 export
 class BlockParamValues {
+    /**
+     * @summary `capability`.
+     * @description
+     * Selected `block-definition-capability`. `true` = `"yes"`;
+     * `false` or absent = `"no"`. ISO/IEC 9040:1997 §18.1,
+     * §18.2.1.
+     * @public
+     * @readonly
+     */
+    public readonly capability?: OPTIONAL<BOOLEAN>;
+    /**
+     * @summary `bound`.
+     * @description
+     * Selected `b-bound` (max blocks per Y-array; default 1).
+     * ISO/IEC 9040:1997 §18.2.1.
+     * @public
+     * @readonly
+     */
+    public readonly bound?: OPTIONAL<BlockParamValues_bound>;
+
     constructor (
-        /**
-         * @summary `capability`.
-         * @description
-         * Selected `block-definition-capability`. `true` = `"yes"`;
-         * `false` or absent = `"no"`. ISO/IEC 9040:1997 §18.1,
-         * §18.2.1.
-         * @public
-         * @readonly
-         */
-        readonly capability?: OPTIONAL<BOOLEAN>,
-        /**
-         * @summary `bound`.
-         * @description
-         * Selected `b-bound` (max blocks per Y-array; default 1).
-         * ISO/IEC 9040:1997 §18.2.1.
-         * @public
-         * @readonly
-         */
-        readonly bound?: OPTIONAL<BlockParamValues_bound>
-    ) {}
+        capability?: OPTIONAL<BOOLEAN>,
+        bound?: OPTIONAL<BlockParamValues_bound>
+    ) {
+        this.capability = capability;
+        this.bound = bound;
+    }
 
     /**
      * @summary Restructures an object into a BlockParamValues

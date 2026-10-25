@@ -1,14 +1,14 @@
 /* eslint-disable */
 import {
-    OPTIONAL,
-    ASN1Element as _Element,
+    type OPTIONAL,
+    type ASN1Element as _Element,
     ASN1TagClass as _TagClass
 } from "@wildboar/asn1";
 import * as $ from "@wildboar/asn1/functional";
 import { SessionDirection, _decode_SessionDirection, _encode_SessionDirection, _enum_for_SessionDirection } from "../IMSChargingDataTypes/SessionDirection.ta.mjs";
 import { NNIType, _decode_NNIType, _encode_NNIType, _enum_for_NNIType } from "../IMSChargingDataTypes/NNIType.ta.mjs";
 import { RelationshipMode, _decode_RelationshipMode, _encode_RelationshipMode, _enum_for_RelationshipMode } from "../IMSChargingDataTypes/RelationshipMode.ta.mjs";
-import { ServedPartyIPAddress, _decode_ServedPartyIPAddress, _encode_ServedPartyIPAddress } from "../IMSChargingDataTypes/ServedPartyIPAddress.ta.mjs";
+import { type ServedPartyIPAddress, _decode_ServedPartyIPAddress, _encode_ServedPartyIPAddress } from "../IMSChargingDataTypes/ServedPartyIPAddress.ta.mjs";
 
 
 /**
@@ -133,19 +133,19 @@ class NNI_Information {
          * @static
          */
 
-    public static _enum_for_sessionDirection = _enum_for_SessionDirection;        /**
+    public static _enum_for_sessionDirection: typeof _enum_for_SessionDirection = _enum_for_SessionDirection;        /**
          * @summary The enum used as the type of the component `nNIType`
          * @public
          * @static
          */
 
-    public static _enum_for_nNIType = _enum_for_NNIType;        /**
+    public static _enum_for_nNIType: typeof _enum_for_NNIType = _enum_for_NNIType;        /**
          * @summary The enum used as the type of the component `relationshipMode`
          * @public
          * @static
          */
 
-    public static _enum_for_relationshipMode = _enum_for_RelationshipMode;
+    public static _enum_for_relationshipMode: typeof _enum_for_RelationshipMode = _enum_for_RelationshipMode;
 }
 
 /**

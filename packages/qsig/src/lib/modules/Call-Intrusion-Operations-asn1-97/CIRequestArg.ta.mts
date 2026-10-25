@@ -1,12 +1,12 @@
 /* eslint-disable */
 import {
-    OPTIONAL,
-    ASN1Element as _Element,
+    type OPTIONAL,
+    type ASN1Element as _Element,
     ASN1TagClass as _TagClass
 } from "@wildboar/asn1";
 import * as $ from "@wildboar/asn1/functional";
 import { CICapabilityLevel, _decode_CICapabilityLevel, _encode_CICapabilityLevel, _enum_for_CICapabilityLevel } from "../Call-Intrusion-Operations-asn1-97/CICapabilityLevel.ta.mjs";
-import { CIRequestArg_argumentExtension, _decode_CIRequestArg_argumentExtension, _encode_CIRequestArg_argumentExtension } from "../Call-Intrusion-Operations-asn1-97/CIRequestArg-argumentExtension.ta.mjs";
+import { type CIRequestArg_argumentExtension, _decode_CIRequestArg_argumentExtension, _encode_CIRequestArg_argumentExtension } from "../Call-Intrusion-Operations-asn1-97/CIRequestArg-argumentExtension.ta.mjs";
 
 /**
  * @summary CIRequestArg
@@ -87,7 +87,7 @@ class CIRequestArg {
          * @static
          */
 
-    public static _enum_for_ciCapabilityLevel = _enum_for_CICapabilityLevel;
+    public static _enum_for_ciCapabilityLevel: typeof _enum_for_CICapabilityLevel = _enum_for_CICapabilityLevel;
 }
 
 /**

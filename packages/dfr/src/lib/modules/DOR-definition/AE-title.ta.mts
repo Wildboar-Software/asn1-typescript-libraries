@@ -1,6 +1,6 @@
 /* eslint-disable */
 import {
-    ASN1Element as _Element,
+    type ASN1Element as _Element,
     ASN1TagClass as _TagClass,
     ASN1Construction as _Construction,
     ASN1UniversalType as _UniversalType,
@@ -10,8 +10,8 @@ import {
     ASN1ConstructionError as _ConstructionError,
 } from "@wildboar/asn1";
 import * as $ from "@wildboar/asn1/functional";
-import { AP_title, _decode_AP_title, _encode_AP_title } from "../DOR-definition/AP-title.ta.mjs";
-import { AE_qualifier, _decode_AE_qualifier, _encode_AE_qualifier } from "../DOR-definition/AE-qualifier.ta.mjs";
+import { type AP_title, _decode_AP_title, _encode_AP_title } from "../DOR-definition/AP-title.ta.mjs";
+import { type AE_qualifier, _decode_AE_qualifier, _encode_AE_qualifier } from "../DOR-definition/AE-qualifier.ta.mjs";
 
 
 /**
@@ -33,20 +33,26 @@ import { AE_qualifier, _decode_AE_qualifier, _encode_AE_qualifier } from "../DOR
  */
 export
 class AE_title {
+    /**
+     * @summary `ap`.
+     * @public
+     * @readonly
+     */
+    public readonly ap: AP_title;
+    /**
+     * @summary `ae`.
+     * @public
+     * @readonly
+     */
+    public readonly ae: AE_qualifier;
+
     constructor (
-        /**
-         * @summary `ap`.
-         * @public
-         * @readonly
-         */
-        readonly ap: AP_title,
-        /**
-         * @summary `ae`.
-         * @public
-         * @readonly
-         */
-        readonly ae: AE_qualifier
-    ) {}
+        ap: AP_title,
+        ae: AE_qualifier
+    ) {
+        this.ap = ap;
+        this.ae = ae;
+    }
 
     /**
      * @summary Restructures an object into a AE_title

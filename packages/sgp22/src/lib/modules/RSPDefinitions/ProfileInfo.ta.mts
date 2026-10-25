@@ -1,25 +1,25 @@
 /* eslint-disable */
 import {
-    BOOLEAN,
-    OCTET_STRING,
-    OPTIONAL,
-    UTF8String,
-    ASN1Element as _Element,
+    type BOOLEAN,
+    type OCTET_STRING,
+    type OPTIONAL,
+    type UTF8String,
+    type ASN1Element as _Element,
     ASN1TagClass as _TagClass
 } from "@wildboar/asn1";
 import { ASN1ConstructionError } from "@wildboar/asn1";
 import { ASN1SizeError } from "@wildboar/asn1";
 import * as $ from "@wildboar/asn1/functional";
-import { Iccid, _decode_Iccid, _encode_Iccid } from "../RSPDefinitions/Iccid.ta.mjs";
-import { OctetTo16, _decode_OctetTo16, _encode_OctetTo16 } from "../RSPDefinitions/OctetTo16.ta.mjs";
-import { ProfileState, _decode_ProfileState, _encode_ProfileState } from "../RSPDefinitions/ProfileState.ta.mjs";
-import { IconType, _decode_IconType, _encode_IconType } from "../RSPDefinitions/IconType.ta.mjs";
-import { ProfileClass, _decode_ProfileClass, _encode_ProfileClass } from "../RSPDefinitions/ProfileClass.ta.mjs";
+import { type Iccid, _decode_Iccid, _encode_Iccid } from "../RSPDefinitions/Iccid.ta.mjs";
+import { type OctetTo16, _decode_OctetTo16, _encode_OctetTo16 } from "../RSPDefinitions/OctetTo16.ta.mjs";
+import { type ProfileState, _decode_ProfileState, _encode_ProfileState } from "../RSPDefinitions/ProfileState.ta.mjs";
+import { type IconType, _decode_IconType, _encode_IconType } from "../RSPDefinitions/IconType.ta.mjs";
+import { type ProfileClass, _decode_ProfileClass, _encode_ProfileClass } from "../RSPDefinitions/ProfileClass.ta.mjs";
 import { NotificationConfigurationInformation, _decode_NotificationConfigurationInformation, _encode_NotificationConfigurationInformation } from "../RSPDefinitions/NotificationConfigurationInformation.ta.mjs";
 import { OperatorId, _decode_OperatorId, _encode_OperatorId } from "../RSPDefinitions/OperatorId.ta.mjs";
 import { DpProprietaryData, _decode_DpProprietaryData, _encode_DpProprietaryData } from "../RSPDefinitions/DpProprietaryData.ta.mjs";
-import { PprIds, _decode_PprIds, _encode_PprIds } from "../RSPDefinitions/PprIds.ta.mjs";
-import { VendorSpecificExtension, _decode_VendorSpecificExtension, _encode_VendorSpecificExtension } from "../RSPDefinitions/VendorSpecificExtension.ta.mjs";
+import { type PprIds, _decode_PprIds, _encode_PprIds } from "../RSPDefinitions/PprIds.ta.mjs";
+import { type VendorSpecificExtension, _decode_VendorSpecificExtension, _encode_VendorSpecificExtension } from "../RSPDefinitions/VendorSpecificExtension.ta.mjs";
 import { ProfileInfo_iotSpecificProfileInfo, _decode_ProfileInfo_iotSpecificProfileInfo, _encode_ProfileInfo_iotSpecificProfileInfo } from "../RSPDefinitions/ProfileInfo-iotSpecificProfileInfo.ta.mjs";
 
 
@@ -82,7 +82,7 @@ class ProfileInfo {
      * @public
      * @readonly
      */
-    readonly iccid?: OPTIONAL<Iccid>;
+    public readonly iccid?: OPTIONAL<Iccid>;
     /**
      * @summary `isdpAid`.
      * @description
@@ -93,7 +93,7 @@ class ProfileInfo {
      * @public
      * @readonly
      */
-    readonly isdpAid?: OPTIONAL<OctetTo16>;
+    public readonly isdpAid?: OPTIONAL<OctetTo16>;
     /**
      * @summary `profileState`.
      * @description
@@ -105,7 +105,7 @@ class ProfileInfo {
      * @public
      * @readonly
      */
-    readonly profileState?: OPTIONAL<ProfileState>;
+    public readonly profileState?: OPTIONAL<ProfileState>;
     /**
      * @summary `profileNickname`.
      * @description
@@ -117,7 +117,7 @@ class ProfileInfo {
      * @public
      * @readonly
      */
-    readonly profileNickname?: OPTIONAL<UTF8String>;
+    public readonly profileNickname?: OPTIONAL<UTF8String>;
     /**
      * @summary `serviceProviderName`.
      * @description
@@ -128,7 +128,7 @@ class ProfileInfo {
      * @public
      * @readonly
      */
-    readonly serviceProviderName?: OPTIONAL<UTF8String>;
+    public readonly serviceProviderName?: OPTIONAL<UTF8String>;
     /**
      * @summary `profileName`.
      * @description
@@ -139,7 +139,7 @@ class ProfileInfo {
      * @public
      * @readonly
      */
-    readonly profileName?: OPTIONAL<UTF8String>;
+    public readonly profileName?: OPTIONAL<UTF8String>;
     /**
      * @summary `iconType`.
      * @description
@@ -150,7 +150,7 @@ class ProfileInfo {
      * @public
      * @readonly
      */
-    readonly iconType?: OPTIONAL<IconType>;
+    public readonly iconType?: OPTIONAL<IconType>;
     /**
      * @summary `icon`.
      * @description
@@ -162,7 +162,7 @@ class ProfileInfo {
      * @public
      * @readonly
      */
-    readonly icon?: OPTIONAL<OCTET_STRING>;
+    public readonly icon?: OPTIONAL<OCTET_STRING>;
     /**
      * @summary `profileClass`.
      * @description
@@ -174,7 +174,7 @@ class ProfileInfo {
      * @public
      * @readonly
      */
-    readonly profileClass?: OPTIONAL<ProfileClass>;
+    public readonly profileClass?: OPTIONAL<ProfileClass>;
     /**
      * @summary `notificationConfigurationInfo`.
      * @description
@@ -185,7 +185,7 @@ class ProfileInfo {
      * @public
      * @readonly
      */
-    readonly notificationConfigurationInfo?: OPTIONAL<NotificationConfigurationInformation[]>;
+    public readonly notificationConfigurationInfo?: OPTIONAL<NotificationConfigurationInformation[]>;
     /**
      * @summary `profileOwner`.
      * @description
@@ -197,7 +197,7 @@ class ProfileInfo {
      * @public
      * @readonly
      */
-    readonly profileOwner?: OPTIONAL<OperatorId>;
+    public readonly profileOwner?: OPTIONAL<OperatorId>;
     /**
      * @summary `dpProprietaryData`.
      * @description
@@ -208,7 +208,7 @@ class ProfileInfo {
      * @public
      * @readonly
      */
-    readonly dpProprietaryData?: OPTIONAL<DpProprietaryData>;
+    public readonly dpProprietaryData?: OPTIONAL<DpProprietaryData>;
     /**
      * @summary `profilePolicyRules`.
      * @description
@@ -219,7 +219,7 @@ class ProfileInfo {
      * @public
      * @readonly
      */
-    readonly profilePolicyRules?: OPTIONAL<PprIds>;
+    public readonly profilePolicyRules?: OPTIONAL<PprIds>;
     /**
      * @summary `serviceSpecificDataStoredInEuicc`.
      * @description
@@ -230,7 +230,7 @@ class ProfileInfo {
      * @public
      * @readonly
      */
-    readonly serviceSpecificDataStoredInEuicc?: OPTIONAL<VendorSpecificExtension>;
+    public readonly serviceSpecificDataStoredInEuicc?: OPTIONAL<VendorSpecificExtension>;
     /**
      * @summary `ecallIndication`.
      * @description
@@ -240,7 +240,7 @@ class ProfileInfo {
      * @public
      * @readonly
      */
-    readonly ecallIndication?: OPTIONAL<BOOLEAN>;
+    public readonly ecallIndication?: OPTIONAL<BOOLEAN>;
     /**
      * @summary `fallbackAttribute`.
      * @description
@@ -251,7 +251,7 @@ class ProfileInfo {
      * @public
      * @readonly
      */
-    readonly fallbackAttribute?: OPTIONAL<BOOLEAN>;
+    public readonly fallbackAttribute?: OPTIONAL<BOOLEAN>;
     /**
      * @summary `fallbackAllowed`.
      * @description
@@ -261,7 +261,7 @@ class ProfileInfo {
      * @public
      * @readonly
      */
-    readonly fallbackAllowed?: OPTIONAL<BOOLEAN>;
+    public readonly fallbackAllowed?: OPTIONAL<BOOLEAN>;
     /**
      * @summary `iotSpecificProfileInfo`.
      * @description
@@ -272,7 +272,7 @@ class ProfileInfo {
      * @public
      * @readonly
      */
-    readonly iotSpecificProfileInfo?: OPTIONAL<ProfileInfo_iotSpecificProfileInfo>;
+    public readonly iotSpecificProfileInfo?: OPTIONAL<ProfileInfo_iotSpecificProfileInfo>;
 
     constructor (
         iccid?: OPTIONAL<Iccid>,

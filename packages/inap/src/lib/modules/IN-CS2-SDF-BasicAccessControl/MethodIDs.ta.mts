@@ -1,6 +1,6 @@
 /* eslint-disable */
 import {
-    OBJECT_IDENTIFIER
+    type OBJECT_IDENTIFIER
 } from "@wildboar/asn1";
 import * as $ from "@wildboar/asn1/functional";
 // export { METHOD } from "../IN-CS2-SDF-InformationFramework/METHOD.oca.mjs";

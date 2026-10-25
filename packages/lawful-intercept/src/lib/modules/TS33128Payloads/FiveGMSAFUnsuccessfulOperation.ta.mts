@@ -128,7 +128,7 @@ type FiveGMSAFUnsuccessfulOperation = _enum_for_FiveGMSAFUnsuccessfulOperation;
  * @enum {number}
  */
 export
-const FiveGMSAFUnsuccessfulOperation = _enum_for_FiveGMSAFUnsuccessfulOperation;
+const FiveGMSAFUnsuccessfulOperation: typeof _enum_for_FiveGMSAFUnsuccessfulOperation = _enum_for_FiveGMSAFUnsuccessfulOperation;
 
 /**
  * @summary FiveGMSAFUnsuccessfulOperation_retrieveServiceAccessInformation
@@ -136,7 +136,7 @@ const FiveGMSAFUnsuccessfulOperation = _enum_for_FiveGMSAFUnsuccessfulOperation;
  * @type {number}
  */
 export
-const FiveGMSAFUnsuccessfulOperation_retrieveServiceAccessInformation: FiveGMSAFUnsuccessfulOperation = FiveGMSAFUnsuccessfulOperation.retrieveServiceAccessInformation; /* LONG_NAMED_ENUMERATED_VALUE */
+const FiveGMSAFUnsuccessfulOperation_retrieveServiceAccessInformation: _enum_for_FiveGMSAFUnsuccessfulOperation.retrieveServiceAccessInformation = FiveGMSAFUnsuccessfulOperation.retrieveServiceAccessInformation; /* LONG_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary retrieveServiceAccessInformation
@@ -144,7 +144,7 @@ const FiveGMSAFUnsuccessfulOperation_retrieveServiceAccessInformation: FiveGMSAF
  * @type {number}
  */
 export
-const retrieveServiceAccessInformation: FiveGMSAFUnsuccessfulOperation = FiveGMSAFUnsuccessfulOperation.retrieveServiceAccessInformation; /* SHORT_NAMED_ENUMERATED_VALUE */
+const retrieveServiceAccessInformation: _enum_for_FiveGMSAFUnsuccessfulOperation.retrieveServiceAccessInformation = FiveGMSAFUnsuccessfulOperation.retrieveServiceAccessInformation; /* SHORT_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary FiveGMSAFUnsuccessfulOperation_submitConsumptionReport
@@ -152,7 +152,7 @@ const retrieveServiceAccessInformation: FiveGMSAFUnsuccessfulOperation = FiveGMS
  * @type {number}
  */
 export
-const FiveGMSAFUnsuccessfulOperation_submitConsumptionReport: FiveGMSAFUnsuccessfulOperation = FiveGMSAFUnsuccessfulOperation.submitConsumptionReport; /* LONG_NAMED_ENUMERATED_VALUE */
+const FiveGMSAFUnsuccessfulOperation_submitConsumptionReport: _enum_for_FiveGMSAFUnsuccessfulOperation.submitConsumptionReport = FiveGMSAFUnsuccessfulOperation.submitConsumptionReport; /* LONG_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary submitConsumptionReport
@@ -160,7 +160,7 @@ const FiveGMSAFUnsuccessfulOperation_submitConsumptionReport: FiveGMSAFUnsuccess
  * @type {number}
  */
 export
-const submitConsumptionReport: FiveGMSAFUnsuccessfulOperation = FiveGMSAFUnsuccessfulOperation.submitConsumptionReport; /* SHORT_NAMED_ENUMERATED_VALUE */
+const submitConsumptionReport: _enum_for_FiveGMSAFUnsuccessfulOperation.submitConsumptionReport = FiveGMSAFUnsuccessfulOperation.submitConsumptionReport; /* SHORT_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary FiveGMSAFUnsuccessfulOperation_submitMetricsReport
@@ -168,7 +168,7 @@ const submitConsumptionReport: FiveGMSAFUnsuccessfulOperation = FiveGMSAFUnsucce
  * @type {number}
  */
 export
-const FiveGMSAFUnsuccessfulOperation_submitMetricsReport: FiveGMSAFUnsuccessfulOperation = FiveGMSAFUnsuccessfulOperation.submitMetricsReport; /* LONG_NAMED_ENUMERATED_VALUE */
+const FiveGMSAFUnsuccessfulOperation_submitMetricsReport: _enum_for_FiveGMSAFUnsuccessfulOperation.submitMetricsReport = FiveGMSAFUnsuccessfulOperation.submitMetricsReport; /* LONG_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary submitMetricsReport
@@ -176,7 +176,7 @@ const FiveGMSAFUnsuccessfulOperation_submitMetricsReport: FiveGMSAFUnsuccessfulO
  * @type {number}
  */
 export
-const submitMetricsReport: FiveGMSAFUnsuccessfulOperation = FiveGMSAFUnsuccessfulOperation.submitMetricsReport; /* SHORT_NAMED_ENUMERATED_VALUE */
+const submitMetricsReport: _enum_for_FiveGMSAFUnsuccessfulOperation.submitMetricsReport = FiveGMSAFUnsuccessfulOperation.submitMetricsReport; /* SHORT_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary FiveGMSAFUnsuccessfulOperation_createDynamicPolicy
@@ -184,7 +184,7 @@ const submitMetricsReport: FiveGMSAFUnsuccessfulOperation = FiveGMSAFUnsuccessfu
  * @type {number}
  */
 export
-const FiveGMSAFUnsuccessfulOperation_createDynamicPolicy: FiveGMSAFUnsuccessfulOperation = FiveGMSAFUnsuccessfulOperation.createDynamicPolicy; /* LONG_NAMED_ENUMERATED_VALUE */
+const FiveGMSAFUnsuccessfulOperation_createDynamicPolicy: _enum_for_FiveGMSAFUnsuccessfulOperation.createDynamicPolicy = FiveGMSAFUnsuccessfulOperation.createDynamicPolicy; /* LONG_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary createDynamicPolicy
@@ -192,7 +192,7 @@ const FiveGMSAFUnsuccessfulOperation_createDynamicPolicy: FiveGMSAFUnsuccessfulO
  * @type {number}
  */
 export
-const createDynamicPolicy: FiveGMSAFUnsuccessfulOperation = FiveGMSAFUnsuccessfulOperation.createDynamicPolicy; /* SHORT_NAMED_ENUMERATED_VALUE */
+const createDynamicPolicy: _enum_for_FiveGMSAFUnsuccessfulOperation.createDynamicPolicy = FiveGMSAFUnsuccessfulOperation.createDynamicPolicy; /* SHORT_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary FiveGMSAFUnsuccessfulOperation_retrieveDynamicPolicy
@@ -200,7 +200,7 @@ const createDynamicPolicy: FiveGMSAFUnsuccessfulOperation = FiveGMSAFUnsuccessfu
  * @type {number}
  */
 export
-const FiveGMSAFUnsuccessfulOperation_retrieveDynamicPolicy: FiveGMSAFUnsuccessfulOperation = FiveGMSAFUnsuccessfulOperation.retrieveDynamicPolicy; /* LONG_NAMED_ENUMERATED_VALUE */
+const FiveGMSAFUnsuccessfulOperation_retrieveDynamicPolicy: _enum_for_FiveGMSAFUnsuccessfulOperation.retrieveDynamicPolicy = FiveGMSAFUnsuccessfulOperation.retrieveDynamicPolicy; /* LONG_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary retrieveDynamicPolicy
@@ -208,7 +208,7 @@ const FiveGMSAFUnsuccessfulOperation_retrieveDynamicPolicy: FiveGMSAFUnsuccessfu
  * @type {number}
  */
 export
-const retrieveDynamicPolicy: FiveGMSAFUnsuccessfulOperation = FiveGMSAFUnsuccessfulOperation.retrieveDynamicPolicy; /* SHORT_NAMED_ENUMERATED_VALUE */
+const retrieveDynamicPolicy: _enum_for_FiveGMSAFUnsuccessfulOperation.retrieveDynamicPolicy = FiveGMSAFUnsuccessfulOperation.retrieveDynamicPolicy; /* SHORT_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary FiveGMSAFUnsuccessfulOperation_updateDynamicPolicy
@@ -216,7 +216,7 @@ const retrieveDynamicPolicy: FiveGMSAFUnsuccessfulOperation = FiveGMSAFUnsuccess
  * @type {number}
  */
 export
-const FiveGMSAFUnsuccessfulOperation_updateDynamicPolicy: FiveGMSAFUnsuccessfulOperation = FiveGMSAFUnsuccessfulOperation.updateDynamicPolicy; /* LONG_NAMED_ENUMERATED_VALUE */
+const FiveGMSAFUnsuccessfulOperation_updateDynamicPolicy: _enum_for_FiveGMSAFUnsuccessfulOperation.updateDynamicPolicy = FiveGMSAFUnsuccessfulOperation.updateDynamicPolicy; /* LONG_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary updateDynamicPolicy
@@ -224,7 +224,7 @@ const FiveGMSAFUnsuccessfulOperation_updateDynamicPolicy: FiveGMSAFUnsuccessfulO
  * @type {number}
  */
 export
-const updateDynamicPolicy: FiveGMSAFUnsuccessfulOperation = FiveGMSAFUnsuccessfulOperation.updateDynamicPolicy; /* SHORT_NAMED_ENUMERATED_VALUE */
+const updateDynamicPolicy: _enum_for_FiveGMSAFUnsuccessfulOperation.updateDynamicPolicy = FiveGMSAFUnsuccessfulOperation.updateDynamicPolicy; /* SHORT_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary FiveGMSAFUnsuccessfulOperation_patchDynamicPolicy
@@ -232,7 +232,7 @@ const updateDynamicPolicy: FiveGMSAFUnsuccessfulOperation = FiveGMSAFUnsuccessfu
  * @type {number}
  */
 export
-const FiveGMSAFUnsuccessfulOperation_patchDynamicPolicy: FiveGMSAFUnsuccessfulOperation = FiveGMSAFUnsuccessfulOperation.patchDynamicPolicy; /* LONG_NAMED_ENUMERATED_VALUE */
+const FiveGMSAFUnsuccessfulOperation_patchDynamicPolicy: _enum_for_FiveGMSAFUnsuccessfulOperation.patchDynamicPolicy = FiveGMSAFUnsuccessfulOperation.patchDynamicPolicy; /* LONG_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary patchDynamicPolicy
@@ -240,7 +240,7 @@ const FiveGMSAFUnsuccessfulOperation_patchDynamicPolicy: FiveGMSAFUnsuccessfulOp
  * @type {number}
  */
 export
-const patchDynamicPolicy: FiveGMSAFUnsuccessfulOperation = FiveGMSAFUnsuccessfulOperation.patchDynamicPolicy; /* SHORT_NAMED_ENUMERATED_VALUE */
+const patchDynamicPolicy: _enum_for_FiveGMSAFUnsuccessfulOperation.patchDynamicPolicy = FiveGMSAFUnsuccessfulOperation.patchDynamicPolicy; /* SHORT_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary FiveGMSAFUnsuccessfulOperation_destroyDynamicPolicy
@@ -248,7 +248,7 @@ const patchDynamicPolicy: FiveGMSAFUnsuccessfulOperation = FiveGMSAFUnsuccessful
  * @type {number}
  */
 export
-const FiveGMSAFUnsuccessfulOperation_destroyDynamicPolicy: FiveGMSAFUnsuccessfulOperation = FiveGMSAFUnsuccessfulOperation.destroyDynamicPolicy; /* LONG_NAMED_ENUMERATED_VALUE */
+const FiveGMSAFUnsuccessfulOperation_destroyDynamicPolicy: _enum_for_FiveGMSAFUnsuccessfulOperation.destroyDynamicPolicy = FiveGMSAFUnsuccessfulOperation.destroyDynamicPolicy; /* LONG_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary destroyDynamicPolicy
@@ -256,7 +256,7 @@ const FiveGMSAFUnsuccessfulOperation_destroyDynamicPolicy: FiveGMSAFUnsuccessful
  * @type {number}
  */
 export
-const destroyDynamicPolicy: FiveGMSAFUnsuccessfulOperation = FiveGMSAFUnsuccessfulOperation.destroyDynamicPolicy; /* SHORT_NAMED_ENUMERATED_VALUE */
+const destroyDynamicPolicy: _enum_for_FiveGMSAFUnsuccessfulOperation.destroyDynamicPolicy = FiveGMSAFUnsuccessfulOperation.destroyDynamicPolicy; /* SHORT_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary FiveGMSAFUnsuccessfulOperation_createNetworkAssistanceSession
@@ -264,7 +264,7 @@ const destroyDynamicPolicy: FiveGMSAFUnsuccessfulOperation = FiveGMSAFUnsuccessf
  * @type {number}
  */
 export
-const FiveGMSAFUnsuccessfulOperation_createNetworkAssistanceSession: FiveGMSAFUnsuccessfulOperation = FiveGMSAFUnsuccessfulOperation.createNetworkAssistanceSession; /* LONG_NAMED_ENUMERATED_VALUE */
+const FiveGMSAFUnsuccessfulOperation_createNetworkAssistanceSession: _enum_for_FiveGMSAFUnsuccessfulOperation.createNetworkAssistanceSession = FiveGMSAFUnsuccessfulOperation.createNetworkAssistanceSession; /* LONG_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary createNetworkAssistanceSession
@@ -272,7 +272,7 @@ const FiveGMSAFUnsuccessfulOperation_createNetworkAssistanceSession: FiveGMSAFUn
  * @type {number}
  */
 export
-const createNetworkAssistanceSession: FiveGMSAFUnsuccessfulOperation = FiveGMSAFUnsuccessfulOperation.createNetworkAssistanceSession; /* SHORT_NAMED_ENUMERATED_VALUE */
+const createNetworkAssistanceSession: _enum_for_FiveGMSAFUnsuccessfulOperation.createNetworkAssistanceSession = FiveGMSAFUnsuccessfulOperation.createNetworkAssistanceSession; /* SHORT_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary FiveGMSAFUnsuccessfulOperation_retrieveNetworkAssistanceSession
@@ -280,7 +280,7 @@ const createNetworkAssistanceSession: FiveGMSAFUnsuccessfulOperation = FiveGMSAF
  * @type {number}
  */
 export
-const FiveGMSAFUnsuccessfulOperation_retrieveNetworkAssistanceSession: FiveGMSAFUnsuccessfulOperation = FiveGMSAFUnsuccessfulOperation.retrieveNetworkAssistanceSession; /* LONG_NAMED_ENUMERATED_VALUE */
+const FiveGMSAFUnsuccessfulOperation_retrieveNetworkAssistanceSession: _enum_for_FiveGMSAFUnsuccessfulOperation.retrieveNetworkAssistanceSession = FiveGMSAFUnsuccessfulOperation.retrieveNetworkAssistanceSession; /* LONG_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary retrieveNetworkAssistanceSession
@@ -288,7 +288,7 @@ const FiveGMSAFUnsuccessfulOperation_retrieveNetworkAssistanceSession: FiveGMSAF
  * @type {number}
  */
 export
-const retrieveNetworkAssistanceSession: FiveGMSAFUnsuccessfulOperation = FiveGMSAFUnsuccessfulOperation.retrieveNetworkAssistanceSession; /* SHORT_NAMED_ENUMERATED_VALUE */
+const retrieveNetworkAssistanceSession: _enum_for_FiveGMSAFUnsuccessfulOperation.retrieveNetworkAssistanceSession = FiveGMSAFUnsuccessfulOperation.retrieveNetworkAssistanceSession; /* SHORT_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary FiveGMSAFUnsuccessfulOperation_updateNetworkAssistanceSession
@@ -296,7 +296,7 @@ const retrieveNetworkAssistanceSession: FiveGMSAFUnsuccessfulOperation = FiveGMS
  * @type {number}
  */
 export
-const FiveGMSAFUnsuccessfulOperation_updateNetworkAssistanceSession: FiveGMSAFUnsuccessfulOperation = FiveGMSAFUnsuccessfulOperation.updateNetworkAssistanceSession; /* LONG_NAMED_ENUMERATED_VALUE */
+const FiveGMSAFUnsuccessfulOperation_updateNetworkAssistanceSession: _enum_for_FiveGMSAFUnsuccessfulOperation.updateNetworkAssistanceSession = FiveGMSAFUnsuccessfulOperation.updateNetworkAssistanceSession; /* LONG_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary updateNetworkAssistanceSession
@@ -304,7 +304,7 @@ const FiveGMSAFUnsuccessfulOperation_updateNetworkAssistanceSession: FiveGMSAFUn
  * @type {number}
  */
 export
-const updateNetworkAssistanceSession: FiveGMSAFUnsuccessfulOperation = FiveGMSAFUnsuccessfulOperation.updateNetworkAssistanceSession; /* SHORT_NAMED_ENUMERATED_VALUE */
+const updateNetworkAssistanceSession: _enum_for_FiveGMSAFUnsuccessfulOperation.updateNetworkAssistanceSession = FiveGMSAFUnsuccessfulOperation.updateNetworkAssistanceSession; /* SHORT_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary FiveGMSAFUnsuccessfulOperation_patchNetworkAssistanceSession
@@ -312,7 +312,7 @@ const updateNetworkAssistanceSession: FiveGMSAFUnsuccessfulOperation = FiveGMSAF
  * @type {number}
  */
 export
-const FiveGMSAFUnsuccessfulOperation_patchNetworkAssistanceSession: FiveGMSAFUnsuccessfulOperation = FiveGMSAFUnsuccessfulOperation.patchNetworkAssistanceSession; /* LONG_NAMED_ENUMERATED_VALUE */
+const FiveGMSAFUnsuccessfulOperation_patchNetworkAssistanceSession: _enum_for_FiveGMSAFUnsuccessfulOperation.patchNetworkAssistanceSession = FiveGMSAFUnsuccessfulOperation.patchNetworkAssistanceSession; /* LONG_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary patchNetworkAssistanceSession
@@ -320,7 +320,7 @@ const FiveGMSAFUnsuccessfulOperation_patchNetworkAssistanceSession: FiveGMSAFUns
  * @type {number}
  */
 export
-const patchNetworkAssistanceSession: FiveGMSAFUnsuccessfulOperation = FiveGMSAFUnsuccessfulOperation.patchNetworkAssistanceSession; /* SHORT_NAMED_ENUMERATED_VALUE */
+const patchNetworkAssistanceSession: _enum_for_FiveGMSAFUnsuccessfulOperation.patchNetworkAssistanceSession = FiveGMSAFUnsuccessfulOperation.patchNetworkAssistanceSession; /* SHORT_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary FiveGMSAFUnsuccessfulOperation_destroyNetworkAssistanceSession
@@ -328,7 +328,7 @@ const patchNetworkAssistanceSession: FiveGMSAFUnsuccessfulOperation = FiveGMSAFU
  * @type {number}
  */
 export
-const FiveGMSAFUnsuccessfulOperation_destroyNetworkAssistanceSession: FiveGMSAFUnsuccessfulOperation = FiveGMSAFUnsuccessfulOperation.destroyNetworkAssistanceSession; /* LONG_NAMED_ENUMERATED_VALUE */
+const FiveGMSAFUnsuccessfulOperation_destroyNetworkAssistanceSession: _enum_for_FiveGMSAFUnsuccessfulOperation.destroyNetworkAssistanceSession = FiveGMSAFUnsuccessfulOperation.destroyNetworkAssistanceSession; /* LONG_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary destroyNetworkAssistanceSession
@@ -336,7 +336,7 @@ const FiveGMSAFUnsuccessfulOperation_destroyNetworkAssistanceSession: FiveGMSAFU
  * @type {number}
  */
 export
-const destroyNetworkAssistanceSession: FiveGMSAFUnsuccessfulOperation = FiveGMSAFUnsuccessfulOperation.destroyNetworkAssistanceSession; /* SHORT_NAMED_ENUMERATED_VALUE */
+const destroyNetworkAssistanceSession: _enum_for_FiveGMSAFUnsuccessfulOperation.destroyNetworkAssistanceSession = FiveGMSAFUnsuccessfulOperation.destroyNetworkAssistanceSession; /* SHORT_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary FiveGMSAFUnsuccessfulOperation_requestBitRateRecommendation
@@ -344,7 +344,7 @@ const destroyNetworkAssistanceSession: FiveGMSAFUnsuccessfulOperation = FiveGMSA
  * @type {number}
  */
 export
-const FiveGMSAFUnsuccessfulOperation_requestBitRateRecommendation: FiveGMSAFUnsuccessfulOperation = FiveGMSAFUnsuccessfulOperation.requestBitRateRecommendation; /* LONG_NAMED_ENUMERATED_VALUE */
+const FiveGMSAFUnsuccessfulOperation_requestBitRateRecommendation: _enum_for_FiveGMSAFUnsuccessfulOperation.requestBitRateRecommendation = FiveGMSAFUnsuccessfulOperation.requestBitRateRecommendation; /* LONG_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary requestBitRateRecommendation
@@ -352,7 +352,7 @@ const FiveGMSAFUnsuccessfulOperation_requestBitRateRecommendation: FiveGMSAFUnsu
  * @type {number}
  */
 export
-const requestBitRateRecommendation: FiveGMSAFUnsuccessfulOperation = FiveGMSAFUnsuccessfulOperation.requestBitRateRecommendation; /* SHORT_NAMED_ENUMERATED_VALUE */
+const requestBitRateRecommendation: _enum_for_FiveGMSAFUnsuccessfulOperation.requestBitRateRecommendation = FiveGMSAFUnsuccessfulOperation.requestBitRateRecommendation; /* SHORT_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary FiveGMSAFUnsuccessfulOperation_requestDeliveryBoost
@@ -360,7 +360,7 @@ const requestBitRateRecommendation: FiveGMSAFUnsuccessfulOperation = FiveGMSAFUn
  * @type {number}
  */
 export
-const FiveGMSAFUnsuccessfulOperation_requestDeliveryBoost: FiveGMSAFUnsuccessfulOperation = FiveGMSAFUnsuccessfulOperation.requestDeliveryBoost; /* LONG_NAMED_ENUMERATED_VALUE */
+const FiveGMSAFUnsuccessfulOperation_requestDeliveryBoost: _enum_for_FiveGMSAFUnsuccessfulOperation.requestDeliveryBoost = FiveGMSAFUnsuccessfulOperation.requestDeliveryBoost; /* LONG_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary requestDeliveryBoost
@@ -368,7 +368,7 @@ const FiveGMSAFUnsuccessfulOperation_requestDeliveryBoost: FiveGMSAFUnsuccessful
  * @type {number}
  */
 export
-const requestDeliveryBoost: FiveGMSAFUnsuccessfulOperation = FiveGMSAFUnsuccessfulOperation.requestDeliveryBoost; /* SHORT_NAMED_ENUMERATED_VALUE */
+const requestDeliveryBoost: _enum_for_FiveGMSAFUnsuccessfulOperation.requestDeliveryBoost = FiveGMSAFUnsuccessfulOperation.requestDeliveryBoost; /* SHORT_NAMED_ENUMERATED_VALUE */
 export const _decode_FiveGMSAFUnsuccessfulOperation: $.ASN1Decoder<FiveGMSAFUnsuccessfulOperation> = $._decodeEnumerated;
 export const _encode_FiveGMSAFUnsuccessfulOperation: $.ASN1Encoder<FiveGMSAFUnsuccessfulOperation> = $._encodeEnumerated;
 

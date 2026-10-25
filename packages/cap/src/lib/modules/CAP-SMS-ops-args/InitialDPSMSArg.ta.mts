@@ -1,7 +1,7 @@
 /* eslint-disable */
 import {
-    OPTIONAL,
-    ASN1Element as _Element,
+    type OPTIONAL,
+    type ASN1Element as _Element,
     ASN1TagClass as _TagClass,
     ASN1Construction as _Construction,
     ASN1UniversalType as _UniversalType,
@@ -21,14 +21,14 @@ import { type TPProtocolIdentifier, _decode_TPProtocolIdentifier, _encode_TPProt
 import { type TPShortMessageSpecificInfo, _decode_TPShortMessageSpecificInfo, _encode_TPShortMessageSpecificInfo } from "../CAP-datatypes/TPShortMessageSpecificInfo.ta.mjs";
 import { type TPValidityPeriod, _decode_TPValidityPeriod, _encode_TPValidityPeriod } from "../CAP-datatypes/TPValidityPeriod.ta.mjs";
 import { type TimeAndTimezone, _decode_TimeAndTimezone, _encode_TimeAndTimezone } from "../CAP-datatypes/TimeAndTimezone.ta.mjs";
-import { ServiceKey, _decode_ServiceKey, _encode_ServiceKey } from "../Core-INAP-CS1-DataTypes/ServiceKey.ta.mjs";
-import { IMSI, _decode_IMSI, _encode_IMSI } from "../MAP-CommonDataTypes/IMSI.ta.mjs";
+import { type ServiceKey, _decode_ServiceKey, _encode_ServiceKey } from "../Core-INAP-CS1-DataTypes/ServiceKey.ta.mjs";
+import { type IMSI, _decode_IMSI, _encode_IMSI } from "../MAP-CommonDataTypes/IMSI.ta.mjs";
 import { LocationInformation, _decode_LocationInformation, _encode_LocationInformation } from "../MAP-MS-DataTypes/LocationInformation.ta.mjs";
-import { ISDN_AddressString, _decode_ISDN_AddressString, _encode_ISDN_AddressString } from "../MAP-CommonDataTypes/ISDN-AddressString.ta.mjs";
-import { CallReferenceNumber, _decode_CallReferenceNumber, _encode_CallReferenceNumber } from "../MAP-CH-DataTypes/CallReferenceNumber.ta.mjs";
-import { MS_Classmark2, _decode_MS_Classmark2, _encode_MS_Classmark2 } from "../MAP-MS-DataTypes/MS-Classmark2.ta.mjs";
+import { type ISDN_AddressString, _decode_ISDN_AddressString, _encode_ISDN_AddressString } from "../MAP-CommonDataTypes/ISDN-AddressString.ta.mjs";
+import { type CallReferenceNumber, _decode_CallReferenceNumber, _encode_CallReferenceNumber } from "../MAP-CH-DataTypes/CallReferenceNumber.ta.mjs";
+import { type MS_Classmark2, _decode_MS_Classmark2, _encode_MS_Classmark2 } from "../MAP-MS-DataTypes/MS-Classmark2.ta.mjs";
 import { GPRSMSClass, _decode_GPRSMSClass, _encode_GPRSMSClass } from "../MAP-MS-DataTypes/GPRSMSClass.ta.mjs";
-import { IMEI, _decode_IMEI, _encode_IMEI } from "../MAP-CommonDataTypes/IMEI.ta.mjs";
+import { type IMEI, _decode_IMEI, _encode_IMEI } from "../MAP-CommonDataTypes/IMEI.ta.mjs";
 
 
 /**
@@ -47,26 +47,26 @@ import { IMEI, _decode_IMEI, _encode_IMEI } from "../MAP-CommonDataTypes/IMEI.ta
  * ```asn1
  * InitialDPSMSArg {PARAMETERS-BOUND : bound} ::= SEQUENCE {
  *     serviceKey                [0] ServiceKey,
- *     destinationSubscriberNumber        [1] CalledPartyBCDNumber {bound}        OPTIONAL,
- *     callingPartyNumber            [2] SMS-AddressString            OPTIONAL,
- *     eventTypeSMS            [3] EventTypeSMS                OPTIONAL,
- *     iMSI                [4] IMSI                    OPTIONAL,
- *     locationInformationMSC        [5] LocationInformation            OPTIONAL,
- *     locationInformationGPRS        [6] LocationInformationGPRS            OPTIONAL,
- *     sMSCAddress                [7] ISDN-AddressString            OPTIONAL,
- *     timeAndTimezone            [8] TimeAndTimezone {bound}            OPTIONAL,
- *     tPShortMessageSpecificInfo        [9] TPShortMessageSpecificInfo        OPTIONAL,
- *     tPProtocolIdentifier        [10] TPProtocolIdentifier            OPTIONAL,
- *     tPDataCodingScheme            [11] TPDataCodingScheme            OPTIONAL,
- *     tPValidityPeriod            [12] TPValidityPeriod            OPTIONAL,
- *     extensions                [13] Extensions {bound}            OPTIONAL,
+ *     destinationSubscriberNumber        [1] CalledPartyBCDNumber {bound}        type OPTIONAL,
+ *     callingPartyNumber            [2] SMS-AddressString            type OPTIONAL,
+ *     eventTypeSMS            [3] EventTypeSMS                type OPTIONAL,
+ *     iMSI                [4] IMSI                    type OPTIONAL,
+ *     locationInformationMSC        [5] LocationInformation            type OPTIONAL,
+ *     locationInformationGPRS        [6] LocationInformationGPRS            type OPTIONAL,
+ *     sMSCAddress                [7] ISDN-AddressString            type OPTIONAL,
+ *     timeAndTimezone            [8] TimeAndTimezone {bound}            type OPTIONAL,
+ *     tPShortMessageSpecificInfo        [9] TPShortMessageSpecificInfo        type OPTIONAL,
+ *     tPProtocolIdentifier        [10] TPProtocolIdentifier            type OPTIONAL,
+ *     tPDataCodingScheme            [11] TPDataCodingScheme            type OPTIONAL,
+ *     tPValidityPeriod            [12] TPValidityPeriod            type OPTIONAL,
+ *     extensions                [13] Extensions {bound}            type OPTIONAL,
  *     ...,
- *     smsReferenceNumber            [14] CallReferenceNumber            OPTIONAL,
- *     mscAddress                [15] ISDN-AddressString            OPTIONAL,
- *     sgsn-Number                [16] ISDN-AddressString            OPTIONAL,
- *     ms-Classmark2            [17] MS-Classmark2                OPTIONAL,
- *     gPRSMSClass            [18] GPRSMSClass                OPTIONAL,
- *     iMEI                [19] IMEI                    OPTIONAL,
+ *     smsReferenceNumber            [14] CallReferenceNumber            type OPTIONAL,
+ *     mscAddress                [15] ISDN-AddressString            type OPTIONAL,
+ *     sgsn-Number                [16] ISDN-AddressString            type OPTIONAL,
+ *     ms-Classmark2            [17] MS-Classmark2                type OPTIONAL,
+ *     gPRSMSClass            [18] GPRSMSClass                type OPTIONAL,
+ *     iMEI                [19] IMEI                    type OPTIONAL,
  *     calledPartyNumber            [20] ISDN-AddressString            OPTIONAL
  *     }
  * ```
@@ -75,250 +75,296 @@ import { IMEI, _decode_IMEI, _encode_IMEI } from "../MAP-CommonDataTypes/IMEI.ta
  */
 export
 class InitialDPSMSArg {
+    /**
+     * @summary `serviceKey`.
+     * @description
+     *
+     * Requested IN service / SLP inside the gsmSCF; not used for
+     * gsmSCF addressing. (3GPP TS 29.078 V19.0.0 clause 12.5.1.1).
+     *
+     * @public
+     * @readonly
+     */
+    public readonly serviceKey: ServiceKey;
+    /**
+     * @summary `destinationSubscriberNumber`.
+     * @description
+     *
+     * ISDN number of the entity receiving the SM, or destination
+     * address of the destination subscriber, in an MO-SMS
+     * procedure. (3GPP TS 29.078 V19.0.0 clause 12.5.1.1).
+     *
+     * @public
+     * @readonly
+     */
+    public readonly destinationSubscriberNumber?: OPTIONAL<CalledPartyBCDNumber>;
+    /**
+     * @summary `callingPartyNumber`.
+     * @description
+     *
+     * MO-SMS: MSISDN of the subscriber. MT-SMS: originating address
+     * of the submitter. (3GPP TS 29.078 V19.0.0 clause 12.5.1.1).
+     *
+     * @public
+     * @readonly
+     */
+    public readonly callingPartyNumber?: OPTIONAL<SMS_AddressString>;
+    /**
+     * @summary `eventTypeSMS`.
+     * @description
+     *
+     * Armed smsSSF FSM DP that resulted in this InitialDPSMS
+     * (spec: eventType). (3GPP TS 29.078 V19.0.0 clause 12.5.1.1).
+     *
+     * @public
+     * @readonly
+     */
+    public readonly eventTypeSMS?: OPTIONAL<EventTypeSMS>;
+    /**
+     * @summary `iMSI`.
+     * @description
+     *
+     * IMSI of the mobile subscriber for whom the CAMEL service is
+     * invoked. (3GPP TS 29.078 V19.0.0 clause 12.5.1.1).
+     *
+     * @public
+     * @readonly
+     */
+    public readonly iMSI?: OPTIONAL<IMSI>;
+    /**
+     * @summary `locationInformationMSC`.
+     * @description
+     *
+     * Location of the MSC of the served subscriber. Include only
+     * when InitialDPSMS is sent from the MSC (spec:
+     * locationInformationInMSC). UserCSGInformation may be nested
+     * (3GPP TS 29.002). (3GPP TS 29.078 V19.0.0 clause 12.5.1.1).
+     *
+     * @public
+     * @readonly
+     */
+    public readonly locationInformationMSC?: OPTIONAL<LocationInformation>;
+    /**
+     * @summary `locationInformationGPRS`.
+     * @description
+     *
+     * Location of the SGSN of the served subscriber. Include only
+     * when InitialDPSMS is sent from the SGSN (spec:
+     * locationInformationInSGSN). UserCSGInformation may be nested
+     * (3GPP TS 29.002). (3GPP TS 29.078 V19.0.0 clause 12.5.1.1).
+     *
+     * @public
+     * @readonly
+     */
+    public readonly locationInformationGPRS?: OPTIONAL<LocationInformationGPRS>;
+    /**
+     * @summary `sMSCAddress`.
+     * @description
+     *
+     * Address of the SMSC to which the Short Message is intended to
+     * be submitted. (3GPP TS 29.078 V19.0.0 clause 12.5.1.1).
+     *
+     * @public
+     * @readonly
+     */
+    public readonly sMSCAddress?: OPTIONAL<ISDN_AddressString>;
+    /**
+     * @summary `timeAndTimezone`.
+     * @description
+     *
+     * Time the smsSSF was triggered and the time zone of the
+     * invoking smsSSF. (3GPP TS 29.078 V19.0.0 clause 12.5.1.1).
+     *
+     * @public
+     * @readonly
+     */
+    public readonly timeAndTimezone?: OPTIONAL<TimeAndTimezone>;
+    /**
+     * @summary `tPShortMessageSpecificInfo`.
+     * @description
+     *
+     * First octet of the TPDU. See 3GPP TS 23.040 for TPDU types.
+     * (3GPP TS 29.078 V19.0.0 clause 12.5.1.1).
+     *
+     * @public
+     * @readonly
+     */
+    public readonly tPShortMessageSpecificInfo?: OPTIONAL<TPShortMessageSpecificInfo>;
+    /**
+     * @summary `tPProtocolIdentifier`.
+     * @description
+     *
+     * Protocol used above the SM-Transfer Layer.
+     * (3GPP TS 29.078 V19.0.0 clause 12.5.1.1).
+     *
+     * @public
+     * @readonly
+     */
+    public readonly tPProtocolIdentifier?: OPTIONAL<TPProtocolIdentifier>;
+    /**
+     * @summary `tPDataCodingScheme`.
+     * @description
+     *
+     * Data coding scheme of the TP-User-Data in the TPDU. May
+     * indicate a message class (e.g. originator of the SM).
+     * (3GPP TS 29.078 V19.0.0 clause 12.5.1.1).
+     *
+     * @public
+     * @readonly
+     */
+    public readonly tPDataCodingScheme?: OPTIONAL<TPDataCodingScheme>;
+    /**
+     * @summary `tPValidityPeriod`.
+     * @description
+     *
+     * Length of the validity period, or absolute time of validity
+     * period termination. (3GPP TS 29.078 V19.0.0 clause 12.5.1.1).
+     *
+     * @public
+     * @readonly
+     */
+    public readonly tPValidityPeriod?: OPTIONAL<TPValidityPeriod>;
+    /**
+     * @summary `extensions`.
+     * @public
+     * @readonly
+     */
+    public readonly extensions?: OPTIONAL<Extensions>;
+    /**
+     * @summary `smsReferenceNumber`.
+     * @description
+     *
+     * SMS Reference Number assigned to the Short Message by the MSC
+     * or SGSN. (3GPP TS 29.078 V19.0.0 clause 12.5.1.1).
+     *
+     * @public
+     * @readonly
+     */
+    public readonly smsReferenceNumber?: OPTIONAL<CallReferenceNumber>;
+    /**
+     * @summary `mscAddress`.
+     * @description
+     *
+     * E.164 address of the MSC. Present if SMS processing is in the
+     * MSC; otherwise absent. (3GPP TS 29.078 V19.0.0
+     * clause 12.5.1.1).
+     *
+     * @public
+     * @readonly
+     */
+    public readonly mscAddress?: OPTIONAL<ISDN_AddressString>;
+    /**
+     * @summary `sgsn_Number`.
+     * @description
+     *
+     * Global Title of the SGSN. Present if SMS processing is in the
+     * SGSN; otherwise absent. (3GPP TS 29.078 V19.0.0
+     * clause 12.5.1.1).
+     *
+     * @public
+     * @readonly
+     */
+    public readonly sgsn_Number?: OPTIONAL<ISDN_AddressString>;
+    /**
+     * @summary `ms_Classmark2`.
+     * @description
+     *
+     * MS Classmark 2 of the mobile subscriber for which the service
+     * is invoked. (3GPP TS 29.078 V19.0.0 clause 12.5.1.1).
+     *
+     * @public
+     * @readonly
+     */
+    public readonly ms_Classmark2?: OPTIONAL<MS_Classmark2>;
+    /**
+     * @summary `gPRSMSClass`.
+     * @description
+     *
+     * GPRS MS capabilities of the mobile subscriber for which the
+     * CAMEL service is invoked. (3GPP TS 29.078 V19.0.0
+     * clause 12.5.1.1).
+     *
+     * @public
+     * @readonly
+     */
+    public readonly gPRSMSClass?: OPTIONAL<GPRSMSClass>;
+    /**
+     * @summary `iMEI`.
+     * @description
+     *
+     * IMEI (with software version) of the mobile subscriber for
+     * which the service is invoked. (3GPP TS 29.078 V19.0.0
+     * clause 12.5.1.1).
+     *
+     * @public
+     * @readonly
+     */
+    public readonly iMEI?: OPTIONAL<IMEI>;
+    /**
+     * @summary `calledPartyNumber`.
+     * @description
+     *
+     * Served subscriber in an MT-SMS procedure.
+     * (3GPP TS 29.078 V19.0.0 clause 12.5.1.1).
+     *
+     * @public
+     * @readonly
+     */
+    public readonly calledPartyNumber?: OPTIONAL<ISDN_AddressString>;
+    /**
+     * @summary Extensions that are not recognized.
+     * @public
+     * @readonly
+     */
+    public readonly _unrecognizedExtensionsList: _Element[];
+
     constructor (
-        /**
-         * @summary `serviceKey`.
-         * @description
-         *
-         * Requested IN service / SLP inside the gsmSCF; not used for
-         * gsmSCF addressing. (3GPP TS 29.078 V19.0.0 clause 12.5.1.1).
-         *
-         * @public
-         * @readonly
-         */
-        readonly serviceKey: ServiceKey,
-        /**
-         * @summary `destinationSubscriberNumber`.
-         * @description
-         *
-         * ISDN number of the entity receiving the SM, or destination
-         * address of the destination subscriber, in an MO-SMS
-         * procedure. (3GPP TS 29.078 V19.0.0 clause 12.5.1.1).
-         *
-         * @public
-         * @readonly
-         */
-        readonly destinationSubscriberNumber?: OPTIONAL<CalledPartyBCDNumber>,
-        /**
-         * @summary `callingPartyNumber`.
-         * @description
-         *
-         * MO-SMS: MSISDN of the subscriber. MT-SMS: originating address
-         * of the submitter. (3GPP TS 29.078 V19.0.0 clause 12.5.1.1).
-         *
-         * @public
-         * @readonly
-         */
-        readonly callingPartyNumber?: OPTIONAL<SMS_AddressString>,
-        /**
-         * @summary `eventTypeSMS`.
-         * @description
-         *
-         * Armed smsSSF FSM DP that resulted in this InitialDPSMS
-         * (spec: eventType). (3GPP TS 29.078 V19.0.0 clause 12.5.1.1).
-         *
-         * @public
-         * @readonly
-         */
-        readonly eventTypeSMS?: OPTIONAL<EventTypeSMS>,
-        /**
-         * @summary `iMSI`.
-         * @description
-         *
-         * IMSI of the mobile subscriber for whom the CAMEL service is
-         * invoked. (3GPP TS 29.078 V19.0.0 clause 12.5.1.1).
-         *
-         * @public
-         * @readonly
-         */
-        readonly iMSI?: OPTIONAL<IMSI>,
-        /**
-         * @summary `locationInformationMSC`.
-         * @description
-         *
-         * Location of the MSC of the served subscriber. Include only
-         * when InitialDPSMS is sent from the MSC (spec:
-         * locationInformationInMSC). UserCSGInformation may be nested
-         * (3GPP TS 29.002). (3GPP TS 29.078 V19.0.0 clause 12.5.1.1).
-         *
-         * @public
-         * @readonly
-         */
-        readonly locationInformationMSC?: OPTIONAL<LocationInformation>,
-        /**
-         * @summary `locationInformationGPRS`.
-         * @description
-         *
-         * Location of the SGSN of the served subscriber. Include only
-         * when InitialDPSMS is sent from the SGSN (spec:
-         * locationInformationInSGSN). UserCSGInformation may be nested
-         * (3GPP TS 29.002). (3GPP TS 29.078 V19.0.0 clause 12.5.1.1).
-         *
-         * @public
-         * @readonly
-         */
-        readonly locationInformationGPRS?: OPTIONAL<LocationInformationGPRS>,
-        /**
-         * @summary `sMSCAddress`.
-         * @description
-         *
-         * Address of the SMSC to which the Short Message is intended to
-         * be submitted. (3GPP TS 29.078 V19.0.0 clause 12.5.1.1).
-         *
-         * @public
-         * @readonly
-         */
-        readonly sMSCAddress?: OPTIONAL<ISDN_AddressString>,
-        /**
-         * @summary `timeAndTimezone`.
-         * @description
-         *
-         * Time the smsSSF was triggered and the time zone of the
-         * invoking smsSSF. (3GPP TS 29.078 V19.0.0 clause 12.5.1.1).
-         *
-         * @public
-         * @readonly
-         */
-        readonly timeAndTimezone?: OPTIONAL<TimeAndTimezone>,
-        /**
-         * @summary `tPShortMessageSpecificInfo`.
-         * @description
-         *
-         * First octet of the TPDU. See 3GPP TS 23.040 for TPDU types.
-         * (3GPP TS 29.078 V19.0.0 clause 12.5.1.1).
-         *
-         * @public
-         * @readonly
-         */
-        readonly tPShortMessageSpecificInfo?: OPTIONAL<TPShortMessageSpecificInfo>,
-        /**
-         * @summary `tPProtocolIdentifier`.
-         * @description
-         *
-         * Protocol used above the SM-Transfer Layer.
-         * (3GPP TS 29.078 V19.0.0 clause 12.5.1.1).
-         *
-         * @public
-         * @readonly
-         */
-        readonly tPProtocolIdentifier?: OPTIONAL<TPProtocolIdentifier>,
-        /**
-         * @summary `tPDataCodingScheme`.
-         * @description
-         *
-         * Data coding scheme of the TP-User-Data in the TPDU. May
-         * indicate a message class (e.g. originator of the SM).
-         * (3GPP TS 29.078 V19.0.0 clause 12.5.1.1).
-         *
-         * @public
-         * @readonly
-         */
-        readonly tPDataCodingScheme?: OPTIONAL<TPDataCodingScheme>,
-        /**
-         * @summary `tPValidityPeriod`.
-         * @description
-         *
-         * Length of the validity period, or absolute time of validity
-         * period termination. (3GPP TS 29.078 V19.0.0 clause 12.5.1.1).
-         *
-         * @public
-         * @readonly
-         */
-        readonly tPValidityPeriod?: OPTIONAL<TPValidityPeriod>,
-        /**
-         * @summary `extensions`.
-         * @public
-         * @readonly
-         */
-        readonly extensions?: OPTIONAL<Extensions>,
-        /**
-         * @summary `smsReferenceNumber`.
-         * @description
-         *
-         * SMS Reference Number assigned to the Short Message by the MSC
-         * or SGSN. (3GPP TS 29.078 V19.0.0 clause 12.5.1.1).
-         *
-         * @public
-         * @readonly
-         */
-        readonly smsReferenceNumber?: OPTIONAL<CallReferenceNumber>,
-        /**
-         * @summary `mscAddress`.
-         * @description
-         *
-         * E.164 address of the MSC. Present if SMS processing is in the
-         * MSC; otherwise absent. (3GPP TS 29.078 V19.0.0
-         * clause 12.5.1.1).
-         *
-         * @public
-         * @readonly
-         */
-        readonly mscAddress?: OPTIONAL<ISDN_AddressString>,
-        /**
-         * @summary `sgsn_Number`.
-         * @description
-         *
-         * Global Title of the SGSN. Present if SMS processing is in the
-         * SGSN; otherwise absent. (3GPP TS 29.078 V19.0.0
-         * clause 12.5.1.1).
-         *
-         * @public
-         * @readonly
-         */
-        readonly sgsn_Number?: OPTIONAL<ISDN_AddressString>,
-        /**
-         * @summary `ms_Classmark2`.
-         * @description
-         *
-         * MS Classmark 2 of the mobile subscriber for which the service
-         * is invoked. (3GPP TS 29.078 V19.0.0 clause 12.5.1.1).
-         *
-         * @public
-         * @readonly
-         */
-        readonly ms_Classmark2?: OPTIONAL<MS_Classmark2>,
-        /**
-         * @summary `gPRSMSClass`.
-         * @description
-         *
-         * GPRS MS capabilities of the mobile subscriber for which the
-         * CAMEL service is invoked. (3GPP TS 29.078 V19.0.0
-         * clause 12.5.1.1).
-         *
-         * @public
-         * @readonly
-         */
-        readonly gPRSMSClass?: OPTIONAL<GPRSMSClass>,
-        /**
-         * @summary `iMEI`.
-         * @description
-         *
-         * IMEI (with software version) of the mobile subscriber for
-         * which the service is invoked. (3GPP TS 29.078 V19.0.0
-         * clause 12.5.1.1).
-         *
-         * @public
-         * @readonly
-         */
-        readonly iMEI?: OPTIONAL<IMEI>,
-        /**
-         * @summary `calledPartyNumber`.
-         * @description
-         *
-         * Served subscriber in an MT-SMS procedure.
-         * (3GPP TS 29.078 V19.0.0 clause 12.5.1.1).
-         *
-         * @public
-         * @readonly
-         */
-        readonly calledPartyNumber?: OPTIONAL<ISDN_AddressString>,
-        /**
-         * @summary Extensions that are not recognized.
-         * @public
-         * @readonly
-         */
-        readonly _unrecognizedExtensionsList: _Element[] = []
-    ) {}
+        serviceKey: ServiceKey,
+        destinationSubscriberNumber?: OPTIONAL<CalledPartyBCDNumber>,
+        callingPartyNumber?: OPTIONAL<SMS_AddressString>,
+        eventTypeSMS?: OPTIONAL<EventTypeSMS>,
+        iMSI?: OPTIONAL<IMSI>,
+        locationInformationMSC?: OPTIONAL<LocationInformation>,
+        locationInformationGPRS?: OPTIONAL<LocationInformationGPRS>,
+        sMSCAddress?: OPTIONAL<ISDN_AddressString>,
+        timeAndTimezone?: OPTIONAL<TimeAndTimezone>,
+        tPShortMessageSpecificInfo?: OPTIONAL<TPShortMessageSpecificInfo>,
+        tPProtocolIdentifier?: OPTIONAL<TPProtocolIdentifier>,
+        tPDataCodingScheme?: OPTIONAL<TPDataCodingScheme>,
+        tPValidityPeriod?: OPTIONAL<TPValidityPeriod>,
+        extensions?: OPTIONAL<Extensions>,
+        smsReferenceNumber?: OPTIONAL<CallReferenceNumber>,
+        mscAddress?: OPTIONAL<ISDN_AddressString>,
+        sgsn_Number?: OPTIONAL<ISDN_AddressString>,
+        ms_Classmark2?: OPTIONAL<MS_Classmark2>,
+        gPRSMSClass?: OPTIONAL<GPRSMSClass>,
+        iMEI?: OPTIONAL<IMEI>,
+        calledPartyNumber?: OPTIONAL<ISDN_AddressString>,
+        _unrecognizedExtensionsList: _Element[] = []
+    ) {
+        this.serviceKey = serviceKey;
+        this.destinationSubscriberNumber = destinationSubscriberNumber;
+        this.callingPartyNumber = callingPartyNumber;
+        this.eventTypeSMS = eventTypeSMS;
+        this.iMSI = iMSI;
+        this.locationInformationMSC = locationInformationMSC;
+        this.locationInformationGPRS = locationInformationGPRS;
+        this.sMSCAddress = sMSCAddress;
+        this.timeAndTimezone = timeAndTimezone;
+        this.tPShortMessageSpecificInfo = tPShortMessageSpecificInfo;
+        this.tPProtocolIdentifier = tPProtocolIdentifier;
+        this.tPDataCodingScheme = tPDataCodingScheme;
+        this.tPValidityPeriod = tPValidityPeriod;
+        this.extensions = extensions;
+        this.smsReferenceNumber = smsReferenceNumber;
+        this.mscAddress = mscAddress;
+        this.sgsn_Number = sgsn_Number;
+        this.ms_Classmark2 = ms_Classmark2;
+        this.gPRSMSClass = gPRSMSClass;
+        this.iMEI = iMEI;
+        this.calledPartyNumber = calledPartyNumber;
+        this._unrecognizedExtensionsList = _unrecognizedExtensionsList;
+    }
 
     /**
      * @summary Restructures an object into a InitialDPSMSArg

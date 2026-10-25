@@ -1,4 +1,5 @@
 /* eslint-disable */
+import { ASN1Element as _Element, ASN1ConstructionError as _ConstructionError } from "@wildboar/asn1";
 import * as $ from "@wildboar/asn1/functional";
 
 
@@ -66,7 +67,7 @@ type InvokableService = _enum_for_InvokableService;
  * @enum {number}
  */
 export
-const InvokableService = _enum_for_InvokableService;
+const InvokableService: typeof _enum_for_InvokableService = _enum_for_InvokableService;
 
 /**
  * @summary InvokableService_callingLineIdentificationRestriction
@@ -74,7 +75,7 @@ const InvokableService = _enum_for_InvokableService;
  * @type {number}
  */
 export
-const InvokableService_callingLineIdentificationRestriction: InvokableService = InvokableService.callingLineIdentificationRestriction; /* LONG_NAMED_ENUMERATED_VALUE */
+const InvokableService_callingLineIdentificationRestriction: _enum_for_InvokableService.callingLineIdentificationRestriction = InvokableService.callingLineIdentificationRestriction; /* LONG_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary callingLineIdentificationRestriction
@@ -82,7 +83,7 @@ const InvokableService_callingLineIdentificationRestriction: InvokableService = 
  * @type {number}
  */
 export
-const callingLineIdentificationRestriction: InvokableService = InvokableService.callingLineIdentificationRestriction; /* SHORT_NAMED_ENUMERATED_VALUE */
+const callingLineIdentificationRestriction: _enum_for_InvokableService.callingLineIdentificationRestriction = InvokableService.callingLineIdentificationRestriction; /* SHORT_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary InvokableService_connectedLineIdentificationRestriction
@@ -90,7 +91,7 @@ const callingLineIdentificationRestriction: InvokableService = InvokableService.
  * @type {number}
  */
 export
-const InvokableService_connectedLineIdentificationRestriction: InvokableService = InvokableService.connectedLineIdentificationRestriction; /* LONG_NAMED_ENUMERATED_VALUE */
+const InvokableService_connectedLineIdentificationRestriction: _enum_for_InvokableService.connectedLineIdentificationRestriction = InvokableService.connectedLineIdentificationRestriction; /* LONG_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary connectedLineIdentificationRestriction
@@ -98,7 +99,7 @@ const InvokableService_connectedLineIdentificationRestriction: InvokableService 
  * @type {number}
  */
 export
-const connectedLineIdentificationRestriction: InvokableService = InvokableService.connectedLineIdentificationRestriction; /* SHORT_NAMED_ENUMERATED_VALUE */
+const connectedLineIdentificationRestriction: _enum_for_InvokableService.connectedLineIdentificationRestriction = InvokableService.connectedLineIdentificationRestriction; /* SHORT_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary InvokableService_callWaiting
@@ -106,7 +107,7 @@ const connectedLineIdentificationRestriction: InvokableService = InvokableServic
  * @type {number}
  */
 export
-const InvokableService_callWaiting: InvokableService = InvokableService.callWaiting; /* LONG_NAMED_ENUMERATED_VALUE */
+const InvokableService_callWaiting: _enum_for_InvokableService.callWaiting = InvokableService.callWaiting; /* LONG_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary callWaiting
@@ -114,7 +115,7 @@ const InvokableService_callWaiting: InvokableService = InvokableService.callWait
  * @type {number}
  */
 export
-const callWaiting: InvokableService = InvokableService.callWaiting; /* SHORT_NAMED_ENUMERATED_VALUE */
+const callWaiting: _enum_for_InvokableService.callWaiting = InvokableService.callWaiting; /* SHORT_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary InvokableService_callHold
@@ -122,7 +123,7 @@ const callWaiting: InvokableService = InvokableService.callWaiting; /* SHORT_NAM
  * @type {number}
  */
 export
-const InvokableService_callHold: InvokableService = InvokableService.callHold; /* LONG_NAMED_ENUMERATED_VALUE */
+const InvokableService_callHold: _enum_for_InvokableService.callHold = InvokableService.callHold; /* LONG_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary callHold
@@ -130,7 +131,7 @@ const InvokableService_callHold: InvokableService = InvokableService.callHold; /
  * @type {number}
  */
 export
-const callHold: InvokableService = InvokableService.callHold; /* SHORT_NAMED_ENUMERATED_VALUE */
+const callHold: _enum_for_InvokableService.callHold = InvokableService.callHold; /* SHORT_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary InvokableService_reverseCharging
@@ -138,7 +139,7 @@ const callHold: InvokableService = InvokableService.callHold; /* SHORT_NAMED_ENU
  * @type {number}
  */
 export
-const InvokableService_reverseCharging: InvokableService = InvokableService.reverseCharging; /* LONG_NAMED_ENUMERATED_VALUE */
+const InvokableService_reverseCharging: _enum_for_InvokableService.reverseCharging = InvokableService.reverseCharging; /* LONG_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary reverseCharging
@@ -146,7 +147,7 @@ const InvokableService_reverseCharging: InvokableService = InvokableService.reve
  * @type {number}
  */
 export
-const reverseCharging: InvokableService = InvokableService.reverseCharging; /* SHORT_NAMED_ENUMERATED_VALUE */
+const reverseCharging: _enum_for_InvokableService.reverseCharging = InvokableService.reverseCharging; /* SHORT_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary InvokableService_explicitCallTransfer
@@ -154,7 +155,7 @@ const reverseCharging: InvokableService = InvokableService.reverseCharging; /* S
  * @type {number}
  */
 export
-const InvokableService_explicitCallTransfer: InvokableService = InvokableService.explicitCallTransfer; /* LONG_NAMED_ENUMERATED_VALUE */
+const InvokableService_explicitCallTransfer: _enum_for_InvokableService.explicitCallTransfer = InvokableService.explicitCallTransfer; /* LONG_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary explicitCallTransfer
@@ -162,7 +163,7 @@ const InvokableService_explicitCallTransfer: InvokableService = InvokableService
  * @type {number}
  */
 export
-const explicitCallTransfer: InvokableService = InvokableService.explicitCallTransfer; /* SHORT_NAMED_ENUMERATED_VALUE */
+const explicitCallTransfer: _enum_for_InvokableService.explicitCallTransfer = InvokableService.explicitCallTransfer; /* SHORT_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary InvokableService_callCompletionOnBusySubscriber
@@ -170,7 +171,7 @@ const explicitCallTransfer: InvokableService = InvokableService.explicitCallTran
  * @type {number}
  */
 export
-const InvokableService_callCompletionOnBusySubscriber: InvokableService = InvokableService.callCompletionOnBusySubscriber; /* LONG_NAMED_ENUMERATED_VALUE */
+const InvokableService_callCompletionOnBusySubscriber: _enum_for_InvokableService.callCompletionOnBusySubscriber = InvokableService.callCompletionOnBusySubscriber; /* LONG_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary callCompletionOnBusySubscriber
@@ -178,12 +179,28 @@ const InvokableService_callCompletionOnBusySubscriber: InvokableService = Invoka
  * @type {number}
  */
 export
-const callCompletionOnBusySubscriber: InvokableService = InvokableService.callCompletionOnBusySubscriber; /* SHORT_NAMED_ENUMERATED_VALUE */
+const callCompletionOnBusySubscriber: _enum_for_InvokableService.callCompletionOnBusySubscriber = InvokableService.callCompletionOnBusySubscriber; /* SHORT_NAMED_ENUMERATED_VALUE */
 
 export
-const _decode_InvokableService: $.ASN1Decoder<InvokableService> = $._decodeEnumerated;
+function _decode_InvokableService(el: _Element): InvokableService {
+    const enumerated = $._decodeEnumerated(el);
+    switch (enumerated) {
+        case InvokableService.callingLineIdentificationRestriction: return InvokableService.callingLineIdentificationRestriction;
+        case InvokableService.connectedLineIdentificationRestriction: return InvokableService.connectedLineIdentificationRestriction;
+        case InvokableService.callWaiting: return InvokableService.callWaiting;
+        case InvokableService.callHold: return InvokableService.callHold;
+        case InvokableService.reverseCharging: return InvokableService.reverseCharging;
+        case InvokableService.explicitCallTransfer: return InvokableService.explicitCallTransfer;
+        case InvokableService.callCompletionOnBusySubscriber: return InvokableService.callCompletionOnBusySubscriber;
+        default:
+            throw new _ConstructionError(
+                "Invalid ENUMERATED value " + enumerated + " for InvokableService.",
+                el,
+            );
+    }
+}
 
 export
-const _encode_InvokableService: $.ASN1Encoder<InvokableService> = $._encodeEnumerated;
+const _encode_InvokableService: $.ASN1Encoder<InvokableService> = $._encodeEnumerated as $.ASN1Encoder<InvokableService>;
 
 /* eslint-enable */

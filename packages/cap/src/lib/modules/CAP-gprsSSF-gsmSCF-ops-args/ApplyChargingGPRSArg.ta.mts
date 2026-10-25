@@ -1,8 +1,8 @@
 /* eslint-disable */
 import {
-    OPTIONAL,
-    INTEGER,
-    ASN1Element as _Element,
+    type OPTIONAL,
+    type INTEGER,
+    type ASN1Element as _Element,
     ASN1TagClass as _TagClass,
     ASN1Construction as _Construction,
     ASN1UniversalType as _UniversalType,
@@ -31,8 +31,8 @@ import { type PDPID, _decode_PDPID, _encode_PDPID } from "../CAP-datatypes/PDPID
  * ```asn1
  * ApplyChargingGPRSArg ::= SEQUENCE { 
  *     chargingCharacteristics        [0] ChargingCharacteristics,
- *     tariffSwitchInterval        [1] INTEGER (1..86400)            OPTIONAL,
- *     pDPID                [2] PDPID                    OPTIONAL,
+ *     tariffSwitchInterval        [1] INTEGER (1..86400)            type OPTIONAL,
+ *     pDPID                [2] PDPID                    type OPTIONAL,
  *     ...
  *     }
  * ```
@@ -41,54 +41,63 @@ import { type PDPID, _decode_PDPID, _encode_PDPID } from "../CAP-datatypes/PDPID
  */
 export
 class ApplyChargingGPRSArg {
+    /**
+     * @summary `chargingCharacteristics`.
+     * @description
+     *
+     * Choice for CSE control of session or PDP Context duration or
+     * volume: `maxTransferredVolume` (volume before
+     * ApplyChargingReportGPRS) or `maxElapsedTime` (period before
+     * ApplyChargingReportGPRS). Session charging is duration only.
+     * (3GPP TS 29.078 V19.0.0 clause 13.2.1.1).
+     *
+     * @public
+     * @readonly
+     */
+    public readonly chargingCharacteristics: ChargingCharacteristics;
+    /**
+     * @summary `tariffSwitchInterval`.
+     * @description
+     *
+     * Time until the next tariff switch, in 1-second units
+     * (1..86400). Elapsed-period measurement starts immediately
+     * after successful execution.
+     * (3GPP TS 29.078 V19.0.0 clause 13.2.1.1).
+     *
+     * @public
+     * @readonly
+     */
+    public readonly tariffSwitchInterval?: OPTIONAL<INTEGER>;
+    /**
+     * @summary `pDPID`.
+     * @description
+     *
+     * Identifies the PDP Context, within a GPRS Session dialogue, to
+     * which the charging instruction applies. unknownPDPID if the
+     * gprsSSF does not know this PDPID.
+     * (3GPP TS 29.078 V19.0.0 clause 13.2.1.1).
+     *
+     * @public
+     * @readonly
+     */
+    public readonly pDPID?: OPTIONAL<PDPID>;
+    /**
+     * @summary Extensions that are not recognized.
+     * @public
+     * @readonly
+     */
+    public readonly _unrecognizedExtensionsList: _Element[];
+
     constructor (
-        /**
-         * @summary `chargingCharacteristics`.
-         * @description
-         *
-         * Choice for CSE control of session or PDP Context duration or
-         * volume: `maxTransferredVolume` (volume before
-         * ApplyChargingReportGPRS) or `maxElapsedTime` (period before
-         * ApplyChargingReportGPRS). Session charging is duration only.
-         * (3GPP TS 29.078 V19.0.0 clause 13.2.1.1).
-         *
-         * @public
-         * @readonly
-         */
-        readonly chargingCharacteristics: ChargingCharacteristics,
-        /**
-         * @summary `tariffSwitchInterval`.
-         * @description
-         *
-         * Time until the next tariff switch, in 1-second units
-         * (1..86400). Elapsed-period measurement starts immediately
-         * after successful execution.
-         * (3GPP TS 29.078 V19.0.0 clause 13.2.1.1).
-         *
-         * @public
-         * @readonly
-         */
-        readonly tariffSwitchInterval?: OPTIONAL<INTEGER>,
-        /**
-         * @summary `pDPID`.
-         * @description
-         *
-         * Identifies the PDP Context, within a GPRS Session dialogue, to
-         * which the charging instruction applies. unknownPDPID if the
-         * gprsSSF does not know this PDPID.
-         * (3GPP TS 29.078 V19.0.0 clause 13.2.1.1).
-         *
-         * @public
-         * @readonly
-         */
-        readonly pDPID?: OPTIONAL<PDPID>,
-        /**
-         * @summary Extensions that are not recognized.
-         * @public
-         * @readonly
-         */
-        readonly _unrecognizedExtensionsList: _Element[] = []
+        chargingCharacteristics: ChargingCharacteristics,
+        tariffSwitchInterval?: OPTIONAL<INTEGER>,
+        pDPID?: OPTIONAL<PDPID>,
+        _unrecognizedExtensionsList: _Element[] = []
     ) {
+        this.chargingCharacteristics = chargingCharacteristics;
+        this.tariffSwitchInterval = tariffSwitchInterval;
+        this.pDPID = pDPID;
+        this._unrecognizedExtensionsList = _unrecognizedExtensionsList;
         if (tariffSwitchInterval !== undefined && (typeof tariffSwitchInterval === "bigint" ? (tariffSwitchInterval < 1n || tariffSwitchInterval > 86400n) : (tariffSwitchInterval < 1 || tariffSwitchInterval > 86400))) {
             throw new ASN1OverflowError("ApplyChargingGPRSArg.tariffSwitchInterval violates INTEGER constraint");
         }

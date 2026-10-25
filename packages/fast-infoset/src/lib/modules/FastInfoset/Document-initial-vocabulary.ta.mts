@@ -1,6 +1,6 @@
 /* eslint-disable */
 import {
-  OPTIONAL,
+  type OPTIONAL,
   ASN1Element as _Element,
   ASN1TagClass as _TagClass,
   ASN1Construction as _Construction,
@@ -11,9 +11,9 @@ import {
   ASN1ConstructionError as _ConstructionError,
 } from '@wildboar/asn1';
 import * as $ from '@wildboar/asn1/functional';
-import { URI, _decode_URI, _encode_URI } from '../FastInfoset/URI.ta.mjs';
+import { type URI, _decode_URI, _encode_URI } from '../FastInfoset/URI.ta.mjs';
 import {
-  NonEmptyOctetString,
+  type NonEmptyOctetString,
   _decode_NonEmptyOctetString,
   _encode_NonEmptyOctetString,
 } from '../FastInfoset/NonEmptyOctetString.ta.mjs';
@@ -61,7 +61,7 @@ export class Document_initial_vocabulary {
    * @public
    * @readonly
    */
-  readonly external_vocabulary?: OPTIONAL<URI>;
+  public readonly external_vocabulary?: OPTIONAL<URI>;
   /**
    * @summary `restricted_alphabets`.
    * @description UTF-8 strings of at least two distinct
@@ -73,7 +73,7 @@ export class Document_initial_vocabulary {
    * @public
    * @readonly
    */
-  readonly restricted_alphabets?: OPTIONAL<NonEmptyOctetString[]>;
+  public readonly restricted_alphabets?: OPTIONAL<NonEmptyOctetString[]>;
   /**
    * @summary `encoding_algorithms`.
    * @description URIs of encoding algorithms, appended to
@@ -84,7 +84,7 @@ export class Document_initial_vocabulary {
    * @public
    * @readonly
    */
-  readonly encoding_algorithms?: OPTIONAL<NonEmptyOctetString[]>;
+  public readonly encoding_algorithms?: OPTIONAL<NonEmptyOctetString[]>;
   /**
    * @summary `prefixes`.
    * @description UTF-8 strings for the PREFIX table. Index 1
@@ -94,7 +94,7 @@ export class Document_initial_vocabulary {
    * @public
    * @readonly
    */
-  readonly prefixes?: OPTIONAL<NonEmptyOctetString[]>;
+  public readonly prefixes?: OPTIONAL<NonEmptyOctetString[]>;
   /**
    * @summary `namespace_names`.
    * @description UTF-8 strings for the NAMESPACE NAME
@@ -105,7 +105,7 @@ export class Document_initial_vocabulary {
    * @public
    * @readonly
    */
-  readonly namespace_names?: OPTIONAL<NonEmptyOctetString[]>;
+  public readonly namespace_names?: OPTIONAL<NonEmptyOctetString[]>;
   /**
    * @summary `local_names`.
    * @description UTF-8 strings for the LOCAL NAME table
@@ -114,7 +114,7 @@ export class Document_initial_vocabulary {
    * @public
    * @readonly
    */
-  readonly local_names?: OPTIONAL<NonEmptyOctetString[]>;
+  public readonly local_names?: OPTIONAL<NonEmptyOctetString[]>;
   /**
    * @summary `other_ncnames`.
    * @description UTF-8 strings for the OTHER NCNAME table
@@ -124,7 +124,7 @@ export class Document_initial_vocabulary {
    * @public
    * @readonly
    */
-  readonly other_ncnames?: OPTIONAL<NonEmptyOctetString[]>;
+  public readonly other_ncnames?: OPTIONAL<NonEmptyOctetString[]>;
   /**
    * @summary `other_uris`.
    * @description UTF-8 strings for the OTHER URI table
@@ -133,7 +133,7 @@ export class Document_initial_vocabulary {
    * @public
    * @readonly
    */
-  readonly other_uris?: OPTIONAL<NonEmptyOctetString[]>;
+  public readonly other_uris?: OPTIONAL<NonEmptyOctetString[]>;
   /**
    * @summary `attribute_values`.
    * @description ATTRIBUTE VALUE table entries
@@ -142,7 +142,7 @@ export class Document_initial_vocabulary {
    * @public
    * @readonly
    */
-  readonly attribute_values?: OPTIONAL<EncodedCharacterString[]>;
+  public readonly attribute_values?: OPTIONAL<EncodedCharacterString[]>;
   /**
    * @summary `content_character_chunks`.
    * @description CONTENT CHARACTER CHUNK table entries.
@@ -150,7 +150,7 @@ export class Document_initial_vocabulary {
    * @public
    * @readonly
    */
-  readonly content_character_chunks?: OPTIONAL<EncodedCharacterString[]>;
+  public readonly content_character_chunks?: OPTIONAL<EncodedCharacterString[]>;
   /**
    * @summary `other_strings`.
    * @description OTHER STRING table entries (document
@@ -159,7 +159,7 @@ export class Document_initial_vocabulary {
    * @public
    * @readonly
    */
-  readonly other_strings?: OPTIONAL<EncodedCharacterString[]>;
+  public readonly other_strings?: OPTIONAL<EncodedCharacterString[]>;
   /**
    * @summary `element_name_surrogates`.
    * @description ELEMENT NAME table entries. ITU-T Rec.
@@ -167,7 +167,7 @@ export class Document_initial_vocabulary {
    * @public
    * @readonly
    */
-  readonly element_name_surrogates?: OPTIONAL<NameSurrogate[]>;
+  public readonly element_name_surrogates?: OPTIONAL<NameSurrogate[]>;
   /**
    * @summary `attribute_name_surrogates`.
    * @description ATTRIBUTE NAME table entries. ITU-T Rec.
@@ -175,7 +175,7 @@ export class Document_initial_vocabulary {
    * @public
    * @readonly
    */
-  readonly attribute_name_surrogates?: OPTIONAL<NameSurrogate[]>;
+  public readonly attribute_name_surrogates?: OPTIONAL<NameSurrogate[]>;
 
   constructor(
     external_vocabulary?: OPTIONAL<URI>,

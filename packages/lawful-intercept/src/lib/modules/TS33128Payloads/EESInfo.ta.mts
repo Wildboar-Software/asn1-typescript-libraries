@@ -1,19 +1,19 @@
 /* eslint-disable */
 import {
-    OPTIONAL,
-    ASN1Element as _Element,
+    type OPTIONAL,
+    type ASN1Element as _Element,
     ASN1TagClass as _TagClass
 } from "@wildboar/asn1";
 import * as $ from "@wildboar/asn1/functional";
-import { EESID, _decode_EESID, _encode_EESID } from "../TS33128Payloads/EESID.ta.mjs";
+import { type EESID, _decode_EESID, _encode_EESID } from "../TS33128Payloads/EESID.ta.mjs";
 // export { EESID, _decode_EESID, _encode_EESID } from "../TS33128Payloads/EESID.ta.mjs";
 import { EESEndpoint, _decode_EESEndpoint, _encode_EESEndpoint } from "../TS33128Payloads/EESEndpoint.ta.mjs";
 // export { EESEndpoint, _decode_EESEndpoint, _encode_EESEndpoint } from "../TS33128Payloads/EESEndpoint.ta.mjs";
-import { EASIDs, _decode_EASIDs, _encode_EASIDs } from "../TS33128Payloads/EASIDs.ta.mjs";
+import { type EASIDs, _decode_EASIDs, _encode_EASIDs } from "../TS33128Payloads/EASIDs.ta.mjs";
 // export { EASIDs, _decode_EASIDs, _encode_EASIDs } from "../TS33128Payloads/EASIDs.ta.mjs";
 import { Location, _decode_Location, _encode_Location } from "../TS33128Payloads/Location.ta.mjs";
 // export { Location, _decode_Location, _encode_Location } from "../TS33128Payloads/Location.ta.mjs";
-import { DNAIs, _decode_DNAIs, _encode_DNAIs } from "../TS33128Payloads/DNAIs.ta.mjs";
+import { type DNAIs, _decode_DNAIs, _encode_DNAIs } from "../TS33128Payloads/DNAIs.ta.mjs";
 // export { DNAIs, _decode_DNAIs, _encode_DNAIs } from "../TS33128Payloads/DNAIs.ta.mjs";
 
 

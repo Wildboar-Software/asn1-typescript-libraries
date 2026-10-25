@@ -1,9 +1,9 @@
 /* eslint-disable */
 import {
-    ASN1Element as _Element,
+    type ASN1Element as _Element,
     ASN1TagClass as _TagClass,
-    BOOLEAN,
-    OPTIONAL,
+    type BOOLEAN,
+    type OPTIONAL,
 } from "@wildboar/asn1";
 import * as $ from "@wildboar/asn1/functional";
 import {
@@ -12,12 +12,12 @@ import {
     _encode_SecurityParameters,
 } from "../DirectoryAbstractService/SecurityParameters.ta.mjs";
 import {
-    UpdateErrorData_attributeInfo_Item,
+    type UpdateErrorData_attributeInfo_Item,
     _decode_UpdateErrorData_attributeInfo_Item,
     _encode_UpdateErrorData_attributeInfo_Item,
 } from "../DirectoryAbstractService/UpdateErrorData-attributeInfo-Item.ta.mjs";
 import {
-    UpdateProblem,
+    type UpdateProblem,
     _decode_UpdateProblem,
     _encode_UpdateProblem,
 } from "../DirectoryAbstractService/UpdateProblem.ta.mjs";
@@ -27,7 +27,7 @@ import {
     _encode_Attribute,
 } from "../InformationFramework/Attribute.ta.mjs";
 import {
-    DistinguishedName,
+    type DistinguishedName,
     _decode_DistinguishedName,
     _encode_DistinguishedName,
 } from "../InformationFramework/DistinguishedName.ta.mjs";
@@ -61,80 +61,96 @@ import {
  *
  */
 export class UpdateErrorData implements CommonResults {
+    /**
+     * @summary `problem`.
+     * @description
+     *
+     * `entryAlreadyExists` includes multi-valued RDN distinguished
+     * values differing only by context. `noPasswordSlot` = history full
+     * with no slot older than `pwdMinTimeInHistory`.
+     *
+     * @public
+     * @readonly
+     */
+    public readonly problem: UpdateProblem;
+    /**
+     * @summary `attributeInfo`.
+     * @description
+     *
+     * SET SIZE (1..MAX). Identifies the type(s) and possibly value(s)
+     * causing the problem. For `objectClassViolation`, an `attribute`
+     * item shall list `objectClass` and the class(es) that caused it.
+     *
+     * @public
+     * @readonly
+     */
+    public readonly attributeInfo?: OPTIONAL<UpdateErrorData_attributeInfo_Item[]>;
+    /**
+     * @summary Extensions that are not recognized.
+     * @public
+     * @readonly
+     */
+    public readonly _unrecognizedExtensionsList: _Element[];
+    /**
+     * @summary `securityParameters`.
+     * @description
+     *
+     * Required if the error is signed; absence ≡ empty set. Signing of
+     * update errors requires protocol v2+.
+     *
+     * @public
+     * @readonly
+     */
+    public readonly securityParameters?: OPTIONAL<SecurityParameters>; /* REPLICATED_COMPONENT */
+    /**
+     * @summary `performer`.
+     * @description
+     *
+     * DN of the DSA that signed; needed when the error is signed.
+     *
+     * @public
+     * @readonly
+     */
+    public readonly performer?: OPTIONAL<DistinguishedName>; /* REPLICATED_COMPONENT */
+    /**
+     * @summary `aliasDereferenced`.
+     * @description
+     *
+     * DEFAULT FALSE. TRUE if any alias in the purported name was
+     * dereferenced.
+     *
+     * @public
+     * @readonly
+     */
+    public readonly aliasDereferenced?: OPTIONAL<BOOLEAN>; /* REPLICATED_COMPONENT */
+    /**
+     * @summary `notification`.
+     * @description
+     *
+     * SEQUENCE SIZE (1..MAX). Qualifies the error.
+     *
+     * @public
+     * @readonly
+     */
+    public readonly notification?: OPTIONAL<Attribute[]>; /* REPLICATED_COMPONENT */
+
     constructor(
-        /**
-         * @summary `problem`.
-         * @description
-         *
-         * `entryAlreadyExists` includes multi-valued RDN distinguished
-         * values differing only by context. `noPasswordSlot` = history full
-         * with no slot older than `pwdMinTimeInHistory`.
-         *
-         * @public
-         * @readonly
-         */
-        readonly problem: UpdateProblem,
-        /**
-         * @summary `attributeInfo`.
-         * @description
-         *
-         * SET SIZE (1..MAX). Identifies the type(s) and possibly value(s)
-         * causing the problem. For `objectClassViolation`, an `attribute`
-         * item shall list `objectClass` and the class(es) that caused it.
-         *
-         * @public
-         * @readonly
-         */
-        readonly attributeInfo?: OPTIONAL<UpdateErrorData_attributeInfo_Item[]>,
-        /**
-         * @summary Extensions that are not recognized.
-         * @public
-         * @readonly
-         */
-        readonly _unrecognizedExtensionsList: _Element[] = [],
-        /**
-         * @summary `securityParameters`.
-         * @description
-         *
-         * Required if the error is signed; absence ≡ empty set. Signing of
-         * update errors requires protocol v2+.
-         *
-         * @public
-         * @readonly
-         */
-        readonly securityParameters?: OPTIONAL<SecurityParameters> /* REPLICATED_COMPONENT */,
-        /**
-         * @summary `performer`.
-         * @description
-         *
-         * DN of the DSA that signed; needed when the error is signed.
-         *
-         * @public
-         * @readonly
-         */
-        readonly performer?: OPTIONAL<DistinguishedName> /* REPLICATED_COMPONENT */,
-        /**
-         * @summary `aliasDereferenced`.
-         * @description
-         *
-         * DEFAULT FALSE. TRUE if any alias in the purported name was
-         * dereferenced.
-         *
-         * @public
-         * @readonly
-         */
-        readonly aliasDereferenced?: OPTIONAL<BOOLEAN> /* REPLICATED_COMPONENT */,
-        /**
-         * @summary `notification`.
-         * @description
-         *
-         * SEQUENCE SIZE (1..MAX). Qualifies the error.
-         *
-         * @public
-         * @readonly
-         */
-        readonly notification?: OPTIONAL<Attribute[]> /* REPLICATED_COMPONENT */
-    ) {}
+        problem: UpdateProblem,
+        attributeInfo?: OPTIONAL<UpdateErrorData_attributeInfo_Item[]>,
+        _unrecognizedExtensionsList: _Element[] = [],
+        securityParameters?: OPTIONAL<SecurityParameters>,
+        performer?: OPTIONAL<DistinguishedName>,
+        aliasDereferenced?: OPTIONAL<BOOLEAN>,
+        notification?: OPTIONAL<Attribute[]>
+    ) {
+        this.problem = problem;
+        this.attributeInfo = attributeInfo;
+        this._unrecognizedExtensionsList = _unrecognizedExtensionsList;
+        this.securityParameters = securityParameters;
+        this.performer = performer;
+        this.aliasDereferenced = aliasDereferenced;
+        this.notification = notification;
+    }
 
     /**
      * @summary Restructures an object into a UpdateErrorData

@@ -1,6 +1,6 @@
 /* eslint-disable */
 import {
-    INTEGER
+    type INTEGER
 } from "@wildboar/asn1";
 import * as $ from "@wildboar/asn1/functional";
 
@@ -46,7 +46,7 @@ type RcfProductionStatus = INTEGER;
  * @type {number}
  */
 export
-const RcfProductionStatus_running: RcfProductionStatus = 0; /* LONG_NAMED_INTEGER_VALUE */
+const RcfProductionStatus_running: 0 = 0 satisfies RcfProductionStatus; /* LONG_NAMED_INTEGER_VALUE */
 
 /**
  * @summary RcfProductionStatus_running
@@ -58,7 +58,7 @@ const RcfProductionStatus_running: RcfProductionStatus = 0; /* LONG_NAMED_INTEGE
  * @type {number}
  */
 export
-const running: RcfProductionStatus = RcfProductionStatus_running; /* SHORT_NAMED_INTEGER_VALUE */
+const running: 0 = RcfProductionStatus_running; /* SHORT_NAMED_INTEGER_VALUE */
 
 /**
  * @summary RcfProductionStatus_interrupted
@@ -73,7 +73,7 @@ const running: RcfProductionStatus = RcfProductionStatus_running; /* SHORT_NAMED
  * @type {number}
  */
 export
-const RcfProductionStatus_interrupted: RcfProductionStatus = 1; /* LONG_NAMED_INTEGER_VALUE */
+const RcfProductionStatus_interrupted: 1 = 1 satisfies RcfProductionStatus; /* LONG_NAMED_INTEGER_VALUE */
 
 /**
  * @summary RcfProductionStatus_interrupted
@@ -85,7 +85,7 @@ const RcfProductionStatus_interrupted: RcfProductionStatus = 1; /* LONG_NAMED_IN
  * @type {number}
  */
 export
-const interrupted: RcfProductionStatus = RcfProductionStatus_interrupted; /* SHORT_NAMED_INTEGER_VALUE */
+const interrupted: 1 = RcfProductionStatus_interrupted; /* SHORT_NAMED_INTEGER_VALUE */
 
 /**
  * @summary RcfProductionStatus_halted
@@ -100,7 +100,7 @@ const interrupted: RcfProductionStatus = RcfProductionStatus_interrupted; /* SHO
  * @type {number}
  */
 export
-const RcfProductionStatus_halted: RcfProductionStatus = 2; /* LONG_NAMED_INTEGER_VALUE */
+const RcfProductionStatus_halted: 2 = 2 satisfies RcfProductionStatus; /* LONG_NAMED_INTEGER_VALUE */
 
 /**
  * @summary RcfProductionStatus_halted
@@ -112,7 +112,7 @@ const RcfProductionStatus_halted: RcfProductionStatus = 2; /* LONG_NAMED_INTEGER
  * @type {number}
  */
 export
-const halted: RcfProductionStatus = RcfProductionStatus_halted; /* SHORT_NAMED_INTEGER_VALUE */
+const halted: 2 = RcfProductionStatus_halted; /* SHORT_NAMED_INTEGER_VALUE */
 export const _decode_RcfProductionStatus: $.ASN1Decoder<RcfProductionStatus> = $._decodeInteger;
 export const _encode_RcfProductionStatus: $.ASN1Encoder<RcfProductionStatus> = $._encodeInteger;
 

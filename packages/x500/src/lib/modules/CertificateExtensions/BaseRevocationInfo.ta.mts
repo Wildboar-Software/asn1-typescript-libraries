@@ -1,18 +1,18 @@
 /* eslint-disable */
 import {
-    ASN1Element as _Element,
+    type ASN1Element as _Element,
     ASN1TagClass as _TagClass,
-    GeneralizedTime,
-    OPTIONAL,
+    type GeneralizedTime,
+    type OPTIONAL,
 } from "@wildboar/asn1";
 import * as $ from "@wildboar/asn1/functional";
 import {
-    CRLNumber,
+    type CRLNumber,
     _decode_CRLNumber,
     _encode_CRLNumber,
 } from "../CertificateExtensions/CRLNumber.ta.mjs";
 import {
-    CRLStreamIdentifier,
+    type CRLStreamIdentifier,
     _decode_CRLStreamIdentifier,
     _encode_CRLStreamIdentifier,
 } from "../CertificateExtensions/CRLStreamIdentifier.ta.mjs";
@@ -37,32 +37,42 @@ import {
  *
  */
 export class BaseRevocationInfo {
+    /**
+     * @summary `cRLStreamIdentifier`.
+     * @public
+     * @readonly
+     */
+    public readonly cRLStreamIdentifier: OPTIONAL<CRLStreamIdentifier>;
+    /**
+     * @summary `cRLNumber`.
+     * @public
+     * @readonly
+     */
+    public readonly cRLNumber: CRLNumber;
+    /**
+     * @summary `baseThisUpdate`.
+     * @public
+     * @readonly
+     */
+    public readonly baseThisUpdate: GeneralizedTime;
+    /**
+     * @summary Extensions that are not recognized.
+     * @public
+     * @readonly
+     */
+    public readonly _unrecognizedExtensionsList: _Element[];
+
     constructor(
-        /**
-         * @summary `cRLStreamIdentifier`.
-         * @public
-         * @readonly
-         */
-        readonly cRLStreamIdentifier: OPTIONAL<CRLStreamIdentifier>,
-        /**
-         * @summary `cRLNumber`.
-         * @public
-         * @readonly
-         */
-        readonly cRLNumber: CRLNumber,
-        /**
-         * @summary `baseThisUpdate`.
-         * @public
-         * @readonly
-         */
-        readonly baseThisUpdate: GeneralizedTime,
-        /**
-         * @summary Extensions that are not recognized.
-         * @public
-         * @readonly
-         */
-        readonly _unrecognizedExtensionsList: _Element[] = []
-    ) {}
+        cRLStreamIdentifier: OPTIONAL<CRLStreamIdentifier>,
+        cRLNumber: CRLNumber,
+        baseThisUpdate: GeneralizedTime,
+        _unrecognizedExtensionsList: _Element[] = []
+    ) {
+        this.cRLStreamIdentifier = cRLStreamIdentifier;
+        this.cRLNumber = cRLNumber;
+        this.baseThisUpdate = baseThisUpdate;
+        this._unrecognizedExtensionsList = _unrecognizedExtensionsList;
+    }
 
     /**
      * @summary Restructures an object into a BaseRevocationInfo

@@ -1,7 +1,7 @@
 /* eslint-disable */
 import {
-    INTEGER,
-    ASN1Element as _Element,
+    type INTEGER,
+    type ASN1Element as _Element,
     ASN1TagClass as _TagClass,
     ASN1Construction as _Construction,
     ASN1UniversalType as _UniversalType,
@@ -42,62 +42,62 @@ export type QOSErrorCause = INTEGER;
  * @constant
  * @type {number}
  */
-export const QOSErrorCause_responseTimeExcessive: QOSErrorCause = 0; /* LONG_NAMED_INTEGER_VALUE */
+export const QOSErrorCause_responseTimeExcessive: 0 = 0 satisfies QOSErrorCause; /* LONG_NAMED_INTEGER_VALUE */
 
 /**
  * @summary QOSErrorCause_responseTimeExcessive
  * @constant
  * @type {number}
  */
-export const responseTimeExcessive: QOSErrorCause = QOSErrorCause_responseTimeExcessive; /* SHORT_NAMED_INTEGER_VALUE */
+export const responseTimeExcessive: 0 = QOSErrorCause_responseTimeExcessive; /* SHORT_NAMED_INTEGER_VALUE */
 
 /**
  * @summary QOSErrorCause_queueSizeExceeded
  * @constant
  * @type {number}
  */
-export const QOSErrorCause_queueSizeExceeded: QOSErrorCause = 1; /* LONG_NAMED_INTEGER_VALUE */
+export const QOSErrorCause_queueSizeExceeded: 1 = 1 satisfies QOSErrorCause; /* LONG_NAMED_INTEGER_VALUE */
 
 /**
  * @summary QOSErrorCause_queueSizeExceeded
  * @constant
  * @type {number}
  */
-export const queueSizeExceeded: QOSErrorCause = QOSErrorCause_queueSizeExceeded; /* SHORT_NAMED_INTEGER_VALUE */
+export const queueSizeExceeded: 1 = QOSErrorCause_queueSizeExceeded; /* SHORT_NAMED_INTEGER_VALUE */
 
 /**
  * @summary QOSErrorCause_bandwidthReduced
  * @constant
  * @type {number}
  */
-export const QOSErrorCause_bandwidthReduced: QOSErrorCause = 2; /* LONG_NAMED_INTEGER_VALUE */
+export const QOSErrorCause_bandwidthReduced: 2 = 2 satisfies QOSErrorCause; /* LONG_NAMED_INTEGER_VALUE */
 
 /**
  * @summary QOSErrorCause_bandwidthReduced
  * @constant
  * @type {number}
  */
-export const bandwidthReduced: QOSErrorCause = QOSErrorCause_bandwidthReduced; /* SHORT_NAMED_INTEGER_VALUE */
+export const bandwidthReduced: 2 = QOSErrorCause_bandwidthReduced; /* SHORT_NAMED_INTEGER_VALUE */
 
 /**
  * @summary QOSErrorCause_retransmissionRateExcessive
  * @constant
  * @type {number}
  */
-export const QOSErrorCause_retransmissionRateExcessive: QOSErrorCause = 3; /* LONG_NAMED_INTEGER_VALUE */
+export const QOSErrorCause_retransmissionRateExcessive: 3 = 3 satisfies QOSErrorCause; /* LONG_NAMED_INTEGER_VALUE */
 
 /**
  * @summary QOSErrorCause_retransmissionRateExcessive
  * @constant
  * @type {number}
  */
-export const retransmissionRateExcessive: QOSErrorCause = QOSErrorCause_retransmissionRateExcessive; /* SHORT_NAMED_INTEGER_VALUE */
+export const retransmissionRateExcessive: 3 = QOSErrorCause_retransmissionRateExcessive; /* SHORT_NAMED_INTEGER_VALUE */
 
 
-export const _decode_QOSErrorCause = $._decodeInteger;
+export const _decode_QOSErrorCause: $.ASN1Decoder<INTEGER> = $._decodeInteger;
 
 
-export const _encode_QOSErrorCause = $._encodeInteger;
+export const _encode_QOSErrorCause: $.ASN1Encoder<INTEGER> = $._encodeInteger;
 
 
 /* eslint-enable */

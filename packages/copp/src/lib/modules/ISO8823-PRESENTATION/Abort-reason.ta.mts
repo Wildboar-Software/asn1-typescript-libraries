@@ -1,7 +1,7 @@
 /* eslint-disable */
 import {
-    INTEGER,
-    ASN1Element as _Element,
+    type INTEGER,
+    type ASN1Element as _Element,
     ASN1TagClass as _TagClass,
     ASN1Construction as _Construction,
     ASN1UniversalType as _UniversalType,
@@ -39,7 +39,7 @@ export type Abort_reason = INTEGER;
  * @constant
  * @type {number}
  */
-export const Abort_reason_reason_not_specified: Abort_reason = 0; /* LONG_NAMED_INTEGER_VALUE */
+export const Abort_reason_reason_not_specified: 0 = 0 satisfies Abort_reason; /* LONG_NAMED_INTEGER_VALUE */
 
 
 /**
@@ -47,7 +47,7 @@ export const Abort_reason_reason_not_specified: Abort_reason = 0; /* LONG_NAMED_
  * @constant
  * @type {number}
  */
-export const reason_not_specified: Abort_reason = Abort_reason_reason_not_specified; /* SHORT_NAMED_INTEGER_VALUE */
+export const reason_not_specified: 0 = Abort_reason_reason_not_specified; /* SHORT_NAMED_INTEGER_VALUE */
 
 
 /**
@@ -56,7 +56,7 @@ export const reason_not_specified: Abort_reason = Abort_reason_reason_not_specif
  * @constant
  * @type {number}
  */
-export const Abort_reason_unrecognized_ppdu: Abort_reason = 1; /* LONG_NAMED_INTEGER_VALUE */
+export const Abort_reason_unrecognized_ppdu: 1 = 1 satisfies Abort_reason; /* LONG_NAMED_INTEGER_VALUE */
 
 
 /**
@@ -64,7 +64,7 @@ export const Abort_reason_unrecognized_ppdu: Abort_reason = 1; /* LONG_NAMED_INT
  * @constant
  * @type {number}
  */
-export const unrecognized_ppdu: Abort_reason = Abort_reason_unrecognized_ppdu; /* SHORT_NAMED_INTEGER_VALUE */
+export const unrecognized_ppdu: 1 = Abort_reason_unrecognized_ppdu; /* SHORT_NAMED_INTEGER_VALUE */
 
 
 /**
@@ -73,7 +73,7 @@ export const unrecognized_ppdu: Abort_reason = Abort_reason_unrecognized_ppdu; /
  * @constant
  * @type {number}
  */
-export const Abort_reason_unexpected_ppdu: Abort_reason = 2; /* LONG_NAMED_INTEGER_VALUE */
+export const Abort_reason_unexpected_ppdu: 2 = 2 satisfies Abort_reason; /* LONG_NAMED_INTEGER_VALUE */
 
 
 /**
@@ -81,7 +81,7 @@ export const Abort_reason_unexpected_ppdu: Abort_reason = 2; /* LONG_NAMED_INTEG
  * @constant
  * @type {number}
  */
-export const unexpected_ppdu: Abort_reason = Abort_reason_unexpected_ppdu; /* SHORT_NAMED_INTEGER_VALUE */
+export const unexpected_ppdu: 2 = Abort_reason_unexpected_ppdu; /* SHORT_NAMED_INTEGER_VALUE */
 
 
 /**
@@ -90,7 +90,7 @@ export const unexpected_ppdu: Abort_reason = Abort_reason_unexpected_ppdu; /* SH
  * @constant
  * @type {number}
  */
-export const Abort_reason_unexpected_session_service_primitive: Abort_reason = 3; /* LONG_NAMED_INTEGER_VALUE */
+export const Abort_reason_unexpected_session_service_primitive: 3 = 3 satisfies Abort_reason; /* LONG_NAMED_INTEGER_VALUE */
 
 
 /**
@@ -98,7 +98,7 @@ export const Abort_reason_unexpected_session_service_primitive: Abort_reason = 3
  * @constant
  * @type {number}
  */
-export const unexpected_session_service_primitive: Abort_reason = Abort_reason_unexpected_session_service_primitive; /* SHORT_NAMED_INTEGER_VALUE */
+export const unexpected_session_service_primitive: 3 = Abort_reason_unexpected_session_service_primitive; /* SHORT_NAMED_INTEGER_VALUE */
 
 
 /**
@@ -107,7 +107,7 @@ export const unexpected_session_service_primitive: Abort_reason = Abort_reason_u
  * @constant
  * @type {number}
  */
-export const Abort_reason_unrecognized_ppdu_parameter: Abort_reason = 4; /* LONG_NAMED_INTEGER_VALUE */
+export const Abort_reason_unrecognized_ppdu_parameter: 4 = 4 satisfies Abort_reason; /* LONG_NAMED_INTEGER_VALUE */
 
 
 /**
@@ -115,7 +115,7 @@ export const Abort_reason_unrecognized_ppdu_parameter: Abort_reason = 4; /* LONG
  * @constant
  * @type {number}
  */
-export const unrecognized_ppdu_parameter: Abort_reason = Abort_reason_unrecognized_ppdu_parameter; /* SHORT_NAMED_INTEGER_VALUE */
+export const unrecognized_ppdu_parameter: 4 = Abort_reason_unrecognized_ppdu_parameter; /* SHORT_NAMED_INTEGER_VALUE */
 
 
 /**
@@ -124,7 +124,7 @@ export const unrecognized_ppdu_parameter: Abort_reason = Abort_reason_unrecogniz
  * @constant
  * @type {number}
  */
-export const Abort_reason_unexpected_ppdu_parameter: Abort_reason = 5; /* LONG_NAMED_INTEGER_VALUE */
+export const Abort_reason_unexpected_ppdu_parameter: 5 = 5 satisfies Abort_reason; /* LONG_NAMED_INTEGER_VALUE */
 
 
 /**
@@ -132,7 +132,7 @@ export const Abort_reason_unexpected_ppdu_parameter: Abort_reason = 5; /* LONG_N
  * @constant
  * @type {number}
  */
-export const unexpected_ppdu_parameter: Abort_reason = Abort_reason_unexpected_ppdu_parameter; /* SHORT_NAMED_INTEGER_VALUE */
+export const unexpected_ppdu_parameter: 5 = Abort_reason_unexpected_ppdu_parameter; /* SHORT_NAMED_INTEGER_VALUE */
 
 
 /**
@@ -141,7 +141,7 @@ export const unexpected_ppdu_parameter: Abort_reason = Abort_reason_unexpected_p
  * @constant
  * @type {number}
  */
-export const Abort_reason_invalid_ppdu_parameter_value: Abort_reason = 6; /* LONG_NAMED_INTEGER_VALUE */
+export const Abort_reason_invalid_ppdu_parameter_value: 6 = 6 satisfies Abort_reason; /* LONG_NAMED_INTEGER_VALUE */
 
 
 /**
@@ -149,17 +149,17 @@ export const Abort_reason_invalid_ppdu_parameter_value: Abort_reason = 6; /* LON
  * @constant
  * @type {number}
  */
-export const invalid_ppdu_parameter_value: Abort_reason = Abort_reason_invalid_ppdu_parameter_value; /* SHORT_NAMED_INTEGER_VALUE */
+export const invalid_ppdu_parameter_value: 6 = Abort_reason_invalid_ppdu_parameter_value; /* SHORT_NAMED_INTEGER_VALUE */
 
 
 
 
-export const _decode_Abort_reason = $._decodeInteger;
+export const _decode_Abort_reason: $.ASN1Decoder<INTEGER> = $._decodeInteger;
 
 
 
 
-export const _encode_Abort_reason = $._encodeInteger;
+export const _encode_Abort_reason: $.ASN1Encoder<INTEGER> = $._encodeInteger;
 
 
 /* eslint-enable */

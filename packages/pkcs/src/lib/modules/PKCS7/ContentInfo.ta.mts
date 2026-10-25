@@ -1,9 +1,9 @@
 /* eslint-disable */
 import {
-    ASN1Element as _Element,
+    type ASN1Element as _Element,
     ASN1TagClass as _TagClass,
-    OBJECT_IDENTIFIER,
-    OPTIONAL,
+    type OBJECT_IDENTIFIER,
+    type OPTIONAL,
 } from "@wildboar/asn1";
 import * as $ from "@wildboar/asn1/functional";
 
@@ -27,20 +27,26 @@ import * as $ from "@wildboar/asn1/functional";
  *
  */
 export class ContentInfo {
+    /**
+     * @summary `content_type`.
+     * @public
+     * @readonly
+     */
+    public readonly content_type: OBJECT_IDENTIFIER;
+    /**
+     * @summary `pkcs7_content`.
+     * @public
+     * @readonly
+     */
+    public readonly pkcs7_content?: OPTIONAL<_Element>;
+
     constructor(
-        /**
-         * @summary `content_type`.
-         * @public
-         * @readonly
-         */
-        readonly content_type: OBJECT_IDENTIFIER,
-        /**
-         * @summary `pkcs7_content`.
-         * @public
-         * @readonly
-         */
-        readonly pkcs7_content?: OPTIONAL<_Element>
-    ) {}
+        content_type: OBJECT_IDENTIFIER,
+        pkcs7_content?: OPTIONAL<_Element>
+    ) {
+        this.content_type = content_type;
+        this.pkcs7_content = pkcs7_content;
+    }
 
     /**
      * @summary Restructures an object into a ContentInfo

@@ -1,9 +1,9 @@
 /* eslint-disable */
 import {
     ASN1ConstructionError as _ConstructionError,
-    ASN1Element as _Element,
+    type ASN1Element as _Element,
     ASN1TagClass as _TagClass,
-    OBJECT_IDENTIFIER,
+    type OBJECT_IDENTIFIER,
 } from "@wildboar/asn1";
 import * as $ from "@wildboar/asn1/functional";
 import {
@@ -12,7 +12,7 @@ import {
     _encode_GenericSecretKeyAttributes,
 } from "../PKCS-15/GenericSecretKeyAttributes.ta.mjs";
 import {
-    SecretKeyObject,
+    type SecretKeyObject,
     _get_decoder_for_SecretKeyObject,
     _get_encoder_for_SecretKeyObject,
 } from "../PKCS-15/SecretKeyObject.ta.mjs";
@@ -32,20 +32,26 @@ import {
  *
  */
 export class OtherKey {
+    /**
+     * @summary `keyType`.
+     * @public
+     * @readonly
+     */
+    public readonly keyType: OBJECT_IDENTIFIER;
+    /**
+     * @summary `keyAttr`.
+     * @public
+     * @readonly
+     */
+    public readonly keyAttr: SecretKeyObject<GenericSecretKeyAttributes>;
+
     constructor(
-        /**
-         * @summary `keyType`.
-         * @public
-         * @readonly
-         */
-        readonly keyType: OBJECT_IDENTIFIER,
-        /**
-         * @summary `keyAttr`.
-         * @public
-         * @readonly
-         */
-        readonly keyAttr: SecretKeyObject<GenericSecretKeyAttributes>
-    ) {}
+        keyType: OBJECT_IDENTIFIER,
+        keyAttr: SecretKeyObject<GenericSecretKeyAttributes>
+    ) {
+        this.keyType = keyType;
+        this.keyAttr = keyAttr;
+    }
 
     /**
      * @summary Restructures an object into a OtherKey

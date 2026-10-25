@@ -1,6 +1,6 @@
 /* eslint-disable */
 import {
-    ASN1Element as _Element,
+    type ASN1Element as _Element,
     ASN1TagClass as _TagClass,
     ASN1Construction as _Construction,
     ASN1UniversalType as _UniversalType,
@@ -11,12 +11,12 @@ import {
 } from '@wildboar/asn1';
 import * as $ from '@wildboar/asn1/functional';
 import {
-    ProbableCause,
+    type ProbableCause,
     _decode_ProbableCause,
     _encode_ProbableCause,
 } from '@wildboar/attribute-asn1module';
 import {
-    AdditionalInformation,
+    type AdditionalInformation,
     _decode_AdditionalInformation,
     _encode_AdditionalInformation,
 } from '@wildboar/attribute-asn1module';
@@ -36,20 +36,26 @@ import {
  *
  */
 export class ProtectionAlarmInfo {
+    /**
+     * @summary `probableCause`.
+     * @public
+     * @readonly
+     */
+    public readonly probableCause: ProbableCause;
+    /**
+     * @summary `additionalInfo`.
+     * @public
+     * @readonly
+     */
+    public readonly additionalInfo: AdditionalInformation;
+
     constructor(
-        /**
-         * @summary `probableCause`.
-         * @public
-         * @readonly
-         */
-        readonly probableCause: ProbableCause,
-        /**
-         * @summary `additionalInfo`.
-         * @public
-         * @readonly
-         */
-        readonly additionalInfo: AdditionalInformation
-    ) {}
+        probableCause: ProbableCause,
+        additionalInfo: AdditionalInformation
+    ) {
+        this.probableCause = probableCause;
+        this.additionalInfo = additionalInfo;
+    }
 
     /**
      * @summary Restructures an object into a ProtectionAlarmInfo

@@ -1,7 +1,7 @@
 /* eslint-disable */
 import {
-    OPTIONAL,
-    ASN1Element as _Element,
+    type OPTIONAL,
+    type ASN1Element as _Element,
     ASN1TagClass as _TagClass,
     ASN1Construction as _Construction,
     ASN1UniversalType as _UniversalType,
@@ -12,12 +12,12 @@ import {
 } from '@wildboar/asn1';
 import * as $ from '@wildboar/asn1/functional';
 import {
-    RegistrationTypes_standard_parameters,
+    type RegistrationTypes_standard_parameters,
     _decode_RegistrationTypes_standard_parameters,
     _encode_RegistrationTypes_standard_parameters,
 } from '../MTSAbstractService/RegistrationTypes-standard-parameters.ta.mjs';
 import {
-    ExtensionType,
+    type ExtensionType,
     _decode_ExtensionType,
     _encode_ExtensionType,
 } from "./ExtensionType.ta.mjs";
@@ -43,20 +43,26 @@ import {
  *
  */
 export class RegistrationTypes {
+    /**
+     * @summary `standard_parameters`.
+     * @public
+     * @readonly
+     */
+    public readonly standard_parameters?: OPTIONAL<RegistrationTypes_standard_parameters>;
+    /**
+     * @summary `extensions`.
+     * @public
+     * @readonly
+     */
+    public readonly extensions?: OPTIONAL<ExtensionType[]>;
+
     constructor(
-        /**
-         * @summary `standard_parameters`.
-         * @public
-         * @readonly
-         */
-        readonly standard_parameters?: OPTIONAL<RegistrationTypes_standard_parameters>,
-        /**
-         * @summary `extensions`.
-         * @public
-         * @readonly
-         */
-        readonly extensions?: OPTIONAL<ExtensionType[]>
-    ) {}
+        standard_parameters?: OPTIONAL<RegistrationTypes_standard_parameters>,
+        extensions?: OPTIONAL<ExtensionType[]>
+    ) {
+        this.standard_parameters = standard_parameters;
+        this.extensions = extensions;
+    }
 
     /**
      * @summary Restructures an object into a RegistrationTypes

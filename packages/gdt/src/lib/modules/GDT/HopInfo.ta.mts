@@ -1,9 +1,9 @@
 /* eslint-disable */
 import {
     ASN1ConstructionError as _ConstructionError,
-    ASN1Element as _Element,
+    type ASN1Element as _Element,
     ASN1TagClass as _TagClass,
-    INTEGER
+    type INTEGER
 } from "@wildboar/asn1";
 import * as $ from "@wildboar/asn1/functional";
 
@@ -32,19 +32,19 @@ class HopInfo {
      * @public
      * @readonly
      */
-    readonly current_hop: INTEGER;
+    public readonly current_hop: INTEGER;
     /**
      * @summary `max_hops`.
      * @public
      * @readonly
      */
-    readonly max_hops: INTEGER;
+    public readonly max_hops: INTEGER;
     /**
      * @summary Extensions that are not recognized.
      * @public
      * @readonly
      */
-    readonly _unrecognizedExtensionsList: _Element[];
+    public readonly _unrecognizedExtensionsList: _Element[];
 
     constructor (
         current_hop: INTEGER,

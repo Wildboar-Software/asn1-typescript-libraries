@@ -1,7 +1,7 @@
 /* eslint-disable */
 import {
-    UTF8String,
-    ASN1Element as _Element,
+    type UTF8String,
+    type ASN1Element as _Element,
     ASN1TagClass as _TagClass,
     ASN1Construction as _Construction,
     ASN1UniversalType as _UniversalType,
@@ -11,11 +11,11 @@ import {
     ASN1ConstructionError as _ConstructionError,
 } from "@wildboar/asn1";
 import * as $ from "@wildboar/asn1/functional";
-import { BiometricType, _decode_BiometricType, _encode_BiometricType } from "../TSM/BiometricType.ta.mjs";
+import { type BiometricType, _decode_BiometricType, _encode_BiometricType } from "../TSM/BiometricType.ta.mjs";
 
-import { BSP_BFP_Schema, _decode_BSP_BFP_Schema, _encode_BSP_BFP_Schema } from "../TSM/BSP-BFP-Schema.ta.mjs";
+import { type BSP_BFP_Schema, _decode_BSP_BFP_Schema, _encode_BSP_BFP_Schema } from "../TSM/BSP-BFP-Schema.ta.mjs";
 
-import { NetworkAuthenticationModel, _enum_for_NetworkAuthenticationModel, _decode_NetworkAuthenticationModel, _encode_NetworkAuthenticationModel } from "../TSM/NetworkAuthenticationModel.ta.mjs";
+import { type NetworkAuthenticationModel, _enum_for_NetworkAuthenticationModel, _decode_NetworkAuthenticationModel, _encode_NetworkAuthenticationModel } from "../TSM/NetworkAuthenticationModel.ta.mjs";
 
 
 
@@ -42,52 +42,62 @@ import { NetworkAuthenticationModel, _enum_for_NetworkAuthenticationModel, _deco
  */
 export
 class BiometricMethod {
+    /**
+     * @summary `biometricType`.
+     * @description
+     *
+     * BioAPI `BioAPI-BIR-BIOMETRIC-TYPE` (face, finger, iris, …).
+     * [ISO/IEC 19784-1]; X.1084 §10.1.2.
+     *
+     * @public
+     * @readonly
+     */
+    public readonly biometricType: BiometricType;
+    /**
+     * @summary `biometricFunctionProvider`.
+     * @description
+     *
+     * BSP or BFP schema identifying capture / preprocess / compare
+     * functions. [ISO/IEC 19784-1]; X.1084 §10.1.2, §11.1 Table 3.
+     *
+     * @public
+     * @readonly
+     */
+    public readonly biometricFunctionProvider: BSP_BFP_Schema;
+    /**
+     * @summary `networkAuthenticationModel`.
+     * @description
+     *
+     * One of the nine models in clause 7 (local, download, attached,
+     * centre, TTP variants, outsourcing). X.1084 §7, §10.1.2.
+     *
+     * @public
+     * @readonly
+     */
+    public readonly networkAuthenticationModel: NetworkAuthenticationModel;
+    /**
+     * @summary `thirdPartyInfo`.
+     * @description
+     *
+     * Required for TTP models: TTP network address as a URI
+     * ([IETF RFC 3986]). X.1084 §10.1.2.
+     *
+     * @public
+     * @readonly
+     */
+    public readonly thirdPartyInfo: UTF8String;
+
     constructor (
-        /**
-         * @summary `biometricType`.
-         * @description
-         *
-         * BioAPI `BioAPI-BIR-BIOMETRIC-TYPE` (face, finger, iris, …).
-         * [ISO/IEC 19784-1]; X.1084 §10.1.2.
-         *
-         * @public
-         * @readonly
-         */
-        readonly biometricType: BiometricType,
-        /**
-         * @summary `biometricFunctionProvider`.
-         * @description
-         *
-         * BSP or BFP schema identifying capture / preprocess / compare
-         * functions. [ISO/IEC 19784-1]; X.1084 §10.1.2, §11.1 Table 3.
-         *
-         * @public
-         * @readonly
-         */
-        readonly biometricFunctionProvider: BSP_BFP_Schema,
-        /**
-         * @summary `networkAuthenticationModel`.
-         * @description
-         *
-         * One of the nine models in clause 7 (local, download, attached,
-         * centre, TTP variants, outsourcing). X.1084 §7, §10.1.2.
-         *
-         * @public
-         * @readonly
-         */
-        readonly networkAuthenticationModel: NetworkAuthenticationModel,
-        /**
-         * @summary `thirdPartyInfo`.
-         * @description
-         *
-         * Required for TTP models: TTP network address as a URI
-         * ([IETF RFC 3986]). X.1084 §10.1.2.
-         *
-         * @public
-         * @readonly
-         */
-        readonly thirdPartyInfo: UTF8String
-    ) {}
+        biometricType: BiometricType,
+        biometricFunctionProvider: BSP_BFP_Schema,
+        networkAuthenticationModel: NetworkAuthenticationModel,
+        thirdPartyInfo: UTF8String
+    ) {
+        this.biometricType = biometricType;
+        this.biometricFunctionProvider = biometricFunctionProvider;
+        this.networkAuthenticationModel = networkAuthenticationModel;
+        this.thirdPartyInfo = thirdPartyInfo;
+    }
 
     /**
      * @summary Restructures an object into a BiometricMethod
@@ -111,7 +121,7 @@ class BiometricMethod {
          * @static
          */
 
-    public static _enum_for_networkAuthenticationModel = _enum_for_NetworkAuthenticationModel;
+    public static _enum_for_networkAuthenticationModel: typeof _enum_for_NetworkAuthenticationModel = _enum_for_NetworkAuthenticationModel;
 }
 
 /**

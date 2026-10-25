@@ -1,12 +1,12 @@
 /* eslint-disable */
 import {
-    NULL,
-    OPTIONAL,
-    ASN1Element as _Element,
+    type NULL,
+    type OPTIONAL,
+    type ASN1Element as _Element,
     ASN1TagClass as _TagClass
 } from "@wildboar/asn1";
 import * as $ from "@wildboar/asn1/functional";
-import { ISDN_AddressString, _decode_ISDN_AddressString, _encode_ISDN_AddressString } from "../MAP-CommonDataTypes/ISDN-AddressString.ta.mjs";
+import { type ISDN_AddressString, _decode_ISDN_AddressString, _encode_ISDN_AddressString } from "../MAP-CommonDataTypes/ISDN-AddressString.ta.mjs";
 import { ExtensionContainer, _decode_ExtensionContainer, _encode_ExtensionContainer } from "../MAP-ExtensionDataTypes/ExtensionContainer.ta.mjs";
 
 
@@ -22,9 +22,9 @@ import { ExtensionContainer, _decode_ExtensionContainer, _encode_ExtensionContai
  * ```asn1
  * ProvideRoamingNumberRes ::= SEQUENCE {
  *     roamingNumber    ISDN-AddressString,
- *     extensionContainer    ExtensionContainer    OPTIONAL,
+ *     extensionContainer    ExtensionContainer    type OPTIONAL,
  *     ...,
- *     releaseResourcesSupported    NULL    OPTIONAL,
+ *     releaseResourcesSupported    NULL    type OPTIONAL,
  *     vmsc-Address    ISDN-AddressString    OPTIONAL }
  * ```
  * 
@@ -32,55 +32,67 @@ import { ExtensionContainer, _decode_ExtensionContainer, _encode_ExtensionContai
  */
 export
 class ProvideRoamingNumberRes {
+    /**
+     * @summary `roamingNumber`.
+     * @description
+     *
+     * MSRN. If NPLR returns MSISDN without RN, that MSISDN is returned as
+     * MSRN (clause 10.1.3).
+     *
+     * @public
+     * @readonly
+     */
+    public readonly roamingNumber: ISDN_AddressString;
+    /**
+     * @summary `extensionContainer`.
+     * @description
+     *
+     * Private or PCS extensions (3GPP TS 29.002 V19.1.0 clause 17.7.11).
+     *
+     * @public
+     * @readonly
+     */
+    public readonly extensionContainer?: OPTIONAL<ExtensionContainer>;
+    /**
+     * @summary `releaseResourcesSupported`.
+     * @description
+     *
+     * VMSC supports MAP_RELEASE_RESOURCES.
+     *
+     * @public
+     * @readonly
+     */
+    public readonly releaseResourcesSupported?: OPTIONAL<NULL>;
+    /**
+     * @summary `vmsc_Address`.
+     * @description
+     *
+     * VMSC address.
+     *
+     * @public
+     * @readonly
+     */
+    public readonly vmsc_Address?: OPTIONAL<ISDN_AddressString>;
+    /**
+     * @summary Extensions that are not recognized.
+     * @public
+     * @readonly
+     */
+    public readonly _unrecognizedExtensionsList: _Element[];
+
     constructor (
-        /**
-         * @summary `roamingNumber`.
-         * @description
-         *
-         * MSRN. If NPLR returns MSISDN without RN, that MSISDN is returned as
-         * MSRN (clause 10.1.3).
-         *
-         * @public
-         * @readonly
-         */
-        readonly roamingNumber: ISDN_AddressString,
-        /**
-         * @summary `extensionContainer`.
-         * @description
-         *
-         * Private or PCS extensions (3GPP TS 29.002 V19.1.0 clause 17.7.11).
-         *
-         * @public
-         * @readonly
-         */
-        readonly extensionContainer?: OPTIONAL<ExtensionContainer>,
-        /**
-         * @summary `releaseResourcesSupported`.
-         * @description
-         *
-         * VMSC supports MAP_RELEASE_RESOURCES.
-         *
-         * @public
-         * @readonly
-         */
-        readonly releaseResourcesSupported?: OPTIONAL<NULL>,
-        /**
-         * @summary `vmsc_Address`.
-         * @description
-         *
-         * VMSC address.
-         *
-         * @public
-         * @readonly
-         */
-        readonly vmsc_Address?: OPTIONAL<ISDN_AddressString>,
-        /**
-         * @summary Extensions that are not recognized.
-         * @public
-         * @readonly
-         */
-        readonly _unrecognizedExtensionsList: _Element[] = []
-    ) {}
+        roamingNumber: ISDN_AddressString,
+        extensionContainer?: OPTIONAL<ExtensionContainer>,
+        releaseResourcesSupported?: OPTIONAL<NULL>,
+        vmsc_Address?: OPTIONAL<ISDN_AddressString>,
+        _unrecognizedExtensionsList: _Element[] = []
+    ) {
+        this.roamingNumber = roamingNumber;
+        this.extensionContainer = extensionContainer;
+        this.releaseResourcesSupported = releaseResourcesSupported;
+        this.vmsc_Address = vmsc_Address;
+        this._unrecognizedExtensionsList = _unrecognizedExtensionsList;
+    }
 
     /**
      * @summary Restructures an object into a ProvideRoamingNumberRes

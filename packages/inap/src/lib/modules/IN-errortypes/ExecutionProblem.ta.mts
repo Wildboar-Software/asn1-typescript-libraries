@@ -1,6 +1,6 @@
 /* eslint-disable */
 import {
-    INTEGER
+    type INTEGER
 } from "@wildboar/asn1";
 import * as $ from "@wildboar/asn1/functional";
 
@@ -26,7 +26,7 @@ type ExecutionProblem = INTEGER;
  * @type {number}
  */
 export
-const ExecutionProblem_missingInputValues: ExecutionProblem = 1; /* LONG_NAMED_INTEGER_VALUE */
+const ExecutionProblem_missingInputValues: 1 = 1 satisfies ExecutionProblem; /* LONG_NAMED_INTEGER_VALUE */
 
 /**
  * @summary ExecutionProblem_missingInputValues
@@ -34,7 +34,7 @@ const ExecutionProblem_missingInputValues: ExecutionProblem = 1; /* LONG_NAMED_I
  * @type {number}
  */
 export
-const missingInputValues: ExecutionProblem = ExecutionProblem_missingInputValues; /* SHORT_NAMED_INTEGER_VALUE */
+const missingInputValues: 1 = ExecutionProblem_missingInputValues; /* SHORT_NAMED_INTEGER_VALUE */
 
 /**
  * @summary ExecutionProblem_executionFailure
@@ -42,7 +42,7 @@ const missingInputValues: ExecutionProblem = ExecutionProblem_missingInputValues
  * @type {number}
  */
 export
-const ExecutionProblem_executionFailure: ExecutionProblem = 2; /* LONG_NAMED_INTEGER_VALUE */
+const ExecutionProblem_executionFailure: 2 = 2 satisfies ExecutionProblem; /* LONG_NAMED_INTEGER_VALUE */
 
 /**
  * @summary ExecutionProblem_executionFailure
@@ -50,7 +50,7 @@ const ExecutionProblem_executionFailure: ExecutionProblem = 2; /* LONG_NAMED_INT
  * @type {number}
  */
 export
-const executionFailure: ExecutionProblem = ExecutionProblem_executionFailure; /* SHORT_NAMED_INTEGER_VALUE */
+const executionFailure: 2 = ExecutionProblem_executionFailure; /* SHORT_NAMED_INTEGER_VALUE */
 
 export
 const _decode_ExecutionProblem: $.ASN1Decoder<ExecutionProblem> = $._decodeInteger;

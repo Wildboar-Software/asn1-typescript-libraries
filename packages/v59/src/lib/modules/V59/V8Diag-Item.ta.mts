@@ -1,6 +1,6 @@
 /* eslint-disable */
 import {
-    ASN1Element as _Element,
+    type ASN1Element as _Element,
     ASN1TagClass as _TagClass,
     ASN1Construction as _Construction,
     ASN1UniversalType as _UniversalType,
@@ -10,7 +10,7 @@ import {
     ASN1ConstructionError as _ConstructionError,
 } from "@wildboar/asn1";
 import * as $ from "@wildboar/asn1/functional";
-import { V59String, _decode_V59String, _encode_V59String } from "../V59/V59String.ta.mjs";
+import { type V59String, _decode_V59String, _encode_V59String } from "../V59/V59String.ta.mjs";
 
 import { V8Diag_Item_v8Result, _enum_for_V8Diag_Item_v8Result, _decode_V8Diag_Item_v8Result, _encode_V8Diag_Item_v8Result } from "../V59/V8Diag-Item-v8Result.ta.mjs";
 
@@ -46,7 +46,7 @@ class V8Diag_Item {
      * @public
      * @readonly
      */
-    readonly ci: V59String;
+    public readonly ci: V59String;
     /**
      * @summary `cm`.
      * @description
@@ -58,7 +58,7 @@ class V8Diag_Item {
      * @public
      * @readonly
      */
-    readonly cm: V59String;
+    public readonly cm: V59String;
     /**
      * @summary `jm`.
      * @description
@@ -70,7 +70,7 @@ class V8Diag_Item {
      * @public
      * @readonly
      */
-    readonly jm: V59String;
+    public readonly jm: V59String;
     /**
      * @summary `v8Result`.
      * @description
@@ -80,7 +80,7 @@ class V8Diag_Item {
      * @public
      * @readonly
      */
-    readonly v8Result: V8Diag_Item_v8Result;
+    public readonly v8Result: V8Diag_Item_v8Result;
 
     constructor (
         ci: V59String,
@@ -116,7 +116,7 @@ class V8Diag_Item {
          * @static
          */
 
-    public static _enum_for_v8Result = _enum_for_V8Diag_Item_v8Result;
+    public static _enum_for_v8Result: typeof _enum_for_V8Diag_Item_v8Result = _enum_for_V8Diag_Item_v8Result;
 }
 
 /**

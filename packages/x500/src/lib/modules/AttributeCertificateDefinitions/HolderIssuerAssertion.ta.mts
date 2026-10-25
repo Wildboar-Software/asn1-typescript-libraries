@@ -1,8 +1,8 @@
 /* eslint-disable */
 import {
-    ASN1Element as _Element,
+    type ASN1Element as _Element,
     ASN1TagClass as _TagClass,
-    OPTIONAL,
+    type OPTIONAL,
 } from "@wildboar/asn1";
 import * as $ from "@wildboar/asn1/functional";
 import {
@@ -33,26 +33,34 @@ import {
  *
  */
 export class HolderIssuerAssertion {
+    /**
+     * @summary `holder`.
+     * @public
+     * @readonly
+     */
+    public readonly holder?: OPTIONAL<Holder>;
+    /**
+     * @summary `issuer`.
+     * @public
+     * @readonly
+     */
+    public readonly issuer?: OPTIONAL<AttCertIssuer>;
+    /**
+     * @summary Extensions that are not recognized.
+     * @public
+     * @readonly
+     */
+    public readonly _unrecognizedExtensionsList: _Element[];
+
     constructor(
-        /**
-         * @summary `holder`.
-         * @public
-         * @readonly
-         */
-        readonly holder?: OPTIONAL<Holder>,
-        /**
-         * @summary `issuer`.
-         * @public
-         * @readonly
-         */
-        readonly issuer?: OPTIONAL<AttCertIssuer>,
-        /**
-         * @summary Extensions that are not recognized.
-         * @public
-         * @readonly
-         */
-        readonly _unrecognizedExtensionsList: _Element[] = []
-    ) {}
+        holder?: OPTIONAL<Holder>,
+        issuer?: OPTIONAL<AttCertIssuer>,
+        _unrecognizedExtensionsList: _Element[] = []
+    ) {
+        this.holder = holder;
+        this.issuer = issuer;
+        this._unrecognizedExtensionsList = _unrecognizedExtensionsList;
+    }
 
     /**
      * @summary Restructures an object into a HolderIssuerAssertion

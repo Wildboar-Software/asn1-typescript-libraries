@@ -75,7 +75,7 @@ export type AbortProblem = _enum_for_AbortProblem;
  *
  * @enum {number}
  */
-export const AbortProblem = _enum_for_AbortProblem;
+export const AbortProblem: typeof _enum_for_AbortProblem = _enum_for_AbortProblem;
 
 
 /**
@@ -89,7 +89,7 @@ export const AbortProblem = _enum_for_AbortProblem;
  * @constant
  * @type {number}
  */
-export const AbortProblem_unrecognizedInvocationId: AbortProblem =
+export const AbortProblem_unrecognizedInvocationId: _enum_for_AbortProblem.unrecognizedInvocationId =
   AbortProblem.unrecognizedInvocationId; /* LONG_NAMED_ENUMERATED_VALUE */
 
 
@@ -98,7 +98,7 @@ export const AbortProblem_unrecognizedInvocationId: AbortProblem =
  * @constant
  * @type {number}
  */
-export const unrecognizedInvocationId: AbortProblem =
+export const unrecognizedInvocationId: _enum_for_AbortProblem.unrecognizedInvocationId =
   AbortProblem.unrecognizedInvocationId; /* SHORT_NAMED_ENUMERATED_VALUE */
 
 
@@ -112,7 +112,7 @@ export const unrecognizedInvocationId: AbortProblem =
  * @constant
  * @type {number}
  */
-export const AbortProblem_abortUnexpected: AbortProblem =
+export const AbortProblem_abortUnexpected: _enum_for_AbortProblem.abortUnexpected =
   AbortProblem.abortUnexpected; /* LONG_NAMED_ENUMERATED_VALUE */
 
 
@@ -121,7 +121,7 @@ export const AbortProblem_abortUnexpected: AbortProblem =
  * @constant
  * @type {number}
  */
-export const abortUnexpected: AbortProblem =
+export const abortUnexpected: _enum_for_AbortProblem.abortUnexpected =
   AbortProblem.abortUnexpected; /* SHORT_NAMED_ENUMERATED_VALUE */
 
 
@@ -135,7 +135,7 @@ export const abortUnexpected: AbortProblem =
  * @constant
  * @type {number}
  */
-export const AbortProblem_unrecognizedError: AbortProblem =
+export const AbortProblem_unrecognizedError: _enum_for_AbortProblem.unrecognizedError =
   AbortProblem.unrecognizedError; /* LONG_NAMED_ENUMERATED_VALUE */
 
 
@@ -144,7 +144,7 @@ export const AbortProblem_unrecognizedError: AbortProblem =
  * @constant
  * @type {number}
  */
-export const unrecognizedError: AbortProblem =
+export const unrecognizedError: _enum_for_AbortProblem.unrecognizedError =
   AbortProblem.unrecognizedError; /* SHORT_NAMED_ENUMERATED_VALUE */
 
 
@@ -159,7 +159,7 @@ export const unrecognizedError: AbortProblem =
  * @constant
  * @type {number}
  */
-export const AbortProblem_unexpectedError: AbortProblem =
+export const AbortProblem_unexpectedError: _enum_for_AbortProblem.unexpectedError =
   AbortProblem.unexpectedError; /* LONG_NAMED_ENUMERATED_VALUE */
 
 
@@ -168,7 +168,7 @@ export const AbortProblem_unexpectedError: AbortProblem =
  * @constant
  * @type {number}
  */
-export const unexpectedError: AbortProblem =
+export const unexpectedError: _enum_for_AbortProblem.unexpectedError =
   AbortProblem.unexpectedError; /* SHORT_NAMED_ENUMERATED_VALUE */
 
 
@@ -183,7 +183,7 @@ export const unexpectedError: AbortProblem =
  * @constant
  * @type {number}
  */
-export const AbortProblem_mistypedErrorParameter: AbortProblem =
+export const AbortProblem_mistypedErrorParameter: _enum_for_AbortProblem.mistypedErrorParameter =
   AbortProblem.mistypedErrorParameter; /* LONG_NAMED_ENUMERATED_VALUE */
 
 
@@ -192,18 +192,32 @@ export const AbortProblem_mistypedErrorParameter: AbortProblem =
  * @constant
  * @type {number}
  */
-export const mistypedErrorParameter: AbortProblem =
+export const mistypedErrorParameter: _enum_for_AbortProblem.mistypedErrorParameter =
   AbortProblem.mistypedErrorParameter; /* SHORT_NAMED_ENUMERATED_VALUE */
 
 
 
 
-export const _decode_AbortProblem = $._decodeEnumerated;
+export function _decode_AbortProblem(el: _Element): AbortProblem {
+  const enumerated = $._decodeEnumerated(el);
+  switch (enumerated) {
+    case AbortProblem.unrecognizedInvocationId: return AbortProblem.unrecognizedInvocationId;
+    case AbortProblem.abortUnexpected: return AbortProblem.abortUnexpected;
+    case AbortProblem.unrecognizedError: return AbortProblem.unrecognizedError;
+    case AbortProblem.unexpectedError: return AbortProblem.unexpectedError;
+    case AbortProblem.mistypedErrorParameter: return AbortProblem.mistypedErrorParameter;
+    default:
+      throw new _ConstructionError(
+        'Invalid ENUMERATED value ' + enumerated + ' for AbortProblem.',
+        el,
+      );
+  }
+}
 
 
 
 
-export const _encode_AbortProblem = $._encodeEnumerated;
+export const _encode_AbortProblem: $.ASN1Encoder<AbortProblem> = $._encodeEnumerated as $.ASN1Encoder<AbortProblem>;
 
 
 /* eslint-enable */

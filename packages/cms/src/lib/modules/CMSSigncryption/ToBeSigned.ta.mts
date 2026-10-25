@@ -1,17 +1,17 @@
 /* eslint-disable */
 import {
     ASN1ConstructionError as _ConstructionError,
-    ASN1Element as _Element,
+    type ASN1Element as _Element,
     ASN1TagClass as _TagClass,
 } from "@wildboar/asn1";
 import * as $ from "@wildboar/asn1/functional";
 import {
-    SigncryptedPartsManifest,
+    type SigncryptedPartsManifest,
     _decode_SigncryptedPartsManifest,
     _encode_SigncryptedPartsManifest,
 } from "../CMSSigncryption/SigncryptedPartsManifest.ta.mjs";
 import {
-    SignedAttributes,
+    type SignedAttributes,
     _decode_SignedAttributes,
     _encode_SignedAttributes,
 } from "../CryptographicMessageSyntax-2010/SignedAttributes.ta.mjs";
@@ -34,20 +34,26 @@ import {
  *
  */
 export class ToBeSigned {
+    /**
+     * @summary `signcryptedPartsManifest`.
+     * @public
+     * @readonly
+     */
+    public readonly signcryptedPartsManifest: SigncryptedPartsManifest;
+    /**
+     * @summary `signedAttributes`.
+     * @public
+     * @readonly
+     */
+    public readonly signedAttributes: SignedAttributes;
+
     constructor(
-        /**
-         * @summary `signcryptedPartsManifest`.
-         * @public
-         * @readonly
-         */
-        readonly signcryptedPartsManifest: SigncryptedPartsManifest,
-        /**
-         * @summary `signedAttributes`.
-         * @public
-         * @readonly
-         */
-        readonly signedAttributes: SignedAttributes
-    ) {}
+        signcryptedPartsManifest: SigncryptedPartsManifest,
+        signedAttributes: SignedAttributes
+    ) {
+        this.signcryptedPartsManifest = signcryptedPartsManifest;
+        this.signedAttributes = signedAttributes;
+    }
 
     /**
      * @summary Restructures an object into a ToBeSigned

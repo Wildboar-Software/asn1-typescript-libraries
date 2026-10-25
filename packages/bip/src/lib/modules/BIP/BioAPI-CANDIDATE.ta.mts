@@ -11,12 +11,12 @@ import {
 } from '@wildboar/asn1';
 import * as $ from '@wildboar/asn1/functional';
 import {
-  BioAPI_CANDIDATE_bir,
+  type BioAPI_CANDIDATE_bir,
   _decode_BioAPI_CANDIDATE_bir,
   _encode_BioAPI_CANDIDATE_bir,
 } from '../BIP/BioAPI-CANDIDATE-bir.ta.mjs';
 import {
-  BioAPI_FMR,
+  type BioAPI_FMR,
   _decode_BioAPI_FMR,
   _encode_BioAPI_FMR,
 } from '../BIP/BioAPI-FMR.ta.mjs';
@@ -56,13 +56,13 @@ export class BioAPI_CANDIDATE {
    * @public
    * @readonly
    */
-  readonly bir: BioAPI_CANDIDATE_bir;
+  public readonly bir: BioAPI_CANDIDATE_bir;
   /**
    * @summary `fmrAchieved`.
    * @public
    * @readonly
    */
-  readonly fmrAchieved: BioAPI_FMR;
+  public readonly fmrAchieved: BioAPI_FMR;
 
   constructor(
     bir: BioAPI_CANDIDATE_bir,

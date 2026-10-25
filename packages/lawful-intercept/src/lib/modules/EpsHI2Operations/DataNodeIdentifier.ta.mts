@@ -1,15 +1,15 @@
 /* eslint-disable */
 import {
-    OPTIONAL,
-    PrintableString,
-    ASN1Element as _Element,
+    type OPTIONAL,
+    type PrintableString,
+    type ASN1Element as _Element,
     ASN1TagClass as _TagClass,
     ASN1SizeError
 } from "@wildboar/asn1";
 import * as $ from "@wildboar/asn1/functional";
-import { DataNodeAddress, _decode_DataNodeAddress, _encode_DataNodeAddress } from "../HI2Operations/DataNodeAddress.ta.mjs";
+import { type DataNodeAddress, _decode_DataNodeAddress, _encode_DataNodeAddress } from "../HI2Operations/DataNodeAddress.ta.mjs";
 // export { DataNodeAddress, _decode_DataNodeAddress, _encode_DataNodeAddress } from "../HI2Operations/DataNodeAddress.ta.mjs";
-import { LogicalFunctionType, _decode_LogicalFunctionType, _encode_LogicalFunctionType, _enum_for_LogicalFunctionType } from "../EpsHI2Operations/LogicalFunctionType.ta.mjs";
+import { type LogicalFunctionType, _decode_LogicalFunctionType, _encode_LogicalFunctionType, _enum_for_LogicalFunctionType } from "../EpsHI2Operations/LogicalFunctionType.ta.mjs";
 // export { LogicalFunctionType, _enum_for_LogicalFunctionType, LogicalFunctionType_pDNGW /* IMPORTED_LONG_ENUMERATION_ITEM */, pDNGW /* IMPORTED_SHORT_ENUMERATION_ITEM */, LogicalFunctionType_mME /* IMPORTED_LONG_ENUMERATION_ITEM */, mME /* IMPORTED_SHORT_ENUMERATION_ITEM */, LogicalFunctionType_sGW /* IMPORTED_LONG_ENUMERATION_ITEM */, sGW /* IMPORTED_SHORT_ENUMERATION_ITEM */, LogicalFunctionType_ePDG /* IMPORTED_LONG_ENUMERATION_ITEM */, ePDG /* IMPORTED_SHORT_ENUMERATION_ITEM */, LogicalFunctionType_hSS /* IMPORTED_LONG_ENUMERATION_ITEM */, hSS /* IMPORTED_SHORT_ENUMERATION_ITEM */, _decode_LogicalFunctionType, _encode_LogicalFunctionType } from "../EpsHI2Operations/LogicalFunctionType.ta.mjs";
 
 
@@ -124,7 +124,7 @@ class DataNodeIdentifier {
          * @static
          */
 
-    public static _enum_for_logicalFunctionType = _enum_for_LogicalFunctionType;
+    public static _enum_for_logicalFunctionType: typeof _enum_for_LogicalFunctionType = _enum_for_LogicalFunctionType;
 }
 
 /**

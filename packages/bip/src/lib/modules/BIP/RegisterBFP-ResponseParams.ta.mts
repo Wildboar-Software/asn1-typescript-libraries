@@ -1,6 +1,6 @@
 /* eslint-disable */
 import {
-  NULL,
+  type NULL,
   ASN1Element as _Element,
   ASN1TagClass as _TagClass,
   ASN1Construction as _Construction,
@@ -32,12 +32,12 @@ export type RegisterBFP_ResponseParams = NULL; // NullType
 
 
 
-export const _decode_RegisterBFP_ResponseParams = $._decodeNull;
+export const _decode_RegisterBFP_ResponseParams: $.ASN1Decoder<null> = $._decodeNull;
 
 
 
 
-export const _encode_RegisterBFP_ResponseParams = $._encodeNull;
+export const _encode_RegisterBFP_ResponseParams: $.ASN1Encoder<null> = $._encodeNull;
 
 
 /* eslint-enable */

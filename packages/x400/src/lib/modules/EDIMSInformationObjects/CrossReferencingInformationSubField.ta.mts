@@ -1,7 +1,7 @@
 /* eslint-disable */
 import {
-    OPTIONAL,
-    ASN1Element as _Element,
+    type OPTIONAL,
+    type ASN1Element as _Element,
     ASN1TagClass as _TagClass,
     ASN1Construction as _Construction,
     ASN1UniversalType as _UniversalType,
@@ -12,17 +12,17 @@ import {
 } from '@wildboar/asn1';
 import * as $ from '@wildboar/asn1/functional';
 import {
-    ApplicationCrossReference,
+    type ApplicationCrossReference,
     _decode_ApplicationCrossReference,
     _encode_ApplicationCrossReference,
 } from '../EDIMSInformationObjects/ApplicationCrossReference.ta.mjs';
 import {
-    MessageReference,
+    type MessageReference,
     _decode_MessageReference,
     _encode_MessageReference,
 } from '../EDIMSInformationObjects/MessageReference.ta.mjs';
 import {
-    BodyPartReference,
+    type BodyPartReference,
     _decode_BodyPartReference,
     _encode_BodyPartReference,
 } from '../EDIMSInformationObjects/BodyPartReference.ta.mjs';
@@ -44,26 +44,34 @@ import {
  *
  */
 export class CrossReferencingInformationSubField {
+    /**
+     * @summary `application_cross_reference`.
+     * @public
+     * @readonly
+     */
+    public readonly application_cross_reference: ApplicationCrossReference;
+    /**
+     * @summary `message_reference`.
+     * @public
+     * @readonly
+     */
+    public readonly message_reference: OPTIONAL<MessageReference>;
+    /**
+     * @summary `body_part_reference`.
+     * @public
+     * @readonly
+     */
+    public readonly body_part_reference: BodyPartReference;
+
     constructor(
-        /**
-         * @summary `application_cross_reference`.
-         * @public
-         * @readonly
-         */
-        readonly application_cross_reference: ApplicationCrossReference,
-        /**
-         * @summary `message_reference`.
-         * @public
-         * @readonly
-         */
-        readonly message_reference: OPTIONAL<MessageReference>,
-        /**
-         * @summary `body_part_reference`.
-         * @public
-         * @readonly
-         */
-        readonly body_part_reference: BodyPartReference
-    ) {}
+        application_cross_reference: ApplicationCrossReference,
+        message_reference: OPTIONAL<MessageReference>,
+        body_part_reference: BodyPartReference
+    ) {
+        this.application_cross_reference = application_cross_reference;
+        this.message_reference = message_reference;
+        this.body_part_reference = body_part_reference;
+    }
 
     /**
      * @summary Restructures an object into a CrossReferencingInformationSubField

@@ -1,8 +1,8 @@
 /* eslint-disable */
 import {
-    INTEGER,
-    OPTIONAL,
-    ASN1Element as _Element,
+    type INTEGER,
+    type OPTIONAL,
+    type ASN1Element as _Element,
     ASN1TagClass as _TagClass
 } from "@wildboar/asn1";
 import * as $ from "@wildboar/asn1/functional";
@@ -180,7 +180,7 @@ class UEDifferentiationInfo {
          * @static
          */
 
-    public static _enum_for_periodicCommunicationIndicator = _enum_for_PeriodicCommunicationIndicator;
+    public static _enum_for_periodicCommunicationIndicator: typeof _enum_for_PeriodicCommunicationIndicator = _enum_for_PeriodicCommunicationIndicator;
 }
 
 /**

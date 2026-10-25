@@ -1,7 +1,7 @@
 /* eslint-disable */
 import {
-    OPTIONAL,
-    ASN1Element as _Element,
+    type OPTIONAL,
+    type ASN1Element as _Element,
     ASN1TagClass as _TagClass,
     ASN1Construction as _Construction,
     ASN1UniversalType as _UniversalType,
@@ -12,7 +12,7 @@ import {
 } from '@wildboar/asn1';
 import * as $ from '@wildboar/asn1/functional';
 import {
-    BackupReply_reply,
+    type BackupReply_reply,
     _decode_BackupReply_reply,
     _encode_BackupReply_reply,
 } from '../BackupRestoreASN1Module/BackupReply-reply.ta.mjs';
@@ -45,29 +45,35 @@ import {
  *
  */
 export class BackupReply {
+    /**
+     * @summary `reply`.
+     * @description
+     *
+     * `success` (`NULL`) for local/off-line; `inLine` BIT STRING
+     * is the backup copy. Conditional in Table 6. ITU-T Rec.
+     * X.744 (10/96) §8.3.1, A.9.1.
+     * @public
+     * @readonly
+     */
+    public readonly reply: BackupReply_reply;
+    /**
+     * @summary `additionalInfo`.
+     * @description
+     *
+     * Management extensions. User in Table 6. ITU-T Rec. X.744
+     * (10/96) §9.2 Table 6.
+     * @public
+     * @readonly
+     */
+    public readonly additionalInfo?: OPTIONAL<ManagementExtension[]>;
+
     constructor(
-        /**
-         * @summary `reply`.
-         * @description
-         *
-         * `success` (`NULL`) for local/off-line; `inLine` BIT STRING
-         * is the backup copy. Conditional in Table 6. ITU-T Rec.
-         * X.744 (10/96) §8.3.1, A.9.1.
-         * @public
-         * @readonly
-         */
-        readonly reply: BackupReply_reply,
-        /**
-         * @summary `additionalInfo`.
-         * @description
-         *
-         * Management extensions. User in Table 6. ITU-T Rec. X.744
-         * (10/96) §9.2 Table 6.
-         * @public
-         * @readonly
-         */
-        readonly additionalInfo?: OPTIONAL<ManagementExtension[]>
-    ) {}
+        reply: BackupReply_reply,
+        additionalInfo?: OPTIONAL<ManagementExtension[]>
+    ) {
+        this.reply = reply;
+        this.additionalInfo = additionalInfo;
+    }
 
     /**
      * @summary Restructures an object into a BackupReply

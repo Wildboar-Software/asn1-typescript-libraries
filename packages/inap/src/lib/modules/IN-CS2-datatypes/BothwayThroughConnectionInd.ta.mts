@@ -1,4 +1,5 @@
 /* eslint-disable */
+import { ASN1Element as _Element, ASN1ConstructionError as _ConstructionError } from "@wildboar/asn1";
 import * as $ from "@wildboar/asn1/functional";
 
 
@@ -52,7 +53,7 @@ type BothwayThroughConnectionInd = _enum_for_BothwayThroughConnectionInd;
  * @enum {number}
  */
 export
-const BothwayThroughConnectionInd = _enum_for_BothwayThroughConnectionInd;
+const BothwayThroughConnectionInd: typeof _enum_for_BothwayThroughConnectionInd = _enum_for_BothwayThroughConnectionInd;
 
 /**
  * @summary BothwayThroughConnectionInd_bothwayPathRequired
@@ -60,7 +61,7 @@ const BothwayThroughConnectionInd = _enum_for_BothwayThroughConnectionInd;
  * @type {number}
  */
 export
-const BothwayThroughConnectionInd_bothwayPathRequired: BothwayThroughConnectionInd = BothwayThroughConnectionInd.bothwayPathRequired; /* LONG_NAMED_ENUMERATED_VALUE */
+const BothwayThroughConnectionInd_bothwayPathRequired: _enum_for_BothwayThroughConnectionInd.bothwayPathRequired = BothwayThroughConnectionInd.bothwayPathRequired; /* LONG_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary bothwayPathRequired
@@ -68,7 +69,7 @@ const BothwayThroughConnectionInd_bothwayPathRequired: BothwayThroughConnectionI
  * @type {number}
  */
 export
-const bothwayPathRequired: BothwayThroughConnectionInd = BothwayThroughConnectionInd.bothwayPathRequired; /* SHORT_NAMED_ENUMERATED_VALUE */
+const bothwayPathRequired: _enum_for_BothwayThroughConnectionInd.bothwayPathRequired = BothwayThroughConnectionInd.bothwayPathRequired; /* SHORT_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary BothwayThroughConnectionInd_bothwayPathNotRequired
@@ -76,7 +77,7 @@ const bothwayPathRequired: BothwayThroughConnectionInd = BothwayThroughConnectio
  * @type {number}
  */
 export
-const BothwayThroughConnectionInd_bothwayPathNotRequired: BothwayThroughConnectionInd = BothwayThroughConnectionInd.bothwayPathNotRequired; /* LONG_NAMED_ENUMERATED_VALUE */
+const BothwayThroughConnectionInd_bothwayPathNotRequired: _enum_for_BothwayThroughConnectionInd.bothwayPathNotRequired = BothwayThroughConnectionInd.bothwayPathNotRequired; /* LONG_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary bothwayPathNotRequired
@@ -84,12 +85,23 @@ const BothwayThroughConnectionInd_bothwayPathNotRequired: BothwayThroughConnecti
  * @type {number}
  */
 export
-const bothwayPathNotRequired: BothwayThroughConnectionInd = BothwayThroughConnectionInd.bothwayPathNotRequired; /* SHORT_NAMED_ENUMERATED_VALUE */
+const bothwayPathNotRequired: _enum_for_BothwayThroughConnectionInd.bothwayPathNotRequired = BothwayThroughConnectionInd.bothwayPathNotRequired; /* SHORT_NAMED_ENUMERATED_VALUE */
 
 export
-const _decode_BothwayThroughConnectionInd: $.ASN1Decoder<BothwayThroughConnectionInd> = $._decodeEnumerated;
+function _decode_BothwayThroughConnectionInd(el: _Element): BothwayThroughConnectionInd {
+    const enumerated = $._decodeEnumerated(el);
+    switch (enumerated) {
+        case BothwayThroughConnectionInd.bothwayPathRequired: return BothwayThroughConnectionInd.bothwayPathRequired;
+        case BothwayThroughConnectionInd.bothwayPathNotRequired: return BothwayThroughConnectionInd.bothwayPathNotRequired;
+        default:
+            throw new _ConstructionError(
+                "Invalid ENUMERATED value " + enumerated + " for BothwayThroughConnectionInd.",
+                el,
+            );
+    }
+}
 
 export
-const _encode_BothwayThroughConnectionInd: $.ASN1Encoder<BothwayThroughConnectionInd> = $._encodeEnumerated;
+const _encode_BothwayThroughConnectionInd: $.ASN1Encoder<BothwayThroughConnectionInd> = $._encodeEnumerated as $.ASN1Encoder<BothwayThroughConnectionInd>;
 
 /* eslint-enable */

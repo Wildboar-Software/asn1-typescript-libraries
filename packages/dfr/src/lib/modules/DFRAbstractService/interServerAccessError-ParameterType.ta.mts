@@ -1,6 +1,6 @@
 /* eslint-disable */
 import {
-    ASN1Element as _Element,
+    type ASN1Element as _Element,
     ASN1TagClass as _TagClass,
     ASN1Construction as _Construction,
     ASN1UniversalType as _UniversalType,
@@ -10,7 +10,7 @@ import {
     ASN1ConstructionError as _ConstructionError,
 } from "@wildboar/asn1";
 import * as $ from "@wildboar/asn1/functional";
-import { DfrEntryName, _decode_DfrEntryName, _encode_DfrEntryName } from "../DFRAbstractService/DfrEntryName.ta.mjs";
+import { type DfrEntryName, _decode_DfrEntryName, _encode_DfrEntryName } from "../DFRAbstractService/DfrEntryName.ta.mjs";
 import { InterServerAccessProblem, _enum_for_InterServerAccessProblem, _decode_InterServerAccessProblem, _encode_InterServerAccessProblem } from "../DFRAbstractService/InterServerAccessProblem.ta.mjs";
 
 
@@ -34,26 +34,32 @@ import { InterServerAccessProblem, _enum_for_InterServerAccessProblem, _decode_I
  */
 export
 class interServerAccessError_ParameterType {
+    /**
+     * @summary `entry`.
+     * @description
+     *
+     * Local DFR-Reference whose remote access failed.
+     * @public
+     * @readonly
+     */
+    public readonly entry: DfrEntryName;
+    /**
+     * @summary `problem`.
+     * @description
+     *
+     * Why the accessee could not be used.
+     * @public
+     * @readonly
+     */
+    public readonly problem: InterServerAccessProblem;
+
     constructor (
-        /**
-         * @summary `entry`.
-         * @description
-         *
-         * Local DFR-Reference whose remote access failed.
-         * @public
-         * @readonly
-         */
-        readonly entry: DfrEntryName,
-        /**
-         * @summary `problem`.
-         * @description
-         *
-         * Why the accessee could not be used.
-         * @public
-         * @readonly
-         */
-        readonly problem: InterServerAccessProblem
-    ) {}
+        entry: DfrEntryName,
+        problem: InterServerAccessProblem
+    ) {
+        this.entry = entry;
+        this.problem = problem;
+    }
 
     /**
      * @summary Restructures an object into a interServerAccessError_ParameterType
@@ -77,7 +83,7 @@ class interServerAccessError_ParameterType {
          * @static
          */
 
-    public static _enum_for_problem = _enum_for_InterServerAccessProblem;
+    public static _enum_for_problem: typeof _enum_for_InterServerAccessProblem = _enum_for_InterServerAccessProblem;
 }
 
 /**

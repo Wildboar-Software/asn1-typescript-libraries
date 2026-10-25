@@ -1,7 +1,7 @@
 /* eslint-disable */
 import {
-    OPTIONAL,
-    ASN1Element as _Element,
+    type OPTIONAL,
+    type ASN1Element as _Element,
     ASN1TagClass as _TagClass,
     ASN1Construction as _Construction,
     ASN1UniversalType as _UniversalType,
@@ -17,7 +17,7 @@ import {
     _encode_ORAddress,
 } from '../MTSAbstractService/ORAddress.ta.mjs';
 import {
-    Name,
+    type Name,
     _decode_Name,
     _encode_Name,
 } from '@wildboar/dn';
@@ -27,12 +27,12 @@ import {
     _encode_BuiltInStandardAttributes,
 } from '../MTSAbstractService/BuiltInStandardAttributes.ta.mjs';
 import {
-    BuiltInDomainDefinedAttributes,
+    type BuiltInDomainDefinedAttributes,
     _decode_BuiltInDomainDefinedAttributes,
     _encode_BuiltInDomainDefinedAttributes,
 } from '../MTSAbstractService/BuiltInDomainDefinedAttributes.ta.mjs';
 import {
-    ExtensionAttributes,
+    type ExtensionAttributes,
     _decode_ExtensionAttributes,
     _encode_ExtensionAttributes,
 } from '../MTSAbstractService/ExtensionAttributes.ta.mjs';
@@ -62,33 +62,42 @@ import {
  *
  */
 export class ORName extends ORAddress {
+    /**
+     * @summary `built_in_standard_attributes`.
+     * @public
+     * @readonly
+     */
+    public override readonly built_in_standard_attributes: BuiltInStandardAttributes; /* REPLICATED_COMPONENT */
+    /**
+     * @summary `built_in_domain_defined_attributes`.
+     * @public
+     * @readonly
+     */
+    public override readonly built_in_domain_defined_attributes?: OPTIONAL<BuiltInDomainDefinedAttributes>; /* REPLICATED_COMPONENT */
+    /**
+     * @summary `extension_attributes`.
+     * @public
+     * @readonly
+     */
+    public override readonly extension_attributes?: OPTIONAL<ExtensionAttributes>; /* REPLICATED_COMPONENT */
+    /**
+     * @summary `directory_name`.
+     * @public
+     * @readonly
+     */
+    public readonly directory_name?: OPTIONAL<Name>;
+
     constructor(
-        /**
-         * @summary `built_in_standard_attributes`.
-         * @public
-         * @readonly
-         */
-        override readonly built_in_standard_attributes: BuiltInStandardAttributes /* REPLICATED_COMPONENT */,
-        /**
-         * @summary `built_in_domain_defined_attributes`.
-         * @public
-         * @readonly
-         */
-        override readonly built_in_domain_defined_attributes?: OPTIONAL<BuiltInDomainDefinedAttributes> /* REPLICATED_COMPONENT */,
-        /**
-         * @summary `extension_attributes`.
-         * @public
-         * @readonly
-         */
-        override readonly extension_attributes?: OPTIONAL<ExtensionAttributes> /* REPLICATED_COMPONENT */,
-        /**
-         * @summary `directory_name`.
-         * @public
-         * @readonly
-         */
-        readonly directory_name?: OPTIONAL<Name>
+        built_in_standard_attributes: BuiltInStandardAttributes,
+        built_in_domain_defined_attributes?: OPTIONAL<BuiltInDomainDefinedAttributes>,
+        extension_attributes?: OPTIONAL<ExtensionAttributes>,
+        directory_name?: OPTIONAL<Name>
     ) {
         super(built_in_standard_attributes, built_in_domain_defined_attributes, extension_attributes);
+        this.built_in_standard_attributes = built_in_standard_attributes;
+        this.built_in_domain_defined_attributes = built_in_domain_defined_attributes;
+        this.extension_attributes = extension_attributes;
+        this.directory_name = directory_name;
     }
 
     /**

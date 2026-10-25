@@ -1,7 +1,7 @@
 /* eslint-disable */
 import {
-    OPTIONAL,
-    ASN1Element as _Element,
+    type OPTIONAL,
+    type ASN1Element as _Element,
     ASN1TagClass as _TagClass,
     ASN1Construction as _Construction,
     ASN1UniversalType as _UniversalType,
@@ -22,17 +22,17 @@ import {
     _encode_ExtensionField,
 } from '../MTSAbstractService/ExtensionField.ta.mjs';
 import {
-    Operations,
+    type Operations,
     _decode_Operations,
     _encode_Operations,
 } from '../MTSAbstractService/Operations.ta.mjs';
 import {
-    WaitingMessages,
+    type WaitingMessages,
     _decode_WaitingMessages,
     _encode_WaitingMessages,
 } from '../MTSAbstractService/WaitingMessages.ta.mjs';
 import {
-    ContentType,
+    type ContentType,
     _decode_ContentType,
     _encode_ContentType,
 } from '../MTSAbstractService/ContentType.ta.mjs';
@@ -65,40 +65,54 @@ import {
  *
  */
 export class DeliveryControlResult implements Waiting {
-    constructor(
-        /**
-         * @summary `waiting_operations`.
-         * @public
-         * @readonly
-         */
-        readonly waiting_operations?: OPTIONAL<Operations> /* REPLICATED_COMPONENT */,
-        /**
-         * @summary `waiting_messages`.
-         * @public
-         * @readonly
-         */
-        readonly waiting_messages?: OPTIONAL<WaitingMessages> /* REPLICATED_COMPONENT */,
-        /**
-         * @summary `waiting_content_types`.
-         * @public
-         * @readonly
-         */
-        readonly waiting_content_types?: OPTIONAL<
+    /**
+     * @summary `waiting_operations`.
+     * @public
+     * @readonly
+     */
+    public readonly waiting_operations?: OPTIONAL<Operations>; /* REPLICATED_COMPONENT */
+    /**
+     * @summary `waiting_messages`.
+     * @public
+     * @readonly
+     */
+    public readonly waiting_messages?: OPTIONAL<WaitingMessages>; /* REPLICATED_COMPONENT */
+    /**
+     * @summary `waiting_content_types`.
+     * @public
+     * @readonly
+     */
+    public readonly waiting_content_types?: OPTIONAL<
             ContentType[]
-        > /* REPLICATED_COMPONENT */,
-        /**
-         * @summary `waiting_encoded_information_types`.
-         * @public
-         * @readonly
-         */
-        readonly waiting_encoded_information_types?: OPTIONAL<EncodedInformationTypes> /* REPLICATED_COMPONENT */,
-        /**
-         * @summary `extensions`.
-         * @public
-         * @readonly
-         */
-        readonly extensions?: OPTIONAL<ExtensionField[]>
-    ) {}
+        >; /* REPLICATED_COMPONENT */
+    /**
+     * @summary `waiting_encoded_information_types`.
+     * @public
+     * @readonly
+     */
+    public readonly waiting_encoded_information_types?: OPTIONAL<EncodedInformationTypes>; /* REPLICATED_COMPONENT */
+    /**
+     * @summary `extensions`.
+     * @public
+     * @readonly
+     */
+    public readonly extensions?: OPTIONAL<ExtensionField[]>;
+
+    constructor(
+        waiting_operations?: OPTIONAL<Operations>,
+        waiting_messages?: OPTIONAL<WaitingMessages>,
+        waiting_content_types?: OPTIONAL<
+            ContentType[]
+        >,
+        waiting_encoded_information_types?: OPTIONAL<EncodedInformationTypes>,
+        extensions?: OPTIONAL<ExtensionField[]>
+    ) {
+        this.waiting_operations = waiting_operations;
+        this.waiting_messages = waiting_messages;
+        this.waiting_content_types = waiting_content_types;
+        this.waiting_encoded_information_types = waiting_encoded_information_types;
+        this.extensions = extensions;
+    }
 
     /**
      * @summary Restructures an object into a DeliveryControlResult

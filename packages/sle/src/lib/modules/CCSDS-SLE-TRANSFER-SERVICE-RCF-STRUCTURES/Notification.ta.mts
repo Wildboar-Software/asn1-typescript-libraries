@@ -1,12 +1,12 @@
 /* eslint-disable */
 import {
-    NULL,
-    ASN1Element as _Element,
+    type NULL,
+    type ASN1Element as _Element,
     ASN1TagClass as _TagClass
 } from "@wildboar/asn1";
 import * as $ from "@wildboar/asn1/functional";
 import { LockStatusReport, _decode_LockStatusReport, _encode_LockStatusReport } from "../CCSDS-SLE-TRANSFER-SERVICE-RCF-STRUCTURES/LockStatusReport.ta.mjs";
-import { RcfProductionStatus, _decode_RcfProductionStatus, _encode_RcfProductionStatus } from "../CCSDS-SLE-TRANSFER-SERVICE-RCF-STRUCTURES/RcfProductionStatus.ta.mjs";
+import { type RcfProductionStatus, _decode_RcfProductionStatus, _encode_RcfProductionStatus } from "../CCSDS-SLE-TRANSFER-SERVICE-RCF-STRUCTURES/RcfProductionStatus.ta.mjs";
 
 
 /**

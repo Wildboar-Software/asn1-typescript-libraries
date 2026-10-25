@@ -1,6 +1,6 @@
 /* eslint-disable */
 import {
-  INTEGER,
+  type INTEGER,
   ASN1Element as _Element,
   ASN1TagClass as _TagClass,
   ASN1Construction as _Construction,
@@ -29,20 +29,20 @@ export type HeaderVersion_header_major = INTEGER;
  * @constant
  * @type {number}
  */
-export const HeaderVersion_header_major_version1: HeaderVersion_header_major = 1; /* LONG_NAMED_INTEGER_VALUE */
+export const HeaderVersion_header_major_version1: 1 = 1 satisfies HeaderVersion_header_major; /* LONG_NAMED_INTEGER_VALUE */
 
 /**
  * @summary HeaderVersion_header_major_version1
  * @constant
  * @type {number}
  */
-export const version1: HeaderVersion_header_major = HeaderVersion_header_major_version1; /* SHORT_NAMED_INTEGER_VALUE */
+export const version1: 1 = HeaderVersion_header_major_version1; /* SHORT_NAMED_INTEGER_VALUE */
 
 
-export const _decode_HeaderVersion_header_major = $._decodeInteger;
+export const _decode_HeaderVersion_header_major: $.ASN1Decoder<INTEGER> = $._decodeInteger;
 
 
-export const _encode_HeaderVersion_header_major = $._encodeInteger;
+export const _encode_HeaderVersion_header_major: $.ASN1Encoder<INTEGER> = $._encodeInteger;
 
 
 /* eslint-enable */

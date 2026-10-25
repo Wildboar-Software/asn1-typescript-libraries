@@ -1,13 +1,13 @@
 /* eslint-disable */
 import {
-    OPTIONAL,
-    ASN1Element as _Element,
+    type OPTIONAL,
+    type ASN1Element as _Element,
     ASN1TagClass as _TagClass
 } from "@wildboar/asn1";
 import * as $ from "@wildboar/asn1/functional";
-import { Octet4, _decode_Octet4, _encode_Octet4 } from "../RSPDefinitions/Octet4.ta.mjs";
+import { type Octet4, _decode_Octet4, _encode_Octet4 } from "../RSPDefinitions/Octet4.ta.mjs";
 import { DeviceCapabilities, _decode_DeviceCapabilities, _encode_DeviceCapabilities } from "../RSPDefinitions/DeviceCapabilities.ta.mjs";
-import { Octet8, _decode_Octet8, _encode_Octet8 } from "../RSPDefinitions/Octet8.ta.mjs";
+import { type Octet8, _decode_Octet8, _encode_Octet8 } from "../RSPDefinitions/Octet8.ta.mjs";
 
 
 /**
@@ -45,7 +45,7 @@ class DeviceInfo {
      * @public
      * @readonly
      */
-    readonly tac: Octet4;
+    public readonly tac: Octet4;
     /**
      * @summary `deviceCapabilities`.
      * @description
@@ -56,7 +56,7 @@ class DeviceInfo {
      * @public
      * @readonly
      */
-    readonly deviceCapabilities: DeviceCapabilities;
+    public readonly deviceCapabilities: DeviceCapabilities;
     /**
      * @summary `imei`.
      * @description
@@ -69,7 +69,7 @@ class DeviceInfo {
      * @public
      * @readonly
      */
-    readonly imei?: OPTIONAL<Octet8>;
+    public readonly imei?: OPTIONAL<Octet8>;
 
     constructor (
         tac: Octet4,

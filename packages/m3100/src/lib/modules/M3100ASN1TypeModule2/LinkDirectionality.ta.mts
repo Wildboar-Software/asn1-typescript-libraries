@@ -1,6 +1,6 @@
 /* eslint-disable */
 import {
-    ASN1Element as _Element,
+    type ASN1Element as _Element,
     ASN1TagClass as _TagClass,
     ASN1Construction as _Construction,
     ASN1UniversalType as _UniversalType,
@@ -61,7 +61,7 @@ export type LinkDirectionality = _enum_for_LinkDirectionality;
  *
  * @enum {number}
  */
-export const LinkDirectionality = _enum_for_LinkDirectionality;
+export const LinkDirectionality: typeof _enum_for_LinkDirectionality = _enum_for_LinkDirectionality;
 
 
 /**
@@ -69,7 +69,7 @@ export const LinkDirectionality = _enum_for_LinkDirectionality;
  * @constant
  * @type {number}
  */
-export const LinkDirectionality_unidirectional: LinkDirectionality =
+export const LinkDirectionality_unidirectional: _enum_for_LinkDirectionality.unidirectional =
     LinkDirectionality.unidirectional; /* LONG_NAMED_ENUMERATED_VALUE */
 
 
@@ -78,7 +78,7 @@ export const LinkDirectionality_unidirectional: LinkDirectionality =
  * @constant
  * @type {number}
  */
-export const unidirectional: LinkDirectionality =
+export const unidirectional: _enum_for_LinkDirectionality.unidirectional =
     LinkDirectionality.unidirectional; /* SHORT_NAMED_ENUMERATED_VALUE */
 
 
@@ -87,7 +87,7 @@ export const unidirectional: LinkDirectionality =
  * @constant
  * @type {number}
  */
-export const LinkDirectionality_bidirectional: LinkDirectionality =
+export const LinkDirectionality_bidirectional: _enum_for_LinkDirectionality.bidirectional =
     LinkDirectionality.bidirectional; /* LONG_NAMED_ENUMERATED_VALUE */
 
 
@@ -96,7 +96,7 @@ export const LinkDirectionality_bidirectional: LinkDirectionality =
  * @constant
  * @type {number}
  */
-export const bidirectional: LinkDirectionality =
+export const bidirectional: _enum_for_LinkDirectionality.bidirectional =
     LinkDirectionality.bidirectional; /* SHORT_NAMED_ENUMERATED_VALUE */
 
 
@@ -105,7 +105,7 @@ export const bidirectional: LinkDirectionality =
  * @constant
  * @type {number}
  */
-export const LinkDirectionality_undefined: LinkDirectionality =
+export const LinkDirectionality_undefined: _enum_for_LinkDirectionality.undefined =
     LinkDirectionality.undefined; /* LONG_NAMED_ENUMERATED_VALUE */
 
 
@@ -114,18 +114,30 @@ export const LinkDirectionality_undefined: LinkDirectionality =
  * @constant
  * @type {number}
  */
-export const undefined: LinkDirectionality =
+export const undefined: _enum_for_LinkDirectionality.undefined =
     LinkDirectionality.undefined; /* SHORT_NAMED_ENUMERATED_VALUE */
 
 
 
 
-export const _decode_LinkDirectionality = $._decodeEnumerated;
+export function _decode_LinkDirectionality(el: _Element): LinkDirectionality {
+    const enumerated = $._decodeEnumerated(el);
+    switch (enumerated) {
+        case LinkDirectionality.unidirectional: return LinkDirectionality.unidirectional;
+        case LinkDirectionality.bidirectional: return LinkDirectionality.bidirectional;
+        case LinkDirectionality.undefined: return LinkDirectionality.undefined;
+        default:
+            throw new _ConstructionError(
+                'Invalid ENUMERATED value ' + enumerated + ' for LinkDirectionality.',
+                el,
+            );
+    }
+}
 
 
 
 
-export const _encode_LinkDirectionality = $._encodeEnumerated;
+export const _encode_LinkDirectionality: $.ASN1Encoder<LinkDirectionality> = $._encodeEnumerated as $.ASN1Encoder<LinkDirectionality>;
 
 
 /* eslint-enable */

@@ -1,5 +1,5 @@
 /* eslint-disable */
-import { ASN1Element as _Element } from "@wildboar/asn1";
+import { ASN1Element as _Element, ASN1ConstructionError as _ConstructionError } from "@wildboar/asn1";
 import * as $ from "@wildboar/asn1/functional";
 
 /**
@@ -59,7 +59,7 @@ export type NamedDay_intNamedDays = _enum_for_NamedDay_intNamedDays;
  *
  * @enum {number}
  */
-export const NamedDay_intNamedDays = _enum_for_NamedDay_intNamedDays;
+export const NamedDay_intNamedDays: typeof _enum_for_NamedDay_intNamedDays = _enum_for_NamedDay_intNamedDays;
 
 /**
  * @summary NamedDay_intNamedDays_sunday
@@ -70,7 +70,7 @@ export const NamedDay_intNamedDays = _enum_for_NamedDay_intNamedDays;
  * @constant
  * @type {number}
  */
-export const NamedDay_intNamedDays_sunday: NamedDay_intNamedDays =
+export const NamedDay_intNamedDays_sunday: _enum_for_NamedDay_intNamedDays.sunday =
     NamedDay_intNamedDays.sunday; /* LONG_NAMED_ENUMERATED_VALUE */
 
 /**
@@ -82,7 +82,7 @@ export const NamedDay_intNamedDays_sunday: NamedDay_intNamedDays =
  * @constant
  * @type {number}
  */
-export const sunday: NamedDay_intNamedDays =
+export const sunday: _enum_for_NamedDay_intNamedDays.sunday =
     NamedDay_intNamedDays.sunday; /* SHORT_NAMED_ENUMERATED_VALUE */
 
 /**
@@ -90,7 +90,7 @@ export const sunday: NamedDay_intNamedDays =
  * @constant
  * @type {number}
  */
-export const NamedDay_intNamedDays_monday: NamedDay_intNamedDays =
+export const NamedDay_intNamedDays_monday: _enum_for_NamedDay_intNamedDays.monday =
     NamedDay_intNamedDays.monday; /* LONG_NAMED_ENUMERATED_VALUE */
 
 /**
@@ -98,7 +98,7 @@ export const NamedDay_intNamedDays_monday: NamedDay_intNamedDays =
  * @constant
  * @type {number}
  */
-export const monday: NamedDay_intNamedDays =
+export const monday: _enum_for_NamedDay_intNamedDays.monday =
     NamedDay_intNamedDays.monday; /* SHORT_NAMED_ENUMERATED_VALUE */
 
 /**
@@ -106,7 +106,7 @@ export const monday: NamedDay_intNamedDays =
  * @constant
  * @type {number}
  */
-export const NamedDay_intNamedDays_tuesday: NamedDay_intNamedDays =
+export const NamedDay_intNamedDays_tuesday: _enum_for_NamedDay_intNamedDays.tuesday =
     NamedDay_intNamedDays.tuesday; /* LONG_NAMED_ENUMERATED_VALUE */
 
 /**
@@ -114,7 +114,7 @@ export const NamedDay_intNamedDays_tuesday: NamedDay_intNamedDays =
  * @constant
  * @type {number}
  */
-export const tuesday: NamedDay_intNamedDays =
+export const tuesday: _enum_for_NamedDay_intNamedDays.tuesday =
     NamedDay_intNamedDays.tuesday; /* SHORT_NAMED_ENUMERATED_VALUE */
 
 /**
@@ -122,7 +122,7 @@ export const tuesday: NamedDay_intNamedDays =
  * @constant
  * @type {number}
  */
-export const NamedDay_intNamedDays_wednesday: NamedDay_intNamedDays =
+export const NamedDay_intNamedDays_wednesday: _enum_for_NamedDay_intNamedDays.wednesday =
     NamedDay_intNamedDays.wednesday; /* LONG_NAMED_ENUMERATED_VALUE */
 
 /**
@@ -130,7 +130,7 @@ export const NamedDay_intNamedDays_wednesday: NamedDay_intNamedDays =
  * @constant
  * @type {number}
  */
-export const wednesday: NamedDay_intNamedDays =
+export const wednesday: _enum_for_NamedDay_intNamedDays.wednesday =
     NamedDay_intNamedDays.wednesday; /* SHORT_NAMED_ENUMERATED_VALUE */
 
 /**
@@ -138,7 +138,7 @@ export const wednesday: NamedDay_intNamedDays =
  * @constant
  * @type {number}
  */
-export const NamedDay_intNamedDays_thursday: NamedDay_intNamedDays =
+export const NamedDay_intNamedDays_thursday: _enum_for_NamedDay_intNamedDays.thursday =
     NamedDay_intNamedDays.thursday; /* LONG_NAMED_ENUMERATED_VALUE */
 
 /**
@@ -146,7 +146,7 @@ export const NamedDay_intNamedDays_thursday: NamedDay_intNamedDays =
  * @constant
  * @type {number}
  */
-export const thursday: NamedDay_intNamedDays =
+export const thursday: _enum_for_NamedDay_intNamedDays.thursday =
     NamedDay_intNamedDays.thursday; /* SHORT_NAMED_ENUMERATED_VALUE */
 
 /**
@@ -154,7 +154,7 @@ export const thursday: NamedDay_intNamedDays =
  * @constant
  * @type {number}
  */
-export const NamedDay_intNamedDays_friday: NamedDay_intNamedDays =
+export const NamedDay_intNamedDays_friday: _enum_for_NamedDay_intNamedDays.friday =
     NamedDay_intNamedDays.friday; /* LONG_NAMED_ENUMERATED_VALUE */
 
 /**
@@ -162,7 +162,7 @@ export const NamedDay_intNamedDays_friday: NamedDay_intNamedDays =
  * @constant
  * @type {number}
  */
-export const friday: NamedDay_intNamedDays =
+export const friday: _enum_for_NamedDay_intNamedDays.friday =
     NamedDay_intNamedDays.friday; /* SHORT_NAMED_ENUMERATED_VALUE */
 
 /**
@@ -170,7 +170,7 @@ export const friday: NamedDay_intNamedDays =
  * @constant
  * @type {number}
  */
-export const NamedDay_intNamedDays_saturday: NamedDay_intNamedDays =
+export const NamedDay_intNamedDays_saturday: _enum_for_NamedDay_intNamedDays.saturday =
     NamedDay_intNamedDays.saturday; /* LONG_NAMED_ENUMERATED_VALUE */
 
 /**
@@ -178,14 +178,30 @@ export const NamedDay_intNamedDays_saturday: NamedDay_intNamedDays =
  * @constant
  * @type {number}
  */
-export const saturday: NamedDay_intNamedDays =
+export const saturday: _enum_for_NamedDay_intNamedDays.saturday =
     NamedDay_intNamedDays.saturday; /* SHORT_NAMED_ENUMERATED_VALUE */
 
 
-export const _decode_NamedDay_intNamedDays = $._decodeEnumerated;
+export function _decode_NamedDay_intNamedDays(el: _Element): NamedDay_intNamedDays {
+    const enumerated = $._decodeEnumerated(el);
+    switch (enumerated) {
+        case NamedDay_intNamedDays.sunday: return NamedDay_intNamedDays.sunday;
+        case NamedDay_intNamedDays.monday: return NamedDay_intNamedDays.monday;
+        case NamedDay_intNamedDays.tuesday: return NamedDay_intNamedDays.tuesday;
+        case NamedDay_intNamedDays.wednesday: return NamedDay_intNamedDays.wednesday;
+        case NamedDay_intNamedDays.thursday: return NamedDay_intNamedDays.thursday;
+        case NamedDay_intNamedDays.friday: return NamedDay_intNamedDays.friday;
+        case NamedDay_intNamedDays.saturday: return NamedDay_intNamedDays.saturday;
+        default:
+            throw new _ConstructionError(
+                "Invalid ENUMERATED value " + enumerated + " for NamedDay_intNamedDays.",
+                el,
+            );
+    }
+}
 
 
-export const _encode_NamedDay_intNamedDays = $._encodeEnumerated;
+export const _encode_NamedDay_intNamedDays: $.ASN1Encoder<NamedDay_intNamedDays> = $._encodeEnumerated as $.ASN1Encoder<NamedDay_intNamedDays>;
 
 
 /* eslint-enable */

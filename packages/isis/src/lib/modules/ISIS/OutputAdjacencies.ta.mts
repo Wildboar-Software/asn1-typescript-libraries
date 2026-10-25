@@ -11,7 +11,7 @@ import {
 } from '@wildboar/asn1';
 import * as $ from '@wildboar/asn1/functional';
 import {
-  LocalDistinguishedName,
+  type LocalDistinguishedName,
   _decode_LocalDistinguishedName,
   _encode_LocalDistinguishedName,
 } from '../ISIS/LocalDistinguishedName.ta.mjs';

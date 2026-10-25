@@ -1,6 +1,6 @@
 /* eslint-disable */
 import {
-    ASN1Element as _Element,
+    type ASN1Element as _Element,
     ASN1TagClass as _TagClass,
     ASN1Construction as _Construction,
     ASN1UniversalType as _UniversalType,
@@ -9,7 +9,7 @@ import {
     EmbeddedPDV as _PDV,
     ASN1ConstructionError as _ConstructionError,
 } from "@wildboar/asn1";
-import { ALGORITHM } from "../X9-84-CMS/ALGORITHM.oca.mjs";
+import { type ALGORITHM } from "../X9-84-CMS/ALGORITHM.oca.mjs";
 
 import { KeyEncryptionAlgorithms_Union0_Intersection0_Element } from "../X9-84-CMS/KeyEncryptionAlgorithms-Union0-Intersection0-Element.oa.mjs";
 

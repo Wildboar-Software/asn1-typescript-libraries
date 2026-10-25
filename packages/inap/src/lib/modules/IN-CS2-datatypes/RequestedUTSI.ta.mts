@@ -1,15 +1,16 @@
 /* eslint-disable */
 import {
-    OPTIONAL,
-    ASN1Element as _Element,
+    type OCTET_STRING,
+    type OPTIONAL,
+    type ASN1Element as _Element,
     ASN1TagClass as _TagClass
 } from "@wildboar/asn1";
 import * as $ from "@wildboar/asn1/functional";
-import { USIServiceIndicator, _decode_USIServiceIndicator, _encode_USIServiceIndicator } from "../IN-CS2-datatypes/USIServiceIndicator.ta.mjs";
+import { type USIServiceIndicator, _decode_USIServiceIndicator, _encode_USIServiceIndicator } from "../IN-CS2-datatypes/USIServiceIndicator.ta.mjs";
 // export { USIServiceIndicator, _decode_USIServiceIndicator, _encode_USIServiceIndicator } from "../IN-CS2-datatypes/USIServiceIndicator.ta.mjs";
 import { USIMonitorMode, _decode_USIMonitorMode, _encode_USIMonitorMode, _enum_for_USIMonitorMode } from "../IN-CS2-datatypes/USIMonitorMode.ta.mjs";
 // export { USIMonitorMode, _enum_for_USIMonitorMode, USIMonitorMode_monitoringActive /* IMPORTED_LONG_ENUMERATION_ITEM */, monitoringActive /* IMPORTED_SHORT_ENUMERATION_ITEM */, USIMonitorMode_monitoringInactive /* IMPORTED_LONG_ENUMERATION_ITEM */, monitoringInactive /* IMPORTED_SHORT_ENUMERATION_ITEM */, _decode_USIMonitorMode, _encode_USIMonitorMode } from "../IN-CS2-datatypes/USIMonitorMode.ta.mjs";
-import { LegID, _decode_LegID, _encode_LegID } from "../IN-CS2-datatypes/LegID.ta.mjs";
+import { type LegID, _decode_LegID, _encode_LegID } from "../IN-CS2-datatypes/LegID.ta.mjs";
 // export { LegID, _decode_LegID, _encode_LegID } from "../IN-CS2-datatypes/LegID.ta.mjs";
 import { leg1 } from "../IN-CS2-datatypes/leg1.va.mjs";
 // export { leg1 } from "../IN-CS2-datatypes/leg1.va.mjs";
@@ -84,13 +85,15 @@ class RequestedUTSI {
      * @static
      * @method
      */
-    public static get _default_value_for_legID () { return { sendingSideID: leg1 }; }        /**
+    public static get _default_value_for_legID (): {
+        sendingSideID: OCTET_STRING;
+    } { return { sendingSideID: leg1 }; }        /**
          * @summary The enum used as the type of the component `uSImonitorMode`
          * @public
          * @static
          */
 
-    public static _enum_for_uSImonitorMode = _enum_for_USIMonitorMode;
+    public static _enum_for_uSImonitorMode: typeof _enum_for_USIMonitorMode = _enum_for_USIMonitorMode;
 }
 
 /**

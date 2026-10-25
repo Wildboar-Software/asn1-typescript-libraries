@@ -1,6 +1,6 @@
 /* eslint-disable */
 import {
-    ASN1Element as _Element,
+    type ASN1Element as _Element,
     ASN1TagClass as _TagClass,
     ASN1Construction as _Construction,
     ASN1UniversalType as _UniversalType,
@@ -10,8 +10,8 @@ import {
     ASN1ConstructionError as _ConstructionError,
 } from "@wildboar/asn1";
 import * as $ from "@wildboar/asn1/functional";
-import { AttrId, _decode_AttrId, _encode_AttrId } from "../ISO9041-VTP/AttrId.ta.mjs";
-import { AttrExtent, _decode_AttrExtent, _encode_AttrExtent } from "../ISO9041-VTP/AttrExtent.ta.mjs";
+import { type AttrId, _decode_AttrId, _encode_AttrId } from "../ISO9041-VTP/AttrId.ta.mjs";
+import { type AttrExtent, _decode_AttrExtent, _encode_AttrExtent } from "../ISO9041-VTP/AttrExtent.ta.mjs";
 
 
 /**
@@ -36,26 +36,32 @@ import { AttrExtent, _decode_AttrExtent, _encode_AttrExtent } from "../ISO9041-V
  */
 export
 class DOupdate_writeAttr {
+    /**
+     * @summary `attributeId`.
+     * @description
+     * Both attribute-id and attribute-value.
+     * ISO/IEC 9040:1997 §19.4.1.3; ISO/IEC 9041-1:1997 §12.1.
+     * @public
+     * @readonly
+     */
+    public readonly attributeId: AttrId;
+    /**
+     * @summary `attributeExtent`.
+     * @description
+     * global, address or modal. character-repertoire may only be
+     * set with modal extent. ISO/IEC 9040:1997 §19.4.1.3.
+     * @public
+     * @readonly
+     */
+    public readonly attributeExtent: AttrExtent;
+
     constructor (
-        /**
-         * @summary `attributeId`.
-         * @description
-         * Both attribute-id and attribute-value.
-         * ISO/IEC 9040:1997 §19.4.1.3; ISO/IEC 9041-1:1997 §12.1.
-         * @public
-         * @readonly
-         */
-        readonly attributeId: AttrId,
-        /**
-         * @summary `attributeExtent`.
-         * @description
-         * global, address or modal. character-repertoire may only be
-         * set with modal extent. ISO/IEC 9040:1997 §19.4.1.3.
-         * @public
-         * @readonly
-         */
-        readonly attributeExtent: AttrExtent
-    ) {}
+        attributeId: AttrId,
+        attributeExtent: AttrExtent
+    ) {
+        this.attributeId = attributeId;
+        this.attributeExtent = attributeExtent;
+    }
 
     /**
      * @summary Restructures an object into a DOupdate_writeAttr

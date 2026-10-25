@@ -2,7 +2,7 @@
 import { dhStatic } from "../ANSI-X9-42/dhStatic.va.mjs";
 import { type KEY_AGREEMENT } from "../ANSI-X9-42/KEY-AGREEMENT.oca.mjs";
 import {
-    SchemeParameters,
+    type SchemeParameters,
     _decode_SchemeParameters,
     _encode_SchemeParameters,
 } from "../ANSI-X9-42/SchemeParameters.ta.mjs";

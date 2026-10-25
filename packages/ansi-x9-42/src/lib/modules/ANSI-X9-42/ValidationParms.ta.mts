@@ -1,10 +1,10 @@
 /* eslint-disable */
 import {
     ASN1ConstructionError as _ConstructionError,
-    ASN1Element as _Element,
+    type ASN1Element as _Element,
     ASN1TagClass as _TagClass,
-    BIT_STRING,
-    INTEGER,
+    type BIT_STRING,
+    type INTEGER,
 } from "@wildboar/asn1";
 import * as $ from "@wildboar/asn1/functional";
 
@@ -38,7 +38,7 @@ export class ValidationParms {
      * @public
      * @readonly
      */
-    readonly seed: BIT_STRING;
+    public readonly seed: BIT_STRING;
     /**
      * @summary `pGenCounter`.
      * @description
@@ -49,7 +49,7 @@ export class ValidationParms {
      * @public
      * @readonly
      */
-    readonly pGenCounter: INTEGER;
+    public readonly pGenCounter: INTEGER;
 
     constructor(
         seed: BIT_STRING,

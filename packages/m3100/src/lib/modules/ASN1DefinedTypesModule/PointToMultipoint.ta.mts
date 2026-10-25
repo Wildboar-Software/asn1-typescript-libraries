@@ -1,6 +1,6 @@
 /* eslint-disable */
 import {
-    ASN1Element as _Element,
+    type ASN1Element as _Element,
     ASN1TagClass as _TagClass,
     ASN1Construction as _Construction,
     ASN1UniversalType as _UniversalType,
@@ -11,7 +11,7 @@ import {
 } from '@wildboar/asn1';
 import * as $ from '@wildboar/asn1/functional';
 import {
-    ObjectInstance,
+    type ObjectInstance,
     _decode_ObjectInstance,
     _encode_ObjectInstance,
 } from '@wildboar/cmip';
@@ -39,26 +39,34 @@ import {
  *
  */
 export class PointToMultipoint {
+    /**
+     * @summary `fromTp`.
+     * @public
+     * @readonly
+     */
+    public readonly fromTp: ObjectInstance;
+    /**
+     * @summary `toTps`.
+     * @public
+     * @readonly
+     */
+    public readonly toTps: PointToMultipoint_toTps_Item[];
+    /**
+     * @summary `mpXCon`.
+     * @public
+     * @readonly
+     */
+    public readonly mpXCon: ObjectInstance;
+
     constructor(
-        /**
-         * @summary `fromTp`.
-         * @public
-         * @readonly
-         */
-        readonly fromTp: ObjectInstance,
-        /**
-         * @summary `toTps`.
-         * @public
-         * @readonly
-         */
-        readonly toTps: PointToMultipoint_toTps_Item[],
-        /**
-         * @summary `mpXCon`.
-         * @public
-         * @readonly
-         */
-        readonly mpXCon: ObjectInstance
-    ) {}
+        fromTp: ObjectInstance,
+        toTps: PointToMultipoint_toTps_Item[],
+        mpXCon: ObjectInstance
+    ) {
+        this.fromTp = fromTp;
+        this.toTps = toTps;
+        this.mpXCon = mpXCon;
+    }
 
     /**
      * @summary Restructures an object into a PointToMultipoint

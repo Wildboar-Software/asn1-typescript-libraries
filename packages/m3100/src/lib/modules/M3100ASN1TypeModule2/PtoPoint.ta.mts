@@ -1,6 +1,6 @@
 /* eslint-disable */
 import {
-    ASN1Element as _Element,
+    type ASN1Element as _Element,
     ASN1TagClass as _TagClass,
     ASN1Construction as _Construction,
     ASN1UniversalType as _UniversalType,
@@ -11,7 +11,7 @@ import {
 } from '@wildboar/asn1';
 import * as $ from '@wildboar/asn1/functional';
 import {
-    ConnectivityEndPoint,
+    type ConnectivityEndPoint,
     _decode_ConnectivityEndPoint,
     _encode_ConnectivityEndPoint,
 } from '../M3100ASN1TypeModule2/ConnectivityEndPoint.ta.mjs';
@@ -30,20 +30,26 @@ import {
  *
  */
 export class PtoPoint {
+    /**
+     * @summary `aEnd`.
+     * @public
+     * @readonly
+     */
+    public readonly aEnd: ConnectivityEndPoint;
+    /**
+     * @summary `zEnd`.
+     * @public
+     * @readonly
+     */
+    public readonly zEnd: ConnectivityEndPoint;
+
     constructor(
-        /**
-         * @summary `aEnd`.
-         * @public
-         * @readonly
-         */
-        readonly aEnd: ConnectivityEndPoint,
-        /**
-         * @summary `zEnd`.
-         * @public
-         * @readonly
-         */
-        readonly zEnd: ConnectivityEndPoint
-    ) {}
+        aEnd: ConnectivityEndPoint,
+        zEnd: ConnectivityEndPoint
+    ) {
+        this.aEnd = aEnd;
+        this.zEnd = zEnd;
+    }
 
     /**
      * @summary Restructures an object into a PtoPoint

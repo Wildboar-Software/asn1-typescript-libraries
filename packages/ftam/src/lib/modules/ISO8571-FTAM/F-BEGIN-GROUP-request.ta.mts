@@ -1,6 +1,6 @@
 /* eslint-disable */
 import {
-  INTEGER,
+  type INTEGER,
   ASN1Element as _Element,
   ASN1TagClass as _TagClass,
   ASN1Construction as _Construction,
@@ -48,7 +48,7 @@ export class F_BEGIN_GROUP_request {
    * @public
    * @readonly
    */
-  readonly threshold: INTEGER;
+  public readonly threshold: INTEGER;
 
   constructor(
     threshold: INTEGER

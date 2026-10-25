@@ -1,5 +1,5 @@
 /* eslint-disable */
-import { ASN1Element as _Element, BIT_STRING } from "@wildboar/asn1";
+import { ASN1Element as _Element, type BIT_STRING } from "@wildboar/asn1";
 import * as $ from "@wildboar/asn1/functional";
 
 
@@ -60,12 +60,12 @@ export const execute: number = AccessMode_execute; /* SHORT_NAMED_BIT */
 
 
 
-export const _decode_AccessMode = $._decodeBitString;
+export const _decode_AccessMode: $.ASN1Decoder<BIT_STRING> = $._decodeBitString;
 
 
 
 
-export const _encode_AccessMode = $._encodeBitString;
+export const _encode_AccessMode: $.ASN1Encoder<BIT_STRING> = $._encodeBitString;
 
 
 /* eslint-enable */

@@ -1,6 +1,6 @@
 /* eslint-disable */
 import {
-    ASN1Element as _Element,
+    type ASN1Element as _Element,
     ASN1TagClass as _TagClass,
     ASN1Construction as _Construction,
     ASN1UniversalType as _UniversalType,
@@ -21,7 +21,7 @@ import {
     _encode_ACA_PPDU,
 } from '../ISO8823-PRESENTATION/ACA-PPDU.ta.mjs';
 import {
-    User_data,
+    type User_data,
     _decode_User_data,
     _encode_User_data,
 } from '../ISO8823-PRESENTATION/User-data.ta.mjs';

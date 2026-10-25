@@ -1,9 +1,9 @@
 /* eslint-disable */
 import {
-    ASN1Element as _Element,
+    type ASN1Element as _Element,
     ASN1TagClass as _TagClass,
-    GeneralizedTime,
-    OPTIONAL,
+    type GeneralizedTime,
+    type OPTIONAL,
 } from "@wildboar/asn1";
 import * as $ from "@wildboar/asn1/functional";
 import {
@@ -12,7 +12,7 @@ import {
     _encode_OtherKeyAttribute,
 } from "../CryptographicMessageSyntax-2010/OtherKeyAttribute.ta.mjs";
 import {
-    SubjectKeyIdentifier,
+    type SubjectKeyIdentifier,
     _decode_SubjectKeyIdentifier,
     _encode_SubjectKeyIdentifier,
 } from "../CryptographicMessageSyntax-2010/SubjectKeyIdentifier.ta.mjs";
@@ -35,26 +35,34 @@ import {
  *
  */
 export class RecipientKeyIdentifier {
+    /**
+     * @summary `subjectKeyIdentifier`.
+     * @public
+     * @readonly
+     */
+    public readonly subjectKeyIdentifier: SubjectKeyIdentifier;
+    /**
+     * @summary `date`.
+     * @public
+     * @readonly
+     */
+    public readonly date?: OPTIONAL<GeneralizedTime>;
+    /**
+     * @summary `other`.
+     * @public
+     * @readonly
+     */
+    public readonly other?: OPTIONAL<OtherKeyAttribute>;
+
     constructor(
-        /**
-         * @summary `subjectKeyIdentifier`.
-         * @public
-         * @readonly
-         */
-        readonly subjectKeyIdentifier: SubjectKeyIdentifier,
-        /**
-         * @summary `date`.
-         * @public
-         * @readonly
-         */
-        readonly date?: OPTIONAL<GeneralizedTime>,
-        /**
-         * @summary `other`.
-         * @public
-         * @readonly
-         */
-        readonly other?: OPTIONAL<OtherKeyAttribute>
-    ) {}
+        subjectKeyIdentifier: SubjectKeyIdentifier,
+        date?: OPTIONAL<GeneralizedTime>,
+        other?: OPTIONAL<OtherKeyAttribute>
+    ) {
+        this.subjectKeyIdentifier = subjectKeyIdentifier;
+        this.date = date;
+        this.other = other;
+    }
 
     /**
      * @summary Restructures an object into a RecipientKeyIdentifier

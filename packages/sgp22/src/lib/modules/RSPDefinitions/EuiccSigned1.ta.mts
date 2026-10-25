@@ -1,15 +1,15 @@
 /* eslint-disable */
 import {
-    UTF8String,
+    type UTF8String,
     ASN1ConstructionError as _ConstructionError,
-    ASN1Element as _Element,
+    type ASN1Element as _Element,
     ASN1TagClass as _TagClass
 } from "@wildboar/asn1";
 import * as $ from "@wildboar/asn1/functional";
-import { TransactionId, _decode_TransactionId, _encode_TransactionId } from "../RSPDefinitions/TransactionId.ta.mjs";
-import { Octet16, _decode_Octet16, _encode_Octet16 } from "../RSPDefinitions/Octet16.ta.mjs";
+import { type TransactionId, _decode_TransactionId, _encode_TransactionId } from "../RSPDefinitions/TransactionId.ta.mjs";
+import { type Octet16, _decode_Octet16, _encode_Octet16 } from "../RSPDefinitions/Octet16.ta.mjs";
 import { EUICCInfo2, _decode_EUICCInfo2, _encode_EUICCInfo2 } from "../RSPDefinitions/EUICCInfo2.ta.mjs";
-import { CtxParams1, _decode_CtxParams1, _encode_CtxParams1 } from "../RSPDefinitions/CtxParams1.ta.mjs";
+import { type CtxParams1, _decode_CtxParams1, _encode_CtxParams1 } from "../RSPDefinitions/CtxParams1.ta.mjs";
 
 
 /**
@@ -47,7 +47,7 @@ class EuiccSigned1 {
      * @public
      * @readonly
      */
-    readonly transactionId: TransactionId;
+    public readonly transactionId: TransactionId;
     /**
      * @summary `serverAddress`.
      * @description
@@ -57,7 +57,7 @@ class EuiccSigned1 {
      * @public
      * @readonly
      */
-    readonly serverAddress: UTF8String;
+    public readonly serverAddress: UTF8String;
     /**
      * @summary `serverChallenge`.
      * @description
@@ -67,7 +67,7 @@ class EuiccSigned1 {
      * @public
      * @readonly
      */
-    readonly serverChallenge: Octet16;
+    public readonly serverChallenge: Octet16;
     /**
      * @summary `euiccInfo2`.
      * @description
@@ -78,7 +78,7 @@ class EuiccSigned1 {
      * @public
      * @readonly
      */
-    readonly euiccInfo2: EUICCInfo2;
+    public readonly euiccInfo2: EUICCInfo2;
     /**
      * @summary `ctxParams1`.
      * @description
@@ -89,7 +89,7 @@ class EuiccSigned1 {
      * @public
      * @readonly
      */
-    readonly ctxParams1: CtxParams1;
+    public readonly ctxParams1: CtxParams1;
 
     constructor (
         transactionId: TransactionId,

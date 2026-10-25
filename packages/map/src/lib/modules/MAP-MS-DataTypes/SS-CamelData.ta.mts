@@ -1,13 +1,13 @@
 /* eslint-disable */
 import {
-    OPTIONAL,
-    ASN1Element as _Element,
+    type OPTIONAL,
+    type ASN1Element as _Element,
     ASN1TagClass as _TagClass
 } from "@wildboar/asn1";
 import * as $ from "@wildboar/asn1/functional";
-import { ISDN_AddressString, _decode_ISDN_AddressString, _encode_ISDN_AddressString } from "../MAP-CommonDataTypes/ISDN-AddressString.ta.mjs";
+import { type ISDN_AddressString, _decode_ISDN_AddressString, _encode_ISDN_AddressString } from "../MAP-CommonDataTypes/ISDN-AddressString.ta.mjs";
 import { ExtensionContainer, _decode_ExtensionContainer, _encode_ExtensionContainer } from "../MAP-ExtensionDataTypes/ExtensionContainer.ta.mjs";
-import { SS_EventList, _decode_SS_EventList, _encode_SS_EventList } from "../MAP-MS-DataTypes/SS-EventList.ta.mjs";
+import { type SS_EventList, _decode_SS_EventList, _encode_SS_EventList } from "../MAP-MS-DataTypes/SS-EventList.ta.mjs";
 
 
 /**
@@ -25,7 +25,7 @@ import { SS_EventList, _decode_SS_EventList, _encode_SS_EventList } from "../MAP
  * SS-CamelData ::= SEQUENCE {
  *     ss-EventList    SS-EventList,
  *     gsmSCF-Address    ISDN-AddressString,
- *     extensionContainer    [0] ExtensionContainer    OPTIONAL, 
+ *     extensionContainer    [0] ExtensionContainer    type OPTIONAL, 
  *     ...}
  * ```
  * 
@@ -33,45 +33,55 @@ import { SS_EventList, _decode_SS_EventList, _encode_SS_EventList } from "../MAP
  */
 export
 class SS_CamelData {
+    /**
+     * @summary `ss_EventList`.
+     * @description
+     *
+     * SS-Codes that trigger CAMEL (ECT, MPTY, CD, CCBS in Phase 3).
+     *
+     * (3GPP TS 29.002 V19.1.0 clause 17.7.1).
+     *
+     * @public
+     * @readonly
+     */
+    public readonly ss_EventList: SS_EventList;
+    /**
+     * @summary `gsmSCF_Address`.
+     * @description
+     *
+     * ISDN number assigned to the gsmSCF. In an IP Multimedia CN, contains
+     * the IM-SSF address when IM-SSF takes the gsmSCF role.
+     *
+     * (3GPP TS 29.002 V19.1.0 clause 7.6.2.58).
+     *
+     * @public
+     * @readonly
+     */
+    public readonly gsmSCF_Address: ISDN_AddressString;
+    /**
+     * @summary `extensionContainer`.
+     * @public
+     * @readonly
+     */
+    public readonly extensionContainer?: OPTIONAL<ExtensionContainer>;
+    /**
+     * @summary Extensions that are not recognized.
+     * @public
+     * @readonly
+     */
+    public readonly _unrecognizedExtensionsList: _Element[];
+
     constructor (
-        /**
-         * @summary `ss_EventList`.
-         * @description
-         *
-         * SS-Codes that trigger CAMEL (ECT, MPTY, CD, CCBS in Phase 3).
-         *
-         * (3GPP TS 29.002 V19.1.0 clause 17.7.1).
-         *
-         * @public
-         * @readonly
-         */
-        readonly ss_EventList: SS_EventList,
-        /**
-         * @summary `gsmSCF_Address`.
-         * @description
-         *
-         * ISDN number assigned to the gsmSCF. In an IP Multimedia CN, contains
-         * the IM-SSF address when IM-SSF takes the gsmSCF role.
-         *
-         * (3GPP TS 29.002 V19.1.0 clause 7.6.2.58).
-         *
-         * @public
-         * @readonly
-         */
-        readonly gsmSCF_Address: ISDN_AddressString,
-        /**
-         * @summary `extensionContainer`.
-         * @public
-         * @readonly
-         */
-        readonly extensionContainer?: OPTIONAL<ExtensionContainer>,
-        /**
-         * @summary Extensions that are not recognized.
-         * @public
-         * @readonly
-         */
-        readonly _unrecognizedExtensionsList: _Element[] = []
-    ) {}
+        ss_EventList: SS_EventList,
+        gsmSCF_Address: ISDN_AddressString,
+        extensionContainer?: OPTIONAL<ExtensionContainer>,
+        _unrecognizedExtensionsList: _Element[] = []
+    ) {
+        this.ss_EventList = ss_EventList;
+        this.gsmSCF_Address = gsmSCF_Address;
+        this.extensionContainer = extensionContainer;
+        this._unrecognizedExtensionsList = _unrecognizedExtensionsList;
+    }
 
     /**
      * @summary Restructures an object into a SS_CamelData

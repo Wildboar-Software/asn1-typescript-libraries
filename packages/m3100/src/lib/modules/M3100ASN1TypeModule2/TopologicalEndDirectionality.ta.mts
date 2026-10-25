@@ -1,6 +1,6 @@
 /* eslint-disable */
 import {
-    ASN1Element as _Element,
+    type ASN1Element as _Element,
     ASN1TagClass as _TagClass,
     ASN1Construction as _Construction,
     ASN1UniversalType as _UniversalType,
@@ -62,7 +62,7 @@ export type TopologicalEndDirectionality = _enum_for_TopologicalEndDirectionalit
  *
  * @enum {number}
  */
-export const TopologicalEndDirectionality = _enum_for_TopologicalEndDirectionality;
+export const TopologicalEndDirectionality: typeof _enum_for_TopologicalEndDirectionality = _enum_for_TopologicalEndDirectionality;
 
 
 /**
@@ -70,7 +70,7 @@ export const TopologicalEndDirectionality = _enum_for_TopologicalEndDirectionali
  * @constant
  * @type {number}
  */
-export const TopologicalEndDirectionality_undefined: TopologicalEndDirectionality =
+export const TopologicalEndDirectionality_undefined: _enum_for_TopologicalEndDirectionality.undefined =
     TopologicalEndDirectionality.undefined; /* LONG_NAMED_ENUMERATED_VALUE */
 
 
@@ -79,7 +79,7 @@ export const TopologicalEndDirectionality_undefined: TopologicalEndDirectionalit
  * @constant
  * @type {number}
  */
-export const undefined: TopologicalEndDirectionality =
+export const undefined: _enum_for_TopologicalEndDirectionality.undefined =
     TopologicalEndDirectionality.undefined; /* SHORT_NAMED_ENUMERATED_VALUE */
 
 
@@ -88,7 +88,7 @@ export const undefined: TopologicalEndDirectionality =
  * @constant
  * @type {number}
  */
-export const TopologicalEndDirectionality_sink: TopologicalEndDirectionality =
+export const TopologicalEndDirectionality_sink: _enum_for_TopologicalEndDirectionality.sink =
     TopologicalEndDirectionality.sink; /* LONG_NAMED_ENUMERATED_VALUE */
 
 
@@ -97,7 +97,7 @@ export const TopologicalEndDirectionality_sink: TopologicalEndDirectionality =
  * @constant
  * @type {number}
  */
-export const sink: TopologicalEndDirectionality =
+export const sink: _enum_for_TopologicalEndDirectionality.sink =
     TopologicalEndDirectionality.sink; /* SHORT_NAMED_ENUMERATED_VALUE */
 
 
@@ -106,7 +106,7 @@ export const sink: TopologicalEndDirectionality =
  * @constant
  * @type {number}
  */
-export const TopologicalEndDirectionality_source: TopologicalEndDirectionality =
+export const TopologicalEndDirectionality_source: _enum_for_TopologicalEndDirectionality.source =
     TopologicalEndDirectionality.source; /* LONG_NAMED_ENUMERATED_VALUE */
 
 
@@ -115,7 +115,7 @@ export const TopologicalEndDirectionality_source: TopologicalEndDirectionality =
  * @constant
  * @type {number}
  */
-export const source: TopologicalEndDirectionality =
+export const source: _enum_for_TopologicalEndDirectionality.source =
     TopologicalEndDirectionality.source; /* SHORT_NAMED_ENUMERATED_VALUE */
 
 
@@ -124,7 +124,7 @@ export const source: TopologicalEndDirectionality =
  * @constant
  * @type {number}
  */
-export const TopologicalEndDirectionality_bidirectional: TopologicalEndDirectionality =
+export const TopologicalEndDirectionality_bidirectional: _enum_for_TopologicalEndDirectionality.bidirectional =
     TopologicalEndDirectionality.bidirectional; /* LONG_NAMED_ENUMERATED_VALUE */
 
 
@@ -133,18 +133,31 @@ export const TopologicalEndDirectionality_bidirectional: TopologicalEndDirection
  * @constant
  * @type {number}
  */
-export const bidirectional: TopologicalEndDirectionality =
+export const bidirectional: _enum_for_TopologicalEndDirectionality.bidirectional =
     TopologicalEndDirectionality.bidirectional; /* SHORT_NAMED_ENUMERATED_VALUE */
 
 
 
 
-export const _decode_TopologicalEndDirectionality = $._decodeEnumerated;
+export function _decode_TopologicalEndDirectionality(el: _Element): TopologicalEndDirectionality {
+    const enumerated = $._decodeEnumerated(el);
+    switch (enumerated) {
+        case TopologicalEndDirectionality.undefined: return TopologicalEndDirectionality.undefined;
+        case TopologicalEndDirectionality.sink: return TopologicalEndDirectionality.sink;
+        case TopologicalEndDirectionality.source: return TopologicalEndDirectionality.source;
+        case TopologicalEndDirectionality.bidirectional: return TopologicalEndDirectionality.bidirectional;
+        default:
+            throw new _ConstructionError(
+                'Invalid ENUMERATED value ' + enumerated + ' for TopologicalEndDirectionality.',
+                el,
+            );
+    }
+}
 
 
 
 
-export const _encode_TopologicalEndDirectionality = $._encodeEnumerated;
+export const _encode_TopologicalEndDirectionality: $.ASN1Encoder<TopologicalEndDirectionality> = $._encodeEnumerated as $.ASN1Encoder<TopologicalEndDirectionality>;
 
 
 /* eslint-enable */

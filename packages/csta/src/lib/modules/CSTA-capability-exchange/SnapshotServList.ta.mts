@@ -2,19 +2,19 @@
 
 import * as $ from "@wildboar/asn1/functional";
 import {
-    SEQUENCE,
-    SET,
-    ASN1Element as _Element,
+    type SEQUENCE,
+    type SET,
+    type ASN1Element as _Element,
     ASN1TagClass as _TagClass,
     ASN1ConstructionError as _ConstructionError
 } from "@wildboar/asn1";
-import { SnapshotCall, _decode_SnapshotCall, _encode_SnapshotCall } from "../CSTA-capability-exchange/SnapshotCall.ta.mjs";
+import { type SnapshotCall, _decode_SnapshotCall, _encode_SnapshotCall } from "../CSTA-capability-exchange/SnapshotCall.ta.mjs";
 
-import { SnapshotDevice, _decode_SnapshotDevice, _encode_SnapshotDevice } from "../CSTA-capability-exchange/SnapshotDevice.ta.mjs";
+import { type SnapshotDevice, _decode_SnapshotDevice, _encode_SnapshotDevice } from "../CSTA-capability-exchange/SnapshotDevice.ta.mjs";
 
-import { SnapshotCallData, _decode_SnapshotCallData, _encode_SnapshotCallData } from "../CSTA-capability-exchange/SnapshotCallData.ta.mjs";
+import { type SnapshotCallData, _decode_SnapshotCallData, _encode_SnapshotCallData } from "../CSTA-capability-exchange/SnapshotCallData.ta.mjs";
 
-import { SnapshotDeviceData, _decode_SnapshotDeviceData, _encode_SnapshotDeviceData } from "../CSTA-capability-exchange/SnapshotDeviceData.ta.mjs";
+import { type SnapshotDeviceData, _decode_SnapshotDeviceData, _encode_SnapshotDeviceData } from "../CSTA-capability-exchange/SnapshotDeviceData.ta.mjs";
 
 
 
@@ -42,44 +42,54 @@ import { SnapshotDeviceData, _decode_SnapshotDeviceData, _encode_SnapshotDeviceD
  */
 export
 class SnapshotServList {
+    /**
+     * @summary `snapshotCall`.
+     * @public
+     * @readonly
+     * @description
+     * Capability bitmap for this service; omit if the SF does not support
+     * it (ECMA-269 Annex C).
+     */
+    public readonly snapshotCall: SnapshotCall;
+    /**
+     * @summary `snapshotDevice`.
+     * @public
+     * @readonly
+     * @description
+     * Capability bitmap for this service; omit if the SF does not support
+     * it (ECMA-269 Annex C).
+     */
+    public readonly snapshotDevice: SnapshotDevice;
+    /**
+     * @summary `snapshotCallData`.
+     * @public
+     * @readonly
+     * @description
+     * Capability bitmap for this service; omit if the SF does not support
+     * it (ECMA-269 Annex C).
+     */
+    public readonly snapshotCallData: SnapshotCallData;
+    /**
+     * @summary `snapshotDeviceData`.
+     * @public
+     * @readonly
+     * @description
+     * Capability bitmap for this service; omit if the SF does not support
+     * it (ECMA-269 Annex C).
+     */
+    public readonly snapshotDeviceData: SnapshotDeviceData;
+
     constructor (
-        /**
-         * @summary `snapshotCall`.
-         * @public
-         * @readonly
-         * @description
-         * Capability bitmap for this service; omit if the SF does not support
-         * it (ECMA-269 Annex C).
-         */
-        readonly snapshotCall: SnapshotCall,
-        /**
-         * @summary `snapshotDevice`.
-         * @public
-         * @readonly
-         * @description
-         * Capability bitmap for this service; omit if the SF does not support
-         * it (ECMA-269 Annex C).
-         */
-        readonly snapshotDevice: SnapshotDevice,
-        /**
-         * @summary `snapshotCallData`.
-         * @public
-         * @readonly
-         * @description
-         * Capability bitmap for this service; omit if the SF does not support
-         * it (ECMA-269 Annex C).
-         */
-        readonly snapshotCallData: SnapshotCallData,
-        /**
-         * @summary `snapshotDeviceData`.
-         * @public
-         * @readonly
-         * @description
-         * Capability bitmap for this service; omit if the SF does not support
-         * it (ECMA-269 Annex C).
-         */
-        readonly snapshotDeviceData: SnapshotDeviceData
-    ) {}
+        snapshotCall: SnapshotCall,
+        snapshotDevice: SnapshotDevice,
+        snapshotCallData: SnapshotCallData,
+        snapshotDeviceData: SnapshotDeviceData
+    ) {
+        this.snapshotCall = snapshotCall;
+        this.snapshotDevice = snapshotDevice;
+        this.snapshotCallData = snapshotCallData;
+        this.snapshotDeviceData = snapshotDeviceData;
+    }
 
     /**
      * @summary Restructures an object into a SnapshotServList

@@ -1,12 +1,12 @@
 /* eslint-disable */
 import {
-    ASN1Element as _Element,
+    type ASN1Element as _Element,
     ASN1TagClass as _TagClass,
-    OPTIONAL,
+    type OPTIONAL,
 } from "@wildboar/asn1";
 import * as $ from "@wildboar/asn1/functional";
 import {
-    SkipCerts,
+    type SkipCerts,
     _decode_SkipCerts,
     _encode_SkipCerts,
 } from "../CertificateExtensions/SkipCerts.ta.mjs";
@@ -32,36 +32,44 @@ import {
  *
  */
 export class PolicyConstraintsSyntax {
+    /**
+     * @summary `requireExplicitPolicy`.
+     * @description
+     *
+     * SkipCerts; 0 = this cert's issuer. At least one of the two components
+     * required.
+     *
+     * @public
+     * @readonly
+     */
+    public readonly requireExplicitPolicy?: OPTIONAL<SkipCerts>;
+    /**
+     * @summary `inhibitPolicyMapping`.
+     * @description
+     *
+     * SkipCerts; 0 = this cert's subject CA. At least one of the two
+     * components required.
+     *
+     * @public
+     * @readonly
+     */
+    public readonly inhibitPolicyMapping?: OPTIONAL<SkipCerts>;
+    /**
+     * @summary Extensions that are not recognized.
+     * @public
+     * @readonly
+     */
+    public readonly _unrecognizedExtensionsList: _Element[];
+
     constructor(
-        /**
-         * @summary `requireExplicitPolicy`.
-         * @description
-         *
-         * SkipCerts; 0 = this cert's issuer. At least one of the two components
-         * required.
-         *
-         * @public
-         * @readonly
-         */
-        readonly requireExplicitPolicy?: OPTIONAL<SkipCerts>,
-        /**
-         * @summary `inhibitPolicyMapping`.
-         * @description
-         *
-         * SkipCerts; 0 = this cert's subject CA. At least one of the two
-         * components required.
-         *
-         * @public
-         * @readonly
-         */
-        readonly inhibitPolicyMapping?: OPTIONAL<SkipCerts>,
-        /**
-         * @summary Extensions that are not recognized.
-         * @public
-         * @readonly
-         */
-        readonly _unrecognizedExtensionsList: _Element[] = []
-    ) {}
+        requireExplicitPolicy?: OPTIONAL<SkipCerts>,
+        inhibitPolicyMapping?: OPTIONAL<SkipCerts>,
+        _unrecognizedExtensionsList: _Element[] = []
+    ) {
+        this.requireExplicitPolicy = requireExplicitPolicy;
+        this.inhibitPolicyMapping = inhibitPolicyMapping;
+        this._unrecognizedExtensionsList = _unrecognizedExtensionsList;
+    }
 
     /**
      * @summary Restructures an object into a PolicyConstraintsSyntax

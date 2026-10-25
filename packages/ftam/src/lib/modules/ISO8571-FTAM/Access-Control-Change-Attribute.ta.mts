@@ -1,6 +1,6 @@
 /* eslint-disable */
 import {
-  NULL,
+  type NULL,
   ASN1Element as _Element,
   ASN1TagClass as _TagClass,
   ASN1Construction as _Construction,
@@ -40,7 +40,7 @@ import {
  *   actual-values
  *     [1] IMPLICIT SEQUENCE {insert-values
  *                              [0] IMPLICIT SET OF Access-Control-Element
- *                                OPTIONAL,
+ *                                type OPTIONAL,
  *                            -- This field is used by the Change attribute actions to indicate
  *                            -- new values to be inserted in the access control Object attribute.
  *                            delete-values

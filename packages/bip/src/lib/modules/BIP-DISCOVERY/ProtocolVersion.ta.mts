@@ -1,6 +1,6 @@
 /* eslint-disable */
 import {
-  INTEGER,
+  type INTEGER,
   ASN1Element as _Element,
   ASN1TagClass as _TagClass,
   ASN1Construction as _Construction,
@@ -42,7 +42,7 @@ export class ProtocolVersion {
    * @public
    * @readonly
    */
-  readonly major: INTEGER;
+  public readonly major: INTEGER;
   /**
    * @summary `minor`.
    * @description
@@ -52,7 +52,7 @@ export class ProtocolVersion {
    * @public
    * @readonly
    */
-  readonly minor: INTEGER;
+  public readonly minor: INTEGER;
 
   constructor(
     major: INTEGER,

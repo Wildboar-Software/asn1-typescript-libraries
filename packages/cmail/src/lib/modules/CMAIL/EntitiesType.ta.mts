@@ -42,7 +42,7 @@ export class EntitiesType {
    * @public
    * @readonly
    */
-  readonly entity: EntityType[];
+  public readonly entity: EntityType[];
 
   constructor(
     entity: EntityType[]

@@ -1,7 +1,7 @@
 /* eslint-disable */
 import {
-    OPTIONAL,
-    ASN1Element as _Element,
+    type OPTIONAL,
+    type ASN1Element as _Element,
     ASN1TagClass as _TagClass,
     ASN1Construction as _Construction,
     ASN1UniversalType as _UniversalType,
@@ -11,7 +11,7 @@ import {
     ASN1ConstructionError as _ConstructionError,
 } from "@wildboar/asn1";
 import * as $ from "@wildboar/asn1/functional";
-import { CalledPartyNumber, _decode_CalledPartyNumber, _encode_CalledPartyNumber } from "../IN-CS2-datatypes/CalledPartyNumber.ta.mjs";
+import { type CalledPartyNumber, _decode_CalledPartyNumber, _encode_CalledPartyNumber } from "../IN-CS2-datatypes/CalledPartyNumber.ta.mjs";
 
 
 /**
@@ -31,20 +31,26 @@ import { CalledPartyNumber, _decode_CalledPartyNumber, _encode_CalledPartyNumber
  */
 export
 class NotificationInformation_calledNumberSpecificInfo {
+    /**
+     * @summary `calledNumber`.
+     * @public
+     * @readonly
+     */
+    public readonly calledNumber?: OPTIONAL<CalledPartyNumber>;
+    /**
+     * @summary Extensions that are not recognized.
+     * @public
+     * @readonly
+     */
+    public readonly _unrecognizedExtensionsList: _Element[];
+
     constructor (
-        /**
-         * @summary `calledNumber`.
-         * @public
-         * @readonly
-         */
-        readonly calledNumber?: OPTIONAL<CalledPartyNumber>,
-        /**
-         * @summary Extensions that are not recognized.
-         * @public
-         * @readonly
-         */
-        readonly _unrecognizedExtensionsList: _Element[] = []
-    ) {}
+        calledNumber?: OPTIONAL<CalledPartyNumber>,
+        _unrecognizedExtensionsList: _Element[] = []
+    ) {
+        this.calledNumber = calledNumber;
+        this._unrecognizedExtensionsList = _unrecognizedExtensionsList;
+    }
 
     /**
      * @summary Restructures an object into a NotificationInformation_calledNumberSpecificInfo

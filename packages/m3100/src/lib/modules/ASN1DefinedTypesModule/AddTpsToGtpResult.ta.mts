@@ -1,6 +1,6 @@
 /* eslint-disable */
 import {
-    ASN1Element as _Element,
+    type ASN1Element as _Element,
     ASN1TagClass as _TagClass,
     ASN1Construction as _Construction,
     ASN1UniversalType as _UniversalType,
@@ -11,7 +11,7 @@ import {
 } from '@wildboar/asn1';
 import * as $ from '@wildboar/asn1/functional';
 import {
-    AddTpsToGtpResult_Item,
+    type AddTpsToGtpResult_Item,
     _decode_AddTpsToGtpResult_Item,
     _encode_AddTpsToGtpResult_Item,
 } from '../ASN1DefinedTypesModule/AddTpsToGtpResult-Item.ta.mjs';

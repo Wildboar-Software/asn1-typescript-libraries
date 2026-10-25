@@ -8,7 +8,7 @@ import { type OPERATION } from "../Remote-Operations-Information-Objects/OPERATI
 
 import { SystemStatusArg, _decode_SystemStatusArg, _encode_SystemStatusArg } from "../CSTA-system-status/SystemStatusArg.ta.mjs";
 
-import { SystemStatusRes, _decode_SystemStatusRes, _encode_SystemStatusRes } from "../CSTA-system-status/SystemStatusRes.ta.mjs";
+import { type SystemStatusRes, _decode_SystemStatusRes, _encode_SystemStatusRes } from "../CSTA-system-status/SystemStatusRes.ta.mjs";
 
 import { universalFailure } from "../CSTA-error-definition/universalFailure.oa.mjs";
 

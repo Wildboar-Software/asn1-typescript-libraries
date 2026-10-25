@@ -1,6 +1,6 @@
 /* eslint-disable */
 import {
-    ASN1Element as _Element,
+    type ASN1Element as _Element,
     ASN1TagClass as _TagClass,
     ASN1Construction as _Construction,
     ASN1UniversalType as _UniversalType,
@@ -11,12 +11,12 @@ import {
 } from '@wildboar/asn1';
 import * as $ from '@wildboar/asn1/functional';
 import {
-    TestPatternSequence,
+    type TestPatternSequence,
     _decode_TestPatternSequence,
     _encode_TestPatternSequence,
 } from '../TestCategories-ASN1Module/TestPatternSequence.ta.mjs';
 import {
-    LoopbackError,
+    type LoopbackError,
     _decode_LoopbackError,
     _encode_LoopbackError,
 } from '../TestCategories-ASN1Module/LoopbackError.ta.mjs';
@@ -36,26 +36,32 @@ import {
  *
  */
 export class LoopbackTestResult_passed {
+    /**
+     * @summary `loopbackDataReceived`.
+     * @description
+     *
+     * Data received from the loop. X.737 §7.4.8.
+     * @public
+     * @readonly
+     */
+    public readonly loopbackDataReceived: TestPatternSequence;
+    /**
+     * @summary `loopbackErrorReceived`.
+     * @description
+     *
+     * Measured error (bit count or percent). X.737 §7.4.8.
+     * @public
+     * @readonly
+     */
+    public readonly loopbackErrorReceived: LoopbackError;
+
     constructor(
-        /**
-         * @summary `loopbackDataReceived`.
-         * @description
-         *
-         * Data received from the loop. X.737 §7.4.8.
-         * @public
-         * @readonly
-         */
-        readonly loopbackDataReceived: TestPatternSequence,
-        /**
-         * @summary `loopbackErrorReceived`.
-         * @description
-         *
-         * Measured error (bit count or percent). X.737 §7.4.8.
-         * @public
-         * @readonly
-         */
-        readonly loopbackErrorReceived: LoopbackError
-    ) {}
+        loopbackDataReceived: TestPatternSequence,
+        loopbackErrorReceived: LoopbackError
+    ) {
+        this.loopbackDataReceived = loopbackDataReceived;
+        this.loopbackErrorReceived = loopbackErrorReceived;
+    }
 
     /**
      * @summary Restructures an object into a LoopbackTestResult_passed

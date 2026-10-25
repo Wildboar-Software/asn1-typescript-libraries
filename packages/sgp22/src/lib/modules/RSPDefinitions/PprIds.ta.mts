@@ -1,7 +1,7 @@
 /* eslint-disable */
 import {
-    ASN1Element as _Element,
-    BIT_STRING
+    type ASN1Element as _Element,
+    type BIT_STRING
 } from "@wildboar/asn1";
 import * as $ from "@wildboar/asn1/functional";
 
@@ -105,8 +105,8 @@ const PprIds_ppr2: number = 2; /* LONG_NAMED_BIT */
  */
 export
 const ppr2: number = PprIds_ppr2; /* SHORT_NAMED_BIT */
-export const _decode_PprIds = $._decodeBitString;
-export const _encode_PprIds = $._encodeBitString;
+export const _decode_PprIds: $.ASN1Decoder<BIT_STRING> = $._decodeBitString;
+export const _encode_PprIds: $.ASN1Encoder<BIT_STRING> = $._encodeBitString;
 
 
 /* eslint-enable */

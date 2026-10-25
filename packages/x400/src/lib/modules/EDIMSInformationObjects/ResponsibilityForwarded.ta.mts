@@ -1,7 +1,7 @@
 /* eslint-disable */
 import {
-    BOOLEAN,
-    ASN1Element as _Element,
+    type BOOLEAN,
+    type ASN1Element as _Element,
     ASN1TagClass as _TagClass,
     ASN1Construction as _Construction,
     ASN1UniversalType as _UniversalType,
@@ -29,10 +29,10 @@ import * as $ from '@wildboar/asn1/functional';
 export type ResponsibilityForwarded = BOOLEAN; // BooleanType
 
 
-export const _decode_ResponsibilityForwarded = $._decodeBoolean;
+export const _decode_ResponsibilityForwarded: $.ASN1Decoder<boolean> = $._decodeBoolean;
 
 
-export const _encode_ResponsibilityForwarded = $._encodeBoolean;
+export const _encode_ResponsibilityForwarded: $.ASN1Encoder<boolean> = $._encodeBoolean;
 
 
 /* eslint-enable */

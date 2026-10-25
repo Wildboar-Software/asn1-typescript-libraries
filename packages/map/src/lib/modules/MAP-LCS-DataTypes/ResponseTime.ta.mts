@@ -1,11 +1,11 @@
 /* eslint-disable */
 import {
     ASN1ConstructionError as _ConstructionError,
-    ASN1Element as _Element,
+    type ASN1Element as _Element,
     ASN1TagClass as _TagClass
 } from "@wildboar/asn1";
 import * as $ from "@wildboar/asn1/functional";
-import { ResponseTimeCategory, _decode_ResponseTimeCategory, _encode_ResponseTimeCategory, _enum_for_ResponseTimeCategory } from "../MAP-LCS-DataTypes/ResponseTimeCategory.ta.mjs";
+import { type ResponseTimeCategory, _decode_ResponseTimeCategory, _encode_ResponseTimeCategory, _enum_for_ResponseTimeCategory } from "../MAP-LCS-DataTypes/ResponseTimeCategory.ta.mjs";
 
 
 /**
@@ -27,24 +27,30 @@ import { ResponseTimeCategory, _decode_ResponseTimeCategory, _encode_ResponseTim
  */
 export
 class ResponseTime {
+    /**
+     * @summary `responseTimeCategory`.
+     * @description
+     *
+     * lowdelay or delaytolerant.
+     *
+     * @public
+     * @readonly
+     */
+    public readonly responseTimeCategory: ResponseTimeCategory;
+    /**
+     * @summary Extensions that are not recognized.
+     * @public
+     * @readonly
+     */
+    public readonly _unrecognizedExtensionsList: _Element[];
+
     constructor (
-        /**
-         * @summary `responseTimeCategory`.
-         * @description
-         *
-         * lowdelay or delaytolerant.
-         *
-         * @public
-         * @readonly
-         */
-        readonly responseTimeCategory: ResponseTimeCategory,
-        /**
-         * @summary Extensions that are not recognized.
-         * @public
-         * @readonly
-         */
-        readonly _unrecognizedExtensionsList: _Element[] = []
-    ) {}
+        responseTimeCategory: ResponseTimeCategory,
+        _unrecognizedExtensionsList: _Element[] = []
+    ) {
+        this.responseTimeCategory = responseTimeCategory;
+        this._unrecognizedExtensionsList = _unrecognizedExtensionsList;
+    }
 
     /**
      * @summary Restructures an object into a ResponseTime
@@ -68,7 +74,7 @@ class ResponseTime {
          * @static
          */
 
-    public static _enum_for_responseTimeCategory = _enum_for_ResponseTimeCategory;
+    public static _enum_for_responseTimeCategory: typeof _enum_for_ResponseTimeCategory = _enum_for_ResponseTimeCategory;
 }
 
 /**

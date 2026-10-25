@@ -1,6 +1,6 @@
 /* eslint-disable */
 import {
-  BIT_STRING,
+  type BIT_STRING,
   ASN1Element as _Element,
   ASN1TagClass as _TagClass,
   ASN1Construction as _Construction,
@@ -350,12 +350,12 @@ export const controlUnit: number = BioAPI_OPERATIONS_MASK_controlUnit; /* SHORT_
 
 
 
-export const _decode_BioAPI_OPERATIONS_MASK = $._decodeBitString;
+export const _decode_BioAPI_OPERATIONS_MASK: $.ASN1Decoder<BIT_STRING> = $._decodeBitString;
 
 
 
 
-export const _encode_BioAPI_OPERATIONS_MASK = $._encodeBitString;
+export const _encode_BioAPI_OPERATIONS_MASK: $.ASN1Encoder<BIT_STRING> = $._encodeBitString;
 
 
 /* eslint-enable */

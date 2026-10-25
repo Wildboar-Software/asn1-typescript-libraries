@@ -1,13 +1,13 @@
 /* eslint-disable */
 import {
-    OPTIONAL,
-    ASN1Element as _Element,
+    type OPTIONAL,
+    type ASN1Element as _Element,
     ASN1TagClass as _TagClass
 } from "@wildboar/asn1";
 import * as $ from "@wildboar/asn1/functional";
-import { PLMN_Id, _decode_PLMN_Id, _encode_PLMN_Id } from "../MAP-CommonDataTypes/PLMN-Id.ta.mjs";
-import { AccessRestrictionData, _decode_AccessRestrictionData, _encode_AccessRestrictionData } from "../MAP-MS-DataTypes/AccessRestrictionData.ta.mjs";
-import { Ext_AccessRestrictionData, _decode_Ext_AccessRestrictionData, _encode_Ext_AccessRestrictionData } from "../MAP-MS-DataTypes/Ext-AccessRestrictionData.ta.mjs";
+import { type PLMN_Id, _decode_PLMN_Id, _encode_PLMN_Id } from "../MAP-CommonDataTypes/PLMN-Id.ta.mjs";
+import { type AccessRestrictionData, _decode_AccessRestrictionData, _encode_AccessRestrictionData } from "../MAP-MS-DataTypes/AccessRestrictionData.ta.mjs";
+import { type Ext_AccessRestrictionData, _decode_Ext_AccessRestrictionData, _encode_Ext_AccessRestrictionData } from "../MAP-MS-DataTypes/Ext-AccessRestrictionData.ta.mjs";
 
 
 /**
@@ -32,42 +32,52 @@ import { Ext_AccessRestrictionData, _decode_Ext_AccessRestrictionData, _encode_E
  */
 export
 class AdjacentAccessRestrictionData {
+    /**
+     * @summary `plmnId`.
+     * @public
+     * @readonly
+     */
+    public readonly plmnId: PLMN_Id;
+    /**
+     * @summary `accessRestrictionData`.
+     * @description
+     *
+     * Access restriction data for this adjacent PLMN (3GPP TS 29.002
+     * V19.1.0 clauses 7.6.3.97 and 17.7.1).
+     *
+     * @public
+     * @readonly
+     */
+    public readonly accessRestrictionData: AccessRestrictionData;
+    /**
+     * @summary `ext_AccessRestrictionData`.
+     * @description
+     *
+     * Additional access restrictions for this adjacent PLMN (3GPP TS 29.002
+     * V19.1.0 clause 17.7.1).
+     *
+     * @public
+     * @readonly
+     */
+    public readonly ext_AccessRestrictionData?: OPTIONAL<Ext_AccessRestrictionData>;
+    /**
+     * @summary Extensions that are not recognized.
+     * @public
+     * @readonly
+     */
+    public readonly _unrecognizedExtensionsList: _Element[];
+
     constructor (
-        /**
-         * @summary `plmnId`.
-         * @public
-         * @readonly
-         */
-        readonly plmnId: PLMN_Id,
-        /**
-         * @summary `accessRestrictionData`.
-         * @description
-         *
-         * Access restriction data for this adjacent PLMN (3GPP TS 29.002
-         * V19.1.0 clauses 7.6.3.97 and 17.7.1).
-         *
-         * @public
-         * @readonly
-         */
-        readonly accessRestrictionData: AccessRestrictionData,
-        /**
-         * @summary `ext_AccessRestrictionData`.
-         * @description
-         *
-         * Additional access restrictions for this adjacent PLMN (3GPP TS 29.002
-         * V19.1.0 clause 17.7.1).
-         *
-         * @public
-         * @readonly
-         */
-        readonly ext_AccessRestrictionData?: OPTIONAL<Ext_AccessRestrictionData>,
-        /**
-         * @summary Extensions that are not recognized.
-         * @public
-         * @readonly
-         */
-        readonly _unrecognizedExtensionsList: _Element[] = []
-    ) {}
+        plmnId: PLMN_Id,
+        accessRestrictionData: AccessRestrictionData,
+        ext_AccessRestrictionData?: OPTIONAL<Ext_AccessRestrictionData>,
+        _unrecognizedExtensionsList: _Element[] = []
+    ) {
+        this.plmnId = plmnId;
+        this.accessRestrictionData = accessRestrictionData;
+        this.ext_AccessRestrictionData = ext_AccessRestrictionData;
+        this._unrecognizedExtensionsList = _unrecognizedExtensionsList;
+    }
 
     /**
      * @summary Restructures an object into a AdjacentAccessRestrictionData

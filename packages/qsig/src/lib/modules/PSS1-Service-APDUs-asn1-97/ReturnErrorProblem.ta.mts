@@ -1,6 +1,6 @@
 /* eslint-disable */
 import {
-    INTEGER
+    type INTEGER
 } from "@wildboar/asn1";
 import * as $ from "@wildboar/asn1/functional";
 
@@ -39,7 +39,7 @@ type ReturnErrorProblem = INTEGER;
  * @see https://ecma-international.org/publications-and-standards/standards/ecma-165/
  */
 export
-const ReturnErrorProblem_unrecognisedInvocation: ReturnErrorProblem = 0; /* LONG_NAMED_INTEGER_VALUE */
+const ReturnErrorProblem_unrecognisedInvocation: 0 = 0 satisfies ReturnErrorProblem; /* LONG_NAMED_INTEGER_VALUE */
 
 /**
  * @summary unrecognisedInvocation
@@ -48,7 +48,7 @@ const ReturnErrorProblem_unrecognisedInvocation: ReturnErrorProblem = 0; /* LONG
  * @type {number}
  */
 export
-const unrecognisedInvocation: ReturnErrorProblem = ReturnErrorProblem_unrecognisedInvocation; /* SHORT_NAMED_INTEGER_VALUE */
+const unrecognisedInvocation: 0 = ReturnErrorProblem_unrecognisedInvocation; /* SHORT_NAMED_INTEGER_VALUE */
 
 /**
  * @summary ReturnErrorProblem_errorResponseUnexpected
@@ -60,7 +60,7 @@ const unrecognisedInvocation: ReturnErrorProblem = ReturnErrorProblem_unrecognis
  * @see https://ecma-international.org/publications-and-standards/standards/ecma-165/
  */
 export
-const ReturnErrorProblem_errorResponseUnexpected: ReturnErrorProblem = 1; /* LONG_NAMED_INTEGER_VALUE */
+const ReturnErrorProblem_errorResponseUnexpected: 1 = 1 satisfies ReturnErrorProblem; /* LONG_NAMED_INTEGER_VALUE */
 
 /**
  * @summary errorResponseUnexpected
@@ -69,7 +69,7 @@ const ReturnErrorProblem_errorResponseUnexpected: ReturnErrorProblem = 1; /* LON
  * @type {number}
  */
 export
-const errorResponseUnexpected: ReturnErrorProblem = ReturnErrorProblem_errorResponseUnexpected; /* SHORT_NAMED_INTEGER_VALUE */
+const errorResponseUnexpected: 1 = ReturnErrorProblem_errorResponseUnexpected; /* SHORT_NAMED_INTEGER_VALUE */
 
 /**
  * @summary ReturnErrorProblem_unrecognisedError
@@ -82,7 +82,7 @@ const errorResponseUnexpected: ReturnErrorProblem = ReturnErrorProblem_errorResp
  * @see https://ecma-international.org/publications-and-standards/standards/ecma-165/
  */
 export
-const ReturnErrorProblem_unrecognisedError: ReturnErrorProblem = 2; /* LONG_NAMED_INTEGER_VALUE */
+const ReturnErrorProblem_unrecognisedError: 2 = 2 satisfies ReturnErrorProblem; /* LONG_NAMED_INTEGER_VALUE */
 
 /**
  * @summary unrecognisedError
@@ -91,7 +91,7 @@ const ReturnErrorProblem_unrecognisedError: ReturnErrorProblem = 2; /* LONG_NAME
  * @type {number}
  */
 export
-const unrecognisedError: ReturnErrorProblem = ReturnErrorProblem_unrecognisedError; /* SHORT_NAMED_INTEGER_VALUE */
+const unrecognisedError: 2 = ReturnErrorProblem_unrecognisedError; /* SHORT_NAMED_INTEGER_VALUE */
 
 /**
  * @summary ReturnErrorProblem_unexpectedError
@@ -104,7 +104,7 @@ const unrecognisedError: ReturnErrorProblem = ReturnErrorProblem_unrecognisedErr
  * @see https://ecma-international.org/publications-and-standards/standards/ecma-165/
  */
 export
-const ReturnErrorProblem_unexpectedError: ReturnErrorProblem = 3; /* LONG_NAMED_INTEGER_VALUE */
+const ReturnErrorProblem_unexpectedError: 3 = 3 satisfies ReturnErrorProblem; /* LONG_NAMED_INTEGER_VALUE */
 
 /**
  * @summary unexpectedError
@@ -113,7 +113,7 @@ const ReturnErrorProblem_unexpectedError: ReturnErrorProblem = 3; /* LONG_NAMED_
  * @type {number}
  */
 export
-const unexpectedError: ReturnErrorProblem = ReturnErrorProblem_unexpectedError; /* SHORT_NAMED_INTEGER_VALUE */
+const unexpectedError: 3 = ReturnErrorProblem_unexpectedError; /* SHORT_NAMED_INTEGER_VALUE */
 
 /**
  * @summary ReturnErrorProblem_mistypedParameter
@@ -126,7 +126,7 @@ const unexpectedError: ReturnErrorProblem = ReturnErrorProblem_unexpectedError; 
  * @see https://ecma-international.org/publications-and-standards/standards/ecma-165/
  */
 export
-const ReturnErrorProblem_mistypedParameter: ReturnErrorProblem = 4; /* LONG_NAMED_INTEGER_VALUE */
+const ReturnErrorProblem_mistypedParameter: 4 = 4 satisfies ReturnErrorProblem; /* LONG_NAMED_INTEGER_VALUE */
 
 /**
  * @summary mistypedParameter
@@ -135,7 +135,7 @@ const ReturnErrorProblem_mistypedParameter: ReturnErrorProblem = 4; /* LONG_NAME
  * @type {number}
  */
 export
-const mistypedParameter: ReturnErrorProblem = ReturnErrorProblem_mistypedParameter; /* SHORT_NAMED_INTEGER_VALUE */
+const mistypedParameter: 4 = ReturnErrorProblem_mistypedParameter; /* SHORT_NAMED_INTEGER_VALUE */
 
 export
 const _decode_ReturnErrorProblem: $.ASN1Decoder<ReturnErrorProblem> = $._decodeInteger;

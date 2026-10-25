@@ -1,11 +1,11 @@
 /* eslint-disable */
 import {
-    ASN1Element as _Element,
+    type ASN1Element as _Element,
     ASN1TagClass as _TagClass,
-    OBJECT_IDENTIFIER
+    type OBJECT_IDENTIFIER
 } from "@wildboar/asn1";
 import * as $ from "@wildboar/asn1/functional";
-import { _decode_AlgorithmID_ShortForm, _encode_AlgorithmID_ShortForm, AlgorithmID_ShortForm } from "../CompressedDataType/AlgorithmID-ShortForm.ta.mjs";
+import { _decode_AlgorithmID_ShortForm, _encode_AlgorithmID_ShortForm, type AlgorithmID_ShortForm } from "../CompressedDataType/AlgorithmID-ShortForm.ta.mjs";
 
 
 /**

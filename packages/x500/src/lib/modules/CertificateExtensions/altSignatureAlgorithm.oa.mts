@@ -1,7 +1,7 @@
 /* eslint-disable */
 import { type EXTENSION } from "../AuthenticationFramework/EXTENSION.oca.mjs";
 import {
-    AltSignatureAlgorithm,
+    type AltSignatureAlgorithm,
     _decode_AltSignatureAlgorithm,
     _encode_AltSignatureAlgorithm,
 } from "../CertificateExtensions/AltSignatureAlgorithm.ta.mjs";

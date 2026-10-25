@@ -1,7 +1,7 @@
 /* eslint-disable */
 import {
-    INTEGER,
-    ASN1Element as _Element,
+    type INTEGER,
+    type ASN1Element as _Element,
     ASN1TagClass as _TagClass,
     ASN1Construction as _Construction,
     ASN1UniversalType as _UniversalType,
@@ -40,7 +40,7 @@ export type ActivateReply_responseCode = INTEGER;
  * @constant
  * @type {number}
  */
-export const ActivateReply_responseCode_successResponse: ActivateReply_responseCode = 0; /* LONG_NAMED_INTEGER_VALUE */
+export const ActivateReply_responseCode_successResponse: 0 = 0 satisfies ActivateReply_responseCode; /* LONG_NAMED_INTEGER_VALUE */
 
 /**
  * @summary ActivateReply_responseCode_successResponse
@@ -51,7 +51,7 @@ export const ActivateReply_responseCode_successResponse: ActivateReply_responseC
  * @constant
  * @type {number}
  */
-export const successResponse: ActivateReply_responseCode = ActivateReply_responseCode_successResponse; /* SHORT_NAMED_INTEGER_VALUE */
+export const successResponse: 0 = ActivateReply_responseCode_successResponse; /* SHORT_NAMED_INTEGER_VALUE */
 
 /**
  * @summary ActivateReply_responseCode_serviceProviderErrorResponse
@@ -62,7 +62,7 @@ export const successResponse: ActivateReply_responseCode = ActivateReply_respons
  * @constant
  * @type {number}
  */
-export const ActivateReply_responseCode_serviceProviderErrorResponse: ActivateReply_responseCode = 1; /* LONG_NAMED_INTEGER_VALUE */
+export const ActivateReply_responseCode_serviceProviderErrorResponse: 1 = 1 satisfies ActivateReply_responseCode; /* LONG_NAMED_INTEGER_VALUE */
 
 /**
  * @summary ActivateReply_responseCode_serviceProviderErrorResponse
@@ -73,13 +73,13 @@ export const ActivateReply_responseCode_serviceProviderErrorResponse: ActivateRe
  * @constant
  * @type {number}
  */
-export const serviceProviderErrorResponse: ActivateReply_responseCode = ActivateReply_responseCode_serviceProviderErrorResponse; /* SHORT_NAMED_INTEGER_VALUE */
+export const serviceProviderErrorResponse: 1 = ActivateReply_responseCode_serviceProviderErrorResponse; /* SHORT_NAMED_INTEGER_VALUE */
 
 
-export const _decode_ActivateReply_responseCode = $._decodeInteger;
+export const _decode_ActivateReply_responseCode: $.ASN1Decoder<INTEGER> = $._decodeInteger;
 
 
-export const _encode_ActivateReply_responseCode = $._encodeInteger;
+export const _encode_ActivateReply_responseCode: $.ASN1Encoder<INTEGER> = $._encodeInteger;
 
 
 /* eslint-enable */

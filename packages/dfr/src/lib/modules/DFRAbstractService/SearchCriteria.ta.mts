@@ -1,6 +1,6 @@
 /* eslint-disable */
 import {
-    ASN1Element as _Element,
+    type ASN1Element as _Element,
     ASN1TagClass as _TagClass,
     ASN1Construction as _Construction,
     ASN1UniversalType as _UniversalType,
@@ -10,7 +10,7 @@ import {
     ASN1ConstructionError as _ConstructionError,
 } from "@wildboar/asn1";
 import * as $ from "@wildboar/asn1/functional";
-import { Filter, _decode_Filter, _encode_Filter } from "../DirectoryAbstractService/Filter.ta.mjs";
+import { type Filter, _decode_Filter, _encode_Filter } from "../DirectoryAbstractService/Filter.ta.mjs";
 
 
 /**
@@ -30,21 +30,13 @@ import { Filter, _decode_Filter, _encode_Filter } from "../DirectoryAbstractServ
 export
 type SearchCriteria = Filter; // DefinedType
 
-let _cached_decoder_for_SearchCriteria: $.ASN1Decoder<SearchCriteria> | null = null;
-
 /**
  * @summary Decodes an ASN.1 element into a(n) SearchCriteria
  * @function
  * @param el The element being decoded.
  * @returns The decoded data structure.
  */
-export
-function _decode_SearchCriteria (el: _Element): SearchCriteria {
-    if (!_cached_decoder_for_SearchCriteria) { _cached_decoder_for_SearchCriteria = _decode_Filter; }
-    return _cached_decoder_for_SearchCriteria(el);
-}
-
-let _cached_encoder_for_SearchCriteria: $.ASN1Encoder<SearchCriteria> | null = null;
+export const _decode_SearchCriteria: $.ASN1Decoder<SearchCriteria> = _decode_Filter;
 
 /**
  * @summary Encodes a(n) SearchCriteria into an ASN.1 Element.
@@ -53,11 +45,7 @@ let _cached_encoder_for_SearchCriteria: $.ASN1Encoder<SearchCriteria> | null = n
  * @param elGetter A function that can be used to get new ASN.1 elements.
  * @returns {_Element} The SearchCriteria, encoded as an ASN.1 Element.
  */
-export
-function _encode_SearchCriteria (value: SearchCriteria, elGetter: $.ASN1Encoder<any>): _Element {
-    if (!_cached_encoder_for_SearchCriteria) { _cached_encoder_for_SearchCriteria = _encode_Filter; }
-    return _cached_encoder_for_SearchCriteria(value, elGetter);
-}
+export const _encode_SearchCriteria: $.ASN1Encoder<SearchCriteria> = _encode_Filter;
 
 
 /* eslint-enable */

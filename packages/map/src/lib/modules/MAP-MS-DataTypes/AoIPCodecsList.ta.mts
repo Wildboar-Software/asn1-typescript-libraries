@@ -1,12 +1,12 @@
 /* eslint-disable */
 import {
-    OPTIONAL,
-    ASN1Element as _Element,
+    type OPTIONAL,
+    type ASN1Element as _Element,
     ASN1TagClass as _TagClass
 } from "@wildboar/asn1";
 import * as $ from "@wildboar/asn1/functional";
 import { ExtensionContainer, _decode_ExtensionContainer, _encode_ExtensionContainer } from "../MAP-ExtensionDataTypes/ExtensionContainer.ta.mjs";
-import { AoIPCodec, _decode_AoIPCodec, _encode_AoIPCodec } from "../MAP-MS-DataTypes/AoIPCodec.ta.mjs";
+import { type AoIPCodec, _decode_AoIPCodec, _encode_AoIPCodec } from "../MAP-MS-DataTypes/AoIPCodec.ta.mjs";
 
 
 /**
@@ -23,14 +23,14 @@ import { AoIPCodec, _decode_AoIPCodec, _encode_AoIPCodec } from "../MAP-MS-DataT
  * ```asn1
  * AoIPCodecsList ::= SEQUENCE {
  *     codec1    [1] AoIPCodec,
- *     codec2    [2] AoIPCodec    OPTIONAL,
- *     codec3    [3] AoIPCodec    OPTIONAL,
- *     codec4    [4] AoIPCodec    OPTIONAL,
- *     codec5    [5] AoIPCodec    OPTIONAL,
- *     codec6    [6] AoIPCodec    OPTIONAL,
- *     codec7    [7] AoIPCodec    OPTIONAL,
- *     codec8    [8] AoIPCodec    OPTIONAL,
- *     extensionContainer    [9] ExtensionContainer    OPTIONAL,
+ *     codec2    [2] AoIPCodec    type OPTIONAL,
+ *     codec3    [3] AoIPCodec    type OPTIONAL,
+ *     codec4    [4] AoIPCodec    type OPTIONAL,
+ *     codec5    [5] AoIPCodec    type OPTIONAL,
+ *     codec6    [6] AoIPCodec    type OPTIONAL,
+ *     codec7    [7] AoIPCodec    type OPTIONAL,
+ *     codec8    [8] AoIPCodec    type OPTIONAL,
+ *     extensionContainer    [9] ExtensionContainer    type OPTIONAL,
  *     ...}
  * ```
  * 
@@ -38,73 +38,95 @@ import { AoIPCodec, _decode_AoIPCodec, _encode_AoIPCodec } from "../MAP-MS-DataT
  */
 export
 class AoIPCodecsList {
+    /**
+     * @summary `codec1`.
+     * @description
+     *
+     * Highest-priority codec; codecs are sent in priority order (3GPP TS
+     * 29.002 V19.1.0 clause 17.7.1).
+     *
+     * @public
+     * @readonly
+     */
+    public readonly codec1: AoIPCodec;
+    /**
+     * @summary `codec2`.
+     * @public
+     * @readonly
+     */
+    public readonly codec2?: OPTIONAL<AoIPCodec>;
+    /**
+     * @summary `codec3`.
+     * @public
+     * @readonly
+     */
+    public readonly codec3?: OPTIONAL<AoIPCodec>;
+    /**
+     * @summary `codec4`.
+     * @public
+     * @readonly
+     */
+    public readonly codec4?: OPTIONAL<AoIPCodec>;
+    /**
+     * @summary `codec5`.
+     * @public
+     * @readonly
+     */
+    public readonly codec5?: OPTIONAL<AoIPCodec>;
+    /**
+     * @summary `codec6`.
+     * @public
+     * @readonly
+     */
+    public readonly codec6?: OPTIONAL<AoIPCodec>;
+    /**
+     * @summary `codec7`.
+     * @public
+     * @readonly
+     */
+    public readonly codec7?: OPTIONAL<AoIPCodec>;
+    /**
+     * @summary `codec8`.
+     * @public
+     * @readonly
+     */
+    public readonly codec8?: OPTIONAL<AoIPCodec>;
+    /**
+     * @summary `extensionContainer`.
+     * @public
+     * @readonly
+     */
+    public readonly extensionContainer?: OPTIONAL<ExtensionContainer>;
+    /**
+     * @summary Extensions that are not recognized.
+     * @public
+     * @readonly
+     */
+    public readonly _unrecognizedExtensionsList: _Element[];
+
     constructor (
-        /**
-         * @summary `codec1`.
-         * @description
-         *
-         * Highest-priority codec; codecs are sent in priority order (3GPP TS
-         * 29.002 V19.1.0 clause 17.7.1).
-         *
-         * @public
-         * @readonly
-         */
-        readonly codec1: AoIPCodec,
-        /**
-         * @summary `codec2`.
-         * @public
-         * @readonly
-         */
-        readonly codec2?: OPTIONAL<AoIPCodec>,
-        /**
-         * @summary `codec3`.
-         * @public
-         * @readonly
-         */
-        readonly codec3?: OPTIONAL<AoIPCodec>,
-        /**
-         * @summary `codec4`.
-         * @public
-         * @readonly
-         */
-        readonly codec4?: OPTIONAL<AoIPCodec>,
-        /**
-         * @summary `codec5`.
-         * @public
-         * @readonly
-         */
-        readonly codec5?: OPTIONAL<AoIPCodec>,
-        /**
-         * @summary `codec6`.
-         * @public
-         * @readonly
-         */
-        readonly codec6?: OPTIONAL<AoIPCodec>,
-        /**
-         * @summary `codec7`.
-         * @public
-         * @readonly
-         */
-        readonly codec7?: OPTIONAL<AoIPCodec>,
-        /**
-         * @summary `codec8`.
-         * @public
-         * @readonly
-         */
-        readonly codec8?: OPTIONAL<AoIPCodec>,
-        /**
-         * @summary `extensionContainer`.
-         * @public
-         * @readonly
-         */
-        readonly extensionContainer?: OPTIONAL<ExtensionContainer>,
-        /**
-         * @summary Extensions that are not recognized.
-         * @public
-         * @readonly
-         */
-        readonly _unrecognizedExtensionsList: _Element[] = []
-    ) {}
+        codec1: AoIPCodec,
+        codec2?: OPTIONAL<AoIPCodec>,
+        codec3?: OPTIONAL<AoIPCodec>,
+        codec4?: OPTIONAL<AoIPCodec>,
+        codec5?: OPTIONAL<AoIPCodec>,
+        codec6?: OPTIONAL<AoIPCodec>,
+        codec7?: OPTIONAL<AoIPCodec>,
+        codec8?: OPTIONAL<AoIPCodec>,
+        extensionContainer?: OPTIONAL<ExtensionContainer>,
+        _unrecognizedExtensionsList: _Element[] = []
+    ) {
+        this.codec1 = codec1;
+        this.codec2 = codec2;
+        this.codec3 = codec3;
+        this.codec4 = codec4;
+        this.codec5 = codec5;
+        this.codec6 = codec6;
+        this.codec7 = codec7;
+        this.codec8 = codec8;
+        this.extensionContainer = extensionContainer;
+        this._unrecognizedExtensionsList = _unrecognizedExtensionsList;
+    }
 
     /**
      * @summary Restructures an object into a AoIPCodecsList

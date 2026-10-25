@@ -2,7 +2,7 @@
 import { ASN1Element as _Element, ASN1TagClass as _TagClass } from "@wildboar/asn1";
 import * as $ from "@wildboar/asn1/functional";
 import {
-    EntryModification,
+    type EntryModification,
     _decode_EntryModification,
     _encode_EntryModification,
 } from "../DirectoryAbstractService/EntryModification.ta.mjs";

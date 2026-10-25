@@ -2,13 +2,13 @@
 
 import * as $ from "@wildboar/asn1/functional";
 import {
-    OPTIONAL,
-    SEQUENCE,
-    SET,
-    ASN1Element as _Element,
+    type OPTIONAL,
+    type SEQUENCE,
+    type SET,
+    type ASN1Element as _Element,
     ASN1TagClass as _TagClass
 } from "@wildboar/asn1";
-import { SubjectDeviceID, _decode_SubjectDeviceID, _encode_SubjectDeviceID } from "../CSTA-device-identifiers/SubjectDeviceID.ta.mjs";
+import { type SubjectDeviceID, _decode_SubjectDeviceID, _encode_SubjectDeviceID } from "../CSTA-device-identifiers/SubjectDeviceID.ta.mjs";
 
 import {
     EventCause,
@@ -40,7 +40,7 @@ import { CSTACommonArguments, _decode_CSTACommonArguments, _encode_CSTACommonArg
  * ```asn1
  * OutOfServiceEvent ::= SEQUENCE
  * {    device                SubjectDeviceID,
- *     cause                EventCause                OPTIONAL,
+ *     cause                EventCause                type OPTIONAL,
  *     extensions            CSTACommonArguments            OPTIONAL }
  * ```
  * 
@@ -48,36 +48,44 @@ import { CSTACommonArguments, _decode_CSTACommonArguments, _encode_CSTACommonArg
  */
 export
 class OutOfServiceEvent {
+    /**
+     * @summary `device`.
+     * @description
+     *
+     * Device taken out of service.
+     * @public
+     * @readonly
+     */
+    public readonly device: SubjectDeviceID;
+    /**
+     * @summary `cause`.
+     * @description
+     *
+     * Reason for the event.
+     * @public
+     * @readonly
+     */
+    public readonly cause?: OPTIONAL<EventCause>;
+    /**
+     * @summary `extensions`.
+     * @description
+     *
+     * Optional security (timestamp, sequence, securityInfo) and
+     * privateData.
+     * @public
+     * @readonly
+     */
+    public readonly extensions?: OPTIONAL<CSTACommonArguments>;
+
     constructor (
-        /**
-         * @summary `device`.
-         * @description
-         *
-         * Device taken out of service.
-         * @public
-         * @readonly
-         */
-        readonly device: SubjectDeviceID,
-        /**
-         * @summary `cause`.
-         * @description
-         *
-         * Reason for the event.
-         * @public
-         * @readonly
-         */
-        readonly cause?: OPTIONAL<EventCause>,
-        /**
-         * @summary `extensions`.
-         * @description
-         *
-         * Optional security (timestamp, sequence, securityInfo) and
-         * privateData.
-         * @public
-         * @readonly
-         */
-        readonly extensions?: OPTIONAL<CSTACommonArguments>
-    ) {}
+        device: SubjectDeviceID,
+        cause?: OPTIONAL<EventCause>,
+        extensions?: OPTIONAL<CSTACommonArguments>
+    ) {
+        this.device = device;
+        this.cause = cause;
+        this.extensions = extensions;
+    }
 
     /**
      * @summary Restructures an object into a OutOfServiceEvent
@@ -101,7 +109,7 @@ class OutOfServiceEvent {
          * @static
          */
 
-    public static _enum_for_cause = _enum_for_EventCause;
+    public static _enum_for_cause: typeof _enum_for_EventCause = _enum_for_EventCause;
 }
 
 /**

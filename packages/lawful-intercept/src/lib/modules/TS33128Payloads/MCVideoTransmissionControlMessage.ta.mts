@@ -1,12 +1,12 @@
 /* eslint-disable */
 import {
-    OCTET_STRING,
+    type OCTET_STRING,
     ASN1ConstructionError as _ConstructionError,
-    ASN1Element as _Element,
+    type ASN1Element as _Element,
     ASN1TagClass as _TagClass
 } from "@wildboar/asn1";
 import * as $ from "@wildboar/asn1/functional";
-import { MCServiceIDOrGroupID, _decode_MCServiceIDOrGroupID, _encode_MCServiceIDOrGroupID } from "../TS33128Payloads/MCServiceIDOrGroupID.ta.mjs";
+import { type MCServiceIDOrGroupID, _decode_MCServiceIDOrGroupID, _encode_MCServiceIDOrGroupID } from "../TS33128Payloads/MCServiceIDOrGroupID.ta.mjs";
 // export { MCServiceIDOrGroupID, _decode_MCServiceIDOrGroupID, _encode_MCServiceIDOrGroupID } from "../TS33128Payloads/MCServiceIDOrGroupID.ta.mjs";
 import { Direction, _decode_Direction, _encode_Direction, _enum_for_Direction } from "../TS33128Payloads/Direction.ta.mjs";
 // export { Direction, _enum_for_Direction, Direction_fromTarget /* IMPORTED_LONG_ENUMERATION_ITEM */, fromTarget /* IMPORTED_SHORT_ENUMERATION_ITEM */, Direction_toTarget /* IMPORTED_LONG_ENUMERATION_ITEM */, toTarget /* IMPORTED_SHORT_ENUMERATION_ITEM */, _decode_Direction, _encode_Direction } from "../TS33128Payloads/Direction.ta.mjs";
@@ -142,7 +142,7 @@ class MCVideoTransmissionControlMessage {
          * @static
          */
 
-    public static _enum_for_transmissionControlMessageDirection = _enum_for_Direction;
+    public static _enum_for_transmissionControlMessageDirection: typeof _enum_for_Direction = _enum_for_Direction;
 }
 
 /**

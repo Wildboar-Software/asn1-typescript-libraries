@@ -2,23 +2,23 @@
 
 import * as $ from "@wildboar/asn1/functional";
 import {
-    OPTIONAL,
-    SEQUENCE,
-    SET,
-    ASN1Element as _Element,
+    type OPTIONAL,
+    type SEQUENCE,
+    type SET,
+    type ASN1Element as _Element,
     ASN1TagClass as _TagClass
 } from "@wildboar/asn1";
-import { AssociateData, _decode_AssociateData, _encode_AssociateData } from "../CSTA-capability-exchange/AssociateData.ta.mjs";
+import { type AssociateData, _decode_AssociateData, _encode_AssociateData } from "../CSTA-capability-exchange/AssociateData.ta.mjs";
 
-import { CancelTelephonyTones, _decode_CancelTelephonyTones, _encode_CancelTelephonyTones } from "../CSTA-capability-exchange/CancelTelephonyTones.ta.mjs";
+import { type CancelTelephonyTones, _decode_CancelTelephonyTones, _encode_CancelTelephonyTones } from "../CSTA-capability-exchange/CancelTelephonyTones.ta.mjs";
 
-import { ChangeConnectionInformation, _decode_ChangeConnectionInformation, _encode_ChangeConnectionInformation } from "../CSTA-capability-exchange/ChangeConnectionInformation.ta.mjs";
+import { type ChangeConnectionInformation, _decode_ChangeConnectionInformation, _encode_ChangeConnectionInformation } from "../CSTA-capability-exchange/ChangeConnectionInformation.ta.mjs";
 
-import { GenerateDigits, _decode_GenerateDigits, _encode_GenerateDigits } from "../CSTA-capability-exchange/GenerateDigits.ta.mjs";
+import { type GenerateDigits, _decode_GenerateDigits, _encode_GenerateDigits } from "../CSTA-capability-exchange/GenerateDigits.ta.mjs";
 
-import { GenerateTelephonyTones, _decode_GenerateTelephonyTones, _encode_GenerateTelephonyTones } from "../CSTA-capability-exchange/GenerateTelephonyTones.ta.mjs";
+import { type GenerateTelephonyTones, _decode_GenerateTelephonyTones, _encode_GenerateTelephonyTones } from "../CSTA-capability-exchange/GenerateTelephonyTones.ta.mjs";
 
-import { SendUserInformation, _decode_SendUserInformation, _encode_SendUserInformation } from "../CSTA-capability-exchange/SendUserInformation.ta.mjs";
+import { type SendUserInformation, _decode_SendUserInformation, _encode_SendUserInformation } from "../CSTA-capability-exchange/SendUserInformation.ta.mjs";
 
 
 
@@ -36,11 +36,11 @@ import { SendUserInformation, _decode_SendUserInformation, _encode_SendUserInfor
  * 
  * ```asn1
  * CallAssociatedServList ::= SEQUENCE
- * {     associateData             [0] IMPLICIT     AssociateData             OPTIONAL,
- *     cancelTelephonyTones         [1] IMPLICIT     CancelTelephonyTones         OPTIONAL,
- *     changeConnectionInformation    [5] IMPLICIT     ChangeConnectionInformation    OPTIONAL,
- *     generateDigits             [2] IMPLICIT     GenerateDigits             OPTIONAL,
- *     generateTelephonyTones         [3] IMPLICIT     GenerateTelephonyTones         OPTIONAL,
+ * {     associateData             [0] IMPLICIT     AssociateData             type OPTIONAL,
+ *     cancelTelephonyTones         [1] IMPLICIT     CancelTelephonyTones         type OPTIONAL,
+ *     changeConnectionInformation    [5] IMPLICIT     ChangeConnectionInformation    type OPTIONAL,
+ *     generateDigits             [2] IMPLICIT     GenerateDigits             type OPTIONAL,
+ *     generateTelephonyTones         [3] IMPLICIT     GenerateTelephonyTones         type OPTIONAL,
  *     sendUserInformation         [4] IMPLICIT     SendUserInformation         OPTIONAL }
  * ```
  * 
@@ -48,62 +48,76 @@ import { SendUserInformation, _decode_SendUserInformation, _encode_SendUserInfor
  */
 export
 class CallAssociatedServList {
+    /**
+     * @summary `associateData`.
+     * @public
+     * @readonly
+     * @description
+     * Capability bitmap for this service; omit if the SF does not support
+     * it (ECMA-269 Annex C).
+     */
+    public readonly associateData?: OPTIONAL<AssociateData>;
+    /**
+     * @summary `cancelTelephonyTones`.
+     * @public
+     * @readonly
+     * @description
+     * Capability bitmap for this service; omit if the SF does not support
+     * it (ECMA-269 Annex C).
+     */
+    public readonly cancelTelephonyTones?: OPTIONAL<CancelTelephonyTones>;
+    /**
+     * @summary `changeConnectionInformation`.
+     * @public
+     * @readonly
+     * @description
+     * Capability bitmap for this service; omit if the SF does not support
+     * it (ECMA-269 Annex C).
+     */
+    public readonly changeConnectionInformation?: OPTIONAL<ChangeConnectionInformation>;
+    /**
+     * @summary `generateDigits`.
+     * @public
+     * @readonly
+     * @description
+     * Capability bitmap for this service; omit if the SF does not support
+     * it (ECMA-269 Annex C).
+     */
+    public readonly generateDigits?: OPTIONAL<GenerateDigits>;
+    /**
+     * @summary `generateTelephonyTones`.
+     * @public
+     * @readonly
+     * @description
+     * Capability bitmap for this service; omit if the SF does not support
+     * it (ECMA-269 Annex C).
+     */
+    public readonly generateTelephonyTones?: OPTIONAL<GenerateTelephonyTones>;
+    /**
+     * @summary `sendUserInformation`.
+     * @public
+     * @readonly
+     * @description
+     * Capability bitmap for this service; omit if the SF does not support
+     * it (ECMA-269 Annex C).
+     */
+    public readonly sendUserInformation?: OPTIONAL<SendUserInformation>;
+
     constructor (
-        /**
-         * @summary `associateData`.
-         * @public
-         * @readonly
-         * @description
-         * Capability bitmap for this service; omit if the SF does not support
-         * it (ECMA-269 Annex C).
-         */
-        readonly associateData?: OPTIONAL<AssociateData>,
-        /**
-         * @summary `cancelTelephonyTones`.
-         * @public
-         * @readonly
-         * @description
-         * Capability bitmap for this service; omit if the SF does not support
-         * it (ECMA-269 Annex C).
-         */
-        readonly cancelTelephonyTones?: OPTIONAL<CancelTelephonyTones>,
-        /**
-         * @summary `changeConnectionInformation`.
-         * @public
-         * @readonly
-         * @description
-         * Capability bitmap for this service; omit if the SF does not support
-         * it (ECMA-269 Annex C).
-         */
-        readonly changeConnectionInformation?: OPTIONAL<ChangeConnectionInformation>,
-        /**
-         * @summary `generateDigits`.
-         * @public
-         * @readonly
-         * @description
-         * Capability bitmap for this service; omit if the SF does not support
-         * it (ECMA-269 Annex C).
-         */
-        readonly generateDigits?: OPTIONAL<GenerateDigits>,
-        /**
-         * @summary `generateTelephonyTones`.
-         * @public
-         * @readonly
-         * @description
-         * Capability bitmap for this service; omit if the SF does not support
-         * it (ECMA-269 Annex C).
-         */
-        readonly generateTelephonyTones?: OPTIONAL<GenerateTelephonyTones>,
-        /**
-         * @summary `sendUserInformation`.
-         * @public
-         * @readonly
-         * @description
-         * Capability bitmap for this service; omit if the SF does not support
-         * it (ECMA-269 Annex C).
-         */
-        readonly sendUserInformation?: OPTIONAL<SendUserInformation>
-    ) {}
+        associateData?: OPTIONAL<AssociateData>,
+        cancelTelephonyTones?: OPTIONAL<CancelTelephonyTones>,
+        changeConnectionInformation?: OPTIONAL<ChangeConnectionInformation>,
+        generateDigits?: OPTIONAL<GenerateDigits>,
+        generateTelephonyTones?: OPTIONAL<GenerateTelephonyTones>,
+        sendUserInformation?: OPTIONAL<SendUserInformation>
+    ) {
+        this.associateData = associateData;
+        this.cancelTelephonyTones = cancelTelephonyTones;
+        this.changeConnectionInformation = changeConnectionInformation;
+        this.generateDigits = generateDigits;
+        this.generateTelephonyTones = generateTelephonyTones;
+        this.sendUserInformation = sendUserInformation;
+    }
 
     /**
      * @summary Restructures an object into a CallAssociatedServList

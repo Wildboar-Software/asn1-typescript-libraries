@@ -1,7 +1,7 @@
 /* eslint-disable */
 import {
-    INTEGER,
-    ASN1Element as _Element,
+    type INTEGER,
+    type ASN1Element as _Element,
     ASN1TagClass as _TagClass,
     ASN1Construction as _Construction,
     ASN1UniversalType as _UniversalType,
@@ -42,7 +42,7 @@ type AttrId_font = INTEGER;
  * @type {number}
  */
 export
-const AttrId_font_null_: AttrId_font = 0; /* LONG_NAMED_INTEGER_VALUE */
+const AttrId_font_null_: 0 = 0 satisfies AttrId_font; /* LONG_NAMED_INTEGER_VALUE */
 
 /**
  * @summary AttrId_font_null_
@@ -54,9 +54,9 @@ const AttrId_font_null_: AttrId_font = 0; /* LONG_NAMED_INTEGER_VALUE */
  * @type {number}
  */
 export
-const null_: AttrId_font = AttrId_font_null_; /* SHORT_NAMED_INTEGER_VALUE */
-export const _decode_AttrId_font = $._decodeInteger;
-export const _encode_AttrId_font = $._encodeInteger;
+const null_: 0 = AttrId_font_null_; /* SHORT_NAMED_INTEGER_VALUE */
+export const _decode_AttrId_font: $.ASN1Decoder<INTEGER> = $._decodeInteger;
+export const _encode_AttrId_font: $.ASN1Encoder<INTEGER> = $._encodeInteger;
 
 
 /* eslint-enable */

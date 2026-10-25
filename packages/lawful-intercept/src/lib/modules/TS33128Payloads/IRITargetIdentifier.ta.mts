@@ -1,11 +1,11 @@
 /* eslint-disable */
 import {
-    OPTIONAL,
-    ASN1Element as _Element,
+    type OPTIONAL,
+    type ASN1Element as _Element,
     ASN1TagClass as _TagClass
 } from "@wildboar/asn1";
 import * as $ from "@wildboar/asn1/functional";
-import { TargetIdentifier, _decode_TargetIdentifier, _encode_TargetIdentifier } from "../TS33128Payloads/TargetIdentifier.ta.mjs";
+import { type TargetIdentifier, _decode_TargetIdentifier, _encode_TargetIdentifier } from "../TS33128Payloads/TargetIdentifier.ta.mjs";
 // export { TargetIdentifier, _decode_TargetIdentifier, _encode_TargetIdentifier } from "../TS33128Payloads/TargetIdentifier.ta.mjs";
 import { TargetIdentifierProvenance, _decode_TargetIdentifierProvenance, _encode_TargetIdentifierProvenance, _enum_for_TargetIdentifierProvenance } from "../TS33128Payloads/TargetIdentifierProvenance.ta.mjs";
 // export { TargetIdentifierProvenance, _enum_for_TargetIdentifierProvenance, TargetIdentifierProvenance_lEAProvided /* IMPORTED_LONG_ENUMERATION_ITEM */, lEAProvided /* IMPORTED_SHORT_ENUMERATION_ITEM */, TargetIdentifierProvenance_observed /* IMPORTED_LONG_ENUMERATION_ITEM */, observed /* IMPORTED_SHORT_ENUMERATION_ITEM */, TargetIdentifierProvenance_matchedOn /* IMPORTED_LONG_ENUMERATION_ITEM */, matchedOn /* IMPORTED_SHORT_ENUMERATION_ITEM */, TargetIdentifierProvenance_other /* IMPORTED_LONG_ENUMERATION_ITEM */, other /* IMPORTED_SHORT_ENUMERATION_ITEM */, _decode_TargetIdentifierProvenance, _encode_TargetIdentifierProvenance } from "../TS33128Payloads/TargetIdentifierProvenance.ta.mjs";
@@ -80,7 +80,7 @@ class IRITargetIdentifier {
          * @static
          */
 
-    public static _enum_for_provenance = _enum_for_TargetIdentifierProvenance;
+    public static _enum_for_provenance: typeof _enum_for_TargetIdentifierProvenance = _enum_for_TargetIdentifierProvenance;
 }
 
 /**

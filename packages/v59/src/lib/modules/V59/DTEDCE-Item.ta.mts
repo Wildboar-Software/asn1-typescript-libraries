@@ -1,7 +1,7 @@
 /* eslint-disable */
 import {
-    INTEGER,
-    ASN1Element as _Element,
+    type INTEGER,
+    type ASN1Element as _Element,
     ASN1TagClass as _TagClass,
     ASN1Construction as _Construction,
     ASN1UniversalType as _UniversalType,
@@ -10,7 +10,7 @@ import {
     EmbeddedPDV as _PDV,
     ASN1ConstructionError as _ConstructionError, ASN1OverflowError } from "@wildboar/asn1";
 import * as $ from "@wildboar/asn1/functional";
-import { V59String, _decode_V59String, _encode_V59String } from "../V59/V59String.ta.mjs";
+import { type V59String, _decode_V59String, _encode_V59String } from "../V59/V59String.ta.mjs";
 
 /**
  * @summary DTEDCE_Item
@@ -51,7 +51,7 @@ class DTEDCE_Item {
      * @public
      * @readonly
      */
-    readonly txFlowControl: V59String;
+    public readonly txFlowControl: V59String;
     /**
      * @summary `rxFlowControl`.
      * @description
@@ -62,7 +62,7 @@ class DTEDCE_Item {
      * @public
      * @readonly
      */
-    readonly rxFlowControl: V59String;
+    public readonly rxFlowControl: V59String;
     /**
      * @summary `protocol`.
      * @description
@@ -73,7 +73,7 @@ class DTEDCE_Item {
      * @public
      * @readonly
      */
-    readonly protocol: V59String;
+    public readonly protocol: V59String;
     /**
      * @summary `txSpeed`.
      * @description
@@ -83,7 +83,7 @@ class DTEDCE_Item {
      * @public
      * @readonly
      */
-    readonly txSpeed: INTEGER;
+    public readonly txSpeed: INTEGER;
     /**
      * @summary `rxSpeed`.
      * @description
@@ -93,7 +93,7 @@ class DTEDCE_Item {
      * @public
      * @readonly
      */
-    readonly rxSpeed: INTEGER;
+    public readonly rxSpeed: INTEGER;
     /**
      * @summary `txThroughput`.
      * @description
@@ -104,7 +104,7 @@ class DTEDCE_Item {
      * @public
      * @readonly
      */
-    readonly txThroughput: INTEGER;
+    public readonly txThroughput: INTEGER;
     /**
      * @summary `rxThroughput`.
      * @description
@@ -115,7 +115,7 @@ class DTEDCE_Item {
      * @public
      * @readonly
      */
-    readonly rxThroughput: INTEGER;
+    public readonly rxThroughput: INTEGER;
     /**
      * @summary `txErrors`.
      * @description
@@ -126,7 +126,7 @@ class DTEDCE_Item {
      * @public
      * @readonly
      */
-    readonly txErrors: INTEGER;
+    public readonly txErrors: INTEGER;
     /**
      * @summary `rxErrors`.
      * @description
@@ -137,13 +137,13 @@ class DTEDCE_Item {
      * @public
      * @readonly
      */
-    readonly rxErrors: INTEGER;
+    public readonly rxErrors: INTEGER;
     /**
      * @summary Extensions that are not recognized.
      * @public
      * @readonly
      */
-    readonly _unrecognizedExtensionsList: _Element[];
+    public readonly _unrecognizedExtensionsList: _Element[];
 
     constructor (
         txFlowControl: V59String,

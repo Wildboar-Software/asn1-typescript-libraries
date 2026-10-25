@@ -8,7 +8,7 @@ import { type OPERATION } from "../Remote-Operations-Information-Objects/OPERATI
 
 import { SetRingerStatusArgument, _decode_SetRingerStatusArgument, _encode_SetRingerStatusArgument } from "../CSTA-set-ringer-status/SetRingerStatusArgument.ta.mjs";
 
-import { SetRingerStatusResult, _decode_SetRingerStatusResult, _encode_SetRingerStatusResult } from "../CSTA-set-ringer-status/SetRingerStatusResult.ta.mjs";
+import { type SetRingerStatusResult, _decode_SetRingerStatusResult, _encode_SetRingerStatusResult } from "../CSTA-set-ringer-status/SetRingerStatusResult.ta.mjs";
 
 import { universalFailure } from "../CSTA-error-definition/universalFailure.oa.mjs";
 

@@ -1,6 +1,6 @@
 /* eslint-disable */
 import {
-    ASN1Element as _Element,
+    type ASN1Element as _Element,
     ASN1TagClass as _TagClass,
     ASN1Construction as _Construction,
     ASN1UniversalType as _UniversalType,
@@ -10,7 +10,7 @@ import {
     ASN1ConstructionError as _ConstructionError,
 } from "@wildboar/asn1";
 import * as $ from "@wildboar/asn1/functional";
-import { CS_Resume_Request_controlling_modeType, _decode_CS_Resume_Request_controlling_modeType, _encode_CS_Resume_Request_controlling_modeType } from "../ISO-9506-MMS-1/CS-Resume-Request-controlling-modeType.ta.mjs";
+import { type CS_Resume_Request_controlling_modeType, _decode_CS_Resume_Request_controlling_modeType, _encode_CS_Resume_Request_controlling_modeType } from "../ISO-9506-MMS-1/CS-Resume-Request-controlling-modeType.ta.mjs";
 
 
 /**
@@ -35,19 +35,23 @@ import { CS_Resume_Request_controlling_modeType, _decode_CS_Resume_Request_contr
  */
 export
 class CS_Resume_Request_controlling {
+    /**
+     * @summary `modeType`.
+     * @description
+     *
+     * Continue with current `&running-Mode`, or change it via StartCount.
+     * ISO 9506-1:2003 §12.6.1.1.3.
+     *
+     * @public
+     * @readonly
+     */
+    public readonly modeType: CS_Resume_Request_controlling_modeType;
+
     constructor (
-        /**
-         * @summary `modeType`.
-         * @description
-         *
-         * Continue with current `&running-Mode`, or change it via StartCount.
-         * ISO 9506-1:2003 §12.6.1.1.3.
-         *
-         * @public
-         * @readonly
-         */
-        readonly modeType: CS_Resume_Request_controlling_modeType
-    ) {}
+        modeType: CS_Resume_Request_controlling_modeType
+    ) {
+        this.modeType = modeType;
+    }
 
     /**
      * @summary Restructures an object into a CS_Resume_Request_controlling

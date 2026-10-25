@@ -1,8 +1,8 @@
 /* eslint-disable */
 import {
-    ASN1Element as _Element,
+    type ASN1Element as _Element,
     ASN1TagClass as _TagClass,
-    OPTIONAL,
+    type OPTIONAL,
 } from "@wildboar/asn1";
 import * as $ from "@wildboar/asn1/functional";
 import {
@@ -37,34 +37,40 @@ import {
  *
  */
 export class OCSPResponse {
+    /**
+     * @summary `responseStatus`.
+     * @description
+     *
+     * Processing status of the prior request
+     * ([RFC 6960 §4.2.1](https://datatracker.ietf.org/doc/html/rfc6960#section-4.2.1)).
+     * See also exception cases in
+     * [§2.3](https://datatracker.ietf.org/doc/html/rfc6960#section-2.3).
+     *
+     * @public
+     * @readonly
+     */
+    public readonly responseStatus: OCSPResponseStatus;
+    /**
+     * @summary `responseBytes`.
+     * @description
+     *
+     * Present for successful responses: response type OID and the
+     * corresponding response syntax encoded as an OCTET STRING.
+     * Absent when `responseStatus` is an error condition
+     * ([RFC 6960 §4.2.1](https://datatracker.ietf.org/doc/html/rfc6960#section-4.2.1)).
+     *
+     * @public
+     * @readonly
+     */
+    public readonly responseBytes?: OPTIONAL<ResponseBytes>;
+
     constructor(
-        /**
-         * @summary `responseStatus`.
-         * @description
-         *
-         * Processing status of the prior request
-         * ([RFC 6960 §4.2.1](https://datatracker.ietf.org/doc/html/rfc6960#section-4.2.1)).
-         * See also exception cases in
-         * [§2.3](https://datatracker.ietf.org/doc/html/rfc6960#section-2.3).
-         *
-         * @public
-         * @readonly
-         */
-        readonly responseStatus: OCSPResponseStatus,
-        /**
-         * @summary `responseBytes`.
-         * @description
-         *
-         * Present for successful responses: response type OID and the
-         * corresponding response syntax encoded as an OCTET STRING.
-         * Absent when `responseStatus` is an error condition
-         * ([RFC 6960 §4.2.1](https://datatracker.ietf.org/doc/html/rfc6960#section-4.2.1)).
-         *
-         * @public
-         * @readonly
-         */
-        readonly responseBytes?: OPTIONAL<ResponseBytes>
-    ) {}
+        responseStatus: OCSPResponseStatus,
+        responseBytes?: OPTIONAL<ResponseBytes>
+    ) {
+        this.responseStatus = responseStatus;
+        this.responseBytes = responseBytes;
+    }
 
     /**
      * @summary Restructures an object into a OCSPResponse
@@ -90,7 +96,7 @@ export class OCSPResponse {
      * @static
      */
 
-    public static _enum_for_responseStatus = _enum_for_OCSPResponseStatus;
+    public static _enum_for_responseStatus: typeof _enum_for_OCSPResponseStatus = _enum_for_OCSPResponseStatus;
 }
 
 

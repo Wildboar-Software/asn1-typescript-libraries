@@ -1,6 +1,6 @@
 /* eslint-disable */
 import {
-    OCTET_STRING
+    type OCTET_STRING
 } from "@wildboar/asn1";
 import * as $ from "@wildboar/asn1/functional";
 

@@ -83,7 +83,7 @@ type CallStatus = _enum_for_CallStatus;
  * @enum {number}
  */
 export
-const CallStatus = _enum_for_CallStatus;
+const CallStatus: typeof _enum_for_CallStatus = _enum_for_CallStatus;
 
 /**
  * @summary CallStatus_answered
@@ -99,7 +99,7 @@ const CallStatus = _enum_for_CallStatus;
  * @type {number}
  */
 export
-const CallStatus_answered: CallStatus = CallStatus.answered; /* LONG_NAMED_ENUMERATED_VALUE */
+const CallStatus_answered: _enum_for_CallStatus.answered = CallStatus.answered; /* LONG_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary answered
@@ -108,7 +108,7 @@ const CallStatus_answered: CallStatus = CallStatus.answered; /* LONG_NAMED_ENUME
  * @type {number}
  */
 export
-const answered: CallStatus = CallStatus.answered; /* SHORT_NAMED_ENUMERATED_VALUE */
+const answered: _enum_for_CallStatus.answered = CallStatus.answered; /* SHORT_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary CallStatus_alerting
@@ -124,7 +124,7 @@ const answered: CallStatus = CallStatus.answered; /* SHORT_NAMED_ENUMERATED_VALU
  * @type {number}
  */
 export
-const CallStatus_alerting: CallStatus = CallStatus.alerting; /* LONG_NAMED_ENUMERATED_VALUE */
+const CallStatus_alerting: _enum_for_CallStatus.alerting = CallStatus.alerting; /* LONG_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary alerting
@@ -133,7 +133,7 @@ const CallStatus_alerting: CallStatus = CallStatus.alerting; /* LONG_NAMED_ENUME
  * @type {number}
  */
 export
-const alerting: CallStatus = CallStatus.alerting; /* SHORT_NAMED_ENUMERATED_VALUE */
+const alerting: _enum_for_CallStatus.alerting = CallStatus.alerting; /* SHORT_NAMED_ENUMERATED_VALUE */
 
 export
 const _decode_CallStatus: $.ASN1Decoder<CallStatus> = $._decodeEnumerated;

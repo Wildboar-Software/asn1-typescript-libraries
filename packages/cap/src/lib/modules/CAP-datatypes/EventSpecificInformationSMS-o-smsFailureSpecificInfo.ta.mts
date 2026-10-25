@@ -1,6 +1,6 @@
 import {
-    OPTIONAL,
-    ASN1Element as _Element,
+    type OPTIONAL,
+    type ASN1Element as _Element,
     ASN1TagClass as _TagClass,
 } from "@wildboar/asn1";
 import * as $ from "@wildboar/asn1/functional";
@@ -21,26 +21,32 @@ import { MO_SMSCause, _enum_for_MO_SMSCause, _decode_MO_SMSCause, _encode_MO_SMS
  *
  */
 export class EventSpecificInformationSMS_o_smsFailureSpecificInfo {
+    /**
+     * @summary `failureCause`.
+     * @description
+     *
+     * MO SMS error reported to the gsmSCF. Most values come from the SMSC
+     * as a response to MO-ForwardSM. (3GPP TS 29.078 V19.0.0 clause 5.1).
+     *
+     * @public
+     * @readonly
+     */
+    public readonly failureCause?: OPTIONAL<MO_SMSCause>;
+    public readonly _unrecognizedExtensionsList: _Element[];
+
     constructor (
-        /**
-         * @summary `failureCause`.
-         * @description
-         *
-         * MO SMS error reported to the gsmSCF. Most values come from the SMSC
-         * as a response to MO-ForwardSM. (3GPP TS 29.078 V19.0.0 clause 5.1).
-         *
-         * @public
-         * @readonly
-         */
-        readonly failureCause?: OPTIONAL<MO_SMSCause>,
-        readonly _unrecognizedExtensionsList: _Element[] = [],
-    ) {}
+        failureCause?: OPTIONAL<MO_SMSCause>,
+        _unrecognizedExtensionsList: _Element[] = [],
+    ) {
+        this.failureCause = failureCause;
+        this._unrecognizedExtensionsList = _unrecognizedExtensionsList;
+    }
 
     public static _from_object (_o: { [_K in keyof (EventSpecificInformationSMS_o_smsFailureSpecificInfo)]: (EventSpecificInformationSMS_o_smsFailureSpecificInfo)[_K] }): EventSpecificInformationSMS_o_smsFailureSpecificInfo {
         return new EventSpecificInformationSMS_o_smsFailureSpecificInfo(_o.failureCause, _o._unrecognizedExtensionsList);
     }
 
-    public static _enum_for_failureCause = _enum_for_MO_SMSCause;
+    public static _enum_for_failureCause: typeof _enum_for_MO_SMSCause = _enum_for_MO_SMSCause;
 }
 
 export const _root_component_type_list_1_spec_for_EventSpecificInformationSMS_o_smsFailureSpecificInfo: $.ComponentSpec[] = [

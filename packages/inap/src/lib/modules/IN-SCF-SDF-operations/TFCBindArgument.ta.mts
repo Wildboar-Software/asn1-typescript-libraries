@@ -1,14 +1,14 @@
 /* eslint-disable */
 import {
-    OPTIONAL,
+    type OPTIONAL,
     TRUE_BIT,
-    ASN1Element as _Element,
+    type ASN1Element as _Element,
     ASN1TagClass as _TagClass
 } from "@wildboar/asn1";
 import * as $ from "@wildboar/asn1/functional";
-import { Credentials, _decode_Credentials, _encode_Credentials } from "../DirectoryAbstractService/Credentials.ta.mjs";
+import { type Credentials, _decode_Credentials, _encode_Credentials } from "../DirectoryAbstractService/Credentials.ta.mjs";
 // export { Credentials, _decode_Credentials, _encode_Credentials } from "../DirectoryAbstractService/Credentials.ta.mjs";
-import { Versions, Versions_v1 /* IMPORTED_LONG_NAMED_BIT */, _decode_Versions, _encode_Versions } from "../DirectoryAbstractService/Versions.ta.mjs";
+import { type Versions, Versions_v1 /* IMPORTED_LONG_NAMED_BIT */, _decode_Versions, _encode_Versions } from "../DirectoryAbstractService/Versions.ta.mjs";
 // export { Versions, Versions_v1 /* IMPORTED_LONG_NAMED_BIT */, v1 /* IMPORTED_SHORT_NAMED_BIT */, Versions_v2 /* IMPORTED_LONG_NAMED_BIT */, v2 /* IMPORTED_SHORT_NAMED_BIT */, _decode_Versions, _encode_Versions } from "../DirectoryAbstractService/Versions.ta.mjs";
 
 
@@ -82,7 +82,7 @@ class TFCBindArgument {
      * @static
      * @method
      */
-    public static get _default_value_for_versions () { return (() => { const _ret = new Uint8ClampedArray(1); _ret[Versions_v1] = TRUE_BIT;return _ret; })(); }
+    public static get _default_value_for_versions (): Uint8ClampedArray<ArrayBuffer> { return (() => { const _ret = new Uint8ClampedArray(1); _ret[Versions_v1] = TRUE_BIT;return _ret; })(); }
 }
 
 /**

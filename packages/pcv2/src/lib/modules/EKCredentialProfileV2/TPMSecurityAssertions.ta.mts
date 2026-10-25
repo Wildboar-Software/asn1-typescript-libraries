@@ -1,15 +1,15 @@
 /* eslint-disable */
 import {
     ASN1SizeError,
-    BOOLEAN,
-    IA5String,
-    OPTIONAL,
-    ASN1Element as _Element,
+    type BOOLEAN,
+    type IA5String,
+    type OPTIONAL,
+    type ASN1Element as _Element,
     ASN1TagClass as _TagClass
 } from "@wildboar/asn1";
 import * as $ from "@wildboar/asn1/functional";
 import { urimax } from "../EKCredentialProfileV2/urimax.va.mjs";
-import { Version, _decode_Version, _encode_Version, v1 /* IMPORTED_SHORT_NAMED_INTEGER */ } from "../EKCredentialProfileV2/Version.ta.mjs";
+import { type Version, _decode_Version, _encode_Version, v1 /* IMPORTED_SHORT_NAMED_INTEGER */ } from "../EKCredentialProfileV2/Version.ta.mjs";
 import { EKGenerationType, _decode_EKGenerationType, _encode_EKGenerationType, _enum_for_EKGenerationType } from "../EKCredentialProfileV2/EKGenerationType.ta.mjs";
 import { EKGenerationLocation, _decode_EKGenerationLocation, _encode_EKGenerationLocation, _enum_for_EKGenerationLocation } from "../EKCredentialProfileV2/EKGenerationLocation.ta.mjs";
 import { EKCertificateGenerationLocation, _decode_EKCertificateGenerationLocation, _encode_EKCertificateGenerationLocation, _enum_for_EKCertificateGenerationLocation } from "../EKCredentialProfileV2/EKCertificateGenerationLocation.ta.mjs";
@@ -261,7 +261,7 @@ class TPMSecurityAssertions {
      * @static
      * @method
      */
-    public static get _default_value_for_version () { return v1; }
+    public static get _default_value_for_version (): number { return v1; }
     /**
      * @summary Getter that returns the default value for `fieldUpgradable`.
      * @public
@@ -281,19 +281,19 @@ class TPMSecurityAssertions {
          * @static
          */
 
-    public static _enum_for_ekGenerationType = _enum_for_EKGenerationType;        /**
+    public static _enum_for_ekGenerationType: typeof _enum_for_EKGenerationType = _enum_for_EKGenerationType;        /**
          * @summary The enum used as the type of the component `ekGenerationLocation`
          * @public
          * @static
          */
 
-    public static _enum_for_ekGenerationLocation = _enum_for_EKGenerationLocation;        /**
+    public static _enum_for_ekGenerationLocation: typeof _enum_for_EKGenerationLocation = _enum_for_EKGenerationLocation;        /**
          * @summary The enum used as the type of the component `ekCertificateGenerationLocation`
          * @public
          * @static
          */
 
-    public static _enum_for_ekCertificateGenerationLocation = _enum_for_EKCertificateGenerationLocation;
+    public static _enum_for_ekCertificateGenerationLocation: typeof _enum_for_EKCertificateGenerationLocation = _enum_for_EKCertificateGenerationLocation;
 }
 
 /**

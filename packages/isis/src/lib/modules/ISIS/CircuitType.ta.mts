@@ -77,7 +77,7 @@ export type CircuitType = _enum_for_CircuitType;
  *
  * @enum {number}
  */
-export const CircuitType = _enum_for_CircuitType;
+export const CircuitType: typeof _enum_for_CircuitType = _enum_for_CircuitType;
 
 /**
  * @summary CircuitType_broadcast
@@ -90,7 +90,7 @@ export const CircuitType = _enum_for_CircuitType;
  * @constant
  * @type {number}
  */
-export const CircuitType_broadcast: CircuitType =
+export const CircuitType_broadcast: 0 =
   CircuitType.broadcast; /* LONG_NAMED_ENUMERATED_VALUE */
 
 /**
@@ -98,7 +98,7 @@ export const CircuitType_broadcast: CircuitType =
  * @constant
  * @type {number}
  */
-export const broadcast: CircuitType =
+export const broadcast: 0 =
   CircuitType.broadcast; /* SHORT_NAMED_ENUMERATED_VALUE */
 
 /**
@@ -112,7 +112,7 @@ export const broadcast: CircuitType =
  * @constant
  * @type {number}
  */
-export const CircuitType_ptToPt: CircuitType =
+export const CircuitType_ptToPt: 1 =
   CircuitType.ptToPt; /* LONG_NAMED_ENUMERATED_VALUE */
 
 /**
@@ -120,7 +120,7 @@ export const CircuitType_ptToPt: CircuitType =
  * @constant
  * @type {number}
  */
-export const ptToPt: CircuitType =
+export const ptToPt: 1 =
   CircuitType.ptToPt; /* SHORT_NAMED_ENUMERATED_VALUE */
 
 /**
@@ -134,7 +134,7 @@ export const ptToPt: CircuitType =
  * @constant
  * @type {number}
  */
-export const CircuitType_staticIn: CircuitType =
+export const CircuitType_staticIn: 2 =
   CircuitType.staticIn; /* LONG_NAMED_ENUMERATED_VALUE */
 
 /**
@@ -142,7 +142,7 @@ export const CircuitType_staticIn: CircuitType =
  * @constant
  * @type {number}
  */
-export const staticIn: CircuitType =
+export const staticIn: 2 =
   CircuitType.staticIn; /* SHORT_NAMED_ENUMERATED_VALUE */
 
 /**
@@ -157,7 +157,7 @@ export const staticIn: CircuitType =
  * @constant
  * @type {number}
  */
-export const CircuitType_staticOut: CircuitType =
+export const CircuitType_staticOut: 3 =
   CircuitType.staticOut; /* LONG_NAMED_ENUMERATED_VALUE */
 
 /**
@@ -165,7 +165,7 @@ export const CircuitType_staticOut: CircuitType =
  * @constant
  * @type {number}
  */
-export const staticOut: CircuitType =
+export const staticOut: 3 =
   CircuitType.staticOut; /* SHORT_NAMED_ENUMERATED_VALUE */
 
 /**
@@ -179,7 +179,7 @@ export const staticOut: CircuitType =
  * @constant
  * @type {number}
  */
-export const CircuitType_dA: CircuitType =
+export const CircuitType_dA: 4 =
   CircuitType.dA; /* LONG_NAMED_ENUMERATED_VALUE */
 
 /**
@@ -187,14 +187,28 @@ export const CircuitType_dA: CircuitType =
  * @constant
  * @type {number}
  */
-export const dA: CircuitType =
+export const dA: 4 =
   CircuitType.dA; /* SHORT_NAMED_ENUMERATED_VALUE */
 
 
-export const _decode_CircuitType = $._decodeEnumerated as $.ASN1Decoder<CircuitType>;
+export function _decode_CircuitType(el: _Element): CircuitType {
+  const enumerated = $._decodeEnumerated(el);
+  switch (enumerated) {
+    case CircuitType.broadcast: return CircuitType.broadcast;
+    case CircuitType.ptToPt: return CircuitType.ptToPt;
+    case CircuitType.staticIn: return CircuitType.staticIn;
+    case CircuitType.staticOut: return CircuitType.staticOut;
+    case CircuitType.dA: return CircuitType.dA;
+    default:
+      throw new _ConstructionError(
+        'Invalid ENUMERATED value ' + enumerated + ' for CircuitType.',
+        el,
+      );
+  }
+}
 
 
-export const _encode_CircuitType = $._encodeEnumerated as $.ASN1Encoder<CircuitType>;
+export const _encode_CircuitType: $.ASN1Encoder<CircuitType> = $._encodeEnumerated as $.ASN1Encoder<CircuitType>;
 
 
 /* eslint-enable */

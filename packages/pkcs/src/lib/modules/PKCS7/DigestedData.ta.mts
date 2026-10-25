@@ -1,7 +1,7 @@
 /* eslint-disable */
 import {
     ASN1ConstructionError as _ConstructionError,
-    ASN1Element as _Element,
+    type ASN1Element as _Element,
     ASN1TagClass as _TagClass,
 } from "@wildboar/asn1";
 import * as $ from "@wildboar/asn1/functional";
@@ -16,11 +16,11 @@ import {
     _encode_ContentInfo,
 } from "../PKCS7/ContentInfo.ta.mjs";
 import {
-    DigestAlgorithmIdentifier,
+    type DigestAlgorithmIdentifier,
     _decode_DigestAlgorithmIdentifier,
     _encode_DigestAlgorithmIdentifier,
 } from "../PKCS7/DigestAlgorithmIdentifier.ta.mjs";
-import { Version, _decode_Version, _encode_Version } from "../PKCS7/Version.ta.mjs";
+import { type Version, _decode_Version, _encode_Version } from "../PKCS7/Version.ta.mjs";
 
 
 /**
@@ -40,32 +40,42 @@ import { Version, _decode_Version, _encode_Version } from "../PKCS7/Version.ta.m
  *
  */
 export class DigestedData {
+    /**
+     * @summary `version`.
+     * @public
+     * @readonly
+     */
+    public readonly version: Version;
+    /**
+     * @summary `digestAlgorithm`.
+     * @public
+     * @readonly
+     */
+    public readonly digestAlgorithm: DigestAlgorithmIdentifier;
+    /**
+     * @summary `contentInfo`.
+     * @public
+     * @readonly
+     */
+    public readonly contentInfo: ContentInfo;
+    /**
+     * @summary `digest`.
+     * @public
+     * @readonly
+     */
+    public readonly digest: HASH<_Element>;
+
     constructor(
-        /**
-         * @summary `version`.
-         * @public
-         * @readonly
-         */
-        readonly version: Version,
-        /**
-         * @summary `digestAlgorithm`.
-         * @public
-         * @readonly
-         */
-        readonly digestAlgorithm: DigestAlgorithmIdentifier,
-        /**
-         * @summary `contentInfo`.
-         * @public
-         * @readonly
-         */
-        readonly contentInfo: ContentInfo,
-        /**
-         * @summary `digest`.
-         * @public
-         * @readonly
-         */
-        readonly digest: HASH<_Element>
-    ) {}
+        version: Version,
+        digestAlgorithm: DigestAlgorithmIdentifier,
+        contentInfo: ContentInfo,
+        digest: HASH<_Element>
+    ) {
+        this.version = version;
+        this.digestAlgorithm = digestAlgorithm;
+        this.contentInfo = contentInfo;
+        this.digest = digest;
+    }
 
     /**
      * @summary Restructures an object into a DigestedData

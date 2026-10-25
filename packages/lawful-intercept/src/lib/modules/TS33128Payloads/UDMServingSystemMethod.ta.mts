@@ -65,7 +65,7 @@ type UDMServingSystemMethod = _enum_for_UDMServingSystemMethod;
  * @enum {number}
  */
 export
-const UDMServingSystemMethod = _enum_for_UDMServingSystemMethod;
+const UDMServingSystemMethod: typeof _enum_for_UDMServingSystemMethod = _enum_for_UDMServingSystemMethod;
 
 /**
  * @summary UDMServingSystemMethod_amf3GPPAccessRegistration
@@ -73,7 +73,7 @@ const UDMServingSystemMethod = _enum_for_UDMServingSystemMethod;
  * @type {number}
  */
 export
-const UDMServingSystemMethod_amf3GPPAccessRegistration: UDMServingSystemMethod = UDMServingSystemMethod.amf3GPPAccessRegistration; /* LONG_NAMED_ENUMERATED_VALUE */
+const UDMServingSystemMethod_amf3GPPAccessRegistration: _enum_for_UDMServingSystemMethod.amf3GPPAccessRegistration = UDMServingSystemMethod.amf3GPPAccessRegistration; /* LONG_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary amf3GPPAccessRegistration
@@ -81,7 +81,7 @@ const UDMServingSystemMethod_amf3GPPAccessRegistration: UDMServingSystemMethod =
  * @type {number}
  */
 export
-const amf3GPPAccessRegistration: UDMServingSystemMethod = UDMServingSystemMethod.amf3GPPAccessRegistration; /* SHORT_NAMED_ENUMERATED_VALUE */
+const amf3GPPAccessRegistration: _enum_for_UDMServingSystemMethod.amf3GPPAccessRegistration = UDMServingSystemMethod.amf3GPPAccessRegistration; /* SHORT_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary UDMServingSystemMethod_amfNon3GPPAccessRegistration
@@ -89,7 +89,7 @@ const amf3GPPAccessRegistration: UDMServingSystemMethod = UDMServingSystemMethod
  * @type {number}
  */
 export
-const UDMServingSystemMethod_amfNon3GPPAccessRegistration: UDMServingSystemMethod = UDMServingSystemMethod.amfNon3GPPAccessRegistration; /* LONG_NAMED_ENUMERATED_VALUE */
+const UDMServingSystemMethod_amfNon3GPPAccessRegistration: _enum_for_UDMServingSystemMethod.amfNon3GPPAccessRegistration = UDMServingSystemMethod.amfNon3GPPAccessRegistration; /* LONG_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary amfNon3GPPAccessRegistration
@@ -97,7 +97,7 @@ const UDMServingSystemMethod_amfNon3GPPAccessRegistration: UDMServingSystemMetho
  * @type {number}
  */
 export
-const amfNon3GPPAccessRegistration: UDMServingSystemMethod = UDMServingSystemMethod.amfNon3GPPAccessRegistration; /* SHORT_NAMED_ENUMERATED_VALUE */
+const amfNon3GPPAccessRegistration: _enum_for_UDMServingSystemMethod.amfNon3GPPAccessRegistration = UDMServingSystemMethod.amfNon3GPPAccessRegistration; /* SHORT_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary UDMServingSystemMethod_unknown
@@ -105,7 +105,7 @@ const amfNon3GPPAccessRegistration: UDMServingSystemMethod = UDMServingSystemMet
  * @type {number}
  */
 export
-const UDMServingSystemMethod_unknown: UDMServingSystemMethod = UDMServingSystemMethod.unknown; /* LONG_NAMED_ENUMERATED_VALUE */
+const UDMServingSystemMethod_unknown: _enum_for_UDMServingSystemMethod.unknown = UDMServingSystemMethod.unknown; /* LONG_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary unknown
@@ -113,7 +113,7 @@ const UDMServingSystemMethod_unknown: UDMServingSystemMethod = UDMServingSystemM
  * @type {number}
  */
 export
-const unknown: UDMServingSystemMethod = UDMServingSystemMethod.unknown; /* SHORT_NAMED_ENUMERATED_VALUE */
+const unknown: _enum_for_UDMServingSystemMethod.unknown = UDMServingSystemMethod.unknown; /* SHORT_NAMED_ENUMERATED_VALUE */
 export const _decode_UDMServingSystemMethod: $.ASN1Decoder<UDMServingSystemMethod> = $._decodeEnumerated;
 export const _encode_UDMServingSystemMethod: $.ASN1Encoder<UDMServingSystemMethod> = $._encodeEnumerated;
 

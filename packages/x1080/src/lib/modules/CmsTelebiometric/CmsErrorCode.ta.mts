@@ -1,6 +1,6 @@
 /* eslint-disable */
 import {
-    ASN1Element as _Element,
+    type ASN1Element as _Element,
     ASN1TagClass as _TagClass,
     ASN1Construction as _Construction,
     ASN1UniversalType as _UniversalType,
@@ -245,7 +245,7 @@ export type CmsErrorCode = _enum_for_CmsErrorCode;
  *
  * @enum {number}
  */
-export const CmsErrorCode = _enum_for_CmsErrorCode;
+export const CmsErrorCode: typeof _enum_for_CmsErrorCode = _enum_for_CmsErrorCode;
 
 
 /**
@@ -253,7 +253,7 @@ export const CmsErrorCode = _enum_for_CmsErrorCode;
  * @constant
  * @type {number}
  */
-export const CmsErrorCode_decodeFailure: CmsErrorCode =
+export const CmsErrorCode_decodeFailure: _enum_for_CmsErrorCode.decodeFailure =
     CmsErrorCode.decodeFailure; /* LONG_NAMED_ENUMERATED_VALUE */
 
 
@@ -262,7 +262,7 @@ export const CmsErrorCode_decodeFailure: CmsErrorCode =
  * @constant
  * @type {number}
  */
-export const decodeFailure: CmsErrorCode =
+export const decodeFailure: _enum_for_CmsErrorCode.decodeFailure =
     CmsErrorCode.decodeFailure; /* SHORT_NAMED_ENUMERATED_VALUE */
 
 
@@ -271,7 +271,7 @@ export const decodeFailure: CmsErrorCode =
  * @constant
  * @type {number}
  */
-export const CmsErrorCode_badContentInfo: CmsErrorCode =
+export const CmsErrorCode_badContentInfo: _enum_for_CmsErrorCode.badContentInfo =
     CmsErrorCode.badContentInfo; /* LONG_NAMED_ENUMERATED_VALUE */
 
 
@@ -280,7 +280,7 @@ export const CmsErrorCode_badContentInfo: CmsErrorCode =
  * @constant
  * @type {number}
  */
-export const badContentInfo: CmsErrorCode =
+export const badContentInfo: _enum_for_CmsErrorCode.badContentInfo =
     CmsErrorCode.badContentInfo; /* SHORT_NAMED_ENUMERATED_VALUE */
 
 
@@ -289,7 +289,7 @@ export const badContentInfo: CmsErrorCode =
  * @constant
  * @type {number}
  */
-export const CmsErrorCode_badSignedData: CmsErrorCode =
+export const CmsErrorCode_badSignedData: _enum_for_CmsErrorCode.badSignedData =
     CmsErrorCode.badSignedData; /* LONG_NAMED_ENUMERATED_VALUE */
 
 
@@ -298,7 +298,7 @@ export const CmsErrorCode_badSignedData: CmsErrorCode =
  * @constant
  * @type {number}
  */
-export const badSignedData: CmsErrorCode =
+export const badSignedData: _enum_for_CmsErrorCode.badSignedData =
     CmsErrorCode.badSignedData; /* SHORT_NAMED_ENUMERATED_VALUE */
 
 
@@ -307,7 +307,7 @@ export const badSignedData: CmsErrorCode =
  * @constant
  * @type {number}
  */
-export const CmsErrorCode_badEncapContent: CmsErrorCode =
+export const CmsErrorCode_badEncapContent: _enum_for_CmsErrorCode.badEncapContent =
     CmsErrorCode.badEncapContent; /* LONG_NAMED_ENUMERATED_VALUE */
 
 
@@ -316,7 +316,7 @@ export const CmsErrorCode_badEncapContent: CmsErrorCode =
  * @constant
  * @type {number}
  */
-export const badEncapContent: CmsErrorCode =
+export const badEncapContent: _enum_for_CmsErrorCode.badEncapContent =
     CmsErrorCode.badEncapContent; /* SHORT_NAMED_ENUMERATED_VALUE */
 
 
@@ -325,7 +325,7 @@ export const badEncapContent: CmsErrorCode =
  * @constant
  * @type {number}
  */
-export const CmsErrorCode_badCertificate: CmsErrorCode =
+export const CmsErrorCode_badCertificate: _enum_for_CmsErrorCode.badCertificate =
     CmsErrorCode.badCertificate; /* LONG_NAMED_ENUMERATED_VALUE */
 
 
@@ -334,7 +334,7 @@ export const CmsErrorCode_badCertificate: CmsErrorCode =
  * @constant
  * @type {number}
  */
-export const badCertificate: CmsErrorCode =
+export const badCertificate: _enum_for_CmsErrorCode.badCertificate =
     CmsErrorCode.badCertificate; /* SHORT_NAMED_ENUMERATED_VALUE */
 
 
@@ -343,7 +343,7 @@ export const badCertificate: CmsErrorCode =
  * @constant
  * @type {number}
  */
-export const CmsErrorCode_badSignerInfo: CmsErrorCode =
+export const CmsErrorCode_badSignerInfo: _enum_for_CmsErrorCode.badSignerInfo =
     CmsErrorCode.badSignerInfo; /* LONG_NAMED_ENUMERATED_VALUE */
 
 
@@ -352,7 +352,7 @@ export const CmsErrorCode_badSignerInfo: CmsErrorCode =
  * @constant
  * @type {number}
  */
-export const badSignerInfo: CmsErrorCode =
+export const badSignerInfo: _enum_for_CmsErrorCode.badSignerInfo =
     CmsErrorCode.badSignerInfo; /* SHORT_NAMED_ENUMERATED_VALUE */
 
 
@@ -361,7 +361,7 @@ export const badSignerInfo: CmsErrorCode =
  * @constant
  * @type {number}
  */
-export const CmsErrorCode_badSignedAttrs: CmsErrorCode =
+export const CmsErrorCode_badSignedAttrs: _enum_for_CmsErrorCode.badSignedAttrs =
     CmsErrorCode.badSignedAttrs; /* LONG_NAMED_ENUMERATED_VALUE */
 
 
@@ -370,7 +370,7 @@ export const CmsErrorCode_badSignedAttrs: CmsErrorCode =
  * @constant
  * @type {number}
  */
-export const badSignedAttrs: CmsErrorCode =
+export const badSignedAttrs: _enum_for_CmsErrorCode.badSignedAttrs =
     CmsErrorCode.badSignedAttrs; /* SHORT_NAMED_ENUMERATED_VALUE */
 
 
@@ -379,7 +379,7 @@ export const badSignedAttrs: CmsErrorCode =
  * @constant
  * @type {number}
  */
-export const CmsErrorCode_badUnsignedAttrs: CmsErrorCode =
+export const CmsErrorCode_badUnsignedAttrs: _enum_for_CmsErrorCode.badUnsignedAttrs =
     CmsErrorCode.badUnsignedAttrs; /* LONG_NAMED_ENUMERATED_VALUE */
 
 
@@ -388,7 +388,7 @@ export const CmsErrorCode_badUnsignedAttrs: CmsErrorCode =
  * @constant
  * @type {number}
  */
-export const badUnsignedAttrs: CmsErrorCode =
+export const badUnsignedAttrs: _enum_for_CmsErrorCode.badUnsignedAttrs =
     CmsErrorCode.badUnsignedAttrs; /* SHORT_NAMED_ENUMERATED_VALUE */
 
 
@@ -397,7 +397,7 @@ export const badUnsignedAttrs: CmsErrorCode =
  * @constant
  * @type {number}
  */
-export const CmsErrorCode_missingContent: CmsErrorCode =
+export const CmsErrorCode_missingContent: _enum_for_CmsErrorCode.missingContent =
     CmsErrorCode.missingContent; /* LONG_NAMED_ENUMERATED_VALUE */
 
 
@@ -406,7 +406,7 @@ export const CmsErrorCode_missingContent: CmsErrorCode =
  * @constant
  * @type {number}
  */
-export const missingContent: CmsErrorCode =
+export const missingContent: _enum_for_CmsErrorCode.missingContent =
     CmsErrorCode.missingContent; /* SHORT_NAMED_ENUMERATED_VALUE */
 
 
@@ -415,7 +415,7 @@ export const missingContent: CmsErrorCode =
  * @constant
  * @type {number}
  */
-export const CmsErrorCode_noTrustAnchor: CmsErrorCode =
+export const CmsErrorCode_noTrustAnchor: _enum_for_CmsErrorCode.noTrustAnchor =
     CmsErrorCode.noTrustAnchor; /* LONG_NAMED_ENUMERATED_VALUE */
 
 
@@ -424,7 +424,7 @@ export const CmsErrorCode_noTrustAnchor: CmsErrorCode =
  * @constant
  * @type {number}
  */
-export const noTrustAnchor: CmsErrorCode =
+export const noTrustAnchor: _enum_for_CmsErrorCode.noTrustAnchor =
     CmsErrorCode.noTrustAnchor; /* SHORT_NAMED_ENUMERATED_VALUE */
 
 
@@ -433,7 +433,7 @@ export const noTrustAnchor: CmsErrorCode =
  * @constant
  * @type {number}
  */
-export const CmsErrorCode_notAuthorized: CmsErrorCode =
+export const CmsErrorCode_notAuthorized: _enum_for_CmsErrorCode.notAuthorized =
     CmsErrorCode.notAuthorized; /* LONG_NAMED_ENUMERATED_VALUE */
 
 
@@ -442,7 +442,7 @@ export const CmsErrorCode_notAuthorized: CmsErrorCode =
  * @constant
  * @type {number}
  */
-export const notAuthorized: CmsErrorCode =
+export const notAuthorized: _enum_for_CmsErrorCode.notAuthorized =
     CmsErrorCode.notAuthorized; /* SHORT_NAMED_ENUMERATED_VALUE */
 
 
@@ -451,7 +451,7 @@ export const notAuthorized: CmsErrorCode =
  * @constant
  * @type {number}
  */
-export const CmsErrorCode_badDigestAlgorithm: CmsErrorCode =
+export const CmsErrorCode_badDigestAlgorithm: _enum_for_CmsErrorCode.badDigestAlgorithm =
     CmsErrorCode.badDigestAlgorithm; /* LONG_NAMED_ENUMERATED_VALUE */
 
 
@@ -460,7 +460,7 @@ export const CmsErrorCode_badDigestAlgorithm: CmsErrorCode =
  * @constant
  * @type {number}
  */
-export const badDigestAlgorithm: CmsErrorCode =
+export const badDigestAlgorithm: _enum_for_CmsErrorCode.badDigestAlgorithm =
     CmsErrorCode.badDigestAlgorithm; /* SHORT_NAMED_ENUMERATED_VALUE */
 
 
@@ -469,7 +469,7 @@ export const badDigestAlgorithm: CmsErrorCode =
  * @constant
  * @type {number}
  */
-export const CmsErrorCode_badSignatureAlgorithm: CmsErrorCode =
+export const CmsErrorCode_badSignatureAlgorithm: _enum_for_CmsErrorCode.badSignatureAlgorithm =
     CmsErrorCode.badSignatureAlgorithm; /* LONG_NAMED_ENUMERATED_VALUE */
 
 
@@ -478,7 +478,7 @@ export const CmsErrorCode_badSignatureAlgorithm: CmsErrorCode =
  * @constant
  * @type {number}
  */
-export const badSignatureAlgorithm: CmsErrorCode =
+export const badSignatureAlgorithm: _enum_for_CmsErrorCode.badSignatureAlgorithm =
     CmsErrorCode.badSignatureAlgorithm; /* SHORT_NAMED_ENUMERATED_VALUE */
 
 
@@ -487,7 +487,7 @@ export const badSignatureAlgorithm: CmsErrorCode =
  * @constant
  * @type {number}
  */
-export const CmsErrorCode_unsupportedKeySize: CmsErrorCode =
+export const CmsErrorCode_unsupportedKeySize: _enum_for_CmsErrorCode.unsupportedKeySize =
     CmsErrorCode.unsupportedKeySize; /* LONG_NAMED_ENUMERATED_VALUE */
 
 
@@ -496,7 +496,7 @@ export const CmsErrorCode_unsupportedKeySize: CmsErrorCode =
  * @constant
  * @type {number}
  */
-export const unsupportedKeySize: CmsErrorCode =
+export const unsupportedKeySize: _enum_for_CmsErrorCode.unsupportedKeySize =
     CmsErrorCode.unsupportedKeySize; /* SHORT_NAMED_ENUMERATED_VALUE */
 
 
@@ -505,7 +505,7 @@ export const unsupportedKeySize: CmsErrorCode =
  * @constant
  * @type {number}
  */
-export const CmsErrorCode_unsupportedParameters: CmsErrorCode =
+export const CmsErrorCode_unsupportedParameters: _enum_for_CmsErrorCode.unsupportedParameters =
     CmsErrorCode.unsupportedParameters; /* LONG_NAMED_ENUMERATED_VALUE */
 
 
@@ -514,7 +514,7 @@ export const CmsErrorCode_unsupportedParameters: CmsErrorCode =
  * @constant
  * @type {number}
  */
-export const unsupportedParameters: CmsErrorCode =
+export const unsupportedParameters: _enum_for_CmsErrorCode.unsupportedParameters =
     CmsErrorCode.unsupportedParameters; /* SHORT_NAMED_ENUMERATED_VALUE */
 
 
@@ -523,7 +523,7 @@ export const unsupportedParameters: CmsErrorCode =
  * @constant
  * @type {number}
  */
-export const CmsErrorCode_signatureFailure: CmsErrorCode =
+export const CmsErrorCode_signatureFailure: _enum_for_CmsErrorCode.signatureFailure =
     CmsErrorCode.signatureFailure; /* LONG_NAMED_ENUMERATED_VALUE */
 
 
@@ -532,7 +532,7 @@ export const CmsErrorCode_signatureFailure: CmsErrorCode =
  * @constant
  * @type {number}
  */
-export const signatureFailure: CmsErrorCode =
+export const signatureFailure: _enum_for_CmsErrorCode.signatureFailure =
     CmsErrorCode.signatureFailure; /* SHORT_NAMED_ENUMERATED_VALUE */
 
 
@@ -541,7 +541,7 @@ export const signatureFailure: CmsErrorCode =
  * @constant
  * @type {number}
  */
-export const CmsErrorCode_incorrectTarget: CmsErrorCode =
+export const CmsErrorCode_incorrectTarget: _enum_for_CmsErrorCode.incorrectTarget =
     CmsErrorCode.incorrectTarget; /* LONG_NAMED_ENUMERATED_VALUE */
 
 
@@ -550,7 +550,7 @@ export const CmsErrorCode_incorrectTarget: CmsErrorCode =
  * @constant
  * @type {number}
  */
-export const incorrectTarget: CmsErrorCode =
+export const incorrectTarget: _enum_for_CmsErrorCode.incorrectTarget =
     CmsErrorCode.incorrectTarget; /* SHORT_NAMED_ENUMERATED_VALUE */
 
 
@@ -559,7 +559,7 @@ export const incorrectTarget: CmsErrorCode =
  * @constant
  * @type {number}
  */
-export const CmsErrorCode_missingSignature: CmsErrorCode =
+export const CmsErrorCode_missingSignature: _enum_for_CmsErrorCode.missingSignature =
     CmsErrorCode.missingSignature; /* LONG_NAMED_ENUMERATED_VALUE */
 
 
@@ -568,7 +568,7 @@ export const CmsErrorCode_missingSignature: CmsErrorCode =
  * @constant
  * @type {number}
  */
-export const missingSignature: CmsErrorCode =
+export const missingSignature: _enum_for_CmsErrorCode.missingSignature =
     CmsErrorCode.missingSignature; /* SHORT_NAMED_ENUMERATED_VALUE */
 
 
@@ -577,7 +577,7 @@ export const missingSignature: CmsErrorCode =
  * @constant
  * @type {number}
  */
-export const CmsErrorCode_versionNumberMismatch: CmsErrorCode =
+export const CmsErrorCode_versionNumberMismatch: _enum_for_CmsErrorCode.versionNumberMismatch =
     CmsErrorCode.versionNumberMismatch; /* LONG_NAMED_ENUMERATED_VALUE */
 
 
@@ -586,7 +586,7 @@ export const CmsErrorCode_versionNumberMismatch: CmsErrorCode =
  * @constant
  * @type {number}
  */
-export const versionNumberMismatch: CmsErrorCode =
+export const versionNumberMismatch: _enum_for_CmsErrorCode.versionNumberMismatch =
     CmsErrorCode.versionNumberMismatch; /* SHORT_NAMED_ENUMERATED_VALUE */
 
 
@@ -595,7 +595,7 @@ export const versionNumberMismatch: CmsErrorCode =
  * @constant
  * @type {number}
  */
-export const CmsErrorCode_revokedCertificate: CmsErrorCode =
+export const CmsErrorCode_revokedCertificate: _enum_for_CmsErrorCode.revokedCertificate =
     CmsErrorCode.revokedCertificate; /* LONG_NAMED_ENUMERATED_VALUE */
 
 
@@ -604,7 +604,7 @@ export const CmsErrorCode_revokedCertificate: CmsErrorCode =
  * @constant
  * @type {number}
  */
-export const revokedCertificate: CmsErrorCode =
+export const revokedCertificate: _enum_for_CmsErrorCode.revokedCertificate =
     CmsErrorCode.revokedCertificate; /* SHORT_NAMED_ENUMERATED_VALUE */
 
 
@@ -613,7 +613,7 @@ export const revokedCertificate: CmsErrorCode =
  * @constant
  * @type {number}
  */
-export const CmsErrorCode_badEncryptedData: CmsErrorCode =
+export const CmsErrorCode_badEncryptedData: _enum_for_CmsErrorCode.badEncryptedData =
     CmsErrorCode.badEncryptedData; /* LONG_NAMED_ENUMERATED_VALUE */
 
 
@@ -622,7 +622,7 @@ export const CmsErrorCode_badEncryptedData: CmsErrorCode =
  * @constant
  * @type {number}
  */
-export const badEncryptedData: CmsErrorCode =
+export const badEncryptedData: _enum_for_CmsErrorCode.badEncryptedData =
     CmsErrorCode.badEncryptedData; /* SHORT_NAMED_ENUMERATED_VALUE */
 
 
@@ -631,7 +631,7 @@ export const badEncryptedData: CmsErrorCode =
  * @constant
  * @type {number}
  */
-export const CmsErrorCode_badEnvelopedData: CmsErrorCode =
+export const CmsErrorCode_badEnvelopedData: _enum_for_CmsErrorCode.badEnvelopedData =
     CmsErrorCode.badEnvelopedData; /* LONG_NAMED_ENUMERATED_VALUE */
 
 
@@ -640,7 +640,7 @@ export const CmsErrorCode_badEnvelopedData: CmsErrorCode =
  * @constant
  * @type {number}
  */
-export const badEnvelopedData: CmsErrorCode =
+export const badEnvelopedData: _enum_for_CmsErrorCode.badEnvelopedData =
     CmsErrorCode.badEnvelopedData; /* SHORT_NAMED_ENUMERATED_VALUE */
 
 
@@ -649,7 +649,7 @@ export const badEnvelopedData: CmsErrorCode =
  * @constant
  * @type {number}
  */
-export const CmsErrorCode_badKeyAgreeRecipientInfo: CmsErrorCode =
+export const CmsErrorCode_badKeyAgreeRecipientInfo: _enum_for_CmsErrorCode.badKeyAgreeRecipientInfo =
     CmsErrorCode.badKeyAgreeRecipientInfo; /* LONG_NAMED_ENUMERATED_VALUE */
 
 
@@ -658,7 +658,7 @@ export const CmsErrorCode_badKeyAgreeRecipientInfo: CmsErrorCode =
  * @constant
  * @type {number}
  */
-export const badKeyAgreeRecipientInfo: CmsErrorCode =
+export const badKeyAgreeRecipientInfo: _enum_for_CmsErrorCode.badKeyAgreeRecipientInfo =
     CmsErrorCode.badKeyAgreeRecipientInfo; /* SHORT_NAMED_ENUMERATED_VALUE */
 
 
@@ -667,7 +667,7 @@ export const badKeyAgreeRecipientInfo: CmsErrorCode =
  * @constant
  * @type {number}
  */
-export const CmsErrorCode_badKEKRecipientInfo: CmsErrorCode =
+export const CmsErrorCode_badKEKRecipientInfo: _enum_for_CmsErrorCode.badKEKRecipientInfo =
     CmsErrorCode.badKEKRecipientInfo; /* LONG_NAMED_ENUMERATED_VALUE */
 
 
@@ -676,7 +676,7 @@ export const CmsErrorCode_badKEKRecipientInfo: CmsErrorCode =
  * @constant
  * @type {number}
  */
-export const badKEKRecipientInfo: CmsErrorCode =
+export const badKEKRecipientInfo: _enum_for_CmsErrorCode.badKEKRecipientInfo =
     CmsErrorCode.badKEKRecipientInfo; /* SHORT_NAMED_ENUMERATED_VALUE */
 
 
@@ -685,7 +685,7 @@ export const badKEKRecipientInfo: CmsErrorCode =
  * @constant
  * @type {number}
  */
-export const CmsErrorCode_badEncryptContent: CmsErrorCode =
+export const CmsErrorCode_badEncryptContent: _enum_for_CmsErrorCode.badEncryptContent =
     CmsErrorCode.badEncryptContent; /* LONG_NAMED_ENUMERATED_VALUE */
 
 
@@ -694,7 +694,7 @@ export const CmsErrorCode_badEncryptContent: CmsErrorCode =
  * @constant
  * @type {number}
  */
-export const badEncryptContent: CmsErrorCode =
+export const badEncryptContent: _enum_for_CmsErrorCode.badEncryptContent =
     CmsErrorCode.badEncryptContent; /* SHORT_NAMED_ENUMERATED_VALUE */
 
 
@@ -703,7 +703,7 @@ export const badEncryptContent: CmsErrorCode =
  * @constant
  * @type {number}
  */
-export const CmsErrorCode_badEncryptAlgorithm: CmsErrorCode =
+export const CmsErrorCode_badEncryptAlgorithm: _enum_for_CmsErrorCode.badEncryptAlgorithm =
     CmsErrorCode.badEncryptAlgorithm; /* LONG_NAMED_ENUMERATED_VALUE */
 
 
@@ -712,7 +712,7 @@ export const CmsErrorCode_badEncryptAlgorithm: CmsErrorCode =
  * @constant
  * @type {number}
  */
-export const badEncryptAlgorithm: CmsErrorCode =
+export const badEncryptAlgorithm: _enum_for_CmsErrorCode.badEncryptAlgorithm =
     CmsErrorCode.badEncryptAlgorithm; /* SHORT_NAMED_ENUMERATED_VALUE */
 
 
@@ -721,7 +721,7 @@ export const badEncryptAlgorithm: CmsErrorCode =
  * @constant
  * @type {number}
  */
-export const CmsErrorCode_missingCiphertext: CmsErrorCode =
+export const CmsErrorCode_missingCiphertext: _enum_for_CmsErrorCode.missingCiphertext =
     CmsErrorCode.missingCiphertext; /* LONG_NAMED_ENUMERATED_VALUE */
 
 
@@ -730,7 +730,7 @@ export const CmsErrorCode_missingCiphertext: CmsErrorCode =
  * @constant
  * @type {number}
  */
-export const missingCiphertext: CmsErrorCode =
+export const missingCiphertext: _enum_for_CmsErrorCode.missingCiphertext =
     CmsErrorCode.missingCiphertext; /* SHORT_NAMED_ENUMERATED_VALUE */
 
 
@@ -739,7 +739,7 @@ export const missingCiphertext: CmsErrorCode =
  * @constant
  * @type {number}
  */
-export const CmsErrorCode_decryptFailure: CmsErrorCode =
+export const CmsErrorCode_decryptFailure: _enum_for_CmsErrorCode.decryptFailure =
     CmsErrorCode.decryptFailure; /* LONG_NAMED_ENUMERATED_VALUE */
 
 
@@ -748,7 +748,7 @@ export const CmsErrorCode_decryptFailure: CmsErrorCode =
  * @constant
  * @type {number}
  */
-export const decryptFailure: CmsErrorCode =
+export const decryptFailure: _enum_for_CmsErrorCode.decryptFailure =
     CmsErrorCode.decryptFailure; /* SHORT_NAMED_ENUMERATED_VALUE */
 
 
@@ -757,7 +757,7 @@ export const decryptFailure: CmsErrorCode =
  * @constant
  * @type {number}
  */
-export const CmsErrorCode_badMACAlgorithm: CmsErrorCode =
+export const CmsErrorCode_badMACAlgorithm: _enum_for_CmsErrorCode.badMACAlgorithm =
     CmsErrorCode.badMACAlgorithm; /* LONG_NAMED_ENUMERATED_VALUE */
 
 
@@ -766,7 +766,7 @@ export const CmsErrorCode_badMACAlgorithm: CmsErrorCode =
  * @constant
  * @type {number}
  */
-export const badMACAlgorithm: CmsErrorCode =
+export const badMACAlgorithm: _enum_for_CmsErrorCode.badMACAlgorithm =
     CmsErrorCode.badMACAlgorithm; /* SHORT_NAMED_ENUMERATED_VALUE */
 
 
@@ -775,7 +775,7 @@ export const badMACAlgorithm: CmsErrorCode =
  * @constant
  * @type {number}
  */
-export const CmsErrorCode_badAuthAttrs: CmsErrorCode =
+export const CmsErrorCode_badAuthAttrs: _enum_for_CmsErrorCode.badAuthAttrs =
     CmsErrorCode.badAuthAttrs; /* LONG_NAMED_ENUMERATED_VALUE */
 
 
@@ -784,7 +784,7 @@ export const CmsErrorCode_badAuthAttrs: CmsErrorCode =
  * @constant
  * @type {number}
  */
-export const badAuthAttrs: CmsErrorCode =
+export const badAuthAttrs: _enum_for_CmsErrorCode.badAuthAttrs =
     CmsErrorCode.badAuthAttrs; /* SHORT_NAMED_ENUMERATED_VALUE */
 
 
@@ -793,7 +793,7 @@ export const badAuthAttrs: CmsErrorCode =
  * @constant
  * @type {number}
  */
-export const CmsErrorCode_badUnauthAttrs: CmsErrorCode =
+export const CmsErrorCode_badUnauthAttrs: _enum_for_CmsErrorCode.badUnauthAttrs =
     CmsErrorCode.badUnauthAttrs; /* LONG_NAMED_ENUMERATED_VALUE */
 
 
@@ -802,7 +802,7 @@ export const CmsErrorCode_badUnauthAttrs: CmsErrorCode =
  * @constant
  * @type {number}
  */
-export const badUnauthAttrs: CmsErrorCode =
+export const badUnauthAttrs: _enum_for_CmsErrorCode.badUnauthAttrs =
     CmsErrorCode.badUnauthAttrs; /* SHORT_NAMED_ENUMERATED_VALUE */
 
 
@@ -811,7 +811,7 @@ export const badUnauthAttrs: CmsErrorCode =
  * @constant
  * @type {number}
  */
-export const CmsErrorCode_invalidMAC: CmsErrorCode =
+export const CmsErrorCode_invalidMAC: _enum_for_CmsErrorCode.invalidMAC =
     CmsErrorCode.invalidMAC; /* LONG_NAMED_ENUMERATED_VALUE */
 
 
@@ -820,7 +820,7 @@ export const CmsErrorCode_invalidMAC: CmsErrorCode =
  * @constant
  * @type {number}
  */
-export const invalidMAC: CmsErrorCode =
+export const invalidMAC: _enum_for_CmsErrorCode.invalidMAC =
     CmsErrorCode.invalidMAC; /* SHORT_NAMED_ENUMERATED_VALUE */
 
 
@@ -829,7 +829,7 @@ export const invalidMAC: CmsErrorCode =
  * @constant
  * @type {number}
  */
-export const CmsErrorCode_mismatchedDigestAlg: CmsErrorCode =
+export const CmsErrorCode_mismatchedDigestAlg: _enum_for_CmsErrorCode.mismatchedDigestAlg =
     CmsErrorCode.mismatchedDigestAlg; /* LONG_NAMED_ENUMERATED_VALUE */
 
 
@@ -838,7 +838,7 @@ export const CmsErrorCode_mismatchedDigestAlg: CmsErrorCode =
  * @constant
  * @type {number}
  */
-export const mismatchedDigestAlg: CmsErrorCode =
+export const mismatchedDigestAlg: _enum_for_CmsErrorCode.mismatchedDigestAlg =
     CmsErrorCode.mismatchedDigestAlg; /* SHORT_NAMED_ENUMERATED_VALUE */
 
 
@@ -847,7 +847,7 @@ export const mismatchedDigestAlg: CmsErrorCode =
  * @constant
  * @type {number}
  */
-export const CmsErrorCode_missingCertificate: CmsErrorCode =
+export const CmsErrorCode_missingCertificate: _enum_for_CmsErrorCode.missingCertificate =
     CmsErrorCode.missingCertificate; /* LONG_NAMED_ENUMERATED_VALUE */
 
 
@@ -856,7 +856,7 @@ export const CmsErrorCode_missingCertificate: CmsErrorCode =
  * @constant
  * @type {number}
  */
-export const missingCertificate: CmsErrorCode =
+export const missingCertificate: _enum_for_CmsErrorCode.missingCertificate =
     CmsErrorCode.missingCertificate; /* SHORT_NAMED_ENUMERATED_VALUE */
 
 
@@ -865,7 +865,7 @@ export const missingCertificate: CmsErrorCode =
  * @constant
  * @type {number}
  */
-export const CmsErrorCode_tooManySigners: CmsErrorCode =
+export const CmsErrorCode_tooManySigners: _enum_for_CmsErrorCode.tooManySigners =
     CmsErrorCode.tooManySigners; /* LONG_NAMED_ENUMERATED_VALUE */
 
 
@@ -874,7 +874,7 @@ export const CmsErrorCode_tooManySigners: CmsErrorCode =
  * @constant
  * @type {number}
  */
-export const tooManySigners: CmsErrorCode =
+export const tooManySigners: _enum_for_CmsErrorCode.tooManySigners =
     CmsErrorCode.tooManySigners; /* SHORT_NAMED_ENUMERATED_VALUE */
 
 
@@ -883,7 +883,7 @@ export const tooManySigners: CmsErrorCode =
  * @constant
  * @type {number}
  */
-export const CmsErrorCode_missingSignedAttributes: CmsErrorCode =
+export const CmsErrorCode_missingSignedAttributes: _enum_for_CmsErrorCode.missingSignedAttributes =
     CmsErrorCode.missingSignedAttributes; /* LONG_NAMED_ENUMERATED_VALUE */
 
 
@@ -892,7 +892,7 @@ export const CmsErrorCode_missingSignedAttributes: CmsErrorCode =
  * @constant
  * @type {number}
  */
-export const missingSignedAttributes: CmsErrorCode =
+export const missingSignedAttributes: _enum_for_CmsErrorCode.missingSignedAttributes =
     CmsErrorCode.missingSignedAttributes; /* SHORT_NAMED_ENUMERATED_VALUE */
 
 
@@ -901,7 +901,7 @@ export const missingSignedAttributes: CmsErrorCode =
  * @constant
  * @type {number}
  */
-export const CmsErrorCode_derEncodingNotUsed: CmsErrorCode =
+export const CmsErrorCode_derEncodingNotUsed: _enum_for_CmsErrorCode.derEncodingNotUsed =
     CmsErrorCode.derEncodingNotUsed; /* LONG_NAMED_ENUMERATED_VALUE */
 
 
@@ -910,7 +910,7 @@ export const CmsErrorCode_derEncodingNotUsed: CmsErrorCode =
  * @constant
  * @type {number}
  */
-export const derEncodingNotUsed: CmsErrorCode =
+export const derEncodingNotUsed: _enum_for_CmsErrorCode.derEncodingNotUsed =
     CmsErrorCode.derEncodingNotUsed; /* SHORT_NAMED_ENUMERATED_VALUE */
 
 
@@ -919,7 +919,7 @@ export const derEncodingNotUsed: CmsErrorCode =
  * @constant
  * @type {number}
  */
-export const CmsErrorCode_invalidAttributeLocation: CmsErrorCode =
+export const CmsErrorCode_invalidAttributeLocation: _enum_for_CmsErrorCode.invalidAttributeLocation =
     CmsErrorCode.invalidAttributeLocation; /* LONG_NAMED_ENUMERATED_VALUE */
 
 
@@ -928,7 +928,7 @@ export const CmsErrorCode_invalidAttributeLocation: CmsErrorCode =
  * @constant
  * @type {number}
  */
-export const invalidAttributeLocation: CmsErrorCode =
+export const invalidAttributeLocation: _enum_for_CmsErrorCode.invalidAttributeLocation =
     CmsErrorCode.invalidAttributeLocation; /* SHORT_NAMED_ENUMERATED_VALUE */
 
 
@@ -937,7 +937,7 @@ export const invalidAttributeLocation: CmsErrorCode =
  * @constant
  * @type {number}
  */
-export const CmsErrorCode_badAttributes: CmsErrorCode =
+export const CmsErrorCode_badAttributes: _enum_for_CmsErrorCode.badAttributes =
     CmsErrorCode.badAttributes; /* LONG_NAMED_ENUMERATED_VALUE */
 
 
@@ -946,7 +946,7 @@ export const CmsErrorCode_badAttributes: CmsErrorCode =
  * @constant
  * @type {number}
  */
-export const badAttributes: CmsErrorCode =
+export const badAttributes: _enum_for_CmsErrorCode.badAttributes =
     CmsErrorCode.badAttributes; /* SHORT_NAMED_ENUMERATED_VALUE */
 
 
@@ -955,7 +955,7 @@ export const badAttributes: CmsErrorCode =
  * @constant
  * @type {number}
  */
-export const CmsErrorCode_noMatchingRecipientInfo: CmsErrorCode =
+export const CmsErrorCode_noMatchingRecipientInfo: _enum_for_CmsErrorCode.noMatchingRecipientInfo =
     CmsErrorCode.noMatchingRecipientInfo; /* LONG_NAMED_ENUMERATED_VALUE */
 
 
@@ -964,7 +964,7 @@ export const CmsErrorCode_noMatchingRecipientInfo: CmsErrorCode =
  * @constant
  * @type {number}
  */
-export const noMatchingRecipientInfo: CmsErrorCode =
+export const noMatchingRecipientInfo: _enum_for_CmsErrorCode.noMatchingRecipientInfo =
     CmsErrorCode.noMatchingRecipientInfo; /* SHORT_NAMED_ENUMERATED_VALUE */
 
 
@@ -973,7 +973,7 @@ export const noMatchingRecipientInfo: CmsErrorCode =
  * @constant
  * @type {number}
  */
-export const CmsErrorCode_unsupportedKeyWrapAlgorithm: CmsErrorCode =
+export const CmsErrorCode_unsupportedKeyWrapAlgorithm: _enum_for_CmsErrorCode.unsupportedKeyWrapAlgorithm =
     CmsErrorCode.unsupportedKeyWrapAlgorithm; /* LONG_NAMED_ENUMERATED_VALUE */
 
 
@@ -982,7 +982,7 @@ export const CmsErrorCode_unsupportedKeyWrapAlgorithm: CmsErrorCode =
  * @constant
  * @type {number}
  */
-export const unsupportedKeyWrapAlgorithm: CmsErrorCode =
+export const unsupportedKeyWrapAlgorithm: _enum_for_CmsErrorCode.unsupportedKeyWrapAlgorithm =
     CmsErrorCode.unsupportedKeyWrapAlgorithm; /* SHORT_NAMED_ENUMERATED_VALUE */
 
 
@@ -991,7 +991,7 @@ export const unsupportedKeyWrapAlgorithm: CmsErrorCode =
  * @constant
  * @type {number}
  */
-export const CmsErrorCode_badKeyTransRecipientInfo: CmsErrorCode =
+export const CmsErrorCode_badKeyTransRecipientInfo: _enum_for_CmsErrorCode.badKeyTransRecipientInfo =
     CmsErrorCode.badKeyTransRecipientInfo; /* LONG_NAMED_ENUMERATED_VALUE */
 
 
@@ -1000,7 +1000,7 @@ export const CmsErrorCode_badKeyTransRecipientInfo: CmsErrorCode =
  * @constant
  * @type {number}
  */
-export const badKeyTransRecipientInfo: CmsErrorCode =
+export const badKeyTransRecipientInfo: _enum_for_CmsErrorCode.badKeyTransRecipientInfo =
     CmsErrorCode.badKeyTransRecipientInfo; /* SHORT_NAMED_ENUMERATED_VALUE */
 
 
@@ -1009,7 +1009,7 @@ export const badKeyTransRecipientInfo: CmsErrorCode =
  * @constant
  * @type {number}
  */
-export const CmsErrorCode_other: CmsErrorCode =
+export const CmsErrorCode_other: _enum_for_CmsErrorCode.other =
     CmsErrorCode.other; /* LONG_NAMED_ENUMERATED_VALUE */
 
 
@@ -1018,18 +1018,18 @@ export const CmsErrorCode_other: CmsErrorCode =
  * @constant
  * @type {number}
  */
-export const other: CmsErrorCode =
+export const other: _enum_for_CmsErrorCode.other =
     CmsErrorCode.other; /* SHORT_NAMED_ENUMERATED_VALUE */
 
 
 
 
-export const _decode_CmsErrorCode = $._decodeEnumerated;
+export const _decode_CmsErrorCode: $.ASN1Decoder<number> = $._decodeEnumerated;
 
 
 
 
-export const _encode_CmsErrorCode = $._encodeEnumerated;
+export const _encode_CmsErrorCode: $.ASN1Encoder<number> = $._encodeEnumerated;
 
 
 /* eslint-enable */

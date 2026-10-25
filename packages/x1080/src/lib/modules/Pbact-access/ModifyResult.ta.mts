@@ -1,6 +1,6 @@
 /* eslint-disable */
 import {
-    ASN1Element as _Element,
+    type ASN1Element as _Element,
     ASN1TagClass as _TagClass,
     ASN1Construction as _Construction,
     ASN1UniversalType as _UniversalType,
@@ -11,7 +11,7 @@ import {
 } from '@wildboar/asn1';
 import * as $ from '@wildboar/asn1/functional';
 import {
-    ModifyResult_result,
+    type ModifyResult_result,
     _decode_ModifyResult_result,
     _encode_ModifyResult_result,
 } from '../Pbact-access/ModifyResult-result.ta.mjs';
@@ -37,26 +37,32 @@ import {
  *
  */
 export class ModifyResult {
+    /**
+     * @summary `result`.
+     * @description
+     *
+     * Success (`ObjectInformation`) or failure (`AccessdErr`).
+     * ITU-T Rec. X.1080.0 (2017) Cor.1
+     * [§8.8](https://www.itu.int/rec/T-REC-X.1080.0-201703-I!Cor1).
+     *
+     * @public
+     * @readonly
+     */
+    public readonly result: ModifyResult_result;
+    /**
+     * @summary Extensions that are not recognized.
+     * @public
+     * @readonly
+     */
+    public readonly _unrecognizedExtensionsList: _Element[];
+
     constructor(
-        /**
-         * @summary `result`.
-         * @description
-         *
-         * Success (`ObjectInformation`) or failure (`AccessdErr`).
-         * ITU-T Rec. X.1080.0 (2017) Cor.1
-         * [§8.8](https://www.itu.int/rec/T-REC-X.1080.0-201703-I!Cor1).
-         *
-         * @public
-         * @readonly
-         */
-        readonly result: ModifyResult_result,
-        /**
-         * @summary Extensions that are not recognized.
-         * @public
-         * @readonly
-         */
-        readonly _unrecognizedExtensionsList: _Element[] = []
-    ) {}
+        result: ModifyResult_result,
+        _unrecognizedExtensionsList: _Element[] = []
+    ) {
+        this.result = result;
+        this._unrecognizedExtensionsList = _unrecognizedExtensionsList;
+    }
 
     /**
      * @summary Restructures an object into a ModifyResult

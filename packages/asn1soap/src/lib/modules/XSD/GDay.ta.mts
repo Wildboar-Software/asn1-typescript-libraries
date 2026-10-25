@@ -11,7 +11,7 @@ import {
 } from '@wildboar/asn1';
 import * as $ from '@wildboar/asn1/functional';
 import {
-  DateTimeType,
+  type DateTimeType,
   _decode_DateTimeType,
   _encode_DateTimeType,
 } from '../XSD/DateTimeType.ta.mjs';
@@ -32,26 +32,13 @@ import {
  */
 export type GDay = DateTimeType; // DefinedType
 
-
-let _cached_decoder_for_GDay: $.ASN1Decoder<GDay> | null = null;
-
-
 /**
  * @summary Decodes an ASN.1 element into a(n) GDay
  * @function
  * @param {_Element} el The element being decoded.
  * @returns {GDay} The decoded data structure.
  */
-export function _decode_GDay(el: _Element): GDay {
-  if (!_cached_decoder_for_GDay) {
-    _cached_decoder_for_GDay = _decode_DateTimeType;
-  }
-  return _cached_decoder_for_GDay(el);
-}
-
-
-let _cached_encoder_for_GDay: $.ASN1Encoder<GDay> | null = null;
-
+export const _decode_GDay: $.ASN1Decoder<GDay> = _decode_DateTimeType;
 
 /**
  * @summary Encodes a(n) GDay into an ASN.1 Element.
@@ -60,12 +47,7 @@ let _cached_encoder_for_GDay: $.ASN1Encoder<GDay> | null = null;
  * @param elGetter A function that can be used to get new ASN.1 elements.
  * @returns {_Element} The GDay, encoded as an ASN.1 Element.
  */
-export function _encode_GDay(value: GDay, elGetter: $.ASN1Encoder<GDay>): _Element {
-  if (!_cached_encoder_for_GDay) {
-    _cached_encoder_for_GDay = _encode_DateTimeType;
-  }
-  return _cached_encoder_for_GDay(value, elGetter);
-}
+export const _encode_GDay: $.ASN1Encoder<GDay> = _encode_DateTimeType;
 
 
 /* eslint-enable */

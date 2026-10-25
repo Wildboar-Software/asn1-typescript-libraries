@@ -2,11 +2,11 @@
 
 import * as $ from "@wildboar/asn1/functional";
 import {
-    OPTIONAL,
-    BOOLEAN,
-    SEQUENCE,
-    SET,
-    ASN1Element as _Element,
+    type OPTIONAL,
+    type BOOLEAN,
+    type SEQUENCE,
+    type SET,
+    type ASN1Element as _Element,
     ASN1TagClass as _TagClass
 } from "@wildboar/asn1";
 import { CSTACommonArguments, _decode_CSTACommonArguments, _encode_CSTACommonArguments } from "../CSTA-extension-types/CSTACommonArguments.ta.mjs";
@@ -34,28 +34,34 @@ import { CSTACommonArguments, _decode_CSTACommonArguments, _encode_CSTACommonArg
  */
 export
 class GetCallerIDStatusResult {
+    /**
+     * @summary `callerIDProvided`.
+     * @description
+     *
+     * TRUE: provide Caller ID on originating calls. FALSE: do not provide
+     * it to the called device.
+     * @public
+     * @readonly
+     */
+    public readonly callerIDProvided: BOOLEAN;
+    /**
+     * @summary `extensions`.
+     * @description
+     *
+     * Optional security (timestamp, sequence, securityInfo) and
+     * privateData.
+     * @public
+     * @readonly
+     */
+    public readonly extensions?: OPTIONAL<CSTACommonArguments>;
+
     constructor (
-        /**
-         * @summary `callerIDProvided`.
-         * @description
-         *
-         * TRUE: provide Caller ID on originating calls. FALSE: do not provide
-         * it to the called device.
-         * @public
-         * @readonly
-         */
-        readonly callerIDProvided: BOOLEAN,
-        /**
-         * @summary `extensions`.
-         * @description
-         *
-         * Optional security (timestamp, sequence, securityInfo) and
-         * privateData.
-         * @public
-         * @readonly
-         */
-        readonly extensions?: OPTIONAL<CSTACommonArguments>
-    ) {}
+        callerIDProvided: BOOLEAN,
+        extensions?: OPTIONAL<CSTACommonArguments>
+    ) {
+        this.callerIDProvided = callerIDProvided;
+        this.extensions = extensions;
+    }
 
     /**
      * @summary Restructures an object into a GetCallerIDStatusResult

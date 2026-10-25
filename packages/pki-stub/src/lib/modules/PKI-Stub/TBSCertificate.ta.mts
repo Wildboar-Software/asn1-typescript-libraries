@@ -1,7 +1,7 @@
 /* eslint-disable */
 import {
-    OPTIONAL,
-    ASN1Element as _Element,
+    type OPTIONAL,
+    type ASN1Element as _Element,
     ASN1TagClass as _TagClass,
     ASN1Construction as _Construction,
     ASN1UniversalType as _UniversalType,
@@ -12,13 +12,13 @@ import {
 } from "@wildboar/asn1";
 import * as $ from "@wildboar/asn1/functional";
 import {
-    Version,
+    type Version,
     v1 /* IMPORTED_SHORT_NAMED_INTEGER */,
     _decode_Version,
     _encode_Version,
 } from "../PKI-Stub/Version.ta.mjs";
 import {
-    CertificateSerialNumber,
+    type CertificateSerialNumber,
     _decode_CertificateSerialNumber,
     _encode_CertificateSerialNumber,
 } from "../PKI-Stub/CertificateSerialNumber.ta.mjs";
@@ -27,7 +27,7 @@ import {
     _decode_AlgorithmIdentifier,
     _encode_AlgorithmIdentifier,
 } from "../PKI-Stub/AlgorithmIdentifier.ta.mjs";
-import { Name, _decode_Name, _encode_Name } from "../PKI-Stub/Name.ta.mjs";
+import { type Name, _decode_Name, _encode_Name } from "../PKI-Stub/Name.ta.mjs";
 import {
     Validity,
     _decode_Validity,
@@ -39,12 +39,12 @@ import {
     _encode_SubjectPublicKeyInfo,
 } from "../PKI-Stub/SubjectPublicKeyInfo.ta.mjs";
 import {
-    UniqueIdentifier,
+    type UniqueIdentifier,
     _decode_UniqueIdentifier,
     _encode_UniqueIdentifier,
 } from "../PKI-Stub/UniqueIdentifier.ta.mjs";
 import {
-    Extensions,
+    type Extensions,
     _decode_Extensions,
     _encode_Extensions,
 } from "../PKI-Stub/Extensions.ta.mjs";

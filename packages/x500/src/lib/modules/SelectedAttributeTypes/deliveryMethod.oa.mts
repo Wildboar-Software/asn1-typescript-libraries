@@ -2,7 +2,7 @@
 import { type SYNTAX_NAME } from "../InformationFramework/SYNTAX-NAME.oca.mjs";
 import { id_lsx_deliveryMethod } from "../SelectedAttributeTypes/id-lsx-deliveryMethod.va.mjs";
 import {
-    PreferredDeliveryMethod,
+    type PreferredDeliveryMethod,
     _decode_PreferredDeliveryMethod,
     _encode_PreferredDeliveryMethod,
 } from "../SelectedAttributeTypes/PreferredDeliveryMethod.ta.mjs";

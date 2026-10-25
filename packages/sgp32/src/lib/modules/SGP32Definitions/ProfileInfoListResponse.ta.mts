@@ -1,11 +1,11 @@
 /* eslint-disable */
 import {
-    ASN1Element as _Element,
+    type ASN1Element as _Element,
     ASN1TagClass as _TagClass
 } from "@wildboar/asn1";
 import * as $ from "@wildboar/asn1/functional";
 import { ProfileInfo, _decode_ProfileInfo, _encode_ProfileInfo } from "../SGP32Definitions/ProfileInfo.ta.mjs";
-import { ProfileInfoListError, _decode_ProfileInfoListError, _encode_ProfileInfoListError } from "../SGP32Definitions/ProfileInfoListError.ta.mjs";
+import { type ProfileInfoListError, _decode_ProfileInfoListError, _encode_ProfileInfoListError } from "../SGP32Definitions/ProfileInfoListError.ta.mjs";
 
 
 /**

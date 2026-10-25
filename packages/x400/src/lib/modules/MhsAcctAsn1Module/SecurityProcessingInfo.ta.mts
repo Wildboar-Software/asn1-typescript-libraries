@@ -1,8 +1,8 @@
 /* eslint-disable */
 import {
-    OPTIONAL,
-    OBJECT_IDENTIFIER,
-    ASN1Element as _Element,
+    type OPTIONAL,
+    type OBJECT_IDENTIFIER,
+    type ASN1Element as _Element,
     ASN1TagClass as _TagClass,
     ASN1Construction as _Construction,
     ASN1UniversalType as _UniversalType,
@@ -13,7 +13,7 @@ import {
 } from '@wildboar/asn1';
 import * as $ from '@wildboar/asn1/functional';
 import {
-    SecurityAction,
+    type SecurityAction,
     _decode_SecurityAction,
     _encode_SecurityAction,
 } from '../MhsAcctAsn1Module/SecurityAction.ta.mjs';
@@ -34,20 +34,26 @@ import {
  *
  */
 export class SecurityProcessingInfo {
+    /**
+     * @summary `action`.
+     * @public
+     * @readonly
+     */
+    public readonly action: SecurityAction;
+    /**
+     * @summary `security_policy`.
+     * @public
+     * @readonly
+     */
+    public readonly security_policy?: OPTIONAL<OBJECT_IDENTIFIER>;
+
     constructor(
-        /**
-         * @summary `action`.
-         * @public
-         * @readonly
-         */
-        readonly action: SecurityAction,
-        /**
-         * @summary `security_policy`.
-         * @public
-         * @readonly
-         */
-        readonly security_policy?: OPTIONAL<OBJECT_IDENTIFIER>
-    ) {}
+        action: SecurityAction,
+        security_policy?: OPTIONAL<OBJECT_IDENTIFIER>
+    ) {
+        this.action = action;
+        this.security_policy = security_policy;
+    }
 
     /**
      * @summary Restructures an object into a SecurityProcessingInfo

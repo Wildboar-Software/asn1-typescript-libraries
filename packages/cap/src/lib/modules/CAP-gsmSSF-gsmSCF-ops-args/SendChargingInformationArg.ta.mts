@@ -1,7 +1,7 @@
 /* eslint-disable */
 import {
-    OPTIONAL,
-    ASN1Element as _Element,
+    type OPTIONAL,
+    type ASN1Element as _Element,
     ASN1TagClass as _TagClass,
     ASN1Construction as _Construction,
     ASN1UniversalType as _UniversalType,
@@ -30,7 +30,7 @@ import { type SendingSideID, _decode_SendingSideID, _encode_SendingSideID } from
  * SendChargingInformationArg {PARAMETERS-BOUND : bound} ::= SEQUENCE {
  *     sCIBillingChargingCharacteristics    [0] SCIBillingChargingCharacteristics {bound},
  *     partyToCharge            [1] SendingSideID,
- *     extensions                [2] Extensions {bound}            OPTIONAL,
+ *     extensions                [2] Extensions {bound}            type OPTIONAL,
  *     ...
  *     }
  * ```
@@ -39,50 +39,60 @@ import { type SendingSideID, _decode_SendingSideID, _encode_SendingSideID } from
  */
 export
 class SendChargingInformationArg {
+    /**
+     * @summary `sCIBillingChargingCharacteristics`.
+     * @description
+     *
+     * Choice of two lists (3GPP TS 22.024 CAI). `aOCBeforeAnswer` (no
+     * active call leg, Temporary Connection, or gsmSRF): `aOCInitial` at
+     * Answer if no e-parameter tariff switch yet; `aOCSubsequent`
+     * (`cAIElements` plus `tariffSwitchInterval` for CSE control of
+     * e-parameters). `aOCAfterAnswer` when a call leg, Temporary
+     * Connection, or gsmSRF is already active. Tariff-switch measurement
+     * starts after successful execution. (3GPP TS 29.078 V19.0.0 clause
+     * 11.29.1.1).
+     *
+     * @public
+     * @readonly
+     */
+    public readonly sCIBillingChargingCharacteristics: SCIBillingChargingCharacteristics;
+    /**
+     * @summary `partyToCharge`.
+     * @description
+     *
+     * Where charging information shall be sent (spec parameter `legID`).
+     * For MO, only leg 1; for MT in the VMSC, only the CAMEL subscriber's
+     * leg. Sending Side LegID. (3GPP TS 29.078 V19.0.0 clauses 4.1.5 and
+     * 11.29.1.1).
+     *
+     * @public
+     * @readonly
+     */
+    public readonly partyToCharge: SendingSideID;
+    /**
+     * @summary `extensions`.
+     * @public
+     * @readonly
+     */
+    public readonly extensions?: OPTIONAL<Extensions>;
+    /**
+     * @summary Extensions that are not recognized.
+     * @public
+     * @readonly
+     */
+    public readonly _unrecognizedExtensionsList: _Element[];
+
     constructor (
-        /**
-         * @summary `sCIBillingChargingCharacteristics`.
-         * @description
-         *
-         * Choice of two lists (3GPP TS 22.024 CAI). `aOCBeforeAnswer` (no
-         * active call leg, Temporary Connection, or gsmSRF): `aOCInitial` at
-         * Answer if no e-parameter tariff switch yet; `aOCSubsequent`
-         * (`cAIElements` plus `tariffSwitchInterval` for CSE control of
-         * e-parameters). `aOCAfterAnswer` when a call leg, Temporary
-         * Connection, or gsmSRF is already active. Tariff-switch measurement
-         * starts after successful execution. (3GPP TS 29.078 V19.0.0 clause
-         * 11.29.1.1).
-         *
-         * @public
-         * @readonly
-         */
-        readonly sCIBillingChargingCharacteristics: SCIBillingChargingCharacteristics,
-        /**
-         * @summary `partyToCharge`.
-         * @description
-         *
-         * Where charging information shall be sent (spec parameter `legID`).
-         * For MO, only leg 1; for MT in the VMSC, only the CAMEL subscriber's
-         * leg. Sending Side LegID. (3GPP TS 29.078 V19.0.0 clauses 4.1.5 and
-         * 11.29.1.1).
-         *
-         * @public
-         * @readonly
-         */
-        readonly partyToCharge: SendingSideID,
-        /**
-         * @summary `extensions`.
-         * @public
-         * @readonly
-         */
-        readonly extensions?: OPTIONAL<Extensions>,
-        /**
-         * @summary Extensions that are not recognized.
-         * @public
-         * @readonly
-         */
-        readonly _unrecognizedExtensionsList: _Element[] = []
-    ) {}
+        sCIBillingChargingCharacteristics: SCIBillingChargingCharacteristics,
+        partyToCharge: SendingSideID,
+        extensions?: OPTIONAL<Extensions>,
+        _unrecognizedExtensionsList: _Element[] = []
+    ) {
+        this.sCIBillingChargingCharacteristics = sCIBillingChargingCharacteristics;
+        this.partyToCharge = partyToCharge;
+        this.extensions = extensions;
+        this._unrecognizedExtensionsList = _unrecognizedExtensionsList;
+    }
 
     /**
      * @summary Restructures an object into a SendChargingInformationArg

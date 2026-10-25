@@ -1,22 +1,22 @@
 /* eslint-disable */
 import {
-    ASN1Element as _Element,
+    type ASN1Element as _Element,
     ASN1TagClass as _TagClass,
-    OPTIONAL,
+    type OPTIONAL,
 } from "@wildboar/asn1";
 import * as $ from "@wildboar/asn1/functional";
 import {
-    DirectoryInformationServiceElement_operationType,
+    type DirectoryInformationServiceElement_operationType,
     _decode_DirectoryInformationServiceElement_operationType,
     _encode_DirectoryInformationServiceElement_operationType,
 } from "../DirectoryManagement/DirectoryInformationServiceElement-operationType.ta.mjs";
 import {
-    AttributeType,
+    type AttributeType,
     _decode_AttributeType,
     _encode_AttributeType,
 } from "../InformationFramework/AttributeType.ta.mjs";
 import {
-    AttributeValue,
+    type AttributeValue,
     _decode_AttributeValue,
     _encode_AttributeValue,
 } from "../InformationFramework/AttributeValue.ta.mjs";
@@ -36,7 +36,7 @@ import {
  *   operationType
  *     BIT STRING {read(0), compare(1), abandon(2), list(3), search(4),
  *                 addEntry(5), removeEntry(6), modifyEntry(7), modifyDN(8)}
- *       OPTIONAL,
+ *       type OPTIONAL,
  *   attributeType   AttributeType OPTIONAL,
  *   attributeValue  [0]  AttributeValue OPTIONAL
  * }
@@ -44,40 +44,48 @@ import {
  *
  */
 export class DirectoryInformationServiceElement {
+    /**
+     * @summary `operationType`.
+     * @description
+     *
+     * BIT STRING of DAP ops; multiple bits may be set. Absent: this
+     * element does not constrain by operation.
+     *
+     * @public
+     * @readonly
+     */
+    public readonly operationType?: OPTIONAL<DirectoryInformationServiceElement_operationType>;
+    /**
+     * @summary `attributeType`.
+     * @description
+     *
+     * Absent: this element does not constrain by attribute type.
+     *
+     * @public
+     * @readonly
+     */
+    public readonly attributeType?: OPTIONAL<AttributeType>;
+    /**
+     * @summary `attributeValue`.
+     * @description
+     *
+     * Tagged [0] (open type). Typically paired with `attributeType`.
+     * Absent: no value constraint.
+     *
+     * @public
+     * @readonly
+     */
+    public readonly attributeValue?: OPTIONAL<AttributeValue>;
+
     constructor(
-        /**
-         * @summary `operationType`.
-         * @description
-         *
-         * BIT STRING of DAP ops; multiple bits may be set. Absent: this
-         * element does not constrain by operation.
-         *
-         * @public
-         * @readonly
-         */
-        readonly operationType?: OPTIONAL<DirectoryInformationServiceElement_operationType>,
-        /**
-         * @summary `attributeType`.
-         * @description
-         *
-         * Absent: this element does not constrain by attribute type.
-         *
-         * @public
-         * @readonly
-         */
-        readonly attributeType?: OPTIONAL<AttributeType>,
-        /**
-         * @summary `attributeValue`.
-         * @description
-         *
-         * Tagged [0] (open type). Typically paired with `attributeType`.
-         * Absent: no value constraint.
-         *
-         * @public
-         * @readonly
-         */
-        readonly attributeValue?: OPTIONAL<AttributeValue>
-    ) {}
+        operationType?: OPTIONAL<DirectoryInformationServiceElement_operationType>,
+        attributeType?: OPTIONAL<AttributeType>,
+        attributeValue?: OPTIONAL<AttributeValue>
+    ) {
+        this.operationType = operationType;
+        this.attributeType = attributeType;
+        this.attributeValue = attributeValue;
+    }
 
     /**
      * @summary Restructures an object into a DirectoryInformationServiceElement

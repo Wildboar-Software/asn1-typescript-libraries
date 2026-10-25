@@ -1,50 +1,50 @@
 /* eslint-disable */
 import {
-    BOOLEAN,
-    NULL,
-    OPTIONAL,
-    ASN1Element as _Element,
+    type BOOLEAN,
+    type NULL,
+    type OPTIONAL,
+    type ASN1Element as _Element,
     ASN1TagClass as _TagClass
 } from "@wildboar/asn1";
 import * as $ from "@wildboar/asn1/functional";
-import { DiameterIdentity, _decode_DiameterIdentity, _encode_DiameterIdentity } from "../MAP-CommonDataTypes/DiameterIdentity.ta.mjs";
-import { IMSI, _decode_IMSI, _encode_IMSI } from "../MAP-CommonDataTypes/IMSI.ta.mjs";
-import { ISDN_AddressString, _decode_ISDN_AddressString, _encode_ISDN_AddressString } from "../MAP-CommonDataTypes/ISDN-AddressString.ta.mjs";
+import { type DiameterIdentity, _decode_DiameterIdentity, _encode_DiameterIdentity } from "../MAP-CommonDataTypes/DiameterIdentity.ta.mjs";
+import { type IMSI, _decode_IMSI, _encode_IMSI } from "../MAP-CommonDataTypes/IMSI.ta.mjs";
+import { type ISDN_AddressString, _decode_ISDN_AddressString, _encode_ISDN_AddressString } from "../MAP-CommonDataTypes/ISDN-AddressString.ta.mjs";
 import { MC_SS_Info, _decode_MC_SS_Info, _encode_MC_SS_Info } from "../MAP-CommonDataTypes/MC-SS-Info.ta.mjs";
 import { NAEA_PreferredCI, _decode_NAEA_PreferredCI, _encode_NAEA_PreferredCI } from "../MAP-CommonDataTypes/NAEA-PreferredCI.ta.mjs";
 import { ExtensionContainer, _decode_ExtensionContainer, _encode_ExtensionContainer } from "../MAP-ExtensionDataTypes/ExtensionContainer.ta.mjs";
-import { AccessRestrictionData, _decode_AccessRestrictionData, _encode_AccessRestrictionData } from "../MAP-MS-DataTypes/AccessRestrictionData.ta.mjs";
-import { AdjacentAccessRestrictionDataList, _decode_AdjacentAccessRestrictionDataList, _encode_AdjacentAccessRestrictionDataList } from "../MAP-MS-DataTypes/AdjacentAccessRestrictionDataList.ta.mjs";
-import { AgeIndicator, _decode_AgeIndicator, _encode_AgeIndicator } from "../MAP-MS-DataTypes/AgeIndicator.ta.mjs";
-import { BearerServiceList, _decode_BearerServiceList, _encode_BearerServiceList } from "../MAP-MS-DataTypes/BearerServiceList.ta.mjs";
-import { Category, _decode_Category, _encode_Category } from "../MAP-MS-DataTypes/Category.ta.mjs";
-import { ChargingCharacteristics, _decode_ChargingCharacteristics, _encode_ChargingCharacteristics } from "../MAP-MS-DataTypes/ChargingCharacteristics.ta.mjs";
-import { CS_AllocationRetentionPriority, _decode_CS_AllocationRetentionPriority, _encode_CS_AllocationRetentionPriority } from "../MAP-MS-DataTypes/CS-AllocationRetentionPriority.ta.mjs";
-import { CSG_SubscriptionDataList, _decode_CSG_SubscriptionDataList, _encode_CSG_SubscriptionDataList } from "../MAP-MS-DataTypes/CSG-SubscriptionDataList.ta.mjs";
-import { DL_Buffering_Suggested_Packet_Count, _decode_DL_Buffering_Suggested_Packet_Count, _encode_DL_Buffering_Suggested_Packet_Count } from "../MAP-MS-DataTypes/DL-Buffering-Suggested-Packet-Count.ta.mjs";
-import { EDRX_Cycle_Length_List, _decode_EDRX_Cycle_Length_List, _encode_EDRX_Cycle_Length_List } from "../MAP-MS-DataTypes/EDRX-Cycle-Length-List.ta.mjs";
+import { type AccessRestrictionData, _decode_AccessRestrictionData, _encode_AccessRestrictionData } from "../MAP-MS-DataTypes/AccessRestrictionData.ta.mjs";
+import { type AdjacentAccessRestrictionDataList, _decode_AdjacentAccessRestrictionDataList, _encode_AdjacentAccessRestrictionDataList } from "../MAP-MS-DataTypes/AdjacentAccessRestrictionDataList.ta.mjs";
+import { type AgeIndicator, _decode_AgeIndicator, _encode_AgeIndicator } from "../MAP-MS-DataTypes/AgeIndicator.ta.mjs";
+import { type BearerServiceList, _decode_BearerServiceList, _encode_BearerServiceList } from "../MAP-MS-DataTypes/BearerServiceList.ta.mjs";
+import { type Category, _decode_Category, _encode_Category } from "../MAP-MS-DataTypes/Category.ta.mjs";
+import { type ChargingCharacteristics, _decode_ChargingCharacteristics, _encode_ChargingCharacteristics } from "../MAP-MS-DataTypes/ChargingCharacteristics.ta.mjs";
+import { type CS_AllocationRetentionPriority, _decode_CS_AllocationRetentionPriority, _encode_CS_AllocationRetentionPriority } from "../MAP-MS-DataTypes/CS-AllocationRetentionPriority.ta.mjs";
+import { type CSG_SubscriptionDataList, _decode_CSG_SubscriptionDataList, _encode_CSG_SubscriptionDataList } from "../MAP-MS-DataTypes/CSG-SubscriptionDataList.ta.mjs";
+import { type DL_Buffering_Suggested_Packet_Count, _decode_DL_Buffering_Suggested_Packet_Count, _encode_DL_Buffering_Suggested_Packet_Count } from "../MAP-MS-DataTypes/DL-Buffering-Suggested-Packet-Count.ta.mjs";
+import { type EDRX_Cycle_Length_List, _decode_EDRX_Cycle_Length_List, _encode_EDRX_Cycle_Length_List } from "../MAP-MS-DataTypes/EDRX-Cycle-Length-List.ta.mjs";
 import { EPS_SubscriptionData, _decode_EPS_SubscriptionData, _encode_EPS_SubscriptionData } from "../MAP-MS-DataTypes/EPS-SubscriptionData.ta.mjs";
-import { Ext_AccessRestrictionData, _decode_Ext_AccessRestrictionData, _encode_Ext_AccessRestrictionData } from "../MAP-MS-DataTypes/Ext-AccessRestrictionData.ta.mjs";
-import { Ext_SS_InfoList, _decode_Ext_SS_InfoList, _encode_Ext_SS_InfoList } from "../MAP-MS-DataTypes/Ext-SS-InfoList.ta.mjs";
+import { type Ext_AccessRestrictionData, _decode_Ext_AccessRestrictionData, _encode_Ext_AccessRestrictionData } from "../MAP-MS-DataTypes/Ext-AccessRestrictionData.ta.mjs";
+import { type Ext_SS_InfoList, _decode_Ext_SS_InfoList, _encode_Ext_SS_InfoList } from "../MAP-MS-DataTypes/Ext-SS-InfoList.ta.mjs";
 import { GPRSSubscriptionData, _decode_GPRSSubscriptionData, _encode_GPRSSubscriptionData } from "../MAP-MS-DataTypes/GPRSSubscriptionData.ta.mjs";
-import { IMSI_GroupIdList, _decode_IMSI_GroupIdList, _encode_IMSI_GroupIdList } from "../MAP-MS-DataTypes/IMSI-GroupIdList.ta.mjs";
-import { IST_AlertTimerValue, _decode_IST_AlertTimerValue, _encode_IST_AlertTimerValue } from "../MAP-MS-DataTypes/IST-AlertTimerValue.ta.mjs";
+import { type IMSI_GroupIdList, _decode_IMSI_GroupIdList, _encode_IMSI_GroupIdList } from "../MAP-MS-DataTypes/IMSI-GroupIdList.ta.mjs";
+import { type IST_AlertTimerValue, _decode_IST_AlertTimerValue, _encode_IST_AlertTimerValue } from "../MAP-MS-DataTypes/IST-AlertTimerValue.ta.mjs";
 import { LCSInformation, _decode_LCSInformation, _encode_LCSInformation } from "../MAP-MS-DataTypes/LCSInformation.ta.mjs";
 import { LSAInformation, _decode_LSAInformation, _encode_LSAInformation } from "../MAP-MS-DataTypes/LSAInformation.ta.mjs";
-import { NetworkAccessMode, _decode_NetworkAccessMode, _encode_NetworkAccessMode, _enum_for_NetworkAccessMode } from "../MAP-MS-DataTypes/NetworkAccessMode.ta.mjs";
+import { type NetworkAccessMode, _decode_NetworkAccessMode, _encode_NetworkAccessMode, _enum_for_NetworkAccessMode } from "../MAP-MS-DataTypes/NetworkAccessMode.ta.mjs";
 import { ODB_Data, _decode_ODB_Data, _encode_ODB_Data } from "../MAP-MS-DataTypes/ODB-Data.ta.mjs";
-import { Reset_Id_List, _decode_Reset_Id_List, _encode_Reset_Id_List } from "../MAP-MS-DataTypes/Reset-Id-List.ta.mjs";
+import { type Reset_Id_List, _decode_Reset_Id_List, _encode_Reset_Id_List } from "../MAP-MS-DataTypes/Reset-Id-List.ta.mjs";
 import { SGSN_CAMEL_SubscriptionInfo, _decode_SGSN_CAMEL_SubscriptionInfo, _encode_SGSN_CAMEL_SubscriptionInfo } from "../MAP-MS-DataTypes/SGSN-CAMEL-SubscriptionInfo.ta.mjs";
-import { SubscribedPeriodicLAUtimer, _decode_SubscribedPeriodicLAUtimer, _encode_SubscribedPeriodicLAUtimer } from "../MAP-MS-DataTypes/SubscribedPeriodicLAUtimer.ta.mjs";
-import { SubscribedPeriodicRAUTAUtimer, _decode_SubscribedPeriodicRAUTAUtimer, _encode_SubscribedPeriodicRAUTAUtimer } from "../MAP-MS-DataTypes/SubscribedPeriodicRAUTAUtimer.ta.mjs";
+import { type SubscribedPeriodicLAUtimer, _decode_SubscribedPeriodicLAUtimer, _encode_SubscribedPeriodicLAUtimer } from "../MAP-MS-DataTypes/SubscribedPeriodicLAUtimer.ta.mjs";
+import { type SubscribedPeriodicRAUTAUtimer, _decode_SubscribedPeriodicRAUTAUtimer, _encode_SubscribedPeriodicRAUTAUtimer } from "../MAP-MS-DataTypes/SubscribedPeriodicRAUTAUtimer.ta.mjs";
 import { SubscriberStatus, _decode_SubscriberStatus, _encode_SubscriberStatus, _enum_for_SubscriberStatus } from "../MAP-MS-DataTypes/SubscriberStatus.ta.mjs";
-import { TeleserviceList, _decode_TeleserviceList, _encode_TeleserviceList } from "../MAP-MS-DataTypes/TeleserviceList.ta.mjs";
-import { UE_UsageType, _decode_UE_UsageType, _encode_UE_UsageType } from "../MAP-MS-DataTypes/UE-UsageType.ta.mjs";
-import { VBSDataList, _decode_VBSDataList, _encode_VBSDataList } from "../MAP-MS-DataTypes/VBSDataList.ta.mjs";
-import { VGCSDataList, _decode_VGCSDataList, _encode_VGCSDataList } from "../MAP-MS-DataTypes/VGCSDataList.ta.mjs";
+import { type TeleserviceList, _decode_TeleserviceList, _encode_TeleserviceList } from "../MAP-MS-DataTypes/TeleserviceList.ta.mjs";
+import { type UE_UsageType, _decode_UE_UsageType, _encode_UE_UsageType } from "../MAP-MS-DataTypes/UE-UsageType.ta.mjs";
+import { type VBSDataList, _decode_VBSDataList, _encode_VBSDataList } from "../MAP-MS-DataTypes/VBSDataList.ta.mjs";
+import { type VGCSDataList, _decode_VGCSDataList, _encode_VGCSDataList } from "../MAP-MS-DataTypes/VGCSDataList.ta.mjs";
 import { VlrCamelSubscriptionInfo, _decode_VlrCamelSubscriptionInfo, _encode_VlrCamelSubscriptionInfo } from "../MAP-MS-DataTypes/VlrCamelSubscriptionInfo.ta.mjs";
-import { VPLMN_CSG_SubscriptionDataList, _decode_VPLMN_CSG_SubscriptionDataList, _encode_VPLMN_CSG_SubscriptionDataList } from "../MAP-MS-DataTypes/VPLMN-CSG-SubscriptionDataList.ta.mjs";
-import { ZoneCodeList, _decode_ZoneCodeList, _encode_ZoneCodeList } from "../MAP-MS-DataTypes/ZoneCodeList.ta.mjs";
+import { type VPLMN_CSG_SubscriptionDataList, _decode_VPLMN_CSG_SubscriptionDataList, _encode_VPLMN_CSG_SubscriptionDataList } from "../MAP-MS-DataTypes/VPLMN-CSG-SubscriptionDataList.ta.mjs";
+import { type ZoneCodeList, _decode_ZoneCodeList, _encode_ZoneCodeList } from "../MAP-MS-DataTypes/ZoneCodeList.ta.mjs";
 
 
 /**
@@ -63,50 +63,50 @@ import { ZoneCodeList, _decode_ZoneCodeList, _encode_ZoneCodeList } from "../MAP
  * 
  * ```asn1
  * InsertSubscriberDataArg ::= SEQUENCE {
- *     imsi    [0] IMSI    OPTIONAL,
+ *     imsi    [0] IMSI    type OPTIONAL,
  *     COMPONENTS OF    SubscriberData,
- *     extensionContainer    [14] ExtensionContainer    OPTIONAL,
+ *     extensionContainer    [14] ExtensionContainer    type OPTIONAL,
  *     ... ,    
- *     naea-PreferredCI    [15] NAEA-PreferredCI    OPTIONAL,
+ *     naea-PreferredCI    [15] NAEA-PreferredCI    type OPTIONAL,
  *     -- naea-PreferredCI is included at the discretion of the HLR operator.
- *     gprsSubscriptionData    [16] GPRSSubscriptionData    OPTIONAL,
+ *     gprsSubscriptionData    [16] GPRSSubscriptionData    type OPTIONAL,
  *     roamingRestrictedInSgsnDueToUnsupportedFeature [23]    NULL    
- *         OPTIONAL, 
- *     networkAccessMode    [24] NetworkAccessMode    OPTIONAL,
- *     lsaInformation    [25] LSAInformation    OPTIONAL,
- *     lmu-Indicator    [21]    NULL    OPTIONAL,
- *     lcsInformation    [22]    LCSInformation    OPTIONAL,
- *     istAlertTimer    [26] IST-AlertTimerValue    OPTIONAL,
- *     superChargerSupportedInHLR    [27] AgeIndicator    OPTIONAL,
- *     mc-SS-Info    [28] MC-SS-Info    OPTIONAL,
- *     cs-AllocationRetentionPriority    [29] CS-AllocationRetentionPriority    OPTIONAL,
- *     sgsn-CAMEL-SubscriptionInfo    [17] SGSN-CAMEL-SubscriptionInfo    OPTIONAL,
- *     chargingCharacteristics    [18]    ChargingCharacteristics    OPTIONAL,
- *     accessRestrictionData    [19] AccessRestrictionData    OPTIONAL,
- *     ics-Indicator    [20]    BOOLEAN    OPTIONAL,
- *     eps-SubscriptionData    [31]    EPS-SubscriptionData    OPTIONAL,
- *     csg-SubscriptionDataList    [32] CSG-SubscriptionDataList    OPTIONAL,
- *     ue-ReachabilityRequestIndicator    [33]    NULL    OPTIONAL,
- *     sgsn-Number    [34]    ISDN-AddressString    OPTIONAL,
- *     mme-Name    [35]    DiameterIdentity    OPTIONAL,
- *     subscribedPeriodicRAUTAUtimer    [36]    SubscribedPeriodicRAUTAUtimer    OPTIONAL,
- *     vplmnLIPAAllowed    [37]    NULL    OPTIONAL,
- *     mdtUserConsent    [38]    BOOLEAN    OPTIONAL,
- *     subscribedPeriodicLAUtimer    [39]    SubscribedPeriodicLAUtimer    OPTIONAL,
- *     vplmn-Csg-SubscriptionDataList    [40]    VPLMN-CSG-SubscriptionDataList    OPTIONAL,
- *     additionalMSISDN    [41]    ISDN-AddressString    OPTIONAL,
- *     psAndSMS-OnlyServiceProvision    [42]    NULL    OPTIONAL,
- *     smsInSGSNAllowed    [43]    NULL    OPTIONAL,
- *     cs-to-ps-SRVCC-Allowed-Indicator    [44]    NULL    OPTIONAL,
- *     pcscf-Restoration-Request    [45]    NULL    OPTIONAL,
- *     adjacentAccessRestrictionDataList    [46] AdjacentAccessRestrictionDataList    OPTIONAL,
- *     imsi-Group-Id-List    [47] IMSI-GroupIdList    OPTIONAL,
- *     ueUsageType    [48] UE-UsageType    OPTIONAL,
- *     userPlaneIntegrityProtectionIndicator    [49] NULL    OPTIONAL,
- *     dl-Buffering-Suggested-Packet-Count    [50]    DL-Buffering-Suggested-Packet-Count    OPTIONAL,
- *     reset-Id-List    [51]    Reset-Id-List    OPTIONAL,
- *     eDRX-Cycle-Length-List    [52] EDRX-Cycle-Length-List    OPTIONAL,
- *     ext-AccessRestrictionData    [53] Ext-AccessRestrictionData    OPTIONAL,
+ *         type OPTIONAL, 
+ *     networkAccessMode    [24] NetworkAccessMode    type OPTIONAL,
+ *     lsaInformation    [25] LSAInformation    type OPTIONAL,
+ *     lmu-Indicator    [21]    NULL    type OPTIONAL,
+ *     lcsInformation    [22]    LCSInformation    type OPTIONAL,
+ *     istAlertTimer    [26] IST-AlertTimerValue    type OPTIONAL,
+ *     superChargerSupportedInHLR    [27] AgeIndicator    type OPTIONAL,
+ *     mc-SS-Info    [28] MC-SS-Info    type OPTIONAL,
+ *     cs-AllocationRetentionPriority    [29] CS-AllocationRetentionPriority    type OPTIONAL,
+ *     sgsn-CAMEL-SubscriptionInfo    [17] SGSN-CAMEL-SubscriptionInfo    type OPTIONAL,
+ *     chargingCharacteristics    [18]    ChargingCharacteristics    type OPTIONAL,
+ *     accessRestrictionData    [19] AccessRestrictionData    type OPTIONAL,
+ *     ics-Indicator    [20]    BOOLEAN    type OPTIONAL,
+ *     eps-SubscriptionData    [31]    EPS-SubscriptionData    type OPTIONAL,
+ *     csg-SubscriptionDataList    [32] CSG-SubscriptionDataList    type OPTIONAL,
+ *     ue-ReachabilityRequestIndicator    [33]    NULL    type OPTIONAL,
+ *     sgsn-Number    [34]    ISDN-AddressString    type OPTIONAL,
+ *     mme-Name    [35]    DiameterIdentity    type OPTIONAL,
+ *     subscribedPeriodicRAUTAUtimer    [36]    SubscribedPeriodicRAUTAUtimer    type OPTIONAL,
+ *     vplmnLIPAAllowed    [37]    NULL    type OPTIONAL,
+ *     mdtUserConsent    [38]    BOOLEAN    type OPTIONAL,
+ *     subscribedPeriodicLAUtimer    [39]    SubscribedPeriodicLAUtimer    type OPTIONAL,
+ *     vplmn-Csg-SubscriptionDataList    [40]    VPLMN-CSG-SubscriptionDataList    type OPTIONAL,
+ *     additionalMSISDN    [41]    ISDN-AddressString    type OPTIONAL,
+ *     psAndSMS-OnlyServiceProvision    [42]    NULL    type OPTIONAL,
+ *     smsInSGSNAllowed    [43]    NULL    type OPTIONAL,
+ *     cs-to-ps-SRVCC-Allowed-Indicator    [44]    NULL    type OPTIONAL,
+ *     pcscf-Restoration-Request    [45]    NULL    type OPTIONAL,
+ *     adjacentAccessRestrictionDataList    [46] AdjacentAccessRestrictionDataList    type OPTIONAL,
+ *     imsi-Group-Id-List    [47] IMSI-GroupIdList    type OPTIONAL,
+ *     ueUsageType    [48] UE-UsageType    type OPTIONAL,
+ *     userPlaneIntegrityProtectionIndicator    [49] NULL    type OPTIONAL,
+ *     dl-Buffering-Suggested-Packet-Count    [50]    DL-Buffering-Suggested-Packet-Count    type OPTIONAL,
+ *     reset-Id-List    [51]    Reset-Id-List    type OPTIONAL,
+ *     eDRX-Cycle-Length-List    [52] EDRX-Cycle-Length-List    type OPTIONAL,
+ *     ext-AccessRestrictionData    [53] Ext-AccessRestrictionData    type OPTIONAL,
  *     iab-Operation-Allowed-Indicator    [54]    NULL    OPTIONAL }
  * ```
  * 
@@ -114,650 +114,760 @@ import { ZoneCodeList, _decode_ZoneCodeList, _encode_ZoneCodeList } from "../MAP
  */
 export
 class InsertSubscriberDataArg {
+    /**
+     * @summary `imsi`.
+     * @description
+     *
+     * Included only if the service is not used in an ongoing transaction
+     * (e.g. location updating). Used by VLR, SGSN, and IWF. (3GPP TS 29.002
+     * V19.1.0 clause 8.8.1.3)
+     *
+     * @public
+     * @readonly
+     */
+    public readonly imsi?: OPTIONAL<IMSI>;
+    /**
+     * @summary `msisdn`.
+     * @description
+     *
+     * Basic MSISDN. Included at location updating and when changed. For a
+     * subscription without MSISDN the HLR shall not populate this if the
+     * VLR or SGSN indicated MSISDN-less operation. Used by VLR, SGSN, and
+     * IWF. (3GPP TS 29.002 V19.1.0 clauses 8.8.1.3 and 7.6.2.17)
+     *
+     * @public
+     * @readonly
+     */
+    public readonly msisdn?: OPTIONAL<ISDN_AddressString>; /* REPLICATED_COMPONENT */
+    /**
+     * @summary `category`.
+     * @description
+     *
+     * Included at location updating or when changed. Used only by the VLR;
+     * SGSN or IWF shall ignore it. Not used by the CSS. (3GPP TS 29.002
+     * V19.1.0 clauses 8.8.1.3 and 7.6.3.1)
+     *
+     * @public
+     * @readonly
+     */
+    public readonly category?: OPTIONAL<Category>; /* REPLICATED_COMPONENT */
+    /**
+     * @summary `subscriberStatus`.
+     * @description
+     *
+     * Included at location updating or when changed. Set to Operator
+     * Determined Barring to apply/update ODB (then ODB General Data shall
+     * be present). Set to Service Granted to remove all ODB categories.
+     * Used by VLR, SGSN, and IWF. Not used by the CSS. (3GPP TS 29.002
+     * V19.1.0 clauses 8.8.1.3 and 7.6.3.7)
+     *
+     * @public
+     * @readonly
+     */
+    public readonly subscriberStatus?: OPTIONAL<SubscriberStatus>; /* REPLICATED_COMPONENT */
+    /**
+     * @summary `bearerServiceList`.
+     * @description
+     *
+     * Individual extensible bearer services subscribed (all at location
+     * updating/restoration, or those added). Used only by the VLR;
+     * unsupported codes are returned in the response. Not used by the CSS.
+     * (3GPP TS 29.002 V19.1.0 clause 8.8.1.3)
+     *
+     * @public
+     * @readonly
+     */
+    public readonly bearerServiceList?: OPTIONAL<BearerServiceList>; /* REPLICATED_COMPONENT */
+    /**
+     * @summary `teleserviceList`.
+     * @description
+     *
+     * Individual extensible teleservices relevant to the receiving node
+     * (all subscribed or those added). Unsupported codes are returned in
+     * the response. Used by VLR, SGSN, and IWF. Not used by the CSS. (3GPP
+     * TS 29.002 V19.1.0 clause 8.8.1.3)
+     *
+     * @public
+     * @readonly
+     */
+    public readonly teleserviceList?: OPTIONAL<TeleserviceList>; /* REPLICATED_COMPONENT */
+    /**
+     * @summary `provisionedSS`.
+     * @description
+     *
+     * Extensible SS-Info (forwarding, barring, CUG, SS-Data, eMLPP). See
+     * clause 8.8.1.3 for per-service rules. (3GPP TS 29.002 V19.1.0 clauses
+     * 8.8.1.3 and 7.6.3.14)
+     *
+     * @public
+     * @readonly
+     */
+    public readonly provisionedSS?: OPTIONAL<Ext_SS_InfoList>; /* REPLICATED_COMPONENT */
+    /**
+     * @summary `odb_Data`.
+     * @description
+     *
+     * ODB general data, and HPLMN-specific data when applicable. Only when
+     * Subscriber Status is Operator Determined Barring. (3GPP TS 29.002
+     * V19.1.0 clauses 8.8.1.3 and 7.6.3.85)
+     *
+     * @public
+     * @readonly
+     */
+    public readonly odb_Data?: OPTIONAL<ODB_Data>; /* REPLICATED_COMPONENT */
+    /**
+     * @summary `roamingRestrictionDueToUnsupportedFeature`.
+     * @description
+     *
+     * HLR may include this if the MSC/VLR indicated unsupported
+     * services/features; the MSC area is then restricted. Used only by the
+     * VLR; SGSN/IWF shall ignore it. Not used by the CSS. (3GPP TS 29.002
+     * V19.1.0 clauses 8.8.1.3 and 7.6.3.13)
+     *
+     * @public
+     * @readonly
+     */
+    public readonly roamingRestrictionDueToUnsupportedFeature?: OPTIONAL<NULL>; /* REPLICATED_COMPONENT */
+    /**
+     * @summary `regionalSubscriptionData`.
+     * @description
+     *
+     * Complete list of up to 10 Zone Codes for the current VPLMN. Accepted
+     * in only one Insert Subscriber Data in a dialogue; a later occurrence
+     * yields Unexpected Data Value. If omitted in all services of the
+     * dialogue, roaming is not regionally restricted. (3GPP TS 29.002
+     * V19.1.0 clauses 8.8.1.3 and 7.6.3.11)
+     *
+     * @public
+     * @readonly
+     */
+    public readonly regionalSubscriptionData?: OPTIONAL<ZoneCodeList>; /* REPLICATED_COMPONENT */
+    /**
+     * @summary `vbsSubscriptionData`.
+     * @description
+     *
+     * Complete VBS group-id list at location updating, restoration, or
+     * change. Used only by the VLR. Not used by the CSS. (3GPP TS 29.002
+     * V19.1.0 clauses 8.8.1.3 and 7.6.3.40)
+     *
+     * @public
+     * @readonly
+     */
+    public readonly vbsSubscriptionData?: OPTIONAL<VBSDataList>; /* REPLICATED_COMPONENT */
+    /**
+     * @summary `vgcsSubscriptionData`.
+     * @description
+     *
+     * Complete VGCS group-id list at location updating, restoration, or
+     * change. Used only by the VLR. Not used by the CSS. (3GPP TS 29.002
+     * V19.1.0 clauses 8.8.1.3 and 7.6.3.39)
+     *
+     * @public
+     * @readonly
+     */
+    public readonly vgcsSubscriptionData?: OPTIONAL<VGCSDataList>; /* REPLICATED_COMPONENT */
+    /**
+     * @summary `vlrCamelSubscriptionInfo`.
+     * @description
+     *
+     * CAMEL services invoked in the MSC (O-CSI and further CSIs by CAMEL
+     * phase). Used only by the VLR; SGSN/IWF shall ignore it. (3GPP TS
+     * 29.002 V19.1.0 clauses 8.8.1.3 and 7.6.3.35)
+     *
+     * @public
+     * @readonly
+     */
+    public readonly vlrCamelSubscriptionInfo?: OPTIONAL<VlrCamelSubscriptionInfo>; /* REPLICATED_COMPONENT */
+    /**
+     * @summary `extensionContainer`.
+     * @public
+     * @readonly
+     */
+    public readonly extensionContainer?: OPTIONAL<ExtensionContainer>;
+    /**
+     * @summary `naea_PreferredCI`.
+     * @description
+     *
+     * North American Equal Access preferred Carrier Id. Included at the
+     * discretion of the HLR operator. (3GPP TS 29.002 V19.1.0 clauses
+     * 17.7.1 and 7.6.2.34)
+     *
+     * @public
+     * @readonly
+     */
+    public readonly naea_PreferredCI?: OPTIONAL<NAEA_PreferredCI>;
+    /**
+     * @summary `gprsSubscriptionData`.
+     * @description
+     *
+     * PDP contexts the user has subscribed to. Complete set at GPRS
+     * location updating; only new/modified contexts on change. Used only by
+     * the SGSN; VLR shall ignore it. Not used by the CSS. (3GPP TS 29.002
+     * V19.1.0 clauses 8.8.1.3 and 7.6.3.46)
+     *
+     * @public
+     * @readonly
+     */
+    public readonly gprsSubscriptionData?: OPTIONAL<GPRSSubscriptionData>;
+    /**
+     * @summary `roamingRestrictedInSgsnDueToUnsupportedFeature`.
+     * @description
+     *
+     * HSS/HLR may include this if SGSN/IWF indicated unsupported features.
+     * Used only by SGSN and IWF; VLR shall ignore it. (3GPP TS 29.002
+     * V19.1.0 clauses 8.8.1.3 and 7.6.3.49)
+     *
+     * @public
+     * @readonly
+     */
+    public readonly roamingRestrictedInSgsnDueToUnsupportedFeature?: OPTIONAL<NULL>;
+    /**
+     * @summary `networkAccessMode`.
+     * @description
+     *
+     * Access to MSC/VLR and/or SGSN/MME. Always sent to SGSN and via IWF to
+     * MME at GPRS/MME location updating. In VLR used only in Restore Data
+     * and not stored. If segmentation is used, present only in the first
+     * sequence. Not used by the CSS. (3GPP TS 29.002 V19.1.0 clauses
+     * 8.8.1.3 and 17.7.1)
+     *
+     * @public
+     * @readonly
+     */
+    public readonly networkAccessMode?: OPTIONAL<NetworkAccessMode>;
+    /**
+     * @summary `lsaInformation`.
+     * @description
+     *
+     * SoLSA LSAs applicable to the VPLMN, with access-right outside those
+     * LSAs. Used by VLR and SGSN; IWF shall ignore it. Not used by the CSS.
+     * (3GPP TS 29.002 V19.1.0 clauses 8.8.1.3 and 7.6.3.56)
+     *
+     * @public
+     * @readonly
+     */
+    public readonly lsaInformation?: OPTIONAL<LSAInformation>;
+    /**
+     * @summary `lmu_Indicator`.
+     * @description
+     *
+     * Presence of an LMU. Used only by the VLR; SGSN or IWF shall ignore
+     * it. Not used by the CSS. (3GPP TS 29.002 V19.1.0 clauses 8.8.1.3 and
+     * 7.6.3.59)
+     *
+     * @public
+     * @readonly
+     */
+    public readonly lmu_Indicator?: OPTIONAL<NULL>;
+    /**
+     * @summary `lcsInformation`.
+     * @description
+     *
+     * GMLC list, privacy exception list, and MO-LR list. Complete at
+     * restoration/location updating. Used by VLR, SGSN, and IWF. Not used
+     * by the CSS. (3GPP TS 29.002 V19.1.0 clauses 8.8.1.3 and 7.6.3.60)
+     *
+     * @public
+     * @readonly
+     */
+    public readonly lcsInformation?: OPTIONAL<LCSInformation>;
+    /**
+     * @summary `istAlertTimer`.
+     * @description
+     *
+     * IST Alert timer sent at location updating, restoration, or IST data
+     * change. Not used by the CSS. (3GPP TS 29.002 V19.1.0 clauses 8.8.1.3
+     * and 7.6.3.66)
+     *
+     * @public
+     * @readonly
+     */
+    public readonly istAlertTimer?: OPTIONAL<IST_AlertTimerValue>;
+    /**
+     * @summary `superChargerSupportedInHLR`.
+     * @description
+     *
+     * HLR Super-Charger support and age of subscription data stored in the
+     * HLR. Absence means the HLR does not support Super-Charger. Not used
+     * by the CSS. (3GPP TS 29.002 V19.1.0 clauses 8.8.1.3 and 7.6.3.70)
+     *
+     * @public
+     * @readonly
+     */
+    public readonly superChargerSupportedInHLR?: OPTIONAL<AgeIndicator>;
+    /**
+     * @summary `mc_SS_Info`.
+     * @description
+     *
+     * Multicall subscription data. Completely replaces previously stored MC
+     * data in the VLR. Used only by the VLR. (3GPP TS 29.002 V19.1.0 clause
+     * 8.8.1.3)
+     *
+     * @public
+     * @readonly
+     */
+    public readonly mc_SS_Info?: OPTIONAL<MC_SS_Info>;
+    /**
+     * @summary `cs_AllocationRetentionPriority`.
+     * @description
+     *
+     * CS allocation/retention priority (3GPP TS 23.107). Used only by the
+     * VLR. (3GPP TS 29.002 V19.1.0 clauses 8.8.1.3 and 7.6.3.87)
+     *
+     * @public
+     * @readonly
+     */
+    public readonly cs_AllocationRetentionPriority?: OPTIONAL<CS_AllocationRetentionPriority>;
+    /**
+     * @summary `sgsn_CAMEL_SubscriptionInfo`.
+     * @description
+     *
+     * CAMEL services invoked in the SGSN (GPRS-CSI, MO/MT-SMS-CSI, MG-CSI
+     * by CAMEL phase). Used only by the SGSN. (3GPP TS 29.002 V19.1.0
+     * clauses 8.8.1.3 and 7.6.3.75)
+     *
+     * @public
+     * @readonly
+     */
+    public readonly sgsn_CAMEL_SubscriptionInfo?: OPTIONAL<SGSN_CAMEL_SubscriptionInfo>;
+    /**
+     * @summary `chargingCharacteristics`.
+     * @description
+     *
+     * Subscribed Charging Characteristics (3GPP TS 32.251). Used only by
+     * SGSN and IWF; VLR shall ignore it. (3GPP TS 29.002 V19.1.0 clause
+     * 8.8.1.3)
+     *
+     * @public
+     * @readonly
+     */
+    public readonly chargingCharacteristics?: OPTIONAL<ChargingCharacteristics>;
+    /**
+     * @summary `accessRestrictionData`.
+     * @description
+     *
+     * Restricted radio access technologies for this PLMN. If the
+     * VLR/SGSN/MME supports the feature but does not receive this IE, it
+     * shall assume no restrictions. Not used by the CSS. (3GPP TS 29.002
+     * V19.1.0 clauses 8.8.1.3 and 7.6.3.97)
+     *
+     * @public
+     * @readonly
+     */
+    public readonly accessRestrictionData?: OPTIONAL<AccessRestrictionData>;
+    /**
+     * @summary `ics_Indicator`.
+     * @description
+     *
+     * If true, the MSC Server enhanced for ICS (3GPP TS 23.292) shall
+     * attempt IMS registration. Used by VLR and SGSN. (3GPP TS 29.002
+     * V19.1.0 clause 8.8.1.3)
+     *
+     * @public
+     * @readonly
+     */
+    public readonly ics_Indicator?: OPTIONAL<BOOLEAN>;
+    /**
+     * @summary `eps_SubscriptionData`.
+     * @description
+     *
+     * EPS subscription (APN-OI replacement, RFSP-ID, AMBR, APN
+     * configurations, STN-SR, MPS, vSRVCC). Used only by MME via IWF and
+     * SGSN; VLR shall ignore it. (3GPP TS 29.002 V19.1.0 clauses 8.8.1.3
+     * and 7.6.3.46A)
+     *
+     * @public
+     * @readonly
+     */
+    public readonly eps_SubscriptionData?: OPTIONAL<EPS_SubscriptionData>;
+    /**
+     * @summary `csg_SubscriptionDataList`.
+     * @description
+     *
+     * CSG-Ids, expiration dates (3GPP TS 22.011), and corresponding APNs.
+     * Replaces stored HLR/HSS CSG data. APN list is not applicable to the
+     * VLR. (3GPP TS 29.002 V19.1.0 clause 8.8.1.3)
+     *
+     * @public
+     * @readonly
+     */
+    public readonly csg_SubscriptionDataList?: OPTIONAL<CSG_SubscriptionDataList>;
+    /**
+     * @summary `ue_ReachabilityRequestIndicator`.
+     * @description
+     *
+     * HSS is awaiting Notification of UE Reachability. Used by the IWF
+     * only. (3GPP TS 29.002 V19.1.0 clause 8.8.1.3)
+     *
+     * @public
+     * @readonly
+     */
+    public readonly ue_ReachabilityRequestIndicator?: OPTIONAL<NULL>;
+    /**
+     * @summary `sgsn_Number`.
+     * @description
+     *
+     * SGSN identity (3GPP TS 23.003). Sent to the VLR during Restore Data
+     * or Update Location if Restoration Indicator is set and the subscriber
+     * is GPRS-registered. (3GPP TS 29.002 V19.1.0 clauses 8.8.1.3 and
+     * 7.6.2.38)
+     *
+     * @public
+     * @readonly
+     */
+    public readonly sgsn_Number?: OPTIONAL<ISDN_AddressString>;
+    /**
+     * @summary `mme_Name`.
+     * @description
+     *
+     * MME identity over SGs (3GPP TS 23.003 clause 19.4.2.4) or Diameter
+     * Identity of the MME. Sent to the VLR during restoration if
+     * Restoration Indicator is set, length does not exceed 55 octets, and
+     * the subscriber is EPS-registered. (3GPP TS 29.002 V19.1.0 clauses
+     * 8.8.1.3 and 7.6.2.65)
+     *
+     * @public
+     * @readonly
+     */
+    public readonly mme_Name?: OPTIONAL<DiameterIdentity>;
+    /**
+     * @summary `subscribedPeriodicRAUTAUtimer`.
+     * @description
+     *
+     * Subscribed periodic RAU/TAU timer. Used by SGSN and MME (via IWF) as
+     * in 3GPP TS 29.272 clause 5.2.1.1.2. VLR shall ignore it. (3GPP TS
+     * 29.002 V19.1.0 clause 8.8.1.3)
+     *
+     * @public
+     * @readonly
+     */
+    public readonly subscribedPeriodicRAUTAUtimer?: OPTIONAL<SubscribedPeriodicRAUTAUtimer>;
+    /**
+     * @summary `vplmnLIPAAllowed`.
+     * @description
+     *
+     * UE may use LIPA in the attached PLMN (3GPP TS 23.401 / 23.060). Used
+     * only by IWF and SGSN; VLR shall ignore it. (3GPP TS 29.002 V19.1.0
+     * clause 8.8.1.3)
+     *
+     * @public
+     * @readonly
+     */
+    public readonly vplmnLIPAAllowed?: OPTIONAL<NULL>;
+    /**
+     * @summary `mdtUserConsent`.
+     * @description
+     *
+     * User consent availability for MDT activation (3GPP TS 32.422). Used
+     * by VLR, SGSN, and IWF. (3GPP TS 29.002 V19.1.0 clause 8.8.1.3)
+     *
+     * @public
+     * @readonly
+     */
+    public readonly mdtUserConsent?: OPTIONAL<BOOLEAN>;
+    /**
+     * @summary `subscribedPeriodicLAUtimer`.
+     * @description
+     *
+     * Subscribed periodic LAU timer (3GPP TS 23.012 clause 3.7.3). Used by
+     * MSC/VLR; SGSN shall ignore it. (3GPP TS 29.002 V19.1.0 clause
+     * 8.8.1.3)
+     *
+     * @public
+     * @readonly
+     */
+    public readonly subscribedPeriodicLAUtimer?: OPTIONAL<SubscribedPeriodicLAUtimer>;
+    /**
+     * @summary `vplmn_Csg_SubscriptionDataList`.
+     * @description
+     *
+     * VPLMN CSG subscription from the CSS. Independent of HLR/HSS CSG data;
+     * HLR/HSS data takes precedence for a duplicate CSG Id. (3GPP TS 29.002
+     * V19.1.0 clause 8.8.1.3)
+     *
+     * @public
+     * @readonly
+     */
+    public readonly vplmn_Csg_SubscriptionDataList?: OPTIONAL<VPLMN_CSG_SubscriptionDataList>;
+    /**
+     * @summary `additionalMSISDN`.
+     * @description
+     *
+     * Included at location updating and when changed if subscribed. Used by
+     * SGSN and IWF; VLR shall ignore it. Not sent if the SGSN did not
+     * indicate support. (3GPP TS 29.002 V19.1.0 clauses 8.8.1.3 and
+     * 7.6.2.17A)
+     *
+     * @public
+     * @readonly
+     */
+    public readonly additionalMSISDN?: OPTIONAL<ISDN_AddressString>;
+    /**
+     * @summary `psAndSMS_OnlyServiceProvision`.
+     * @description
+     *
+     * Subscription is PS-only and permits CS access only for SMS. (3GPP TS
+     * 29.002 V19.1.0 clause 8.8.1.3)
+     *
+     * @public
+     * @readonly
+     */
+    public readonly psAndSMS_OnlyServiceProvision?: OPTIONAL<NULL>;
+    /**
+     * @summary `smsInSGSNAllowed`.
+     * @description
+     *
+     * HSS allows SMS to be provided by the SGSN over NAS. (3GPP TS 29.002
+     * V19.1.0 clause 8.8.1.3)
+     *
+     * @public
+     * @readonly
+     */
+    public readonly smsInSGSNAllowed?: OPTIONAL<NULL>;
+    /**
+     * @summary `cs_to_ps_SRVCC_Allowed_Indicator`.
+     * @description
+     *
+     * CS to PS SRVCC is subscribed. Used by the VLR (MSC Server enhanced
+     * for ICS). (3GPP TS 29.002 V19.1.0 clause 8.8.1.3)
+     *
+     * @public
+     * @readonly
+     */
+    public readonly cs_to_ps_SRVCC_Allowed_Indicator?: OPTIONAL<NULL>;
+    /**
+     * @summary `pcscf_Restoration_Request`.
+     * @description
+     *
+     * HSS requests HSS-based P-CSCF restoration (3GPP TS 23.380 clause 5.4)
+     * toward SGSN or MME via IWF. (3GPP TS 29.002 V19.1.0 clause 8.8.1.3)
+     *
+     * @public
+     * @readonly
+     */
+    public readonly pcscf_Restoration_Request?: OPTIONAL<NULL>;
+    /**
+     * @summary `adjacentAccessRestrictionDataList`.
+     * @description
+     *
+     * Allowed RAT in each indicated adjacent PLMN, according to
+     * subscription data. Not used by the CSS. (3GPP TS 29.002 V19.1.0
+     * clause 8.8.1.3)
+     *
+     * @public
+     * @readonly
+     */
+    public readonly adjacentAccessRestrictionDataList?: OPTIONAL<AdjacentAccessRestrictionDataList>;
+    /**
+     * @summary `imsi_Group_Id_List`.
+     * @description
+     *
+     * IMSI-Group identifiers the subscriber belongs to (3GPP TS 29.272).
+     * (3GPP TS 29.002 V19.1.0 clauses 8.8.1.3 and 7.6.3.102)
+     *
+     * @public
+     * @readonly
+     */
+    public readonly imsi_Group_Id_List?: OPTIONAL<IMSI_GroupIdList>;
+    /**
+     * @summary `ueUsageType`.
+     * @description
+     *
+     * UE usage characteristics for Dedicated Core Network selection. Shall
+     * not be sent to VLRs, nor to SGSNs that did not indicate Dedicated
+     * Core Network support in GPRS Location Update. (3GPP TS 29.002 V19.1.0
+     * clause 8.8.1.3)
+     *
+     * @public
+     * @readonly
+     */
+    public readonly ueUsageType?: OPTIONAL<UE_UsageType>;
+    /**
+     * @summary `userPlaneIntegrityProtectionIndicator`.
+     * @description
+     *
+     * SGSN may activate user-plane integrity protection when GERAN is used
+     * (3GPP TS 43.020). VLR shall ignore it. (3GPP TS 29.002 V19.1.0 clause
+     * 8.8.1.3)
+     *
+     * @public
+     * @readonly
+     */
+    public readonly userPlaneIntegrityProtectionIndicator?: OPTIONAL<NULL>;
+    /**
+     * @summary `dl_Buffering_Suggested_Packet_Count`.
+     * @description
+     *
+     * Suggested DL-buffering packet count for High Latency Communication
+     * (3GPP TS 29.272). VLR shall ignore it. (3GPP TS 29.002 V19.1.0 clause
+     * 8.8.1.3)
+     *
+     * @public
+     * @readonly
+     */
+    public readonly dl_Buffering_Suggested_Packet_Count?: OPTIONAL<DL_Buffering_Suggested_Packet_Count>;
+    /**
+     * @summary `reset_Id_List`.
+     * @description
+     *
+     * Subscribed Reset-IDs. (3GPP TS 29.002 V19.1.0 clause 8.8.1.3)
+     *
+     * @public
+     * @readonly
+     */
+    public readonly reset_Id_List?: OPTIONAL<Reset_Id_List>;
+    /**
+     * @summary `eDRX_Cycle_Length_List`.
+     * @description
+     *
+     * Subscribed eDRX cycle length per RAT type. (3GPP TS 29.002 V19.1.0
+     * clause 8.8.1.3)
+     *
+     * @public
+     * @readonly
+     */
+    public readonly eDRX_Cycle_Length_List?: OPTIONAL<EDRX_Cycle_Length_List>;
+    /**
+     * @summary `ext_AccessRestrictionData`.
+     * @description
+     *
+     * Additional access restrictions (NR / unlicensed spectrum as secondary
+     * RAT) beyond `AccessRestrictionData`. (3GPP TS 29.002 V19.1.0 clause
+     * 17.7.1)
+     *
+     * @public
+     * @readonly
+     */
+    public readonly ext_AccessRestrictionData?: OPTIONAL<Ext_AccessRestrictionData>;
+    /**
+     * @summary `iab_Operation_Allowed_Indicator`.
+     * @description
+     *
+     * IAB operation is authorized for the UE (3GPP TS 23.401). (3GPP TS
+     * 29.002 V19.1.0 clause 8.8.1.3)
+     *
+     * @public
+     * @readonly
+     */
+    public readonly iab_Operation_Allowed_Indicator?: OPTIONAL<NULL>;
+    /**
+     * @summary Extensions that are not recognized.
+     * @public
+     * @readonly
+     */
+    public readonly _unrecognizedExtensionsList: _Element[];
+
     constructor (
-        /**
-         * @summary `imsi`.
-         * @description
-         *
-         * Included only if the service is not used in an ongoing transaction
-         * (e.g. location updating). Used by VLR, SGSN, and IWF. (3GPP TS 29.002
-         * V19.1.0 clause 8.8.1.3)
-         *
-         * @public
-         * @readonly
-         */
-        readonly imsi?: OPTIONAL<IMSI>,
-        /**
-         * @summary `msisdn`.
-         * @description
-         *
-         * Basic MSISDN. Included at location updating and when changed. For a
-         * subscription without MSISDN the HLR shall not populate this if the
-         * VLR or SGSN indicated MSISDN-less operation. Used by VLR, SGSN, and
-         * IWF. (3GPP TS 29.002 V19.1.0 clauses 8.8.1.3 and 7.6.2.17)
-         *
-         * @public
-         * @readonly
-         */
-        readonly msisdn?: OPTIONAL<ISDN_AddressString> /* REPLICATED_COMPONENT */,
-        /**
-         * @summary `category`.
-         * @description
-         *
-         * Included at location updating or when changed. Used only by the VLR;
-         * SGSN or IWF shall ignore it. Not used by the CSS. (3GPP TS 29.002
-         * V19.1.0 clauses 8.8.1.3 and 7.6.3.1)
-         *
-         * @public
-         * @readonly
-         */
-        readonly category?: OPTIONAL<Category> /* REPLICATED_COMPONENT */,
-        /**
-         * @summary `subscriberStatus`.
-         * @description
-         *
-         * Included at location updating or when changed. Set to Operator
-         * Determined Barring to apply/update ODB (then ODB General Data shall
-         * be present). Set to Service Granted to remove all ODB categories.
-         * Used by VLR, SGSN, and IWF. Not used by the CSS. (3GPP TS 29.002
-         * V19.1.0 clauses 8.8.1.3 and 7.6.3.7)
-         *
-         * @public
-         * @readonly
-         */
-        readonly subscriberStatus?: OPTIONAL<SubscriberStatus> /* REPLICATED_COMPONENT */,
-        /**
-         * @summary `bearerServiceList`.
-         * @description
-         *
-         * Individual extensible bearer services subscribed (all at location
-         * updating/restoration, or those added). Used only by the VLR;
-         * unsupported codes are returned in the response. Not used by the CSS.
-         * (3GPP TS 29.002 V19.1.0 clause 8.8.1.3)
-         *
-         * @public
-         * @readonly
-         */
-        readonly bearerServiceList?: OPTIONAL<BearerServiceList> /* REPLICATED_COMPONENT */,
-        /**
-         * @summary `teleserviceList`.
-         * @description
-         *
-         * Individual extensible teleservices relevant to the receiving node
-         * (all subscribed or those added). Unsupported codes are returned in
-         * the response. Used by VLR, SGSN, and IWF. Not used by the CSS. (3GPP
-         * TS 29.002 V19.1.0 clause 8.8.1.3)
-         *
-         * @public
-         * @readonly
-         */
-        readonly teleserviceList?: OPTIONAL<TeleserviceList> /* REPLICATED_COMPONENT */,
-        /**
-         * @summary `provisionedSS`.
-         * @description
-         *
-         * Extensible SS-Info (forwarding, barring, CUG, SS-Data, eMLPP). See
-         * clause 8.8.1.3 for per-service rules. (3GPP TS 29.002 V19.1.0 clauses
-         * 8.8.1.3 and 7.6.3.14)
-         *
-         * @public
-         * @readonly
-         */
-        readonly provisionedSS?: OPTIONAL<Ext_SS_InfoList> /* REPLICATED_COMPONENT */,
-        /**
-         * @summary `odb_Data`.
-         * @description
-         *
-         * ODB general data, and HPLMN-specific data when applicable. Only when
-         * Subscriber Status is Operator Determined Barring. (3GPP TS 29.002
-         * V19.1.0 clauses 8.8.1.3 and 7.6.3.85)
-         *
-         * @public
-         * @readonly
-         */
-        readonly odb_Data?: OPTIONAL<ODB_Data> /* REPLICATED_COMPONENT */,
-        /**
-         * @summary `roamingRestrictionDueToUnsupportedFeature`.
-         * @description
-         *
-         * HLR may include this if the MSC/VLR indicated unsupported
-         * services/features; the MSC area is then restricted. Used only by the
-         * VLR; SGSN/IWF shall ignore it. Not used by the CSS. (3GPP TS 29.002
-         * V19.1.0 clauses 8.8.1.3 and 7.6.3.13)
-         *
-         * @public
-         * @readonly
-         */
-        readonly roamingRestrictionDueToUnsupportedFeature?: OPTIONAL<NULL> /* REPLICATED_COMPONENT */,
-        /**
-         * @summary `regionalSubscriptionData`.
-         * @description
-         *
-         * Complete list of up to 10 Zone Codes for the current VPLMN. Accepted
-         * in only one Insert Subscriber Data in a dialogue; a later occurrence
-         * yields Unexpected Data Value. If omitted in all services of the
-         * dialogue, roaming is not regionally restricted. (3GPP TS 29.002
-         * V19.1.0 clauses 8.8.1.3 and 7.6.3.11)
-         *
-         * @public
-         * @readonly
-         */
-        readonly regionalSubscriptionData?: OPTIONAL<ZoneCodeList> /* REPLICATED_COMPONENT */,
-        /**
-         * @summary `vbsSubscriptionData`.
-         * @description
-         *
-         * Complete VBS group-id list at location updating, restoration, or
-         * change. Used only by the VLR. Not used by the CSS. (3GPP TS 29.002
-         * V19.1.0 clauses 8.8.1.3 and 7.6.3.40)
-         *
-         * @public
-         * @readonly
-         */
-        readonly vbsSubscriptionData?: OPTIONAL<VBSDataList> /* REPLICATED_COMPONENT */,
-        /**
-         * @summary `vgcsSubscriptionData`.
-         * @description
-         *
-         * Complete VGCS group-id list at location updating, restoration, or
-         * change. Used only by the VLR. Not used by the CSS. (3GPP TS 29.002
-         * V19.1.0 clauses 8.8.1.3 and 7.6.3.39)
-         *
-         * @public
-         * @readonly
-         */
-        readonly vgcsSubscriptionData?: OPTIONAL<VGCSDataList> /* REPLICATED_COMPONENT */,
-        /**
-         * @summary `vlrCamelSubscriptionInfo`.
-         * @description
-         *
-         * CAMEL services invoked in the MSC (O-CSI and further CSIs by CAMEL
-         * phase). Used only by the VLR; SGSN/IWF shall ignore it. (3GPP TS
-         * 29.002 V19.1.0 clauses 8.8.1.3 and 7.6.3.35)
-         *
-         * @public
-         * @readonly
-         */
-        readonly vlrCamelSubscriptionInfo?: OPTIONAL<VlrCamelSubscriptionInfo> /* REPLICATED_COMPONENT */,
-        /**
-         * @summary `extensionContainer`.
-         * @public
-         * @readonly
-         */
-        readonly extensionContainer?: OPTIONAL<ExtensionContainer>,
-        /**
-         * @summary `naea_PreferredCI`.
-         * @description
-         *
-         * North American Equal Access preferred Carrier Id. Included at the
-         * discretion of the HLR operator. (3GPP TS 29.002 V19.1.0 clauses
-         * 17.7.1 and 7.6.2.34)
-         *
-         * @public
-         * @readonly
-         */
-        readonly naea_PreferredCI?: OPTIONAL<NAEA_PreferredCI>,
-        /**
-         * @summary `gprsSubscriptionData`.
-         * @description
-         *
-         * PDP contexts the user has subscribed to. Complete set at GPRS
-         * location updating; only new/modified contexts on change. Used only by
-         * the SGSN; VLR shall ignore it. Not used by the CSS. (3GPP TS 29.002
-         * V19.1.0 clauses 8.8.1.3 and 7.6.3.46)
-         *
-         * @public
-         * @readonly
-         */
-        readonly gprsSubscriptionData?: OPTIONAL<GPRSSubscriptionData>,
-        /**
-         * @summary `roamingRestrictedInSgsnDueToUnsupportedFeature`.
-         * @description
-         *
-         * HSS/HLR may include this if SGSN/IWF indicated unsupported features.
-         * Used only by SGSN and IWF; VLR shall ignore it. (3GPP TS 29.002
-         * V19.1.0 clauses 8.8.1.3 and 7.6.3.49)
-         *
-         * @public
-         * @readonly
-         */
-        readonly roamingRestrictedInSgsnDueToUnsupportedFeature?: OPTIONAL<NULL>,
-        /**
-         * @summary `networkAccessMode`.
-         * @description
-         *
-         * Access to MSC/VLR and/or SGSN/MME. Always sent to SGSN and via IWF to
-         * MME at GPRS/MME location updating. In VLR used only in Restore Data
-         * and not stored. If segmentation is used, present only in the first
-         * sequence. Not used by the CSS. (3GPP TS 29.002 V19.1.0 clauses
-         * 8.8.1.3 and 17.7.1)
-         *
-         * @public
-         * @readonly
-         */
-        readonly networkAccessMode?: OPTIONAL<NetworkAccessMode>,
-        /**
-         * @summary `lsaInformation`.
-         * @description
-         *
-         * SoLSA LSAs applicable to the VPLMN, with access-right outside those
-         * LSAs. Used by VLR and SGSN; IWF shall ignore it. Not used by the CSS.
-         * (3GPP TS 29.002 V19.1.0 clauses 8.8.1.3 and 7.6.3.56)
-         *
-         * @public
-         * @readonly
-         */
-        readonly lsaInformation?: OPTIONAL<LSAInformation>,
-        /**
-         * @summary `lmu_Indicator`.
-         * @description
-         *
-         * Presence of an LMU. Used only by the VLR; SGSN or IWF shall ignore
-         * it. Not used by the CSS. (3GPP TS 29.002 V19.1.0 clauses 8.8.1.3 and
-         * 7.6.3.59)
-         *
-         * @public
-         * @readonly
-         */
-        readonly lmu_Indicator?: OPTIONAL<NULL>,
-        /**
-         * @summary `lcsInformation`.
-         * @description
-         *
-         * GMLC list, privacy exception list, and MO-LR list. Complete at
-         * restoration/location updating. Used by VLR, SGSN, and IWF. Not used
-         * by the CSS. (3GPP TS 29.002 V19.1.0 clauses 8.8.1.3 and 7.6.3.60)
-         *
-         * @public
-         * @readonly
-         */
-        readonly lcsInformation?: OPTIONAL<LCSInformation>,
-        /**
-         * @summary `istAlertTimer`.
-         * @description
-         *
-         * IST Alert timer sent at location updating, restoration, or IST data
-         * change. Not used by the CSS. (3GPP TS 29.002 V19.1.0 clauses 8.8.1.3
-         * and 7.6.3.66)
-         *
-         * @public
-         * @readonly
-         */
-        readonly istAlertTimer?: OPTIONAL<IST_AlertTimerValue>,
-        /**
-         * @summary `superChargerSupportedInHLR`.
-         * @description
-         *
-         * HLR Super-Charger support and age of subscription data stored in the
-         * HLR. Absence means the HLR does not support Super-Charger. Not used
-         * by the CSS. (3GPP TS 29.002 V19.1.0 clauses 8.8.1.3 and 7.6.3.70)
-         *
-         * @public
-         * @readonly
-         */
-        readonly superChargerSupportedInHLR?: OPTIONAL<AgeIndicator>,
-        /**
-         * @summary `mc_SS_Info`.
-         * @description
-         *
-         * Multicall subscription data. Completely replaces previously stored MC
-         * data in the VLR. Used only by the VLR. (3GPP TS 29.002 V19.1.0 clause
-         * 8.8.1.3)
-         *
-         * @public
-         * @readonly
-         */
-        readonly mc_SS_Info?: OPTIONAL<MC_SS_Info>,
-        /**
-         * @summary `cs_AllocationRetentionPriority`.
-         * @description
-         *
-         * CS allocation/retention priority (3GPP TS 23.107). Used only by the
-         * VLR. (3GPP TS 29.002 V19.1.0 clauses 8.8.1.3 and 7.6.3.87)
-         *
-         * @public
-         * @readonly
-         */
-        readonly cs_AllocationRetentionPriority?: OPTIONAL<CS_AllocationRetentionPriority>,
-        /**
-         * @summary `sgsn_CAMEL_SubscriptionInfo`.
-         * @description
-         *
-         * CAMEL services invoked in the SGSN (GPRS-CSI, MO/MT-SMS-CSI, MG-CSI
-         * by CAMEL phase). Used only by the SGSN. (3GPP TS 29.002 V19.1.0
-         * clauses 8.8.1.3 and 7.6.3.75)
-         *
-         * @public
-         * @readonly
-         */
-        readonly sgsn_CAMEL_SubscriptionInfo?: OPTIONAL<SGSN_CAMEL_SubscriptionInfo>,
-        /**
-         * @summary `chargingCharacteristics`.
-         * @description
-         *
-         * Subscribed Charging Characteristics (3GPP TS 32.251). Used only by
-         * SGSN and IWF; VLR shall ignore it. (3GPP TS 29.002 V19.1.0 clause
-         * 8.8.1.3)
-         *
-         * @public
-         * @readonly
-         */
-        readonly chargingCharacteristics?: OPTIONAL<ChargingCharacteristics>,
-        /**
-         * @summary `accessRestrictionData`.
-         * @description
-         *
-         * Restricted radio access technologies for this PLMN. If the
-         * VLR/SGSN/MME supports the feature but does not receive this IE, it
-         * shall assume no restrictions. Not used by the CSS. (3GPP TS 29.002
-         * V19.1.0 clauses 8.8.1.3 and 7.6.3.97)
-         *
-         * @public
-         * @readonly
-         */
-        readonly accessRestrictionData?: OPTIONAL<AccessRestrictionData>,
-        /**
-         * @summary `ics_Indicator`.
-         * @description
-         *
-         * If true, the MSC Server enhanced for ICS (3GPP TS 23.292) shall
-         * attempt IMS registration. Used by VLR and SGSN. (3GPP TS 29.002
-         * V19.1.0 clause 8.8.1.3)
-         *
-         * @public
-         * @readonly
-         */
-        readonly ics_Indicator?: OPTIONAL<BOOLEAN>,
-        /**
-         * @summary `eps_SubscriptionData`.
-         * @description
-         *
-         * EPS subscription (APN-OI replacement, RFSP-ID, AMBR, APN
-         * configurations, STN-SR, MPS, vSRVCC). Used only by MME via IWF and
-         * SGSN; VLR shall ignore it. (3GPP TS 29.002 V19.1.0 clauses 8.8.1.3
-         * and 7.6.3.46A)
-         *
-         * @public
-         * @readonly
-         */
-        readonly eps_SubscriptionData?: OPTIONAL<EPS_SubscriptionData>,
-        /**
-         * @summary `csg_SubscriptionDataList`.
-         * @description
-         *
-         * CSG-Ids, expiration dates (3GPP TS 22.011), and corresponding APNs.
-         * Replaces stored HLR/HSS CSG data. APN list is not applicable to the
-         * VLR. (3GPP TS 29.002 V19.1.0 clause 8.8.1.3)
-         *
-         * @public
-         * @readonly
-         */
-        readonly csg_SubscriptionDataList?: OPTIONAL<CSG_SubscriptionDataList>,
-        /**
-         * @summary `ue_ReachabilityRequestIndicator`.
-         * @description
-         *
-         * HSS is awaiting Notification of UE Reachability. Used by the IWF
-         * only. (3GPP TS 29.002 V19.1.0 clause 8.8.1.3)
-         *
-         * @public
-         * @readonly
-         */
-        readonly ue_ReachabilityRequestIndicator?: OPTIONAL<NULL>,
-        /**
-         * @summary `sgsn_Number`.
-         * @description
-         *
-         * SGSN identity (3GPP TS 23.003). Sent to the VLR during Restore Data
-         * or Update Location if Restoration Indicator is set and the subscriber
-         * is GPRS-registered. (3GPP TS 29.002 V19.1.0 clauses 8.8.1.3 and
-         * 7.6.2.38)
-         *
-         * @public
-         * @readonly
-         */
-        readonly sgsn_Number?: OPTIONAL<ISDN_AddressString>,
-        /**
-         * @summary `mme_Name`.
-         * @description
-         *
-         * MME identity over SGs (3GPP TS 23.003 clause 19.4.2.4) or Diameter
-         * Identity of the MME. Sent to the VLR during restoration if
-         * Restoration Indicator is set, length does not exceed 55 octets, and
-         * the subscriber is EPS-registered. (3GPP TS 29.002 V19.1.0 clauses
-         * 8.8.1.3 and 7.6.2.65)
-         *
-         * @public
-         * @readonly
-         */
-        readonly mme_Name?: OPTIONAL<DiameterIdentity>,
-        /**
-         * @summary `subscribedPeriodicRAUTAUtimer`.
-         * @description
-         *
-         * Subscribed periodic RAU/TAU timer. Used by SGSN and MME (via IWF) as
-         * in 3GPP TS 29.272 clause 5.2.1.1.2. VLR shall ignore it. (3GPP TS
-         * 29.002 V19.1.0 clause 8.8.1.3)
-         *
-         * @public
-         * @readonly
-         */
-        readonly subscribedPeriodicRAUTAUtimer?: OPTIONAL<SubscribedPeriodicRAUTAUtimer>,
-        /**
-         * @summary `vplmnLIPAAllowed`.
-         * @description
-         *
-         * UE may use LIPA in the attached PLMN (3GPP TS 23.401 / 23.060). Used
-         * only by IWF and SGSN; VLR shall ignore it. (3GPP TS 29.002 V19.1.0
-         * clause 8.8.1.3)
-         *
-         * @public
-         * @readonly
-         */
-        readonly vplmnLIPAAllowed?: OPTIONAL<NULL>,
-        /**
-         * @summary `mdtUserConsent`.
-         * @description
-         *
-         * User consent availability for MDT activation (3GPP TS 32.422). Used
-         * by VLR, SGSN, and IWF. (3GPP TS 29.002 V19.1.0 clause 8.8.1.3)
-         *
-         * @public
-         * @readonly
-         */
-        readonly mdtUserConsent?: OPTIONAL<BOOLEAN>,
-        /**
-         * @summary `subscribedPeriodicLAUtimer`.
-         * @description
-         *
-         * Subscribed periodic LAU timer (3GPP TS 23.012 clause 3.7.3). Used by
-         * MSC/VLR; SGSN shall ignore it. (3GPP TS 29.002 V19.1.0 clause
-         * 8.8.1.3)
-         *
-         * @public
-         * @readonly
-         */
-        readonly subscribedPeriodicLAUtimer?: OPTIONAL<SubscribedPeriodicLAUtimer>,
-        /**
-         * @summary `vplmn_Csg_SubscriptionDataList`.
-         * @description
-         *
-         * VPLMN CSG subscription from the CSS. Independent of HLR/HSS CSG data;
-         * HLR/HSS data takes precedence for a duplicate CSG Id. (3GPP TS 29.002
-         * V19.1.0 clause 8.8.1.3)
-         *
-         * @public
-         * @readonly
-         */
-        readonly vplmn_Csg_SubscriptionDataList?: OPTIONAL<VPLMN_CSG_SubscriptionDataList>,
-        /**
-         * @summary `additionalMSISDN`.
-         * @description
-         *
-         * Included at location updating and when changed if subscribed. Used by
-         * SGSN and IWF; VLR shall ignore it. Not sent if the SGSN did not
-         * indicate support. (3GPP TS 29.002 V19.1.0 clauses 8.8.1.3 and
-         * 7.6.2.17A)
-         *
-         * @public
-         * @readonly
-         */
-        readonly additionalMSISDN?: OPTIONAL<ISDN_AddressString>,
-        /**
-         * @summary `psAndSMS_OnlyServiceProvision`.
-         * @description
-         *
-         * Subscription is PS-only and permits CS access only for SMS. (3GPP TS
-         * 29.002 V19.1.0 clause 8.8.1.3)
-         *
-         * @public
-         * @readonly
-         */
-        readonly psAndSMS_OnlyServiceProvision?: OPTIONAL<NULL>,
-        /**
-         * @summary `smsInSGSNAllowed`.
-         * @description
-         *
-         * HSS allows SMS to be provided by the SGSN over NAS. (3GPP TS 29.002
-         * V19.1.0 clause 8.8.1.3)
-         *
-         * @public
-         * @readonly
-         */
-        readonly smsInSGSNAllowed?: OPTIONAL<NULL>,
-        /**
-         * @summary `cs_to_ps_SRVCC_Allowed_Indicator`.
-         * @description
-         *
-         * CS to PS SRVCC is subscribed. Used by the VLR (MSC Server enhanced
-         * for ICS). (3GPP TS 29.002 V19.1.0 clause 8.8.1.3)
-         *
-         * @public
-         * @readonly
-         */
-        readonly cs_to_ps_SRVCC_Allowed_Indicator?: OPTIONAL<NULL>,
-        /**
-         * @summary `pcscf_Restoration_Request`.
-         * @description
-         *
-         * HSS requests HSS-based P-CSCF restoration (3GPP TS 23.380 clause 5.4)
-         * toward SGSN or MME via IWF. (3GPP TS 29.002 V19.1.0 clause 8.8.1.3)
-         *
-         * @public
-         * @readonly
-         */
-        readonly pcscf_Restoration_Request?: OPTIONAL<NULL>,
-        /**
-         * @summary `adjacentAccessRestrictionDataList`.
-         * @description
-         *
-         * Allowed RAT in each indicated adjacent PLMN, according to
-         * subscription data. Not used by the CSS. (3GPP TS 29.002 V19.1.0
-         * clause 8.8.1.3)
-         *
-         * @public
-         * @readonly
-         */
-        readonly adjacentAccessRestrictionDataList?: OPTIONAL<AdjacentAccessRestrictionDataList>,
-        /**
-         * @summary `imsi_Group_Id_List`.
-         * @description
-         *
-         * IMSI-Group identifiers the subscriber belongs to (3GPP TS 29.272).
-         * (3GPP TS 29.002 V19.1.0 clauses 8.8.1.3 and 7.6.3.102)
-         *
-         * @public
-         * @readonly
-         */
-        readonly imsi_Group_Id_List?: OPTIONAL<IMSI_GroupIdList>,
-        /**
-         * @summary `ueUsageType`.
-         * @description
-         *
-         * UE usage characteristics for Dedicated Core Network selection. Shall
-         * not be sent to VLRs, nor to SGSNs that did not indicate Dedicated
-         * Core Network support in GPRS Location Update. (3GPP TS 29.002 V19.1.0
-         * clause 8.8.1.3)
-         *
-         * @public
-         * @readonly
-         */
-        readonly ueUsageType?: OPTIONAL<UE_UsageType>,
-        /**
-         * @summary `userPlaneIntegrityProtectionIndicator`.
-         * @description
-         *
-         * SGSN may activate user-plane integrity protection when GERAN is used
-         * (3GPP TS 43.020). VLR shall ignore it. (3GPP TS 29.002 V19.1.0 clause
-         * 8.8.1.3)
-         *
-         * @public
-         * @readonly
-         */
-        readonly userPlaneIntegrityProtectionIndicator?: OPTIONAL<NULL>,
-        /**
-         * @summary `dl_Buffering_Suggested_Packet_Count`.
-         * @description
-         *
-         * Suggested DL-buffering packet count for High Latency Communication
-         * (3GPP TS 29.272). VLR shall ignore it. (3GPP TS 29.002 V19.1.0 clause
-         * 8.8.1.3)
-         *
-         * @public
-         * @readonly
-         */
-        readonly dl_Buffering_Suggested_Packet_Count?: OPTIONAL<DL_Buffering_Suggested_Packet_Count>,
-        /**
-         * @summary `reset_Id_List`.
-         * @description
-         *
-         * Subscribed Reset-IDs. (3GPP TS 29.002 V19.1.0 clause 8.8.1.3)
-         *
-         * @public
-         * @readonly
-         */
-        readonly reset_Id_List?: OPTIONAL<Reset_Id_List>,
-        /**
-         * @summary `eDRX_Cycle_Length_List`.
-         * @description
-         *
-         * Subscribed eDRX cycle length per RAT type. (3GPP TS 29.002 V19.1.0
-         * clause 8.8.1.3)
-         *
-         * @public
-         * @readonly
-         */
-        readonly eDRX_Cycle_Length_List?: OPTIONAL<EDRX_Cycle_Length_List>,
-        /**
-         * @summary `ext_AccessRestrictionData`.
-         * @description
-         *
-         * Additional access restrictions (NR / unlicensed spectrum as secondary
-         * RAT) beyond `AccessRestrictionData`. (3GPP TS 29.002 V19.1.0 clause
-         * 17.7.1)
-         *
-         * @public
-         * @readonly
-         */
-        readonly ext_AccessRestrictionData?: OPTIONAL<Ext_AccessRestrictionData>,
-        /**
-         * @summary `iab_Operation_Allowed_Indicator`.
-         * @description
-         *
-         * IAB operation is authorized for the UE (3GPP TS 23.401). (3GPP TS
-         * 29.002 V19.1.0 clause 8.8.1.3)
-         *
-         * @public
-         * @readonly
-         */
-        readonly iab_Operation_Allowed_Indicator?: OPTIONAL<NULL>,
-        /**
-         * @summary Extensions that are not recognized.
-         * @public
-         * @readonly
-         */
-        readonly _unrecognizedExtensionsList: _Element[] = []
-    ) {}
+        imsi?: OPTIONAL<IMSI>,
+        msisdn?: OPTIONAL<ISDN_AddressString>,
+        category?: OPTIONAL<Category>,
+        subscriberStatus?: OPTIONAL<SubscriberStatus>,
+        bearerServiceList?: OPTIONAL<BearerServiceList>,
+        teleserviceList?: OPTIONAL<TeleserviceList>,
+        provisionedSS?: OPTIONAL<Ext_SS_InfoList>,
+        odb_Data?: OPTIONAL<ODB_Data>,
+        roamingRestrictionDueToUnsupportedFeature?: OPTIONAL<NULL>,
+        regionalSubscriptionData?: OPTIONAL<ZoneCodeList>,
+        vbsSubscriptionData?: OPTIONAL<VBSDataList>,
+        vgcsSubscriptionData?: OPTIONAL<VGCSDataList>,
+        vlrCamelSubscriptionInfo?: OPTIONAL<VlrCamelSubscriptionInfo>,
+        extensionContainer?: OPTIONAL<ExtensionContainer>,
+        naea_PreferredCI?: OPTIONAL<NAEA_PreferredCI>,
+        gprsSubscriptionData?: OPTIONAL<GPRSSubscriptionData>,
+        roamingRestrictedInSgsnDueToUnsupportedFeature?: OPTIONAL<NULL>,
+        networkAccessMode?: OPTIONAL<NetworkAccessMode>,
+        lsaInformation?: OPTIONAL<LSAInformation>,
+        lmu_Indicator?: OPTIONAL<NULL>,
+        lcsInformation?: OPTIONAL<LCSInformation>,
+        istAlertTimer?: OPTIONAL<IST_AlertTimerValue>,
+        superChargerSupportedInHLR?: OPTIONAL<AgeIndicator>,
+        mc_SS_Info?: OPTIONAL<MC_SS_Info>,
+        cs_AllocationRetentionPriority?: OPTIONAL<CS_AllocationRetentionPriority>,
+        sgsn_CAMEL_SubscriptionInfo?: OPTIONAL<SGSN_CAMEL_SubscriptionInfo>,
+        chargingCharacteristics?: OPTIONAL<ChargingCharacteristics>,
+        accessRestrictionData?: OPTIONAL<AccessRestrictionData>,
+        ics_Indicator?: OPTIONAL<BOOLEAN>,
+        eps_SubscriptionData?: OPTIONAL<EPS_SubscriptionData>,
+        csg_SubscriptionDataList?: OPTIONAL<CSG_SubscriptionDataList>,
+        ue_ReachabilityRequestIndicator?: OPTIONAL<NULL>,
+        sgsn_Number?: OPTIONAL<ISDN_AddressString>,
+        mme_Name?: OPTIONAL<DiameterIdentity>,
+        subscribedPeriodicRAUTAUtimer?: OPTIONAL<SubscribedPeriodicRAUTAUtimer>,
+        vplmnLIPAAllowed?: OPTIONAL<NULL>,
+        mdtUserConsent?: OPTIONAL<BOOLEAN>,
+        subscribedPeriodicLAUtimer?: OPTIONAL<SubscribedPeriodicLAUtimer>,
+        vplmn_Csg_SubscriptionDataList?: OPTIONAL<VPLMN_CSG_SubscriptionDataList>,
+        additionalMSISDN?: OPTIONAL<ISDN_AddressString>,
+        psAndSMS_OnlyServiceProvision?: OPTIONAL<NULL>,
+        smsInSGSNAllowed?: OPTIONAL<NULL>,
+        cs_to_ps_SRVCC_Allowed_Indicator?: OPTIONAL<NULL>,
+        pcscf_Restoration_Request?: OPTIONAL<NULL>,
+        adjacentAccessRestrictionDataList?: OPTIONAL<AdjacentAccessRestrictionDataList>,
+        imsi_Group_Id_List?: OPTIONAL<IMSI_GroupIdList>,
+        ueUsageType?: OPTIONAL<UE_UsageType>,
+        userPlaneIntegrityProtectionIndicator?: OPTIONAL<NULL>,
+        dl_Buffering_Suggested_Packet_Count?: OPTIONAL<DL_Buffering_Suggested_Packet_Count>,
+        reset_Id_List?: OPTIONAL<Reset_Id_List>,
+        eDRX_Cycle_Length_List?: OPTIONAL<EDRX_Cycle_Length_List>,
+        ext_AccessRestrictionData?: OPTIONAL<Ext_AccessRestrictionData>,
+        iab_Operation_Allowed_Indicator?: OPTIONAL<NULL>,
+        _unrecognizedExtensionsList: _Element[] = []
+    ) {
+        this.imsi = imsi;
+        this.msisdn = msisdn;
+        this.category = category;
+        this.subscriberStatus = subscriberStatus;
+        this.bearerServiceList = bearerServiceList;
+        this.teleserviceList = teleserviceList;
+        this.provisionedSS = provisionedSS;
+        this.odb_Data = odb_Data;
+        this.roamingRestrictionDueToUnsupportedFeature = roamingRestrictionDueToUnsupportedFeature;
+        this.regionalSubscriptionData = regionalSubscriptionData;
+        this.vbsSubscriptionData = vbsSubscriptionData;
+        this.vgcsSubscriptionData = vgcsSubscriptionData;
+        this.vlrCamelSubscriptionInfo = vlrCamelSubscriptionInfo;
+        this.extensionContainer = extensionContainer;
+        this.naea_PreferredCI = naea_PreferredCI;
+        this.gprsSubscriptionData = gprsSubscriptionData;
+        this.roamingRestrictedInSgsnDueToUnsupportedFeature = roamingRestrictedInSgsnDueToUnsupportedFeature;
+        this.networkAccessMode = networkAccessMode;
+        this.lsaInformation = lsaInformation;
+        this.lmu_Indicator = lmu_Indicator;
+        this.lcsInformation = lcsInformation;
+        this.istAlertTimer = istAlertTimer;
+        this.superChargerSupportedInHLR = superChargerSupportedInHLR;
+        this.mc_SS_Info = mc_SS_Info;
+        this.cs_AllocationRetentionPriority = cs_AllocationRetentionPriority;
+        this.sgsn_CAMEL_SubscriptionInfo = sgsn_CAMEL_SubscriptionInfo;
+        this.chargingCharacteristics = chargingCharacteristics;
+        this.accessRestrictionData = accessRestrictionData;
+        this.ics_Indicator = ics_Indicator;
+        this.eps_SubscriptionData = eps_SubscriptionData;
+        this.csg_SubscriptionDataList = csg_SubscriptionDataList;
+        this.ue_ReachabilityRequestIndicator = ue_ReachabilityRequestIndicator;
+        this.sgsn_Number = sgsn_Number;
+        this.mme_Name = mme_Name;
+        this.subscribedPeriodicRAUTAUtimer = subscribedPeriodicRAUTAUtimer;
+        this.vplmnLIPAAllowed = vplmnLIPAAllowed;
+        this.mdtUserConsent = mdtUserConsent;
+        this.subscribedPeriodicLAUtimer = subscribedPeriodicLAUtimer;
+        this.vplmn_Csg_SubscriptionDataList = vplmn_Csg_SubscriptionDataList;
+        this.additionalMSISDN = additionalMSISDN;
+        this.psAndSMS_OnlyServiceProvision = psAndSMS_OnlyServiceProvision;
+        this.smsInSGSNAllowed = smsInSGSNAllowed;
+        this.cs_to_ps_SRVCC_Allowed_Indicator = cs_to_ps_SRVCC_Allowed_Indicator;
+        this.pcscf_Restoration_Request = pcscf_Restoration_Request;
+        this.adjacentAccessRestrictionDataList = adjacentAccessRestrictionDataList;
+        this.imsi_Group_Id_List = imsi_Group_Id_List;
+        this.ueUsageType = ueUsageType;
+        this.userPlaneIntegrityProtectionIndicator = userPlaneIntegrityProtectionIndicator;
+        this.dl_Buffering_Suggested_Packet_Count = dl_Buffering_Suggested_Packet_Count;
+        this.reset_Id_List = reset_Id_List;
+        this.eDRX_Cycle_Length_List = eDRX_Cycle_Length_List;
+        this.ext_AccessRestrictionData = ext_AccessRestrictionData;
+        this.iab_Operation_Allowed_Indicator = iab_Operation_Allowed_Indicator;
+        this._unrecognizedExtensionsList = _unrecognizedExtensionsList;
+    }
 
     /**
      * @summary Restructures an object into a InsertSubscriberDataArg
@@ -781,13 +891,13 @@ class InsertSubscriberDataArg {
          * @static
          */
 
-    public static _enum_for_subscriberStatus = _enum_for_SubscriberStatus;        /**
+    public static _enum_for_subscriberStatus: typeof _enum_for_SubscriberStatus = _enum_for_SubscriberStatus;        /**
          * @summary The enum used as the type of the component `networkAccessMode`
          * @public
          * @static
          */
 
-    public static _enum_for_networkAccessMode = _enum_for_NetworkAccessMode;
+    public static _enum_for_networkAccessMode: typeof _enum_for_NetworkAccessMode = _enum_for_NetworkAccessMode;
 }
 
 /**

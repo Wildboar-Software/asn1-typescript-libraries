@@ -1,7 +1,7 @@
 /* eslint-disable */
 import {
-    UTF8String,
-    ASN1Element as _Element,
+    type UTF8String,
+    type ASN1Element as _Element,
     ASN1TagClass as _TagClass,
     ASN1Construction as _Construction,
     ASN1UniversalType as _UniversalType,
@@ -38,7 +38,7 @@ export const _decode_Label = (el: _Element): Label => {
     }
     return value;
 };
-export const _encode_Label = $._encodeUTF8String;
+export const _encode_Label: $.ASN1Encoder<string> = $._encodeUTF8String;
 
 
 /* eslint-enable */

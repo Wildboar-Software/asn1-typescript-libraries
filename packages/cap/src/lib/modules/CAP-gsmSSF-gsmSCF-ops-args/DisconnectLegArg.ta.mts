@@ -1,7 +1,7 @@
 /* eslint-disable */
 import {
-    OPTIONAL,
-    ASN1Element as _Element,
+    type OPTIONAL,
+    type ASN1Element as _Element,
     ASN1TagClass as _TagClass,
     ASN1Construction as _Construction,
     ASN1UniversalType as _UniversalType,
@@ -13,7 +13,7 @@ import {
 import * as $ from "@wildboar/asn1/functional";
 import { type Cause, _decode_Cause, _encode_Cause } from "../CAP-datatypes/Cause.ta.mjs";
 import { type Extensions, _decode_Extensions, _encode_Extensions } from "../CAP-datatypes/Extensions.ta.mjs";
-import { LegID, _decode_LegID, _encode_LegID } from "../Core-INAP-CS1-DataTypes/LegID.ta.mjs";
+import { type LegID, _decode_LegID, _encode_LegID } from "../Core-INAP-CS1-DataTypes/LegID.ta.mjs";
 
 
 /**
@@ -28,8 +28,8 @@ import { LegID, _decode_LegID, _encode_LegID } from "../Core-INAP-CS1-DataTypes/
  * ```asn1
  * DisconnectLegArg {PARAMETERS-BOUND : bound} ::= SEQUENCE {
  *     legToBeReleased            [0]    LegID,
- *     releaseCause            [1]    Cause {bound}                OPTIONAL,
- *     extensions                [2]    Extensions {bound}            OPTIONAL,
+ *     releaseCause            [1]    Cause {bound}                type OPTIONAL,
+ *     extensions                [2]    Extensions {bound}            type OPTIONAL,
  *     ...
  *     }
  * ```
@@ -38,43 +38,53 @@ import { LegID, _decode_LegID, _encode_LegID } from "../Core-INAP-CS1-DataTypes/
  */
 export
 class DisconnectLegArg {
+    /**
+     * @summary `legToBeReleased`.
+     * @description
+     *
+     * Call leg to release. Sending Side LegID (gsmSCF → gsmSSF). (3GPP TS
+     * 29.078 V19.0.0 clauses 4.1.5 and 11.15.1.1).
+     *
+     * @public
+     * @readonly
+     */
+    public readonly legToBeReleased: LegID;
+    /**
+     * @summary `releaseCause`.
+     * @description
+     *
+     * May be used by the MSC to generate specific tones to the party being
+     * released, or to fill the cause in the release message. (3GPP TS
+     * 29.078 V19.0.0 clause 11.15.1.1).
+     *
+     * @public
+     * @readonly
+     */
+    public readonly releaseCause?: OPTIONAL<Cause>;
+    /**
+     * @summary `extensions`.
+     * @public
+     * @readonly
+     */
+    public readonly extensions?: OPTIONAL<Extensions>;
+    /**
+     * @summary Extensions that are not recognized.
+     * @public
+     * @readonly
+     */
+    public readonly _unrecognizedExtensionsList: _Element[];
+
     constructor (
-        /**
-         * @summary `legToBeReleased`.
-         * @description
-         *
-         * Call leg to release. Sending Side LegID (gsmSCF → gsmSSF). (3GPP TS
-         * 29.078 V19.0.0 clauses 4.1.5 and 11.15.1.1).
-         *
-         * @public
-         * @readonly
-         */
-        readonly legToBeReleased: LegID,
-        /**
-         * @summary `releaseCause`.
-         * @description
-         *
-         * May be used by the MSC to generate specific tones to the party being
-         * released, or to fill the cause in the release message. (3GPP TS
-         * 29.078 V19.0.0 clause 11.15.1.1).
-         *
-         * @public
-         * @readonly
-         */
-        readonly releaseCause?: OPTIONAL<Cause>,
-        /**
-         * @summary `extensions`.
-         * @public
-         * @readonly
-         */
-        readonly extensions?: OPTIONAL<Extensions>,
-        /**
-         * @summary Extensions that are not recognized.
-         * @public
-         * @readonly
-         */
-        readonly _unrecognizedExtensionsList: _Element[] = []
-    ) {}
+        legToBeReleased: LegID,
+        releaseCause?: OPTIONAL<Cause>,
+        extensions?: OPTIONAL<Extensions>,
+        _unrecognizedExtensionsList: _Element[] = []
+    ) {
+        this.legToBeReleased = legToBeReleased;
+        this.releaseCause = releaseCause;
+        this.extensions = extensions;
+        this._unrecognizedExtensionsList = _unrecognizedExtensionsList;
+    }
 
     /**
      * @summary Restructures an object into a DisconnectLegArg

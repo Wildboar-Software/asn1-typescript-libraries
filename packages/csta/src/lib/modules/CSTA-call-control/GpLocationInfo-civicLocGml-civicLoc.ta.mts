@@ -2,11 +2,11 @@
 
 import * as $ from "@wildboar/asn1/functional";
 import {
-    OPTIONAL,
-    SEQUENCE,
-    SET,
-    IA5String,
-    ASN1Element as _Element,
+    type OPTIONAL,
+    type SEQUENCE,
+    type SET,
+    type IA5String,
+    type ASN1Element as _Element,
     ASN1TagClass as _TagClass
 } from "@wildboar/asn1";
 
@@ -51,178 +51,214 @@ import {
  */
 export
 class GpLocationInfo_civicLocGml_civicLoc {
+    /**
+     * @summary `country`.
+     * @description
+     *
+     * ISO 3166 country code. ECMA-285 §9.9.
+     *
+     * @public
+     * @readonly
+     */
+    public readonly country: IA5String;
+    /**
+     * @summary `a1`.
+     * @description
+     *
+     * National subdivision (IANA civic `A1`). RFC 4776.
+     *
+     * @public
+     * @readonly
+     */
+    public readonly a1?: OPTIONAL<IA5String>;
+    /**
+     * @summary `a2`.
+     * @description
+     *
+     * County, parish, or district (IANA `A2`). RFC 4776.
+     *
+     * @public
+     * @readonly
+     */
+    public readonly a2?: OPTIONAL<IA5String>;
+    /**
+     * @summary `a3`.
+     * @description
+     *
+     * City (IANA `A3`). RFC 4776.
+     *
+     * @public
+     * @readonly
+     */
+    public readonly a3?: OPTIONAL<IA5String>;
+    /**
+     * @summary `a4`.
+     * @description
+     *
+     * City division (IANA `A4`). RFC 4776.
+     *
+     * @public
+     * @readonly
+     */
+    public readonly a4?: OPTIONAL<IA5String>;
+    /**
+     * @summary `a5`.
+     * @description
+     *
+     * Neighborhood or block (IANA `A5`). RFC 4776.
+     *
+     * @public
+     * @readonly
+     */
+    public readonly a5?: OPTIONAL<IA5String>;
+    /**
+     * @summary `a6`.
+     * @description
+     *
+     * Street (IANA `A6`). RFC 4776.
+     *
+     * @public
+     * @readonly
+     */
+    public readonly a6?: OPTIONAL<IA5String>;
+    /**
+     * @summary `prd`.
+     * @description
+     *
+     * Leading street direction (IANA `PRD`). RFC 4776.
+     *
+     * @public
+     * @readonly
+     */
+    public readonly prd?: OPTIONAL<IA5String>;
+    /**
+     * @summary `pod`.
+     * @description
+     *
+     * Trailing street suffix (IANA `POD`). RFC 4776.
+     *
+     * @public
+     * @readonly
+     */
+    public readonly pod?: OPTIONAL<IA5String>;
+    /**
+     * @summary `sts`.
+     * @description
+     *
+     * Street suffix (IANA `STS`). RFC 4776.
+     *
+     * @public
+     * @readonly
+     */
+    public readonly sts?: OPTIONAL<IA5String>;
+    /**
+     * @summary `hno`.
+     * @description
+     *
+     * House number (IANA `HNO`). RFC 4776.
+     *
+     * @public
+     * @readonly
+     */
+    public readonly hno?: OPTIONAL<IA5String>;
+    /**
+     * @summary `hns`.
+     * @description
+     *
+     * House number suffix (IANA `HNS`). RFC 4776.
+     *
+     * @public
+     * @readonly
+     */
+    public readonly hns?: OPTIONAL<IA5String>;
+    /**
+     * @summary `lmk`.
+     * @description
+     *
+     * Landmark / vanity (IANA `LMK`). RFC 4776.
+     *
+     * @public
+     * @readonly
+     */
+    public readonly lmk?: OPTIONAL<IA5String>;
+    /**
+     * @summary `loc`.
+     * @description
+     *
+     * Additional location information (IANA `LOC`). RFC 4776.
+     *
+     * @public
+     * @readonly
+     */
+    public readonly loc?: OPTIONAL<IA5String>;
+    /**
+     * @summary `flr`.
+     * @description
+     *
+     * Floor (IANA `FLR`). RFC 4776.
+     *
+     * @public
+     * @readonly
+     */
+    public readonly flr?: OPTIONAL<IA5String>;
+    /**
+     * @summary `nam`.
+     * @description
+     *
+     * Residence or office name (IANA `NAM`). RFC 4776.
+     *
+     * @public
+     * @readonly
+     */
+    public readonly nam?: OPTIONAL<IA5String>;
+    /**
+     * @summary `pc`.
+     * @description
+     *
+     * Postal code (IANA `PC`). RFC 4776.
+     *
+     * @public
+     * @readonly
+     */
+    public readonly pc?: OPTIONAL<IA5String>;
+
     constructor (
-        /**
-         * @summary `country`.
-         * @description
-         *
-         * ISO 3166 country code. ECMA-285 §9.9.
-         *
-         * @public
-         * @readonly
-         */
-        readonly country: IA5String,
-        /**
-         * @summary `a1`.
-         * @description
-         *
-         * National subdivision (IANA civic `A1`). RFC 4776.
-         *
-         * @public
-         * @readonly
-         */
-        readonly a1?: OPTIONAL<IA5String>,
-        /**
-         * @summary `a2`.
-         * @description
-         *
-         * County, parish, or district (IANA `A2`). RFC 4776.
-         *
-         * @public
-         * @readonly
-         */
-        readonly a2?: OPTIONAL<IA5String>,
-        /**
-         * @summary `a3`.
-         * @description
-         *
-         * City (IANA `A3`). RFC 4776.
-         *
-         * @public
-         * @readonly
-         */
-        readonly a3?: OPTIONAL<IA5String>,
-        /**
-         * @summary `a4`.
-         * @description
-         *
-         * City division (IANA `A4`). RFC 4776.
-         *
-         * @public
-         * @readonly
-         */
-        readonly a4?: OPTIONAL<IA5String>,
-        /**
-         * @summary `a5`.
-         * @description
-         *
-         * Neighborhood or block (IANA `A5`). RFC 4776.
-         *
-         * @public
-         * @readonly
-         */
-        readonly a5?: OPTIONAL<IA5String>,
-        /**
-         * @summary `a6`.
-         * @description
-         *
-         * Street (IANA `A6`). RFC 4776.
-         *
-         * @public
-         * @readonly
-         */
-        readonly a6?: OPTIONAL<IA5String>,
-        /**
-         * @summary `prd`.
-         * @description
-         *
-         * Leading street direction (IANA `PRD`). RFC 4776.
-         *
-         * @public
-         * @readonly
-         */
-        readonly prd?: OPTIONAL<IA5String>,
-        /**
-         * @summary `pod`.
-         * @description
-         *
-         * Trailing street suffix (IANA `POD`). RFC 4776.
-         *
-         * @public
-         * @readonly
-         */
-        readonly pod?: OPTIONAL<IA5String>,
-        /**
-         * @summary `sts`.
-         * @description
-         *
-         * Street suffix (IANA `STS`). RFC 4776.
-         *
-         * @public
-         * @readonly
-         */
-        readonly sts?: OPTIONAL<IA5String>,
-        /**
-         * @summary `hno`.
-         * @description
-         *
-         * House number (IANA `HNO`). RFC 4776.
-         *
-         * @public
-         * @readonly
-         */
-        readonly hno?: OPTIONAL<IA5String>,
-        /**
-         * @summary `hns`.
-         * @description
-         *
-         * House number suffix (IANA `HNS`). RFC 4776.
-         *
-         * @public
-         * @readonly
-         */
-        readonly hns?: OPTIONAL<IA5String>,
-        /**
-         * @summary `lmk`.
-         * @description
-         *
-         * Landmark / vanity (IANA `LMK`). RFC 4776.
-         *
-         * @public
-         * @readonly
-         */
-        readonly lmk?: OPTIONAL<IA5String>,
-        /**
-         * @summary `loc`.
-         * @description
-         *
-         * Additional location information (IANA `LOC`). RFC 4776.
-         *
-         * @public
-         * @readonly
-         */
-        readonly loc?: OPTIONAL<IA5String>,
-        /**
-         * @summary `flr`.
-         * @description
-         *
-         * Floor (IANA `FLR`). RFC 4776.
-         *
-         * @public
-         * @readonly
-         */
-        readonly flr?: OPTIONAL<IA5String>,
-        /**
-         * @summary `nam`.
-         * @description
-         *
-         * Residence or office name (IANA `NAM`). RFC 4776.
-         *
-         * @public
-         * @readonly
-         */
-        readonly nam?: OPTIONAL<IA5String>,
-        /**
-         * @summary `pc`.
-         * @description
-         *
-         * Postal code (IANA `PC`). RFC 4776.
-         *
-         * @public
-         * @readonly
-         */
-        readonly pc?: OPTIONAL<IA5String>
-    ) {}
+        country: IA5String,
+        a1?: OPTIONAL<IA5String>,
+        a2?: OPTIONAL<IA5String>,
+        a3?: OPTIONAL<IA5String>,
+        a4?: OPTIONAL<IA5String>,
+        a5?: OPTIONAL<IA5String>,
+        a6?: OPTIONAL<IA5String>,
+        prd?: OPTIONAL<IA5String>,
+        pod?: OPTIONAL<IA5String>,
+        sts?: OPTIONAL<IA5String>,
+        hno?: OPTIONAL<IA5String>,
+        hns?: OPTIONAL<IA5String>,
+        lmk?: OPTIONAL<IA5String>,
+        loc?: OPTIONAL<IA5String>,
+        flr?: OPTIONAL<IA5String>,
+        nam?: OPTIONAL<IA5String>,
+        pc?: OPTIONAL<IA5String>
+    ) {
+        this.country = country;
+        this.a1 = a1;
+        this.a2 = a2;
+        this.a3 = a3;
+        this.a4 = a4;
+        this.a5 = a5;
+        this.a6 = a6;
+        this.prd = prd;
+        this.pod = pod;
+        this.sts = sts;
+        this.hno = hno;
+        this.hns = hns;
+        this.lmk = lmk;
+        this.loc = loc;
+        this.flr = flr;
+        this.nam = nam;
+        this.pc = pc;
+    }
 
     /**
      * @summary Restructures an object into a GpLocationInfo_civicLocGml_civicLoc

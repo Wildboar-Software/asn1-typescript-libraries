@@ -1,7 +1,7 @@
 /* eslint-disable */
 import {
-    ASN1Element as _Element,
-    INTEGER
+    type ASN1Element as _Element,
+    type INTEGER
 } from "@wildboar/asn1";
 import * as $ from "@wildboar/asn1/functional";
 
@@ -41,7 +41,7 @@ type CancelSessionResponseEsipa_cancelSessionError = INTEGER;
  * @type {number}
  */
 export
-const CancelSessionResponseEsipa_cancelSessionError_invalidTransactionId: CancelSessionResponseEsipa_cancelSessionError = 1; /* LONG_NAMED_INTEGER_VALUE */
+const CancelSessionResponseEsipa_cancelSessionError_invalidTransactionId: 1 = 1 satisfies CancelSessionResponseEsipa_cancelSessionError; /* LONG_NAMED_INTEGER_VALUE */
 
 /**
  * @summary CancelSessionResponseEsipa_cancelSessionError_invalidTransactionId
@@ -53,7 +53,7 @@ const CancelSessionResponseEsipa_cancelSessionError_invalidTransactionId: Cancel
  * @type {number}
  */
 export
-const invalidTransactionId: CancelSessionResponseEsipa_cancelSessionError = CancelSessionResponseEsipa_cancelSessionError_invalidTransactionId; /* SHORT_NAMED_INTEGER_VALUE */
+const invalidTransactionId: 1 = CancelSessionResponseEsipa_cancelSessionError_invalidTransactionId; /* SHORT_NAMED_INTEGER_VALUE */
 
 /**
  * @summary CancelSessionResponseEsipa_cancelSessionError_euiccSignatureInvalid
@@ -66,7 +66,7 @@ const invalidTransactionId: CancelSessionResponseEsipa_cancelSessionError = Canc
  * @type {number}
  */
 export
-const CancelSessionResponseEsipa_cancelSessionError_euiccSignatureInvalid: CancelSessionResponseEsipa_cancelSessionError = 2; /* LONG_NAMED_INTEGER_VALUE */
+const CancelSessionResponseEsipa_cancelSessionError_euiccSignatureInvalid: 2 = 2 satisfies CancelSessionResponseEsipa_cancelSessionError; /* LONG_NAMED_INTEGER_VALUE */
 
 /**
  * @summary CancelSessionResponseEsipa_cancelSessionError_euiccSignatureInvalid
@@ -78,7 +78,7 @@ const CancelSessionResponseEsipa_cancelSessionError_euiccSignatureInvalid: Cance
  * @type {number}
  */
 export
-const euiccSignatureInvalid: CancelSessionResponseEsipa_cancelSessionError = CancelSessionResponseEsipa_cancelSessionError_euiccSignatureInvalid; /* SHORT_NAMED_INTEGER_VALUE */
+const euiccSignatureInvalid: 2 = CancelSessionResponseEsipa_cancelSessionError_euiccSignatureInvalid; /* SHORT_NAMED_INTEGER_VALUE */
 
 /**
  * @summary CancelSessionResponseEsipa_cancelSessionError_undefinedError
@@ -91,7 +91,7 @@ const euiccSignatureInvalid: CancelSessionResponseEsipa_cancelSessionError = Can
  * @type {number}
  */
 export
-const CancelSessionResponseEsipa_cancelSessionError_undefinedError: CancelSessionResponseEsipa_cancelSessionError = 127; /* LONG_NAMED_INTEGER_VALUE */
+const CancelSessionResponseEsipa_cancelSessionError_undefinedError: 127 = 127 satisfies CancelSessionResponseEsipa_cancelSessionError; /* LONG_NAMED_INTEGER_VALUE */
 
 /**
  * @summary CancelSessionResponseEsipa_cancelSessionError_undefinedError
@@ -103,7 +103,7 @@ const CancelSessionResponseEsipa_cancelSessionError_undefinedError: CancelSessio
  * @type {number}
  */
 export
-const undefinedError: CancelSessionResponseEsipa_cancelSessionError = CancelSessionResponseEsipa_cancelSessionError_undefinedError; /* SHORT_NAMED_INTEGER_VALUE */
+const undefinedError: 127 = CancelSessionResponseEsipa_cancelSessionError_undefinedError; /* SHORT_NAMED_INTEGER_VALUE */
 export const _decode_CancelSessionResponseEsipa_cancelSessionError: $.ASN1Decoder<CancelSessionResponseEsipa_cancelSessionError> = $._decodeInteger;
 export const _encode_CancelSessionResponseEsipa_cancelSessionError: $.ASN1Encoder<CancelSessionResponseEsipa_cancelSessionError> = $._encodeInteger;
 

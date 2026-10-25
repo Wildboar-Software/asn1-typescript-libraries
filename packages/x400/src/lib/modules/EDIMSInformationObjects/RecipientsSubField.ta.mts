@@ -1,7 +1,7 @@
 /* eslint-disable */
 import {
-    OPTIONAL,
-    ASN1Element as _Element,
+    type OPTIONAL,
+    type ASN1Element as _Element,
     ASN1TagClass as _TagClass,
     ASN1Construction as _Construction,
     ASN1UniversalType as _UniversalType,
@@ -13,12 +13,12 @@ import {
 } from '@wildboar/asn1';
 import * as $ from '@wildboar/asn1/functional';
 import {
-    RecipientField,
+    type RecipientField,
     _decode_RecipientField,
     _encode_RecipientField,
 } from '../EDIMSInformationObjects/RecipientField.ta.mjs';
 import {
-    ActionRequestField,
+    type ActionRequestField,
     _decode_ActionRequestField,
     _encode_ActionRequestField,
 } from '../EDIMSInformationObjects/ActionRequestField.ta.mjs';
@@ -28,7 +28,7 @@ import {
     _encode_EDINotificationRequestsField,
 } from '../EDIMSInformationObjects/EDINotificationRequestsField.ta.mjs';
 import {
-    ResponsibilityPassingAllowedField,
+    type ResponsibilityPassingAllowedField,
     _decode_ResponsibilityPassingAllowedField,
     _encode_ResponsibilityPassingAllowedField,
 } from '../EDIMSInformationObjects/ResponsibilityPassingAllowedField.ta.mjs';
@@ -43,27 +43,27 @@ import {
     _encode_RecipientReferenceField,
 } from '../EDIMSInformationObjects/RecipientReferenceField.ta.mjs';
 import {
-    InterchangeControlReferenceField,
+    type InterchangeControlReferenceField,
     _decode_InterchangeControlReferenceField,
     _encode_InterchangeControlReferenceField,
 } from '../EDIMSInformationObjects/InterchangeControlReferenceField.ta.mjs';
 import {
-    ProcessingPriorityCodeField,
+    type ProcessingPriorityCodeField,
     _decode_ProcessingPriorityCodeField,
     _encode_ProcessingPriorityCodeField,
 } from '../EDIMSInformationObjects/ProcessingPriorityCodeField.ta.mjs';
 import {
-    AcknowledgementRequestField,
+    type AcknowledgementRequestField,
     _decode_AcknowledgementRequestField,
     _encode_AcknowledgementRequestField,
 } from '../EDIMSInformationObjects/AcknowledgementRequestField.ta.mjs';
 import {
-    CommunicationsAgreementIdField,
+    type CommunicationsAgreementIdField,
     _decode_CommunicationsAgreementIdField,
     _encode_CommunicationsAgreementIdField,
 } from '../EDIMSInformationObjects/CommunicationsAgreementIdField.ta.mjs';
 import {
-    TestIndicatorField,
+    type TestIndicatorField,
     _decode_TestIndicatorField,
     _encode_TestIndicatorField,
 } from '../EDIMSInformationObjects/TestIndicatorField.ta.mjs';
@@ -73,7 +73,7 @@ import {
     _encode_AuthorizationInformationField,
 } from '../EDIMSInformationObjects/AuthorizationInformationField.ta.mjs';
 import {
-    RecipientExtensionsField,
+    type RecipientExtensionsField,
     _decode_RecipientExtensionsField,
     _encode_RecipientExtensionsField,
 } from '../EDIMSInformationObjects/RecipientExtensionsField.ta.mjs';
@@ -118,86 +118,114 @@ import {
  *
  */
 export class RecipientsSubField {
+    /**
+     * @summary `recipient`.
+     * @public
+     * @readonly
+     */
+    public readonly recipient: RecipientField;
+    /**
+     * @summary `action_request`.
+     * @public
+     * @readonly
+     */
+    public readonly action_request?: OPTIONAL<ActionRequestField>;
+    /**
+     * @summary `edi_notification_requests_field`.
+     * @public
+     * @readonly
+     */
+    public readonly edi_notification_requests_field?: OPTIONAL<EDINotificationRequestsField>;
+    /**
+     * @summary `responsibility_passing_allowed`.
+     * @public
+     * @readonly
+     */
+    public readonly responsibility_passing_allowed?: OPTIONAL<ResponsibilityPassingAllowedField>;
+    /**
+     * @summary `interchange_recipient`.
+     * @public
+     * @readonly
+     */
+    public readonly interchange_recipient?: OPTIONAL<InterchangeRecipientField>;
+    /**
+     * @summary `recipient_reference`.
+     * @public
+     * @readonly
+     */
+    public readonly recipient_reference?: OPTIONAL<RecipientReferenceField>;
+    /**
+     * @summary `interchange_control_reference`.
+     * @public
+     * @readonly
+     */
+    public readonly interchange_control_reference?: OPTIONAL<InterchangeControlReferenceField>;
+    /**
+     * @summary `processing_priority_code`.
+     * @public
+     * @readonly
+     */
+    public readonly processing_priority_code?: OPTIONAL<ProcessingPriorityCodeField>;
+    /**
+     * @summary `acknowledgement_request`.
+     * @public
+     * @readonly
+     */
+    public readonly acknowledgement_request?: OPTIONAL<AcknowledgementRequestField>;
+    /**
+     * @summary `communications_agreement_id`.
+     * @public
+     * @readonly
+     */
+    public readonly communications_agreement_id?: OPTIONAL<CommunicationsAgreementIdField>;
+    /**
+     * @summary `test_indicator`.
+     * @public
+     * @readonly
+     */
+    public readonly test_indicator?: OPTIONAL<TestIndicatorField>;
+    /**
+     * @summary `authorization_information`.
+     * @public
+     * @readonly
+     */
+    public readonly authorization_information?: OPTIONAL<AuthorizationInformationField>;
+    /**
+     * @summary `recipient_extensions`.
+     * @public
+     * @readonly
+     */
+    public readonly recipient_extensions?: OPTIONAL<RecipientExtensionsField>;
+
     constructor(
-        /**
-         * @summary `recipient`.
-         * @public
-         * @readonly
-         */
-        readonly recipient: RecipientField,
-        /**
-         * @summary `action_request`.
-         * @public
-         * @readonly
-         */
-        readonly action_request?: OPTIONAL<ActionRequestField>,
-        /**
-         * @summary `edi_notification_requests_field`.
-         * @public
-         * @readonly
-         */
-        readonly edi_notification_requests_field?: OPTIONAL<EDINotificationRequestsField>,
-        /**
-         * @summary `responsibility_passing_allowed`.
-         * @public
-         * @readonly
-         */
-        readonly responsibility_passing_allowed?: OPTIONAL<ResponsibilityPassingAllowedField>,
-        /**
-         * @summary `interchange_recipient`.
-         * @public
-         * @readonly
-         */
-        readonly interchange_recipient?: OPTIONAL<InterchangeRecipientField>,
-        /**
-         * @summary `recipient_reference`.
-         * @public
-         * @readonly
-         */
-        readonly recipient_reference?: OPTIONAL<RecipientReferenceField>,
-        /**
-         * @summary `interchange_control_reference`.
-         * @public
-         * @readonly
-         */
-        readonly interchange_control_reference?: OPTIONAL<InterchangeControlReferenceField>,
-        /**
-         * @summary `processing_priority_code`.
-         * @public
-         * @readonly
-         */
-        readonly processing_priority_code?: OPTIONAL<ProcessingPriorityCodeField>,
-        /**
-         * @summary `acknowledgement_request`.
-         * @public
-         * @readonly
-         */
-        readonly acknowledgement_request?: OPTIONAL<AcknowledgementRequestField>,
-        /**
-         * @summary `communications_agreement_id`.
-         * @public
-         * @readonly
-         */
-        readonly communications_agreement_id?: OPTIONAL<CommunicationsAgreementIdField>,
-        /**
-         * @summary `test_indicator`.
-         * @public
-         * @readonly
-         */
-        readonly test_indicator?: OPTIONAL<TestIndicatorField>,
-        /**
-         * @summary `authorization_information`.
-         * @public
-         * @readonly
-         */
-        readonly authorization_information?: OPTIONAL<AuthorizationInformationField>,
-        /**
-         * @summary `recipient_extensions`.
-         * @public
-         * @readonly
-         */
-        readonly recipient_extensions?: OPTIONAL<RecipientExtensionsField>
-    ) {}
+        recipient: RecipientField,
+        action_request?: OPTIONAL<ActionRequestField>,
+        edi_notification_requests_field?: OPTIONAL<EDINotificationRequestsField>,
+        responsibility_passing_allowed?: OPTIONAL<ResponsibilityPassingAllowedField>,
+        interchange_recipient?: OPTIONAL<InterchangeRecipientField>,
+        recipient_reference?: OPTIONAL<RecipientReferenceField>,
+        interchange_control_reference?: OPTIONAL<InterchangeControlReferenceField>,
+        processing_priority_code?: OPTIONAL<ProcessingPriorityCodeField>,
+        acknowledgement_request?: OPTIONAL<AcknowledgementRequestField>,
+        communications_agreement_id?: OPTIONAL<CommunicationsAgreementIdField>,
+        test_indicator?: OPTIONAL<TestIndicatorField>,
+        authorization_information?: OPTIONAL<AuthorizationInformationField>,
+        recipient_extensions?: OPTIONAL<RecipientExtensionsField>
+    ) {
+        this.recipient = recipient;
+        this.action_request = action_request;
+        this.edi_notification_requests_field = edi_notification_requests_field;
+        this.responsibility_passing_allowed = responsibility_passing_allowed;
+        this.interchange_recipient = interchange_recipient;
+        this.recipient_reference = recipient_reference;
+        this.interchange_control_reference = interchange_control_reference;
+        this.processing_priority_code = processing_priority_code;
+        this.acknowledgement_request = acknowledgement_request;
+        this.communications_agreement_id = communications_agreement_id;
+        this.test_indicator = test_indicator;
+        this.authorization_information = authorization_information;
+        this.recipient_extensions = recipient_extensions;
+    }
 
     /**
      * @summary Restructures an object into a RecipientsSubField

@@ -1,6 +1,6 @@
 /* eslint-disable */
 import {
-    ASN1Element as _Element,
+    type ASN1Element as _Element,
     ASN1TagClass as _TagClass,
     ASN1Construction as _Construction,
     ASN1UniversalType as _UniversalType,
@@ -10,7 +10,7 @@ import {
     ASN1ConstructionError as _ConstructionError,
 } from "@wildboar/asn1";
 import * as $ from "@wildboar/asn1/functional";
-import { SecretKeyObject, _get_decoder_for_SecretKeyObject, _get_encoder_for_SecretKeyObject } from "../CryptographicInformationFramework/SecretKeyObject.ta.mjs";
+import { type SecretKeyObject, _get_decoder_for_SecretKeyObject, _get_encoder_for_SecretKeyObject } from "../CryptographicInformationFramework/SecretKeyObject.ta.mjs";
 import { SecretKeyAttributes, _decode_SecretKeyAttributes, _encode_SecretKeyAttributes } from "../CryptographicInformationFramework/SecretKeyAttributes.ta.mjs";
 import { GenericKeyAttributes, _decode_GenericKeyAttributes, _encode_GenericKeyAttributes } from "../CryptographicInformationFramework/GenericKeyAttributes.ta.mjs";
 

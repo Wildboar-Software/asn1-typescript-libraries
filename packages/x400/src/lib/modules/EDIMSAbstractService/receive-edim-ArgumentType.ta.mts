@@ -1,6 +1,6 @@
 /* eslint-disable */
 import {
-    ASN1Element as _Element,
+    type ASN1Element as _Element,
     ASN1TagClass as _TagClass,
     ASN1Construction as _Construction,
     ASN1UniversalType as _UniversalType,
@@ -34,20 +34,26 @@ import {
  *
  */
 export class receive_edim_ArgumentType {
+    /**
+     * @summary `envelope`.
+     * @public
+     * @readonly
+     */
+    public readonly envelope: MessageDeliveryEnvelope;
+    /**
+     * @summary `content`.
+     * @public
+     * @readonly
+     */
+    public readonly content: EDIM;
+
     constructor(
-        /**
-         * @summary `envelope`.
-         * @public
-         * @readonly
-         */
-        readonly envelope: MessageDeliveryEnvelope,
-        /**
-         * @summary `content`.
-         * @public
-         * @readonly
-         */
-        readonly content: EDIM
-    ) {}
+        envelope: MessageDeliveryEnvelope,
+        content: EDIM
+    ) {
+        this.envelope = envelope;
+        this.content = content;
+    }
 
     /**
      * @summary Restructures an object into a receive_edim_ArgumentType

@@ -1,20 +1,20 @@
 /* eslint-disable */
 import {
-    OPTIONAL,
-    ASN1Element as _Element,
+    type OPTIONAL,
+    type ASN1Element as _Element,
     ASN1TagClass as _TagClass
 } from "@wildboar/asn1";
 import * as $ from "@wildboar/asn1/functional";
 
 import {
-    ReceiptTimeField,
+    type ReceiptTimeField,
     _decode_ReceiptTimeField,
     _encode_ReceiptTimeField,
 } from "@wildboar/x400/IPMSInformationObjects";
-import { Acp127NotificationType, _decode_Acp127NotificationType, _encode_Acp127NotificationType } from "../MMSPerRecipientSpecifierExtensions/Acp127NotificationType.ta.mjs";
-import { AddressListIndicator, _decode_AddressListIndicator, _encode_AddressListIndicator } from "../MMSOtherNotificationTypeExtensions/AddressListIndicator.ta.mjs";
-import { Acp127Recipient, _decode_Acp127Recipient, _encode_Acp127Recipient } from "../MMSOtherNotificationTypeExtensions/Acp127Recipient.ta.mjs";
-import { Acp127SuppInfo, _decode_Acp127SuppInfo, _encode_Acp127SuppInfo } from "../MMSOtherNotificationTypeExtensions/Acp127SuppInfo.ta.mjs";
+import { type Acp127NotificationType, _decode_Acp127NotificationType, _encode_Acp127NotificationType } from "../MMSPerRecipientSpecifierExtensions/Acp127NotificationType.ta.mjs";
+import { type AddressListIndicator, _decode_AddressListIndicator, _encode_AddressListIndicator } from "../MMSOtherNotificationTypeExtensions/AddressListIndicator.ta.mjs";
+import { type Acp127Recipient, _decode_Acp127Recipient, _encode_Acp127Recipient } from "../MMSOtherNotificationTypeExtensions/Acp127Recipient.ta.mjs";
+import { type Acp127SuppInfo, _decode_Acp127SuppInfo, _encode_Acp127SuppInfo } from "../MMSOtherNotificationTypeExtensions/Acp127SuppInfo.ta.mjs";
 
 
 /**

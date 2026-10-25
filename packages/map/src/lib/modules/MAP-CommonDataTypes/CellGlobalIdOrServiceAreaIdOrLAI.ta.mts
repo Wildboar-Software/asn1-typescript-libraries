@@ -1,11 +1,11 @@
 /* eslint-disable */
 import {
-    ASN1Element as _Element,
+    type ASN1Element as _Element,
     ASN1TagClass as _TagClass
 } from "@wildboar/asn1";
 import * as $ from "@wildboar/asn1/functional";
-import { CellGlobalIdOrServiceAreaIdFixedLength, _decode_CellGlobalIdOrServiceAreaIdFixedLength, _encode_CellGlobalIdOrServiceAreaIdFixedLength } from "../MAP-CommonDataTypes/CellGlobalIdOrServiceAreaIdFixedLength.ta.mjs";
-import { LAIFixedLength, _decode_LAIFixedLength, _encode_LAIFixedLength } from "../MAP-CommonDataTypes/LAIFixedLength.ta.mjs";
+import { type CellGlobalIdOrServiceAreaIdFixedLength, _decode_CellGlobalIdOrServiceAreaIdFixedLength, _encode_CellGlobalIdOrServiceAreaIdFixedLength } from "../MAP-CommonDataTypes/CellGlobalIdOrServiceAreaIdFixedLength.ta.mjs";
+import { type LAIFixedLength, _decode_LAIFixedLength, _encode_LAIFixedLength } from "../MAP-CommonDataTypes/LAIFixedLength.ta.mjs";
 
 
 /**

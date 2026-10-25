@@ -1,12 +1,12 @@
 /* eslint-disable */
 import {
-    OPTIONAL,
-    ASN1Element as _Element,
+    type OPTIONAL,
+    type ASN1Element as _Element,
     ASN1TagClass as _TagClass
 } from "@wildboar/asn1";
 import * as $ from "@wildboar/asn1/functional";
 import { DNDActivateRes_status_Item, _decode_DNDActivateRes_status_Item, _encode_DNDActivateRes_status_Item } from "../Do-Not-Disturb-Operations-asn1-97/DNDActivateRes-status-Item.ta.mjs";
-import { DNDActivateRes_resultExtension, _decode_DNDActivateRes_resultExtension, _encode_DNDActivateRes_resultExtension } from "../Do-Not-Disturb-Operations-asn1-97/DNDActivateRes-resultExtension.ta.mjs";
+import { type DNDActivateRes_resultExtension, _decode_DNDActivateRes_resultExtension, _encode_DNDActivateRes_resultExtension } from "../Do-Not-Disturb-Operations-asn1-97/DNDActivateRes-resultExtension.ta.mjs";
 
 /**
  * @summary DNDActivateRes

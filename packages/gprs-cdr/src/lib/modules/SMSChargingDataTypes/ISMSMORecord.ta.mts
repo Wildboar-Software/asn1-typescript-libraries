@@ -1,26 +1,26 @@
 /* eslint-disable */
 import {
-    BOOLEAN,
-    GraphicString,
-    INTEGER,
-    NULL,
-    OCTET_STRING,
-    OPTIONAL,
-    ASN1Element as _Element,
+    type BOOLEAN,
+    type GraphicString,
+    type INTEGER,
+    type NULL,
+    type OCTET_STRING,
+    type OPTIONAL,
+    type ASN1Element as _Element,
     ASN1TagClass as _TagClass,
     ASN1SizeError,
     ASN1OverflowError
 } from "@wildboar/asn1";
 import * as $ from "@wildboar/asn1/functional";
-import { RecordType, _decode_RecordType, _encode_RecordType } from "../SMSChargingDataTypes/RecordType.ta.mjs";
-import { NodeAddress, _decode_NodeAddress, _encode_NodeAddress } from "../SMSChargingDataTypes/NodeAddress.ta.mjs";
+import { type RecordType, _decode_RecordType, _encode_RecordType } from "../SMSChargingDataTypes/RecordType.ta.mjs";
+import { type NodeAddress, _decode_NodeAddress, _encode_NodeAddress } from "../SMSChargingDataTypes/NodeAddress.ta.mjs";
 import { OriginatorInfo, _decode_OriginatorInfo, _encode_OriginatorInfo } from "../SMSChargingDataTypes/OriginatorInfo.ta.mjs";
 import { RecipientInfo, _decode_RecipientInfo, _encode_RecipientInfo } from "../SMSChargingDataTypes/RecipientInfo.ta.mjs";
 import { SubscriberEquipmentNumber, _decode_SubscriberEquipmentNumber, _encode_SubscriberEquipmentNumber } from "../SMSChargingDataTypes/SubscriberEquipmentNumber.ta.mjs";
-import { MessageClass, _decode_MessageClass, _encode_MessageClass, _enum_for_MessageClass } from "../SMSChargingDataTypes/MessageClass.ta.mjs";
+import { type MessageClass, _decode_MessageClass, _encode_MessageClass, _enum_for_MessageClass } from "../SMSChargingDataTypes/MessageClass.ta.mjs";
 import { SMMessageType, _decode_SMMessageType, _encode_SMMessageType, _enum_for_SMMessageType } from "../SMSChargingDataTypes/SMMessageType.ta.mjs";
-import { SMSResult, _decode_SMSResult, _encode_SMSResult } from "../SMSChargingDataTypes/SMSResult.ta.mjs";
-import { PDPAddress, _decode_PDPAddress, _encode_PDPAddress } from "../SMSChargingDataTypes/PDPAddress.ta.mjs";
+import { type SMSResult, _decode_SMSResult, _encode_SMSResult } from "../SMSChargingDataTypes/SMSResult.ta.mjs";
+import { type PDPAddress, _decode_PDPAddress, _encode_PDPAddress } from "../SMSChargingDataTypes/PDPAddress.ta.mjs";
 import { ManagementExtension, _decode_ManagementExtension, _encode_ManagementExtension } from "../SMSChargingDataTypes/ManagementExtension.ta.mjs";
 
 
@@ -512,13 +512,13 @@ class ISMSMORecord {
          * @static
          */
 
-    public static _enum_for_messageClass = _enum_for_MessageClass;        /**
+    public static _enum_for_messageClass: typeof _enum_for_MessageClass = _enum_for_MessageClass;        /**
          * @summary The enum used as the type of the component `sMMessageType`
          * @public
          * @static
          */
 
-    public static _enum_for_sMMessageType = _enum_for_SMMessageType;
+    public static _enum_for_sMMessageType: typeof _enum_for_SMMessageType = _enum_for_SMMessageType;
 }
 
 /**

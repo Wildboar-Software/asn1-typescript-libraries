@@ -1,10 +1,10 @@
 /* eslint-disable */
 import {
-    ASN1Element as _Element,
+    type ASN1Element as _Element,
     ASN1Error
 } from "@wildboar/asn1";
 import * as $ from "@wildboar/asn1/functional";
-import { _decode_DeliveryMode, _encode_DeliveryMode, DeliveryMode,
+import { _decode_DeliveryMode, _encode_DeliveryMode, type DeliveryMode,
     DeliveryMode_fwdOnline
 } from "../CCSDS-SLE-TRANSFER-SERVICE-COMMON-TYPES/DeliveryMode.ta.mjs";
 
@@ -49,8 +49,6 @@ function _decode_CltuDeliveryMode (el: _Element): CltuDeliveryMode {
     return _decoded;
 }
 
-let _cached_encoder_for_CltuDeliveryMode: $.ASN1Encoder<CltuDeliveryMode> | null = null;
-
 /**
  * @summary Encodes a(n) CltuDeliveryMode into an ASN.1 Element.
  * @function
@@ -58,11 +56,7 @@ let _cached_encoder_for_CltuDeliveryMode: $.ASN1Encoder<CltuDeliveryMode> | null
  * @param elGetter A function that can be used to get new ASN.1 elements.
  * @returns {_Element} The CltuDeliveryMode, encoded as an ASN.1 Element.
  */
-export
-function _encode_CltuDeliveryMode (value: CltuDeliveryMode, elGetter: $.ASN1Encoder<any>): _Element {
-    if (!_cached_encoder_for_CltuDeliveryMode) { _cached_encoder_for_CltuDeliveryMode = _encode_DeliveryMode; }
-    return _cached_encoder_for_CltuDeliveryMode(value, elGetter);
-}
+export const _encode_CltuDeliveryMode: $.ASN1Encoder<CltuDeliveryMode> = _encode_DeliveryMode;
 
 
 /* eslint-enable */

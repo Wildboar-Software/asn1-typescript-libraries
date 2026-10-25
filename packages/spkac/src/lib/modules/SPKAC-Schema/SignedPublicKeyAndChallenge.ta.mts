@@ -1,9 +1,9 @@
 /* eslint-disable */
 import {
     ASN1ConstructionError as _ConstructionError,
-    ASN1Element as _Element,
+    type ASN1Element as _Element,
     ASN1TagClass as _TagClass,
-    BIT_STRING,
+    type BIT_STRING,
 } from "@wildboar/asn1";
 import * as $ from "@wildboar/asn1/functional";
 import {
@@ -53,7 +53,7 @@ export class SignedPublicKeyAndChallenge {
      * @public
      * @readonly
      */
-    readonly publicKeyAndChallenge: PublicKeyAndChallenge;
+    public readonly publicKeyAndChallenge: PublicKeyAndChallenge;
     /**
      * @summary `signatureAlgorithm`.
      * @description
@@ -64,7 +64,7 @@ export class SignedPublicKeyAndChallenge {
      * @public
      * @readonly
      */
-    readonly signatureAlgorithm: AlgorithmIdentifier;
+    public readonly signatureAlgorithm: AlgorithmIdentifier;
     /**
      * @summary `signature`.
      * @description
@@ -76,7 +76,7 @@ export class SignedPublicKeyAndChallenge {
      * @public
      * @readonly
      */
-    readonly signature: BIT_STRING;
+    public readonly signature: BIT_STRING;
 
     constructor(
         publicKeyAndChallenge: PublicKeyAndChallenge,

@@ -1,8 +1,8 @@
 /* eslint-disable */
 import {
-    OPTIONAL,
-    UTF8String,
-    ASN1Element as _Element,
+    type OPTIONAL,
+    type UTF8String,
+    type ASN1Element as _Element,
     ASN1TagClass as _TagClass,
     ASN1Construction as _Construction,
     ASN1UniversalType as _UniversalType,
@@ -35,42 +35,50 @@ import { AttributeStatus, _enum_for_AttributeStatus, _decode_AttributeStatus, _e
  */
 export
 class Properties {
+    /**
+     * @summary `propertyName`.
+     * @description
+     *
+     * Property name chosen by the issuer. Bounded by `strmax`.
+     * §3.1.6.
+     *
+     * @public
+     * @readonly
+     */
+    public readonly propertyName: UTF8String;
+    /**
+     * @summary `propertyValue`.
+     * @description
+     *
+     * Property value chosen by the issuer. Bounded by `strmax`.
+     * §3.1.6.
+     *
+     * @public
+     * @readonly
+     */
+    public readonly propertyValue: UTF8String;
+    /**
+     * @summary `status`.
+     * @description
+     *
+     * Whether this property was added, modified, or removed
+     * relative to the base certificate. MUST be used only in
+     * Delta Platform Certificates. §3.1.6.
+     *
+     * @public
+     * @readonly
+     */
+    public readonly status?: OPTIONAL<AttributeStatus>;
+
     constructor (
-        /**
-         * @summary `propertyName`.
-         * @description
-         *
-         * Property name chosen by the issuer. Bounded by `strmax`.
-         * §3.1.6.
-         *
-         * @public
-         * @readonly
-         */
-        readonly propertyName: UTF8String,
-        /**
-         * @summary `propertyValue`.
-         * @description
-         *
-         * Property value chosen by the issuer. Bounded by `strmax`.
-         * §3.1.6.
-         *
-         * @public
-         * @readonly
-         */
-        readonly propertyValue: UTF8String,
-        /**
-         * @summary `status`.
-         * @description
-         *
-         * Whether this property was added, modified, or removed
-         * relative to the base certificate. MUST be used only in
-         * Delta Platform Certificates. §3.1.6.
-         *
-         * @public
-         * @readonly
-         */
-        readonly status?: OPTIONAL<AttributeStatus>
-    ) {}
+        propertyName: UTF8String,
+        propertyValue: UTF8String,
+        status?: OPTIONAL<AttributeStatus>
+    ) {
+        this.propertyName = propertyName;
+        this.propertyValue = propertyValue;
+        this.status = status;
+    }
 
     /**
      * @summary Restructures an object into a Properties
@@ -94,7 +102,7 @@ class Properties {
          * @static
          */
 
-    public static _enum_for_status = _enum_for_AttributeStatus;
+    public static _enum_for_status: typeof _enum_for_AttributeStatus = _enum_for_AttributeStatus;
 }
 
 /**

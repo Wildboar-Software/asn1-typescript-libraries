@@ -1,6 +1,6 @@
 /* eslint-disable */
 import {
-    ASN1Element as _Element,
+    type ASN1Element as _Element,
     ASN1TagClass as _TagClass,
     ASN1Construction as _Construction,
     ASN1UniversalType as _UniversalType,
@@ -10,7 +10,7 @@ import {
     ASN1ConstructionError as _ConstructionError,
 } from "@wildboar/asn1";
 import * as $ from "@wildboar/asn1/functional";
-import { BioAPI_BIR_BIOMETRIC_TYPE, _decode_BioAPI_BIR_BIOMETRIC_TYPE, _encode_BioAPI_BIR_BIOMETRIC_TYPE } from "../BIP/BioAPI-BIR-BIOMETRIC-TYPE.ta.mjs";
+import { type BioAPI_BIR_BIOMETRIC_TYPE, _decode_BioAPI_BIR_BIOMETRIC_TYPE, _encode_BioAPI_BIR_BIOMETRIC_TYPE } from "../BIP/BioAPI-BIR-BIOMETRIC-TYPE.ta.mjs";
 
 
 
@@ -31,21 +31,13 @@ import { BioAPI_BIR_BIOMETRIC_TYPE, _decode_BioAPI_BIR_BIOMETRIC_TYPE, _encode_B
 export
 type BiometricType = BioAPI_BIR_BIOMETRIC_TYPE; // DefinedType
 
-let _cached_decoder_for_BiometricType: $.ASN1Decoder<BiometricType> | null = null;
-
 /**
  * @summary Decodes an ASN.1 element into a(n) BiometricType
  * @function
  * @param el The element being decoded.
  * @returns The decoded data structure.
  */
-export
-function _decode_BiometricType (el: _Element): BiometricType {
-    if (!_cached_decoder_for_BiometricType) { _cached_decoder_for_BiometricType = _decode_BioAPI_BIR_BIOMETRIC_TYPE; }
-    return _cached_decoder_for_BiometricType(el);
-}
-
-let _cached_encoder_for_BiometricType: $.ASN1Encoder<BiometricType> | null = null;
+export const _decode_BiometricType: $.ASN1Decoder<BiometricType> = _decode_BioAPI_BIR_BIOMETRIC_TYPE;
 
 /**
  * @summary Encodes a(n) BiometricType into an ASN.1 Element.
@@ -54,11 +46,7 @@ let _cached_encoder_for_BiometricType: $.ASN1Encoder<BiometricType> | null = nul
  * @param elGetter A function that can be used to get new ASN.1 elements.
  * @returns {_Element} The BiometricType, encoded as an ASN.1 Element.
  */
-export
-function _encode_BiometricType (value: BiometricType, elGetter: $.ASN1Encoder<any>): _Element {
-    if (!_cached_encoder_for_BiometricType) { _cached_encoder_for_BiometricType = _encode_BioAPI_BIR_BIOMETRIC_TYPE; }
-    return _cached_encoder_for_BiometricType(value, elGetter);
-}
+export const _encode_BiometricType: $.ASN1Encoder<BiometricType> = _encode_BioAPI_BIR_BIOMETRIC_TYPE;
 
 
 /* eslint-enable */

@@ -1,9 +1,9 @@
 /* eslint-disable */
 import {
-    OPTIONAL,
-    INTEGER,
-    VisibleString,
-    ASN1Element as _Element,
+    type OPTIONAL,
+    type INTEGER,
+    type VisibleString,
+    type ASN1Element as _Element,
     ASN1TagClass as _TagClass,
     ASN1Construction as _Construction,
     ASN1UniversalType as _UniversalType,
@@ -13,8 +13,8 @@ import {
     ASN1ConstructionError as _ConstructionError,
 } from "@wildboar/asn1";
 import * as $ from "@wildboar/asn1/functional";
-import { ServiceError_errorClass, _decode_ServiceError_errorClass, _encode_ServiceError_errorClass } from "../ISO-9506-MMS-1/ServiceError-errorClass.ta.mjs";
-import { ServiceError_serviceSpecificInfo, _decode_ServiceError_serviceSpecificInfo, _encode_ServiceError_serviceSpecificInfo } from "../ISO-9506-MMS-1/ServiceError-serviceSpecificInfo.ta.mjs";
+import { type ServiceError_errorClass, _decode_ServiceError_errorClass, _encode_ServiceError_errorClass } from "../ISO-9506-MMS-1/ServiceError-errorClass.ta.mjs";
+import { type ServiceError_serviceSpecificInfo, _decode_ServiceError_serviceSpecificInfo, _encode_ServiceError_serviceSpecificInfo } from "../ISO-9506-MMS-1/ServiceError-serviceSpecificInfo.ta.mjs";
 
 
 /**
@@ -159,55 +159,65 @@ import { ServiceError_serviceSpecificInfo, _decode_ServiceError_serviceSpecificI
  */
 export
 class ServiceError {
+    /**
+     * @summary `errorClass`.
+     * @description
+     *
+     * Error Class (CHOICE) plus Error Code (named INTEGER). Class from the
+     * Error Type primitive; code is the Error Code of that class.
+     * ISO 9506-1:2003 §24.2; ISO 9506-2:2003 §7.4.1.
+     *
+     * @public
+     * @readonly
+     */
+    public readonly errorClass: ServiceError_errorClass;
+    /**
+     * @summary `additionalCode`.
+     * @description
+     *
+     * Locally defined integer option. ISO 9506-1:2003 §24.2(c), §24.3;
+     * ISO 9506-2:2003 §7.4.1.
+     *
+     * @public
+     * @readonly
+     */
+    public readonly additionalCode?: OPTIONAL<INTEGER>;
+    /**
+     * @summary `additionalDescription`.
+     * @description
+     *
+     * Locally defined character string; may be a human-readable error
+     * description. ISO 9506-1:2003 §24.2(d), §24.4; ISO 9506-2:2003 §7.4.1.
+     *
+     * @public
+     * @readonly
+     */
+    public readonly additionalDescription?: OPTIONAL<VisibleString>;
+    /**
+     * @summary `serviceSpecificInfo`.
+     * @description
+     *
+     * Per-service Result(-) extras (e.g. ChangeAccessControl Number
+     * Changed). Shall not be present if `modifierPosition` is present on
+     * the Confirmed-ErrorPDU. ISO 9506-1:2003 §24.2 note; ISO 9506-2:2003
+     * §7.4.1.
+     *
+     * @public
+     * @readonly
+     */
+    public readonly serviceSpecificInfo?: OPTIONAL<ServiceError_serviceSpecificInfo>;
+
     constructor (
-        /**
-         * @summary `errorClass`.
-         * @description
-         *
-         * Error Class (CHOICE) plus Error Code (named INTEGER). Class from the
-         * Error Type primitive; code is the Error Code of that class.
-         * ISO 9506-1:2003 §24.2; ISO 9506-2:2003 §7.4.1.
-         *
-         * @public
-         * @readonly
-         */
-        readonly errorClass: ServiceError_errorClass,
-        /**
-         * @summary `additionalCode`.
-         * @description
-         *
-         * Locally defined integer option. ISO 9506-1:2003 §24.2(c), §24.3;
-         * ISO 9506-2:2003 §7.4.1.
-         *
-         * @public
-         * @readonly
-         */
-        readonly additionalCode?: OPTIONAL<INTEGER>,
-        /**
-         * @summary `additionalDescription`.
-         * @description
-         *
-         * Locally defined character string; may be a human-readable error
-         * description. ISO 9506-1:2003 §24.2(d), §24.4; ISO 9506-2:2003 §7.4.1.
-         *
-         * @public
-         * @readonly
-         */
-        readonly additionalDescription?: OPTIONAL<VisibleString>,
-        /**
-         * @summary `serviceSpecificInfo`.
-         * @description
-         *
-         * Per-service Result(-) extras (e.g. ChangeAccessControl Number
-         * Changed). Shall not be present if `modifierPosition` is present on
-         * the Confirmed-ErrorPDU. ISO 9506-1:2003 §24.2 note; ISO 9506-2:2003
-         * §7.4.1.
-         *
-         * @public
-         * @readonly
-         */
-        readonly serviceSpecificInfo?: OPTIONAL<ServiceError_serviceSpecificInfo>
-    ) {}
+        errorClass: ServiceError_errorClass,
+        additionalCode?: OPTIONAL<INTEGER>,
+        additionalDescription?: OPTIONAL<VisibleString>,
+        serviceSpecificInfo?: OPTIONAL<ServiceError_serviceSpecificInfo>
+    ) {
+        this.errorClass = errorClass;
+        this.additionalCode = additionalCode;
+        this.additionalDescription = additionalDescription;
+        this.serviceSpecificInfo = serviceSpecificInfo;
+    }
 
     /**
      * @summary Restructures an object into a ServiceError

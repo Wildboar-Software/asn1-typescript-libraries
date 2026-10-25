@@ -2,18 +2,18 @@
 
 import * as $ from "@wildboar/asn1/functional";
 import {
-    OPTIONAL,
-    OCTET_STRING,
-    SEQUENCE,
-    SET,
-    ASN1Element as _Element,
+    type OPTIONAL,
+    type OCTET_STRING,
+    type SEQUENCE,
+    type SET,
+    type ASN1Element as _Element,
     ASN1TagClass as _TagClass
 } from "@wildboar/asn1";
-import { SubjectDeviceID, _decode_SubjectDeviceID, _encode_SubjectDeviceID } from "../CSTA-device-identifiers/SubjectDeviceID.ta.mjs";
+import { type SubjectDeviceID, _decode_SubjectDeviceID, _encode_SubjectDeviceID } from "../CSTA-device-identifiers/SubjectDeviceID.ta.mjs";
 
-import { LampID, _decode_LampID, _encode_LampID } from "../CSTA-physical-device-feature/LampID.ta.mjs";
+import { type LampID, _decode_LampID, _encode_LampID } from "../CSTA-physical-device-feature/LampID.ta.mjs";
 
-import { LampMode, _decode_LampMode, _encode_LampMode } from "../CSTA-physical-device-feature/LampMode.ta.mjs";
+import { type LampMode, _decode_LampMode, _encode_LampMode } from "../CSTA-physical-device-feature/LampMode.ta.mjs";
 
 import {
     LampBrightness,
@@ -22,7 +22,7 @@ import {
     _encode_LampBrightness
 } from "../CSTA-physical-device-feature/LampBrightness.ta.mjs";
 
-import { LampColor, _decode_LampColor, _encode_LampColor } from "../CSTA-physical-device-feature/LampColor.ta.mjs";
+import { type LampColor, _decode_LampColor, _encode_LampColor } from "../CSTA-physical-device-feature/LampColor.ta.mjs";
 
 import { CSTACommonArguments, _decode_CSTACommonArguments, _encode_CSTACommonArguments } from "../CSTA-extension-types/CSTACommonArguments.ta.mjs";
 
@@ -47,10 +47,10 @@ import { CSTACommonArguments, _decode_CSTACommonArguments, _encode_CSTACommonArg
  * LampModeEvent ::= SEQUENCE
  * {    device                SubjectDeviceID,
  *     lamp                LampID,
- *     lampLabel            OCTET STRING                OPTIONAL,
+ *     lampLabel            OCTET STRING                type OPTIONAL,
  *     lampMode            LampMode,
- *     lampBrightness            LampBrightness                OPTIONAL,
- *     lampColor            LampColor                OPTIONAL,
+ *     lampBrightness            LampBrightness                type OPTIONAL,
+ *     lampColor            LampColor                type OPTIONAL,
  *     extensions            CSTACommonArguments            OPTIONAL }
  * ```
  * 
@@ -58,74 +58,90 @@ import { CSTACommonArguments, _decode_CSTACommonArguments, _encode_CSTACommonArg
  */
 export
 class LampModeEvent {
+    /**
+     * @summary `device`.
+     * @description
+     *
+     * Device whose lamp mode changed.
+     * @public
+     * @readonly
+     */
+    public readonly device: SubjectDeviceID;
+    /**
+     * @summary `lamp`.
+     * @description
+     *
+     * Lamp that changed.
+     * @public
+     * @readonly
+     */
+    public readonly lamp: LampID;
+    /**
+     * @summary `lampLabel`.
+     * @description
+     *
+     * Label by which the lamp may be referenced.
+     * @public
+     * @readonly
+     */
+    public readonly lampLabel: OPTIONAL<OCTET_STRING>;
+    /**
+     * @summary `lampMode`.
+     * @description
+     *
+     * 0–100: 0 brokenflutter, 1 flutter, 2 off, 3 steady, 4 wink, 5
+     * unknown. 6–100 switching-function specific.
+     * @public
+     * @readonly
+     */
+    public readonly lampMode: LampMode;
+    /**
+     * @summary `lampBrightness`.
+     * @description
+     *
+     * Intensity when on: unspecified/normal (default), dim, or bright.
+     * @public
+     * @readonly
+     */
+    public readonly lampBrightness?: OPTIONAL<LampBrightness>;
+    /**
+     * @summary `lampColor`.
+     * @description
+     *
+     * 0–100: 0 none, 1 red, 2 yellow, 3 green, 4 blue, 5 unknown (default
+     * if absent). 6–100 switching-function specific.
+     * @public
+     * @readonly
+     */
+    public readonly lampColor?: OPTIONAL<LampColor>;
+    /**
+     * @summary `extensions`.
+     * @description
+     *
+     * Optional security (timestamp, sequence, securityInfo) and
+     * privateData.
+     * @public
+     * @readonly
+     */
+    public readonly extensions?: OPTIONAL<CSTACommonArguments>;
+
     constructor (
-        /**
-         * @summary `device`.
-         * @description
-         *
-         * Device whose lamp mode changed.
-         * @public
-         * @readonly
-         */
-        readonly device: SubjectDeviceID,
-        /**
-         * @summary `lamp`.
-         * @description
-         *
-         * Lamp that changed.
-         * @public
-         * @readonly
-         */
-        readonly lamp: LampID,
-        /**
-         * @summary `lampLabel`.
-         * @description
-         *
-         * Label by which the lamp may be referenced.
-         * @public
-         * @readonly
-         */
-        readonly lampLabel: OPTIONAL<OCTET_STRING>,
-        /**
-         * @summary `lampMode`.
-         * @description
-         *
-         * 0–100: 0 brokenflutter, 1 flutter, 2 off, 3 steady, 4 wink, 5
-         * unknown. 6–100 switching-function specific.
-         * @public
-         * @readonly
-         */
-        readonly lampMode: LampMode,
-        /**
-         * @summary `lampBrightness`.
-         * @description
-         *
-         * Intensity when on: unspecified/normal (default), dim, or bright.
-         * @public
-         * @readonly
-         */
-        readonly lampBrightness?: OPTIONAL<LampBrightness>,
-        /**
-         * @summary `lampColor`.
-         * @description
-         *
-         * 0–100: 0 none, 1 red, 2 yellow, 3 green, 4 blue, 5 unknown (default
-         * if absent). 6–100 switching-function specific.
-         * @public
-         * @readonly
-         */
-        readonly lampColor?: OPTIONAL<LampColor>,
-        /**
-         * @summary `extensions`.
-         * @description
-         *
-         * Optional security (timestamp, sequence, securityInfo) and
-         * privateData.
-         * @public
-         * @readonly
-         */
-        readonly extensions?: OPTIONAL<CSTACommonArguments>
-    ) {}
+        device: SubjectDeviceID,
+        lamp: LampID,
+        lampLabel: OPTIONAL<OCTET_STRING>,
+        lampMode: LampMode,
+        lampBrightness?: OPTIONAL<LampBrightness>,
+        lampColor?: OPTIONAL<LampColor>,
+        extensions?: OPTIONAL<CSTACommonArguments>
+    ) {
+        this.device = device;
+        this.lamp = lamp;
+        this.lampLabel = lampLabel;
+        this.lampMode = lampMode;
+        this.lampBrightness = lampBrightness;
+        this.lampColor = lampColor;
+        this.extensions = extensions;
+    }
 
     /**
      * @summary Restructures an object into a LampModeEvent
@@ -149,7 +165,7 @@ class LampModeEvent {
          * @static
          */
 
-    public static _enum_for_lampBrightness = _enum_for_LampBrightness;
+    public static _enum_for_lampBrightness: typeof _enum_for_LampBrightness = _enum_for_LampBrightness;
 }
 
 /**

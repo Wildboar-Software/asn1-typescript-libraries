@@ -1,7 +1,7 @@
 /* eslint-disable */
 import {
-    OPTIONAL,
-    ASN1Element as _Element,
+    type OPTIONAL,
+    type ASN1Element as _Element,
     ASN1TagClass as _TagClass,
     ASN1Construction as _Construction,
     ASN1UniversalType as _UniversalType,
@@ -12,12 +12,12 @@ import {
 } from '@wildboar/asn1';
 import * as $ from '@wildboar/asn1/functional';
 import {
-    PrimaryBodyPart,
+    type PrimaryBodyPart,
     _decode_PrimaryBodyPart,
     _encode_PrimaryBodyPart,
 } from '../EDIMSInformationObjects/PrimaryBodyPart.ta.mjs';
 import {
-    OtherBodyParts,
+    type OtherBodyParts,
     _decode_OtherBodyParts,
     _encode_OtherBodyParts,
 } from '../EDIMSInformationObjects/OtherBodyParts.ta.mjs';
@@ -41,20 +41,26 @@ import {
  *
  */
 export class Body {
+    /**
+     * @summary `primary_body_part`.
+     * @public
+     * @readonly
+     */
+    public readonly primary_body_part: PrimaryBodyPart;
+    /**
+     * @summary `additional_body_parts`.
+     * @public
+     * @readonly
+     */
+    public readonly additional_body_parts?: OPTIONAL<OtherBodyParts>;
+
     constructor(
-        /**
-         * @summary `primary_body_part`.
-         * @public
-         * @readonly
-         */
-        readonly primary_body_part: PrimaryBodyPart,
-        /**
-         * @summary `additional_body_parts`.
-         * @public
-         * @readonly
-         */
-        readonly additional_body_parts?: OPTIONAL<OtherBodyParts>
-    ) {}
+        primary_body_part: PrimaryBodyPart,
+        additional_body_parts?: OPTIONAL<OtherBodyParts>
+    ) {
+        this.primary_body_part = primary_body_part;
+        this.additional_body_parts = additional_body_parts;
+    }
 
     /**
      * @summary Restructures an object into a Body

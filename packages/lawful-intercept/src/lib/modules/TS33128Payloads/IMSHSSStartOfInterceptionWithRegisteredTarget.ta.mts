@@ -1,7 +1,7 @@
 /* eslint-disable */
 import {
-    OPTIONAL,
-    ASN1Element as _Element,
+    type OPTIONAL,
+    type ASN1Element as _Element,
     ASN1TagClass as _TagClass
 } from "@wildboar/asn1";
 import * as $ from "@wildboar/asn1/functional";
@@ -127,7 +127,7 @@ class IMSHSSStartOfInterceptionWithRegisteredTarget {
          * @static
          */
 
-    public static _enum_for_iMSRegistrationStatus = _enum_for_IMSRegistrationStatus;
+    public static _enum_for_iMSRegistrationStatus: typeof _enum_for_IMSRegistrationStatus = _enum_for_IMSRegistrationStatus;
 }
 
 /**

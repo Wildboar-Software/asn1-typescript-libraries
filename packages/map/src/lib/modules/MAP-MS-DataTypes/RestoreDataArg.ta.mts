@@ -1,13 +1,13 @@
 /* eslint-disable */
 import {
-    NULL,
-    OPTIONAL,
-    ASN1Element as _Element,
+    type NULL,
+    type OPTIONAL,
+    type ASN1Element as _Element,
     ASN1TagClass as _TagClass
 } from "@wildboar/asn1";
 import * as $ from "@wildboar/asn1/functional";
-import { IMSI, _decode_IMSI, _encode_IMSI } from "../MAP-CommonDataTypes/IMSI.ta.mjs";
-import { LMSI, _decode_LMSI, _encode_LMSI } from "../MAP-CommonDataTypes/LMSI.ta.mjs";
+import { type IMSI, _decode_IMSI, _encode_IMSI } from "../MAP-CommonDataTypes/IMSI.ta.mjs";
+import { type LMSI, _decode_LMSI, _encode_LMSI } from "../MAP-CommonDataTypes/LMSI.ta.mjs";
 import { ExtensionContainer, _decode_ExtensionContainer, _encode_ExtensionContainer } from "../MAP-ExtensionDataTypes/ExtensionContainer.ta.mjs";
 import { VLR_Capability, _decode_VLR_Capability, _encode_VLR_Capability } from "../MAP-MS-DataTypes/VLR-Capability.ta.mjs";
 
@@ -29,10 +29,10 @@ import { VLR_Capability, _decode_VLR_Capability, _encode_VLR_Capability } from "
  * ```asn1
  * RestoreDataArg ::= SEQUENCE {
  *     imsi    IMSI,
- *     lmsi    LMSI    OPTIONAL,
- *     extensionContainer    ExtensionContainer    OPTIONAL,
+ *     lmsi    LMSI    type OPTIONAL,
+ *     extensionContainer    ExtensionContainer    type OPTIONAL,
  *     ... ,
- *     vlr-Capability    [6] VLR-Capability    OPTIONAL,
+ *     vlr-Capability    [6] VLR-Capability    type OPTIONAL,
  *     restorationIndicator    [7]    NULL    OPTIONAL 
  *  }
  * ```
@@ -41,73 +41,87 @@ import { VLR_Capability, _decode_VLR_Capability, _encode_VLR_Capability } from "
  */
 export
 class RestoreDataArg {
+    /**
+     * @summary `imsi`.
+     * @description
+     *
+     * International Mobile Subscriber Identity as in 3GPP TS 23.003.
+     *
+     * (3GPP TS 29.002 V19.1.0 clause 7.6.2.1).
+     *
+     * @public
+     * @readonly
+     */
+    public readonly imsi: IMSI;
+    /**
+     * @summary `lmsi`.
+     * @description
+     *
+     * Local identity allocated by the VLR for internal data management.
+     * Providing it is an operator option; HLR shall support LMSI handling.
+     * Shall not be sent to the SGSN.
+     *
+     * (3GPP TS 29.002 V19.1.0 clause 7.6.2.16).
+     *
+     * @public
+     * @readonly
+     */
+    public readonly lmsi?: OPTIONAL<LMSI>;
+    /**
+     * @summary `extensionContainer`.
+     * @public
+     * @readonly
+     */
+    public readonly extensionContainer?: OPTIONAL<ExtensionContainer>;
+    /**
+     * @summary `vlr_Capability`.
+     * @description
+     *
+     * Capabilities of the serving VLR/VMSC.
+     *
+     * (3GPP TS 29.002 V19.1.0 clause 8.1.2.3).
+     *
+     * @public
+     * @readonly
+     */
+    public readonly vlr_Capability?: OPTIONAL<VLR_Capability>;
+    /**
+     * @summary `restorationIndicator`.
+     * @description
+     *
+     * HLR shall send in Insert Subscriber Data the MME Name if the
+     * subscriber is registered to EPS, or the SGSN Number if registered to
+     * GPRS. VLR may set this during a CSFB MO call implicit location update
+     * (3GPP TS 23.272).
+     *
+     * (3GPP TS 29.002 V19.1.0 clause 8.1.2.3).
+     *
+     * @public
+     * @readonly
+     */
+    public readonly restorationIndicator?: OPTIONAL<NULL>;
+    /**
+     * @summary Extensions that are not recognized.
+     * @public
+     * @readonly
+     */
+    public readonly _unrecognizedExtensionsList: _Element[];
+
     constructor (
-        /**
-         * @summary `imsi`.
-         * @description
-         *
-         * International Mobile Subscriber Identity as in 3GPP TS 23.003.
-         *
-         * (3GPP TS 29.002 V19.1.0 clause 7.6.2.1).
-         *
-         * @public
-         * @readonly
-         */
-        readonly imsi: IMSI,
-        /**
-         * @summary `lmsi`.
-         * @description
-         *
-         * Local identity allocated by the VLR for internal data management.
-         * Providing it is an operator option; HLR shall support LMSI handling.
-         * Shall not be sent to the SGSN.
-         *
-         * (3GPP TS 29.002 V19.1.0 clause 7.6.2.16).
-         *
-         * @public
-         * @readonly
-         */
-        readonly lmsi?: OPTIONAL<LMSI>,
-        /**
-         * @summary `extensionContainer`.
-         * @public
-         * @readonly
-         */
-        readonly extensionContainer?: OPTIONAL<ExtensionContainer>,
-        /**
-         * @summary `vlr_Capability`.
-         * @description
-         *
-         * Capabilities of the serving VLR/VMSC.
-         *
-         * (3GPP TS 29.002 V19.1.0 clause 8.1.2.3).
-         *
-         * @public
-         * @readonly
-         */
-        readonly vlr_Capability?: OPTIONAL<VLR_Capability>,
-        /**
-         * @summary `restorationIndicator`.
-         * @description
-         *
-         * HLR shall send in Insert Subscriber Data the MME Name if the
-         * subscriber is registered to EPS, or the SGSN Number if registered to
-         * GPRS. VLR may set this during a CSFB MO call implicit location update
-         * (3GPP TS 23.272).
-         *
-         * (3GPP TS 29.002 V19.1.0 clause 8.1.2.3).
-         *
-         * @public
-         * @readonly
-         */
-        readonly restorationIndicator?: OPTIONAL<NULL>,
-        /**
-         * @summary Extensions that are not recognized.
-         * @public
-         * @readonly
-         */
-        readonly _unrecognizedExtensionsList: _Element[] = []
-    ) {}
+        imsi: IMSI,
+        lmsi?: OPTIONAL<LMSI>,
+        extensionContainer?: OPTIONAL<ExtensionContainer>,
+        vlr_Capability?: OPTIONAL<VLR_Capability>,
+        restorationIndicator?: OPTIONAL<NULL>,
+        _unrecognizedExtensionsList: _Element[] = []
+    ) {
+        this.imsi = imsi;
+        this.lmsi = lmsi;
+        this.extensionContainer = extensionContainer;
+        this.vlr_Capability = vlr_Capability;
+        this.restorationIndicator = restorationIndicator;
+        this._unrecognizedExtensionsList = _unrecognizedExtensionsList;
+    }
 
     /**
      * @summary Restructures an object into a RestoreDataArg

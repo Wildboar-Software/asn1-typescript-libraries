@@ -2,47 +2,47 @@
 
 import * as $ from "@wildboar/asn1/functional";
 import {
-    OPTIONAL,
-    SEQUENCE,
-    SET,
-    ASN1Element as _Element,
+    type OPTIONAL,
+    type SEQUENCE,
+    type SET,
+    type ASN1Element as _Element,
     ASN1TagClass as _TagClass
 } from "@wildboar/asn1";
-import { Bridged, _decode_Bridged, _encode_Bridged } from "../CSTA-capability-exchange/Bridged.ta.mjs";
+import { type Bridged, _decode_Bridged, _encode_Bridged } from "../CSTA-capability-exchange/Bridged.ta.mjs";
 
-import { CallCleared, _decode_CallCleared, _encode_CallCleared } from "../CSTA-capability-exchange/CallCleared.ta.mjs";
+import { type CallCleared, _decode_CallCleared, _encode_CallCleared } from "../CSTA-capability-exchange/CallCleared.ta.mjs";
 
-import { Conferenced, _decode_Conferenced, _encode_Conferenced } from "../CSTA-capability-exchange/Conferenced.ta.mjs";
+import { type Conferenced, _decode_Conferenced, _encode_Conferenced } from "../CSTA-capability-exchange/Conferenced.ta.mjs";
 
-import { ConnectionCleared, _decode_ConnectionCleared, _encode_ConnectionCleared } from "../CSTA-capability-exchange/ConnectionCleared.ta.mjs";
+import { type ConnectionCleared, _decode_ConnectionCleared, _encode_ConnectionCleared } from "../CSTA-capability-exchange/ConnectionCleared.ta.mjs";
 
-import { Delivered, _decode_Delivered, _encode_Delivered } from "../CSTA-capability-exchange/Delivered.ta.mjs";
+import { type Delivered, _decode_Delivered, _encode_Delivered } from "../CSTA-capability-exchange/Delivered.ta.mjs";
 
-import { DigitsDialed, _decode_DigitsDialed, _encode_DigitsDialed } from "../CSTA-capability-exchange/DigitsDialed.ta.mjs";
+import { type DigitsDialed, _decode_DigitsDialed, _encode_DigitsDialed } from "../CSTA-capability-exchange/DigitsDialed.ta.mjs";
 
-import { Diverted, _decode_Diverted, _encode_Diverted } from "../CSTA-capability-exchange/Diverted.ta.mjs";
+import { type Diverted, _decode_Diverted, _encode_Diverted } from "../CSTA-capability-exchange/Diverted.ta.mjs";
 
-import { Established, _decode_Established, _encode_Established } from "../CSTA-capability-exchange/Established.ta.mjs";
+import { type Established, _decode_Established, _encode_Established } from "../CSTA-capability-exchange/Established.ta.mjs";
 
-import { Failed, _decode_Failed, _encode_Failed } from "../CSTA-capability-exchange/Failed.ta.mjs";
+import { type Failed, _decode_Failed, _encode_Failed } from "../CSTA-capability-exchange/Failed.ta.mjs";
 
-import { Held, _decode_Held, _encode_Held } from "../CSTA-capability-exchange/Held.ta.mjs";
+import { type Held, _decode_Held, _encode_Held } from "../CSTA-capability-exchange/Held.ta.mjs";
 
-import { NetwCapsChanged, _decode_NetwCapsChanged, _encode_NetwCapsChanged } from "../CSTA-capability-exchange/NetwCapsChanged.ta.mjs";
+import { type NetwCapsChanged, _decode_NetwCapsChanged, _encode_NetwCapsChanged } from "../CSTA-capability-exchange/NetwCapsChanged.ta.mjs";
 
-import { NetwReached, _decode_NetwReached, _encode_NetwReached } from "../CSTA-capability-exchange/NetwReached.ta.mjs";
+import { type NetwReached, _decode_NetwReached, _encode_NetwReached } from "../CSTA-capability-exchange/NetwReached.ta.mjs";
 
-import { Offered, _decode_Offered, _encode_Offered } from "../CSTA-capability-exchange/Offered.ta.mjs";
+import { type Offered, _decode_Offered, _encode_Offered } from "../CSTA-capability-exchange/Offered.ta.mjs";
 
-import { Originated, _decode_Originated, _encode_Originated } from "../CSTA-capability-exchange/Originated.ta.mjs";
+import { type Originated, _decode_Originated, _encode_Originated } from "../CSTA-capability-exchange/Originated.ta.mjs";
 
-import { Queued, _decode_Queued, _encode_Queued } from "../CSTA-capability-exchange/Queued.ta.mjs";
+import { type Queued, _decode_Queued, _encode_Queued } from "../CSTA-capability-exchange/Queued.ta.mjs";
 
-import { Retrieved, _decode_Retrieved, _encode_Retrieved } from "../CSTA-capability-exchange/Retrieved.ta.mjs";
+import { type Retrieved, _decode_Retrieved, _encode_Retrieved } from "../CSTA-capability-exchange/Retrieved.ta.mjs";
 
-import { ServiceInitiated, _decode_ServiceInitiated, _encode_ServiceInitiated } from "../CSTA-capability-exchange/ServiceInitiated.ta.mjs";
+import { type ServiceInitiated, _decode_ServiceInitiated, _encode_ServiceInitiated } from "../CSTA-capability-exchange/ServiceInitiated.ta.mjs";
 
-import { Transferred, _decode_Transferred, _encode_Transferred } from "../CSTA-capability-exchange/Transferred.ta.mjs";
+import { type Transferred, _decode_Transferred, _encode_Transferred } from "../CSTA-capability-exchange/Transferred.ta.mjs";
 
 
 
@@ -60,23 +60,23 @@ import { Transferred, _decode_Transferred, _encode_Transferred } from "../CSTA-c
  * 
  * ```asn1
  * CallControlEvtsList ::= SEQUENCE
- * {     bridged             [ 0] IMPLICIT     Bridged         OPTIONAL,
- *     callCleared             [ 1] IMPLICIT     CallCleared         OPTIONAL,
- *     conferenced             [ 2] IMPLICIT     Conferenced         OPTIONAL,
- *     connectionCleared         [ 3] IMPLICIT     ConnectionCleared     OPTIONAL,
- *     delivered             [ 4] IMPLICIT     Delivered         OPTIONAL,
- *     digitsDialed             [ 5] IMPLICIT     DigitsDialed         OPTIONAL,
- *     diverted             [ 6] IMPLICIT     Diverted         OPTIONAL,
- *     established             [ 7] IMPLICIT     Established         OPTIONAL,
- *     failed                 [ 8] IMPLICIT     Failed             OPTIONAL,
- *     held                 [ 9] IMPLICIT     Held             OPTIONAL,
- *     netwCapsChanged         [10] IMPLICIT     NetwCapsChanged     OPTIONAL,
- *     netwReached             [11] IMPLICIT     NetwReached         OPTIONAL,
- *     offered             [12] IMPLICIT     Offered         OPTIONAL,
- *     originated             [13] IMPLICIT     Originated         OPTIONAL,
- *     queued                 [14] IMPLICIT     Queued             OPTIONAL,
- *     retrieved             [15] IMPLICIT     Retrieved         OPTIONAL,
- *     serviceInitiated         [16] IMPLICIT     ServiceInitiated     OPTIONAL,
+ * {     bridged             [ 0] IMPLICIT     Bridged         type OPTIONAL,
+ *     callCleared             [ 1] IMPLICIT     CallCleared         type OPTIONAL,
+ *     conferenced             [ 2] IMPLICIT     Conferenced         type OPTIONAL,
+ *     connectionCleared         [ 3] IMPLICIT     ConnectionCleared     type OPTIONAL,
+ *     delivered             [ 4] IMPLICIT     Delivered         type OPTIONAL,
+ *     digitsDialed             [ 5] IMPLICIT     DigitsDialed         type OPTIONAL,
+ *     diverted             [ 6] IMPLICIT     Diverted         type OPTIONAL,
+ *     established             [ 7] IMPLICIT     Established         type OPTIONAL,
+ *     failed                 [ 8] IMPLICIT     Failed             type OPTIONAL,
+ *     held                 [ 9] IMPLICIT     Held             type OPTIONAL,
+ *     netwCapsChanged         [10] IMPLICIT     NetwCapsChanged     type OPTIONAL,
+ *     netwReached             [11] IMPLICIT     NetwReached         type OPTIONAL,
+ *     offered             [12] IMPLICIT     Offered         type OPTIONAL,
+ *     originated             [13] IMPLICIT     Originated         type OPTIONAL,
+ *     queued                 [14] IMPLICIT     Queued             type OPTIONAL,
+ *     retrieved             [15] IMPLICIT     Retrieved         type OPTIONAL,
+ *     serviceInitiated         [16] IMPLICIT     ServiceInitiated     type OPTIONAL,
  *     transferred             [17] IMPLICIT     Transferred         OPTIONAL }
  * ```
  * 
@@ -84,170 +84,208 @@ import { Transferred, _decode_Transferred, _encode_Transferred } from "../CSTA-c
  */
 export
 class CallControlEvtsList {
+    /**
+     * @summary `bridged`.
+     * @public
+     * @readonly
+     * @description
+     * Capability bitmap for this event; omit if the SF does not support it
+     * (ECMA-269 Annex C).
+     */
+    public readonly bridged?: OPTIONAL<Bridged>;
+    /**
+     * @summary `callCleared`.
+     * @public
+     * @readonly
+     * @description
+     * Capability bitmap for this event; omit if the SF does not support it
+     * (ECMA-269 Annex C).
+     */
+    public readonly callCleared?: OPTIONAL<CallCleared>;
+    /**
+     * @summary `conferenced`.
+     * @public
+     * @readonly
+     * @description
+     * Capability bitmap for this event; omit if the SF does not support it
+     * (ECMA-269 Annex C).
+     */
+    public readonly conferenced?: OPTIONAL<Conferenced>;
+    /**
+     * @summary `connectionCleared`.
+     * @public
+     * @readonly
+     * @description
+     * Capability bitmap for this event; omit if the SF does not support it
+     * (ECMA-269 Annex C).
+     */
+    public readonly connectionCleared?: OPTIONAL<ConnectionCleared>;
+    /**
+     * @summary `delivered`.
+     * @public
+     * @readonly
+     * @description
+     * Capability bitmap for this event; omit if the SF does not support it
+     * (ECMA-269 Annex C).
+     */
+    public readonly delivered?: OPTIONAL<Delivered>;
+    /**
+     * @summary `digitsDialed`.
+     * @public
+     * @readonly
+     * @description
+     * Capability bitmap for this event; omit if the SF does not support it
+     * (ECMA-269 Annex C).
+     */
+    public readonly digitsDialed?: OPTIONAL<DigitsDialed>;
+    /**
+     * @summary `diverted`.
+     * @public
+     * @readonly
+     * @description
+     * Capability bitmap for this event; omit if the SF does not support it
+     * (ECMA-269 Annex C).
+     */
+    public readonly diverted?: OPTIONAL<Diverted>;
+    /**
+     * @summary `established`.
+     * @public
+     * @readonly
+     * @description
+     * Capability bitmap for this event; omit if the SF does not support it
+     * (ECMA-269 Annex C).
+     */
+    public readonly established?: OPTIONAL<Established>;
+    /**
+     * @summary `failed`.
+     * @public
+     * @readonly
+     * @description
+     * Capability bitmap for this event; omit if the SF does not support it
+     * (ECMA-269 Annex C).
+     */
+    public readonly failed?: OPTIONAL<Failed>;
+    /**
+     * @summary `held`.
+     * @public
+     * @readonly
+     * @description
+     * Capability bitmap for this event; omit if the SF does not support it
+     * (ECMA-269 Annex C).
+     */
+    public readonly held?: OPTIONAL<Held>;
+    /**
+     * @summary `netwCapsChanged`.
+     * @public
+     * @readonly
+     * @description
+     * Capability bitmap for this event; omit if the SF does not support it
+     * (ECMA-269 Annex C).
+     */
+    public readonly netwCapsChanged?: OPTIONAL<NetwCapsChanged>;
+    /**
+     * @summary `netwReached`.
+     * @public
+     * @readonly
+     * @description
+     * Capability bitmap for this event; omit if the SF does not support it
+     * (ECMA-269 Annex C).
+     */
+    public readonly netwReached?: OPTIONAL<NetwReached>;
+    /**
+     * @summary `offered`.
+     * @public
+     * @readonly
+     * @description
+     * Capability bitmap for this event; omit if the SF does not support it
+     * (ECMA-269 Annex C).
+     */
+    public readonly offered?: OPTIONAL<Offered>;
+    /**
+     * @summary `originated`.
+     * @public
+     * @readonly
+     * @description
+     * Capability bitmap for this event; omit if the SF does not support it
+     * (ECMA-269 Annex C).
+     */
+    public readonly originated?: OPTIONAL<Originated>;
+    /**
+     * @summary `queued`.
+     * @public
+     * @readonly
+     * @description
+     * Capability bitmap for this event; omit if the SF does not support it
+     * (ECMA-269 Annex C).
+     */
+    public readonly queued?: OPTIONAL<Queued>;
+    /**
+     * @summary `retrieved`.
+     * @public
+     * @readonly
+     * @description
+     * Capability bitmap for this event; omit if the SF does not support it
+     * (ECMA-269 Annex C).
+     */
+    public readonly retrieved?: OPTIONAL<Retrieved>;
+    /**
+     * @summary `serviceInitiated`.
+     * @public
+     * @readonly
+     * @description
+     * Capability bitmap for this event; omit if the SF does not support it
+     * (ECMA-269 Annex C).
+     */
+    public readonly serviceInitiated?: OPTIONAL<ServiceInitiated>;
+    /**
+     * @summary `transferred`.
+     * @public
+     * @readonly
+     * @description
+     * Capability bitmap for this event; omit if the SF does not support it
+     * (ECMA-269 Annex C).
+     */
+    public readonly transferred?: OPTIONAL<Transferred>;
+
     constructor (
-        /**
-         * @summary `bridged`.
-         * @public
-         * @readonly
-         * @description
-         * Capability bitmap for this event; omit if the SF does not support it
-         * (ECMA-269 Annex C).
-         */
-        readonly bridged?: OPTIONAL<Bridged>,
-        /**
-         * @summary `callCleared`.
-         * @public
-         * @readonly
-         * @description
-         * Capability bitmap for this event; omit if the SF does not support it
-         * (ECMA-269 Annex C).
-         */
-        readonly callCleared?: OPTIONAL<CallCleared>,
-        /**
-         * @summary `conferenced`.
-         * @public
-         * @readonly
-         * @description
-         * Capability bitmap for this event; omit if the SF does not support it
-         * (ECMA-269 Annex C).
-         */
-        readonly conferenced?: OPTIONAL<Conferenced>,
-        /**
-         * @summary `connectionCleared`.
-         * @public
-         * @readonly
-         * @description
-         * Capability bitmap for this event; omit if the SF does not support it
-         * (ECMA-269 Annex C).
-         */
-        readonly connectionCleared?: OPTIONAL<ConnectionCleared>,
-        /**
-         * @summary `delivered`.
-         * @public
-         * @readonly
-         * @description
-         * Capability bitmap for this event; omit if the SF does not support it
-         * (ECMA-269 Annex C).
-         */
-        readonly delivered?: OPTIONAL<Delivered>,
-        /**
-         * @summary `digitsDialed`.
-         * @public
-         * @readonly
-         * @description
-         * Capability bitmap for this event; omit if the SF does not support it
-         * (ECMA-269 Annex C).
-         */
-        readonly digitsDialed?: OPTIONAL<DigitsDialed>,
-        /**
-         * @summary `diverted`.
-         * @public
-         * @readonly
-         * @description
-         * Capability bitmap for this event; omit if the SF does not support it
-         * (ECMA-269 Annex C).
-         */
-        readonly diverted?: OPTIONAL<Diverted>,
-        /**
-         * @summary `established`.
-         * @public
-         * @readonly
-         * @description
-         * Capability bitmap for this event; omit if the SF does not support it
-         * (ECMA-269 Annex C).
-         */
-        readonly established?: OPTIONAL<Established>,
-        /**
-         * @summary `failed`.
-         * @public
-         * @readonly
-         * @description
-         * Capability bitmap for this event; omit if the SF does not support it
-         * (ECMA-269 Annex C).
-         */
-        readonly failed?: OPTIONAL<Failed>,
-        /**
-         * @summary `held`.
-         * @public
-         * @readonly
-         * @description
-         * Capability bitmap for this event; omit if the SF does not support it
-         * (ECMA-269 Annex C).
-         */
-        readonly held?: OPTIONAL<Held>,
-        /**
-         * @summary `netwCapsChanged`.
-         * @public
-         * @readonly
-         * @description
-         * Capability bitmap for this event; omit if the SF does not support it
-         * (ECMA-269 Annex C).
-         */
-        readonly netwCapsChanged?: OPTIONAL<NetwCapsChanged>,
-        /**
-         * @summary `netwReached`.
-         * @public
-         * @readonly
-         * @description
-         * Capability bitmap for this event; omit if the SF does not support it
-         * (ECMA-269 Annex C).
-         */
-        readonly netwReached?: OPTIONAL<NetwReached>,
-        /**
-         * @summary `offered`.
-         * @public
-         * @readonly
-         * @description
-         * Capability bitmap for this event; omit if the SF does not support it
-         * (ECMA-269 Annex C).
-         */
-        readonly offered?: OPTIONAL<Offered>,
-        /**
-         * @summary `originated`.
-         * @public
-         * @readonly
-         * @description
-         * Capability bitmap for this event; omit if the SF does not support it
-         * (ECMA-269 Annex C).
-         */
-        readonly originated?: OPTIONAL<Originated>,
-        /**
-         * @summary `queued`.
-         * @public
-         * @readonly
-         * @description
-         * Capability bitmap for this event; omit if the SF does not support it
-         * (ECMA-269 Annex C).
-         */
-        readonly queued?: OPTIONAL<Queued>,
-        /**
-         * @summary `retrieved`.
-         * @public
-         * @readonly
-         * @description
-         * Capability bitmap for this event; omit if the SF does not support it
-         * (ECMA-269 Annex C).
-         */
-        readonly retrieved?: OPTIONAL<Retrieved>,
-        /**
-         * @summary `serviceInitiated`.
-         * @public
-         * @readonly
-         * @description
-         * Capability bitmap for this event; omit if the SF does not support it
-         * (ECMA-269 Annex C).
-         */
-        readonly serviceInitiated?: OPTIONAL<ServiceInitiated>,
-        /**
-         * @summary `transferred`.
-         * @public
-         * @readonly
-         * @description
-         * Capability bitmap for this event; omit if the SF does not support it
-         * (ECMA-269 Annex C).
-         */
-        readonly transferred?: OPTIONAL<Transferred>
-    ) {}
+        bridged?: OPTIONAL<Bridged>,
+        callCleared?: OPTIONAL<CallCleared>,
+        conferenced?: OPTIONAL<Conferenced>,
+        connectionCleared?: OPTIONAL<ConnectionCleared>,
+        delivered?: OPTIONAL<Delivered>,
+        digitsDialed?: OPTIONAL<DigitsDialed>,
+        diverted?: OPTIONAL<Diverted>,
+        established?: OPTIONAL<Established>,
+        failed?: OPTIONAL<Failed>,
+        held?: OPTIONAL<Held>,
+        netwCapsChanged?: OPTIONAL<NetwCapsChanged>,
+        netwReached?: OPTIONAL<NetwReached>,
+        offered?: OPTIONAL<Offered>,
+        originated?: OPTIONAL<Originated>,
+        queued?: OPTIONAL<Queued>,
+        retrieved?: OPTIONAL<Retrieved>,
+        serviceInitiated?: OPTIONAL<ServiceInitiated>,
+        transferred?: OPTIONAL<Transferred>
+    ) {
+        this.bridged = bridged;
+        this.callCleared = callCleared;
+        this.conferenced = conferenced;
+        this.connectionCleared = connectionCleared;
+        this.delivered = delivered;
+        this.digitsDialed = digitsDialed;
+        this.diverted = diverted;
+        this.established = established;
+        this.failed = failed;
+        this.held = held;
+        this.netwCapsChanged = netwCapsChanged;
+        this.netwReached = netwReached;
+        this.offered = offered;
+        this.originated = originated;
+        this.queued = queued;
+        this.retrieved = retrieved;
+        this.serviceInitiated = serviceInitiated;
+        this.transferred = transferred;
+    }
 
     /**
      * @summary Restructures an object into a CallControlEvtsList

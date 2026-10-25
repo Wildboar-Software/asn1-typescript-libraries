@@ -2,10 +2,10 @@
 
 import * as $ from "@wildboar/asn1/functional";
 import {
-    OPTIONAL,
-    SEQUENCE,
-    SET,
-    ASN1Element as _Element,
+    type OPTIONAL,
+    type SEQUENCE,
+    type SET,
+    type ASN1Element as _Element,
     ASN1TagClass as _TagClass
 } from "@wildboar/asn1";
 import { DeviceID, _decode_DeviceID, _encode_DeviceID } from "../CSTA-device-identifiers/DeviceID.ta.mjs";
@@ -19,15 +19,15 @@ import {
     _encode_AutoOriginate
 } from "../CSTA-call-control/AutoOriginate.ta.mjs";
 
-import { CallCharacteristics, _decode_CallCharacteristics, _encode_CallCharacteristics } from "../CSTA-call-control/CallCharacteristics.ta.mjs";
+import { type CallCharacteristics, _decode_CallCharacteristics, _encode_CallCharacteristics } from "../CSTA-call-control/CallCharacteristics.ta.mjs";
 
 import { MediaCallCharacteristics, _decode_MediaCallCharacteristics, _encode_MediaCallCharacteristics } from "../CSTA-media-services/MediaCallCharacteristics.ta.mjs";
 
 import { ConnectionInformation, _decode_ConnectionInformation, _encode_ConnectionInformation } from "../CSTA-media-services/ConnectionInformation.ta.mjs";
 
-import { SubjectOfCall, _decode_SubjectOfCall, _encode_SubjectOfCall } from "../CSTA-device-feature-types/SubjectOfCall.ta.mjs";
+import { type SubjectOfCall, _decode_SubjectOfCall, _encode_SubjectOfCall } from "../CSTA-device-feature-types/SubjectOfCall.ta.mjs";
 
-import { LanguagePreferences, _decode_LanguagePreferences, _encode_LanguagePreferences } from "../CSTA-device-feature-types/LanguagePreferences.ta.mjs";
+import { type LanguagePreferences, _decode_LanguagePreferences, _encode_LanguagePreferences } from "../CSTA-device-feature-types/LanguagePreferences.ta.mjs";
 
 import {
     EventCause,
@@ -40,13 +40,13 @@ import { CSTACommonArguments, _decode_CSTACommonArguments, _encode_CSTACommonArg
 
 
 
-import { AccountInfo, _decode_AccountInfo, _encode_AccountInfo } from "../CSTA-device-feature-types/AccountInfo.ta.mjs";
+import { type AccountInfo, _decode_AccountInfo, _encode_AccountInfo } from "../CSTA-device-feature-types/AccountInfo.ta.mjs";
 
-import { AuthCode, _decode_AuthCode, _encode_AuthCode } from "../CSTA-device-feature-types/AuthCode.ta.mjs";
+import { type AuthCode, _decode_AuthCode, _encode_AuthCode } from "../CSTA-device-feature-types/AuthCode.ta.mjs";
 
-import { CorrelatorData, _decode_CorrelatorData, _encode_CorrelatorData } from "../CSTA-device-feature-types/CorrelatorData.ta.mjs";
+import { type CorrelatorData, _decode_CorrelatorData, _encode_CorrelatorData } from "../CSTA-device-feature-types/CorrelatorData.ta.mjs";
 
-import { UserData, _decode_UserData, _encode_UserData } from "../CSTA-device-feature-types/UserData.ta.mjs";
+import { type UserData, _decode_UserData, _encode_UserData } from "../CSTA-device-feature-types/UserData.ta.mjs";
 
 /**
  * @summary MakeCallArgument
@@ -65,17 +65,17 @@ import { UserData, _decode_UserData, _encode_UserData } from "../CSTA-device-fea
  * MakeCallArgument ::= SEQUENCE
  * {     callingDevice             DeviceID,
  *     calledDirectoryNumber         DeviceID,
- *     accountCode             [0] IMPLICIT AccountInfo         OPTIONAL,
- *     authCode             [1] IMPLICIT AuthCode             OPTIONAL,
+ *     accountCode             [0] IMPLICIT AccountInfo         type OPTIONAL,
+ *     authCode             [1] IMPLICIT AuthCode             type OPTIONAL,
  *     autoOriginate             [3] IMPLICIT AutoOriginate         DEFAULT prompt,
- *     correlatorData             [2] IMPLICIT CorrelatorData         OPTIONAL,
- *     userData             UserData                 OPTIONAL,
- *     callCharacteristics         CallCharacteristics             OPTIONAL,
- *     mediaCallCharacteristics     [4] IMPLICIT MediaCallCharacteristics     OPTIONAL,
- *     callingConnectionInfo         [5] IMPLICIT ConnectionInformation     OPTIONAL,
- *     subjectOfCall            [6] IMPLICIT SubjectOfCall        OPTIONAL,
- *     languagePreferences        [7] IMPLICIT LanguagePreferences    OPTIONAL,
- *     reason                [8] IMPLICIT EventCause            OPTIONAL,
+ *     correlatorData             [2] IMPLICIT CorrelatorData         type OPTIONAL,
+ *     userData             UserData                 type OPTIONAL,
+ *     callCharacteristics         CallCharacteristics             type OPTIONAL,
+ *     mediaCallCharacteristics     [4] IMPLICIT MediaCallCharacteristics     type OPTIONAL,
+ *     callingConnectionInfo         [5] IMPLICIT ConnectionInformation     type OPTIONAL,
+ *     subjectOfCall            [6] IMPLICIT SubjectOfCall        type OPTIONAL,
+ *     languagePreferences        [7] IMPLICIT LanguagePreferences    type OPTIONAL,
+ *     reason                [8] IMPLICIT EventCause            type OPTIONAL,
  *     extensions             CSTACommonArguments             OPTIONAL }
  * ```
  * 
@@ -83,163 +83,193 @@ import { UserData, _decode_UserData, _encode_UserData } from "../CSTA-device-fea
  */
 export
 class MakeCallArgument {
+    /**
+     * @summary `callingDevice`.
+     * @description
+     *
+     * Mandatory. Device from which the call is originated.
+     * Initial Null or Initiated (if already off-hook, FR 6).
+     * May identify a group; subsequent events use the actual
+     * originating device.
+     *
+     * @public
+     * @readonly
+     */
+    public readonly callingDevice: DeviceID;
+    /**
+     * @summary `calledDirectoryNumber`.
+     * @description
+     *
+     * Mandatory. Called device. May be a null DeviceID or a
+     * Diallable Digits string ending in `;` to stage dialling
+     * via Dial Digits (FR 7–8). Other formats must be
+     * complete. Called-device features are honoured (FR 5).
+     *
+     * @public
+     * @readonly
+     */
+    public readonly calledDirectoryNumber: DeviceID;
+    /**
+     * @summary `accountCode`.
+     * @description
+     *
+     * Optional account code for the new call (§12.2.1).
+     *
+     * @public
+     * @readonly
+     */
+    public readonly accountCode?: OPTIONAL<AccountInfo>;
+    /**
+     * @summary `authCode`.
+     * @description
+     *
+     * Optional authorization code for this request (§12.2.3).
+     *
+     * @public
+     * @readonly
+     */
+    public readonly authCode?: OPTIONAL<AuthCode>;
+    /**
+     * @summary `autoOriginate`.
+     * @description
+     *
+     * Default `prompt`. Whether the switching function
+     * prompts the calling device off-hook. `doNotPrompt` is
+     * switching-function dependent if the device cannot
+     * auto-answer (FR 3).
+     *
+     * @public
+     * @readonly
+     */
+    public readonly autoOriginate?: OPTIONAL<AutoOriginate>;
+    /**
+     * @summary `correlatorData`.
+     * @description
+     *
+     * Optional correlator data attached before resulting
+     * state transitions (§12.2.10).
+     *
+     * @public
+     * @readonly
+     */
+    public readonly correlatorData?: OPTIONAL<CorrelatorData>;
+    /**
+     * @summary `userData`.
+     * @description
+     *
+     * Optional user data sent with the call (§12.2.30).
+     *
+     * @public
+     * @readonly
+     */
+    public readonly userData?: OPTIONAL<UserData>;
+    /**
+     * @summary `callCharacteristics`.
+     * @description
+     *
+     * Optional call characteristics (§12.2.4).
+     *
+     * @public
+     * @readonly
+     */
+    public readonly callCharacteristics?: OPTIONAL<CallCharacteristics>;
+    /**
+     * @summary `mediaCallCharacteristics`.
+     * @description
+     *
+     * Optional media class/characteristics (§12.2.20). The
+     * switching function may adjust digital-data values
+     * (FR 10).
+     *
+     * @public
+     * @readonly
+     */
+    public readonly mediaCallCharacteristics?: OPTIONAL<MediaCallCharacteristics>;
+    /**
+     * @summary `callingConnectionInfo`.
+     * @description
+     *
+     * Optional connection information for the calling
+     * connection (§12.2.8).
+     *
+     * @public
+     * @readonly
+     */
+    public readonly callingConnectionInfo?: OPTIONAL<ConnectionInformation>;
+    /**
+     * @summary `subjectOfCall`.
+     * @description
+     *
+     * Optional subject or intent of the call (§12.2.27).
+     *
+     * @public
+     * @readonly
+     */
+    public readonly subjectOfCall?: OPTIONAL<SubjectOfCall>;
+    /**
+     * @summary `languagePreferences`.
+     * @description
+     *
+     * Optional preferred language(s) (§12.2.16).
+     *
+     * @public
+     * @readonly
+     */
+    public readonly languagePreferences?: OPTIONAL<LanguagePreferences>;
+    /**
+     * @summary `reason`.
+     * @description
+     *
+     * Optional `EventCause` for underlying signalling
+     * (§12.2.15).
+     *
+     * @public
+     * @readonly
+     */
+    public readonly reason?: OPTIONAL<EventCause>;
+    /**
+     * @summary `extensions`.
+     * @description
+     *
+     * Optional `CSTACommonArguments` carrying the security and
+     * privateData parameters from the ECMA-269 service table.
+     *
+     * @public
+     * @readonly
+     */
+    public readonly extensions?: OPTIONAL<CSTACommonArguments>;
+
     constructor (
-        /**
-         * @summary `callingDevice`.
-         * @description
-         *
-         * Mandatory. Device from which the call is originated.
-         * Initial Null or Initiated (if already off-hook, FR 6).
-         * May identify a group; subsequent events use the actual
-         * originating device.
-         *
-         * @public
-         * @readonly
-         */
-        readonly callingDevice: DeviceID,
-        /**
-         * @summary `calledDirectoryNumber`.
-         * @description
-         *
-         * Mandatory. Called device. May be a null DeviceID or a
-         * Diallable Digits string ending in `;` to stage dialling
-         * via Dial Digits (FR 7–8). Other formats must be
-         * complete. Called-device features are honoured (FR 5).
-         *
-         * @public
-         * @readonly
-         */
-        readonly calledDirectoryNumber: DeviceID,
-        /**
-         * @summary `accountCode`.
-         * @description
-         *
-         * Optional account code for the new call (§12.2.1).
-         *
-         * @public
-         * @readonly
-         */
-        readonly accountCode?: OPTIONAL<AccountInfo>,
-        /**
-         * @summary `authCode`.
-         * @description
-         *
-         * Optional authorization code for this request (§12.2.3).
-         *
-         * @public
-         * @readonly
-         */
-        readonly authCode?: OPTIONAL<AuthCode>,
-        /**
-         * @summary `autoOriginate`.
-         * @description
-         *
-         * Default `prompt`. Whether the switching function
-         * prompts the calling device off-hook. `doNotPrompt` is
-         * switching-function dependent if the device cannot
-         * auto-answer (FR 3).
-         *
-         * @public
-         * @readonly
-         */
-        readonly autoOriginate?: OPTIONAL<AutoOriginate>,
-        /**
-         * @summary `correlatorData`.
-         * @description
-         *
-         * Optional correlator data attached before resulting
-         * state transitions (§12.2.10).
-         *
-         * @public
-         * @readonly
-         */
-        readonly correlatorData?: OPTIONAL<CorrelatorData>,
-        /**
-         * @summary `userData`.
-         * @description
-         *
-         * Optional user data sent with the call (§12.2.30).
-         *
-         * @public
-         * @readonly
-         */
-        readonly userData?: OPTIONAL<UserData>,
-        /**
-         * @summary `callCharacteristics`.
-         * @description
-         *
-         * Optional call characteristics (§12.2.4).
-         *
-         * @public
-         * @readonly
-         */
-        readonly callCharacteristics?: OPTIONAL<CallCharacteristics>,
-        /**
-         * @summary `mediaCallCharacteristics`.
-         * @description
-         *
-         * Optional media class/characteristics (§12.2.20). The
-         * switching function may adjust digital-data values
-         * (FR 10).
-         *
-         * @public
-         * @readonly
-         */
-        readonly mediaCallCharacteristics?: OPTIONAL<MediaCallCharacteristics>,
-        /**
-         * @summary `callingConnectionInfo`.
-         * @description
-         *
-         * Optional connection information for the calling
-         * connection (§12.2.8).
-         *
-         * @public
-         * @readonly
-         */
-        readonly callingConnectionInfo?: OPTIONAL<ConnectionInformation>,
-        /**
-         * @summary `subjectOfCall`.
-         * @description
-         *
-         * Optional subject or intent of the call (§12.2.27).
-         *
-         * @public
-         * @readonly
-         */
-        readonly subjectOfCall?: OPTIONAL<SubjectOfCall>,
-        /**
-         * @summary `languagePreferences`.
-         * @description
-         *
-         * Optional preferred language(s) (§12.2.16).
-         *
-         * @public
-         * @readonly
-         */
-        readonly languagePreferences?: OPTIONAL<LanguagePreferences>,
-        /**
-         * @summary `reason`.
-         * @description
-         *
-         * Optional `EventCause` for underlying signalling
-         * (§12.2.15).
-         *
-         * @public
-         * @readonly
-         */
-        readonly reason?: OPTIONAL<EventCause>,
-        /**
-         * @summary `extensions`.
-         * @description
-         *
-         * Optional `CSTACommonArguments` carrying the security and
-         * privateData parameters from the ECMA-269 service table.
-         *
-         * @public
-         * @readonly
-         */
-        readonly extensions?: OPTIONAL<CSTACommonArguments>
-    ) {}
+        callingDevice: DeviceID,
+        calledDirectoryNumber: DeviceID,
+        accountCode?: OPTIONAL<AccountInfo>,
+        authCode?: OPTIONAL<AuthCode>,
+        autoOriginate?: OPTIONAL<AutoOriginate>,
+        correlatorData?: OPTIONAL<CorrelatorData>,
+        userData?: OPTIONAL<UserData>,
+        callCharacteristics?: OPTIONAL<CallCharacteristics>,
+        mediaCallCharacteristics?: OPTIONAL<MediaCallCharacteristics>,
+        callingConnectionInfo?: OPTIONAL<ConnectionInformation>,
+        subjectOfCall?: OPTIONAL<SubjectOfCall>,
+        languagePreferences?: OPTIONAL<LanguagePreferences>,
+        reason?: OPTIONAL<EventCause>,
+        extensions?: OPTIONAL<CSTACommonArguments>
+    ) {
+        this.callingDevice = callingDevice;
+        this.calledDirectoryNumber = calledDirectoryNumber;
+        this.accountCode = accountCode;
+        this.authCode = authCode;
+        this.autoOriginate = autoOriginate;
+        this.correlatorData = correlatorData;
+        this.userData = userData;
+        this.callCharacteristics = callCharacteristics;
+        this.mediaCallCharacteristics = mediaCallCharacteristics;
+        this.callingConnectionInfo = callingConnectionInfo;
+        this.subjectOfCall = subjectOfCall;
+        this.languagePreferences = languagePreferences;
+        this.reason = reason;
+        this.extensions = extensions;
+    }
 
     /**
      * @summary Restructures an object into a MakeCallArgument
@@ -263,19 +293,19 @@ class MakeCallArgument {
      * @static
      * @method
      */
-    public static get _default_value_for_autoOriginate () { return AutoOriginate_prompt; }        /**
+    public static get _default_value_for_autoOriginate (): _enum_for_AutoOriginate.prompt { return AutoOriginate_prompt; }        /**
          * @summary The enum used as the type of the component `autoOriginate`
          * @public
          * @static
          */
 
-    public static _enum_for_autoOriginate = _enum_for_AutoOriginate;        /**
+    public static _enum_for_autoOriginate: typeof _enum_for_AutoOriginate = _enum_for_AutoOriginate;        /**
          * @summary The enum used as the type of the component `reason`
          * @public
          * @static
          */
 
-    public static _enum_for_reason = _enum_for_EventCause;
+    public static _enum_for_reason: typeof _enum_for_EventCause = _enum_for_EventCause;
 }
 
 /**

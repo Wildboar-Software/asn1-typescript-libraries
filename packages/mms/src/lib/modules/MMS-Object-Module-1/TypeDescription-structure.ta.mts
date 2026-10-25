@@ -1,8 +1,8 @@
 /* eslint-disable */
 import {
-    OPTIONAL,
-    BOOLEAN,
-    ASN1Element as _Element,
+    type OPTIONAL,
+    type BOOLEAN,
+    type ASN1Element as _Element,
     ASN1TagClass as _TagClass,
     ASN1Construction as _Construction,
     ASN1UniversalType as _UniversalType,
@@ -39,29 +39,35 @@ import { TypeDescription_structure_components_Item, _decode_TypeDescription_stru
  */
 export
 class TypeDescription_structure {
+    /**
+     * @summary `packed`.
+     * @description
+     *
+     * If true, packed storage for this structure sub-tree. ISO 9506-1:2003
+     * §14.2.2.
+     *
+     * @public
+     * @readonly
+     */
+    public readonly packed: OPTIONAL<BOOLEAN>;
+    /**
+     * @summary `components`.
+     * @description
+     *
+     * Ordered named components. ISO 9506-1:2003 §14.2.2.
+     *
+     * @public
+     * @readonly
+     */
+    public readonly components: TypeDescription_structure_components_Item[];
+
     constructor (
-        /**
-         * @summary `packed`.
-         * @description
-         *
-         * If true, packed storage for this structure sub-tree. ISO 9506-1:2003
-         * §14.2.2.
-         *
-         * @public
-         * @readonly
-         */
-        readonly packed: OPTIONAL<BOOLEAN>,
-        /**
-         * @summary `components`.
-         * @description
-         *
-         * Ordered named components. ISO 9506-1:2003 §14.2.2.
-         *
-         * @public
-         * @readonly
-         */
-        readonly components: TypeDescription_structure_components_Item[]
-    ) {}
+        packed: OPTIONAL<BOOLEAN>,
+        components: TypeDescription_structure_components_Item[]
+    ) {
+        this.packed = packed;
+        this.components = components;
+    }
 
     /**
      * @summary Restructures an object into a TypeDescription_structure

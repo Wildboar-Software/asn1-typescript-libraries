@@ -8,7 +8,7 @@ import { type OPERATION } from "../Remote-Operations-Information-Objects/OPERATI
 
 import { SetSpeakerVolumeArgument, _decode_SetSpeakerVolumeArgument, _encode_SetSpeakerVolumeArgument } from "../CSTA-set-speaker-volume/SetSpeakerVolumeArgument.ta.mjs";
 
-import { SetSpeakerVolumeResult, _decode_SetSpeakerVolumeResult, _encode_SetSpeakerVolumeResult } from "../CSTA-set-speaker-volume/SetSpeakerVolumeResult.ta.mjs";
+import { type SetSpeakerVolumeResult, _decode_SetSpeakerVolumeResult, _encode_SetSpeakerVolumeResult } from "../CSTA-set-speaker-volume/SetSpeakerVolumeResult.ta.mjs";
 
 import { universalFailure } from "../CSTA-error-definition/universalFailure.oa.mjs";
 

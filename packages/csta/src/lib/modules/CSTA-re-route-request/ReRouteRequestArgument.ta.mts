@@ -2,18 +2,18 @@
 
 import * as $ from "@wildboar/asn1/functional";
 import {
-    OPTIONAL,
-    INTEGER,
-    SEQUENCE,
-    SET,
-    ASN1Element as _Element,
+    type OPTIONAL,
+    type INTEGER,
+    type SEQUENCE,
+    type SET,
+    type ASN1Element as _Element,
     ASN1TagClass as _TagClass
 } from "@wildboar/asn1";
-import { RouteingCrossRefID, _decode_RouteingCrossRefID, _encode_RouteingCrossRefID } from "../CSTA-device-feature-types/RouteingCrossRefID.ta.mjs";
+import { type RouteingCrossRefID, _decode_RouteingCrossRefID, _encode_RouteingCrossRefID } from "../CSTA-device-feature-types/RouteingCrossRefID.ta.mjs";
 
-import { RouteRegisterReqID, _decode_RouteRegisterReqID, _encode_RouteRegisterReqID } from "../CSTA-device-feature-types/RouteRegisterReqID.ta.mjs";
+import { type RouteRegisterReqID, _decode_RouteRegisterReqID, _encode_RouteRegisterReqID } from "../CSTA-device-feature-types/RouteRegisterReqID.ta.mjs";
 
-import { CorrelatorData, _decode_CorrelatorData, _encode_CorrelatorData } from "../CSTA-device-feature-types/CorrelatorData.ta.mjs";
+import { type CorrelatorData, _decode_CorrelatorData, _encode_CorrelatorData } from "../CSTA-device-feature-types/CorrelatorData.ta.mjs";
 
 import { CallLinkageData, _decode_CallLinkageData, _encode_CallLinkageData } from "../CSTA-call-control/CallLinkageData.ta.mjs";
 
@@ -35,10 +35,10 @@ import { CSTACommonArguments, _decode_CSTACommonArguments, _encode_CSTACommonArg
  * ```asn1
  * ReRouteRequestArgument ::= SEQUENCE
  * {    crossRefIdentifier        RouteingCrossRefID,
- *     routeRegisterReqID         [0] IMPLICIT RouteRegisterReqID        OPTIONAL,
- *     replyTimeout             [1] IMPLICIT INTEGER             OPTIONAL,
- *     correlatorData             [2] IMPLICIT CorrelatorData         OPTIONAL,
- *     callLinkageData            [3] IMPLICIT CallLinkageData        OPTIONAL,
+ *     routeRegisterReqID         [0] IMPLICIT RouteRegisterReqID        type OPTIONAL,
+ *     replyTimeout             [1] IMPLICIT INTEGER             type OPTIONAL,
+ *     correlatorData             [2] IMPLICIT CorrelatorData         type OPTIONAL,
+ *     callLinkageData            [3] IMPLICIT CallLinkageData        type OPTIONAL,
  *     extensions             CSTACommonArguments            OPTIONAL }
  * ```
  * 
@@ -46,65 +46,79 @@ import { CSTACommonArguments, _decode_CSTACommonArguments, _encode_CSTACommonArg
  */
 export
 class ReRouteRequestArgument {
+    /**
+     * @summary `crossRefIdentifier`.
+     * @description
+     *
+     * Per-call routeing dialogue (`routeingCrossRefID`).
+     * @public
+     * @readonly
+     */
+    public readonly crossRefIdentifier: RouteingCrossRefID;
+    /**
+     * @summary `routeRegisterReqID`.
+     * @description
+     *
+     * Mandatory if the SF supports route registration; otherwise
+     * absent. If absent, `routeingCrossRefID` is unique in the
+     * sub-domain.
+     * @public
+     * @readonly
+     */
+    public readonly routeRegisterReqID?: OPTIONAL<RouteRegisterReqID>;
+    /**
+     * @summary `replyTimeout`.
+     * @description
+     *
+     * How long CF may take to respond, if provided.
+     * @public
+     * @readonly
+     */
+    public readonly replyTimeout?: OPTIONAL<INTEGER>;
+    /**
+     * @summary `correlatorData`.
+     * @description
+     *
+     * Correlator data associated with the call.
+     * @public
+     * @readonly
+     */
+    public readonly correlatorData?: OPTIONAL<CorrelatorData>;
+    /**
+     * @summary `callLinkageData`.
+     * @description
+     *
+     * Call/thread linkage identifiers.
+     * @public
+     * @readonly
+     */
+    public readonly callLinkageData?: OPTIONAL<CallLinkageData>;
+    /**
+     * @summary `extensions`.
+     * @description
+     *
+     * Optional security (timestamp, sequence, securityInfo) and
+     * privateData.
+     * @public
+     * @readonly
+     */
+    public readonly extensions?: OPTIONAL<CSTACommonArguments>;
+
     constructor (
-        /**
-         * @summary `crossRefIdentifier`.
-         * @description
-         *
-         * Per-call routeing dialogue (`routeingCrossRefID`).
-         * @public
-         * @readonly
-         */
-        readonly crossRefIdentifier: RouteingCrossRefID,
-        /**
-         * @summary `routeRegisterReqID`.
-         * @description
-         *
-         * Mandatory if the SF supports route registration; otherwise
-         * absent. If absent, `routeingCrossRefID` is unique in the
-         * sub-domain.
-         * @public
-         * @readonly
-         */
-        readonly routeRegisterReqID?: OPTIONAL<RouteRegisterReqID>,
-        /**
-         * @summary `replyTimeout`.
-         * @description
-         *
-         * How long CF may take to respond, if provided.
-         * @public
-         * @readonly
-         */
-        readonly replyTimeout?: OPTIONAL<INTEGER>,
-        /**
-         * @summary `correlatorData`.
-         * @description
-         *
-         * Correlator data associated with the call.
-         * @public
-         * @readonly
-         */
-        readonly correlatorData?: OPTIONAL<CorrelatorData>,
-        /**
-         * @summary `callLinkageData`.
-         * @description
-         *
-         * Call/thread linkage identifiers.
-         * @public
-         * @readonly
-         */
-        readonly callLinkageData?: OPTIONAL<CallLinkageData>,
-        /**
-         * @summary `extensions`.
-         * @description
-         *
-         * Optional security (timestamp, sequence, securityInfo) and
-         * privateData.
-         * @public
-         * @readonly
-         */
-        readonly extensions?: OPTIONAL<CSTACommonArguments>
-    ) {}
+        crossRefIdentifier: RouteingCrossRefID,
+        routeRegisterReqID?: OPTIONAL<RouteRegisterReqID>,
+        replyTimeout?: OPTIONAL<INTEGER>,
+        correlatorData?: OPTIONAL<CorrelatorData>,
+        callLinkageData?: OPTIONAL<CallLinkageData>,
+        extensions?: OPTIONAL<CSTACommonArguments>
+    ) {
+        this.crossRefIdentifier = crossRefIdentifier;
+        this.routeRegisterReqID = routeRegisterReqID;
+        this.replyTimeout = replyTimeout;
+        this.correlatorData = correlatorData;
+        this.callLinkageData = callLinkageData;
+        this.extensions = extensions;
+    }
 
     /**
      * @summary Restructures an object into a ReRouteRequestArgument

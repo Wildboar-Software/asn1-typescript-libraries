@@ -1,6 +1,6 @@
 /* eslint-disable */
 import {
-  ENUMERATED,
+  type ENUMERATED,
   ASN1Element as _Element,
   ASN1TagClass as _TagClass,
   ASN1Construction as _Construction,
@@ -54,7 +54,7 @@ export type DigitalPostmarkType_deliveryType =
  * @constant
  * @type {number}
  */
-export const DigitalPostmarkType_deliveryType_certifiedMail: DigitalPostmarkType_deliveryType = 0; /* LONG_NAMED_ENUMERATED_VALUE */
+export const DigitalPostmarkType_deliveryType_certifiedMail: 0 = _enum_for_DigitalPostmarkType_deliveryType.certifiedMail; /* LONG_NAMED_ENUMERATED_VALUE */
 
 
 /**
@@ -63,17 +63,17 @@ export const DigitalPostmarkType_deliveryType_certifiedMail: DigitalPostmarkType
  * @constant
  * @type {number}
  */
-export const certifiedMail: DigitalPostmarkType_deliveryType = DigitalPostmarkType_deliveryType_certifiedMail; /* SHORT_NAMED_ENUMERATED_VALUE */
+export const certifiedMail: 0 = DigitalPostmarkType_deliveryType_certifiedMail; /* SHORT_NAMED_ENUMERATED_VALUE */
 
 
 
 
-export const _decode_DigitalPostmarkType_deliveryType = $._decodeEnumerated as $.ASN1Decoder<DigitalPostmarkType_deliveryType>;
+export const _decode_DigitalPostmarkType_deliveryType: $.ASN1Decoder<DigitalPostmarkType_deliveryType> = $._decodeEnumerated as $.ASN1Decoder<DigitalPostmarkType_deliveryType>;
 
 
 
 
-export const _encode_DigitalPostmarkType_deliveryType = $._encodeEnumerated as $.ASN1Encoder<DigitalPostmarkType_deliveryType>;
+export const _encode_DigitalPostmarkType_deliveryType: $.ASN1Encoder<DigitalPostmarkType_deliveryType> = $._encodeEnumerated as $.ASN1Encoder<DigitalPostmarkType_deliveryType>;
 
 
 /* eslint-enable */

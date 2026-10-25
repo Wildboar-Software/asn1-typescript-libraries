@@ -1,11 +1,11 @@
 /* eslint-disable */
 import {
-    OPTIONAL,
-    BOOLEAN,
-    INTEGER,
-    OBJECT_IDENTIFIER,
-    INSTANCE_OF,
-    ASN1Element as _Element,
+    type OPTIONAL,
+    type BOOLEAN,
+    type INTEGER,
+    type OBJECT_IDENTIFIER,
+    type INSTANCE_OF,
+    type ASN1Element as _Element,
     ASN1TagClass as _TagClass,
     ASN1Construction as _Construction,
     ASN1UniversalType as _UniversalType,
@@ -35,32 +35,42 @@ import * as $ from '@wildboar/asn1/functional';
  *
  */
 export class NonMessageBodyPartSynopsis {
+    /**
+     * @summary `type_`.
+     * @public
+     * @readonly
+     */
+    public readonly type_: OBJECT_IDENTIFIER;
+    /**
+     * @summary `parameters`.
+     * @public
+     * @readonly
+     */
+    public readonly parameters: OPTIONAL<INSTANCE_OF>;
+    /**
+     * @summary `size`.
+     * @public
+     * @readonly
+     */
+    public readonly size: INTEGER;
+    /**
+     * @summary `processed`.
+     * @public
+     * @readonly
+     */
+    public readonly processed?: OPTIONAL<BOOLEAN>;
+
     constructor(
-        /**
-         * @summary `type_`.
-         * @public
-         * @readonly
-         */
-        readonly type_: OBJECT_IDENTIFIER,
-        /**
-         * @summary `parameters`.
-         * @public
-         * @readonly
-         */
-        readonly parameters: OPTIONAL<INSTANCE_OF>,
-        /**
-         * @summary `size`.
-         * @public
-         * @readonly
-         */
-        readonly size: INTEGER,
-        /**
-         * @summary `processed`.
-         * @public
-         * @readonly
-         */
-        readonly processed?: OPTIONAL<BOOLEAN>
-    ) {}
+        type_: OBJECT_IDENTIFIER,
+        parameters: OPTIONAL<INSTANCE_OF>,
+        size: INTEGER,
+        processed?: OPTIONAL<BOOLEAN>
+    ) {
+        this.type_ = type_;
+        this.parameters = parameters;
+        this.size = size;
+        this.processed = processed;
+    }
 
     /**
      * @summary Restructures an object into a NonMessageBodyPartSynopsis

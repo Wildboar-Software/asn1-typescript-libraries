@@ -1,5 +1,5 @@
 /* eslint-disable */
-import { OCTET_STRING } from "@wildboar/asn1";
+import { type OCTET_STRING } from "@wildboar/asn1";
 import * as $ from "@wildboar/asn1/functional";
 import { type ALGORITHM_IDENTIFIER } from "../PKCS5v2-1/ALGORITHM-IDENTIFIER.oca.mjs";
 import { des_EDE3_CBC } from "../PKCS5v2-1/des-EDE3-CBC.va.mjs";

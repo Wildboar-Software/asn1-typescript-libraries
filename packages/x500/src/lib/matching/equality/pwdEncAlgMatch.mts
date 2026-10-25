@@ -1,11 +1,11 @@
 import type { ASN1Element } from "@wildboar/asn1";
 import { readDecoded } from "../readValue.mjs";
 import {
-    PwdEncAlg,
+    type PwdEncAlg,
     _decode_PwdEncAlg,
 } from "../../modules/PasswordPolicy/PwdEncAlg.ta.mjs";
 import {
-    UserPwd,
+    type UserPwd,
     _decode_UserPwd,
 } from "../../modules/PasswordPolicy/UserPwd.ta.mjs";
 import compareElements from "../../comparators/compareElements.mjs";

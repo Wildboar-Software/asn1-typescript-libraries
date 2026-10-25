@@ -1,9 +1,9 @@
 /* eslint-disable */
 import {
-    OPTIONAL,
-    OBJECT_IDENTIFIER,
-    PrintableString,
-    ASN1Element as _Element,
+    type OPTIONAL,
+    type OBJECT_IDENTIFIER,
+    type PrintableString,
+    type ASN1Element as _Element,
     ASN1TagClass as _TagClass,
 } from "@wildboar/asn1";
 import * as $ from "@wildboar/asn1/functional";
@@ -41,38 +41,48 @@ import * as $ from "@wildboar/asn1/functional";
  */
 export
 class DeviationDescription {
+    /**
+     * Optional human-readable text. No length or language is specified.
+     * @summary `description`.
+     * @public
+     * @readonly
+     */
+    public readonly description: OPTIONAL<PrintableString>;
+    /**
+     * Which defect this is. One of the deviation object identifiers in
+     * section 10.2.
+     * @summary `deviationType`.
+     * @public
+     * @readonly
+     */
+    public readonly deviationType: OBJECT_IDENTIFIER;
+    /**
+     * Open type selected by `deviationType`. This edition assigns no syntax
+     * for any deviation object identifier.
+     * @summary `parameters`.
+     * @public
+     * @readonly
+     */
+    public readonly parameters?: OPTIONAL<_Element>;
+    /**
+     * For internal State use. Not governed by an ICAO specification.
+     * @summary `nationalUse`.
+     * @public
+     * @readonly
+     */
+    public readonly nationalUse?: OPTIONAL<_Element>;
+
     constructor (
-        /**
-         * Optional human-readable text. No length or language is specified.
-         * @summary `description`.
-         * @public
-         * @readonly
-         */
-        readonly description: OPTIONAL<PrintableString>,
-        /**
-         * Which defect this is. One of the deviation object identifiers in
-         * section 10.2.
-         * @summary `deviationType`.
-         * @public
-         * @readonly
-         */
-        readonly deviationType: OBJECT_IDENTIFIER,
-        /**
-         * Open type selected by `deviationType`. This edition assigns no syntax
-         * for any deviation object identifier.
-         * @summary `parameters`.
-         * @public
-         * @readonly
-         */
-        readonly parameters?: OPTIONAL<_Element>,
-        /**
-         * For internal State use. Not governed by an ICAO specification.
-         * @summary `nationalUse`.
-         * @public
-         * @readonly
-         */
-        readonly nationalUse?: OPTIONAL<_Element>,
-    ) {}
+        description: OPTIONAL<PrintableString>,
+        deviationType: OBJECT_IDENTIFIER,
+        parameters?: OPTIONAL<_Element>,
+        nationalUse?: OPTIONAL<_Element>,
+    ) {
+        this.description = description;
+        this.deviationType = deviationType;
+        this.parameters = parameters;
+        this.nationalUse = nationalUse;
+    }
 
     /**
      * @summary Restructures an object into a DeviationDescription

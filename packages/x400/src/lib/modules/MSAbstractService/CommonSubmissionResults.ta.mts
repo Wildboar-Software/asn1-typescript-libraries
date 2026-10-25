@@ -1,7 +1,7 @@
 /* eslint-disable */
 import {
-    OPTIONAL,
-    ASN1Element as _Element,
+    type OPTIONAL,
+    type ASN1Element as _Element,
     ASN1TagClass as _TagClass,
     ASN1Construction as _Construction,
     ASN1UniversalType as _UniversalType,
@@ -12,17 +12,17 @@ import {
 } from '@wildboar/asn1';
 import * as $ from '@wildboar/asn1/functional';
 import {
-    SequenceNumber,
+    type SequenceNumber,
     _decode_SequenceNumber,
     _encode_SequenceNumber,
 } from '../MSAbstractService/SequenceNumber.ta.mjs';
 import {
-    AutoActionErrorIndication,
+    type AutoActionErrorIndication,
     _decode_AutoActionErrorIndication,
     _encode_AutoActionErrorIndication,
 } from '../MSAbstractService/AutoActionErrorIndication.ta.mjs';
 import {
-    MSExtensions,
+    type MSExtensions,
     _decode_MSExtensions,
     _encode_MSExtensions,
 } from '../MSAbstractService/MSExtensions.ta.mjs';
@@ -44,26 +44,34 @@ import {
  *
  */
 export class CommonSubmissionResults {
+    /**
+     * @summary `created_entry`.
+     * @public
+     * @readonly
+     */
+    public readonly created_entry?: OPTIONAL<SequenceNumber>;
+    /**
+     * @summary `auto_action_error_indication`.
+     * @public
+     * @readonly
+     */
+    public readonly auto_action_error_indication?: OPTIONAL<AutoActionErrorIndication>;
+    /**
+     * @summary `ms_submission_result_extensions`.
+     * @public
+     * @readonly
+     */
+    public readonly ms_submission_result_extensions?: OPTIONAL<MSExtensions>;
+
     constructor(
-        /**
-         * @summary `created_entry`.
-         * @public
-         * @readonly
-         */
-        readonly created_entry?: OPTIONAL<SequenceNumber>,
-        /**
-         * @summary `auto_action_error_indication`.
-         * @public
-         * @readonly
-         */
-        readonly auto_action_error_indication?: OPTIONAL<AutoActionErrorIndication>,
-        /**
-         * @summary `ms_submission_result_extensions`.
-         * @public
-         * @readonly
-         */
-        readonly ms_submission_result_extensions?: OPTIONAL<MSExtensions>
-    ) {}
+        created_entry?: OPTIONAL<SequenceNumber>,
+        auto_action_error_indication?: OPTIONAL<AutoActionErrorIndication>,
+        ms_submission_result_extensions?: OPTIONAL<MSExtensions>
+    ) {
+        this.created_entry = created_entry;
+        this.auto_action_error_indication = auto_action_error_indication;
+        this.ms_submission_result_extensions = ms_submission_result_extensions;
+    }
 
     /**
      * @summary Restructures an object into a CommonSubmissionResults

@@ -1,11 +1,11 @@
 /* eslint-disable */
 import {
-    RELATIVE_OID,
-    ASN1Element as _Element,
+    type RELATIVE_OID,
+    type ASN1Element as _Element,
     ASN1TagClass as _TagClass
 } from "@wildboar/asn1";
 import * as $ from "@wildboar/asn1/functional";
-import { PacketReport, _decode_PacketReport, _encode_PacketReport } from "../IPAccessPDU/PacketReport.ta.mjs";
+import { type PacketReport, _decode_PacketReport, _encode_PacketReport } from "../IPAccessPDU/PacketReport.ta.mjs";
 
 
 /**

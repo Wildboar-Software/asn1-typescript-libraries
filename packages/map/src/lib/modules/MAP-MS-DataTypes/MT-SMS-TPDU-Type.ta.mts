@@ -1,7 +1,7 @@
 /* eslint-disable */
 import {
-    ASN1Element as _Element,
-    ENUMERATED
+    type ASN1Element as _Element,
+    type ENUMERATED
 } from "@wildboar/asn1";
 import * as $ from "@wildboar/asn1/functional";
 
@@ -48,7 +48,7 @@ type MT_SMS_TPDU_Type = _enum_for_MT_SMS_TPDU_Type | ENUMERATED;
  * @type {number}
  */
 export
-const MT_SMS_TPDU_Type_sms_DELIVER: MT_SMS_TPDU_Type = 0; /* LONG_NAMED_ENUMERATED_VALUE */
+const MT_SMS_TPDU_Type_sms_DELIVER: _enum_for_MT_SMS_TPDU_Type.sms_DELIVER = _enum_for_MT_SMS_TPDU_Type.sms_DELIVER; /* LONG_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary sms_DELIVER
@@ -60,7 +60,7 @@ const MT_SMS_TPDU_Type_sms_DELIVER: MT_SMS_TPDU_Type = 0; /* LONG_NAMED_ENUMERAT
  * @type {number}
  */
 export
-const sms_DELIVER: MT_SMS_TPDU_Type = MT_SMS_TPDU_Type_sms_DELIVER; /* SHORT_NAMED_ENUMERATED_VALUE */
+const sms_DELIVER: _enum_for_MT_SMS_TPDU_Type.sms_DELIVER = MT_SMS_TPDU_Type_sms_DELIVER; /* SHORT_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary MT_SMS_TPDU_Type_sms_SUBMIT_REPORT
@@ -73,7 +73,7 @@ const sms_DELIVER: MT_SMS_TPDU_Type = MT_SMS_TPDU_Type_sms_DELIVER; /* SHORT_NAM
  * @type {number}
  */
 export
-const MT_SMS_TPDU_Type_sms_SUBMIT_REPORT: MT_SMS_TPDU_Type = 1; /* LONG_NAMED_ENUMERATED_VALUE */
+const MT_SMS_TPDU_Type_sms_SUBMIT_REPORT: _enum_for_MT_SMS_TPDU_Type.sms_SUBMIT_REPORT = _enum_for_MT_SMS_TPDU_Type.sms_SUBMIT_REPORT; /* LONG_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary sms_SUBMIT_REPORT
@@ -86,7 +86,7 @@ const MT_SMS_TPDU_Type_sms_SUBMIT_REPORT: MT_SMS_TPDU_Type = 1; /* LONG_NAMED_EN
  * @type {number}
  */
 export
-const sms_SUBMIT_REPORT: MT_SMS_TPDU_Type = MT_SMS_TPDU_Type_sms_SUBMIT_REPORT; /* SHORT_NAMED_ENUMERATED_VALUE */
+const sms_SUBMIT_REPORT: _enum_for_MT_SMS_TPDU_Type.sms_SUBMIT_REPORT = MT_SMS_TPDU_Type_sms_SUBMIT_REPORT; /* SHORT_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary MT_SMS_TPDU_Type_sms_STATUS_REPORT
@@ -98,7 +98,7 @@ const sms_SUBMIT_REPORT: MT_SMS_TPDU_Type = MT_SMS_TPDU_Type_sms_SUBMIT_REPORT; 
  * @type {number}
  */
 export
-const MT_SMS_TPDU_Type_sms_STATUS_REPORT: MT_SMS_TPDU_Type = 2; /* LONG_NAMED_ENUMERATED_VALUE */
+const MT_SMS_TPDU_Type_sms_STATUS_REPORT: _enum_for_MT_SMS_TPDU_Type.sms_STATUS_REPORT = _enum_for_MT_SMS_TPDU_Type.sms_STATUS_REPORT; /* LONG_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary sms_STATUS_REPORT
@@ -110,7 +110,7 @@ const MT_SMS_TPDU_Type_sms_STATUS_REPORT: MT_SMS_TPDU_Type = 2; /* LONG_NAMED_EN
  * @type {number}
  */
 export
-const sms_STATUS_REPORT: MT_SMS_TPDU_Type = MT_SMS_TPDU_Type_sms_STATUS_REPORT; /* SHORT_NAMED_ENUMERATED_VALUE */
+const sms_STATUS_REPORT: _enum_for_MT_SMS_TPDU_Type.sms_STATUS_REPORT = MT_SMS_TPDU_Type_sms_STATUS_REPORT; /* SHORT_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary Decodes an ASN.1 element into a(n) MT_SMS_TPDU_Type
@@ -118,7 +118,7 @@ const sms_STATUS_REPORT: MT_SMS_TPDU_Type = MT_SMS_TPDU_Type_sms_STATUS_REPORT; 
  * @param el The element being decoded.
  * @returns The decoded data structure.
  */
-export const _decode_MT_SMS_TPDU_Type = $._decodeEnumerated;
+export const _decode_MT_SMS_TPDU_Type: $.ASN1Decoder<number> = $._decodeEnumerated;
 
 /**
  * @summary Encodes a(n) MT_SMS_TPDU_Type into an ASN.1 Element.
@@ -127,7 +127,7 @@ export const _decode_MT_SMS_TPDU_Type = $._decodeEnumerated;
  * @param elGetter A function that can be used to get new ASN.1 elements.
  * @returns {_Element} The MT_SMS_TPDU_Type, encoded as an ASN.1 Element.
  */
-export const _encode_MT_SMS_TPDU_Type = $._encodeEnumerated;
+export const _encode_MT_SMS_TPDU_Type: $.ASN1Encoder<number> = $._encodeEnumerated;
 
 
 /* eslint-enable */

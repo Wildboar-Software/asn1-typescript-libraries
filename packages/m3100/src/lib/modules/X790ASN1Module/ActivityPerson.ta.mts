@@ -1,6 +1,6 @@
 /* eslint-disable */
 import {
-    ASN1Element as _Element,
+    type ASN1Element as _Element,
     ASN1TagClass as _TagClass,
     ASN1Construction as _Construction,
     ASN1UniversalType as _UniversalType,
@@ -28,26 +28,13 @@ import {
  */
 export type ActivityPerson = PersonReach; // DefinedType
 
-
-let _cached_decoder_for_ActivityPerson: $.ASN1Decoder<ActivityPerson> | null = null;
-
-
 /**
  * @summary Decodes an ASN.1 element into a(n) ActivityPerson
  * @function
  * @param {_Element} el The element being decoded.
  * @returns {ActivityPerson} The decoded data structure.
  */
-export function _decode_ActivityPerson(el: _Element): ActivityPerson {
-    if (!_cached_decoder_for_ActivityPerson) {
-        _cached_decoder_for_ActivityPerson = _decode_PersonReach;
-    }
-    return _cached_decoder_for_ActivityPerson(el);
-}
-
-
-let _cached_encoder_for_ActivityPerson: $.ASN1Encoder<ActivityPerson> | null = null;
-
+export const _decode_ActivityPerson: $.ASN1Decoder<ActivityPerson> = _decode_PersonReach;
 
 /**
  * @summary Encodes a(n) ActivityPerson into an ASN.1 Element.
@@ -56,15 +43,7 @@ let _cached_encoder_for_ActivityPerson: $.ASN1Encoder<ActivityPerson> | null = n
  * @param elGetter A function that can be used to get new ASN.1 elements.
  * @returns {_Element} The ActivityPerson, encoded as an ASN.1 Element.
  */
-export function _encode_ActivityPerson(
-    value: ActivityPerson,
-    elGetter: $.ASN1Encoder<ActivityPerson>
-): _Element {
-    if (!_cached_encoder_for_ActivityPerson) {
-        _cached_encoder_for_ActivityPerson = _encode_PersonReach;
-    }
-    return _cached_encoder_for_ActivityPerson(value, elGetter);
-}
+export const _encode_ActivityPerson: $.ASN1Encoder<ActivityPerson> = _encode_PersonReach;
 
 
 /* eslint-enable */

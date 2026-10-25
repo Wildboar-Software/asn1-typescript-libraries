@@ -11,7 +11,7 @@ import {
 } from '@wildboar/asn1';
 import * as $ from '@wildboar/asn1/functional';
 import {
-  BioAPI_HANDLE,
+  type BioAPI_HANDLE,
   _decode_BioAPI_HANDLE,
   _encode_BioAPI_HANDLE,
 } from '../BIP/BioAPI-HANDLE.ta.mjs';
@@ -21,7 +21,7 @@ import {
   _encode_BioAPI_INPUT_BIR,
 } from '../BIP/BioAPI-INPUT-BIR.ta.mjs';
 import {
-  BioAPI_DB_HANDLE,
+  type BioAPI_DB_HANDLE,
   _decode_BioAPI_DB_HANDLE,
   _encode_BioAPI_DB_HANDLE,
 } from '../BIP/BioAPI-DB-HANDLE.ta.mjs';
@@ -61,7 +61,7 @@ export class DbStoreBIR_RequestParams {
    * @public
    * @readonly
    */
-  readonly originalBSPHandle: BioAPI_HANDLE;
+  public readonly originalBSPHandle: BioAPI_HANDLE;
   /**
    * @summary `birToStore`.
    * @description
@@ -72,7 +72,7 @@ export class DbStoreBIR_RequestParams {
    * @public
    * @readonly
    */
-  readonly birToStore: BioAPI_INPUT_BIR;
+  public readonly birToStore: BioAPI_INPUT_BIR;
   /**
    * @summary `dbHandle`.
    * @description
@@ -83,7 +83,7 @@ export class DbStoreBIR_RequestParams {
    * @public
    * @readonly
    */
-  readonly dbHandle: BioAPI_DB_HANDLE;
+  public readonly dbHandle: BioAPI_DB_HANDLE;
 
   constructor(
     originalBSPHandle: BioAPI_HANDLE,

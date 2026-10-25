@@ -1,17 +1,17 @@
 /* eslint-disable */
 import {
-    ASN1Element as _Element,
+    type ASN1Element as _Element,
     ASN1TagClass as _TagClass,
-    OPTIONAL,
+    type OPTIONAL,
 } from "@wildboar/asn1";
 import * as $ from "@wildboar/asn1/functional";
 import {
-    CertificateRevocationLists,
+    type CertificateRevocationLists,
     _decode_CertificateRevocationLists,
     _encode_CertificateRevocationLists,
 } from "../PKCS7/CertificateRevocationLists.ta.mjs";
 import {
-    CertificateSet,
+    type CertificateSet,
     _decode_CertificateSet,
     _encode_CertificateSet,
 } from "../PKCS7/CertificateSet.ta.mjs";
@@ -21,16 +21,16 @@ import {
     _encode_ContentInfo,
 } from "../PKCS7/ContentInfo.ta.mjs";
 import {
-    DigestAlgorithmIdentifiers,
+    type DigestAlgorithmIdentifiers,
     _decode_DigestAlgorithmIdentifiers,
     _encode_DigestAlgorithmIdentifiers,
 } from "../PKCS7/DigestAlgorithmIdentifiers.ta.mjs";
 import {
-    SignerInfos,
+    type SignerInfos,
     _decode_SignerInfos,
     _encode_SignerInfos,
 } from "../PKCS7/SignerInfos.ta.mjs";
-import { Version, _decode_Version, _encode_Version } from "../PKCS7/Version.ta.mjs";
+import { type Version, _decode_Version, _encode_Version } from "../PKCS7/Version.ta.mjs";
 
 /**
  * @summary SignedData
@@ -51,44 +51,58 @@ import { Version, _decode_Version, _encode_Version } from "../PKCS7/Version.ta.m
  *
  */
 export class SignedData {
+    /**
+     * @summary `version`.
+     * @public
+     * @readonly
+     */
+    public readonly version: Version;
+    /**
+     * @summary `digestAlgorithms`.
+     * @public
+     * @readonly
+     */
+    public readonly digestAlgorithms: DigestAlgorithmIdentifiers;
+    /**
+     * @summary `contentInfo`.
+     * @public
+     * @readonly
+     */
+    public readonly contentInfo: ContentInfo;
+    /**
+     * @summary `certificates`.
+     * @public
+     * @readonly
+     */
+    public readonly certificates: OPTIONAL<CertificateSet>;
+    /**
+     * @summary `crls`.
+     * @public
+     * @readonly
+     */
+    public readonly crls: OPTIONAL<CertificateRevocationLists>;
+    /**
+     * @summary `signerInfos`.
+     * @public
+     * @readonly
+     */
+    public readonly signerInfos: SignerInfos;
+
     constructor(
-        /**
-         * @summary `version`.
-         * @public
-         * @readonly
-         */
-        readonly version: Version,
-        /**
-         * @summary `digestAlgorithms`.
-         * @public
-         * @readonly
-         */
-        readonly digestAlgorithms: DigestAlgorithmIdentifiers,
-        /**
-         * @summary `contentInfo`.
-         * @public
-         * @readonly
-         */
-        readonly contentInfo: ContentInfo,
-        /**
-         * @summary `certificates`.
-         * @public
-         * @readonly
-         */
-        readonly certificates: OPTIONAL<CertificateSet>,
-        /**
-         * @summary `crls`.
-         * @public
-         * @readonly
-         */
-        readonly crls: OPTIONAL<CertificateRevocationLists>,
-        /**
-         * @summary `signerInfos`.
-         * @public
-         * @readonly
-         */
-        readonly signerInfos: SignerInfos
-    ) {}
+        version: Version,
+        digestAlgorithms: DigestAlgorithmIdentifiers,
+        contentInfo: ContentInfo,
+        certificates: OPTIONAL<CertificateSet>,
+        crls: OPTIONAL<CertificateRevocationLists>,
+        signerInfos: SignerInfos
+    ) {
+        this.version = version;
+        this.digestAlgorithms = digestAlgorithms;
+        this.contentInfo = contentInfo;
+        this.certificates = certificates;
+        this.crls = crls;
+        this.signerInfos = signerInfos;
+    }
 
     /**
      * @summary Restructures an object into a SignedData

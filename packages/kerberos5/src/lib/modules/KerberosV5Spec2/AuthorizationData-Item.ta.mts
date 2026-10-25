@@ -1,6 +1,6 @@
 /* eslint-disable */
 import {
-  OCTET_STRING,
+  type OCTET_STRING,
   ASN1Element as _Element,
   ASN1TagClass as _TagClass,
   ASN1Construction as _Construction,
@@ -12,7 +12,7 @@ import {
 } from '@wildboar/asn1';
 import * as $ from '@wildboar/asn1/functional';
 import {
-  Int32,
+  type Int32,
   _decode_Int32,
   _encode_Int32,
 } from '../KerberosV5Spec2/Int32.ta.mjs';
@@ -43,7 +43,7 @@ export class AuthorizationData_Item {
    * @public
    * @readonly
    */
-  readonly ad_type: Int32;
+  public readonly ad_type: Int32;
   /**
    * @summary `ad_data`.
    * @description
@@ -54,7 +54,7 @@ export class AuthorizationData_Item {
    * @public
    * @readonly
    */
-  readonly ad_data: OCTET_STRING;
+  public readonly ad_data: OCTET_STRING;
 
   constructor(
     ad_type: Int32,

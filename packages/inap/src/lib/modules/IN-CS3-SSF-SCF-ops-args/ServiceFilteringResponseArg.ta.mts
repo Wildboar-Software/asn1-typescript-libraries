@@ -1,15 +1,15 @@
 /* eslint-disable */
 import {
-    OPTIONAL,
-    ASN1Element as _Element,
+    type OPTIONAL,
+    type ASN1Element as _Element,
     ASN1TagClass as _TagClass
 } from "@wildboar/asn1";
 import * as $ from "@wildboar/asn1/functional";
-import { CountersValue, _decode_CountersValue, _encode_CountersValue } from "../IN-CS3-SSF-SCF-datatypes/CountersValue.ta.mjs";
+import { type CountersValue, _decode_CountersValue, _encode_CountersValue } from "../IN-CS3-SSF-SCF-datatypes/CountersValue.ta.mjs";
 // export { CountersValue, _decode_CountersValue, _encode_CountersValue } from "../IN-CS3-SSF-SCF-datatypes/CountersValue.ta.mjs";
-import { FilteringCriteria, _decode_FilteringCriteria, _encode_FilteringCriteria } from "../IN-CS3-SSF-SCF-datatypes/FilteringCriteria.ta.mjs";
+import { type FilteringCriteria, _decode_FilteringCriteria, _encode_FilteringCriteria } from "../IN-CS3-SSF-SCF-datatypes/FilteringCriteria.ta.mjs";
 // export { FilteringCriteria, _decode_FilteringCriteria, _encode_FilteringCriteria } from "../IN-CS3-SSF-SCF-datatypes/FilteringCriteria.ta.mjs";
-import { Extensions, _decode_Extensions, _encode_Extensions } from "../IN-CS3-common-datatypes/Extensions.ta.mjs";
+import { type Extensions, _decode_Extensions, _encode_Extensions } from "../IN-CS3-common-datatypes/Extensions.ta.mjs";
 // export { Extensions, _decode_Extensions, _encode_Extensions } from "../IN-CS3-common-datatypes/Extensions.ta.mjs";
 import { ResponseCondition, _decode_ResponseCondition, _encode_ResponseCondition, _enum_for_ResponseCondition } from "../IN-CS3-SSF-SCF-datatypes/ResponseCondition.ta.mjs";
 // export { ResponseCondition, _enum_for_ResponseCondition, ResponseCondition_intermediateResponse /* IMPORTED_LONG_ENUMERATION_ITEM */, intermediateResponse /* IMPORTED_SHORT_ENUMERATION_ITEM */, ResponseCondition_lastResponse /* IMPORTED_LONG_ENUMERATION_ITEM */, lastResponse /* IMPORTED_SHORT_ENUMERATION_ITEM */, _decode_ResponseCondition, _encode_ResponseCondition } from "../IN-CS3-SSF-SCF-datatypes/ResponseCondition.ta.mjs";
@@ -102,7 +102,7 @@ class ServiceFilteringResponseArg {
          * @static
          */
 
-    public static _enum_for_responseCondition = _enum_for_ResponseCondition;
+    public static _enum_for_responseCondition: typeof _enum_for_ResponseCondition = _enum_for_ResponseCondition;
 }
 
 /**

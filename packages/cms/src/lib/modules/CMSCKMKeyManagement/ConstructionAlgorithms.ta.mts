@@ -1,17 +1,17 @@
 /* eslint-disable */
 import {
     ASN1ConstructionError as _ConstructionError,
-    ASN1Element as _Element,
+    type ASN1Element as _Element,
     ASN1TagClass as _TagClass,
 } from "@wildboar/asn1";
 import * as $ from "@wildboar/asn1/functional";
 import {
-    CombinerAlgorithmIdentifier,
+    type CombinerAlgorithmIdentifier,
     _decode_CombinerAlgorithmIdentifier,
     _encode_CombinerAlgorithmIdentifier,
 } from "../CMSCKMKeyManagement/CombinerAlgorithmIdentifier.ta.mjs";
 import {
-    KeyEncryptionAlgorithmIdentifier,
+    type KeyEncryptionAlgorithmIdentifier,
     _decode_KeyEncryptionAlgorithmIdentifier,
     _encode_KeyEncryptionAlgorithmIdentifier,
 } from "../CMSCKMKeyManagement/KeyEncryptionAlgorithmIdentifier.ta.mjs";
@@ -33,20 +33,26 @@ import {
  *
  */
 export class ConstructionAlgorithms {
+    /**
+     * @summary `combiner`.
+     * @public
+     * @readonly
+     */
+    public readonly combiner: CombinerAlgorithmIdentifier;
+    /**
+     * @summary `keyEncryptionAlgorithm`.
+     * @public
+     * @readonly
+     */
+    public readonly keyEncryptionAlgorithm: KeyEncryptionAlgorithmIdentifier;
+
     constructor(
-        /**
-         * @summary `combiner`.
-         * @public
-         * @readonly
-         */
-        readonly combiner: CombinerAlgorithmIdentifier,
-        /**
-         * @summary `keyEncryptionAlgorithm`.
-         * @public
-         * @readonly
-         */
-        readonly keyEncryptionAlgorithm: KeyEncryptionAlgorithmIdentifier
-    ) {}
+        combiner: CombinerAlgorithmIdentifier,
+        keyEncryptionAlgorithm: KeyEncryptionAlgorithmIdentifier
+    ) {
+        this.combiner = combiner;
+        this.keyEncryptionAlgorithm = keyEncryptionAlgorithm;
+    }
 
     /**
      * @summary Restructures an object into a ConstructionAlgorithms

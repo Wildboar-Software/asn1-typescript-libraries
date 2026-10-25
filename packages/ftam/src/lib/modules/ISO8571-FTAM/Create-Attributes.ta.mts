@@ -1,6 +1,6 @@
 /* eslint-disable */
 import {
-  OPTIONAL,
+  type OPTIONAL,
   ASN1Element as _Element,
   ASN1TagClass as _TagClass,
   ASN1Construction as _Construction,
@@ -12,58 +12,58 @@ import {
 } from '@wildboar/asn1';
 import * as $ from '@wildboar/asn1/functional';
 import {
-  Pathname_Attribute,
+  type Pathname_Attribute,
   _decode_Pathname_Attribute,
   _encode_Pathname_Attribute,
 } from '../ISO8571-FTAM/Pathname-Attribute.ta.mjs';
 import {
-  Object_Type_Attribute,
+  type Object_Type_Attribute,
   file /* IMPORTED_SHORT_NAMED_INTEGER */,
   _decode_Object_Type_Attribute,
   _encode_Object_Type_Attribute,
 } from '../ISO8571-FTAM/Object-Type-Attribute.ta.mjs';
 import {
-  Permitted_Actions_Attribute,
+  type Permitted_Actions_Attribute,
   _decode_Permitted_Actions_Attribute,
   _encode_Permitted_Actions_Attribute,
 } from '../ISO8571-FTAM/Permitted-Actions-Attribute.ta.mjs';
 import {
-  Contents_Type_Attribute,
+  type Contents_Type_Attribute,
   _decode_Contents_Type_Attribute,
   _encode_Contents_Type_Attribute,
 } from '../ISO8571-FTAM/Contents-Type-Attribute.ta.mjs';
 import {
-  Account_Attribute,
+  type Account_Attribute,
   _decode_Account_Attribute,
   _encode_Account_Attribute,
 } from '../ISO8571-FTAM/Account-Attribute.ta.mjs';
 import {
-  Object_Availability_Attribute,
+  type Object_Availability_Attribute,
   _decode_Object_Availability_Attribute,
   _encode_Object_Availability_Attribute,
 } from '../ISO8571-FTAM/Object-Availability-Attribute.ta.mjs';
 import {
-  Object_Size_Attribute,
+  type Object_Size_Attribute,
   _decode_Object_Size_Attribute,
   _encode_Object_Size_Attribute,
 } from '../ISO8571-FTAM/Object-Size-Attribute.ta.mjs';
 import {
-  Access_Control_Attribute,
+  type Access_Control_Attribute,
   _decode_Access_Control_Attribute,
   _encode_Access_Control_Attribute,
 } from '../ISO8571-FTAM/Access-Control-Attribute.ta.mjs';
 import {
-  Legal_Qualification_Attribute,
+  type Legal_Qualification_Attribute,
   _decode_Legal_Qualification_Attribute,
   _encode_Legal_Qualification_Attribute,
 } from '../ISO8571-FTAM/Legal-Qualification-Attribute.ta.mjs';
 import {
-  Private_Use_Attribute,
+  type Private_Use_Attribute,
   _decode_Private_Use_Attribute,
   _encode_Private_Use_Attribute,
 } from '../ISO8571-FTAM/Private-Use-Attribute.ta.mjs';
 import {
-  Attribute_Extensions,
+  type Attribute_Extensions,
   _decode_Attribute_Extensions,
   _encode_Attribute_Extensions,
 } from '../ISO8571-FTAM/Attribute-Extensions.ta.mjs';
@@ -120,7 +120,7 @@ export class Create_Attributes {
    * @public
    * @readonly
    */
-  readonly pathname: Pathname_Attribute;
+  public readonly pathname: Pathname_Attribute;
   /**
    * @summary `object_type`.
    * @description
@@ -131,7 +131,7 @@ export class Create_Attributes {
    * @public
    * @readonly
    */
-  readonly object_type: OPTIONAL<Object_Type_Attribute>;
+  public readonly object_type: OPTIONAL<Object_Type_Attribute>;
   /**
    * @summary `permitted_actions`.
    * @description
@@ -141,7 +141,7 @@ export class Create_Attributes {
    * @public
    * @readonly
    */
-  readonly permitted_actions: Permitted_Actions_Attribute;
+  public readonly permitted_actions: Permitted_Actions_Attribute;
   /**
    * @summary `contents_type`.
    * @description
@@ -151,7 +151,7 @@ export class Create_Attributes {
    * @public
    * @readonly
    */
-  readonly contents_type: Contents_Type_Attribute;
+  public readonly contents_type: Contents_Type_Attribute;
   /**
    * @summary `storage_account`.
    * @description
@@ -162,7 +162,7 @@ export class Create_Attributes {
    * @public
    * @readonly
    */
-  readonly storage_account?: OPTIONAL<Account_Attribute>;
+  public readonly storage_account?: OPTIONAL<Account_Attribute>;
   /**
    * @summary `object_availability`.
    * @description
@@ -173,7 +173,7 @@ export class Create_Attributes {
    * @public
    * @readonly
    */
-  readonly object_availability?: OPTIONAL<Object_Availability_Attribute>;
+  public readonly object_availability?: OPTIONAL<Object_Availability_Attribute>;
   /**
    * @summary `future_Object_size`.
    * @description
@@ -185,7 +185,7 @@ export class Create_Attributes {
    * @public
    * @readonly
    */
-  readonly future_Object_size?: OPTIONAL<Object_Size_Attribute>;
+  public readonly future_Object_size?: OPTIONAL<Object_Size_Attribute>;
   /**
    * @summary `access_control`.
    * @description
@@ -197,7 +197,7 @@ export class Create_Attributes {
    * @public
    * @readonly
    */
-  readonly access_control?: OPTIONAL<Access_Control_Attribute>;
+  public readonly access_control?: OPTIONAL<Access_Control_Attribute>;
   /**
    * @summary `path_access_control`.
    * @description
@@ -208,7 +208,7 @@ export class Create_Attributes {
    * @public
    * @readonly
    */
-  readonly path_access_control?: OPTIONAL<Access_Control_Attribute>;
+  public readonly path_access_control?: OPTIONAL<Access_Control_Attribute>;
   /**
    * @summary `legal_qualification`.
    * @description
@@ -219,7 +219,7 @@ export class Create_Attributes {
    * @public
    * @readonly
    */
-  readonly legal_qualification?: OPTIONAL<Legal_Qualification_Attribute>;
+  public readonly legal_qualification?: OPTIONAL<Legal_Qualification_Attribute>;
   /**
    * @summary `private_use`.
    * @description
@@ -230,7 +230,7 @@ export class Create_Attributes {
    * @public
    * @readonly
    */
-  readonly private_use?: OPTIONAL<Private_Use_Attribute>;
+  public readonly private_use?: OPTIONAL<Private_Use_Attribute>;
   /**
    * @summary `attribute_extensions`.
    * @description
@@ -240,7 +240,7 @@ export class Create_Attributes {
    * @public
    * @readonly
    */
-  readonly attribute_extensions?: OPTIONAL<Attribute_Extensions>;
+  public readonly attribute_extensions?: OPTIONAL<Attribute_Extensions>;
 
   constructor(
     pathname: Pathname_Attribute,

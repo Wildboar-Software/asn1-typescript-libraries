@@ -1,11 +1,11 @@
 /* eslint-disable */
 import {
-    ASN1Element as _Element,
+    type ASN1Element as _Element,
     ASN1TagClass as _TagClass
 } from "@wildboar/asn1";
 import * as $ from "@wildboar/asn1/functional";
-import { P_AbortCause, _decode_P_AbortCause, _encode_P_AbortCause } from "../Dialog-Service-Pdus-asn1-97/P-AbortCause.ta.mjs";
-import { UserAbortInformation, _decode_UserAbortInformation, _encode_UserAbortInformation } from "../Dialog-Service-Pdus-asn1-97/UserAbortInformation.ta.mjs";
+import { type P_AbortCause, _decode_P_AbortCause, _encode_P_AbortCause } from "../Dialog-Service-Pdus-asn1-97/P-AbortCause.ta.mjs";
+import { type UserAbortInformation, _decode_UserAbortInformation, _encode_UserAbortInformation } from "../Dialog-Service-Pdus-asn1-97/UserAbortInformation.ta.mjs";
 
 /**
  * @summary DialogAbortPDU_abortChoice

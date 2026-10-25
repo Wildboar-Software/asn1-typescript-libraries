@@ -1,11 +1,11 @@
 /* eslint-disable */
 import {
     ASN1ConstructionError as _ConstructionError,
-    ASN1Element as _Element,
+    type ASN1Element as _Element,
     ASN1TagClass as _TagClass
 } from "@wildboar/asn1";
 import * as $ from "@wildboar/asn1/functional";
-import { _decode_SetNicknameResponse_setNicknameResult, _encode_SetNicknameResponse_setNicknameResult, SetNicknameResponse_setNicknameResult } from "../RSPDefinitions/SetNicknameResponse-setNicknameResult.ta.mjs";
+import { _decode_SetNicknameResponse_setNicknameResult, _encode_SetNicknameResponse_setNicknameResult, type SetNicknameResponse_setNicknameResult } from "../RSPDefinitions/SetNicknameResponse-setNicknameResult.ta.mjs";
 
 
 /**
@@ -35,7 +35,7 @@ class SetNicknameResponse {
      * @public
      * @readonly
      */
-    readonly setNicknameResult: SetNicknameResponse_setNicknameResult;
+    public readonly setNicknameResult: SetNicknameResponse_setNicknameResult;
 
     constructor (
         setNicknameResult: SetNicknameResponse_setNicknameResult

@@ -1,9 +1,9 @@
 /* eslint-disable */
 import {
-    OCTET_STRING,
-    RELATIVE_OID,
+    type OCTET_STRING,
+    type RELATIVE_OID,
     ASN1ConstructionError as _ConstructionError,
-    ASN1Element as _Element,
+    type ASN1Element as _Element,
     ASN1TagClass as _TagClass
 } from "@wildboar/asn1";
 import * as $ from "@wildboar/asn1/functional";
@@ -137,7 +137,7 @@ class EmailCC {
          * @static
          */
 
-    public static _enum_for_email_Format = _enum_for_Email_Format;
+    public static _enum_for_email_Format: typeof _enum_for_Email_Format = _enum_for_Email_Format;
 }
 
 /**

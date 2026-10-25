@@ -1,15 +1,15 @@
 /* eslint-disable */
 import {
-    OPTIONAL,
-    ASN1Element as _Element,
+    type OPTIONAL,
+    type ASN1Element as _Element,
     ASN1TagClass as _TagClass
 } from "@wildboar/asn1";
 import * as $ from "@wildboar/asn1/functional";
-import { PartyNumber, _decode_PartyNumber, _encode_PartyNumber } from "../Addressing-Data-Elements-asn1-97/PartyNumber.ta.mjs";
-import { PresentedAddressScreened, _decode_PresentedAddressScreened, _encode_PresentedAddressScreened } from "../Addressing-Data-Elements-asn1-97/PresentedAddressScreened.ta.mjs";
-import { AwaitConnect, _decode_AwaitConnect, _encode_AwaitConnect } from "../Single-Step-Call-Transfer-Operations-asn1-97/AwaitConnect.ta.mjs";
-import { Name, _decode_Name, _encode_Name } from "../Name-Operations-asn1-97/Name.ta.mjs";
-import { SSCTInitiateArg_argumentExtension, _decode_SSCTInitiateArg_argumentExtension, _encode_SSCTInitiateArg_argumentExtension } from "../Single-Step-Call-Transfer-Operations-asn1-97/SSCTInitiateArg-argumentExtension.ta.mjs";
+import { type PartyNumber, _decode_PartyNumber, _encode_PartyNumber } from "../Addressing-Data-Elements-asn1-97/PartyNumber.ta.mjs";
+import { type PresentedAddressScreened, _decode_PresentedAddressScreened, _encode_PresentedAddressScreened } from "../Addressing-Data-Elements-asn1-97/PresentedAddressScreened.ta.mjs";
+import { type AwaitConnect, _decode_AwaitConnect, _encode_AwaitConnect } from "../Single-Step-Call-Transfer-Operations-asn1-97/AwaitConnect.ta.mjs";
+import { type Name, _decode_Name, _encode_Name } from "../Name-Operations-asn1-97/Name.ta.mjs";
+import { type SSCTInitiateArg_argumentExtension, _decode_SSCTInitiateArg_argumentExtension, _encode_SSCTInitiateArg_argumentExtension } from "../Single-Step-Call-Transfer-Operations-asn1-97/SSCTInitiateArg-argumentExtension.ta.mjs";
 
 /**
  * @summary SSCTInitiateArg

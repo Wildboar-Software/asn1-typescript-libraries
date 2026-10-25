@@ -2,13 +2,13 @@
 
 import * as $ from "@wildboar/asn1/functional";
 import {
-    OPTIONAL,
-    SEQUENCE,
-    SET,
-    ASN1Element as _Element,
+    type OPTIONAL,
+    type SEQUENCE,
+    type SET,
+    type ASN1Element as _Element,
     ASN1TagClass as _TagClass
 } from "@wildboar/asn1";
-import { ConnectionID, _decode_ConnectionID, _encode_ConnectionID } from "../CSTA-call-connection-identifiers/ConnectionID.ta.mjs";
+import { type ConnectionID, _decode_ConnectionID, _encode_ConnectionID } from "../CSTA-call-connection-identifiers/ConnectionID.ta.mjs";
 
 import {
     ParticipationType,
@@ -19,7 +19,7 @@ import {
     _encode_ParticipationType
 } from "../CSTA-device-feature-types/ParticipationType.ta.mjs";
 
-import { UserData, _decode_UserData, _encode_UserData } from "../CSTA-device-feature-types/UserData.ta.mjs";
+import { type UserData, _decode_UserData, _encode_UserData } from "../CSTA-device-feature-types/UserData.ta.mjs";
 
 import { CSTACommonArguments, _decode_CSTACommonArguments, _encode_CSTACommonArguments } from "../CSTA-extension-types/CSTACommonArguments.ta.mjs";
 
@@ -42,7 +42,7 @@ import { CSTACommonArguments, _decode_CSTACommonArguments, _encode_CSTACommonArg
  * IntrudeCallArgument ::= SEQUENCE
  * {     intrude             ConnectionID,
  *     participationType         ParticipationType             DEFAULT active,
- *     userData             UserData                 OPTIONAL,
+ *     userData             UserData                 type OPTIONAL,
  *     extensions             CSTACommonArguments             OPTIONAL }
  * ```
  * 
@@ -50,51 +50,61 @@ import { CSTACommonArguments, _decode_CSTACommonArguments, _encode_CSTACommonArg
  */
 export
 class IntrudeCallArgument {
+    /**
+     * @summary `intrude`.
+     * @description
+     *
+     * Mandatory. Calling device's connection (typically
+     * Connected while the called side is Fail).
+     *
+     * @public
+     * @readonly
+     */
+    public readonly intrude: ConnectionID;
+    /**
+     * @summary `participationType`.
+     * @description
+     *
+     * Default `active`. Whether the intruding device may speak
+     * (`active`) or only listen (`silent`).
+     *
+     * @public
+     * @readonly
+     */
+    public readonly participationType?: OPTIONAL<ParticipationType>;
+    /**
+     * @summary `userData`.
+     * @description
+     *
+     * Optional user data sent with the intrusion (§12.2.30).
+     *
+     * @public
+     * @readonly
+     */
+    public readonly userData?: OPTIONAL<UserData>;
+    /**
+     * @summary `extensions`.
+     * @description
+     *
+     * Optional `CSTACommonArguments` carrying the security and
+     * privateData parameters from the ECMA-269 service table.
+     *
+     * @public
+     * @readonly
+     */
+    public readonly extensions?: OPTIONAL<CSTACommonArguments>;
+
     constructor (
-        /**
-         * @summary `intrude`.
-         * @description
-         *
-         * Mandatory. Calling device's connection (typically
-         * Connected while the called side is Fail).
-         *
-         * @public
-         * @readonly
-         */
-        readonly intrude: ConnectionID,
-        /**
-         * @summary `participationType`.
-         * @description
-         *
-         * Default `active`. Whether the intruding device may speak
-         * (`active`) or only listen (`silent`).
-         *
-         * @public
-         * @readonly
-         */
-        readonly participationType?: OPTIONAL<ParticipationType>,
-        /**
-         * @summary `userData`.
-         * @description
-         *
-         * Optional user data sent with the intrusion (§12.2.30).
-         *
-         * @public
-         * @readonly
-         */
-        readonly userData?: OPTIONAL<UserData>,
-        /**
-         * @summary `extensions`.
-         * @description
-         *
-         * Optional `CSTACommonArguments` carrying the security and
-         * privateData parameters from the ECMA-269 service table.
-         *
-         * @public
-         * @readonly
-         */
-        readonly extensions?: OPTIONAL<CSTACommonArguments>
-    ) {}
+        intrude: ConnectionID,
+        participationType?: OPTIONAL<ParticipationType>,
+        userData?: OPTIONAL<UserData>,
+        extensions?: OPTIONAL<CSTACommonArguments>
+    ) {
+        this.intrude = intrude;
+        this.participationType = participationType;
+        this.userData = userData;
+        this.extensions = extensions;
+    }
 
     /**
      * @summary Restructures an object into a IntrudeCallArgument
@@ -118,13 +128,13 @@ class IntrudeCallArgument {
      * @static
      * @method
      */
-    public static get _default_value_for_participationType () { return ParticipationType_active; }        /**
+    public static get _default_value_for_participationType (): _enum_for_ParticipationType.active { return ParticipationType_active; }        /**
          * @summary The enum used as the type of the component `participationType`
          * @public
          * @static
          */
 
-    public static _enum_for_participationType = _enum_for_ParticipationType;
+    public static _enum_for_participationType: typeof _enum_for_ParticipationType = _enum_for_ParticipationType;
 }
 
 /**

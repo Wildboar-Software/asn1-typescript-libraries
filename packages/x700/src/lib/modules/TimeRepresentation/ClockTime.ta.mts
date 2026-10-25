@@ -1,6 +1,6 @@
 /* eslint-disable */
 import {
-    ASN1Element as _Element,
+    type ASN1Element as _Element,
     ASN1TagClass as _TagClass,
     ASN1Construction as _Construction,
     ASN1UniversalType as _UniversalType,
@@ -16,12 +16,12 @@ import {
     _encode_TimeStamp,
 } from '../TimeRepresentation/TimeStamp.ta.mjs';
 import {
-    CumLeapSeconds,
+    type CumLeapSeconds,
     _decode_CumLeapSeconds,
     _encode_CumLeapSeconds,
 } from '../TimeRepresentation/CumLeapSeconds.ta.mjs';
 import {
-    TimeZone,
+    type TimeZone,
     _decode_TimeZone,
     _encode_TimeZone,
 } from '../TimeRepresentation/TimeZone.ta.mjs';
@@ -47,41 +47,49 @@ import {
  *
  */
 export class ClockTime {
+    /**
+     * @summary `time`.
+     * @description
+     *
+     * Instant and its maximum error (epoch, seconds,
+     * nanoseconds). ITU-T Rec. X.743 (06/98)
+     * [§8.1](https://www.itu.int/rec/T-REC-X.743-199806-I), A.6.
+     * @public
+     * @readonly
+     */
+    public readonly time: TimeStamp;
+    /**
+     * @summary `leapSeconds`.
+     * @description
+     *
+     * Cumulative leap seconds for conversion to civil time and
+     * other formats. Does not alter `time`. ITU-T Rec. X.743 (06/98)
+     * [§8.1](https://www.itu.int/rec/T-REC-X.743-199806-I), A.6.
+     * @public
+     * @readonly
+     */
+    public readonly leapSeconds: CumLeapSeconds;
+    /**
+     * @summary `localTimeZone`.
+     * @description
+     *
+     * Timezone in which the timestamp was created, minutes east
+     * of GMT (`unknown` if undefined). ITU-T Rec. X.743 (06/98)
+     * [§8.1](https://www.itu.int/rec/T-REC-X.743-199806-I), A.6.
+     * @public
+     * @readonly
+     */
+    public readonly localTimeZone: TimeZone;
+
     constructor(
-        /**
-         * @summary `time`.
-         * @description
-         *
-         * Instant and its maximum error (epoch, seconds,
-         * nanoseconds). ITU-T Rec. X.743 (06/98)
-         * [§8.1](https://www.itu.int/rec/T-REC-X.743-199806-I), A.6.
-         * @public
-         * @readonly
-         */
-        readonly time: TimeStamp,
-        /**
-         * @summary `leapSeconds`.
-         * @description
-         *
-         * Cumulative leap seconds for conversion to civil time and
-         * other formats. Does not alter `time`. ITU-T Rec. X.743 (06/98)
-         * [§8.1](https://www.itu.int/rec/T-REC-X.743-199806-I), A.6.
-         * @public
-         * @readonly
-         */
-        readonly leapSeconds: CumLeapSeconds,
-        /**
-         * @summary `localTimeZone`.
-         * @description
-         *
-         * Timezone in which the timestamp was created, minutes east
-         * of GMT (`unknown` if undefined). ITU-T Rec. X.743 (06/98)
-         * [§8.1](https://www.itu.int/rec/T-REC-X.743-199806-I), A.6.
-         * @public
-         * @readonly
-         */
-        readonly localTimeZone: TimeZone
-    ) {}
+        time: TimeStamp,
+        leapSeconds: CumLeapSeconds,
+        localTimeZone: TimeZone
+    ) {
+        this.time = time;
+        this.leapSeconds = leapSeconds;
+        this.localTimeZone = localTimeZone;
+    }
 
     /**
      * @summary Restructures an object into a ClockTime

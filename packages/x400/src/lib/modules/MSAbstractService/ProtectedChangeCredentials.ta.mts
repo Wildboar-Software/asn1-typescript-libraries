@@ -1,8 +1,8 @@
 /* eslint-disable */
 import {
-    BIT_STRING,
-    OBJECT_IDENTIFIER,
-    ASN1Element as _Element,
+    type BIT_STRING,
+    type OBJECT_IDENTIFIER,
+    type ASN1Element as _Element,
     ASN1TagClass as _TagClass,
     ASN1Construction as _Construction,
     ASN1UniversalType as _UniversalType,
@@ -13,7 +13,7 @@ import {
 } from '@wildboar/asn1';
 import * as $ from '@wildboar/asn1/functional';
 import {
-    InitiatorCredentials,
+    type InitiatorCredentials,
     _decode_InitiatorCredentials,
     _encode_InitiatorCredentials,
 } from '../MTSAbstractService/InitiatorCredentials.ta.mjs';
@@ -38,26 +38,34 @@ import {
  *
  */
 export class ProtectedChangeCredentials {
+    /**
+     * @summary `algorithm_identifier`.
+     * @public
+     * @readonly
+     */
+    public readonly algorithm_identifier: OBJECT_IDENTIFIER;
+    /**
+     * @summary `old_credentials`.
+     * @public
+     * @readonly
+     */
+    public readonly old_credentials: InitiatorCredentials;
+    /**
+     * @summary `password_delta`.
+     * @public
+     * @readonly
+     */
+    public readonly password_delta: BIT_STRING;
+
     constructor(
-        /**
-         * @summary `algorithm_identifier`.
-         * @public
-         * @readonly
-         */
-        readonly algorithm_identifier: OBJECT_IDENTIFIER,
-        /**
-         * @summary `old_credentials`.
-         * @public
-         * @readonly
-         */
-        readonly old_credentials: InitiatorCredentials,
-        /**
-         * @summary `password_delta`.
-         * @public
-         * @readonly
-         */
-        readonly password_delta: BIT_STRING
-    ) {}
+        algorithm_identifier: OBJECT_IDENTIFIER,
+        old_credentials: InitiatorCredentials,
+        password_delta: BIT_STRING
+    ) {
+        this.algorithm_identifier = algorithm_identifier;
+        this.old_credentials = old_credentials;
+        this.password_delta = password_delta;
+    }
 
     /**
      * @summary Restructures an object into a ProtectedChangeCredentials

@@ -1,26 +1,26 @@
 /* eslint-disable */
 import {
-    OPTIONAL,
-    SEQUENCE,
-    SET,
-    ASN1Element as _Element,
+    type OPTIONAL,
+    type SEQUENCE,
+    type SET,
+    type ASN1Element as _Element,
     ASN1TagClass as _TagClass,
 } from "@wildboar/asn1";
 import * as $ from "@wildboar/asn1/functional";
 import {
-    ObjectInstance,
+    type ObjectInstance,
     _decode_ObjectInstance,
     _encode_ObjectInstance,
 } from "../CMIP-1/ObjectInstance.ta.mjs";
 
 import {
-    Scope,
+    type Scope,
     _decode_Scope,
     _encode_Scope,
 } from "../CMIP-1/Scope.ta.mjs";
 
 import {
-    CMISFilter,
+    type CMISFilter,
     _decode_CMISFilter,
     _encode_CMISFilter,
 } from "../CMIP-1/CMISFilter.ta.mjs";
@@ -45,26 +45,34 @@ import {
  */
 export
 class ScopedCriteria {
+    /**
+     * @summary `baseManagedObject`.
+     * @public
+     * @readonly
+     */
+    public readonly baseManagedObject: ObjectInstance;
+    /**
+     * @summary `scope`.
+     * @public
+     * @readonly
+     */
+    public readonly scope: Scope;
+    /**
+     * @summary `criteria`.
+     * @public
+     * @readonly
+     */
+    public readonly criteria?: OPTIONAL<CMISFilter>;
+
     constructor (
-        /**
-         * @summary `baseManagedObject`.
-         * @public
-         * @readonly
-         */
-        readonly baseManagedObject: ObjectInstance,
-        /**
-         * @summary `scope`.
-         * @public
-         * @readonly
-         */
-        readonly scope: Scope,
-        /**
-         * @summary `criteria`.
-         * @public
-         * @readonly
-         */
-        readonly criteria?: OPTIONAL<CMISFilter>
-    ) {}
+        baseManagedObject: ObjectInstance,
+        scope: Scope,
+        criteria?: OPTIONAL<CMISFilter>
+    ) {
+        this.baseManagedObject = baseManagedObject;
+        this.scope = scope;
+        this.criteria = criteria;
+    }
 
     /**
      * @summary Restructures an object into a ScopedCriteria

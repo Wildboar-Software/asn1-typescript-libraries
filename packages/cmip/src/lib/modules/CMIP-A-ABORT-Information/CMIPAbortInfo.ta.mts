@@ -1,7 +1,7 @@
 /* eslint-disable */
 import {
-  OPTIONAL,
-  EXTERNAL,
+  type OPTIONAL,
+  type EXTERNAL,
   ASN1Element as _Element,
   ASN1TagClass as _TagClass,
   ASN1Construction as _Construction,
@@ -54,7 +54,7 @@ export class CMIPAbortInfo {
    * @public
    * @readonly
    */
-  readonly abortSource: CMIPAbortSource;
+  public readonly abortSource: CMIPAbortSource;
   /**
    * @summary `userInfo`.
    * @description
@@ -65,7 +65,7 @@ export class CMIPAbortInfo {
    * @public
    * @readonly
    */
-  readonly userInfo?: OPTIONAL<EXTERNAL>;
+  public readonly userInfo?: OPTIONAL<EXTERNAL>;
 
   constructor(
     abortSource: CMIPAbortSource,
@@ -99,7 +99,7 @@ export class CMIPAbortInfo {
    * @static
    */
 
-  public static _enum_for_abortSource = _enum_for_CMIPAbortSource;
+  public static _enum_for_abortSource: typeof _enum_for_CMIPAbortSource = _enum_for_CMIPAbortSource;
 }
 
 

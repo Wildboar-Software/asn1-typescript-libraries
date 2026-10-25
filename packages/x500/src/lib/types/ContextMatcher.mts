@@ -6,4 +6,4 @@ import type { ASN1Element } from "@wildboar/asn1";
 export
 type ContextMatcher = (assertion: ASN1Element, value: ASN1Element) => boolean;
 
-export default ContextMatcher;
+export type { ContextMatcher as default };

@@ -21,10 +21,10 @@ import * as $ from "@wildboar/asn1/functional";
 export type OSI_PDU = _Element; // ObjectClassFieldType
 
 
-export const _decode_OSI_PDU = $._decodeAny;
+export const _decode_OSI_PDU: $.ASN1Decoder<_Element> = $._decodeAny;
 
 
-export const _encode_OSI_PDU = $._encodeAny;
+export const _encode_OSI_PDU: $.ASN1Encoder<_Element> = $._encodeAny;
 
 
 /* eslint-enable */

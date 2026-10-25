@@ -1,15 +1,15 @@
 /* eslint-disable */
 import {
-    OPTIONAL,
-    ASN1Element as _Element,
+    type OPTIONAL,
+    type ASN1Element as _Element,
     ASN1TagClass as _TagClass
 } from "@wildboar/asn1";
 import * as $ from "@wildboar/asn1/functional";
-import { PLMN_Id, _decode_PLMN_Id, _encode_PLMN_Id } from "../MAP-CommonDataTypes/PLMN-Id.ta.mjs";
-import { Time, _decode_Time, _encode_Time } from "../MAP-CommonDataTypes/Time.ta.mjs";
+import { type PLMN_Id, _decode_PLMN_Id, _encode_PLMN_Id } from "../MAP-CommonDataTypes/PLMN-Id.ta.mjs";
+import { type Time, _decode_Time, _encode_Time } from "../MAP-CommonDataTypes/Time.ta.mjs";
 import { ExtensionContainer, _decode_ExtensionContainer, _encode_ExtensionContainer } from "../MAP-ExtensionDataTypes/ExtensionContainer.ta.mjs";
-import { CSG_Id, _decode_CSG_Id, _encode_CSG_Id } from "../MAP-MS-DataTypes/CSG-Id.ta.mjs";
-import { LIPA_AllowedAPNList, _decode_LIPA_AllowedAPNList, _encode_LIPA_AllowedAPNList } from "../MAP-MS-DataTypes/LIPA-AllowedAPNList.ta.mjs";
+import { type CSG_Id, _decode_CSG_Id, _encode_CSG_Id } from "../MAP-MS-DataTypes/CSG-Id.ta.mjs";
+import { type LIPA_AllowedAPNList, _decode_LIPA_AllowedAPNList, _encode_LIPA_AllowedAPNList } from "../MAP-MS-DataTypes/LIPA-AllowedAPNList.ta.mjs";
 
 
 /**
@@ -24,10 +24,10 @@ import { LIPA_AllowedAPNList, _decode_LIPA_AllowedAPNList, _encode_LIPA_AllowedA
  * ```asn1
  * CSG-SubscriptionData ::= SEQUENCE {
  *     csg-Id    CSG-Id,
- *     expirationDate    Time    OPTIONAL,
- *     extensionContainer    ExtensionContainer    OPTIONAL,
+ *     expirationDate    Time    type OPTIONAL,
+ *     extensionContainer    ExtensionContainer    type OPTIONAL,
  *     ...,
- *     lipa-AllowedAPNList    [0] LIPA-AllowedAPNList    OPTIONAL,
+ *     lipa-AllowedAPNList    [0] LIPA-AllowedAPNList    type OPTIONAL,
  *     plmn-Id    [1] PLMN-Id    OPTIONAL
  * }
  * ```
@@ -36,49 +36,63 @@ import { LIPA_AllowedAPNList, _decode_LIPA_AllowedAPNList, _encode_LIPA_AllowedA
  */
 export
 class CSG_SubscriptionData {
+    /**
+     * @summary `csg_Id`.
+     * @description
+     *
+     * CSG identity coded according to 3GPP TS 23.003 (3GPP TS 29.002
+     * V19.1.0 clause 17.7.1).
+     *
+     * @public
+     * @readonly
+     */
+    public readonly csg_Id: CSG_Id;
+    /**
+     * @summary `expirationDate`.
+     * @public
+     * @readonly
+     */
+    public readonly expirationDate?: OPTIONAL<Time>;
+    /**
+     * @summary `extensionContainer`.
+     * @public
+     * @readonly
+     */
+    public readonly extensionContainer?: OPTIONAL<ExtensionContainer>;
+    /**
+     * @summary `lipa_AllowedAPNList`.
+     * @public
+     * @readonly
+     */
+    public readonly lipa_AllowedAPNList?: OPTIONAL<LIPA_AllowedAPNList>;
+    /**
+     * @summary `plmn_Id`.
+     * @public
+     * @readonly
+     */
+    public readonly plmn_Id?: OPTIONAL<PLMN_Id>;
+    /**
+     * @summary Extensions that are not recognized.
+     * @public
+     * @readonly
+     */
+    public readonly _unrecognizedExtensionsList: _Element[];
+
     constructor (
-        /**
-         * @summary `csg_Id`.
-         * @description
-         *
-         * CSG identity coded according to 3GPP TS 23.003 (3GPP TS 29.002
-         * V19.1.0 clause 17.7.1).
-         *
-         * @public
-         * @readonly
-         */
-        readonly csg_Id: CSG_Id,
-        /**
-         * @summary `expirationDate`.
-         * @public
-         * @readonly
-         */
-        readonly expirationDate?: OPTIONAL<Time>,
-        /**
-         * @summary `extensionContainer`.
-         * @public
-         * @readonly
-         */
-        readonly extensionContainer?: OPTIONAL<ExtensionContainer>,
-        /**
-         * @summary `lipa_AllowedAPNList`.
-         * @public
-         * @readonly
-         */
-        readonly lipa_AllowedAPNList?: OPTIONAL<LIPA_AllowedAPNList>,
-        /**
-         * @summary `plmn_Id`.
-         * @public
-         * @readonly
-         */
-        readonly plmn_Id?: OPTIONAL<PLMN_Id>,
-        /**
-         * @summary Extensions that are not recognized.
-         * @public
-         * @readonly
-         */
-        readonly _unrecognizedExtensionsList: _Element[] = []
-    ) {}
+        csg_Id: CSG_Id,
+        expirationDate?: OPTIONAL<Time>,
+        extensionContainer?: OPTIONAL<ExtensionContainer>,
+        lipa_AllowedAPNList?: OPTIONAL<LIPA_AllowedAPNList>,
+        plmn_Id?: OPTIONAL<PLMN_Id>,
+        _unrecognizedExtensionsList: _Element[] = []
+    ) {
+        this.csg_Id = csg_Id;
+        this.expirationDate = expirationDate;
+        this.extensionContainer = extensionContainer;
+        this.lipa_AllowedAPNList = lipa_AllowedAPNList;
+        this.plmn_Id = plmn_Id;
+        this._unrecognizedExtensionsList = _unrecognizedExtensionsList;
+    }
 
     /**
      * @summary Restructures an object into a CSG_SubscriptionData

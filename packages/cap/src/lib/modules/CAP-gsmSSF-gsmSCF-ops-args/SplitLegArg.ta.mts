@@ -1,7 +1,7 @@
 /* eslint-disable */
 import {
-    OPTIONAL,
-    ASN1Element as _Element,
+    type OPTIONAL,
+    type ASN1Element as _Element,
     ASN1TagClass as _TagClass,
     ASN1Construction as _Construction,
     ASN1UniversalType as _UniversalType,
@@ -13,7 +13,7 @@ import {
 import * as $ from "@wildboar/asn1/functional";
 import { type CallSegmentID, _decode_CallSegmentID, _encode_CallSegmentID } from "../CAP-datatypes/CallSegmentID.ta.mjs";
 import { type Extensions, _decode_Extensions, _encode_Extensions } from "../CAP-datatypes/Extensions.ta.mjs";
-import { LegID, _decode_LegID, _encode_LegID } from "../Core-INAP-CS1-DataTypes/LegID.ta.mjs";
+import { type LegID, _decode_LegID, _encode_LegID } from "../Core-INAP-CS1-DataTypes/LegID.ta.mjs";
 
 
 /**
@@ -28,8 +28,8 @@ import { LegID, _decode_LegID, _encode_LegID } from "../Core-INAP-CS1-DataTypes/
  * ```asn1
  * SplitLegArg {PARAMETERS-BOUND : bound} ::= SEQUENCE {
  *     legToBeSplit            [0]    LegID,
- *     newCallSegment            [1]    CallSegmentID {bound}            OPTIONAL,
- *     extensions                [2]    Extensions {bound}            OPTIONAL,
+ *     newCallSegment            [1]    CallSegmentID {bound}            type OPTIONAL,
+ *     extensions                [2]    Extensions {bound}            type OPTIONAL,
  *     ...
  *     }
  * ```
@@ -38,42 +38,52 @@ import { LegID, _decode_LegID, _encode_LegID } from "../Core-INAP-CS1-DataTypes/
  */
 export
 class SplitLegArg {
+    /**
+     * @summary `legToBeSplit`.
+     * @description
+     *
+     * Party to split from the source Call Segment. Sending Side LegID.
+     * (3GPP TS 29.078 V19.0.0 clauses 4.1.5 and 11.31.1.1).
+     *
+     * @public
+     * @readonly
+     */
+    public readonly legToBeSplit: LegID;
+    /**
+     * @summary `newCallSegment`.
+     * @description
+     *
+     * CSID to assign to the newly created Call Segment. (3GPP TS 29.078
+     * V19.0.0 clause 11.31.1.1).
+     *
+     * @public
+     * @readonly
+     */
+    public readonly newCallSegment?: OPTIONAL<CallSegmentID>;
+    /**
+     * @summary `extensions`.
+     * @public
+     * @readonly
+     */
+    public readonly extensions?: OPTIONAL<Extensions>;
+    /**
+     * @summary Extensions that are not recognized.
+     * @public
+     * @readonly
+     */
+    public readonly _unrecognizedExtensionsList: _Element[];
+
     constructor (
-        /**
-         * @summary `legToBeSplit`.
-         * @description
-         *
-         * Party to split from the source Call Segment. Sending Side LegID.
-         * (3GPP TS 29.078 V19.0.0 clauses 4.1.5 and 11.31.1.1).
-         *
-         * @public
-         * @readonly
-         */
-        readonly legToBeSplit: LegID,
-        /**
-         * @summary `newCallSegment`.
-         * @description
-         *
-         * CSID to assign to the newly created Call Segment. (3GPP TS 29.078
-         * V19.0.0 clause 11.31.1.1).
-         *
-         * @public
-         * @readonly
-         */
-        readonly newCallSegment?: OPTIONAL<CallSegmentID>,
-        /**
-         * @summary `extensions`.
-         * @public
-         * @readonly
-         */
-        readonly extensions?: OPTIONAL<Extensions>,
-        /**
-         * @summary Extensions that are not recognized.
-         * @public
-         * @readonly
-         */
-        readonly _unrecognizedExtensionsList: _Element[] = []
-    ) {}
+        legToBeSplit: LegID,
+        newCallSegment?: OPTIONAL<CallSegmentID>,
+        extensions?: OPTIONAL<Extensions>,
+        _unrecognizedExtensionsList: _Element[] = []
+    ) {
+        this.legToBeSplit = legToBeSplit;
+        this.newCallSegment = newCallSegment;
+        this.extensions = extensions;
+        this._unrecognizedExtensionsList = _unrecognizedExtensionsList;
+    }
 
     /**
      * @summary Restructures an object into a SplitLegArg

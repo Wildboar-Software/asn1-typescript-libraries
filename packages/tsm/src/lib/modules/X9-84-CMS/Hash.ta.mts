@@ -1,6 +1,6 @@
 /* eslint-disable */
 import {
-    ASN1Element as _Element,
+    type ASN1Element as _Element,
     ASN1TagClass as _TagClass,
     ASN1Construction as _Construction,
     ASN1UniversalType as _UniversalType,
@@ -10,7 +10,7 @@ import {
     ASN1ConstructionError as _ConstructionError,
 } from "@wildboar/asn1";
 import * as $ from "@wildboar/asn1/functional";
-import { CertHash, _decode_CertHash, _encode_CertHash } from "../X9-84-CMS/CertHash.ta.mjs";
+import { type CertHash, _decode_CertHash, _encode_CertHash } from "../X9-84-CMS/CertHash.ta.mjs";
 
 import { DigestInfo, _decode_DigestInfo, _encode_DigestInfo } from "../X9-84-CMS/DigestInfo.ta.mjs";
 

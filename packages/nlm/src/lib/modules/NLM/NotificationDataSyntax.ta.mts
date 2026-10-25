@@ -1,8 +1,8 @@
 /* eslint-disable */
 import {
-    OPTIONAL,
-    OCTET_STRING,
-    ASN1Element as _Element,
+    type OPTIONAL,
+    type OCTET_STRING,
+    type ASN1Element as _Element,
     ASN1TagClass as _TagClass,
     ASN1Construction as _Construction,
     ASN1UniversalType as _UniversalType,
@@ -13,7 +13,7 @@ import {
 } from '@wildboar/asn1';
 import * as $ from '@wildboar/asn1/functional';
 import {
-    LogicalChannelId,
+    type LogicalChannelId,
     _decode_LogicalChannelId,
     _encode_LogicalChannelId,
 } from '../NLM/LogicalChannelId.ta.mjs';
@@ -53,7 +53,7 @@ export class NotificationDataSyntax {
      * @public
      * @readonly
      */
-    readonly channel: OPTIONAL<LogicalChannelId>;
+    public readonly channel: OPTIONAL<LogicalChannelId>;
     /**
      * @summary `packetHeader`.
      * @description
@@ -65,7 +65,7 @@ export class NotificationDataSyntax {
      * @public
      * @readonly
      */
-    readonly packetHeader: OCTET_STRING;
+    public readonly packetHeader: OCTET_STRING;
     /**
      * @summary `diagnosticCode`.
      * @description
@@ -77,7 +77,7 @@ export class NotificationDataSyntax {
      * @public
      * @readonly
      */
-    readonly diagnosticCode: OCTET_STRING;
+    public readonly diagnosticCode: OCTET_STRING;
     /**
      * @summary `causeCode`.
      * @description
@@ -89,7 +89,7 @@ export class NotificationDataSyntax {
      * @public
      * @readonly
      */
-    readonly causeCode: OCTET_STRING;
+    public readonly causeCode: OCTET_STRING;
 
     constructor(
         channel: OPTIONAL<LogicalChannelId>,

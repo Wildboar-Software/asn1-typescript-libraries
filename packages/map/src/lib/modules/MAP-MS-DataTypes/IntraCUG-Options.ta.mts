@@ -74,7 +74,7 @@ type IntraCUG_Options = _enum_for_IntraCUG_Options;
  * @enum {number}
  */
 export
-const IntraCUG_Options = _enum_for_IntraCUG_Options;
+const IntraCUG_Options: typeof _enum_for_IntraCUG_Options = _enum_for_IntraCUG_Options;
 
 /**
  * @summary IntraCUG_Options_noCUG_Restrictions
@@ -86,7 +86,7 @@ const IntraCUG_Options = _enum_for_IntraCUG_Options;
  * @type {number}
  */
 export
-const IntraCUG_Options_noCUG_Restrictions: IntraCUG_Options = IntraCUG_Options.noCUG_Restrictions; /* LONG_NAMED_ENUMERATED_VALUE */
+const IntraCUG_Options_noCUG_Restrictions: _enum_for_IntraCUG_Options.noCUG_Restrictions = IntraCUG_Options.noCUG_Restrictions; /* LONG_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary noCUG_Restrictions
@@ -98,7 +98,7 @@ const IntraCUG_Options_noCUG_Restrictions: IntraCUG_Options = IntraCUG_Options.n
  * @type {number}
  */
 export
-const noCUG_Restrictions: IntraCUG_Options = IntraCUG_Options.noCUG_Restrictions; /* SHORT_NAMED_ENUMERATED_VALUE */
+const noCUG_Restrictions: _enum_for_IntraCUG_Options.noCUG_Restrictions = IntraCUG_Options.noCUG_Restrictions; /* SHORT_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary IntraCUG_Options_cugIC_CallBarred
@@ -110,7 +110,7 @@ const noCUG_Restrictions: IntraCUG_Options = IntraCUG_Options.noCUG_Restrictions
  * @type {number}
  */
 export
-const IntraCUG_Options_cugIC_CallBarred: IntraCUG_Options = IntraCUG_Options.cugIC_CallBarred; /* LONG_NAMED_ENUMERATED_VALUE */
+const IntraCUG_Options_cugIC_CallBarred: _enum_for_IntraCUG_Options.cugIC_CallBarred = IntraCUG_Options.cugIC_CallBarred; /* LONG_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary cugIC_CallBarred
@@ -122,7 +122,7 @@ const IntraCUG_Options_cugIC_CallBarred: IntraCUG_Options = IntraCUG_Options.cug
  * @type {number}
  */
 export
-const cugIC_CallBarred: IntraCUG_Options = IntraCUG_Options.cugIC_CallBarred; /* SHORT_NAMED_ENUMERATED_VALUE */
+const cugIC_CallBarred: _enum_for_IntraCUG_Options.cugIC_CallBarred = IntraCUG_Options.cugIC_CallBarred; /* SHORT_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary IntraCUG_Options_cugOG_CallBarred
@@ -134,7 +134,7 @@ const cugIC_CallBarred: IntraCUG_Options = IntraCUG_Options.cugIC_CallBarred; /*
  * @type {number}
  */
 export
-const IntraCUG_Options_cugOG_CallBarred: IntraCUG_Options = IntraCUG_Options.cugOG_CallBarred; /* LONG_NAMED_ENUMERATED_VALUE */
+const IntraCUG_Options_cugOG_CallBarred: _enum_for_IntraCUG_Options.cugOG_CallBarred = IntraCUG_Options.cugOG_CallBarred; /* LONG_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary cugOG_CallBarred
@@ -146,7 +146,7 @@ const IntraCUG_Options_cugOG_CallBarred: IntraCUG_Options = IntraCUG_Options.cug
  * @type {number}
  */
 export
-const cugOG_CallBarred: IntraCUG_Options = IntraCUG_Options.cugOG_CallBarred; /* SHORT_NAMED_ENUMERATED_VALUE */
+const cugOG_CallBarred: _enum_for_IntraCUG_Options.cugOG_CallBarred = IntraCUG_Options.cugOG_CallBarred; /* SHORT_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary Decodes an ASN.1 element into a(n) IntraCUG_Options
@@ -154,7 +154,7 @@ const cugOG_CallBarred: IntraCUG_Options = IntraCUG_Options.cugOG_CallBarred; /*
  * @param el The element being decoded.
  * @returns The decoded data structure.
  */
-export const _decode_IntraCUG_Options = $._decodeEnumerated;
+export const _decode_IntraCUG_Options: $.ASN1Decoder<number> = $._decodeEnumerated;
 
 /**
  * @summary Encodes a(n) IntraCUG_Options into an ASN.1 Element.
@@ -163,7 +163,7 @@ export const _decode_IntraCUG_Options = $._decodeEnumerated;
  * @param elGetter A function that can be used to get new ASN.1 elements.
  * @returns {_Element} The IntraCUG_Options, encoded as an ASN.1 Element.
  */
-export const _encode_IntraCUG_Options = $._encodeEnumerated;
+export const _encode_IntraCUG_Options: $.ASN1Encoder<number> = $._encodeEnumerated;
 
 
 /* eslint-enable */

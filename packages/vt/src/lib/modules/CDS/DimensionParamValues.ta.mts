@@ -1,8 +1,8 @@
 /* eslint-disable */
 import {
-    OPTIONAL,
-    BOOLEAN,
-    ASN1Element as _Element,
+    type OPTIONAL,
+    type BOOLEAN,
+    type ASN1Element as _Element,
     ASN1TagClass as _TagClass,
     ASN1Construction as _Construction,
     ASN1UniversalType as _UniversalType,
@@ -12,9 +12,9 @@ import {
     ASN1ConstructionError as _ConstructionError,
 } from "@wildboar/asn1";
 import * as $ from "@wildboar/asn1/functional";
-import { DimensionParamValues_bound, _decode_DimensionParamValues_bound, _encode_DimensionParamValues_bound } from "../CDS/DimensionParamValues-bound.ta.mjs";
-import { DimensionParamValues_addressing, _decode_DimensionParamValues_addressing, _encode_DimensionParamValues_addressing } from "../CDS/DimensionParamValues-addressing.ta.mjs";
-import { DimensionParamValues_window, _decode_DimensionParamValues_window, _encode_DimensionParamValues_window } from "../CDS/DimensionParamValues-window.ta.mjs";
+import { type DimensionParamValues_bound, _decode_DimensionParamValues_bound, _encode_DimensionParamValues_bound } from "../CDS/DimensionParamValues-bound.ta.mjs";
+import { type DimensionParamValues_addressing, _decode_DimensionParamValues_addressing, _encode_DimensionParamValues_addressing } from "../CDS/DimensionParamValues-addressing.ta.mjs";
+import { type DimensionParamValues_window, _decode_DimensionParamValues_window, _encode_DimensionParamValues_window } from "../CDS/DimensionParamValues-window.ta.mjs";
 
 
 /**
@@ -44,48 +44,58 @@ import { DimensionParamValues_window, _decode_DimensionParamValues_window, _enco
  */
 export
 class DimensionParamValues {
+    /**
+     * @summary `bound`.
+     * @description
+     * Selected `d-bound`: unbounded or integer limit. X default
+     * unbounded. ISO/IEC 9040:1997 §18.2.3.
+     * @public
+     * @readonly
+     */
+    public readonly bound?: OPTIONAL<DimensionParamValues_bound>;
+    /**
+     * @summary `addressing`.
+     * @description
+     * Selected `d-addressing`. Default `"higher only"`. ISO/IEC
+     * 9040:1997 §18.2.3.
+     * @public
+     * @readonly
+     */
+    public readonly addressing?: OPTIONAL<DimensionParamValues_addressing>;
+    /**
+     * @summary `absolute`.
+     * @description
+     * Selected `d-absolute`. `true` = `"yes"`; `false` or absent
+     * = `"no"` (default). ISO/IEC 9040:1997 §18.2.3; ISO/IEC
+     * 9041-1:1997 §12.3.3.
+     * @public
+     * @readonly
+     */
+    public readonly absolute?: OPTIONAL<BOOLEAN>;
+    /**
+     * @summary `window`.
+     * @description
+     * Selected update-window-size. Default 0 if bound unbounded
+     * (X: no backward movement); else default = bound. Y/Z
+     * default 1 when that bound is unbounded. Unused (assumes
+     * bound default) for X/Y when blocks or fields are selected.
+     * ISO/IEC 9040:1997 §18.2.3, §19.1.1.3.
+     * @public
+     * @readonly
+     */
+    public readonly window?: OPTIONAL<DimensionParamValues_window>;
+
     constructor (
-        /**
-         * @summary `bound`.
-         * @description
-         * Selected `d-bound`: unbounded or integer limit. X default
-         * unbounded. ISO/IEC 9040:1997 §18.2.3.
-         * @public
-         * @readonly
-         */
-        readonly bound?: OPTIONAL<DimensionParamValues_bound>,
-        /**
-         * @summary `addressing`.
-         * @description
-         * Selected `d-addressing`. Default `"higher only"`. ISO/IEC
-         * 9040:1997 §18.2.3.
-         * @public
-         * @readonly
-         */
-        readonly addressing?: OPTIONAL<DimensionParamValues_addressing>,
-        /**
-         * @summary `absolute`.
-         * @description
-         * Selected `d-absolute`. `true` = `"yes"`; `false` or absent
-         * = `"no"` (default). ISO/IEC 9040:1997 §18.2.3; ISO/IEC
-         * 9041-1:1997 §12.3.3.
-         * @public
-         * @readonly
-         */
-        readonly absolute?: OPTIONAL<BOOLEAN>,
-        /**
-         * @summary `window`.
-         * @description
-         * Selected update-window-size. Default 0 if bound unbounded
-         * (X: no backward movement); else default = bound. Y/Z
-         * default 1 when that bound is unbounded. Unused (assumes
-         * bound default) for X/Y when blocks or fields are selected.
-         * ISO/IEC 9040:1997 §18.2.3, §19.1.1.3.
-         * @public
-         * @readonly
-         */
-        readonly window?: OPTIONAL<DimensionParamValues_window>
-    ) {}
+        bound?: OPTIONAL<DimensionParamValues_bound>,
+        addressing?: OPTIONAL<DimensionParamValues_addressing>,
+        absolute?: OPTIONAL<BOOLEAN>,
+        window?: OPTIONAL<DimensionParamValues_window>
+    ) {
+        this.bound = bound;
+        this.addressing = addressing;
+        this.absolute = absolute;
+        this.window = window;
+    }
 
     /**
      * @summary Restructures an object into a DimensionParamValues

@@ -1,6 +1,6 @@
 /* eslint-disable */
 import {
-    ASN1Element as _Element,
+    type ASN1Element as _Element,
     ASN1TagClass as _TagClass,
     ASN1Construction as _Construction,
     ASN1UniversalType as _UniversalType,
@@ -62,14 +62,14 @@ export type SensitivityField = _enum_for_SensitivityField;
  *
  * @enum {number}
  */
-export const SensitivityField = _enum_for_SensitivityField;
+export const SensitivityField: typeof _enum_for_SensitivityField = _enum_for_SensitivityField;
 
 /**
  * @summary SensitivityField_personal
  * @constant
  * @type {number}
  */
-export const SensitivityField_personal: SensitivityField =
+export const SensitivityField_personal: _enum_for_SensitivityField.personal =
     SensitivityField.personal; /* LONG_NAMED_ENUMERATED_VALUE */
 
 /**
@@ -77,7 +77,7 @@ export const SensitivityField_personal: SensitivityField =
  * @constant
  * @type {number}
  */
-export const personal: SensitivityField =
+export const personal: _enum_for_SensitivityField.personal =
     SensitivityField.personal; /* SHORT_NAMED_ENUMERATED_VALUE */
 
 /**
@@ -85,7 +85,7 @@ export const personal: SensitivityField =
  * @constant
  * @type {number}
  */
-export const SensitivityField_private_: SensitivityField =
+export const SensitivityField_private_: _enum_for_SensitivityField.private_ =
     SensitivityField.private_; /* LONG_NAMED_ENUMERATED_VALUE */
 
 /**
@@ -93,7 +93,7 @@ export const SensitivityField_private_: SensitivityField =
  * @constant
  * @type {number}
  */
-export const private_: SensitivityField =
+export const private_: _enum_for_SensitivityField.private_ =
     SensitivityField.private_; /* SHORT_NAMED_ENUMERATED_VALUE */
 
 /**
@@ -101,7 +101,7 @@ export const private_: SensitivityField =
  * @constant
  * @type {number}
  */
-export const SensitivityField_company_confidential: SensitivityField =
+export const SensitivityField_company_confidential: _enum_for_SensitivityField.company_confidential =
     SensitivityField.company_confidential; /* LONG_NAMED_ENUMERATED_VALUE */
 
 /**
@@ -109,14 +109,26 @@ export const SensitivityField_company_confidential: SensitivityField =
  * @constant
  * @type {number}
  */
-export const company_confidential: SensitivityField =
+export const company_confidential: _enum_for_SensitivityField.company_confidential =
     SensitivityField.company_confidential; /* SHORT_NAMED_ENUMERATED_VALUE */
 
 
-export const _decode_SensitivityField = $._decodeEnumerated;
+export function _decode_SensitivityField(el: _Element): SensitivityField {
+    const enumerated = $._decodeEnumerated(el);
+    switch (enumerated) {
+        case SensitivityField.personal: return SensitivityField.personal;
+        case SensitivityField.private_: return SensitivityField.private_;
+        case SensitivityField.company_confidential: return SensitivityField.company_confidential;
+        default:
+            throw new _ConstructionError(
+                'Invalid ENUMERATED value ' + enumerated + ' for SensitivityField.',
+                el,
+            );
+    }
+}
 
 
-export const _encode_SensitivityField = $._encodeEnumerated;
+export const _encode_SensitivityField: $.ASN1Encoder<SensitivityField> = $._encodeEnumerated as $.ASN1Encoder<SensitivityField>;
 
 
 /* eslint-enable */

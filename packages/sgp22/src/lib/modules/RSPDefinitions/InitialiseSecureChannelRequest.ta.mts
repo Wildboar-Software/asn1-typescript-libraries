@@ -1,13 +1,13 @@
 /* eslint-disable */
 import {
-    OCTET_STRING,
+    type OCTET_STRING,
     ASN1ConstructionError as _ConstructionError,
-    ASN1Element as _Element,
+    type ASN1Element as _Element,
     ASN1TagClass as _TagClass
 } from "@wildboar/asn1";
 import * as $ from "@wildboar/asn1/functional";
-import { RemoteOpId, _decode_RemoteOpId, _encode_RemoteOpId } from "../RSPDefinitions/RemoteOpId.ta.mjs";
-import { TransactionId, _decode_TransactionId, _encode_TransactionId } from "../RSPDefinitions/TransactionId.ta.mjs";
+import { type RemoteOpId, _decode_RemoteOpId, _encode_RemoteOpId } from "../RSPDefinitions/RemoteOpId.ta.mjs";
+import { type TransactionId, _decode_TransactionId, _encode_TransactionId } from "../RSPDefinitions/TransactionId.ta.mjs";
 import { ControlRefTemplate, _decode_ControlRefTemplate, _encode_ControlRefTemplate } from "../RSPDefinitions/ControlRefTemplate.ta.mjs";
 
 
@@ -50,7 +50,7 @@ class InitialiseSecureChannelRequest {
      * @public
      * @readonly
      */
-    readonly remoteOpId: RemoteOpId;
+    public readonly remoteOpId: RemoteOpId;
     /**
      * @summary `transactionId`.
      * @description
@@ -61,7 +61,7 @@ class InitialiseSecureChannelRequest {
      * @public
      * @readonly
      */
-    readonly transactionId: TransactionId;
+    public readonly transactionId: TransactionId;
     /**
      * @summary `controlRefTemplate`.
      * @description
@@ -72,7 +72,7 @@ class InitialiseSecureChannelRequest {
      * @public
      * @readonly
      */
-    readonly controlRefTemplate: ControlRefTemplate;
+    public readonly controlRefTemplate: ControlRefTemplate;
     /**
      * @summary `smdpOtpk`.
      * @description
@@ -84,7 +84,7 @@ class InitialiseSecureChannelRequest {
      * @public
      * @readonly
      */
-    readonly smdpOtpk: OCTET_STRING;
+    public readonly smdpOtpk: OCTET_STRING;
     /**
      * @summary `smdpSign`.
      * @description
@@ -98,7 +98,7 @@ class InitialiseSecureChannelRequest {
      * @public
      * @readonly
      */
-    readonly smdpSign: OCTET_STRING;
+    public readonly smdpSign: OCTET_STRING;
 
     constructor (
         remoteOpId: RemoteOpId,

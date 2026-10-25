@@ -1,6 +1,6 @@
 /* eslint-disable */
 import {
-  OPTIONAL,
+  type OPTIONAL,
   ASN1Element as _Element,
   ASN1TagClass as _TagClass,
   ASN1Construction as _Construction,
@@ -12,12 +12,12 @@ import {
 } from '@wildboar/asn1';
 import * as $ from '@wildboar/asn1/functional';
 import {
-  KerberosTime,
+  type KerberosTime,
   _decode_KerberosTime,
   _encode_KerberosTime,
 } from '../KerberosV5Spec2/KerberosTime.ta.mjs';
 import {
-  Microseconds,
+  type Microseconds,
   _decode_Microseconds,
   _encode_Microseconds,
 } from '../KerberosV5Spec2/Microseconds.ta.mjs';
@@ -50,7 +50,7 @@ export class PA_ENC_TS_ENC {
    * @public
    * @readonly
    */
-  readonly patimestamp: KerberosTime;
+  public readonly patimestamp: KerberosTime;
   /**
    * @summary `pausec`.
    * @description
@@ -61,7 +61,7 @@ export class PA_ENC_TS_ENC {
    * @public
    * @readonly
    */
-  readonly pausec?: OPTIONAL<Microseconds>;
+  public readonly pausec?: OPTIONAL<Microseconds>;
 
   constructor(
     patimestamp: KerberosTime,

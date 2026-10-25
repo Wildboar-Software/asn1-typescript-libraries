@@ -1,6 +1,6 @@
 /* eslint-disable */
 import {
-    ASN1Element as _Element,
+    type ASN1Element as _Element,
     ASN1TagClass as _TagClass,
     ASN1Construction as _Construction,
     ASN1UniversalType as _UniversalType,
@@ -21,7 +21,7 @@ import {
     _encode_ReceiptFields,
 } from '../IPMSInformationObjects/ReceiptFields.ta.mjs';
 import {
-    OtherNotificationTypeFields,
+    type OtherNotificationTypeFields,
     _decode_OtherNotificationTypeFields,
     _encode_OtherNotificationTypeFields,
 } from '../IPMSInformationObjects/OtherNotificationTypeFields.ta.mjs';

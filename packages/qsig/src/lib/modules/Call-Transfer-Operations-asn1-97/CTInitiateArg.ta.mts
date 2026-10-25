@@ -1,13 +1,13 @@
 /* eslint-disable */
 import {
-    OPTIONAL,
-    ASN1Element as _Element,
+    type OPTIONAL,
+    type ASN1Element as _Element,
     ASN1TagClass as _TagClass
 } from "@wildboar/asn1";
 import * as $ from "@wildboar/asn1/functional";
-import { CallIdentity, _decode_CallIdentity, _encode_CallIdentity } from "../Call-Transfer-Operations-asn1-97/CallIdentity.ta.mjs";
-import { PartyNumber, _decode_PartyNumber, _encode_PartyNumber } from "../Addressing-Data-Elements-asn1-97/PartyNumber.ta.mjs";
-import { CTInitiateArg_argumentExtension, _decode_CTInitiateArg_argumentExtension, _encode_CTInitiateArg_argumentExtension } from "../Call-Transfer-Operations-asn1-97/CTInitiateArg-argumentExtension.ta.mjs";
+import { type CallIdentity, _decode_CallIdentity, _encode_CallIdentity } from "../Call-Transfer-Operations-asn1-97/CallIdentity.ta.mjs";
+import { type PartyNumber, _decode_PartyNumber, _encode_PartyNumber } from "../Addressing-Data-Elements-asn1-97/PartyNumber.ta.mjs";
+import { type CTInitiateArg_argumentExtension, _decode_CTInitiateArg_argumentExtension, _encode_CTInitiateArg_argumentExtension } from "../Call-Transfer-Operations-asn1-97/CTInitiateArg-argumentExtension.ta.mjs";
 
 /**
  * @summary CTInitiateArg

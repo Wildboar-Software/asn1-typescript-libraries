@@ -1,59 +1,59 @@
 /* eslint-disable */
 import {
-    ASN1Element as _Element,
+    type ASN1Element as _Element,
     ASN1TagClass as _TagClass,
-    OPTIONAL,
+    type OPTIONAL,
     TRUE_BIT,
 } from "@wildboar/asn1";
 import * as $ from "@wildboar/asn1/functional";
 import {
-    Name,
+    type Name,
     _decode_Name,
     _encode_Name,
 } from "../InformationFramework/Name.ta.mjs";
 import {
-    RelativeDistinguishedName,
+    type RelativeDistinguishedName,
     _decode_RelativeDistinguishedName,
     _encode_RelativeDistinguishedName,
 } from "../InformationFramework/RelativeDistinguishedName.ta.mjs";
 import {
-    AARE_apdu_protocol_version,
+    type AARE_apdu_protocol_version,
     AARE_apdu_protocol_version_version1 /* IMPORTED_LONG_NAMED_BIT */,
     _decode_AARE_apdu_protocol_version,
     _encode_AARE_apdu_protocol_version,
 } from "../OSIProtocolSpecification/AARE-apdu-protocol-version.ta.mjs";
 import {
-    AE_invocation_identifier,
+    type AE_invocation_identifier,
     _decode_AE_invocation_identifier,
     _encode_AE_invocation_identifier,
 } from "../OSIProtocolSpecification/AE-invocation-identifier.ta.mjs";
 import {
-    AP_invocation_identifier,
+    type AP_invocation_identifier,
     _decode_AP_invocation_identifier,
     _encode_AP_invocation_identifier,
 } from "../OSIProtocolSpecification/AP-invocation-identifier.ta.mjs";
 import {
-    Application_context_name,
+    type Application_context_name,
     _decode_Application_context_name,
     _encode_Application_context_name,
 } from "../OSIProtocolSpecification/Application-context-name.ta.mjs";
 import {
-    Associate_result,
+    type Associate_result,
     _decode_Associate_result,
     _encode_Associate_result,
 } from "../OSIProtocolSpecification/Associate-result.ta.mjs";
 import {
-    Associate_source_diagnostic,
+    type Associate_source_diagnostic,
     _decode_Associate_source_diagnostic,
     _encode_Associate_source_diagnostic,
 } from "../OSIProtocolSpecification/Associate-source-diagnostic.ta.mjs";
 import {
-    Association_informationBindRes,
+    type Association_informationBindRes,
     _decode_Association_informationBindRes,
     _encode_Association_informationBindRes,
 } from "../OSIProtocolSpecification/Association-informationBindRes.ta.mjs";
 import {
-    Implementation_data,
+    type Implementation_data,
     _decode_Implementation_data,
     _encode_Implementation_data,
 } from "../OSIProtocolSpecification/Implementation-data.ta.mjs";
@@ -70,10 +70,10 @@ import {
  *   application-context-name             [1]  Application-context-name,
  *   result                               [2]  Associate-result(accepted),
  *   result-source-diagnostic             [3]  Associate-source-diagnostic,
- *   responding-AP-title                  [4]  Name                          OPTIONAL,
- *   responding-AE-qualifier              [5]  RelativeDistinguishedName     OPTIONAL,
- *   responding-AP-invocation-identifier  [6]  AP-invocation-identifier      OPTIONAL,
- *   responding-AE-invocation-identifier  [7]  AE-invocation-identifier      OPTIONAL,
+ *   responding-AP-title                  [4]  Name                          type OPTIONAL,
+ *   responding-AE-qualifier              [5]  RelativeDistinguishedName     type OPTIONAL,
+ *   responding-AP-invocation-identifier  [6]  AP-invocation-identifier      type OPTIONAL,
+ *   responding-AE-invocation-identifier  [7]  AE-invocation-identifier      type OPTIONAL,
  *   implementation-information           [29] IMPLICIT Implementation-data  OPTIONAL,
  *   user-information                     [30] IMPLICIT
  *                                         Association-informationBindRes{{Protocols}}}
@@ -81,68 +81,90 @@ import {
  *
  */
 export class AARE_apdu {
+    /**
+     * @summary `protocol_version`.
+     * @public
+     * @readonly
+     */
+    public readonly protocol_version: OPTIONAL<AARE_apdu_protocol_version>;
+    /**
+     * @summary `application_context_name`.
+     * @public
+     * @readonly
+     */
+    public readonly application_context_name: Application_context_name;
+    /**
+     * @summary `result`.
+     * @public
+     * @readonly
+     */
+    public readonly result: Associate_result;
+    /**
+     * @summary `result_source_diagnostic`.
+     * @public
+     * @readonly
+     */
+    public readonly result_source_diagnostic: Associate_source_diagnostic;
+    /**
+     * @summary `responding_AP_title`.
+     * @public
+     * @readonly
+     */
+    public readonly responding_AP_title: OPTIONAL<Name>;
+    /**
+     * @summary `responding_AE_qualifier`.
+     * @public
+     * @readonly
+     */
+    public readonly responding_AE_qualifier: OPTIONAL<RelativeDistinguishedName>;
+    /**
+     * @summary `responding_AP_invocation_identifier`.
+     * @public
+     * @readonly
+     */
+    public readonly responding_AP_invocation_identifier: OPTIONAL<AP_invocation_identifier>;
+    /**
+     * @summary `responding_AE_invocation_identifier`.
+     * @public
+     * @readonly
+     */
+    public readonly responding_AE_invocation_identifier: OPTIONAL<AE_invocation_identifier>;
+    /**
+     * @summary `implementation_information`.
+     * @public
+     * @readonly
+     */
+    public readonly implementation_information: OPTIONAL<Implementation_data>;
+    /**
+     * @summary `user_information`.
+     * @public
+     * @readonly
+     */
+    public readonly user_information: Association_informationBindRes;
+
     constructor(
-        /**
-         * @summary `protocol_version`.
-         * @public
-         * @readonly
-         */
-        readonly protocol_version: OPTIONAL<AARE_apdu_protocol_version>,
-        /**
-         * @summary `application_context_name`.
-         * @public
-         * @readonly
-         */
-        readonly application_context_name: Application_context_name,
-        /**
-         * @summary `result`.
-         * @public
-         * @readonly
-         */
-        readonly result: Associate_result,
-        /**
-         * @summary `result_source_diagnostic`.
-         * @public
-         * @readonly
-         */
-        readonly result_source_diagnostic: Associate_source_diagnostic,
-        /**
-         * @summary `responding_AP_title`.
-         * @public
-         * @readonly
-         */
-        readonly responding_AP_title: OPTIONAL<Name>,
-        /**
-         * @summary `responding_AE_qualifier`.
-         * @public
-         * @readonly
-         */
-        readonly responding_AE_qualifier: OPTIONAL<RelativeDistinguishedName>,
-        /**
-         * @summary `responding_AP_invocation_identifier`.
-         * @public
-         * @readonly
-         */
-        readonly responding_AP_invocation_identifier: OPTIONAL<AP_invocation_identifier>,
-        /**
-         * @summary `responding_AE_invocation_identifier`.
-         * @public
-         * @readonly
-         */
-        readonly responding_AE_invocation_identifier: OPTIONAL<AE_invocation_identifier>,
-        /**
-         * @summary `implementation_information`.
-         * @public
-         * @readonly
-         */
-        readonly implementation_information: OPTIONAL<Implementation_data>,
-        /**
-         * @summary `user_information`.
-         * @public
-         * @readonly
-         */
-        readonly user_information: Association_informationBindRes
-    ) {}
+        protocol_version: OPTIONAL<AARE_apdu_protocol_version>,
+        application_context_name: Application_context_name,
+        result: Associate_result,
+        result_source_diagnostic: Associate_source_diagnostic,
+        responding_AP_title: OPTIONAL<Name>,
+        responding_AE_qualifier: OPTIONAL<RelativeDistinguishedName>,
+        responding_AP_invocation_identifier: OPTIONAL<AP_invocation_identifier>,
+        responding_AE_invocation_identifier: OPTIONAL<AE_invocation_identifier>,
+        implementation_information: OPTIONAL<Implementation_data>,
+        user_information: Association_informationBindRes
+    ) {
+        this.protocol_version = protocol_version;
+        this.application_context_name = application_context_name;
+        this.result = result;
+        this.result_source_diagnostic = result_source_diagnostic;
+        this.responding_AP_title = responding_AP_title;
+        this.responding_AE_qualifier = responding_AE_qualifier;
+        this.responding_AP_invocation_identifier = responding_AP_invocation_identifier;
+        this.responding_AE_invocation_identifier = responding_AE_invocation_identifier;
+        this.implementation_information = implementation_information;
+        this.user_information = user_information;
+    }
 
     /**
      * @summary Restructures an object into a AARE_apdu

@@ -1,10 +1,10 @@
 /* eslint-disable */
 import {
     ASN1ConstructionError as _ConstructionError,
-    ASN1Element as _Element,
+    type ASN1Element as _Element,
     ASN1TagClass as _TagClass,
-    BOOLEAN,
-    INTEGER,
+    type BOOLEAN,
+    type INTEGER,
 } from "@wildboar/asn1";
 import * as $ from "@wildboar/asn1/functional";
 
@@ -29,29 +29,35 @@ import * as $ from "@wildboar/asn1/functional";
  *
  */
 export class SeqNum {
+    /**
+     * @summary `num`.
+     * @description
+     *
+     * Sender's sequence number; increment by 1 after each MIC/WRAP/DEL.
+     *
+     * @public
+     * @readonly
+     */
+    public readonly num: INTEGER;
+    /**
+     * @summary `dir_ind`.
+     * @description
+     *
+     * FALSE if the sender initiated the context; TRUE if the sender
+     * accepted it.
+     *
+     * @public
+     * @readonly
+     */
+    public readonly dir_ind: BOOLEAN;
+
     constructor(
-        /**
-         * @summary `num`.
-         * @description
-         *
-         * Sender's sequence number; increment by 1 after each MIC/WRAP/DEL.
-         *
-         * @public
-         * @readonly
-         */
-        readonly num: INTEGER,
-        /**
-         * @summary `dir_ind`.
-         * @description
-         *
-         * FALSE if the sender initiated the context; TRUE if the sender
-         * accepted it.
-         *
-         * @public
-         * @readonly
-         */
-        readonly dir_ind: BOOLEAN
-    ) {}
+        num: INTEGER,
+        dir_ind: BOOLEAN
+    ) {
+        this.num = num;
+        this.dir_ind = dir_ind;
+    }
 
     /**
      * @summary Restructures an object into a SeqNum

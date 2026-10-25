@@ -1,17 +1,17 @@
 /* eslint-disable */
 import {
-    OPTIONAL,
-    ASN1Element as _Element,
+    type OPTIONAL,
+    type ASN1Element as _Element,
     ASN1TagClass as _TagClass
 } from "@wildboar/asn1";
 import * as $ from "@wildboar/asn1/functional";
-import { SFBillingChargingCharacteristics, _decode_SFBillingChargingCharacteristics, _encode_SFBillingChargingCharacteristics } from "../IN-CS2-datatypes/SFBillingChargingCharacteristics.ta.mjs";
+import { type SFBillingChargingCharacteristics, _decode_SFBillingChargingCharacteristics, _encode_SFBillingChargingCharacteristics } from "../IN-CS2-datatypes/SFBillingChargingCharacteristics.ta.mjs";
 // export { SFBillingChargingCharacteristics, _decode_SFBillingChargingCharacteristics, _encode_SFBillingChargingCharacteristics } from "../IN-CS2-datatypes/SFBillingChargingCharacteristics.ta.mjs";
-import { InformationToSend, _decode_InformationToSend, _encode_InformationToSend } from "../IN-CS2-datatypes/InformationToSend.ta.mjs";
+import { type InformationToSend, _decode_InformationToSend, _encode_InformationToSend } from "../IN-CS2-datatypes/InformationToSend.ta.mjs";
 // export { InformationToSend, _decode_InformationToSend, _encode_InformationToSend } from "../IN-CS2-datatypes/InformationToSend.ta.mjs";
-import { MaximumNumberOfCounters, _decode_MaximumNumberOfCounters, _encode_MaximumNumberOfCounters } from "../IN-CS2-datatypes/MaximumNumberOfCounters.ta.mjs";
+import { type MaximumNumberOfCounters, _decode_MaximumNumberOfCounters, _encode_MaximumNumberOfCounters } from "../IN-CS2-datatypes/MaximumNumberOfCounters.ta.mjs";
 // export { MaximumNumberOfCounters, _decode_MaximumNumberOfCounters, _encode_MaximumNumberOfCounters } from "../IN-CS2-datatypes/MaximumNumberOfCounters.ta.mjs";
-import { Cause, _decode_Cause, _encode_Cause } from "../IN-CS2-datatypes/Cause.ta.mjs";
+import { type Cause, _decode_Cause, _encode_Cause } from "../IN-CS2-datatypes/Cause.ta.mjs";
 // export { Cause, _decode_Cause, _encode_Cause } from "../IN-CS2-datatypes/Cause.ta.mjs";
 
 

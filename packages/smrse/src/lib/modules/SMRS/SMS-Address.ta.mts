@@ -1,13 +1,13 @@
 /* eslint-disable */
 import {
     ASN1ConstructionError as _ConstructionError,
-    ASN1Element as _Element,
+    type ASN1Element as _Element,
     ASN1TagClass as _TagClass
 } from "@wildboar/asn1";
 import * as $ from "@wildboar/asn1/functional";
-import { SMS_Address_address_type, _decode_SMS_Address_address_type, _encode_SMS_Address_address_type } from "../SMRS/SMS-Address-address-type.ta.mjs";
-import { SMS_Address_numbering_plan, _decode_SMS_Address_numbering_plan, _encode_SMS_Address_numbering_plan } from "../SMRS/SMS-Address-numbering-plan.ta.mjs";
-import { SMS_Address_address_value, _decode_SMS_Address_address_value, _encode_SMS_Address_address_value } from "../SMRS/SMS-Address-address-value.ta.mjs";
+import { type SMS_Address_address_type, _decode_SMS_Address_address_type, _encode_SMS_Address_address_type } from "../SMRS/SMS-Address-address-type.ta.mjs";
+import { type SMS_Address_numbering_plan, _decode_SMS_Address_numbering_plan, _encode_SMS_Address_numbering_plan } from "../SMRS/SMS-Address-numbering-plan.ta.mjs";
+import { type SMS_Address_address_value, _decode_SMS_Address_address_value, _encode_SMS_Address_address_value } from "../SMRS/SMS-Address-address-value.ta.mjs";
 
 
 /**
@@ -71,7 +71,7 @@ class SMS_Address {
      * @public
      * @readonly
      */
-    readonly address_type: SMS_Address_address_type;
+    public readonly address_type: SMS_Address_address_type;
     /**
      * @summary `numbering_plan`.
      * @description
@@ -82,7 +82,7 @@ class SMS_Address {
      * @public
      * @readonly
      */
-    readonly numbering_plan: SMS_Address_numbering_plan;
+    public readonly numbering_plan: SMS_Address_numbering_plan;
     /**
      * @summary `address_value`.
      * @description
@@ -93,7 +93,7 @@ class SMS_Address {
      * @public
      * @readonly
      */
-    readonly address_value: SMS_Address_address_value;
+    public readonly address_value: SMS_Address_address_value;
 
     constructor (
         address_type: SMS_Address_address_type,

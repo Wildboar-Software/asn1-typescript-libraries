@@ -1,12 +1,12 @@
 /* eslint-disable */
 import {
-    INTEGER,
-    OPTIONAL,
-    ASN1Element as _Element,
+    type INTEGER,
+    type OPTIONAL,
+    type ASN1Element as _Element,
     ASN1TagClass as _TagClass
 } from "@wildboar/asn1";
 import * as $ from "@wildboar/asn1/functional";
-import { MessageID, _decode_MessageID, _encode_MessageID } from "../IN-CS-1-Datatypes/MessageID.ta.mjs";
+import { type MessageID, _decode_MessageID, _encode_MessageID } from "../IN-CS-1-Datatypes/MessageID.ta.mjs";
 // export { MessageID, _decode_MessageID, _encode_MessageID } from "../IN-CS-1-Datatypes/MessageID.ta.mjs";
 
 

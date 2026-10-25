@@ -1,8 +1,8 @@
 /* eslint-disable */
 import {
-    OPTIONAL,
-    UTF8String,
-    ASN1Element as _Element,
+    type OPTIONAL,
+    type UTF8String,
+    type ASN1Element as _Element,
     ASN1TagClass as _TagClass
 } from "@wildboar/asn1";
 import * as $ from "@wildboar/asn1/functional";
@@ -24,8 +24,8 @@ import { IPAddress, _decode_IPAddress, _encode_IPAddress } from "../HI2Operation
  * 
  * ```asn1
  * MBMSNodeList-Item-mBMSNODELIST ::= SEQUENCE {
- *     mbmsnodeIPAdress    [1]      IPAddress     OPTIONAL,
- *     mbmsnodeName        [2]        UTF8String    OPTIONAL,
+ *     mbmsnodeIPAdress    [1]      IPAddress     type OPTIONAL,
+ *     mbmsnodeName        [2]        UTF8String    type OPTIONAL,
  *     ...
  * }
  * ```

@@ -1,17 +1,17 @@
 /* eslint-disable */
 import {
-    ASN1Element as _Element,
+    type ASN1Element as _Element,
     ASN1TagClass as _TagClass,
-    OPTIONAL,
+    type OPTIONAL,
 } from "@wildboar/asn1";
 import * as $ from "@wildboar/asn1/functional";
 import {
-    GeneralName,
+    type GeneralName,
     _decode_GeneralName,
     _encode_GeneralName,
 } from "../CertificateExtensions/GeneralName.ta.mjs";
 import {
-    GeneralNames,
+    type GeneralNames,
     _decode_GeneralNames,
     _encode_GeneralNames,
 } from "../CertificateExtensions/GeneralNames.ta.mjs";
@@ -34,26 +34,34 @@ import {
  *
  */
 export class RoleSyntax {
+    /**
+     * @summary `roleAuthority`.
+     * @public
+     * @readonly
+     */
+    public readonly roleAuthority: OPTIONAL<GeneralNames>;
+    /**
+     * @summary `roleName`.
+     * @public
+     * @readonly
+     */
+    public readonly roleName: GeneralName;
+    /**
+     * @summary Extensions that are not recognized.
+     * @public
+     * @readonly
+     */
+    public readonly _unrecognizedExtensionsList: _Element[];
+
     constructor(
-        /**
-         * @summary `roleAuthority`.
-         * @public
-         * @readonly
-         */
-        readonly roleAuthority: OPTIONAL<GeneralNames>,
-        /**
-         * @summary `roleName`.
-         * @public
-         * @readonly
-         */
-        readonly roleName: GeneralName,
-        /**
-         * @summary Extensions that are not recognized.
-         * @public
-         * @readonly
-         */
-        readonly _unrecognizedExtensionsList: _Element[] = []
-    ) {}
+        roleAuthority: OPTIONAL<GeneralNames>,
+        roleName: GeneralName,
+        _unrecognizedExtensionsList: _Element[] = []
+    ) {
+        this.roleAuthority = roleAuthority;
+        this.roleName = roleName;
+        this._unrecognizedExtensionsList = _unrecognizedExtensionsList;
+    }
 
     /**
      * @summary Restructures an object into a RoleSyntax

@@ -1,7 +1,7 @@
 /* eslint-disable */
 import {
-  OPTIONAL,
-  BOOLEAN,
+  type OPTIONAL,
+  type BOOLEAN,
   ASN1Element as _Element,
   ASN1TagClass as _TagClass,
   ASN1Construction as _Construction,
@@ -92,7 +92,7 @@ export class RealizationParameter {
    * @static
    */
 
-  public static _enum_for_realization_type = _enum_for_RealizationParameter_realization_type;
+  public static _enum_for_realization_type: typeof _enum_for_RealizationParameter_realization_type = _enum_for_RealizationParameter_realization_type;
 }
 
 

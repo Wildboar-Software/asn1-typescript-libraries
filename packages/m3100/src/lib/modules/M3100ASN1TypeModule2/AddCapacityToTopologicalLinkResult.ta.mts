@@ -1,6 +1,6 @@
 /* eslint-disable */
 import {
-    ASN1Element as _Element,
+    type ASN1Element as _Element,
     ASN1TagClass as _TagClass,
     ASN1Construction as _Construction,
     ASN1UniversalType as _UniversalType,
@@ -11,12 +11,12 @@ import {
 } from '@wildboar/asn1';
 import * as $ from '@wildboar/asn1/functional';
 import {
-    Capacity,
+    type Capacity,
     _decode_Capacity,
     _encode_Capacity,
 } from '../M3100ASN1TypeModule2/Capacity.ta.mjs';
 import {
-    LinkConnectionList,
+    type LinkConnectionList,
     _decode_LinkConnectionList,
     _encode_LinkConnectionList,
 } from '../M3100ASN1TypeModule2/LinkConnectionList.ta.mjs';
@@ -36,20 +36,26 @@ import {
  *
  */
 export class AddCapacityToTopologicalLinkResult {
+    /**
+     * @summary `resultingCapacity`.
+     * @public
+     * @readonly
+     */
+    public readonly resultingCapacity: Capacity;
+    /**
+     * @summary `resultingLinkConnections`.
+     * @public
+     * @readonly
+     */
+    public readonly resultingLinkConnections: LinkConnectionList;
+
     constructor(
-        /**
-         * @summary `resultingCapacity`.
-         * @public
-         * @readonly
-         */
-        readonly resultingCapacity: Capacity,
-        /**
-         * @summary `resultingLinkConnections`.
-         * @public
-         * @readonly
-         */
-        readonly resultingLinkConnections: LinkConnectionList
-    ) {}
+        resultingCapacity: Capacity,
+        resultingLinkConnections: LinkConnectionList
+    ) {
+        this.resultingCapacity = resultingCapacity;
+        this.resultingLinkConnections = resultingLinkConnections;
+    }
 
     /**
      * @summary Restructures an object into a AddCapacityToTopologicalLinkResult

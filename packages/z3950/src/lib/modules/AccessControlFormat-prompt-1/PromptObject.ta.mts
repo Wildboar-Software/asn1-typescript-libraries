@@ -1,11 +1,11 @@
 /* eslint-disable */
 import {
-    ASN1Element as _Element,
+    type ASN1Element as _Element,
     ASN1TagClass as _TagClass
 } from "@wildboar/asn1";
 import * as $ from "@wildboar/asn1/functional";
-import { Challenge, _decode_Challenge, _encode_Challenge } from "../AccessControlFormat-prompt-1/Challenge.ta.mjs";
-import { Response, _decode_Response, _encode_Response } from "../AccessControlFormat-prompt-1/Response.ta.mjs";
+import { type Challenge, _decode_Challenge, _encode_Challenge } from "../AccessControlFormat-prompt-1/Challenge.ta.mjs";
+import { type Response, _decode_Response, _encode_Response } from "../AccessControlFormat-prompt-1/Response.ta.mjs";
 
 
 /**

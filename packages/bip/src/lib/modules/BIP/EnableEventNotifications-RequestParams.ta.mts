@@ -11,12 +11,12 @@ import {
 } from '@wildboar/asn1';
 import * as $ from '@wildboar/asn1/functional';
 import {
-  BioAPI_UUID,
+  type BioAPI_UUID,
   _decode_BioAPI_UUID,
   _encode_BioAPI_UUID,
 } from '../BIP/BioAPI-UUID.ta.mjs';
 import {
-  BioAPI_UNIT_EVENT_TYPE_MASK,
+  type BioAPI_UNIT_EVENT_TYPE_MASK,
   _decode_BioAPI_UNIT_EVENT_TYPE_MASK,
   _encode_BioAPI_UNIT_EVENT_TYPE_MASK,
 } from '../BIP/BioAPI-UNIT-EVENT-TYPE-MASK.ta.mjs';
@@ -52,7 +52,7 @@ export class EnableEventNotifications_RequestParams {
    * @public
    * @readonly
    */
-  readonly bspProductUuid: BioAPI_UUID;
+  public readonly bspProductUuid: BioAPI_UUID;
   /**
    * @summary `unitEventTypes`.
    * @description
@@ -65,7 +65,7 @@ export class EnableEventNotifications_RequestParams {
    * @public
    * @readonly
    */
-  readonly unitEventTypes: BioAPI_UNIT_EVENT_TYPE_MASK;
+  public readonly unitEventTypes: BioAPI_UNIT_EVENT_TYPE_MASK;
 
   constructor(
     bspProductUuid: BioAPI_UUID,

@@ -1,12 +1,12 @@
 /* eslint-disable */
 import {
     ASN1ConstructionError as _ConstructionError,
-    ASN1Element as _Element,
+    type ASN1Element as _Element,
     ASN1TagClass as _TagClass,
 } from "@wildboar/asn1";
 import * as $ from "@wildboar/asn1/functional";
 import {
-    ABRT_source,
+    type ABRT_source,
     _decode_ABRT_source,
     _encode_ABRT_source,
 } from "../OSIProtocolSpecification/ABRT-source.ta.mjs";
@@ -23,14 +23,18 @@ import {
  *
  */
 export class ABRT_apdu {
+    /**
+     * @summary `abort_source`.
+     * @public
+     * @readonly
+     */
+    public readonly abort_source: ABRT_source;
+
     constructor(
-        /**
-         * @summary `abort_source`.
-         * @public
-         * @readonly
-         */
-        readonly abort_source: ABRT_source
-    ) {}
+        abort_source: ABRT_source
+    ) {
+        this.abort_source = abort_source;
+    }
 
     /**
      * @summary Restructures an object into a ABRT_apdu

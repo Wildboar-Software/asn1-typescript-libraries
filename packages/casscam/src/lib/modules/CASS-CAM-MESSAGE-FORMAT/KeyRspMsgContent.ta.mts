@@ -1,8 +1,8 @@
 /* eslint-disable */
 import {
-    BIT_STRING,
-    OCTET_STRING,
-    ASN1Element as _Element,
+    type BIT_STRING,
+    type OCTET_STRING,
+    type ASN1Element as _Element,
     ASN1TagClass as _TagClass,
     ASN1Construction as _Construction,
     ASN1UniversalType as _UniversalType,
@@ -12,7 +12,7 @@ import {
     ASN1ConstructionError as _ConstructionError,
 } from "@wildboar/asn1";
 import * as $ from "@wildboar/asn1/functional";
-import { RSAEncryptedContent, _decode_RSAEncryptedContent, _encode_RSAEncryptedContent } from "../CASS-CAM-MESSAGE-FORMAT/RSAEncryptedContent.ta.mjs";
+import { type RSAEncryptedContent, _decode_RSAEncryptedContent, _encode_RSAEncryptedContent } from "../CASS-CAM-MESSAGE-FORMAT/RSAEncryptedContent.ta.mjs";
 
 /**
  * @summary KeyRspMsgContent
@@ -52,7 +52,7 @@ class KeyRspMsgContent {
      * @public
      * @readonly
      */
-    readonly sessionID: OCTET_STRING;
+    public readonly sessionID: OCTET_STRING;
     /**
      * @summary `cASSCertificate`.
      * @description
@@ -63,7 +63,7 @@ class KeyRspMsgContent {
      * @public
      * @readonly
      */
-    readonly cASSCertificate: BIT_STRING;
+    public readonly cASSCertificate: BIT_STRING;
     /**
      * @summary `rSAEncryptedContent`.
      * @description
@@ -75,7 +75,7 @@ class KeyRspMsgContent {
      * @public
      * @readonly
      */
-    readonly rSAEncryptedContent: RSAEncryptedContent;
+    public readonly rSAEncryptedContent: RSAEncryptedContent;
     /**
      * @summary `sIGN_kpk`.
      * @description
@@ -87,7 +87,7 @@ class KeyRspMsgContent {
      * @public
      * @readonly
      */
-    readonly sIGN_kpk: OCTET_STRING;
+    public readonly sIGN_kpk: OCTET_STRING;
 
     constructor (
         sessionID: OCTET_STRING,

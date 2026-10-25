@@ -1,13 +1,13 @@
 /* eslint-disable */
 import {
     ASN1ConstructionError as _ConstructionError,
-    ASN1Element as _Element,
+    type ASN1Element as _Element,
     ASN1TagClass as _TagClass
 } from "@wildboar/asn1";
 import * as $ from "@wildboar/asn1/functional";
 import { PSHeader, _decode_PSHeader, _encode_PSHeader } from "../LI-PS-PDU/PSHeader.ta.mjs";
 // export { PSHeader, _decode_PSHeader, _encode_PSHeader } from "../LI-PS-PDU/PSHeader.ta.mjs";
-import { Payload, _decode_Payload, _encode_Payload } from "../LI-PS-PDU/Payload.ta.mjs";
+import { type Payload, _decode_Payload, _encode_Payload } from "../LI-PS-PDU/Payload.ta.mjs";
 // export { Payload, _decode_Payload, _encode_Payload } from "../LI-PS-PDU/Payload.ta.mjs";
 
 

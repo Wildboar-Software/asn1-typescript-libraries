@@ -1,4 +1,4 @@
-import { ASN1Construction, ASN1Element, ASN1TagClass, ASN1UniversalType, OBJECT_IDENTIFIER } from "@wildboar/asn1";
+import { ASN1Construction, ASN1Element, ASN1TagClass, ASN1UniversalType, type OBJECT_IDENTIFIER } from "@wildboar/asn1";
 import { readObjectIdentifier } from "../readValue.mjs";
 import type { ObjectIdentifierInput } from "../readValue.mjs";
 import type { Certificate } from "../../modules/AuthenticationFramework/Certificate.ta.mjs";
@@ -8,7 +8,7 @@ import {
     Extension,
 } from "../../modules/AuthenticationFramework/Extension.ta.mjs";
 import {
-    Extensions,
+    type Extensions,
     _decode_Extensions,
 } from "../../modules/AuthenticationFramework/Extensions.ta.mjs";
 

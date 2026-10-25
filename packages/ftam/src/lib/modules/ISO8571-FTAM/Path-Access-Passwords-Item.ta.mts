@@ -11,12 +11,12 @@ import {
 } from '@wildboar/asn1';
 import * as $ from '@wildboar/asn1/functional';
 import {
-  Password,
+  type Password,
   _decode_Password,
   _encode_Password,
 } from '../ISO8571-FTAM/Password.ta.mjs';
 import {
-  Pass_Passwords,
+  type Pass_Passwords,
   _decode_Pass_Passwords,
   _encode_Pass_Passwords,
 } from '../ISO8571-FTAM/Pass-Passwords.ta.mjs';
@@ -47,7 +47,7 @@ export class Path_Access_Passwords_Item {
    * @public
    * @readonly
    */
-  readonly read_password: Password;
+  public readonly read_password: Password;
   /**
    * @summary `insert_password`.
    * @description
@@ -57,7 +57,7 @@ export class Path_Access_Passwords_Item {
    * @public
    * @readonly
    */
-  readonly insert_password: Password;
+  public readonly insert_password: Password;
   /**
    * @summary `replace_password`.
    * @description
@@ -67,7 +67,7 @@ export class Path_Access_Passwords_Item {
    * @public
    * @readonly
    */
-  readonly replace_password: Password;
+  public readonly replace_password: Password;
   /**
    * @summary `extend_password`.
    * @description
@@ -77,7 +77,7 @@ export class Path_Access_Passwords_Item {
    * @public
    * @readonly
    */
-  readonly extend_password: Password;
+  public readonly extend_password: Password;
   /**
    * @summary `erase_password`.
    * @description
@@ -87,7 +87,7 @@ export class Path_Access_Passwords_Item {
    * @public
    * @readonly
    */
-  readonly erase_password: Password;
+  public readonly erase_password: Password;
   /**
    * @summary `read_attribute_password`.
    * @description
@@ -98,7 +98,7 @@ export class Path_Access_Passwords_Item {
    * @public
    * @readonly
    */
-  readonly read_attribute_password: Password;
+  public readonly read_attribute_password: Password;
   /**
    * @summary `change_attribute_password`.
    * @description
@@ -109,7 +109,7 @@ export class Path_Access_Passwords_Item {
    * @public
    * @readonly
    */
-  readonly change_attribute_password: Password;
+  public readonly change_attribute_password: Password;
   /**
    * @summary `delete_password`.
    * @description
@@ -119,7 +119,7 @@ export class Path_Access_Passwords_Item {
    * @public
    * @readonly
    */
-  readonly delete_password: Password;
+  public readonly delete_password: Password;
   /**
    * @summary `pass_passwords`.
    * @description
@@ -130,7 +130,7 @@ export class Path_Access_Passwords_Item {
    * @public
    * @readonly
    */
-  readonly pass_passwords: Pass_Passwords;
+  public readonly pass_passwords: Pass_Passwords;
   /**
    * @summary `link_password`.
    * @description
@@ -141,7 +141,7 @@ export class Path_Access_Passwords_Item {
    * @public
    * @readonly
    */
-  readonly link_password: Password;
+  public readonly link_password: Password;
 
   constructor(
     read_password: Password,

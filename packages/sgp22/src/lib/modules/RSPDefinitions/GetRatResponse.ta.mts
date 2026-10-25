@@ -1,11 +1,11 @@
 /* eslint-disable */
 import {
     ASN1ConstructionError as _ConstructionError,
-    ASN1Element as _Element,
+    type ASN1Element as _Element,
     ASN1TagClass as _TagClass
 } from "@wildboar/asn1";
 import * as $ from "@wildboar/asn1/functional";
-import { RulesAuthorisationTable, _decode_RulesAuthorisationTable, _encode_RulesAuthorisationTable } from "../RSPDefinitions/RulesAuthorisationTable.ta.mjs";
+import { type RulesAuthorisationTable, _decode_RulesAuthorisationTable, _encode_RulesAuthorisationTable } from "../RSPDefinitions/RulesAuthorisationTable.ta.mjs";
 
 
 /**
@@ -37,7 +37,7 @@ class GetRatResponse {
      * @public
      * @readonly
      */
-    readonly rat: RulesAuthorisationTable;
+    public readonly rat: RulesAuthorisationTable;
 
     constructor (
         rat: RulesAuthorisationTable

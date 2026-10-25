@@ -55,7 +55,7 @@ type TriggerCategory = _enum_for_TriggerCategory;
  * @enum {number}
  */
 export
-const TriggerCategory = _enum_for_TriggerCategory;
+const TriggerCategory: typeof _enum_for_TriggerCategory = _enum_for_TriggerCategory;
 
 /**
  * @summary TriggerCategory_immediateReport
@@ -63,7 +63,7 @@ const TriggerCategory = _enum_for_TriggerCategory;
  * @type {number}
  */
 export
-const TriggerCategory_immediateReport: TriggerCategory = TriggerCategory.immediateReport; /* LONG_NAMED_ENUMERATED_VALUE */
+const TriggerCategory_immediateReport: _enum_for_TriggerCategory.immediateReport = TriggerCategory.immediateReport; /* LONG_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary immediateReport
@@ -71,7 +71,7 @@ const TriggerCategory_immediateReport: TriggerCategory = TriggerCategory.immedia
  * @type {number}
  */
 export
-const immediateReport: TriggerCategory = TriggerCategory.immediateReport; /* SHORT_NAMED_ENUMERATED_VALUE */
+const immediateReport: _enum_for_TriggerCategory.immediateReport = TriggerCategory.immediateReport; /* SHORT_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary TriggerCategory_deferredReport
@@ -79,7 +79,7 @@ const immediateReport: TriggerCategory = TriggerCategory.immediateReport; /* SHO
  * @type {number}
  */
 export
-const TriggerCategory_deferredReport: TriggerCategory = TriggerCategory.deferredReport; /* LONG_NAMED_ENUMERATED_VALUE */
+const TriggerCategory_deferredReport: _enum_for_TriggerCategory.deferredReport = TriggerCategory.deferredReport; /* LONG_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary deferredReport
@@ -87,7 +87,7 @@ const TriggerCategory_deferredReport: TriggerCategory = TriggerCategory.deferred
  * @type {number}
  */
 export
-const deferredReport: TriggerCategory = TriggerCategory.deferredReport; /* SHORT_NAMED_ENUMERATED_VALUE */
+const deferredReport: _enum_for_TriggerCategory.deferredReport = TriggerCategory.deferredReport; /* SHORT_NAMED_ENUMERATED_VALUE */
 
 export
 const _decode_TriggerCategory: $.ASN1Decoder<TriggerCategory> = $._decodeEnumerated;

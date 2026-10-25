@@ -1,7 +1,7 @@
 /* eslint-disable */
 import {
-    OPTIONAL,
-    ASN1Element as _Element,
+    type OPTIONAL,
+    type ASN1Element as _Element,
     ASN1TagClass as _TagClass,
     ASN1Construction as _Construction,
     ASN1UniversalType as _UniversalType,
@@ -17,7 +17,7 @@ import {
     _encode_TemplateLabel,
 } from '../DefinitionASN1Module/TemplateLabel.ta.mjs';
 import {
-    TemplateList,
+    type TemplateList,
     _decode_TemplateList,
     _encode_TemplateList,
 } from '../DefinitionASN1Module/TemplateList.ta.mjs';
@@ -41,29 +41,35 @@ import {
  *
  */
 export class LabelAndParameters {
+    /**
+     * @summary `label`.
+     * @description
+     *
+     * Attribute, action, or notification label of the mapped
+     * operation. ITU-T Rec. X.725 (11/95) A.2.3.5.
+     * @public
+     * @readonly
+     */
+    public readonly label: TemplateLabel;
+    /**
+     * @summary `parameters`.
+     * @description
+     *
+     * Parameter labels associated with the systems management
+     * operation or notification. ITU-T Rec. X.725 (11/95)
+     * A.2.3.5.
+     * @public
+     * @readonly
+     */
+    public readonly parameters?: OPTIONAL<TemplateList>;
+
     constructor(
-        /**
-         * @summary `label`.
-         * @description
-         *
-         * Attribute, action, or notification label of the mapped
-         * operation. ITU-T Rec. X.725 (11/95) A.2.3.5.
-         * @public
-         * @readonly
-         */
-        readonly label: TemplateLabel,
-        /**
-         * @summary `parameters`.
-         * @description
-         *
-         * Parameter labels associated with the systems management
-         * operation or notification. ITU-T Rec. X.725 (11/95)
-         * A.2.3.5.
-         * @public
-         * @readonly
-         */
-        readonly parameters?: OPTIONAL<TemplateList>
-    ) {}
+        label: TemplateLabel,
+        parameters?: OPTIONAL<TemplateList>
+    ) {
+        this.label = label;
+        this.parameters = parameters;
+    }
 
     /**
      * @summary Restructures an object into a LabelAndParameters

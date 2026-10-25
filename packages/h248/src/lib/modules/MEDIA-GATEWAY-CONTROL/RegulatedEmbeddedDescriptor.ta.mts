@@ -1,12 +1,12 @@
 /* eslint-disable */
 import {
-    OPTIONAL,
-    ASN1Element as _Element,
+    type OPTIONAL,
+    type ASN1Element as _Element,
     ASN1TagClass as _TagClass
 } from "@wildboar/asn1";
 import * as $ from "@wildboar/asn1/functional";
 import { SecondEventsDescriptor, _decode_SecondEventsDescriptor, _encode_SecondEventsDescriptor } from "../MEDIA-GATEWAY-CONTROL/SecondEventsDescriptor.ta.mjs";
-import { SignalsDescriptor, _decode_SignalsDescriptor, _encode_SignalsDescriptor } from "../MEDIA-GATEWAY-CONTROL/SignalsDescriptor.ta.mjs";
+import { type SignalsDescriptor, _decode_SignalsDescriptor, _encode_SignalsDescriptor } from "../MEDIA-GATEWAY-CONTROL/SignalsDescriptor.ta.mjs";
 
 
 /**
@@ -44,7 +44,7 @@ class RegulatedEmbeddedDescriptor {
      * @public
      * @readonly
      */
-    readonly secondEvent?: OPTIONAL<SecondEventsDescriptor>;
+    public readonly secondEvent?: OPTIONAL<SecondEventsDescriptor>;
     /**
      * @summary `signalsDescriptor`.
      * @description
@@ -55,7 +55,7 @@ class RegulatedEmbeddedDescriptor {
      * @public
      * @readonly
      */
-    readonly signalsDescriptor?: OPTIONAL<SignalsDescriptor>;
+    public readonly signalsDescriptor?: OPTIONAL<SignalsDescriptor>;
     /**
      * @summary Extensions that are not recognized.
      * @description
@@ -66,7 +66,7 @@ class RegulatedEmbeddedDescriptor {
      * @public
      * @readonly
      */
-    readonly _unrecognizedExtensionsList: _Element[];
+    public readonly _unrecognizedExtensionsList: _Element[];
 
     constructor (
         secondEvent?: OPTIONAL<SecondEventsDescriptor>,

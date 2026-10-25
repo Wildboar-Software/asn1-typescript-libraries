@@ -1,6 +1,6 @@
 /* eslint-disable */
 import {
-    ASN1Element as _Element,
+    type ASN1Element as _Element,
     ASN1TagClass as _TagClass,
     ASN1Construction as _Construction,
     ASN1UniversalType as _UniversalType,
@@ -11,7 +11,7 @@ import {
     ASN1Error,
 } from "@wildboar/asn1";
 import * as $ from "@wildboar/asn1/functional";
-import { InvokeId, _decode_InvokeId, _encode_InvokeId } from "../Remote-Operations-Generic-ROS-PDUs/InvokeId.ta.mjs";
+import { type InvokeId, _decode_InvokeId, _encode_InvokeId } from "../Remote-Operations-Generic-ROS-PDUs/InvokeId.ta.mjs";
 
 
 /**
@@ -44,8 +44,6 @@ function _decode_DFR_InvokeIDSet (el: _Element): DFR_InvokeIDSet {
     return value;
 }
 
-let _cached_encoder_for_DFR_InvokeIDSet: $.ASN1Encoder<DFR_InvokeIDSet> | null = null;
-
 /**
  * @summary Encodes a(n) DFR_InvokeIDSet into an ASN.1 Element.
  * @function
@@ -53,11 +51,7 @@ let _cached_encoder_for_DFR_InvokeIDSet: $.ASN1Encoder<DFR_InvokeIDSet> | null =
  * @param elGetter A function that can be used to get new ASN.1 elements.
  * @returns {_Element} The DFR_InvokeIDSet, encoded as an ASN.1 Element.
  */
-export
-function _encode_DFR_InvokeIDSet (value: DFR_InvokeIDSet, elGetter: $.ASN1Encoder<any>): _Element {
-    if (!_cached_encoder_for_DFR_InvokeIDSet) { _cached_encoder_for_DFR_InvokeIDSet = _encode_InvokeId; }
-    return _cached_encoder_for_DFR_InvokeIDSet(value, elGetter);
-}
+export const _encode_DFR_InvokeIDSet: $.ASN1Encoder<DFR_InvokeIDSet> = _encode_InvokeId;
 
 
 /* eslint-enable */

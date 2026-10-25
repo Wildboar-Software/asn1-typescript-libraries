@@ -1,6 +1,6 @@
 /* eslint-disable */
 import {
-    ASN1Element as _Element,
+    type ASN1Element as _Element,
     ASN1TagClass as _TagClass,
     ASN1Construction as _Construction,
     ASN1UniversalType as _UniversalType,
@@ -16,7 +16,7 @@ import {
     _encode_MessageParameters,
 } from '../IPMSInformationObjects/MessageParameters.ta.mjs';
 import {
-    MessageData,
+    type MessageData,
     _decode_MessageData,
     _encode_MessageData,
 } from '../IPMSInformationObjects/MessageData.ta.mjs';
@@ -37,20 +37,26 @@ import {
  *
  */
 export class MessageBodyPart {
+    /**
+     * @summary `parameters`.
+     * @public
+     * @readonly
+     */
+    public readonly parameters: MessageParameters;
+    /**
+     * @summary `data`.
+     * @public
+     * @readonly
+     */
+    public readonly data: MessageData;
+
     constructor(
-        /**
-         * @summary `parameters`.
-         * @public
-         * @readonly
-         */
-        readonly parameters: MessageParameters,
-        /**
-         * @summary `data`.
-         * @public
-         * @readonly
-         */
-        readonly data: MessageData
-    ) {}
+        parameters: MessageParameters,
+        data: MessageData
+    ) {
+        this.parameters = parameters;
+        this.data = data;
+    }
 
     /**
      * @summary Restructures an object into a MessageBodyPart

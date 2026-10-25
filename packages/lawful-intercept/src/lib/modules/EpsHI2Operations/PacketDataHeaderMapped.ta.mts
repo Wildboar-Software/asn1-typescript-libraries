@@ -1,8 +1,8 @@
 /* eslint-disable */
 import {
-    INTEGER,
-    OPTIONAL,
-    ASN1Element as _Element,
+    type INTEGER,
+    type OPTIONAL,
+    type ASN1Element as _Element,
     ASN1TagClass as _TagClass,
     ASN1OverflowError
 } from "@wildboar/asn1";
@@ -206,7 +206,7 @@ class PacketDataHeaderMapped {
          * @static
          */
 
-    public static _enum_for_direction = _enum_for_TPDU_direction;
+    public static _enum_for_direction: typeof _enum_for_TPDU_direction = _enum_for_TPDU_direction;
 }
 
 /**

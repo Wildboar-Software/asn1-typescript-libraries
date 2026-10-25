@@ -1,8 +1,8 @@
 /* eslint-disable */
 import {
-    OPTIONAL,
-    PrintableString,
-    ASN1Element as _Element,
+    type OPTIONAL,
+    type PrintableString,
+    type ASN1Element as _Element,
     ASN1TagClass as _TagClass,
     ASN1Construction as _Construction,
     ASN1UniversalType as _UniversalType,
@@ -13,7 +13,7 @@ import {
 } from "@wildboar/asn1";
 import * as $ from "@wildboar/asn1/functional";
 import { _decode_AccessRuleOffer, _encode_AccessRuleOffer, type AccessRuleOffer } from "../CSS/AccessRuleOffer.ta.mjs";
-import { ParameterOffers_defaultCOPriority, _decode_ParameterOffers_defaultCOPriority, _encode_ParameterOffers_defaultCOPriority } from "../DEV/ParameterOffers-defaultCOPriority.ta.mjs";
+import { type ParameterOffers_defaultCOPriority, _decode_ParameterOffers_defaultCOPriority, _encode_ParameterOffers_defaultCOPriority } from "../DEV/ParameterOffers-defaultCOPriority.ta.mjs";
 import { _decode_CompoundRepertoireOffer, _encode_CompoundRepertoireOffer, CompoundRepertoireOffer } from "../CDS/CompoundRepertoireOffer.ta.mjs";
 import { _decode_CompoundEmphasisOffer, _encode_CompoundEmphasisOffer, type CompoundEmphasisOffer } from "../CDS/CompoundEmphasisOffer.ta.mjs";
 import { _decode_CompoundColourOffer, _encode_CompoundColourOffer, CompoundColourOffer } from "../CDS/CompoundColourOffer.ta.mjs";
@@ -21,7 +21,7 @@ import { _decode_IntegerOffer, _encode_IntegerOffer, type IntegerOffer } from ".
 import { ParameterOffers_terminationEventList_Item_Item, _decode_ParameterOffers_terminationEventList_Item_Item, _encode_ParameterOffers_terminationEventList_Item_Item } from "../DEV/ParameterOffers-terminationEventList-Item-Item.ta.mjs";
 import { ParameterOffers_terminationLength, _decode_ParameterOffers_terminationLength, _encode_ParameterOffers_terminationLength } from "../DEV/ParameterOffers-terminationLength.ta.mjs";
 import { ParameterOffers_terminationTimeout, _decode_ParameterOffers_terminationTimeout, _encode_ParameterOffers_terminationTimeout } from "../DEV/ParameterOffers-terminationTimeout.ta.mjs";
-import { ParameterOffers_defaultCOtrigger, _decode_ParameterOffers_defaultCOtrigger, _encode_ParameterOffers_defaultCOtrigger } from "../DEV/ParameterOffers-defaultCOtrigger.ta.mjs";
+import { type ParameterOffers_defaultCOtrigger, _decode_ParameterOffers_defaultCOtrigger, _encode_ParameterOffers_defaultCOtrigger } from "../DEV/ParameterOffers-defaultCOtrigger.ta.mjs";
 import { ParameterOffers_defaultCOinitialValue_Item, _decode_ParameterOffers_defaultCOinitialValue_Item, _encode_ParameterOffers_defaultCOinitialValue_Item } from "../DEV/ParameterOffers-defaultCOinitialValue-Item.ta.mjs";
 
 
@@ -94,157 +94,189 @@ import { ParameterOffers_defaultCOinitialValue_Item, _decode_ParameterOffers_def
  */
 export
 class ParameterOffers {
+    /**
+     * @summary `defaultCOaccess`.
+     * @description
+     * CSS `AccessRuleOffer` for the implicit default CO. Set bits
+     * are offered. ISO/IEC 9040:1997 §23.1 table 12.
+     * @public
+     * @readonly
+     */
+    public readonly defaultCOaccess?: OPTIONAL<AccessRuleOffer>;
+    /**
+     * @summary `defaultCOPriority`.
+     * @description
+     * Offered default-CO priorities. Set bits are offered. Same
+     * meaning as CO-priority. ISO/IEC 9040:1997 §23.1 table 12.
+     * @public
+     * @readonly
+     */
+    public readonly defaultCOPriority?: OPTIONAL<ParameterOffers_defaultCOPriority>;
+    /**
+     * @summary `deviceRepertoireAssignment`.
+     * @description
+     * Offered repertoire overrides. The n-th device assignment
+     * overrides the n-th DO assignment; `"null"` skips a slot.
+     * ISO/IEC 9040:1997 §23.3.
+     * @public
+     * @readonly
+     */
+    public readonly deviceRepertoireAssignment?: OPTIONAL<CompoundRepertoireOffer>;
+    /**
+     * @summary `deviceEmphasisAssignment`.
+     * @description
+     * Offered emphasis overrides of the linked DO. Same CDS
+     * compound type and n-th/`"null"` slot rule. ISO/IEC
+     * 9040:1997 §23.3.
+     * @public
+     * @readonly
+     */
+    public readonly deviceEmphasisAssignment?: OPTIONAL<CompoundEmphasisOffer>;
+    /**
+     * @summary `deviceForegroundAssignment`.
+     * @description
+     * Offered foreground-colour overrides of the linked DO. Same
+     * CDS colour semantics and n-th/`"null"` slot rule. ISO/IEC
+     * 9040:1997 §23.3.
+     * @public
+     * @readonly
+     */
+    public readonly deviceForegroundAssignment?: OPTIONAL<CompoundColourOffer>;
+    /**
+     * @summary `deviceBackgroundAssignment`.
+     * @description
+     * Offered background-colour overrides of the linked DO. Same
+     * CDS colour semantics and n-th/`"null"` slot rule. ISO/IEC
+     * 9040:1997 §23.3.
+     * @public
+     * @readonly
+     */
+    public readonly deviceBackgroundAssignment?: OPTIONAL<CompoundColourOffer>;
+    /**
+     * @summary `minimumXarrayLength`.
+     * @description
+     * Offered minimum X-array length the device must handle.
+     * ISO/IEC 9040:1997 §23.2 table 12.
+     * @public
+     * @readonly
+     */
+    public readonly minimumXarrayLength?: OPTIONAL<IntegerOffer>;
+    /**
+     * @summary `minimumYarrayLength`.
+     * @description
+     * Offered minimum Y-array length the device must handle.
+     * ISO/IEC 9040:1997 §23.2 table 12.
+     * @public
+     * @readonly
+     */
+    public readonly minimumYarrayLength?: OPTIONAL<IntegerOffer>;
+    /**
+     * @summary `deviceControlObjectNames`.
+     * @description
+     * Alternatives: each inner SEQUENCE OF names is one offered
+     * set of linked CO-names. Does not include the implicit
+     * default CO. ISO/IEC 9040:1997 §23 notes.
+     * @public
+     * @readonly
+     */
+    public readonly deviceControlObjectNames?: OPTIONAL<PrintableString[][]>;
+    /**
+     * @summary `deviceDisplayObjectName`.
+     * @description
+     * Alternative DO-names; the chosen value must equal a DO-name
+     * in the VTE. ISO/IEC 9040:1997 §23 notes.
+     * @public
+     * @readonly
+     */
+    public readonly deviceDisplayObjectName?: OPTIONAL<PrintableString[]>;
+    /**
+     * @summary `terminationEventList`.
+     * @description
+     * Offered sets of `<event, eventId>` pairs. Event syntax is
+     * not defined in 9040; datatypes come from the VTE-profile
+     * used as the initial draft-VTE. Absent ⇒ no explicit event
+     * conditions. ISO/IEC 9040:1997 §23.4; ISO/IEC 9041-1:1997
+     * §12.5.2.
+     * @public
+     * @readonly
+     */
+    public readonly terminationEventList?: OPTIONAL<ParameterOffers_terminationEventList_Item_Item[][]>;
+    /**
+     * @summary `terminationLength`.
+     * @description
+     * Offered `<length, eventId>`: terminate after this many
+     * array-element updates if no event fired first. Absent ⇒ no
+     * update-count limit. ISO/IEC 9040:1997 §23.4 table 14.
+     * @public
+     * @readonly
+     */
+    public readonly terminationLength?: OPTIONAL<ParameterOffers_terminationLength>;
+    /**
+     * @summary `terminationTimeout`.
+     * @description
+     * Offered timeout `<T, E, eventId>`. T and E encode the
+     * timeout per ISO/IEC 9040:1997 §23.4; T=0 means infinite. If
+     * a TCCO is linked, these parameters become ineffective; an
+     * FDCO linked to the device also overrides them. ISO/IEC
+     * 9040:1997 §14.3, §23.4, §23.5.
+     * @public
+     * @readonly
+     */
+    public readonly terminationTimeout?: OPTIONAL<ParameterOffers_terminationTimeout>;
+    /**
+     * @summary `defaultCOtrigger`.
+     * @description
+     * Offered trigger values for the implicit default CO. Set bits
+     * are offered. ISO/IEC 9040:1997 §23.1 table 12.
+     * @public
+     * @readonly
+     */
+    public readonly defaultCOtrigger?: OPTIONAL<ParameterOffers_defaultCOtrigger>;
+    /**
+     * @summary `defaultCOinitialValue`.
+     * @description
+     * Offered initial states of the eight booleans. Each item is
+     * a BIT STRING value plus optional mask (omitted ⇒ all-ones,
+     * same as G.COupdate). ISO/IEC 9040:1997 §23.1; ISO/IEC
+     * 9041-1:1997 §12.5.2.
+     * @public
+     * @readonly
+     */
+    public readonly defaultCOinitialValue?: OPTIONAL<ParameterOffers_defaultCOinitialValue_Item[]>;
+
     constructor (
-        /**
-         * @summary `defaultCOaccess`.
-         * @description
-         * CSS `AccessRuleOffer` for the implicit default CO. Set bits
-         * are offered. ISO/IEC 9040:1997 §23.1 table 12.
-         * @public
-         * @readonly
-         */
-        readonly defaultCOaccess?: OPTIONAL<AccessRuleOffer>,
-        /**
-         * @summary `defaultCOPriority`.
-         * @description
-         * Offered default-CO priorities. Set bits are offered. Same
-         * meaning as CO-priority. ISO/IEC 9040:1997 §23.1 table 12.
-         * @public
-         * @readonly
-         */
-        readonly defaultCOPriority?: OPTIONAL<ParameterOffers_defaultCOPriority>,
-        /**
-         * @summary `deviceRepertoireAssignment`.
-         * @description
-         * Offered repertoire overrides. The n-th device assignment
-         * overrides the n-th DO assignment; `"null"` skips a slot.
-         * ISO/IEC 9040:1997 §23.3.
-         * @public
-         * @readonly
-         */
-        readonly deviceRepertoireAssignment?: OPTIONAL<CompoundRepertoireOffer>,
-        /**
-         * @summary `deviceEmphasisAssignment`.
-         * @description
-         * Offered emphasis overrides of the linked DO. Same CDS
-         * compound type and n-th/`"null"` slot rule. ISO/IEC
-         * 9040:1997 §23.3.
-         * @public
-         * @readonly
-         */
-        readonly deviceEmphasisAssignment?: OPTIONAL<CompoundEmphasisOffer>,
-        /**
-         * @summary `deviceForegroundAssignment`.
-         * @description
-         * Offered foreground-colour overrides of the linked DO. Same
-         * CDS colour semantics and n-th/`"null"` slot rule. ISO/IEC
-         * 9040:1997 §23.3.
-         * @public
-         * @readonly
-         */
-        readonly deviceForegroundAssignment?: OPTIONAL<CompoundColourOffer>,
-        /**
-         * @summary `deviceBackgroundAssignment`.
-         * @description
-         * Offered background-colour overrides of the linked DO. Same
-         * CDS colour semantics and n-th/`"null"` slot rule. ISO/IEC
-         * 9040:1997 §23.3.
-         * @public
-         * @readonly
-         */
-        readonly deviceBackgroundAssignment?: OPTIONAL<CompoundColourOffer>,
-        /**
-         * @summary `minimumXarrayLength`.
-         * @description
-         * Offered minimum X-array length the device must handle.
-         * ISO/IEC 9040:1997 §23.2 table 12.
-         * @public
-         * @readonly
-         */
-        readonly minimumXarrayLength?: OPTIONAL<IntegerOffer>,
-        /**
-         * @summary `minimumYarrayLength`.
-         * @description
-         * Offered minimum Y-array length the device must handle.
-         * ISO/IEC 9040:1997 §23.2 table 12.
-         * @public
-         * @readonly
-         */
-        readonly minimumYarrayLength?: OPTIONAL<IntegerOffer>,
-        /**
-         * @summary `deviceControlObjectNames`.
-         * @description
-         * Alternatives: each inner SEQUENCE OF names is one offered
-         * set of linked CO-names. Does not include the implicit
-         * default CO. ISO/IEC 9040:1997 §23 notes.
-         * @public
-         * @readonly
-         */
-        readonly deviceControlObjectNames?: OPTIONAL<PrintableString[][]>,
-        /**
-         * @summary `deviceDisplayObjectName`.
-         * @description
-         * Alternative DO-names; the chosen value must equal a DO-name
-         * in the VTE. ISO/IEC 9040:1997 §23 notes.
-         * @public
-         * @readonly
-         */
-        readonly deviceDisplayObjectName?: OPTIONAL<PrintableString[]>,
-        /**
-         * @summary `terminationEventList`.
-         * @description
-         * Offered sets of `<event, eventId>` pairs. Event syntax is
-         * not defined in 9040; datatypes come from the VTE-profile
-         * used as the initial draft-VTE. Absent ⇒ no explicit event
-         * conditions. ISO/IEC 9040:1997 §23.4; ISO/IEC 9041-1:1997
-         * §12.5.2.
-         * @public
-         * @readonly
-         */
-        readonly terminationEventList?: OPTIONAL<ParameterOffers_terminationEventList_Item_Item[][]>,
-        /**
-         * @summary `terminationLength`.
-         * @description
-         * Offered `<length, eventId>`: terminate after this many
-         * array-element updates if no event fired first. Absent ⇒ no
-         * update-count limit. ISO/IEC 9040:1997 §23.4 table 14.
-         * @public
-         * @readonly
-         */
-        readonly terminationLength?: OPTIONAL<ParameterOffers_terminationLength>,
-        /**
-         * @summary `terminationTimeout`.
-         * @description
-         * Offered timeout `<T, E, eventId>`. T and E encode the
-         * timeout per ISO/IEC 9040:1997 §23.4; T=0 means infinite. If
-         * a TCCO is linked, these parameters become ineffective; an
-         * FDCO linked to the device also overrides them. ISO/IEC
-         * 9040:1997 §14.3, §23.4, §23.5.
-         * @public
-         * @readonly
-         */
-        readonly terminationTimeout?: OPTIONAL<ParameterOffers_terminationTimeout>,
-        /**
-         * @summary `defaultCOtrigger`.
-         * @description
-         * Offered trigger values for the implicit default CO. Set bits
-         * are offered. ISO/IEC 9040:1997 §23.1 table 12.
-         * @public
-         * @readonly
-         */
-        readonly defaultCOtrigger?: OPTIONAL<ParameterOffers_defaultCOtrigger>,
-        /**
-         * @summary `defaultCOinitialValue`.
-         * @description
-         * Offered initial states of the eight booleans. Each item is
-         * a BIT STRING value plus optional mask (omitted ⇒ all-ones,
-         * same as G.COupdate). ISO/IEC 9040:1997 §23.1; ISO/IEC
-         * 9041-1:1997 §12.5.2.
-         * @public
-         * @readonly
-         */
-        readonly defaultCOinitialValue?: OPTIONAL<ParameterOffers_defaultCOinitialValue_Item[]>
-    ) {}
+        defaultCOaccess?: OPTIONAL<AccessRuleOffer>,
+        defaultCOPriority?: OPTIONAL<ParameterOffers_defaultCOPriority>,
+        deviceRepertoireAssignment?: OPTIONAL<CompoundRepertoireOffer>,
+        deviceEmphasisAssignment?: OPTIONAL<CompoundEmphasisOffer>,
+        deviceForegroundAssignment?: OPTIONAL<CompoundColourOffer>,
+        deviceBackgroundAssignment?: OPTIONAL<CompoundColourOffer>,
+        minimumXarrayLength?: OPTIONAL<IntegerOffer>,
+        minimumYarrayLength?: OPTIONAL<IntegerOffer>,
+        deviceControlObjectNames?: OPTIONAL<PrintableString[][]>,
+        deviceDisplayObjectName?: OPTIONAL<PrintableString[]>,
+        terminationEventList?: OPTIONAL<ParameterOffers_terminationEventList_Item_Item[][]>,
+        terminationLength?: OPTIONAL<ParameterOffers_terminationLength>,
+        terminationTimeout?: OPTIONAL<ParameterOffers_terminationTimeout>,
+        defaultCOtrigger?: OPTIONAL<ParameterOffers_defaultCOtrigger>,
+        defaultCOinitialValue?: OPTIONAL<ParameterOffers_defaultCOinitialValue_Item[]>
+    ) {
+        this.defaultCOaccess = defaultCOaccess;
+        this.defaultCOPriority = defaultCOPriority;
+        this.deviceRepertoireAssignment = deviceRepertoireAssignment;
+        this.deviceEmphasisAssignment = deviceEmphasisAssignment;
+        this.deviceForegroundAssignment = deviceForegroundAssignment;
+        this.deviceBackgroundAssignment = deviceBackgroundAssignment;
+        this.minimumXarrayLength = minimumXarrayLength;
+        this.minimumYarrayLength = minimumYarrayLength;
+        this.deviceControlObjectNames = deviceControlObjectNames;
+        this.deviceDisplayObjectName = deviceDisplayObjectName;
+        this.terminationEventList = terminationEventList;
+        this.terminationLength = terminationLength;
+        this.terminationTimeout = terminationTimeout;
+        this.defaultCOtrigger = defaultCOtrigger;
+        this.defaultCOinitialValue = defaultCOinitialValue;
+    }
 
     /**
      * @summary Restructures an object into a ParameterOffers

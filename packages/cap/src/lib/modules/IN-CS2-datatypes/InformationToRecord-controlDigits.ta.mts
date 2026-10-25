@@ -1,9 +1,9 @@
 /* eslint-disable */
 import {
-    OPTIONAL,
-    BOOLEAN,
-    OCTET_STRING,
-    ASN1Element as _Element,
+    type OPTIONAL,
+    type BOOLEAN,
+    type OCTET_STRING,
+    type ASN1Element as _Element,
     ASN1TagClass as _TagClass,
     ASN1Construction as _Construction,
     ASN1UniversalType as _UniversalType,
@@ -42,44 +42,57 @@ import * as $ from "@wildboar/asn1/functional";
  */
 export
 class InformationToRecord_controlDigits {
+    /**
+     * @summary `endOfRecordingDigit`.
+     * @public
+     * @readonly
+     */
+    public readonly endOfRecordingDigit?: OPTIONAL<OCTET_STRING>;
+    /**
+     * @summary `cancelDigit`.
+     * @public
+     * @readonly
+     */
+    public readonly cancelDigit?: OPTIONAL<OCTET_STRING>;
+    /**
+     * @summary `replayDigit`.
+     * @public
+     * @readonly
+     */
+    public readonly replayDigit?: OPTIONAL<OCTET_STRING>;
+    /**
+     * @summary `restartRecordingDigit`.
+     * @public
+     * @readonly
+     */
+    public readonly restartRecordingDigit?: OPTIONAL<OCTET_STRING>;
+    /**
+     * @summary `restartAllowed`.
+     * @public
+     * @readonly
+     */
+    public readonly restartAllowed?: OPTIONAL<BOOLEAN>;
+    /**
+     * @summary `replayAllowed`.
+     * @public
+     * @readonly
+     */
+    public readonly replayAllowed?: OPTIONAL<BOOLEAN>;
+
     constructor (
-        /**
-         * @summary `endOfRecordingDigit`.
-         * @public
-         * @readonly
-         */
-        readonly endOfRecordingDigit?: OPTIONAL<OCTET_STRING>,
-        /**
-         * @summary `cancelDigit`.
-         * @public
-         * @readonly
-         */
-        readonly cancelDigit?: OPTIONAL<OCTET_STRING>,
-        /**
-         * @summary `replayDigit`.
-         * @public
-         * @readonly
-         */
-        readonly replayDigit?: OPTIONAL<OCTET_STRING>,
-        /**
-         * @summary `restartRecordingDigit`.
-         * @public
-         * @readonly
-         */
-        readonly restartRecordingDigit?: OPTIONAL<OCTET_STRING>,
-        /**
-         * @summary `restartAllowed`.
-         * @public
-         * @readonly
-         */
-        readonly restartAllowed?: OPTIONAL<BOOLEAN>,
-        /**
-         * @summary `replayAllowed`.
-         * @public
-         * @readonly
-         */
-        readonly replayAllowed?: OPTIONAL<BOOLEAN>
+        endOfRecordingDigit?: OPTIONAL<OCTET_STRING>,
+        cancelDigit?: OPTIONAL<OCTET_STRING>,
+        replayDigit?: OPTIONAL<OCTET_STRING>,
+        restartRecordingDigit?: OPTIONAL<OCTET_STRING>,
+        restartAllowed?: OPTIONAL<BOOLEAN>,
+        replayAllowed?: OPTIONAL<BOOLEAN>
     ) {
+        this.endOfRecordingDigit = endOfRecordingDigit;
+        this.cancelDigit = cancelDigit;
+        this.replayDigit = replayDigit;
+        this.restartRecordingDigit = restartRecordingDigit;
+        this.restartAllowed = restartAllowed;
+        this.replayAllowed = replayAllowed;
         if (endOfRecordingDigit !== undefined && (endOfRecordingDigit.length < 1 || endOfRecordingDigit.length > 2)) {
             throw new ASN1SizeError("InformationToRecord_controlDigits.endOfRecordingDigit violates SIZE constraint");
         }

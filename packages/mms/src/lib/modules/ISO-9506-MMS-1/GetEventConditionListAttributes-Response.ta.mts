@@ -1,7 +1,7 @@
 /* eslint-disable */
 import {
-    OPTIONAL,
-    ASN1Element as _Element,
+    type OPTIONAL,
+    type ASN1Element as _Element,
     ASN1TagClass as _TagClass,
     ASN1Construction as _Construction,
     ASN1UniversalType as _UniversalType,
@@ -11,7 +11,7 @@ import {
     ASN1ConstructionError as _ConstructionError,
 } from "@wildboar/asn1";
 import * as $ from "@wildboar/asn1/functional";
-import { ObjectName, _decode_ObjectName, _encode_ObjectName } from "../ISO-9506-MMS-1/ObjectName.ta.mjs";
+import { type ObjectName, _decode_ObjectName, _encode_ObjectName } from "../ISO-9506-MMS-1/ObjectName.ta.mjs";
 
 
 /**
@@ -38,32 +38,38 @@ import { ObjectName, _decode_ObjectName, _encode_ObjectName } from "../ISO-9506-
  */
 export
 class GetEventConditionListAttributes_Response {
+    /**
+     * @summary `listOfEventConditionName`.
+     * @description
+     *
+     * Event Conditions in `&EventConditions`.
+     *
+     * [ISO 9506-1:2003 §22.1.1.3]
+     *
+     * @public
+     * @readonly
+     */
+    public readonly listOfEventConditionName: ObjectName[];
+    /**
+     * @summary `listOfEventConditionListName`.
+     * @description
+     *
+     * Nested lists. Present iff `recl`.
+     *
+     * [ISO 9506-1:2003 §22.1.1.4]
+     *
+     * @public
+     * @readonly
+     */
+    public readonly listOfEventConditionListName?: OPTIONAL<ObjectName[]>;
+
     constructor (
-        /**
-         * @summary `listOfEventConditionName`.
-         * @description
-         *
-         * Event Conditions in `&EventConditions`.
-         *
-         * [ISO 9506-1:2003 §22.1.1.3]
-         *
-         * @public
-         * @readonly
-         */
-        readonly listOfEventConditionName: ObjectName[],
-        /**
-         * @summary `listOfEventConditionListName`.
-         * @description
-         *
-         * Nested lists. Present iff `recl`.
-         *
-         * [ISO 9506-1:2003 §22.1.1.4]
-         *
-         * @public
-         * @readonly
-         */
-        readonly listOfEventConditionListName?: OPTIONAL<ObjectName[]>
-    ) {}
+        listOfEventConditionName: ObjectName[],
+        listOfEventConditionListName?: OPTIONAL<ObjectName[]>
+    ) {
+        this.listOfEventConditionName = listOfEventConditionName;
+        this.listOfEventConditionListName = listOfEventConditionListName;
+    }
 
     /**
      * @summary Restructures an object into a GetEventConditionListAttributes_Response

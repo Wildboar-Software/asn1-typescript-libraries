@@ -1,7 +1,7 @@
 /* eslint-disable */
 import {
-    OPTIONAL,
-    ASN1Element as _Element,
+    type OPTIONAL,
+    type ASN1Element as _Element,
     ASN1TagClass as _TagClass,
     ASN1Construction as _Construction,
     ASN1UniversalType as _UniversalType,
@@ -12,12 +12,12 @@ import {
 } from '@wildboar/asn1';
 import * as $ from '@wildboar/asn1/functional';
 import {
-    ObjectInstance,
+    type ObjectInstance,
     _decode_ObjectInstance,
     _encode_ObjectInstance,
 } from '@wildboar/cmip';
 import {
-    GdmoObjectClass,
+    type GdmoObjectClass,
     _decode_GdmoObjectClass,
     _encode_GdmoObjectClass,
 } from '../RepertoireASN1Module/GdmoObjectClass.ta.mjs';
@@ -48,38 +48,46 @@ import {
  *
  */
 export class RootedNameTree {
+    /**
+     * @summary `rootObject`.
+     * @description
+     *
+     * Distinguished name of the root of this discovered subtree.
+     * ITU-T Rec. X.750 (10/96) §8.3.2.4.
+     * @public
+     * @readonly
+     */
+    public readonly rootObject: ObjectInstance;
+    /**
+     * @summary `classOfRoot`.
+     * @description
+     *
+     * Class of the root object. Present when `classRequest` was
+     * true. ITU-T Rec. X.750 (10/96) §8.3.2.3–§8.3.2.4.
+     * @public
+     * @readonly
+     */
+    public readonly classOfRoot?: OPTIONAL<GdmoObjectClass>;
+    /**
+     * @summary `subordinates`.
+     * @description
+     *
+     * Recursively nested RDNs of contained managed objects in
+     * scope. ITU-T Rec. X.750 (10/96) §8.3.2.4.
+     * @public
+     * @readonly
+     */
+    public readonly subordinates?: OPTIONAL<NameTree[]>;
+
     constructor(
-        /**
-         * @summary `rootObject`.
-         * @description
-         *
-         * Distinguished name of the root of this discovered subtree.
-         * ITU-T Rec. X.750 (10/96) §8.3.2.4.
-         * @public
-         * @readonly
-         */
-        readonly rootObject: ObjectInstance,
-        /**
-         * @summary `classOfRoot`.
-         * @description
-         *
-         * Class of the root object. Present when `classRequest` was
-         * true. ITU-T Rec. X.750 (10/96) §8.3.2.3–§8.3.2.4.
-         * @public
-         * @readonly
-         */
-        readonly classOfRoot?: OPTIONAL<GdmoObjectClass>,
-        /**
-         * @summary `subordinates`.
-         * @description
-         *
-         * Recursively nested RDNs of contained managed objects in
-         * scope. ITU-T Rec. X.750 (10/96) §8.3.2.4.
-         * @public
-         * @readonly
-         */
-        readonly subordinates?: OPTIONAL<NameTree[]>
-    ) {}
+        rootObject: ObjectInstance,
+        classOfRoot?: OPTIONAL<GdmoObjectClass>,
+        subordinates?: OPTIONAL<NameTree[]>
+    ) {
+        this.rootObject = rootObject;
+        this.classOfRoot = classOfRoot;
+        this.subordinates = subordinates;
+    }
 
     /**
      * @summary Restructures an object into a RootedNameTree

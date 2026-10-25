@@ -1,6 +1,6 @@
 /* eslint-disable */
 import {
-  OPTIONAL,
+  type OPTIONAL,
   ASN1Element as _Element,
   ASN1TagClass as _TagClass,
   ASN1Construction as _Construction,
@@ -12,12 +12,12 @@ import {
 } from '@wildboar/asn1';
 import * as $ from '@wildboar/asn1/functional';
 import {
-  DestTransactionID,
+  type DestTransactionID,
   _decode_DestTransactionID,
   _encode_DestTransactionID,
 } from '../TCAPMessages/DestTransactionID.ta.mjs';
 import {
-  Abort_reason,
+  type Abort_reason,
   _decode_Abort_reason,
   _encode_Abort_reason,
 } from '../TCAPMessages/Abort-reason.ta.mjs';
@@ -47,32 +47,38 @@ import {
  *
  */
 export class Abort {
+  /**
+   * @summary `dtid`.
+   * @description
+   *
+   * Destination Transaction ID of the transaction being
+   * aborted (1–4 octets). Mandatory (Table 9).
+   *
+   * @public
+   * @readonly
+   */
+  public readonly dtid: DestTransactionID;
+  /**
+   * @summary `reason`.
+   * @description
+   *
+   * `p-abortCause` from the Transaction sublayer, or
+   * `u-abortCause` (Dialogue Portion) from the component
+   * sublayer or TC-User. Optional as a whole; presence
+   * rules are in Table 7 notes b and c.
+   *
+   * @public
+   * @readonly
+   */
+  public readonly reason?: OPTIONAL<Abort_reason>;
+
   constructor(
-    /**
-     * @summary `dtid`.
-     * @description
-     *
-     * Destination Transaction ID of the transaction being
-     * aborted (1–4 octets). Mandatory (Table 9).
-     *
-     * @public
-     * @readonly
-     */
-    readonly dtid: DestTransactionID,
-    /**
-     * @summary `reason`.
-     * @description
-     *
-     * `p-abortCause` from the Transaction sublayer, or
-     * `u-abortCause` (Dialogue Portion) from the component
-     * sublayer or TC-User. Optional as a whole; presence
-     * rules are in Table 7 notes b and c.
-     *
-     * @public
-     * @readonly
-     */
-    readonly reason?: OPTIONAL<Abort_reason>
-  ) {}
+    dtid: DestTransactionID,
+    reason?: OPTIONAL<Abort_reason>
+  ) {
+    this.dtid = dtid;
+    this.reason = reason;
+  }
 
   /**
    * @summary Restructures an object into a Abort

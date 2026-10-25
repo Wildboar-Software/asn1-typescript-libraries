@@ -1,13 +1,13 @@
 /* eslint-disable */
 import {
-    ASN1Element as _Element,
+    type ASN1Element as _Element,
     ASN1TagClass as _TagClass,
-    OBJECT_IDENTIFIER,
-    OPTIONAL,
+    type OBJECT_IDENTIFIER,
+    type OPTIONAL,
 } from "@wildboar/asn1";
 import * as $ from "@wildboar/asn1/functional";
 import {
-    NameRegistrationAuthorities,
+    type NameRegistrationAuthorities,
     _decode_NameRegistrationAuthorities,
     _encode_NameRegistrationAuthorities,
 } from "../PKIXqualified97/NameRegistrationAuthorities.ta.mjs";
@@ -36,36 +36,42 @@ import {
  *
  */
 export class SemanticsInformation {
+    /**
+     * @summary `semanticsIdentifier`.
+     * @description
+     *
+     * If present, an OID defining semantics for attributes and names
+     * in basic certificate fields and certificate extensions (all
+     * or a subgroup)
+     * ([RFC 3739 §3.2.6.1](https://datatracker.ietf.org/doc/html/rfc3739#section-3.2.6.1)).
+     *
+     * @public
+     * @readonly
+     */
+    public readonly semanticsIdentifier?: OPTIONAL<OBJECT_IDENTIFIER>;
+    /**
+     * @summary `nameRegistrationAuthorities`.
+     * @description
+     *
+     * If present, one or more name registration authorities
+     * responsible for registration of attributes or names
+     * associated with the subject. Association with present
+     * attributes MAY be defined by a semantics identifier OID, a
+     * certificate policy (or CPS), or other implicit factors
+     * ([RFC 3739 §3.2.6.1](https://datatracker.ietf.org/doc/html/rfc3739#section-3.2.6.1)).
+     *
+     * @public
+     * @readonly
+     */
+    public readonly nameRegistrationAuthorities?: OPTIONAL<NameRegistrationAuthorities>;
+
     constructor(
-        /**
-         * @summary `semanticsIdentifier`.
-         * @description
-         *
-         * If present, an OID defining semantics for attributes and names
-         * in basic certificate fields and certificate extensions (all
-         * or a subgroup)
-         * ([RFC 3739 §3.2.6.1](https://datatracker.ietf.org/doc/html/rfc3739#section-3.2.6.1)).
-         *
-         * @public
-         * @readonly
-         */
-        readonly semanticsIdentifier?: OPTIONAL<OBJECT_IDENTIFIER>,
-        /**
-         * @summary `nameRegistrationAuthorities`.
-         * @description
-         *
-         * If present, one or more name registration authorities
-         * responsible for registration of attributes or names
-         * associated with the subject. Association with present
-         * attributes MAY be defined by a semantics identifier OID, a
-         * certificate policy (or CPS), or other implicit factors
-         * ([RFC 3739 §3.2.6.1](https://datatracker.ietf.org/doc/html/rfc3739#section-3.2.6.1)).
-         *
-         * @public
-         * @readonly
-         */
-        readonly nameRegistrationAuthorities?: OPTIONAL<NameRegistrationAuthorities>
-    ) {}
+        semanticsIdentifier?: OPTIONAL<OBJECT_IDENTIFIER>,
+        nameRegistrationAuthorities?: OPTIONAL<NameRegistrationAuthorities>
+    ) {
+        this.semanticsIdentifier = semanticsIdentifier;
+        this.nameRegistrationAuthorities = nameRegistrationAuthorities;
+    }
 
     /**
      * @summary Restructures an object into a SemanticsInformation

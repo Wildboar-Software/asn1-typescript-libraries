@@ -1,7 +1,7 @@
 /* eslint-disable */
 import {
-    INTEGER,
-    ASN1Element as _Element,
+    type INTEGER,
+    type ASN1Element as _Element,
     ASN1TagClass as _TagClass,
     ASN1Construction as _Construction,
     ASN1UniversalType as _UniversalType,
@@ -51,7 +51,7 @@ type GetAlarmSummary_Request_acknowledgementFilter = INTEGER;
  * @type {number}
  */
 export
-const GetAlarmSummary_Request_acknowledgementFilter_not_acked: GetAlarmSummary_Request_acknowledgementFilter = 0; /* LONG_NAMED_INTEGER_VALUE */
+const GetAlarmSummary_Request_acknowledgementFilter_not_acked: 0 = 0 satisfies GetAlarmSummary_Request_acknowledgementFilter; /* LONG_NAMED_INTEGER_VALUE */
 
 /**
  * @summary GetAlarmSummary_Request_acknowledgementFilter_not_acked
@@ -66,7 +66,7 @@ const GetAlarmSummary_Request_acknowledgementFilter_not_acked: GetAlarmSummary_R
  * @type {number}
  */
 export
-const not_acked: GetAlarmSummary_Request_acknowledgementFilter = GetAlarmSummary_Request_acknowledgementFilter_not_acked; /* SHORT_NAMED_INTEGER_VALUE */
+const not_acked: 0 = GetAlarmSummary_Request_acknowledgementFilter_not_acked; /* SHORT_NAMED_INTEGER_VALUE */
 
 /**
  * @summary GetAlarmSummary_Request_acknowledgementFilter_acked
@@ -81,7 +81,7 @@ const not_acked: GetAlarmSummary_Request_acknowledgementFilter = GetAlarmSummary
  * @type {number}
  */
 export
-const GetAlarmSummary_Request_acknowledgementFilter_acked: GetAlarmSummary_Request_acknowledgementFilter = 1; /* LONG_NAMED_INTEGER_VALUE */
+const GetAlarmSummary_Request_acknowledgementFilter_acked: 1 = 1 satisfies GetAlarmSummary_Request_acknowledgementFilter; /* LONG_NAMED_INTEGER_VALUE */
 
 /**
  * @summary GetAlarmSummary_Request_acknowledgementFilter_acked
@@ -96,7 +96,7 @@ const GetAlarmSummary_Request_acknowledgementFilter_acked: GetAlarmSummary_Reque
  * @type {number}
  */
 export
-const acked: GetAlarmSummary_Request_acknowledgementFilter = GetAlarmSummary_Request_acknowledgementFilter_acked; /* SHORT_NAMED_INTEGER_VALUE */
+const acked: 1 = GetAlarmSummary_Request_acknowledgementFilter_acked; /* SHORT_NAMED_INTEGER_VALUE */
 
 /**
  * @summary GetAlarmSummary_Request_acknowledgementFilter_all
@@ -111,7 +111,7 @@ const acked: GetAlarmSummary_Request_acknowledgementFilter = GetAlarmSummary_Req
  * @type {number}
  */
 export
-const GetAlarmSummary_Request_acknowledgementFilter_all: GetAlarmSummary_Request_acknowledgementFilter = 2; /* LONG_NAMED_INTEGER_VALUE */
+const GetAlarmSummary_Request_acknowledgementFilter_all: 2 = 2 satisfies GetAlarmSummary_Request_acknowledgementFilter; /* LONG_NAMED_INTEGER_VALUE */
 
 /**
  * @summary GetAlarmSummary_Request_acknowledgementFilter_all
@@ -126,9 +126,9 @@ const GetAlarmSummary_Request_acknowledgementFilter_all: GetAlarmSummary_Request
  * @type {number}
  */
 export
-const all: GetAlarmSummary_Request_acknowledgementFilter = GetAlarmSummary_Request_acknowledgementFilter_all; /* SHORT_NAMED_INTEGER_VALUE */
-export const _decode_GetAlarmSummary_Request_acknowledgementFilter = $._decodeInteger;
-export const _encode_GetAlarmSummary_Request_acknowledgementFilter = $._encodeInteger;
+const all: 2 = GetAlarmSummary_Request_acknowledgementFilter_all; /* SHORT_NAMED_INTEGER_VALUE */
+export const _decode_GetAlarmSummary_Request_acknowledgementFilter: $.ASN1Decoder<INTEGER> = $._decodeInteger;
+export const _encode_GetAlarmSummary_Request_acknowledgementFilter: $.ASN1Encoder<INTEGER> = $._encodeInteger;
 
 
 /* eslint-enable */

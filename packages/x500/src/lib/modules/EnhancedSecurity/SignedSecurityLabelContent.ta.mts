@@ -1,8 +1,8 @@
 /* eslint-disable */
 import {
-    ASN1Element as _Element,
+    type ASN1Element as _Element,
     ASN1TagClass as _TagClass,
-    OPTIONAL,
+    type OPTIONAL,
 } from "@wildboar/asn1";
 import * as $ from "@wildboar/asn1/functional";
 import {
@@ -11,7 +11,7 @@ import {
     _get_encoder_for_HASH,
 } from "../AuthenticationFramework/HASH.ta.mjs";
 import {
-    KeyIdentifier,
+    type KeyIdentifier,
     _decode_KeyIdentifier,
     _encode_KeyIdentifier,
 } from "../CertificateExtensions/KeyIdentifier.ta.mjs";
@@ -26,7 +26,7 @@ import {
     _encode_AttributeTypeAndValue,
 } from "../InformationFramework/AttributeTypeAndValue.ta.mjs";
 import {
-    Name,
+    type Name,
     _decode_Name,
     _encode_Name,
 } from "../InformationFramework/Name.ta.mjs";
@@ -51,41 +51,53 @@ import {
  *
  */
 export class SignedSecurityLabelContent {
+    /**
+     * @summary `attHash`.
+     * @description HASH of DER-encoded AttributeTypeAndValue.
+     * @public
+     * @readonly
+     */
+    public readonly attHash: HASH<AttributeTypeAndValue>;
+    /**
+     * @summary `issuer`.
+     * @description Name of the labelling authority.
+     * @public
+     * @readonly
+     */
+    public readonly issuer: OPTIONAL<Name>;
+    /**
+     * @summary `keyIdentifier`.
+     * @description Subject key identifier or symmetric-key identifier.
+     * @public
+     * @readonly
+     */
+    public readonly keyIdentifier: OPTIONAL<KeyIdentifier>;
+    /**
+     * @summary `securityLabel`.
+     * @public
+     * @readonly
+     */
+    public readonly securityLabel: SecurityLabel;
+    /**
+     * @summary Extensions that are not recognized.
+     * @public
+     * @readonly
+     */
+    public readonly _unrecognizedExtensionsList: _Element[];
+
     constructor(
-        /**
-         * @summary `attHash`.
-         * @description HASH of DER-encoded AttributeTypeAndValue.
-         * @public
-         * @readonly
-         */
-        readonly attHash: HASH<AttributeTypeAndValue>,
-        /**
-         * @summary `issuer`.
-         * @description Name of the labelling authority.
-         * @public
-         * @readonly
-         */
-        readonly issuer: OPTIONAL<Name>,
-        /**
-         * @summary `keyIdentifier`.
-         * @description Subject key identifier or symmetric-key identifier.
-         * @public
-         * @readonly
-         */
-        readonly keyIdentifier: OPTIONAL<KeyIdentifier>,
-        /**
-         * @summary `securityLabel`.
-         * @public
-         * @readonly
-         */
-        readonly securityLabel: SecurityLabel,
-        /**
-         * @summary Extensions that are not recognized.
-         * @public
-         * @readonly
-         */
-        readonly _unrecognizedExtensionsList: _Element[] = []
-    ) {}
+        attHash: HASH<AttributeTypeAndValue>,
+        issuer: OPTIONAL<Name>,
+        keyIdentifier: OPTIONAL<KeyIdentifier>,
+        securityLabel: SecurityLabel,
+        _unrecognizedExtensionsList: _Element[] = []
+    ) {
+        this.attHash = attHash;
+        this.issuer = issuer;
+        this.keyIdentifier = keyIdentifier;
+        this.securityLabel = securityLabel;
+        this._unrecognizedExtensionsList = _unrecognizedExtensionsList;
+    }
 
     /**
      * @summary Restructures an object into a SignedSecurityLabelContent

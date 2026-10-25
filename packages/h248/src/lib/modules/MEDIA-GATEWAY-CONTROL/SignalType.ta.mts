@@ -1,6 +1,6 @@
 /* eslint-disable */
 import {
-    ENUMERATED
+    type ENUMERATED
 } from "@wildboar/asn1";
 import * as $ from "@wildboar/asn1/functional";
 
@@ -70,7 +70,7 @@ type SignalType = _enum_for_SignalType | ENUMERATED;
  * @type {number}
  */
 export
-const SignalType_brief: SignalType = 0; /* LONG_NAMED_ENUMERATED_VALUE */
+const SignalType_brief: 0 = _enum_for_SignalType.brief; /* LONG_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary brief
@@ -78,7 +78,7 @@ const SignalType_brief: SignalType = 0; /* LONG_NAMED_ENUMERATED_VALUE */
  * @type {number}
  */
 export
-const brief: SignalType = SignalType_brief; /* SHORT_NAMED_ENUMERATED_VALUE */
+const brief: 0 = SignalType_brief; /* SHORT_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary SignalType_onOff
@@ -91,7 +91,7 @@ const brief: SignalType = SignalType_brief; /* SHORT_NAMED_ENUMERATED_VALUE */
  * @type {number}
  */
 export
-const SignalType_onOff: SignalType = 1; /* LONG_NAMED_ENUMERATED_VALUE */
+const SignalType_onOff: 1 = _enum_for_SignalType.onOff; /* LONG_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary onOff
@@ -99,7 +99,7 @@ const SignalType_onOff: SignalType = 1; /* LONG_NAMED_ENUMERATED_VALUE */
  * @type {number}
  */
 export
-const onOff: SignalType = SignalType_onOff; /* SHORT_NAMED_ENUMERATED_VALUE */
+const onOff: 1 = SignalType_onOff; /* SHORT_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary SignalType_timeOut
@@ -112,7 +112,7 @@ const onOff: SignalType = SignalType_onOff; /* SHORT_NAMED_ENUMERATED_VALUE */
  * @type {number}
  */
 export
-const SignalType_timeOut: SignalType = 2; /* LONG_NAMED_ENUMERATED_VALUE */
+const SignalType_timeOut: 2 = _enum_for_SignalType.timeOut; /* LONG_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary timeOut
@@ -120,9 +120,9 @@ const SignalType_timeOut: SignalType = 2; /* LONG_NAMED_ENUMERATED_VALUE */
  * @type {number}
  */
 export
-const timeOut: SignalType = SignalType_timeOut; /* SHORT_NAMED_ENUMERATED_VALUE */
-export const _decode_SignalType = $._decodeEnumerated as $.ASN1Decoder<SignalType>;
-export const _encode_SignalType = $._encodeEnumerated as $.ASN1Encoder<SignalType>;
+const timeOut: 2 = SignalType_timeOut; /* SHORT_NAMED_ENUMERATED_VALUE */
+export const _decode_SignalType: $.ASN1Decoder<SignalType> = $._decodeEnumerated as $.ASN1Decoder<SignalType>;
+export const _encode_SignalType: $.ASN1Encoder<SignalType> = $._encodeEnumerated as $.ASN1Encoder<SignalType>;
 
 
 /* eslint-enable */

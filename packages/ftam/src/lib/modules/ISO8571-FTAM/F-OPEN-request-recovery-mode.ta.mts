@@ -1,6 +1,6 @@
 /* eslint-disable */
 import {
-  INTEGER,
+  type INTEGER,
   ASN1Element as _Element,
   ASN1TagClass as _TagClass,
   ASN1Construction as _Construction,
@@ -42,7 +42,7 @@ export type F_OPEN_request_recovery_mode = INTEGER;
  * @constant
  * @type {number}
  */
-export const F_OPEN_request_recovery_mode_none: F_OPEN_request_recovery_mode = 0; /* LONG_NAMED_INTEGER_VALUE */
+export const F_OPEN_request_recovery_mode_none: 0 = 0 satisfies F_OPEN_request_recovery_mode; /* LONG_NAMED_INTEGER_VALUE */
 
 
 /**
@@ -50,7 +50,7 @@ export const F_OPEN_request_recovery_mode_none: F_OPEN_request_recovery_mode = 0
  * @constant
  * @type {number}
  */
-export const none: F_OPEN_request_recovery_mode = F_OPEN_request_recovery_mode_none; /* SHORT_NAMED_INTEGER_VALUE */
+export const none: 0 = F_OPEN_request_recovery_mode_none; /* SHORT_NAMED_INTEGER_VALUE */
 
 
 /**
@@ -62,7 +62,7 @@ export const none: F_OPEN_request_recovery_mode = F_OPEN_request_recovery_mode_n
  * @constant
  * @type {number}
  */
-export const F_OPEN_request_recovery_mode_at_start_of_file: F_OPEN_request_recovery_mode = 1; /* LONG_NAMED_INTEGER_VALUE */
+export const F_OPEN_request_recovery_mode_at_start_of_file: 1 = 1 satisfies F_OPEN_request_recovery_mode; /* LONG_NAMED_INTEGER_VALUE */
 
 
 /**
@@ -70,7 +70,7 @@ export const F_OPEN_request_recovery_mode_at_start_of_file: F_OPEN_request_recov
  * @constant
  * @type {number}
  */
-export const at_start_of_file: F_OPEN_request_recovery_mode = F_OPEN_request_recovery_mode_at_start_of_file; /* SHORT_NAMED_INTEGER_VALUE */
+export const at_start_of_file: 1 = F_OPEN_request_recovery_mode_at_start_of_file; /* SHORT_NAMED_INTEGER_VALUE */
 
 
 /**
@@ -83,7 +83,7 @@ export const at_start_of_file: F_OPEN_request_recovery_mode = F_OPEN_request_rec
  * @constant
  * @type {number}
  */
-export const F_OPEN_request_recovery_mode_at_any_active_Checkpoint: F_OPEN_request_recovery_mode = 2; /* LONG_NAMED_INTEGER_VALUE */
+export const F_OPEN_request_recovery_mode_at_any_active_Checkpoint: 2 = 2 satisfies F_OPEN_request_recovery_mode; /* LONG_NAMED_INTEGER_VALUE */
 
 
 /**
@@ -91,17 +91,17 @@ export const F_OPEN_request_recovery_mode_at_any_active_Checkpoint: F_OPEN_reque
  * @constant
  * @type {number}
  */
-export const at_any_active_Checkpoint: F_OPEN_request_recovery_mode = F_OPEN_request_recovery_mode_at_any_active_Checkpoint; /* SHORT_NAMED_INTEGER_VALUE */
+export const at_any_active_Checkpoint: 2 = F_OPEN_request_recovery_mode_at_any_active_Checkpoint; /* SHORT_NAMED_INTEGER_VALUE */
 
 
 
 
-export const _decode_F_OPEN_request_recovery_mode = $._decodeInteger;
+export const _decode_F_OPEN_request_recovery_mode: $.ASN1Decoder<INTEGER> = $._decodeInteger;
 
 
 
 
-export const _encode_F_OPEN_request_recovery_mode = $._encodeInteger;
+export const _encode_F_OPEN_request_recovery_mode: $.ASN1Encoder<INTEGER> = $._encodeInteger;
 
 
 /* eslint-enable */

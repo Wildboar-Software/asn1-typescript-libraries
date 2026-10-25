@@ -1,14 +1,14 @@
 /* eslint-disable */
 import {
-    OPTIONAL,
-    ASN1Element as _Element,
+    type OPTIONAL,
+    type ASN1Element as _Element,
     ASN1TagClass as _TagClass
 } from "@wildboar/asn1";
 import * as $ from "@wildboar/asn1/functional";
 import { ExtensionContainer, _decode_ExtensionContainer, _encode_ExtensionContainer } from "../MAP-ExtensionDataTypes/ExtensionContainer.ta.mjs";
 import { GPRS_CSI, _decode_GPRS_CSI, _encode_GPRS_CSI } from "../MAP-MS-DataTypes/GPRS-CSI.ta.mjs";
 import { MG_CSI, _decode_MG_CSI, _encode_MG_CSI } from "../MAP-MS-DataTypes/MG-CSI.ta.mjs";
-import { MT_smsCAMELTDP_CriteriaList, _decode_MT_smsCAMELTDP_CriteriaList, _encode_MT_smsCAMELTDP_CriteriaList } from "../MAP-MS-DataTypes/MT-smsCAMELTDP-CriteriaList.ta.mjs";
+import { type MT_smsCAMELTDP_CriteriaList, _decode_MT_smsCAMELTDP_CriteriaList, _encode_MT_smsCAMELTDP_CriteriaList } from "../MAP-MS-DataTypes/MT-smsCAMELTDP-CriteriaList.ta.mjs";
 import { SMS_CSI, _decode_SMS_CSI, _encode_SMS_CSI } from "../MAP-MS-DataTypes/SMS-CSI.ta.mjs";
 
 
@@ -25,12 +25,12 @@ import { SMS_CSI, _decode_SMS_CSI, _encode_SMS_CSI } from "../MAP-MS-DataTypes/S
  * 
  * ```asn1
  * SGSN-CAMEL-SubscriptionInfo ::= SEQUENCE {
- *     gprs-CSI    [0]    GPRS-CSI    OPTIONAL,
- *     mo-sms-CSI    [1]    SMS-CSI    OPTIONAL,
- *     extensionContainer    [2]    ExtensionContainer    OPTIONAL,
+ *     gprs-CSI    [0]    GPRS-CSI    type OPTIONAL,
+ *     mo-sms-CSI    [1]    SMS-CSI    type OPTIONAL,
+ *     extensionContainer    [2]    ExtensionContainer    type OPTIONAL,
  *     ...,
- *     mt-sms-CSI    [3]    SMS-CSI    OPTIONAL,
- *     mt-smsCAMELTDP-CriteriaList    [4]    MT-smsCAMELTDP-CriteriaList    OPTIONAL,
+ *     mt-sms-CSI    [3]    SMS-CSI    type OPTIONAL,
+ *     mt-smsCAMELTDP-CriteriaList    [4]    MT-smsCAMELTDP-CriteriaList    type OPTIONAL,
  *     mg-csi    [5]    MG-CSI    OPTIONAL
  *     }
  * ```
@@ -39,80 +39,96 @@ import { SMS_CSI, _decode_SMS_CSI, _encode_SMS_CSI } from "../MAP-MS-DataTypes/S
  */
 export
 class SGSN_CAMEL_SubscriptionInfo {
+    /**
+     * @summary `gprs_CSI`.
+     * @description
+     *
+     * GPRS CAMEL services as in 3GPP TS 23.078.
+     *
+     * (3GPP TS 29.002 V19.1.0 clause 7.6.3.77).
+     *
+     * @public
+     * @readonly
+     */
+    public readonly gprs_CSI?: OPTIONAL<GPRS_CSI>;
+    /**
+     * @summary `mo_sms_CSI`.
+     * @description
+     *
+     * Mobile originating SMS CAMEL services as in 3GPP TS 23.078.
+     *
+     * (3GPP TS 29.002 V19.1.0 clause 7.6.3.76).
+     *
+     * @public
+     * @readonly
+     */
+    public readonly mo_sms_CSI?: OPTIONAL<SMS_CSI>;
+    /**
+     * @summary `extensionContainer`.
+     * @public
+     * @readonly
+     */
+    public readonly extensionContainer?: OPTIONAL<ExtensionContainer>;
+    /**
+     * @summary `mt_sms_CSI`.
+     * @description
+     *
+     * Mobile terminating SMS CAMEL services as in 3GPP TS 23.078.
+     *
+     * (3GPP TS 29.002 V19.1.0 clause 7.6.3.76a).
+     *
+     * @public
+     * @readonly
+     */
+    public readonly mt_sms_CSI?: OPTIONAL<SMS_CSI>;
+    /**
+     * @summary `mt_smsCAMELTDP_CriteriaList`.
+     * @description
+     *
+     * Criteria for MT-SMS CAMEL TDPs.
+     *
+     * (3GPP TS 29.002 V19.1.0 clause 17.7.1).
+     *
+     * @public
+     * @readonly
+     */
+    public readonly mt_smsCAMELTDP_CriteriaList?: OPTIONAL<MT_smsCAMELTDP_CriteriaList>;
+    /**
+     * @summary `mg_csi`.
+     * @description
+     *
+     * Mobility management CAMEL CSI for the SGSN.
+     *
+     * (3GPP TS 29.002 V19.1.0 clause 17.7.1).
+     *
+     * @public
+     * @readonly
+     */
+    public readonly mg_csi?: OPTIONAL<MG_CSI>;
+    /**
+     * @summary Extensions that are not recognized.
+     * @public
+     * @readonly
+     */
+    public readonly _unrecognizedExtensionsList: _Element[];
+
     constructor (
-        /**
-         * @summary `gprs_CSI`.
-         * @description
-         *
-         * GPRS CAMEL services as in 3GPP TS 23.078.
-         *
-         * (3GPP TS 29.002 V19.1.0 clause 7.6.3.77).
-         *
-         * @public
-         * @readonly
-         */
-        readonly gprs_CSI?: OPTIONAL<GPRS_CSI>,
-        /**
-         * @summary `mo_sms_CSI`.
-         * @description
-         *
-         * Mobile originating SMS CAMEL services as in 3GPP TS 23.078.
-         *
-         * (3GPP TS 29.002 V19.1.0 clause 7.6.3.76).
-         *
-         * @public
-         * @readonly
-         */
-        readonly mo_sms_CSI?: OPTIONAL<SMS_CSI>,
-        /**
-         * @summary `extensionContainer`.
-         * @public
-         * @readonly
-         */
-        readonly extensionContainer?: OPTIONAL<ExtensionContainer>,
-        /**
-         * @summary `mt_sms_CSI`.
-         * @description
-         *
-         * Mobile terminating SMS CAMEL services as in 3GPP TS 23.078.
-         *
-         * (3GPP TS 29.002 V19.1.0 clause 7.6.3.76a).
-         *
-         * @public
-         * @readonly
-         */
-        readonly mt_sms_CSI?: OPTIONAL<SMS_CSI>,
-        /**
-         * @summary `mt_smsCAMELTDP_CriteriaList`.
-         * @description
-         *
-         * Criteria for MT-SMS CAMEL TDPs.
-         *
-         * (3GPP TS 29.002 V19.1.0 clause 17.7.1).
-         *
-         * @public
-         * @readonly
-         */
-        readonly mt_smsCAMELTDP_CriteriaList?: OPTIONAL<MT_smsCAMELTDP_CriteriaList>,
-        /**
-         * @summary `mg_csi`.
-         * @description
-         *
-         * Mobility management CAMEL CSI for the SGSN.
-         *
-         * (3GPP TS 29.002 V19.1.0 clause 17.7.1).
-         *
-         * @public
-         * @readonly
-         */
-        readonly mg_csi?: OPTIONAL<MG_CSI>,
-        /**
-         * @summary Extensions that are not recognized.
-         * @public
-         * @readonly
-         */
-        readonly _unrecognizedExtensionsList: _Element[] = []
-    ) {}
+        gprs_CSI?: OPTIONAL<GPRS_CSI>,
+        mo_sms_CSI?: OPTIONAL<SMS_CSI>,
+        extensionContainer?: OPTIONAL<ExtensionContainer>,
+        mt_sms_CSI?: OPTIONAL<SMS_CSI>,
+        mt_smsCAMELTDP_CriteriaList?: OPTIONAL<MT_smsCAMELTDP_CriteriaList>,
+        mg_csi?: OPTIONAL<MG_CSI>,
+        _unrecognizedExtensionsList: _Element[] = []
+    ) {
+        this.gprs_CSI = gprs_CSI;
+        this.mo_sms_CSI = mo_sms_CSI;
+        this.extensionContainer = extensionContainer;
+        this.mt_sms_CSI = mt_sms_CSI;
+        this.mt_smsCAMELTDP_CriteriaList = mt_smsCAMELTDP_CriteriaList;
+        this.mg_csi = mg_csi;
+        this._unrecognizedExtensionsList = _unrecognizedExtensionsList;
+    }
 
     /**
      * @summary Restructures an object into a SGSN_CAMEL_SubscriptionInfo

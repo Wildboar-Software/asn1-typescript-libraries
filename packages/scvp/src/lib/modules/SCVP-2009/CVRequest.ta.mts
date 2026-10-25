@@ -1,10 +1,10 @@
 /* eslint-disable */
 import {
-  OPTIONAL,
-  INTEGER,
-  OCTET_STRING,
-  OBJECT_IDENTIFIER,
-  UTF8String,
+  type OPTIONAL,
+  type INTEGER,
+  type OCTET_STRING,
+  type OBJECT_IDENTIFIER,
+  type UTF8String,
   ASN1Element as _Element,
   ASN1TagClass as _TagClass,
   ASN1Construction as _Construction,
@@ -17,17 +17,17 @@ import {
 import * as $ from '@wildboar/asn1/functional';
 import { Query, _decode_Query, _encode_Query } from '../SCVP-2009/Query.ta.mjs';
 import {
-  GeneralNames,
+  type GeneralNames,
   _decode_GeneralNames,
   _encode_GeneralNames,
 } from '@wildboar/gn';
 import {
-  GeneralName,
+  type GeneralName,
   _decode_GeneralName,
   _encode_GeneralName,
 } from '@wildboar/gn';
 import {
-  Extensions,
+  type Extensions,
   _decode_Extensions,
   _encode_Extensions,
 } from '@wildboar/x500/AuthenticationFramework';
@@ -63,11 +63,11 @@ import {
  *     requestorName          [2] GeneralName OPTIONAL,
  *     responderName          [3] GeneralName OPTIONAL,
  *     requestExtensions      [4] Extensions{{RequestExtensions}}
- *                                     OPTIONAL,
+ *                                     type OPTIONAL,
  *     signatureAlg           [5] AlgorithmIdentifier
  *                                     {SIGNATURE-ALGORITHM,
  *                                         {SignatureAlgorithms}}
- *                                     OPTIONAL,
+ *                                     type OPTIONAL,
  *     hashAlg                [6] OBJECT IDENTIFIER OPTIONAL,
  *     requestorText          [7] UTF8String (SIZE (1..256)) OPTIONAL
  * }
@@ -75,125 +75,147 @@ import {
  *
  */
 export class CVRequest {
+  /**
+   * @summary `cvRequestVersion`.
+   * @description
+   *
+   * Version of this `CVRequest`. DEFAULT 1. Clients SHOULD use 1;
+   * servers that do not support the requested version return
+   * `unsupportedVersion` ([RFC 5055 §3.1](https://datatracker.ietf.org/doc/html/rfc5055#section-3.1)).
+   *
+   * @public
+   * @readonly
+   */
+  public readonly cvRequestVersion: OPTIONAL<INTEGER>;
+  /**
+   * @summary `query`.
+   * @description
+   *
+   * The validation query: certificates, checks, wantBacks, and
+   * validation policy ([RFC 5055 §3.2](https://datatracker.ietf.org/doc/html/rfc5055#section-3.2)).
+   *
+   * @public
+   * @readonly
+   */
+  public readonly query: Query;
+  /**
+   * @summary `requestorRef`.
+   * @description
+   *
+   * Optional names identifying the requestor, typically for servers
+   * that relay requests. Relaying servers MAY add a name; clients
+   * need not set this ([RFC 5055 §3.3](https://datatracker.ietf.org/doc/html/rfc5055#section-3.3)).
+   *
+   * @public
+   * @readonly
+   */
+  public readonly requestorRef?: OPTIONAL<GeneralNames>;
+  /**
+   * @summary `requestNonce`.
+   * @description
+   *
+   * Client-generated nonce binding request to response. If present
+   * and the server returns a non-cached response, the same value MUST
+   * appear in `respNonce`. Cached responses omit `respNonce`
+   * ([RFC 5055 §3.4](https://datatracker.ietf.org/doc/html/rfc5055#section-3.4)).
+   *
+   * @public
+   * @readonly
+   */
+  public readonly requestNonce?: OPTIONAL<OCTET_STRING>;
+  /**
+   * @summary `requestorName`.
+   * @description
+   *
+   * Optional name of the requestor; used when authenticating the
+   * request (e.g., matching a certificate subject) ([RFC 5055 §3.5](https://datatracker.ietf.org/doc/html/rfc5055#section-3.5)).
+   *
+   * @public
+   * @readonly
+   */
+  public readonly requestorName?: OPTIONAL<GeneralName>;
+  /**
+   * @summary `responderName`.
+   * @description
+   *
+   * Optional name of the SCVP server expected to answer. Servers
+   * without a matching certificate return
+   * `unrecognizedResponderName` ([RFC 5055 §3.6](https://datatracker.ietf.org/doc/html/rfc5055#section-3.6)).
+   *
+   * @public
+   * @readonly
+   */
+  public readonly responderName?: OPTIONAL<GeneralName>;
+  /**
+   * @summary `requestExtensions`.
+   * @description
+   *
+   * Optional request-level extensions (`RequestExtensions` object
+   * set). Unrecognized critical extensions yield
+   * `unrecognizedCritRequestExt` ([RFC 5055 §3.7](https://datatracker.ietf.org/doc/html/rfc5055#section-3.7)).
+   *
+   * @public
+   * @readonly
+   */
+  public readonly requestExtensions?: OPTIONAL<Extensions>;
+  /**
+   * @summary `signatureAlg`.
+   * @description
+   *
+   * Optional signature algorithm the client wants the server to use
+   * when protecting the response ([RFC 5055 §3.8](https://datatracker.ietf.org/doc/html/rfc5055#section-3.8)).
+   *
+   * @public
+   * @readonly
+   */
+  public readonly signatureAlg?: OPTIONAL<AlgorithmIdentifier>;
+  /**
+   * @summary `hashAlg`.
+   * @description
+   *
+   * Optional hash algorithm OID the client wants used when computing
+   * `requestHash` in `RequestReference` ([RFC 5055 §3.9](https://datatracker.ietf.org/doc/html/rfc5055#section-3.9)).
+   *
+   * @public
+   * @readonly
+   */
+  public readonly hashAlg?: OPTIONAL<OBJECT_IDENTIFIER>;
+  /**
+   * @summary `requestorText`.
+   * @description
+   *
+   * Optional UTF-8 text (1..256) supplied by the client. Echoed in
+   * non-cached responses; omitted from cached responses
+   * ([RFC 5055 §3.10](https://datatracker.ietf.org/doc/html/rfc5055#section-3.10)).
+   *
+   * @public
+   * @readonly
+   */
+  public readonly requestorText?: OPTIONAL<UTF8String>;
+
   constructor(
-    /**
-     * @summary `cvRequestVersion`.
-     * @description
-     *
-     * Version of this `CVRequest`. DEFAULT 1. Clients SHOULD use 1;
-     * servers that do not support the requested version return
-     * `unsupportedVersion` ([RFC 5055 §3.1](https://datatracker.ietf.org/doc/html/rfc5055#section-3.1)).
-     *
-     * @public
-     * @readonly
-     */
-    readonly cvRequestVersion: OPTIONAL<INTEGER>,
-    /**
-     * @summary `query`.
-     * @description
-     *
-     * The validation query: certificates, checks, wantBacks, and
-     * validation policy ([RFC 5055 §3.2](https://datatracker.ietf.org/doc/html/rfc5055#section-3.2)).
-     *
-     * @public
-     * @readonly
-     */
-    readonly query: Query,
-    /**
-     * @summary `requestorRef`.
-     * @description
-     *
-     * Optional names identifying the requestor, typically for servers
-     * that relay requests. Relaying servers MAY add a name; clients
-     * need not set this ([RFC 5055 §3.3](https://datatracker.ietf.org/doc/html/rfc5055#section-3.3)).
-     *
-     * @public
-     * @readonly
-     */
-    readonly requestorRef?: OPTIONAL<GeneralNames>,
-    /**
-     * @summary `requestNonce`.
-     * @description
-     *
-     * Client-generated nonce binding request to response. If present
-     * and the server returns a non-cached response, the same value MUST
-     * appear in `respNonce`. Cached responses omit `respNonce`
-     * ([RFC 5055 §3.4](https://datatracker.ietf.org/doc/html/rfc5055#section-3.4)).
-     *
-     * @public
-     * @readonly
-     */
-    readonly requestNonce?: OPTIONAL<OCTET_STRING>,
-    /**
-     * @summary `requestorName`.
-     * @description
-     *
-     * Optional name of the requestor; used when authenticating the
-     * request (e.g., matching a certificate subject) ([RFC 5055 §3.5](https://datatracker.ietf.org/doc/html/rfc5055#section-3.5)).
-     *
-     * @public
-     * @readonly
-     */
-    readonly requestorName?: OPTIONAL<GeneralName>,
-    /**
-     * @summary `responderName`.
-     * @description
-     *
-     * Optional name of the SCVP server expected to answer. Servers
-     * without a matching certificate return
-     * `unrecognizedResponderName` ([RFC 5055 §3.6](https://datatracker.ietf.org/doc/html/rfc5055#section-3.6)).
-     *
-     * @public
-     * @readonly
-     */
-    readonly responderName?: OPTIONAL<GeneralName>,
-    /**
-     * @summary `requestExtensions`.
-     * @description
-     *
-     * Optional request-level extensions (`RequestExtensions` object
-     * set). Unrecognized critical extensions yield
-     * `unrecognizedCritRequestExt` ([RFC 5055 §3.7](https://datatracker.ietf.org/doc/html/rfc5055#section-3.7)).
-     *
-     * @public
-     * @readonly
-     */
-    readonly requestExtensions?: OPTIONAL<Extensions>,
-    /**
-     * @summary `signatureAlg`.
-     * @description
-     *
-     * Optional signature algorithm the client wants the server to use
-     * when protecting the response ([RFC 5055 §3.8](https://datatracker.ietf.org/doc/html/rfc5055#section-3.8)).
-     *
-     * @public
-     * @readonly
-     */
-    readonly signatureAlg?: OPTIONAL<AlgorithmIdentifier>,
-    /**
-     * @summary `hashAlg`.
-     * @description
-     *
-     * Optional hash algorithm OID the client wants used when computing
-     * `requestHash` in `RequestReference` ([RFC 5055 §3.9](https://datatracker.ietf.org/doc/html/rfc5055#section-3.9)).
-     *
-     * @public
-     * @readonly
-     */
-    readonly hashAlg?: OPTIONAL<OBJECT_IDENTIFIER>,
-    /**
-     * @summary `requestorText`.
-     * @description
-     *
-     * Optional UTF-8 text (1..256) supplied by the client. Echoed in
-     * non-cached responses; omitted from cached responses
-     * ([RFC 5055 §3.10](https://datatracker.ietf.org/doc/html/rfc5055#section-3.10)).
-     *
-     * @public
-     * @readonly
-     */
-    readonly requestorText?: OPTIONAL<UTF8String>
-  ) {}
+    cvRequestVersion: OPTIONAL<INTEGER>,
+    query: Query,
+    requestorRef?: OPTIONAL<GeneralNames>,
+    requestNonce?: OPTIONAL<OCTET_STRING>,
+    requestorName?: OPTIONAL<GeneralName>,
+    responderName?: OPTIONAL<GeneralName>,
+    requestExtensions?: OPTIONAL<Extensions>,
+    signatureAlg?: OPTIONAL<AlgorithmIdentifier>,
+    hashAlg?: OPTIONAL<OBJECT_IDENTIFIER>,
+    requestorText?: OPTIONAL<UTF8String>
+  ) {
+    this.cvRequestVersion = cvRequestVersion;
+    this.query = query;
+    this.requestorRef = requestorRef;
+    this.requestNonce = requestNonce;
+    this.requestorName = requestorName;
+    this.responderName = responderName;
+    this.requestExtensions = requestExtensions;
+    this.signatureAlg = signatureAlg;
+    this.hashAlg = hashAlg;
+    this.requestorText = requestorText;
+  }
 
   /**
    * @summary Restructures an object into a CVRequest

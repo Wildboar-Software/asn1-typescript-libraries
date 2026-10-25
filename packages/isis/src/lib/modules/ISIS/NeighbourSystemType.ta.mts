@@ -77,7 +77,7 @@ export type NeighbourSystemType = _enum_for_NeighbourSystemType;
  *
  * @enum {number}
  */
-export const NeighbourSystemType = _enum_for_NeighbourSystemType;
+export const NeighbourSystemType: typeof _enum_for_NeighbourSystemType = _enum_for_NeighbourSystemType;
 
 /**
  * @summary NeighbourSystemType_unknown
@@ -90,7 +90,7 @@ export const NeighbourSystemType = _enum_for_NeighbourSystemType;
  * @constant
  * @type {number}
  */
-export const NeighbourSystemType_unknown: NeighbourSystemType =
+export const NeighbourSystemType_unknown: 0 =
   NeighbourSystemType.unknown; /* LONG_NAMED_ENUMERATED_VALUE */
 
 /**
@@ -98,7 +98,7 @@ export const NeighbourSystemType_unknown: NeighbourSystemType =
  * @constant
  * @type {number}
  */
-export const unknown: NeighbourSystemType =
+export const unknown: 0 =
   NeighbourSystemType.unknown; /* SHORT_NAMED_ENUMERATED_VALUE */
 
 /**
@@ -112,7 +112,7 @@ export const unknown: NeighbourSystemType =
  * @constant
  * @type {number}
  */
-export const NeighbourSystemType_endSystem: NeighbourSystemType =
+export const NeighbourSystemType_endSystem: 1 =
   NeighbourSystemType.endSystem; /* LONG_NAMED_ENUMERATED_VALUE */
 
 /**
@@ -120,7 +120,7 @@ export const NeighbourSystemType_endSystem: NeighbourSystemType =
  * @constant
  * @type {number}
  */
-export const endSystem: NeighbourSystemType =
+export const endSystem: 1 =
   NeighbourSystemType.endSystem; /* SHORT_NAMED_ENUMERATED_VALUE */
 
 /**
@@ -134,7 +134,7 @@ export const endSystem: NeighbourSystemType =
  * @constant
  * @type {number}
  */
-export const NeighbourSystemType_intermediateSystem: NeighbourSystemType =
+export const NeighbourSystemType_intermediateSystem: 2 =
   NeighbourSystemType.intermediateSystem; /* LONG_NAMED_ENUMERATED_VALUE */
 
 /**
@@ -142,7 +142,7 @@ export const NeighbourSystemType_intermediateSystem: NeighbourSystemType =
  * @constant
  * @type {number}
  */
-export const intermediateSystem: NeighbourSystemType =
+export const intermediateSystem: 2 =
   NeighbourSystemType.intermediateSystem; /* SHORT_NAMED_ENUMERATED_VALUE */
 
 /**
@@ -156,7 +156,7 @@ export const intermediateSystem: NeighbourSystemType =
  * @constant
  * @type {number}
  */
-export const NeighbourSystemType_l1IntermediateSystem: NeighbourSystemType =
+export const NeighbourSystemType_l1IntermediateSystem: 3 =
   NeighbourSystemType.l1IntermediateSystem; /* LONG_NAMED_ENUMERATED_VALUE */
 
 /**
@@ -164,7 +164,7 @@ export const NeighbourSystemType_l1IntermediateSystem: NeighbourSystemType =
  * @constant
  * @type {number}
  */
-export const l1IntermediateSystem: NeighbourSystemType =
+export const l1IntermediateSystem: 3 =
   NeighbourSystemType.l1IntermediateSystem; /* SHORT_NAMED_ENUMERATED_VALUE */
 
 /**
@@ -178,7 +178,7 @@ export const l1IntermediateSystem: NeighbourSystemType =
  * @constant
  * @type {number}
  */
-export const NeighbourSystemType_l2IntermediateSystem: NeighbourSystemType =
+export const NeighbourSystemType_l2IntermediateSystem: 4 =
   NeighbourSystemType.l2IntermediateSystem; /* LONG_NAMED_ENUMERATED_VALUE */
 
 /**
@@ -186,14 +186,28 @@ export const NeighbourSystemType_l2IntermediateSystem: NeighbourSystemType =
  * @constant
  * @type {number}
  */
-export const l2IntermediateSystem: NeighbourSystemType =
+export const l2IntermediateSystem: 4 =
   NeighbourSystemType.l2IntermediateSystem; /* SHORT_NAMED_ENUMERATED_VALUE */
 
 
-export const _decode_NeighbourSystemType = $._decodeEnumerated as $.ASN1Decoder<NeighbourSystemType>;
+export function _decode_NeighbourSystemType(el: _Element): NeighbourSystemType {
+  const enumerated = $._decodeEnumerated(el);
+  switch (enumerated) {
+    case NeighbourSystemType.unknown: return NeighbourSystemType.unknown;
+    case NeighbourSystemType.endSystem: return NeighbourSystemType.endSystem;
+    case NeighbourSystemType.intermediateSystem: return NeighbourSystemType.intermediateSystem;
+    case NeighbourSystemType.l1IntermediateSystem: return NeighbourSystemType.l1IntermediateSystem;
+    case NeighbourSystemType.l2IntermediateSystem: return NeighbourSystemType.l2IntermediateSystem;
+    default:
+      throw new _ConstructionError(
+        'Invalid ENUMERATED value ' + enumerated + ' for NeighbourSystemType.',
+        el,
+      );
+  }
+}
 
 
-export const _encode_NeighbourSystemType = $._encodeEnumerated as $.ASN1Encoder<NeighbourSystemType>;
+export const _encode_NeighbourSystemType: $.ASN1Encoder<NeighbourSystemType> = $._encodeEnumerated as $.ASN1Encoder<NeighbourSystemType>;
 
 
 /* eslint-enable */

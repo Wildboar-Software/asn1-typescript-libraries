@@ -1,6 +1,6 @@
 /* eslint-disable */
 import {
-    ASN1Element as _Element,
+    type ASN1Element as _Element,
     ASN1TagClass as _TagClass,
     ASN1Construction as _Construction,
     ASN1UniversalType as _UniversalType,
@@ -11,12 +11,12 @@ import {
 } from '@wildboar/asn1';
 import * as $ from '@wildboar/asn1/functional';
 import {
-    ProofOfSubmission,
+    type ProofOfSubmission,
     _decode_ProofOfSubmission,
     _encode_ProofOfSubmission,
 } from '../MTSAbstractService/ProofOfSubmission.ta.mjs';
 import {
-    OriginatingMTACertificate,
+    type OriginatingMTACertificate,
     _decode_OriginatingMTACertificate,
     _encode_OriginatingMTACertificate,
 } from '../MTSAbstractService/OriginatingMTACertificate.ta.mjs';
@@ -43,26 +43,34 @@ import {
  *
  */
 export class SubmissionProof {
+    /**
+     * @summary `proof_of_submission`.
+     * @public
+     * @readonly
+     */
+    public readonly proof_of_submission: ProofOfSubmission;
+    /**
+     * @summary `originating_MTA_certificate`.
+     * @public
+     * @readonly
+     */
+    public readonly originating_MTA_certificate: OriginatingMTACertificate;
+    /**
+     * @summary `message_submission_envelope`.
+     * @public
+     * @readonly
+     */
+    public readonly message_submission_envelope: MessageSubmissionEnvelope;
+
     constructor(
-        /**
-         * @summary `proof_of_submission`.
-         * @public
-         * @readonly
-         */
-        readonly proof_of_submission: ProofOfSubmission,
-        /**
-         * @summary `originating_MTA_certificate`.
-         * @public
-         * @readonly
-         */
-        readonly originating_MTA_certificate: OriginatingMTACertificate,
-        /**
-         * @summary `message_submission_envelope`.
-         * @public
-         * @readonly
-         */
-        readonly message_submission_envelope: MessageSubmissionEnvelope
-    ) {}
+        proof_of_submission: ProofOfSubmission,
+        originating_MTA_certificate: OriginatingMTACertificate,
+        message_submission_envelope: MessageSubmissionEnvelope
+    ) {
+        this.proof_of_submission = proof_of_submission;
+        this.originating_MTA_certificate = originating_MTA_certificate;
+        this.message_submission_envelope = message_submission_envelope;
+    }
 
     /**
      * @summary Restructures an object into a SubmissionProof

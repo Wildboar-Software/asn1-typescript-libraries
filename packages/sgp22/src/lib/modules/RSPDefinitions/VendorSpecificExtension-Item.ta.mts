@@ -1,9 +1,9 @@
 /* eslint-disable */
 import {
     ASN1ConstructionError as _ConstructionError,
-    ASN1Element as _Element,
+    type ASN1Element as _Element,
     ASN1TagClass as _TagClass,
-    OBJECT_IDENTIFIER
+    type OBJECT_IDENTIFIER
 } from "@wildboar/asn1";
 import * as $ from "@wildboar/asn1/functional";
 
@@ -38,7 +38,7 @@ class VendorSpecificExtension_Item {
      * @public
      * @readonly
      */
-    readonly vendorOid: OBJECT_IDENTIFIER;
+    public readonly vendorOid: OBJECT_IDENTIFIER;
     /**
      * @summary `vendorSpecificData`.
      * @description
@@ -49,7 +49,7 @@ class VendorSpecificExtension_Item {
      * @public
      * @readonly
      */
-    readonly vendorSpecificData: _Element;
+    public readonly vendorSpecificData: _Element;
 
     constructor (
         vendorOid: OBJECT_IDENTIFIER,

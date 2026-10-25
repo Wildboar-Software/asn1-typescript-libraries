@@ -1,6 +1,6 @@
 /* eslint-disable */
 import {
-    Countersignature,
+    type Countersignature,
     _decode_Countersignature,
     _encode_Countersignature,
 } from "../CryptographicMessageSyntax-2010/Countersignature.ta.mjs";

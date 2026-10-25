@@ -21,7 +21,7 @@ import {
   _encode_EntitiesType,
 } from '../CMAIL/EntitiesType.ta.mjs';
 import {
-  SignatureType,
+  type SignatureType,
   _decode_SignatureType,
   _encode_SignatureType,
 } from '../CMAIL/SignatureType.ta.mjs';
@@ -58,7 +58,7 @@ export class EnvelopeInformationType {
    * @public
    * @readonly
    */
-  readonly contentEnvelopeInformation: ContentEnvelopeInformationType;
+  public readonly contentEnvelopeInformation: ContentEnvelopeInformationType;
   /**
    * @summary `entities`.
    * @description At least one `Entity` (sender,
@@ -68,7 +68,7 @@ export class EnvelopeInformationType {
    * @public
    * @readonly
    */
-  readonly entities: EntitiesType;
+  public readonly entities: EntitiesType;
   /**
    * @summary `signature`.
    * @description Additional signatures
@@ -78,7 +78,7 @@ export class EnvelopeInformationType {
    * @public
    * @readonly
    */
-  readonly signature: SignatureType[];
+  public readonly signature: SignatureType[];
 
   constructor(
     contentEnvelopeInformation: ContentEnvelopeInformationType,

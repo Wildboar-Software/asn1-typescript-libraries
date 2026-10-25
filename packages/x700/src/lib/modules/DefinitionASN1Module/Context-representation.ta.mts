@@ -1,6 +1,6 @@
 /* eslint-disable */
 import {
-    ASN1Element as _Element,
+    type ASN1Element as _Element,
     ASN1TagClass as _TagClass,
     ASN1Construction as _Construction,
     ASN1UniversalType as _UniversalType,
@@ -70,7 +70,7 @@ export type Context_representation = _enum_for_Context_representation;
  *
  * @enum {number}
  */
-export const Context_representation = _enum_for_Context_representation;
+export const Context_representation: typeof _enum_for_Context_representation = _enum_for_Context_representation;
 
 
 /**
@@ -81,7 +81,7 @@ export const Context_representation = _enum_for_Context_representation;
  * @constant
  * @type {number}
  */
-export const Context_representation_aCTION_INFO: Context_representation =
+export const Context_representation_aCTION_INFO: _enum_for_Context_representation.aCTION_INFO =
     Context_representation.aCTION_INFO; /* LONG_NAMED_ENUMERATED_VALUE */
 
 
@@ -93,7 +93,7 @@ export const Context_representation_aCTION_INFO: Context_representation =
  * @constant
  * @type {number}
  */
-export const aCTION_INFO: Context_representation =
+export const aCTION_INFO: _enum_for_Context_representation.aCTION_INFO =
     Context_representation.aCTION_INFO; /* SHORT_NAMED_ENUMERATED_VALUE */
 
 
@@ -105,7 +105,7 @@ export const aCTION_INFO: Context_representation =
  * @constant
  * @type {number}
  */
-export const Context_representation_aCTION_REPLY: Context_representation =
+export const Context_representation_aCTION_REPLY: _enum_for_Context_representation.aCTION_REPLY =
     Context_representation.aCTION_REPLY; /* LONG_NAMED_ENUMERATED_VALUE */
 
 
@@ -117,7 +117,7 @@ export const Context_representation_aCTION_REPLY: Context_representation =
  * @constant
  * @type {number}
  */
-export const aCTION_REPLY: Context_representation =
+export const aCTION_REPLY: _enum_for_Context_representation.aCTION_REPLY =
     Context_representation.aCTION_REPLY; /* SHORT_NAMED_ENUMERATED_VALUE */
 
 
@@ -129,7 +129,7 @@ export const aCTION_REPLY: Context_representation =
  * @constant
  * @type {number}
  */
-export const Context_representation_eVENT_INFO: Context_representation =
+export const Context_representation_eVENT_INFO: _enum_for_Context_representation.eVENT_INFO =
     Context_representation.eVENT_INFO; /* LONG_NAMED_ENUMERATED_VALUE */
 
 
@@ -141,7 +141,7 @@ export const Context_representation_eVENT_INFO: Context_representation =
  * @constant
  * @type {number}
  */
-export const eVENT_INFO: Context_representation =
+export const eVENT_INFO: _enum_for_Context_representation.eVENT_INFO =
     Context_representation.eVENT_INFO; /* SHORT_NAMED_ENUMERATED_VALUE */
 
 
@@ -153,7 +153,7 @@ export const eVENT_INFO: Context_representation =
  * @constant
  * @type {number}
  */
-export const Context_representation_eVENT_REPLY: Context_representation =
+export const Context_representation_eVENT_REPLY: _enum_for_Context_representation.eVENT_REPLY =
     Context_representation.eVENT_REPLY; /* LONG_NAMED_ENUMERATED_VALUE */
 
 
@@ -165,7 +165,7 @@ export const Context_representation_eVENT_REPLY: Context_representation =
  * @constant
  * @type {number}
  */
-export const eVENT_REPLY: Context_representation =
+export const eVENT_REPLY: _enum_for_Context_representation.eVENT_REPLY =
     Context_representation.eVENT_REPLY; /* SHORT_NAMED_ENUMERATED_VALUE */
 
 
@@ -177,7 +177,7 @@ export const eVENT_REPLY: Context_representation =
  * @constant
  * @type {number}
  */
-export const Context_representation_sPECIFIC_ERROR: Context_representation =
+export const Context_representation_sPECIFIC_ERROR: _enum_for_Context_representation.sPECIFIC_ERROR =
     Context_representation.sPECIFIC_ERROR; /* LONG_NAMED_ENUMERATED_VALUE */
 
 
@@ -189,18 +189,32 @@ export const Context_representation_sPECIFIC_ERROR: Context_representation =
  * @constant
  * @type {number}
  */
-export const sPECIFIC_ERROR: Context_representation =
+export const sPECIFIC_ERROR: _enum_for_Context_representation.sPECIFIC_ERROR =
     Context_representation.sPECIFIC_ERROR; /* SHORT_NAMED_ENUMERATED_VALUE */
 
 
 
 
-export const _decode_Context_representation = $._decodeEnumerated;
+export function _decode_Context_representation(el: _Element): Context_representation {
+    const enumerated = $._decodeEnumerated(el);
+    switch (enumerated) {
+        case Context_representation.aCTION_INFO: return Context_representation.aCTION_INFO;
+        case Context_representation.aCTION_REPLY: return Context_representation.aCTION_REPLY;
+        case Context_representation.eVENT_INFO: return Context_representation.eVENT_INFO;
+        case Context_representation.eVENT_REPLY: return Context_representation.eVENT_REPLY;
+        case Context_representation.sPECIFIC_ERROR: return Context_representation.sPECIFIC_ERROR;
+        default:
+            throw new _ConstructionError(
+                'Invalid ENUMERATED value ' + enumerated + ' for Context_representation.',
+                el,
+            );
+    }
+}
 
 
 
 
-export const _encode_Context_representation = $._encodeEnumerated;
+export const _encode_Context_representation: $.ASN1Encoder<Context_representation> = $._encodeEnumerated as $.ASN1Encoder<Context_representation>;
 
 
 /* eslint-enable */

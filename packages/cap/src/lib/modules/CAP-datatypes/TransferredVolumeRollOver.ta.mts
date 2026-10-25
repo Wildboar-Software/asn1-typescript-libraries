@@ -1,6 +1,6 @@
 import {
-    INTEGER,
-    ASN1Element as _Element,
+    type INTEGER,
+    type ASN1Element as _Element,
     ASN1OverflowError,
     ASN1TagClass as _TagClass,
 } from "@wildboar/asn1";

@@ -1,6 +1,6 @@
 /* eslint-disable */
 import {
-    ENUMERATED
+    type ENUMERATED
 } from "@wildboar/asn1";
 import * as $ from "@wildboar/asn1/functional";
 
@@ -63,7 +63,7 @@ type Molr_Type = _enum_for_Molr_Type | ENUMERATED;
  * @type {number}
  */
 export
-const Molr_Type_locationEstimate: Molr_Type = 0; /* LONG_NAMED_ENUMERATED_VALUE */
+const Molr_Type_locationEstimate: _enum_for_Molr_Type.locationEstimate = _enum_for_Molr_Type.locationEstimate; /* LONG_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary locationEstimate
@@ -71,7 +71,7 @@ const Molr_Type_locationEstimate: Molr_Type = 0; /* LONG_NAMED_ENUMERATED_VALUE 
  * @type {number}
  */
 export
-const locationEstimate: Molr_Type = Molr_Type_locationEstimate; /* SHORT_NAMED_ENUMERATED_VALUE */
+const locationEstimate: _enum_for_Molr_Type.locationEstimate = Molr_Type_locationEstimate; /* SHORT_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary Molr_Type_assistanceData
@@ -79,7 +79,7 @@ const locationEstimate: Molr_Type = Molr_Type_locationEstimate; /* SHORT_NAMED_E
  * @type {number}
  */
 export
-const Molr_Type_assistanceData: Molr_Type = 1; /* LONG_NAMED_ENUMERATED_VALUE */
+const Molr_Type_assistanceData: _enum_for_Molr_Type.assistanceData = _enum_for_Molr_Type.assistanceData; /* LONG_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary assistanceData
@@ -87,7 +87,7 @@ const Molr_Type_assistanceData: Molr_Type = 1; /* LONG_NAMED_ENUMERATED_VALUE */
  * @type {number}
  */
 export
-const assistanceData: Molr_Type = Molr_Type_assistanceData; /* SHORT_NAMED_ENUMERATED_VALUE */
+const assistanceData: _enum_for_Molr_Type.assistanceData = Molr_Type_assistanceData; /* SHORT_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary Molr_Type_deCipheringKeys
@@ -95,7 +95,7 @@ const assistanceData: Molr_Type = Molr_Type_assistanceData; /* SHORT_NAMED_ENUME
  * @type {number}
  */
 export
-const Molr_Type_deCipheringKeys: Molr_Type = 2; /* LONG_NAMED_ENUMERATED_VALUE */
+const Molr_Type_deCipheringKeys: _enum_for_Molr_Type.deCipheringKeys = _enum_for_Molr_Type.deCipheringKeys; /* LONG_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary deCipheringKeys
@@ -103,7 +103,7 @@ const Molr_Type_deCipheringKeys: Molr_Type = 2; /* LONG_NAMED_ENUMERATED_VALUE *
  * @type {number}
  */
 export
-const deCipheringKeys: Molr_Type = Molr_Type_deCipheringKeys; /* SHORT_NAMED_ENUMERATED_VALUE */
+const deCipheringKeys: _enum_for_Molr_Type.deCipheringKeys = Molr_Type_deCipheringKeys; /* SHORT_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary Molr_Type_deferredMo_lrTTTPInitiation
@@ -111,7 +111,7 @@ const deCipheringKeys: Molr_Type = Molr_Type_deCipheringKeys; /* SHORT_NAMED_ENU
  * @type {number}
  */
 export
-const Molr_Type_deferredMo_lrTTTPInitiation: Molr_Type = 3; /* LONG_NAMED_ENUMERATED_VALUE */
+const Molr_Type_deferredMo_lrTTTPInitiation: _enum_for_Molr_Type.deferredMo_lrTTTPInitiation = _enum_for_Molr_Type.deferredMo_lrTTTPInitiation; /* LONG_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary deferredMo_lrTTTPInitiation
@@ -119,7 +119,7 @@ const Molr_Type_deferredMo_lrTTTPInitiation: Molr_Type = 3; /* LONG_NAMED_ENUMER
  * @type {number}
  */
 export
-const deferredMo_lrTTTPInitiation: Molr_Type = Molr_Type_deferredMo_lrTTTPInitiation; /* SHORT_NAMED_ENUMERATED_VALUE */
+const deferredMo_lrTTTPInitiation: _enum_for_Molr_Type.deferredMo_lrTTTPInitiation = Molr_Type_deferredMo_lrTTTPInitiation; /* SHORT_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary Molr_Type_deferredMo_lrSelfLocationInitiation
@@ -127,7 +127,7 @@ const deferredMo_lrTTTPInitiation: Molr_Type = Molr_Type_deferredMo_lrTTTPInitia
  * @type {number}
  */
 export
-const Molr_Type_deferredMo_lrSelfLocationInitiation: Molr_Type = 4; /* LONG_NAMED_ENUMERATED_VALUE */
+const Molr_Type_deferredMo_lrSelfLocationInitiation: _enum_for_Molr_Type.deferredMo_lrSelfLocationInitiation = _enum_for_Molr_Type.deferredMo_lrSelfLocationInitiation; /* LONG_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary deferredMo_lrSelfLocationInitiation
@@ -135,7 +135,7 @@ const Molr_Type_deferredMo_lrSelfLocationInitiation: Molr_Type = 4; /* LONG_NAME
  * @type {number}
  */
 export
-const deferredMo_lrSelfLocationInitiation: Molr_Type = Molr_Type_deferredMo_lrSelfLocationInitiation; /* SHORT_NAMED_ENUMERATED_VALUE */
+const deferredMo_lrSelfLocationInitiation: _enum_for_Molr_Type.deferredMo_lrSelfLocationInitiation = Molr_Type_deferredMo_lrSelfLocationInitiation; /* SHORT_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary Molr_Type_deferredMt_lrOrmo_lrTTTPLocationEstimate
@@ -143,7 +143,7 @@ const deferredMo_lrSelfLocationInitiation: Molr_Type = Molr_Type_deferredMo_lrSe
  * @type {number}
  */
 export
-const Molr_Type_deferredMt_lrOrmo_lrTTTPLocationEstimate: Molr_Type = 5; /* LONG_NAMED_ENUMERATED_VALUE */
+const Molr_Type_deferredMt_lrOrmo_lrTTTPLocationEstimate: _enum_for_Molr_Type.deferredMt_lrOrmo_lrTTTPLocationEstimate = _enum_for_Molr_Type.deferredMt_lrOrmo_lrTTTPLocationEstimate; /* LONG_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary deferredMt_lrOrmo_lrTTTPLocationEstimate
@@ -151,7 +151,7 @@ const Molr_Type_deferredMt_lrOrmo_lrTTTPLocationEstimate: Molr_Type = 5; /* LONG
  * @type {number}
  */
 export
-const deferredMt_lrOrmo_lrTTTPLocationEstimate: Molr_Type = Molr_Type_deferredMt_lrOrmo_lrTTTPLocationEstimate; /* SHORT_NAMED_ENUMERATED_VALUE */
+const deferredMt_lrOrmo_lrTTTPLocationEstimate: _enum_for_Molr_Type.deferredMt_lrOrmo_lrTTTPLocationEstimate = Molr_Type_deferredMt_lrOrmo_lrTTTPLocationEstimate; /* SHORT_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary Molr_Type_deferredMt_lrOrmo_lrCancellation
@@ -159,7 +159,7 @@ const deferredMt_lrOrmo_lrTTTPLocationEstimate: Molr_Type = Molr_Type_deferredMt
  * @type {number}
  */
 export
-const Molr_Type_deferredMt_lrOrmo_lrCancellation: Molr_Type = 6; /* LONG_NAMED_ENUMERATED_VALUE */
+const Molr_Type_deferredMt_lrOrmo_lrCancellation: _enum_for_Molr_Type.deferredMt_lrOrmo_lrCancellation = _enum_for_Molr_Type.deferredMt_lrOrmo_lrCancellation; /* LONG_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary deferredMt_lrOrmo_lrCancellation
@@ -167,7 +167,7 @@ const Molr_Type_deferredMt_lrOrmo_lrCancellation: Molr_Type = 6; /* LONG_NAMED_E
  * @type {number}
  */
 export
-const deferredMt_lrOrmo_lrCancellation: Molr_Type = Molr_Type_deferredMt_lrOrmo_lrCancellation; /* SHORT_NAMED_ENUMERATED_VALUE */
+const deferredMt_lrOrmo_lrCancellation: _enum_for_Molr_Type.deferredMt_lrOrmo_lrCancellation = Molr_Type_deferredMt_lrOrmo_lrCancellation; /* SHORT_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary Molr_Type_periodicEvent
@@ -175,7 +175,7 @@ const deferredMt_lrOrmo_lrCancellation: Molr_Type = Molr_Type_deferredMt_lrOrmo_
  * @type {number}
  */
 export
-const Molr_Type_periodicEvent: Molr_Type = 7; /* LONG_NAMED_ENUMERATED_VALUE */
+const Molr_Type_periodicEvent: _enum_for_Molr_Type.periodicEvent = _enum_for_Molr_Type.periodicEvent; /* LONG_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary periodicEvent
@@ -183,7 +183,7 @@ const Molr_Type_periodicEvent: Molr_Type = 7; /* LONG_NAMED_ENUMERATED_VALUE */
  * @type {number}
  */
 export
-const periodicEvent: Molr_Type = Molr_Type_periodicEvent; /* SHORT_NAMED_ENUMERATED_VALUE */
+const periodicEvent: _enum_for_Molr_Type.periodicEvent = Molr_Type_periodicEvent; /* SHORT_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary Molr_Type_enteringAreaEvent
@@ -191,7 +191,7 @@ const periodicEvent: Molr_Type = Molr_Type_periodicEvent; /* SHORT_NAMED_ENUMERA
  * @type {number}
  */
 export
-const Molr_Type_enteringAreaEvent: Molr_Type = 8; /* LONG_NAMED_ENUMERATED_VALUE */
+const Molr_Type_enteringAreaEvent: _enum_for_Molr_Type.enteringAreaEvent = _enum_for_Molr_Type.enteringAreaEvent; /* LONG_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary enteringAreaEvent
@@ -199,7 +199,7 @@ const Molr_Type_enteringAreaEvent: Molr_Type = 8; /* LONG_NAMED_ENUMERATED_VALUE
  * @type {number}
  */
 export
-const enteringAreaEvent: Molr_Type = Molr_Type_enteringAreaEvent; /* SHORT_NAMED_ENUMERATED_VALUE */
+const enteringAreaEvent: _enum_for_Molr_Type.enteringAreaEvent = Molr_Type_enteringAreaEvent; /* SHORT_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary Molr_Type_leavingAreaEvent
@@ -207,7 +207,7 @@ const enteringAreaEvent: Molr_Type = Molr_Type_enteringAreaEvent; /* SHORT_NAMED
  * @type {number}
  */
 export
-const Molr_Type_leavingAreaEvent: Molr_Type = 9; /* LONG_NAMED_ENUMERATED_VALUE */
+const Molr_Type_leavingAreaEvent: _enum_for_Molr_Type.leavingAreaEvent = _enum_for_Molr_Type.leavingAreaEvent; /* LONG_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary leavingAreaEvent
@@ -215,7 +215,7 @@ const Molr_Type_leavingAreaEvent: Molr_Type = 9; /* LONG_NAMED_ENUMERATED_VALUE 
  * @type {number}
  */
 export
-const leavingAreaEvent: Molr_Type = Molr_Type_leavingAreaEvent; /* SHORT_NAMED_ENUMERATED_VALUE */
+const leavingAreaEvent: _enum_for_Molr_Type.leavingAreaEvent = Molr_Type_leavingAreaEvent; /* SHORT_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary Molr_Type_beingInsideAreaEvent
@@ -223,7 +223,7 @@ const leavingAreaEvent: Molr_Type = Molr_Type_leavingAreaEvent; /* SHORT_NAMED_E
  * @type {number}
  */
 export
-const Molr_Type_beingInsideAreaEvent: Molr_Type = 10; /* LONG_NAMED_ENUMERATED_VALUE */
+const Molr_Type_beingInsideAreaEvent: _enum_for_Molr_Type.beingInsideAreaEvent = _enum_for_Molr_Type.beingInsideAreaEvent; /* LONG_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary beingInsideAreaEvent
@@ -231,7 +231,7 @@ const Molr_Type_beingInsideAreaEvent: Molr_Type = 10; /* LONG_NAMED_ENUMERATED_V
  * @type {number}
  */
 export
-const beingInsideAreaEvent: Molr_Type = Molr_Type_beingInsideAreaEvent; /* SHORT_NAMED_ENUMERATED_VALUE */
+const beingInsideAreaEvent: _enum_for_Molr_Type.beingInsideAreaEvent = Molr_Type_beingInsideAreaEvent; /* SHORT_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary Molr_Type_motionEvent
@@ -239,7 +239,7 @@ const beingInsideAreaEvent: Molr_Type = Molr_Type_beingInsideAreaEvent; /* SHORT
  * @type {number}
  */
 export
-const Molr_Type_motionEvent: Molr_Type = 11; /* LONG_NAMED_ENUMERATED_VALUE */
+const Molr_Type_motionEvent: _enum_for_Molr_Type.motionEvent = _enum_for_Molr_Type.motionEvent; /* LONG_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary motionEvent
@@ -247,7 +247,7 @@ const Molr_Type_motionEvent: Molr_Type = 11; /* LONG_NAMED_ENUMERATED_VALUE */
  * @type {number}
  */
 export
-const motionEvent: Molr_Type = Molr_Type_motionEvent; /* SHORT_NAMED_ENUMERATED_VALUE */
+const motionEvent: _enum_for_Molr_Type.motionEvent = Molr_Type_motionEvent; /* SHORT_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary Molr_Type_maximumIntervalExpirationEvent
@@ -255,7 +255,7 @@ const motionEvent: Molr_Type = Molr_Type_motionEvent; /* SHORT_NAMED_ENUMERATED_
  * @type {number}
  */
 export
-const Molr_Type_maximumIntervalExpirationEvent: Molr_Type = 12; /* LONG_NAMED_ENUMERATED_VALUE */
+const Molr_Type_maximumIntervalExpirationEvent: _enum_for_Molr_Type.maximumIntervalExpirationEvent = _enum_for_Molr_Type.maximumIntervalExpirationEvent; /* LONG_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary maximumIntervalExpirationEvent
@@ -263,7 +263,7 @@ const Molr_Type_maximumIntervalExpirationEvent: Molr_Type = 12; /* LONG_NAMED_EN
  * @type {number}
  */
 export
-const maximumIntervalExpirationEvent: Molr_Type = Molr_Type_maximumIntervalExpirationEvent; /* SHORT_NAMED_ENUMERATED_VALUE */
+const maximumIntervalExpirationEvent: _enum_for_Molr_Type.maximumIntervalExpirationEvent = Molr_Type_maximumIntervalExpirationEvent; /* SHORT_NAMED_ENUMERATED_VALUE */
 
 export
 const _decode_Molr_Type: $.ASN1Decoder<Molr_Type> = $._decodeEnumerated;

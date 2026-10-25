@@ -1,7 +1,7 @@
 /* eslint-disable */
 import {
-    OPTIONAL,
-    ASN1Element as _Element,
+    type OPTIONAL,
+    type ASN1Element as _Element,
     ASN1TagClass as _TagClass,
     ASN1Construction as _Construction,
     ASN1UniversalType as _UniversalType,
@@ -11,8 +11,8 @@ import {
     ASN1ConstructionError as _ConstructionError,
 } from "@wildboar/asn1";
 import * as $ from "@wildboar/asn1/functional";
-import { CountersValue, _decode_CountersValue, _encode_CountersValue } from "../Core-INAP-CS1-DataTypes/CountersValue.ta.mjs";
-import { FilteringCriteria, _decode_FilteringCriteria, _encode_FilteringCriteria } from "../Core-INAP-CS1-DataTypes/FilteringCriteria.ta.mjs";
+import { type CountersValue, _decode_CountersValue, _encode_CountersValue } from "../Core-INAP-CS1-DataTypes/CountersValue.ta.mjs";
+import { type FilteringCriteria, _decode_FilteringCriteria, _encode_FilteringCriteria } from "../Core-INAP-CS1-DataTypes/FilteringCriteria.ta.mjs";
 import { ExtensionField, _decode_ExtensionField, _encode_ExtensionField } from "../Core-INAP-CS1-DataTypes/ExtensionField.ta.mjs";
 
 
@@ -35,26 +35,34 @@ import { ExtensionField, _decode_ExtensionField, _encode_ExtensionField } from "
  */
 export
 class ServiceFilteringResponseArg {
+    /**
+     * @summary `countersValue`.
+     * @public
+     * @readonly
+     */
+    public readonly countersValue: CountersValue;
+    /**
+     * @summary `filteringCriteria`.
+     * @public
+     * @readonly
+     */
+    public readonly filteringCriteria: FilteringCriteria;
+    /**
+     * @summary `extensions`.
+     * @public
+     * @readonly
+     */
+    public readonly extensions?: OPTIONAL<ExtensionField[]>;
+
     constructor (
-        /**
-         * @summary `countersValue`.
-         * @public
-         * @readonly
-         */
-        readonly countersValue: CountersValue,
-        /**
-         * @summary `filteringCriteria`.
-         * @public
-         * @readonly
-         */
-        readonly filteringCriteria: FilteringCriteria,
-        /**
-         * @summary `extensions`.
-         * @public
-         * @readonly
-         */
-        readonly extensions?: OPTIONAL<ExtensionField[]>
-    ) {}
+        countersValue: CountersValue,
+        filteringCriteria: FilteringCriteria,
+        extensions?: OPTIONAL<ExtensionField[]>
+    ) {
+        this.countersValue = countersValue;
+        this.filteringCriteria = filteringCriteria;
+        this.extensions = extensions;
+    }
 
     /**
      * @summary Restructures an object into a ServiceFilteringResponseArg

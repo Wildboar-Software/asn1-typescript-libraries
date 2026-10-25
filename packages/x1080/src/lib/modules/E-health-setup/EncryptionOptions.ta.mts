@@ -1,7 +1,7 @@
 /* eslint-disable */
 import {
-    BOOLEAN,
-    ASN1Element as _Element,
+    type BOOLEAN,
+    type ASN1Element as _Element,
     ASN1TagClass as _TagClass,
     ASN1Construction as _Construction,
     ASN1UniversalType as _UniversalType,
@@ -35,12 +35,12 @@ export type EncryptionOptions = BOOLEAN; // BooleanType
 
 
 
-export const _decode_EncryptionOptions = $._decodeBoolean;
+export const _decode_EncryptionOptions: $.ASN1Decoder<boolean> = $._decodeBoolean;
 
 
 
 
-export const _encode_EncryptionOptions = $._encodeBoolean;
+export const _encode_EncryptionOptions: $.ASN1Encoder<boolean> = $._encodeBoolean;
 
 
 /* eslint-enable */

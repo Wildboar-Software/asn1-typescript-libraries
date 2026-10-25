@@ -1,7 +1,7 @@
 /* eslint-disable */
 import {
-    OPTIONAL,
-    ASN1Element as _Element,
+    type OPTIONAL,
+    type ASN1Element as _Element,
     ASN1TagClass as _TagClass
 } from "@wildboar/asn1";
 import * as $ from "@wildboar/asn1/functional";
@@ -11,7 +11,7 @@ import { PositioningMode, _decode_PositioningMode, _encode_PositioningMode, _enu
 // export { PositioningMode, _enum_for_PositioningMode, PositioningMode_uEBased /* IMPORTED_LONG_ENUMERATION_ITEM */, uEBased /* IMPORTED_SHORT_ENUMERATION_ITEM */, PositioningMode_uEAssisted /* IMPORTED_LONG_ENUMERATION_ITEM */, uEAssisted /* IMPORTED_SHORT_ENUMERATION_ITEM */, PositioningMode_conventional /* IMPORTED_LONG_ENUMERATION_ITEM */, conventional /* IMPORTED_SHORT_ENUMERATION_ITEM */, _decode_PositioningMode, _encode_PositioningMode } from "../TS33128Payloads/PositioningMode.ta.mjs";
 import { Usage, _decode_Usage, _encode_Usage, _enum_for_Usage } from "../TS33128Payloads/Usage.ta.mjs";
 // export { Usage, _enum_for_Usage, Usage_unsuccess /* IMPORTED_LONG_ENUMERATION_ITEM */, unsuccess /* IMPORTED_SHORT_ENUMERATION_ITEM */, Usage_successResultsNotUsed /* IMPORTED_LONG_ENUMERATION_ITEM */, successResultsNotUsed /* IMPORTED_SHORT_ENUMERATION_ITEM */, Usage_successResultsUsedToVerifyLocation /* IMPORTED_LONG_ENUMERATION_ITEM */, successResultsUsedToVerifyLocation /* IMPORTED_SHORT_ENUMERATION_ITEM */, Usage_successResultsUsedToGenerateLocation /* IMPORTED_LONG_ENUMERATION_ITEM */, successResultsUsedToGenerateLocation /* IMPORTED_SHORT_ENUMERATION_ITEM */, Usage_successMethodNotDetermined /* IMPORTED_LONG_ENUMERATION_ITEM */, successMethodNotDetermined /* IMPORTED_SHORT_ENUMERATION_ITEM */, _decode_Usage, _encode_Usage } from "../TS33128Payloads/Usage.ta.mjs";
-import { MethodCode, _decode_MethodCode, _encode_MethodCode } from "../TS33128Payloads/MethodCode.ta.mjs";
+import { type MethodCode, _decode_MethodCode, _encode_MethodCode } from "../TS33128Payloads/MethodCode.ta.mjs";
 // export { MethodCode, _decode_MethodCode, _encode_MethodCode } from "../TS33128Payloads/MethodCode.ta.mjs";
 
 
@@ -139,19 +139,19 @@ class PositioningMethodAndUsage {
          * @static
          */
 
-    public static _enum_for_method = _enum_for_PositioningMethod;        /**
+    public static _enum_for_method: typeof _enum_for_PositioningMethod = _enum_for_PositioningMethod;        /**
          * @summary The enum used as the type of the component `mode`
          * @public
          * @static
          */
 
-    public static _enum_for_mode = _enum_for_PositioningMode;        /**
+    public static _enum_for_mode: typeof _enum_for_PositioningMode = _enum_for_PositioningMode;        /**
          * @summary The enum used as the type of the component `usage`
          * @public
          * @static
          */
 
-    public static _enum_for_usage = _enum_for_Usage;
+    public static _enum_for_usage: typeof _enum_for_Usage = _enum_for_Usage;
 }
 
 /**

@@ -1,7 +1,7 @@
 /* eslint-disable */
 import {
     ASN1ConstructionError as _ConstructionError,
-    ASN1Element as _Element,
+    type ASN1Element as _Element,
     ASN1TagClass as _TagClass,
 } from "@wildboar/asn1";
 import * as $ from "@wildboar/asn1/functional";
@@ -31,26 +31,34 @@ import {
  *
  */
 export class ACIItem_itemOrUserFirst_itemFirst {
+    /**
+     * @summary `protectedItems`.
+     * @public
+     * @readonly
+     */
+    public readonly protectedItems: ProtectedItems;
+    /**
+     * @summary `itemPermissions`.
+     * @public
+     * @readonly
+     */
+    public readonly itemPermissions: ItemPermission[];
+    /**
+     * @summary Extensions that are not recognized.
+     * @public
+     * @readonly
+     */
+    public readonly _unrecognizedExtensionsList: _Element[];
+
     constructor(
-        /**
-         * @summary `protectedItems`.
-         * @public
-         * @readonly
-         */
-        readonly protectedItems: ProtectedItems,
-        /**
-         * @summary `itemPermissions`.
-         * @public
-         * @readonly
-         */
-        readonly itemPermissions: ItemPermission[],
-        /**
-         * @summary Extensions that are not recognized.
-         * @public
-         * @readonly
-         */
-        readonly _unrecognizedExtensionsList: _Element[] = []
-    ) {}
+        protectedItems: ProtectedItems,
+        itemPermissions: ItemPermission[],
+        _unrecognizedExtensionsList: _Element[] = []
+    ) {
+        this.protectedItems = protectedItems;
+        this.itemPermissions = itemPermissions;
+        this._unrecognizedExtensionsList = _unrecognizedExtensionsList;
+    }
 
     /**
      * @summary Restructures an object into a ACIItem_itemOrUserFirst_itemFirst

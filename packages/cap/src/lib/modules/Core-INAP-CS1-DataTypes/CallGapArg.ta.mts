@@ -1,7 +1,7 @@
 /* eslint-disable */
 import {
-    OPTIONAL,
-    ASN1Element as _Element,
+    type OPTIONAL,
+    type ASN1Element as _Element,
     ASN1TagClass as _TagClass,
     ASN1Construction as _Construction,
     ASN1UniversalType as _UniversalType,
@@ -11,10 +11,10 @@ import {
     ASN1ConstructionError as _ConstructionError,
 } from "@wildboar/asn1";
 import * as $ from "@wildboar/asn1/functional";
-import { GapCriteria, _decode_GapCriteria, _encode_GapCriteria } from "../Core-INAP-CS1-DataTypes/GapCriteria.ta.mjs";
+import { type GapCriteria, _decode_GapCriteria, _encode_GapCriteria } from "../Core-INAP-CS1-DataTypes/GapCriteria.ta.mjs";
 import { GapIndicators, _decode_GapIndicators, _encode_GapIndicators } from "../Core-INAP-CS1-DataTypes/GapIndicators.ta.mjs";
 import { ControlType, _enum_for_ControlType, _decode_ControlType, _encode_ControlType } from "../Core-INAP-CS1-DataTypes/ControlType.ta.mjs";
-import { GapTreatment, _decode_GapTreatment, _encode_GapTreatment } from "../Core-INAP-CS1-DataTypes/GapTreatment.ta.mjs";
+import { type GapTreatment, _decode_GapTreatment, _encode_GapTreatment } from "../Core-INAP-CS1-DataTypes/GapTreatment.ta.mjs";
 import { ExtensionField, _decode_ExtensionField, _encode_ExtensionField } from "../Core-INAP-CS1-DataTypes/ExtensionField.ta.mjs";
 
 
@@ -28,8 +28,8 @@ import { ExtensionField, _decode_ExtensionField, _encode_ExtensionField } from "
  * CallGapArg ::= SEQUENCE {
  *      gapCriteria     [0] GapCriteria,
  *      gapIndicators     [1] GapIndicators,
- *      controlType     [2] ControlType     OPTIONAL,
- *      gapTreatment     [3] GapTreatment     OPTIONAL,
+ *      controlType     [2] ControlType     type OPTIONAL,
+ *      gapTreatment     [3] GapTreatment     type OPTIONAL,
  *      extensions     [4] SEQUENCE SIZE(1..numOfExtensions) OF ExtensionField     OPTIONAL
  * --  ...
  *      }
@@ -39,38 +39,50 @@ import { ExtensionField, _decode_ExtensionField, _encode_ExtensionField } from "
  */
 export
 class CallGapArg {
+    /**
+     * @summary `gapCriteria`.
+     * @public
+     * @readonly
+     */
+    public readonly gapCriteria: GapCriteria;
+    /**
+     * @summary `gapIndicators`.
+     * @public
+     * @readonly
+     */
+    public readonly gapIndicators: GapIndicators;
+    /**
+     * @summary `controlType`.
+     * @public
+     * @readonly
+     */
+    public readonly controlType?: OPTIONAL<ControlType>;
+    /**
+     * @summary `gapTreatment`.
+     * @public
+     * @readonly
+     */
+    public readonly gapTreatment?: OPTIONAL<GapTreatment>;
+    /**
+     * @summary `extensions`.
+     * @public
+     * @readonly
+     */
+    public readonly extensions?: OPTIONAL<ExtensionField[]>;
+
     constructor (
-        /**
-         * @summary `gapCriteria`.
-         * @public
-         * @readonly
-         */
-        readonly gapCriteria: GapCriteria,
-        /**
-         * @summary `gapIndicators`.
-         * @public
-         * @readonly
-         */
-        readonly gapIndicators: GapIndicators,
-        /**
-         * @summary `controlType`.
-         * @public
-         * @readonly
-         */
-        readonly controlType?: OPTIONAL<ControlType>,
-        /**
-         * @summary `gapTreatment`.
-         * @public
-         * @readonly
-         */
-        readonly gapTreatment?: OPTIONAL<GapTreatment>,
-        /**
-         * @summary `extensions`.
-         * @public
-         * @readonly
-         */
-        readonly extensions?: OPTIONAL<ExtensionField[]>
-    ) {}
+        gapCriteria: GapCriteria,
+        gapIndicators: GapIndicators,
+        controlType?: OPTIONAL<ControlType>,
+        gapTreatment?: OPTIONAL<GapTreatment>,
+        extensions?: OPTIONAL<ExtensionField[]>
+    ) {
+        this.gapCriteria = gapCriteria;
+        this.gapIndicators = gapIndicators;
+        this.controlType = controlType;
+        this.gapTreatment = gapTreatment;
+        this.extensions = extensions;
+    }
 
     /**
      * @summary Restructures an object into a CallGapArg
@@ -94,7 +106,7 @@ class CallGapArg {
          * @static
          */
 
-    public static _enum_for_controlType = _enum_for_ControlType;
+    public static _enum_for_controlType: typeof _enum_for_ControlType = _enum_for_ControlType;
 }
 
 /**

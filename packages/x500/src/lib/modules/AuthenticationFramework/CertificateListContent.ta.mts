@@ -1,8 +1,8 @@
 /* eslint-disable */
 import {
-    ASN1Element as _Element,
+    type ASN1Element as _Element,
     ASN1TagClass as _TagClass,
-    OPTIONAL,
+    type OPTIONAL,
 } from "@wildboar/asn1";
 import * as $ from "@wildboar/asn1/functional";
 import {
@@ -16,22 +16,22 @@ import {
     _encode_CertificateListContent_revokedCertificates_Item,
 } from "../AuthenticationFramework/CertificateListContent-revokedCertificates-Item.ta.mjs";
 import {
-    Extensions,
+    type Extensions,
     _decode_Extensions,
     _encode_Extensions,
 } from "../AuthenticationFramework/Extensions.ta.mjs";
 import {
-    Time,
+    type Time,
     _decode_Time,
     _encode_Time,
 } from "../AuthenticationFramework/Time.ta.mjs";
 import {
-    Version,
+    type Version,
     _decode_Version,
     _encode_Version,
 } from "../AuthenticationFramework/Version.ta.mjs";
 import {
-    Name,
+    type Name,
     _decode_Name,
     _encode_Name,
 } from "../InformationFramework/Name.ta.mjs";
@@ -67,58 +67,78 @@ import {
  *
  */
 export class CertificateListContent {
+    /**
+     * @summary `version`.
+     * @public
+     * @readonly
+     */
+    public readonly version: OPTIONAL<Version>;
+    /**
+     * @summary `signature`.
+     * @public
+     * @readonly
+     */
+    public readonly signature: AlgorithmIdentifier;
+    /**
+     * @summary `issuer`.
+     * @public
+     * @readonly
+     */
+    public readonly issuer: Name;
+    /**
+     * @summary `thisUpdate`.
+     * @public
+     * @readonly
+     */
+    public readonly thisUpdate: Time;
+    /**
+     * @summary `nextUpdate`.
+     * @public
+     * @readonly
+     */
+    public readonly nextUpdate?: OPTIONAL<Time>;
+    /**
+     * @summary `revokedCertificates`.
+     * @public
+     * @readonly
+     */
+    public readonly revokedCertificates?: OPTIONAL<
+            CertificateListContent_revokedCertificates_Item[]
+        >;
+    /**
+     * @summary Extensions that are not recognized.
+     * @public
+     * @readonly
+     */
+    public readonly _unrecognizedExtensionsList: _Element[];
+    /**
+     * @summary `crlExtensions`.
+     * @public
+     * @readonly
+     */
+    public readonly crlExtensions?: OPTIONAL<Extensions>;
+
     constructor(
-        /**
-         * @summary `version`.
-         * @public
-         * @readonly
-         */
-        readonly version: OPTIONAL<Version>,
-        /**
-         * @summary `signature`.
-         * @public
-         * @readonly
-         */
-        readonly signature: AlgorithmIdentifier,
-        /**
-         * @summary `issuer`.
-         * @public
-         * @readonly
-         */
-        readonly issuer: Name,
-        /**
-         * @summary `thisUpdate`.
-         * @public
-         * @readonly
-         */
-        readonly thisUpdate: Time,
-        /**
-         * @summary `nextUpdate`.
-         * @public
-         * @readonly
-         */
-        readonly nextUpdate?: OPTIONAL<Time>,
-        /**
-         * @summary `revokedCertificates`.
-         * @public
-         * @readonly
-         */
-        readonly revokedCertificates?: OPTIONAL<
+        version: OPTIONAL<Version>,
+        signature: AlgorithmIdentifier,
+        issuer: Name,
+        thisUpdate: Time,
+        nextUpdate?: OPTIONAL<Time>,
+        revokedCertificates?: OPTIONAL<
             CertificateListContent_revokedCertificates_Item[]
         >,
-        /**
-         * @summary Extensions that are not recognized.
-         * @public
-         * @readonly
-         */
-        readonly _unrecognizedExtensionsList: _Element[] = [],
-        /**
-         * @summary `crlExtensions`.
-         * @public
-         * @readonly
-         */
-        readonly crlExtensions?: OPTIONAL<Extensions>
-    ) {}
+        _unrecognizedExtensionsList: _Element[] = [],
+        crlExtensions?: OPTIONAL<Extensions>
+    ) {
+        this.version = version;
+        this.signature = signature;
+        this.issuer = issuer;
+        this.thisUpdate = thisUpdate;
+        this.nextUpdate = nextUpdate;
+        this.revokedCertificates = revokedCertificates;
+        this._unrecognizedExtensionsList = _unrecognizedExtensionsList;
+        this.crlExtensions = crlExtensions;
+    }
 
     /**
      * @summary Restructures an object into a CertificateListContent

@@ -1,6 +1,6 @@
 /* eslint-disable */
 import {
-    ASN1Element as _Element,
+    type ASN1Element as _Element,
     ASN1TagClass as _TagClass,
     ASN1Construction as _Construction,
     ASN1UniversalType as _UniversalType,
@@ -60,14 +60,14 @@ export type EDINInitiatorField = _enum_for_EDINInitiatorField;
  *
  * @enum {number}
  */
-export const EDINInitiatorField = _enum_for_EDINInitiatorField;
+export const EDINInitiatorField: typeof _enum_for_EDINInitiatorField = _enum_for_EDINInitiatorField;
 
 /**
  * @summary EDINInitiatorField_internal_ua
  * @constant
  * @type {number}
  */
-export const EDINInitiatorField_internal_ua: EDINInitiatorField =
+export const EDINInitiatorField_internal_ua: _enum_for_EDINInitiatorField.internal_ua =
     EDINInitiatorField.internal_ua; /* LONG_NAMED_ENUMERATED_VALUE */
 
 /**
@@ -75,7 +75,7 @@ export const EDINInitiatorField_internal_ua: EDINInitiatorField =
  * @constant
  * @type {number}
  */
-export const internal_ua: EDINInitiatorField =
+export const internal_ua: _enum_for_EDINInitiatorField.internal_ua =
     EDINInitiatorField.internal_ua; /* SHORT_NAMED_ENUMERATED_VALUE */
 
 /**
@@ -83,7 +83,7 @@ export const internal_ua: EDINInitiatorField =
  * @constant
  * @type {number}
  */
-export const EDINInitiatorField_external_ua: EDINInitiatorField =
+export const EDINInitiatorField_external_ua: _enum_for_EDINInitiatorField.external_ua =
     EDINInitiatorField.external_ua; /* LONG_NAMED_ENUMERATED_VALUE */
 
 /**
@@ -91,7 +91,7 @@ export const EDINInitiatorField_external_ua: EDINInitiatorField =
  * @constant
  * @type {number}
  */
-export const external_ua: EDINInitiatorField =
+export const external_ua: _enum_for_EDINInitiatorField.external_ua =
     EDINInitiatorField.external_ua; /* SHORT_NAMED_ENUMERATED_VALUE */
 
 /**
@@ -99,7 +99,7 @@ export const external_ua: EDINInitiatorField =
  * @constant
  * @type {number}
  */
-export const EDINInitiatorField_internal_ms: EDINInitiatorField =
+export const EDINInitiatorField_internal_ms: _enum_for_EDINInitiatorField.internal_ms =
     EDINInitiatorField.internal_ms; /* LONG_NAMED_ENUMERATED_VALUE */
 
 /**
@@ -107,14 +107,26 @@ export const EDINInitiatorField_internal_ms: EDINInitiatorField =
  * @constant
  * @type {number}
  */
-export const internal_ms: EDINInitiatorField =
+export const internal_ms: _enum_for_EDINInitiatorField.internal_ms =
     EDINInitiatorField.internal_ms; /* SHORT_NAMED_ENUMERATED_VALUE */
 
 
-export const _decode_EDINInitiatorField = $._decodeEnumerated;
+export function _decode_EDINInitiatorField(el: _Element): EDINInitiatorField {
+    const enumerated = $._decodeEnumerated(el);
+    switch (enumerated) {
+        case EDINInitiatorField.internal_ua: return EDINInitiatorField.internal_ua;
+        case EDINInitiatorField.external_ua: return EDINInitiatorField.external_ua;
+        case EDINInitiatorField.internal_ms: return EDINInitiatorField.internal_ms;
+        default:
+            throw new _ConstructionError(
+                'Invalid ENUMERATED value ' + enumerated + ' for EDINInitiatorField.',
+                el,
+            );
+    }
+}
 
 
-export const _encode_EDINInitiatorField = $._encodeEnumerated;
+export const _encode_EDINInitiatorField: $.ASN1Encoder<EDINInitiatorField> = $._encodeEnumerated as $.ASN1Encoder<EDINInitiatorField>;
 
 
 /* eslint-enable */

@@ -1,7 +1,7 @@
 /* eslint-disable */
 import {
-    PrintableString,
-    ASN1Element as _Element,
+    type PrintableString,
+    type ASN1Element as _Element,
     ASN1TagClass as _TagClass,
     ASN1Construction as _Construction,
     ASN1UniversalType as _UniversalType,
@@ -34,7 +34,7 @@ export const _decode_CurrencyID = (el: _Element): CurrencyID => {
     }
     return value;
 };
-export const _encode_CurrencyID = $._encodePrintableString;
+export const _encode_CurrencyID: $.ASN1Encoder<string> = $._encodePrintableString;
 
 
 /* eslint-enable */

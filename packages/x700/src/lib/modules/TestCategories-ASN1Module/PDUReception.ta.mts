@@ -1,7 +1,7 @@
 /* eslint-disable */
 import {
-    OPTIONAL,
-    ASN1Element as _Element,
+    type OPTIONAL,
+    type ASN1Element as _Element,
     ASN1TagClass as _TagClass,
     ASN1Construction as _Construction,
     ASN1UniversalType as _UniversalType,
@@ -12,7 +12,7 @@ import {
 } from '@wildboar/asn1';
 import * as $ from '@wildboar/asn1/functional';
 import {
-    PDUType,
+    type PDUType,
     _decode_PDUType,
     _encode_PDUType,
 } from '../TestCategories-ASN1Module/PDUType.ta.mjs';
@@ -22,7 +22,7 @@ import {
     _encode_Parameter,
 } from '../TestCategories-ASN1Module/Parameter.ta.mjs';
 import {
-    ResponseTimeout,
+    type ResponseTimeout,
     _decode_ResponseTimeout,
     _encode_ResponseTimeout,
 } from '../TestCategories-ASN1Module/ResponseTimeout.ta.mjs';
@@ -51,37 +51,45 @@ import {
  *
  */
 export class PDUReception {
+    /**
+     * @summary `pDUType`.
+     * @description
+     *
+     * Expected PDU type (OID). X.737 §7.5.6, A.7.
+     * @public
+     * @readonly
+     */
+    public readonly pDUType: PDUType;
+    /**
+     * @summary `parameter`.
+     * @description
+     *
+     * Parameters of the expected PDU. X.737 A.7.
+     * @public
+     * @readonly
+     */
+    public readonly parameter: Parameter;
+    /**
+     * @summary `responseTimeout`.
+     * @description
+     *
+     * Time allowed to receive the matching
+     * PDU before treating the condition as unmet. Optional. X.737
+     * §7.5.6.
+     * @public
+     * @readonly
+     */
+    public readonly responseTimeout?: OPTIONAL<ResponseTimeout>;
+
     constructor(
-        /**
-         * @summary `pDUType`.
-         * @description
-         *
-         * Expected PDU type (OID). X.737 §7.5.6, A.7.
-         * @public
-         * @readonly
-         */
-        readonly pDUType: PDUType,
-        /**
-         * @summary `parameter`.
-         * @description
-         *
-         * Parameters of the expected PDU. X.737 A.7.
-         * @public
-         * @readonly
-         */
-        readonly parameter: Parameter,
-        /**
-         * @summary `responseTimeout`.
-         * @description
-         *
-         * Time allowed to receive the matching
-         * PDU before treating the condition as unmet. Optional. X.737
-         * §7.5.6.
-         * @public
-         * @readonly
-         */
-        readonly responseTimeout?: OPTIONAL<ResponseTimeout>
-    ) {}
+        pDUType: PDUType,
+        parameter: Parameter,
+        responseTimeout?: OPTIONAL<ResponseTimeout>
+    ) {
+        this.pDUType = pDUType;
+        this.parameter = parameter;
+        this.responseTimeout = responseTimeout;
+    }
 
     /**
      * @summary Restructures an object into a PDUReception

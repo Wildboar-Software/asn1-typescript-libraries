@@ -1,22 +1,22 @@
 /* eslint-disable */
 import {
     ASN1ConstructionError as _ConstructionError,
-    ASN1Element as _Element,
+    type ASN1Element as _Element,
     ASN1TagClass as _TagClass,
 } from "@wildboar/asn1";
 import * as $ from "@wildboar/asn1/functional";
 import {
-    ContentIdentifier,
+    type ContentIdentifier,
     _decode_ContentIdentifier,
     _encode_ContentIdentifier,
 } from "../ExtendedSecurityServices-2006/ContentIdentifier.ta.mjs";
 import {
-    ReceiptsFrom,
+    type ReceiptsFrom,
     _decode_ReceiptsFrom,
     _encode_ReceiptsFrom,
 } from "../ExtendedSecurityServices-2006/ReceiptsFrom.ta.mjs";
 import {
-    GeneralNames,
+    type GeneralNames,
     _decode_GeneralNames,
     _encode_GeneralNames,
 } from "@wildboar/gn";
@@ -47,47 +47,55 @@ import {
  *
  */
 export class ReceiptRequest {
+    /**
+     * @summary `signedContentIdentifier`.
+     * @description
+     *
+     * Originator-created identifier associating the receipt with the message
+     * that requested it. MUST be created when building the request. For
+     * global uniqueness, the minimal value SHOULD concatenate user-specific
+     * identification, a `GeneralizedTime` string, and a random number
+     * ([RFC 2634 §2.7](https://datatracker.ietf.org/doc/html/rfc2634#section-2.7)).
+     *
+     * @public
+     * @readonly
+     */
+    public readonly signedContentIdentifier: ContentIdentifier;
+    /**
+     * @summary `receiptsFrom`.
+     * @description
+     *
+     * Which recipients are asked to return a signed receipt: all recipients,
+     * first-tier recipients only, or an explicit list ([RFC 2634 §2.7](https://datatracker.ietf.org/doc/html/rfc2634#section-2.7)).
+     *
+     * @public
+     * @readonly
+     */
+    public readonly receiptsFrom: ReceiptsFrom;
+    /**
+     * @summary `receiptsTo`.
+     * @description
+     *
+     * `SEQUENCE SIZE (1..ub-receiptsTo)` of `GeneralNames` naming entities
+     * that should receive the signed receipt. The originator MUST include a
+     * `GeneralNames` for itself if it wants the receipt. Each `GeneralNames`
+     * MUST at least carry the delivery address; other `GeneralName` choices
+     * MAY be included ([RFC 2634 §2.2](https://datatracker.ietf.org/doc/html/rfc2634#section-2.2); [RFC 2634 §2.7](https://datatracker.ietf.org/doc/html/rfc2634#section-2.7)).
+     *
+     * @public
+     * @readonly
+     */
+    public readonly receiptsTo: GeneralNames[];
+
     constructor(
-        /**
-         * @summary `signedContentIdentifier`.
-         * @description
-         *
-         * Originator-created identifier associating the receipt with the message
-         * that requested it. MUST be created when building the request. For
-         * global uniqueness, the minimal value SHOULD concatenate user-specific
-         * identification, a `GeneralizedTime` string, and a random number
-         * ([RFC 2634 §2.7](https://datatracker.ietf.org/doc/html/rfc2634#section-2.7)).
-         *
-         * @public
-         * @readonly
-         */
-        readonly signedContentIdentifier: ContentIdentifier,
-        /**
-         * @summary `receiptsFrom`.
-         * @description
-         *
-         * Which recipients are asked to return a signed receipt: all recipients,
-         * first-tier recipients only, or an explicit list ([RFC 2634 §2.7](https://datatracker.ietf.org/doc/html/rfc2634#section-2.7)).
-         *
-         * @public
-         * @readonly
-         */
-        readonly receiptsFrom: ReceiptsFrom,
-        /**
-         * @summary `receiptsTo`.
-         * @description
-         *
-         * `SEQUENCE SIZE (1..ub-receiptsTo)` of `GeneralNames` naming entities
-         * that should receive the signed receipt. The originator MUST include a
-         * `GeneralNames` for itself if it wants the receipt. Each `GeneralNames`
-         * MUST at least carry the delivery address; other `GeneralName` choices
-         * MAY be included ([RFC 2634 §2.2](https://datatracker.ietf.org/doc/html/rfc2634#section-2.2); [RFC 2634 §2.7](https://datatracker.ietf.org/doc/html/rfc2634#section-2.7)).
-         *
-         * @public
-         * @readonly
-         */
-        readonly receiptsTo: GeneralNames[]
-    ) {}
+        signedContentIdentifier: ContentIdentifier,
+        receiptsFrom: ReceiptsFrom,
+        receiptsTo: GeneralNames[]
+    ) {
+        this.signedContentIdentifier = signedContentIdentifier;
+        this.receiptsFrom = receiptsFrom;
+        this.receiptsTo = receiptsTo;
+    }
 
     /**
      * @summary Restructures an object into a ReceiptRequest

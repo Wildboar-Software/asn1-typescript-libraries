@@ -1,7 +1,7 @@
 /* eslint-disable */
 import {
-    BOOLEAN,
-    ASN1Element as _Element,
+    type BOOLEAN,
+    type ASN1Element as _Element,
     ASN1TagClass as _TagClass,
     ASN1Construction as _Construction,
     ASN1UniversalType as _UniversalType,
@@ -28,8 +28,8 @@ import * as $ from "@wildboar/asn1/functional";
  */
 export
 type Single_use_of_reference = BOOLEAN; // BooleanType
-export const _decode_Single_use_of_reference = $._decodeBoolean;
-export const _encode_Single_use_of_reference = $._encodeBoolean;
+export const _decode_Single_use_of_reference: $.ASN1Decoder<boolean> = $._decodeBoolean;
+export const _encode_Single_use_of_reference: $.ASN1Encoder<boolean> = $._encodeBoolean;
 
 
 /* eslint-enable */

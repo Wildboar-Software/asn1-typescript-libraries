@@ -1,19 +1,19 @@
 /* eslint-disable */
 import {
-    ASN1Element as _Element,
+    type ASN1Element as _Element,
     ASN1TagClass as _TagClass,
-    GeneralizedTime,
-    OBJECT_IDENTIFIER,
-    OPTIONAL,
+    type GeneralizedTime,
+    type OBJECT_IDENTIFIER,
+    type OPTIONAL,
 } from "@wildboar/asn1";
 import * as $ from "@wildboar/asn1/functional";
 import {
-    CertificateSerialNumber,
+    type CertificateSerialNumber,
     _decode_CertificateSerialNumber,
     _encode_CertificateSerialNumber,
 } from "../AuthenticationFramework/CertificateSerialNumber.ta.mjs";
 import {
-    Time,
+    type Time,
     _decode_Time,
     _encode_Time,
 } from "../AuthenticationFramework/Time.ta.mjs";
@@ -28,17 +28,17 @@ import {
     _encode_AuthorityKeyIdentifier,
 } from "../CertificateExtensions/AuthorityKeyIdentifier.ta.mjs";
 import {
-    CertPolicySet,
+    type CertPolicySet,
     _decode_CertPolicySet,
     _encode_CertPolicySet,
 } from "../CertificateExtensions/CertPolicySet.ta.mjs";
 import {
-    GeneralNames,
+    type GeneralNames,
     _decode_GeneralNames,
     _encode_GeneralNames,
 } from "../CertificateExtensions/GeneralNames.ta.mjs";
 import {
-    KeyUsage,
+    type KeyUsage,
     _decode_KeyUsage,
     _encode_KeyUsage,
 } from "../CertificateExtensions/KeyUsage.ta.mjs";
@@ -48,12 +48,12 @@ import {
     _encode_NameConstraintsSyntax,
 } from "../CertificateExtensions/NameConstraintsSyntax.ta.mjs";
 import {
-    SubjectKeyIdentifier,
+    type SubjectKeyIdentifier,
     _decode_SubjectKeyIdentifier,
     _encode_SubjectKeyIdentifier,
 } from "../CertificateExtensions/SubjectKeyIdentifier.ta.mjs";
 import {
-    Name,
+    type Name,
     _decode_Name,
     _encode_Name,
 } from "../InformationFramework/Name.ta.mjs";
@@ -89,92 +89,122 @@ import {
  *
  */
 export class EnhancedCertificateAssertion {
+    /**
+     * @summary `serialNumber`.
+     * @public
+     * @readonly
+     */
+    public readonly serialNumber?: OPTIONAL<CertificateSerialNumber>;
+    /**
+     * @summary `issuer`.
+     * @public
+     * @readonly
+     */
+    public readonly issuer?: OPTIONAL<Name>;
+    /**
+     * @summary `subjectKeyIdentifier`.
+     * @public
+     * @readonly
+     */
+    public readonly subjectKeyIdentifier?: OPTIONAL<SubjectKeyIdentifier>;
+    /**
+     * @summary `authorityKeyIdentifier`.
+     * @public
+     * @readonly
+     */
+    public readonly authorityKeyIdentifier?: OPTIONAL<AuthorityKeyIdentifier>;
+    /**
+     * @summary `certificateValid`.
+     * @public
+     * @readonly
+     */
+    public readonly certificateValid?: OPTIONAL<Time>;
+    /**
+     * @summary `privateKeyValid`.
+     * @public
+     * @readonly
+     */
+    public readonly privateKeyValid?: OPTIONAL<GeneralizedTime>;
+    /**
+     * @summary `subjectPublicKeyAlgID`.
+     * @public
+     * @readonly
+     */
+    public readonly subjectPublicKeyAlgID?: OPTIONAL<OBJECT_IDENTIFIER>;
+    /**
+     * @summary `keyUsage`.
+     * @public
+     * @readonly
+     */
+    public readonly keyUsage?: OPTIONAL<KeyUsage>;
+    /**
+     * @summary `subjectAltName`.
+     * @public
+     * @readonly
+     */
+    public readonly subjectAltName?: OPTIONAL<AltName>;
+    /**
+     * @summary `policy`.
+     * @public
+     * @readonly
+     */
+    public readonly policy?: OPTIONAL<CertPolicySet>;
+    /**
+     * @summary `pathToName`.
+     * @public
+     * @readonly
+     */
+    public readonly pathToName?: OPTIONAL<GeneralNames>;
+    /**
+     * @summary `subject`.
+     * @public
+     * @readonly
+     */
+    public readonly subject?: OPTIONAL<Name>;
+    /**
+     * @summary `nameConstraints`.
+     * @public
+     * @readonly
+     */
+    public readonly nameConstraints?: OPTIONAL<NameConstraintsSyntax>;
+    /**
+     * @summary Extensions that are not recognized.
+     * @public
+     * @readonly
+     */
+    public readonly _unrecognizedExtensionsList: _Element[];
+
     constructor(
-        /**
-         * @summary `serialNumber`.
-         * @public
-         * @readonly
-         */
-        readonly serialNumber?: OPTIONAL<CertificateSerialNumber>,
-        /**
-         * @summary `issuer`.
-         * @public
-         * @readonly
-         */
-        readonly issuer?: OPTIONAL<Name>,
-        /**
-         * @summary `subjectKeyIdentifier`.
-         * @public
-         * @readonly
-         */
-        readonly subjectKeyIdentifier?: OPTIONAL<SubjectKeyIdentifier>,
-        /**
-         * @summary `authorityKeyIdentifier`.
-         * @public
-         * @readonly
-         */
-        readonly authorityKeyIdentifier?: OPTIONAL<AuthorityKeyIdentifier>,
-        /**
-         * @summary `certificateValid`.
-         * @public
-         * @readonly
-         */
-        readonly certificateValid?: OPTIONAL<Time>,
-        /**
-         * @summary `privateKeyValid`.
-         * @public
-         * @readonly
-         */
-        readonly privateKeyValid?: OPTIONAL<GeneralizedTime>,
-        /**
-         * @summary `subjectPublicKeyAlgID`.
-         * @public
-         * @readonly
-         */
-        readonly subjectPublicKeyAlgID?: OPTIONAL<OBJECT_IDENTIFIER>,
-        /**
-         * @summary `keyUsage`.
-         * @public
-         * @readonly
-         */
-        readonly keyUsage?: OPTIONAL<KeyUsage>,
-        /**
-         * @summary `subjectAltName`.
-         * @public
-         * @readonly
-         */
-        readonly subjectAltName?: OPTIONAL<AltName>,
-        /**
-         * @summary `policy`.
-         * @public
-         * @readonly
-         */
-        readonly policy?: OPTIONAL<CertPolicySet>,
-        /**
-         * @summary `pathToName`.
-         * @public
-         * @readonly
-         */
-        readonly pathToName?: OPTIONAL<GeneralNames>,
-        /**
-         * @summary `subject`.
-         * @public
-         * @readonly
-         */
-        readonly subject?: OPTIONAL<Name>,
-        /**
-         * @summary `nameConstraints`.
-         * @public
-         * @readonly
-         */
-        readonly nameConstraints?: OPTIONAL<NameConstraintsSyntax>,
-        /**
-         * @summary Extensions that are not recognized.
-         * @public
-         * @readonly
-         */
-        readonly _unrecognizedExtensionsList: _Element[] = []
-    ) {}
+        serialNumber?: OPTIONAL<CertificateSerialNumber>,
+        issuer?: OPTIONAL<Name>,
+        subjectKeyIdentifier?: OPTIONAL<SubjectKeyIdentifier>,
+        authorityKeyIdentifier?: OPTIONAL<AuthorityKeyIdentifier>,
+        certificateValid?: OPTIONAL<Time>,
+        privateKeyValid?: OPTIONAL<GeneralizedTime>,
+        subjectPublicKeyAlgID?: OPTIONAL<OBJECT_IDENTIFIER>,
+        keyUsage?: OPTIONAL<KeyUsage>,
+        subjectAltName?: OPTIONAL<AltName>,
+        policy?: OPTIONAL<CertPolicySet>,
+        pathToName?: OPTIONAL<GeneralNames>,
+        subject?: OPTIONAL<Name>,
+        nameConstraints?: OPTIONAL<NameConstraintsSyntax>,
+        _unrecognizedExtensionsList: _Element[] = []
+    ) {
+        this.serialNumber = serialNumber;
+        this.issuer = issuer;
+        this.subjectKeyIdentifier = subjectKeyIdentifier;
+        this.authorityKeyIdentifier = authorityKeyIdentifier;
+        this.certificateValid = certificateValid;
+        this.privateKeyValid = privateKeyValid;
+        this.subjectPublicKeyAlgID = subjectPublicKeyAlgID;
+        this.keyUsage = keyUsage;
+        this.subjectAltName = subjectAltName;
+        this.policy = policy;
+        this.pathToName = pathToName;
+        this.subject = subject;
+        this.nameConstraints = nameConstraints;
+        this._unrecognizedExtensionsList = _unrecognizedExtensionsList;
+    }
 
     /**
      * @summary Restructures an object into a EnhancedCertificateAssertion

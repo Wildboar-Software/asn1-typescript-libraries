@@ -1,6 +1,6 @@
 /* eslint-disable */
 import {
-  OBJECT_IDENTIFIER,
+  type OBJECT_IDENTIFIER,
   ASN1Element as _Element,
   ASN1TagClass as _TagClass,
   ASN1Construction as _Construction,
@@ -44,7 +44,7 @@ export class SecurityProtocol {
    * @public
    * @readonly
    */
-  readonly id: OBJECT_IDENTIFIER;
+  public readonly id: OBJECT_IDENTIFIER;
   /**
    * @summary `parameter`.
    * @description
@@ -55,7 +55,7 @@ export class SecurityProtocol {
    * @public
    * @readonly
    */
-  readonly parameter: _Element;
+  public readonly parameter: _Element;
 
   constructor(
     id: OBJECT_IDENTIFIER,

@@ -1,12 +1,12 @@
 /* eslint-disable */
 import {
-    OPTIONAL,
-    ASN1Element as _Element,
+    type OPTIONAL,
+    type ASN1Element as _Element,
     ASN1TagClass as _TagClass
 } from "@wildboar/asn1";
 import * as $ from "@wildboar/asn1/functional";
-import { PkgdName, _decode_PkgdName, _encode_PkgdName } from "../MEDIA-GATEWAY-CONTROL/PkgdName.ta.mjs";
-import { StreamID, _decode_StreamID, _encode_StreamID } from "../MEDIA-GATEWAY-CONTROL/StreamID.ta.mjs";
+import { type PkgdName, _decode_PkgdName, _encode_PkgdName } from "../MEDIA-GATEWAY-CONTROL/PkgdName.ta.mjs";
+import { type StreamID, _decode_StreamID, _encode_StreamID } from "../MEDIA-GATEWAY-CONTROL/StreamID.ta.mjs";
 
 
 /**
@@ -41,7 +41,7 @@ class IndAudEventBufferDescriptor {
      * @public
      * @readonly
      */
-    readonly eventName: PkgdName;
+    public readonly eventName: PkgdName;
     /**
      * @summary `streamID`.
      * @description
@@ -51,7 +51,7 @@ class IndAudEventBufferDescriptor {
      * @public
      * @readonly
      */
-    readonly streamID?: OPTIONAL<StreamID>;
+    public readonly streamID?: OPTIONAL<StreamID>;
     /**
      * @summary Extensions that are not recognized.
      * @description
@@ -62,7 +62,7 @@ class IndAudEventBufferDescriptor {
      * @public
      * @readonly
      */
-    readonly _unrecognizedExtensionsList: _Element[];
+    public readonly _unrecognizedExtensionsList: _Element[];
 
     constructor (
         eventName: PkgdName,

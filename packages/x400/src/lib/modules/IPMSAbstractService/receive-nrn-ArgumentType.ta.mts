@@ -1,6 +1,6 @@
 /* eslint-disable */
 import {
-    ASN1Element as _Element,
+    type ASN1Element as _Element,
     ASN1TagClass as _TagClass,
     ASN1Construction as _Construction,
     ASN1UniversalType as _UniversalType,
@@ -16,7 +16,7 @@ import {
     _encode_MessageDeliveryEnvelope,
 } from '../MTSAbstractService/MessageDeliveryEnvelope.ta.mjs';
 import {
-    NRN,
+    type NRN,
     _decode_NRN,
     _encode_NRN,
 } from '../IPMSInformationObjects/NRN.ta.mjs';
@@ -34,20 +34,26 @@ import {
  *
  */
 export class receive_nrn_ArgumentType {
+    /**
+     * @summary `envelope`.
+     * @public
+     * @readonly
+     */
+    public readonly envelope: MessageDeliveryEnvelope;
+    /**
+     * @summary `content`.
+     * @public
+     * @readonly
+     */
+    public readonly content: NRN;
+
     constructor(
-        /**
-         * @summary `envelope`.
-         * @public
-         * @readonly
-         */
-        readonly envelope: MessageDeliveryEnvelope,
-        /**
-         * @summary `content`.
-         * @public
-         * @readonly
-         */
-        readonly content: NRN
-    ) {}
+        envelope: MessageDeliveryEnvelope,
+        content: NRN
+    ) {
+        this.envelope = envelope;
+        this.content = content;
+    }
 
     /**
      * @summary Restructures an object into a receive_nrn_ArgumentType

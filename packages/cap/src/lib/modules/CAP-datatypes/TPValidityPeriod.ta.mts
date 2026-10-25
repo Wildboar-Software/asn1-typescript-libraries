@@ -1,6 +1,6 @@
 import {
-    OCTET_STRING,
-    ASN1Element as _Element,
+    type OCTET_STRING,
+    type ASN1Element as _Element,
     ASN1SizeError,
     ASN1TagClass as _TagClass,
 } from "@wildboar/asn1";
@@ -30,4 +30,4 @@ export const _decode_TPValidityPeriod = (el: _Element): TPValidityPeriod => {
     }
     return value;
 };
-export const _encode_TPValidityPeriod = $._encodeOctetString;
+export const _encode_TPValidityPeriod: $.ASN1Encoder<OCTET_STRING> = $._encodeOctetString;

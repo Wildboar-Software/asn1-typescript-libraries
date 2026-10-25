@@ -1,7 +1,7 @@
 /* eslint-disable */
 import {
-    OPTIONAL,
-    ASN1Element as _Element,
+    type OPTIONAL,
+    type ASN1Element as _Element,
     ASN1TagClass as _TagClass
 } from "@wildboar/asn1";
 import * as $ from "@wildboar/asn1/functional";
@@ -9,41 +9,41 @@ import { EPSAttachType, _decode_EPSAttachType, _encode_EPSAttachType, _enum_for_
 // export { EPSAttachType, _enum_for_EPSAttachType, EPSAttachType_ePSAttach /* IMPORTED_LONG_ENUMERATION_ITEM */, ePSAttach /* IMPORTED_SHORT_ENUMERATION_ITEM */, EPSAttachType_combinedEPSIMSIAttach /* IMPORTED_LONG_ENUMERATION_ITEM */, combinedEPSIMSIAttach /* IMPORTED_SHORT_ENUMERATION_ITEM */, EPSAttachType_ePSRLOSAttach /* IMPORTED_LONG_ENUMERATION_ITEM */, ePSRLOSAttach /* IMPORTED_SHORT_ENUMERATION_ITEM */, EPSAttachType_ePSEmergencyAttach /* IMPORTED_LONG_ENUMERATION_ITEM */, ePSEmergencyAttach /* IMPORTED_SHORT_ENUMERATION_ITEM */, EPSAttachType_reserved /* IMPORTED_LONG_ENUMERATION_ITEM */, reserved /* IMPORTED_SHORT_ENUMERATION_ITEM */, _decode_EPSAttachType, _encode_EPSAttachType } from "../TS33128Payloads/EPSAttachType.ta.mjs";
 import { EPSAttachResult, _decode_EPSAttachResult, _encode_EPSAttachResult, _enum_for_EPSAttachResult } from "../TS33128Payloads/EPSAttachResult.ta.mjs";
 // export { EPSAttachResult, _enum_for_EPSAttachResult, EPSAttachResult_ePSOnly /* IMPORTED_LONG_ENUMERATION_ITEM */, ePSOnly /* IMPORTED_SHORT_ENUMERATION_ITEM */, EPSAttachResult_combinedEPSIMSI /* IMPORTED_LONG_ENUMERATION_ITEM */, combinedEPSIMSI /* IMPORTED_SHORT_ENUMERATION_ITEM */, _decode_EPSAttachResult, _encode_EPSAttachResult } from "../TS33128Payloads/EPSAttachResult.ta.mjs";
-import { IMSI, _decode_IMSI, _encode_IMSI } from "../TS33128Payloads/IMSI.ta.mjs";
+import { type IMSI, _decode_IMSI, _encode_IMSI } from "../TS33128Payloads/IMSI.ta.mjs";
 // export { IMSI, _decode_IMSI, _encode_IMSI } from "../TS33128Payloads/IMSI.ta.mjs";
-import { IMEI, _decode_IMEI, _encode_IMEI } from "../TS33128Payloads/IMEI.ta.mjs";
+import { type IMEI, _decode_IMEI, _encode_IMEI } from "../TS33128Payloads/IMEI.ta.mjs";
 // export { IMEI, _decode_IMEI, _encode_IMEI } from "../TS33128Payloads/IMEI.ta.mjs";
-import { MSISDN, _decode_MSISDN, _encode_MSISDN } from "../TS33128Payloads/MSISDN.ta.mjs";
+import { type MSISDN, _decode_MSISDN, _encode_MSISDN } from "../TS33128Payloads/MSISDN.ta.mjs";
 // export { MSISDN, _decode_MSISDN, _encode_MSISDN } from "../TS33128Payloads/MSISDN.ta.mjs";
 import { GUTI, _decode_GUTI, _encode_GUTI } from "../TS33128Payloads/GUTI.ta.mjs";
 // export { GUTI, _decode_GUTI, _encode_GUTI } from "../TS33128Payloads/GUTI.ta.mjs";
 import { Location, _decode_Location, _encode_Location } from "../TS33128Payloads/Location.ta.mjs";
 // export { Location, _decode_Location, _encode_Location } from "../TS33128Payloads/Location.ta.mjs";
-import { TAIList, _decode_TAIList, _encode_TAIList } from "../TS33128Payloads/TAIList.ta.mjs";
+import { type TAIList, _decode_TAIList, _encode_TAIList } from "../TS33128Payloads/TAIList.ta.mjs";
 // export { TAIList, _decode_TAIList, _encode_TAIList } from "../TS33128Payloads/TAIList.ta.mjs";
 import { EPSSMSServiceStatus, _decode_EPSSMSServiceStatus, _encode_EPSSMSServiceStatus, _enum_for_EPSSMSServiceStatus } from "../TS33128Payloads/EPSSMSServiceStatus.ta.mjs";
 // export { EPSSMSServiceStatus, _enum_for_EPSSMSServiceStatus, EPSSMSServiceStatus_sMSServicesNotAvailable /* IMPORTED_LONG_ENUMERATION_ITEM */, sMSServicesNotAvailable /* IMPORTED_SHORT_ENUMERATION_ITEM */, EPSSMSServiceStatus_sMSServicesNotAvailableInThisPLMN /* IMPORTED_LONG_ENUMERATION_ITEM */, sMSServicesNotAvailableInThisPLMN /* IMPORTED_SHORT_ENUMERATION_ITEM */, EPSSMSServiceStatus_networkFailure /* IMPORTED_LONG_ENUMERATION_ITEM */, networkFailure /* IMPORTED_SHORT_ENUMERATION_ITEM */, EPSSMSServiceStatus_congestion /* IMPORTED_LONG_ENUMERATION_ITEM */, congestion /* IMPORTED_SHORT_ENUMERATION_ITEM */, _decode_EPSSMSServiceStatus, _encode_EPSSMSServiceStatus } from "../TS33128Payloads/EPSSMSServiceStatus.ta.mjs";
 import { EMM5GMMStatus, _decode_EMM5GMMStatus, _encode_EMM5GMMStatus } from "../TS33128Payloads/EMM5GMMStatus.ta.mjs";
 // export { EMM5GMMStatus, _decode_EMM5GMMStatus, _encode_EMM5GMMStatus } from "../TS33128Payloads/EMM5GMMStatus.ta.mjs";
-import { PagingRestrictionIndicator, _decode_PagingRestrictionIndicator, _encode_PagingRestrictionIndicator } from "../TS33128Payloads/PagingRestrictionIndicator.ta.mjs";
+import { type PagingRestrictionIndicator, _decode_PagingRestrictionIndicator, _encode_PagingRestrictionIndicator } from "../TS33128Payloads/PagingRestrictionIndicator.ta.mjs";
 // export { PagingRestrictionIndicator, _decode_PagingRestrictionIndicator, _encode_PagingRestrictionIndicator } from "../TS33128Payloads/PagingRestrictionIndicator.ta.mjs";
 import { RATType, _decode_RATType, _encode_RATType, _enum_for_RATType } from "../TS33128Payloads/RATType.ta.mjs";
 // export { RATType, _enum_for_RATType, RATType_nR /* IMPORTED_LONG_ENUMERATION_ITEM */, nR /* IMPORTED_SHORT_ENUMERATION_ITEM */, RATType_eUTRA /* IMPORTED_LONG_ENUMERATION_ITEM */, eUTRA /* IMPORTED_SHORT_ENUMERATION_ITEM */, RATType_wLAN /* IMPORTED_LONG_ENUMERATION_ITEM */, wLAN /* IMPORTED_SHORT_ENUMERATION_ITEM */, RATType_virtual /* IMPORTED_LONG_ENUMERATION_ITEM */, virtual /* IMPORTED_SHORT_ENUMERATION_ITEM */, RATType_nBIOT /* IMPORTED_LONG_ENUMERATION_ITEM */, nBIOT /* IMPORTED_SHORT_ENUMERATION_ITEM */, RATType_wireline /* IMPORTED_LONG_ENUMERATION_ITEM */, wireline /* IMPORTED_SHORT_ENUMERATION_ITEM */, RATType_wirelineCable /* IMPORTED_LONG_ENUMERATION_ITEM */, wirelineCable /* IMPORTED_SHORT_ENUMERATION_ITEM */, RATType_wirelineBBF /* IMPORTED_LONG_ENUMERATION_ITEM */, wirelineBBF /* IMPORTED_SHORT_ENUMERATION_ITEM */, RATType_lTEM /* IMPORTED_LONG_ENUMERATION_ITEM */, lTEM /* IMPORTED_SHORT_ENUMERATION_ITEM */, RATType_nRU /* IMPORTED_LONG_ENUMERATION_ITEM */, nRU /* IMPORTED_SHORT_ENUMERATION_ITEM */, RATType_eUTRAU /* IMPORTED_LONG_ENUMERATION_ITEM */, eUTRAU /* IMPORTED_SHORT_ENUMERATION_ITEM */, RATType_trustedN3GA /* IMPORTED_LONG_ENUMERATION_ITEM */, trustedN3GA /* IMPORTED_SHORT_ENUMERATION_ITEM */, RATType_trustedWLAN /* IMPORTED_LONG_ENUMERATION_ITEM */, trustedWLAN /* IMPORTED_SHORT_ENUMERATION_ITEM */, RATType_uTRA /* IMPORTED_LONG_ENUMERATION_ITEM */, uTRA /* IMPORTED_SHORT_ENUMERATION_ITEM */, RATType_gERA /* IMPORTED_LONG_ENUMERATION_ITEM */, gERA /* IMPORTED_SHORT_ENUMERATION_ITEM */, RATType_nRLEO /* IMPORTED_LONG_ENUMERATION_ITEM */, nRLEO /* IMPORTED_SHORT_ENUMERATION_ITEM */, RATType_nRMEO /* IMPORTED_LONG_ENUMERATION_ITEM */, nRMEO /* IMPORTED_SHORT_ENUMERATION_ITEM */, RATType_nRGEO /* IMPORTED_LONG_ENUMERATION_ITEM */, nRGEO /* IMPORTED_SHORT_ENUMERATION_ITEM */, RATType_nROTHERSAT /* IMPORTED_LONG_ENUMERATION_ITEM */, nROTHERSAT /* IMPORTED_SHORT_ENUMERATION_ITEM */, RATType_nRREDCAP /* IMPORTED_LONG_ENUMERATION_ITEM */, nRREDCAP /* IMPORTED_SHORT_ENUMERATION_ITEM */, RATType_wBEUTRANLEO /* IMPORTED_LONG_ENUMERATION_ITEM */, wBEUTRANLEO /* IMPORTED_SHORT_ENUMERATION_ITEM */, RATType_wBEUTRANMEO /* IMPORTED_LONG_ENUMERATION_ITEM */, wBEUTRANMEO /* IMPORTED_SHORT_ENUMERATION_ITEM */, RATType_wBEUTRANGEO /* IMPORTED_LONG_ENUMERATION_ITEM */, wBEUTRANGEO /* IMPORTED_SHORT_ENUMERATION_ITEM */, RATType_wBEUTRANOTHERSAT /* IMPORTED_LONG_ENUMERATION_ITEM */, wBEUTRANOTHERSAT /* IMPORTED_SHORT_ENUMERATION_ITEM */, RATType_nBIOTLEO /* IMPORTED_LONG_ENUMERATION_ITEM */, nBIOTLEO /* IMPORTED_SHORT_ENUMERATION_ITEM */, RATType_nBIOTMEO /* IMPORTED_LONG_ENUMERATION_ITEM */, nBIOTMEO /* IMPORTED_SHORT_ENUMERATION_ITEM */, RATType_nBIOTGEO /* IMPORTED_LONG_ENUMERATION_ITEM */, nBIOTGEO /* IMPORTED_SHORT_ENUMERATION_ITEM */, RATType_nBIOTOTHERSAT /* IMPORTED_LONG_ENUMERATION_ITEM */, nBIOTOTHERSAT /* IMPORTED_SHORT_ENUMERATION_ITEM */, RATType_lTEMLEO /* IMPORTED_LONG_ENUMERATION_ITEM */, lTEMLEO /* IMPORTED_SHORT_ENUMERATION_ITEM */, RATType_lTEMMEO /* IMPORTED_LONG_ENUMERATION_ITEM */, lTEMMEO /* IMPORTED_SHORT_ENUMERATION_ITEM */, RATType_lTEMGEO /* IMPORTED_LONG_ENUMERATION_ITEM */, lTEMGEO /* IMPORTED_SHORT_ENUMERATION_ITEM */, RATType_lTEMOTHERSAT /* IMPORTED_LONG_ENUMERATION_ITEM */, lTEMOTHERSAT /* IMPORTED_SHORT_ENUMERATION_ITEM */, RATType_nREREDCAP /* IMPORTED_LONG_ENUMERATION_ITEM */, nREREDCAP /* IMPORTED_SHORT_ENUMERATION_ITEM */, _decode_RATType, _encode_RATType } from "../TS33128Payloads/RATType.ta.mjs";
-import { RRCEstablishmentCause, _decode_RRCEstablishmentCause, _encode_RRCEstablishmentCause } from "../TS33128Payloads/RRCEstablishmentCause.ta.mjs";
+import { type RRCEstablishmentCause, _decode_RRCEstablishmentCause, _encode_RRCEstablishmentCause } from "../TS33128Payloads/RRCEstablishmentCause.ta.mjs";
 // export { RRCEstablishmentCause, _decode_RRCEstablishmentCause, _encode_RRCEstablishmentCause } from "../TS33128Payloads/RRCEstablishmentCause.ta.mjs";
 import { S1Information, _decode_S1Information, _encode_S1Information } from "../TS33128Payloads/S1Information.ta.mjs";
 // export { S1Information, _decode_S1Information, _encode_S1Information } from "../TS33128Payloads/S1Information.ta.mjs";
 import { EPSNASTransportInitialInformation, _decode_EPSNASTransportInitialInformation, _encode_EPSNASTransportInitialInformation } from "../TS33128Payloads/EPSNASTransportInitialInformation.ta.mjs";
 // export { EPSNASTransportInitialInformation, _decode_EPSNASTransportInitialInformation, _encode_EPSNASTransportInitialInformation } from "../TS33128Payloads/EPSNASTransportInitialInformation.ta.mjs";
-import { PLMNList, _decode_PLMNList, _encode_PLMNList } from "../TS33128Payloads/PLMNList.ta.mjs";
+import { type PLMNList, _decode_PLMNList, _encode_PLMNList } from "../TS33128Payloads/PLMNList.ta.mjs";
 // export { PLMNList, _decode_PLMNList, _encode_PLMNList } from "../TS33128Payloads/PLMNList.ta.mjs";
-import { EPSUENetworkCapability, _decode_EPSUENetworkCapability, _encode_EPSUENetworkCapability } from "../TS33128Payloads/EPSUENetworkCapability.ta.mjs";
+import { type EPSUENetworkCapability, _decode_EPSUENetworkCapability, _encode_EPSUENetworkCapability } from "../TS33128Payloads/EPSUENetworkCapability.ta.mjs";
 // export { EPSUENetworkCapability, _decode_EPSUENetworkCapability, _encode_EPSUENetworkCapability } from "../TS33128Payloads/EPSUENetworkCapability.ta.mjs";
 import { EPSRANUEContext, _decode_EPSRANUEContext, _encode_EPSRANUEContext } from "../TS33128Payloads/EPSRANUEContext.ta.mjs";
 // export { EPSRANUEContext, _decode_EPSRANUEContext, _encode_EPSRANUEContext } from "../TS33128Payloads/EPSRANUEContext.ta.mjs";
-import { MUSIMUERequestType, _decode_MUSIMUERequestType, _encode_MUSIMUERequestType } from "../TS33128Payloads/MUSIMUERequestType.ta.mjs";
+import { type MUSIMUERequestType, _decode_MUSIMUERequestType, _encode_MUSIMUERequestType } from "../TS33128Payloads/MUSIMUERequestType.ta.mjs";
 // export { MUSIMUERequestType, _decode_MUSIMUERequestType, _encode_MUSIMUERequestType } from "../TS33128Payloads/MUSIMUERequestType.ta.mjs";
-import { EPSNetworkPolicy, _decode_EPSNetworkPolicy, _encode_EPSNetworkPolicy } from "../TS33128Payloads/EPSNetworkPolicy.ta.mjs";
+import { type EPSNetworkPolicy, _decode_EPSNetworkPolicy, _encode_EPSNetworkPolicy } from "../TS33128Payloads/EPSNetworkPolicy.ta.mjs";
 // export { EPSNetworkPolicy, _decode_EPSNetworkPolicy, _encode_EPSNetworkPolicy } from "../TS33128Payloads/EPSNetworkPolicy.ta.mjs";
 
 
@@ -444,25 +444,25 @@ class MMEStartOfInterceptionWithEPSAttachedUE {
          * @static
          */
 
-    public static _enum_for_attachType = _enum_for_EPSAttachType;        /**
+    public static _enum_for_attachType: typeof _enum_for_EPSAttachType = _enum_for_EPSAttachType;        /**
          * @summary The enum used as the type of the component `attachResult`
          * @public
          * @static
          */
 
-    public static _enum_for_attachResult = _enum_for_EPSAttachResult;        /**
+    public static _enum_for_attachResult: typeof _enum_for_EPSAttachResult = _enum_for_EPSAttachResult;        /**
          * @summary The enum used as the type of the component `sMSServiceStatus`
          * @public
          * @static
          */
 
-    public static _enum_for_sMSServiceStatus = _enum_for_EPSSMSServiceStatus;        /**
+    public static _enum_for_sMSServiceStatus: typeof _enum_for_EPSSMSServiceStatus = _enum_for_EPSSMSServiceStatus;        /**
          * @summary The enum used as the type of the component `rATType`
          * @public
          * @static
          */
 
-    public static _enum_for_rATType = _enum_for_RATType;
+    public static _enum_for_rATType: typeof _enum_for_RATType = _enum_for_RATType;
 }
 
 /**

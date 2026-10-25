@@ -1,6 +1,6 @@
 /* eslint-disable */
 import {
-  ENUMERATED,
+  type ENUMERATED,
   ASN1Element as _Element,
   ASN1TagClass as _TagClass,
   ASN1Construction as _Construction,
@@ -49,7 +49,7 @@ export type C_NOCHANGE_RI_confirmation =
  * @constant
  * @type {number}
  */
-export const C_NOCHANGE_RI_confirmation_not_required: C_NOCHANGE_RI_confirmation = 0; /* LONG_NAMED_ENUMERATED_VALUE */
+export const C_NOCHANGE_RI_confirmation_not_required: 0 = _enum_for_C_NOCHANGE_RI_confirmation.not_required; /* LONG_NAMED_ENUMERATED_VALUE */
 
 
 /**
@@ -57,7 +57,7 @@ export const C_NOCHANGE_RI_confirmation_not_required: C_NOCHANGE_RI_confirmation
  * @constant
  * @type {number}
  */
-export const not_required: C_NOCHANGE_RI_confirmation = C_NOCHANGE_RI_confirmation_not_required; /* SHORT_NAMED_ENUMERATED_VALUE */
+export const not_required: 0 = C_NOCHANGE_RI_confirmation_not_required; /* SHORT_NAMED_ENUMERATED_VALUE */
 
 
 /**
@@ -66,7 +66,7 @@ export const not_required: C_NOCHANGE_RI_confirmation = C_NOCHANGE_RI_confirmati
  * @constant
  * @type {number}
  */
-export const C_NOCHANGE_RI_confirmation_result_requested: C_NOCHANGE_RI_confirmation = 1; /* LONG_NAMED_ENUMERATED_VALUE */
+export const C_NOCHANGE_RI_confirmation_result_requested: 1 = _enum_for_C_NOCHANGE_RI_confirmation.result_requested; /* LONG_NAMED_ENUMERATED_VALUE */
 
 
 /**
@@ -74,17 +74,17 @@ export const C_NOCHANGE_RI_confirmation_result_requested: C_NOCHANGE_RI_confirma
  * @constant
  * @type {number}
  */
-export const result_requested: C_NOCHANGE_RI_confirmation = C_NOCHANGE_RI_confirmation_result_requested; /* SHORT_NAMED_ENUMERATED_VALUE */
+export const result_requested: 1 = C_NOCHANGE_RI_confirmation_result_requested; /* SHORT_NAMED_ENUMERATED_VALUE */
 
 
 
 
-export const _decode_C_NOCHANGE_RI_confirmation = $._decodeEnumerated;
+export const _decode_C_NOCHANGE_RI_confirmation: $.ASN1Decoder<number> = $._decodeEnumerated;
 
 
 
 
-export const _encode_C_NOCHANGE_RI_confirmation = $._encodeEnumerated;
+export const _encode_C_NOCHANGE_RI_confirmation: $.ASN1Encoder<number> = $._encodeEnumerated;
 
 
 /* eslint-enable */

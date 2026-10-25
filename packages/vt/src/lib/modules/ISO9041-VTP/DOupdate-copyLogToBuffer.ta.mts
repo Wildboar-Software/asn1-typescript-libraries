@@ -1,9 +1,9 @@
 /* eslint-disable */
 import {
-    OPTIONAL,
-    NULL,
-    PrintableString,
-    ASN1Element as _Element,
+    type OPTIONAL,
+    type NULL,
+    type PrintableString,
+    type ASN1Element as _Element,
     ASN1TagClass as _TagClass,
     ASN1Construction as _Construction,
     ASN1UniversalType as _UniversalType,
@@ -13,7 +13,7 @@ import {
     ASN1ConstructionError as _ConstructionError,
 } from "@wildboar/asn1";
 import * as $ from "@wildboar/asn1/functional";
-import { LogPointer, _decode_LogPointer, _encode_LogPointer } from "../ISO9041-VTP/LogPointer.ta.mjs";
+import { type LogPointer, _decode_LogPointer, _encode_LogPointer } from "../ISO9041-VTP/LogPointer.ta.mjs";
 
 
 /**
@@ -45,54 +45,66 @@ import { LogPointer, _decode_LogPointer, _encode_LogPointer } from "../ISO9041-V
  */
 export
 class DOupdate_copyLogToBuffer {
+    /**
+     * @summary `address`.
+     * @description
+     * End of the logical copy extent. ISO/IEC 9040:1997 §19.4.2.5.
+     * @public
+     * @readonly
+     */
+    public readonly address: LogPointer;
+    /**
+     * @summary `rioName`.
+     * @description
+     * RIO name. SHALL be absent for the temporary buffer.
+     * Optional when the VTE has a single RIO.
+     * ISO/IEC 9040:1997 §19.4.2.5; ISO/IEC 9041-1:1997 §12.1.
+     * @public
+     * @readonly
+     */
+    public readonly rioName?: OPTIONAL<PrintableString>;
+    /**
+     * @summary `recordId`.
+     * @description
+     * RIO record identifier. SHALL be absent for the temporary
+     * buffer; present when a RIO is the target.
+     * ISO/IEC 9040:1997 §19.4.2.5; ISO/IEC 9041-1:1997 §12.1.
+     * @public
+     * @readonly
+     */
+    public readonly recordId?: OPTIONAL<PrintableString>;
+    /**
+     * @summary `rendition`.
+     * @description
+     * Present ⇒ `"copy attributes"`; absent ⇒
+     * `"no attribute copy"`. ISO/IEC 9040:1997 §19.4.2.5.
+     * @public
+     * @readonly
+     */
+    public readonly rendition?: OPTIONAL<NULL>;
+    /**
+     * @summary `structure`.
+     * @description
+     * Present ⇒ `"x"`; absent ⇒ `"none"`.
+     * ISO/IEC 9040:1997 §19.4.2.5.
+     * @public
+     * @readonly
+     */
+    public readonly structure?: OPTIONAL<NULL>;
+
     constructor (
-        /**
-         * @summary `address`.
-         * @description
-         * End of the logical copy extent. ISO/IEC 9040:1997 §19.4.2.5.
-         * @public
-         * @readonly
-         */
-        readonly address: LogPointer,
-        /**
-         * @summary `rioName`.
-         * @description
-         * RIO name. SHALL be absent for the temporary buffer.
-         * Optional when the VTE has a single RIO.
-         * ISO/IEC 9040:1997 §19.4.2.5; ISO/IEC 9041-1:1997 §12.1.
-         * @public
-         * @readonly
-         */
-        readonly rioName?: OPTIONAL<PrintableString>,
-        /**
-         * @summary `recordId`.
-         * @description
-         * RIO record identifier. SHALL be absent for the temporary
-         * buffer; present when a RIO is the target.
-         * ISO/IEC 9040:1997 §19.4.2.5; ISO/IEC 9041-1:1997 §12.1.
-         * @public
-         * @readonly
-         */
-        readonly recordId?: OPTIONAL<PrintableString>,
-        /**
-         * @summary `rendition`.
-         * @description
-         * Present ⇒ `"copy attributes"`; absent ⇒
-         * `"no attribute copy"`. ISO/IEC 9040:1997 §19.4.2.5.
-         * @public
-         * @readonly
-         */
-        readonly rendition?: OPTIONAL<NULL>,
-        /**
-         * @summary `structure`.
-         * @description
-         * Present ⇒ `"x"`; absent ⇒ `"none"`.
-         * ISO/IEC 9040:1997 §19.4.2.5.
-         * @public
-         * @readonly
-         */
-        readonly structure?: OPTIONAL<NULL>
-    ) {}
+        address: LogPointer,
+        rioName?: OPTIONAL<PrintableString>,
+        recordId?: OPTIONAL<PrintableString>,
+        rendition?: OPTIONAL<NULL>,
+        structure?: OPTIONAL<NULL>
+    ) {
+        this.address = address;
+        this.rioName = rioName;
+        this.recordId = recordId;
+        this.rendition = rendition;
+        this.structure = structure;
+    }
 
     /**
      * @summary Restructures an object into a DOupdate_copyLogToBuffer

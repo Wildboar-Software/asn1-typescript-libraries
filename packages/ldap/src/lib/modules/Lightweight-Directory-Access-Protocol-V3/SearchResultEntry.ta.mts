@@ -13,12 +13,12 @@ import {
 } from '@wildboar/asn1';
 import * as $ from '@wildboar/asn1/functional';
 import {
-  LDAPDN,
+  type LDAPDN,
   _decode_LDAPDN,
   _encode_LDAPDN,
 } from '../Lightweight-Directory-Access-Protocol-V3/LDAPDN.ta.mjs';
 import {
-  PartialAttributeList,
+  type PartialAttributeList,
   _decode_PartialAttributeList,
   _encode_PartialAttributeList,
 } from '../Lightweight-Directory-Access-Protocol-V3/PartialAttributeList.ta.mjs';
@@ -54,7 +54,7 @@ export class SearchResultEntry {
    * @public
    * @readonly
    */
-  readonly objectName: LDAPDN;
+  public readonly objectName: LDAPDN;
   /**
    * @summary `attributes`.
    * @description
@@ -65,13 +65,13 @@ export class SearchResultEntry {
    * @public
    * @readonly
    */
-  readonly attributes: PartialAttributeList;
+  public readonly attributes: PartialAttributeList;
   /**
    * @summary Extensions that are not recognized.
    * @public
    * @readonly
    */
-  readonly _unrecognizedExtensionsList: _Element[];
+  public readonly _unrecognizedExtensionsList: _Element[];
 
   constructor(
     objectName: LDAPDN,

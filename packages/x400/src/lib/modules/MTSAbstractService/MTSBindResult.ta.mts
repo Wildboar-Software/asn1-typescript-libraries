@@ -1,7 +1,7 @@
 /* eslint-disable */
 import {
-    OPTIONAL,
-    ASN1Element as _Element,
+    type OPTIONAL,
+    type ASN1Element as _Element,
     ASN1TagClass as _TagClass,
     ASN1Construction as _Construction,
     ASN1UniversalType as _UniversalType,
@@ -12,7 +12,7 @@ import {
 } from '@wildboar/asn1';
 import * as $ from '@wildboar/asn1/functional';
 import {
-    ObjectName,
+    type ObjectName,
     _decode_ObjectName,
     _encode_ObjectName,
 } from '../MTSAbstractService/ObjectName.ta.mjs';
@@ -22,7 +22,7 @@ import {
     _encode_MessagesWaiting,
 } from '../MTSAbstractService/MessagesWaiting.ta.mjs';
 import {
-    ResponderCredentials,
+    type ResponderCredentials,
     _decode_ResponderCredentials,
     _encode_ResponderCredentials,
 } from '../MTSAbstractService/ResponderCredentials.ta.mjs';
@@ -52,38 +52,50 @@ import {
  *
  */
 export class MTSBindResult {
+    /**
+     * @summary `responder_name`.
+     * @public
+     * @readonly
+     */
+    public readonly responder_name: ObjectName;
+    /**
+     * @summary `messages_waiting`.
+     * @public
+     * @readonly
+     */
+    public readonly messages_waiting: OPTIONAL<MessagesWaiting>;
+    /**
+     * @summary `responder_credentials`.
+     * @public
+     * @readonly
+     */
+    public readonly responder_credentials: ResponderCredentials;
+    /**
+     * @summary `extensions`.
+     * @public
+     * @readonly
+     */
+    public readonly extensions?: OPTIONAL<ExtensionField[]>;
+    /**
+     * @summary Extensions that are not recognized.
+     * @public
+     * @readonly
+     */
+    public readonly _unrecognizedExtensionsList: _Element[];
+
     constructor(
-        /**
-         * @summary `responder_name`.
-         * @public
-         * @readonly
-         */
-        readonly responder_name: ObjectName,
-        /**
-         * @summary `messages_waiting`.
-         * @public
-         * @readonly
-         */
-        readonly messages_waiting: OPTIONAL<MessagesWaiting>,
-        /**
-         * @summary `responder_credentials`.
-         * @public
-         * @readonly
-         */
-        readonly responder_credentials: ResponderCredentials,
-        /**
-         * @summary `extensions`.
-         * @public
-         * @readonly
-         */
-        readonly extensions?: OPTIONAL<ExtensionField[]>,
-        /**
-         * @summary Extensions that are not recognized.
-         * @public
-         * @readonly
-         */
-        readonly _unrecognizedExtensionsList: _Element[] = []
-    ) {}
+        responder_name: ObjectName,
+        messages_waiting: OPTIONAL<MessagesWaiting>,
+        responder_credentials: ResponderCredentials,
+        extensions?: OPTIONAL<ExtensionField[]>,
+        _unrecognizedExtensionsList: _Element[] = []
+    ) {
+        this.responder_name = responder_name;
+        this.messages_waiting = messages_waiting;
+        this.responder_credentials = responder_credentials;
+        this.extensions = extensions;
+        this._unrecognizedExtensionsList = _unrecognizedExtensionsList;
+    }
 
     /**
      * @summary Restructures an object into a MTSBindResult

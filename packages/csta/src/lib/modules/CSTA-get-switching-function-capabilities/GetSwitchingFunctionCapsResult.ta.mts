@@ -2,24 +2,24 @@
 
 import * as $ from "@wildboar/asn1/functional";
 import {
-    OPTIONAL,
-    BOOLEAN,
-    INTEGER,
-    SEQUENCE,
-    SET,
-    IA5String,
-    ASN1Element as _Element,
+    type OPTIONAL,
+    type BOOLEAN,
+    type INTEGER,
+    type SEQUENCE,
+    type SET,
+    type IA5String,
+    type ASN1Element as _Element,
     ASN1TagClass as _TagClass
 } from "@wildboar/asn1";
-import { Profiles, _decode_Profiles, _encode_Profiles } from "../CSTA-get-switching-function-capabilities/Profiles.ta.mjs";
+import { type Profiles, _decode_Profiles, _encode_Profiles } from "../CSTA-get-switching-function-capabilities/Profiles.ta.mjs";
 
-import { DeviceIDFormat, _decode_DeviceIDFormat, _encode_DeviceIDFormat } from "../CSTA-capability-exchange/DeviceIDFormat.ta.mjs";
+import { type DeviceIDFormat, _decode_DeviceIDFormat, _encode_DeviceIDFormat } from "../CSTA-capability-exchange/DeviceIDFormat.ta.mjs";
 
-import { SwDomainFeatures, _decode_SwDomainFeatures, _encode_SwDomainFeatures } from "../CSTA-capability-exchange/SwDomainFeatures.ta.mjs";
+import { type SwDomainFeatures, _decode_SwDomainFeatures, _encode_SwDomainFeatures } from "../CSTA-capability-exchange/SwDomainFeatures.ta.mjs";
 
-import { SwAppearanceAddressability, _decode_SwAppearanceAddressability, _encode_SwAppearanceAddressability } from "../CSTA-capability-exchange/SwAppearanceAddressability.ta.mjs";
+import { type SwAppearanceAddressability, _decode_SwAppearanceAddressability, _encode_SwAppearanceAddressability } from "../CSTA-capability-exchange/SwAppearanceAddressability.ta.mjs";
 
-import { SwAppearanceTypes, _decode_SwAppearanceTypes, _encode_SwAppearanceTypes } from "../CSTA-capability-exchange/SwAppearanceTypes.ta.mjs";
+import { type SwAppearanceTypes, _decode_SwAppearanceTypes, _encode_SwAppearanceTypes } from "../CSTA-capability-exchange/SwAppearanceTypes.ta.mjs";
 
 import {
     IgnoreUnsupportedParameters,
@@ -28,32 +28,32 @@ import {
     _encode_IgnoreUnsupportedParameters
 } from "../CSTA-capability-exchange/IgnoreUnsupportedParameters.ta.mjs";
 
-import { CallCharacteristics, _decode_CallCharacteristics, _encode_CallCharacteristics } from "../CSTA-call-control/CallCharacteristics.ta.mjs";
+import { type CallCharacteristics, _decode_CallCharacteristics, _encode_CallCharacteristics } from "../CSTA-call-control/CallCharacteristics.ta.mjs";
 
 import {
-    MonitorMediaClass,
+    type MonitorMediaClass,
     data /* IMPORTED_SHORT_NAMED_BIT */,
     _decode_MonitorMediaClass,
     _encode_MonitorMediaClass
 } from "../CSTA-status-reporting/MonitorMediaClass.ta.mjs";
 
-import { NumberOfChannels, _decode_NumberOfChannels, _encode_NumberOfChannels } from "../CSTA-data-call-types/NumberOfChannels.ta.mjs";
+import { type NumberOfChannels, _decode_NumberOfChannels, _encode_NumberOfChannels } from "../CSTA-data-call-types/NumberOfChannels.ta.mjs";
 
-import { MaxChannelBind, _decode_MaxChannelBind, _encode_MaxChannelBind } from "../CSTA-data-call-types/MaxChannelBind.ta.mjs";
+import { type MaxChannelBind, _decode_MaxChannelBind, _encode_MaxChannelBind } from "../CSTA-data-call-types/MaxChannelBind.ta.mjs";
 
-import { MiscMediaCallCharacteristics, _decode_MiscMediaCallCharacteristics, _encode_MiscMediaCallCharacteristics } from "../CSTA-get-switching-function-capabilities/MiscMediaCallCharacteristics.ta.mjs";
+import { type MiscMediaCallCharacteristics, _decode_MiscMediaCallCharacteristics, _encode_MiscMediaCallCharacteristics } from "../CSTA-get-switching-function-capabilities/MiscMediaCallCharacteristics.ta.mjs";
 
-import { ConnectionRateList, _decode_ConnectionRateList, _encode_ConnectionRateList } from "../CSTA-data-call-types/ConnectionRateList.ta.mjs";
+import { type ConnectionRateList, _decode_ConnectionRateList, _encode_ConnectionRateList } from "../CSTA-data-call-types/ConnectionRateList.ta.mjs";
 
-import { DelayToleranceList, _decode_DelayToleranceList, _encode_DelayToleranceList } from "../CSTA-data-call-types/DelayToleranceList.ta.mjs";
+import { type DelayToleranceList, _decode_DelayToleranceList, _encode_DelayToleranceList } from "../CSTA-data-call-types/DelayToleranceList.ta.mjs";
 
-import { PauseTime, _decode_PauseTime, _encode_PauseTime } from "../CSTA-capability-exchange/PauseTime.ta.mjs";
+import { type PauseTime, _decode_PauseTime, _encode_PauseTime } from "../CSTA-capability-exchange/PauseTime.ta.mjs";
 
-import { TimeInfo, _decode_TimeInfo, _encode_TimeInfo } from "../CSTA-security/TimeInfo.ta.mjs";
+import { type TimeInfo, _decode_TimeInfo, _encode_TimeInfo } from "../CSTA-security/TimeInfo.ta.mjs";
 
-import { MessageSeqNumbers, _decode_MessageSeqNumbers, _encode_MessageSeqNumbers } from "../CSTA-get-switching-function-capabilities/MessageSeqNumbers.ta.mjs";
+import { type MessageSeqNumbers, _decode_MessageSeqNumbers, _encode_MessageSeqNumbers } from "../CSTA-get-switching-function-capabilities/MessageSeqNumbers.ta.mjs";
 
-import { TimeStampMode, _decode_TimeStampMode, _encode_TimeStampMode } from "../CSTA-capability-exchange/TimeStampMode.ta.mjs";
+import { type TimeStampMode, _decode_TimeStampMode, _encode_TimeStampMode } from "../CSTA-capability-exchange/TimeStampMode.ta.mjs";
 
 import {
     SecurityMode,
@@ -62,13 +62,13 @@ import {
     _encode_SecurityMode
 } from "../CSTA-get-switching-function-capabilities/SecurityMode.ta.mjs";
 
-import { SecurityFormat, _decode_SecurityFormat, _encode_SecurityFormat } from "../CSTA-get-switching-function-capabilities/SecurityFormat.ta.mjs";
+import { type SecurityFormat, _decode_SecurityFormat, _encode_SecurityFormat } from "../CSTA-get-switching-function-capabilities/SecurityFormat.ta.mjs";
 
-import { TransAndConfSetup, _decode_TransAndConfSetup, _encode_TransAndConfSetup } from "../CSTA-capability-exchange/TransAndConfSetup.ta.mjs";
+import { type TransAndConfSetup, _decode_TransAndConfSetup, _encode_TransAndConfSetup } from "../CSTA-capability-exchange/TransAndConfSetup.ta.mjs";
 
 import { MonitorFilterItems, _decode_MonitorFilterItems, _encode_MonitorFilterItems } from "../CSTA-get-switching-function-capabilities/MonitorFilterItems.ta.mjs";
 
-import { MiscMonitorCaps, _decode_MiscMonitorCaps, _encode_MiscMonitorCaps } from "../CSTA-capability-exchange/MiscMonitorCaps.ta.mjs";
+import { type MiscMonitorCaps, _decode_MiscMonitorCaps, _encode_MiscMonitorCaps } from "../CSTA-capability-exchange/MiscMonitorCaps.ta.mjs";
 
 import {
     DynamicFeatureSupported,
@@ -78,13 +78,13 @@ import {
     _encode_DynamicFeatureSupported
 } from "../CSTA-get-switching-function-capabilities/DynamicFeatureSupported.ta.mjs";
 
-import { CallLinkageOptions, _decode_CallLinkageOptions, _encode_CallLinkageOptions } from "../CSTA-get-switching-function-capabilities/CallLinkageOptions.ta.mjs";
+import { type CallLinkageOptions, _decode_CallLinkageOptions, _encode_CallLinkageOptions } from "../CSTA-get-switching-function-capabilities/CallLinkageOptions.ta.mjs";
 
-import { ACDModels, _decode_ACDModels, _encode_ACDModels } from "../CSTA-capability-exchange/ACDModels.ta.mjs";
+import { type ACDModels, _decode_ACDModels, _encode_ACDModels } from "../CSTA-capability-exchange/ACDModels.ta.mjs";
 
-import { AgentLogOnModels, _decode_AgentLogOnModels, _encode_AgentLogOnModels } from "../CSTA-get-switching-function-capabilities/AgentLogOnModels.ta.mjs";
+import { type AgentLogOnModels, _decode_AgentLogOnModels, _encode_AgentLogOnModels } from "../CSTA-get-switching-function-capabilities/AgentLogOnModels.ta.mjs";
 
-import { AgentStateModels, _decode_AgentStateModels, _encode_AgentStateModels } from "../CSTA-get-switching-function-capabilities/AgentStateModels.ta.mjs";
+import { type AgentStateModels, _decode_AgentStateModels, _encode_AgentStateModels } from "../CSTA-get-switching-function-capabilities/AgentStateModels.ta.mjs";
 
 import {
     ConnectionView,
@@ -99,11 +99,11 @@ import { MaxLengthParametersContinued, _decode_MaxLengthParametersContinued, _en
 
 import { ServEvtsList, _decode_ServEvtsList, _encode_ServEvtsList } from "../CSTA-get-switching-function-capabilities/ServEvtsList.ta.mjs";
 
-import { PrivateDataVersionList, _decode_PrivateDataVersionList, _encode_PrivateDataVersionList } from "../CSTA-get-switching-function-capabilities/PrivateDataVersionList.ta.mjs";
+import { type PrivateDataVersionList, _decode_PrivateDataVersionList, _encode_PrivateDataVersionList } from "../CSTA-get-switching-function-capabilities/PrivateDataVersionList.ta.mjs";
 
 import { FilterThreshold, _decode_FilterThreshold, _encode_FilterThreshold } from "../CSTA-capability-exchange/FilterThreshold.ta.mjs";
 
-import { MediaServiceCapsList, _decode_MediaServiceCapsList, _encode_MediaServiceCapsList } from "../CSTA-capability-exchange/MediaServiceCapsList.ta.mjs";
+import { type MediaServiceCapsList, _decode_MediaServiceCapsList, _encode_MediaServiceCapsList } from "../CSTA-capability-exchange/MediaServiceCapsList.ta.mjs";
 
 import { CSTACommonArguments, _decode_CSTACommonArguments, _encode_CSTACommonArguments } from "../CSTA-extension-types/CSTACommonArguments.ta.mjs";
 
@@ -132,40 +132,40 @@ import { CSTACommonArguments, _decode_CSTACommonArguments, _encode_CSTACommonArg
  *     swAppearanceAddressability         SwAppearanceAddressability,
  *     swAppearanceTypes             SwAppearanceTypes,
  *     ignoreUnsupportedParameters         IgnoreUnsupportedParameters,
- *     callCharacteristicsSupported         [ 0] IMPLICIT     CallCharacteristics         OPTIONAL,
- *     mediaClassSupport             [ 1] IMPLICIT     MonitorMediaClass         OPTIONAL,
- *     numberOfChannels             [ 2] IMPLICIT     NumberOfChannels         OPTIONAL,
- *     maxChannelBind                 [ 3] IMPLICIT     MaxChannelBind             OPTIONAL,
- *     miscMediaCallCharacteristics         [ 4] IMPLICIT     MiscMediaCallCharacteristics     OPTIONAL,
- *     connectionRateList             [ 5] IMPLICIT     ConnectionRateList         OPTIONAL,
- *     delayToleranceList             [ 6] IMPLICIT     DelayToleranceList         OPTIONAL,
- *     pauseTime                 [ 7] IMPLICIT     PauseTime             OPTIONAL,
- *     currentTime                 [ 8] IMPLICIT     TimeInfo             OPTIONAL,
- *     messageSeqNumbers             [ 9] IMPLICIT     MessageSeqNumbers         OPTIONAL,
- *     timeStampMode                 [10] IMPLICIT     TimeStampMode             OPTIONAL,
- *     securityMode                 [11] IMPLICIT     SecurityMode             OPTIONAL,
- *     securityFormat                 [12] IMPLICIT     SecurityFormat            OPTIONAL,
- *     privateDataFormat             [13] IMPLICIT     SecurityFormat             OPTIONAL,
- *     transAndConfSetup             [14] IMPLICIT     TransAndConfSetup         OPTIONAL,
- *     monitorFilterItems             [15] IMPLICIT     MonitorFilterItems         OPTIONAL,
- *     miscMonitorCaps             [16] IMPLICIT     MiscMonitorCaps         OPTIONAL,
- *     correlatorDataSupported         [17] IMPLICIT     BOOLEAN             OPTIONAL,
- *     dynamicFeatureSupported         [18] IMPLICIT     DynamicFeatureSupported     OPTIONAL,
- *     callLinkageOptions             [28] IMPLICIT     CallLinkageOptions         OPTIONAL,
- *     aCDModels                 [19] IMPLICIT     ACDModels             OPTIONAL,
- *     agentLogOnModels             [20] IMPLICIT     AgentLogOnModels         OPTIONAL,
- *     agentStateModels             [21] IMPLICIT     AgentStateModels         OPTIONAL,
+ *     callCharacteristicsSupported         [ 0] IMPLICIT     CallCharacteristics         type OPTIONAL,
+ *     mediaClassSupport             [ 1] IMPLICIT     MonitorMediaClass         type OPTIONAL,
+ *     numberOfChannels             [ 2] IMPLICIT     NumberOfChannels         type OPTIONAL,
+ *     maxChannelBind                 [ 3] IMPLICIT     MaxChannelBind             type OPTIONAL,
+ *     miscMediaCallCharacteristics         [ 4] IMPLICIT     MiscMediaCallCharacteristics     type OPTIONAL,
+ *     connectionRateList             [ 5] IMPLICIT     ConnectionRateList         type OPTIONAL,
+ *     delayToleranceList             [ 6] IMPLICIT     DelayToleranceList         type OPTIONAL,
+ *     pauseTime                 [ 7] IMPLICIT     PauseTime             type OPTIONAL,
+ *     currentTime                 [ 8] IMPLICIT     TimeInfo             type OPTIONAL,
+ *     messageSeqNumbers             [ 9] IMPLICIT     MessageSeqNumbers         type OPTIONAL,
+ *     timeStampMode                 [10] IMPLICIT     TimeStampMode             type OPTIONAL,
+ *     securityMode                 [11] IMPLICIT     SecurityMode             type OPTIONAL,
+ *     securityFormat                 [12] IMPLICIT     SecurityFormat            type OPTIONAL,
+ *     privateDataFormat             [13] IMPLICIT     SecurityFormat             type OPTIONAL,
+ *     transAndConfSetup             [14] IMPLICIT     TransAndConfSetup         type OPTIONAL,
+ *     monitorFilterItems             [15] IMPLICIT     MonitorFilterItems         type OPTIONAL,
+ *     miscMonitorCaps             [16] IMPLICIT     MiscMonitorCaps         type OPTIONAL,
+ *     correlatorDataSupported         [17] IMPLICIT     BOOLEAN             type OPTIONAL,
+ *     dynamicFeatureSupported         [18] IMPLICIT     DynamicFeatureSupported     type OPTIONAL,
+ *     callLinkageOptions             [28] IMPLICIT     CallLinkageOptions         type OPTIONAL,
+ *     aCDModels                 [19] IMPLICIT     ACDModels             type OPTIONAL,
+ *     agentLogOnModels             [20] IMPLICIT     AgentLogOnModels         type OPTIONAL,
+ *     agentStateModels             [21] IMPLICIT     AgentStateModels         type OPTIONAL,
  *     connectionView                 ConnectionView,
  *     maxLengthParameters             MaxLengthParameters,
- *     maxLengthParametersContinued        [28] IMPLICIT     MaxLengthParametersContinued    OPTIONAL,
- *     servEvtsList                 [22] IMPLICIT     ServEvtsList             OPTIONAL,
- *     privateDataVersionList             [23] IMPLICIT     PrivateDataVersionList        OPTIONAL,
- *     systemStatusTimer             [24] IMPLICIT     INTEGER (0..180)         OPTIONAL,
- *     simpleThreshold             [25] IMPLICIT     INTEGER             OPTIONAL,
- *     filterThreshold             [26] IMPLICIT     FilterThreshold         OPTIONAL,
- *     mediaServiceCapsList             [27] IMPLICIT     MediaServiceCapsList         OPTIONAL,
- *     maxDeviceHistoryLength            [29] IMPLICIT     INTEGER                OPTIONAL,
- *     maxDestinationDevicesForDeflect        [30] IMPLICIT    INTEGER                OPTIONAL,
+ *     maxLengthParametersContinued        [28] IMPLICIT     MaxLengthParametersContinued    type OPTIONAL,
+ *     servEvtsList                 [22] IMPLICIT     ServEvtsList             type OPTIONAL,
+ *     privateDataVersionList             [23] IMPLICIT     PrivateDataVersionList        type OPTIONAL,
+ *     systemStatusTimer             [24] IMPLICIT     INTEGER (0..180)         type OPTIONAL,
+ *     simpleThreshold             [25] IMPLICIT     INTEGER             type OPTIONAL,
+ *     filterThreshold             [26] IMPLICIT     FilterThreshold         type OPTIONAL,
+ *     mediaServiceCapsList             [27] IMPLICIT     MediaServiceCapsList         type OPTIONAL,
+ *     maxDeviceHistoryLength            [29] IMPLICIT     INTEGER                type OPTIONAL,
+ *     maxDestinationDevicesForDeflect        [30] IMPLICIT    INTEGER                type OPTIONAL,
  *     extensions                 CSTACommonArguments                 OPTIONAL }
  * ```
  * 
@@ -173,426 +173,514 @@ import { CSTACommonArguments, _decode_CSTACommonArguments, _encode_CSTACommonArg
  */
 export
 class GetSwitchingFunctionCapsResult {
+    /**
+     * @summary `switchingSubDomainName`.
+     * @description
+     *
+     * Name distinguishing this switching sub-domain. Max 64 chars.
+     * @public
+     * @readonly
+     */
+    public readonly switchingSubDomainName: IA5String;
+    /**
+     * @summary `manufacturerName`.
+     * @description
+     *
+     * Manufacturer of the switching sub-domain. Max 64 chars.
+     * @public
+     * @readonly
+     */
+    public readonly manufacturerName: IA5String;
+    /**
+     * @summary `profiles`.
+     * @description
+     *
+     * CSTA profiles supported. At least one bit shall be set
+     * (ECMA-269 §2.1.3 / Table 13-9).
+     * @public
+     * @readonly
+     */
+    public readonly profiles: Profiles;
+    /**
+     * @summary `deviceIDFormat`.
+     * @description
+     *
+     * DeviceID formats accepted in service requests. Diallable
+     * digits 0-9 shall be supported.
+     * @public
+     * @readonly
+     */
+    public readonly deviceIDFormat: DeviceIDFormat;
+    /**
+     * @summary `swDomainFeatures`.
+     * @description
+     *
+     * Sub-domain features: forwarding models, connection-failure
+     * behaviour, recall, callback, external calls, prompting.
+     * @public
+     * @readonly
+     */
+    public readonly swDomainFeatures: SwDomainFeatures;
+    /**
+     * @summary `swAppearanceAddressability`.
+     * @description
+     *
+     * Whether appearances are addressable and/or not.
+     * @public
+     * @readonly
+     */
+    public readonly swAppearanceAddressability: SwAppearanceAddressability;
+    /**
+     * @summary `swAppearanceTypes`.
+     * @description
+     *
+     * Appearance types present (selected/basic-standard, bridged
+     * variants).
+     * @public
+     * @readonly
+     */
+    public readonly swAppearanceTypes: SwAppearanceTypes;
+    /**
+     * @summary `ignoreUnsupportedParameters`.
+     * @description
+     *
+     * Ignore unsupported optional parameters vs reject the request.
+     * @public
+     * @readonly
+     */
+    public readonly ignoreUnsupportedParameters: IgnoreUnsupportedParameters;
+    /**
+     * @summary `callCharacteristicsSupported`.
+     * @description
+     *
+     * Which `callCharacteristics` bits the SF reports. Present if
+     * the SF characterises calls that way.
+     * @public
+     * @readonly
+     */
+    public readonly callCharacteristicsSupported: OPTIONAL<CallCharacteristics>;
+    /**
+     * @summary `mediaClassSupport`.
+     * @description
+     *
+     * Media classes the sub-domain can host. Absent means voice
+     * only.
+     * @public
+     * @readonly
+     */
+    public readonly mediaClassSupport: OPTIONAL<MonitorMediaClass>;
+    /**
+     * @summary `numberOfChannels`.
+     * @description
+     *
+     * Highest available channels at any device. Absent: unknown,
+     * at least one.
+     * @public
+     * @readonly
+     */
+    public readonly numberOfChannels: OPTIONAL<NumberOfChannels>;
+    /**
+     * @summary `maxChannelBind`.
+     * @description
+     *
+     * Highest max channels per connection. Absent means one.
+     * @public
+     * @readonly
+     */
+    public readonly maxChannelBind: OPTIONAL<MaxChannelBind>;
+    /**
+     * @summary `miscMediaCallCharacteristics`.
+     * @description
+     *
+     * Whether media characteristics can be adjusted when a call is
+     * made (`supportAdjustment`).
+     * @public
+     * @readonly
+     */
+    public readonly miscMediaCallCharacteristics: OPTIONAL<MiscMediaCallCharacteristics>;
+    /**
+     * @summary `connectionRateList`.
+     * @description
+     *
+     * Supported connection rates.
+     * @public
+     * @readonly
+     */
+    public readonly connectionRateList: OPTIONAL<ConnectionRateList>;
+    /**
+     * @summary `delayToleranceList`.
+     * @description
+     *
+     * Supported delay tolerances.
+     * @public
+     * @readonly
+     */
+    public readonly delayToleranceList: OPTIONAL<DelayToleranceList>;
+    /**
+     * @summary `pauseTime`.
+     * @description
+     *
+     * Duration in ms of a `,` pause in Diallable Digits (1..2000).
+     * Omitted if unknown.
+     * @public
+     * @readonly
+     */
+    public readonly pauseTime: OPTIONAL<PauseTime>;
+    /**
+     * @summary `currentTime`.
+     * @description
+     *
+     * Current SF date and time.
+     * @public
+     * @readonly
+     */
+    public readonly currentTime: OPTIONAL<TimeInfo>;
+    /**
+     * @summary `messageSeqNumbers`.
+     * @description
+     *
+     * Where message sequence numbers are supplied (events, acks,
+     * service requests). Present if the SF provides them.
+     * @public
+     * @readonly
+     */
+    public readonly messageSeqNumbers: OPTIONAL<MessageSeqNumbers>;
+    /**
+     * @summary `timeStampMode`.
+     * @description
+     *
+     * Where timestamps are supplied via security. Present if the
+     * SF provides timestamps.
+     * @public
+     * @readonly
+     */
+    public readonly timeStampMode: OPTIONAL<TimeStampMode>;
+    /**
+     * @summary `securityMode`.
+     * @description
+     *
+     * Where securityInfo is supplied. Present if the SF provides
+     * it.
+     * @public
+     * @readonly
+     */
+    public readonly securityMode: OPTIONAL<SecurityMode>;
+    /**
+     * @summary `securityFormat`.
+     * @description
+     *
+     * securityInfo encodings to/from the SF (octet string or other).
+     * @public
+     * @readonly
+     */
+    public readonly securityFormat: OPTIONAL<SecurityFormat>;
+    /**
+     * @summary `privateDataFormat`.
+     * @description
+     *
+     * privateData encodings to/from the SF. Same bit names as
+     * `securityFormat`.
+     * @public
+     * @readonly
+     */
+    public readonly privateDataFormat: OPTIONAL<SecurityFormat>;
+    /**
+     * @summary `transAndConfSetup`.
+     * @description
+     *
+     * How devices may set up transfer/conference.
+     * @public
+     * @readonly
+     */
+    public readonly transAndConfSetup: OPTIONAL<TransAndConfSetup>;
+    /**
+     * @summary `monitorFilterItems`.
+     * @description
+     *
+     * Complete monitorFilter values the SF supports per monitor
+     * object/type combination.
+     * @public
+     * @readonly
+     */
+    public readonly monitorFilterItems: OPTIONAL<MonitorFilterItems>;
+    /**
+     * @summary `miscMonitorCaps`.
+     * @description
+     *
+     * Special monitoring considerations for the sub-domain.
+     * @public
+     * @readonly
+     */
+    public readonly miscMonitorCaps: OPTIONAL<MiscMonitorCaps>;
+    /**
+     * @summary `correlatorDataSupported`.
+     * @description
+     *
+     * TRUE if `correlatorData` is supported on services and events.
+     * @public
+     * @readonly
+     */
+    public readonly correlatorDataSupported: OPTIONAL<BOOLEAN>;
+    /**
+     * @summary `dynamicFeatureSupported`.
+     * @description
+     *
+     * How `servicesPermitted` appears on events: none, all, or some.
+     * @public
+     * @readonly
+     */
+    public readonly dynamicFeatureSupported: OPTIONAL<DynamicFeatureSupported>;
+    /**
+     * @summary `callLinkageOptions`.
+     * @description
+     *
+     * Call-linkage and thread-linkage support. Call linkage is
+     * required if thread linkage is supported (ECMA-269 §6.1.2.7).
+     * @public
+     * @readonly
+     */
+    public readonly callLinkageOptions: OPTIONAL<CallLinkageOptions>;
+    /**
+     * @summary `aCDModels`.
+     * @description
+     *
+     * Visible / non-visible ACD models. If more than one, use Get
+     * Logical Device Information per ACD device/group.
+     * @public
+     * @readonly
+     */
+    public readonly aCDModels: OPTIONAL<ACDModels>;
+    /**
+     * @summary `agentLogOnModels`.
+     * @description
+     *
+     * Agent log-on models. If more than one, query per device.
+     * @public
+     * @readonly
+     */
+    public readonly agentLogOnModels: OPTIONAL<AgentLogOnModels>;
+    /**
+     * @summary `agentStateModels`.
+     * @description
+     *
+     * Agent multi-state, semi-independent linked, or agent-oriented.
+     * @public
+     * @readonly
+     */
+    public readonly agentStateModels: OPTIONAL<AgentStateModels>;
+    /**
+     * @summary `connectionView`.
+     * @description
+     *
+     * Meaning of primary/secondary oldCall on Conferenced and
+     * Transferred: fixed (independent of monitor) vs local
+     * (depends on which device is monitored).
+     * @public
+     * @readonly
+     */
+    public readonly connectionView: ConnectionView;
+    /**
+     * @summary `maxLengthParameters`.
+     * @description
+     *
+     * Max character lengths for AccountInfo, AuthCode, AgentID,
+     * passwords, callID, correlatorData, privateData, DeviceIDs,
+     * userData, labels, charactersToSend. Zero means unsupported.
+     * @public
+     * @readonly
+     */
+    public readonly maxLengthParameters: MaxLengthParameters;
+    /**
+     * @summary `maxLengthParametersContinued`.
+     * @description
+     *
+     * Further max lengths: MonitorCrossRefID, CallQualifyingData,
+     * call/thread linkage IDs, ioData, MessageInfo. Zero means
+     * unsupported.
+     * @public
+     * @readonly
+     */
+    public readonly maxLengthParametersContinued?: OPTIONAL<MaxLengthParametersContinued>;
+    /**
+     * @summary `servEvtsList`.
+     * @description
+     *
+     * Service and event bitmaps for the whole SF. Present if any
+     * listed category is supported. Omitted bit: not supported.
+     * @public
+     * @readonly
+     */
+    public readonly servEvtsList?: OPTIONAL<ServEvtsList>;
+    /**
+     * @summary `privateDataVersionList`.
+     * @description
+     *
+     * Private-data versions for this manufacturer, if private data
+     * is supported.
+     * @public
+     * @readonly
+     */
+    public readonly privateDataVersionList?: OPTIONAL<PrivateDataVersionList>;
+    /**
+     * @summary `systemStatusTimer`.
+     * @description
+     *
+     * Heartbeat interval 0..180 s for periodic System Status. 0 =
+     * no periodic requests. Present if heartbeat via System Status
+     * is supported.
+     * @public
+     * @readonly
+     */
+    public readonly systemStatusTimer?: OPTIONAL<INTEGER>;
+    /**
+     * @summary `simpleThreshold`.
+     * @description
+     *
+     * Max unacknowledged service requests at once. 0 = no limit.
+     * Omitted if unknown.
+     * @public
+     * @readonly
+     */
+    public readonly simpleThreshold?: OPTIONAL<INTEGER>;
+    /**
+     * @summary `filterThreshold`.
+     * @description
+     *
+     * Per-service outstanding-request limits. 0 = no limit. Omitted
+     * if unknown.
+     * @public
+     * @readonly
+     */
+    public readonly filterThreshold?: OPTIONAL<FilterThreshold>;
+    /**
+     * @summary `mediaServiceCapsList`.
+     * @description
+     *
+     * Media service types/versions/instances and connection modes
+     * across the SF. Present iff at least one device supports media
+     * access.
+     * @public
+     * @readonly
+     */
+    public readonly mediaServiceCapsList?: OPTIONAL<MediaServiceCapsList>;
+    /**
+     * @summary `maxDeviceHistoryLength`.
+     * @description
+     *
+     * Max DeviceHistory entries the SF supports.
+     * @public
+     * @readonly
+     */
+    public readonly maxDeviceHistoryLength?: OPTIONAL<INTEGER>;
+    /**
+     * @summary `maxDestinationDevicesForDeflect`.
+     * @description
+     *
+     * Max new destinations in Deflect Call.
+     * @public
+     * @readonly
+     */
+    public readonly maxDestinationDevicesForDeflect?: OPTIONAL<INTEGER>;
+    /**
+     * @summary `extensions`.
+     * @description
+     *
+     * Optional security (timestamp, sequence, securityInfo) and
+     * privateData. ECMA-269 Table 13-9.
+     * @public
+     * @readonly
+     */
+    public readonly extensions?: OPTIONAL<CSTACommonArguments>;
+
     constructor (
-        /**
-         * @summary `switchingSubDomainName`.
-         * @description
-         *
-         * Name distinguishing this switching sub-domain. Max 64 chars.
-         * @public
-         * @readonly
-         */
-        readonly switchingSubDomainName: IA5String,
-        /**
-         * @summary `manufacturerName`.
-         * @description
-         *
-         * Manufacturer of the switching sub-domain. Max 64 chars.
-         * @public
-         * @readonly
-         */
-        readonly manufacturerName: IA5String,
-        /**
-         * @summary `profiles`.
-         * @description
-         *
-         * CSTA profiles supported. At least one bit shall be set
-         * (ECMA-269 §2.1.3 / Table 13-9).
-         * @public
-         * @readonly
-         */
-        readonly profiles: Profiles,
-        /**
-         * @summary `deviceIDFormat`.
-         * @description
-         *
-         * DeviceID formats accepted in service requests. Diallable
-         * digits 0-9 shall be supported.
-         * @public
-         * @readonly
-         */
-        readonly deviceIDFormat: DeviceIDFormat,
-        /**
-         * @summary `swDomainFeatures`.
-         * @description
-         *
-         * Sub-domain features: forwarding models, connection-failure
-         * behaviour, recall, callback, external calls, prompting.
-         * @public
-         * @readonly
-         */
-        readonly swDomainFeatures: SwDomainFeatures,
-        /**
-         * @summary `swAppearanceAddressability`.
-         * @description
-         *
-         * Whether appearances are addressable and/or not.
-         * @public
-         * @readonly
-         */
-        readonly swAppearanceAddressability: SwAppearanceAddressability,
-        /**
-         * @summary `swAppearanceTypes`.
-         * @description
-         *
-         * Appearance types present (selected/basic-standard, bridged
-         * variants).
-         * @public
-         * @readonly
-         */
-        readonly swAppearanceTypes: SwAppearanceTypes,
-        /**
-         * @summary `ignoreUnsupportedParameters`.
-         * @description
-         *
-         * Ignore unsupported optional parameters vs reject the request.
-         * @public
-         * @readonly
-         */
-        readonly ignoreUnsupportedParameters: IgnoreUnsupportedParameters,
-        /**
-         * @summary `callCharacteristicsSupported`.
-         * @description
-         *
-         * Which `callCharacteristics` bits the SF reports. Present if
-         * the SF characterises calls that way.
-         * @public
-         * @readonly
-         */
-        readonly callCharacteristicsSupported: OPTIONAL<CallCharacteristics>,
-        /**
-         * @summary `mediaClassSupport`.
-         * @description
-         *
-         * Media classes the sub-domain can host. Absent means voice
-         * only.
-         * @public
-         * @readonly
-         */
-        readonly mediaClassSupport: OPTIONAL<MonitorMediaClass>,
-        /**
-         * @summary `numberOfChannels`.
-         * @description
-         *
-         * Highest available channels at any device. Absent: unknown,
-         * at least one.
-         * @public
-         * @readonly
-         */
-        readonly numberOfChannels: OPTIONAL<NumberOfChannels>,
-        /**
-         * @summary `maxChannelBind`.
-         * @description
-         *
-         * Highest max channels per connection. Absent means one.
-         * @public
-         * @readonly
-         */
-        readonly maxChannelBind: OPTIONAL<MaxChannelBind>,
-        /**
-         * @summary `miscMediaCallCharacteristics`.
-         * @description
-         *
-         * Whether media characteristics can be adjusted when a call is
-         * made (`supportAdjustment`).
-         * @public
-         * @readonly
-         */
-        readonly miscMediaCallCharacteristics: OPTIONAL<MiscMediaCallCharacteristics>,
-        /**
-         * @summary `connectionRateList`.
-         * @description
-         *
-         * Supported connection rates.
-         * @public
-         * @readonly
-         */
-        readonly connectionRateList: OPTIONAL<ConnectionRateList>,
-        /**
-         * @summary `delayToleranceList`.
-         * @description
-         *
-         * Supported delay tolerances.
-         * @public
-         * @readonly
-         */
-        readonly delayToleranceList: OPTIONAL<DelayToleranceList>,
-        /**
-         * @summary `pauseTime`.
-         * @description
-         *
-         * Duration in ms of a `,` pause in Diallable Digits (1..2000).
-         * Omitted if unknown.
-         * @public
-         * @readonly
-         */
-        readonly pauseTime: OPTIONAL<PauseTime>,
-        /**
-         * @summary `currentTime`.
-         * @description
-         *
-         * Current SF date and time.
-         * @public
-         * @readonly
-         */
-        readonly currentTime: OPTIONAL<TimeInfo>,
-        /**
-         * @summary `messageSeqNumbers`.
-         * @description
-         *
-         * Where message sequence numbers are supplied (events, acks,
-         * service requests). Present if the SF provides them.
-         * @public
-         * @readonly
-         */
-        readonly messageSeqNumbers: OPTIONAL<MessageSeqNumbers>,
-        /**
-         * @summary `timeStampMode`.
-         * @description
-         *
-         * Where timestamps are supplied via security. Present if the
-         * SF provides timestamps.
-         * @public
-         * @readonly
-         */
-        readonly timeStampMode: OPTIONAL<TimeStampMode>,
-        /**
-         * @summary `securityMode`.
-         * @description
-         *
-         * Where securityInfo is supplied. Present if the SF provides
-         * it.
-         * @public
-         * @readonly
-         */
-        readonly securityMode: OPTIONAL<SecurityMode>,
-        /**
-         * @summary `securityFormat`.
-         * @description
-         *
-         * securityInfo encodings to/from the SF (octet string or other).
-         * @public
-         * @readonly
-         */
-        readonly securityFormat: OPTIONAL<SecurityFormat>,
-        /**
-         * @summary `privateDataFormat`.
-         * @description
-         *
-         * privateData encodings to/from the SF. Same bit names as
-         * `securityFormat`.
-         * @public
-         * @readonly
-         */
-        readonly privateDataFormat: OPTIONAL<SecurityFormat>,
-        /**
-         * @summary `transAndConfSetup`.
-         * @description
-         *
-         * How devices may set up transfer/conference.
-         * @public
-         * @readonly
-         */
-        readonly transAndConfSetup: OPTIONAL<TransAndConfSetup>,
-        /**
-         * @summary `monitorFilterItems`.
-         * @description
-         *
-         * Complete monitorFilter values the SF supports per monitor
-         * object/type combination.
-         * @public
-         * @readonly
-         */
-        readonly monitorFilterItems: OPTIONAL<MonitorFilterItems>,
-        /**
-         * @summary `miscMonitorCaps`.
-         * @description
-         *
-         * Special monitoring considerations for the sub-domain.
-         * @public
-         * @readonly
-         */
-        readonly miscMonitorCaps: OPTIONAL<MiscMonitorCaps>,
-        /**
-         * @summary `correlatorDataSupported`.
-         * @description
-         *
-         * TRUE if `correlatorData` is supported on services and events.
-         * @public
-         * @readonly
-         */
-        readonly correlatorDataSupported: OPTIONAL<BOOLEAN>,
-        /**
-         * @summary `dynamicFeatureSupported`.
-         * @description
-         *
-         * How `servicesPermitted` appears on events: none, all, or some.
-         * @public
-         * @readonly
-         */
-        readonly dynamicFeatureSupported: OPTIONAL<DynamicFeatureSupported>,
-        /**
-         * @summary `callLinkageOptions`.
-         * @description
-         *
-         * Call-linkage and thread-linkage support. Call linkage is
-         * required if thread linkage is supported (ECMA-269 §6.1.2.7).
-         * @public
-         * @readonly
-         */
-        readonly callLinkageOptions: OPTIONAL<CallLinkageOptions>,
-        /**
-         * @summary `aCDModels`.
-         * @description
-         *
-         * Visible / non-visible ACD models. If more than one, use Get
-         * Logical Device Information per ACD device/group.
-         * @public
-         * @readonly
-         */
-        readonly aCDModels: OPTIONAL<ACDModels>,
-        /**
-         * @summary `agentLogOnModels`.
-         * @description
-         *
-         * Agent log-on models. If more than one, query per device.
-         * @public
-         * @readonly
-         */
-        readonly agentLogOnModels: OPTIONAL<AgentLogOnModels>,
-        /**
-         * @summary `agentStateModels`.
-         * @description
-         *
-         * Agent multi-state, semi-independent linked, or agent-oriented.
-         * @public
-         * @readonly
-         */
-        readonly agentStateModels: OPTIONAL<AgentStateModels>,
-        /**
-         * @summary `connectionView`.
-         * @description
-         *
-         * Meaning of primary/secondary oldCall on Conferenced and
-         * Transferred: fixed (independent of monitor) vs local
-         * (depends on which device is monitored).
-         * @public
-         * @readonly
-         */
-        readonly connectionView: ConnectionView,
-        /**
-         * @summary `maxLengthParameters`.
-         * @description
-         *
-         * Max character lengths for AccountInfo, AuthCode, AgentID,
-         * passwords, callID, correlatorData, privateData, DeviceIDs,
-         * userData, labels, charactersToSend. Zero means unsupported.
-         * @public
-         * @readonly
-         */
-        readonly maxLengthParameters: MaxLengthParameters,
-        /**
-         * @summary `maxLengthParametersContinued`.
-         * @description
-         *
-         * Further max lengths: MonitorCrossRefID, CallQualifyingData,
-         * call/thread linkage IDs, ioData, MessageInfo. Zero means
-         * unsupported.
-         * @public
-         * @readonly
-         */
-        readonly maxLengthParametersContinued?: OPTIONAL<MaxLengthParametersContinued>,
-        /**
-         * @summary `servEvtsList`.
-         * @description
-         *
-         * Service and event bitmaps for the whole SF. Present if any
-         * listed category is supported. Omitted bit: not supported.
-         * @public
-         * @readonly
-         */
-        readonly servEvtsList?: OPTIONAL<ServEvtsList>,
-        /**
-         * @summary `privateDataVersionList`.
-         * @description
-         *
-         * Private-data versions for this manufacturer, if private data
-         * is supported.
-         * @public
-         * @readonly
-         */
-        readonly privateDataVersionList?: OPTIONAL<PrivateDataVersionList>,
-        /**
-         * @summary `systemStatusTimer`.
-         * @description
-         *
-         * Heartbeat interval 0..180 s for periodic System Status. 0 =
-         * no periodic requests. Present if heartbeat via System Status
-         * is supported.
-         * @public
-         * @readonly
-         */
-        readonly systemStatusTimer?: OPTIONAL<INTEGER>,
-        /**
-         * @summary `simpleThreshold`.
-         * @description
-         *
-         * Max unacknowledged service requests at once. 0 = no limit.
-         * Omitted if unknown.
-         * @public
-         * @readonly
-         */
-        readonly simpleThreshold?: OPTIONAL<INTEGER>,
-        /**
-         * @summary `filterThreshold`.
-         * @description
-         *
-         * Per-service outstanding-request limits. 0 = no limit. Omitted
-         * if unknown.
-         * @public
-         * @readonly
-         */
-        readonly filterThreshold?: OPTIONAL<FilterThreshold>,
-        /**
-         * @summary `mediaServiceCapsList`.
-         * @description
-         *
-         * Media service types/versions/instances and connection modes
-         * across the SF. Present iff at least one device supports media
-         * access.
-         * @public
-         * @readonly
-         */
-        readonly mediaServiceCapsList?: OPTIONAL<MediaServiceCapsList>,
-        /**
-         * @summary `maxDeviceHistoryLength`.
-         * @description
-         *
-         * Max DeviceHistory entries the SF supports.
-         * @public
-         * @readonly
-         */
-        readonly maxDeviceHistoryLength?: OPTIONAL<INTEGER>,
-        /**
-         * @summary `maxDestinationDevicesForDeflect`.
-         * @description
-         *
-         * Max new destinations in Deflect Call.
-         * @public
-         * @readonly
-         */
-        readonly maxDestinationDevicesForDeflect?: OPTIONAL<INTEGER>,
-        /**
-         * @summary `extensions`.
-         * @description
-         *
-         * Optional security (timestamp, sequence, securityInfo) and
-         * privateData. ECMA-269 Table 13-9.
-         * @public
-         * @readonly
-         */
-        readonly extensions?: OPTIONAL<CSTACommonArguments>
-    ) {}
+        switchingSubDomainName: IA5String,
+        manufacturerName: IA5String,
+        profiles: Profiles,
+        deviceIDFormat: DeviceIDFormat,
+        swDomainFeatures: SwDomainFeatures,
+        swAppearanceAddressability: SwAppearanceAddressability,
+        swAppearanceTypes: SwAppearanceTypes,
+        ignoreUnsupportedParameters: IgnoreUnsupportedParameters,
+        callCharacteristicsSupported: OPTIONAL<CallCharacteristics>,
+        mediaClassSupport: OPTIONAL<MonitorMediaClass>,
+        numberOfChannels: OPTIONAL<NumberOfChannels>,
+        maxChannelBind: OPTIONAL<MaxChannelBind>,
+        miscMediaCallCharacteristics: OPTIONAL<MiscMediaCallCharacteristics>,
+        connectionRateList: OPTIONAL<ConnectionRateList>,
+        delayToleranceList: OPTIONAL<DelayToleranceList>,
+        pauseTime: OPTIONAL<PauseTime>,
+        currentTime: OPTIONAL<TimeInfo>,
+        messageSeqNumbers: OPTIONAL<MessageSeqNumbers>,
+        timeStampMode: OPTIONAL<TimeStampMode>,
+        securityMode: OPTIONAL<SecurityMode>,
+        securityFormat: OPTIONAL<SecurityFormat>,
+        privateDataFormat: OPTIONAL<SecurityFormat>,
+        transAndConfSetup: OPTIONAL<TransAndConfSetup>,
+        monitorFilterItems: OPTIONAL<MonitorFilterItems>,
+        miscMonitorCaps: OPTIONAL<MiscMonitorCaps>,
+        correlatorDataSupported: OPTIONAL<BOOLEAN>,
+        dynamicFeatureSupported: OPTIONAL<DynamicFeatureSupported>,
+        callLinkageOptions: OPTIONAL<CallLinkageOptions>,
+        aCDModels: OPTIONAL<ACDModels>,
+        agentLogOnModels: OPTIONAL<AgentLogOnModels>,
+        agentStateModels: OPTIONAL<AgentStateModels>,
+        connectionView: ConnectionView,
+        maxLengthParameters: MaxLengthParameters,
+        maxLengthParametersContinued?: OPTIONAL<MaxLengthParametersContinued>,
+        servEvtsList?: OPTIONAL<ServEvtsList>,
+        privateDataVersionList?: OPTIONAL<PrivateDataVersionList>,
+        systemStatusTimer?: OPTIONAL<INTEGER>,
+        simpleThreshold?: OPTIONAL<INTEGER>,
+        filterThreshold?: OPTIONAL<FilterThreshold>,
+        mediaServiceCapsList?: OPTIONAL<MediaServiceCapsList>,
+        maxDeviceHistoryLength?: OPTIONAL<INTEGER>,
+        maxDestinationDevicesForDeflect?: OPTIONAL<INTEGER>,
+        extensions?: OPTIONAL<CSTACommonArguments>
+    ) {
+        this.switchingSubDomainName = switchingSubDomainName;
+        this.manufacturerName = manufacturerName;
+        this.profiles = profiles;
+        this.deviceIDFormat = deviceIDFormat;
+        this.swDomainFeatures = swDomainFeatures;
+        this.swAppearanceAddressability = swAppearanceAddressability;
+        this.swAppearanceTypes = swAppearanceTypes;
+        this.ignoreUnsupportedParameters = ignoreUnsupportedParameters;
+        this.callCharacteristicsSupported = callCharacteristicsSupported;
+        this.mediaClassSupport = mediaClassSupport;
+        this.numberOfChannels = numberOfChannels;
+        this.maxChannelBind = maxChannelBind;
+        this.miscMediaCallCharacteristics = miscMediaCallCharacteristics;
+        this.connectionRateList = connectionRateList;
+        this.delayToleranceList = delayToleranceList;
+        this.pauseTime = pauseTime;
+        this.currentTime = currentTime;
+        this.messageSeqNumbers = messageSeqNumbers;
+        this.timeStampMode = timeStampMode;
+        this.securityMode = securityMode;
+        this.securityFormat = securityFormat;
+        this.privateDataFormat = privateDataFormat;
+        this.transAndConfSetup = transAndConfSetup;
+        this.monitorFilterItems = monitorFilterItems;
+        this.miscMonitorCaps = miscMonitorCaps;
+        this.correlatorDataSupported = correlatorDataSupported;
+        this.dynamicFeatureSupported = dynamicFeatureSupported;
+        this.callLinkageOptions = callLinkageOptions;
+        this.aCDModels = aCDModels;
+        this.agentLogOnModels = agentLogOnModels;
+        this.agentStateModels = agentStateModels;
+        this.connectionView = connectionView;
+        this.maxLengthParameters = maxLengthParameters;
+        this.maxLengthParametersContinued = maxLengthParametersContinued;
+        this.servEvtsList = servEvtsList;
+        this.privateDataVersionList = privateDataVersionList;
+        this.systemStatusTimer = systemStatusTimer;
+        this.simpleThreshold = simpleThreshold;
+        this.filterThreshold = filterThreshold;
+        this.mediaServiceCapsList = mediaServiceCapsList;
+        this.maxDeviceHistoryLength = maxDeviceHistoryLength;
+        this.maxDestinationDevicesForDeflect = maxDestinationDevicesForDeflect;
+        this.extensions = extensions;
+    }
 
     /**
      * @summary Restructures an object into a GetSwitchingFunctionCapsResult
@@ -616,25 +704,25 @@ class GetSwitchingFunctionCapsResult {
          * @static
          */
 
-    public static _enum_for_ignoreUnsupportedParameters = _enum_for_IgnoreUnsupportedParameters;        /**
+    public static _enum_for_ignoreUnsupportedParameters: typeof _enum_for_IgnoreUnsupportedParameters = _enum_for_IgnoreUnsupportedParameters;        /**
          * @summary The enum used as the type of the component `securityMode`
          * @public
          * @static
          */
 
-    public static _enum_for_securityMode = _enum_for_SecurityMode;        /**
+    public static _enum_for_securityMode: typeof _enum_for_SecurityMode = _enum_for_SecurityMode;        /**
          * @summary The enum used as the type of the component `dynamicFeatureSupported`
          * @public
          * @static
          */
 
-    public static _enum_for_dynamicFeatureSupported = _enum_for_DynamicFeatureSupported;        /**
+    public static _enum_for_dynamicFeatureSupported: typeof _enum_for_DynamicFeatureSupported = _enum_for_DynamicFeatureSupported;        /**
          * @summary The enum used as the type of the component `connectionView`
          * @public
          * @static
          */
 
-    public static _enum_for_connectionView = _enum_for_ConnectionView;
+    public static _enum_for_connectionView: typeof _enum_for_ConnectionView = _enum_for_ConnectionView;
 }
 
 /**

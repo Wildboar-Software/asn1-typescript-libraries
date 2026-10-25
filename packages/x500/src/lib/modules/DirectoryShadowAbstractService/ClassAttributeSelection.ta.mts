@@ -1,13 +1,13 @@
 /* eslint-disable */
 import {
-    ASN1Element as _Element,
+    type ASN1Element as _Element,
     ASN1TagClass as _TagClass,
-    OBJECT_IDENTIFIER,
-    OPTIONAL,
+    type OBJECT_IDENTIFIER,
+    type OPTIONAL,
 } from "@wildboar/asn1";
 import * as $ from "@wildboar/asn1/functional";
 import {
-    ClassAttributes,
+    type ClassAttributes,
     _decode_ClassAttributes,
     _encode_ClassAttributes,
 } from "../DirectoryShadowAbstractService/ClassAttributes.ta.mjs";
@@ -30,30 +30,36 @@ import {
  *
  */
 export class ClassAttributeSelection {
+    /**
+     * @summary `class_`.
+     * @description
+     *
+     * Object-class OID. Absent = this selection applies to all classes.
+     * Also matches subclasses of the named class.
+     *
+     * @public
+     * @readonly
+     */
+    public readonly class_?: OPTIONAL<OBJECT_IDENTIFIER>;
+    /**
+     * @summary `classAttributes`.
+     * @description
+     *
+     * DEFAULT `allAttributes:NULL` (all user and collective attributes;
+     * extra operational attributes still need an `include`).
+     *
+     * @public
+     * @readonly
+     */
+    public readonly classAttributes?: OPTIONAL<ClassAttributes>;
+
     constructor(
-        /**
-         * @summary `class_`.
-         * @description
-         *
-         * Object-class OID. Absent = this selection applies to all classes.
-         * Also matches subclasses of the named class.
-         *
-         * @public
-         * @readonly
-         */
-        readonly class_?: OPTIONAL<OBJECT_IDENTIFIER>,
-        /**
-         * @summary `classAttributes`.
-         * @description
-         *
-         * DEFAULT `allAttributes:NULL` (all user and collective attributes;
-         * extra operational attributes still need an `include`).
-         *
-         * @public
-         * @readonly
-         */
-        readonly classAttributes?: OPTIONAL<ClassAttributes>
-    ) {}
+        class_?: OPTIONAL<OBJECT_IDENTIFIER>,
+        classAttributes?: OPTIONAL<ClassAttributes>
+    ) {
+        this.class_ = class_;
+        this.classAttributes = classAttributes;
+    }
 
     /**
      * @summary Restructures an object into a ClassAttributeSelection

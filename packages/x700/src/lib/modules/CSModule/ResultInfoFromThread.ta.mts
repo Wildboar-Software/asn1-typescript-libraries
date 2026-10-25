@@ -1,6 +1,6 @@
 /* eslint-disable */
 import {
-    ASN1Element as _Element,
+    type ASN1Element as _Element,
     ASN1TagClass as _TagClass,
     ASN1Construction as _Construction,
     ASN1UniversalType as _UniversalType,
@@ -11,17 +11,17 @@ import {
 } from '@wildboar/asn1';
 import * as $ from '@wildboar/asn1/functional';
 import {
-    ExecutionType,
+    type ExecutionType,
     _decode_ExecutionType,
     _encode_ExecutionType,
 } from '../CSModule/ExecutionType.ta.mjs';
 import {
-    ErrorCode,
+    type ErrorCode,
     _decode_ErrorCode,
     _encode_ErrorCode,
 } from '../CSModule/ErrorCode.ta.mjs';
 import {
-    ExecutionResultType,
+    type ExecutionResultType,
     _decode_ExecutionResultType,
     _encode_ExecutionResultType,
 } from '../CSModule/ExecutionResultType.ta.mjs';
@@ -57,52 +57,62 @@ import {
  *
  */
 export class ResultInfoFromThread {
+    /**
+     * @summary `executionType`.
+     * @description
+     *
+     * Script/thread pairs spawned for this trigger (single,
+     * parallel set, or sequential list). ITU-T Rec. X.753
+     * (10/97) §7.2, A.8.
+     * @public
+     * @readonly
+     */
+    public readonly executionType: ExecutionType;
+    /**
+     * @summary `errorCode`.
+     * @description
+     *
+     * `{noError}` if this thread succeeded; otherwise the
+     * failure code(s). ITU-T Rec. X.753 (10/97) §8.2.1–§8.2.2.
+     * @public
+     * @readonly
+     */
+    public readonly errorCode: ErrorCode;
+    /**
+     * @summary `executionResultType`.
+     * @description
+     *
+     * Type of `executionResult`; should match the script's
+     * `executionResultType`. ITU-T Rec. X.753 (10/97) §7.2.
+     * @public
+     * @readonly
+     */
+    public readonly executionResultType: ExecutionResultType;
+    /**
+     * @summary `executionResult`.
+     * @description
+     *
+     * Result attributes from the thread. Present in a
+     * synchronous launch pad's trigger result after wait;
+     * async launch pads deliver these via
+     * `executionResultInfo` instead. ITU-T Rec. X.753 (10/97)
+     * §7.2, §8.1.7–§8.1.8.
+     * @public
+     * @readonly
+     */
+    public readonly executionResult: Attribute[];
+
     constructor(
-        /**
-         * @summary `executionType`.
-         * @description
-         *
-         * Script/thread pairs spawned for this trigger (single,
-         * parallel set, or sequential list). ITU-T Rec. X.753
-         * (10/97) §7.2, A.8.
-         * @public
-         * @readonly
-         */
-        readonly executionType: ExecutionType,
-        /**
-         * @summary `errorCode`.
-         * @description
-         *
-         * `{noError}` if this thread succeeded; otherwise the
-         * failure code(s). ITU-T Rec. X.753 (10/97) §8.2.1–§8.2.2.
-         * @public
-         * @readonly
-         */
-        readonly errorCode: ErrorCode,
-        /**
-         * @summary `executionResultType`.
-         * @description
-         *
-         * Type of `executionResult`; should match the script's
-         * `executionResultType`. ITU-T Rec. X.753 (10/97) §7.2.
-         * @public
-         * @readonly
-         */
-        readonly executionResultType: ExecutionResultType,
-        /**
-         * @summary `executionResult`.
-         * @description
-         *
-         * Result attributes from the thread. Present in a
-         * synchronous launch pad's trigger result after wait;
-         * async launch pads deliver these via
-         * `executionResultInfo` instead. ITU-T Rec. X.753 (10/97)
-         * §7.2, §8.1.7–§8.1.8.
-         * @public
-         * @readonly
-         */
-        readonly executionResult: Attribute[]
-    ) {}
+        executionType: ExecutionType,
+        errorCode: ErrorCode,
+        executionResultType: ExecutionResultType,
+        executionResult: Attribute[]
+    ) {
+        this.executionType = executionType;
+        this.errorCode = errorCode;
+        this.executionResultType = executionResultType;
+        this.executionResult = executionResult;
+    }
 
     /**
      * @summary Restructures an object into a ResultInfoFromThread

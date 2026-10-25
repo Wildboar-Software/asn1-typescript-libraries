@@ -46,7 +46,7 @@ export class BioAPI_GUI_BITMAP_ARRAY {
    * @public
    * @readonly
    */
-  readonly guiBitmaps: BioAPI_GUI_BITMAP[];
+  public readonly guiBitmaps: BioAPI_GUI_BITMAP[];
 
   constructor(
     guiBitmaps: BioAPI_GUI_BITMAP[]

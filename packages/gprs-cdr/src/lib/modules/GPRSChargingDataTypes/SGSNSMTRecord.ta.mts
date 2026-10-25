@@ -1,23 +1,23 @@
 /* eslint-disable */
 import {
-    IA5String,
-    INTEGER,
-    NULL,
-    OCTET_STRING,
-    OPTIONAL,
-    ASN1Element as _Element,
+    type IA5String,
+    type INTEGER,
+    type NULL,
+    type OCTET_STRING,
+    type OPTIONAL,
+    type ASN1Element as _Element,
     ASN1TagClass as _TagClass,
     ASN1SizeError,
     ASN1OverflowError
 } from "@wildboar/asn1";
 import * as $ from "@wildboar/asn1/functional";
-import { RecordType, _decode_RecordType, _encode_RecordType } from "../GPRSChargingDataTypes/RecordType.ta.mjs";
-import { Diagnostics, _decode_Diagnostics, _encode_Diagnostics } from "../GPRSChargingDataTypes/Diagnostics.ta.mjs";
+import { type RecordType, _decode_RecordType, _encode_RecordType } from "../GPRSChargingDataTypes/RecordType.ta.mjs";
+import { type Diagnostics, _decode_Diagnostics, _encode_Diagnostics } from "../GPRSChargingDataTypes/Diagnostics.ta.mjs";
 import { ManagementExtension, _decode_ManagementExtension, _encode_ManagementExtension } from "../GPRSChargingDataTypes/ManagementExtension.ta.mjs";
-import { ChChSelectionMode, _decode_ChChSelectionMode, _encode_ChChSelectionMode, _enum_for_ChChSelectionMode } from "../GPRSChargingDataTypes/ChChSelectionMode.ta.mjs";
+import { type ChChSelectionMode, _decode_ChChSelectionMode, _encode_ChChSelectionMode, _enum_for_ChChSelectionMode } from "../GPRSChargingDataTypes/ChChSelectionMode.ta.mjs";
 import { CAMELInformationSMS, _decode_CAMELInformationSMS, _encode_CAMELInformationSMS } from "../GPRSChargingDataTypes/CAMELInformationSMS.ta.mjs";
 import { ServingNodeType, _decode_ServingNodeType, _encode_ServingNodeType, _enum_for_ServingNodeType } from "../GPRSChargingDataTypes/ServingNodeType.ta.mjs";
-import { GSNAddress, _decode_GSNAddress, _encode_GSNAddress } from "../GPRSChargingDataTypes/GSNAddress.ta.mjs";
+import { type GSNAddress, _decode_GSNAddress, _encode_GSNAddress } from "../GPRSChargingDataTypes/GSNAddress.ta.mjs";
 import { CNOperatorSelectionEntity, _decode_CNOperatorSelectionEntity, _encode_CNOperatorSelectionEntity, _enum_for_CNOperatorSelectionEntity } from "../GPRSChargingDataTypes/CNOperatorSelectionEntity.ta.mjs";
 
 
@@ -756,19 +756,19 @@ class SGSNSMTRecord {
          * @static
          */
 
-    public static _enum_for_chChSelectionMode = _enum_for_ChChSelectionMode;        /**
+    public static _enum_for_chChSelectionMode: typeof _enum_for_ChChSelectionMode = _enum_for_ChChSelectionMode;        /**
          * @summary The enum used as the type of the component `servingNodeType`
          * @public
          * @static
          */
 
-    public static _enum_for_servingNodeType = _enum_for_ServingNodeType;        /**
+    public static _enum_for_servingNodeType: typeof _enum_for_ServingNodeType = _enum_for_ServingNodeType;        /**
          * @summary The enum used as the type of the component `cNOperatorSelectionEnt`
          * @public
          * @static
          */
 
-    public static _enum_for_cNOperatorSelectionEnt = _enum_for_CNOperatorSelectionEntity;
+    public static _enum_for_cNOperatorSelectionEnt: typeof _enum_for_CNOperatorSelectionEntity = _enum_for_CNOperatorSelectionEntity;
 }
 
 /**

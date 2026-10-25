@@ -1,9 +1,9 @@
 /* eslint-disable */
 import {
-    ASN1Element as _Element,
+    type ASN1Element as _Element,
     ASN1TagClass as _TagClass,
-    INTEGER,
-    OPTIONAL,
+    type INTEGER,
+    type OPTIONAL,
 } from "@wildboar/asn1";
 import * as $ from "@wildboar/asn1/functional";
 import {
@@ -12,12 +12,12 @@ import {
     _encode_AlgorithmIdentifier,
 } from "../AuthenticationFramework/AlgorithmIdentifier.ta.mjs";
 import {
-    Conf_Alg,
+    type Conf_Alg,
     _decode_Conf_Alg,
     _encode_Conf_Alg,
 } from "../SpkmGssTokens/Conf-Alg.ta.mjs";
 import {
-    Random_Integer,
+    type Random_Integer,
     _decode_Random_Integer,
     _encode_Random_Integer,
 } from "../SpkmGssTokens/Random-Integer.ta.mjs";
@@ -49,61 +49,73 @@ import {
  *
  */
 export class Wrap_Header {
+    /**
+     * @summary `tok_id`.
+     * @description
+     *
+     * Must be 513 (0x0201). Bound into the checksum.
+     *
+     * @public
+     * @readonly
+     */
+    public readonly tok_id: INTEGER;
+    /**
+     * @summary `context_id`.
+     * @description
+     *
+     * Established context-id.
+     *
+     * @public
+     * @readonly
+     */
+    public readonly context_id: Random_Integer;
+    /**
+     * @summary `int_alg`.
+     * @description
+     *
+     * Must be an agreed I-ALG. Omit for default. `sum64-DES-CBC`
+     * forces confidentiality.
+     *
+     * @public
+     * @readonly
+     */
+    public readonly int_alg?: OPTIONAL<AlgorithmIdentifier>;
+    /**
+     * @summary `conf_alg`.
+     * @description
+     *
+     * Agreed C-ALG, or `null` for no encryption. Omit for default
+     * C-ALG (not `null`). Combined encrypt+integrity when DES-CBC
+     * with md5-DES-CBC or sum64-DES-CBC.
+     *
+     * @public
+     * @readonly
+     */
+    public readonly conf_alg?: OPTIONAL<Conf_Alg>;
+    /**
+     * @summary `snd_seq`.
+     * @description
+     *
+     * Same sequencing rules as MIC. Increment after emitting.
+     *
+     * @public
+     * @readonly
+     */
+    public readonly snd_seq?: OPTIONAL<SeqNum>;
+
     constructor(
-        /**
-         * @summary `tok_id`.
-         * @description
-         *
-         * Must be 513 (0x0201). Bound into the checksum.
-         *
-         * @public
-         * @readonly
-         */
-        readonly tok_id: INTEGER,
-        /**
-         * @summary `context_id`.
-         * @description
-         *
-         * Established context-id.
-         *
-         * @public
-         * @readonly
-         */
-        readonly context_id: Random_Integer,
-        /**
-         * @summary `int_alg`.
-         * @description
-         *
-         * Must be an agreed I-ALG. Omit for default. `sum64-DES-CBC`
-         * forces confidentiality.
-         *
-         * @public
-         * @readonly
-         */
-        readonly int_alg?: OPTIONAL<AlgorithmIdentifier>,
-        /**
-         * @summary `conf_alg`.
-         * @description
-         *
-         * Agreed C-ALG, or `null` for no encryption. Omit for default
-         * C-ALG (not `null`). Combined encrypt+integrity when DES-CBC
-         * with md5-DES-CBC or sum64-DES-CBC.
-         *
-         * @public
-         * @readonly
-         */
-        readonly conf_alg?: OPTIONAL<Conf_Alg>,
-        /**
-         * @summary `snd_seq`.
-         * @description
-         *
-         * Same sequencing rules as MIC. Increment after emitting.
-         *
-         * @public
-         * @readonly
-         */
-        readonly snd_seq?: OPTIONAL<SeqNum>
-    ) {}
+        tok_id: INTEGER,
+        context_id: Random_Integer,
+        int_alg?: OPTIONAL<AlgorithmIdentifier>,
+        conf_alg?: OPTIONAL<Conf_Alg>,
+        snd_seq?: OPTIONAL<SeqNum>
+    ) {
+        this.tok_id = tok_id;
+        this.context_id = context_id;
+        this.int_alg = int_alg;
+        this.conf_alg = conf_alg;
+        this.snd_seq = snd_seq;
+    }
 
     /**
      * @summary Restructures an object into a Wrap_Header

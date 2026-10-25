@@ -1,6 +1,6 @@
 /* eslint-disable */
 import {
-    INTEGER
+    type INTEGER
 } from "@wildboar/asn1";
 import * as $ from "@wildboar/asn1/functional";
 
@@ -42,7 +42,7 @@ type ClientPartNotToKeep_replaceOrAppend = INTEGER;
  * @type {number}
  */
 export
-const ClientPartNotToKeep_replaceOrAppend_replace: ClientPartNotToKeep_replaceOrAppend = 1; /* LONG_NAMED_INTEGER_VALUE */
+const ClientPartNotToKeep_replaceOrAppend_replace: 1 = 1 satisfies ClientPartNotToKeep_replaceOrAppend; /* LONG_NAMED_INTEGER_VALUE */
 
 /**
  * @summary ClientPartNotToKeep_replaceOrAppend_replace
@@ -54,7 +54,7 @@ const ClientPartNotToKeep_replaceOrAppend_replace: ClientPartNotToKeep_replaceOr
  * @type {number}
  */
 export
-const replace: ClientPartNotToKeep_replaceOrAppend = ClientPartNotToKeep_replaceOrAppend_replace; /* SHORT_NAMED_INTEGER_VALUE */
+const replace: 1 = ClientPartNotToKeep_replaceOrAppend_replace; /* SHORT_NAMED_INTEGER_VALUE */
 
 /**
  * @summary ClientPartNotToKeep_replaceOrAppend_append
@@ -69,7 +69,7 @@ const replace: ClientPartNotToKeep_replaceOrAppend = ClientPartNotToKeep_replace
  * @type {number}
  */
 export
-const ClientPartNotToKeep_replaceOrAppend_append: ClientPartNotToKeep_replaceOrAppend = 2; /* LONG_NAMED_INTEGER_VALUE */
+const ClientPartNotToKeep_replaceOrAppend_append: 2 = 2 satisfies ClientPartNotToKeep_replaceOrAppend; /* LONG_NAMED_INTEGER_VALUE */
 
 /**
  * @summary ClientPartNotToKeep_replaceOrAppend_append
@@ -81,7 +81,7 @@ const ClientPartNotToKeep_replaceOrAppend_append: ClientPartNotToKeep_replaceOrA
  * @type {number}
  */
 export
-const append: ClientPartNotToKeep_replaceOrAppend = ClientPartNotToKeep_replaceOrAppend_append; /* SHORT_NAMED_INTEGER_VALUE */
+const append: 2 = ClientPartNotToKeep_replaceOrAppend_append; /* SHORT_NAMED_INTEGER_VALUE */
 export const _decode_ClientPartNotToKeep_replaceOrAppend: $.ASN1Decoder<ClientPartNotToKeep_replaceOrAppend> = $._decodeInteger;
 export const _encode_ClientPartNotToKeep_replaceOrAppend: $.ASN1Encoder<ClientPartNotToKeep_replaceOrAppend> = $._encodeInteger;
 

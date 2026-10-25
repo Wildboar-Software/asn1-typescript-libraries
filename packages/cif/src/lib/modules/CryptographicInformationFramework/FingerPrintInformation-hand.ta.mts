@@ -1,6 +1,6 @@
 /* eslint-disable */
 import {
-    ASN1Element as _Element,
+    type ASN1Element as _Element,
     ASN1TagClass as _TagClass,
     ASN1Construction as _Construction,
     ASN1UniversalType as _UniversalType,
@@ -61,7 +61,7 @@ type FingerPrintInformation_hand = _enum_for_FingerPrintInformation_hand;
  * @enum {number}
  */
 export
-const FingerPrintInformation_hand = _enum_for_FingerPrintInformation_hand;
+const FingerPrintInformation_hand: typeof _enum_for_FingerPrintInformation_hand = _enum_for_FingerPrintInformation_hand;
 
 /**
  * @summary FingerPrintInformation_hand_left
@@ -69,7 +69,7 @@ const FingerPrintInformation_hand = _enum_for_FingerPrintInformation_hand;
  * @type {number}
  */
 export
-const FingerPrintInformation_hand_left: FingerPrintInformation_hand = FingerPrintInformation_hand.left; /* LONG_NAMED_ENUMERATED_VALUE */
+const FingerPrintInformation_hand_left: _enum_for_FingerPrintInformation_hand.left = FingerPrintInformation_hand.left; /* LONG_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary left
@@ -77,7 +77,7 @@ const FingerPrintInformation_hand_left: FingerPrintInformation_hand = FingerPrin
  * @type {number}
  */
 export
-const left: FingerPrintInformation_hand = FingerPrintInformation_hand.left; /* SHORT_NAMED_ENUMERATED_VALUE */
+const left: _enum_for_FingerPrintInformation_hand.left = FingerPrintInformation_hand.left; /* SHORT_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary FingerPrintInformation_hand_right
@@ -85,7 +85,7 @@ const left: FingerPrintInformation_hand = FingerPrintInformation_hand.left; /* S
  * @type {number}
  */
 export
-const FingerPrintInformation_hand_right: FingerPrintInformation_hand = FingerPrintInformation_hand.right; /* LONG_NAMED_ENUMERATED_VALUE */
+const FingerPrintInformation_hand_right: _enum_for_FingerPrintInformation_hand.right = FingerPrintInformation_hand.right; /* LONG_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary right
@@ -93,9 +93,9 @@ const FingerPrintInformation_hand_right: FingerPrintInformation_hand = FingerPri
  * @type {number}
  */
 export
-const right: FingerPrintInformation_hand = FingerPrintInformation_hand.right; /* SHORT_NAMED_ENUMERATED_VALUE */
-export const _decode_FingerPrintInformation_hand = $._decodeEnumerated;
-export const _encode_FingerPrintInformation_hand = $._encodeEnumerated;
+const right: _enum_for_FingerPrintInformation_hand.right = FingerPrintInformation_hand.right; /* SHORT_NAMED_ENUMERATED_VALUE */
+export const _decode_FingerPrintInformation_hand: $.ASN1Decoder<number> = $._decodeEnumerated;
+export const _encode_FingerPrintInformation_hand: $.ASN1Encoder<number> = $._encodeEnumerated;
 
 
 /* eslint-enable */

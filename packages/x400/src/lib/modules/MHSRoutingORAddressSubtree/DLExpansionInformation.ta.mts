@@ -1,8 +1,8 @@
 /* eslint-disable */
 import {
-    OPTIONAL,
-    BOOLEAN,
-    ASN1Element as _Element,
+    type OPTIONAL,
+    type BOOLEAN,
+    type ASN1Element as _Element,
     ASN1TagClass as _TagClass,
     ASN1Construction as _Construction,
     ASN1UniversalType as _UniversalType,
@@ -18,7 +18,7 @@ import {
     _encode_TargetRoutingCollective,
 } from '../MHSRoutingORAddressSubtree/TargetRoutingCollective.ta.mjs';
 import {
-    MHSDistributionListName,
+    type MHSDistributionListName,
     _decode_MHSDistributionListName,
     _encode_MHSDistributionListName,
 } from '../MHSRoutingORAddressSubtree/MHSDistributionListName.ta.mjs';
@@ -40,26 +40,34 @@ import {
  *
  */
 export class DLExpansionInformation {
+    /**
+     * @summary `dl_expansion_routing_collectives`.
+     * @public
+     * @readonly
+     */
+    public readonly dl_expansion_routing_collectives: TargetRoutingCollective[];
+    /**
+     * @summary `dl_name`.
+     * @public
+     * @readonly
+     */
+    public readonly dl_name?: OPTIONAL<MHSDistributionListName>;
+    /**
+     * @summary `any_mta_may_expand`.
+     * @public
+     * @readonly
+     */
+    public readonly any_mta_may_expand?: OPTIONAL<BOOLEAN>;
+
     constructor(
-        /**
-         * @summary `dl_expansion_routing_collectives`.
-         * @public
-         * @readonly
-         */
-        readonly dl_expansion_routing_collectives: TargetRoutingCollective[],
-        /**
-         * @summary `dl_name`.
-         * @public
-         * @readonly
-         */
-        readonly dl_name?: OPTIONAL<MHSDistributionListName>,
-        /**
-         * @summary `any_mta_may_expand`.
-         * @public
-         * @readonly
-         */
-        readonly any_mta_may_expand?: OPTIONAL<BOOLEAN>
-    ) {}
+        dl_expansion_routing_collectives: TargetRoutingCollective[],
+        dl_name?: OPTIONAL<MHSDistributionListName>,
+        any_mta_may_expand?: OPTIONAL<BOOLEAN>
+    ) {
+        this.dl_expansion_routing_collectives = dl_expansion_routing_collectives;
+        this.dl_name = dl_name;
+        this.any_mta_may_expand = any_mta_may_expand;
+    }
 
     /**
      * @summary Restructures an object into a DLExpansionInformation

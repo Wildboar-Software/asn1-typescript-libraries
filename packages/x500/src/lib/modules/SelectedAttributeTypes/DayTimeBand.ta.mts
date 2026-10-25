@@ -1,8 +1,8 @@
 /* eslint-disable */
 import {
-    ASN1Element as _Element,
+    type ASN1Element as _Element,
     ASN1TagClass as _TagClass,
-    OPTIONAL,
+    type OPTIONAL,
 } from "@wildboar/asn1";
 import * as $ from "@wildboar/asn1/functional";
 import {
@@ -55,34 +55,42 @@ import {
  *
  */
 export class DayTimeBand {
+    /**
+     * @summary `startDayTime`.
+     * @description
+     *
+     * DEFAULT {hour 0}.
+     *
+     * @public
+     * @readonly
+     */
+    public readonly startDayTime?: OPTIONAL<DayTime>;
+    /**
+     * @summary `endDayTime`.
+     * @description
+     *
+     * DEFAULT {hour 23, minute 59, second 59}.
+     *
+     * @public
+     * @readonly
+     */
+    public readonly endDayTime?: OPTIONAL<DayTime>;
+    /**
+     * @summary Extensions that are not recognized.
+     * @public
+     * @readonly
+     */
+    public readonly _unrecognizedExtensionsList: _Element[];
+
     constructor(
-        /**
-         * @summary `startDayTime`.
-         * @description
-         *
-         * DEFAULT {hour 0}.
-         *
-         * @public
-         * @readonly
-         */
-        readonly startDayTime?: OPTIONAL<DayTime>,
-        /**
-         * @summary `endDayTime`.
-         * @description
-         *
-         * DEFAULT {hour 23, minute 59, second 59}.
-         *
-         * @public
-         * @readonly
-         */
-        readonly endDayTime?: OPTIONAL<DayTime>,
-        /**
-         * @summary Extensions that are not recognized.
-         * @public
-         * @readonly
-         */
-        readonly _unrecognizedExtensionsList: _Element[] = []
-    ) {}
+        startDayTime?: OPTIONAL<DayTime>,
+        endDayTime?: OPTIONAL<DayTime>,
+        _unrecognizedExtensionsList: _Element[] = []
+    ) {
+        this.startDayTime = startDayTime;
+        this.endDayTime = endDayTime;
+        this._unrecognizedExtensionsList = _unrecognizedExtensionsList;
+    }
 
     /**
      * @summary Restructures an object into a DayTimeBand

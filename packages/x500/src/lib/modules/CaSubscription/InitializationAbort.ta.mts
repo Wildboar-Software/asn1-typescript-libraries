@@ -1,12 +1,12 @@
 /* eslint-disable */
 import {
     ASN1ConstructionError as _ConstructionError,
-    ASN1Element as _Element,
+    type ASN1Element as _Element,
     ASN1TagClass as _TagClass,
 } from "@wildboar/asn1";
 import * as $ from "@wildboar/asn1/functional";
 import {
-    InitializationAbort_diag,
+    type InitializationAbort_diag,
     _decode_InitializationAbort_diag,
     _encode_InitializationAbort_diag,
     _enum_for_InitializationAbort_diag,
@@ -31,25 +31,31 @@ import {
  *
  */
 export class InitializationAbort {
+    /**
+     * @summary `diag`.
+     * @description
+     *
+     * `unsupportedVersion` if Acc’s single version was not among those
+     * offered; `onlySingleVersionAllowed` if Acc set more than one version
+     * bit.
+     * @public
+     * @readonly
+     */
+    public readonly diag: InitializationAbort_diag;
+    /**
+     * @summary Extensions that are not recognized.
+     * @public
+     * @readonly
+     */
+    public readonly _unrecognizedExtensionsList: _Element[];
+
     constructor(
-        /**
-         * @summary `diag`.
-         * @description
-         *
-         * `unsupportedVersion` if Acc’s single version was not among those
-         * offered; `onlySingleVersionAllowed` if Acc set more than one version
-         * bit.
-         * @public
-         * @readonly
-         */
-        readonly diag: InitializationAbort_diag,
-        /**
-         * @summary Extensions that are not recognized.
-         * @public
-         * @readonly
-         */
-        readonly _unrecognizedExtensionsList: _Element[] = []
-    ) {}
+        diag: InitializationAbort_diag,
+        _unrecognizedExtensionsList: _Element[] = []
+    ) {
+        this.diag = diag;
+        this._unrecognizedExtensionsList = _unrecognizedExtensionsList;
+    }
 
     /**
      * @summary Restructures an object into a InitializationAbort
@@ -75,7 +81,7 @@ export class InitializationAbort {
      * @static
      */
 
-    public static _enum_for_diag = _enum_for_InitializationAbort_diag;
+    public static _enum_for_diag: typeof _enum_for_InitializationAbort_diag = _enum_for_InitializationAbort_diag;
 }
 
 /**

@@ -1,6 +1,6 @@
 /* eslint-disable */
 import {
-    ASN1Element as _Element,
+    type ASN1Element as _Element,
     ASN1TagClass as _TagClass,
     ASN1Construction as _Construction,
     ASN1UniversalType as _UniversalType,
@@ -11,7 +11,7 @@ import {
 } from '@wildboar/asn1';
 import * as $ from '@wildboar/asn1/functional';
 import {
-    MessageSubmissionIdentifier,
+    type MessageSubmissionIdentifier,
     _decode_MessageSubmissionIdentifier,
     _encode_MessageSubmissionIdentifier,
 } from '../MTSAbstractService/MessageSubmissionIdentifier.ta.mjs';
@@ -29,22 +29,13 @@ import {
  */
 export type CancelDeferredDeliveryArgument = MessageSubmissionIdentifier; // DefinedType
 
-let _cached_decoder_for_CancelDeferredDeliveryArgument: $.ASN1Decoder<CancelDeferredDeliveryArgument> | null = null;
-
 /**
  * @summary Decodes an ASN.1 element into a(n) CancelDeferredDeliveryArgument
  * @function
  * @param {_Element} el The element being decoded.
  * @returns {CancelDeferredDeliveryArgument} The decoded data structure.
  */
-export function _decode_CancelDeferredDeliveryArgument(el: _Element): CancelDeferredDeliveryArgument {
-    if (!_cached_decoder_for_CancelDeferredDeliveryArgument) {
-        _cached_decoder_for_CancelDeferredDeliveryArgument = _decode_MessageSubmissionIdentifier;
-    }
-    return _cached_decoder_for_CancelDeferredDeliveryArgument(el);
-}
-
-let _cached_encoder_for_CancelDeferredDeliveryArgument: $.ASN1Encoder<CancelDeferredDeliveryArgument> | null = null;
+export const _decode_CancelDeferredDeliveryArgument: $.ASN1Decoder<CancelDeferredDeliveryArgument> = _decode_MessageSubmissionIdentifier;
 
 /**
  * @summary Encodes a(n) CancelDeferredDeliveryArgument into an ASN.1 Element.
@@ -53,15 +44,7 @@ let _cached_encoder_for_CancelDeferredDeliveryArgument: $.ASN1Encoder<CancelDefe
  * @param elGetter A function that can be used to get new ASN.1 elements.
  * @returns {_Element} The CancelDeferredDeliveryArgument, encoded as an ASN.1 Element.
  */
-export function _encode_CancelDeferredDeliveryArgument(
-    value: CancelDeferredDeliveryArgument,
-    elGetter: $.ASN1Encoder<CancelDeferredDeliveryArgument>
-): _Element {
-    if (!_cached_encoder_for_CancelDeferredDeliveryArgument) {
-        _cached_encoder_for_CancelDeferredDeliveryArgument = _encode_MessageSubmissionIdentifier;
-    }
-    return _cached_encoder_for_CancelDeferredDeliveryArgument(value, elGetter);
-}
+export const _encode_CancelDeferredDeliveryArgument: $.ASN1Encoder<CancelDeferredDeliveryArgument> = _encode_MessageSubmissionIdentifier;
 
 
 /* eslint-enable */

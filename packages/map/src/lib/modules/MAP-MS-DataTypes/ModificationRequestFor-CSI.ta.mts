@@ -1,12 +1,12 @@
 /* eslint-disable */
 import {
-    OPTIONAL,
-    ASN1Element as _Element,
+    type OPTIONAL,
+    type ASN1Element as _Element,
     ASN1TagClass as _TagClass
 } from "@wildboar/asn1";
 import * as $ from "@wildboar/asn1/functional";
 import { ExtensionContainer, _decode_ExtensionContainer, _encode_ExtensionContainer } from "../MAP-ExtensionDataTypes/ExtensionContainer.ta.mjs";
-import { AdditionalRequestedCAMEL_SubscriptionInfo, _decode_AdditionalRequestedCAMEL_SubscriptionInfo, _encode_AdditionalRequestedCAMEL_SubscriptionInfo, _enum_for_AdditionalRequestedCAMEL_SubscriptionInfo } from "../MAP-MS-DataTypes/AdditionalRequestedCAMEL-SubscriptionInfo.ta.mjs";
+import { type AdditionalRequestedCAMEL_SubscriptionInfo, _decode_AdditionalRequestedCAMEL_SubscriptionInfo, _encode_AdditionalRequestedCAMEL_SubscriptionInfo, _enum_for_AdditionalRequestedCAMEL_SubscriptionInfo } from "../MAP-MS-DataTypes/AdditionalRequestedCAMEL-SubscriptionInfo.ta.mjs";
 import { ModificationInstruction, _decode_ModificationInstruction, _encode_ModificationInstruction, _enum_for_ModificationInstruction } from "../MAP-MS-DataTypes/ModificationInstruction.ta.mjs";
 import { RequestedCAMEL_SubscriptionInfo, _decode_RequestedCAMEL_SubscriptionInfo, _encode_RequestedCAMEL_SubscriptionInfo, _enum_for_RequestedCAMEL_SubscriptionInfo } from "../MAP-MS-DataTypes/RequestedCAMEL-SubscriptionInfo.ta.mjs";
 
@@ -25,9 +25,9 @@ import { RequestedCAMEL_SubscriptionInfo, _decode_RequestedCAMEL_SubscriptionInf
  * ```asn1
  * ModificationRequestFor-CSI ::= SEQUENCE {
  *     requestedCamel-SubscriptionInfo    [0]    RequestedCAMEL-SubscriptionInfo,
- *     modifyNotificationToCSE    [1]    ModificationInstruction    OPTIONAL,
- *     modifyCSI-State    [2]    ModificationInstruction    OPTIONAL,
- *     extensionContainer    [3]    ExtensionContainer    OPTIONAL,
+ *     modifyNotificationToCSE    [1]    ModificationInstruction    type OPTIONAL,
+ *     modifyCSI-State    [2]    ModificationInstruction    type OPTIONAL,
+ *     extensionContainer    [3]    ExtensionContainer    type OPTIONAL,
  *     ...,
  *     additionalRequestedCAMEL-SubscriptionInfo
  *     [4] AdditionalRequestedCAMEL-SubscriptionInfo
@@ -38,64 +38,78 @@ import { RequestedCAMEL_SubscriptionInfo, _decode_RequestedCAMEL_SubscriptionInf
  */
 export
 class ModificationRequestFor_CSI {
+    /**
+     * @summary `requestedCamel_SubscriptionInfo`.
+     * @description
+     *
+     * Shall be discarded if `additionalRequestedCAMEL-SubscriptionInfo` is
+     * received. (3GPP TS 29.002 V19.1.0 clause 17.7.1)
+     *
+     * @public
+     * @readonly
+     */
+    public readonly requestedCamel_SubscriptionInfo: RequestedCAMEL_SubscriptionInfo;
+    /**
+     * @summary `modifyNotificationToCSE`.
+     * @description
+     *
+     * Activate or deactivate notification to the CSE for this CSI. (3GPP TS
+     * 29.002 V19.1.0 clause 7.6.3.81)
+     *
+     * @public
+     * @readonly
+     */
+    public readonly modifyNotificationToCSE?: OPTIONAL<ModificationInstruction>;
+    /**
+     * @summary `modifyCSI_State`.
+     * @description
+     *
+     * Activate or deactivate the CSI itself. (3GPP TS 29.002 V19.1.0 clause
+     * 7.6.3.81)
+     *
+     * @public
+     * @readonly
+     */
+    public readonly modifyCSI_State?: OPTIONAL<ModificationInstruction>;
+    /**
+     * @summary `extensionContainer`.
+     * @public
+     * @readonly
+     */
+    public readonly extensionContainer?: OPTIONAL<ExtensionContainer>;
+    /**
+     * @summary `additionalRequestedCAMEL_SubscriptionInfo`.
+     * @description
+     *
+     * Takes precedence over `requestedCamel-SubscriptionInfo`. (3GPP TS
+     * 29.002 V19.1.0 clause 17.7.1)
+     *
+     * @public
+     * @readonly
+     */
+    public readonly additionalRequestedCAMEL_SubscriptionInfo?: OPTIONAL<AdditionalRequestedCAMEL_SubscriptionInfo>;
+    /**
+     * @summary Extensions that are not recognized.
+     * @public
+     * @readonly
+     */
+    public readonly _unrecognizedExtensionsList: _Element[];
+
     constructor (
-        /**
-         * @summary `requestedCamel_SubscriptionInfo`.
-         * @description
-         *
-         * Shall be discarded if `additionalRequestedCAMEL-SubscriptionInfo` is
-         * received. (3GPP TS 29.002 V19.1.0 clause 17.7.1)
-         *
-         * @public
-         * @readonly
-         */
-        readonly requestedCamel_SubscriptionInfo: RequestedCAMEL_SubscriptionInfo,
-        /**
-         * @summary `modifyNotificationToCSE`.
-         * @description
-         *
-         * Activate or deactivate notification to the CSE for this CSI. (3GPP TS
-         * 29.002 V19.1.0 clause 7.6.3.81)
-         *
-         * @public
-         * @readonly
-         */
-        readonly modifyNotificationToCSE?: OPTIONAL<ModificationInstruction>,
-        /**
-         * @summary `modifyCSI_State`.
-         * @description
-         *
-         * Activate or deactivate the CSI itself. (3GPP TS 29.002 V19.1.0 clause
-         * 7.6.3.81)
-         *
-         * @public
-         * @readonly
-         */
-        readonly modifyCSI_State?: OPTIONAL<ModificationInstruction>,
-        /**
-         * @summary `extensionContainer`.
-         * @public
-         * @readonly
-         */
-        readonly extensionContainer?: OPTIONAL<ExtensionContainer>,
-        /**
-         * @summary `additionalRequestedCAMEL_SubscriptionInfo`.
-         * @description
-         *
-         * Takes precedence over `requestedCamel-SubscriptionInfo`. (3GPP TS
-         * 29.002 V19.1.0 clause 17.7.1)
-         *
-         * @public
-         * @readonly
-         */
-        readonly additionalRequestedCAMEL_SubscriptionInfo?: OPTIONAL<AdditionalRequestedCAMEL_SubscriptionInfo>,
-        /**
-         * @summary Extensions that are not recognized.
-         * @public
-         * @readonly
-         */
-        readonly _unrecognizedExtensionsList: _Element[] = []
-    ) {}
+        requestedCamel_SubscriptionInfo: RequestedCAMEL_SubscriptionInfo,
+        modifyNotificationToCSE?: OPTIONAL<ModificationInstruction>,
+        modifyCSI_State?: OPTIONAL<ModificationInstruction>,
+        extensionContainer?: OPTIONAL<ExtensionContainer>,
+        additionalRequestedCAMEL_SubscriptionInfo?: OPTIONAL<AdditionalRequestedCAMEL_SubscriptionInfo>,
+        _unrecognizedExtensionsList: _Element[] = []
+    ) {
+        this.requestedCamel_SubscriptionInfo = requestedCamel_SubscriptionInfo;
+        this.modifyNotificationToCSE = modifyNotificationToCSE;
+        this.modifyCSI_State = modifyCSI_State;
+        this.extensionContainer = extensionContainer;
+        this.additionalRequestedCAMEL_SubscriptionInfo = additionalRequestedCAMEL_SubscriptionInfo;
+        this._unrecognizedExtensionsList = _unrecognizedExtensionsList;
+    }
 
     /**
      * @summary Restructures an object into a ModificationRequestFor_CSI
@@ -119,25 +133,25 @@ class ModificationRequestFor_CSI {
          * @static
          */
 
-    public static _enum_for_requestedCamel_SubscriptionInfo = _enum_for_RequestedCAMEL_SubscriptionInfo;        /**
+    public static _enum_for_requestedCamel_SubscriptionInfo: typeof _enum_for_RequestedCAMEL_SubscriptionInfo = _enum_for_RequestedCAMEL_SubscriptionInfo;        /**
          * @summary The enum used as the type of the component `modifyNotificationToCSE`
          * @public
          * @static
          */
 
-    public static _enum_for_modifyNotificationToCSE = _enum_for_ModificationInstruction;        /**
+    public static _enum_for_modifyNotificationToCSE: typeof _enum_for_ModificationInstruction = _enum_for_ModificationInstruction;        /**
          * @summary The enum used as the type of the component `modifyCSI_State`
          * @public
          * @static
          */
 
-    public static _enum_for_modifyCSI_State = _enum_for_ModificationInstruction;        /**
+    public static _enum_for_modifyCSI_State: typeof _enum_for_ModificationInstruction = _enum_for_ModificationInstruction;        /**
          * @summary The enum used as the type of the component `additionalRequestedCAMEL_SubscriptionInfo`
          * @public
          * @static
          */
 
-    public static _enum_for_additionalRequestedCAMEL_SubscriptionInfo = _enum_for_AdditionalRequestedCAMEL_SubscriptionInfo;
+    public static _enum_for_additionalRequestedCAMEL_SubscriptionInfo: typeof _enum_for_AdditionalRequestedCAMEL_SubscriptionInfo = _enum_for_AdditionalRequestedCAMEL_SubscriptionInfo;
 }
 
 /**

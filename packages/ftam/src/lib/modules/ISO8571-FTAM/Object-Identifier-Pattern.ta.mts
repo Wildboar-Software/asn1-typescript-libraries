@@ -1,6 +1,6 @@
 /* eslint-disable */
 import {
-  OBJECT_IDENTIFIER,
+  type OBJECT_IDENTIFIER,
   ASN1Element as _Element,
   ASN1TagClass as _TagClass,
   ASN1Construction as _Construction,
@@ -12,7 +12,7 @@ import {
 } from '@wildboar/asn1';
 import * as $ from '@wildboar/asn1/functional';
 import {
-  Equality_Comparision,
+  type Equality_Comparision,
   _decode_Equality_Comparision,
   _encode_Equality_Comparision,
 } from '../ISO8571-FTAM/Equality-Comparision.ta.mjs';
@@ -43,7 +43,7 @@ export class Object_Identifier_Pattern {
    * @public
    * @readonly
    */
-  readonly equality_comparision: Equality_Comparision;
+  public readonly equality_comparision: Equality_Comparision;
   /**
    * @summary `object_identifier_value`.
    * @description
@@ -53,7 +53,7 @@ export class Object_Identifier_Pattern {
    * @public
    * @readonly
    */
-  readonly object_identifier_value: OBJECT_IDENTIFIER;
+  public readonly object_identifier_value: OBJECT_IDENTIFIER;
 
   constructor(
     equality_comparision: Equality_Comparision,

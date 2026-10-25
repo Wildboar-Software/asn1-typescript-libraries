@@ -1,7 +1,7 @@
 /* eslint-disable */
 import { type ALGORITHM } from "@wildboar/x500/AuthenticationFramework";
 import {
-    EncodingParameters,
+    type EncodingParameters,
     _decode_EncodingParameters,
     _encode_EncodingParameters,
 } from "../PKIX1-PSS-OAEP-Algorithms-2009/EncodingParameters.ta.mjs";

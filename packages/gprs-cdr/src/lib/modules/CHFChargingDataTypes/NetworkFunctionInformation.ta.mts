@@ -1,16 +1,16 @@
 /* eslint-disable */
 import {
-    IA5String,
-    OCTET_STRING,
-    OPTIONAL,
-    ASN1Element as _Element,
+    type IA5String,
+    type OCTET_STRING,
+    type OPTIONAL,
+    type ASN1Element as _Element,
     ASN1TagClass as _TagClass,
     ASN1SizeError
 } from "@wildboar/asn1";
 import * as $ from "@wildboar/asn1/functional";
 import { NetworkFunctionality, _decode_NetworkFunctionality, _encode_NetworkFunctionality, _enum_for_NetworkFunctionality } from "../CHFChargingDataTypes/NetworkFunctionality.ta.mjs";
-import { IPAddress, _decode_IPAddress, _encode_IPAddress } from "../CHFChargingDataTypes/IPAddress.ta.mjs";
-import { NodeAddress, _decode_NodeAddress, _encode_NodeAddress } from "../CHFChargingDataTypes/NodeAddress.ta.mjs";
+import { type IPAddress, _decode_IPAddress, _encode_IPAddress } from "../CHFChargingDataTypes/IPAddress.ta.mjs";
+import { type NodeAddress, _decode_NodeAddress, _encode_NodeAddress } from "../CHFChargingDataTypes/NodeAddress.ta.mjs";
 
 
 /**
@@ -123,7 +123,7 @@ class NetworkFunctionInformation {
          * @static
          */
 
-    public static _enum_for_networkFunctionality = _enum_for_NetworkFunctionality;
+    public static _enum_for_networkFunctionality: typeof _enum_for_NetworkFunctionality = _enum_for_NetworkFunctionality;
 }
 
 /**

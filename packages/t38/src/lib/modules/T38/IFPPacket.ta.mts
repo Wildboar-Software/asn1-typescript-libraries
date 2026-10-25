@@ -1,6 +1,6 @@
 /* eslint-disable */
 import {
-  OPTIONAL,
+  type OPTIONAL,
   ASN1Element as _Element,
   ASN1TagClass as _TagClass,
   ASN1Construction as _Construction,
@@ -12,12 +12,12 @@ import {
 } from '@wildboar/asn1';
 import * as $ from '@wildboar/asn1/functional';
 import {
-  Type_of_msg,
+  type Type_of_msg,
   _decode_Type_of_msg,
   _encode_Type_of_msg,
 } from '../T38/Type-of-msg.ta.mjs';
 import {
-  Data_Field,
+  type Data_Field,
   _decode_Data_Field,
   _encode_Data_Field,
 } from '../T38/Data-Field.ta.mjs';
@@ -59,7 +59,7 @@ export class IFPPacket {
    * @public
    * @readonly
    */
-  readonly type_of_msg: Type_of_msg;
+  public readonly type_of_msg: Type_of_msg;
   /**
    * @summary `data_field`.
    * @description T.30 HDLC control and Phase C (or BFT)
@@ -71,7 +71,7 @@ export class IFPPacket {
    * @public
    * @readonly
    */
-  readonly data_field?: OPTIONAL<Data_Field>;
+  public readonly data_field?: OPTIONAL<Data_Field>;
 
   constructor(
     type_of_msg: Type_of_msg,

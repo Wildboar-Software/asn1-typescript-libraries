@@ -1,6 +1,6 @@
 /* eslint-disable */
 import {
-  OPTIONAL,
+  type OPTIONAL,
   ASN1Element as _Element,
   ASN1TagClass as _TagClass,
   ASN1Construction as _Construction,
@@ -12,12 +12,12 @@ import {
 } from '@wildboar/asn1';
 import * as $ from '@wildboar/asn1/functional';
 import {
-  InvocationId,
+  type InvocationId,
   _decode_InvocationId,
   _encode_InvocationId,
 } from '../SeseAPDUs/InvocationId.ta.mjs';
 import {
-  ProblemCode,
+  type ProblemCode,
   _decode_ProblemCode,
   _encode_ProblemCode,
 } from '../SeseAPDUs/ProblemCode.ta.mjs';
@@ -39,7 +39,7 @@ import {
  *   invocationId    InvocationId(InvocationIdSet) OPTIONAL,
  *   itemIdentifier
  *     SECURITY-EXCHANGE.&SE-Items.&itemId({ValidSEs.&SE-Items})
- *       OPTIONAL,
+ *       type OPTIONAL,
  *   --  This component will only be present
  *   --  when the Abort is generated subsequent
  *   --  to receipt of a SETransfer APDU.
@@ -49,41 +49,49 @@ import {
  *
  */
 export class SEPAbort {
+  /**
+   * @summary `invocationId`.
+   * @description
+   *
+   * Invocation concerned, when applicable. ITU-T Rec. X.832
+   * (04/95) §7.1.
+   *
+   * @public
+   * @readonly
+   */
+  public readonly invocationId: OPTIONAL<InvocationId>;
+  /**
+   * @summary `itemIdentifier`.
+   * @description
+   *
+   * Present only when the abort follows receipt of a
+   * SETransfer. ITU-T Rec. X.832 (04/95) §7.1.
+   *
+   * @public
+   * @readonly
+   */
+  public readonly itemIdentifier: OPTIONAL<_Element>;
+  /**
+   * @summary `problemCode`.
+   * @description
+   *
+   * Why the SEPM aborted: general, transfer, or abort
+   * problem. ITU-T Rec. X.832 (04/95) §6.4, §7.1.
+   *
+   * @public
+   * @readonly
+   */
+  public readonly problemCode: ProblemCode;
+
   constructor(
-    /**
-     * @summary `invocationId`.
-     * @description
-     *
-     * Invocation concerned, when applicable. ITU-T Rec. X.832
-     * (04/95) §7.1.
-     *
-     * @public
-     * @readonly
-     */
-    readonly invocationId: OPTIONAL<InvocationId>,
-    /**
-     * @summary `itemIdentifier`.
-     * @description
-     *
-     * Present only when the abort follows receipt of a
-     * SETransfer. ITU-T Rec. X.832 (04/95) §7.1.
-     *
-     * @public
-     * @readonly
-     */
-    readonly itemIdentifier: OPTIONAL<_Element>,
-    /**
-     * @summary `problemCode`.
-     * @description
-     *
-     * Why the SEPM aborted: general, transfer, or abort
-     * problem. ITU-T Rec. X.832 (04/95) §6.4, §7.1.
-     *
-     * @public
-     * @readonly
-     */
-    readonly problemCode: ProblemCode
-  ) {}
+    invocationId: OPTIONAL<InvocationId>,
+    itemIdentifier: OPTIONAL<_Element>,
+    problemCode: ProblemCode
+  ) {
+    this.invocationId = invocationId;
+    this.itemIdentifier = itemIdentifier;
+    this.problemCode = problemCode;
+  }
 
   /**
    * @summary Restructures an object into a SEPAbort

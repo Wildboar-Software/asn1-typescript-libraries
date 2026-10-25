@@ -2,10 +2,10 @@
 
 import * as $ from "@wildboar/asn1/functional";
 import {
-    OPTIONAL,
-    SEQUENCE,
-    SET,
-    ASN1Element as _Element,
+    type OPTIONAL,
+    type SEQUENCE,
+    type SET,
+    type ASN1Element as _Element,
     ASN1TagClass as _TagClass
 } from "@wildboar/asn1";
 import { GlobalCallData, _decode_GlobalCallData, _encode_GlobalCallData } from "../CSTA-call-control/GlobalCallData.ta.mjs";
@@ -43,37 +43,43 @@ import { ThreadData, _decode_ThreadData, _encode_ThreadData } from "../CSTA-call
  */
 export
 class CallLinkageData {
+    /**
+     * @summary `globalCallData`.
+     * @description
+     *
+     * End-to-end / global call identity. Always provided when
+     * the switch supports call linkage. New calls either create
+     * new global data or inherit it when they belong to an
+     * existing global call (e.g. incoming from another
+     * sub-domain). ECMA-269 §6.1.2.7.3, §12.2.5.
+     *
+     * @public
+     * @readonly
+     */
+    public readonly globalCallData: GlobalCallData;
+    /**
+     * @summary `threadData`.
+     * @description
+     *
+     * Call-thread identity: all CSTA/global calls in the same
+     * telephony process (e.g. consultation). Present only if
+     * the switch supports thread linkage. After conference or
+     * transfer, thread data is inherited from one of the
+     * incoming or originating calls per §6.1.2.7.3.
+     * ECMA-269 §12.2.5.
+     *
+     * @public
+     * @readonly
+     */
+    public readonly threadData?: OPTIONAL<ThreadData>;
+
     constructor (
-        /**
-         * @summary `globalCallData`.
-         * @description
-         *
-         * End-to-end / global call identity. Always provided when
-         * the switch supports call linkage. New calls either create
-         * new global data or inherit it when they belong to an
-         * existing global call (e.g. incoming from another
-         * sub-domain). ECMA-269 §6.1.2.7.3, §12.2.5.
-         *
-         * @public
-         * @readonly
-         */
-        readonly globalCallData: GlobalCallData,
-        /**
-         * @summary `threadData`.
-         * @description
-         *
-         * Call-thread identity: all CSTA/global calls in the same
-         * telephony process (e.g. consultation). Present only if
-         * the switch supports thread linkage. After conference or
-         * transfer, thread data is inherited from one of the
-         * incoming or originating calls per §6.1.2.7.3.
-         * ECMA-269 §12.2.5.
-         *
-         * @public
-         * @readonly
-         */
-        readonly threadData?: OPTIONAL<ThreadData>
-    ) {}
+        globalCallData: GlobalCallData,
+        threadData?: OPTIONAL<ThreadData>
+    ) {
+        this.globalCallData = globalCallData;
+        this.threadData = threadData;
+    }
 
     /**
      * @summary Restructures an object into a CallLinkageData

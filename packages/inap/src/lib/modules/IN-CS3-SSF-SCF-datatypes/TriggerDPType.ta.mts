@@ -1,4 +1,5 @@
 /* eslint-disable */
+import { ASN1Element as _Element, ASN1ConstructionError as _ConstructionError } from "@wildboar/asn1";
 import * as $ from "@wildboar/asn1/functional";
 
 
@@ -49,7 +50,7 @@ type TriggerDPType = _enum_for_TriggerDPType;
  * @enum {number}
  */
 export
-const TriggerDPType = _enum_for_TriggerDPType;
+const TriggerDPType: typeof _enum_for_TriggerDPType = _enum_for_TriggerDPType;
 
 /**
  * @summary TriggerDPType_tdp_r
@@ -57,7 +58,7 @@ const TriggerDPType = _enum_for_TriggerDPType;
  * @type {number}
  */
 export
-const TriggerDPType_tdp_r: TriggerDPType = TriggerDPType.tdp_r; /* LONG_NAMED_ENUMERATED_VALUE */
+const TriggerDPType_tdp_r: _enum_for_TriggerDPType.tdp_r = TriggerDPType.tdp_r; /* LONG_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary tdp_r
@@ -65,7 +66,7 @@ const TriggerDPType_tdp_r: TriggerDPType = TriggerDPType.tdp_r; /* LONG_NAMED_EN
  * @type {number}
  */
 export
-const tdp_r: TriggerDPType = TriggerDPType.tdp_r; /* SHORT_NAMED_ENUMERATED_VALUE */
+const tdp_r: _enum_for_TriggerDPType.tdp_r = TriggerDPType.tdp_r; /* SHORT_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary TriggerDPType_tdp_n
@@ -73,7 +74,7 @@ const tdp_r: TriggerDPType = TriggerDPType.tdp_r; /* SHORT_NAMED_ENUMERATED_VALU
  * @type {number}
  */
 export
-const TriggerDPType_tdp_n: TriggerDPType = TriggerDPType.tdp_n; /* LONG_NAMED_ENUMERATED_VALUE */
+const TriggerDPType_tdp_n: _enum_for_TriggerDPType.tdp_n = TriggerDPType.tdp_n; /* LONG_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary tdp_n
@@ -81,12 +82,23 @@ const TriggerDPType_tdp_n: TriggerDPType = TriggerDPType.tdp_n; /* LONG_NAMED_EN
  * @type {number}
  */
 export
-const tdp_n: TriggerDPType = TriggerDPType.tdp_n; /* SHORT_NAMED_ENUMERATED_VALUE */
+const tdp_n: _enum_for_TriggerDPType.tdp_n = TriggerDPType.tdp_n; /* SHORT_NAMED_ENUMERATED_VALUE */
 
 export
-const _decode_TriggerDPType: $.ASN1Decoder<TriggerDPType> = $._decodeEnumerated;
+function _decode_TriggerDPType(el: _Element): TriggerDPType {
+    const enumerated = $._decodeEnumerated(el);
+    switch (enumerated) {
+        case TriggerDPType.tdp_r: return TriggerDPType.tdp_r;
+        case TriggerDPType.tdp_n: return TriggerDPType.tdp_n;
+        default:
+            throw new _ConstructionError(
+                "Invalid ENUMERATED value " + enumerated + " for TriggerDPType.",
+                el,
+            );
+    }
+}
 
 export
-const _encode_TriggerDPType: $.ASN1Encoder<TriggerDPType> = $._encodeEnumerated;
+const _encode_TriggerDPType: $.ASN1Encoder<TriggerDPType> = $._encodeEnumerated as $.ASN1Encoder<TriggerDPType>;
 
 /* eslint-enable */

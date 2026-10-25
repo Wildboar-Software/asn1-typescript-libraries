@@ -1,12 +1,12 @@
 /* eslint-disable */
 import {
     ASN1ConstructionError as _ConstructionError,
-    ASN1Element as _Element,
+    type ASN1Element as _Element,
     ASN1TagClass as _TagClass,
 } from "@wildboar/asn1";
 import * as $ from "@wildboar/asn1/functional";
 import {
-    CASP_CertStatusCode,
+    type CASP_CertStatusCode,
     _decode_CASP_CertStatusCode,
     _encode_CASP_CertStatusCode,
     _enum_for_CASP_CertStatusCode,
@@ -23,20 +23,26 @@ import {
  *
  */
 export class CertReplaceOK_Item_not_ok {
+    /**
+     * @summary `status`.
+     * @public
+     * @readonly
+     */
+    public readonly status: CASP_CertStatusCode;
+    /**
+     * @summary Extensions that are not recognized.
+     * @public
+     * @readonly
+     */
+    public readonly _unrecognizedExtensionsList: _Element[];
+
     constructor(
-        /**
-         * @summary `status`.
-         * @public
-         * @readonly
-         */
-        readonly status: CASP_CertStatusCode,
-        /**
-         * @summary Extensions that are not recognized.
-         * @public
-         * @readonly
-         */
-        readonly _unrecognizedExtensionsList: _Element[] = []
-    ) {}
+        status: CASP_CertStatusCode,
+        _unrecognizedExtensionsList: _Element[] = []
+    ) {
+        this.status = status;
+        this._unrecognizedExtensionsList = _unrecognizedExtensionsList;
+    }
 
     /**
      * @summary Restructures an object into a CertReplaceOK_Item_not_ok
@@ -67,7 +73,7 @@ export class CertReplaceOK_Item_not_ok {
      * @static
      */
 
-    public static _enum_for_status = _enum_for_CASP_CertStatusCode;
+    public static _enum_for_status: typeof _enum_for_CASP_CertStatusCode = _enum_for_CASP_CertStatusCode;
 }
 
 /**

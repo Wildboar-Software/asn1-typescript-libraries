@@ -1,6 +1,6 @@
 /* eslint-disable */
 import {
-    ASN1Element as _Element,
+    type ASN1Element as _Element,
     ASN1TagClass as _TagClass,
     ASN1Construction as _Construction,
     ASN1UniversalType as _UniversalType,
@@ -61,7 +61,7 @@ export type ArcQIStatus = _enum_for_ArcQIStatus;
  *
  * @enum {number}
  */
-export const ArcQIStatus = _enum_for_ArcQIStatus;
+export const ArcQIStatus: typeof _enum_for_ArcQIStatus = _enum_for_ArcQIStatus;
 
 
 /**
@@ -69,7 +69,7 @@ export const ArcQIStatus = _enum_for_ArcQIStatus;
  * @constant
  * @type {number}
  */
-export const ArcQIStatus_notApplicable: ArcQIStatus =
+export const ArcQIStatus_notApplicable: _enum_for_ArcQIStatus.notApplicable =
     ArcQIStatus.notApplicable; /* LONG_NAMED_ENUMERATED_VALUE */
 
 
@@ -78,7 +78,7 @@ export const ArcQIStatus_notApplicable: ArcQIStatus =
  * @constant
  * @type {number}
  */
-export const notApplicable: ArcQIStatus =
+export const notApplicable: _enum_for_ArcQIStatus.notApplicable =
     ArcQIStatus.notApplicable; /* SHORT_NAMED_ENUMERATED_VALUE */
 
 
@@ -87,7 +87,7 @@ export const notApplicable: ArcQIStatus =
  * @constant
  * @type {number}
  */
-export const ArcQIStatus_nalmNotReported: ArcQIStatus =
+export const ArcQIStatus_nalmNotReported: _enum_for_ArcQIStatus.nalmNotReported =
     ArcQIStatus.nalmNotReported; /* LONG_NAMED_ENUMERATED_VALUE */
 
 
@@ -96,7 +96,7 @@ export const ArcQIStatus_nalmNotReported: ArcQIStatus =
  * @constant
  * @type {number}
  */
-export const nalmNotReported: ArcQIStatus =
+export const nalmNotReported: _enum_for_ArcQIStatus.nalmNotReported =
     ArcQIStatus.nalmNotReported; /* SHORT_NAMED_ENUMERATED_VALUE */
 
 
@@ -105,7 +105,7 @@ export const nalmNotReported: ArcQIStatus =
  * @constant
  * @type {number}
  */
-export const ArcQIStatus_nalmCountDown: ArcQIStatus =
+export const ArcQIStatus_nalmCountDown: _enum_for_ArcQIStatus.nalmCountDown =
     ArcQIStatus.nalmCountDown; /* LONG_NAMED_ENUMERATED_VALUE */
 
 
@@ -114,18 +114,30 @@ export const ArcQIStatus_nalmCountDown: ArcQIStatus =
  * @constant
  * @type {number}
  */
-export const nalmCountDown: ArcQIStatus =
+export const nalmCountDown: _enum_for_ArcQIStatus.nalmCountDown =
     ArcQIStatus.nalmCountDown; /* SHORT_NAMED_ENUMERATED_VALUE */
 
 
 
 
-export const _decode_ArcQIStatus = $._decodeEnumerated;
+export function _decode_ArcQIStatus(el: _Element): ArcQIStatus {
+    const enumerated = $._decodeEnumerated(el);
+    switch (enumerated) {
+        case ArcQIStatus.notApplicable: return ArcQIStatus.notApplicable;
+        case ArcQIStatus.nalmNotReported: return ArcQIStatus.nalmNotReported;
+        case ArcQIStatus.nalmCountDown: return ArcQIStatus.nalmCountDown;
+        default:
+            throw new _ConstructionError(
+                'Invalid ENUMERATED value ' + enumerated + ' for ArcQIStatus.',
+                el,
+            );
+    }
+}
 
 
 
 
-export const _encode_ArcQIStatus = $._encodeEnumerated;
+export const _encode_ArcQIStatus: $.ASN1Encoder<ArcQIStatus> = $._encodeEnumerated as $.ASN1Encoder<ArcQIStatus>;
 
 
 /* eslint-enable */

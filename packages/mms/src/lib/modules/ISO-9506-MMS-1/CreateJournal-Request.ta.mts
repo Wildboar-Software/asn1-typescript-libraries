@@ -1,6 +1,6 @@
 /* eslint-disable */
 import {
-    ASN1Element as _Element,
+    type ASN1Element as _Element,
     ASN1TagClass as _TagClass,
     ASN1Construction as _Construction,
     ASN1UniversalType as _UniversalType,
@@ -10,7 +10,7 @@ import {
     ASN1ConstructionError as _ConstructionError,
 } from "@wildboar/asn1";
 import * as $ from "@wildboar/asn1/functional";
-import { ObjectName, _decode_ObjectName, _encode_ObjectName } from "../ISO-9506-MMS-1/ObjectName.ta.mjs";
+import { type ObjectName, _decode_ObjectName, _encode_ObjectName } from "../ISO-9506-MMS-1/ObjectName.ta.mjs";
 
 
 /**
@@ -32,19 +32,23 @@ import { ObjectName, _decode_ObjectName, _encode_ObjectName } from "../ISO-9506-
  */
 export
 class CreateJournal_Request {
+    /**
+     * @summary `journalName`.
+     * @description
+     *
+     * Name of the Journal to create (VMD, Domain, or AA scope).
+     * ISO 9506-1:2003 §23.1.1.1, §23.6.1.1.1.
+     *
+     * @public
+     * @readonly
+     */
+    public readonly journalName: ObjectName;
+
     constructor (
-        /**
-         * @summary `journalName`.
-         * @description
-         *
-         * Name of the Journal to create (VMD, Domain, or AA scope).
-         * ISO 9506-1:2003 §23.1.1.1, §23.6.1.1.1.
-         *
-         * @public
-         * @readonly
-         */
-        readonly journalName: ObjectName
-    ) {}
+        journalName: ObjectName
+    ) {
+        this.journalName = journalName;
+    }
 
     /**
      * @summary Restructures an object into a CreateJournal_Request

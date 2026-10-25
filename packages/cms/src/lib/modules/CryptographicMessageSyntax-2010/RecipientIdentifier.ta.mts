@@ -7,7 +7,7 @@ import {
     _encode_IssuerAndSerialNumber,
 } from "../CryptographicMessageSyntax-2010/IssuerAndSerialNumber.ta.mjs";
 import {
-    SubjectKeyIdentifier,
+    type SubjectKeyIdentifier,
     _decode_SubjectKeyIdentifier,
     _encode_SubjectKeyIdentifier,
 } from "../CryptographicMessageSyntax-2010/SubjectKeyIdentifier.ta.mjs";

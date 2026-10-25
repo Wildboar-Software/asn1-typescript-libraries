@@ -1,13 +1,13 @@
 /* eslint-disable */
 import {
-    EXTERNAL,
-    OPTIONAL,
-    ASN1Element as _Element,
+    type EXTERNAL,
+    type OPTIONAL,
+    type ASN1Element as _Element,
     ASN1TagClass as _TagClass
 } from "@wildboar/asn1";
 import * as $ from "@wildboar/asn1/functional";
-import { SuppliedRecords_Item_recordId, _decode_SuppliedRecords_Item_recordId, _encode_SuppliedRecords_Item_recordId } from "../ESFormat-Update/SuppliedRecords-Item-recordId.ta.mjs";
-import { SuppliedRecords_Item_supplementalId, _decode_SuppliedRecords_Item_supplementalId, _encode_SuppliedRecords_Item_supplementalId } from "../ESFormat-Update/SuppliedRecords-Item-supplementalId.ta.mjs";
+import { type SuppliedRecords_Item_recordId, _decode_SuppliedRecords_Item_recordId, _encode_SuppliedRecords_Item_recordId } from "../ESFormat-Update/SuppliedRecords-Item-recordId.ta.mjs";
+import { type SuppliedRecords_Item_supplementalId, _decode_SuppliedRecords_Item_supplementalId, _encode_SuppliedRecords_Item_supplementalId } from "../ESFormat-Update/SuppliedRecords-Item-supplementalId.ta.mjs";
 import { CorrelationInfo, _decode_CorrelationInfo, _encode_CorrelationInfo } from "../ESFormat-Update/CorrelationInfo.ta.mjs";
 
 

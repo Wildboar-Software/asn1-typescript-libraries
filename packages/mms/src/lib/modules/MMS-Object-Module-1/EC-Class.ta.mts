@@ -1,7 +1,7 @@
 /* eslint-disable */
 import {
-    INTEGER,
-    ASN1Element as _Element,
+    type INTEGER,
+    type ASN1Element as _Element,
     ASN1TagClass as _TagClass,
     ASN1Construction as _Construction,
     ASN1UniversalType as _UniversalType,
@@ -45,7 +45,7 @@ type EC_Class = INTEGER;
  * @type {number}
  */
 export
-const EC_Class_network_triggered: EC_Class = 0; /* LONG_NAMED_INTEGER_VALUE */
+const EC_Class_network_triggered: 0 = 0 satisfies EC_Class; /* LONG_NAMED_INTEGER_VALUE */
 
 /**
  * @summary EC_Class_network_triggered
@@ -58,7 +58,7 @@ const EC_Class_network_triggered: EC_Class = 0; /* LONG_NAMED_INTEGER_VALUE */
  * @type {number}
  */
 export
-const network_triggered: EC_Class = EC_Class_network_triggered; /* SHORT_NAMED_INTEGER_VALUE */
+const network_triggered: 0 = EC_Class_network_triggered; /* SHORT_NAMED_INTEGER_VALUE */
 
 /**
  * @summary EC_Class_monitored
@@ -71,7 +71,7 @@ const network_triggered: EC_Class = EC_Class_network_triggered; /* SHORT_NAMED_I
  * @type {number}
  */
 export
-const EC_Class_monitored: EC_Class = 1; /* LONG_NAMED_INTEGER_VALUE */
+const EC_Class_monitored: 1 = 1 satisfies EC_Class; /* LONG_NAMED_INTEGER_VALUE */
 
 /**
  * @summary EC_Class_monitored
@@ -84,9 +84,9 @@ const EC_Class_monitored: EC_Class = 1; /* LONG_NAMED_INTEGER_VALUE */
  * @type {number}
  */
 export
-const monitored: EC_Class = EC_Class_monitored; /* SHORT_NAMED_INTEGER_VALUE */
-export const _decode_EC_Class = $._decodeInteger;
-export const _encode_EC_Class = $._encodeInteger;
+const monitored: 1 = EC_Class_monitored; /* SHORT_NAMED_INTEGER_VALUE */
+export const _decode_EC_Class: $.ASN1Decoder<INTEGER> = $._decodeInteger;
+export const _encode_EC_Class: $.ASN1Encoder<INTEGER> = $._encodeInteger;
 
 
 /* eslint-enable */

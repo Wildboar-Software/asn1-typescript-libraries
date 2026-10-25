@@ -1,6 +1,6 @@
 /* eslint-disable */
 import {
-  INTEGER,
+  type INTEGER,
   ASN1Element as _Element,
   ASN1TagClass as _TagClass,
   ASN1Construction as _Construction,
@@ -12,7 +12,7 @@ import {
 } from '@wildboar/asn1';
 import * as $ from '@wildboar/asn1/functional';
 import {
-  Relational_Comparision,
+  type Relational_Comparision,
   _decode_Relational_Comparision,
   _encode_Relational_Comparision,
 } from '../ISO8571-FTAM/Relational-Comparision.ta.mjs';
@@ -45,7 +45,7 @@ export class Integer_Pattern {
    * @public
    * @readonly
    */
-  readonly relational_comparision: Relational_Comparision;
+  public readonly relational_comparision: Relational_Comparision;
   /**
    * @summary `integer_value`.
    * @description
@@ -55,7 +55,7 @@ export class Integer_Pattern {
    * @public
    * @readonly
    */
-  readonly integer_value: INTEGER;
+  public readonly integer_value: INTEGER;
 
   constructor(
     relational_comparision: Relational_Comparision,

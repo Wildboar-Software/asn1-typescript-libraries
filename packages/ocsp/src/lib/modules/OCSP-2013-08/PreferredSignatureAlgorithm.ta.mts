@@ -1,8 +1,8 @@
 /* eslint-disable */
 import {
-    ASN1Element as _Element,
+    type ASN1Element as _Element,
     ASN1TagClass as _TagClass,
-    OPTIONAL,
+    type OPTIONAL,
 } from "@wildboar/asn1";
 import * as $ from "@wildboar/asn1/functional";
 import {
@@ -38,41 +38,47 @@ import {
  *
  */
 export class PreferredSignatureAlgorithm {
+    /**
+     * @summary `sigIdentifier`.
+     * @description
+     *
+     * Signature algorithm the client prefers (e.g.
+     * `ecdsa-with-sha256`). Parameters are absent for most common
+     * signature algorithms
+     * ([RFC 6960 §4.4.7.1](https://datatracker.ietf.org/doc/html/rfc6960#section-4.4.7.1)).
+     * `AlgorithmIdentifier` syntax is
+     * [RFC 5280](https://datatracker.ietf.org/doc/html/rfc5280)
+     * §4.1.1.2.
+     *
+     * @public
+     * @readonly
+     */
+    public readonly sigIdentifier: AlgorithmIdentifier;
+    /**
+     * @summary `certIdentifier`.
+     * @description
+     *
+     * Optional preferred subject public key algorithm identifier
+     * in the server's certificate used to validate the OCSP
+     * response (e.g. `id-ecPublicKey` with curve parameters).
+     * Distinguishes among different usages of a particular
+     * algorithm (e.g. which elliptic curve the client supports)
+     * ([RFC 6960 §4.4.7.1](https://datatracker.ietf.org/doc/html/rfc6960#section-4.4.7.1)).
+     * Named `pubKeyAlgIdentifier` / `SMIMECapability` in the
+     * §4.4.7.1 prose ([RFC 5751](https://datatracker.ietf.org/doc/html/rfc5751)).
+     *
+     * @public
+     * @readonly
+     */
+    public readonly certIdentifier?: OPTIONAL<AlgorithmIdentifier>;
+
     constructor(
-        /**
-         * @summary `sigIdentifier`.
-         * @description
-         *
-         * Signature algorithm the client prefers (e.g.
-         * `ecdsa-with-sha256`). Parameters are absent for most common
-         * signature algorithms
-         * ([RFC 6960 §4.4.7.1](https://datatracker.ietf.org/doc/html/rfc6960#section-4.4.7.1)).
-         * `AlgorithmIdentifier` syntax is
-         * [RFC 5280](https://datatracker.ietf.org/doc/html/rfc5280)
-         * §4.1.1.2.
-         *
-         * @public
-         * @readonly
-         */
-        readonly sigIdentifier: AlgorithmIdentifier,
-        /**
-         * @summary `certIdentifier`.
-         * @description
-         *
-         * Optional preferred subject public key algorithm identifier
-         * in the server's certificate used to validate the OCSP
-         * response (e.g. `id-ecPublicKey` with curve parameters).
-         * Distinguishes among different usages of a particular
-         * algorithm (e.g. which elliptic curve the client supports)
-         * ([RFC 6960 §4.4.7.1](https://datatracker.ietf.org/doc/html/rfc6960#section-4.4.7.1)).
-         * Named `pubKeyAlgIdentifier` / `SMIMECapability` in the
-         * §4.4.7.1 prose ([RFC 5751](https://datatracker.ietf.org/doc/html/rfc5751)).
-         *
-         * @public
-         * @readonly
-         */
-        readonly certIdentifier?: OPTIONAL<AlgorithmIdentifier>
-    ) {}
+        sigIdentifier: AlgorithmIdentifier,
+        certIdentifier?: OPTIONAL<AlgorithmIdentifier>
+    ) {
+        this.sigIdentifier = sigIdentifier;
+        this.certIdentifier = certIdentifier;
+    }
 
     /**
      * @summary Restructures an object into a PreferredSignatureAlgorithm

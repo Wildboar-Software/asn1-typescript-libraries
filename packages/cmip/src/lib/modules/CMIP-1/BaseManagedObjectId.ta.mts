@@ -11,12 +11,12 @@ import {
 } from '@wildboar/asn1';
 import * as $ from '@wildboar/asn1/functional';
 import {
-  ObjectClass,
+  type ObjectClass,
   _decode_ObjectClass,
   _encode_ObjectClass,
 } from '../CMIP-1/ObjectClass.ta.mjs';
 import {
-  ObjectInstance,
+  type ObjectInstance,
   _decode_ObjectInstance,
   _encode_ObjectInstance,
 } from '../CMIP-1/ObjectInstance.ta.mjs';
@@ -51,7 +51,7 @@ export class BaseManagedObjectId {
    * @public
    * @readonly
    */
-  readonly baseManagedObjectClass: ObjectClass;
+  public readonly baseManagedObjectClass: ObjectClass;
   /**
    * @summary `baseManagedObjectInstance`.
    * @description
@@ -61,7 +61,7 @@ export class BaseManagedObjectId {
    * @public
    * @readonly
    */
-  readonly baseManagedObjectInstance: ObjectInstance;
+  public readonly baseManagedObjectInstance: ObjectInstance;
 
   constructor(
     baseManagedObjectClass: ObjectClass,

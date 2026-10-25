@@ -1,9 +1,9 @@
 /* eslint-disable */
 import {
-    ASN1Element as _Element,
+    type ASN1Element as _Element,
     ASN1TagClass as _TagClass,
-    BOOLEAN,
-    OPTIONAL,
+    type BOOLEAN,
+    type OPTIONAL,
 } from "@wildboar/asn1";
 import * as $ from "@wildboar/asn1/functional";
 import {
@@ -34,36 +34,44 @@ import {
  *
  */
 export class SchedulingParameters {
+    /**
+     * @summary `periodic`.
+     * @description
+     *
+     * Regular windows. Required if `othertimes` is FALSE.
+     *
+     * @public
+     * @readonly
+     */
+    public readonly periodic?: OPTIONAL<PeriodicStrategy>;
+    /**
+     * @summary `othertimes`.
+     * @description
+     *
+     * DEFAULT FALSE. TRUE allows locally scheduled updates and lets the
+     * supplier send `updateWindow` on `updateShadow` (and the peer
+     * return one on `unsuitableTiming`).
+     *
+     * @public
+     * @readonly
+     */
+    public readonly othertimes?: OPTIONAL<BOOLEAN>;
+    /**
+     * @summary Extensions that are not recognized.
+     * @public
+     * @readonly
+     */
+    public readonly _unrecognizedExtensionsList: _Element[];
+
     constructor(
-        /**
-         * @summary `periodic`.
-         * @description
-         *
-         * Regular windows. Required if `othertimes` is FALSE.
-         *
-         * @public
-         * @readonly
-         */
-        readonly periodic?: OPTIONAL<PeriodicStrategy>,
-        /**
-         * @summary `othertimes`.
-         * @description
-         *
-         * DEFAULT FALSE. TRUE allows locally scheduled updates and lets the
-         * supplier send `updateWindow` on `updateShadow` (and the peer
-         * return one on `unsuitableTiming`).
-         *
-         * @public
-         * @readonly
-         */
-        readonly othertimes?: OPTIONAL<BOOLEAN>,
-        /**
-         * @summary Extensions that are not recognized.
-         * @public
-         * @readonly
-         */
-        readonly _unrecognizedExtensionsList: _Element[] = []
-    ) {}
+        periodic?: OPTIONAL<PeriodicStrategy>,
+        othertimes?: OPTIONAL<BOOLEAN>,
+        _unrecognizedExtensionsList: _Element[] = []
+    ) {
+        this.periodic = periodic;
+        this.othertimes = othertimes;
+        this._unrecognizedExtensionsList = _unrecognizedExtensionsList;
+    }
 
     /**
      * @summary Restructures an object into a SchedulingParameters

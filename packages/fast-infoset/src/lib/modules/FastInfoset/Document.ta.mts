@@ -1,7 +1,7 @@
 /* eslint-disable */
 import {
-  OPTIONAL,
-  BOOLEAN,
+  type OPTIONAL,
+  type BOOLEAN,
   ASN1Element as _Element,
   ASN1TagClass as _TagClass,
   ASN1Construction as _Construction,
@@ -33,17 +33,17 @@ import {
   _encode_UnparsedEntity,
 } from '../FastInfoset/UnparsedEntity.ta.mjs';
 import {
-  NonEmptyOctetString,
+  type NonEmptyOctetString,
   _decode_NonEmptyOctetString,
   _encode_NonEmptyOctetString,
 } from '../FastInfoset/NonEmptyOctetString.ta.mjs';
 import {
-  NonIdentifyingStringOrIndex,
+  type NonIdentifyingStringOrIndex,
   _decode_NonIdentifyingStringOrIndex,
   _encode_NonIdentifyingStringOrIndex,
 } from '../FastInfoset/NonIdentifyingStringOrIndex.ta.mjs';
 import {
-  Document_children_Item,
+  type Document_children_Item,
   _decode_Document_children_Item,
   _encode_Document_children_Item,
 } from '../FastInfoset/Document-children-Item.ta.mjs';
@@ -134,7 +134,7 @@ export class Document {
    * @public
    * @readonly
    */
-  readonly additional_data: OPTIONAL<
+  public readonly additional_data: OPTIONAL<
       Document_additional_data_additional_datum[]
     >;
   /**
@@ -147,7 +147,7 @@ export class Document {
    * @public
    * @readonly
    */
-  readonly initial_vocabulary: OPTIONAL<Document_initial_vocabulary>;
+  public readonly initial_vocabulary: OPTIONAL<Document_initial_vocabulary>;
   /**
    * @summary `notations`.
    * @description [notations] of the document information
@@ -157,7 +157,7 @@ export class Document {
    * @public
    * @readonly
    */
-  readonly notations: OPTIONAL<Notation[]>;
+  public readonly notations: OPTIONAL<Notation[]>;
   /**
    * @summary `unparsed_entities`.
    * @description [unparsed entities] of the document
@@ -167,7 +167,7 @@ export class Document {
    * @public
    * @readonly
    */
-  readonly unparsed_entities: OPTIONAL<UnparsedEntity[]>;
+  public readonly unparsed_entities: OPTIONAL<UnparsedEntity[]>;
   /**
    * @summary `character_encoding_scheme`.
    * @description [character encoding scheme], UTF-8 encoded.
@@ -176,7 +176,7 @@ export class Document {
    * @public
    * @readonly
    */
-  readonly character_encoding_scheme: OPTIONAL<NonEmptyOctetString>;
+  public readonly character_encoding_scheme: OPTIONAL<NonEmptyOctetString>;
   /**
    * @summary `standalone`.
    * @description [standalone]: `TRUE` is yes, `FALSE` is no.
@@ -185,7 +185,7 @@ export class Document {
    * @public
    * @readonly
    */
-  readonly standalone: OPTIONAL<BOOLEAN>;
+  public readonly standalone: OPTIONAL<BOOLEAN>;
   /**
    * @summary `version`.
    * @description [version], OTHER STRING category. Absent
@@ -194,7 +194,7 @@ export class Document {
    * @public
    * @readonly
    */
-  readonly version: OPTIONAL<NonIdentifyingStringOrIndex>;
+  public readonly version: OPTIONAL<NonIdentifyingStringOrIndex>;
   /**
    * @summary `children`.
    * @description [children]. Exactly one item shall be
@@ -205,7 +205,7 @@ export class Document {
    * @public
    * @readonly
    */
-  readonly children: Document_children_Item[];
+  public readonly children: Document_children_Item[];
 
   constructor(
     additional_data: OPTIONAL<

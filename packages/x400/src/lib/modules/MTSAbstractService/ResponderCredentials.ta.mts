@@ -1,6 +1,6 @@
 /* eslint-disable */
 import {
-    ASN1Element as _Element,
+    type ASN1Element as _Element,
     ASN1TagClass as _TagClass,
     ASN1Construction as _Construction,
     ASN1UniversalType as _UniversalType,
@@ -11,7 +11,7 @@ import {
 } from '@wildboar/asn1';
 import * as $ from '@wildboar/asn1/functional';
 import {
-    Credentials,
+    type Credentials,
     _decode_Credentials,
     _encode_Credentials,
 } from '../MTSAbstractService/Credentials.ta.mjs';
@@ -30,22 +30,13 @@ import {
  */
 export type ResponderCredentials = Credentials; // DefinedType
 
-let _cached_decoder_for_ResponderCredentials: $.ASN1Decoder<ResponderCredentials> | null = null;
-
 /**
  * @summary Decodes an ASN.1 element into a(n) ResponderCredentials
  * @function
  * @param {_Element} el The element being decoded.
  * @returns {ResponderCredentials} The decoded data structure.
  */
-export function _decode_ResponderCredentials(el: _Element): ResponderCredentials {
-    if (!_cached_decoder_for_ResponderCredentials) {
-        _cached_decoder_for_ResponderCredentials = _decode_Credentials;
-    }
-    return _cached_decoder_for_ResponderCredentials(el);
-}
-
-let _cached_encoder_for_ResponderCredentials: $.ASN1Encoder<ResponderCredentials> | null = null;
+export const _decode_ResponderCredentials: $.ASN1Decoder<ResponderCredentials> = _decode_Credentials;
 
 /**
  * @summary Encodes a(n) ResponderCredentials into an ASN.1 Element.
@@ -54,15 +45,7 @@ let _cached_encoder_for_ResponderCredentials: $.ASN1Encoder<ResponderCredentials
  * @param elGetter A function that can be used to get new ASN.1 elements.
  * @returns {_Element} The ResponderCredentials, encoded as an ASN.1 Element.
  */
-export function _encode_ResponderCredentials(
-    value: ResponderCredentials,
-    elGetter: $.ASN1Encoder<ResponderCredentials>
-): _Element {
-    if (!_cached_encoder_for_ResponderCredentials) {
-        _cached_encoder_for_ResponderCredentials = _encode_Credentials;
-    }
-    return _cached_encoder_for_ResponderCredentials(value, elGetter);
-}
+export const _encode_ResponderCredentials: $.ASN1Encoder<ResponderCredentials> = _encode_Credentials;
 
 
 /* eslint-enable */

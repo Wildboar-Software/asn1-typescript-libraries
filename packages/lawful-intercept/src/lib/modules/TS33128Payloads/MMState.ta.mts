@@ -97,7 +97,7 @@ type MMState = _enum_for_MMState;
  * @enum {number}
  */
 export
-const MMState = _enum_for_MMState;
+const MMState: typeof _enum_for_MMState = _enum_for_MMState;
 
 /**
  * @summary MMState_draft
@@ -105,7 +105,7 @@ const MMState = _enum_for_MMState;
  * @type {number}
  */
 export
-const MMState_draft: MMState = MMState.draft; /* LONG_NAMED_ENUMERATED_VALUE */
+const MMState_draft: _enum_for_MMState.draft = MMState.draft; /* LONG_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary draft
@@ -113,7 +113,7 @@ const MMState_draft: MMState = MMState.draft; /* LONG_NAMED_ENUMERATED_VALUE */
  * @type {number}
  */
 export
-const draft: MMState = MMState.draft; /* SHORT_NAMED_ENUMERATED_VALUE */
+const draft: _enum_for_MMState.draft = MMState.draft; /* SHORT_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary MMState_sent
@@ -121,7 +121,7 @@ const draft: MMState = MMState.draft; /* SHORT_NAMED_ENUMERATED_VALUE */
  * @type {number}
  */
 export
-const MMState_sent: MMState = MMState.sent; /* LONG_NAMED_ENUMERATED_VALUE */
+const MMState_sent: _enum_for_MMState.sent = MMState.sent; /* LONG_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary sent
@@ -129,7 +129,7 @@ const MMState_sent: MMState = MMState.sent; /* LONG_NAMED_ENUMERATED_VALUE */
  * @type {number}
  */
 export
-const sent: MMState = MMState.sent; /* SHORT_NAMED_ENUMERATED_VALUE */
+const sent: _enum_for_MMState.sent = MMState.sent; /* SHORT_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary MMState_new_
@@ -137,7 +137,7 @@ const sent: MMState = MMState.sent; /* SHORT_NAMED_ENUMERATED_VALUE */
  * @type {number}
  */
 export
-const MMState_new_: MMState = MMState.new_; /* LONG_NAMED_ENUMERATED_VALUE */
+const MMState_new_: _enum_for_MMState.new_ = MMState.new_; /* LONG_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary new_
@@ -145,7 +145,7 @@ const MMState_new_: MMState = MMState.new_; /* LONG_NAMED_ENUMERATED_VALUE */
  * @type {number}
  */
 export
-const new_: MMState = MMState.new_; /* SHORT_NAMED_ENUMERATED_VALUE */
+const new_: _enum_for_MMState.new_ = MMState.new_; /* SHORT_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary MMState_retrieved
@@ -153,7 +153,7 @@ const new_: MMState = MMState.new_; /* SHORT_NAMED_ENUMERATED_VALUE */
  * @type {number}
  */
 export
-const MMState_retrieved: MMState = MMState.retrieved; /* LONG_NAMED_ENUMERATED_VALUE */
+const MMState_retrieved: _enum_for_MMState.retrieved = MMState.retrieved; /* LONG_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary retrieved
@@ -161,7 +161,7 @@ const MMState_retrieved: MMState = MMState.retrieved; /* LONG_NAMED_ENUMERATED_V
  * @type {number}
  */
 export
-const retrieved: MMState = MMState.retrieved; /* SHORT_NAMED_ENUMERATED_VALUE */
+const retrieved: _enum_for_MMState.retrieved = MMState.retrieved; /* SHORT_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary MMState_forwarded
@@ -169,7 +169,7 @@ const retrieved: MMState = MMState.retrieved; /* SHORT_NAMED_ENUMERATED_VALUE */
  * @type {number}
  */
 export
-const MMState_forwarded: MMState = MMState.forwarded; /* LONG_NAMED_ENUMERATED_VALUE */
+const MMState_forwarded: _enum_for_MMState.forwarded = MMState.forwarded; /* LONG_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary forwarded
@@ -177,7 +177,7 @@ const MMState_forwarded: MMState = MMState.forwarded; /* LONG_NAMED_ENUMERATED_V
  * @type {number}
  */
 export
-const forwarded: MMState = MMState.forwarded; /* SHORT_NAMED_ENUMERATED_VALUE */
+const forwarded: _enum_for_MMState.forwarded = MMState.forwarded; /* SHORT_NAMED_ENUMERATED_VALUE */
 export const _decode_MMState: $.ASN1Decoder<MMState> = $._decodeEnumerated;
 export const _encode_MMState: $.ASN1Encoder<MMState> = $._encodeEnumerated;
 

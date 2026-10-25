@@ -1,8 +1,8 @@
 /* eslint-disable */
 import {
-    INTEGER,
-    OCTET_STRING,
-    ASN1Element as _Element,
+    type INTEGER,
+    type OCTET_STRING,
+    type ASN1Element as _Element,
     ASN1TagClass as _TagClass,
     ASN1Construction as _Construction,
     ASN1UniversalType as _UniversalType,
@@ -13,7 +13,7 @@ import {
 } from "@wildboar/asn1";
 import * as $ from "@wildboar/asn1/functional";
 import { HeaderData, _decode_HeaderData, _encode_HeaderData } from "../SNMPv3MessageSyntax/HeaderData.ta.mjs";
-import { ScopedPduData, _decode_ScopedPduData, _encode_ScopedPduData } from "../SNMPv3MessageSyntax/ScopedPduData.ta.mjs";
+import { type ScopedPduData, _decode_ScopedPduData, _encode_ScopedPduData } from "../SNMPv3MessageSyntax/ScopedPduData.ta.mjs";
 /**
  * @summary SNMPv3Message
  * @description
@@ -55,7 +55,7 @@ class SNMPv3Message {
      * @public
      * @readonly
      */
-    readonly msgVersion: INTEGER;
+    public readonly msgVersion: INTEGER;
     /**
      * @summary `msgGlobalData`.
      * @description
@@ -67,7 +67,7 @@ class SNMPv3Message {
      * @public
      * @readonly
      */
-    readonly msgGlobalData: HeaderData;
+    public readonly msgGlobalData: HeaderData;
     /**
      * @summary `msgSecurityParameters`.
      * @description
@@ -80,7 +80,7 @@ class SNMPv3Message {
      * @public
      * @readonly
      */
-    readonly msgSecurityParameters: OCTET_STRING;
+    public readonly msgSecurityParameters: OCTET_STRING;
     /**
      * @summary `msgData`.
      * @description
@@ -92,7 +92,7 @@ class SNMPv3Message {
      * @public
      * @readonly
      */
-    readonly msgData: ScopedPduData;
+    public readonly msgData: ScopedPduData;
 
     constructor (
         msgVersion: INTEGER,

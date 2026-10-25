@@ -11,12 +11,12 @@ import {
 } from '@wildboar/asn1';
 import * as $ from '@wildboar/asn1/functional';
 import {
-  BioAPI_UUID,
+  type BioAPI_UUID,
   _decode_BioAPI_UUID,
   _encode_BioAPI_UUID,
 } from '../BIP/BioAPI-UUID.ta.mjs';
 import {
-  MemoryAddress,
+  type MemoryAddress,
   _decode_MemoryAddress,
   _encode_MemoryAddress,
 } from '../BIP/MemoryAddress.ta.mjs';
@@ -52,7 +52,7 @@ export class BSPUnloadCallParams {
    * @public
    * @readonly
    */
-  readonly bspUuid: BioAPI_UUID;
+  public readonly bspUuid: BioAPI_UUID;
   /**
    * @summary `unitEventHandlerAddress`.
    * @description
@@ -65,7 +65,7 @@ export class BSPUnloadCallParams {
    * @public
    * @readonly
    */
-  readonly unitEventHandlerAddress: MemoryAddress;
+  public readonly unitEventHandlerAddress: MemoryAddress;
   /**
    * @summary `unitEventHandlerContext`.
    * @description
@@ -76,7 +76,7 @@ export class BSPUnloadCallParams {
    * @public
    * @readonly
    */
-  readonly unitEventHandlerContext: MemoryAddress;
+  public readonly unitEventHandlerContext: MemoryAddress;
 
   constructor(
     bspUuid: BioAPI_UUID,

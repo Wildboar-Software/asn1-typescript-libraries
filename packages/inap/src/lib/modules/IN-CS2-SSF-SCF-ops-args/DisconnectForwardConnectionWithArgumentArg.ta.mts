@@ -1,11 +1,11 @@
 /* eslint-disable */
 import {
-    OPTIONAL,
-    ASN1Element as _Element,
+    type OPTIONAL,
+    type ASN1Element as _Element,
     ASN1TagClass as _TagClass
 } from "@wildboar/asn1";
 import * as $ from "@wildboar/asn1/functional";
-import { DisconnectForwardConnectionWithArgumentArg_partyToDisconnect, _decode_DisconnectForwardConnectionWithArgumentArg_partyToDisconnect, _encode_DisconnectForwardConnectionWithArgumentArg_partyToDisconnect } from "../IN-CS2-SSF-SCF-ops-args/DisconnectForwardConnectionWithArgumentArg-partyToDisconnect.ta.mjs";
+import { type DisconnectForwardConnectionWithArgumentArg_partyToDisconnect, _decode_DisconnectForwardConnectionWithArgumentArg_partyToDisconnect, _encode_DisconnectForwardConnectionWithArgumentArg_partyToDisconnect } from "../IN-CS2-SSF-SCF-ops-args/DisconnectForwardConnectionWithArgumentArg-partyToDisconnect.ta.mjs";
 // export { DisconnectForwardConnectionWithArgumentArg_partyToDisconnect, _decode_DisconnectForwardConnectionWithArgumentArg_partyToDisconnect, _encode_DisconnectForwardConnectionWithArgumentArg_partyToDisconnect } from "../IN-CS2-SSF-SCF-ops-args/DisconnectForwardConnectionWithArgumentArg-partyToDisconnect.ta.mjs";
 import { ExtensionField, _decode_ExtensionField, _encode_ExtensionField } from "../IN-CS2-datatypes/ExtensionField.ta.mjs";
 // export { ExtensionField, _decode_ExtensionField, _encode_ExtensionField } from "../IN-CS2-datatypes/ExtensionField.ta.mjs";

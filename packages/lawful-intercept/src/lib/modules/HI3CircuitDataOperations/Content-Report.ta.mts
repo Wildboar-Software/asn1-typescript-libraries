@@ -1,20 +1,20 @@
 /* eslint-disable */
 import {
-    OBJECT_IDENTIFIER,
-    OPTIONAL,
-    ASN1Element as _Element,
+    type OBJECT_IDENTIFIER,
+    type OPTIONAL,
+    type ASN1Element as _Element,
     ASN1TagClass as _TagClass,
     ASN1Error
 } from "@wildboar/asn1";
 import * as $ from "@wildboar/asn1/functional";
 import { hi3CircuitLIOperationId } from "../HI3CircuitDataOperations/hi3CircuitLIOperationId.va.mjs";
-import { LawfulInterceptionIdentifier, _decode_LawfulInterceptionIdentifier, _encode_LawfulInterceptionIdentifier } from "../HI2Operations/LawfulInterceptionIdentifier.ta.mjs";
+import { type LawfulInterceptionIdentifier, _decode_LawfulInterceptionIdentifier, _encode_LawfulInterceptionIdentifier } from "../HI2Operations/LawfulInterceptionIdentifier.ta.mjs";
 // export { LawfulInterceptionIdentifier, _decode_LawfulInterceptionIdentifier, _encode_LawfulInterceptionIdentifier } from "../HI2Operations/LawfulInterceptionIdentifier.ta.mjs";
 import { CommunicationIdentifier, _decode_CommunicationIdentifier, _encode_CommunicationIdentifier } from "../HI2Operations/CommunicationIdentifier.ta.mjs";
 // export { CommunicationIdentifier, _decode_CommunicationIdentifier, _encode_CommunicationIdentifier } from "../HI2Operations/CommunicationIdentifier.ta.mjs";
-import { TimeStamp, _decode_TimeStamp, _encode_TimeStamp } from "../HI2Operations/TimeStamp.ta.mjs";
+import { type TimeStamp, _decode_TimeStamp, _encode_TimeStamp } from "../HI2Operations/TimeStamp.ta.mjs";
 // export { TimeStamp, _decode_TimeStamp, _encode_TimeStamp } from "../HI2Operations/TimeStamp.ta.mjs";
-import { Content_Report_initiator, _decode_Content_Report_initiator, _encode_Content_Report_initiator, _enum_for_Content_Report_initiator } from "../HI3CircuitDataOperations/Content-Report-initiator.ta.mjs";
+import { type Content_Report_initiator, _decode_Content_Report_initiator, _encode_Content_Report_initiator, _enum_for_Content_Report_initiator } from "../HI3CircuitDataOperations/Content-Report-initiator.ta.mjs";
 // export { Content_Report_initiator, _enum_for_Content_Report_initiator, Content_Report_initiator_originating_party /* IMPORTED_LONG_ENUMERATION_ITEM */, originating_party /* IMPORTED_SHORT_ENUMERATION_ITEM */, Content_Report_initiator_terminating_party /* IMPORTED_LONG_ENUMERATION_ITEM */, terminating_party /* IMPORTED_SHORT_ENUMERATION_ITEM */, Content_Report_initiator_forwarded_to_party /* IMPORTED_LONG_ENUMERATION_ITEM */, forwarded_to_party /* IMPORTED_SHORT_ENUMERATION_ITEM */, Content_Report_initiator_undefined_party /* IMPORTED_LONG_ENUMERATION_ITEM */, undefined_party /* IMPORTED_SHORT_ENUMERATION_ITEM */, _decode_Content_Report_initiator, _encode_Content_Report_initiator } from "../HI3CircuitDataOperations/Content-Report-initiator.ta.mjs";
 import { Supplementary_Services, _decode_Supplementary_Services, _encode_Supplementary_Services } from "../HI2Operations/Supplementary-Services.ta.mjs";
 // export { Supplementary_Services, _decode_Supplementary_Services, _encode_Supplementary_Services } from "../HI2Operations/Supplementary-Services.ta.mjs";
@@ -237,7 +237,7 @@ class Content_Report {
          * @static
          */
 
-    public static _enum_for_initiator = _enum_for_Content_Report_initiator;
+    public static _enum_for_initiator: typeof _enum_for_Content_Report_initiator = _enum_for_Content_Report_initiator;
 }
 
 /**

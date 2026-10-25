@@ -1,5 +1,5 @@
 import {
-    ASN1Element as _Element,
+    type ASN1Element as _Element,
     ASN1TagClass as _TagClass,
 } from "@wildboar/asn1";
 import * as $ from "@wildboar/asn1/functional";
@@ -21,17 +21,23 @@ import { MonitorMode, _enum_for_MonitorMode, _decode_MonitorMode, _encode_Monito
  *
  */
 export class SMSEvent {
+    public readonly eventTypeSMS: EventTypeSMS;
+    public readonly monitorMode: MonitorMode;
+
     constructor (
-        readonly eventTypeSMS: EventTypeSMS,
-        readonly monitorMode: MonitorMode,
-    ) {}
+        eventTypeSMS: EventTypeSMS,
+        monitorMode: MonitorMode,
+    ) {
+        this.eventTypeSMS = eventTypeSMS;
+        this.monitorMode = monitorMode;
+    }
 
     public static _from_object (_o: { [_K in keyof (SMSEvent)]: (SMSEvent)[_K] }): SMSEvent {
         return new SMSEvent(_o.eventTypeSMS, _o.monitorMode);
     }
 
-    public static _enum_for_eventTypeSMS = _enum_for_EventTypeSMS;
-    public static _enum_for_monitorMode = _enum_for_MonitorMode;
+    public static _enum_for_eventTypeSMS: typeof _enum_for_EventTypeSMS = _enum_for_EventTypeSMS;
+    public static _enum_for_monitorMode: typeof _enum_for_MonitorMode = _enum_for_MonitorMode;
 }
 
 export const _root_component_type_list_1_spec_for_SMSEvent: $.ComponentSpec[] = [

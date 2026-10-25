@@ -2,9 +2,9 @@
 
 import * as $ from "@wildboar/asn1/functional";
 import {
-    SEQUENCE,
-    SET,
-    ASN1Element as _Element,
+    type SEQUENCE,
+    type SET,
+    type ASN1Element as _Element,
     ASN1TagClass as _TagClass,
     ASN1ConstructionError as _ConstructionError
 } from "@wildboar/asn1";
@@ -36,29 +36,35 @@ import { CallLinkageData, _decode_CallLinkageData, _encode_CallLinkageData } fro
  */
 export
 class CallLinkageDataList {
+    /**
+     * @summary `newCallLinkageData`.
+     * @description
+     *
+     * Call linkage after the conference, transfer, or other
+     * update. ECMA-269 §12.2.5.
+     *
+     * @public
+     * @readonly
+     */
+    public readonly newCallLinkageData: CallLinkageData;
+    /**
+     * @summary `oldCallLinkageData`.
+     * @description
+     *
+     * Call linkage before the update. ECMA-269 §12.2.5.
+     *
+     * @public
+     * @readonly
+     */
+    public readonly oldCallLinkageData: CallLinkageData;
+
     constructor (
-        /**
-         * @summary `newCallLinkageData`.
-         * @description
-         *
-         * Call linkage after the conference, transfer, or other
-         * update. ECMA-269 §12.2.5.
-         *
-         * @public
-         * @readonly
-         */
-        readonly newCallLinkageData: CallLinkageData,
-        /**
-         * @summary `oldCallLinkageData`.
-         * @description
-         *
-         * Call linkage before the update. ECMA-269 §12.2.5.
-         *
-         * @public
-         * @readonly
-         */
-        readonly oldCallLinkageData: CallLinkageData
-    ) {}
+        newCallLinkageData: CallLinkageData,
+        oldCallLinkageData: CallLinkageData
+    ) {
+        this.newCallLinkageData = newCallLinkageData;
+        this.oldCallLinkageData = oldCallLinkageData;
+    }
 
     /**
      * @summary Restructures an object into a CallLinkageDataList

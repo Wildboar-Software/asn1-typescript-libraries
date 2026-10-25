@@ -1,11 +1,11 @@
 /* eslint-disable */
 import {
     ASN1ConstructionError as _ConstructionError,
-    ASN1Element as _Element,
+    type ASN1Element as _Element,
     ASN1TagClass as _TagClass
 } from "@wildboar/asn1";
 import * as $ from "@wildboar/asn1/functional";
-import { ACID, _decode_ACID, _encode_ACID } from "../TS33128Payloads/ACID.ta.mjs";
+import { type ACID, _decode_ACID, _encode_ACID } from "../TS33128Payloads/ACID.ta.mjs";
 // export { ACID, _decode_ACID, _encode_ACID } from "../TS33128Payloads/ACID.ta.mjs";
 import { UnfulfilledACProfileReason, _decode_UnfulfilledACProfileReason, _encode_UnfulfilledACProfileReason, _enum_for_UnfulfilledACProfileReason } from "../TS33128Payloads/UnfulfilledACProfileReason.ta.mjs";
 // export { UnfulfilledACProfileReason, _enum_for_UnfulfilledACProfileReason, UnfulfilledACProfileReason_eASNotAvailable /* IMPORTED_LONG_ENUMERATION_ITEM */, eASNotAvailable /* IMPORTED_SHORT_ENUMERATION_ITEM */, UnfulfilledACProfileReason_requirementsUnfulfilled /* IMPORTED_LONG_ENUMERATION_ITEM */, requirementsUnfulfilled /* IMPORTED_SHORT_ENUMERATION_ITEM */, _decode_UnfulfilledACProfileReason, _encode_UnfulfilledACProfileReason } from "../TS33128Payloads/UnfulfilledACProfileReason.ta.mjs";
@@ -80,7 +80,7 @@ class UnfulfilledACProfile {
          * @static
          */
 
-    public static _enum_for_reason = _enum_for_UnfulfilledACProfileReason;
+    public static _enum_for_reason: typeof _enum_for_UnfulfilledACProfileReason = _enum_for_UnfulfilledACProfileReason;
 }
 
 /**

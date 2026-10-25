@@ -1,6 +1,6 @@
 /* eslint-disable */
 import {
-    ASN1Element as _Element,
+    type ASN1Element as _Element,
     ASN1TagClass as _TagClass,
     ASN1Construction as _Construction,
     ASN1UniversalType as _UniversalType,
@@ -14,7 +14,7 @@ import {
     _encode_AttributeType,
 } from '../MSAbstractService/AttributeType.ta.mjs';
 import {
-    EDIApplicationSecurityExtension,
+    type EDIApplicationSecurityExtension,
     _decode_EDIApplicationSecurityExtension,
     _encode_EDIApplicationSecurityExtension,
 } from '../EDIMSInformationObjects/EDIApplicationSecurityExtension.ta.mjs';

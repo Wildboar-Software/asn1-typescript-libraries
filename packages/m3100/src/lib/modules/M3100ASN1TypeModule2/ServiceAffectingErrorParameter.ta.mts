@@ -1,7 +1,7 @@
 /* eslint-disable */
 import {
-    ENUMERATED,
-    ASN1Element as _Element,
+    type ENUMERATED,
+    type ASN1Element as _Element,
     ASN1TagClass as _TagClass,
     ASN1Construction as _Construction,
     ASN1UniversalType as _UniversalType,
@@ -41,7 +41,7 @@ export type ServiceAffectingErrorParameter =
  * @constant
  * @type {number}
  */
-export const ServiceAffectingErrorParameter_affectingExistingService: ServiceAffectingErrorParameter = 0; /* LONG_NAMED_ENUMERATED_VALUE */
+export const ServiceAffectingErrorParameter_affectingExistingService: _enum_for_ServiceAffectingErrorParameter.affectingExistingService = _enum_for_ServiceAffectingErrorParameter.affectingExistingService; /* LONG_NAMED_ENUMERATED_VALUE */
 
 
 /**
@@ -49,7 +49,7 @@ export const ServiceAffectingErrorParameter_affectingExistingService: ServiceAff
  * @constant
  * @type {number}
  */
-export const affectingExistingService: ServiceAffectingErrorParameter = ServiceAffectingErrorParameter_affectingExistingService; /* SHORT_NAMED_ENUMERATED_VALUE */
+export const affectingExistingService: _enum_for_ServiceAffectingErrorParameter.affectingExistingService = ServiceAffectingErrorParameter_affectingExistingService; /* SHORT_NAMED_ENUMERATED_VALUE */
 
 
 let _cached_decoder_for_ServiceAffectingErrorParameter: $.ASN1Decoder<ServiceAffectingErrorParameter> | null = null;

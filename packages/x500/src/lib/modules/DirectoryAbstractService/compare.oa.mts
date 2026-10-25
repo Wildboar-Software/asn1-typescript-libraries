@@ -4,12 +4,12 @@ import { type OPERATION } from "../CommonProtocolSpecification/OPERATION.oca.mjs
 import { abandoned } from "../DirectoryAbstractService/abandoned.oa.mjs";
 import { attributeError } from "../DirectoryAbstractService/attributeError.oa.mjs";
 import {
-    CompareArgument,
+    type CompareArgument,
     _decode_CompareArgument,
     _encode_CompareArgument,
 } from "../DirectoryAbstractService/CompareArgument.ta.mjs";
 import {
-    CompareResult,
+    type CompareResult,
     _decode_CompareResult,
     _encode_CompareResult,
 } from "../DirectoryAbstractService/CompareResult.ta.mjs";

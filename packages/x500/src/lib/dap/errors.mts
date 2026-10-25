@@ -69,8 +69,13 @@ interface X500DirectoryErrorCoded {
 export
 class AbandonError extends Error implements X500DirectoryErrorCoded {
     public static readonly errcode: Code = id_errcode_abandoned;
-    constructor (override readonly message: string, readonly data: AbandonedData) {
+    public override readonly message: string;
+    public readonly data: AbandonedData;
+
+    constructor (message: string, data: AbandonedData) {
         super(message);
+        this.message = message;
+        this.data = data;
         Object.setPrototypeOf(this, AbandonError.prototype);
     }
     public error_code(): Code {
@@ -84,8 +89,13 @@ class AbandonError extends Error implements X500DirectoryErrorCoded {
 export
 class AbandonFailedError extends Error {
     public static readonly errcode: Code = id_errcode_abandonFailed;
-    constructor (override readonly message: string, readonly data: AbandonFailedData) {
+    public override readonly message: string;
+    public readonly data: AbandonFailedData;
+
+    constructor (message: string, data: AbandonFailedData) {
         super(message);
+        this.message = message;
+        this.data = data;
         Object.setPrototypeOf(this, AbandonFailedError.prototype);
     }
     public error_code(): Code {
@@ -99,8 +109,13 @@ class AbandonFailedError extends Error {
 export
 class AttributeError extends Error {
     public static readonly errcode: Code = id_errcode_attributeError;
-    constructor (override readonly message: string, readonly data: AttributeErrorData) {
+    public override readonly message: string;
+    public readonly data: AttributeErrorData;
+
+    constructor (message: string, data: AttributeErrorData) {
         super(message);
+        this.message = message;
+        this.data = data;
         Object.setPrototypeOf(this, AttributeError.prototype);
     }
     public error_code(): Code {
@@ -114,8 +129,13 @@ class AttributeError extends Error {
 export
 class NameError extends Error {
     public static readonly errcode: Code = id_errcode_nameError;
-    constructor (override readonly message: string, readonly data: NameErrorData) {
+    public override readonly message: string;
+    public readonly data: NameErrorData;
+
+    constructor (message: string, data: NameErrorData) {
         super(message);
+        this.message = message;
+        this.data = data;
         Object.setPrototypeOf(this, NameError.prototype);
     }
     public error_code(): Code {
@@ -129,8 +149,13 @@ class NameError extends Error {
 export
 class ReferralError extends Error {
     public static readonly errcode: Code = id_errcode_referral;
-    constructor (override readonly message: string, readonly data: ReferralData) {
+    public override readonly message: string;
+    public readonly data: ReferralData;
+
+    constructor (message: string, data: ReferralData) {
         super(message);
+        this.message = message;
+        this.data = data;
         Object.setPrototypeOf(this, ReferralError.prototype);
     }
     public error_code(): Code {
@@ -144,8 +169,13 @@ class ReferralError extends Error {
 export
 class SecurityError extends Error {
     public static readonly errcode: Code = id_errcode_securityError;
-    constructor (override readonly message: string, readonly data: SecurityErrorData) {
+    public override readonly message: string;
+    public readonly data: SecurityErrorData;
+
+    constructor (message: string, data: SecurityErrorData) {
         super(message);
+        this.message = message;
+        this.data = data;
         Object.setPrototypeOf(this, SecurityError.prototype);
     }
     public error_code(): Code {
@@ -159,8 +189,13 @@ class SecurityError extends Error {
 export
 class ServiceError extends Error {
     public static readonly errcode: Code = id_errcode_serviceError;
-    constructor (override readonly message: string, readonly data: ServiceErrorData) {
+    public override readonly message: string;
+    public readonly data: ServiceErrorData;
+
+    constructor (message: string, data: ServiceErrorData) {
         super(message);
+        this.message = message;
+        this.data = data;
         Object.setPrototypeOf(this, ServiceError.prototype);
     }
     public error_code(): Code {
@@ -174,8 +209,13 @@ class ServiceError extends Error {
 export
 class UpdateError extends Error {
     public static readonly errcode: Code = id_errcode_updateError;
-    constructor (override readonly message: string, readonly data: UpdateErrorData) {
+    public override readonly message: string;
+    public readonly data: UpdateErrorData;
+
+    constructor (message: string, data: UpdateErrorData) {
         super(message);
+        this.message = message;
+        this.data = data;
         Object.setPrototypeOf(this, UpdateError.prototype);
     }
     public error_code(): Code {

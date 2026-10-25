@@ -1,17 +1,17 @@
 /* eslint-disable */
 import {
-    OPTIONAL,
-    ASN1Element as _Element,
+    type OPTIONAL,
+    type ASN1Element as _Element,
     ASN1TagClass as _TagClass
 } from "@wildboar/asn1";
 import * as $ from "@wildboar/asn1/functional";
-import { IMSI, _decode_IMSI, _encode_IMSI } from "../TS33128Payloads/IMSI.ta.mjs";
+import { type IMSI, _decode_IMSI, _encode_IMSI } from "../TS33128Payloads/IMSI.ta.mjs";
 // export { IMSI, _decode_IMSI, _encode_IMSI } from "../TS33128Payloads/IMSI.ta.mjs";
-import { MSISDN, _decode_MSISDN, _encode_MSISDN } from "../TS33128Payloads/MSISDN.ta.mjs";
+import { type MSISDN, _decode_MSISDN, _encode_MSISDN } from "../TS33128Payloads/MSISDN.ta.mjs";
 // export { MSISDN, _decode_MSISDN, _encode_MSISDN } from "../TS33128Payloads/MSISDN.ta.mjs";
-import { NAI, _decode_NAI, _encode_NAI } from "../TS33128Payloads/NAI.ta.mjs";
+import { type NAI, _decode_NAI, _encode_NAI } from "../TS33128Payloads/NAI.ta.mjs";
 // export { NAI, _decode_NAI, _encode_NAI } from "../TS33128Payloads/NAI.ta.mjs";
-import { TriggerID, _decode_TriggerID, _encode_TriggerID } from "../TS33128Payloads/TriggerID.ta.mjs";
+import { type TriggerID, _decode_TriggerID, _encode_TriggerID } from "../TS33128Payloads/TriggerID.ta.mjs";
 // export { TriggerID, _decode_TriggerID, _encode_TriggerID } from "../TS33128Payloads/TriggerID.ta.mjs";
 import { DeviceTriggerDeliveryResult, _decode_DeviceTriggerDeliveryResult, _encode_DeviceTriggerDeliveryResult, _enum_for_DeviceTriggerDeliveryResult } from "../TS33128Payloads/DeviceTriggerDeliveryResult.ta.mjs";
 // export { DeviceTriggerDeliveryResult, _enum_for_DeviceTriggerDeliveryResult, DeviceTriggerDeliveryResult_success /* IMPORTED_LONG_ENUMERATION_ITEM */, success /* IMPORTED_SHORT_ENUMERATION_ITEM */, DeviceTriggerDeliveryResult_unknown /* IMPORTED_LONG_ENUMERATION_ITEM */, unknown /* IMPORTED_SHORT_ENUMERATION_ITEM */, DeviceTriggerDeliveryResult_failure /* IMPORTED_LONG_ENUMERATION_ITEM */, failure /* IMPORTED_SHORT_ENUMERATION_ITEM */, DeviceTriggerDeliveryResult_triggered /* IMPORTED_LONG_ENUMERATION_ITEM */, triggered /* IMPORTED_SHORT_ENUMERATION_ITEM */, DeviceTriggerDeliveryResult_expired /* IMPORTED_LONG_ENUMERATION_ITEM */, expired /* IMPORTED_SHORT_ENUMERATION_ITEM */, DeviceTriggerDeliveryResult_unconfirmed /* IMPORTED_LONG_ENUMERATION_ITEM */, unconfirmed /* IMPORTED_SHORT_ENUMERATION_ITEM */, DeviceTriggerDeliveryResult_replaced /* IMPORTED_LONG_ENUMERATION_ITEM */, replaced /* IMPORTED_SHORT_ENUMERATION_ITEM */, DeviceTriggerDeliveryResult_terminate /* IMPORTED_LONG_ENUMERATION_ITEM */, terminate /* IMPORTED_SHORT_ENUMERATION_ITEM */, _decode_DeviceTriggerDeliveryResult, _encode_DeviceTriggerDeliveryResult } from "../TS33128Payloads/DeviceTriggerDeliveryResult.ta.mjs";
@@ -191,7 +191,7 @@ class SCEFDeviceTriggerReportNotify {
          * @static
          */
 
-    public static _enum_for_deviceTriggerDeliveryResult = _enum_for_DeviceTriggerDeliveryResult;
+    public static _enum_for_deviceTriggerDeliveryResult: typeof _enum_for_DeviceTriggerDeliveryResult = _enum_for_DeviceTriggerDeliveryResult;
 }
 
 /**

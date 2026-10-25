@@ -1,11 +1,11 @@
 /* eslint-disable */
 import {
-    ASN1Element as _Element,
+    type ASN1Element as _Element,
     ASN1TagClass as _TagClass
 } from "@wildboar/asn1";
 import * as $ from "@wildboar/asn1/functional";
-import { SubDomainID, _decode_SubDomainID, _encode_SubDomainID } from "../Call-Identification-and-Call-Linkage-Operations-asn1-97/SubDomainID.ta.mjs";
-import { GloballyUniqueID, _decode_GloballyUniqueID, _encode_GloballyUniqueID } from "../Call-Identification-and-Call-Linkage-Operations-asn1-97/GloballyUniqueID.ta.mjs";
+import { type SubDomainID, _decode_SubDomainID, _encode_SubDomainID } from "../Call-Identification-and-Call-Linkage-Operations-asn1-97/SubDomainID.ta.mjs";
+import { type GloballyUniqueID, _decode_GloballyUniqueID, _encode_GloballyUniqueID } from "../Call-Identification-and-Call-Linkage-Operations-asn1-97/GloballyUniqueID.ta.mjs";
 
 /**
  * @summary CallIdentificationData_linkageID

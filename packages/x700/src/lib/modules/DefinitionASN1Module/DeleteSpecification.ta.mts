@@ -1,7 +1,7 @@
 /* eslint-disable */
 import {
-    OPTIONAL,
-    ASN1Element as _Element,
+    type OPTIONAL,
+    type ASN1Element as _Element,
     ASN1TagClass as _TagClass,
     ASN1Construction as _Construction,
     ASN1UniversalType as _UniversalType,
@@ -18,7 +18,7 @@ import {
     _encode_DeleteSpecification_deleteModifier,
 } from '../DefinitionASN1Module/DeleteSpecification-deleteModifier.ta.mjs';
 import {
-    TemplateList,
+    type TemplateList,
     _decode_TemplateList,
     _encode_TemplateList,
 } from '../DefinitionASN1Module/TemplateList.ta.mjs';
@@ -37,34 +37,40 @@ import {
  * DeleteSpecification ::= SEQUENCE {
  *   deleteModifier
  *     ENUMERATED {onlyIfNoContainedObjects(0), deletesContainedObjects(1)}
- *       OPTIONAL,
+ *       type OPTIONAL,
  *   parameter       TemplateList OPTIONAL
  * }
  * ```
  *
  */
 export class DeleteSpecification {
+    /**
+     * @summary `deleteModifier`.
+     * @description
+     *
+     * ONLY-IF-NO-CONTAINED-OBJECTS or DELETES-CONTAINED-OBJECTS. Omitted if
+     * the DELETE construct has no modifier.
+     * @public
+     * @readonly
+     */
+    public readonly deleteModifier?: OPTIONAL<DeleteSpecification_deleteModifier>;
+    /**
+     * @summary `parameter`.
+     * @description
+     *
+     * Name-binding-specific Delete error parameters (processing failures).
+     * @public
+     * @readonly
+     */
+    public readonly parameter?: OPTIONAL<TemplateList>;
+
     constructor(
-        /**
-         * @summary `deleteModifier`.
-         * @description
-         *
-         * ONLY-IF-NO-CONTAINED-OBJECTS or DELETES-CONTAINED-OBJECTS. Omitted if
-         * the DELETE construct has no modifier.
-         * @public
-         * @readonly
-         */
-        readonly deleteModifier?: OPTIONAL<DeleteSpecification_deleteModifier>,
-        /**
-         * @summary `parameter`.
-         * @description
-         *
-         * Name-binding-specific Delete error parameters (processing failures).
-         * @public
-         * @readonly
-         */
-        readonly parameter?: OPTIONAL<TemplateList>
-    ) {}
+        deleteModifier?: OPTIONAL<DeleteSpecification_deleteModifier>,
+        parameter?: OPTIONAL<TemplateList>
+    ) {
+        this.deleteModifier = deleteModifier;
+        this.parameter = parameter;
+    }
 
     /**
      * @summary Restructures an object into a DeleteSpecification
@@ -90,7 +96,7 @@ export class DeleteSpecification {
      * @static
      */
 
-    public static _enum_for_deleteModifier = _enum_for_DeleteSpecification_deleteModifier;
+    public static _enum_for_deleteModifier: typeof _enum_for_DeleteSpecification_deleteModifier = _enum_for_DeleteSpecification_deleteModifier;
 }
 
 /**

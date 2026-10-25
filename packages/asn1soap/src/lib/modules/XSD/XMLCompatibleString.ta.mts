@@ -1,6 +1,6 @@
 /* eslint-disable */
 import {
-  UTF8String,
+  type UTF8String,
   ASN1Element as _Element,
   ASN1TagClass as _TagClass,
   ASN1Construction as _Construction,
@@ -39,12 +39,12 @@ export type XMLCompatibleString = UTF8String; // UTF8String
 
 
 
-export const _decode_XMLCompatibleString = $._decodeUTF8String;
+export const _decode_XMLCompatibleString: $.ASN1Decoder<string> = $._decodeUTF8String;
 
 
 
 
-export const _encode_XMLCompatibleString = $._encodeUTF8String;
+export const _encode_XMLCompatibleString: $.ASN1Encoder<string> = $._encodeUTF8String;
 
 
 /* eslint-enable */

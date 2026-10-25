@@ -1,10 +1,10 @@
 /* eslint-disable */
 import {
-    INTEGER,
-    OCTET_STRING,
-    OPTIONAL,
-    UTF8String,
-    ASN1Element as _Element,
+    type INTEGER,
+    type OCTET_STRING,
+    type OPTIONAL,
+    type UTF8String,
+    type ASN1Element as _Element,
     ASN1TagClass as _TagClass,
     ASN1SizeError,
     ASN1OverflowError
@@ -268,13 +268,13 @@ class MonitoringEventReportData {
          * @static
          */
 
-    public static _enum_for_monitoringType = _enum_for_MonitoringType;        /**
+    public static _enum_for_monitoringType: typeof _enum_for_MonitoringType = _enum_for_MonitoringType;        /**
          * @summary The enum used as the type of the component `reachabilityInformation`
          * @public
          * @static
          */
 
-    public static _enum_for_reachabilityInformation = _enum_for_ReachabilityType;
+    public static _enum_for_reachabilityInformation: typeof _enum_for_ReachabilityType = _enum_for_ReachabilityType;
 }
 
 /**

@@ -1,6 +1,6 @@
 /* eslint-disable */
 import {
-  BOOLEAN,
+  type BOOLEAN,
   ASN1Element as _Element,
   ASN1TagClass as _TagClass,
   ASN1Construction as _Construction,
@@ -12,17 +12,17 @@ import {
 } from '@wildboar/asn1';
 import * as $ from '@wildboar/asn1/functional';
 import {
-  BioAPI_HANDLE,
+  type BioAPI_HANDLE,
   _decode_BioAPI_HANDLE,
   _encode_BioAPI_HANDLE,
 } from '../BIP/BioAPI-HANDLE.ta.mjs';
 import {
-  BioAPI_FMR,
+  type BioAPI_FMR,
   _decode_BioAPI_FMR,
   _encode_BioAPI_FMR,
 } from '../BIP/BioAPI-FMR.ta.mjs';
 import {
-  BioAPI_BIR_SUBTYPE,
+  type BioAPI_BIR_SUBTYPE,
   _decode_BioAPI_BIR_SUBTYPE,
   _encode_BioAPI_BIR_SUBTYPE,
 } from '../BIP/BioAPI-BIR-SUBTYPE.ta.mjs';
@@ -32,12 +32,12 @@ import {
   _encode_BioAPI_IDENTIFY_POPULATION,
 } from '../BIP/BioAPI-IDENTIFY-POPULATION.ta.mjs';
 import {
-  UnsignedInt,
+  type UnsignedInt,
   _decode_UnsignedInt,
   _encode_UnsignedInt,
 } from '../BIP/UnsignedInt.ta.mjs';
 import {
-  SignedInt,
+  type SignedInt,
   _decode_SignedInt,
   _encode_SignedInt,
 } from '../BIP/SignedInt.ta.mjs';
@@ -80,7 +80,7 @@ export class Identify_RequestParams {
    * @public
    * @readonly
    */
-  readonly originalBSPHandle: BioAPI_HANDLE;
+  public readonly originalBSPHandle: BioAPI_HANDLE;
   /**
    * @summary `maxFMRRequested`.
    * @description
@@ -91,7 +91,7 @@ export class Identify_RequestParams {
    * @public
    * @readonly
    */
-  readonly maxFMRRequested: BioAPI_FMR;
+  public readonly maxFMRRequested: BioAPI_FMR;
   /**
    * @summary `subtype`.
    * @description
@@ -102,7 +102,7 @@ export class Identify_RequestParams {
    * @public
    * @readonly
    */
-  readonly subtype: BioAPI_BIR_SUBTYPE;
+  public readonly subtype: BioAPI_BIR_SUBTYPE;
   /**
    * @summary `population`.
    * @description
@@ -113,7 +113,7 @@ export class Identify_RequestParams {
    * @public
    * @readonly
    */
-  readonly population: BioAPI_IDENTIFY_POPULATION;
+  public readonly population: BioAPI_IDENTIFY_POPULATION;
   /**
    * @summary `totalNumberOfTemplates`.
    * @description
@@ -124,7 +124,7 @@ export class Identify_RequestParams {
    * @public
    * @readonly
    */
-  readonly totalNumberOfTemplates: UnsignedInt;
+  public readonly totalNumberOfTemplates: UnsignedInt;
   /**
    * @summary `binning`.
    * @description
@@ -135,7 +135,7 @@ export class Identify_RequestParams {
    * @public
    * @readonly
    */
-  readonly binning: BOOLEAN;
+  public readonly binning: BOOLEAN;
   /**
    * @summary `maxNumberOfResults`.
    * @description
@@ -146,7 +146,7 @@ export class Identify_RequestParams {
    * @public
    * @readonly
    */
-  readonly maxNumberOfResults: UnsignedInt;
+  public readonly maxNumberOfResults: UnsignedInt;
   /**
    * @summary `timeout`.
    * @description
@@ -156,7 +156,7 @@ export class Identify_RequestParams {
    * @public
    * @readonly
    */
-  readonly timeout: SignedInt;
+  public readonly timeout: SignedInt;
   /**
    * @summary `no_auditData`.
    * @description
@@ -168,7 +168,7 @@ export class Identify_RequestParams {
    * @public
    * @readonly
    */
-  readonly no_auditData: BOOLEAN;
+  public readonly no_auditData: BOOLEAN;
 
   constructor(
     originalBSPHandle: BioAPI_HANDLE,

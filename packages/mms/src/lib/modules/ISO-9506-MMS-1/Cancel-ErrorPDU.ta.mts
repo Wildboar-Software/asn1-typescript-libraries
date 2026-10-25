@@ -1,6 +1,6 @@
 /* eslint-disable */
 import {
-    ASN1Element as _Element,
+    type ASN1Element as _Element,
     ASN1TagClass as _TagClass,
     ASN1Construction as _Construction,
     ASN1UniversalType as _UniversalType,
@@ -10,7 +10,7 @@ import {
     ASN1ConstructionError as _ConstructionError,
 } from "@wildboar/asn1";
 import * as $ from "@wildboar/asn1/functional";
-import { Unsigned32, _decode_Unsigned32, _encode_Unsigned32 } from "../ISO-9506-MMS-1/Unsigned32.ta.mjs";
+import { type Unsigned32, _decode_Unsigned32, _encode_Unsigned32 } from "../ISO-9506-MMS-1/Unsigned32.ta.mjs";
 import { ServiceError, _decode_ServiceError, _encode_ServiceError } from "../ISO-9506-MMS-1/ServiceError.ta.mjs";
 
 
@@ -36,27 +36,33 @@ import { ServiceError, _decode_ServiceError, _encode_ServiceError } from "../ISO
  */
 export
 class Cancel_ErrorPDU {
+    /**
+     * @summary `originalInvokeID`.
+     * @description
+     *
+     * Invoke ID of the confirmed service whose cancellation was requested
+     * (ISO 9506-1:2003 §8.5.1.3.1).
+     * @public
+     * @readonly
+     */
+    public readonly originalInvokeID: Unsigned32;
+    /**
+     * @summary `serviceError`.
+     * @description
+     *
+     * Why Cancel failed (ISO 9506-1:2003 clause 24; ISO 9506-2:2003 §8.5).
+     * @public
+     * @readonly
+     */
+    public readonly serviceError: ServiceError;
+
     constructor (
-        /**
-         * @summary `originalInvokeID`.
-         * @description
-         *
-         * Invoke ID of the confirmed service whose cancellation was requested
-         * (ISO 9506-1:2003 §8.5.1.3.1).
-         * @public
-         * @readonly
-         */
-        readonly originalInvokeID: Unsigned32,
-        /**
-         * @summary `serviceError`.
-         * @description
-         *
-         * Why Cancel failed (ISO 9506-1:2003 clause 24; ISO 9506-2:2003 §8.5).
-         * @public
-         * @readonly
-         */
-        readonly serviceError: ServiceError
-    ) {}
+        originalInvokeID: Unsigned32,
+        serviceError: ServiceError
+    ) {
+        this.originalInvokeID = originalInvokeID;
+        this.serviceError = serviceError;
+    }
 
     /**
      * @summary Restructures an object into a Cancel_ErrorPDU

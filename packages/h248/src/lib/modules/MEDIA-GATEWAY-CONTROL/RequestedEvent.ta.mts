@@ -1,12 +1,12 @@
 /* eslint-disable */
 import {
-    OPTIONAL,
-    ASN1Element as _Element,
+    type OPTIONAL,
+    type ASN1Element as _Element,
     ASN1TagClass as _TagClass
 } from "@wildboar/asn1";
 import * as $ from "@wildboar/asn1/functional";
-import { EventName, _decode_EventName, _encode_EventName } from "../MEDIA-GATEWAY-CONTROL/EventName.ta.mjs";
-import { StreamID, _decode_StreamID, _encode_StreamID } from "../MEDIA-GATEWAY-CONTROL/StreamID.ta.mjs";
+import { type EventName, _decode_EventName, _encode_EventName } from "../MEDIA-GATEWAY-CONTROL/EventName.ta.mjs";
+import { type StreamID, _decode_StreamID, _encode_StreamID } from "../MEDIA-GATEWAY-CONTROL/StreamID.ta.mjs";
 import { RequestedActions, _decode_RequestedActions, _encode_RequestedActions } from "../MEDIA-GATEWAY-CONTROL/RequestedActions.ta.mjs";
 import { EventParameter, _decode_EventParameter, _encode_EventParameter } from "../MEDIA-GATEWAY-CONTROL/EventParameter.ta.mjs";
 
@@ -53,7 +53,7 @@ class RequestedEvent {
      * @public
      * @readonly
      */
-    readonly eventName: EventName;
+    public readonly eventName: EventName;
     /**
      * @summary `streamID`.
      * @description
@@ -64,7 +64,7 @@ class RequestedEvent {
      * @public
      * @readonly
      */
-    readonly streamID: OPTIONAL<StreamID>;
+    public readonly streamID: OPTIONAL<StreamID>;
     /**
      * @summary `eventAction`.
      * @description
@@ -76,7 +76,7 @@ class RequestedEvent {
      * @public
      * @readonly
      */
-    readonly eventAction: OPTIONAL<RequestedActions>;
+    public readonly eventAction: OPTIONAL<RequestedActions>;
     /**
      * @summary `evParList`.
      * @description
@@ -86,7 +86,7 @@ class RequestedEvent {
      * @public
      * @readonly
      */
-    readonly evParList: EventParameter[];
+    public readonly evParList: EventParameter[];
     /**
      * @summary Extensions that are not recognized.
      * @description
@@ -97,7 +97,7 @@ class RequestedEvent {
      * @public
      * @readonly
      */
-    readonly _unrecognizedExtensionsList: _Element[];
+    public readonly _unrecognizedExtensionsList: _Element[];
 
     constructor (
         eventName: EventName,

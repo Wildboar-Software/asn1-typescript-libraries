@@ -2,10 +2,10 @@
 
 import * as $ from "@wildboar/asn1/functional";
 import {
-    OPTIONAL,
-    SEQUENCE,
-    SET,
-    ASN1Element as _Element,
+    type OPTIONAL,
+    type SEQUENCE,
+    type SET,
+    type ASN1Element as _Element,
     ASN1TagClass as _TagClass
 } from "@wildboar/asn1";
 import {
@@ -41,30 +41,36 @@ import { CSTACommonArguments, _decode_CSTACommonArguments, _encode_CSTACommonArg
  */
 export
 class StartCDRTransmissionArgument {
+    /**
+     * @summary `transferMode`.
+     * @description
+     *
+     * transferAtEndOfCall, transferOnRequest, or transferOnThresholdReached
+     * (ECMA-269 §27.1.4.1).
+     *
+     * @public
+     * @readonly
+     */
+    public readonly transferMode: CDRTransferMode;
+    /**
+     * @summary `extensions`.
+     * @description
+     *
+     * CSTACommonArguments carrying the service-table security and
+     * privateData parameters.
+     *
+     * @public
+     * @readonly
+     */
+    public readonly extensions?: OPTIONAL<CSTACommonArguments>;
+
     constructor (
-        /**
-         * @summary `transferMode`.
-         * @description
-         *
-         * transferAtEndOfCall, transferOnRequest, or transferOnThresholdReached
-         * (ECMA-269 §27.1.4.1).
-         *
-         * @public
-         * @readonly
-         */
-        readonly transferMode: CDRTransferMode,
-        /**
-         * @summary `extensions`.
-         * @description
-         *
-         * CSTACommonArguments carrying the service-table security and
-         * privateData parameters.
-         *
-         * @public
-         * @readonly
-         */
-        readonly extensions?: OPTIONAL<CSTACommonArguments>
-    ) {}
+        transferMode: CDRTransferMode,
+        extensions?: OPTIONAL<CSTACommonArguments>
+    ) {
+        this.transferMode = transferMode;
+        this.extensions = extensions;
+    }
 
     /**
      * @summary Restructures an object into a StartCDRTransmissionArgument
@@ -88,7 +94,7 @@ class StartCDRTransmissionArgument {
          * @static
          */
 
-    public static _enum_for_transferMode = _enum_for_CDRTransferMode;
+    public static _enum_for_transferMode: typeof _enum_for_CDRTransferMode = _enum_for_CDRTransferMode;
 }
 
 /**

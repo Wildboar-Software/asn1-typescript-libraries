@@ -1,10 +1,10 @@
 /* eslint-disable */
 import {
-    OBJECT_IDENTIFIER,
+    type OBJECT_IDENTIFIER,
     ASN1Element as _Element
 } from "@wildboar/asn1";
 import * as $ from "@wildboar/asn1/functional";
-import { Ae_title_form1, _decode_Ae_title_form1, _encode_Ae_title_form1 } from "../CSChargingDataTypes/Ae-title-form1.ta.mjs";
+import { type Ae_title_form1, _decode_Ae_title_form1, _encode_Ae_title_form1 } from "../CSChargingDataTypes/Ae-title-form1.ta.mjs";
 
 
 /**

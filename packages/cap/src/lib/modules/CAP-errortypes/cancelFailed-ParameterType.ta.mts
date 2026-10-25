@@ -1,6 +1,6 @@
 /* eslint-disable */
 import {
-    ASN1Element as _Element,
+    type ASN1Element as _Element,
     ASN1TagClass as _TagClass,
     ASN1Construction as _Construction,
     ASN1UniversalType as _UniversalType,
@@ -39,37 +39,45 @@ import { cancelFailed_ParameterType_problem, _enum_for_cancelFailed_ParameterTyp
  */
 export
 class cancelFailed_ParameterType {
+    /**
+     * @summary `problem`.
+     * @description
+     *
+     * Why Cancel failed: `unknownOperation` (0), `tooLate` (1), or
+     * `operationNotCancellable` (2).
+     * (3GPP TS 29.078 V19.0.0 clause 10.1.2).
+     *
+     * @public
+     * @readonly
+     */
+    public readonly problem: cancelFailed_ParameterType_problem;
+    /**
+     * @summary `operation`.
+     * @description
+     *
+     * InvokeID of the operation that failed to cancel.
+     * (3GPP TS 29.078 V19.0.0 clauses 5.2 and 10.1.2).
+     *
+     * @public
+     * @readonly
+     */
+    public readonly operation: InvokeID;
+    /**
+     * @summary Extensions that are not recognized.
+     * @public
+     * @readonly
+     */
+    public readonly _unrecognizedExtensionsList: _Element[];
+
     constructor (
-        /**
-         * @summary `problem`.
-         * @description
-         *
-         * Why Cancel failed: `unknownOperation` (0), `tooLate` (1), or
-         * `operationNotCancellable` (2).
-         * (3GPP TS 29.078 V19.0.0 clause 10.1.2).
-         *
-         * @public
-         * @readonly
-         */
-        readonly problem: cancelFailed_ParameterType_problem,
-        /**
-         * @summary `operation`.
-         * @description
-         *
-         * InvokeID of the operation that failed to cancel.
-         * (3GPP TS 29.078 V19.0.0 clauses 5.2 and 10.1.2).
-         *
-         * @public
-         * @readonly
-         */
-        readonly operation: InvokeID,
-        /**
-         * @summary Extensions that are not recognized.
-         * @public
-         * @readonly
-         */
-        readonly _unrecognizedExtensionsList: _Element[] = []
-    ) {}
+        problem: cancelFailed_ParameterType_problem,
+        operation: InvokeID,
+        _unrecognizedExtensionsList: _Element[] = []
+    ) {
+        this.problem = problem;
+        this.operation = operation;
+        this._unrecognizedExtensionsList = _unrecognizedExtensionsList;
+    }
 
     /**
      * @summary Restructures an object into a cancelFailed_ParameterType
@@ -93,7 +101,7 @@ class cancelFailed_ParameterType {
          * @static
          */
 
-    public static _enum_for_problem = _enum_for_cancelFailed_ParameterType_problem;
+    public static _enum_for_problem: typeof _enum_for_cancelFailed_ParameterType_problem = _enum_for_cancelFailed_ParameterType_problem;
 }
 
 /**

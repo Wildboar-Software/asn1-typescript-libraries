@@ -1,11 +1,11 @@
 /* eslint-disable */
 import {
-    OPTIONAL,
-    ASN1Element as _Element,
+    type OPTIONAL,
+    type ASN1Element as _Element,
     ASN1TagClass as _TagClass
 } from "@wildboar/asn1";
 import * as $ from "@wildboar/asn1/functional";
-import { PositionMethodFailure_Diagnostic, _decode_PositionMethodFailure_Diagnostic, _encode_PositionMethodFailure_Diagnostic, _enum_for_PositionMethodFailure_Diagnostic } from "../MAP-ER-DataTypes/PositionMethodFailure-Diagnostic.ta.mjs";
+import { type PositionMethodFailure_Diagnostic, _decode_PositionMethodFailure_Diagnostic, _encode_PositionMethodFailure_Diagnostic, _enum_for_PositionMethodFailure_Diagnostic } from "../MAP-ER-DataTypes/PositionMethodFailure-Diagnostic.ta.mjs";
 import { ExtensionContainer, _decode_ExtensionContainer, _encode_ExtensionContainer } from "../MAP-ExtensionDataTypes/ExtensionContainer.ta.mjs";
 
 
@@ -20,8 +20,8 @@ import { ExtensionContainer, _decode_ExtensionContainer, _encode_ExtensionContai
  * 
  * ```asn1
  * PositionMethodFailure-Param ::= SEQUENCE {
- *     positionMethodFailure-Diagnostic    [0] PositionMethodFailure-Diagnostic    OPTIONAL,
- *     extensionContainer    [1] ExtensionContainer    OPTIONAL,
+ *     positionMethodFailure-Diagnostic    [0] PositionMethodFailure-Diagnostic    type OPTIONAL,
+ *     extensionContainer    [1] ExtensionContainer    type OPTIONAL,
  *     ... }
  * ```
  * 
@@ -29,31 +29,39 @@ import { ExtensionContainer, _decode_ExtensionContainer, _encode_ExtensionContai
  */
 export
 class PositionMethodFailure_Param {
+    /**
+     * @summary `positionMethodFailure_Diagnostic`.
+     * @description
+     *
+     * Detailed reason for position method failure. Unrecognized values
+     * shall be ignored (3GPP TS 29.002 V19.1.0 clauses 7.6.1.4 and 17.7.7).
+     *
+     * @public
+     * @readonly
+     */
+    public readonly positionMethodFailure_Diagnostic?: OPTIONAL<PositionMethodFailure_Diagnostic>;
+    /**
+     * @summary `extensionContainer`.
+     * @public
+     * @readonly
+     */
+    public readonly extensionContainer?: OPTIONAL<ExtensionContainer>;
+    /**
+     * @summary Extensions that are not recognized.
+     * @public
+     * @readonly
+     */
+    public readonly _unrecognizedExtensionsList: _Element[];
+
     constructor (
-        /**
-         * @summary `positionMethodFailure_Diagnostic`.
-         * @description
-         *
-         * Detailed reason for position method failure. Unrecognized values
-         * shall be ignored (3GPP TS 29.002 V19.1.0 clauses 7.6.1.4 and 17.7.7).
-         *
-         * @public
-         * @readonly
-         */
-        readonly positionMethodFailure_Diagnostic?: OPTIONAL<PositionMethodFailure_Diagnostic>,
-        /**
-         * @summary `extensionContainer`.
-         * @public
-         * @readonly
-         */
-        readonly extensionContainer?: OPTIONAL<ExtensionContainer>,
-        /**
-         * @summary Extensions that are not recognized.
-         * @public
-         * @readonly
-         */
-        readonly _unrecognizedExtensionsList: _Element[] = []
-    ) {}
+        positionMethodFailure_Diagnostic?: OPTIONAL<PositionMethodFailure_Diagnostic>,
+        extensionContainer?: OPTIONAL<ExtensionContainer>,
+        _unrecognizedExtensionsList: _Element[] = []
+    ) {
+        this.positionMethodFailure_Diagnostic = positionMethodFailure_Diagnostic;
+        this.extensionContainer = extensionContainer;
+        this._unrecognizedExtensionsList = _unrecognizedExtensionsList;
+    }
 
     /**
      * @summary Restructures an object into a PositionMethodFailure_Param
@@ -77,7 +85,7 @@ class PositionMethodFailure_Param {
          * @static
          */
 
-    public static _enum_for_positionMethodFailure_Diagnostic = _enum_for_PositionMethodFailure_Diagnostic;
+    public static _enum_for_positionMethodFailure_Diagnostic: typeof _enum_for_PositionMethodFailure_Diagnostic = _enum_for_PositionMethodFailure_Diagnostic;
 }
 
 /**

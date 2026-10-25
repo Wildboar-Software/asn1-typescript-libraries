@@ -1,6 +1,6 @@
 /* eslint-disable */
 import {
-    ASN1Element as _Element,
+    type ASN1Element as _Element,
     ASN1TagClass as _TagClass,
     ASN1Construction as _Construction,
     ASN1UniversalType as _UniversalType,
@@ -10,9 +10,9 @@ import {
     ASN1ConstructionError as _ConstructionError,
 } from "@wildboar/asn1";
 import * as $ from "@wildboar/asn1/functional";
-import { ObjectName, _decode_ObjectName, _encode_ObjectName } from "../ISO-9506-MMS-1/ObjectName.ta.mjs";
-import { EC_State, _decode_EC_State, _encode_EC_State } from "../MMS-Object-Module-1/EC-State.ta.mjs";
-import { EventTime, _decode_EventTime, _encode_EventTime } from "../MMS-Object-Module-1/EventTime.ta.mjs";
+import { type ObjectName, _decode_ObjectName, _encode_ObjectName } from "../ISO-9506-MMS-1/ObjectName.ta.mjs";
+import { type EC_State, _decode_EC_State, _encode_EC_State } from "../MMS-Object-Module-1/EC-State.ta.mjs";
+import { type EventTime, _decode_EventTime, _encode_EventTime } from "../MMS-Object-Module-1/EventTime.ta.mjs";
 
 
 /**
@@ -42,49 +42,57 @@ import { EventTime, _decode_EventTime, _encode_EventTime } from "../MMS-Object-M
  */
 export
 class AcknowledgeEventNotification_Request {
+    /**
+     * @summary `eventEnrollmentName`.
+     * @description
+     *
+     * Must equal the Event Enrollment Name of the
+     * EventNotification being acknowledged.
+     *
+     * [ISO 9506-1:2003 §18.4.1.1.1]
+     *
+     * @public
+     * @readonly
+     */
+    public readonly eventEnrollmentName: ObjectName;
+    /**
+     * @summary `acknowledgedState`.
+     * @description
+     *
+     * Must equal the Current State of the
+     * EventNotification being acknowledged. ACTIVE
+     * updates `&timeActiveAck`; IDLE updates
+     * `&timeIdleAck`.
+     *
+     * [ISO 9506-1:2003 §18.4.1.1.2]
+     *
+     * @public
+     * @readonly
+     */
+    public readonly acknowledgedState: EC_State;
+    /**
+     * @summary `timeOfAcknowledgedTransition`.
+     * @description
+     *
+     * Must equal the Transition Time of the
+     * EventNotification being acknowledged.
+     *
+     * [ISO 9506-1:2003 §18.4.1.1.3]
+     *
+     * @public
+     * @readonly
+     */
+    public readonly timeOfAcknowledgedTransition: EventTime;
+
     constructor (
-        /**
-         * @summary `eventEnrollmentName`.
-         * @description
-         *
-         * Must equal the Event Enrollment Name of the
-         * EventNotification being acknowledged.
-         *
-         * [ISO 9506-1:2003 §18.4.1.1.1]
-         *
-         * @public
-         * @readonly
-         */
-        readonly eventEnrollmentName: ObjectName,
-        /**
-         * @summary `acknowledgedState`.
-         * @description
-         *
-         * Must equal the Current State of the
-         * EventNotification being acknowledged. ACTIVE
-         * updates `&timeActiveAck`; IDLE updates
-         * `&timeIdleAck`.
-         *
-         * [ISO 9506-1:2003 §18.4.1.1.2]
-         *
-         * @public
-         * @readonly
-         */
-        readonly acknowledgedState: EC_State,
-        /**
-         * @summary `timeOfAcknowledgedTransition`.
-         * @description
-         *
-         * Must equal the Transition Time of the
-         * EventNotification being acknowledged.
-         *
-         * [ISO 9506-1:2003 §18.4.1.1.3]
-         *
-         * @public
-         * @readonly
-         */
-        readonly timeOfAcknowledgedTransition: EventTime
-    ) {}
+        eventEnrollmentName: ObjectName,
+        acknowledgedState: EC_State,
+        timeOfAcknowledgedTransition: EventTime
+    ) {
+        this.eventEnrollmentName = eventEnrollmentName;
+        this.acknowledgedState = acknowledgedState;
+        this.timeOfAcknowledgedTransition = timeOfAcknowledgedTransition;
+    }
 
     /**
      * @summary Restructures an object into a AcknowledgeEventNotification_Request

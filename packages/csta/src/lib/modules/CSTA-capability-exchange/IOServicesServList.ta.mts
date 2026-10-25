@@ -2,37 +2,37 @@
 
 import * as $ from "@wildboar/asn1/functional";
 import {
-    OPTIONAL,
-    SEQUENCE,
-    SET,
-    ASN1Element as _Element,
+    type OPTIONAL,
+    type SEQUENCE,
+    type SET,
+    type ASN1Element as _Element,
     ASN1TagClass as _TagClass
 } from "@wildboar/asn1";
-import { IoRegister, _decode_IoRegister, _encode_IoRegister } from "../CSTA-capability-exchange/IoRegister.ta.mjs";
+import { type IoRegister, _decode_IoRegister, _encode_IoRegister } from "../CSTA-capability-exchange/IoRegister.ta.mjs";
 
-import { IoRegisterAbort, _decode_IoRegisterAbort, _encode_IoRegisterAbort } from "../CSTA-capability-exchange/IoRegisterAbort.ta.mjs";
+import { type IoRegisterAbort, _decode_IoRegisterAbort, _encode_IoRegisterAbort } from "../CSTA-capability-exchange/IoRegisterAbort.ta.mjs";
 
-import { IoRegisterCancel, _decode_IoRegisterCancel, _encode_IoRegisterCancel } from "../CSTA-capability-exchange/IoRegisterCancel.ta.mjs";
+import { type IoRegisterCancel, _decode_IoRegisterCancel, _encode_IoRegisterCancel } from "../CSTA-capability-exchange/IoRegisterCancel.ta.mjs";
 
-import { DataPathResumed, _decode_DataPathResumed, _encode_DataPathResumed } from "../CSTA-capability-exchange/DataPathResumed.ta.mjs";
+import { type DataPathResumed, _decode_DataPathResumed, _encode_DataPathResumed } from "../CSTA-capability-exchange/DataPathResumed.ta.mjs";
 
-import { DataPathSuspended, _decode_DataPathSuspended, _encode_DataPathSuspended } from "../CSTA-capability-exchange/DataPathSuspended.ta.mjs";
+import { type DataPathSuspended, _decode_DataPathSuspended, _encode_DataPathSuspended } from "../CSTA-capability-exchange/DataPathSuspended.ta.mjs";
 
-import { FastData, _decode_FastData, _encode_FastData } from "../CSTA-capability-exchange/FastData.ta.mjs";
+import { type FastData, _decode_FastData, _encode_FastData } from "../CSTA-capability-exchange/FastData.ta.mjs";
 
-import { ResumeDataPath, _decode_ResumeDataPath, _encode_ResumeDataPath } from "../CSTA-capability-exchange/ResumeDataPath.ta.mjs";
+import { type ResumeDataPath, _decode_ResumeDataPath, _encode_ResumeDataPath } from "../CSTA-capability-exchange/ResumeDataPath.ta.mjs";
 
-import { SendBroadcastData, _decode_SendBroadcastData, _encode_SendBroadcastData } from "../CSTA-capability-exchange/SendBroadcastData.ta.mjs";
+import { type SendBroadcastData, _decode_SendBroadcastData, _encode_SendBroadcastData } from "../CSTA-capability-exchange/SendBroadcastData.ta.mjs";
 
-import { SendData, _decode_SendData, _encode_SendData } from "../CSTA-capability-exchange/SendData.ta.mjs";
+import { type SendData, _decode_SendData, _encode_SendData } from "../CSTA-capability-exchange/SendData.ta.mjs";
 
-import { SendMulticastData, _decode_SendMulticastData, _encode_SendMulticastData } from "../CSTA-capability-exchange/SendMulticastData.ta.mjs";
+import { type SendMulticastData, _decode_SendMulticastData, _encode_SendMulticastData } from "../CSTA-capability-exchange/SendMulticastData.ta.mjs";
 
-import { StartDataPath, _decode_StartDataPath, _encode_StartDataPath } from "../CSTA-capability-exchange/StartDataPath.ta.mjs";
+import { type StartDataPath, _decode_StartDataPath, _encode_StartDataPath } from "../CSTA-capability-exchange/StartDataPath.ta.mjs";
 
-import { StopDataPath, _decode_StopDataPath, _encode_StopDataPath } from "../CSTA-capability-exchange/StopDataPath.ta.mjs";
+import { type StopDataPath, _decode_StopDataPath, _encode_StopDataPath } from "../CSTA-capability-exchange/StopDataPath.ta.mjs";
 
-import { SuspendDataPath, _decode_SuspendDataPath, _encode_SuspendDataPath } from "../CSTA-capability-exchange/SuspendDataPath.ta.mjs";
+import { type SuspendDataPath, _decode_SuspendDataPath, _encode_SuspendDataPath } from "../CSTA-capability-exchange/SuspendDataPath.ta.mjs";
 
 
 
@@ -50,18 +50,18 @@ import { SuspendDataPath, _decode_SuspendDataPath, _encode_SuspendDataPath } fro
  * 
  * ```asn1
  * IOServicesServList ::= SEQUENCE
- * {     ioRegister             [ 0] IMPLICIT     IoRegister         OPTIONAL,
- *     ioRegisterAbort         [ 1] IMPLICIT     IoRegisterAbort     OPTIONAL,
- *     ioRegisterCancel         [ 2] IMPLICIT     IoRegisterCancel     OPTIONAL,
- *     dataPathResumed         [ 3] IMPLICIT     DataPathResumed     OPTIONAL,
- *     dataPathSuspended         [ 4] IMPLICIT     DataPathSuspended     OPTIONAL,
- *     fastData             [ 5] IMPLICIT     FastData         OPTIONAL,
- *     resumeDataPath             [ 6] IMPLICIT     ResumeDataPath         OPTIONAL,
- *     sendBroadcastData         [ 7] IMPLICIT     SendBroadcastData     OPTIONAL,
- *     sendData             [ 8] IMPLICIT     SendData         OPTIONAL,
- *     sendMulticastData         [ 9] IMPLICIT     SendMulticastData     OPTIONAL,
- *     startDataPath             [10] IMPLICIT     StartDataPath         OPTIONAL,
- *     stopDataPath             [11] IMPLICIT     StopDataPath         OPTIONAL,
+ * {     ioRegister             [ 0] IMPLICIT     IoRegister         type OPTIONAL,
+ *     ioRegisterAbort         [ 1] IMPLICIT     IoRegisterAbort     type OPTIONAL,
+ *     ioRegisterCancel         [ 2] IMPLICIT     IoRegisterCancel     type OPTIONAL,
+ *     dataPathResumed         [ 3] IMPLICIT     DataPathResumed     type OPTIONAL,
+ *     dataPathSuspended         [ 4] IMPLICIT     DataPathSuspended     type OPTIONAL,
+ *     fastData             [ 5] IMPLICIT     FastData         type OPTIONAL,
+ *     resumeDataPath             [ 6] IMPLICIT     ResumeDataPath         type OPTIONAL,
+ *     sendBroadcastData         [ 7] IMPLICIT     SendBroadcastData     type OPTIONAL,
+ *     sendData             [ 8] IMPLICIT     SendData         type OPTIONAL,
+ *     sendMulticastData         [ 9] IMPLICIT     SendMulticastData     type OPTIONAL,
+ *     startDataPath             [10] IMPLICIT     StartDataPath         type OPTIONAL,
+ *     stopDataPath             [11] IMPLICIT     StopDataPath         type OPTIONAL,
  *     suspendDataPath         [12] IMPLICIT     SuspendDataPath     OPTIONAL }
  * ```
  * 
@@ -69,125 +69,153 @@ import { SuspendDataPath, _decode_SuspendDataPath, _encode_SuspendDataPath } fro
  */
 export
 class IOServicesServList {
+    /**
+     * @summary `ioRegister`.
+     * @public
+     * @readonly
+     * @description
+     * Capability bitmap for this service; omit if the SF does not support
+     * it (ECMA-269 Annex C).
+     */
+    public readonly ioRegister?: OPTIONAL<IoRegister>;
+    /**
+     * @summary `ioRegisterAbort`.
+     * @public
+     * @readonly
+     * @description
+     * Capability bitmap for this service; omit if the SF does not support
+     * it (ECMA-269 Annex C).
+     */
+    public readonly ioRegisterAbort?: OPTIONAL<IoRegisterAbort>;
+    /**
+     * @summary `ioRegisterCancel`.
+     * @public
+     * @readonly
+     * @description
+     * Capability bitmap for this service; omit if the SF does not support
+     * it (ECMA-269 Annex C).
+     */
+    public readonly ioRegisterCancel?: OPTIONAL<IoRegisterCancel>;
+    /**
+     * @summary `dataPathResumed`.
+     * @public
+     * @readonly
+     * @description
+     * Capability bitmap for this service; omit if the SF does not support
+     * it (ECMA-269 Annex C).
+     */
+    public readonly dataPathResumed?: OPTIONAL<DataPathResumed>;
+    /**
+     * @summary `dataPathSuspended`.
+     * @public
+     * @readonly
+     * @description
+     * Capability bitmap for this service; omit if the SF does not support
+     * it (ECMA-269 Annex C).
+     */
+    public readonly dataPathSuspended?: OPTIONAL<DataPathSuspended>;
+    /**
+     * @summary `fastData`.
+     * @public
+     * @readonly
+     * @description
+     * Capability bitmap for this service; omit if the SF does not support
+     * it (ECMA-269 Annex C).
+     */
+    public readonly fastData?: OPTIONAL<FastData>;
+    /**
+     * @summary `resumeDataPath`.
+     * @public
+     * @readonly
+     * @description
+     * Capability bitmap for this service; omit if the SF does not support
+     * it (ECMA-269 Annex C).
+     */
+    public readonly resumeDataPath?: OPTIONAL<ResumeDataPath>;
+    /**
+     * @summary `sendBroadcastData`.
+     * @public
+     * @readonly
+     * @description
+     * Capability bitmap for this service; omit if the SF does not support
+     * it (ECMA-269 Annex C).
+     */
+    public readonly sendBroadcastData?: OPTIONAL<SendBroadcastData>;
+    /**
+     * @summary `sendData`.
+     * @public
+     * @readonly
+     * @description
+     * Capability bitmap for this service; omit if the SF does not support
+     * it (ECMA-269 Annex C).
+     */
+    public readonly sendData?: OPTIONAL<SendData>;
+    /**
+     * @summary `sendMulticastData`.
+     * @public
+     * @readonly
+     * @description
+     * Capability bitmap for this service; omit if the SF does not support
+     * it (ECMA-269 Annex C).
+     */
+    public readonly sendMulticastData?: OPTIONAL<SendMulticastData>;
+    /**
+     * @summary `startDataPath`.
+     * @public
+     * @readonly
+     * @description
+     * Capability bitmap for this service; omit if the SF does not support
+     * it (ECMA-269 Annex C).
+     */
+    public readonly startDataPath?: OPTIONAL<StartDataPath>;
+    /**
+     * @summary `stopDataPath`.
+     * @public
+     * @readonly
+     * @description
+     * Capability bitmap for this service; omit if the SF does not support
+     * it (ECMA-269 Annex C).
+     */
+    public readonly stopDataPath?: OPTIONAL<StopDataPath>;
+    /**
+     * @summary `suspendDataPath`.
+     * @public
+     * @readonly
+     * @description
+     * Capability bitmap for this service; omit if the SF does not support
+     * it (ECMA-269 Annex C).
+     */
+    public readonly suspendDataPath?: OPTIONAL<SuspendDataPath>;
+
     constructor (
-        /**
-         * @summary `ioRegister`.
-         * @public
-         * @readonly
-         * @description
-         * Capability bitmap for this service; omit if the SF does not support
-         * it (ECMA-269 Annex C).
-         */
-        readonly ioRegister?: OPTIONAL<IoRegister>,
-        /**
-         * @summary `ioRegisterAbort`.
-         * @public
-         * @readonly
-         * @description
-         * Capability bitmap for this service; omit if the SF does not support
-         * it (ECMA-269 Annex C).
-         */
-        readonly ioRegisterAbort?: OPTIONAL<IoRegisterAbort>,
-        /**
-         * @summary `ioRegisterCancel`.
-         * @public
-         * @readonly
-         * @description
-         * Capability bitmap for this service; omit if the SF does not support
-         * it (ECMA-269 Annex C).
-         */
-        readonly ioRegisterCancel?: OPTIONAL<IoRegisterCancel>,
-        /**
-         * @summary `dataPathResumed`.
-         * @public
-         * @readonly
-         * @description
-         * Capability bitmap for this service; omit if the SF does not support
-         * it (ECMA-269 Annex C).
-         */
-        readonly dataPathResumed?: OPTIONAL<DataPathResumed>,
-        /**
-         * @summary `dataPathSuspended`.
-         * @public
-         * @readonly
-         * @description
-         * Capability bitmap for this service; omit if the SF does not support
-         * it (ECMA-269 Annex C).
-         */
-        readonly dataPathSuspended?: OPTIONAL<DataPathSuspended>,
-        /**
-         * @summary `fastData`.
-         * @public
-         * @readonly
-         * @description
-         * Capability bitmap for this service; omit if the SF does not support
-         * it (ECMA-269 Annex C).
-         */
-        readonly fastData?: OPTIONAL<FastData>,
-        /**
-         * @summary `resumeDataPath`.
-         * @public
-         * @readonly
-         * @description
-         * Capability bitmap for this service; omit if the SF does not support
-         * it (ECMA-269 Annex C).
-         */
-        readonly resumeDataPath?: OPTIONAL<ResumeDataPath>,
-        /**
-         * @summary `sendBroadcastData`.
-         * @public
-         * @readonly
-         * @description
-         * Capability bitmap for this service; omit if the SF does not support
-         * it (ECMA-269 Annex C).
-         */
-        readonly sendBroadcastData?: OPTIONAL<SendBroadcastData>,
-        /**
-         * @summary `sendData`.
-         * @public
-         * @readonly
-         * @description
-         * Capability bitmap for this service; omit if the SF does not support
-         * it (ECMA-269 Annex C).
-         */
-        readonly sendData?: OPTIONAL<SendData>,
-        /**
-         * @summary `sendMulticastData`.
-         * @public
-         * @readonly
-         * @description
-         * Capability bitmap for this service; omit if the SF does not support
-         * it (ECMA-269 Annex C).
-         */
-        readonly sendMulticastData?: OPTIONAL<SendMulticastData>,
-        /**
-         * @summary `startDataPath`.
-         * @public
-         * @readonly
-         * @description
-         * Capability bitmap for this service; omit if the SF does not support
-         * it (ECMA-269 Annex C).
-         */
-        readonly startDataPath?: OPTIONAL<StartDataPath>,
-        /**
-         * @summary `stopDataPath`.
-         * @public
-         * @readonly
-         * @description
-         * Capability bitmap for this service; omit if the SF does not support
-         * it (ECMA-269 Annex C).
-         */
-        readonly stopDataPath?: OPTIONAL<StopDataPath>,
-        /**
-         * @summary `suspendDataPath`.
-         * @public
-         * @readonly
-         * @description
-         * Capability bitmap for this service; omit if the SF does not support
-         * it (ECMA-269 Annex C).
-         */
-        readonly suspendDataPath?: OPTIONAL<SuspendDataPath>
-    ) {}
+        ioRegister?: OPTIONAL<IoRegister>,
+        ioRegisterAbort?: OPTIONAL<IoRegisterAbort>,
+        ioRegisterCancel?: OPTIONAL<IoRegisterCancel>,
+        dataPathResumed?: OPTIONAL<DataPathResumed>,
+        dataPathSuspended?: OPTIONAL<DataPathSuspended>,
+        fastData?: OPTIONAL<FastData>,
+        resumeDataPath?: OPTIONAL<ResumeDataPath>,
+        sendBroadcastData?: OPTIONAL<SendBroadcastData>,
+        sendData?: OPTIONAL<SendData>,
+        sendMulticastData?: OPTIONAL<SendMulticastData>,
+        startDataPath?: OPTIONAL<StartDataPath>,
+        stopDataPath?: OPTIONAL<StopDataPath>,
+        suspendDataPath?: OPTIONAL<SuspendDataPath>
+    ) {
+        this.ioRegister = ioRegister;
+        this.ioRegisterAbort = ioRegisterAbort;
+        this.ioRegisterCancel = ioRegisterCancel;
+        this.dataPathResumed = dataPathResumed;
+        this.dataPathSuspended = dataPathSuspended;
+        this.fastData = fastData;
+        this.resumeDataPath = resumeDataPath;
+        this.sendBroadcastData = sendBroadcastData;
+        this.sendData = sendData;
+        this.sendMulticastData = sendMulticastData;
+        this.startDataPath = startDataPath;
+        this.stopDataPath = stopDataPath;
+        this.suspendDataPath = suspendDataPath;
+    }
 
     /**
      * @summary Restructures an object into a IOServicesServList

@@ -1,6 +1,6 @@
 /* eslint-disable */
 import {
-    ENUMERATED
+    type ENUMERATED
 } from "@wildboar/asn1";
 import * as $ from "@wildboar/asn1/functional";
 
@@ -71,7 +71,7 @@ type Umts_Cs_Event = _enum_for_Umts_Cs_Event | ENUMERATED;
  * @type {number}
  */
 export
-const Umts_Cs_Event_call_establishment: Umts_Cs_Event = 1; /* LONG_NAMED_ENUMERATED_VALUE */
+const Umts_Cs_Event_call_establishment: _enum_for_Umts_Cs_Event.call_establishment = _enum_for_Umts_Cs_Event.call_establishment; /* LONG_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary call_establishment
@@ -83,7 +83,7 @@ const Umts_Cs_Event_call_establishment: Umts_Cs_Event = 1; /* LONG_NAMED_ENUMERA
  * @type {number}
  */
 export
-const call_establishment: Umts_Cs_Event = Umts_Cs_Event_call_establishment; /* SHORT_NAMED_ENUMERATED_VALUE */
+const call_establishment: _enum_for_Umts_Cs_Event.call_establishment = Umts_Cs_Event_call_establishment; /* SHORT_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary Umts_Cs_Event_answer
@@ -96,7 +96,7 @@ const call_establishment: Umts_Cs_Event = Umts_Cs_Event_call_establishment; /* S
  * @type {number}
  */
 export
-const Umts_Cs_Event_answer: Umts_Cs_Event = 2; /* LONG_NAMED_ENUMERATED_VALUE */
+const Umts_Cs_Event_answer: _enum_for_Umts_Cs_Event.answer = _enum_for_Umts_Cs_Event.answer; /* LONG_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary answer
@@ -108,7 +108,7 @@ const Umts_Cs_Event_answer: Umts_Cs_Event = 2; /* LONG_NAMED_ENUMERATED_VALUE */
  * @type {number}
  */
 export
-const answer: Umts_Cs_Event = Umts_Cs_Event_answer; /* SHORT_NAMED_ENUMERATED_VALUE */
+const answer: _enum_for_Umts_Cs_Event.answer = Umts_Cs_Event_answer; /* SHORT_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary Umts_Cs_Event_supplementary_Service
@@ -123,7 +123,7 @@ const answer: Umts_Cs_Event = Umts_Cs_Event_answer; /* SHORT_NAMED_ENUMERATED_VA
  * @type {number}
  */
 export
-const Umts_Cs_Event_supplementary_Service: Umts_Cs_Event = 3; /* LONG_NAMED_ENUMERATED_VALUE */
+const Umts_Cs_Event_supplementary_Service: _enum_for_Umts_Cs_Event.supplementary_Service = _enum_for_Umts_Cs_Event.supplementary_Service; /* LONG_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary supplementary_Service
@@ -135,7 +135,7 @@ const Umts_Cs_Event_supplementary_Service: Umts_Cs_Event = 3; /* LONG_NAMED_ENUM
  * @type {number}
  */
 export
-const supplementary_Service: Umts_Cs_Event = Umts_Cs_Event_supplementary_Service; /* SHORT_NAMED_ENUMERATED_VALUE */
+const supplementary_Service: _enum_for_Umts_Cs_Event.supplementary_Service = Umts_Cs_Event_supplementary_Service; /* SHORT_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary Umts_Cs_Event_handover
@@ -148,7 +148,7 @@ const supplementary_Service: Umts_Cs_Event = Umts_Cs_Event_supplementary_Service
  * @type {number}
  */
 export
-const Umts_Cs_Event_handover: Umts_Cs_Event = 4; /* LONG_NAMED_ENUMERATED_VALUE */
+const Umts_Cs_Event_handover: _enum_for_Umts_Cs_Event.handover = _enum_for_Umts_Cs_Event.handover; /* LONG_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary handover
@@ -160,7 +160,7 @@ const Umts_Cs_Event_handover: Umts_Cs_Event = 4; /* LONG_NAMED_ENUMERATED_VALUE 
  * @type {number}
  */
 export
-const handover: Umts_Cs_Event = Umts_Cs_Event_handover; /* SHORT_NAMED_ENUMERATED_VALUE */
+const handover: _enum_for_Umts_Cs_Event.handover = Umts_Cs_Event_handover; /* SHORT_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary Umts_Cs_Event_release
@@ -174,7 +174,7 @@ const handover: Umts_Cs_Event = Umts_Cs_Event_handover; /* SHORT_NAMED_ENUMERATE
  * @type {number}
  */
 export
-const Umts_Cs_Event_release: Umts_Cs_Event = 5; /* LONG_NAMED_ENUMERATED_VALUE */
+const Umts_Cs_Event_release: _enum_for_Umts_Cs_Event.release = _enum_for_Umts_Cs_Event.release; /* LONG_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary release
@@ -186,7 +186,7 @@ const Umts_Cs_Event_release: Umts_Cs_Event = 5; /* LONG_NAMED_ENUMERATED_VALUE *
  * @type {number}
  */
 export
-const release: Umts_Cs_Event = Umts_Cs_Event_release; /* SHORT_NAMED_ENUMERATED_VALUE */
+const release: _enum_for_Umts_Cs_Event.release = Umts_Cs_Event_release; /* SHORT_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary Umts_Cs_Event_sMS
@@ -200,7 +200,7 @@ const release: Umts_Cs_Event = Umts_Cs_Event_release; /* SHORT_NAMED_ENUMERATED_
  * @type {number}
  */
 export
-const Umts_Cs_Event_sMS: Umts_Cs_Event = 6; /* LONG_NAMED_ENUMERATED_VALUE */
+const Umts_Cs_Event_sMS: _enum_for_Umts_Cs_Event.sMS = _enum_for_Umts_Cs_Event.sMS; /* LONG_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary sMS
@@ -212,7 +212,7 @@ const Umts_Cs_Event_sMS: Umts_Cs_Event = 6; /* LONG_NAMED_ENUMERATED_VALUE */
  * @type {number}
  */
 export
-const sMS: Umts_Cs_Event = Umts_Cs_Event_sMS; /* SHORT_NAMED_ENUMERATED_VALUE */
+const sMS: _enum_for_Umts_Cs_Event.sMS = Umts_Cs_Event_sMS; /* SHORT_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary Umts_Cs_Event_location_update
@@ -224,7 +224,7 @@ const sMS: Umts_Cs_Event = Umts_Cs_Event_sMS; /* SHORT_NAMED_ENUMERATED_VALUE */
  * @type {number}
  */
 export
-const Umts_Cs_Event_location_update: Umts_Cs_Event = 7; /* LONG_NAMED_ENUMERATED_VALUE */
+const Umts_Cs_Event_location_update: _enum_for_Umts_Cs_Event.location_update = _enum_for_Umts_Cs_Event.location_update; /* LONG_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary location_update
@@ -236,7 +236,7 @@ const Umts_Cs_Event_location_update: Umts_Cs_Event = 7; /* LONG_NAMED_ENUMERATED
  * @type {number}
  */
 export
-const location_update: Umts_Cs_Event = Umts_Cs_Event_location_update; /* SHORT_NAMED_ENUMERATED_VALUE */
+const location_update: _enum_for_Umts_Cs_Event.location_update = Umts_Cs_Event_location_update; /* SHORT_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary Umts_Cs_Event_subscriber_Controlled_Input
@@ -250,7 +250,7 @@ const location_update: Umts_Cs_Event = Umts_Cs_Event_location_update; /* SHORT_N
  * @type {number}
  */
 export
-const Umts_Cs_Event_subscriber_Controlled_Input: Umts_Cs_Event = 8; /* LONG_NAMED_ENUMERATED_VALUE */
+const Umts_Cs_Event_subscriber_Controlled_Input: _enum_for_Umts_Cs_Event.subscriber_Controlled_Input = _enum_for_Umts_Cs_Event.subscriber_Controlled_Input; /* LONG_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary subscriber_Controlled_Input
@@ -262,7 +262,7 @@ const Umts_Cs_Event_subscriber_Controlled_Input: Umts_Cs_Event = 8; /* LONG_NAME
  * @type {number}
  */
 export
-const subscriber_Controlled_Input: Umts_Cs_Event = Umts_Cs_Event_subscriber_Controlled_Input; /* SHORT_NAMED_ENUMERATED_VALUE */
+const subscriber_Controlled_Input: _enum_for_Umts_Cs_Event.subscriber_Controlled_Input = Umts_Cs_Event_subscriber_Controlled_Input; /* SHORT_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary Umts_Cs_Event_hLR_Subscriber_Record_Change
@@ -276,7 +276,7 @@ const subscriber_Controlled_Input: Umts_Cs_Event = Umts_Cs_Event_subscriber_Cont
  * @type {number}
  */
 export
-const Umts_Cs_Event_hLR_Subscriber_Record_Change: Umts_Cs_Event = 9; /* LONG_NAMED_ENUMERATED_VALUE */
+const Umts_Cs_Event_hLR_Subscriber_Record_Change: _enum_for_Umts_Cs_Event.hLR_Subscriber_Record_Change = _enum_for_Umts_Cs_Event.hLR_Subscriber_Record_Change; /* LONG_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary hLR_Subscriber_Record_Change
@@ -288,7 +288,7 @@ const Umts_Cs_Event_hLR_Subscriber_Record_Change: Umts_Cs_Event = 9; /* LONG_NAM
  * @type {number}
  */
 export
-const hLR_Subscriber_Record_Change: Umts_Cs_Event = Umts_Cs_Event_hLR_Subscriber_Record_Change; /* SHORT_NAMED_ENUMERATED_VALUE */
+const hLR_Subscriber_Record_Change: _enum_for_Umts_Cs_Event.hLR_Subscriber_Record_Change = Umts_Cs_Event_hLR_Subscriber_Record_Change; /* SHORT_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary Umts_Cs_Event_serving_System
@@ -302,7 +302,7 @@ const hLR_Subscriber_Record_Change: Umts_Cs_Event = Umts_Cs_Event_hLR_Subscriber
  * @type {number}
  */
 export
-const Umts_Cs_Event_serving_System: Umts_Cs_Event = 10; /* LONG_NAMED_ENUMERATED_VALUE */
+const Umts_Cs_Event_serving_System: _enum_for_Umts_Cs_Event.serving_System = _enum_for_Umts_Cs_Event.serving_System; /* LONG_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary serving_System
@@ -314,7 +314,7 @@ const Umts_Cs_Event_serving_System: Umts_Cs_Event = 10; /* LONG_NAMED_ENUMERATED
  * @type {number}
  */
 export
-const serving_System: Umts_Cs_Event = Umts_Cs_Event_serving_System; /* SHORT_NAMED_ENUMERATED_VALUE */
+const serving_System: _enum_for_Umts_Cs_Event.serving_System = Umts_Cs_Event_serving_System; /* SHORT_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary Umts_Cs_Event_cancel_Location
@@ -328,7 +328,7 @@ const serving_System: Umts_Cs_Event = Umts_Cs_Event_serving_System; /* SHORT_NAM
  * @type {number}
  */
 export
-const Umts_Cs_Event_cancel_Location: Umts_Cs_Event = 11; /* LONG_NAMED_ENUMERATED_VALUE */
+const Umts_Cs_Event_cancel_Location: _enum_for_Umts_Cs_Event.cancel_Location = _enum_for_Umts_Cs_Event.cancel_Location; /* LONG_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary cancel_Location
@@ -340,7 +340,7 @@ const Umts_Cs_Event_cancel_Location: Umts_Cs_Event = 11; /* LONG_NAMED_ENUMERATE
  * @type {number}
  */
 export
-const cancel_Location: Umts_Cs_Event = Umts_Cs_Event_cancel_Location; /* SHORT_NAMED_ENUMERATED_VALUE */
+const cancel_Location: _enum_for_Umts_Cs_Event.cancel_Location = Umts_Cs_Event_cancel_Location; /* SHORT_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary Umts_Cs_Event_register_Location
@@ -354,7 +354,7 @@ const cancel_Location: Umts_Cs_Event = Umts_Cs_Event_cancel_Location; /* SHORT_N
  * @type {number}
  */
 export
-const Umts_Cs_Event_register_Location: Umts_Cs_Event = 12; /* LONG_NAMED_ENUMERATED_VALUE */
+const Umts_Cs_Event_register_Location: _enum_for_Umts_Cs_Event.register_Location = _enum_for_Umts_Cs_Event.register_Location; /* LONG_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary register_Location
@@ -366,7 +366,7 @@ const Umts_Cs_Event_register_Location: Umts_Cs_Event = 12; /* LONG_NAMED_ENUMERA
  * @type {number}
  */
 export
-const register_Location: Umts_Cs_Event = Umts_Cs_Event_register_Location; /* SHORT_NAMED_ENUMERATED_VALUE */
+const register_Location: _enum_for_Umts_Cs_Event.register_Location = Umts_Cs_Event_register_Location; /* SHORT_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary Umts_Cs_Event_location_Information_Request
@@ -380,7 +380,7 @@ const register_Location: Umts_Cs_Event = Umts_Cs_Event_register_Location; /* SHO
  * @type {number}
  */
 export
-const Umts_Cs_Event_location_Information_Request: Umts_Cs_Event = 13; /* LONG_NAMED_ENUMERATED_VALUE */
+const Umts_Cs_Event_location_Information_Request: _enum_for_Umts_Cs_Event.location_Information_Request = _enum_for_Umts_Cs_Event.location_Information_Request; /* LONG_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary location_Information_Request
@@ -392,7 +392,7 @@ const Umts_Cs_Event_location_Information_Request: Umts_Cs_Event = 13; /* LONG_NA
  * @type {number}
  */
 export
-const location_Information_Request: Umts_Cs_Event = Umts_Cs_Event_location_Information_Request; /* SHORT_NAMED_ENUMERATED_VALUE */
+const location_Information_Request: _enum_for_Umts_Cs_Event.location_Information_Request = Umts_Cs_Event_location_Information_Request; /* SHORT_NAMED_ENUMERATED_VALUE */
 export const _decode_Umts_Cs_Event: $.ASN1Decoder<Umts_Cs_Event> = $._decodeEnumerated;
 export const _encode_Umts_Cs_Event: $.ASN1Encoder<Umts_Cs_Event> = $._encodeEnumerated;
 

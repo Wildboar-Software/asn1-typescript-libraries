@@ -1,6 +1,6 @@
 /* eslint-disable */
 import {
-    ASN1Element as _Element,
+    type ASN1Element as _Element,
     ASN1TagClass as _TagClass,
     ASN1Construction as _Construction,
     ASN1UniversalType as _UniversalType,
@@ -10,9 +10,9 @@ import {
     ASN1ConstructionError as _ConstructionError,
 } from "@wildboar/asn1";
 import * as $ from "@wildboar/asn1/functional";
-import { XtsmTemplate, _decode_XtsmTemplate, _encode_XtsmTemplate } from "../TSM/XtsmTemplate.ta.mjs";
+import { type XtsmTemplate, _decode_XtsmTemplate, _encode_XtsmTemplate } from "../TSM/XtsmTemplate.ta.mjs";
 
-import { SampleData, _decode_SampleData, _encode_SampleData } from "../TSM/SampleData.ta.mjs";
+import { type SampleData, _decode_SampleData, _encode_SampleData } from "../TSM/SampleData.ta.mjs";
 
 
 
@@ -36,30 +36,36 @@ import { SampleData, _decode_SampleData, _encode_SampleData } from "../TSM/Sampl
  */
 export
 class TTPRequestCObyClientModel {
+    /**
+     * @summary `templateData`.
+     * @description
+     *
+     * Reference template as `XtsmTemplate` (X.1089 biometric
+     * certificate). X.1084 §11.3, §11.5.
+     *
+     * @public
+     * @readonly
+     */
+    public readonly templateData: XtsmTemplate;
+    /**
+     * @summary `sampleData`.
+     * @description
+     *
+     * Captured sample as BioAPI BIR (includes BSP/device info).
+     * [ISO/IEC 19784-1]; X.1084 §11.3–§11.4.
+     *
+     * @public
+     * @readonly
+     */
+    public readonly sampleData: SampleData;
+
     constructor (
-        /**
-         * @summary `templateData`.
-         * @description
-         *
-         * Reference template as `XtsmTemplate` (X.1089 biometric
-         * certificate). X.1084 §11.3, §11.5.
-         *
-         * @public
-         * @readonly
-         */
-        readonly templateData: XtsmTemplate,
-        /**
-         * @summary `sampleData`.
-         * @description
-         *
-         * Captured sample as BioAPI BIR (includes BSP/device info).
-         * [ISO/IEC 19784-1]; X.1084 §11.3–§11.4.
-         *
-         * @public
-         * @readonly
-         */
-        readonly sampleData: SampleData
-    ) {}
+        templateData: XtsmTemplate,
+        sampleData: SampleData
+    ) {
+        this.templateData = templateData;
+        this.sampleData = sampleData;
+    }
 
     /**
      * @summary Restructures an object into a TTPRequestCObyClientModel

@@ -1,6 +1,6 @@
 /* eslint-disable */
 import {
-    ASN1Element as _Element,
+    type ASN1Element as _Element,
     ASN1TagClass as _TagClass,
     ASN1Construction as _Construction,
     ASN1UniversalType as _UniversalType,
@@ -39,29 +39,35 @@ import { Service_and_Parameter_CBBs, _decode_Service_and_Parameter_CBBs, _encode
  */
 export
 class SCI_Information {
+    /**
+     * @summary `partOne`.
+     * @description
+     *
+     * VMD-File: configured VMD snapshot. ISO 9506-2:2003 Annex B.1.
+     *
+     * @public
+     * @readonly
+     */
+    public readonly partOne: VMD_File;
+    /**
+     * @summary `partTwo`.
+     * @description
+     *
+     * Service-and-Parameter-CBBs: CIS/CBB tables. ISO 9506-2:2003 Annex
+     * B.2.
+     *
+     * @public
+     * @readonly
+     */
+    public readonly partTwo: Service_and_Parameter_CBBs;
+
     constructor (
-        /**
-         * @summary `partOne`.
-         * @description
-         *
-         * VMD-File: configured VMD snapshot. ISO 9506-2:2003 Annex B.1.
-         *
-         * @public
-         * @readonly
-         */
-        readonly partOne: VMD_File,
-        /**
-         * @summary `partTwo`.
-         * @description
-         *
-         * Service-and-Parameter-CBBs: CIS/CBB tables. ISO 9506-2:2003 Annex
-         * B.2.
-         *
-         * @public
-         * @readonly
-         */
-        readonly partTwo: Service_and_Parameter_CBBs
-    ) {}
+        partOne: VMD_File,
+        partTwo: Service_and_Parameter_CBBs
+    ) {
+        this.partOne = partOne;
+        this.partTwo = partTwo;
+    }
 
     /**
      * @summary Restructures an object into a SCI_Information

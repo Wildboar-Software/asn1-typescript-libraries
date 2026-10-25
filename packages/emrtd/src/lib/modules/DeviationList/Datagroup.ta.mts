@@ -1,6 +1,6 @@
 /* eslint-disable */
 import {
-    INTEGER
+    type INTEGER
 } from "@wildboar/asn1";
 import * as $ from "@wildboar/asn1/functional";
 
@@ -36,7 +36,7 @@ type Datagroup = INTEGER;
  * @type {number}
  */
 export
-const Datagroup_dg1: Datagroup = 1; /* LONG_NAMED_INTEGER_VALUE */
+const Datagroup_dg1: 1 = 1 satisfies Datagroup; /* LONG_NAMED_INTEGER_VALUE */
 
 /**
  * Short name for {@link Datagroup_dg1}.
@@ -45,7 +45,7 @@ const Datagroup_dg1: Datagroup = 1; /* LONG_NAMED_INTEGER_VALUE */
  * @type {number}
  */
 export
-const dg1: Datagroup = Datagroup_dg1; /* SHORT_NAMED_INTEGER_VALUE */
+const dg1: 1 = Datagroup_dg1; /* SHORT_NAMED_INTEGER_VALUE */
 
 /**
  * LDS data group 2. Contents are defined in Doc 9303-10, not in this part.
@@ -54,7 +54,7 @@ const dg1: Datagroup = Datagroup_dg1; /* SHORT_NAMED_INTEGER_VALUE */
  * @type {number}
  */
 export
-const Datagroup_dg2: Datagroup = 2; /* LONG_NAMED_INTEGER_VALUE */
+const Datagroup_dg2: 2 = 2 satisfies Datagroup; /* LONG_NAMED_INTEGER_VALUE */
 
 /**
  * Short name for {@link Datagroup_dg2}.
@@ -63,7 +63,7 @@ const Datagroup_dg2: Datagroup = 2; /* LONG_NAMED_INTEGER_VALUE */
  * @type {number}
  */
 export
-const dg2: Datagroup = Datagroup_dg2; /* SHORT_NAMED_INTEGER_VALUE */
+const dg2: 2 = Datagroup_dg2; /* SHORT_NAMED_INTEGER_VALUE */
 
 /**
  * LDS data group 3. Contents are defined in Doc 9303-10, not in this part.
@@ -72,7 +72,7 @@ const dg2: Datagroup = Datagroup_dg2; /* SHORT_NAMED_INTEGER_VALUE */
  * @type {number}
  */
 export
-const Datagroup_dg3: Datagroup = 3; /* LONG_NAMED_INTEGER_VALUE */
+const Datagroup_dg3: 3 = 3 satisfies Datagroup; /* LONG_NAMED_INTEGER_VALUE */
 
 /**
  * Short name for {@link Datagroup_dg3}.
@@ -81,7 +81,7 @@ const Datagroup_dg3: Datagroup = 3; /* LONG_NAMED_INTEGER_VALUE */
  * @type {number}
  */
 export
-const dg3: Datagroup = Datagroup_dg3; /* SHORT_NAMED_INTEGER_VALUE */
+const dg3: 3 = Datagroup_dg3; /* SHORT_NAMED_INTEGER_VALUE */
 
 /**
  * LDS data group 4. Contents are defined in Doc 9303-10, not in this part.
@@ -90,7 +90,7 @@ const dg3: Datagroup = Datagroup_dg3; /* SHORT_NAMED_INTEGER_VALUE */
  * @type {number}
  */
 export
-const Datagroup_dg4: Datagroup = 4; /* LONG_NAMED_INTEGER_VALUE */
+const Datagroup_dg4: 4 = 4 satisfies Datagroup; /* LONG_NAMED_INTEGER_VALUE */
 
 /**
  * Short name for {@link Datagroup_dg4}.
@@ -99,7 +99,7 @@ const Datagroup_dg4: Datagroup = 4; /* LONG_NAMED_INTEGER_VALUE */
  * @type {number}
  */
 export
-const dg4: Datagroup = Datagroup_dg4; /* SHORT_NAMED_INTEGER_VALUE */
+const dg4: 4 = Datagroup_dg4; /* SHORT_NAMED_INTEGER_VALUE */
 
 /**
  * LDS data group 5. Contents are defined in Doc 9303-10, not in this part.
@@ -108,7 +108,7 @@ const dg4: Datagroup = Datagroup_dg4; /* SHORT_NAMED_INTEGER_VALUE */
  * @type {number}
  */
 export
-const Datagroup_dg5: Datagroup = 5; /* LONG_NAMED_INTEGER_VALUE */
+const Datagroup_dg5: 5 = 5 satisfies Datagroup; /* LONG_NAMED_INTEGER_VALUE */
 
 /**
  * Short name for {@link Datagroup_dg5}.
@@ -117,7 +117,7 @@ const Datagroup_dg5: Datagroup = 5; /* LONG_NAMED_INTEGER_VALUE */
  * @type {number}
  */
 export
-const dg5: Datagroup = Datagroup_dg5; /* SHORT_NAMED_INTEGER_VALUE */
+const dg5: 5 = Datagroup_dg5; /* SHORT_NAMED_INTEGER_VALUE */
 
 /**
  * LDS data group 6. Contents are defined in Doc 9303-10, not in this part.
@@ -126,7 +126,7 @@ const dg5: Datagroup = Datagroup_dg5; /* SHORT_NAMED_INTEGER_VALUE */
  * @type {number}
  */
 export
-const Datagroup_dg6: Datagroup = 6; /* LONG_NAMED_INTEGER_VALUE */
+const Datagroup_dg6: 6 = 6 satisfies Datagroup; /* LONG_NAMED_INTEGER_VALUE */
 
 /**
  * Short name for {@link Datagroup_dg6}.
@@ -135,7 +135,7 @@ const Datagroup_dg6: Datagroup = 6; /* LONG_NAMED_INTEGER_VALUE */
  * @type {number}
  */
 export
-const dg6: Datagroup = Datagroup_dg6; /* SHORT_NAMED_INTEGER_VALUE */
+const dg6: 6 = Datagroup_dg6; /* SHORT_NAMED_INTEGER_VALUE */
 
 /**
  * LDS data group 7. Contents are defined in Doc 9303-10, not in this part.
@@ -144,7 +144,7 @@ const dg6: Datagroup = Datagroup_dg6; /* SHORT_NAMED_INTEGER_VALUE */
  * @type {number}
  */
 export
-const Datagroup_dg7: Datagroup = 7; /* LONG_NAMED_INTEGER_VALUE */
+const Datagroup_dg7: 7 = 7 satisfies Datagroup; /* LONG_NAMED_INTEGER_VALUE */
 
 /**
  * Short name for {@link Datagroup_dg7}.
@@ -153,7 +153,7 @@ const Datagroup_dg7: Datagroup = 7; /* LONG_NAMED_INTEGER_VALUE */
  * @type {number}
  */
 export
-const dg7: Datagroup = Datagroup_dg7; /* SHORT_NAMED_INTEGER_VALUE */
+const dg7: 7 = Datagroup_dg7; /* SHORT_NAMED_INTEGER_VALUE */
 
 /**
  * LDS data group 8. Contents are defined in Doc 9303-10, not in this part.
@@ -162,7 +162,7 @@ const dg7: Datagroup = Datagroup_dg7; /* SHORT_NAMED_INTEGER_VALUE */
  * @type {number}
  */
 export
-const Datagroup_dg8: Datagroup = 8; /* LONG_NAMED_INTEGER_VALUE */
+const Datagroup_dg8: 8 = 8 satisfies Datagroup; /* LONG_NAMED_INTEGER_VALUE */
 
 /**
  * Short name for {@link Datagroup_dg8}.
@@ -171,7 +171,7 @@ const Datagroup_dg8: Datagroup = 8; /* LONG_NAMED_INTEGER_VALUE */
  * @type {number}
  */
 export
-const dg8: Datagroup = Datagroup_dg8; /* SHORT_NAMED_INTEGER_VALUE */
+const dg8: 8 = Datagroup_dg8; /* SHORT_NAMED_INTEGER_VALUE */
 
 /**
  * LDS data group 9. Contents are defined in Doc 9303-10, not in this part.
@@ -180,7 +180,7 @@ const dg8: Datagroup = Datagroup_dg8; /* SHORT_NAMED_INTEGER_VALUE */
  * @type {number}
  */
 export
-const Datagroup_dg9: Datagroup = 9; /* LONG_NAMED_INTEGER_VALUE */
+const Datagroup_dg9: 9 = 9 satisfies Datagroup; /* LONG_NAMED_INTEGER_VALUE */
 
 /**
  * Short name for {@link Datagroup_dg9}.
@@ -189,7 +189,7 @@ const Datagroup_dg9: Datagroup = 9; /* LONG_NAMED_INTEGER_VALUE */
  * @type {number}
  */
 export
-const dg9: Datagroup = Datagroup_dg9; /* SHORT_NAMED_INTEGER_VALUE */
+const dg9: 9 = Datagroup_dg9; /* SHORT_NAMED_INTEGER_VALUE */
 
 /**
  * LDS data group 10. Contents are defined in Doc 9303-10, not in this part.
@@ -198,7 +198,7 @@ const dg9: Datagroup = Datagroup_dg9; /* SHORT_NAMED_INTEGER_VALUE */
  * @type {number}
  */
 export
-const Datagroup_dg10: Datagroup = 10; /* LONG_NAMED_INTEGER_VALUE */
+const Datagroup_dg10: 10 = 10 satisfies Datagroup; /* LONG_NAMED_INTEGER_VALUE */
 
 /**
  * Short name for {@link Datagroup_dg10}.
@@ -207,7 +207,7 @@ const Datagroup_dg10: Datagroup = 10; /* LONG_NAMED_INTEGER_VALUE */
  * @type {number}
  */
 export
-const dg10: Datagroup = Datagroup_dg10; /* SHORT_NAMED_INTEGER_VALUE */
+const dg10: 10 = Datagroup_dg10; /* SHORT_NAMED_INTEGER_VALUE */
 
 /**
  * LDS data group 11. Contents are defined in Doc 9303-10, not in this part.
@@ -216,7 +216,7 @@ const dg10: Datagroup = Datagroup_dg10; /* SHORT_NAMED_INTEGER_VALUE */
  * @type {number}
  */
 export
-const Datagroup_dg11: Datagroup = 11; /* LONG_NAMED_INTEGER_VALUE */
+const Datagroup_dg11: 11 = 11 satisfies Datagroup; /* LONG_NAMED_INTEGER_VALUE */
 
 /**
  * Short name for {@link Datagroup_dg11}.
@@ -225,7 +225,7 @@ const Datagroup_dg11: Datagroup = 11; /* LONG_NAMED_INTEGER_VALUE */
  * @type {number}
  */
 export
-const dg11: Datagroup = Datagroup_dg11; /* SHORT_NAMED_INTEGER_VALUE */
+const dg11: 11 = Datagroup_dg11; /* SHORT_NAMED_INTEGER_VALUE */
 
 /**
  * LDS data group 12. Contents are defined in Doc 9303-10, not in this part.
@@ -234,7 +234,7 @@ const dg11: Datagroup = Datagroup_dg11; /* SHORT_NAMED_INTEGER_VALUE */
  * @type {number}
  */
 export
-const Datagroup_dg12: Datagroup = 12; /* LONG_NAMED_INTEGER_VALUE */
+const Datagroup_dg12: 12 = 12 satisfies Datagroup; /* LONG_NAMED_INTEGER_VALUE */
 
 /**
  * Short name for {@link Datagroup_dg12}.
@@ -243,7 +243,7 @@ const Datagroup_dg12: Datagroup = 12; /* LONG_NAMED_INTEGER_VALUE */
  * @type {number}
  */
 export
-const dg12: Datagroup = Datagroup_dg12; /* SHORT_NAMED_INTEGER_VALUE */
+const dg12: 12 = Datagroup_dg12; /* SHORT_NAMED_INTEGER_VALUE */
 
 /**
  * LDS data group 13. Contents are defined in Doc 9303-10, not in this part.
@@ -252,7 +252,7 @@ const dg12: Datagroup = Datagroup_dg12; /* SHORT_NAMED_INTEGER_VALUE */
  * @type {number}
  */
 export
-const Datagroup_dg13: Datagroup = 13; /* LONG_NAMED_INTEGER_VALUE */
+const Datagroup_dg13: 13 = 13 satisfies Datagroup; /* LONG_NAMED_INTEGER_VALUE */
 
 /**
  * Short name for {@link Datagroup_dg13}.
@@ -261,7 +261,7 @@ const Datagroup_dg13: Datagroup = 13; /* LONG_NAMED_INTEGER_VALUE */
  * @type {number}
  */
 export
-const dg13: Datagroup = Datagroup_dg13; /* SHORT_NAMED_INTEGER_VALUE */
+const dg13: 13 = Datagroup_dg13; /* SHORT_NAMED_INTEGER_VALUE */
 
 /**
  * LDS data group 14. Contents are defined in Doc 9303-10, not in this part.
@@ -270,7 +270,7 @@ const dg13: Datagroup = Datagroup_dg13; /* SHORT_NAMED_INTEGER_VALUE */
  * @type {number}
  */
 export
-const Datagroup_dg14: Datagroup = 14; /* LONG_NAMED_INTEGER_VALUE */
+const Datagroup_dg14: 14 = 14 satisfies Datagroup; /* LONG_NAMED_INTEGER_VALUE */
 
 /**
  * Short name for {@link Datagroup_dg14}.
@@ -279,7 +279,7 @@ const Datagroup_dg14: Datagroup = 14; /* LONG_NAMED_INTEGER_VALUE */
  * @type {number}
  */
 export
-const dg14: Datagroup = Datagroup_dg14; /* SHORT_NAMED_INTEGER_VALUE */
+const dg14: 14 = Datagroup_dg14; /* SHORT_NAMED_INTEGER_VALUE */
 
 /**
  * LDS data group 15. Contents are defined in Doc 9303-10, not in this part.
@@ -288,7 +288,7 @@ const dg14: Datagroup = Datagroup_dg14; /* SHORT_NAMED_INTEGER_VALUE */
  * @type {number}
  */
 export
-const Datagroup_dg15: Datagroup = 15; /* LONG_NAMED_INTEGER_VALUE */
+const Datagroup_dg15: 15 = 15 satisfies Datagroup; /* LONG_NAMED_INTEGER_VALUE */
 
 /**
  * Short name for {@link Datagroup_dg15}.
@@ -297,7 +297,7 @@ const Datagroup_dg15: Datagroup = 15; /* LONG_NAMED_INTEGER_VALUE */
  * @type {number}
  */
 export
-const dg15: Datagroup = Datagroup_dg15; /* SHORT_NAMED_INTEGER_VALUE */
+const dg15: 15 = Datagroup_dg15; /* SHORT_NAMED_INTEGER_VALUE */
 
 /**
  * LDS data group 16. Contents are defined in Doc 9303-10, not in this part.
@@ -306,7 +306,7 @@ const dg15: Datagroup = Datagroup_dg15; /* SHORT_NAMED_INTEGER_VALUE */
  * @type {number}
  */
 export
-const Datagroup_dg16: Datagroup = 16; /* LONG_NAMED_INTEGER_VALUE */
+const Datagroup_dg16: 16 = 16 satisfies Datagroup; /* LONG_NAMED_INTEGER_VALUE */
 
 /**
  * Short name for {@link Datagroup_dg16}.
@@ -315,7 +315,7 @@ const Datagroup_dg16: Datagroup = 16; /* LONG_NAMED_INTEGER_VALUE */
  * @type {number}
  */
 export
-const dg16: Datagroup = Datagroup_dg16; /* SHORT_NAMED_INTEGER_VALUE */
+const dg16: 16 = Datagroup_dg16; /* SHORT_NAMED_INTEGER_VALUE */
 
 /**
  * The Document Security Object.
@@ -324,7 +324,7 @@ const dg16: Datagroup = Datagroup_dg16; /* SHORT_NAMED_INTEGER_VALUE */
  * @type {number}
  */
 export
-const Datagroup_sod: Datagroup = 20; /* LONG_NAMED_INTEGER_VALUE */
+const Datagroup_sod: 20 = 20 satisfies Datagroup; /* LONG_NAMED_INTEGER_VALUE */
 
 /**
  * Short name for {@link Datagroup_sod}.
@@ -333,7 +333,7 @@ const Datagroup_sod: Datagroup = 20; /* LONG_NAMED_INTEGER_VALUE */
  * @type {number}
  */
 export
-const sod: Datagroup = Datagroup_sod; /* SHORT_NAMED_INTEGER_VALUE */
+const sod: 20 = Datagroup_sod; /* SHORT_NAMED_INTEGER_VALUE */
 
 /**
  * The Common Data (COM) file.
@@ -342,7 +342,7 @@ const sod: Datagroup = Datagroup_sod; /* SHORT_NAMED_INTEGER_VALUE */
  * @type {number}
  */
 export
-const Datagroup_com: Datagroup = 21; /* LONG_NAMED_INTEGER_VALUE */
+const Datagroup_com: 21 = 21 satisfies Datagroup; /* LONG_NAMED_INTEGER_VALUE */
 
 /**
  * Short name for {@link Datagroup_com}.
@@ -351,9 +351,9 @@ const Datagroup_com: Datagroup = 21; /* LONG_NAMED_INTEGER_VALUE */
  * @type {number}
  */
 export
-const com: Datagroup = Datagroup_com; /* SHORT_NAMED_INTEGER_VALUE */
-export const _decode_Datagroup = $._decodeInteger;
-export const _encode_Datagroup = $._encodeInteger;
+const com: 21 = Datagroup_com; /* SHORT_NAMED_INTEGER_VALUE */
+export const _decode_Datagroup: $.ASN1Decoder<INTEGER> = $._decodeInteger;
+export const _encode_Datagroup: $.ASN1Encoder<INTEGER> = $._encodeInteger;
 
 
 /* eslint-enable */

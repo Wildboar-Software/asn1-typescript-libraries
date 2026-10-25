@@ -1,11 +1,11 @@
 /* eslint-disable */
 import {
-    OPTIONAL,
-    ASN1Element as _Element,
+    type OPTIONAL,
+    type ASN1Element as _Element,
     ASN1TagClass as _TagClass
 } from "@wildboar/asn1";
 import * as $ from "@wildboar/asn1/functional";
-import { RequestID, _decode_RequestID, _encode_RequestID } from "../MEDIA-GATEWAY-CONTROL/RequestID.ta.mjs";
+import { type RequestID, _decode_RequestID, _encode_RequestID } from "../MEDIA-GATEWAY-CONTROL/RequestID.ta.mjs";
 import { SecondRequestedEvent, _decode_SecondRequestedEvent, _encode_SecondRequestedEvent } from "../MEDIA-GATEWAY-CONTROL/SecondRequestedEvent.ta.mjs";
 
 
@@ -47,7 +47,7 @@ class SecondEventsDescriptor {
      * @public
      * @readonly
      */
-    readonly requestID: OPTIONAL<RequestID>;
+    public readonly requestID: OPTIONAL<RequestID>;
     /**
      * @summary `eventList`.
      * @description
@@ -59,7 +59,7 @@ class SecondEventsDescriptor {
      * @public
      * @readonly
      */
-    readonly eventList: SecondRequestedEvent[];
+    public readonly eventList: SecondRequestedEvent[];
     /**
      * @summary Extensions that are not recognized.
      * @description
@@ -70,7 +70,7 @@ class SecondEventsDescriptor {
      * @public
      * @readonly
      */
-    readonly _unrecognizedExtensionsList: _Element[];
+    public readonly _unrecognizedExtensionsList: _Element[];
 
     constructor (
         requestID: OPTIONAL<RequestID>,

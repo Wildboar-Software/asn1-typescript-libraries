@@ -1,9 +1,9 @@
 /* eslint-disable */
 import {
-    ASN1Element as _Element,
+    type ASN1Element as _Element,
     ASN1TagClass as _TagClass,
-    INTEGER,
-    OPTIONAL,
+    type INTEGER,
+    type OPTIONAL,
 } from "@wildboar/asn1";
 import * as $ from "@wildboar/asn1/functional";
 
@@ -29,48 +29,56 @@ import * as $ from "@wildboar/asn1/functional";
  *
  * ```asn1
  * Accuracy ::= SEQUENCE {
- *     seconds        INTEGER           OPTIONAL,
+ *     seconds        INTEGER           type OPTIONAL,
  *     millis     [0] INTEGER  (1..999) OPTIONAL,
  *     micros     [1] INTEGER  (1..999) OPTIONAL  }
  * ```
  *
  */
 export class Accuracy {
+    /**
+     * @summary `seconds`.
+     * @description
+     *
+     * Whole-second component of accuracy. If absent, treat as zero
+     * ([RFC 3161 §2.4.2](https://datatracker.ietf.org/doc/html/rfc3161#section-2.4.2)).
+     *
+     * @public
+     * @readonly
+     */
+    public readonly seconds?: OPTIONAL<INTEGER>;
+    /**
+     * @summary `millis`.
+     * @description
+     *
+     * Milliseconds, range 1..999. If absent, treat as zero
+     * ([RFC 3161 §2.4.2](https://datatracker.ietf.org/doc/html/rfc3161#section-2.4.2)).
+     *
+     * @public
+     * @readonly
+     */
+    public readonly millis?: OPTIONAL<INTEGER>;
+    /**
+     * @summary `micros`.
+     * @description
+     *
+     * Microseconds, range 1..999. If absent, treat as zero
+     * ([RFC 3161 §2.4.2](https://datatracker.ietf.org/doc/html/rfc3161#section-2.4.2)).
+     *
+     * @public
+     * @readonly
+     */
+    public readonly micros?: OPTIONAL<INTEGER>;
+
     constructor(
-        /**
-         * @summary `seconds`.
-         * @description
-         *
-         * Whole-second component of accuracy. If absent, treat as zero
-         * ([RFC 3161 §2.4.2](https://datatracker.ietf.org/doc/html/rfc3161#section-2.4.2)).
-         *
-         * @public
-         * @readonly
-         */
-        readonly seconds?: OPTIONAL<INTEGER>,
-        /**
-         * @summary `millis`.
-         * @description
-         *
-         * Milliseconds, range 1..999. If absent, treat as zero
-         * ([RFC 3161 §2.4.2](https://datatracker.ietf.org/doc/html/rfc3161#section-2.4.2)).
-         *
-         * @public
-         * @readonly
-         */
-        readonly millis?: OPTIONAL<INTEGER>,
-        /**
-         * @summary `micros`.
-         * @description
-         *
-         * Microseconds, range 1..999. If absent, treat as zero
-         * ([RFC 3161 §2.4.2](https://datatracker.ietf.org/doc/html/rfc3161#section-2.4.2)).
-         *
-         * @public
-         * @readonly
-         */
-        readonly micros?: OPTIONAL<INTEGER>
-    ) {}
+        seconds?: OPTIONAL<INTEGER>,
+        millis?: OPTIONAL<INTEGER>,
+        micros?: OPTIONAL<INTEGER>
+    ) {
+        this.seconds = seconds;
+        this.millis = millis;
+        this.micros = micros;
+    }
 
     /**
      * @summary Restructures an object into a Accuracy

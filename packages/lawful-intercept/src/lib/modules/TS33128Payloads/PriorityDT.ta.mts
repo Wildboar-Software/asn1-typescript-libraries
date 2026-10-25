@@ -76,7 +76,7 @@ type PriorityDT = _enum_for_PriorityDT;
  * @enum {number}
  */
 export
-const PriorityDT = _enum_for_PriorityDT;
+const PriorityDT: typeof _enum_for_PriorityDT = _enum_for_PriorityDT;
 
 /**
  * @summary PriorityDT_noPriority
@@ -84,7 +84,7 @@ const PriorityDT = _enum_for_PriorityDT;
  * @type {number}
  */
 export
-const PriorityDT_noPriority: PriorityDT = PriorityDT.noPriority; /* LONG_NAMED_ENUMERATED_VALUE */
+const PriorityDT_noPriority: _enum_for_PriorityDT.noPriority = PriorityDT.noPriority; /* LONG_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary noPriority
@@ -92,7 +92,7 @@ const PriorityDT_noPriority: PriorityDT = PriorityDT.noPriority; /* LONG_NAMED_E
  * @type {number}
  */
 export
-const noPriority: PriorityDT = PriorityDT.noPriority; /* SHORT_NAMED_ENUMERATED_VALUE */
+const noPriority: _enum_for_PriorityDT.noPriority = PriorityDT.noPriority; /* SHORT_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary PriorityDT_priority
@@ -100,7 +100,7 @@ const noPriority: PriorityDT = PriorityDT.noPriority; /* SHORT_NAMED_ENUMERATED_
  * @type {number}
  */
 export
-const PriorityDT_priority: PriorityDT = PriorityDT.priority; /* LONG_NAMED_ENUMERATED_VALUE */
+const PriorityDT_priority: _enum_for_PriorityDT.priority = PriorityDT.priority; /* LONG_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary priority
@@ -108,7 +108,7 @@ const PriorityDT_priority: PriorityDT = PriorityDT.priority; /* LONG_NAMED_ENUME
  * @type {number}
  */
 export
-const priority: PriorityDT = PriorityDT.priority; /* SHORT_NAMED_ENUMERATED_VALUE */
+const priority: _enum_for_PriorityDT.priority = PriorityDT.priority; /* SHORT_NAMED_ENUMERATED_VALUE */
 export const _decode_PriorityDT: $.ASN1Decoder<PriorityDT> = $._decodeEnumerated;
 export const _encode_PriorityDT: $.ASN1Encoder<PriorityDT> = $._encodeEnumerated;
 

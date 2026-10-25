@@ -1,7 +1,7 @@
 /* eslint-disable */
 import {
-    OPTIONAL,
-    ASN1Element as _Element,
+    type OPTIONAL,
+    type ASN1Element as _Element,
     ASN1TagClass as _TagClass,
     ASN1Construction as _Construction,
     ASN1UniversalType as _UniversalType,
@@ -12,7 +12,7 @@ import {
 } from '@wildboar/asn1';
 import * as $ from '@wildboar/asn1/functional';
 import {
-    ConnectInformation_Item_itemType,
+    type ConnectInformation_Item_itemType,
     _decode_ConnectInformation_Item_itemType,
     _encode_ConnectInformation_Item_itemType,
 } from '../ASN1DefinedTypesModule/ConnectInformation-Item-itemType.ta.mjs';
@@ -28,17 +28,17 @@ import {
     _encode_NamedCrossConnection,
 } from '../ASN1DefinedTypesModule/NamedCrossConnection.ta.mjs';
 import {
-    AdditionalInformation,
+    type AdditionalInformation,
     _decode_AdditionalInformation,
     _encode_AdditionalInformation,
 } from '@wildboar/attribute-asn1module';
 import {
-    UserLabel,
+    type UserLabel,
     _decode_UserLabel,
     _encode_UserLabel,
 } from '../ASN1DefinedTypesModule/UserLabel.ta.mjs';
 import {
-    Boolean,
+    type Boolean,
     _decode_Boolean,
     _encode_Boolean,
 } from '../ASN1DefinedTypesModule/Boolean.ta.mjs';
@@ -55,50 +55,66 @@ import {
  *
  */
 export class ConnectInformation_Item {
+    /**
+     * @summary `itemType`.
+     * @public
+     * @readonly
+     */
+    public readonly itemType: ConnectInformation_Item_itemType;
+    /**
+     * @summary `administrativeState`.
+     * @public
+     * @readonly
+     */
+    public readonly administrativeState?: OPTIONAL<AdministrativeState>;
+    /**
+     * @summary `namedCrossConnection`.
+     * @public
+     * @readonly
+     */
+    public readonly namedCrossConnection?: OPTIONAL<NamedCrossConnection>;
+    /**
+     * @summary `userLabel`.
+     * @public
+     * @readonly
+     */
+    public readonly userLabel?: OPTIONAL<UserLabel>;
+    /**
+     * @summary `redline`.
+     * @public
+     * @readonly
+     */
+    public readonly redline?: OPTIONAL<Boolean>;
+    /**
+     * @summary Extensions that are not recognized.
+     * @public
+     * @readonly
+     */
+    public readonly _unrecognizedExtensionsList: _Element[];
+    /**
+     * @summary `additionalInfo`.
+     * @public
+     * @readonly
+     */
+    public readonly additionalInfo?: OPTIONAL<AdditionalInformation>;
+
     constructor(
-        /**
-         * @summary `itemType`.
-         * @public
-         * @readonly
-         */
-        readonly itemType: ConnectInformation_Item_itemType,
-        /**
-         * @summary `administrativeState`.
-         * @public
-         * @readonly
-         */
-        readonly administrativeState?: OPTIONAL<AdministrativeState>,
-        /**
-         * @summary `namedCrossConnection`.
-         * @public
-         * @readonly
-         */
-        readonly namedCrossConnection?: OPTIONAL<NamedCrossConnection>,
-        /**
-         * @summary `userLabel`.
-         * @public
-         * @readonly
-         */
-        readonly userLabel?: OPTIONAL<UserLabel>,
-        /**
-         * @summary `redline`.
-         * @public
-         * @readonly
-         */
-        readonly redline?: OPTIONAL<Boolean>,
-        /**
-         * @summary Extensions that are not recognized.
-         * @public
-         * @readonly
-         */
-        readonly _unrecognizedExtensionsList: _Element[] = [],
-        /**
-         * @summary `additionalInfo`.
-         * @public
-         * @readonly
-         */
-        readonly additionalInfo?: OPTIONAL<AdditionalInformation>
-    ) {}
+        itemType: ConnectInformation_Item_itemType,
+        administrativeState?: OPTIONAL<AdministrativeState>,
+        namedCrossConnection?: OPTIONAL<NamedCrossConnection>,
+        userLabel?: OPTIONAL<UserLabel>,
+        redline?: OPTIONAL<Boolean>,
+        _unrecognizedExtensionsList: _Element[] = [],
+        additionalInfo?: OPTIONAL<AdditionalInformation>
+    ) {
+        this.itemType = itemType;
+        this.administrativeState = administrativeState;
+        this.namedCrossConnection = namedCrossConnection;
+        this.userLabel = userLabel;
+        this.redline = redline;
+        this._unrecognizedExtensionsList = _unrecognizedExtensionsList;
+        this.additionalInfo = additionalInfo;
+    }
 
     /**
      * @summary Restructures an object into a ConnectInformation_Item
@@ -134,7 +150,7 @@ export class ConnectInformation_Item {
      * @static
      */
 
-    public static _enum_for_administrativeState = _enum_for_AdministrativeState;
+    public static _enum_for_administrativeState: typeof _enum_for_AdministrativeState = _enum_for_AdministrativeState;
 }
 
 

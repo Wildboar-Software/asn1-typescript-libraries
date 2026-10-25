@@ -1,9 +1,9 @@
 /* eslint-disable */
 import {
     ASN1ConstructionError as _ConstructionError,
-    ASN1Element as _Element,
+    type ASN1Element as _Element,
     ASN1TagClass as _TagClass,
-    INTEGER,
+    type INTEGER,
 } from "@wildboar/asn1";
 import * as $ from "@wildboar/asn1/functional";
 
@@ -39,7 +39,7 @@ export class Pentanomial {
      * @public
      * @readonly
      */
-    readonly k1: INTEGER;
+    public readonly k1: INTEGER;
     /**
      * @summary `k2`.
      * @description
@@ -50,7 +50,7 @@ export class Pentanomial {
      * @public
      * @readonly
      */
-    readonly k2: INTEGER;
+    public readonly k2: INTEGER;
     /**
      * @summary `k3`.
      * @description
@@ -61,7 +61,7 @@ export class Pentanomial {
      * @public
      * @readonly
      */
-    readonly k3: INTEGER;
+    public readonly k3: INTEGER;
 
     constructor(
         k1: INTEGER,

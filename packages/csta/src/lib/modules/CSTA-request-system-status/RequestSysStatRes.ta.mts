@@ -2,10 +2,10 @@
 
 import * as $ from "@wildboar/asn1/functional";
 import {
-    OPTIONAL,
-    SEQUENCE,
-    SET,
-    ASN1Element as _Element,
+    type OPTIONAL,
+    type SEQUENCE,
+    type SET,
+    type ASN1Element as _Element,
     ASN1TagClass as _TagClass
 } from "@wildboar/asn1";
 import {
@@ -40,29 +40,35 @@ import { CSTACommonArguments, _decode_CSTACommonArguments, _encode_CSTACommonArg
  */
 export
 class RequestSysStatRes {
+    /**
+     * @summary `systemStatus`.
+     * @description
+     *
+     * Status of the queried function: initializing, enabled, normal,
+     * messages lost, disabled, partially disabled, overload
+     * imminent/reached/relieved.
+     * @public
+     * @readonly
+     */
+    public readonly systemStatus: SystemStatus;
+    /**
+     * @summary `extensions`.
+     * @description
+     *
+     * Optional security (timestamp, sequence, securityInfo) and
+     * privateData. ECMA-269 Table 14-11.
+     * @public
+     * @readonly
+     */
+    public readonly extensions?: OPTIONAL<CSTACommonArguments>;
+
     constructor (
-        /**
-         * @summary `systemStatus`.
-         * @description
-         *
-         * Status of the queried function: initializing, enabled, normal,
-         * messages lost, disabled, partially disabled, overload
-         * imminent/reached/relieved.
-         * @public
-         * @readonly
-         */
-        readonly systemStatus: SystemStatus,
-        /**
-         * @summary `extensions`.
-         * @description
-         *
-         * Optional security (timestamp, sequence, securityInfo) and
-         * privateData. ECMA-269 Table 14-11.
-         * @public
-         * @readonly
-         */
-        readonly extensions?: OPTIONAL<CSTACommonArguments>
-    ) {}
+        systemStatus: SystemStatus,
+        extensions?: OPTIONAL<CSTACommonArguments>
+    ) {
+        this.systemStatus = systemStatus;
+        this.extensions = extensions;
+    }
 
     /**
      * @summary Restructures an object into a RequestSysStatRes
@@ -86,7 +92,7 @@ class RequestSysStatRes {
          * @static
          */
 
-    public static _enum_for_systemStatus = _enum_for_SystemStatus;
+    public static _enum_for_systemStatus: typeof _enum_for_SystemStatus = _enum_for_SystemStatus;
 }
 
 /**

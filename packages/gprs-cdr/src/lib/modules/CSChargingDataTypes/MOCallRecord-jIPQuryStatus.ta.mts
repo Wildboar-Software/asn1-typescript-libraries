@@ -1,6 +1,6 @@
 /* eslint-disable */
 import {
-    INTEGER
+    type INTEGER
 } from "@wildboar/asn1";
 import * as $ from "@wildboar/asn1/functional";
 
@@ -33,7 +33,7 @@ type MOCallRecord_jIPQuryStatus = INTEGER;
  * @type {number}
  */
 export
-const MOCallRecord_jIPQuryStatus_successfulQuery: MOCallRecord_jIPQuryStatus = 1; /* LONG_NAMED_INTEGER_VALUE */
+const MOCallRecord_jIPQuryStatus_successfulQuery: 1 = 1 satisfies MOCallRecord_jIPQuryStatus; /* LONG_NAMED_INTEGER_VALUE */
 
 /**
  * @summary MOCallRecord_jIPQuryStatus_successfulQuery
@@ -41,7 +41,7 @@ const MOCallRecord_jIPQuryStatus_successfulQuery: MOCallRecord_jIPQuryStatus = 1
  * @type {number}
  */
 export
-const successfulQuery: MOCallRecord_jIPQuryStatus = MOCallRecord_jIPQuryStatus_successfulQuery; /* SHORT_NAMED_INTEGER_VALUE */
+const successfulQuery: 1 = MOCallRecord_jIPQuryStatus_successfulQuery; /* SHORT_NAMED_INTEGER_VALUE */
 
 /**
  * @summary MOCallRecord_jIPQuryStatus_noQueryResponseMsg
@@ -49,7 +49,7 @@ const successfulQuery: MOCallRecord_jIPQuryStatus = MOCallRecord_jIPQuryStatus_s
  * @type {number}
  */
 export
-const MOCallRecord_jIPQuryStatus_noQueryResponseMsg: MOCallRecord_jIPQuryStatus = 2; /* LONG_NAMED_INTEGER_VALUE */
+const MOCallRecord_jIPQuryStatus_noQueryResponseMsg: 2 = 2 satisfies MOCallRecord_jIPQuryStatus; /* LONG_NAMED_INTEGER_VALUE */
 
 /**
  * @summary MOCallRecord_jIPQuryStatus_noQueryResponseMsg
@@ -57,7 +57,7 @@ const MOCallRecord_jIPQuryStatus_noQueryResponseMsg: MOCallRecord_jIPQuryStatus 
  * @type {number}
  */
 export
-const noQueryResponseMsg: MOCallRecord_jIPQuryStatus = MOCallRecord_jIPQuryStatus_noQueryResponseMsg; /* SHORT_NAMED_INTEGER_VALUE */
+const noQueryResponseMsg: 2 = MOCallRecord_jIPQuryStatus_noQueryResponseMsg; /* SHORT_NAMED_INTEGER_VALUE */
 
 /**
  * @summary MOCallRecord_jIPQuryStatus_queryProtocolErr
@@ -65,7 +65,7 @@ const noQueryResponseMsg: MOCallRecord_jIPQuryStatus = MOCallRecord_jIPQuryStatu
  * @type {number}
  */
 export
-const MOCallRecord_jIPQuryStatus_queryProtocolErr: MOCallRecord_jIPQuryStatus = 4; /* LONG_NAMED_INTEGER_VALUE */
+const MOCallRecord_jIPQuryStatus_queryProtocolErr: 4 = 4 satisfies MOCallRecord_jIPQuryStatus; /* LONG_NAMED_INTEGER_VALUE */
 
 /**
  * @summary MOCallRecord_jIPQuryStatus_queryProtocolErr
@@ -73,7 +73,7 @@ const MOCallRecord_jIPQuryStatus_queryProtocolErr: MOCallRecord_jIPQuryStatus = 
  * @type {number}
  */
 export
-const queryProtocolErr: MOCallRecord_jIPQuryStatus = MOCallRecord_jIPQuryStatus_queryProtocolErr; /* SHORT_NAMED_INTEGER_VALUE */
+const queryProtocolErr: 4 = MOCallRecord_jIPQuryStatus_queryProtocolErr; /* SHORT_NAMED_INTEGER_VALUE */
 
 /**
  * @summary MOCallRecord_jIPQuryStatus_queryResponseDataErr
@@ -81,7 +81,7 @@ const queryProtocolErr: MOCallRecord_jIPQuryStatus = MOCallRecord_jIPQuryStatus_
  * @type {number}
  */
 export
-const MOCallRecord_jIPQuryStatus_queryResponseDataErr: MOCallRecord_jIPQuryStatus = 5; /* LONG_NAMED_INTEGER_VALUE */
+const MOCallRecord_jIPQuryStatus_queryResponseDataErr: 5 = 5 satisfies MOCallRecord_jIPQuryStatus; /* LONG_NAMED_INTEGER_VALUE */
 
 /**
  * @summary MOCallRecord_jIPQuryStatus_queryResponseDataErr
@@ -89,7 +89,7 @@ const MOCallRecord_jIPQuryStatus_queryResponseDataErr: MOCallRecord_jIPQuryStatu
  * @type {number}
  */
 export
-const queryResponseDataErr: MOCallRecord_jIPQuryStatus = MOCallRecord_jIPQuryStatus_queryResponseDataErr; /* SHORT_NAMED_INTEGER_VALUE */
+const queryResponseDataErr: 5 = MOCallRecord_jIPQuryStatus_queryResponseDataErr; /* SHORT_NAMED_INTEGER_VALUE */
 
 /**
  * @summary MOCallRecord_jIPQuryStatus_queryRejected
@@ -97,7 +97,7 @@ const queryResponseDataErr: MOCallRecord_jIPQuryStatus = MOCallRecord_jIPQurySta
  * @type {number}
  */
 export
-const MOCallRecord_jIPQuryStatus_queryRejected: MOCallRecord_jIPQuryStatus = 6; /* LONG_NAMED_INTEGER_VALUE */
+const MOCallRecord_jIPQuryStatus_queryRejected: 6 = 6 satisfies MOCallRecord_jIPQuryStatus; /* LONG_NAMED_INTEGER_VALUE */
 
 /**
  * @summary MOCallRecord_jIPQuryStatus_queryRejected
@@ -105,7 +105,7 @@ const MOCallRecord_jIPQuryStatus_queryRejected: MOCallRecord_jIPQuryStatus = 6; 
  * @type {number}
  */
 export
-const queryRejected: MOCallRecord_jIPQuryStatus = MOCallRecord_jIPQuryStatus_queryRejected; /* SHORT_NAMED_INTEGER_VALUE */
+const queryRejected: 6 = MOCallRecord_jIPQuryStatus_queryRejected; /* SHORT_NAMED_INTEGER_VALUE */
 
 /**
  * @summary MOCallRecord_jIPQuryStatus_queryNotPerformed
@@ -113,7 +113,7 @@ const queryRejected: MOCallRecord_jIPQuryStatus = MOCallRecord_jIPQuryStatus_que
  * @type {number}
  */
 export
-const MOCallRecord_jIPQuryStatus_queryNotPerformed: MOCallRecord_jIPQuryStatus = 9; /* LONG_NAMED_INTEGER_VALUE */
+const MOCallRecord_jIPQuryStatus_queryNotPerformed: 9 = 9 satisfies MOCallRecord_jIPQuryStatus; /* LONG_NAMED_INTEGER_VALUE */
 
 /**
  * @summary MOCallRecord_jIPQuryStatus_queryNotPerformed
@@ -121,7 +121,7 @@ const MOCallRecord_jIPQuryStatus_queryNotPerformed: MOCallRecord_jIPQuryStatus =
  * @type {number}
  */
 export
-const queryNotPerformed: MOCallRecord_jIPQuryStatus = MOCallRecord_jIPQuryStatus_queryNotPerformed; /* SHORT_NAMED_INTEGER_VALUE */
+const queryNotPerformed: 9 = MOCallRecord_jIPQuryStatus_queryNotPerformed; /* SHORT_NAMED_INTEGER_VALUE */
 
 /**
  * @summary MOCallRecord_jIPQuryStatus_queryUnsuccessful
@@ -129,7 +129,7 @@ const queryNotPerformed: MOCallRecord_jIPQuryStatus = MOCallRecord_jIPQuryStatus
  * @type {number}
  */
 export
-const MOCallRecord_jIPQuryStatus_queryUnsuccessful: MOCallRecord_jIPQuryStatus = 99; /* LONG_NAMED_INTEGER_VALUE */
+const MOCallRecord_jIPQuryStatus_queryUnsuccessful: 99 = 99 satisfies MOCallRecord_jIPQuryStatus; /* LONG_NAMED_INTEGER_VALUE */
 
 /**
  * @summary MOCallRecord_jIPQuryStatus_queryUnsuccessful
@@ -137,7 +137,7 @@ const MOCallRecord_jIPQuryStatus_queryUnsuccessful: MOCallRecord_jIPQuryStatus =
  * @type {number}
  */
 export
-const queryUnsuccessful: MOCallRecord_jIPQuryStatus = MOCallRecord_jIPQuryStatus_queryUnsuccessful; /* SHORT_NAMED_INTEGER_VALUE */
+const queryUnsuccessful: 99 = MOCallRecord_jIPQuryStatus_queryUnsuccessful; /* SHORT_NAMED_INTEGER_VALUE */
 
 export
 const _decode_MOCallRecord_jIPQuryStatus: $.ASN1Decoder<MOCallRecord_jIPQuryStatus> = $._decodeInteger;

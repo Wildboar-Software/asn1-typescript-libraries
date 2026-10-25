@@ -2,10 +2,10 @@
 
 import * as $ from "@wildboar/asn1/functional";
 import {
-    OPTIONAL,
-    SEQUENCE,
-    SET,
-    ASN1Element as _Element,
+    type OPTIONAL,
+    type SEQUENCE,
+    type SET,
+    type ASN1Element as _Element,
     ASN1TagClass as _TagClass
 } from "@wildboar/asn1";
 import { CapExchangeServList, _decode_CapExchangeServList, _encode_CapExchangeServList } from "../CSTA-capability-exchange/CapExchangeServList.ta.mjs";
@@ -74,30 +74,30 @@ import { LocationServicesServList, _decode_LocationServicesServList, _encode_Loc
  * 
  * ```asn1
  * ServEvtsList ::= SEQUENCE
- * {    capExchangeServList             [ 0] IMPLICIT     CapExchangeServList         OPTIONAL,
- *     systemServList                 [ 1] IMPLICIT     SystemStatusServList         OPTIONAL,
- *     monitoringServList             [ 2] IMPLICIT     MonitoringServList         OPTIONAL,
- *     snapshotServList             [ 3] IMPLICIT     SnapshotServList         OPTIONAL,
- *     callControlServList             [ 4] IMPLICIT     CallControlServList         OPTIONAL,
- *     callControlEvtsList             [ 5] IMPLICIT     CallControlEvtsList         OPTIONAL,
- *     callAssociatedServList             [ 6] IMPLICIT     CallAssociatedServList         OPTIONAL,
- *     callAssociatedEvtsList             [ 7] IMPLICIT     CallAssociatedEvtsList         OPTIONAL,
- *     mediaServList                 [ 8] IMPLICIT     MediaServList             OPTIONAL,
- *     mediaEvtsList                 [ 9] IMPLICIT     MediaEvtsList             OPTIONAL,
- *     routeingServList             [10] IMPLICIT     RouteingServList         OPTIONAL,
- *     physDevServList             [11] IMPLICIT     PhysDevServList         OPTIONAL,
- *     physDevEvtsList             [12] IMPLICIT     PhysDevEvtsList         OPTIONAL,
- *     logicalServList             [13] IMPLICIT     LogicalServList         OPTIONAL,
- *     logicalEvtsList             [14] IMPLICIT     LogicalEvtsList         OPTIONAL,
- *     deviceMaintEvtsList             [15] IMPLICIT     DeviceMaintEvtsList         OPTIONAL,
- *     iOServicesServList             [16] IMPLICIT     IOServicesServList         OPTIONAL,
- *     dataCollectionServList             [17] IMPLICIT     DataCollectionServList         OPTIONAL,
- *     voiceUnitServList             [18] IMPLICIT     VoiceUnitServList         OPTIONAL,
- *     voiceUnitEvtsList             [19] IMPLICIT     VoiceUnitEvtsList         OPTIONAL,
- *     cdrServList                 [20] IMPLICIT     CDRServList             OPTIONAL,
- *     vendorSpecificServList             [21] IMPLICIT     VendorSpecificServList         OPTIONAL,
- *     vendorSpecificEvtsList             [22] IMPLICIT     VendorSpecificEvtsList         OPTIONAL,
- *     statusReportingServList         [23] IMPLICIT     StatusReportingServList     OPTIONAL,
+ * {    capExchangeServList             [ 0] IMPLICIT     CapExchangeServList         type OPTIONAL,
+ *     systemServList                 [ 1] IMPLICIT     SystemStatusServList         type OPTIONAL,
+ *     monitoringServList             [ 2] IMPLICIT     MonitoringServList         type OPTIONAL,
+ *     snapshotServList             [ 3] IMPLICIT     SnapshotServList         type OPTIONAL,
+ *     callControlServList             [ 4] IMPLICIT     CallControlServList         type OPTIONAL,
+ *     callControlEvtsList             [ 5] IMPLICIT     CallControlEvtsList         type OPTIONAL,
+ *     callAssociatedServList             [ 6] IMPLICIT     CallAssociatedServList         type OPTIONAL,
+ *     callAssociatedEvtsList             [ 7] IMPLICIT     CallAssociatedEvtsList         type OPTIONAL,
+ *     mediaServList                 [ 8] IMPLICIT     MediaServList             type OPTIONAL,
+ *     mediaEvtsList                 [ 9] IMPLICIT     MediaEvtsList             type OPTIONAL,
+ *     routeingServList             [10] IMPLICIT     RouteingServList         type OPTIONAL,
+ *     physDevServList             [11] IMPLICIT     PhysDevServList         type OPTIONAL,
+ *     physDevEvtsList             [12] IMPLICIT     PhysDevEvtsList         type OPTIONAL,
+ *     logicalServList             [13] IMPLICIT     LogicalServList         type OPTIONAL,
+ *     logicalEvtsList             [14] IMPLICIT     LogicalEvtsList         type OPTIONAL,
+ *     deviceMaintEvtsList             [15] IMPLICIT     DeviceMaintEvtsList         type OPTIONAL,
+ *     iOServicesServList             [16] IMPLICIT     IOServicesServList         type OPTIONAL,
+ *     dataCollectionServList             [17] IMPLICIT     DataCollectionServList         type OPTIONAL,
+ *     voiceUnitServList             [18] IMPLICIT     VoiceUnitServList         type OPTIONAL,
+ *     voiceUnitEvtsList             [19] IMPLICIT     VoiceUnitEvtsList         type OPTIONAL,
+ *     cdrServList                 [20] IMPLICIT     CDRServList             type OPTIONAL,
+ *     vendorSpecificServList             [21] IMPLICIT     VendorSpecificServList         type OPTIONAL,
+ *     vendorSpecificEvtsList             [22] IMPLICIT     VendorSpecificEvtsList         type OPTIONAL,
+ *     statusReportingServList         [23] IMPLICIT     StatusReportingServList     type OPTIONAL,
  *     locationServList            [24] IMPLICIT    LocationServicesServList    OPTIONAL }
  * ```
  * 
@@ -105,233 +105,285 @@ import { LocationServicesServList, _decode_LocationServicesServList, _encode_Loc
  */
 export
 class ServEvtsList {
+    /**
+     * @summary `capExchangeServList`.
+     * @description
+     *
+     * Capability-exchange services.
+     * @public
+     * @readonly
+     */
+    public readonly capExchangeServList?: OPTIONAL<CapExchangeServList>;
+    /**
+     * @summary `systemServList`.
+     * @description
+     *
+     * System status services.
+     * @public
+     * @readonly
+     */
+    public readonly systemServList?: OPTIONAL<SystemStatusServList>;
+    /**
+     * @summary `monitoringServList`.
+     * @description
+     *
+     * Monitoring services.
+     * @public
+     * @readonly
+     */
+    public readonly monitoringServList?: OPTIONAL<MonitoringServList>;
+    /**
+     * @summary `snapshotServList`.
+     * @description
+     *
+     * Snapshot services.
+     * @public
+     * @readonly
+     */
+    public readonly snapshotServList?: OPTIONAL<SnapshotServList>;
+    /**
+     * @summary `callControlServList`.
+     * @description
+     *
+     * Call-control services.
+     * @public
+     * @readonly
+     */
+    public readonly callControlServList?: OPTIONAL<CallControlServList>;
+    /**
+     * @summary `callControlEvtsList`.
+     * @description
+     *
+     * Call-control events.
+     * @public
+     * @readonly
+     */
+    public readonly callControlEvtsList?: OPTIONAL<CallControlEvtsList>;
+    /**
+     * @summary `callAssociatedServList`.
+     * @description
+     *
+     * Call-associated services.
+     * @public
+     * @readonly
+     */
+    public readonly callAssociatedServList?: OPTIONAL<CallAssociatedServList>;
+    /**
+     * @summary `callAssociatedEvtsList`.
+     * @description
+     *
+     * Call-associated events.
+     * @public
+     * @readonly
+     */
+    public readonly callAssociatedEvtsList?: OPTIONAL<CallAssociatedEvtsList>;
+    /**
+     * @summary `mediaServList`.
+     * @description
+     *
+     * Media-attachment services.
+     * @public
+     * @readonly
+     */
+    public readonly mediaServList?: OPTIONAL<MediaServList>;
+    /**
+     * @summary `mediaEvtsList`.
+     * @description
+     *
+     * Media-attachment events.
+     * @public
+     * @readonly
+     */
+    public readonly mediaEvtsList?: OPTIONAL<MediaEvtsList>;
+    /**
+     * @summary `routeingServList`.
+     * @description
+     *
+     * Routeing services.
+     * @public
+     * @readonly
+     */
+    public readonly routeingServList?: OPTIONAL<RouteingServList>;
+    /**
+     * @summary `physDevServList`.
+     * @description
+     *
+     * Physical-device feature services.
+     * @public
+     * @readonly
+     */
+    public readonly physDevServList?: OPTIONAL<PhysDevServList>;
+    /**
+     * @summary `physDevEvtsList`.
+     * @description
+     *
+     * Physical-device feature events.
+     * @public
+     * @readonly
+     */
+    public readonly physDevEvtsList?: OPTIONAL<PhysDevEvtsList>;
+    /**
+     * @summary `logicalServList`.
+     * @description
+     *
+     * Logical-device feature services.
+     * @public
+     * @readonly
+     */
+    public readonly logicalServList?: OPTIONAL<LogicalServList>;
+    /**
+     * @summary `logicalEvtsList`.
+     * @description
+     *
+     * Logical-device feature events.
+     * @public
+     * @readonly
+     */
+    public readonly logicalEvtsList?: OPTIONAL<LogicalEvtsList>;
+    /**
+     * @summary `deviceMaintEvtsList`.
+     * @description
+     *
+     * Device-maintenance events.
+     * @public
+     * @readonly
+     */
+    public readonly deviceMaintEvtsList?: OPTIONAL<DeviceMaintEvtsList>;
+    /**
+     * @summary `iOServicesServList`.
+     * @description
+     *
+     * I/O services.
+     * @public
+     * @readonly
+     */
+    public readonly iOServicesServList?: OPTIONAL<IOServicesServList>;
+    /**
+     * @summary `dataCollectionServList`.
+     * @description
+     *
+     * Data-collection services.
+     * @public
+     * @readonly
+     */
+    public readonly dataCollectionServList?: OPTIONAL<DataCollectionServList>;
+    /**
+     * @summary `voiceUnitServList`.
+     * @description
+     *
+     * Voice-unit services.
+     * @public
+     * @readonly
+     */
+    public readonly voiceUnitServList?: OPTIONAL<VoiceUnitServList>;
+    /**
+     * @summary `voiceUnitEvtsList`.
+     * @description
+     *
+     * Voice-unit events.
+     * @public
+     * @readonly
+     */
+    public readonly voiceUnitEvtsList?: OPTIONAL<VoiceUnitEvtsList>;
+    /**
+     * @summary `cdrServList`.
+     * @description
+     *
+     * Call-detail-record services.
+     * @public
+     * @readonly
+     */
+    public readonly cdrServList?: OPTIONAL<CDRServList>;
+    /**
+     * @summary `vendorSpecificServList`.
+     * @description
+     *
+     * Vendor-specific services.
+     * @public
+     * @readonly
+     */
+    public readonly vendorSpecificServList?: OPTIONAL<VendorSpecificServList>;
+    /**
+     * @summary `vendorSpecificEvtsList`.
+     * @description
+     *
+     * Vendor-specific events.
+     * @public
+     * @readonly
+     */
+    public readonly vendorSpecificEvtsList?: OPTIONAL<VendorSpecificEvtsList>;
+    /**
+     * @summary `statusReportingServList`.
+     * @description
+     *
+     * Grouped monitoring/snapshot/system lists.
+     * @public
+     * @readonly
+     */
+    public readonly statusReportingServList?: OPTIONAL<StatusReportingServList>;
+    /**
+     * @summary `locationServList`.
+     * @description
+     *
+     * Location services.
+     * @public
+     * @readonly
+     */
+    public readonly locationServList?: OPTIONAL<LocationServicesServList>;
+
     constructor (
-        /**
-         * @summary `capExchangeServList`.
-         * @description
-         *
-         * Capability-exchange services.
-         * @public
-         * @readonly
-         */
-        readonly capExchangeServList?: OPTIONAL<CapExchangeServList>,
-        /**
-         * @summary `systemServList`.
-         * @description
-         *
-         * System status services.
-         * @public
-         * @readonly
-         */
-        readonly systemServList?: OPTIONAL<SystemStatusServList>,
-        /**
-         * @summary `monitoringServList`.
-         * @description
-         *
-         * Monitoring services.
-         * @public
-         * @readonly
-         */
-        readonly monitoringServList?: OPTIONAL<MonitoringServList>,
-        /**
-         * @summary `snapshotServList`.
-         * @description
-         *
-         * Snapshot services.
-         * @public
-         * @readonly
-         */
-        readonly snapshotServList?: OPTIONAL<SnapshotServList>,
-        /**
-         * @summary `callControlServList`.
-         * @description
-         *
-         * Call-control services.
-         * @public
-         * @readonly
-         */
-        readonly callControlServList?: OPTIONAL<CallControlServList>,
-        /**
-         * @summary `callControlEvtsList`.
-         * @description
-         *
-         * Call-control events.
-         * @public
-         * @readonly
-         */
-        readonly callControlEvtsList?: OPTIONAL<CallControlEvtsList>,
-        /**
-         * @summary `callAssociatedServList`.
-         * @description
-         *
-         * Call-associated services.
-         * @public
-         * @readonly
-         */
-        readonly callAssociatedServList?: OPTIONAL<CallAssociatedServList>,
-        /**
-         * @summary `callAssociatedEvtsList`.
-         * @description
-         *
-         * Call-associated events.
-         * @public
-         * @readonly
-         */
-        readonly callAssociatedEvtsList?: OPTIONAL<CallAssociatedEvtsList>,
-        /**
-         * @summary `mediaServList`.
-         * @description
-         *
-         * Media-attachment services.
-         * @public
-         * @readonly
-         */
-        readonly mediaServList?: OPTIONAL<MediaServList>,
-        /**
-         * @summary `mediaEvtsList`.
-         * @description
-         *
-         * Media-attachment events.
-         * @public
-         * @readonly
-         */
-        readonly mediaEvtsList?: OPTIONAL<MediaEvtsList>,
-        /**
-         * @summary `routeingServList`.
-         * @description
-         *
-         * Routeing services.
-         * @public
-         * @readonly
-         */
-        readonly routeingServList?: OPTIONAL<RouteingServList>,
-        /**
-         * @summary `physDevServList`.
-         * @description
-         *
-         * Physical-device feature services.
-         * @public
-         * @readonly
-         */
-        readonly physDevServList?: OPTIONAL<PhysDevServList>,
-        /**
-         * @summary `physDevEvtsList`.
-         * @description
-         *
-         * Physical-device feature events.
-         * @public
-         * @readonly
-         */
-        readonly physDevEvtsList?: OPTIONAL<PhysDevEvtsList>,
-        /**
-         * @summary `logicalServList`.
-         * @description
-         *
-         * Logical-device feature services.
-         * @public
-         * @readonly
-         */
-        readonly logicalServList?: OPTIONAL<LogicalServList>,
-        /**
-         * @summary `logicalEvtsList`.
-         * @description
-         *
-         * Logical-device feature events.
-         * @public
-         * @readonly
-         */
-        readonly logicalEvtsList?: OPTIONAL<LogicalEvtsList>,
-        /**
-         * @summary `deviceMaintEvtsList`.
-         * @description
-         *
-         * Device-maintenance events.
-         * @public
-         * @readonly
-         */
-        readonly deviceMaintEvtsList?: OPTIONAL<DeviceMaintEvtsList>,
-        /**
-         * @summary `iOServicesServList`.
-         * @description
-         *
-         * I/O services.
-         * @public
-         * @readonly
-         */
-        readonly iOServicesServList?: OPTIONAL<IOServicesServList>,
-        /**
-         * @summary `dataCollectionServList`.
-         * @description
-         *
-         * Data-collection services.
-         * @public
-         * @readonly
-         */
-        readonly dataCollectionServList?: OPTIONAL<DataCollectionServList>,
-        /**
-         * @summary `voiceUnitServList`.
-         * @description
-         *
-         * Voice-unit services.
-         * @public
-         * @readonly
-         */
-        readonly voiceUnitServList?: OPTIONAL<VoiceUnitServList>,
-        /**
-         * @summary `voiceUnitEvtsList`.
-         * @description
-         *
-         * Voice-unit events.
-         * @public
-         * @readonly
-         */
-        readonly voiceUnitEvtsList?: OPTIONAL<VoiceUnitEvtsList>,
-        /**
-         * @summary `cdrServList`.
-         * @description
-         *
-         * Call-detail-record services.
-         * @public
-         * @readonly
-         */
-        readonly cdrServList?: OPTIONAL<CDRServList>,
-        /**
-         * @summary `vendorSpecificServList`.
-         * @description
-         *
-         * Vendor-specific services.
-         * @public
-         * @readonly
-         */
-        readonly vendorSpecificServList?: OPTIONAL<VendorSpecificServList>,
-        /**
-         * @summary `vendorSpecificEvtsList`.
-         * @description
-         *
-         * Vendor-specific events.
-         * @public
-         * @readonly
-         */
-        readonly vendorSpecificEvtsList?: OPTIONAL<VendorSpecificEvtsList>,
-        /**
-         * @summary `statusReportingServList`.
-         * @description
-         *
-         * Grouped monitoring/snapshot/system lists.
-         * @public
-         * @readonly
-         */
-        readonly statusReportingServList?: OPTIONAL<StatusReportingServList>,
-        /**
-         * @summary `locationServList`.
-         * @description
-         *
-         * Location services.
-         * @public
-         * @readonly
-         */
-        readonly locationServList?: OPTIONAL<LocationServicesServList>
-    ) {}
+        capExchangeServList?: OPTIONAL<CapExchangeServList>,
+        systemServList?: OPTIONAL<SystemStatusServList>,
+        monitoringServList?: OPTIONAL<MonitoringServList>,
+        snapshotServList?: OPTIONAL<SnapshotServList>,
+        callControlServList?: OPTIONAL<CallControlServList>,
+        callControlEvtsList?: OPTIONAL<CallControlEvtsList>,
+        callAssociatedServList?: OPTIONAL<CallAssociatedServList>,
+        callAssociatedEvtsList?: OPTIONAL<CallAssociatedEvtsList>,
+        mediaServList?: OPTIONAL<MediaServList>,
+        mediaEvtsList?: OPTIONAL<MediaEvtsList>,
+        routeingServList?: OPTIONAL<RouteingServList>,
+        physDevServList?: OPTIONAL<PhysDevServList>,
+        physDevEvtsList?: OPTIONAL<PhysDevEvtsList>,
+        logicalServList?: OPTIONAL<LogicalServList>,
+        logicalEvtsList?: OPTIONAL<LogicalEvtsList>,
+        deviceMaintEvtsList?: OPTIONAL<DeviceMaintEvtsList>,
+        iOServicesServList?: OPTIONAL<IOServicesServList>,
+        dataCollectionServList?: OPTIONAL<DataCollectionServList>,
+        voiceUnitServList?: OPTIONAL<VoiceUnitServList>,
+        voiceUnitEvtsList?: OPTIONAL<VoiceUnitEvtsList>,
+        cdrServList?: OPTIONAL<CDRServList>,
+        vendorSpecificServList?: OPTIONAL<VendorSpecificServList>,
+        vendorSpecificEvtsList?: OPTIONAL<VendorSpecificEvtsList>,
+        statusReportingServList?: OPTIONAL<StatusReportingServList>,
+        locationServList?: OPTIONAL<LocationServicesServList>
+    ) {
+        this.capExchangeServList = capExchangeServList;
+        this.systemServList = systemServList;
+        this.monitoringServList = monitoringServList;
+        this.snapshotServList = snapshotServList;
+        this.callControlServList = callControlServList;
+        this.callControlEvtsList = callControlEvtsList;
+        this.callAssociatedServList = callAssociatedServList;
+        this.callAssociatedEvtsList = callAssociatedEvtsList;
+        this.mediaServList = mediaServList;
+        this.mediaEvtsList = mediaEvtsList;
+        this.routeingServList = routeingServList;
+        this.physDevServList = physDevServList;
+        this.physDevEvtsList = physDevEvtsList;
+        this.logicalServList = logicalServList;
+        this.logicalEvtsList = logicalEvtsList;
+        this.deviceMaintEvtsList = deviceMaintEvtsList;
+        this.iOServicesServList = iOServicesServList;
+        this.dataCollectionServList = dataCollectionServList;
+        this.voiceUnitServList = voiceUnitServList;
+        this.voiceUnitEvtsList = voiceUnitEvtsList;
+        this.cdrServList = cdrServList;
+        this.vendorSpecificServList = vendorSpecificServList;
+        this.vendorSpecificEvtsList = vendorSpecificEvtsList;
+        this.statusReportingServList = statusReportingServList;
+        this.locationServList = locationServList;
+    }
 
     /**
      * @summary Restructures an object into a ServEvtsList

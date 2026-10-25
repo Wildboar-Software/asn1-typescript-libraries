@@ -1,7 +1,7 @@
 /* eslint-disable */
 import { type ATTRIBUTE } from "../InformationFramework/ATTRIBUTE.oca.mjs";
 import { userApplications /* IMPORTED_SHORT_ENUMERATION_ITEM */ } from "@wildboar/x500/InformationFramework";
-import { Sic, _decode_Sic, _encode_Sic } from "../MMSHeadingExtensions/Sic.ta.mjs";
+import { type Sic, _decode_Sic, _encode_Sic } from "../MMSHeadingExtensions/Sic.ta.mjs";
 import { id_nato_mmhs_hat_sic_codes } from "../MMSObjectIdentifiers/id-nato-mmhs-hat-sic-codes.va.mjs";
 
 

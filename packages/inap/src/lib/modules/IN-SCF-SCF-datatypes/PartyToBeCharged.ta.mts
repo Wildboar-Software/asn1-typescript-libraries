@@ -1,4 +1,5 @@
 /* eslint-disable */
+import { ASN1Element as _Element, ASN1ConstructionError as _ConstructionError } from "@wildboar/asn1";
 import * as $ from "@wildboar/asn1/functional";
 
 
@@ -49,7 +50,7 @@ type PartyToBeCharged = _enum_for_PartyToBeCharged;
  * @enum {number}
  */
 export
-const PartyToBeCharged = _enum_for_PartyToBeCharged;
+const PartyToBeCharged: typeof _enum_for_PartyToBeCharged = _enum_for_PartyToBeCharged;
 
 /**
  * @summary PartyToBeCharged_orignating
@@ -57,7 +58,7 @@ const PartyToBeCharged = _enum_for_PartyToBeCharged;
  * @type {number}
  */
 export
-const PartyToBeCharged_orignating: PartyToBeCharged = PartyToBeCharged.orignating; /* LONG_NAMED_ENUMERATED_VALUE */
+const PartyToBeCharged_orignating: _enum_for_PartyToBeCharged.orignating = PartyToBeCharged.orignating; /* LONG_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary orignating
@@ -65,7 +66,7 @@ const PartyToBeCharged_orignating: PartyToBeCharged = PartyToBeCharged.orignatin
  * @type {number}
  */
 export
-const orignating: PartyToBeCharged = PartyToBeCharged.orignating; /* SHORT_NAMED_ENUMERATED_VALUE */
+const orignating: _enum_for_PartyToBeCharged.orignating = PartyToBeCharged.orignating; /* SHORT_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary PartyToBeCharged_terminating
@@ -73,7 +74,7 @@ const orignating: PartyToBeCharged = PartyToBeCharged.orignating; /* SHORT_NAMED
  * @type {number}
  */
 export
-const PartyToBeCharged_terminating: PartyToBeCharged = PartyToBeCharged.terminating; /* LONG_NAMED_ENUMERATED_VALUE */
+const PartyToBeCharged_terminating: _enum_for_PartyToBeCharged.terminating = PartyToBeCharged.terminating; /* LONG_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary terminating
@@ -81,12 +82,23 @@ const PartyToBeCharged_terminating: PartyToBeCharged = PartyToBeCharged.terminat
  * @type {number}
  */
 export
-const terminating: PartyToBeCharged = PartyToBeCharged.terminating; /* SHORT_NAMED_ENUMERATED_VALUE */
+const terminating: _enum_for_PartyToBeCharged.terminating = PartyToBeCharged.terminating; /* SHORT_NAMED_ENUMERATED_VALUE */
 
 export
-const _decode_PartyToBeCharged: $.ASN1Decoder<PartyToBeCharged> = $._decodeEnumerated;
+function _decode_PartyToBeCharged(el: _Element): PartyToBeCharged {
+    const enumerated = $._decodeEnumerated(el);
+    switch (enumerated) {
+        case PartyToBeCharged.orignating: return PartyToBeCharged.orignating;
+        case PartyToBeCharged.terminating: return PartyToBeCharged.terminating;
+        default:
+            throw new _ConstructionError(
+                "Invalid ENUMERATED value " + enumerated + " for PartyToBeCharged.",
+                el,
+            );
+    }
+}
 
 export
-const _encode_PartyToBeCharged: $.ASN1Encoder<PartyToBeCharged> = $._encodeEnumerated;
+const _encode_PartyToBeCharged: $.ASN1Encoder<PartyToBeCharged> = $._encodeEnumerated as $.ASN1Encoder<PartyToBeCharged>;
 
 /* eslint-enable */

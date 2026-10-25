@@ -2,7 +2,7 @@
 import { type OPERATION } from "../Remote-Operations-Information-Objects/OPERATION.oca.mjs";
 // export { Priority, _decode_Priority, _encode_Priority } from "../Remote-Operations-Information-Objects/Priority.ta.mjs";
 // export { Code, _decode_Code, _encode_Code } from "../Remote-Operations-Information-Objects/Code.ta.mjs";
-import { HoldCallInNetworkArg, _decode_HoldCallInNetworkArg, _encode_HoldCallInNetworkArg } from "../IN-CS-1-Datatypes/HoldCallInNetworkArg.ta.mjs";
+import { type HoldCallInNetworkArg, _decode_HoldCallInNetworkArg, _encode_HoldCallInNetworkArg } from "../IN-CS-1-Datatypes/HoldCallInNetworkArg.ta.mjs";
 // export { HoldCallInNetworkArg, _decode_HoldCallInNetworkArg, _encode_HoldCallInNetworkArg } from "../IN-CS-1-Datatypes/HoldCallInNetworkArg.ta.mjs";
 import { missingParameter } from "../IN-CS-1-Errors/missingParameter.oa.mjs";
 // export { missingParameter } from "../IN-CS-1-Errors/missingParameter.oa.mjs";

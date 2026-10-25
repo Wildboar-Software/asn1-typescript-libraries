@@ -1,10 +1,10 @@
 /* eslint-disable */
 import {
-    OBJECT_IDENTIFIER,
-    REAL,
-    PrintableString,
-    RELATIVE_OID_IRI,
-    ASN1Element as _Element,
+    type OBJECT_IDENTIFIER,
+    type REAL,
+    type PrintableString,
+    type RELATIVE_OID_IRI,
+    type ASN1Element as _Element,
     ASN1TagClass as _TagClass,
     ASN1Construction as _Construction,
     ASN1UniversalType as _UniversalType,

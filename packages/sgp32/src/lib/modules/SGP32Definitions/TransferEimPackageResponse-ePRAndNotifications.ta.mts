@@ -1,12 +1,12 @@
 /* eslint-disable */
 import {
     ASN1ConstructionError as _ConstructionError,
-    ASN1Element as _Element,
+    type ASN1Element as _Element,
     ASN1TagClass as _TagClass
 } from "@wildboar/asn1";
 import * as $ from "@wildboar/asn1/functional";
-import { EuiccPackageResult, _decode_EuiccPackageResult, _encode_EuiccPackageResult } from "../SGP32Definitions/EuiccPackageResult.ta.mjs";
-import { PendingNotificationList, _decode_PendingNotificationList, _encode_PendingNotificationList } from "../SGP32Definitions/PendingNotificationList.ta.mjs";
+import { type EuiccPackageResult, _decode_EuiccPackageResult, _encode_EuiccPackageResult } from "../SGP32Definitions/EuiccPackageResult.ta.mjs";
+import { type PendingNotificationList, _decode_PendingNotificationList, _encode_PendingNotificationList } from "../SGP32Definitions/PendingNotificationList.ta.mjs";
 
 
 /**
@@ -33,28 +33,34 @@ import { PendingNotificationList, _decode_PendingNotificationList, _encode_Pendi
  */
 export
 class TransferEimPackageResponse_ePRAndNotifications {
+    /**
+     * @summary `euiccPackageResult`.
+     * @description
+     * Signed result of the eUICC Package the IPA just loaded. Sent together with
+     * notificationList. SGP.32 v1.2, sections 5.14.4 and 6.3.3.1.
+     * @public
+     * @readonly
+     */
+    public readonly euiccPackageResult: EuiccPackageResult;
+    /**
+     * @summary `notificationList`.
+     * @description
+     * Pending Notifications retrieved with ES10b.RetrieveNotificationsList after a
+     * package that contained PSMOs. Empty lists are omitted: the IPA includes the
+     * list when retrieval is non-empty. Compact form is preferred when the IPA has
+     * minimizeEsipaBytes. SGP.32 v1.2, sections 5.14.4 and 5.14.7.
+     * @public
+     * @readonly
+     */
+    public readonly notificationList: PendingNotificationList;
+
     constructor (
-        /**
-         * @summary `euiccPackageResult`.
-         * @description
-         * Signed result of the eUICC Package the IPA just loaded. Sent together with
-         * notificationList. SGP.32 v1.2, sections 5.14.4 and 6.3.3.1.
-         * @public
-         * @readonly
-         */
-        readonly euiccPackageResult: EuiccPackageResult,
-        /**
-         * @summary `notificationList`.
-         * @description
-         * Pending Notifications retrieved with ES10b.RetrieveNotificationsList after a
-         * package that contained PSMOs. Empty lists are omitted: the IPA includes the
-         * list when retrieval is non-empty. Compact form is preferred when the IPA has
-         * minimizeEsipaBytes. SGP.32 v1.2, sections 5.14.4 and 5.14.7.
-         * @public
-         * @readonly
-         */
-        readonly notificationList: PendingNotificationList
-    ) {}
+        euiccPackageResult: EuiccPackageResult,
+        notificationList: PendingNotificationList
+    ) {
+        this.euiccPackageResult = euiccPackageResult;
+        this.notificationList = notificationList;
+    }
 
     /**
      * @summary Restructures an object into a TransferEimPackageResponse_ePRAndNotifications

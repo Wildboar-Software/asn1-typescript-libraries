@@ -1,7 +1,7 @@
 /* eslint-disable */
 import {
-    OPTIONAL,
-    ASN1Element as _Element,
+    type OPTIONAL,
+    type ASN1Element as _Element,
     ASN1TagClass as _TagClass,
     ASN1Construction as _Construction,
     ASN1UniversalType as _UniversalType,
@@ -12,17 +12,17 @@ import {
 } from '@wildboar/asn1';
 import * as $ from '@wildboar/asn1/functional';
 import {
-    NonDeliveryReasonCode,
+    type NonDeliveryReasonCode,
     _decode_NonDeliveryReasonCode,
     _encode_NonDeliveryReasonCode,
 } from '../MTSAbstractService/NonDeliveryReasonCode.ta.mjs';
 import {
-    NonDeliveryDiagnosticCode,
+    type NonDeliveryDiagnosticCode,
     _decode_NonDeliveryDiagnosticCode,
     _encode_NonDeliveryDiagnosticCode,
 } from '../MTSAbstractService/NonDeliveryDiagnosticCode.ta.mjs';
 import {
-    SupplementaryError,
+    type SupplementaryError,
     _decode_SupplementaryError,
     _encode_SupplementaryError,
 } from '../MhsAcctAsn1Module/SupplementaryError.ta.mjs';
@@ -44,26 +44,34 @@ import {
  *
  */
 export class ProcessingError {
+    /**
+     * @summary `non_delivery_reason`.
+     * @public
+     * @readonly
+     */
+    public readonly non_delivery_reason: OPTIONAL<NonDeliveryReasonCode>;
+    /**
+     * @summary `non_delivery_diagnostics`.
+     * @public
+     * @readonly
+     */
+    public readonly non_delivery_diagnostics: OPTIONAL<NonDeliveryDiagnosticCode>;
+    /**
+     * @summary `supplementary_info`.
+     * @public
+     * @readonly
+     */
+    public readonly supplementary_info: SupplementaryError;
+
     constructor(
-        /**
-         * @summary `non_delivery_reason`.
-         * @public
-         * @readonly
-         */
-        readonly non_delivery_reason: OPTIONAL<NonDeliveryReasonCode>,
-        /**
-         * @summary `non_delivery_diagnostics`.
-         * @public
-         * @readonly
-         */
-        readonly non_delivery_diagnostics: OPTIONAL<NonDeliveryDiagnosticCode>,
-        /**
-         * @summary `supplementary_info`.
-         * @public
-         * @readonly
-         */
-        readonly supplementary_info: SupplementaryError
-    ) {}
+        non_delivery_reason: OPTIONAL<NonDeliveryReasonCode>,
+        non_delivery_diagnostics: OPTIONAL<NonDeliveryDiagnosticCode>,
+        supplementary_info: SupplementaryError
+    ) {
+        this.non_delivery_reason = non_delivery_reason;
+        this.non_delivery_diagnostics = non_delivery_diagnostics;
+        this.supplementary_info = supplementary_info;
+    }
 
     /**
      * @summary Restructures an object into a ProcessingError

@@ -76,7 +76,7 @@ type NIDD_Mechanism = _enum_for_NIDD_Mechanism;
  * @enum {number}
  */
 export
-const NIDD_Mechanism = _enum_for_NIDD_Mechanism;
+const NIDD_Mechanism: typeof _enum_for_NIDD_Mechanism = _enum_for_NIDD_Mechanism;
 
 /**
  * @summary NIDD_Mechanism_sGi_based_data_delivery
@@ -88,7 +88,7 @@ const NIDD_Mechanism = _enum_for_NIDD_Mechanism;
  * @type {number}
  */
 export
-const NIDD_Mechanism_sGi_based_data_delivery: NIDD_Mechanism = NIDD_Mechanism.sGi_based_data_delivery; /* LONG_NAMED_ENUMERATED_VALUE */
+const NIDD_Mechanism_sGi_based_data_delivery: _enum_for_NIDD_Mechanism.sGi_based_data_delivery = NIDD_Mechanism.sGi_based_data_delivery; /* LONG_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary sGi_based_data_delivery
@@ -100,7 +100,7 @@ const NIDD_Mechanism_sGi_based_data_delivery: NIDD_Mechanism = NIDD_Mechanism.sG
  * @type {number}
  */
 export
-const sGi_based_data_delivery: NIDD_Mechanism = NIDD_Mechanism.sGi_based_data_delivery; /* SHORT_NAMED_ENUMERATED_VALUE */
+const sGi_based_data_delivery: _enum_for_NIDD_Mechanism.sGi_based_data_delivery = NIDD_Mechanism.sGi_based_data_delivery; /* SHORT_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary NIDD_Mechanism_sCEF_based_data_delivery
@@ -112,7 +112,7 @@ const sGi_based_data_delivery: NIDD_Mechanism = NIDD_Mechanism.sGi_based_data_de
  * @type {number}
  */
 export
-const NIDD_Mechanism_sCEF_based_data_delivery: NIDD_Mechanism = NIDD_Mechanism.sCEF_based_data_delivery; /* LONG_NAMED_ENUMERATED_VALUE */
+const NIDD_Mechanism_sCEF_based_data_delivery: _enum_for_NIDD_Mechanism.sCEF_based_data_delivery = NIDD_Mechanism.sCEF_based_data_delivery; /* LONG_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary sCEF_based_data_delivery
@@ -124,7 +124,7 @@ const NIDD_Mechanism_sCEF_based_data_delivery: NIDD_Mechanism = NIDD_Mechanism.s
  * @type {number}
  */
 export
-const sCEF_based_data_delivery: NIDD_Mechanism = NIDD_Mechanism.sCEF_based_data_delivery; /* SHORT_NAMED_ENUMERATED_VALUE */
+const sCEF_based_data_delivery: _enum_for_NIDD_Mechanism.sCEF_based_data_delivery = NIDD_Mechanism.sCEF_based_data_delivery; /* SHORT_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary Decodes an ASN.1 element into a(n) NIDD_Mechanism
@@ -132,7 +132,7 @@ const sCEF_based_data_delivery: NIDD_Mechanism = NIDD_Mechanism.sCEF_based_data_
  * @param el The element being decoded.
  * @returns The decoded data structure.
  */
-export const _decode_NIDD_Mechanism = $._decodeEnumerated;
+export const _decode_NIDD_Mechanism: $.ASN1Decoder<number> = $._decodeEnumerated;
 
 /**
  * @summary Encodes a(n) NIDD_Mechanism into an ASN.1 Element.
@@ -141,7 +141,7 @@ export const _decode_NIDD_Mechanism = $._decodeEnumerated;
  * @param elGetter A function that can be used to get new ASN.1 elements.
  * @returns {_Element} The NIDD_Mechanism, encoded as an ASN.1 Element.
  */
-export const _encode_NIDD_Mechanism = $._encodeEnumerated;
+export const _encode_NIDD_Mechanism: $.ASN1Encoder<number> = $._encodeEnumerated;
 
 
 /* eslint-enable */

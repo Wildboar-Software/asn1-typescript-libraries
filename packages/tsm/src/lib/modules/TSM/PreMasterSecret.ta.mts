@@ -1,6 +1,6 @@
 /* eslint-disable */
 import {
-    ASN1Element as _Element,
+    type ASN1Element as _Element,
     ASN1TagClass as _TagClass,
     ASN1Construction as _Construction,
     ASN1UniversalType as _UniversalType,
@@ -12,7 +12,7 @@ import {
 import * as $ from "@wildboar/asn1/functional";
 import { ProtocolVersion, _decode_ProtocolVersion, _encode_ProtocolVersion } from "../TSM/ProtocolVersion.ta.mjs";
 
-import { Opaque, _decode_Opaque, _encode_Opaque } from "../TSM/Opaque.ta.mjs";
+import { type Opaque, _decode_Opaque, _encode_Opaque } from "../TSM/Opaque.ta.mjs";
 
 
 
@@ -37,30 +37,36 @@ import { Opaque, _decode_Opaque, _encode_Opaque } from "../TSM/Opaque.ta.mjs";
  */
 export
 class PreMasterSecret {
+    /**
+     * @summary `client_version`.
+     * @description
+     *
+     * Client-offered version, copied into the premaster so the server
+     * can detect version rollback. X.1084 Annex A.
+     *
+     * @public
+     * @readonly
+     */
+    public readonly client_version: ProtocolVersion;
+    /**
+     * @summary `random`.
+     * @description
+     *
+     * 46 opaque random octets of the TLS premaster secret. X.1084
+     * Annex A.
+     *
+     * @public
+     * @readonly
+     */
+    public readonly random: Opaque;
+
     constructor (
-        /**
-         * @summary `client_version`.
-         * @description
-         *
-         * Client-offered version, copied into the premaster so the server
-         * can detect version rollback. X.1084 Annex A.
-         *
-         * @public
-         * @readonly
-         */
-        readonly client_version: ProtocolVersion,
-        /**
-         * @summary `random`.
-         * @description
-         *
-         * 46 opaque random octets of the TLS premaster secret. X.1084
-         * Annex A.
-         *
-         * @public
-         * @readonly
-         */
-        readonly random: Opaque
-    ) {}
+        client_version: ProtocolVersion,
+        random: Opaque
+    ) {
+        this.client_version = client_version;
+        this.random = random;
+    }
 
     /**
      * @summary Restructures an object into a PreMasterSecret

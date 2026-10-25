@@ -1,6 +1,7 @@
 import {
-    ASN1Element as _Element,
+    type ASN1Element as _Element,
     ASN1SizeError,
+    type OCTET_STRING,
 } from "@wildboar/asn1";
 import * as $ from "@wildboar/asn1/functional";
 import { type CalledPartyNumber, _decode_CalledPartyNumber, _encode_CalledPartyNumber } from "./CalledPartyNumber.ta.mjs";
@@ -28,4 +29,4 @@ export const _decode_DestinationRoutingAddress = (el: _Element): DestinationRout
     }
     return value;
 };
-export const _encode_DestinationRoutingAddress = $._encodeSequenceOf<CalledPartyNumber>(() => _encode_CalledPartyNumber, $.BER);
+export const _encode_DestinationRoutingAddress: $.SequenceOfEncoder<OCTET_STRING> = $._encodeSequenceOf<CalledPartyNumber>(() => _encode_CalledPartyNumber, $.BER);

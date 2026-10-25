@@ -1,6 +1,6 @@
 /* eslint-disable */
 import {
-    ASN1Element as _Element,
+    type ASN1Element as _Element,
     ASN1TagClass as _TagClass,
     ASN1Construction as _Construction,
     ASN1UniversalType as _UniversalType,
@@ -11,7 +11,7 @@ import {
 } from '@wildboar/asn1';
 import * as $ from '@wildboar/asn1/functional';
 import {
-    ASO_context_name,
+    type ASO_context_name,
     _decode_ASO_context_name,
     _encode_ASO_context_name,
 } from '../Connectionless-ACSE-1/ASO-context-name.ta.mjs';

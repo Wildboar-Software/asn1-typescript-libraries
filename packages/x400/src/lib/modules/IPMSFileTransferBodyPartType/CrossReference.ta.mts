@@ -1,9 +1,9 @@
 /* eslint-disable */
 import {
-    OPTIONAL,
-    INTEGER,
-    OCTET_STRING,
-    ASN1Element as _Element,
+    type OPTIONAL,
+    type INTEGER,
+    type OCTET_STRING,
+    type ASN1Element as _Element,
     ASN1TagClass as _TagClass,
     ASN1Construction as _Construction,
     ASN1UniversalType as _UniversalType,
@@ -36,26 +36,34 @@ import {
  *
  */
 export class CrossReference {
+    /**
+     * @summary `application_cross_reference`.
+     * @public
+     * @readonly
+     */
+    public readonly application_cross_reference: OCTET_STRING;
+    /**
+     * @summary `message_reference`.
+     * @public
+     * @readonly
+     */
+    public readonly message_reference?: OPTIONAL<MessageReference>;
+    /**
+     * @summary `body_part_reference`.
+     * @public
+     * @readonly
+     */
+    public readonly body_part_reference?: OPTIONAL<INTEGER>;
+
     constructor(
-        /**
-         * @summary `application_cross_reference`.
-         * @public
-         * @readonly
-         */
-        readonly application_cross_reference: OCTET_STRING,
-        /**
-         * @summary `message_reference`.
-         * @public
-         * @readonly
-         */
-        readonly message_reference?: OPTIONAL<MessageReference>,
-        /**
-         * @summary `body_part_reference`.
-         * @public
-         * @readonly
-         */
-        readonly body_part_reference?: OPTIONAL<INTEGER>
-    ) {}
+        application_cross_reference: OCTET_STRING,
+        message_reference?: OPTIONAL<MessageReference>,
+        body_part_reference?: OPTIONAL<INTEGER>
+    ) {
+        this.application_cross_reference = application_cross_reference;
+        this.message_reference = message_reference;
+        this.body_part_reference = body_part_reference;
+    }
 
     /**
      * @summary Restructures an object into a CrossReference

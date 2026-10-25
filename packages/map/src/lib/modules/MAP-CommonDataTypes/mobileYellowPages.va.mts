@@ -1,5 +1,5 @@
 /* eslint-disable */
-import { LCSServiceTypeID } from "../MAP-CommonDataTypes/LCSServiceTypeID.ta.mjs";
+import { type LCSServiceTypeID } from "../MAP-CommonDataTypes/LCSServiceTypeID.ta.mjs";
 
 
 /**

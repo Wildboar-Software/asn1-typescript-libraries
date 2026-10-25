@@ -1,7 +1,7 @@
 /* eslint-disable */
 import {
-    OPTIONAL,
-    ASN1Element as _Element,
+    type OPTIONAL,
+    type ASN1Element as _Element,
     ASN1TagClass as _TagClass,
     ASN1Construction as _Construction,
     ASN1UniversalType as _UniversalType,
@@ -11,10 +11,10 @@ import {
     ASN1ConstructionError as _ConstructionError,
 } from "@wildboar/asn1";
 import * as $ from "@wildboar/asn1/functional";
-import { SFBillingChargingCharacteristics, _decode_SFBillingChargingCharacteristics, _encode_SFBillingChargingCharacteristics } from "../IN-CS2-datatypes/SFBillingChargingCharacteristics.ta.mjs";
-import { InformationToSend, _decode_InformationToSend, _encode_InformationToSend } from "../IN-CS2-datatypes/InformationToSend.ta.mjs";
-import { MaximumNumberOfCounters, _decode_MaximumNumberOfCounters, _encode_MaximumNumberOfCounters } from "../IN-CS2-datatypes/MaximumNumberOfCounters.ta.mjs";
-import { Cause, _decode_Cause, _encode_Cause } from "../IN-CS2-datatypes/Cause.ta.mjs";
+import { type SFBillingChargingCharacteristics, _decode_SFBillingChargingCharacteristics, _encode_SFBillingChargingCharacteristics } from "../IN-CS2-datatypes/SFBillingChargingCharacteristics.ta.mjs";
+import { type InformationToSend, _decode_InformationToSend, _encode_InformationToSend } from "../IN-CS2-datatypes/InformationToSend.ta.mjs";
+import { type MaximumNumberOfCounters, _decode_MaximumNumberOfCounters, _encode_MaximumNumberOfCounters } from "../IN-CS2-datatypes/MaximumNumberOfCounters.ta.mjs";
+import { type Cause, _decode_Cause, _encode_Cause } from "../IN-CS2-datatypes/Cause.ta.mjs";
 
 
 /**
@@ -37,32 +37,42 @@ import { Cause, _decode_Cause, _encode_Cause } from "../IN-CS2-datatypes/Cause.t
  */
 export
 class FilteredCallTreatment {
+    /**
+     * @summary `sFBillingChargingCharacteristics`.
+     * @public
+     * @readonly
+     */
+    public readonly sFBillingChargingCharacteristics: SFBillingChargingCharacteristics;
+    /**
+     * @summary `informationToSend`.
+     * @public
+     * @readonly
+     */
+    public readonly informationToSend?: OPTIONAL<InformationToSend>;
+    /**
+     * @summary `maximumNumberOfCounters`.
+     * @public
+     * @readonly
+     */
+    public readonly maximumNumberOfCounters?: OPTIONAL<MaximumNumberOfCounters>;
+    /**
+     * @summary `releaseCause`.
+     * @public
+     * @readonly
+     */
+    public readonly releaseCause?: OPTIONAL<Cause>;
+
     constructor (
-        /**
-         * @summary `sFBillingChargingCharacteristics`.
-         * @public
-         * @readonly
-         */
-        readonly sFBillingChargingCharacteristics: SFBillingChargingCharacteristics,
-        /**
-         * @summary `informationToSend`.
-         * @public
-         * @readonly
-         */
-        readonly informationToSend?: OPTIONAL<InformationToSend>,
-        /**
-         * @summary `maximumNumberOfCounters`.
-         * @public
-         * @readonly
-         */
-        readonly maximumNumberOfCounters?: OPTIONAL<MaximumNumberOfCounters>,
-        /**
-         * @summary `releaseCause`.
-         * @public
-         * @readonly
-         */
-        readonly releaseCause?: OPTIONAL<Cause>
-    ) {}
+        sFBillingChargingCharacteristics: SFBillingChargingCharacteristics,
+        informationToSend?: OPTIONAL<InformationToSend>,
+        maximumNumberOfCounters?: OPTIONAL<MaximumNumberOfCounters>,
+        releaseCause?: OPTIONAL<Cause>
+    ) {
+        this.sFBillingChargingCharacteristics = sFBillingChargingCharacteristics;
+        this.informationToSend = informationToSend;
+        this.maximumNumberOfCounters = maximumNumberOfCounters;
+        this.releaseCause = releaseCause;
+    }
 
     /**
      * @summary Restructures an object into a FilteredCallTreatment

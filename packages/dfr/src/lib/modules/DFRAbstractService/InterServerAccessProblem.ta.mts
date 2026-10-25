@@ -1,6 +1,6 @@
 /* eslint-disable */
 import {
-    ASN1Element as _Element,
+    type ASN1Element as _Element,
     ASN1TagClass as _TagClass,
     ASN1Construction as _Construction,
     ASN1UniversalType as _UniversalType,
@@ -85,7 +85,7 @@ type InterServerAccessProblem = _enum_for_InterServerAccessProblem;
  * @enum {number}
  */
 export
-const InterServerAccessProblem = _enum_for_InterServerAccessProblem;
+const InterServerAccessProblem: typeof _enum_for_InterServerAccessProblem = _enum_for_InterServerAccessProblem;
 
 /**
  * @summary InterServerAccessProblem_referent_store_not_found
@@ -96,7 +96,7 @@ const InterServerAccessProblem = _enum_for_InterServerAccessProblem;
  * @type {number}
  */
 export
-const InterServerAccessProblem_referent_store_not_found: InterServerAccessProblem = InterServerAccessProblem.referent_store_not_found; /* LONG_NAMED_ENUMERATED_VALUE */
+const InterServerAccessProblem_referent_store_not_found: _enum_for_InterServerAccessProblem.referent_store_not_found = InterServerAccessProblem.referent_store_not_found; /* LONG_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary referent_store_not_found
@@ -107,7 +107,7 @@ const InterServerAccessProblem_referent_store_not_found: InterServerAccessProble
  * @type {number}
  */
 export
-const referent_store_not_found: InterServerAccessProblem = InterServerAccessProblem.referent_store_not_found; /* SHORT_NAMED_ENUMERATED_VALUE */
+const referent_store_not_found: _enum_for_InterServerAccessProblem.referent_store_not_found = InterServerAccessProblem.referent_store_not_found; /* SHORT_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary InterServerAccessProblem_referent_store_unreachable
@@ -118,7 +118,7 @@ const referent_store_not_found: InterServerAccessProblem = InterServerAccessProb
  * @type {number}
  */
 export
-const InterServerAccessProblem_referent_store_unreachable: InterServerAccessProblem = InterServerAccessProblem.referent_store_unreachable; /* LONG_NAMED_ENUMERATED_VALUE */
+const InterServerAccessProblem_referent_store_unreachable: _enum_for_InterServerAccessProblem.referent_store_unreachable = InterServerAccessProblem.referent_store_unreachable; /* LONG_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary referent_store_unreachable
@@ -129,7 +129,7 @@ const InterServerAccessProblem_referent_store_unreachable: InterServerAccessProb
  * @type {number}
  */
 export
-const referent_store_unreachable: InterServerAccessProblem = InterServerAccessProblem.referent_store_unreachable; /* SHORT_NAMED_ENUMERATED_VALUE */
+const referent_store_unreachable: _enum_for_InterServerAccessProblem.referent_store_unreachable = InterServerAccessProblem.referent_store_unreachable; /* SHORT_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary InterServerAccessProblem_referent_store_unavailable
@@ -140,7 +140,7 @@ const referent_store_unreachable: InterServerAccessProblem = InterServerAccessPr
  * @type {number}
  */
 export
-const InterServerAccessProblem_referent_store_unavailable: InterServerAccessProblem = InterServerAccessProblem.referent_store_unavailable; /* LONG_NAMED_ENUMERATED_VALUE */
+const InterServerAccessProblem_referent_store_unavailable: _enum_for_InterServerAccessProblem.referent_store_unavailable = InterServerAccessProblem.referent_store_unavailable; /* LONG_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary referent_store_unavailable
@@ -151,7 +151,7 @@ const InterServerAccessProblem_referent_store_unavailable: InterServerAccessProb
  * @type {number}
  */
 export
-const referent_store_unavailable: InterServerAccessProblem = InterServerAccessProblem.referent_store_unavailable; /* SHORT_NAMED_ENUMERATED_VALUE */
+const referent_store_unavailable: _enum_for_InterServerAccessProblem.referent_store_unavailable = InterServerAccessProblem.referent_store_unavailable; /* SHORT_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary InterServerAccessProblem_referent_store_security_problem
@@ -162,7 +162,7 @@ const referent_store_unavailable: InterServerAccessProblem = InterServerAccessPr
  * @type {number}
  */
 export
-const InterServerAccessProblem_referent_store_security_problem: InterServerAccessProblem = InterServerAccessProblem.referent_store_security_problem; /* LONG_NAMED_ENUMERATED_VALUE */
+const InterServerAccessProblem_referent_store_security_problem: _enum_for_InterServerAccessProblem.referent_store_security_problem = InterServerAccessProblem.referent_store_security_problem; /* LONG_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary referent_store_security_problem
@@ -173,9 +173,22 @@ const InterServerAccessProblem_referent_store_security_problem: InterServerAcces
  * @type {number}
  */
 export
-const referent_store_security_problem: InterServerAccessProblem = InterServerAccessProblem.referent_store_security_problem; /* SHORT_NAMED_ENUMERATED_VALUE */
-export const _decode_InterServerAccessProblem = $._decodeEnumerated;
-export const _encode_InterServerAccessProblem = $._encodeEnumerated;
+const referent_store_security_problem: _enum_for_InterServerAccessProblem.referent_store_security_problem = InterServerAccessProblem.referent_store_security_problem; /* SHORT_NAMED_ENUMERATED_VALUE */
+export function _decode_InterServerAccessProblem(el: _Element): InterServerAccessProblem {
+    const enumerated = $._decodeEnumerated(el);
+    switch (enumerated) {
+        case InterServerAccessProblem.referent_store_not_found: return InterServerAccessProblem.referent_store_not_found;
+        case InterServerAccessProblem.referent_store_unreachable: return InterServerAccessProblem.referent_store_unreachable;
+        case InterServerAccessProblem.referent_store_unavailable: return InterServerAccessProblem.referent_store_unavailable;
+        case InterServerAccessProblem.referent_store_security_problem: return InterServerAccessProblem.referent_store_security_problem;
+        default:
+            throw new _ConstructionError(
+                "Invalid ENUMERATED value " + enumerated + " for InterServerAccessProblem.",
+                el,
+            );
+    }
+}
+export const _encode_InterServerAccessProblem: $.ASN1Encoder<InterServerAccessProblem> = $._encodeEnumerated as $.ASN1Encoder<InterServerAccessProblem>;
 
 
 /* eslint-enable */

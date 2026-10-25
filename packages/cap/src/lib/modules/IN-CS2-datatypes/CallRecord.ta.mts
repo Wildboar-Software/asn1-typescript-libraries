@@ -1,6 +1,6 @@
 /* eslint-disable */
 import {
-    ASN1Element as _Element,
+    type ASN1Element as _Element,
     ASN1TagClass as _TagClass,
     ASN1Construction as _Construction,
     ASN1UniversalType as _UniversalType,
@@ -10,9 +10,9 @@ import {
     ASN1ConstructionError as _ConstructionError,
 } from "@wildboar/asn1";
 import * as $ from "@wildboar/asn1/functional";
-import { Duration, _decode_Duration, _encode_Duration } from "../IN-CS2-datatypes/Duration.ta.mjs";
-import { CallingPartyNumber, _decode_CallingPartyNumber, _encode_CallingPartyNumber } from "../IN-CS2-datatypes/CallingPartyNumber.ta.mjs";
-import { CalledPartyNumber, _decode_CalledPartyNumber, _encode_CalledPartyNumber } from "../IN-CS2-datatypes/CalledPartyNumber.ta.mjs";
+import { type Duration, _decode_Duration, _encode_Duration } from "../IN-CS2-datatypes/Duration.ta.mjs";
+import { type CallingPartyNumber, _decode_CallingPartyNumber, _encode_CallingPartyNumber } from "../IN-CS2-datatypes/CallingPartyNumber.ta.mjs";
+import { type CalledPartyNumber, _decode_CalledPartyNumber, _encode_CalledPartyNumber } from "../IN-CS2-datatypes/CalledPartyNumber.ta.mjs";
 
 
 /**
@@ -33,26 +33,34 @@ import { CalledPartyNumber, _decode_CalledPartyNumber, _encode_CalledPartyNumber
  */
 export
 class CallRecord {
+    /**
+     * @summary `callDuration`.
+     * @public
+     * @readonly
+     */
+    public readonly callDuration: Duration;
+    /**
+     * @summary `callingPartyNumber`.
+     * @public
+     * @readonly
+     */
+    public readonly callingPartyNumber: CallingPartyNumber;
+    /**
+     * @summary `calledPartyNumber`.
+     * @public
+     * @readonly
+     */
+    public readonly calledPartyNumber: CalledPartyNumber;
+
     constructor (
-        /**
-         * @summary `callDuration`.
-         * @public
-         * @readonly
-         */
-        readonly callDuration: Duration,
-        /**
-         * @summary `callingPartyNumber`.
-         * @public
-         * @readonly
-         */
-        readonly callingPartyNumber: CallingPartyNumber,
-        /**
-         * @summary `calledPartyNumber`.
-         * @public
-         * @readonly
-         */
-        readonly calledPartyNumber: CalledPartyNumber
-    ) {}
+        callDuration: Duration,
+        callingPartyNumber: CallingPartyNumber,
+        calledPartyNumber: CalledPartyNumber
+    ) {
+        this.callDuration = callDuration;
+        this.callingPartyNumber = callingPartyNumber;
+        this.calledPartyNumber = calledPartyNumber;
+    }
 
     /**
      * @summary Restructures an object into a CallRecord

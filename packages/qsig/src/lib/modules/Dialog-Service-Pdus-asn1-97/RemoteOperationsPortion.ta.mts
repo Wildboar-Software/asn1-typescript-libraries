@@ -1,10 +1,10 @@
 /* eslint-disable */
 import {
-    ASN1Element as _Element,
+    type ASN1Element as _Element,
     ASN1TagClass as _TagClass
 } from "@wildboar/asn1";
 import * as $ from "@wildboar/asn1/functional";
-import { RemoteOperationsPortion_Item, _decode_RemoteOperationsPortion_Item, _encode_RemoteOperationsPortion_Item } from "../Dialog-Service-Pdus-asn1-97/RemoteOperationsPortion-Item.ta.mjs";
+import { type RemoteOperationsPortion_Item, _decode_RemoteOperationsPortion_Item, _encode_RemoteOperationsPortion_Item } from "../Dialog-Service-Pdus-asn1-97/RemoteOperationsPortion-Item.ta.mjs";
 
 /**
  * @summary RemoteOperationsPortion

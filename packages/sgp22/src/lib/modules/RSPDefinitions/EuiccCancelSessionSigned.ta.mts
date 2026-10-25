@@ -1,13 +1,13 @@
 /* eslint-disable */
 import {
-    OBJECT_IDENTIFIER,
+    type OBJECT_IDENTIFIER,
     ASN1ConstructionError as _ConstructionError,
-    ASN1Element as _Element,
+    type ASN1Element as _Element,
     ASN1TagClass as _TagClass
 } from "@wildboar/asn1";
 import * as $ from "@wildboar/asn1/functional";
-import { TransactionId, _decode_TransactionId, _encode_TransactionId } from "../RSPDefinitions/TransactionId.ta.mjs";
-import { CancelSessionReason, _decode_CancelSessionReason, _encode_CancelSessionReason } from "../RSPDefinitions/CancelSessionReason.ta.mjs";
+import { type TransactionId, _decode_TransactionId, _encode_TransactionId } from "../RSPDefinitions/TransactionId.ta.mjs";
+import { type CancelSessionReason, _decode_CancelSessionReason, _encode_CancelSessionReason } from "../RSPDefinitions/CancelSessionReason.ta.mjs";
 
 
 /**
@@ -40,7 +40,7 @@ class EuiccCancelSessionSigned {
      * @public
      * @readonly
      */
-    readonly transactionId: TransactionId;
+    public readonly transactionId: TransactionId;
     /**
      * @summary `smdpOid`.
      * @description
@@ -50,7 +50,7 @@ class EuiccCancelSessionSigned {
      * @public
      * @readonly
      */
-    readonly smdpOid: OBJECT_IDENTIFIER;
+    public readonly smdpOid: OBJECT_IDENTIFIER;
     /**
      * @summary `reason`.
      * @description
@@ -60,7 +60,7 @@ class EuiccCancelSessionSigned {
      * @public
      * @readonly
      */
-    readonly reason: CancelSessionReason;
+    public readonly reason: CancelSessionReason;
 
     constructor (
         transactionId: TransactionId,

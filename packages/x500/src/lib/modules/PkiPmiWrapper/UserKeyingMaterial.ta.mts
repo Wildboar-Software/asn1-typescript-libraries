@@ -1,5 +1,5 @@
 /* eslint-disable */
-import { ASN1Element as _Element, OCTET_STRING } from "@wildboar/asn1";
+import { ASN1Element as _Element, type OCTET_STRING } from "@wildboar/asn1";
 import * as $ from "@wildboar/asn1/functional";
 
 /**
@@ -17,10 +17,10 @@ import * as $ from "@wildboar/asn1/functional";
 export type UserKeyingMaterial = OCTET_STRING; // OctetStringType
 
 
-export const _decode_UserKeyingMaterial = $._decodeOctetString;
+export const _decode_UserKeyingMaterial: $.ASN1Decoder<OCTET_STRING> = $._decodeOctetString;
 
 
-export const _encode_UserKeyingMaterial = $._encodeOctetString;
+export const _encode_UserKeyingMaterial: $.ASN1Encoder<OCTET_STRING> = $._encodeOctetString;
 
 
 /* eslint-enable */

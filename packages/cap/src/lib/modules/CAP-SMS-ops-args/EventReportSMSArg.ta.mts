@@ -1,7 +1,7 @@
 /* eslint-disable */
 import {
-    OPTIONAL,
-    ASN1Element as _Element,
+    type OPTIONAL,
+    type ASN1Element as _Element,
     ASN1TagClass as _TagClass,
     ASN1Construction as _Construction,
     ASN1UniversalType as _UniversalType,
@@ -30,9 +30,9 @@ import { MiscCallInfo, _decode_MiscCallInfo, _encode_MiscCallInfo } from "../IN-
  * ```asn1
  * EventReportSMSArg {PARAMETERS-BOUND : bound} ::= SEQUENCE {
  *     eventTypeSMS            [0] EventTypeSMS,
- *     eventSpecificInformationSMS        [1] EventSpecificInformationSMS        OPTIONAL,
+ *     eventSpecificInformationSMS        [1] EventSpecificInformationSMS        type OPTIONAL,
  *     miscCallInfo            [2] MiscCallInfo DEFAULT {messageType request},
- *     extensions                [10] Extensions {bound}            OPTIONAL,
+ *     extensions                [10] Extensions {bound}            type OPTIONAL,
  *     ...
  *     }
  * ```
@@ -41,58 +41,70 @@ import { MiscCallInfo, _decode_MiscCallInfo, _encode_MiscCallInfo } from "../IN-
  */
 export
 class EventReportSMSArg {
+    /**
+     * @summary `eventTypeSMS`.
+     * @description
+     *
+     * Type of SM event being reported.
+     * (3GPP TS 29.078 V19.0.0 clause 12.3.1.1).
+     *
+     * @public
+     * @readonly
+     */
+    public readonly eventTypeSMS: EventTypeSMS;
+    /**
+     * @summary `eventSpecificInformationSMS`.
+     * @description
+     *
+     * Event-specific SM information. For O_SMS_Failure: O-SMSCause
+     * if available. For T_SMS_Failure: T-SMSCause if available. For
+     * O_SMS_Submitted and T_SMS_Delivery: empty.
+     * (3GPP TS 29.078 V19.0.0 clause 12.3.1.1).
+     *
+     * @public
+     * @readonly
+     */
+    public readonly eventSpecificInformationSMS?: OPTIONAL<EventSpecificInformationSMS>;
+    /**
+     * @summary `miscCallInfo`.
+     * @description
+     *
+     * DP-related information. `messageType` is a request if the
+     * corresponding RequestReportSMSEvent used monitorMode
+     * interrupted, or a notification if notifyAndContinue. ASN.1
+     * default `{messageType request}`.
+     * (3GPP TS 29.078 V19.0.0 clause 12.3.1.1).
+     *
+     * @public
+     * @readonly
+     */
+    public readonly miscCallInfo?: OPTIONAL<MiscCallInfo>;
+    /**
+     * @summary `extensions`.
+     * @public
+     * @readonly
+     */
+    public readonly extensions?: OPTIONAL<Extensions>;
+    /**
+     * @summary Extensions that are not recognized.
+     * @public
+     * @readonly
+     */
+    public readonly _unrecognizedExtensionsList: _Element[];
+
     constructor (
-        /**
-         * @summary `eventTypeSMS`.
-         * @description
-         *
-         * Type of SM event being reported.
-         * (3GPP TS 29.078 V19.0.0 clause 12.3.1.1).
-         *
-         * @public
-         * @readonly
-         */
-        readonly eventTypeSMS: EventTypeSMS,
-        /**
-         * @summary `eventSpecificInformationSMS`.
-         * @description
-         *
-         * Event-specific SM information. For O_SMS_Failure: O-SMSCause
-         * if available. For T_SMS_Failure: T-SMSCause if available. For
-         * O_SMS_Submitted and T_SMS_Delivery: empty.
-         * (3GPP TS 29.078 V19.0.0 clause 12.3.1.1).
-         *
-         * @public
-         * @readonly
-         */
-        readonly eventSpecificInformationSMS?: OPTIONAL<EventSpecificInformationSMS>,
-        /**
-         * @summary `miscCallInfo`.
-         * @description
-         *
-         * DP-related information. `messageType` is a request if the
-         * corresponding RequestReportSMSEvent used monitorMode
-         * interrupted, or a notification if notifyAndContinue. ASN.1
-         * default `{messageType request}`.
-         * (3GPP TS 29.078 V19.0.0 clause 12.3.1.1).
-         *
-         * @public
-         * @readonly
-         */
-        readonly miscCallInfo?: OPTIONAL<MiscCallInfo>,
-        /**
-         * @summary `extensions`.
-         * @public
-         * @readonly
-         */
-        readonly extensions?: OPTIONAL<Extensions>,
-        /**
-         * @summary Extensions that are not recognized.
-         * @public
-         * @readonly
-         */
-        readonly _unrecognizedExtensionsList: _Element[] = []
-    ) {}
+        eventTypeSMS: EventTypeSMS,
+        eventSpecificInformationSMS?: OPTIONAL<EventSpecificInformationSMS>,
+        miscCallInfo?: OPTIONAL<MiscCallInfo>,
+        extensions?: OPTIONAL<Extensions>,
+        _unrecognizedExtensionsList: _Element[] = []
+    ) {
+        this.eventTypeSMS = eventTypeSMS;
+        this.eventSpecificInformationSMS = eventSpecificInformationSMS;
+        this.miscCallInfo = miscCallInfo;
+        this.extensions = extensions;
+        this._unrecognizedExtensionsList = _unrecognizedExtensionsList;
+    }
 
     /**
      * @summary Restructures an object into a EventReportSMSArg
@@ -116,7 +128,7 @@ class EventReportSMSArg {
      * @static
      * @method
      */
-    public static get _default_value_for_miscCallInfo () { return MiscCallInfo._from_object({ messageType: MiscCallInfo._enum_for_messageType.request }); }
+    public static get _default_value_for_miscCallInfo (): MiscCallInfo { return MiscCallInfo._from_object({ messageType: MiscCallInfo._enum_for_messageType.request }); }
 }
 
 /**

@@ -1,7 +1,7 @@
 /* eslint-disable */
 import {
-    OPTIONAL,
-    ASN1Element as _Element,
+    type OPTIONAL,
+    type ASN1Element as _Element,
     ASN1TagClass as _TagClass,
     ASN1Construction as _Construction,
     ASN1UniversalType as _UniversalType,
@@ -11,8 +11,8 @@ import {
     ASN1ConstructionError as _ConstructionError,
 } from "@wildboar/asn1";
 import * as $ from "@wildboar/asn1/functional";
-import { Unsigned32, _decode_Unsigned32, _encode_Unsigned32 } from "../ISO-9506-MMS-1/Unsigned32.ta.mjs";
-import { RejectPDU_rejectReason, _decode_RejectPDU_rejectReason, _encode_RejectPDU_rejectReason } from "../ISO-9506-MMS-1/RejectPDU-rejectReason.ta.mjs";
+import { type Unsigned32, _decode_Unsigned32, _encode_Unsigned32 } from "../ISO-9506-MMS-1/Unsigned32.ta.mjs";
+import { type RejectPDU_rejectReason, _decode_RejectPDU_rejectReason, _encode_RejectPDU_rejectReason } from "../ISO-9506-MMS-1/RejectPDU-rejectReason.ta.mjs";
 
 
 /**
@@ -112,28 +112,34 @@ import { RejectPDU_rejectReason, _decode_RejectPDU_rejectReason, _encode_RejectP
  */
 export
 class RejectPDU {
+    /**
+     * @summary `originalInvokeID`.
+     * @description
+     *
+     * Invoke ID of the PDU found in error, if determinable. Omit when the
+     * rejected PDU has no invoke ID (ISO 9506-1:2003 §8.6.1.2).
+     * @public
+     * @readonly
+     */
+    public readonly originalInvokeID: OPTIONAL<Unsigned32>;
+    /**
+     * @summary `rejectReason`.
+     * @description
+     *
+     * Rejected PDU type plus reject code (ISO 9506-1:2003
+     * §8.6.1.3–8.6.1.4).
+     * @public
+     * @readonly
+     */
+    public readonly rejectReason: RejectPDU_rejectReason;
+
     constructor (
-        /**
-         * @summary `originalInvokeID`.
-         * @description
-         *
-         * Invoke ID of the PDU found in error, if determinable. Omit when the
-         * rejected PDU has no invoke ID (ISO 9506-1:2003 §8.6.1.2).
-         * @public
-         * @readonly
-         */
-        readonly originalInvokeID: OPTIONAL<Unsigned32>,
-        /**
-         * @summary `rejectReason`.
-         * @description
-         *
-         * Rejected PDU type plus reject code (ISO 9506-1:2003
-         * §8.6.1.3–8.6.1.4).
-         * @public
-         * @readonly
-         */
-        readonly rejectReason: RejectPDU_rejectReason
-    ) {}
+        originalInvokeID: OPTIONAL<Unsigned32>,
+        rejectReason: RejectPDU_rejectReason
+    ) {
+        this.originalInvokeID = originalInvokeID;
+        this.rejectReason = rejectReason;
+    }
 
     /**
      * @summary Restructures an object into a RejectPDU

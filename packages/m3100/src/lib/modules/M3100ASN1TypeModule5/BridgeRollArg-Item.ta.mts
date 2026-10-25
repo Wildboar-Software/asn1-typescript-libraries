@@ -1,7 +1,7 @@
 /* eslint-disable */
 import {
-    OPTIONAL,
-    ASN1Element as _Element,
+    type OPTIONAL,
+    type ASN1Element as _Element,
     ASN1TagClass as _TagClass,
     ASN1Construction as _Construction,
     ASN1UniversalType as _UniversalType,
@@ -12,12 +12,12 @@ import {
 } from '@wildboar/asn1';
 import * as $ from '@wildboar/asn1/functional';
 import {
-    ObjectInstance,
+    type ObjectInstance,
     _decode_ObjectInstance,
     _encode_ObjectInstance,
 } from '@wildboar/cmip';
 import {
-    BridgeRollArg_Item_bridgeRollOperation,
+    type BridgeRollArg_Item_bridgeRollOperation,
     _enum_for_BridgeRollArg_Item_bridgeRollOperation,
     _decode_BridgeRollArg_Item_bridgeRollOperation,
     _encode_BridgeRollArg_Item_bridgeRollOperation,
@@ -40,38 +40,50 @@ import {
  *
  */
 export class BridgeRollArg_Item {
+    /**
+     * @summary `xc`.
+     * @public
+     * @readonly
+     */
+    public readonly xc: ObjectInstance;
+    /**
+     * @summary `bridgeRollFromTp`.
+     * @public
+     * @readonly
+     */
+    public readonly bridgeRollFromTp: ObjectInstance;
+    /**
+     * @summary `bridgeRollToTp`.
+     * @public
+     * @readonly
+     */
+    public readonly bridgeRollToTp: ObjectInstance;
+    /**
+     * @summary `bridgeRollOperation`.
+     * @public
+     * @readonly
+     */
+    public readonly bridgeRollOperation: BridgeRollArg_Item_bridgeRollOperation;
+    /**
+     * @summary `additionalInfo`.
+     * @public
+     * @readonly
+     */
+    public readonly additionalInfo?: OPTIONAL<ManagementExtension[]>;
+
     constructor(
-        /**
-         * @summary `xc`.
-         * @public
-         * @readonly
-         */
-        readonly xc: ObjectInstance,
-        /**
-         * @summary `bridgeRollFromTp`.
-         * @public
-         * @readonly
-         */
-        readonly bridgeRollFromTp: ObjectInstance,
-        /**
-         * @summary `bridgeRollToTp`.
-         * @public
-         * @readonly
-         */
-        readonly bridgeRollToTp: ObjectInstance,
-        /**
-         * @summary `bridgeRollOperation`.
-         * @public
-         * @readonly
-         */
-        readonly bridgeRollOperation: BridgeRollArg_Item_bridgeRollOperation,
-        /**
-         * @summary `additionalInfo`.
-         * @public
-         * @readonly
-         */
-        readonly additionalInfo?: OPTIONAL<ManagementExtension[]>
-    ) {}
+        xc: ObjectInstance,
+        bridgeRollFromTp: ObjectInstance,
+        bridgeRollToTp: ObjectInstance,
+        bridgeRollOperation: BridgeRollArg_Item_bridgeRollOperation,
+        additionalInfo?: OPTIONAL<ManagementExtension[]>
+    ) {
+        this.xc = xc;
+        this.bridgeRollFromTp = bridgeRollFromTp;
+        this.bridgeRollToTp = bridgeRollToTp;
+        this.bridgeRollOperation = bridgeRollOperation;
+        this.additionalInfo = additionalInfo;
+    }
 
     /**
      * @summary Restructures an object into a BridgeRollArg_Item
@@ -103,7 +115,7 @@ export class BridgeRollArg_Item {
      * @static
      */
 
-    public static _enum_for_bridgeRollOperation = _enum_for_BridgeRollArg_Item_bridgeRollOperation;
+    public static _enum_for_bridgeRollOperation: typeof _enum_for_BridgeRollArg_Item_bridgeRollOperation = _enum_for_BridgeRollArg_Item_bridgeRollOperation;
 }
 
 

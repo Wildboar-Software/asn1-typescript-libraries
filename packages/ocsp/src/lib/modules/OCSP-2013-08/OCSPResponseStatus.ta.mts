@@ -1,5 +1,5 @@
 /* eslint-disable */
-import { ASN1Element as _Element } from "@wildboar/asn1";
+import { ASN1Element as _Element, ASN1ConstructionError as _ConstructionError } from "@wildboar/asn1";
 import * as $ from "@wildboar/asn1/functional";
 
 
@@ -29,14 +29,16 @@ import * as $ from "@wildboar/asn1/functional";
  *
  * @enum {number}
  */
-export enum _enum_for_OCSPResponseStatus {
-    successful = 0,
-    malformedRequest = 1,
-    internalError = 2,
-    tryLater = 3,
-    sigRequired = 5,
-    unauthorized = 6,
-}
+export const _enum_for_OCSPResponseStatus = {
+    successful: 0,
+    malformedRequest: 1,
+    internalError: 2,
+    tryLater: 3,
+    sigRequired: 5,
+    unauthorized: 6,
+} as const;
+
+export type _enum_for_OCSPResponseStatus = (typeof _enum_for_OCSPResponseStatus)[keyof typeof _enum_for_OCSPResponseStatus];
 
 
 /**
@@ -94,7 +96,7 @@ export type OCSPResponseStatus = _enum_for_OCSPResponseStatus;
  *
  * @enum {number}
  */
-export const OCSPResponseStatus = _enum_for_OCSPResponseStatus;
+export const OCSPResponseStatus: typeof _enum_for_OCSPResponseStatus = _enum_for_OCSPResponseStatus;
 
 
 /**
@@ -107,7 +109,7 @@ export const OCSPResponseStatus = _enum_for_OCSPResponseStatus;
  * @constant
  * @type {number}
  */
-export const OCSPResponseStatus_successful: OCSPResponseStatus =
+export const OCSPResponseStatus_successful: 0 =
     OCSPResponseStatus.successful; /* LONG_NAMED_ENUMERATED_VALUE */
 
 
@@ -121,7 +123,7 @@ export const OCSPResponseStatus_successful: OCSPResponseStatus =
  * @constant
  * @type {number}
  */
-export const successful: OCSPResponseStatus =
+export const successful: 0 =
     OCSPResponseStatus.successful; /* SHORT_NAMED_ENUMERATED_VALUE */
 
 
@@ -136,7 +138,7 @@ export const successful: OCSPResponseStatus =
  * @constant
  * @type {number}
  */
-export const OCSPResponseStatus_malformedRequest: OCSPResponseStatus =
+export const OCSPResponseStatus_malformedRequest: 1 =
     OCSPResponseStatus.malformedRequest; /* LONG_NAMED_ENUMERATED_VALUE */
 
 
@@ -151,7 +153,7 @@ export const OCSPResponseStatus_malformedRequest: OCSPResponseStatus =
  * @constant
  * @type {number}
  */
-export const malformedRequest: OCSPResponseStatus =
+export const malformedRequest: 1 =
     OCSPResponseStatus.malformedRequest; /* SHORT_NAMED_ENUMERATED_VALUE */
 
 
@@ -167,7 +169,7 @@ export const malformedRequest: OCSPResponseStatus =
  * @constant
  * @type {number}
  */
-export const OCSPResponseStatus_internalError: OCSPResponseStatus =
+export const OCSPResponseStatus_internalError: 2 =
     OCSPResponseStatus.internalError; /* LONG_NAMED_ENUMERATED_VALUE */
 
 
@@ -183,7 +185,7 @@ export const OCSPResponseStatus_internalError: OCSPResponseStatus =
  * @constant
  * @type {number}
  */
-export const internalError: OCSPResponseStatus =
+export const internalError: 2 =
     OCSPResponseStatus.internalError; /* SHORT_NAMED_ENUMERATED_VALUE */
 
 
@@ -198,7 +200,7 @@ export const internalError: OCSPResponseStatus =
  * @constant
  * @type {number}
  */
-export const OCSPResponseStatus_tryLater: OCSPResponseStatus =
+export const OCSPResponseStatus_tryLater: 3 =
     OCSPResponseStatus.tryLater; /* LONG_NAMED_ENUMERATED_VALUE */
 
 
@@ -213,7 +215,7 @@ export const OCSPResponseStatus_tryLater: OCSPResponseStatus =
  * @constant
  * @type {number}
  */
-export const tryLater: OCSPResponseStatus =
+export const tryLater: 3 =
     OCSPResponseStatus.tryLater; /* SHORT_NAMED_ENUMERATED_VALUE */
 
 
@@ -227,7 +229,7 @@ export const tryLater: OCSPResponseStatus =
  * @constant
  * @type {number}
  */
-export const OCSPResponseStatus_sigRequired: OCSPResponseStatus =
+export const OCSPResponseStatus_sigRequired: 5 =
     OCSPResponseStatus.sigRequired; /* LONG_NAMED_ENUMERATED_VALUE */
 
 
@@ -241,7 +243,7 @@ export const OCSPResponseStatus_sigRequired: OCSPResponseStatus =
  * @constant
  * @type {number}
  */
-export const sigRequired: OCSPResponseStatus =
+export const sigRequired: 5 =
     OCSPResponseStatus.sigRequired; /* SHORT_NAMED_ENUMERATED_VALUE */
 
 
@@ -258,7 +260,7 @@ export const sigRequired: OCSPResponseStatus =
  * @constant
  * @type {number}
  */
-export const OCSPResponseStatus_unauthorized: OCSPResponseStatus =
+export const OCSPResponseStatus_unauthorized: 6 =
     OCSPResponseStatus.unauthorized; /* LONG_NAMED_ENUMERATED_VALUE */
 
 
@@ -275,17 +277,32 @@ export const OCSPResponseStatus_unauthorized: OCSPResponseStatus =
  * @constant
  * @type {number}
  */
-export const unauthorized: OCSPResponseStatus =
+export const unauthorized: 6 =
     OCSPResponseStatus.unauthorized; /* SHORT_NAMED_ENUMERATED_VALUE */
 
 
 
-export const _decode_OCSPResponseStatus = $._decodeEnumerated;
+export function _decode_OCSPResponseStatus(el: _Element): OCSPResponseStatus {
+    const enumerated = $._decodeEnumerated(el);
+    switch (enumerated) {
+        case OCSPResponseStatus.successful: return OCSPResponseStatus.successful;
+        case OCSPResponseStatus.malformedRequest: return OCSPResponseStatus.malformedRequest;
+        case OCSPResponseStatus.internalError: return OCSPResponseStatus.internalError;
+        case OCSPResponseStatus.tryLater: return OCSPResponseStatus.tryLater;
+        case OCSPResponseStatus.sigRequired: return OCSPResponseStatus.sigRequired;
+        case OCSPResponseStatus.unauthorized: return OCSPResponseStatus.unauthorized;
+        default:
+            throw new _ConstructionError(
+                "Invalid ENUMERATED value " + enumerated + " for OCSPResponseStatus.",
+                el,
+            );
+    }
+}
 
 
 
 
-export const _encode_OCSPResponseStatus = $._encodeEnumerated;
+export const _encode_OCSPResponseStatus: $.ASN1Encoder<OCSPResponseStatus> = $._encodeEnumerated as $.ASN1Encoder<OCSPResponseStatus>;
 
 
 /* eslint-enable */

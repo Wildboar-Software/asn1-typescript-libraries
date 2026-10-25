@@ -1,7 +1,7 @@
 /* eslint-disable */
 import {
-    BIT_STRING,
-    ASN1Element as _Element,
+    type BIT_STRING,
+    type ASN1Element as _Element,
     ASN1TagClass as _TagClass,
     ASN1Construction as _Construction,
     ASN1UniversalType as _UniversalType,
@@ -135,12 +135,12 @@ export const saturday: number = DaysOfWeek_saturday; /* SHORT_NAMED_BIT */
 
 
 
-export const _decode_DaysOfWeek = $._decodeBitString;
+export const _decode_DaysOfWeek: $.ASN1Decoder<BIT_STRING> = $._decodeBitString;
 
 
 
 
-export const _encode_DaysOfWeek = $._encodeBitString;
+export const _encode_DaysOfWeek: $.ASN1Encoder<BIT_STRING> = $._encodeBitString;
 
 
 /* eslint-enable */

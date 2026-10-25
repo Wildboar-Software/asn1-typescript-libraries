@@ -1,8 +1,8 @@
 /* eslint-disable */
 import {
-    OPTIONAL,
-    OBJECT_IDENTIFIER,
-    ASN1Element as _Element,
+    type OPTIONAL,
+    type OBJECT_IDENTIFIER,
+    type ASN1Element as _Element,
     ASN1TagClass as _TagClass,
     ASN1Construction as _Construction,
     ASN1UniversalType as _UniversalType,
@@ -13,7 +13,7 @@ import {
 } from '@wildboar/asn1';
 import * as $ from '@wildboar/asn1/functional';
 import {
-    RegistrationTypes_registrations,
+    type RegistrationTypes_registrations,
     _decode_RegistrationTypes_registrations,
     _encode_RegistrationTypes_registrations,
 } from '../MSAbstractService/RegistrationTypes-registrations.ta.mjs';
@@ -36,7 +36,7 @@ import {
  *     [0]  BIT STRING {auto-action-registrations(0), list-attribute-defaults(1),
  *                      fetch-attribute-defaults(2), ua-registrations(3),
  *                      submission-defaults(4), message-group-registrations(5)}
- *       OPTIONAL,
+ *       type OPTIONAL,
  *   extended-registrations   [1]  SET OF MS-EXTENSION.&id OPTIONAL,
  *   restrict-message-groups  [2]  MessageGroupsRestriction OPTIONAL
  * }
@@ -44,26 +44,34 @@ import {
  *
  */
 export class RegistrationTypes {
+    /**
+     * @summary `registrations`.
+     * @public
+     * @readonly
+     */
+    public readonly registrations?: OPTIONAL<RegistrationTypes_registrations>;
+    /**
+     * @summary `extended_registrations`.
+     * @public
+     * @readonly
+     */
+    public readonly extended_registrations?: OPTIONAL<OBJECT_IDENTIFIER[]>;
+    /**
+     * @summary `restrict_message_groups`.
+     * @public
+     * @readonly
+     */
+    public readonly restrict_message_groups?: OPTIONAL<MessageGroupsRestriction>;
+
     constructor(
-        /**
-         * @summary `registrations`.
-         * @public
-         * @readonly
-         */
-        readonly registrations?: OPTIONAL<RegistrationTypes_registrations>,
-        /**
-         * @summary `extended_registrations`.
-         * @public
-         * @readonly
-         */
-        readonly extended_registrations?: OPTIONAL<OBJECT_IDENTIFIER[]>,
-        /**
-         * @summary `restrict_message_groups`.
-         * @public
-         * @readonly
-         */
-        readonly restrict_message_groups?: OPTIONAL<MessageGroupsRestriction>
-    ) {}
+        registrations?: OPTIONAL<RegistrationTypes_registrations>,
+        extended_registrations?: OPTIONAL<OBJECT_IDENTIFIER[]>,
+        restrict_message_groups?: OPTIONAL<MessageGroupsRestriction>
+    ) {
+        this.registrations = registrations;
+        this.extended_registrations = extended_registrations;
+        this.restrict_message_groups = restrict_message_groups;
+    }
 
     /**
      * @summary Restructures an object into a RegistrationTypes

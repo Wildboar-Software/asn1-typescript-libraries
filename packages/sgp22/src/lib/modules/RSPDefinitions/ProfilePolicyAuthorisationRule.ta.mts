@@ -1,13 +1,13 @@
 /* eslint-disable */
 import {
     ASN1ConstructionError as _ConstructionError,
-    ASN1Element as _Element,
+    type ASN1Element as _Element,
     ASN1TagClass as _TagClass
 } from "@wildboar/asn1";
 import * as $ from "@wildboar/asn1/functional";
-import { PprIds, _decode_PprIds, _encode_PprIds } from "../RSPDefinitions/PprIds.ta.mjs";
+import { type PprIds, _decode_PprIds, _encode_PprIds } from "../RSPDefinitions/PprIds.ta.mjs";
 import { OperatorId, _decode_OperatorId, _encode_OperatorId } from "../RSPDefinitions/OperatorId.ta.mjs";
-import { ProfilePolicyAuthorisationRule_pprFlags, _decode_ProfilePolicyAuthorisationRule_pprFlags, _encode_ProfilePolicyAuthorisationRule_pprFlags } from "../RSPDefinitions/ProfilePolicyAuthorisationRule-pprFlags.ta.mjs";
+import { type ProfilePolicyAuthorisationRule_pprFlags, _decode_ProfilePolicyAuthorisationRule_pprFlags, _encode_ProfilePolicyAuthorisationRule_pprFlags } from "../RSPDefinitions/ProfilePolicyAuthorisationRule-pprFlags.ta.mjs";
 
 
 /**
@@ -44,7 +44,7 @@ class ProfilePolicyAuthorisationRule {
      * @public
      * @readonly
      */
-    readonly pprIds: PprIds;
+    public readonly pprIds: PprIds;
     /**
      * @summary `allowedOperators`.
      * @description
@@ -55,7 +55,7 @@ class ProfilePolicyAuthorisationRule {
      * @public
      * @readonly
      */
-    readonly allowedOperators: OperatorId[];
+    public readonly allowedOperators: OperatorId[];
     /**
      * @summary `pprFlags`.
      * @description
@@ -66,7 +66,7 @@ class ProfilePolicyAuthorisationRule {
      * @public
      * @readonly
      */
-    readonly pprFlags: ProfilePolicyAuthorisationRule_pprFlags;
+    public readonly pprFlags: ProfilePolicyAuthorisationRule_pprFlags;
 
     constructor (
         pprIds: PprIds,

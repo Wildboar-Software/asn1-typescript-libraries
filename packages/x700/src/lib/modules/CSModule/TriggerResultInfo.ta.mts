@@ -1,6 +1,6 @@
 /* eslint-disable */
 import {
-    ASN1Element as _Element,
+    type ASN1Element as _Element,
     ASN1TagClass as _TagClass,
     ASN1Construction as _Construction,
     ASN1UniversalType as _UniversalType,
@@ -11,12 +11,12 @@ import {
 } from '@wildboar/asn1';
 import * as $ from '@wildboar/asn1/functional';
 import {
-    TriggerId,
+    type TriggerId,
     _decode_TriggerId,
     _encode_TriggerId,
 } from '../CSModule/TriggerId.ta.mjs';
 import {
-    TriggerResultInfo_resultType,
+    type TriggerResultInfo_resultType,
     _decode_TriggerResultInfo_resultType,
     _encode_TriggerResultInfo_resultType,
 } from '../CSModule/TriggerResultInfo-resultType.ta.mjs';
@@ -51,29 +51,35 @@ import {
  *
  */
 export class TriggerResultInfo {
+    /**
+     * @summary `triggerId`.
+     * @description
+     *
+     * Trigger this result answers. Mandatory in the trigger-
+     * result service. ITU-T Rec. X.753 (10/97) §9.3.1 Table 7.
+     * @public
+     * @readonly
+     */
+    public readonly triggerId: TriggerId;
+    /**
+     * @summary `resultType`.
+     * @description
+     *
+     * Per-thread results grouped as single, sequential, or
+     * parallel, matching how the launch pad spawned. ITU-T Rec.
+     * X.753 (10/97) §7.1–§7.2, A.8.
+     * @public
+     * @readonly
+     */
+    public readonly resultType: TriggerResultInfo_resultType;
+
     constructor(
-        /**
-         * @summary `triggerId`.
-         * @description
-         *
-         * Trigger this result answers. Mandatory in the trigger-
-         * result service. ITU-T Rec. X.753 (10/97) §9.3.1 Table 7.
-         * @public
-         * @readonly
-         */
-        readonly triggerId: TriggerId,
-        /**
-         * @summary `resultType`.
-         * @description
-         *
-         * Per-thread results grouped as single, sequential, or
-         * parallel, matching how the launch pad spawned. ITU-T Rec.
-         * X.753 (10/97) §7.1–§7.2, A.8.
-         * @public
-         * @readonly
-         */
-        readonly resultType: TriggerResultInfo_resultType
-    ) {}
+        triggerId: TriggerId,
+        resultType: TriggerResultInfo_resultType
+    ) {
+        this.triggerId = triggerId;
+        this.resultType = resultType;
+    }
 
     /**
      * @summary Restructures an object into a TriggerResultInfo

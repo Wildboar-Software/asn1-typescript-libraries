@@ -1,7 +1,7 @@
 /* eslint-disable */
 import {
-    OBJECT_IDENTIFIER,
-    ASN1Element as _Element,
+    type OBJECT_IDENTIFIER,
+    type ASN1Element as _Element,
     ASN1TagClass as _TagClass,
     ASN1Construction as _Construction,
     ASN1UniversalType as _UniversalType,
@@ -37,31 +37,37 @@ import * as $ from '@wildboar/asn1/functional';
  *
  */
 export class UsageInfo {
+    /**
+     * @summary `serviceType`.
+     * @description
+     *
+     * Registered OID identifying the specialization (and thus
+     * the syntax of `usageData`). Cor.2 `&id` of `UMF-USAGE`.
+     * ITU-T Rec. X.742 (04/95) A.9; Cor.2 (02/2000) §5.
+     * @public
+     * @readonly
+     */
+    public readonly serviceType: OBJECT_IDENTIFIER;
+    /**
+     * @summary `usageData`.
+     * @description
+     *
+     * Usage blocks for this service type. Specializations shall
+     * use only the block kinds in §8.2.3; registration is
+     * mandatory and first. ITU-T Rec. X.742 (04/95) §8.2.3,
+     * §8.2.3.8, A.9.
+     * @public
+     * @readonly
+     */
+    public readonly usageData: _Element;
+
     constructor(
-        /**
-         * @summary `serviceType`.
-         * @description
-         *
-         * Registered OID identifying the specialization (and thus
-         * the syntax of `usageData`). Cor.2 `&id` of `UMF-USAGE`.
-         * ITU-T Rec. X.742 (04/95) A.9; Cor.2 (02/2000) §5.
-         * @public
-         * @readonly
-         */
-        readonly serviceType: OBJECT_IDENTIFIER,
-        /**
-         * @summary `usageData`.
-         * @description
-         *
-         * Usage blocks for this service type. Specializations shall
-         * use only the block kinds in §8.2.3; registration is
-         * mandatory and first. ITU-T Rec. X.742 (04/95) §8.2.3,
-         * §8.2.3.8, A.9.
-         * @public
-         * @readonly
-         */
-        readonly usageData: _Element
-    ) {}
+        serviceType: OBJECT_IDENTIFIER,
+        usageData: _Element
+    ) {
+        this.serviceType = serviceType;
+        this.usageData = usageData;
+    }
 
     /**
      * @summary Restructures an object into a UsageInfo

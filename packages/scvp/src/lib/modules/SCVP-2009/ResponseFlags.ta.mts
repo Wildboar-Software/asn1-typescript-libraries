@@ -1,7 +1,7 @@
 /* eslint-disable */
 import {
-  OPTIONAL,
-  BOOLEAN,
+  type OPTIONAL,
+  type BOOLEAN,
   ASN1Element as _Element,
   ASN1TagClass as _TagClass,
   ASN1Construction as _Construction,
@@ -34,52 +34,62 @@ import * as $ from '@wildboar/asn1/functional';
  *
  */
 export class ResponseFlags {
+  /**
+   * @summary `fullRequestInResponse`.
+   * @description
+   *
+   * If TRUE, ask the server to return the full `CVRequest` in
+   * `requestRef` (DEFAULT FALSE) ([RFC 5055 §3.2.5.1](https://datatracker.ietf.org/doc/html/rfc5055#section-3.2.5.1)).
+   *
+   * @public
+   * @readonly
+   */
+  public readonly fullRequestInResponse?: OPTIONAL<BOOLEAN>;
+  /**
+   * @summary `responseValidationPolByRef`.
+   * @description
+   *
+   * If TRUE (DEFAULT), prefer policy by reference in the response;
+   * FALSE asks for full policy by value ([RFC 5055 §3.2.5.2](https://datatracker.ietf.org/doc/html/rfc5055#section-3.2.5.2)).
+   *
+   * @public
+   * @readonly
+   */
+  public readonly responseValidationPolByRef?: OPTIONAL<BOOLEAN>;
+  /**
+   * @summary `protectResponse`.
+   * @description
+   *
+   * If TRUE (DEFAULT), ask for a protected response
+   * ([RFC 5055 §3.2.5.3](https://datatracker.ietf.org/doc/html/rfc5055#section-3.2.5.3)).
+   *
+   * @public
+   * @readonly
+   */
+  public readonly protectResponse?: OPTIONAL<BOOLEAN>;
+  /**
+   * @summary `cachedResponse`.
+   * @description
+   *
+   * If TRUE (DEFAULT), allow a cached response; FALSE asks for a
+   * request-specific response ([RFC 5055 §3.2.5.4](https://datatracker.ietf.org/doc/html/rfc5055#section-3.2.5.4)).
+   *
+   * @public
+   * @readonly
+   */
+  public readonly cachedResponse?: OPTIONAL<BOOLEAN>;
+
   constructor(
-    /**
-     * @summary `fullRequestInResponse`.
-     * @description
-     *
-     * If TRUE, ask the server to return the full `CVRequest` in
-     * `requestRef` (DEFAULT FALSE) ([RFC 5055 §3.2.5.1](https://datatracker.ietf.org/doc/html/rfc5055#section-3.2.5.1)).
-     *
-     * @public
-     * @readonly
-     */
-    readonly fullRequestInResponse?: OPTIONAL<BOOLEAN>,
-    /**
-     * @summary `responseValidationPolByRef`.
-     * @description
-     *
-     * If TRUE (DEFAULT), prefer policy by reference in the response;
-     * FALSE asks for full policy by value ([RFC 5055 §3.2.5.2](https://datatracker.ietf.org/doc/html/rfc5055#section-3.2.5.2)).
-     *
-     * @public
-     * @readonly
-     */
-    readonly responseValidationPolByRef?: OPTIONAL<BOOLEAN>,
-    /**
-     * @summary `protectResponse`.
-     * @description
-     *
-     * If TRUE (DEFAULT), ask for a protected response
-     * ([RFC 5055 §3.2.5.3](https://datatracker.ietf.org/doc/html/rfc5055#section-3.2.5.3)).
-     *
-     * @public
-     * @readonly
-     */
-    readonly protectResponse?: OPTIONAL<BOOLEAN>,
-    /**
-     * @summary `cachedResponse`.
-     * @description
-     *
-     * If TRUE (DEFAULT), allow a cached response; FALSE asks for a
-     * request-specific response ([RFC 5055 §3.2.5.4](https://datatracker.ietf.org/doc/html/rfc5055#section-3.2.5.4)).
-     *
-     * @public
-     * @readonly
-     */
-    readonly cachedResponse?: OPTIONAL<BOOLEAN>
-  ) {}
+    fullRequestInResponse?: OPTIONAL<BOOLEAN>,
+    responseValidationPolByRef?: OPTIONAL<BOOLEAN>,
+    protectResponse?: OPTIONAL<BOOLEAN>,
+    cachedResponse?: OPTIONAL<BOOLEAN>
+  ) {
+    this.fullRequestInResponse = fullRequestInResponse;
+    this.responseValidationPolByRef = responseValidationPolByRef;
+    this.protectResponse = protectResponse;
+    this.cachedResponse = cachedResponse;
+  }
 
   /**
    * @summary Restructures an object into a ResponseFlags

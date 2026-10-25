@@ -1,6 +1,6 @@
 /* eslint-disable */
 import {
-    ASN1Element as _Element,
+    type ASN1Element as _Element,
     ASN1TagClass as _TagClass,
     ASN1Construction as _Construction,
     ASN1UniversalType as _UniversalType,
@@ -10,7 +10,7 @@ import {
     ASN1ConstructionError as _ConstructionError,
 } from "@wildboar/asn1";
 import * as $ from "@wildboar/asn1/functional";
-import { ExtensionType, _decode_ExtensionType, _encode_ExtensionType } from "../TSM/ExtensionType.ta.mjs";
+import { type ExtensionType, _decode_ExtensionType, _encode_ExtensionType } from "../TSM/ExtensionType.ta.mjs";
 
 
 /**
@@ -33,28 +33,34 @@ import { ExtensionType, _decode_ExtensionType, _encode_ExtensionType } from "../
  */
 export
 class ExtensionValue {
+    /**
+     * @summary `extension_type`.
+     * @description
+     *
+     * `EXTENSION.&id` from `{Extensions}`. X.1084 §10.3.2.
+     *
+     * @public
+     * @readonly
+     */
+    public readonly extension_type: ExtensionType;
+    /**
+     * @summary `extension_data`.
+     * @description
+     *
+     * `EXTENSION.&Type` for that id. X.1084 §10.3.2.
+     *
+     * @public
+     * @readonly
+     */
+    public readonly extension_data: _Element;
+
     constructor (
-        /**
-         * @summary `extension_type`.
-         * @description
-         *
-         * `EXTENSION.&id` from `{Extensions}`. X.1084 §10.3.2.
-         *
-         * @public
-         * @readonly
-         */
-        readonly extension_type: ExtensionType,
-        /**
-         * @summary `extension_data`.
-         * @description
-         *
-         * `EXTENSION.&Type` for that id. X.1084 §10.3.2.
-         *
-         * @public
-         * @readonly
-         */
-        readonly extension_data: _Element
-    ) {}
+        extension_type: ExtensionType,
+        extension_data: _Element
+    ) {
+        this.extension_type = extension_type;
+        this.extension_data = extension_data;
+    }
 
     /**
      * @summary Restructures an object into a ExtensionValue

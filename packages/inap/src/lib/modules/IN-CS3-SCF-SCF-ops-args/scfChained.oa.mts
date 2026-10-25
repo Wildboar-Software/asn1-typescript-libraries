@@ -3,7 +3,7 @@ import { ASN1Element as _Element, ASN1TagClass as _TagClass } from "@wildboar/as
 import * as $ from "@wildboar/asn1/functional";
 import { type ERROR, type OPERATION } from "@wildboar/rose";
 import {
-    OPTIONALLY_PROTECTED,
+    type OPTIONALLY_PROTECTED,
     _get_decoder_for_OPTIONALLY_PROTECTED,
     _get_encoder_for_OPTIONALLY_PROTECTED,
 } from "../EnhancedSecurity/OPTIONALLY-PROTECTED.ta.mjs";

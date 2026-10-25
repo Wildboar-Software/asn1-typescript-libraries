@@ -1,5 +1,5 @@
 /* eslint-disable */
-import { ASN1Element as _Element, INTEGER } from "@wildboar/asn1";
+import { ASN1Element as _Element, type INTEGER } from "@wildboar/asn1";
 import * as $ from "@wildboar/asn1/functional";
 
 
@@ -24,7 +24,7 @@ export type CMSVersion = INTEGER;
  * @constant
  * @type {number}
  */
-export const CMSVersion_v0: CMSVersion = 0; /* LONG_NAMED_INTEGER_VALUE */
+export const CMSVersion_v0: 0 = 0 satisfies CMSVersion; /* LONG_NAMED_INTEGER_VALUE */
 
 
 /**
@@ -32,17 +32,17 @@ export const CMSVersion_v0: CMSVersion = 0; /* LONG_NAMED_INTEGER_VALUE */
  * @constant
  * @type {number}
  */
-export const v0: CMSVersion = CMSVersion_v0; /* SHORT_NAMED_INTEGER_VALUE */
+export const v0: 0 = CMSVersion_v0; /* SHORT_NAMED_INTEGER_VALUE */
 
 
 
 
-export const _decode_CMSVersion = $._decodeInteger;
+export const _decode_CMSVersion: $.ASN1Decoder<INTEGER> = $._decodeInteger;
 
 
 
 
-export const _encode_CMSVersion = $._encodeInteger;
+export const _encode_CMSVersion: $.ASN1Encoder<INTEGER> = $._encodeInteger;
 
 
 /* eslint-enable */

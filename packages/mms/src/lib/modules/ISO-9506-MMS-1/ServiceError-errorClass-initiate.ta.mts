@@ -1,7 +1,7 @@
 /* eslint-disable */
 import {
-    INTEGER,
-    ASN1Element as _Element,
+    type INTEGER,
+    type ASN1Element as _Element,
     ASN1TagClass as _TagClass,
     ASN1Construction as _Construction,
     ASN1UniversalType as _UniversalType,
@@ -49,7 +49,7 @@ type ServiceError_errorClass_initiate = INTEGER;
  * @type {number}
  */
 export
-const ServiceError_errorClass_initiate_other: ServiceError_errorClass_initiate = 0; /* LONG_NAMED_INTEGER_VALUE */
+const ServiceError_errorClass_initiate_other: 0 = 0 satisfies ServiceError_errorClass_initiate; /* LONG_NAMED_INTEGER_VALUE */
 
 /**
  * @summary ServiceError_errorClass_initiate_other
@@ -61,7 +61,7 @@ const ServiceError_errorClass_initiate_other: ServiceError_errorClass_initiate =
  * @type {number}
  */
 export
-const other: ServiceError_errorClass_initiate = ServiceError_errorClass_initiate_other; /* SHORT_NAMED_INTEGER_VALUE */
+const other: 0 = ServiceError_errorClass_initiate_other; /* SHORT_NAMED_INTEGER_VALUE */
 
 /**
  * @summary ServiceError_errorClass_initiate_max_services_outstanding_calling_insufficient
@@ -74,7 +74,7 @@ const other: ServiceError_errorClass_initiate = ServiceError_errorClass_initiate
  * @type {number}
  */
 export
-const ServiceError_errorClass_initiate_max_services_outstanding_calling_insufficient: ServiceError_errorClass_initiate = 3; /* LONG_NAMED_INTEGER_VALUE */
+const ServiceError_errorClass_initiate_max_services_outstanding_calling_insufficient: 3 = 3 satisfies ServiceError_errorClass_initiate; /* LONG_NAMED_INTEGER_VALUE */
 
 /**
  * @summary ServiceError_errorClass_initiate_max_services_outstanding_calling_insufficient
@@ -87,7 +87,7 @@ const ServiceError_errorClass_initiate_max_services_outstanding_calling_insuffic
  * @type {number}
  */
 export
-const max_services_outstanding_calling_insufficient: ServiceError_errorClass_initiate = ServiceError_errorClass_initiate_max_services_outstanding_calling_insufficient; /* SHORT_NAMED_INTEGER_VALUE */
+const max_services_outstanding_calling_insufficient: 3 = ServiceError_errorClass_initiate_max_services_outstanding_calling_insufficient; /* SHORT_NAMED_INTEGER_VALUE */
 
 /**
  * @summary ServiceError_errorClass_initiate_max_services_outstanding_called_insufficient
@@ -100,7 +100,7 @@ const max_services_outstanding_calling_insufficient: ServiceError_errorClass_ini
  * @type {number}
  */
 export
-const ServiceError_errorClass_initiate_max_services_outstanding_called_insufficient: ServiceError_errorClass_initiate = 4; /* LONG_NAMED_INTEGER_VALUE */
+const ServiceError_errorClass_initiate_max_services_outstanding_called_insufficient: 4 = 4 satisfies ServiceError_errorClass_initiate; /* LONG_NAMED_INTEGER_VALUE */
 
 /**
  * @summary ServiceError_errorClass_initiate_max_services_outstanding_called_insufficient
@@ -113,7 +113,7 @@ const ServiceError_errorClass_initiate_max_services_outstanding_called_insuffici
  * @type {number}
  */
 export
-const max_services_outstanding_called_insufficient: ServiceError_errorClass_initiate = ServiceError_errorClass_initiate_max_services_outstanding_called_insufficient; /* SHORT_NAMED_INTEGER_VALUE */
+const max_services_outstanding_called_insufficient: 4 = ServiceError_errorClass_initiate_max_services_outstanding_called_insufficient; /* SHORT_NAMED_INTEGER_VALUE */
 
 /**
  * @summary ServiceError_errorClass_initiate_service_CBB_insufficient
@@ -126,7 +126,7 @@ const max_services_outstanding_called_insufficient: ServiceError_errorClass_init
  * @type {number}
  */
 export
-const ServiceError_errorClass_initiate_service_CBB_insufficient: ServiceError_errorClass_initiate = 5; /* LONG_NAMED_INTEGER_VALUE */
+const ServiceError_errorClass_initiate_service_CBB_insufficient: 5 = 5 satisfies ServiceError_errorClass_initiate; /* LONG_NAMED_INTEGER_VALUE */
 
 /**
  * @summary ServiceError_errorClass_initiate_service_CBB_insufficient
@@ -139,7 +139,7 @@ const ServiceError_errorClass_initiate_service_CBB_insufficient: ServiceError_er
  * @type {number}
  */
 export
-const service_CBB_insufficient: ServiceError_errorClass_initiate = ServiceError_errorClass_initiate_service_CBB_insufficient; /* SHORT_NAMED_INTEGER_VALUE */
+const service_CBB_insufficient: 5 = ServiceError_errorClass_initiate_service_CBB_insufficient; /* SHORT_NAMED_INTEGER_VALUE */
 
 /**
  * @summary ServiceError_errorClass_initiate_parameter_CBB_insufficient
@@ -152,7 +152,7 @@ const service_CBB_insufficient: ServiceError_errorClass_initiate = ServiceError_
  * @type {number}
  */
 export
-const ServiceError_errorClass_initiate_parameter_CBB_insufficient: ServiceError_errorClass_initiate = 6; /* LONG_NAMED_INTEGER_VALUE */
+const ServiceError_errorClass_initiate_parameter_CBB_insufficient: 6 = 6 satisfies ServiceError_errorClass_initiate; /* LONG_NAMED_INTEGER_VALUE */
 
 /**
  * @summary ServiceError_errorClass_initiate_parameter_CBB_insufficient
@@ -165,7 +165,7 @@ const ServiceError_errorClass_initiate_parameter_CBB_insufficient: ServiceError_
  * @type {number}
  */
 export
-const parameter_CBB_insufficient: ServiceError_errorClass_initiate = ServiceError_errorClass_initiate_parameter_CBB_insufficient; /* SHORT_NAMED_INTEGER_VALUE */
+const parameter_CBB_insufficient: 6 = ServiceError_errorClass_initiate_parameter_CBB_insufficient; /* SHORT_NAMED_INTEGER_VALUE */
 
 /**
  * @summary ServiceError_errorClass_initiate_nesting_level_insufficient
@@ -178,7 +178,7 @@ const parameter_CBB_insufficient: ServiceError_errorClass_initiate = ServiceErro
  * @type {number}
  */
 export
-const ServiceError_errorClass_initiate_nesting_level_insufficient: ServiceError_errorClass_initiate = 7; /* LONG_NAMED_INTEGER_VALUE */
+const ServiceError_errorClass_initiate_nesting_level_insufficient: 7 = 7 satisfies ServiceError_errorClass_initiate; /* LONG_NAMED_INTEGER_VALUE */
 
 /**
  * @summary ServiceError_errorClass_initiate_nesting_level_insufficient
@@ -191,9 +191,9 @@ const ServiceError_errorClass_initiate_nesting_level_insufficient: ServiceError_
  * @type {number}
  */
 export
-const nesting_level_insufficient: ServiceError_errorClass_initiate = ServiceError_errorClass_initiate_nesting_level_insufficient; /* SHORT_NAMED_INTEGER_VALUE */
-export const _decode_ServiceError_errorClass_initiate = $._decodeInteger;
-export const _encode_ServiceError_errorClass_initiate = $._encodeInteger;
+const nesting_level_insufficient: 7 = ServiceError_errorClass_initiate_nesting_level_insufficient; /* SHORT_NAMED_INTEGER_VALUE */
+export const _decode_ServiceError_errorClass_initiate: $.ASN1Decoder<INTEGER> = $._decodeInteger;
+export const _encode_ServiceError_errorClass_initiate: $.ASN1Encoder<INTEGER> = $._encodeInteger;
 
 
 /* eslint-enable */

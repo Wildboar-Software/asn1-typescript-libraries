@@ -1,8 +1,8 @@
 import {
-    OPTIONAL,
-    OCTET_STRING,
-    IA5String,
-    ASN1Element as _Element,
+    type OPTIONAL,
+    type OCTET_STRING,
+    type IA5String,
+    type ASN1Element as _Element,
     ASN1TagClass as _TagClass,
 } from "@wildboar/asn1";
 import * as $ from "@wildboar/asn1/functional";
@@ -27,10 +27,16 @@ import * as $ from "@wildboar/asn1/functional";
  *
  */
 export class MessageID_text {
+    public readonly messageContent: IA5String;
+    public readonly attributes?: OPTIONAL<OCTET_STRING>;
+
     constructor (
-        readonly messageContent: IA5String,
-        readonly attributes?: OPTIONAL<OCTET_STRING>,
-    ) {}
+        messageContent: IA5String,
+        attributes?: OPTIONAL<OCTET_STRING>,
+    ) {
+        this.messageContent = messageContent;
+        this.attributes = attributes;
+    }
 
     public static _from_object (_o: { [_K in keyof (MessageID_text)]: (MessageID_text)[_K] }): MessageID_text {
         return new MessageID_text(_o.messageContent, _o.attributes);

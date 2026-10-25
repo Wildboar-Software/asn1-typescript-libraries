@@ -67,7 +67,7 @@ type MatchType = _enum_for_MatchType;
  * @enum {number}
  */
 export
-const MatchType = _enum_for_MatchType;
+const MatchType: typeof _enum_for_MatchType = _enum_for_MatchType;
 
 /**
  * @summary MatchType_inhibiting
@@ -80,7 +80,7 @@ const MatchType = _enum_for_MatchType;
  * @type {number}
  */
 export
-const MatchType_inhibiting: MatchType = MatchType.inhibiting; /* LONG_NAMED_ENUMERATED_VALUE */
+const MatchType_inhibiting: _enum_for_MatchType.inhibiting = MatchType.inhibiting; /* LONG_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary inhibiting
@@ -93,7 +93,7 @@ const MatchType_inhibiting: MatchType = MatchType.inhibiting; /* LONG_NAMED_ENUM
  * @type {number}
  */
 export
-const inhibiting: MatchType = MatchType.inhibiting; /* SHORT_NAMED_ENUMERATED_VALUE */
+const inhibiting: _enum_for_MatchType.inhibiting = MatchType.inhibiting; /* SHORT_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary MatchType_enabling
@@ -106,7 +106,7 @@ const inhibiting: MatchType = MatchType.inhibiting; /* SHORT_NAMED_ENUMERATED_VA
  * @type {number}
  */
 export
-const MatchType_enabling: MatchType = MatchType.enabling; /* LONG_NAMED_ENUMERATED_VALUE */
+const MatchType_enabling: _enum_for_MatchType.enabling = MatchType.enabling; /* LONG_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary enabling
@@ -119,7 +119,7 @@ const MatchType_enabling: MatchType = MatchType.enabling; /* LONG_NAMED_ENUMERAT
  * @type {number}
  */
 export
-const enabling: MatchType = MatchType.enabling; /* SHORT_NAMED_ENUMERATED_VALUE */
+const enabling: _enum_for_MatchType.enabling = MatchType.enabling; /* SHORT_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary Decodes an ASN.1 element into a(n) MatchType
@@ -127,7 +127,7 @@ const enabling: MatchType = MatchType.enabling; /* SHORT_NAMED_ENUMERATED_VALUE 
  * @param el The element being decoded.
  * @returns The decoded data structure.
  */
-export const _decode_MatchType = $._decodeEnumerated;
+export const _decode_MatchType: $.ASN1Decoder<number> = $._decodeEnumerated;
 
 /**
  * @summary Encodes a(n) MatchType into an ASN.1 Element.
@@ -136,7 +136,7 @@ export const _decode_MatchType = $._decodeEnumerated;
  * @param elGetter A function that can be used to get new ASN.1 elements.
  * @returns {_Element} The MatchType, encoded as an ASN.1 Element.
  */
-export const _encode_MatchType = $._encodeEnumerated;
+export const _encode_MatchType: $.ASN1Encoder<number> = $._encodeEnumerated;
 
 
 /* eslint-enable */

@@ -1,6 +1,6 @@
 /* eslint-disable */
 import {
-  OBJECT_IDENTIFIER,
+  type OBJECT_IDENTIFIER,
   ASN1Element as _Element,
   ASN1TagClass as _TagClass,
   ASN1Construction as _Construction,
@@ -42,7 +42,7 @@ export class SpecificErrorInfo {
    * @public
    * @readonly
    */
-  readonly errorId: OBJECT_IDENTIFIER;
+  public readonly errorId: OBJECT_IDENTIFIER;
   /**
    * @summary `errorInfo`.
    * @description
@@ -53,7 +53,7 @@ export class SpecificErrorInfo {
    * @public
    * @readonly
    */
-  readonly errorInfo: _Element;
+  public readonly errorInfo: _Element;
 
   constructor(
     errorId: OBJECT_IDENTIFIER,

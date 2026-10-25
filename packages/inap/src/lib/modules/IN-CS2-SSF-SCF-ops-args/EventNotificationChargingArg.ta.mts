@@ -1,15 +1,15 @@
 /* eslint-disable */
 import {
-    OPTIONAL,
-    ASN1Element as _Element,
+    type OPTIONAL,
+    type ASN1Element as _Element,
     ASN1TagClass as _TagClass
 } from "@wildboar/asn1";
 import * as $ from "@wildboar/asn1/functional";
-import { EventTypeCharging, _decode_EventTypeCharging, _encode_EventTypeCharging } from "../IN-CS2-datatypes/EventTypeCharging.ta.mjs";
+import { type EventTypeCharging, _decode_EventTypeCharging, _encode_EventTypeCharging } from "../IN-CS2-datatypes/EventTypeCharging.ta.mjs";
 // export { EventTypeCharging, _decode_EventTypeCharging, _encode_EventTypeCharging } from "../IN-CS2-datatypes/EventTypeCharging.ta.mjs";
-import { EventSpecificInformationCharging, _decode_EventSpecificInformationCharging, _encode_EventSpecificInformationCharging } from "../IN-CS2-datatypes/EventSpecificInformationCharging.ta.mjs";
+import { type EventSpecificInformationCharging, _decode_EventSpecificInformationCharging, _encode_EventSpecificInformationCharging } from "../IN-CS2-datatypes/EventSpecificInformationCharging.ta.mjs";
 // export { EventSpecificInformationCharging, _decode_EventSpecificInformationCharging, _encode_EventSpecificInformationCharging } from "../IN-CS2-datatypes/EventSpecificInformationCharging.ta.mjs";
-import { LegID, _decode_LegID, _encode_LegID } from "../IN-CS2-datatypes/LegID.ta.mjs";
+import { type LegID, _decode_LegID, _encode_LegID } from "../IN-CS2-datatypes/LegID.ta.mjs";
 // export { LegID, _decode_LegID, _encode_LegID } from "../IN-CS2-datatypes/LegID.ta.mjs";
 import { ExtensionField, _decode_ExtensionField, _encode_ExtensionField } from "../IN-CS2-datatypes/ExtensionField.ta.mjs";
 // export { ExtensionField, _decode_ExtensionField, _encode_ExtensionField } from "../IN-CS2-datatypes/ExtensionField.ta.mjs";
@@ -116,13 +116,13 @@ class EventNotificationChargingArg {
      * @static
      * @method
      */
-    public static get _default_value_for_monitorMode () { return MonitorMode_notifyAndContinue; }        /**
+    public static get _default_value_for_monitorMode (): _enum_for_MonitorMode { return MonitorMode_notifyAndContinue; }        /**
          * @summary The enum used as the type of the component `monitorMode`
          * @public
          * @static
          */
 
-    public static _enum_for_monitorMode = _enum_for_MonitorMode;
+    public static _enum_for_monitorMode: typeof _enum_for_MonitorMode = _enum_for_MonitorMode;
 }
 
 /**

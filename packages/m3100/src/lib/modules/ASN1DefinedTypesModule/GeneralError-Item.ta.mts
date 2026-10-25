@@ -1,8 +1,8 @@
 /* eslint-disable */
 import {
-    OPTIONAL,
-    GraphicString,
-    ASN1Element as _Element,
+    type OPTIONAL,
+    type GraphicString,
+    type ASN1Element as _Element,
     ASN1TagClass as _TagClass,
     ASN1Construction as _Construction,
     ASN1UniversalType as _UniversalType,
@@ -13,17 +13,17 @@ import {
 } from '@wildboar/asn1';
 import * as $ from '@wildboar/asn1/functional';
 import {
-    GeneralErrorCause,
+    type GeneralErrorCause,
     _decode_GeneralErrorCause,
     _encode_GeneralErrorCause,
 } from '../ASN1DefinedTypesModule/GeneralErrorCause.ta.mjs';
 import {
-    ObjectInstance,
+    type ObjectInstance,
     _decode_ObjectInstance,
     _encode_ObjectInstance,
 } from '@wildboar/cmip';
 import {
-    AttributeList,
+    type AttributeList,
     _decode_AttributeList,
     _encode_AttributeList,
 } from '@wildboar/attribute-asn1module';
@@ -40,32 +40,42 @@ import {
  *
  */
 export class GeneralError_Item {
+    /**
+     * @summary `cause`.
+     * @public
+     * @readonly
+     */
+    public readonly cause: GeneralErrorCause;
+    /**
+     * @summary `details`.
+     * @public
+     * @readonly
+     */
+    public readonly details?: OPTIONAL<GraphicString>;
+    /**
+     * @summary `relatedObjects`.
+     * @public
+     * @readonly
+     */
+    public readonly relatedObjects?: OPTIONAL<ObjectInstance[]>;
+    /**
+     * @summary `attributeList`.
+     * @public
+     * @readonly
+     */
+    public readonly attributeList?: OPTIONAL<AttributeList>;
+
     constructor(
-        /**
-         * @summary `cause`.
-         * @public
-         * @readonly
-         */
-        readonly cause: GeneralErrorCause,
-        /**
-         * @summary `details`.
-         * @public
-         * @readonly
-         */
-        readonly details?: OPTIONAL<GraphicString>,
-        /**
-         * @summary `relatedObjects`.
-         * @public
-         * @readonly
-         */
-        readonly relatedObjects?: OPTIONAL<ObjectInstance[]>,
-        /**
-         * @summary `attributeList`.
-         * @public
-         * @readonly
-         */
-        readonly attributeList?: OPTIONAL<AttributeList>
-    ) {}
+        cause: GeneralErrorCause,
+        details?: OPTIONAL<GraphicString>,
+        relatedObjects?: OPTIONAL<ObjectInstance[]>,
+        attributeList?: OPTIONAL<AttributeList>
+    ) {
+        this.cause = cause;
+        this.details = details;
+        this.relatedObjects = relatedObjects;
+        this.attributeList = attributeList;
+    }
 
     /**
      * @summary Restructures an object into a GeneralError_Item

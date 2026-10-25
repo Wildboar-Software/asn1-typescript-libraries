@@ -1,7 +1,7 @@
 /* eslint-disable */
 import {
-    OPTIONAL,
-    ASN1Element as _Element,
+    type OPTIONAL,
+    type ASN1Element as _Element,
     ASN1TagClass as _TagClass,
     ASN1Construction as _Construction,
     ASN1UniversalType as _UniversalType,
@@ -11,7 +11,7 @@ import {
     ASN1ConstructionError as _ConstructionError,
 } from "@wildboar/asn1";
 import * as $ from "@wildboar/asn1/functional";
-import { Identifier, _decode_Identifier, _encode_Identifier } from "../ISO-9506-MMS-1/Identifier.ta.mjs";
+import { type Identifier, _decode_Identifier, _encode_Identifier } from "../ISO-9506-MMS-1/Identifier.ta.mjs";
 import { ServiceError, _decode_ServiceError, _encode_ServiceError } from "../ISO-9506-MMS-1/ServiceError.ta.mjs";
 
 
@@ -35,31 +35,37 @@ import { ServiceError, _decode_ServiceError, _encode_ServiceError } from "../ISO
  */
 export
 class TerminateDownloadSequence_Request {
+    /**
+     * @summary `domainName`.
+     * @description
+     *
+     * Domain whose download is ending. Must be `loading`, `complete`, or
+     * `incomplete`. ISO 9506-1:2003 §11.4.1.1.1.
+     *
+     * @public
+     * @readonly
+     */
+    public readonly domainName: Identifier;
+    /**
+     * @summary `discard`.
+     * @description
+     *
+     * If present, abort: delete the Domain and report why. If absent,
+     * retain content and place Domain in `ready`. ISO 9506-1:2003
+     * §11.4.1.1.2. ISO 9506-2:2003 §11.4.1.1.
+     *
+     * @public
+     * @readonly
+     */
+    public readonly discard?: OPTIONAL<ServiceError>;
+
     constructor (
-        /**
-         * @summary `domainName`.
-         * @description
-         *
-         * Domain whose download is ending. Must be `loading`, `complete`, or
-         * `incomplete`. ISO 9506-1:2003 §11.4.1.1.1.
-         *
-         * @public
-         * @readonly
-         */
-        readonly domainName: Identifier,
-        /**
-         * @summary `discard`.
-         * @description
-         *
-         * If present, abort: delete the Domain and report why. If absent,
-         * retain content and place Domain in `ready`. ISO 9506-1:2003
-         * §11.4.1.1.2. ISO 9506-2:2003 §11.4.1.1.
-         *
-         * @public
-         * @readonly
-         */
-        readonly discard?: OPTIONAL<ServiceError>
-    ) {}
+        domainName: Identifier,
+        discard?: OPTIONAL<ServiceError>
+    ) {
+        this.domainName = domainName;
+        this.discard = discard;
+    }
 
     /**
      * @summary Restructures an object into a TerminateDownloadSequence_Request

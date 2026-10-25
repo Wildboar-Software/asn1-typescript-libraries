@@ -2,11 +2,11 @@
 
 import * as $ from "@wildboar/asn1/functional";
 import {
-    OPTIONAL,
-    INTEGER,
-    SEQUENCE,
-    SET,
-    ASN1Element as _Element,
+    type OPTIONAL,
+    type INTEGER,
+    type SEQUENCE,
+    type SET,
+    type ASN1Element as _Element,
     ASN1TagClass as _TagClass
 } from "@wildboar/asn1";
 import {
@@ -34,8 +34,8 @@ import {
  * ```asn1
  * TelTonesData ::= SEQUENCE
  * {    toneDetected            ToneDetected,
- *     toneFrequency            [0] IMPLICIT INTEGER            OPTIONAL,
- *     toneDuration            [1] IMPLICIT INTEGER            OPTIONAL,
+ *     toneFrequency            [0] IMPLICIT INTEGER            type OPTIONAL,
+ *     toneDuration            [1] IMPLICIT INTEGER            type OPTIONAL,
  *     tonePauseDuration        [2] IMPLICIT INTEGER            OPTIONAL }
  * ```
  * 
@@ -43,51 +43,61 @@ import {
  */
 export
 class TelTonesData {
+    /**
+     * @summary `toneDetected`.
+     * @description
+     *
+     * Detected telephony tone (ECMA-269 §25.1.1.1).
+     *
+     * @public
+     * @readonly
+     */
+    public readonly toneDetected: ToneDetected;
+    /**
+     * @summary `toneFrequency`.
+     * @description
+     *
+     * Hz of the tone. Only when `toneDetected` is `other` (ECMA-269
+     * §25.1.1.1).
+     *
+     * @public
+     * @readonly
+     */
+    public readonly toneFrequency?: OPTIONAL<INTEGER>;
+    /**
+     * @summary `toneDuration`.
+     * @description
+     *
+     * Milliseconds. Only when `toneDetected` is `other` (ECMA-269
+     * §25.1.1.1).
+     *
+     * @public
+     * @readonly
+     */
+    public readonly toneDuration?: OPTIONAL<INTEGER>;
+    /**
+     * @summary `tonePauseDuration`.
+     * @description
+     *
+     * Milliseconds since the previous tone. Only when `toneDetected` is
+     * `other` (ECMA-269 §25.1.1.1).
+     *
+     * @public
+     * @readonly
+     */
+    public readonly tonePauseDuration?: OPTIONAL<INTEGER>;
+
     constructor (
-        /**
-         * @summary `toneDetected`.
-         * @description
-         *
-         * Detected telephony tone (ECMA-269 §25.1.1.1).
-         *
-         * @public
-         * @readonly
-         */
-        readonly toneDetected: ToneDetected,
-        /**
-         * @summary `toneFrequency`.
-         * @description
-         *
-         * Hz of the tone. Only when `toneDetected` is `other` (ECMA-269
-         * §25.1.1.1).
-         *
-         * @public
-         * @readonly
-         */
-        readonly toneFrequency?: OPTIONAL<INTEGER>,
-        /**
-         * @summary `toneDuration`.
-         * @description
-         *
-         * Milliseconds. Only when `toneDetected` is `other` (ECMA-269
-         * §25.1.1.1).
-         *
-         * @public
-         * @readonly
-         */
-        readonly toneDuration?: OPTIONAL<INTEGER>,
-        /**
-         * @summary `tonePauseDuration`.
-         * @description
-         *
-         * Milliseconds since the previous tone. Only when `toneDetected` is
-         * `other` (ECMA-269 §25.1.1.1).
-         *
-         * @public
-         * @readonly
-         */
-        readonly tonePauseDuration?: OPTIONAL<INTEGER>
-    ) {}
+        toneDetected: ToneDetected,
+        toneFrequency?: OPTIONAL<INTEGER>,
+        toneDuration?: OPTIONAL<INTEGER>,
+        tonePauseDuration?: OPTIONAL<INTEGER>
+    ) {
+        this.toneDetected = toneDetected;
+        this.toneFrequency = toneFrequency;
+        this.toneDuration = toneDuration;
+        this.tonePauseDuration = tonePauseDuration;
+    }
 
     /**
      * @summary Restructures an object into a TelTonesData
@@ -111,7 +121,7 @@ class TelTonesData {
          * @static
          */
 
-    public static _enum_for_toneDetected = _enum_for_ToneDetected;
+    public static _enum_for_toneDetected: typeof _enum_for_ToneDetected = _enum_for_ToneDetected;
 }
 
 /**

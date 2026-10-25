@@ -1,4 +1,5 @@
 /* eslint-disable */
+import { ASN1Element as _Element, ASN1ConstructionError as _ConstructionError } from "@wildboar/asn1";
 import * as $ from "@wildboar/asn1/functional";
 
 
@@ -49,7 +50,7 @@ type ResourceStatus = _enum_for_ResourceStatus;
  * @enum {number}
  */
 export
-const ResourceStatus = _enum_for_ResourceStatus;
+const ResourceStatus: typeof _enum_for_ResourceStatus = _enum_for_ResourceStatus;
 
 /**
  * @summary ResourceStatus_busy
@@ -57,7 +58,7 @@ const ResourceStatus = _enum_for_ResourceStatus;
  * @type {number}
  */
 export
-const ResourceStatus_busy: ResourceStatus = ResourceStatus.busy; /* LONG_NAMED_ENUMERATED_VALUE */
+const ResourceStatus_busy: _enum_for_ResourceStatus.busy = ResourceStatus.busy; /* LONG_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary busy
@@ -65,7 +66,7 @@ const ResourceStatus_busy: ResourceStatus = ResourceStatus.busy; /* LONG_NAMED_E
  * @type {number}
  */
 export
-const busy: ResourceStatus = ResourceStatus.busy; /* SHORT_NAMED_ENUMERATED_VALUE */
+const busy: _enum_for_ResourceStatus.busy = ResourceStatus.busy; /* SHORT_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary ResourceStatus_idle
@@ -73,7 +74,7 @@ const busy: ResourceStatus = ResourceStatus.busy; /* SHORT_NAMED_ENUMERATED_VALU
  * @type {number}
  */
 export
-const ResourceStatus_idle: ResourceStatus = ResourceStatus.idle; /* LONG_NAMED_ENUMERATED_VALUE */
+const ResourceStatus_idle: _enum_for_ResourceStatus.idle = ResourceStatus.idle; /* LONG_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary idle
@@ -81,12 +82,23 @@ const ResourceStatus_idle: ResourceStatus = ResourceStatus.idle; /* LONG_NAMED_E
  * @type {number}
  */
 export
-const idle: ResourceStatus = ResourceStatus.idle; /* SHORT_NAMED_ENUMERATED_VALUE */
+const idle: _enum_for_ResourceStatus.idle = ResourceStatus.idle; /* SHORT_NAMED_ENUMERATED_VALUE */
 
 export
-const _decode_ResourceStatus: $.ASN1Decoder<ResourceStatus> = $._decodeEnumerated;
+function _decode_ResourceStatus(el: _Element): ResourceStatus {
+    const enumerated = $._decodeEnumerated(el);
+    switch (enumerated) {
+        case ResourceStatus.busy: return ResourceStatus.busy;
+        case ResourceStatus.idle: return ResourceStatus.idle;
+        default:
+            throw new _ConstructionError(
+                "Invalid ENUMERATED value " + enumerated + " for ResourceStatus.",
+                el,
+            );
+    }
+}
 
 export
-const _encode_ResourceStatus: $.ASN1Encoder<ResourceStatus> = $._encodeEnumerated;
+const _encode_ResourceStatus: $.ASN1Encoder<ResourceStatus> = $._encodeEnumerated as $.ASN1Encoder<ResourceStatus>;
 
 /* eslint-enable */

@@ -1,9 +1,9 @@
 /* eslint-disable */
 import {
-    ASN1Element as _Element,
+    type ASN1Element as _Element,
     ASN1TagClass as _TagClass,
-    BOOLEAN,
-    OPTIONAL,
+    type BOOLEAN,
+    type OPTIONAL,
 } from "@wildboar/asn1";
 import * as $ from "@wildboar/asn1/functional";
 /**
@@ -23,32 +23,42 @@ import * as $ from "@wildboar/asn1/functional";
  *
  */
 export class ExtensionAttribute_value_Item {
+    /**
+     * @summary `mandatory`.
+     * @public
+     * @readonly
+     */
+    public readonly mandatory: OPTIONAL<BOOLEAN>;
+    /**
+     * @summary `critical`.
+     * @public
+     * @readonly
+     */
+    public readonly critical: OPTIONAL<BOOLEAN>;
+    /**
+     * @summary `ext`.
+     * @public
+     * @readonly
+     */
+    public readonly ext: _Element;
+    /**
+     * @summary Extensions that are not recognized.
+     * @public
+     * @readonly
+     */
+    public readonly _unrecognizedExtensionsList: _Element[];
+
     constructor(
-        /**
-         * @summary `mandatory`.
-         * @public
-         * @readonly
-         */
-        readonly mandatory: OPTIONAL<BOOLEAN>,
-        /**
-         * @summary `critical`.
-         * @public
-         * @readonly
-         */
-        readonly critical: OPTIONAL<BOOLEAN>,
-        /**
-         * @summary `ext`.
-         * @public
-         * @readonly
-         */
-        readonly ext: _Element,
-        /**
-         * @summary Extensions that are not recognized.
-         * @public
-         * @readonly
-         */
-        readonly _unrecognizedExtensionsList: _Element[] = []
-    ) {}
+        mandatory: OPTIONAL<BOOLEAN>,
+        critical: OPTIONAL<BOOLEAN>,
+        ext: _Element,
+        _unrecognizedExtensionsList: _Element[] = []
+    ) {
+        this.mandatory = mandatory;
+        this.critical = critical;
+        this.ext = ext;
+        this._unrecognizedExtensionsList = _unrecognizedExtensionsList;
+    }
 
     /**
      * @summary Restructures an object into a ExtensionAttribute_value_Item

@@ -1,7 +1,7 @@
 /* eslint-disable */
 import { id_algo_multipleAuthenEncryptAlgo } from "../CryptoTools/id-algo-multipleAuthenEncryptAlgo.va.mjs";
 import {
-    MultipleAuthenEncryptAlgo,
+    type MultipleAuthenEncryptAlgo,
     _decode_MultipleAuthenEncryptAlgo,
     _encode_MultipleAuthenEncryptAlgo,
 } from "../CryptoTools/MultipleAuthenEncryptAlgo.ta.mjs";

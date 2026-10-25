@@ -1,12 +1,12 @@
 /* eslint-disable */
 import {
-    ASN1Element as _Element,
+    type ASN1Element as _Element,
     ASN1TagClass as _TagClass,
-    BIT_STRING,
-    INTEGER,
-    OCTET_STRING,
-    OPTIONAL,
-    UTCTime,
+    type BIT_STRING,
+    type INTEGER,
+    type OCTET_STRING,
+    type OPTIONAL,
+    type UTCTime,
 } from "@wildboar/asn1";
 import * as $ from "@wildboar/asn1/functional";
 import {
@@ -15,7 +15,7 @@ import {
     _encode_Validity,
 } from "../AuthenticationFramework/Validity.ta.mjs";
 import {
-    Name,
+    type Name,
     _decode_Name,
     _encode_Name,
 } from "../InformationFramework/Name.ta.mjs";
@@ -25,12 +25,12 @@ import {
     _encode_Context_Data,
 } from "../SpkmGssTokens/Context-Data.ta.mjs";
 import {
-    Key_Estb_Algs,
+    type Key_Estb_Algs,
     _decode_Key_Estb_Algs,
     _encode_Key_Estb_Algs,
 } from "../SpkmGssTokens/Key-Estb-Algs.ta.mjs";
 import {
-    Random_Integer,
+    type Random_Integer,
     _decode_Random_Integer,
     _encode_Random_Integer,
 } from "../SpkmGssTokens/Random-Integer.ta.mjs";
@@ -93,145 +93,171 @@ export class Req_contents {
      */
     public originalDER: SingleThreadBuffer | null = null;
 
+    /**
+     * @summary `tok_id`.
+     * @description
+     *
+     * Must be 256 (0x0100). Distinct from the CHOICE tag on
+     * `SPKMInnerContextToken`; this value is inside the signed/MACed
+     * bytes.
+     *
+     * @public
+     * @readonly
+     */
+    public readonly tok_id: INTEGER;
+    /**
+     * @summary `context_id`.
+     * @description
+     *
+     * Initiator's fresh random. If a reply is expected, the target
+     * concatenates its own random onto this; for SPKM-2 unilateral
+     * this value is the context-id as-is. Need only be fresh, not
+     * unpredictable.
+     *
+     * @public
+     * @readonly
+     */
+    public readonly context_id: Random_Integer;
+    /**
+     * @summary `pvno`.
+     * @description
+     *
+     * One bit per protocol version; bit 0 is this RFC (version 0).
+     * Token version is the highest bit set. SPKM-2 unilateral: set
+     * exactly one bit (no negotiation).
+     *
+     * @public
+     * @readonly
+     */
+    public readonly pvno: BIT_STRING;
+    /**
+     * @summary `timestamp`.
+     * @description
+     *
+     * Mandatory for SPKM-2 (timestamp replay detection). SPKM-1 uses
+     * `randSrc` instead and may omit this.
+     *
+     * @public
+     * @readonly
+     */
+    public readonly timestamp: OPTIONAL<UTCTime>;
+    /**
+     * @summary `randSrc`.
+     * @description
+     *
+     * Initiator nonce; echoed by the target in `SPKM-REP-TI`.
+     *
+     * @public
+     * @readonly
+     */
+    public readonly randSrc: Random_Integer;
+    /**
+     * @summary `targ_name`.
+     * @description
+     *
+     * Intended target. Must match the name in the target's cert.
+     *
+     * @public
+     * @readonly
+     */
+    public readonly targ_name: Name;
+    /**
+     * @summary `src_name`.
+     * @description
+     *
+     * Required unless the initiator is anonymous. Echoed in later
+     * tokens if present.
+     *
+     * @public
+     * @readonly
+     */
+    public readonly src_name: OPTIONAL<Name>;
+    /**
+     * @summary `req_data`.
+     * @description
+     *
+     * Offered algorithms, options, and optional channel bindings /
+     * initial sequence number.
+     *
+     * @public
+     * @readonly
+     */
+    public readonly req_data: Context_Data;
+    /**
+     * @summary `validity`.
+     * @description
+     *
+     * Only SPKM way to send desired context lifetime. Clocks need not
+     * be synced: the *span* is authoritative, not the absolute times.
+     *
+     * @public
+     * @readonly
+     */
+    public readonly validity: OPTIONAL<Validity>;
+    /**
+     * @summary `key_estb_set`.
+     * @description
+     *
+     * Offered K-ALGs in preference order. `key-estb-req` is the key
+     * (or half) for the *first* algorithm. SPKM-2 unilateral: no
+     * K-ALG negotiation. Two-pass K-ALGs (e.g. DH) need SPKM-1 mutual.
+     *
+     * @public
+     * @readonly
+     */
+    public readonly key_estb_set: Key_Estb_Algs;
+    /**
+     * @summary `key_estb_req`.
+     * @description
+     *
+     * Key material for the first K-ALG. Omit if the initiator cannot
+     * or will not generate the context key (target must then supply
+     * it). Established key length: L ≤ M ≤ U (RFC 2025 §2.4).
+     *
+     * @public
+     * @readonly
+     */
+    public readonly key_estb_req?: OPTIONAL<BIT_STRING>;
+    /**
+     * @summary `key_src_bind`.
+     * @description
+     *
+     * MD5(DER(`src-name`) || unprotected context key). Required for
+     * SPKM-2 unilateral if the K-ALG itself does not bind source to
+     * key; optional otherwise.
+     *
+     * @public
+     * @readonly
+     */
+    public readonly key_src_bind?: OPTIONAL<OCTET_STRING>;
+
     constructor(
-        /**
-         * @summary `tok_id`.
-         * @description
-         *
-         * Must be 256 (0x0100). Distinct from the CHOICE tag on
-         * `SPKMInnerContextToken`; this value is inside the signed/MACed
-         * bytes.
-         *
-         * @public
-         * @readonly
-         */
-        readonly tok_id: INTEGER,
-        /**
-         * @summary `context_id`.
-         * @description
-         *
-         * Initiator's fresh random. If a reply is expected, the target
-         * concatenates its own random onto this; for SPKM-2 unilateral
-         * this value is the context-id as-is. Need only be fresh, not
-         * unpredictable.
-         *
-         * @public
-         * @readonly
-         */
-        readonly context_id: Random_Integer,
-        /**
-         * @summary `pvno`.
-         * @description
-         *
-         * One bit per protocol version; bit 0 is this RFC (version 0).
-         * Token version is the highest bit set. SPKM-2 unilateral: set
-         * exactly one bit (no negotiation).
-         *
-         * @public
-         * @readonly
-         */
-        readonly pvno: BIT_STRING,
-        /**
-         * @summary `timestamp`.
-         * @description
-         *
-         * Mandatory for SPKM-2 (timestamp replay detection). SPKM-1 uses
-         * `randSrc` instead and may omit this.
-         *
-         * @public
-         * @readonly
-         */
-        readonly timestamp: OPTIONAL<UTCTime>,
-        /**
-         * @summary `randSrc`.
-         * @description
-         *
-         * Initiator nonce; echoed by the target in `SPKM-REP-TI`.
-         *
-         * @public
-         * @readonly
-         */
-        readonly randSrc: Random_Integer,
-        /**
-         * @summary `targ_name`.
-         * @description
-         *
-         * Intended target. Must match the name in the target's cert.
-         *
-         * @public
-         * @readonly
-         */
-        readonly targ_name: Name,
-        /**
-         * @summary `src_name`.
-         * @description
-         *
-         * Required unless the initiator is anonymous. Echoed in later
-         * tokens if present.
-         *
-         * @public
-         * @readonly
-         */
-        readonly src_name: OPTIONAL<Name>,
-        /**
-         * @summary `req_data`.
-         * @description
-         *
-         * Offered algorithms, options, and optional channel bindings /
-         * initial sequence number.
-         *
-         * @public
-         * @readonly
-         */
-        readonly req_data: Context_Data,
-        /**
-         * @summary `validity`.
-         * @description
-         *
-         * Only SPKM way to send desired context lifetime. Clocks need not
-         * be synced: the *span* is authoritative, not the absolute times.
-         *
-         * @public
-         * @readonly
-         */
-        readonly validity: OPTIONAL<Validity>,
-        /**
-         * @summary `key_estb_set`.
-         * @description
-         *
-         * Offered K-ALGs in preference order. `key-estb-req` is the key
-         * (or half) for the *first* algorithm. SPKM-2 unilateral: no
-         * K-ALG negotiation. Two-pass K-ALGs (e.g. DH) need SPKM-1 mutual.
-         *
-         * @public
-         * @readonly
-         */
-        readonly key_estb_set: Key_Estb_Algs,
-        /**
-         * @summary `key_estb_req`.
-         * @description
-         *
-         * Key material for the first K-ALG. Omit if the initiator cannot
-         * or will not generate the context key (target must then supply
-         * it). Established key length: L ≤ M ≤ U (RFC 2025 §2.4).
-         *
-         * @public
-         * @readonly
-         */
-        readonly key_estb_req?: OPTIONAL<BIT_STRING>,
-        /**
-         * @summary `key_src_bind`.
-         * @description
-         *
-         * MD5(DER(`src-name`) || unprotected context key). Required for
-         * SPKM-2 unilateral if the K-ALG itself does not bind source to
-         * key; optional otherwise.
-         *
-         * @public
-         * @readonly
-         */
-        readonly key_src_bind?: OPTIONAL<OCTET_STRING>
-    ) {}
+        tok_id: INTEGER,
+        context_id: Random_Integer,
+        pvno: BIT_STRING,
+        timestamp: OPTIONAL<UTCTime>,
+        randSrc: Random_Integer,
+        targ_name: Name,
+        src_name: OPTIONAL<Name>,
+        req_data: Context_Data,
+        validity: OPTIONAL<Validity>,
+        key_estb_set: Key_Estb_Algs,
+        key_estb_req?: OPTIONAL<BIT_STRING>,
+        key_src_bind?: OPTIONAL<OCTET_STRING>
+    ) {
+        this.tok_id = tok_id;
+        this.context_id = context_id;
+        this.pvno = pvno;
+        this.timestamp = timestamp;
+        this.randSrc = randSrc;
+        this.targ_name = targ_name;
+        this.src_name = src_name;
+        this.req_data = req_data;
+        this.validity = validity;
+        this.key_estb_set = key_estb_set;
+        this.key_estb_req = key_estb_req;
+        this.key_src_bind = key_src_bind;
+    }
 
     /**
      * @summary Restructures an object into a Req_contents

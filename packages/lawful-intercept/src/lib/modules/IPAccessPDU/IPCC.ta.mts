@@ -1,12 +1,12 @@
 /* eslint-disable */
 import {
-    RELATIVE_OID,
+    type RELATIVE_OID,
     ASN1ConstructionError as _ConstructionError,
-    ASN1Element as _Element,
+    type ASN1Element as _Element,
     ASN1TagClass as _TagClass
 } from "@wildboar/asn1";
 import * as $ from "@wildboar/asn1/functional";
-import { IPCCContents, _decode_IPCCContents, _encode_IPCCContents } from "../IPAccessPDU/IPCCContents.ta.mjs";
+import { type IPCCContents, _decode_IPCCContents, _encode_IPCCContents } from "../IPAccessPDU/IPCCContents.ta.mjs";
 // export { IPCCContents, _decode_IPCCContents, _encode_IPCCContents } from "../IPAccessPDU/IPCCContents.ta.mjs";
 
 

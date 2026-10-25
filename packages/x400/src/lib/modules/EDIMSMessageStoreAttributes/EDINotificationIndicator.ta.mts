@@ -1,6 +1,6 @@
 /* eslint-disable */
 import {
-    ASN1Element as _Element,
+    type ASN1Element as _Element,
     ASN1TagClass as _TagClass,
     ASN1Construction as _Construction,
     ASN1UniversalType as _UniversalType,
@@ -65,14 +65,14 @@ export type EDINotificationIndicator = _enum_for_EDINotificationIndicator;
  *
  * @enum {number}
  */
-export const EDINotificationIndicator = _enum_for_EDINotificationIndicator;
+export const EDINotificationIndicator: typeof _enum_for_EDINotificationIndicator = _enum_for_EDINotificationIndicator;
 
 /**
  * @summary EDINotificationIndicator_no_notification_sent
  * @constant
  * @type {number}
  */
-export const EDINotificationIndicator_no_notification_sent: EDINotificationIndicator =
+export const EDINotificationIndicator_no_notification_sent: _enum_for_EDINotificationIndicator.no_notification_sent =
     EDINotificationIndicator.no_notification_sent; /* LONG_NAMED_ENUMERATED_VALUE */
 
 /**
@@ -80,7 +80,7 @@ export const EDINotificationIndicator_no_notification_sent: EDINotificationIndic
  * @constant
  * @type {number}
  */
-export const no_notification_sent: EDINotificationIndicator =
+export const no_notification_sent: _enum_for_EDINotificationIndicator.no_notification_sent =
     EDINotificationIndicator.no_notification_sent; /* SHORT_NAMED_ENUMERATED_VALUE */
 
 /**
@@ -88,7 +88,7 @@ export const no_notification_sent: EDINotificationIndicator =
  * @constant
  * @type {number}
  */
-export const EDINotificationIndicator_pn_sent: EDINotificationIndicator =
+export const EDINotificationIndicator_pn_sent: _enum_for_EDINotificationIndicator.pn_sent =
     EDINotificationIndicator.pn_sent; /* LONG_NAMED_ENUMERATED_VALUE */
 
 /**
@@ -96,7 +96,7 @@ export const EDINotificationIndicator_pn_sent: EDINotificationIndicator =
  * @constant
  * @type {number}
  */
-export const pn_sent: EDINotificationIndicator =
+export const pn_sent: _enum_for_EDINotificationIndicator.pn_sent =
     EDINotificationIndicator.pn_sent; /* SHORT_NAMED_ENUMERATED_VALUE */
 
 /**
@@ -104,7 +104,7 @@ export const pn_sent: EDINotificationIndicator =
  * @constant
  * @type {number}
  */
-export const EDINotificationIndicator_nn_sent: EDINotificationIndicator =
+export const EDINotificationIndicator_nn_sent: _enum_for_EDINotificationIndicator.nn_sent =
     EDINotificationIndicator.nn_sent; /* LONG_NAMED_ENUMERATED_VALUE */
 
 /**
@@ -112,7 +112,7 @@ export const EDINotificationIndicator_nn_sent: EDINotificationIndicator =
  * @constant
  * @type {number}
  */
-export const nn_sent: EDINotificationIndicator =
+export const nn_sent: _enum_for_EDINotificationIndicator.nn_sent =
     EDINotificationIndicator.nn_sent; /* SHORT_NAMED_ENUMERATED_VALUE */
 
 /**
@@ -120,7 +120,7 @@ export const nn_sent: EDINotificationIndicator =
  * @constant
  * @type {number}
  */
-export const EDINotificationIndicator_fn_sent: EDINotificationIndicator =
+export const EDINotificationIndicator_fn_sent: _enum_for_EDINotificationIndicator.fn_sent =
     EDINotificationIndicator.fn_sent; /* LONG_NAMED_ENUMERATED_VALUE */
 
 /**
@@ -128,14 +128,27 @@ export const EDINotificationIndicator_fn_sent: EDINotificationIndicator =
  * @constant
  * @type {number}
  */
-export const fn_sent: EDINotificationIndicator =
+export const fn_sent: _enum_for_EDINotificationIndicator.fn_sent =
     EDINotificationIndicator.fn_sent; /* SHORT_NAMED_ENUMERATED_VALUE */
 
 
-export const _decode_EDINotificationIndicator = $._decodeEnumerated;
+export function _decode_EDINotificationIndicator(el: _Element): EDINotificationIndicator {
+    const enumerated = $._decodeEnumerated(el);
+    switch (enumerated) {
+        case EDINotificationIndicator.no_notification_sent: return EDINotificationIndicator.no_notification_sent;
+        case EDINotificationIndicator.pn_sent: return EDINotificationIndicator.pn_sent;
+        case EDINotificationIndicator.nn_sent: return EDINotificationIndicator.nn_sent;
+        case EDINotificationIndicator.fn_sent: return EDINotificationIndicator.fn_sent;
+        default:
+            throw new _ConstructionError(
+                'Invalid ENUMERATED value ' + enumerated + ' for EDINotificationIndicator.',
+                el,
+            );
+    }
+}
 
 
-export const _encode_EDINotificationIndicator = $._encodeEnumerated;
+export const _encode_EDINotificationIndicator: $.ASN1Encoder<EDINotificationIndicator> = $._encodeEnumerated as $.ASN1Encoder<EDINotificationIndicator>;
 
 
 /* eslint-enable */

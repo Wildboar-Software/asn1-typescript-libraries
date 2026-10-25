@@ -1,10 +1,10 @@
 /* eslint-disable */
 import {
-    ASN1Element as _Element,
+    type ASN1Element as _Element,
     ASN1OverflowError,
     ASN1TagClass as _TagClass,
-    INTEGER,
-    OPTIONAL
+    type INTEGER,
+    type OPTIONAL
 } from "@wildboar/asn1";
 import * as $ from "@wildboar/asn1/functional";
 import { _decode_flowControl_ArgumentType_controlReceiver, _encode_flowControl_ArgumentType_controlReceiver, _enum_for_flowControl_ArgumentType_controlReceiver, flowControl_ArgumentType_controlReceiver } from "../Flow-Control/flowControl-ArgumentType-controlReceiver.ta.mjs";
@@ -132,7 +132,7 @@ class flowControl_ArgumentType {
          * @static
          */
 
-    public static _enum_for_controlReceiver = _enum_for_flowControl_ArgumentType_controlReceiver;
+    public static _enum_for_controlReceiver: typeof _enum_for_flowControl_ArgumentType_controlReceiver = _enum_for_flowControl_ArgumentType_controlReceiver;
 }
 
 /**

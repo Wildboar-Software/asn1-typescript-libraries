@@ -1,7 +1,7 @@
 /* eslint-disable */
 import {
-    BIT_STRING,
-    ASN1Element as _Element,
+    type BIT_STRING,
+    type ASN1Element as _Element,
     ASN1TagClass as _TagClass,
     ASN1Construction as _Construction,
     ASN1UniversalType as _UniversalType,
@@ -138,7 +138,7 @@ const RobBitPatt_robBit5: number = 5; /* LONG_NAMED_BIT */
  */
 export
 const robBit5: number = RobBitPatt_robBit5; /* SHORT_NAMED_BIT */
-export const _decode_RobBitPatt = $._decodeBitString;
-export const _encode_RobBitPatt = $._encodeBitString;
+export const _decode_RobBitPatt: $.ASN1Decoder<BIT_STRING> = $._decodeBitString;
+export const _encode_RobBitPatt: $.ASN1Encoder<BIT_STRING> = $._encodeBitString;
 
 /* eslint-enable */

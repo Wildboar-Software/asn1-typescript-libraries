@@ -1,10 +1,10 @@
 /* eslint-disable */
 import {
-    ASN1Element as _Element,
+    type ASN1Element as _Element,
     ASN1TagClass as _TagClass,
     ASN1SizeError,
-    OPTIONAL,
-    UTF8String
+    type OPTIONAL,
+    type UTF8String
 } from "@wildboar/asn1";
 import * as $ from "@wildboar/asn1/functional";
 import { strmax } from "../PlatformCertificateProfileV2/strmax.va.mjs";
@@ -120,7 +120,7 @@ class Property {
          * @static
          */
 
-    public static _enum_for_status = _enum_for_AttributeStatus;
+    public static _enum_for_status: typeof _enum_for_AttributeStatus = _enum_for_AttributeStatus;
 }
 
 /**

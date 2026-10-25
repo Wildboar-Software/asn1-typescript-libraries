@@ -1,8 +1,8 @@
 /* eslint-disable */
 import {
-    ASN1Element as _Element,
+    type ASN1Element as _Element,
     ASN1SizeError,
-    UTF8String
+    type UTF8String
 } from "@wildboar/asn1";
 import * as $ from "@wildboar/asn1/functional";
 import { strmax } from "../PlatformCertificateProfileV2/strmax.va.mjs";

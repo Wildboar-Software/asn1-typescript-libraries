@@ -1,7 +1,7 @@
 /* eslint-disable */
 import {
-    OPTIONAL,
-    ASN1Element as _Element,
+    type OPTIONAL,
+    type ASN1Element as _Element,
     ASN1TagClass as _TagClass,
     ASN1Construction as _Construction,
     ASN1UniversalType as _UniversalType,
@@ -12,17 +12,17 @@ import {
 } from '@wildboar/asn1';
 import * as $ from '@wildboar/asn1/functional';
 import {
-    MessageSubmissionIdentifier,
+    type MessageSubmissionIdentifier,
     _decode_MessageSubmissionIdentifier,
     _encode_MessageSubmissionIdentifier,
 } from '../MTSAbstractService/MessageSubmissionIdentifier.ta.mjs';
 import {
-    MessageSubmissionTime,
+    type MessageSubmissionTime,
     _decode_MessageSubmissionTime,
     _encode_MessageSubmissionTime,
 } from '../MTSAbstractService/MessageSubmissionTime.ta.mjs';
 import {
-    ContentIdentifier,
+    type ContentIdentifier,
     _decode_ContentIdentifier,
     _encode_ContentIdentifier,
 } from '../MTSAbstractService/ContentIdentifier.ta.mjs';
@@ -51,32 +51,42 @@ import {
  *
  */
 export class MessageSubmissionResult {
+    /**
+     * @summary `message_submission_identifier`.
+     * @public
+     * @readonly
+     */
+    public readonly message_submission_identifier: MessageSubmissionIdentifier;
+    /**
+     * @summary `message_submission_time`.
+     * @public
+     * @readonly
+     */
+    public readonly message_submission_time: MessageSubmissionTime;
+    /**
+     * @summary `content_identifier`.
+     * @public
+     * @readonly
+     */
+    public readonly content_identifier?: OPTIONAL<ContentIdentifier>;
+    /**
+     * @summary `extensions`.
+     * @public
+     * @readonly
+     */
+    public readonly extensions?: OPTIONAL<ExtensionField[]>;
+
     constructor(
-        /**
-         * @summary `message_submission_identifier`.
-         * @public
-         * @readonly
-         */
-        readonly message_submission_identifier: MessageSubmissionIdentifier,
-        /**
-         * @summary `message_submission_time`.
-         * @public
-         * @readonly
-         */
-        readonly message_submission_time: MessageSubmissionTime,
-        /**
-         * @summary `content_identifier`.
-         * @public
-         * @readonly
-         */
-        readonly content_identifier?: OPTIONAL<ContentIdentifier>,
-        /**
-         * @summary `extensions`.
-         * @public
-         * @readonly
-         */
-        readonly extensions?: OPTIONAL<ExtensionField[]>
-    ) {}
+        message_submission_identifier: MessageSubmissionIdentifier,
+        message_submission_time: MessageSubmissionTime,
+        content_identifier?: OPTIONAL<ContentIdentifier>,
+        extensions?: OPTIONAL<ExtensionField[]>
+    ) {
+        this.message_submission_identifier = message_submission_identifier;
+        this.message_submission_time = message_submission_time;
+        this.content_identifier = content_identifier;
+        this.extensions = extensions;
+    }
 
     /**
      * @summary Restructures an object into a MessageSubmissionResult

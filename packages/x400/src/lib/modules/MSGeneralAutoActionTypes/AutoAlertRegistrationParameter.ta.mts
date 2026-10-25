@@ -1,9 +1,9 @@
 /* eslint-disable */
 import {
-    OPTIONAL,
-    BOOLEAN,
+    type OPTIONAL,
+    type BOOLEAN,
     TRUE,
-    ASN1Element as _Element,
+    type ASN1Element as _Element,
     ASN1TagClass as _TagClass,
     ASN1Construction as _Construction,
     ASN1UniversalType as _UniversalType,
@@ -14,7 +14,7 @@ import {
 } from '@wildboar/asn1';
 import * as $ from '@wildboar/asn1/functional';
 import {
-    Filter,
+    type Filter,
     _decode_Filter,
     _encode_Filter,
 } from '../MSAbstractService/Filter.ta.mjs';
@@ -24,7 +24,7 @@ import {
     _encode_AlertDestination,
 } from '../MSGeneralAutoActionTypes/AlertDestination.ta.mjs';
 import {
-    EntryInformationSelection,
+    type EntryInformationSelection,
     _decode_EntryInformationSelection,
     _encode_EntryInformationSelection,
 } from '../MSAbstractService/EntryInformationSelection.ta.mjs';
@@ -49,32 +49,42 @@ import {
  *
  */
 export class AutoAlertRegistrationParameter {
+    /**
+     * @summary `filter`.
+     * @public
+     * @readonly
+     */
+    public readonly filter?: OPTIONAL<Filter>;
+    /**
+     * @summary `alert_destinations`.
+     * @public
+     * @readonly
+     */
+    public readonly alert_destinations?: OPTIONAL<AlertDestination[]>;
+    /**
+     * @summary `requested_attributes`.
+     * @public
+     * @readonly
+     */
+    public readonly requested_attributes?: OPTIONAL<EntryInformationSelection>;
+    /**
+     * @summary `suppress_alert_destinations`.
+     * @public
+     * @readonly
+     */
+    public readonly suppress_alert_destinations?: OPTIONAL<BOOLEAN>;
+
     constructor(
-        /**
-         * @summary `filter`.
-         * @public
-         * @readonly
-         */
-        readonly filter?: OPTIONAL<Filter>,
-        /**
-         * @summary `alert_destinations`.
-         * @public
-         * @readonly
-         */
-        readonly alert_destinations?: OPTIONAL<AlertDestination[]>,
-        /**
-         * @summary `requested_attributes`.
-         * @public
-         * @readonly
-         */
-        readonly requested_attributes?: OPTIONAL<EntryInformationSelection>,
-        /**
-         * @summary `suppress_alert_destinations`.
-         * @public
-         * @readonly
-         */
-        readonly suppress_alert_destinations?: OPTIONAL<BOOLEAN>
-    ) {}
+        filter?: OPTIONAL<Filter>,
+        alert_destinations?: OPTIONAL<AlertDestination[]>,
+        requested_attributes?: OPTIONAL<EntryInformationSelection>,
+        suppress_alert_destinations?: OPTIONAL<BOOLEAN>
+    ) {
+        this.filter = filter;
+        this.alert_destinations = alert_destinations;
+        this.requested_attributes = requested_attributes;
+        this.suppress_alert_destinations = suppress_alert_destinations;
+    }
 
     /**
      * @summary Restructures an object into a AutoAlertRegistrationParameter

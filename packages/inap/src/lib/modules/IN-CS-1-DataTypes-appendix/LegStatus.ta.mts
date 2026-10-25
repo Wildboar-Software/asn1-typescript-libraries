@@ -1,4 +1,5 @@
 /* eslint-disable */
+import { ASN1Element as _Element, ASN1ConstructionError as _ConstructionError } from "@wildboar/asn1";
 import * as $ from "@wildboar/asn1/functional";
 
 
@@ -57,7 +58,7 @@ type LegStatus = _enum_for_LegStatus;
  * @enum {number}
  */
 export
-const LegStatus = _enum_for_LegStatus;
+const LegStatus: typeof _enum_for_LegStatus = _enum_for_LegStatus;
 
 /**
  * @summary LegStatus_connected
@@ -65,7 +66,7 @@ const LegStatus = _enum_for_LegStatus;
  * @type {number}
  */
 export
-const LegStatus_connected: LegStatus = LegStatus.connected; /* LONG_NAMED_ENUMERATED_VALUE */
+const LegStatus_connected: _enum_for_LegStatus.connected = LegStatus.connected; /* LONG_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary connected
@@ -73,7 +74,7 @@ const LegStatus_connected: LegStatus = LegStatus.connected; /* LONG_NAMED_ENUMER
  * @type {number}
  */
 export
-const connected: LegStatus = LegStatus.connected; /* SHORT_NAMED_ENUMERATED_VALUE */
+const connected: _enum_for_LegStatus.connected = LegStatus.connected; /* SHORT_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary LegStatus_unconnected
@@ -81,7 +82,7 @@ const connected: LegStatus = LegStatus.connected; /* SHORT_NAMED_ENUMERATED_VALU
  * @type {number}
  */
 export
-const LegStatus_unconnected: LegStatus = LegStatus.unconnected; /* LONG_NAMED_ENUMERATED_VALUE */
+const LegStatus_unconnected: _enum_for_LegStatus.unconnected = LegStatus.unconnected; /* LONG_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary unconnected
@@ -89,7 +90,7 @@ const LegStatus_unconnected: LegStatus = LegStatus.unconnected; /* LONG_NAMED_EN
  * @type {number}
  */
 export
-const unconnected: LegStatus = LegStatus.unconnected; /* SHORT_NAMED_ENUMERATED_VALUE */
+const unconnected: _enum_for_LegStatus.unconnected = LegStatus.unconnected; /* SHORT_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary LegStatus_pending
@@ -97,7 +98,7 @@ const unconnected: LegStatus = LegStatus.unconnected; /* SHORT_NAMED_ENUMERATED_
  * @type {number}
  */
 export
-const LegStatus_pending: LegStatus = LegStatus.pending; /* LONG_NAMED_ENUMERATED_VALUE */
+const LegStatus_pending: _enum_for_LegStatus.pending = LegStatus.pending; /* LONG_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary pending
@@ -105,7 +106,7 @@ const LegStatus_pending: LegStatus = LegStatus.pending; /* LONG_NAMED_ENUMERATED
  * @type {number}
  */
 export
-const pending: LegStatus = LegStatus.pending; /* SHORT_NAMED_ENUMERATED_VALUE */
+const pending: _enum_for_LegStatus.pending = LegStatus.pending; /* SHORT_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary LegStatus_interacting
@@ -113,7 +114,7 @@ const pending: LegStatus = LegStatus.pending; /* SHORT_NAMED_ENUMERATED_VALUE */
  * @type {number}
  */
 export
-const LegStatus_interacting: LegStatus = LegStatus.interacting; /* LONG_NAMED_ENUMERATED_VALUE */
+const LegStatus_interacting: _enum_for_LegStatus.interacting = LegStatus.interacting; /* LONG_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary interacting
@@ -121,12 +122,25 @@ const LegStatus_interacting: LegStatus = LegStatus.interacting; /* LONG_NAMED_EN
  * @type {number}
  */
 export
-const interacting: LegStatus = LegStatus.interacting; /* SHORT_NAMED_ENUMERATED_VALUE */
+const interacting: _enum_for_LegStatus.interacting = LegStatus.interacting; /* SHORT_NAMED_ENUMERATED_VALUE */
 
 export
-const _decode_LegStatus: $.ASN1Decoder<LegStatus> = $._decodeEnumerated;
+function _decode_LegStatus(el: _Element): LegStatus {
+    const enumerated = $._decodeEnumerated(el);
+    switch (enumerated) {
+        case LegStatus.connected: return LegStatus.connected;
+        case LegStatus.unconnected: return LegStatus.unconnected;
+        case LegStatus.pending: return LegStatus.pending;
+        case LegStatus.interacting: return LegStatus.interacting;
+        default:
+            throw new _ConstructionError(
+                "Invalid ENUMERATED value " + enumerated + " for LegStatus.",
+                el,
+            );
+    }
+}
 
 export
-const _encode_LegStatus: $.ASN1Encoder<LegStatus> = $._encodeEnumerated;
+const _encode_LegStatus: $.ASN1Encoder<LegStatus> = $._encodeEnumerated as $.ASN1Encoder<LegStatus>;
 
 /* eslint-enable */

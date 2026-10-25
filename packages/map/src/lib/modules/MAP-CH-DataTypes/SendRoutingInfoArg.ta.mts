@@ -1,30 +1,30 @@
 /* eslint-disable */
 import {
-    NULL,
-    OPTIONAL,
-    ASN1Element as _Element,
+    type NULL,
+    type OPTIONAL,
+    type ASN1Element as _Element,
     ASN1TagClass as _TagClass
 } from "@wildboar/asn1";
 import * as $ from "@wildboar/asn1/functional";
-import { CallDiversionTreatmentIndicator, _decode_CallDiversionTreatmentIndicator, _encode_CallDiversionTreatmentIndicator } from "../MAP-CH-DataTypes/CallDiversionTreatmentIndicator.ta.mjs";
-import { CallReferenceNumber, _decode_CallReferenceNumber, _encode_CallReferenceNumber } from "../MAP-CH-DataTypes/CallReferenceNumber.ta.mjs";
+import { type CallDiversionTreatmentIndicator, _decode_CallDiversionTreatmentIndicator, _encode_CallDiversionTreatmentIndicator } from "../MAP-CH-DataTypes/CallDiversionTreatmentIndicator.ta.mjs";
+import { type CallReferenceNumber, _decode_CallReferenceNumber, _encode_CallReferenceNumber } from "../MAP-CH-DataTypes/CallReferenceNumber.ta.mjs";
 import { CamelInfo, _decode_CamelInfo, _encode_CamelInfo } from "../MAP-CH-DataTypes/CamelInfo.ta.mjs";
 import { CUG_CheckInfo, _decode_CUG_CheckInfo, _encode_CUG_CheckInfo } from "../MAP-CH-DataTypes/CUG-CheckInfo.ta.mjs";
 import { ForwardingReason, _decode_ForwardingReason, _encode_ForwardingReason, _enum_for_ForwardingReason } from "../MAP-CH-DataTypes/ForwardingReason.ta.mjs";
 import { InterrogationType, _decode_InterrogationType, _encode_InterrogationType, _enum_for_InterrogationType } from "../MAP-CH-DataTypes/InterrogationType.ta.mjs";
-import { NumberOfForwarding, _decode_NumberOfForwarding, _encode_NumberOfForwarding } from "../MAP-CH-DataTypes/NumberOfForwarding.ta.mjs";
-import { OR_Phase, _decode_OR_Phase, _encode_OR_Phase } from "../MAP-CH-DataTypes/OR-Phase.ta.mjs";
-import { SupportedCCBS_Phase, _decode_SupportedCCBS_Phase, _encode_SupportedCCBS_Phase } from "../MAP-CH-DataTypes/SupportedCCBS-Phase.ta.mjs";
-import { SuppressionOfAnnouncement, _decode_SuppressionOfAnnouncement, _encode_SuppressionOfAnnouncement } from "../MAP-CH-DataTypes/SuppressionOfAnnouncement.ta.mjs";
-import { SuppressMTSS, _decode_SuppressMTSS, _encode_SuppressMTSS } from "../MAP-CH-DataTypes/SuppressMTSS.ta.mjs";
-import { AlertingPattern, _decode_AlertingPattern, _encode_AlertingPattern } from "../MAP-CommonDataTypes/AlertingPattern.ta.mjs";
-import { EMLPP_Priority, _decode_EMLPP_Priority, _encode_EMLPP_Priority } from "../MAP-CommonDataTypes/EMLPP-Priority.ta.mjs";
-import { Ext_BasicServiceCode, _decode_Ext_BasicServiceCode, _encode_Ext_BasicServiceCode } from "../MAP-CommonDataTypes/Ext-BasicServiceCode.ta.mjs";
+import { type NumberOfForwarding, _decode_NumberOfForwarding, _encode_NumberOfForwarding } from "../MAP-CH-DataTypes/NumberOfForwarding.ta.mjs";
+import { type OR_Phase, _decode_OR_Phase, _encode_OR_Phase } from "../MAP-CH-DataTypes/OR-Phase.ta.mjs";
+import { type SupportedCCBS_Phase, _decode_SupportedCCBS_Phase, _encode_SupportedCCBS_Phase } from "../MAP-CH-DataTypes/SupportedCCBS-Phase.ta.mjs";
+import { type SuppressionOfAnnouncement, _decode_SuppressionOfAnnouncement, _encode_SuppressionOfAnnouncement } from "../MAP-CH-DataTypes/SuppressionOfAnnouncement.ta.mjs";
+import { type SuppressMTSS, _decode_SuppressMTSS, _encode_SuppressMTSS } from "../MAP-CH-DataTypes/SuppressMTSS.ta.mjs";
+import { type AlertingPattern, _decode_AlertingPattern, _encode_AlertingPattern } from "../MAP-CommonDataTypes/AlertingPattern.ta.mjs";
+import { type EMLPP_Priority, _decode_EMLPP_Priority, _encode_EMLPP_Priority } from "../MAP-CommonDataTypes/EMLPP-Priority.ta.mjs";
+import { type Ext_BasicServiceCode, _decode_Ext_BasicServiceCode, _encode_Ext_BasicServiceCode } from "../MAP-CommonDataTypes/Ext-BasicServiceCode.ta.mjs";
 import { Ext_ExternalSignalInfo, _decode_Ext_ExternalSignalInfo, _encode_Ext_ExternalSignalInfo } from "../MAP-CommonDataTypes/Ext-ExternalSignalInfo.ta.mjs";
 import { ExternalSignalInfo, _decode_ExternalSignalInfo, _encode_ExternalSignalInfo } from "../MAP-CommonDataTypes/ExternalSignalInfo.ta.mjs";
-import { ISDN_AddressString, _decode_ISDN_AddressString, _encode_ISDN_AddressString } from "../MAP-CommonDataTypes/ISDN-AddressString.ta.mjs";
+import { type ISDN_AddressString, _decode_ISDN_AddressString, _encode_ISDN_AddressString } from "../MAP-CommonDataTypes/ISDN-AddressString.ta.mjs";
 import { ExtensionContainer, _decode_ExtensionContainer, _encode_ExtensionContainer } from "../MAP-ExtensionDataTypes/ExtensionContainer.ta.mjs";
-import { IST_SupportIndicator, _decode_IST_SupportIndicator, _encode_IST_SupportIndicator, _enum_for_IST_SupportIndicator } from "../MAP-MS-DataTypes/IST-SupportIndicator.ta.mjs";
+import { type IST_SupportIndicator, _decode_IST_SupportIndicator, _encode_IST_SupportIndicator, _enum_for_IST_SupportIndicator } from "../MAP-MS-DataTypes/IST-SupportIndicator.ta.mjs";
 
 
 /**
@@ -40,35 +40,35 @@ import { IST_SupportIndicator, _decode_IST_SupportIndicator, _encode_IST_Support
  * ```asn1
  * SendRoutingInfoArg ::= SEQUENCE {
  *     msisdn    [0] ISDN-AddressString,
- *     cug-CheckInfo    [1] CUG-CheckInfo    OPTIONAL,
- *     numberOfForwarding    [2] NumberOfForwarding    OPTIONAL,
+ *     cug-CheckInfo    [1] CUG-CheckInfo    type OPTIONAL,
+ *     numberOfForwarding    [2] NumberOfForwarding    type OPTIONAL,
  *     interrogationType    [3] InterrogationType,
- *     or-Interrogation    [4] NULL    OPTIONAL,
- *     or-Capability    [5] OR-Phase    OPTIONAL,
+ *     or-Interrogation    [4] NULL    type OPTIONAL,
+ *     or-Capability    [5] OR-Phase    type OPTIONAL,
  *     gmsc-OrGsmSCF-Address    [6] ISDN-AddressString,
- *     callReferenceNumber    [7] CallReferenceNumber    OPTIONAL,
- *     forwardingReason    [8] ForwardingReason    OPTIONAL,
- *     basicServiceGroup    [9] Ext-BasicServiceCode    OPTIONAL,
- *     networkSignalInfo    [10] ExternalSignalInfo    OPTIONAL,
- *     camelInfo    [11] CamelInfo    OPTIONAL,
- *     suppressionOfAnnouncement    [12] SuppressionOfAnnouncement    OPTIONAL,
- *     extensionContainer    [13] ExtensionContainer    OPTIONAL,
+ *     callReferenceNumber    [7] CallReferenceNumber    type OPTIONAL,
+ *     forwardingReason    [8] ForwardingReason    type OPTIONAL,
+ *     basicServiceGroup    [9] Ext-BasicServiceCode    type OPTIONAL,
+ *     networkSignalInfo    [10] ExternalSignalInfo    type OPTIONAL,
+ *     camelInfo    [11] CamelInfo    type OPTIONAL,
+ *     suppressionOfAnnouncement    [12] SuppressionOfAnnouncement    type OPTIONAL,
+ *     extensionContainer    [13] ExtensionContainer    type OPTIONAL,
  *     ...,
- *     alertingPattern    [14] AlertingPattern    OPTIONAL,
- *     ccbs-Call    [15] NULL    OPTIONAL,
- *     supportedCCBS-Phase    [16]    SupportedCCBS-Phase    OPTIONAL,
- *     additionalSignalInfo    [17] Ext-ExternalSignalInfo    OPTIONAL,
- *     istSupportIndicator    [18] IST-SupportIndicator    OPTIONAL,
- *     pre-pagingSupported    [19]    NULL    OPTIONAL,
- *     callDiversionTreatmentIndicator    [20]    CallDiversionTreatmentIndicator    OPTIONAL,
- *     longFTN-Supported    [21]    NULL    OPTIONAL,
- *     suppress-VT-CSI    [22]    NULL    OPTIONAL,
- *     suppressIncomingCallBarring    [23]    NULL    OPTIONAL,
- *     gsmSCF-InitiatedCall    [24]    NULL    OPTIONAL,
- *     basicServiceGroup2    [25] Ext-BasicServiceCode    OPTIONAL,
- *     networkSignalInfo2    [26] ExternalSignalInfo    OPTIONAL,
- *     suppressMTSS    [27] SuppressMTSS    OPTIONAL,
- *     mtRoamingRetrySupported    [28] NULL    OPTIONAL,
+ *     alertingPattern    [14] AlertingPattern    type OPTIONAL,
+ *     ccbs-Call    [15] NULL    type OPTIONAL,
+ *     supportedCCBS-Phase    [16]    SupportedCCBS-Phase    type OPTIONAL,
+ *     additionalSignalInfo    [17] Ext-ExternalSignalInfo    type OPTIONAL,
+ *     istSupportIndicator    [18] IST-SupportIndicator    type OPTIONAL,
+ *     pre-pagingSupported    [19]    NULL    type OPTIONAL,
+ *     callDiversionTreatmentIndicator    [20]    CallDiversionTreatmentIndicator    type OPTIONAL,
+ *     longFTN-Supported    [21]    NULL    type OPTIONAL,
+ *     suppress-VT-CSI    [22]    NULL    type OPTIONAL,
+ *     suppressIncomingCallBarring    [23]    NULL    type OPTIONAL,
+ *     gsmSCF-InitiatedCall    [24]    NULL    type OPTIONAL,
+ *     basicServiceGroup2    [25] Ext-BasicServiceCode    type OPTIONAL,
+ *     networkSignalInfo2    [26] ExternalSignalInfo    type OPTIONAL,
+ *     suppressMTSS    [27] SuppressMTSS    type OPTIONAL,
+ *     mtRoamingRetrySupported    [28] NULL    type OPTIONAL,
  *     callPriority    [29]    EMLPP-Priority    OPTIONAL
  *     }
  * ```
@@ -77,324 +77,388 @@ import { IST_SupportIndicator, _decode_IST_SupportIndicator, _encode_IST_Support
  */
 export
 class SendRoutingInfoArg {
+    /**
+     * @summary `msisdn`.
+     * @description
+     *
+     * MSISDN received in ISUP IAM (clause 10.1.3).
+     *
+     * @public
+     * @readonly
+     */
+    public readonly msisdn: ISDN_AddressString;
+    /**
+     * @summary `cug_CheckInfo`.
+     * @description
+     *
+     * CUG interlock and outgoing access (Use and presence as in 3GPP TS
+     * 23.018).
+     *
+     * @public
+     * @readonly
+     */
+    public readonly cug_CheckInfo: OPTIONAL<CUG_CheckInfo>;
+    /**
+     * @summary `numberOfForwarding`.
+     * @description
+     *
+     * Use and presence as in 3GPP TS 23.018 (clause 10.1.3).
+     *
+     * @public
+     * @readonly
+     */
+    public readonly numberOfForwarding: OPTIONAL<NumberOfForwarding>;
+    /**
+     * @summary `interrogationType`.
+     * @description
+     *
+     * Use and presence as in 3GPP TS 23.079 (clause 10.1.3).
+     *
+     * @public
+     * @readonly
+     */
+    public readonly interrogationType: InterrogationType;
+    /**
+     * @summary `or_Interrogation`.
+     * @description
+     *
+     * Use and presence as in 3GPP TS 23.079 (clause 10.1.3).
+     *
+     * @public
+     * @readonly
+     */
+    public readonly or_Interrogation: OPTIONAL<NULL>;
+    /**
+     * @summary `or_Capability`.
+     * @description
+     *
+     * Use and presence as in 3GPP TS 23.079 (clause 10.1.3).
+     *
+     * @public
+     * @readonly
+     */
+    public readonly or_Capability: OPTIONAL<OR_Phase>;
+    /**
+     * @summary `gmsc_OrGsmSCF_Address`.
+     * @description
+     *
+     * E.164 of GMSC, or gsmSCF if gsmSCF-InitiatedCall is present (clause
+     * 10.1.3).
+     *
+     * @public
+     * @readonly
+     */
+    public readonly gmsc_OrGsmSCF_Address: ISDN_AddressString;
+    /**
+     * @summary `callReferenceNumber`.
+     * @description
+     *
+     * Use and presence as in 3GPP TS 23.078, Use and presence as in 3GPP TS
+     * 23.079 and Use and presence as in 3GPP TS 23.018 (clause 10.1.3).
+     *
+     * @public
+     * @readonly
+     */
+    public readonly callReferenceNumber?: OPTIONAL<CallReferenceNumber>;
+    /**
+     * @summary `forwardingReason`.
+     * @description
+     *
+     * Use and presence as in 3GPP TS 23.079 (clause 10.1.3).
+     *
+     * @public
+     * @readonly
+     */
+    public readonly forwardingReason?: OPTIONAL<ForwardingReason>;
+    /**
+     * @summary `basicServiceGroup`.
+     * @description
+     *
+     * Use and presence as in 3GPP TS 23.079 (clause 10.1.3).
+     *
+     * @public
+     * @readonly
+     */
+    public readonly basicServiceGroup?: OPTIONAL<Ext_BasicServiceCode>;
+    /**
+     * @summary `networkSignalInfo`.
+     * @description
+     *
+     * Component presence as in Use and presence as in 3GPP TS 23.018
+     * (clause 10.1.3).
+     *
+     * @public
+     * @readonly
+     */
+    public readonly networkSignalInfo?: OPTIONAL<ExternalSignalInfo>;
+    /**
+     * @summary `camelInfo`.
+     * @description
+     *
+     * Supported CAMEL phases and related flags.
+     *
+     * @public
+     * @readonly
+     */
+    public readonly camelInfo?: OPTIONAL<CamelInfo>;
+    /**
+     * @summary `suppressionOfAnnouncement`.
+     * @description
+     *
+     * Use and presence as in 3GPP TS 23.078 (clause 10.1.3).
+     *
+     * @public
+     * @readonly
+     */
+    public readonly suppressionOfAnnouncement?: OPTIONAL<SuppressionOfAnnouncement>;
+    /**
+     * @summary `extensionContainer`.
+     * @description
+     *
+     * Private or PCS extensions (3GPP TS 29.002 V19.1.0 clause 17.7.11).
+     *
+     * @public
+     * @readonly
+     */
+    public readonly extensionContainer?: OPTIONAL<ExtensionContainer>;
+    /**
+     * @summary `alertingPattern`.
+     * @description
+     *
+     * Use and presence as in 3GPP TS 23.018 and 3GPP TS 23.078 (clause
+     * 10.1.3).
+     *
+     * @public
+     * @readonly
+     */
+    public readonly alertingPattern?: OPTIONAL<AlertingPattern>;
+    /**
+     * @summary `ccbs_Call`.
+     * @description
+     *
+     * See 3GPP TS 23.093 (clause 10.1.3).
+     *
+     * @public
+     * @readonly
+     */
+    public readonly ccbs_Call?: OPTIONAL<NULL>;
+    /**
+     * @summary `supportedCCBS_Phase`.
+     * @description
+     *
+     * Presence means CCBS is supported. Only value 1 is used; 2–127 map to
+     * 1 (3GPP TS 29.002 V19.1.0 clauses 10.1.3 and 17.7.3).
+     *
+     * @public
+     * @readonly
+     */
+    public readonly supportedCCBS_Phase?: OPTIONAL<SupportedCCBS_Phase>;
+    /**
+     * @summary `additionalSignalInfo`.
+     * @description
+     *
+     * See 3GPP TS 23.081 and 23.088 (clause 10.1.3).
+     *
+     * @public
+     * @readonly
+     */
+    public readonly additionalSignalInfo?: OPTIONAL<Ext_ExternalSignalInfo>;
+    /**
+     * @summary `istSupportIndicator`.
+     * @description
+     *
+     * GMSC supports basic IST and optionally IST Command (clause 10.1.3).
+     *
+     * @public
+     * @readonly
+     */
+    public readonly istSupportIndicator?: OPTIONAL<IST_SupportIndicator>;
+    /**
+     * @summary `pre_pagingSupported`.
+     * @description
+     *
+     * Use and presence as in 3GPP TS 23.018 (clause 10.1.3).
+     *
+     * @public
+     * @readonly
+     */
+    public readonly pre_pagingSupported?: OPTIONAL<NULL>;
+    /**
+     * @summary `callDiversionTreatmentIndicator`.
+     * @description
+     *
+     * Whether diversion is allowed. Octet: xxxx xx01 allowed, xxxx xx10 not
+     * allowed; network default allowed (3GPP TS 29.002 V19.1.0 clauses
+     * 10.1.3 and 17.7.3).
+     *
+     * @public
+     * @readonly
+     */
+    public readonly callDiversionTreatmentIndicator?: OPTIONAL<CallDiversionTreatmentIndicator>;
+    /**
+     * @summary `longFTN_Supported`.
+     * @description
+     *
+     * GMSC supports Long Forwarded-to Numbers (clause 10.1.3).
+     *
+     * @public
+     * @readonly
+     */
+    public readonly longFTN_Supported?: OPTIONAL<NULL>;
+    /**
+     * @summary `suppress_VT_CSI`.
+     * @description
+     *
+     * Use and presence as in 3GPP TS 23.078 (clause 10.1.3).
+     *
+     * @public
+     * @readonly
+     */
+    public readonly suppress_VT_CSI?: OPTIONAL<NULL>;
+    /**
+     * @summary `suppressIncomingCallBarring`.
+     * @description
+     *
+     * Use and presence as in 3GPP TS 23.078 (clause 10.1.3).
+     *
+     * @public
+     * @readonly
+     */
+    public readonly suppressIncomingCallBarring?: OPTIONAL<NULL>;
+    /**
+     * @summary `gsmSCF_InitiatedCall`.
+     * @description
+     *
+     * Use and presence as in 3GPP TS 23.078 (clause 10.1.3).
+     *
+     * @public
+     * @readonly
+     */
+    public readonly gsmSCF_InitiatedCall?: OPTIONAL<NULL>;
+    /**
+     * @summary `basicServiceGroup2`.
+     * @description
+     *
+     * See 3GPP TS 23.079 / 23.172 (clause 10.1.3).
+     *
+     * @public
+     * @readonly
+     */
+    public readonly basicServiceGroup2?: OPTIONAL<Ext_BasicServiceCode>;
+    /**
+     * @summary `networkSignalInfo2`.
+     * @description
+     *
+     * See 3GPP TS 23.172 (clause 10.1.3).
+     *
+     * @public
+     * @readonly
+     */
+    public readonly networkSignalInfo2?: OPTIONAL<ExternalSignalInfo>;
+    /**
+     * @summary `suppressMTSS`.
+     * @description
+     *
+     * Use and presence as in 3GPP TS 23.078 (clause 10.1.3).
+     *
+     * @public
+     * @readonly
+     */
+    public readonly suppressMTSS?: OPTIONAL<SuppressMTSS>;
+    /**
+     * @summary `mtRoamingRetrySupported`.
+     * @description
+     *
+     * Use and presence as in 3GPP TS 23.018 and 3GPP TS 23.012 (clause
+     * 10.1.3).
+     *
+     * @public
+     * @readonly
+     */
+    public readonly mtRoamingRetrySupported?: OPTIONAL<NULL>;
+    /**
+     * @summary `callPriority`.
+     * @description
+     *
+     * eMLPP priority (3GPP TS 24.067). Present if GMSC supports eMLPP and
+     * the call is an eMLPP call. Levels A and B map to 0 (clause 10.1.3).
+     *
+     * @public
+     * @readonly
+     */
+    public readonly callPriority?: OPTIONAL<EMLPP_Priority>;
+    /**
+     * @summary Extensions that are not recognized.
+     * @public
+     * @readonly
+     */
+    public readonly _unrecognizedExtensionsList: _Element[];
+
     constructor (
-        /**
-         * @summary `msisdn`.
-         * @description
-         *
-         * MSISDN received in ISUP IAM (clause 10.1.3).
-         *
-         * @public
-         * @readonly
-         */
-        readonly msisdn: ISDN_AddressString,
-        /**
-         * @summary `cug_CheckInfo`.
-         * @description
-         *
-         * CUG interlock and outgoing access (Use and presence as in 3GPP TS
-         * 23.018).
-         *
-         * @public
-         * @readonly
-         */
-        readonly cug_CheckInfo: OPTIONAL<CUG_CheckInfo>,
-        /**
-         * @summary `numberOfForwarding`.
-         * @description
-         *
-         * Use and presence as in 3GPP TS 23.018 (clause 10.1.3).
-         *
-         * @public
-         * @readonly
-         */
-        readonly numberOfForwarding: OPTIONAL<NumberOfForwarding>,
-        /**
-         * @summary `interrogationType`.
-         * @description
-         *
-         * Use and presence as in 3GPP TS 23.079 (clause 10.1.3).
-         *
-         * @public
-         * @readonly
-         */
-        readonly interrogationType: InterrogationType,
-        /**
-         * @summary `or_Interrogation`.
-         * @description
-         *
-         * Use and presence as in 3GPP TS 23.079 (clause 10.1.3).
-         *
-         * @public
-         * @readonly
-         */
-        readonly or_Interrogation: OPTIONAL<NULL>,
-        /**
-         * @summary `or_Capability`.
-         * @description
-         *
-         * Use and presence as in 3GPP TS 23.079 (clause 10.1.3).
-         *
-         * @public
-         * @readonly
-         */
-        readonly or_Capability: OPTIONAL<OR_Phase>,
-        /**
-         * @summary `gmsc_OrGsmSCF_Address`.
-         * @description
-         *
-         * E.164 of GMSC, or gsmSCF if gsmSCF-InitiatedCall is present (clause
-         * 10.1.3).
-         *
-         * @public
-         * @readonly
-         */
-        readonly gmsc_OrGsmSCF_Address: ISDN_AddressString,
-        /**
-         * @summary `callReferenceNumber`.
-         * @description
-         *
-         * Use and presence as in 3GPP TS 23.078, Use and presence as in 3GPP TS
-         * 23.079 and Use and presence as in 3GPP TS 23.018 (clause 10.1.3).
-         *
-         * @public
-         * @readonly
-         */
-        readonly callReferenceNumber?: OPTIONAL<CallReferenceNumber>,
-        /**
-         * @summary `forwardingReason`.
-         * @description
-         *
-         * Use and presence as in 3GPP TS 23.079 (clause 10.1.3).
-         *
-         * @public
-         * @readonly
-         */
-        readonly forwardingReason?: OPTIONAL<ForwardingReason>,
-        /**
-         * @summary `basicServiceGroup`.
-         * @description
-         *
-         * Use and presence as in 3GPP TS 23.079 (clause 10.1.3).
-         *
-         * @public
-         * @readonly
-         */
-        readonly basicServiceGroup?: OPTIONAL<Ext_BasicServiceCode>,
-        /**
-         * @summary `networkSignalInfo`.
-         * @description
-         *
-         * Component presence as in Use and presence as in 3GPP TS 23.018
-         * (clause 10.1.3).
-         *
-         * @public
-         * @readonly
-         */
-        readonly networkSignalInfo?: OPTIONAL<ExternalSignalInfo>,
-        /**
-         * @summary `camelInfo`.
-         * @description
-         *
-         * Supported CAMEL phases and related flags.
-         *
-         * @public
-         * @readonly
-         */
-        readonly camelInfo?: OPTIONAL<CamelInfo>,
-        /**
-         * @summary `suppressionOfAnnouncement`.
-         * @description
-         *
-         * Use and presence as in 3GPP TS 23.078 (clause 10.1.3).
-         *
-         * @public
-         * @readonly
-         */
-        readonly suppressionOfAnnouncement?: OPTIONAL<SuppressionOfAnnouncement>,
-        /**
-         * @summary `extensionContainer`.
-         * @description
-         *
-         * Private or PCS extensions (3GPP TS 29.002 V19.1.0 clause 17.7.11).
-         *
-         * @public
-         * @readonly
-         */
-        readonly extensionContainer?: OPTIONAL<ExtensionContainer>,
-        /**
-         * @summary `alertingPattern`.
-         * @description
-         *
-         * Use and presence as in 3GPP TS 23.018 and 3GPP TS 23.078 (clause
-         * 10.1.3).
-         *
-         * @public
-         * @readonly
-         */
-        readonly alertingPattern?: OPTIONAL<AlertingPattern>,
-        /**
-         * @summary `ccbs_Call`.
-         * @description
-         *
-         * See 3GPP TS 23.093 (clause 10.1.3).
-         *
-         * @public
-         * @readonly
-         */
-        readonly ccbs_Call?: OPTIONAL<NULL>,
-        /**
-         * @summary `supportedCCBS_Phase`.
-         * @description
-         *
-         * Presence means CCBS is supported. Only value 1 is used; 2–127 map to
-         * 1 (3GPP TS 29.002 V19.1.0 clauses 10.1.3 and 17.7.3).
-         *
-         * @public
-         * @readonly
-         */
-        readonly supportedCCBS_Phase?: OPTIONAL<SupportedCCBS_Phase>,
-        /**
-         * @summary `additionalSignalInfo`.
-         * @description
-         *
-         * See 3GPP TS 23.081 and 23.088 (clause 10.1.3).
-         *
-         * @public
-         * @readonly
-         */
-        readonly additionalSignalInfo?: OPTIONAL<Ext_ExternalSignalInfo>,
-        /**
-         * @summary `istSupportIndicator`.
-         * @description
-         *
-         * GMSC supports basic IST and optionally IST Command (clause 10.1.3).
-         *
-         * @public
-         * @readonly
-         */
-        readonly istSupportIndicator?: OPTIONAL<IST_SupportIndicator>,
-        /**
-         * @summary `pre_pagingSupported`.
-         * @description
-         *
-         * Use and presence as in 3GPP TS 23.018 (clause 10.1.3).
-         *
-         * @public
-         * @readonly
-         */
-        readonly pre_pagingSupported?: OPTIONAL<NULL>,
-        /**
-         * @summary `callDiversionTreatmentIndicator`.
-         * @description
-         *
-         * Whether diversion is allowed. Octet: xxxx xx01 allowed, xxxx xx10 not
-         * allowed; network default allowed (3GPP TS 29.002 V19.1.0 clauses
-         * 10.1.3 and 17.7.3).
-         *
-         * @public
-         * @readonly
-         */
-        readonly callDiversionTreatmentIndicator?: OPTIONAL<CallDiversionTreatmentIndicator>,
-        /**
-         * @summary `longFTN_Supported`.
-         * @description
-         *
-         * GMSC supports Long Forwarded-to Numbers (clause 10.1.3).
-         *
-         * @public
-         * @readonly
-         */
-        readonly longFTN_Supported?: OPTIONAL<NULL>,
-        /**
-         * @summary `suppress_VT_CSI`.
-         * @description
-         *
-         * Use and presence as in 3GPP TS 23.078 (clause 10.1.3).
-         *
-         * @public
-         * @readonly
-         */
-        readonly suppress_VT_CSI?: OPTIONAL<NULL>,
-        /**
-         * @summary `suppressIncomingCallBarring`.
-         * @description
-         *
-         * Use and presence as in 3GPP TS 23.078 (clause 10.1.3).
-         *
-         * @public
-         * @readonly
-         */
-        readonly suppressIncomingCallBarring?: OPTIONAL<NULL>,
-        /**
-         * @summary `gsmSCF_InitiatedCall`.
-         * @description
-         *
-         * Use and presence as in 3GPP TS 23.078 (clause 10.1.3).
-         *
-         * @public
-         * @readonly
-         */
-        readonly gsmSCF_InitiatedCall?: OPTIONAL<NULL>,
-        /**
-         * @summary `basicServiceGroup2`.
-         * @description
-         *
-         * See 3GPP TS 23.079 / 23.172 (clause 10.1.3).
-         *
-         * @public
-         * @readonly
-         */
-        readonly basicServiceGroup2?: OPTIONAL<Ext_BasicServiceCode>,
-        /**
-         * @summary `networkSignalInfo2`.
-         * @description
-         *
-         * See 3GPP TS 23.172 (clause 10.1.3).
-         *
-         * @public
-         * @readonly
-         */
-        readonly networkSignalInfo2?: OPTIONAL<ExternalSignalInfo>,
-        /**
-         * @summary `suppressMTSS`.
-         * @description
-         *
-         * Use and presence as in 3GPP TS 23.078 (clause 10.1.3).
-         *
-         * @public
-         * @readonly
-         */
-        readonly suppressMTSS?: OPTIONAL<SuppressMTSS>,
-        /**
-         * @summary `mtRoamingRetrySupported`.
-         * @description
-         *
-         * Use and presence as in 3GPP TS 23.018 and 3GPP TS 23.012 (clause
-         * 10.1.3).
-         *
-         * @public
-         * @readonly
-         */
-        readonly mtRoamingRetrySupported?: OPTIONAL<NULL>,
-        /**
-         * @summary `callPriority`.
-         * @description
-         *
-         * eMLPP priority (3GPP TS 24.067). Present if GMSC supports eMLPP and
-         * the call is an eMLPP call. Levels A and B map to 0 (clause 10.1.3).
-         *
-         * @public
-         * @readonly
-         */
-        readonly callPriority?: OPTIONAL<EMLPP_Priority>,
-        /**
-         * @summary Extensions that are not recognized.
-         * @public
-         * @readonly
-         */
-        readonly _unrecognizedExtensionsList: _Element[] = []
-    ) {}
+        msisdn: ISDN_AddressString,
+        cug_CheckInfo: OPTIONAL<CUG_CheckInfo>,
+        numberOfForwarding: OPTIONAL<NumberOfForwarding>,
+        interrogationType: InterrogationType,
+        or_Interrogation: OPTIONAL<NULL>,
+        or_Capability: OPTIONAL<OR_Phase>,
+        gmsc_OrGsmSCF_Address: ISDN_AddressString,
+        callReferenceNumber?: OPTIONAL<CallReferenceNumber>,
+        forwardingReason?: OPTIONAL<ForwardingReason>,
+        basicServiceGroup?: OPTIONAL<Ext_BasicServiceCode>,
+        networkSignalInfo?: OPTIONAL<ExternalSignalInfo>,
+        camelInfo?: OPTIONAL<CamelInfo>,
+        suppressionOfAnnouncement?: OPTIONAL<SuppressionOfAnnouncement>,
+        extensionContainer?: OPTIONAL<ExtensionContainer>,
+        alertingPattern?: OPTIONAL<AlertingPattern>,
+        ccbs_Call?: OPTIONAL<NULL>,
+        supportedCCBS_Phase?: OPTIONAL<SupportedCCBS_Phase>,
+        additionalSignalInfo?: OPTIONAL<Ext_ExternalSignalInfo>,
+        istSupportIndicator?: OPTIONAL<IST_SupportIndicator>,
+        pre_pagingSupported?: OPTIONAL<NULL>,
+        callDiversionTreatmentIndicator?: OPTIONAL<CallDiversionTreatmentIndicator>,
+        longFTN_Supported?: OPTIONAL<NULL>,
+        suppress_VT_CSI?: OPTIONAL<NULL>,
+        suppressIncomingCallBarring?: OPTIONAL<NULL>,
+        gsmSCF_InitiatedCall?: OPTIONAL<NULL>,
+        basicServiceGroup2?: OPTIONAL<Ext_BasicServiceCode>,
+        networkSignalInfo2?: OPTIONAL<ExternalSignalInfo>,
+        suppressMTSS?: OPTIONAL<SuppressMTSS>,
+        mtRoamingRetrySupported?: OPTIONAL<NULL>,
+        callPriority?: OPTIONAL<EMLPP_Priority>,
+        _unrecognizedExtensionsList: _Element[] = []
+    ) {
+        this.msisdn = msisdn;
+        this.cug_CheckInfo = cug_CheckInfo;
+        this.numberOfForwarding = numberOfForwarding;
+        this.interrogationType = interrogationType;
+        this.or_Interrogation = or_Interrogation;
+        this.or_Capability = or_Capability;
+        this.gmsc_OrGsmSCF_Address = gmsc_OrGsmSCF_Address;
+        this.callReferenceNumber = callReferenceNumber;
+        this.forwardingReason = forwardingReason;
+        this.basicServiceGroup = basicServiceGroup;
+        this.networkSignalInfo = networkSignalInfo;
+        this.camelInfo = camelInfo;
+        this.suppressionOfAnnouncement = suppressionOfAnnouncement;
+        this.extensionContainer = extensionContainer;
+        this.alertingPattern = alertingPattern;
+        this.ccbs_Call = ccbs_Call;
+        this.supportedCCBS_Phase = supportedCCBS_Phase;
+        this.additionalSignalInfo = additionalSignalInfo;
+        this.istSupportIndicator = istSupportIndicator;
+        this.pre_pagingSupported = pre_pagingSupported;
+        this.callDiversionTreatmentIndicator = callDiversionTreatmentIndicator;
+        this.longFTN_Supported = longFTN_Supported;
+        this.suppress_VT_CSI = suppress_VT_CSI;
+        this.suppressIncomingCallBarring = suppressIncomingCallBarring;
+        this.gsmSCF_InitiatedCall = gsmSCF_InitiatedCall;
+        this.basicServiceGroup2 = basicServiceGroup2;
+        this.networkSignalInfo2 = networkSignalInfo2;
+        this.suppressMTSS = suppressMTSS;
+        this.mtRoamingRetrySupported = mtRoamingRetrySupported;
+        this.callPriority = callPriority;
+        this._unrecognizedExtensionsList = _unrecognizedExtensionsList;
+    }
 
     /**
      * @summary Restructures an object into a SendRoutingInfoArg
@@ -418,19 +482,19 @@ class SendRoutingInfoArg {
          * @static
          */
 
-    public static _enum_for_interrogationType = _enum_for_InterrogationType;        /**
+    public static _enum_for_interrogationType: typeof _enum_for_InterrogationType = _enum_for_InterrogationType;        /**
          * @summary The enum used as the type of the component `forwardingReason`
          * @public
          * @static
          */
 
-    public static _enum_for_forwardingReason = _enum_for_ForwardingReason;        /**
+    public static _enum_for_forwardingReason: typeof _enum_for_ForwardingReason = _enum_for_ForwardingReason;        /**
          * @summary The enum used as the type of the component `istSupportIndicator`
          * @public
          * @static
          */
 
-    public static _enum_for_istSupportIndicator = _enum_for_IST_SupportIndicator;
+    public static _enum_for_istSupportIndicator: typeof _enum_for_IST_SupportIndicator = _enum_for_IST_SupportIndicator;
 }
 
 /**

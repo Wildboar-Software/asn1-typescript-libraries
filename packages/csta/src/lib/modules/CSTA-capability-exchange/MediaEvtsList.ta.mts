@@ -2,15 +2,15 @@
 
 import * as $ from "@wildboar/asn1/functional";
 import {
-    OPTIONAL,
-    SEQUENCE,
-    SET,
-    ASN1Element as _Element,
+    type OPTIONAL,
+    type SEQUENCE,
+    type SET,
+    type ASN1Element as _Element,
     ASN1TagClass as _TagClass
 } from "@wildboar/asn1";
-import { MediaAttached, _decode_MediaAttached, _encode_MediaAttached } from "../CSTA-capability-exchange/MediaAttached.ta.mjs";
+import { type MediaAttached, _decode_MediaAttached, _encode_MediaAttached } from "../CSTA-capability-exchange/MediaAttached.ta.mjs";
 
-import { MediaDetached, _decode_MediaDetached, _encode_MediaDetached } from "../CSTA-capability-exchange/MediaDetached.ta.mjs";
+import { type MediaDetached, _decode_MediaDetached, _encode_MediaDetached } from "../CSTA-capability-exchange/MediaDetached.ta.mjs";
 
 
 
@@ -28,7 +28,7 @@ import { MediaDetached, _decode_MediaDetached, _encode_MediaDetached } from "../
  * 
  * ```asn1
  * MediaEvtsList ::= SEQUENCE
- * {     mediaAttached             [0] IMPLICIT     MediaAttached         OPTIONAL,
+ * {     mediaAttached             [0] IMPLICIT     MediaAttached         type OPTIONAL,
  *     mediaDetached             [1] IMPLICIT     MediaDetached         OPTIONAL }
  * ```
  * 
@@ -36,26 +36,32 @@ import { MediaDetached, _decode_MediaDetached, _encode_MediaDetached } from "../
  */
 export
 class MediaEvtsList {
+    /**
+     * @summary `mediaAttached`.
+     * @public
+     * @readonly
+     * @description
+     * Capability bitmap for this event; omit if the SF does not support it
+     * (ECMA-269 Annex C).
+     */
+    public readonly mediaAttached?: OPTIONAL<MediaAttached>;
+    /**
+     * @summary `mediaDetached`.
+     * @public
+     * @readonly
+     * @description
+     * Capability bitmap for this event; omit if the SF does not support it
+     * (ECMA-269 Annex C).
+     */
+    public readonly mediaDetached?: OPTIONAL<MediaDetached>;
+
     constructor (
-        /**
-         * @summary `mediaAttached`.
-         * @public
-         * @readonly
-         * @description
-         * Capability bitmap for this event; omit if the SF does not support it
-         * (ECMA-269 Annex C).
-         */
-        readonly mediaAttached?: OPTIONAL<MediaAttached>,
-        /**
-         * @summary `mediaDetached`.
-         * @public
-         * @readonly
-         * @description
-         * Capability bitmap for this event; omit if the SF does not support it
-         * (ECMA-269 Annex C).
-         */
-        readonly mediaDetached?: OPTIONAL<MediaDetached>
-    ) {}
+        mediaAttached?: OPTIONAL<MediaAttached>,
+        mediaDetached?: OPTIONAL<MediaDetached>
+    ) {
+        this.mediaAttached = mediaAttached;
+        this.mediaDetached = mediaDetached;
+    }
 
     /**
      * @summary Restructures an object into a MediaEvtsList

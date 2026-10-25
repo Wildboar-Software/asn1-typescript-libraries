@@ -6,7 +6,7 @@ import {
 } from "@wildboar/asn1";
 import * as $ from "@wildboar/asn1/functional";
 import {
-    Calling_authentication_value_c1221,
+    type Calling_authentication_value_c1221,
     _decode_Calling_authentication_value_c1221,
     _encode_Calling_authentication_value_c1221,
 } from "./lib/modules/C1221-Security-Mechanism/Calling-authentication-value-c1221.ta.mjs";

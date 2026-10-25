@@ -1,6 +1,6 @@
 /* eslint-disable */
 import {
-    ASN1Element as _Element,
+    type ASN1Element as _Element,
     ASN1TagClass as _TagClass,
     ASN1Construction as _Construction,
     ASN1UniversalType as _UniversalType,
@@ -17,7 +17,7 @@ import {
     _encode_AttributeUsage,
 } from '@wildboar/x500/InformationFramework';
 import {
-    WithSyntax,
+    type WithSyntax,
     _decode_WithSyntax,
     _encode_WithSyntax,
 } from '../DefinitionASN1Module/WithSyntax.ta.mjs';

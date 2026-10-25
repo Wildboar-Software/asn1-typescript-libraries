@@ -1,7 +1,7 @@
 /* eslint-disable */
 
 import * as $ from "@wildboar/asn1/functional";
-import { SEQUENCE, ASN1Element as _Element } from "@wildboar/asn1";
+import { type SEQUENCE, ASN1Element as _Element } from "@wildboar/asn1";
 import { LocalConnectionState, _decode_LocalConnectionState, _encode_LocalConnectionState } from "../CSTA-connection-states/LocalConnectionState.ta.mjs";
 
 

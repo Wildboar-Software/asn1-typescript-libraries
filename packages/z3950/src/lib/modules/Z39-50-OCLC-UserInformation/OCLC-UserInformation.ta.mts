@@ -1,13 +1,13 @@
 /* eslint-disable */
 import {
-    BOOLEAN,
-    OPTIONAL,
-    VisibleString,
-    ASN1Element as _Element,
+    type BOOLEAN,
+    type OPTIONAL,
+    type VisibleString,
+    type ASN1Element as _Element,
     ASN1TagClass as _TagClass
 } from "@wildboar/asn1";
 import * as $ from "@wildboar/asn1/functional";
-import { DBName, _decode_DBName, _encode_DBName } from "../Z39-50-OCLC-UserInformation/DBName.ta.mjs";
+import { type DBName, _decode_DBName, _encode_DBName } from "../Z39-50-OCLC-UserInformation/DBName.ta.mjs";
 
 
 /**

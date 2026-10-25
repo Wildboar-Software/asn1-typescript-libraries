@@ -1,6 +1,6 @@
 /* eslint-disable */
 import {
-    ASN1Element as _Element,
+    type ASN1Element as _Element,
     ASN1TagClass as _TagClass,
     ASN1Construction as _Construction,
     ASN1UniversalType as _UniversalType,
@@ -30,20 +30,26 @@ import { InvokableService, _enum_for_InvokableService, _decode_InvokableService,
  */
 export
 class NotificationInformation_ssInvocationSpecificInfo {
+    /**
+     * @summary `invokedService`.
+     * @public
+     * @readonly
+     */
+    public readonly invokedService: InvokableService;
+    /**
+     * @summary Extensions that are not recognized.
+     * @public
+     * @readonly
+     */
+    public readonly _unrecognizedExtensionsList: _Element[];
+
     constructor (
-        /**
-         * @summary `invokedService`.
-         * @public
-         * @readonly
-         */
-        readonly invokedService: InvokableService,
-        /**
-         * @summary Extensions that are not recognized.
-         * @public
-         * @readonly
-         */
-        readonly _unrecognizedExtensionsList: _Element[] = []
-    ) {}
+        invokedService: InvokableService,
+        _unrecognizedExtensionsList: _Element[] = []
+    ) {
+        this.invokedService = invokedService;
+        this._unrecognizedExtensionsList = _unrecognizedExtensionsList;
+    }
 
     /**
      * @summary Restructures an object into a NotificationInformation_ssInvocationSpecificInfo
@@ -67,7 +73,7 @@ class NotificationInformation_ssInvocationSpecificInfo {
          * @static
          */
 
-    public static _enum_for_invokedService = _enum_for_InvokableService;
+    public static _enum_for_invokedService: typeof _enum_for_InvokableService = _enum_for_InvokableService;
 }
 
 /**

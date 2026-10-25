@@ -1,7 +1,7 @@
 /* eslint-disable */
 import {
-    ASN1Element as _Element,
-    INTEGER
+    type ASN1Element as _Element,
+    type INTEGER
 } from "@wildboar/asn1";
 import * as $ from "@wildboar/asn1/functional";
 
@@ -39,7 +39,7 @@ type EuiccPackageUnsignedErrorCode = INTEGER;
  * likewise only enumerated (section 2.11.2.1).
  */
 export
-const EuiccPackageUnsignedErrorCode_sizeOverflow: EuiccPackageUnsignedErrorCode = 15; /* LONG_NAMED_INTEGER_VALUE */
+const EuiccPackageUnsignedErrorCode_sizeOverflow: 15 = 15 satisfies EuiccPackageUnsignedErrorCode; /* LONG_NAMED_INTEGER_VALUE */
 
 /**
  * @summary EuiccPackageUnsignedErrorCode_sizeOverflow
@@ -50,7 +50,7 @@ const EuiccPackageUnsignedErrorCode_sizeOverflow: EuiccPackageUnsignedErrorCode 
  * only enumerates sizeOverflow on EuiccPackageErrorCode).
  */
 export
-const sizeOverflow: EuiccPackageUnsignedErrorCode = EuiccPackageUnsignedErrorCode_sizeOverflow; /* SHORT_NAMED_INTEGER_VALUE */
+const sizeOverflow: 15 = EuiccPackageUnsignedErrorCode_sizeOverflow; /* SHORT_NAMED_INTEGER_VALUE */
 
 /**
  * @summary EuiccPackageUnsignedErrorCode_undefinedError
@@ -61,7 +61,7 @@ const sizeOverflow: EuiccPackageUnsignedErrorCode = EuiccPackageUnsignedErrorCod
  * EuiccPackageUnsignedErrorCode.
  */
 export
-const EuiccPackageUnsignedErrorCode_undefinedError: EuiccPackageUnsignedErrorCode = 127; /* LONG_NAMED_INTEGER_VALUE */
+const EuiccPackageUnsignedErrorCode_undefinedError: 127 = 127 satisfies EuiccPackageUnsignedErrorCode; /* LONG_NAMED_INTEGER_VALUE */
 
 /**
  * @summary EuiccPackageUnsignedErrorCode_undefinedError
@@ -72,7 +72,7 @@ const EuiccPackageUnsignedErrorCode_undefinedError: EuiccPackageUnsignedErrorCod
  * EuiccPackageUnsignedErrorCode.
  */
 export
-const undefinedError: EuiccPackageUnsignedErrorCode = EuiccPackageUnsignedErrorCode_undefinedError; /* SHORT_NAMED_INTEGER_VALUE */
+const undefinedError: 127 = EuiccPackageUnsignedErrorCode_undefinedError; /* SHORT_NAMED_INTEGER_VALUE */
 export const _decode_EuiccPackageUnsignedErrorCode: $.ASN1Decoder<EuiccPackageUnsignedErrorCode> = $._decodeInteger;
 export const _encode_EuiccPackageUnsignedErrorCode: $.ASN1Encoder<EuiccPackageUnsignedErrorCode> = $._encodeInteger;
 

@@ -1,11 +1,11 @@
 /* eslint-disable */
 import {
     ASN1ConstructionError as _ConstructionError,
-    ASN1Element as _Element,
+    type ASN1Element as _Element,
     ASN1TagClass as _TagClass
 } from "@wildboar/asn1";
 import * as $ from "@wildboar/asn1/functional";
-import { TransactionId, _decode_TransactionId, _encode_TransactionId } from "../MEDIA-GATEWAY-CONTROL/TransactionId.ta.mjs";
+import { type TransactionId, _decode_TransactionId, _encode_TransactionId } from "../MEDIA-GATEWAY-CONTROL/TransactionId.ta.mjs";
 import { ActionRequest, _decode_ActionRequest, _encode_ActionRequest } from "../MEDIA-GATEWAY-CONTROL/ActionRequest.ta.mjs";
 
 
@@ -46,7 +46,7 @@ class TransactionRequest {
      * @public
      * @readonly
      */
-    readonly transactionId: TransactionId;
+    public readonly transactionId: TransactionId;
     /**
      * @summary `actions`.
      * @description
@@ -60,7 +60,7 @@ class TransactionRequest {
      * @public
      * @readonly
      */
-    readonly actions: ActionRequest[];
+    public readonly actions: ActionRequest[];
     /**
      * @summary Extensions that are not recognized.
      * @description
@@ -71,7 +71,7 @@ class TransactionRequest {
      * @public
      * @readonly
      */
-    readonly _unrecognizedExtensionsList: _Element[];
+    public readonly _unrecognizedExtensionsList: _Element[];
 
     constructor (
         transactionId: TransactionId,

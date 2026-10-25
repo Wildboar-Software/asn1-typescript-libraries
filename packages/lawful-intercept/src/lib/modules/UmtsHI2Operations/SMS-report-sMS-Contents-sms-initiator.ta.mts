@@ -1,6 +1,6 @@
 /* eslint-disable */
 import {
-    ENUMERATED
+    type ENUMERATED
 } from "@wildboar/asn1";
 import * as $ from "@wildboar/asn1/functional";
 
@@ -50,7 +50,7 @@ type SMS_report_sMS_Contents_sms_initiator = _enum_for_SMS_report_sMS_Contents_s
  * @type {number}
  */
 export
-const SMS_report_sMS_Contents_sms_initiator_target: SMS_report_sMS_Contents_sms_initiator = 0; /* LONG_NAMED_ENUMERATED_VALUE */
+const SMS_report_sMS_Contents_sms_initiator_target: _enum_for_SMS_report_sMS_Contents_sms_initiator.target = _enum_for_SMS_report_sMS_Contents_sms_initiator.target; /* LONG_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary target
@@ -62,7 +62,7 @@ const SMS_report_sMS_Contents_sms_initiator_target: SMS_report_sMS_Contents_sms_
  * @type {number}
  */
 export
-const target: SMS_report_sMS_Contents_sms_initiator = SMS_report_sMS_Contents_sms_initiator_target; /* SHORT_NAMED_ENUMERATED_VALUE */
+const target: _enum_for_SMS_report_sMS_Contents_sms_initiator.target = SMS_report_sMS_Contents_sms_initiator_target; /* SHORT_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary SMS_report_sMS_Contents_sms_initiator_server
@@ -75,7 +75,7 @@ const target: SMS_report_sMS_Contents_sms_initiator = SMS_report_sMS_Contents_sm
  * @type {number}
  */
 export
-const SMS_report_sMS_Contents_sms_initiator_server: SMS_report_sMS_Contents_sms_initiator = 1; /* LONG_NAMED_ENUMERATED_VALUE */
+const SMS_report_sMS_Contents_sms_initiator_server: _enum_for_SMS_report_sMS_Contents_sms_initiator.server = _enum_for_SMS_report_sMS_Contents_sms_initiator.server; /* LONG_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary server
@@ -87,7 +87,7 @@ const SMS_report_sMS_Contents_sms_initiator_server: SMS_report_sMS_Contents_sms_
  * @type {number}
  */
 export
-const server: SMS_report_sMS_Contents_sms_initiator = SMS_report_sMS_Contents_sms_initiator_server; /* SHORT_NAMED_ENUMERATED_VALUE */
+const server: _enum_for_SMS_report_sMS_Contents_sms_initiator.server = SMS_report_sMS_Contents_sms_initiator_server; /* SHORT_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary SMS_report_sMS_Contents_sms_initiator_undefined_party
@@ -101,7 +101,7 @@ const server: SMS_report_sMS_Contents_sms_initiator = SMS_report_sMS_Contents_sm
  * @type {number}
  */
 export
-const SMS_report_sMS_Contents_sms_initiator_undefined_party: SMS_report_sMS_Contents_sms_initiator = 2; /* LONG_NAMED_ENUMERATED_VALUE */
+const SMS_report_sMS_Contents_sms_initiator_undefined_party: _enum_for_SMS_report_sMS_Contents_sms_initiator.undefined_party = _enum_for_SMS_report_sMS_Contents_sms_initiator.undefined_party; /* LONG_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary undefined_party
@@ -113,7 +113,7 @@ const SMS_report_sMS_Contents_sms_initiator_undefined_party: SMS_report_sMS_Cont
  * @type {number}
  */
 export
-const undefined_party: SMS_report_sMS_Contents_sms_initiator = SMS_report_sMS_Contents_sms_initiator_undefined_party; /* SHORT_NAMED_ENUMERATED_VALUE */
+const undefined_party: _enum_for_SMS_report_sMS_Contents_sms_initiator.undefined_party = SMS_report_sMS_Contents_sms_initiator_undefined_party; /* SHORT_NAMED_ENUMERATED_VALUE */
 export const _decode_SMS_report_sMS_Contents_sms_initiator: $.ASN1Decoder<SMS_report_sMS_Contents_sms_initiator> = $._decodeEnumerated;
 export const _encode_SMS_report_sMS_Contents_sms_initiator: $.ASN1Encoder<SMS_report_sMS_Contents_sms_initiator> = $._encodeEnumerated;
 

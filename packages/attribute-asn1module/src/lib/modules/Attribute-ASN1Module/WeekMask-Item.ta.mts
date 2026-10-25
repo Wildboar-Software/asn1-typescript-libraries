@@ -1,6 +1,6 @@
 /* eslint-disable */
 import {
-    ASN1Element as _Element,
+    type ASN1Element as _Element,
     ASN1TagClass as _TagClass,
     ASN1Construction as _Construction,
     ASN1UniversalType as _UniversalType,
@@ -10,8 +10,8 @@ import {
     ASN1ConstructionError as _ConstructionError,
 } from "@wildboar/asn1";
 import * as $ from "@wildboar/asn1/functional";
-import { WeekMask_Item_daysOfWeek, _decode_WeekMask_Item_daysOfWeek, _encode_WeekMask_Item_daysOfWeek } from "../Attribute-ASN1Module/WeekMask-Item-daysOfWeek.ta.mjs";
-import { IntervalsOfDay, _decode_IntervalsOfDay, _encode_IntervalsOfDay } from "../Attribute-ASN1Module/IntervalsOfDay.ta.mjs";
+import { type WeekMask_Item_daysOfWeek, _decode_WeekMask_Item_daysOfWeek, _encode_WeekMask_Item_daysOfWeek } from "../Attribute-ASN1Module/WeekMask-Item-daysOfWeek.ta.mjs";
+import { type IntervalsOfDay, _decode_IntervalsOfDay, _encode_IntervalsOfDay } from "../Attribute-ASN1Module/IntervalsOfDay.ta.mjs";
 /**
  * @summary WeekMask_Item
  * @description
@@ -38,7 +38,7 @@ class WeekMask_Item {
      * @public
      * @readonly
      */
-    readonly daysOfWeek: WeekMask_Item_daysOfWeek;
+    public readonly daysOfWeek: WeekMask_Item_daysOfWeek;
     /**
      * @summary `intervalsOfDay`.
      * @description
@@ -48,7 +48,7 @@ class WeekMask_Item {
      * @public
      * @readonly
      */
-    readonly intervalsOfDay: IntervalsOfDay;
+    public readonly intervalsOfDay: IntervalsOfDay;
 
     constructor (
         daysOfWeek: WeekMask_Item_daysOfWeek,

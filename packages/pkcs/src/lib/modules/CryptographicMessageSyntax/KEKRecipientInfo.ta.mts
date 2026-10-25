@@ -1,17 +1,17 @@
 /* eslint-disable */
 import {
     ASN1ConstructionError as _ConstructionError,
-    ASN1Element as _Element,
+    type ASN1Element as _Element,
     ASN1TagClass as _TagClass,
 } from "@wildboar/asn1";
 import * as $ from "@wildboar/asn1/functional";
 import {
-    CMSVersion,
+    type CMSVersion,
     _decode_CMSVersion,
     _encode_CMSVersion,
 } from "../CryptographicMessageSyntax/CMSVersion.ta.mjs";
 import {
-    EncryptedKey,
+    type EncryptedKey,
     _decode_EncryptedKey,
     _encode_EncryptedKey,
 } from "../CryptographicMessageSyntax/EncryptedKey.ta.mjs";
@@ -21,7 +21,7 @@ import {
     _encode_KEKIdentifier,
 } from "../CryptographicMessageSyntax/KEKIdentifier.ta.mjs";
 import {
-    KeyEncryptionAlgorithmIdentifier,
+    type KeyEncryptionAlgorithmIdentifier,
     _decode_KeyEncryptionAlgorithmIdentifier,
     _encode_KeyEncryptionAlgorithmIdentifier,
 } from "../CryptographicMessageSyntax/KeyEncryptionAlgorithmIdentifier.ta.mjs";
@@ -43,32 +43,42 @@ import {
  *
  */
 export class KEKRecipientInfo {
+    /**
+     * @summary `version`.
+     * @public
+     * @readonly
+     */
+    public readonly version: CMSVersion;
+    /**
+     * @summary `kekid`.
+     * @public
+     * @readonly
+     */
+    public readonly kekid: KEKIdentifier;
+    /**
+     * @summary `keyEncryptionAlgorithm`.
+     * @public
+     * @readonly
+     */
+    public readonly keyEncryptionAlgorithm: KeyEncryptionAlgorithmIdentifier;
+    /**
+     * @summary `encryptedKey`.
+     * @public
+     * @readonly
+     */
+    public readonly encryptedKey: EncryptedKey;
+
     constructor(
-        /**
-         * @summary `version`.
-         * @public
-         * @readonly
-         */
-        readonly version: CMSVersion,
-        /**
-         * @summary `kekid`.
-         * @public
-         * @readonly
-         */
-        readonly kekid: KEKIdentifier,
-        /**
-         * @summary `keyEncryptionAlgorithm`.
-         * @public
-         * @readonly
-         */
-        readonly keyEncryptionAlgorithm: KeyEncryptionAlgorithmIdentifier,
-        /**
-         * @summary `encryptedKey`.
-         * @public
-         * @readonly
-         */
-        readonly encryptedKey: EncryptedKey
-    ) {}
+        version: CMSVersion,
+        kekid: KEKIdentifier,
+        keyEncryptionAlgorithm: KeyEncryptionAlgorithmIdentifier,
+        encryptedKey: EncryptedKey
+    ) {
+        this.version = version;
+        this.kekid = kekid;
+        this.keyEncryptionAlgorithm = keyEncryptionAlgorithm;
+        this.encryptedKey = encryptedKey;
+    }
 
     /**
      * @summary Restructures an object into a KEKRecipientInfo

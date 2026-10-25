@@ -73,7 +73,7 @@ type NBIFOMSupport = _enum_for_NBIFOMSupport;
  * @enum {number}
  */
 export
-const NBIFOMSupport = _enum_for_NBIFOMSupport;
+const NBIFOMSupport: typeof _enum_for_NBIFOMSupport = _enum_for_NBIFOMSupport;
 
 /**
  * @summary NBIFOMSupport_nBIFOMNotSupported
@@ -81,7 +81,7 @@ const NBIFOMSupport = _enum_for_NBIFOMSupport;
  * @type {number}
  */
 export
-const NBIFOMSupport_nBIFOMNotSupported: NBIFOMSupport = NBIFOMSupport.nBIFOMNotSupported; /* LONG_NAMED_ENUMERATED_VALUE */
+const NBIFOMSupport_nBIFOMNotSupported: _enum_for_NBIFOMSupport.nBIFOMNotSupported = NBIFOMSupport.nBIFOMNotSupported; /* LONG_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary nBIFOMNotSupported
@@ -89,7 +89,7 @@ const NBIFOMSupport_nBIFOMNotSupported: NBIFOMSupport = NBIFOMSupport.nBIFOMNotS
  * @type {number}
  */
 export
-const nBIFOMNotSupported: NBIFOMSupport = NBIFOMSupport.nBIFOMNotSupported; /* SHORT_NAMED_ENUMERATED_VALUE */
+const nBIFOMNotSupported: _enum_for_NBIFOMSupport.nBIFOMNotSupported = NBIFOMSupport.nBIFOMNotSupported; /* SHORT_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary NBIFOMSupport_nBIFOMSupported
@@ -97,7 +97,7 @@ const nBIFOMNotSupported: NBIFOMSupport = NBIFOMSupport.nBIFOMNotSupported; /* S
  * @type {number}
  */
 export
-const NBIFOMSupport_nBIFOMSupported: NBIFOMSupport = NBIFOMSupport.nBIFOMSupported; /* LONG_NAMED_ENUMERATED_VALUE */
+const NBIFOMSupport_nBIFOMSupported: _enum_for_NBIFOMSupport.nBIFOMSupported = NBIFOMSupport.nBIFOMSupported; /* LONG_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary nBIFOMSupported
@@ -105,7 +105,7 @@ const NBIFOMSupport_nBIFOMSupported: NBIFOMSupport = NBIFOMSupport.nBIFOMSupport
  * @type {number}
  */
 export
-const nBIFOMSupported: NBIFOMSupport = NBIFOMSupport.nBIFOMSupported; /* SHORT_NAMED_ENUMERATED_VALUE */
+const nBIFOMSupported: _enum_for_NBIFOMSupport.nBIFOMSupported = NBIFOMSupport.nBIFOMSupported; /* SHORT_NAMED_ENUMERATED_VALUE */
 
 export
 const _decode_NBIFOMSupport: $.ASN1Decoder<NBIFOMSupport> = $._decodeEnumerated;

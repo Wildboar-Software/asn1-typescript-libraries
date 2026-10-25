@@ -1,13 +1,13 @@
 /* eslint-disable */
 import {
-    OCTET_STRING,
+    type OCTET_STRING,
     ASN1ConstructionError as _ConstructionError,
-    ASN1Element as _Element,
+    type ASN1Element as _Element,
     ASN1TagClass as _TagClass,
     ASN1SizeError
 } from "@wildboar/asn1";
 import * as $ from "@wildboar/asn1/functional";
-import { OperatorLeaMessagePriority, _decode_OperatorLeaMessagePriority, _encode_OperatorLeaMessagePriority, _enum_for_OperatorLeaMessagePriority } from "../LI-PS-PDU/OperatorLeaMessagePriority.ta.mjs";
+import { type OperatorLeaMessagePriority, _decode_OperatorLeaMessagePriority, _encode_OperatorLeaMessagePriority, _enum_for_OperatorLeaMessagePriority } from "../LI-PS-PDU/OperatorLeaMessagePriority.ta.mjs";
 // export { OperatorLeaMessagePriority, _enum_for_OperatorLeaMessagePriority, OperatorLeaMessagePriority_error /* IMPORTED_LONG_ENUMERATION_ITEM */, error /* IMPORTED_SHORT_ENUMERATION_ITEM */, OperatorLeaMessagePriority_informational /* IMPORTED_LONG_ENUMERATION_ITEM */, informational /* IMPORTED_SHORT_ENUMERATION_ITEM */, _decode_OperatorLeaMessagePriority, _encode_OperatorLeaMessagePriority } from "../LI-PS-PDU/OperatorLeaMessagePriority.ta.mjs";
 
 
@@ -114,7 +114,7 @@ class OperatorLeaMessage {
          * @static
          */
 
-    public static _enum_for_messagePriority = _enum_for_OperatorLeaMessagePriority;
+    public static _enum_for_messagePriority: typeof _enum_for_OperatorLeaMessagePriority = _enum_for_OperatorLeaMessagePriority;
 }
 
 /**

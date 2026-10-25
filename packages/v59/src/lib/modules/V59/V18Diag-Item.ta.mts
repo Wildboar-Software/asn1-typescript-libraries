@@ -1,7 +1,7 @@
 /* eslint-disable */
 import {
-    OPTIONAL,
-    ASN1Element as _Element,
+    type OPTIONAL,
+    type ASN1Element as _Element,
     ASN1TagClass as _TagClass,
     ASN1Construction as _Construction,
     ASN1UniversalType as _UniversalType,
@@ -11,13 +11,13 @@ import {
     ASN1ConstructionError as _ConstructionError,
 } from "@wildboar/asn1";
 import * as $ from "@wildboar/asn1/functional";
-import { Capabilities, _decode_Capabilities, _encode_Capabilities } from "../V59/Capabilities.ta.mjs";
+import { type Capabilities, _decode_Capabilities, _encode_Capabilities } from "../V59/Capabilities.ta.mjs";
 
 import { V18Diag_Item_v18used, _enum_for_V18Diag_Item_v18used, _decode_V18Diag_Item_v18used, _encode_V18Diag_Item_v18used } from "../V59/V18Diag-Item-v18used.ta.mjs";
 
-import { TxPowerLevel, _decode_TxPowerLevel, _encode_TxPowerLevel } from "../V59/TxPowerLevel.ta.mjs";
+import { type TxPowerLevel, _decode_TxPowerLevel, _encode_TxPowerLevel } from "../V59/TxPowerLevel.ta.mjs";
 
-import { V59String, _decode_V59String, _encode_V59String } from "../V59/V59String.ta.mjs";
+import { type V59String, _decode_V59String, _encode_V59String } from "../V59/V59String.ta.mjs";
 
 /**
  * @summary V18Diag_Item
@@ -54,7 +54,7 @@ class V18Diag_Item {
      * @public
      * @readonly
      */
-    readonly modeV18: Capabilities;
+    public readonly modeV18: Capabilities;
     /**
      * @summary `v18used`.
      * @description
@@ -64,7 +64,7 @@ class V18Diag_Item {
      * @public
      * @readonly
      */
-    readonly v18used: V18Diag_Item_v18used;
+    public readonly v18used: V18Diag_Item_v18used;
     /**
      * @summary `v18TxLevel`.
      * @description
@@ -74,7 +74,7 @@ class V18Diag_Item {
      * @public
      * @readonly
      */
-    readonly v18TxLevel: TxPowerLevel;
+    public readonly v18TxLevel: TxPowerLevel;
     /**
      * @summary `rxLevelEstimate`.
      * @description
@@ -85,13 +85,13 @@ class V18Diag_Item {
      * @public
      * @readonly
      */
-    readonly rxLevelEstimate?: OPTIONAL<V59String>;
+    public readonly rxLevelEstimate?: OPTIONAL<V59String>;
     /**
      * @summary Extensions that are not recognized.
      * @public
      * @readonly
      */
-    readonly _unrecognizedExtensionsList: _Element[];
+    public readonly _unrecognizedExtensionsList: _Element[];
 
     constructor (
         modeV18: Capabilities,
@@ -129,7 +129,7 @@ class V18Diag_Item {
          * @static
          */
 
-    public static _enum_for_v18used = _enum_for_V18Diag_Item_v18used;
+    public static _enum_for_v18used: typeof _enum_for_V18Diag_Item_v18used = _enum_for_V18Diag_Item_v18used;
 }
 
 /**

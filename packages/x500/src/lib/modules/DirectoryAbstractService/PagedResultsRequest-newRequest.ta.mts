@@ -1,10 +1,10 @@
 /* eslint-disable */
 import {
-    ASN1Element as _Element,
+    type ASN1Element as _Element,
     ASN1TagClass as _TagClass,
-    BOOLEAN,
-    INTEGER,
-    OPTIONAL,
+    type BOOLEAN,
+    type INTEGER,
+    type OPTIONAL,
 } from "@wildboar/asn1";
 import * as $ from "@wildboar/asn1/functional";
 import {
@@ -33,72 +33,86 @@ import {
  *
  */
 export class PagedResultsRequest_newRequest {
+    /**
+     * @summary `pageSize`.
+     * @description
+     *
+     * Max subordinates/entries. Family members inside
+     * `family-information` do not count. If paging is performed, the
+     * paging DSA ignores `sizeLimit`.
+     *
+     * @public
+     * @readonly
+     */
+    public readonly pageSize: INTEGER;
+    /**
+     * @summary `sortKeys`.
+     * @description
+     *
+     * SEQUENCE SIZE (1..MAX); first is primary. List: keys apply only to
+     * RDN attributes. Search: only returned attributes; fallback DN.
+     * Ignore a key with no ordering rule. Multi-valued: least value
+     * (greatest if `reverse`). Missing attr: greater than all (less if
+     * `reverse`).
+     *
+     * @public
+     * @readonly
+     */
+    public readonly sortKeys?: OPTIONAL<SortKey[]>;
+    /**
+     * @summary `reverse`.
+     * @description
+     *
+     * DEFAULT FALSE. Ignored if no `sortKeys`.
+     *
+     * @public
+     * @readonly
+     */
+    public readonly reverse?: OPTIONAL<BOOLEAN>;
+    /**
+     * @summary `unmerged`.
+     * @description
+     *
+     * DEFAULT FALSE. TRUE ⇒ each contributing DSA's data (sorted) before
+     * the next; FALSE ⇒ merge then sort. Ignored if no `sortKeys`.
+     *
+     * @public
+     * @readonly
+     */
+    public readonly unmerged?: OPTIONAL<BOOLEAN>;
+    /**
+     * @summary `pageNumber`.
+     * @description
+     *
+     * Start at that page, not the first. Ignored if ordering not
+     * requested.
+     *
+     * @public
+     * @readonly
+     */
+    public readonly pageNumber?: OPTIONAL<INTEGER>;
+    /**
+     * @summary Extensions that are not recognized.
+     * @public
+     * @readonly
+     */
+    public readonly _unrecognizedExtensionsList: _Element[];
+
     constructor(
-        /**
-         * @summary `pageSize`.
-         * @description
-         *
-         * Max subordinates/entries. Family members inside
-         * `family-information` do not count. If paging is performed, the
-         * paging DSA ignores `sizeLimit`.
-         *
-         * @public
-         * @readonly
-         */
-        readonly pageSize: INTEGER,
-        /**
-         * @summary `sortKeys`.
-         * @description
-         *
-         * SEQUENCE SIZE (1..MAX); first is primary. List: keys apply only to
-         * RDN attributes. Search: only returned attributes; fallback DN.
-         * Ignore a key with no ordering rule. Multi-valued: least value
-         * (greatest if `reverse`). Missing attr: greater than all (less if
-         * `reverse`).
-         *
-         * @public
-         * @readonly
-         */
-        readonly sortKeys?: OPTIONAL<SortKey[]>,
-        /**
-         * @summary `reverse`.
-         * @description
-         *
-         * DEFAULT FALSE. Ignored if no `sortKeys`.
-         *
-         * @public
-         * @readonly
-         */
-        readonly reverse?: OPTIONAL<BOOLEAN>,
-        /**
-         * @summary `unmerged`.
-         * @description
-         *
-         * DEFAULT FALSE. TRUE ⇒ each contributing DSA's data (sorted) before
-         * the next; FALSE ⇒ merge then sort. Ignored if no `sortKeys`.
-         *
-         * @public
-         * @readonly
-         */
-        readonly unmerged?: OPTIONAL<BOOLEAN>,
-        /**
-         * @summary `pageNumber`.
-         * @description
-         *
-         * Start at that page, not the first. Ignored if ordering not
-         * requested.
-         *
-         * @public
-         * @readonly
-         */
-        readonly pageNumber?: OPTIONAL<INTEGER>,
-        /**
-         * @summary Extensions that are not recognized.
-         * @public
-         * @readonly
-         */
-        readonly _unrecognizedExtensionsList: _Element[] = []
-    ) {}
+        pageSize: INTEGER,
+        sortKeys?: OPTIONAL<SortKey[]>,
+        reverse?: OPTIONAL<BOOLEAN>,
+        unmerged?: OPTIONAL<BOOLEAN>,
+        pageNumber?: OPTIONAL<INTEGER>,
+        _unrecognizedExtensionsList: _Element[] = []
+    ) {
+        this.pageSize = pageSize;
+        this.sortKeys = sortKeys;
+        this.reverse = reverse;
+        this.unmerged = unmerged;
+        this.pageNumber = pageNumber;
+        this._unrecognizedExtensionsList = _unrecognizedExtensionsList;
+    }
 
     /**
      * @summary Restructures an object into a PagedResultsRequest_newRequest

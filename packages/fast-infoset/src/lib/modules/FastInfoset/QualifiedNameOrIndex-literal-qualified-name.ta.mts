@@ -1,6 +1,6 @@
 /* eslint-disable */
 import {
-  OPTIONAL,
+  type OPTIONAL,
   ASN1Element as _Element,
   ASN1TagClass as _TagClass,
   ASN1Construction as _Construction,
@@ -12,7 +12,7 @@ import {
 } from '@wildboar/asn1';
 import * as $ from '@wildboar/asn1/functional';
 import {
-  IdentifyingStringOrIndex,
+  type IdentifyingStringOrIndex,
   _decode_IdentifyingStringOrIndex,
   _encode_IdentifyingStringOrIndex,
 } from '../FastInfoset/IdentifyingStringOrIndex.ta.mjs';
@@ -47,7 +47,7 @@ export class QualifiedNameOrIndex_literal_qualified_name {
    * @public
    * @readonly
    */
-  readonly prefix: OPTIONAL<IdentifyingStringOrIndex>;
+  public readonly prefix: OPTIONAL<IdentifyingStringOrIndex>;
   /**
    * @summary `namespace_name`.
    * @description Namespace name (NAMESPACE NAME category).
@@ -56,7 +56,7 @@ export class QualifiedNameOrIndex_literal_qualified_name {
    * @public
    * @readonly
    */
-  readonly namespace_name: OPTIONAL<IdentifyingStringOrIndex>;
+  public readonly namespace_name: OPTIONAL<IdentifyingStringOrIndex>;
   /**
    * @summary `local_name`.
    * @description Local name (LOCAL NAME category). ITU-T Rec.
@@ -64,7 +64,7 @@ export class QualifiedNameOrIndex_literal_qualified_name {
    * @public
    * @readonly
    */
-  readonly local_name: IdentifyingStringOrIndex;
+  public readonly local_name: IdentifyingStringOrIndex;
 
   constructor(
     prefix: OPTIONAL<IdentifyingStringOrIndex>,

@@ -1,7 +1,7 @@
 /* eslint-disable */
 import {
-    OPTIONAL,
-    ASN1Element as _Element,
+    type OPTIONAL,
+    type ASN1Element as _Element,
     ASN1TagClass as _TagClass,
     ASN1Construction as _Construction,
     ASN1UniversalType as _UniversalType,
@@ -11,10 +11,10 @@ import {
     ASN1ConstructionError as _ConstructionError,
 } from "@wildboar/asn1";
 import * as $ from "@wildboar/asn1/functional";
-import { ObjectName, _decode_ObjectName, _encode_ObjectName } from "../ISO-9506-MMS-1/ObjectName.ta.mjs";
-import { Modifier, _decode_Modifier, _encode_Modifier } from "../MMS-Object-Module-1/Modifier.ta.mjs";
-import { ConfirmedServiceRequest, _decode_ConfirmedServiceRequest, _encode_ConfirmedServiceRequest } from "../ISO-9506-MMS-1/ConfirmedServiceRequest.ta.mjs";
-import { Request_Detail, _decode_Request_Detail, _encode_Request_Detail } from "../ISO-9506-MMS-1/Request-Detail.ta.mjs";
+import { type ObjectName, _decode_ObjectName, _encode_ObjectName } from "../ISO-9506-MMS-1/ObjectName.ta.mjs";
+import { type Modifier, _decode_Modifier, _encode_Modifier } from "../MMS-Object-Module-1/Modifier.ta.mjs";
+import { type ConfirmedServiceRequest, _decode_ConfirmedServiceRequest, _encode_ConfirmedServiceRequest } from "../ISO-9506-MMS-1/ConfirmedServiceRequest.ta.mjs";
+import { type Request_Detail, _decode_Request_Detail, _encode_Request_Detail } from "../ISO-9506-MMS-1/Request-Detail.ta.mjs";
 
 
 /**
@@ -46,58 +46,68 @@ import { Request_Detail, _decode_Request_Detail, _encode_Request_Detail } from "
  */
 export
 class DefineEventAction_Request {
+    /**
+     * @summary `eventActionName`.
+     * @description
+     *
+     * `&name` of the Event Action to create.
+     *
+     * [ISO 9506-1:2003 §20.2.1.1.1]
+     *
+     * @public
+     * @readonly
+     */
+    public readonly eventActionName: ObjectName;
+    /**
+     * @summary `listOfModifier`.
+     * @description
+     *
+     * Modifiers applied on each execution of this action, not of DefineEventAction
+     * itself.
+     *
+     * [ISO 9506-1:2003 §20.2.1.1.2]
+     *
+     * @public
+     * @readonly
+     */
+    public readonly listOfModifier: OPTIONAL<Modifier[]>;
+    /**
+     * @summary `confirmedServiceRequest`.
+     * @description
+     *
+     * Confirmed service and argument to execute on a matching transition.
+     *
+     * [ISO 9506-1:2003 §20.2.1.1.3]
+     *
+     * @public
+     * @readonly
+     */
+    public readonly confirmedServiceRequest: ConfirmedServiceRequest;
+    /**
+     * @summary `cs_extension`.
+     * @description
+     *
+     * CS Request-Detail matching the confirmed-service choice. `csr`/`cspi`. Not
+     * sent if tagged NULL.
+     *
+     * [ISO 9506-2:2003 §20.2.1.1]
+     *
+     * @public
+     * @readonly
+     */
+    public readonly cs_extension?: OPTIONAL<Request_Detail>;
+
     constructor (
-        /**
-         * @summary `eventActionName`.
-         * @description
-         *
-         * `&name` of the Event Action to create.
-         *
-         * [ISO 9506-1:2003 §20.2.1.1.1]
-         *
-         * @public
-         * @readonly
-         */
-        readonly eventActionName: ObjectName,
-        /**
-         * @summary `listOfModifier`.
-         * @description
-         *
-         * Modifiers applied on each execution of this action, not of DefineEventAction
-         * itself.
-         *
-         * [ISO 9506-1:2003 §20.2.1.1.2]
-         *
-         * @public
-         * @readonly
-         */
-        readonly listOfModifier: OPTIONAL<Modifier[]>,
-        /**
-         * @summary `confirmedServiceRequest`.
-         * @description
-         *
-         * Confirmed service and argument to execute on a matching transition.
-         *
-         * [ISO 9506-1:2003 §20.2.1.1.3]
-         *
-         * @public
-         * @readonly
-         */
-        readonly confirmedServiceRequest: ConfirmedServiceRequest,
-        /**
-         * @summary `cs_extension`.
-         * @description
-         *
-         * CS Request-Detail matching the confirmed-service choice. `csr`/`cspi`. Not
-         * sent if tagged NULL.
-         *
-         * [ISO 9506-2:2003 §20.2.1.1]
-         *
-         * @public
-         * @readonly
-         */
-        readonly cs_extension?: OPTIONAL<Request_Detail>
-    ) {}
+        eventActionName: ObjectName,
+        listOfModifier: OPTIONAL<Modifier[]>,
+        confirmedServiceRequest: ConfirmedServiceRequest,
+        cs_extension?: OPTIONAL<Request_Detail>
+    ) {
+        this.eventActionName = eventActionName;
+        this.listOfModifier = listOfModifier;
+        this.confirmedServiceRequest = confirmedServiceRequest;
+        this.cs_extension = cs_extension;
+    }
 
     /**
      * @summary Restructures an object into a DefineEventAction_Request

@@ -1,7 +1,7 @@
 /* eslint-disable */
 import {
-    OPTIONAL,
-    ASN1Element as _Element,
+    type OPTIONAL,
+    type ASN1Element as _Element,
     ASN1TagClass as _TagClass
 } from "@wildboar/asn1";
 import * as $ from "@wildboar/asn1/functional";
@@ -23,7 +23,7 @@ import { SubscriberInfo, _decode_SubscriberInfo, _encode_SubscriberInfo } from "
  * ```asn1
  * AnyTimeInterrogationRes ::= SEQUENCE {
  *     subscriberInfo    SubscriberInfo,
- *     extensionContainer    ExtensionContainer    OPTIONAL,
+ *     extensionContainer    ExtensionContainer    type OPTIONAL,
  *     ...}
  * ```
  * 
@@ -31,32 +31,40 @@ import { SubscriberInfo, _decode_SubscriberInfo, _encode_SubscriberInfo } from "
  */
 export
 class AnyTimeInterrogationRes {
+    /**
+     * @summary `subscriberInfo`.
+     * @description
+     *
+     * Returned subscriber information matching Requested Info (location,
+     * state, IMEI, classmark, MNP, T-ADS, time zone / DST as applicable)
+     * (3GPP TS 29.002 V19.1.0 clauses 8.11.1.2 and 8.11.1.3).
+     *
+     * @public
+     * @readonly
+     */
+    public readonly subscriberInfo: SubscriberInfo;
+    /**
+     * @summary `extensionContainer`.
+     * @public
+     * @readonly
+     */
+    public readonly extensionContainer?: OPTIONAL<ExtensionContainer>;
+    /**
+     * @summary Extensions that are not recognized.
+     * @public
+     * @readonly
+     */
+    public readonly _unrecognizedExtensionsList: _Element[];
+
     constructor (
-        /**
-         * @summary `subscriberInfo`.
-         * @description
-         *
-         * Returned subscriber information matching Requested Info (location,
-         * state, IMEI, classmark, MNP, T-ADS, time zone / DST as applicable)
-         * (3GPP TS 29.002 V19.1.0 clauses 8.11.1.2 and 8.11.1.3).
-         *
-         * @public
-         * @readonly
-         */
-        readonly subscriberInfo: SubscriberInfo,
-        /**
-         * @summary `extensionContainer`.
-         * @public
-         * @readonly
-         */
-        readonly extensionContainer?: OPTIONAL<ExtensionContainer>,
-        /**
-         * @summary Extensions that are not recognized.
-         * @public
-         * @readonly
-         */
-        readonly _unrecognizedExtensionsList: _Element[] = []
-    ) {}
+        subscriberInfo: SubscriberInfo,
+        extensionContainer?: OPTIONAL<ExtensionContainer>,
+        _unrecognizedExtensionsList: _Element[] = []
+    ) {
+        this.subscriberInfo = subscriberInfo;
+        this.extensionContainer = extensionContainer;
+        this._unrecognizedExtensionsList = _unrecognizedExtensionsList;
+    }
 
     /**
      * @summary Restructures an object into a AnyTimeInterrogationRes

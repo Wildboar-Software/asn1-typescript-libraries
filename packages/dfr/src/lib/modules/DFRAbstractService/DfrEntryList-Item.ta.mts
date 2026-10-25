@@ -1,7 +1,7 @@
 /* eslint-disable */
 import {
-    OPTIONAL,
-    ASN1Element as _Element,
+    type OPTIONAL,
+    type ASN1Element as _Element,
     ASN1TagClass as _TagClass,
     ASN1Construction as _Construction,
     ASN1UniversalType as _UniversalType,
@@ -11,7 +11,7 @@ import {
     ASN1ConstructionError as _ConstructionError,
 } from "@wildboar/asn1";
 import * as $ from "@wildboar/asn1/functional";
-import { DfrUniquePermanentIdentifier, _decode_DfrUniquePermanentIdentifier, _encode_DfrUniquePermanentIdentifier } from "../DFRAbstractService/DfrUniquePermanentIdentifier.ta.mjs";
+import { type DfrUniquePermanentIdentifier, _decode_DfrUniquePermanentIdentifier, _encode_DfrUniquePermanentIdentifier } from "../DFRAbstractService/DfrUniquePermanentIdentifier.ta.mjs";
 import { DfrObjectClass, _enum_for_DfrObjectClass, _decode_DfrObjectClass, _encode_DfrObjectClass } from "../DFRAbstractService/DfrObjectClass.ta.mjs";
 import { Attribute, _decode_Attribute, _encode_Attribute } from "../InformationFramework/Attribute.ta.mjs";
 
@@ -40,44 +40,54 @@ import { Attribute, _decode_Attribute, _encode_Attribute } from "../InformationF
  */
 export
 class DfrEntryList_Item {
+    /**
+     * @summary `upi`.
+     * @description
+     *
+     * UPI of the listed object.
+     * @public
+     * @readonly
+     */
+    public readonly upi: DfrUniquePermanentIdentifier;
+    /**
+     * @summary `class_`.
+     * @description
+     *
+     * Object class.
+     * @public
+     * @readonly
+     */
+    public readonly class_: DfrObjectClass;
+    /**
+     * @summary `ordering_attribute`.
+     * @description
+     *
+     * Key values in OrderingRule order.
+     * @public
+     * @readonly
+     */
+    public readonly ordering_attribute?: OPTIONAL<Attribute[]>;
+    /**
+     * @summary `other_attributes`.
+     * @description
+     *
+     * Additionally selected attributes.
+     * @public
+     * @readonly
+     */
+    public readonly other_attributes?: OPTIONAL<Attribute[]>;
+
     constructor (
-        /**
-         * @summary `upi`.
-         * @description
-         *
-         * UPI of the listed object.
-         * @public
-         * @readonly
-         */
-        readonly upi: DfrUniquePermanentIdentifier,
-        /**
-         * @summary `class_`.
-         * @description
-         *
-         * Object class.
-         * @public
-         * @readonly
-         */
-        readonly class_: DfrObjectClass,
-        /**
-         * @summary `ordering_attribute`.
-         * @description
-         *
-         * Key values in OrderingRule order.
-         * @public
-         * @readonly
-         */
-        readonly ordering_attribute?: OPTIONAL<Attribute[]>,
-        /**
-         * @summary `other_attributes`.
-         * @description
-         *
-         * Additionally selected attributes.
-         * @public
-         * @readonly
-         */
-        readonly other_attributes?: OPTIONAL<Attribute[]>
-    ) {}
+        upi: DfrUniquePermanentIdentifier,
+        class_: DfrObjectClass,
+        ordering_attribute?: OPTIONAL<Attribute[]>,
+        other_attributes?: OPTIONAL<Attribute[]>
+    ) {
+        this.upi = upi;
+        this.class_ = class_;
+        this.ordering_attribute = ordering_attribute;
+        this.other_attributes = other_attributes;
+    }
 
     /**
      * @summary Restructures an object into a DfrEntryList_Item
@@ -101,7 +111,7 @@ class DfrEntryList_Item {
          * @static
          */
 
-    public static _enum_for_class_ = _enum_for_DfrObjectClass;
+    public static _enum_for_class_: typeof _enum_for_DfrObjectClass = _enum_for_DfrObjectClass;
 }
 
 /**

@@ -1,12 +1,12 @@
 /* eslint-disable */
 import {
-    OPTIONAL,
-    ASN1Element as _Element,
+    type OPTIONAL,
+    type ASN1Element as _Element,
     ASN1TagClass as _TagClass
 } from "@wildboar/asn1";
 import * as $ from "@wildboar/asn1/functional";
-import { ServerPart_updateStatus, _decode_ServerPart_updateStatus, _encode_ServerPart_updateStatus } from "../ESFormat-Update/ServerPart-updateStatus.ta.mjs";
-import { DiagRec, _decode_DiagRec, _encode_DiagRec } from "../Z39-50-APDU-2001/DiagRec.ta.mjs";
+import { type ServerPart_updateStatus, _decode_ServerPart_updateStatus, _encode_ServerPart_updateStatus } from "../ESFormat-Update/ServerPart-updateStatus.ta.mjs";
+import { type DiagRec, _decode_DiagRec, _encode_DiagRec } from "../Z39-50-APDU-2001/DiagRec.ta.mjs";
 import { TaskPackageRecordStructure, _decode_TaskPackageRecordStructure, _encode_TaskPackageRecordStructure } from "../ESFormat-Update/TaskPackageRecordStructure.ta.mjs";
 
 

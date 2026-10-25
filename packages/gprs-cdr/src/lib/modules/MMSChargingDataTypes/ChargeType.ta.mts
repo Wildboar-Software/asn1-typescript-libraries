@@ -70,7 +70,7 @@ type ChargeType = _enum_for_ChargeType;
  * @enum {number}
  */
 export
-const ChargeType = _enum_for_ChargeType;
+const ChargeType: typeof _enum_for_ChargeType = _enum_for_ChargeType;
 
 /**
  * @summary ChargeType_postpaid
@@ -85,7 +85,7 @@ const ChargeType = _enum_for_ChargeType;
  * @type {number}
  */
 export
-const ChargeType_postpaid: ChargeType = ChargeType.postpaid; /* LONG_NAMED_ENUMERATED_VALUE */
+const ChargeType_postpaid: _enum_for_ChargeType.postpaid = ChargeType.postpaid; /* LONG_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary postpaid
@@ -100,7 +100,7 @@ const ChargeType_postpaid: ChargeType = ChargeType.postpaid; /* LONG_NAMED_ENUME
  * @type {number}
  */
 export
-const postpaid: ChargeType = ChargeType.postpaid; /* SHORT_NAMED_ENUMERATED_VALUE */
+const postpaid: _enum_for_ChargeType.postpaid = ChargeType.postpaid; /* SHORT_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary ChargeType_pre_paid
@@ -115,7 +115,7 @@ const postpaid: ChargeType = ChargeType.postpaid; /* SHORT_NAMED_ENUMERATED_VALU
  * @type {number}
  */
 export
-const ChargeType_pre_paid: ChargeType = ChargeType.pre_paid; /* LONG_NAMED_ENUMERATED_VALUE */
+const ChargeType_pre_paid: _enum_for_ChargeType.pre_paid = ChargeType.pre_paid; /* LONG_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary pre_paid
@@ -130,7 +130,7 @@ const ChargeType_pre_paid: ChargeType = ChargeType.pre_paid; /* LONG_NAMED_ENUME
  * @type {number}
  */
 export
-const pre_paid: ChargeType = ChargeType.pre_paid; /* SHORT_NAMED_ENUMERATED_VALUE */
+const pre_paid: _enum_for_ChargeType.pre_paid = ChargeType.pre_paid; /* SHORT_NAMED_ENUMERATED_VALUE */
 
 export
 const _decode_ChargeType: $.ASN1Decoder<ChargeType> = $._decodeEnumerated;

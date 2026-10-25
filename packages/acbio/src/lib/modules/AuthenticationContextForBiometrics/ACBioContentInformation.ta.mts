@@ -1,8 +1,8 @@
 /* eslint-disable */
 import {
-    OPTIONAL,
-    OCTET_STRING,
-    ASN1Element as _Element,
+    type OPTIONAL,
+    type OCTET_STRING,
+    type ASN1Element as _Element,
     ASN1TagClass as _TagClass,
     ASN1Construction as _Construction,
     ASN1UniversalType as _UniversalType,
@@ -13,7 +13,7 @@ import {
 } from '@wildboar/asn1';
 import * as $ from '@wildboar/asn1/functional';
 import {
-    Version,
+    type Version,
     v0 /* IMPORTED_SHORT_NAMED_INTEGER */,
     _decode_Version,
     _encode_Version,
@@ -29,7 +29,7 @@ import {
     _encode_BiometricProcess,
 } from '../AuthenticationContextForBiometrics/BiometricProcess.ta.mjs';
 import {
-    BRTCertificateInformation,
+    type BRTCertificateInformation,
     _decode_BRTCertificateInformation,
     _encode_BRTCertificateInformation,
 } from '../AuthenticationContextForBiometrics/BRTCertificateInformation.ta.mjs';
@@ -51,38 +51,50 @@ import {
  *
  */
 export class ACBioContentInformation {
+    /**
+     * @summary `version`.
+     * @public
+     * @readonly
+     */
+    public readonly version: OPTIONAL<Version>;
+    /**
+     * @summary `bpuInformation`.
+     * @public
+     * @readonly
+     */
+    public readonly bpuInformation: BPUInformation;
+    /**
+     * @summary `controlValue`.
+     * @public
+     * @readonly
+     */
+    public readonly controlValue: OCTET_STRING;
+    /**
+     * @summary `biometricProcess`.
+     * @public
+     * @readonly
+     */
+    public readonly biometricProcess: BiometricProcess;
+    /**
+     * @summary `brtCertificateInformation`.
+     * @public
+     * @readonly
+     */
+    public readonly brtCertificateInformation?: OPTIONAL<BRTCertificateInformation>;
+
     constructor(
-        /**
-         * @summary `version`.
-         * @public
-         * @readonly
-         */
-        readonly version: OPTIONAL<Version>,
-        /**
-         * @summary `bpuInformation`.
-         * @public
-         * @readonly
-         */
-        readonly bpuInformation: BPUInformation,
-        /**
-         * @summary `controlValue`.
-         * @public
-         * @readonly
-         */
-        readonly controlValue: OCTET_STRING,
-        /**
-         * @summary `biometricProcess`.
-         * @public
-         * @readonly
-         */
-        readonly biometricProcess: BiometricProcess,
-        /**
-         * @summary `brtCertificateInformation`.
-         * @public
-         * @readonly
-         */
-        readonly brtCertificateInformation?: OPTIONAL<BRTCertificateInformation>
-    ) {}
+        version: OPTIONAL<Version>,
+        bpuInformation: BPUInformation,
+        controlValue: OCTET_STRING,
+        biometricProcess: BiometricProcess,
+        brtCertificateInformation?: OPTIONAL<BRTCertificateInformation>
+    ) {
+        this.version = version;
+        this.bpuInformation = bpuInformation;
+        this.controlValue = controlValue;
+        this.biometricProcess = biometricProcess;
+        this.brtCertificateInformation = brtCertificateInformation;
+    }
 
     /**
      * @summary Restructures an object into a ACBioContentInformation

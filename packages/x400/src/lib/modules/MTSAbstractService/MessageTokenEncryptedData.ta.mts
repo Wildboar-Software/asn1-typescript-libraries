@@ -1,8 +1,8 @@
 /* eslint-disable */
 import {
-    OPTIONAL,
-    INTEGER,
-    ASN1Element as _Element,
+    type OPTIONAL,
+    type INTEGER,
+    type ASN1Element as _Element,
     ASN1TagClass as _TagClass,
     ASN1Construction as _Construction,
     ASN1UniversalType as _UniversalType,
@@ -13,17 +13,17 @@ import {
 } from '@wildboar/asn1';
 import * as $ from '@wildboar/asn1/functional';
 import {
-    EncryptionKey,
+    type EncryptionKey,
     _decode_EncryptionKey,
     _encode_EncryptionKey,
 } from '../MTSAbstractService/EncryptionKey.ta.mjs';
 import {
-    ContentIntegrityCheck,
+    type ContentIntegrityCheck,
     _decode_ContentIntegrityCheck,
     _encode_ContentIntegrityCheck,
 } from '../MTSAbstractService/ContentIntegrityCheck.ta.mjs';
 import {
-    MessageSecurityLabel,
+    type MessageSecurityLabel,
     _decode_MessageSecurityLabel,
     _encode_MessageSecurityLabel,
 } from '../MTSAbstractService/MessageSecurityLabel.ta.mjs';
@@ -47,38 +47,50 @@ import {
  *
  */
 export class MessageTokenEncryptedData {
+    /**
+     * @summary `content_confidentiality_key`.
+     * @public
+     * @readonly
+     */
+    public readonly content_confidentiality_key?: OPTIONAL<EncryptionKey>;
+    /**
+     * @summary `content_integrity_check`.
+     * @public
+     * @readonly
+     */
+    public readonly content_integrity_check?: OPTIONAL<ContentIntegrityCheck>;
+    /**
+     * @summary `message_security_label`.
+     * @public
+     * @readonly
+     */
+    public readonly message_security_label?: OPTIONAL<MessageSecurityLabel>;
+    /**
+     * @summary `content_integrity_key`.
+     * @public
+     * @readonly
+     */
+    public readonly content_integrity_key?: OPTIONAL<EncryptionKey>;
+    /**
+     * @summary `message_sequence_number`.
+     * @public
+     * @readonly
+     */
+    public readonly message_sequence_number?: OPTIONAL<INTEGER>;
+
     constructor(
-        /**
-         * @summary `content_confidentiality_key`.
-         * @public
-         * @readonly
-         */
-        readonly content_confidentiality_key?: OPTIONAL<EncryptionKey>,
-        /**
-         * @summary `content_integrity_check`.
-         * @public
-         * @readonly
-         */
-        readonly content_integrity_check?: OPTIONAL<ContentIntegrityCheck>,
-        /**
-         * @summary `message_security_label`.
-         * @public
-         * @readonly
-         */
-        readonly message_security_label?: OPTIONAL<MessageSecurityLabel>,
-        /**
-         * @summary `content_integrity_key`.
-         * @public
-         * @readonly
-         */
-        readonly content_integrity_key?: OPTIONAL<EncryptionKey>,
-        /**
-         * @summary `message_sequence_number`.
-         * @public
-         * @readonly
-         */
-        readonly message_sequence_number?: OPTIONAL<INTEGER>
-    ) {}
+        content_confidentiality_key?: OPTIONAL<EncryptionKey>,
+        content_integrity_check?: OPTIONAL<ContentIntegrityCheck>,
+        message_security_label?: OPTIONAL<MessageSecurityLabel>,
+        content_integrity_key?: OPTIONAL<EncryptionKey>,
+        message_sequence_number?: OPTIONAL<INTEGER>
+    ) {
+        this.content_confidentiality_key = content_confidentiality_key;
+        this.content_integrity_check = content_integrity_check;
+        this.message_security_label = message_security_label;
+        this.content_integrity_key = content_integrity_key;
+        this.message_sequence_number = message_sequence_number;
+    }
 
     /**
      * @summary Restructures an object into a MessageTokenEncryptedData

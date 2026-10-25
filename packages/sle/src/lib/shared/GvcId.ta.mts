@@ -1,14 +1,14 @@
 /* eslint-disable */
 import {
-    INTEGER,
+    type INTEGER,
     ASN1ConstructionError as _ConstructionError,
-    ASN1Element as _Element,
+    type ASN1Element as _Element,
     ASN1TagClass as _TagClass,
     ASN1OverflowError,
     ASN1Error
 } from "@wildboar/asn1";
 import * as $ from "@wildboar/asn1/functional";
-import { GvcId_vcId, _decode_GvcId_vcId, _encode_GvcId_vcId } from "./GvcId-vcId.ta.mjs";
+import { type GvcId_vcId, _decode_GvcId_vcId, _encode_GvcId_vcId } from "./GvcId-vcId.ta.mjs";
 
 
 

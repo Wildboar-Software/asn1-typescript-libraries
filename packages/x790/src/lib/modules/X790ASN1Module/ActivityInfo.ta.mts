@@ -1,7 +1,7 @@
 /* eslint-disable */
 import {
-    GraphicString,
-    ASN1Element as _Element,
+    type GraphicString,
+    type ASN1Element as _Element,
     ASN1SizeError,
 } from "@wildboar/asn1";
 import * as $ from "@wildboar/asn1/functional";
@@ -27,7 +27,7 @@ export function _decode_ActivityInfo (el: _Element): ActivityInfo {
     }
     return value;
 }
-export const _encode_ActivityInfo = $._encodeGraphicString;
+export const _encode_ActivityInfo: $.ASN1Encoder<string> = $._encodeGraphicString;
 
 
 /* eslint-enable */

@@ -74,7 +74,7 @@ export type OverloadStateChange = _enum_for_OverloadStateChange;
  *
  * @enum {number}
  */
-export const OverloadStateChange = _enum_for_OverloadStateChange;
+export const OverloadStateChange: typeof _enum_for_OverloadStateChange = _enum_for_OverloadStateChange;
 
 /**
  * @summary OverloadStateChange_on
@@ -87,7 +87,7 @@ export const OverloadStateChange = _enum_for_OverloadStateChange;
  * @constant
  * @type {number}
  */
-export const OverloadStateChange_on: OverloadStateChange =
+export const OverloadStateChange_on: 0 =
   OverloadStateChange.on; /* LONG_NAMED_ENUMERATED_VALUE */
 
 /**
@@ -95,7 +95,7 @@ export const OverloadStateChange_on: OverloadStateChange =
  * @constant
  * @type {number}
  */
-export const on: OverloadStateChange =
+export const on: 0 =
   OverloadStateChange.on; /* SHORT_NAMED_ENUMERATED_VALUE */
 
 /**
@@ -109,7 +109,7 @@ export const on: OverloadStateChange =
  * @constant
  * @type {number}
  */
-export const OverloadStateChange_waiting: OverloadStateChange =
+export const OverloadStateChange_waiting: 1 =
   OverloadStateChange.waiting; /* LONG_NAMED_ENUMERATED_VALUE */
 
 /**
@@ -117,14 +117,25 @@ export const OverloadStateChange_waiting: OverloadStateChange =
  * @constant
  * @type {number}
  */
-export const waiting: OverloadStateChange =
+export const waiting: 1 =
   OverloadStateChange.waiting; /* SHORT_NAMED_ENUMERATED_VALUE */
 
 
-export const _decode_OverloadStateChange = $._decodeEnumerated as $.ASN1Decoder<OverloadStateChange>;
+export function _decode_OverloadStateChange(el: _Element): OverloadStateChange {
+  const enumerated = $._decodeEnumerated(el);
+  switch (enumerated) {
+    case OverloadStateChange.on: return OverloadStateChange.on;
+    case OverloadStateChange.waiting: return OverloadStateChange.waiting;
+    default:
+      throw new _ConstructionError(
+        'Invalid ENUMERATED value ' + enumerated + ' for OverloadStateChange.',
+        el,
+      );
+  }
+}
 
 
-export const _encode_OverloadStateChange = $._encodeEnumerated as $.ASN1Encoder<OverloadStateChange>;
+export const _encode_OverloadStateChange: $.ASN1Encoder<OverloadStateChange> = $._encodeEnumerated as $.ASN1Encoder<OverloadStateChange>;
 
 
 /* eslint-enable */

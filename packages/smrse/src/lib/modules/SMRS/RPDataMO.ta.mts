@@ -1,14 +1,14 @@
 /* eslint-disable */
 import {
-    OPTIONAL,
-    ASN1Element as _Element,
+    type OPTIONAL,
+    type ASN1Element as _Element,
     ASN1TagClass as _TagClass
 } from "@wildboar/asn1";
 import * as $ from "@wildboar/asn1/functional";
-import { RP_MR, _decode_RP_MR, _encode_RP_MR } from "../SMRS/RP-MR.ta.mjs";
+import { type RP_MR, _decode_RP_MR, _encode_RP_MR } from "../SMRS/RP-MR.ta.mjs";
 import { SMS_Address, _decode_SMS_Address, _encode_SMS_Address } from "../SMRS/SMS-Address.ta.mjs";
-import { RP_UD, _decode_RP_UD, _encode_RP_UD } from "../SMRS/RP-UD.ta.mjs";
-import { IMSI_Address, _decode_IMSI_Address, _encode_IMSI_Address } from "../SMRS/IMSI-Address.ta.mjs";
+import { type RP_UD, _decode_RP_UD, _encode_RP_UD } from "../SMRS/RP-UD.ta.mjs";
+import { type IMSI_Address, _decode_IMSI_Address, _encode_IMSI_Address } from "../SMRS/IMSI-Address.ta.mjs";
 
 
 /**
@@ -52,7 +52,7 @@ class RPDataMO {
      * @public
      * @readonly
      */
-    readonly mo_message_reference: RP_MR;
+    public readonly mo_message_reference: RP_MR;
     /**
      * @summary `mo_originating_address`.
      * @description
@@ -64,7 +64,7 @@ class RPDataMO {
      * @public
      * @readonly
      */
-    readonly mo_originating_address: SMS_Address;
+    public readonly mo_originating_address: SMS_Address;
     /**
      * @summary `mo_user_data`.
      * @description
@@ -74,7 +74,7 @@ class RPDataMO {
      * @public
      * @readonly
      */
-    readonly mo_user_data: RP_UD;
+    public readonly mo_user_data: RP_UD;
     /**
      * @summary `origVMSCAddr`.
      * @description
@@ -85,7 +85,7 @@ class RPDataMO {
      * @public
      * @readonly
      */
-    readonly origVMSCAddr?: OPTIONAL<SMS_Address>;
+    public readonly origVMSCAddr?: OPTIONAL<SMS_Address>;
     /**
      * @summary `moimsi`.
      * @description
@@ -97,7 +97,7 @@ class RPDataMO {
      * @public
      * @readonly
      */
-    readonly moimsi?: OPTIONAL<IMSI_Address>;
+    public readonly moimsi?: OPTIONAL<IMSI_Address>;
     /**
      * @summary Extensions that are not recognized.
      * @description
@@ -108,7 +108,7 @@ class RPDataMO {
      * @public
      * @readonly
      */
-    readonly _unrecognizedExtensionsList: _Element[];
+    public readonly _unrecognizedExtensionsList: _Element[];
 
     constructor (
         mo_message_reference: RP_MR,

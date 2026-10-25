@@ -1,6 +1,6 @@
 /* eslint-disable */
 import {
-  INTEGER,
+  type INTEGER,
   ASN1Element as _Element,
   ASN1TagClass as _TagClass,
   ASN1Construction as _Construction,
@@ -34,12 +34,12 @@ export type BioAPI_QUALITY = INTEGER;
 
 
 
-export const _decode_BioAPI_QUALITY = $._decodeInteger;
+export const _decode_BioAPI_QUALITY: $.ASN1Decoder<INTEGER> = $._decodeInteger;
 
 
 
 
-export const _encode_BioAPI_QUALITY = $._encodeInteger;
+export const _encode_BioAPI_QUALITY: $.ASN1Encoder<INTEGER> = $._encodeInteger;
 
 
 /* eslint-enable */

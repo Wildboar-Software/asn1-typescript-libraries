@@ -1,7 +1,7 @@
 /* eslint-disable */
 import {
-    OPTIONAL,
-    ASN1Element as _Element,
+    type OPTIONAL,
+    type ASN1Element as _Element,
     ASN1TagClass as _TagClass,
     ASN1Construction as _Construction,
     ASN1UniversalType as _UniversalType,
@@ -12,12 +12,12 @@ import {
 } from '@wildboar/asn1';
 import * as $ from '@wildboar/asn1/functional';
 import {
-    Content,
+    type Content,
     _decode_Content,
     _encode_Content,
 } from '../MTSAbstractService/Content.ta.mjs';
 import {
-    ContentIntegrityCheck,
+    type ContentIntegrityCheck,
     _decode_ContentIntegrityCheck,
     _encode_ContentIntegrityCheck,
 } from '../MTSAbstractService/ContentIntegrityCheck.ta.mjs';
@@ -27,7 +27,7 @@ import {
     _encode_EDIApplicationSecurityElementsField,
 } from '../EDIMSInformationObjects/EDIApplicationSecurityElementsField.ta.mjs';
 import {
-    SecurityExtensionsField,
+    type SecurityExtensionsField,
     _decode_SecurityExtensionsField,
     _encode_SecurityExtensionsField,
 } from '../EDIMSInformationObjects/SecurityExtensionsField.ta.mjs';
@@ -51,32 +51,42 @@ import {
  *
  */
 export class SecurityElementsField {
+    /**
+     * @summary `original_content`.
+     * @public
+     * @readonly
+     */
+    public readonly original_content?: OPTIONAL<Content>;
+    /**
+     * @summary `original_content_integrity_check`.
+     * @public
+     * @readonly
+     */
+    public readonly original_content_integrity_check?: OPTIONAL<ContentIntegrityCheck>;
+    /**
+     * @summary `edi_application_security_elements`.
+     * @public
+     * @readonly
+     */
+    public readonly edi_application_security_elements?: OPTIONAL<EDIApplicationSecurityElementsField>;
+    /**
+     * @summary `security_extensions`.
+     * @public
+     * @readonly
+     */
+    public readonly security_extensions?: OPTIONAL<SecurityExtensionsField>;
+
     constructor(
-        /**
-         * @summary `original_content`.
-         * @public
-         * @readonly
-         */
-        readonly original_content?: OPTIONAL<Content>,
-        /**
-         * @summary `original_content_integrity_check`.
-         * @public
-         * @readonly
-         */
-        readonly original_content_integrity_check?: OPTIONAL<ContentIntegrityCheck>,
-        /**
-         * @summary `edi_application_security_elements`.
-         * @public
-         * @readonly
-         */
-        readonly edi_application_security_elements?: OPTIONAL<EDIApplicationSecurityElementsField>,
-        /**
-         * @summary `security_extensions`.
-         * @public
-         * @readonly
-         */
-        readonly security_extensions?: OPTIONAL<SecurityExtensionsField>
-    ) {}
+        original_content?: OPTIONAL<Content>,
+        original_content_integrity_check?: OPTIONAL<ContentIntegrityCheck>,
+        edi_application_security_elements?: OPTIONAL<EDIApplicationSecurityElementsField>,
+        security_extensions?: OPTIONAL<SecurityExtensionsField>
+    ) {
+        this.original_content = original_content;
+        this.original_content_integrity_check = original_content_integrity_check;
+        this.edi_application_security_elements = edi_application_security_elements;
+        this.security_extensions = security_extensions;
+    }
 
     /**
      * @summary Restructures an object into a SecurityElementsField

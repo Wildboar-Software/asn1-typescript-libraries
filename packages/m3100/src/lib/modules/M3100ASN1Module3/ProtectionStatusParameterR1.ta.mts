@@ -1,6 +1,6 @@
 /* eslint-disable */
 import {
-    ASN1Element as _Element,
+    type ASN1Element as _Element,
     ASN1TagClass as _TagClass,
     ASN1Construction as _Construction,
     ASN1UniversalType as _UniversalType,
@@ -11,7 +11,7 @@ import {
 } from '@wildboar/asn1';
 import * as $ from '@wildboar/asn1/functional';
 import {
-    ProtectionStatusR1,
+    type ProtectionStatusR1,
     _decode_ProtectionStatusR1,
     _encode_ProtectionStatusR1,
 } from '../M3100ASN1Module3/ProtectionStatusR1.ta.mjs';
@@ -31,20 +31,26 @@ import {
  *
  */
 export class ProtectionStatusParameterR1 {
+    /**
+     * @summary `oldProtectionStatus`.
+     * @public
+     * @readonly
+     */
+    public readonly oldProtectionStatus: ProtectionStatusR1;
+    /**
+     * @summary `newProtectionStatus`.
+     * @public
+     * @readonly
+     */
+    public readonly newProtectionStatus: ProtectionStatusR1;
+
     constructor(
-        /**
-         * @summary `oldProtectionStatus`.
-         * @public
-         * @readonly
-         */
-        readonly oldProtectionStatus: ProtectionStatusR1,
-        /**
-         * @summary `newProtectionStatus`.
-         * @public
-         * @readonly
-         */
-        readonly newProtectionStatus: ProtectionStatusR1
-    ) {}
+        oldProtectionStatus: ProtectionStatusR1,
+        newProtectionStatus: ProtectionStatusR1
+    ) {
+        this.oldProtectionStatus = oldProtectionStatus;
+        this.newProtectionStatus = newProtectionStatus;
+    }
 
     /**
      * @summary Restructures an object into a ProtectionStatusParameterR1

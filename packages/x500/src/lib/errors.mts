@@ -3,8 +3,11 @@
  */
 export
 class CannotPerformExactly extends Error {
-    constructor (override readonly message: string) {
+    public override readonly message: string;
+
+    constructor (message: string) {
         super(message);
+        this.message = message;
         Object.setPrototypeOf(this, CannotPerformExactly.prototype);
     }
 }

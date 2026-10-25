@@ -1,8 +1,8 @@
 /* eslint-disable */
 import {
-    OPTIONAL,
-    INTEGER,
-    ASN1Element as _Element,
+    type OPTIONAL,
+    type INTEGER,
+    type ASN1Element as _Element,
     ASN1TagClass as _TagClass,
     ASN1Construction as _Construction,
     ASN1UniversalType as _UniversalType,
@@ -13,7 +13,7 @@ import {
 } from '@wildboar/asn1';
 import * as $ from '@wildboar/asn1/functional';
 import {
-    SequenceNumber,
+    type SequenceNumber,
     _decode_SequenceNumber,
     _encode_SequenceNumber,
 } from '../MSAbstractService/SequenceNumber.ta.mjs';
@@ -35,20 +35,26 @@ import {
  *
  */
 export class PerRecipientReport {
+    /**
+     * @summary `report_entry`.
+     * @public
+     * @readonly
+     */
+    public readonly report_entry: SequenceNumber;
+    /**
+     * @summary `position`.
+     * @public
+     * @readonly
+     */
+    public readonly position?: OPTIONAL<INTEGER>;
+
     constructor(
-        /**
-         * @summary `report_entry`.
-         * @public
-         * @readonly
-         */
-        readonly report_entry: SequenceNumber,
-        /**
-         * @summary `position`.
-         * @public
-         * @readonly
-         */
-        readonly position?: OPTIONAL<INTEGER>
-    ) {}
+        report_entry: SequenceNumber,
+        position?: OPTIONAL<INTEGER>
+    ) {
+        this.report_entry = report_entry;
+        this.position = position;
+    }
 
     /**
      * @summary Restructures an object into a PerRecipientReport

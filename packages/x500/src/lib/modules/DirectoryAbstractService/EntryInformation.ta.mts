@@ -1,18 +1,18 @@
 /* eslint-disable */
 import {
-    ASN1Element as _Element,
+    type ASN1Element as _Element,
     ASN1TagClass as _TagClass,
-    BOOLEAN,
-    OPTIONAL,
+    type BOOLEAN,
+    type OPTIONAL,
 } from "@wildboar/asn1";
 import * as $ from "@wildboar/asn1/functional";
 import {
-    EntryInformation_information_Item,
+    type EntryInformation_information_Item,
     _decode_EntryInformation_information_Item,
     _encode_EntryInformation_information_Item,
 } from "../DirectoryAbstractService/EntryInformation-information-Item.ta.mjs";
 import {
-    Name,
+    type Name,
     _decode_Name,
     _encode_Name,
 } from "../InformationFramework/Name.ta.mjs";
@@ -43,86 +43,102 @@ import {
  *
  */
 export class EntryInformation {
+    /**
+     * @summary `name`.
+     * @description
+     *
+     * DN if ACI allows; else a valid alias or omit. Prefer a stable
+     * alias for the same requester. If `derivedEntry` TRUE, may be any
+     * related entry or alias — do not use in subsequent operations.
+     *
+     * @public
+     * @readonly
+     */
+    public readonly name: Name;
+    /**
+     * @summary `fromEntry`.
+     * @description
+     *
+     * DEFAULT TRUE. TRUE = entry; FALSE = copy.
+     *
+     * @public
+     * @readonly
+     */
+    public readonly fromEntry?: OPTIONAL<BOOLEAN>;
+    /**
+     * @summary `information`.
+     * @description
+     *
+     * SET SIZE (1..MAX). Omitted if no attr info. CHOICE type-only vs
+     * full Attribute.
+     *
+     * @public
+     * @readonly
+     */
+    public readonly information?: OPTIONAL<EntryInformation_information_Item[]>;
+    /**
+     * @summary `incompleteEntry`.
+     * @description
+     *
+     * DEFAULT FALSE. TRUE if incomplete vs request (ACI omission if
+     * DiscloseOnError, incomplete shadow + `copyShallDo`,
+     * `attributeSizeLimit`). Not set merely because an alias name was
+     * returned. Absent in 1988 impls.
+     *
+     * @public
+     * @readonly
+     */
+    public readonly incompleteEntry?: OPTIONAL<BOOLEAN>;
+    /**
+     * @summary `partialName`.
+     * @description
+     *
+     * DEFAULT FALSE. TRUE only if the request had
+     * `partialNameResolution`, name resolution was fully exhausted
+     * (incl. knowledge/referrals), ≥1 RDN resolved, and not all RDNs
+     * resolved. Info is from the last successfully resolved entry.
+     * 1997+.
+     *
+     * @public
+     * @readonly
+     */
+    public readonly partialName?: OPTIONAL<BOOLEAN>;
+    /**
+     * @summary `derivedEntry`.
+     * @description
+     *
+     * DEFAULT FALSE. TRUE if joined from more than one entry. If
+     * signed, the signature is of the joining DSA. Do not use `name`
+     * subsequently. 2001+.
+     *
+     * @public
+     * @readonly
+     */
+    public readonly derivedEntry?: OPTIONAL<BOOLEAN>;
+    /**
+     * @summary Extensions that are not recognized.
+     * @public
+     * @readonly
+     */
+    public readonly _unrecognizedExtensionsList: _Element[];
+
     constructor(
-        /**
-         * @summary `name`.
-         * @description
-         *
-         * DN if ACI allows; else a valid alias or omit. Prefer a stable
-         * alias for the same requester. If `derivedEntry` TRUE, may be any
-         * related entry or alias — do not use in subsequent operations.
-         *
-         * @public
-         * @readonly
-         */
-        readonly name: Name,
-        /**
-         * @summary `fromEntry`.
-         * @description
-         *
-         * DEFAULT TRUE. TRUE = entry; FALSE = copy.
-         *
-         * @public
-         * @readonly
-         */
-        readonly fromEntry?: OPTIONAL<BOOLEAN>,
-        /**
-         * @summary `information`.
-         * @description
-         *
-         * SET SIZE (1..MAX). Omitted if no attr info. CHOICE type-only vs
-         * full Attribute.
-         *
-         * @public
-         * @readonly
-         */
-        readonly information?: OPTIONAL<EntryInformation_information_Item[]>,
-        /**
-         * @summary `incompleteEntry`.
-         * @description
-         *
-         * DEFAULT FALSE. TRUE if incomplete vs request (ACI omission if
-         * DiscloseOnError, incomplete shadow + `copyShallDo`,
-         * `attributeSizeLimit`). Not set merely because an alias name was
-         * returned. Absent in 1988 impls.
-         *
-         * @public
-         * @readonly
-         */
-        readonly incompleteEntry?: OPTIONAL<BOOLEAN>,
-        /**
-         * @summary `partialName`.
-         * @description
-         *
-         * DEFAULT FALSE. TRUE only if the request had
-         * `partialNameResolution`, name resolution was fully exhausted
-         * (incl. knowledge/referrals), ≥1 RDN resolved, and not all RDNs
-         * resolved. Info is from the last successfully resolved entry.
-         * 1997+.
-         *
-         * @public
-         * @readonly
-         */
-        readonly partialName?: OPTIONAL<BOOLEAN>,
-        /**
-         * @summary `derivedEntry`.
-         * @description
-         *
-         * DEFAULT FALSE. TRUE if joined from more than one entry. If
-         * signed, the signature is of the joining DSA. Do not use `name`
-         * subsequently. 2001+.
-         *
-         * @public
-         * @readonly
-         */
-        readonly derivedEntry?: OPTIONAL<BOOLEAN>,
-        /**
-         * @summary Extensions that are not recognized.
-         * @public
-         * @readonly
-         */
-        readonly _unrecognizedExtensionsList: _Element[] = []
-    ) {}
+        name: Name,
+        fromEntry?: OPTIONAL<BOOLEAN>,
+        information?: OPTIONAL<EntryInformation_information_Item[]>,
+        incompleteEntry?: OPTIONAL<BOOLEAN>,
+        partialName?: OPTIONAL<BOOLEAN>,
+        derivedEntry?: OPTIONAL<BOOLEAN>,
+        _unrecognizedExtensionsList: _Element[] = []
+    ) {
+        this.name = name;
+        this.fromEntry = fromEntry;
+        this.information = information;
+        this.incompleteEntry = incompleteEntry;
+        this.partialName = partialName;
+        this.derivedEntry = derivedEntry;
+        this._unrecognizedExtensionsList = _unrecognizedExtensionsList;
+    }
 
     /**
      * @summary Restructures an object into a EntryInformation

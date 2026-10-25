@@ -1,6 +1,6 @@
 /* eslint-disable */
 import {
-    ASN1Element as _Element,
+    type ASN1Element as _Element,
     ASN1TagClass as _TagClass,
     ASN1Construction as _Construction,
     ASN1UniversalType as _UniversalType,
@@ -10,7 +10,7 @@ import {
     ASN1ConstructionError as _ConstructionError,
 } from "@wildboar/asn1";
 import * as $ from "@wildboar/asn1/functional";
-import { Signature, _decode_Signature, _encode_Signature } from "../TSM/Signature.ta.mjs";
+import { type Signature, _decode_Signature, _encode_Signature } from "../TSM/Signature.ta.mjs";
 
 
 
@@ -33,18 +33,22 @@ import { Signature, _decode_Signature, _encode_Signature } from "../TSM/Signatur
  */
 export
 class CertificateVerify {
+    /**
+     * @summary `signature`.
+     * @description
+     *
+     * Signature over the handshake transcript. X.1084 Annex A.
+     *
+     * @public
+     * @readonly
+     */
+    public readonly signature: Signature;
+
     constructor (
-        /**
-         * @summary `signature`.
-         * @description
-         *
-         * Signature over the handshake transcript. X.1084 Annex A.
-         *
-         * @public
-         * @readonly
-         */
-        readonly signature: Signature
-    ) {}
+        signature: Signature
+    ) {
+        this.signature = signature;
+    }
 
     /**
      * @summary Restructures an object into a CertificateVerify

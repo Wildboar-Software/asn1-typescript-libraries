@@ -1,12 +1,12 @@
 /* eslint-disable */
 import {
     ASN1ConstructionError as _ConstructionError,
-    ASN1Element as _Element,
+    type ASN1Element as _Element,
     ASN1TagClass as _TagClass
 } from "@wildboar/asn1";
 import * as $ from "@wildboar/asn1/functional";
-import { Credentials, _decode_Credentials, _encode_Credentials } from "../CCSDS-SLE-TRANSFER-SERVICE-COMMON-TYPES/Credentials.ta.mjs";
-import { UnbindReason, _decode_UnbindReason, _encode_UnbindReason } from "../CCSDS-SLE-TRANSFER-SERVICE-BIND-TYPES/UnbindReason.ta.mjs";
+import { type Credentials, _decode_Credentials, _encode_Credentials } from "../CCSDS-SLE-TRANSFER-SERVICE-COMMON-TYPES/Credentials.ta.mjs";
+import { type UnbindReason, _decode_UnbindReason, _encode_UnbindReason } from "../CCSDS-SLE-TRANSFER-SERVICE-BIND-TYPES/UnbindReason.ta.mjs";
 
 
 /**

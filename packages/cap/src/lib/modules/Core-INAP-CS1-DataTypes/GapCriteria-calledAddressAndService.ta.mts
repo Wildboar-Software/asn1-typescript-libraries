@@ -1,6 +1,6 @@
 /* eslint-disable */
 import {
-    ASN1Element as _Element,
+    type ASN1Element as _Element,
     ASN1TagClass as _TagClass,
     ASN1Construction as _Construction,
     ASN1UniversalType as _UniversalType,
@@ -10,8 +10,8 @@ import {
     ASN1ConstructionError as _ConstructionError,
 } from "@wildboar/asn1";
 import * as $ from "@wildboar/asn1/functional";
-import { Digits, _decode_Digits, _encode_Digits } from "../Core-INAP-CS1-DataTypes/Digits.ta.mjs";
-import { ServiceKey, _decode_ServiceKey, _encode_ServiceKey } from "../Core-INAP-CS1-DataTypes/ServiceKey.ta.mjs";
+import { type Digits, _decode_Digits, _encode_Digits } from "../Core-INAP-CS1-DataTypes/Digits.ta.mjs";
+import { type ServiceKey, _decode_ServiceKey, _encode_ServiceKey } from "../Core-INAP-CS1-DataTypes/ServiceKey.ta.mjs";
 
 
 /**
@@ -31,20 +31,26 @@ import { ServiceKey, _decode_ServiceKey, _encode_ServiceKey } from "../Core-INAP
  */
 export
 class GapCriteria_calledAddressAndService {
+    /**
+     * @summary `calledAddressValue`.
+     * @public
+     * @readonly
+     */
+    public readonly calledAddressValue: Digits;
+    /**
+     * @summary `serviceKey`.
+     * @public
+     * @readonly
+     */
+    public readonly serviceKey: ServiceKey;
+
     constructor (
-        /**
-         * @summary `calledAddressValue`.
-         * @public
-         * @readonly
-         */
-        readonly calledAddressValue: Digits,
-        /**
-         * @summary `serviceKey`.
-         * @public
-         * @readonly
-         */
-        readonly serviceKey: ServiceKey
-    ) {}
+        calledAddressValue: Digits,
+        serviceKey: ServiceKey
+    ) {
+        this.calledAddressValue = calledAddressValue;
+        this.serviceKey = serviceKey;
+    }
 
     /**
      * @summary Restructures an object into a GapCriteria_calledAddressAndService

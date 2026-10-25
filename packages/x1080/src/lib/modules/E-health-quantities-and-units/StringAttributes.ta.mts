@@ -1,7 +1,7 @@
 /* eslint-disable */
 import {
-    BIT_STRING,
-    ASN1Element as _Element,
+    type BIT_STRING,
+    type ASN1Element as _Element,
     ASN1TagClass as _TagClass,
     ASN1Construction as _Construction,
     ASN1UniversalType as _UniversalType,
@@ -77,12 +77,12 @@ export const betweenParenthesis: number = StringAttributes_betweenParenthesis; /
 
 
 
-export const _decode_StringAttributes = $._decodeBitString;
+export const _decode_StringAttributes: $.ASN1Decoder<BIT_STRING> = $._decodeBitString;
 
 
 
 
-export const _encode_StringAttributes = $._encodeBitString;
+export const _encode_StringAttributes: $.ASN1Encoder<BIT_STRING> = $._encodeBitString;
 
 
 /* eslint-enable */

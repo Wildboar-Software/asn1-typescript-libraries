@@ -1,7 +1,7 @@
 /* eslint-disable */
 import {
-    OPTIONAL,
-    ASN1Element as _Element,
+    type OPTIONAL,
+    type ASN1Element as _Element,
     ASN1TagClass as _TagClass,
     ASN1Construction as _Construction,
     ASN1UniversalType as _UniversalType,
@@ -11,7 +11,7 @@ import {
     ASN1ConstructionError as _ConstructionError,
 } from "@wildboar/asn1";
 import * as $ from "@wildboar/asn1/functional";
-import { BlockParamOffer_capability, _decode_BlockParamOffer_capability, _encode_BlockParamOffer_capability } from "../CDS/BlockParamOffer-capability.ta.mjs";
+import { type BlockParamOffer_capability, _decode_BlockParamOffer_capability, _encode_BlockParamOffer_capability } from "../CDS/BlockParamOffer-capability.ta.mjs";
 import { BlockParamOffer_bound, _decode_BlockParamOffer_bound, _encode_BlockParamOffer_bound } from "../CDS/BlockParamOffer-bound.ta.mjs";
 
 
@@ -39,27 +39,33 @@ import { BlockParamOffer_bound, _decode_BlockParamOffer_bound, _encode_BlockPara
  */
 export
 class BlockParamOffer {
+    /**
+     * @summary `capability`.
+     * @description
+     * Offered `block-definition-capability` (`yes`(0)/`no`(1);
+     * default `"no"`). ISO/IEC 9040:1997 §18.1, §18.2.1.
+     * @public
+     * @readonly
+     */
+    public readonly capability?: OPTIONAL<BlockParamOffer_capability>;
+    /**
+     * @summary `bound`.
+     * @description
+     * Offered `b-bound`: unbounded or integer limit (default 1).
+     * Addressing/CREATE/DELETE invalid if b > bound; b < 1
+     * always invalid. ISO/IEC 9040:1997 §18.2.1.
+     * @public
+     * @readonly
+     */
+    public readonly bound?: OPTIONAL<BlockParamOffer_bound>;
+
     constructor (
-        /**
-         * @summary `capability`.
-         * @description
-         * Offered `block-definition-capability` (`yes`(0)/`no`(1);
-         * default `"no"`). ISO/IEC 9040:1997 §18.1, §18.2.1.
-         * @public
-         * @readonly
-         */
-        readonly capability?: OPTIONAL<BlockParamOffer_capability>,
-        /**
-         * @summary `bound`.
-         * @description
-         * Offered `b-bound`: unbounded or integer limit (default 1).
-         * Addressing/CREATE/DELETE invalid if b > bound; b < 1
-         * always invalid. ISO/IEC 9040:1997 §18.2.1.
-         * @public
-         * @readonly
-         */
-        readonly bound?: OPTIONAL<BlockParamOffer_bound>
-    ) {}
+        capability?: OPTIONAL<BlockParamOffer_capability>,
+        bound?: OPTIONAL<BlockParamOffer_bound>
+    ) {
+        this.capability = capability;
+        this.bound = bound;
+    }
 
     /**
      * @summary Restructures an object into a BlockParamOffer

@@ -1,7 +1,7 @@
 /* eslint-disable */
 import {
-    OPTIONAL,
-    ASN1Element as _Element,
+    type OPTIONAL,
+    type ASN1Element as _Element,
     ASN1TagClass as _TagClass,
     ASN1Construction as _Construction,
     ASN1UniversalType as _UniversalType,
@@ -11,9 +11,9 @@ import {
     ASN1ConstructionError as _ConstructionError,
 } from "@wildboar/asn1";
 import * as $ from "@wildboar/asn1/functional";
-import { PostalAddress, _decode_PostalAddress, _encode_PostalAddress } from "../ETS-ElectronicSignatureFormats-ExplicitSyntax97/PostalAddress.ta.mjs";
+import { type PostalAddress, _decode_PostalAddress, _encode_PostalAddress } from "../ETS-ElectronicSignatureFormats-ExplicitSyntax97/PostalAddress.ta.mjs";
 import {
-    DirectoryString,
+    type DirectoryString,
     _decode_DirectoryString,
     _encode_DirectoryString,
 } from "@wildboar/x500/SelectedAttributeTypes";
@@ -44,39 +44,47 @@ import {
  */
 export
 class SignerLocation {
+    /**
+     * @summary `countryName`.
+     * @description
+     *
+     * Country name as used in X.500.
+     *
+     * @public
+     * @readonly
+     */
+    public readonly countryName?: OPTIONAL<DirectoryString>;
+    /**
+     * @summary `localityName`.
+     * @description
+     *
+     * Locality name as used in X.500.
+     *
+     * @public
+     * @readonly
+     */
+    public readonly localityName?: OPTIONAL<DirectoryString>;
+    /**
+     * @summary `postalAdddress`.
+     * @description
+     *
+     * Postal address (1 to 6 `DirectoryString` lines). The
+     * identifier is spelled `postalAdddress` in the ASN.1.
+     *
+     * @public
+     * @readonly
+     */
+    public readonly postalAdddress?: OPTIONAL<PostalAddress>;
+
     constructor (
-        /**
-         * @summary `countryName`.
-         * @description
-         *
-         * Country name as used in X.500.
-         *
-         * @public
-         * @readonly
-         */
-        readonly countryName?: OPTIONAL<DirectoryString>,
-        /**
-         * @summary `localityName`.
-         * @description
-         *
-         * Locality name as used in X.500.
-         *
-         * @public
-         * @readonly
-         */
-        readonly localityName?: OPTIONAL<DirectoryString>,
-        /**
-         * @summary `postalAdddress`.
-         * @description
-         *
-         * Postal address (1 to 6 `DirectoryString` lines). The
-         * identifier is spelled `postalAdddress` in the ASN.1.
-         *
-         * @public
-         * @readonly
-         */
-        readonly postalAdddress?: OPTIONAL<PostalAddress>
-    ) {}
+        countryName?: OPTIONAL<DirectoryString>,
+        localityName?: OPTIONAL<DirectoryString>,
+        postalAdddress?: OPTIONAL<PostalAddress>
+    ) {
+        this.countryName = countryName;
+        this.localityName = localityName;
+        this.postalAdddress = postalAdddress;
+    }
 
     /**
      * @summary Restructures an object into a SignerLocation

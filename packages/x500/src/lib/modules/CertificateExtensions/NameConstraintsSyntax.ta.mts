@@ -1,12 +1,12 @@
 /* eslint-disable */
 import {
-    ASN1Element as _Element,
+    type ASN1Element as _Element,
     ASN1TagClass as _TagClass,
-    OPTIONAL,
+    type OPTIONAL,
 } from "@wildboar/asn1";
 import * as $ from "@wildboar/asn1/functional";
 import {
-    GeneralSubtrees,
+    type GeneralSubtrees,
     _decode_GeneralSubtrees,
     _encode_GeneralSubtrees,
 } from "../CertificateExtensions/GeneralSubtrees.ta.mjs";
@@ -33,35 +33,43 @@ import {
  *
  */
 export class NameConstraintsSyntax {
+    /**
+     * @summary `permittedSubtrees`.
+     * @description
+     *
+     * Absent = all names permitted except excluded. SIZE (1..MAX) if
+     * present.
+     *
+     * @public
+     * @readonly
+     */
+    public readonly permittedSubtrees?: OPTIONAL<GeneralSubtrees>;
+    /**
+     * @summary `excludedSubtrees`.
+     * @description
+     *
+     * Takes precedence over permitted. SIZE (1..MAX) if present.
+     *
+     * @public
+     * @readonly
+     */
+    public readonly excludedSubtrees?: OPTIONAL<GeneralSubtrees>;
+    /**
+     * @summary Extensions that are not recognized.
+     * @public
+     * @readonly
+     */
+    public readonly _unrecognizedExtensionsList: _Element[];
+
     constructor(
-        /**
-         * @summary `permittedSubtrees`.
-         * @description
-         *
-         * Absent = all names permitted except excluded. SIZE (1..MAX) if
-         * present.
-         *
-         * @public
-         * @readonly
-         */
-        readonly permittedSubtrees?: OPTIONAL<GeneralSubtrees>,
-        /**
-         * @summary `excludedSubtrees`.
-         * @description
-         *
-         * Takes precedence over permitted. SIZE (1..MAX) if present.
-         *
-         * @public
-         * @readonly
-         */
-        readonly excludedSubtrees?: OPTIONAL<GeneralSubtrees>,
-        /**
-         * @summary Extensions that are not recognized.
-         * @public
-         * @readonly
-         */
-        readonly _unrecognizedExtensionsList: _Element[] = []
-    ) {}
+        permittedSubtrees?: OPTIONAL<GeneralSubtrees>,
+        excludedSubtrees?: OPTIONAL<GeneralSubtrees>,
+        _unrecognizedExtensionsList: _Element[] = []
+    ) {
+        this.permittedSubtrees = permittedSubtrees;
+        this.excludedSubtrees = excludedSubtrees;
+        this._unrecognizedExtensionsList = _unrecognizedExtensionsList;
+    }
 
     /**
      * @summary Restructures an object into a NameConstraintsSyntax

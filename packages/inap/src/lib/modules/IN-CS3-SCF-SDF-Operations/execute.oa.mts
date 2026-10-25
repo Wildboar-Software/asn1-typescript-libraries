@@ -3,9 +3,9 @@ import { type ERROR } from "../Remote-Operations-Information-Objects/ERROR.oca.m
 import { type OPERATION } from "../Remote-Operations-Information-Objects/OPERATION.oca.mjs";
 // export { Priority, _decode_Priority, _encode_Priority } from "../Remote-Operations-Information-Objects/Priority.ta.mjs";
 // export { Code, _decode_Code, _encode_Code } from "../Remote-Operations-Information-Objects/Code.ta.mjs";
-import { ExecuteArgument, _decode_ExecuteArgument, _encode_ExecuteArgument } from "../IN-CS3-SCF-SDF-Operations/ExecuteArgument.ta.mjs";
+import { type ExecuteArgument, _decode_ExecuteArgument, _encode_ExecuteArgument } from "../IN-CS3-SCF-SDF-Operations/ExecuteArgument.ta.mjs";
 // export { ExecuteArgument, _decode_ExecuteArgument, _encode_ExecuteArgument } from "../IN-CS3-SCF-SDF-Operations/ExecuteArgument.ta.mjs";
-import { ExecuteResult, _decode_ExecuteResult, _encode_ExecuteResult } from "../IN-CS3-SCF-SDF-Operations/ExecuteResult.ta.mjs";
+import { type ExecuteResult, _decode_ExecuteResult, _encode_ExecuteResult } from "../IN-CS3-SCF-SDF-Operations/ExecuteResult.ta.mjs";
 // export { ExecuteResult, _decode_ExecuteResult, _encode_ExecuteResult } from "../IN-CS3-SCF-SDF-Operations/ExecuteResult.ta.mjs";
 import { attributeError } from "../DirectoryAbstractService/attributeError.oa.mjs";
 // export { attributeError } from "../DirectoryAbstractService/attributeError.oa.mjs";

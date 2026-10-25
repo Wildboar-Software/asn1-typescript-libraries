@@ -1,23 +1,23 @@
 /* eslint-disable */
 import {
-    BOOLEAN,
-    OPTIONAL,
-    UTF8String,
-    ASN1Element as _Element,
+    type BOOLEAN,
+    type OPTIONAL,
+    type UTF8String,
+    type ASN1Element as _Element,
     ASN1TagClass as _TagClass
 } from "@wildboar/asn1";
 import * as $ from "@wildboar/asn1/functional";
 import { MMSVersion, _decode_MMSVersion, _encode_MMSVersion } from "../TS33128Payloads/MMSVersion.ta.mjs";
 // export { MMSVersion, _decode_MMSVersion, _encode_MMSVersion } from "../TS33128Payloads/MMSVersion.ta.mjs";
-import { Timestamp, _decode_Timestamp, _encode_Timestamp } from "../TS33128Payloads/Timestamp.ta.mjs";
+import { type Timestamp, _decode_Timestamp, _encode_Timestamp } from "../TS33128Payloads/Timestamp.ta.mjs";
 // export { Timestamp, _decode_Timestamp, _encode_Timestamp } from "../TS33128Payloads/Timestamp.ta.mjs";
 import { MMSParty, _decode_MMSParty, _encode_MMSParty } from "../TS33128Payloads/MMSParty.ta.mjs";
 // export { MMSParty, _decode_MMSParty, _encode_MMSParty } from "../TS33128Payloads/MMSParty.ta.mjs";
-import { MMSPreviouslySentBy, _decode_MMSPreviouslySentBy, _encode_MMSPreviouslySentBy } from "../TS33128Payloads/MMSPreviouslySentBy.ta.mjs";
+import { type MMSPreviouslySentBy, _decode_MMSPreviouslySentBy, _encode_MMSPreviouslySentBy } from "../TS33128Payloads/MMSPreviouslySentBy.ta.mjs";
 // export { MMSPreviouslySentBy, _decode_MMSPreviouslySentBy, _encode_MMSPreviouslySentBy } from "../TS33128Payloads/MMSPreviouslySentBy.ta.mjs";
 import { MMSDirection, _decode_MMSDirection, _encode_MMSDirection, _enum_for_MMSDirection } from "../TS33128Payloads/MMSDirection.ta.mjs";
 // export { MMSDirection, _enum_for_MMSDirection, MMSDirection_fromTarget /* IMPORTED_LONG_ENUMERATION_ITEM */, fromTarget /* IMPORTED_SHORT_ENUMERATION_ITEM */, MMSDirection_toTarget /* IMPORTED_LONG_ENUMERATION_ITEM */, toTarget /* IMPORTED_SHORT_ENUMERATION_ITEM */, _decode_MMSDirection, _encode_MMSDirection } from "../TS33128Payloads/MMSDirection.ta.mjs";
-import { MMSSubject, _decode_MMSSubject, _encode_MMSSubject } from "../TS33128Payloads/MMSSubject.ta.mjs";
+import { type MMSSubject, _decode_MMSSubject, _encode_MMSSubject } from "../TS33128Payloads/MMSSubject.ta.mjs";
 // export { MMSSubject, _decode_MMSSubject, _encode_MMSSubject } from "../TS33128Payloads/MMSSubject.ta.mjs";
 import { MMState, _decode_MMState, _encode_MMState, _enum_for_MMState } from "../TS33128Payloads/MMState.ta.mjs";
 // export { MMState, _enum_for_MMState, MMState_draft /* IMPORTED_LONG_ENUMERATION_ITEM */, draft /* IMPORTED_SHORT_ENUMERATION_ITEM */, MMState_sent /* IMPORTED_LONG_ENUMERATION_ITEM */, sent /* IMPORTED_SHORT_ENUMERATION_ITEM */, MMState_new /* IMPORTED_LONG_ENUMERATION_ITEM */, new_ /* IMPORTED_SHORT_ENUMERATION_ITEM */, MMState_retrieved /* IMPORTED_LONG_ENUMERATION_ITEM */, retrieved /* IMPORTED_SHORT_ENUMERATION_ITEM */, MMState_forwarded /* IMPORTED_LONG_ENUMERATION_ITEM */, forwarded /* IMPORTED_SHORT_ENUMERATION_ITEM */, _decode_MMState, _encode_MMState } from "../TS33128Payloads/MMState.ta.mjs";
@@ -555,43 +555,43 @@ class MMSRetrieval {
          * @static
          */
 
-    public static _enum_for_direction = _enum_for_MMSDirection;        /**
+    public static _enum_for_direction: typeof _enum_for_MMSDirection = _enum_for_MMSDirection;        /**
          * @summary The enum used as the type of the component `state`
          * @public
          * @static
          */
 
-    public static _enum_for_state = _enum_for_MMState;        /**
+    public static _enum_for_state: typeof _enum_for_MMState = _enum_for_MMState;        /**
          * @summary The enum used as the type of the component `messageClass`
          * @public
          * @static
          */
 
-    public static _enum_for_messageClass = _enum_for_MMSMessageClass;        /**
+    public static _enum_for_messageClass: typeof _enum_for_MMSMessageClass = _enum_for_MMSMessageClass;        /**
          * @summary The enum used as the type of the component `priority`
          * @public
          * @static
          */
 
-    public static _enum_for_priority = _enum_for_MMSPriority;        /**
+    public static _enum_for_priority: typeof _enum_for_MMSPriority = _enum_for_MMSPriority;        /**
          * @summary The enum used as the type of the component `replyCharging`
          * @public
          * @static
          */
 
-    public static _enum_for_replyCharging = _enum_for_MMSReplyCharging;        /**
+    public static _enum_for_replyCharging: typeof _enum_for_MMSReplyCharging = _enum_for_MMSReplyCharging;        /**
          * @summary The enum used as the type of the component `retrieveStatus`
          * @public
          * @static
          */
 
-    public static _enum_for_retrieveStatus = _enum_for_MMSRetrieveStatus;        /**
+    public static _enum_for_retrieveStatus: typeof _enum_for_MMSRetrieveStatus = _enum_for_MMSRetrieveStatus;        /**
          * @summary The enum used as the type of the component `contentClass`
          * @public
          * @static
          */
 
-    public static _enum_for_contentClass = _enum_for_MMSContentClass;
+    public static _enum_for_contentClass: typeof _enum_for_MMSContentClass = _enum_for_MMSContentClass;
 }
 
 /**

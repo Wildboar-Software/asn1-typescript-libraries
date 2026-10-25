@@ -1,7 +1,7 @@
 /* eslint-disable */
 import {
-    ENUMERATED,
-    ASN1Element as _Element,
+    type ENUMERATED,
+    type ASN1Element as _Element,
     ASN1TagClass as _TagClass,
     ASN1Construction as _Construction,
     ASN1UniversalType as _UniversalType,
@@ -68,7 +68,7 @@ export type PbactErr = _enum_for_PbactErr | ENUMERATED;
  * @constant
  * @type {number}
  */
-export const PbactErr_noSuchService: PbactErr = 0; /* LONG_NAMED_ENUMERATED_VALUE */
+export const PbactErr_noSuchService: _enum_for_PbactErr.noSuchService = _enum_for_PbactErr.noSuchService; /* LONG_NAMED_ENUMERATED_VALUE */
 
 
 /**
@@ -82,7 +82,7 @@ export const PbactErr_noSuchService: PbactErr = 0; /* LONG_NAMED_ENUMERATED_VALU
  * @constant
  * @type {number}
  */
-export const noSuchService: PbactErr = PbactErr_noSuchService; /* SHORT_NAMED_ENUMERATED_VALUE */
+export const noSuchService: _enum_for_PbactErr.noSuchService = PbactErr_noSuchService; /* SHORT_NAMED_ENUMERATED_VALUE */
 
 
 /**
@@ -96,7 +96,7 @@ export const noSuchService: PbactErr = PbactErr_noSuchService; /* SHORT_NAMED_EN
  * @constant
  * @type {number}
  */
-export const PbactErr_invalidOperationForService: PbactErr = 1; /* LONG_NAMED_ENUMERATED_VALUE */
+export const PbactErr_invalidOperationForService: _enum_for_PbactErr.invalidOperationForService = _enum_for_PbactErr.invalidOperationForService; /* LONG_NAMED_ENUMERATED_VALUE */
 
 
 /**
@@ -110,7 +110,7 @@ export const PbactErr_invalidOperationForService: PbactErr = 1; /* LONG_NAMED_EN
  * @constant
  * @type {number}
  */
-export const invalidOperationForService: PbactErr = PbactErr_invalidOperationForService; /* SHORT_NAMED_ENUMERATED_VALUE */
+export const invalidOperationForService: _enum_for_PbactErr.invalidOperationForService = PbactErr_invalidOperationForService; /* SHORT_NAMED_ENUMERATED_VALUE */
 
 
 /**
@@ -125,7 +125,7 @@ export const invalidOperationForService: PbactErr = PbactErr_invalidOperationFor
  * @constant
  * @type {number}
  */
-export const PbactErr_insufficientAccessRigth: PbactErr = 2; /* LONG_NAMED_ENUMERATED_VALUE */
+export const PbactErr_insufficientAccessRigth: _enum_for_PbactErr.insufficientAccessRigth = _enum_for_PbactErr.insufficientAccessRigth; /* LONG_NAMED_ENUMERATED_VALUE */
 
 
 /**
@@ -140,7 +140,7 @@ export const PbactErr_insufficientAccessRigth: PbactErr = 2; /* LONG_NAMED_ENUME
  * @constant
  * @type {number}
  */
-export const insufficientAccessRigth: PbactErr = PbactErr_insufficientAccessRigth; /* SHORT_NAMED_ENUMERATED_VALUE */
+export const insufficientAccessRigth: _enum_for_PbactErr.insufficientAccessRigth = PbactErr_insufficientAccessRigth; /* SHORT_NAMED_ENUMERATED_VALUE */
 
 
 /**
@@ -154,7 +154,7 @@ export const insufficientAccessRigth: PbactErr = PbactErr_insufficientAccessRigt
  * @constant
  * @type {number}
  */
-export const PbactErr_noSuchObject: PbactErr = 3; /* LONG_NAMED_ENUMERATED_VALUE */
+export const PbactErr_noSuchObject: _enum_for_PbactErr.noSuchObject = _enum_for_PbactErr.noSuchObject; /* LONG_NAMED_ENUMERATED_VALUE */
 
 
 /**
@@ -168,7 +168,7 @@ export const PbactErr_noSuchObject: PbactErr = 3; /* LONG_NAMED_ENUMERATED_VALUE
  * @constant
  * @type {number}
  */
-export const noSuchObject: PbactErr = PbactErr_noSuchObject; /* SHORT_NAMED_ENUMERATED_VALUE */
+export const noSuchObject: _enum_for_PbactErr.noSuchObject = PbactErr_noSuchObject; /* SHORT_NAMED_ENUMERATED_VALUE */
 
 
 /**
@@ -183,7 +183,7 @@ export const noSuchObject: PbactErr = PbactErr_noSuchObject; /* SHORT_NAMED_ENUM
  * @constant
  * @type {number}
  */
-export const PbactErr_noSuchAttribute: PbactErr = 4; /* LONG_NAMED_ENUMERATED_VALUE */
+export const PbactErr_noSuchAttribute: _enum_for_PbactErr.noSuchAttribute = _enum_for_PbactErr.noSuchAttribute; /* LONG_NAMED_ENUMERATED_VALUE */
 
 
 /**
@@ -198,7 +198,7 @@ export const PbactErr_noSuchAttribute: PbactErr = 4; /* LONG_NAMED_ENUMERATED_VA
  * @constant
  * @type {number}
  */
-export const noSuchAttribute: PbactErr = PbactErr_noSuchAttribute; /* SHORT_NAMED_ENUMERATED_VALUE */
+export const noSuchAttribute: _enum_for_PbactErr.noSuchAttribute = PbactErr_noSuchAttribute; /* SHORT_NAMED_ENUMERATED_VALUE */
 
 
 /**
@@ -212,7 +212,7 @@ export const noSuchAttribute: PbactErr = PbactErr_noSuchAttribute; /* SHORT_NAME
  * @constant
  * @type {number}
  */
-export const PbactErr_noSuchAttributeValue: PbactErr = 5; /* LONG_NAMED_ENUMERATED_VALUE */
+export const PbactErr_noSuchAttributeValue: _enum_for_PbactErr.noSuchAttributeValue = _enum_for_PbactErr.noSuchAttributeValue; /* LONG_NAMED_ENUMERATED_VALUE */
 
 
 /**
@@ -226,7 +226,7 @@ export const PbactErr_noSuchAttributeValue: PbactErr = 5; /* LONG_NAMED_ENUMERAT
  * @constant
  * @type {number}
  */
-export const noSuchAttributeValue: PbactErr = PbactErr_noSuchAttributeValue; /* SHORT_NAMED_ENUMERATED_VALUE */
+export const noSuchAttributeValue: _enum_for_PbactErr.noSuchAttributeValue = PbactErr_noSuchAttributeValue; /* SHORT_NAMED_ENUMERATED_VALUE */
 
 
 /**
@@ -240,7 +240,7 @@ export const noSuchAttributeValue: PbactErr = PbactErr_noSuchAttributeValue; /* 
  * @constant
  * @type {number}
  */
-export const PbactErr_objectAlreadyExists: PbactErr = 6; /* LONG_NAMED_ENUMERATED_VALUE */
+export const PbactErr_objectAlreadyExists: _enum_for_PbactErr.objectAlreadyExists = _enum_for_PbactErr.objectAlreadyExists; /* LONG_NAMED_ENUMERATED_VALUE */
 
 
 /**
@@ -254,7 +254,7 @@ export const PbactErr_objectAlreadyExists: PbactErr = 6; /* LONG_NAMED_ENUMERATE
  * @constant
  * @type {number}
  */
-export const objectAlreadyExists: PbactErr = PbactErr_objectAlreadyExists; /* SHORT_NAMED_ENUMERATED_VALUE */
+export const objectAlreadyExists: _enum_for_PbactErr.objectAlreadyExists = PbactErr_objectAlreadyExists; /* SHORT_NAMED_ENUMERATED_VALUE */
 
 
 /**
@@ -269,7 +269,7 @@ export const objectAlreadyExists: PbactErr = PbactErr_objectAlreadyExists; /* SH
  * @constant
  * @type {number}
  */
-export const PbactErr_attributeAlreadyExists: PbactErr = 7; /* LONG_NAMED_ENUMERATED_VALUE */
+export const PbactErr_attributeAlreadyExists: _enum_for_PbactErr.attributeAlreadyExists = _enum_for_PbactErr.attributeAlreadyExists; /* LONG_NAMED_ENUMERATED_VALUE */
 
 
 /**
@@ -284,7 +284,7 @@ export const PbactErr_attributeAlreadyExists: PbactErr = 7; /* LONG_NAMED_ENUMER
  * @constant
  * @type {number}
  */
-export const attributeAlreadyExists: PbactErr = PbactErr_attributeAlreadyExists; /* SHORT_NAMED_ENUMERATED_VALUE */
+export const attributeAlreadyExists: _enum_for_PbactErr.attributeAlreadyExists = PbactErr_attributeAlreadyExists; /* SHORT_NAMED_ENUMERATED_VALUE */
 
 
 /**
@@ -298,7 +298,7 @@ export const attributeAlreadyExists: PbactErr = PbactErr_attributeAlreadyExists;
  * @constant
  * @type {number}
  */
-export const PbactErr_attributeValueAlreadyExists: PbactErr = 8; /* LONG_NAMED_ENUMERATED_VALUE */
+export const PbactErr_attributeValueAlreadyExists: _enum_for_PbactErr.attributeValueAlreadyExists = _enum_for_PbactErr.attributeValueAlreadyExists; /* LONG_NAMED_ENUMERATED_VALUE */
 
 
 /**
@@ -312,7 +312,7 @@ export const PbactErr_attributeValueAlreadyExists: PbactErr = 8; /* LONG_NAMED_E
  * @constant
  * @type {number}
  */
-export const attributeValueAlreadyExists: PbactErr = PbactErr_attributeValueAlreadyExists; /* SHORT_NAMED_ENUMERATED_VALUE */
+export const attributeValueAlreadyExists: _enum_for_PbactErr.attributeValueAlreadyExists = PbactErr_attributeValueAlreadyExists; /* SHORT_NAMED_ENUMERATED_VALUE */
 
 
 /**
@@ -327,7 +327,7 @@ export const attributeValueAlreadyExists: PbactErr = PbactErr_attributeValueAlre
  * @constant
  * @type {number}
  */
-export const PbactErr_noInformation: PbactErr = 9; /* LONG_NAMED_ENUMERATED_VALUE */
+export const PbactErr_noInformation: _enum_for_PbactErr.noInformation = _enum_for_PbactErr.noInformation; /* LONG_NAMED_ENUMERATED_VALUE */
 
 
 /**
@@ -342,17 +342,17 @@ export const PbactErr_noInformation: PbactErr = 9; /* LONG_NAMED_ENUMERATED_VALU
  * @constant
  * @type {number}
  */
-export const noInformation: PbactErr = PbactErr_noInformation; /* SHORT_NAMED_ENUMERATED_VALUE */
+export const noInformation: _enum_for_PbactErr.noInformation = PbactErr_noInformation; /* SHORT_NAMED_ENUMERATED_VALUE */
 
 
 
 
-export const _decode_PbactErr = $._decodeEnumerated;
+export const _decode_PbactErr: $.ASN1Decoder<number> = $._decodeEnumerated;
 
 
 
 
-export const _encode_PbactErr = $._encodeEnumerated;
+export const _encode_PbactErr: $.ASN1Encoder<number> = $._encodeEnumerated;
 
 
 /* eslint-enable */

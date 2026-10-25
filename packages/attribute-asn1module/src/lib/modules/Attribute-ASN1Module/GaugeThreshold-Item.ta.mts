@@ -1,6 +1,6 @@
 /* eslint-disable */
 import {
-    ASN1Element as _Element,
+    type ASN1Element as _Element,
     ASN1TagClass as _TagClass,
     ASN1Construction as _Construction,
     ASN1UniversalType as _UniversalType,
@@ -37,7 +37,7 @@ class GaugeThreshold_Item {
      * @public
      * @readonly
      */
-    readonly notifyLow: NotifyThreshold;
+    public readonly notifyLow: NotifyThreshold;
     /**
      * @summary `notifyHigh`.
      * @description
@@ -49,7 +49,7 @@ class GaugeThreshold_Item {
      * @public
      * @readonly
      */
-    readonly notifyHigh: NotifyThreshold;
+    public readonly notifyHigh: NotifyThreshold;
 
     constructor (
         notifyLow: NotifyThreshold,

@@ -2,13 +2,13 @@
 
 import * as $ from "@wildboar/asn1/functional";
 import {
-    OPTIONAL,
-    SEQUENCE,
-    SET,
-    ASN1Element as _Element,
+    type OPTIONAL,
+    type SEQUENCE,
+    type SET,
+    type ASN1Element as _Element,
     ASN1TagClass as _TagClass
 } from "@wildboar/asn1";
-import { MediaStreamID, _decode_MediaStreamID, _encode_MediaStreamID } from "../CSTA-media-services/MediaStreamID.ta.mjs";
+import { type MediaStreamID, _decode_MediaStreamID, _encode_MediaStreamID } from "../CSTA-media-services/MediaStreamID.ta.mjs";
 
 import { ConnectionInformation, _decode_ConnectionInformation, _encode_ConnectionInformation } from "../CSTA-media-services/ConnectionInformation.ta.mjs";
 
@@ -36,28 +36,34 @@ import { ConnectionInformation, _decode_ConnectionInformation, _encode_Connectio
  */
 export
 class DeviceMediaInfoList_Item {
+    /**
+     * @summary `mediaStreamID`.
+     * @description
+     *
+     * Required if the switch provides mediaStreamID. ECMA-269 §16.1.4.
+     *
+     * @public
+     * @readonly
+     */
+    public readonly mediaStreamID?: OPTIONAL<MediaStreamID>;
+    /**
+     * @summary `connectionInformation`.
+     * @description
+     *
+     * Connection-level flow/channels. ECMA-269 §16.1.4, §12.2.8.
+     *
+     * @public
+     * @readonly
+     */
+    public readonly connectionInformation?: OPTIONAL<ConnectionInformation>;
+
     constructor (
-        /**
-         * @summary `mediaStreamID`.
-         * @description
-         *
-         * Required if the switch provides mediaStreamID. ECMA-269 §16.1.4.
-         *
-         * @public
-         * @readonly
-         */
-        readonly mediaStreamID?: OPTIONAL<MediaStreamID>,
-        /**
-         * @summary `connectionInformation`.
-         * @description
-         *
-         * Connection-level flow/channels. ECMA-269 §16.1.4, §12.2.8.
-         *
-         * @public
-         * @readonly
-         */
-        readonly connectionInformation?: OPTIONAL<ConnectionInformation>
-    ) {}
+        mediaStreamID?: OPTIONAL<MediaStreamID>,
+        connectionInformation?: OPTIONAL<ConnectionInformation>
+    ) {
+        this.mediaStreamID = mediaStreamID;
+        this.connectionInformation = connectionInformation;
+    }
 
     /**
      * @summary Restructures an object into a DeviceMediaInfoList_Item

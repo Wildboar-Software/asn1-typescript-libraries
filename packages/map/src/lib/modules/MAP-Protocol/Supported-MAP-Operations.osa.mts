@@ -69,7 +69,7 @@ import { registerSS } from "../MAP-SupplementaryServiceOperations/registerSS.oa.
 import { ss_InvocationNotification } from "../MAP-SupplementaryServiceOperations/ss-InvocationNotification.oa.mjs";
 import { unstructuredSS_Notify } from "../MAP-SupplementaryServiceOperations/unstructuredSS-Notify.oa.mjs";
 import { unstructuredSS_Request } from "../MAP-SupplementaryServiceOperations/unstructuredSS-Request.oa.mjs";
-import { OPERATION } from "../Remote-Operations-Information-Objects/OPERATION.oca.mjs";
+import { type OPERATION } from "../Remote-Operations-Information-Objects/OPERATION.oca.mjs";
 
 
 /**

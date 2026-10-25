@@ -1,7 +1,7 @@
 /* eslint-disable */
 import {
-    ASN1Element as _Element,
-    INTEGER
+    type ASN1Element as _Element,
+    type INTEGER
 } from "@wildboar/asn1";
 import * as $ from "@wildboar/asn1/functional";
 
@@ -43,7 +43,7 @@ type UpdateEimResult = INTEGER;
  * @type {number}
  */
 export
-const UpdateEimResult_ok: UpdateEimResult = 0; /* LONG_NAMED_INTEGER_VALUE */
+const UpdateEimResult_ok: 0 = 0 satisfies UpdateEimResult; /* LONG_NAMED_INTEGER_VALUE */
 
 /**
  * @summary UpdateEimResult_ok
@@ -54,7 +54,7 @@ const UpdateEimResult_ok: UpdateEimResult = 0; /* LONG_NAMED_INTEGER_VALUE */
  * @type {number}
  */
 export
-const ok: UpdateEimResult = UpdateEimResult_ok; /* SHORT_NAMED_INTEGER_VALUE */
+const ok: 0 = UpdateEimResult_ok; /* SHORT_NAMED_INTEGER_VALUE */
 
 /**
  * @summary UpdateEimResult_eimNotFound
@@ -65,7 +65,7 @@ const ok: UpdateEimResult = UpdateEimResult_ok; /* SHORT_NAMED_INTEGER_VALUE */
  * @type {number}
  */
 export
-const UpdateEimResult_eimNotFound: UpdateEimResult = 1; /* LONG_NAMED_INTEGER_VALUE */
+const UpdateEimResult_eimNotFound: 1 = 1 satisfies UpdateEimResult; /* LONG_NAMED_INTEGER_VALUE */
 
 /**
  * @summary UpdateEimResult_eimNotFound
@@ -76,7 +76,7 @@ const UpdateEimResult_eimNotFound: UpdateEimResult = 1; /* LONG_NAMED_INTEGER_VA
  * @type {number}
  */
 export
-const eimNotFound: UpdateEimResult = UpdateEimResult_eimNotFound; /* SHORT_NAMED_INTEGER_VALUE */
+const eimNotFound: 1 = UpdateEimResult_eimNotFound; /* SHORT_NAMED_INTEGER_VALUE */
 
 /**
  * @summary UpdateEimResult_ciPKUnknown
@@ -87,7 +87,7 @@ const eimNotFound: UpdateEimResult = UpdateEimResult_eimNotFound; /* SHORT_NAMED
  * @type {number}
  */
 export
-const UpdateEimResult_ciPKUnknown: UpdateEimResult = 3; /* LONG_NAMED_INTEGER_VALUE */
+const UpdateEimResult_ciPKUnknown: 3 = 3 satisfies UpdateEimResult; /* LONG_NAMED_INTEGER_VALUE */
 
 /**
  * @summary UpdateEimResult_ciPKUnknown
@@ -98,7 +98,7 @@ const UpdateEimResult_ciPKUnknown: UpdateEimResult = 3; /* LONG_NAMED_INTEGER_VA
  * @type {number}
  */
 export
-const ciPKUnknown: UpdateEimResult = UpdateEimResult_ciPKUnknown; /* SHORT_NAMED_INTEGER_VALUE */
+const ciPKUnknown: 3 = UpdateEimResult_ciPKUnknown; /* SHORT_NAMED_INTEGER_VALUE */
 
 /**
  * @summary UpdateEimResult_counterValueOutOfRange
@@ -110,7 +110,7 @@ const ciPKUnknown: UpdateEimResult = UpdateEimResult_ciPKUnknown; /* SHORT_NAMED
  * @type {number}
  */
 export
-const UpdateEimResult_counterValueOutOfRange: UpdateEimResult = 6; /* LONG_NAMED_INTEGER_VALUE */
+const UpdateEimResult_counterValueOutOfRange: 6 = 6 satisfies UpdateEimResult; /* LONG_NAMED_INTEGER_VALUE */
 
 /**
  * @summary UpdateEimResult_counterValueOutOfRange
@@ -121,7 +121,7 @@ const UpdateEimResult_counterValueOutOfRange: UpdateEimResult = 6; /* LONG_NAMED
  * @type {number}
  */
 export
-const counterValueOutOfRange: UpdateEimResult = UpdateEimResult_counterValueOutOfRange; /* SHORT_NAMED_INTEGER_VALUE */
+const counterValueOutOfRange: 6 = UpdateEimResult_counterValueOutOfRange; /* SHORT_NAMED_INTEGER_VALUE */
 
 /**
  * @summary UpdateEimResult_commandError
@@ -136,7 +136,7 @@ const counterValueOutOfRange: UpdateEimResult = UpdateEimResult_counterValueOutO
  * @type {number}
  */
 export
-const UpdateEimResult_commandError: UpdateEimResult = 7; /* LONG_NAMED_INTEGER_VALUE */
+const UpdateEimResult_commandError: 7 = 7 satisfies UpdateEimResult; /* LONG_NAMED_INTEGER_VALUE */
 
 /**
  * @summary UpdateEimResult_commandError
@@ -148,7 +148,7 @@ const UpdateEimResult_commandError: UpdateEimResult = 7; /* LONG_NAMED_INTEGER_V
  * @type {number}
  */
 export
-const commandError: UpdateEimResult = UpdateEimResult_commandError; /* SHORT_NAMED_INTEGER_VALUE */
+const commandError: 7 = UpdateEimResult_commandError; /* SHORT_NAMED_INTEGER_VALUE */
 
 /**
  * @summary UpdateEimResult_undefinedError
@@ -158,7 +158,7 @@ const commandError: UpdateEimResult = UpdateEimResult_commandError; /* SHORT_NAM
  * @type {number}
  */
 export
-const UpdateEimResult_undefinedError: UpdateEimResult = 127; /* LONG_NAMED_INTEGER_VALUE */
+const UpdateEimResult_undefinedError: 127 = 127 satisfies UpdateEimResult; /* LONG_NAMED_INTEGER_VALUE */
 
 /**
  * @summary UpdateEimResult_undefinedError
@@ -168,7 +168,7 @@ const UpdateEimResult_undefinedError: UpdateEimResult = 127; /* LONG_NAMED_INTEG
  * @type {number}
  */
 export
-const undefinedError: UpdateEimResult = UpdateEimResult_undefinedError; /* SHORT_NAMED_INTEGER_VALUE */
+const undefinedError: 127 = UpdateEimResult_undefinedError; /* SHORT_NAMED_INTEGER_VALUE */
 export const _decode_UpdateEimResult: $.ASN1Decoder<UpdateEimResult> = $._decodeInteger;
 export const _encode_UpdateEimResult: $.ASN1Encoder<UpdateEimResult> = $._encodeInteger;
 

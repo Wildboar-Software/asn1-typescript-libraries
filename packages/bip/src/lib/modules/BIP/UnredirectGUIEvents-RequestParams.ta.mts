@@ -1,6 +1,6 @@
 /* eslint-disable */
 import {
-  BOOLEAN,
+  type BOOLEAN,
   ASN1Element as _Element,
   ASN1TagClass as _TagClass,
   ASN1Construction as _Construction,
@@ -12,17 +12,17 @@ import {
 } from '@wildboar/asn1';
 import * as $ from '@wildboar/asn1/functional';
 import {
-  EndpointIRI,
+  type EndpointIRI,
   _decode_EndpointIRI,
   _encode_EndpointIRI,
 } from '../BIP/EndpointIRI.ta.mjs';
 import {
-  BioAPI_UUID,
+  type BioAPI_UUID,
   _decode_BioAPI_UUID,
   _encode_BioAPI_UUID,
 } from '../BIP/BioAPI-UUID.ta.mjs';
 import {
-  BioAPI_HANDLE,
+  type BioAPI_HANDLE,
   _decode_BioAPI_HANDLE,
   _encode_BioAPI_HANDLE,
 } from '../BIP/BioAPI-HANDLE.ta.mjs';
@@ -65,7 +65,7 @@ export class UnredirectGUIEvents_RequestParams {
    * @public
    * @readonly
    */
-  readonly subscriberEndpointIRI: EndpointIRI;
+  public readonly subscriberEndpointIRI: EndpointIRI;
   /**
    * @summary `guiEventSubscriptionUuid`.
    * @description
@@ -77,7 +77,7 @@ export class UnredirectGUIEvents_RequestParams {
    * @public
    * @readonly
    */
-  readonly guiEventSubscriptionUuid: BioAPI_UUID;
+  public readonly guiEventSubscriptionUuid: BioAPI_UUID;
   /**
    * @summary `originalBSPHandle`.
    * @description
@@ -89,7 +89,7 @@ export class UnredirectGUIEvents_RequestParams {
    * @public
    * @readonly
    */
-  readonly originalBSPHandle: BioAPI_HANDLE;
+  public readonly originalBSPHandle: BioAPI_HANDLE;
   /**
    * @summary `guiSelectEventRedirected`.
    * @description
@@ -100,7 +100,7 @@ export class UnredirectGUIEvents_RequestParams {
    * @public
    * @readonly
    */
-  readonly guiSelectEventRedirected: BOOLEAN;
+  public readonly guiSelectEventRedirected: BOOLEAN;
   /**
    * @summary `guiStateEventRedirected`.
    * @description
@@ -111,7 +111,7 @@ export class UnredirectGUIEvents_RequestParams {
    * @public
    * @readonly
    */
-  readonly guiStateEventRedirected: BOOLEAN;
+  public readonly guiStateEventRedirected: BOOLEAN;
   /**
    * @summary `guiProgressEventRedirected`.
    * @description
@@ -122,7 +122,7 @@ export class UnredirectGUIEvents_RequestParams {
    * @public
    * @readonly
    */
-  readonly guiProgressEventRedirected: BOOLEAN;
+  public readonly guiProgressEventRedirected: BOOLEAN;
 
   constructor(
     subscriberEndpointIRI: EndpointIRI,

@@ -1,13 +1,13 @@
 /* eslint-disable */
 import {
-    OCTET_STRING,
-    OPTIONAL,
-    ASN1Element as _Element,
+    type OCTET_STRING,
+    type OPTIONAL,
+    type ASN1Element as _Element,
     ASN1TagClass as _TagClass
 } from "@wildboar/asn1";
 import * as $ from "@wildboar/asn1/functional";
 import { PresenceReportingAreaInfo_presenceReportingAreaStatus, _decode_PresenceReportingAreaInfo_presenceReportingAreaStatus, _encode_PresenceReportingAreaInfo_presenceReportingAreaStatus, _enum_for_PresenceReportingAreaInfo_presenceReportingAreaStatus } from "../CHFChargingDataTypes/PresenceReportingAreaInfo-presenceReportingAreaStatus.ta.mjs";
-import { PresenceReportingAreaInfo_presenceReportingAreaNode, _decode_PresenceReportingAreaInfo_presenceReportingAreaNode, _encode_PresenceReportingAreaInfo_presenceReportingAreaNode } from "../CHFChargingDataTypes/PresenceReportingAreaInfo-presenceReportingAreaNode.ta.mjs";
+import { type PresenceReportingAreaInfo_presenceReportingAreaNode, _decode_PresenceReportingAreaInfo_presenceReportingAreaNode, _encode_PresenceReportingAreaInfo_presenceReportingAreaNode } from "../CHFChargingDataTypes/PresenceReportingAreaInfo-presenceReportingAreaNode.ta.mjs";
 
 
 /**
@@ -93,7 +93,7 @@ class PresenceReportingAreaInfo {
          * @static
          */
 
-    public static _enum_for_presenceReportingAreaStatus = _enum_for_PresenceReportingAreaInfo_presenceReportingAreaStatus;
+    public static _enum_for_presenceReportingAreaStatus: typeof _enum_for_PresenceReportingAreaInfo_presenceReportingAreaStatus = _enum_for_PresenceReportingAreaInfo_presenceReportingAreaStatus;
 }
 
 /**

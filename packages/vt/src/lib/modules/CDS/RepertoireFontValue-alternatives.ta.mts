@@ -1,8 +1,8 @@
 /* eslint-disable */
 import {
-    OPTIONAL,
-    INTEGER,
-    ASN1Element as _Element,
+    type OPTIONAL,
+    type INTEGER,
+    type ASN1Element as _Element,
     ASN1TagClass as _TagClass,
     ASN1Construction as _Construction,
     ASN1UniversalType as _UniversalType,
@@ -38,35 +38,43 @@ import { FontAssignment, _decode_FontAssignment, _encode_FontAssignment } from "
  */
 export
 class RepertoireFontValue_alternatives {
+    /**
+     * @summary `repertoire`.
+     * @description
+     * Selected repertoire-assignment for this slot. ISO/IEC
+     * 9040:1997 §18.2.4.
+     * @public
+     * @readonly
+     */
+    public readonly repertoire?: OPTIONAL<RepertoireAssignment>;
+    /**
+     * @summary `fontCapability`.
+     * @description
+     * Selected `font-capability` (default 1). ISO/IEC 9040:1997
+     * §18.3.
+     * @public
+     * @readonly
+     */
+    public readonly fontCapability?: OPTIONAL<INTEGER>;
+    /**
+     * @summary `fontAssignments`.
+     * @description
+     * Selected font-assignment list for this repertoire. ISO/IEC
+     * 9040:1997 §18.3.
+     * @public
+     * @readonly
+     */
+    public readonly fontAssignments?: OPTIONAL<FontAssignment[]>;
+
     constructor (
-        /**
-         * @summary `repertoire`.
-         * @description
-         * Selected repertoire-assignment for this slot. ISO/IEC
-         * 9040:1997 §18.2.4.
-         * @public
-         * @readonly
-         */
-        readonly repertoire?: OPTIONAL<RepertoireAssignment>,
-        /**
-         * @summary `fontCapability`.
-         * @description
-         * Selected `font-capability` (default 1). ISO/IEC 9040:1997
-         * §18.3.
-         * @public
-         * @readonly
-         */
-        readonly fontCapability?: OPTIONAL<INTEGER>,
-        /**
-         * @summary `fontAssignments`.
-         * @description
-         * Selected font-assignment list for this repertoire. ISO/IEC
-         * 9040:1997 §18.3.
-         * @public
-         * @readonly
-         */
-        readonly fontAssignments?: OPTIONAL<FontAssignment[]>
-    ) {}
+        repertoire?: OPTIONAL<RepertoireAssignment>,
+        fontCapability?: OPTIONAL<INTEGER>,
+        fontAssignments?: OPTIONAL<FontAssignment[]>
+    ) {
+        this.repertoire = repertoire;
+        this.fontCapability = fontCapability;
+        this.fontAssignments = fontAssignments;
+    }
 
     /**
      * @summary Restructures an object into a RepertoireFontValue_alternatives

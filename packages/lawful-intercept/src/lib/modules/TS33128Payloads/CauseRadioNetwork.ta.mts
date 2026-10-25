@@ -257,7 +257,7 @@ type CauseRadioNetwork = _enum_for_CauseRadioNetwork;
  * @enum {number}
  */
 export
-const CauseRadioNetwork = _enum_for_CauseRadioNetwork;
+const CauseRadioNetwork: typeof _enum_for_CauseRadioNetwork = _enum_for_CauseRadioNetwork;
 
 /**
  * @summary CauseRadioNetwork_unspecified
@@ -265,7 +265,7 @@ const CauseRadioNetwork = _enum_for_CauseRadioNetwork;
  * @type {number}
  */
 export
-const CauseRadioNetwork_unspecified: CauseRadioNetwork = CauseRadioNetwork.unspecified; /* LONG_NAMED_ENUMERATED_VALUE */
+const CauseRadioNetwork_unspecified: _enum_for_CauseRadioNetwork.unspecified = CauseRadioNetwork.unspecified; /* LONG_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary unspecified
@@ -273,7 +273,7 @@ const CauseRadioNetwork_unspecified: CauseRadioNetwork = CauseRadioNetwork.unspe
  * @type {number}
  */
 export
-const unspecified: CauseRadioNetwork = CauseRadioNetwork.unspecified; /* SHORT_NAMED_ENUMERATED_VALUE */
+const unspecified: _enum_for_CauseRadioNetwork.unspecified = CauseRadioNetwork.unspecified; /* SHORT_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary CauseRadioNetwork_txnrelocoverallExpiry
@@ -281,7 +281,7 @@ const unspecified: CauseRadioNetwork = CauseRadioNetwork.unspecified; /* SHORT_N
  * @type {number}
  */
 export
-const CauseRadioNetwork_txnrelocoverallExpiry: CauseRadioNetwork = CauseRadioNetwork.txnrelocoverallExpiry; /* LONG_NAMED_ENUMERATED_VALUE */
+const CauseRadioNetwork_txnrelocoverallExpiry: _enum_for_CauseRadioNetwork.txnrelocoverallExpiry = CauseRadioNetwork.txnrelocoverallExpiry; /* LONG_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary txnrelocoverallExpiry
@@ -289,7 +289,7 @@ const CauseRadioNetwork_txnrelocoverallExpiry: CauseRadioNetwork = CauseRadioNet
  * @type {number}
  */
 export
-const txnrelocoverallExpiry: CauseRadioNetwork = CauseRadioNetwork.txnrelocoverallExpiry; /* SHORT_NAMED_ENUMERATED_VALUE */
+const txnrelocoverallExpiry: _enum_for_CauseRadioNetwork.txnrelocoverallExpiry = CauseRadioNetwork.txnrelocoverallExpiry; /* SHORT_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary CauseRadioNetwork_successfulHandover
@@ -297,7 +297,7 @@ const txnrelocoverallExpiry: CauseRadioNetwork = CauseRadioNetwork.txnrelocovera
  * @type {number}
  */
 export
-const CauseRadioNetwork_successfulHandover: CauseRadioNetwork = CauseRadioNetwork.successfulHandover; /* LONG_NAMED_ENUMERATED_VALUE */
+const CauseRadioNetwork_successfulHandover: _enum_for_CauseRadioNetwork.successfulHandover = CauseRadioNetwork.successfulHandover; /* LONG_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary successfulHandover
@@ -305,7 +305,7 @@ const CauseRadioNetwork_successfulHandover: CauseRadioNetwork = CauseRadioNetwor
  * @type {number}
  */
 export
-const successfulHandover: CauseRadioNetwork = CauseRadioNetwork.successfulHandover; /* SHORT_NAMED_ENUMERATED_VALUE */
+const successfulHandover: _enum_for_CauseRadioNetwork.successfulHandover = CauseRadioNetwork.successfulHandover; /* SHORT_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary CauseRadioNetwork_releaseDueToNGRANGeneratedReason
@@ -313,7 +313,7 @@ const successfulHandover: CauseRadioNetwork = CauseRadioNetwork.successfulHandov
  * @type {number}
  */
 export
-const CauseRadioNetwork_releaseDueToNGRANGeneratedReason: CauseRadioNetwork = CauseRadioNetwork.releaseDueToNGRANGeneratedReason; /* LONG_NAMED_ENUMERATED_VALUE */
+const CauseRadioNetwork_releaseDueToNGRANGeneratedReason: _enum_for_CauseRadioNetwork.releaseDueToNGRANGeneratedReason = CauseRadioNetwork.releaseDueToNGRANGeneratedReason; /* LONG_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary releaseDueToNGRANGeneratedReason
@@ -321,7 +321,7 @@ const CauseRadioNetwork_releaseDueToNGRANGeneratedReason: CauseRadioNetwork = Ca
  * @type {number}
  */
 export
-const releaseDueToNGRANGeneratedReason: CauseRadioNetwork = CauseRadioNetwork.releaseDueToNGRANGeneratedReason; /* SHORT_NAMED_ENUMERATED_VALUE */
+const releaseDueToNGRANGeneratedReason: _enum_for_CauseRadioNetwork.releaseDueToNGRANGeneratedReason = CauseRadioNetwork.releaseDueToNGRANGeneratedReason; /* SHORT_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary CauseRadioNetwork_releaseDueTo5gcGeneratedReason
@@ -329,7 +329,7 @@ const releaseDueToNGRANGeneratedReason: CauseRadioNetwork = CauseRadioNetwork.re
  * @type {number}
  */
 export
-const CauseRadioNetwork_releaseDueTo5gcGeneratedReason: CauseRadioNetwork = CauseRadioNetwork.releaseDueTo5gcGeneratedReason; /* LONG_NAMED_ENUMERATED_VALUE */
+const CauseRadioNetwork_releaseDueTo5gcGeneratedReason: _enum_for_CauseRadioNetwork.releaseDueTo5gcGeneratedReason = CauseRadioNetwork.releaseDueTo5gcGeneratedReason; /* LONG_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary releaseDueTo5gcGeneratedReason
@@ -337,7 +337,7 @@ const CauseRadioNetwork_releaseDueTo5gcGeneratedReason: CauseRadioNetwork = Caus
  * @type {number}
  */
 export
-const releaseDueTo5gcGeneratedReason: CauseRadioNetwork = CauseRadioNetwork.releaseDueTo5gcGeneratedReason; /* SHORT_NAMED_ENUMERATED_VALUE */
+const releaseDueTo5gcGeneratedReason: _enum_for_CauseRadioNetwork.releaseDueTo5gcGeneratedReason = CauseRadioNetwork.releaseDueTo5gcGeneratedReason; /* SHORT_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary CauseRadioNetwork_handoverCancelled
@@ -345,7 +345,7 @@ const releaseDueTo5gcGeneratedReason: CauseRadioNetwork = CauseRadioNetwork.rele
  * @type {number}
  */
 export
-const CauseRadioNetwork_handoverCancelled: CauseRadioNetwork = CauseRadioNetwork.handoverCancelled; /* LONG_NAMED_ENUMERATED_VALUE */
+const CauseRadioNetwork_handoverCancelled: _enum_for_CauseRadioNetwork.handoverCancelled = CauseRadioNetwork.handoverCancelled; /* LONG_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary handoverCancelled
@@ -353,7 +353,7 @@ const CauseRadioNetwork_handoverCancelled: CauseRadioNetwork = CauseRadioNetwork
  * @type {number}
  */
 export
-const handoverCancelled: CauseRadioNetwork = CauseRadioNetwork.handoverCancelled; /* SHORT_NAMED_ENUMERATED_VALUE */
+const handoverCancelled: _enum_for_CauseRadioNetwork.handoverCancelled = CauseRadioNetwork.handoverCancelled; /* SHORT_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary CauseRadioNetwork_partialHandover
@@ -361,7 +361,7 @@ const handoverCancelled: CauseRadioNetwork = CauseRadioNetwork.handoverCancelled
  * @type {number}
  */
 export
-const CauseRadioNetwork_partialHandover: CauseRadioNetwork = CauseRadioNetwork.partialHandover; /* LONG_NAMED_ENUMERATED_VALUE */
+const CauseRadioNetwork_partialHandover: _enum_for_CauseRadioNetwork.partialHandover = CauseRadioNetwork.partialHandover; /* LONG_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary partialHandover
@@ -369,7 +369,7 @@ const CauseRadioNetwork_partialHandover: CauseRadioNetwork = CauseRadioNetwork.p
  * @type {number}
  */
 export
-const partialHandover: CauseRadioNetwork = CauseRadioNetwork.partialHandover; /* SHORT_NAMED_ENUMERATED_VALUE */
+const partialHandover: _enum_for_CauseRadioNetwork.partialHandover = CauseRadioNetwork.partialHandover; /* SHORT_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary CauseRadioNetwork_hoFailureInTarget5GCNGRANNodeOrTargetSystem
@@ -377,7 +377,7 @@ const partialHandover: CauseRadioNetwork = CauseRadioNetwork.partialHandover; /*
  * @type {number}
  */
 export
-const CauseRadioNetwork_hoFailureInTarget5GCNGRANNodeOrTargetSystem: CauseRadioNetwork = CauseRadioNetwork.hoFailureInTarget5GCNGRANNodeOrTargetSystem; /* LONG_NAMED_ENUMERATED_VALUE */
+const CauseRadioNetwork_hoFailureInTarget5GCNGRANNodeOrTargetSystem: _enum_for_CauseRadioNetwork.hoFailureInTarget5GCNGRANNodeOrTargetSystem = CauseRadioNetwork.hoFailureInTarget5GCNGRANNodeOrTargetSystem; /* LONG_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary hoFailureInTarget5GCNGRANNodeOrTargetSystem
@@ -385,7 +385,7 @@ const CauseRadioNetwork_hoFailureInTarget5GCNGRANNodeOrTargetSystem: CauseRadioN
  * @type {number}
  */
 export
-const hoFailureInTarget5GCNGRANNodeOrTargetSystem: CauseRadioNetwork = CauseRadioNetwork.hoFailureInTarget5GCNGRANNodeOrTargetSystem; /* SHORT_NAMED_ENUMERATED_VALUE */
+const hoFailureInTarget5GCNGRANNodeOrTargetSystem: _enum_for_CauseRadioNetwork.hoFailureInTarget5GCNGRANNodeOrTargetSystem = CauseRadioNetwork.hoFailureInTarget5GCNGRANNodeOrTargetSystem; /* SHORT_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary CauseRadioNetwork_hoTargetNotAllowed
@@ -393,7 +393,7 @@ const hoFailureInTarget5GCNGRANNodeOrTargetSystem: CauseRadioNetwork = CauseRadi
  * @type {number}
  */
 export
-const CauseRadioNetwork_hoTargetNotAllowed: CauseRadioNetwork = CauseRadioNetwork.hoTargetNotAllowed; /* LONG_NAMED_ENUMERATED_VALUE */
+const CauseRadioNetwork_hoTargetNotAllowed: _enum_for_CauseRadioNetwork.hoTargetNotAllowed = CauseRadioNetwork.hoTargetNotAllowed; /* LONG_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary hoTargetNotAllowed
@@ -401,7 +401,7 @@ const CauseRadioNetwork_hoTargetNotAllowed: CauseRadioNetwork = CauseRadioNetwor
  * @type {number}
  */
 export
-const hoTargetNotAllowed: CauseRadioNetwork = CauseRadioNetwork.hoTargetNotAllowed; /* SHORT_NAMED_ENUMERATED_VALUE */
+const hoTargetNotAllowed: _enum_for_CauseRadioNetwork.hoTargetNotAllowed = CauseRadioNetwork.hoTargetNotAllowed; /* SHORT_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary CauseRadioNetwork_tNGRelocOverallExpiry
@@ -409,7 +409,7 @@ const hoTargetNotAllowed: CauseRadioNetwork = CauseRadioNetwork.hoTargetNotAllow
  * @type {number}
  */
 export
-const CauseRadioNetwork_tNGRelocOverallExpiry: CauseRadioNetwork = CauseRadioNetwork.tNGRelocOverallExpiry; /* LONG_NAMED_ENUMERATED_VALUE */
+const CauseRadioNetwork_tNGRelocOverallExpiry: _enum_for_CauseRadioNetwork.tNGRelocOverallExpiry = CauseRadioNetwork.tNGRelocOverallExpiry; /* LONG_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary tNGRelocOverallExpiry
@@ -417,7 +417,7 @@ const CauseRadioNetwork_tNGRelocOverallExpiry: CauseRadioNetwork = CauseRadioNet
  * @type {number}
  */
 export
-const tNGRelocOverallExpiry: CauseRadioNetwork = CauseRadioNetwork.tNGRelocOverallExpiry; /* SHORT_NAMED_ENUMERATED_VALUE */
+const tNGRelocOverallExpiry: _enum_for_CauseRadioNetwork.tNGRelocOverallExpiry = CauseRadioNetwork.tNGRelocOverallExpiry; /* SHORT_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary CauseRadioNetwork_tNGRelocPrepExpiry
@@ -425,7 +425,7 @@ const tNGRelocOverallExpiry: CauseRadioNetwork = CauseRadioNetwork.tNGRelocOvera
  * @type {number}
  */
 export
-const CauseRadioNetwork_tNGRelocPrepExpiry: CauseRadioNetwork = CauseRadioNetwork.tNGRelocPrepExpiry; /* LONG_NAMED_ENUMERATED_VALUE */
+const CauseRadioNetwork_tNGRelocPrepExpiry: _enum_for_CauseRadioNetwork.tNGRelocPrepExpiry = CauseRadioNetwork.tNGRelocPrepExpiry; /* LONG_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary tNGRelocPrepExpiry
@@ -433,7 +433,7 @@ const CauseRadioNetwork_tNGRelocPrepExpiry: CauseRadioNetwork = CauseRadioNetwor
  * @type {number}
  */
 export
-const tNGRelocPrepExpiry: CauseRadioNetwork = CauseRadioNetwork.tNGRelocPrepExpiry; /* SHORT_NAMED_ENUMERATED_VALUE */
+const tNGRelocPrepExpiry: _enum_for_CauseRadioNetwork.tNGRelocPrepExpiry = CauseRadioNetwork.tNGRelocPrepExpiry; /* SHORT_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary CauseRadioNetwork_cellNotAvailable
@@ -441,7 +441,7 @@ const tNGRelocPrepExpiry: CauseRadioNetwork = CauseRadioNetwork.tNGRelocPrepExpi
  * @type {number}
  */
 export
-const CauseRadioNetwork_cellNotAvailable: CauseRadioNetwork = CauseRadioNetwork.cellNotAvailable; /* LONG_NAMED_ENUMERATED_VALUE */
+const CauseRadioNetwork_cellNotAvailable: _enum_for_CauseRadioNetwork.cellNotAvailable = CauseRadioNetwork.cellNotAvailable; /* LONG_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary cellNotAvailable
@@ -449,7 +449,7 @@ const CauseRadioNetwork_cellNotAvailable: CauseRadioNetwork = CauseRadioNetwork.
  * @type {number}
  */
 export
-const cellNotAvailable: CauseRadioNetwork = CauseRadioNetwork.cellNotAvailable; /* SHORT_NAMED_ENUMERATED_VALUE */
+const cellNotAvailable: _enum_for_CauseRadioNetwork.cellNotAvailable = CauseRadioNetwork.cellNotAvailable; /* SHORT_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary CauseRadioNetwork_unknownTargetID
@@ -457,7 +457,7 @@ const cellNotAvailable: CauseRadioNetwork = CauseRadioNetwork.cellNotAvailable; 
  * @type {number}
  */
 export
-const CauseRadioNetwork_unknownTargetID: CauseRadioNetwork = CauseRadioNetwork.unknownTargetID; /* LONG_NAMED_ENUMERATED_VALUE */
+const CauseRadioNetwork_unknownTargetID: _enum_for_CauseRadioNetwork.unknownTargetID = CauseRadioNetwork.unknownTargetID; /* LONG_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary unknownTargetID
@@ -465,7 +465,7 @@ const CauseRadioNetwork_unknownTargetID: CauseRadioNetwork = CauseRadioNetwork.u
  * @type {number}
  */
 export
-const unknownTargetID: CauseRadioNetwork = CauseRadioNetwork.unknownTargetID; /* SHORT_NAMED_ENUMERATED_VALUE */
+const unknownTargetID: _enum_for_CauseRadioNetwork.unknownTargetID = CauseRadioNetwork.unknownTargetID; /* SHORT_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary CauseRadioNetwork_noRadioResourcesAvailableInTargetCell
@@ -473,7 +473,7 @@ const unknownTargetID: CauseRadioNetwork = CauseRadioNetwork.unknownTargetID; /*
  * @type {number}
  */
 export
-const CauseRadioNetwork_noRadioResourcesAvailableInTargetCell: CauseRadioNetwork = CauseRadioNetwork.noRadioResourcesAvailableInTargetCell; /* LONG_NAMED_ENUMERATED_VALUE */
+const CauseRadioNetwork_noRadioResourcesAvailableInTargetCell: _enum_for_CauseRadioNetwork.noRadioResourcesAvailableInTargetCell = CauseRadioNetwork.noRadioResourcesAvailableInTargetCell; /* LONG_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary noRadioResourcesAvailableInTargetCell
@@ -481,7 +481,7 @@ const CauseRadioNetwork_noRadioResourcesAvailableInTargetCell: CauseRadioNetwork
  * @type {number}
  */
 export
-const noRadioResourcesAvailableInTargetCell: CauseRadioNetwork = CauseRadioNetwork.noRadioResourcesAvailableInTargetCell; /* SHORT_NAMED_ENUMERATED_VALUE */
+const noRadioResourcesAvailableInTargetCell: _enum_for_CauseRadioNetwork.noRadioResourcesAvailableInTargetCell = CauseRadioNetwork.noRadioResourcesAvailableInTargetCell; /* SHORT_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary CauseRadioNetwork_unknownLocalUENGAPID
@@ -489,7 +489,7 @@ const noRadioResourcesAvailableInTargetCell: CauseRadioNetwork = CauseRadioNetwo
  * @type {number}
  */
 export
-const CauseRadioNetwork_unknownLocalUENGAPID: CauseRadioNetwork = CauseRadioNetwork.unknownLocalUENGAPID; /* LONG_NAMED_ENUMERATED_VALUE */
+const CauseRadioNetwork_unknownLocalUENGAPID: _enum_for_CauseRadioNetwork.unknownLocalUENGAPID = CauseRadioNetwork.unknownLocalUENGAPID; /* LONG_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary unknownLocalUENGAPID
@@ -497,7 +497,7 @@ const CauseRadioNetwork_unknownLocalUENGAPID: CauseRadioNetwork = CauseRadioNetw
  * @type {number}
  */
 export
-const unknownLocalUENGAPID: CauseRadioNetwork = CauseRadioNetwork.unknownLocalUENGAPID; /* SHORT_NAMED_ENUMERATED_VALUE */
+const unknownLocalUENGAPID: _enum_for_CauseRadioNetwork.unknownLocalUENGAPID = CauseRadioNetwork.unknownLocalUENGAPID; /* SHORT_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary CauseRadioNetwork_inconsistentRemoteUENGAPID
@@ -505,7 +505,7 @@ const unknownLocalUENGAPID: CauseRadioNetwork = CauseRadioNetwork.unknownLocalUE
  * @type {number}
  */
 export
-const CauseRadioNetwork_inconsistentRemoteUENGAPID: CauseRadioNetwork = CauseRadioNetwork.inconsistentRemoteUENGAPID; /* LONG_NAMED_ENUMERATED_VALUE */
+const CauseRadioNetwork_inconsistentRemoteUENGAPID: _enum_for_CauseRadioNetwork.inconsistentRemoteUENGAPID = CauseRadioNetwork.inconsistentRemoteUENGAPID; /* LONG_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary inconsistentRemoteUENGAPID
@@ -513,7 +513,7 @@ const CauseRadioNetwork_inconsistentRemoteUENGAPID: CauseRadioNetwork = CauseRad
  * @type {number}
  */
 export
-const inconsistentRemoteUENGAPID: CauseRadioNetwork = CauseRadioNetwork.inconsistentRemoteUENGAPID; /* SHORT_NAMED_ENUMERATED_VALUE */
+const inconsistentRemoteUENGAPID: _enum_for_CauseRadioNetwork.inconsistentRemoteUENGAPID = CauseRadioNetwork.inconsistentRemoteUENGAPID; /* SHORT_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary CauseRadioNetwork_handoverDesirableForRadioReason
@@ -521,7 +521,7 @@ const inconsistentRemoteUENGAPID: CauseRadioNetwork = CauseRadioNetwork.inconsis
  * @type {number}
  */
 export
-const CauseRadioNetwork_handoverDesirableForRadioReason: CauseRadioNetwork = CauseRadioNetwork.handoverDesirableForRadioReason; /* LONG_NAMED_ENUMERATED_VALUE */
+const CauseRadioNetwork_handoverDesirableForRadioReason: _enum_for_CauseRadioNetwork.handoverDesirableForRadioReason = CauseRadioNetwork.handoverDesirableForRadioReason; /* LONG_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary handoverDesirableForRadioReason
@@ -529,7 +529,7 @@ const CauseRadioNetwork_handoverDesirableForRadioReason: CauseRadioNetwork = Cau
  * @type {number}
  */
 export
-const handoverDesirableForRadioReason: CauseRadioNetwork = CauseRadioNetwork.handoverDesirableForRadioReason; /* SHORT_NAMED_ENUMERATED_VALUE */
+const handoverDesirableForRadioReason: _enum_for_CauseRadioNetwork.handoverDesirableForRadioReason = CauseRadioNetwork.handoverDesirableForRadioReason; /* SHORT_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary CauseRadioNetwork_timeCriticalHandover
@@ -537,7 +537,7 @@ const handoverDesirableForRadioReason: CauseRadioNetwork = CauseRadioNetwork.han
  * @type {number}
  */
 export
-const CauseRadioNetwork_timeCriticalHandover: CauseRadioNetwork = CauseRadioNetwork.timeCriticalHandover; /* LONG_NAMED_ENUMERATED_VALUE */
+const CauseRadioNetwork_timeCriticalHandover: _enum_for_CauseRadioNetwork.timeCriticalHandover = CauseRadioNetwork.timeCriticalHandover; /* LONG_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary timeCriticalHandover
@@ -545,7 +545,7 @@ const CauseRadioNetwork_timeCriticalHandover: CauseRadioNetwork = CauseRadioNetw
  * @type {number}
  */
 export
-const timeCriticalHandover: CauseRadioNetwork = CauseRadioNetwork.timeCriticalHandover; /* SHORT_NAMED_ENUMERATED_VALUE */
+const timeCriticalHandover: _enum_for_CauseRadioNetwork.timeCriticalHandover = CauseRadioNetwork.timeCriticalHandover; /* SHORT_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary CauseRadioNetwork_resourceOptimisationHandover
@@ -553,7 +553,7 @@ const timeCriticalHandover: CauseRadioNetwork = CauseRadioNetwork.timeCriticalHa
  * @type {number}
  */
 export
-const CauseRadioNetwork_resourceOptimisationHandover: CauseRadioNetwork = CauseRadioNetwork.resourceOptimisationHandover; /* LONG_NAMED_ENUMERATED_VALUE */
+const CauseRadioNetwork_resourceOptimisationHandover: _enum_for_CauseRadioNetwork.resourceOptimisationHandover = CauseRadioNetwork.resourceOptimisationHandover; /* LONG_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary resourceOptimisationHandover
@@ -561,7 +561,7 @@ const CauseRadioNetwork_resourceOptimisationHandover: CauseRadioNetwork = CauseR
  * @type {number}
  */
 export
-const resourceOptimisationHandover: CauseRadioNetwork = CauseRadioNetwork.resourceOptimisationHandover; /* SHORT_NAMED_ENUMERATED_VALUE */
+const resourceOptimisationHandover: _enum_for_CauseRadioNetwork.resourceOptimisationHandover = CauseRadioNetwork.resourceOptimisationHandover; /* SHORT_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary CauseRadioNetwork_reduceLoadInServingCell
@@ -569,7 +569,7 @@ const resourceOptimisationHandover: CauseRadioNetwork = CauseRadioNetwork.resour
  * @type {number}
  */
 export
-const CauseRadioNetwork_reduceLoadInServingCell: CauseRadioNetwork = CauseRadioNetwork.reduceLoadInServingCell; /* LONG_NAMED_ENUMERATED_VALUE */
+const CauseRadioNetwork_reduceLoadInServingCell: _enum_for_CauseRadioNetwork.reduceLoadInServingCell = CauseRadioNetwork.reduceLoadInServingCell; /* LONG_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary reduceLoadInServingCell
@@ -577,7 +577,7 @@ const CauseRadioNetwork_reduceLoadInServingCell: CauseRadioNetwork = CauseRadioN
  * @type {number}
  */
 export
-const reduceLoadInServingCell: CauseRadioNetwork = CauseRadioNetwork.reduceLoadInServingCell; /* SHORT_NAMED_ENUMERATED_VALUE */
+const reduceLoadInServingCell: _enum_for_CauseRadioNetwork.reduceLoadInServingCell = CauseRadioNetwork.reduceLoadInServingCell; /* SHORT_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary CauseRadioNetwork_userInactivity
@@ -585,7 +585,7 @@ const reduceLoadInServingCell: CauseRadioNetwork = CauseRadioNetwork.reduceLoadI
  * @type {number}
  */
 export
-const CauseRadioNetwork_userInactivity: CauseRadioNetwork = CauseRadioNetwork.userInactivity; /* LONG_NAMED_ENUMERATED_VALUE */
+const CauseRadioNetwork_userInactivity: _enum_for_CauseRadioNetwork.userInactivity = CauseRadioNetwork.userInactivity; /* LONG_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary userInactivity
@@ -593,7 +593,7 @@ const CauseRadioNetwork_userInactivity: CauseRadioNetwork = CauseRadioNetwork.us
  * @type {number}
  */
 export
-const userInactivity: CauseRadioNetwork = CauseRadioNetwork.userInactivity; /* SHORT_NAMED_ENUMERATED_VALUE */
+const userInactivity: _enum_for_CauseRadioNetwork.userInactivity = CauseRadioNetwork.userInactivity; /* SHORT_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary CauseRadioNetwork_radioConnectionWithUELost
@@ -601,7 +601,7 @@ const userInactivity: CauseRadioNetwork = CauseRadioNetwork.userInactivity; /* S
  * @type {number}
  */
 export
-const CauseRadioNetwork_radioConnectionWithUELost: CauseRadioNetwork = CauseRadioNetwork.radioConnectionWithUELost; /* LONG_NAMED_ENUMERATED_VALUE */
+const CauseRadioNetwork_radioConnectionWithUELost: _enum_for_CauseRadioNetwork.radioConnectionWithUELost = CauseRadioNetwork.radioConnectionWithUELost; /* LONG_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary radioConnectionWithUELost
@@ -609,7 +609,7 @@ const CauseRadioNetwork_radioConnectionWithUELost: CauseRadioNetwork = CauseRadi
  * @type {number}
  */
 export
-const radioConnectionWithUELost: CauseRadioNetwork = CauseRadioNetwork.radioConnectionWithUELost; /* SHORT_NAMED_ENUMERATED_VALUE */
+const radioConnectionWithUELost: _enum_for_CauseRadioNetwork.radioConnectionWithUELost = CauseRadioNetwork.radioConnectionWithUELost; /* SHORT_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary CauseRadioNetwork_radioResourcesNotAvailable
@@ -617,7 +617,7 @@ const radioConnectionWithUELost: CauseRadioNetwork = CauseRadioNetwork.radioConn
  * @type {number}
  */
 export
-const CauseRadioNetwork_radioResourcesNotAvailable: CauseRadioNetwork = CauseRadioNetwork.radioResourcesNotAvailable; /* LONG_NAMED_ENUMERATED_VALUE */
+const CauseRadioNetwork_radioResourcesNotAvailable: _enum_for_CauseRadioNetwork.radioResourcesNotAvailable = CauseRadioNetwork.radioResourcesNotAvailable; /* LONG_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary radioResourcesNotAvailable
@@ -625,7 +625,7 @@ const CauseRadioNetwork_radioResourcesNotAvailable: CauseRadioNetwork = CauseRad
  * @type {number}
  */
 export
-const radioResourcesNotAvailable: CauseRadioNetwork = CauseRadioNetwork.radioResourcesNotAvailable; /* SHORT_NAMED_ENUMERATED_VALUE */
+const radioResourcesNotAvailable: _enum_for_CauseRadioNetwork.radioResourcesNotAvailable = CauseRadioNetwork.radioResourcesNotAvailable; /* SHORT_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary CauseRadioNetwork_invalidQoSCombination
@@ -633,7 +633,7 @@ const radioResourcesNotAvailable: CauseRadioNetwork = CauseRadioNetwork.radioRes
  * @type {number}
  */
 export
-const CauseRadioNetwork_invalidQoSCombination: CauseRadioNetwork = CauseRadioNetwork.invalidQoSCombination; /* LONG_NAMED_ENUMERATED_VALUE */
+const CauseRadioNetwork_invalidQoSCombination: _enum_for_CauseRadioNetwork.invalidQoSCombination = CauseRadioNetwork.invalidQoSCombination; /* LONG_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary invalidQoSCombination
@@ -641,7 +641,7 @@ const CauseRadioNetwork_invalidQoSCombination: CauseRadioNetwork = CauseRadioNet
  * @type {number}
  */
 export
-const invalidQoSCombination: CauseRadioNetwork = CauseRadioNetwork.invalidQoSCombination; /* SHORT_NAMED_ENUMERATED_VALUE */
+const invalidQoSCombination: _enum_for_CauseRadioNetwork.invalidQoSCombination = CauseRadioNetwork.invalidQoSCombination; /* SHORT_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary CauseRadioNetwork_failureInRadioInterfaceProcedure
@@ -649,7 +649,7 @@ const invalidQoSCombination: CauseRadioNetwork = CauseRadioNetwork.invalidQoSCom
  * @type {number}
  */
 export
-const CauseRadioNetwork_failureInRadioInterfaceProcedure: CauseRadioNetwork = CauseRadioNetwork.failureInRadioInterfaceProcedure; /* LONG_NAMED_ENUMERATED_VALUE */
+const CauseRadioNetwork_failureInRadioInterfaceProcedure: _enum_for_CauseRadioNetwork.failureInRadioInterfaceProcedure = CauseRadioNetwork.failureInRadioInterfaceProcedure; /* LONG_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary failureInRadioInterfaceProcedure
@@ -657,7 +657,7 @@ const CauseRadioNetwork_failureInRadioInterfaceProcedure: CauseRadioNetwork = Ca
  * @type {number}
  */
 export
-const failureInRadioInterfaceProcedure: CauseRadioNetwork = CauseRadioNetwork.failureInRadioInterfaceProcedure; /* SHORT_NAMED_ENUMERATED_VALUE */
+const failureInRadioInterfaceProcedure: _enum_for_CauseRadioNetwork.failureInRadioInterfaceProcedure = CauseRadioNetwork.failureInRadioInterfaceProcedure; /* SHORT_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary CauseRadioNetwork_interactionWithOtherProcedure
@@ -665,7 +665,7 @@ const failureInRadioInterfaceProcedure: CauseRadioNetwork = CauseRadioNetwork.fa
  * @type {number}
  */
 export
-const CauseRadioNetwork_interactionWithOtherProcedure: CauseRadioNetwork = CauseRadioNetwork.interactionWithOtherProcedure; /* LONG_NAMED_ENUMERATED_VALUE */
+const CauseRadioNetwork_interactionWithOtherProcedure: _enum_for_CauseRadioNetwork.interactionWithOtherProcedure = CauseRadioNetwork.interactionWithOtherProcedure; /* LONG_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary interactionWithOtherProcedure
@@ -673,7 +673,7 @@ const CauseRadioNetwork_interactionWithOtherProcedure: CauseRadioNetwork = Cause
  * @type {number}
  */
 export
-const interactionWithOtherProcedure: CauseRadioNetwork = CauseRadioNetwork.interactionWithOtherProcedure; /* SHORT_NAMED_ENUMERATED_VALUE */
+const interactionWithOtherProcedure: _enum_for_CauseRadioNetwork.interactionWithOtherProcedure = CauseRadioNetwork.interactionWithOtherProcedure; /* SHORT_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary CauseRadioNetwork_unknownPDUSessionID
@@ -681,7 +681,7 @@ const interactionWithOtherProcedure: CauseRadioNetwork = CauseRadioNetwork.inter
  * @type {number}
  */
 export
-const CauseRadioNetwork_unknownPDUSessionID: CauseRadioNetwork = CauseRadioNetwork.unknownPDUSessionID; /* LONG_NAMED_ENUMERATED_VALUE */
+const CauseRadioNetwork_unknownPDUSessionID: _enum_for_CauseRadioNetwork.unknownPDUSessionID = CauseRadioNetwork.unknownPDUSessionID; /* LONG_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary unknownPDUSessionID
@@ -689,7 +689,7 @@ const CauseRadioNetwork_unknownPDUSessionID: CauseRadioNetwork = CauseRadioNetwo
  * @type {number}
  */
 export
-const unknownPDUSessionID: CauseRadioNetwork = CauseRadioNetwork.unknownPDUSessionID; /* SHORT_NAMED_ENUMERATED_VALUE */
+const unknownPDUSessionID: _enum_for_CauseRadioNetwork.unknownPDUSessionID = CauseRadioNetwork.unknownPDUSessionID; /* SHORT_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary CauseRadioNetwork_multiplePDUSessionIDInstances
@@ -697,7 +697,7 @@ const unknownPDUSessionID: CauseRadioNetwork = CauseRadioNetwork.unknownPDUSessi
  * @type {number}
  */
 export
-const CauseRadioNetwork_multiplePDUSessionIDInstances: CauseRadioNetwork = CauseRadioNetwork.multiplePDUSessionIDInstances; /* LONG_NAMED_ENUMERATED_VALUE */
+const CauseRadioNetwork_multiplePDUSessionIDInstances: _enum_for_CauseRadioNetwork.multiplePDUSessionIDInstances = CauseRadioNetwork.multiplePDUSessionIDInstances; /* LONG_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary multiplePDUSessionIDInstances
@@ -705,7 +705,7 @@ const CauseRadioNetwork_multiplePDUSessionIDInstances: CauseRadioNetwork = Cause
  * @type {number}
  */
 export
-const multiplePDUSessionIDInstances: CauseRadioNetwork = CauseRadioNetwork.multiplePDUSessionIDInstances; /* SHORT_NAMED_ENUMERATED_VALUE */
+const multiplePDUSessionIDInstances: _enum_for_CauseRadioNetwork.multiplePDUSessionIDInstances = CauseRadioNetwork.multiplePDUSessionIDInstances; /* SHORT_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary CauseRadioNetwork_multipleQoSFlowIDInstances
@@ -713,7 +713,7 @@ const multiplePDUSessionIDInstances: CauseRadioNetwork = CauseRadioNetwork.multi
  * @type {number}
  */
 export
-const CauseRadioNetwork_multipleQoSFlowIDInstances: CauseRadioNetwork = CauseRadioNetwork.multipleQoSFlowIDInstances; /* LONG_NAMED_ENUMERATED_VALUE */
+const CauseRadioNetwork_multipleQoSFlowIDInstances: _enum_for_CauseRadioNetwork.multipleQoSFlowIDInstances = CauseRadioNetwork.multipleQoSFlowIDInstances; /* LONG_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary multipleQoSFlowIDInstances
@@ -721,7 +721,7 @@ const CauseRadioNetwork_multipleQoSFlowIDInstances: CauseRadioNetwork = CauseRad
  * @type {number}
  */
 export
-const multipleQoSFlowIDInstances: CauseRadioNetwork = CauseRadioNetwork.multipleQoSFlowIDInstances; /* SHORT_NAMED_ENUMERATED_VALUE */
+const multipleQoSFlowIDInstances: _enum_for_CauseRadioNetwork.multipleQoSFlowIDInstances = CauseRadioNetwork.multipleQoSFlowIDInstances; /* SHORT_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary CauseRadioNetwork_encryptionAndOrIntegrityProtectionAlgorithmsNotSupported
@@ -729,7 +729,7 @@ const multipleQoSFlowIDInstances: CauseRadioNetwork = CauseRadioNetwork.multiple
  * @type {number}
  */
 export
-const CauseRadioNetwork_encryptionAndOrIntegrityProtectionAlgorithmsNotSupported: CauseRadioNetwork = CauseRadioNetwork.encryptionAndOrIntegrityProtectionAlgorithmsNotSupported; /* LONG_NAMED_ENUMERATED_VALUE */
+const CauseRadioNetwork_encryptionAndOrIntegrityProtectionAlgorithmsNotSupported: _enum_for_CauseRadioNetwork.encryptionAndOrIntegrityProtectionAlgorithmsNotSupported = CauseRadioNetwork.encryptionAndOrIntegrityProtectionAlgorithmsNotSupported; /* LONG_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary encryptionAndOrIntegrityProtectionAlgorithmsNotSupported
@@ -737,7 +737,7 @@ const CauseRadioNetwork_encryptionAndOrIntegrityProtectionAlgorithmsNotSupported
  * @type {number}
  */
 export
-const encryptionAndOrIntegrityProtectionAlgorithmsNotSupported: CauseRadioNetwork = CauseRadioNetwork.encryptionAndOrIntegrityProtectionAlgorithmsNotSupported; /* SHORT_NAMED_ENUMERATED_VALUE */
+const encryptionAndOrIntegrityProtectionAlgorithmsNotSupported: _enum_for_CauseRadioNetwork.encryptionAndOrIntegrityProtectionAlgorithmsNotSupported = CauseRadioNetwork.encryptionAndOrIntegrityProtectionAlgorithmsNotSupported; /* SHORT_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary CauseRadioNetwork_nGIntraSystemHandoverTriggered
@@ -745,7 +745,7 @@ const encryptionAndOrIntegrityProtectionAlgorithmsNotSupported: CauseRadioNetwor
  * @type {number}
  */
 export
-const CauseRadioNetwork_nGIntraSystemHandoverTriggered: CauseRadioNetwork = CauseRadioNetwork.nGIntraSystemHandoverTriggered; /* LONG_NAMED_ENUMERATED_VALUE */
+const CauseRadioNetwork_nGIntraSystemHandoverTriggered: _enum_for_CauseRadioNetwork.nGIntraSystemHandoverTriggered = CauseRadioNetwork.nGIntraSystemHandoverTriggered; /* LONG_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary nGIntraSystemHandoverTriggered
@@ -753,7 +753,7 @@ const CauseRadioNetwork_nGIntraSystemHandoverTriggered: CauseRadioNetwork = Caus
  * @type {number}
  */
 export
-const nGIntraSystemHandoverTriggered: CauseRadioNetwork = CauseRadioNetwork.nGIntraSystemHandoverTriggered; /* SHORT_NAMED_ENUMERATED_VALUE */
+const nGIntraSystemHandoverTriggered: _enum_for_CauseRadioNetwork.nGIntraSystemHandoverTriggered = CauseRadioNetwork.nGIntraSystemHandoverTriggered; /* SHORT_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary CauseRadioNetwork_nGInterSystemHandoverTriggered
@@ -761,7 +761,7 @@ const nGIntraSystemHandoverTriggered: CauseRadioNetwork = CauseRadioNetwork.nGIn
  * @type {number}
  */
 export
-const CauseRadioNetwork_nGInterSystemHandoverTriggered: CauseRadioNetwork = CauseRadioNetwork.nGInterSystemHandoverTriggered; /* LONG_NAMED_ENUMERATED_VALUE */
+const CauseRadioNetwork_nGInterSystemHandoverTriggered: _enum_for_CauseRadioNetwork.nGInterSystemHandoverTriggered = CauseRadioNetwork.nGInterSystemHandoverTriggered; /* LONG_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary nGInterSystemHandoverTriggered
@@ -769,7 +769,7 @@ const CauseRadioNetwork_nGInterSystemHandoverTriggered: CauseRadioNetwork = Caus
  * @type {number}
  */
 export
-const nGInterSystemHandoverTriggered: CauseRadioNetwork = CauseRadioNetwork.nGInterSystemHandoverTriggered; /* SHORT_NAMED_ENUMERATED_VALUE */
+const nGInterSystemHandoverTriggered: _enum_for_CauseRadioNetwork.nGInterSystemHandoverTriggered = CauseRadioNetwork.nGInterSystemHandoverTriggered; /* SHORT_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary CauseRadioNetwork_xNHandoverTriggered
@@ -777,7 +777,7 @@ const nGInterSystemHandoverTriggered: CauseRadioNetwork = CauseRadioNetwork.nGIn
  * @type {number}
  */
 export
-const CauseRadioNetwork_xNHandoverTriggered: CauseRadioNetwork = CauseRadioNetwork.xNHandoverTriggered; /* LONG_NAMED_ENUMERATED_VALUE */
+const CauseRadioNetwork_xNHandoverTriggered: _enum_for_CauseRadioNetwork.xNHandoverTriggered = CauseRadioNetwork.xNHandoverTriggered; /* LONG_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary xNHandoverTriggered
@@ -785,7 +785,7 @@ const CauseRadioNetwork_xNHandoverTriggered: CauseRadioNetwork = CauseRadioNetwo
  * @type {number}
  */
 export
-const xNHandoverTriggered: CauseRadioNetwork = CauseRadioNetwork.xNHandoverTriggered; /* SHORT_NAMED_ENUMERATED_VALUE */
+const xNHandoverTriggered: _enum_for_CauseRadioNetwork.xNHandoverTriggered = CauseRadioNetwork.xNHandoverTriggered; /* SHORT_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary CauseRadioNetwork_notSupported5QIValue
@@ -793,7 +793,7 @@ const xNHandoverTriggered: CauseRadioNetwork = CauseRadioNetwork.xNHandoverTrigg
  * @type {number}
  */
 export
-const CauseRadioNetwork_notSupported5QIValue: CauseRadioNetwork = CauseRadioNetwork.notSupported5QIValue; /* LONG_NAMED_ENUMERATED_VALUE */
+const CauseRadioNetwork_notSupported5QIValue: _enum_for_CauseRadioNetwork.notSupported5QIValue = CauseRadioNetwork.notSupported5QIValue; /* LONG_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary notSupported5QIValue
@@ -801,7 +801,7 @@ const CauseRadioNetwork_notSupported5QIValue: CauseRadioNetwork = CauseRadioNetw
  * @type {number}
  */
 export
-const notSupported5QIValue: CauseRadioNetwork = CauseRadioNetwork.notSupported5QIValue; /* SHORT_NAMED_ENUMERATED_VALUE */
+const notSupported5QIValue: _enum_for_CauseRadioNetwork.notSupported5QIValue = CauseRadioNetwork.notSupported5QIValue; /* SHORT_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary CauseRadioNetwork_uEContextTransfer
@@ -809,7 +809,7 @@ const notSupported5QIValue: CauseRadioNetwork = CauseRadioNetwork.notSupported5Q
  * @type {number}
  */
 export
-const CauseRadioNetwork_uEContextTransfer: CauseRadioNetwork = CauseRadioNetwork.uEContextTransfer; /* LONG_NAMED_ENUMERATED_VALUE */
+const CauseRadioNetwork_uEContextTransfer: _enum_for_CauseRadioNetwork.uEContextTransfer = CauseRadioNetwork.uEContextTransfer; /* LONG_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary uEContextTransfer
@@ -817,7 +817,7 @@ const CauseRadioNetwork_uEContextTransfer: CauseRadioNetwork = CauseRadioNetwork
  * @type {number}
  */
 export
-const uEContextTransfer: CauseRadioNetwork = CauseRadioNetwork.uEContextTransfer; /* SHORT_NAMED_ENUMERATED_VALUE */
+const uEContextTransfer: _enum_for_CauseRadioNetwork.uEContextTransfer = CauseRadioNetwork.uEContextTransfer; /* SHORT_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary CauseRadioNetwork_iMSVoiceeEPSFallbackOrRATFallbackTriggered
@@ -825,7 +825,7 @@ const uEContextTransfer: CauseRadioNetwork = CauseRadioNetwork.uEContextTransfer
  * @type {number}
  */
 export
-const CauseRadioNetwork_iMSVoiceeEPSFallbackOrRATFallbackTriggered: CauseRadioNetwork = CauseRadioNetwork.iMSVoiceeEPSFallbackOrRATFallbackTriggered; /* LONG_NAMED_ENUMERATED_VALUE */
+const CauseRadioNetwork_iMSVoiceeEPSFallbackOrRATFallbackTriggered: _enum_for_CauseRadioNetwork.iMSVoiceeEPSFallbackOrRATFallbackTriggered = CauseRadioNetwork.iMSVoiceeEPSFallbackOrRATFallbackTriggered; /* LONG_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary iMSVoiceeEPSFallbackOrRATFallbackTriggered
@@ -833,7 +833,7 @@ const CauseRadioNetwork_iMSVoiceeEPSFallbackOrRATFallbackTriggered: CauseRadioNe
  * @type {number}
  */
 export
-const iMSVoiceeEPSFallbackOrRATFallbackTriggered: CauseRadioNetwork = CauseRadioNetwork.iMSVoiceeEPSFallbackOrRATFallbackTriggered; /* SHORT_NAMED_ENUMERATED_VALUE */
+const iMSVoiceeEPSFallbackOrRATFallbackTriggered: _enum_for_CauseRadioNetwork.iMSVoiceeEPSFallbackOrRATFallbackTriggered = CauseRadioNetwork.iMSVoiceeEPSFallbackOrRATFallbackTriggered; /* SHORT_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary CauseRadioNetwork_uPIntegrityProtectioNotPossible
@@ -841,7 +841,7 @@ const iMSVoiceeEPSFallbackOrRATFallbackTriggered: CauseRadioNetwork = CauseRadio
  * @type {number}
  */
 export
-const CauseRadioNetwork_uPIntegrityProtectioNotPossible: CauseRadioNetwork = CauseRadioNetwork.uPIntegrityProtectioNotPossible; /* LONG_NAMED_ENUMERATED_VALUE */
+const CauseRadioNetwork_uPIntegrityProtectioNotPossible: _enum_for_CauseRadioNetwork.uPIntegrityProtectioNotPossible = CauseRadioNetwork.uPIntegrityProtectioNotPossible; /* LONG_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary uPIntegrityProtectioNotPossible
@@ -849,7 +849,7 @@ const CauseRadioNetwork_uPIntegrityProtectioNotPossible: CauseRadioNetwork = Cau
  * @type {number}
  */
 export
-const uPIntegrityProtectioNotPossible: CauseRadioNetwork = CauseRadioNetwork.uPIntegrityProtectioNotPossible; /* SHORT_NAMED_ENUMERATED_VALUE */
+const uPIntegrityProtectioNotPossible: _enum_for_CauseRadioNetwork.uPIntegrityProtectioNotPossible = CauseRadioNetwork.uPIntegrityProtectioNotPossible; /* SHORT_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary CauseRadioNetwork_uPConfidentialityProtectionNotPossible
@@ -857,7 +857,7 @@ const uPIntegrityProtectioNotPossible: CauseRadioNetwork = CauseRadioNetwork.uPI
  * @type {number}
  */
 export
-const CauseRadioNetwork_uPConfidentialityProtectionNotPossible: CauseRadioNetwork = CauseRadioNetwork.uPConfidentialityProtectionNotPossible; /* LONG_NAMED_ENUMERATED_VALUE */
+const CauseRadioNetwork_uPConfidentialityProtectionNotPossible: _enum_for_CauseRadioNetwork.uPConfidentialityProtectionNotPossible = CauseRadioNetwork.uPConfidentialityProtectionNotPossible; /* LONG_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary uPConfidentialityProtectionNotPossible
@@ -865,7 +865,7 @@ const CauseRadioNetwork_uPConfidentialityProtectionNotPossible: CauseRadioNetwor
  * @type {number}
  */
 export
-const uPConfidentialityProtectionNotPossible: CauseRadioNetwork = CauseRadioNetwork.uPConfidentialityProtectionNotPossible; /* SHORT_NAMED_ENUMERATED_VALUE */
+const uPConfidentialityProtectionNotPossible: _enum_for_CauseRadioNetwork.uPConfidentialityProtectionNotPossible = CauseRadioNetwork.uPConfidentialityProtectionNotPossible; /* SHORT_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary CauseRadioNetwork_sliceNotSupported
@@ -873,7 +873,7 @@ const uPConfidentialityProtectionNotPossible: CauseRadioNetwork = CauseRadioNetw
  * @type {number}
  */
 export
-const CauseRadioNetwork_sliceNotSupported: CauseRadioNetwork = CauseRadioNetwork.sliceNotSupported; /* LONG_NAMED_ENUMERATED_VALUE */
+const CauseRadioNetwork_sliceNotSupported: _enum_for_CauseRadioNetwork.sliceNotSupported = CauseRadioNetwork.sliceNotSupported; /* LONG_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary sliceNotSupported
@@ -881,7 +881,7 @@ const CauseRadioNetwork_sliceNotSupported: CauseRadioNetwork = CauseRadioNetwork
  * @type {number}
  */
 export
-const sliceNotSupported: CauseRadioNetwork = CauseRadioNetwork.sliceNotSupported; /* SHORT_NAMED_ENUMERATED_VALUE */
+const sliceNotSupported: _enum_for_CauseRadioNetwork.sliceNotSupported = CauseRadioNetwork.sliceNotSupported; /* SHORT_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary CauseRadioNetwork_uEInRRCInactiveStateNotReachable
@@ -889,7 +889,7 @@ const sliceNotSupported: CauseRadioNetwork = CauseRadioNetwork.sliceNotSupported
  * @type {number}
  */
 export
-const CauseRadioNetwork_uEInRRCInactiveStateNotReachable: CauseRadioNetwork = CauseRadioNetwork.uEInRRCInactiveStateNotReachable; /* LONG_NAMED_ENUMERATED_VALUE */
+const CauseRadioNetwork_uEInRRCInactiveStateNotReachable: _enum_for_CauseRadioNetwork.uEInRRCInactiveStateNotReachable = CauseRadioNetwork.uEInRRCInactiveStateNotReachable; /* LONG_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary uEInRRCInactiveStateNotReachable
@@ -897,7 +897,7 @@ const CauseRadioNetwork_uEInRRCInactiveStateNotReachable: CauseRadioNetwork = Ca
  * @type {number}
  */
 export
-const uEInRRCInactiveStateNotReachable: CauseRadioNetwork = CauseRadioNetwork.uEInRRCInactiveStateNotReachable; /* SHORT_NAMED_ENUMERATED_VALUE */
+const uEInRRCInactiveStateNotReachable: _enum_for_CauseRadioNetwork.uEInRRCInactiveStateNotReachable = CauseRadioNetwork.uEInRRCInactiveStateNotReachable; /* SHORT_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary CauseRadioNetwork_redirection
@@ -905,7 +905,7 @@ const uEInRRCInactiveStateNotReachable: CauseRadioNetwork = CauseRadioNetwork.uE
  * @type {number}
  */
 export
-const CauseRadioNetwork_redirection: CauseRadioNetwork = CauseRadioNetwork.redirection; /* LONG_NAMED_ENUMERATED_VALUE */
+const CauseRadioNetwork_redirection: _enum_for_CauseRadioNetwork.redirection = CauseRadioNetwork.redirection; /* LONG_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary redirection
@@ -913,7 +913,7 @@ const CauseRadioNetwork_redirection: CauseRadioNetwork = CauseRadioNetwork.redir
  * @type {number}
  */
 export
-const redirection: CauseRadioNetwork = CauseRadioNetwork.redirection; /* SHORT_NAMED_ENUMERATED_VALUE */
+const redirection: _enum_for_CauseRadioNetwork.redirection = CauseRadioNetwork.redirection; /* SHORT_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary CauseRadioNetwork_resourcesNotAvailableForTheSlice
@@ -921,7 +921,7 @@ const redirection: CauseRadioNetwork = CauseRadioNetwork.redirection; /* SHORT_N
  * @type {number}
  */
 export
-const CauseRadioNetwork_resourcesNotAvailableForTheSlice: CauseRadioNetwork = CauseRadioNetwork.resourcesNotAvailableForTheSlice; /* LONG_NAMED_ENUMERATED_VALUE */
+const CauseRadioNetwork_resourcesNotAvailableForTheSlice: _enum_for_CauseRadioNetwork.resourcesNotAvailableForTheSlice = CauseRadioNetwork.resourcesNotAvailableForTheSlice; /* LONG_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary resourcesNotAvailableForTheSlice
@@ -929,7 +929,7 @@ const CauseRadioNetwork_resourcesNotAvailableForTheSlice: CauseRadioNetwork = Ca
  * @type {number}
  */
 export
-const resourcesNotAvailableForTheSlice: CauseRadioNetwork = CauseRadioNetwork.resourcesNotAvailableForTheSlice; /* SHORT_NAMED_ENUMERATED_VALUE */
+const resourcesNotAvailableForTheSlice: _enum_for_CauseRadioNetwork.resourcesNotAvailableForTheSlice = CauseRadioNetwork.resourcesNotAvailableForTheSlice; /* SHORT_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary CauseRadioNetwork_uEMaxIntegrityProtectedDataRateReason
@@ -937,7 +937,7 @@ const resourcesNotAvailableForTheSlice: CauseRadioNetwork = CauseRadioNetwork.re
  * @type {number}
  */
 export
-const CauseRadioNetwork_uEMaxIntegrityProtectedDataRateReason: CauseRadioNetwork = CauseRadioNetwork.uEMaxIntegrityProtectedDataRateReason; /* LONG_NAMED_ENUMERATED_VALUE */
+const CauseRadioNetwork_uEMaxIntegrityProtectedDataRateReason: _enum_for_CauseRadioNetwork.uEMaxIntegrityProtectedDataRateReason = CauseRadioNetwork.uEMaxIntegrityProtectedDataRateReason; /* LONG_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary uEMaxIntegrityProtectedDataRateReason
@@ -945,7 +945,7 @@ const CauseRadioNetwork_uEMaxIntegrityProtectedDataRateReason: CauseRadioNetwork
  * @type {number}
  */
 export
-const uEMaxIntegrityProtectedDataRateReason: CauseRadioNetwork = CauseRadioNetwork.uEMaxIntegrityProtectedDataRateReason; /* SHORT_NAMED_ENUMERATED_VALUE */
+const uEMaxIntegrityProtectedDataRateReason: _enum_for_CauseRadioNetwork.uEMaxIntegrityProtectedDataRateReason = CauseRadioNetwork.uEMaxIntegrityProtectedDataRateReason; /* SHORT_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary CauseRadioNetwork_releaseDueToCNDetectedMobility
@@ -953,7 +953,7 @@ const uEMaxIntegrityProtectedDataRateReason: CauseRadioNetwork = CauseRadioNetwo
  * @type {number}
  */
 export
-const CauseRadioNetwork_releaseDueToCNDetectedMobility: CauseRadioNetwork = CauseRadioNetwork.releaseDueToCNDetectedMobility; /* LONG_NAMED_ENUMERATED_VALUE */
+const CauseRadioNetwork_releaseDueToCNDetectedMobility: _enum_for_CauseRadioNetwork.releaseDueToCNDetectedMobility = CauseRadioNetwork.releaseDueToCNDetectedMobility; /* LONG_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary releaseDueToCNDetectedMobility
@@ -961,7 +961,7 @@ const CauseRadioNetwork_releaseDueToCNDetectedMobility: CauseRadioNetwork = Caus
  * @type {number}
  */
 export
-const releaseDueToCNDetectedMobility: CauseRadioNetwork = CauseRadioNetwork.releaseDueToCNDetectedMobility; /* SHORT_NAMED_ENUMERATED_VALUE */
+const releaseDueToCNDetectedMobility: _enum_for_CauseRadioNetwork.releaseDueToCNDetectedMobility = CauseRadioNetwork.releaseDueToCNDetectedMobility; /* SHORT_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary CauseRadioNetwork_n26InterfaceNotAvailable
@@ -969,7 +969,7 @@ const releaseDueToCNDetectedMobility: CauseRadioNetwork = CauseRadioNetwork.rele
  * @type {number}
  */
 export
-const CauseRadioNetwork_n26InterfaceNotAvailable: CauseRadioNetwork = CauseRadioNetwork.n26InterfaceNotAvailable; /* LONG_NAMED_ENUMERATED_VALUE */
+const CauseRadioNetwork_n26InterfaceNotAvailable: _enum_for_CauseRadioNetwork.n26InterfaceNotAvailable = CauseRadioNetwork.n26InterfaceNotAvailable; /* LONG_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary n26InterfaceNotAvailable
@@ -977,7 +977,7 @@ const CauseRadioNetwork_n26InterfaceNotAvailable: CauseRadioNetwork = CauseRadio
  * @type {number}
  */
 export
-const n26InterfaceNotAvailable: CauseRadioNetwork = CauseRadioNetwork.n26InterfaceNotAvailable; /* SHORT_NAMED_ENUMERATED_VALUE */
+const n26InterfaceNotAvailable: _enum_for_CauseRadioNetwork.n26InterfaceNotAvailable = CauseRadioNetwork.n26InterfaceNotAvailable; /* SHORT_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary CauseRadioNetwork_releaseDueToPreemption
@@ -985,7 +985,7 @@ const n26InterfaceNotAvailable: CauseRadioNetwork = CauseRadioNetwork.n26Interfa
  * @type {number}
  */
 export
-const CauseRadioNetwork_releaseDueToPreemption: CauseRadioNetwork = CauseRadioNetwork.releaseDueToPreemption; /* LONG_NAMED_ENUMERATED_VALUE */
+const CauseRadioNetwork_releaseDueToPreemption: _enum_for_CauseRadioNetwork.releaseDueToPreemption = CauseRadioNetwork.releaseDueToPreemption; /* LONG_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary releaseDueToPreemption
@@ -993,7 +993,7 @@ const CauseRadioNetwork_releaseDueToPreemption: CauseRadioNetwork = CauseRadioNe
  * @type {number}
  */
 export
-const releaseDueToPreemption: CauseRadioNetwork = CauseRadioNetwork.releaseDueToPreemption; /* SHORT_NAMED_ENUMERATED_VALUE */
+const releaseDueToPreemption: _enum_for_CauseRadioNetwork.releaseDueToPreemption = CauseRadioNetwork.releaseDueToPreemption; /* SHORT_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary CauseRadioNetwork_multipleLocationReportingReferenceIDInstances
@@ -1001,7 +1001,7 @@ const releaseDueToPreemption: CauseRadioNetwork = CauseRadioNetwork.releaseDueTo
  * @type {number}
  */
 export
-const CauseRadioNetwork_multipleLocationReportingReferenceIDInstances: CauseRadioNetwork = CauseRadioNetwork.multipleLocationReportingReferenceIDInstances; /* LONG_NAMED_ENUMERATED_VALUE */
+const CauseRadioNetwork_multipleLocationReportingReferenceIDInstances: _enum_for_CauseRadioNetwork.multipleLocationReportingReferenceIDInstances = CauseRadioNetwork.multipleLocationReportingReferenceIDInstances; /* LONG_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary multipleLocationReportingReferenceIDInstances
@@ -1009,7 +1009,7 @@ const CauseRadioNetwork_multipleLocationReportingReferenceIDInstances: CauseRadi
  * @type {number}
  */
 export
-const multipleLocationReportingReferenceIDInstances: CauseRadioNetwork = CauseRadioNetwork.multipleLocationReportingReferenceIDInstances; /* SHORT_NAMED_ENUMERATED_VALUE */
+const multipleLocationReportingReferenceIDInstances: _enum_for_CauseRadioNetwork.multipleLocationReportingReferenceIDInstances = CauseRadioNetwork.multipleLocationReportingReferenceIDInstances; /* SHORT_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary CauseRadioNetwork_rSNNotAvailableForTheUP
@@ -1017,7 +1017,7 @@ const multipleLocationReportingReferenceIDInstances: CauseRadioNetwork = CauseRa
  * @type {number}
  */
 export
-const CauseRadioNetwork_rSNNotAvailableForTheUP: CauseRadioNetwork = CauseRadioNetwork.rSNNotAvailableForTheUP; /* LONG_NAMED_ENUMERATED_VALUE */
+const CauseRadioNetwork_rSNNotAvailableForTheUP: _enum_for_CauseRadioNetwork.rSNNotAvailableForTheUP = CauseRadioNetwork.rSNNotAvailableForTheUP; /* LONG_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary rSNNotAvailableForTheUP
@@ -1025,7 +1025,7 @@ const CauseRadioNetwork_rSNNotAvailableForTheUP: CauseRadioNetwork = CauseRadioN
  * @type {number}
  */
 export
-const rSNNotAvailableForTheUP: CauseRadioNetwork = CauseRadioNetwork.rSNNotAvailableForTheUP; /* SHORT_NAMED_ENUMERATED_VALUE */
+const rSNNotAvailableForTheUP: _enum_for_CauseRadioNetwork.rSNNotAvailableForTheUP = CauseRadioNetwork.rSNNotAvailableForTheUP; /* SHORT_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary CauseRadioNetwork_nPMAccessDenied
@@ -1033,7 +1033,7 @@ const rSNNotAvailableForTheUP: CauseRadioNetwork = CauseRadioNetwork.rSNNotAvail
  * @type {number}
  */
 export
-const CauseRadioNetwork_nPMAccessDenied: CauseRadioNetwork = CauseRadioNetwork.nPMAccessDenied; /* LONG_NAMED_ENUMERATED_VALUE */
+const CauseRadioNetwork_nPMAccessDenied: _enum_for_CauseRadioNetwork.nPMAccessDenied = CauseRadioNetwork.nPMAccessDenied; /* LONG_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary nPMAccessDenied
@@ -1041,7 +1041,7 @@ const CauseRadioNetwork_nPMAccessDenied: CauseRadioNetwork = CauseRadioNetwork.n
  * @type {number}
  */
 export
-const nPMAccessDenied: CauseRadioNetwork = CauseRadioNetwork.nPMAccessDenied; /* SHORT_NAMED_ENUMERATED_VALUE */
+const nPMAccessDenied: _enum_for_CauseRadioNetwork.nPMAccessDenied = CauseRadioNetwork.nPMAccessDenied; /* SHORT_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary CauseRadioNetwork_cAGOnlyAccessDenied
@@ -1049,7 +1049,7 @@ const nPMAccessDenied: CauseRadioNetwork = CauseRadioNetwork.nPMAccessDenied; /*
  * @type {number}
  */
 export
-const CauseRadioNetwork_cAGOnlyAccessDenied: CauseRadioNetwork = CauseRadioNetwork.cAGOnlyAccessDenied; /* LONG_NAMED_ENUMERATED_VALUE */
+const CauseRadioNetwork_cAGOnlyAccessDenied: _enum_for_CauseRadioNetwork.cAGOnlyAccessDenied = CauseRadioNetwork.cAGOnlyAccessDenied; /* LONG_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary cAGOnlyAccessDenied
@@ -1057,7 +1057,7 @@ const CauseRadioNetwork_cAGOnlyAccessDenied: CauseRadioNetwork = CauseRadioNetwo
  * @type {number}
  */
 export
-const cAGOnlyAccessDenied: CauseRadioNetwork = CauseRadioNetwork.cAGOnlyAccessDenied; /* SHORT_NAMED_ENUMERATED_VALUE */
+const cAGOnlyAccessDenied: _enum_for_CauseRadioNetwork.cAGOnlyAccessDenied = CauseRadioNetwork.cAGOnlyAccessDenied; /* SHORT_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary CauseRadioNetwork_insufficientUECapabilities
@@ -1065,7 +1065,7 @@ const cAGOnlyAccessDenied: CauseRadioNetwork = CauseRadioNetwork.cAGOnlyAccessDe
  * @type {number}
  */
 export
-const CauseRadioNetwork_insufficientUECapabilities: CauseRadioNetwork = CauseRadioNetwork.insufficientUECapabilities; /* LONG_NAMED_ENUMERATED_VALUE */
+const CauseRadioNetwork_insufficientUECapabilities: _enum_for_CauseRadioNetwork.insufficientUECapabilities = CauseRadioNetwork.insufficientUECapabilities; /* LONG_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary insufficientUECapabilities
@@ -1073,7 +1073,7 @@ const CauseRadioNetwork_insufficientUECapabilities: CauseRadioNetwork = CauseRad
  * @type {number}
  */
 export
-const insufficientUECapabilities: CauseRadioNetwork = CauseRadioNetwork.insufficientUECapabilities; /* SHORT_NAMED_ENUMERATED_VALUE */
+const insufficientUECapabilities: _enum_for_CauseRadioNetwork.insufficientUECapabilities = CauseRadioNetwork.insufficientUECapabilities; /* SHORT_NAMED_ENUMERATED_VALUE */
 export const _decode_CauseRadioNetwork: $.ASN1Decoder<CauseRadioNetwork> = $._decodeEnumerated;
 export const _encode_CauseRadioNetwork: $.ASN1Encoder<CauseRadioNetwork> = $._encodeEnumerated;
 

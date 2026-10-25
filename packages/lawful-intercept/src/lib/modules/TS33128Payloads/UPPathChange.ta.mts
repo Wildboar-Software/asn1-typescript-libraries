@@ -1,19 +1,19 @@
 /* eslint-disable */
 import {
-    OPTIONAL,
-    ASN1Element as _Element,
+    type OPTIONAL,
+    type ASN1Element as _Element,
     ASN1TagClass as _TagClass
 } from "@wildboar/asn1";
 import * as $ from "@wildboar/asn1/functional";
-import { DNAI, _decode_DNAI, _encode_DNAI } from "../TS33128Payloads/DNAI.ta.mjs";
+import { type DNAI, _decode_DNAI, _encode_DNAI } from "../TS33128Payloads/DNAI.ta.mjs";
 // export { DNAI, _decode_DNAI, _encode_DNAI } from "../TS33128Payloads/DNAI.ta.mjs";
 import { DNAIChangeType, _decode_DNAIChangeType, _encode_DNAIChangeType, _enum_for_DNAIChangeType } from "../TS33128Payloads/DNAIChangeType.ta.mjs";
 // export { DNAIChangeType, _enum_for_DNAIChangeType, DNAIChangeType_early /* IMPORTED_LONG_ENUMERATION_ITEM */, early /* IMPORTED_SHORT_ENUMERATION_ITEM */, DNAIChangeType_earlyAndLate /* IMPORTED_LONG_ENUMERATION_ITEM */, earlyAndLate /* IMPORTED_SHORT_ENUMERATION_ITEM */, DNAIChangeType_late /* IMPORTED_LONG_ENUMERATION_ITEM */, late /* IMPORTED_SHORT_ENUMERATION_ITEM */, _decode_DNAIChangeType, _encode_DNAIChangeType } from "../TS33128Payloads/DNAIChangeType.ta.mjs";
-import { IPAddress, _decode_IPAddress, _encode_IPAddress } from "../TS33128Payloads/IPAddress.ta.mjs";
+import { type IPAddress, _decode_IPAddress, _encode_IPAddress } from "../TS33128Payloads/IPAddress.ta.mjs";
 // export { IPAddress, _decode_IPAddress, _encode_IPAddress } from "../TS33128Payloads/IPAddress.ta.mjs";
 import { RouteToLocation, _decode_RouteToLocation, _encode_RouteToLocation } from "../TS33128Payloads/RouteToLocation.ta.mjs";
 // export { RouteToLocation, _decode_RouteToLocation, _encode_RouteToLocation } from "../TS33128Payloads/RouteToLocation.ta.mjs";
-import { MACAddress, _decode_MACAddress, _encode_MACAddress } from "../TS33128Payloads/MACAddress.ta.mjs";
+import { type MACAddress, _decode_MACAddress, _encode_MACAddress } from "../TS33128Payloads/MACAddress.ta.mjs";
 // export { MACAddress, _decode_MACAddress, _encode_MACAddress } from "../TS33128Payloads/MACAddress.ta.mjs";
 
 
@@ -146,7 +146,7 @@ class UPPathChange {
          * @static
          */
 
-    public static _enum_for_dNAIChangeType = _enum_for_DNAIChangeType;
+    public static _enum_for_dNAIChangeType: typeof _enum_for_DNAIChangeType = _enum_for_DNAIChangeType;
 }
 
 /**

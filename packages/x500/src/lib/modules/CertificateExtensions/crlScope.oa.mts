@@ -1,7 +1,7 @@
 /* eslint-disable */
 import { type EXTENSION } from "../AuthenticationFramework/EXTENSION.oca.mjs";
 import {
-    CRLScopeSyntax,
+    type CRLScopeSyntax,
     _decode_CRLScopeSyntax,
     _encode_CRLScopeSyntax,
 } from "../CertificateExtensions/CRLScopeSyntax.ta.mjs";

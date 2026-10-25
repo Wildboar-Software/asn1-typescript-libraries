@@ -1,24 +1,24 @@
 /* eslint-disable */
 import {
-    INTEGER,
-    OBJECT_IDENTIFIER,
-    OPTIONAL,
-    UTF8String,
-    ASN1Element as _Element,
+    type INTEGER,
+    type OBJECT_IDENTIFIER,
+    type OPTIONAL,
+    type UTF8String,
+    type ASN1Element as _Element,
     ASN1TagClass as _TagClass
 } from "@wildboar/asn1";
 import * as $ from "@wildboar/asn1/functional";
-import { LawfulInterceptionIdentifier, _decode_LawfulInterceptionIdentifier, _encode_LawfulInterceptionIdentifier } from "../HI2Operations/LawfulInterceptionIdentifier.ta.mjs";
+import { type LawfulInterceptionIdentifier, _decode_LawfulInterceptionIdentifier, _encode_LawfulInterceptionIdentifier } from "../HI2Operations/LawfulInterceptionIdentifier.ta.mjs";
 // export { LawfulInterceptionIdentifier, _decode_LawfulInterceptionIdentifier, _encode_LawfulInterceptionIdentifier } from "../HI2Operations/LawfulInterceptionIdentifier.ta.mjs";
-import { MMSCorrelationNumber, _decode_MMSCorrelationNumber, _encode_MMSCorrelationNumber } from "../MmsHI2Operations/MMSCorrelationNumber.ta.mjs";
+import { type MMSCorrelationNumber, _decode_MMSCorrelationNumber, _encode_MMSCorrelationNumber } from "../MmsHI2Operations/MMSCorrelationNumber.ta.mjs";
 // export { MMSCorrelationNumber, _decode_MMSCorrelationNumber, _encode_MMSCorrelationNumber } from "../MmsHI2Operations/MMSCorrelationNumber.ta.mjs";
-import { TimeStamp, _decode_TimeStamp, _encode_TimeStamp } from "../HI2Operations/TimeStamp.ta.mjs";
+import { type TimeStamp, _decode_TimeStamp, _encode_TimeStamp } from "../HI2Operations/TimeStamp.ta.mjs";
 // export { TimeStamp, _decode_TimeStamp, _encode_TimeStamp } from "../HI2Operations/TimeStamp.ta.mjs";
 import { TPDU_direction, _decode_TPDU_direction, _encode_TPDU_direction, _enum_for_TPDU_direction } from "../Mms-HI3-PS/TPDU-direction.ta.mjs";
 // export { TPDU_direction, _enum_for_TPDU_direction, TPDU_direction_from_target /* IMPORTED_LONG_ENUMERATION_ITEM */, from_target /* IMPORTED_SHORT_ENUMERATION_ITEM */, TPDU_direction_to_target /* IMPORTED_LONG_ENUMERATION_ITEM */, to_target /* IMPORTED_SHORT_ENUMERATION_ITEM */, TPDU_direction_unknown /* IMPORTED_LONG_ENUMERATION_ITEM */, unknown /* IMPORTED_SHORT_ENUMERATION_ITEM */, _decode_TPDU_direction, _encode_TPDU_direction } from "../Mms-HI3-PS/TPDU-direction.ta.mjs";
 import { National_HI3_ASN1parameters, _decode_National_HI3_ASN1parameters, _encode_National_HI3_ASN1parameters } from "../Mms-HI3-PS/National-HI3-ASN1parameters.ta.mjs";
 // export { National_HI3_ASN1parameters, _decode_National_HI3_ASN1parameters, _encode_National_HI3_ASN1parameters } from "../Mms-HI3-PS/National-HI3-ASN1parameters.ta.mjs";
-import { ICE_type, _decode_ICE_type, _encode_ICE_type, _enum_for_ICE_type } from "../Mms-HI3-PS/ICE-type.ta.mjs";
+import { type ICE_type, _decode_ICE_type, _encode_ICE_type, _enum_for_ICE_type } from "../Mms-HI3-PS/ICE-type.ta.mjs";
 // export { ICE_type, _enum_for_ICE_type, ICE_type_mMSC /* IMPORTED_LONG_ENUMERATION_ITEM */, mMSC /* IMPORTED_SHORT_ENUMERATION_ITEM */, ICE_type_mMSProxyRelay /* IMPORTED_LONG_ENUMERATION_ITEM */, mMSProxyRelay /* IMPORTED_SHORT_ENUMERATION_ITEM */, _decode_ICE_type, _encode_ICE_type } from "../Mms-HI3-PS/ICE-type.ta.mjs";
 
 
@@ -208,13 +208,13 @@ class MMSLIC_header {
          * @static
          */
 
-    public static _enum_for_t_PDU_direction = _enum_for_TPDU_direction;        /**
+    public static _enum_for_t_PDU_direction: typeof _enum_for_TPDU_direction = _enum_for_TPDU_direction;        /**
          * @summary The enum used as the type of the component `ice_type`
          * @public
          * @static
          */
 
-    public static _enum_for_ice_type = _enum_for_ICE_type;
+    public static _enum_for_ice_type: typeof _enum_for_ICE_type = _enum_for_ICE_type;
 }
 
 /**

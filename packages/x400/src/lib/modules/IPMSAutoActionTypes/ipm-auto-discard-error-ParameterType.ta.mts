@@ -1,6 +1,6 @@
 /* eslint-disable */
 import {
-    ASN1Element as _Element,
+    type ASN1Element as _Element,
     ASN1TagClass as _TagClass,
     ASN1Construction as _Construction,
     ASN1UniversalType as _UniversalType,
@@ -11,7 +11,7 @@ import {
 } from '@wildboar/asn1';
 import * as $ from '@wildboar/asn1/functional';
 import {
-    AutoDiscardProblem,
+    type AutoDiscardProblem,
     _decode_AutoDiscardProblem,
     _encode_AutoDiscardProblem,
 } from '../IPMSAutoActionTypes/AutoDiscardProblem.ta.mjs';
@@ -29,14 +29,18 @@ import {
  *
  */
 export class ipm_auto_discard_error_ParameterType {
+    /**
+     * @summary `problem`.
+     * @public
+     * @readonly
+     */
+    public readonly problem: AutoDiscardProblem;
+
     constructor(
-        /**
-         * @summary `problem`.
-         * @public
-         * @readonly
-         */
-        readonly problem: AutoDiscardProblem
-    ) {}
+        problem: AutoDiscardProblem
+    ) {
+        this.problem = problem;
+    }
 
     /**
      * @summary Restructures an object into a ipm_auto_discard_error_ParameterType

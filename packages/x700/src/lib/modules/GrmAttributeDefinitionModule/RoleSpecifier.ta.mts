@@ -1,7 +1,7 @@
 /* eslint-disable */
 import {
-    OPTIONAL,
-    ASN1Element as _Element,
+    type OPTIONAL,
+    type ASN1Element as _Element,
     ASN1TagClass as _TagClass,
     ASN1Construction as _Construction,
     ASN1UniversalType as _UniversalType,
@@ -12,7 +12,7 @@ import {
 } from '@wildboar/asn1';
 import * as $ from '@wildboar/asn1/functional';
 import {
-    Identifier,
+    type Identifier,
     _decode_Identifier,
     _encode_Identifier,
 } from '../DefinitionASN1Module/Identifier.ta.mjs';
@@ -27,12 +27,12 @@ import {
     _encode_DefinedType,
 } from '../DefinitionASN1Module/DefinedType.ta.mjs';
 import {
-    OptionalIdentifier,
+    type OptionalIdentifier,
     _decode_OptionalIdentifier,
     _encode_OptionalIdentifier,
 } from '../GrmAttributeDefinitionModule/OptionalIdentifier.ta.mjs';
 import {
-    OptionallyRegisteredAs,
+    type OptionallyRegisteredAs,
     _decode_OptionallyRegisteredAs,
     _encode_OptionallyRegisteredAs,
 } from '../DefinitionASN1Module/OptionallyRegisteredAs.ta.mjs';
@@ -65,98 +65,116 @@ import {
  *
  */
 export class RoleSpecifier {
+    /**
+     * @summary `role`.
+     * @description
+     *
+     * Reference name of the role. ITU-T Rec. X.725 (11/95)
+     * A.1.3.5.
+     * @public
+     * @readonly
+     */
+    public readonly role: Identifier;
+    /**
+     * @summary `compatibleWith`.
+     * @description
+     *
+     * Compatible managed object class whose characteristics a
+     * participant must fulfil. If absent, `top` is assumed.
+     * ITU-T Rec. X.725 (11/95) A.1.3.5.1.
+     * @public
+     * @readonly
+     */
+    public readonly compatibleWith: OPTIONAL<TemplateLabel>;
+    /**
+     * @summary `permittedRoleCardinality`.
+     * @description
+     *
+     * ASN.1 subtype of non-negative integers: how many objects
+     * this relationship may support in the role. If the set
+     * contains 0 the role is optional. Default if neither present
+     * nor inherited: `INTEGER (0..MAX)`. ITU-T Rec. X.725 (11/95)
+     * A.1.3.5.2.
+     * @public
+     * @readonly
+     */
+    public readonly permittedRoleCardinality: OPTIONAL<DefinedType>;
+    /**
+     * @summary `requiredRoleCardinality`.
+     * @description
+     *
+     * How many objects this relationship is required to support
+     * in the role. Shall be a subset of permitted cardinality.
+     * ITU-T Rec. X.725 (11/95) A.1.3.5.3.
+     * @public
+     * @readonly
+     */
+    public readonly requiredRoleCardinality: OPTIONAL<DefinedType>;
+    /**
+     * @summary `bindingSupport`.
+     * @description
+     *
+     * Present if objects may join the role during the
+     * relationship's existence (BIND). Absence means they may
+     * not. ITU-T Rec. X.725 (11/95) A.1.3.5.4.
+     * @public
+     * @readonly
+     */
+    public readonly bindingSupport: OPTIONAL<OptionalIdentifier>;
+    /**
+     * @summary `unbindingSupport`.
+     * @description
+     *
+     * Present if participants may leave the role during the
+     * relationship's existence (UNBIND). Absence means they may
+     * not. ITU-T Rec. X.725 (11/95) A.1.3.5.5.
+     * @public
+     * @readonly
+     */
+    public readonly unbindingSupport: OPTIONAL<OptionalIdentifier>;
+    /**
+     * @summary `permittedRelationshipCardinality`.
+     * @description
+     *
+     * How many instances of this relationship class a managed
+     * object may participate in, in this role. Default if neither
+     * present nor inherited: `INTEGER (0..MAX)`. ITU-T Rec. X.725
+     * (11/95) A.1.3.5.6.
+     * @public
+     * @readonly
+     */
+    public readonly permittedRelationshipCardinality: OPTIONAL<DefinedType>;
+    /**
+     * @summary `optionalRegisteredAs`.
+     * @description
+     *
+     * Globally unique OID registering the role, or null if
+     * unregistered. Shall not be present if the role was
+     * inherited. ITU-T Rec. X.725 (11/95) A.1.3.5.7.
+     * @public
+     * @readonly
+     */
+    public readonly optionalRegisteredAs: OptionallyRegisteredAs;
+
     constructor(
-        /**
-         * @summary `role`.
-         * @description
-         *
-         * Reference name of the role. ITU-T Rec. X.725 (11/95)
-         * A.1.3.5.
-         * @public
-         * @readonly
-         */
-        readonly role: Identifier,
-        /**
-         * @summary `compatibleWith`.
-         * @description
-         *
-         * Compatible managed object class whose characteristics a
-         * participant must fulfil. If absent, `top` is assumed.
-         * ITU-T Rec. X.725 (11/95) A.1.3.5.1.
-         * @public
-         * @readonly
-         */
-        readonly compatibleWith: OPTIONAL<TemplateLabel>,
-        /**
-         * @summary `permittedRoleCardinality`.
-         * @description
-         *
-         * ASN.1 subtype of non-negative integers: how many objects
-         * this relationship may support in the role. If the set
-         * contains 0 the role is optional. Default if neither present
-         * nor inherited: `INTEGER (0..MAX)`. ITU-T Rec. X.725 (11/95)
-         * A.1.3.5.2.
-         * @public
-         * @readonly
-         */
-        readonly permittedRoleCardinality: OPTIONAL<DefinedType>,
-        /**
-         * @summary `requiredRoleCardinality`.
-         * @description
-         *
-         * How many objects this relationship is required to support
-         * in the role. Shall be a subset of permitted cardinality.
-         * ITU-T Rec. X.725 (11/95) A.1.3.5.3.
-         * @public
-         * @readonly
-         */
-        readonly requiredRoleCardinality: OPTIONAL<DefinedType>,
-        /**
-         * @summary `bindingSupport`.
-         * @description
-         *
-         * Present if objects may join the role during the
-         * relationship's existence (BIND). Absence means they may
-         * not. ITU-T Rec. X.725 (11/95) A.1.3.5.4.
-         * @public
-         * @readonly
-         */
-        readonly bindingSupport: OPTIONAL<OptionalIdentifier>,
-        /**
-         * @summary `unbindingSupport`.
-         * @description
-         *
-         * Present if participants may leave the role during the
-         * relationship's existence (UNBIND). Absence means they may
-         * not. ITU-T Rec. X.725 (11/95) A.1.3.5.5.
-         * @public
-         * @readonly
-         */
-        readonly unbindingSupport: OPTIONAL<OptionalIdentifier>,
-        /**
-         * @summary `permittedRelationshipCardinality`.
-         * @description
-         *
-         * How many instances of this relationship class a managed
-         * object may participate in, in this role. Default if neither
-         * present nor inherited: `INTEGER (0..MAX)`. ITU-T Rec. X.725
-         * (11/95) A.1.3.5.6.
-         * @public
-         * @readonly
-         */
-        readonly permittedRelationshipCardinality: OPTIONAL<DefinedType>,
-        /**
-         * @summary `optionalRegisteredAs`.
-         * @description
-         *
-         * Globally unique OID registering the role, or null if
-         * unregistered. Shall not be present if the role was
-         * inherited. ITU-T Rec. X.725 (11/95) A.1.3.5.7.
-         * @public
-         * @readonly
-         */
-        readonly optionalRegisteredAs: OptionallyRegisteredAs
-    ) {}
+        role: Identifier,
+        compatibleWith: OPTIONAL<TemplateLabel>,
+        permittedRoleCardinality: OPTIONAL<DefinedType>,
+        requiredRoleCardinality: OPTIONAL<DefinedType>,
+        bindingSupport: OPTIONAL<OptionalIdentifier>,
+        unbindingSupport: OPTIONAL<OptionalIdentifier>,
+        permittedRelationshipCardinality: OPTIONAL<DefinedType>,
+        optionalRegisteredAs: OptionallyRegisteredAs
+    ) {
+        this.role = role;
+        this.compatibleWith = compatibleWith;
+        this.permittedRoleCardinality = permittedRoleCardinality;
+        this.requiredRoleCardinality = requiredRoleCardinality;
+        this.bindingSupport = bindingSupport;
+        this.unbindingSupport = unbindingSupport;
+        this.permittedRelationshipCardinality = permittedRelationshipCardinality;
+        this.optionalRegisteredAs = optionalRegisteredAs;
+    }
 
     /**
      * @summary Restructures an object into a RoleSpecifier

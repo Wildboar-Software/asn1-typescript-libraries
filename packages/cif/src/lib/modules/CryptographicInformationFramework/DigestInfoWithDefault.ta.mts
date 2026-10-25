@@ -1,8 +1,8 @@
 /* eslint-disable */
 import {
-    OPTIONAL,
-    OCTET_STRING,
-    ASN1Element as _Element,
+    type OPTIONAL,
+    type OCTET_STRING,
+    type ASN1Element as _Element,
     ASN1TagClass as _TagClass,
     ASN1Construction as _Construction,
     ASN1UniversalType as _UniversalType,
@@ -37,25 +37,30 @@ import { alg_id_sha1 } from "../CryptographicInformationFramework/alg-id-sha1.va
  */
 export
 class DigestInfoWithDefault {
+    /**
+     * @summary `digestAlg`.
+     * @description
+     * Defaults to SHA-1 (`alg-id-sha1`). The set is open and may be
+     * extended (e.g. SHA-2). ISO/IEC 7816-15:2016 Annex A.2.5.
+     * @public
+     * @readonly
+     */
+    public readonly digestAlg: OPTIONAL<AlgorithmIdentifier>;
+    /**
+     * @summary `digest`.
+     * @description
+     * Digest octets; SIZE(8..128). ISO/IEC 7816-15:2016 Annex A.2.5.
+     * @public
+     * @readonly
+     */
+    public readonly digest: OCTET_STRING;
+
     constructor (
-        /**
-         * @summary `digestAlg`.
-         * @description
-         * Defaults to SHA-1 (`alg-id-sha1`). The set is open and may be
-         * extended (e.g. SHA-2). ISO/IEC 7816-15:2016 Annex A.2.5.
-         * @public
-         * @readonly
-         */
-        readonly digestAlg: OPTIONAL<AlgorithmIdentifier>,
-        /**
-         * @summary `digest`.
-         * @description
-         * Digest octets; SIZE(8..128). ISO/IEC 7816-15:2016 Annex A.2.5.
-         * @public
-         * @readonly
-         */
-        readonly digest: OCTET_STRING
+        digestAlg: OPTIONAL<AlgorithmIdentifier>,
+        digest: OCTET_STRING
     ) {
+        this.digestAlg = digestAlg;
+        this.digest = digest;
         if (digest.length < 8 || digest.length > 128) {
             throw new ASN1SizeError("DigestInfoWithDefault.digest violates SIZE constraint");
         }

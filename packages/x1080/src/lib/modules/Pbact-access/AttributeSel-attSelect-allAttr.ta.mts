@@ -1,7 +1,7 @@
 /* eslint-disable */
 import {
-    OPTIONAL,
-    ASN1Element as _Element,
+    type OPTIONAL,
+    type ASN1Element as _Element,
     ASN1TagClass as _TagClass,
     ASN1Construction as _Construction,
     ASN1UniversalType as _UniversalType,
@@ -12,7 +12,7 @@ import {
 } from '@wildboar/asn1';
 import * as $ from '@wildboar/asn1/functional';
 import {
-    AttributeOperations,
+    type AttributeOperations,
     _decode_AttributeOperations,
     _encode_AttributeOperations,
 } from '../Pbact-access/AttributeOperations.ta.mjs';
@@ -33,26 +33,32 @@ import {
  *
  */
 export class AttributeSel_attSelect_allAttr {
+    /**
+     * @summary `attrOper1`.
+     * @description
+     *
+     * Allowed operations on all attributes.
+     * ITU-T Rec. X.1080.0 (2017) Cor.1
+     * [§7.3.3](https://www.itu.int/rec/T-REC-X.1080.0-201703-I!Cor1).
+     *
+     * @public
+     * @readonly
+     */
+    public readonly attrOper1?: OPTIONAL<AttributeOperations>;
+    /**
+     * @summary Extensions that are not recognized.
+     * @public
+     * @readonly
+     */
+    public readonly _unrecognizedExtensionsList: _Element[];
+
     constructor(
-        /**
-         * @summary `attrOper1`.
-         * @description
-         *
-         * Allowed operations on all attributes.
-         * ITU-T Rec. X.1080.0 (2017) Cor.1
-         * [§7.3.3](https://www.itu.int/rec/T-REC-X.1080.0-201703-I!Cor1).
-         *
-         * @public
-         * @readonly
-         */
-        readonly attrOper1?: OPTIONAL<AttributeOperations>,
-        /**
-         * @summary Extensions that are not recognized.
-         * @public
-         * @readonly
-         */
-        readonly _unrecognizedExtensionsList: _Element[] = []
-    ) {}
+        attrOper1?: OPTIONAL<AttributeOperations>,
+        _unrecognizedExtensionsList: _Element[] = []
+    ) {
+        this.attrOper1 = attrOper1;
+        this._unrecognizedExtensionsList = _unrecognizedExtensionsList;
+    }
 
     /**
      * @summary Restructures an object into a AttributeSel_attSelect_allAttr

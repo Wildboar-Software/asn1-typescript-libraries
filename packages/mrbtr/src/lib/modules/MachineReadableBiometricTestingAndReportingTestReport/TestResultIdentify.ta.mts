@@ -1,7 +1,7 @@
 /* eslint-disable */
 import {
-    OPTIONAL,
-    ASN1Element as _Element,
+    type OPTIONAL,
+    type ASN1Element as _Element,
     ASN1TagClass as _TagClass,
     ASN1Construction as _Construction,
     ASN1UniversalType as _UniversalType,
@@ -36,30 +36,36 @@ import { ResultMatchOpenIdentify, _decode_ResultMatchOpenIdentify, _encode_Resul
  */
 export
 class TestResultIdentify {
+    /**
+     * @summary `resultMatchClosedIdentify`.
+     * @description
+     *
+     * Closed-set CMC, search-count histogram, and optional search
+     * duration (Clause 6.4.4.3.4).
+     *
+     * @public
+     * @readonly
+     */
+    public readonly resultMatchClosedIdentify: ResultMatchClosedIdentify;
+    /**
+     * @summary `resultMatchOpenIdentify`.
+     * @description
+     *
+     * Open-set CMC, enrolled/no-mate search histograms, optional
+     * FNIR/FPIR DET, and optional duration (Clause 6.4.4.3.4).
+     *
+     * @public
+     * @readonly
+     */
+    public readonly resultMatchOpenIdentify?: OPTIONAL<ResultMatchOpenIdentify>;
+
     constructor (
-        /**
-         * @summary `resultMatchClosedIdentify`.
-         * @description
-         *
-         * Closed-set CMC, search-count histogram, and optional search
-         * duration (Clause 6.4.4.3.4).
-         *
-         * @public
-         * @readonly
-         */
-        readonly resultMatchClosedIdentify: ResultMatchClosedIdentify,
-        /**
-         * @summary `resultMatchOpenIdentify`.
-         * @description
-         *
-         * Open-set CMC, enrolled/no-mate search histograms, optional
-         * FNIR/FPIR DET, and optional duration (Clause 6.4.4.3.4).
-         *
-         * @public
-         * @readonly
-         */
-        readonly resultMatchOpenIdentify?: OPTIONAL<ResultMatchOpenIdentify>
-    ) {}
+        resultMatchClosedIdentify: ResultMatchClosedIdentify,
+        resultMatchOpenIdentify?: OPTIONAL<ResultMatchOpenIdentify>
+    ) {
+        this.resultMatchClosedIdentify = resultMatchClosedIdentify;
+        this.resultMatchOpenIdentify = resultMatchOpenIdentify;
+    }
 
     /**
      * @summary Restructures an object into a TestResultIdentify

@@ -1,6 +1,6 @@
 /* eslint-disable */
 import {
-    ASN1Element as _Element,
+    type ASN1Element as _Element,
     ASN1TagClass as _TagClass,
     ASN1Construction as _Construction,
     ASN1UniversalType as _UniversalType,
@@ -11,7 +11,7 @@ import {
 } from '@wildboar/asn1';
 import * as $ from '@wildboar/asn1/functional';
 import {
-    ResourcePointer,
+    type ResourcePointer,
     _decode_ResourcePointer,
     _encode_ResourcePointer,
 } from '../SDHProtASN1/ResourcePointer.ta.mjs';
@@ -32,26 +32,13 @@ import {
  */
 export type SDHMSResourcePointer = ResourcePointer; // DefinedType
 
-
-let _cached_decoder_for_SDHMSResourcePointer: $.ASN1Decoder<SDHMSResourcePointer> | null = null;
-
-
 /**
  * @summary Decodes an ASN.1 element into a(n) SDHMSResourcePointer
  * @function
  * @param {_Element} el The element being decoded.
  * @returns {SDHMSResourcePointer} The decoded data structure.
  */
-export function _decode_SDHMSResourcePointer(el: _Element): SDHMSResourcePointer {
-    if (!_cached_decoder_for_SDHMSResourcePointer) {
-        _cached_decoder_for_SDHMSResourcePointer = _decode_ResourcePointer;
-    }
-    return _cached_decoder_for_SDHMSResourcePointer(el);
-}
-
-
-let _cached_encoder_for_SDHMSResourcePointer: $.ASN1Encoder<SDHMSResourcePointer> | null = null;
-
+export const _decode_SDHMSResourcePointer: $.ASN1Decoder<SDHMSResourcePointer> = _decode_ResourcePointer;
 
 /**
  * @summary Encodes a(n) SDHMSResourcePointer into an ASN.1 Element.
@@ -60,15 +47,7 @@ let _cached_encoder_for_SDHMSResourcePointer: $.ASN1Encoder<SDHMSResourcePointer
  * @param elGetter A function that can be used to get new ASN.1 elements.
  * @returns {_Element} The SDHMSResourcePointer, encoded as an ASN.1 Element.
  */
-export function _encode_SDHMSResourcePointer(
-    value: SDHMSResourcePointer,
-    elGetter: $.ASN1Encoder<SDHMSResourcePointer>
-): _Element {
-    if (!_cached_encoder_for_SDHMSResourcePointer) {
-        _cached_encoder_for_SDHMSResourcePointer = _encode_ResourcePointer;
-    }
-    return _cached_encoder_for_SDHMSResourcePointer(value, elGetter);
-}
+export const _encode_SDHMSResourcePointer: $.ASN1Encoder<SDHMSResourcePointer> = _encode_ResourcePointer;
 
 
 /* eslint-enable */

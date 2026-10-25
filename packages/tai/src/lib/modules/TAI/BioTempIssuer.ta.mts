@@ -1,7 +1,7 @@
 /* eslint-disable */
 import {
-    OPTIONAL,
-    ASN1Element as _Element,
+    type OPTIONAL,
+    type ASN1Element as _Element,
     ASN1TagClass as _TagClass,
     ASN1Construction as _Construction,
     ASN1UniversalType as _UniversalType,
@@ -36,40 +36,48 @@ import { ObjectDigestInfo, _decode_ObjectDigestInfo, _encode_ObjectDigestInfo } 
  */
 export
 class BioTempIssuer {
+    /**
+     * @summary `issuerName`.
+     * @description
+     *
+     * Names of the BIT issuer. X.1089 §8.6.
+     *
+     * @public
+     * @readonly
+     */
+    public readonly issuerName?: OPTIONAL<GeneralNames>;
+    /**
+     * @summary `baseCertificateID`.
+     * @description
+     *
+     * Issuer and serial of a certificate identifying the BIT
+     * issuer. X.1089 §8.6.
+     *
+     * @public
+     * @readonly
+     */
+    public readonly baseCertificateID?: OPTIONAL<IssuerSerial>;
+    /**
+     * @summary `objectDigestInfo`.
+     * @description
+     *
+     * Digest identifying the BIT issuer. See
+     * ISO/IEC TR 24741. X.1089 §8.6.
+     *
+     * @public
+     * @readonly
+     */
+    public readonly objectDigestInfo?: OPTIONAL<ObjectDigestInfo>;
+
     constructor (
-        /**
-         * @summary `issuerName`.
-         * @description
-         *
-         * Names of the BIT issuer. X.1089 §8.6.
-         *
-         * @public
-         * @readonly
-         */
-        readonly issuerName?: OPTIONAL<GeneralNames>,
-        /**
-         * @summary `baseCertificateID`.
-         * @description
-         *
-         * Issuer and serial of a certificate identifying the BIT
-         * issuer. X.1089 §8.6.
-         *
-         * @public
-         * @readonly
-         */
-        readonly baseCertificateID?: OPTIONAL<IssuerSerial>,
-        /**
-         * @summary `objectDigestInfo`.
-         * @description
-         *
-         * Digest identifying the BIT issuer. See
-         * ISO/IEC TR 24741. X.1089 §8.6.
-         *
-         * @public
-         * @readonly
-         */
-        readonly objectDigestInfo?: OPTIONAL<ObjectDigestInfo>
-    ) {}
+        issuerName?: OPTIONAL<GeneralNames>,
+        baseCertificateID?: OPTIONAL<IssuerSerial>,
+        objectDigestInfo?: OPTIONAL<ObjectDigestInfo>
+    ) {
+        this.issuerName = issuerName;
+        this.baseCertificateID = baseCertificateID;
+        this.objectDigestInfo = objectDigestInfo;
+    }
 
     /**
      * @summary Restructures an object into a BioTempIssuer

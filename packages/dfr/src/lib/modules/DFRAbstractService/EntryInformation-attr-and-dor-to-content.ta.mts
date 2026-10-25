@@ -1,6 +1,6 @@
 /* eslint-disable */
 import {
-    ASN1Element as _Element,
+    type ASN1Element as _Element,
     ASN1TagClass as _TagClass,
     ASN1Construction as _Construction,
     ASN1UniversalType as _UniversalType,
@@ -10,7 +10,7 @@ import {
     ASN1ConstructionError as _ConstructionError,
 } from "@wildboar/asn1";
 import * as $ from "@wildboar/asn1/functional";
-import { DfrEntryAttributes, _decode_DfrEntryAttributes, _encode_DfrEntryAttributes } from "../DFRAbstractService/DfrEntryAttributes.ta.mjs";
+import { type DfrEntryAttributes, _decode_DfrEntryAttributes, _encode_DfrEntryAttributes } from "../DFRAbstractService/DfrEntryAttributes.ta.mjs";
 import { DOR, _decode_DOR, _encode_DOR } from "../DOR-definition/DOR.ta.mjs";
 
 
@@ -34,26 +34,32 @@ import { DOR, _decode_DOR, _encode_DOR } from "../DOR-definition/DOR.ta.mjs";
  */
 export
 class EntryInformation_attr_and_dor_to_content {
+    /**
+     * @summary `attributes`.
+     * @description
+     *
+     * Selected attributes.
+     * @public
+     * @readonly
+     */
+    public readonly attributes: DfrEntryAttributes;
+    /**
+     * @summary `dor_to_content`.
+     * @description
+     *
+     * DOR locating the content only.
+     * @public
+     * @readonly
+     */
+    public readonly dor_to_content: DOR;
+
     constructor (
-        /**
-         * @summary `attributes`.
-         * @description
-         *
-         * Selected attributes.
-         * @public
-         * @readonly
-         */
-        readonly attributes: DfrEntryAttributes,
-        /**
-         * @summary `dor_to_content`.
-         * @description
-         *
-         * DOR locating the content only.
-         * @public
-         * @readonly
-         */
-        readonly dor_to_content: DOR
-    ) {}
+        attributes: DfrEntryAttributes,
+        dor_to_content: DOR
+    ) {
+        this.attributes = attributes;
+        this.dor_to_content = dor_to_content;
+    }
 
     /**
      * @summary Restructures an object into a EntryInformation_attr_and_dor_to_content

@@ -1,7 +1,7 @@
 /* eslint-disable */
 import {
-    OPTIONAL,
-    ASN1Element as _Element,
+    type OPTIONAL,
+    type ASN1Element as _Element,
     ASN1TagClass as _TagClass,
     ASN1Construction as _Construction,
     ASN1UniversalType as _UniversalType,
@@ -11,7 +11,7 @@ import {
     ASN1ConstructionError as _ConstructionError,
 } from "@wildboar/asn1";
 import * as $ from "@wildboar/asn1/functional";
-import { Digits, _decode_Digits, _encode_Digits } from "../IN-CS2-datatypes/Digits.ta.mjs";
+import { type Digits, _decode_Digits, _encode_Digits } from "../IN-CS2-datatypes/Digits.ta.mjs";
 
 
 /**
@@ -31,20 +31,26 @@ import { Digits, _decode_Digits, _encode_Digits } from "../IN-CS2-datatypes/Digi
  */
 export
 class MidCallInfoType {
+    /**
+     * @summary `iNServiceControlCodeLow`.
+     * @public
+     * @readonly
+     */
+    public readonly iNServiceControlCodeLow: Digits;
+    /**
+     * @summary `iNServiceControlCodeHigh`.
+     * @public
+     * @readonly
+     */
+    public readonly iNServiceControlCodeHigh?: OPTIONAL<Digits>;
+
     constructor (
-        /**
-         * @summary `iNServiceControlCodeLow`.
-         * @public
-         * @readonly
-         */
-        readonly iNServiceControlCodeLow: Digits,
-        /**
-         * @summary `iNServiceControlCodeHigh`.
-         * @public
-         * @readonly
-         */
-        readonly iNServiceControlCodeHigh?: OPTIONAL<Digits>
-    ) {}
+        iNServiceControlCodeLow: Digits,
+        iNServiceControlCodeHigh?: OPTIONAL<Digits>
+    ) {
+        this.iNServiceControlCodeLow = iNServiceControlCodeLow;
+        this.iNServiceControlCodeHigh = iNServiceControlCodeHigh;
+    }
 
     /**
      * @summary Restructures an object into a MidCallInfoType

@@ -2,14 +2,14 @@
 
 import * as $ from "@wildboar/asn1/functional";
 import {
-    OPTIONAL,
-    BOOLEAN,
-    SEQUENCE,
-    SET,
-    ASN1Element as _Element,
+    type OPTIONAL,
+    type BOOLEAN,
+    type SEQUENCE,
+    type SET,
+    type ASN1Element as _Element,
     ASN1TagClass as _TagClass
 } from "@wildboar/asn1";
-import { ConnectionID, _decode_ConnectionID, _encode_ConnectionID } from "../CSTA-call-connection-identifiers/ConnectionID.ta.mjs";
+import { type ConnectionID, _decode_ConnectionID, _encode_ConnectionID } from "../CSTA-call-connection-identifiers/ConnectionID.ta.mjs";
 
 import { CSTACommonArguments, _decode_CSTACommonArguments, _encode_CSTACommonArguments } from "../CSTA-extension-types/CSTACommonArguments.ta.mjs";
 
@@ -30,7 +30,7 @@ import { CSTACommonArguments, _decode_CSTACommonArguments, _encode_CSTACommonArg
  * ```asn1
  * HoldCallArgument ::= SEQUENCE
  * {    callToBeHeld             ConnectionID,
- *     connectionReservation         BOOLEAN             OPTIONAL,
+ *     connectionReservation         BOOLEAN             type OPTIONAL,
  *     extensions             CSTACommonArguments         OPTIONAL }
  * ```
  * 
@@ -38,42 +38,50 @@ import { CSTACommonArguments, _decode_CSTACommonArguments, _encode_CSTACommonArg
  */
 export
 class HoldCallArgument {
+    /**
+     * @summary `callToBeHeld`.
+     * @description
+     *
+     * Mandatory. Connection to hold. Required initial state
+     * Connected; final Hold (§17.1.15.3.1).
+     *
+     * @public
+     * @readonly
+     */
+    public readonly callToBeHeld: ConnectionID;
+    /**
+     * @summary `connectionReservation`.
+     * @description
+     *
+     * Optional. When TRUE, reserve the held call's
+     * media-stream channel(s) for later Retrieve, Reconnect,
+     * or Alternate.
+     *
+     * @public
+     * @readonly
+     */
+    public readonly connectionReservation?: OPTIONAL<BOOLEAN>;
+    /**
+     * @summary `extensions`.
+     * @description
+     *
+     * Optional `CSTACommonArguments` carrying the security and
+     * privateData parameters from the ECMA-269 service table.
+     *
+     * @public
+     * @readonly
+     */
+    public readonly extensions?: OPTIONAL<CSTACommonArguments>;
+
     constructor (
-        /**
-         * @summary `callToBeHeld`.
-         * @description
-         *
-         * Mandatory. Connection to hold. Required initial state
-         * Connected; final Hold (§17.1.15.3.1).
-         *
-         * @public
-         * @readonly
-         */
-        readonly callToBeHeld: ConnectionID,
-        /**
-         * @summary `connectionReservation`.
-         * @description
-         *
-         * Optional. When TRUE, reserve the held call's
-         * media-stream channel(s) for later Retrieve, Reconnect,
-         * or Alternate.
-         *
-         * @public
-         * @readonly
-         */
-        readonly connectionReservation?: OPTIONAL<BOOLEAN>,
-        /**
-         * @summary `extensions`.
-         * @description
-         *
-         * Optional `CSTACommonArguments` carrying the security and
-         * privateData parameters from the ECMA-269 service table.
-         *
-         * @public
-         * @readonly
-         */
-        readonly extensions?: OPTIONAL<CSTACommonArguments>
-    ) {}
+        callToBeHeld: ConnectionID,
+        connectionReservation?: OPTIONAL<BOOLEAN>,
+        extensions?: OPTIONAL<CSTACommonArguments>
+    ) {
+        this.callToBeHeld = callToBeHeld;
+        this.connectionReservation = connectionReservation;
+        this.extensions = extensions;
+    }
 
     /**
      * @summary Restructures an object into a HoldCallArgument

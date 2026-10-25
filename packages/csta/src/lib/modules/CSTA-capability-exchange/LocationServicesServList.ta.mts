@@ -2,39 +2,39 @@
 
 import * as $ from "@wildboar/asn1/functional";
 import {
-    OPTIONAL,
-    SEQUENCE,
-    SET,
-    ASN1Element as _Element,
+    type OPTIONAL,
+    type SEQUENCE,
+    type SET,
+    type ASN1Element as _Element,
     ASN1TagClass as _TagClass
 } from "@wildboar/asn1";
-import { GetLocationInformation, _decode_GetLocationInformation, _encode_GetLocationInformation } from "../CSTA-capability-exchange/GetLocationInformation.ta.mjs";
+import { type GetLocationInformation, _decode_GetLocationInformation, _encode_GetLocationInformation } from "../CSTA-capability-exchange/GetLocationInformation.ta.mjs";
 
-import { SetLocationInformation, _decode_SetLocationInformation, _encode_SetLocationInformation } from "../CSTA-capability-exchange/SetLocationInformation.ta.mjs";
+import { type SetLocationInformation, _decode_SetLocationInformation, _encode_SetLocationInformation } from "../CSTA-capability-exchange/SetLocationInformation.ta.mjs";
 
-import { LocationTrackingSessionResumed, _decode_LocationTrackingSessionResumed, _encode_LocationTrackingSessionResumed } from "../CSTA-capability-exchange/LocationTrackingSessionResumed.ta.mjs";
+import { type LocationTrackingSessionResumed, _decode_LocationTrackingSessionResumed, _encode_LocationTrackingSessionResumed } from "../CSTA-capability-exchange/LocationTrackingSessionResumed.ta.mjs";
 
 import {
-    LocationTrackingSessionSuspended,
+    type LocationTrackingSessionSuspended,
     _decode_LocationTrackingSessionSuspended,
     _encode_LocationTrackingSessionSuspended
 } from "../CSTA-capability-exchange/LocationTrackingSessionSuspended.ta.mjs";
 
-import { ResumeLocationTrackingSession, _decode_ResumeLocationTrackingSession, _encode_ResumeLocationTrackingSession } from "../CSTA-capability-exchange/ResumeLocationTrackingSession.ta.mjs";
+import { type ResumeLocationTrackingSession, _decode_ResumeLocationTrackingSession, _encode_ResumeLocationTrackingSession } from "../CSTA-capability-exchange/ResumeLocationTrackingSession.ta.mjs";
 
-import { LocationInformationReport, _decode_LocationInformationReport, _encode_LocationInformationReport } from "../CSTA-capability-exchange/LocationInformationReport.ta.mjs";
+import { type LocationInformationReport, _decode_LocationInformationReport, _encode_LocationInformationReport } from "../CSTA-capability-exchange/LocationInformationReport.ta.mjs";
 
-import { StartLocationTrackingSession, _decode_StartLocationTrackingSession, _encode_StartLocationTrackingSession } from "../CSTA-capability-exchange/StartLocationTrackingSession.ta.mjs";
+import { type StartLocationTrackingSession, _decode_StartLocationTrackingSession, _encode_StartLocationTrackingSession } from "../CSTA-capability-exchange/StartLocationTrackingSession.ta.mjs";
 
-import { StopLocationTrackingSession, _decode_StopLocationTrackingSession, _encode_StopLocationTrackingSession } from "../CSTA-capability-exchange/StopLocationTrackingSession.ta.mjs";
+import { type StopLocationTrackingSession, _decode_StopLocationTrackingSession, _encode_StopLocationTrackingSession } from "../CSTA-capability-exchange/StopLocationTrackingSession.ta.mjs";
 
-import { SuspendLocationTrackingSession, _decode_SuspendLocationTrackingSession, _encode_SuspendLocationTrackingSession } from "../CSTA-capability-exchange/SuspendLocationTrackingSession.ta.mjs";
+import { type SuspendLocationTrackingSession, _decode_SuspendLocationTrackingSession, _encode_SuspendLocationTrackingSession } from "../CSTA-capability-exchange/SuspendLocationTrackingSession.ta.mjs";
 
-import { GetLocationTrackingCapabilities, _decode_GetLocationTrackingCapabilities, _encode_GetLocationTrackingCapabilities } from "../CSTA-capability-exchange/GetLocationTrackingCapabilities.ta.mjs";
+import { type GetLocationTrackingCapabilities, _decode_GetLocationTrackingCapabilities, _encode_GetLocationTrackingCapabilities } from "../CSTA-capability-exchange/GetLocationTrackingCapabilities.ta.mjs";
 
-import { GetLocationTrackingSessions, _decode_GetLocationTrackingSessions, _encode_GetLocationTrackingSessions } from "../CSTA-capability-exchange/GetLocationTrackingSessions.ta.mjs";
+import { type GetLocationTrackingSessions, _decode_GetLocationTrackingSessions, _encode_GetLocationTrackingSessions } from "../CSTA-capability-exchange/GetLocationTrackingSessions.ta.mjs";
 
-import { LocationSessionInfo, _decode_LocationSessionInfo, _encode_LocationSessionInfo } from "../CSTA-capability-exchange/LocationSessionInfo.ta.mjs";
+import { type LocationSessionInfo, _decode_LocationSessionInfo, _encode_LocationSessionInfo } from "../CSTA-capability-exchange/LocationSessionInfo.ta.mjs";
 
 
 
@@ -52,17 +52,17 @@ import { LocationSessionInfo, _decode_LocationSessionInfo, _encode_LocationSessi
  * 
  * ```asn1
  * LocationServicesServList ::= SEQUENCE
- * {    getLocationInformation            [ 0] IMPLICIT GetLocationInformation        OPTIONAL,
- *     setLocationInformation            [ 1] IMPLICIT SetLocationInformation        OPTIONAL,
- *     locationTrackingSessionResumed        [ 2] IMPLICIT LocationTrackingSessionResumed    OPTIONAL,
- *     locationTrackingSessionSuspended    [ 3] IMPLICIT LocationTrackingSessionSuspended    OPTIONAL,
- *     resumeLocationTrackingSession        [ 4] IMPLICIT ResumeLocationTrackingSession    OPTIONAL,
- *     locationInformationReport        [ 5] IMPLICIT LocationInformationReport        OPTIONAL,
- *     startLocationTrackingSession        [ 6] IMPLICIT StartLocationTrackingSession    OPTIONAL,
- *     stopLocationTrackingSession        [ 7] IMPLICIT StopLocationTrackingSession    OPTIONAL,
- *     suspendLocationTrackingSession        [ 8] IMPLICIT SuspendLocationTrackingSession    OPTIONAL,
- *     getLocationTrackingCapabilities        [ 9] IMPLICIT GetLocationTrackingCapabilities    OPTIONAL,
- *     getLocationTrackingSessions        [10] IMPLICIT GetLocationTrackingSessions    OPTIONAL,
+ * {    getLocationInformation            [ 0] IMPLICIT GetLocationInformation        type OPTIONAL,
+ *     setLocationInformation            [ 1] IMPLICIT SetLocationInformation        type OPTIONAL,
+ *     locationTrackingSessionResumed        [ 2] IMPLICIT LocationTrackingSessionResumed    type OPTIONAL,
+ *     locationTrackingSessionSuspended    [ 3] IMPLICIT LocationTrackingSessionSuspended    type OPTIONAL,
+ *     resumeLocationTrackingSession        [ 4] IMPLICIT ResumeLocationTrackingSession    type OPTIONAL,
+ *     locationInformationReport        [ 5] IMPLICIT LocationInformationReport        type OPTIONAL,
+ *     startLocationTrackingSession        [ 6] IMPLICIT StartLocationTrackingSession    type OPTIONAL,
+ *     stopLocationTrackingSession        [ 7] IMPLICIT StopLocationTrackingSession    type OPTIONAL,
+ *     suspendLocationTrackingSession        [ 8] IMPLICIT SuspendLocationTrackingSession    type OPTIONAL,
+ *     getLocationTrackingCapabilities        [ 9] IMPLICIT GetLocationTrackingCapabilities    type OPTIONAL,
+ *     getLocationTrackingSessions        [10] IMPLICIT GetLocationTrackingSessions    type OPTIONAL,
  *     locationSessionInfo            [11] IMPLICIT LocationSessionInfo        OPTIONAL }
  * ```
  * 
@@ -70,116 +70,142 @@ import { LocationSessionInfo, _decode_LocationSessionInfo, _encode_LocationSessi
  */
 export
 class LocationServicesServList {
+    /**
+     * @summary `getLocationInformation`.
+     * @public
+     * @readonly
+     * @description
+     * Capability bitmap for this service; omit if the SF does not support
+     * it (ECMA-269 Annex C).
+     */
+    public readonly getLocationInformation?: OPTIONAL<GetLocationInformation>;
+    /**
+     * @summary `setLocationInformation`.
+     * @public
+     * @readonly
+     * @description
+     * Capability bitmap for this service; omit if the SF does not support
+     * it (ECMA-269 Annex C).
+     */
+    public readonly setLocationInformation?: OPTIONAL<SetLocationInformation>;
+    /**
+     * @summary `locationTrackingSessionResumed`.
+     * @public
+     * @readonly
+     * @description
+     * Capability bitmap for this service; omit if the SF does not support
+     * it (ECMA-269 Annex C).
+     */
+    public readonly locationTrackingSessionResumed?: OPTIONAL<LocationTrackingSessionResumed>;
+    /**
+     * @summary `locationTrackingSessionSuspended`.
+     * @public
+     * @readonly
+     * @description
+     * Capability bitmap for this service; omit if the SF does not support
+     * it (ECMA-269 Annex C).
+     */
+    public readonly locationTrackingSessionSuspended?: OPTIONAL<LocationTrackingSessionSuspended>;
+    /**
+     * @summary `resumeLocationTrackingSession`.
+     * @public
+     * @readonly
+     * @description
+     * Capability bitmap for this service; omit if the SF does not support
+     * it (ECMA-269 Annex C).
+     */
+    public readonly resumeLocationTrackingSession?: OPTIONAL<ResumeLocationTrackingSession>;
+    /**
+     * @summary `locationInformationReport`.
+     * @public
+     * @readonly
+     * @description
+     * Capability bitmap for this service; omit if the SF does not support
+     * it (ECMA-269 Annex C).
+     */
+    public readonly locationInformationReport?: OPTIONAL<LocationInformationReport>;
+    /**
+     * @summary `startLocationTrackingSession`.
+     * @public
+     * @readonly
+     * @description
+     * Capability bitmap for this service; omit if the SF does not support
+     * it (ECMA-269 Annex C).
+     */
+    public readonly startLocationTrackingSession?: OPTIONAL<StartLocationTrackingSession>;
+    /**
+     * @summary `stopLocationTrackingSession`.
+     * @public
+     * @readonly
+     * @description
+     * Capability bitmap for this service; omit if the SF does not support
+     * it (ECMA-269 Annex C).
+     */
+    public readonly stopLocationTrackingSession?: OPTIONAL<StopLocationTrackingSession>;
+    /**
+     * @summary `suspendLocationTrackingSession`.
+     * @public
+     * @readonly
+     * @description
+     * Capability bitmap for this service; omit if the SF does not support
+     * it (ECMA-269 Annex C).
+     */
+    public readonly suspendLocationTrackingSession?: OPTIONAL<SuspendLocationTrackingSession>;
+    /**
+     * @summary `getLocationTrackingCapabilities`.
+     * @public
+     * @readonly
+     * @description
+     * Capability bitmap for this service; omit if the SF does not support
+     * it (ECMA-269 Annex C).
+     */
+    public readonly getLocationTrackingCapabilities?: OPTIONAL<GetLocationTrackingCapabilities>;
+    /**
+     * @summary `getLocationTrackingSessions`.
+     * @public
+     * @readonly
+     * @description
+     * Capability bitmap for this service; omit if the SF does not support
+     * it (ECMA-269 Annex C).
+     */
+    public readonly getLocationTrackingSessions?: OPTIONAL<GetLocationTrackingSessions>;
+    /**
+     * @summary `locationSessionInfo`.
+     * @public
+     * @readonly
+     * @description
+     * Capability bitmap for this service; omit if the SF does not support
+     * it (ECMA-269 Annex C).
+     */
+    public readonly locationSessionInfo?: OPTIONAL<LocationSessionInfo>;
+
     constructor (
-        /**
-         * @summary `getLocationInformation`.
-         * @public
-         * @readonly
-         * @description
-         * Capability bitmap for this service; omit if the SF does not support
-         * it (ECMA-269 Annex C).
-         */
-        readonly getLocationInformation?: OPTIONAL<GetLocationInformation>,
-        /**
-         * @summary `setLocationInformation`.
-         * @public
-         * @readonly
-         * @description
-         * Capability bitmap for this service; omit if the SF does not support
-         * it (ECMA-269 Annex C).
-         */
-        readonly setLocationInformation?: OPTIONAL<SetLocationInformation>,
-        /**
-         * @summary `locationTrackingSessionResumed`.
-         * @public
-         * @readonly
-         * @description
-         * Capability bitmap for this service; omit if the SF does not support
-         * it (ECMA-269 Annex C).
-         */
-        readonly locationTrackingSessionResumed?: OPTIONAL<LocationTrackingSessionResumed>,
-        /**
-         * @summary `locationTrackingSessionSuspended`.
-         * @public
-         * @readonly
-         * @description
-         * Capability bitmap for this service; omit if the SF does not support
-         * it (ECMA-269 Annex C).
-         */
-        readonly locationTrackingSessionSuspended?: OPTIONAL<LocationTrackingSessionSuspended>,
-        /**
-         * @summary `resumeLocationTrackingSession`.
-         * @public
-         * @readonly
-         * @description
-         * Capability bitmap for this service; omit if the SF does not support
-         * it (ECMA-269 Annex C).
-         */
-        readonly resumeLocationTrackingSession?: OPTIONAL<ResumeLocationTrackingSession>,
-        /**
-         * @summary `locationInformationReport`.
-         * @public
-         * @readonly
-         * @description
-         * Capability bitmap for this service; omit if the SF does not support
-         * it (ECMA-269 Annex C).
-         */
-        readonly locationInformationReport?: OPTIONAL<LocationInformationReport>,
-        /**
-         * @summary `startLocationTrackingSession`.
-         * @public
-         * @readonly
-         * @description
-         * Capability bitmap for this service; omit if the SF does not support
-         * it (ECMA-269 Annex C).
-         */
-        readonly startLocationTrackingSession?: OPTIONAL<StartLocationTrackingSession>,
-        /**
-         * @summary `stopLocationTrackingSession`.
-         * @public
-         * @readonly
-         * @description
-         * Capability bitmap for this service; omit if the SF does not support
-         * it (ECMA-269 Annex C).
-         */
-        readonly stopLocationTrackingSession?: OPTIONAL<StopLocationTrackingSession>,
-        /**
-         * @summary `suspendLocationTrackingSession`.
-         * @public
-         * @readonly
-         * @description
-         * Capability bitmap for this service; omit if the SF does not support
-         * it (ECMA-269 Annex C).
-         */
-        readonly suspendLocationTrackingSession?: OPTIONAL<SuspendLocationTrackingSession>,
-        /**
-         * @summary `getLocationTrackingCapabilities`.
-         * @public
-         * @readonly
-         * @description
-         * Capability bitmap for this service; omit if the SF does not support
-         * it (ECMA-269 Annex C).
-         */
-        readonly getLocationTrackingCapabilities?: OPTIONAL<GetLocationTrackingCapabilities>,
-        /**
-         * @summary `getLocationTrackingSessions`.
-         * @public
-         * @readonly
-         * @description
-         * Capability bitmap for this service; omit if the SF does not support
-         * it (ECMA-269 Annex C).
-         */
-        readonly getLocationTrackingSessions?: OPTIONAL<GetLocationTrackingSessions>,
-        /**
-         * @summary `locationSessionInfo`.
-         * @public
-         * @readonly
-         * @description
-         * Capability bitmap for this service; omit if the SF does not support
-         * it (ECMA-269 Annex C).
-         */
-        readonly locationSessionInfo?: OPTIONAL<LocationSessionInfo>
-    ) {}
+        getLocationInformation?: OPTIONAL<GetLocationInformation>,
+        setLocationInformation?: OPTIONAL<SetLocationInformation>,
+        locationTrackingSessionResumed?: OPTIONAL<LocationTrackingSessionResumed>,
+        locationTrackingSessionSuspended?: OPTIONAL<LocationTrackingSessionSuspended>,
+        resumeLocationTrackingSession?: OPTIONAL<ResumeLocationTrackingSession>,
+        locationInformationReport?: OPTIONAL<LocationInformationReport>,
+        startLocationTrackingSession?: OPTIONAL<StartLocationTrackingSession>,
+        stopLocationTrackingSession?: OPTIONAL<StopLocationTrackingSession>,
+        suspendLocationTrackingSession?: OPTIONAL<SuspendLocationTrackingSession>,
+        getLocationTrackingCapabilities?: OPTIONAL<GetLocationTrackingCapabilities>,
+        getLocationTrackingSessions?: OPTIONAL<GetLocationTrackingSessions>,
+        locationSessionInfo?: OPTIONAL<LocationSessionInfo>
+    ) {
+        this.getLocationInformation = getLocationInformation;
+        this.setLocationInformation = setLocationInformation;
+        this.locationTrackingSessionResumed = locationTrackingSessionResumed;
+        this.locationTrackingSessionSuspended = locationTrackingSessionSuspended;
+        this.resumeLocationTrackingSession = resumeLocationTrackingSession;
+        this.locationInformationReport = locationInformationReport;
+        this.startLocationTrackingSession = startLocationTrackingSession;
+        this.stopLocationTrackingSession = stopLocationTrackingSession;
+        this.suspendLocationTrackingSession = suspendLocationTrackingSession;
+        this.getLocationTrackingCapabilities = getLocationTrackingCapabilities;
+        this.getLocationTrackingSessions = getLocationTrackingSessions;
+        this.locationSessionInfo = locationSessionInfo;
+    }
 
     /**
      * @summary Restructures an object into a LocationServicesServList

@@ -1,7 +1,7 @@
 /* eslint-disable */
 import {
-    OPTIONAL,
-    ASN1Element as _Element,
+    type OPTIONAL,
+    type ASN1Element as _Element,
     ASN1TagClass as _TagClass,
     ASN1Construction as _Construction,
     ASN1UniversalType as _UniversalType,
@@ -11,8 +11,8 @@ import {
     ASN1ConstructionError as _ConstructionError,
 } from "@wildboar/asn1";
 import * as $ from "@wildboar/asn1/functional";
-import { Requested_QoS_level, _decode_Requested_QoS_level, _encode_Requested_QoS_level } from "../DOR-definition/Requested-QoS-level.ta.mjs";
-import { Single_use_of_reference, _decode_Single_use_of_reference, _encode_Single_use_of_reference } from "../DOR-definition/Single-use-of-reference.ta.mjs";
+import { type Requested_QoS_level, _decode_Requested_QoS_level, _encode_Requested_QoS_level } from "../DOR-definition/Requested-QoS-level.ta.mjs";
+import { type Single_use_of_reference, _decode_Single_use_of_reference, _encode_Single_use_of_reference } from "../DOR-definition/Single-use-of-reference.ta.mjs";
 
 
 /**
@@ -36,20 +36,26 @@ import { Single_use_of_reference, _decode_Single_use_of_reference, _encode_Singl
  */
 export
 class Extend_QoS {
+    /**
+     * @summary `qoS_level`.
+     * @public
+     * @readonly
+     */
+    public readonly qoS_level?: OPTIONAL<Requested_QoS_level>;
+    /**
+     * @summary `usage_of_reference`.
+     * @public
+     * @readonly
+     */
+    public readonly usage_of_reference?: OPTIONAL<Single_use_of_reference>;
+
     constructor (
-        /**
-         * @summary `qoS_level`.
-         * @public
-         * @readonly
-         */
-        readonly qoS_level?: OPTIONAL<Requested_QoS_level>,
-        /**
-         * @summary `usage_of_reference`.
-         * @public
-         * @readonly
-         */
-        readonly usage_of_reference?: OPTIONAL<Single_use_of_reference>
-    ) {}
+        qoS_level?: OPTIONAL<Requested_QoS_level>,
+        usage_of_reference?: OPTIONAL<Single_use_of_reference>
+    ) {
+        this.qoS_level = qoS_level;
+        this.usage_of_reference = usage_of_reference;
+    }
 
     /**
      * @summary Restructures an object into a Extend_QoS

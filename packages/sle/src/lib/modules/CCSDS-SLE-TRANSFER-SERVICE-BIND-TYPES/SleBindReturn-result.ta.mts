@@ -1,11 +1,11 @@
 /* eslint-disable */
 import {
-    ASN1Element as _Element,
+    type ASN1Element as _Element,
     ASN1TagClass as _TagClass
 } from "@wildboar/asn1";
 import * as $ from "@wildboar/asn1/functional";
-import { VersionNumber, _decode_VersionNumber, _encode_VersionNumber } from "../CCSDS-SLE-TRANSFER-SERVICE-BIND-TYPES/VersionNumber.ta.mjs";
-import { BindDiagnostic, _decode_BindDiagnostic, _encode_BindDiagnostic } from "../CCSDS-SLE-TRANSFER-SERVICE-BIND-TYPES/BindDiagnostic.ta.mjs";
+import { type VersionNumber, _decode_VersionNumber, _encode_VersionNumber } from "../CCSDS-SLE-TRANSFER-SERVICE-BIND-TYPES/VersionNumber.ta.mjs";
+import { type BindDiagnostic, _decode_BindDiagnostic, _encode_BindDiagnostic } from "../CCSDS-SLE-TRANSFER-SERVICE-BIND-TYPES/BindDiagnostic.ta.mjs";
 
 
 /**

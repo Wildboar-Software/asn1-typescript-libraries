@@ -1,7 +1,7 @@
 /* eslint-disable */
 import {
-    OPTIONAL,
-    ASN1Element as _Element,
+    type OPTIONAL,
+    type ASN1Element as _Element,
     ASN1TagClass as _TagClass,
     ASN1Construction as _Construction,
     ASN1UniversalType as _UniversalType,
@@ -35,31 +35,37 @@ import { AssistanceAndInstruction, _decode_AssistanceAndInstruction, _encode_Ass
  */
 export
 class LevelPolicyAssistance {
+    /**
+     * @summary `levelEffortAndDecisionPolicy`.
+     * @description
+     *
+     * Enrolment and comparison policies (min/max attempts and max
+     * duration). A transaction consists of one or more attempts
+     * (Clause 6.5.2, Annex C.3).
+     *
+     * @public
+     * @readonly
+     */
+    public readonly levelEffortAndDecisionPolicy: LevelEffortAndDecisionPolicy;
+    /**
+     * @summary `assistanceAndInstruction`.
+     * @description
+     *
+     * Where assistance was given, how, and how subjects were
+     * instructed (Clause 6.5.2).
+     *
+     * @public
+     * @readonly
+     */
+    public readonly assistanceAndInstruction?: OPTIONAL<AssistanceAndInstruction>;
+
     constructor (
-        /**
-         * @summary `levelEffortAndDecisionPolicy`.
-         * @description
-         *
-         * Enrolment and comparison policies (min/max attempts and max
-         * duration). A transaction consists of one or more attempts
-         * (Clause 6.5.2, Annex C.3).
-         *
-         * @public
-         * @readonly
-         */
-        readonly levelEffortAndDecisionPolicy: LevelEffortAndDecisionPolicy,
-        /**
-         * @summary `assistanceAndInstruction`.
-         * @description
-         *
-         * Where assistance was given, how, and how subjects were
-         * instructed (Clause 6.5.2).
-         *
-         * @public
-         * @readonly
-         */
-        readonly assistanceAndInstruction?: OPTIONAL<AssistanceAndInstruction>
-    ) {}
+        levelEffortAndDecisionPolicy: LevelEffortAndDecisionPolicy,
+        assistanceAndInstruction?: OPTIONAL<AssistanceAndInstruction>
+    ) {
+        this.levelEffortAndDecisionPolicy = levelEffortAndDecisionPolicy;
+        this.assistanceAndInstruction = assistanceAndInstruction;
+    }
 
     /**
      * @summary Restructures an object into a LevelPolicyAssistance

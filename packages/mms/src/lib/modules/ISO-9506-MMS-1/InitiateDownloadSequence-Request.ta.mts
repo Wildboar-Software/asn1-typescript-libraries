@@ -1,7 +1,7 @@
 /* eslint-disable */
 import {
-    BOOLEAN,
-    ASN1Element as _Element,
+    type BOOLEAN,
+    type ASN1Element as _Element,
     ASN1TagClass as _TagClass,
     ASN1Construction as _Construction,
     ASN1UniversalType as _UniversalType,
@@ -11,8 +11,8 @@ import {
     ASN1ConstructionError as _ConstructionError,
 } from "@wildboar/asn1";
 import * as $ from "@wildboar/asn1/functional";
-import { Identifier, _decode_Identifier, _encode_Identifier } from "../ISO-9506-MMS-1/Identifier.ta.mjs";
-import { MMSString, _decode_MMSString, _encode_MMSString } from "../ISO-9506-MMS-1/MMSString.ta.mjs";
+import { type Identifier, _decode_Identifier, _encode_Identifier } from "../ISO-9506-MMS-1/Identifier.ta.mjs";
+import { type MMSString, _decode_MMSString, _encode_MMSString } from "../ISO-9506-MMS-1/MMSString.ta.mjs";
 
 
 /**
@@ -38,42 +38,50 @@ import { MMSString, _decode_MMSString, _encode_MMSString } from "../ISO-9506-MMS
  */
 export
 class InitiateDownloadSequence_Request {
+    /**
+     * @summary `domainName`.
+     * @description
+     *
+     * Domain to create and load. Must not already exist. ISO 9506-1:2003
+     * §11.2.1.1.1.
+     *
+     * @public
+     * @readonly
+     */
+    public readonly domainName: Identifier;
+    /**
+     * @summary `listOfCapabilities`.
+     * @description
+     *
+     * Implementation-specific VMD resource limits for this Domain. Empty
+     * list is preferred for interoperability; invalid or unavailable
+     * capabilities fail. ISO 9506-1:2003 §11.2.1.1.2.
+     *
+     * @public
+     * @readonly
+     */
+    public readonly listOfCapabilities: MMSString[];
+    /**
+     * @summary `sharable`.
+     * @description
+     *
+     * True: Domain may be used by more than one Program Invocation. False:
+     * at most one. ISO 9506-1:2003 §11.2.1.1.3.
+     *
+     * @public
+     * @readonly
+     */
+    public readonly sharable: BOOLEAN;
+
     constructor (
-        /**
-         * @summary `domainName`.
-         * @description
-         *
-         * Domain to create and load. Must not already exist. ISO 9506-1:2003
-         * §11.2.1.1.1.
-         *
-         * @public
-         * @readonly
-         */
-        readonly domainName: Identifier,
-        /**
-         * @summary `listOfCapabilities`.
-         * @description
-         *
-         * Implementation-specific VMD resource limits for this Domain. Empty
-         * list is preferred for interoperability; invalid or unavailable
-         * capabilities fail. ISO 9506-1:2003 §11.2.1.1.2.
-         *
-         * @public
-         * @readonly
-         */
-        readonly listOfCapabilities: MMSString[],
-        /**
-         * @summary `sharable`.
-         * @description
-         *
-         * True: Domain may be used by more than one Program Invocation. False:
-         * at most one. ISO 9506-1:2003 §11.2.1.1.3.
-         *
-         * @public
-         * @readonly
-         */
-        readonly sharable: BOOLEAN
-    ) {}
+        domainName: Identifier,
+        listOfCapabilities: MMSString[],
+        sharable: BOOLEAN
+    ) {
+        this.domainName = domainName;
+        this.listOfCapabilities = listOfCapabilities;
+        this.sharable = sharable;
+    }
 
     /**
      * @summary Restructures an object into a InitiateDownloadSequence_Request

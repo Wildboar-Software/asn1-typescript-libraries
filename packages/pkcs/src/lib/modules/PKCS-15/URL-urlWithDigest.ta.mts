@@ -1,9 +1,9 @@
 /* eslint-disable */
 import {
     ASN1ConstructionError as _ConstructionError,
-    ASN1Element as _Element,
+    type ASN1Element as _Element,
     ASN1TagClass as _TagClass,
-    IA5String,
+    type IA5String,
 } from "@wildboar/asn1";
 import * as $ from "@wildboar/asn1/functional";
 import {
@@ -24,20 +24,26 @@ import {
  *
  */
 export class URL_urlWithDigest {
+    /**
+     * @summary `url`.
+     * @public
+     * @readonly
+     */
+    public readonly url: IA5String;
+    /**
+     * @summary `digest`.
+     * @public
+     * @readonly
+     */
+    public readonly digest: DigestInfoWithDefault;
+
     constructor(
-        /**
-         * @summary `url`.
-         * @public
-         * @readonly
-         */
-        readonly url: IA5String,
-        /**
-         * @summary `digest`.
-         * @public
-         * @readonly
-         */
-        readonly digest: DigestInfoWithDefault
-    ) {}
+        url: IA5String,
+        digest: DigestInfoWithDefault
+    ) {
+        this.url = url;
+        this.digest = digest;
+    }
 
     /**
      * @summary Restructures an object into a URL_urlWithDigest

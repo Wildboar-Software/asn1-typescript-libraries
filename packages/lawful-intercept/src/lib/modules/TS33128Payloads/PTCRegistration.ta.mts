@@ -1,8 +1,8 @@
 /* eslint-disable */
 import {
-    UTF8String,
+    type UTF8String,
     ASN1ConstructionError as _ConstructionError,
-    ASN1Element as _Element,
+    type ASN1Element as _Element,
     ASN1TagClass as _TagClass
 } from "@wildboar/asn1";
 import * as $ from "@wildboar/asn1/functional";
@@ -143,13 +143,13 @@ class PTCRegistration {
          * @static
          */
 
-    public static _enum_for_pTCRegistrationRequest = _enum_for_PTCRegistrationRequest;        /**
+    public static _enum_for_pTCRegistrationRequest: typeof _enum_for_PTCRegistrationRequest = _enum_for_PTCRegistrationRequest;        /**
          * @summary The enum used as the type of the component `pTCRegistrationOutcome`
          * @public
          * @static
          */
 
-    public static _enum_for_pTCRegistrationOutcome = _enum_for_PTCRegistrationOutcome;
+    public static _enum_for_pTCRegistrationOutcome: typeof _enum_for_PTCRegistrationOutcome = _enum_for_PTCRegistrationOutcome;
 }
 
 /**

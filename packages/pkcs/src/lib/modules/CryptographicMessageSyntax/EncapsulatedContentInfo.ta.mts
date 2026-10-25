@@ -1,13 +1,13 @@
 /* eslint-disable */
 import {
-    ASN1Element as _Element,
+    type ASN1Element as _Element,
     ASN1TagClass as _TagClass,
-    OCTET_STRING,
-    OPTIONAL,
+    type OCTET_STRING,
+    type OPTIONAL,
 } from "@wildboar/asn1";
 import * as $ from "@wildboar/asn1/functional";
 import {
-    ContentType,
+    type ContentType,
     _decode_ContentType,
     _encode_ContentType,
 } from "../CryptographicMessageSyntax/ContentType.ta.mjs";
@@ -27,20 +27,26 @@ import {
  *
  */
 export class EncapsulatedContentInfo {
+    /**
+     * @summary `eContentType`.
+     * @public
+     * @readonly
+     */
+    public readonly eContentType: ContentType;
+    /**
+     * @summary `eContent`.
+     * @public
+     * @readonly
+     */
+    public readonly eContent?: OPTIONAL<OCTET_STRING>;
+
     constructor(
-        /**
-         * @summary `eContentType`.
-         * @public
-         * @readonly
-         */
-        readonly eContentType: ContentType,
-        /**
-         * @summary `eContent`.
-         * @public
-         * @readonly
-         */
-        readonly eContent?: OPTIONAL<OCTET_STRING>
-    ) {}
+        eContentType: ContentType,
+        eContent?: OPTIONAL<OCTET_STRING>
+    ) {
+        this.eContentType = eContentType;
+        this.eContent = eContent;
+    }
 
     /**
      * @summary Restructures an object into a EncapsulatedContentInfo

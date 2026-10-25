@@ -1,6 +1,6 @@
 /* eslint-disable */
 import {
-  OPTIONAL,
+  type OPTIONAL,
   ASN1Element as _Element,
   ASN1TagClass as _TagClass,
   ASN1Construction as _Construction,
@@ -17,7 +17,7 @@ import {
   _encode_Checksum,
 } from '../KerberosV5Spec2/Checksum.ta.mjs';
 import {
-  Realm,
+  type Realm,
   _decode_Realm,
   _encode_Realm,
 } from '../KerberosV5Spec2/Realm.ta.mjs';
@@ -27,7 +27,7 @@ import {
   _encode_PrincipalName,
 } from '../KerberosV5Spec2/PrincipalName.ta.mjs';
 import {
-  AuthorizationData,
+  type AuthorizationData,
   _decode_AuthorizationData,
   _encode_AuthorizationData,
 } from '../KerberosV5Spec2/AuthorizationData.ta.mjs';
@@ -66,7 +66,7 @@ export class AD_KDCIssued {
    * @public
    * @readonly
    */
-  readonly ad_checksum: Checksum;
+  public readonly ad_checksum: Checksum;
   /**
    * @summary `i_realm`.
    * @description
@@ -77,7 +77,7 @@ export class AD_KDCIssued {
    * @public
    * @readonly
    */
-  readonly i_realm: OPTIONAL<Realm>;
+  public readonly i_realm: OPTIONAL<Realm>;
   /**
    * @summary `i_sname`.
    * @description
@@ -88,7 +88,7 @@ export class AD_KDCIssued {
    * @public
    * @readonly
    */
-  readonly i_sname: OPTIONAL<PrincipalName>;
+  public readonly i_sname: OPTIONAL<PrincipalName>;
   /**
    * @summary `elements`.
    * @description
@@ -99,7 +99,7 @@ export class AD_KDCIssued {
    * @public
    * @readonly
    */
-  readonly elements: AuthorizationData;
+  public readonly elements: AuthorizationData;
 
   constructor(
     ad_checksum: Checksum,

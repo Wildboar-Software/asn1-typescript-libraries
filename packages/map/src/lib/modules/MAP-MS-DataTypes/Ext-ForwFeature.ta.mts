@@ -1,18 +1,18 @@
 /* eslint-disable */
 import {
-    OPTIONAL,
-    ASN1Element as _Element,
+    type OPTIONAL,
+    type ASN1Element as _Element,
     ASN1TagClass as _TagClass
 } from "@wildboar/asn1";
 import * as $ from "@wildboar/asn1/functional";
-import { Ext_BasicServiceCode, _decode_Ext_BasicServiceCode, _encode_Ext_BasicServiceCode } from "../MAP-CommonDataTypes/Ext-BasicServiceCode.ta.mjs";
-import { Ext_SS_Status, _decode_Ext_SS_Status, _encode_Ext_SS_Status } from "../MAP-CommonDataTypes/Ext-SS-Status.ta.mjs";
-import { FTN_AddressString, _decode_FTN_AddressString, _encode_FTN_AddressString } from "../MAP-CommonDataTypes/FTN-AddressString.ta.mjs";
-import { ISDN_AddressString, _decode_ISDN_AddressString, _encode_ISDN_AddressString } from "../MAP-CommonDataTypes/ISDN-AddressString.ta.mjs";
-import { ISDN_SubaddressString, _decode_ISDN_SubaddressString, _encode_ISDN_SubaddressString } from "../MAP-CommonDataTypes/ISDN-SubaddressString.ta.mjs";
+import { type Ext_BasicServiceCode, _decode_Ext_BasicServiceCode, _encode_Ext_BasicServiceCode } from "../MAP-CommonDataTypes/Ext-BasicServiceCode.ta.mjs";
+import { type Ext_SS_Status, _decode_Ext_SS_Status, _encode_Ext_SS_Status } from "../MAP-CommonDataTypes/Ext-SS-Status.ta.mjs";
+import { type FTN_AddressString, _decode_FTN_AddressString, _encode_FTN_AddressString } from "../MAP-CommonDataTypes/FTN-AddressString.ta.mjs";
+import { type ISDN_AddressString, _decode_ISDN_AddressString, _encode_ISDN_AddressString } from "../MAP-CommonDataTypes/ISDN-AddressString.ta.mjs";
+import { type ISDN_SubaddressString, _decode_ISDN_SubaddressString, _encode_ISDN_SubaddressString } from "../MAP-CommonDataTypes/ISDN-SubaddressString.ta.mjs";
 import { ExtensionContainer, _decode_ExtensionContainer, _encode_ExtensionContainer } from "../MAP-ExtensionDataTypes/ExtensionContainer.ta.mjs";
-import { Ext_ForwOptions, _decode_Ext_ForwOptions, _encode_Ext_ForwOptions } from "../MAP-MS-DataTypes/Ext-ForwOptions.ta.mjs";
-import { Ext_NoRepCondTime, _decode_Ext_NoRepCondTime, _encode_Ext_NoRepCondTime } from "../MAP-MS-DataTypes/Ext-NoRepCondTime.ta.mjs";
+import { type Ext_ForwOptions, _decode_Ext_ForwOptions, _encode_Ext_ForwOptions } from "../MAP-MS-DataTypes/Ext-ForwOptions.ta.mjs";
+import { type Ext_NoRepCondTime, _decode_Ext_NoRepCondTime, _encode_Ext_NoRepCondTime } from "../MAP-MS-DataTypes/Ext-NoRepCondTime.ta.mjs";
 
 
 /**
@@ -31,16 +31,16 @@ import { Ext_NoRepCondTime, _decode_Ext_NoRepCondTime, _encode_Ext_NoRepCondTime
  * 
  * ```asn1
  * Ext-ForwFeature ::= SEQUENCE {
- *     basicService    Ext-BasicServiceCode    OPTIONAL,
+ *     basicService    Ext-BasicServiceCode    type OPTIONAL,
  *     ss-Status    [4] Ext-SS-Status,
- *     forwardedToNumber    [5] ISDN-AddressString    OPTIONAL,
+ *     forwardedToNumber    [5] ISDN-AddressString    type OPTIONAL,
  *     -- When this data type is sent from an HLR which supports CAMEL Phase 2
  *     -- to a VLR that supports CAMEL Phase 2 the VLR shall not check the
  *     -- format of the number
- *     forwardedToSubaddress    [8] ISDN-SubaddressString    OPTIONAL,
- *     forwardingOptions    [6] Ext-ForwOptions    OPTIONAL,
- *     noReplyConditionTime    [7] Ext-NoRepCondTime    OPTIONAL,
- *     extensionContainer    [9] ExtensionContainer    OPTIONAL,
+ *     forwardedToSubaddress    [8] ISDN-SubaddressString    type OPTIONAL,
+ *     forwardingOptions    [6] Ext-ForwOptions    type OPTIONAL,
+ *     noReplyConditionTime    [7] Ext-NoRepCondTime    type OPTIONAL,
+ *     extensionContainer    [9] ExtensionContainer    type OPTIONAL,
  *     ...,
  *     longForwardedToNumber    [10] FTN-AddressString    OPTIONAL }
  * ```
@@ -49,102 +49,122 @@ import { Ext_NoRepCondTime, _decode_Ext_NoRepCondTime, _encode_Ext_NoRepCondTime
  */
 export
 class Ext_ForwFeature {
+    /**
+     * @summary `basicService`.
+     * @description
+     *
+     * Extensible Basic Service Group; interpreted per clause 8.8.1.4 (3GPP
+     * TS 29.002 V19.1.0 clauses 7.6.3.16 and 8.8.1.3).
+     *
+     * @public
+     * @readonly
+     */
+    public readonly basicService: OPTIONAL<Ext_BasicServiceCode>;
+    /**
+     * @summary `ss_Status`.
+     * @description
+     *
+     * Extensible SS-Status of this forwarding feature (3GPP TS 29.002
+     * V19.1.0 clauses 7.6.3.16 and 7.6.3.17).
+     *
+     * @public
+     * @readonly
+     */
+    public readonly ss_Status: Ext_SS_Status;
+    /**
+     * @summary `forwardedToNumber`.
+     * @description
+     *
+     * Forwarded-to number. Absent if the VLR supports Long Forwarded-to
+     * Numbers (longForwardedToNumber used instead). When HLR and VLR both
+     * support CAMEL Phase 2 the VLR shall not check the number format (3GPP
+     * TS 29.002 V19.1.0 clauses 7.6.3.16 and 17.7.1).
+     *
+     * @public
+     * @readonly
+     */
+    public readonly forwardedToNumber?: OPTIONAL<ISDN_AddressString>;
+    /**
+     * @summary `forwardedToSubaddress`.
+     * @description
+     *
+     * Forwarded-to subaddress if available (3GPP TS 29.002 V19.1.0 clauses
+     * 7.6.3.16 and 7.6.2.23).
+     *
+     * @public
+     * @readonly
+     */
+    public readonly forwardedToSubaddress?: OPTIONAL<ISDN_SubaddressString>;
+    /**
+     * @summary `forwardingOptions`.
+     * @description
+     *
+     * Extensible forwarding options (except for CFU, where they shall not
+     * be included). Bits 3 and 4 shall be ignored by the VLR (3GPP TS
+     * 29.002 V19.1.0 clauses 7.6.3.18 and 8.8.1.3).
+     *
+     * @public
+     * @readonly
+     */
+    public readonly forwardingOptions?: OPTIONAL<Ext_ForwOptions>;
+    /**
+     * @summary `noReplyConditionTime`.
+     * @description
+     *
+     * For CFNRy, present when SS-Status indicates registered; otherwise
+     * absent. Not included for other CF services (3GPP TS 29.002 V19.1.0
+     * clauses 7.6.3.19 and 8.8.1.3).
+     *
+     * @public
+     * @readonly
+     */
+    public readonly noReplyConditionTime?: OPTIONAL<Ext_NoRepCondTime>;
+    /**
+     * @summary `extensionContainer`.
+     * @public
+     * @readonly
+     */
+    public readonly extensionContainer?: OPTIONAL<ExtensionContainer>;
+    /**
+     * @summary `longForwardedToNumber`.
+     * @description
+     *
+     * Shall be present (and forwardedToNumber absent) if the VLR supports
+     * Long Forwarded-to Numbers (3GPP TS 29.002 V19.1.0 clauses 7.6.3.16
+     * and 7.6.2.22A).
+     *
+     * @public
+     * @readonly
+     */
+    public readonly longForwardedToNumber?: OPTIONAL<FTN_AddressString>;
+    /**
+     * @summary Extensions that are not recognized.
+     * @public
+     * @readonly
+     */
+    public readonly _unrecognizedExtensionsList: _Element[];
+
     constructor (
-        /**
-         * @summary `basicService`.
-         * @description
-         *
-         * Extensible Basic Service Group; interpreted per clause 8.8.1.4 (3GPP
-         * TS 29.002 V19.1.0 clauses 7.6.3.16 and 8.8.1.3).
-         *
-         * @public
-         * @readonly
-         */
-        readonly basicService: OPTIONAL<Ext_BasicServiceCode>,
-        /**
-         * @summary `ss_Status`.
-         * @description
-         *
-         * Extensible SS-Status of this forwarding feature (3GPP TS 29.002
-         * V19.1.0 clauses 7.6.3.16 and 7.6.3.17).
-         *
-         * @public
-         * @readonly
-         */
-        readonly ss_Status: Ext_SS_Status,
-        /**
-         * @summary `forwardedToNumber`.
-         * @description
-         *
-         * Forwarded-to number. Absent if the VLR supports Long Forwarded-to
-         * Numbers (longForwardedToNumber used instead). When HLR and VLR both
-         * support CAMEL Phase 2 the VLR shall not check the number format (3GPP
-         * TS 29.002 V19.1.0 clauses 7.6.3.16 and 17.7.1).
-         *
-         * @public
-         * @readonly
-         */
-        readonly forwardedToNumber?: OPTIONAL<ISDN_AddressString>,
-        /**
-         * @summary `forwardedToSubaddress`.
-         * @description
-         *
-         * Forwarded-to subaddress if available (3GPP TS 29.002 V19.1.0 clauses
-         * 7.6.3.16 and 7.6.2.23).
-         *
-         * @public
-         * @readonly
-         */
-        readonly forwardedToSubaddress?: OPTIONAL<ISDN_SubaddressString>,
-        /**
-         * @summary `forwardingOptions`.
-         * @description
-         *
-         * Extensible forwarding options (except for CFU, where they shall not
-         * be included). Bits 3 and 4 shall be ignored by the VLR (3GPP TS
-         * 29.002 V19.1.0 clauses 7.6.3.18 and 8.8.1.3).
-         *
-         * @public
-         * @readonly
-         */
-        readonly forwardingOptions?: OPTIONAL<Ext_ForwOptions>,
-        /**
-         * @summary `noReplyConditionTime`.
-         * @description
-         *
-         * For CFNRy, present when SS-Status indicates registered; otherwise
-         * absent. Not included for other CF services (3GPP TS 29.002 V19.1.0
-         * clauses 7.6.3.19 and 8.8.1.3).
-         *
-         * @public
-         * @readonly
-         */
-        readonly noReplyConditionTime?: OPTIONAL<Ext_NoRepCondTime>,
-        /**
-         * @summary `extensionContainer`.
-         * @public
-         * @readonly
-         */
-        readonly extensionContainer?: OPTIONAL<ExtensionContainer>,
-        /**
-         * @summary `longForwardedToNumber`.
-         * @description
-         *
-         * Shall be present (and forwardedToNumber absent) if the VLR supports
-         * Long Forwarded-to Numbers (3GPP TS 29.002 V19.1.0 clauses 7.6.3.16
-         * and 7.6.2.22A).
-         *
-         * @public
-         * @readonly
-         */
-        readonly longForwardedToNumber?: OPTIONAL<FTN_AddressString>,
-        /**
-         * @summary Extensions that are not recognized.
-         * @public
-         * @readonly
-         */
-        readonly _unrecognizedExtensionsList: _Element[] = []
-    ) {}
+        basicService: OPTIONAL<Ext_BasicServiceCode>,
+        ss_Status: Ext_SS_Status,
+        forwardedToNumber?: OPTIONAL<ISDN_AddressString>,
+        forwardedToSubaddress?: OPTIONAL<ISDN_SubaddressString>,
+        forwardingOptions?: OPTIONAL<Ext_ForwOptions>,
+        noReplyConditionTime?: OPTIONAL<Ext_NoRepCondTime>,
+        extensionContainer?: OPTIONAL<ExtensionContainer>,
+        longForwardedToNumber?: OPTIONAL<FTN_AddressString>,
+        _unrecognizedExtensionsList: _Element[] = []
+    ) {
+        this.basicService = basicService;
+        this.ss_Status = ss_Status;
+        this.forwardedToNumber = forwardedToNumber;
+        this.forwardedToSubaddress = forwardedToSubaddress;
+        this.forwardingOptions = forwardingOptions;
+        this.noReplyConditionTime = noReplyConditionTime;
+        this.extensionContainer = extensionContainer;
+        this.longForwardedToNumber = longForwardedToNumber;
+        this._unrecognizedExtensionsList = _unrecognizedExtensionsList;
+    }
 
     /**
      * @summary Restructures an object into a Ext_ForwFeature

@@ -1,12 +1,12 @@
 /* eslint-disable */
 import {
     ASN1ConstructionError as _ConstructionError,
-    ASN1Element as _Element,
+    type ASN1Element as _Element,
     ASN1TagClass as _TagClass,
 } from "@wildboar/asn1";
 import * as $ from "@wildboar/asn1/functional";
 import {
-    CASP_error,
+    type CASP_error,
     _decode_CASP_error,
     _encode_CASP_error,
     _enum_for_CASP_error,
@@ -28,23 +28,29 @@ import {
  *
  */
 export class CertUnsubscribeErr {
+    /**
+     * @summary `code`.
+     * @description
+     *
+     * CASP-error for the whole-message failure.
+     * @public
+     * @readonly
+     */
+    public readonly code: CASP_error;
+    /**
+     * @summary Extensions that are not recognized.
+     * @public
+     * @readonly
+     */
+    public readonly _unrecognizedExtensionsList: _Element[];
+
     constructor(
-        /**
-         * @summary `code`.
-         * @description
-         *
-         * CASP-error for the whole-message failure.
-         * @public
-         * @readonly
-         */
-        readonly code: CASP_error,
-        /**
-         * @summary Extensions that are not recognized.
-         * @public
-         * @readonly
-         */
-        readonly _unrecognizedExtensionsList: _Element[] = []
-    ) {}
+        code: CASP_error,
+        _unrecognizedExtensionsList: _Element[] = []
+    ) {
+        this.code = code;
+        this._unrecognizedExtensionsList = _unrecognizedExtensionsList;
+    }
 
     /**
      * @summary Restructures an object into a CertUnsubscribeErr
@@ -70,7 +76,7 @@ export class CertUnsubscribeErr {
      * @static
      */
 
-    public static _enum_for_code = _enum_for_CASP_error;
+    public static _enum_for_code: typeof _enum_for_CASP_error = _enum_for_CASP_error;
 }
 
 /**

@@ -1,17 +1,17 @@
 /* eslint-disable */
 import {
-    ASN1Element as _Element,
+    type ASN1Element as _Element,
     ASN1TagClass as _TagClass,
-    OPTIONAL,
+    type OPTIONAL,
 } from "@wildboar/asn1";
 import * as $ from "@wildboar/asn1/functional";
 import {
-    Extensions,
+    type Extensions,
     _decode_Extensions,
     _encode_Extensions,
 } from "@wildboar/pki-stub";
 import {
-    GeneralName,
+    type GeneralName,
     _decode_GeneralName,
     _encode_GeneralName,
 } from "@wildboar/gn";
@@ -22,7 +22,7 @@ import {
 } from "../OCSP-2013-08/Request.ta.mjs";
 import {
     v1 /* IMPORTED_SHORT_NAMED_INTEGER */,
-    Version,
+    type Version,
     _decode_Version,
     _encode_Version,
 } from "../OCSP-2013-08/Version.ta.mjs";
@@ -51,58 +51,68 @@ import {
  *
  */
 export class TBSRequest {
+    /**
+     * @summary `version`.
+     * @description
+     *
+     * Protocol version; for this document `v1`(0)
+     * ([RFC 6960 §4.1.1](https://datatracker.ietf.org/doc/html/rfc6960#section-4.1.1)).
+     * DEFAULT `v1` when absent.
+     *
+     * @public
+     * @readonly
+     */
+    public readonly version: OPTIONAL<Version>;
+    /**
+     * @summary `requestorName`.
+     * @description
+     *
+     * Optional name of the OCSP requestor. SHALL be present when
+     * the request is signed
+     * ([RFC 6960 §4.1.1](https://datatracker.ietf.org/doc/html/rfc6960#section-4.1.1),
+     * [§4.1.2](https://datatracker.ietf.org/doc/html/rfc6960#section-4.1.2)).
+     *
+     * @public
+     * @readonly
+     */
+    public readonly requestorName: OPTIONAL<GeneralName>;
+    /**
+     * @summary `requestList`.
+     * @description
+     *
+     * One or more single certificate status requests
+     * ([RFC 6960 §4.1.1](https://datatracker.ietf.org/doc/html/rfc6960#section-4.1.1)).
+     *
+     * @public
+     * @readonly
+     */
+    public readonly requestList: Request[];
+    /**
+     * @summary `requestExtensions`.
+     * @description
+     *
+     * Optional extensions applicable to the requests (e.g. nonce,
+     * acceptable responses, preferred signature algorithms). See
+     * [RFC 6960 §4.4](https://datatracker.ietf.org/doc/html/rfc6960#section-4.4).
+     * Support for any specific extension is OPTIONAL; unrecognized
+     * non-critical extensions MUST be ignored (§4.1.2).
+     *
+     * @public
+     * @readonly
+     */
+    public readonly requestExtensions?: OPTIONAL<Extensions>;
+
     constructor(
-        /**
-         * @summary `version`.
-         * @description
-         *
-         * Protocol version; for this document `v1`(0)
-         * ([RFC 6960 §4.1.1](https://datatracker.ietf.org/doc/html/rfc6960#section-4.1.1)).
-         * DEFAULT `v1` when absent.
-         *
-         * @public
-         * @readonly
-         */
-        readonly version: OPTIONAL<Version>,
-        /**
-         * @summary `requestorName`.
-         * @description
-         *
-         * Optional name of the OCSP requestor. SHALL be present when
-         * the request is signed
-         * ([RFC 6960 §4.1.1](https://datatracker.ietf.org/doc/html/rfc6960#section-4.1.1),
-         * [§4.1.2](https://datatracker.ietf.org/doc/html/rfc6960#section-4.1.2)).
-         *
-         * @public
-         * @readonly
-         */
-        readonly requestorName: OPTIONAL<GeneralName>,
-        /**
-         * @summary `requestList`.
-         * @description
-         *
-         * One or more single certificate status requests
-         * ([RFC 6960 §4.1.1](https://datatracker.ietf.org/doc/html/rfc6960#section-4.1.1)).
-         *
-         * @public
-         * @readonly
-         */
-        readonly requestList: Request[],
-        /**
-         * @summary `requestExtensions`.
-         * @description
-         *
-         * Optional extensions applicable to the requests (e.g. nonce,
-         * acceptable responses, preferred signature algorithms). See
-         * [RFC 6960 §4.4](https://datatracker.ietf.org/doc/html/rfc6960#section-4.4).
-         * Support for any specific extension is OPTIONAL; unrecognized
-         * non-critical extensions MUST be ignored (§4.1.2).
-         *
-         * @public
-         * @readonly
-         */
-        readonly requestExtensions?: OPTIONAL<Extensions>
-    ) {}
+        version: OPTIONAL<Version>,
+        requestorName: OPTIONAL<GeneralName>,
+        requestList: Request[],
+        requestExtensions?: OPTIONAL<Extensions>
+    ) {
+        this.version = version;
+        this.requestorName = requestorName;
+        this.requestList = requestList;
+        this.requestExtensions = requestExtensions;
+    }
 
     /**
      * @summary Restructures an object into a TBSRequest

@@ -1,12 +1,12 @@
 /* eslint-disable */
 import {
-    ASN1Element as _Element,
+    type ASN1Element as _Element,
     ASN1TagClass as _TagClass,
-    INTEGER,
+    type INTEGER,
 } from "@wildboar/asn1";
 import * as $ from "@wildboar/asn1/functional";
 import {
-    Name,
+    type Name,
     _decode_Name,
     _encode_Name,
 } from "../InformationFramework/Name.ta.mjs";
@@ -27,20 +27,26 @@ import {
  *
  */
 export class supplierOrConsumerInformationMatch_AssertionType {
+    /**
+     * @summary `ae_title`.
+     * @public
+     * @readonly
+     */
+    public readonly ae_title: Name;
+    /**
+     * @summary `agreement_identifier`.
+     * @public
+     * @readonly
+     */
+    public readonly agreement_identifier: INTEGER;
+
     constructor(
-        /**
-         * @summary `ae_title`.
-         * @public
-         * @readonly
-         */
-        readonly ae_title: Name,
-        /**
-         * @summary `agreement_identifier`.
-         * @public
-         * @readonly
-         */
-        readonly agreement_identifier: INTEGER
-    ) {}
+        ae_title: Name,
+        agreement_identifier: INTEGER
+    ) {
+        this.ae_title = ae_title;
+        this.agreement_identifier = agreement_identifier;
+    }
 
     /**
      * @summary Restructures an object into a supplierOrConsumerInformationMatch_AssertionType

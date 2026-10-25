@@ -1,10 +1,10 @@
 /* eslint-disable */
 import {
-    OPTIONAL,
-    BOOLEAN,
-    INTEGER,
-    OBJECT_IDENTIFIER,
-    ASN1Element as _Element,
+    type OPTIONAL,
+    type BOOLEAN,
+    type INTEGER,
+    type OBJECT_IDENTIFIER,
+    type ASN1Element as _Element,
     ASN1TagClass as _TagClass,
     ASN1Construction as _Construction,
     ASN1UniversalType as _UniversalType,
@@ -15,7 +15,7 @@ import {
 } from '@wildboar/asn1';
 import * as $ from '@wildboar/asn1/functional';
 import {
-    SequenceNumber,
+    type SequenceNumber,
     _decode_SequenceNumber,
     _encode_SequenceNumber,
 } from '../MSAbstractService/SequenceNumber.ta.mjs';
@@ -40,44 +40,58 @@ import {
  *
  */
 export class BodyPartDescriptor {
+    /**
+     * @summary `data`.
+     * @public
+     * @readonly
+     */
+    public readonly data: OBJECT_IDENTIFIER;
+    /**
+     * @summary `parameters`.
+     * @public
+     * @readonly
+     */
+    public readonly parameters: OPTIONAL<OBJECT_IDENTIFIER>;
+    /**
+     * @summary `this_child_entry`.
+     * @public
+     * @readonly
+     */
+    public readonly this_child_entry: OPTIONAL<SequenceNumber>;
+    /**
+     * @summary `position`.
+     * @public
+     * @readonly
+     */
+    public readonly position: INTEGER;
+    /**
+     * @summary `size`.
+     * @public
+     * @readonly
+     */
+    public readonly size: INTEGER;
+    /**
+     * @summary `processed`.
+     * @public
+     * @readonly
+     */
+    public readonly processed?: OPTIONAL<BOOLEAN>;
+
     constructor(
-        /**
-         * @summary `data`.
-         * @public
-         * @readonly
-         */
-        readonly data: OBJECT_IDENTIFIER,
-        /**
-         * @summary `parameters`.
-         * @public
-         * @readonly
-         */
-        readonly parameters: OPTIONAL<OBJECT_IDENTIFIER>,
-        /**
-         * @summary `this_child_entry`.
-         * @public
-         * @readonly
-         */
-        readonly this_child_entry: OPTIONAL<SequenceNumber>,
-        /**
-         * @summary `position`.
-         * @public
-         * @readonly
-         */
-        readonly position: INTEGER,
-        /**
-         * @summary `size`.
-         * @public
-         * @readonly
-         */
-        readonly size: INTEGER,
-        /**
-         * @summary `processed`.
-         * @public
-         * @readonly
-         */
-        readonly processed?: OPTIONAL<BOOLEAN>
-    ) {}
+        data: OBJECT_IDENTIFIER,
+        parameters: OPTIONAL<OBJECT_IDENTIFIER>,
+        this_child_entry: OPTIONAL<SequenceNumber>,
+        position: INTEGER,
+        size: INTEGER,
+        processed?: OPTIONAL<BOOLEAN>
+    ) {
+        this.data = data;
+        this.parameters = parameters;
+        this.this_child_entry = this_child_entry;
+        this.position = position;
+        this.size = size;
+        this.processed = processed;
+    }
 
     /**
      * @summary Restructures an object into a BodyPartDescriptor

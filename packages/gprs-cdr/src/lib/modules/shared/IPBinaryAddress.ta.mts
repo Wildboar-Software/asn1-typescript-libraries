@@ -1,12 +1,12 @@
 /* eslint-disable */
 import {
-    OCTET_STRING,
-    ASN1Element as _Element,
+    type OCTET_STRING,
+    type ASN1Element as _Element,
     ASN1TagClass as _TagClass,
     ASN1SizeError
 } from "@wildboar/asn1";
 import * as $ from "@wildboar/asn1/functional";
-import { IPBinV6AddressWithOrWithoutPrefixLength, _decode_IPBinV6AddressWithOrWithoutPrefixLength, _encode_IPBinV6AddressWithOrWithoutPrefixLength } from "./IPBinV6AddressWithOrWithoutPrefixLength.ta.mjs";
+import { type IPBinV6AddressWithOrWithoutPrefixLength, _decode_IPBinV6AddressWithOrWithoutPrefixLength, _encode_IPBinV6AddressWithOrWithoutPrefixLength } from "./IPBinV6AddressWithOrWithoutPrefixLength.ta.mjs";
 
 
 /**

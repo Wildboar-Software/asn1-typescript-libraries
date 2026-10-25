@@ -1,7 +1,7 @@
 /* eslint-disable */
 import {
-    OPTIONAL,
-    ASN1Element as _Element,
+    type OPTIONAL,
+    type ASN1Element as _Element,
     ASN1TagClass as _TagClass,
     ASN1Construction as _Construction,
     ASN1UniversalType as _UniversalType,
@@ -12,7 +12,7 @@ import {
 } from '@wildboar/asn1';
 import * as $ from '@wildboar/asn1/functional';
 import {
-    RelativeDistinguishedName,
+    type RelativeDistinguishedName,
     _decode_RelativeDistinguishedName,
     _encode_RelativeDistinguishedName,
 } from '@wildboar/dn';
@@ -32,20 +32,26 @@ import {
  *
  */
 export class ProtectionEntity {
+    /**
+     * @summary `protectedUnits`.
+     * @public
+     * @readonly
+     */
+    public readonly protectedUnits?: OPTIONAL<RelativeDistinguishedName[]>;
+    /**
+     * @summary `protectingUnits`.
+     * @public
+     * @readonly
+     */
+    public readonly protectingUnits?: OPTIONAL<RelativeDistinguishedName[]>;
+
     constructor(
-        /**
-         * @summary `protectedUnits`.
-         * @public
-         * @readonly
-         */
-        readonly protectedUnits?: OPTIONAL<RelativeDistinguishedName[]>,
-        /**
-         * @summary `protectingUnits`.
-         * @public
-         * @readonly
-         */
-        readonly protectingUnits?: OPTIONAL<RelativeDistinguishedName[]>
-    ) {}
+        protectedUnits?: OPTIONAL<RelativeDistinguishedName[]>,
+        protectingUnits?: OPTIONAL<RelativeDistinguishedName[]>
+    ) {
+        this.protectedUnits = protectedUnits;
+        this.protectingUnits = protectingUnits;
+    }
 
     /**
      * @summary Restructures an object into a ProtectionEntity

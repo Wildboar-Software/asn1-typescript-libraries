@@ -2,13 +2,13 @@
 
 import * as $ from "@wildboar/asn1/functional";
 import {
-    OPTIONAL,
-    SEQUENCE,
-    SET,
-    ASN1Element as _Element,
+    type OPTIONAL,
+    type SEQUENCE,
+    type SET,
+    type ASN1Element as _Element,
     ASN1TagClass as _TagClass
 } from "@wildboar/asn1";
-import { AttributeInfo, _decode_AttributeInfo, _encode_AttributeInfo } from "../CSTA-device-feature-types/AttributeInfo.ta.mjs";
+import { type AttributeInfo, _decode_AttributeInfo, _encode_AttributeInfo } from "../CSTA-device-feature-types/AttributeInfo.ta.mjs";
 
 import { CSTACommonArguments, _decode_CSTACommonArguments, _encode_CSTACommonArguments } from "../CSTA-extension-types/CSTACommonArguments.ta.mjs";
 
@@ -36,29 +36,35 @@ import { CSTACommonArguments, _decode_CSTACommonArguments, _encode_CSTACommonArg
  */
 export
 class QueryVoiceAttributeResult {
+    /**
+     * @summary `attribute`.
+     * @description
+     *
+     * Value of the requested attribute (ECMA-269 §26.1.7.2.1).
+     *
+     * @public
+     * @readonly
+     */
+    public readonly attribute: AttributeInfo;
+    /**
+     * @summary `extensions`.
+     * @description
+     *
+     * CSTACommonArguments carrying the service-table security and
+     * privateData parameters.
+     *
+     * @public
+     * @readonly
+     */
+    public readonly extensions?: OPTIONAL<CSTACommonArguments>;
+
     constructor (
-        /**
-         * @summary `attribute`.
-         * @description
-         *
-         * Value of the requested attribute (ECMA-269 §26.1.7.2.1).
-         *
-         * @public
-         * @readonly
-         */
-        readonly attribute: AttributeInfo,
-        /**
-         * @summary `extensions`.
-         * @description
-         *
-         * CSTACommonArguments carrying the service-table security and
-         * privateData parameters.
-         *
-         * @public
-         * @readonly
-         */
-        readonly extensions?: OPTIONAL<CSTACommonArguments>
-    ) {}
+        attribute: AttributeInfo,
+        extensions?: OPTIONAL<CSTACommonArguments>
+    ) {
+        this.attribute = attribute;
+        this.extensions = extensions;
+    }
 
     /**
      * @summary Restructures an object into a QueryVoiceAttributeResult

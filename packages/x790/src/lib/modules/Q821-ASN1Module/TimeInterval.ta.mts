@@ -1,10 +1,10 @@
 /* eslint-disable */
 import {
-    OPTIONAL,
-    INTEGER,
-    SEQUENCE,
-    SET,
-    ASN1Element as _Element,
+    type OPTIONAL,
+    type INTEGER,
+    type SEQUENCE,
+    type SET,
+    type ASN1Element as _Element,
     ASN1TagClass as _TagClass,
     ASN1OverflowError,
 } from "@wildboar/asn1";
@@ -32,38 +32,49 @@ import * as $ from "@wildboar/asn1/functional";
  */
 export
 class TimeInterval {
+    /**
+     * @summary `day`.
+     * @public
+     * @readonly
+     */
+    public readonly day?: OPTIONAL<INTEGER>;
+    /**
+     * @summary `hour`.
+     * @public
+     * @readonly
+     */
+    public readonly hour?: OPTIONAL<INTEGER>;
+    /**
+     * @summary `minute`.
+     * @public
+     * @readonly
+     */
+    public readonly minute?: OPTIONAL<INTEGER>;
+    /**
+     * @summary `second`.
+     * @public
+     * @readonly
+     */
+    public readonly second?: OPTIONAL<INTEGER>;
+    /**
+     * @summary `msec`.
+     * @public
+     * @readonly
+     */
+    public readonly msec?: OPTIONAL<INTEGER>;
+
     constructor (
-        /**
-         * @summary `day`.
-         * @public
-         * @readonly
-         */
-        readonly day?: OPTIONAL<INTEGER>,
-        /**
-         * @summary `hour`.
-         * @public
-         * @readonly
-         */
-        readonly hour?: OPTIONAL<INTEGER>,
-        /**
-         * @summary `minute`.
-         * @public
-         * @readonly
-         */
-        readonly minute?: OPTIONAL<INTEGER>,
-        /**
-         * @summary `second`.
-         * @public
-         * @readonly
-         */
-        readonly second?: OPTIONAL<INTEGER>,
-        /**
-         * @summary `msec`.
-         * @public
-         * @readonly
-         */
-        readonly msec?: OPTIONAL<INTEGER>
+        day?: OPTIONAL<INTEGER>,
+        hour?: OPTIONAL<INTEGER>,
+        minute?: OPTIONAL<INTEGER>,
+        second?: OPTIONAL<INTEGER>,
+        msec?: OPTIONAL<INTEGER>
     ) {
+        this.day = day;
+        this.hour = hour;
+        this.minute = minute;
+        this.second = second;
+        this.msec = msec;
         const check = (name: string, v: INTEGER | undefined, min: number, max: number): void => {
             if (v === undefined) {
                 return;

@@ -1,7 +1,7 @@
 /* eslint-disable */
 import {
-    OPTIONAL,
-    ASN1Element as _Element,
+    type OPTIONAL,
+    type ASN1Element as _Element,
     ASN1TagClass as _TagClass,
     ASN1Construction as _Construction,
     ASN1UniversalType as _UniversalType,
@@ -12,7 +12,7 @@ import {
 } from '@wildboar/asn1';
 import * as $ from '@wildboar/asn1/functional';
 import {
-    ProbableCause,
+    type ProbableCause,
     _decode_ProbableCause,
     _encode_ProbableCause,
 } from '@wildboar/attribute-asn1module';
@@ -40,32 +40,42 @@ import {
  *
  */
 export class AlarmSeverityAssignment {
+    /**
+     * @summary `problem`.
+     * @public
+     * @readonly
+     */
+    public readonly problem: ProbableCause;
+    /**
+     * @summary `severityAssignedServiceAffecting`.
+     * @public
+     * @readonly
+     */
+    public readonly severityAssignedServiceAffecting?: OPTIONAL<AlarmSeverityCode>;
+    /**
+     * @summary `severityAssignedNonServiceAffecting`.
+     * @public
+     * @readonly
+     */
+    public readonly severityAssignedNonServiceAffecting?: OPTIONAL<AlarmSeverityCode>;
+    /**
+     * @summary `severityAssignedServiceIndependent`.
+     * @public
+     * @readonly
+     */
+    public readonly severityAssignedServiceIndependent?: OPTIONAL<AlarmSeverityCode>;
+
     constructor(
-        /**
-         * @summary `problem`.
-         * @public
-         * @readonly
-         */
-        readonly problem: ProbableCause,
-        /**
-         * @summary `severityAssignedServiceAffecting`.
-         * @public
-         * @readonly
-         */
-        readonly severityAssignedServiceAffecting?: OPTIONAL<AlarmSeverityCode>,
-        /**
-         * @summary `severityAssignedNonServiceAffecting`.
-         * @public
-         * @readonly
-         */
-        readonly severityAssignedNonServiceAffecting?: OPTIONAL<AlarmSeverityCode>,
-        /**
-         * @summary `severityAssignedServiceIndependent`.
-         * @public
-         * @readonly
-         */
-        readonly severityAssignedServiceIndependent?: OPTIONAL<AlarmSeverityCode>
-    ) {}
+        problem: ProbableCause,
+        severityAssignedServiceAffecting?: OPTIONAL<AlarmSeverityCode>,
+        severityAssignedNonServiceAffecting?: OPTIONAL<AlarmSeverityCode>,
+        severityAssignedServiceIndependent?: OPTIONAL<AlarmSeverityCode>
+    ) {
+        this.problem = problem;
+        this.severityAssignedServiceAffecting = severityAssignedServiceAffecting;
+        this.severityAssignedNonServiceAffecting = severityAssignedNonServiceAffecting;
+        this.severityAssignedServiceIndependent = severityAssignedServiceIndependent;
+    }
 
     /**
      * @summary Restructures an object into a AlarmSeverityAssignment
@@ -98,21 +108,21 @@ export class AlarmSeverityAssignment {
      * @static
      */
 
-    public static _enum_for_severityAssignedServiceAffecting = _enum_for_AlarmSeverityCode;
+    public static _enum_for_severityAssignedServiceAffecting: typeof _enum_for_AlarmSeverityCode = _enum_for_AlarmSeverityCode;
     /**
      * @summary The enum used as the type of the component `severityAssignedNonServiceAffecting`
      * @public
      * @static
      */
 
-    public static _enum_for_severityAssignedNonServiceAffecting = _enum_for_AlarmSeverityCode;
+    public static _enum_for_severityAssignedNonServiceAffecting: typeof _enum_for_AlarmSeverityCode = _enum_for_AlarmSeverityCode;
     /**
      * @summary The enum used as the type of the component `severityAssignedServiceIndependent`
      * @public
      * @static
      */
 
-    public static _enum_for_severityAssignedServiceIndependent = _enum_for_AlarmSeverityCode;
+    public static _enum_for_severityAssignedServiceIndependent: typeof _enum_for_AlarmSeverityCode = _enum_for_AlarmSeverityCode;
 }
 
 

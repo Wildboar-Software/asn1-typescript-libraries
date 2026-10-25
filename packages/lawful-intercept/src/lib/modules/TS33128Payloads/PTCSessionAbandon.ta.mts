@@ -1,8 +1,8 @@
 /* eslint-disable */
 import {
-    INTEGER,
-    OPTIONAL,
-    ASN1Element as _Element,
+    type INTEGER,
+    type OPTIONAL,
+    type ASN1Element as _Element,
     ASN1TagClass as _TagClass
 } from "@wildboar/asn1";
 import * as $ from "@wildboar/asn1/functional";
@@ -112,7 +112,7 @@ class PTCSessionAbandon {
          * @static
          */
 
-    public static _enum_for_pTCDirection = _enum_for_Direction;
+    public static _enum_for_pTCDirection: typeof _enum_for_Direction = _enum_for_Direction;
 }
 
 /**

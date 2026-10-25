@@ -1,14 +1,14 @@
 /* eslint-disable */
 import {
-    ASN1Element as _Element,
+    type ASN1Element as _Element,
     ASN1TagClass as _TagClass,
-    BOOLEAN,
-    OCTET_STRING,
-    OPTIONAL,
+    type BOOLEAN,
+    type OCTET_STRING,
+    type OPTIONAL,
 } from "@wildboar/asn1";
 import * as $ from "@wildboar/asn1/functional";
 import {
-    DirectoryString,
+    type DirectoryString,
     _decode_DirectoryString,
     _encode_DirectoryString,
 } from "../SelectedAttributeTypes/DirectoryString.ta.mjs";
@@ -32,45 +32,55 @@ import {
  *
  */
 export class SaslCredentials {
+    /**
+     * @summary `mechanism`.
+     * @description
+     *
+     * DirectoryString; upper bound 20. Empty ⇒
+     * `inappropriateAuthentication`.
+     *
+     * @public
+     * @readonly
+     */
+    public readonly mechanism: DirectoryString;
+    /**
+     * @summary `credentials`.
+     * @description
+     *
+     * OPTIONAL; used in multi-step SASL.
+     *
+     * @public
+     * @readonly
+     */
+    public readonly credentials?: OPTIONAL<OCTET_STRING>;
+    /**
+     * @summary `saslAbort`.
+     * @description
+     *
+     * DEFAULT FALSE. Abort a multi-step SASL exchange.
+     *
+     * @public
+     * @readonly
+     */
+    public readonly saslAbort?: OPTIONAL<BOOLEAN>;
+    /**
+     * @summary Extensions that are not recognized.
+     * @public
+     * @readonly
+     */
+    public readonly _unrecognizedExtensionsList: _Element[];
+
     constructor(
-        /**
-         * @summary `mechanism`.
-         * @description
-         *
-         * DirectoryString; upper bound 20. Empty ⇒
-         * `inappropriateAuthentication`.
-         *
-         * @public
-         * @readonly
-         */
-        readonly mechanism: DirectoryString,
-        /**
-         * @summary `credentials`.
-         * @description
-         *
-         * OPTIONAL; used in multi-step SASL.
-         *
-         * @public
-         * @readonly
-         */
-        readonly credentials?: OPTIONAL<OCTET_STRING>,
-        /**
-         * @summary `saslAbort`.
-         * @description
-         *
-         * DEFAULT FALSE. Abort a multi-step SASL exchange.
-         *
-         * @public
-         * @readonly
-         */
-        readonly saslAbort?: OPTIONAL<BOOLEAN>,
-        /**
-         * @summary Extensions that are not recognized.
-         * @public
-         * @readonly
-         */
-        readonly _unrecognizedExtensionsList: _Element[] = []
-    ) {}
+        mechanism: DirectoryString,
+        credentials?: OPTIONAL<OCTET_STRING>,
+        saslAbort?: OPTIONAL<BOOLEAN>,
+        _unrecognizedExtensionsList: _Element[] = []
+    ) {
+        this.mechanism = mechanism;
+        this.credentials = credentials;
+        this.saslAbort = saslAbort;
+        this._unrecognizedExtensionsList = _unrecognizedExtensionsList;
+    }
 
     /**
      * @summary Restructures an object into a SaslCredentials

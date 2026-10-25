@@ -1,7 +1,7 @@
 /* eslint-disable */
 import {
-    NULL,
-    ASN1Element as _Element,
+    type NULL,
+    type ASN1Element as _Element,
     ASN1TagClass as _TagClass,
 } from "@wildboar/asn1";
 import * as $ from "@wildboar/asn1/functional";
@@ -12,7 +12,7 @@ import {
 } from "../X790ASN1Module/LocationAddress.ta.mjs";
 
 import {
-    ObjectInstance,
+    type ObjectInstance,
     _decode_ObjectInstance,
     _encode_ObjectInstance,
 } from "../CMIP-1/ObjectInstance.ta.mjs";

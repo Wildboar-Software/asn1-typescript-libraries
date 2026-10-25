@@ -2,17 +2,17 @@
 
 import * as $ from "@wildboar/asn1/functional";
 import {
-    OPTIONAL,
-    SEQUENCE,
-    SET,
-    ASN1Element as _Element,
+    type OPTIONAL,
+    type SEQUENCE,
+    type SET,
+    type ASN1Element as _Element,
     ASN1TagClass as _TagClass
 } from "@wildboar/asn1";
-import { ConnectionID, _decode_ConnectionID, _encode_ConnectionID } from "../CSTA-call-connection-identifiers/ConnectionID.ta.mjs";
+import { type ConnectionID, _decode_ConnectionID, _encode_ConnectionID } from "../CSTA-call-connection-identifiers/ConnectionID.ta.mjs";
 
-import { CorrelatorData, _decode_CorrelatorData, _encode_CorrelatorData } from "../CSTA-device-feature-types/CorrelatorData.ta.mjs";
+import { type CorrelatorData, _decode_CorrelatorData, _encode_CorrelatorData } from "../CSTA-device-feature-types/CorrelatorData.ta.mjs";
 
-import { UserData, _decode_UserData, _encode_UserData } from "../CSTA-device-feature-types/UserData.ta.mjs";
+import { type UserData, _decode_UserData, _encode_UserData } from "../CSTA-device-feature-types/UserData.ta.mjs";
 
 import { CSTACommonArguments, _decode_CSTACommonArguments, _encode_CSTACommonArguments } from "../CSTA-extension-types/CSTACommonArguments.ta.mjs";
 
@@ -33,8 +33,8 @@ import { CSTACommonArguments, _decode_CSTACommonArguments, _encode_CSTACommonArg
  * ```asn1
  * AcceptCallArgument ::= SEQUENCE
  * {     callToBeAccepted         ConnectionID,
- *     correlatorData             CorrelatorData             OPTIONAL,
- *     userData             UserData             OPTIONAL,
+ *     correlatorData             CorrelatorData             type OPTIONAL,
+ *     userData             UserData             type OPTIONAL,
  *     extensions             CSTACommonArguments         OPTIONAL }
  * ```
  * 
@@ -42,53 +42,63 @@ import { CSTACommonArguments, _decode_CSTACommonArguments, _encode_CSTACommonArg
  */
 export
 class AcceptCallArgument {
+    /**
+     * @summary `callToBeAccepted`.
+     * @description
+     *
+     * Mandatory. Offered connection to accept. Required initial state is
+     * Alerting in Offered mode only (§17.1.1.3.1).
+     *
+     * @public
+     * @readonly
+     */
+    public readonly callToBeAccepted: ConnectionID;
+    /**
+     * @summary `correlatorData`.
+     * @description
+     *
+     * Optional correlator data to attach to this call before any resulting
+     * state transitions (ECMA-269 §12.2.10). A null string clears existing
+     * data.
+     *
+     * @public
+     * @readonly
+     */
+    public readonly correlatorData?: OPTIONAL<CorrelatorData>;
+    /**
+     * @summary `userData`.
+     * @description
+     *
+     * Optional user data sent to parties in the call (§12.2.30). Not
+     * retained on a later conference or transferred call.
+     *
+     * @public
+     * @readonly
+     */
+    public readonly userData?: OPTIONAL<UserData>;
+    /**
+     * @summary `extensions`.
+     * @description
+     *
+     * Optional `CSTACommonArguments` carrying the security and privateData
+     * parameters from the ECMA-269 service table.
+     *
+     * @public
+     * @readonly
+     */
+    public readonly extensions?: OPTIONAL<CSTACommonArguments>;
+
     constructor (
-        /**
-         * @summary `callToBeAccepted`.
-         * @description
-         *
-         * Mandatory. Offered connection to accept. Required initial state is
-         * Alerting in Offered mode only (§17.1.1.3.1).
-         *
-         * @public
-         * @readonly
-         */
-        readonly callToBeAccepted: ConnectionID,
-        /**
-         * @summary `correlatorData`.
-         * @description
-         *
-         * Optional correlator data to attach to this call before any resulting
-         * state transitions (ECMA-269 §12.2.10). A null string clears existing
-         * data.
-         *
-         * @public
-         * @readonly
-         */
-        readonly correlatorData?: OPTIONAL<CorrelatorData>,
-        /**
-         * @summary `userData`.
-         * @description
-         *
-         * Optional user data sent to parties in the call (§12.2.30). Not
-         * retained on a later conference or transferred call.
-         *
-         * @public
-         * @readonly
-         */
-        readonly userData?: OPTIONAL<UserData>,
-        /**
-         * @summary `extensions`.
-         * @description
-         *
-         * Optional `CSTACommonArguments` carrying the security and privateData
-         * parameters from the ECMA-269 service table.
-         *
-         * @public
-         * @readonly
-         */
-        readonly extensions?: OPTIONAL<CSTACommonArguments>
-    ) {}
+        callToBeAccepted: ConnectionID,
+        correlatorData?: OPTIONAL<CorrelatorData>,
+        userData?: OPTIONAL<UserData>,
+        extensions?: OPTIONAL<CSTACommonArguments>
+    ) {
+        this.callToBeAccepted = callToBeAccepted;
+        this.correlatorData = correlatorData;
+        this.userData = userData;
+        this.extensions = extensions;
+    }
 
     /**
      * @summary Restructures an object into a AcceptCallArgument

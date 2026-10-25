@@ -1,6 +1,6 @@
 /* eslint-disable */
 import {
-  BIT_STRING,
+  type BIT_STRING,
   ASN1Element as _Element,
   ASN1TagClass as _TagClass,
   ASN1Construction as _Construction,
@@ -125,12 +125,12 @@ export const f_erase: number = F_OPEN_request_processing_mode_f_erase; /* SHORT_
 
 
 
-export const _decode_F_OPEN_request_processing_mode = $._decodeBitString;
+export const _decode_F_OPEN_request_processing_mode: $.ASN1Decoder<BIT_STRING> = $._decodeBitString;
 
 
 
 
-export const _encode_F_OPEN_request_processing_mode = $._encodeBitString;
+export const _encode_F_OPEN_request_processing_mode: $.ASN1Encoder<BIT_STRING> = $._encodeBitString;
 
 
 /* eslint-enable */

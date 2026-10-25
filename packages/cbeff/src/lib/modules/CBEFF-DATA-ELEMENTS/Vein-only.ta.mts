@@ -1,6 +1,6 @@
 /* eslint-disable */
 import {
-  BIT_STRING,
+  type BIT_STRING,
   ASN1Element as _Element,
   ASN1TagClass as _TagClass,
   ASN1Construction as _Construction,
@@ -111,10 +111,10 @@ export const Vein_only_reserved2: number = 0; /* LONG_NAMED_BIT */
 export const reserved2: number = Vein_only_reserved2; /* SHORT_NAMED_BIT */
 
 
-export const _decode_Vein_only = $._decodeBitString;
+export const _decode_Vein_only: $.ASN1Decoder<BIT_STRING> = $._decodeBitString;
 
 
-export const _encode_Vein_only = $._encodeBitString;
+export const _encode_Vein_only: $.ASN1Encoder<BIT_STRING> = $._encodeBitString;
 
 
 /* eslint-enable */

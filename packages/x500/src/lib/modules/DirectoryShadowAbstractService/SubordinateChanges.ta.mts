@@ -1,7 +1,7 @@
 /* eslint-disable */
 import {
     ASN1ConstructionError as _ConstructionError,
-    ASN1Element as _Element,
+    type ASN1Element as _Element,
     ASN1TagClass as _TagClass,
 } from "@wildboar/asn1";
 import * as $ from "@wildboar/asn1/functional";
@@ -11,7 +11,7 @@ import {
     _encode_IncrementalStepRefresh,
 } from "../DirectoryShadowAbstractService/IncrementalStepRefresh.ta.mjs";
 import {
-    RelativeDistinguishedName,
+    type RelativeDistinguishedName,
     _decode_RelativeDistinguishedName,
     _encode_RelativeDistinguishedName,
 } from "../InformationFramework/RelativeDistinguishedName.ta.mjs";
@@ -36,37 +36,45 @@ import {
  *
  */
 export class SubordinateChanges {
+    /**
+     * @summary `subordinate`.
+     * @description
+     *
+     * Primary RDN of the subordinate SDSE. Include contexts and all
+     * alternative distinguished values unless the agreement's context
+     * selection reduced them.
+     *
+     * @public
+     * @readonly
+     */
+    public readonly subordinate: RelativeDistinguishedName;
+    /**
+     * @summary `changes`.
+     * @description
+     *
+     * Incremental step to apply under that RDN (may itself recurse via
+     * `subordinateUpdates`).
+     *
+     * @public
+     * @readonly
+     */
+    public readonly changes: IncrementalStepRefresh;
+    /**
+     * @summary Extensions that are not recognized.
+     * @public
+     * @readonly
+     */
+    public readonly _unrecognizedExtensionsList: _Element[];
+
     constructor(
-        /**
-         * @summary `subordinate`.
-         * @description
-         *
-         * Primary RDN of the subordinate SDSE. Include contexts and all
-         * alternative distinguished values unless the agreement's context
-         * selection reduced them.
-         *
-         * @public
-         * @readonly
-         */
-        readonly subordinate: RelativeDistinguishedName,
-        /**
-         * @summary `changes`.
-         * @description
-         *
-         * Incremental step to apply under that RDN (may itself recurse via
-         * `subordinateUpdates`).
-         *
-         * @public
-         * @readonly
-         */
-        readonly changes: IncrementalStepRefresh,
-        /**
-         * @summary Extensions that are not recognized.
-         * @public
-         * @readonly
-         */
-        readonly _unrecognizedExtensionsList: _Element[] = []
-    ) {}
+        subordinate: RelativeDistinguishedName,
+        changes: IncrementalStepRefresh,
+        _unrecognizedExtensionsList: _Element[] = []
+    ) {
+        this.subordinate = subordinate;
+        this.changes = changes;
+        this._unrecognizedExtensionsList = _unrecognizedExtensionsList;
+    }
 
     /**
      * @summary Restructures an object into a SubordinateChanges

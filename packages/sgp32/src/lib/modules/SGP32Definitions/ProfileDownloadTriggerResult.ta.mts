@@ -1,12 +1,12 @@
 /* eslint-disable */
 import {
-    OPTIONAL,
-    ASN1Element as _Element,
+    type OPTIONAL,
+    type ASN1Element as _Element,
     ASN1TagClass as _TagClass
 } from "@wildboar/asn1";
 import * as $ from "@wildboar/asn1/functional";
 import { type TransactionId, _decode_TransactionId, _encode_TransactionId } from "@wildboar/sgp22/RSPDefinitions";
-import { ProfileDownloadTriggerResult_profileDownloadTriggerResultData, _decode_ProfileDownloadTriggerResult_profileDownloadTriggerResultData, _encode_ProfileDownloadTriggerResult_profileDownloadTriggerResultData } from "../SGP32Definitions/ProfileDownloadTriggerResult-profileDownloadTriggerResultData.ta.mjs";
+import { type ProfileDownloadTriggerResult_profileDownloadTriggerResultData, _decode_ProfileDownloadTriggerResult_profileDownloadTriggerResultData, _encode_ProfileDownloadTriggerResult_profileDownloadTriggerResultData } from "../SGP32Definitions/ProfileDownloadTriggerResult-profileDownloadTriggerResultData.ta.mjs";
 
 
 /**
@@ -43,26 +43,32 @@ import { ProfileDownloadTriggerResult_profileDownloadTriggerResultData, _decode_
  */
 export
 class ProfileDownloadTriggerResult {
+    /**
+     * @summary `eimTransactionId`.
+     * @description
+     * Same transaction identifier the eIM put in ProfileDownloadTriggerRequest.
+     * Absent when the request omitted it. SGP.32 v1.2, section 2.11.2.3.
+     * @public
+     * @readonly
+     */
+    public readonly eimTransactionId: OPTIONAL<TransactionId>;
+    /**
+     * @summary `profileDownloadTriggerResultData`.
+     * @description
+     * Either the Profile Installation Result from ES10b.LoadBoundProfilePackage,
+     * or profileDownloadError. SGP.32 v1.2, section 2.11.2.3.
+     * @public
+     * @readonly
+     */
+    public readonly profileDownloadTriggerResultData: ProfileDownloadTriggerResult_profileDownloadTriggerResultData;
+
     constructor (
-        /**
-         * @summary `eimTransactionId`.
-         * @description
-         * Same transaction identifier the eIM put in ProfileDownloadTriggerRequest.
-         * Absent when the request omitted it. SGP.32 v1.2, section 2.11.2.3.
-         * @public
-         * @readonly
-         */
-        readonly eimTransactionId: OPTIONAL<TransactionId>,
-        /**
-         * @summary `profileDownloadTriggerResultData`.
-         * @description
-         * Either the Profile Installation Result from ES10b.LoadBoundProfilePackage,
-         * or profileDownloadError. SGP.32 v1.2, section 2.11.2.3.
-         * @public
-         * @readonly
-         */
-        readonly profileDownloadTriggerResultData: ProfileDownloadTriggerResult_profileDownloadTriggerResultData
-    ) {}
+        eimTransactionId: OPTIONAL<TransactionId>,
+        profileDownloadTriggerResultData: ProfileDownloadTriggerResult_profileDownloadTriggerResultData
+    ) {
+        this.eimTransactionId = eimTransactionId;
+        this.profileDownloadTriggerResultData = profileDownloadTriggerResultData;
+    }
 
     /**
      * @summary Restructures an object into a ProfileDownloadTriggerResult

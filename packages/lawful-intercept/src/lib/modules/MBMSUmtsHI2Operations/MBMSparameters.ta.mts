@@ -1,9 +1,9 @@
 /* eslint-disable */
 import {
-    ASN1Element as _Element,
+    type ASN1Element as _Element,
     ASN1TagClass as _TagClass,
-    OPTIONAL,
-    UTF8String
+    type OPTIONAL,
+    type UTF8String
 } from "@wildboar/asn1";
 import * as $ from "@wildboar/asn1/functional";
 
@@ -23,7 +23,7 @@ import * as $ from "@wildboar/asn1/functional";
  * ```asn1
  * MBMSparameters ::= SEQUENCE
  * {
- *     aPN                                 [1] UTF8String    OPTIONAL,
+ *     aPN                                 [1] UTF8String    type OPTIONAL,
  *     -- The Access Point Name (APN) is coded in accordance with
  *         -- 3GPP TS 24.008 [9] without the APN IEI (only the last 100 octets are used).
  *         -- Octets are coded according to 3GPP TS 23.003 [25].

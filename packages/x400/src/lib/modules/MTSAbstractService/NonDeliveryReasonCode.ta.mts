@@ -1,7 +1,7 @@
 /* eslint-disable */
 import {
-    INTEGER,
-    ASN1Element as _Element,
+    type INTEGER,
+    type ASN1Element as _Element,
     ASN1TagClass as _TagClass,
     ASN1Construction as _Construction,
     ASN1UniversalType as _UniversalType,
@@ -39,132 +39,132 @@ export type NonDeliveryReasonCode = INTEGER;
  * @constant
  * @type {number}
  */
-export const NonDeliveryReasonCode_transfer_failure: NonDeliveryReasonCode = 0; /* LONG_NAMED_INTEGER_VALUE */
+export const NonDeliveryReasonCode_transfer_failure: 0 = 0 satisfies NonDeliveryReasonCode; /* LONG_NAMED_INTEGER_VALUE */
 
 /**
  * @summary NonDeliveryReasonCode_transfer_failure
  * @constant
  * @type {number}
  */
-export const transfer_failure: NonDeliveryReasonCode = NonDeliveryReasonCode_transfer_failure; /* SHORT_NAMED_INTEGER_VALUE */
+export const transfer_failure: 0 = NonDeliveryReasonCode_transfer_failure; /* SHORT_NAMED_INTEGER_VALUE */
 
 /**
  * @summary NonDeliveryReasonCode_unable_to_transfer
  * @constant
  * @type {number}
  */
-export const NonDeliveryReasonCode_unable_to_transfer: NonDeliveryReasonCode = 1; /* LONG_NAMED_INTEGER_VALUE */
+export const NonDeliveryReasonCode_unable_to_transfer: 1 = 1 satisfies NonDeliveryReasonCode; /* LONG_NAMED_INTEGER_VALUE */
 
 /**
  * @summary NonDeliveryReasonCode_unable_to_transfer
  * @constant
  * @type {number}
  */
-export const unable_to_transfer: NonDeliveryReasonCode = NonDeliveryReasonCode_unable_to_transfer; /* SHORT_NAMED_INTEGER_VALUE */
+export const unable_to_transfer: 1 = NonDeliveryReasonCode_unable_to_transfer; /* SHORT_NAMED_INTEGER_VALUE */
 
 /**
  * @summary NonDeliveryReasonCode_conversion_not_performed
  * @constant
  * @type {number}
  */
-export const NonDeliveryReasonCode_conversion_not_performed: NonDeliveryReasonCode = 2; /* LONG_NAMED_INTEGER_VALUE */
+export const NonDeliveryReasonCode_conversion_not_performed: 2 = 2 satisfies NonDeliveryReasonCode; /* LONG_NAMED_INTEGER_VALUE */
 
 /**
  * @summary NonDeliveryReasonCode_conversion_not_performed
  * @constant
  * @type {number}
  */
-export const conversion_not_performed: NonDeliveryReasonCode = NonDeliveryReasonCode_conversion_not_performed; /* SHORT_NAMED_INTEGER_VALUE */
+export const conversion_not_performed: 2 = NonDeliveryReasonCode_conversion_not_performed; /* SHORT_NAMED_INTEGER_VALUE */
 
 /**
  * @summary NonDeliveryReasonCode_physical_rendition_not_performed
  * @constant
  * @type {number}
  */
-export const NonDeliveryReasonCode_physical_rendition_not_performed: NonDeliveryReasonCode = 3; /* LONG_NAMED_INTEGER_VALUE */
+export const NonDeliveryReasonCode_physical_rendition_not_performed: 3 = 3 satisfies NonDeliveryReasonCode; /* LONG_NAMED_INTEGER_VALUE */
 
 /**
  * @summary NonDeliveryReasonCode_physical_rendition_not_performed
  * @constant
  * @type {number}
  */
-export const physical_rendition_not_performed: NonDeliveryReasonCode = NonDeliveryReasonCode_physical_rendition_not_performed; /* SHORT_NAMED_INTEGER_VALUE */
+export const physical_rendition_not_performed: 3 = NonDeliveryReasonCode_physical_rendition_not_performed; /* SHORT_NAMED_INTEGER_VALUE */
 
 /**
  * @summary NonDeliveryReasonCode_physical_delivery_not_performed
  * @constant
  * @type {number}
  */
-export const NonDeliveryReasonCode_physical_delivery_not_performed: NonDeliveryReasonCode = 4; /* LONG_NAMED_INTEGER_VALUE */
+export const NonDeliveryReasonCode_physical_delivery_not_performed: 4 = 4 satisfies NonDeliveryReasonCode; /* LONG_NAMED_INTEGER_VALUE */
 
 /**
  * @summary NonDeliveryReasonCode_physical_delivery_not_performed
  * @constant
  * @type {number}
  */
-export const physical_delivery_not_performed: NonDeliveryReasonCode = NonDeliveryReasonCode_physical_delivery_not_performed; /* SHORT_NAMED_INTEGER_VALUE */
+export const physical_delivery_not_performed: 4 = NonDeliveryReasonCode_physical_delivery_not_performed; /* SHORT_NAMED_INTEGER_VALUE */
 
 /**
  * @summary NonDeliveryReasonCode_restricted_delivery
  * @constant
  * @type {number}
  */
-export const NonDeliveryReasonCode_restricted_delivery: NonDeliveryReasonCode = 5; /* LONG_NAMED_INTEGER_VALUE */
+export const NonDeliveryReasonCode_restricted_delivery: 5 = 5 satisfies NonDeliveryReasonCode; /* LONG_NAMED_INTEGER_VALUE */
 
 /**
  * @summary NonDeliveryReasonCode_restricted_delivery
  * @constant
  * @type {number}
  */
-export const restricted_delivery: NonDeliveryReasonCode = NonDeliveryReasonCode_restricted_delivery; /* SHORT_NAMED_INTEGER_VALUE */
+export const restricted_delivery: 5 = NonDeliveryReasonCode_restricted_delivery; /* SHORT_NAMED_INTEGER_VALUE */
 
 /**
  * @summary NonDeliveryReasonCode_directory_operation_unsuccessful
  * @constant
  * @type {number}
  */
-export const NonDeliveryReasonCode_directory_operation_unsuccessful: NonDeliveryReasonCode = 6; /* LONG_NAMED_INTEGER_VALUE */
+export const NonDeliveryReasonCode_directory_operation_unsuccessful: 6 = 6 satisfies NonDeliveryReasonCode; /* LONG_NAMED_INTEGER_VALUE */
 
 /**
  * @summary NonDeliveryReasonCode_directory_operation_unsuccessful
  * @constant
  * @type {number}
  */
-export const directory_operation_unsuccessful: NonDeliveryReasonCode = NonDeliveryReasonCode_directory_operation_unsuccessful; /* SHORT_NAMED_INTEGER_VALUE */
+export const directory_operation_unsuccessful: 6 = NonDeliveryReasonCode_directory_operation_unsuccessful; /* SHORT_NAMED_INTEGER_VALUE */
 
 /**
  * @summary NonDeliveryReasonCode_deferred_delivery_not_performed
  * @constant
  * @type {number}
  */
-export const NonDeliveryReasonCode_deferred_delivery_not_performed: NonDeliveryReasonCode = 7; /* LONG_NAMED_INTEGER_VALUE */
+export const NonDeliveryReasonCode_deferred_delivery_not_performed: 7 = 7 satisfies NonDeliveryReasonCode; /* LONG_NAMED_INTEGER_VALUE */
 
 /**
  * @summary NonDeliveryReasonCode_deferred_delivery_not_performed
  * @constant
  * @type {number}
  */
-export const deferred_delivery_not_performed: NonDeliveryReasonCode = NonDeliveryReasonCode_deferred_delivery_not_performed; /* SHORT_NAMED_INTEGER_VALUE */
+export const deferred_delivery_not_performed: 7 = NonDeliveryReasonCode_deferred_delivery_not_performed; /* SHORT_NAMED_INTEGER_VALUE */
 
 /**
  * @summary NonDeliveryReasonCode_transfer_failure_for_security_reason
  * @constant
  * @type {number}
  */
-export const NonDeliveryReasonCode_transfer_failure_for_security_reason: NonDeliveryReasonCode = 8; /* LONG_NAMED_INTEGER_VALUE */
+export const NonDeliveryReasonCode_transfer_failure_for_security_reason: 8 = 8 satisfies NonDeliveryReasonCode; /* LONG_NAMED_INTEGER_VALUE */
 
 /**
  * @summary NonDeliveryReasonCode_transfer_failure_for_security_reason
  * @constant
  * @type {number}
  */
-export const transfer_failure_for_security_reason: NonDeliveryReasonCode = NonDeliveryReasonCode_transfer_failure_for_security_reason; /* SHORT_NAMED_INTEGER_VALUE */
+export const transfer_failure_for_security_reason: 8 = NonDeliveryReasonCode_transfer_failure_for_security_reason; /* SHORT_NAMED_INTEGER_VALUE */
 
 
-export const _decode_NonDeliveryReasonCode = $._decodeInteger;
+export const _decode_NonDeliveryReasonCode: $.ASN1Decoder<INTEGER> = $._decodeInteger;
 
 
-export const _encode_NonDeliveryReasonCode = $._encodeInteger;
+export const _encode_NonDeliveryReasonCode: $.ASN1Encoder<INTEGER> = $._encodeInteger;
 
 
 /* eslint-enable */

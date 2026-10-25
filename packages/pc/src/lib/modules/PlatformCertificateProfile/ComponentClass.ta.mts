@@ -1,7 +1,7 @@
 /* eslint-disable */
 import {
-    OCTET_STRING,
-    ASN1Element as _Element,
+    type OCTET_STRING,
+    type ASN1Element as _Element,
     ASN1TagClass as _TagClass,
     ASN1Construction as _Construction,
     ASN1UniversalType as _UniversalType,
@@ -11,7 +11,7 @@ import {
     ASN1ConstructionError as _ConstructionError,
 } from "@wildboar/asn1";
 import * as $ from "@wildboar/asn1/functional";
-import { ComponentClassRegistry, _decode_ComponentClassRegistry, _encode_ComponentClassRegistry } from "../PlatformCertificateProfile/ComponentClassRegistry.ta.mjs";
+import { type ComponentClassRegistry, _decode_ComponentClassRegistry, _encode_ComponentClassRegistry } from "../PlatformCertificateProfile/ComponentClassRegistry.ta.mjs";
 /**
  * @summary ComponentClass
  * @description
@@ -32,30 +32,36 @@ import { ComponentClassRegistry, _decode_ComponentClassRegistry, _encode_Compone
  */
 export
 class ComponentClass {
+    /**
+     * @summary `componentClassRegistry`.
+     * @description
+     *
+     * Catalogue used to name the class: TCG (placeholder), IETF
+     * RFC 8348 IANA Hardware Class, or DMTF/SMBIOS
+     * (placeholder). §3.1.6.
+     *
+     * @public
+     * @readonly
+     */
+    public readonly componentClassRegistry: ComponentClassRegistry;
+    /**
+     * @summary `componentClassValue`.
+     * @description
+     *
+     * 4-octet class value from the chosen registry. §3.1.6.
+     *
+     * @public
+     * @readonly
+     */
+    public readonly componentClassValue: OCTET_STRING;
+
     constructor (
-        /**
-         * @summary `componentClassRegistry`.
-         * @description
-         *
-         * Catalogue used to name the class: TCG (placeholder), IETF
-         * RFC 8348 IANA Hardware Class, or DMTF/SMBIOS
-         * (placeholder). §3.1.6.
-         *
-         * @public
-         * @readonly
-         */
-        readonly componentClassRegistry: ComponentClassRegistry,
-        /**
-         * @summary `componentClassValue`.
-         * @description
-         *
-         * 4-octet class value from the chosen registry. §3.1.6.
-         *
-         * @public
-         * @readonly
-         */
-        readonly componentClassValue: OCTET_STRING
-    ) {}
+        componentClassRegistry: ComponentClassRegistry,
+        componentClassValue: OCTET_STRING
+    ) {
+        this.componentClassRegistry = componentClassRegistry;
+        this.componentClassValue = componentClassValue;
+    }
 
     /**
      * @summary Restructures an object into a ComponentClass

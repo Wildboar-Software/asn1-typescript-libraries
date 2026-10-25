@@ -1,6 +1,6 @@
 /* eslint-disable */
 import {
-  OPTIONAL,
+  type OPTIONAL,
   ASN1Element as _Element,
   ASN1TagClass as _TagClass,
   ASN1Construction as _Construction,
@@ -12,17 +12,17 @@ import {
 } from '@wildboar/asn1';
 import * as $ from '@wildboar/asn1/functional';
 import {
-  CallingSSuserReference,
+  type CallingSSuserReference,
   _decode_CallingSSuserReference,
   _encode_CallingSSuserReference,
 } from '../Reliable-Transfer-APDU/CallingSSuserReference.ta.mjs';
 import {
-  CommonReference,
+  type CommonReference,
   _decode_CommonReference,
   _encode_CommonReference,
 } from '../Reliable-Transfer-APDU/CommonReference.ta.mjs';
 import {
-  AdditionalReferenceInformation,
+  type AdditionalReferenceInformation,
   _decode_AdditionalReferenceInformation,
   _encode_AdditionalReferenceInformation,
 } from '../Reliable-Transfer-APDU/AdditionalReferenceInformation.ta.mjs';

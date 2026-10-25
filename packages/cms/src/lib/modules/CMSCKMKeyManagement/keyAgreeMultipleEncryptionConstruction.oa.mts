@@ -1,7 +1,7 @@
 /* eslint-disable */
 import type { ALGORITHM } from "@wildboar/x500/AuthenticationFramework";
 import {
-    KeyEncryptionAlgorithmIdentifier,
+    type KeyEncryptionAlgorithmIdentifier,
     _decode_KeyEncryptionAlgorithmIdentifier,
     _encode_KeyEncryptionAlgorithmIdentifier,
 } from "../CMSCKMKeyManagement/KeyEncryptionAlgorithmIdentifier.ta.mjs";

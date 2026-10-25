@@ -1,7 +1,7 @@
 /* eslint-disable */
 import {
-    ASN1Element as _Element,
-    INTEGER,
+    type ASN1Element as _Element,
+    type INTEGER,
     ASN1OverflowError
 } from "@wildboar/asn1";
 import * as $ from "@wildboar/asn1/functional";
@@ -37,7 +37,7 @@ export const _decode_ContextIDinList = (el: _Element): ContextIDinList => {
     }
     return value;
 };
-export const _encode_ContextIDinList = $._encodeInteger;
+export const _encode_ContextIDinList: $.ASN1Encoder<INTEGER> = $._encodeInteger;
 
 
 /* eslint-enable */

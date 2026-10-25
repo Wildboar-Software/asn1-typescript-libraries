@@ -1,12 +1,12 @@
 /* eslint-disable */
 import {
     ASN1ConstructionError as _ConstructionError,
-    ASN1Element as _Element,
+    type ASN1Element as _Element,
     ASN1TagClass as _TagClass
 } from "@wildboar/asn1";
 import * as $ from "@wildboar/asn1/functional";
-import { TerminationIDList, _decode_TerminationIDList, _encode_TerminationIDList } from "../MEDIA-GATEWAY-CONTROL/TerminationIDList.ta.mjs";
-import { AmmDescriptor, _decode_AmmDescriptor, _encode_AmmDescriptor } from "../MEDIA-GATEWAY-CONTROL/AmmDescriptor.ta.mjs";
+import { type TerminationIDList, _decode_TerminationIDList, _encode_TerminationIDList } from "../MEDIA-GATEWAY-CONTROL/TerminationIDList.ta.mjs";
+import { type AmmDescriptor, _decode_AmmDescriptor, _encode_AmmDescriptor } from "../MEDIA-GATEWAY-CONTROL/AmmDescriptor.ta.mjs";
 
 
 /**
@@ -51,7 +51,7 @@ class AmmRequest {
      * @public
      * @readonly
      */
-    readonly terminationID: TerminationIDList;
+    public readonly terminationID: TerminationIDList;
     /**
      * @summary `descriptors`.
      * @description
@@ -63,7 +63,7 @@ class AmmRequest {
      * @public
      * @readonly
      */
-    readonly descriptors: AmmDescriptor[];
+    public readonly descriptors: AmmDescriptor[];
     /**
      * @summary Extensions that are not recognized.
      * @description
@@ -74,7 +74,7 @@ class AmmRequest {
      * @public
      * @readonly
      */
-    readonly _unrecognizedExtensionsList: _Element[];
+    public readonly _unrecognizedExtensionsList: _Element[];
 
     constructor (
         terminationID: TerminationIDList,

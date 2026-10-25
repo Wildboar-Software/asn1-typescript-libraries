@@ -8,7 +8,7 @@ import { type OPERATION } from "../Remote-Operations-Information-Objects/OPERATI
 
 import { ClearConnectionArgument, _decode_ClearConnectionArgument, _encode_ClearConnectionArgument } from "../CSTA-clear-connection/ClearConnectionArgument.ta.mjs";
 
-import { ClearConnectionResult, _decode_ClearConnectionResult, _encode_ClearConnectionResult } from "../CSTA-clear-connection/ClearConnectionResult.ta.mjs";
+import { type ClearConnectionResult, _decode_ClearConnectionResult, _encode_ClearConnectionResult } from "../CSTA-clear-connection/ClearConnectionResult.ta.mjs";
 
 import { universalFailure } from "../CSTA-error-definition/universalFailure.oa.mjs";
 

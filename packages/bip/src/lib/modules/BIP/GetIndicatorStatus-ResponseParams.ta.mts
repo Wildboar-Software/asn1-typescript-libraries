@@ -11,7 +11,7 @@ import {
 } from '@wildboar/asn1';
 import * as $ from '@wildboar/asn1/functional';
 import {
-  BioAPI_INDICATOR_STATUS,
+  type BioAPI_INDICATOR_STATUS,
   _enum_for_BioAPI_INDICATOR_STATUS,
   _decode_BioAPI_INDICATOR_STATUS,
   _encode_BioAPI_INDICATOR_STATUS,
@@ -46,7 +46,7 @@ export class GetIndicatorStatus_ResponseParams {
    * @public
    * @readonly
    */
-  readonly indicatorStatus: BioAPI_INDICATOR_STATUS;
+  public readonly indicatorStatus: BioAPI_INDICATOR_STATUS;
 
   constructor(
     indicatorStatus: BioAPI_INDICATOR_STATUS
@@ -80,7 +80,7 @@ export class GetIndicatorStatus_ResponseParams {
    * @static
    */
 
-  public static _enum_for_indicatorStatus = _enum_for_BioAPI_INDICATOR_STATUS;
+  public static _enum_for_indicatorStatus: typeof _enum_for_BioAPI_INDICATOR_STATUS = _enum_for_BioAPI_INDICATOR_STATUS;
 }
 
 

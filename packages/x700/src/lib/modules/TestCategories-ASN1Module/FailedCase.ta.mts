@@ -1,6 +1,6 @@
 /* eslint-disable */
 import {
-    ASN1Element as _Element,
+    type ASN1Element as _Element,
     ASN1TagClass as _TagClass,
     ASN1Construction as _Construction,
     ASN1UniversalType as _UniversalType,
@@ -72,7 +72,7 @@ export type FailedCase = _enum_for_FailedCase;
  *
  * @enum {number}
  */
-export const FailedCase = _enum_for_FailedCase;
+export const FailedCase: typeof _enum_for_FailedCase = _enum_for_FailedCase;
 
 /**
  * @summary FailedCase_lineDisconnected
@@ -82,7 +82,7 @@ export const FailedCase = _enum_for_FailedCase;
  * @constant
  * @type {number}
  */
-export const FailedCase_lineDisconnected: FailedCase =
+export const FailedCase_lineDisconnected: _enum_for_FailedCase.lineDisconnected =
     FailedCase.lineDisconnected; /* LONG_NAMED_ENUMERATED_VALUE */
 
 /**
@@ -93,7 +93,7 @@ export const FailedCase_lineDisconnected: FailedCase =
  * @constant
  * @type {number}
  */
-export const lineDisconnected: FailedCase =
+export const lineDisconnected: _enum_for_FailedCase.lineDisconnected =
     FailedCase.lineDisconnected; /* SHORT_NAMED_ENUMERATED_VALUE */
 
 /**
@@ -104,7 +104,7 @@ export const lineDisconnected: FailedCase =
  * @constant
  * @type {number}
  */
-export const FailedCase_counterOverflow: FailedCase =
+export const FailedCase_counterOverflow: _enum_for_FailedCase.counterOverflow =
     FailedCase.counterOverflow; /* LONG_NAMED_ENUMERATED_VALUE */
 
 /**
@@ -115,14 +115,25 @@ export const FailedCase_counterOverflow: FailedCase =
  * @constant
  * @type {number}
  */
-export const counterOverflow: FailedCase =
+export const counterOverflow: _enum_for_FailedCase.counterOverflow =
     FailedCase.counterOverflow; /* SHORT_NAMED_ENUMERATED_VALUE */
 
 
-export const _decode_FailedCase = $._decodeEnumerated;
+export function _decode_FailedCase(el: _Element): FailedCase {
+    const enumerated = $._decodeEnumerated(el);
+    switch (enumerated) {
+        case FailedCase.lineDisconnected: return FailedCase.lineDisconnected;
+        case FailedCase.counterOverflow: return FailedCase.counterOverflow;
+        default:
+            throw new _ConstructionError(
+                'Invalid ENUMERATED value ' + enumerated + ' for FailedCase.',
+                el,
+            );
+    }
+}
 
 
-export const _encode_FailedCase = $._encodeEnumerated;
+export const _encode_FailedCase: $.ASN1Encoder<FailedCase> = $._encodeEnumerated as $.ASN1Encoder<FailedCase>;
 
 
 /* eslint-enable */

@@ -1,6 +1,6 @@
 /* eslint-disable */
 import {
-    ASN1Element as _Element,
+    type ASN1Element as _Element,
     ASN1TagClass as _TagClass,
     ASN1Construction as _Construction,
     ASN1UniversalType as _UniversalType,
@@ -34,7 +34,8 @@ const _enum_for_V8Diag_Item_v8Result = {
     v8NoNegAuto: 2,
 } as const;
 
-export type _enum_for_V8Diag_Item_v8Result = (typeof _enum_for_V8Diag_Item_v8Result)[keyof typeof _enum_for_V8Diag_Item_v8Result];
+export
+type _enum_for_V8Diag_Item_v8Result = (typeof _enum_for_V8Diag_Item_v8Result)[keyof typeof _enum_for_V8Diag_Item_v8Result];
 
 /**
  * @summary V8Diag_Item_v8Result
@@ -72,7 +73,7 @@ type V8Diag_Item_v8Result = _enum_for_V8Diag_Item_v8Result;
  * @enum {number}
  */
 export
-const V8Diag_Item_v8Result = _enum_for_V8Diag_Item_v8Result;
+const V8Diag_Item_v8Result: typeof _enum_for_V8Diag_Item_v8Result = _enum_for_V8Diag_Item_v8Result;
 
 /**
  * @summary V8Diag_Item_v8Result_v8ComNeg
@@ -83,7 +84,7 @@ const V8Diag_Item_v8Result = _enum_for_V8Diag_Item_v8Result;
  * @type {number}
  */
 export
-const V8Diag_Item_v8Result_v8ComNeg: V8Diag_Item_v8Result = V8Diag_Item_v8Result.v8ComNeg; /* LONG_NAMED_ENUMERATED_VALUE */
+const V8Diag_Item_v8Result_v8ComNeg: 0 = V8Diag_Item_v8Result.v8ComNeg; /* LONG_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary v8ComNeg
@@ -91,7 +92,7 @@ const V8Diag_Item_v8Result_v8ComNeg: V8Diag_Item_v8Result = V8Diag_Item_v8Result
  * @type {number}
  */
 export
-const v8ComNeg: V8Diag_Item_v8Result = V8Diag_Item_v8Result.v8ComNeg; /* SHORT_NAMED_ENUMERATED_VALUE */
+const v8ComNeg: 0 = V8Diag_Item_v8Result.v8ComNeg; /* SHORT_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary V8Diag_Item_v8Result_v8NoComNeg
@@ -102,7 +103,7 @@ const v8ComNeg: V8Diag_Item_v8Result = V8Diag_Item_v8Result.v8ComNeg; /* SHORT_N
  * @type {number}
  */
 export
-const V8Diag_Item_v8Result_v8NoComNeg: V8Diag_Item_v8Result = V8Diag_Item_v8Result.v8NoComNeg; /* LONG_NAMED_ENUMERATED_VALUE */
+const V8Diag_Item_v8Result_v8NoComNeg: 1 = V8Diag_Item_v8Result.v8NoComNeg; /* LONG_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary v8NoComNeg
@@ -110,7 +111,7 @@ const V8Diag_Item_v8Result_v8NoComNeg: V8Diag_Item_v8Result = V8Diag_Item_v8Resu
  * @type {number}
  */
 export
-const v8NoComNeg: V8Diag_Item_v8Result = V8Diag_Item_v8Result.v8NoComNeg; /* SHORT_NAMED_ENUMERATED_VALUE */
+const v8NoComNeg: 1 = V8Diag_Item_v8Result.v8NoComNeg; /* SHORT_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary V8Diag_Item_v8Result_v8NoNegAuto
@@ -122,7 +123,7 @@ const v8NoComNeg: V8Diag_Item_v8Result = V8Diag_Item_v8Result.v8NoComNeg; /* SHO
  * @type {number}
  */
 export
-const V8Diag_Item_v8Result_v8NoNegAuto: V8Diag_Item_v8Result = V8Diag_Item_v8Result.v8NoNegAuto; /* LONG_NAMED_ENUMERATED_VALUE */
+const V8Diag_Item_v8Result_v8NoNegAuto: 2 = V8Diag_Item_v8Result.v8NoNegAuto; /* LONG_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary v8NoNegAuto
@@ -130,8 +131,20 @@ const V8Diag_Item_v8Result_v8NoNegAuto: V8Diag_Item_v8Result = V8Diag_Item_v8Res
  * @type {number}
  */
 export
-const v8NoNegAuto: V8Diag_Item_v8Result = V8Diag_Item_v8Result.v8NoNegAuto; /* SHORT_NAMED_ENUMERATED_VALUE */
-export const _decode_V8Diag_Item_v8Result = $._decodeEnumerated as $.ASN1Decoder<V8Diag_Item_v8Result>;
-export const _encode_V8Diag_Item_v8Result = $._encodeEnumerated as $.ASN1Encoder<V8Diag_Item_v8Result>;
+const v8NoNegAuto: 2 = V8Diag_Item_v8Result.v8NoNegAuto; /* SHORT_NAMED_ENUMERATED_VALUE */
+export function _decode_V8Diag_Item_v8Result(el: _Element): V8Diag_Item_v8Result {
+    const enumerated = $._decodeEnumerated(el);
+    switch (enumerated) {
+        case V8Diag_Item_v8Result.v8ComNeg: return V8Diag_Item_v8Result.v8ComNeg;
+        case V8Diag_Item_v8Result.v8NoComNeg: return V8Diag_Item_v8Result.v8NoComNeg;
+        case V8Diag_Item_v8Result.v8NoNegAuto: return V8Diag_Item_v8Result.v8NoNegAuto;
+        default:
+            throw new _ConstructionError(
+                "Invalid ENUMERATED value " + enumerated + " for V8Diag_Item_v8Result.",
+                el,
+            );
+    }
+}
+export const _encode_V8Diag_Item_v8Result: $.ASN1Encoder<V8Diag_Item_v8Result> = $._encodeEnumerated as $.ASN1Encoder<V8Diag_Item_v8Result>;
 
 /* eslint-enable */

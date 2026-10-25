@@ -1,7 +1,7 @@
 /* eslint-disable */
 import {
-    OPTIONAL,
-    ASN1Element as _Element,
+    type OPTIONAL,
+    type ASN1Element as _Element,
     ASN1TagClass as _TagClass,
     ASN1Construction as _Construction,
     ASN1UniversalType as _UniversalType,
@@ -12,7 +12,7 @@ import {
 } from '@wildboar/asn1';
 import * as $ from '@wildboar/asn1/functional';
 import {
-    SequenceNumber,
+    type SequenceNumber,
     _decode_SequenceNumber,
     _encode_SequenceNumber,
 } from '../MSAbstractService/SequenceNumber.ta.mjs';
@@ -22,7 +22,7 @@ import {
     _encode_EntryInformation,
 } from '../MSAbstractService/EntryInformation.ta.mjs';
 import {
-    MSExtensions,
+    type MSExtensions,
     _decode_MSExtensions,
     _encode_MSExtensions,
 } from '../MSAbstractService/MSExtensions.ta.mjs';
@@ -47,26 +47,34 @@ import {
  *
  */
 export class ListResult {
+    /**
+     * @summary `next`.
+     * @public
+     * @readonly
+     */
+    public readonly next?: OPTIONAL<SequenceNumber>;
+    /**
+     * @summary `requested`.
+     * @public
+     * @readonly
+     */
+    public readonly requested?: OPTIONAL<EntryInformation[]>;
+    /**
+     * @summary `list_result_extensions`.
+     * @public
+     * @readonly
+     */
+    public readonly list_result_extensions?: OPTIONAL<MSExtensions>;
+
     constructor(
-        /**
-         * @summary `next`.
-         * @public
-         * @readonly
-         */
-        readonly next?: OPTIONAL<SequenceNumber>,
-        /**
-         * @summary `requested`.
-         * @public
-         * @readonly
-         */
-        readonly requested?: OPTIONAL<EntryInformation[]>,
-        /**
-         * @summary `list_result_extensions`.
-         * @public
-         * @readonly
-         */
-        readonly list_result_extensions?: OPTIONAL<MSExtensions>
-    ) {}
+        next?: OPTIONAL<SequenceNumber>,
+        requested?: OPTIONAL<EntryInformation[]>,
+        list_result_extensions?: OPTIONAL<MSExtensions>
+    ) {
+        this.next = next;
+        this.requested = requested;
+        this.list_result_extensions = list_result_extensions;
+    }
 
     /**
      * @summary Restructures an object into a ListResult

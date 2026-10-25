@@ -1,10 +1,10 @@
 /* eslint-disable */
 import {
-    OPTIONAL,
-    BOOLEAN,
+    type OPTIONAL,
+    type BOOLEAN,
     TRUE,
     TRUE_BIT,
-    ASN1Element as _Element,
+    type ASN1Element as _Element,
     ASN1TagClass as _TagClass,
     ASN1Construction as _Construction,
     ASN1UniversalType as _UniversalType,
@@ -14,8 +14,8 @@ import {
     ASN1ConstructionError as _ConstructionError,
 } from "@wildboar/asn1";
 import * as $ from "@wildboar/asn1/functional";
-import { Restriction_source_type, Restriction_source_type_originated_by /* IMPORTED_LONG_NAMED_BIT */, Restriction_source_type_redirected_by /* IMPORTED_LONG_NAMED_BIT */, Restriction_source_type_dl_expanded_by /* IMPORTED_LONG_NAMED_BIT */, _decode_Restriction_source_type, _encode_Restriction_source_type } from "../MTSAbstractService/Restriction-source-type.ta.mjs";
-import { ExactOrPattern, _decode_ExactOrPattern, _encode_ExactOrPattern } from "../MTSAbstractService/ExactOrPattern.ta.mjs";
+import { type Restriction_source_type, Restriction_source_type_originated_by /* IMPORTED_LONG_NAMED_BIT */, Restriction_source_type_redirected_by /* IMPORTED_LONG_NAMED_BIT */, Restriction_source_type_dl_expanded_by /* IMPORTED_LONG_NAMED_BIT */, _decode_Restriction_source_type, _encode_Restriction_source_type } from "../MTSAbstractService/Restriction-source-type.ta.mjs";
+import { type ExactOrPattern, _decode_ExactOrPattern, _encode_ExactOrPattern } from "../MTSAbstractService/ExactOrPattern.ta.mjs";
 /**
  * @summary Restriction
  * @description
@@ -37,26 +37,34 @@ import { ExactOrPattern, _decode_ExactOrPattern, _encode_ExactOrPattern } from "
  */
 export
 class Restriction {
+    /**
+     * @summary `permitted`.
+     * @public
+     * @readonly
+     */
+    public readonly permitted?: OPTIONAL<BOOLEAN>;
+    /**
+     * @summary `source_type`.
+     * @public
+     * @readonly
+     */
+    public readonly source_type?: OPTIONAL<Restriction_source_type>;
+    /**
+     * @summary `source_name`.
+     * @public
+     * @readonly
+     */
+    public readonly source_name?: OPTIONAL<ExactOrPattern>;
+
     constructor (
-        /**
-         * @summary `permitted`.
-         * @public
-         * @readonly
-         */
-        readonly permitted?: OPTIONAL<BOOLEAN>,
-        /**
-         * @summary `source_type`.
-         * @public
-         * @readonly
-         */
-        readonly source_type?: OPTIONAL<Restriction_source_type>,
-        /**
-         * @summary `source_name`.
-         * @public
-         * @readonly
-         */
-        readonly source_name?: OPTIONAL<ExactOrPattern>
-    ) {}
+        permitted?: OPTIONAL<BOOLEAN>,
+        source_type?: OPTIONAL<Restriction_source_type>,
+        source_name?: OPTIONAL<ExactOrPattern>
+    ) {
+        this.permitted = permitted;
+        this.source_type = source_type;
+        this.source_name = source_name;
+    }
 
     /**
      * @summary Restructures an object into a Restriction

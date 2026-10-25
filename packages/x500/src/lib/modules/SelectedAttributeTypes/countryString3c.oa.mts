@@ -1,7 +1,7 @@
 /* eslint-disable */
 import { type SYNTAX_NAME } from "../InformationFramework/SYNTAX-NAME.oca.mjs";
 import {
-    CountryCode3c,
+    type CountryCode3c,
     _decode_CountryCode3c,
     _encode_CountryCode3c,
 } from "../SelectedAttributeTypes/CountryCode3c.ta.mjs";

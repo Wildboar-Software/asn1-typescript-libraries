@@ -1,7 +1,7 @@
 /* eslint-disable */
 import {
-    OPTIONAL,
-    ASN1Element as _Element,
+    type OPTIONAL,
+    type ASN1Element as _Element,
     ASN1TagClass as _TagClass,
     ASN1Construction as _Construction,
     ASN1UniversalType as _UniversalType,
@@ -11,7 +11,7 @@ import {
     ASN1ConstructionError as _ConstructionError,
 } from "@wildboar/asn1";
 import * as $ from "@wildboar/asn1/functional";
-import { Cause, _decode_Cause, _encode_Cause } from "../Core-INAP-CS1-DataTypes/Cause.ta.mjs";
+import { type Cause, _decode_Cause, _encode_Cause } from "../Core-INAP-CS1-DataTypes/Cause.ta.mjs";
 
 
 /**
@@ -31,14 +31,18 @@ import { Cause, _decode_Cause, _encode_Cause } from "../Core-INAP-CS1-DataTypes/
  */
 export
 class EventSpecificInformationBCSM_routeSelectFailureSpecificInfo {
+    /**
+     * @summary `failureCause`.
+     * @public
+     * @readonly
+     */
+    public readonly failureCause?: OPTIONAL<Cause>;
+
     constructor (
-        /**
-         * @summary `failureCause`.
-         * @public
-         * @readonly
-         */
-        readonly failureCause?: OPTIONAL<Cause>
-    ) {}
+        failureCause?: OPTIONAL<Cause>
+    ) {
+        this.failureCause = failureCause;
+    }
 
     /**
      * @summary Restructures an object into a EventSpecificInformationBCSM_routeSelectFailureSpecificInfo

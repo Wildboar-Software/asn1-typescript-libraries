@@ -1,7 +1,7 @@
 /* eslint-disable */
 import {
-    ENUMERATED,
-    ASN1Element as _Element,
+    type ENUMERATED,
+    type ASN1Element as _Element,
     ASN1TagClass as _TagClass,
     ASN1Construction as _Construction,
     ASN1UniversalType as _UniversalType,
@@ -40,7 +40,7 @@ export type ResetError = _enum_for_ResetError | ENUMERATED;
  * @constant
  * @type {number}
  */
-export const ResetError_resetFail: ResetError = 0; /* LONG_NAMED_ENUMERATED_VALUE */
+export const ResetError_resetFail: _enum_for_ResetError.resetFail = _enum_for_ResetError.resetFail; /* LONG_NAMED_ENUMERATED_VALUE */
 
 
 /**
@@ -48,7 +48,7 @@ export const ResetError_resetFail: ResetError = 0; /* LONG_NAMED_ENUMERATED_VALU
  * @constant
  * @type {number}
  */
-export const resetFail: ResetError = ResetError_resetFail; /* SHORT_NAMED_ENUMERATED_VALUE */
+export const resetFail: _enum_for_ResetError.resetFail = ResetError_resetFail; /* SHORT_NAMED_ENUMERATED_VALUE */
 
 
 /**
@@ -56,7 +56,7 @@ export const resetFail: ResetError = ResetError_resetFail; /* SHORT_NAMED_ENUMER
  * @constant
  * @type {number}
  */
-export const ResetError_entityInService: ResetError = 1; /* LONG_NAMED_ENUMERATED_VALUE */
+export const ResetError_entityInService: _enum_for_ResetError.entityInService = _enum_for_ResetError.entityInService; /* LONG_NAMED_ENUMERATED_VALUE */
 
 
 /**
@@ -64,17 +64,17 @@ export const ResetError_entityInService: ResetError = 1; /* LONG_NAMED_ENUMERATE
  * @constant
  * @type {number}
  */
-export const entityInService: ResetError = ResetError_entityInService; /* SHORT_NAMED_ENUMERATED_VALUE */
+export const entityInService: _enum_for_ResetError.entityInService = ResetError_entityInService; /* SHORT_NAMED_ENUMERATED_VALUE */
 
 
 
 
-export const _decode_ResetError = $._decodeEnumerated;
+export const _decode_ResetError: $.ASN1Decoder<number> = $._decodeEnumerated;
 
 
 
 
-export const _encode_ResetError = $._encodeEnumerated;
+export const _encode_ResetError: $.ASN1Encoder<number> = $._encodeEnumerated;
 
 
 /* eslint-enable */

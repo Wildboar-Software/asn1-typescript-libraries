@@ -1,6 +1,6 @@
 /* eslint-disable */
 import {
-    ASN1Element as _Element,
+    type ASN1Element as _Element,
     ASN1TagClass as _TagClass,
     ASN1Construction as _Construction,
     ASN1UniversalType as _UniversalType,
@@ -29,22 +29,13 @@ import {
  */
 export type ReturnedIPMField = IPM; // DefinedType
 
-let _cached_decoder_for_ReturnedIPMField: $.ASN1Decoder<ReturnedIPMField> | null = null;
-
 /**
  * @summary Decodes an ASN.1 element into a(n) ReturnedIPMField
  * @function
  * @param {_Element} el The element being decoded.
  * @returns {ReturnedIPMField} The decoded data structure.
  */
-export function _decode_ReturnedIPMField(el: _Element): ReturnedIPMField {
-    if (!_cached_decoder_for_ReturnedIPMField) {
-        _cached_decoder_for_ReturnedIPMField = _decode_IPM;
-    }
-    return _cached_decoder_for_ReturnedIPMField(el);
-}
-
-let _cached_encoder_for_ReturnedIPMField: $.ASN1Encoder<ReturnedIPMField> | null = null;
+export const _decode_ReturnedIPMField: $.ASN1Decoder<ReturnedIPMField> = _decode_IPM;
 
 /**
  * @summary Encodes a(n) ReturnedIPMField into an ASN.1 Element.
@@ -53,15 +44,7 @@ let _cached_encoder_for_ReturnedIPMField: $.ASN1Encoder<ReturnedIPMField> | null
  * @param elGetter A function that can be used to get new ASN.1 elements.
  * @returns {_Element} The ReturnedIPMField, encoded as an ASN.1 Element.
  */
-export function _encode_ReturnedIPMField(
-    value: ReturnedIPMField,
-    elGetter: $.ASN1Encoder<ReturnedIPMField>
-): _Element {
-    if (!_cached_encoder_for_ReturnedIPMField) {
-        _cached_encoder_for_ReturnedIPMField = _encode_IPM;
-    }
-    return _cached_encoder_for_ReturnedIPMField(value, elGetter);
-}
+export const _encode_ReturnedIPMField: $.ASN1Encoder<ReturnedIPMField> = _encode_IPM;
 
 
 /* eslint-enable */

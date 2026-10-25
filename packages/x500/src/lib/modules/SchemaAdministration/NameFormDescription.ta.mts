@@ -1,10 +1,10 @@
 /* eslint-disable */
 import {
-    ASN1Element as _Element,
+    type ASN1Element as _Element,
     ASN1TagClass as _TagClass,
-    BOOLEAN,
-    OBJECT_IDENTIFIER,
-    OPTIONAL,
+    type BOOLEAN,
+    type OBJECT_IDENTIFIER,
+    type OPTIONAL,
 } from "@wildboar/asn1";
 import * as $ from "@wildboar/asn1/functional";
 import {
@@ -13,7 +13,7 @@ import {
     _encode_NameFormInformation,
 } from "../SchemaAdministration/NameFormInformation.ta.mjs";
 import {
-    UnboundedDirectoryString,
+    type UnboundedDirectoryString,
     _decode_UnboundedDirectoryString,
     _encode_UnboundedDirectoryString,
 } from "../SelectedAttributeTypes/UnboundedDirectoryString.ta.mjs";
@@ -34,7 +34,7 @@ import {
  * NameFormDescription ::= SEQUENCE {
  *   identifier        NAME-FORM.&id,
  *   name              SET SIZE (1..MAX) OF UnboundedDirectoryString OPTIONAL,
- *   description       UnboundedDirectoryString                      OPTIONAL,
+ *   description       UnboundedDirectoryString                      type OPTIONAL,
  *   obsolete          BOOLEAN                                       DEFAULT FALSE,
  *   information  [0]  NameFormInformation,
  *   ... }

@@ -1,6 +1,6 @@
 /* eslint-disable */
 import {
-  GeneralizedTime,
+  type GeneralizedTime,
   ASN1Element as _Element,
   ASN1TagClass as _TagClass,
   ASN1Construction as _Construction,
@@ -32,12 +32,12 @@ export type KerberosTime = GeneralizedTime; // GeneralizedTime
 
 
 
-export const _decode_KerberosTime = $._decodeGeneralizedTime;
+export const _decode_KerberosTime: $.ASN1Decoder<Date> = $._decodeGeneralizedTime;
 
 
 
 
-export const _encode_KerberosTime = $._encodeGeneralizedTime;
+export const _encode_KerberosTime: $.ASN1Encoder<Date> = $._encodeGeneralizedTime;
 
 
 /* eslint-enable */

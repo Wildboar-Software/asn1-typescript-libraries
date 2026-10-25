@@ -1,7 +1,7 @@
 /* eslint-disable */
 import {
-    OPTIONAL,
-    ASN1Element as _Element,
+    type OPTIONAL,
+    type ASN1Element as _Element,
     ASN1TagClass as _TagClass,
     ASN1Construction as _Construction,
     ASN1UniversalType as _UniversalType,
@@ -48,26 +48,34 @@ import { type Code, _encode_Code, _decode_Code } from "@wildboar/rose";
  */
 export
 class ExtensionField {
+    /**
+     * @summary `type_`.
+     * @public
+     * @readonly
+     */
+    public readonly type_: Code;
+    /**
+     * @summary `criticality`.
+     * @public
+     * @readonly
+     */
+    public readonly criticality: OPTIONAL<CriticalityType>;
+    /**
+     * @summary `value`.
+     * @public
+     * @readonly
+     */
+    public readonly value: _Element;
+
     constructor (
-        /**
-         * @summary `type_`.
-         * @public
-         * @readonly
-         */
-        readonly type_: Code,
-        /**
-         * @summary `criticality`.
-         * @public
-         * @readonly
-         */
-        readonly criticality: OPTIONAL<CriticalityType>,
-        /**
-         * @summary `value`.
-         * @public
-         * @readonly
-         */
-        readonly value: _Element
-    ) {}
+        type_: Code,
+        criticality: OPTIONAL<CriticalityType>,
+        value: _Element
+    ) {
+        this.type_ = type_;
+        this.criticality = criticality;
+        this.value = value;
+    }
 
     /**
      * @summary Restructures an object into a ExtensionField
@@ -91,13 +99,13 @@ class ExtensionField {
      * @static
      * @method
      */
-    public static get _default_value_for_criticality () { return CriticalityType_ignore; }        /**
+    public static get _default_value_for_criticality (): _enum_for_CriticalityType.ignore { return CriticalityType_ignore; }        /**
          * @summary The enum used as the type of the component `criticality`
          * @public
          * @static
          */
 
-    public static _enum_for_criticality = _enum_for_CriticalityType;
+    public static _enum_for_criticality: typeof _enum_for_CriticalityType = _enum_for_CriticalityType;
 }
 
 /**

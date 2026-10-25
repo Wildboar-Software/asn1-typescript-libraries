@@ -1,7 +1,7 @@
 /* eslint-disable */
 import {
-    NULL,
-    ASN1Element as _Element,
+    type NULL,
+    type ASN1Element as _Element,
     ASN1TagClass as _TagClass,
     ASN1Construction as _Construction,
     ASN1UniversalType as _UniversalType,
@@ -28,12 +28,12 @@ export type None = NULL; // NullType
 
 
 
-export const _decode_None = $._decodeNull;
+export const _decode_None: $.ASN1Decoder<null> = $._decodeNull;
 
 
 
 
-export const _encode_None = $._encodeNull;
+export const _encode_None: $.ASN1Encoder<null> = $._encodeNull;
 
 
 /* eslint-enable */

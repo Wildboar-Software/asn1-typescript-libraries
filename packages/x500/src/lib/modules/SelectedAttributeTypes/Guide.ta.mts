@@ -1,13 +1,13 @@
 /* eslint-disable */
 import {
-    ASN1Element as _Element,
+    type ASN1Element as _Element,
     ASN1TagClass as _TagClass,
-    OBJECT_IDENTIFIER,
-    OPTIONAL,
+    type OBJECT_IDENTIFIER,
+    type OPTIONAL,
 } from "@wildboar/asn1";
 import * as $ from "@wildboar/asn1/functional";
 import {
-    Criteria,
+    type Criteria,
     _decode_Criteria,
     _encode_Criteria,
 } from "../SelectedAttributeTypes/Criteria.ta.mjs";
@@ -29,34 +29,42 @@ import {
  *
  */
 export class Guide {
+    /**
+     * @summary `objectClass`.
+     * @description
+     *
+     * OPTIONAL; omitted ⇒ not class-specific.
+     *
+     * @public
+     * @readonly
+     */
+    public readonly objectClass: OPTIONAL<OBJECT_IDENTIFIER>;
+    /**
+     * @summary `criteria`.
+     * @description
+     *
+     * Attribute types only; DUA supplies values.
+     *
+     * @public
+     * @readonly
+     */
+    public readonly criteria: Criteria;
+    /**
+     * @summary Extensions that are not recognized.
+     * @public
+     * @readonly
+     */
+    public readonly _unrecognizedExtensionsList: _Element[];
+
     constructor(
-        /**
-         * @summary `objectClass`.
-         * @description
-         *
-         * OPTIONAL; omitted ⇒ not class-specific.
-         *
-         * @public
-         * @readonly
-         */
-        readonly objectClass: OPTIONAL<OBJECT_IDENTIFIER>,
-        /**
-         * @summary `criteria`.
-         * @description
-         *
-         * Attribute types only; DUA supplies values.
-         *
-         * @public
-         * @readonly
-         */
-        readonly criteria: Criteria,
-        /**
-         * @summary Extensions that are not recognized.
-         * @public
-         * @readonly
-         */
-        readonly _unrecognizedExtensionsList: _Element[] = []
-    ) {}
+        objectClass: OPTIONAL<OBJECT_IDENTIFIER>,
+        criteria: Criteria,
+        _unrecognizedExtensionsList: _Element[] = []
+    ) {
+        this.objectClass = objectClass;
+        this.criteria = criteria;
+        this._unrecognizedExtensionsList = _unrecognizedExtensionsList;
+    }
 
     /**
      * @summary Restructures an object into a Guide

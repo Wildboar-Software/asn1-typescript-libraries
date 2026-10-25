@@ -76,7 +76,7 @@ export type AdjacencyUsage = _enum_for_AdjacencyUsage;
  *
  * @enum {number}
  */
-export const AdjacencyUsage = _enum_for_AdjacencyUsage;
+export const AdjacencyUsage: typeof _enum_for_AdjacencyUsage = _enum_for_AdjacencyUsage;
 
 /**
  * @summary AdjacencyUsage_undefined
@@ -89,7 +89,7 @@ export const AdjacencyUsage = _enum_for_AdjacencyUsage;
  * @constant
  * @type {number}
  */
-export const AdjacencyUsage_undefined: AdjacencyUsage =
+export const AdjacencyUsage_undefined: 0 =
   AdjacencyUsage.undefined; /* LONG_NAMED_ENUMERATED_VALUE */
 
 /**
@@ -97,7 +97,7 @@ export const AdjacencyUsage_undefined: AdjacencyUsage =
  * @constant
  * @type {number}
  */
-export const undefined: AdjacencyUsage =
+export const undefined: 0 =
   AdjacencyUsage.undefined; /* SHORT_NAMED_ENUMERATED_VALUE */
 
 /**
@@ -111,7 +111,7 @@ export const undefined: AdjacencyUsage =
  * @constant
  * @type {number}
  */
-export const AdjacencyUsage_level1: AdjacencyUsage =
+export const AdjacencyUsage_level1: 1 =
   AdjacencyUsage.level1; /* LONG_NAMED_ENUMERATED_VALUE */
 
 /**
@@ -119,7 +119,7 @@ export const AdjacencyUsage_level1: AdjacencyUsage =
  * @constant
  * @type {number}
  */
-export const level1: AdjacencyUsage =
+export const level1: 1 =
   AdjacencyUsage.level1; /* SHORT_NAMED_ENUMERATED_VALUE */
 
 /**
@@ -133,7 +133,7 @@ export const level1: AdjacencyUsage =
  * @constant
  * @type {number}
  */
-export const AdjacencyUsage_level2: AdjacencyUsage =
+export const AdjacencyUsage_level2: 2 =
   AdjacencyUsage.level2; /* LONG_NAMED_ENUMERATED_VALUE */
 
 /**
@@ -141,7 +141,7 @@ export const AdjacencyUsage_level2: AdjacencyUsage =
  * @constant
  * @type {number}
  */
-export const level2: AdjacencyUsage =
+export const level2: 2 =
   AdjacencyUsage.level2; /* SHORT_NAMED_ENUMERATED_VALUE */
 
 /**
@@ -155,7 +155,7 @@ export const level2: AdjacencyUsage =
  * @constant
  * @type {number}
  */
-export const AdjacencyUsage_level1and2: AdjacencyUsage =
+export const AdjacencyUsage_level1and2: 3 =
   AdjacencyUsage.level1and2; /* LONG_NAMED_ENUMERATED_VALUE */
 
 /**
@@ -163,14 +163,27 @@ export const AdjacencyUsage_level1and2: AdjacencyUsage =
  * @constant
  * @type {number}
  */
-export const level1and2: AdjacencyUsage =
+export const level1and2: 3 =
   AdjacencyUsage.level1and2; /* SHORT_NAMED_ENUMERATED_VALUE */
 
 
-export const _decode_AdjacencyUsage = $._decodeEnumerated as $.ASN1Decoder<AdjacencyUsage>;
+export function _decode_AdjacencyUsage(el: _Element): AdjacencyUsage {
+  const enumerated = $._decodeEnumerated(el);
+  switch (enumerated) {
+    case AdjacencyUsage.undefined: return AdjacencyUsage.undefined;
+    case AdjacencyUsage.level1: return AdjacencyUsage.level1;
+    case AdjacencyUsage.level2: return AdjacencyUsage.level2;
+    case AdjacencyUsage.level1and2: return AdjacencyUsage.level1and2;
+    default:
+      throw new _ConstructionError(
+        'Invalid ENUMERATED value ' + enumerated + ' for AdjacencyUsage.',
+        el,
+      );
+  }
+}
 
 
-export const _encode_AdjacencyUsage = $._encodeEnumerated as $.ASN1Encoder<AdjacencyUsage>;
+export const _encode_AdjacencyUsage: $.ASN1Encoder<AdjacencyUsage> = $._encodeEnumerated as $.ASN1Encoder<AdjacencyUsage>;
 
 
 /* eslint-enable */

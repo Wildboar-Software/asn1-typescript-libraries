@@ -1,8 +1,8 @@
 /* eslint-disable */
 import {
-    NULL,
-    OPTIONAL,
-    ASN1Element as _Element,
+    type NULL,
+    type OPTIONAL,
+    type ASN1Element as _Element,
     ASN1TagClass as _TagClass
 } from "@wildboar/asn1";
 import * as $ from "@wildboar/asn1/functional";
@@ -22,10 +22,10 @@ import { ExtensionContainer, _decode_ExtensionContainer, _encode_ExtensionContai
  * 
  * ```asn1
  * ExtensibleCallBarredParam ::= SEQUENCE {
- *     callBarringCause    CallBarringCause    OPTIONAL,
- *     extensionContainer    ExtensionContainer    OPTIONAL,
+ *     callBarringCause    CallBarringCause    type OPTIONAL,
+ *     extensionContainer    ExtensionContainer    type OPTIONAL,
  *     ... ,
- *     unauthorisedMessageOriginator    [1] NULL    OPTIONAL,
+ *     unauthorisedMessageOriginator    [1] NULL    type OPTIONAL,
  *     anonymousCallRejection    [2] NULL    OPTIONAL }
  * ```
  * 
@@ -33,55 +33,67 @@ import { ExtensionContainer, _decode_ExtensionContainer, _encode_ExtensionContai
  */
 export
 class ExtensibleCallBarredParam {
+    /**
+     * @summary `callBarringCause`.
+     * @description
+     *
+     * Subscriber barring service active, or operator barring (3GPP TS
+     * 29.002 V19.1.0 clause 7.6.1.4).
+     *
+     * @public
+     * @readonly
+     */
+    public readonly callBarringCause?: OPTIONAL<CallBarringCause>;
+    /**
+     * @summary `extensionContainer`.
+     * @public
+     * @readonly
+     */
+    public readonly extensionContainer?: OPTIONAL<ExtensionContainer>;
+    /**
+     * @summary `unauthorisedMessageOriginator`.
+     * @description
+     *
+     * Barring of Mobile Terminating Short Message due to "Unauthorised
+     * Message Originator". Mutually exclusive with `anonymousCallRejection`
+     * (3GPP TS 29.002 V19.1.0 clauses 7.6.1.4 and 17.7.7).
+     *
+     * @public
+     * @readonly
+     */
+    public readonly unauthorisedMessageOriginator?: OPTIONAL<NULL>;
+    /**
+     * @summary `anonymousCallRejection`.
+     * @description
+     *
+     * Call rejected due to the ACR supplementary service. Mutually
+     * exclusive with `unauthorisedMessageOriginator` (3GPP TS 29.002
+     * V19.1.0 clauses 7.6.1.4 and 17.7.7).
+     *
+     * @public
+     * @readonly
+     */
+    public readonly anonymousCallRejection?: OPTIONAL<NULL>;
+    /**
+     * @summary Extensions that are not recognized.
+     * @public
+     * @readonly
+     */
+    public readonly _unrecognizedExtensionsList: _Element[];
+
     constructor (
-        /**
-         * @summary `callBarringCause`.
-         * @description
-         *
-         * Subscriber barring service active, or operator barring (3GPP TS
-         * 29.002 V19.1.0 clause 7.6.1.4).
-         *
-         * @public
-         * @readonly
-         */
-        readonly callBarringCause?: OPTIONAL<CallBarringCause>,
-        /**
-         * @summary `extensionContainer`.
-         * @public
-         * @readonly
-         */
-        readonly extensionContainer?: OPTIONAL<ExtensionContainer>,
-        /**
-         * @summary `unauthorisedMessageOriginator`.
-         * @description
-         *
-         * Barring of Mobile Terminating Short Message due to "Unauthorised
-         * Message Originator". Mutually exclusive with `anonymousCallRejection`
-         * (3GPP TS 29.002 V19.1.0 clauses 7.6.1.4 and 17.7.7).
-         *
-         * @public
-         * @readonly
-         */
-        readonly unauthorisedMessageOriginator?: OPTIONAL<NULL>,
-        /**
-         * @summary `anonymousCallRejection`.
-         * @description
-         *
-         * Call rejected due to the ACR supplementary service. Mutually
-         * exclusive with `unauthorisedMessageOriginator` (3GPP TS 29.002
-         * V19.1.0 clauses 7.6.1.4 and 17.7.7).
-         *
-         * @public
-         * @readonly
-         */
-        readonly anonymousCallRejection?: OPTIONAL<NULL>,
-        /**
-         * @summary Extensions that are not recognized.
-         * @public
-         * @readonly
-         */
-        readonly _unrecognizedExtensionsList: _Element[] = []
-    ) {}
+        callBarringCause?: OPTIONAL<CallBarringCause>,
+        extensionContainer?: OPTIONAL<ExtensionContainer>,
+        unauthorisedMessageOriginator?: OPTIONAL<NULL>,
+        anonymousCallRejection?: OPTIONAL<NULL>,
+        _unrecognizedExtensionsList: _Element[] = []
+    ) {
+        this.callBarringCause = callBarringCause;
+        this.extensionContainer = extensionContainer;
+        this.unauthorisedMessageOriginator = unauthorisedMessageOriginator;
+        this.anonymousCallRejection = anonymousCallRejection;
+        this._unrecognizedExtensionsList = _unrecognizedExtensionsList;
+    }
 
     /**
      * @summary Restructures an object into a ExtensibleCallBarredParam
@@ -105,7 +117,7 @@ class ExtensibleCallBarredParam {
          * @static
          */
 
-    public static _enum_for_callBarringCause = _enum_for_CallBarringCause;
+    public static _enum_for_callBarringCause: typeof _enum_for_CallBarringCause = _enum_for_CallBarringCause;
 }
 
 /**

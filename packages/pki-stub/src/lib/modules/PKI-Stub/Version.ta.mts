@@ -1,7 +1,7 @@
 /* eslint-disable */
 import {
-    INTEGER,
-    ASN1Element as _Element,
+    type INTEGER,
+    type ASN1Element as _Element,
     ASN1TagClass as _TagClass,
     ASN1Construction as _Construction,
     ASN1UniversalType as _UniversalType,
@@ -36,42 +36,42 @@ export type Version = INTEGER;
  * @constant
  * @type {number}
  */
-export const Version_v1: Version = 0; /* LONG_NAMED_INTEGER_VALUE */
+export const Version_v1: 0 = 0 satisfies Version; /* LONG_NAMED_INTEGER_VALUE */
 
 /**
  * @summary Version_v1
  * @constant
  * @type {number}
  */
-export const v1: Version = Version_v1; /* SHORT_NAMED_INTEGER_VALUE */
+export const v1: 0 = Version_v1; /* SHORT_NAMED_INTEGER_VALUE */
 
 /**
  * @summary Version_v2
  * @constant
  * @type {number}
  */
-export const Version_v2: Version = 1; /* LONG_NAMED_INTEGER_VALUE */
+export const Version_v2: 1 = 1 satisfies Version; /* LONG_NAMED_INTEGER_VALUE */
 
 /**
  * @summary Version_v2
  * @constant
  * @type {number}
  */
-export const v2: Version = Version_v2; /* SHORT_NAMED_INTEGER_VALUE */
+export const v2: 1 = Version_v2; /* SHORT_NAMED_INTEGER_VALUE */
 
 /**
  * @summary Version_v3
  * @constant
  * @type {number}
  */
-export const Version_v3: Version = 2; /* LONG_NAMED_INTEGER_VALUE */
+export const Version_v3: 2 = 2 satisfies Version; /* LONG_NAMED_INTEGER_VALUE */
 
 /**
  * @summary Version_v3
  * @constant
  * @type {number}
  */
-export const v3: Version = Version_v3; /* SHORT_NAMED_INTEGER_VALUE */
+export const v3: 2 = Version_v3; /* SHORT_NAMED_INTEGER_VALUE */
 
 /**
  * @summary Decodes an ASN.1 element into a(n) Version

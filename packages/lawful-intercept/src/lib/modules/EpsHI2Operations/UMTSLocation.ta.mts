@@ -1,6 +1,6 @@
 /* eslint-disable */
 import {
-    ASN1Element as _Element,
+    type ASN1Element as _Element,
     ASN1TagClass as _TagClass
 } from "@wildboar/asn1";
 import * as $ from "@wildboar/asn1/functional";
@@ -8,7 +8,7 @@ import { GA_Point, _decode_GA_Point, _encode_GA_Point } from "../EpsHI2Operation
 // export { GA_Point, _decode_GA_Point, _encode_GA_Point } from "../EpsHI2Operations/GA-Point.ta.mjs";
 import { GA_PointWithUnCertainty, _decode_GA_PointWithUnCertainty, _encode_GA_PointWithUnCertainty } from "../EpsHI2Operations/GA-PointWithUnCertainty.ta.mjs";
 // export { GA_PointWithUnCertainty, _decode_GA_PointWithUnCertainty, _encode_GA_PointWithUnCertainty } from "../EpsHI2Operations/GA-PointWithUnCertainty.ta.mjs";
-import { GA_Polygon, _decode_GA_Polygon, _encode_GA_Polygon } from "../EpsHI2Operations/GA-Polygon.ta.mjs";
+import { type GA_Polygon, _decode_GA_Polygon, _encode_GA_Polygon } from "../EpsHI2Operations/GA-Polygon.ta.mjs";
 // export { GA_Polygon, _decode_GA_Polygon, _encode_GA_Polygon } from "../EpsHI2Operations/GA-Polygon.ta.mjs";
 
 

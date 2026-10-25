@@ -1,6 +1,6 @@
 /* eslint-disable */
 import {
-    ASN1Element as _Element,
+    type ASN1Element as _Element,
     ASN1TagClass as _TagClass,
     ASN1Construction as _Construction,
     ASN1UniversalType as _UniversalType,
@@ -10,8 +10,8 @@ import {
     ASN1ConstructionError as _ConstructionError,
 } from "@wildboar/asn1";
 import * as $ from "@wildboar/asn1/functional";
-import { AttrId, _decode_AttrId, _encode_AttrId } from "../ISO9041-VTP/AttrId.ta.mjs";
-import { LogAttrExtent, _decode_LogAttrExtent, _encode_LogAttrExtent } from "../ISO9041-VTP/LogAttrExtent.ta.mjs";
+import { type AttrId, _decode_AttrId, _encode_AttrId } from "../ISO9041-VTP/AttrId.ta.mjs";
+import { type LogAttrExtent, _decode_LogAttrExtent, _encode_LogAttrExtent } from "../ISO9041-VTP/LogAttrExtent.ta.mjs";
 
 
 /**
@@ -35,26 +35,32 @@ import { LogAttrExtent, _decode_LogAttrExtent, _encode_LogAttrExtent } from "../
  */
 export
 class DOupdate_writeLogAttr {
+    /**
+     * @summary `attributeId`.
+     * @description
+     * Both attribute-id and attribute-value.
+     * ISO/IEC 9040:1997 §19.4.2; ISO/IEC 9041-1:1997 §12.1.
+     * @public
+     * @readonly
+     */
+    public readonly attributeId: AttrId;
+    /**
+     * @summary `logAttrExtent`.
+     * @description
+     * global, address or modal logical extent.
+     * ISO/IEC 9040:1997 §19.4.2.
+     * @public
+     * @readonly
+     */
+    public readonly logAttrExtent: LogAttrExtent;
+
     constructor (
-        /**
-         * @summary `attributeId`.
-         * @description
-         * Both attribute-id and attribute-value.
-         * ISO/IEC 9040:1997 §19.4.2; ISO/IEC 9041-1:1997 §12.1.
-         * @public
-         * @readonly
-         */
-        readonly attributeId: AttrId,
-        /**
-         * @summary `logAttrExtent`.
-         * @description
-         * global, address or modal logical extent.
-         * ISO/IEC 9040:1997 §19.4.2.
-         * @public
-         * @readonly
-         */
-        readonly logAttrExtent: LogAttrExtent
-    ) {}
+        attributeId: AttrId,
+        logAttrExtent: LogAttrExtent
+    ) {
+        this.attributeId = attributeId;
+        this.logAttrExtent = logAttrExtent;
+    }
 
     /**
      * @summary Restructures an object into a DOupdate_writeLogAttr

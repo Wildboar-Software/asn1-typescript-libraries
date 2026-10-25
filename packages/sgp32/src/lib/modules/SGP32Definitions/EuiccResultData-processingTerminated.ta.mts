@@ -1,7 +1,7 @@
 /* eslint-disable */
 import {
-    ASN1Element as _Element,
-    INTEGER
+    type ASN1Element as _Element,
+    type INTEGER
 } from "@wildboar/asn1";
 import * as $ from "@wildboar/asn1/functional";
 
@@ -41,7 +41,7 @@ type EuiccResultData_processingTerminated = INTEGER;
  * large Profile icons as an example.
  */
 export
-const EuiccResultData_processingTerminated_resultSizeOverflow: EuiccResultData_processingTerminated = 1; /* LONG_NAMED_INTEGER_VALUE */
+const EuiccResultData_processingTerminated_resultSizeOverflow: 1 = 1 satisfies EuiccResultData_processingTerminated; /* LONG_NAMED_INTEGER_VALUE */
 
 /**
  * @summary EuiccResultData_processingTerminated_resultSizeOverflow
@@ -52,7 +52,7 @@ const EuiccResultData_processingTerminated_resultSizeOverflow: EuiccResultData_p
  * section 5.9.1).
  */
 export
-const resultSizeOverflow: EuiccResultData_processingTerminated = EuiccResultData_processingTerminated_resultSizeOverflow; /* SHORT_NAMED_INTEGER_VALUE */
+const resultSizeOverflow: 1 = EuiccResultData_processingTerminated_resultSizeOverflow; /* SHORT_NAMED_INTEGER_VALUE */
 
 /**
  * @summary EuiccResultData_processingTerminated_unknownOrDamagedCommand
@@ -65,7 +65,7 @@ const resultSizeOverflow: EuiccResultData_processingTerminated = EuiccResultData
  * (section 3.4.6).
  */
 export
-const EuiccResultData_processingTerminated_unknownOrDamagedCommand: EuiccResultData_processingTerminated = 2; /* LONG_NAMED_INTEGER_VALUE */
+const EuiccResultData_processingTerminated_unknownOrDamagedCommand: 2 = 2 satisfies EuiccResultData_processingTerminated; /* LONG_NAMED_INTEGER_VALUE */
 
 /**
  * @summary EuiccResultData_processingTerminated_unknownOrDamagedCommand
@@ -76,7 +76,7 @@ const EuiccResultData_processingTerminated_unknownOrDamagedCommand: EuiccResultD
  * (SGP.32 v1.2, section 5.9.1).
  */
 export
-const unknownOrDamagedCommand: EuiccResultData_processingTerminated = EuiccResultData_processingTerminated_unknownOrDamagedCommand; /* SHORT_NAMED_INTEGER_VALUE */
+const unknownOrDamagedCommand: 2 = EuiccResultData_processingTerminated_unknownOrDamagedCommand; /* SHORT_NAMED_INTEGER_VALUE */
 
 /**
  * @summary EuiccResultData_processingTerminated_interruption
@@ -89,7 +89,7 @@ const unknownOrDamagedCommand: EuiccResultData_processingTerminated = EuiccResul
  * results, and does not name this code as the response.
  */
 export
-const EuiccResultData_processingTerminated_interruption: EuiccResultData_processingTerminated = 3; /* LONG_NAMED_INTEGER_VALUE */
+const EuiccResultData_processingTerminated_interruption: 3 = 3 satisfies EuiccResultData_processingTerminated; /* LONG_NAMED_INTEGER_VALUE */
 
 /**
  * @summary EuiccResultData_processingTerminated_interruption
@@ -100,7 +100,7 @@ const EuiccResultData_processingTerminated_interruption: EuiccResultData_process
  * the condition that produces it.
  */
 export
-const interruption: EuiccResultData_processingTerminated = EuiccResultData_processingTerminated_interruption; /* SHORT_NAMED_INTEGER_VALUE */
+const interruption: 3 = EuiccResultData_processingTerminated_interruption; /* SHORT_NAMED_INTEGER_VALUE */
 
 /**
  * @summary EuiccResultData_processingTerminated_undefinedError
@@ -111,7 +111,7 @@ const interruption: EuiccResultData_processingTerminated = EuiccResultData_proce
  * 2.11.2.1 and does not further define the condition that produces it.
  */
 export
-const EuiccResultData_processingTerminated_undefinedError: EuiccResultData_processingTerminated = 127; /* LONG_NAMED_INTEGER_VALUE */
+const EuiccResultData_processingTerminated_undefinedError: 127 = 127 satisfies EuiccResultData_processingTerminated; /* LONG_NAMED_INTEGER_VALUE */
 
 /**
  * @summary EuiccResultData_processingTerminated_undefinedError
@@ -122,7 +122,7 @@ const EuiccResultData_processingTerminated_undefinedError: EuiccResultData_proce
  * and does not further define the condition that produces it.
  */
 export
-const undefinedError: EuiccResultData_processingTerminated = EuiccResultData_processingTerminated_undefinedError; /* SHORT_NAMED_INTEGER_VALUE */
+const undefinedError: 127 = EuiccResultData_processingTerminated_undefinedError; /* SHORT_NAMED_INTEGER_VALUE */
 export const _decode_EuiccResultData_processingTerminated: $.ASN1Decoder<EuiccResultData_processingTerminated> = $._decodeInteger;
 export const _encode_EuiccResultData_processingTerminated: $.ASN1Encoder<EuiccResultData_processingTerminated> = $._encodeInteger;
 

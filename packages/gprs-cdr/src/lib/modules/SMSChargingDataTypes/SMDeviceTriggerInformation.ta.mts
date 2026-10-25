@@ -1,12 +1,12 @@
 /* eslint-disable */
 import {
-    INTEGER,
-    OPTIONAL,
-    ASN1Element as _Element,
+    type INTEGER,
+    type OPTIONAL,
+    type ASN1Element as _Element,
     ASN1TagClass as _TagClass
 } from "@wildboar/asn1";
 import * as $ from "@wildboar/asn1/functional";
-import { NodeAddress, _decode_NodeAddress, _encode_NodeAddress } from "../SMSChargingDataTypes/NodeAddress.ta.mjs";
+import { type NodeAddress, _decode_NodeAddress, _encode_NodeAddress } from "../SMSChargingDataTypes/NodeAddress.ta.mjs";
 import { SMServingNode, _decode_SMServingNode, _encode_SMServingNode } from "../SMSChargingDataTypes/SMServingNode.ta.mjs";
 import { SMDTPriorityIndication, _decode_SMDTPriorityIndication, _encode_SMDTPriorityIndication, _enum_for_SMDTPriorityIndication } from "../SMSChargingDataTypes/SMDTPriorityIndication.ta.mjs";
 
@@ -165,7 +165,7 @@ class SMDeviceTriggerInformation {
          * @static
          */
 
-    public static _enum_for_sMDTPriorityIndication = _enum_for_SMDTPriorityIndication;
+    public static _enum_for_sMDTPriorityIndication: typeof _enum_for_SMDTPriorityIndication = _enum_for_SMDTPriorityIndication;
 }
 
 /**

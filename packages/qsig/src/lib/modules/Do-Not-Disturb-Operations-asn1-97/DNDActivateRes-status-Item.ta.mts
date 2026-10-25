@@ -1,8 +1,8 @@
 /* eslint-disable */
 import {
-    ASN1Element as _Element,
+    type ASN1Element as _Element,
     ASN1TagClass as _TagClass,
-    OPTIONAL
+    type OPTIONAL
 } from "@wildboar/asn1";
 import * as $ from "@wildboar/asn1/functional";
 import { _decode_BasicService, _encode_BasicService, _enum_for_BasicService, BasicService } from "../Call-Diversion-Operations-asn1-97/BasicService.ta.mjs";
@@ -83,13 +83,13 @@ class DNDActivateRes_status_Item {
          * @static
          */
 
-    public static _enum_for_basicService = _enum_for_BasicService;        /**
+    public static _enum_for_basicService: typeof _enum_for_BasicService = _enum_for_BasicService;        /**
          * @summary The enum used as the type of the component `dndProtectionLevel`
          * @public
          * @static
          */
 
-    public static _enum_for_dndProtectionLevel = _enum_for_DNDProtectionLevel;
+    public static _enum_for_dndProtectionLevel: typeof _enum_for_DNDProtectionLevel = _enum_for_DNDProtectionLevel;
 }
 
 /**

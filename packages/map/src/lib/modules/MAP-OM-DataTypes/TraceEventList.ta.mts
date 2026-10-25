@@ -1,18 +1,18 @@
 /* eslint-disable */
 import {
-    OPTIONAL,
-    ASN1Element as _Element,
+    type OPTIONAL,
+    type ASN1Element as _Element,
     ASN1TagClass as _TagClass
 } from "@wildboar/asn1";
 import * as $ from "@wildboar/asn1/functional";
-import { BMSC_EventList, _decode_BMSC_EventList, _encode_BMSC_EventList } from "../MAP-OM-DataTypes/BMSC-EventList.ta.mjs";
-import { GGSN_EventList, _decode_GGSN_EventList, _encode_GGSN_EventList } from "../MAP-OM-DataTypes/GGSN-EventList.ta.mjs";
-import { MGW_EventList, _decode_MGW_EventList, _encode_MGW_EventList } from "../MAP-OM-DataTypes/MGW-EventList.ta.mjs";
-import { MME_EventList, _decode_MME_EventList, _encode_MME_EventList } from "../MAP-OM-DataTypes/MME-EventList.ta.mjs";
-import { MSC_S_EventList, _decode_MSC_S_EventList, _encode_MSC_S_EventList } from "../MAP-OM-DataTypes/MSC-S-EventList.ta.mjs";
-import { PGW_EventList, _decode_PGW_EventList, _encode_PGW_EventList } from "../MAP-OM-DataTypes/PGW-EventList.ta.mjs";
-import { SGSN_EventList, _decode_SGSN_EventList, _encode_SGSN_EventList } from "../MAP-OM-DataTypes/SGSN-EventList.ta.mjs";
-import { SGW_EventList, _decode_SGW_EventList, _encode_SGW_EventList } from "../MAP-OM-DataTypes/SGW-EventList.ta.mjs";
+import { type BMSC_EventList, _decode_BMSC_EventList, _encode_BMSC_EventList } from "../MAP-OM-DataTypes/BMSC-EventList.ta.mjs";
+import { type GGSN_EventList, _decode_GGSN_EventList, _encode_GGSN_EventList } from "../MAP-OM-DataTypes/GGSN-EventList.ta.mjs";
+import { type MGW_EventList, _decode_MGW_EventList, _encode_MGW_EventList } from "../MAP-OM-DataTypes/MGW-EventList.ta.mjs";
+import { type MME_EventList, _decode_MME_EventList, _encode_MME_EventList } from "../MAP-OM-DataTypes/MME-EventList.ta.mjs";
+import { type MSC_S_EventList, _decode_MSC_S_EventList, _encode_MSC_S_EventList } from "../MAP-OM-DataTypes/MSC-S-EventList.ta.mjs";
+import { type PGW_EventList, _decode_PGW_EventList, _encode_PGW_EventList } from "../MAP-OM-DataTypes/PGW-EventList.ta.mjs";
+import { type SGSN_EventList, _decode_SGSN_EventList, _encode_SGSN_EventList } from "../MAP-OM-DataTypes/SGSN-EventList.ta.mjs";
+import { type SGW_EventList, _decode_SGW_EventList, _encode_SGW_EventList } from "../MAP-OM-DataTypes/SGW-EventList.ta.mjs";
 
 
 /**
@@ -26,14 +26,14 @@ import { SGW_EventList, _decode_SGW_EventList, _encode_SGW_EventList } from "../
  * 
  * ```asn1
  * TraceEventList ::= SEQUENCE {
- *     msc-s-List    [0] MSC-S-EventList    OPTIONAL,
- *     mgw-List    [1] MGW-EventList    OPTIONAL,
- *     sgsn-List    [2] SGSN-EventList    OPTIONAL,
- *     ggsn-List    [3] GGSN-EventList    OPTIONAL,
- *     bmsc-List    [4] BMSC-EventList    OPTIONAL,
+ *     msc-s-List    [0] MSC-S-EventList    type OPTIONAL,
+ *     mgw-List    [1] MGW-EventList    type OPTIONAL,
+ *     sgsn-List    [2] SGSN-EventList    type OPTIONAL,
+ *     ggsn-List    [3] GGSN-EventList    type OPTIONAL,
+ *     bmsc-List    [4] BMSC-EventList    type OPTIONAL,
  *     ...,
- *     mme-List    [5] MME-EventList    OPTIONAL,
- *     sgw-List    [6] SGW-EventList    OPTIONAL,
+ *     mme-List    [5] MME-EventList    type OPTIONAL,
+ *     sgw-List    [6] SGW-EventList    type OPTIONAL,
  *     pgw-List    [7] PGW-EventList    OPTIONAL}
  * ```
  * 
@@ -41,94 +41,114 @@ import { SGW_EventList, _decode_SGW_EventList, _encode_SGW_EventList } from "../
  */
 export
 class TraceEventList {
+    /**
+     * @summary `msc_s_List`.
+     * @description
+     *
+     * Event list for this NE (clause 17.7.2).
+     *
+     * @public
+     * @readonly
+     */
+    public readonly msc_s_List?: OPTIONAL<MSC_S_EventList>;
+    /**
+     * @summary `mgw_List`.
+     * @description
+     *
+     * Event list for this NE (clause 17.7.2).
+     *
+     * @public
+     * @readonly
+     */
+    public readonly mgw_List?: OPTIONAL<MGW_EventList>;
+    /**
+     * @summary `sgsn_List`.
+     * @description
+     *
+     * Event list for this NE (clause 17.7.2).
+     *
+     * @public
+     * @readonly
+     */
+    public readonly sgsn_List?: OPTIONAL<SGSN_EventList>;
+    /**
+     * @summary `ggsn_List`.
+     * @description
+     *
+     * Event list for this NE (clause 17.7.2).
+     *
+     * @public
+     * @readonly
+     */
+    public readonly ggsn_List?: OPTIONAL<GGSN_EventList>;
+    /**
+     * @summary `bmsc_List`.
+     * @description
+     *
+     * Event list for this NE (clause 17.7.2).
+     *
+     * @public
+     * @readonly
+     */
+    public readonly bmsc_List?: OPTIONAL<BMSC_EventList>;
+    /**
+     * @summary `mme_List`.
+     * @description
+     *
+     * Event list for this NE (clause 17.7.2).
+     *
+     * @public
+     * @readonly
+     */
+    public readonly mme_List?: OPTIONAL<MME_EventList>;
+    /**
+     * @summary `sgw_List`.
+     * @description
+     *
+     * Event list for this NE (clause 17.7.2).
+     *
+     * @public
+     * @readonly
+     */
+    public readonly sgw_List?: OPTIONAL<SGW_EventList>;
+    /**
+     * @summary `pgw_List`.
+     * @description
+     *
+     * Event list for this NE (clause 17.7.2).
+     *
+     * @public
+     * @readonly
+     */
+    public readonly pgw_List?: OPTIONAL<PGW_EventList>;
+    /**
+     * @summary Extensions that are not recognized.
+     * @public
+     * @readonly
+     */
+    public readonly _unrecognizedExtensionsList: _Element[];
+
     constructor (
-        /**
-         * @summary `msc_s_List`.
-         * @description
-         *
-         * Event list for this NE (clause 17.7.2).
-         *
-         * @public
-         * @readonly
-         */
-        readonly msc_s_List?: OPTIONAL<MSC_S_EventList>,
-        /**
-         * @summary `mgw_List`.
-         * @description
-         *
-         * Event list for this NE (clause 17.7.2).
-         *
-         * @public
-         * @readonly
-         */
-        readonly mgw_List?: OPTIONAL<MGW_EventList>,
-        /**
-         * @summary `sgsn_List`.
-         * @description
-         *
-         * Event list for this NE (clause 17.7.2).
-         *
-         * @public
-         * @readonly
-         */
-        readonly sgsn_List?: OPTIONAL<SGSN_EventList>,
-        /**
-         * @summary `ggsn_List`.
-         * @description
-         *
-         * Event list for this NE (clause 17.7.2).
-         *
-         * @public
-         * @readonly
-         */
-        readonly ggsn_List?: OPTIONAL<GGSN_EventList>,
-        /**
-         * @summary `bmsc_List`.
-         * @description
-         *
-         * Event list for this NE (clause 17.7.2).
-         *
-         * @public
-         * @readonly
-         */
-        readonly bmsc_List?: OPTIONAL<BMSC_EventList>,
-        /**
-         * @summary `mme_List`.
-         * @description
-         *
-         * Event list for this NE (clause 17.7.2).
-         *
-         * @public
-         * @readonly
-         */
-        readonly mme_List?: OPTIONAL<MME_EventList>,
-        /**
-         * @summary `sgw_List`.
-         * @description
-         *
-         * Event list for this NE (clause 17.7.2).
-         *
-         * @public
-         * @readonly
-         */
-        readonly sgw_List?: OPTIONAL<SGW_EventList>,
-        /**
-         * @summary `pgw_List`.
-         * @description
-         *
-         * Event list for this NE (clause 17.7.2).
-         *
-         * @public
-         * @readonly
-         */
-        readonly pgw_List?: OPTIONAL<PGW_EventList>,
-        /**
-         * @summary Extensions that are not recognized.
-         * @public
-         * @readonly
-         */
-        readonly _unrecognizedExtensionsList: _Element[] = []
-    ) {}
+        msc_s_List?: OPTIONAL<MSC_S_EventList>,
+        mgw_List?: OPTIONAL<MGW_EventList>,
+        sgsn_List?: OPTIONAL<SGSN_EventList>,
+        ggsn_List?: OPTIONAL<GGSN_EventList>,
+        bmsc_List?: OPTIONAL<BMSC_EventList>,
+        mme_List?: OPTIONAL<MME_EventList>,
+        sgw_List?: OPTIONAL<SGW_EventList>,
+        pgw_List?: OPTIONAL<PGW_EventList>,
+        _unrecognizedExtensionsList: _Element[] = []
+    ) {
+        this.msc_s_List = msc_s_List;
+        this.mgw_List = mgw_List;
+        this.sgsn_List = sgsn_List;
+        this.ggsn_List = ggsn_List;
+        this.bmsc_List = bmsc_List;
+        this.mme_List = mme_List;
+        this.sgw_List = sgw_List;
+        this.pgw_List = pgw_List;
+        this._unrecognizedExtensionsList = _unrecognizedExtensionsList;
+    }
 
     /**
      * @summary Restructures an object into a TraceEventList

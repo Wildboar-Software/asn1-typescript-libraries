@@ -1,8 +1,8 @@
 /* eslint-disable */
 import {
-    OPTIONAL,
-    UTF8String,
-    ASN1Element as _Element,
+    type OPTIONAL,
+    type UTF8String,
+    type ASN1Element as _Element,
     ASN1TagClass as _TagClass
 } from "@wildboar/asn1";
 import * as $ from "@wildboar/asn1/functional";
@@ -125,19 +125,19 @@ class MCServiceSessionInfo {
          * @static
          */
 
-    public static _enum_for_sessionType = _enum_for_MCServiceSessionType;        /**
+    public static _enum_for_sessionType: typeof _enum_for_MCServiceSessionType = _enum_for_MCServiceSessionType;        /**
          * @summary The enum used as the type of the component `groupSessionType`
          * @public
          * @static
          */
 
-    public static _enum_for_groupSessionType = _enum_for_MCServiceGroupSessionType;        /**
+    public static _enum_for_groupSessionType: typeof _enum_for_MCServiceGroupSessionType = _enum_for_MCServiceGroupSessionType;        /**
          * @summary The enum used as the type of the component `establishmentType`
          * @public
          * @static
          */
 
-    public static _enum_for_establishmentType = _enum_for_MCServiceEstablishmentType;
+    public static _enum_for_establishmentType: typeof _enum_for_MCServiceEstablishmentType = _enum_for_MCServiceEstablishmentType;
 }
 
 /**

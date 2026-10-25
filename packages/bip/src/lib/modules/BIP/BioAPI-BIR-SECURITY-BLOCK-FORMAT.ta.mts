@@ -11,7 +11,7 @@ import {
 } from '@wildboar/asn1';
 import * as $ from '@wildboar/asn1/functional';
 import {
-  UnsignedShort,
+  type UnsignedShort,
   _decode_UnsignedShort,
   _encode_UnsignedShort,
 } from '../BIP/UnsignedShort.ta.mjs';
@@ -42,13 +42,13 @@ export class BioAPI_BIR_SECURITY_BLOCK_FORMAT {
    * @public
    * @readonly
    */
-  readonly formatOwner: UnsignedShort;
+  public readonly formatOwner: UnsignedShort;
   /**
    * @summary `formatType`.
    * @public
    * @readonly
    */
-  readonly formatType: UnsignedShort;
+  public readonly formatType: UnsignedShort;
 
   constructor(
     formatOwner: UnsignedShort,

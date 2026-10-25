@@ -1,8 +1,8 @@
 /* eslint-disable */
 import {
-    OPTIONAL,
-    BIT_STRING,
-    ASN1Element as _Element,
+    type OPTIONAL,
+    type BIT_STRING,
+    type ASN1Element as _Element,
     ASN1TagClass as _TagClass,
     ASN1Construction as _Construction,
     ASN1UniversalType as _UniversalType,
@@ -13,7 +13,7 @@ import {
 } from '@wildboar/asn1';
 import * as $ from '@wildboar/asn1/functional';
 import {
-    AbortReason,
+    type AbortReason,
     _decode_AbortReason,
     _encode_AbortReason,
 } from '../MTSTransferProtocol/AbortReason.ta.mjs';
@@ -39,26 +39,34 @@ import {
  *
  */
 export class RTABapdu {
+    /**
+     * @summary `abortReason`.
+     * @public
+     * @readonly
+     */
+    public readonly abortReason?: OPTIONAL<AbortReason>;
+    /**
+     * @summary `reflectedParameter`.
+     * @public
+     * @readonly
+     */
+    public readonly reflectedParameter?: OPTIONAL<BIT_STRING>;
+    /**
+     * @summary `userdataAB`.
+     * @public
+     * @readonly
+     */
+    public readonly userdataAB?: OPTIONAL<_Element>;
+
     constructor(
-        /**
-         * @summary `abortReason`.
-         * @public
-         * @readonly
-         */
-        readonly abortReason?: OPTIONAL<AbortReason>,
-        /**
-         * @summary `reflectedParameter`.
-         * @public
-         * @readonly
-         */
-        readonly reflectedParameter?: OPTIONAL<BIT_STRING>,
-        /**
-         * @summary `userdataAB`.
-         * @public
-         * @readonly
-         */
-        readonly userdataAB?: OPTIONAL<_Element>
-    ) {}
+        abortReason?: OPTIONAL<AbortReason>,
+        reflectedParameter?: OPTIONAL<BIT_STRING>,
+        userdataAB?: OPTIONAL<_Element>
+    ) {
+        this.abortReason = abortReason;
+        this.reflectedParameter = reflectedParameter;
+        this.userdataAB = userdataAB;
+    }
 
     /**
      * @summary Restructures an object into a RTABapdu

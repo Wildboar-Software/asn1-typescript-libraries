@@ -1,7 +1,7 @@
 /* eslint-disable */
 import {
-    OPTIONAL,
-    ASN1Element as _Element,
+    type OPTIONAL,
+    type ASN1Element as _Element,
     ASN1TagClass as _TagClass,
     ASN1Construction as _Construction,
     ASN1UniversalType as _UniversalType,
@@ -12,17 +12,17 @@ import {
 } from '@wildboar/asn1';
 import * as $ from '@wildboar/asn1/functional';
 import {
-    DeliveryServiceType,
+    type DeliveryServiceType,
     _decode_DeliveryServiceType,
     _encode_DeliveryServiceType,
 } from '../MhsAcctAsn1Module/DeliveryServiceType.ta.mjs';
 import {
-    PerMessageComponentRate,
+    type PerMessageComponentRate,
     _decode_PerMessageComponentRate,
     _encode_PerMessageComponentRate,
 } from '../MhsAcctAsn1Module/PerMessageComponentRate.ta.mjs';
 import {
-    PerOctetComponentRate,
+    type PerOctetComponentRate,
     _decode_PerOctetComponentRate,
     _encode_PerOctetComponentRate,
 } from '../MhsAcctAsn1Module/PerOctetComponentRate.ta.mjs';
@@ -44,26 +44,34 @@ import {
  *
  */
 export class DeliveryService {
+    /**
+     * @summary `delivery_service_type`.
+     * @public
+     * @readonly
+     */
+    public readonly delivery_service_type: DeliveryServiceType;
+    /**
+     * @summary `per_message_component_rate`.
+     * @public
+     * @readonly
+     */
+    public readonly per_message_component_rate?: OPTIONAL<PerMessageComponentRate>;
+    /**
+     * @summary `per_octet_component_rate`.
+     * @public
+     * @readonly
+     */
+    public readonly per_octet_component_rate?: OPTIONAL<PerOctetComponentRate>;
+
     constructor(
-        /**
-         * @summary `delivery_service_type`.
-         * @public
-         * @readonly
-         */
-        readonly delivery_service_type: DeliveryServiceType,
-        /**
-         * @summary `per_message_component_rate`.
-         * @public
-         * @readonly
-         */
-        readonly per_message_component_rate?: OPTIONAL<PerMessageComponentRate>,
-        /**
-         * @summary `per_octet_component_rate`.
-         * @public
-         * @readonly
-         */
-        readonly per_octet_component_rate?: OPTIONAL<PerOctetComponentRate>
-    ) {}
+        delivery_service_type: DeliveryServiceType,
+        per_message_component_rate?: OPTIONAL<PerMessageComponentRate>,
+        per_octet_component_rate?: OPTIONAL<PerOctetComponentRate>
+    ) {
+        this.delivery_service_type = delivery_service_type;
+        this.per_message_component_rate = per_message_component_rate;
+        this.per_octet_component_rate = per_octet_component_rate;
+    }
 
     /**
      * @summary Restructures an object into a DeliveryService

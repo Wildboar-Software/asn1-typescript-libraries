@@ -74,7 +74,7 @@ export type ISType = _enum_for_ISType;
  *
  * @enum {number}
  */
-export const ISType = _enum_for_ISType;
+export const ISType: typeof _enum_for_ISType = _enum_for_ISType;
 
 /**
  * @summary ISType_level1IS
@@ -87,7 +87,7 @@ export const ISType = _enum_for_ISType;
  * @constant
  * @type {number}
  */
-export const ISType_level1IS: ISType =
+export const ISType_level1IS: 1 =
   ISType.level1IS; /* LONG_NAMED_ENUMERATED_VALUE */
 
 /**
@@ -95,7 +95,7 @@ export const ISType_level1IS: ISType =
  * @constant
  * @type {number}
  */
-export const level1IS: ISType =
+export const level1IS: 1 =
   ISType.level1IS; /* SHORT_NAMED_ENUMERATED_VALUE */
 
 /**
@@ -109,7 +109,7 @@ export const level1IS: ISType =
  * @constant
  * @type {number}
  */
-export const ISType_level2IS: ISType =
+export const ISType_level2IS: 2 =
   ISType.level2IS; /* LONG_NAMED_ENUMERATED_VALUE */
 
 /**
@@ -117,14 +117,25 @@ export const ISType_level2IS: ISType =
  * @constant
  * @type {number}
  */
-export const level2IS: ISType =
+export const level2IS: 2 =
   ISType.level2IS; /* SHORT_NAMED_ENUMERATED_VALUE */
 
 
-export const _decode_ISType = $._decodeEnumerated as $.ASN1Decoder<ISType>;
+export function _decode_ISType(el: _Element): ISType {
+  const enumerated = $._decodeEnumerated(el);
+  switch (enumerated) {
+    case ISType.level1IS: return ISType.level1IS;
+    case ISType.level2IS: return ISType.level2IS;
+    default:
+      throw new _ConstructionError(
+        'Invalid ENUMERATED value ' + enumerated + ' for ISType.',
+        el,
+      );
+  }
+}
 
 
-export const _encode_ISType = $._encodeEnumerated as $.ASN1Encoder<ISType>;
+export const _encode_ISType: $.ASN1Encoder<ISType> = $._encodeEnumerated as $.ASN1Encoder<ISType>;
 
 
 /* eslint-enable */

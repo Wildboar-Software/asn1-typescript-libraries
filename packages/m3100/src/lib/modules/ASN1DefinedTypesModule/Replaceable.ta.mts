@@ -1,6 +1,6 @@
 /* eslint-disable */
 import {
-    ASN1Element as _Element,
+    type ASN1Element as _Element,
     ASN1TagClass as _TagClass,
     ASN1Construction as _Construction,
     ASN1UniversalType as _UniversalType,
@@ -58,7 +58,7 @@ export type Replaceable = _enum_for_Replaceable;
  *
  * @enum {number}
  */
-export const Replaceable = _enum_for_Replaceable;
+export const Replaceable: typeof _enum_for_Replaceable = _enum_for_Replaceable;
 
 
 /**
@@ -66,7 +66,7 @@ export const Replaceable = _enum_for_Replaceable;
  * @constant
  * @type {number}
  */
-export const Replaceable_yes: Replaceable =
+export const Replaceable_yes: _enum_for_Replaceable.yes =
     Replaceable.yes; /* LONG_NAMED_ENUMERATED_VALUE */
 
 
@@ -75,7 +75,7 @@ export const Replaceable_yes: Replaceable =
  * @constant
  * @type {number}
  */
-export const yes: Replaceable =
+export const yes: _enum_for_Replaceable.yes =
     Replaceable.yes; /* SHORT_NAMED_ENUMERATED_VALUE */
 
 
@@ -84,7 +84,7 @@ export const yes: Replaceable =
  * @constant
  * @type {number}
  */
-export const Replaceable_no: Replaceable =
+export const Replaceable_no: _enum_for_Replaceable.no =
     Replaceable.no; /* LONG_NAMED_ENUMERATED_VALUE */
 
 
@@ -93,7 +93,7 @@ export const Replaceable_no: Replaceable =
  * @constant
  * @type {number}
  */
-export const no: Replaceable =
+export const no: _enum_for_Replaceable.no =
     Replaceable.no; /* SHORT_NAMED_ENUMERATED_VALUE */
 
 
@@ -102,7 +102,7 @@ export const no: Replaceable =
  * @constant
  * @type {number}
  */
-export const Replaceable_notapplicable: Replaceable =
+export const Replaceable_notapplicable: _enum_for_Replaceable.notapplicable =
     Replaceable.notapplicable; /* LONG_NAMED_ENUMERATED_VALUE */
 
 
@@ -111,18 +111,30 @@ export const Replaceable_notapplicable: Replaceable =
  * @constant
  * @type {number}
  */
-export const notapplicable: Replaceable =
+export const notapplicable: _enum_for_Replaceable.notapplicable =
     Replaceable.notapplicable; /* SHORT_NAMED_ENUMERATED_VALUE */
 
 
 
 
-export const _decode_Replaceable = $._decodeEnumerated;
+export function _decode_Replaceable(el: _Element): Replaceable {
+    const enumerated = $._decodeEnumerated(el);
+    switch (enumerated) {
+        case Replaceable.yes: return Replaceable.yes;
+        case Replaceable.no: return Replaceable.no;
+        case Replaceable.notapplicable: return Replaceable.notapplicable;
+        default:
+            throw new _ConstructionError(
+                'Invalid ENUMERATED value ' + enumerated + ' for Replaceable.',
+                el,
+            );
+    }
+}
 
 
 
 
-export const _encode_Replaceable = $._encodeEnumerated;
+export const _encode_Replaceable: $.ASN1Encoder<Replaceable> = $._encodeEnumerated as $.ASN1Encoder<Replaceable>;
 
 
 /* eslint-enable */

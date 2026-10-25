@@ -11,17 +11,17 @@ import {
 } from '@wildboar/asn1';
 import * as $ from '@wildboar/asn1/functional';
 import {
-  EndpointIRI,
+  type EndpointIRI,
   _decode_EndpointIRI,
   _encode_EndpointIRI,
 } from '../BIP/EndpointIRI.ta.mjs';
 import {
-  UnsignedInt,
+  type UnsignedInt,
   _decode_UnsignedInt,
   _encode_UnsignedInt,
 } from '../BIP/UnsignedInt.ta.mjs';
 import {
-  BIPRequest_params,
+  type BIPRequest_params,
   _decode_BIPRequest_params,
   _encode_BIPRequest_params,
 } from '../BIP/BIPRequest-params.ta.mjs';
@@ -115,7 +115,7 @@ export class BIPRequest {
    * @public
    * @readonly
    */
-  readonly slaveEndpointIRI: EndpointIRI;
+  public readonly slaveEndpointIRI: EndpointIRI;
   /**
    * @summary `masterEndpointIRI`.
    * @description
@@ -126,7 +126,7 @@ export class BIPRequest {
    * @public
    * @readonly
    */
-  readonly masterEndpointIRI: EndpointIRI;
+  public readonly masterEndpointIRI: EndpointIRI;
   /**
    * @summary `linkNumber`.
    * @description
@@ -140,7 +140,7 @@ export class BIPRequest {
    * @public
    * @readonly
    */
-  readonly linkNumber: UnsignedInt;
+  public readonly linkNumber: UnsignedInt;
   /**
    * @summary `requestId`.
    * @description
@@ -154,7 +154,7 @@ export class BIPRequest {
    * @public
    * @readonly
    */
-  readonly requestId: UnsignedInt;
+  public readonly requestId: UnsignedInt;
   /**
    * @summary `params`.
    * @description
@@ -166,7 +166,7 @@ export class BIPRequest {
    * @public
    * @readonly
    */
-  readonly params: BIPRequest_params;
+  public readonly params: BIPRequest_params;
 
   constructor(
     slaveEndpointIRI: EndpointIRI,

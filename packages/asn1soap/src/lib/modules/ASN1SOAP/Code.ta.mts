@@ -51,7 +51,7 @@ export class Code {
    * @public
    * @readonly
    */
-  readonly value: Value;
+  public readonly value: Value;
   /**
    * @summary `subcodes`.
    * @description Nested SOAP Subcodes, outermost first. Empty
@@ -61,7 +61,7 @@ export class Code {
    * @public
    * @readonly
    */
-  readonly subcodes: QName[];
+  public readonly subcodes: QName[];
 
   constructor(
     value: Value,
@@ -93,7 +93,7 @@ export class Code {
    * @static
    */
 
-  public static _enum_for_value = _enum_for_Value;
+  public static _enum_for_value: typeof _enum_for_Value = _enum_for_Value;
 }
 
 

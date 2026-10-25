@@ -1,18 +1,18 @@
 /* eslint-disable */
 import {
-    NULL,
-    OPTIONAL,
-    ASN1Element as _Element,
+    type NULL,
+    type OPTIONAL,
+    type ASN1Element as _Element,
     ASN1TagClass as _TagClass
 } from "@wildboar/asn1";
 import * as $ from "@wildboar/asn1/functional";
 import { AccessNetworkSignalInfo, _decode_AccessNetworkSignalInfo, _encode_AccessNetworkSignalInfo } from "../MAP-CommonDataTypes/AccessNetworkSignalInfo.ta.mjs";
-import { GlobalCellId, _decode_GlobalCellId, _encode_GlobalCellId } from "../MAP-CommonDataTypes/GlobalCellId.ta.mjs";
-import { ISDN_AddressString, _decode_ISDN_AddressString, _encode_ISDN_AddressString } from "../MAP-CommonDataTypes/ISDN-AddressString.ta.mjs";
+import { type GlobalCellId, _decode_GlobalCellId, _encode_GlobalCellId } from "../MAP-CommonDataTypes/GlobalCellId.ta.mjs";
+import { type ISDN_AddressString, _decode_ISDN_AddressString, _encode_ISDN_AddressString } from "../MAP-CommonDataTypes/ISDN-AddressString.ta.mjs";
 import { ExtensionContainer, _decode_ExtensionContainer, _encode_ExtensionContainer } from "../MAP-ExtensionDataTypes/ExtensionContainer.ta.mjs";
-import { GERAN_Classmark, _decode_GERAN_Classmark, _encode_GERAN_Classmark } from "../MAP-MS-DataTypes/GERAN-Classmark.ta.mjs";
-import { RAB_Id, _decode_RAB_Id, _encode_RAB_Id } from "../MAP-MS-DataTypes/RAB-Id.ta.mjs";
-import { RNCId, _decode_RNCId, _encode_RNCId } from "../MAP-MS-DataTypes/RNCId.ta.mjs";
+import { type GERAN_Classmark, _decode_GERAN_Classmark, _encode_GERAN_Classmark } from "../MAP-MS-DataTypes/GERAN-Classmark.ta.mjs";
+import { type RAB_Id, _decode_RAB_Id, _encode_RAB_Id } from "../MAP-MS-DataTypes/RAB-Id.ta.mjs";
+import { type RNCId, _decode_RNCId, _encode_RNCId } from "../MAP-MS-DataTypes/RNCId.ta.mjs";
 
 
 /**
@@ -28,14 +28,14 @@ import { RNCId, _decode_RNCId, _encode_RNCId } from "../MAP-MS-DataTypes/RNCId.t
  * 
  * ```asn1
  * PrepareSubsequentHO-Arg ::= [3] SEQUENCE {
- *     targetCellId    [0] GlobalCellId    OPTIONAL,
+ *     targetCellId    [0] GlobalCellId    type OPTIONAL,
  *     targetMSC-Number    [1] ISDN-AddressString,
- *     targetRNCId    [2] RNCId    OPTIONAL,
- *     an-APDU    [3]    AccessNetworkSignalInfo    OPTIONAL,
- *     selectedRab-Id    [4]    RAB-Id    OPTIONAL,
- *     extensionContainer    [5]    ExtensionContainer    OPTIONAL,
+ *     targetRNCId    [2] RNCId    type OPTIONAL,
+ *     an-APDU    [3]    AccessNetworkSignalInfo    type OPTIONAL,
+ *     selectedRab-Id    [4]    RAB-Id    type OPTIONAL,
+ *     extensionContainer    [5]    ExtensionContainer    type OPTIONAL,
  *     ...,
- *     geran-classmark    [6] GERAN-Classmark    OPTIONAL,
+ *     geran-classmark    [6] GERAN-Classmark    type OPTIONAL,
  *     rab-ConfigurationIndicator    [7] NULL    OPTIONAL }
  * ```
  * 
@@ -43,114 +43,134 @@ import { RNCId, _decode_RNCId, _encode_RNCId } from "../MAP-MS-DataTypes/RNCId.t
  */
 export
 class PrepareSubsequentHO_Arg {
+    /**
+     * @summary `targetCellId`.
+     * @description
+     *
+     * Identity of the cell to which a call has to be handed over. In
+     * Prepare HO, only if the service is not in an ongoing transaction;
+     * excluded for Inter-MSC SRNS Relocation and GSM-to-UMTS inter-system
+     * handover (3GPP TS 23.009).
+     *
+     * (3GPP TS 29.002 V19.1.0 clauses 7.6.2.8 and 8.4.1.3).
+     *
+     * @public
+     * @readonly
+     */
+    public readonly targetCellId: OPTIONAL<GlobalCellId>;
+    /**
+     * @summary `targetMSC_Number`.
+     * @description
+     *
+     * ISDN number of the MSC to which a call has to be handed over.
+     * Mandatory in Prepare Subsequent Handover.
+     *
+     * (3GPP TS 29.002 V19.1.0 clauses 7.6.2.12 and 8.4.5).
+     *
+     * @public
+     * @readonly
+     */
+    public readonly targetMSC_Number: ISDN_AddressString;
+    /**
+     * @summary `targetRNCId`.
+     * @description
+     *
+     * Identity of the RNC to which a call has to be relocated. Included for
+     * Inter-MSC SRNS Relocation or GSM-to-UMTS inter-system handover (3GPP
+     * TS 23.009).
+     *
+     * (3GPP TS 29.002 V19.1.0 clauses 7.6.2.8A and 8.4.1.3).
+     *
+     * @public
+     * @readonly
+     */
+    public readonly targetRNCId?: OPTIONAL<RNCId>;
+    /**
+     * @summary `an_APDU`.
+     * @description
+     *
+     * One or two concatenated complete 3GPP TS 25.413 or 48.006 messages,
+     * as in 3GPP TS 23.009 and 29.010. The access-network protocol ID
+     * selects 48.006 or 25.413.
+     *
+     * (3GPP TS 29.002 V19.1.0 clause 7.6.9.1).
+     *
+     * @public
+     * @readonly
+     */
+    public readonly an_APDU?: OPTIONAL<AccessNetworkSignalInfo>;
+    /**
+     * @summary `selectedRab_Id`.
+     * @description
+     *
+     * Radio access bearer to be kept at subsequent inter-MSC handover from
+     * UMTS to GSM.
+     *
+     * (3GPP TS 29.002 V19.1.0 clause 7.6.2.56).
+     *
+     * @public
+     * @readonly
+     */
+    public readonly selectedRab_Id?: OPTIONAL<RAB_Id>;
+    /**
+     * @summary `extensionContainer`.
+     * @public
+     * @readonly
+     */
+    public readonly extensionContainer?: OPTIONAL<ExtensionContainer>;
+    /**
+     * @summary `geran_classmark`.
+     * @description
+     *
+     * GERAN cell capabilities as in 3GPP TS 48.008, sent inter-MSC.
+     *
+     * (3GPP TS 29.002 V19.1.0 clause 7.6.6.4).
+     *
+     * @public
+     * @readonly
+     */
+    public readonly geran_classmark?: OPTIONAL<GERAN_Classmark>;
+    /**
+     * @summary `rab_ConfigurationIndicator`.
+     * @description
+     *
+     * MSC-A (or MSC-B in subsequent HO) generated RAB parameters according
+     * to the preferred codec (first entry of Iu-Supported Codecs List).
+     *
+     * (3GPP TS 29.002 V19.1.0 clause 7.6.6.19).
+     *
+     * @public
+     * @readonly
+     */
+    public readonly rab_ConfigurationIndicator?: OPTIONAL<NULL>;
+    /**
+     * @summary Extensions that are not recognized.
+     * @public
+     * @readonly
+     */
+    public readonly _unrecognizedExtensionsList: _Element[];
+
     constructor (
-        /**
-         * @summary `targetCellId`.
-         * @description
-         *
-         * Identity of the cell to which a call has to be handed over. In
-         * Prepare HO, only if the service is not in an ongoing transaction;
-         * excluded for Inter-MSC SRNS Relocation and GSM-to-UMTS inter-system
-         * handover (3GPP TS 23.009).
-         *
-         * (3GPP TS 29.002 V19.1.0 clauses 7.6.2.8 and 8.4.1.3).
-         *
-         * @public
-         * @readonly
-         */
-        readonly targetCellId: OPTIONAL<GlobalCellId>,
-        /**
-         * @summary `targetMSC_Number`.
-         * @description
-         *
-         * ISDN number of the MSC to which a call has to be handed over.
-         * Mandatory in Prepare Subsequent Handover.
-         *
-         * (3GPP TS 29.002 V19.1.0 clauses 7.6.2.12 and 8.4.5).
-         *
-         * @public
-         * @readonly
-         */
-        readonly targetMSC_Number: ISDN_AddressString,
-        /**
-         * @summary `targetRNCId`.
-         * @description
-         *
-         * Identity of the RNC to which a call has to be relocated. Included for
-         * Inter-MSC SRNS Relocation or GSM-to-UMTS inter-system handover (3GPP
-         * TS 23.009).
-         *
-         * (3GPP TS 29.002 V19.1.0 clauses 7.6.2.8A and 8.4.1.3).
-         *
-         * @public
-         * @readonly
-         */
-        readonly targetRNCId?: OPTIONAL<RNCId>,
-        /**
-         * @summary `an_APDU`.
-         * @description
-         *
-         * One or two concatenated complete 3GPP TS 25.413 or 48.006 messages,
-         * as in 3GPP TS 23.009 and 29.010. The access-network protocol ID
-         * selects 48.006 or 25.413.
-         *
-         * (3GPP TS 29.002 V19.1.0 clause 7.6.9.1).
-         *
-         * @public
-         * @readonly
-         */
-        readonly an_APDU?: OPTIONAL<AccessNetworkSignalInfo>,
-        /**
-         * @summary `selectedRab_Id`.
-         * @description
-         *
-         * Radio access bearer to be kept at subsequent inter-MSC handover from
-         * UMTS to GSM.
-         *
-         * (3GPP TS 29.002 V19.1.0 clause 7.6.2.56).
-         *
-         * @public
-         * @readonly
-         */
-        readonly selectedRab_Id?: OPTIONAL<RAB_Id>,
-        /**
-         * @summary `extensionContainer`.
-         * @public
-         * @readonly
-         */
-        readonly extensionContainer?: OPTIONAL<ExtensionContainer>,
-        /**
-         * @summary `geran_classmark`.
-         * @description
-         *
-         * GERAN cell capabilities as in 3GPP TS 48.008, sent inter-MSC.
-         *
-         * (3GPP TS 29.002 V19.1.0 clause 7.6.6.4).
-         *
-         * @public
-         * @readonly
-         */
-        readonly geran_classmark?: OPTIONAL<GERAN_Classmark>,
-        /**
-         * @summary `rab_ConfigurationIndicator`.
-         * @description
-         *
-         * MSC-A (or MSC-B in subsequent HO) generated RAB parameters according
-         * to the preferred codec (first entry of Iu-Supported Codecs List).
-         *
-         * (3GPP TS 29.002 V19.1.0 clause 7.6.6.19).
-         *
-         * @public
-         * @readonly
-         */
-        readonly rab_ConfigurationIndicator?: OPTIONAL<NULL>,
-        /**
-         * @summary Extensions that are not recognized.
-         * @public
-         * @readonly
-         */
-        readonly _unrecognizedExtensionsList: _Element[] = []
-    ) {}
+        targetCellId: OPTIONAL<GlobalCellId>,
+        targetMSC_Number: ISDN_AddressString,
+        targetRNCId?: OPTIONAL<RNCId>,
+        an_APDU?: OPTIONAL<AccessNetworkSignalInfo>,
+        selectedRab_Id?: OPTIONAL<RAB_Id>,
+        extensionContainer?: OPTIONAL<ExtensionContainer>,
+        geran_classmark?: OPTIONAL<GERAN_Classmark>,
+        rab_ConfigurationIndicator?: OPTIONAL<NULL>,
+        _unrecognizedExtensionsList: _Element[] = []
+    ) {
+        this.targetCellId = targetCellId;
+        this.targetMSC_Number = targetMSC_Number;
+        this.targetRNCId = targetRNCId;
+        this.an_APDU = an_APDU;
+        this.selectedRab_Id = selectedRab_Id;
+        this.extensionContainer = extensionContainer;
+        this.geran_classmark = geran_classmark;
+        this.rab_ConfigurationIndicator = rab_ConfigurationIndicator;
+        this._unrecognizedExtensionsList = _unrecognizedExtensionsList;
+    }
 
     /**
      * @summary Restructures an object into a PrepareSubsequentHO_Arg

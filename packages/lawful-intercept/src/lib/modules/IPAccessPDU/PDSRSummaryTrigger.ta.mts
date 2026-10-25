@@ -1,6 +1,6 @@
 /* eslint-disable */
 import {
-    ENUMERATED
+    type ENUMERATED
 } from "@wildboar/asn1";
 import * as $ from "@wildboar/asn1/functional";
 
@@ -57,7 +57,7 @@ type PDSRSummaryTrigger = _enum_for_PDSRSummaryTrigger | ENUMERATED;
  * @type {number}
  */
 export
-const PDSRSummaryTrigger_startOfFlow: PDSRSummaryTrigger = 0; /* LONG_NAMED_ENUMERATED_VALUE */
+const PDSRSummaryTrigger_startOfFlow: _enum_for_PDSRSummaryTrigger.startOfFlow = _enum_for_PDSRSummaryTrigger.startOfFlow; /* LONG_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary startOfFlow
@@ -69,7 +69,7 @@ const PDSRSummaryTrigger_startOfFlow: PDSRSummaryTrigger = 0; /* LONG_NAMED_ENUM
  * @type {number}
  */
 export
-const startOfFlow: PDSRSummaryTrigger = PDSRSummaryTrigger_startOfFlow; /* SHORT_NAMED_ENUMERATED_VALUE */
+const startOfFlow: _enum_for_PDSRSummaryTrigger.startOfFlow = PDSRSummaryTrigger_startOfFlow; /* SHORT_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary PDSRSummaryTrigger_timerExpiry
@@ -83,7 +83,7 @@ const startOfFlow: PDSRSummaryTrigger = PDSRSummaryTrigger_startOfFlow; /* SHORT
  * @type {number}
  */
 export
-const PDSRSummaryTrigger_timerExpiry: PDSRSummaryTrigger = 1; /* LONG_NAMED_ENUMERATED_VALUE */
+const PDSRSummaryTrigger_timerExpiry: _enum_for_PDSRSummaryTrigger.timerExpiry = _enum_for_PDSRSummaryTrigger.timerExpiry; /* LONG_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary timerExpiry
@@ -95,7 +95,7 @@ const PDSRSummaryTrigger_timerExpiry: PDSRSummaryTrigger = 1; /* LONG_NAMED_ENUM
  * @type {number}
  */
 export
-const timerExpiry: PDSRSummaryTrigger = PDSRSummaryTrigger_timerExpiry; /* SHORT_NAMED_ENUMERATED_VALUE */
+const timerExpiry: _enum_for_PDSRSummaryTrigger.timerExpiry = PDSRSummaryTrigger_timerExpiry; /* SHORT_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary PDSRSummaryTrigger_packetCount
@@ -108,7 +108,7 @@ const timerExpiry: PDSRSummaryTrigger = PDSRSummaryTrigger_timerExpiry; /* SHORT
  * @type {number}
  */
 export
-const PDSRSummaryTrigger_packetCount: PDSRSummaryTrigger = 2; /* LONG_NAMED_ENUMERATED_VALUE */
+const PDSRSummaryTrigger_packetCount: _enum_for_PDSRSummaryTrigger.packetCount = _enum_for_PDSRSummaryTrigger.packetCount; /* LONG_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary packetCount
@@ -120,7 +120,7 @@ const PDSRSummaryTrigger_packetCount: PDSRSummaryTrigger = 2; /* LONG_NAMED_ENUM
  * @type {number}
  */
 export
-const packetCount: PDSRSummaryTrigger = PDSRSummaryTrigger_packetCount; /* SHORT_NAMED_ENUMERATED_VALUE */
+const packetCount: _enum_for_PDSRSummaryTrigger.packetCount = PDSRSummaryTrigger_packetCount; /* SHORT_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary PDSRSummaryTrigger_byteCount
@@ -133,7 +133,7 @@ const packetCount: PDSRSummaryTrigger = PDSRSummaryTrigger_packetCount; /* SHORT
  * @type {number}
  */
 export
-const PDSRSummaryTrigger_byteCount: PDSRSummaryTrigger = 3; /* LONG_NAMED_ENUMERATED_VALUE */
+const PDSRSummaryTrigger_byteCount: _enum_for_PDSRSummaryTrigger.byteCount = _enum_for_PDSRSummaryTrigger.byteCount; /* LONG_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary byteCount
@@ -145,7 +145,7 @@ const PDSRSummaryTrigger_byteCount: PDSRSummaryTrigger = 3; /* LONG_NAMED_ENUMER
  * @type {number}
  */
 export
-const byteCount: PDSRSummaryTrigger = PDSRSummaryTrigger_byteCount; /* SHORT_NAMED_ENUMERATED_VALUE */
+const byteCount: _enum_for_PDSRSummaryTrigger.byteCount = PDSRSummaryTrigger_byteCount; /* SHORT_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary PDSRSummaryTrigger_endOfFlow
@@ -161,7 +161,7 @@ const byteCount: PDSRSummaryTrigger = PDSRSummaryTrigger_byteCount; /* SHORT_NAM
  * @type {number}
  */
 export
-const PDSRSummaryTrigger_endOfFlow: PDSRSummaryTrigger = 4; /* LONG_NAMED_ENUMERATED_VALUE */
+const PDSRSummaryTrigger_endOfFlow: _enum_for_PDSRSummaryTrigger.endOfFlow = _enum_for_PDSRSummaryTrigger.endOfFlow; /* LONG_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary endOfFlow
@@ -174,7 +174,7 @@ const PDSRSummaryTrigger_endOfFlow: PDSRSummaryTrigger = 4; /* LONG_NAMED_ENUMER
  * @type {number}
  */
 export
-const endOfFlow: PDSRSummaryTrigger = PDSRSummaryTrigger_endOfFlow; /* SHORT_NAMED_ENUMERATED_VALUE */
+const endOfFlow: _enum_for_PDSRSummaryTrigger.endOfFlow = PDSRSummaryTrigger_endOfFlow; /* SHORT_NAMED_ENUMERATED_VALUE */
 export const _decode_PDSRSummaryTrigger: $.ASN1Decoder<PDSRSummaryTrigger> = $._decodeEnumerated;
 export const _encode_PDSRSummaryTrigger: $.ASN1Encoder<PDSRSummaryTrigger> = $._encodeEnumerated;
 

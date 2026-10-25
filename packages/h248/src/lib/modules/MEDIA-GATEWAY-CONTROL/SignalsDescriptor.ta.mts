@@ -3,7 +3,7 @@ import {
     ASN1Element as _Element
 } from "@wildboar/asn1";
 import * as $ from "@wildboar/asn1/functional";
-import { SignalRequest, _decode_SignalRequest, _encode_SignalRequest } from "../MEDIA-GATEWAY-CONTROL/SignalRequest.ta.mjs";
+import { type SignalRequest, _decode_SignalRequest, _encode_SignalRequest } from "../MEDIA-GATEWAY-CONTROL/SignalRequest.ta.mjs";
 
 
 /**

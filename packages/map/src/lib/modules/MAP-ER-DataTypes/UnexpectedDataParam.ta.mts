@@ -1,8 +1,8 @@
 /* eslint-disable */
 import {
-    NULL,
-    OPTIONAL,
-    ASN1Element as _Element,
+    type NULL,
+    type OPTIONAL,
+    type ASN1Element as _Element,
     ASN1TagClass as _TagClass
 } from "@wildboar/asn1";
 import * as $ from "@wildboar/asn1/functional";
@@ -22,7 +22,7 @@ import { ExtensionContainer, _decode_ExtensionContainer, _encode_ExtensionContai
  * 
  * ```asn1
  * UnexpectedDataParam ::= SEQUENCE {
- *     extensionContainer    ExtensionContainer    OPTIONAL,
+ *     extensionContainer    ExtensionContainer    type OPTIONAL,
  *     ...,
  *     unexpectedSubscriber [0]    NULL    OPTIONAL}
  * ```
@@ -31,34 +31,42 @@ import { ExtensionContainer, _decode_ExtensionContainer, _encode_ExtensionContai
  */
 export
 class UnexpectedDataParam {
+    /**
+     * @summary `extensionContainer`.
+     * @public
+     * @readonly
+     */
+    public readonly extensionContainer?: OPTIONAL<ExtensionContainer>;
+    /**
+     * @summary `unexpectedSubscriber`.
+     * @description
+     *
+     * Shall not be used for operations that allow the
+     * `unidentifiedSubscriber` error. On MAP-PROVIDE-SUBSCRIBER-INFO, if
+     * the subscriber is not found on the VLR, SGSN or MME, this may be
+     * indicated with this value inside `unexpectedDataValue` (3GPP TS
+     * 29.002 V19.1.0 clauses 8.11.2.3 and 17.7.7).
+     *
+     * @public
+     * @readonly
+     */
+    public readonly unexpectedSubscriber?: OPTIONAL<NULL>;
+    /**
+     * @summary Extensions that are not recognized.
+     * @public
+     * @readonly
+     */
+    public readonly _unrecognizedExtensionsList: _Element[];
+
     constructor (
-        /**
-         * @summary `extensionContainer`.
-         * @public
-         * @readonly
-         */
-        readonly extensionContainer?: OPTIONAL<ExtensionContainer>,
-        /**
-         * @summary `unexpectedSubscriber`.
-         * @description
-         *
-         * Shall not be used for operations that allow the
-         * `unidentifiedSubscriber` error. On MAP-PROVIDE-SUBSCRIBER-INFO, if
-         * the subscriber is not found on the VLR, SGSN or MME, this may be
-         * indicated with this value inside `unexpectedDataValue` (3GPP TS
-         * 29.002 V19.1.0 clauses 8.11.2.3 and 17.7.7).
-         *
-         * @public
-         * @readonly
-         */
-        readonly unexpectedSubscriber?: OPTIONAL<NULL>,
-        /**
-         * @summary Extensions that are not recognized.
-         * @public
-         * @readonly
-         */
-        readonly _unrecognizedExtensionsList: _Element[] = []
-    ) {}
+        extensionContainer?: OPTIONAL<ExtensionContainer>,
+        unexpectedSubscriber?: OPTIONAL<NULL>,
+        _unrecognizedExtensionsList: _Element[] = []
+    ) {
+        this.extensionContainer = extensionContainer;
+        this.unexpectedSubscriber = unexpectedSubscriber;
+        this._unrecognizedExtensionsList = _unrecognizedExtensionsList;
+    }
 
     /**
      * @summary Restructures an object into a UnexpectedDataParam

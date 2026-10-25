@@ -1,7 +1,7 @@
 /* eslint-disable */
 import {
-    OPTIONAL,
-    ASN1Element as _Element,
+    type OPTIONAL,
+    type ASN1Element as _Element,
     ASN1TagClass as _TagClass,
     ASN1Construction as _Construction,
     ASN1UniversalType as _UniversalType,
@@ -12,7 +12,7 @@ import {
 } from "@wildboar/asn1";
 import * as $ from "@wildboar/asn1/functional";
 import { TimerID, _enum_for_TimerID, TimerID_tssf /* IMPORTED_LONG_ENUMERATION_ITEM */, _decode_TimerID, _encode_TimerID } from "../Core-INAP-CS1-DataTypes/TimerID.ta.mjs";
-import { TimerValue, _decode_TimerValue, _encode_TimerValue } from "../Core-INAP-CS1-DataTypes/TimerValue.ta.mjs";
+import { type TimerValue, _decode_TimerValue, _encode_TimerValue } from "../Core-INAP-CS1-DataTypes/TimerValue.ta.mjs";
 import { ExtensionField, _decode_ExtensionField, _encode_ExtensionField } from "../Core-INAP-CS1-DataTypes/ExtensionField.ta.mjs";
 
 
@@ -35,26 +35,34 @@ import { ExtensionField, _decode_ExtensionField, _encode_ExtensionField } from "
  */
 export
 class ResetTimerArg {
+    /**
+     * @summary `timerID`.
+     * @public
+     * @readonly
+     */
+    public readonly timerID: OPTIONAL<TimerID>;
+    /**
+     * @summary `timervalue`.
+     * @public
+     * @readonly
+     */
+    public readonly timervalue: TimerValue;
+    /**
+     * @summary `extensions`.
+     * @public
+     * @readonly
+     */
+    public readonly extensions?: OPTIONAL<ExtensionField[]>;
+
     constructor (
-        /**
-         * @summary `timerID`.
-         * @public
-         * @readonly
-         */
-        readonly timerID: OPTIONAL<TimerID>,
-        /**
-         * @summary `timervalue`.
-         * @public
-         * @readonly
-         */
-        readonly timervalue: TimerValue,
-        /**
-         * @summary `extensions`.
-         * @public
-         * @readonly
-         */
-        readonly extensions?: OPTIONAL<ExtensionField[]>
-    ) {}
+        timerID: OPTIONAL<TimerID>,
+        timervalue: TimerValue,
+        extensions?: OPTIONAL<ExtensionField[]>
+    ) {
+        this.timerID = timerID;
+        this.timervalue = timervalue;
+        this.extensions = extensions;
+    }
 
     /**
      * @summary Restructures an object into a ResetTimerArg
@@ -78,13 +86,13 @@ class ResetTimerArg {
      * @static
      * @method
      */
-    public static get _default_value_for_timerID () { return TimerID_tssf; }        /**
+    public static get _default_value_for_timerID (): _enum_for_TimerID { return TimerID_tssf; }        /**
          * @summary The enum used as the type of the component `timerID`
          * @public
          * @static
          */
 
-    public static _enum_for_timerID = _enum_for_TimerID;
+    public static _enum_for_timerID: typeof _enum_for_TimerID = _enum_for_TimerID;
 }
 
 /**

@@ -3,7 +3,7 @@ import {
     ASN1Element as _Element
 } from "@wildboar/asn1";
 import * as $ from "@wildboar/asn1/functional";
-import { Digits, _decode_Digits, _encode_Digits } from "../IN-CS-1-Datatypes/Digits.ta.mjs";
+import { type Digits, _decode_Digits, _encode_Digits } from "../IN-CS-1-Datatypes/Digits.ta.mjs";
 // export { Digits, _decode_Digits, _encode_Digits } from "../IN-CS-1-Datatypes/Digits.ta.mjs";
 
 
@@ -21,21 +21,13 @@ import { Digits, _decode_Digits, _encode_Digits } from "../IN-CS-1-Datatypes/Dig
 export
 type AssistingSSPIPRoutingAddress = Digits; // DefinedType
 
-let _cached_decoder_for_AssistingSSPIPRoutingAddress: $.ASN1Decoder<AssistingSSPIPRoutingAddress> | null = null;
-
 /**
  * @summary Decodes an ASN.1 element into a(n) AssistingSSPIPRoutingAddress
  * @function
  * @param el The element being decoded.
  * @returns The decoded data structure.
  */
-export
-function _decode_AssistingSSPIPRoutingAddress (el: _Element): AssistingSSPIPRoutingAddress {
-    if (!_cached_decoder_for_AssistingSSPIPRoutingAddress) { _cached_decoder_for_AssistingSSPIPRoutingAddress = _decode_Digits; }
-    return _cached_decoder_for_AssistingSSPIPRoutingAddress(el);
-}
-
-let _cached_encoder_for_AssistingSSPIPRoutingAddress: $.ASN1Encoder<AssistingSSPIPRoutingAddress> | null = null;
+export const _decode_AssistingSSPIPRoutingAddress: $.ASN1Decoder<AssistingSSPIPRoutingAddress> = _decode_Digits;
 
 /**
  * @summary Encodes a(n) AssistingSSPIPRoutingAddress into an ASN.1 Element.
@@ -44,11 +36,7 @@ let _cached_encoder_for_AssistingSSPIPRoutingAddress: $.ASN1Encoder<AssistingSSP
  * @param elGetter A function that can be used to get new ASN.1 elements.
  * @returns {_Element} The AssistingSSPIPRoutingAddress, encoded as an ASN.1 Element.
  */
-export
-function _encode_AssistingSSPIPRoutingAddress (value: AssistingSSPIPRoutingAddress, elGetter: $.ASN1Encoder<any>): _Element {
-    if (!_cached_encoder_for_AssistingSSPIPRoutingAddress) { _cached_encoder_for_AssistingSSPIPRoutingAddress = _encode_Digits; }
-    return _cached_encoder_for_AssistingSSPIPRoutingAddress(value, elGetter);
-}
+export const _encode_AssistingSSPIPRoutingAddress: $.ASN1Encoder<AssistingSSPIPRoutingAddress> = _encode_Digits;
 
 
 /* eslint-enable */

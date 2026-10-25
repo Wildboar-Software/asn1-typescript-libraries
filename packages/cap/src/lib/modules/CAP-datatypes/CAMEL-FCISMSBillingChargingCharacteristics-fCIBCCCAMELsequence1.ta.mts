@@ -1,7 +1,7 @@
 import {
-    OPTIONAL,
-    OCTET_STRING,
-    ASN1Element as _Element,
+    type OPTIONAL,
+    type OCTET_STRING,
+    type ASN1Element as _Element,
     ASN1TagClass as _TagClass,
 } from "@wildboar/asn1";
 import * as $ from "@wildboar/asn1/functional";
@@ -23,39 +23,45 @@ import { AppendFreeFormatData, _enum_for_AppendFreeFormatData, overwrite, _decod
  *
  */
 export class CAMEL_FCISMSBillingChargingCharacteristics_fCIBCCCAMELsequence1 {
+    /**
+     * @summary `freeFormatData`.
+     * @description
+     *
+     * Free-format billing and/or charging characteristics.
+     * (3GPP TS 29.078 V19.0.0 clause 12.4).
+     *
+     * @public
+     * @readonly
+     */
+    public readonly freeFormatData: OCTET_STRING;
+    /**
+     * @summary `appendFreeFormatData`.
+     * @description
+     *
+     * Whether previous free-format data shall be appended or overwritten.
+     * Default `overwrite`. See 3GPP TS 23.078.
+     * (3GPP TS 29.078 V19.0.0 clause 12.4).
+     *
+     * @public
+     * @readonly
+     */
+    public readonly appendFreeFormatData?: OPTIONAL<AppendFreeFormatData>;
+
     constructor (
-        /**
-         * @summary `freeFormatData`.
-         * @description
-         *
-         * Free-format billing and/or charging characteristics.
-         * (3GPP TS 29.078 V19.0.0 clause 12.4).
-         *
-         * @public
-         * @readonly
-         */
-        readonly freeFormatData: OCTET_STRING,
-        /**
-         * @summary `appendFreeFormatData`.
-         * @description
-         *
-         * Whether previous free-format data shall be appended or overwritten.
-         * Default `overwrite`. See 3GPP TS 23.078.
-         * (3GPP TS 29.078 V19.0.0 clause 12.4).
-         *
-         * @public
-         * @readonly
-         */
-        readonly appendFreeFormatData?: OPTIONAL<AppendFreeFormatData>,
-    ) {}
+        freeFormatData: OCTET_STRING,
+        appendFreeFormatData?: OPTIONAL<AppendFreeFormatData>,
+    ) {
+        this.freeFormatData = freeFormatData;
+        this.appendFreeFormatData = appendFreeFormatData;
+    }
 
     public static _from_object (_o: { [_K in keyof (CAMEL_FCISMSBillingChargingCharacteristics_fCIBCCCAMELsequence1)]: (CAMEL_FCISMSBillingChargingCharacteristics_fCIBCCCAMELsequence1)[_K] }): CAMEL_FCISMSBillingChargingCharacteristics_fCIBCCCAMELsequence1 {
         return new CAMEL_FCISMSBillingChargingCharacteristics_fCIBCCCAMELsequence1(_o.freeFormatData, _o.appendFreeFormatData);
     }
 
-    public static get _default_value_for_appendFreeFormatData () { return overwrite; }
+    public static get _default_value_for_appendFreeFormatData (): _enum_for_AppendFreeFormatData.overwrite { return overwrite; }
 
-    public static _enum_for_appendFreeFormatData = _enum_for_AppendFreeFormatData;
+    public static _enum_for_appendFreeFormatData: typeof _enum_for_AppendFreeFormatData = _enum_for_AppendFreeFormatData;
 }
 
 export const _root_component_type_list_1_spec_for_CAMEL_FCISMSBillingChargingCharacteristics_fCIBCCCAMELsequence1: $.ComponentSpec[] = [

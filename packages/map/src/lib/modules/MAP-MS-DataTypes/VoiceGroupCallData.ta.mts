@@ -1,15 +1,15 @@
 /* eslint-disable */
 import {
-    OPTIONAL,
-    ASN1Element as _Element,
+    type OPTIONAL,
+    type ASN1Element as _Element,
     ASN1TagClass as _TagClass
 } from "@wildboar/asn1";
 import * as $ from "@wildboar/asn1/functional";
 import { ExtensionContainer, _decode_ExtensionContainer, _encode_ExtensionContainer } from "../MAP-ExtensionDataTypes/ExtensionContainer.ta.mjs";
-import { AdditionalInfo, _decode_AdditionalInfo, _encode_AdditionalInfo } from "../MAP-MS-DataTypes/AdditionalInfo.ta.mjs";
-import { AdditionalSubscriptions, _decode_AdditionalSubscriptions, _encode_AdditionalSubscriptions } from "../MAP-MS-DataTypes/AdditionalSubscriptions.ta.mjs";
-import { GroupId, _decode_GroupId, _encode_GroupId } from "../MAP-MS-DataTypes/GroupId.ta.mjs";
-import { Long_GroupId, _decode_Long_GroupId, _encode_Long_GroupId } from "../MAP-MS-DataTypes/Long-GroupId.ta.mjs";
+import { type AdditionalInfo, _decode_AdditionalInfo, _encode_AdditionalInfo } from "../MAP-MS-DataTypes/AdditionalInfo.ta.mjs";
+import { type AdditionalSubscriptions, _decode_AdditionalSubscriptions, _encode_AdditionalSubscriptions } from "../MAP-MS-DataTypes/AdditionalSubscriptions.ta.mjs";
+import { type GroupId, _decode_GroupId, _encode_GroupId } from "../MAP-MS-DataTypes/GroupId.ta.mjs";
+import { type Long_GroupId, _decode_Long_GroupId, _encode_Long_GroupId } from "../MAP-MS-DataTypes/Long-GroupId.ta.mjs";
 
 
 /**
@@ -29,10 +29,10 @@ import { Long_GroupId, _decode_Long_GroupId, _encode_Long_GroupId } from "../MAP
  * VoiceGroupCallData ::= SEQUENCE {
  *     groupId    GroupId, 
  *     -- groupId shall be filled with six TBCD fillers (1111)if the longGroupId is present  
- *     extensionContainer    ExtensionContainer    OPTIONAL,
+ *     extensionContainer    ExtensionContainer    type OPTIONAL,
  *     ...,
- *     additionalSubscriptions    AdditionalSubscriptions    OPTIONAL,
- *     additionalInfo    [0] AdditionalInfo    OPTIONAL,
+ *     additionalSubscriptions    AdditionalSubscriptions    type OPTIONAL,
+ *     additionalInfo    [0] AdditionalInfo    type OPTIONAL,
  *     longGroupId    [1] Long-GroupId    OPTIONAL }
  * ```
  * 
@@ -40,71 +40,85 @@ import { Long_GroupId, _decode_Long_GroupId, _encode_Long_GroupId } from "../MAP
  */
 export
 class VoiceGroupCallData {
+    /**
+     * @summary `groupId`.
+     * @description
+     *
+     * Group Identification as in 3GPP TS 23.003. Filled with six TBCD
+     * fillers (`1111`) if `longGroupId` is present.
+     *
+     * (3GPP TS 29.002 V19.1.0 clauses 7.6.2.33 and 17.7.1).
+     *
+     * @public
+     * @readonly
+     */
+    public readonly groupId: GroupId;
+    /**
+     * @summary `extensionContainer`.
+     * @public
+     * @readonly
+     */
+    public readonly extensionContainer?: OPTIONAL<ExtensionContainer>;
+    /**
+     * @summary `additionalSubscriptions`.
+     * @description
+     *
+     * Additional VGCS subscriptions for this group.
+     *
+     * (3GPP TS 29.002 V19.1.0 clause 7.6.3.39).
+     *
+     * @public
+     * @readonly
+     */
+    public readonly additionalSubscriptions?: OPTIONAL<AdditionalSubscriptions>;
+    /**
+     * @summary `additionalInfo`.
+     * @description
+     *
+     * Additional VGCS information for this group.
+     *
+     * (3GPP TS 29.002 V19.1.0 clause 17.7.1).
+     *
+     * @public
+     * @readonly
+     */
+    public readonly additionalInfo?: OPTIONAL<AdditionalInfo>;
+    /**
+     * @summary `longGroupId`.
+     * @description
+     *
+     * Long Group Identification as in 3GPP TS 23.003 and 43.068/43.069.
+     * Shall not be sent to VLRs that did not indicate long Group ID
+     * support.
+     *
+     * (3GPP TS 29.002 V19.1.0 clause 17.7.1).
+     *
+     * @public
+     * @readonly
+     */
+    public readonly longGroupId?: OPTIONAL<Long_GroupId>;
+    /**
+     * @summary Extensions that are not recognized.
+     * @public
+     * @readonly
+     */
+    public readonly _unrecognizedExtensionsList: _Element[];
+
     constructor (
-        /**
-         * @summary `groupId`.
-         * @description
-         *
-         * Group Identification as in 3GPP TS 23.003. Filled with six TBCD
-         * fillers (`1111`) if `longGroupId` is present.
-         *
-         * (3GPP TS 29.002 V19.1.0 clauses 7.6.2.33 and 17.7.1).
-         *
-         * @public
-         * @readonly
-         */
-        readonly groupId: GroupId,
-        /**
-         * @summary `extensionContainer`.
-         * @public
-         * @readonly
-         */
-        readonly extensionContainer?: OPTIONAL<ExtensionContainer>,
-        /**
-         * @summary `additionalSubscriptions`.
-         * @description
-         *
-         * Additional VGCS subscriptions for this group.
-         *
-         * (3GPP TS 29.002 V19.1.0 clause 7.6.3.39).
-         *
-         * @public
-         * @readonly
-         */
-        readonly additionalSubscriptions?: OPTIONAL<AdditionalSubscriptions>,
-        /**
-         * @summary `additionalInfo`.
-         * @description
-         *
-         * Additional VGCS information for this group.
-         *
-         * (3GPP TS 29.002 V19.1.0 clause 17.7.1).
-         *
-         * @public
-         * @readonly
-         */
-        readonly additionalInfo?: OPTIONAL<AdditionalInfo>,
-        /**
-         * @summary `longGroupId`.
-         * @description
-         *
-         * Long Group Identification as in 3GPP TS 23.003 and 43.068/43.069.
-         * Shall not be sent to VLRs that did not indicate long Group ID
-         * support.
-         *
-         * (3GPP TS 29.002 V19.1.0 clause 17.7.1).
-         *
-         * @public
-         * @readonly
-         */
-        readonly longGroupId?: OPTIONAL<Long_GroupId>,
-        /**
-         * @summary Extensions that are not recognized.
-         * @public
-         * @readonly
-         */
-        readonly _unrecognizedExtensionsList: _Element[] = []
-    ) {}
+        groupId: GroupId,
+        extensionContainer?: OPTIONAL<ExtensionContainer>,
+        additionalSubscriptions?: OPTIONAL<AdditionalSubscriptions>,
+        additionalInfo?: OPTIONAL<AdditionalInfo>,
+        longGroupId?: OPTIONAL<Long_GroupId>,
+        _unrecognizedExtensionsList: _Element[] = []
+    ) {
+        this.groupId = groupId;
+        this.extensionContainer = extensionContainer;
+        this.additionalSubscriptions = additionalSubscriptions;
+        this.additionalInfo = additionalInfo;
+        this.longGroupId = longGroupId;
+        this._unrecognizedExtensionsList = _unrecognizedExtensionsList;
+    }
 
     /**
      * @summary Restructures an object into a VoiceGroupCallData

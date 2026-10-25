@@ -1,7 +1,7 @@
 /* eslint-disable */
 import {
-    INTEGER,
-    ASN1Element as _Element,
+    type INTEGER,
+    type ASN1Element as _Element,
     ASN1TagClass as _TagClass,
     ASN1Construction as _Construction,
     ASN1UniversalType as _UniversalType,
@@ -35,14 +35,18 @@ import * as $ from "@wildboar/asn1/functional";
  */
 export
 class OperatorCommunicationParameters {
+    /**
+     * @summary `input_time_out`.
+     * @public
+     * @readonly
+     */
+    public readonly input_time_out: INTEGER;
+
     constructor (
-        /**
-         * @summary `input_time_out`.
-         * @public
-         * @readonly
-         */
-        readonly input_time_out: INTEGER
-    ) {}
+        input_time_out: INTEGER
+    ) {
+        this.input_time_out = input_time_out;
+    }
 
     /**
      * @summary Restructures an object into a OperatorCommunicationParameters

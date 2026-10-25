@@ -2,12 +2,12 @@
 import { id_opcode_modifyDN } from "../CommonProtocolSpecification/id-opcode-modifyDN.va.mjs";
 import { type OPERATION } from "../CommonProtocolSpecification/OPERATION.oca.mjs";
 import {
-    ModifyDNArgument,
+    type ModifyDNArgument,
     _decode_ModifyDNArgument,
     _encode_ModifyDNArgument,
 } from "../DirectoryAbstractService/ModifyDNArgument.ta.mjs";
 import {
-    ModifyDNResult,
+    type ModifyDNResult,
     _decode_ModifyDNResult,
     _encode_ModifyDNResult,
 } from "../DirectoryAbstractService/ModifyDNResult.ta.mjs";

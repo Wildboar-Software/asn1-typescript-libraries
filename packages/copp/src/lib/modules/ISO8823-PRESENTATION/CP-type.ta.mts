@@ -1,7 +1,7 @@
 /* eslint-disable */
 import {
-    OPTIONAL,
-    ASN1Element as _Element,
+    type OPTIONAL,
+    type ASN1Element as _Element,
     ASN1TagClass as _TagClass,
     ASN1Construction as _Construction,
     ASN1UniversalType as _UniversalType,
@@ -55,12 +55,12 @@ import {
  *                              [0] IMPLICIT Protocol-version DEFAULT {version-1},
  *                            calling-presentation-selector
  *                              [1] IMPLICIT Calling-presentation-selector
- *                                OPTIONAL,
+ *                                type OPTIONAL,
  *                            called-presentation-selector
  *                              [2] IMPLICIT Called-presentation-selector OPTIONAL,
  *                            presentation-context-definition-list
  *                              [4] IMPLICIT Presentation-context-definition-list
- *                                OPTIONAL,
+ *                                type OPTIONAL,
  *                            default-context-name
  *                              [6] IMPLICIT Default-context-name OPTIONAL,
  *                            presentation-requirements

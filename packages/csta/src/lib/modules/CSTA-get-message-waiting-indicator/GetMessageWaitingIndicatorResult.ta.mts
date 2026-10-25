@@ -2,11 +2,11 @@
 
 import * as $ from "@wildboar/asn1/functional";
 import {
-    OPTIONAL,
-    BOOLEAN,
-    SEQUENCE,
-    SET,
-    ASN1Element as _Element,
+    type OPTIONAL,
+    type BOOLEAN,
+    type SEQUENCE,
+    type SET,
+    type ASN1Element as _Element,
     ASN1TagClass as _TagClass
 } from "@wildboar/asn1";
 import { DeviceID, _decode_DeviceID, _encode_DeviceID } from "../CSTA-device-identifiers/DeviceID.ta.mjs";
@@ -29,8 +29,8 @@ import { CSTACommonArguments, _decode_CSTACommonArguments, _encode_CSTACommonArg
  * ```asn1
  * GetMessageWaitingIndicatorResult ::= SEQUENCE
  * {    messageWaitingOn        BOOLEAN,
- *     deviceForMessage        DeviceID                OPTIONAL,
- *     lampIsPresent            BOOLEAN                    OPTIONAL,
+ *     deviceForMessage        DeviceID                type OPTIONAL,
+ *     lampIsPresent            BOOLEAN                    type OPTIONAL,
  *     extensions            CSTACommonArguments            OPTIONAL }
  * ```
  * 
@@ -38,45 +38,55 @@ import { CSTACommonArguments, _decode_CSTACommonArguments, _encode_CSTACommonArg
  */
 export
 class GetMessageWaitingIndicatorResult {
+    /**
+     * @summary `messageWaitingOn`.
+     * @description
+     *
+     * FALSE = off; TRUE = on.
+     * @public
+     * @readonly
+     */
+    public readonly messageWaitingOn: BOOLEAN;
+    /**
+     * @summary `deviceForMessage`.
+     * @description
+     *
+     * Device where the message is waiting.
+     * @public
+     * @readonly
+     */
+    public readonly deviceForMessage?: OPTIONAL<DeviceID>;
+    /**
+     * @summary `lampIsPresent`.
+     * @description
+     *
+     * Whether a message-waiting lamp is present.
+     * @public
+     * @readonly
+     */
+    public readonly lampIsPresent?: OPTIONAL<BOOLEAN>;
+    /**
+     * @summary `extensions`.
+     * @description
+     *
+     * Optional security (timestamp, sequence, securityInfo) and
+     * privateData.
+     * @public
+     * @readonly
+     */
+    public readonly extensions?: OPTIONAL<CSTACommonArguments>;
+
     constructor (
-        /**
-         * @summary `messageWaitingOn`.
-         * @description
-         *
-         * FALSE = off; TRUE = on.
-         * @public
-         * @readonly
-         */
-        readonly messageWaitingOn: BOOLEAN,
-        /**
-         * @summary `deviceForMessage`.
-         * @description
-         *
-         * Device where the message is waiting.
-         * @public
-         * @readonly
-         */
-        readonly deviceForMessage?: OPTIONAL<DeviceID>,
-        /**
-         * @summary `lampIsPresent`.
-         * @description
-         *
-         * Whether a message-waiting lamp is present.
-         * @public
-         * @readonly
-         */
-        readonly lampIsPresent?: OPTIONAL<BOOLEAN>,
-        /**
-         * @summary `extensions`.
-         * @description
-         *
-         * Optional security (timestamp, sequence, securityInfo) and
-         * privateData.
-         * @public
-         * @readonly
-         */
-        readonly extensions?: OPTIONAL<CSTACommonArguments>
-    ) {}
+        messageWaitingOn: BOOLEAN,
+        deviceForMessage?: OPTIONAL<DeviceID>,
+        lampIsPresent?: OPTIONAL<BOOLEAN>,
+        extensions?: OPTIONAL<CSTACommonArguments>
+    ) {
+        this.messageWaitingOn = messageWaitingOn;
+        this.deviceForMessage = deviceForMessage;
+        this.lampIsPresent = lampIsPresent;
+        this.extensions = extensions;
+    }
 
     /**
      * @summary Restructures an object into a GetMessageWaitingIndicatorResult

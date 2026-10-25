@@ -2,12 +2,12 @@
 
 import * as $ from "@wildboar/asn1/functional";
 import {
-    OPTIONAL,
-    BOOLEAN,
-    INTEGER,
-    SEQUENCE,
-    SET,
-    ASN1Element as _Element,
+    type OPTIONAL,
+    type BOOLEAN,
+    type INTEGER,
+    type SEQUENCE,
+    type SET,
+    type ASN1Element as _Element,
     ASN1TagClass as _TagClass
 } from "@wildboar/asn1";
 import {
@@ -55,59 +55,73 @@ import {
  */
 export
 class ForwardList_Item {
+    /**
+     * @summary `forwardingType`.
+     * @description
+     * Type of forwarding. Required for user-specified settings; optional
+     * for switching-function defaults. Internal/external types refer to
+     * call origination.
+     * @public
+     * @readonly
+     */
+    public readonly forwardingType: OPTIONAL<ForwardingType>;
+    /**
+     * @summary `forwardStatus`.
+     * @description TRUE if this forwarding type is active.
+     * @public
+     * @readonly
+     */
+    public readonly forwardStatus: BOOLEAN;
+    /**
+     * @summary `forwardDN`.
+     * @description
+     * Destination to which calls are forwarded. Required for user-specified
+     * settings; optional for defaults.
+     * @public
+     * @readonly
+     */
+    public readonly forwardDN?: OPTIONAL<DeviceID>;
+    /**
+     * @summary `forwardDefault`.
+     * @description
+     * Which of forwardingType and/or forwardDN is a default setting.
+     * @public
+     * @readonly
+     */
+    public readonly forwardDefault?: OPTIONAL<ForwardDefault>;
+    /**
+     * @summary `ringDuration`.
+     * @description
+     * Seconds the device rings before forward-no-answer. Do not provide if
+     * ringCount is provided.
+     * @public
+     * @readonly
+     */
+    public readonly ringDuration?: OPTIONAL<INTEGER>;
+    /**
+     * @summary `ringCount`.
+     * @description
+     * Times the device rings before forward-no-answer (1..100).
+     * @public
+     * @readonly
+     */
+    public readonly ringCount?: OPTIONAL<INTEGER>;
+
     constructor (
-        /**
-         * @summary `forwardingType`.
-         * @description
-         * Type of forwarding. Required for user-specified settings; optional
-         * for switching-function defaults. Internal/external types refer to
-         * call origination.
-         * @public
-         * @readonly
-         */
-        readonly forwardingType: OPTIONAL<ForwardingType>,
-        /**
-         * @summary `forwardStatus`.
-         * @description TRUE if this forwarding type is active.
-         * @public
-         * @readonly
-         */
-        readonly forwardStatus: BOOLEAN,
-        /**
-         * @summary `forwardDN`.
-         * @description
-         * Destination to which calls are forwarded. Required for user-specified
-         * settings; optional for defaults.
-         * @public
-         * @readonly
-         */
-        readonly forwardDN?: OPTIONAL<DeviceID>,
-        /**
-         * @summary `forwardDefault`.
-         * @description
-         * Which of forwardingType and/or forwardDN is a default setting.
-         * @public
-         * @readonly
-         */
-        readonly forwardDefault?: OPTIONAL<ForwardDefault>,
-        /**
-         * @summary `ringDuration`.
-         * @description
-         * Seconds the device rings before forward-no-answer. Do not provide if
-         * ringCount is provided.
-         * @public
-         * @readonly
-         */
-        readonly ringDuration?: OPTIONAL<INTEGER>,
-        /**
-         * @summary `ringCount`.
-         * @description
-         * Times the device rings before forward-no-answer (1..100).
-         * @public
-         * @readonly
-         */
-        readonly ringCount?: OPTIONAL<INTEGER>
-    ) {}
+        forwardingType: OPTIONAL<ForwardingType>,
+        forwardStatus: BOOLEAN,
+        forwardDN?: OPTIONAL<DeviceID>,
+        forwardDefault?: OPTIONAL<ForwardDefault>,
+        ringDuration?: OPTIONAL<INTEGER>,
+        ringCount?: OPTIONAL<INTEGER>
+    ) {
+        this.forwardingType = forwardingType;
+        this.forwardStatus = forwardStatus;
+        this.forwardDN = forwardDN;
+        this.forwardDefault = forwardDefault;
+        this.ringDuration = ringDuration;
+        this.ringCount = ringCount;
+    }
 
     /**
      * @summary Restructures an object into a ForwardList_Item
@@ -131,13 +145,13 @@ class ForwardList_Item {
          * @static
          */
 
-    public static _enum_for_forwardingType = _enum_for_ForwardingType;        /**
+    public static _enum_for_forwardingType: typeof _enum_for_ForwardingType = _enum_for_ForwardingType;        /**
          * @summary The enum used as the type of the component `forwardDefault`
          * @public
          * @static
          */
 
-    public static _enum_for_forwardDefault = _enum_for_ForwardDefault;
+    public static _enum_for_forwardDefault: typeof _enum_for_ForwardDefault = _enum_for_ForwardDefault;
 }
 
 /**

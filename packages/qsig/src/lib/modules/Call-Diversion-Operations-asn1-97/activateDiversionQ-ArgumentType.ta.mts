@@ -1,15 +1,15 @@
 /* eslint-disable */
 import {
-    OPTIONAL,
-    ASN1Element as _Element,
+    type OPTIONAL,
+    type ASN1Element as _Element,
     ASN1TagClass as _TagClass
 } from "@wildboar/asn1";
 import * as $ from "@wildboar/asn1/functional";
 import { Procedure, _decode_Procedure, _encode_Procedure, _enum_for_Procedure } from "../Call-Diversion-Operations-asn1-97/Procedure.ta.mjs";
 import { BasicService, _decode_BasicService, _encode_BasicService, _enum_for_BasicService } from "../Call-Diversion-Operations-asn1-97/BasicService.ta.mjs";
 import { Address, _decode_Address, _encode_Address } from "../Addressing-Data-Elements-asn1-97/Address.ta.mjs";
-import { PartyNumber, _decode_PartyNumber, _encode_PartyNumber } from "../Addressing-Data-Elements-asn1-97/PartyNumber.ta.mjs";
-import { _decode_activateDiversionQ_ArgumentType_extension, _encode_activateDiversionQ_ArgumentType_extension, activateDiversionQ_ArgumentType_extension } from "../Call-Diversion-Operations-asn1-97/activateDiversionQ-ArgumentType-extension.ta.mjs";
+import { type PartyNumber, _decode_PartyNumber, _encode_PartyNumber } from "../Addressing-Data-Elements-asn1-97/PartyNumber.ta.mjs";
+import { _decode_activateDiversionQ_ArgumentType_extension, _encode_activateDiversionQ_ArgumentType_extension, type activateDiversionQ_ArgumentType_extension } from "../Call-Diversion-Operations-asn1-97/activateDiversionQ-ArgumentType-extension.ta.mjs";
 
 /**
  * @summary activateDiversionQ_ArgumentType
@@ -144,13 +144,13 @@ class activateDiversionQ_ArgumentType {
          * @static
          */
 
-    public static _enum_for_procedure = _enum_for_Procedure;        /**
+    public static _enum_for_procedure: typeof _enum_for_Procedure = _enum_for_Procedure;        /**
          * @summary The enum used as the type of the component `basicService`
          * @public
          * @static
          */
 
-    public static _enum_for_basicService = _enum_for_BasicService;
+    public static _enum_for_basicService: typeof _enum_for_BasicService = _enum_for_BasicService;
 }
 
 /**

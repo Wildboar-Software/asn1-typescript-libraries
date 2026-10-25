@@ -1,7 +1,7 @@
 /* eslint-disable */
 
 import * as $ from "@wildboar/asn1/functional";
-import { SEQUENCE, ASN1Element as _Element } from "@wildboar/asn1";
+import { type SEQUENCE, ASN1Element as _Element } from "@wildboar/asn1";
 import { DestinationDetection_Item, _decode_DestinationDetection_Item, _encode_DestinationDetection_Item } from "../CSTA-make-predictive-call/DestinationDetection-Item.ta.mjs";
 
 

@@ -1,6 +1,6 @@
 /* eslint-disable */
 import {
-    ASN1Element as _Element,
+    type ASN1Element as _Element,
     ASN1TagClass as _TagClass,
     ASN1Construction as _Construction,
     ASN1UniversalType as _UniversalType,
@@ -11,12 +11,12 @@ import {
 } from '@wildboar/asn1';
 import * as $ from '@wildboar/asn1/functional';
 import {
-    ConnectionType,
+    type ConnectionType,
     _decode_ConnectionType,
     _encode_ConnectionType,
 } from '../ASN1DefinedTypesModule/ConnectionType.ta.mjs';
 import {
-    ConnectionTypeBi,
+    type ConnectionTypeBi,
     _decode_ConnectionTypeBi,
     _encode_ConnectionTypeBi,
 } from '../ASN1DefinedTypesModule/ConnectionTypeBi.ta.mjs';

@@ -1,14 +1,14 @@
 /* eslint-disable */
 import {
-    INTEGER,
+    type INTEGER,
     ASN1ConstructionError as _ConstructionError,
-    ASN1Element as _Element,
+    type ASN1Element as _Element,
     ASN1TagClass as _TagClass,
     ASN1OverflowError
 } from "@wildboar/asn1";
 import * as $ from "@wildboar/asn1/functional";
-import { MId, _decode_MId, _encode_MId } from "../MEDIA-GATEWAY-CONTROL/MId.ta.mjs";
-import { Message_messageBody, _decode_Message_messageBody, _encode_Message_messageBody } from "../MEDIA-GATEWAY-CONTROL/Message-messageBody.ta.mjs";
+import { type MId, _decode_MId, _encode_MId } from "../MEDIA-GATEWAY-CONTROL/MId.ta.mjs";
+import { type Message_messageBody, _decode_Message_messageBody, _encode_Message_messageBody } from "../MEDIA-GATEWAY-CONTROL/Message-messageBody.ta.mjs";
 
 
 /**
@@ -56,7 +56,7 @@ class Message {
      * @public
      * @readonly
      */
-    readonly version: INTEGER;
+    public readonly version: INTEGER;
     /**
      * @summary `mId`.
      * @description
@@ -68,7 +68,7 @@ class Message {
      * @public
      * @readonly
      */
-    readonly mId: MId;
+    public readonly mId: MId;
     /**
      * @summary `messageBody`.
      * @description
@@ -79,7 +79,7 @@ class Message {
      * @public
      * @readonly
      */
-    readonly messageBody: Message_messageBody;
+    public readonly messageBody: Message_messageBody;
     /**
      * @summary Extensions that are not recognized.
      * @description
@@ -90,7 +90,7 @@ class Message {
      * @public
      * @readonly
      */
-    readonly _unrecognizedExtensionsList: _Element[];
+    public readonly _unrecognizedExtensionsList: _Element[];
 
     constructor (
         version: INTEGER,
@@ -98,10 +98,10 @@ class Message {
         messageBody: Message_messageBody,
         _unrecognizedExtensionsList: _Element[] = []
     ) {
-        this.version = version;
-        this.mId = mId;
-        this.messageBody = messageBody;
-        this._unrecognizedExtensionsList = _unrecognizedExtensionsList;
+            this.version = version;
+            this.mId = mId;
+            this.messageBody = messageBody;
+            this._unrecognizedExtensionsList = _unrecognizedExtensionsList;
             const n = typeof version === "bigint" ? version : BigInt(version);
             if (n < 0n || n > 99n) {
                 throw new ASN1OverflowError("Message.version violates INTEGER range");

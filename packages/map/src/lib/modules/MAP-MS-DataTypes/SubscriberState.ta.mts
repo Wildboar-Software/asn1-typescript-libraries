@@ -1,8 +1,8 @@
 /* eslint-disable */
 import {
-    ASN1Element as _Element,
+    type ASN1Element as _Element,
     ASN1TagClass as _TagClass,
-    NULL
+    type NULL
 } from "@wildboar/asn1";
 import * as $ from "@wildboar/asn1/functional";
 import { _decode_NotReachableReason, _encode_NotReachableReason, NotReachableReason } from "../MAP-MS-DataTypes/NotReachableReason.ta.mjs";

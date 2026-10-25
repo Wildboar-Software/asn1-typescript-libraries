@@ -1,8 +1,8 @@
 /* eslint-disable */
 import {
-    OPTIONAL,
-    UTF8String,
-    ASN1Element as _Element,
+    type OPTIONAL,
+    type UTF8String,
+    type ASN1Element as _Element,
     ASN1TagClass as _TagClass
 } from "@wildboar/asn1";
 import * as $ from "@wildboar/asn1/functional";
@@ -185,13 +185,13 @@ class MMSMBoxDelete {
          * @static
          */
 
-    public static _enum_for_direction = _enum_for_MMSDirection;        /**
+    public static _enum_for_direction: typeof _enum_for_MMSDirection = _enum_for_MMSDirection;        /**
          * @summary The enum used as the type of the component `responseStatus`
          * @public
          * @static
          */
 
-    public static _enum_for_responseStatus = _enum_for_MMSDeleteResponseStatus;
+    public static _enum_for_responseStatus: typeof _enum_for_MMSDeleteResponseStatus = _enum_for_MMSDeleteResponseStatus;
 }
 
 /**

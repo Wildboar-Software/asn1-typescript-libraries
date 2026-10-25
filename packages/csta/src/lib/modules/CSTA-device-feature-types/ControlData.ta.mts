@@ -2,11 +2,11 @@
 
 import * as $ from "@wildboar/asn1/functional";
 import {
-    OCTET_STRING,
-    ENUMERATED,
-    SEQUENCE,
-    SET,
-    ASN1Element as _Element,
+    type OCTET_STRING,
+    type ENUMERATED,
+    type SEQUENCE,
+    type SET,
+    type ASN1Element as _Element,
     ASN1TagClass as _TagClass,
     ASN1ConstructionError as _ConstructionError
 } from "@wildboar/asn1";
@@ -45,22 +45,28 @@ import {
  */
 export
 class ControlData {
+    /**
+     * @summary `gender`.
+     * @description Male or female voice.
+     * @public
+     * @readonly
+     */
+    public readonly gender: ControlData_gender;
+    /**
+     * @summary `language`.
+     * @description Language of the synthesized voice.
+     * @public
+     * @readonly
+     */
+    public readonly language: OCTET_STRING;
+
     constructor (
-        /**
-         * @summary `gender`.
-         * @description Male or female voice.
-         * @public
-         * @readonly
-         */
-        readonly gender: ControlData_gender,
-        /**
-         * @summary `language`.
-         * @description Language of the synthesized voice.
-         * @public
-         * @readonly
-         */
-        readonly language: OCTET_STRING
-    ) {}
+        gender: ControlData_gender,
+        language: OCTET_STRING
+    ) {
+        this.gender = gender;
+        this.language = language;
+    }
 
     /**
      * @summary Restructures an object into a ControlData
@@ -84,7 +90,7 @@ class ControlData {
          * @static
          */
 
-    public static _enum_for_gender = _enum_for_ControlData_gender;
+    public static _enum_for_gender: typeof _enum_for_ControlData_gender = _enum_for_ControlData_gender;
 }
 
 /**

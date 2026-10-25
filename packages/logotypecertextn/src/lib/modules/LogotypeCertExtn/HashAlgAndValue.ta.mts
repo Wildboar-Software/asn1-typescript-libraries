@@ -1,8 +1,8 @@
 /* eslint-disable */
 import {
-    OCTET_STRING,
+    type OCTET_STRING,
     ASN1ConstructionError as _ConstructionError,
-    ASN1Element as _Element,
+    type ASN1Element as _Element,
     ASN1TagClass as _TagClass
 } from "@wildboar/asn1";
 import * as $ from "@wildboar/asn1/functional";
@@ -46,13 +46,13 @@ class HashAlgAndValue {
      * @public
      * @readonly
      */
-    readonly hashAlg: AlgorithmIdentifier;
+    public readonly hashAlg: AlgorithmIdentifier;
     /**
      * Digest of the entire referenced file under `hashAlg`.
      * @public
      * @readonly
      */
-    readonly hashValue: OCTET_STRING;
+    public readonly hashValue: OCTET_STRING;
 
     constructor (
         hashAlg: AlgorithmIdentifier,

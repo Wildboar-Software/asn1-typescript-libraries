@@ -1,6 +1,6 @@
 /* eslint-disable */
 import {
-    ASN1Element as _Element,
+    type ASN1Element as _Element,
     ASN1TagClass as _TagClass,
     ASN1Construction as _Construction,
     ASN1UniversalType as _UniversalType,
@@ -58,7 +58,7 @@ export type SystemTiming_sourceType = _enum_for_SystemTiming_sourceType;
  *
  * @enum {number}
  */
-export const SystemTiming_sourceType = _enum_for_SystemTiming_sourceType;
+export const SystemTiming_sourceType: typeof _enum_for_SystemTiming_sourceType = _enum_for_SystemTiming_sourceType;
 
 
 /**
@@ -66,7 +66,7 @@ export const SystemTiming_sourceType = _enum_for_SystemTiming_sourceType;
  * @constant
  * @type {number}
  */
-export const SystemTiming_sourceType_internalTimingSource: SystemTiming_sourceType =
+export const SystemTiming_sourceType_internalTimingSource: _enum_for_SystemTiming_sourceType.internalTimingSource =
     SystemTiming_sourceType.internalTimingSource; /* LONG_NAMED_ENUMERATED_VALUE */
 
 
@@ -75,7 +75,7 @@ export const SystemTiming_sourceType_internalTimingSource: SystemTiming_sourceTy
  * @constant
  * @type {number}
  */
-export const internalTimingSource: SystemTiming_sourceType =
+export const internalTimingSource: _enum_for_SystemTiming_sourceType.internalTimingSource =
     SystemTiming_sourceType.internalTimingSource; /* SHORT_NAMED_ENUMERATED_VALUE */
 
 
@@ -84,7 +84,7 @@ export const internalTimingSource: SystemTiming_sourceType =
  * @constant
  * @type {number}
  */
-export const SystemTiming_sourceType_remoteTimingSource: SystemTiming_sourceType =
+export const SystemTiming_sourceType_remoteTimingSource: _enum_for_SystemTiming_sourceType.remoteTimingSource =
     SystemTiming_sourceType.remoteTimingSource; /* LONG_NAMED_ENUMERATED_VALUE */
 
 
@@ -93,7 +93,7 @@ export const SystemTiming_sourceType_remoteTimingSource: SystemTiming_sourceType
  * @constant
  * @type {number}
  */
-export const remoteTimingSource: SystemTiming_sourceType =
+export const remoteTimingSource: _enum_for_SystemTiming_sourceType.remoteTimingSource =
     SystemTiming_sourceType.remoteTimingSource; /* SHORT_NAMED_ENUMERATED_VALUE */
 
 
@@ -102,7 +102,7 @@ export const remoteTimingSource: SystemTiming_sourceType =
  * @constant
  * @type {number}
  */
-export const SystemTiming_sourceType_slavedTimingTerminationSignal: SystemTiming_sourceType =
+export const SystemTiming_sourceType_slavedTimingTerminationSignal: _enum_for_SystemTiming_sourceType.slavedTimingTerminationSignal =
     SystemTiming_sourceType.slavedTimingTerminationSignal; /* LONG_NAMED_ENUMERATED_VALUE */
 
 
@@ -111,18 +111,30 @@ export const SystemTiming_sourceType_slavedTimingTerminationSignal: SystemTiming
  * @constant
  * @type {number}
  */
-export const slavedTimingTerminationSignal: SystemTiming_sourceType =
+export const slavedTimingTerminationSignal: _enum_for_SystemTiming_sourceType.slavedTimingTerminationSignal =
     SystemTiming_sourceType.slavedTimingTerminationSignal; /* SHORT_NAMED_ENUMERATED_VALUE */
 
 
 
 
-export const _decode_SystemTiming_sourceType = $._decodeEnumerated;
+export function _decode_SystemTiming_sourceType(el: _Element): SystemTiming_sourceType {
+    const enumerated = $._decodeEnumerated(el);
+    switch (enumerated) {
+        case SystemTiming_sourceType.internalTimingSource: return SystemTiming_sourceType.internalTimingSource;
+        case SystemTiming_sourceType.remoteTimingSource: return SystemTiming_sourceType.remoteTimingSource;
+        case SystemTiming_sourceType.slavedTimingTerminationSignal: return SystemTiming_sourceType.slavedTimingTerminationSignal;
+        default:
+            throw new _ConstructionError(
+                'Invalid ENUMERATED value ' + enumerated + ' for SystemTiming_sourceType.',
+                el,
+            );
+    }
+}
 
 
 
 
-export const _encode_SystemTiming_sourceType = $._encodeEnumerated;
+export const _encode_SystemTiming_sourceType: $.ASN1Encoder<SystemTiming_sourceType> = $._encodeEnumerated as $.ASN1Encoder<SystemTiming_sourceType>;
 
 
 /* eslint-enable */

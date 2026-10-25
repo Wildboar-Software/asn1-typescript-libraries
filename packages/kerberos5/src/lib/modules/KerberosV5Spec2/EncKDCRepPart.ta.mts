@@ -1,6 +1,6 @@
 /* eslint-disable */
 import {
-  OPTIONAL,
+  type OPTIONAL,
   ASN1Element as _Element,
   ASN1TagClass as _TagClass,
   ASN1Construction as _Construction,
@@ -17,27 +17,27 @@ import {
   _encode_EncryptionKey,
 } from '../KerberosV5Spec2/EncryptionKey.ta.mjs';
 import {
-  LastReq,
+  type LastReq,
   _decode_LastReq,
   _encode_LastReq,
 } from '../KerberosV5Spec2/LastReq.ta.mjs';
 import {
-  UInt32,
+  type UInt32,
   _decode_UInt32,
   _encode_UInt32,
 } from '../KerberosV5Spec2/UInt32.ta.mjs';
 import {
-  KerberosTime,
+  type KerberosTime,
   _decode_KerberosTime,
   _encode_KerberosTime,
 } from '../KerberosV5Spec2/KerberosTime.ta.mjs';
 import {
-  TicketFlags,
+  type TicketFlags,
   _decode_TicketFlags,
   _encode_TicketFlags,
 } from '../KerberosV5Spec2/TicketFlags.ta.mjs';
 import {
-  Realm,
+  type Realm,
   _decode_Realm,
   _encode_Realm,
 } from '../KerberosV5Spec2/Realm.ta.mjs';
@@ -47,7 +47,7 @@ import {
   _encode_PrincipalName,
 } from '../KerberosV5Spec2/PrincipalName.ta.mjs';
 import {
-  HostAddresses,
+  type HostAddresses,
   _decode_HostAddresses,
   _encode_HostAddresses,
 } from '../KerberosV5Spec2/HostAddresses.ta.mjs';
@@ -90,7 +90,7 @@ export class EncKDCRepPart {
    * @public
    * @readonly
    */
-  readonly key: EncryptionKey;
+  public readonly key: EncryptionKey;
   /**
    * @summary `last_req`.
    * @description
@@ -101,7 +101,7 @@ export class EncKDCRepPart {
    * @public
    * @readonly
    */
-  readonly last_req: LastReq;
+  public readonly last_req: LastReq;
   /**
    * @summary `nonce`.
    * @description
@@ -112,7 +112,7 @@ export class EncKDCRepPart {
    * @public
    * @readonly
    */
-  readonly nonce: UInt32;
+  public readonly nonce: UInt32;
   /**
    * @summary `key_expiration`.
    * @description
@@ -124,7 +124,7 @@ export class EncKDCRepPart {
    * @public
    * @readonly
    */
-  readonly key_expiration: OPTIONAL<KerberosTime>;
+  public readonly key_expiration: OPTIONAL<KerberosTime>;
   /**
    * @summary `flags`.
    * @description
@@ -135,7 +135,7 @@ export class EncKDCRepPart {
    * @public
    * @readonly
    */
-  readonly flags: TicketFlags;
+  public readonly flags: TicketFlags;
   /**
    * @summary `authtime`.
    * @description
@@ -145,7 +145,7 @@ export class EncKDCRepPart {
    * @public
    * @readonly
    */
-  readonly authtime: KerberosTime;
+  public readonly authtime: KerberosTime;
   /**
    * @summary `starttime`.
    * @description
@@ -155,7 +155,7 @@ export class EncKDCRepPart {
    * @public
    * @readonly
    */
-  readonly starttime: OPTIONAL<KerberosTime>;
+  public readonly starttime: OPTIONAL<KerberosTime>;
   /**
    * @summary `endtime`.
    * @description
@@ -165,7 +165,7 @@ export class EncKDCRepPart {
    * @public
    * @readonly
    */
-  readonly endtime: KerberosTime;
+  public readonly endtime: KerberosTime;
   /**
    * @summary `renew_till`.
    * @description
@@ -175,7 +175,7 @@ export class EncKDCRepPart {
    * @public
    * @readonly
    */
-  readonly renew_till: OPTIONAL<KerberosTime>;
+  public readonly renew_till: OPTIONAL<KerberosTime>;
   /**
    * @summary `srealm`.
    * @description
@@ -185,7 +185,7 @@ export class EncKDCRepPart {
    * @public
    * @readonly
    */
-  readonly srealm: Realm;
+  public readonly srealm: Realm;
   /**
    * @summary `sname`.
    * @description
@@ -195,7 +195,7 @@ export class EncKDCRepPart {
    * @public
    * @readonly
    */
-  readonly sname: PrincipalName;
+  public readonly sname: PrincipalName;
   /**
    * @summary `caddr`.
    * @description
@@ -206,7 +206,7 @@ export class EncKDCRepPart {
    * @public
    * @readonly
    */
-  readonly caddr?: OPTIONAL<HostAddresses>;
+  public readonly caddr?: OPTIONAL<HostAddresses>;
 
   constructor(
     key: EncryptionKey,

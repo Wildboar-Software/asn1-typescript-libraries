@@ -1,12 +1,12 @@
 /* eslint-disable */
 import {
-    OPTIONAL,
-    ASN1Element as _Element,
+    type OPTIONAL,
+    type ASN1Element as _Element,
     ASN1TagClass as _TagClass
 } from "@wildboar/asn1";
 import * as $ from "@wildboar/asn1/functional";
-import { SS_Code, _decode_SS_Code, _encode_SS_Code } from "../MAP-SS-Code/SS-Code.ta.mjs";
-import { CCBS_Index, _decode_CCBS_Index, _encode_CCBS_Index } from "../MAP-SS-DataTypes/CCBS-Index.ta.mjs";
+import { type SS_Code, _decode_SS_Code, _encode_SS_Code } from "../MAP-SS-Code/SS-Code.ta.mjs";
+import { type CCBS_Index, _decode_CCBS_Index, _encode_CCBS_Index } from "../MAP-SS-DataTypes/CCBS-Index.ta.mjs";
 
 
 /**
@@ -21,7 +21,7 @@ import { CCBS_Index, _decode_CCBS_Index, _encode_CCBS_Index } from "../MAP-SS-Da
  * ```asn1
  * EraseCC-EntryArg ::= SEQUENCE {
  *     ss-Code    [0]    SS-Code,
- *     ccbs-Index    [1]    CCBS-Index    OPTIONAL,
+ *     ccbs-Index    [1]    CCBS-Index    type OPTIONAL,
  *     ...}
  * ```
  * 
@@ -29,34 +29,42 @@ import { CCBS_Index, _decode_CCBS_Index, _encode_CCBS_Index } from "../MAP-SS-Da
  */
 export
 class EraseCC_EntryArg {
+    /**
+     * @summary `ss_Code`.
+     * @description
+     *
+     * Call-completion SS-Code.
+     *
+     * @public
+     * @readonly
+     */
+    public readonly ss_Code: SS_Code;
+    /**
+     * @summary `ccbs_Index`.
+     * @description
+     *
+     * CCBS request index to erase, if present.
+     *
+     * @public
+     * @readonly
+     */
+    public readonly ccbs_Index?: OPTIONAL<CCBS_Index>;
+    /**
+     * @summary Extensions that are not recognized.
+     * @public
+     * @readonly
+     */
+    public readonly _unrecognizedExtensionsList: _Element[];
+
     constructor (
-        /**
-         * @summary `ss_Code`.
-         * @description
-         *
-         * Call-completion SS-Code.
-         *
-         * @public
-         * @readonly
-         */
-        readonly ss_Code: SS_Code,
-        /**
-         * @summary `ccbs_Index`.
-         * @description
-         *
-         * CCBS request index to erase, if present.
-         *
-         * @public
-         * @readonly
-         */
-        readonly ccbs_Index?: OPTIONAL<CCBS_Index>,
-        /**
-         * @summary Extensions that are not recognized.
-         * @public
-         * @readonly
-         */
-        readonly _unrecognizedExtensionsList: _Element[] = []
-    ) {}
+        ss_Code: SS_Code,
+        ccbs_Index?: OPTIONAL<CCBS_Index>,
+        _unrecognizedExtensionsList: _Element[] = []
+    ) {
+        this.ss_Code = ss_Code;
+        this.ccbs_Index = ccbs_Index;
+        this._unrecognizedExtensionsList = _unrecognizedExtensionsList;
+    }
 
     /**
      * @summary Restructures an object into a EraseCC_EntryArg

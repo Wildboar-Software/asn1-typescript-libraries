@@ -2,10 +2,10 @@
 
 import * as $ from "@wildboar/asn1/functional";
 import {
-    OPTIONAL,
-    SEQUENCE,
-    SET,
-    ASN1Element as _Element,
+    type OPTIONAL,
+    type SEQUENCE,
+    type SET,
+    type ASN1Element as _Element,
     ASN1TagClass as _TagClass
 } from "@wildboar/asn1";
 import { DeviceID, _decode_DeviceID, _encode_DeviceID } from "../CSTA-device-identifiers/DeviceID.ta.mjs";
@@ -35,8 +35,8 @@ import { CSTACommonArguments, _decode_CSTACommonArguments, _encode_CSTACommonArg
  * 
  * ```asn1
  * GetSwitchingFunctionDevicesArgument ::= SEQUENCE
- * {     requestedDeviceID         DeviceID             OPTIONAL,
- *     requestedDeviceCategory     ReqDeviceCategory         OPTIONAL,
+ * {     requestedDeviceID         DeviceID             type OPTIONAL,
+ *     requestedDeviceCategory     ReqDeviceCategory         type OPTIONAL,
  *     extensions             CSTACommonArguments         OPTIONAL }
  * ```
  * 
@@ -44,38 +44,46 @@ import { CSTACommonArguments, _decode_CSTACommonArguments, _encode_CSTACommonArg
  */
 export
 class GetSwitchingFunctionDevicesArgument {
+    /**
+     * @summary `requestedDeviceID`.
+     * @description
+     *
+     * If present, query this device only (still subject to
+     * `requestedDeviceCategory`).
+     * @public
+     * @readonly
+     */
+    public readonly requestedDeviceID?: OPTIONAL<DeviceID>;
+    /**
+     * @summary `requestedDeviceCategory`.
+     * @description
+     *
+     * Restrict the list to this category (group ACD/hunt/pick/user/
+     * other, IV variants, station, routeing, etc.).
+     * @public
+     * @readonly
+     */
+    public readonly requestedDeviceCategory?: OPTIONAL<ReqDeviceCategory>;
+    /**
+     * @summary `extensions`.
+     * @description
+     *
+     * Optional security (timestamp, sequence, securityInfo) and
+     * privateData. ECMA-269 Table 13-10.
+     * @public
+     * @readonly
+     */
+    public readonly extensions?: OPTIONAL<CSTACommonArguments>;
+
     constructor (
-        /**
-         * @summary `requestedDeviceID`.
-         * @description
-         *
-         * If present, query this device only (still subject to
-         * `requestedDeviceCategory`).
-         * @public
-         * @readonly
-         */
-        readonly requestedDeviceID?: OPTIONAL<DeviceID>,
-        /**
-         * @summary `requestedDeviceCategory`.
-         * @description
-         *
-         * Restrict the list to this category (group ACD/hunt/pick/user/
-         * other, IV variants, station, routeing, etc.).
-         * @public
-         * @readonly
-         */
-        readonly requestedDeviceCategory?: OPTIONAL<ReqDeviceCategory>,
-        /**
-         * @summary `extensions`.
-         * @description
-         *
-         * Optional security (timestamp, sequence, securityInfo) and
-         * privateData. ECMA-269 Table 13-10.
-         * @public
-         * @readonly
-         */
-        readonly extensions?: OPTIONAL<CSTACommonArguments>
-    ) {}
+        requestedDeviceID?: OPTIONAL<DeviceID>,
+        requestedDeviceCategory?: OPTIONAL<ReqDeviceCategory>,
+        extensions?: OPTIONAL<CSTACommonArguments>
+    ) {
+        this.requestedDeviceID = requestedDeviceID;
+        this.requestedDeviceCategory = requestedDeviceCategory;
+        this.extensions = extensions;
+    }
 
     /**
      * @summary Restructures an object into a GetSwitchingFunctionDevicesArgument
@@ -99,7 +107,7 @@ class GetSwitchingFunctionDevicesArgument {
          * @static
          */
 
-    public static _enum_for_requestedDeviceCategory = _enum_for_ReqDeviceCategory;
+    public static _enum_for_requestedDeviceCategory: typeof _enum_for_ReqDeviceCategory = _enum_for_ReqDeviceCategory;
 }
 
 /**

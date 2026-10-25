@@ -1,7 +1,7 @@
 /* eslint-disable */
 import {
-    BIT_STRING,
-    ASN1Element as _Element,
+    type BIT_STRING,
+    type ASN1Element as _Element,
     ASN1TagClass as _TagClass,
     ASN1Construction as _Construction,
     ASN1UniversalType as _UniversalType,
@@ -101,8 +101,8 @@ const ParameterOffers_defaultCOPriority_urgent: number = 2; /* LONG_NAMED_BIT */
  */
 export
 const urgent: number = ParameterOffers_defaultCOPriority_urgent; /* SHORT_NAMED_BIT */
-export const _decode_ParameterOffers_defaultCOPriority = $._decodeBitString;
-export const _encode_ParameterOffers_defaultCOPriority = $._encodeBitString;
+export const _decode_ParameterOffers_defaultCOPriority: $.ASN1Decoder<BIT_STRING> = $._decodeBitString;
+export const _encode_ParameterOffers_defaultCOPriority: $.ASN1Encoder<BIT_STRING> = $._encodeBitString;
 
 
 /* eslint-enable */

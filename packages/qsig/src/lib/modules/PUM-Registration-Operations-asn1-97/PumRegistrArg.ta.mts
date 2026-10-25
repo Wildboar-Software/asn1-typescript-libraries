@@ -1,17 +1,17 @@
 /* eslint-disable */
 import {
-    OPTIONAL,
-    ASN1Element as _Element,
+    type OPTIONAL,
+    type ASN1Element as _Element,
     ASN1TagClass as _TagClass
 } from "@wildboar/asn1";
 import * as $ from "@wildboar/asn1/functional";
-import { PumRegistrArg_pumUserId, _decode_PumRegistrArg_pumUserId, _encode_PumRegistrArg_pumUserId } from "../PUM-Registration-Operations-asn1-97/PumRegistrArg-pumUserId.ta.mjs";
+import { type PumRegistrArg_pumUserId, _decode_PumRegistrArg_pumUserId, _encode_PumRegistrArg_pumUserId } from "../PUM-Registration-Operations-asn1-97/PumRegistrArg-pumUserId.ta.mjs";
 import { BasicService, _decode_BasicService, _encode_BasicService, _enum_for_BasicService } from "../Call-Diversion-Operations-asn1-97/BasicService.ta.mjs";
-import { PartyNumber, _decode_PartyNumber, _encode_PartyNumber } from "../Addressing-Data-Elements-asn1-97/PartyNumber.ta.mjs";
+import { type PartyNumber, _decode_PartyNumber, _encode_PartyNumber } from "../Addressing-Data-Elements-asn1-97/PartyNumber.ta.mjs";
 import { ServiceOption, ServiceOption_inCallRegistration /* IMPORTED_LONG_ENUMERATION_ITEM */, _decode_ServiceOption, _encode_ServiceOption, _enum_for_ServiceOption } from "../PUM-Registration-Operations-asn1-97/ServiceOption.ta.mjs";
 import { SessionParams, _decode_SessionParams, _encode_SessionParams } from "../PUM-Registration-Operations-asn1-97/SessionParams.ta.mjs";
-import { PumRegistrArg_userPin, _decode_PumRegistrArg_userPin, _encode_PumRegistrArg_userPin } from "../PUM-Registration-Operations-asn1-97/PumRegistrArg-userPin.ta.mjs";
-import { PumrExtension, _decode_PumrExtension, _encode_PumrExtension } from "../PUM-Registration-Operations-asn1-97/PumrExtension.ta.mjs";
+import { type PumRegistrArg_userPin, _decode_PumRegistrArg_userPin, _encode_PumRegistrArg_userPin } from "../PUM-Registration-Operations-asn1-97/PumRegistrArg-userPin.ta.mjs";
+import { type PumrExtension, _decode_PumrExtension, _encode_PumrExtension } from "../PUM-Registration-Operations-asn1-97/PumrExtension.ta.mjs";
 
 /**
  * @summary PumRegistrArg
@@ -191,19 +191,19 @@ class PumRegistrArg {
      * @static
      * @method
      */
-    public static get _default_value_for_serviceOption () { return ServiceOption_inCallRegistration; }        /**
+    public static get _default_value_for_serviceOption (): _enum_for_ServiceOption { return ServiceOption_inCallRegistration; }        /**
          * @summary The enum used as the type of the component `basicService`
          * @public
          * @static
          */
 
-    public static _enum_for_basicService = _enum_for_BasicService;        /**
+    public static _enum_for_basicService: typeof _enum_for_BasicService = _enum_for_BasicService;        /**
          * @summary The enum used as the type of the component `serviceOption`
          * @public
          * @static
          */
 
-    public static _enum_for_serviceOption = _enum_for_ServiceOption;
+    public static _enum_for_serviceOption: typeof _enum_for_ServiceOption = _enum_for_ServiceOption;
 }
 
 /**

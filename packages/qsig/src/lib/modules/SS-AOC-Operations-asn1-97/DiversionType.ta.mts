@@ -88,7 +88,7 @@ type DiversionType = _enum_for_DiversionType;
  * @enum {number}
  */
 export
-const DiversionType = _enum_for_DiversionType;
+const DiversionType: typeof _enum_for_DiversionType = _enum_for_DiversionType;
 
 /**
  * @summary DiversionType_callForwardingUnconditional
@@ -103,7 +103,7 @@ const DiversionType = _enum_for_DiversionType;
  * @see https://ecma-international.org/publications-and-standards/standards/ecma-211/
  */
 export
-const DiversionType_callForwardingUnconditional: DiversionType = DiversionType.callForwardingUnconditional; /* LONG_NAMED_ENUMERATED_VALUE */
+const DiversionType_callForwardingUnconditional: _enum_for_DiversionType.callForwardingUnconditional = DiversionType.callForwardingUnconditional; /* LONG_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary callForwardingUnconditional
@@ -112,7 +112,7 @@ const DiversionType_callForwardingUnconditional: DiversionType = DiversionType.c
  * @type {number}
  */
 export
-const callForwardingUnconditional: DiversionType = DiversionType.callForwardingUnconditional; /* SHORT_NAMED_ENUMERATED_VALUE */
+const callForwardingUnconditional: _enum_for_DiversionType.callForwardingUnconditional = DiversionType.callForwardingUnconditional; /* SHORT_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary DiversionType_callForwardingBusy
@@ -126,7 +126,7 @@ const callForwardingUnconditional: DiversionType = DiversionType.callForwardingU
  * @see https://ecma-international.org/publications-and-standards/standards/ecma-211/
  */
 export
-const DiversionType_callForwardingBusy: DiversionType = DiversionType.callForwardingBusy; /* LONG_NAMED_ENUMERATED_VALUE */
+const DiversionType_callForwardingBusy: _enum_for_DiversionType.callForwardingBusy = DiversionType.callForwardingBusy; /* LONG_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary callForwardingBusy
@@ -135,7 +135,7 @@ const DiversionType_callForwardingBusy: DiversionType = DiversionType.callForwar
  * @type {number}
  */
 export
-const callForwardingBusy: DiversionType = DiversionType.callForwardingBusy; /* SHORT_NAMED_ENUMERATED_VALUE */
+const callForwardingBusy: _enum_for_DiversionType.callForwardingBusy = DiversionType.callForwardingBusy; /* SHORT_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary DiversionType_callForwardingNoReply
@@ -150,7 +150,7 @@ const callForwardingBusy: DiversionType = DiversionType.callForwardingBusy; /* S
  * @see https://ecma-international.org/publications-and-standards/standards/ecma-211/
  */
 export
-const DiversionType_callForwardingNoReply: DiversionType = DiversionType.callForwardingNoReply; /* LONG_NAMED_ENUMERATED_VALUE */
+const DiversionType_callForwardingNoReply: _enum_for_DiversionType.callForwardingNoReply = DiversionType.callForwardingNoReply; /* LONG_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary callForwardingNoReply
@@ -159,7 +159,7 @@ const DiversionType_callForwardingNoReply: DiversionType = DiversionType.callFor
  * @type {number}
  */
 export
-const callForwardingNoReply: DiversionType = DiversionType.callForwardingNoReply; /* SHORT_NAMED_ENUMERATED_VALUE */
+const callForwardingNoReply: _enum_for_DiversionType.callForwardingNoReply = DiversionType.callForwardingNoReply; /* SHORT_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary DiversionType_callDeflection
@@ -173,7 +173,7 @@ const callForwardingNoReply: DiversionType = DiversionType.callForwardingNoReply
  * @see https://ecma-international.org/publications-and-standards/standards/ecma-211/
  */
 export
-const DiversionType_callDeflection: DiversionType = DiversionType.callDeflection; /* LONG_NAMED_ENUMERATED_VALUE */
+const DiversionType_callDeflection: _enum_for_DiversionType.callDeflection = DiversionType.callDeflection; /* LONG_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary callDeflection
@@ -182,7 +182,7 @@ const DiversionType_callDeflection: DiversionType = DiversionType.callDeflection
  * @type {number}
  */
 export
-const callDeflection: DiversionType = DiversionType.callDeflection; /* SHORT_NAMED_ENUMERATED_VALUE */
+const callDeflection: _enum_for_DiversionType.callDeflection = DiversionType.callDeflection; /* SHORT_NAMED_ENUMERATED_VALUE */
 
 export
 const _decode_DiversionType: $.ASN1Decoder<DiversionType> = $._decodeEnumerated;

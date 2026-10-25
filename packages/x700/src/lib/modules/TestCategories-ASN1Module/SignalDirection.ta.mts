@@ -1,6 +1,6 @@
 /* eslint-disable */
 import {
-    ASN1Element as _Element,
+    type ASN1Element as _Element,
     ASN1TagClass as _TagClass,
     ASN1Construction as _Construction,
     ASN1UniversalType as _UniversalType,
@@ -69,7 +69,7 @@ export type SignalDirection = _enum_for_SignalDirection;
  *
  * @enum {number}
  */
-export const SignalDirection = _enum_for_SignalDirection;
+export const SignalDirection: typeof _enum_for_SignalDirection = _enum_for_SignalDirection;
 
 /**
  * @summary SignalDirection_send
@@ -79,7 +79,7 @@ export const SignalDirection = _enum_for_SignalDirection;
  * @constant
  * @type {number}
  */
-export const SignalDirection_send: SignalDirection =
+export const SignalDirection_send: _enum_for_SignalDirection.send =
     SignalDirection.send; /* LONG_NAMED_ENUMERATED_VALUE */
 
 /**
@@ -90,7 +90,7 @@ export const SignalDirection_send: SignalDirection =
  * @constant
  * @type {number}
  */
-export const send: SignalDirection =
+export const send: _enum_for_SignalDirection.send =
     SignalDirection.send; /* SHORT_NAMED_ENUMERATED_VALUE */
 
 /**
@@ -101,7 +101,7 @@ export const send: SignalDirection =
  * @constant
  * @type {number}
  */
-export const SignalDirection_receive: SignalDirection =
+export const SignalDirection_receive: _enum_for_SignalDirection.receive =
     SignalDirection.receive; /* LONG_NAMED_ENUMERATED_VALUE */
 
 /**
@@ -112,14 +112,25 @@ export const SignalDirection_receive: SignalDirection =
  * @constant
  * @type {number}
  */
-export const receive: SignalDirection =
+export const receive: _enum_for_SignalDirection.receive =
     SignalDirection.receive; /* SHORT_NAMED_ENUMERATED_VALUE */
 
 
-export const _decode_SignalDirection = $._decodeEnumerated;
+export function _decode_SignalDirection(el: _Element): SignalDirection {
+    const enumerated = $._decodeEnumerated(el);
+    switch (enumerated) {
+        case SignalDirection.send: return SignalDirection.send;
+        case SignalDirection.receive: return SignalDirection.receive;
+        default:
+            throw new _ConstructionError(
+                'Invalid ENUMERATED value ' + enumerated + ' for SignalDirection.',
+                el,
+            );
+    }
+}
 
 
-export const _encode_SignalDirection = $._encodeEnumerated;
+export const _encode_SignalDirection: $.ASN1Encoder<SignalDirection> = $._encodeEnumerated as $.ASN1Encoder<SignalDirection>;
 
 
 /* eslint-enable */

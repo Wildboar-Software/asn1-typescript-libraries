@@ -1,5 +1,5 @@
 /* eslint-disable */
-import { OBJECT_IDENTIFIER } from "@wildboar/asn1";
+import { type OBJECT_IDENTIFIER } from "@wildboar/asn1";
 import { dhpublicnumber } from "../PKIXAlgs-2009/dhpublicnumber.va.mjs";
 
 /**

@@ -1,13 +1,13 @@
 /* eslint-disable */
 import {
     ASN1ConstructionError as _ConstructionError,
-    ASN1Element as _Element,
+    type ASN1Element as _Element,
     ASN1TagClass as _TagClass
 } from "@wildboar/asn1";
 import * as $ from "@wildboar/asn1/functional";
-import { AFID, _decode_AFID, _encode_AFID } from "../TS33128Payloads/AFID.ta.mjs";
+import { type AFID, _decode_AFID, _encode_AFID } from "../TS33128Payloads/AFID.ta.mjs";
 // export { AFID, _decode_AFID, _encode_AFID } from "../TS33128Payloads/AFID.ta.mjs";
-import { NAI, _decode_NAI, _encode_NAI } from "../TS33128Payloads/NAI.ta.mjs";
+import { type NAI, _decode_NAI, _encode_NAI } from "../TS33128Payloads/NAI.ta.mjs";
 // export { NAI, _decode_NAI, _encode_NAI } from "../TS33128Payloads/NAI.ta.mjs";
 import { AFKeyRemovalCause, _decode_AFKeyRemovalCause, _encode_AFKeyRemovalCause, _enum_for_AFKeyRemovalCause } from "../TS33128Payloads/AFKeyRemovalCause.ta.mjs";
 // export { AFKeyRemovalCause, _enum_for_AFKeyRemovalCause, AFKeyRemovalCause_unknown /* IMPORTED_LONG_ENUMERATION_ITEM */, unknown /* IMPORTED_SHORT_ENUMERATION_ITEM */, AFKeyRemovalCause_keyExpiry /* IMPORTED_LONG_ENUMERATION_ITEM */, keyExpiry /* IMPORTED_SHORT_ENUMERATION_ITEM */, AFKeyRemovalCause_applicationSpecific /* IMPORTED_LONG_ENUMERATION_ITEM */, applicationSpecific /* IMPORTED_SHORT_ENUMERATION_ITEM */, _decode_AFKeyRemovalCause, _encode_AFKeyRemovalCause } from "../TS33128Payloads/AFKeyRemovalCause.ta.mjs";
@@ -118,7 +118,7 @@ class AFApplicationKeyRemoval {
          * @static
          */
 
-    public static _enum_for_removalCause = _enum_for_AFKeyRemovalCause;
+    public static _enum_for_removalCause: typeof _enum_for_AFKeyRemovalCause = _enum_for_AFKeyRemovalCause;
 }
 
 /**

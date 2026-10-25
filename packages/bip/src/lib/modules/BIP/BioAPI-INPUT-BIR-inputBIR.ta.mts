@@ -16,7 +16,7 @@ import {
   _encode_BioAPI_DBBIR_ID,
 } from '../BIP/BioAPI-DBBIR-ID.ta.mjs';
 import {
-  BioAPI_BIR_HANDLE,
+  type BioAPI_BIR_HANDLE,
   _decode_BioAPI_BIR_HANDLE,
   _encode_BioAPI_BIR_HANDLE,
 } from '../BIP/BioAPI-BIR-HANDLE.ta.mjs';

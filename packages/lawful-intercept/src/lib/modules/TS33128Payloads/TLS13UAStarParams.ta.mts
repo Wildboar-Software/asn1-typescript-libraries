@@ -1,9 +1,9 @@
 /* eslint-disable */
 import {
-    INTEGER,
-    OCTET_STRING,
-    OPTIONAL,
-    ASN1Element as _Element,
+    type INTEGER,
+    type OCTET_STRING,
+    type OPTIONAL,
+    type ASN1Element as _Element,
     ASN1TagClass as _TagClass,
     ASN1OverflowError,
     ASN1SizeError
@@ -17,7 +17,7 @@ import { TLS13PSKInfo, _decode_TLS13PSKInfo, _encode_TLS13PSKInfo } from "../TS3
 // export { TLS13PSKInfo, _decode_TLS13PSKInfo, _encode_TLS13PSKInfo } from "../TS33128Payloads/TLS13PSKInfo.ta.mjs";
 import { TLS13KDFAlgorithm, _decode_TLS13KDFAlgorithm, _encode_TLS13KDFAlgorithm, _enum_for_TLS13KDFAlgorithm } from "../TS33128Payloads/TLS13KDFAlgorithm.ta.mjs";
 // export { TLS13KDFAlgorithm, _enum_for_TLS13KDFAlgorithm, TLS13KDFAlgorithm_rfc5869 /* IMPORTED_LONG_ENUMERATION_ITEM */, rfc5869 /* IMPORTED_SHORT_ENUMERATION_ITEM */, _decode_TLS13KDFAlgorithm, _encode_TLS13KDFAlgorithm } from "../TS33128Payloads/TLS13KDFAlgorithm.ta.mjs";
-import { TLS13CipherSuite, _decode_TLS13CipherSuite, _encode_TLS13CipherSuite } from "../TS33128Payloads/TLS13CipherSuite.ta.mjs";
+import { type TLS13CipherSuite, _decode_TLS13CipherSuite, _encode_TLS13CipherSuite } from "../TS33128Payloads/TLS13CipherSuite.ta.mjs";
 // export { TLS13CipherSuite, _decode_TLS13CipherSuite, _encode_TLS13CipherSuite } from "../TS33128Payloads/TLS13CipherSuite.ta.mjs";
 import { TLS13Extension, _decode_TLS13Extension, _encode_TLS13Extension } from "../TS33128Payloads/TLS13Extension.ta.mjs";
 // export { TLS13Extension, _decode_TLS13Extension, _encode_TLS13Extension } from "../TS33128Payloads/TLS13Extension.ta.mjs";
@@ -403,7 +403,7 @@ class TLS13UAStarParams {
          * @static
          */
 
-    public static _enum_for_kDFAlgorithm = _enum_for_TLS13KDFAlgorithm;
+    public static _enum_for_kDFAlgorithm: typeof _enum_for_TLS13KDFAlgorithm = _enum_for_TLS13KDFAlgorithm;
 }
 
 /**

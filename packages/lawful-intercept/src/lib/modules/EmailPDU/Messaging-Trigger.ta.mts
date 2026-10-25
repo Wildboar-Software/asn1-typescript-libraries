@@ -1,6 +1,6 @@
 /* eslint-disable */
 import {
-    ENUMERATED
+    type ENUMERATED
 } from "@wildboar/asn1";
 import * as $ from "@wildboar/asn1/functional";
 
@@ -93,7 +93,7 @@ type Messaging_Trigger = _enum_for_Messaging_Trigger | ENUMERATED;
  * @type {number}
  */
 export
-const Messaging_Trigger_unknown: Messaging_Trigger = 0; /* LONG_NAMED_ENUMERATED_VALUE */
+const Messaging_Trigger_unknown: _enum_for_Messaging_Trigger.unknown = _enum_for_Messaging_Trigger.unknown; /* LONG_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary unknown
@@ -107,7 +107,7 @@ const Messaging_Trigger_unknown: Messaging_Trigger = 0; /* LONG_NAMED_ENUMERATED
  * @type {number}
  */
 export
-const unknown: Messaging_Trigger = Messaging_Trigger_unknown; /* SHORT_NAMED_ENUMERATED_VALUE */
+const unknown: _enum_for_Messaging_Trigger.unknown = Messaging_Trigger_unknown; /* SHORT_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary Messaging_Trigger_user
@@ -122,7 +122,7 @@ const unknown: Messaging_Trigger = Messaging_Trigger_unknown; /* SHORT_NAMED_ENU
  * @type {number}
  */
 export
-const Messaging_Trigger_user: Messaging_Trigger = 1; /* LONG_NAMED_ENUMERATED_VALUE */
+const Messaging_Trigger_user: _enum_for_Messaging_Trigger.user = _enum_for_Messaging_Trigger.user; /* LONG_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary user
@@ -137,7 +137,7 @@ const Messaging_Trigger_user: Messaging_Trigger = 1; /* LONG_NAMED_ENUMERATED_VA
  * @type {number}
  */
 export
-const user: Messaging_Trigger = Messaging_Trigger_user; /* SHORT_NAMED_ENUMERATED_VALUE */
+const user: _enum_for_Messaging_Trigger.user = Messaging_Trigger_user; /* SHORT_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary Messaging_Trigger_user_agent
@@ -152,7 +152,7 @@ const user: Messaging_Trigger = Messaging_Trigger_user; /* SHORT_NAMED_ENUMERATE
  * @type {number}
  */
 export
-const Messaging_Trigger_user_agent: Messaging_Trigger = 2; /* LONG_NAMED_ENUMERATED_VALUE */
+const Messaging_Trigger_user_agent: _enum_for_Messaging_Trigger.user_agent = _enum_for_Messaging_Trigger.user_agent; /* LONG_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary user_agent
@@ -167,7 +167,7 @@ const Messaging_Trigger_user_agent: Messaging_Trigger = 2; /* LONG_NAMED_ENUMERA
  * @type {number}
  */
 export
-const user_agent: Messaging_Trigger = Messaging_Trigger_user_agent; /* SHORT_NAMED_ENUMERATED_VALUE */
+const user_agent: _enum_for_Messaging_Trigger.user_agent = Messaging_Trigger_user_agent; /* SHORT_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary Messaging_Trigger_system
@@ -181,7 +181,7 @@ const user_agent: Messaging_Trigger = Messaging_Trigger_user_agent; /* SHORT_NAM
  * @type {number}
  */
 export
-const Messaging_Trigger_system: Messaging_Trigger = 3; /* LONG_NAMED_ENUMERATED_VALUE */
+const Messaging_Trigger_system: _enum_for_Messaging_Trigger.system = _enum_for_Messaging_Trigger.system; /* LONG_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary system
@@ -195,7 +195,7 @@ const Messaging_Trigger_system: Messaging_Trigger = 3; /* LONG_NAMED_ENUMERATED_
  * @type {number}
  */
 export
-const system: Messaging_Trigger = Messaging_Trigger_system; /* SHORT_NAMED_ENUMERATED_VALUE */
+const system: _enum_for_Messaging_Trigger.system = Messaging_Trigger_system; /* SHORT_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary Messaging_Trigger_system_operator
@@ -209,7 +209,7 @@ const system: Messaging_Trigger = Messaging_Trigger_system; /* SHORT_NAMED_ENUME
  * @type {number}
  */
 export
-const Messaging_Trigger_system_operator: Messaging_Trigger = 4; /* LONG_NAMED_ENUMERATED_VALUE */
+const Messaging_Trigger_system_operator: _enum_for_Messaging_Trigger.system_operator = _enum_for_Messaging_Trigger.system_operator; /* LONG_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary system_operator
@@ -223,7 +223,7 @@ const Messaging_Trigger_system_operator: Messaging_Trigger = 4; /* LONG_NAMED_EN
  * @type {number}
  */
 export
-const system_operator: Messaging_Trigger = Messaging_Trigger_system_operator; /* SHORT_NAMED_ENUMERATED_VALUE */
+const system_operator: _enum_for_Messaging_Trigger.system_operator = Messaging_Trigger_system_operator; /* SHORT_NAMED_ENUMERATED_VALUE */
 export const _decode_Messaging_Trigger: $.ASN1Decoder<Messaging_Trigger> = $._decodeEnumerated;
 export const _encode_Messaging_Trigger: $.ASN1Encoder<Messaging_Trigger> = $._encodeEnumerated;
 

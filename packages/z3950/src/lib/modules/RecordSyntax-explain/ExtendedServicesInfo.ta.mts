@@ -1,17 +1,17 @@
 /* eslint-disable */
 import {
-    BOOLEAN,
-    EXTERNAL,
-    OBJECT_IDENTIFIER,
-    OPTIONAL,
-    ASN1Element as _Element,
+    type BOOLEAN,
+    type EXTERNAL,
+    type OBJECT_IDENTIFIER,
+    type OPTIONAL,
+    type ASN1Element as _Element,
     ASN1TagClass as _TagClass
 } from "@wildboar/asn1";
 import * as $ from "@wildboar/asn1/functional";
 import { CommonInfo, _decode_CommonInfo, _encode_CommonInfo } from "../RecordSyntax-explain/CommonInfo.ta.mjs";
-import { InternationalString, _decode_InternationalString, _encode_InternationalString } from "../Z39-50-APDU-2001/InternationalString.ta.mjs";
-import { ExtendedServicesInfo_waitAction, _decode_ExtendedServicesInfo_waitAction, _encode_ExtendedServicesInfo_waitAction } from "../RecordSyntax-explain/ExtendedServicesInfo-waitAction.ta.mjs";
-import { HumanString, _decode_HumanString, _encode_HumanString } from "../RecordSyntax-explain/HumanString.ta.mjs";
+import { type InternationalString, _decode_InternationalString, _encode_InternationalString } from "../Z39-50-APDU-2001/InternationalString.ta.mjs";
+import { type ExtendedServicesInfo_waitAction, _decode_ExtendedServicesInfo_waitAction, _encode_ExtendedServicesInfo_waitAction } from "../RecordSyntax-explain/ExtendedServicesInfo-waitAction.ta.mjs";
+import { type HumanString, _decode_HumanString, _encode_HumanString } from "../RecordSyntax-explain/HumanString.ta.mjs";
 
 
 /**

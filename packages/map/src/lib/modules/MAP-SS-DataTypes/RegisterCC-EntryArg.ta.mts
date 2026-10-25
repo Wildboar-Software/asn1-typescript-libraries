@@ -1,11 +1,11 @@
 /* eslint-disable */
 import {
-    OPTIONAL,
-    ASN1Element as _Element,
+    type OPTIONAL,
+    type ASN1Element as _Element,
     ASN1TagClass as _TagClass
 } from "@wildboar/asn1";
 import * as $ from "@wildboar/asn1/functional";
-import { SS_Code, _decode_SS_Code, _encode_SS_Code } from "../MAP-SS-Code/SS-Code.ta.mjs";
+import { type SS_Code, _decode_SS_Code, _encode_SS_Code } from "../MAP-SS-Code/SS-Code.ta.mjs";
 import { CCBS_Data, _decode_CCBS_Data, _encode_CCBS_Data } from "../MAP-SS-DataTypes/CCBS-Data.ta.mjs";
 
 
@@ -21,7 +21,7 @@ import { CCBS_Data, _decode_CCBS_Data, _encode_CCBS_Data } from "../MAP-SS-DataT
  * ```asn1
  * RegisterCC-EntryArg ::= SEQUENCE {
  *     ss-Code    [0]    SS-Code,
- *     ccbs-Data    [1]    CCBS-Data    OPTIONAL,
+ *     ccbs-Data    [1]    CCBS-Data    type OPTIONAL,
  *     ...}
  * ```
  * 
@@ -29,34 +29,42 @@ import { CCBS_Data, _decode_CCBS_Data, _encode_CCBS_Data } from "../MAP-SS-DataT
  */
 export
 class RegisterCC_EntryArg {
+    /**
+     * @summary `ss_Code`.
+     * @description
+     *
+     * Call-completion SS-Code.
+     *
+     * @public
+     * @readonly
+     */
+    public readonly ss_Code: SS_Code;
+    /**
+     * @summary `ccbs_Data`.
+     * @description
+     *
+     * CCBS registration data.
+     *
+     * @public
+     * @readonly
+     */
+    public readonly ccbs_Data?: OPTIONAL<CCBS_Data>;
+    /**
+     * @summary Extensions that are not recognized.
+     * @public
+     * @readonly
+     */
+    public readonly _unrecognizedExtensionsList: _Element[];
+
     constructor (
-        /**
-         * @summary `ss_Code`.
-         * @description
-         *
-         * Call-completion SS-Code.
-         *
-         * @public
-         * @readonly
-         */
-        readonly ss_Code: SS_Code,
-        /**
-         * @summary `ccbs_Data`.
-         * @description
-         *
-         * CCBS registration data.
-         *
-         * @public
-         * @readonly
-         */
-        readonly ccbs_Data?: OPTIONAL<CCBS_Data>,
-        /**
-         * @summary Extensions that are not recognized.
-         * @public
-         * @readonly
-         */
-        readonly _unrecognizedExtensionsList: _Element[] = []
-    ) {}
+        ss_Code: SS_Code,
+        ccbs_Data?: OPTIONAL<CCBS_Data>,
+        _unrecognizedExtensionsList: _Element[] = []
+    ) {
+        this.ss_Code = ss_Code;
+        this.ccbs_Data = ccbs_Data;
+        this._unrecognizedExtensionsList = _unrecognizedExtensionsList;
+    }
 
     /**
      * @summary Restructures an object into a RegisterCC_EntryArg

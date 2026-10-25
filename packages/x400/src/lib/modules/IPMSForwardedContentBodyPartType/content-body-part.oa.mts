@@ -1,7 +1,7 @@
 /* eslint-disable */
 import {
-    TYPE_IDENTIFIER,
-    ASN1Element as _Element,
+    type TYPE_IDENTIFIER,
+    type ASN1Element as _Element,
     ASN1TagClass as _TagClass,
     ASN1Construction as _Construction,
     ASN1UniversalType as _UniversalType,
@@ -11,15 +11,15 @@ import {
     ASN1ConstructionError as _ConstructionError,
 } from '@wildboar/asn1';
 import {
-    Content,
+    type Content,
     _decode_Content,
     _encode_Content,
 } from '../MTSAbstractService/Content.ta.mjs';
 import {
-    ExtendedContentType,
+    type ExtendedContentType,
 } from "../MTSAbstractService/ExtendedContentType.ta.mjs";
 import {
-    EXTENDED_BODY_PART_TYPE,
+    type EXTENDED_BODY_PART_TYPE,
 } from "../IPMSInformationObjects/EXTENDED-BODY-PART-TYPE.oca.mjs";
 import {
     content_body_part_data,

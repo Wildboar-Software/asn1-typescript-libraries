@@ -1,17 +1,17 @@
 /* eslint-disable */
 import {
-    ASN1Element as _Element,
+    type ASN1Element as _Element,
     ASN1TagClass as _TagClass,
-    OPTIONAL,
+    type OPTIONAL,
 } from "@wildboar/asn1";
 import * as $ from "@wildboar/asn1/functional";
 import {
-    CertificateSerialNumber,
+    type CertificateSerialNumber,
     _decode_CertificateSerialNumber,
     _encode_CertificateSerialNumber,
 } from "../AuthenticationFramework/CertificateSerialNumber.ta.mjs";
 import {
-    GeneralName,
+    type GeneralName,
     _decode_GeneralName,
     _encode_GeneralName,
 } from "../CertificateExtensions/GeneralName.ta.mjs";
@@ -35,28 +35,36 @@ import {
  *
  */
 export class SpecificallyIdentified {
+    /**
+     * @summary `name`.
+     * @public
+     * @readonly
+     */
+    public readonly name: GeneralName;
+    /**
+     * @summary `issuer`.
+     * @description Must be present iff `serial` is present.
+     * @public
+     * @readonly
+     */
+    public readonly issuer?: OPTIONAL<GeneralName>;
+    /**
+     * @summary `serial`.
+     * @description Must be present iff `issuer` is present.
+     * @public
+     * @readonly
+     */
+    public readonly serial?: OPTIONAL<CertificateSerialNumber>;
+
     constructor(
-        /**
-         * @summary `name`.
-         * @public
-         * @readonly
-         */
-        readonly name: GeneralName,
-        /**
-         * @summary `issuer`.
-         * @description Must be present iff `serial` is present.
-         * @public
-         * @readonly
-         */
-        readonly issuer?: OPTIONAL<GeneralName>,
-        /**
-         * @summary `serial`.
-         * @description Must be present iff `issuer` is present.
-         * @public
-         * @readonly
-         */
-        readonly serial?: OPTIONAL<CertificateSerialNumber>
-    ) {}
+        name: GeneralName,
+        issuer?: OPTIONAL<GeneralName>,
+        serial?: OPTIONAL<CertificateSerialNumber>
+    ) {
+        this.name = name;
+        this.issuer = issuer;
+        this.serial = serial;
+    }
 
     /**
      * @summary Restructures an object into a SpecificallyIdentified

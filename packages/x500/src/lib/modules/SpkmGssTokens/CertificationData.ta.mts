@@ -1,12 +1,12 @@
 /* eslint-disable */
 import {
-    ASN1Element as _Element,
+    type ASN1Element as _Element,
     ASN1TagClass as _TagClass,
-    OPTIONAL,
+    type OPTIONAL,
 } from "@wildboar/asn1";
 import * as $ from "@wildboar/asn1/functional";
 import {
-    CertificateList,
+    type CertificateList,
     _decode_CertificateList,
     _encode_CertificateList,
 } from "../AuthenticationFramework/CertificateList.ta.mjs";
@@ -34,28 +34,34 @@ import {
  *
  */
 export class CertificationData {
+    /**
+     * @summary `certificationPath`.
+     * @description
+     *
+     * Sender's keys/certs and CA path toward the recipient.
+     *
+     * @public
+     * @readonly
+     */
+    public readonly certificationPath?: OPTIONAL<CertificationPath>;
+    /**
+     * @summary `certificateRevocationList`.
+     * @description
+     *
+     * Optional CRL. May be the only component present.
+     *
+     * @public
+     * @readonly
+     */
+    public readonly certificateRevocationList?: OPTIONAL<CertificateList>;
+
     constructor(
-        /**
-         * @summary `certificationPath`.
-         * @description
-         *
-         * Sender's keys/certs and CA path toward the recipient.
-         *
-         * @public
-         * @readonly
-         */
-        readonly certificationPath?: OPTIONAL<CertificationPath>,
-        /**
-         * @summary `certificateRevocationList`.
-         * @description
-         *
-         * Optional CRL. May be the only component present.
-         *
-         * @public
-         * @readonly
-         */
-        readonly certificateRevocationList?: OPTIONAL<CertificateList>
-    ) {}
+        certificationPath?: OPTIONAL<CertificationPath>,
+        certificateRevocationList?: OPTIONAL<CertificateList>
+    ) {
+        this.certificationPath = certificationPath;
+        this.certificateRevocationList = certificateRevocationList;
+    }
 
     /**
      * @summary Restructures an object into a CertificationData

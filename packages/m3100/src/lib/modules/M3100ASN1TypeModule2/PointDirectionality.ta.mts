@@ -1,6 +1,6 @@
 /* eslint-disable */
 import {
-    ASN1Element as _Element,
+    type ASN1Element as _Element,
     ASN1TagClass as _TagClass,
     ASN1Construction as _Construction,
     ASN1UniversalType as _UniversalType,
@@ -58,7 +58,7 @@ export type PointDirectionality = _enum_for_PointDirectionality;
  *
  * @enum {number}
  */
-export const PointDirectionality = _enum_for_PointDirectionality;
+export const PointDirectionality: typeof _enum_for_PointDirectionality = _enum_for_PointDirectionality;
 
 
 /**
@@ -66,7 +66,7 @@ export const PointDirectionality = _enum_for_PointDirectionality;
  * @constant
  * @type {number}
  */
-export const PointDirectionality_sink: PointDirectionality =
+export const PointDirectionality_sink: _enum_for_PointDirectionality.sink =
     PointDirectionality.sink; /* LONG_NAMED_ENUMERATED_VALUE */
 
 
@@ -75,7 +75,7 @@ export const PointDirectionality_sink: PointDirectionality =
  * @constant
  * @type {number}
  */
-export const sink: PointDirectionality =
+export const sink: _enum_for_PointDirectionality.sink =
     PointDirectionality.sink; /* SHORT_NAMED_ENUMERATED_VALUE */
 
 
@@ -84,7 +84,7 @@ export const sink: PointDirectionality =
  * @constant
  * @type {number}
  */
-export const PointDirectionality_source: PointDirectionality =
+export const PointDirectionality_source: _enum_for_PointDirectionality.source =
     PointDirectionality.source; /* LONG_NAMED_ENUMERATED_VALUE */
 
 
@@ -93,7 +93,7 @@ export const PointDirectionality_source: PointDirectionality =
  * @constant
  * @type {number}
  */
-export const source: PointDirectionality =
+export const source: _enum_for_PointDirectionality.source =
     PointDirectionality.source; /* SHORT_NAMED_ENUMERATED_VALUE */
 
 
@@ -102,7 +102,7 @@ export const source: PointDirectionality =
  * @constant
  * @type {number}
  */
-export const PointDirectionality_bidirectional: PointDirectionality =
+export const PointDirectionality_bidirectional: _enum_for_PointDirectionality.bidirectional =
     PointDirectionality.bidirectional; /* LONG_NAMED_ENUMERATED_VALUE */
 
 
@@ -111,18 +111,30 @@ export const PointDirectionality_bidirectional: PointDirectionality =
  * @constant
  * @type {number}
  */
-export const bidirectional: PointDirectionality =
+export const bidirectional: _enum_for_PointDirectionality.bidirectional =
     PointDirectionality.bidirectional; /* SHORT_NAMED_ENUMERATED_VALUE */
 
 
 
 
-export const _decode_PointDirectionality = $._decodeEnumerated;
+export function _decode_PointDirectionality(el: _Element): PointDirectionality {
+    const enumerated = $._decodeEnumerated(el);
+    switch (enumerated) {
+        case PointDirectionality.sink: return PointDirectionality.sink;
+        case PointDirectionality.source: return PointDirectionality.source;
+        case PointDirectionality.bidirectional: return PointDirectionality.bidirectional;
+        default:
+            throw new _ConstructionError(
+                'Invalid ENUMERATED value ' + enumerated + ' for PointDirectionality.',
+                el,
+            );
+    }
+}
 
 
 
 
-export const _encode_PointDirectionality = $._encodeEnumerated;
+export const _encode_PointDirectionality: $.ASN1Encoder<PointDirectionality> = $._encodeEnumerated as $.ASN1Encoder<PointDirectionality>;
 
 
 /* eslint-enable */

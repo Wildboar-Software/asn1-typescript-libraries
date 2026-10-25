@@ -1,7 +1,7 @@
 /* eslint-disable */
 
 import * as $ from "@wildboar/asn1/functional";
-import { INTEGER, ENUMERATED, ASN1Element as _Element } from "@wildboar/asn1";
+import { type INTEGER, type ENUMERATED, ASN1Element as _Element } from "@wildboar/asn1";
 import {
     Period_absolutePosition,
     startOfMessage /* IMPORTED_SHORT_ENUMERATION_ITEM */,

@@ -2,14 +2,14 @@
 
 import * as $ from "@wildboar/asn1/functional";
 import {
-    OPTIONAL,
-    SEQUENCE,
-    SET,
-    ASN1Element as _Element,
+    type OPTIONAL,
+    type SEQUENCE,
+    type SET,
+    type ASN1Element as _Element,
     ASN1TagClass as _TagClass
 } from "@wildboar/asn1";
 import {
-    SnapshotDeviceResult_crossRefIDorSnapshotData,
+    type SnapshotDeviceResult_crossRefIDorSnapshotData,
     _decode_SnapshotDeviceResult_crossRefIDorSnapshotData,
     _encode_SnapshotDeviceResult_crossRefIDorSnapshotData
 } from "../CSTA-snapshot-device/SnapshotDeviceResult-crossRefIDorSnapshotData.ta.mjs";
@@ -41,28 +41,34 @@ import { CSTACommonArguments, _decode_CSTACommonArguments, _encode_CSTACommonArg
  */
 export
 class SnapshotDeviceResult {
+    /**
+     * @summary `crossRefIDorSnapshotData`.
+     * @description
+     *
+     * `serviceCrossRefID` if Snapshot DeviceData will follow;
+     * `snapshotData` if inline.
+     * @public
+     * @readonly
+     */
+    public readonly crossRefIDorSnapshotData: SnapshotDeviceResult_crossRefIDorSnapshotData;
+    /**
+     * @summary `extensions`.
+     * @description
+     *
+     * Optional security (timestamp, sequence, securityInfo) and
+     * privateData.
+     * @public
+     * @readonly
+     */
+    public readonly extensions?: OPTIONAL<CSTACommonArguments>;
+
     constructor (
-        /**
-         * @summary `crossRefIDorSnapshotData`.
-         * @description
-         *
-         * `serviceCrossRefID` if Snapshot DeviceData will follow;
-         * `snapshotData` if inline.
-         * @public
-         * @readonly
-         */
-        readonly crossRefIDorSnapshotData: SnapshotDeviceResult_crossRefIDorSnapshotData,
-        /**
-         * @summary `extensions`.
-         * @description
-         *
-         * Optional security (timestamp, sequence, securityInfo) and
-         * privateData.
-         * @public
-         * @readonly
-         */
-        readonly extensions?: OPTIONAL<CSTACommonArguments>
-    ) {}
+        crossRefIDorSnapshotData: SnapshotDeviceResult_crossRefIDorSnapshotData,
+        extensions?: OPTIONAL<CSTACommonArguments>
+    ) {
+        this.crossRefIDorSnapshotData = crossRefIDorSnapshotData;
+        this.extensions = extensions;
+    }
 
     /**
      * @summary Restructures an object into a SnapshotDeviceResult

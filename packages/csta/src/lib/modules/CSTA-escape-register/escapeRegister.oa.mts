@@ -6,7 +6,7 @@ import { type OPERATION } from "../Remote-Operations-Information-Objects/OPERATI
 
 
 
-import { EscapeRegisterArgument, _decode_EscapeRegisterArgument, _encode_EscapeRegisterArgument } from "../CSTA-escape-register/EscapeRegisterArgument.ta.mjs";
+import { type EscapeRegisterArgument, _decode_EscapeRegisterArgument, _encode_EscapeRegisterArgument } from "../CSTA-escape-register/EscapeRegisterArgument.ta.mjs";
 
 import { EscapeRegisterResult, _decode_EscapeRegisterResult, _encode_EscapeRegisterResult } from "../CSTA-escape-register/EscapeRegisterResult.ta.mjs";
 

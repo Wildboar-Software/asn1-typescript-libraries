@@ -1,6 +1,6 @@
 /* eslint-disable */
 import {
-    INTEGER
+    type INTEGER
 } from "@wildboar/asn1";
 import * as $ from "@wildboar/asn1/functional";
 
@@ -35,7 +35,7 @@ type MRZField = INTEGER;
  * @type {number}
  */
 export
-const MRZField_generic: MRZField = 0; /* LONG_NAMED_INTEGER_VALUE */
+const MRZField_generic: 0 = 0 satisfies MRZField; /* LONG_NAMED_INTEGER_VALUE */
 
 /**
  * Short name for {@link MRZField_generic}.
@@ -44,7 +44,7 @@ const MRZField_generic: MRZField = 0; /* LONG_NAMED_INTEGER_VALUE */
  * @type {number}
  */
 export
-const generic: MRZField = MRZField_generic; /* SHORT_NAMED_INTEGER_VALUE */
+const generic: 0 = MRZField_generic; /* SHORT_NAMED_INTEGER_VALUE */
 
 /**
  * MRZ document code.
@@ -53,7 +53,7 @@ const generic: MRZField = MRZField_generic; /* SHORT_NAMED_INTEGER_VALUE */
  * @type {number}
  */
 export
-const MRZField_documentCode: MRZField = 1; /* LONG_NAMED_INTEGER_VALUE */
+const MRZField_documentCode: 1 = 1 satisfies MRZField; /* LONG_NAMED_INTEGER_VALUE */
 
 /**
  * Short name for {@link MRZField_documentCode}.
@@ -62,7 +62,7 @@ const MRZField_documentCode: MRZField = 1; /* LONG_NAMED_INTEGER_VALUE */
  * @type {number}
  */
 export
-const documentCode: MRZField = MRZField_documentCode; /* SHORT_NAMED_INTEGER_VALUE */
+const documentCode: 1 = MRZField_documentCode; /* SHORT_NAMED_INTEGER_VALUE */
 
 /**
  * MRZ issuing state.
@@ -71,7 +71,7 @@ const documentCode: MRZField = MRZField_documentCode; /* SHORT_NAMED_INTEGER_VAL
  * @type {number}
  */
 export
-const MRZField_issuingState: MRZField = 2; /* LONG_NAMED_INTEGER_VALUE */
+const MRZField_issuingState: 2 = 2 satisfies MRZField; /* LONG_NAMED_INTEGER_VALUE */
 
 /**
  * Short name for {@link MRZField_issuingState}.
@@ -80,7 +80,7 @@ const MRZField_issuingState: MRZField = 2; /* LONG_NAMED_INTEGER_VALUE */
  * @type {number}
  */
 export
-const issuingState: MRZField = MRZField_issuingState; /* SHORT_NAMED_INTEGER_VALUE */
+const issuingState: 2 = MRZField_issuingState; /* SHORT_NAMED_INTEGER_VALUE */
 
 /**
  * MRZ holder name.
@@ -89,7 +89,7 @@ const issuingState: MRZField = MRZField_issuingState; /* SHORT_NAMED_INTEGER_VAL
  * @type {number}
  */
 export
-const MRZField_personName: MRZField = 3; /* LONG_NAMED_INTEGER_VALUE */
+const MRZField_personName: 3 = 3 satisfies MRZField; /* LONG_NAMED_INTEGER_VALUE */
 
 /**
  * Short name for {@link MRZField_personName}.
@@ -98,7 +98,7 @@ const MRZField_personName: MRZField = 3; /* LONG_NAMED_INTEGER_VALUE */
  * @type {number}
  */
 export
-const personName: MRZField = MRZField_personName; /* SHORT_NAMED_INTEGER_VALUE */
+const personName: 3 = MRZField_personName; /* SHORT_NAMED_INTEGER_VALUE */
 
 /**
  * MRZ document number.
@@ -107,7 +107,7 @@ const personName: MRZField = MRZField_personName; /* SHORT_NAMED_INTEGER_VALUE *
  * @type {number}
  */
 export
-const MRZField_documentNumber: MRZField = 4; /* LONG_NAMED_INTEGER_VALUE */
+const MRZField_documentNumber: 4 = 4 satisfies MRZField; /* LONG_NAMED_INTEGER_VALUE */
 
 /**
  * Short name for {@link MRZField_documentNumber}.
@@ -116,7 +116,7 @@ const MRZField_documentNumber: MRZField = 4; /* LONG_NAMED_INTEGER_VALUE */
  * @type {number}
  */
 export
-const documentNumber: MRZField = MRZField_documentNumber; /* SHORT_NAMED_INTEGER_VALUE */
+const documentNumber: 4 = MRZField_documentNumber; /* SHORT_NAMED_INTEGER_VALUE */
 
 /**
  * MRZ nationality.
@@ -125,7 +125,7 @@ const documentNumber: MRZField = MRZField_documentNumber; /* SHORT_NAMED_INTEGER
  * @type {number}
  */
 export
-const MRZField_nationality: MRZField = 5; /* LONG_NAMED_INTEGER_VALUE */
+const MRZField_nationality: 5 = 5 satisfies MRZField; /* LONG_NAMED_INTEGER_VALUE */
 
 /**
  * Short name for {@link MRZField_nationality}.
@@ -134,7 +134,7 @@ const MRZField_nationality: MRZField = 5; /* LONG_NAMED_INTEGER_VALUE */
  * @type {number}
  */
 export
-const nationality: MRZField = MRZField_nationality; /* SHORT_NAMED_INTEGER_VALUE */
+const nationality: 5 = MRZField_nationality; /* SHORT_NAMED_INTEGER_VALUE */
 
 /**
  * MRZ date of birth.
@@ -143,7 +143,7 @@ const nationality: MRZField = MRZField_nationality; /* SHORT_NAMED_INTEGER_VALUE
  * @type {number}
  */
 export
-const MRZField_dateOfBirth: MRZField = 6; /* LONG_NAMED_INTEGER_VALUE */
+const MRZField_dateOfBirth: 6 = 6 satisfies MRZField; /* LONG_NAMED_INTEGER_VALUE */
 
 /**
  * Short name for {@link MRZField_dateOfBirth}.
@@ -152,7 +152,7 @@ const MRZField_dateOfBirth: MRZField = 6; /* LONG_NAMED_INTEGER_VALUE */
  * @type {number}
  */
 export
-const dateOfBirth: MRZField = MRZField_dateOfBirth; /* SHORT_NAMED_INTEGER_VALUE */
+const dateOfBirth: 6 = MRZField_dateOfBirth; /* SHORT_NAMED_INTEGER_VALUE */
 
 /**
  * MRZ sex.
@@ -161,7 +161,7 @@ const dateOfBirth: MRZField = MRZField_dateOfBirth; /* SHORT_NAMED_INTEGER_VALUE
  * @type {number}
  */
 export
-const MRZField_sex: MRZField = 7; /* LONG_NAMED_INTEGER_VALUE */
+const MRZField_sex: 7 = 7 satisfies MRZField; /* LONG_NAMED_INTEGER_VALUE */
 
 /**
  * Short name for {@link MRZField_sex}.
@@ -170,7 +170,7 @@ const MRZField_sex: MRZField = 7; /* LONG_NAMED_INTEGER_VALUE */
  * @type {number}
  */
 export
-const sex: MRZField = MRZField_sex; /* SHORT_NAMED_INTEGER_VALUE */
+const sex: 7 = MRZField_sex; /* SHORT_NAMED_INTEGER_VALUE */
 
 /**
  * MRZ date of expiry.
@@ -179,7 +179,7 @@ const sex: MRZField = MRZField_sex; /* SHORT_NAMED_INTEGER_VALUE */
  * @type {number}
  */
 export
-const MRZField_dateOfExpiry: MRZField = 8; /* LONG_NAMED_INTEGER_VALUE */
+const MRZField_dateOfExpiry: 8 = 8 satisfies MRZField; /* LONG_NAMED_INTEGER_VALUE */
 
 /**
  * Short name for {@link MRZField_dateOfExpiry}.
@@ -188,7 +188,7 @@ const MRZField_dateOfExpiry: MRZField = 8; /* LONG_NAMED_INTEGER_VALUE */
  * @type {number}
  */
 export
-const dateOfExpiry: MRZField = MRZField_dateOfExpiry; /* SHORT_NAMED_INTEGER_VALUE */
+const dateOfExpiry: 8 = MRZField_dateOfExpiry; /* SHORT_NAMED_INTEGER_VALUE */
 
 /**
  * MRZ optional data.
@@ -197,7 +197,7 @@ const dateOfExpiry: MRZField = MRZField_dateOfExpiry; /* SHORT_NAMED_INTEGER_VAL
  * @type {number}
  */
 export
-const MRZField_optionalData: MRZField = 9; /* LONG_NAMED_INTEGER_VALUE */
+const MRZField_optionalData: 9 = 9 satisfies MRZField; /* LONG_NAMED_INTEGER_VALUE */
 
 /**
  * Short name for {@link MRZField_optionalData}.
@@ -206,9 +206,9 @@ const MRZField_optionalData: MRZField = 9; /* LONG_NAMED_INTEGER_VALUE */
  * @type {number}
  */
 export
-const optionalData: MRZField = MRZField_optionalData; /* SHORT_NAMED_INTEGER_VALUE */
-export const _decode_MRZField = $._decodeInteger;
-export const _encode_MRZField = $._encodeInteger;
+const optionalData: 9 = MRZField_optionalData; /* SHORT_NAMED_INTEGER_VALUE */
+export const _decode_MRZField: $.ASN1Decoder<INTEGER> = $._decodeInteger;
+export const _encode_MRZField: $.ASN1Encoder<INTEGER> = $._encodeInteger;
 
 
 /* eslint-enable */

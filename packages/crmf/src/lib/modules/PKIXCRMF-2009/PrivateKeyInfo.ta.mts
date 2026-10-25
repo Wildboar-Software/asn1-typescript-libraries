@@ -1,10 +1,10 @@
 /* eslint-disable */
 import {
-    ASN1Element as _Element,
+    type ASN1Element as _Element,
     ASN1TagClass as _TagClass,
-    INTEGER,
-    OCTET_STRING,
-    OPTIONAL,
+    type INTEGER,
+    type OCTET_STRING,
+    type OPTIONAL,
 } from "@wildboar/asn1";
 import * as $ from "@wildboar/asn1/functional";
 import {
@@ -43,52 +43,62 @@ import {
  *
  */
 export class PrivateKeyInfo {
+    /**
+     * @summary `version`.
+     * @description
+     *
+     * MUST be the value 0 ([RFC 4211 §4.2.1](https://datatracker.ietf.org/doc/html/rfc4211#section-4.2.1)).
+     *
+     * @public
+     * @readonly
+     */
+    public readonly version: INTEGER;
+    /**
+     * @summary `privateKeyAlgorithm`.
+     * @description
+     *
+     * Identifier for the private key algorithm
+     * ([RFC 4211 §4.2.1](https://datatracker.ietf.org/doc/html/rfc4211#section-4.2.1)).
+     *
+     * @public
+     * @readonly
+     */
+    public readonly privateKeyAlgorithm: AlgorithmIdentifier;
+    /**
+     * @summary `privateKey`.
+     * @description
+     *
+     * Octet string whose contents are the private key; format
+     * defined by `privateKeyAlgorithm`
+     * ([RFC 4211 §4.2.1](https://datatracker.ietf.org/doc/html/rfc4211#section-4.2.1)).
+     *
+     * @public
+     * @readonly
+     */
+    public readonly privateKey: OCTET_STRING;
+    /**
+     * @summary `attributes`.
+     * @description
+     *
+     * Optional set of attributes extending the private key info
+     * ([RFC 4211 §4.2.1](https://datatracker.ietf.org/doc/html/rfc4211#section-4.2.1)).
+     *
+     * @public
+     * @readonly
+     */
+    public readonly attributes?: OPTIONAL<Attributes>;
+
     constructor(
-        /**
-         * @summary `version`.
-         * @description
-         *
-         * MUST be the value 0 ([RFC 4211 §4.2.1](https://datatracker.ietf.org/doc/html/rfc4211#section-4.2.1)).
-         *
-         * @public
-         * @readonly
-         */
-        readonly version: INTEGER,
-        /**
-         * @summary `privateKeyAlgorithm`.
-         * @description
-         *
-         * Identifier for the private key algorithm
-         * ([RFC 4211 §4.2.1](https://datatracker.ietf.org/doc/html/rfc4211#section-4.2.1)).
-         *
-         * @public
-         * @readonly
-         */
-        readonly privateKeyAlgorithm: AlgorithmIdentifier,
-        /**
-         * @summary `privateKey`.
-         * @description
-         *
-         * Octet string whose contents are the private key; format
-         * defined by `privateKeyAlgorithm`
-         * ([RFC 4211 §4.2.1](https://datatracker.ietf.org/doc/html/rfc4211#section-4.2.1)).
-         *
-         * @public
-         * @readonly
-         */
-        readonly privateKey: OCTET_STRING,
-        /**
-         * @summary `attributes`.
-         * @description
-         *
-         * Optional set of attributes extending the private key info
-         * ([RFC 4211 §4.2.1](https://datatracker.ietf.org/doc/html/rfc4211#section-4.2.1)).
-         *
-         * @public
-         * @readonly
-         */
-        readonly attributes?: OPTIONAL<Attributes>
-    ) {}
+        version: INTEGER,
+        privateKeyAlgorithm: AlgorithmIdentifier,
+        privateKey: OCTET_STRING,
+        attributes?: OPTIONAL<Attributes>
+    ) {
+        this.version = version;
+        this.privateKeyAlgorithm = privateKeyAlgorithm;
+        this.privateKey = privateKey;
+        this.attributes = attributes;
+    }
 
     /**
      * @summary Restructures an object into a PrivateKeyInfo

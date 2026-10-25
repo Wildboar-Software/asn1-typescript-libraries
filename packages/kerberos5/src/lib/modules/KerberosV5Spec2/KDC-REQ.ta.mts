@@ -1,7 +1,7 @@
 /* eslint-disable */
 import {
-  OPTIONAL,
-  INTEGER,
+  type OPTIONAL,
+  type INTEGER,
   ASN1Element as _Element,
   ASN1TagClass as _TagClass,
   ASN1Construction as _Construction,
@@ -56,7 +56,7 @@ export class KDC_REQ {
    * @public
    * @readonly
    */
-  readonly pvno: INTEGER;
+  public readonly pvno: INTEGER;
   /**
    * @summary `msg_type`.
    * @description
@@ -67,7 +67,7 @@ export class KDC_REQ {
    * @public
    * @readonly
    */
-  readonly msg_type: INTEGER;
+  public readonly msg_type: INTEGER;
   /**
    * @summary `padata`.
    * @description
@@ -79,7 +79,7 @@ export class KDC_REQ {
    * @public
    * @readonly
    */
-  readonly padata: OPTIONAL<PA_DATA[]>;
+  public readonly padata: OPTIONAL<PA_DATA[]>;
   /**
    * @summary `req_body`.
    * @description
@@ -91,7 +91,7 @@ export class KDC_REQ {
    * @public
    * @readonly
    */
-  readonly req_body: KDC_REQ_BODY;
+  public readonly req_body: KDC_REQ_BODY;
 
   constructor(
     pvno: INTEGER,

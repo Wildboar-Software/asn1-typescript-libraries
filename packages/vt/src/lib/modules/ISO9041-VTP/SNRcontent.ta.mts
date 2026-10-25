@@ -1,7 +1,7 @@
 /* eslint-disable */
 import {
-    OPTIONAL,
-    ASN1Element as _Element,
+    type OPTIONAL,
+    type ASN1Element as _Element,
     ASN1TagClass as _TagClass,
     ASN1Construction as _Construction,
     ASN1UniversalType as _UniversalType,
@@ -36,26 +36,32 @@ import { _decode_ProfileArgumValueList, _encode_ProfileArgumValueList, ProfileAr
  */
 export
 class SNRcontent {
+    /**
+     * @summary `result`.
+     * @description
+     * Result2 success or fail. ISO/IEC 9041-1:1997 §6.22,
+     * §6.24.
+     * @public
+     * @readonly
+     */
+    public readonly result: Result2;
+    /**
+     * @summary `argValuesList`.
+     * @description
+     * Selected profile-argument values. ISO/IEC
+     * 9041-1:1997 §6.22, §6.24.
+     * @public
+     * @readonly
+     */
+    public readonly argValuesList?: OPTIONAL<ProfileArgumValueList>;
+
     constructor (
-        /**
-         * @summary `result`.
-         * @description
-         * Result2 success or fail. ISO/IEC 9041-1:1997 §6.22,
-         * §6.24.
-         * @public
-         * @readonly
-         */
-        readonly result: Result2,
-        /**
-         * @summary `argValuesList`.
-         * @description
-         * Selected profile-argument values. ISO/IEC
-         * 9041-1:1997 §6.22, §6.24.
-         * @public
-         * @readonly
-         */
-        readonly argValuesList?: OPTIONAL<ProfileArgumValueList>
-    ) {}
+        result: Result2,
+        argValuesList?: OPTIONAL<ProfileArgumValueList>
+    ) {
+        this.result = result;
+        this.argValuesList = argValuesList;
+    }
 
     /**
      * @summary Restructures an object into a SNRcontent

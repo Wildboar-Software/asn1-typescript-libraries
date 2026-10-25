@@ -2,13 +2,13 @@
 
 import * as $ from "@wildboar/asn1/functional";
 import {
-    OPTIONAL,
-    SEQUENCE,
-    SET,
-    ASN1Element as _Element,
+    type OPTIONAL,
+    type SEQUENCE,
+    type SET,
+    type ASN1Element as _Element,
     ASN1TagClass as _TagClass
 } from "@wildboar/asn1";
-import { ConnectionID, _decode_ConnectionID, _encode_ConnectionID } from "../CSTA-call-connection-identifiers/ConnectionID.ta.mjs";
+import { type ConnectionID, _decode_ConnectionID, _encode_ConnectionID } from "../CSTA-call-connection-identifiers/ConnectionID.ta.mjs";
 
 import {
     EventCause,
@@ -19,19 +19,19 @@ import {
 
 import { MediaCallCharacteristics, _decode_MediaCallCharacteristics, _encode_MediaCallCharacteristics } from "../CSTA-media-services/MediaCallCharacteristics.ta.mjs";
 
-import { LanguagePreferences, _decode_LanguagePreferences, _encode_LanguagePreferences } from "../CSTA-device-feature-types/LanguagePreferences.ta.mjs";
+import { type LanguagePreferences, _decode_LanguagePreferences, _encode_LanguagePreferences } from "../CSTA-device-feature-types/LanguagePreferences.ta.mjs";
 
-import { LocationInfoList, _decode_LocationInfoList, _encode_LocationInfoList } from "../CSTA-call-control/LocationInfoList.ta.mjs";
+import { type LocationInfoList, _decode_LocationInfoList, _encode_LocationInfoList } from "../CSTA-call-control/LocationInfoList.ta.mjs";
 
 import { CSTACommonArguments, _decode_CSTACommonArguments, _encode_CSTACommonArguments } from "../CSTA-extension-types/CSTACommonArguments.ta.mjs";
 
 
 
-import { CorrelatorData, _decode_CorrelatorData, _encode_CorrelatorData } from "../CSTA-device-feature-types/CorrelatorData.ta.mjs";
+import { type CorrelatorData, _decode_CorrelatorData, _encode_CorrelatorData } from "../CSTA-device-feature-types/CorrelatorData.ta.mjs";
 
-import { UserData, _decode_UserData, _encode_UserData } from "../CSTA-device-feature-types/UserData.ta.mjs";
+import { type UserData, _decode_UserData, _encode_UserData } from "../CSTA-device-feature-types/UserData.ta.mjs";
 
-import { CallCharacteristics, _decode_CallCharacteristics, _encode_CallCharacteristics } from "../CSTA-call-control/CallCharacteristics.ta.mjs";
+import { type CallCharacteristics, _decode_CallCharacteristics, _encode_CallCharacteristics } from "../CSTA-call-control/CallCharacteristics.ta.mjs";
 
 import { CallLinkageData, _decode_CallLinkageData, _encode_CallLinkageData } from "../CSTA-call-control/CallLinkageData.ta.mjs";
 
@@ -52,14 +52,14 @@ import { CallLinkageData, _decode_CallLinkageData, _encode_CallLinkageData } fro
  * ```asn1
  * CallClearedEvent ::= SEQUENCE
  * {     clearedCall             ConnectionID,
- *     correlatorData             [1] IMPLICIT CorrelatorData         OPTIONAL,
- *     userData             UserData                 OPTIONAL,
+ *     correlatorData             [1] IMPLICIT CorrelatorData         type OPTIONAL,
+ *     userData             UserData                 type OPTIONAL,
  *     cause                 EventCause,
- *     mediaCallCharacteristics     [2] IMPLICIT MediaCallCharacteristics     OPTIONAL,
- *     callCharacteristics         [3] IMPLICIT CallCharacteristics     OPTIONAL,
- *     callLinkageData         [4] IMPLICIT CallLinkageData         OPTIONAL,
- *     languagePreferences        [5] IMPLICIT LanguagePreferences    OPTIONAL,
- *     locationInfo            [6] IMPLICIT LocationInfoList        OPTIONAL,
+ *     mediaCallCharacteristics     [2] IMPLICIT MediaCallCharacteristics     type OPTIONAL,
+ *     callCharacteristics         [3] IMPLICIT CallCharacteristics     type OPTIONAL,
+ *     callLinkageData         [4] IMPLICIT CallLinkageData         type OPTIONAL,
+ *     languagePreferences        [5] IMPLICIT LanguagePreferences    type OPTIONAL,
+ *     locationInfo            [6] IMPLICIT LocationInfoList        type OPTIONAL,
  *     extensions             CSTACommonArguments             OPTIONAL }
  * ```
  * 
@@ -67,119 +67,141 @@ import { CallLinkageData, _decode_CallLinkageData, _encode_CallLinkageData } fro
  */
 export
 class CallClearedEvent {
+    /**
+     * @summary `clearedCall`.
+     * @description
+     *
+     * Mandatory. ConnectionID of the cleared call.
+     * DeviceID shall be omitted (Call-ID only).
+     *
+     * @public
+     * @readonly
+     */
+    public readonly clearedCall: ConnectionID;
+    /**
+     * @summary `correlatorData`.
+     * @description
+     *
+     * Optional current correlator data (§12.2.10). This
+     * event may omit it (FR 6).
+     *
+     * @public
+     * @readonly
+     */
+    public readonly correlatorData: OPTIONAL<CorrelatorData>;
+    /**
+     * @summary `userData`.
+     * @description
+     *
+     * Conditional. Present when user data is sent and
+     * supported (§12.2.30).
+     *
+     * @public
+     * @readonly
+     */
+    public readonly userData: OPTIONAL<UserData>;
+    /**
+     * @summary `cause`.
+     * @description
+     *
+     * Mandatory. Same cause as the last Connection
+     * Cleared for the call. Valid values are listed in
+     * Table 17-154.
+     *
+     * @public
+     * @readonly
+     */
+    public readonly cause: EventCause;
+    /**
+     * @summary `mediaCallCharacteristics`.
+     * @description
+     *
+     * Optional media class and characteristics
+     * (§12.2.20).
+     *
+     * @public
+     * @readonly
+     */
+    public readonly mediaCallCharacteristics?: OPTIONAL<MediaCallCharacteristics>;
+    /**
+     * @summary `callCharacteristics`.
+     * @description
+     *
+     * Optional high-level call characteristics
+     * (§12.2.4).
+     *
+     * @public
+     * @readonly
+     */
+    public readonly callCharacteristics?: OPTIONAL<CallCharacteristics>;
+    /**
+     * @summary `callLinkageData`.
+     * @description
+     *
+     * Optional global call data and thread data
+     * (§12.2.5).
+     *
+     * @public
+     * @readonly
+     */
+    public readonly callLinkageData?: OPTIONAL<CallLinkageData>;
+    /**
+     * @summary `languagePreferences`.
+     * @description
+     *
+     * Optional preferred language(s) (§12.2.16).
+     *
+     * @public
+     * @readonly
+     */
+    public readonly languagePreferences?: OPTIONAL<LanguagePreferences>;
+    /**
+     * @summary `locationInfo`.
+     * @description
+     *
+     * Optional location information for devices in the
+     * call.
+     *
+     * @public
+     * @readonly
+     */
+    public readonly locationInfo?: OPTIONAL<LocationInfoList>;
+    /**
+     * @summary `extensions`.
+     * @description
+     *
+     * Optional `CSTACommonArguments` carrying the
+     * security and privateData parameters from the
+     * ECMA-269 event table.
+     *
+     * @public
+     * @readonly
+     */
+    public readonly extensions?: OPTIONAL<CSTACommonArguments>;
+
     constructor (
-        /**
-         * @summary `clearedCall`.
-         * @description
-         *
-         * Mandatory. ConnectionID of the cleared call.
-         * DeviceID shall be omitted (Call-ID only).
-         *
-         * @public
-         * @readonly
-         */
-        readonly clearedCall: ConnectionID,
-        /**
-         * @summary `correlatorData`.
-         * @description
-         *
-         * Optional current correlator data (§12.2.10). This
-         * event may omit it (FR 6).
-         *
-         * @public
-         * @readonly
-         */
-        readonly correlatorData: OPTIONAL<CorrelatorData>,
-        /**
-         * @summary `userData`.
-         * @description
-         *
-         * Conditional. Present when user data is sent and
-         * supported (§12.2.30).
-         *
-         * @public
-         * @readonly
-         */
-        readonly userData: OPTIONAL<UserData>,
-        /**
-         * @summary `cause`.
-         * @description
-         *
-         * Mandatory. Same cause as the last Connection
-         * Cleared for the call. Valid values are listed in
-         * Table 17-154.
-         *
-         * @public
-         * @readonly
-         */
-        readonly cause: EventCause,
-        /**
-         * @summary `mediaCallCharacteristics`.
-         * @description
-         *
-         * Optional media class and characteristics
-         * (§12.2.20).
-         *
-         * @public
-         * @readonly
-         */
-        readonly mediaCallCharacteristics?: OPTIONAL<MediaCallCharacteristics>,
-        /**
-         * @summary `callCharacteristics`.
-         * @description
-         *
-         * Optional high-level call characteristics
-         * (§12.2.4).
-         *
-         * @public
-         * @readonly
-         */
-        readonly callCharacteristics?: OPTIONAL<CallCharacteristics>,
-        /**
-         * @summary `callLinkageData`.
-         * @description
-         *
-         * Optional global call data and thread data
-         * (§12.2.5).
-         *
-         * @public
-         * @readonly
-         */
-        readonly callLinkageData?: OPTIONAL<CallLinkageData>,
-        /**
-         * @summary `languagePreferences`.
-         * @description
-         *
-         * Optional preferred language(s) (§12.2.16).
-         *
-         * @public
-         * @readonly
-         */
-        readonly languagePreferences?: OPTIONAL<LanguagePreferences>,
-        /**
-         * @summary `locationInfo`.
-         * @description
-         *
-         * Optional location information for devices in the
-         * call.
-         *
-         * @public
-         * @readonly
-         */
-        readonly locationInfo?: OPTIONAL<LocationInfoList>,
-        /**
-         * @summary `extensions`.
-         * @description
-         *
-         * Optional `CSTACommonArguments` carrying the
-         * security and privateData parameters from the
-         * ECMA-269 event table.
-         *
-         * @public
-         * @readonly
-         */
-        readonly extensions?: OPTIONAL<CSTACommonArguments>
-    ) {}
+        clearedCall: ConnectionID,
+        correlatorData: OPTIONAL<CorrelatorData>,
+        userData: OPTIONAL<UserData>,
+        cause: EventCause,
+        mediaCallCharacteristics?: OPTIONAL<MediaCallCharacteristics>,
+        callCharacteristics?: OPTIONAL<CallCharacteristics>,
+        callLinkageData?: OPTIONAL<CallLinkageData>,
+        languagePreferences?: OPTIONAL<LanguagePreferences>,
+        locationInfo?: OPTIONAL<LocationInfoList>,
+        extensions?: OPTIONAL<CSTACommonArguments>
+    ) {
+        this.clearedCall = clearedCall;
+        this.correlatorData = correlatorData;
+        this.userData = userData;
+        this.cause = cause;
+        this.mediaCallCharacteristics = mediaCallCharacteristics;
+        this.callCharacteristics = callCharacteristics;
+        this.callLinkageData = callLinkageData;
+        this.languagePreferences = languagePreferences;
+        this.locationInfo = locationInfo;
+        this.extensions = extensions;
+    }
 
     /**
      * @summary Restructures an object into a CallClearedEvent
@@ -203,7 +225,7 @@ class CallClearedEvent {
          * @static
          */
 
-    public static _enum_for_cause = _enum_for_EventCause;
+    public static _enum_for_cause: typeof _enum_for_EventCause = _enum_for_EventCause;
 }
 
 /**

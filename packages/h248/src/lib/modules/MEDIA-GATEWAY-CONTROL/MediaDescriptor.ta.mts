@@ -1,12 +1,12 @@
 /* eslint-disable */
 import {
-    OPTIONAL,
-    ASN1Element as _Element,
+    type OPTIONAL,
+    type ASN1Element as _Element,
     ASN1TagClass as _TagClass
 } from "@wildboar/asn1";
 import * as $ from "@wildboar/asn1/functional";
 import { TerminationStateDescriptor, _decode_TerminationStateDescriptor, _encode_TerminationStateDescriptor } from "../MEDIA-GATEWAY-CONTROL/TerminationStateDescriptor.ta.mjs";
-import { MediaDescriptor_streams, _decode_MediaDescriptor_streams, _encode_MediaDescriptor_streams } from "../MEDIA-GATEWAY-CONTROL/MediaDescriptor-streams.ta.mjs";
+import { type MediaDescriptor_streams, _decode_MediaDescriptor_streams, _encode_MediaDescriptor_streams } from "../MEDIA-GATEWAY-CONTROL/MediaDescriptor-streams.ta.mjs";
 
 
 /**
@@ -52,7 +52,7 @@ class MediaDescriptor {
      * @public
      * @readonly
      */
-    readonly termStateDescr?: OPTIONAL<TerminationStateDescriptor>;
+    public readonly termStateDescr?: OPTIONAL<TerminationStateDescriptor>;
     /**
      * @summary `streams`.
      * @description
@@ -63,7 +63,7 @@ class MediaDescriptor {
      * @public
      * @readonly
      */
-    readonly streams?: OPTIONAL<MediaDescriptor_streams>;
+    public readonly streams?: OPTIONAL<MediaDescriptor_streams>;
     /**
      * @summary Extensions that are not recognized.
      * @description
@@ -74,7 +74,7 @@ class MediaDescriptor {
      * @public
      * @readonly
      */
-    readonly _unrecognizedExtensionsList: _Element[];
+    public readonly _unrecognizedExtensionsList: _Element[];
 
     constructor (
         termStateDescr?: OPTIONAL<TerminationStateDescriptor>,

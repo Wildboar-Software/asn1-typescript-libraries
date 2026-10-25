@@ -1,7 +1,7 @@
 /* eslint-disable */
 import {
-    INTEGER,
-    ASN1Element as _Element,
+    type INTEGER,
+    type ASN1Element as _Element,
     ASN1TagClass as _TagClass,
     ASN1Construction as _Construction,
     ASN1UniversalType as _UniversalType,
@@ -32,48 +32,48 @@ export type ServiceProblem = INTEGER;
  * @constant
  * @type {number}
  */
-export const ServiceProblem_busy: ServiceProblem = 0; /* LONG_NAMED_INTEGER_VALUE */
+export const ServiceProblem_busy: 0 = 0 satisfies ServiceProblem; /* LONG_NAMED_INTEGER_VALUE */
 
 /**
  * @summary ServiceProblem_busy
  * @constant
  * @type {number}
  */
-export const busy: ServiceProblem = ServiceProblem_busy; /* SHORT_NAMED_INTEGER_VALUE */
+export const busy: 0 = ServiceProblem_busy; /* SHORT_NAMED_INTEGER_VALUE */
 
 /**
  * @summary ServiceProblem_unavailable
  * @constant
  * @type {number}
  */
-export const ServiceProblem_unavailable: ServiceProblem = 1; /* LONG_NAMED_INTEGER_VALUE */
+export const ServiceProblem_unavailable: 1 = 1 satisfies ServiceProblem; /* LONG_NAMED_INTEGER_VALUE */
 
 /**
  * @summary ServiceProblem_unavailable
  * @constant
  * @type {number}
  */
-export const unavailable: ServiceProblem = ServiceProblem_unavailable; /* SHORT_NAMED_INTEGER_VALUE */
+export const unavailable: 1 = ServiceProblem_unavailable; /* SHORT_NAMED_INTEGER_VALUE */
 
 /**
  * @summary ServiceProblem_unwilling_to_perform
  * @constant
  * @type {number}
  */
-export const ServiceProblem_unwilling_to_perform: ServiceProblem = 2; /* LONG_NAMED_INTEGER_VALUE */
+export const ServiceProblem_unwilling_to_perform: 2 = 2 satisfies ServiceProblem; /* LONG_NAMED_INTEGER_VALUE */
 
 /**
  * @summary ServiceProblem_unwilling_to_perform
  * @constant
  * @type {number}
  */
-export const unwilling_to_perform: ServiceProblem = ServiceProblem_unwilling_to_perform; /* SHORT_NAMED_INTEGER_VALUE */
+export const unwilling_to_perform: 2 = ServiceProblem_unwilling_to_perform; /* SHORT_NAMED_INTEGER_VALUE */
 
 
-export const _decode_ServiceProblem = $._decodeInteger;
+export const _decode_ServiceProblem: $.ASN1Decoder<INTEGER> = $._decodeInteger;
 
 
-export const _encode_ServiceProblem = $._encodeInteger;
+export const _encode_ServiceProblem: $.ASN1Encoder<INTEGER> = $._encodeInteger;
 
 
 /* eslint-enable */

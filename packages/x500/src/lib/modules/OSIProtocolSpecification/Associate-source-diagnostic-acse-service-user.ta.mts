@@ -1,5 +1,5 @@
 /* eslint-disable */
-import { ASN1Element as _Element, INTEGER } from "@wildboar/asn1";
+import { ASN1Element as _Element, type INTEGER } from "@wildboar/asn1";
 import * as $ from "@wildboar/asn1/functional";
 
 /**
@@ -19,154 +19,154 @@ export type Associate_source_diagnostic_acse_service_user = INTEGER;
  * @constant
  * @type {number}
  */
-export const Associate_source_diagnostic_acse_service_user_null_: Associate_source_diagnostic_acse_service_user = 0; /* LONG_NAMED_INTEGER_VALUE */
+export const Associate_source_diagnostic_acse_service_user_null_: 0 = 0 satisfies Associate_source_diagnostic_acse_service_user; /* LONG_NAMED_INTEGER_VALUE */
 
 /**
  * @summary Associate_source_diagnostic_acse_service_user_null_
  * @constant
  * @type {number}
  */
-export const null_: Associate_source_diagnostic_acse_service_user = Associate_source_diagnostic_acse_service_user_null_; /* SHORT_NAMED_INTEGER_VALUE */
+export const null_: 0 = Associate_source_diagnostic_acse_service_user_null_; /* SHORT_NAMED_INTEGER_VALUE */
 
 /**
  * @summary Associate_source_diagnostic_acse_service_user_no_reason_given
  * @constant
  * @type {number}
  */
-export const Associate_source_diagnostic_acse_service_user_no_reason_given: Associate_source_diagnostic_acse_service_user = 1; /* LONG_NAMED_INTEGER_VALUE */
+export const Associate_source_diagnostic_acse_service_user_no_reason_given: 1 = 1 satisfies Associate_source_diagnostic_acse_service_user; /* LONG_NAMED_INTEGER_VALUE */
 
 /**
  * @summary Associate_source_diagnostic_acse_service_user_no_reason_given
  * @constant
  * @type {number}
  */
-export const no_reason_given: Associate_source_diagnostic_acse_service_user = Associate_source_diagnostic_acse_service_user_no_reason_given; /* SHORT_NAMED_INTEGER_VALUE */
+export const no_reason_given: 1 = Associate_source_diagnostic_acse_service_user_no_reason_given; /* SHORT_NAMED_INTEGER_VALUE */
 
 /**
  * @summary Associate_source_diagnostic_acse_service_user_application_context_name_not_supported
  * @constant
  * @type {number}
  */
-export const Associate_source_diagnostic_acse_service_user_application_context_name_not_supported: Associate_source_diagnostic_acse_service_user = 2; /* LONG_NAMED_INTEGER_VALUE */
+export const Associate_source_diagnostic_acse_service_user_application_context_name_not_supported: 2 = 2 satisfies Associate_source_diagnostic_acse_service_user; /* LONG_NAMED_INTEGER_VALUE */
 
 /**
  * @summary Associate_source_diagnostic_acse_service_user_application_context_name_not_supported
  * @constant
  * @type {number}
  */
-export const application_context_name_not_supported: Associate_source_diagnostic_acse_service_user = Associate_source_diagnostic_acse_service_user_application_context_name_not_supported; /* SHORT_NAMED_INTEGER_VALUE */
+export const application_context_name_not_supported: 2 = Associate_source_diagnostic_acse_service_user_application_context_name_not_supported; /* SHORT_NAMED_INTEGER_VALUE */
 
 /**
  * @summary Associate_source_diagnostic_acse_service_user_calling_AP_title_not_recognized
  * @constant
  * @type {number}
  */
-export const Associate_source_diagnostic_acse_service_user_calling_AP_title_not_recognized: Associate_source_diagnostic_acse_service_user = 3; /* LONG_NAMED_INTEGER_VALUE */
+export const Associate_source_diagnostic_acse_service_user_calling_AP_title_not_recognized: 3 = 3 satisfies Associate_source_diagnostic_acse_service_user; /* LONG_NAMED_INTEGER_VALUE */
 
 /**
  * @summary Associate_source_diagnostic_acse_service_user_calling_AP_title_not_recognized
  * @constant
  * @type {number}
  */
-export const calling_AP_title_not_recognized: Associate_source_diagnostic_acse_service_user = Associate_source_diagnostic_acse_service_user_calling_AP_title_not_recognized; /* SHORT_NAMED_INTEGER_VALUE */
+export const calling_AP_title_not_recognized: 3 = Associate_source_diagnostic_acse_service_user_calling_AP_title_not_recognized; /* SHORT_NAMED_INTEGER_VALUE */
 
 /**
  * @summary Associate_source_diagnostic_acse_service_user_calling_AP_invocation_identifier_not_recognized
  * @constant
  * @type {number}
  */
-export const Associate_source_diagnostic_acse_service_user_calling_AP_invocation_identifier_not_recognized: Associate_source_diagnostic_acse_service_user = 4; /* LONG_NAMED_INTEGER_VALUE */
+export const Associate_source_diagnostic_acse_service_user_calling_AP_invocation_identifier_not_recognized: 4 = 4 satisfies Associate_source_diagnostic_acse_service_user; /* LONG_NAMED_INTEGER_VALUE */
 
 /**
  * @summary Associate_source_diagnostic_acse_service_user_calling_AP_invocation_identifier_not_recognized
  * @constant
  * @type {number}
  */
-export const calling_AP_invocation_identifier_not_recognized: Associate_source_diagnostic_acse_service_user = Associate_source_diagnostic_acse_service_user_calling_AP_invocation_identifier_not_recognized; /* SHORT_NAMED_INTEGER_VALUE */
+export const calling_AP_invocation_identifier_not_recognized: 4 = Associate_source_diagnostic_acse_service_user_calling_AP_invocation_identifier_not_recognized; /* SHORT_NAMED_INTEGER_VALUE */
 
 /**
  * @summary Associate_source_diagnostic_acse_service_user_calling_AE_qualifier_not_recognized
  * @constant
  * @type {number}
  */
-export const Associate_source_diagnostic_acse_service_user_calling_AE_qualifier_not_recognized: Associate_source_diagnostic_acse_service_user = 5; /* LONG_NAMED_INTEGER_VALUE */
+export const Associate_source_diagnostic_acse_service_user_calling_AE_qualifier_not_recognized: 5 = 5 satisfies Associate_source_diagnostic_acse_service_user; /* LONG_NAMED_INTEGER_VALUE */
 
 /**
  * @summary Associate_source_diagnostic_acse_service_user_calling_AE_qualifier_not_recognized
  * @constant
  * @type {number}
  */
-export const calling_AE_qualifier_not_recognized: Associate_source_diagnostic_acse_service_user = Associate_source_diagnostic_acse_service_user_calling_AE_qualifier_not_recognized; /* SHORT_NAMED_INTEGER_VALUE */
+export const calling_AE_qualifier_not_recognized: 5 = Associate_source_diagnostic_acse_service_user_calling_AE_qualifier_not_recognized; /* SHORT_NAMED_INTEGER_VALUE */
 
 /**
  * @summary Associate_source_diagnostic_acse_service_user_calling_AE_invocation_identifier_not_recognized
  * @constant
  * @type {number}
  */
-export const Associate_source_diagnostic_acse_service_user_calling_AE_invocation_identifier_not_recognized: Associate_source_diagnostic_acse_service_user = 6; /* LONG_NAMED_INTEGER_VALUE */
+export const Associate_source_diagnostic_acse_service_user_calling_AE_invocation_identifier_not_recognized: 6 = 6 satisfies Associate_source_diagnostic_acse_service_user; /* LONG_NAMED_INTEGER_VALUE */
 
 /**
  * @summary Associate_source_diagnostic_acse_service_user_calling_AE_invocation_identifier_not_recognized
  * @constant
  * @type {number}
  */
-export const calling_AE_invocation_identifier_not_recognized: Associate_source_diagnostic_acse_service_user = Associate_source_diagnostic_acse_service_user_calling_AE_invocation_identifier_not_recognized; /* SHORT_NAMED_INTEGER_VALUE */
+export const calling_AE_invocation_identifier_not_recognized: 6 = Associate_source_diagnostic_acse_service_user_calling_AE_invocation_identifier_not_recognized; /* SHORT_NAMED_INTEGER_VALUE */
 
 /**
  * @summary Associate_source_diagnostic_acse_service_user_called_AP_title_not_recognized
  * @constant
  * @type {number}
  */
-export const Associate_source_diagnostic_acse_service_user_called_AP_title_not_recognized: Associate_source_diagnostic_acse_service_user = 7; /* LONG_NAMED_INTEGER_VALUE */
+export const Associate_source_diagnostic_acse_service_user_called_AP_title_not_recognized: 7 = 7 satisfies Associate_source_diagnostic_acse_service_user; /* LONG_NAMED_INTEGER_VALUE */
 
 /**
  * @summary Associate_source_diagnostic_acse_service_user_called_AP_title_not_recognized
  * @constant
  * @type {number}
  */
-export const called_AP_title_not_recognized: Associate_source_diagnostic_acse_service_user = Associate_source_diagnostic_acse_service_user_called_AP_title_not_recognized; /* SHORT_NAMED_INTEGER_VALUE */
+export const called_AP_title_not_recognized: 7 = Associate_source_diagnostic_acse_service_user_called_AP_title_not_recognized; /* SHORT_NAMED_INTEGER_VALUE */
 
 /**
  * @summary Associate_source_diagnostic_acse_service_user_called_AP_invocation_identifier_not_recognized
  * @constant
  * @type {number}
  */
-export const Associate_source_diagnostic_acse_service_user_called_AP_invocation_identifier_not_recognized: Associate_source_diagnostic_acse_service_user = 8; /* LONG_NAMED_INTEGER_VALUE */
+export const Associate_source_diagnostic_acse_service_user_called_AP_invocation_identifier_not_recognized: 8 = 8 satisfies Associate_source_diagnostic_acse_service_user; /* LONG_NAMED_INTEGER_VALUE */
 
 /**
  * @summary Associate_source_diagnostic_acse_service_user_called_AP_invocation_identifier_not_recognized
  * @constant
  * @type {number}
  */
-export const called_AP_invocation_identifier_not_recognized: Associate_source_diagnostic_acse_service_user = Associate_source_diagnostic_acse_service_user_called_AP_invocation_identifier_not_recognized; /* SHORT_NAMED_INTEGER_VALUE */
+export const called_AP_invocation_identifier_not_recognized: 8 = Associate_source_diagnostic_acse_service_user_called_AP_invocation_identifier_not_recognized; /* SHORT_NAMED_INTEGER_VALUE */
 
 /**
  * @summary Associate_source_diagnostic_acse_service_user_called_AE_qualifier_not_recognized
  * @constant
  * @type {number}
  */
-export const Associate_source_diagnostic_acse_service_user_called_AE_qualifier_not_recognized: Associate_source_diagnostic_acse_service_user = 9; /* LONG_NAMED_INTEGER_VALUE */
+export const Associate_source_diagnostic_acse_service_user_called_AE_qualifier_not_recognized: 9 = 9 satisfies Associate_source_diagnostic_acse_service_user; /* LONG_NAMED_INTEGER_VALUE */
 
 /**
  * @summary Associate_source_diagnostic_acse_service_user_called_AE_qualifier_not_recognized
  * @constant
  * @type {number}
  */
-export const called_AE_qualifier_not_recognized: Associate_source_diagnostic_acse_service_user = Associate_source_diagnostic_acse_service_user_called_AE_qualifier_not_recognized; /* SHORT_NAMED_INTEGER_VALUE */
+export const called_AE_qualifier_not_recognized: 9 = Associate_source_diagnostic_acse_service_user_called_AE_qualifier_not_recognized; /* SHORT_NAMED_INTEGER_VALUE */
 
 /**
  * @summary Associate_source_diagnostic_acse_service_user_called_AE_invocation_identifier_not_recognized
  * @constant
  * @type {number}
  */
-export const Associate_source_diagnostic_acse_service_user_called_AE_invocation_identifier_not_recognized: Associate_source_diagnostic_acse_service_user = 10; /* LONG_NAMED_INTEGER_VALUE */
+export const Associate_source_diagnostic_acse_service_user_called_AE_invocation_identifier_not_recognized: 10 = 10 satisfies Associate_source_diagnostic_acse_service_user; /* LONG_NAMED_INTEGER_VALUE */
 
 /**
  * @summary Associate_source_diagnostic_acse_service_user_called_AE_invocation_identifier_not_recognized
  * @constant
  * @type {number}
  */
-export const called_AE_invocation_identifier_not_recognized: Associate_source_diagnostic_acse_service_user = Associate_source_diagnostic_acse_service_user_called_AE_invocation_identifier_not_recognized; /* SHORT_NAMED_INTEGER_VALUE */
+export const called_AE_invocation_identifier_not_recognized: 10 = Associate_source_diagnostic_acse_service_user_called_AE_invocation_identifier_not_recognized; /* SHORT_NAMED_INTEGER_VALUE */
 
 let _cached_decoder_for_Associate_source_diagnostic_acse_service_user: $.ASN1Decoder<Associate_source_diagnostic_acse_service_user> | null = null;
 

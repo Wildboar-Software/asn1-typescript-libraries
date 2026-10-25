@@ -1,6 +1,6 @@
 /* eslint-disable */
 import {
-    ASN1Element as _Element,
+    type ASN1Element as _Element,
     ASN1TagClass as _TagClass,
     ASN1Construction as _Construction,
     ASN1UniversalType as _UniversalType,
@@ -34,26 +34,32 @@ import { VersionConstraint, _enum_for_VersionConstraint, _decode_VersionConstrai
  */
 export
 class ConstraintsType {
+    /**
+     * @summary `name_constraint`.
+     * @description
+     *
+     * Uniqueness rule for `dfr-title`.
+     * @public
+     * @readonly
+     */
+    public readonly name_constraint: NameConstraint;
+    /**
+     * @summary `version_constraint`.
+     * @description
+     *
+     * Uniqueness rule for `version-name`.
+     * @public
+     * @readonly
+     */
+    public readonly version_constraint: VersionConstraint;
+
     constructor (
-        /**
-         * @summary `name_constraint`.
-         * @description
-         *
-         * Uniqueness rule for `dfr-title`.
-         * @public
-         * @readonly
-         */
-        readonly name_constraint: NameConstraint,
-        /**
-         * @summary `version_constraint`.
-         * @description
-         *
-         * Uniqueness rule for `version-name`.
-         * @public
-         * @readonly
-         */
-        readonly version_constraint: VersionConstraint
-    ) {}
+        name_constraint: NameConstraint,
+        version_constraint: VersionConstraint
+    ) {
+        this.name_constraint = name_constraint;
+        this.version_constraint = version_constraint;
+    }
 
     /**
      * @summary Restructures an object into a ConstraintsType
@@ -77,13 +83,13 @@ class ConstraintsType {
          * @static
          */
 
-    public static _enum_for_name_constraint = _enum_for_NameConstraint;        /**
+    public static _enum_for_name_constraint: typeof _enum_for_NameConstraint = _enum_for_NameConstraint;        /**
          * @summary The enum used as the type of the component `version_constraint`
          * @public
          * @static
          */
 
-    public static _enum_for_version_constraint = _enum_for_VersionConstraint;
+    public static _enum_for_version_constraint: typeof _enum_for_VersionConstraint = _enum_for_VersionConstraint;
 }
 
 /**

@@ -1,17 +1,17 @@
 /* eslint-disable */
 import {
-    BOOLEAN,
-    EXTERNAL,
-    GeneralizedTime,
-    INTEGER,
-    NULL,
-    OBJECT_IDENTIFIER,
-    OCTET_STRING,
-    ASN1Element as _Element,
+    type BOOLEAN,
+    type EXTERNAL,
+    type GeneralizedTime,
+    type INTEGER,
+    type NULL,
+    type OBJECT_IDENTIFIER,
+    type OCTET_STRING,
+    type ASN1Element as _Element,
     ASN1TagClass as _TagClass
 } from "@wildboar/asn1";
 import * as $ from "@wildboar/asn1/functional";
-import { InternationalString, _decode_InternationalString, _encode_InternationalString } from "../Z39-50-APDU-2001/InternationalString.ta.mjs";
+import { type InternationalString, _decode_InternationalString, _encode_InternationalString } from "../Z39-50-APDU-2001/InternationalString.ta.mjs";
 import { IntUnit, _decode_IntUnit, _encode_IntUnit } from "../Z39-50-APDU-2001/IntUnit.ta.mjs";
 import { TaggedElement, _decode_TaggedElement, _encode_TaggedElement } from "../RecordSyntax-generic/TaggedElement.ta.mjs";
 

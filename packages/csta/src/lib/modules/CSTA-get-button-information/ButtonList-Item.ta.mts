@@ -2,19 +2,19 @@
 
 import * as $ from "@wildboar/asn1/functional";
 import {
-    OPTIONAL,
-    BOOLEAN,
-    SEQUENCE,
-    SET,
-    IA5String,
-    ASN1Element as _Element,
+    type OPTIONAL,
+    type BOOLEAN,
+    type SEQUENCE,
+    type SET,
+    type IA5String,
+    type ASN1Element as _Element,
     ASN1TagClass as _TagClass
 } from "@wildboar/asn1";
-import { ButtonID, _decode_ButtonID, _encode_ButtonID } from "../CSTA-physical-device-feature/ButtonID.ta.mjs";
+import { type ButtonID, _decode_ButtonID, _encode_ButtonID } from "../CSTA-physical-device-feature/ButtonID.ta.mjs";
 
 import { DeviceID, _decode_DeviceID, _encode_DeviceID } from "../CSTA-device-identifiers/DeviceID.ta.mjs";
 
-import { LampID, _decode_LampID, _encode_LampID } from "../CSTA-physical-device-feature/LampID.ta.mjs";
+import { type LampID, _decode_LampID, _encode_LampID } from "../CSTA-physical-device-feature/LampID.ta.mjs";
 
 
 
@@ -46,83 +46,101 @@ import { LampID, _decode_LampID, _encode_LampID } from "../CSTA-physical-device-
  */
 export
 class ButtonList_Item {
+    /**
+     * @summary `button`.
+     * @description
+     *
+     * ButtonID of this entry. Reserved ButtonIDs in Table 12-3: `0`–`9`,
+     * `*`=10, `#`=11 (ECMA-269 §12.3.5).
+     * @public
+     * @readonly
+     */
+    public readonly button: ButtonID;
+    /**
+     * @summary `buttonLabel`.
+     * @description
+     *
+     * Label by which the button may be referenced. Max length from
+     * capabilities exchange.
+     * @public
+     * @readonly
+     */
+    public readonly buttonLabel?: OPTIONAL<IA5String>;
+    /**
+     * @summary `buttonLabelSettable`.
+     * @description
+     *
+     * TRUE if Set Button Information may set the label.
+     * @public
+     * @readonly
+     */
+    public readonly buttonLabelSettable?: OPTIONAL<BOOLEAN>;
+    /**
+     * @summary `buttonFunction`.
+     * @description
+     *
+     * Function assigned to the button.
+     * @public
+     * @readonly
+     */
+    public readonly buttonFunction?: OPTIONAL<IA5String>;
+    /**
+     * @summary `buttonAssociatedNumber`.
+     * @description
+     *
+     * Diallable-digits DeviceID associated with the button (e.g.
+     * speed-dial).
+     * @public
+     * @readonly
+     */
+    public readonly buttonAssociatedNumber?: OPTIONAL<DeviceID>;
+    /**
+     * @summary `buttonAssociatedNumberSettable`.
+     * @description
+     *
+     * TRUE if Set Button Information may associate a number.
+     * @public
+     * @readonly
+     */
+    public readonly buttonAssociatedNumberSettable?: OPTIONAL<BOOLEAN>;
+    /**
+     * @summary `buttonPressIndicator`.
+     * @description
+     *
+     * TRUE (default) if Button Press may press this button.
+     * @public
+     * @readonly
+     */
+    public readonly buttonPressIndicator?: OPTIONAL<BOOLEAN>;
+    /**
+     * @summary `lampList`.
+     * @description
+     *
+     * Associated lamps. Empty: none.
+     * @public
+     * @readonly
+     */
+    public readonly lampList?: OPTIONAL<LampID[]>;
+
     constructor (
-        /**
-         * @summary `button`.
-         * @description
-         *
-         * ButtonID of this entry. Reserved ButtonIDs in Table 12-3: `0`–`9`,
-         * `*`=10, `#`=11 (ECMA-269 §12.3.5).
-         * @public
-         * @readonly
-         */
-        readonly button: ButtonID,
-        /**
-         * @summary `buttonLabel`.
-         * @description
-         *
-         * Label by which the button may be referenced. Max length from
-         * capabilities exchange.
-         * @public
-         * @readonly
-         */
-        readonly buttonLabel?: OPTIONAL<IA5String>,
-        /**
-         * @summary `buttonLabelSettable`.
-         * @description
-         *
-         * TRUE if Set Button Information may set the label.
-         * @public
-         * @readonly
-         */
-        readonly buttonLabelSettable?: OPTIONAL<BOOLEAN>,
-        /**
-         * @summary `buttonFunction`.
-         * @description
-         *
-         * Function assigned to the button.
-         * @public
-         * @readonly
-         */
-        readonly buttonFunction?: OPTIONAL<IA5String>,
-        /**
-         * @summary `buttonAssociatedNumber`.
-         * @description
-         *
-         * Diallable-digits DeviceID associated with the button (e.g.
-         * speed-dial).
-         * @public
-         * @readonly
-         */
-        readonly buttonAssociatedNumber?: OPTIONAL<DeviceID>,
-        /**
-         * @summary `buttonAssociatedNumberSettable`.
-         * @description
-         *
-         * TRUE if Set Button Information may associate a number.
-         * @public
-         * @readonly
-         */
-        readonly buttonAssociatedNumberSettable?: OPTIONAL<BOOLEAN>,
-        /**
-         * @summary `buttonPressIndicator`.
-         * @description
-         *
-         * TRUE (default) if Button Press may press this button.
-         * @public
-         * @readonly
-         */
-        readonly buttonPressIndicator?: OPTIONAL<BOOLEAN>,
-        /**
-         * @summary `lampList`.
-         * @description
-         *
-         * Associated lamps. Empty: none.
-         * @public
-         * @readonly
-         */
-        readonly lampList?: OPTIONAL<LampID[]>
-    ) {}
+        button: ButtonID,
+        buttonLabel?: OPTIONAL<IA5String>,
+        buttonLabelSettable?: OPTIONAL<BOOLEAN>,
+        buttonFunction?: OPTIONAL<IA5String>,
+        buttonAssociatedNumber?: OPTIONAL<DeviceID>,
+        buttonAssociatedNumberSettable?: OPTIONAL<BOOLEAN>,
+        buttonPressIndicator?: OPTIONAL<BOOLEAN>,
+        lampList?: OPTIONAL<LampID[]>
+    ) {
+        this.button = button;
+        this.buttonLabel = buttonLabel;
+        this.buttonLabelSettable = buttonLabelSettable;
+        this.buttonFunction = buttonFunction;
+        this.buttonAssociatedNumber = buttonAssociatedNumber;
+        this.buttonAssociatedNumberSettable = buttonAssociatedNumberSettable;
+        this.buttonPressIndicator = buttonPressIndicator;
+        this.lampList = lampList;
+    }
 
     /**
      * @summary Restructures an object into a ButtonList_Item

@@ -1,14 +1,14 @@
 /* eslint-disable */
 import {
-    OPTIONAL,
-    ASN1Element as _Element,
+    type OPTIONAL,
+    type ASN1Element as _Element,
     ASN1TagClass as _TagClass
 } from "@wildboar/asn1";
 import * as $ from "@wildboar/asn1/functional";
-import { IMSI, _decode_IMSI, _encode_IMSI } from "../MAP-CommonDataTypes/IMSI.ta.mjs";
+import { type IMSI, _decode_IMSI, _encode_IMSI } from "../MAP-CommonDataTypes/IMSI.ta.mjs";
 import { ExtensionContainer, _decode_ExtensionContainer, _encode_ExtensionContainer } from "../MAP-ExtensionDataTypes/ExtensionContainer.ta.mjs";
-import { TraceReference, _decode_TraceReference, _encode_TraceReference } from "../MAP-OM-DataTypes/TraceReference.ta.mjs";
-import { TraceReference2, _decode_TraceReference2, _encode_TraceReference2 } from "../MAP-OM-DataTypes/TraceReference2.ta.mjs";
+import { type TraceReference, _decode_TraceReference, _encode_TraceReference } from "../MAP-OM-DataTypes/TraceReference.ta.mjs";
+import { type TraceReference2, _decode_TraceReference2, _encode_TraceReference2 } from "../MAP-OM-DataTypes/TraceReference2.ta.mjs";
 
 
 /**
@@ -22,9 +22,9 @@ import { TraceReference2, _decode_TraceReference2, _encode_TraceReference2 } fro
  * 
  * ```asn1
  * DeactivateTraceModeArg ::= SEQUENCE {
- *     imsi    [0] IMSI    OPTIONAL,
+ *     imsi    [0] IMSI    type OPTIONAL,
  *     traceReference    [1] TraceReference,
- *     extensionContainer    [2] ExtensionContainer    OPTIONAL,
+ *     extensionContainer    [2] ExtensionContainer    type OPTIONAL,
  *     ...,
  *     traceReference2    [3] TraceReference2    OPTIONAL
  *     }
@@ -34,54 +34,66 @@ import { TraceReference2, _decode_TraceReference2, _encode_TraceReference2 } fro
  */
 export
 class DeactivateTraceModeArg {
+    /**
+     * @summary `imsi`.
+     * @description
+     *
+     * Mandatory in a stand-alone operation (clause 9.1.2.3).
+     *
+     * @public
+     * @readonly
+     */
+    public readonly imsi: OPTIONAL<IMSI>;
+    /**
+     * @summary `traceReference`.
+     * @description
+     *
+     * GSM-only trace reference (clauses 7.6.10.2 and 9.1.2.3).
+     *
+     * @public
+     * @readonly
+     */
+    public readonly traceReference: TraceReference;
+    /**
+     * @summary `extensionContainer`.
+     * @description
+     *
+     * Private or PCS extensions (3GPP TS 29.002 V19.1.0 clause 17.7.11).
+     *
+     * @public
+     * @readonly
+     */
+    public readonly extensionContainer?: OPTIONAL<ExtensionContainer>;
+    /**
+     * @summary `traceReference2`.
+     * @description
+     *
+     * UMTS trace reference (clauses 7.6.10.2A and 9.1.2.3).
+     *
+     * @public
+     * @readonly
+     */
+    public readonly traceReference2?: OPTIONAL<TraceReference2>;
+    /**
+     * @summary Extensions that are not recognized.
+     * @public
+     * @readonly
+     */
+    public readonly _unrecognizedExtensionsList: _Element[];
+
     constructor (
-        /**
-         * @summary `imsi`.
-         * @description
-         *
-         * Mandatory in a stand-alone operation (clause 9.1.2.3).
-         *
-         * @public
-         * @readonly
-         */
-        readonly imsi: OPTIONAL<IMSI>,
-        /**
-         * @summary `traceReference`.
-         * @description
-         *
-         * GSM-only trace reference (clauses 7.6.10.2 and 9.1.2.3).
-         *
-         * @public
-         * @readonly
-         */
-        readonly traceReference: TraceReference,
-        /**
-         * @summary `extensionContainer`.
-         * @description
-         *
-         * Private or PCS extensions (3GPP TS 29.002 V19.1.0 clause 17.7.11).
-         *
-         * @public
-         * @readonly
-         */
-        readonly extensionContainer?: OPTIONAL<ExtensionContainer>,
-        /**
-         * @summary `traceReference2`.
-         * @description
-         *
-         * UMTS trace reference (clauses 7.6.10.2A and 9.1.2.3).
-         *
-         * @public
-         * @readonly
-         */
-        readonly traceReference2?: OPTIONAL<TraceReference2>,
-        /**
-         * @summary Extensions that are not recognized.
-         * @public
-         * @readonly
-         */
-        readonly _unrecognizedExtensionsList: _Element[] = []
-    ) {}
+        imsi: OPTIONAL<IMSI>,
+        traceReference: TraceReference,
+        extensionContainer?: OPTIONAL<ExtensionContainer>,
+        traceReference2?: OPTIONAL<TraceReference2>,
+        _unrecognizedExtensionsList: _Element[] = []
+    ) {
+        this.imsi = imsi;
+        this.traceReference = traceReference;
+        this.extensionContainer = extensionContainer;
+        this.traceReference2 = traceReference2;
+        this._unrecognizedExtensionsList = _unrecognizedExtensionsList;
+    }
 
     /**
      * @summary Restructures an object into a DeactivateTraceModeArg

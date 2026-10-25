@@ -1,11 +1,11 @@
 /* eslint-disable */
 import {
-    OPTIONAL,
-    ASN1Element as _Element,
+    type OPTIONAL,
+    type ASN1Element as _Element,
     ASN1TagClass as _TagClass
 } from "@wildboar/asn1";
 import * as $ from "@wildboar/asn1/functional";
-import { TSCheckErrorId, _decode_TSCheckErrorId, _encode_TSCheckErrorId } from "../CSChargingDataTypes/TSCheckErrorId.ta.mjs";
+import { type TSCheckErrorId, _decode_TSCheckErrorId, _encode_TSCheckErrorId } from "../CSChargingDataTypes/TSCheckErrorId.ta.mjs";
 
 
 /**

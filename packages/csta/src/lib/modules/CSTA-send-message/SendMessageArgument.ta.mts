@@ -2,10 +2,10 @@
 
 import * as $ from "@wildboar/asn1/functional";
 import {
-    OPTIONAL,
-    SEQUENCE,
-    SET,
-    ASN1Element as _Element,
+    type OPTIONAL,
+    type SEQUENCE,
+    type SET,
+    type ASN1Element as _Element,
     ASN1TagClass as _TagClass
 } from "@wildboar/asn1";
 import { DeviceID, _decode_DeviceID, _encode_DeviceID } from "../CSTA-device-identifiers/DeviceID.ta.mjs";
@@ -14,23 +14,23 @@ import { DeviceListItems, _decode_DeviceListItems, _encode_DeviceListItems } fro
 
 import { MessageInfo, _decode_MessageInfo, _encode_MessageInfo } from "../CSTA-device-feature-types/MessageInfo.ta.mjs";
 
-import { CallCharacteristics, _decode_CallCharacteristics, _encode_CallCharacteristics } from "../CSTA-call-control/CallCharacteristics.ta.mjs";
+import { type CallCharacteristics, _decode_CallCharacteristics, _encode_CallCharacteristics } from "../CSTA-call-control/CallCharacteristics.ta.mjs";
 
 import { MediaCallCharacteristics, _decode_MediaCallCharacteristics, _encode_MediaCallCharacteristics } from "../CSTA-media-services/MediaCallCharacteristics.ta.mjs";
 
-import { SubjectOfCall, _decode_SubjectOfCall, _encode_SubjectOfCall } from "../CSTA-device-feature-types/SubjectOfCall.ta.mjs";
+import { type SubjectOfCall, _decode_SubjectOfCall, _encode_SubjectOfCall } from "../CSTA-device-feature-types/SubjectOfCall.ta.mjs";
 
-import { LanguagePreferences, _decode_LanguagePreferences, _encode_LanguagePreferences } from "../CSTA-device-feature-types/LanguagePreferences.ta.mjs";
+import { type LanguagePreferences, _decode_LanguagePreferences, _encode_LanguagePreferences } from "../CSTA-device-feature-types/LanguagePreferences.ta.mjs";
 
 import { CSTACommonArguments, _decode_CSTACommonArguments, _encode_CSTACommonArguments } from "../CSTA-extension-types/CSTACommonArguments.ta.mjs";
 
 
 
-import { AccountInfo, _decode_AccountInfo, _encode_AccountInfo } from "../CSTA-device-feature-types/AccountInfo.ta.mjs";
+import { type AccountInfo, _decode_AccountInfo, _encode_AccountInfo } from "../CSTA-device-feature-types/AccountInfo.ta.mjs";
 
-import { AuthCode, _decode_AuthCode, _encode_AuthCode } from "../CSTA-device-feature-types/AuthCode.ta.mjs";
+import { type AuthCode, _decode_AuthCode, _encode_AuthCode } from "../CSTA-device-feature-types/AuthCode.ta.mjs";
 
-import { CorrelatorData, _decode_CorrelatorData, _encode_CorrelatorData } from "../CSTA-device-feature-types/CorrelatorData.ta.mjs";
+import { type CorrelatorData, _decode_CorrelatorData, _encode_CorrelatorData } from "../CSTA-device-feature-types/CorrelatorData.ta.mjs";
 
 /**
  * @summary SendMessageArgument
@@ -51,13 +51,13 @@ import { CorrelatorData, _decode_CorrelatorData, _encode_CorrelatorData } from "
  * {    callingDevice             DeviceID,
  *     destinationDevices        DeviceListItems,
  *     messageInfo             MessageInfo,
- *     accountCode             [0] IMPLICIT AccountInfo             OPTIONAL,
- *     authCode             [1] IMPLICIT AuthCode                 OPTIONAL,
- *     correlatorData             [2] IMPLICIT CorrelatorData             OPTIONAL,
- *     callCharacteristics        [3] IMPLICIT CallCharacteristics        OPTIONAL,
- *     mediaCallCharacteristics    [4] IMPLICIT MediaCallCharacteristics        OPTIONAL,
- *     subjectOfCall             [5] IMPLICIT SubjectOfCall             OPTIONAL,
- *     languagePreferences        [6] IMPLICIT LanguagePreferences        OPTIONAL,
+ *     accountCode             [0] IMPLICIT AccountInfo             type OPTIONAL,
+ *     authCode             [1] IMPLICIT AuthCode                 type OPTIONAL,
+ *     correlatorData             [2] IMPLICIT CorrelatorData             type OPTIONAL,
+ *     callCharacteristics        [3] IMPLICIT CallCharacteristics        type OPTIONAL,
+ *     mediaCallCharacteristics    [4] IMPLICIT MediaCallCharacteristics        type OPTIONAL,
+ *     subjectOfCall             [5] IMPLICIT SubjectOfCall             type OPTIONAL,
+ *     languagePreferences        [6] IMPLICIT LanguagePreferences        type OPTIONAL,
  *     extensions             CSTACommonArguments                 OPTIONAL }
  * ```
  * 
@@ -65,128 +65,152 @@ import { CorrelatorData, _decode_CorrelatorData, _encode_CorrelatorData } from "
  */
 export
 class SendMessageArgument {
+    /**
+     * @summary `callingDevice`.
+     * @description
+     *
+     * Mandatory. Device on whose behalf the message is
+     * sent. May name a group; later events use the actual
+     * device, and Originated reports this value as
+     * `originatingDevice` (FR 9).
+     *
+     * @public
+     * @readonly
+     */
+    public readonly callingDevice: DeviceID;
+    /**
+     * @summary `destinationDevices`.
+     * @description
+     *
+     * Mandatory. Destination device(s). One
+     * non-interactive call is created per destination.
+     *
+     * @public
+     * @readonly
+     */
+    public readonly destinationDevices: DeviceListItems;
+    /**
+     * @summary `messageInfo`.
+     * @description
+     *
+     * Mandatory. MIME body part(s). Default content type
+     * is `text/plain` when omitted (Table 17-130).
+     *
+     * @public
+     * @readonly
+     */
+    public readonly messageInfo: MessageInfo;
+    /**
+     * @summary `accountCode`.
+     * @description
+     *
+     * Optional account code for the new call (§12.2.1).
+     *
+     * @public
+     * @readonly
+     */
+    public readonly accountCode?: OPTIONAL<AccountInfo>;
+    /**
+     * @summary `authCode`.
+     * @description
+     *
+     * Optional authorization code (§12.2.3).
+     *
+     * @public
+     * @readonly
+     */
+    public readonly authCode?: OPTIONAL<AuthCode>;
+    /**
+     * @summary `correlatorData`.
+     * @description
+     *
+     * Optional. Associates several messages into one
+     * conversation (FR 1, §12.2.10).
+     *
+     * @public
+     * @readonly
+     */
+    public readonly correlatorData?: OPTIONAL<CorrelatorData>;
+    /**
+     * @summary `callCharacteristics`.
+     * @description
+     *
+     * Optional call characteristics (§12.2.4). Unsupported
+     * values cause a negative acknowledgement.
+     *
+     * @public
+     * @readonly
+     */
+    public readonly callCharacteristics?: OPTIONAL<CallCharacteristics>;
+    /**
+     * @summary `mediaCallCharacteristics`.
+     * @description
+     *
+     * Optional. Omitted media class is Message. The
+     * switching function may adjust values (FR 8).
+     *
+     * @public
+     * @readonly
+     */
+    public readonly mediaCallCharacteristics?: OPTIONAL<MediaCallCharacteristics>;
+    /**
+     * @summary `subjectOfCall`.
+     * @description
+     *
+     * Optional subject or intent (§12.2.27).
+     *
+     * @public
+     * @readonly
+     */
+    public readonly subjectOfCall?: OPTIONAL<SubjectOfCall>;
+    /**
+     * @summary `languagePreferences`.
+     * @description
+     *
+     * Optional preferred language(s) (§12.2.16).
+     *
+     * @public
+     * @readonly
+     */
+    public readonly languagePreferences?: OPTIONAL<LanguagePreferences>;
+    /**
+     * @summary `extensions`.
+     * @description
+     *
+     * Optional `CSTACommonArguments` carrying the security
+     * and privateData parameters from the ECMA-269 service
+     * table.
+     *
+     * @public
+     * @readonly
+     */
+    public readonly extensions?: OPTIONAL<CSTACommonArguments>;
+
     constructor (
-        /**
-         * @summary `callingDevice`.
-         * @description
-         *
-         * Mandatory. Device on whose behalf the message is
-         * sent. May name a group; later events use the actual
-         * device, and Originated reports this value as
-         * `originatingDevice` (FR 9).
-         *
-         * @public
-         * @readonly
-         */
-        readonly callingDevice: DeviceID,
-        /**
-         * @summary `destinationDevices`.
-         * @description
-         *
-         * Mandatory. Destination device(s). One
-         * non-interactive call is created per destination.
-         *
-         * @public
-         * @readonly
-         */
-        readonly destinationDevices: DeviceListItems,
-        /**
-         * @summary `messageInfo`.
-         * @description
-         *
-         * Mandatory. MIME body part(s). Default content type
-         * is `text/plain` when omitted (Table 17-130).
-         *
-         * @public
-         * @readonly
-         */
-        readonly messageInfo: MessageInfo,
-        /**
-         * @summary `accountCode`.
-         * @description
-         *
-         * Optional account code for the new call (§12.2.1).
-         *
-         * @public
-         * @readonly
-         */
-        readonly accountCode?: OPTIONAL<AccountInfo>,
-        /**
-         * @summary `authCode`.
-         * @description
-         *
-         * Optional authorization code (§12.2.3).
-         *
-         * @public
-         * @readonly
-         */
-        readonly authCode?: OPTIONAL<AuthCode>,
-        /**
-         * @summary `correlatorData`.
-         * @description
-         *
-         * Optional. Associates several messages into one
-         * conversation (FR 1, §12.2.10).
-         *
-         * @public
-         * @readonly
-         */
-        readonly correlatorData?: OPTIONAL<CorrelatorData>,
-        /**
-         * @summary `callCharacteristics`.
-         * @description
-         *
-         * Optional call characteristics (§12.2.4). Unsupported
-         * values cause a negative acknowledgement.
-         *
-         * @public
-         * @readonly
-         */
-        readonly callCharacteristics?: OPTIONAL<CallCharacteristics>,
-        /**
-         * @summary `mediaCallCharacteristics`.
-         * @description
-         *
-         * Optional. Omitted media class is Message. The
-         * switching function may adjust values (FR 8).
-         *
-         * @public
-         * @readonly
-         */
-        readonly mediaCallCharacteristics?: OPTIONAL<MediaCallCharacteristics>,
-        /**
-         * @summary `subjectOfCall`.
-         * @description
-         *
-         * Optional subject or intent (§12.2.27).
-         *
-         * @public
-         * @readonly
-         */
-        readonly subjectOfCall?: OPTIONAL<SubjectOfCall>,
-        /**
-         * @summary `languagePreferences`.
-         * @description
-         *
-         * Optional preferred language(s) (§12.2.16).
-         *
-         * @public
-         * @readonly
-         */
-        readonly languagePreferences?: OPTIONAL<LanguagePreferences>,
-        /**
-         * @summary `extensions`.
-         * @description
-         *
-         * Optional `CSTACommonArguments` carrying the security
-         * and privateData parameters from the ECMA-269 service
-         * table.
-         *
-         * @public
-         * @readonly
-         */
-        readonly extensions?: OPTIONAL<CSTACommonArguments>
-    ) {}
+        callingDevice: DeviceID,
+        destinationDevices: DeviceListItems,
+        messageInfo: MessageInfo,
+        accountCode?: OPTIONAL<AccountInfo>,
+        authCode?: OPTIONAL<AuthCode>,
+        correlatorData?: OPTIONAL<CorrelatorData>,
+        callCharacteristics?: OPTIONAL<CallCharacteristics>,
+        mediaCallCharacteristics?: OPTIONAL<MediaCallCharacteristics>,
+        subjectOfCall?: OPTIONAL<SubjectOfCall>,
+        languagePreferences?: OPTIONAL<LanguagePreferences>,
+        extensions?: OPTIONAL<CSTACommonArguments>
+    ) {
+        this.callingDevice = callingDevice;
+        this.destinationDevices = destinationDevices;
+        this.messageInfo = messageInfo;
+        this.accountCode = accountCode;
+        this.authCode = authCode;
+        this.correlatorData = correlatorData;
+        this.callCharacteristics = callCharacteristics;
+        this.mediaCallCharacteristics = mediaCallCharacteristics;
+        this.subjectOfCall = subjectOfCall;
+        this.languagePreferences = languagePreferences;
+        this.extensions = extensions;
+    }
 
     /**
      * @summary Restructures an object into a SendMessageArgument

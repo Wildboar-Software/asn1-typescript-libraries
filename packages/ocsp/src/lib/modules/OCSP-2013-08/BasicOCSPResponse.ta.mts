@@ -1,16 +1,16 @@
 /* eslint-disable */
 import {
-    ASN1Element as _Element,
+    type ASN1Element as _Element,
     ASN1TagClass as _TagClass,
-    BIT_STRING,
-    OPTIONAL,
+    type BIT_STRING,
+    type OPTIONAL,
 } from "@wildboar/asn1";
 import * as $ from "@wildboar/asn1/functional";
 import {
     AlgorithmIdentifier,
     _decode_AlgorithmIdentifier,
     _encode_AlgorithmIdentifier,
-    Certificate,
+    type Certificate,
     _decode_Certificate,
     _encode_Certificate,
 } from "@wildboar/x500/AuthenticationFramework";
@@ -52,60 +52,70 @@ import {
  *
  */
 export class BasicOCSPResponse {
+    /**
+     * @summary `tbsResponseData`.
+     * @description
+     *
+     * To-be-signed response data; signature is over the DER
+     * encoding of this field
+     * ([RFC 6960 §4.2.1](https://datatracker.ietf.org/doc/html/rfc6960#section-4.2.1)).
+     *
+     * @public
+     * @readonly
+     */
+    public readonly tbsResponseData: ResponseData;
+    /**
+     * @summary `signatureAlgorithm`.
+     * @description
+     *
+     * Signature algorithm OID (and parameters) used to sign
+     * `tbsResponseData`
+     * ([RFC 6960 §4.2.1](https://datatracker.ietf.org/doc/html/rfc6960#section-4.2.1),
+     * [§4.2.2.3](https://datatracker.ietf.org/doc/html/rfc6960#section-4.2.2.3)).
+     * Clients SHALL support RSA with SHA-256; SHOULD also support
+     * RSA with SHA-1 and DSA with SHA-1 (§4.3).
+     *
+     * @public
+     * @readonly
+     */
+    public readonly signatureAlgorithm: AlgorithmIdentifier;
+    /**
+     * @summary `signature`.
+     * @description
+     *
+     * Signature computed on the hash of the DER encoding of
+     * `ResponseData`
+     * ([RFC 6960 §4.2.1](https://datatracker.ietf.org/doc/html/rfc6960#section-4.2.1)).
+     *
+     * @public
+     * @readonly
+     */
+    public readonly signature: BIT_STRING;
+    /**
+     * @summary `certs`.
+     * @description
+     *
+     * Optional certificates that help the OCSP client verify the
+     * responder's signature. If no certificates are included,
+     * then `certs` SHOULD be absent
+     * ([RFC 6960 §4.2.1](https://datatracker.ietf.org/doc/html/rfc6960#section-4.2.1)).
+     *
+     * @public
+     * @readonly
+     */
+    public readonly certs?: OPTIONAL<Certificate[]>;
+
     constructor(
-        /**
-         * @summary `tbsResponseData`.
-         * @description
-         *
-         * To-be-signed response data; signature is over the DER
-         * encoding of this field
-         * ([RFC 6960 §4.2.1](https://datatracker.ietf.org/doc/html/rfc6960#section-4.2.1)).
-         *
-         * @public
-         * @readonly
-         */
-        readonly tbsResponseData: ResponseData,
-        /**
-         * @summary `signatureAlgorithm`.
-         * @description
-         *
-         * Signature algorithm OID (and parameters) used to sign
-         * `tbsResponseData`
-         * ([RFC 6960 §4.2.1](https://datatracker.ietf.org/doc/html/rfc6960#section-4.2.1),
-         * [§4.2.2.3](https://datatracker.ietf.org/doc/html/rfc6960#section-4.2.2.3)).
-         * Clients SHALL support RSA with SHA-256; SHOULD also support
-         * RSA with SHA-1 and DSA with SHA-1 (§4.3).
-         *
-         * @public
-         * @readonly
-         */
-        readonly signatureAlgorithm: AlgorithmIdentifier,
-        /**
-         * @summary `signature`.
-         * @description
-         *
-         * Signature computed on the hash of the DER encoding of
-         * `ResponseData`
-         * ([RFC 6960 §4.2.1](https://datatracker.ietf.org/doc/html/rfc6960#section-4.2.1)).
-         *
-         * @public
-         * @readonly
-         */
-        readonly signature: BIT_STRING,
-        /**
-         * @summary `certs`.
-         * @description
-         *
-         * Optional certificates that help the OCSP client verify the
-         * responder's signature. If no certificates are included,
-         * then `certs` SHOULD be absent
-         * ([RFC 6960 §4.2.1](https://datatracker.ietf.org/doc/html/rfc6960#section-4.2.1)).
-         *
-         * @public
-         * @readonly
-         */
-        readonly certs?: OPTIONAL<Certificate[]>
-    ) {}
+        tbsResponseData: ResponseData,
+        signatureAlgorithm: AlgorithmIdentifier,
+        signature: BIT_STRING,
+        certs?: OPTIONAL<Certificate[]>
+    ) {
+        this.tbsResponseData = tbsResponseData;
+        this.signatureAlgorithm = signatureAlgorithm;
+        this.signature = signature;
+        this.certs = certs;
+    }
 
     /**
      * @summary Restructures an object into a BasicOCSPResponse

@@ -1,13 +1,13 @@
 /* eslint-disable */
 import {
     ASN1ConstructionError as _ConstructionError,
-    ASN1Element as _Element,
+    type ASN1Element as _Element,
     ASN1TagClass as _TagClass
 } from "@wildboar/asn1";
 import * as $ from "@wildboar/asn1/functional";
-import { SBIReference, _decode_SBIReference, _encode_SBIReference } from "../TS33128Payloads/SBIReference.ta.mjs";
+import { type SBIReference, _decode_SBIReference, _encode_SBIReference } from "../TS33128Payloads/SBIReference.ta.mjs";
 // export { SBIReference, _decode_SBIReference, _encode_SBIReference } from "../TS33128Payloads/SBIReference.ta.mjs";
-import { SBIValue, _decode_SBIValue, _encode_SBIValue } from "../TS33128Payloads/SBIValue.ta.mjs";
+import { type SBIValue, _decode_SBIValue, _encode_SBIValue } from "../TS33128Payloads/SBIValue.ta.mjs";
 // export { SBIValue, _decode_SBIValue, _encode_SBIValue } from "../TS33128Payloads/SBIValue.ta.mjs";
 
 

@@ -1,11 +1,11 @@
 /* eslint-disable */
 import {
     ASN1ConstructionError as _ConstructionError,
-    ASN1Element as _Element,
+    type ASN1Element as _Element,
     ASN1TagClass as _TagClass
 } from "@wildboar/asn1";
 import * as $ from "@wildboar/asn1/functional";
-import { TerminationIDList, _decode_TerminationIDList, _encode_TerminationIDList } from "../MEDIA-GATEWAY-CONTROL/TerminationIDList.ta.mjs";
+import { type TerminationIDList, _decode_TerminationIDList, _encode_TerminationIDList } from "../MEDIA-GATEWAY-CONTROL/TerminationIDList.ta.mjs";
 import { ServiceChangeParm, _decode_ServiceChangeParm, _encode_ServiceChangeParm } from "../MEDIA-GATEWAY-CONTROL/ServiceChangeParm.ta.mjs";
 
 
@@ -50,7 +50,7 @@ class ServiceChangeRequest {
      * @public
      * @readonly
      */
-    readonly terminationID: TerminationIDList;
+    public readonly terminationID: TerminationIDList;
     /**
      * @summary `serviceChangeParms`.
      * @description
@@ -60,7 +60,7 @@ class ServiceChangeRequest {
      * @public
      * @readonly
      */
-    readonly serviceChangeParms: ServiceChangeParm;
+    public readonly serviceChangeParms: ServiceChangeParm;
     /**
      * @summary Extensions that are not recognized.
      * @description
@@ -71,7 +71,7 @@ class ServiceChangeRequest {
      * @public
      * @readonly
      */
-    readonly _unrecognizedExtensionsList: _Element[];
+    public readonly _unrecognizedExtensionsList: _Element[];
 
     constructor (
         terminationID: TerminationIDList,

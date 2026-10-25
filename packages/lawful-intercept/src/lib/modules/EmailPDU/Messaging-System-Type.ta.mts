@@ -1,6 +1,6 @@
 /* eslint-disable */
 import {
-    ENUMERATED
+    type ENUMERATED
 } from "@wildboar/asn1";
 import * as $ from "@wildboar/asn1/functional";
 
@@ -67,7 +67,7 @@ type Messaging_System_Type = _enum_for_Messaging_System_Type | ENUMERATED;
  * @type {number}
  */
 export
-const Messaging_System_Type_unified_messaging: Messaging_System_Type = 1; /* LONG_NAMED_ENUMERATED_VALUE */
+const Messaging_System_Type_unified_messaging: _enum_for_Messaging_System_Type.unified_messaging = _enum_for_Messaging_System_Type.unified_messaging; /* LONG_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary unified_messaging
@@ -82,7 +82,7 @@ const Messaging_System_Type_unified_messaging: Messaging_System_Type = 1; /* LON
  * @type {number}
  */
 export
-const unified_messaging: Messaging_System_Type = Messaging_System_Type_unified_messaging; /* SHORT_NAMED_ENUMERATED_VALUE */
+const unified_messaging: _enum_for_Messaging_System_Type.unified_messaging = Messaging_System_Type_unified_messaging; /* SHORT_NAMED_ENUMERATED_VALUE */
 export const _decode_Messaging_System_Type: $.ASN1Decoder<Messaging_System_Type> = $._decodeEnumerated;
 export const _encode_Messaging_System_Type: $.ASN1Encoder<Messaging_System_Type> = $._encodeEnumerated;
 

@@ -1,22 +1,22 @@
 /* eslint-disable */
 import {
-    ASN1Element as _Element,
+    type ASN1Element as _Element,
     ASN1TagClass as _TagClass,
-    OPTIONAL,
+    type OPTIONAL,
 } from "@wildboar/asn1";
 import * as $ from "@wildboar/asn1/functional";
 import {
-    CertificateSerialNumber,
+    type CertificateSerialNumber,
     _decode_CertificateSerialNumber,
     _encode_CertificateSerialNumber,
 } from "../AuthenticationFramework/CertificateSerialNumber.ta.mjs";
 import {
-    GeneralName,
+    type GeneralName,
     _decode_GeneralName,
     _encode_GeneralName,
 } from "../CertificateExtensions/GeneralName.ta.mjs";
 import {
-    GeneralNames,
+    type GeneralNames,
     _decode_GeneralNames,
     _encode_GeneralNames,
 } from "../CertificateExtensions/GeneralNames.ta.mjs";
@@ -40,38 +40,50 @@ import {
  *
  */
 export class RoleSpecCertIdentifier {
+    /**
+     * @summary `roleName`.
+     * @public
+     * @readonly
+     */
+    public readonly roleName: GeneralName;
+    /**
+     * @summary `roleCertIssuer`.
+     * @public
+     * @readonly
+     */
+    public readonly roleCertIssuer: GeneralName;
+    /**
+     * @summary `roleCertSerialNumber`.
+     * @public
+     * @readonly
+     */
+    public readonly roleCertSerialNumber?: OPTIONAL<CertificateSerialNumber>;
+    /**
+     * @summary `roleCertLocator`.
+     * @public
+     * @readonly
+     */
+    public readonly roleCertLocator?: OPTIONAL<GeneralNames>;
+    /**
+     * @summary Extensions that are not recognized.
+     * @public
+     * @readonly
+     */
+    public readonly _unrecognizedExtensionsList: _Element[];
+
     constructor(
-        /**
-         * @summary `roleName`.
-         * @public
-         * @readonly
-         */
-        readonly roleName: GeneralName,
-        /**
-         * @summary `roleCertIssuer`.
-         * @public
-         * @readonly
-         */
-        readonly roleCertIssuer: GeneralName,
-        /**
-         * @summary `roleCertSerialNumber`.
-         * @public
-         * @readonly
-         */
-        readonly roleCertSerialNumber?: OPTIONAL<CertificateSerialNumber>,
-        /**
-         * @summary `roleCertLocator`.
-         * @public
-         * @readonly
-         */
-        readonly roleCertLocator?: OPTIONAL<GeneralNames>,
-        /**
-         * @summary Extensions that are not recognized.
-         * @public
-         * @readonly
-         */
-        readonly _unrecognizedExtensionsList: _Element[] = []
-    ) {}
+        roleName: GeneralName,
+        roleCertIssuer: GeneralName,
+        roleCertSerialNumber?: OPTIONAL<CertificateSerialNumber>,
+        roleCertLocator?: OPTIONAL<GeneralNames>,
+        _unrecognizedExtensionsList: _Element[] = []
+    ) {
+        this.roleName = roleName;
+        this.roleCertIssuer = roleCertIssuer;
+        this.roleCertSerialNumber = roleCertSerialNumber;
+        this.roleCertLocator = roleCertLocator;
+        this._unrecognizedExtensionsList = _unrecognizedExtensionsList;
+    }
 
     /**
      * @summary Restructures an object into a RoleSpecCertIdentifier

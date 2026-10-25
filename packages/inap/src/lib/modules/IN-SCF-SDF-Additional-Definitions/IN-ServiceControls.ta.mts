@@ -28,21 +28,13 @@ import { ServiceControls, _decode_ServiceControls, _encode_ServiceControls } fro
 export
 type IN_ServiceControls = ServiceControls; // DefinedType
 
-let _cached_decoder_for_IN_ServiceControls: $.ASN1Decoder<IN_ServiceControls> | null = null;
-
 /**
  * @summary Decodes an ASN.1 element into a(n) IN_ServiceControls
  * @function
  * @param el The element being decoded.
  * @returns The decoded data structure.
  */
-export
-function _decode_IN_ServiceControls (el: _Element): IN_ServiceControls {
-    if (!_cached_decoder_for_IN_ServiceControls) { _cached_decoder_for_IN_ServiceControls = _decode_ServiceControls; }
-    return _cached_decoder_for_IN_ServiceControls(el);
-}
-
-let _cached_encoder_for_IN_ServiceControls: $.ASN1Encoder<IN_ServiceControls> | null = null;
+export const _decode_IN_ServiceControls: $.ASN1Decoder<IN_ServiceControls> = _decode_ServiceControls;
 
 /**
  * @summary Encodes a(n) IN_ServiceControls into an ASN.1 Element.
@@ -51,11 +43,7 @@ let _cached_encoder_for_IN_ServiceControls: $.ASN1Encoder<IN_ServiceControls> | 
  * @param elGetter A function that can be used to get new ASN.1 elements.
  * @returns {_Element} The IN_ServiceControls, encoded as an ASN.1 Element.
  */
-export
-function _encode_IN_ServiceControls (value: IN_ServiceControls, elGetter: $.ASN1Encoder<any>): _Element {
-    if (!_cached_encoder_for_IN_ServiceControls) { _cached_encoder_for_IN_ServiceControls = _encode_ServiceControls; }
-    return _cached_encoder_for_IN_ServiceControls(value, elGetter);
-}
+export const _encode_IN_ServiceControls: $.ASN1Encoder<IN_ServiceControls> = _encode_ServiceControls;
 
 
 /* eslint-enable */

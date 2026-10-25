@@ -1,11 +1,11 @@
 /* eslint-disable */
 import {
-    OPTIONAL,
-    ASN1Element as _Element,
+    type OPTIONAL,
+    type ASN1Element as _Element,
     ASN1TagClass as _TagClass
 } from "@wildboar/asn1";
 import * as $ from "@wildboar/asn1/functional";
-import { Code, _decode_Code, _encode_Code } from "../Tariffing-Data-Types/Code.ta.mjs";
+import { type Code, _decode_Code, _encode_Code } from "../Tariffing-Data-Types/Code.ta.mjs";
 import { CriticalityType, CriticalityType_ignore /* IMPORTED_LONG_ENUMERATION_ITEM */, _decode_CriticalityType, _encode_CriticalityType, _enum_for_CriticalityType } from "../Tariffing-Data-Types/CriticalityType.ta.mjs";
 
 
@@ -95,13 +95,13 @@ class ExtensionField {
      * @static
      * @method
      */
-    public static get _default_value_for_criticality () { return CriticalityType_ignore; }        /**
+    public static get _default_value_for_criticality (): 0 { return CriticalityType_ignore; }        /**
          * @summary The enum used as the type of the component `criticality`
          * @public
          * @static
          */
 
-    public static _enum_for_criticality = _enum_for_CriticalityType;
+    public static _enum_for_criticality: typeof _enum_for_CriticalityType = _enum_for_CriticalityType;
 }
 
 /**

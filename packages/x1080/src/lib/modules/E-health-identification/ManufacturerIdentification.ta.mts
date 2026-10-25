@@ -1,8 +1,8 @@
 /* eslint-disable */
 import {
-    OPTIONAL,
-    OBJECT_IDENTIFIER,
-    ASN1Element as _Element,
+    type OPTIONAL,
+    type OBJECT_IDENTIFIER,
+    type ASN1Element as _Element,
     ASN1TagClass as _TagClass,
     ASN1Construction as _Construction,
     ASN1UniversalType as _UniversalType,
@@ -13,7 +13,7 @@ import {
 } from '@wildboar/asn1';
 import * as $ from '@wildboar/asn1/functional';
 import {
-    SchemeName,
+    type SchemeName,
     _decode_SchemeName,
     _encode_SchemeName,
 } from './SchemeName.ta.mjs';
@@ -42,51 +42,61 @@ import {
  *
  */
 export class ManufacturerIdentification {
+    /**
+     * @summary `scheme`.
+     * @description
+     *
+     * `MANUFACTURER-SCHEME.&id` of the identification scheme.
+     *
+     * @public
+     * @readonly
+     */
+    public readonly scheme: OBJECT_IDENTIFIER;
+    /**
+     * @summary `schemeName`.
+     * @description
+     *
+     * Optional `MANUFACTURER-SCHEME.&name`. ISO646String is not
+     * necessarily unique.
+     *
+     * @public
+     * @readonly
+     */
+    public readonly schemeName: OPTIONAL<SchemeName>;
+    /**
+     * @summary `manufacturerId`.
+     * @description
+     *
+     * `MANUFACTURER-SCHEME.&Manufacturer`. Typically name, HQ
+     * location, and perhaps a company number.
+     *
+     * @public
+     * @readonly
+     */
+    public readonly manufacturerId: _Element;
+    /**
+     * @summary `drugId`.
+     * @description
+     *
+     * `MANUFACTURER-SCHEME.&Drug` of that manufacturer. Spec text
+     * repeats manufacturer wording; the type is scheme-defined.
+     *
+     * @public
+     * @readonly
+     */
+    public readonly drugId: _Element;
+
     constructor(
-        /**
-         * @summary `scheme`.
-         * @description
-         *
-         * `MANUFACTURER-SCHEME.&id` of the identification scheme.
-         *
-         * @public
-         * @readonly
-         */
-        readonly scheme: OBJECT_IDENTIFIER,
-        /**
-         * @summary `schemeName`.
-         * @description
-         *
-         * Optional `MANUFACTURER-SCHEME.&name`. ISO646String is not
-         * necessarily unique.
-         *
-         * @public
-         * @readonly
-         */
-        readonly schemeName: OPTIONAL<SchemeName>,
-        /**
-         * @summary `manufacturerId`.
-         * @description
-         *
-         * `MANUFACTURER-SCHEME.&Manufacturer`. Typically name, HQ
-         * location, and perhaps a company number.
-         *
-         * @public
-         * @readonly
-         */
-        readonly manufacturerId: _Element,
-        /**
-         * @summary `drugId`.
-         * @description
-         *
-         * `MANUFACTURER-SCHEME.&Drug` of that manufacturer. Spec text
-         * repeats manufacturer wording; the type is scheme-defined.
-         *
-         * @public
-         * @readonly
-         */
-        readonly drugId: _Element
-    ) {}
+        scheme: OBJECT_IDENTIFIER,
+        schemeName: OPTIONAL<SchemeName>,
+        manufacturerId: _Element,
+        drugId: _Element
+    ) {
+        this.scheme = scheme;
+        this.schemeName = schemeName;
+        this.manufacturerId = manufacturerId;
+        this.drugId = drugId;
+    }
 
     /**
      * @summary Restructures an object into a ManufacturerIdentification

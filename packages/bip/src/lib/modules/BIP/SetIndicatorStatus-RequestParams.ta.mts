@@ -11,17 +11,17 @@ import {
 } from '@wildboar/asn1';
 import * as $ from '@wildboar/asn1/functional';
 import {
-  BioAPI_HANDLE,
+  type BioAPI_HANDLE,
   _decode_BioAPI_HANDLE,
   _encode_BioAPI_HANDLE,
 } from '../BIP/BioAPI-HANDLE.ta.mjs';
 import {
-  BioAPI_UNIT_ID,
+  type BioAPI_UNIT_ID,
   _decode_BioAPI_UNIT_ID,
   _encode_BioAPI_UNIT_ID,
 } from '../BIP/BioAPI-UNIT-ID.ta.mjs';
 import {
-  BioAPI_INDICATOR_STATUS,
+  type BioAPI_INDICATOR_STATUS,
   _enum_for_BioAPI_INDICATOR_STATUS,
   _decode_BioAPI_INDICATOR_STATUS,
   _encode_BioAPI_INDICATOR_STATUS,
@@ -59,7 +59,7 @@ export class SetIndicatorStatus_RequestParams {
    * @public
    * @readonly
    */
-  readonly originalBSPHandle: BioAPI_HANDLE;
+  public readonly originalBSPHandle: BioAPI_HANDLE;
   /**
    * @summary `unitID`.
    * @description
@@ -70,7 +70,7 @@ export class SetIndicatorStatus_RequestParams {
    * @public
    * @readonly
    */
-  readonly unitID: BioAPI_UNIT_ID;
+  public readonly unitID: BioAPI_UNIT_ID;
   /**
    * @summary `indicatorStatus`.
    * @description
@@ -81,7 +81,7 @@ export class SetIndicatorStatus_RequestParams {
    * @public
    * @readonly
    */
-  readonly indicatorStatus: BioAPI_INDICATOR_STATUS;
+  public readonly indicatorStatus: BioAPI_INDICATOR_STATUS;
 
   constructor(
     originalBSPHandle: BioAPI_HANDLE,
@@ -123,7 +123,7 @@ export class SetIndicatorStatus_RequestParams {
    * @static
    */
 
-  public static _enum_for_indicatorStatus = _enum_for_BioAPI_INDICATOR_STATUS;
+  public static _enum_for_indicatorStatus: typeof _enum_for_BioAPI_INDICATOR_STATUS = _enum_for_BioAPI_INDICATOR_STATUS;
 }
 
 

@@ -1,6 +1,6 @@
 /* eslint-disable */
 import {
-    ASN1Element as _Element,
+    type ASN1Element as _Element,
     ASN1TagClass as _TagClass,
     ASN1Construction as _Construction,
     ASN1UniversalType as _UniversalType,
@@ -71,7 +71,7 @@ export type ReachabilityChangeSyntax_newState = _enum_for_ReachabilityChangeSynt
  *
  * @enum {number}
  */
-export const ReachabilityChangeSyntax_newState = _enum_for_ReachabilityChangeSyntax_newState;
+export const ReachabilityChangeSyntax_newState: typeof _enum_for_ReachabilityChangeSyntax_newState = _enum_for_ReachabilityChangeSyntax_newState;
 
 
 /**
@@ -85,7 +85,7 @@ export const ReachabilityChangeSyntax_newState = _enum_for_ReachabilityChangeSyn
  * @constant
  * @type {number}
  */
-export const ReachabilityChangeSyntax_newState_down: ReachabilityChangeSyntax_newState =
+export const ReachabilityChangeSyntax_newState_down: 0 =
     ReachabilityChangeSyntax_newState.down; /* LONG_NAMED_ENUMERATED_VALUE */
 
 
@@ -100,7 +100,7 @@ export const ReachabilityChangeSyntax_newState_down: ReachabilityChangeSyntax_ne
  * @constant
  * @type {number}
  */
-export const down: ReachabilityChangeSyntax_newState =
+export const down: 0 =
     ReachabilityChangeSyntax_newState.down; /* SHORT_NAMED_ENUMERATED_VALUE */
 
 
@@ -115,7 +115,7 @@ export const down: ReachabilityChangeSyntax_newState =
  * @constant
  * @type {number}
  */
-export const ReachabilityChangeSyntax_newState_up: ReachabilityChangeSyntax_newState =
+export const ReachabilityChangeSyntax_newState_up: 1 =
     ReachabilityChangeSyntax_newState.up; /* LONG_NAMED_ENUMERATED_VALUE */
 
 
@@ -130,7 +130,7 @@ export const ReachabilityChangeSyntax_newState_up: ReachabilityChangeSyntax_newS
  * @constant
  * @type {number}
  */
-export const up: ReachabilityChangeSyntax_newState =
+export const up: 1 =
     ReachabilityChangeSyntax_newState.up; /* SHORT_NAMED_ENUMERATED_VALUE */
 
 
@@ -146,7 +146,18 @@ let _cached_decoder_for_ReachabilityChangeSyntax_newState: $.ASN1Decoder<Reachab
 export function _decode_ReachabilityChangeSyntax_newState(el: _Element): ReachabilityChangeSyntax_newState {
     if (!_cached_decoder_for_ReachabilityChangeSyntax_newState) {
         _cached_decoder_for_ReachabilityChangeSyntax_newState =
-            $._decodeEnumerated as $.ASN1Decoder<ReachabilityChangeSyntax_newState>;
+            function (el: _Element): ReachabilityChangeSyntax_newState {
+                const enumerated = $._decodeEnumerated(el);
+                switch (enumerated) {
+                    case ReachabilityChangeSyntax_newState.down: return ReachabilityChangeSyntax_newState.down;
+                    case ReachabilityChangeSyntax_newState.up: return ReachabilityChangeSyntax_newState.up;
+                    default:
+                        throw new _ConstructionError(
+                            'Invalid ENUMERATED value ' + enumerated + ' for ReachabilityChangeSyntax_newState.',
+                            el,
+                        );
+                }
+            };
     }
     return _cached_decoder_for_ReachabilityChangeSyntax_newState(el);
 }

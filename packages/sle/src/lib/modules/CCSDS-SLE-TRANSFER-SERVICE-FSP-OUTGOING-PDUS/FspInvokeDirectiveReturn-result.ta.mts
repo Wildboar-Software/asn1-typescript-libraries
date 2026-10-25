@@ -1,11 +1,11 @@
 /* eslint-disable */
 import {
-    NULL,
-    ASN1Element as _Element,
+    type NULL,
+    type ASN1Element as _Element,
     ASN1TagClass as _TagClass
 } from "@wildboar/asn1";
 import * as $ from "@wildboar/asn1/functional";
-import { DiagnosticFspInvokeDirective, _decode_DiagnosticFspInvokeDirective, _encode_DiagnosticFspInvokeDirective } from "../CCSDS-SLE-TRANSFER-SERVICE-FSP-STRUCTURES/DiagnosticFspInvokeDirective.ta.mjs";
+import { type DiagnosticFspInvokeDirective, _decode_DiagnosticFspInvokeDirective, _encode_DiagnosticFspInvokeDirective } from "../CCSDS-SLE-TRANSFER-SERVICE-FSP-STRUCTURES/DiagnosticFspInvokeDirective.ta.mjs";
 
 
 /**

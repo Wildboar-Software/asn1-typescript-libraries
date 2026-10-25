@@ -1,6 +1,6 @@
 /* eslint-disable */
 import {
-  NULL,
+  type NULL,
   ASN1Element as _Element,
   ASN1TagClass as _TagClass,
   ASN1Construction as _Construction,
@@ -12,7 +12,7 @@ import {
 } from '@wildboar/asn1';
 import * as $ from '@wildboar/asn1/functional';
 import {
-  Object_Availability_Attribute_actual_values,
+  type Object_Availability_Attribute_actual_values,
   _decode_Object_Availability_Attribute_actual_values,
   _encode_Object_Availability_Attribute_actual_values,
 } from '../ISO8571-FTAM/Object-Availability-Attribute-actual-values.ta.mjs';

@@ -1,7 +1,7 @@
 /* eslint-disable */
 import {
     ObjectIdentifier as _OID,
-    OBJECT_IDENTIFIER
+    type OBJECT_IDENTIFIER
 } from "@wildboar/asn1";
 import { id_icao_mrtd_security_extensions } from "../Doc-9303-Part-12-Module/id-icao-mrtd-security-extensions.va.mjs";
 // export { id_icao_mrtd_security_extensions } from "../Doc-9303-Part-12-Module/id-icao-mrtd-security-extensions.va.mjs";

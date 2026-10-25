@@ -1,6 +1,6 @@
 /* eslint-disable */
 import {
-    ASN1Element as _Element,
+    type ASN1Element as _Element,
     ASN1TagClass as _TagClass,
     ASN1Construction as _Construction,
     ASN1UniversalType as _UniversalType,
@@ -11,12 +11,12 @@ import {
 } from '@wildboar/asn1';
 import * as $ from '@wildboar/asn1/functional';
 import {
-    CMSVersion,
+    type CMSVersion,
     _decode_CMSVersion,
     _encode_CMSVersion,
 } from '../CmsTelebiometric/CMSVersion.ta.mjs';
 import {
-    RecipientInfos,
+    type RecipientInfos,
     _decode_RecipientInfos,
     _encode_RecipientInfos,
 } from '../CmsTelebiometric/RecipientInfos.ta.mjs';
@@ -56,47 +56,57 @@ import {
  *
  */
 export class EnvelopedData {
+    /**
+     * @summary `version`.
+     * @description
+     *
+     * `v2` if `unprotectedAttrs` is present, else `v0`.
+     * ITU-T Rec. X.1080.0 (2017) Cor.1 Annex B.3.1.
+     *
+     * @public
+     * @readonly
+     */
+    public readonly version: CMSVersion;
+    /**
+     * @summary `recipientInfos`.
+     * @description
+     *
+     * Exactly one recipient. For `envelopedData`, only `kari`.
+     * ITU-T Rec. X.1080.0 (2017) Cor.1 Annex B.3.1–B.3.2.
+     *
+     * @public
+     * @readonly
+     */
+    public readonly recipientInfos: RecipientInfos;
+    /**
+     * @summary `encryptedContentInfo`.
+     * @description
+     *
+     * Encrypted encapsulated content (`EncryptedContentInfo`).
+     * ITU-T Rec. X.1080.0 (2017) Cor.1 Annex B.3.1, B.3.5.
+     *
+     * @public
+     * @readonly
+     */
+    public readonly encryptedContentInfo: EncryptedContentInfo;
+    /**
+     * @summary Extensions that are not recognized.
+     * @public
+     * @readonly
+     */
+    public readonly _unrecognizedExtensionsList: _Element[];
+
     constructor(
-        /**
-         * @summary `version`.
-         * @description
-         *
-         * `v2` if `unprotectedAttrs` is present, else `v0`.
-         * ITU-T Rec. X.1080.0 (2017) Cor.1 Annex B.3.1.
-         *
-         * @public
-         * @readonly
-         */
-        readonly version: CMSVersion,
-        /**
-         * @summary `recipientInfos`.
-         * @description
-         *
-         * Exactly one recipient. For `envelopedData`, only `kari`.
-         * ITU-T Rec. X.1080.0 (2017) Cor.1 Annex B.3.1–B.3.2.
-         *
-         * @public
-         * @readonly
-         */
-        readonly recipientInfos: RecipientInfos,
-        /**
-         * @summary `encryptedContentInfo`.
-         * @description
-         *
-         * Encrypted encapsulated content (`EncryptedContentInfo`).
-         * ITU-T Rec. X.1080.0 (2017) Cor.1 Annex B.3.1, B.3.5.
-         *
-         * @public
-         * @readonly
-         */
-        readonly encryptedContentInfo: EncryptedContentInfo,
-        /**
-         * @summary Extensions that are not recognized.
-         * @public
-         * @readonly
-         */
-        readonly _unrecognizedExtensionsList: _Element[] = []
-    ) {}
+        version: CMSVersion,
+        recipientInfos: RecipientInfos,
+        encryptedContentInfo: EncryptedContentInfo,
+        _unrecognizedExtensionsList: _Element[] = []
+    ) {
+        this.version = version;
+        this.recipientInfos = recipientInfos;
+        this.encryptedContentInfo = encryptedContentInfo;
+        this._unrecognizedExtensionsList = _unrecognizedExtensionsList;
+    }
 
     /**
      * @summary Restructures an object into a EnvelopedData

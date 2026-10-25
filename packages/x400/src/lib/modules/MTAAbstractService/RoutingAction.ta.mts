@@ -1,6 +1,6 @@
 /* eslint-disable */
 import {
-    ASN1Element as _Element,
+    type ASN1Element as _Element,
     ASN1TagClass as _TagClass,
     ASN1Construction as _Construction,
     ASN1UniversalType as _UniversalType,
@@ -56,14 +56,14 @@ export type RoutingAction = _enum_for_RoutingAction;
  *
  * @enum {number}
  */
-export const RoutingAction = _enum_for_RoutingAction;
+export const RoutingAction: typeof _enum_for_RoutingAction = _enum_for_RoutingAction;
 
 /**
  * @summary RoutingAction_relayed
  * @constant
  * @type {number}
  */
-export const RoutingAction_relayed: RoutingAction =
+export const RoutingAction_relayed: _enum_for_RoutingAction.relayed =
     RoutingAction.relayed; /* LONG_NAMED_ENUMERATED_VALUE */
 
 /**
@@ -71,7 +71,7 @@ export const RoutingAction_relayed: RoutingAction =
  * @constant
  * @type {number}
  */
-export const relayed: RoutingAction =
+export const relayed: _enum_for_RoutingAction.relayed =
     RoutingAction.relayed; /* SHORT_NAMED_ENUMERATED_VALUE */
 
 /**
@@ -79,7 +79,7 @@ export const relayed: RoutingAction =
  * @constant
  * @type {number}
  */
-export const RoutingAction_rerouted: RoutingAction =
+export const RoutingAction_rerouted: _enum_for_RoutingAction.rerouted =
     RoutingAction.rerouted; /* LONG_NAMED_ENUMERATED_VALUE */
 
 /**
@@ -87,14 +87,25 @@ export const RoutingAction_rerouted: RoutingAction =
  * @constant
  * @type {number}
  */
-export const rerouted: RoutingAction =
+export const rerouted: _enum_for_RoutingAction.rerouted =
     RoutingAction.rerouted; /* SHORT_NAMED_ENUMERATED_VALUE */
 
 
-export const _decode_RoutingAction = $._decodeEnumerated;
+export function _decode_RoutingAction(el: _Element): RoutingAction {
+    const enumerated = $._decodeEnumerated(el);
+    switch (enumerated) {
+        case RoutingAction.relayed: return RoutingAction.relayed;
+        case RoutingAction.rerouted: return RoutingAction.rerouted;
+        default:
+            throw new _ConstructionError(
+                'Invalid ENUMERATED value ' + enumerated + ' for RoutingAction.',
+                el,
+            );
+    }
+}
 
 
-export const _encode_RoutingAction = $._encodeEnumerated;
+export const _encode_RoutingAction: $.ASN1Encoder<RoutingAction> = $._encodeEnumerated as $.ASN1Encoder<RoutingAction>;
 
 
 /* eslint-enable */

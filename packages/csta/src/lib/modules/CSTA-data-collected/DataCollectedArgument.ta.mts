@@ -2,13 +2,13 @@
 
 import * as $ from "@wildboar/asn1/functional";
 import {
-    OPTIONAL,
-    SEQUENCE,
-    SET,
-    ASN1Element as _Element,
+    type OPTIONAL,
+    type SEQUENCE,
+    type SET,
+    type ASN1Element as _Element,
     ASN1TagClass as _TagClass
 } from "@wildboar/asn1";
-import { DcollCrossRefID, _decode_DcollCrossRefID, _encode_DcollCrossRefID } from "../CSTA-data-collection/DcollCrossRefID.ta.mjs";
+import { type DcollCrossRefID, _decode_DcollCrossRefID, _encode_DcollCrossRefID } from "../CSTA-data-collection/DcollCrossRefID.ta.mjs";
 
 import { DigitsData, _decode_DigitsData, _encode_DigitsData } from "../CSTA-data-collected/DigitsData.ta.mjs";
 
@@ -43,10 +43,10 @@ import { CSTACommonArguments, _decode_CSTACommonArguments, _encode_CSTACommonArg
  * ```asn1
  * DataCollectedArgument ::= SEQUENCE
  * {    dcollCrossRefID            DcollCrossRefID,
- *     digitsData            [0] IMPLICIT DigitsData            OPTIONAL,
- *     telTonesData            [1] IMPLICIT TelTonesData        OPTIONAL,
- *     connectionInformation        [2] IMPLICIT ConnectionInformation    OPTIONAL,
- *     dcollCause            DcollCause                OPTIONAL,
+ *     digitsData            [0] IMPLICIT DigitsData            type OPTIONAL,
+ *     telTonesData            [1] IMPLICIT TelTonesData        type OPTIONAL,
+ *     connectionInformation        [2] IMPLICIT ConnectionInformation    type OPTIONAL,
+ *     dcollCause            DcollCause                type OPTIONAL,
  *     extensions             CSTACommonArguments             OPTIONAL }
  * ```
  * 
@@ -54,73 +54,87 @@ import { CSTACommonArguments, _decode_CSTACommonArguments, _encode_CSTACommonArg
  */
 export
 class DataCollectedArgument {
+    /**
+     * @summary `dcollCrossRefID`.
+     * @description
+     *
+     * Cross-reference identifying this data collection (ECMA-269 §25).
+     *
+     * @public
+     * @readonly
+     */
+    public readonly dcollCrossRefID: DcollCrossRefID;
+    /**
+     * @summary `digitsData`.
+     * @description
+     *
+     * DTMF/rotary digits. Required if Start used digits; absent otherwise
+     * (ECMA-269 §25.1.1.1).
+     *
+     * @public
+     * @readonly
+     */
+    public readonly digitsData?: OPTIONAL<DigitsData>;
+    /**
+     * @summary `telTonesData`.
+     * @description
+     *
+     * Telephony tone. Required if Start used telephony tones; absent
+     * otherwise (ECMA-269 §25.1.1.1).
+     *
+     * @public
+     * @readonly
+     */
+    public readonly telTonesData?: OPTIONAL<TelTonesData>;
+    /**
+     * @summary `connectionInformation`.
+     * @description
+     *
+     * Connection information; if absent, switching-function specific
+     * (ECMA-269 §25.1.1.1).
+     *
+     * @public
+     * @readonly
+     */
+    public readonly connectionInformation?: OPTIONAL<ConnectionInformation>;
+    /**
+     * @summary `dcollCause`.
+     * @description
+     *
+     * flushCharReceived, charCountReached, timeout, or sfTerminated
+     * (ECMA-269 §25.1.1.1).
+     *
+     * @public
+     * @readonly
+     */
+    public readonly dcollCause?: OPTIONAL<DcollCause>;
+    /**
+     * @summary `extensions`.
+     * @description
+     *
+     * CSTACommonArguments carrying the service-table security and
+     * privateData parameters.
+     *
+     * @public
+     * @readonly
+     */
+    public readonly extensions?: OPTIONAL<CSTACommonArguments>;
+
     constructor (
-        /**
-         * @summary `dcollCrossRefID`.
-         * @description
-         *
-         * Cross-reference identifying this data collection (ECMA-269 §25).
-         *
-         * @public
-         * @readonly
-         */
-        readonly dcollCrossRefID: DcollCrossRefID,
-        /**
-         * @summary `digitsData`.
-         * @description
-         *
-         * DTMF/rotary digits. Required if Start used digits; absent otherwise
-         * (ECMA-269 §25.1.1.1).
-         *
-         * @public
-         * @readonly
-         */
-        readonly digitsData?: OPTIONAL<DigitsData>,
-        /**
-         * @summary `telTonesData`.
-         * @description
-         *
-         * Telephony tone. Required if Start used telephony tones; absent
-         * otherwise (ECMA-269 §25.1.1.1).
-         *
-         * @public
-         * @readonly
-         */
-        readonly telTonesData?: OPTIONAL<TelTonesData>,
-        /**
-         * @summary `connectionInformation`.
-         * @description
-         *
-         * Connection information; if absent, switching-function specific
-         * (ECMA-269 §25.1.1.1).
-         *
-         * @public
-         * @readonly
-         */
-        readonly connectionInformation?: OPTIONAL<ConnectionInformation>,
-        /**
-         * @summary `dcollCause`.
-         * @description
-         *
-         * flushCharReceived, charCountReached, timeout, or sfTerminated
-         * (ECMA-269 §25.1.1.1).
-         *
-         * @public
-         * @readonly
-         */
-        readonly dcollCause?: OPTIONAL<DcollCause>,
-        /**
-         * @summary `extensions`.
-         * @description
-         *
-         * CSTACommonArguments carrying the service-table security and
-         * privateData parameters.
-         *
-         * @public
-         * @readonly
-         */
-        readonly extensions?: OPTIONAL<CSTACommonArguments>
-    ) {}
+        dcollCrossRefID: DcollCrossRefID,
+        digitsData?: OPTIONAL<DigitsData>,
+        telTonesData?: OPTIONAL<TelTonesData>,
+        connectionInformation?: OPTIONAL<ConnectionInformation>,
+        dcollCause?: OPTIONAL<DcollCause>,
+        extensions?: OPTIONAL<CSTACommonArguments>
+    ) {
+        this.dcollCrossRefID = dcollCrossRefID;
+        this.digitsData = digitsData;
+        this.telTonesData = telTonesData;
+        this.connectionInformation = connectionInformation;
+        this.dcollCause = dcollCause;
+        this.extensions = extensions;
+    }
 
     /**
      * @summary Restructures an object into a DataCollectedArgument
@@ -144,7 +158,7 @@ class DataCollectedArgument {
          * @static
          */
 
-    public static _enum_for_dcollCause = _enum_for_DcollCause;
+    public static _enum_for_dcollCause: typeof _enum_for_DcollCause = _enum_for_DcollCause;
 }
 
 /**

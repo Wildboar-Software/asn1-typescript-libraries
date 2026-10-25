@@ -2,25 +2,25 @@
 
 import * as $ from "@wildboar/asn1/functional";
 import {
-    OPTIONAL,
-    SEQUENCE,
-    SET,
-    ASN1Element as _Element,
+    type OPTIONAL,
+    type SEQUENCE,
+    type SET,
+    type ASN1Element as _Element,
     ASN1TagClass as _TagClass
 } from "@wildboar/asn1";
-import { SwitchingFunctionServicesC2, _decode_SwitchingFunctionServicesC2, _encode_SwitchingFunctionServicesC2 } from "../CSTA-application-context-information-csta3/SwitchingFunctionServicesC2.ta.mjs";
+import { type SwitchingFunctionServicesC2, _decode_SwitchingFunctionServicesC2, _encode_SwitchingFunctionServicesC2 } from "../CSTA-application-context-information-csta3/SwitchingFunctionServicesC2.ta.mjs";
 
-import { EventReportServicesC2, _decode_EventReportServicesC2, _encode_EventReportServicesC2 } from "../CSTA-application-context-information-csta3/EventReportServicesC2.ta.mjs";
+import { type EventReportServicesC2, _decode_EventReportServicesC2, _encode_EventReportServicesC2 } from "../CSTA-application-context-information-csta3/EventReportServicesC2.ta.mjs";
 
-import { ComputingFunctionServicesC2, _decode_ComputingFunctionServicesC2, _encode_ComputingFunctionServicesC2 } from "../CSTA-application-context-information-csta3/ComputingFunctionServicesC2.ta.mjs";
+import { type ComputingFunctionServicesC2, _decode_ComputingFunctionServicesC2, _encode_ComputingFunctionServicesC2 } from "../CSTA-application-context-information-csta3/ComputingFunctionServicesC2.ta.mjs";
 
-import { BidirectionalServicesC2, _decode_BidirectionalServicesC2, _encode_BidirectionalServicesC2 } from "../CSTA-application-context-information-csta3/BidirectionalServicesC2.ta.mjs";
+import { type BidirectionalServicesC2, _decode_BidirectionalServicesC2, _encode_BidirectionalServicesC2 } from "../CSTA-application-context-information-csta3/BidirectionalServicesC2.ta.mjs";
 
-import { StatusReportingServicesC2, _decode_StatusReportingServicesC2, _encode_StatusReportingServicesC2 } from "../CSTA-application-context-information-csta3/StatusReportingServicesC2.ta.mjs";
+import { type StatusReportingServicesC2, _decode_StatusReportingServicesC2, _encode_StatusReportingServicesC2 } from "../CSTA-application-context-information-csta3/StatusReportingServicesC2.ta.mjs";
 
-import { InputOutputServicesC2, _decode_InputOutputServicesC2, _encode_InputOutputServicesC2 } from "../CSTA-application-context-information-csta3/InputOutputServicesC2.ta.mjs";
+import { type InputOutputServicesC2, _decode_InputOutputServicesC2, _encode_InputOutputServicesC2 } from "../CSTA-application-context-information-csta3/InputOutputServicesC2.ta.mjs";
 
-import { VoiceUnitServicesC2, _decode_VoiceUnitServicesC2, _encode_VoiceUnitServicesC2 } from "../CSTA-application-context-information-csta3/VoiceUnitServicesC2.ta.mjs";
+import { type VoiceUnitServicesC2, _decode_VoiceUnitServicesC2, _encode_VoiceUnitServicesC2 } from "../CSTA-application-context-information-csta3/VoiceUnitServicesC2.ta.mjs";
 
 
 
@@ -51,58 +51,74 @@ import { VoiceUnitServicesC2, _decode_VoiceUnitServicesC2, _encode_VoiceUnitServ
  */
 export
 class CSTAFunctionality {
+    /**
+     * @summary `switchingFunctionServices`.
+     * @description Switching-function services this association will use.
+     * @public
+     * @readonly
+     */
+    public readonly switchingFunctionServices?: OPTIONAL<SwitchingFunctionServicesC2>;
+    /**
+     * @summary `eventReportServices`.
+     * @description Event reports this association will use.
+     * @public
+     * @readonly
+     */
+    public readonly eventReportServices?: OPTIONAL<EventReportServicesC2>;
+    /**
+     * @summary `computingFunctionServices`.
+     * @description
+     * Computing-function (routeing) services this association will use.
+     * @public
+     * @readonly
+     */
+    public readonly computingFunctionServices?: OPTIONAL<ComputingFunctionServicesC2>;
+    /**
+     * @summary `bidirectionalServices`.
+     * @description Bidirectional services (escape, system status).
+     * @public
+     * @readonly
+     */
+    public readonly bidirectionalServices?: OPTIONAL<BidirectionalServicesC2>;
+    /**
+     * @summary `statusReportingServices`.
+     * @description Status-reporting services.
+     * @public
+     * @readonly
+     */
+    public readonly statusReportingServices?: OPTIONAL<StatusReportingServicesC2>;
+    /**
+     * @summary `inputOutputServices`.
+     * @description I/O data-path services.
+     * @public
+     * @readonly
+     */
+    public readonly inputOutputServices?: OPTIONAL<InputOutputServicesC2>;
+    /**
+     * @summary `voiceUnitServices`.
+     * @description Voice-unit services.
+     * @public
+     * @readonly
+     */
+    public readonly voiceUnitServices?: OPTIONAL<VoiceUnitServicesC2>;
+
     constructor (
-        /**
-         * @summary `switchingFunctionServices`.
-         * @description Switching-function services this association will use.
-         * @public
-         * @readonly
-         */
-        readonly switchingFunctionServices?: OPTIONAL<SwitchingFunctionServicesC2>,
-        /**
-         * @summary `eventReportServices`.
-         * @description Event reports this association will use.
-         * @public
-         * @readonly
-         */
-        readonly eventReportServices?: OPTIONAL<EventReportServicesC2>,
-        /**
-         * @summary `computingFunctionServices`.
-         * @description
-         * Computing-function (routeing) services this association will use.
-         * @public
-         * @readonly
-         */
-        readonly computingFunctionServices?: OPTIONAL<ComputingFunctionServicesC2>,
-        /**
-         * @summary `bidirectionalServices`.
-         * @description Bidirectional services (escape, system status).
-         * @public
-         * @readonly
-         */
-        readonly bidirectionalServices?: OPTIONAL<BidirectionalServicesC2>,
-        /**
-         * @summary `statusReportingServices`.
-         * @description Status-reporting services.
-         * @public
-         * @readonly
-         */
-        readonly statusReportingServices?: OPTIONAL<StatusReportingServicesC2>,
-        /**
-         * @summary `inputOutputServices`.
-         * @description I/O data-path services.
-         * @public
-         * @readonly
-         */
-        readonly inputOutputServices?: OPTIONAL<InputOutputServicesC2>,
-        /**
-         * @summary `voiceUnitServices`.
-         * @description Voice-unit services.
-         * @public
-         * @readonly
-         */
-        readonly voiceUnitServices?: OPTIONAL<VoiceUnitServicesC2>
-    ) {}
+        switchingFunctionServices?: OPTIONAL<SwitchingFunctionServicesC2>,
+        eventReportServices?: OPTIONAL<EventReportServicesC2>,
+        computingFunctionServices?: OPTIONAL<ComputingFunctionServicesC2>,
+        bidirectionalServices?: OPTIONAL<BidirectionalServicesC2>,
+        statusReportingServices?: OPTIONAL<StatusReportingServicesC2>,
+        inputOutputServices?: OPTIONAL<InputOutputServicesC2>,
+        voiceUnitServices?: OPTIONAL<VoiceUnitServicesC2>
+    ) {
+        this.switchingFunctionServices = switchingFunctionServices;
+        this.eventReportServices = eventReportServices;
+        this.computingFunctionServices = computingFunctionServices;
+        this.bidirectionalServices = bidirectionalServices;
+        this.statusReportingServices = statusReportingServices;
+        this.inputOutputServices = inputOutputServices;
+        this.voiceUnitServices = voiceUnitServices;
+    }
 
     /**
      * @summary Restructures an object into a CSTAFunctionality
@@ -126,49 +142,49 @@ class CSTAFunctionality {
      * @static
      * @method
      */
-    public static get _default_value_for_switchingFunctionServices () { return new Uint8ClampedArray([]); }
+    public static get _default_value_for_switchingFunctionServices (): Uint8ClampedArray<ArrayBuffer> { return new Uint8ClampedArray([]); }
     /**
      * @summary Getter that returns the default value for `eventReportServices`.
      * @public
      * @static
      * @method
      */
-    public static get _default_value_for_eventReportServices () { return new Uint8ClampedArray([]); }
+    public static get _default_value_for_eventReportServices (): Uint8ClampedArray<ArrayBuffer> { return new Uint8ClampedArray([]); }
     /**
      * @summary Getter that returns the default value for `computingFunctionServices`.
      * @public
      * @static
      * @method
      */
-    public static get _default_value_for_computingFunctionServices () { return new Uint8ClampedArray([]); }
+    public static get _default_value_for_computingFunctionServices (): Uint8ClampedArray<ArrayBuffer> { return new Uint8ClampedArray([]); }
     /**
      * @summary Getter that returns the default value for `bidirectionalServices`.
      * @public
      * @static
      * @method
      */
-    public static get _default_value_for_bidirectionalServices () { return new Uint8ClampedArray([]); }
+    public static get _default_value_for_bidirectionalServices (): Uint8ClampedArray<ArrayBuffer> { return new Uint8ClampedArray([]); }
     /**
      * @summary Getter that returns the default value for `statusReportingServices`.
      * @public
      * @static
      * @method
      */
-    public static get _default_value_for_statusReportingServices () { return new Uint8ClampedArray([]); }
+    public static get _default_value_for_statusReportingServices (): Uint8ClampedArray<ArrayBuffer> { return new Uint8ClampedArray([]); }
     /**
      * @summary Getter that returns the default value for `inputOutputServices`.
      * @public
      * @static
      * @method
      */
-    public static get _default_value_for_inputOutputServices () { return new Uint8ClampedArray([]); }
+    public static get _default_value_for_inputOutputServices (): Uint8ClampedArray<ArrayBuffer> { return new Uint8ClampedArray([]); }
     /**
      * @summary Getter that returns the default value for `voiceUnitServices`.
      * @public
      * @static
      * @method
      */
-    public static get _default_value_for_voiceUnitServices () { return new Uint8ClampedArray([]); }
+    public static get _default_value_for_voiceUnitServices (): Uint8ClampedArray<ArrayBuffer> { return new Uint8ClampedArray([]); }
 }
 
 /**

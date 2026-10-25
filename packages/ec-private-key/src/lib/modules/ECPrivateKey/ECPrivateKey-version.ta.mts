@@ -1,7 +1,7 @@
 /* eslint-disable */
 import {
-    INTEGER,
-    ASN1Element as _Element,
+    type INTEGER,
+    type ASN1Element as _Element,
     ASN1TagClass as _TagClass,
     ASN1Construction as _Construction,
     ASN1UniversalType as _UniversalType,
@@ -46,7 +46,7 @@ type ECPrivateKey_version = INTEGER;
  * @type {number}
  */
 export
-const ECPrivateKey_version_ecPrivkeyVer1: ECPrivateKey_version = 1; /* LONG_NAMED_INTEGER_VALUE */
+const ECPrivateKey_version_ecPrivkeyVer1: 1 = 1 satisfies ECPrivateKey_version; /* LONG_NAMED_INTEGER_VALUE */
 
 
 /**
@@ -60,17 +60,17 @@ const ECPrivateKey_version_ecPrivkeyVer1: ECPrivateKey_version = 1; /* LONG_NAME
  * @type {number}
  */
 export
-const ecPrivkeyVer1: ECPrivateKey_version = ECPrivateKey_version_ecPrivkeyVer1; /* SHORT_NAMED_INTEGER_VALUE */
+const ecPrivkeyVer1: 1 = ECPrivateKey_version_ecPrivkeyVer1; /* SHORT_NAMED_INTEGER_VALUE */
 
 
 
 
-export const _decode_ECPrivateKey_version = $._decodeInteger;
+export const _decode_ECPrivateKey_version: $.ASN1Decoder<INTEGER> = $._decodeInteger;
 
 
 
 
-export const _encode_ECPrivateKey_version = $._encodeInteger;
+export const _encode_ECPrivateKey_version: $.ASN1Encoder<INTEGER> = $._encodeInteger;
 
 
 /* eslint-enable */

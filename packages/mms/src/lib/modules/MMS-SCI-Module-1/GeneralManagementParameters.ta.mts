@@ -1,7 +1,7 @@
 /* eslint-disable */
 import {
-    INTEGER,
-    ASN1Element as _Element,
+    type INTEGER,
+    type ASN1Element as _Element,
     ASN1TagClass as _TagClass,
     ASN1Construction as _Construction,
     ASN1UniversalType as _UniversalType,
@@ -11,7 +11,7 @@ import {
     ASN1ConstructionError as _ConstructionError,
 } from "@wildboar/asn1";
 import * as $ from "@wildboar/asn1/functional";
-import { MMSString, _decode_MMSString, _encode_MMSString } from "../ISO-9506-MMS-1/MMSString.ta.mjs";
+import { type MMSString, _decode_MMSString, _encode_MMSString } from "../ISO-9506-MMS-1/MMSString.ta.mjs";
 import { GeneralManagementParameters_supportForTime, _decode_GeneralManagementParameters_supportForTime, _encode_GeneralManagementParameters_supportForTime } from "../MMS-SCI-Module-1/GeneralManagementParameters-supportForTime.ta.mjs";
 
 
@@ -41,38 +41,46 @@ import { GeneralManagementParameters_supportForTime, _decode_GeneralManagementPa
  */
 export
 class GeneralManagementParameters {
+    /**
+     * @summary `localDetail`.
+     * @description
+     *
+     * Implementation-local CIS detail string. ISO 9506-2:2003 Annex B.2.
+     *
+     * @public
+     * @readonly
+     */
+    public readonly localDetail: MMSString;
+    /**
+     * @summary `supportForTime`.
+     * @description
+     *
+     * Supported time forms. ISO 9506-2:2003 Annex B.2.1.
+     *
+     * @public
+     * @readonly
+     */
+    public readonly supportForTime: GeneralManagementParameters_supportForTime;
+    /**
+     * @summary `granularityOfTime`.
+     * @description
+     *
+     * Time granularity. ISO 9506-2:2003 Annex B.2.1.
+     *
+     * @public
+     * @readonly
+     */
+    public readonly granularityOfTime: INTEGER;
+
     constructor (
-        /**
-         * @summary `localDetail`.
-         * @description
-         *
-         * Implementation-local CIS detail string. ISO 9506-2:2003 Annex B.2.
-         *
-         * @public
-         * @readonly
-         */
-        readonly localDetail: MMSString,
-        /**
-         * @summary `supportForTime`.
-         * @description
-         *
-         * Supported time forms. ISO 9506-2:2003 Annex B.2.1.
-         *
-         * @public
-         * @readonly
-         */
-        readonly supportForTime: GeneralManagementParameters_supportForTime,
-        /**
-         * @summary `granularityOfTime`.
-         * @description
-         *
-         * Time granularity. ISO 9506-2:2003 Annex B.2.1.
-         *
-         * @public
-         * @readonly
-         */
-        readonly granularityOfTime: INTEGER
-    ) {}
+        localDetail: MMSString,
+        supportForTime: GeneralManagementParameters_supportForTime,
+        granularityOfTime: INTEGER
+    ) {
+        this.localDetail = localDetail;
+        this.supportForTime = supportForTime;
+        this.granularityOfTime = granularityOfTime;
+    }
 
     /**
      * @summary Restructures an object into a GeneralManagementParameters

@@ -11,7 +11,7 @@ import {
 } from '@wildboar/asn1';
 import * as $ from '@wildboar/asn1/functional';
 import {
-  XMLStringWithNoCRLFHT,
+  type XMLStringWithNoCRLFHT,
   _decode_XMLStringWithNoCRLFHT,
   _encode_XMLStringWithNoCRLFHT,
 } from '../XSD/XMLStringWithNoCRLFHT.ta.mjs';
@@ -33,26 +33,13 @@ import {
  */
 export type AnyURI = XMLStringWithNoCRLFHT; // DefinedType
 
-
-let _cached_decoder_for_AnyURI: $.ASN1Decoder<AnyURI> | null = null;
-
-
 /**
  * @summary Decodes an ASN.1 element into a(n) AnyURI
  * @function
  * @param {_Element} el The element being decoded.
  * @returns {AnyURI} The decoded data structure.
  */
-export function _decode_AnyURI(el: _Element): AnyURI {
-  if (!_cached_decoder_for_AnyURI) {
-    _cached_decoder_for_AnyURI = _decode_XMLStringWithNoCRLFHT;
-  }
-  return _cached_decoder_for_AnyURI(el);
-}
-
-
-let _cached_encoder_for_AnyURI: $.ASN1Encoder<AnyURI> | null = null;
-
+export const _decode_AnyURI: $.ASN1Decoder<AnyURI> = _decode_XMLStringWithNoCRLFHT;
 
 /**
  * @summary Encodes a(n) AnyURI into an ASN.1 Element.
@@ -61,12 +48,7 @@ let _cached_encoder_for_AnyURI: $.ASN1Encoder<AnyURI> | null = null;
  * @param elGetter A function that can be used to get new ASN.1 elements.
  * @returns {_Element} The AnyURI, encoded as an ASN.1 Element.
  */
-export function _encode_AnyURI(value: AnyURI, elGetter: $.ASN1Encoder<AnyURI>): _Element {
-  if (!_cached_encoder_for_AnyURI) {
-    _cached_encoder_for_AnyURI = _encode_XMLStringWithNoCRLFHT;
-  }
-  return _cached_encoder_for_AnyURI(value, elGetter);
-}
+export const _encode_AnyURI: $.ASN1Encoder<AnyURI> = _encode_XMLStringWithNoCRLFHT;
 
 
 /* eslint-enable */

@@ -1,6 +1,6 @@
 /* eslint-disable */
 import {
-    ASN1Element as _Element,
+    type ASN1Element as _Element,
     ASN1TagClass as _TagClass,
     ASN1Construction as _Construction,
     ASN1UniversalType as _UniversalType,
@@ -31,22 +31,13 @@ import {
  */
 export type ProbeSubmissionIdentifier = MTSIdentifier; // DefinedType
 
-let _cached_decoder_for_ProbeSubmissionIdentifier: $.ASN1Decoder<ProbeSubmissionIdentifier> | null = null;
-
 /**
  * @summary Decodes an ASN.1 element into a(n) ProbeSubmissionIdentifier
  * @function
  * @param {_Element} el The element being decoded.
  * @returns {ProbeSubmissionIdentifier} The decoded data structure.
  */
-export function _decode_ProbeSubmissionIdentifier(el: _Element): ProbeSubmissionIdentifier {
-    if (!_cached_decoder_for_ProbeSubmissionIdentifier) {
-        _cached_decoder_for_ProbeSubmissionIdentifier = _decode_MTSIdentifier;
-    }
-    return _cached_decoder_for_ProbeSubmissionIdentifier(el);
-}
-
-let _cached_encoder_for_ProbeSubmissionIdentifier: $.ASN1Encoder<ProbeSubmissionIdentifier> | null = null;
+export const _decode_ProbeSubmissionIdentifier: $.ASN1Decoder<ProbeSubmissionIdentifier> = _decode_MTSIdentifier;
 
 /**
  * @summary Encodes a(n) ProbeSubmissionIdentifier into an ASN.1 Element.
@@ -55,15 +46,7 @@ let _cached_encoder_for_ProbeSubmissionIdentifier: $.ASN1Encoder<ProbeSubmission
  * @param elGetter A function that can be used to get new ASN.1 elements.
  * @returns {_Element} The ProbeSubmissionIdentifier, encoded as an ASN.1 Element.
  */
-export function _encode_ProbeSubmissionIdentifier(
-    value: ProbeSubmissionIdentifier,
-    elGetter: $.ASN1Encoder<ProbeSubmissionIdentifier>
-): _Element {
-    if (!_cached_encoder_for_ProbeSubmissionIdentifier) {
-        _cached_encoder_for_ProbeSubmissionIdentifier = _encode_MTSIdentifier;
-    }
-    return _cached_encoder_for_ProbeSubmissionIdentifier(value, elGetter);
-}
+export const _encode_ProbeSubmissionIdentifier: $.ASN1Encoder<ProbeSubmissionIdentifier> = _encode_MTSIdentifier;
 
 
 /* eslint-enable */

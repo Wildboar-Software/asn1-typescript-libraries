@@ -1,12 +1,12 @@
 /* eslint-disable */
 import {
     ASN1ConstructionError as _ConstructionError,
-    ASN1Element as _Element,
+    type ASN1Element as _Element,
     ASN1TagClass as _TagClass
 } from "@wildboar/asn1";
 import * as $ from "@wildboar/asn1/functional";
 import { SMS_Address, _decode_SMS_Address, _encode_SMS_Address } from "../SMRS/SMS-Address.ta.mjs";
-import { RP_MR, _decode_RP_MR, _encode_RP_MR } from "../SMRS/RP-MR.ta.mjs";
+import { type RP_MR, _decode_RP_MR, _encode_RP_MR } from "../SMRS/RP-MR.ta.mjs";
 
 
 /**
@@ -52,7 +52,7 @@ class RPAlertSC {
      * @public
      * @readonly
      */
-    readonly ms_address: SMS_Address;
+    public readonly ms_address: SMS_Address;
     /**
      * @summary `message_reference`.
      * @description
@@ -64,7 +64,7 @@ class RPAlertSC {
      * @public
      * @readonly
      */
-    readonly message_reference: RP_MR;
+    public readonly message_reference: RP_MR;
     /**
      * @summary Extensions that are not recognized.
      * @description
@@ -75,7 +75,7 @@ class RPAlertSC {
      * @public
      * @readonly
      */
-    readonly _unrecognizedExtensionsList: _Element[];
+    public readonly _unrecognizedExtensionsList: _Element[];
 
     constructor (
         ms_address: SMS_Address,

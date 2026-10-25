@@ -1,6 +1,6 @@
 /* eslint-disable */
 import {
-    ASN1Element as _Element,
+    type ASN1Element as _Element,
     ASN1TagClass as _TagClass,
     ASN1Construction as _Construction,
     ASN1UniversalType as _UniversalType,
@@ -10,8 +10,8 @@ import {
     ASN1ConstructionError as _ConstructionError,
 } from "@wildboar/asn1";
 import * as $ from "@wildboar/asn1/functional";
-import { ObjectName, _decode_ObjectName, _encode_ObjectName } from "../ISO-9506-MMS-1/ObjectName.ta.mjs";
-import { TypeSpecification, _decode_TypeSpecification, _encode_TypeSpecification } from "../ISO-9506-MMS-1/TypeSpecification.ta.mjs";
+import { type ObjectName, _decode_ObjectName, _encode_ObjectName } from "../ISO-9506-MMS-1/ObjectName.ta.mjs";
+import { type TypeSpecification, _decode_TypeSpecification, _encode_TypeSpecification } from "../ISO-9506-MMS-1/TypeSpecification.ta.mjs";
 
 
 /**
@@ -35,30 +35,36 @@ import { TypeSpecification, _decode_TypeSpecification, _encode_TypeSpecification
  */
 export
 class DefineNamedType_Request {
+    /**
+     * @summary `typeName`.
+     * @description
+     *
+     * Unique `&name` of the Named Type.
+     * ISO 9506-1:2003 §14.15.1.1.1.
+     *
+     * @public
+     * @readonly
+     */
+    public readonly typeName: ObjectName;
+    /**
+     * @summary `typeSpecification`.
+     * @description
+     *
+     * Abstract type associated with Type Name.
+     * ISO 9506-1:2003 §14.15.1.1.2, §14.2.3.
+     *
+     * @public
+     * @readonly
+     */
+    public readonly typeSpecification: TypeSpecification;
+
     constructor (
-        /**
-         * @summary `typeName`.
-         * @description
-         *
-         * Unique `&name` of the Named Type.
-         * ISO 9506-1:2003 §14.15.1.1.1.
-         *
-         * @public
-         * @readonly
-         */
-        readonly typeName: ObjectName,
-        /**
-         * @summary `typeSpecification`.
-         * @description
-         *
-         * Abstract type associated with Type Name.
-         * ISO 9506-1:2003 §14.15.1.1.2, §14.2.3.
-         *
-         * @public
-         * @readonly
-         */
-        readonly typeSpecification: TypeSpecification
-    ) {}
+        typeName: ObjectName,
+        typeSpecification: TypeSpecification
+    ) {
+        this.typeName = typeName;
+        this.typeSpecification = typeSpecification;
+    }
 
     /**
      * @summary Restructures an object into a DefineNamedType_Request

@@ -1,13 +1,13 @@
 /* eslint-disable */
 import {
-    OCTET_STRING,
-    OPTIONAL,
-    ASN1Element as _Element,
+    type OCTET_STRING,
+    type OPTIONAL,
+    type ASN1Element as _Element,
     ASN1TagClass as _TagClass
 } from "@wildboar/asn1";
 import * as $ from "@wildboar/asn1/functional";
-import { StateAction, _decode_StateAction, _encode_StateAction } from "../GDT/StateAction.ta.mjs";
-import { Parameters, _decode_Parameters, _encode_Parameters } from "../GDT/Parameters.ta.mjs";
+import { type StateAction, _decode_StateAction, _encode_StateAction } from "../GDT/StateAction.ta.mjs";
+import { type Parameters, _decode_Parameters, _encode_Parameters } from "../GDT/Parameters.ta.mjs";
 
 
 /**
@@ -34,25 +34,25 @@ class StateMessage {
      * @public
      * @readonly
      */
-    readonly stmch_id: OCTET_STRING;
+    public readonly stmch_id: OCTET_STRING;
     /**
      * @summary `state_action`.
      * @public
      * @readonly
      */
-    readonly state_action: StateAction;
+    public readonly state_action: StateAction;
     /**
      * @summary `params`.
      * @public
      * @readonly
      */
-    readonly params?: OPTIONAL<Parameters>;
+    public readonly params?: OPTIONAL<Parameters>;
     /**
      * @summary Extensions that are not recognized.
      * @public
      * @readonly
      */
-    readonly _unrecognizedExtensionsList: _Element[];
+    public readonly _unrecognizedExtensionsList: _Element[];
 
     constructor (
         stmch_id: OCTET_STRING,

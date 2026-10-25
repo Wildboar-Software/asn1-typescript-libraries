@@ -1,12 +1,12 @@
 /* eslint-disable */
 import {
-    OCTET_STRING,
+    type OCTET_STRING,
     ASN1ConstructionError as _ConstructionError,
-    ASN1Element as _Element,
+    type ASN1Element as _Element,
     ASN1TagClass as _TagClass
 } from "@wildboar/asn1";
 import * as $ from "@wildboar/asn1/functional";
-import { NonStandardIdentifier, _decode_NonStandardIdentifier, _encode_NonStandardIdentifier } from "../MEDIA-GATEWAY-CONTROL/NonStandardIdentifier.ta.mjs";
+import { type NonStandardIdentifier, _decode_NonStandardIdentifier, _encode_NonStandardIdentifier } from "../MEDIA-GATEWAY-CONTROL/NonStandardIdentifier.ta.mjs";
 
 
 /**
@@ -41,7 +41,7 @@ class NonStandardData {
      * @public
      * @readonly
      */
-    readonly nonStandardIdentifier: NonStandardIdentifier;
+    public readonly nonStandardIdentifier: NonStandardIdentifier;
     /**
      * @summary `data`.
      * @description
@@ -51,7 +51,7 @@ class NonStandardData {
      * @public
      * @readonly
      */
-    readonly data: OCTET_STRING;
+    public readonly data: OCTET_STRING;
 
     constructor (
         nonStandardIdentifier: NonStandardIdentifier,

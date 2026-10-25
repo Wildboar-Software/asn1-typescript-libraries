@@ -2,13 +2,13 @@
 
 import * as $ from "@wildboar/asn1/functional";
 import {
-    OPTIONAL,
-    SEQUENCE,
-    SET,
-    ASN1Element as _Element,
+    type OPTIONAL,
+    type SEQUENCE,
+    type SET,
+    type ASN1Element as _Element,
     ASN1TagClass as _TagClass
 } from "@wildboar/asn1";
-import { ConnectionID, _decode_ConnectionID, _encode_ConnectionID } from "../CSTA-call-connection-identifiers/ConnectionID.ta.mjs";
+import { type ConnectionID, _decode_ConnectionID, _encode_ConnectionID } from "../CSTA-call-connection-identifiers/ConnectionID.ta.mjs";
 
 import { DeviceID, _decode_DeviceID, _encode_DeviceID } from "../CSTA-device-identifiers/DeviceID.ta.mjs";
 
@@ -43,7 +43,7 @@ import { CSTACommonArguments, _decode_CSTACommonArguments, _encode_CSTACommonArg
  * {    connection            ConnectionID,
  *     chargedDevice            DeviceID,
  *     chargingInfo            ChargingInfo,
- *     cause                EventCause                OPTIONAL,
+ *     cause                EventCause                type OPTIONAL,
  *     extensions             CSTACommonArguments             OPTIONAL }
  * ```
  * 
@@ -51,54 +51,66 @@ import { CSTACommonArguments, _decode_CSTACommonArguments, _encode_CSTACommonArg
  */
 export
 class ChargingEvent {
+    /**
+     * @summary `connection`.
+     * @description
+     *
+     * Connection for which charging information was detected.
+     * @public
+     * @readonly
+     */
+    public readonly connection: ConnectionID;
+    /**
+     * @summary `chargedDevice`.
+     * @description
+     *
+     * Device being charged.
+     * @public
+     * @readonly
+     */
+    public readonly chargedDevice: DeviceID;
+    /**
+     * @summary `chargingInfo`.
+     * @description
+     *
+     * New charging information (e.g. PPM).
+     * @public
+     * @readonly
+     */
+    public readonly chargingInfo: ChargingInfo;
+    /**
+     * @summary `cause`.
+     * @description
+     *
+     * Event cause, if provided.
+     * @public
+     * @readonly
+     */
+    public readonly cause?: OPTIONAL<EventCause>;
+    /**
+     * @summary `extensions`.
+     * @description
+     *
+     * Optional security (timestamp, sequence, securityInfo) and
+     * privateData.
+     * @public
+     * @readonly
+     */
+    public readonly extensions?: OPTIONAL<CSTACommonArguments>;
+
     constructor (
-        /**
-         * @summary `connection`.
-         * @description
-         *
-         * Connection for which charging information was detected.
-         * @public
-         * @readonly
-         */
-        readonly connection: ConnectionID,
-        /**
-         * @summary `chargedDevice`.
-         * @description
-         *
-         * Device being charged.
-         * @public
-         * @readonly
-         */
-        readonly chargedDevice: DeviceID,
-        /**
-         * @summary `chargingInfo`.
-         * @description
-         *
-         * New charging information (e.g. PPM).
-         * @public
-         * @readonly
-         */
-        readonly chargingInfo: ChargingInfo,
-        /**
-         * @summary `cause`.
-         * @description
-         *
-         * Event cause, if provided.
-         * @public
-         * @readonly
-         */
-        readonly cause?: OPTIONAL<EventCause>,
-        /**
-         * @summary `extensions`.
-         * @description
-         *
-         * Optional security (timestamp, sequence, securityInfo) and
-         * privateData.
-         * @public
-         * @readonly
-         */
-        readonly extensions?: OPTIONAL<CSTACommonArguments>
-    ) {}
+        connection: ConnectionID,
+        chargedDevice: DeviceID,
+        chargingInfo: ChargingInfo,
+        cause?: OPTIONAL<EventCause>,
+        extensions?: OPTIONAL<CSTACommonArguments>
+    ) {
+        this.connection = connection;
+        this.chargedDevice = chargedDevice;
+        this.chargingInfo = chargingInfo;
+        this.cause = cause;
+        this.extensions = extensions;
+    }
 
     /**
      * @summary Restructures an object into a ChargingEvent
@@ -122,7 +134,7 @@ class ChargingEvent {
          * @static
          */
 
-    public static _enum_for_cause = _enum_for_EventCause;
+    public static _enum_for_cause: typeof _enum_for_EventCause = _enum_for_EventCause;
 }
 
 /**

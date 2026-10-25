@@ -1,7 +1,7 @@
 /* eslint-disable */
 import {
-    INTEGER,
-    ASN1Element as _Element,
+    type INTEGER,
+    type ASN1Element as _Element,
     ASN1TagClass as _TagClass,
     ASN1Construction as _Construction,
     ASN1UniversalType as _UniversalType,
@@ -33,34 +33,34 @@ export type FNPDAUBasicCodeField = INTEGER;
  * @constant
  * @type {number}
  */
-export const FNPDAUBasicCodeField_unspecified: FNPDAUBasicCodeField = 0; /* LONG_NAMED_INTEGER_VALUE */
+export const FNPDAUBasicCodeField_unspecified: 0 = 0 satisfies FNPDAUBasicCodeField; /* LONG_NAMED_INTEGER_VALUE */
 
 /**
  * @summary FNPDAUBasicCodeField_unspecified
  * @constant
  * @type {number}
  */
-export const unspecified: FNPDAUBasicCodeField = FNPDAUBasicCodeField_unspecified; /* SHORT_NAMED_INTEGER_VALUE */
+export const unspecified: 0 = FNPDAUBasicCodeField_unspecified; /* SHORT_NAMED_INTEGER_VALUE */
 
 /**
  * @summary FNPDAUBasicCodeField_forwarded_for_physical_rendition_and_delivery
  * @constant
  * @type {number}
  */
-export const FNPDAUBasicCodeField_forwarded_for_physical_rendition_and_delivery: FNPDAUBasicCodeField = 1; /* LONG_NAMED_INTEGER_VALUE */
+export const FNPDAUBasicCodeField_forwarded_for_physical_rendition_and_delivery: 1 = 1 satisfies FNPDAUBasicCodeField; /* LONG_NAMED_INTEGER_VALUE */
 
 /**
  * @summary FNPDAUBasicCodeField_forwarded_for_physical_rendition_and_delivery
  * @constant
  * @type {number}
  */
-export const forwarded_for_physical_rendition_and_delivery: FNPDAUBasicCodeField = FNPDAUBasicCodeField_forwarded_for_physical_rendition_and_delivery; /* SHORT_NAMED_INTEGER_VALUE */
+export const forwarded_for_physical_rendition_and_delivery: 1 = FNPDAUBasicCodeField_forwarded_for_physical_rendition_and_delivery; /* SHORT_NAMED_INTEGER_VALUE */
 
 
-export const _decode_FNPDAUBasicCodeField = $._decodeInteger;
+export const _decode_FNPDAUBasicCodeField: $.ASN1Decoder<INTEGER> = $._decodeInteger;
 
 
-export const _encode_FNPDAUBasicCodeField = $._encodeInteger;
+export const _encode_FNPDAUBasicCodeField: $.ASN1Encoder<INTEGER> = $._encodeInteger;
 
 
 /* eslint-enable */

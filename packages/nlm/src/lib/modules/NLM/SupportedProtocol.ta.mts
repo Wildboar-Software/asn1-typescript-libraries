@@ -1,8 +1,8 @@
 /* eslint-disable */
 import {
-    OPTIONAL,
-    OBJECT_IDENTIFIER,
-    ASN1Element as _Element,
+    type OPTIONAL,
+    type OBJECT_IDENTIFIER,
+    type ASN1Element as _Element,
     ASN1TagClass as _TagClass,
     ASN1Construction as _Construction,
     ASN1UniversalType as _UniversalType,
@@ -53,7 +53,7 @@ export class SupportedProtocol {
      * @public
      * @readonly
      */
-    readonly protocol: OBJECT_IDENTIFIER;
+    public readonly protocol: OBJECT_IDENTIFIER;
     /**
      * @summary `versions`.
      * @description
@@ -65,7 +65,7 @@ export class SupportedProtocol {
      * @public
      * @readonly
      */
-    readonly versions: ProtocolVersion[];
+    public readonly versions: ProtocolVersion[];
     /**
      * @summary `defectsRepaired`.
      * @description
@@ -77,7 +77,7 @@ export class SupportedProtocol {
      * @public
      * @readonly
      */
-    readonly defectsRepaired?: OPTIONAL<OBJECT_IDENTIFIER[]>;
+    public readonly defectsRepaired?: OPTIONAL<OBJECT_IDENTIFIER[]>;
 
     constructor(
         protocol: OBJECT_IDENTIFIER,

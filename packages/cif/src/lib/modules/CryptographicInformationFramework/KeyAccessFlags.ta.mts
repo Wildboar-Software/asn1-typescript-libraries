@@ -1,7 +1,7 @@
 /* eslint-disable */
 import {
-    BIT_STRING,
-    ASN1Element as _Element,
+    type BIT_STRING,
+    type ASN1Element as _Element,
     ASN1TagClass as _TagClass,
     ASN1Construction as _Construction,
     ASN1UniversalType as _UniversalType,
@@ -116,8 +116,8 @@ const KeyAccessFlags_cardGenerated: number = 4; /* LONG_NAMED_BIT */
  */
 export
 const cardGenerated: number = KeyAccessFlags_cardGenerated; /* SHORT_NAMED_BIT */
-export const _decode_KeyAccessFlags = $._decodeBitString;
-export const _encode_KeyAccessFlags = $._encodeBitString;
+export const _decode_KeyAccessFlags: $.ASN1Decoder<BIT_STRING> = $._decodeBitString;
+export const _encode_KeyAccessFlags: $.ASN1Encoder<BIT_STRING> = $._encodeBitString;
 
 
 /* eslint-enable */

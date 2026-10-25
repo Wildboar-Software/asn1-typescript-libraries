@@ -1,7 +1,7 @@
 /* eslint-disable */
 import {
-    BOOLEAN,
-    ASN1Element as _Element,
+    type BOOLEAN,
+    type ASN1Element as _Element,
     ASN1TagClass as _TagClass,
     ASN1Construction as _Construction,
     ASN1UniversalType as _UniversalType,
@@ -26,20 +26,26 @@ import * as $ from '@wildboar/asn1/functional';
  *
  */
 export class change_auto_discard_ArgumentType {
+    /**
+     * @summary `auto_discard_expired_IPMs`.
+     * @public
+     * @readonly
+     */
+    public readonly auto_discard_expired_IPMs: BOOLEAN;
+    /**
+     * @summary `auto_discard_obsolete_IPMs`.
+     * @public
+     * @readonly
+     */
+    public readonly auto_discard_obsolete_IPMs: BOOLEAN;
+
     constructor(
-        /**
-         * @summary `auto_discard_expired_IPMs`.
-         * @public
-         * @readonly
-         */
-        readonly auto_discard_expired_IPMs: BOOLEAN,
-        /**
-         * @summary `auto_discard_obsolete_IPMs`.
-         * @public
-         * @readonly
-         */
-        readonly auto_discard_obsolete_IPMs: BOOLEAN
-    ) {}
+        auto_discard_expired_IPMs: BOOLEAN,
+        auto_discard_obsolete_IPMs: BOOLEAN
+    ) {
+        this.auto_discard_expired_IPMs = auto_discard_expired_IPMs;
+        this.auto_discard_obsolete_IPMs = auto_discard_obsolete_IPMs;
+    }
 
     /**
      * @summary Restructures an object into a change_auto_discard_ArgumentType

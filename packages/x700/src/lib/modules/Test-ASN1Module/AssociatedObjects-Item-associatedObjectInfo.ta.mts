@@ -1,8 +1,8 @@
 /* eslint-disable */
 import {
-    OPTIONAL,
-    OBJECT_IDENTIFIER,
-    ASN1Element as _Element,
+    type OPTIONAL,
+    type OBJECT_IDENTIFIER,
+    type ASN1Element as _Element,
     ASN1TagClass as _TagClass,
     ASN1Construction as _Construction,
     ASN1UniversalType as _UniversalType,
@@ -29,33 +29,39 @@ import * as $ from '@wildboar/asn1/functional';
  *
  */
 export class AssociatedObjects_Item_associatedObjectInfo {
+    /**
+     * @summary `associatedObjectInfoId`.
+     * @description
+     *
+     * TMF-OBJECT.&id drawn from AssociatedObjectSet.
+     * X.745 Cor.3 (02/00) A.7.1.
+     * https://www.itu.int/rec/T-REC-X.745-200002-I_Cor3
+     *
+     * @public
+     * @readonly
+     */
+    public readonly associatedObjectInfoId: OBJECT_IDENTIFIER;
+    /**
+     * @summary `associatedObjectInform`.
+     * @description
+     *
+     * TMF-OBJECT.&Value matching associatedObjectInfoId, if any extra
+     * information is supplied.
+     * X.745 Cor.3 (02/00) A.7.1.
+     * https://www.itu.int/rec/T-REC-X.745-200002-I_Cor3
+     *
+     * @public
+     * @readonly
+     */
+    public readonly associatedObjectInform?: OPTIONAL<_Element>;
+
     constructor(
-        /**
-         * @summary `associatedObjectInfoId`.
-         * @description
-         *
-         * TMF-OBJECT.&id drawn from AssociatedObjectSet.
-         * X.745 Cor.3 (02/00) A.7.1.
-         * https://www.itu.int/rec/T-REC-X.745-200002-I_Cor3
-         *
-         * @public
-         * @readonly
-         */
-        readonly associatedObjectInfoId: OBJECT_IDENTIFIER,
-        /**
-         * @summary `associatedObjectInform`.
-         * @description
-         *
-         * TMF-OBJECT.&Value matching associatedObjectInfoId, if any extra
-         * information is supplied.
-         * X.745 Cor.3 (02/00) A.7.1.
-         * https://www.itu.int/rec/T-REC-X.745-200002-I_Cor3
-         *
-         * @public
-         * @readonly
-         */
-        readonly associatedObjectInform?: OPTIONAL<_Element>
-    ) {}
+        associatedObjectInfoId: OBJECT_IDENTIFIER,
+        associatedObjectInform?: OPTIONAL<_Element>
+    ) {
+        this.associatedObjectInfoId = associatedObjectInfoId;
+        this.associatedObjectInform = associatedObjectInform;
+    }
 
     /**
      * @summary Restructures an object into a AssociatedObjects_Item_associatedObjectInfo

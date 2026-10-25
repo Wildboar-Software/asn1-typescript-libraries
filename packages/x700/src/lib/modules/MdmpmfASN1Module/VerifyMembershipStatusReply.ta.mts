@@ -1,6 +1,6 @@
 /* eslint-disable */
 import {
-    ASN1Element as _Element,
+    type ASN1Element as _Element,
     ASN1TagClass as _TagClass,
     ASN1Construction as _Construction,
     ASN1UniversalType as _UniversalType,
@@ -11,7 +11,7 @@ import {
 } from '@wildboar/asn1';
 import * as $ from '@wildboar/asn1/functional';
 import {
-    ObjectInstance,
+    type ObjectInstance,
     _decode_ObjectInstance,
     _encode_ObjectInstance,
 } from '@wildboar/cmip';
@@ -42,29 +42,35 @@ import {
  *
  */
 export class VerifyMembershipStatusReply {
+    /**
+     * @summary `objectName`.
+     * @description
+     *
+     * Object whose membership was tested. ITU-T Rec. X.749
+     * (08/97)
+     * [§8.4.3](https://www.itu.int/rec/T-REC-X.749-199708-I).
+     * @public
+     * @readonly
+     */
+    public readonly objectName: ObjectInstance;
+    /**
+     * @summary `membershipStatus`.
+     * @description
+     *
+     * Result of the membership test. ITU-T Rec. X.749 (08/97)
+     * [§8.4.3](https://www.itu.int/rec/T-REC-X.749-199708-I).
+     * @public
+     * @readonly
+     */
+    public readonly membershipStatus: MembershipStatus;
+
     constructor(
-        /**
-         * @summary `objectName`.
-         * @description
-         *
-         * Object whose membership was tested. ITU-T Rec. X.749
-         * (08/97)
-         * [§8.4.3](https://www.itu.int/rec/T-REC-X.749-199708-I).
-         * @public
-         * @readonly
-         */
-        readonly objectName: ObjectInstance,
-        /**
-         * @summary `membershipStatus`.
-         * @description
-         *
-         * Result of the membership test. ITU-T Rec. X.749 (08/97)
-         * [§8.4.3](https://www.itu.int/rec/T-REC-X.749-199708-I).
-         * @public
-         * @readonly
-         */
-        readonly membershipStatus: MembershipStatus
-    ) {}
+        objectName: ObjectInstance,
+        membershipStatus: MembershipStatus
+    ) {
+        this.objectName = objectName;
+        this.membershipStatus = membershipStatus;
+    }
 
     /**
      * @summary Restructures an object into a VerifyMembershipStatusReply
@@ -95,7 +101,7 @@ export class VerifyMembershipStatusReply {
      * @static
      */
 
-    public static _enum_for_membershipStatus = _enum_for_MembershipStatus;
+    public static _enum_for_membershipStatus: typeof _enum_for_MembershipStatus = _enum_for_MembershipStatus;
 }
 
 /**

@@ -1,17 +1,17 @@
 /* eslint-disable */
 import {
     ASN1ConstructionError as _ConstructionError,
-    ASN1Element as _Element,
+    type ASN1Element as _Element,
     ASN1TagClass as _TagClass,
 } from "@wildboar/asn1";
 import * as $ from "@wildboar/asn1/functional";
 import {
-    Content,
+    type Content,
     _decode_Content,
     _encode_Content,
 } from "../CMSSigncryption/Content.ta.mjs";
 import {
-    SigncryptedAttributes,
+    type SigncryptedAttributes,
     _decode_SigncryptedAttributes,
     _encode_SigncryptedAttributes,
 } from "../CMSSigncryption/SigncryptedAttributes.ta.mjs";
@@ -34,20 +34,26 @@ import {
  *
  */
 export class ToBeSigncrypted {
+    /**
+     * @summary `content`.
+     * @public
+     * @readonly
+     */
+    public readonly content: Content;
+    /**
+     * @summary `attributes`.
+     * @public
+     * @readonly
+     */
+    public readonly attributes: SigncryptedAttributes;
+
     constructor(
-        /**
-         * @summary `content`.
-         * @public
-         * @readonly
-         */
-        readonly content: Content,
-        /**
-         * @summary `attributes`.
-         * @public
-         * @readonly
-         */
-        readonly attributes: SigncryptedAttributes
-    ) {}
+        content: Content,
+        attributes: SigncryptedAttributes
+    ) {
+        this.content = content;
+        this.attributes = attributes;
+    }
 
     /**
      * @summary Restructures an object into a ToBeSigncrypted

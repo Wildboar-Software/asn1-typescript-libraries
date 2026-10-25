@@ -1,14 +1,14 @@
 /* eslint-disable */
 import {
-    OPTIONAL,
-    UTF8String,
-    ASN1Element as _Element,
+    type OPTIONAL,
+    type UTF8String,
+    type ASN1Element as _Element,
     ASN1TagClass as _TagClass
 } from "@wildboar/asn1";
 import * as $ from "@wildboar/asn1/functional";
-import { GPSI, _decode_GPSI, _encode_GPSI } from "../TS33128Payloads/GPSI.ta.mjs";
+import { type GPSI, _decode_GPSI, _encode_GPSI } from "../TS33128Payloads/GPSI.ta.mjs";
 // export { GPSI, _decode_GPSI, _encode_GPSI } from "../TS33128Payloads/GPSI.ta.mjs";
-import { EESACRDetOrInit, _decode_EESACRDetOrInit, _encode_EESACRDetOrInit } from "../TS33128Payloads/EESACRDetOrInit.ta.mjs";
+import { type EESACRDetOrInit, _decode_EESACRDetOrInit, _encode_EESACRDetOrInit } from "../TS33128Payloads/EESACRDetOrInit.ta.mjs";
 // export { EESACRDetOrInit, _decode_EESACRDetOrInit, _encode_EESACRDetOrInit } from "../TS33128Payloads/EESACRDetOrInit.ta.mjs";
 
 

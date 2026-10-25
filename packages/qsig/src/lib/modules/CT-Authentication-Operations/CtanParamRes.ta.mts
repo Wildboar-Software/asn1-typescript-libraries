@@ -1,13 +1,13 @@
 /* eslint-disable */
 import {
-    OPTIONAL,
-    ASN1Element as _Element,
+    type OPTIONAL,
+    type ASN1Element as _Element,
     ASN1TagClass as _TagClass
 } from "@wildboar/asn1";
 import * as $ from "@wildboar/asn1/functional";
-import { CtanParamInfo, _decode_CtanParamInfo, _encode_CtanParamInfo } from "../CT-Authentication-Operations/CtanParamInfo.ta.mjs";
+import { type CtanParamInfo, _decode_CtanParamInfo, _encode_CtanParamInfo } from "../CT-Authentication-Operations/CtanParamInfo.ta.mjs";
 // export { CtanParamInfo, _decode_CtanParamInfo, _encode_CtanParamInfo } from "../CT-Authentication-Operations/CtanParamInfo.ta.mjs";
-import { DummyExtension, _decode_DummyExtension, _encode_DummyExtension } from "../CT-Authentication-Operations/DummyExtension.ta.mjs";
+import { type DummyExtension, _decode_DummyExtension, _encode_DummyExtension } from "../CT-Authentication-Operations/DummyExtension.ta.mjs";
 // export { DummyExtension, _decode_DummyExtension, _encode_DummyExtension } from "../CT-Authentication-Operations/DummyExtension.ta.mjs";
 
 
@@ -162,7 +162,7 @@ let _cached_encoder_for_CtanParamRes: $.ASN1Encoder<CtanParamRes> | null = null;
  */
 export
 function _encode_CtanParamRes (value: CtanParamRes, elGetter: $.ASN1Encoder<any>): _Element {
-    if (!_cached_encoder_for_CtanParamRes) { _cached_encoder_for_CtanParamRes = function (value: CtanParamRes, elGetter: $.ASN1Encoder<CtanParamRes>): _Element {
+    if (!_cached_encoder_for_CtanParamRes) { _cached_encoder_for_CtanParamRes = function (value: CtanParamRes): _Element {
     const _components: _Element[] = [];
     _components.push(/* REQUIRED   */ _encode_CtanParamInfo(value.ctanParamInfo, $.BER));
     if (value.dummyExtension !== undefined) {

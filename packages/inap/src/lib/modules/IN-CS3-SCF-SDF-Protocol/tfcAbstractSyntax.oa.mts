@@ -1,8 +1,8 @@
 /* eslint-disable */
 import {
-    ABSTRACT_SYNTAX
+    type ABSTRACT_SYNTAX
 } from "@wildboar/asn1";
-import { BasicTFC_PDUs, _decode_BasicTFC_PDUs, _encode_BasicTFC_PDUs } from "../IN-CS3-SCF-SDF-Protocol/BasicTFC-PDUs.ta.mjs";
+import { type BasicTFC_PDUs, _decode_BasicTFC_PDUs, _encode_BasicTFC_PDUs } from "../IN-CS3-SCF-SDF-Protocol/BasicTFC-PDUs.ta.mjs";
 // export { BasicTFC_PDUs, _decode_BasicTFC_PDUs, _encode_BasicTFC_PDUs } from "../IN-CS3-SCF-SDF-Protocol/BasicTFC-PDUs.ta.mjs";
 import { id_as_tfcOperationsAS } from "../IN-CS3-object-identifiers/id-as-tfcOperationsAS.va.mjs";
 // export { id_as_tfcOperationsAS } from "../IN-CS3-object-identifiers/id-as-tfcOperationsAS.va.mjs";

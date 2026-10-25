@@ -1,7 +1,7 @@
 /* eslint-disable */
 import { type ATTRIBUTE } from "../InformationFramework/ATTRIBUTE.oca.mjs";
 import { userApplications /* IMPORTED_SHORT_ENUMERATION_ITEM */ } from "../InformationFramework/AttributeUsage.ta.mjs";
-import { CryptographicAnchors, _decode_CryptographicAnchors, _encode_CryptographicAnchors } from "../PlatformCertificateProfileV2/CryptographicAnchors.ta.mjs";
+import { type CryptographicAnchors, _decode_CryptographicAnchors, _encode_CryptographicAnchors } from "../PlatformCertificateProfileV2/CryptographicAnchors.ta.mjs";
 import { tcg_at_cryptographicAnchors } from "../PlatformCertificateProfileV2/tcg-at-cryptographicAnchors.va.mjs";
 
 

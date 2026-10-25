@@ -1,6 +1,6 @@
 /* eslint-disable */
 import { ObjectIdentifier as _OID } from "@wildboar/asn1";
-import { ID } from "../AlgorithmObjectIdentifiers/ID.ta.mjs";
+import { type ID } from "../AlgorithmObjectIdentifiers/ID.ta.mjs";
 import { pkcs_1 } from "../AlgorithmObjectIdentifiers/pkcs-1.va.mjs";
 /**
  * @summary rsaEncryption

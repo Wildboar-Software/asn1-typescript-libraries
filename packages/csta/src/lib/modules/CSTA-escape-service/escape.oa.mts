@@ -8,7 +8,7 @@ import { type OPERATION } from "../Remote-Operations-Information-Objects/OPERATI
 
 import { EscapeArgument, _decode_EscapeArgument, _encode_EscapeArgument } from "../CSTA-escape-service/EscapeArgument.ta.mjs";
 
-import { EscapeResult, _decode_EscapeResult, _encode_EscapeResult } from "../CSTA-escape-service/EscapeResult.ta.mjs";
+import { type EscapeResult, _decode_EscapeResult, _encode_EscapeResult } from "../CSTA-escape-service/EscapeResult.ta.mjs";
 
 import { universalFailure } from "../CSTA-error-definition/universalFailure.oa.mjs";
 

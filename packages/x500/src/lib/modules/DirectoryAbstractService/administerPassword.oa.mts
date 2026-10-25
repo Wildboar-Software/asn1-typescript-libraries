@@ -2,12 +2,12 @@
 import { id_opcode_administerPassword } from "../CommonProtocolSpecification/id-opcode-administerPassword.va.mjs";
 import { type OPERATION } from "../CommonProtocolSpecification/OPERATION.oca.mjs";
 import {
-    AdministerPasswordArgument,
+    type AdministerPasswordArgument,
     _decode_AdministerPasswordArgument,
     _encode_AdministerPasswordArgument,
 } from "../DirectoryAbstractService/AdministerPasswordArgument.ta.mjs";
 import {
-    AdministerPasswordResult,
+    type AdministerPasswordResult,
     _decode_AdministerPasswordResult,
     _encode_AdministerPasswordResult,
 } from "../DirectoryAbstractService/AdministerPasswordResult.ta.mjs";

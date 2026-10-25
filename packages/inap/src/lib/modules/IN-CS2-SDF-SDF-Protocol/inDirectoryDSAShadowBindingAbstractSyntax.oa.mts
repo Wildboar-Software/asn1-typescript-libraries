@@ -1,8 +1,8 @@
 /* eslint-disable */
 import {
-    ABSTRACT_SYNTAX
+    type ABSTRACT_SYNTAX
 } from "@wildboar/asn1";
-import { DISPBinding_PDUs, _decode_DISPBinding_PDUs, _encode_DISPBinding_PDUs } from "../IN-CS2-SDF-SDF-Protocol/DISPBinding-PDUs.ta.mjs";
+import { type DISPBinding_PDUs, _decode_DISPBinding_PDUs, _encode_DISPBinding_PDUs } from "../IN-CS2-SDF-SDF-Protocol/DISPBinding-PDUs.ta.mjs";
 // export { DISPBinding_PDUs, _decode_DISPBinding_PDUs, _encode_DISPBinding_PDUs } from "../IN-CS2-SDF-SDF-Protocol/DISPBinding-PDUs.ta.mjs";
 import { id_as_indsaShadowBindingAS } from "../IN-CS2-object-identifiers/id-as-indsaShadowBindingAS.va.mjs";
 // export { id_as_indsaShadowBindingAS } from "../IN-CS2-object-identifiers/id-as-indsaShadowBindingAS.va.mjs";

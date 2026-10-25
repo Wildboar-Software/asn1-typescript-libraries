@@ -1,7 +1,7 @@
 /* eslint-disable */
 import {
-    OPTIONAL,
-    ASN1Element as _Element,
+    type OPTIONAL,
+    type ASN1Element as _Element,
     ASN1TagClass as _TagClass,
     ASN1Construction as _Construction,
     ASN1UniversalType as _UniversalType,
@@ -18,7 +18,7 @@ import {
     _encode_ReachabilityChangeSyntax_newState,
 } from '../NLM/ReachabilityChangeSyntax-newState.ta.mjs';
 import {
-    NAddress,
+    type NAddress,
     _decode_NAddress,
     _encode_NAddress,
 } from '../NLM/NAddress.ta.mjs';
@@ -69,7 +69,7 @@ export class ReachabilityChangeSyntax {
      * @public
      * @readonly
      */
-    readonly newState: ReachabilityChangeSyntax_newState;
+    public readonly newState: ReachabilityChangeSyntax_newState;
     /**
      * @summary `nAddresses`.
      * @description
@@ -82,7 +82,7 @@ export class ReachabilityChangeSyntax {
      * @public
      * @readonly
      */
-    readonly nAddresses: NAddress[];
+    public readonly nAddresses: NAddress[];
     /**
      * @summary `sNPAAddress`.
      * @description
@@ -94,7 +94,7 @@ export class ReachabilityChangeSyntax {
      * @public
      * @readonly
      */
-    readonly sNPAAddress?: OPTIONAL<SNPAAddress>;
+    public readonly sNPAAddress?: OPTIONAL<SNPAAddress>;
     /**
      * @summary `reason`.
      * @description
@@ -107,7 +107,7 @@ export class ReachabilityChangeSyntax {
      * @public
      * @readonly
      */
-    readonly reason?: OPTIONAL<ReachabilityChangeSyntax_reason>;
+    public readonly reason?: OPTIONAL<ReachabilityChangeSyntax_reason>;
 
     constructor(
         newState: ReachabilityChangeSyntax_newState,
@@ -152,14 +152,14 @@ export class ReachabilityChangeSyntax {
      * @static
      */
 
-    public static _enum_for_newState = _enum_for_ReachabilityChangeSyntax_newState;
+    public static _enum_for_newState: typeof _enum_for_ReachabilityChangeSyntax_newState = _enum_for_ReachabilityChangeSyntax_newState;
     /**
      * @summary The enum used as the type of the component `reason`
      * @public
      * @static
      */
 
-    public static _enum_for_reason = _enum_for_ReachabilityChangeSyntax_reason;
+    public static _enum_for_reason: typeof _enum_for_ReachabilityChangeSyntax_reason = _enum_for_ReachabilityChangeSyntax_reason;
 }
 
 

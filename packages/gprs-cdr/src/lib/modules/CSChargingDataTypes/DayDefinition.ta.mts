@@ -1,12 +1,12 @@
 /* eslint-disable */
 import {
     ASN1ConstructionError as _ConstructionError,
-    ASN1Element as _Element,
+    type ASN1Element as _Element,
     ASN1TagClass as _TagClass
 } from "@wildboar/asn1";
 import * as $ from "@wildboar/asn1/functional";
 import { DayOfTheWeek, _decode_DayOfTheWeek, _encode_DayOfTheWeek, _enum_for_DayOfTheWeek } from "../CSChargingDataTypes/DayOfTheWeek.ta.mjs";
-import { DayClass, _decode_DayClass, _encode_DayClass } from "../CSChargingDataTypes/DayClass.ta.mjs";
+import { type DayClass, _decode_DayClass, _encode_DayClass } from "../CSChargingDataTypes/DayClass.ta.mjs";
 
 
 /**
@@ -68,7 +68,7 @@ class DayDefinition {
          * @static
          */
 
-    public static _enum_for_day = _enum_for_DayOfTheWeek;
+    public static _enum_for_day: typeof _enum_for_DayOfTheWeek = _enum_for_DayOfTheWeek;
 }
 
 /**

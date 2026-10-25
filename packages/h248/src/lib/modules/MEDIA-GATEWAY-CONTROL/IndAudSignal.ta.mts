@@ -1,13 +1,13 @@
 /* eslint-disable */
 import {
-    OPTIONAL,
-    ASN1Element as _Element,
+    type OPTIONAL,
+    type ASN1Element as _Element,
     ASN1TagClass as _TagClass
 } from "@wildboar/asn1";
 import * as $ from "@wildboar/asn1/functional";
-import { PkgdName, _decode_PkgdName, _encode_PkgdName } from "../MEDIA-GATEWAY-CONTROL/PkgdName.ta.mjs";
-import { StreamID, _decode_StreamID, _encode_StreamID } from "../MEDIA-GATEWAY-CONTROL/StreamID.ta.mjs";
-import { RequestID, _decode_RequestID, _encode_RequestID } from "../MEDIA-GATEWAY-CONTROL/RequestID.ta.mjs";
+import { type PkgdName, _decode_PkgdName, _encode_PkgdName } from "../MEDIA-GATEWAY-CONTROL/PkgdName.ta.mjs";
+import { type StreamID, _decode_StreamID, _encode_StreamID } from "../MEDIA-GATEWAY-CONTROL/StreamID.ta.mjs";
+import { type RequestID, _decode_RequestID, _encode_RequestID } from "../MEDIA-GATEWAY-CONTROL/RequestID.ta.mjs";
 
 
 /**
@@ -43,7 +43,7 @@ class IndAudSignal {
      * @public
      * @readonly
      */
-    readonly signalName: PkgdName;
+    public readonly signalName: PkgdName;
     /**
      * @summary `streamID`.
      * @description
@@ -53,7 +53,7 @@ class IndAudSignal {
      * @public
      * @readonly
      */
-    readonly streamID?: OPTIONAL<StreamID>;
+    public readonly streamID?: OPTIONAL<StreamID>;
     /**
      * @summary `signalRequestID`.
      * @description
@@ -64,7 +64,7 @@ class IndAudSignal {
      * @public
      * @readonly
      */
-    readonly signalRequestID?: OPTIONAL<RequestID>;
+    public readonly signalRequestID?: OPTIONAL<RequestID>;
     /**
      * @summary Extensions that are not recognized.
      * @description
@@ -75,7 +75,7 @@ class IndAudSignal {
      * @public
      * @readonly
      */
-    readonly _unrecognizedExtensionsList: _Element[];
+    public readonly _unrecognizedExtensionsList: _Element[];
 
     constructor (
         signalName: PkgdName,

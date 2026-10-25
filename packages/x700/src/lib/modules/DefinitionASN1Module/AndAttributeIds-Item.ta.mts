@@ -1,6 +1,6 @@
 /* eslint-disable */
 import {
-    ASN1Element as _Element,
+    type ASN1Element as _Element,
     ASN1TagClass as _TagClass,
     ASN1Construction as _Construction,
     ASN1UniversalType as _UniversalType,
@@ -11,7 +11,7 @@ import {
 } from '@wildboar/asn1';
 import * as $ from '@wildboar/asn1/functional';
 import {
-    Identifier,
+    type Identifier,
     _decode_Identifier,
     _encode_Identifier,
 } from '../DefinitionASN1Module/Identifier.ta.mjs';
@@ -42,27 +42,33 @@ import {
  *
  */
 export class AndAttributeIds_Item {
+    /**
+     * @summary `fieldName`.
+     * @description
+     *
+     * Label of the field in the notification information syntax that
+     * carries the attribute value.
+     * @public
+     * @readonly
+     */
+    public readonly fieldName: Identifier;
+    /**
+     * @summary `attribute`.
+     * @description
+     *
+     * Attribute template whose values occupy `fieldName`.
+     * @public
+     * @readonly
+     */
+    public readonly attribute: TemplateLabel;
+
     constructor(
-        /**
-         * @summary `fieldName`.
-         * @description
-         *
-         * Label of the field in the notification information syntax that
-         * carries the attribute value.
-         * @public
-         * @readonly
-         */
-        readonly fieldName: Identifier,
-        /**
-         * @summary `attribute`.
-         * @description
-         *
-         * Attribute template whose values occupy `fieldName`.
-         * @public
-         * @readonly
-         */
-        readonly attribute: TemplateLabel
-    ) {}
+        fieldName: Identifier,
+        attribute: TemplateLabel
+    ) {
+        this.fieldName = fieldName;
+        this.attribute = attribute;
+    }
 
     /**
      * @summary Restructures an object into a AndAttributeIds_Item

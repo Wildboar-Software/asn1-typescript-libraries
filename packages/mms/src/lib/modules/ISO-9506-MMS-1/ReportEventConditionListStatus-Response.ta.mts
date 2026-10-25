@@ -1,8 +1,8 @@
 /* eslint-disable */
 import {
-    OPTIONAL,
-    BOOLEAN,
-    ASN1Element as _Element,
+    type OPTIONAL,
+    type BOOLEAN,
+    type ASN1Element as _Element,
     ASN1TagClass as _TagClass,
     ASN1Construction as _Construction,
     ASN1UniversalType as _UniversalType,
@@ -37,33 +37,39 @@ import { EventConditionStatus, _decode_EventConditionStatus, _encode_EventCondit
  */
 export
 class ReportEventConditionListStatus_Response {
+    /**
+     * @summary `listOfEventConditionStatus`.
+     * @description
+     *
+     * Status of members, collation order.
+     *
+     * [ISO 9506-1:2003 §22.7.1.2.1]
+     *
+     * @public
+     * @readonly
+     */
+    public readonly listOfEventConditionStatus: EventConditionStatus[];
+    /**
+     * @summary `moreFollows`.
+     * @description
+     *
+     * True if more statuses remain. Default true in protocol; false if the list is
+     * empty.
+     *
+     * [ISO 9506-1:2003 §22.7.1.2.2]
+     *
+     * @public
+     * @readonly
+     */
+    public readonly moreFollows?: OPTIONAL<BOOLEAN>;
+
     constructor (
-        /**
-         * @summary `listOfEventConditionStatus`.
-         * @description
-         *
-         * Status of members, collation order.
-         *
-         * [ISO 9506-1:2003 §22.7.1.2.1]
-         *
-         * @public
-         * @readonly
-         */
-        readonly listOfEventConditionStatus: EventConditionStatus[],
-        /**
-         * @summary `moreFollows`.
-         * @description
-         *
-         * True if more statuses remain. Default true in protocol; false if the list is
-         * empty.
-         *
-         * [ISO 9506-1:2003 §22.7.1.2.2]
-         *
-         * @public
-         * @readonly
-         */
-        readonly moreFollows?: OPTIONAL<BOOLEAN>
-    ) {}
+        listOfEventConditionStatus: EventConditionStatus[],
+        moreFollows?: OPTIONAL<BOOLEAN>
+    ) {
+        this.listOfEventConditionStatus = listOfEventConditionStatus;
+        this.moreFollows = moreFollows;
+    }
 
     /**
      * @summary Restructures an object into a ReportEventConditionListStatus_Response

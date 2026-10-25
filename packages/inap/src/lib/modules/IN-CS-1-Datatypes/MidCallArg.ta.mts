@@ -1,25 +1,25 @@
 /* eslint-disable */
 import {
-    OPTIONAL,
-    ASN1Element as _Element,
+    type OPTIONAL,
+    type ASN1Element as _Element,
     ASN1TagClass as _TagClass
 } from "@wildboar/asn1";
 import * as $ from "@wildboar/asn1/functional";
 import { DpSpecificCommonParameters, _decode_DpSpecificCommonParameters, _encode_DpSpecificCommonParameters } from "../IN-CS-1-Datatypes/DpSpecificCommonParameters.ta.mjs";
 // export { DpSpecificCommonParameters, _decode_DpSpecificCommonParameters, _encode_DpSpecificCommonParameters } from "../IN-CS-1-Datatypes/DpSpecificCommonParameters.ta.mjs";
-import { CalledPartyBusinessGroupID, _decode_CalledPartyBusinessGroupID, _encode_CalledPartyBusinessGroupID } from "../IN-CS-1-Datatypes/CalledPartyBusinessGroupID.ta.mjs";
+import { type CalledPartyBusinessGroupID, _decode_CalledPartyBusinessGroupID, _encode_CalledPartyBusinessGroupID } from "../IN-CS-1-Datatypes/CalledPartyBusinessGroupID.ta.mjs";
 // export { CalledPartyBusinessGroupID, _decode_CalledPartyBusinessGroupID, _encode_CalledPartyBusinessGroupID } from "../IN-CS-1-Datatypes/CalledPartyBusinessGroupID.ta.mjs";
-import { CalledPartySubaddress, _decode_CalledPartySubaddress, _encode_CalledPartySubaddress } from "../IN-CS-1-Datatypes/CalledPartySubaddress.ta.mjs";
+import { type CalledPartySubaddress, _decode_CalledPartySubaddress, _encode_CalledPartySubaddress } from "../IN-CS-1-Datatypes/CalledPartySubaddress.ta.mjs";
 // export { CalledPartySubaddress, _decode_CalledPartySubaddress, _encode_CalledPartySubaddress } from "../IN-CS-1-Datatypes/CalledPartySubaddress.ta.mjs";
-import { CallingPartyBusinessGroupID, _decode_CallingPartyBusinessGroupID, _encode_CallingPartyBusinessGroupID } from "../IN-CS-1-Datatypes/CallingPartyBusinessGroupID.ta.mjs";
+import { type CallingPartyBusinessGroupID, _decode_CallingPartyBusinessGroupID, _encode_CallingPartyBusinessGroupID } from "../IN-CS-1-Datatypes/CallingPartyBusinessGroupID.ta.mjs";
 // export { CallingPartyBusinessGroupID, _decode_CallingPartyBusinessGroupID, _encode_CallingPartyBusinessGroupID } from "../IN-CS-1-Datatypes/CallingPartyBusinessGroupID.ta.mjs";
-import { CallingPartySubaddress, _decode_CallingPartySubaddress, _encode_CallingPartySubaddress } from "../IN-CS-1-Datatypes/CallingPartySubaddress.ta.mjs";
+import { type CallingPartySubaddress, _decode_CallingPartySubaddress, _encode_CallingPartySubaddress } from "../IN-CS-1-Datatypes/CallingPartySubaddress.ta.mjs";
 // export { CallingPartySubaddress, _decode_CallingPartySubaddress, _encode_CallingPartySubaddress } from "../IN-CS-1-Datatypes/CallingPartySubaddress.ta.mjs";
 import { FeatureRequestIndicator, _decode_FeatureRequestIndicator, _encode_FeatureRequestIndicator, _enum_for_FeatureRequestIndicator } from "../IN-CS-1-Datatypes/FeatureRequestIndicator.ta.mjs";
 // export { FeatureRequestIndicator, _enum_for_FeatureRequestIndicator, FeatureRequestIndicator_hold /* IMPORTED_LONG_ENUMERATION_ITEM */, hold /* IMPORTED_SHORT_ENUMERATION_ITEM */, FeatureRequestIndicator_retrieve /* IMPORTED_LONG_ENUMERATION_ITEM */, retrieve /* IMPORTED_SHORT_ENUMERATION_ITEM */, FeatureRequestIndicator_featureActivation /* IMPORTED_LONG_ENUMERATION_ITEM */, featureActivation /* IMPORTED_SHORT_ENUMERATION_ITEM */, FeatureRequestIndicator_spare1 /* IMPORTED_LONG_ENUMERATION_ITEM */, spare1 /* IMPORTED_SHORT_ENUMERATION_ITEM */, FeatureRequestIndicator_sparen /* IMPORTED_LONG_ENUMERATION_ITEM */, sparen /* IMPORTED_SHORT_ENUMERATION_ITEM */, _decode_FeatureRequestIndicator, _encode_FeatureRequestIndicator } from "../IN-CS-1-Datatypes/FeatureRequestIndicator.ta.mjs";
 import { ExtensionField, _decode_ExtensionField, _encode_ExtensionField } from "../IN-CS-1-Datatypes/ExtensionField.ta.mjs";
 // export { ExtensionField, _decode_ExtensionField, _encode_ExtensionField } from "../IN-CS-1-Datatypes/ExtensionField.ta.mjs";
-import { Carrier, _decode_Carrier, _encode_Carrier } from "../IN-CS-1-Datatypes/Carrier.ta.mjs";
+import { type Carrier, _decode_Carrier, _encode_Carrier } from "../IN-CS-1-Datatypes/Carrier.ta.mjs";
 // export { Carrier, _decode_Carrier, _encode_Carrier } from "../IN-CS-1-Datatypes/Carrier.ta.mjs";
 
 
@@ -148,7 +148,7 @@ class MidCallArg {
          * @static
          */
 
-    public static _enum_for_featureRequestIndicator = _enum_for_FeatureRequestIndicator;
+    public static _enum_for_featureRequestIndicator: typeof _enum_for_FeatureRequestIndicator = _enum_for_FeatureRequestIndicator;
 }
 
 /**

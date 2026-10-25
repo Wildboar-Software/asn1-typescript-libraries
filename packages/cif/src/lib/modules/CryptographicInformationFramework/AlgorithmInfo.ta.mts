@@ -1,9 +1,9 @@
 /* eslint-disable */
 import {
-    OPTIONAL,
-    INTEGER,
-    OBJECT_IDENTIFIER,
-    ASN1Element as _Element,
+    type OPTIONAL,
+    type INTEGER,
+    type OBJECT_IDENTIFIER,
+    type ASN1Element as _Element,
     ASN1TagClass as _TagClass,
     ASN1Construction as _Construction,
     ASN1UniversalType as _UniversalType,
@@ -13,7 +13,7 @@ import {
     ASN1ConstructionError as _ConstructionError,
 } from "@wildboar/asn1";
 import * as $ from "@wildboar/asn1/functional";
-import { Reference, _decode_Reference, _encode_Reference } from "../CryptographicInformationFramework/Reference.ta.mjs";
+import { type Reference, _decode_Reference, _encode_Reference } from "../CryptographicInformationFramework/Reference.ta.mjs";
 
 
 /**
@@ -40,59 +40,73 @@ import { Reference, _decode_Reference, _encode_Reference } from "../Cryptographi
  */
 export
 class AlgorithmInfo {
+    /**
+     * @summary `reference`.
+     * @description
+     * Cross-reference from key `algReference`. ISO/IEC 7816-15:2016 §8.10.
+     * @public
+     * @readonly
+     */
+    public readonly reference: Reference;
+    /**
+     * @summary `algorithm`.
+     * @description
+     * Private algorithm id (often a PKCS #11 mechanism number). ISO/IEC
+     * 7816-15:2016 §8.10.
+     * @public
+     * @readonly
+     */
+    public readonly algorithm: INTEGER;
+    /**
+     * @summary `parameters`.
+     * @description
+     * Parameters of the algorithm. ISO/IEC 7816-15:2016 §8.10.
+     * @public
+     * @readonly
+     */
+    public readonly parameters: _Element;
+    /**
+     * @summary `supportedOperations`.
+     * @description
+     * Hardware operations the card can perform with this algorithm. ISO/IEC
+     * 7816-15:2016 §8.10.
+     * @public
+     * @readonly
+     */
+    public readonly supportedOperations: _Element;
+    /**
+     * @summary `objId`.
+     * @description
+     * Algorithm object identifier. ISO/IEC 7816-15:2016 §8.10.
+     * @public
+     * @readonly
+     */
+    public readonly objId: OBJECT_IDENTIFIER;
+    /**
+     * @summary `algRef`.
+     * @description
+     * Identifier used at the card interface (e.g. parameter of EXTERNAL
+     * AUTHENTICATE). ISO/IEC 7816-15:2016 §8.10.
+     * @public
+     * @readonly
+     */
+    public readonly algRef?: OPTIONAL<Reference>;
+
     constructor (
-        /**
-         * @summary `reference`.
-         * @description
-         * Cross-reference from key `algReference`. ISO/IEC 7816-15:2016 §8.10.
-         * @public
-         * @readonly
-         */
-        readonly reference: Reference,
-        /**
-         * @summary `algorithm`.
-         * @description
-         * Private algorithm id (often a PKCS #11 mechanism number). ISO/IEC
-         * 7816-15:2016 §8.10.
-         * @public
-         * @readonly
-         */
-        readonly algorithm: INTEGER,
-        /**
-         * @summary `parameters`.
-         * @description
-         * Parameters of the algorithm. ISO/IEC 7816-15:2016 §8.10.
-         * @public
-         * @readonly
-         */
-        readonly parameters: _Element,
-        /**
-         * @summary `supportedOperations`.
-         * @description
-         * Hardware operations the card can perform with this algorithm. ISO/IEC
-         * 7816-15:2016 §8.10.
-         * @public
-         * @readonly
-         */
-        readonly supportedOperations: _Element,
-        /**
-         * @summary `objId`.
-         * @description
-         * Algorithm object identifier. ISO/IEC 7816-15:2016 §8.10.
-         * @public
-         * @readonly
-         */
-        readonly objId: OBJECT_IDENTIFIER,
-        /**
-         * @summary `algRef`.
-         * @description
-         * Identifier used at the card interface (e.g. parameter of EXTERNAL
-         * AUTHENTICATE). ISO/IEC 7816-15:2016 §8.10.
-         * @public
-         * @readonly
-         */
-        readonly algRef?: OPTIONAL<Reference>
-    ) {}
+        reference: Reference,
+        algorithm: INTEGER,
+        parameters: _Element,
+        supportedOperations: _Element,
+        objId: OBJECT_IDENTIFIER,
+        algRef?: OPTIONAL<Reference>
+    ) {
+        this.reference = reference;
+        this.algorithm = algorithm;
+        this.parameters = parameters;
+        this.supportedOperations = supportedOperations;
+        this.objId = objId;
+        this.algRef = algRef;
+    }
 
     /**
      * @summary Restructures an object into a AlgorithmInfo

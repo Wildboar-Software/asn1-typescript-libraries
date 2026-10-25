@@ -1,8 +1,8 @@
 /* eslint-disable */
 import {
-    OPTIONAL,
-    INTEGER,
-    ASN1Element as _Element,
+    type OPTIONAL,
+    type INTEGER,
+    type ASN1Element as _Element,
     ASN1TagClass as _TagClass,
     ASN1Construction as _Construction,
     ASN1UniversalType as _UniversalType,
@@ -35,31 +35,39 @@ import { AuthKeyAttributes, _decode_AuthKeyAttributes, _encode_AuthKeyAttributes
  */
 export
 class InternalAuthObjectAttributes {
+    /**
+     * @summary `cioSecurityId`.
+     * @description
+     * Cross-reference to a `SecurityFileOrObject` protocol. ISO/IEC
+     * 7816-15:2016 §8.9.4.
+     * @public
+     * @readonly
+     */
+    public readonly cioSecurityId: OPTIONAL<INTEGER>;
+    /**
+     * @summary `authKeyAttributes`.
+     * @description
+     * Key used for internal authentication. ISO/IEC 7816-15:2016 §8.9.4.
+     * @public
+     * @readonly
+     */
+    public readonly authKeyAttributes: AuthKeyAttributes;
+    /**
+     * @summary Extensions that are not recognized.
+     * @public
+     * @readonly
+     */
+    public readonly _unrecognizedExtensionsList: _Element[];
+
     constructor (
-        /**
-         * @summary `cioSecurityId`.
-         * @description
-         * Cross-reference to a `SecurityFileOrObject` protocol. ISO/IEC
-         * 7816-15:2016 §8.9.4.
-         * @public
-         * @readonly
-         */
-        readonly cioSecurityId: OPTIONAL<INTEGER>,
-        /**
-         * @summary `authKeyAttributes`.
-         * @description
-         * Key used for internal authentication. ISO/IEC 7816-15:2016 §8.9.4.
-         * @public
-         * @readonly
-         */
-        readonly authKeyAttributes: AuthKeyAttributes,
-        /**
-         * @summary Extensions that are not recognized.
-         * @public
-         * @readonly
-         */
-        readonly _unrecognizedExtensionsList: _Element[] = []
-    ) {}
+        cioSecurityId: OPTIONAL<INTEGER>,
+        authKeyAttributes: AuthKeyAttributes,
+        _unrecognizedExtensionsList: _Element[] = []
+    ) {
+        this.cioSecurityId = cioSecurityId;
+        this.authKeyAttributes = authKeyAttributes;
+        this._unrecognizedExtensionsList = _unrecognizedExtensionsList;
+    }
 
     /**
      * @summary Restructures an object into a InternalAuthObjectAttributes

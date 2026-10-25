@@ -1,9 +1,9 @@
 /* eslint-disable */
 import {
-    OPTIONAL,
-    INTEGER,
-    OCTET_STRING,
-    ASN1Element as _Element,
+    type OPTIONAL,
+    type INTEGER,
+    type OCTET_STRING,
+    type ASN1Element as _Element,
     ASN1TagClass as _TagClass,
     ASN1Construction as _Construction,
     ASN1UniversalType as _UniversalType,
@@ -13,11 +13,11 @@ import {
     ASN1ConstructionError as _ConstructionError,
 } from "@wildboar/asn1";
 import * as $ from "@wildboar/asn1/functional";
-import { ObjectName, _decode_ObjectName, _encode_ObjectName } from "../ISO-9506-MMS-1/ObjectName.ta.mjs";
+import { type ObjectName, _decode_ObjectName, _encode_ObjectName } from "../ISO-9506-MMS-1/ObjectName.ta.mjs";
 import { ApplicationReference, _decode_ApplicationReference, _encode_ApplicationReference } from "../MMS-Environment-1/ApplicationReference.ta.mjs";
-import { TimeOfDay, _decode_TimeOfDay, _encode_TimeOfDay } from "../ISO-9506-MMS-1/TimeOfDay.ta.mjs";
-import { MMS255String, _decode_MMS255String, _encode_MMS255String } from "../ISO-9506-MMS-1/MMS255String.ta.mjs";
-import { EC_State, _decode_EC_State, _encode_EC_State } from "../MMS-Object-Module-1/EC-State.ta.mjs";
+import { type TimeOfDay, _decode_TimeOfDay, _encode_TimeOfDay } from "../ISO-9506-MMS-1/TimeOfDay.ta.mjs";
+import { type MMS255String, _decode_MMS255String, _encode_MMS255String } from "../ISO-9506-MMS-1/MMS255String.ta.mjs";
+import { type EC_State, _decode_EC_State, _encode_EC_State } from "../MMS-Object-Module-1/EC-State.ta.mjs";
 import { Journal_Variable, _decode_Journal_Variable, _encode_Journal_Variable } from "../MMS-Object-Module-1/Journal-Variable.ta.mjs";
 
 
@@ -197,7 +197,7 @@ type JOURNAL_ENTRY_informationType = _enum_for_JOURNAL_ENTRY_informationType;
  * @enum {number}
  */
 export
-const JOURNAL_ENTRY_informationType = _enum_for_JOURNAL_ENTRY_informationType;
+const JOURNAL_ENTRY_informationType: typeof _enum_for_JOURNAL_ENTRY_informationType = _enum_for_JOURNAL_ENTRY_informationType;
 
 /**
  * @summary JOURNAL_ENTRY_informationType_annotation
@@ -205,7 +205,7 @@ const JOURNAL_ENTRY_informationType = _enum_for_JOURNAL_ENTRY_informationType;
  * @type {number}
  */
 export
-const JOURNAL_ENTRY_informationType_annotation: JOURNAL_ENTRY_informationType = JOURNAL_ENTRY_informationType.annotation; /* LONG_NAMED_ENUMERATED_VALUE */
+const JOURNAL_ENTRY_informationType_annotation: _enum_for_JOURNAL_ENTRY_informationType.annotation = JOURNAL_ENTRY_informationType.annotation; /* LONG_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary JOURNAL_ENTRY_informationType_event_data
@@ -213,7 +213,7 @@ const JOURNAL_ENTRY_informationType_annotation: JOURNAL_ENTRY_informationType = 
  * @type {number}
  */
 export
-const JOURNAL_ENTRY_informationType_event_data: JOURNAL_ENTRY_informationType = JOURNAL_ENTRY_informationType.event_data; /* LONG_NAMED_ENUMERATED_VALUE */
+const JOURNAL_ENTRY_informationType_event_data: _enum_for_JOURNAL_ENTRY_informationType.event_data = JOURNAL_ENTRY_informationType.event_data; /* LONG_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary JOURNAL_ENTRY_informationType_data
@@ -221,6 +221,6 @@ const JOURNAL_ENTRY_informationType_event_data: JOURNAL_ENTRY_informationType = 
  * @type {number}
  */
 export
-const JOURNAL_ENTRY_informationType_data: JOURNAL_ENTRY_informationType = JOURNAL_ENTRY_informationType.data; /* LONG_NAMED_ENUMERATED_VALUE */
+const JOURNAL_ENTRY_informationType_data: _enum_for_JOURNAL_ENTRY_informationType.data = JOURNAL_ENTRY_informationType.data; /* LONG_NAMED_ENUMERATED_VALUE */
 
 /* eslint-enable */

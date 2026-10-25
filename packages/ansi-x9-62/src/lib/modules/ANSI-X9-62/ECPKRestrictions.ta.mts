@@ -1,17 +1,17 @@
 /* eslint-disable */
 import {
     ASN1ConstructionError as _ConstructionError,
-    ASN1Element as _Element,
+    type ASN1Element as _Element,
     ASN1TagClass as _TagClass,
 } from "@wildboar/asn1";
 import * as $ from "@wildboar/asn1/functional";
 import {
-    ECCAlgorithms,
+    type ECCAlgorithms,
     _decode_ECCAlgorithms,
     _encode_ECCAlgorithms,
 } from "../ANSI-X9-62/ECCAlgorithms.ta.mjs";
 import {
-    ECDomainParameters,
+    type ECDomainParameters,
     _decode_ECDomainParameters,
     _encode_ECDomainParameters,
 } from "../ANSI-X9-62/ECDomainParameters.ta.mjs";
@@ -46,7 +46,7 @@ export class ECPKRestrictions {
      * @public
      * @readonly
      */
-    readonly ecDomain: ECDomainParameters;
+    public readonly ecDomain: ECDomainParameters;
     /**
      * @summary `eccAlgorithms`.
      * @description
@@ -57,7 +57,7 @@ export class ECPKRestrictions {
      * @public
      * @readonly
      */
-    readonly eccAlgorithms: ECCAlgorithms;
+    public readonly eccAlgorithms: ECCAlgorithms;
 
     constructor(
         ecDomain: ECDomainParameters,

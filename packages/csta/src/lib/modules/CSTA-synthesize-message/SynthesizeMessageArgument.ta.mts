@@ -2,11 +2,11 @@
 
 import * as $ from "@wildboar/asn1/functional";
 import {
-    OPTIONAL,
-    SEQUENCE,
-    SET,
-    IA5String,
-    ASN1Element as _Element,
+    type OPTIONAL,
+    type SEQUENCE,
+    type SET,
+    type IA5String,
+    type ASN1Element as _Element,
     ASN1TagClass as _TagClass
 } from "@wildboar/asn1";
 import { ControlData, _decode_ControlData, _encode_ControlData } from "../CSTA-device-feature-types/ControlData.ta.mjs";
@@ -30,7 +30,7 @@ import { CSTACommonArguments, _decode_CSTACommonArguments, _encode_CSTACommonArg
  * ```asn1
  * SynthesizeMessageArgument ::= SEQUENCE
  * {    textToBeSynthesized        IA5String,
- *     control                ControlData                OPTIONAL,
+ *     control                ControlData                type OPTIONAL,
  *     extensions            CSTACommonArguments            OPTIONAL }
  * ```
  * 
@@ -38,39 +38,47 @@ import { CSTACommonArguments, _decode_CSTACommonArguments, _encode_CSTACommonArg
  */
 export
 class SynthesizeMessageArgument {
+    /**
+     * @summary `textToBeSynthesized`.
+     * @description
+     *
+     * Source text (ECMA-269 §26.1.17.1).
+     *
+     * @public
+     * @readonly
+     */
+    public readonly textToBeSynthesized: IA5String;
+    /**
+     * @summary `control`.
+     * @description
+     *
+     * Optional synthesis control (ECMA-269 §26.1.17.1).
+     *
+     * @public
+     * @readonly
+     */
+    public readonly control?: OPTIONAL<ControlData>;
+    /**
+     * @summary `extensions`.
+     * @description
+     *
+     * CSTACommonArguments carrying the service-table security and
+     * privateData parameters.
+     *
+     * @public
+     * @readonly
+     */
+    public readonly extensions?: OPTIONAL<CSTACommonArguments>;
+
     constructor (
-        /**
-         * @summary `textToBeSynthesized`.
-         * @description
-         *
-         * Source text (ECMA-269 §26.1.17.1).
-         *
-         * @public
-         * @readonly
-         */
-        readonly textToBeSynthesized: IA5String,
-        /**
-         * @summary `control`.
-         * @description
-         *
-         * Optional synthesis control (ECMA-269 §26.1.17.1).
-         *
-         * @public
-         * @readonly
-         */
-        readonly control?: OPTIONAL<ControlData>,
-        /**
-         * @summary `extensions`.
-         * @description
-         *
-         * CSTACommonArguments carrying the service-table security and
-         * privateData parameters.
-         *
-         * @public
-         * @readonly
-         */
-        readonly extensions?: OPTIONAL<CSTACommonArguments>
-    ) {}
+        textToBeSynthesized: IA5String,
+        control?: OPTIONAL<ControlData>,
+        extensions?: OPTIONAL<CSTACommonArguments>
+    ) {
+        this.textToBeSynthesized = textToBeSynthesized;
+        this.control = control;
+        this.extensions = extensions;
+    }
 
     /**
      * @summary Restructures an object into a SynthesizeMessageArgument

@@ -1,6 +1,6 @@
 /* eslint-disable */
 import {
-  OPTIONAL,
+  type OPTIONAL,
   ASN1Element as _Element,
   ASN1TagClass as _TagClass,
   ASN1Construction as _Construction,
@@ -37,31 +37,37 @@ import * as $ from '@wildboar/asn1/functional';
  *
  */
 export class SubsequentPdv {
+  /**
+   * @summary `dynamicUnprotParm`.
+   * @description
+   *
+   * Dynamic unprotected parameters; the transformation is
+   * implied by the presentation context. ITU-T Rec. X.833
+   * (04/95) §6.
+   *
+   * @public
+   * @readonly
+   */
+  public readonly dynamicUnprotParm: OPTIONAL<_Element>;
+  /**
+   * @summary `xformedData`.
+   * @description
+   *
+   * `&XformedDataType` of the context's transformation.
+   * ITU-T Rec. X.833 (04/95) §6.
+   *
+   * @public
+   * @readonly
+   */
+  public readonly xformedData: _Element;
+
   constructor(
-    /**
-     * @summary `dynamicUnprotParm`.
-     * @description
-     *
-     * Dynamic unprotected parameters; the transformation is
-     * implied by the presentation context. ITU-T Rec. X.833
-     * (04/95) §6.
-     *
-     * @public
-     * @readonly
-     */
-    readonly dynamicUnprotParm: OPTIONAL<_Element>,
-    /**
-     * @summary `xformedData`.
-     * @description
-     *
-     * `&XformedDataType` of the context's transformation.
-     * ITU-T Rec. X.833 (04/95) §6.
-     *
-     * @public
-     * @readonly
-     */
-    readonly xformedData: _Element
-  ) {}
+    dynamicUnprotParm: OPTIONAL<_Element>,
+    xformedData: _Element
+  ) {
+    this.dynamicUnprotParm = dynamicUnprotParm;
+    this.xformedData = xformedData;
+  }
 
   /**
    * @summary Restructures an object into a SubsequentPdv

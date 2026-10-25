@@ -67,7 +67,7 @@ type ResourceUnavailableReason = _enum_for_ResourceUnavailableReason;
  * @enum {number}
  */
 export
-const ResourceUnavailableReason = _enum_for_ResourceUnavailableReason;
+const ResourceUnavailableReason: typeof _enum_for_ResourceUnavailableReason = _enum_for_ResourceUnavailableReason;
 
 /**
  * @summary ResourceUnavailableReason_shortTermResourceLimitation
@@ -80,7 +80,7 @@ const ResourceUnavailableReason = _enum_for_ResourceUnavailableReason;
  * @type {number}
  */
 export
-const ResourceUnavailableReason_shortTermResourceLimitation: ResourceUnavailableReason = ResourceUnavailableReason.shortTermResourceLimitation; /* LONG_NAMED_ENUMERATED_VALUE */
+const ResourceUnavailableReason_shortTermResourceLimitation: _enum_for_ResourceUnavailableReason.shortTermResourceLimitation = ResourceUnavailableReason.shortTermResourceLimitation; /* LONG_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary shortTermResourceLimitation
@@ -93,7 +93,7 @@ const ResourceUnavailableReason_shortTermResourceLimitation: ResourceUnavailable
  * @type {number}
  */
 export
-const shortTermResourceLimitation: ResourceUnavailableReason = ResourceUnavailableReason.shortTermResourceLimitation; /* SHORT_NAMED_ENUMERATED_VALUE */
+const shortTermResourceLimitation: _enum_for_ResourceUnavailableReason.shortTermResourceLimitation = ResourceUnavailableReason.shortTermResourceLimitation; /* SHORT_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary ResourceUnavailableReason_longTermResourceLimitation
@@ -106,7 +106,7 @@ const shortTermResourceLimitation: ResourceUnavailableReason = ResourceUnavailab
  * @type {number}
  */
 export
-const ResourceUnavailableReason_longTermResourceLimitation: ResourceUnavailableReason = ResourceUnavailableReason.longTermResourceLimitation; /* LONG_NAMED_ENUMERATED_VALUE */
+const ResourceUnavailableReason_longTermResourceLimitation: _enum_for_ResourceUnavailableReason.longTermResourceLimitation = ResourceUnavailableReason.longTermResourceLimitation; /* LONG_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary longTermResourceLimitation
@@ -119,7 +119,7 @@ const ResourceUnavailableReason_longTermResourceLimitation: ResourceUnavailableR
  * @type {number}
  */
 export
-const longTermResourceLimitation: ResourceUnavailableReason = ResourceUnavailableReason.longTermResourceLimitation; /* SHORT_NAMED_ENUMERATED_VALUE */
+const longTermResourceLimitation: _enum_for_ResourceUnavailableReason.longTermResourceLimitation = ResourceUnavailableReason.longTermResourceLimitation; /* SHORT_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary Decodes an ASN.1 element into a(n) ResourceUnavailableReason
@@ -127,7 +127,7 @@ const longTermResourceLimitation: ResourceUnavailableReason = ResourceUnavailabl
  * @param el The element being decoded.
  * @returns The decoded data structure.
  */
-export const _decode_ResourceUnavailableReason = $._decodeEnumerated;
+export const _decode_ResourceUnavailableReason: $.ASN1Decoder<number> = $._decodeEnumerated;
 
 /**
  * @summary Encodes a(n) ResourceUnavailableReason into an ASN.1 Element.
@@ -136,7 +136,7 @@ export const _decode_ResourceUnavailableReason = $._decodeEnumerated;
  * @param elGetter A function that can be used to get new ASN.1 elements.
  * @returns {_Element} The ResourceUnavailableReason, encoded as an ASN.1 Element.
  */
-export const _encode_ResourceUnavailableReason = $._encodeEnumerated;
+export const _encode_ResourceUnavailableReason: $.ASN1Encoder<number> = $._encodeEnumerated;
 
 
 /* eslint-enable */

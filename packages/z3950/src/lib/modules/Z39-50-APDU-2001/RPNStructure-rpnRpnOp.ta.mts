@@ -1,12 +1,12 @@
 /* eslint-disable */
 import {
     ASN1ConstructionError as _ConstructionError,
-    ASN1Element as _Element,
+    type ASN1Element as _Element,
     ASN1TagClass as _TagClass
 } from "@wildboar/asn1";
 import * as $ from "@wildboar/asn1/functional";
-import { RPNStructure, _decode_RPNStructure, _encode_RPNStructure } from "../Z39-50-APDU-2001/RPNStructure.ta.mjs";
-import { Operator, _decode_Operator, _encode_Operator } from "../Z39-50-APDU-2001/Operator.ta.mjs";
+import { type RPNStructure, _decode_RPNStructure, _encode_RPNStructure } from "../Z39-50-APDU-2001/RPNStructure.ta.mjs";
+import { type Operator, _decode_Operator, _encode_Operator } from "../Z39-50-APDU-2001/Operator.ta.mjs";
 
 
 /**

@@ -1,7 +1,7 @@
 /* eslint-disable */
 import {
-    ASN1Element as _Element,
-    INTEGER
+    type ASN1Element as _Element,
+    type INTEGER
 } from "@wildboar/asn1";
 import * as $ from "@wildboar/asn1/functional";
 
@@ -33,7 +33,7 @@ type ProfileInfoListError = INTEGER;
  * @type {number}
  */
 export
-const ProfileInfoListError_incorrectInputValues: ProfileInfoListError = 1; /* LONG_NAMED_INTEGER_VALUE */
+const ProfileInfoListError_incorrectInputValues: 1 = 1 satisfies ProfileInfoListError; /* LONG_NAMED_INTEGER_VALUE */
 
 /**
  * @summary ProfileInfoListError_incorrectInputValues
@@ -45,7 +45,7 @@ const ProfileInfoListError_incorrectInputValues: ProfileInfoListError = 1; /* LO
  * @type {number}
  */
 export
-const incorrectInputValues: ProfileInfoListError = ProfileInfoListError_incorrectInputValues; /* SHORT_NAMED_INTEGER_VALUE */
+const incorrectInputValues: 1 = ProfileInfoListError_incorrectInputValues; /* SHORT_NAMED_INTEGER_VALUE */
 
 /**
  * @summary ProfileInfoListError_undefinedError
@@ -57,7 +57,7 @@ const incorrectInputValues: ProfileInfoListError = ProfileInfoListError_incorrec
  * @type {number}
  */
 export
-const ProfileInfoListError_undefinedError: ProfileInfoListError = 127; /* LONG_NAMED_INTEGER_VALUE */
+const ProfileInfoListError_undefinedError: 127 = 127 satisfies ProfileInfoListError; /* LONG_NAMED_INTEGER_VALUE */
 
 /**
  * @summary ProfileInfoListError_undefinedError
@@ -69,9 +69,9 @@ const ProfileInfoListError_undefinedError: ProfileInfoListError = 127; /* LONG_N
  * @type {number}
  */
 export
-const undefinedError: ProfileInfoListError = ProfileInfoListError_undefinedError; /* SHORT_NAMED_INTEGER_VALUE */
-export const _decode_ProfileInfoListError = $._decodeInteger;
-export const _encode_ProfileInfoListError = $._encodeInteger;
+const undefinedError: 127 = ProfileInfoListError_undefinedError; /* SHORT_NAMED_INTEGER_VALUE */
+export const _decode_ProfileInfoListError: $.ASN1Decoder<INTEGER> = $._decodeInteger;
+export const _encode_ProfileInfoListError: $.ASN1Encoder<INTEGER> = $._encodeInteger;
 
 
 /* eslint-enable */

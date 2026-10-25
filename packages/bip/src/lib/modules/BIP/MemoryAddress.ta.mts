@@ -1,6 +1,6 @@
 /* eslint-disable */
 import {
-  INTEGER,
+  type INTEGER,
   ASN1Element as _Element,
   ASN1TagClass as _TagClass,
   ASN1Construction as _Construction,
@@ -34,12 +34,12 @@ export type MemoryAddress = INTEGER;
 
 
 
-export const _decode_MemoryAddress = $._decodeInteger;
+export const _decode_MemoryAddress: $.ASN1Decoder<INTEGER> = $._decodeInteger;
 
 
 
 
-export const _encode_MemoryAddress = $._encodeInteger;
+export const _encode_MemoryAddress: $.ASN1Encoder<INTEGER> = $._encodeInteger;
 
 
 /* eslint-enable */

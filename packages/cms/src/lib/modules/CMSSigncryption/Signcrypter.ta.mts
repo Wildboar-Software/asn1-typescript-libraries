@@ -1,12 +1,12 @@
 /* eslint-disable */
 import {
-    ASN1Element as _Element,
+    type ASN1Element as _Element,
     ASN1TagClass as _TagClass,
-    OPTIONAL,
+    type OPTIONAL,
 } from "@wildboar/asn1";
 import * as $ from "@wildboar/asn1/functional";
 import {
-    CMSVersion,
+    type CMSVersion,
     _decode_CMSVersion,
     _encode_CMSVersion,
 } from "../CMSSigncryption/CMSVersion.ta.mjs";
@@ -16,7 +16,7 @@ import {
     _encode_SignatureInformation,
 } from "../CMSSigncryption/SignatureInformation.ta.mjs";
 import {
-    SigncryptedDataAlgorithmIdentifier,
+    type SigncryptedDataAlgorithmIdentifier,
     _decode_SigncryptedDataAlgorithmIdentifier,
     _encode_SigncryptedDataAlgorithmIdentifier,
 } from "../CMSSigncryption/SigncryptedDataAlgorithmIdentifier.ta.mjs";
@@ -26,12 +26,12 @@ import {
     _encode_SigncrypterIDs,
 } from "../CMSSigncryption/SigncrypterIDs.ta.mjs";
 import {
-    SigncryptionValue,
+    type SigncryptionValue,
     _decode_SigncryptionValue,
     _encode_SigncryptionValue,
 } from "../CMSSigncryption/SigncryptionValue.ta.mjs";
 import {
-    UnSigncryptedAttributes,
+    type UnSigncryptedAttributes,
     _decode_UnSigncryptedAttributes,
     _encode_UnSigncryptedAttributes,
 } from "../CMSSigncryption/UnSigncryptedAttributes.ta.mjs";
@@ -59,44 +59,58 @@ import {
  *
  */
 export class Signcrypter {
+    /**
+     * @summary `version`.
+     * @public
+     * @readonly
+     */
+    public readonly version: CMSVersion;
+    /**
+     * @summary `side`.
+     * @public
+     * @readonly
+     */
+    public readonly side: SigncrypterIDs;
+    /**
+     * @summary `signcryptedDataAlgorithm`.
+     * @public
+     * @readonly
+     */
+    public readonly signcryptedDataAlgorithm: SigncryptedDataAlgorithmIdentifier;
+    /**
+     * @summary `signcryptionValue`.
+     * @public
+     * @readonly
+     */
+    public readonly signcryptionValue: SigncryptionValue;
+    /**
+     * @summary `signatureInformation`.
+     * @public
+     * @readonly
+     */
+    public readonly signatureInformation?: OPTIONAL<SignatureInformation>;
+    /**
+     * @summary `unsigncryptedAttributes`.
+     * @public
+     * @readonly
+     */
+    public readonly unsigncryptedAttributes?: OPTIONAL<UnSigncryptedAttributes>;
+
     constructor(
-        /**
-         * @summary `version`.
-         * @public
-         * @readonly
-         */
-        readonly version: CMSVersion,
-        /**
-         * @summary `side`.
-         * @public
-         * @readonly
-         */
-        readonly side: SigncrypterIDs,
-        /**
-         * @summary `signcryptedDataAlgorithm`.
-         * @public
-         * @readonly
-         */
-        readonly signcryptedDataAlgorithm: SigncryptedDataAlgorithmIdentifier,
-        /**
-         * @summary `signcryptionValue`.
-         * @public
-         * @readonly
-         */
-        readonly signcryptionValue: SigncryptionValue,
-        /**
-         * @summary `signatureInformation`.
-         * @public
-         * @readonly
-         */
-        readonly signatureInformation?: OPTIONAL<SignatureInformation>,
-        /**
-         * @summary `unsigncryptedAttributes`.
-         * @public
-         * @readonly
-         */
-        readonly unsigncryptedAttributes?: OPTIONAL<UnSigncryptedAttributes>
-    ) {}
+        version: CMSVersion,
+        side: SigncrypterIDs,
+        signcryptedDataAlgorithm: SigncryptedDataAlgorithmIdentifier,
+        signcryptionValue: SigncryptionValue,
+        signatureInformation?: OPTIONAL<SignatureInformation>,
+        unsigncryptedAttributes?: OPTIONAL<UnSigncryptedAttributes>
+    ) {
+        this.version = version;
+        this.side = side;
+        this.signcryptedDataAlgorithm = signcryptedDataAlgorithm;
+        this.signcryptionValue = signcryptionValue;
+        this.signatureInformation = signatureInformation;
+        this.unsigncryptedAttributes = unsigncryptedAttributes;
+    }
 
     /**
      * @summary Restructures an object into a Signcrypter

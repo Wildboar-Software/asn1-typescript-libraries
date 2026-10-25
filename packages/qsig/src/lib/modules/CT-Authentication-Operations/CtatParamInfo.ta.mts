@@ -1,13 +1,13 @@
 /* eslint-disable */
 import {
     ASN1ConstructionError as _ConstructionError,
-    ASN1Element as _Element,
+    type ASN1Element as _Element,
     ASN1TagClass as _TagClass
 } from "@wildboar/asn1";
 import * as $ from "@wildboar/asn1/functional";
-import { AuthAlgorithm, _decode_AuthAlgorithm, _encode_AuthAlgorithm } from "../CT-Authentication-Operations/AuthAlgorithm.ta.mjs";
+import { type AuthAlgorithm, _decode_AuthAlgorithm, _encode_AuthAlgorithm } from "../CT-Authentication-Operations/AuthAlgorithm.ta.mjs";
 // export { AuthAlgorithm, AuthAlgorithm_ct2 /* IMPORTED_LONG_NAMED_INTEGER */, ct2 /* IMPORTED_SHORT_NAMED_INTEGER */, AuthAlgorithm_dect /* IMPORTED_LONG_NAMED_INTEGER */, dect /* IMPORTED_SHORT_NAMED_INTEGER */, AuthAlgorithm_gsm /* IMPORTED_LONG_NAMED_INTEGER */, gsm /* IMPORTED_SHORT_NAMED_INTEGER */, AuthAlgorithm_us_ct2 /* IMPORTED_LONG_NAMED_INTEGER */, us_ct2 /* IMPORTED_SHORT_NAMED_INTEGER */, AuthAlgorithm_us_dect /* IMPORTED_LONG_NAMED_INTEGER */, us_dect /* IMPORTED_SHORT_NAMED_INTEGER */, AuthAlgorithm_us_gsm /* IMPORTED_LONG_NAMED_INTEGER */, us_gsm /* IMPORTED_SHORT_NAMED_INTEGER */, _decode_AuthAlgorithm, _encode_AuthAlgorithm } from "../CT-Authentication-Operations/AuthAlgorithm.ta.mjs";
-import { CtatParamInfo_info, _decode_CtatParamInfo_info, _encode_CtatParamInfo_info } from "../CT-Authentication-Operations/CtatParamInfo-info.ta.mjs";
+import { type CtatParamInfo_info, _decode_CtatParamInfo_info, _encode_CtatParamInfo_info } from "../CT-Authentication-Operations/CtatParamInfo-info.ta.mjs";
 // export { CtatParamInfo_info, _decode_CtatParamInfo_info, _encode_CtatParamInfo_info } from "../CT-Authentication-Operations/CtatParamInfo-info.ta.mjs";
 
 
@@ -168,7 +168,7 @@ let _cached_encoder_for_CtatParamInfo: $.ASN1Encoder<CtatParamInfo> | null = nul
  */
 export
 function _encode_CtatParamInfo (value: CtatParamInfo, elGetter: $.ASN1Encoder<any>): _Element {
-    if (!_cached_encoder_for_CtatParamInfo) { _cached_encoder_for_CtatParamInfo = function (value: CtatParamInfo, elGetter: $.ASN1Encoder<CtatParamInfo>): _Element {
+    if (!_cached_encoder_for_CtatParamInfo) { _cached_encoder_for_CtatParamInfo = function (value: CtatParamInfo): _Element {
     return $._encodeSequence([
         /* REQUIRED   */ _encode_AuthAlgorithm(value.authAlgorithm, $.BER),
         /* REQUIRED   */ _encode_CtatParamInfo_info(value.info, $.BER)

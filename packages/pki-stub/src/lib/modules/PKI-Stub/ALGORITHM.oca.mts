@@ -1,7 +1,7 @@
 /* eslint-disable */
 import {
-    OBJECT_IDENTIFIER,
-    ASN1Element as _Element,
+    type OBJECT_IDENTIFIER,
+    type ASN1Element as _Element,
     ASN1TagClass as _TagClass,
     ASN1Construction as _Construction,
     ASN1UniversalType as _UniversalType,
@@ -26,8 +26,8 @@ import * as $ from "@wildboar/asn1/functional";
  *
  * ```asn1
  * ALGORITHM ::= CLASS {
- *   &Type          OPTIONAL,
- *   &DynParms      OPTIONAL,
+ *   &Type          type OPTIONAL,
+ *   &DynParms      type OPTIONAL,
  *   &id            OBJECT IDENTIFIER UNIQUE }
  * WITH SYNTAX {
  *   [PARMS         &Type]

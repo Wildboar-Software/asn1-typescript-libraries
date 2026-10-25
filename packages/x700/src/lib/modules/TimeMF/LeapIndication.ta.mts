@@ -1,6 +1,6 @@
 /* eslint-disable */
 import {
-    ASN1Element as _Element,
+    type ASN1Element as _Element,
     ASN1TagClass as _TagClass,
     ASN1Construction as _Construction,
     ASN1UniversalType as _UniversalType,
@@ -98,7 +98,7 @@ export type LeapIndication = _enum_for_LeapIndication;
  *
  * @enum {number}
  */
-export const LeapIndication = _enum_for_LeapIndication;
+export const LeapIndication: typeof _enum_for_LeapIndication = _enum_for_LeapIndication;
 
 /**
  * @summary LeapIndication_noWarning
@@ -109,7 +109,7 @@ export const LeapIndication = _enum_for_LeapIndication;
  * @constant
  * @type {number}
  */
-export const LeapIndication_noWarning: LeapIndication =
+export const LeapIndication_noWarning: _enum_for_LeapIndication.noWarning =
     LeapIndication.noWarning; /* LONG_NAMED_ENUMERATED_VALUE */
 
 /**
@@ -117,7 +117,7 @@ export const LeapIndication_noWarning: LeapIndication =
  * @constant
  * @type {number}
  */
-export const noWarning: LeapIndication =
+export const noWarning: _enum_for_LeapIndication.noWarning =
     LeapIndication.noWarning; /* SHORT_NAMED_ENUMERATED_VALUE */
 
 /**
@@ -130,7 +130,7 @@ export const noWarning: LeapIndication =
  * @constant
  * @type {number}
  */
-export const LeapIndication_minuteHas61Seconds: LeapIndication =
+export const LeapIndication_minuteHas61Seconds: _enum_for_LeapIndication.minuteHas61Seconds =
     LeapIndication.minuteHas61Seconds; /* LONG_NAMED_ENUMERATED_VALUE */
 
 /**
@@ -138,7 +138,7 @@ export const LeapIndication_minuteHas61Seconds: LeapIndication =
  * @constant
  * @type {number}
  */
-export const minuteHas61Seconds: LeapIndication =
+export const minuteHas61Seconds: _enum_for_LeapIndication.minuteHas61Seconds =
     LeapIndication.minuteHas61Seconds; /* SHORT_NAMED_ENUMERATED_VALUE */
 
 /**
@@ -151,7 +151,7 @@ export const minuteHas61Seconds: LeapIndication =
  * @constant
  * @type {number}
  */
-export const LeapIndication_minuteHas59Seconds: LeapIndication =
+export const LeapIndication_minuteHas59Seconds: _enum_for_LeapIndication.minuteHas59Seconds =
     LeapIndication.minuteHas59Seconds; /* LONG_NAMED_ENUMERATED_VALUE */
 
 /**
@@ -159,7 +159,7 @@ export const LeapIndication_minuteHas59Seconds: LeapIndication =
  * @constant
  * @type {number}
  */
-export const minuteHas59Seconds: LeapIndication =
+export const minuteHas59Seconds: _enum_for_LeapIndication.minuteHas59Seconds =
     LeapIndication.minuteHas59Seconds; /* SHORT_NAMED_ENUMERATED_VALUE */
 
 /**
@@ -172,7 +172,7 @@ export const minuteHas59Seconds: LeapIndication =
  * @constant
  * @type {number}
  */
-export const LeapIndication_alarmCondition: LeapIndication =
+export const LeapIndication_alarmCondition: _enum_for_LeapIndication.alarmCondition =
     LeapIndication.alarmCondition; /* LONG_NAMED_ENUMERATED_VALUE */
 
 /**
@@ -180,14 +180,27 @@ export const LeapIndication_alarmCondition: LeapIndication =
  * @constant
  * @type {number}
  */
-export const alarmCondition: LeapIndication =
+export const alarmCondition: _enum_for_LeapIndication.alarmCondition =
     LeapIndication.alarmCondition; /* SHORT_NAMED_ENUMERATED_VALUE */
 
 
-export const _decode_LeapIndication = $._decodeEnumerated;
+export function _decode_LeapIndication(el: _Element): LeapIndication {
+    const enumerated = $._decodeEnumerated(el);
+    switch (enumerated) {
+        case LeapIndication.noWarning: return LeapIndication.noWarning;
+        case LeapIndication.minuteHas61Seconds: return LeapIndication.minuteHas61Seconds;
+        case LeapIndication.minuteHas59Seconds: return LeapIndication.minuteHas59Seconds;
+        case LeapIndication.alarmCondition: return LeapIndication.alarmCondition;
+        default:
+            throw new _ConstructionError(
+                'Invalid ENUMERATED value ' + enumerated + ' for LeapIndication.',
+                el,
+            );
+    }
+}
 
 
-export const _encode_LeapIndication = $._encodeEnumerated;
+export const _encode_LeapIndication: $.ASN1Encoder<LeapIndication> = $._encodeEnumerated as $.ASN1Encoder<LeapIndication>;
 
 
 /* eslint-enable */

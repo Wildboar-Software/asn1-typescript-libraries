@@ -1,6 +1,8 @@
 {
   "extends": "./tsconfig.json",
   "compilerOptions": {
+    "isolatedDeclarations": true,
+    "erasableSyntaxOnly": true,
     "outDir": "../../dist/out-tsc",
     "declaration": true,
     "types": [
@@ -8,8 +10,7 @@
     ],
     "rootDir": ".",
     "strict": true,
-    "strictNullChecks": true,
-    "erasableSyntaxOnly": true,
+    "strictNullChecks": true
   },
   "exclude": [
     "**/*.spec.mts",

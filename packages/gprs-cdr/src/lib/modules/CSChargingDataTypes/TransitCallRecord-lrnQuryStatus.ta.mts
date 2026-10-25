@@ -1,6 +1,6 @@
 /* eslint-disable */
 import {
-    INTEGER
+    type INTEGER
 } from "@wildboar/asn1";
 import * as $ from "@wildboar/asn1/functional";
 
@@ -33,7 +33,7 @@ type TransitCallRecord_lrnQuryStatus = INTEGER;
  * @type {number}
  */
 export
-const TransitCallRecord_lrnQuryStatus_successfulQuery: TransitCallRecord_lrnQuryStatus = 1; /* LONG_NAMED_INTEGER_VALUE */
+const TransitCallRecord_lrnQuryStatus_successfulQuery: 1 = 1 satisfies TransitCallRecord_lrnQuryStatus; /* LONG_NAMED_INTEGER_VALUE */
 
 /**
  * @summary TransitCallRecord_lrnQuryStatus_successfulQuery
@@ -41,7 +41,7 @@ const TransitCallRecord_lrnQuryStatus_successfulQuery: TransitCallRecord_lrnQury
  * @type {number}
  */
 export
-const successfulQuery: TransitCallRecord_lrnQuryStatus = TransitCallRecord_lrnQuryStatus_successfulQuery; /* SHORT_NAMED_INTEGER_VALUE */
+const successfulQuery: 1 = TransitCallRecord_lrnQuryStatus_successfulQuery; /* SHORT_NAMED_INTEGER_VALUE */
 
 /**
  * @summary TransitCallRecord_lrnQuryStatus_noQueryResponseMsg
@@ -49,7 +49,7 @@ const successfulQuery: TransitCallRecord_lrnQuryStatus = TransitCallRecord_lrnQu
  * @type {number}
  */
 export
-const TransitCallRecord_lrnQuryStatus_noQueryResponseMsg: TransitCallRecord_lrnQuryStatus = 2; /* LONG_NAMED_INTEGER_VALUE */
+const TransitCallRecord_lrnQuryStatus_noQueryResponseMsg: 2 = 2 satisfies TransitCallRecord_lrnQuryStatus; /* LONG_NAMED_INTEGER_VALUE */
 
 /**
  * @summary TransitCallRecord_lrnQuryStatus_noQueryResponseMsg
@@ -57,7 +57,7 @@ const TransitCallRecord_lrnQuryStatus_noQueryResponseMsg: TransitCallRecord_lrnQ
  * @type {number}
  */
 export
-const noQueryResponseMsg: TransitCallRecord_lrnQuryStatus = TransitCallRecord_lrnQuryStatus_noQueryResponseMsg; /* SHORT_NAMED_INTEGER_VALUE */
+const noQueryResponseMsg: 2 = TransitCallRecord_lrnQuryStatus_noQueryResponseMsg; /* SHORT_NAMED_INTEGER_VALUE */
 
 /**
  * @summary TransitCallRecord_lrnQuryStatus_queryProtocolErr
@@ -65,7 +65,7 @@ const noQueryResponseMsg: TransitCallRecord_lrnQuryStatus = TransitCallRecord_lr
  * @type {number}
  */
 export
-const TransitCallRecord_lrnQuryStatus_queryProtocolErr: TransitCallRecord_lrnQuryStatus = 4; /* LONG_NAMED_INTEGER_VALUE */
+const TransitCallRecord_lrnQuryStatus_queryProtocolErr: 4 = 4 satisfies TransitCallRecord_lrnQuryStatus; /* LONG_NAMED_INTEGER_VALUE */
 
 /**
  * @summary TransitCallRecord_lrnQuryStatus_queryProtocolErr
@@ -73,7 +73,7 @@ const TransitCallRecord_lrnQuryStatus_queryProtocolErr: TransitCallRecord_lrnQur
  * @type {number}
  */
 export
-const queryProtocolErr: TransitCallRecord_lrnQuryStatus = TransitCallRecord_lrnQuryStatus_queryProtocolErr; /* SHORT_NAMED_INTEGER_VALUE */
+const queryProtocolErr: 4 = TransitCallRecord_lrnQuryStatus_queryProtocolErr; /* SHORT_NAMED_INTEGER_VALUE */
 
 /**
  * @summary TransitCallRecord_lrnQuryStatus_queryResponseDataErr
@@ -81,7 +81,7 @@ const queryProtocolErr: TransitCallRecord_lrnQuryStatus = TransitCallRecord_lrnQ
  * @type {number}
  */
 export
-const TransitCallRecord_lrnQuryStatus_queryResponseDataErr: TransitCallRecord_lrnQuryStatus = 5; /* LONG_NAMED_INTEGER_VALUE */
+const TransitCallRecord_lrnQuryStatus_queryResponseDataErr: 5 = 5 satisfies TransitCallRecord_lrnQuryStatus; /* LONG_NAMED_INTEGER_VALUE */
 
 /**
  * @summary TransitCallRecord_lrnQuryStatus_queryResponseDataErr
@@ -89,7 +89,7 @@ const TransitCallRecord_lrnQuryStatus_queryResponseDataErr: TransitCallRecord_lr
  * @type {number}
  */
 export
-const queryResponseDataErr: TransitCallRecord_lrnQuryStatus = TransitCallRecord_lrnQuryStatus_queryResponseDataErr; /* SHORT_NAMED_INTEGER_VALUE */
+const queryResponseDataErr: 5 = TransitCallRecord_lrnQuryStatus_queryResponseDataErr; /* SHORT_NAMED_INTEGER_VALUE */
 
 /**
  * @summary TransitCallRecord_lrnQuryStatus_queryRejected
@@ -97,7 +97,7 @@ const queryResponseDataErr: TransitCallRecord_lrnQuryStatus = TransitCallRecord_
  * @type {number}
  */
 export
-const TransitCallRecord_lrnQuryStatus_queryRejected: TransitCallRecord_lrnQuryStatus = 6; /* LONG_NAMED_INTEGER_VALUE */
+const TransitCallRecord_lrnQuryStatus_queryRejected: 6 = 6 satisfies TransitCallRecord_lrnQuryStatus; /* LONG_NAMED_INTEGER_VALUE */
 
 /**
  * @summary TransitCallRecord_lrnQuryStatus_queryRejected
@@ -105,7 +105,7 @@ const TransitCallRecord_lrnQuryStatus_queryRejected: TransitCallRecord_lrnQurySt
  * @type {number}
  */
 export
-const queryRejected: TransitCallRecord_lrnQuryStatus = TransitCallRecord_lrnQuryStatus_queryRejected; /* SHORT_NAMED_INTEGER_VALUE */
+const queryRejected: 6 = TransitCallRecord_lrnQuryStatus_queryRejected; /* SHORT_NAMED_INTEGER_VALUE */
 
 /**
  * @summary TransitCallRecord_lrnQuryStatus_queryNotPerformed
@@ -113,7 +113,7 @@ const queryRejected: TransitCallRecord_lrnQuryStatus = TransitCallRecord_lrnQury
  * @type {number}
  */
 export
-const TransitCallRecord_lrnQuryStatus_queryNotPerformed: TransitCallRecord_lrnQuryStatus = 9; /* LONG_NAMED_INTEGER_VALUE */
+const TransitCallRecord_lrnQuryStatus_queryNotPerformed: 9 = 9 satisfies TransitCallRecord_lrnQuryStatus; /* LONG_NAMED_INTEGER_VALUE */
 
 /**
  * @summary TransitCallRecord_lrnQuryStatus_queryNotPerformed
@@ -121,7 +121,7 @@ const TransitCallRecord_lrnQuryStatus_queryNotPerformed: TransitCallRecord_lrnQu
  * @type {number}
  */
 export
-const queryNotPerformed: TransitCallRecord_lrnQuryStatus = TransitCallRecord_lrnQuryStatus_queryNotPerformed; /* SHORT_NAMED_INTEGER_VALUE */
+const queryNotPerformed: 9 = TransitCallRecord_lrnQuryStatus_queryNotPerformed; /* SHORT_NAMED_INTEGER_VALUE */
 
 /**
  * @summary TransitCallRecord_lrnQuryStatus_queryUnsuccessful
@@ -129,7 +129,7 @@ const queryNotPerformed: TransitCallRecord_lrnQuryStatus = TransitCallRecord_lrn
  * @type {number}
  */
 export
-const TransitCallRecord_lrnQuryStatus_queryUnsuccessful: TransitCallRecord_lrnQuryStatus = 99; /* LONG_NAMED_INTEGER_VALUE */
+const TransitCallRecord_lrnQuryStatus_queryUnsuccessful: 99 = 99 satisfies TransitCallRecord_lrnQuryStatus; /* LONG_NAMED_INTEGER_VALUE */
 
 /**
  * @summary TransitCallRecord_lrnQuryStatus_queryUnsuccessful
@@ -137,7 +137,7 @@ const TransitCallRecord_lrnQuryStatus_queryUnsuccessful: TransitCallRecord_lrnQu
  * @type {number}
  */
 export
-const queryUnsuccessful: TransitCallRecord_lrnQuryStatus = TransitCallRecord_lrnQuryStatus_queryUnsuccessful; /* SHORT_NAMED_INTEGER_VALUE */
+const queryUnsuccessful: 99 = TransitCallRecord_lrnQuryStatus_queryUnsuccessful; /* SHORT_NAMED_INTEGER_VALUE */
 
 export
 const _decode_TransitCallRecord_lrnQuryStatus: $.ASN1Decoder<TransitCallRecord_lrnQuryStatus> = $._decodeInteger;

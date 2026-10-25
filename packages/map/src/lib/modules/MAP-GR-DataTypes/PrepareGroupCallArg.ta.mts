@@ -1,21 +1,21 @@
 /* eslint-disable */
 import {
-    NULL,
-    OPTIONAL,
-    ASN1Element as _Element,
+    type NULL,
+    type OPTIONAL,
+    type ASN1Element as _Element,
     ASN1TagClass as _TagClass
 } from "@wildboar/asn1";
 import * as $ from "@wildboar/asn1/functional";
-import { ASCI_CallReference, _decode_ASCI_CallReference, _encode_ASCI_CallReference } from "../MAP-CommonDataTypes/ASCI-CallReference.ta.mjs";
-import { EMLPP_Priority, _decode_EMLPP_Priority, _encode_EMLPP_Priority } from "../MAP-CommonDataTypes/EMLPP-Priority.ta.mjs";
+import { type ASCI_CallReference, _decode_ASCI_CallReference, _encode_ASCI_CallReference } from "../MAP-CommonDataTypes/ASCI-CallReference.ta.mjs";
+import { type EMLPP_Priority, _decode_EMLPP_Priority, _encode_EMLPP_Priority } from "../MAP-CommonDataTypes/EMLPP-Priority.ta.mjs";
 import { ExtensionContainer, _decode_ExtensionContainer, _encode_ExtensionContainer } from "../MAP-ExtensionDataTypes/ExtensionContainer.ta.mjs";
-import { CODEC_Info, _decode_CODEC_Info, _encode_CODEC_Info } from "../MAP-GR-DataTypes/CODEC-Info.ta.mjs";
-import { CipheringAlgorithm, _decode_CipheringAlgorithm, _encode_CipheringAlgorithm } from "../MAP-GR-DataTypes/CipheringAlgorithm.ta.mjs";
-import { GroupKeyNumber, _decode_GroupKeyNumber, _encode_GroupKeyNumber } from "../MAP-GR-DataTypes/GroupKeyNumber.ta.mjs";
-import { VSTK_RAND, _decode_VSTK_RAND, _encode_VSTK_RAND } from "../MAP-GR-DataTypes/VSTK-RAND.ta.mjs";
-import { VSTK, _decode_VSTK, _encode_VSTK } from "../MAP-GR-DataTypes/VSTK.ta.mjs";
-import { Kc, _decode_Kc, _encode_Kc } from "../MAP-MS-DataTypes/Kc.ta.mjs";
-import { Ext_TeleserviceCode, _decode_Ext_TeleserviceCode, _encode_Ext_TeleserviceCode } from "../MAP-TS-Code/Ext-TeleserviceCode.ta.mjs";
+import { type CODEC_Info, _decode_CODEC_Info, _encode_CODEC_Info } from "../MAP-GR-DataTypes/CODEC-Info.ta.mjs";
+import { type CipheringAlgorithm, _decode_CipheringAlgorithm, _encode_CipheringAlgorithm } from "../MAP-GR-DataTypes/CipheringAlgorithm.ta.mjs";
+import { type GroupKeyNumber, _decode_GroupKeyNumber, _encode_GroupKeyNumber } from "../MAP-GR-DataTypes/GroupKeyNumber.ta.mjs";
+import { type VSTK_RAND, _decode_VSTK_RAND, _encode_VSTK_RAND } from "../MAP-GR-DataTypes/VSTK-RAND.ta.mjs";
+import { type VSTK, _decode_VSTK, _encode_VSTK } from "../MAP-GR-DataTypes/VSTK.ta.mjs";
+import { type Kc, _decode_Kc, _encode_Kc } from "../MAP-MS-DataTypes/Kc.ta.mjs";
+import { type Ext_TeleserviceCode, _decode_Ext_TeleserviceCode, _encode_Ext_TeleserviceCode } from "../MAP-TS-Code/Ext-TeleserviceCode.ta.mjs";
 
 
 /**
@@ -34,16 +34,16 @@ import { Ext_TeleserviceCode, _decode_Ext_TeleserviceCode, _encode_Ext_Teleservi
  *     asciCallReference    ASCI-CallReference,
  *     codec-Info    CODEC-Info,
  *     cipheringAlgorithm    CipheringAlgorithm,
- *     groupKeyNumber-Vk-Id    [0] GroupKeyNumber    OPTIONAL,
- *     groupKey    [1] Kc    OPTIONAL, 
+ *     groupKeyNumber-Vk-Id    [0] GroupKeyNumber    type OPTIONAL,
+ *     groupKey    [1] Kc    type OPTIONAL, 
  *     -- this parameter shall not be sent and shall be discarded if received
- *     priority    [2] EMLPP-Priority    OPTIONAL,
- *     uplinkFree    [3] NULL    OPTIONAL,
- *     extensionContainer    [4] ExtensionContainer    OPTIONAL,
+ *     priority    [2] EMLPP-Priority    type OPTIONAL,
+ *     uplinkFree    [3] NULL    type OPTIONAL,
+ *     extensionContainer    [4] ExtensionContainer    type OPTIONAL,
  *     ...,
- *     vstk    [5] VSTK    OPTIONAL,
- *     vstk-rand    [6] VSTK-RAND    OPTIONAL,
- *     talkerChannelParameter    [7] NULL    OPTIONAL,
+ *     vstk    [5] VSTK    type OPTIONAL,
+ *     vstk-rand    [6] VSTK-RAND    type OPTIONAL,
+ *     talkerChannelParameter    [7] NULL    type OPTIONAL,
  *     uplinkReplyIndicator    [8] NULL    OPTIONAL}
  * ```
  * 
@@ -51,158 +51,188 @@ import { Ext_TeleserviceCode, _decode_Ext_TeleserviceCode, _encode_Ext_Teleservi
  */
 export
 class PrepareGroupCallArg {
+    /**
+     * @summary `teleservice`.
+     * @description
+     *
+     * Voice Broadcast Service or Voice Group Call Service (clause 10.4.3).
+     *
+     * @public
+     * @readonly
+     */
+    public readonly teleservice: Ext_TeleserviceCode;
+    /**
+     * @summary `asciCallReference`.
+     * @description
+     *
+     * Broadcast or group call reference used to access the VBS-GCR or
+     * VGCS-GCR in the Relay MSC (clause 10.4.3).
+     *
+     * @public
+     * @readonly
+     */
+    public readonly asciCallReference: ASCI_CallReference;
+    /**
+     * @summary `codec_Info`.
+     * @description
+     *
+     * Codecs allowed for this call. Channel type including element
+     * identifier and length as in 3GPP TS 48.008 (3GPP TS 29.002 V19.1.0
+     * clauses 10.4.3 and 17.7.12).
+     *
+     * @public
+     * @readonly
+     */
+    public readonly codec_Info: CODEC_Info;
+    /**
+     * @summary `cipheringAlgorithm`.
+     * @description
+     *
+     * Permitted algorithms in encryption information as in 3GPP TS 48.008
+     * (3GPP TS 29.002 V19.1.0 clauses 10.4.3 and 17.7.12).
+     *
+     * @public
+     * @readonly
+     */
+    public readonly cipheringAlgorithm: CipheringAlgorithm;
+    /**
+     * @summary `groupKeyNumber_Vk_Id`.
+     * @description
+     *
+     * Broadcast to the MS to derive the radio ciphering key (3GPP TS
+     * 43.020). Values 2–15 reserved. Present if ciphering applies (3GPP TS
+     * 29.002 V19.1.0 clause 10.4.3).
+     *
+     * @public
+     * @readonly
+     */
+    public readonly groupKeyNumber_Vk_Id?: OPTIONAL<GroupKeyNumber>;
+    /**
+     * @summary `groupKey`.
+     * @description
+     *
+     * Shall not be sent and shall be discarded if received (3GPP TS 29.002
+     * V19.1.0 clause 17.7.12).
+     *
+     * @public
+     * @readonly
+     */
+    public readonly groupKey?: OPTIONAL<Kc>;
+    /**
+     * @summary `priority`.
+     * @description
+     *
+     * Default eMLPP priority of the call (clause 10.4.3).
+     *
+     * @public
+     * @readonly
+     */
+    public readonly priority?: OPTIONAL<EMLPP_Priority>;
+    /**
+     * @summary `uplinkFree`.
+     * @description
+     *
+     * Uplink Free Indicator: call is initiated from a dispatcher (clause
+     * 10.4.3).
+     *
+     * @public
+     * @readonly
+     */
+    public readonly uplinkFree?: OPTIONAL<NULL>;
+    /**
+     * @summary `extensionContainer`.
+     * @description
+     *
+     * Private or PCS extensions (3GPP TS 29.002 V19.1.0 clause 17.7.11).
+     *
+     * @public
+     * @readonly
+     */
+    public readonly extensionContainer?: OPTIONAL<ExtensionContainer>;
+    /**
+     * @summary `vstk`.
+     * @description
+     *
+     * VGCS/VBS Short Term Key to derive the radio ciphering key (3GPP TS
+     * 43.020). Present if ciphering applies (3GPP TS 29.002 V19.1.0 clause
+     * 10.4.3).
+     *
+     * @public
+     * @readonly
+     */
+    public readonly vstk?: OPTIONAL<VSTK>;
+    /**
+     * @summary `vstk_rand`.
+     * @description
+     *
+     * Random number broadcast to the MS to derive the group ciphering key
+     * (3GPP TS 43.020). Present if ciphering applies (3GPP TS 29.002
+     * V19.1.0 clause 10.4.3).
+     *
+     * @public
+     * @readonly
+     */
+    public readonly vstk_rand?: OPTIONAL<VSTK_RAND>;
+    /**
+     * @summary `talkerChannelParameter`.
+     * @description
+     *
+     * Dedicated channel shall be established and maintained for the talking
+     * service subscriber (clause 10.4.3).
+     *
+     * @public
+     * @readonly
+     */
+    public readonly talkerChannelParameter?: OPTIONAL<NULL>;
+    /**
+     * @summary `uplinkReplyIndicator`.
+     * @description
+     *
+     * Uplink reply procedure applies for this VGCS/VBS call (clause
+     * 10.4.3).
+     *
+     * @public
+     * @readonly
+     */
+    public readonly uplinkReplyIndicator?: OPTIONAL<NULL>;
+    /**
+     * @summary Extensions that are not recognized.
+     * @public
+     * @readonly
+     */
+    public readonly _unrecognizedExtensionsList: _Element[];
+
     constructor (
-        /**
-         * @summary `teleservice`.
-         * @description
-         *
-         * Voice Broadcast Service or Voice Group Call Service (clause 10.4.3).
-         *
-         * @public
-         * @readonly
-         */
-        readonly teleservice: Ext_TeleserviceCode,
-        /**
-         * @summary `asciCallReference`.
-         * @description
-         *
-         * Broadcast or group call reference used to access the VBS-GCR or
-         * VGCS-GCR in the Relay MSC (clause 10.4.3).
-         *
-         * @public
-         * @readonly
-         */
-        readonly asciCallReference: ASCI_CallReference,
-        /**
-         * @summary `codec_Info`.
-         * @description
-         *
-         * Codecs allowed for this call. Channel type including element
-         * identifier and length as in 3GPP TS 48.008 (3GPP TS 29.002 V19.1.0
-         * clauses 10.4.3 and 17.7.12).
-         *
-         * @public
-         * @readonly
-         */
-        readonly codec_Info: CODEC_Info,
-        /**
-         * @summary `cipheringAlgorithm`.
-         * @description
-         *
-         * Permitted algorithms in encryption information as in 3GPP TS 48.008
-         * (3GPP TS 29.002 V19.1.0 clauses 10.4.3 and 17.7.12).
-         *
-         * @public
-         * @readonly
-         */
-        readonly cipheringAlgorithm: CipheringAlgorithm,
-        /**
-         * @summary `groupKeyNumber_Vk_Id`.
-         * @description
-         *
-         * Broadcast to the MS to derive the radio ciphering key (3GPP TS
-         * 43.020). Values 2–15 reserved. Present if ciphering applies (3GPP TS
-         * 29.002 V19.1.0 clause 10.4.3).
-         *
-         * @public
-         * @readonly
-         */
-        readonly groupKeyNumber_Vk_Id?: OPTIONAL<GroupKeyNumber>,
-        /**
-         * @summary `groupKey`.
-         * @description
-         *
-         * Shall not be sent and shall be discarded if received (3GPP TS 29.002
-         * V19.1.0 clause 17.7.12).
-         *
-         * @public
-         * @readonly
-         */
-        readonly groupKey?: OPTIONAL<Kc>,
-        /**
-         * @summary `priority`.
-         * @description
-         *
-         * Default eMLPP priority of the call (clause 10.4.3).
-         *
-         * @public
-         * @readonly
-         */
-        readonly priority?: OPTIONAL<EMLPP_Priority>,
-        /**
-         * @summary `uplinkFree`.
-         * @description
-         *
-         * Uplink Free Indicator: call is initiated from a dispatcher (clause
-         * 10.4.3).
-         *
-         * @public
-         * @readonly
-         */
-        readonly uplinkFree?: OPTIONAL<NULL>,
-        /**
-         * @summary `extensionContainer`.
-         * @description
-         *
-         * Private or PCS extensions (3GPP TS 29.002 V19.1.0 clause 17.7.11).
-         *
-         * @public
-         * @readonly
-         */
-        readonly extensionContainer?: OPTIONAL<ExtensionContainer>,
-        /**
-         * @summary `vstk`.
-         * @description
-         *
-         * VGCS/VBS Short Term Key to derive the radio ciphering key (3GPP TS
-         * 43.020). Present if ciphering applies (3GPP TS 29.002 V19.1.0 clause
-         * 10.4.3).
-         *
-         * @public
-         * @readonly
-         */
-        readonly vstk?: OPTIONAL<VSTK>,
-        /**
-         * @summary `vstk_rand`.
-         * @description
-         *
-         * Random number broadcast to the MS to derive the group ciphering key
-         * (3GPP TS 43.020). Present if ciphering applies (3GPP TS 29.002
-         * V19.1.0 clause 10.4.3).
-         *
-         * @public
-         * @readonly
-         */
-        readonly vstk_rand?: OPTIONAL<VSTK_RAND>,
-        /**
-         * @summary `talkerChannelParameter`.
-         * @description
-         *
-         * Dedicated channel shall be established and maintained for the talking
-         * service subscriber (clause 10.4.3).
-         *
-         * @public
-         * @readonly
-         */
-        readonly talkerChannelParameter?: OPTIONAL<NULL>,
-        /**
-         * @summary `uplinkReplyIndicator`.
-         * @description
-         *
-         * Uplink reply procedure applies for this VGCS/VBS call (clause
-         * 10.4.3).
-         *
-         * @public
-         * @readonly
-         */
-        readonly uplinkReplyIndicator?: OPTIONAL<NULL>,
-        /**
-         * @summary Extensions that are not recognized.
-         * @public
-         * @readonly
-         */
-        readonly _unrecognizedExtensionsList: _Element[] = []
-    ) {}
+        teleservice: Ext_TeleserviceCode,
+        asciCallReference: ASCI_CallReference,
+        codec_Info: CODEC_Info,
+        cipheringAlgorithm: CipheringAlgorithm,
+        groupKeyNumber_Vk_Id?: OPTIONAL<GroupKeyNumber>,
+        groupKey?: OPTIONAL<Kc>,
+        priority?: OPTIONAL<EMLPP_Priority>,
+        uplinkFree?: OPTIONAL<NULL>,
+        extensionContainer?: OPTIONAL<ExtensionContainer>,
+        vstk?: OPTIONAL<VSTK>,
+        vstk_rand?: OPTIONAL<VSTK_RAND>,
+        talkerChannelParameter?: OPTIONAL<NULL>,
+        uplinkReplyIndicator?: OPTIONAL<NULL>,
+        _unrecognizedExtensionsList: _Element[] = []
+    ) {
+        this.teleservice = teleservice;
+        this.asciCallReference = asciCallReference;
+        this.codec_Info = codec_Info;
+        this.cipheringAlgorithm = cipheringAlgorithm;
+        this.groupKeyNumber_Vk_Id = groupKeyNumber_Vk_Id;
+        this.groupKey = groupKey;
+        this.priority = priority;
+        this.uplinkFree = uplinkFree;
+        this.extensionContainer = extensionContainer;
+        this.vstk = vstk;
+        this.vstk_rand = vstk_rand;
+        this.talkerChannelParameter = talkerChannelParameter;
+        this.uplinkReplyIndicator = uplinkReplyIndicator;
+        this._unrecognizedExtensionsList = _unrecognizedExtensionsList;
+    }
 
     /**
      * @summary Restructures an object into a PrepareGroupCallArg

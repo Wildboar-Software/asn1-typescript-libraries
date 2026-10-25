@@ -1,6 +1,6 @@
 /* eslint-disable */
 import {
-    ENUMERATED
+    type ENUMERATED
 } from "@wildboar/asn1";
 import * as $ from "@wildboar/asn1/functional";
 
@@ -59,7 +59,7 @@ type I_WLANEvent = _enum_for_I_WLANEvent | ENUMERATED;
  * @type {number}
  */
 export
-const I_WLANEvent_i_WLANAccessInitiation: I_WLANEvent = 1; /* LONG_NAMED_ENUMERATED_VALUE */
+const I_WLANEvent_i_WLANAccessInitiation: _enum_for_I_WLANEvent.i_WLANAccessInitiation = _enum_for_I_WLANEvent.i_WLANAccessInitiation; /* LONG_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary i_WLANAccessInitiation
@@ -71,7 +71,7 @@ const I_WLANEvent_i_WLANAccessInitiation: I_WLANEvent = 1; /* LONG_NAMED_ENUMERA
  * @type {number}
  */
 export
-const i_WLANAccessInitiation: I_WLANEvent = I_WLANEvent_i_WLANAccessInitiation; /* SHORT_NAMED_ENUMERATED_VALUE */
+const i_WLANAccessInitiation: _enum_for_I_WLANEvent.i_WLANAccessInitiation = I_WLANEvent_i_WLANAccessInitiation; /* SHORT_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary I_WLANEvent_i_WLANAccessTermination
@@ -84,7 +84,7 @@ const i_WLANAccessInitiation: I_WLANEvent = I_WLANEvent_i_WLANAccessInitiation; 
  * @type {number}
  */
 export
-const I_WLANEvent_i_WLANAccessTermination: I_WLANEvent = 2; /* LONG_NAMED_ENUMERATED_VALUE */
+const I_WLANEvent_i_WLANAccessTermination: _enum_for_I_WLANEvent.i_WLANAccessTermination = _enum_for_I_WLANEvent.i_WLANAccessTermination; /* LONG_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary i_WLANAccessTermination
@@ -95,7 +95,7 @@ const I_WLANEvent_i_WLANAccessTermination: I_WLANEvent = 2; /* LONG_NAMED_ENUMER
  * @type {number}
  */
 export
-const i_WLANAccessTermination: I_WLANEvent = I_WLANEvent_i_WLANAccessTermination; /* SHORT_NAMED_ENUMERATED_VALUE */
+const i_WLANAccessTermination: _enum_for_I_WLANEvent.i_WLANAccessTermination = I_WLANEvent_i_WLANAccessTermination; /* SHORT_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary I_WLANEvent_i_WLANTunnelEstablishment
@@ -108,7 +108,7 @@ const i_WLANAccessTermination: I_WLANEvent = I_WLANEvent_i_WLANAccessTermination
  * @type {number}
  */
 export
-const I_WLANEvent_i_WLANTunnelEstablishment: I_WLANEvent = 3; /* LONG_NAMED_ENUMERATED_VALUE */
+const I_WLANEvent_i_WLANTunnelEstablishment: _enum_for_I_WLANEvent.i_WLANTunnelEstablishment = _enum_for_I_WLANEvent.i_WLANTunnelEstablishment; /* LONG_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary i_WLANTunnelEstablishment
@@ -119,7 +119,7 @@ const I_WLANEvent_i_WLANTunnelEstablishment: I_WLANEvent = 3; /* LONG_NAMED_ENUM
  * @type {number}
  */
 export
-const i_WLANTunnelEstablishment: I_WLANEvent = I_WLANEvent_i_WLANTunnelEstablishment; /* SHORT_NAMED_ENUMERATED_VALUE */
+const i_WLANTunnelEstablishment: _enum_for_I_WLANEvent.i_WLANTunnelEstablishment = I_WLANEvent_i_WLANTunnelEstablishment; /* SHORT_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary I_WLANEvent_i_WLANTunnelDisconnect
@@ -131,7 +131,7 @@ const i_WLANTunnelEstablishment: I_WLANEvent = I_WLANEvent_i_WLANTunnelEstablish
  * @type {number}
  */
 export
-const I_WLANEvent_i_WLANTunnelDisconnect: I_WLANEvent = 4; /* LONG_NAMED_ENUMERATED_VALUE */
+const I_WLANEvent_i_WLANTunnelDisconnect: _enum_for_I_WLANEvent.i_WLANTunnelDisconnect = _enum_for_I_WLANEvent.i_WLANTunnelDisconnect; /* LONG_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary i_WLANTunnelDisconnect
@@ -142,7 +142,7 @@ const I_WLANEvent_i_WLANTunnelDisconnect: I_WLANEvent = 4; /* LONG_NAMED_ENUMERA
  * @type {number}
  */
 export
-const i_WLANTunnelDisconnect: I_WLANEvent = I_WLANEvent_i_WLANTunnelDisconnect; /* SHORT_NAMED_ENUMERATED_VALUE */
+const i_WLANTunnelDisconnect: _enum_for_I_WLANEvent.i_WLANTunnelDisconnect = I_WLANEvent_i_WLANTunnelDisconnect; /* SHORT_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary I_WLANEvent_startOfInterceptionCommunicationActive
@@ -156,7 +156,7 @@ const i_WLANTunnelDisconnect: I_WLANEvent = I_WLANEvent_i_WLANTunnelDisconnect; 
  * @type {number}
  */
 export
-const I_WLANEvent_startOfInterceptionCommunicationActive: I_WLANEvent = 5; /* LONG_NAMED_ENUMERATED_VALUE */
+const I_WLANEvent_startOfInterceptionCommunicationActive: _enum_for_I_WLANEvent.startOfInterceptionCommunicationActive = _enum_for_I_WLANEvent.startOfInterceptionCommunicationActive; /* LONG_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary startOfInterceptionCommunicationActive
@@ -167,7 +167,7 @@ const I_WLANEvent_startOfInterceptionCommunicationActive: I_WLANEvent = 5; /* LO
  * @type {number}
  */
 export
-const startOfInterceptionCommunicationActive: I_WLANEvent = I_WLANEvent_startOfInterceptionCommunicationActive; /* SHORT_NAMED_ENUMERATED_VALUE */
+const startOfInterceptionCommunicationActive: _enum_for_I_WLANEvent.startOfInterceptionCommunicationActive = I_WLANEvent_startOfInterceptionCommunicationActive; /* SHORT_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary I_WLANEvent_packetDataHeaderInformation
@@ -180,7 +180,7 @@ const startOfInterceptionCommunicationActive: I_WLANEvent = I_WLANEvent_startOfI
  * @type {number}
  */
 export
-const I_WLANEvent_packetDataHeaderInformation: I_WLANEvent = 6; /* LONG_NAMED_ENUMERATED_VALUE */
+const I_WLANEvent_packetDataHeaderInformation: _enum_for_I_WLANEvent.packetDataHeaderInformation = _enum_for_I_WLANEvent.packetDataHeaderInformation; /* LONG_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary packetDataHeaderInformation
@@ -191,7 +191,7 @@ const I_WLANEvent_packetDataHeaderInformation: I_WLANEvent = 6; /* LONG_NAMED_EN
  * @type {number}
  */
 export
-const packetDataHeaderInformation: I_WLANEvent = I_WLANEvent_packetDataHeaderInformation; /* SHORT_NAMED_ENUMERATED_VALUE */
+const packetDataHeaderInformation: _enum_for_I_WLANEvent.packetDataHeaderInformation = I_WLANEvent_packetDataHeaderInformation; /* SHORT_NAMED_ENUMERATED_VALUE */
 export const _decode_I_WLANEvent: $.ASN1Decoder<I_WLANEvent> = $._decodeEnumerated;
 export const _encode_I_WLANEvent: $.ASN1Encoder<I_WLANEvent> = $._encodeEnumerated;
 

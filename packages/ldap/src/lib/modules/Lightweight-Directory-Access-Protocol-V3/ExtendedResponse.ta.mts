@@ -1,7 +1,7 @@
 /* eslint-disable */
 import {
-  OPTIONAL,
-  OCTET_STRING,
+  type OPTIONAL,
+  type OCTET_STRING,
   ASN1Element as _Element,
   ASN1TagClass as _TagClass,
   ASN1Construction as _Construction,
@@ -18,28 +18,28 @@ import {
   _encode_LDAPResult,
 } from '../Lightweight-Directory-Access-Protocol-V3/LDAPResult.ta.mjs';
 import {
-  LDAPOID,
+  type LDAPOID,
   _decode_LDAPOID,
   _encode_LDAPOID,
 } from '../Lightweight-Directory-Access-Protocol-V3/LDAPOID.ta.mjs';
 import {
-  LDAPResult_resultCode,
+  type LDAPResult_resultCode,
   _enum_for_LDAPResult_resultCode,
   _decode_LDAPResult_resultCode,
   _encode_LDAPResult_resultCode,
 } from '../Lightweight-Directory-Access-Protocol-V3/LDAPResult-resultCode.ta.mjs';
 import {
-  LDAPDN,
+  type LDAPDN,
   _decode_LDAPDN,
   _encode_LDAPDN,
 } from '../Lightweight-Directory-Access-Protocol-V3/LDAPDN.ta.mjs';
 import {
-  LDAPString,
+  type LDAPString,
   _decode_LDAPString,
   _encode_LDAPString,
 } from '../Lightweight-Directory-Access-Protocol-V3/LDAPString.ta.mjs';
 import {
-  Referral,
+  type Referral,
   _decode_Referral,
   _encode_Referral,
 } from '../Lightweight-Directory-Access-Protocol-V3/Referral.ta.mjs';
@@ -80,7 +80,7 @@ export class ExtendedResponse implements LDAPResult {
    * @public
    * @readonly
    */
-  readonly resultCode: LDAPResult_resultCode;
+  public readonly resultCode: LDAPResult_resultCode; /* REPLICATED_COMPONENT */
   /**
    * @summary `matchedDN`.
    * @description
@@ -90,7 +90,7 @@ export class ExtendedResponse implements LDAPResult {
    * @public
    * @readonly
    */
-  readonly matchedDN: LDAPDN;
+  public readonly matchedDN: LDAPDN; /* REPLICATED_COMPONENT */
   /**
    * @summary `diagnosticMessage`.
    * @description
@@ -100,7 +100,7 @@ export class ExtendedResponse implements LDAPResult {
    * @public
    * @readonly
    */
-  readonly diagnosticMessage: LDAPString;
+  public readonly diagnosticMessage: LDAPString; /* REPLICATED_COMPONENT */
   /**
    * @summary `referral`.
    * @description
@@ -110,7 +110,7 @@ export class ExtendedResponse implements LDAPResult {
    * @public
    * @readonly
    */
-  readonly referral?: OPTIONAL<Referral>;
+  public readonly referral?: OPTIONAL<Referral>; /* REPLICATED_COMPONENT */
   /**
    * @summary `responseName`.
    * @description
@@ -122,7 +122,7 @@ export class ExtendedResponse implements LDAPResult {
    * @public
    * @readonly
    */
-  readonly responseName?: OPTIONAL<LDAPOID>;
+  public readonly responseName?: OPTIONAL<LDAPOID>;
   /**
    * @summary `responseValue`.
    * @description
@@ -133,19 +133,19 @@ export class ExtendedResponse implements LDAPResult {
    * @public
    * @readonly
    */
-  readonly responseValue?: OPTIONAL<OCTET_STRING>;
+  public readonly responseValue?: OPTIONAL<OCTET_STRING>;
   /**
    * @summary Extensions that are not recognized.
    * @public
    * @readonly
    */
-  readonly _unrecognizedExtensionsList: _Element[];
+  public readonly _unrecognizedExtensionsList: _Element[];
 
   constructor(
-    resultCode: LDAPResult_resultCode /* REPLICATED_COMPONENT */,
-    matchedDN: LDAPDN /* REPLICATED_COMPONENT */,
-    diagnosticMessage: LDAPString /* REPLICATED_COMPONENT */,
-    referral?: OPTIONAL<Referral> /* REPLICATED_COMPONENT */,
+    resultCode: LDAPResult_resultCode,
+    matchedDN: LDAPDN,
+    diagnosticMessage: LDAPString,
+    referral?: OPTIONAL<Referral>,
     responseName?: OPTIONAL<LDAPOID>,
     responseValue?: OPTIONAL<OCTET_STRING>,
     _unrecognizedExtensionsList: _Element[] = []
@@ -191,7 +191,7 @@ export class ExtendedResponse implements LDAPResult {
    * @static
    */
 
-  public static _enum_for_resultCode = _enum_for_LDAPResult_resultCode;
+  public static _enum_for_resultCode: typeof _enum_for_LDAPResult_resultCode = _enum_for_LDAPResult_resultCode;
 }
 
 

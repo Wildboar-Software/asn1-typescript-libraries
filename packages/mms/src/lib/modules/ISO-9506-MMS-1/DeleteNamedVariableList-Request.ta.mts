@@ -1,7 +1,7 @@
 /* eslint-disable */
 import {
-    OPTIONAL,
-    ASN1Element as _Element,
+    type OPTIONAL,
+    type ASN1Element as _Element,
     ASN1TagClass as _TagClass,
     ASN1Construction as _Construction,
     ASN1UniversalType as _UniversalType,
@@ -11,9 +11,9 @@ import {
     ASN1ConstructionError as _ConstructionError,
 } from "@wildboar/asn1";
 import * as $ from "@wildboar/asn1/functional";
-import { DeleteNamedVariableList_Request_scopeOfDelete, specific /* IMPORTED_SHORT_NAMED_INTEGER */, _decode_DeleteNamedVariableList_Request_scopeOfDelete, _encode_DeleteNamedVariableList_Request_scopeOfDelete } from "../ISO-9506-MMS-1/DeleteNamedVariableList-Request-scopeOfDelete.ta.mjs";
-import { ObjectName, _decode_ObjectName, _encode_ObjectName } from "../ISO-9506-MMS-1/ObjectName.ta.mjs";
-import { Identifier, _decode_Identifier, _encode_Identifier } from "../ISO-9506-MMS-1/Identifier.ta.mjs";
+import { type DeleteNamedVariableList_Request_scopeOfDelete, specific /* IMPORTED_SHORT_NAMED_INTEGER */, _decode_DeleteNamedVariableList_Request_scopeOfDelete, _encode_DeleteNamedVariableList_Request_scopeOfDelete } from "../ISO-9506-MMS-1/DeleteNamedVariableList-Request-scopeOfDelete.ta.mjs";
+import { type ObjectName, _decode_ObjectName, _encode_ObjectName } from "../ISO-9506-MMS-1/ObjectName.ta.mjs";
+import { type Identifier, _decode_Identifier, _encode_Identifier } from "../ISO-9506-MMS-1/Identifier.ta.mjs";
 
 
 /**
@@ -44,43 +44,51 @@ import { Identifier, _decode_Identifier, _encode_Identifier } from "../ISO-9506-
  */
 export
 class DeleteNamedVariableList_Request {
+    /**
+     * @summary `scopeOfDelete`.
+     * @description
+     *
+     * Extent: `specific`, `aa-specific`, `domain`, or
+     * `vmd`. Default `specific`.
+     * ISO 9506-1:2003 §14.14.1.1.1.
+     *
+     * @public
+     * @readonly
+     */
+    public readonly scopeOfDelete?: OPTIONAL<DeleteNamedVariableList_Request_scopeOfDelete>;
+    /**
+     * @summary `listOfVariableListName`.
+     * @description
+     *
+     * Lists to delete when scope is `specific`; otherwise
+     * omitted. ISO 9506-1:2003 §14.14.1.1.2.
+     *
+     * @public
+     * @readonly
+     */
+    public readonly listOfVariableListName?: OPTIONAL<ObjectName[]>;
+    /**
+     * @summary `domainName`.
+     * @description
+     *
+     * Domain whose Named Variable Lists are deleted when
+     * scope is `domain`; otherwise omitted.
+     * ISO 9506-1:2003 §14.14.1.1.3.
+     *
+     * @public
+     * @readonly
+     */
+    public readonly domainName?: OPTIONAL<Identifier>;
+
     constructor (
-        /**
-         * @summary `scopeOfDelete`.
-         * @description
-         *
-         * Extent: `specific`, `aa-specific`, `domain`, or
-         * `vmd`. Default `specific`.
-         * ISO 9506-1:2003 §14.14.1.1.1.
-         *
-         * @public
-         * @readonly
-         */
-        readonly scopeOfDelete?: OPTIONAL<DeleteNamedVariableList_Request_scopeOfDelete>,
-        /**
-         * @summary `listOfVariableListName`.
-         * @description
-         *
-         * Lists to delete when scope is `specific`; otherwise
-         * omitted. ISO 9506-1:2003 §14.14.1.1.2.
-         *
-         * @public
-         * @readonly
-         */
-        readonly listOfVariableListName?: OPTIONAL<ObjectName[]>,
-        /**
-         * @summary `domainName`.
-         * @description
-         *
-         * Domain whose Named Variable Lists are deleted when
-         * scope is `domain`; otherwise omitted.
-         * ISO 9506-1:2003 §14.14.1.1.3.
-         *
-         * @public
-         * @readonly
-         */
-        readonly domainName?: OPTIONAL<Identifier>
-    ) {}
+        scopeOfDelete?: OPTIONAL<DeleteNamedVariableList_Request_scopeOfDelete>,
+        listOfVariableListName?: OPTIONAL<ObjectName[]>,
+        domainName?: OPTIONAL<Identifier>
+    ) {
+        this.scopeOfDelete = scopeOfDelete;
+        this.listOfVariableListName = listOfVariableListName;
+        this.domainName = domainName;
+    }
 
     /**
      * @summary Restructures an object into a DeleteNamedVariableList_Request
@@ -104,7 +112,7 @@ class DeleteNamedVariableList_Request {
      * @static
      * @method
      */
-    public static get _default_value_for_scopeOfDelete () { return specific; }
+    public static get _default_value_for_scopeOfDelete (): 0 { return specific; }
 }
 
 /**

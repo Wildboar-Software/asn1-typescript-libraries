@@ -1,6 +1,6 @@
 /* eslint-disable */
 import {
-    ASN1Element as _Element,
+    type ASN1Element as _Element,
     ASN1TagClass as _TagClass,
     ASN1Construction as _Construction,
     ASN1UniversalType as _UniversalType,
@@ -10,7 +10,7 @@ import {
     ASN1ConstructionError as _ConstructionError,
 } from "@wildboar/asn1";
 import * as $ from "@wildboar/asn1/functional";
-import { Digits, _decode_Digits, _encode_Digits } from "../IN-CS2-datatypes/Digits.ta.mjs";
+import { type Digits, _decode_Digits, _encode_Digits } from "../IN-CS2-datatypes/Digits.ta.mjs";
 
 
 /**
@@ -29,14 +29,18 @@ import { Digits, _decode_Digits, _encode_Digits } from "../IN-CS2-datatypes/Digi
  */
 export
 class MidCallInfo {
+    /**
+     * @summary `iNServiceControlCode`.
+     * @public
+     * @readonly
+     */
+    public readonly iNServiceControlCode: Digits;
+
     constructor (
-        /**
-         * @summary `iNServiceControlCode`.
-         * @public
-         * @readonly
-         */
-        readonly iNServiceControlCode: Digits
-    ) {}
+        iNServiceControlCode: Digits
+    ) {
+        this.iNServiceControlCode = iNServiceControlCode;
+    }
 
     /**
      * @summary Restructures an object into a MidCallInfo

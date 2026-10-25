@@ -2,13 +2,13 @@
 
 import * as $ from "@wildboar/asn1/functional";
 import {
-    OPTIONAL,
-    SEQUENCE,
-    SET,
-    ASN1Element as _Element,
+    type OPTIONAL,
+    type SEQUENCE,
+    type SET,
+    type ASN1Element as _Element,
     ASN1TagClass as _TagClass
 } from "@wildboar/asn1";
-import { ConnectionID, _decode_ConnectionID, _encode_ConnectionID } from "../CSTA-call-connection-identifiers/ConnectionID.ta.mjs";
+import { type ConnectionID, _decode_ConnectionID, _encode_ConnectionID } from "../CSTA-call-connection-identifiers/ConnectionID.ta.mjs";
 
 import { CSTACommonArguments, _decode_CSTACommonArguments, _encode_CSTACommonArguments } from "../CSTA-extension-types/CSTACommonArguments.ta.mjs";
 
@@ -38,31 +38,37 @@ import { CSTACommonArguments, _decode_CSTACommonArguments, _encode_CSTACommonArg
  */
 export
 class CamponCallArgument {
+    /**
+     * @summary `camponConnection`.
+     * @description
+     *
+     * Mandatory. Calling device's connection (Connected). The
+     * called side is typically a Call-ID-only connection in
+     * Fail (§6.7.2).
+     *
+     * @public
+     * @readonly
+     */
+    public readonly camponConnection: ConnectionID;
+    /**
+     * @summary `extensions`.
+     * @description
+     *
+     * Optional `CSTACommonArguments` carrying the security and
+     * privateData parameters from the ECMA-269 service table.
+     *
+     * @public
+     * @readonly
+     */
+    public readonly extensions?: OPTIONAL<CSTACommonArguments>;
+
     constructor (
-        /**
-         * @summary `camponConnection`.
-         * @description
-         *
-         * Mandatory. Calling device's connection (Connected). The
-         * called side is typically a Call-ID-only connection in
-         * Fail (§6.7.2).
-         *
-         * @public
-         * @readonly
-         */
-        readonly camponConnection: ConnectionID,
-        /**
-         * @summary `extensions`.
-         * @description
-         *
-         * Optional `CSTACommonArguments` carrying the security and
-         * privateData parameters from the ECMA-269 service table.
-         *
-         * @public
-         * @readonly
-         */
-        readonly extensions?: OPTIONAL<CSTACommonArguments>
-    ) {}
+        camponConnection: ConnectionID,
+        extensions?: OPTIONAL<CSTACommonArguments>
+    ) {
+        this.camponConnection = camponConnection;
+        this.extensions = extensions;
+    }
 
     /**
      * @summary Restructures an object into a CamponCallArgument

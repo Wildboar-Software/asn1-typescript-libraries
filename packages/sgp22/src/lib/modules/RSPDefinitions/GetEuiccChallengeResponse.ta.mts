@@ -1,11 +1,11 @@
 /* eslint-disable */
 import {
     ASN1ConstructionError as _ConstructionError,
-    ASN1Element as _Element,
+    type ASN1Element as _Element,
     ASN1TagClass as _TagClass
 } from "@wildboar/asn1";
 import * as $ from "@wildboar/asn1/functional";
-import { Octet16, _decode_Octet16, _encode_Octet16 } from "../RSPDefinitions/Octet16.ta.mjs";
+import { type Octet16, _decode_Octet16, _encode_Octet16 } from "../RSPDefinitions/Octet16.ta.mjs";
 
 
 /**
@@ -39,7 +39,7 @@ class GetEuiccChallengeResponse {
      * @public
      * @readonly
      */
-    readonly euiccChallenge: Octet16;
+    public readonly euiccChallenge: Octet16;
 
     constructor (
         euiccChallenge: Octet16

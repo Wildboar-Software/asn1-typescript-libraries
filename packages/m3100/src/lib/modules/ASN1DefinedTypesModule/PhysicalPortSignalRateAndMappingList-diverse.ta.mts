@@ -1,6 +1,6 @@
 /* eslint-disable */
 import {
-    ASN1Element as _Element,
+    type ASN1Element as _Element,
     ASN1TagClass as _TagClass,
     ASN1Construction as _Construction,
     ASN1UniversalType as _UniversalType,
@@ -11,7 +11,7 @@ import {
 } from '@wildboar/asn1';
 import * as $ from '@wildboar/asn1/functional';
 import {
-    SignalRateAndMappingList,
+    type SignalRateAndMappingList,
     _decode_SignalRateAndMappingList,
     _encode_SignalRateAndMappingList,
 } from '../ASN1DefinedTypesModule/SignalRateAndMappingList.ta.mjs';
@@ -28,20 +28,26 @@ import {
  *
  */
 export class PhysicalPortSignalRateAndMappingList_diverse {
+    /**
+     * @summary `downstream`.
+     * @public
+     * @readonly
+     */
+    public readonly downstream: SignalRateAndMappingList;
+    /**
+     * @summary `upStream`.
+     * @public
+     * @readonly
+     */
+    public readonly upStream: SignalRateAndMappingList;
+
     constructor(
-        /**
-         * @summary `downstream`.
-         * @public
-         * @readonly
-         */
-        readonly downstream: SignalRateAndMappingList,
-        /**
-         * @summary `upStream`.
-         * @public
-         * @readonly
-         */
-        readonly upStream: SignalRateAndMappingList
-    ) {}
+        downstream: SignalRateAndMappingList,
+        upStream: SignalRateAndMappingList
+    ) {
+        this.downstream = downstream;
+        this.upStream = upStream;
+    }
 
     /**
      * @summary Restructures an object into a PhysicalPortSignalRateAndMappingList_diverse

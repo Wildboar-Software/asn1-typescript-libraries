@@ -1,14 +1,14 @@
 /* eslint-disable */
 import {
-    BOOLEAN,
-    OPTIONAL,
-    ASN1Element as _Element,
+    type BOOLEAN,
+    type OPTIONAL,
+    type ASN1Element as _Element,
     ASN1TagClass as _TagClass
 } from "@wildboar/asn1";
 import * as $ from "@wildboar/asn1/functional";
-import { TFCcriteria, _decode_TFCcriteria, _encode_TFCcriteria } from "../IN-SCF-SDF-datatypes/TFCcriteria.ta.mjs";
+import { type TFCcriteria, _decode_TFCcriteria, _encode_TFCcriteria } from "../IN-SCF-SDF-datatypes/TFCcriteria.ta.mjs";
 // export { TFCcriteria, _decode_TFCcriteria, _encode_TFCcriteria } from "../IN-SCF-SDF-datatypes/TFCcriteria.ta.mjs";
-import { Duration, _decode_Duration, _encode_Duration } from "../IN-SSF-SCF-datatypes/Duration.ta.mjs";
+import { type Duration, _decode_Duration, _encode_Duration } from "../IN-SSF-SCF-datatypes/Duration.ta.mjs";
 // export { Duration, _decode_Duration, _encode_Duration } from "../IN-SSF-SCF-datatypes/Duration.ta.mjs";
 import { ControlType, _decode_ControlType, _encode_ControlType, _enum_for_ControlType } from "../IN-SSF-SCF-datatypes/ControlType.ta.mjs";
 // export { ControlType, _enum_for_ControlType, ControlType_sCPOverloaded /* IMPORTED_LONG_ENUMERATION_ITEM */, sCPOverloaded /* IMPORTED_SHORT_ENUMERATION_ITEM */, ControlType_manuallyInitiated /* IMPORTED_LONG_ENUMERATION_ITEM */, manuallyInitiated /* IMPORTED_SHORT_ENUMERATION_ITEM */, ControlType_destinationOverload /* IMPORTED_LONG_ENUMERATION_ITEM */, destinationOverload /* IMPORTED_SHORT_ENUMERATION_ITEM */, _decode_ControlType, _encode_ControlType } from "../IN-SSF-SCF-datatypes/ControlType.ta.mjs";
@@ -120,7 +120,7 @@ class TFCArgument_Type {
          * @static
          */
 
-    public static _enum_for_controlType = _enum_for_ControlType;
+    public static _enum_for_controlType: typeof _enum_for_ControlType = _enum_for_ControlType;
 }
 
 /**

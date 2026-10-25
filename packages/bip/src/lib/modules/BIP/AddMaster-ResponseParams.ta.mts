@@ -1,6 +1,6 @@
 /* eslint-disable */
 import {
-  OPTIONAL,
+  type OPTIONAL,
   ASN1Element as _Element,
   ASN1TagClass as _TagClass,
   ASN1Construction as _Construction,
@@ -62,7 +62,7 @@ export class AddMaster_ResponseParams {
    * @public
    * @readonly
    */
-  readonly fwSchema: OPTIONAL<BioAPI_FRAMEWORK_SCHEMA>;
+  public readonly fwSchema: OPTIONAL<BioAPI_FRAMEWORK_SCHEMA>;
   /**
    * @summary `bspSchemas`.
    * @description
@@ -76,7 +76,7 @@ export class AddMaster_ResponseParams {
    * @public
    * @readonly
    */
-  readonly bspSchemas: BioAPI_BSP_SCHEMA[];
+  public readonly bspSchemas: BioAPI_BSP_SCHEMA[];
   /**
    * @summary `bfpSchemas`.
    * @description
@@ -88,7 +88,7 @@ export class AddMaster_ResponseParams {
    * @public
    * @readonly
    */
-  readonly bfpSchemas: BioAPI_BFP_SCHEMA[];
+  public readonly bfpSchemas: BioAPI_BFP_SCHEMA[];
 
   constructor(
     fwSchema: OPTIONAL<BioAPI_FRAMEWORK_SCHEMA>,

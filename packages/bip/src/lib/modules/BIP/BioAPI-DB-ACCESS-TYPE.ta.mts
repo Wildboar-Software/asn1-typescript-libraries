@@ -1,6 +1,6 @@
 /* eslint-disable */
 import {
-  BIT_STRING,
+  type BIT_STRING,
   ASN1Element as _Element,
   ASN1TagClass as _TagClass,
   ASN1Construction as _Construction,
@@ -63,12 +63,12 @@ export const write: number = BioAPI_DB_ACCESS_TYPE_write; /* SHORT_NAMED_BIT */
 
 
 
-export const _decode_BioAPI_DB_ACCESS_TYPE = $._decodeBitString;
+export const _decode_BioAPI_DB_ACCESS_TYPE: $.ASN1Decoder<BIT_STRING> = $._decodeBitString;
 
 
 
 
-export const _encode_BioAPI_DB_ACCESS_TYPE = $._encodeBitString;
+export const _encode_BioAPI_DB_ACCESS_TYPE: $.ASN1Encoder<BIT_STRING> = $._encodeBitString;
 
 
 /* eslint-enable */

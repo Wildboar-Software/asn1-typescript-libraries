@@ -19,26 +19,13 @@ import { AlgorithmIdentifier, _decode_AlgorithmIdentifier, _encode_AlgorithmIden
  */
 export type SigncryptedDataAlgorithmIdentifier = AlgorithmIdentifier; // DefinedType
 
-
-let _cached_decoder_for_SigncryptedDataAlgorithmIdentifier: $.ASN1Decoder<SigncryptedDataAlgorithmIdentifier> | null = null;
-
-
 /**
  * @summary Decodes an ASN.1 element into a(n) SigncryptedDataAlgorithmIdentifier
  * @function
  * @param {_Element} el The element being decoded.
  * @returns {SigncryptedDataAlgorithmIdentifier} The decoded data structure.
  */
-export function _decode_SigncryptedDataAlgorithmIdentifier(el: _Element): SigncryptedDataAlgorithmIdentifier {
-    if (!_cached_decoder_for_SigncryptedDataAlgorithmIdentifier) {
-        _cached_decoder_for_SigncryptedDataAlgorithmIdentifier = _decode_AlgorithmIdentifier;
-    }
-    return _cached_decoder_for_SigncryptedDataAlgorithmIdentifier(el);
-}
-
-
-let _cached_encoder_for_SigncryptedDataAlgorithmIdentifier: $.ASN1Encoder<SigncryptedDataAlgorithmIdentifier> | null = null;
-
+export const _decode_SigncryptedDataAlgorithmIdentifier: $.ASN1Decoder<SigncryptedDataAlgorithmIdentifier> = _decode_AlgorithmIdentifier;
 
 /**
  * @summary Encodes a(n) SigncryptedDataAlgorithmIdentifier into an ASN.1 Element.
@@ -47,18 +34,7 @@ let _cached_encoder_for_SigncryptedDataAlgorithmIdentifier: $.ASN1Encoder<Signcr
  * @param elGetter A function that can be used to get new ASN.1 elements.
  * @returns {_Element} The SigncryptedDataAlgorithmIdentifier, encoded as an ASN.1 Element.
  */
-export function _encode_SigncryptedDataAlgorithmIdentifier(
-    value: SigncryptedDataAlgorithmIdentifier,
-    elGetter: $.ASN1Encoder<SigncryptedDataAlgorithmIdentifier>
-): _Element {
-    if (!_cached_encoder_for_SigncryptedDataAlgorithmIdentifier) {
-        _cached_encoder_for_SigncryptedDataAlgorithmIdentifier = _encode_AlgorithmIdentifier;
-    }
-    return _cached_encoder_for_SigncryptedDataAlgorithmIdentifier(
-        value,
-        elGetter
-    );
-}
+export const _encode_SigncryptedDataAlgorithmIdentifier: $.ASN1Encoder<SigncryptedDataAlgorithmIdentifier> = _encode_AlgorithmIdentifier;
 
 
 /* eslint-enable */

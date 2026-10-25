@@ -1,8 +1,8 @@
 /* eslint-disable */
 import {
-    ASN1Element as _Element,
+    type ASN1Element as _Element,
     ASN1TagClass as _TagClass,
-    OPTIONAL,
+    type OPTIONAL,
 } from "@wildboar/asn1";
 import * as $ from "@wildboar/asn1/functional";
 import {
@@ -36,29 +36,35 @@ import {
  *
  */
 export class SPKM_REP_TI {
+    /**
+     * @summary `responseToken`.
+     * @description
+     *
+     * Signed or MACed `Rep-ti-contents`.
+     *
+     * @public
+     * @readonly
+     */
+    public readonly responseToken: REP_TI_TOKEN;
+    /**
+     * @summary `certif_data`.
+     * @description
+     *
+     * Target's certs/CRL when `target-certif-data-required` was set
+     * in the request.
+     *
+     * @public
+     * @readonly
+     */
+    public readonly certif_data?: OPTIONAL<CertificationData>;
+
     constructor(
-        /**
-         * @summary `responseToken`.
-         * @description
-         *
-         * Signed or MACed `Rep-ti-contents`.
-         *
-         * @public
-         * @readonly
-         */
-        readonly responseToken: REP_TI_TOKEN,
-        /**
-         * @summary `certif_data`.
-         * @description
-         *
-         * Target's certs/CRL when `target-certif-data-required` was set
-         * in the request.
-         *
-         * @public
-         * @readonly
-         */
-        readonly certif_data?: OPTIONAL<CertificationData>
-    ) {}
+        responseToken: REP_TI_TOKEN,
+        certif_data?: OPTIONAL<CertificationData>
+    ) {
+        this.responseToken = responseToken;
+        this.certif_data = certif_data;
+    }
 
     /**
      * @summary Restructures an object into a SPKM_REP_TI

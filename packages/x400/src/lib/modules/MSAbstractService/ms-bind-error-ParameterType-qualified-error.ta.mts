@@ -1,9 +1,9 @@
 /* eslint-disable */
 import {
-    OPTIONAL,
-    OBJECT_IDENTIFIER,
-    GeneralString,
-    ASN1Element as _Element,
+    type OPTIONAL,
+    type OBJECT_IDENTIFIER,
+    type GeneralString,
+    type ASN1Element as _Element,
     ASN1TagClass as _TagClass,
     ASN1Construction as _Construction,
     ASN1UniversalType as _UniversalType,
@@ -14,7 +14,7 @@ import {
 } from '@wildboar/asn1';
 import * as $ from '@wildboar/asn1/functional';
 import {
-    BindProblem,
+    type BindProblem,
     _enum_for_BindProblem,
     _decode_BindProblem,
     _encode_BindProblem,
@@ -33,26 +33,34 @@ import {
  *
  */
 export class ms_bind_error_ParameterType_qualified_error {
+    /**
+     * @summary `bind_problem`.
+     * @public
+     * @readonly
+     */
+    public readonly bind_problem: BindProblem;
+    /**
+     * @summary `supplementary_information`.
+     * @public
+     * @readonly
+     */
+    public readonly supplementary_information?: OPTIONAL<GeneralString>;
+    /**
+     * @summary `bind_extension_errors`.
+     * @public
+     * @readonly
+     */
+    public readonly bind_extension_errors?: OPTIONAL<OBJECT_IDENTIFIER[]>;
+
     constructor(
-        /**
-         * @summary `bind_problem`.
-         * @public
-         * @readonly
-         */
-        readonly bind_problem: BindProblem,
-        /**
-         * @summary `supplementary_information`.
-         * @public
-         * @readonly
-         */
-        readonly supplementary_information?: OPTIONAL<GeneralString>,
-        /**
-         * @summary `bind_extension_errors`.
-         * @public
-         * @readonly
-         */
-        readonly bind_extension_errors?: OPTIONAL<OBJECT_IDENTIFIER[]>
-    ) {}
+        bind_problem: BindProblem,
+        supplementary_information?: OPTIONAL<GeneralString>,
+        bind_extension_errors?: OPTIONAL<OBJECT_IDENTIFIER[]>
+    ) {
+        this.bind_problem = bind_problem;
+        this.supplementary_information = supplementary_information;
+        this.bind_extension_errors = bind_extension_errors;
+    }
 
     /**
      * @summary Restructures an object into a ms_bind_error_ParameterType_qualified_error
@@ -84,7 +92,7 @@ export class ms_bind_error_ParameterType_qualified_error {
      * @static
      */
 
-    public static _enum_for_bind_problem = _enum_for_BindProblem;
+    public static _enum_for_bind_problem: typeof _enum_for_BindProblem = _enum_for_BindProblem;
 }
 
 /**

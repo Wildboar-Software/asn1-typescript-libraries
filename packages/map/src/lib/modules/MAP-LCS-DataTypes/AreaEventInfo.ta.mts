@@ -1,13 +1,13 @@
 /* eslint-disable */
 import {
-    OPTIONAL,
-    ASN1Element as _Element,
+    type OPTIONAL,
+    type ASN1Element as _Element,
     ASN1TagClass as _TagClass
 } from "@wildboar/asn1";
 import * as $ from "@wildboar/asn1/functional";
 import { AreaDefinition, _decode_AreaDefinition, _encode_AreaDefinition } from "../MAP-LCS-DataTypes/AreaDefinition.ta.mjs";
-import { IntervalTime, _decode_IntervalTime, _encode_IntervalTime } from "../MAP-LCS-DataTypes/IntervalTime.ta.mjs";
-import { OccurrenceInfo, _decode_OccurrenceInfo, _encode_OccurrenceInfo, _enum_for_OccurrenceInfo } from "../MAP-LCS-DataTypes/OccurrenceInfo.ta.mjs";
+import { type IntervalTime, _decode_IntervalTime, _encode_IntervalTime } from "../MAP-LCS-DataTypes/IntervalTime.ta.mjs";
+import { type OccurrenceInfo, _decode_OccurrenceInfo, _encode_OccurrenceInfo, _enum_for_OccurrenceInfo } from "../MAP-LCS-DataTypes/OccurrenceInfo.ta.mjs";
 
 
 /**
@@ -22,8 +22,8 @@ import { OccurrenceInfo, _decode_OccurrenceInfo, _encode_OccurrenceInfo, _enum_f
  * ```asn1
  * AreaEventInfo ::= SEQUENCE {
  *     areaDefinition    [0]    AreaDefinition,
- *     occurrenceInfo    [1]    OccurrenceInfo    OPTIONAL,
- *     intervalTime    [2]    IntervalTime    OPTIONAL,
+ *     occurrenceInfo    [1]    OccurrenceInfo    type OPTIONAL,
+ *     intervalTime    [2]    IntervalTime    type OPTIONAL,
  *     ...}
  * ```
  * 
@@ -31,44 +31,54 @@ import { OccurrenceInfo, _decode_OccurrenceInfo, _encode_OccurrenceInfo, _enum_f
  */
 export
 class AreaEventInfo {
+    /**
+     * @summary `areaDefinition`.
+     * @description
+     *
+     * List of areas.
+     *
+     * @public
+     * @readonly
+     */
+    public readonly areaDefinition: AreaDefinition;
+    /**
+     * @summary `occurrenceInfo`.
+     * @description
+     *
+     * oneTimeEvent or multipleTimeEvent.
+     *
+     * @public
+     * @readonly
+     */
+    public readonly occurrenceInfo?: OPTIONAL<OccurrenceInfo>;
+    /**
+     * @summary `intervalTime`.
+     * @description
+     *
+     * Minimum interval between area reports in seconds (1..32767).
+     *
+     * @public
+     * @readonly
+     */
+    public readonly intervalTime?: OPTIONAL<IntervalTime>;
+    /**
+     * @summary Extensions that are not recognized.
+     * @public
+     * @readonly
+     */
+    public readonly _unrecognizedExtensionsList: _Element[];
+
     constructor (
-        /**
-         * @summary `areaDefinition`.
-         * @description
-         *
-         * List of areas.
-         *
-         * @public
-         * @readonly
-         */
-        readonly areaDefinition: AreaDefinition,
-        /**
-         * @summary `occurrenceInfo`.
-         * @description
-         *
-         * oneTimeEvent or multipleTimeEvent.
-         *
-         * @public
-         * @readonly
-         */
-        readonly occurrenceInfo?: OPTIONAL<OccurrenceInfo>,
-        /**
-         * @summary `intervalTime`.
-         * @description
-         *
-         * Minimum interval between area reports in seconds (1..32767).
-         *
-         * @public
-         * @readonly
-         */
-        readonly intervalTime?: OPTIONAL<IntervalTime>,
-        /**
-         * @summary Extensions that are not recognized.
-         * @public
-         * @readonly
-         */
-        readonly _unrecognizedExtensionsList: _Element[] = []
-    ) {}
+        areaDefinition: AreaDefinition,
+        occurrenceInfo?: OPTIONAL<OccurrenceInfo>,
+        intervalTime?: OPTIONAL<IntervalTime>,
+        _unrecognizedExtensionsList: _Element[] = []
+    ) {
+        this.areaDefinition = areaDefinition;
+        this.occurrenceInfo = occurrenceInfo;
+        this.intervalTime = intervalTime;
+        this._unrecognizedExtensionsList = _unrecognizedExtensionsList;
+    }
 
     /**
      * @summary Restructures an object into a AreaEventInfo
@@ -92,7 +102,7 @@ class AreaEventInfo {
          * @static
          */
 
-    public static _enum_for_occurrenceInfo = _enum_for_OccurrenceInfo;
+    public static _enum_for_occurrenceInfo: typeof _enum_for_OccurrenceInfo = _enum_for_OccurrenceInfo;
 }
 
 /**

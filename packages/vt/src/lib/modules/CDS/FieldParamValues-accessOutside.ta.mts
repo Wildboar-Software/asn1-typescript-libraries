@@ -1,7 +1,7 @@
 /* eslint-disable */
 import {
-    INTEGER,
-    ASN1Element as _Element,
+    type INTEGER,
+    type ASN1Element as _Element,
     ASN1TagClass as _TagClass,
     ASN1Construction as _Construction,
     ASN1UniversalType as _UniversalType,
@@ -41,7 +41,7 @@ type FieldParamValues_accessOutside = INTEGER;
  * @type {number}
  */
 export
-const FieldParamValues_accessOutside_allowed: FieldParamValues_accessOutside = 0; /* LONG_NAMED_INTEGER_VALUE */
+const FieldParamValues_accessOutside_allowed: 0 = 0 satisfies FieldParamValues_accessOutside; /* LONG_NAMED_INTEGER_VALUE */
 
 /**
  * @summary allowed
@@ -53,7 +53,7 @@ const FieldParamValues_accessOutside_allowed: FieldParamValues_accessOutside = 0
  * @type {number}
  */
 export
-const allowed: FieldParamValues_accessOutside = FieldParamValues_accessOutside_allowed; /* SHORT_NAMED_INTEGER_VALUE */
+const allowed: 0 = FieldParamValues_accessOutside_allowed; /* SHORT_NAMED_INTEGER_VALUE */
 
 /**
  * @summary FieldParamValues_accessOutside_notAllowed
@@ -66,7 +66,7 @@ const allowed: FieldParamValues_accessOutside = FieldParamValues_accessOutside_a
  * @type {number}
  */
 export
-const FieldParamValues_accessOutside_notAllowed: FieldParamValues_accessOutside = 1; /* LONG_NAMED_INTEGER_VALUE */
+const FieldParamValues_accessOutside_notAllowed: 1 = 1 satisfies FieldParamValues_accessOutside; /* LONG_NAMED_INTEGER_VALUE */
 
 /**
  * @summary notAllowed
@@ -79,9 +79,9 @@ const FieldParamValues_accessOutside_notAllowed: FieldParamValues_accessOutside 
  * @type {number}
  */
 export
-const notAllowed: FieldParamValues_accessOutside = FieldParamValues_accessOutside_notAllowed; /* SHORT_NAMED_INTEGER_VALUE */
-export const _decode_FieldParamValues_accessOutside = $._decodeInteger;
-export const _encode_FieldParamValues_accessOutside = $._encodeInteger;
+const notAllowed: 1 = FieldParamValues_accessOutside_notAllowed; /* SHORT_NAMED_INTEGER_VALUE */
+export const _decode_FieldParamValues_accessOutside: $.ASN1Decoder<INTEGER> = $._decodeInteger;
+export const _encode_FieldParamValues_accessOutside: $.ASN1Encoder<INTEGER> = $._encodeInteger;
 
 
 /* eslint-enable */

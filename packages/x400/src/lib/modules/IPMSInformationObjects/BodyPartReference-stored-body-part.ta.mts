@@ -1,7 +1,7 @@
 /* eslint-disable */
 import {
-    INTEGER,
-    ASN1Element as _Element,
+    type INTEGER,
+    type ASN1Element as _Element,
     ASN1TagClass as _TagClass,
     ASN1Construction as _Construction,
     ASN1UniversalType as _UniversalType,
@@ -12,7 +12,7 @@ import {
 } from '@wildboar/asn1';
 import * as $ from '@wildboar/asn1/functional';
 import {
-    SequenceNumber,
+    type SequenceNumber,
     _decode_SequenceNumber,
     _encode_SequenceNumber,
 } from '../MSAbstractService/SequenceNumber.ta.mjs';
@@ -30,20 +30,26 @@ import {
  *
  */
 export class BodyPartReference_stored_body_part {
+    /**
+     * @summary `message_entry`.
+     * @public
+     * @readonly
+     */
+    public readonly message_entry: SequenceNumber;
+    /**
+     * @summary `body_part_number`.
+     * @public
+     * @readonly
+     */
+    public readonly body_part_number: INTEGER;
+
     constructor(
-        /**
-         * @summary `message_entry`.
-         * @public
-         * @readonly
-         */
-        readonly message_entry: SequenceNumber,
-        /**
-         * @summary `body_part_number`.
-         * @public
-         * @readonly
-         */
-        readonly body_part_number: INTEGER
-    ) {}
+        message_entry: SequenceNumber,
+        body_part_number: INTEGER
+    ) {
+        this.message_entry = message_entry;
+        this.body_part_number = body_part_number;
+    }
 
     /**
      * @summary Restructures an object into a BodyPartReference_stored_body_part

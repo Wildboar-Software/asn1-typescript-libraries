@@ -1,6 +1,6 @@
 /* eslint-disable */
 import {
-    ASN1Element as _Element,
+    type ASN1Element as _Element,
     ASN1TagClass as _TagClass,
     ASN1Construction as _Construction,
     ASN1UniversalType as _UniversalType,
@@ -57,7 +57,7 @@ export type ControlState = _enum_for_ControlState;
  *
  * @enum {number}
  */
-export const ControlState = _enum_for_ControlState;
+export const ControlState: typeof _enum_for_ControlState = _enum_for_ControlState;
 
 
 /**
@@ -65,7 +65,7 @@ export const ControlState = _enum_for_ControlState;
  * @constant
  * @type {number}
  */
-export const ControlState_closed: ControlState =
+export const ControlState_closed: _enum_for_ControlState.closed =
     ControlState.closed; /* LONG_NAMED_ENUMERATED_VALUE */
 
 
@@ -74,7 +74,7 @@ export const ControlState_closed: ControlState =
  * @constant
  * @type {number}
  */
-export const closed: ControlState =
+export const closed: _enum_for_ControlState.closed =
     ControlState.closed; /* SHORT_NAMED_ENUMERATED_VALUE */
 
 
@@ -83,7 +83,7 @@ export const closed: ControlState =
  * @constant
  * @type {number}
  */
-export const ControlState_open: ControlState =
+export const ControlState_open: _enum_for_ControlState.open =
     ControlState.open; /* LONG_NAMED_ENUMERATED_VALUE */
 
 
@@ -92,18 +92,29 @@ export const ControlState_open: ControlState =
  * @constant
  * @type {number}
  */
-export const open: ControlState =
+export const open: _enum_for_ControlState.open =
     ControlState.open; /* SHORT_NAMED_ENUMERATED_VALUE */
 
 
 
 
-export const _decode_ControlState = $._decodeEnumerated;
+export function _decode_ControlState(el: _Element): ControlState {
+    const enumerated = $._decodeEnumerated(el);
+    switch (enumerated) {
+        case ControlState.closed: return ControlState.closed;
+        case ControlState.open: return ControlState.open;
+        default:
+            throw new _ConstructionError(
+                'Invalid ENUMERATED value ' + enumerated + ' for ControlState.',
+                el,
+            );
+    }
+}
 
 
 
 
-export const _encode_ControlState = $._encodeEnumerated;
+export const _encode_ControlState: $.ASN1Encoder<ControlState> = $._encodeEnumerated as $.ASN1Encoder<ControlState>;
 
 
 /* eslint-enable */

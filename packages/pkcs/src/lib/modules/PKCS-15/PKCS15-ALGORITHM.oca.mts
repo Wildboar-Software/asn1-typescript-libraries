@@ -1,7 +1,7 @@
 /* eslint-disable */
-import { INTEGER, OBJECT_IDENTIFIER } from "@wildboar/asn1";
+import { type INTEGER, type OBJECT_IDENTIFIER } from "@wildboar/asn1";
 import * as $ from "@wildboar/asn1/functional";
-import { Operations } from "../PKCS-15/Operations.ta.mjs";
+import { type Operations } from "../PKCS-15/Operations.ta.mjs";
 
 /**
  * @summary PKCS15_ALGORITHM

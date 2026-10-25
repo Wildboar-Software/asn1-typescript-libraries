@@ -1,11 +1,11 @@
 /* eslint-disable */
 import {
-    ASN1Element as _Element,
+    type ASN1Element as _Element,
     ASN1TagClass as _TagClass,
-    INTEGER
+    type INTEGER
 } from "@wildboar/asn1";
 import * as $ from "@wildboar/asn1/functional";
-import { _decode_AddEimResult_addEimResultCode, _encode_AddEimResult_addEimResultCode, AddEimResult_addEimResultCode } from "../SGP32Definitions/AddEimResult-addEimResultCode.ta.mjs";
+import { _decode_AddEimResult_addEimResultCode, _encode_AddEimResult_addEimResultCode, type AddEimResult_addEimResultCode } from "../SGP32Definitions/AddEimResult-addEimResultCode.ta.mjs";
 
 
 /**

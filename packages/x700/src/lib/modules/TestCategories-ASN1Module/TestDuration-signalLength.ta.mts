@@ -1,8 +1,8 @@
 /* eslint-disable */
 import {
-    OPTIONAL,
-    INTEGER,
-    ASN1Element as _Element,
+    type OPTIONAL,
+    type INTEGER,
+    type ASN1Element as _Element,
     ASN1TagClass as _TagClass,
     ASN1Construction as _Construction,
     ASN1UniversalType as _UniversalType,
@@ -13,7 +13,7 @@ import {
 } from '@wildboar/asn1';
 import * as $ from '@wildboar/asn1/functional';
 import {
-    DataRate,
+    type DataRate,
     _decode_DataRate,
     _encode_DataRate,
 } from '../TestCategories-ASN1Module/DataRate.ta.mjs';
@@ -34,27 +34,33 @@ import {
  *
  */
 export class TestDuration_signalLength {
+    /**
+     * @summary `size`.
+     * @description
+     *
+     * Length of the pattern (units implied by the data category in use).
+     * X.737 §3.9.7.
+     * @public
+     * @readonly
+     */
+    public readonly size: INTEGER;
+    /**
+     * @summary `dataRate`.
+     * @description
+     *
+     * Optional rate at which that length is sent. X.737 §3.9.7, A.7.
+     * @public
+     * @readonly
+     */
+    public readonly dataRate?: OPTIONAL<DataRate>;
+
     constructor(
-        /**
-         * @summary `size`.
-         * @description
-         *
-         * Length of the pattern (units implied by the data category in use).
-         * X.737 §3.9.7.
-         * @public
-         * @readonly
-         */
-        readonly size: INTEGER,
-        /**
-         * @summary `dataRate`.
-         * @description
-         *
-         * Optional rate at which that length is sent. X.737 §3.9.7, A.7.
-         * @public
-         * @readonly
-         */
-        readonly dataRate?: OPTIONAL<DataRate>
-    ) {}
+        size: INTEGER,
+        dataRate?: OPTIONAL<DataRate>
+    ) {
+        this.size = size;
+        this.dataRate = dataRate;
+    }
 
     /**
      * @summary Restructures an object into a TestDuration_signalLength

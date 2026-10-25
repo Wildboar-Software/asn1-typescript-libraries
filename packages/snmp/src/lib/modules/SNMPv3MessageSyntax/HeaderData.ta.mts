@@ -1,8 +1,8 @@
 /* eslint-disable */
 import {
-    INTEGER,
-    OCTET_STRING,
-    ASN1Element as _Element,
+    type INTEGER,
+    type OCTET_STRING,
+    type ASN1Element as _Element,
     ASN1TagClass as _TagClass,
     ASN1Construction as _Construction,
     ASN1UniversalType as _UniversalType,
@@ -60,7 +60,7 @@ class HeaderData {
      * @public
      * @readonly
      */
-    readonly msgID: INTEGER;
+    public readonly msgID: INTEGER;
     /**
      * @summary `msgMaxSize`.
      * @description
@@ -73,7 +73,7 @@ class HeaderData {
      * @public
      * @readonly
      */
-    readonly msgMaxSize: INTEGER;
+    public readonly msgMaxSize: INTEGER;
     /**
      * @summary `msgFlags`.
      * @description
@@ -88,7 +88,7 @@ class HeaderData {
      * @public
      * @readonly
      */
-    readonly msgFlags: OCTET_STRING;
+    public readonly msgFlags: OCTET_STRING;
     /**
      * @summary `msgSecurityModel`.
      * @description
@@ -101,7 +101,7 @@ class HeaderData {
      * @public
      * @readonly
      */
-    readonly msgSecurityModel: INTEGER;
+    public readonly msgSecurityModel: INTEGER;
 
     constructor (
         msgID: INTEGER,

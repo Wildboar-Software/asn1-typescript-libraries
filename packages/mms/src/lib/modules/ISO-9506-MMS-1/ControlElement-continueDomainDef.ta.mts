@@ -1,6 +1,6 @@
 /* eslint-disable */
 import {
-    ASN1Element as _Element,
+    type ASN1Element as _Element,
     ASN1TagClass as _TagClass,
     ASN1Construction as _Construction,
     ASN1UniversalType as _UniversalType,
@@ -10,8 +10,8 @@ import {
     ASN1ConstructionError as _ConstructionError,
 } from "@wildboar/asn1";
 import * as $ from "@wildboar/asn1/functional";
-import { Identifier, _decode_Identifier, _encode_Identifier } from "../ISO-9506-MMS-1/Identifier.ta.mjs";
-import { LoadData, _decode_LoadData, _encode_LoadData } from "../ISO-9506-MMS-1/LoadData.ta.mjs";
+import { type Identifier, _decode_Identifier, _encode_Identifier } from "../ISO-9506-MMS-1/Identifier.ta.mjs";
+import { type LoadData, _decode_LoadData, _encode_LoadData } from "../ISO-9506-MMS-1/LoadData.ta.mjs";
 
 
 /**
@@ -34,28 +34,34 @@ import { LoadData, _decode_LoadData, _encode_LoadData } from "../ISO-9506-MMS-1/
  */
 export
 class ControlElement_continueDomainDef {
+    /**
+     * @summary `domainName`.
+     * @description
+     *
+     * Domain still in `loading`. ISO 9506-1:2003 §13.2.1.2.1.
+     *
+     * @public
+     * @readonly
+     */
+    public readonly domainName: Identifier;
+    /**
+     * @summary `loadData`.
+     * @description
+     *
+     * Further (partial) Domain content. ISO 9506-1:2003 §13.2.1.2.2.
+     *
+     * @public
+     * @readonly
+     */
+    public readonly loadData: LoadData;
+
     constructor (
-        /**
-         * @summary `domainName`.
-         * @description
-         *
-         * Domain still in `loading`. ISO 9506-1:2003 §13.2.1.2.1.
-         *
-         * @public
-         * @readonly
-         */
-        readonly domainName: Identifier,
-        /**
-         * @summary `loadData`.
-         * @description
-         *
-         * Further (partial) Domain content. ISO 9506-1:2003 §13.2.1.2.2.
-         *
-         * @public
-         * @readonly
-         */
-        readonly loadData: LoadData
-    ) {}
+        domainName: Identifier,
+        loadData: LoadData
+    ) {
+        this.domainName = domainName;
+        this.loadData = loadData;
+    }
 
     /**
      * @summary Restructures an object into a ControlElement_continueDomainDef

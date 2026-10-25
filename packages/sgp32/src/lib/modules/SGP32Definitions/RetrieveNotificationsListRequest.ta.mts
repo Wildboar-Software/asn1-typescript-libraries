@@ -1,11 +1,11 @@
 /* eslint-disable */
 import {
-    OPTIONAL,
-    ASN1Element as _Element,
+    type OPTIONAL,
+    type ASN1Element as _Element,
     ASN1TagClass as _TagClass
 } from "@wildboar/asn1";
 import * as $ from "@wildboar/asn1/functional";
-import { RetrieveNotificationsListRequest_searchCriteria, _decode_RetrieveNotificationsListRequest_searchCriteria, _encode_RetrieveNotificationsListRequest_searchCriteria } from "../SGP32Definitions/RetrieveNotificationsListRequest-searchCriteria.ta.mjs";
+import { type RetrieveNotificationsListRequest_searchCriteria, _decode_RetrieveNotificationsListRequest_searchCriteria, _encode_RetrieveNotificationsListRequest_searchCriteria } from "../SGP32Definitions/RetrieveNotificationsListRequest-searchCriteria.ta.mjs";
 
 
 /**
@@ -35,18 +35,22 @@ import { RetrieveNotificationsListRequest_searchCriteria, _decode_RetrieveNotifi
  */
 export
 class RetrieveNotificationsListRequest {
+    /**
+     * @summary `searchCriteria`.
+     * @description
+     * Optional filter. Omitted, the eUICC returns every stored Notification.
+     * seqNumber, a profile-management bit mask, and euiccPackageResults are
+     * defined on the choice. SGP.32 v1.2, section 5.9.11.
+     * @public
+     * @readonly
+     */
+    public readonly searchCriteria?: OPTIONAL<RetrieveNotificationsListRequest_searchCriteria>;
+
     constructor (
-        /**
-         * @summary `searchCriteria`.
-         * @description
-         * Optional filter. Omitted, the eUICC returns every stored Notification.
-         * seqNumber, a profile-management bit mask, and euiccPackageResults are
-         * defined on the choice. SGP.32 v1.2, section 5.9.11.
-         * @public
-         * @readonly
-         */
-        readonly searchCriteria?: OPTIONAL<RetrieveNotificationsListRequest_searchCriteria>
-    ) {}
+        searchCriteria?: OPTIONAL<RetrieveNotificationsListRequest_searchCriteria>
+    ) {
+        this.searchCriteria = searchCriteria;
+    }
 
     /**
      * @summary Restructures an object into a RetrieveNotificationsListRequest

@@ -2,7 +2,7 @@
 import { type EXTENSION } from "../AuthenticationFramework/EXTENSION.oca.mjs";
 import { id_pe_subjectInfoAccess } from "../PkiPmiExternalDataTypes/id-pe-subjectInfoAccess.va.mjs";
 import {
-    SubjectInfoAccessSyntax,
+    type SubjectInfoAccessSyntax,
     _decode_SubjectInfoAccessSyntax,
     _encode_SubjectInfoAccessSyntax,
 } from "../PkiPmiExternalDataTypes/SubjectInfoAccessSyntax.ta.mjs";

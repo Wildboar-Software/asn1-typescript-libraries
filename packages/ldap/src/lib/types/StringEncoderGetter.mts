@@ -15,4 +15,4 @@ import type StringEncoder from "./StringEncoder.mjs";
 export
 type StringEncoderGetter = (syntax: OBJECT_IDENTIFIER) => StringEncoder | undefined;
 
-export default StringEncoderGetter;
+export type { StringEncoderGetter as default };

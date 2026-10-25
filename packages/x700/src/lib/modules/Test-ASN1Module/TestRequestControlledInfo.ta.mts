@@ -1,7 +1,7 @@
 /* eslint-disable */
 import {
-    OPTIONAL,
-    ASN1Element as _Element,
+    type OPTIONAL,
+    type ASN1Element as _Element,
     ASN1TagClass as _TagClass,
     ASN1Construction as _Construction,
     ASN1UniversalType as _UniversalType,
@@ -18,7 +18,7 @@ import {
     _encode_ControlledTestRequestType,
 } from '../Test-ASN1Module/ControlledTestRequestType.ta.mjs';
 import {
-    TestCategoryInformation,
+    type TestCategoryInformation,
     _decode_TestCategoryInformation,
     _encode_TestCategoryInformation,
 } from '../Test-ASN1Module/TestCategoryInformation.ta.mjs';
@@ -28,22 +28,22 @@ import {
     _encode_TestSessionId,
 } from '../Test-ASN1Module/TestSessionId.ta.mjs';
 import {
-    ToBeTestedMORTs,
+    type ToBeTestedMORTs,
     _decode_ToBeTestedMORTs,
     _encode_ToBeTestedMORTs,
 } from '../Test-ASN1Module/ToBeTestedMORTs.ta.mjs';
 import {
-    AssociatedObjects,
+    type AssociatedObjects,
     _decode_AssociatedObjects,
     _encode_AssociatedObjects,
 } from '../Test-ASN1Module/AssociatedObjects.ta.mjs';
 import {
-    TimeoutPeriod,
+    type TimeoutPeriod,
     _decode_TimeoutPeriod,
     _encode_TimeoutPeriod,
 } from '../Test-ASN1Module/TimeoutPeriod.ta.mjs';
 import {
-    TestObjectList,
+    type TestObjectList,
     _decode_TestObjectList,
     _encode_TestObjectList,
 } from '../Test-ASN1Module/TestObjectList.ta.mjs';
@@ -73,94 +73,110 @@ import {
  *
  */
 export class TestRequestControlledInfo {
+    /**
+     * @summary `controlledTestRequestType`.
+     * @description
+     *
+     * independent (one TO per test) or related (one test, several TOs).
+     * Mandatory. Selects the response CHOICE. ITU-T Rec. X.745 (11/93)
+     * §8.4.2.1.
+     * [§8.4.2.1](https://www.itu.int/rec/T-REC-X.745-199311-I)
+     *
+     * @public
+     * @readonly
+     */
+    public readonly controlledTestRequestType: ControlledTestRequestType;
+    /**
+     * @summary `testCategoryInformation`.
+     * @description
+     *
+     * Optional category-specific input; not necessarily stored on TOs.
+     * ITU-T Rec. X.745 (11/93) §8.4.2.4.
+     * [§8.4.2.4](https://www.itu.int/rec/T-REC-X.745-199311-I)
+     *
+     * @public
+     * @readonly
+     */
+    public readonly testCategoryInformation: OPTIONAL<TestCategoryInformation>;
+    /**
+     * @summary `testSessionId`.
+     * @description
+     *
+     * Optional conductor-assigned session id; if present, copied to every
+     * TO and result notification. ITU-T Rec. X.745 (11/93) §7.3.2.
+     * [§7.3.2](https://www.itu.int/rec/T-REC-X.745-199311-I)
+     *
+     * @public
+     * @readonly
+     */
+    public readonly testSessionId: OPTIONAL<TestSessionId>;
+    /**
+     * @summary `toBeTestedMORTs`.
+     * @description
+     *
+     * Optional explicit MORT list or scope/filter. Else implicit (TARR is
+     * the MORT, or MORTs in TO initial attributes). ITU-T Rec. X.745
+     * (11/93) §8.4.2.6.
+     * [§8.4.2.6](https://www.itu.int/rec/T-REC-X.745-199311-I)
+     *
+     * @public
+     * @readonly
+     */
+    public readonly toBeTestedMORTs: OPTIONAL<ToBeTestedMORTs>;
+    /**
+     * @summary `associatedObjects`.
+     * @description
+     *
+     * Optional AOs involved in the test, distinct from MORT/TO/TARR. ITU-T
+     * Rec. X.745 (11/93) §8.1.1, 8.4.2.7.
+     * [§8.1.1](https://www.itu.int/rec/T-REC-X.745-199311-I)
+     *
+     * @public
+     * @readonly
+     */
+    public readonly associatedObjects: OPTIONAL<AssociatedObjects>;
+    /**
+     * @summary `timeoutPeriod`.
+     * @description
+     *
+     * Optional maximum instantiation time. ITU-T Rec. X.745 (11/93) §8.1.7.
+     * [§8.1.7](https://www.itu.int/rec/T-REC-X.745-199311-I)
+     *
+     * @public
+     * @readonly
+     */
+    public readonly timeoutPeriod: OPTIONAL<TimeoutPeriod>;
+    /**
+     * @summary `testObjectList`.
+     * @description
+     *
+     * TOs to create. Order is significant for correlating the response or
+     * error; it does not imply creation order. Mandatory. ITU-T Rec. X.745
+     * (11/93) §8.4.2.5.
+     * [§8.4.2.5](https://www.itu.int/rec/T-REC-X.745-199311-I)
+     *
+     * @public
+     * @readonly
+     */
+    public readonly testObjectList: TestObjectList;
+
     constructor(
-        /**
-         * @summary `controlledTestRequestType`.
-         * @description
-         *
-         * independent (one TO per test) or related (one test, several TOs).
-         * Mandatory. Selects the response CHOICE. ITU-T Rec. X.745 (11/93)
-         * §8.4.2.1.
-         * [§8.4.2.1](https://www.itu.int/rec/T-REC-X.745-199311-I)
-         *
-         * @public
-         * @readonly
-         */
-        readonly controlledTestRequestType: ControlledTestRequestType,
-        /**
-         * @summary `testCategoryInformation`.
-         * @description
-         *
-         * Optional category-specific input; not necessarily stored on TOs.
-         * ITU-T Rec. X.745 (11/93) §8.4.2.4.
-         * [§8.4.2.4](https://www.itu.int/rec/T-REC-X.745-199311-I)
-         *
-         * @public
-         * @readonly
-         */
-        readonly testCategoryInformation: OPTIONAL<TestCategoryInformation>,
-        /**
-         * @summary `testSessionId`.
-         * @description
-         *
-         * Optional conductor-assigned session id; if present, copied to every
-         * TO and result notification. ITU-T Rec. X.745 (11/93) §7.3.2.
-         * [§7.3.2](https://www.itu.int/rec/T-REC-X.745-199311-I)
-         *
-         * @public
-         * @readonly
-         */
-        readonly testSessionId: OPTIONAL<TestSessionId>,
-        /**
-         * @summary `toBeTestedMORTs`.
-         * @description
-         *
-         * Optional explicit MORT list or scope/filter. Else implicit (TARR is
-         * the MORT, or MORTs in TO initial attributes). ITU-T Rec. X.745
-         * (11/93) §8.4.2.6.
-         * [§8.4.2.6](https://www.itu.int/rec/T-REC-X.745-199311-I)
-         *
-         * @public
-         * @readonly
-         */
-        readonly toBeTestedMORTs: OPTIONAL<ToBeTestedMORTs>,
-        /**
-         * @summary `associatedObjects`.
-         * @description
-         *
-         * Optional AOs involved in the test, distinct from MORT/TO/TARR. ITU-T
-         * Rec. X.745 (11/93) §8.1.1, 8.4.2.7.
-         * [§8.1.1](https://www.itu.int/rec/T-REC-X.745-199311-I)
-         *
-         * @public
-         * @readonly
-         */
-        readonly associatedObjects: OPTIONAL<AssociatedObjects>,
-        /**
-         * @summary `timeoutPeriod`.
-         * @description
-         *
-         * Optional maximum instantiation time. ITU-T Rec. X.745 (11/93) §8.1.7.
-         * [§8.1.7](https://www.itu.int/rec/T-REC-X.745-199311-I)
-         *
-         * @public
-         * @readonly
-         */
-        readonly timeoutPeriod: OPTIONAL<TimeoutPeriod>,
-        /**
-         * @summary `testObjectList`.
-         * @description
-         *
-         * TOs to create. Order is significant for correlating the response or
-         * error; it does not imply creation order. Mandatory. ITU-T Rec. X.745
-         * (11/93) §8.4.2.5.
-         * [§8.4.2.5](https://www.itu.int/rec/T-REC-X.745-199311-I)
-         *
-         * @public
-         * @readonly
-         */
-        readonly testObjectList: TestObjectList
-    ) {}
+        controlledTestRequestType: ControlledTestRequestType,
+        testCategoryInformation: OPTIONAL<TestCategoryInformation>,
+        testSessionId: OPTIONAL<TestSessionId>,
+        toBeTestedMORTs: OPTIONAL<ToBeTestedMORTs>,
+        associatedObjects: OPTIONAL<AssociatedObjects>,
+        timeoutPeriod: OPTIONAL<TimeoutPeriod>,
+        testObjectList: TestObjectList
+    ) {
+        this.controlledTestRequestType = controlledTestRequestType;
+        this.testCategoryInformation = testCategoryInformation;
+        this.testSessionId = testSessionId;
+        this.toBeTestedMORTs = toBeTestedMORTs;
+        this.associatedObjects = associatedObjects;
+        this.timeoutPeriod = timeoutPeriod;
+        this.testObjectList = testObjectList;
+    }
 
     /**
      * @summary Restructures an object into a TestRequestControlledInfo
@@ -196,7 +212,7 @@ export class TestRequestControlledInfo {
      * @static
      */
 
-    public static _enum_for_controlledTestRequestType = _enum_for_ControlledTestRequestType;
+    public static _enum_for_controlledTestRequestType: typeof _enum_for_ControlledTestRequestType = _enum_for_ControlledTestRequestType;
 }
 
 /**

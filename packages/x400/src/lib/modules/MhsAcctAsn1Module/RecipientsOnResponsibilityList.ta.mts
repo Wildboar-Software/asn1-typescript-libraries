@@ -1,6 +1,6 @@
 /* eslint-disable */
 import {
-    ASN1Element as _Element,
+    type ASN1Element as _Element,
     ASN1TagClass as _TagClass,
     ASN1Construction as _Construction,
     ASN1UniversalType as _UniversalType,
@@ -11,7 +11,7 @@ import {
 } from '@wildboar/asn1';
 import * as $ from '@wildboar/asn1/functional';
 import {
-    RecipientName,
+    type RecipientName,
     _decode_RecipientName,
     _encode_RecipientName,
 } from '../MhsAcctAsn1Module/RecipientName.ta.mjs';
@@ -29,22 +29,13 @@ import {
  */
 export type RecipientsOnResponsibilityList = RecipientName; // DefinedType
 
-let _cached_decoder_for_RecipientsOnResponsibilityList: $.ASN1Decoder<RecipientsOnResponsibilityList> | null = null;
-
 /**
  * @summary Decodes an ASN.1 element into a(n) RecipientsOnResponsibilityList
  * @function
  * @param {_Element} el The element being decoded.
  * @returns {RecipientsOnResponsibilityList} The decoded data structure.
  */
-export function _decode_RecipientsOnResponsibilityList(el: _Element): RecipientsOnResponsibilityList {
-    if (!_cached_decoder_for_RecipientsOnResponsibilityList) {
-        _cached_decoder_for_RecipientsOnResponsibilityList = _decode_RecipientName;
-    }
-    return _cached_decoder_for_RecipientsOnResponsibilityList(el);
-}
-
-let _cached_encoder_for_RecipientsOnResponsibilityList: $.ASN1Encoder<RecipientsOnResponsibilityList> | null = null;
+export const _decode_RecipientsOnResponsibilityList: $.ASN1Decoder<RecipientsOnResponsibilityList> = _decode_RecipientName;
 
 /**
  * @summary Encodes a(n) RecipientsOnResponsibilityList into an ASN.1 Element.
@@ -53,15 +44,7 @@ let _cached_encoder_for_RecipientsOnResponsibilityList: $.ASN1Encoder<Recipients
  * @param elGetter A function that can be used to get new ASN.1 elements.
  * @returns {_Element} The RecipientsOnResponsibilityList, encoded as an ASN.1 Element.
  */
-export function _encode_RecipientsOnResponsibilityList(
-    value: RecipientsOnResponsibilityList,
-    elGetter: $.ASN1Encoder<RecipientsOnResponsibilityList>
-): _Element {
-    if (!_cached_encoder_for_RecipientsOnResponsibilityList) {
-        _cached_encoder_for_RecipientsOnResponsibilityList = _encode_RecipientName;
-    }
-    return _cached_encoder_for_RecipientsOnResponsibilityList(value, elGetter);
-}
+export const _encode_RecipientsOnResponsibilityList: $.ASN1Encoder<RecipientsOnResponsibilityList> = _encode_RecipientName;
 
 
 /* eslint-enable */

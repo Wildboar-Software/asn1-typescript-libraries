@@ -1,6 +1,6 @@
 import {
-    OCTET_STRING,
-    ASN1Element as _Element,
+    type OCTET_STRING,
+    type ASN1Element as _Element,
     ASN1SizeError,
     ASN1TagClass as _TagClass,
 } from "@wildboar/asn1";
@@ -39,4 +39,4 @@ export const _decode_LegType = (el: _Element): LegType => {
     }
     return value;
 };
-export const _encode_LegType = $._encodeOctetString;
+export const _encode_LegType: $.ASN1Encoder<OCTET_STRING> = $._encodeOctetString;

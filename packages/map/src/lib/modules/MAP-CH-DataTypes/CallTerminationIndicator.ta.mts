@@ -1,7 +1,7 @@
 /* eslint-disable */
 import {
-    ASN1Element as _Element,
-    ENUMERATED
+    type ASN1Element as _Element,
+    type ENUMERATED
 } from "@wildboar/asn1";
 import * as $ from "@wildboar/asn1/functional";
 
@@ -45,7 +45,7 @@ type CallTerminationIndicator = _enum_for_CallTerminationIndicator | ENUMERATED;
  * @type {number}
  */
 export
-const CallTerminationIndicator_terminateCallActivityReferred: CallTerminationIndicator = 0; /* LONG_NAMED_ENUMERATED_VALUE */
+const CallTerminationIndicator_terminateCallActivityReferred: _enum_for_CallTerminationIndicator.terminateCallActivityReferred = _enum_for_CallTerminationIndicator.terminateCallActivityReferred; /* LONG_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary terminateCallActivityReferred
@@ -57,7 +57,7 @@ const CallTerminationIndicator_terminateCallActivityReferred: CallTerminationInd
  * @type {number}
  */
 export
-const terminateCallActivityReferred: CallTerminationIndicator = CallTerminationIndicator_terminateCallActivityReferred; /* SHORT_NAMED_ENUMERATED_VALUE */
+const terminateCallActivityReferred: _enum_for_CallTerminationIndicator.terminateCallActivityReferred = CallTerminationIndicator_terminateCallActivityReferred; /* SHORT_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary CallTerminationIndicator_terminateAllCallActivities
@@ -69,7 +69,7 @@ const terminateCallActivityReferred: CallTerminationIndicator = CallTerminationI
  * @type {number}
  */
 export
-const CallTerminationIndicator_terminateAllCallActivities: CallTerminationIndicator = 1; /* LONG_NAMED_ENUMERATED_VALUE */
+const CallTerminationIndicator_terminateAllCallActivities: _enum_for_CallTerminationIndicator.terminateAllCallActivities = _enum_for_CallTerminationIndicator.terminateAllCallActivities; /* LONG_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary terminateAllCallActivities
@@ -81,7 +81,7 @@ const CallTerminationIndicator_terminateAllCallActivities: CallTerminationIndica
  * @type {number}
  */
 export
-const terminateAllCallActivities: CallTerminationIndicator = CallTerminationIndicator_terminateAllCallActivities; /* SHORT_NAMED_ENUMERATED_VALUE */
+const terminateAllCallActivities: _enum_for_CallTerminationIndicator.terminateAllCallActivities = CallTerminationIndicator_terminateAllCallActivities; /* SHORT_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary Decodes an ASN.1 element into a(n) CallTerminationIndicator
@@ -89,7 +89,7 @@ const terminateAllCallActivities: CallTerminationIndicator = CallTerminationIndi
  * @param el The element being decoded.
  * @returns The decoded data structure.
  */
-export const _decode_CallTerminationIndicator = $._decodeEnumerated;
+export const _decode_CallTerminationIndicator: $.ASN1Decoder<number> = $._decodeEnumerated;
 
 /**
  * @summary Encodes a(n) CallTerminationIndicator into an ASN.1 Element.
@@ -98,7 +98,7 @@ export const _decode_CallTerminationIndicator = $._decodeEnumerated;
  * @param elGetter A function that can be used to get new ASN.1 elements.
  * @returns {_Element} The CallTerminationIndicator, encoded as an ASN.1 Element.
  */
-export const _encode_CallTerminationIndicator = $._encodeEnumerated;
+export const _encode_CallTerminationIndicator: $.ASN1Encoder<number> = $._encodeEnumerated;
 
 
 /* eslint-enable */

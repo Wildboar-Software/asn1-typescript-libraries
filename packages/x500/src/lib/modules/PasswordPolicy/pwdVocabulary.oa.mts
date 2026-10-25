@@ -5,7 +5,7 @@ import {
 } from "../InformationFramework/AttributeUsage.ta.mjs";
 import { id_oa_pwdVocabulary } from "../PasswordPolicy/id-oa-pwdVocabulary.va.mjs";
 import {
-    PwdVocabulary,
+    type PwdVocabulary,
     _decode_PwdVocabulary,
     _encode_PwdVocabulary,
 } from "../PasswordPolicy/PwdVocabulary.ta.mjs";

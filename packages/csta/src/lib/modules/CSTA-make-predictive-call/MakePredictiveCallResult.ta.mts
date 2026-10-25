@@ -2,13 +2,13 @@
 
 import * as $ from "@wildboar/asn1/functional";
 import {
-    OPTIONAL,
-    SEQUENCE,
-    SET,
-    ASN1Element as _Element,
+    type OPTIONAL,
+    type SEQUENCE,
+    type SET,
+    type ASN1Element as _Element,
     ASN1TagClass as _TagClass
 } from "@wildboar/asn1";
-import { ConnectionID, _decode_ConnectionID, _encode_ConnectionID } from "../CSTA-call-connection-identifiers/ConnectionID.ta.mjs";
+import { type ConnectionID, _decode_ConnectionID, _encode_ConnectionID } from "../CSTA-call-connection-identifiers/ConnectionID.ta.mjs";
 
 import { ConnectionInformation, _decode_ConnectionInformation, _encode_ConnectionInformation } from "../CSTA-media-services/ConnectionInformation.ta.mjs";
 
@@ -35,8 +35,8 @@ import { CSTACommonArguments, _decode_CSTACommonArguments, _encode_CSTACommonArg
  * ```asn1
  * MakePredictiveCallResult ::= SEQUENCE
  * {     initiatedCall             ConnectionID,
- *     initiatedCallInfo         ConnectionInformation                 OPTIONAL,
- *     callLinkageData         [1] IMPLICIT CallLinkageData             OPTIONAL,
+ *     initiatedCallInfo         ConnectionInformation                 type OPTIONAL,
+ *     callLinkageData         [1] IMPLICIT CallLinkageData             type OPTIONAL,
  *     extensions             CSTACommonArguments                 OPTIONAL }
  * ```
  * 
@@ -44,54 +44,64 @@ import { CSTACommonArguments, _decode_CSTACommonArguments, _encode_CSTACommonArg
  */
 export
 class MakePredictiveCallResult {
+    /**
+     * @summary `initiatedCall`.
+     * @description
+     *
+     * Mandatory. Initial connection of the called device
+     * (CallID of the new call plus that device). For an
+     * external called party this is often the NID (FR 3).
+     *
+     * @public
+     * @readonly
+     */
+    public readonly initiatedCall: ConnectionID;
+    /**
+     * @summary `initiatedCallInfo`.
+     * @description
+     *
+     * Optional connection information. Omitted values are
+     * switching-function specific (§12.2.8).
+     *
+     * @public
+     * @readonly
+     */
+    public readonly initiatedCallInfo?: OPTIONAL<ConnectionInformation>;
+    /**
+     * @summary `callLinkageData`.
+     * @description
+     *
+     * Optional global call data and thread data
+     * (§12.2.5).
+     *
+     * @public
+     * @readonly
+     */
+    public readonly callLinkageData?: OPTIONAL<CallLinkageData>;
+    /**
+     * @summary `extensions`.
+     * @description
+     *
+     * Optional `CSTACommonArguments` carrying the security
+     * and privateData parameters from the ECMA-269 service
+     * table.
+     *
+     * @public
+     * @readonly
+     */
+    public readonly extensions?: OPTIONAL<CSTACommonArguments>;
+
     constructor (
-        /**
-         * @summary `initiatedCall`.
-         * @description
-         *
-         * Mandatory. Initial connection of the called device
-         * (CallID of the new call plus that device). For an
-         * external called party this is often the NID (FR 3).
-         *
-         * @public
-         * @readonly
-         */
-        readonly initiatedCall: ConnectionID,
-        /**
-         * @summary `initiatedCallInfo`.
-         * @description
-         *
-         * Optional connection information. Omitted values are
-         * switching-function specific (§12.2.8).
-         *
-         * @public
-         * @readonly
-         */
-        readonly initiatedCallInfo?: OPTIONAL<ConnectionInformation>,
-        /**
-         * @summary `callLinkageData`.
-         * @description
-         *
-         * Optional global call data and thread data
-         * (§12.2.5).
-         *
-         * @public
-         * @readonly
-         */
-        readonly callLinkageData?: OPTIONAL<CallLinkageData>,
-        /**
-         * @summary `extensions`.
-         * @description
-         *
-         * Optional `CSTACommonArguments` carrying the security
-         * and privateData parameters from the ECMA-269 service
-         * table.
-         *
-         * @public
-         * @readonly
-         */
-        readonly extensions?: OPTIONAL<CSTACommonArguments>
-    ) {}
+        initiatedCall: ConnectionID,
+        initiatedCallInfo?: OPTIONAL<ConnectionInformation>,
+        callLinkageData?: OPTIONAL<CallLinkageData>,
+        extensions?: OPTIONAL<CSTACommonArguments>
+    ) {
+        this.initiatedCall = initiatedCall;
+        this.initiatedCallInfo = initiatedCallInfo;
+        this.callLinkageData = callLinkageData;
+        this.extensions = extensions;
+    }
 
     /**
      * @summary Restructures an object into a MakePredictiveCallResult

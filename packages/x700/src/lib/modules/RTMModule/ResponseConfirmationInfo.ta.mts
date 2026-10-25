@@ -1,7 +1,7 @@
 /* eslint-disable */
 import {
-    OPTIONAL,
-    ASN1Element as _Element,
+    type OPTIONAL,
+    type ASN1Element as _Element,
     ASN1TagClass as _TagClass,
     ASN1Construction as _Construction,
     ASN1UniversalType as _UniversalType,
@@ -12,37 +12,37 @@ import {
 } from '@wildboar/asn1';
 import * as $ from '@wildboar/asn1/functional';
 import {
-    ObjectInstance,
+    type ObjectInstance,
     _decode_ObjectInstance,
     _encode_ObjectInstance,
 } from '@wildboar/cmip';
 import {
-    GroupObjects,
+    type GroupObjects,
     _decode_GroupObjects,
     _encode_GroupObjects,
 } from '@wildboar/attribute-asn1module';
 import {
-    RequestIdentifier,
+    type RequestIdentifier,
     _decode_RequestIdentifier,
     _encode_RequestIdentifier,
 } from '../RTMModule/RequestIdentifier.ta.mjs';
 import {
-    NotificationIdentifier,
+    type NotificationIdentifier,
     _decode_NotificationIdentifier,
     _encode_NotificationIdentifier,
 } from '@wildboar/attribute-asn1module';
 import {
-    CorrelatedNotifications,
+    type CorrelatedNotifications,
     _decode_CorrelatedNotifications,
     _encode_CorrelatedNotifications,
 } from '@wildboar/attribute-asn1module';
 import {
-    ResponseTime,
+    type ResponseTime,
     _decode_ResponseTime,
     _encode_ResponseTime,
 } from '../RTMModule/ResponseTime.ta.mjs';
 import {
-    Integer,
+    type Integer,
     _decode_Integer,
     _encode_Integer,
 } from '../MetricModule/Integer.ta.mjs';
@@ -53,17 +53,17 @@ import {
     _encode_ResponseSync,
 } from '../RTMModule/ResponseSync.ta.mjs';
 import {
-    TimePeriod,
+    type TimePeriod,
     _decode_TimePeriod,
     _encode_TimePeriod,
 } from '../MetricModule/TimePeriod.ta.mjs';
 import {
-    AdditionalText,
+    type AdditionalText,
     _decode_AdditionalText,
     _encode_AdditionalText,
 } from '@wildboar/attribute-asn1module';
 import {
-    AdditionalInformation,
+    type AdditionalInformation,
     _decode_AdditionalInformation,
     _encode_AdditionalInformation,
 } from '@wildboar/attribute-asn1module';
@@ -102,187 +102,221 @@ import {
  *
  */
 export class ResponseConfirmationInfo {
+    /**
+     * @summary `responseMonitor`.
+     * @description
+     *
+     * Monitor that produced this notification (`responseMonitorId`).
+     * ITU-T Rec. X.748 (03/99)
+     * [§8.5.1.2.5](https://www.itu.int/rec/T-REC-X.748-199903-I),
+     * A.5.
+     * @public
+     * @readonly
+     */
+    public readonly responseMonitor: ObjectInstance;
+    /**
+     * @summary `responseRequester`.
+     * @description
+     *
+     * Requester whose request is being monitored. ITU-T Rec.
+     * X.748 (03/99)
+     * [§8.5.1.2.6](https://www.itu.int/rec/T-REC-X.748-199903-I).
+     * @public
+     * @readonly
+     */
+    public readonly responseRequester: ObjectInstance;
+    /**
+     * @summary `responseConfirmationObject`.
+     * @description
+     *
+     * Confirmation object that received the response. ITU-T Rec.
+     * X.748 (03/99)
+     * [§8.5.1.2.3](https://www.itu.int/rec/T-REC-X.748-199903-I).
+     * @public
+     * @readonly
+     */
+    public readonly responseConfirmationObject: ObjectInstance;
+    /**
+     * @summary `routeList`.
+     * @description
+     *
+     * Route-role objects through which the response was
+     * monitored. ITU-T Rec. X.748 (03/99)
+     * [§8.5.1.2.10](https://www.itu.int/rec/T-REC-X.748-199903-I).
+     * @public
+     * @readonly
+     */
+    public readonly routeList: GroupObjects;
+    /**
+     * @summary `requestIdentifier`.
+     * @description
+     *
+     * Identifies the response request. ITU-T Rec. X.748 (03/99)
+     * [§8.5.1.2.2](https://www.itu.int/rec/T-REC-X.748-199903-I).
+     * @public
+     * @readonly
+     */
+    public readonly requestIdentifier: RequestIdentifier;
+    /**
+     * @summary `notificationIdentifier`.
+     * @description
+     *
+     * Identifies this notification instance (X.733). ITU-T Rec.
+     * X.748 (03/99)
+     * [§8.5.1.2.11](https://www.itu.int/rec/T-REC-X.748-199903-I).
+     * @public
+     * @readonly
+     */
+    public readonly notificationIdentifier: OPTIONAL<NotificationIdentifier>;
+    /**
+     * @summary `correlatedNotifications`.
+     * @description
+     *
+     * Related notifications (X.733). ITU-T Rec. X.748 (03/99)
+     * [§8.5.1.2.12](https://www.itu.int/rec/T-REC-X.748-199903-I).
+     * @public
+     * @readonly
+     */
+    public readonly correlatedNotifications: OPTIONAL<CorrelatedNotifications>;
+    /**
+     * @summary `responseTime`.
+     * @description
+     *
+     * Elapsed time from request send to response arrival. ITU-T
+     * Rec. X.748 (03/99)
+     * [§8.5.1.2.8](https://www.itu.int/rec/T-REC-X.748-199903-I).
+     * @public
+     * @readonly
+     */
+    public readonly responseTime: ResponseTime;
+    /**
+     * @summary `maximumResponseTimeError`.
+     * @description
+     *
+     * Precision of `responseTime`; omitted or
+     * `noEstimateOnResponseTimeError` if unknown. ITU-T Rec.
+     * X.748 (03/99)
+     * [§8.5.1.2.1](https://www.itu.int/rec/T-REC-X.748-199903-I).
+     * @public
+     * @readonly
+     */
+    public readonly maximumResponseTimeError: OPTIONAL<ResponseTime>;
+    /**
+     * @summary `responseRequestLength`.
+     * @description
+     *
+     * Bit length of the request PDU; present if
+     * `reqResLengthPkg` is supported. ITU-T Rec. X.748 (03/99)
+     * [§8.4.9](https://www.itu.int/rec/T-REC-X.748-199903-I),
+     * §8.3.1.
+     * @public
+     * @readonly
+     */
+    public readonly responseRequestLength: OPTIONAL<Integer>;
+    /**
+     * @summary `responseLength`.
+     * @description
+     *
+     * Bit length of the response PDU; present if
+     * `reqResLengthPkg` is supported. ITU-T Rec. X.748 (03/99)
+     * [§8.4.7](https://www.itu.int/rec/T-REC-X.748-199903-I),
+     * §8.3.1.
+     * @public
+     * @readonly
+     */
+    public readonly responseLength: OPTIONAL<Integer>;
+    /**
+     * @summary `responseSync`.
+     * @description
+     *
+     * Synchronization used for this measurement. ITU-T Rec.
+     * X.748 (03/99)
+     * [§8.5.1.2.7](https://www.itu.int/rec/T-REC-X.748-199903-I).
+     * @public
+     * @readonly
+     */
+    public readonly responseSync: ResponseSync;
+    /**
+     * @summary `responseDelayTime`.
+     * @description
+     *
+     * `responseTime` minus `responseTimeout` (delay monitor).
+     * ITU-T Rec. X.748 (03/99)
+     * [§8.5.1.2.4](https://www.itu.int/rec/T-REC-X.748-199903-I),
+     * §8.4.6.
+     * @public
+     * @readonly
+     */
+    public readonly responseDelayTime?: OPTIONAL<TimePeriod>;
+    /**
+     * @summary `responseTimeout`.
+     * @description
+     *
+     * Configured timeout, or the interval until timeout without a
+     * response. ITU-T Rec. X.748 (03/99)
+     * [§8.5.1.2.9](https://www.itu.int/rec/T-REC-X.748-199903-I),
+     * §8.4.16.
+     * @public
+     * @readonly
+     */
+    public readonly responseTimeout?: OPTIONAL<TimePeriod>;
+    /**
+     * @summary `additionalText`.
+     * @description
+     *
+     * Optional extension text (X.733). ITU-T Rec. X.748 (03/99)
+     * [§8.5.1.2.13](https://www.itu.int/rec/T-REC-X.748-199903-I).
+     * @public
+     * @readonly
+     */
+    public readonly additionalText?: OPTIONAL<AdditionalText>;
+    /**
+     * @summary `additionalInformation`.
+     * @description
+     *
+     * Optional extension information (X.733). ITU-T Rec. X.748
+     * (03/99)
+     * [§8.5.1.2.14](https://www.itu.int/rec/T-REC-X.748-199903-I).
+     * @public
+     * @readonly
+     */
+    public readonly additionalInformation?: OPTIONAL<AdditionalInformation>;
+
     constructor(
-        /**
-         * @summary `responseMonitor`.
-         * @description
-         *
-         * Monitor that produced this notification (`responseMonitorId`).
-         * ITU-T Rec. X.748 (03/99)
-         * [§8.5.1.2.5](https://www.itu.int/rec/T-REC-X.748-199903-I),
-         * A.5.
-         * @public
-         * @readonly
-         */
-        readonly responseMonitor: ObjectInstance,
-        /**
-         * @summary `responseRequester`.
-         * @description
-         *
-         * Requester whose request is being monitored. ITU-T Rec.
-         * X.748 (03/99)
-         * [§8.5.1.2.6](https://www.itu.int/rec/T-REC-X.748-199903-I).
-         * @public
-         * @readonly
-         */
-        readonly responseRequester: ObjectInstance,
-        /**
-         * @summary `responseConfirmationObject`.
-         * @description
-         *
-         * Confirmation object that received the response. ITU-T Rec.
-         * X.748 (03/99)
-         * [§8.5.1.2.3](https://www.itu.int/rec/T-REC-X.748-199903-I).
-         * @public
-         * @readonly
-         */
-        readonly responseConfirmationObject: ObjectInstance,
-        /**
-         * @summary `routeList`.
-         * @description
-         *
-         * Route-role objects through which the response was
-         * monitored. ITU-T Rec. X.748 (03/99)
-         * [§8.5.1.2.10](https://www.itu.int/rec/T-REC-X.748-199903-I).
-         * @public
-         * @readonly
-         */
-        readonly routeList: GroupObjects,
-        /**
-         * @summary `requestIdentifier`.
-         * @description
-         *
-         * Identifies the response request. ITU-T Rec. X.748 (03/99)
-         * [§8.5.1.2.2](https://www.itu.int/rec/T-REC-X.748-199903-I).
-         * @public
-         * @readonly
-         */
-        readonly requestIdentifier: RequestIdentifier,
-        /**
-         * @summary `notificationIdentifier`.
-         * @description
-         *
-         * Identifies this notification instance (X.733). ITU-T Rec.
-         * X.748 (03/99)
-         * [§8.5.1.2.11](https://www.itu.int/rec/T-REC-X.748-199903-I).
-         * @public
-         * @readonly
-         */
-        readonly notificationIdentifier: OPTIONAL<NotificationIdentifier>,
-        /**
-         * @summary `correlatedNotifications`.
-         * @description
-         *
-         * Related notifications (X.733). ITU-T Rec. X.748 (03/99)
-         * [§8.5.1.2.12](https://www.itu.int/rec/T-REC-X.748-199903-I).
-         * @public
-         * @readonly
-         */
-        readonly correlatedNotifications: OPTIONAL<CorrelatedNotifications>,
-        /**
-         * @summary `responseTime`.
-         * @description
-         *
-         * Elapsed time from request send to response arrival. ITU-T
-         * Rec. X.748 (03/99)
-         * [§8.5.1.2.8](https://www.itu.int/rec/T-REC-X.748-199903-I).
-         * @public
-         * @readonly
-         */
-        readonly responseTime: ResponseTime,
-        /**
-         * @summary `maximumResponseTimeError`.
-         * @description
-         *
-         * Precision of `responseTime`; omitted or
-         * `noEstimateOnResponseTimeError` if unknown. ITU-T Rec.
-         * X.748 (03/99)
-         * [§8.5.1.2.1](https://www.itu.int/rec/T-REC-X.748-199903-I).
-         * @public
-         * @readonly
-         */
-        readonly maximumResponseTimeError: OPTIONAL<ResponseTime>,
-        /**
-         * @summary `responseRequestLength`.
-         * @description
-         *
-         * Bit length of the request PDU; present if
-         * `reqResLengthPkg` is supported. ITU-T Rec. X.748 (03/99)
-         * [§8.4.9](https://www.itu.int/rec/T-REC-X.748-199903-I),
-         * §8.3.1.
-         * @public
-         * @readonly
-         */
-        readonly responseRequestLength: OPTIONAL<Integer>,
-        /**
-         * @summary `responseLength`.
-         * @description
-         *
-         * Bit length of the response PDU; present if
-         * `reqResLengthPkg` is supported. ITU-T Rec. X.748 (03/99)
-         * [§8.4.7](https://www.itu.int/rec/T-REC-X.748-199903-I),
-         * §8.3.1.
-         * @public
-         * @readonly
-         */
-        readonly responseLength: OPTIONAL<Integer>,
-        /**
-         * @summary `responseSync`.
-         * @description
-         *
-         * Synchronization used for this measurement. ITU-T Rec.
-         * X.748 (03/99)
-         * [§8.5.1.2.7](https://www.itu.int/rec/T-REC-X.748-199903-I).
-         * @public
-         * @readonly
-         */
-        readonly responseSync: ResponseSync,
-        /**
-         * @summary `responseDelayTime`.
-         * @description
-         *
-         * `responseTime` minus `responseTimeout` (delay monitor).
-         * ITU-T Rec. X.748 (03/99)
-         * [§8.5.1.2.4](https://www.itu.int/rec/T-REC-X.748-199903-I),
-         * §8.4.6.
-         * @public
-         * @readonly
-         */
-        readonly responseDelayTime?: OPTIONAL<TimePeriod>,
-        /**
-         * @summary `responseTimeout`.
-         * @description
-         *
-         * Configured timeout, or the interval until timeout without a
-         * response. ITU-T Rec. X.748 (03/99)
-         * [§8.5.1.2.9](https://www.itu.int/rec/T-REC-X.748-199903-I),
-         * §8.4.16.
-         * @public
-         * @readonly
-         */
-        readonly responseTimeout?: OPTIONAL<TimePeriod>,
-        /**
-         * @summary `additionalText`.
-         * @description
-         *
-         * Optional extension text (X.733). ITU-T Rec. X.748 (03/99)
-         * [§8.5.1.2.13](https://www.itu.int/rec/T-REC-X.748-199903-I).
-         * @public
-         * @readonly
-         */
-        readonly additionalText?: OPTIONAL<AdditionalText>,
-        /**
-         * @summary `additionalInformation`.
-         * @description
-         *
-         * Optional extension information (X.733). ITU-T Rec. X.748
-         * (03/99)
-         * [§8.5.1.2.14](https://www.itu.int/rec/T-REC-X.748-199903-I).
-         * @public
-         * @readonly
-         */
-        readonly additionalInformation?: OPTIONAL<AdditionalInformation>
-    ) {}
+        responseMonitor: ObjectInstance,
+        responseRequester: ObjectInstance,
+        responseConfirmationObject: ObjectInstance,
+        routeList: GroupObjects,
+        requestIdentifier: RequestIdentifier,
+        notificationIdentifier: OPTIONAL<NotificationIdentifier>,
+        correlatedNotifications: OPTIONAL<CorrelatedNotifications>,
+        responseTime: ResponseTime,
+        maximumResponseTimeError: OPTIONAL<ResponseTime>,
+        responseRequestLength: OPTIONAL<Integer>,
+        responseLength: OPTIONAL<Integer>,
+        responseSync: ResponseSync,
+        responseDelayTime?: OPTIONAL<TimePeriod>,
+        responseTimeout?: OPTIONAL<TimePeriod>,
+        additionalText?: OPTIONAL<AdditionalText>,
+        additionalInformation?: OPTIONAL<AdditionalInformation>
+    ) {
+        this.responseMonitor = responseMonitor;
+        this.responseRequester = responseRequester;
+        this.responseConfirmationObject = responseConfirmationObject;
+        this.routeList = routeList;
+        this.requestIdentifier = requestIdentifier;
+        this.notificationIdentifier = notificationIdentifier;
+        this.correlatedNotifications = correlatedNotifications;
+        this.responseTime = responseTime;
+        this.maximumResponseTimeError = maximumResponseTimeError;
+        this.responseRequestLength = responseRequestLength;
+        this.responseLength = responseLength;
+        this.responseSync = responseSync;
+        this.responseDelayTime = responseDelayTime;
+        this.responseTimeout = responseTimeout;
+        this.additionalText = additionalText;
+        this.additionalInformation = additionalInformation;
+    }
 
     /**
      * @summary Restructures an object into a ResponseConfirmationInfo
@@ -327,7 +361,7 @@ export class ResponseConfirmationInfo {
      * @static
      */
 
-    public static _enum_for_responseSync = _enum_for_ResponseSync;
+    public static _enum_for_responseSync: typeof _enum_for_ResponseSync = _enum_for_ResponseSync;
 }
 
 /**

@@ -1,6 +1,6 @@
 /* eslint-disable */
 import {
-    ASN1Element as _Element,
+    type ASN1Element as _Element,
     ASN1TagClass as _TagClass,
     ASN1Construction as _Construction,
     ASN1UniversalType as _UniversalType,
@@ -10,8 +10,8 @@ import {
     ASN1ConstructionError as _ConstructionError,
 } from "@wildboar/asn1";
 import * as $ from "@wildboar/asn1/functional";
-import { GeneralName, _decode_GeneralName, _encode_GeneralName } from "../CertificateExtensions/GeneralName.ta.mjs";
-import { CertificateSerialNumber, _decode_CertificateSerialNumber, _encode_CertificateSerialNumber } from "../AuthenticationFramework/CertificateSerialNumber.ta.mjs";
+import { type GeneralName, _decode_GeneralName, _encode_GeneralName } from "../CertificateExtensions/GeneralName.ta.mjs";
+import { type CertificateSerialNumber, _decode_CertificateSerialNumber, _encode_CertificateSerialNumber } from "../AuthenticationFramework/CertificateSerialNumber.ta.mjs";
 
 
 /**
@@ -34,24 +34,30 @@ import { CertificateSerialNumber, _decode_CertificateSerialNumber, _encode_Certi
  */
 export
 class CertId {
+    /**
+     * @summary `issuer`.
+     * @description
+     * Certificate issuer. ISO/IEC 7816-15:2016 Annex A.
+     * @public
+     * @readonly
+     */
+    public readonly issuer: GeneralName;
+    /**
+     * @summary `serialNumber`.
+     * @description
+     * Certificate serial number. ISO/IEC 7816-15:2016 Annex A.
+     * @public
+     * @readonly
+     */
+    public readonly serialNumber: CertificateSerialNumber;
+
     constructor (
-        /**
-         * @summary `issuer`.
-         * @description
-         * Certificate issuer. ISO/IEC 7816-15:2016 Annex A.
-         * @public
-         * @readonly
-         */
-        readonly issuer: GeneralName,
-        /**
-         * @summary `serialNumber`.
-         * @description
-         * Certificate serial number. ISO/IEC 7816-15:2016 Annex A.
-         * @public
-         * @readonly
-         */
-        readonly serialNumber: CertificateSerialNumber
-    ) {}
+        issuer: GeneralName,
+        serialNumber: CertificateSerialNumber
+    ) {
+        this.issuer = issuer;
+        this.serialNumber = serialNumber;
+    }
 
     /**
      * @summary Restructures an object into a CertId

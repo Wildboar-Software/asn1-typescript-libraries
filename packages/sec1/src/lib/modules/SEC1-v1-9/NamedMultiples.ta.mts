@@ -1,7 +1,7 @@
 /* eslint-disable */
 import {
-    OBJECT_IDENTIFIER,
-    ASN1Element as _Element,
+    type OBJECT_IDENTIFIER,
+    type ASN1Element as _Element,
     ASN1TagClass as _TagClass,
     ASN1Construction as _Construction,
     ASN1UniversalType as _UniversalType,
@@ -11,7 +11,7 @@ import {
     ASN1ConstructionError as _ConstructionError,
 } from "@wildboar/asn1";
 import * as $ from "@wildboar/asn1/functional";
-import { ECPoint, _decode_ECPoint, _encode_ECPoint } from "../SEC1-v1-9/ECPoint.ta.mjs";
+import { type ECPoint, _decode_ECPoint, _encode_ECPoint } from "../SEC1-v1-9/ECPoint.ta.mjs";
 /**
  * @summary NamedMultiples
  * @description
@@ -40,7 +40,7 @@ class NamedMultiples {
      * @public
      * @readonly
      */
-    readonly multiples: OBJECT_IDENTIFIER;
+    public readonly multiples: OBJECT_IDENTIFIER;
     /**
      * @summary `points`.
      * @description
@@ -51,7 +51,7 @@ class NamedMultiples {
      * @public
      * @readonly
      */
-    readonly points: ECPoint[];
+    public readonly points: ECPoint[];
 
     constructor (
         multiples: OBJECT_IDENTIFIER,

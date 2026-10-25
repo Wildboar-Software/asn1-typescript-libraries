@@ -1,6 +1,6 @@
 /* eslint-disable */
 import {
-  BIT_STRING,
+  type BIT_STRING,
   ASN1Element as _Element,
   ASN1TagClass as _TagClass,
   ASN1Construction as _Construction,
@@ -34,12 +34,12 @@ export type PKIProtection = BIT_STRING;
 
 
 
-export const _decode_PKIProtection = $._decodeBitString;
+export const _decode_PKIProtection: $.ASN1Decoder<BIT_STRING> = $._decodeBitString;
 
 
 
 
-export const _encode_PKIProtection = $._encodeBitString;
+export const _encode_PKIProtection: $.ASN1Encoder<BIT_STRING> = $._encodeBitString;
 
 
 /* eslint-enable */

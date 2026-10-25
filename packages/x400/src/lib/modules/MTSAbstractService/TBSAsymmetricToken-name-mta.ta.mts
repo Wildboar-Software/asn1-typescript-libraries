@@ -1,7 +1,7 @@
 /* eslint-disable */
 import {
-    OPTIONAL,
-    ASN1Element as _Element,
+    type OPTIONAL,
+    type ASN1Element as _Element,
     ASN1TagClass as _TagClass,
     ASN1Construction as _Construction,
     ASN1UniversalType as _UniversalType,
@@ -17,7 +17,7 @@ import {
     _encode_GlobalDomainIdentifier,
 } from '../MTSAbstractService/GlobalDomainIdentifier.ta.mjs';
 import {
-    MTAName,
+    type MTAName,
     _decode_MTAName,
     _encode_MTAName,
 } from '../MTSAbstractService/MTAName.ta.mjs';
@@ -37,20 +37,26 @@ import {
  *
  */
 export class TBSAsymmetricToken_name_mta {
+    /**
+     * @summary `global_domain_identifier`.
+     * @public
+     * @readonly
+     */
+    public readonly global_domain_identifier: OPTIONAL<GlobalDomainIdentifier>;
+    /**
+     * @summary `mta_name`.
+     * @public
+     * @readonly
+     */
+    public readonly mta_name: MTAName;
+
     constructor(
-        /**
-         * @summary `global_domain_identifier`.
-         * @public
-         * @readonly
-         */
-        readonly global_domain_identifier: OPTIONAL<GlobalDomainIdentifier>,
-        /**
-         * @summary `mta_name`.
-         * @public
-         * @readonly
-         */
-        readonly mta_name: MTAName
-    ) {}
+        global_domain_identifier: OPTIONAL<GlobalDomainIdentifier>,
+        mta_name: MTAName
+    ) {
+        this.global_domain_identifier = global_domain_identifier;
+        this.mta_name = mta_name;
+    }
 
     /**
      * @summary Restructures an object into a TBSAsymmetricToken_name_mta

@@ -1,13 +1,13 @@
 /* eslint-disable */
 import {
     ASN1ConstructionError as _ConstructionError,
-    ASN1Element as _Element,
+    type ASN1Element as _Element,
     ASN1TagClass as _TagClass
 } from "@wildboar/asn1";
 import * as $ from "@wildboar/asn1/functional";
-import { SecurityParmIndex, _decode_SecurityParmIndex, _encode_SecurityParmIndex } from "../MEDIA-GATEWAY-CONTROL/SecurityParmIndex.ta.mjs";
-import { SequenceNum, _decode_SequenceNum, _encode_SequenceNum } from "../MEDIA-GATEWAY-CONTROL/SequenceNum.ta.mjs";
-import { AuthData, _decode_AuthData, _encode_AuthData } from "../MEDIA-GATEWAY-CONTROL/AuthData.ta.mjs";
+import { type SecurityParmIndex, _decode_SecurityParmIndex, _encode_SecurityParmIndex } from "../MEDIA-GATEWAY-CONTROL/SecurityParmIndex.ta.mjs";
+import { type SequenceNum, _decode_SequenceNum, _encode_SequenceNum } from "../MEDIA-GATEWAY-CONTROL/SequenceNum.ta.mjs";
+import { type AuthData, _decode_AuthData, _encode_AuthData } from "../MEDIA-GATEWAY-CONTROL/AuthData.ta.mjs";
 
 
 /**
@@ -44,7 +44,7 @@ class AuthenticationHeader {
      * @public
      * @readonly
      */
-    readonly secParmIndex: SecurityParmIndex;
+    public readonly secParmIndex: SecurityParmIndex;
     /**
      * @summary `seqNum`.
      * @description
@@ -56,7 +56,7 @@ class AuthenticationHeader {
      * @public
      * @readonly
      */
-    readonly seqNum: SequenceNum;
+    public readonly seqNum: SequenceNum;
     /**
      * @summary `ad`.
      * @description
@@ -70,7 +70,7 @@ class AuthenticationHeader {
      * @public
      * @readonly
      */
-    readonly ad: AuthData;
+    public readonly ad: AuthData;
 
     constructor (
         secParmIndex: SecurityParmIndex,

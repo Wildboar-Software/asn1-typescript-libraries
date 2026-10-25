@@ -1,6 +1,6 @@
 /* eslint-disable */
 import {
-  OPTIONAL,
+  type OPTIONAL,
   ASN1Element as _Element,
   ASN1TagClass as _TagClass,
   ASN1Construction as _Construction,
@@ -12,12 +12,12 @@ import {
 } from '@wildboar/asn1';
 import * as $ from '@wildboar/asn1/functional';
 import {
-  ObjectClass,
+  type ObjectClass,
   _decode_ObjectClass,
   _encode_ObjectClass,
 } from '../CMIP-1/ObjectClass.ta.mjs';
 import {
-    ActionTypeId,
+    type ActionTypeId,
     _decode_ActionTypeId,
     _encode_ActionTypeId,
 } from '../CMIP-1/ActionTypeId.ta.mjs';
@@ -48,7 +48,7 @@ export class NoSuchArgument_actionId {
    * @public
    * @readonly
    */
-  readonly managedObjectClass: OPTIONAL<ObjectClass>;
+  public readonly managedObjectClass: OPTIONAL<ObjectClass>;
   /**
    * @summary `actionType`.
    * @description
@@ -58,7 +58,7 @@ export class NoSuchArgument_actionId {
    * @public
    * @readonly
    */
-  readonly actionType: ActionTypeId;
+  public readonly actionType: ActionTypeId;
 
   constructor(
     managedObjectClass: OPTIONAL<ObjectClass>,

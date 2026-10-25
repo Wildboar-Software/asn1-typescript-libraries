@@ -1,7 +1,7 @@
 /* eslint-disable */
 import {
-    OPTIONAL,
-    ASN1Element as _Element,
+    type OPTIONAL,
+    type ASN1Element as _Element,
     ASN1TagClass as _TagClass,
     ASN1Construction as _Construction,
     ASN1UniversalType as _UniversalType,
@@ -17,12 +17,12 @@ import {
     _encode_GlobalDomainIdentifier,
 } from '../MTSAbstractService/GlobalDomainIdentifier.ta.mjs';
 import {
-    MTAName,
+    type MTAName,
     _decode_MTAName,
     _encode_MTAName,
 } from '../MTSAbstractService/MTAName.ta.mjs';
 import {
-    Name,
+    type Name,
     _decode_Name,
     _encode_Name,
 } from '@wildboar/dn';
@@ -47,26 +47,34 @@ import {
  *
  */
 export class ReportingMTAName {
+    /**
+     * @summary `domain`.
+     * @public
+     * @readonly
+     */
+    public readonly domain: GlobalDomainIdentifier;
+    /**
+     * @summary `mta_name`.
+     * @public
+     * @readonly
+     */
+    public readonly mta_name: MTAName;
+    /**
+     * @summary `mta_directory_name`.
+     * @public
+     * @readonly
+     */
+    public readonly mta_directory_name?: OPTIONAL<Name>;
+
     constructor(
-        /**
-         * @summary `domain`.
-         * @public
-         * @readonly
-         */
-        readonly domain: GlobalDomainIdentifier,
-        /**
-         * @summary `mta_name`.
-         * @public
-         * @readonly
-         */
-        readonly mta_name: MTAName,
-        /**
-         * @summary `mta_directory_name`.
-         * @public
-         * @readonly
-         */
-        readonly mta_directory_name?: OPTIONAL<Name>
-    ) {}
+        domain: GlobalDomainIdentifier,
+        mta_name: MTAName,
+        mta_directory_name?: OPTIONAL<Name>
+    ) {
+        this.domain = domain;
+        this.mta_name = mta_name;
+        this.mta_directory_name = mta_directory_name;
+    }
 
     /**
      * @summary Restructures an object into a ReportingMTAName

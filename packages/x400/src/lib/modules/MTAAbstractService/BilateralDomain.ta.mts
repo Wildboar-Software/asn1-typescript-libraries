@@ -1,6 +1,6 @@
 /* eslint-disable */
 import {
-    ASN1Element as _Element,
+    type ASN1Element as _Element,
     ASN1TagClass as _TagClass,
     ASN1Construction as _Construction,
     ASN1UniversalType as _UniversalType,
@@ -11,12 +11,12 @@ import {
 } from '@wildboar/asn1';
 import * as $ from '@wildboar/asn1/functional';
 import {
-    CountryName,
+    type CountryName,
     _decode_CountryName,
     _encode_CountryName,
 } from '../MTSAbstractService/CountryName.ta.mjs';
 import {
-    BilateralDomain_domain,
+    type BilateralDomain_domain,
     _decode_BilateralDomain_domain,
     _encode_BilateralDomain_domain,
 } from '../MTAAbstractService/BilateralDomain-domain.ta.mjs';
@@ -43,20 +43,26 @@ import {
  *
  */
 export class BilateralDomain {
+    /**
+     * @summary `country_name`.
+     * @public
+     * @readonly
+     */
+    public readonly country_name: CountryName;
+    /**
+     * @summary `domain`.
+     * @public
+     * @readonly
+     */
+    public readonly domain: BilateralDomain_domain;
+
     constructor(
-        /**
-         * @summary `country_name`.
-         * @public
-         * @readonly
-         */
-        readonly country_name: CountryName,
-        /**
-         * @summary `domain`.
-         * @public
-         * @readonly
-         */
-        readonly domain: BilateralDomain_domain
-    ) {}
+        country_name: CountryName,
+        domain: BilateralDomain_domain
+    ) {
+        this.country_name = country_name;
+        this.domain = domain;
+    }
 
     /**
      * @summary Restructures an object into a BilateralDomain

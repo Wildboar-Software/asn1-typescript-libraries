@@ -2,13 +2,13 @@
 
 import * as $ from "@wildboar/asn1/functional";
 import {
-    OPTIONAL,
-    SEQUENCE,
-    SET,
-    ASN1Element as _Element,
+    type OPTIONAL,
+    type SEQUENCE,
+    type SET,
+    type ASN1Element as _Element,
     ASN1TagClass as _TagClass
 } from "@wildboar/asn1";
-import { AuditoryApparatusList, _decode_AuditoryApparatusList, _encode_AuditoryApparatusList } from "../CSTA-physical-device-feature/AuditoryApparatusList.ta.mjs";
+import { type AuditoryApparatusList, _decode_AuditoryApparatusList, _encode_AuditoryApparatusList } from "../CSTA-physical-device-feature/AuditoryApparatusList.ta.mjs";
 
 import { CSTACommonArguments, _decode_CSTACommonArguments, _encode_CSTACommonArguments } from "../CSTA-extension-types/CSTACommonArguments.ta.mjs";
 
@@ -36,29 +36,35 @@ import { CSTACommonArguments, _decode_CSTACommonArguments, _encode_CSTACommonArg
  */
 export
 class GetAuditoryApparatusInformationResult {
+    /**
+     * @summary `auditoryApparatusList`.
+     * @description
+     *
+     * One entry per apparatus: type, speaker/microphone/hookswitch
+     * capability bits, `hookswitchID` (a hookswitch may serve multiple
+     * apparatuses).
+     * @public
+     * @readonly
+     */
+    public readonly auditoryApparatusList: AuditoryApparatusList;
+    /**
+     * @summary `extensions`.
+     * @description
+     *
+     * Optional security (timestamp, sequence, securityInfo) and
+     * privateData.
+     * @public
+     * @readonly
+     */
+    public readonly extensions?: OPTIONAL<CSTACommonArguments>;
+
     constructor (
-        /**
-         * @summary `auditoryApparatusList`.
-         * @description
-         *
-         * One entry per apparatus: type, speaker/microphone/hookswitch
-         * capability bits, `hookswitchID` (a hookswitch may serve multiple
-         * apparatuses).
-         * @public
-         * @readonly
-         */
-        readonly auditoryApparatusList: AuditoryApparatusList,
-        /**
-         * @summary `extensions`.
-         * @description
-         *
-         * Optional security (timestamp, sequence, securityInfo) and
-         * privateData.
-         * @public
-         * @readonly
-         */
-        readonly extensions?: OPTIONAL<CSTACommonArguments>
-    ) {}
+        auditoryApparatusList: AuditoryApparatusList,
+        extensions?: OPTIONAL<CSTACommonArguments>
+    ) {
+        this.auditoryApparatusList = auditoryApparatusList;
+        this.extensions = extensions;
+    }
 
     /**
      * @summary Restructures an object into a GetAuditoryApparatusInformationResult

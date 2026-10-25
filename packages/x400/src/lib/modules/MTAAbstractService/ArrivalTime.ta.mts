@@ -1,6 +1,6 @@
 /* eslint-disable */
 import {
-    ASN1Element as _Element,
+    type ASN1Element as _Element,
     ASN1TagClass as _TagClass,
     ASN1Construction as _Construction,
     ASN1UniversalType as _UniversalType,
@@ -11,7 +11,7 @@ import {
 } from '@wildboar/asn1';
 import * as $ from '@wildboar/asn1/functional';
 import {
-    Time,
+    type Time,
     _decode_Time,
     _encode_Time,
 } from '../MTSAbstractService/Time.ta.mjs';
@@ -32,22 +32,13 @@ import {
  */
 export type ArrivalTime = Time; // DefinedType
 
-let _cached_decoder_for_ArrivalTime: $.ASN1Decoder<ArrivalTime> | null = null;
-
 /**
  * @summary Decodes an ASN.1 element into a(n) ArrivalTime
  * @function
  * @param {_Element} el The element being decoded.
  * @returns {ArrivalTime} The decoded data structure.
  */
-export function _decode_ArrivalTime(el: _Element): ArrivalTime {
-    if (!_cached_decoder_for_ArrivalTime) {
-        _cached_decoder_for_ArrivalTime = _decode_Time;
-    }
-    return _cached_decoder_for_ArrivalTime(el);
-}
-
-let _cached_encoder_for_ArrivalTime: $.ASN1Encoder<ArrivalTime> | null = null;
+export const _decode_ArrivalTime: $.ASN1Decoder<ArrivalTime> = _decode_Time;
 
 /**
  * @summary Encodes a(n) ArrivalTime into an ASN.1 Element.
@@ -56,15 +47,7 @@ let _cached_encoder_for_ArrivalTime: $.ASN1Encoder<ArrivalTime> | null = null;
  * @param elGetter A function that can be used to get new ASN.1 elements.
  * @returns {_Element} The ArrivalTime, encoded as an ASN.1 Element.
  */
-export function _encode_ArrivalTime(
-    value: ArrivalTime,
-    elGetter: $.ASN1Encoder<ArrivalTime>
-): _Element {
-    if (!_cached_encoder_for_ArrivalTime) {
-        _cached_encoder_for_ArrivalTime = _encode_Time;
-    }
-    return _cached_encoder_for_ArrivalTime(value, elGetter);
-}
+export const _encode_ArrivalTime: $.ASN1Encoder<ArrivalTime> = _encode_Time;
 
 
 /* eslint-enable */

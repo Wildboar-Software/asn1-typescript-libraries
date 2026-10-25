@@ -1,6 +1,6 @@
 /* eslint-disable */
 import {
-    ENUMERATED
+    type ENUMERATED
 } from "@wildboar/asn1";
 import * as $ from "@wildboar/asn1/functional";
 
@@ -88,7 +88,7 @@ type Messaging_Party_Validity = _enum_for_Messaging_Party_Validity | ENUMERATED;
  * @type {number}
  */
 export
-const Messaging_Party_Validity_unknown: Messaging_Party_Validity = 0; /* LONG_NAMED_ENUMERATED_VALUE */
+const Messaging_Party_Validity_unknown: _enum_for_Messaging_Party_Validity.unknown = _enum_for_Messaging_Party_Validity.unknown; /* LONG_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary unknown
@@ -103,7 +103,7 @@ const Messaging_Party_Validity_unknown: Messaging_Party_Validity = 0; /* LONG_NA
  * @type {number}
  */
 export
-const unknown: Messaging_Party_Validity = Messaging_Party_Validity_unknown; /* SHORT_NAMED_ENUMERATED_VALUE */
+const unknown: _enum_for_Messaging_Party_Validity.unknown = Messaging_Party_Validity_unknown; /* SHORT_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary Messaging_Party_Validity_trusted
@@ -118,7 +118,7 @@ const unknown: Messaging_Party_Validity = Messaging_Party_Validity_unknown; /* S
  * @type {number}
  */
 export
-const Messaging_Party_Validity_trusted: Messaging_Party_Validity = 1; /* LONG_NAMED_ENUMERATED_VALUE */
+const Messaging_Party_Validity_trusted: _enum_for_Messaging_Party_Validity.trusted = _enum_for_Messaging_Party_Validity.trusted; /* LONG_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary trusted
@@ -133,7 +133,7 @@ const Messaging_Party_Validity_trusted: Messaging_Party_Validity = 1; /* LONG_NA
  * @type {number}
  */
 export
-const trusted: Messaging_Party_Validity = Messaging_Party_Validity_trusted; /* SHORT_NAMED_ENUMERATED_VALUE */
+const trusted: _enum_for_Messaging_Party_Validity.trusted = Messaging_Party_Validity_trusted; /* SHORT_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary Messaging_Party_Validity_untrusted
@@ -148,7 +148,7 @@ const trusted: Messaging_Party_Validity = Messaging_Party_Validity_trusted; /* S
  * @type {number}
  */
 export
-const Messaging_Party_Validity_untrusted: Messaging_Party_Validity = 2; /* LONG_NAMED_ENUMERATED_VALUE */
+const Messaging_Party_Validity_untrusted: _enum_for_Messaging_Party_Validity.untrusted = _enum_for_Messaging_Party_Validity.untrusted; /* LONG_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary untrusted
@@ -163,7 +163,7 @@ const Messaging_Party_Validity_untrusted: Messaging_Party_Validity = 2; /* LONG_
  * @type {number}
  */
 export
-const untrusted: Messaging_Party_Validity = Messaging_Party_Validity_untrusted; /* SHORT_NAMED_ENUMERATED_VALUE */
+const untrusted: _enum_for_Messaging_Party_Validity.untrusted = Messaging_Party_Validity_untrusted; /* SHORT_NAMED_ENUMERATED_VALUE */
 export const _decode_Messaging_Party_Validity: $.ASN1Decoder<Messaging_Party_Validity> = $._decodeEnumerated;
 export const _encode_Messaging_Party_Validity: $.ASN1Encoder<Messaging_Party_Validity> = $._encodeEnumerated;
 

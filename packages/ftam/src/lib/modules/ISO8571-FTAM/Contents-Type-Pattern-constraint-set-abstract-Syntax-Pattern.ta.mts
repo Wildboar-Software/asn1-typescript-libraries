@@ -1,6 +1,6 @@
 /* eslint-disable */
 import {
-  OPTIONAL,
+  type OPTIONAL,
   ASN1Element as _Element,
   ASN1TagClass as _TagClass,
   ASN1Construction as _Construction,
@@ -41,7 +41,7 @@ export class Contents_Type_Pattern_constraint_set_abstract_Syntax_Pattern {
    * @public
    * @readonly
    */
-  readonly constraint_Set_Pattern?: OPTIONAL<Object_Identifier_Pattern>;
+  public readonly constraint_Set_Pattern?: OPTIONAL<Object_Identifier_Pattern>;
   /**
    * @summary `abstract_Syntax_Pattern`.
    * @description
@@ -51,7 +51,7 @@ export class Contents_Type_Pattern_constraint_set_abstract_Syntax_Pattern {
    * @public
    * @readonly
    */
-  readonly abstract_Syntax_Pattern?: OPTIONAL<Object_Identifier_Pattern>;
+  public readonly abstract_Syntax_Pattern?: OPTIONAL<Object_Identifier_Pattern>;
 
   constructor(
     constraint_Set_Pattern?: OPTIONAL<Object_Identifier_Pattern>,

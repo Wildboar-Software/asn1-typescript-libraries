@@ -1,6 +1,6 @@
 /* eslint-disable */
 import {
-  OPTIONAL,
+  type OPTIONAL,
   ASN1Element as _Element,
   ASN1TagClass as _TagClass,
   ASN1Construction as _Construction,
@@ -12,12 +12,12 @@ import {
 } from '@wildboar/asn1';
 import * as $ from '@wildboar/asn1/functional';
 import {
-  DialoguePortion,
+  type DialoguePortion,
   _decode_DialoguePortion,
   _encode_DialoguePortion,
 } from '../TCAPMessages/DialoguePortion.ta.mjs';
 import {
-  ComponentPortion,
+  type ComponentPortion,
   _decode_ComponentPortion,
   _encode_ComponentPortion,
 } from '../TCAPMessages/ComponentPortion.ta.mjs';
@@ -42,31 +42,37 @@ import {
  *
  */
 export class Unidirectional {
+  /**
+   * @summary `dialoguePortion`.
+   * @description
+   *
+   * Optional EXTERNAL carrying a unidialogue APDU
+   * (`uniDialogue-as-id`) or user information. ITU-T Rec.
+   * Q.773 (06/97) §4.2.3.
+   *
+   * @public
+   * @readonly
+   */
+  public readonly dialoguePortion: OPTIONAL<DialoguePortion>;
+  /**
+   * @summary `components`.
+   * @description
+   *
+   * One or more Components. Mandatory on Unidirectional
+   * (Table 3).
+   *
+   * @public
+   * @readonly
+   */
+  public readonly components: ComponentPortion;
+
   constructor(
-    /**
-     * @summary `dialoguePortion`.
-     * @description
-     *
-     * Optional EXTERNAL carrying a unidialogue APDU
-     * (`uniDialogue-as-id`) or user information. ITU-T Rec.
-     * Q.773 (06/97) §4.2.3.
-     *
-     * @public
-     * @readonly
-     */
-    readonly dialoguePortion: OPTIONAL<DialoguePortion>,
-    /**
-     * @summary `components`.
-     * @description
-     *
-     * One or more Components. Mandatory on Unidirectional
-     * (Table 3).
-     *
-     * @public
-     * @readonly
-     */
-    readonly components: ComponentPortion
-  ) {}
+    dialoguePortion: OPTIONAL<DialoguePortion>,
+    components: ComponentPortion
+  ) {
+    this.dialoguePortion = dialoguePortion;
+    this.components = components;
+  }
 
   /**
    * @summary Restructures an object into a Unidirectional

@@ -1,8 +1,8 @@
 /* eslint-disable */
 import {
-    OPTIONAL,
-    BOOLEAN,
-    ASN1Element as _Element,
+    type OPTIONAL,
+    type BOOLEAN,
+    type ASN1Element as _Element,
     ASN1TagClass as _TagClass,
     ASN1Construction as _Construction,
     ASN1UniversalType as _UniversalType,
@@ -13,7 +13,7 @@ import {
 } from '@wildboar/asn1';
 import * as $ from '@wildboar/asn1/functional';
 import {
-    ValueSpecifier,
+    type ValueSpecifier,
     _decode_ValueSpecifier,
     _encode_ValueSpecifier,
 } from '../DefinitionASN1Module/ValueSpecifier.ta.mjs';
@@ -35,7 +35,7 @@ import {
     _encode_PropertyList_addRemove,
 } from '../DefinitionASN1Module/PropertyList-addRemove.ta.mjs';
 import {
-    AdditionalProperties,
+    type AdditionalProperties,
     _decode_AdditionalProperties,
     _encode_AdditionalProperties,
 } from '../DefinitionASN1Module/AdditionalProperties.ta.mjs';
@@ -74,98 +74,118 @@ import {
  *
  */
 export class PropertyList {
+    /**
+     * @summary `replaceWithDefault`.
+     * @description
+     *
+     * `TRUE` if REPLACE-WITH-DEFAULT is present (default value may be set
+     * by Replace-with-default). Default `FALSE`.
+     * @public
+     * @readonly
+     */
+    public readonly replaceWithDefault?: OPTIONAL<BOOLEAN>;
+    /**
+     * @summary `defaultValue`.
+     * @description
+     *
+     * DEFAULT VALUE: value used by Replace-with-default or when the package
+     * is instantiated. If REPLACE-WITH-DEFAULT is present and this is
+     * omitted, the default is local to the managed system.
+     * @public
+     * @readonly
+     */
+    public readonly defaultValue?: OPTIONAL<ValueSpecifier>;
+    /**
+     * @summary `initialValue`.
+     * @description
+     *
+     * INITIAL VALUE: mandatory value at Create.
+     * @public
+     * @readonly
+     */
+    public readonly initialValue?: OPTIONAL<ValueSpecifier>;
+    /**
+     * @summary `permittedValues`.
+     * @description
+     *
+     * PERMITTED VALUES: ASN.1 subtype restricting the attribute syntax.
+     * @public
+     * @readonly
+     */
+    public readonly permittedValues?: OPTIONAL<DefinedType>;
+    /**
+     * @summary `requiredValues`.
+     * @description
+     *
+     * REQUIRED VALUES: subtype the implementation shall be capable of
+     * taking (conformance value set).
+     * @public
+     * @readonly
+     */
+    public readonly requiredValues?: OPTIONAL<DefinedType>;
+    /**
+     * @summary `getReplace`.
+     * @description
+     *
+     * GET, REPLACE, or GET-REPLACE. Omitted if none of those properties is
+     * present.
+     * @public
+     * @readonly
+     */
+    public readonly getReplace?: OPTIONAL<PropertyList_getReplace>;
+    /**
+     * @summary `addRemove`.
+     * @description
+     *
+     * ADD, REMOVE, or ADD-REMOVE. Omitted if none of those properties is
+     * present.
+     * @public
+     * @readonly
+     */
+    public readonly addRemove?: OPTIONAL<PropertyList_addRemove>;
+    /**
+     * @summary `setByCreate`.
+     * @description
+     *
+     * `TRUE` if SET-BY-CREATE is present. Redundant if REPLACE or
+     * ADD/REMOVE is already present; even if `FALSE`, Create may still
+     * succeed in setting the value. Default `FALSE`. X.722 Amd.1 item 6.
+     * @public
+     * @readonly
+     */
+    public readonly setByCreate?: OPTIONAL<BOOLEAN>;
+    /**
+     * @summary `additionalProperties`.
+     * @description
+     *
+     * Further propertylist extensions as `ManagementExtension`s. X.750 does
+     * not enumerate them.
+     * @public
+     * @readonly
+     */
+    public readonly additionalProperties?: OPTIONAL<AdditionalProperties>;
+
     constructor(
-        /**
-         * @summary `replaceWithDefault`.
-         * @description
-         *
-         * `TRUE` if REPLACE-WITH-DEFAULT is present (default value may be set
-         * by Replace-with-default). Default `FALSE`.
-         * @public
-         * @readonly
-         */
-        readonly replaceWithDefault?: OPTIONAL<BOOLEAN>,
-        /**
-         * @summary `defaultValue`.
-         * @description
-         *
-         * DEFAULT VALUE: value used by Replace-with-default or when the package
-         * is instantiated. If REPLACE-WITH-DEFAULT is present and this is
-         * omitted, the default is local to the managed system.
-         * @public
-         * @readonly
-         */
-        readonly defaultValue?: OPTIONAL<ValueSpecifier>,
-        /**
-         * @summary `initialValue`.
-         * @description
-         *
-         * INITIAL VALUE: mandatory value at Create.
-         * @public
-         * @readonly
-         */
-        readonly initialValue?: OPTIONAL<ValueSpecifier>,
-        /**
-         * @summary `permittedValues`.
-         * @description
-         *
-         * PERMITTED VALUES: ASN.1 subtype restricting the attribute syntax.
-         * @public
-         * @readonly
-         */
-        readonly permittedValues?: OPTIONAL<DefinedType>,
-        /**
-         * @summary `requiredValues`.
-         * @description
-         *
-         * REQUIRED VALUES: subtype the implementation shall be capable of
-         * taking (conformance value set).
-         * @public
-         * @readonly
-         */
-        readonly requiredValues?: OPTIONAL<DefinedType>,
-        /**
-         * @summary `getReplace`.
-         * @description
-         *
-         * GET, REPLACE, or GET-REPLACE. Omitted if none of those properties is
-         * present.
-         * @public
-         * @readonly
-         */
-        readonly getReplace?: OPTIONAL<PropertyList_getReplace>,
-        /**
-         * @summary `addRemove`.
-         * @description
-         *
-         * ADD, REMOVE, or ADD-REMOVE. Omitted if none of those properties is
-         * present.
-         * @public
-         * @readonly
-         */
-        readonly addRemove?: OPTIONAL<PropertyList_addRemove>,
-        /**
-         * @summary `setByCreate`.
-         * @description
-         *
-         * `TRUE` if SET-BY-CREATE is present. Redundant if REPLACE or
-         * ADD/REMOVE is already present; even if `FALSE`, Create may still
-         * succeed in setting the value. Default `FALSE`. X.722 Amd.1 item 6.
-         * @public
-         * @readonly
-         */
-        readonly setByCreate?: OPTIONAL<BOOLEAN>,
-        /**
-         * @summary `additionalProperties`.
-         * @description
-         *
-         * Further propertylist extensions as `ManagementExtension`s. X.750 does
-         * not enumerate them.
-         * @public
-         * @readonly
-         */
-        readonly additionalProperties?: OPTIONAL<AdditionalProperties>
-    ) {}
+        replaceWithDefault?: OPTIONAL<BOOLEAN>,
+        defaultValue?: OPTIONAL<ValueSpecifier>,
+        initialValue?: OPTIONAL<ValueSpecifier>,
+        permittedValues?: OPTIONAL<DefinedType>,
+        requiredValues?: OPTIONAL<DefinedType>,
+        getReplace?: OPTIONAL<PropertyList_getReplace>,
+        addRemove?: OPTIONAL<PropertyList_addRemove>,
+        setByCreate?: OPTIONAL<BOOLEAN>,
+        additionalProperties?: OPTIONAL<AdditionalProperties>
+    ) {
+        this.replaceWithDefault = replaceWithDefault;
+        this.defaultValue = defaultValue;
+        this.initialValue = initialValue;
+        this.permittedValues = permittedValues;
+        this.requiredValues = requiredValues;
+        this.getReplace = getReplace;
+        this.addRemove = addRemove;
+        this.setByCreate = setByCreate;
+        this.additionalProperties = additionalProperties;
+    }
 
     /**
      * @summary Restructures an object into a PropertyList
@@ -219,14 +239,14 @@ export class PropertyList {
      * @static
      */
 
-    public static _enum_for_getReplace = _enum_for_PropertyList_getReplace;
+    public static _enum_for_getReplace: typeof _enum_for_PropertyList_getReplace = _enum_for_PropertyList_getReplace;
     /**
      * @summary The enum used as the type of the component `addRemove`
      * @public
      * @static
      */
 
-    public static _enum_for_addRemove = _enum_for_PropertyList_addRemove;
+    public static _enum_for_addRemove: typeof _enum_for_PropertyList_addRemove = _enum_for_PropertyList_addRemove;
 }
 
 

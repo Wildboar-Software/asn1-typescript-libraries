@@ -2,13 +2,13 @@
 
 import * as $ from "@wildboar/asn1/functional";
 import {
-    OPTIONAL,
-    SEQUENCE,
-    SET,
-    ASN1Element as _Element,
+    type OPTIONAL,
+    type SEQUENCE,
+    type SET,
+    type ASN1Element as _Element,
     ASN1TagClass as _TagClass
 } from "@wildboar/asn1";
-import { SpeakerVolumeList, _decode_SpeakerVolumeList, _encode_SpeakerVolumeList } from "../CSTA-get-speaker-volume/SpeakerVolumeList.ta.mjs";
+import { type SpeakerVolumeList, _decode_SpeakerVolumeList, _encode_SpeakerVolumeList } from "../CSTA-get-speaker-volume/SpeakerVolumeList.ta.mjs";
 
 import { CSTACommonArguments, _decode_CSTACommonArguments, _encode_CSTACommonArguments } from "../CSTA-extension-types/CSTACommonArguments.ta.mjs";
 
@@ -35,27 +35,33 @@ import { CSTACommonArguments, _decode_CSTACommonArguments, _encode_CSTACommonArg
  */
 export
 class GetSpeakerVolumeResult {
+    /**
+     * @summary `speakerVolumeList`.
+     * @description
+     *
+     * One entry per queried apparatus.
+     * @public
+     * @readonly
+     */
+    public readonly speakerVolumeList: SpeakerVolumeList;
+    /**
+     * @summary `extensions`.
+     * @description
+     *
+     * Optional security (timestamp, sequence, securityInfo) and
+     * privateData.
+     * @public
+     * @readonly
+     */
+    public readonly extensions?: OPTIONAL<CSTACommonArguments>;
+
     constructor (
-        /**
-         * @summary `speakerVolumeList`.
-         * @description
-         *
-         * One entry per queried apparatus.
-         * @public
-         * @readonly
-         */
-        readonly speakerVolumeList: SpeakerVolumeList,
-        /**
-         * @summary `extensions`.
-         * @description
-         *
-         * Optional security (timestamp, sequence, securityInfo) and
-         * privateData.
-         * @public
-         * @readonly
-         */
-        readonly extensions?: OPTIONAL<CSTACommonArguments>
-    ) {}
+        speakerVolumeList: SpeakerVolumeList,
+        extensions?: OPTIONAL<CSTACommonArguments>
+    ) {
+        this.speakerVolumeList = speakerVolumeList;
+        this.extensions = extensions;
+    }
 
     /**
      * @summary Restructures an object into a GetSpeakerVolumeResult

@@ -1,35 +1,35 @@
 /* eslint-disable */
 import {
-    OPTIONAL,
-    ASN1Element as _Element,
+    type OPTIONAL,
+    type ASN1Element as _Element,
     ASN1TagClass as _TagClass
 } from "@wildboar/asn1";
 import * as $ from "@wildboar/asn1/functional";
-import { ServiceKey, _decode_ServiceKey, _encode_ServiceKey } from "../IN-CS-1-Datatypes/ServiceKey.ta.mjs";
+import { type ServiceKey, _decode_ServiceKey, _encode_ServiceKey } from "../IN-CS-1-Datatypes/ServiceKey.ta.mjs";
 // export { ServiceKey, _decode_ServiceKey, _encode_ServiceKey } from "../IN-CS-1-Datatypes/ServiceKey.ta.mjs";
-import { CalledPartyNumber, _decode_CalledPartyNumber, _encode_CalledPartyNumber } from "../IN-CS-1-Datatypes/CalledPartyNumber.ta.mjs";
+import { type CalledPartyNumber, _decode_CalledPartyNumber, _encode_CalledPartyNumber } from "../IN-CS-1-Datatypes/CalledPartyNumber.ta.mjs";
 // export { CalledPartyNumber, _decode_CalledPartyNumber, _encode_CalledPartyNumber } from "../IN-CS-1-Datatypes/CalledPartyNumber.ta.mjs";
-import { CallingPartyNumber, _decode_CallingPartyNumber, _encode_CallingPartyNumber } from "../IN-CS-1-Datatypes/CallingPartyNumber.ta.mjs";
+import { type CallingPartyNumber, _decode_CallingPartyNumber, _encode_CallingPartyNumber } from "../IN-CS-1-Datatypes/CallingPartyNumber.ta.mjs";
 // export { CallingPartyNumber, _decode_CallingPartyNumber, _encode_CallingPartyNumber } from "../IN-CS-1-Datatypes/CallingPartyNumber.ta.mjs";
-import { CallingPartyBusinessGroupID, _decode_CallingPartyBusinessGroupID, _encode_CallingPartyBusinessGroupID } from "../IN-CS-1-Datatypes/CallingPartyBusinessGroupID.ta.mjs";
+import { type CallingPartyBusinessGroupID, _decode_CallingPartyBusinessGroupID, _encode_CallingPartyBusinessGroupID } from "../IN-CS-1-Datatypes/CallingPartyBusinessGroupID.ta.mjs";
 // export { CallingPartyBusinessGroupID, _decode_CallingPartyBusinessGroupID, _encode_CallingPartyBusinessGroupID } from "../IN-CS-1-Datatypes/CallingPartyBusinessGroupID.ta.mjs";
-import { CallingPartysCategory, _decode_CallingPartysCategory, _encode_CallingPartysCategory } from "../IN-CS-1-Datatypes/CallingPartysCategory.ta.mjs";
+import { type CallingPartysCategory, _decode_CallingPartysCategory, _encode_CallingPartysCategory } from "../IN-CS-1-Datatypes/CallingPartysCategory.ta.mjs";
 // export { CallingPartysCategory, _decode_CallingPartysCategory, _encode_CallingPartysCategory } from "../IN-CS-1-Datatypes/CallingPartysCategory.ta.mjs";
-import { CallingPartySubaddress, _decode_CallingPartySubaddress, _encode_CallingPartySubaddress } from "../IN-CS-1-Datatypes/CallingPartySubaddress.ta.mjs";
+import { type CallingPartySubaddress, _decode_CallingPartySubaddress, _encode_CallingPartySubaddress } from "../IN-CS-1-Datatypes/CallingPartySubaddress.ta.mjs";
 // export { CallingPartySubaddress, _decode_CallingPartySubaddress, _encode_CallingPartySubaddress } from "../IN-CS-1-Datatypes/CallingPartySubaddress.ta.mjs";
 import { CGEncountered, _decode_CGEncountered, _encode_CGEncountered, _enum_for_CGEncountered } from "../IN-CS-1-Datatypes/CGEncountered.ta.mjs";
 // export { CGEncountered, _enum_for_CGEncountered, CGEncountered_noCGencountered /* IMPORTED_LONG_ENUMERATION_ITEM */, noCGencountered /* IMPORTED_SHORT_ENUMERATION_ITEM */, CGEncountered_manualCGencountered /* IMPORTED_LONG_ENUMERATION_ITEM */, manualCGencountered /* IMPORTED_SHORT_ENUMERATION_ITEM */, CGEncountered_scpOverload /* IMPORTED_LONG_ENUMERATION_ITEM */, scpOverload /* IMPORTED_SHORT_ENUMERATION_ITEM */, _decode_CGEncountered, _encode_CGEncountered } from "../IN-CS-1-Datatypes/CGEncountered.ta.mjs";
-import { IPSSPCapabilities, _decode_IPSSPCapabilities, _encode_IPSSPCapabilities } from "../IN-CS-1-Datatypes/IPSSPCapabilities.ta.mjs";
+import { type IPSSPCapabilities, _decode_IPSSPCapabilities, _encode_IPSSPCapabilities } from "../IN-CS-1-Datatypes/IPSSPCapabilities.ta.mjs";
 // export { IPSSPCapabilities, _decode_IPSSPCapabilities, _encode_IPSSPCapabilities } from "../IN-CS-1-Datatypes/IPSSPCapabilities.ta.mjs";
-import { IPAvailable, _decode_IPAvailable, _encode_IPAvailable } from "../IN-CS-1-Datatypes/IPAvailable.ta.mjs";
+import { type IPAvailable, _decode_IPAvailable, _encode_IPAvailable } from "../IN-CS-1-Datatypes/IPAvailable.ta.mjs";
 // export { IPAvailable, _decode_IPAvailable, _encode_IPAvailable } from "../IN-CS-1-Datatypes/IPAvailable.ta.mjs";
-import { LocationNumber, _decode_LocationNumber, _encode_LocationNumber } from "../IN-CS-1-Datatypes/LocationNumber.ta.mjs";
+import { type LocationNumber, _decode_LocationNumber, _encode_LocationNumber } from "../IN-CS-1-Datatypes/LocationNumber.ta.mjs";
 // export { LocationNumber, _decode_LocationNumber, _encode_LocationNumber } from "../IN-CS-1-Datatypes/LocationNumber.ta.mjs";
 import { MiscCallInfo, _decode_MiscCallInfo, _encode_MiscCallInfo } from "../IN-CS-1-Datatypes/MiscCallInfo.ta.mjs";
 // export { MiscCallInfo, _decode_MiscCallInfo, _encode_MiscCallInfo } from "../IN-CS-1-Datatypes/MiscCallInfo.ta.mjs";
-import { OriginalCalledPartyID, _decode_OriginalCalledPartyID, _encode_OriginalCalledPartyID } from "../IN-CS-1-Datatypes/OriginalCalledPartyID.ta.mjs";
+import { type OriginalCalledPartyID, _decode_OriginalCalledPartyID, _encode_OriginalCalledPartyID } from "../IN-CS-1-Datatypes/OriginalCalledPartyID.ta.mjs";
 // export { OriginalCalledPartyID, _decode_OriginalCalledPartyID, _encode_OriginalCalledPartyID } from "../IN-CS-1-Datatypes/OriginalCalledPartyID.ta.mjs";
-import { ServiceProfileIdentifier, _decode_ServiceProfileIdentifier, _encode_ServiceProfileIdentifier } from "../IN-CS-1-Datatypes/ServiceProfileIdentifier.ta.mjs";
+import { type ServiceProfileIdentifier, _decode_ServiceProfileIdentifier, _encode_ServiceProfileIdentifier } from "../IN-CS-1-Datatypes/ServiceProfileIdentifier.ta.mjs";
 // export { ServiceProfileIdentifier, _decode_ServiceProfileIdentifier, _encode_ServiceProfileIdentifier } from "../IN-CS-1-Datatypes/ServiceProfileIdentifier.ta.mjs";
 import { TerminalType, _decode_TerminalType, _encode_TerminalType, _enum_for_TerminalType } from "../IN-CS-1-Datatypes/TerminalType.ta.mjs";
 // export { TerminalType, _enum_for_TerminalType, TerminalType_unknown /* IMPORTED_LONG_ENUMERATION_ITEM */, unknown /* IMPORTED_SHORT_ENUMERATION_ITEM */, TerminalType_dialPulse /* IMPORTED_LONG_ENUMERATION_ITEM */, dialPulse /* IMPORTED_SHORT_ENUMERATION_ITEM */, TerminalType_dtmf /* IMPORTED_LONG_ENUMERATION_ITEM */, dtmf /* IMPORTED_SHORT_ENUMERATION_ITEM */, TerminalType_isdn /* IMPORTED_LONG_ENUMERATION_ITEM */, isdn /* IMPORTED_SHORT_ENUMERATION_ITEM */, TerminalType_isdnNoDtmf /* IMPORTED_LONG_ENUMERATION_ITEM */, isdnNoDtmf /* IMPORTED_SHORT_ENUMERATION_ITEM */, TerminalType_spare /* IMPORTED_LONG_ENUMERATION_ITEM */, spare /* IMPORTED_SHORT_ENUMERATION_ITEM */, _decode_TerminalType, _encode_TerminalType } from "../IN-CS-1-Datatypes/TerminalType.ta.mjs";
@@ -37,21 +37,21 @@ import { ExtensionField, _decode_ExtensionField, _encode_ExtensionField } from "
 // export { ExtensionField, _decode_ExtensionField, _encode_ExtensionField } from "../IN-CS-1-Datatypes/ExtensionField.ta.mjs";
 import { TriggerType, _decode_TriggerType, _encode_TriggerType, _enum_for_TriggerType } from "../IN-CS-1-Datatypes/TriggerType.ta.mjs";
 // export { TriggerType, _enum_for_TriggerType, TriggerType_featureActivation /* IMPORTED_LONG_ENUMERATION_ITEM */, featureActivation /* IMPORTED_SHORT_ENUMERATION_ITEM */, TriggerType_verticalServiceCode /* IMPORTED_LONG_ENUMERATION_ITEM */, verticalServiceCode /* IMPORTED_SHORT_ENUMERATION_ITEM */, TriggerType_customizedAccess /* IMPORTED_LONG_ENUMERATION_ITEM */, customizedAccess /* IMPORTED_SHORT_ENUMERATION_ITEM */, TriggerType_customizedIntercom /* IMPORTED_LONG_ENUMERATION_ITEM */, customizedIntercom /* IMPORTED_SHORT_ENUMERATION_ITEM */, TriggerType_emergencyService /* IMPORTED_LONG_ENUMERATION_ITEM */, emergencyService /* IMPORTED_SHORT_ENUMERATION_ITEM */, TriggerType_aFR /* IMPORTED_LONG_ENUMERATION_ITEM */, aFR /* IMPORTED_SHORT_ENUMERATION_ITEM */, TriggerType_sharedIOTrunk /* IMPORTED_LONG_ENUMERATION_ITEM */, sharedIOTrunk /* IMPORTED_SHORT_ENUMERATION_ITEM */, TriggerType_offHookDelay /* IMPORTED_LONG_ENUMERATION_ITEM */, offHookDelay /* IMPORTED_SHORT_ENUMERATION_ITEM */, TriggerType_channelSetupPRI /* IMPORTED_LONG_ENUMERATION_ITEM */, channelSetupPRI /* IMPORTED_SHORT_ENUMERATION_ITEM */, TriggerType_tNoAnswer /* IMPORTED_LONG_ENUMERATION_ITEM */, TriggerType_tBusy /* IMPORTED_LONG_ENUMERATION_ITEM */, TriggerType_oCalledPartyBusy /* IMPORTED_LONG_ENUMERATION_ITEM */, TriggerType_oNoAnswer /* IMPORTED_LONG_ENUMERATION_ITEM */, TriggerType_originationAttemptAuthorized /* IMPORTED_LONG_ENUMERATION_ITEM */, originationAttemptAuthorized /* IMPORTED_SHORT_ENUMERATION_ITEM */, TriggerType_oAnswer /* IMPORTED_LONG_ENUMERATION_ITEM */, TriggerType_oDisconnect /* IMPORTED_LONG_ENUMERATION_ITEM */, TriggerType_termAttemptAuthorized /* IMPORTED_LONG_ENUMERATION_ITEM */, TriggerType_tAnswer /* IMPORTED_LONG_ENUMERATION_ITEM */, TriggerType_tDisconnect /* IMPORTED_LONG_ENUMERATION_ITEM */, _decode_TriggerType, _encode_TriggerType } from "../IN-CS-1-Datatypes/TriggerType.ta.mjs";
-import { HighLayerCompatibility, _decode_HighLayerCompatibility, _encode_HighLayerCompatibility } from "../IN-CS-1-Datatypes/HighLayerCompatibility.ta.mjs";
+import { type HighLayerCompatibility, _decode_HighLayerCompatibility, _encode_HighLayerCompatibility } from "../IN-CS-1-Datatypes/HighLayerCompatibility.ta.mjs";
 // export { HighLayerCompatibility, _decode_HighLayerCompatibility, _encode_HighLayerCompatibility } from "../IN-CS-1-Datatypes/HighLayerCompatibility.ta.mjs";
-import { ServiceInteractionIndicators, _decode_ServiceInteractionIndicators, _encode_ServiceInteractionIndicators } from "../IN-CS-1-Datatypes/ServiceInteractionIndicators.ta.mjs";
+import { type ServiceInteractionIndicators, _decode_ServiceInteractionIndicators, _encode_ServiceInteractionIndicators } from "../IN-CS-1-Datatypes/ServiceInteractionIndicators.ta.mjs";
 // export { ServiceInteractionIndicators, _decode_ServiceInteractionIndicators, _encode_ServiceInteractionIndicators } from "../IN-CS-1-Datatypes/ServiceInteractionIndicators.ta.mjs";
-import { AdditionalCallingPartyNumber, _decode_AdditionalCallingPartyNumber, _encode_AdditionalCallingPartyNumber } from "../IN-CS-1-Datatypes/AdditionalCallingPartyNumber.ta.mjs";
+import { type AdditionalCallingPartyNumber, _decode_AdditionalCallingPartyNumber, _encode_AdditionalCallingPartyNumber } from "../IN-CS-1-Datatypes/AdditionalCallingPartyNumber.ta.mjs";
 // export { AdditionalCallingPartyNumber, _decode_AdditionalCallingPartyNumber, _encode_AdditionalCallingPartyNumber } from "../IN-CS-1-Datatypes/AdditionalCallingPartyNumber.ta.mjs";
-import { ForwardCallIndicators, _decode_ForwardCallIndicators, _encode_ForwardCallIndicators } from "../IN-CS-1-Datatypes/ForwardCallIndicators.ta.mjs";
+import { type ForwardCallIndicators, _decode_ForwardCallIndicators, _encode_ForwardCallIndicators } from "../IN-CS-1-Datatypes/ForwardCallIndicators.ta.mjs";
 // export { ForwardCallIndicators, _decode_ForwardCallIndicators, _encode_ForwardCallIndicators } from "../IN-CS-1-Datatypes/ForwardCallIndicators.ta.mjs";
-import { BearerCapability, _decode_BearerCapability, _encode_BearerCapability } from "../IN-CS-1-Datatypes/BearerCapability.ta.mjs";
+import { type BearerCapability, _decode_BearerCapability, _encode_BearerCapability } from "../IN-CS-1-Datatypes/BearerCapability.ta.mjs";
 // export { BearerCapability, _decode_BearerCapability, _encode_BearerCapability } from "../IN-CS-1-Datatypes/BearerCapability.ta.mjs";
 import { EventTypeBCSM, _decode_EventTypeBCSM, _encode_EventTypeBCSM, _enum_for_EventTypeBCSM } from "../IN-CS-1-Datatypes/EventTypeBCSM.ta.mjs";
 // export { EventTypeBCSM, _enum_for_EventTypeBCSM, EventTypeBCSM_origAttemptAuthorized /* IMPORTED_LONG_ENUMERATION_ITEM */, origAttemptAuthorized /* IMPORTED_SHORT_ENUMERATION_ITEM */, EventTypeBCSM_collectedInfo /* IMPORTED_LONG_ENUMERATION_ITEM */, collectedInfo /* IMPORTED_SHORT_ENUMERATION_ITEM */, EventTypeBCSM_analysedInformation /* IMPORTED_LONG_ENUMERATION_ITEM */, analysedInformation /* IMPORTED_SHORT_ENUMERATION_ITEM */, EventTypeBCSM_routeSelectFailure /* IMPORTED_LONG_ENUMERATION_ITEM */, routeSelectFailure /* IMPORTED_SHORT_ENUMERATION_ITEM */, EventTypeBCSM_oCalledPartyBusy /* IMPORTED_LONG_ENUMERATION_ITEM */, EventTypeBCSM_oNoAnswer /* IMPORTED_LONG_ENUMERATION_ITEM */, EventTypeBCSM_oAnswer /* IMPORTED_LONG_ENUMERATION_ITEM */, EventTypeBCSM_oMidCall /* IMPORTED_LONG_ENUMERATION_ITEM */, oMidCall /* IMPORTED_SHORT_ENUMERATION_ITEM */, EventTypeBCSM_oDisconnect /* IMPORTED_LONG_ENUMERATION_ITEM */, EventTypeBCSM_oAbandon /* IMPORTED_LONG_ENUMERATION_ITEM */, oAbandon /* IMPORTED_SHORT_ENUMERATION_ITEM */, EventTypeBCSM_termAttemptAuthorized /* IMPORTED_LONG_ENUMERATION_ITEM */, EventTypeBCSM_tBusy /* IMPORTED_LONG_ENUMERATION_ITEM */, EventTypeBCSM_tNoAnswer /* IMPORTED_LONG_ENUMERATION_ITEM */, EventTypeBCSM_tAnswer /* IMPORTED_LONG_ENUMERATION_ITEM */, EventTypeBCSM_tMidCall /* IMPORTED_LONG_ENUMERATION_ITEM */, tMidCall /* IMPORTED_SHORT_ENUMERATION_ITEM */, EventTypeBCSM_tDisconnect /* IMPORTED_LONG_ENUMERATION_ITEM */, EventTypeBCSM_tAbandon /* IMPORTED_LONG_ENUMERATION_ITEM */, tAbandon /* IMPORTED_SHORT_ENUMERATION_ITEM */, _decode_EventTypeBCSM, _encode_EventTypeBCSM } from "../IN-CS-1-Datatypes/EventTypeBCSM.ta.mjs";
-import { RedirectingPartyID, _decode_RedirectingPartyID, _encode_RedirectingPartyID } from "../IN-CS-1-Datatypes/RedirectingPartyID.ta.mjs";
+import { type RedirectingPartyID, _decode_RedirectingPartyID, _encode_RedirectingPartyID } from "../IN-CS-1-Datatypes/RedirectingPartyID.ta.mjs";
 // export { RedirectingPartyID, _decode_RedirectingPartyID, _encode_RedirectingPartyID } from "../IN-CS-1-Datatypes/RedirectingPartyID.ta.mjs";
-import { RedirectionInformation, _decode_RedirectionInformation, _encode_RedirectionInformation } from "../IN-CS-1-Datatypes/RedirectionInformation.ta.mjs";
+import { type RedirectionInformation, _decode_RedirectionInformation, _encode_RedirectionInformation } from "../IN-CS-1-Datatypes/RedirectionInformation.ta.mjs";
 // export { RedirectionInformation, _decode_RedirectionInformation, _encode_RedirectionInformation } from "../IN-CS-1-Datatypes/RedirectionInformation.ta.mjs";
 
 
@@ -333,25 +333,25 @@ class InitialDPArg {
          * @static
          */
 
-    public static _enum_for_cGEncountered = _enum_for_CGEncountered;        /**
+    public static _enum_for_cGEncountered: typeof _enum_for_CGEncountered = _enum_for_CGEncountered;        /**
          * @summary The enum used as the type of the component `terminalType`
          * @public
          * @static
          */
 
-    public static _enum_for_terminalType = _enum_for_TerminalType;        /**
+    public static _enum_for_terminalType: typeof _enum_for_TerminalType = _enum_for_TerminalType;        /**
          * @summary The enum used as the type of the component `triggerType`
          * @public
          * @static
          */
 
-    public static _enum_for_triggerType = _enum_for_TriggerType;        /**
+    public static _enum_for_triggerType: typeof _enum_for_TriggerType = _enum_for_TriggerType;        /**
          * @summary The enum used as the type of the component `eventTypeBCSM`
          * @public
          * @static
          */
 
-    public static _enum_for_eventTypeBCSM = _enum_for_EventTypeBCSM;
+    public static _enum_for_eventTypeBCSM: typeof _enum_for_EventTypeBCSM = _enum_for_EventTypeBCSM;
 }
 
 /**

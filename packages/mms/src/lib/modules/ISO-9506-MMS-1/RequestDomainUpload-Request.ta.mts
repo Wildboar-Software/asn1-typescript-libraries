@@ -1,6 +1,6 @@
 /* eslint-disable */
 import {
-    ASN1Element as _Element,
+    type ASN1Element as _Element,
     ASN1TagClass as _TagClass,
     ASN1Construction as _Construction,
     ASN1UniversalType as _UniversalType,
@@ -10,8 +10,8 @@ import {
     ASN1ConstructionError as _ConstructionError,
 } from "@wildboar/asn1";
 import * as $ from "@wildboar/asn1/functional";
-import { Identifier, _decode_Identifier, _encode_Identifier } from "../ISO-9506-MMS-1/Identifier.ta.mjs";
-import { FileName, _decode_FileName, _encode_FileName } from "../ISO-9506-MMS-1/FileName.ta.mjs";
+import { type Identifier, _decode_Identifier, _encode_Identifier } from "../ISO-9506-MMS-1/Identifier.ta.mjs";
+import { type FileName, _decode_FileName, _encode_FileName } from "../ISO-9506-MMS-1/FileName.ta.mjs";
 
 
 /**
@@ -34,29 +34,35 @@ import { FileName, _decode_FileName, _encode_FileName } from "../ISO-9506-MMS-1/
  */
 export
 class RequestDomainUpload_Request {
+    /**
+     * @summary `domainName`.
+     * @description
+     *
+     * Domain at the server whose content is uploaded. ISO 9506-1:2003
+     * §11.9.1.1.1.
+     *
+     * @public
+     * @readonly
+     */
+    public readonly domainName: Identifier;
+    /**
+     * @summary `fileName`.
+     * @description
+     *
+     * Client file that will store the upload. ISO 9506-1:2003 §11.9.1.1.2.
+     *
+     * @public
+     * @readonly
+     */
+    public readonly fileName: FileName;
+
     constructor (
-        /**
-         * @summary `domainName`.
-         * @description
-         *
-         * Domain at the server whose content is uploaded. ISO 9506-1:2003
-         * §11.9.1.1.1.
-         *
-         * @public
-         * @readonly
-         */
-        readonly domainName: Identifier,
-        /**
-         * @summary `fileName`.
-         * @description
-         *
-         * Client file that will store the upload. ISO 9506-1:2003 §11.9.1.1.2.
-         *
-         * @public
-         * @readonly
-         */
-        readonly fileName: FileName
-    ) {}
+        domainName: Identifier,
+        fileName: FileName
+    ) {
+        this.domainName = domainName;
+        this.fileName = fileName;
+    }
 
     /**
      * @summary Restructures an object into a RequestDomainUpload_Request

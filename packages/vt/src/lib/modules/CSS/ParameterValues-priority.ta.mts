@@ -1,7 +1,7 @@
 /* eslint-disable */
 import {
-    INTEGER,
-    ASN1Element as _Element,
+    type INTEGER,
+    type ASN1Element as _Element,
     ASN1TagClass as _TagClass,
     ASN1Construction as _Construction,
     ASN1UniversalType as _UniversalType,
@@ -46,7 +46,7 @@ type ParameterValues_priority = INTEGER;
  * @type {number}
  */
 export
-const ParameterValues_priority_normal: ParameterValues_priority = 0; /* LONG_NAMED_INTEGER_VALUE */
+const ParameterValues_priority_normal: 0 = 0 satisfies ParameterValues_priority; /* LONG_NAMED_INTEGER_VALUE */
 
 /**
  * @summary ParameterValues_priority_normal
@@ -59,7 +59,7 @@ const ParameterValues_priority_normal: ParameterValues_priority = 0; /* LONG_NAM
  * @type {number}
  */
 export
-const normal: ParameterValues_priority = ParameterValues_priority_normal; /* SHORT_NAMED_INTEGER_VALUE */
+const normal: 0 = ParameterValues_priority_normal; /* SHORT_NAMED_INTEGER_VALUE */
 
 /**
  * @summary ParameterValues_priority_high
@@ -72,7 +72,7 @@ const normal: ParameterValues_priority = ParameterValues_priority_normal; /* SHO
  * @type {number}
  */
 export
-const ParameterValues_priority_high: ParameterValues_priority = 1; /* LONG_NAMED_INTEGER_VALUE */
+const ParameterValues_priority_high: 1 = 1 satisfies ParameterValues_priority; /* LONG_NAMED_INTEGER_VALUE */
 
 /**
  * @summary ParameterValues_priority_high
@@ -85,7 +85,7 @@ const ParameterValues_priority_high: ParameterValues_priority = 1; /* LONG_NAMED
  * @type {number}
  */
 export
-const high: ParameterValues_priority = ParameterValues_priority_high; /* SHORT_NAMED_INTEGER_VALUE */
+const high: 1 = ParameterValues_priority_high; /* SHORT_NAMED_INTEGER_VALUE */
 
 /**
  * @summary ParameterValues_priority_urgent
@@ -99,7 +99,7 @@ const high: ParameterValues_priority = ParameterValues_priority_high; /* SHORT_N
  * @type {number}
  */
 export
-const ParameterValues_priority_urgent: ParameterValues_priority = 2; /* LONG_NAMED_INTEGER_VALUE */
+const ParameterValues_priority_urgent: 2 = 2 satisfies ParameterValues_priority; /* LONG_NAMED_INTEGER_VALUE */
 
 /**
  * @summary ParameterValues_priority_urgent
@@ -113,9 +113,9 @@ const ParameterValues_priority_urgent: ParameterValues_priority = 2; /* LONG_NAM
  * @type {number}
  */
 export
-const urgent: ParameterValues_priority = ParameterValues_priority_urgent; /* SHORT_NAMED_INTEGER_VALUE */
-export const _decode_ParameterValues_priority = $._decodeInteger;
-export const _encode_ParameterValues_priority = $._encodeInteger;
+const urgent: 2 = ParameterValues_priority_urgent; /* SHORT_NAMED_INTEGER_VALUE */
+export const _decode_ParameterValues_priority: $.ASN1Decoder<INTEGER> = $._decodeInteger;
+export const _encode_ParameterValues_priority: $.ASN1Encoder<INTEGER> = $._encodeInteger;
 
 
 /* eslint-enable */

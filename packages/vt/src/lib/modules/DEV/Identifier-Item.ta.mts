@@ -1,7 +1,7 @@
 /* eslint-disable */
 import {
-    PrintableString,
-    ASN1Element as _Element,
+    type PrintableString,
+    type ASN1Element as _Element,
     ASN1TagClass as _TagClass,
     ASN1Construction as _Construction,
     ASN1UniversalType as _UniversalType,
@@ -35,27 +35,33 @@ import { ParameterIdents, _decode_ParameterIdents, _encode_ParameterIdents } fro
  */
 export
 class Identifier_Item {
+    /**
+     * @summary `name`.
+     * @description
+     * VTE-unique device-name. Also names the implicit default CO,
+     * which is not listed in `deviceControlObjectNames`. ISO/IEC
+     * 9040:1997 §16, §23.1.
+     * @public
+     * @readonly
+     */
+    public readonly name: PrintableString;
+    /**
+     * @summary `idents`.
+     * @description
+     * Which of this device's VTE-parameters are in the Identifier.
+     * ISO/IEC 9041-1:1997 §12.5.1.
+     * @public
+     * @readonly
+     */
+    public readonly idents: ParameterIdents;
+
     constructor (
-        /**
-         * @summary `name`.
-         * @description
-         * VTE-unique device-name. Also names the implicit default CO,
-         * which is not listed in `deviceControlObjectNames`. ISO/IEC
-         * 9040:1997 §16, §23.1.
-         * @public
-         * @readonly
-         */
-        readonly name: PrintableString,
-        /**
-         * @summary `idents`.
-         * @description
-         * Which of this device's VTE-parameters are in the Identifier.
-         * ISO/IEC 9041-1:1997 §12.5.1.
-         * @public
-         * @readonly
-         */
-        readonly idents: ParameterIdents
-    ) {}
+        name: PrintableString,
+        idents: ParameterIdents
+    ) {
+        this.name = name;
+        this.idents = idents;
+    }
 
     /**
      * @summary Restructures an object into a Identifier_Item

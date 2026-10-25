@@ -1,12 +1,12 @@
 /* eslint-disable */
 import {
-    OPTIONAL,
-    ASN1Element as _Element,
+    type OPTIONAL,
+    type ASN1Element as _Element,
     ASN1TagClass as _TagClass
 } from "@wildboar/asn1";
 import * as $ from "@wildboar/asn1/functional";
 import { ExtensionContainer, _decode_ExtensionContainer, _encode_ExtensionContainer } from "../MAP-ExtensionDataTypes/ExtensionContainer.ta.mjs";
-import { SM_DeliveryTimerValue, _decode_SM_DeliveryTimerValue, _encode_SM_DeliveryTimerValue } from "../MAP-SM-DataTypes/SM-DeliveryTimerValue.ta.mjs";
+import { type SM_DeliveryTimerValue, _decode_SM_DeliveryTimerValue, _encode_SM_DeliveryTimerValue } from "../MAP-SM-DataTypes/SM-DeliveryTimerValue.ta.mjs";
 
 
 /**
@@ -22,7 +22,7 @@ import { SM_DeliveryTimerValue, _decode_SM_DeliveryTimerValue, _encode_SM_Delive
  * IP-SM-GW-Guidance ::= SEQUENCE {
  *     minimumDeliveryTimeValue    SM-DeliveryTimerValue,
  *     recommendedDeliveryTimeValue    SM-DeliveryTimerValue,
- *     extensionContainer    ExtensionContainer    OPTIONAL,
+ *     extensionContainer    ExtensionContainer    type OPTIONAL,
  *     ...}
  * ```
  * 
@@ -30,44 +30,54 @@ import { SM_DeliveryTimerValue, _decode_SM_DeliveryTimerValue, _encode_SM_Delive
  */
 export
 class IP_SM_GW_Guidance {
+    /**
+     * @summary `minimumDeliveryTimeValue`.
+     * @description
+     *
+     * Minimum SM-DeliveryTimerValue (30..600).
+     *
+     * @public
+     * @readonly
+     */
+    public readonly minimumDeliveryTimeValue: SM_DeliveryTimerValue;
+    /**
+     * @summary `recommendedDeliveryTimeValue`.
+     * @description
+     *
+     * Recommended SM-DeliveryTimerValue (30..600).
+     *
+     * @public
+     * @readonly
+     */
+    public readonly recommendedDeliveryTimeValue: SM_DeliveryTimerValue;
+    /**
+     * @summary `extensionContainer`.
+     * @description
+     *
+     * Private or PCS extensions (3GPP TS 29.002 V19.1.0 clause 17.7.11).
+     *
+     * @public
+     * @readonly
+     */
+    public readonly extensionContainer?: OPTIONAL<ExtensionContainer>;
+    /**
+     * @summary Extensions that are not recognized.
+     * @public
+     * @readonly
+     */
+    public readonly _unrecognizedExtensionsList: _Element[];
+
     constructor (
-        /**
-         * @summary `minimumDeliveryTimeValue`.
-         * @description
-         *
-         * Minimum SM-DeliveryTimerValue (30..600).
-         *
-         * @public
-         * @readonly
-         */
-        readonly minimumDeliveryTimeValue: SM_DeliveryTimerValue,
-        /**
-         * @summary `recommendedDeliveryTimeValue`.
-         * @description
-         *
-         * Recommended SM-DeliveryTimerValue (30..600).
-         *
-         * @public
-         * @readonly
-         */
-        readonly recommendedDeliveryTimeValue: SM_DeliveryTimerValue,
-        /**
-         * @summary `extensionContainer`.
-         * @description
-         *
-         * Private or PCS extensions (3GPP TS 29.002 V19.1.0 clause 17.7.11).
-         *
-         * @public
-         * @readonly
-         */
-        readonly extensionContainer?: OPTIONAL<ExtensionContainer>,
-        /**
-         * @summary Extensions that are not recognized.
-         * @public
-         * @readonly
-         */
-        readonly _unrecognizedExtensionsList: _Element[] = []
-    ) {}
+        minimumDeliveryTimeValue: SM_DeliveryTimerValue,
+        recommendedDeliveryTimeValue: SM_DeliveryTimerValue,
+        extensionContainer?: OPTIONAL<ExtensionContainer>,
+        _unrecognizedExtensionsList: _Element[] = []
+    ) {
+        this.minimumDeliveryTimeValue = minimumDeliveryTimeValue;
+        this.recommendedDeliveryTimeValue = recommendedDeliveryTimeValue;
+        this.extensionContainer = extensionContainer;
+        this._unrecognizedExtensionsList = _unrecognizedExtensionsList;
+    }
 
     /**
      * @summary Restructures an object into a IP_SM_GW_Guidance

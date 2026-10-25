@@ -1,6 +1,6 @@
 /* eslint-disable */
 import {
-  OBJECT_IDENTIFIER,
+  type OBJECT_IDENTIFIER,
   ASN1Element as _Element,
   ASN1TagClass as _TagClass,
   ASN1Construction as _Construction,
@@ -36,30 +36,36 @@ import {
  *
  */
 export class NameValidationAlgParams {
+  /**
+   * @summary `nameCompAlgId`.
+   * @description
+   *
+   * Name matching rules OID (`id-nva-dnCompAlg`, `id-kp-serverAuth`,
+   * `id-kp-mailProtection`, …) ([RFC 5055 §3.2.4.2.3](https://datatracker.ietf.org/doc/html/rfc5055#section-3.2.4.2.3)).
+   *
+   * @public
+   * @readonly
+   */
+  public readonly nameCompAlgId: OBJECT_IDENTIFIER;
+  /**
+   * @summary `validationNames`.
+   * @description
+   *
+   * Names that MUST appear in the end certificate under the chosen
+   * matching rules ([RFC 5055 §3.2.4.2.3](https://datatracker.ietf.org/doc/html/rfc5055#section-3.2.4.2.3)).
+   *
+   * @public
+   * @readonly
+   */
+  public readonly validationNames: GeneralNames;
+
   constructor(
-    /**
-     * @summary `nameCompAlgId`.
-     * @description
-     *
-     * Name matching rules OID (`id-nva-dnCompAlg`, `id-kp-serverAuth`,
-     * `id-kp-mailProtection`, …) ([RFC 5055 §3.2.4.2.3](https://datatracker.ietf.org/doc/html/rfc5055#section-3.2.4.2.3)).
-     *
-     * @public
-     * @readonly
-     */
-    readonly nameCompAlgId: OBJECT_IDENTIFIER,
-    /**
-     * @summary `validationNames`.
-     * @description
-     *
-     * Names that MUST appear in the end certificate under the chosen
-     * matching rules ([RFC 5055 §3.2.4.2.3](https://datatracker.ietf.org/doc/html/rfc5055#section-3.2.4.2.3)).
-     *
-     * @public
-     * @readonly
-     */
-    readonly validationNames: GeneralNames
-  ) {}
+    nameCompAlgId: OBJECT_IDENTIFIER,
+    validationNames: GeneralNames
+  ) {
+    this.nameCompAlgId = nameCompAlgId;
+    this.validationNames = validationNames;
+  }
 
   /**
    * @summary Restructures an object into a NameValidationAlgParams

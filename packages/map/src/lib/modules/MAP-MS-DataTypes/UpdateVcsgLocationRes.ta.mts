@@ -1,8 +1,8 @@
 /* eslint-disable */
 import {
-    NULL,
-    OPTIONAL,
-    ASN1Element as _Element,
+    type NULL,
+    type OPTIONAL,
+    type ASN1Element as _Element,
     ASN1TagClass as _TagClass
 } from "@wildboar/asn1";
 import * as $ from "@wildboar/asn1/functional";
@@ -23,8 +23,8 @@ import { ExtensionContainer, _decode_ExtensionContainer, _encode_ExtensionContai
  * 
  * ```asn1
  * UpdateVcsgLocationRes ::= SEQUENCE {
- *     temporaryEmptySubscriptiondataIndicator    NULL    OPTIONAL,
- *     extensionContainer    ExtensionContainer    OPTIONAL,
+ *     temporaryEmptySubscriptiondataIndicator    NULL    type OPTIONAL,
+ *     extensionContainer    ExtensionContainer    type OPTIONAL,
  *     ... }
  * ```
  * 
@@ -32,33 +32,41 @@ import { ExtensionContainer, _decode_ExtensionContainer, _encode_ExtensionContai
  */
 export
 class UpdateVcsgLocationRes {
+    /**
+     * @summary `temporaryEmptySubscriptiondataIndicator`.
+     * @description
+     *
+     * CSS currently has no CSG subscription data for this roaming user but
+     * registers the VLR or SGSN so later CSG changes can be notified.
+     *
+     * (3GPP TS 29.002 V19.1.0 clauses 7.6.3.100 and 8.1.9.3).
+     *
+     * @public
+     * @readonly
+     */
+    public readonly temporaryEmptySubscriptiondataIndicator?: OPTIONAL<NULL>;
+    /**
+     * @summary `extensionContainer`.
+     * @public
+     * @readonly
+     */
+    public readonly extensionContainer?: OPTIONAL<ExtensionContainer>;
+    /**
+     * @summary Extensions that are not recognized.
+     * @public
+     * @readonly
+     */
+    public readonly _unrecognizedExtensionsList: _Element[];
+
     constructor (
-        /**
-         * @summary `temporaryEmptySubscriptiondataIndicator`.
-         * @description
-         *
-         * CSS currently has no CSG subscription data for this roaming user but
-         * registers the VLR or SGSN so later CSG changes can be notified.
-         *
-         * (3GPP TS 29.002 V19.1.0 clauses 7.6.3.100 and 8.1.9.3).
-         *
-         * @public
-         * @readonly
-         */
-        readonly temporaryEmptySubscriptiondataIndicator?: OPTIONAL<NULL>,
-        /**
-         * @summary `extensionContainer`.
-         * @public
-         * @readonly
-         */
-        readonly extensionContainer?: OPTIONAL<ExtensionContainer>,
-        /**
-         * @summary Extensions that are not recognized.
-         * @public
-         * @readonly
-         */
-        readonly _unrecognizedExtensionsList: _Element[] = []
-    ) {}
+        temporaryEmptySubscriptiondataIndicator?: OPTIONAL<NULL>,
+        extensionContainer?: OPTIONAL<ExtensionContainer>,
+        _unrecognizedExtensionsList: _Element[] = []
+    ) {
+        this.temporaryEmptySubscriptiondataIndicator = temporaryEmptySubscriptiondataIndicator;
+        this.extensionContainer = extensionContainer;
+        this._unrecognizedExtensionsList = _unrecognizedExtensionsList;
+    }
 
     /**
      * @summary Restructures an object into a UpdateVcsgLocationRes

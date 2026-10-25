@@ -1,6 +1,6 @@
 /* eslint-disable */
 import {
-    ASN1Element as _Element,
+    type ASN1Element as _Element,
     ASN1TagClass as _TagClass,
     ASN1Construction as _Construction,
     ASN1UniversalType as _UniversalType,
@@ -29,22 +29,13 @@ import {
  */
 export type DescriptionString = UniversalOrBMPString; // DefinedType
 
-let _cached_decoder_for_DescriptionString: $.ASN1Decoder<DescriptionString> | null = null;
-
 /**
  * @summary Decodes an ASN.1 element into a(n) DescriptionString
  * @function
  * @param {_Element} el The element being decoded.
  * @returns {DescriptionString} The decoded data structure.
  */
-export function _decode_DescriptionString(el: _Element): DescriptionString {
-    if (!_cached_decoder_for_DescriptionString) {
-        _cached_decoder_for_DescriptionString = _decode_UniversalOrBMPString;
-    }
-    return _cached_decoder_for_DescriptionString(el);
-}
-
-let _cached_encoder_for_DescriptionString: $.ASN1Encoder<DescriptionString> | null = null;
+export const _decode_DescriptionString: $.ASN1Decoder<DescriptionString> = _decode_UniversalOrBMPString;
 
 /**
  * @summary Encodes a(n) DescriptionString into an ASN.1 Element.
@@ -53,15 +44,7 @@ let _cached_encoder_for_DescriptionString: $.ASN1Encoder<DescriptionString> | nu
  * @param elGetter A function that can be used to get new ASN.1 elements.
  * @returns {_Element} The DescriptionString, encoded as an ASN.1 Element.
  */
-export function _encode_DescriptionString(
-    value: DescriptionString,
-    elGetter: $.ASN1Encoder<DescriptionString>
-): _Element {
-    if (!_cached_encoder_for_DescriptionString) {
-        _cached_encoder_for_DescriptionString = _encode_UniversalOrBMPString;
-    }
-    return _cached_encoder_for_DescriptionString(value, elGetter);
-}
+export const _encode_DescriptionString: $.ASN1Encoder<DescriptionString> = _encode_UniversalOrBMPString;
 
 
 /* eslint-enable */

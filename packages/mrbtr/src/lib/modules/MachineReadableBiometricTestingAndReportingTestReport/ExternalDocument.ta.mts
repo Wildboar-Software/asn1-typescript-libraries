@@ -1,8 +1,8 @@
 /* eslint-disable */
 import {
-    OPTIONAL,
-    VisibleString,
-    ASN1Element as _Element,
+    type OPTIONAL,
+    type VisibleString,
+    type ASN1Element as _Element,
     ASN1TagClass as _TagClass,
     ASN1Construction as _Construction,
     ASN1UniversalType as _UniversalType,
@@ -12,9 +12,9 @@ import {
     ASN1ConstructionError as _ConstructionError,
 } from "@wildboar/asn1";
 import * as $ from "@wildboar/asn1/functional";
-import { URI, _decode_URI, _encode_URI } from "../MachineReadableBiometricTestingAndReportingTestReport/URI.ta.mjs";
+import { type URI, _decode_URI, _encode_URI } from "../MachineReadableBiometricTestingAndReportingTestReport/URI.ta.mjs";
 import { TypeDocument, _enum_for_TypeDocument, _decode_TypeDocument, _encode_TypeDocument } from "../MachineReadableBiometricTestingAndReportingTestReport/TypeDocument.ta.mjs";
-import { Date, _decode_Date, _encode_Date } from "../MachineReadableBiometricTestingAndReportingTestReport/Date.ta.mjs";
+import { type Date, _decode_Date, _encode_Date } from "../MachineReadableBiometricTestingAndReportingTestReport/Date.ta.mjs";
 import { Availability, _enum_for_Availability, _decode_Availability, _encode_Availability } from "../MachineReadableBiometricTestingAndReportingTestReport/Availability.ta.mjs";
 
 
@@ -45,91 +45,109 @@ import { Availability, _enum_for_Availability, _decode_Availability, _encode_Ava
  */
 export
 class ExternalDocument {
+    /**
+     * @summary `link`.
+     * @description
+     *
+     * URL or other locator where the document can be referenced
+     * (Clause 6.4.3).
+     *
+     * @public
+     * @readonly
+     */
+    public readonly link: URI;
+    /**
+     * @summary `title`.
+     * @description
+     *
+     * Title of the document (Clause 6.4.3).
+     *
+     * @public
+     * @readonly
+     */
+    public readonly title: VisibleString;
+    /**
+     * @summary `authors`.
+     * @description
+     *
+     * Author or group of authors (Clause 6.4.3).
+     *
+     * @public
+     * @readonly
+     */
+    public readonly authors: OPTIONAL<VisibleString[]>;
+    /**
+     * @summary `publisher`.
+     * @description
+     *
+     * Publisher of the document (Clause 6.4.3).
+     *
+     * @public
+     * @readonly
+     */
+    public readonly publisher: OPTIONAL<VisibleString>;
+    /**
+     * @summary `editor`.
+     * @description
+     *
+     * Editor of the document (Clause 6.4.3).
+     *
+     * @public
+     * @readonly
+     */
+    public readonly editor: OPTIONAL<VisibleString>;
+    /**
+     * @summary `typeDocument`.
+     * @description
+     *
+     * `article`, `technical-report`, `in-proceedings`, `abstract`,
+     * `book`, `in-book`, or `collection` (Clause 6.4.3).
+     *
+     * @public
+     * @readonly
+     */
+    public readonly typeDocument: OPTIONAL<TypeDocument>;
+    /**
+     * @summary `publicationDate`.
+     * @description
+     *
+     * Publication date of the document (Clause 6.4.3).
+     *
+     * @public
+     * @readonly
+     */
+    public readonly publicationDate: OPTIONAL<Date>;
+    /**
+     * @summary `availability`.
+     * @description
+     *
+     * `public`, `restricted`, `unavailable`, or `superseded`
+     * (Clause 6.4.3).
+     *
+     * @public
+     * @readonly
+     */
+    public readonly availability: Availability;
+
     constructor (
-        /**
-         * @summary `link`.
-         * @description
-         *
-         * URL or other locator where the document can be referenced
-         * (Clause 6.4.3).
-         *
-         * @public
-         * @readonly
-         */
-        readonly link: URI,
-        /**
-         * @summary `title`.
-         * @description
-         *
-         * Title of the document (Clause 6.4.3).
-         *
-         * @public
-         * @readonly
-         */
-        readonly title: VisibleString,
-        /**
-         * @summary `authors`.
-         * @description
-         *
-         * Author or group of authors (Clause 6.4.3).
-         *
-         * @public
-         * @readonly
-         */
-        readonly authors: OPTIONAL<VisibleString[]>,
-        /**
-         * @summary `publisher`.
-         * @description
-         *
-         * Publisher of the document (Clause 6.4.3).
-         *
-         * @public
-         * @readonly
-         */
-        readonly publisher: OPTIONAL<VisibleString>,
-        /**
-         * @summary `editor`.
-         * @description
-         *
-         * Editor of the document (Clause 6.4.3).
-         *
-         * @public
-         * @readonly
-         */
-        readonly editor: OPTIONAL<VisibleString>,
-        /**
-         * @summary `typeDocument`.
-         * @description
-         *
-         * `article`, `technical-report`, `in-proceedings`, `abstract`,
-         * `book`, `in-book`, or `collection` (Clause 6.4.3).
-         *
-         * @public
-         * @readonly
-         */
-        readonly typeDocument: OPTIONAL<TypeDocument>,
-        /**
-         * @summary `publicationDate`.
-         * @description
-         *
-         * Publication date of the document (Clause 6.4.3).
-         *
-         * @public
-         * @readonly
-         */
-        readonly publicationDate: OPTIONAL<Date>,
-        /**
-         * @summary `availability`.
-         * @description
-         *
-         * `public`, `restricted`, `unavailable`, or `superseded`
-         * (Clause 6.4.3).
-         *
-         * @public
-         * @readonly
-         */
-        readonly availability: Availability
-    ) {}
+        link: URI,
+        title: VisibleString,
+        authors: OPTIONAL<VisibleString[]>,
+        publisher: OPTIONAL<VisibleString>,
+        editor: OPTIONAL<VisibleString>,
+        typeDocument: OPTIONAL<TypeDocument>,
+        publicationDate: OPTIONAL<Date>,
+        availability: Availability
+    ) {
+        this.link = link;
+        this.title = title;
+        this.authors = authors;
+        this.publisher = publisher;
+        this.editor = editor;
+        this.typeDocument = typeDocument;
+        this.publicationDate = publicationDate;
+        this.availability = availability;
+    }
 
     /**
      * @summary Restructures an object into a ExternalDocument
@@ -153,13 +171,13 @@ class ExternalDocument {
          * @static
          */
 
-    public static _enum_for_typeDocument = _enum_for_TypeDocument;        /**
+    public static _enum_for_typeDocument: typeof _enum_for_TypeDocument = _enum_for_TypeDocument;        /**
          * @summary The enum used as the type of the component `availability`
          * @public
          * @static
          */
 
-    public static _enum_for_availability = _enum_for_Availability;
+    public static _enum_for_availability: typeof _enum_for_Availability = _enum_for_Availability;
 }
 
 /**

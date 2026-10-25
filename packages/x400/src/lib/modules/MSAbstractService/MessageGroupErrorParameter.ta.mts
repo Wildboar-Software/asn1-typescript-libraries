@@ -1,6 +1,6 @@
 /* eslint-disable */
 import {
-    ASN1Element as _Element,
+    type ASN1Element as _Element,
     ASN1TagClass as _TagClass,
     ASN1Construction as _Construction,
     ASN1UniversalType as _UniversalType,
@@ -11,12 +11,12 @@ import {
 } from '@wildboar/asn1';
 import * as $ from '@wildboar/asn1/functional';
 import {
-    MessageGroupProblem,
+    type MessageGroupProblem,
     _decode_MessageGroupProblem,
     _encode_MessageGroupProblem,
 } from '../MSAbstractService/MessageGroupProblem.ta.mjs';
 import {
-    MessageGroupName,
+    type MessageGroupName,
     _decode_MessageGroupName,
     _encode_MessageGroupName,
 } from '../MSAbstractService/MessageGroupName.ta.mjs';
@@ -37,20 +37,26 @@ import {
  *
  */
 export class MessageGroupErrorParameter {
+    /**
+     * @summary `problem`.
+     * @public
+     * @readonly
+     */
+    public readonly problem: MessageGroupProblem;
+    /**
+     * @summary `name`.
+     * @public
+     * @readonly
+     */
+    public readonly name: MessageGroupName;
+
     constructor(
-        /**
-         * @summary `problem`.
-         * @public
-         * @readonly
-         */
-        readonly problem: MessageGroupProblem,
-        /**
-         * @summary `name`.
-         * @public
-         * @readonly
-         */
-        readonly name: MessageGroupName
-    ) {}
+        problem: MessageGroupProblem,
+        name: MessageGroupName
+    ) {
+        this.problem = problem;
+        this.name = name;
+    }
 
     /**
      * @summary Restructures an object into a MessageGroupErrorParameter

@@ -1,8 +1,8 @@
 /* eslint-disable */
-import { ASN1Element as _Element, EXTERNAL } from "@wildboar/asn1";
+import { ASN1Element as _Element, type EXTERNAL } from "@wildboar/asn1";
 import * as $ from "@wildboar/asn1/functional";
 import {
-    RequestShadowUpdateArgumentData_requestedStrategy_standard,
+    type RequestShadowUpdateArgumentData_requestedStrategy_standard,
     _decode_RequestShadowUpdateArgumentData_requestedStrategy_standard,
     _encode_RequestShadowUpdateArgumentData_requestedStrategy_standard,
 } from "../DirectoryShadowAbstractService/RequestShadowUpdateArgumentData-requestedStrategy-standard.ta.mjs";

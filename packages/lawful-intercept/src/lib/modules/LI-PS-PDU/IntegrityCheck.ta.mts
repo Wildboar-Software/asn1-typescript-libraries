@@ -1,18 +1,18 @@
 /* eslint-disable */
 import {
-    ASN1Element as _Element,
+    type ASN1Element as _Element,
     ASN1TagClass as _TagClass,
-    INTEGER,
-    OCTET_STRING,
-    OPTIONAL,
+    type INTEGER,
+    type OCTET_STRING,
+    type OPTIONAL,
     ASN1OverflowError
 } from "@wildboar/asn1";
 import * as $ from "@wildboar/asn1/functional";
-import { _decode_CheckType, _encode_CheckType, _enum_for_CheckType, CheckType } from "../LI-PS-PDU/CheckType.ta.mjs";
+import { _decode_CheckType, _encode_CheckType, _enum_for_CheckType, type CheckType } from "../LI-PS-PDU/CheckType.ta.mjs";
 // export { CheckType, _enum_for_CheckType, CheckType_hash /* IMPORTED_LONG_ENUMERATION_ITEM */, hash /* IMPORTED_SHORT_ENUMERATION_ITEM */, CheckType_signature /* IMPORTED_LONG_ENUMERATION_ITEM */, signature /* IMPORTED_SHORT_ENUMERATION_ITEM */, _decode_CheckType, _encode_CheckType } from "../LI-PS-PDU/CheckType.ta.mjs";
-import { _decode_DataType, _encode_DataType, _enum_for_DataType, DataType } from "../LI-PS-PDU/DataType.ta.mjs";
+import { _decode_DataType, _encode_DataType, _enum_for_DataType, type DataType } from "../LI-PS-PDU/DataType.ta.mjs";
 // export { DataType, _enum_for_DataType, DataType_iRI /* IMPORTED_LONG_ENUMERATION_ITEM */, iRI /* IMPORTED_SHORT_ENUMERATION_ITEM */, DataType_cC /* IMPORTED_LONG_ENUMERATION_ITEM */, cC /* IMPORTED_SHORT_ENUMERATION_ITEM */, DataType_iLHI /* IMPORTED_LONG_ENUMERATION_ITEM */, iLHI /* IMPORTED_SHORT_ENUMERATION_ITEM */, _decode_DataType, _encode_DataType } from "../LI-PS-PDU/DataType.ta.mjs";
-import { _decode_HashAlgorithm, _encode_HashAlgorithm, _enum_for_HashAlgorithm, HashAlgorithm } from "../LI-PS-PDU/HashAlgorithm.ta.mjs";
+import { _decode_HashAlgorithm, _encode_HashAlgorithm, _enum_for_HashAlgorithm, type HashAlgorithm } from "../LI-PS-PDU/HashAlgorithm.ta.mjs";
 // export { HashAlgorithm, _enum_for_HashAlgorithm, HashAlgorithm_sHA_1 /* IMPORTED_LONG_ENUMERATION_ITEM */, sHA_1 /* IMPORTED_SHORT_ENUMERATION_ITEM */, HashAlgorithm_sHA_256 /* IMPORTED_LONG_ENUMERATION_ITEM */, sHA_256 /* IMPORTED_SHORT_ENUMERATION_ITEM */, HashAlgorithm_sHA_384 /* IMPORTED_LONG_ENUMERATION_ITEM */, sHA_384 /* IMPORTED_SHORT_ENUMERATION_ITEM */, HashAlgorithm_sHA_512 /* IMPORTED_LONG_ENUMERATION_ITEM */, sHA_512 /* IMPORTED_SHORT_ENUMERATION_ITEM */, _decode_HashAlgorithm, _encode_HashAlgorithm } from "../LI-PS-PDU/HashAlgorithm.ta.mjs";
 
 
@@ -213,19 +213,19 @@ class IntegrityCheck {
          * @static
          */
 
-    public static _enum_for_checkType = _enum_for_CheckType;        /**
+    public static _enum_for_checkType: typeof _enum_for_CheckType = _enum_for_CheckType;        /**
          * @summary The enum used as the type of the component `dataType`
          * @public
          * @static
          */
 
-    public static _enum_for_dataType = _enum_for_DataType;        /**
+    public static _enum_for_dataType: typeof _enum_for_DataType = _enum_for_DataType;        /**
          * @summary The enum used as the type of the component `hashAlgorithm`
          * @public
          * @static
          */
 
-    public static _enum_for_hashAlgorithm = _enum_for_HashAlgorithm;
+    public static _enum_for_hashAlgorithm: typeof _enum_for_HashAlgorithm = _enum_for_HashAlgorithm;
 }
 
 /**

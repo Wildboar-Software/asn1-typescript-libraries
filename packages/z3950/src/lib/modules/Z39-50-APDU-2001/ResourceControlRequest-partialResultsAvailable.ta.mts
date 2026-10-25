@@ -1,6 +1,6 @@
 /* eslint-disable */
 import {
-    INTEGER
+    type INTEGER
 } from "@wildboar/asn1";
 import * as $ from "@wildboar/asn1/functional";
 
@@ -40,7 +40,7 @@ type ResourceControlRequest_partialResultsAvailable = INTEGER;
  * @type {number}
  */
 export
-const ResourceControlRequest_partialResultsAvailable_subset: ResourceControlRequest_partialResultsAvailable = 1; /* LONG_NAMED_INTEGER_VALUE */
+const ResourceControlRequest_partialResultsAvailable_subset: 1 = 1 satisfies ResourceControlRequest_partialResultsAvailable; /* LONG_NAMED_INTEGER_VALUE */
 
 /**
  * @summary ResourceControlRequest_partialResultsAvailable_subset
@@ -53,7 +53,7 @@ const ResourceControlRequest_partialResultsAvailable_subset: ResourceControlRequ
  * @type {number}
  */
 export
-const subset: ResourceControlRequest_partialResultsAvailable = ResourceControlRequest_partialResultsAvailable_subset; /* SHORT_NAMED_INTEGER_VALUE */
+const subset: 1 = ResourceControlRequest_partialResultsAvailable_subset; /* SHORT_NAMED_INTEGER_VALUE */
 
 /**
  * @summary ResourceControlRequest_partialResultsAvailable_interim
@@ -66,7 +66,7 @@ const subset: ResourceControlRequest_partialResultsAvailable = ResourceControlRe
  * @type {number}
  */
 export
-const ResourceControlRequest_partialResultsAvailable_interim: ResourceControlRequest_partialResultsAvailable = 2; /* LONG_NAMED_INTEGER_VALUE */
+const ResourceControlRequest_partialResultsAvailable_interim: 2 = 2 satisfies ResourceControlRequest_partialResultsAvailable; /* LONG_NAMED_INTEGER_VALUE */
 
 /**
  * @summary ResourceControlRequest_partialResultsAvailable_interim
@@ -79,7 +79,7 @@ const ResourceControlRequest_partialResultsAvailable_interim: ResourceControlReq
  * @type {number}
  */
 export
-const interim: ResourceControlRequest_partialResultsAvailable = ResourceControlRequest_partialResultsAvailable_interim; /* SHORT_NAMED_INTEGER_VALUE */
+const interim: 2 = ResourceControlRequest_partialResultsAvailable_interim; /* SHORT_NAMED_INTEGER_VALUE */
 
 /**
  * @summary ResourceControlRequest_partialResultsAvailable_none
@@ -91,7 +91,7 @@ const interim: ResourceControlRequest_partialResultsAvailable = ResourceControlR
  * @type {number}
  */
 export
-const ResourceControlRequest_partialResultsAvailable_none: ResourceControlRequest_partialResultsAvailable = 3; /* LONG_NAMED_INTEGER_VALUE */
+const ResourceControlRequest_partialResultsAvailable_none: 3 = 3 satisfies ResourceControlRequest_partialResultsAvailable; /* LONG_NAMED_INTEGER_VALUE */
 
 /**
  * @summary ResourceControlRequest_partialResultsAvailable_none
@@ -104,7 +104,7 @@ const ResourceControlRequest_partialResultsAvailable_none: ResourceControlReques
  * @type {number}
  */
 export
-const none: ResourceControlRequest_partialResultsAvailable = ResourceControlRequest_partialResultsAvailable_none; /* SHORT_NAMED_INTEGER_VALUE */
+const none: 3 = ResourceControlRequest_partialResultsAvailable_none; /* SHORT_NAMED_INTEGER_VALUE */
 export const _decode_ResourceControlRequest_partialResultsAvailable: $.ASN1Decoder<ResourceControlRequest_partialResultsAvailable> = $._decodeInteger;
 export const _encode_ResourceControlRequest_partialResultsAvailable: $.ASN1Encoder<ResourceControlRequest_partialResultsAvailable> = $._encodeInteger;
 

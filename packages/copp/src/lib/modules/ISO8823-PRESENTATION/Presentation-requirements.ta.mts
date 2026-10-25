@@ -1,7 +1,7 @@
 /* eslint-disable */
 import {
-    BIT_STRING,
-    ASN1Element as _Element,
+    type BIT_STRING,
+    type ASN1Element as _Element,
     ASN1TagClass as _TagClass,
     ASN1Construction as _Construction,
     ASN1UniversalType as _UniversalType,
@@ -76,12 +76,12 @@ export const restoration: number = Presentation_requirements_restoration; /* SHO
 
 
 
-export const _decode_Presentation_requirements = $._decodeBitString;
+export const _decode_Presentation_requirements: $.ASN1Decoder<BIT_STRING> = $._decodeBitString;
 
 
 
 
-export const _encode_Presentation_requirements = $._encodeBitString;
+export const _encode_Presentation_requirements: $.ASN1Encoder<BIT_STRING> = $._encodeBitString;
 
 
 /* eslint-enable */

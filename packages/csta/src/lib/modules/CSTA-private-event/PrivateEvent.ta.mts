@@ -2,15 +2,15 @@
 
 import * as $ from "@wildboar/asn1/functional";
 import {
-    OPTIONAL,
-    SEQUENCE,
-    SET,
-    ASN1Element as _Element,
+    type OPTIONAL,
+    type SEQUENCE,
+    type SET,
+    type ASN1Element as _Element,
     ASN1TagClass as _TagClass
 } from "@wildboar/asn1";
 import { CSTASecurityData, _decode_CSTASecurityData, _encode_CSTASecurityData } from "../CSTA-security/CSTASecurityData.ta.mjs";
 
-import { CSTAPrivateData, _decode_CSTAPrivateData, _encode_CSTAPrivateData } from "../CSTA-extension-types/CSTAPrivateData.ta.mjs";
+import { type CSTAPrivateData, _decode_CSTAPrivateData, _encode_CSTAPrivateData } from "../CSTA-extension-types/CSTAPrivateData.ta.mjs";
 
 
 
@@ -32,7 +32,7 @@ import { CSTAPrivateData, _decode_CSTAPrivateData, _encode_CSTAPrivateData } fro
  * 
  * ```asn1
  * PrivateEvent ::= SEQUENCE
- * {    security            CSTASecurityData            OPTIONAL,
+ * {    security            CSTASecurityData            type OPTIONAL,
  *     privateData            CSTAPrivateData}
  * ```
  * 
@@ -40,30 +40,36 @@ import { CSTAPrivateData, _decode_CSTAPrivateData, _encode_CSTAPrivateData } fro
  */
 export
 class PrivateEvent {
+    /**
+     * @summary `security`.
+     * @description
+     *
+     * Timestamp, sequence number, and security information (ECMA-269
+     * §29.3.1.1).
+     *
+     * @public
+     * @readonly
+     */
+    public readonly security: OPTIONAL<CSTASecurityData>;
+    /**
+     * @summary `privateData`.
+     * @description
+     *
+     * Vendor-defined event information. CSTA does not specify the contents
+     * (ECMA-269 §9.4.1 / §29.3.1.1).
+     *
+     * @public
+     * @readonly
+     */
+    public readonly privateData: CSTAPrivateData;
+
     constructor (
-        /**
-         * @summary `security`.
-         * @description
-         *
-         * Timestamp, sequence number, and security information (ECMA-269
-         * §29.3.1.1).
-         *
-         * @public
-         * @readonly
-         */
-        readonly security: OPTIONAL<CSTASecurityData>,
-        /**
-         * @summary `privateData`.
-         * @description
-         *
-         * Vendor-defined event information. CSTA does not specify the contents
-         * (ECMA-269 §9.4.1 / §29.3.1.1).
-         *
-         * @public
-         * @readonly
-         */
-        readonly privateData: CSTAPrivateData
-    ) {}
+        security: OPTIONAL<CSTASecurityData>,
+        privateData: CSTAPrivateData
+    ) {
+        this.security = security;
+        this.privateData = privateData;
+    }
 
     /**
      * @summary Restructures an object into a PrivateEvent

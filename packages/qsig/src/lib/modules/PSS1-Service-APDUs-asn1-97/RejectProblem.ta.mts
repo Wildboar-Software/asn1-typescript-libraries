@@ -1,6 +1,6 @@
 /* eslint-disable */
 import {
-    INTEGER
+    type INTEGER
 } from "@wildboar/asn1";
 import * as $ from "@wildboar/asn1/functional";
 
@@ -57,7 +57,7 @@ type RejectProblem = INTEGER;
  * @see https://ecma-international.org/publications-and-standards/standards/ecma-165/
  */
 export
-const RejectProblem_general_unrecognisedPDU: RejectProblem = 0; /* LONG_NAMED_INTEGER_VALUE */
+const RejectProblem_general_unrecognisedPDU: 0 = 0 satisfies RejectProblem; /* LONG_NAMED_INTEGER_VALUE */
 
 /**
  * @summary general_unrecognisedPDU
@@ -66,7 +66,7 @@ const RejectProblem_general_unrecognisedPDU: RejectProblem = 0; /* LONG_NAMED_IN
  * @type {number}
  */
 export
-const general_unrecognisedPDU: RejectProblem = RejectProblem_general_unrecognisedPDU; /* SHORT_NAMED_INTEGER_VALUE */
+const general_unrecognisedPDU: 0 = RejectProblem_general_unrecognisedPDU; /* SHORT_NAMED_INTEGER_VALUE */
 
 /**
  * @summary RejectProblem_general_mistypedPDU
@@ -80,7 +80,7 @@ const general_unrecognisedPDU: RejectProblem = RejectProblem_general_unrecognise
  * @see https://ecma-international.org/publications-and-standards/standards/ecma-165/
  */
 export
-const RejectProblem_general_mistypedPDU: RejectProblem = 1; /* LONG_NAMED_INTEGER_VALUE */
+const RejectProblem_general_mistypedPDU: 1 = 1 satisfies RejectProblem; /* LONG_NAMED_INTEGER_VALUE */
 
 /**
  * @summary general_mistypedPDU
@@ -89,7 +89,7 @@ const RejectProblem_general_mistypedPDU: RejectProblem = 1; /* LONG_NAMED_INTEGE
  * @type {number}
  */
 export
-const general_mistypedPDU: RejectProblem = RejectProblem_general_mistypedPDU; /* SHORT_NAMED_INTEGER_VALUE */
+const general_mistypedPDU: 1 = RejectProblem_general_mistypedPDU; /* SHORT_NAMED_INTEGER_VALUE */
 
 /**
  * @summary RejectProblem_general_badlyStructuredPDU
@@ -103,7 +103,7 @@ const general_mistypedPDU: RejectProblem = RejectProblem_general_mistypedPDU; /*
  * @see https://ecma-international.org/publications-and-standards/standards/ecma-165/
  */
 export
-const RejectProblem_general_badlyStructuredPDU: RejectProblem = 2; /* LONG_NAMED_INTEGER_VALUE */
+const RejectProblem_general_badlyStructuredPDU: 2 = 2 satisfies RejectProblem; /* LONG_NAMED_INTEGER_VALUE */
 
 /**
  * @summary general_badlyStructuredPDU
@@ -112,7 +112,7 @@ const RejectProblem_general_badlyStructuredPDU: RejectProblem = 2; /* LONG_NAMED
  * @type {number}
  */
 export
-const general_badlyStructuredPDU: RejectProblem = RejectProblem_general_badlyStructuredPDU; /* SHORT_NAMED_INTEGER_VALUE */
+const general_badlyStructuredPDU: 2 = RejectProblem_general_badlyStructuredPDU; /* SHORT_NAMED_INTEGER_VALUE */
 
 /**
  * @summary RejectProblem_invoke_duplicateInvocation
@@ -125,7 +125,7 @@ const general_badlyStructuredPDU: RejectProblem = RejectProblem_general_badlyStr
  * @see https://ecma-international.org/publications-and-standards/standards/ecma-165/
  */
 export
-const RejectProblem_invoke_duplicateInvocation: RejectProblem = 10; /* LONG_NAMED_INTEGER_VALUE */
+const RejectProblem_invoke_duplicateInvocation: 10 = 10 satisfies RejectProblem; /* LONG_NAMED_INTEGER_VALUE */
 
 /**
  * @summary invoke_duplicateInvocation
@@ -134,7 +134,7 @@ const RejectProblem_invoke_duplicateInvocation: RejectProblem = 10; /* LONG_NAME
  * @type {number}
  */
 export
-const invoke_duplicateInvocation: RejectProblem = RejectProblem_invoke_duplicateInvocation; /* SHORT_NAMED_INTEGER_VALUE */
+const invoke_duplicateInvocation: 10 = RejectProblem_invoke_duplicateInvocation; /* SHORT_NAMED_INTEGER_VALUE */
 
 /**
  * @summary RejectProblem_invoke_unrecognisedOperation
@@ -147,7 +147,7 @@ const invoke_duplicateInvocation: RejectProblem = RejectProblem_invoke_duplicate
  * @see https://ecma-international.org/publications-and-standards/standards/ecma-165/
  */
 export
-const RejectProblem_invoke_unrecognisedOperation: RejectProblem = 11; /* LONG_NAMED_INTEGER_VALUE */
+const RejectProblem_invoke_unrecognisedOperation: 11 = 11 satisfies RejectProblem; /* LONG_NAMED_INTEGER_VALUE */
 
 /**
  * @summary invoke_unrecognisedOperation
@@ -156,7 +156,7 @@ const RejectProblem_invoke_unrecognisedOperation: RejectProblem = 11; /* LONG_NA
  * @type {number}
  */
 export
-const invoke_unrecognisedOperation: RejectProblem = RejectProblem_invoke_unrecognisedOperation; /* SHORT_NAMED_INTEGER_VALUE */
+const invoke_unrecognisedOperation: 11 = RejectProblem_invoke_unrecognisedOperation; /* SHORT_NAMED_INTEGER_VALUE */
 
 /**
  * @summary RejectProblem_invoke_mistypedArgument
@@ -169,7 +169,7 @@ const invoke_unrecognisedOperation: RejectProblem = RejectProblem_invoke_unrecog
  * @see https://ecma-international.org/publications-and-standards/standards/ecma-165/
  */
 export
-const RejectProblem_invoke_mistypedArgument: RejectProblem = 12; /* LONG_NAMED_INTEGER_VALUE */
+const RejectProblem_invoke_mistypedArgument: 12 = 12 satisfies RejectProblem; /* LONG_NAMED_INTEGER_VALUE */
 
 /**
  * @summary invoke_mistypedArgument
@@ -178,7 +178,7 @@ const RejectProblem_invoke_mistypedArgument: RejectProblem = 12; /* LONG_NAMED_I
  * @type {number}
  */
 export
-const invoke_mistypedArgument: RejectProblem = RejectProblem_invoke_mistypedArgument; /* SHORT_NAMED_INTEGER_VALUE */
+const invoke_mistypedArgument: 12 = RejectProblem_invoke_mistypedArgument; /* SHORT_NAMED_INTEGER_VALUE */
 
 /**
  * @summary RejectProblem_invoke_resourceLimitation
@@ -192,7 +192,7 @@ const invoke_mistypedArgument: RejectProblem = RejectProblem_invoke_mistypedArgu
  * @see https://ecma-international.org/publications-and-standards/standards/ecma-165/
  */
 export
-const RejectProblem_invoke_resourceLimitation: RejectProblem = 13; /* LONG_NAMED_INTEGER_VALUE */
+const RejectProblem_invoke_resourceLimitation: 13 = 13 satisfies RejectProblem; /* LONG_NAMED_INTEGER_VALUE */
 
 /**
  * @summary invoke_resourceLimitation
@@ -201,7 +201,7 @@ const RejectProblem_invoke_resourceLimitation: RejectProblem = 13; /* LONG_NAMED
  * @type {number}
  */
 export
-const invoke_resourceLimitation: RejectProblem = RejectProblem_invoke_resourceLimitation; /* SHORT_NAMED_INTEGER_VALUE */
+const invoke_resourceLimitation: 13 = RejectProblem_invoke_resourceLimitation; /* SHORT_NAMED_INTEGER_VALUE */
 
 /**
  * @summary RejectProblem_invoke_releaseInProgress
@@ -215,7 +215,7 @@ const invoke_resourceLimitation: RejectProblem = RejectProblem_invoke_resourceLi
  * @see https://ecma-international.org/publications-and-standards/standards/ecma-165/
  */
 export
-const RejectProblem_invoke_releaseInProgress: RejectProblem = 14; /* LONG_NAMED_INTEGER_VALUE */
+const RejectProblem_invoke_releaseInProgress: 14 = 14 satisfies RejectProblem; /* LONG_NAMED_INTEGER_VALUE */
 
 /**
  * @summary invoke_releaseInProgress
@@ -224,7 +224,7 @@ const RejectProblem_invoke_releaseInProgress: RejectProblem = 14; /* LONG_NAMED_
  * @type {number}
  */
 export
-const invoke_releaseInProgress: RejectProblem = RejectProblem_invoke_releaseInProgress; /* SHORT_NAMED_INTEGER_VALUE */
+const invoke_releaseInProgress: 14 = RejectProblem_invoke_releaseInProgress; /* SHORT_NAMED_INTEGER_VALUE */
 
 /**
  * @summary RejectProblem_invoke_unrecognisedLinkedId
@@ -237,7 +237,7 @@ const invoke_releaseInProgress: RejectProblem = RejectProblem_invoke_releaseInPr
  * @see https://ecma-international.org/publications-and-standards/standards/ecma-165/
  */
 export
-const RejectProblem_invoke_unrecognisedLinkedId: RejectProblem = 15; /* LONG_NAMED_INTEGER_VALUE */
+const RejectProblem_invoke_unrecognisedLinkedId: 15 = 15 satisfies RejectProblem; /* LONG_NAMED_INTEGER_VALUE */
 
 /**
  * @summary invoke_unrecognisedLinkedId
@@ -246,7 +246,7 @@ const RejectProblem_invoke_unrecognisedLinkedId: RejectProblem = 15; /* LONG_NAM
  * @type {number}
  */
 export
-const invoke_unrecognisedLinkedId: RejectProblem = RejectProblem_invoke_unrecognisedLinkedId; /* SHORT_NAMED_INTEGER_VALUE */
+const invoke_unrecognisedLinkedId: 15 = RejectProblem_invoke_unrecognisedLinkedId; /* SHORT_NAMED_INTEGER_VALUE */
 
 /**
  * @summary RejectProblem_invoke_linkedResponseUnexpected
@@ -259,7 +259,7 @@ const invoke_unrecognisedLinkedId: RejectProblem = RejectProblem_invoke_unrecogn
  * @see https://ecma-international.org/publications-and-standards/standards/ecma-165/
  */
 export
-const RejectProblem_invoke_linkedResponseUnexpected: RejectProblem = 16; /* LONG_NAMED_INTEGER_VALUE */
+const RejectProblem_invoke_linkedResponseUnexpected: 16 = 16 satisfies RejectProblem; /* LONG_NAMED_INTEGER_VALUE */
 
 /**
  * @summary invoke_linkedResponseUnexpected
@@ -268,7 +268,7 @@ const RejectProblem_invoke_linkedResponseUnexpected: RejectProblem = 16; /* LONG
  * @type {number}
  */
 export
-const invoke_linkedResponseUnexpected: RejectProblem = RejectProblem_invoke_linkedResponseUnexpected; /* SHORT_NAMED_INTEGER_VALUE */
+const invoke_linkedResponseUnexpected: 16 = RejectProblem_invoke_linkedResponseUnexpected; /* SHORT_NAMED_INTEGER_VALUE */
 
 /**
  * @summary RejectProblem_invoke_unexpectedLinkedOperation
@@ -282,7 +282,7 @@ const invoke_linkedResponseUnexpected: RejectProblem = RejectProblem_invoke_link
  * @see https://ecma-international.org/publications-and-standards/standards/ecma-165/
  */
 export
-const RejectProblem_invoke_unexpectedLinkedOperation: RejectProblem = 17; /* LONG_NAMED_INTEGER_VALUE */
+const RejectProblem_invoke_unexpectedLinkedOperation: 17 = 17 satisfies RejectProblem; /* LONG_NAMED_INTEGER_VALUE */
 
 /**
  * @summary invoke_unexpectedLinkedOperation
@@ -291,7 +291,7 @@ const RejectProblem_invoke_unexpectedLinkedOperation: RejectProblem = 17; /* LON
  * @type {number}
  */
 export
-const invoke_unexpectedLinkedOperation: RejectProblem = RejectProblem_invoke_unexpectedLinkedOperation; /* SHORT_NAMED_INTEGER_VALUE */
+const invoke_unexpectedLinkedOperation: 17 = RejectProblem_invoke_unexpectedLinkedOperation; /* SHORT_NAMED_INTEGER_VALUE */
 
 /**
  * @summary RejectProblem_returnResult_unrecognisedInvocation
@@ -304,7 +304,7 @@ const invoke_unexpectedLinkedOperation: RejectProblem = RejectProblem_invoke_une
  * @see https://ecma-international.org/publications-and-standards/standards/ecma-165/
  */
 export
-const RejectProblem_returnResult_unrecognisedInvocation: RejectProblem = 20; /* LONG_NAMED_INTEGER_VALUE */
+const RejectProblem_returnResult_unrecognisedInvocation: 20 = 20 satisfies RejectProblem; /* LONG_NAMED_INTEGER_VALUE */
 
 /**
  * @summary returnResult_unrecognisedInvocation
@@ -315,7 +315,7 @@ const RejectProblem_returnResult_unrecognisedInvocation: RejectProblem = 20; /* 
  * @type {number}
  */
 export
-const returnResult_unrecognisedInvocation: RejectProblem = RejectProblem_returnResult_unrecognisedInvocation; /* SHORT_NAMED_INTEGER_VALUE */
+const returnResult_unrecognisedInvocation: 20 = RejectProblem_returnResult_unrecognisedInvocation; /* SHORT_NAMED_INTEGER_VALUE */
 
 /**
  * @summary RejectProblem_returnResult_resultResponseUnexpected
@@ -328,7 +328,7 @@ const returnResult_unrecognisedInvocation: RejectProblem = RejectProblem_returnR
  * @see https://ecma-international.org/publications-and-standards/standards/ecma-165/
  */
 export
-const RejectProblem_returnResult_resultResponseUnexpected: RejectProblem = 21; /* LONG_NAMED_INTEGER_VALUE */
+const RejectProblem_returnResult_resultResponseUnexpected: 21 = 21 satisfies RejectProblem; /* LONG_NAMED_INTEGER_VALUE */
 
 /**
  * @summary returnResult_resultResponseUnexpected
@@ -339,7 +339,7 @@ const RejectProblem_returnResult_resultResponseUnexpected: RejectProblem = 21; /
  * @type {number}
  */
 export
-const returnResult_resultResponseUnexpected: RejectProblem = RejectProblem_returnResult_resultResponseUnexpected; /* SHORT_NAMED_INTEGER_VALUE */
+const returnResult_resultResponseUnexpected: 21 = RejectProblem_returnResult_resultResponseUnexpected; /* SHORT_NAMED_INTEGER_VALUE */
 
 /**
  * @summary RejectProblem_returnResult_mistypedResult
@@ -351,7 +351,7 @@ const returnResult_resultResponseUnexpected: RejectProblem = RejectProblem_retur
  * @see https://ecma-international.org/publications-and-standards/standards/ecma-165/
  */
 export
-const RejectProblem_returnResult_mistypedResult: RejectProblem = 22; /* LONG_NAMED_INTEGER_VALUE */
+const RejectProblem_returnResult_mistypedResult: 22 = 22 satisfies RejectProblem; /* LONG_NAMED_INTEGER_VALUE */
 
 /**
  * @summary returnResult_mistypedResult
@@ -360,7 +360,7 @@ const RejectProblem_returnResult_mistypedResult: RejectProblem = 22; /* LONG_NAM
  * @type {number}
  */
 export
-const returnResult_mistypedResult: RejectProblem = RejectProblem_returnResult_mistypedResult; /* SHORT_NAMED_INTEGER_VALUE */
+const returnResult_mistypedResult: 22 = RejectProblem_returnResult_mistypedResult; /* SHORT_NAMED_INTEGER_VALUE */
 
 /**
  * @summary RejectProblem_returnError_unrecognisedInvocation
@@ -373,7 +373,7 @@ const returnResult_mistypedResult: RejectProblem = RejectProblem_returnResult_mi
  * @see https://ecma-international.org/publications-and-standards/standards/ecma-165/
  */
 export
-const RejectProblem_returnError_unrecognisedInvocation: RejectProblem = 30; /* LONG_NAMED_INTEGER_VALUE */
+const RejectProblem_returnError_unrecognisedInvocation: 30 = 30 satisfies RejectProblem; /* LONG_NAMED_INTEGER_VALUE */
 
 /**
  * @summary returnError_unrecognisedInvocation
@@ -384,7 +384,7 @@ const RejectProblem_returnError_unrecognisedInvocation: RejectProblem = 30; /* L
  * @type {number}
  */
 export
-const returnError_unrecognisedInvocation: RejectProblem = RejectProblem_returnError_unrecognisedInvocation; /* SHORT_NAMED_INTEGER_VALUE */
+const returnError_unrecognisedInvocation: 30 = RejectProblem_returnError_unrecognisedInvocation; /* SHORT_NAMED_INTEGER_VALUE */
 
 /**
  * @summary RejectProblem_returnError_errorResponseUnexpected
@@ -397,7 +397,7 @@ const returnError_unrecognisedInvocation: RejectProblem = RejectProblem_returnEr
  * @see https://ecma-international.org/publications-and-standards/standards/ecma-165/
  */
 export
-const RejectProblem_returnError_errorResponseUnexpected: RejectProblem = 31; /* LONG_NAMED_INTEGER_VALUE */
+const RejectProblem_returnError_errorResponseUnexpected: 31 = 31 satisfies RejectProblem; /* LONG_NAMED_INTEGER_VALUE */
 
 /**
  * @summary returnError_errorResponseUnexpected
@@ -408,7 +408,7 @@ const RejectProblem_returnError_errorResponseUnexpected: RejectProblem = 31; /* 
  * @type {number}
  */
 export
-const returnError_errorResponseUnexpected: RejectProblem = RejectProblem_returnError_errorResponseUnexpected; /* SHORT_NAMED_INTEGER_VALUE */
+const returnError_errorResponseUnexpected: 31 = RejectProblem_returnError_errorResponseUnexpected; /* SHORT_NAMED_INTEGER_VALUE */
 
 /**
  * @summary RejectProblem_returnError_unrecognisedError
@@ -421,7 +421,7 @@ const returnError_errorResponseUnexpected: RejectProblem = RejectProblem_returnE
  * @see https://ecma-international.org/publications-and-standards/standards/ecma-165/
  */
 export
-const RejectProblem_returnError_unrecognisedError: RejectProblem = 32; /* LONG_NAMED_INTEGER_VALUE */
+const RejectProblem_returnError_unrecognisedError: 32 = 32 satisfies RejectProblem; /* LONG_NAMED_INTEGER_VALUE */
 
 /**
  * @summary returnError_unrecognisedError
@@ -430,7 +430,7 @@ const RejectProblem_returnError_unrecognisedError: RejectProblem = 32; /* LONG_N
  * @type {number}
  */
 export
-const returnError_unrecognisedError: RejectProblem = RejectProblem_returnError_unrecognisedError; /* SHORT_NAMED_INTEGER_VALUE */
+const returnError_unrecognisedError: 32 = RejectProblem_returnError_unrecognisedError; /* SHORT_NAMED_INTEGER_VALUE */
 
 /**
  * @summary RejectProblem_returnError_unexpectedError
@@ -443,7 +443,7 @@ const returnError_unrecognisedError: RejectProblem = RejectProblem_returnError_u
  * @see https://ecma-international.org/publications-and-standards/standards/ecma-165/
  */
 export
-const RejectProblem_returnError_unexpectedError: RejectProblem = 33; /* LONG_NAMED_INTEGER_VALUE */
+const RejectProblem_returnError_unexpectedError: 33 = 33 satisfies RejectProblem; /* LONG_NAMED_INTEGER_VALUE */
 
 /**
  * @summary returnError_unexpectedError
@@ -452,7 +452,7 @@ const RejectProblem_returnError_unexpectedError: RejectProblem = 33; /* LONG_NAM
  * @type {number}
  */
 export
-const returnError_unexpectedError: RejectProblem = RejectProblem_returnError_unexpectedError; /* SHORT_NAMED_INTEGER_VALUE */
+const returnError_unexpectedError: 33 = RejectProblem_returnError_unexpectedError; /* SHORT_NAMED_INTEGER_VALUE */
 
 /**
  * @summary RejectProblem_returnError_mistypedParameter
@@ -465,7 +465,7 @@ const returnError_unexpectedError: RejectProblem = RejectProblem_returnError_une
  * @see https://ecma-international.org/publications-and-standards/standards/ecma-165/
  */
 export
-const RejectProblem_returnError_mistypedParameter: RejectProblem = 34; /* LONG_NAMED_INTEGER_VALUE */
+const RejectProblem_returnError_mistypedParameter: 34 = 34 satisfies RejectProblem; /* LONG_NAMED_INTEGER_VALUE */
 
 /**
  * @summary returnError_mistypedParameter
@@ -474,7 +474,7 @@ const RejectProblem_returnError_mistypedParameter: RejectProblem = 34; /* LONG_N
  * @type {number}
  */
 export
-const returnError_mistypedParameter: RejectProblem = RejectProblem_returnError_mistypedParameter; /* SHORT_NAMED_INTEGER_VALUE */
+const returnError_mistypedParameter: 34 = RejectProblem_returnError_mistypedParameter; /* SHORT_NAMED_INTEGER_VALUE */
 
 export
 const _decode_RejectProblem: $.ASN1Decoder<RejectProblem> = $._decodeInteger;

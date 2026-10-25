@@ -1,7 +1,7 @@
 /* eslint-disable */
 import {
-    ENUMERATED,
-    ASN1Element as _Element,
+    type ENUMERATED,
+    type ASN1Element as _Element,
     ASN1TagClass as _TagClass,
     ASN1Construction as _Construction,
     ASN1UniversalType as _UniversalType,
@@ -54,7 +54,7 @@ type ContentType = _enum_for_ContentType | ENUMERATED;
  * @type {number}
  */
 export
-const ContentType_change_cipher_spec: ContentType = 20; /* LONG_NAMED_ENUMERATED_VALUE */
+const ContentType_change_cipher_spec: _enum_for_ContentType.change_cipher_spec = _enum_for_ContentType.change_cipher_spec; /* LONG_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary change_cipher_spec
@@ -63,7 +63,7 @@ const ContentType_change_cipher_spec: ContentType = 20; /* LONG_NAMED_ENUMERATED
  * @type {number}
  */
 export
-const change_cipher_spec: ContentType = ContentType_change_cipher_spec; /* SHORT_NAMED_ENUMERATED_VALUE */
+const change_cipher_spec: _enum_for_ContentType.change_cipher_spec = ContentType_change_cipher_spec; /* SHORT_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary ContentType_alert
@@ -72,7 +72,7 @@ const change_cipher_spec: ContentType = ContentType_change_cipher_spec; /* SHORT
  * @type {number}
  */
 export
-const ContentType_alert: ContentType = 21; /* LONG_NAMED_ENUMERATED_VALUE */
+const ContentType_alert: _enum_for_ContentType.alert = _enum_for_ContentType.alert; /* LONG_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary alert
@@ -81,7 +81,7 @@ const ContentType_alert: ContentType = 21; /* LONG_NAMED_ENUMERATED_VALUE */
  * @type {number}
  */
 export
-const alert: ContentType = ContentType_alert; /* SHORT_NAMED_ENUMERATED_VALUE */
+const alert: _enum_for_ContentType.alert = ContentType_alert; /* SHORT_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary ContentType_handshake
@@ -91,7 +91,7 @@ const alert: ContentType = ContentType_alert; /* SHORT_NAMED_ENUMERATED_VALUE */
  * @type {number}
  */
 export
-const ContentType_handshake: ContentType = 22; /* LONG_NAMED_ENUMERATED_VALUE */
+const ContentType_handshake: _enum_for_ContentType.handshake = _enum_for_ContentType.handshake; /* LONG_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary handshake
@@ -101,7 +101,7 @@ const ContentType_handshake: ContentType = 22; /* LONG_NAMED_ENUMERATED_VALUE */
  * @type {number}
  */
 export
-const handshake: ContentType = ContentType_handshake; /* SHORT_NAMED_ENUMERATED_VALUE */
+const handshake: _enum_for_ContentType.handshake = ContentType_handshake; /* SHORT_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary ContentType_application_data
@@ -111,7 +111,7 @@ const handshake: ContentType = ContentType_handshake; /* SHORT_NAMED_ENUMERATED_
  * @type {number}
  */
 export
-const ContentType_application_data: ContentType = 23; /* LONG_NAMED_ENUMERATED_VALUE */
+const ContentType_application_data: _enum_for_ContentType.application_data = _enum_for_ContentType.application_data; /* LONG_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary application_data
@@ -121,9 +121,9 @@ const ContentType_application_data: ContentType = 23; /* LONG_NAMED_ENUMERATED_V
  * @type {number}
  */
 export
-const application_data: ContentType = ContentType_application_data; /* SHORT_NAMED_ENUMERATED_VALUE */
-export const _decode_ContentType = $._decodeEnumerated;
-export const _encode_ContentType = $._encodeEnumerated;
+const application_data: _enum_for_ContentType.application_data = ContentType_application_data; /* SHORT_NAMED_ENUMERATED_VALUE */
+export const _decode_ContentType: $.ASN1Decoder<number> = $._decodeEnumerated;
+export const _encode_ContentType: $.ASN1Encoder<number> = $._encodeEnumerated;
 
 
 /* eslint-enable */

@@ -1,8 +1,8 @@
 /* eslint-disable */
 import {
-    ABSTRACT_SYNTAX
+    type ABSTRACT_SYNTAX
 } from "@wildboar/asn1";
-import { CS3CUSFSCFDPSpecificPDUs, _decode_CS3CUSFSCFDPSpecificPDUs, _encode_CS3CUSFSCFDPSpecificPDUs } from "../IN-CS3-SCF-CUSF-Protocol/CS3CUSFSCFDPSpecificPDUs.ta.mjs";
+import { type CS3CUSFSCFDPSpecificPDUs, _decode_CS3CUSFSCFDPSpecificPDUs, _encode_CS3CUSFSCFDPSpecificPDUs } from "../IN-CS3-SCF-CUSF-Protocol/CS3CUSFSCFDPSpecificPDUs.ta.mjs";
 // export { CS3CUSFSCFDPSpecificPDUs, _decode_CS3CUSFSCFDPSpecificPDUs, _encode_CS3CUSFSCFDPSpecificPDUs } from "../IN-CS3-SCF-CUSF-Protocol/CS3CUSFSCFDPSpecificPDUs.ta.mjs";
 import { id_as_cs3cusfscfDPSpecific } from "../IN-CS3-object-identifiers/id-as-cs3cusfscfDPSpecific.va.mjs";
 // export { id_as_cs3cusfscfDPSpecific } from "../IN-CS3-object-identifiers/id-as-cs3cusfscfDPSpecific.va.mjs";

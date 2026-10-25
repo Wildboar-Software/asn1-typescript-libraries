@@ -1,8 +1,8 @@
 /* eslint-disable */
 import {
-    OCTET_STRING,
-    IA5String,
-    ASN1Element as _Element,
+    type OCTET_STRING,
+    type IA5String,
+    type ASN1Element as _Element,
     ASN1TagClass as _TagClass,
     ASN1Construction as _Construction,
     ASN1UniversalType as _UniversalType,

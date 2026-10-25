@@ -1,13 +1,13 @@
 /* eslint-disable */
 import {
     ASN1ConstructionError as _ConstructionError,
-    ASN1Element as _Element,
+    type ASN1Element as _Element,
     ASN1TagClass as _TagClass
 } from "@wildboar/asn1";
 import * as $ from "@wildboar/asn1/functional";
 import { PLMNID, _decode_PLMNID, _encode_PLMNID } from "../TS33128Payloads/PLMNID.ta.mjs";
 // export { PLMNID, _decode_PLMNID, _encode_PLMNID } from "../TS33128Payloads/PLMNID.ta.mjs";
-import { ForbiddenTACs, _decode_ForbiddenTACs, _encode_ForbiddenTACs } from "../TS33128Payloads/ForbiddenTACs.ta.mjs";
+import { type ForbiddenTACs, _decode_ForbiddenTACs, _encode_ForbiddenTACs } from "../TS33128Payloads/ForbiddenTACs.ta.mjs";
 // export { ForbiddenTACs, _decode_ForbiddenTACs, _encode_ForbiddenTACs } from "../TS33128Payloads/ForbiddenTACs.ta.mjs";
 
 

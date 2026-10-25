@@ -1,10 +1,10 @@
 /* eslint-disable */
 import {
-    ASN1Element as _Element,
+    type ASN1Element as _Element,
     ASN1SizeError
 } from "@wildboar/asn1";
 import * as $ from "@wildboar/asn1/functional";
-import { _decode_ISDN_AddressString, _encode_ISDN_AddressString, ISDN_AddressString } from "../MAP-CommonDataTypes/ISDN-AddressString.ta.mjs";
+import { _decode_ISDN_AddressString, _encode_ISDN_AddressString, type ISDN_AddressString } from "../MAP-CommonDataTypes/ISDN-AddressString.ta.mjs";
 
 
 import { maxNumOfGMLC } from "./maxNumOfGMLC.va.mjs";

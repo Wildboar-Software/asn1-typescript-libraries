@@ -2,15 +2,15 @@
 
 import * as $ from "@wildboar/asn1/functional";
 import {
-    OPTIONAL,
-    SEQUENCE,
-    SET,
-    ASN1Element as _Element,
+    type OPTIONAL,
+    type SEQUENCE,
+    type SET,
+    type ASN1Element as _Element,
     ASN1TagClass as _TagClass
 } from "@wildboar/asn1";
 import { DeviceID, _decode_DeviceID, _encode_DeviceID } from "../CSTA-device-identifiers/DeviceID.ta.mjs";
 
-import { AuditoryApparatusID, _decode_AuditoryApparatusID, _encode_AuditoryApparatusID } from "../CSTA-physical-device-feature/AuditoryApparatusID.ta.mjs";
+import { type AuditoryApparatusID, _decode_AuditoryApparatusID, _encode_AuditoryApparatusID } from "../CSTA-physical-device-feature/AuditoryApparatusID.ta.mjs";
 
 import { CSTACommonArguments, _decode_CSTACommonArguments, _encode_CSTACommonArguments } from "../CSTA-extension-types/CSTACommonArguments.ta.mjs";
 
@@ -30,7 +30,7 @@ import { CSTACommonArguments, _decode_CSTACommonArguments, _encode_CSTACommonArg
  * ```asn1
  * GetSpeakerMuteArgument ::= SEQUENCE
  * {    device                 DeviceID,
- *     auditoryApparatus        AuditoryApparatusID            OPTIONAL,
+ *     auditoryApparatus        AuditoryApparatusID            type OPTIONAL,
  *     extensions             CSTACommonArguments             OPTIONAL }
  * ```
  * 
@@ -38,37 +38,45 @@ import { CSTACommonArguments, _decode_CSTACommonArguments, _encode_CSTACommonArg
  */
 export
 class GetSpeakerMuteArgument {
+    /**
+     * @summary `device`.
+     * @description
+     *
+     * Physical-element DeviceID; other IDs are rejected (ECMA-269 §21 FR
+     * 1).
+     * @public
+     * @readonly
+     */
+    public readonly device: DeviceID;
+    /**
+     * @summary `auditoryApparatus`.
+     * @description
+     *
+     * Auditory apparatus to query. Absent: all apparatuses on the device.
+     * @public
+     * @readonly
+     */
+    public readonly auditoryApparatus?: OPTIONAL<AuditoryApparatusID>;
+    /**
+     * @summary `extensions`.
+     * @description
+     *
+     * Optional security (timestamp, sequence, securityInfo) and
+     * privateData.
+     * @public
+     * @readonly
+     */
+    public readonly extensions?: OPTIONAL<CSTACommonArguments>;
+
     constructor (
-        /**
-         * @summary `device`.
-         * @description
-         *
-         * Physical-element DeviceID; other IDs are rejected (ECMA-269 §21 FR
-         * 1).
-         * @public
-         * @readonly
-         */
-        readonly device: DeviceID,
-        /**
-         * @summary `auditoryApparatus`.
-         * @description
-         *
-         * Auditory apparatus to query. Absent: all apparatuses on the device.
-         * @public
-         * @readonly
-         */
-        readonly auditoryApparatus?: OPTIONAL<AuditoryApparatusID>,
-        /**
-         * @summary `extensions`.
-         * @description
-         *
-         * Optional security (timestamp, sequence, securityInfo) and
-         * privateData.
-         * @public
-         * @readonly
-         */
-        readonly extensions?: OPTIONAL<CSTACommonArguments>
-    ) {}
+        device: DeviceID,
+        auditoryApparatus?: OPTIONAL<AuditoryApparatusID>,
+        extensions?: OPTIONAL<CSTACommonArguments>
+    ) {
+        this.device = device;
+        this.auditoryApparatus = auditoryApparatus;
+        this.extensions = extensions;
+    }
 
     /**
      * @summary Restructures an object into a GetSpeakerMuteArgument

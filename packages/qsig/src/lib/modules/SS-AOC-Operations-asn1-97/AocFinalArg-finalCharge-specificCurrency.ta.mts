@@ -1,7 +1,7 @@
 /* eslint-disable */
 import {
-    OPTIONAL,
-    ASN1Element as _Element,
+    type OPTIONAL,
+    type ASN1Element as _Element,
     ASN1TagClass as _TagClass
 } from "@wildboar/asn1";
 import * as $ from "@wildboar/asn1/functional";
@@ -83,7 +83,7 @@ class AocFinalArg_finalCharge_specificCurrency {
          * @static
          */
 
-    public static _enum_for_finalBillingId = _enum_for_FinalBillingId;
+    public static _enum_for_finalBillingId: typeof _enum_for_FinalBillingId = _enum_for_FinalBillingId;
 }
 
 /**

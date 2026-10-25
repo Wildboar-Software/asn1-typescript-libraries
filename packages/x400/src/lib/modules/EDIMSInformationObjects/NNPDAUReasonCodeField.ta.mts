@@ -1,7 +1,7 @@
 /* eslint-disable */
 import {
-    OPTIONAL,
-    ASN1Element as _Element,
+    type OPTIONAL,
+    type ASN1Element as _Element,
     ASN1TagClass as _TagClass,
     ASN1Construction as _Construction,
     ASN1UniversalType as _UniversalType,
@@ -12,12 +12,12 @@ import {
 } from '@wildboar/asn1';
 import * as $ from '@wildboar/asn1/functional';
 import {
-    NNPDAUBasicCodeField,
+    type NNPDAUBasicCodeField,
     _decode_NNPDAUBasicCodeField,
     _encode_NNPDAUBasicCodeField,
 } from '../EDIMSInformationObjects/NNPDAUBasicCodeField.ta.mjs';
 import {
-    NNPDAUDiagnosticField,
+    type NNPDAUDiagnosticField,
     _decode_NNPDAUDiagnosticField,
     _encode_NNPDAUDiagnosticField,
 } from '../EDIMSInformationObjects/NNPDAUDiagnosticField.ta.mjs';
@@ -38,20 +38,26 @@ import {
  *
  */
 export class NNPDAUReasonCodeField {
+    /**
+     * @summary `nn_pdau_basic_code`.
+     * @public
+     * @readonly
+     */
+    public readonly nn_pdau_basic_code: NNPDAUBasicCodeField;
+    /**
+     * @summary `nn_pdau_diagnostic`.
+     * @public
+     * @readonly
+     */
+    public readonly nn_pdau_diagnostic?: OPTIONAL<NNPDAUDiagnosticField>;
+
     constructor(
-        /**
-         * @summary `nn_pdau_basic_code`.
-         * @public
-         * @readonly
-         */
-        readonly nn_pdau_basic_code: NNPDAUBasicCodeField,
-        /**
-         * @summary `nn_pdau_diagnostic`.
-         * @public
-         * @readonly
-         */
-        readonly nn_pdau_diagnostic?: OPTIONAL<NNPDAUDiagnosticField>
-    ) {}
+        nn_pdau_basic_code: NNPDAUBasicCodeField,
+        nn_pdau_diagnostic?: OPTIONAL<NNPDAUDiagnosticField>
+    ) {
+        this.nn_pdau_basic_code = nn_pdau_basic_code;
+        this.nn_pdau_diagnostic = nn_pdau_diagnostic;
+    }
 
     /**
      * @summary Restructures an object into a NNPDAUReasonCodeField

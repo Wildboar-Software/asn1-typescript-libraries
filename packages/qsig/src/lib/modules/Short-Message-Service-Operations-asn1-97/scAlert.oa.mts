@@ -1,7 +1,7 @@
 /* eslint-disable */
 import { type OPERATION } from "../Remote-Operations-Information-Objects/OPERATION.oca.mjs";
 import { ScAlertArg, _decode_ScAlertArg, _encode_ScAlertArg } from "../Short-Message-Service-Operations-asn1-97/ScAlertArg.ta.mjs";
-import { DummyRes, _decode_DummyRes, _encode_DummyRes } from "../Short-Message-Service-Operations-asn1-97/DummyRes.ta.mjs";
+import { type DummyRes, _decode_DummyRes, _encode_DummyRes } from "../Short-Message-Service-Operations-asn1-97/DummyRes.ta.mjs";
 import { unspecified } from "../Short-Message-Service-Operations-asn1-97/unspecified.oa.mjs";
 
 /**

@@ -1,6 +1,6 @@
 /* eslint-disable */
 import {
-    ENUMERATED
+    type ENUMERATED
 } from "@wildboar/asn1";
 import * as $ from "@wildboar/asn1/functional";
 
@@ -51,7 +51,7 @@ type AlertIndicator = _enum_for_AlertIndicator | ENUMERATED;
  * @type {number}
  */
 export
-const AlertIndicator_sent: AlertIndicator = 1; /* LONG_NAMED_ENUMERATED_VALUE */
+const AlertIndicator_sent: _enum_for_AlertIndicator.sent = _enum_for_AlertIndicator.sent; /* LONG_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary sent
@@ -63,7 +63,7 @@ const AlertIndicator_sent: AlertIndicator = 1; /* LONG_NAMED_ENUMERATED_VALUE */
  * @type {number}
  */
 export
-const sent: AlertIndicator = AlertIndicator_sent; /* SHORT_NAMED_ENUMERATED_VALUE */
+const sent: _enum_for_AlertIndicator.sent = AlertIndicator_sent; /* SHORT_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary AlertIndicator_received
@@ -75,7 +75,7 @@ const sent: AlertIndicator = AlertIndicator_sent; /* SHORT_NAMED_ENUMERATED_VALU
  * @type {number}
  */
 export
-const AlertIndicator_received: AlertIndicator = 2; /* LONG_NAMED_ENUMERATED_VALUE */
+const AlertIndicator_received: _enum_for_AlertIndicator.received = _enum_for_AlertIndicator.received; /* LONG_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary received
@@ -87,7 +87,7 @@ const AlertIndicator_received: AlertIndicator = 2; /* LONG_NAMED_ENUMERATED_VALU
  * @type {number}
  */
 export
-const received: AlertIndicator = AlertIndicator_received; /* SHORT_NAMED_ENUMERATED_VALUE */
+const received: _enum_for_AlertIndicator.received = AlertIndicator_received; /* SHORT_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary AlertIndicator_cancelled
@@ -100,7 +100,7 @@ const received: AlertIndicator = AlertIndicator_received; /* SHORT_NAMED_ENUMERA
  * @type {number}
  */
 export
-const AlertIndicator_cancelled: AlertIndicator = 3; /* LONG_NAMED_ENUMERATED_VALUE */
+const AlertIndicator_cancelled: _enum_for_AlertIndicator.cancelled = _enum_for_AlertIndicator.cancelled; /* LONG_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary cancelled
@@ -112,7 +112,7 @@ const AlertIndicator_cancelled: AlertIndicator = 3; /* LONG_NAMED_ENUMERATED_VAL
  * @type {number}
  */
 export
-const cancelled: AlertIndicator = AlertIndicator_cancelled; /* SHORT_NAMED_ENUMERATED_VALUE */
+const cancelled: _enum_for_AlertIndicator.cancelled = AlertIndicator_cancelled; /* SHORT_NAMED_ENUMERATED_VALUE */
 export const _decode_AlertIndicator: $.ASN1Decoder<AlertIndicator> = $._decodeEnumerated;
 export const _encode_AlertIndicator: $.ASN1Encoder<AlertIndicator> = $._encodeEnumerated;
 

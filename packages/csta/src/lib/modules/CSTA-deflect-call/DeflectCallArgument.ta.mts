@@ -2,23 +2,23 @@
 
 import * as $ from "@wildboar/asn1/functional";
 import {
-    OPTIONAL,
-    SEQUENCE,
-    SET,
-    ASN1Element as _Element,
+    type OPTIONAL,
+    type SEQUENCE,
+    type SET,
+    type ASN1Element as _Element,
     ASN1TagClass as _TagClass
 } from "@wildboar/asn1";
-import { ConnectionID, _decode_ConnectionID, _encode_ConnectionID } from "../CSTA-call-connection-identifiers/ConnectionID.ta.mjs";
+import { type ConnectionID, _decode_ConnectionID, _encode_ConnectionID } from "../CSTA-call-connection-identifiers/ConnectionID.ta.mjs";
 
 import { DeviceID, _decode_DeviceID, _encode_DeviceID } from "../CSTA-device-identifiers/DeviceID.ta.mjs";
 
-import { DeviceIDList, _decode_DeviceIDList, _encode_DeviceIDList } from "../CSTA-deflect-call/DeviceIDList.ta.mjs";
+import { type DeviceIDList, _decode_DeviceIDList, _encode_DeviceIDList } from "../CSTA-deflect-call/DeviceIDList.ta.mjs";
 
-import { CallCharacteristics, _decode_CallCharacteristics, _encode_CallCharacteristics } from "../CSTA-call-control/CallCharacteristics.ta.mjs";
+import { type CallCharacteristics, _decode_CallCharacteristics, _encode_CallCharacteristics } from "../CSTA-call-control/CallCharacteristics.ta.mjs";
 
-import { SubjectOfCall, _decode_SubjectOfCall, _encode_SubjectOfCall } from "../CSTA-device-feature-types/SubjectOfCall.ta.mjs";
+import { type SubjectOfCall, _decode_SubjectOfCall, _encode_SubjectOfCall } from "../CSTA-device-feature-types/SubjectOfCall.ta.mjs";
 
-import { LanguagePreferences, _decode_LanguagePreferences, _encode_LanguagePreferences } from "../CSTA-device-feature-types/LanguagePreferences.ta.mjs";
+import { type LanguagePreferences, _decode_LanguagePreferences, _encode_LanguagePreferences } from "../CSTA-device-feature-types/LanguagePreferences.ta.mjs";
 
 import {
     EventCause,
@@ -31,9 +31,9 @@ import { CSTACommonArguments, _decode_CSTACommonArguments, _encode_CSTACommonArg
 
 
 
-import { CorrelatorData, _decode_CorrelatorData, _encode_CorrelatorData } from "../CSTA-device-feature-types/CorrelatorData.ta.mjs";
+import { type CorrelatorData, _decode_CorrelatorData, _encode_CorrelatorData } from "../CSTA-device-feature-types/CorrelatorData.ta.mjs";
 
-import { UserData, _decode_UserData, _encode_UserData } from "../CSTA-device-feature-types/UserData.ta.mjs";
+import { type UserData, _decode_UserData, _encode_UserData } from "../CSTA-device-feature-types/UserData.ta.mjs";
 
 /**
  * @summary DeflectCallArgument
@@ -53,14 +53,14 @@ import { UserData, _decode_UserData, _encode_UserData } from "../CSTA-device-fea
  * DeflectCallArgument ::= SEQUENCE
  * {     callToBeDiverted         ConnectionID,
  *     newDestination             DeviceID,
- *     addNewDestinationsList        DeviceIDList                OPTIONAL,
+ *     addNewDestinationsList        DeviceIDList                type OPTIONAL,
  *                               -- List of additional new Destinations
- *     correlatorData             CorrelatorData                 OPTIONAL,
- *     userData             UserData                 OPTIONAL,
- *     callCharacteristics        [0] IMPLICIT CallCharacteristics    OPTIONAL,
- *     subjectOfCall            [1] IMPLICIT SubjectOfCall        OPTIONAL,
- *     languagePreferences        [2] IMPLICIT LanguagePreferences    OPTIONAL,
- *     reason                [3] IMPLICIT EventCause            OPTIONAL,
+ *     correlatorData             CorrelatorData                 type OPTIONAL,
+ *     userData             UserData                 type OPTIONAL,
+ *     callCharacteristics        [0] IMPLICIT CallCharacteristics    type OPTIONAL,
+ *     subjectOfCall            [1] IMPLICIT SubjectOfCall        type OPTIONAL,
+ *     languagePreferences        [2] IMPLICIT LanguagePreferences    type OPTIONAL,
+ *     reason                [3] IMPLICIT EventCause            type OPTIONAL,
  *     extensions             CSTACommonArguments             OPTIONAL }
  * ```
  * 
@@ -68,118 +68,140 @@ import { UserData, _decode_UserData, _encode_UserData } from "../CSTA-device-fea
  */
 export
 class DeflectCallArgument {
+    /**
+     * @summary `callToBeDiverted`.
+     * @description
+     *
+     * Mandatory. Connection to divert. Rejected if it is a
+     * shared-bridged appearance in the Queued (inactive) state
+     * (FR 5).
+     *
+     * @public
+     * @readonly
+     */
+    public readonly callToBeDiverted: ConnectionID;
+    /**
+     * @summary `newDestination`.
+     * @description
+     *
+     * Mandatory. First destination. Must be a complete DeviceID
+     * (not null and not a Diallable Digits string ending in
+     * `;`) (FR 6). Active features at this device are honoured
+     * (FR 3).
+     *
+     * @public
+     * @readonly
+     */
+    public readonly newDestination: DeviceID;
+    /**
+     * @summary `addNewDestinationsList`.
+     * @description
+     *
+     * Optional extra destinations (Case B). The switching
+     * function must emit call-control events for every
+     * destination or reject the request (FR 8).
+     *
+     * @public
+     * @readonly
+     */
+    public readonly addNewDestinationsList?: OPTIONAL<DeviceIDList>;
+    /**
+     * @summary `correlatorData`.
+     * @description
+     *
+     * Optional correlator data attached before resulting state
+     * transitions (§12.2.10).
+     *
+     * @public
+     * @readonly
+     */
+    public readonly correlatorData?: OPTIONAL<CorrelatorData>;
+    /**
+     * @summary `userData`.
+     * @description
+     *
+     * Optional user data sent with the deflection (§12.2.30).
+     *
+     * @public
+     * @readonly
+     */
+    public readonly userData?: OPTIONAL<UserData>;
+    /**
+     * @summary `callCharacteristics`.
+     * @description
+     *
+     * Optional call characteristics (§12.2.4).
+     *
+     * @public
+     * @readonly
+     */
+    public readonly callCharacteristics?: OPTIONAL<CallCharacteristics>;
+    /**
+     * @summary `subjectOfCall`.
+     * @description
+     *
+     * Optional subject or intent of the call (§12.2.27).
+     *
+     * @public
+     * @readonly
+     */
+    public readonly subjectOfCall?: OPTIONAL<SubjectOfCall>;
+    /**
+     * @summary `languagePreferences`.
+     * @description
+     *
+     * Optional preferred language(s) (§12.2.16).
+     *
+     * @public
+     * @readonly
+     */
+    public readonly languagePreferences?: OPTIONAL<LanguagePreferences>;
+    /**
+     * @summary `reason`.
+     * @description
+     *
+     * Optional `EventCause` for underlying signalling
+     * (§12.2.15).
+     *
+     * @public
+     * @readonly
+     */
+    public readonly reason?: OPTIONAL<EventCause>;
+    /**
+     * @summary `extensions`.
+     * @description
+     *
+     * Optional `CSTACommonArguments` carrying the security and
+     * privateData parameters from the ECMA-269 service table.
+     *
+     * @public
+     * @readonly
+     */
+    public readonly extensions?: OPTIONAL<CSTACommonArguments>;
+
     constructor (
-        /**
-         * @summary `callToBeDiverted`.
-         * @description
-         *
-         * Mandatory. Connection to divert. Rejected if it is a
-         * shared-bridged appearance in the Queued (inactive) state
-         * (FR 5).
-         *
-         * @public
-         * @readonly
-         */
-        readonly callToBeDiverted: ConnectionID,
-        /**
-         * @summary `newDestination`.
-         * @description
-         *
-         * Mandatory. First destination. Must be a complete DeviceID
-         * (not null and not a Diallable Digits string ending in
-         * `;`) (FR 6). Active features at this device are honoured
-         * (FR 3).
-         *
-         * @public
-         * @readonly
-         */
-        readonly newDestination: DeviceID,
-        /**
-         * @summary `addNewDestinationsList`.
-         * @description
-         *
-         * Optional extra destinations (Case B). The switching
-         * function must emit call-control events for every
-         * destination or reject the request (FR 8).
-         *
-         * @public
-         * @readonly
-         */
-        readonly addNewDestinationsList?: OPTIONAL<DeviceIDList>,
-        /**
-         * @summary `correlatorData`.
-         * @description
-         *
-         * Optional correlator data attached before resulting state
-         * transitions (§12.2.10).
-         *
-         * @public
-         * @readonly
-         */
-        readonly correlatorData?: OPTIONAL<CorrelatorData>,
-        /**
-         * @summary `userData`.
-         * @description
-         *
-         * Optional user data sent with the deflection (§12.2.30).
-         *
-         * @public
-         * @readonly
-         */
-        readonly userData?: OPTIONAL<UserData>,
-        /**
-         * @summary `callCharacteristics`.
-         * @description
-         *
-         * Optional call characteristics (§12.2.4).
-         *
-         * @public
-         * @readonly
-         */
-        readonly callCharacteristics?: OPTIONAL<CallCharacteristics>,
-        /**
-         * @summary `subjectOfCall`.
-         * @description
-         *
-         * Optional subject or intent of the call (§12.2.27).
-         *
-         * @public
-         * @readonly
-         */
-        readonly subjectOfCall?: OPTIONAL<SubjectOfCall>,
-        /**
-         * @summary `languagePreferences`.
-         * @description
-         *
-         * Optional preferred language(s) (§12.2.16).
-         *
-         * @public
-         * @readonly
-         */
-        readonly languagePreferences?: OPTIONAL<LanguagePreferences>,
-        /**
-         * @summary `reason`.
-         * @description
-         *
-         * Optional `EventCause` for underlying signalling
-         * (§12.2.15).
-         *
-         * @public
-         * @readonly
-         */
-        readonly reason?: OPTIONAL<EventCause>,
-        /**
-         * @summary `extensions`.
-         * @description
-         *
-         * Optional `CSTACommonArguments` carrying the security and
-         * privateData parameters from the ECMA-269 service table.
-         *
-         * @public
-         * @readonly
-         */
-        readonly extensions?: OPTIONAL<CSTACommonArguments>
-    ) {}
+        callToBeDiverted: ConnectionID,
+        newDestination: DeviceID,
+        addNewDestinationsList?: OPTIONAL<DeviceIDList>,
+        correlatorData?: OPTIONAL<CorrelatorData>,
+        userData?: OPTIONAL<UserData>,
+        callCharacteristics?: OPTIONAL<CallCharacteristics>,
+        subjectOfCall?: OPTIONAL<SubjectOfCall>,
+        languagePreferences?: OPTIONAL<LanguagePreferences>,
+        reason?: OPTIONAL<EventCause>,
+        extensions?: OPTIONAL<CSTACommonArguments>
+    ) {
+        this.callToBeDiverted = callToBeDiverted;
+        this.newDestination = newDestination;
+        this.addNewDestinationsList = addNewDestinationsList;
+        this.correlatorData = correlatorData;
+        this.userData = userData;
+        this.callCharacteristics = callCharacteristics;
+        this.subjectOfCall = subjectOfCall;
+        this.languagePreferences = languagePreferences;
+        this.reason = reason;
+        this.extensions = extensions;
+    }
 
     /**
      * @summary Restructures an object into a DeflectCallArgument
@@ -203,7 +225,7 @@ class DeflectCallArgument {
          * @static
          */
 
-    public static _enum_for_reason = _enum_for_EventCause;
+    public static _enum_for_reason: typeof _enum_for_EventCause = _enum_for_EventCause;
 }
 
 /**

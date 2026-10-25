@@ -1,27 +1,27 @@
 /* eslint-disable */
 import {
-    ASN1Element as _Element,
+    type ASN1Element as _Element,
     ASN1TagClass as _TagClass,
-    GeneralizedTime,
-    INTEGER,
-    OCTET_STRING,
-    OPTIONAL,
+    type GeneralizedTime,
+    type INTEGER,
+    type OCTET_STRING,
+    type OPTIONAL,
 } from "@wildboar/asn1";
 import * as $ from "@wildboar/asn1/functional";
 import { Path, _decode_Path, _encode_Path } from "../PKCS-15/Path.ta.mjs";
 import {
-    PinFlags,
+    type PinFlags,
     _decode_PinFlags,
     _encode_PinFlags,
 } from "../PKCS-15/PinFlags.ta.mjs";
 import {
-    PinType,
+    type PinType,
     _decode_PinType,
     _encode_PinType,
     _enum_for_PinType,
 } from "../PKCS-15/PinType.ta.mjs";
 import {
-    Reference,
+    type Reference,
     _decode_Reference,
     _encode_Reference,
 } from "../PKCS-15/Reference.ta.mjs";
@@ -49,68 +49,90 @@ import {
  *
  */
 export class PinAttributes {
+    /**
+     * @summary `pinFlags`.
+     * @public
+     * @readonly
+     */
+    public readonly pinFlags: PinFlags;
+    /**
+     * @summary `pinType`.
+     * @public
+     * @readonly
+     */
+    public readonly pinType: PinType;
+    /**
+     * @summary `minLength`.
+     * @public
+     * @readonly
+     */
+    public readonly minLength: INTEGER;
+    /**
+     * @summary `storedLength`.
+     * @public
+     * @readonly
+     */
+    public readonly storedLength: INTEGER;
+    /**
+     * @summary `maxLength`.
+     * @public
+     * @readonly
+     */
+    public readonly maxLength?: OPTIONAL<INTEGER>;
+    /**
+     * @summary `pinReference`.
+     * @public
+     * @readonly
+     */
+    public readonly pinReference?: OPTIONAL<Reference>;
+    /**
+     * @summary `padChar`.
+     * @public
+     * @readonly
+     */
+    public readonly padChar?: OPTIONAL<OCTET_STRING>;
+    /**
+     * @summary `lastPinChange`.
+     * @public
+     * @readonly
+     */
+    public readonly lastPinChange?: OPTIONAL<GeneralizedTime>;
+    /**
+     * @summary `path`.
+     * @public
+     * @readonly
+     */
+    public readonly path?: OPTIONAL<Path>;
+    /**
+     * @summary Extensions that are not recognized.
+     * @public
+     * @readonly
+     */
+    public readonly _unrecognizedExtensionsList: _Element[];
+
     constructor(
-        /**
-         * @summary `pinFlags`.
-         * @public
-         * @readonly
-         */
-        readonly pinFlags: PinFlags,
-        /**
-         * @summary `pinType`.
-         * @public
-         * @readonly
-         */
-        readonly pinType: PinType,
-        /**
-         * @summary `minLength`.
-         * @public
-         * @readonly
-         */
-        readonly minLength: INTEGER,
-        /**
-         * @summary `storedLength`.
-         * @public
-         * @readonly
-         */
-        readonly storedLength: INTEGER,
-        /**
-         * @summary `maxLength`.
-         * @public
-         * @readonly
-         */
-        readonly maxLength?: OPTIONAL<INTEGER>,
-        /**
-         * @summary `pinReference`.
-         * @public
-         * @readonly
-         */
-        readonly pinReference?: OPTIONAL<Reference>,
-        /**
-         * @summary `padChar`.
-         * @public
-         * @readonly
-         */
-        readonly padChar?: OPTIONAL<OCTET_STRING>,
-        /**
-         * @summary `lastPinChange`.
-         * @public
-         * @readonly
-         */
-        readonly lastPinChange?: OPTIONAL<GeneralizedTime>,
-        /**
-         * @summary `path`.
-         * @public
-         * @readonly
-         */
-        readonly path?: OPTIONAL<Path>,
-        /**
-         * @summary Extensions that are not recognized.
-         * @public
-         * @readonly
-         */
-        readonly _unrecognizedExtensionsList: _Element[] = []
-    ) {}
+        pinFlags: PinFlags,
+        pinType: PinType,
+        minLength: INTEGER,
+        storedLength: INTEGER,
+        maxLength?: OPTIONAL<INTEGER>,
+        pinReference?: OPTIONAL<Reference>,
+        padChar?: OPTIONAL<OCTET_STRING>,
+        lastPinChange?: OPTIONAL<GeneralizedTime>,
+        path?: OPTIONAL<Path>,
+        _unrecognizedExtensionsList: _Element[] = []
+    ) {
+        this.pinFlags = pinFlags;
+        this.pinType = pinType;
+        this.minLength = minLength;
+        this.storedLength = storedLength;
+        this.maxLength = maxLength;
+        this.pinReference = pinReference;
+        this.padChar = padChar;
+        this.lastPinChange = lastPinChange;
+        this.path = path;
+        this._unrecognizedExtensionsList = _unrecognizedExtensionsList;
+    }
 
     /**
      * @summary Restructures an object into a PinAttributes
@@ -156,7 +178,7 @@ export class PinAttributes {
      * @static
      */
 
-    public static _enum_for_pinType = _enum_for_PinType;
+    public static _enum_for_pinType: typeof _enum_for_PinType = _enum_for_PinType;
 }
 
 

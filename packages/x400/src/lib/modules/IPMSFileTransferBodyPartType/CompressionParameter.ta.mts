@@ -1,7 +1,7 @@
 /* eslint-disable */
 import {
-    OBJECT_IDENTIFIER,
-    ASN1Element as _Element,
+    type OBJECT_IDENTIFIER,
+    type ASN1Element as _Element,
     ASN1TagClass as _TagClass,
     ASN1Construction as _Construction,
     ASN1UniversalType as _UniversalType,
@@ -32,20 +32,26 @@ import * as $ from '@wildboar/asn1/functional';
  *
  */
 export class CompressionParameter {
+    /**
+     * @summary `compression_algorithm_id`.
+     * @public
+     * @readonly
+     */
+    public readonly compression_algorithm_id: OBJECT_IDENTIFIER;
+    /**
+     * @summary `compression_algorithm_param`.
+     * @public
+     * @readonly
+     */
+    public readonly compression_algorithm_param: _Element;
+
     constructor(
-        /**
-         * @summary `compression_algorithm_id`.
-         * @public
-         * @readonly
-         */
-        readonly compression_algorithm_id: OBJECT_IDENTIFIER,
-        /**
-         * @summary `compression_algorithm_param`.
-         * @public
-         * @readonly
-         */
-        readonly compression_algorithm_param: _Element
-    ) {}
+        compression_algorithm_id: OBJECT_IDENTIFIER,
+        compression_algorithm_param: _Element
+    ) {
+        this.compression_algorithm_id = compression_algorithm_id;
+        this.compression_algorithm_param = compression_algorithm_param;
+    }
 
     /**
      * @summary Restructures an object into a CompressionParameter

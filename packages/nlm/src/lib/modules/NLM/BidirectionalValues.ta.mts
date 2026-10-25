@@ -1,6 +1,6 @@
 /* eslint-disable */
 import {
-    ASN1Element as _Element,
+    type ASN1Element as _Element,
     ASN1TagClass as _TagClass,
     ASN1Construction as _Construction,
     ASN1UniversalType as _UniversalType,
@@ -11,7 +11,7 @@ import {
 } from '@wildboar/asn1';
 import * as $ from '@wildboar/asn1/functional';
 import {
-    ChoiceInteger,
+    type ChoiceInteger,
     _decode_ChoiceInteger,
     _encode_ChoiceInteger,
 } from '../NLM/ChoiceInteger.ta.mjs';
@@ -52,7 +52,7 @@ export class BidirectionalValues {
      * @public
      * @readonly
      */
-    readonly incoming: ChoiceInteger;
+    public readonly incoming: ChoiceInteger;
     /**
      * @summary `outgoing`.
      * @description
@@ -65,7 +65,7 @@ export class BidirectionalValues {
      * @public
      * @readonly
      */
-    readonly outgoing: ChoiceInteger;
+    public readonly outgoing: ChoiceInteger;
 
     constructor(
         incoming: ChoiceInteger,

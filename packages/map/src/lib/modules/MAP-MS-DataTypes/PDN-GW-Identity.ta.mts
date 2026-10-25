@@ -1,13 +1,13 @@
 /* eslint-disable */
 import {
-    OPTIONAL,
-    ASN1Element as _Element,
+    type OPTIONAL,
+    type ASN1Element as _Element,
     ASN1TagClass as _TagClass
 } from "@wildboar/asn1";
 import * as $ from "@wildboar/asn1/functional";
 import { ExtensionContainer, _decode_ExtensionContainer, _encode_ExtensionContainer } from "../MAP-ExtensionDataTypes/ExtensionContainer.ta.mjs";
-import { FQDN, _decode_FQDN, _encode_FQDN } from "../MAP-MS-DataTypes/FQDN.ta.mjs";
-import { PDP_Address, _decode_PDP_Address, _encode_PDP_Address } from "../MAP-MS-DataTypes/PDP-Address.ta.mjs";
+import { type FQDN, _decode_FQDN, _encode_FQDN } from "../MAP-MS-DataTypes/FQDN.ta.mjs";
+import { type PDP_Address, _decode_PDP_Address, _encode_PDP_Address } from "../MAP-MS-DataTypes/PDP-Address.ta.mjs";
 
 
 /**
@@ -25,10 +25,10 @@ import { PDP_Address, _decode_PDP_Address, _encode_PDP_Address } from "../MAP-MS
  * 
  * ```asn1
  * PDN-GW-Identity ::= SEQUENCE {
- *     pdn-gw-ipv4-Address    [0] PDP-Address    OPTIONAL,
- *     pdn-gw-ipv6-Address    [1] PDP-Address    OPTIONAL,
- *     pdn-gw-name    [2] FQDN    OPTIONAL,
- *     extensionContainer    [3] ExtensionContainer    OPTIONAL,
+ *     pdn-gw-ipv4-Address    [0] PDP-Address    type OPTIONAL,
+ *     pdn-gw-ipv6-Address    [1] PDP-Address    type OPTIONAL,
+ *     pdn-gw-name    [2] FQDN    type OPTIONAL,
+ *     extensionContainer    [3] ExtensionContainer    type OPTIONAL,
  *     ... }
  * ```
  * 
@@ -36,56 +36,68 @@ import { PDP_Address, _decode_PDP_Address, _encode_PDP_Address } from "../MAP-MS
  */
 export
 class PDN_GW_Identity {
+    /**
+     * @summary `pdn_gw_ipv4_Address`.
+     * @description
+     *
+     * IPv4 address of the PDN GW.
+     *
+     * (3GPP TS 29.002 V19.1.0 clause 17.7.1).
+     *
+     * @public
+     * @readonly
+     */
+    public readonly pdn_gw_ipv4_Address?: OPTIONAL<PDP_Address>;
+    /**
+     * @summary `pdn_gw_ipv6_Address`.
+     * @description
+     *
+     * IPv6 address of the PDN GW.
+     *
+     * (3GPP TS 29.002 V19.1.0 clause 17.7.1).
+     *
+     * @public
+     * @readonly
+     */
+    public readonly pdn_gw_ipv6_Address?: OPTIONAL<PDP_Address>;
+    /**
+     * @summary `pdn_gw_name`.
+     * @description
+     *
+     * FQDN of the PDN GW.
+     *
+     * (3GPP TS 29.002 V19.1.0 clause 17.7.1).
+     *
+     * @public
+     * @readonly
+     */
+    public readonly pdn_gw_name?: OPTIONAL<FQDN>;
+    /**
+     * @summary `extensionContainer`.
+     * @public
+     * @readonly
+     */
+    public readonly extensionContainer?: OPTIONAL<ExtensionContainer>;
+    /**
+     * @summary Extensions that are not recognized.
+     * @public
+     * @readonly
+     */
+    public readonly _unrecognizedExtensionsList: _Element[];
+
     constructor (
-        /**
-         * @summary `pdn_gw_ipv4_Address`.
-         * @description
-         *
-         * IPv4 address of the PDN GW.
-         *
-         * (3GPP TS 29.002 V19.1.0 clause 17.7.1).
-         *
-         * @public
-         * @readonly
-         */
-        readonly pdn_gw_ipv4_Address?: OPTIONAL<PDP_Address>,
-        /**
-         * @summary `pdn_gw_ipv6_Address`.
-         * @description
-         *
-         * IPv6 address of the PDN GW.
-         *
-         * (3GPP TS 29.002 V19.1.0 clause 17.7.1).
-         *
-         * @public
-         * @readonly
-         */
-        readonly pdn_gw_ipv6_Address?: OPTIONAL<PDP_Address>,
-        /**
-         * @summary `pdn_gw_name`.
-         * @description
-         *
-         * FQDN of the PDN GW.
-         *
-         * (3GPP TS 29.002 V19.1.0 clause 17.7.1).
-         *
-         * @public
-         * @readonly
-         */
-        readonly pdn_gw_name?: OPTIONAL<FQDN>,
-        /**
-         * @summary `extensionContainer`.
-         * @public
-         * @readonly
-         */
-        readonly extensionContainer?: OPTIONAL<ExtensionContainer>,
-        /**
-         * @summary Extensions that are not recognized.
-         * @public
-         * @readonly
-         */
-        readonly _unrecognizedExtensionsList: _Element[] = []
-    ) {}
+        pdn_gw_ipv4_Address?: OPTIONAL<PDP_Address>,
+        pdn_gw_ipv6_Address?: OPTIONAL<PDP_Address>,
+        pdn_gw_name?: OPTIONAL<FQDN>,
+        extensionContainer?: OPTIONAL<ExtensionContainer>,
+        _unrecognizedExtensionsList: _Element[] = []
+    ) {
+        this.pdn_gw_ipv4_Address = pdn_gw_ipv4_Address;
+        this.pdn_gw_ipv6_Address = pdn_gw_ipv6_Address;
+        this.pdn_gw_name = pdn_gw_name;
+        this.extensionContainer = extensionContainer;
+        this._unrecognizedExtensionsList = _unrecognizedExtensionsList;
+    }
 
     /**
      * @summary Restructures an object into a PDN_GW_Identity

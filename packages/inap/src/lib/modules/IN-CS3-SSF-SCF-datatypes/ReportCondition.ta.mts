@@ -1,4 +1,5 @@
 /* eslint-disable */
+import { ASN1Element as _Element, ASN1ConstructionError as _ConstructionError } from "@wildboar/asn1";
 import * as $ from "@wildboar/asn1/functional";
 
 
@@ -53,7 +54,7 @@ type ReportCondition = _enum_for_ReportCondition;
  * @enum {number}
  */
 export
-const ReportCondition = _enum_for_ReportCondition;
+const ReportCondition: typeof _enum_for_ReportCondition = _enum_for_ReportCondition;
 
 /**
  * @summary ReportCondition_statusReport
@@ -61,7 +62,7 @@ const ReportCondition = _enum_for_ReportCondition;
  * @type {number}
  */
 export
-const ReportCondition_statusReport: ReportCondition = ReportCondition.statusReport; /* LONG_NAMED_ENUMERATED_VALUE */
+const ReportCondition_statusReport: _enum_for_ReportCondition.statusReport = ReportCondition.statusReport; /* LONG_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary statusReport
@@ -69,7 +70,7 @@ const ReportCondition_statusReport: ReportCondition = ReportCondition.statusRepo
  * @type {number}
  */
 export
-const statusReport: ReportCondition = ReportCondition.statusReport; /* SHORT_NAMED_ENUMERATED_VALUE */
+const statusReport: _enum_for_ReportCondition.statusReport = ReportCondition.statusReport; /* SHORT_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary ReportCondition_timerExpired
@@ -77,7 +78,7 @@ const statusReport: ReportCondition = ReportCondition.statusReport; /* SHORT_NAM
  * @type {number}
  */
 export
-const ReportCondition_timerExpired: ReportCondition = ReportCondition.timerExpired; /* LONG_NAMED_ENUMERATED_VALUE */
+const ReportCondition_timerExpired: _enum_for_ReportCondition.timerExpired = ReportCondition.timerExpired; /* LONG_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary timerExpired
@@ -85,7 +86,7 @@ const ReportCondition_timerExpired: ReportCondition = ReportCondition.timerExpir
  * @type {number}
  */
 export
-const timerExpired: ReportCondition = ReportCondition.timerExpired; /* SHORT_NAMED_ENUMERATED_VALUE */
+const timerExpired: _enum_for_ReportCondition.timerExpired = ReportCondition.timerExpired; /* SHORT_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary ReportCondition_canceled
@@ -93,7 +94,7 @@ const timerExpired: ReportCondition = ReportCondition.timerExpired; /* SHORT_NAM
  * @type {number}
  */
 export
-const ReportCondition_canceled: ReportCondition = ReportCondition.canceled; /* LONG_NAMED_ENUMERATED_VALUE */
+const ReportCondition_canceled: _enum_for_ReportCondition.canceled = ReportCondition.canceled; /* LONG_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary canceled
@@ -101,12 +102,24 @@ const ReportCondition_canceled: ReportCondition = ReportCondition.canceled; /* L
  * @type {number}
  */
 export
-const canceled: ReportCondition = ReportCondition.canceled; /* SHORT_NAMED_ENUMERATED_VALUE */
+const canceled: _enum_for_ReportCondition.canceled = ReportCondition.canceled; /* SHORT_NAMED_ENUMERATED_VALUE */
 
 export
-const _decode_ReportCondition: $.ASN1Decoder<ReportCondition> = $._decodeEnumerated;
+function _decode_ReportCondition(el: _Element): ReportCondition {
+    const enumerated = $._decodeEnumerated(el);
+    switch (enumerated) {
+        case ReportCondition.statusReport: return ReportCondition.statusReport;
+        case ReportCondition.timerExpired: return ReportCondition.timerExpired;
+        case ReportCondition.canceled: return ReportCondition.canceled;
+        default:
+            throw new _ConstructionError(
+                "Invalid ENUMERATED value " + enumerated + " for ReportCondition.",
+                el,
+            );
+    }
+}
 
 export
-const _encode_ReportCondition: $.ASN1Encoder<ReportCondition> = $._encodeEnumerated;
+const _encode_ReportCondition: $.ASN1Encoder<ReportCondition> = $._encodeEnumerated as $.ASN1Encoder<ReportCondition>;
 
 /* eslint-enable */

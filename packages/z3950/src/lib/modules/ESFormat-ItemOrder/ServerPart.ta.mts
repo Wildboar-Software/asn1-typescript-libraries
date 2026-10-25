@@ -1,12 +1,12 @@
 /* eslint-disable */
 import {
-    EXTERNAL,
-    OPTIONAL,
-    ASN1Element as _Element,
+    type EXTERNAL,
+    type OPTIONAL,
+    type ASN1Element as _Element,
     ASN1TagClass as _TagClass
 } from "@wildboar/asn1";
 import * as $ from "@wildboar/asn1/functional";
-import { ServerPart_auxiliaryStatus, _decode_ServerPart_auxiliaryStatus, _encode_ServerPart_auxiliaryStatus } from "../ESFormat-ItemOrder/ServerPart-auxiliaryStatus.ta.mjs";
+import { type ServerPart_auxiliaryStatus, _decode_ServerPart_auxiliaryStatus, _encode_ServerPart_auxiliaryStatus } from "../ESFormat-ItemOrder/ServerPart-auxiliaryStatus.ta.mjs";
 
 
 /**

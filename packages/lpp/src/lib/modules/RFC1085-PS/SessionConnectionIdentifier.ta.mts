@@ -1,10 +1,10 @@
 /* eslint-disable */
 import {
-    ASN1Element as _Element,
+    type ASN1Element as _Element,
     ASN1TagClass as _TagClass,
-    OPTIONAL,
-    T61String,
-    UTCTime
+    type OPTIONAL,
+    type T61String,
+    type UTCTime
 } from "@wildboar/asn1";
 import * as $ from "@wildboar/asn1/functional";
 

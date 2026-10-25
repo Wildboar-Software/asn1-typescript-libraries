@@ -1,8 +1,8 @@
 /* eslint-disable */
 import {
-    INTEGER,
-    OCTET_STRING,
-    ASN1Element as _Element,
+    type INTEGER,
+    type OCTET_STRING,
+    type ASN1Element as _Element,
     ASN1TagClass as _TagClass,
     ASN1Construction as _Construction,
     ASN1UniversalType as _UniversalType,
@@ -80,7 +80,7 @@ class UsmSecurityParameters {
      * @public
      * @readonly
      */
-    readonly msgAuthoritativeEngineID: OCTET_STRING;
+    public readonly msgAuthoritativeEngineID: OCTET_STRING;
     /**
      * @summary `msgAuthoritativeEngineBoots`.
      * @description
@@ -105,7 +105,7 @@ class UsmSecurityParameters {
      * @public
      * @readonly
      */
-    readonly msgAuthoritativeEngineBoots: INTEGER;
+    public readonly msgAuthoritativeEngineBoots: INTEGER;
     /**
      * @summary `msgAuthoritativeEngineTime`.
      * @description
@@ -128,7 +128,7 @@ class UsmSecurityParameters {
      * @public
      * @readonly
      */
-    readonly msgAuthoritativeEngineTime: INTEGER;
+    public readonly msgAuthoritativeEngineTime: INTEGER;
     /**
      * @summary `msgUserName`.
      * @description
@@ -148,7 +148,7 @@ class UsmSecurityParameters {
      * @public
      * @readonly
      */
-    readonly msgUserName: OCTET_STRING;
+    public readonly msgUserName: OCTET_STRING;
     /**
      * @summary `msgAuthenticationParameters`.
      * @description
@@ -170,7 +170,7 @@ class UsmSecurityParameters {
      * @public
      * @readonly
      */
-    readonly msgAuthenticationParameters: OCTET_STRING;
+    public readonly msgAuthenticationParameters: OCTET_STRING;
     /**
      * @summary `msgPrivacyParameters`.
      * @description
@@ -191,7 +191,7 @@ class UsmSecurityParameters {
      * @public
      * @readonly
      */
-    readonly msgPrivacyParameters: OCTET_STRING;
+    public readonly msgPrivacyParameters: OCTET_STRING;
 
     constructor (
         msgAuthoritativeEngineID: OCTET_STRING,

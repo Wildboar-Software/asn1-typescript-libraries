@@ -11,12 +11,12 @@ import {
 } from '@wildboar/asn1';
 import * as $ from '@wildboar/asn1/functional';
 import {
-  AE_title,
+  type AE_title,
   _decode_AE_title,
   _encode_AE_title,
 } from '@wildboar/acse';
 import {
-  BRANCH_IDENTIFIER_initiators_name_side,
+  type BRANCH_IDENTIFIER_initiators_name_side,
   _enum_for_BRANCH_IDENTIFIER_initiators_name_side,
   _decode_BRANCH_IDENTIFIER_initiators_name_side,
   _encode_BRANCH_IDENTIFIER_initiators_name_side,

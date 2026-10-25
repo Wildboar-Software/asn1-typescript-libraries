@@ -1,9 +1,9 @@
 /* eslint-disable */
 import {
     ASN1ConstructionError as _ConstructionError,
-    ASN1Element as _Element,
+    type ASN1Element as _Element,
     ASN1TagClass as _TagClass,
-    BOOLEAN
+    type BOOLEAN
 } from "@wildboar/asn1";
 import * as $ from "@wildboar/asn1/functional";
 
@@ -47,18 +47,22 @@ import * as $ from "@wildboar/asn1/functional";
  */
 export
 class ExecuteFallbackMechanismRequest {
+    /**
+     * @summary `refreshFlag`.
+     * @description
+     * When set, the Fallback swap is finished by a REFRESH proactive command. When
+     * clear, the eUICC disables the enabled Profile and enables the Fallback
+     * Profile inside this command (SGP.32 v1.2, section 5.9.20).
+     * @public
+     * @readonly
+     */
+    public readonly refreshFlag: BOOLEAN;
+
     constructor (
-        /**
-         * @summary `refreshFlag`.
-         * @description
-         * When set, the Fallback swap is finished by a REFRESH proactive command. When
-         * clear, the eUICC disables the enabled Profile and enables the Fallback
-         * Profile inside this command (SGP.32 v1.2, section 5.9.20).
-         * @public
-         * @readonly
-         */
-        readonly refreshFlag: BOOLEAN
-    ) {}
+        refreshFlag: BOOLEAN
+    ) {
+        this.refreshFlag = refreshFlag;
+    }
 
     /**
      * @summary Restructures an object into a ExecuteFallbackMechanismRequest

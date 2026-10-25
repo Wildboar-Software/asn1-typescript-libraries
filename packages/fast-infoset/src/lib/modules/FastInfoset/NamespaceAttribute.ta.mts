@@ -1,6 +1,6 @@
 /* eslint-disable */
 import {
-  OPTIONAL,
+  type OPTIONAL,
   ASN1Element as _Element,
   ASN1TagClass as _TagClass,
   ASN1Construction as _Construction,
@@ -12,7 +12,7 @@ import {
 } from '@wildboar/asn1';
 import * as $ from '@wildboar/asn1/functional';
 import {
-  IdentifyingStringOrIndex,
+  type IdentifyingStringOrIndex,
   _decode_IdentifyingStringOrIndex,
   _encode_IdentifyingStringOrIndex,
 } from '../FastInfoset/IdentifyingStringOrIndex.ta.mjs';
@@ -52,7 +52,7 @@ export class NamespaceAttribute {
    * @public
    * @readonly
    */
-  readonly prefix?: OPTIONAL<IdentifyingStringOrIndex>;
+  public readonly prefix?: OPTIONAL<IdentifyingStringOrIndex>;
   /**
    * @summary `namespace_name`.
    * @description [normalized value] of the declaration
@@ -62,7 +62,7 @@ export class NamespaceAttribute {
    * @public
    * @readonly
    */
-  readonly namespace_name?: OPTIONAL<IdentifyingStringOrIndex>;
+  public readonly namespace_name?: OPTIONAL<IdentifyingStringOrIndex>;
 
   constructor(
     prefix?: OPTIONAL<IdentifyingStringOrIndex>,

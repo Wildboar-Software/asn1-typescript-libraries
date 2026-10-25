@@ -1,6 +1,6 @@
 /* eslint-disable */
 import {
-    ASN1Element as _Element,
+    type ASN1Element as _Element,
     ASN1TagClass as _TagClass,
     ASN1Construction as _Construction,
     ASN1UniversalType as _UniversalType,
@@ -11,17 +11,17 @@ import {
 } from '@wildboar/asn1';
 import * as $ from '@wildboar/asn1/functional';
 import {
-    SessionType,
+    type SessionType,
     _decode_SessionType,
     _encode_SessionType,
 } from '../E-health-common/SessionType.ta.mjs';
 import {
-    SessionId,
+    type SessionId,
     _decode_SessionId,
     _encode_SessionId,
 } from '../E-health-common/SessionId.ta.mjs';
 import {
-    TerminateError,
+    type TerminateError,
     _enum_for_TerminateError,
     _decode_TerminateError,
     _encode_TerminateError,
@@ -48,47 +48,57 @@ import {
  *
  */
 export class E_terminateError {
+    /**
+     * @summary `sessionType`.
+     * @description
+     *
+     * Same value as in the corresponding request.
+     * ITU-T Rec. X.1080.1 (05/2018) §11.2.3 a).
+     *
+     * @public
+     * @readonly
+     */
+    public readonly sessionType: SessionType;
+    /**
+     * @summary `sessionId`.
+     * @description
+     *
+     * Same value as in the corresponding request.
+     * ITU-T Rec. X.1080.1 (05/2018) §11.2.3 b).
+     *
+     * @public
+     * @readonly
+     */
+    public readonly sessionId: SessionId;
+    /**
+     * @summary `error`.
+     * @description
+     *
+     * Reason termination was refused. ITU-T Rec. X.1080.1
+     * (05/2018) §11.2.3 c).
+     *
+     * @public
+     * @readonly
+     */
+    public readonly error: TerminateError;
+    /**
+     * @summary Extensions that are not recognized.
+     * @public
+     * @readonly
+     */
+    public readonly _unrecognizedExtensionsList: _Element[];
+
     constructor(
-        /**
-         * @summary `sessionType`.
-         * @description
-         *
-         * Same value as in the corresponding request.
-         * ITU-T Rec. X.1080.1 (05/2018) §11.2.3 a).
-         *
-         * @public
-         * @readonly
-         */
-        readonly sessionType: SessionType,
-        /**
-         * @summary `sessionId`.
-         * @description
-         *
-         * Same value as in the corresponding request.
-         * ITU-T Rec. X.1080.1 (05/2018) §11.2.3 b).
-         *
-         * @public
-         * @readonly
-         */
-        readonly sessionId: SessionId,
-        /**
-         * @summary `error`.
-         * @description
-         *
-         * Reason termination was refused. ITU-T Rec. X.1080.1
-         * (05/2018) §11.2.3 c).
-         *
-         * @public
-         * @readonly
-         */
-        readonly error: TerminateError,
-        /**
-         * @summary Extensions that are not recognized.
-         * @public
-         * @readonly
-         */
-        readonly _unrecognizedExtensionsList: _Element[] = []
-    ) {}
+        sessionType: SessionType,
+        sessionId: SessionId,
+        error: TerminateError,
+        _unrecognizedExtensionsList: _Element[] = []
+    ) {
+        this.sessionType = sessionType;
+        this.sessionId = sessionId;
+        this.error = error;
+        this._unrecognizedExtensionsList = _unrecognizedExtensionsList;
+    }
 
     /**
      * @summary Restructures an object into a E_terminateError
@@ -119,7 +129,7 @@ export class E_terminateError {
      * @static
      */
 
-    public static _enum_for_error = _enum_for_TerminateError;
+    public static _enum_for_error: typeof _enum_for_TerminateError = _enum_for_TerminateError;
 }
 
 

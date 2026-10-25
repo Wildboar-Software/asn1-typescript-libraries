@@ -1,8 +1,8 @@
 /* eslint-disable */
 import {
-    OPTIONAL,
-    VisibleString,
-    ASN1Element as _Element,
+    type OPTIONAL,
+    type VisibleString,
+    type ASN1Element as _Element,
     ASN1TagClass as _TagClass,
     ASN1Construction as _Construction,
     ASN1UniversalType as _UniversalType,
@@ -14,7 +14,7 @@ import {
 import * as $ from "@wildboar/asn1/functional";
 import { Provider, _decode_Provider, _encode_Provider } from "../MachineReadableBiometricTestingAndReportingTestReport/Provider.ta.mjs";
 import { NameProduct, _decode_NameProduct, _encode_NameProduct } from "../MachineReadableBiometricTestingAndReportingTestReport/NameProduct.ta.mjs";
-import { Function, _enum_for_Function, _decode_Function, _encode_Function } from "../MachineReadableBiometricTestingAndReportingTestReport/Function.ta.mjs";
+import { type Function, _enum_for_Function, _decode_Function, _encode_Function } from "../MachineReadableBiometricTestingAndReportingTestReport/Function.ta.mjs";
 import { DataType, _decode_DataType, _encode_DataType } from "../MachineReadableBiometricTestingAndReportingTestReport/DataType.ta.mjs";
 import { Modality, _decode_Modality, _encode_Modality } from "../MachineReadableBiometricTestingAndReportingTestReport/Modality.ta.mjs";
 
@@ -44,77 +44,91 @@ import { Modality, _decode_Modality, _encode_Modality } from "../MachineReadable
  */
 export
 class ProductInformation {
+    /**
+     * @summary `provider`.
+     * @description
+     *
+     * Manufacturer or supplier of the component under test
+     * (Clause 6.4.2.2, Annex B.3).
+     *
+     * @public
+     * @readonly
+     */
+    public readonly provider: Provider;
+    /**
+     * @summary `nameProduct`.
+     * @description
+     *
+     * Model identity and product, software, and firmware versions
+     * (Clause 6.4.2.3).
+     *
+     * @public
+     * @readonly
+     */
+    public readonly nameProduct: NameProduct;
+    /**
+     * @summary `description`.
+     * @description
+     *
+     * Complete unique description of the component. Use for
+     * prototypes, experimental models, modalities not listed in
+     * ISO/IEC 19785-3, or extra modality detail (e.g. iris in the
+     * visible spectrum) (Clause 6.4.2.3).
+     *
+     * @public
+     * @readonly
+     */
+    public readonly description: OPTIONAL<VisibleString>;
+    /**
+     * @summary `functionProduct`.
+     * @description
+     *
+     * One or more functions of the tested product; multifunctional
+     * components list several (Clause 6.4.2.3, Annex B.4).
+     *
+     * @public
+     * @readonly
+     */
+    public readonly functionProduct: Function[];
+    /**
+     * @summary `outputProduct`.
+     * @description
+     *
+     * Processed level and purpose of the product's output
+     * (Clause 6.4.2.3).
+     *
+     * @public
+     * @readonly
+     */
+    public readonly outputProduct: OPTIONAL<DataType>;
+    /**
+     * @summary `modalityProduct`.
+     * @description
+     *
+     * Biometric modality processed by the product. `type` is
+     * mandatory if `outputProduct.processedLevel` is neither
+     * `comparison-score` nor `comparison-result` (Clause 6.4.2.3).
+     *
+     * @public
+     * @readonly
+     */
+    public readonly modalityProduct: Modality;
+
     constructor (
-        /**
-         * @summary `provider`.
-         * @description
-         *
-         * Manufacturer or supplier of the component under test
-         * (Clause 6.4.2.2, Annex B.3).
-         *
-         * @public
-         * @readonly
-         */
-        readonly provider: Provider,
-        /**
-         * @summary `nameProduct`.
-         * @description
-         *
-         * Model identity and product, software, and firmware versions
-         * (Clause 6.4.2.3).
-         *
-         * @public
-         * @readonly
-         */
-        readonly nameProduct: NameProduct,
-        /**
-         * @summary `description`.
-         * @description
-         *
-         * Complete unique description of the component. Use for
-         * prototypes, experimental models, modalities not listed in
-         * ISO/IEC 19785-3, or extra modality detail (e.g. iris in the
-         * visible spectrum) (Clause 6.4.2.3).
-         *
-         * @public
-         * @readonly
-         */
-        readonly description: OPTIONAL<VisibleString>,
-        /**
-         * @summary `functionProduct`.
-         * @description
-         *
-         * One or more functions of the tested product; multifunctional
-         * components list several (Clause 6.4.2.3, Annex B.4).
-         *
-         * @public
-         * @readonly
-         */
-        readonly functionProduct: Function[],
-        /**
-         * @summary `outputProduct`.
-         * @description
-         *
-         * Processed level and purpose of the product's output
-         * (Clause 6.4.2.3).
-         *
-         * @public
-         * @readonly
-         */
-        readonly outputProduct: OPTIONAL<DataType>,
-        /**
-         * @summary `modalityProduct`.
-         * @description
-         *
-         * Biometric modality processed by the product. `type` is
-         * mandatory if `outputProduct.processedLevel` is neither
-         * `comparison-score` nor `comparison-result` (Clause 6.4.2.3).
-         *
-         * @public
-         * @readonly
-         */
-        readonly modalityProduct: Modality
-    ) {}
+        provider: Provider,
+        nameProduct: NameProduct,
+        description: OPTIONAL<VisibleString>,
+        functionProduct: Function[],
+        outputProduct: OPTIONAL<DataType>,
+        modalityProduct: Modality
+    ) {
+        this.provider = provider;
+        this.nameProduct = nameProduct;
+        this.description = description;
+        this.functionProduct = functionProduct;
+        this.outputProduct = outputProduct;
+        this.modalityProduct = modalityProduct;
+    }
 
     /**
      * @summary Restructures an object into a ProductInformation

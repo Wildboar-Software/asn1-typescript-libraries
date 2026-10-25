@@ -2,7 +2,7 @@
 import { type MATCHING_RULE } from "@wildboar/x500/InformationFramework";
 import { pkcs_9_mr_caseIgnoreMatch } from "../PKCS-9/pkcs-9-mr-caseIgnoreMatch.va.mjs";
 import {
-    PKCS9String,
+    type PKCS9String,
     _decode_PKCS9String,
     _encode_PKCS9String,
 } from "../PKCS-9/PKCS9String.ta.mjs";

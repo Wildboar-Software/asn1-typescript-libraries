@@ -2,11 +2,11 @@
 
 import * as $ from "@wildboar/asn1/functional";
 import {
-    OPTIONAL,
-    BOOLEAN,
-    SEQUENCE,
-    SET,
-    ASN1Element as _Element,
+    type OPTIONAL,
+    type BOOLEAN,
+    type SEQUENCE,
+    type SET,
+    type ASN1Element as _Element,
     ASN1TagClass as _TagClass
 } from "@wildboar/asn1";
 import { DeviceID, _decode_DeviceID, _encode_DeviceID } from "../CSTA-device-identifiers/DeviceID.ta.mjs";
@@ -40,37 +40,45 @@ import { CSTACommonArguments, _decode_CSTACommonArguments, _encode_CSTACommonArg
  */
 export
 class CallerIDStatusEvent {
+    /**
+     * @summary `device`.
+     * @description
+     *
+     * Device whose Caller ID status changed.
+     * @public
+     * @readonly
+     */
+    public readonly device: DeviceID;
+    /**
+     * @summary `callerIDProvided`.
+     * @description
+     *
+     * TRUE: provide Caller ID on originating calls. FALSE: do not provide
+     * it to the called device.
+     * @public
+     * @readonly
+     */
+    public readonly callerIDProvided: BOOLEAN;
+    /**
+     * @summary `extensions`.
+     * @description
+     *
+     * Optional security (timestamp, sequence, securityInfo) and
+     * privateData.
+     * @public
+     * @readonly
+     */
+    public readonly extensions?: OPTIONAL<CSTACommonArguments>;
+
     constructor (
-        /**
-         * @summary `device`.
-         * @description
-         *
-         * Device whose Caller ID status changed.
-         * @public
-         * @readonly
-         */
-        readonly device: DeviceID,
-        /**
-         * @summary `callerIDProvided`.
-         * @description
-         *
-         * TRUE: provide Caller ID on originating calls. FALSE: do not provide
-         * it to the called device.
-         * @public
-         * @readonly
-         */
-        readonly callerIDProvided: BOOLEAN,
-        /**
-         * @summary `extensions`.
-         * @description
-         *
-         * Optional security (timestamp, sequence, securityInfo) and
-         * privateData.
-         * @public
-         * @readonly
-         */
-        readonly extensions?: OPTIONAL<CSTACommonArguments>
-    ) {}
+        device: DeviceID,
+        callerIDProvided: BOOLEAN,
+        extensions?: OPTIONAL<CSTACommonArguments>
+    ) {
+        this.device = device;
+        this.callerIDProvided = callerIDProvided;
+        this.extensions = extensions;
+    }
 
     /**
      * @summary Restructures an object into a CallerIDStatusEvent

@@ -1,27 +1,27 @@
 /* eslint-disable */
 import {
-    ASN1Element as _Element,
+    type ASN1Element as _Element,
     ASN1TagClass as _TagClass,
-    BIT_STRING,
-    BOOLEAN,
-    INTEGER,
-    OPTIONAL,
+    type BIT_STRING,
+    type BOOLEAN,
+    type INTEGER,
+    type OPTIONAL,
 } from "@wildboar/asn1";
 import * as $ from "@wildboar/asn1/functional";
 import {
-    ContextSelection,
+    type ContextSelection,
     _decode_ContextSelection,
     _encode_ContextSelection,
 } from "../DirectoryAbstractService/ContextSelection.ta.mjs";
 import {
-    FamilyGrouping,
+    type FamilyGrouping,
     FamilyGrouping_entryOnly /* IMPORTED_LONG_ENUMERATION_ITEM */,
     _decode_FamilyGrouping,
     _encode_FamilyGrouping,
     _enum_for_FamilyGrouping,
 } from "../DirectoryAbstractService/FamilyGrouping.ta.mjs";
 import {
-    PagedResultsRequest,
+    type PagedResultsRequest,
     _decode_PagedResultsRequest,
     _encode_PagedResultsRequest,
 } from "../DirectoryAbstractService/PagedResultsRequest.ta.mjs";
@@ -36,7 +36,7 @@ import {
     _encode_ServiceControls,
 } from "../DirectoryAbstractService/ServiceControls.ta.mjs";
 import {
-    Exclusions,
+    type Exclusions,
     _decode_Exclusions,
     _encode_Exclusions,
 } from "../DistributedOperations/Exclusions.ta.mjs";
@@ -46,18 +46,18 @@ import {
     _encode_OperationProgress,
 } from "../DistributedOperations/OperationProgress.ta.mjs";
 import {
-    ReferenceType,
+    type ReferenceType,
     _decode_ReferenceType,
     _encode_ReferenceType,
     _enum_for_ReferenceType,
 } from "../DistributedOperations/ReferenceType.ta.mjs";
 import {
-    DistinguishedName,
+    type DistinguishedName,
     _decode_DistinguishedName,
     _encode_DistinguishedName,
 } from "../InformationFramework/DistinguishedName.ta.mjs";
 import {
-    Name,
+    type Name,
     _decode_Name,
     _encode_Name,
 } from "../InformationFramework/Name.ta.mjs";
@@ -92,118 +92,152 @@ import {
  *
  */
 export class ListArgumentData implements CommonArguments {
+    /**
+     * @summary `object`.
+     * @description
+     *
+     * Aliases deref'd unless `dontDereferenceAliases`.
+     *
+     * @public
+     * @readonly
+     */
+    public readonly object: Name;
+    /**
+     * @summary `pagedResults`.
+     * @description
+     *
+     * DSA may ignore. If paging is performed, the paging DSA ignores
+     * `sizeLimit`.
+     *
+     * @public
+     * @readonly
+     */
+    public readonly pagedResults?: OPTIONAL<PagedResultsRequest>;
+    /**
+     * @summary `listFamily`.
+     * @description
+     *
+     * DEFAULT FALSE. TRUE and object is ancestor ⇒ only immediate
+     * family children; else only non-family immediate subordinates.
+     *
+     * @public
+     * @readonly
+     */
+    public readonly listFamily?: OPTIONAL<BOOLEAN>;
+    /**
+     * @summary Extensions that are not recognized.
+     * @public
+     * @readonly
+     */
+    public readonly _unrecognizedExtensionsList: _Element[];
+    /**
+     * @summary `serviceControls`.
+     * @public
+     * @readonly
+     */
+    public readonly serviceControls?: OPTIONAL<ServiceControls>; /* REPLICATED_COMPONENT */
+    /**
+     * @summary `securityParameters`.
+     * @public
+     * @readonly
+     */
+    public readonly securityParameters?: OPTIONAL<SecurityParameters>; /* REPLICATED_COMPONENT */
+    /**
+     * @summary `requestor`.
+     * @public
+     * @readonly
+     */
+    public readonly requestor?: OPTIONAL<DistinguishedName>; /* REPLICATED_COMPONENT */
+    /**
+     * @summary `operationProgress`.
+     * @public
+     * @readonly
+     */
+    public readonly operationProgress?: OPTIONAL<OperationProgress>; /* REPLICATED_COMPONENT */
+    /**
+     * @summary `aliasedRDNs`.
+     * @public
+     * @readonly
+     */
+    public readonly aliasedRDNs?: OPTIONAL<INTEGER>; /* REPLICATED_COMPONENT */
+    /**
+     * @summary `criticalExtensions`.
+     * @public
+     * @readonly
+     */
+    public readonly criticalExtensions?: OPTIONAL<BIT_STRING>; /* REPLICATED_COMPONENT */
+    /**
+     * @summary `referenceType`.
+     * @public
+     * @readonly
+     */
+    public readonly referenceType?: OPTIONAL<ReferenceType>; /* REPLICATED_COMPONENT */
+    /**
+     * @summary `entryOnly`.
+     * @public
+     * @readonly
+     */
+    public readonly entryOnly?: OPTIONAL<BOOLEAN>; /* REPLICATED_COMPONENT */
+    /**
+     * @summary `exclusions`.
+     * @public
+     * @readonly
+     */
+    public readonly exclusions?: OPTIONAL<Exclusions>; /* REPLICATED_COMPONENT */
+    /**
+     * @summary `nameResolveOnMaster`.
+     * @public
+     * @readonly
+     */
+    public readonly nameResolveOnMaster?: OPTIONAL<BOOLEAN>; /* REPLICATED_COMPONENT */
+    /**
+     * @summary `operationContexts`.
+     * @public
+     * @readonly
+     */
+    public readonly operationContexts?: OPTIONAL<ContextSelection>; /* REPLICATED_COMPONENT */
+    /**
+     * @summary `familyGrouping`.
+     * @public
+     * @readonly
+     */
+    public readonly familyGrouping?: OPTIONAL<FamilyGrouping>; /* REPLICATED_COMPONENT */
+
     constructor(
-        /**
-         * @summary `object`.
-         * @description
-         *
-         * Aliases deref'd unless `dontDereferenceAliases`.
-         *
-         * @public
-         * @readonly
-         */
-        readonly object: Name,
-        /**
-         * @summary `pagedResults`.
-         * @description
-         *
-         * DSA may ignore. If paging is performed, the paging DSA ignores
-         * `sizeLimit`.
-         *
-         * @public
-         * @readonly
-         */
-        readonly pagedResults?: OPTIONAL<PagedResultsRequest>,
-        /**
-         * @summary `listFamily`.
-         * @description
-         *
-         * DEFAULT FALSE. TRUE and object is ancestor ⇒ only immediate
-         * family children; else only non-family immediate subordinates.
-         *
-         * @public
-         * @readonly
-         */
-        readonly listFamily?: OPTIONAL<BOOLEAN>,
-        /**
-         * @summary Extensions that are not recognized.
-         * @public
-         * @readonly
-         */
-        readonly _unrecognizedExtensionsList: _Element[] = [],
-        /**
-         * @summary `serviceControls`.
-         * @public
-         * @readonly
-         */
-        readonly serviceControls?: OPTIONAL<ServiceControls> /* REPLICATED_COMPONENT */,
-        /**
-         * @summary `securityParameters`.
-         * @public
-         * @readonly
-         */
-        readonly securityParameters?: OPTIONAL<SecurityParameters> /* REPLICATED_COMPONENT */,
-        /**
-         * @summary `requestor`.
-         * @public
-         * @readonly
-         */
-        readonly requestor?: OPTIONAL<DistinguishedName> /* REPLICATED_COMPONENT */,
-        /**
-         * @summary `operationProgress`.
-         * @public
-         * @readonly
-         */
-        readonly operationProgress?: OPTIONAL<OperationProgress> /* REPLICATED_COMPONENT */,
-        /**
-         * @summary `aliasedRDNs`.
-         * @public
-         * @readonly
-         */
-        readonly aliasedRDNs?: OPTIONAL<INTEGER> /* REPLICATED_COMPONENT */,
-        /**
-         * @summary `criticalExtensions`.
-         * @public
-         * @readonly
-         */
-        readonly criticalExtensions?: OPTIONAL<BIT_STRING> /* REPLICATED_COMPONENT */,
-        /**
-         * @summary `referenceType`.
-         * @public
-         * @readonly
-         */
-        readonly referenceType?: OPTIONAL<ReferenceType> /* REPLICATED_COMPONENT */,
-        /**
-         * @summary `entryOnly`.
-         * @public
-         * @readonly
-         */
-        readonly entryOnly?: OPTIONAL<BOOLEAN> /* REPLICATED_COMPONENT */,
-        /**
-         * @summary `exclusions`.
-         * @public
-         * @readonly
-         */
-        readonly exclusions?: OPTIONAL<Exclusions> /* REPLICATED_COMPONENT */,
-        /**
-         * @summary `nameResolveOnMaster`.
-         * @public
-         * @readonly
-         */
-        readonly nameResolveOnMaster?: OPTIONAL<BOOLEAN> /* REPLICATED_COMPONENT */,
-        /**
-         * @summary `operationContexts`.
-         * @public
-         * @readonly
-         */
-        readonly operationContexts?: OPTIONAL<ContextSelection> /* REPLICATED_COMPONENT */,
-        /**
-         * @summary `familyGrouping`.
-         * @public
-         * @readonly
-         */
-        readonly familyGrouping?: OPTIONAL<FamilyGrouping> /* REPLICATED_COMPONENT */
-    ) {}
+        object: Name,
+        pagedResults?: OPTIONAL<PagedResultsRequest>,
+        listFamily?: OPTIONAL<BOOLEAN>,
+        _unrecognizedExtensionsList: _Element[] = [],
+        serviceControls?: OPTIONAL<ServiceControls>,
+        securityParameters?: OPTIONAL<SecurityParameters>,
+        requestor?: OPTIONAL<DistinguishedName>,
+        operationProgress?: OPTIONAL<OperationProgress>,
+        aliasedRDNs?: OPTIONAL<INTEGER>,
+        criticalExtensions?: OPTIONAL<BIT_STRING>,
+        referenceType?: OPTIONAL<ReferenceType>,
+        entryOnly?: OPTIONAL<BOOLEAN>,
+        exclusions?: OPTIONAL<Exclusions>,
+        nameResolveOnMaster?: OPTIONAL<BOOLEAN>,
+        operationContexts?: OPTIONAL<ContextSelection>,
+        familyGrouping?: OPTIONAL<FamilyGrouping>
+    ) {
+        this.object = object;
+        this.pagedResults = pagedResults;
+        this.listFamily = listFamily;
+        this._unrecognizedExtensionsList = _unrecognizedExtensionsList;
+        this.serviceControls = serviceControls;
+        this.securityParameters = securityParameters;
+        this.requestor = requestor;
+        this.operationProgress = operationProgress;
+        this.aliasedRDNs = aliasedRDNs;
+        this.criticalExtensions = criticalExtensions;
+        this.referenceType = referenceType;
+        this.entryOnly = entryOnly;
+        this.exclusions = exclusions;
+        this.nameResolveOnMaster = nameResolveOnMaster;
+        this.operationContexts = operationContexts;
+        this.familyGrouping = familyGrouping;
+    }
 
     /**
      * @summary Restructures an object into a ListArgumentData
@@ -304,14 +338,14 @@ export class ListArgumentData implements CommonArguments {
      * @static
      */
 
-    public static _enum_for_referenceType = _enum_for_ReferenceType;
+    public static _enum_for_referenceType: typeof _enum_for_ReferenceType = _enum_for_ReferenceType;
     /**
      * @summary The enum used as the type of the component `familyGrouping`
      * @public
      * @static
      */
 
-    public static _enum_for_familyGrouping = _enum_for_FamilyGrouping;
+    public static _enum_for_familyGrouping: typeof _enum_for_FamilyGrouping = _enum_for_FamilyGrouping;
 }
 
 /**

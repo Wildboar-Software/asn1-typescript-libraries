@@ -1,7 +1,7 @@
 /* eslint-disable */
 import {
-    PrintableString,
-    ASN1Element as _Element,
+    type PrintableString,
+    type ASN1Element as _Element,
     ASN1TagClass as _TagClass,
     ASN1Construction as _Construction,
     ASN1UniversalType as _UniversalType,
@@ -11,7 +11,7 @@ import {
     ASN1ConstructionError as _ConstructionError,
 } from "@wildboar/asn1";
 import * as $ from "@wildboar/asn1/functional";
-import { RIOreference_operations_Item_operation, _decode_RIOreference_operations_Item_operation, _encode_RIOreference_operations_Item_operation } from "../G/RIOreference-operations-Item-operation.ta.mjs";
+import { type RIOreference_operations_Item_operation, _decode_RIOreference_operations_Item_operation, _encode_RIOreference_operations_Item_operation } from "../G/RIOreference-operations-Item-operation.ta.mjs";
 
 
 /**
@@ -36,24 +36,30 @@ import { RIOreference_operations_Item_operation, _decode_RIOreference_operations
  */
 export
 class RIOreference_operations_Item {
+    /**
+     * @summary `recordId`.
+     * @description
+     * Named record within the RIO. ISO/IEC 9041-1:1997 §12.2.
+     * @public
+     * @readonly
+     */
+    public readonly recordId: PrintableString;
+    /**
+     * @summary `operation`.
+     * @description
+     * executeRecord(0) or callRecord(1). ISO/IEC 9041-1:1997 §12.2.
+     * @public
+     * @readonly
+     */
+    public readonly operation: RIOreference_operations_Item_operation;
+
     constructor (
-        /**
-         * @summary `recordId`.
-         * @description
-         * Named record within the RIO. ISO/IEC 9041-1:1997 §12.2.
-         * @public
-         * @readonly
-         */
-        readonly recordId: PrintableString,
-        /**
-         * @summary `operation`.
-         * @description
-         * executeRecord(0) or callRecord(1). ISO/IEC 9041-1:1997 §12.2.
-         * @public
-         * @readonly
-         */
-        readonly operation: RIOreference_operations_Item_operation
-    ) {}
+        recordId: PrintableString,
+        operation: RIOreference_operations_Item_operation
+    ) {
+        this.recordId = recordId;
+        this.operation = operation;
+    }
 
     /**
      * @summary Restructures an object into a RIOreference_operations_Item

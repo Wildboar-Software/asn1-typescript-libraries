@@ -1,5 +1,5 @@
 /* eslint-disable */
-import { ASN1Element as _Element } from "@wildboar/asn1";
+import { ASN1Element as _Element, ASN1ConstructionError as _ConstructionError } from "@wildboar/asn1";
 import * as $ from "@wildboar/asn1/functional";
 
 /**
@@ -58,7 +58,7 @@ export type SearchArgumentData_joinType = _enum_for_SearchArgumentData_joinType;
  *
  * @enum {number}
  */
-export const SearchArgumentData_joinType = _enum_for_SearchArgumentData_joinType;
+export const SearchArgumentData_joinType: typeof _enum_for_SearchArgumentData_joinType = _enum_for_SearchArgumentData_joinType;
 
 /**
  * @summary SearchArgumentData_joinType_innerJoin
@@ -69,7 +69,7 @@ export const SearchArgumentData_joinType = _enum_for_SearchArgumentData_joinType
  * @constant
  * @type {number}
  */
-export const SearchArgumentData_joinType_innerJoin: SearchArgumentData_joinType =
+export const SearchArgumentData_joinType_innerJoin: _enum_for_SearchArgumentData_joinType.innerJoin =
     SearchArgumentData_joinType.innerJoin; /* LONG_NAMED_ENUMERATED_VALUE */
 
 /**
@@ -81,7 +81,7 @@ export const SearchArgumentData_joinType_innerJoin: SearchArgumentData_joinType 
  * @constant
  * @type {number}
  */
-export const innerJoin: SearchArgumentData_joinType =
+export const innerJoin: _enum_for_SearchArgumentData_joinType.innerJoin =
     SearchArgumentData_joinType.innerJoin; /* SHORT_NAMED_ENUMERATED_VALUE */
 
 /**
@@ -93,7 +93,7 @@ export const innerJoin: SearchArgumentData_joinType =
  * @constant
  * @type {number}
  */
-export const SearchArgumentData_joinType_leftOuterJoin: SearchArgumentData_joinType =
+export const SearchArgumentData_joinType_leftOuterJoin: _enum_for_SearchArgumentData_joinType.leftOuterJoin =
     SearchArgumentData_joinType.leftOuterJoin; /* LONG_NAMED_ENUMERATED_VALUE */
 
 /**
@@ -105,7 +105,7 @@ export const SearchArgumentData_joinType_leftOuterJoin: SearchArgumentData_joinT
  * @constant
  * @type {number}
  */
-export const leftOuterJoin: SearchArgumentData_joinType =
+export const leftOuterJoin: _enum_for_SearchArgumentData_joinType.leftOuterJoin =
     SearchArgumentData_joinType.leftOuterJoin; /* SHORT_NAMED_ENUMERATED_VALUE */
 
 /**
@@ -118,7 +118,7 @@ export const leftOuterJoin: SearchArgumentData_joinType =
  * @constant
  * @type {number}
  */
-export const SearchArgumentData_joinType_fullOuterJoin: SearchArgumentData_joinType =
+export const SearchArgumentData_joinType_fullOuterJoin: _enum_for_SearchArgumentData_joinType.fullOuterJoin =
     SearchArgumentData_joinType.fullOuterJoin; /* LONG_NAMED_ENUMERATED_VALUE */
 
 /**
@@ -131,14 +131,26 @@ export const SearchArgumentData_joinType_fullOuterJoin: SearchArgumentData_joinT
  * @constant
  * @type {number}
  */
-export const fullOuterJoin: SearchArgumentData_joinType =
+export const fullOuterJoin: _enum_for_SearchArgumentData_joinType.fullOuterJoin =
     SearchArgumentData_joinType.fullOuterJoin; /* SHORT_NAMED_ENUMERATED_VALUE */
 
 
-export const _decode_SearchArgumentData_joinType = $._decodeEnumerated;
+export function _decode_SearchArgumentData_joinType(el: _Element): SearchArgumentData_joinType {
+    const enumerated = $._decodeEnumerated(el);
+    switch (enumerated) {
+        case SearchArgumentData_joinType.innerJoin: return SearchArgumentData_joinType.innerJoin;
+        case SearchArgumentData_joinType.leftOuterJoin: return SearchArgumentData_joinType.leftOuterJoin;
+        case SearchArgumentData_joinType.fullOuterJoin: return SearchArgumentData_joinType.fullOuterJoin;
+        default:
+            throw new _ConstructionError(
+                "Invalid ENUMERATED value " + enumerated + " for SearchArgumentData_joinType.",
+                el,
+            );
+    }
+}
 
 
-export const _encode_SearchArgumentData_joinType = $._encodeEnumerated;
+export const _encode_SearchArgumentData_joinType: $.ASN1Encoder<SearchArgumentData_joinType> = $._encodeEnumerated as $.ASN1Encoder<SearchArgumentData_joinType>;
 
 
 /* eslint-enable */

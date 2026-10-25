@@ -1,7 +1,7 @@
 /* eslint-disable */
 import {
-    OPTIONAL,
-    ASN1Element as _Element,
+    type OPTIONAL,
+    type ASN1Element as _Element,
     ASN1TagClass as _TagClass,
     ASN1Construction as _Construction,
     ASN1UniversalType as _UniversalType,
@@ -12,23 +12,23 @@ import {
 } from '@wildboar/asn1';
 import * as $ from '@wildboar/asn1/functional';
 import {
-    CMSVersion,
+    type CMSVersion,
     _decode_CMSVersion,
     _encode_CMSVersion,
-    DigestAlgorithmIdentifier,
+    type DigestAlgorithmIdentifier,
     _decode_DigestAlgorithmIdentifier,
     _encode_DigestAlgorithmIdentifier,
-    SignerInfos,
+    type SignerInfos,
     _decode_SignerInfos,
     _encode_SignerInfos,
 } from '@wildboar/cms';
 import {
-    CertificateSet,
+    type CertificateSet,
     _decode_CertificateSet,
     _encode_CertificateSet,
 } from '../AuthenticationContextForBiometrics/CertificateSet.ta.mjs';
 import {
-    RevocationInfoChoices,
+    type RevocationInfoChoices,
     _decode_RevocationInfoChoices,
     _encode_RevocationInfoChoices,
 } from '../AuthenticationContextForBiometrics/RevocationInfoChoices.ta.mjs';
@@ -51,44 +51,58 @@ import {
  *
  */
 export class SIGNEDDATA<EncapsulatedContentInfo> {
+    /**
+     * @summary `version`.
+     * @public
+     * @readonly
+     */
+    public readonly version: CMSVersion;
+    /**
+     * @summary `digestAlgorithms`.
+     * @public
+     * @readonly
+     */
+    public readonly digestAlgorithms: DigestAlgorithmIdentifier[];
+    /**
+     * @summary `encapContentInfo`.
+     * @public
+     * @readonly
+     */
+    public readonly encapContentInfo: EncapsulatedContentInfo;
+    /**
+     * @summary `certificates`.
+     * @public
+     * @readonly
+     */
+    public readonly certificates: OPTIONAL<CertificateSet>;
+    /**
+     * @summary `crls`.
+     * @public
+     * @readonly
+     */
+    public readonly crls: OPTIONAL<RevocationInfoChoices>;
+    /**
+     * @summary `signerInfos`.
+     * @public
+     * @readonly
+     */
+    public readonly signerInfos: SignerInfos;
+
     constructor(
-        /**
-         * @summary `version`.
-         * @public
-         * @readonly
-         */
-        readonly version: CMSVersion,
-        /**
-         * @summary `digestAlgorithms`.
-         * @public
-         * @readonly
-         */
-        readonly digestAlgorithms: DigestAlgorithmIdentifier[],
-        /**
-         * @summary `encapContentInfo`.
-         * @public
-         * @readonly
-         */
-        readonly encapContentInfo: EncapsulatedContentInfo,
-        /**
-         * @summary `certificates`.
-         * @public
-         * @readonly
-         */
-        readonly certificates: OPTIONAL<CertificateSet>,
-        /**
-         * @summary `crls`.
-         * @public
-         * @readonly
-         */
-        readonly crls: OPTIONAL<RevocationInfoChoices>,
-        /**
-         * @summary `signerInfos`.
-         * @public
-         * @readonly
-         */
-        readonly signerInfos: SignerInfos
-    ) {}
+        version: CMSVersion,
+        digestAlgorithms: DigestAlgorithmIdentifier[],
+        encapContentInfo: EncapsulatedContentInfo,
+        certificates: OPTIONAL<CertificateSet>,
+        crls: OPTIONAL<RevocationInfoChoices>,
+        signerInfos: SignerInfos
+    ) {
+        this.version = version;
+        this.digestAlgorithms = digestAlgorithms;
+        this.encapContentInfo = encapContentInfo;
+        this.certificates = certificates;
+        this.crls = crls;
+        this.signerInfos = signerInfos;
+    }
 
     /**
      * @summary Restructures an object into a SIGNEDDATA

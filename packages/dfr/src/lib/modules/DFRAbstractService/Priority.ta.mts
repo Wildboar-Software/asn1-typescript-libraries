@@ -1,6 +1,6 @@
 /* eslint-disable */
 import {
-    ASN1Element as _Element,
+    type ASN1Element as _Element,
     ASN1TagClass as _TagClass,
     ASN1Construction as _Construction,
     ASN1UniversalType as _UniversalType,
@@ -84,7 +84,7 @@ type Priority = _enum_for_Priority;
  * @enum {number}
  */
 export
-const Priority = _enum_for_Priority;
+const Priority: typeof _enum_for_Priority = _enum_for_Priority;
 
 /**
  * @summary Priority_low
@@ -95,7 +95,7 @@ const Priority = _enum_for_Priority;
  * @type {number}
  */
 export
-const Priority_low: Priority = Priority.low; /* LONG_NAMED_ENUMERATED_VALUE */
+const Priority_low: _enum_for_Priority.low = Priority.low; /* LONG_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary low
@@ -106,7 +106,7 @@ const Priority_low: Priority = Priority.low; /* LONG_NAMED_ENUMERATED_VALUE */
  * @type {number}
  */
 export
-const low: Priority = Priority.low; /* SHORT_NAMED_ENUMERATED_VALUE */
+const low: _enum_for_Priority.low = Priority.low; /* SHORT_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary Priority_medium
@@ -117,7 +117,7 @@ const low: Priority = Priority.low; /* SHORT_NAMED_ENUMERATED_VALUE */
  * @type {number}
  */
 export
-const Priority_medium: Priority = Priority.medium; /* LONG_NAMED_ENUMERATED_VALUE */
+const Priority_medium: _enum_for_Priority.medium = Priority.medium; /* LONG_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary medium
@@ -128,7 +128,7 @@ const Priority_medium: Priority = Priority.medium; /* LONG_NAMED_ENUMERATED_VALU
  * @type {number}
  */
 export
-const medium: Priority = Priority.medium; /* SHORT_NAMED_ENUMERATED_VALUE */
+const medium: _enum_for_Priority.medium = Priority.medium; /* SHORT_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary Priority_high
@@ -139,7 +139,7 @@ const medium: Priority = Priority.medium; /* SHORT_NAMED_ENUMERATED_VALUE */
  * @type {number}
  */
 export
-const Priority_high: Priority = Priority.high; /* LONG_NAMED_ENUMERATED_VALUE */
+const Priority_high: _enum_for_Priority.high = Priority.high; /* LONG_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary high
@@ -150,9 +150,21 @@ const Priority_high: Priority = Priority.high; /* LONG_NAMED_ENUMERATED_VALUE */
  * @type {number}
  */
 export
-const high: Priority = Priority.high; /* SHORT_NAMED_ENUMERATED_VALUE */
-export const _decode_Priority = $._decodeEnumerated;
-export const _encode_Priority = $._encodeEnumerated;
+const high: _enum_for_Priority.high = Priority.high; /* SHORT_NAMED_ENUMERATED_VALUE */
+export function _decode_Priority(el: _Element): Priority {
+    const enumerated = $._decodeEnumerated(el);
+    switch (enumerated) {
+        case Priority.low: return Priority.low;
+        case Priority.medium: return Priority.medium;
+        case Priority.high: return Priority.high;
+        default:
+            throw new _ConstructionError(
+                "Invalid ENUMERATED value " + enumerated + " for Priority.",
+                el,
+            );
+    }
+}
+export const _encode_Priority: $.ASN1Encoder<Priority> = $._encodeEnumerated as $.ASN1Encoder<Priority>;
 
 
 /* eslint-enable */

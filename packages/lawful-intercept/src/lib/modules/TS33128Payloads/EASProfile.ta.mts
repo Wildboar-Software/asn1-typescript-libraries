@@ -1,16 +1,16 @@
 /* eslint-disable */
 import {
-    OPTIONAL,
-    UTF8String,
-    ASN1Element as _Element,
+    type OPTIONAL,
+    type UTF8String,
+    type ASN1Element as _Element,
     ASN1TagClass as _TagClass
 } from "@wildboar/asn1";
 import * as $ from "@wildboar/asn1/functional";
-import { EASID, _decode_EASID, _encode_EASID } from "../TS33128Payloads/EASID.ta.mjs";
+import { type EASID, _decode_EASID, _encode_EASID } from "../TS33128Payloads/EASID.ta.mjs";
 // export { EASID, _decode_EASID, _encode_EASID } from "../TS33128Payloads/EASID.ta.mjs";
 import { EASEndpoint, _decode_EASEndpoint, _encode_EASEndpoint } from "../TS33128Payloads/EASEndpoint.ta.mjs";
 // export { EASEndpoint, _decode_EASEndpoint, _encode_EASEndpoint } from "../TS33128Payloads/EASEndpoint.ta.mjs";
-import { ACIDs, _decode_ACIDs, _encode_ACIDs } from "../TS33128Payloads/ACIDs.ta.mjs";
+import { type ACIDs, _decode_ACIDs, _encode_ACIDs } from "../TS33128Payloads/ACIDs.ta.mjs";
 // export { ACIDs, _decode_ACIDs, _encode_ACIDs } from "../TS33128Payloads/ACIDs.ta.mjs";
 import { Daytime, _decode_Daytime, _encode_Daytime } from "../TS33128Payloads/Daytime.ta.mjs";
 // export { Daytime, _decode_Daytime, _encode_Daytime } from "../TS33128Payloads/Daytime.ta.mjs";
@@ -18,11 +18,11 @@ import { Location, _decode_Location, _encode_Location } from "../TS33128Payloads
 // export { Location, _decode_Location, _encode_Location } from "../TS33128Payloads/Location.ta.mjs";
 import { ServiceKPIs, _decode_ServiceKPIs, _encode_ServiceKPIs } from "../TS33128Payloads/ServiceKPIs.ta.mjs";
 // export { ServiceKPIs, _decode_ServiceKPIs, _encode_ServiceKPIs } from "../TS33128Payloads/ServiceKPIs.ta.mjs";
-import { EASServiceFeatures, _decode_EASServiceFeatures, _encode_EASServiceFeatures } from "../TS33128Payloads/EASServiceFeatures.ta.mjs";
+import { type EASServiceFeatures, _decode_EASServiceFeatures, _encode_EASServiceFeatures } from "../TS33128Payloads/EASServiceFeatures.ta.mjs";
 // export { EASServiceFeatures, _decode_EASServiceFeatures, _encode_EASServiceFeatures } from "../TS33128Payloads/EASServiceFeatures.ta.mjs";
-import { ACRScenarios, _decode_ACRScenarios, _encode_ACRScenarios } from "../TS33128Payloads/ACRScenarios.ta.mjs";
+import { type ACRScenarios, _decode_ACRScenarios, _encode_ACRScenarios } from "../TS33128Payloads/ACRScenarios.ta.mjs";
 // export { ACRScenarios, _decode_ACRScenarios, _encode_ACRScenarios } from "../TS33128Payloads/ACRScenarios.ta.mjs";
-import { RouteToLocations, _decode_RouteToLocations, _encode_RouteToLocations } from "../TS33128Payloads/RouteToLocations.ta.mjs";
+import { type RouteToLocations, _decode_RouteToLocations, _encode_RouteToLocations } from "../TS33128Payloads/RouteToLocations.ta.mjs";
 // export { RouteToLocations, _decode_RouteToLocations, _encode_RouteToLocations } from "../TS33128Payloads/RouteToLocations.ta.mjs";
 import { EASStatus, _decode_EASStatus, _encode_EASStatus, _enum_for_EASStatus } from "../TS33128Payloads/EASStatus.ta.mjs";
 // export { EASStatus, _enum_for_EASStatus, EASStatus_enabled /* IMPORTED_LONG_ENUMERATION_ITEM */, enabled /* IMPORTED_SHORT_ENUMERATION_ITEM */, EASStatus_disabled /* IMPORTED_LONG_ENUMERATION_ITEM */, disabled /* IMPORTED_SHORT_ENUMERATION_ITEM */, _decode_EASStatus, _encode_EASStatus } from "../TS33128Payloads/EASStatus.ta.mjs";
@@ -294,7 +294,7 @@ class EASProfile {
          * @static
          */
 
-    public static _enum_for_eASStatus = _enum_for_EASStatus;
+    public static _enum_for_eASStatus: typeof _enum_for_EASStatus = _enum_for_EASStatus;
 }
 
 /**

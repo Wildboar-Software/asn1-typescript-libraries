@@ -1,6 +1,6 @@
 import {
-    OCTET_STRING,
-    ASN1Element as _Element,
+    type OCTET_STRING,
+    type ASN1Element as _Element,
     ASN1TagClass as _TagClass,
 } from "@wildboar/asn1";
 import * as $ from "@wildboar/asn1/functional";
@@ -22,5 +22,5 @@ import * as $ from "@wildboar/asn1/functional";
  *
  */
 export type CallingPartyNumber = OCTET_STRING;
-export const _decode_CallingPartyNumber = $._decodeOctetString;
-export const _encode_CallingPartyNumber = $._encodeOctetString;
+export const _decode_CallingPartyNumber: $.ASN1Decoder<OCTET_STRING> = $._decodeOctetString;
+export const _encode_CallingPartyNumber: $.ASN1Encoder<OCTET_STRING> = $._encodeOctetString;

@@ -1,6 +1,7 @@
 /* eslint-disable */
 import {
-    OBJECT_IDENTIFIER,
+    ObjectIdentifier,
+    type OBJECT_IDENTIFIER,
 } from "@wildboar/asn1";
 import * as $ from "@wildboar/asn1/functional";
 
@@ -18,8 +19,8 @@ import * as $ from "@wildboar/asn1/functional";
  */
 export
 type AffectedObjectClass = OBJECT_IDENTIFIER; // ObjectIdentifierType
-export const _decode_AffectedObjectClass = $._decodeObjectIdentifier;
-export const _encode_AffectedObjectClass = $._encodeObjectIdentifier;
+export const _decode_AffectedObjectClass: $.ASN1Decoder<ObjectIdentifier> = $._decodeObjectIdentifier;
+export const _encode_AffectedObjectClass: $.ASN1Encoder<ObjectIdentifier> = $._encodeObjectIdentifier;
 
 
 /* eslint-enable */

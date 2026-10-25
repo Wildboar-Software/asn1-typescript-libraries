@@ -4,9 +4,9 @@ import { type ERROR } from "../Remote-Operations-Information-Objects/ERROR.oca.m
 import { type OPERATION } from "../Remote-Operations-Information-Objects/OPERATION.oca.mjs";
 // export { Priority, _decode_Priority, _encode_Priority } from "../Remote-Operations-Information-Objects/Priority.ta.mjs";
 // export { Code, _decode_Code, _encode_Code } from "../Remote-Operations-Information-Objects/Code.ta.mjs";
-import { IN_RemoveEntryArgument, _decode_IN_RemoveEntryArgument, _encode_IN_RemoveEntryArgument } from "../IN-CS3-SCF-SDF-Additional-Definitions/IN-RemoveEntryArgument.ta.mjs";
+import { type IN_RemoveEntryArgument, _decode_IN_RemoveEntryArgument, _encode_IN_RemoveEntryArgument } from "../IN-CS3-SCF-SDF-Additional-Definitions/IN-RemoveEntryArgument.ta.mjs";
 // export { IN_RemoveEntryArgument, _decode_IN_RemoveEntryArgument, _encode_IN_RemoveEntryArgument } from "../IN-CS3-SCF-SDF-Additional-Definitions/IN-RemoveEntryArgument.ta.mjs";
-import { RemoveEntryResult, _decode_RemoveEntryResult, _encode_RemoveEntryResult } from "../DirectoryAbstractService/RemoveEntryResult.ta.mjs";
+import { type RemoveEntryResult, _decode_RemoveEntryResult, _encode_RemoveEntryResult } from "../DirectoryAbstractService/RemoveEntryResult.ta.mjs";
 // export { RemoveEntryResult, _decode_RemoveEntryResult, _encode_RemoveEntryResult } from "../DirectoryAbstractService/RemoveEntryResult.ta.mjs";
 import { nameError } from "../DirectoryAbstractService/nameError.oa.mjs";
 // export { nameError } from "../DirectoryAbstractService/nameError.oa.mjs";

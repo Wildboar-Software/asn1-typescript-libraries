@@ -1,6 +1,7 @@
 {
   "extends": "../../tsconfig.base.json",
   "compilerOptions": {
+    "isolatedDeclarations": true,
     "rootDir": "src",
     "outDir": "../../dist/packages/goose",
     "tsBuildInfoFile": "../../dist/packages/goose/tsconfig.lib.tsbuildinfo",

@@ -1,9 +1,9 @@
 /* eslint-disable */
 import {
     ASN1ConstructionError as _ConstructionError,
-    ASN1Element as _Element,
+    type ASN1Element as _Element,
     ASN1TagClass as _TagClass,
-    INTEGER,
+    type INTEGER,
     ASN1OverflowError
 } from "@wildboar/asn1";
 import * as $ from "@wildboar/asn1/functional";
@@ -43,7 +43,7 @@ class H221NonStandard {
      * @public
      * @readonly
      */
-    readonly t35CountryCode1: INTEGER;
+    public readonly t35CountryCode1: INTEGER;
     /**
      * @summary `t35CountryCode2`.
      * @description
@@ -53,7 +53,7 @@ class H221NonStandard {
      * @public
      * @readonly
      */
-    readonly t35CountryCode2: INTEGER;
+    public readonly t35CountryCode2: INTEGER;
     /**
      * @summary `t35Extension`.
      * @description
@@ -63,7 +63,7 @@ class H221NonStandard {
      * @public
      * @readonly
      */
-    readonly t35Extension: INTEGER;
+    public readonly t35Extension: INTEGER;
     /**
      * @summary `manufacturerCode`.
      * @description
@@ -73,7 +73,7 @@ class H221NonStandard {
      * @public
      * @readonly
      */
-    readonly manufacturerCode: INTEGER;
+    public readonly manufacturerCode: INTEGER;
     /**
      * @summary Extensions that are not recognized.
      * @description
@@ -84,7 +84,7 @@ class H221NonStandard {
      * @public
      * @readonly
      */
-    readonly _unrecognizedExtensionsList: _Element[];
+    public readonly _unrecognizedExtensionsList: _Element[];
 
     constructor (
         t35CountryCode1: INTEGER,

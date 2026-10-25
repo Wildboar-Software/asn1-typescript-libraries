@@ -77,7 +77,7 @@ type AuthWtmRes_autWtmResValue = _enum_for_AuthWtmRes_autWtmResValue;
  * @enum {number}
  */
 export
-const AuthWtmRes_autWtmResValue = _enum_for_AuthWtmRes_autWtmResValue;
+const AuthWtmRes_autWtmResValue: typeof _enum_for_AuthWtmRes_autWtmResValue = _enum_for_AuthWtmRes_autWtmResValue;
 
 /**
  * @summary AuthWtmRes_autWtmResValue_auth_res_correct
@@ -88,7 +88,7 @@ const AuthWtmRes_autWtmResValue = _enum_for_AuthWtmRes_autWtmResValue;
  * @type {number}
  */
 export
-const AuthWtmRes_autWtmResValue_auth_res_correct: AuthWtmRes_autWtmResValue = AuthWtmRes_autWtmResValue.auth_res_correct; /* LONG_NAMED_ENUMERATED_VALUE */
+const AuthWtmRes_autWtmResValue_auth_res_correct: _enum_for_AuthWtmRes_autWtmResValue.auth_res_correct = AuthWtmRes_autWtmResValue.auth_res_correct; /* LONG_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary auth_res_correct
@@ -97,7 +97,7 @@ const AuthWtmRes_autWtmResValue_auth_res_correct: AuthWtmRes_autWtmResValue = Au
  * @type {number}
  */
 export
-const auth_res_correct: AuthWtmRes_autWtmResValue = AuthWtmRes_autWtmResValue.auth_res_correct; /* SHORT_NAMED_ENUMERATED_VALUE */
+const auth_res_correct: _enum_for_AuthWtmRes_autWtmResValue.auth_res_correct = AuthWtmRes_autWtmResValue.auth_res_correct; /* SHORT_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary AuthWtmRes_autWtmResValue_auth_res_incorrect
@@ -108,7 +108,7 @@ const auth_res_correct: AuthWtmRes_autWtmResValue = AuthWtmRes_autWtmResValue.au
  * @type {number}
  */
 export
-const AuthWtmRes_autWtmResValue_auth_res_incorrect: AuthWtmRes_autWtmResValue = AuthWtmRes_autWtmResValue.auth_res_incorrect; /* LONG_NAMED_ENUMERATED_VALUE */
+const AuthWtmRes_autWtmResValue_auth_res_incorrect: _enum_for_AuthWtmRes_autWtmResValue.auth_res_incorrect = AuthWtmRes_autWtmResValue.auth_res_incorrect; /* LONG_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary auth_res_incorrect
@@ -117,7 +117,7 @@ const AuthWtmRes_autWtmResValue_auth_res_incorrect: AuthWtmRes_autWtmResValue = 
  * @type {number}
  */
 export
-const auth_res_incorrect: AuthWtmRes_autWtmResValue = AuthWtmRes_autWtmResValue.auth_res_incorrect; /* SHORT_NAMED_ENUMERATED_VALUE */
+const auth_res_incorrect: _enum_for_AuthWtmRes_autWtmResValue.auth_res_incorrect = AuthWtmRes_autWtmResValue.auth_res_incorrect; /* SHORT_NAMED_ENUMERATED_VALUE */
 
 export
 const _decode_AuthWtmRes_autWtmResValue: $.ASN1Decoder<AuthWtmRes_autWtmResValue> = $._decodeEnumerated;

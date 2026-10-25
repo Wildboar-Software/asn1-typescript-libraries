@@ -1,10 +1,10 @@
 /* eslint-disable */
 import {
     ASN1ConstructionError as _ConstructionError,
-    ASN1Element as _Element,
+    type ASN1Element as _Element,
     ASN1TagClass as _TagClass,
-    NumericString,
-    PrintableString,
+    type NumericString,
+    type PrintableString,
 } from "@wildboar/asn1";
 import * as $ from "@wildboar/asn1/functional";
 
@@ -26,38 +26,46 @@ import * as $ from "@wildboar/asn1/functional";
  *
  */
 export class UtmCoordinates {
+    /**
+     * @summary `zone`.
+     * @description
+     *
+     * UTM zone: one letter followed by up to two digits.
+     *
+     * @public
+     * @readonly
+     */
+    public readonly zone: PrintableString;
+    /**
+     * @summary `easting`.
+     * @description
+     *
+     * Easting in metres.
+     *
+     * @public
+     * @readonly
+     */
+    public readonly easting: NumericString;
+    /**
+     * @summary `northing`.
+     * @description
+     *
+     * Northing in metres.
+     *
+     * @public
+     * @readonly
+     */
+    public readonly northing: NumericString;
+
     constructor(
-        /**
-         * @summary `zone`.
-         * @description
-         *
-         * UTM zone: one letter followed by up to two digits.
-         *
-         * @public
-         * @readonly
-         */
-        readonly zone: PrintableString,
-        /**
-         * @summary `easting`.
-         * @description
-         *
-         * Easting in metres.
-         *
-         * @public
-         * @readonly
-         */
-        readonly easting: NumericString,
-        /**
-         * @summary `northing`.
-         * @description
-         *
-         * Northing in metres.
-         *
-         * @public
-         * @readonly
-         */
-        readonly northing: NumericString
-    ) {}
+        zone: PrintableString,
+        easting: NumericString,
+        northing: NumericString
+    ) {
+        this.zone = zone;
+        this.easting = easting;
+        this.northing = northing;
+    }
 
     /**
      * @summary Restructures an object into a UtmCoordinates

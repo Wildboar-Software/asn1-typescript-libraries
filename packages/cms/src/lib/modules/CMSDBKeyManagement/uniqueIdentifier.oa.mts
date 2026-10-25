@@ -1,6 +1,6 @@
 /* eslint-disable */
 import {
-    UniqueIdentifier,
+    type UniqueIdentifier,
     _decode_UniqueIdentifier,
     _encode_UniqueIdentifier,
 } from "../CMSDBKeyManagement/UniqueIdentifier.ta.mjs";

@@ -1,6 +1,6 @@
 /* eslint-disable */
 import {
-  INTEGER,
+  type INTEGER,
   ASN1Element as _Element,
   ASN1TagClass as _TagClass,
   ASN1Construction as _Construction,
@@ -52,7 +52,7 @@ export class KRB_SAFE {
    * @public
    * @readonly
    */
-  readonly pvno: INTEGER;
+  public readonly pvno: INTEGER;
   /**
    * @summary `msg_type`.
    * @description
@@ -62,7 +62,7 @@ export class KRB_SAFE {
    * @public
    * @readonly
    */
-  readonly msg_type: INTEGER;
+  public readonly msg_type: INTEGER;
   /**
    * @summary `safe_body`.
    * @description
@@ -72,7 +72,7 @@ export class KRB_SAFE {
    * @public
    * @readonly
    */
-  readonly safe_body: KRB_SAFE_BODY;
+  public readonly safe_body: KRB_SAFE_BODY;
   /**
    * @summary `cksum`.
    * @description
@@ -83,7 +83,7 @@ export class KRB_SAFE {
    * @public
    * @readonly
    */
-  readonly cksum: Checksum;
+  public readonly cksum: Checksum;
 
   constructor(
     pvno: INTEGER,

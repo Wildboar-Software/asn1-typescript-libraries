@@ -1,4 +1,5 @@
 /* eslint-disable */
+import { ASN1Element as _Element, ASN1ConstructionError as _ConstructionError } from "@wildboar/asn1";
 import * as $ from "@wildboar/asn1/functional";
 
 
@@ -49,7 +50,7 @@ type Actions = _enum_for_Actions;
  * @enum {number}
  */
 export
-const Actions = _enum_for_Actions;
+const Actions: typeof _enum_for_Actions = _enum_for_Actions;
 
 /**
  * @summary Actions_play
@@ -57,7 +58,7 @@ const Actions = _enum_for_Actions;
  * @type {number}
  */
 export
-const Actions_play: Actions = Actions.play; /* LONG_NAMED_ENUMERATED_VALUE */
+const Actions_play: _enum_for_Actions.play = Actions.play; /* LONG_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary play
@@ -65,7 +66,7 @@ const Actions_play: Actions = Actions.play; /* LONG_NAMED_ENUMERATED_VALUE */
  * @type {number}
  */
 export
-const play: Actions = Actions.play; /* SHORT_NAMED_ENUMERATED_VALUE */
+const play: _enum_for_Actions.play = Actions.play; /* SHORT_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary Actions_playandcollect
@@ -73,7 +74,7 @@ const play: Actions = Actions.play; /* SHORT_NAMED_ENUMERATED_VALUE */
  * @type {number}
  */
 export
-const Actions_playandcollect: Actions = Actions.playandcollect; /* LONG_NAMED_ENUMERATED_VALUE */
+const Actions_playandcollect: _enum_for_Actions.playandcollect = Actions.playandcollect; /* LONG_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary playandcollect
@@ -81,12 +82,23 @@ const Actions_playandcollect: Actions = Actions.playandcollect; /* LONG_NAMED_EN
  * @type {number}
  */
 export
-const playandcollect: Actions = Actions.playandcollect; /* SHORT_NAMED_ENUMERATED_VALUE */
+const playandcollect: _enum_for_Actions.playandcollect = Actions.playandcollect; /* SHORT_NAMED_ENUMERATED_VALUE */
 
 export
-const _decode_Actions: $.ASN1Decoder<Actions> = $._decodeEnumerated;
+function _decode_Actions(el: _Element): Actions {
+    const enumerated = $._decodeEnumerated(el);
+    switch (enumerated) {
+        case Actions.play: return Actions.play;
+        case Actions.playandcollect: return Actions.playandcollect;
+        default:
+            throw new _ConstructionError(
+                "Invalid ENUMERATED value " + enumerated + " for Actions.",
+                el,
+            );
+    }
+}
 
 export
-const _encode_Actions: $.ASN1Encoder<Actions> = $._encodeEnumerated;
+const _encode_Actions: $.ASN1Encoder<Actions> = $._encodeEnumerated as $.ASN1Encoder<Actions>;
 
 /* eslint-enable */

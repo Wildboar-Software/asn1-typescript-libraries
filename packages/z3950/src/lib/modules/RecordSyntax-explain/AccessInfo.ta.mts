@@ -1,17 +1,17 @@
 /* eslint-disable */
 import {
-    OBJECT_IDENTIFIER,
-    OPTIONAL,
-    ASN1Element as _Element,
+    type OBJECT_IDENTIFIER,
+    type OPTIONAL,
+    type ASN1Element as _Element,
     ASN1TagClass as _TagClass
 } from "@wildboar/asn1";
 import * as $ from "@wildboar/asn1/functional";
-import { QueryTypeDetails, _decode_QueryTypeDetails, _encode_QueryTypeDetails } from "../RecordSyntax-explain/QueryTypeDetails.ta.mjs";
-import { AttributeSetId, _decode_AttributeSetId, _encode_AttributeSetId } from "../Z39-50-APDU-2001/AttributeSetId.ta.mjs";
-import { AccessRestrictions, _decode_AccessRestrictions, _encode_AccessRestrictions } from "../RecordSyntax-explain/AccessRestrictions.ta.mjs";
+import { type QueryTypeDetails, _decode_QueryTypeDetails, _encode_QueryTypeDetails } from "../RecordSyntax-explain/QueryTypeDetails.ta.mjs";
+import { type AttributeSetId, _decode_AttributeSetId, _encode_AttributeSetId } from "../Z39-50-APDU-2001/AttributeSetId.ta.mjs";
+import { type AccessRestrictions, _decode_AccessRestrictions, _encode_AccessRestrictions } from "../RecordSyntax-explain/AccessRestrictions.ta.mjs";
 import { Costs, _decode_Costs, _encode_Costs } from "../RecordSyntax-explain/Costs.ta.mjs";
-import { ElementSetName, _decode_ElementSetName, _encode_ElementSetName } from "../Z39-50-APDU-2001/ElementSetName.ta.mjs";
-import { InternationalString, _decode_InternationalString, _encode_InternationalString } from "../Z39-50-APDU-2001/InternationalString.ta.mjs";
+import { type ElementSetName, _decode_ElementSetName, _encode_ElementSetName } from "../Z39-50-APDU-2001/ElementSetName.ta.mjs";
+import { type InternationalString, _decode_InternationalString, _encode_InternationalString } from "../Z39-50-APDU-2001/InternationalString.ta.mjs";
 
 
 /**

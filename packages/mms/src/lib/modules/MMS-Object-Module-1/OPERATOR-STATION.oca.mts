@@ -1,6 +1,6 @@
 /* eslint-disable */
 import {
-    ASN1Element as _Element,
+    type ASN1Element as _Element,
     ASN1TagClass as _TagClass,
     ASN1Construction as _Construction,
     ASN1UniversalType as _UniversalType,
@@ -10,8 +10,8 @@ import {
     ASN1ConstructionError as _ConstructionError,
 } from "@wildboar/asn1";
 import * as $ from "@wildboar/asn1/functional";
-import { Identifier, _decode_Identifier, _encode_Identifier } from "../ISO-9506-MMS-1/Identifier.ta.mjs";
-import { MMSString, _decode_MMSString, _encode_MMSString } from "../ISO-9506-MMS-1/MMSString.ta.mjs";
+import { type Identifier, _decode_Identifier, _encode_Identifier } from "../ISO-9506-MMS-1/Identifier.ta.mjs";
+import { type MMSString, _decode_MMSString, _encode_MMSString } from "../ISO-9506-MMS-1/MMSString.ta.mjs";
 
 
 /**
@@ -158,7 +158,7 @@ type OPERATOR_STATION_stationType = _enum_for_OPERATOR_STATION_stationType;
  * @enum {number}
  */
 export
-const OPERATOR_STATION_stationType = _enum_for_OPERATOR_STATION_stationType;
+const OPERATOR_STATION_stationType: typeof _enum_for_OPERATOR_STATION_stationType = _enum_for_OPERATOR_STATION_stationType;
 
 /**
  * @summary OPERATOR_STATION_stationType_entry
@@ -166,7 +166,7 @@ const OPERATOR_STATION_stationType = _enum_for_OPERATOR_STATION_stationType;
  * @type {number}
  */
 export
-const OPERATOR_STATION_stationType_entry: OPERATOR_STATION_stationType = OPERATOR_STATION_stationType.entry; /* LONG_NAMED_ENUMERATED_VALUE */
+const OPERATOR_STATION_stationType_entry: _enum_for_OPERATOR_STATION_stationType.entry = OPERATOR_STATION_stationType.entry; /* LONG_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary OPERATOR_STATION_stationType_display
@@ -174,7 +174,7 @@ const OPERATOR_STATION_stationType_entry: OPERATOR_STATION_stationType = OPERATO
  * @type {number}
  */
 export
-const OPERATOR_STATION_stationType_display: OPERATOR_STATION_stationType = OPERATOR_STATION_stationType.display; /* LONG_NAMED_ENUMERATED_VALUE */
+const OPERATOR_STATION_stationType_display: _enum_for_OPERATOR_STATION_stationType.display = OPERATOR_STATION_stationType.display; /* LONG_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary OPERATOR_STATION_stationType_entry_display
@@ -182,7 +182,7 @@ const OPERATOR_STATION_stationType_display: OPERATOR_STATION_stationType = OPERA
  * @type {number}
  */
 export
-const OPERATOR_STATION_stationType_entry_display: OPERATOR_STATION_stationType = OPERATOR_STATION_stationType.entry_display; /* LONG_NAMED_ENUMERATED_VALUE */
+const OPERATOR_STATION_stationType_entry_display: _enum_for_OPERATOR_STATION_stationType.entry_display = OPERATOR_STATION_stationType.entry_display; /* LONG_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary OPERATOR_STATION_state
@@ -226,7 +226,7 @@ type OPERATOR_STATION_state = _enum_for_OPERATOR_STATION_state;
  * @enum {number}
  */
 export
-const OPERATOR_STATION_state = _enum_for_OPERATOR_STATION_state;
+const OPERATOR_STATION_state: typeof _enum_for_OPERATOR_STATION_state = _enum_for_OPERATOR_STATION_state;
 
 /**
  * @summary OPERATOR_STATION_state_idle
@@ -234,7 +234,7 @@ const OPERATOR_STATION_state = _enum_for_OPERATOR_STATION_state;
  * @type {number}
  */
 export
-const OPERATOR_STATION_state_idle: OPERATOR_STATION_state = OPERATOR_STATION_state.idle; /* LONG_NAMED_ENUMERATED_VALUE */
+const OPERATOR_STATION_state_idle: _enum_for_OPERATOR_STATION_state.idle = OPERATOR_STATION_state.idle; /* LONG_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary OPERATOR_STATION_state_display_prompt_data
@@ -242,7 +242,7 @@ const OPERATOR_STATION_state_idle: OPERATOR_STATION_state = OPERATOR_STATION_sta
  * @type {number}
  */
 export
-const OPERATOR_STATION_state_display_prompt_data: OPERATOR_STATION_state = OPERATOR_STATION_state.display_prompt_data; /* LONG_NAMED_ENUMERATED_VALUE */
+const OPERATOR_STATION_state_display_prompt_data: _enum_for_OPERATOR_STATION_state.display_prompt_data = OPERATOR_STATION_state.display_prompt_data; /* LONG_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary OPERATOR_STATION_state_waiting_for_input
@@ -250,7 +250,7 @@ const OPERATOR_STATION_state_display_prompt_data: OPERATOR_STATION_state = OPERA
  * @type {number}
  */
 export
-const OPERATOR_STATION_state_waiting_for_input: OPERATOR_STATION_state = OPERATOR_STATION_state.waiting_for_input; /* LONG_NAMED_ENUMERATED_VALUE */
+const OPERATOR_STATION_state_waiting_for_input: _enum_for_OPERATOR_STATION_state.waiting_for_input = OPERATOR_STATION_state.waiting_for_input; /* LONG_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary OPERATOR_STATION_state_input_buffer_filled
@@ -258,7 +258,7 @@ const OPERATOR_STATION_state_waiting_for_input: OPERATOR_STATION_state = OPERATO
  * @type {number}
  */
 export
-const OPERATOR_STATION_state_input_buffer_filled: OPERATOR_STATION_state = OPERATOR_STATION_state.input_buffer_filled; /* LONG_NAMED_ENUMERATED_VALUE */
+const OPERATOR_STATION_state_input_buffer_filled: _enum_for_OPERATOR_STATION_state.input_buffer_filled = OPERATOR_STATION_state.input_buffer_filled; /* LONG_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary OPERATOR_STATION_state_output_buffers_filled
@@ -266,6 +266,6 @@ const OPERATOR_STATION_state_input_buffer_filled: OPERATOR_STATION_state = OPERA
  * @type {number}
  */
 export
-const OPERATOR_STATION_state_output_buffers_filled: OPERATOR_STATION_state = OPERATOR_STATION_state.output_buffers_filled; /* LONG_NAMED_ENUMERATED_VALUE */
+const OPERATOR_STATION_state_output_buffers_filled: _enum_for_OPERATOR_STATION_state.output_buffers_filled = OPERATOR_STATION_state.output_buffers_filled; /* LONG_NAMED_ENUMERATED_VALUE */
 
 /* eslint-enable */

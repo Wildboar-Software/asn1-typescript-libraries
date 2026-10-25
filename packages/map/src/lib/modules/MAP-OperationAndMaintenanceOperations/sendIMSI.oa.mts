@@ -1,6 +1,6 @@
 /* eslint-disable */
-import { IMSI, _decode_IMSI, _encode_IMSI } from "../MAP-CommonDataTypes/IMSI.ta.mjs";
-import { ISDN_AddressString, _decode_ISDN_AddressString, _encode_ISDN_AddressString } from "../MAP-CommonDataTypes/ISDN-AddressString.ta.mjs";
+import { type IMSI, _decode_IMSI, _encode_IMSI } from "../MAP-CommonDataTypes/IMSI.ta.mjs";
+import { type ISDN_AddressString, _decode_ISDN_AddressString, _encode_ISDN_AddressString } from "../MAP-CommonDataTypes/ISDN-AddressString.ta.mjs";
 import { dataMissing } from "../MAP-Errors/dataMissing.oa.mjs";
 import { unexpectedDataValue } from "../MAP-Errors/unexpectedDataValue.oa.mjs";
 import { unknownSubscriber } from "../MAP-Errors/unknownSubscriber.oa.mjs";

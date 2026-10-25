@@ -1,6 +1,6 @@
 /* eslint-disable */
 import {
-    ASN1Element as _Element,
+    type ASN1Element as _Element,
     ASN1TagClass as _TagClass,
     ASN1Construction as _Construction,
     ASN1UniversalType as _UniversalType,
@@ -10,7 +10,7 @@ import {
     ASN1ConstructionError as _ConstructionError,
 } from "@wildboar/asn1";
 import * as $ from "@wildboar/asn1/functional";
-import { AlternateAccessSelection, _decode_AlternateAccessSelection, _encode_AlternateAccessSelection } from "../ISO-9506-MMS-1/AlternateAccessSelection.ta.mjs";
+import { type AlternateAccessSelection, _decode_AlternateAccessSelection, _encode_AlternateAccessSelection } from "../ISO-9506-MMS-1/AlternateAccessSelection.ta.mjs";
 import { AlternateAccess_Item_named, _decode_AlternateAccess_Item_named, _encode_AlternateAccess_Item_named } from "../ISO-9506-MMS-1/AlternateAccess-Item-named.ta.mjs";
 
 

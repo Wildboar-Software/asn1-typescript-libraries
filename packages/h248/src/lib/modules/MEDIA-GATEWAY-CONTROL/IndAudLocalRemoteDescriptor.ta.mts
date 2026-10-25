@@ -1,13 +1,13 @@
 /* eslint-disable */
 import {
-    INTEGER,
-    OPTIONAL,
-    ASN1Element as _Element,
+    type INTEGER,
+    type OPTIONAL,
+    type ASN1Element as _Element,
     ASN1TagClass as _TagClass,
     ASN1OverflowError
 } from "@wildboar/asn1";
 import * as $ from "@wildboar/asn1/functional";
-import { IndAudPropertyGroup, _decode_IndAudPropertyGroup, _encode_IndAudPropertyGroup } from "../MEDIA-GATEWAY-CONTROL/IndAudPropertyGroup.ta.mjs";
+import { type IndAudPropertyGroup, _decode_IndAudPropertyGroup, _encode_IndAudPropertyGroup } from "../MEDIA-GATEWAY-CONTROL/IndAudPropertyGroup.ta.mjs";
 
 
 /**
@@ -45,7 +45,7 @@ class IndAudLocalRemoteDescriptor {
      * @public
      * @readonly
      */
-    readonly propGroupID: OPTIONAL<INTEGER>;
+    public readonly propGroupID: OPTIONAL<INTEGER>;
     /**
      * @summary `propGrps`.
      * @description
@@ -55,7 +55,7 @@ class IndAudLocalRemoteDescriptor {
      * @public
      * @readonly
      */
-    readonly propGrps: IndAudPropertyGroup;
+    public readonly propGrps: IndAudPropertyGroup;
     /**
      * @summary Extensions that are not recognized.
      * @description
@@ -66,7 +66,7 @@ class IndAudLocalRemoteDescriptor {
      * @public
      * @readonly
      */
-    readonly _unrecognizedExtensionsList: _Element[];
+    public readonly _unrecognizedExtensionsList: _Element[];
 
     constructor (
         propGroupID: OPTIONAL<INTEGER>,

@@ -1,7 +1,7 @@
 /* eslint-disable */
 import {
-    OPTIONAL,
-    ASN1Element as _Element,
+    type OPTIONAL,
+    type ASN1Element as _Element,
     ASN1TagClass as _TagClass,
     ASN1Construction as _Construction,
     ASN1UniversalType as _UniversalType,
@@ -12,7 +12,7 @@ import {
 } from '@wildboar/asn1';
 import * as $ from '@wildboar/asn1/functional';
 import {
-    NonReceiptReasonField,
+    type NonReceiptReasonField,
     _enum_for_NonReceiptReasonField,
     _decode_NonReceiptReasonField,
     _encode_NonReceiptReasonField,
@@ -24,17 +24,17 @@ import {
     _encode_DiscardReasonField,
 } from '../IPMSInformationObjects/DiscardReasonField.ta.mjs';
 import {
-    AutoForwardCommentField,
+    type AutoForwardCommentField,
     _decode_AutoForwardCommentField,
     _encode_AutoForwardCommentField,
 } from '../IPMSInformationObjects/AutoForwardCommentField.ta.mjs';
 import {
-    ReturnedIPMField,
+    type ReturnedIPMField,
     _decode_ReturnedIPMField,
     _encode_ReturnedIPMField,
 } from '../IPMSInformationObjects/ReturnedIPMField.ta.mjs';
 import {
-    NRNExtensionsField,
+    type NRNExtensionsField,
     _decode_NRNExtensionsField,
     _encode_NRNExtensionsField,
 } from '../IPMSInformationObjects/NRNExtensionsField.ta.mjs';
@@ -58,38 +58,50 @@ import {
  *
  */
 export class NonReceiptFields {
+    /**
+     * @summary `non_receipt_reason`.
+     * @public
+     * @readonly
+     */
+    public readonly non_receipt_reason: NonReceiptReasonField;
+    /**
+     * @summary `discard_reason`.
+     * @public
+     * @readonly
+     */
+    public readonly discard_reason?: OPTIONAL<DiscardReasonField>;
+    /**
+     * @summary `auto_forward_comment`.
+     * @public
+     * @readonly
+     */
+    public readonly auto_forward_comment?: OPTIONAL<AutoForwardCommentField>;
+    /**
+     * @summary `returned_ipm`.
+     * @public
+     * @readonly
+     */
+    public readonly returned_ipm?: OPTIONAL<ReturnedIPMField>;
+    /**
+     * @summary `nrn_extensions`.
+     * @public
+     * @readonly
+     */
+    public readonly nrn_extensions?: OPTIONAL<NRNExtensionsField>;
+
     constructor(
-        /**
-         * @summary `non_receipt_reason`.
-         * @public
-         * @readonly
-         */
-        readonly non_receipt_reason: NonReceiptReasonField,
-        /**
-         * @summary `discard_reason`.
-         * @public
-         * @readonly
-         */
-        readonly discard_reason?: OPTIONAL<DiscardReasonField>,
-        /**
-         * @summary `auto_forward_comment`.
-         * @public
-         * @readonly
-         */
-        readonly auto_forward_comment?: OPTIONAL<AutoForwardCommentField>,
-        /**
-         * @summary `returned_ipm`.
-         * @public
-         * @readonly
-         */
-        readonly returned_ipm?: OPTIONAL<ReturnedIPMField>,
-        /**
-         * @summary `nrn_extensions`.
-         * @public
-         * @readonly
-         */
-        readonly nrn_extensions?: OPTIONAL<NRNExtensionsField>
-    ) {}
+        non_receipt_reason: NonReceiptReasonField,
+        discard_reason?: OPTIONAL<DiscardReasonField>,
+        auto_forward_comment?: OPTIONAL<AutoForwardCommentField>,
+        returned_ipm?: OPTIONAL<ReturnedIPMField>,
+        nrn_extensions?: OPTIONAL<NRNExtensionsField>
+    ) {
+        this.non_receipt_reason = non_receipt_reason;
+        this.discard_reason = discard_reason;
+        this.auto_forward_comment = auto_forward_comment;
+        this.returned_ipm = returned_ipm;
+        this.nrn_extensions = nrn_extensions;
+    }
 
     /**
      * @summary Restructures an object into a NonReceiptFields
@@ -121,14 +133,14 @@ export class NonReceiptFields {
      * @static
      */
 
-    public static _enum_for_non_receipt_reason = _enum_for_NonReceiptReasonField;
+    public static _enum_for_non_receipt_reason: typeof _enum_for_NonReceiptReasonField = _enum_for_NonReceiptReasonField;
     /**
      * @summary The enum used as the type of the component `discard_reason`
      * @public
      * @static
      */
 
-    public static _enum_for_discard_reason = _enum_for_DiscardReasonField;
+    public static _enum_for_discard_reason: typeof _enum_for_DiscardReasonField = _enum_for_DiscardReasonField;
 }
 
 /**

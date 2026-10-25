@@ -1,7 +1,7 @@
 /* eslint-disable */
 import {
-    ASN1Element as _Element,
-    INTEGER
+    type ASN1Element as _Element,
+    type INTEGER
 } from "@wildboar/asn1";
 import * as $ from "@wildboar/asn1/functional";
 
@@ -36,7 +36,7 @@ type AddressListDesignator_type = INTEGER;
  * @type {number}
  */
 export
-const AddressListDesignator_type_primaryAddressList: AddressListDesignator_type = 0; /* LONG_NAMED_INTEGER_VALUE */
+const AddressListDesignator_type_primaryAddressList: 0 = 0 satisfies AddressListDesignator_type; /* LONG_NAMED_INTEGER_VALUE */
 
 /**
  * @summary AddressListDesignator_type_primaryAddressList
@@ -48,7 +48,7 @@ const AddressListDesignator_type_primaryAddressList: AddressListDesignator_type 
  * @type {number}
  */
 export
-const primaryAddressList: AddressListDesignator_type = AddressListDesignator_type_primaryAddressList; /* SHORT_NAMED_INTEGER_VALUE */
+const primaryAddressList: 0 = AddressListDesignator_type_primaryAddressList; /* SHORT_NAMED_INTEGER_VALUE */
 
 /**
  * @summary AddressListDesignator_type_copyAddressList
@@ -60,7 +60,7 @@ const primaryAddressList: AddressListDesignator_type = AddressListDesignator_typ
  * @type {number}
  */
 export
-const AddressListDesignator_type_copyAddressList: AddressListDesignator_type = 1; /* LONG_NAMED_INTEGER_VALUE */
+const AddressListDesignator_type_copyAddressList: 1 = 1 satisfies AddressListDesignator_type; /* LONG_NAMED_INTEGER_VALUE */
 
 /**
  * @summary AddressListDesignator_type_copyAddressList
@@ -72,7 +72,7 @@ const AddressListDesignator_type_copyAddressList: AddressListDesignator_type = 1
  * @type {number}
  */
 export
-const copyAddressList: AddressListDesignator_type = AddressListDesignator_type_copyAddressList; /* SHORT_NAMED_INTEGER_VALUE */
+const copyAddressList: 1 = AddressListDesignator_type_copyAddressList; /* SHORT_NAMED_INTEGER_VALUE */
 export const _decode_AddressListDesignator_type: $.ASN1Decoder<AddressListDesignator_type> = $._decodeInteger;
 export const _encode_AddressListDesignator_type: $.ASN1Encoder<AddressListDesignator_type> = $._encodeInteger;
 

@@ -50,7 +50,7 @@ export class SignedReceiptNoticeType {
    * @public
    * @readonly
    */
-  readonly operatorPostmark: DigitalPostmarkType;
+  public readonly operatorPostmark: DigitalPostmarkType;
   /**
    * @summary `envelopeInformation`.
    * @description Recipient `Entity` copied from the
@@ -61,7 +61,7 @@ export class SignedReceiptNoticeType {
    * @public
    * @readonly
    */
-  readonly envelopeInformation: EntityEnvelopeInformationType;
+  public readonly envelopeInformation: EntityEnvelopeInformationType;
 
   constructor(
     operatorPostmark: DigitalPostmarkType,

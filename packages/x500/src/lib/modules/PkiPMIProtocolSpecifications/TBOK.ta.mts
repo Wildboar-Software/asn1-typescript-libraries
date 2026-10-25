@@ -1,11 +1,11 @@
 /* eslint-disable */
 import {
-    ASN1Element as _Element,
+    type ASN1Element as _Element,
     ASN1TagClass as _TagClass,
-    INTEGER,
-    OPTIONAL,
-    UTCTime,
-    UTF8String,
+    type INTEGER,
+    type OPTIONAL,
+    type UTCTime,
+    type UTF8String,
 } from "@wildboar/asn1";
 import * as $ from "@wildboar/asn1/functional";
 
@@ -26,38 +26,50 @@ import * as $ from "@wildboar/asn1/functional";
  *
  */
 export class TBOK {
+    /**
+     * @summary `levelOfAssurance`.
+     * @public
+     * @readonly
+     */
+    public readonly levelOfAssurance: INTEGER;
+    /**
+     * @summary `confidenceLevel`.
+     * @public
+     * @readonly
+     */
+    public readonly confidenceLevel: INTEGER;
+    /**
+     * @summary `validationTime`.
+     * @public
+     * @readonly
+     */
+    public readonly validationTime: UTCTime;
+    /**
+     * @summary `info`.
+     * @public
+     * @readonly
+     */
+    public readonly info?: OPTIONAL<UTF8String>;
+    /**
+     * @summary Extensions that are not recognized.
+     * @public
+     * @readonly
+     */
+    public readonly _unrecognizedExtensionsList: _Element[];
+
     constructor(
-        /**
-         * @summary `levelOfAssurance`.
-         * @public
-         * @readonly
-         */
-        readonly levelOfAssurance: INTEGER,
-        /**
-         * @summary `confidenceLevel`.
-         * @public
-         * @readonly
-         */
-        readonly confidenceLevel: INTEGER,
-        /**
-         * @summary `validationTime`.
-         * @public
-         * @readonly
-         */
-        readonly validationTime: UTCTime,
-        /**
-         * @summary `info`.
-         * @public
-         * @readonly
-         */
-        readonly info?: OPTIONAL<UTF8String>,
-        /**
-         * @summary Extensions that are not recognized.
-         * @public
-         * @readonly
-         */
-        readonly _unrecognizedExtensionsList: _Element[] = []
-    ) {}
+        levelOfAssurance: INTEGER,
+        confidenceLevel: INTEGER,
+        validationTime: UTCTime,
+        info?: OPTIONAL<UTF8String>,
+        _unrecognizedExtensionsList: _Element[] = []
+    ) {
+        this.levelOfAssurance = levelOfAssurance;
+        this.confidenceLevel = confidenceLevel;
+        this.validationTime = validationTime;
+        this.info = info;
+        this._unrecognizedExtensionsList = _unrecognizedExtensionsList;
+    }
 
     /**
      * @summary Restructures an object into a TBOK

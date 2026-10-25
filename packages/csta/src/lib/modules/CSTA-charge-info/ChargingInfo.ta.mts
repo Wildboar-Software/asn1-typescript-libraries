@@ -2,14 +2,14 @@
 
 import * as $ from "@wildboar/asn1/functional";
 import {
-    ENUMERATED,
-    SEQUENCE,
-    SET,
-    ASN1Element as _Element,
+    type ENUMERATED,
+    type SEQUENCE,
+    type SET,
+    type ASN1Element as _Element,
     ASN1TagClass as _TagClass,
     ASN1ConstructionError as _ConstructionError
 } from "@wildboar/asn1";
-import { NumberUnits, _decode_NumberUnits, _encode_NumberUnits } from "../CSTA-charge-info/NumberUnits.ta.mjs";
+import { type NumberUnits, _decode_NumberUnits, _encode_NumberUnits } from "../CSTA-charge-info/NumberUnits.ta.mjs";
 
 import {
     ChargingInfo_typeOfChargingInfo,
@@ -46,28 +46,34 @@ import {
  */
 export
 class ChargingInfo {
+    /**
+     * @summary `numberUnits`.
+     * @description
+     *
+     * Charging units or currency units. ECMA-269 §12.2.7.
+     *
+     * @public
+     * @readonly
+     */
+    public readonly numberUnits: NumberUnits;
+    /**
+     * @summary `typeOfChargingInfo`.
+     * @description
+     *
+     * Sub-total (intermediate) or Total (complete). ECMA-269 §12.2.7.
+     *
+     * @public
+     * @readonly
+     */
+    public readonly typeOfChargingInfo: ChargingInfo_typeOfChargingInfo;
+
     constructor (
-        /**
-         * @summary `numberUnits`.
-         * @description
-         *
-         * Charging units or currency units. ECMA-269 §12.2.7.
-         *
-         * @public
-         * @readonly
-         */
-        readonly numberUnits: NumberUnits,
-        /**
-         * @summary `typeOfChargingInfo`.
-         * @description
-         *
-         * Sub-total (intermediate) or Total (complete). ECMA-269 §12.2.7.
-         *
-         * @public
-         * @readonly
-         */
-        readonly typeOfChargingInfo: ChargingInfo_typeOfChargingInfo
-    ) {}
+        numberUnits: NumberUnits,
+        typeOfChargingInfo: ChargingInfo_typeOfChargingInfo
+    ) {
+        this.numberUnits = numberUnits;
+        this.typeOfChargingInfo = typeOfChargingInfo;
+    }
 
     /**
      * @summary Restructures an object into a ChargingInfo
@@ -91,7 +97,7 @@ class ChargingInfo {
          * @static
          */
 
-    public static _enum_for_typeOfChargingInfo = _enum_for_ChargingInfo_typeOfChargingInfo;
+    public static _enum_for_typeOfChargingInfo: typeof _enum_for_ChargingInfo_typeOfChargingInfo = _enum_for_ChargingInfo_typeOfChargingInfo;
 }
 
 /**

@@ -1,7 +1,7 @@
 /* eslint-disable */
 import {
-    NULL,
-    ASN1Element as _Element,
+    type NULL,
+    type ASN1Element as _Element,
     ASN1TagClass as _TagClass,
     ASN1Construction as _Construction,
     ASN1UniversalType as _UniversalType,
@@ -27,10 +27,10 @@ import * as $ from '@wildboar/asn1/functional';
 export type CancelDeferredDeliveryResult = NULL; // NullType
 
 
-export const _decode_CancelDeferredDeliveryResult = $._decodeNull;
+export const _decode_CancelDeferredDeliveryResult: $.ASN1Decoder<null> = $._decodeNull;
 
 
-export const _encode_CancelDeferredDeliveryResult = $._encodeNull;
+export const _encode_CancelDeferredDeliveryResult: $.ASN1Encoder<null> = $._encodeNull;
 
 
 /* eslint-enable */

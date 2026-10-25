@@ -1,6 +1,6 @@
 /* eslint-disable */
 import {
-    ASN1Element as _Element,
+    type ASN1Element as _Element,
     ASN1TagClass as _TagClass,
     ASN1Construction as _Construction,
     ASN1UniversalType as _UniversalType,
@@ -9,7 +9,7 @@ import {
     EmbeddedPDV as _PDV,
     ASN1ConstructionError as _ConstructionError,
 } from "@wildboar/asn1";
-import { Prime_p, _decode_Prime_p, _encode_Prime_p } from "../SEC1-v1-9/Prime-p.ta.mjs";
+import { type Prime_p, _decode_Prime_p, _encode_Prime_p } from "../SEC1-v1-9/Prime-p.ta.mjs";
 import { prime_field } from "../SEC1-v1-9/prime-field.va.mjs";
 import { type FIELD_ID } from "../SEC1-v1-9/FIELD-ID.oca.mjs";
 /**

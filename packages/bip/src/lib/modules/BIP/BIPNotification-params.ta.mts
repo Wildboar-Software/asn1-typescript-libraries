@@ -11,7 +11,7 @@ import {
 } from '@wildboar/asn1';
 import * as $ from '@wildboar/asn1/functional';
 import {
-  MasterDeletionEvent_NotificationParams,
+  type MasterDeletionEvent_NotificationParams,
   _decode_MasterDeletionEvent_NotificationParams,
   _encode_MasterDeletionEvent_NotificationParams,
 } from '../BIP/MasterDeletionEvent-NotificationParams.ta.mjs';

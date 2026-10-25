@@ -1,6 +1,6 @@
 /* eslint-disable */
 import {
-    ASN1Element as _Element,
+    type ASN1Element as _Element,
     ASN1TagClass as _TagClass,
     ASN1Construction as _Construction,
     ASN1UniversalType as _UniversalType,
@@ -16,7 +16,7 @@ import {
     _encode_GlobalDomainIdentifier,
 } from '../MTSAbstractService/GlobalDomainIdentifier.ta.mjs';
 import {
-    MTAName,
+    type MTAName,
     _decode_MTAName,
     _encode_MTAName,
 } from '../MTSAbstractService/MTAName.ta.mjs';
@@ -34,20 +34,26 @@ import {
  *
  */
 export class mta_name_Type {
+    /**
+     * @summary `domain`.
+     * @public
+     * @readonly
+     */
+    public readonly domain: GlobalDomainIdentifier;
+    /**
+     * @summary `mta_name`.
+     * @public
+     * @readonly
+     */
+    public readonly mta_name: MTAName;
+
     constructor(
-        /**
-         * @summary `domain`.
-         * @public
-         * @readonly
-         */
-        readonly domain: GlobalDomainIdentifier,
-        /**
-         * @summary `mta_name`.
-         * @public
-         * @readonly
-         */
-        readonly mta_name: MTAName
-    ) {}
+        domain: GlobalDomainIdentifier,
+        mta_name: MTAName
+    ) {
+        this.domain = domain;
+        this.mta_name = mta_name;
+    }
 
     /**
      * @summary Restructures an object into a mta_name_Type

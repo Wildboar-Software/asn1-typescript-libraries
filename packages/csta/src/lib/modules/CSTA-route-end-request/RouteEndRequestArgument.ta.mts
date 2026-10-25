@@ -2,19 +2,19 @@
 
 import * as $ from "@wildboar/asn1/functional";
 import {
-    OPTIONAL,
-    SEQUENCE,
-    SET,
-    ASN1Element as _Element,
+    type OPTIONAL,
+    type SEQUENCE,
+    type SET,
+    type ASN1Element as _Element,
     ASN1TagClass as _TagClass
 } from "@wildboar/asn1";
-import { RouteingCrossRefID, _decode_RouteingCrossRefID, _encode_RouteingCrossRefID } from "../CSTA-device-feature-types/RouteingCrossRefID.ta.mjs";
+import { type RouteingCrossRefID, _decode_RouteingCrossRefID, _encode_RouteingCrossRefID } from "../CSTA-device-feature-types/RouteingCrossRefID.ta.mjs";
 
-import { RouteRegisterReqID, _decode_RouteRegisterReqID, _encode_RouteRegisterReqID } from "../CSTA-device-feature-types/RouteRegisterReqID.ta.mjs";
+import { type RouteRegisterReqID, _decode_RouteRegisterReqID, _encode_RouteRegisterReqID } from "../CSTA-device-feature-types/RouteRegisterReqID.ta.mjs";
 
-import { ErrorValue, _decode_ErrorValue, _encode_ErrorValue } from "../CSTA-error-definition/ErrorValue.ta.mjs";
+import { type ErrorValue, _decode_ErrorValue, _encode_ErrorValue } from "../CSTA-error-definition/ErrorValue.ta.mjs";
 
-import { CorrelatorData, _decode_CorrelatorData, _encode_CorrelatorData } from "../CSTA-device-feature-types/CorrelatorData.ta.mjs";
+import { type CorrelatorData, _decode_CorrelatorData, _encode_CorrelatorData } from "../CSTA-device-feature-types/CorrelatorData.ta.mjs";
 
 import { CSTACommonArguments, _decode_CSTACommonArguments, _encode_CSTACommonArguments } from "../CSTA-extension-types/CSTACommonArguments.ta.mjs";
 
@@ -34,9 +34,9 @@ import { CSTACommonArguments, _decode_CSTACommonArguments, _encode_CSTACommonArg
  * ```asn1
  * RouteEndRequestArgument ::= SEQUENCE {
  *     crossRefIdentifier        RouteingCrossRefID,
- *     routeRegisterReqID         [ 0] IMPLICIT RouteRegisterReqID    OPTIONAL,
- *     errorValue            [ 1] ErrorValue                OPTIONAL,
- *     correlatorData            [ 2] IMPLICIT CorrelatorData        OPTIONAL,
+ *     routeRegisterReqID         [ 0] IMPLICIT RouteRegisterReqID    type OPTIONAL,
+ *     errorValue            [ 1] ErrorValue                type OPTIONAL,
+ *     correlatorData            [ 2] IMPLICIT CorrelatorData        type OPTIONAL,
  *     extensions            CSTACommonArguments            OPTIONAL }
  * ```
  * 
@@ -44,55 +44,67 @@ import { CSTACommonArguments, _decode_CSTACommonArguments, _encode_CSTACommonArg
  */
 export
 class RouteEndRequestArgument {
+    /**
+     * @summary `crossRefIdentifier`.
+     * @description
+     *
+     * Dialogue being ended.
+     * @public
+     * @readonly
+     */
+    public readonly crossRefIdentifier: RouteingCrossRefID;
+    /**
+     * @summary `routeRegisterReqID`.
+     * @description
+     *
+     * Registration for this dialogue, if registration is used.
+     * @public
+     * @readonly
+     */
+    public readonly routeRegisterReqID?: OPTIONAL<RouteRegisterReqID>;
+    /**
+     * @summary `errorValue`.
+     * @description
+     *
+     * Why the dialogue ended, if provided.
+     * @public
+     * @readonly
+     */
+    public readonly errorValue?: OPTIONAL<ErrorValue>;
+    /**
+     * @summary `correlatorData`.
+     * @description
+     *
+     * If CF→SF: correlator data to associate with the call. If
+     * SF→CF: correlator data associated with the call.
+     * @public
+     * @readonly
+     */
+    public readonly correlatorData?: OPTIONAL<CorrelatorData>;
+    /**
+     * @summary `extensions`.
+     * @description
+     *
+     * Optional security (timestamp, sequence, securityInfo) and
+     * privateData.
+     * @public
+     * @readonly
+     */
+    public readonly extensions?: OPTIONAL<CSTACommonArguments>;
+
     constructor (
-        /**
-         * @summary `crossRefIdentifier`.
-         * @description
-         *
-         * Dialogue being ended.
-         * @public
-         * @readonly
-         */
-        readonly crossRefIdentifier: RouteingCrossRefID,
-        /**
-         * @summary `routeRegisterReqID`.
-         * @description
-         *
-         * Registration for this dialogue, if registration is used.
-         * @public
-         * @readonly
-         */
-        readonly routeRegisterReqID?: OPTIONAL<RouteRegisterReqID>,
-        /**
-         * @summary `errorValue`.
-         * @description
-         *
-         * Why the dialogue ended, if provided.
-         * @public
-         * @readonly
-         */
-        readonly errorValue?: OPTIONAL<ErrorValue>,
-        /**
-         * @summary `correlatorData`.
-         * @description
-         *
-         * If CF→SF: correlator data to associate with the call. If
-         * SF→CF: correlator data associated with the call.
-         * @public
-         * @readonly
-         */
-        readonly correlatorData?: OPTIONAL<CorrelatorData>,
-        /**
-         * @summary `extensions`.
-         * @description
-         *
-         * Optional security (timestamp, sequence, securityInfo) and
-         * privateData.
-         * @public
-         * @readonly
-         */
-        readonly extensions?: OPTIONAL<CSTACommonArguments>
-    ) {}
+        crossRefIdentifier: RouteingCrossRefID,
+        routeRegisterReqID?: OPTIONAL<RouteRegisterReqID>,
+        errorValue?: OPTIONAL<ErrorValue>,
+        correlatorData?: OPTIONAL<CorrelatorData>,
+        extensions?: OPTIONAL<CSTACommonArguments>
+    ) {
+        this.crossRefIdentifier = crossRefIdentifier;
+        this.routeRegisterReqID = routeRegisterReqID;
+        this.errorValue = errorValue;
+        this.correlatorData = correlatorData;
+        this.extensions = extensions;
+    }
 
     /**
      * @summary Restructures an object into a RouteEndRequestArgument

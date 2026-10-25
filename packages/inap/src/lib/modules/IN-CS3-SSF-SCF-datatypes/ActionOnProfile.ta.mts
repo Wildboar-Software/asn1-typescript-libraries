@@ -1,4 +1,5 @@
 /* eslint-disable */
+import { ASN1Element as _Element, ASN1ConstructionError as _ConstructionError } from "@wildboar/asn1";
 import * as $ from "@wildboar/asn1/functional";
 
 
@@ -49,7 +50,7 @@ type ActionOnProfile = _enum_for_ActionOnProfile;
  * @enum {number}
  */
 export
-const ActionOnProfile = _enum_for_ActionOnProfile;
+const ActionOnProfile: typeof _enum_for_ActionOnProfile = _enum_for_ActionOnProfile;
 
 /**
  * @summary ActionOnProfile_activate
@@ -57,7 +58,7 @@ const ActionOnProfile = _enum_for_ActionOnProfile;
  * @type {number}
  */
 export
-const ActionOnProfile_activate: ActionOnProfile = ActionOnProfile.activate; /* LONG_NAMED_ENUMERATED_VALUE */
+const ActionOnProfile_activate: _enum_for_ActionOnProfile.activate = ActionOnProfile.activate; /* LONG_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary activate
@@ -65,7 +66,7 @@ const ActionOnProfile_activate: ActionOnProfile = ActionOnProfile.activate; /* L
  * @type {number}
  */
 export
-const activate: ActionOnProfile = ActionOnProfile.activate; /* SHORT_NAMED_ENUMERATED_VALUE */
+const activate: _enum_for_ActionOnProfile.activate = ActionOnProfile.activate; /* SHORT_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary ActionOnProfile_deactivate
@@ -73,7 +74,7 @@ const activate: ActionOnProfile = ActionOnProfile.activate; /* SHORT_NAMED_ENUME
  * @type {number}
  */
 export
-const ActionOnProfile_deactivate: ActionOnProfile = ActionOnProfile.deactivate; /* LONG_NAMED_ENUMERATED_VALUE */
+const ActionOnProfile_deactivate: _enum_for_ActionOnProfile.deactivate = ActionOnProfile.deactivate; /* LONG_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary deactivate
@@ -81,12 +82,23 @@ const ActionOnProfile_deactivate: ActionOnProfile = ActionOnProfile.deactivate; 
  * @type {number}
  */
 export
-const deactivate: ActionOnProfile = ActionOnProfile.deactivate; /* SHORT_NAMED_ENUMERATED_VALUE */
+const deactivate: _enum_for_ActionOnProfile.deactivate = ActionOnProfile.deactivate; /* SHORT_NAMED_ENUMERATED_VALUE */
 
 export
-const _decode_ActionOnProfile: $.ASN1Decoder<ActionOnProfile> = $._decodeEnumerated;
+function _decode_ActionOnProfile(el: _Element): ActionOnProfile {
+    const enumerated = $._decodeEnumerated(el);
+    switch (enumerated) {
+        case ActionOnProfile.activate: return ActionOnProfile.activate;
+        case ActionOnProfile.deactivate: return ActionOnProfile.deactivate;
+        default:
+            throw new _ConstructionError(
+                "Invalid ENUMERATED value " + enumerated + " for ActionOnProfile.",
+                el,
+            );
+    }
+}
 
 export
-const _encode_ActionOnProfile: $.ASN1Encoder<ActionOnProfile> = $._encodeEnumerated;
+const _encode_ActionOnProfile: $.ASN1Encoder<ActionOnProfile> = $._encodeEnumerated as $.ASN1Encoder<ActionOnProfile>;
 
 /* eslint-enable */

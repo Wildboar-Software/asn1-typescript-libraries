@@ -1,19 +1,19 @@
 /* eslint-disable */
 import {
-    ASN1Element as _Element,
+    type ASN1Element as _Element,
     ASN1TagClass as _TagClass,
-    INTEGER,
-    OPTIONAL,
+    type INTEGER,
+    type OPTIONAL,
 } from "@wildboar/asn1";
 import * as $ from "@wildboar/asn1/functional";
 import { Curve, _decode_Curve, _encode_Curve } from "../ANSI-X9-62/Curve.ta.mjs";
 import {
-    ECParameters_version,
+    type ECParameters_version,
     _decode_ECParameters_version,
     _encode_ECParameters_version,
 } from "../ANSI-X9-62/ECParameters-version.ta.mjs";
 import {
-    ECPoint,
+    type ECPoint,
     _decode_ECPoint,
     _encode_ECPoint,
 } from "../ANSI-X9-62/ECPoint.ta.mjs";
@@ -58,7 +58,7 @@ export class ECParameters {
      * @public
      * @readonly
      */
-    readonly version: ECParameters_version;
+    public readonly version: ECParameters_version;
     /**
      * @summary `fieldID`.
      * @description
@@ -69,7 +69,7 @@ export class ECParameters {
      * @public
      * @readonly
      */
-    readonly fieldID: FieldID;
+    public readonly fieldID: FieldID;
     /**
      * @summary `curve`.
      * @description
@@ -80,7 +80,7 @@ export class ECParameters {
      * @public
      * @readonly
      */
-    readonly curve: Curve;
+    public readonly curve: Curve;
     /**
      * @summary `base`.
      * @description
@@ -91,7 +91,7 @@ export class ECParameters {
      * @public
      * @readonly
      */
-    readonly base: ECPoint;
+    public readonly base: ECPoint;
     /**
      * @summary `order`.
      * @description
@@ -102,7 +102,7 @@ export class ECParameters {
      * @public
      * @readonly
      */
-    readonly order: INTEGER;
+    public readonly order: INTEGER;
     /**
      * @summary `cofactor`.
      * @description
@@ -113,13 +113,13 @@ export class ECParameters {
      * @public
      * @readonly
      */
-    readonly cofactor?: OPTIONAL<INTEGER>;
+    public readonly cofactor?: OPTIONAL<INTEGER>;
     /**
      * @summary Extensions that are not recognized.
      * @public
      * @readonly
      */
-    readonly _unrecognizedExtensionsList: _Element[];
+    public readonly _unrecognizedExtensionsList: _Element[];
 
     constructor(
         version: ECParameters_version,

@@ -1,9 +1,9 @@
 /* eslint-disable */
 import {
-    OPTIONAL,
-    INTEGER,
-    OBJECT_IDENTIFIER,
-    ASN1Element as _Element,
+    type OPTIONAL,
+    type INTEGER,
+    type OBJECT_IDENTIFIER,
+    type ASN1Element as _Element,
     ASN1TagClass as _TagClass,
     ASN1Construction as _Construction,
     ASN1UniversalType as _UniversalType,
@@ -19,12 +19,12 @@ import {
     _encode_CommonReqComp,
 } from '../Pbact-access/CommonReqComp.ta.mjs';
 import {
-    DistinguishedName,
+    type DistinguishedName,
     _decode_DistinguishedName,
     _encode_DistinguishedName,
 } from '@wildboar/dn';
 import {
-    ObjectModification,
+    type ObjectModification,
     _decode_ObjectModification,
     _encode_ObjectModification,
 } from '../Pbact-access/ObjectModification.ta.mjs';
@@ -34,7 +34,7 @@ import {
     _encode_InformationSelection,
 } from '../Pbact-access/InformationSelection.ta.mjs';
 import {
-    AttributeCertificates,
+    type AttributeCertificates,
     _decode_AttributeCertificates,
     _encode_AttributeCertificates,
 } from '../Pbact-access/AttributeCertificates.ta.mjs';
@@ -64,88 +64,104 @@ import {
  *
  */
 export class ModifyRequest implements CommonReqComp {
+    /**
+     * @summary `attrCerts`.
+     * @description
+     *
+     * AC or AC path holding privilege. Absent → privilege is in the
+     * accessor's end-entity PKC.
+     * ITU-T Rec. X.1080.0 (2017) Cor.1
+     * [§8.2](https://www.itu.int/rec/T-REC-X.1080.0-201703-I!Cor1).
+     *
+     * @public
+     * @readonly
+     */
+    public readonly attrCerts: OPTIONAL<AttributeCertificates>; /* REPLICATED_COMPONENT */
+    /**
+     * @summary `serviceId`.
+     * @description
+     *
+     * Service being invoked.
+     * ITU-T Rec. X.1080.0 (2017) Cor.1
+     * [§8.2](https://www.itu.int/rec/T-REC-X.1080.0-201703-I!Cor1).
+     *
+     * @public
+     * @readonly
+     */
+    public readonly serviceId: OBJECT_IDENTIFIER; /* REPLICATED_COMPONENT */
+    /**
+     * @summary `invokId`.
+     * @description
+     *
+     * 0 for the first operation, then increment. Detects missing
+     * requests and replay. Recipient echoes it in the reply.
+     * ITU-T Rec. X.1080.0 (2017) Cor.1
+     * [§8.2](https://www.itu.int/rec/T-REC-X.1080.0-201703-I!Cor1).
+     *
+     * @public
+     * @readonly
+     */
+    public readonly invokId: INTEGER; /* REPLICATED_COMPONENT */
+    /**
+     * @summary `object`.
+     * @description
+     *
+     * Distinguished name of the object to modify.
+     * ITU-T Rec. X.1080.0 (2017) Cor.1
+     * [§8.8](https://www.itu.int/rec/T-REC-X.1080.0-201703-I!Cor1).
+     *
+     * @public
+     * @readonly
+     */
+    public readonly object: DistinguishedName;
+    /**
+     * @summary `changes`.
+     * @description
+     *
+     * Modifications to apply, in order.
+     * ITU-T Rec. X.1080.0 (2017) Cor.1
+     * [§8.8](https://www.itu.int/rec/T-REC-X.1080.0-201703-I!Cor1).
+     *
+     * @public
+     * @readonly
+     */
+    public readonly changes: ObjectModification[];
+    /**
+     * @summary `select`.
+     * @description
+     *
+     * Information to return on success.
+     * ITU-T Rec. X.1080.0 (2017) Cor.1
+     * [§8.8](https://www.itu.int/rec/T-REC-X.1080.0-201703-I!Cor1).
+     *
+     * @public
+     * @readonly
+     */
+    public readonly select: InformationSelection;
+    /**
+     * @summary Extensions that are not recognized.
+     * @public
+     * @readonly
+     */
+    public readonly _unrecognizedExtensionsList: _Element[];
+
     constructor(
-        /**
-         * @summary `attrCerts`.
-         * @description
-         *
-         * AC or AC path holding privilege. Absent → privilege is in the
-         * accessor's end-entity PKC.
-         * ITU-T Rec. X.1080.0 (2017) Cor.1
-         * [§8.2](https://www.itu.int/rec/T-REC-X.1080.0-201703-I!Cor1).
-         *
-         * @public
-         * @readonly
-         */
-        readonly attrCerts: OPTIONAL<AttributeCertificates> /* REPLICATED_COMPONENT */,
-        /**
-         * @summary `serviceId`.
-         * @description
-         *
-         * Service being invoked.
-         * ITU-T Rec. X.1080.0 (2017) Cor.1
-         * [§8.2](https://www.itu.int/rec/T-REC-X.1080.0-201703-I!Cor1).
-         *
-         * @public
-         * @readonly
-         */
-        readonly serviceId: OBJECT_IDENTIFIER /* REPLICATED_COMPONENT */,
-        /**
-         * @summary `invokId`.
-         * @description
-         *
-         * 0 for the first operation, then increment. Detects missing
-         * requests and replay. Recipient echoes it in the reply.
-         * ITU-T Rec. X.1080.0 (2017) Cor.1
-         * [§8.2](https://www.itu.int/rec/T-REC-X.1080.0-201703-I!Cor1).
-         *
-         * @public
-         * @readonly
-         */
-        readonly invokId: INTEGER /* REPLICATED_COMPONENT */,
-        /**
-         * @summary `object`.
-         * @description
-         *
-         * Distinguished name of the object to modify.
-         * ITU-T Rec. X.1080.0 (2017) Cor.1
-         * [§8.8](https://www.itu.int/rec/T-REC-X.1080.0-201703-I!Cor1).
-         *
-         * @public
-         * @readonly
-         */
-        readonly object: DistinguishedName,
-        /**
-         * @summary `changes`.
-         * @description
-         *
-         * Modifications to apply, in order.
-         * ITU-T Rec. X.1080.0 (2017) Cor.1
-         * [§8.8](https://www.itu.int/rec/T-REC-X.1080.0-201703-I!Cor1).
-         *
-         * @public
-         * @readonly
-         */
-        readonly changes: ObjectModification[],
-        /**
-         * @summary `select`.
-         * @description
-         *
-         * Information to return on success.
-         * ITU-T Rec. X.1080.0 (2017) Cor.1
-         * [§8.8](https://www.itu.int/rec/T-REC-X.1080.0-201703-I!Cor1).
-         *
-         * @public
-         * @readonly
-         */
-        readonly select: InformationSelection,
-        /**
-         * @summary Extensions that are not recognized.
-         * @public
-         * @readonly
-         */
-        readonly _unrecognizedExtensionsList: _Element[] = []
-    ) {}
+        attrCerts: OPTIONAL<AttributeCertificates>,
+        serviceId: OBJECT_IDENTIFIER,
+        invokId: INTEGER,
+        object: DistinguishedName,
+        changes: ObjectModification[],
+        select: InformationSelection,
+        _unrecognizedExtensionsList: _Element[] = []
+    ) {
+        this.attrCerts = attrCerts;
+        this.serviceId = serviceId;
+        this.invokId = invokId;
+        this.object = object;
+        this.changes = changes;
+        this.select = select;
+        this._unrecognizedExtensionsList = _unrecognizedExtensionsList;
+    }
 
     /**
      * @summary Restructures an object into a ModifyRequest

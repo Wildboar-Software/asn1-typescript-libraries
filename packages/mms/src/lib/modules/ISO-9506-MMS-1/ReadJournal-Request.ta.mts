@@ -1,8 +1,8 @@
 /* eslint-disable */
 import {
-    OPTIONAL,
-    VisibleString,
-    ASN1Element as _Element,
+    type OPTIONAL,
+    type VisibleString,
+    type ASN1Element as _Element,
     ASN1TagClass as _TagClass,
     ASN1Construction as _Construction,
     ASN1UniversalType as _UniversalType,
@@ -12,9 +12,9 @@ import {
     ASN1ConstructionError as _ConstructionError,
 } from "@wildboar/asn1";
 import * as $ from "@wildboar/asn1/functional";
-import { ObjectName, _decode_ObjectName, _encode_ObjectName } from "../ISO-9506-MMS-1/ObjectName.ta.mjs";
-import { ReadJournal_Request_rangeStartSpecification, _decode_ReadJournal_Request_rangeStartSpecification, _encode_ReadJournal_Request_rangeStartSpecification } from "../ISO-9506-MMS-1/ReadJournal-Request-rangeStartSpecification.ta.mjs";
-import { ReadJournal_Request_rangeStopSpecification, _decode_ReadJournal_Request_rangeStopSpecification, _encode_ReadJournal_Request_rangeStopSpecification } from "../ISO-9506-MMS-1/ReadJournal-Request-rangeStopSpecification.ta.mjs";
+import { type ObjectName, _decode_ObjectName, _encode_ObjectName } from "../ISO-9506-MMS-1/ObjectName.ta.mjs";
+import { type ReadJournal_Request_rangeStartSpecification, _decode_ReadJournal_Request_rangeStartSpecification, _encode_ReadJournal_Request_rangeStartSpecification } from "../ISO-9506-MMS-1/ReadJournal-Request-rangeStartSpecification.ta.mjs";
+import { type ReadJournal_Request_rangeStopSpecification, _decode_ReadJournal_Request_rangeStopSpecification, _encode_ReadJournal_Request_rangeStopSpecification } from "../ISO-9506-MMS-1/ReadJournal-Request-rangeStopSpecification.ta.mjs";
 import { ReadJournal_Request_entryToStartAfter, _decode_ReadJournal_Request_entryToStartAfter, _encode_ReadJournal_Request_entryToStartAfter } from "../ISO-9506-MMS-1/ReadJournal-Request-entryToStartAfter.ta.mjs";
 
 
@@ -50,66 +50,78 @@ import { ReadJournal_Request_entryToStartAfter, _decode_ReadJournal_Request_entr
  */
 export
 class ReadJournal_Request {
+    /**
+     * @summary `journalName`.
+     * @description
+     *
+     * Journal whose entries are read. ISO 9506-1:2003
+     * §23.2.1.1.1.
+     *
+     * @public
+     * @readonly
+     */
+    public readonly journalName: ObjectName;
+    /**
+     * @summary `rangeStartSpecification`.
+     * @description
+     *
+     * Inclusive start of the range. `startingTime` vs
+     * `&timeStamp`, or `startingEntry` as an entry identifier.
+     * Absent means start of the journal. ISO 9506-1:2003
+     * §23.2.1.1.2.
+     *
+     * @public
+     * @readonly
+     */
+    public readonly rangeStartSpecification?: OPTIONAL<ReadJournal_Request_rangeStartSpecification>;
+    /**
+     * @summary `rangeStopSpecification`.
+     * @description
+     *
+     * Inclusive end of the range. `endingTime` vs `&timeStamp`,
+     * or `numberOfEntries` (sign is search direction). Absent
+     * means end of the journal. ISO 9506-1:2003 §23.2.1.1.3.
+     *
+     * @public
+     * @readonly
+     */
+    public readonly rangeStopSpecification?: OPTIONAL<ReadJournal_Request_rangeStopSpecification>;
+    /**
+     * @summary `listOfVariables`.
+     * @description
+     *
+     * Filter: include only entries whose Journal Variable tags
+     * match. ISO 9506-1:2003 §23.2.1.1.4.
+     *
+     * @public
+     * @readonly
+     */
+    public readonly listOfVariables?: OPTIONAL<VisibleString[]>;
+    /**
+     * @summary `entryToStartAfter`.
+     * @description
+     *
+     * Resume after this time/`&entry` among entries that already
+     * pass the other filters. ISO 9506-1:2003 §23.2.1.1.5.
+     *
+     * @public
+     * @readonly
+     */
+    public readonly entryToStartAfter?: OPTIONAL<ReadJournal_Request_entryToStartAfter>;
+
     constructor (
-        /**
-         * @summary `journalName`.
-         * @description
-         *
-         * Journal whose entries are read. ISO 9506-1:2003
-         * §23.2.1.1.1.
-         *
-         * @public
-         * @readonly
-         */
-        readonly journalName: ObjectName,
-        /**
-         * @summary `rangeStartSpecification`.
-         * @description
-         *
-         * Inclusive start of the range. `startingTime` vs
-         * `&timeStamp`, or `startingEntry` as an entry identifier.
-         * Absent means start of the journal. ISO 9506-1:2003
-         * §23.2.1.1.2.
-         *
-         * @public
-         * @readonly
-         */
-        readonly rangeStartSpecification?: OPTIONAL<ReadJournal_Request_rangeStartSpecification>,
-        /**
-         * @summary `rangeStopSpecification`.
-         * @description
-         *
-         * Inclusive end of the range. `endingTime` vs `&timeStamp`,
-         * or `numberOfEntries` (sign is search direction). Absent
-         * means end of the journal. ISO 9506-1:2003 §23.2.1.1.3.
-         *
-         * @public
-         * @readonly
-         */
-        readonly rangeStopSpecification?: OPTIONAL<ReadJournal_Request_rangeStopSpecification>,
-        /**
-         * @summary `listOfVariables`.
-         * @description
-         *
-         * Filter: include only entries whose Journal Variable tags
-         * match. ISO 9506-1:2003 §23.2.1.1.4.
-         *
-         * @public
-         * @readonly
-         */
-        readonly listOfVariables?: OPTIONAL<VisibleString[]>,
-        /**
-         * @summary `entryToStartAfter`.
-         * @description
-         *
-         * Resume after this time/`&entry` among entries that already
-         * pass the other filters. ISO 9506-1:2003 §23.2.1.1.5.
-         *
-         * @public
-         * @readonly
-         */
-        readonly entryToStartAfter?: OPTIONAL<ReadJournal_Request_entryToStartAfter>
-    ) {}
+        journalName: ObjectName,
+        rangeStartSpecification?: OPTIONAL<ReadJournal_Request_rangeStartSpecification>,
+        rangeStopSpecification?: OPTIONAL<ReadJournal_Request_rangeStopSpecification>,
+        listOfVariables?: OPTIONAL<VisibleString[]>,
+        entryToStartAfter?: OPTIONAL<ReadJournal_Request_entryToStartAfter>
+    ) {
+        this.journalName = journalName;
+        this.rangeStartSpecification = rangeStartSpecification;
+        this.rangeStopSpecification = rangeStopSpecification;
+        this.listOfVariables = listOfVariables;
+        this.entryToStartAfter = entryToStartAfter;
+    }
 
     /**
      * @summary Restructures an object into a ReadJournal_Request

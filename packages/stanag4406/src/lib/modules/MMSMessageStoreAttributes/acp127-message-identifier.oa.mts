@@ -1,7 +1,7 @@
 /* eslint-disable */
 import { type ATTRIBUTE } from "../InformationFramework/ATTRIBUTE.oca.mjs";
 import { userApplications /* IMPORTED_SHORT_ENUMERATION_ITEM */ } from "@wildboar/x500/InformationFramework";
-import { Acp127MessageIdentifier, _decode_Acp127MessageIdentifier, _encode_Acp127MessageIdentifier } from "../MMSHeadingExtensions/Acp127MessageIdentifier.ta.mjs";
+import { type Acp127MessageIdentifier, _decode_Acp127MessageIdentifier, _encode_Acp127MessageIdentifier } from "../MMSHeadingExtensions/Acp127MessageIdentifier.ta.mjs";
 import { id_nato_mmhs_hat_acp127_message_identifier } from "../MMSObjectIdentifiers/id-nato-mmhs-hat-acp127-message-identifier.va.mjs";
 
 

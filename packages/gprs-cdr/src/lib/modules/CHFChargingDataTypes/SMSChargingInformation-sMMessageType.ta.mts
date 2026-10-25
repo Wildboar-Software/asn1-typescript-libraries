@@ -74,7 +74,7 @@ type SMSChargingInformation_sMMessageType = _enum_for_SMSChargingInformation_sMM
  * @enum {number}
  */
 export
-const SMSChargingInformation_sMMessageType = _enum_for_SMSChargingInformation_sMMessageType;
+const SMSChargingInformation_sMMessageType: typeof _enum_for_SMSChargingInformation_sMMessageType = _enum_for_SMSChargingInformation_sMMessageType;
 
 /**
  * @summary SMSChargingInformation_sMMessageType_submission
@@ -82,7 +82,7 @@ const SMSChargingInformation_sMMessageType = _enum_for_SMSChargingInformation_sM
  * @type {number}
  */
 export
-const SMSChargingInformation_sMMessageType_submission: SMSChargingInformation_sMMessageType = SMSChargingInformation_sMMessageType.submission; /* LONG_NAMED_ENUMERATED_VALUE */
+const SMSChargingInformation_sMMessageType_submission: _enum_for_SMSChargingInformation_sMMessageType.submission = SMSChargingInformation_sMMessageType.submission; /* LONG_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary submission
@@ -90,7 +90,7 @@ const SMSChargingInformation_sMMessageType_submission: SMSChargingInformation_sM
  * @type {number}
  */
 export
-const submission: SMSChargingInformation_sMMessageType = SMSChargingInformation_sMMessageType.submission; /* SHORT_NAMED_ENUMERATED_VALUE */
+const submission: _enum_for_SMSChargingInformation_sMMessageType.submission = SMSChargingInformation_sMMessageType.submission; /* SHORT_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary SMSChargingInformation_sMMessageType_deliveryReport
@@ -98,7 +98,7 @@ const submission: SMSChargingInformation_sMMessageType = SMSChargingInformation_
  * @type {number}
  */
 export
-const SMSChargingInformation_sMMessageType_deliveryReport: SMSChargingInformation_sMMessageType = SMSChargingInformation_sMMessageType.deliveryReport; /* LONG_NAMED_ENUMERATED_VALUE */
+const SMSChargingInformation_sMMessageType_deliveryReport: _enum_for_SMSChargingInformation_sMMessageType.deliveryReport = SMSChargingInformation_sMMessageType.deliveryReport; /* LONG_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary deliveryReport
@@ -106,7 +106,7 @@ const SMSChargingInformation_sMMessageType_deliveryReport: SMSChargingInformatio
  * @type {number}
  */
 export
-const deliveryReport: SMSChargingInformation_sMMessageType = SMSChargingInformation_sMMessageType.deliveryReport; /* SHORT_NAMED_ENUMERATED_VALUE */
+const deliveryReport: _enum_for_SMSChargingInformation_sMMessageType.deliveryReport = SMSChargingInformation_sMMessageType.deliveryReport; /* SHORT_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary SMSChargingInformation_sMMessageType_sMServiceRequest
@@ -114,7 +114,7 @@ const deliveryReport: SMSChargingInformation_sMMessageType = SMSChargingInformat
  * @type {number}
  */
 export
-const SMSChargingInformation_sMMessageType_sMServiceRequest: SMSChargingInformation_sMMessageType = SMSChargingInformation_sMMessageType.sMServiceRequest; /* LONG_NAMED_ENUMERATED_VALUE */
+const SMSChargingInformation_sMMessageType_sMServiceRequest: _enum_for_SMSChargingInformation_sMMessageType.sMServiceRequest = SMSChargingInformation_sMMessageType.sMServiceRequest; /* LONG_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary sMServiceRequest
@@ -122,7 +122,7 @@ const SMSChargingInformation_sMMessageType_sMServiceRequest: SMSChargingInformat
  * @type {number}
  */
 export
-const sMServiceRequest: SMSChargingInformation_sMMessageType = SMSChargingInformation_sMMessageType.sMServiceRequest; /* SHORT_NAMED_ENUMERATED_VALUE */
+const sMServiceRequest: _enum_for_SMSChargingInformation_sMMessageType.sMServiceRequest = SMSChargingInformation_sMMessageType.sMServiceRequest; /* SHORT_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary SMSChargingInformation_sMMessageType_delivery
@@ -130,7 +130,7 @@ const sMServiceRequest: SMSChargingInformation_sMMessageType = SMSChargingInform
  * @type {number}
  */
 export
-const SMSChargingInformation_sMMessageType_delivery: SMSChargingInformation_sMMessageType = SMSChargingInformation_sMMessageType.delivery; /* LONG_NAMED_ENUMERATED_VALUE */
+const SMSChargingInformation_sMMessageType_delivery: _enum_for_SMSChargingInformation_sMMessageType.delivery = SMSChargingInformation_sMMessageType.delivery; /* LONG_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary delivery
@@ -138,7 +138,7 @@ const SMSChargingInformation_sMMessageType_delivery: SMSChargingInformation_sMMe
  * @type {number}
  */
 export
-const delivery: SMSChargingInformation_sMMessageType = SMSChargingInformation_sMMessageType.delivery; /* SHORT_NAMED_ENUMERATED_VALUE */
+const delivery: _enum_for_SMSChargingInformation_sMMessageType.delivery = SMSChargingInformation_sMMessageType.delivery; /* SHORT_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary SMSChargingInformation_sMMessageType_t4DeviceTrigger
@@ -146,7 +146,7 @@ const delivery: SMSChargingInformation_sMMessageType = SMSChargingInformation_sM
  * @type {number}
  */
 export
-const SMSChargingInformation_sMMessageType_t4DeviceTrigger: SMSChargingInformation_sMMessageType = SMSChargingInformation_sMMessageType.t4DeviceTrigger; /* LONG_NAMED_ENUMERATED_VALUE */
+const SMSChargingInformation_sMMessageType_t4DeviceTrigger: _enum_for_SMSChargingInformation_sMMessageType.t4DeviceTrigger = SMSChargingInformation_sMMessageType.t4DeviceTrigger; /* LONG_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary t4DeviceTrigger
@@ -154,7 +154,7 @@ const SMSChargingInformation_sMMessageType_t4DeviceTrigger: SMSChargingInformati
  * @type {number}
  */
 export
-const t4DeviceTrigger: SMSChargingInformation_sMMessageType = SMSChargingInformation_sMMessageType.t4DeviceTrigger; /* SHORT_NAMED_ENUMERATED_VALUE */
+const t4DeviceTrigger: _enum_for_SMSChargingInformation_sMMessageType.t4DeviceTrigger = SMSChargingInformation_sMMessageType.t4DeviceTrigger; /* SHORT_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary SMSChargingInformation_sMMessageType_sMDeviceTrigger
@@ -162,7 +162,7 @@ const t4DeviceTrigger: SMSChargingInformation_sMMessageType = SMSChargingInforma
  * @type {number}
  */
 export
-const SMSChargingInformation_sMMessageType_sMDeviceTrigger: SMSChargingInformation_sMMessageType = SMSChargingInformation_sMMessageType.sMDeviceTrigger; /* LONG_NAMED_ENUMERATED_VALUE */
+const SMSChargingInformation_sMMessageType_sMDeviceTrigger: _enum_for_SMSChargingInformation_sMMessageType.sMDeviceTrigger = SMSChargingInformation_sMMessageType.sMDeviceTrigger; /* LONG_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary sMDeviceTrigger
@@ -170,7 +170,7 @@ const SMSChargingInformation_sMMessageType_sMDeviceTrigger: SMSChargingInformati
  * @type {number}
  */
 export
-const sMDeviceTrigger: SMSChargingInformation_sMMessageType = SMSChargingInformation_sMMessageType.sMDeviceTrigger; /* SHORT_NAMED_ENUMERATED_VALUE */
+const sMDeviceTrigger: _enum_for_SMSChargingInformation_sMMessageType.sMDeviceTrigger = SMSChargingInformation_sMMessageType.sMDeviceTrigger; /* SHORT_NAMED_ENUMERATED_VALUE */
 
 export
 const _decode_SMSChargingInformation_sMMessageType: $.ASN1Decoder<SMSChargingInformation_sMMessageType> = $._decodeEnumerated;

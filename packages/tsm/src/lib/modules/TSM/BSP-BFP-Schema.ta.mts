@@ -1,6 +1,6 @@
 /* eslint-disable */
 import {
-    ASN1Element as _Element,
+    type ASN1Element as _Element,
     ASN1TagClass as _TagClass,
     ASN1Construction as _Construction,
     ASN1UniversalType as _UniversalType,
@@ -10,9 +10,9 @@ import {
     ASN1ConstructionError as _ConstructionError,
 } from "@wildboar/asn1";
 import * as $ from "@wildboar/asn1/functional";
-import { BioAPI_BSP_SCHEMA, _decode_BioAPI_BSP_SCHEMA, _encode_BioAPI_BSP_SCHEMA } from "../BIP/BioAPI-BSP-SCHEMA.ta.mjs";
+import { type BioAPI_BSP_SCHEMA, _decode_BioAPI_BSP_SCHEMA, _encode_BioAPI_BSP_SCHEMA } from "../BIP/BioAPI-BSP-SCHEMA.ta.mjs";
 
-import { BioAPI_BFP_SCHEMA, _decode_BioAPI_BFP_SCHEMA, _encode_BioAPI_BFP_SCHEMA } from "../BIP/BioAPI-BFP-SCHEMA.ta.mjs";
+import { type BioAPI_BFP_SCHEMA, _decode_BioAPI_BFP_SCHEMA, _encode_BioAPI_BFP_SCHEMA } from "../BIP/BioAPI-BFP-SCHEMA.ta.mjs";
 
 
 

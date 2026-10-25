@@ -1,6 +1,6 @@
 /* eslint-disable */
 import {
-    OCTET_STRING
+    type OCTET_STRING
 } from "@wildboar/asn1";
 import * as $ from "@wildboar/asn1/functional";
 
@@ -21,8 +21,8 @@ import * as $ from "@wildboar/asn1/functional";
  */
 export
 type EventParamValue = OCTET_STRING; // OctetStringType
-export const _decode_EventParamValue = $._decodeOctetString;
-export const _encode_EventParamValue = $._encodeOctetString;
+export const _decode_EventParamValue: $.ASN1Decoder<OCTET_STRING> = $._decodeOctetString;
+export const _encode_EventParamValue: $.ASN1Encoder<OCTET_STRING> = $._encodeOctetString;
 
 
 /* eslint-enable */

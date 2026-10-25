@@ -1,12 +1,12 @@
 /* eslint-disable */
 import {
     ASN1ConstructionError as _ConstructionError,
-    ASN1Element as _Element,
+    type ASN1Element as _Element,
     ASN1TagClass as _TagClass
 } from "@wildboar/asn1";
 import * as $ from "@wildboar/asn1/functional";
-import { TransactionId, _decode_TransactionId, _encode_TransactionId } from "../RSPDefinitions/TransactionId.ta.mjs";
-import { AuthenticateErrorCode, _decode_AuthenticateErrorCode, _encode_AuthenticateErrorCode } from "../RSPDefinitions/AuthenticateErrorCode.ta.mjs";
+import { type TransactionId, _decode_TransactionId, _encode_TransactionId } from "../RSPDefinitions/TransactionId.ta.mjs";
+import { type AuthenticateErrorCode, _decode_AuthenticateErrorCode, _encode_AuthenticateErrorCode } from "../RSPDefinitions/AuthenticateErrorCode.ta.mjs";
 
 
 /**
@@ -38,7 +38,7 @@ class AuthenticateResponseError {
      * @public
      * @readonly
      */
-    readonly transactionId: TransactionId;
+    public readonly transactionId: TransactionId;
     /**
      * @summary `authenticateErrorCode`.
      * @description
@@ -49,7 +49,7 @@ class AuthenticateResponseError {
      * @public
      * @readonly
      */
-    readonly authenticateErrorCode: AuthenticateErrorCode;
+    public readonly authenticateErrorCode: AuthenticateErrorCode;
 
     constructor (
         transactionId: TransactionId,

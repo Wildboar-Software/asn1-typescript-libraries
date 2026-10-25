@@ -1,10 +1,10 @@
 /* eslint-disable */
 import {
-    ASN1Element as _Element,
+    type ASN1Element as _Element,
     ASN1SizeError
 } from "@wildboar/asn1";
 import * as $ from "@wildboar/asn1/functional";
-import { _decode_AddressString, _encode_AddressString, AddressString } from "../MAP-CommonDataTypes/AddressString.ta.mjs";
+import { _decode_AddressString, _encode_AddressString, type AddressString } from "../MAP-CommonDataTypes/AddressString.ta.mjs";
 
 
 import { maxEventSpecification } from "./maxEventSpecification.va.mjs";

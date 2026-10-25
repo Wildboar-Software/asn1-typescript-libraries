@@ -1,6 +1,6 @@
 /* eslint-disable */
 import {
-    ASN1Element as _Element,
+    type ASN1Element as _Element,
     ASN1TagClass as _TagClass,
     ASN1Construction as _Construction,
     ASN1UniversalType as _UniversalType,
@@ -86,7 +86,7 @@ type SecurityProblem = _enum_for_SecurityProblem;
  * @enum {number}
  */
 export
-const SecurityProblem = _enum_for_SecurityProblem;
+const SecurityProblem: typeof _enum_for_SecurityProblem = _enum_for_SecurityProblem;
 
 /**
  * @summary SecurityProblem_inappropriate_authentication
@@ -97,7 +97,7 @@ const SecurityProblem = _enum_for_SecurityProblem;
  * @type {number}
  */
 export
-const SecurityProblem_inappropriate_authentication: SecurityProblem = SecurityProblem.inappropriate_authentication; /* LONG_NAMED_ENUMERATED_VALUE */
+const SecurityProblem_inappropriate_authentication: _enum_for_SecurityProblem.inappropriate_authentication = SecurityProblem.inappropriate_authentication; /* LONG_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary inappropriate_authentication
@@ -108,7 +108,7 @@ const SecurityProblem_inappropriate_authentication: SecurityProblem = SecurityPr
  * @type {number}
  */
 export
-const inappropriate_authentication: SecurityProblem = SecurityProblem.inappropriate_authentication; /* SHORT_NAMED_ENUMERATED_VALUE */
+const inappropriate_authentication: _enum_for_SecurityProblem.inappropriate_authentication = SecurityProblem.inappropriate_authentication; /* SHORT_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary SecurityProblem_invalid_creds
@@ -119,7 +119,7 @@ const inappropriate_authentication: SecurityProblem = SecurityProblem.inappropri
  * @type {number}
  */
 export
-const SecurityProblem_invalid_creds: SecurityProblem = SecurityProblem.invalid_creds; /* LONG_NAMED_ENUMERATED_VALUE */
+const SecurityProblem_invalid_creds: _enum_for_SecurityProblem.invalid_creds = SecurityProblem.invalid_creds; /* LONG_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary invalid_creds
@@ -130,7 +130,7 @@ const SecurityProblem_invalid_creds: SecurityProblem = SecurityProblem.invalid_c
  * @type {number}
  */
 export
-const invalid_creds: SecurityProblem = SecurityProblem.invalid_creds; /* SHORT_NAMED_ENUMERATED_VALUE */
+const invalid_creds: _enum_for_SecurityProblem.invalid_creds = SecurityProblem.invalid_creds; /* SHORT_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary SecurityProblem_invalid_privilege
@@ -141,7 +141,7 @@ const invalid_creds: SecurityProblem = SecurityProblem.invalid_creds; /* SHORT_N
  * @type {number}
  */
 export
-const SecurityProblem_invalid_privilege: SecurityProblem = SecurityProblem.invalid_privilege; /* LONG_NAMED_ENUMERATED_VALUE */
+const SecurityProblem_invalid_privilege: _enum_for_SecurityProblem.invalid_privilege = SecurityProblem.invalid_privilege; /* LONG_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary invalid_privilege
@@ -152,7 +152,7 @@ const SecurityProblem_invalid_privilege: SecurityProblem = SecurityProblem.inval
  * @type {number}
  */
 export
-const invalid_privilege: SecurityProblem = SecurityProblem.invalid_privilege; /* SHORT_NAMED_ENUMERATED_VALUE */
+const invalid_privilege: _enum_for_SecurityProblem.invalid_privilege = SecurityProblem.invalid_privilege; /* SHORT_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary SecurityProblem_invalid_pac
@@ -160,7 +160,7 @@ const invalid_privilege: SecurityProblem = SecurityProblem.invalid_privilege; /*
  * @type {number}
  */
 export
-const SecurityProblem_invalid_pac: SecurityProblem = SecurityProblem.invalid_pac; /* LONG_NAMED_ENUMERATED_VALUE */
+const SecurityProblem_invalid_pac: _enum_for_SecurityProblem.invalid_pac = SecurityProblem.invalid_pac; /* LONG_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary invalid_pac
@@ -168,7 +168,7 @@ const SecurityProblem_invalid_pac: SecurityProblem = SecurityProblem.invalid_pac
  * @type {number}
  */
 export
-const invalid_pac: SecurityProblem = SecurityProblem.invalid_pac; /* SHORT_NAMED_ENUMERATED_VALUE */
+const invalid_pac: _enum_for_SecurityProblem.invalid_pac = SecurityProblem.invalid_pac; /* SHORT_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary SecurityProblem_already_active
@@ -179,7 +179,7 @@ const invalid_pac: SecurityProblem = SecurityProblem.invalid_pac; /* SHORT_NAMED
  * @type {number}
  */
 export
-const SecurityProblem_already_active: SecurityProblem = SecurityProblem.already_active; /* LONG_NAMED_ENUMERATED_VALUE */
+const SecurityProblem_already_active: _enum_for_SecurityProblem.already_active = SecurityProblem.already_active; /* LONG_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary already_active
@@ -190,9 +190,23 @@ const SecurityProblem_already_active: SecurityProblem = SecurityProblem.already_
  * @type {number}
  */
 export
-const already_active: SecurityProblem = SecurityProblem.already_active; /* SHORT_NAMED_ENUMERATED_VALUE */
-export const _decode_SecurityProblem = $._decodeEnumerated;
-export const _encode_SecurityProblem = $._encodeEnumerated;
+const already_active: _enum_for_SecurityProblem.already_active = SecurityProblem.already_active; /* SHORT_NAMED_ENUMERATED_VALUE */
+export function _decode_SecurityProblem(el: _Element): SecurityProblem {
+    const enumerated = $._decodeEnumerated(el);
+    switch (enumerated) {
+        case SecurityProblem.inappropriate_authentication: return SecurityProblem.inappropriate_authentication;
+        case SecurityProblem.invalid_creds: return SecurityProblem.invalid_creds;
+        case SecurityProblem.invalid_privilege: return SecurityProblem.invalid_privilege;
+        case SecurityProblem.invalid_pac: return SecurityProblem.invalid_pac;
+        case SecurityProblem.already_active: return SecurityProblem.already_active;
+        default:
+            throw new _ConstructionError(
+                "Invalid ENUMERATED value " + enumerated + " for SecurityProblem.",
+                el,
+            );
+    }
+}
+export const _encode_SecurityProblem: $.ASN1Encoder<SecurityProblem> = $._encodeEnumerated as $.ASN1Encoder<SecurityProblem>;
 
 
 /* eslint-enable */

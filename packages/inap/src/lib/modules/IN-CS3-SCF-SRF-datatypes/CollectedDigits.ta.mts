@@ -1,11 +1,11 @@
 /* eslint-disable */
 import {
-    ASN1Element as _Element,
+    type ASN1Element as _Element,
     ASN1TagClass as _TagClass,
-    BOOLEAN,
-    INTEGER,
-    OCTET_STRING,
-    OPTIONAL
+    type BOOLEAN,
+    type INTEGER,
+    type OCTET_STRING,
+    type OPTIONAL
 } from "@wildboar/asn1";
 import * as $ from "@wildboar/asn1/functional";
 import { _decode_ErrorTreatment, _encode_ErrorTreatment, _enum_for_ErrorTreatment, ErrorTreatment, ErrorTreatment_reportErrorToScf /* IMPORTED_LONG_ENUMERATION_ITEM */ } from "../IN-CS3-SCF-SRF-datatypes/ErrorTreatment.ta.mjs";
@@ -178,7 +178,7 @@ class CollectedDigits {
      * @static
      * @method
      */
-    public static get _default_value_for_errorTreatment () { return ErrorTreatment_reportErrorToScf; }
+    public static get _default_value_for_errorTreatment (): _enum_for_ErrorTreatment { return ErrorTreatment_reportErrorToScf; }
     /**
      * @summary Getter that returns the default value for `interruptableAnnInd`.
      * @public
@@ -212,7 +212,7 @@ class CollectedDigits {
          * @static
          */
 
-    public static _enum_for_errorTreatment = _enum_for_ErrorTreatment;
+    public static _enum_for_errorTreatment: typeof _enum_for_ErrorTreatment = _enum_for_ErrorTreatment;
 }
 
 /**

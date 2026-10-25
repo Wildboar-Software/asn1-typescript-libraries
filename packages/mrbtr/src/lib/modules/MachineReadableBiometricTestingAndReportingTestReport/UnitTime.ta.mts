@@ -1,6 +1,6 @@
 /* eslint-disable */
 import {
-    ASN1Element as _Element,
+    type ASN1Element as _Element,
     ASN1TagClass as _TagClass,
     ASN1Construction as _Construction,
     ASN1UniversalType as _UniversalType,
@@ -77,7 +77,7 @@ type UnitTime = _enum_for_UnitTime;
  * @enum {number}
  */
 export
-const UnitTime = _enum_for_UnitTime;
+const UnitTime: typeof _enum_for_UnitTime = _enum_for_UnitTime;
 
 /**
  * @summary UnitTime_millisecond
@@ -85,7 +85,7 @@ const UnitTime = _enum_for_UnitTime;
  * @type {number}
  */
 export
-const UnitTime_millisecond: UnitTime = UnitTime.millisecond; /* LONG_NAMED_ENUMERATED_VALUE */
+const UnitTime_millisecond: _enum_for_UnitTime.millisecond = UnitTime.millisecond; /* LONG_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary millisecond
@@ -93,7 +93,7 @@ const UnitTime_millisecond: UnitTime = UnitTime.millisecond; /* LONG_NAMED_ENUME
  * @type {number}
  */
 export
-const millisecond: UnitTime = UnitTime.millisecond; /* SHORT_NAMED_ENUMERATED_VALUE */
+const millisecond: _enum_for_UnitTime.millisecond = UnitTime.millisecond; /* SHORT_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary UnitTime_second
@@ -101,7 +101,7 @@ const millisecond: UnitTime = UnitTime.millisecond; /* SHORT_NAMED_ENUMERATED_VA
  * @type {number}
  */
 export
-const UnitTime_second: UnitTime = UnitTime.second; /* LONG_NAMED_ENUMERATED_VALUE */
+const UnitTime_second: _enum_for_UnitTime.second = UnitTime.second; /* LONG_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary second
@@ -109,7 +109,7 @@ const UnitTime_second: UnitTime = UnitTime.second; /* LONG_NAMED_ENUMERATED_VALU
  * @type {number}
  */
 export
-const second: UnitTime = UnitTime.second; /* SHORT_NAMED_ENUMERATED_VALUE */
+const second: _enum_for_UnitTime.second = UnitTime.second; /* SHORT_NAMED_ENUMERATED_VALUE */
 
 
 /**
@@ -118,7 +118,7 @@ const second: UnitTime = UnitTime.second; /* SHORT_NAMED_ENUMERATED_VALUE */
  * @param el The element being decoded.
  * @returns The decoded data structure.
  */
-export const _decode_UnitTime = $._decodeEnumerated;
+export const _decode_UnitTime: $.ASN1Decoder<number> = $._decodeEnumerated;
 
 
 /**
@@ -128,7 +128,7 @@ export const _decode_UnitTime = $._decodeEnumerated;
  * @param elGetter A function that can be used to get new ASN.1 elements.
  * @returns {_Element} The UnitTime, encoded as an ASN.1 Element.
  */
-export const _encode_UnitTime = $._encodeEnumerated;
+export const _encode_UnitTime: $.ASN1Encoder<number> = $._encodeEnumerated;
 
 
 /* eslint-enable */

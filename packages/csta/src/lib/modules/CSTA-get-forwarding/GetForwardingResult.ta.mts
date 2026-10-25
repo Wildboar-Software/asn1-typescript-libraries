@@ -2,13 +2,13 @@
 
 import * as $ from "@wildboar/asn1/functional";
 import {
-    OPTIONAL,
-    SEQUENCE,
-    SET,
-    ASN1Element as _Element,
+    type OPTIONAL,
+    type SEQUENCE,
+    type SET,
+    type ASN1Element as _Element,
     ASN1TagClass as _TagClass
 } from "@wildboar/asn1";
-import { ForwardList, _decode_ForwardList, _encode_ForwardList } from "../CSTA-device-feature-types/ForwardList.ta.mjs";
+import { type ForwardList, _decode_ForwardList, _encode_ForwardList } from "../CSTA-device-feature-types/ForwardList.ta.mjs";
 
 import { CSTACommonArguments, _decode_CSTACommonArguments, _encode_CSTACommonArguments } from "../CSTA-extension-types/CSTACommonArguments.ta.mjs";
 
@@ -36,30 +36,36 @@ import { CSTACommonArguments, _decode_CSTACommonArguments, _encode_CSTACommonArg
  */
 export
 class GetForwardingResult {
+    /**
+     * @summary `forwardingList`.
+     * @description
+     *
+     * One structure per forwardingType/forwardDN combination.
+     * `forwardDefault` distinguishes SF-default vs user settings
+     * (§22.1.11.3.4 FR 2). `ringCount`/`ringDuration` only for
+     * forwardNoAns{,Int,Ext}.
+     * @public
+     * @readonly
+     */
+    public readonly forwardingList: ForwardList;
+    /**
+     * @summary `extensions`.
+     * @description
+     *
+     * Optional security (timestamp, sequence, securityInfo) and
+     * privateData.
+     * @public
+     * @readonly
+     */
+    public readonly extensions?: OPTIONAL<CSTACommonArguments>;
+
     constructor (
-        /**
-         * @summary `forwardingList`.
-         * @description
-         *
-         * One structure per forwardingType/forwardDN combination.
-         * `forwardDefault` distinguishes SF-default vs user settings
-         * (§22.1.11.3.4 FR 2). `ringCount`/`ringDuration` only for
-         * forwardNoAns{,Int,Ext}.
-         * @public
-         * @readonly
-         */
-        readonly forwardingList: ForwardList,
-        /**
-         * @summary `extensions`.
-         * @description
-         *
-         * Optional security (timestamp, sequence, securityInfo) and
-         * privateData.
-         * @public
-         * @readonly
-         */
-        readonly extensions?: OPTIONAL<CSTACommonArguments>
-    ) {}
+        forwardingList: ForwardList,
+        extensions?: OPTIONAL<CSTACommonArguments>
+    ) {
+        this.forwardingList = forwardingList;
+        this.extensions = extensions;
+    }
 
     /**
      * @summary Restructures an object into a GetForwardingResult

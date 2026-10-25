@@ -1,6 +1,6 @@
 /* eslint-disable */
 import {
-    ASN1Element as _Element,
+    type ASN1Element as _Element,
     ASN1TagClass as _TagClass,
     ASN1Construction as _Construction,
     ASN1UniversalType as _UniversalType,
@@ -36,20 +36,26 @@ import {
  *
  */
 export class Application_Entity_Title {
+    /**
+     * @summary `ap_title`.
+     * @public
+     * @readonly
+     */
+    public readonly ap_title: AP_title;
+    /**
+     * @summary `ae_qualifier`.
+     * @public
+     * @readonly
+     */
+    public readonly ae_qualifier: AE_qualifier;
+
     constructor(
-        /**
-         * @summary `ap_title`.
-         * @public
-         * @readonly
-         */
-        readonly ap_title: AP_title,
-        /**
-         * @summary `ae_qualifier`.
-         * @public
-         * @readonly
-         */
-        readonly ae_qualifier: AE_qualifier
-    ) {}
+        ap_title: AP_title,
+        ae_qualifier: AE_qualifier
+    ) {
+        this.ap_title = ap_title;
+        this.ae_qualifier = ae_qualifier;
+    }
 
     /**
      * @summary Restructures an object into a Application_Entity_Title

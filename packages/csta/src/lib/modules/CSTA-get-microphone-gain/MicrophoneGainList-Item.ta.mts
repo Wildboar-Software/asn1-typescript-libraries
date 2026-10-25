@@ -2,15 +2,15 @@
 
 import * as $ from "@wildboar/asn1/functional";
 import {
-    OPTIONAL,
-    SEQUENCE,
-    SET,
-    ASN1Element as _Element,
+    type OPTIONAL,
+    type SEQUENCE,
+    type SET,
+    type ASN1Element as _Element,
     ASN1TagClass as _TagClass
 } from "@wildboar/asn1";
-import { AuditoryApparatusID, _decode_AuditoryApparatusID, _encode_AuditoryApparatusID } from "../CSTA-physical-device-feature/AuditoryApparatusID.ta.mjs";
+import { type AuditoryApparatusID, _decode_AuditoryApparatusID, _encode_AuditoryApparatusID } from "../CSTA-physical-device-feature/AuditoryApparatusID.ta.mjs";
 
-import { MicGainAbs, _decode_MicGainAbs, _encode_MicGainAbs } from "../CSTA-physical-device-feature/MicGainAbs.ta.mjs";
+import { type MicGainAbs, _decode_MicGainAbs, _encode_MicGainAbs } from "../CSTA-physical-device-feature/MicGainAbs.ta.mjs";
 
 
 
@@ -36,27 +36,33 @@ import { MicGainAbs, _decode_MicGainAbs, _encode_MicGainAbs } from "../CSTA-phys
  */
 export
 class MicrophoneGainList_Item {
+    /**
+     * @summary `auditoryApparatus`.
+     * @description
+     *
+     * Apparatus that owns the microphone.
+     * @public
+     * @readonly
+     */
+    public readonly auditoryApparatus: AuditoryApparatusID;
+    /**
+     * @summary `micGainAbs`.
+     * @description
+     *
+     * Absolute gain. 0 silence, 100 maximum; 1–99 device-specific. Absent:
+     * unknown.
+     * @public
+     * @readonly
+     */
+    public readonly micGainAbs?: OPTIONAL<MicGainAbs>;
+
     constructor (
-        /**
-         * @summary `auditoryApparatus`.
-         * @description
-         *
-         * Apparatus that owns the microphone.
-         * @public
-         * @readonly
-         */
-        readonly auditoryApparatus: AuditoryApparatusID,
-        /**
-         * @summary `micGainAbs`.
-         * @description
-         *
-         * Absolute gain. 0 silence, 100 maximum; 1–99 device-specific. Absent:
-         * unknown.
-         * @public
-         * @readonly
-         */
-        readonly micGainAbs?: OPTIONAL<MicGainAbs>
-    ) {}
+        auditoryApparatus: AuditoryApparatusID,
+        micGainAbs?: OPTIONAL<MicGainAbs>
+    ) {
+        this.auditoryApparatus = auditoryApparatus;
+        this.micGainAbs = micGainAbs;
+    }
 
     /**
      * @summary Restructures an object into a MicrophoneGainList_Item

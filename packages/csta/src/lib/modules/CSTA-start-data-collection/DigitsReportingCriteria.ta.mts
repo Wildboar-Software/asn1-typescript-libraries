@@ -2,12 +2,12 @@
 
 import * as $ from "@wildboar/asn1/functional";
 import {
-    OPTIONAL,
-    INTEGER,
-    SEQUENCE,
-    SET,
-    IA5String,
-    ASN1Element as _Element,
+    type OPTIONAL,
+    type INTEGER,
+    type SEQUENCE,
+    type SET,
+    type IA5String,
+    type ASN1Element as _Element,
     ASN1TagClass as _TagClass
 } from "@wildboar/asn1";
 
@@ -28,8 +28,8 @@ import {
  * 
  * ```asn1
  * DigitsReportingCriteria ::= SEQUENCE
- * {    numChars            [0] IMPLICIT INTEGER             OPTIONAL,
- *     flushChar            IA5String (SIZE(1..1))            OPTIONAL,
+ * {    numChars            [0] IMPLICIT INTEGER             type OPTIONAL,
+ *     flushChar            IA5String (SIZE(1..1))            type OPTIONAL,
  *     timeout                [1] IMPLICIT INTEGER             OPTIONAL }
  * ```
  * 
@@ -37,39 +37,47 @@ import {
  */
 export
 class DigitsReportingCriteria {
+    /**
+     * @summary `numChars`.
+     * @description
+     *
+     * Send Data Collected after this many characters (ECMA-269 §25.1.5.1).
+     *
+     * @public
+     * @readonly
+     */
+    public readonly numChars?: OPTIONAL<INTEGER>;
+    /**
+     * @summary `flushChar`.
+     * @description
+     *
+     * IA5 flush character that reports collected digits (ECMA-269
+     * §25.1.5.1).
+     *
+     * @public
+     * @readonly
+     */
+    public readonly flushChar?: OPTIONAL<IA5String>;
+    /**
+     * @summary `timeout`.
+     * @description
+     *
+     * Timeout that reports collected digits (ECMA-269 §25.1.5.1).
+     *
+     * @public
+     * @readonly
+     */
+    public readonly timeout?: OPTIONAL<INTEGER>;
+
     constructor (
-        /**
-         * @summary `numChars`.
-         * @description
-         *
-         * Send Data Collected after this many characters (ECMA-269 §25.1.5.1).
-         *
-         * @public
-         * @readonly
-         */
-        readonly numChars?: OPTIONAL<INTEGER>,
-        /**
-         * @summary `flushChar`.
-         * @description
-         *
-         * IA5 flush character that reports collected digits (ECMA-269
-         * §25.1.5.1).
-         *
-         * @public
-         * @readonly
-         */
-        readonly flushChar?: OPTIONAL<IA5String>,
-        /**
-         * @summary `timeout`.
-         * @description
-         *
-         * Timeout that reports collected digits (ECMA-269 §25.1.5.1).
-         *
-         * @public
-         * @readonly
-         */
-        readonly timeout?: OPTIONAL<INTEGER>
-    ) {}
+        numChars?: OPTIONAL<INTEGER>,
+        flushChar?: OPTIONAL<IA5String>,
+        timeout?: OPTIONAL<INTEGER>
+    ) {
+        this.numChars = numChars;
+        this.flushChar = flushChar;
+        this.timeout = timeout;
+    }
 
     /**
      * @summary Restructures an object into a DigitsReportingCriteria

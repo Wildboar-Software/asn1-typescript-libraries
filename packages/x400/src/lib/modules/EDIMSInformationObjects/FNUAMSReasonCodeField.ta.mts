@@ -1,7 +1,7 @@
 /* eslint-disable */
 import {
-    OPTIONAL,
-    ASN1Element as _Element,
+    type OPTIONAL,
+    type ASN1Element as _Element,
     ASN1TagClass as _TagClass,
     ASN1Construction as _Construction,
     ASN1UniversalType as _UniversalType,
@@ -13,17 +13,17 @@ import {
 } from '@wildboar/asn1';
 import * as $ from '@wildboar/asn1/functional';
 import {
-    FNUAMSBasicCodeField,
+    type FNUAMSBasicCodeField,
     _decode_FNUAMSBasicCodeField,
     _encode_FNUAMSBasicCodeField,
 } from '../EDIMSInformationObjects/FNUAMSBasicCodeField.ta.mjs';
 import {
-    FNUAMSDiagnosticField,
+    type FNUAMSDiagnosticField,
     _decode_FNUAMSDiagnosticField,
     _encode_FNUAMSDiagnosticField,
 } from '../EDIMSInformationObjects/FNUAMSDiagnosticField.ta.mjs';
 import {
-    FNUAMSSecurityCheckField,
+    type FNUAMSSecurityCheckField,
     _decode_FNUAMSSecurityCheckField,
     _encode_FNUAMSSecurityCheckField,
 } from '../EDIMSInformationObjects/FNUAMSSecurityCheckField.ta.mjs';
@@ -45,26 +45,34 @@ import {
  *
  */
 export class FNUAMSReasonCodeField {
+    /**
+     * @summary `fn_ua_ms_basic_code`.
+     * @public
+     * @readonly
+     */
+    public readonly fn_ua_ms_basic_code: FNUAMSBasicCodeField;
+    /**
+     * @summary `fn_ua_ms_diagnostic`.
+     * @public
+     * @readonly
+     */
+    public readonly fn_ua_ms_diagnostic?: OPTIONAL<FNUAMSDiagnosticField>;
+    /**
+     * @summary `fn_security_check`.
+     * @public
+     * @readonly
+     */
+    public readonly fn_security_check?: OPTIONAL<FNUAMSSecurityCheckField>;
+
     constructor(
-        /**
-         * @summary `fn_ua_ms_basic_code`.
-         * @public
-         * @readonly
-         */
-        readonly fn_ua_ms_basic_code: FNUAMSBasicCodeField,
-        /**
-         * @summary `fn_ua_ms_diagnostic`.
-         * @public
-         * @readonly
-         */
-        readonly fn_ua_ms_diagnostic?: OPTIONAL<FNUAMSDiagnosticField>,
-        /**
-         * @summary `fn_security_check`.
-         * @public
-         * @readonly
-         */
-        readonly fn_security_check?: OPTIONAL<FNUAMSSecurityCheckField>
-    ) {}
+        fn_ua_ms_basic_code: FNUAMSBasicCodeField,
+        fn_ua_ms_diagnostic?: OPTIONAL<FNUAMSDiagnosticField>,
+        fn_security_check?: OPTIONAL<FNUAMSSecurityCheckField>
+    ) {
+        this.fn_ua_ms_basic_code = fn_ua_ms_basic_code;
+        this.fn_ua_ms_diagnostic = fn_ua_ms_diagnostic;
+        this.fn_security_check = fn_security_check;
+    }
 
     /**
      * @summary Restructures an object into a FNUAMSReasonCodeField

@@ -1,6 +1,6 @@
 /* eslint-disable */
 import {
-  ENUMERATED,
+  type ENUMERATED,
   ASN1Element as _Element,
   ASN1TagClass as _TagClass,
   ASN1Construction as _Construction,
@@ -54,7 +54,7 @@ export type BioAPI_GUI_SUBOPERATION =
  * @constant
  * @type {number}
  */
-export const BioAPI_GUI_SUBOPERATION_capture: BioAPI_GUI_SUBOPERATION = 0; /* LONG_NAMED_ENUMERATED_VALUE */
+export const BioAPI_GUI_SUBOPERATION_capture: 0 = _enum_for_BioAPI_GUI_SUBOPERATION.capture; /* LONG_NAMED_ENUMERATED_VALUE */
 
 
 /**
@@ -62,7 +62,7 @@ export const BioAPI_GUI_SUBOPERATION_capture: BioAPI_GUI_SUBOPERATION = 0; /* LO
  * @constant
  * @type {number}
  */
-export const capture: BioAPI_GUI_SUBOPERATION = BioAPI_GUI_SUBOPERATION_capture; /* SHORT_NAMED_ENUMERATED_VALUE */
+export const capture: 0 = BioAPI_GUI_SUBOPERATION_capture; /* SHORT_NAMED_ENUMERATED_VALUE */
 
 
 /**
@@ -70,7 +70,7 @@ export const capture: BioAPI_GUI_SUBOPERATION = BioAPI_GUI_SUBOPERATION_capture;
  * @constant
  * @type {number}
  */
-export const BioAPI_GUI_SUBOPERATION_process: BioAPI_GUI_SUBOPERATION = 1; /* LONG_NAMED_ENUMERATED_VALUE */
+export const BioAPI_GUI_SUBOPERATION_process: 1 = _enum_for_BioAPI_GUI_SUBOPERATION.process; /* LONG_NAMED_ENUMERATED_VALUE */
 
 
 /**
@@ -78,7 +78,7 @@ export const BioAPI_GUI_SUBOPERATION_process: BioAPI_GUI_SUBOPERATION = 1; /* LO
  * @constant
  * @type {number}
  */
-export const process: BioAPI_GUI_SUBOPERATION = BioAPI_GUI_SUBOPERATION_process; /* SHORT_NAMED_ENUMERATED_VALUE */
+export const process: 1 = BioAPI_GUI_SUBOPERATION_process; /* SHORT_NAMED_ENUMERATED_VALUE */
 
 
 /**
@@ -86,7 +86,7 @@ export const process: BioAPI_GUI_SUBOPERATION = BioAPI_GUI_SUBOPERATION_process;
  * @constant
  * @type {number}
  */
-export const BioAPI_GUI_SUBOPERATION_createtemplate: BioAPI_GUI_SUBOPERATION = 2; /* LONG_NAMED_ENUMERATED_VALUE */
+export const BioAPI_GUI_SUBOPERATION_createtemplate: 2 = _enum_for_BioAPI_GUI_SUBOPERATION.createtemplate; /* LONG_NAMED_ENUMERATED_VALUE */
 
 
 /**
@@ -94,7 +94,7 @@ export const BioAPI_GUI_SUBOPERATION_createtemplate: BioAPI_GUI_SUBOPERATION = 2
  * @constant
  * @type {number}
  */
-export const createtemplate: BioAPI_GUI_SUBOPERATION = BioAPI_GUI_SUBOPERATION_createtemplate; /* SHORT_NAMED_ENUMERATED_VALUE */
+export const createtemplate: 2 = BioAPI_GUI_SUBOPERATION_createtemplate; /* SHORT_NAMED_ENUMERATED_VALUE */
 
 
 /**
@@ -102,7 +102,7 @@ export const createtemplate: BioAPI_GUI_SUBOPERATION = BioAPI_GUI_SUBOPERATION_c
  * @constant
  * @type {number}
  */
-export const BioAPI_GUI_SUBOPERATION_verifymatch: BioAPI_GUI_SUBOPERATION = 3; /* LONG_NAMED_ENUMERATED_VALUE */
+export const BioAPI_GUI_SUBOPERATION_verifymatch: 3 = _enum_for_BioAPI_GUI_SUBOPERATION.verifymatch; /* LONG_NAMED_ENUMERATED_VALUE */
 
 
 /**
@@ -110,7 +110,7 @@ export const BioAPI_GUI_SUBOPERATION_verifymatch: BioAPI_GUI_SUBOPERATION = 3; /
  * @constant
  * @type {number}
  */
-export const verifymatch: BioAPI_GUI_SUBOPERATION = BioAPI_GUI_SUBOPERATION_verifymatch; /* SHORT_NAMED_ENUMERATED_VALUE */
+export const verifymatch: 3 = BioAPI_GUI_SUBOPERATION_verifymatch; /* SHORT_NAMED_ENUMERATED_VALUE */
 
 
 /**
@@ -118,7 +118,7 @@ export const verifymatch: BioAPI_GUI_SUBOPERATION = BioAPI_GUI_SUBOPERATION_veri
  * @constant
  * @type {number}
  */
-export const BioAPI_GUI_SUBOPERATION_identifymatch: BioAPI_GUI_SUBOPERATION = 4; /* LONG_NAMED_ENUMERATED_VALUE */
+export const BioAPI_GUI_SUBOPERATION_identifymatch: 4 = _enum_for_BioAPI_GUI_SUBOPERATION.identifymatch; /* LONG_NAMED_ENUMERATED_VALUE */
 
 
 /**
@@ -126,17 +126,17 @@ export const BioAPI_GUI_SUBOPERATION_identifymatch: BioAPI_GUI_SUBOPERATION = 4;
  * @constant
  * @type {number}
  */
-export const identifymatch: BioAPI_GUI_SUBOPERATION = BioAPI_GUI_SUBOPERATION_identifymatch; /* SHORT_NAMED_ENUMERATED_VALUE */
+export const identifymatch: 4 = BioAPI_GUI_SUBOPERATION_identifymatch; /* SHORT_NAMED_ENUMERATED_VALUE */
 
 
 
 
-export const _decode_BioAPI_GUI_SUBOPERATION = $._decodeEnumerated;
+export const _decode_BioAPI_GUI_SUBOPERATION: $.ASN1Decoder<BioAPI_GUI_SUBOPERATION> = $._decodeEnumerated as $.ASN1Decoder<BioAPI_GUI_SUBOPERATION>;
 
 
 
 
-export const _encode_BioAPI_GUI_SUBOPERATION = $._encodeEnumerated;
+export const _encode_BioAPI_GUI_SUBOPERATION: $.ASN1Encoder<BioAPI_GUI_SUBOPERATION> = $._encodeEnumerated as $.ASN1Encoder<BioAPI_GUI_SUBOPERATION>;
 
 
 /* eslint-enable */

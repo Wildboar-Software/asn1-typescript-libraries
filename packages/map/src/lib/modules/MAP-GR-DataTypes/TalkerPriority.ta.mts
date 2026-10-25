@@ -71,7 +71,7 @@ type TalkerPriority = _enum_for_TalkerPriority;
  * @enum {number}
  */
 export
-const TalkerPriority = _enum_for_TalkerPriority;
+const TalkerPriority: typeof _enum_for_TalkerPriority = _enum_for_TalkerPriority;
 
 /**
  * @summary TalkerPriority_normal
@@ -83,7 +83,7 @@ const TalkerPriority = _enum_for_TalkerPriority;
  * @type {number}
  */
 export
-const TalkerPriority_normal: TalkerPriority = TalkerPriority.normal; /* LONG_NAMED_ENUMERATED_VALUE */
+const TalkerPriority_normal: _enum_for_TalkerPriority.normal = TalkerPriority.normal; /* LONG_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary normal
@@ -95,7 +95,7 @@ const TalkerPriority_normal: TalkerPriority = TalkerPriority.normal; /* LONG_NAM
  * @type {number}
  */
 export
-const normal: TalkerPriority = TalkerPriority.normal; /* SHORT_NAMED_ENUMERATED_VALUE */
+const normal: _enum_for_TalkerPriority.normal = TalkerPriority.normal; /* SHORT_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary TalkerPriority_privileged
@@ -107,7 +107,7 @@ const normal: TalkerPriority = TalkerPriority.normal; /* SHORT_NAMED_ENUMERATED_
  * @type {number}
  */
 export
-const TalkerPriority_privileged: TalkerPriority = TalkerPriority.privileged; /* LONG_NAMED_ENUMERATED_VALUE */
+const TalkerPriority_privileged: _enum_for_TalkerPriority.privileged = TalkerPriority.privileged; /* LONG_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary privileged
@@ -119,7 +119,7 @@ const TalkerPriority_privileged: TalkerPriority = TalkerPriority.privileged; /* 
  * @type {number}
  */
 export
-const privileged: TalkerPriority = TalkerPriority.privileged; /* SHORT_NAMED_ENUMERATED_VALUE */
+const privileged: _enum_for_TalkerPriority.privileged = TalkerPriority.privileged; /* SHORT_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary TalkerPriority_emergency
@@ -131,7 +131,7 @@ const privileged: TalkerPriority = TalkerPriority.privileged; /* SHORT_NAMED_ENU
  * @type {number}
  */
 export
-const TalkerPriority_emergency: TalkerPriority = TalkerPriority.emergency; /* LONG_NAMED_ENUMERATED_VALUE */
+const TalkerPriority_emergency: _enum_for_TalkerPriority.emergency = TalkerPriority.emergency; /* LONG_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary emergency
@@ -143,7 +143,7 @@ const TalkerPriority_emergency: TalkerPriority = TalkerPriority.emergency; /* LO
  * @type {number}
  */
 export
-const emergency: TalkerPriority = TalkerPriority.emergency; /* SHORT_NAMED_ENUMERATED_VALUE */
+const emergency: _enum_for_TalkerPriority.emergency = TalkerPriority.emergency; /* SHORT_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary Decodes an ASN.1 element into a(n) TalkerPriority
@@ -151,7 +151,7 @@ const emergency: TalkerPriority = TalkerPriority.emergency; /* SHORT_NAMED_ENUME
  * @param el The element being decoded.
  * @returns The decoded data structure.
  */
-export const _decode_TalkerPriority = $._decodeEnumerated;
+export const _decode_TalkerPriority: $.ASN1Decoder<number> = $._decodeEnumerated;
 
 /**
  * @summary Encodes a(n) TalkerPriority into an ASN.1 Element.
@@ -160,7 +160,7 @@ export const _decode_TalkerPriority = $._decodeEnumerated;
  * @param elGetter A function that can be used to get new ASN.1 elements.
  * @returns {_Element} The TalkerPriority, encoded as an ASN.1 Element.
  */
-export const _encode_TalkerPriority = $._encodeEnumerated;
+export const _encode_TalkerPriority: $.ASN1Encoder<number> = $._encodeEnumerated;
 
 
 /* eslint-enable */

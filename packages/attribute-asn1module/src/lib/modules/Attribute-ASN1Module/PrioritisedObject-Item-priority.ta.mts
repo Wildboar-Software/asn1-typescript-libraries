@@ -1,7 +1,7 @@
 /* eslint-disable */
 import {
-    INTEGER,
-    ASN1Element as _Element,
+    type INTEGER,
+    type ASN1Element as _Element,
     ASN1TagClass as _TagClass,
     ASN1Construction as _Construction,
     ASN1UniversalType as _UniversalType,
@@ -40,7 +40,7 @@ type PrioritisedObject_Item_priority = INTEGER;
  * @type {number}
  */
 export
-const PrioritisedObject_Item_priority_highest: PrioritisedObject_Item_priority = 0; /* LONG_NAMED_INTEGER_VALUE */
+const PrioritisedObject_Item_priority_highest: 0 = 0 satisfies PrioritisedObject_Item_priority; /* LONG_NAMED_INTEGER_VALUE */
 
 /**
  * @summary PrioritisedObject_Item_priority_highest
@@ -52,7 +52,7 @@ const PrioritisedObject_Item_priority_highest: PrioritisedObject_Item_priority =
  * @type {number}
  */
 export
-const highest: PrioritisedObject_Item_priority = PrioritisedObject_Item_priority_highest; /* SHORT_NAMED_INTEGER_VALUE */
+const highest: 0 = PrioritisedObject_Item_priority_highest; /* SHORT_NAMED_INTEGER_VALUE */
 
 /**
  * @summary PrioritisedObject_Item_priority_lowest
@@ -64,7 +64,7 @@ const highest: PrioritisedObject_Item_priority = PrioritisedObject_Item_priority
  * @type {number}
  */
 export
-const PrioritisedObject_Item_priority_lowest: PrioritisedObject_Item_priority = 127; /* LONG_NAMED_INTEGER_VALUE */
+const PrioritisedObject_Item_priority_lowest: 127 = 127 satisfies PrioritisedObject_Item_priority; /* LONG_NAMED_INTEGER_VALUE */
 
 /**
  * @summary PrioritisedObject_Item_priority_lowest
@@ -76,13 +76,13 @@ const PrioritisedObject_Item_priority_lowest: PrioritisedObject_Item_priority = 
  * @type {number}
  */
 export
-const lowest: PrioritisedObject_Item_priority = PrioritisedObject_Item_priority_lowest; /* SHORT_NAMED_INTEGER_VALUE */
+const lowest: 127 = PrioritisedObject_Item_priority_lowest; /* SHORT_NAMED_INTEGER_VALUE */
 
 
-export const _decode_PrioritisedObject_Item_priority = $._decodeInteger;
+export const _decode_PrioritisedObject_Item_priority: $.ASN1Decoder<INTEGER> = $._decodeInteger;
 
 
-export const _encode_PrioritisedObject_Item_priority = $._encodeInteger;
+export const _encode_PrioritisedObject_Item_priority: $.ASN1Encoder<INTEGER> = $._encodeInteger;
 
 
 /* eslint-enable */

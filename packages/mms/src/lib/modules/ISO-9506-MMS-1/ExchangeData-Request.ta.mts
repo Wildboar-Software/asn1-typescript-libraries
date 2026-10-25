@@ -1,6 +1,6 @@
 /* eslint-disable */
 import {
-    ASN1Element as _Element,
+    type ASN1Element as _Element,
     ASN1TagClass as _TagClass,
     ASN1Construction as _Construction,
     ASN1UniversalType as _UniversalType,
@@ -10,8 +10,8 @@ import {
     ASN1ConstructionError as _ConstructionError,
 } from "@wildboar/asn1";
 import * as $ from "@wildboar/asn1/functional";
-import { ObjectName, _decode_ObjectName, _encode_ObjectName } from "../ISO-9506-MMS-1/ObjectName.ta.mjs";
-import { Data, _decode_Data, _encode_Data } from "../ISO-9506-MMS-1/Data.ta.mjs";
+import { type ObjectName, _decode_ObjectName, _encode_ObjectName } from "../ISO-9506-MMS-1/ObjectName.ta.mjs";
+import { type Data, _decode_Data, _encode_Data } from "../ISO-9506-MMS-1/Data.ta.mjs";
 
 
 /**
@@ -38,31 +38,37 @@ import { Data, _decode_Data, _encode_Data } from "../ISO-9506-MMS-1/Data.ta.mjs"
  */
 export
 class ExchangeData_Request {
+    /**
+     * @summary `dataExchangeName`.
+     * @description
+     *
+     * `&name` of the Data Exchange object to invoke.
+     * ISO 9506-1:2003 §15.2.1.1.1.
+     *
+     * @public
+     * @readonly
+     */
+    public readonly dataExchangeName: ObjectName;
+    /**
+     * @summary `listOfRequestData`.
+     * @description
+     *
+     * Input values matching `&request` in type and number.
+     * Empty list if there is no request data.
+     * ISO 9506-1:2003 §15.2.1.1.2.
+     *
+     * @public
+     * @readonly
+     */
+    public readonly listOfRequestData: Data[];
+
     constructor (
-        /**
-         * @summary `dataExchangeName`.
-         * @description
-         *
-         * `&name` of the Data Exchange object to invoke.
-         * ISO 9506-1:2003 §15.2.1.1.1.
-         *
-         * @public
-         * @readonly
-         */
-        readonly dataExchangeName: ObjectName,
-        /**
-         * @summary `listOfRequestData`.
-         * @description
-         *
-         * Input values matching `&request` in type and number.
-         * Empty list if there is no request data.
-         * ISO 9506-1:2003 §15.2.1.1.2.
-         *
-         * @public
-         * @readonly
-         */
-        readonly listOfRequestData: Data[]
-    ) {}
+        dataExchangeName: ObjectName,
+        listOfRequestData: Data[]
+    ) {
+        this.dataExchangeName = dataExchangeName;
+        this.listOfRequestData = listOfRequestData;
+    }
 
     /**
      * @summary Restructures an object into a ExchangeData_Request

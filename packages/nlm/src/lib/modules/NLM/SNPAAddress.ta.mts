@@ -1,8 +1,8 @@
 /* eslint-disable */
 import {
-    OCTET_STRING,
-    OBJECT_IDENTIFIER,
-    ASN1Element as _Element,
+    type OCTET_STRING,
+    type OBJECT_IDENTIFIER,
+    type ASN1Element as _Element,
     ASN1TagClass as _TagClass,
     ASN1Construction as _Construction,
     ASN1UniversalType as _UniversalType,
@@ -45,7 +45,7 @@ export class SNPAAddress {
      * @public
      * @readonly
      */
-    readonly type_: OBJECT_IDENTIFIER;
+    public readonly type_: OBJECT_IDENTIFIER;
     /**
      * @summary `address`.
      * @description
@@ -57,7 +57,7 @@ export class SNPAAddress {
      * @public
      * @readonly
      */
-    readonly address: OCTET_STRING;
+    public readonly address: OCTET_STRING;
 
     constructor(
         type_: OBJECT_IDENTIFIER,

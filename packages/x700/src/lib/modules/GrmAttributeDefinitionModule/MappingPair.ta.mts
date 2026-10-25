@@ -1,6 +1,6 @@
 /* eslint-disable */
 import {
-    ASN1Element as _Element,
+    type ASN1Element as _Element,
     ASN1TagClass as _TagClass,
     ASN1Construction as _Construction,
     ASN1UniversalType as _UniversalType,
@@ -11,12 +11,12 @@ import {
 } from '@wildboar/asn1';
 import * as $ from '@wildboar/asn1/functional';
 import {
-    RelationshipOperation,
+    type RelationshipOperation,
     _decode_RelationshipOperation,
     _encode_RelationshipOperation,
 } from '../GrmAttributeDefinitionModule/RelationshipOperation.ta.mjs';
 import {
-    MapsTo,
+    type MapsTo,
     _decode_MapsTo,
     _encode_MapsTo,
 } from '../GrmAttributeDefinitionModule/MapsTo.ta.mjs';
@@ -39,30 +39,36 @@ import {
  *
  */
 export class MappingPair {
+    /**
+     * @summary `relationshipOperation`.
+     * @description
+     *
+     * ESTABLISH, TERMINATE, BIND, UNBIND, QUERY, NOTIFY, or
+     * USER DEFINED, with optional names. ITU-T Rec. X.725 (11/95)
+     * A.2.3.5.
+     * @public
+     * @readonly
+     */
+    public readonly relationshipOperation: RelationshipOperation;
+    /**
+     * @summary `mapsTo`.
+     * @description
+     *
+     * Systems management operations (and their targets) that
+     * realize this relationship operation. ITU-T Rec. X.725
+     * (11/95) A.2.3.5.
+     * @public
+     * @readonly
+     */
+    public readonly mapsTo: MapsTo;
+
     constructor(
-        /**
-         * @summary `relationshipOperation`.
-         * @description
-         *
-         * ESTABLISH, TERMINATE, BIND, UNBIND, QUERY, NOTIFY, or
-         * USER DEFINED, with optional names. ITU-T Rec. X.725 (11/95)
-         * A.2.3.5.
-         * @public
-         * @readonly
-         */
-        readonly relationshipOperation: RelationshipOperation,
-        /**
-         * @summary `mapsTo`.
-         * @description
-         *
-         * Systems management operations (and their targets) that
-         * realize this relationship operation. ITU-T Rec. X.725
-         * (11/95) A.2.3.5.
-         * @public
-         * @readonly
-         */
-        readonly mapsTo: MapsTo
-    ) {}
+        relationshipOperation: RelationshipOperation,
+        mapsTo: MapsTo
+    ) {
+        this.relationshipOperation = relationshipOperation;
+        this.mapsTo = mapsTo;
+    }
 
     /**
      * @summary Restructures an object into a MappingPair

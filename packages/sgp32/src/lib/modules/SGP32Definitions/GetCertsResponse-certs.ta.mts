@@ -1,7 +1,7 @@
 /* eslint-disable */
 import {
     ASN1ConstructionError as _ConstructionError,
-    ASN1Element as _Element,
+    type ASN1Element as _Element,
     ASN1TagClass as _TagClass
 } from "@wildboar/asn1";
 import * as $ from "@wildboar/asn1/functional";
@@ -30,24 +30,30 @@ import { type Certificate, _decode_Certificate, _encode_Certificate } from "@wil
  */
 export
 class GetCertsResponse_certs {
+    /**
+     * @summary `eumCertificate`.
+     * @description
+     * EUM certificate, tag `'A5'`. SGP.32 v1.2, section 5.9.10.
+     * @public
+     * @readonly
+     */
+    public readonly eumCertificate: Certificate;
+    /**
+     * @summary `euiccCertificate`.
+     * @description
+     * eUICC certificate, tag `'A6'`. SGP.32 v1.2, section 5.9.10.
+     * @public
+     * @readonly
+     */
+    public readonly euiccCertificate: Certificate;
+
     constructor (
-        /**
-         * @summary `eumCertificate`.
-         * @description
-         * EUM certificate, tag `'A5'`. SGP.32 v1.2, section 5.9.10.
-         * @public
-         * @readonly
-         */
-        readonly eumCertificate: Certificate,
-        /**
-         * @summary `euiccCertificate`.
-         * @description
-         * eUICC certificate, tag `'A6'`. SGP.32 v1.2, section 5.9.10.
-         * @public
-         * @readonly
-         */
-        readonly euiccCertificate: Certificate
-    ) {}
+        eumCertificate: Certificate,
+        euiccCertificate: Certificate
+    ) {
+        this.eumCertificate = eumCertificate;
+        this.euiccCertificate = euiccCertificate;
+    }
 
     /**
      * @summary Restructures an object into a GetCertsResponse_certs

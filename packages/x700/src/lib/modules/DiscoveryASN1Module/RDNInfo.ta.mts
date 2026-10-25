@@ -1,7 +1,7 @@
 /* eslint-disable */
 import {
-    OPTIONAL,
-    ASN1Element as _Element,
+    type OPTIONAL,
+    type ASN1Element as _Element,
     ASN1TagClass as _TagClass,
     ASN1Construction as _Construction,
     ASN1UniversalType as _UniversalType,
@@ -12,12 +12,12 @@ import {
 } from '@wildboar/asn1';
 import * as $ from '@wildboar/asn1/functional';
 import {
-    RelativeDistinguishedName,
+    type RelativeDistinguishedName,
     _decode_RelativeDistinguishedName,
     _encode_RelativeDistinguishedName,
 } from '@wildboar/dn';
 import {
-    GdmoObjectClass,
+    type GdmoObjectClass,
     _decode_GdmoObjectClass,
     _encode_GdmoObjectClass,
 } from '../RepertoireASN1Module/GdmoObjectClass.ta.mjs';
@@ -42,28 +42,34 @@ import {
  *
  */
 export class RDNInfo {
+    /**
+     * @summary `rdn`.
+     * @description
+     *
+     * RDN that identifies this object relative to its superior in
+     * the discovered tree. ITU-T Rec. X.750 (10/96) §8.3.2.4.
+     * @public
+     * @readonly
+     */
+    public readonly rdn: RelativeDistinguishedName;
+    /**
+     * @summary `moClass`.
+     * @description
+     *
+     * Class of this object. Present when `classRequest` was true.
+     * ITU-T Rec. X.750 (10/96) §8.3.2.3–§8.3.2.4.
+     * @public
+     * @readonly
+     */
+    public readonly moClass?: OPTIONAL<GdmoObjectClass>;
+
     constructor(
-        /**
-         * @summary `rdn`.
-         * @description
-         *
-         * RDN that identifies this object relative to its superior in
-         * the discovered tree. ITU-T Rec. X.750 (10/96) §8.3.2.4.
-         * @public
-         * @readonly
-         */
-        readonly rdn: RelativeDistinguishedName,
-        /**
-         * @summary `moClass`.
-         * @description
-         *
-         * Class of this object. Present when `classRequest` was true.
-         * ITU-T Rec. X.750 (10/96) §8.3.2.3–§8.3.2.4.
-         * @public
-         * @readonly
-         */
-        readonly moClass?: OPTIONAL<GdmoObjectClass>
-    ) {}
+        rdn: RelativeDistinguishedName,
+        moClass?: OPTIONAL<GdmoObjectClass>
+    ) {
+        this.rdn = rdn;
+        this.moClass = moClass;
+    }
 
     /**
      * @summary Restructures an object into a RDNInfo

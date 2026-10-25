@@ -1,6 +1,6 @@
 /* eslint-disable */
 import {
-    ASN1Element as _Element,
+    type ASN1Element as _Element,
     ASN1TagClass as _TagClass,
     ASN1Construction as _Construction,
     ASN1UniversalType as _UniversalType,
@@ -12,8 +12,8 @@ import {
 import { type OPERATION } from "../Remote-Operations-Information-Objects/OPERATION.oca.mjs";
 import { _decode_Priority, _encode_Priority } from "../Remote-Operations-Information-Objects/Priority.ta.mjs";
 import { _decode_Code, _encode_Code } from "../Remote-Operations-Information-Objects/Code.ta.mjs";
-import { AbandonArgument, _decode_AbandonArgument, _encode_AbandonArgument } from "../DFRAbstractService/AbandonArgument.ta.mjs";
-import { AbandonResult, _decode_AbandonResult, _encode_AbandonResult } from "../DFRAbstractService/AbandonResult.ta.mjs";
+import { type AbandonArgument, _decode_AbandonArgument, _encode_AbandonArgument } from "../DFRAbstractService/AbandonArgument.ta.mjs";
+import { type AbandonResult, _decode_AbandonResult, _encode_AbandonResult } from "../DFRAbstractService/AbandonResult.ta.mjs";
 import { abandonFailed } from "../DFRAbstractService/abandonFailed.oa.mjs";
 import { id_opcode_abandon } from "../DFRAbstractService/id-opcode-abandon.va.mjs";
 

@@ -1,9 +1,9 @@
 /* eslint-disable */
 import {
     ASN1ConstructionError as _ConstructionError,
-    ASN1Element as _Element,
+    type ASN1Element as _Element,
     ASN1TagClass as _TagClass,
-    INTEGER
+    type INTEGER
 } from "@wildboar/asn1";
 import * as $ from "@wildboar/asn1/functional";
 import { _decode_MMSPeriodFormat, _encode_MMSPeriodFormat, _enum_for_MMSPeriodFormat, MMSPeriodFormat } from "../TS33128Payloads/MMSPeriodFormat.ta.mjs";
@@ -85,7 +85,7 @@ class MMSExpiry {
          * @static
          */
 
-    public static _enum_for_periodFormat = _enum_for_MMSPeriodFormat;
+    public static _enum_for_periodFormat: typeof _enum_for_MMSPeriodFormat = _enum_for_MMSPeriodFormat;
 }
 
 /**

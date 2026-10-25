@@ -1,6 +1,6 @@
 /* eslint-disable */
 import {
-    ASN1Element as _Element,
+    type ASN1Element as _Element,
     ASN1TagClass as _TagClass,
     ASN1Construction as _Construction,
     ASN1UniversalType as _UniversalType,
@@ -10,8 +10,8 @@ import {
     ASN1ConstructionError as _ConstructionError,
 } from "@wildboar/asn1";
 import * as $ from "@wildboar/asn1/functional";
-import { NumberOfDigits, _decode_NumberOfDigits, _encode_NumberOfDigits } from "../Core-INAP-CS1-DataTypes/NumberOfDigits.ta.mjs";
-import { ApplicationTimer, _decode_ApplicationTimer, _encode_ApplicationTimer } from "../Core-INAP-CS1-DataTypes/ApplicationTimer.ta.mjs";
+import { type NumberOfDigits, _decode_NumberOfDigits, _encode_NumberOfDigits } from "../Core-INAP-CS1-DataTypes/NumberOfDigits.ta.mjs";
+import { type ApplicationTimer, _decode_ApplicationTimer, _encode_ApplicationTimer } from "../Core-INAP-CS1-DataTypes/ApplicationTimer.ta.mjs";
 
 
 /**

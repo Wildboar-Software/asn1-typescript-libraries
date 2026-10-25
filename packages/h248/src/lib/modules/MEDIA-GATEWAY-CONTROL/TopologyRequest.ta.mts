@@ -1,14 +1,14 @@
 /* eslint-disable */
 import {
-    OPTIONAL,
-    ASN1Element as _Element,
+    type OPTIONAL,
+    type ASN1Element as _Element,
     ASN1TagClass as _TagClass
 } from "@wildboar/asn1";
 import * as $ from "@wildboar/asn1/functional";
 import { TerminationID, _decode_TerminationID, _encode_TerminationID } from "../MEDIA-GATEWAY-CONTROL/TerminationID.ta.mjs";
 import { TopologyRequest_topologyDirection, _decode_TopologyRequest_topologyDirection, _encode_TopologyRequest_topologyDirection, _enum_for_TopologyRequest_topologyDirection } from "../MEDIA-GATEWAY-CONTROL/TopologyRequest-topologyDirection.ta.mjs";
-import { StreamID, _decode_StreamID, _encode_StreamID } from "../MEDIA-GATEWAY-CONTROL/StreamID.ta.mjs";
-import { TopologyRequest_topologyDirectionExtension, _decode_TopologyRequest_topologyDirectionExtension, _encode_TopologyRequest_topologyDirectionExtension, _enum_for_TopologyRequest_topologyDirectionExtension } from "../MEDIA-GATEWAY-CONTROL/TopologyRequest-topologyDirectionExtension.ta.mjs";
+import { type StreamID, _decode_StreamID, _encode_StreamID } from "../MEDIA-GATEWAY-CONTROL/StreamID.ta.mjs";
+import { type TopologyRequest_topologyDirectionExtension, _decode_TopologyRequest_topologyDirectionExtension, _encode_TopologyRequest_topologyDirectionExtension, _enum_for_TopologyRequest_topologyDirectionExtension } from "../MEDIA-GATEWAY-CONTROL/TopologyRequest-topologyDirectionExtension.ta.mjs";
 
 
 /**
@@ -68,7 +68,7 @@ class TopologyRequest {
      * @public
      * @readonly
      */
-    readonly terminationFrom: TerminationID;
+    public readonly terminationFrom: TerminationID;
     /**
      * @summary `terminationTo`.
      * @description
@@ -80,7 +80,7 @@ class TopologyRequest {
      * @public
      * @readonly
      */
-    readonly terminationTo: TerminationID;
+    public readonly terminationTo: TerminationID;
     /**
      * @summary `topologyDirection`.
      * @description
@@ -91,7 +91,7 @@ class TopologyRequest {
      * @public
      * @readonly
      */
-    readonly topologyDirection: TopologyRequest_topologyDirection;
+    public readonly topologyDirection: TopologyRequest_topologyDirection;
     /**
      * @summary `streamID`.
      * @description
@@ -103,7 +103,7 @@ class TopologyRequest {
      * @public
      * @readonly
      */
-    readonly streamID?: OPTIONAL<StreamID>;
+    public readonly streamID?: OPTIONAL<StreamID>;
     /**
      * @summary `topologyDirectionExtension`.
      * @description
@@ -117,7 +117,7 @@ class TopologyRequest {
      * @public
      * @readonly
      */
-    readonly topologyDirectionExtension?: OPTIONAL<TopologyRequest_topologyDirectionExtension>;
+    public readonly topologyDirectionExtension?: OPTIONAL<TopologyRequest_topologyDirectionExtension>;
     /**
      * @summary Extensions that are not recognized.
      * @description
@@ -128,7 +128,7 @@ class TopologyRequest {
      * @public
      * @readonly
      */
-    readonly _unrecognizedExtensionsList: _Element[];
+    public readonly _unrecognizedExtensionsList: _Element[];
 
     constructor (
         terminationFrom: TerminationID,
@@ -168,13 +168,13 @@ class TopologyRequest {
          * @static
          */
 
-    public static _enum_for_topologyDirection = _enum_for_TopologyRequest_topologyDirection;        /**
+    public static _enum_for_topologyDirection: typeof _enum_for_TopologyRequest_topologyDirection = _enum_for_TopologyRequest_topologyDirection;        /**
          * @summary The enum used as the type of the component `topologyDirectionExtension`
          * @public
          * @static
          */
 
-    public static _enum_for_topologyDirectionExtension = _enum_for_TopologyRequest_topologyDirectionExtension;
+    public static _enum_for_topologyDirectionExtension: typeof _enum_for_TopologyRequest_topologyDirectionExtension = _enum_for_TopologyRequest_topologyDirectionExtension;
 }
 
 /**

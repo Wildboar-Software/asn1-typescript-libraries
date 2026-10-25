@@ -1,7 +1,7 @@
 /* eslint-disable */
 import {
-    NULL,
-    ASN1Element as _Element,
+    type NULL,
+    type ASN1Element as _Element,
     ASN1TagClass as _TagClass,
     ASN1Construction as _Construction,
     ASN1UniversalType as _UniversalType,
@@ -12,7 +12,7 @@ import {
 } from "@wildboar/asn1";
 import * as $ from "@wildboar/asn1/functional";
 import { CS_GetProgramInvocationAttributes_Response_control_controlling, _decode_CS_GetProgramInvocationAttributes_Response_control_controlling, _encode_CS_GetProgramInvocationAttributes_Response_control_controlling } from "../ISO-9506-MMS-1/CS-GetProgramInvocationAttributes-Response-control-controlling.ta.mjs";
-import { CS_GetProgramInvocationAttributes_Response_control_controlled, _decode_CS_GetProgramInvocationAttributes_Response_control_controlled, _encode_CS_GetProgramInvocationAttributes_Response_control_controlled } from "../ISO-9506-MMS-1/CS-GetProgramInvocationAttributes-Response-control-controlled.ta.mjs";
+import { type CS_GetProgramInvocationAttributes_Response_control_controlled, _decode_CS_GetProgramInvocationAttributes_Response_control_controlled, _encode_CS_GetProgramInvocationAttributes_Response_control_controlled } from "../ISO-9506-MMS-1/CS-GetProgramInvocationAttributes-Response-control-controlled.ta.mjs";
 
 
 /**

@@ -2,7 +2,7 @@
 import { type EXTENSION } from "../AuthenticationFramework/EXTENSION.oca.mjs";
 import { id_ce_orderedList } from "../CertificateExtensions/id-ce-orderedList.va.mjs";
 import {
-    OrderedListSyntax,
+    type OrderedListSyntax,
     _decode_OrderedListSyntax,
     _encode_OrderedListSyntax,
 } from "../CertificateExtensions/OrderedListSyntax.ta.mjs";

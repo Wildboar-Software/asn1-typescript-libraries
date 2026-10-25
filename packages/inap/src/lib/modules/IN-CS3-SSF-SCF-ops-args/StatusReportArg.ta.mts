@@ -1,17 +1,17 @@
 /* eslint-disable */
 import {
-    OPTIONAL,
-    ASN1Element as _Element,
+    type OPTIONAL,
+    type ASN1Element as _Element,
     ASN1TagClass as _TagClass
 } from "@wildboar/asn1";
 import * as $ from "@wildboar/asn1/functional";
 import { ResourceStatus, _decode_ResourceStatus, _encode_ResourceStatus, _enum_for_ResourceStatus } from "../IN-CS3-SSF-SCF-datatypes/ResourceStatus.ta.mjs";
 // export { ResourceStatus, _enum_for_ResourceStatus, ResourceStatus_busy /* IMPORTED_LONG_ENUMERATION_ITEM */, busy /* IMPORTED_SHORT_ENUMERATION_ITEM */, ResourceStatus_idle /* IMPORTED_LONG_ENUMERATION_ITEM */, idle /* IMPORTED_SHORT_ENUMERATION_ITEM */, _decode_ResourceStatus, _encode_ResourceStatus } from "../IN-CS3-SSF-SCF-datatypes/ResourceStatus.ta.mjs";
-import { CorrelationID, _decode_CorrelationID, _encode_CorrelationID } from "../IN-CS3-SSF-SCF-datatypes/CorrelationID.ta.mjs";
+import { type CorrelationID, _decode_CorrelationID, _encode_CorrelationID } from "../IN-CS3-SSF-SCF-datatypes/CorrelationID.ta.mjs";
 // export { CorrelationID, _decode_CorrelationID, _encode_CorrelationID } from "../IN-CS3-SSF-SCF-datatypes/CorrelationID.ta.mjs";
-import { ResourceID, _decode_ResourceID, _encode_ResourceID } from "../IN-CS3-SSF-SCF-datatypes/ResourceID.ta.mjs";
+import { type ResourceID, _decode_ResourceID, _encode_ResourceID } from "../IN-CS3-SSF-SCF-datatypes/ResourceID.ta.mjs";
 // export { ResourceID, _decode_ResourceID, _encode_ResourceID } from "../IN-CS3-SSF-SCF-datatypes/ResourceID.ta.mjs";
-import { Extensions, _decode_Extensions, _encode_Extensions } from "../IN-CS3-common-datatypes/Extensions.ta.mjs";
+import { type Extensions, _decode_Extensions, _encode_Extensions } from "../IN-CS3-common-datatypes/Extensions.ta.mjs";
 // export { Extensions, _decode_Extensions, _encode_Extensions } from "../IN-CS3-common-datatypes/Extensions.ta.mjs";
 import { ReportCondition, _decode_ReportCondition, _encode_ReportCondition, _enum_for_ReportCondition } from "../IN-CS3-SSF-SCF-datatypes/ReportCondition.ta.mjs";
 // export { ReportCondition, _enum_for_ReportCondition, ReportCondition_statusReport /* IMPORTED_LONG_ENUMERATION_ITEM */, statusReport /* IMPORTED_SHORT_ENUMERATION_ITEM */, ReportCondition_timerExpired /* IMPORTED_LONG_ENUMERATION_ITEM */, timerExpired /* IMPORTED_SHORT_ENUMERATION_ITEM */, ReportCondition_canceled /* IMPORTED_LONG_ENUMERATION_ITEM */, canceled /* IMPORTED_SHORT_ENUMERATION_ITEM */, _decode_ReportCondition, _encode_ReportCondition } from "../IN-CS3-SSF-SCF-datatypes/ReportCondition.ta.mjs";
@@ -113,13 +113,13 @@ class StatusReportArg {
          * @static
          */
 
-    public static _enum_for_resourceStatus = _enum_for_ResourceStatus;        /**
+    public static _enum_for_resourceStatus: typeof _enum_for_ResourceStatus = _enum_for_ResourceStatus;        /**
          * @summary The enum used as the type of the component `reportCondition`
          * @public
          * @static
          */
 
-    public static _enum_for_reportCondition = _enum_for_ReportCondition;
+    public static _enum_for_reportCondition: typeof _enum_for_ReportCondition = _enum_for_ReportCondition;
 }
 
 /**

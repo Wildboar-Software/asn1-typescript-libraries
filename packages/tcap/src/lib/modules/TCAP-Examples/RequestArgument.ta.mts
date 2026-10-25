@@ -1,7 +1,7 @@
 /* eslint-disable */
 import {
-    OPTIONAL,
-    ASN1Element as _Element,
+    type OPTIONAL,
+    type ASN1Element as _Element,
     ASN1TagClass as _TagClass,
     ASN1Construction as _Construction,
     ASN1UniversalType as _UniversalType,
@@ -37,20 +37,26 @@ import {
  *
  */
 export class RequestArgument {
+    /**
+     * @summary `calledNumber`.
+     * @public
+     * @readonly
+     */
+    public readonly calledNumber: IsdnNumber;
+    /**
+     * @summary `basicService`.
+     * @public
+     * @readonly
+     */
+    public readonly basicService?: OPTIONAL<BasicServiceIndicator>;
+
     constructor(
-        /**
-         * @summary `calledNumber`.
-         * @public
-         * @readonly
-         */
-        readonly calledNumber: IsdnNumber,
-        /**
-         * @summary `basicService`.
-         * @public
-         * @readonly
-         */
-        readonly basicService?: OPTIONAL<BasicServiceIndicator>
-    ) {}
+        calledNumber: IsdnNumber,
+        basicService?: OPTIONAL<BasicServiceIndicator>
+    ) {
+        this.calledNumber = calledNumber;
+        this.basicService = basicService;
+    }
 
     /**
      * @summary Restructures an object into a RequestArgument
@@ -76,7 +82,7 @@ export class RequestArgument {
      * @static
      */
 
-    public static _enum_for_basicService = _enum_for_BasicServiceIndicator;
+    public static _enum_for_basicService: typeof _enum_for_BasicServiceIndicator = _enum_for_BasicServiceIndicator;
 }
 
 /**

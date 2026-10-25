@@ -44,7 +44,7 @@ export class AddMaster_RequestParams {
    * @public
    * @readonly
    */
-  readonly bipVersion: BioAPI_VERSION;
+  public readonly bipVersion: BioAPI_VERSION;
 
   constructor(
     bipVersion: BioAPI_VERSION

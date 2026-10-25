@@ -1,6 +1,6 @@
 /* eslint-disable */
 import {
-  OPTIONAL,
+  type OPTIONAL,
   ASN1Element as _Element,
   ASN1TagClass as _TagClass,
   ASN1Construction as _Construction,
@@ -12,7 +12,7 @@ import {
 } from '@wildboar/asn1';
 import * as $ from '@wildboar/asn1/functional';
 import {
-  Date_Time,
+  type Date_Time,
   _decode_Date_Time,
   _encode_Date_Time,
 } from '../CBEFF-DATA-ELEMENTS/Date-Time.ta.mjs';
@@ -36,13 +36,13 @@ export class BIRValidityPeriod {
    * @public
    * @readonly
    */
-  readonly not_valid_before?: OPTIONAL<Date_Time>;
+  public readonly not_valid_before?: OPTIONAL<Date_Time>;
   /**
    * @summary `not_valid_after`.
    * @public
    * @readonly
    */
-  readonly not_valid_after?: OPTIONAL<Date_Time>;
+  public readonly not_valid_after?: OPTIONAL<Date_Time>;
 
   constructor(
     not_valid_before?: OPTIONAL<Date_Time>,

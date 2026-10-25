@@ -1,19 +1,19 @@
 /* eslint-disable */
 import {
-    ASN1Element as _Element,
+    type ASN1Element as _Element,
     ASN1TagClass as _TagClass,
-    OPTIONAL,
+    type OPTIONAL,
     TRUE_BIT,
 } from "@wildboar/asn1";
 import * as $ from "@wildboar/asn1/functional";
 import {
-    Versions,
+    type Versions,
     Versions_v1 /* IMPORTED_LONG_NAMED_BIT */,
     _decode_Versions,
     _encode_Versions,
 } from "../DirectoryAbstractService/Versions.ta.mjs";
 import {
-    DSACredentials,
+    type DSACredentials,
     _decode_DSACredentials,
     _encode_DSACredentials,
 } from "../DistributedOperations/DSACredentials.ta.mjs";
@@ -36,35 +36,43 @@ import {
  *
  */
 export class DSABindArgument {
+    /**
+     * @summary `credentials`.
+     * @description
+     *
+     * DSA AE-title as a DN. CHOICE `simple`/`strong`/
+     * `externalProcedure`/`spkm`; no `sasl`.
+     *
+     * @public
+     * @readonly
+     */
+    public readonly credentials?: OPTIONAL<DSACredentials>;
+    /**
+     * @summary `versions`.
+     * @description
+     *
+     * DEFAULT `{v1}`.
+     *
+     * @public
+     * @readonly
+     */
+    public readonly versions?: OPTIONAL<Versions>;
+    /**
+     * @summary Extensions that are not recognized.
+     * @public
+     * @readonly
+     */
+    public readonly _unrecognizedExtensionsList: _Element[];
+
     constructor(
-        /**
-         * @summary `credentials`.
-         * @description
-         *
-         * DSA AE-title as a DN. CHOICE `simple`/`strong`/
-         * `externalProcedure`/`spkm`; no `sasl`.
-         *
-         * @public
-         * @readonly
-         */
-        readonly credentials?: OPTIONAL<DSACredentials>,
-        /**
-         * @summary `versions`.
-         * @description
-         *
-         * DEFAULT `{v1}`.
-         *
-         * @public
-         * @readonly
-         */
-        readonly versions?: OPTIONAL<Versions>,
-        /**
-         * @summary Extensions that are not recognized.
-         * @public
-         * @readonly
-         */
-        readonly _unrecognizedExtensionsList: _Element[] = []
-    ) {}
+        credentials?: OPTIONAL<DSACredentials>,
+        versions?: OPTIONAL<Versions>,
+        _unrecognizedExtensionsList: _Element[] = []
+    ) {
+        this.credentials = credentials;
+        this.versions = versions;
+        this._unrecognizedExtensionsList = _unrecognizedExtensionsList;
+    }
 
     /**
      * @summary Restructures an object into a DSABindArgument

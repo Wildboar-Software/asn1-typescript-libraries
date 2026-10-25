@@ -1,15 +1,15 @@
 /* eslint-disable */
 import {
-    OPTIONAL,
-    ASN1Element as _Element,
+    type OPTIONAL,
+    type ASN1Element as _Element,
     ASN1TagClass as _TagClass
 } from "@wildboar/asn1";
 import * as $ from "@wildboar/asn1/functional";
-import { SUPI, _decode_SUPI, _encode_SUPI } from "../TS33128Payloads/SUPI.ta.mjs";
+import { type SUPI, _decode_SUPI, _encode_SUPI } from "../TS33128Payloads/SUPI.ta.mjs";
 // export { SUPI, _decode_SUPI, _encode_SUPI } from "../TS33128Payloads/SUPI.ta.mjs";
-import { GPSI, _decode_GPSI, _encode_GPSI } from "../TS33128Payloads/GPSI.ta.mjs";
+import { type GPSI, _decode_GPSI, _encode_GPSI } from "../TS33128Payloads/GPSI.ta.mjs";
 // export { GPSI, _decode_GPSI, _encode_GPSI } from "../TS33128Payloads/GPSI.ta.mjs";
-import { FiveGProSeMessage, _decode_FiveGProSeMessage, _encode_FiveGProSeMessage } from "../TS33128Payloads/FiveGProSeMessage.ta.mjs";
+import { type FiveGProSeMessage, _decode_FiveGProSeMessage, _encode_FiveGProSeMessage } from "../TS33128Payloads/FiveGProSeMessage.ta.mjs";
 // export { FiveGProSeMessage, _decode_FiveGProSeMessage, _encode_FiveGProSeMessage } from "../TS33128Payloads/FiveGProSeMessage.ta.mjs";
 
 

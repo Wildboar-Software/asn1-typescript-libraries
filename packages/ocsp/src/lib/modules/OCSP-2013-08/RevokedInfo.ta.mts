@@ -1,13 +1,13 @@
 /* eslint-disable */
 import {
-    ASN1Element as _Element,
+    type ASN1Element as _Element,
     ASN1TagClass as _TagClass,
-    GeneralizedTime,
-    OPTIONAL,
+    type GeneralizedTime,
+    type OPTIONAL,
 } from "@wildboar/asn1";
 import * as $ from "@wildboar/asn1/functional";
 import {
-    CRLReason,
+    type CRLReason,
     _decode_CRLReason,
     _encode_CRLReason,
 } from "@wildboar/pki-stub";
@@ -36,32 +36,38 @@ import {
  *
  */
 export class RevokedInfo {
+    /**
+     * @summary `revocationTime`.
+     * @description
+     *
+     * Time at which the certificate was revoked or placed on hold
+     * ([RFC 6960 §2.4](https://datatracker.ietf.org/doc/html/rfc6960#section-2.4)).
+     *
+     * @public
+     * @readonly
+     */
+    public readonly revocationTime: GeneralizedTime;
+    /**
+     * @summary `revocationReason`.
+     * @description
+     *
+     * Optional reason the certificate was revoked (`CRLReason`
+     * from [RFC 5280](https://datatracker.ietf.org/doc/html/rfc5280))
+     * ([RFC 6960 §4.2.1](https://datatracker.ietf.org/doc/html/rfc6960#section-4.2.1),
+     * [§4.2.2.3](https://datatracker.ietf.org/doc/html/rfc6960#section-4.2.2.3)).
+     *
+     * @public
+     * @readonly
+     */
+    public readonly revocationReason?: OPTIONAL<CRLReason>;
+
     constructor(
-        /**
-         * @summary `revocationTime`.
-         * @description
-         *
-         * Time at which the certificate was revoked or placed on hold
-         * ([RFC 6960 §2.4](https://datatracker.ietf.org/doc/html/rfc6960#section-2.4)).
-         *
-         * @public
-         * @readonly
-         */
-        readonly revocationTime: GeneralizedTime,
-        /**
-         * @summary `revocationReason`.
-         * @description
-         *
-         * Optional reason the certificate was revoked (`CRLReason`
-         * from [RFC 5280](https://datatracker.ietf.org/doc/html/rfc5280))
-         * ([RFC 6960 §4.2.1](https://datatracker.ietf.org/doc/html/rfc6960#section-4.2.1),
-         * [§4.2.2.3](https://datatracker.ietf.org/doc/html/rfc6960#section-4.2.2.3)).
-         *
-         * @public
-         * @readonly
-         */
-        readonly revocationReason?: OPTIONAL<CRLReason>
-    ) {}
+        revocationTime: GeneralizedTime,
+        revocationReason?: OPTIONAL<CRLReason>
+    ) {
+        this.revocationTime = revocationTime;
+        this.revocationReason = revocationReason;
+    }
 
     /**
      * @summary Restructures an object into a RevokedInfo

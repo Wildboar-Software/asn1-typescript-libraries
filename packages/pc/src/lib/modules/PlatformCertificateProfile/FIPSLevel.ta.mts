@@ -1,9 +1,9 @@
 /* eslint-disable */
 import {
-    OPTIONAL,
-    BOOLEAN,
-    IA5String,
-    ASN1Element as _Element,
+    type OPTIONAL,
+    type BOOLEAN,
+    type IA5String,
+    type ASN1Element as _Element,
     ASN1TagClass as _TagClass,
     ASN1Construction as _Construction,
     ASN1UniversalType as _UniversalType,
@@ -34,40 +34,48 @@ import { SecurityLevel, _enum_for_SecurityLevel, _decode_SecurityLevel, _encode_
  */
 export
 class FIPSLevel {
+    /**
+     * @summary `version`.
+     * @description
+     *
+     * FIPS 140 standard version: `"140-1"`, `"140-2"`, or
+     * `"140-3"`. Bounded by `strmax`. §3.1.1.
+     *
+     * @public
+     * @readonly
+     */
+    public readonly version: IA5String;
+    /**
+     * @summary `level`.
+     * @description
+     *
+     * FIPS 140 security level 1 through 4. §3.1.1.
+     *
+     * @public
+     * @readonly
+     */
+    public readonly level: SecurityLevel;
+    /**
+     * @summary `plus`.
+     * @description
+     *
+     * Default `FALSE`. The profile lists this field but does not
+     * define further semantics. §3.1.1.
+     *
+     * @public
+     * @readonly
+     */
+    public readonly plus?: OPTIONAL<BOOLEAN>;
+
     constructor (
-        /**
-         * @summary `version`.
-         * @description
-         *
-         * FIPS 140 standard version: `"140-1"`, `"140-2"`, or
-         * `"140-3"`. Bounded by `strmax`. §3.1.1.
-         *
-         * @public
-         * @readonly
-         */
-        readonly version: IA5String,
-        /**
-         * @summary `level`.
-         * @description
-         *
-         * FIPS 140 security level 1 through 4. §3.1.1.
-         *
-         * @public
-         * @readonly
-         */
-        readonly level: SecurityLevel,
-        /**
-         * @summary `plus`.
-         * @description
-         *
-         * Default `FALSE`. The profile lists this field but does not
-         * define further semantics. §3.1.1.
-         *
-         * @public
-         * @readonly
-         */
-        readonly plus?: OPTIONAL<BOOLEAN>
-    ) {}
+        version: IA5String,
+        level: SecurityLevel,
+        plus?: OPTIONAL<BOOLEAN>
+    ) {
+        this.version = version;
+        this.level = level;
+        this.plus = plus;
+    }
 
     /**
      * @summary Restructures an object into a FIPSLevel
@@ -97,7 +105,7 @@ class FIPSLevel {
      * @public
      * @static
      */
-    public static _enum_for_level = _enum_for_SecurityLevel;
+    public static _enum_for_level: typeof _enum_for_SecurityLevel = _enum_for_SecurityLevel;
 }
 
 /**

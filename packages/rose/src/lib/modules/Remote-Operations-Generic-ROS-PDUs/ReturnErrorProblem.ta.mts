@@ -1,6 +1,6 @@
 /* eslint-disable */
 import {
-  INTEGER,
+  type INTEGER,
   ASN1Element as _Element,
   ASN1TagClass as _TagClass,
   ASN1Construction as _Construction,
@@ -36,7 +36,7 @@ export type ReturnErrorProblem = INTEGER;
  * @constant
  * @type {number}
  */
-export const ReturnErrorProblem_unrecognizedInvocation: ReturnErrorProblem = 0; /* LONG_NAMED_INTEGER_VALUE */
+export const ReturnErrorProblem_unrecognizedInvocation: 0 = 0 satisfies ReturnErrorProblem; /* LONG_NAMED_INTEGER_VALUE */
 
 
 /**
@@ -45,7 +45,7 @@ export const ReturnErrorProblem_unrecognizedInvocation: ReturnErrorProblem = 0; 
  * @constant
  * @type {number}
  */
-export const unrecognizedInvocation: ReturnErrorProblem = ReturnErrorProblem_unrecognizedInvocation; /* SHORT_NAMED_INTEGER_VALUE */
+export const unrecognizedInvocation: 0 = ReturnErrorProblem_unrecognizedInvocation; /* SHORT_NAMED_INTEGER_VALUE */
 
 
 /**
@@ -54,7 +54,7 @@ export const unrecognizedInvocation: ReturnErrorProblem = ReturnErrorProblem_unr
  * @constant
  * @type {number}
  */
-export const ReturnErrorProblem_errorResponseUnexpected: ReturnErrorProblem = 1; /* LONG_NAMED_INTEGER_VALUE */
+export const ReturnErrorProblem_errorResponseUnexpected: 1 = 1 satisfies ReturnErrorProblem; /* LONG_NAMED_INTEGER_VALUE */
 
 
 /**
@@ -63,7 +63,7 @@ export const ReturnErrorProblem_errorResponseUnexpected: ReturnErrorProblem = 1;
  * @constant
  * @type {number}
  */
-export const errorResponseUnexpected: ReturnErrorProblem = ReturnErrorProblem_errorResponseUnexpected; /* SHORT_NAMED_INTEGER_VALUE */
+export const errorResponseUnexpected: 1 = ReturnErrorProblem_errorResponseUnexpected; /* SHORT_NAMED_INTEGER_VALUE */
 
 
 /**
@@ -72,7 +72,7 @@ export const errorResponseUnexpected: ReturnErrorProblem = ReturnErrorProblem_er
  * @constant
  * @type {number}
  */
-export const ReturnErrorProblem_unrecognizedError: ReturnErrorProblem = 2; /* LONG_NAMED_INTEGER_VALUE */
+export const ReturnErrorProblem_unrecognizedError: 2 = 2 satisfies ReturnErrorProblem; /* LONG_NAMED_INTEGER_VALUE */
 
 
 /**
@@ -81,7 +81,7 @@ export const ReturnErrorProblem_unrecognizedError: ReturnErrorProblem = 2; /* LO
  * @constant
  * @type {number}
  */
-export const unrecognizedError: ReturnErrorProblem = ReturnErrorProblem_unrecognizedError; /* SHORT_NAMED_INTEGER_VALUE */
+export const unrecognizedError: 2 = ReturnErrorProblem_unrecognizedError; /* SHORT_NAMED_INTEGER_VALUE */
 
 
 /**
@@ -90,7 +90,7 @@ export const unrecognizedError: ReturnErrorProblem = ReturnErrorProblem_unrecogn
  * @constant
  * @type {number}
  */
-export const ReturnErrorProblem_unexpectedError: ReturnErrorProblem = 3; /* LONG_NAMED_INTEGER_VALUE */
+export const ReturnErrorProblem_unexpectedError: 3 = 3 satisfies ReturnErrorProblem; /* LONG_NAMED_INTEGER_VALUE */
 
 
 /**
@@ -99,7 +99,7 @@ export const ReturnErrorProblem_unexpectedError: ReturnErrorProblem = 3; /* LONG
  * @constant
  * @type {number}
  */
-export const unexpectedError: ReturnErrorProblem = ReturnErrorProblem_unexpectedError; /* SHORT_NAMED_INTEGER_VALUE */
+export const unexpectedError: 3 = ReturnErrorProblem_unexpectedError; /* SHORT_NAMED_INTEGER_VALUE */
 
 
 /**
@@ -108,7 +108,7 @@ export const unexpectedError: ReturnErrorProblem = ReturnErrorProblem_unexpected
  * @constant
  * @type {number}
  */
-export const ReturnErrorProblem_mistypedParameter: ReturnErrorProblem = 4; /* LONG_NAMED_INTEGER_VALUE */
+export const ReturnErrorProblem_mistypedParameter: 4 = 4 satisfies ReturnErrorProblem; /* LONG_NAMED_INTEGER_VALUE */
 
 
 /**
@@ -117,17 +117,17 @@ export const ReturnErrorProblem_mistypedParameter: ReturnErrorProblem = 4; /* LO
  * @constant
  * @type {number}
  */
-export const mistypedParameter: ReturnErrorProblem = ReturnErrorProblem_mistypedParameter; /* SHORT_NAMED_INTEGER_VALUE */
+export const mistypedParameter: 4 = ReturnErrorProblem_mistypedParameter; /* SHORT_NAMED_INTEGER_VALUE */
 
 
 
 
-export const _decode_ReturnErrorProblem = $._decodeInteger;
+export const _decode_ReturnErrorProblem: $.ASN1Decoder<INTEGER> = $._decodeInteger;
 
 
 
 
-export const _encode_ReturnErrorProblem = $._encodeInteger;
+export const _encode_ReturnErrorProblem: $.ASN1Encoder<INTEGER> = $._encodeInteger;
 
 
 /* eslint-enable */

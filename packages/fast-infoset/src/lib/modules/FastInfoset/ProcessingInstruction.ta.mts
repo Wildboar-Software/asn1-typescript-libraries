@@ -11,12 +11,12 @@ import {
 } from '@wildboar/asn1';
 import * as $ from '@wildboar/asn1/functional';
 import {
-  IdentifyingStringOrIndex,
+  type IdentifyingStringOrIndex,
   _decode_IdentifyingStringOrIndex,
   _encode_IdentifyingStringOrIndex,
 } from '../FastInfoset/IdentifyingStringOrIndex.ta.mjs';
 import {
-  NonIdentifyingStringOrIndex,
+  type NonIdentifyingStringOrIndex,
   _decode_NonIdentifyingStringOrIndex,
   _encode_NonIdentifyingStringOrIndex,
 } from '../FastInfoset/NonIdentifyingStringOrIndex.ta.mjs';
@@ -49,7 +49,7 @@ export class ProcessingInstruction {
    * @public
    * @readonly
    */
-  readonly target: IdentifyingStringOrIndex;
+  public readonly target: IdentifyingStringOrIndex;
   /**
    * @summary `content`.
    * @description [content]; OTHER STRING category. At most
@@ -57,7 +57,7 @@ export class ProcessingInstruction {
    * @public
    * @readonly
    */
-  readonly content: NonIdentifyingStringOrIndex;
+  public readonly content: NonIdentifyingStringOrIndex;
 
   constructor(
     target: IdentifyingStringOrIndex,

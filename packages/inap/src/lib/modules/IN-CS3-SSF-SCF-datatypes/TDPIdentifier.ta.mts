@@ -1,11 +1,11 @@
 /* eslint-disable */
 import {
-    INTEGER,
-    ASN1Element as _Element,
+    type INTEGER,
+    type ASN1Element as _Element,
     ASN1TagClass as _TagClass
 } from "@wildboar/asn1";
 import * as $ from "@wildboar/asn1/functional";
-import { Triggers, _decode_Triggers, _encode_Triggers } from "../IN-CS3-SSF-SCF-datatypes/Triggers.ta.mjs";
+import { type Triggers, _decode_Triggers, _encode_Triggers } from "../IN-CS3-SSF-SCF-datatypes/Triggers.ta.mjs";
 // export { Triggers, _decode_Triggers, _encode_Triggers } from "../IN-CS3-SSF-SCF-datatypes/Triggers.ta.mjs";
 
 

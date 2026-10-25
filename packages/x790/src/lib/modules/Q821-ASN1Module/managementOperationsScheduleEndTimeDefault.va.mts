@@ -1,10 +1,10 @@
 /* eslint-disable */
 import {
-    NULL,
+    type NULL,
 } from "@wildboar/asn1";
 import * as $ from "@wildboar/asn1/functional";
 import {
-    StopTime,
+    type StopTime,
 } from "../Attribute-ASN1Module/StopTime.ta.mjs";
 
 

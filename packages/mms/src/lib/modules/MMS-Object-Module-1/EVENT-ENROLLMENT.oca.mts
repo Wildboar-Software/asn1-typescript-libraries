@@ -1,9 +1,9 @@
 /* eslint-disable */
 import {
-    BOOLEAN,
-    INTEGER,
-    NULL,
-    ASN1Element as _Element,
+    type BOOLEAN,
+    type INTEGER,
+    type NULL,
+    type ASN1Element as _Element,
     ASN1TagClass as _TagClass,
     ASN1Construction as _Construction,
     ASN1UniversalType as _UniversalType,
@@ -13,16 +13,16 @@ import {
     ASN1ConstructionError as _ConstructionError,
 } from "@wildboar/asn1";
 import * as $ from "@wildboar/asn1/functional";
-import { ObjectName, _decode_ObjectName, _encode_ObjectName } from "../ISO-9506-MMS-1/ObjectName.ta.mjs";
-import { Identifier, _decode_Identifier, _encode_Identifier } from "../ISO-9506-MMS-1/Identifier.ta.mjs";
-import { EE_Class, _decode_EE_Class, _encode_EE_Class } from "../MMS-Object-Module-1/EE-Class.ta.mjs";
-import { Transitions, _decode_Transitions, _encode_Transitions } from "../MMS-Object-Module-1/Transitions.ta.mjs";
-import { EE_Duration, _decode_EE_Duration, _encode_EE_Duration } from "../MMS-Object-Module-1/EE-Duration.ta.mjs";
+import { type ObjectName, _decode_ObjectName, _encode_ObjectName } from "../ISO-9506-MMS-1/ObjectName.ta.mjs";
+import { type Identifier, _decode_Identifier, _encode_Identifier } from "../ISO-9506-MMS-1/Identifier.ta.mjs";
+import { type EE_Class, _decode_EE_Class, _encode_EE_Class } from "../MMS-Object-Module-1/EE-Class.ta.mjs";
+import { type Transitions, _decode_Transitions, _encode_Transitions } from "../MMS-Object-Module-1/Transitions.ta.mjs";
+import { type EE_Duration, _decode_EE_Duration, _encode_EE_Duration } from "../MMS-Object-Module-1/EE-Duration.ta.mjs";
 import { ApplicationReference, _decode_ApplicationReference, _encode_ApplicationReference } from "../MMS-Environment-1/ApplicationReference.ta.mjs";
-import { AlarmAckRule, _decode_AlarmAckRule, _encode_AlarmAckRule } from "../MMS-Object-Module-1/AlarmAckRule.ta.mjs";
-import { EventTime, _decode_EventTime, _encode_EventTime } from "../MMS-Object-Module-1/EventTime.ta.mjs";
-import { EC_State, _decode_EC_State, _encode_EC_State } from "../MMS-Object-Module-1/EC-State.ta.mjs";
-import { MMSString, _decode_MMSString, _encode_MMSString } from "../ISO-9506-MMS-1/MMSString.ta.mjs";
+import { type AlarmAckRule, _decode_AlarmAckRule, _encode_AlarmAckRule } from "../MMS-Object-Module-1/AlarmAckRule.ta.mjs";
+import { type EventTime, _decode_EventTime, _encode_EventTime } from "../MMS-Object-Module-1/EventTime.ta.mjs";
+import { type EC_State, _decode_EC_State, _encode_EC_State } from "../MMS-Object-Module-1/EC-State.ta.mjs";
+import { type MMSString, _decode_MMSString, _encode_MMSString } from "../ISO-9506-MMS-1/MMSString.ta.mjs";
 
 
 /**
@@ -291,7 +291,7 @@ type EVENT_ENROLLMENT_ackState = _enum_for_EVENT_ENROLLMENT_ackState;
  * @enum {number}
  */
 export
-const EVENT_ENROLLMENT_ackState = _enum_for_EVENT_ENROLLMENT_ackState;
+const EVENT_ENROLLMENT_ackState: typeof _enum_for_EVENT_ENROLLMENT_ackState = _enum_for_EVENT_ENROLLMENT_ackState;
 
 /**
  * @summary EVENT_ENROLLMENT_ackState_acked
@@ -299,7 +299,7 @@ const EVENT_ENROLLMENT_ackState = _enum_for_EVENT_ENROLLMENT_ackState;
  * @type {number}
  */
 export
-const EVENT_ENROLLMENT_ackState_acked: EVENT_ENROLLMENT_ackState = EVENT_ENROLLMENT_ackState.acked; /* LONG_NAMED_ENUMERATED_VALUE */
+const EVENT_ENROLLMENT_ackState_acked: _enum_for_EVENT_ENROLLMENT_ackState.acked = EVENT_ENROLLMENT_ackState.acked; /* LONG_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary EVENT_ENROLLMENT_ackState_noAckA
@@ -307,7 +307,7 @@ const EVENT_ENROLLMENT_ackState_acked: EVENT_ENROLLMENT_ackState = EVENT_ENROLLM
  * @type {number}
  */
 export
-const EVENT_ENROLLMENT_ackState_noAckA: EVENT_ENROLLMENT_ackState = EVENT_ENROLLMENT_ackState.noAckA; /* LONG_NAMED_ENUMERATED_VALUE */
+const EVENT_ENROLLMENT_ackState_noAckA: _enum_for_EVENT_ENROLLMENT_ackState.noAckA = EVENT_ENROLLMENT_ackState.noAckA; /* LONG_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary EVENT_ENROLLMENT_ackState_noAckI
@@ -315,6 +315,6 @@ const EVENT_ENROLLMENT_ackState_noAckA: EVENT_ENROLLMENT_ackState = EVENT_ENROLL
  * @type {number}
  */
 export
-const EVENT_ENROLLMENT_ackState_noAckI: EVENT_ENROLLMENT_ackState = EVENT_ENROLLMENT_ackState.noAckI; /* LONG_NAMED_ENUMERATED_VALUE */
+const EVENT_ENROLLMENT_ackState_noAckI: _enum_for_EVENT_ENROLLMENT_ackState.noAckI = EVENT_ENROLLMENT_ackState.noAckI; /* LONG_NAMED_ENUMERATED_VALUE */
 
 /* eslint-enable */

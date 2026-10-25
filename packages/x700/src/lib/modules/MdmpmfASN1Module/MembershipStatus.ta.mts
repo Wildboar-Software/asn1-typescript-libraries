@@ -1,6 +1,6 @@
 /* eslint-disable */
 import {
-    ASN1Element as _Element,
+    type ASN1Element as _Element,
     ASN1TagClass as _TagClass,
     ASN1Construction as _Construction,
     ASN1UniversalType as _UniversalType,
@@ -82,7 +82,7 @@ export type MembershipStatus = _enum_for_MembershipStatus;
  *
  * @enum {number}
  */
-export const MembershipStatus = _enum_for_MembershipStatus;
+export const MembershipStatus: typeof _enum_for_MembershipStatus = _enum_for_MembershipStatus;
 
 /**
  * @summary MembershipStatus_unknown
@@ -94,7 +94,7 @@ export const MembershipStatus = _enum_for_MembershipStatus;
  * @constant
  * @type {number}
  */
-export const MembershipStatus_unknown: MembershipStatus =
+export const MembershipStatus_unknown: _enum_for_MembershipStatus.unknown =
     MembershipStatus.unknown; /* LONG_NAMED_ENUMERATED_VALUE */
 
 /**
@@ -107,7 +107,7 @@ export const MembershipStatus_unknown: MembershipStatus =
  * @constant
  * @type {number}
  */
-export const unknown: MembershipStatus =
+export const unknown: _enum_for_MembershipStatus.unknown =
     MembershipStatus.unknown; /* SHORT_NAMED_ENUMERATED_VALUE */
 
 /**
@@ -119,7 +119,7 @@ export const unknown: MembershipStatus =
  * @constant
  * @type {number}
  */
-export const MembershipStatus_member: MembershipStatus =
+export const MembershipStatus_member: _enum_for_MembershipStatus.member =
     MembershipStatus.member; /* LONG_NAMED_ENUMERATED_VALUE */
 
 /**
@@ -131,7 +131,7 @@ export const MembershipStatus_member: MembershipStatus =
  * @constant
  * @type {number}
  */
-export const member: MembershipStatus =
+export const member: _enum_for_MembershipStatus.member =
     MembershipStatus.member; /* SHORT_NAMED_ENUMERATED_VALUE */
 
 /**
@@ -143,7 +143,7 @@ export const member: MembershipStatus =
  * @constant
  * @type {number}
  */
-export const MembershipStatus_non_member: MembershipStatus =
+export const MembershipStatus_non_member: _enum_for_MembershipStatus.non_member =
     MembershipStatus.non_member; /* LONG_NAMED_ENUMERATED_VALUE */
 
 /**
@@ -155,14 +155,26 @@ export const MembershipStatus_non_member: MembershipStatus =
  * @constant
  * @type {number}
  */
-export const non_member: MembershipStatus =
+export const non_member: _enum_for_MembershipStatus.non_member =
     MembershipStatus.non_member; /* SHORT_NAMED_ENUMERATED_VALUE */
 
 
-export const _decode_MembershipStatus = $._decodeEnumerated;
+export function _decode_MembershipStatus(el: _Element): MembershipStatus {
+    const enumerated = $._decodeEnumerated(el);
+    switch (enumerated) {
+        case MembershipStatus.unknown: return MembershipStatus.unknown;
+        case MembershipStatus.member: return MembershipStatus.member;
+        case MembershipStatus.non_member: return MembershipStatus.non_member;
+        default:
+            throw new _ConstructionError(
+                'Invalid ENUMERATED value ' + enumerated + ' for MembershipStatus.',
+                el,
+            );
+    }
+}
 
 
-export const _encode_MembershipStatus = $._encodeEnumerated;
+export const _encode_MembershipStatus: $.ASN1Encoder<MembershipStatus> = $._encodeEnumerated as $.ASN1Encoder<MembershipStatus>;
 
 
 /* eslint-enable */

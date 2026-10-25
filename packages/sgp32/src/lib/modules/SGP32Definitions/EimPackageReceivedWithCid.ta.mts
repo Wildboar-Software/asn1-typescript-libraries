@@ -1,11 +1,11 @@
 /* eslint-disable */
 import {
-    OPTIONAL,
-    ASN1Element as _Element,
+    type OPTIONAL,
+    type ASN1Element as _Element,
     ASN1TagClass as _TagClass
 } from "@wildboar/asn1";
 import * as $ from "@wildboar/asn1/functional";
-import { EimPackageReceivedWithCid_correlationId, _decode_EimPackageReceivedWithCid_correlationId, _encode_EimPackageReceivedWithCid_correlationId } from "../SGP32Definitions/EimPackageReceivedWithCid-correlationId.ta.mjs";
+import { type EimPackageReceivedWithCid_correlationId, _decode_EimPackageReceivedWithCid_correlationId, _encode_EimPackageReceivedWithCid_correlationId } from "../SGP32Definitions/EimPackageReceivedWithCid-correlationId.ta.mjs";
 
 
 /**
@@ -30,17 +30,21 @@ import { EimPackageReceivedWithCid_correlationId, _decode_EimPackageReceivedWith
  */
 export
 class EimPackageReceivedWithCid {
+    /**
+     * @summary `correlationId`.
+     * @description
+     * SGP.32 v1.2 does not further define this component. Annex C does not define
+     * EimPackageReceivedWithCid.
+     * @public
+     * @readonly
+     */
+    public readonly correlationId?: OPTIONAL<EimPackageReceivedWithCid_correlationId>;
+
     constructor (
-        /**
-         * @summary `correlationId`.
-         * @description
-         * SGP.32 v1.2 does not further define this component. Annex C does not define
-         * EimPackageReceivedWithCid.
-         * @public
-         * @readonly
-         */
-        readonly correlationId?: OPTIONAL<EimPackageReceivedWithCid_correlationId>
-    ) {}
+        correlationId?: OPTIONAL<EimPackageReceivedWithCid_correlationId>
+    ) {
+        this.correlationId = correlationId;
+    }
 
     /**
      * @summary Restructures an object into a EimPackageReceivedWithCid

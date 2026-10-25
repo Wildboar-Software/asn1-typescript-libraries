@@ -1,9 +1,9 @@
 /* eslint-disable */
 import {
-    OPTIONAL,
-    BOOLEAN,
-    PrintableString,
-    ASN1Element as _Element,
+    type OPTIONAL,
+    type BOOLEAN,
+    type PrintableString,
+    type ASN1Element as _Element,
     ASN1TagClass as _TagClass,
     ASN1Construction as _Construction,
     ASN1UniversalType as _UniversalType,
@@ -13,7 +13,7 @@ import {
     ASN1ConstructionError as _ConstructionError,
 } from "@wildboar/asn1";
 import * as $ from "@wildboar/asn1/functional";
-import { ENQcontent_vteChoice, _decode_ENQcontent_vteChoice, _encode_ENQcontent_vteChoice } from "../ISO9041-VTP/ENQcontent-vteChoice.ta.mjs";
+import { type ENQcontent_vteChoice, _decode_ENQcontent_vteChoice, _encode_ENQcontent_vteChoice } from "../ISO9041-VTP/ENQcontent-vteChoice.ta.mjs";
 
 
 /**
@@ -38,35 +38,43 @@ import { ENQcontent_vteChoice, _decode_ENQcontent_vteChoice, _encode_ENQcontent_
  */
 export
 class ENQcontent {
+    /**
+     * @summary `vteChoice`.
+     * @description
+     * Which VTE to keep: draft (0), current (1), or either
+     * (2). ISO/IEC 9041-1:1997 §6.9.
+     * @public
+     * @readonly
+     */
+    public readonly vteChoice: ENQcontent_vteChoice;
+    /**
+     * @summary `failAllowed`.
+     * @description
+     * TRUE = yes; FALSE or absent = no. ISO/IEC
+     * 9041-1:1997 §6.9, §12.1.
+     * @public
+     * @readonly
+     */
+    public readonly failAllowed?: OPTIONAL<BOOLEAN>;
+    /**
+     * @summary `retList`.
+     * @description
+     * DO/CO names whose contents are requested retained
+     * (Context Retention FU). ISO/IEC 9041-1:1997 §6.9.
+     * @public
+     * @readonly
+     */
+    public readonly retList?: OPTIONAL<PrintableString[]>;
+
     constructor (
-        /**
-         * @summary `vteChoice`.
-         * @description
-         * Which VTE to keep: draft (0), current (1), or either
-         * (2). ISO/IEC 9041-1:1997 §6.9.
-         * @public
-         * @readonly
-         */
-        readonly vteChoice: ENQcontent_vteChoice,
-        /**
-         * @summary `failAllowed`.
-         * @description
-         * TRUE = yes; FALSE or absent = no. ISO/IEC
-         * 9041-1:1997 §6.9, §12.1.
-         * @public
-         * @readonly
-         */
-        readonly failAllowed?: OPTIONAL<BOOLEAN>,
-        /**
-         * @summary `retList`.
-         * @description
-         * DO/CO names whose contents are requested retained
-         * (Context Retention FU). ISO/IEC 9041-1:1997 §6.9.
-         * @public
-         * @readonly
-         */
-        readonly retList?: OPTIONAL<PrintableString[]>
-    ) {}
+        vteChoice: ENQcontent_vteChoice,
+        failAllowed?: OPTIONAL<BOOLEAN>,
+        retList?: OPTIONAL<PrintableString[]>
+    ) {
+        this.vteChoice = vteChoice;
+        this.failAllowed = failAllowed;
+        this.retList = retList;
+    }
 
     /**
      * @summary Restructures an object into a ENQcontent

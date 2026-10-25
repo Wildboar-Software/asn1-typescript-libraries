@@ -1,8 +1,8 @@
 /* eslint-disable */
 import {
-    OPTIONAL,
-    BOOLEAN,
-    ASN1Element as _Element,
+    type OPTIONAL,
+    type BOOLEAN,
+    type ASN1Element as _Element,
     ASN1TagClass as _TagClass,
     ASN1Construction as _Construction,
     ASN1UniversalType as _UniversalType,
@@ -12,9 +12,9 @@ import {
     ASN1ConstructionError as _ConstructionError,
 } from "@wildboar/asn1";
 import * as $ from "@wildboar/asn1/functional";
-import { Identifier, _decode_Identifier, _encode_Identifier } from "../ISO-9506-MMS-1/Identifier.ta.mjs";
-import { MMSString, _decode_MMSString, _encode_MMSString } from "../ISO-9506-MMS-1/MMSString.ta.mjs";
-import { Unsigned32, _decode_Unsigned32, _encode_Unsigned32 } from "../ISO-9506-MMS-1/Unsigned32.ta.mjs";
+import { type Identifier, _decode_Identifier, _encode_Identifier } from "../ISO-9506-MMS-1/Identifier.ta.mjs";
+import { type MMSString, _decode_MMSString, _encode_MMSString } from "../ISO-9506-MMS-1/MMSString.ta.mjs";
+import { type Unsigned32, _decode_Unsigned32, _encode_Unsigned32 } from "../ISO-9506-MMS-1/Unsigned32.ta.mjs";
 
 
 /**
@@ -40,55 +40,65 @@ import { Unsigned32, _decode_Unsigned32, _encode_Unsigned32 } from "../ISO-9506-
  */
 export
 class Input_Request {
+    /**
+     * @summary `operatorStationName`.
+     * @description
+     *
+     * Operator Station from which input is requested.
+     * ISO 9506-1:2003 §17.2.1.1.1.
+     *
+     * @public
+     * @readonly
+     */
+    public readonly operatorStationName: Identifier;
+    /**
+     * @summary `echo`.
+     * @description
+     *
+     * True (default) displays the Input String on the station.
+     * Requires `entry-display`. Ignored for type `entry`.
+     * ISO 9506-1:2003 §17.2.1.1.2, §17.2.2.2.
+     *
+     * @public
+     * @readonly
+     */
+    public readonly echo?: OPTIONAL<BOOLEAN>;
+    /**
+     * @summary `listOfPromptData`.
+     * @description
+     *
+     * Prompt lines (one per display line). Only if station type
+     * is `entry-display` and CBB `output` is supported.
+     * ISO 9506-1:2003 §17.2.1.1.3. ISO 9506-2:2003 §17.2.
+     *
+     * @public
+     * @readonly
+     */
+    public readonly listOfPromptData?: OPTIONAL<MMSString[]>;
+    /**
+     * @summary `inputTimeOut`.
+     * @description
+     *
+     * Operator timeout in seconds (0..2^31-1). Absent means
+     * unlimited. Zero fails unless input is already in the
+     * buffer. ISO 9506-1:2003 §17.2.1.1.4, §17.2.2.2.
+     *
+     * @public
+     * @readonly
+     */
+    public readonly inputTimeOut?: OPTIONAL<Unsigned32>;
+
     constructor (
-        /**
-         * @summary `operatorStationName`.
-         * @description
-         *
-         * Operator Station from which input is requested.
-         * ISO 9506-1:2003 §17.2.1.1.1.
-         *
-         * @public
-         * @readonly
-         */
-        readonly operatorStationName: Identifier,
-        /**
-         * @summary `echo`.
-         * @description
-         *
-         * True (default) displays the Input String on the station.
-         * Requires `entry-display`. Ignored for type `entry`.
-         * ISO 9506-1:2003 §17.2.1.1.2, §17.2.2.2.
-         *
-         * @public
-         * @readonly
-         */
-        readonly echo?: OPTIONAL<BOOLEAN>,
-        /**
-         * @summary `listOfPromptData`.
-         * @description
-         *
-         * Prompt lines (one per display line). Only if station type
-         * is `entry-display` and CBB `output` is supported.
-         * ISO 9506-1:2003 §17.2.1.1.3. ISO 9506-2:2003 §17.2.
-         *
-         * @public
-         * @readonly
-         */
-        readonly listOfPromptData?: OPTIONAL<MMSString[]>,
-        /**
-         * @summary `inputTimeOut`.
-         * @description
-         *
-         * Operator timeout in seconds (0..2^31-1). Absent means
-         * unlimited. Zero fails unless input is already in the
-         * buffer. ISO 9506-1:2003 §17.2.1.1.4, §17.2.2.2.
-         *
-         * @public
-         * @readonly
-         */
-        readonly inputTimeOut?: OPTIONAL<Unsigned32>
-    ) {}
+        operatorStationName: Identifier,
+        echo?: OPTIONAL<BOOLEAN>,
+        listOfPromptData?: OPTIONAL<MMSString[]>,
+        inputTimeOut?: OPTIONAL<Unsigned32>
+    ) {
+        this.operatorStationName = operatorStationName;
+        this.echo = echo;
+        this.listOfPromptData = listOfPromptData;
+        this.inputTimeOut = inputTimeOut;
+    }
 
     /**
      * @summary Restructures an object into a Input_Request

@@ -1,7 +1,7 @@
 /* eslint-disable */
 import {
-    OPTIONAL,
-    ASN1Element as _Element,
+    type OPTIONAL,
+    type ASN1Element as _Element,
     ASN1TagClass as _TagClass,
     ASN1Construction as _Construction,
     ASN1UniversalType as _UniversalType,
@@ -11,7 +11,7 @@ import {
     ASN1ConstructionError as _ConstructionError,
 } from "@wildboar/asn1";
 import * as $ from "@wildboar/asn1/functional";
-import { ServiceKey, _decode_ServiceKey, _encode_ServiceKey } from "../IN-CS2-datatypes/ServiceKey.ta.mjs";
+import { type ServiceKey, _decode_ServiceKey, _encode_ServiceKey } from "../IN-CS2-datatypes/ServiceKey.ta.mjs";
 import { EventTypeBCSM, _enum_for_EventTypeBCSM, _decode_EventTypeBCSM, _encode_EventTypeBCSM } from "../IN-CS2-datatypes/EventTypeBCSM.ta.mjs";
 
 
@@ -32,20 +32,26 @@ import { EventTypeBCSM, _enum_for_EventTypeBCSM, _decode_EventTypeBCSM, _encode_
  */
 export
 class GapOnService {
+    /**
+     * @summary `serviceKey`.
+     * @public
+     * @readonly
+     */
+    public readonly serviceKey: ServiceKey;
+    /**
+     * @summary `dpCriteria`.
+     * @public
+     * @readonly
+     */
+    public readonly dpCriteria?: OPTIONAL<EventTypeBCSM>;
+
     constructor (
-        /**
-         * @summary `serviceKey`.
-         * @public
-         * @readonly
-         */
-        readonly serviceKey: ServiceKey,
-        /**
-         * @summary `dpCriteria`.
-         * @public
-         * @readonly
-         */
-        readonly dpCriteria?: OPTIONAL<EventTypeBCSM>
-    ) {}
+        serviceKey: ServiceKey,
+        dpCriteria?: OPTIONAL<EventTypeBCSM>
+    ) {
+        this.serviceKey = serviceKey;
+        this.dpCriteria = dpCriteria;
+    }
 
     /**
      * @summary Restructures an object into a GapOnService
@@ -69,7 +75,7 @@ class GapOnService {
          * @static
          */
 
-    public static _enum_for_dpCriteria = _enum_for_EventTypeBCSM;
+    public static _enum_for_dpCriteria: typeof _enum_for_EventTypeBCSM = _enum_for_EventTypeBCSM;
 }
 
 /**

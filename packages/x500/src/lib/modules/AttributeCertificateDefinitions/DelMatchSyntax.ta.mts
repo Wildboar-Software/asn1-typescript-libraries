@@ -1,7 +1,7 @@
 /* eslint-disable */
 import {
     ASN1ConstructionError as _ConstructionError,
-    ASN1Element as _Element,
+    type ASN1Element as _Element,
     ASN1TagClass as _TagClass,
 } from "@wildboar/asn1";
 import * as $ from "@wildboar/asn1/functional";
@@ -33,26 +33,34 @@ import {
  *
  */
 export class DelMatchSyntax {
+    /**
+     * @summary `firstIssuer`.
+     * @public
+     * @readonly
+     */
+    public readonly firstIssuer: AttCertIssuer;
+    /**
+     * @summary `lastHolder`.
+     * @public
+     * @readonly
+     */
+    public readonly lastHolder: Holder;
+    /**
+     * @summary Extensions that are not recognized.
+     * @public
+     * @readonly
+     */
+    public readonly _unrecognizedExtensionsList: _Element[];
+
     constructor(
-        /**
-         * @summary `firstIssuer`.
-         * @public
-         * @readonly
-         */
-        readonly firstIssuer: AttCertIssuer,
-        /**
-         * @summary `lastHolder`.
-         * @public
-         * @readonly
-         */
-        readonly lastHolder: Holder,
-        /**
-         * @summary Extensions that are not recognized.
-         * @public
-         * @readonly
-         */
-        readonly _unrecognizedExtensionsList: _Element[] = []
-    ) {}
+        firstIssuer: AttCertIssuer,
+        lastHolder: Holder,
+        _unrecognizedExtensionsList: _Element[] = []
+    ) {
+        this.firstIssuer = firstIssuer;
+        this.lastHolder = lastHolder;
+        this._unrecognizedExtensionsList = _unrecognizedExtensionsList;
+    }
 
     /**
      * @summary Restructures an object into a DelMatchSyntax

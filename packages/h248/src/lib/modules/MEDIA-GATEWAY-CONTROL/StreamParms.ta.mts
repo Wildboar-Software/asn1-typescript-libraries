@@ -1,13 +1,13 @@
 /* eslint-disable */
 import {
-    OPTIONAL,
-    ASN1Element as _Element,
+    type OPTIONAL,
+    type ASN1Element as _Element,
     ASN1TagClass as _TagClass
 } from "@wildboar/asn1";
 import * as $ from "@wildboar/asn1/functional";
 import { LocalControlDescriptor, _decode_LocalControlDescriptor, _encode_LocalControlDescriptor } from "../MEDIA-GATEWAY-CONTROL/LocalControlDescriptor.ta.mjs";
 import { LocalRemoteDescriptor, _decode_LocalRemoteDescriptor, _encode_LocalRemoteDescriptor } from "../MEDIA-GATEWAY-CONTROL/LocalRemoteDescriptor.ta.mjs";
-import { StatisticsDescriptor, _decode_StatisticsDescriptor, _encode_StatisticsDescriptor } from "../MEDIA-GATEWAY-CONTROL/StatisticsDescriptor.ta.mjs";
+import { type StatisticsDescriptor, _decode_StatisticsDescriptor, _encode_StatisticsDescriptor } from "../MEDIA-GATEWAY-CONTROL/StatisticsDescriptor.ta.mjs";
 
 
 /**
@@ -47,7 +47,7 @@ class StreamParms {
      * @public
      * @readonly
      */
-    readonly localControlDescriptor?: OPTIONAL<LocalControlDescriptor>;
+    public readonly localControlDescriptor?: OPTIONAL<LocalControlDescriptor>;
     /**
      * @summary `localDescriptor`.
      * @description
@@ -59,7 +59,7 @@ class StreamParms {
      * @public
      * @readonly
      */
-    readonly localDescriptor?: OPTIONAL<LocalRemoteDescriptor>;
+    public readonly localDescriptor?: OPTIONAL<LocalRemoteDescriptor>;
     /**
      * @summary `remoteDescriptor`.
      * @description
@@ -70,7 +70,7 @@ class StreamParms {
      * @public
      * @readonly
      */
-    readonly remoteDescriptor?: OPTIONAL<LocalRemoteDescriptor>;
+    public readonly remoteDescriptor?: OPTIONAL<LocalRemoteDescriptor>;
     /**
      * @summary `statisticsDescriptor`.
      * @description
@@ -83,7 +83,7 @@ class StreamParms {
      * @public
      * @readonly
      */
-    readonly statisticsDescriptor?: OPTIONAL<StatisticsDescriptor>;
+    public readonly statisticsDescriptor?: OPTIONAL<StatisticsDescriptor>;
     /**
      * @summary Extensions that are not recognized.
      * @description
@@ -94,7 +94,7 @@ class StreamParms {
      * @public
      * @readonly
      */
-    readonly _unrecognizedExtensionsList: _Element[];
+    public readonly _unrecognizedExtensionsList: _Element[];
 
     constructor (
         localControlDescriptor?: OPTIONAL<LocalControlDescriptor>,

@@ -1,6 +1,6 @@
 /* eslint-disable */
 import {
-    ASN1Element as _Element,
+    type ASN1Element as _Element,
     ASN1TagClass as _TagClass,
     ASN1Construction as _Construction,
     ASN1UniversalType as _UniversalType,
@@ -11,17 +11,17 @@ import {
 } from '@wildboar/asn1';
 import * as $ from '@wildboar/asn1/functional';
 import {
-    Epochs,
+    type Epochs,
     _decode_Epochs,
     _encode_Epochs,
 } from '../TimeRepresentation/Epochs.ta.mjs';
 import {
-    Seconds,
+    type Seconds,
     _decode_Seconds,
     _encode_Seconds,
 } from '../TimeRepresentation/Seconds.ta.mjs';
 import {
-    Nanoseconds,
+    type Nanoseconds,
     _decode_Nanoseconds,
     _encode_Nanoseconds,
 } from '../TimeRepresentation/Nanoseconds.ta.mjs';
@@ -46,39 +46,47 @@ import {
  *
  */
 export class TimeInterval {
+    /**
+     * @summary `epochs`.
+     * @description
+     *
+     * Whole epochs in the duration (each 4 294 967 296 s).
+     * ITU-T Rec. X.743 (06/98)
+     * [§A.6](https://www.itu.int/rec/T-REC-X.743-199806-I), §8.1.
+     * @public
+     * @readonly
+     */
+    public readonly epochs: Epochs;
+    /**
+     * @summary `seconds`.
+     * @description
+     *
+     * Additional whole seconds (0..4 294 967 295). ITU-T Rec. X.743 (06/98)
+     * [§A.6](https://www.itu.int/rec/T-REC-X.743-199806-I).
+     * @public
+     * @readonly
+     */
+    public readonly seconds: Seconds;
+    /**
+     * @summary `nanoseconds`.
+     * @description
+     *
+     * Additional nanoseconds (0..999 999 999). ITU-T Rec. X.743 (06/98)
+     * [§A.6](https://www.itu.int/rec/T-REC-X.743-199806-I).
+     * @public
+     * @readonly
+     */
+    public readonly nanoseconds: Nanoseconds;
+
     constructor(
-        /**
-         * @summary `epochs`.
-         * @description
-         *
-         * Whole epochs in the duration (each 4 294 967 296 s).
-         * ITU-T Rec. X.743 (06/98)
-         * [§A.6](https://www.itu.int/rec/T-REC-X.743-199806-I), §8.1.
-         * @public
-         * @readonly
-         */
-        readonly epochs: Epochs,
-        /**
-         * @summary `seconds`.
-         * @description
-         *
-         * Additional whole seconds (0..4 294 967 295). ITU-T Rec. X.743 (06/98)
-         * [§A.6](https://www.itu.int/rec/T-REC-X.743-199806-I).
-         * @public
-         * @readonly
-         */
-        readonly seconds: Seconds,
-        /**
-         * @summary `nanoseconds`.
-         * @description
-         *
-         * Additional nanoseconds (0..999 999 999). ITU-T Rec. X.743 (06/98)
-         * [§A.6](https://www.itu.int/rec/T-REC-X.743-199806-I).
-         * @public
-         * @readonly
-         */
-        readonly nanoseconds: Nanoseconds
-    ) {}
+        epochs: Epochs,
+        seconds: Seconds,
+        nanoseconds: Nanoseconds
+    ) {
+        this.epochs = epochs;
+        this.seconds = seconds;
+        this.nanoseconds = nanoseconds;
+    }
 
     /**
      * @summary Restructures an object into a TimeInterval

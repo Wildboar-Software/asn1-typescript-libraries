@@ -1,8 +1,8 @@
 /* eslint-disable */
 import {
-    OPTIONAL,
-    BOOLEAN,
-    ASN1Element as _Element,
+    type OPTIONAL,
+    type BOOLEAN,
+    type ASN1Element as _Element,
     ASN1TagClass as _TagClass,
     ASN1Construction as _Construction,
     ASN1UniversalType as _UniversalType,
@@ -12,10 +12,10 @@ import {
     ASN1ConstructionError as _ConstructionError,
 } from "@wildboar/asn1";
 import * as $ from "@wildboar/asn1/functional";
-import { DistinguishedName, _decode_DistinguishedName, _encode_DistinguishedName } from "../InformationFramework/DistinguishedName.ta.mjs";
-import { Credentials, _decode_Credentials, _encode_Credentials } from "../DFRAbstractService/Credentials.ta.mjs";
+import { type DistinguishedName, _decode_DistinguishedName, _encode_DistinguishedName } from "../InformationFramework/DistinguishedName.ta.mjs";
+import { type Credentials, _decode_Credentials, _encode_Credentials } from "../DFRAbstractService/Credentials.ta.mjs";
 import { Restrictions, _decode_Restrictions, _encode_Restrictions } from "../DFRAbstractService/Restrictions.ta.mjs";
-import { BindSecurity, _decode_BindSecurity, _encode_BindSecurity } from "../DFRAbstractService/BindSecurity.ta.mjs";
+import { type BindSecurity, _decode_BindSecurity, _encode_BindSecurity } from "../DFRAbstractService/BindSecurity.ta.mjs";
 import { Priority, _enum_for_Priority, Priority_medium /* IMPORTED_LONG_ENUMERATION_ITEM */, _decode_Priority, _encode_Priority } from "../DFRAbstractService/Priority.ta.mjs";
 
 
@@ -48,85 +48,103 @@ import { Priority, _enum_for_Priority, Priority_medium /* IMPORTED_LONG_ENUMERAT
  */
 export
 class DfrBindArgument {
+    /**
+     * @summary `initiator_name`.
+     * @description
+     *
+     * Directory distinguished name of the initiator.
+     * @public
+     * @readonly
+     */
+    public readonly initiator_name: DistinguishedName;
+    /**
+     * @summary `credentials`.
+     * @description
+     *
+     * Simple password or a PAC from authentication done outside DFR.
+     * Syntax of authentication credentials is out of scope of ISO/IEC
+     * 10166-1:1991. §7.1.1.
+     * @public
+     * @readonly
+     */
+    public readonly credentials: Credentials;
+    /**
+     * @summary `retrieve_restrictions`.
+     * @description
+     *
+     * Caps on returned document types and PDU length for the association.
+     * Default: no restriction. ISO/IEC 10166-1:1991 §7.1.1; ISO/IEC
+     * 10166-1:1991/Cor.1:1994.
+     * @public
+     * @readonly
+     */
+    public readonly retrieve_restrictions?: OPTIONAL<Restrictions>;
+    /**
+     * @summary `dfr_configuration_request`.
+     * @description
+     *
+     * If true, the result reports supported constraints, document types,
+     * and function-set. Default false. ISO/IEC 10166-1:1991 §7.1.1.
+     * @public
+     * @readonly
+     */
+    public readonly dfr_configuration_request?: OPTIONAL<BOOLEAN>;
+    /**
+     * @summary `bind_security`.
+     * @description
+     *
+     * OSI security services for the bind (peer authentication,
+     * confidentiality, integrity). EXTERNAL. ISO/IEC 10166-1:1991 §7.1.1.
+     * @public
+     * @readonly
+     */
+    public readonly bind_security?: OPTIONAL<BindSecurity>;
+    /**
+     * @summary `priority`.
+     * @public
+     * @readonly
+     */
+    public readonly priority?: OPTIONAL<Priority>;
+    /**
+     * @summary `dor_for_produce_operations`.
+     * @description
+     *
+     * Request that the server be willing to return a DOR. Whether it
+     * commits is in the result. Default true. ISO/IEC 10166-1:1991 §7.1.1.
+     * @public
+     * @readonly
+     */
+    public readonly dor_for_produce_operations?: OPTIONAL<BOOLEAN>;
+    /**
+     * @summary `dor_for_consume_operations`.
+     * @description
+     *
+     * Request that the server accept a DOR in operation arguments. Default
+     * true. ISO/IEC 10166-1:1991 §7.1.1.
+     * @public
+     * @readonly
+     */
+    public readonly dor_for_consume_operations?: OPTIONAL<BOOLEAN>;
+
     constructor (
-        /**
-         * @summary `initiator_name`.
-         * @description
-         *
-         * Directory distinguished name of the initiator.
-         * @public
-         * @readonly
-         */
-        readonly initiator_name: DistinguishedName,
-        /**
-         * @summary `credentials`.
-         * @description
-         *
-         * Simple password or a PAC from authentication done outside DFR.
-         * Syntax of authentication credentials is out of scope of ISO/IEC
-         * 10166-1:1991. §7.1.1.
-         * @public
-         * @readonly
-         */
-        readonly credentials: Credentials,
-        /**
-         * @summary `retrieve_restrictions`.
-         * @description
-         *
-         * Caps on returned document types and PDU length for the association.
-         * Default: no restriction. ISO/IEC 10166-1:1991 §7.1.1; ISO/IEC
-         * 10166-1:1991/Cor.1:1994.
-         * @public
-         * @readonly
-         */
-        readonly retrieve_restrictions?: OPTIONAL<Restrictions>,
-        /**
-         * @summary `dfr_configuration_request`.
-         * @description
-         *
-         * If true, the result reports supported constraints, document types,
-         * and function-set. Default false. ISO/IEC 10166-1:1991 §7.1.1.
-         * @public
-         * @readonly
-         */
-        readonly dfr_configuration_request?: OPTIONAL<BOOLEAN>,
-        /**
-         * @summary `bind_security`.
-         * @description
-         *
-         * OSI security services for the bind (peer authentication,
-         * confidentiality, integrity). EXTERNAL. ISO/IEC 10166-1:1991 §7.1.1.
-         * @public
-         * @readonly
-         */
-        readonly bind_security?: OPTIONAL<BindSecurity>,
-        /**
-         * @summary `priority`.
-         * @public
-         * @readonly
-         */
-        readonly priority?: OPTIONAL<Priority>,
-        /**
-         * @summary `dor_for_produce_operations`.
-         * @description
-         *
-         * Request that the server be willing to return a DOR. Whether it
-         * commits is in the result. Default true. ISO/IEC 10166-1:1991 §7.1.1.
-         * @public
-         * @readonly
-         */
-        readonly dor_for_produce_operations?: OPTIONAL<BOOLEAN>,
-        /**
-         * @summary `dor_for_consume_operations`.
-         * @description
-         *
-         * Request that the server accept a DOR in operation arguments. Default
-         * true. ISO/IEC 10166-1:1991 §7.1.1.
-         * @public
-         * @readonly
-         */
-        readonly dor_for_consume_operations?: OPTIONAL<BOOLEAN>
-    ) {}
+        initiator_name: DistinguishedName,
+        credentials: Credentials,
+        retrieve_restrictions?: OPTIONAL<Restrictions>,
+        dfr_configuration_request?: OPTIONAL<BOOLEAN>,
+        bind_security?: OPTIONAL<BindSecurity>,
+        priority?: OPTIONAL<Priority>,
+        dor_for_produce_operations?: OPTIONAL<BOOLEAN>,
+        dor_for_consume_operations?: OPTIONAL<BOOLEAN>
+    ) {
+        this.initiator_name = initiator_name;
+        this.credentials = credentials;
+        this.retrieve_restrictions = retrieve_restrictions;
+        this.dfr_configuration_request = dfr_configuration_request;
+        this.bind_security = bind_security;
+        this.priority = priority;
+        this.dor_for_produce_operations = dor_for_produce_operations;
+        this.dor_for_consume_operations = dor_for_consume_operations;
+    }
 
     /**
      * @summary Restructures an object into a DfrBindArgument
@@ -157,7 +175,7 @@ class DfrBindArgument {
      * @static
      * @method
      */
-    public static get _default_value_for_priority () { return Priority_medium; }
+    public static get _default_value_for_priority (): _enum_for_Priority { return Priority_medium; }
     /**
      * @summary Getter that returns the default value for `dor_for_produce_operations`.
      * @public
@@ -177,7 +195,7 @@ class DfrBindArgument {
          * @static
          */
 
-    public static _enum_for_priority = _enum_for_Priority;
+    public static _enum_for_priority: typeof _enum_for_Priority = _enum_for_Priority;
 }
 
 /**

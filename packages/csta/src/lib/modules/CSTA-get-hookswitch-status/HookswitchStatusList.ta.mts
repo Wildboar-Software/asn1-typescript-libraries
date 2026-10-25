@@ -1,7 +1,7 @@
 /* eslint-disable */
 
 import * as $ from "@wildboar/asn1/functional";
-import { BOOLEAN, SEQUENCE, ASN1Element as _Element } from "@wildboar/asn1";
+import { type BOOLEAN, type SEQUENCE, ASN1Element as _Element } from "@wildboar/asn1";
 import { HookswitchStatusList_Item, _decode_HookswitchStatusList_Item, _encode_HookswitchStatusList_Item } from "../CSTA-get-hookswitch-status/HookswitchStatusList-Item.ta.mjs";
 
 

@@ -1,7 +1,7 @@
 /* eslint-disable */
 import {
-    OPTIONAL,
-    ASN1Element as _Element,
+    type OPTIONAL,
+    type ASN1Element as _Element,
     ASN1TagClass as _TagClass,
     ASN1Construction as _Construction,
     ASN1UniversalType as _UniversalType,
@@ -12,7 +12,7 @@ import {
 } from '@wildboar/asn1';
 import * as $ from '@wildboar/asn1/functional';
 import {
-    SequenceNumber,
+    type SequenceNumber,
     _decode_SequenceNumber,
     _encode_SequenceNumber,
 } from '../MSAbstractService/SequenceNumber.ta.mjs';
@@ -34,20 +34,26 @@ import {
  *
  */
 export class NumberRange {
+    /**
+     * @summary `from_`.
+     * @public
+     * @readonly
+     */
+    public readonly from_?: OPTIONAL<SequenceNumber>;
+    /**
+     * @summary `to`.
+     * @public
+     * @readonly
+     */
+    public readonly to?: OPTIONAL<SequenceNumber>;
+
     constructor(
-        /**
-         * @summary `from_`.
-         * @public
-         * @readonly
-         */
-        readonly from_?: OPTIONAL<SequenceNumber>,
-        /**
-         * @summary `to`.
-         * @public
-         * @readonly
-         */
-        readonly to?: OPTIONAL<SequenceNumber>
-    ) {}
+        from_?: OPTIONAL<SequenceNumber>,
+        to?: OPTIONAL<SequenceNumber>
+    ) {
+        this.from_ = from_;
+        this.to = to;
+    }
 
     /**
      * @summary Restructures an object into a NumberRange

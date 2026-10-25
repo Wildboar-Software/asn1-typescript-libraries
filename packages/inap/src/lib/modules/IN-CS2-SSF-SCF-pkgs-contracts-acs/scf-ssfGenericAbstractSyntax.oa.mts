@@ -1,8 +1,8 @@
 /* eslint-disable */
 import {
-    ABSTRACT_SYNTAX
+    type ABSTRACT_SYNTAX
 } from "@wildboar/asn1";
-import { GenericSCF_SSF_PDUs, _decode_GenericSCF_SSF_PDUs, _encode_GenericSCF_SSF_PDUs } from "../IN-CS2-SSF-SCF-pkgs-contracts-acs/GenericSCF-SSF-PDUs.ta.mjs";
+import { type GenericSCF_SSF_PDUs, _decode_GenericSCF_SSF_PDUs, _encode_GenericSCF_SSF_PDUs } from "../IN-CS2-SSF-SCF-pkgs-contracts-acs/GenericSCF-SSF-PDUs.ta.mjs";
 // export { GenericSCF_SSF_PDUs, _decode_GenericSCF_SSF_PDUs, _encode_GenericSCF_SSF_PDUs } from "../IN-CS2-SSF-SCF-pkgs-contracts-acs/GenericSCF-SSF-PDUs.ta.mjs";
 import { id_as_scf_ssfGenericAS } from "../IN-CS2-object-identifiers/id-as-scf-ssfGenericAS.va.mjs";
 // export { id_as_scf_ssfGenericAS } from "../IN-CS2-object-identifiers/id-as-scf-ssfGenericAS.va.mjs";

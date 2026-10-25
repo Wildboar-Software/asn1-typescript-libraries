@@ -1,13 +1,13 @@
 /* eslint-disable */
 import {
-    NULL,
-    OPTIONAL,
-    ASN1Element as _Element,
+    type NULL,
+    type OPTIONAL,
+    type ASN1Element as _Element,
     ASN1TagClass as _TagClass
 } from "@wildboar/asn1";
 import * as $ from "@wildboar/asn1/functional";
 import { IndAudPropertyParm, _decode_IndAudPropertyParm, _encode_IndAudPropertyParm } from "../MEDIA-GATEWAY-CONTROL/IndAudPropertyParm.ta.mjs";
-import { StreamMode, _decode_StreamMode, _encode_StreamMode, _enum_for_StreamMode } from "../MEDIA-GATEWAY-CONTROL/StreamMode.ta.mjs";
+import { type StreamMode, _decode_StreamMode, _encode_StreamMode, _enum_for_StreamMode } from "../MEDIA-GATEWAY-CONTROL/StreamMode.ta.mjs";
 
 
 /**
@@ -48,7 +48,7 @@ class IndAudLocalControlDescriptor {
      * @public
      * @readonly
      */
-    readonly streamMode?: OPTIONAL<NULL>;
+    public readonly streamMode?: OPTIONAL<NULL>;
     /**
      * @summary `reserveValue`.
      * @description
@@ -58,7 +58,7 @@ class IndAudLocalControlDescriptor {
      * @public
      * @readonly
      */
-    readonly reserveValue?: OPTIONAL<NULL>;
+    public readonly reserveValue?: OPTIONAL<NULL>;
     /**
      * @summary `reserveGroup`.
      * @description
@@ -68,7 +68,7 @@ class IndAudLocalControlDescriptor {
      * @public
      * @readonly
      */
-    readonly reserveGroup?: OPTIONAL<NULL>;
+    public readonly reserveGroup?: OPTIONAL<NULL>;
     /**
      * @summary `propertyParms`.
      * @description
@@ -79,7 +79,7 @@ class IndAudLocalControlDescriptor {
      * @public
      * @readonly
      */
-    readonly propertyParms?: OPTIONAL<IndAudPropertyParm[]>;
+    public readonly propertyParms?: OPTIONAL<IndAudPropertyParm[]>;
     /**
      * @summary `streamModeSel`.
      * @description
@@ -90,7 +90,7 @@ class IndAudLocalControlDescriptor {
      * @public
      * @readonly
      */
-    readonly streamModeSel?: OPTIONAL<StreamMode>;
+    public readonly streamModeSel?: OPTIONAL<StreamMode>;
     /**
      * @summary Extensions that are not recognized.
      * @description
@@ -101,7 +101,7 @@ class IndAudLocalControlDescriptor {
      * @public
      * @readonly
      */
-    readonly _unrecognizedExtensionsList: _Element[];
+    public readonly _unrecognizedExtensionsList: _Element[];
 
     constructor (
         streamMode?: OPTIONAL<NULL>,
@@ -141,7 +141,7 @@ class IndAudLocalControlDescriptor {
          * @static
          */
 
-    public static _enum_for_streamModeSel = _enum_for_StreamMode;
+    public static _enum_for_streamModeSel: typeof _enum_for_StreamMode = _enum_for_StreamMode;
 }
 
 /**

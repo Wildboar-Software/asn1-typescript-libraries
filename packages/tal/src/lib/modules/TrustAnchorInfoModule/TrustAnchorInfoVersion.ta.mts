@@ -1,7 +1,7 @@
 /* eslint-disable */
 import {
-    INTEGER,
-    ASN1Element as _Element,
+    type INTEGER,
+    type ASN1Element as _Element,
     ASN1TagClass as _TagClass,
     ASN1Construction as _Construction,
     ASN1UniversalType as _UniversalType,
@@ -42,7 +42,7 @@ type TrustAnchorInfoVersion = INTEGER;
  * @type {number}
  */
 export
-const TrustAnchorInfoVersion_v1: TrustAnchorInfoVersion = 1; /* LONG_NAMED_INTEGER_VALUE */
+const TrustAnchorInfoVersion_v1: 1 = 1 satisfies TrustAnchorInfoVersion; /* LONG_NAMED_INTEGER_VALUE */
 
 /**
  * @summary TrustAnchorInfoVersion_v1
@@ -54,7 +54,7 @@ const TrustAnchorInfoVersion_v1: TrustAnchorInfoVersion = 1; /* LONG_NAMED_INTEG
  * @type {number}
  */
 export
-const v1: TrustAnchorInfoVersion = TrustAnchorInfoVersion_v1; /* SHORT_NAMED_INTEGER_VALUE */
+const v1: 1 = TrustAnchorInfoVersion_v1; /* SHORT_NAMED_INTEGER_VALUE */
 
 /**
  * @summary Decodes an ASN.1 element into a(n) TrustAnchorInfoVersion

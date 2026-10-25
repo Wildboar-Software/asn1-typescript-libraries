@@ -1,6 +1,6 @@
 /* eslint-disable */
 import {
-  OBJECT_IDENTIFIER,
+  type OBJECT_IDENTIFIER,
   ASN1Element as _Element,
   ASN1TagClass as _TagClass,
   ASN1Construction as _Construction,
@@ -41,7 +41,7 @@ export class AttributeValueAssertion {
    * @public
    * @readonly
    */
-  readonly id: OBJECT_IDENTIFIER;
+  public readonly id: OBJECT_IDENTIFIER;
   /**
    * @summary `value`.
    * @description
@@ -51,7 +51,7 @@ export class AttributeValueAssertion {
    * @public
    * @readonly
    */
-  readonly value: _Element;
+  public readonly value: _Element;
 
   constructor(
     id: OBJECT_IDENTIFIER,

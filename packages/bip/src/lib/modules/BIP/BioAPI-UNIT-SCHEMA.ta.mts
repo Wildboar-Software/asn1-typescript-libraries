@@ -1,6 +1,6 @@
 /* eslint-disable */
 import {
-  BOOLEAN,
+  type BOOLEAN,
   ASN1Element as _Element,
   ASN1TagClass as _TagClass,
   ASN1Construction as _Construction,
@@ -12,38 +12,38 @@ import {
 } from '@wildboar/asn1';
 import * as $ from '@wildboar/asn1/functional';
 import {
-  BioAPI_UUID,
+  type BioAPI_UUID,
   _decode_BioAPI_UUID,
   _encode_BioAPI_UUID,
 } from '../BIP/BioAPI-UUID.ta.mjs';
 import {
-  BioAPI_UNIT_ID,
+  type BioAPI_UNIT_ID,
   _decode_BioAPI_UNIT_ID,
   _encode_BioAPI_UNIT_ID,
 } from '../BIP/BioAPI-UNIT-ID.ta.mjs';
 import {
-  BioAPI_CATEGORY,
+  type BioAPI_CATEGORY,
   _enum_for_BioAPI_CATEGORY,
   _decode_BioAPI_CATEGORY,
   _encode_BioAPI_CATEGORY,
 } from '../BIP/BioAPI-CATEGORY.ta.mjs';
 import {
-  BioAPI_STRING,
+  type BioAPI_STRING,
   _decode_BioAPI_STRING,
   _encode_BioAPI_STRING,
 } from '../BIP/BioAPI-STRING.ta.mjs';
 import {
-  BioAPI_UNIT_EVENT_TYPE_MASK,
+  type BioAPI_UNIT_EVENT_TYPE_MASK,
   _decode_BioAPI_UNIT_EVENT_TYPE_MASK,
   _encode_BioAPI_UNIT_EVENT_TYPE_MASK,
 } from '../BIP/BioAPI-UNIT-EVENT-TYPE-MASK.ta.mjs';
 import {
-  BioAPI_DATA,
+  type BioAPI_DATA,
   _decode_BioAPI_DATA,
   _encode_BioAPI_DATA,
 } from '../BIP/BioAPI-DATA.ta.mjs';
 import {
-  UnsignedInt,
+  type UnsignedInt,
   _decode_UnsignedInt,
   _encode_UnsignedInt,
 } from '../BIP/UnsignedInt.ta.mjs';
@@ -95,97 +95,97 @@ export class BioAPI_UNIT_SCHEMA {
    * @public
    * @readonly
    */
-  readonly bspProductUuid: BioAPI_UUID;
+  public readonly bspProductUuid: BioAPI_UUID;
   /**
    * @summary `unitManagerProductUuid`.
    * @public
    * @readonly
    */
-  readonly unitManagerProductUuid: BioAPI_UUID;
+  public readonly unitManagerProductUuid: BioAPI_UUID;
   /**
    * @summary `unitId`.
    * @public
    * @readonly
    */
-  readonly unitId: BioAPI_UNIT_ID;
+  public readonly unitId: BioAPI_UNIT_ID;
   /**
    * @summary `category`.
    * @public
    * @readonly
    */
-  readonly category: BioAPI_CATEGORY;
+  public readonly category: BioAPI_CATEGORY;
   /**
    * @summary `unitProperties`.
    * @public
    * @readonly
    */
-  readonly unitProperties: BioAPI_UUID;
+  public readonly unitProperties: BioAPI_UUID;
   /**
    * @summary `vendorInformation`.
    * @public
    * @readonly
    */
-  readonly vendorInformation: BioAPI_STRING;
+  public readonly vendorInformation: BioAPI_STRING;
   /**
    * @summary `supportedUnitEvents`.
    * @public
    * @readonly
    */
-  readonly supportedUnitEvents: BioAPI_UNIT_EVENT_TYPE_MASK;
+  public readonly supportedUnitEvents: BioAPI_UNIT_EVENT_TYPE_MASK;
   /**
    * @summary `propertyUuid`.
    * @public
    * @readonly
    */
-  readonly propertyUuid: BioAPI_UUID;
+  public readonly propertyUuid: BioAPI_UUID;
   /**
    * @summary `property`.
    * @public
    * @readonly
    */
-  readonly property: BioAPI_DATA;
+  public readonly property: BioAPI_DATA;
   /**
    * @summary `hardwareVersion`.
    * @public
    * @readonly
    */
-  readonly hardwareVersion: BioAPI_STRING;
+  public readonly hardwareVersion: BioAPI_STRING;
   /**
    * @summary `firmwareVersion`.
    * @public
    * @readonly
    */
-  readonly firmwareVersion: BioAPI_STRING;
+  public readonly firmwareVersion: BioAPI_STRING;
   /**
    * @summary `softwareVersion`.
    * @public
    * @readonly
    */
-  readonly softwareVersion: BioAPI_STRING;
+  public readonly softwareVersion: BioAPI_STRING;
   /**
    * @summary `hardwareSerialNumber`.
    * @public
    * @readonly
    */
-  readonly hardwareSerialNumber: BioAPI_STRING;
+  public readonly hardwareSerialNumber: BioAPI_STRING;
   /**
    * @summary `authenticatedHardware`.
    * @public
    * @readonly
    */
-  readonly authenticatedHardware: BOOLEAN;
+  public readonly authenticatedHardware: BOOLEAN;
   /**
    * @summary `maxBSPDbSize`.
    * @public
    * @readonly
    */
-  readonly maxBSPDbSize: UnsignedInt;
+  public readonly maxBSPDbSize: UnsignedInt;
   /**
    * @summary `maxIdentify`.
    * @public
    * @readonly
    */
-  readonly maxIdentify: UnsignedInt;
+  public readonly maxIdentify: UnsignedInt;
 
   constructor(
     bspProductUuid: BioAPI_UUID,
@@ -264,7 +264,7 @@ export class BioAPI_UNIT_SCHEMA {
    * @static
    */
 
-  public static _enum_for_category = _enum_for_BioAPI_CATEGORY;
+  public static _enum_for_category: typeof _enum_for_BioAPI_CATEGORY = _enum_for_BioAPI_CATEGORY;
 }
 
 

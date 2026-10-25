@@ -1,6 +1,6 @@
 /* eslint-disable */
 import {
-    ASN1Element as _Element,
+    type ASN1Element as _Element,
     ASN1TagClass as _TagClass,
     ASN1Construction as _Construction,
     ASN1UniversalType as _UniversalType,
@@ -16,7 +16,7 @@ import {
     _encode_EDIM_ExtendedBodyPart,
 } from '../EDIMSInformationObjects/EDIM-ExtendedBodyPart.ta.mjs';
 import {
-    BodyPartPlaceHolder,
+    type BodyPartPlaceHolder,
     _decode_BodyPartPlaceHolder,
     _encode_BodyPartPlaceHolder,
 } from '../EDIMSInformationObjects/BodyPartPlaceHolder.ta.mjs';

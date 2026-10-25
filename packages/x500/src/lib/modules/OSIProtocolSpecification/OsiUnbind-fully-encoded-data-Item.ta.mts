@@ -1,17 +1,17 @@
 /* eslint-disable */
 import {
     ASN1ConstructionError as _ConstructionError,
-    ASN1Element as _Element,
+    type ASN1Element as _Element,
     ASN1TagClass as _TagClass,
 } from "@wildboar/asn1";
 import * as $ from "@wildboar/asn1/functional";
 import {
-    OsiUnbind_fully_encoded_data_Item_presentation_data_values,
+    type OsiUnbind_fully_encoded_data_Item_presentation_data_values,
     _decode_OsiUnbind_fully_encoded_data_Item_presentation_data_values,
     _encode_OsiUnbind_fully_encoded_data_Item_presentation_data_values,
 } from "../OSIProtocolSpecification/OsiUnbind-fully-encoded-data-Item-presentation-data-values.ta.mjs";
 import {
-    Presentation_context_identifier,
+    type Presentation_context_identifier,
     _decode_Presentation_context_identifier,
     _encode_Presentation_context_identifier,
 } from "../OSIProtocolSpecification/Presentation-context-identifier.ta.mjs";
@@ -27,20 +27,26 @@ import {
  *
  */
 export class OsiUnbind_fully_encoded_data_Item {
+    /**
+     * @summary `presentation_context_identifier`.
+     * @public
+     * @readonly
+     */
+    public readonly presentation_context_identifier: Presentation_context_identifier;
+    /**
+     * @summary `presentation_data_values`.
+     * @public
+     * @readonly
+     */
+    public readonly presentation_data_values: OsiUnbind_fully_encoded_data_Item_presentation_data_values;
+
     constructor(
-        /**
-         * @summary `presentation_context_identifier`.
-         * @public
-         * @readonly
-         */
-        readonly presentation_context_identifier: Presentation_context_identifier,
-        /**
-         * @summary `presentation_data_values`.
-         * @public
-         * @readonly
-         */
-        readonly presentation_data_values: OsiUnbind_fully_encoded_data_Item_presentation_data_values
-    ) {}
+        presentation_context_identifier: Presentation_context_identifier,
+        presentation_data_values: OsiUnbind_fully_encoded_data_Item_presentation_data_values
+    ) {
+        this.presentation_context_identifier = presentation_context_identifier;
+        this.presentation_data_values = presentation_data_values;
+    }
 
     /**
      * @summary Restructures an object into a OsiUnbind_fully_encoded_data_Item

@@ -70,7 +70,7 @@ type SGiPtPTunnellingMethod = _enum_for_SGiPtPTunnellingMethod;
  * @enum {number}
  */
 export
-const SGiPtPTunnellingMethod = _enum_for_SGiPtPTunnellingMethod;
+const SGiPtPTunnellingMethod: typeof _enum_for_SGiPtPTunnellingMethod = _enum_for_SGiPtPTunnellingMethod;
 
 /**
  * @summary SGiPtPTunnellingMethod_uDPIPbased
@@ -78,7 +78,7 @@ const SGiPtPTunnellingMethod = _enum_for_SGiPtPTunnellingMethod;
  * @type {number}
  */
 export
-const SGiPtPTunnellingMethod_uDPIPbased: SGiPtPTunnellingMethod = SGiPtPTunnellingMethod.uDPIPbased; /* LONG_NAMED_ENUMERATED_VALUE */
+const SGiPtPTunnellingMethod_uDPIPbased: _enum_for_SGiPtPTunnellingMethod.uDPIPbased = SGiPtPTunnellingMethod.uDPIPbased; /* LONG_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary uDPIPbased
@@ -86,7 +86,7 @@ const SGiPtPTunnellingMethod_uDPIPbased: SGiPtPTunnellingMethod = SGiPtPTunnelli
  * @type {number}
  */
 export
-const uDPIPbased: SGiPtPTunnellingMethod = SGiPtPTunnellingMethod.uDPIPbased; /* SHORT_NAMED_ENUMERATED_VALUE */
+const uDPIPbased: _enum_for_SGiPtPTunnellingMethod.uDPIPbased = SGiPtPTunnellingMethod.uDPIPbased; /* SHORT_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary SGiPtPTunnellingMethod_others
@@ -94,7 +94,7 @@ const uDPIPbased: SGiPtPTunnellingMethod = SGiPtPTunnellingMethod.uDPIPbased; /*
  * @type {number}
  */
 export
-const SGiPtPTunnellingMethod_others: SGiPtPTunnellingMethod = SGiPtPTunnellingMethod.others; /* LONG_NAMED_ENUMERATED_VALUE */
+const SGiPtPTunnellingMethod_others: _enum_for_SGiPtPTunnellingMethod.others = SGiPtPTunnellingMethod.others; /* LONG_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary others
@@ -102,7 +102,7 @@ const SGiPtPTunnellingMethod_others: SGiPtPTunnellingMethod = SGiPtPTunnellingMe
  * @type {number}
  */
 export
-const others: SGiPtPTunnellingMethod = SGiPtPTunnellingMethod.others; /* SHORT_NAMED_ENUMERATED_VALUE */
+const others: _enum_for_SGiPtPTunnellingMethod.others = SGiPtPTunnellingMethod.others; /* SHORT_NAMED_ENUMERATED_VALUE */
 
 export
 const _decode_SGiPtPTunnellingMethod: $.ASN1Decoder<SGiPtPTunnellingMethod> = $._decodeEnumerated;

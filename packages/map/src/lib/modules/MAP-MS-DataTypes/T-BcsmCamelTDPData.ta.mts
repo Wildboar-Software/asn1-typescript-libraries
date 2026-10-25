@@ -1,15 +1,15 @@
 /* eslint-disable */
 import {
-    OPTIONAL,
-    ASN1Element as _Element,
+    type OPTIONAL,
+    type ASN1Element as _Element,
     ASN1TagClass as _TagClass
 } from "@wildboar/asn1";
 import * as $ from "@wildboar/asn1/functional";
-import { ISDN_AddressString, _decode_ISDN_AddressString, _encode_ISDN_AddressString } from "../MAP-CommonDataTypes/ISDN-AddressString.ta.mjs";
+import { type ISDN_AddressString, _decode_ISDN_AddressString, _encode_ISDN_AddressString } from "../MAP-CommonDataTypes/ISDN-AddressString.ta.mjs";
 import { ExtensionContainer, _decode_ExtensionContainer, _encode_ExtensionContainer } from "../MAP-ExtensionDataTypes/ExtensionContainer.ta.mjs";
-import { DefaultCallHandling, _decode_DefaultCallHandling, _encode_DefaultCallHandling, _enum_for_DefaultCallHandling } from "../MAP-MS-DataTypes/DefaultCallHandling.ta.mjs";
-import { ServiceKey, _decode_ServiceKey, _encode_ServiceKey } from "../MAP-MS-DataTypes/ServiceKey.ta.mjs";
-import { T_BcsmTriggerDetectionPoint, _decode_T_BcsmTriggerDetectionPoint, _encode_T_BcsmTriggerDetectionPoint, _enum_for_T_BcsmTriggerDetectionPoint } from "../MAP-MS-DataTypes/T-BcsmTriggerDetectionPoint.ta.mjs";
+import { type DefaultCallHandling, _decode_DefaultCallHandling, _encode_DefaultCallHandling, _enum_for_DefaultCallHandling } from "../MAP-MS-DataTypes/DefaultCallHandling.ta.mjs";
+import { type ServiceKey, _decode_ServiceKey, _encode_ServiceKey } from "../MAP-MS-DataTypes/ServiceKey.ta.mjs";
+import { type T_BcsmTriggerDetectionPoint, _decode_T_BcsmTriggerDetectionPoint, _encode_T_BcsmTriggerDetectionPoint, _enum_for_T_BcsmTriggerDetectionPoint } from "../MAP-MS-DataTypes/T-BcsmTriggerDetectionPoint.ta.mjs";
 
 
 /**
@@ -29,7 +29,7 @@ import { T_BcsmTriggerDetectionPoint, _decode_T_BcsmTriggerDetectionPoint, _enco
  *     serviceKey    ServiceKey,
  *     gsmSCF-Address    [0] ISDN-AddressString,
  *     defaultCallHandling    [1] DefaultCallHandling,
- *     extensionContainer    [2] ExtensionContainer    OPTIONAL,
+ *     extensionContainer    [2] ExtensionContainer    type OPTIONAL,
  *     ...}
  * ```
  * 
@@ -37,70 +37,84 @@ import { T_BcsmTriggerDetectionPoint, _decode_T_BcsmTriggerDetectionPoint, _enco
  */
 export
 class T_BcsmCamelTDPData {
+    /**
+     * @summary `t_BcsmTriggerDetectionPoint`.
+     * @description
+     *
+     * Terminating BCSM CAMEL trigger detection point.
+     *
+     * (3GPP TS 29.002 V19.1.0 clause 17.7.1).
+     *
+     * @public
+     * @readonly
+     */
+    public readonly t_BcsmTriggerDetectionPoint: T_BcsmTriggerDetectionPoint;
+    /**
+     * @summary `serviceKey`.
+     * @description
+     *
+     * Identifies CAMEL service logic in the gsmSCF.
+     *
+     * (3GPP TS 29.002 V19.1.0 clause 17.7.1).
+     *
+     * @public
+     * @readonly
+     */
+    public readonly serviceKey: ServiceKey;
+    /**
+     * @summary `gsmSCF_Address`.
+     * @description
+     *
+     * ISDN number assigned to the gsmSCF. In an IP Multimedia CN, contains
+     * the IM-SSF address when IM-SSF takes the gsmSCF role.
+     *
+     * (3GPP TS 29.002 V19.1.0 clause 7.6.2.58).
+     *
+     * @public
+     * @readonly
+     */
+    public readonly gsmSCF_Address: ISDN_AddressString;
+    /**
+     * @summary `defaultCallHandling`.
+     * @description
+     *
+     * CAMEL default call handling. Received 2-31 treated as `continueCall`;
+     * greater than 31 as `releaseCall`.
+     *
+     * (3GPP TS 29.002 V19.1.0 clause 17.7.1).
+     *
+     * @public
+     * @readonly
+     */
+    public readonly defaultCallHandling: DefaultCallHandling;
+    /**
+     * @summary `extensionContainer`.
+     * @public
+     * @readonly
+     */
+    public readonly extensionContainer?: OPTIONAL<ExtensionContainer>;
+    /**
+     * @summary Extensions that are not recognized.
+     * @public
+     * @readonly
+     */
+    public readonly _unrecognizedExtensionsList: _Element[];
+
     constructor (
-        /**
-         * @summary `t_BcsmTriggerDetectionPoint`.
-         * @description
-         *
-         * Terminating BCSM CAMEL trigger detection point.
-         *
-         * (3GPP TS 29.002 V19.1.0 clause 17.7.1).
-         *
-         * @public
-         * @readonly
-         */
-        readonly t_BcsmTriggerDetectionPoint: T_BcsmTriggerDetectionPoint,
-        /**
-         * @summary `serviceKey`.
-         * @description
-         *
-         * Identifies CAMEL service logic in the gsmSCF.
-         *
-         * (3GPP TS 29.002 V19.1.0 clause 17.7.1).
-         *
-         * @public
-         * @readonly
-         */
-        readonly serviceKey: ServiceKey,
-        /**
-         * @summary `gsmSCF_Address`.
-         * @description
-         *
-         * ISDN number assigned to the gsmSCF. In an IP Multimedia CN, contains
-         * the IM-SSF address when IM-SSF takes the gsmSCF role.
-         *
-         * (3GPP TS 29.002 V19.1.0 clause 7.6.2.58).
-         *
-         * @public
-         * @readonly
-         */
-        readonly gsmSCF_Address: ISDN_AddressString,
-        /**
-         * @summary `defaultCallHandling`.
-         * @description
-         *
-         * CAMEL default call handling. Received 2-31 treated as `continueCall`;
-         * greater than 31 as `releaseCall`.
-         *
-         * (3GPP TS 29.002 V19.1.0 clause 17.7.1).
-         *
-         * @public
-         * @readonly
-         */
-        readonly defaultCallHandling: DefaultCallHandling,
-        /**
-         * @summary `extensionContainer`.
-         * @public
-         * @readonly
-         */
-        readonly extensionContainer?: OPTIONAL<ExtensionContainer>,
-        /**
-         * @summary Extensions that are not recognized.
-         * @public
-         * @readonly
-         */
-        readonly _unrecognizedExtensionsList: _Element[] = []
-    ) {}
+        t_BcsmTriggerDetectionPoint: T_BcsmTriggerDetectionPoint,
+        serviceKey: ServiceKey,
+        gsmSCF_Address: ISDN_AddressString,
+        defaultCallHandling: DefaultCallHandling,
+        extensionContainer?: OPTIONAL<ExtensionContainer>,
+        _unrecognizedExtensionsList: _Element[] = []
+    ) {
+        this.t_BcsmTriggerDetectionPoint = t_BcsmTriggerDetectionPoint;
+        this.serviceKey = serviceKey;
+        this.gsmSCF_Address = gsmSCF_Address;
+        this.defaultCallHandling = defaultCallHandling;
+        this.extensionContainer = extensionContainer;
+        this._unrecognizedExtensionsList = _unrecognizedExtensionsList;
+    }
 
     /**
      * @summary Restructures an object into a T_BcsmCamelTDPData
@@ -124,13 +138,13 @@ class T_BcsmCamelTDPData {
          * @static
          */
 
-    public static _enum_for_t_BcsmTriggerDetectionPoint = _enum_for_T_BcsmTriggerDetectionPoint;        /**
+    public static _enum_for_t_BcsmTriggerDetectionPoint: typeof _enum_for_T_BcsmTriggerDetectionPoint = _enum_for_T_BcsmTriggerDetectionPoint;        /**
          * @summary The enum used as the type of the component `defaultCallHandling`
          * @public
          * @static
          */
 
-    public static _enum_for_defaultCallHandling = _enum_for_DefaultCallHandling;
+    public static _enum_for_defaultCallHandling: typeof _enum_for_DefaultCallHandling = _enum_for_DefaultCallHandling;
 }
 
 /**

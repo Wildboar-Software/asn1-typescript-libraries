@@ -1,6 +1,6 @@
 /* eslint-disable */
 import { type OPERATION } from "../Remote-Operations-Information-Objects/OPERATION.oca.mjs";
-import { PathRetainArg, _decode_PathRetainArg, _encode_PathRetainArg } from "../Do-Not-Disturb-Operations-asn1-97/PathRetainArg.ta.mjs";
+import { type PathRetainArg, _decode_PathRetainArg, _encode_PathRetainArg } from "../Do-Not-Disturb-Operations-asn1-97/PathRetainArg.ta.mjs";
 
 /**
  * @summary pathRetain

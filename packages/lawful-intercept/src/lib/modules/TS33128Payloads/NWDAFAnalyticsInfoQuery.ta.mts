@@ -1,11 +1,11 @@
 /* eslint-disable */
 import {
-    OPTIONAL,
-    ASN1Element as _Element,
+    type OPTIONAL,
+    type ASN1Element as _Element,
     ASN1TagClass as _TagClass
 } from "@wildboar/asn1";
 import * as $ from "@wildboar/asn1/functional";
-import { SUPI, _decode_SUPI, _encode_SUPI } from "../TS33128Payloads/SUPI.ta.mjs";
+import { type SUPI, _decode_SUPI, _encode_SUPI } from "../TS33128Payloads/SUPI.ta.mjs";
 // export { SUPI, _decode_SUPI, _encode_SUPI } from "../TS33128Payloads/SUPI.ta.mjs";
 import { NWDAFEvent, _decode_NWDAFEvent, _encode_NWDAFEvent, _enum_for_NWDAFEvent } from "../TS33128Payloads/NWDAFEvent.ta.mjs";
 // export { NWDAFEvent, _enum_for_NWDAFEvent, NWDAFEvent_serviceExperience /* IMPORTED_LONG_ENUMERATION_ITEM */, serviceExperience /* IMPORTED_SHORT_ENUMERATION_ITEM */, NWDAFEvent_uEMobility /* IMPORTED_LONG_ENUMERATION_ITEM */, uEMobility /* IMPORTED_SHORT_ENUMERATION_ITEM */, NWDAFEvent_uEComm /* IMPORTED_LONG_ENUMERATION_ITEM */, uEComm /* IMPORTED_SHORT_ENUMERATION_ITEM */, NWDAFEvent_abnormalBehaviour /* IMPORTED_LONG_ENUMERATION_ITEM */, abnormalBehaviour /* IMPORTED_SHORT_ENUMERATION_ITEM */, NWDAFEvent_dispersion /* IMPORTED_LONG_ENUMERATION_ITEM */, dispersion /* IMPORTED_SHORT_ENUMERATION_ITEM */, NWDAFEvent_relativeProximity /* IMPORTED_LONG_ENUMERATION_ITEM */, relativeProximity /* IMPORTED_SHORT_ENUMERATION_ITEM */, NWDAFEvent_pDUSessionTraffic /* IMPORTED_LONG_ENUMERATION_ITEM */, pDUSessionTraffic /* IMPORTED_SHORT_ENUMERATION_ITEM */, _decode_NWDAFEvent, _encode_NWDAFEvent } from "../TS33128Payloads/NWDAFEvent.ta.mjs";
@@ -191,13 +191,13 @@ class NWDAFAnalyticsInfoQuery {
          * @static
          */
 
-    public static _enum_for_nWDAFEvent = _enum_for_NWDAFEvent;        /**
+    public static _enum_for_nWDAFEvent: typeof _enum_for_NWDAFEvent = _enum_for_NWDAFEvent;        /**
          * @summary The enum used as the type of the component `nWDAFAnalyticsInfoResponseCode`
          * @public
          * @static
          */
 
-    public static _enum_for_nWDAFAnalyticsInfoResponseCode = _enum_for_NWDAFAnalyticsInfoResponseCode;
+    public static _enum_for_nWDAFAnalyticsInfoResponseCode: typeof _enum_for_NWDAFAnalyticsInfoResponseCode = _enum_for_NWDAFAnalyticsInfoResponseCode;
 }
 
 /**

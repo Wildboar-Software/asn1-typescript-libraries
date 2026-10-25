@@ -11,12 +11,12 @@ import {
 } from '@wildboar/asn1';
 import * as $ from '@wildboar/asn1/functional';
 import {
-  AttributeDescription,
+  type AttributeDescription,
   _decode_AttributeDescription,
   _encode_AttributeDescription,
 } from '../Lightweight-Directory-Access-Protocol-V3/AttributeDescription.ta.mjs';
 import {
-  AssertionValue,
+  type AssertionValue,
   _decode_AssertionValue,
   _encode_AssertionValue,
 } from '../Lightweight-Directory-Access-Protocol-V3/AssertionValue.ta.mjs';
@@ -50,7 +50,7 @@ export class AttributeValueAssertion {
    * @public
    * @readonly
    */
-  readonly attributeDesc: AttributeDescription;
+  public readonly attributeDesc: AttributeDescription;
   /**
    * @summary `assertionValue`.
    * @description
@@ -61,13 +61,13 @@ export class AttributeValueAssertion {
    * @public
    * @readonly
    */
-  readonly assertionValue: AssertionValue;
+  public readonly assertionValue: AssertionValue;
   /**
    * @summary Extensions that are not recognized.
    * @public
    * @readonly
    */
-  readonly _unrecognizedExtensionsList: _Element[];
+  public readonly _unrecognizedExtensionsList: _Element[];
 
   constructor(
     attributeDesc: AttributeDescription,

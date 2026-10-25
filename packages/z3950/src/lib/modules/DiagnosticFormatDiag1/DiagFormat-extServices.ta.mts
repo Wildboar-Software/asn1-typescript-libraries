@@ -1,12 +1,12 @@
 /* eslint-disable */
 import {
-    ASN1Element as _Element,
+    type ASN1Element as _Element,
     ASN1TagClass as _TagClass
 } from "@wildboar/asn1";
 import * as $ from "@wildboar/asn1/functional";
-import { _decode_DiagFormat_extServices_req, _encode_DiagFormat_extServices_req, DiagFormat_extServices_req } from "../DiagnosticFormatDiag1/DiagFormat-extServices-req.ta.mjs";
-import { _decode_DiagFormat_extServices_permission, _encode_DiagFormat_extServices_permission, DiagFormat_extServices_permission } from "../DiagnosticFormatDiag1/DiagFormat-extServices-permission.ta.mjs";
-import { _decode_DiagFormat_extServices_immediate, _encode_DiagFormat_extServices_immediate, DiagFormat_extServices_immediate } from "../DiagnosticFormatDiag1/DiagFormat-extServices-immediate.ta.mjs";
+import { _decode_DiagFormat_extServices_req, _encode_DiagFormat_extServices_req, type DiagFormat_extServices_req } from "../DiagnosticFormatDiag1/DiagFormat-extServices-req.ta.mjs";
+import { _decode_DiagFormat_extServices_permission, _encode_DiagFormat_extServices_permission, type DiagFormat_extServices_permission } from "../DiagnosticFormatDiag1/DiagFormat-extServices-permission.ta.mjs";
+import { _decode_DiagFormat_extServices_immediate, _encode_DiagFormat_extServices_immediate, type DiagFormat_extServices_immediate } from "../DiagnosticFormatDiag1/DiagFormat-extServices-immediate.ta.mjs";
 
 
 /**

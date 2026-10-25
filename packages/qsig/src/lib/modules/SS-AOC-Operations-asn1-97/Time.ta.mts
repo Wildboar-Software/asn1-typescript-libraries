@@ -1,11 +1,11 @@
 /* eslint-disable */
 import {
     ASN1ConstructionError as _ConstructionError,
-    ASN1Element as _Element,
+    type ASN1Element as _Element,
     ASN1TagClass as _TagClass
 } from "@wildboar/asn1";
 import * as $ from "@wildboar/asn1/functional";
-import { LengthOfTimeUnit, _decode_LengthOfTimeUnit, _encode_LengthOfTimeUnit } from "../SS-AOC-Operations-asn1-97/LengthOfTimeUnit.ta.mjs";
+import { type LengthOfTimeUnit, _decode_LengthOfTimeUnit, _encode_LengthOfTimeUnit } from "../SS-AOC-Operations-asn1-97/LengthOfTimeUnit.ta.mjs";
 import { Scale, _decode_Scale, _encode_Scale, _enum_for_Scale } from "../SS-AOC-Operations-asn1-97/Scale.ta.mjs";
 
 /**
@@ -81,7 +81,7 @@ class Time {
          * @static
          */
 
-    public static _enum_for_scale = _enum_for_Scale;
+    public static _enum_for_scale: typeof _enum_for_Scale = _enum_for_Scale;
 }
 
 /**

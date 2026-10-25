@@ -1,6 +1,6 @@
 /* eslint-disable */
 import {
-    ASN1Element as _Element,
+    type ASN1Element as _Element,
     ASN1TagClass as _TagClass,
     ASN1Construction as _Construction,
     ASN1UniversalType as _UniversalType,
@@ -92,7 +92,7 @@ export type DetermineViolationStatusReply = _enum_for_DetermineViolationStatusRe
  *
  * @enum {number}
  */
-export const DetermineViolationStatusReply = _enum_for_DetermineViolationStatusReply;
+export const DetermineViolationStatusReply: typeof _enum_for_DetermineViolationStatusReply = _enum_for_DetermineViolationStatusReply;
 
 /**
  * @summary DetermineViolationStatusReply_unknown
@@ -103,7 +103,7 @@ export const DetermineViolationStatusReply = _enum_for_DetermineViolationStatusR
  * @constant
  * @type {number}
  */
-export const DetermineViolationStatusReply_unknown: DetermineViolationStatusReply =
+export const DetermineViolationStatusReply_unknown: _enum_for_DetermineViolationStatusReply.unknown =
     DetermineViolationStatusReply.unknown; /* LONG_NAMED_ENUMERATED_VALUE */
 
 /**
@@ -115,7 +115,7 @@ export const DetermineViolationStatusReply_unknown: DetermineViolationStatusRepl
  * @constant
  * @type {number}
  */
-export const unknown: DetermineViolationStatusReply =
+export const unknown: _enum_for_DetermineViolationStatusReply.unknown =
     DetermineViolationStatusReply.unknown; /* SHORT_NAMED_ENUMERATED_VALUE */
 
 /**
@@ -128,7 +128,7 @@ export const unknown: DetermineViolationStatusReply =
  * @constant
  * @type {number}
  */
-export const DetermineViolationStatusReply_no_violation: DetermineViolationStatusReply =
+export const DetermineViolationStatusReply_no_violation: _enum_for_DetermineViolationStatusReply.no_violation =
     DetermineViolationStatusReply.no_violation; /* LONG_NAMED_ENUMERATED_VALUE */
 
 /**
@@ -141,7 +141,7 @@ export const DetermineViolationStatusReply_no_violation: DetermineViolationStatu
  * @constant
  * @type {number}
  */
-export const no_violation: DetermineViolationStatusReply =
+export const no_violation: _enum_for_DetermineViolationStatusReply.no_violation =
     DetermineViolationStatusReply.no_violation; /* SHORT_NAMED_ENUMERATED_VALUE */
 
 /**
@@ -154,7 +154,7 @@ export const no_violation: DetermineViolationStatusReply =
  * @constant
  * @type {number}
  */
-export const DetermineViolationStatusReply_violation_detected: DetermineViolationStatusReply =
+export const DetermineViolationStatusReply_violation_detected: _enum_for_DetermineViolationStatusReply.violation_detected =
     DetermineViolationStatusReply.violation_detected; /* LONG_NAMED_ENUMERATED_VALUE */
 
 /**
@@ -167,7 +167,7 @@ export const DetermineViolationStatusReply_violation_detected: DetermineViolatio
  * @constant
  * @type {number}
  */
-export const violation_detected: DetermineViolationStatusReply =
+export const violation_detected: _enum_for_DetermineViolationStatusReply.violation_detected =
     DetermineViolationStatusReply.violation_detected; /* SHORT_NAMED_ENUMERATED_VALUE */
 
 /**
@@ -179,7 +179,7 @@ export const violation_detected: DetermineViolationStatusReply =
  * @constant
  * @type {number}
  */
-export const DetermineViolationStatusReply_non_member: DetermineViolationStatusReply =
+export const DetermineViolationStatusReply_non_member: _enum_for_DetermineViolationStatusReply.non_member =
     DetermineViolationStatusReply.non_member; /* LONG_NAMED_ENUMERATED_VALUE */
 
 /**
@@ -191,14 +191,27 @@ export const DetermineViolationStatusReply_non_member: DetermineViolationStatusR
  * @constant
  * @type {number}
  */
-export const non_member: DetermineViolationStatusReply =
+export const non_member: _enum_for_DetermineViolationStatusReply.non_member =
     DetermineViolationStatusReply.non_member; /* SHORT_NAMED_ENUMERATED_VALUE */
 
 
-export const _decode_DetermineViolationStatusReply = $._decodeEnumerated;
+export function _decode_DetermineViolationStatusReply(el: _Element): DetermineViolationStatusReply {
+    const enumerated = $._decodeEnumerated(el);
+    switch (enumerated) {
+        case DetermineViolationStatusReply.unknown: return DetermineViolationStatusReply.unknown;
+        case DetermineViolationStatusReply.no_violation: return DetermineViolationStatusReply.no_violation;
+        case DetermineViolationStatusReply.violation_detected: return DetermineViolationStatusReply.violation_detected;
+        case DetermineViolationStatusReply.non_member: return DetermineViolationStatusReply.non_member;
+        default:
+            throw new _ConstructionError(
+                'Invalid ENUMERATED value ' + enumerated + ' for DetermineViolationStatusReply.',
+                el,
+            );
+    }
+}
 
 
-export const _encode_DetermineViolationStatusReply = $._encodeEnumerated;
+export const _encode_DetermineViolationStatusReply: $.ASN1Encoder<DetermineViolationStatusReply> = $._encodeEnumerated as $.ASN1Encoder<DetermineViolationStatusReply>;
 
 
 /* eslint-enable */

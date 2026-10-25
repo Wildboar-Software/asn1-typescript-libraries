@@ -1,6 +1,6 @@
 /* eslint-disable */
 import {
-    ASN1Element as _Element,
+    type ASN1Element as _Element,
     ASN1TagClass as _TagClass,
     ASN1Construction as _Construction,
     ASN1UniversalType as _UniversalType,
@@ -10,8 +10,8 @@ import {
     ASN1ConstructionError as _ConstructionError,
 } from "@wildboar/asn1";
 import * as $ from "@wildboar/asn1/functional";
-import { Address, _decode_Address, _encode_Address } from "../MMS-Object-Module-1/Address.ta.mjs";
-import { TypeSpecification, _decode_TypeSpecification, _encode_TypeSpecification } from "../ISO-9506-MMS-1/TypeSpecification.ta.mjs";
+import { type Address, _decode_Address, _encode_Address } from "../MMS-Object-Module-1/Address.ta.mjs";
+import { type TypeSpecification, _decode_TypeSpecification, _encode_TypeSpecification } from "../ISO-9506-MMS-1/TypeSpecification.ta.mjs";
 
 
 /**
@@ -38,30 +38,36 @@ import { TypeSpecification, _decode_TypeSpecification, _encode_TypeSpecification
  */
 export
 class VariableSpecification_variableDescription {
+    /**
+     * @summary `address`.
+     * @description
+     *
+     * Base address of the described variable.
+     * ISO 9506-1:2003 §14.5.2.4.1, §14.5.3.
+     *
+     * @public
+     * @readonly
+     */
+    public readonly address: Address;
+    /**
+     * @summary `typeSpecification`.
+     * @description
+     *
+     * Abstract type of the variable.
+     * ISO 9506-1:2003 §14.5.2.4.2, §14.2.
+     *
+     * @public
+     * @readonly
+     */
+    public readonly typeSpecification: TypeSpecification;
+
     constructor (
-        /**
-         * @summary `address`.
-         * @description
-         *
-         * Base address of the described variable.
-         * ISO 9506-1:2003 §14.5.2.4.1, §14.5.3.
-         *
-         * @public
-         * @readonly
-         */
-        readonly address: Address,
-        /**
-         * @summary `typeSpecification`.
-         * @description
-         *
-         * Abstract type of the variable.
-         * ISO 9506-1:2003 §14.5.2.4.2, §14.2.
-         *
-         * @public
-         * @readonly
-         */
-        readonly typeSpecification: TypeSpecification
-    ) {}
+        address: Address,
+        typeSpecification: TypeSpecification
+    ) {
+        this.address = address;
+        this.typeSpecification = typeSpecification;
+    }
 
     /**
      * @summary Restructures an object into a VariableSpecification_variableDescription

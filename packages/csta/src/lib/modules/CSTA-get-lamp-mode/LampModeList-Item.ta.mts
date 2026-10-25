@@ -2,15 +2,15 @@
 
 import * as $ from "@wildboar/asn1/functional";
 import {
-    OPTIONAL,
-    SEQUENCE,
-    SET,
-    ASN1Element as _Element,
+    type OPTIONAL,
+    type SEQUENCE,
+    type SET,
+    type ASN1Element as _Element,
     ASN1TagClass as _TagClass
 } from "@wildboar/asn1";
-import { LampID, _decode_LampID, _encode_LampID } from "../CSTA-physical-device-feature/LampID.ta.mjs";
+import { type LampID, _decode_LampID, _encode_LampID } from "../CSTA-physical-device-feature/LampID.ta.mjs";
 
-import { LampMode, _decode_LampMode, _encode_LampMode } from "../CSTA-physical-device-feature/LampMode.ta.mjs";
+import { type LampMode, _decode_LampMode, _encode_LampMode } from "../CSTA-physical-device-feature/LampMode.ta.mjs";
 
 import {
     LampBrightness,
@@ -19,9 +19,9 @@ import {
     _encode_LampBrightness
 } from "../CSTA-physical-device-feature/LampBrightness.ta.mjs";
 
-import { LampColor, _decode_LampColor, _encode_LampColor } from "../CSTA-physical-device-feature/LampColor.ta.mjs";
+import { type LampColor, _decode_LampColor, _encode_LampColor } from "../CSTA-physical-device-feature/LampColor.ta.mjs";
 
-import { ButtonID, _decode_ButtonID, _encode_ButtonID } from "../CSTA-physical-device-feature/ButtonID.ta.mjs";
+import { type ButtonID, _decode_ButtonID, _encode_ButtonID } from "../CSTA-physical-device-feature/ButtonID.ta.mjs";
 
 
 
@@ -50,57 +50,69 @@ import { ButtonID, _decode_ButtonID, _encode_ButtonID } from "../CSTA-physical-d
  */
 export
 class LampModeList_Item {
+    /**
+     * @summary `lamp`.
+     * @description
+     *
+     * LampID of this lamp.
+     * @public
+     * @readonly
+     */
+    public readonly lamp: LampID;
+    /**
+     * @summary `lampMode`.
+     * @description
+     *
+     * 0–100: 0 brokenflutter, 1 flutter, 2 off, 3 steady, 4 wink, 5 unknown
+     * (Get/Event) or unused (Set). 6–100 switching-function specific.
+     * @public
+     * @readonly
+     */
+    public readonly lampMode: LampMode;
+    /**
+     * @summary `lampBrightness`.
+     * @description
+     *
+     * Intensity when the lamp is on: unspecified/normal (default), dim, or
+     * bright. Visible levels are lamp-dependent.
+     * @public
+     * @readonly
+     */
+    public readonly lampBrightness?: OPTIONAL<LampBrightness>;
+    /**
+     * @summary `lampColor`.
+     * @description
+     *
+     * 0–100: 0 none, 1 red, 2 yellow, 3 green, 4 blue, 5 unknown (Get/Event
+     * default if absent) or unused (Set). 6–100 switching-function
+     * specific.
+     * @public
+     * @readonly
+     */
+    public readonly lampColor?: OPTIONAL<LampColor>;
+    /**
+     * @summary `button`.
+     * @description
+     *
+     * Associated button, if any.
+     * @public
+     * @readonly
+     */
+    public readonly button?: OPTIONAL<ButtonID>;
+
     constructor (
-        /**
-         * @summary `lamp`.
-         * @description
-         *
-         * LampID of this lamp.
-         * @public
-         * @readonly
-         */
-        readonly lamp: LampID,
-        /**
-         * @summary `lampMode`.
-         * @description
-         *
-         * 0–100: 0 brokenflutter, 1 flutter, 2 off, 3 steady, 4 wink, 5 unknown
-         * (Get/Event) or unused (Set). 6–100 switching-function specific.
-         * @public
-         * @readonly
-         */
-        readonly lampMode: LampMode,
-        /**
-         * @summary `lampBrightness`.
-         * @description
-         *
-         * Intensity when the lamp is on: unspecified/normal (default), dim, or
-         * bright. Visible levels are lamp-dependent.
-         * @public
-         * @readonly
-         */
-        readonly lampBrightness?: OPTIONAL<LampBrightness>,
-        /**
-         * @summary `lampColor`.
-         * @description
-         *
-         * 0–100: 0 none, 1 red, 2 yellow, 3 green, 4 blue, 5 unknown (Get/Event
-         * default if absent) or unused (Set). 6–100 switching-function
-         * specific.
-         * @public
-         * @readonly
-         */
-        readonly lampColor?: OPTIONAL<LampColor>,
-        /**
-         * @summary `button`.
-         * @description
-         *
-         * Associated button, if any.
-         * @public
-         * @readonly
-         */
-        readonly button?: OPTIONAL<ButtonID>
-    ) {}
+        lamp: LampID,
+        lampMode: LampMode,
+        lampBrightness?: OPTIONAL<LampBrightness>,
+        lampColor?: OPTIONAL<LampColor>,
+        button?: OPTIONAL<ButtonID>
+    ) {
+        this.lamp = lamp;
+        this.lampMode = lampMode;
+        this.lampBrightness = lampBrightness;
+        this.lampColor = lampColor;
+        this.button = button;
+    }
 
     /**
      * @summary Restructures an object into a LampModeList_Item
@@ -124,7 +136,7 @@ class LampModeList_Item {
          * @static
          */
 
-    public static _enum_for_lampBrightness = _enum_for_LampBrightness;
+    public static _enum_for_lampBrightness: typeof _enum_for_LampBrightness = _enum_for_LampBrightness;
 }
 
 /**

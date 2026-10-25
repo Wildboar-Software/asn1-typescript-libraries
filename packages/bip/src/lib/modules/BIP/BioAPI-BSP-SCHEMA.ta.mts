@@ -1,6 +1,6 @@
 /* eslint-disable */
 import {
-  UTF8String,
+  type UTF8String,
   ASN1Element as _Element,
   ASN1TagClass as _TagClass,
   ASN1Construction as _Construction,
@@ -12,12 +12,12 @@ import {
 } from '@wildboar/asn1';
 import * as $ from '@wildboar/asn1/functional';
 import {
-  BioAPI_UUID,
+  type BioAPI_UUID,
   _decode_BioAPI_UUID,
   _encode_BioAPI_UUID,
 } from '../BIP/BioAPI-UUID.ta.mjs';
 import {
-  BioAPI_STRING,
+  type BioAPI_STRING,
   _decode_BioAPI_STRING,
   _encode_BioAPI_STRING,
 } from '../BIP/BioAPI-STRING.ta.mjs';
@@ -32,37 +32,37 @@ import {
   _encode_BioAPI_BIR_BIOMETRIC_DATA_FORMAT,
 } from '../BIP/BioAPI-BIR-BIOMETRIC-DATA-FORMAT.ta.mjs';
 import {
-  BioAPI_BIR_BIOMETRIC_TYPE,
+  type BioAPI_BIR_BIOMETRIC_TYPE,
   _decode_BioAPI_BIR_BIOMETRIC_TYPE,
   _encode_BioAPI_BIR_BIOMETRIC_TYPE,
 } from '../BIP/BioAPI-BIR-BIOMETRIC-TYPE.ta.mjs';
 import {
-  BioAPI_OPERATIONS_MASK,
+  type BioAPI_OPERATIONS_MASK,
   _decode_BioAPI_OPERATIONS_MASK,
   _encode_BioAPI_OPERATIONS_MASK,
 } from '../BIP/BioAPI-OPERATIONS-MASK.ta.mjs';
 import {
-  BioAPI_OPTIONS_MASK,
+  type BioAPI_OPTIONS_MASK,
   _decode_BioAPI_OPTIONS_MASK,
   _encode_BioAPI_OPTIONS_MASK,
 } from '../BIP/BioAPI-OPTIONS-MASK.ta.mjs';
 import {
-  BioAPI_FMR,
+  type BioAPI_FMR,
   _decode_BioAPI_FMR,
   _encode_BioAPI_FMR,
 } from '../BIP/BioAPI-FMR.ta.mjs';
 import {
-  UnsignedInt,
+  type UnsignedInt,
   _decode_UnsignedInt,
   _encode_UnsignedInt,
 } from '../BIP/UnsignedInt.ta.mjs';
 import {
-  SignedInt,
+  type SignedInt,
   _decode_SignedInt,
   _encode_SignedInt,
 } from '../BIP/SignedInt.ta.mjs';
 import {
-  EndpointIRI,
+  type EndpointIRI,
   _decode_EndpointIRI,
   _encode_EndpointIRI,
 } from '../BIP/EndpointIRI.ta.mjs';
@@ -122,13 +122,13 @@ export class BioAPI_BSP_SCHEMA {
    * @public
    * @readonly
    */
-  readonly bspProductUuid: BioAPI_UUID;
+  public readonly bspProductUuid: BioAPI_UUID;
   /**
    * @summary `description`.
    * @public
    * @readonly
    */
-  readonly description: BioAPI_STRING;
+  public readonly description: BioAPI_STRING;
   /**
    * @summary `path`.
    * @description
@@ -139,25 +139,25 @@ export class BioAPI_BSP_SCHEMA {
    * @public
    * @readonly
    */
-  readonly path: UTF8String;
+  public readonly path: UTF8String;
   /**
    * @summary `specVersion`.
    * @public
    * @readonly
    */
-  readonly specVersion: BioAPI_VERSION;
+  public readonly specVersion: BioAPI_VERSION;
   /**
    * @summary `productVersion`.
    * @public
    * @readonly
    */
-  readonly productVersion: BioAPI_STRING;
+  public readonly productVersion: BioAPI_STRING;
   /**
    * @summary `vendor`.
    * @public
    * @readonly
    */
-  readonly vendor: BioAPI_STRING;
+  public readonly vendor: BioAPI_STRING;
   /**
    * @summary `supportedFormats`.
    * @description
@@ -168,79 +168,79 @@ export class BioAPI_BSP_SCHEMA {
    * @public
    * @readonly
    */
-  readonly supportedFormats: BioAPI_BIR_BIOMETRIC_DATA_FORMAT[];
+  public readonly supportedFormats: BioAPI_BIR_BIOMETRIC_DATA_FORMAT[];
   /**
    * @summary `factorsMask`.
    * @public
    * @readonly
    */
-  readonly factorsMask: BioAPI_BIR_BIOMETRIC_TYPE;
+  public readonly factorsMask: BioAPI_BIR_BIOMETRIC_TYPE;
   /**
    * @summary `operations`.
    * @public
    * @readonly
    */
-  readonly operations: BioAPI_OPERATIONS_MASK;
+  public readonly operations: BioAPI_OPERATIONS_MASK;
   /**
    * @summary `options`.
    * @public
    * @readonly
    */
-  readonly options: BioAPI_OPTIONS_MASK;
+  public readonly options: BioAPI_OPTIONS_MASK;
   /**
    * @summary `payloadPolicy`.
    * @public
    * @readonly
    */
-  readonly payloadPolicy: BioAPI_FMR;
+  public readonly payloadPolicy: BioAPI_FMR;
   /**
    * @summary `maxPayloadSize`.
    * @public
    * @readonly
    */
-  readonly maxPayloadSize: UnsignedInt;
+  public readonly maxPayloadSize: UnsignedInt;
   /**
    * @summary `defaultVerifyTimeout`.
    * @public
    * @readonly
    */
-  readonly defaultVerifyTimeout: SignedInt;
+  public readonly defaultVerifyTimeout: SignedInt;
   /**
    * @summary `defaultIdentifyTimeout`.
    * @public
    * @readonly
    */
-  readonly defaultIdentifyTimeout: SignedInt;
+  public readonly defaultIdentifyTimeout: SignedInt;
   /**
    * @summary `defaultCaptureTimeout`.
    * @public
    * @readonly
    */
-  readonly defaultCaptureTimeout: SignedInt;
+  public readonly defaultCaptureTimeout: SignedInt;
   /**
    * @summary `defaultEnrollTimeout`.
    * @public
    * @readonly
    */
-  readonly defaultEnrollTimeout: SignedInt;
+  public readonly defaultEnrollTimeout: SignedInt;
   /**
    * @summary `defaultCalibrateTimeout`.
    * @public
    * @readonly
    */
-  readonly defaultCalibrateTimeout: SignedInt;
+  public readonly defaultCalibrateTimeout: SignedInt;
   /**
    * @summary `maxBSPDbSize`.
    * @public
    * @readonly
    */
-  readonly maxBSPDbSize: UnsignedInt;
+  public readonly maxBSPDbSize: UnsignedInt;
   /**
    * @summary `maxIdentify`.
    * @public
    * @readonly
    */
-  readonly maxIdentify: UnsignedInt;
+  public readonly maxIdentify: UnsignedInt;
   /**
    * @summary `hostingEndpointIRI`.
    * @description
@@ -252,7 +252,7 @@ export class BioAPI_BSP_SCHEMA {
    * @public
    * @readonly
    */
-  readonly hostingEndpointIRI: EndpointIRI;
+  public readonly hostingEndpointIRI: EndpointIRI;
   /**
    * @summary `bspAccessUuid`.
    * @description
@@ -266,7 +266,7 @@ export class BioAPI_BSP_SCHEMA {
    * @public
    * @readonly
    */
-  readonly bspAccessUuid: BioAPI_UUID;
+  public readonly bspAccessUuid: BioAPI_UUID;
 
   constructor(
     bspProductUuid: BioAPI_UUID,

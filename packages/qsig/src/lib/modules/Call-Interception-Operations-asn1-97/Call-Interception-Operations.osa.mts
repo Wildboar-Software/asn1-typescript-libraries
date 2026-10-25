@@ -1,5 +1,5 @@
 /* eslint-disable */
-import { OPERATION } from "../Remote-Operations-Information-Objects/OPERATION.oca.mjs";
+import { type OPERATION } from "../Remote-Operations-Information-Objects/OPERATION.oca.mjs";
 import { cintLegInformation1 } from "../Call-Interception-Operations-asn1-97/cintLegInformation1.oa.mjs";
 import { cintLegInformation2 } from "../Call-Interception-Operations-asn1-97/cintLegInformation2.oa.mjs";
 import { cintCondition } from "../Call-Interception-Operations-asn1-97/cintCondition.oa.mjs";

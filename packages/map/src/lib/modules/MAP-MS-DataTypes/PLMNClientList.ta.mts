@@ -1,10 +1,10 @@
 /* eslint-disable */
 import {
-    ASN1Element as _Element,
+    type ASN1Element as _Element,
     ASN1SizeError
 } from "@wildboar/asn1";
 import * as $ from "@wildboar/asn1/functional";
-import { _decode_LCSClientInternalID, _encode_LCSClientInternalID, LCSClientInternalID } from "../MAP-CommonDataTypes/LCSClientInternalID.ta.mjs";
+import { _decode_LCSClientInternalID, _encode_LCSClientInternalID, type LCSClientInternalID } from "../MAP-CommonDataTypes/LCSClientInternalID.ta.mjs";
 
 
 import { maxNumOfPLMNClient } from "./maxNumOfPLMNClient.va.mjs";

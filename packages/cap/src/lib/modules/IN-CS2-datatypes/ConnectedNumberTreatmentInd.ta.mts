@@ -1,6 +1,6 @@
 /* eslint-disable */
 import {
-    ASN1Element as _Element,
+    type ASN1Element as _Element,
     ASN1TagClass as _TagClass,
     ASN1Construction as _Construction,
     ASN1UniversalType as _UniversalType,
@@ -63,7 +63,7 @@ type ConnectedNumberTreatmentInd = _enum_for_ConnectedNumberTreatmentInd;
  * @enum {number}
  */
 export
-const ConnectedNumberTreatmentInd = _enum_for_ConnectedNumberTreatmentInd;
+const ConnectedNumberTreatmentInd: typeof _enum_for_ConnectedNumberTreatmentInd = _enum_for_ConnectedNumberTreatmentInd;
 
 /**
  * @summary ConnectedNumberTreatmentInd_noINImpact
@@ -71,7 +71,7 @@ const ConnectedNumberTreatmentInd = _enum_for_ConnectedNumberTreatmentInd;
  * @type {number}
  */
 export
-const ConnectedNumberTreatmentInd_noINImpact: ConnectedNumberTreatmentInd = ConnectedNumberTreatmentInd.noINImpact; /* LONG_NAMED_ENUMERATED_VALUE */
+const ConnectedNumberTreatmentInd_noINImpact: _enum_for_ConnectedNumberTreatmentInd.noINImpact = ConnectedNumberTreatmentInd.noINImpact; /* LONG_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary noINImpact
@@ -79,7 +79,7 @@ const ConnectedNumberTreatmentInd_noINImpact: ConnectedNumberTreatmentInd = Conn
  * @type {number}
  */
 export
-const noINImpact: ConnectedNumberTreatmentInd = ConnectedNumberTreatmentInd.noINImpact; /* SHORT_NAMED_ENUMERATED_VALUE */
+const noINImpact: _enum_for_ConnectedNumberTreatmentInd.noINImpact = ConnectedNumberTreatmentInd.noINImpact; /* SHORT_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary ConnectedNumberTreatmentInd_presentationRestricted
@@ -87,7 +87,7 @@ const noINImpact: ConnectedNumberTreatmentInd = ConnectedNumberTreatmentInd.noIN
  * @type {number}
  */
 export
-const ConnectedNumberTreatmentInd_presentationRestricted: ConnectedNumberTreatmentInd = ConnectedNumberTreatmentInd.presentationRestricted; /* LONG_NAMED_ENUMERATED_VALUE */
+const ConnectedNumberTreatmentInd_presentationRestricted: _enum_for_ConnectedNumberTreatmentInd.presentationRestricted = ConnectedNumberTreatmentInd.presentationRestricted; /* LONG_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary presentationRestricted
@@ -95,7 +95,7 @@ const ConnectedNumberTreatmentInd_presentationRestricted: ConnectedNumberTreatme
  * @type {number}
  */
 export
-const presentationRestricted: ConnectedNumberTreatmentInd = ConnectedNumberTreatmentInd.presentationRestricted; /* SHORT_NAMED_ENUMERATED_VALUE */
+const presentationRestricted: _enum_for_ConnectedNumberTreatmentInd.presentationRestricted = ConnectedNumberTreatmentInd.presentationRestricted; /* SHORT_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary ConnectedNumberTreatmentInd_presentCalledINNumber
@@ -103,7 +103,7 @@ const presentationRestricted: ConnectedNumberTreatmentInd = ConnectedNumberTreat
  * @type {number}
  */
 export
-const ConnectedNumberTreatmentInd_presentCalledINNumber: ConnectedNumberTreatmentInd = ConnectedNumberTreatmentInd.presentCalledINNumber; /* LONG_NAMED_ENUMERATED_VALUE */
+const ConnectedNumberTreatmentInd_presentCalledINNumber: _enum_for_ConnectedNumberTreatmentInd.presentCalledINNumber = ConnectedNumberTreatmentInd.presentCalledINNumber; /* LONG_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary presentCalledINNumber
@@ -111,9 +111,9 @@ const ConnectedNumberTreatmentInd_presentCalledINNumber: ConnectedNumberTreatmen
  * @type {number}
  */
 export
-const presentCalledINNumber: ConnectedNumberTreatmentInd = ConnectedNumberTreatmentInd.presentCalledINNumber; /* SHORT_NAMED_ENUMERATED_VALUE */
-export const _decode_ConnectedNumberTreatmentInd = $._decodeEnumerated;
-export const _encode_ConnectedNumberTreatmentInd = $._encodeEnumerated;
+const presentCalledINNumber: _enum_for_ConnectedNumberTreatmentInd.presentCalledINNumber = ConnectedNumberTreatmentInd.presentCalledINNumber; /* SHORT_NAMED_ENUMERATED_VALUE */
+export const _decode_ConnectedNumberTreatmentInd: $.ASN1Decoder<number> = $._decodeEnumerated;
+export const _encode_ConnectedNumberTreatmentInd: $.ASN1Encoder<number> = $._encodeEnumerated;
 
 
 /* eslint-enable */

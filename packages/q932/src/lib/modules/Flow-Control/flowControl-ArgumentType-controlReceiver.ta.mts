@@ -76,7 +76,7 @@ type flowControl_ArgumentType_controlReceiver = _enum_for_flowControl_ArgumentTy
  * @enum {number}
  */
 export
-const flowControl_ArgumentType_controlReceiver = _enum_for_flowControl_ArgumentType_controlReceiver;
+const flowControl_ArgumentType_controlReceiver: typeof _enum_for_flowControl_ArgumentType_controlReceiver = _enum_for_flowControl_ArgumentType_controlReceiver;
 
 /**
  * @summary flowControl_ArgumentType_controlReceiver_receiverNotReady
@@ -91,7 +91,7 @@ const flowControl_ArgumentType_controlReceiver = _enum_for_flowControl_ArgumentT
  * @type {number}
  */
 export
-const flowControl_ArgumentType_controlReceiver_receiverNotReady: flowControl_ArgumentType_controlReceiver = flowControl_ArgumentType_controlReceiver.receiverNotReady; /* LONG_NAMED_ENUMERATED_VALUE */
+const flowControl_ArgumentType_controlReceiver_receiverNotReady: _enum_for_flowControl_ArgumentType_controlReceiver.receiverNotReady = flowControl_ArgumentType_controlReceiver.receiverNotReady; /* LONG_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary receiverNotReady
@@ -106,7 +106,7 @@ const flowControl_ArgumentType_controlReceiver_receiverNotReady: flowControl_Arg
  * @type {number}
  */
 export
-const receiverNotReady: flowControl_ArgumentType_controlReceiver = flowControl_ArgumentType_controlReceiver.receiverNotReady; /* SHORT_NAMED_ENUMERATED_VALUE */
+const receiverNotReady: _enum_for_flowControl_ArgumentType_controlReceiver.receiverNotReady = flowControl_ArgumentType_controlReceiver.receiverNotReady; /* SHORT_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary flowControl_ArgumentType_controlReceiver_receiverReady
@@ -121,7 +121,7 @@ const receiverNotReady: flowControl_ArgumentType_controlReceiver = flowControl_A
  * @type {number}
  */
 export
-const flowControl_ArgumentType_controlReceiver_receiverReady: flowControl_ArgumentType_controlReceiver = flowControl_ArgumentType_controlReceiver.receiverReady; /* LONG_NAMED_ENUMERATED_VALUE */
+const flowControl_ArgumentType_controlReceiver_receiverReady: _enum_for_flowControl_ArgumentType_controlReceiver.receiverReady = flowControl_ArgumentType_controlReceiver.receiverReady; /* LONG_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary receiverReady
@@ -136,7 +136,7 @@ const flowControl_ArgumentType_controlReceiver_receiverReady: flowControl_Argume
  * @type {number}
  */
 export
-const receiverReady: flowControl_ArgumentType_controlReceiver = flowControl_ArgumentType_controlReceiver.receiverReady; /* SHORT_NAMED_ENUMERATED_VALUE */
+const receiverReady: _enum_for_flowControl_ArgumentType_controlReceiver.receiverReady = flowControl_ArgumentType_controlReceiver.receiverReady; /* SHORT_NAMED_ENUMERATED_VALUE */
 export const _decode_flowControl_ArgumentType_controlReceiver: $.ASN1Decoder<flowControl_ArgumentType_controlReceiver> = $._decodeEnumerated;
 export const _encode_flowControl_ArgumentType_controlReceiver: $.ASN1Encoder<flowControl_ArgumentType_controlReceiver> = $._encodeEnumerated;
 

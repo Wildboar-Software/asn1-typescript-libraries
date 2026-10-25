@@ -1,7 +1,7 @@
 /* eslint-disable */
 import {
-    OPTIONAL,
-    ASN1Element as _Element,
+    type OPTIONAL,
+    type ASN1Element as _Element,
     ASN1TagClass as _TagClass,
     ASN1Construction as _Construction,
     ASN1UniversalType as _UniversalType,
@@ -12,17 +12,17 @@ import {
 } from '@wildboar/asn1';
 import * as $ from '@wildboar/asn1/functional';
 import {
-    Identifier,
+    type Identifier,
     _decode_Identifier,
     _encode_Identifier,
 } from '../DefinitionASN1Module/Identifier.ta.mjs';
 import {
-    TemplateList,
+    type TemplateList,
     _decode_TemplateList,
     _encode_TemplateList,
 } from '../DefinitionASN1Module/TemplateList.ta.mjs';
 import {
-    Representation,
+    type Representation,
     _decode_Representation,
     _encode_Representation,
 } from '../GrmAttributeDefinitionModule/Representation.ta.mjs';
@@ -51,52 +51,62 @@ import {
  *
  */
 export class RoleMappingSpecification {
+    /**
+     * @summary `role`.
+     * @description
+     *
+     * Role name from the referenced relationship class template.
+     * ITU-T Rec. X.725 (11/95) A.2.3.4.
+     * @public
+     * @readonly
+     */
+    public readonly role: Identifier;
+    /**
+     * @summary `relatedClasses`.
+     * @description
+     *
+     * Candidate managed object classes (and their subclasses)
+     * permitted to fulfil this role. Must be compatible with the
+     * class in `COMPATIBLE WITH`. ITU-T Rec. X.725 (11/95)
+     * A.2.3.4.
+     * @public
+     * @readonly
+     */
+    public readonly relatedClasses: TemplateList;
+    /**
+     * @summary `representedBy`.
+     * @description
+     *
+     * How the role is represented: naming, participant-pointer
+     * attribute, relationship-object pointer, or operations.
+     * ITU-T Rec. X.725 (11/95) A.2.3.4.
+     * @public
+     * @readonly
+     */
+    public readonly representedBy?: OPTIONAL<Representation>;
+    /**
+     * @summary `qualifies`.
+     * @description
+     *
+     * Relationship qualification attributes realized by the
+     * referenced managed object classes. ITU-T Rec. X.725 (11/95)
+     * A.2.3.4.
+     * @public
+     * @readonly
+     */
+    public readonly qualifies?: OPTIONAL<TemplateList>;
+
     constructor(
-        /**
-         * @summary `role`.
-         * @description
-         *
-         * Role name from the referenced relationship class template.
-         * ITU-T Rec. X.725 (11/95) A.2.3.4.
-         * @public
-         * @readonly
-         */
-        readonly role: Identifier,
-        /**
-         * @summary `relatedClasses`.
-         * @description
-         *
-         * Candidate managed object classes (and their subclasses)
-         * permitted to fulfil this role. Must be compatible with the
-         * class in `COMPATIBLE WITH`. ITU-T Rec. X.725 (11/95)
-         * A.2.3.4.
-         * @public
-         * @readonly
-         */
-        readonly relatedClasses: TemplateList,
-        /**
-         * @summary `representedBy`.
-         * @description
-         *
-         * How the role is represented: naming, participant-pointer
-         * attribute, relationship-object pointer, or operations.
-         * ITU-T Rec. X.725 (11/95) A.2.3.4.
-         * @public
-         * @readonly
-         */
-        readonly representedBy?: OPTIONAL<Representation>,
-        /**
-         * @summary `qualifies`.
-         * @description
-         *
-         * Relationship qualification attributes realized by the
-         * referenced managed object classes. ITU-T Rec. X.725 (11/95)
-         * A.2.3.4.
-         * @public
-         * @readonly
-         */
-        readonly qualifies?: OPTIONAL<TemplateList>
-    ) {}
+        role: Identifier,
+        relatedClasses: TemplateList,
+        representedBy?: OPTIONAL<Representation>,
+        qualifies?: OPTIONAL<TemplateList>
+    ) {
+        this.role = role;
+        this.relatedClasses = relatedClasses;
+        this.representedBy = representedBy;
+        this.qualifies = qualifies;
+    }
 
     /**
      * @summary Restructures an object into a RoleMappingSpecification

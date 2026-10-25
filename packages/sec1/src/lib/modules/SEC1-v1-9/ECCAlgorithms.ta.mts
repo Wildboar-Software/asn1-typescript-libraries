@@ -1,6 +1,6 @@
 /* eslint-disable */
 import {
-    ASN1Element as _Element,
+    type ASN1Element as _Element,
     ASN1TagClass as _TagClass,
     ASN1Construction as _Construction,
     ASN1UniversalType as _UniversalType,
@@ -10,7 +10,7 @@ import {
     ASN1ConstructionError as _ConstructionError,
 } from "@wildboar/asn1";
 import * as $ from "@wildboar/asn1/functional";
-import { ECCAlgorithm, _decode_ECCAlgorithm, _encode_ECCAlgorithm } from "../SEC1-v1-9/ECCAlgorithm.ta.mjs";
+import { type ECCAlgorithm, _decode_ECCAlgorithm, _encode_ECCAlgorithm } from "../SEC1-v1-9/ECCAlgorithm.ta.mjs";
 /**
  * @summary ECCAlgorithms
  * @description

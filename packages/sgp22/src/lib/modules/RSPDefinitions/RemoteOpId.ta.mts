@@ -1,8 +1,8 @@
 /* eslint-disable */
 import {
-    ASN1Element as _Element,
+    type ASN1Element as _Element,
     ASN1TagClass as _TagClass,
-    INTEGER
+    type INTEGER
 } from "@wildboar/asn1";
 import * as $ from "@wildboar/asn1/functional";
 
@@ -37,7 +37,7 @@ type RemoteOpId = INTEGER;
  * @type {number}
  */
 export
-const RemoteOpId_installBoundProfilePackage: RemoteOpId = 1; /* LONG_NAMED_INTEGER_VALUE */
+const RemoteOpId_installBoundProfilePackage: 1 = 1 satisfies RemoteOpId; /* LONG_NAMED_INTEGER_VALUE */
 
 /**
  * @summary RemoteOpId_installBoundProfilePackage
@@ -50,7 +50,7 @@ const RemoteOpId_installBoundProfilePackage: RemoteOpId = 1; /* LONG_NAMED_INTEG
  * @type {number}
  */
 export
-const installBoundProfilePackage: RemoteOpId = RemoteOpId_installBoundProfilePackage; /* SHORT_NAMED_INTEGER_VALUE */
+const installBoundProfilePackage: 1 = RemoteOpId_installBoundProfilePackage; /* SHORT_NAMED_INTEGER_VALUE */
 
 let _cached_decoder_for_RemoteOpId: $.ASN1Decoder<RemoteOpId> | null = null;
 

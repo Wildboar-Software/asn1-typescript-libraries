@@ -1,7 +1,7 @@
 /* eslint-disable */
 import {
-    OPTIONAL,
-    ASN1Element as _Element,
+    type OPTIONAL,
+    type ASN1Element as _Element,
     ASN1TagClass as _TagClass
 } from "@wildboar/asn1";
 import * as $ from "@wildboar/asn1/functional";
@@ -77,7 +77,7 @@ class ScfTaskRefusedParameter_Type {
          * @static
          */
 
-    public static _enum_for_reason = _enum_for_ScfTaskRefusedParameter_Type_reason;
+    public static _enum_for_reason: typeof _enum_for_ScfTaskRefusedParameter_Type_reason = _enum_for_ScfTaskRefusedParameter_Type_reason;
 }
 
 /**

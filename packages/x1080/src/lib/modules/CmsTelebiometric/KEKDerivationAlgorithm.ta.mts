@@ -1,6 +1,6 @@
 /* eslint-disable */
 import {
-    ASN1Element as _Element,
+    type ASN1Element as _Element,
     ASN1TagClass as _TagClass,
     ASN1Construction as _Construction,
     ASN1UniversalType as _UniversalType,
@@ -39,30 +39,36 @@ import {
  *
  */
 export class KEKDerivationAlgorithm {
+    /**
+     * @summary `kekAlg`.
+     * @description
+     *
+     * Key-wrapping algorithm (`SupportedKeyIncryptAlgorithms`).
+     * ITU-T Rec. X.1080.0 (2017) Cor.1 Annex B.5.
+     *
+     * @public
+     * @readonly
+     */
+    public readonly kekAlg: AlgorithmIdentifier;
+    /**
+     * @summary `pbkdf2Param`.
+     * @description
+     *
+     * PBKDF2 parameters used to derive the KEK.
+     * ITU-T Rec. X.1080.0 (2017) Cor.1 Annex B.5.
+     *
+     * @public
+     * @readonly
+     */
+    public readonly pbkdf2Param: PBKDF2_params;
+
     constructor(
-        /**
-         * @summary `kekAlg`.
-         * @description
-         *
-         * Key-wrapping algorithm (`SupportedKeyIncryptAlgorithms`).
-         * ITU-T Rec. X.1080.0 (2017) Cor.1 Annex B.5.
-         *
-         * @public
-         * @readonly
-         */
-        readonly kekAlg: AlgorithmIdentifier,
-        /**
-         * @summary `pbkdf2Param`.
-         * @description
-         *
-         * PBKDF2 parameters used to derive the KEK.
-         * ITU-T Rec. X.1080.0 (2017) Cor.1 Annex B.5.
-         *
-         * @public
-         * @readonly
-         */
-        readonly pbkdf2Param: PBKDF2_params
-    ) {}
+        kekAlg: AlgorithmIdentifier,
+        pbkdf2Param: PBKDF2_params
+    ) {
+        this.kekAlg = kekAlg;
+        this.pbkdf2Param = pbkdf2Param;
+    }
 
     /**
      * @summary Restructures an object into a KEKDerivationAlgorithm

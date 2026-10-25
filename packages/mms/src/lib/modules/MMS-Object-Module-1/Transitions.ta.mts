@@ -1,7 +1,7 @@
 /* eslint-disable */
 import {
-    BIT_STRING,
-    ASN1Element as _Element,
+    type BIT_STRING,
+    type ASN1Element as _Element,
     ASN1TagClass as _TagClass,
     ASN1Construction as _Construction,
     ASN1UniversalType as _UniversalType,
@@ -196,8 +196,8 @@ const Transitions_any_to_deleted: number = 6; /* LONG_NAMED_BIT */
  */
 export
 const any_to_deleted: number = Transitions_any_to_deleted; /* SHORT_NAMED_BIT */
-export const _decode_Transitions = $._decodeBitString;
-export const _encode_Transitions = $._encodeBitString;
+export const _decode_Transitions: $.ASN1Decoder<BIT_STRING> = $._decodeBitString;
+export const _encode_Transitions: $.ASN1Encoder<BIT_STRING> = $._encodeBitString;
 
 
 /* eslint-enable */

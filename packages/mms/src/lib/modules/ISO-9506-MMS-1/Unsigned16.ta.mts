@@ -1,7 +1,7 @@
 /* eslint-disable */
 import {
-    INTEGER,
-    ASN1Element as _Element,
+    type INTEGER,
+    type ASN1Element as _Element,
     ASN1TagClass as _TagClass,
     ASN1Construction as _Construction,
     ASN1UniversalType as _UniversalType,
@@ -37,7 +37,7 @@ export const _decode_Unsigned16 = (el: _Element): Unsigned16 => {
     }
     return value;
 };
-export const _encode_Unsigned16 = $._encodeInteger;
+export const _encode_Unsigned16: $.ASN1Encoder<INTEGER> = $._encodeInteger;
 
 
 /* eslint-enable */

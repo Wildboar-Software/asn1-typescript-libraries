@@ -1,5 +1,5 @@
 /* eslint-disable */
-import { ASN1Element as _Element, BIT_STRING } from "@wildboar/asn1";
+import { ASN1Element as _Element, type BIT_STRING } from "@wildboar/asn1";
 import * as $ from "@wildboar/asn1/functional";
 
 /**
@@ -21,10 +21,10 @@ import * as $ from "@wildboar/asn1/functional";
 export type Integrity = BIT_STRING;
 
 
-export const _decode_Integrity = $._decodeBitString;
+export const _decode_Integrity: $.ASN1Decoder<BIT_STRING> = $._decodeBitString;
 
 
-export const _encode_Integrity = $._encodeBitString;
+export const _encode_Integrity: $.ASN1Encoder<BIT_STRING> = $._encodeBitString;
 
 
 /* eslint-enable */

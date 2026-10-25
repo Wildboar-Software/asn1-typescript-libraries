@@ -1,7 +1,7 @@
 /* eslint-disable */
 import {
-    OPTIONAL,
-    ASN1Element as _Element,
+    type OPTIONAL,
+    type ASN1Element as _Element,
     ASN1TagClass as _TagClass,
     ASN1Construction as _Construction,
     ASN1UniversalType as _UniversalType,
@@ -11,9 +11,9 @@ import {
     ASN1ConstructionError as _ConstructionError,
 } from "@wildboar/asn1";
 import * as $ from "@wildboar/asn1/functional";
-import { Identifier, _decode_Identifier, _encode_Identifier } from "../ISO-9506-MMS-1/Identifier.ta.mjs";
-import { ObjectClass, _decode_ObjectClass, _encode_ObjectClass } from "../ISO-9506-MMS-1/ObjectClass.ta.mjs";
-import { ObjectName, _decode_ObjectName, _encode_ObjectName } from "../ISO-9506-MMS-1/ObjectName.ta.mjs";
+import { type Identifier, _decode_Identifier, _encode_Identifier } from "../ISO-9506-MMS-1/Identifier.ta.mjs";
+import { type ObjectClass, _decode_ObjectClass, _encode_ObjectClass } from "../ISO-9506-MMS-1/ObjectClass.ta.mjs";
+import { type ObjectName, _decode_ObjectName, _encode_ObjectName } from "../ISO-9506-MMS-1/ObjectName.ta.mjs";
 
 
 /**
@@ -40,40 +40,48 @@ import { ObjectName, _decode_ObjectName, _encode_ObjectName } from "../ISO-9506-
  */
 export
 class ReportAccessControlledObjects_Request {
+    /**
+     * @summary `accessControlList`.
+     * @description
+     *
+     * VMD-specific Identifier of the ACL. ISO 9506-1:2003 §9.5.1.1.1.
+     *
+     * @public
+     * @readonly
+     */
+    public readonly accessControlList: Identifier;
+    /**
+     * @summary `objectClass`.
+     * @description
+     *
+     * Object class of names to return. ISO 9506-1:2003 §9.5.1.1.2.
+     *
+     * @public
+     * @readonly
+     */
+    public readonly objectClass: ObjectClass;
+    /**
+     * @summary `continueAfter`.
+     * @description
+     *
+     * Optional start-after name. If it does not match an existing name of
+     * the class, the server uses the collating sequence of ISO 9506-1:2003
+     * §5.4.2. ISO 9506-1:2003 §9.5.1.1.3.
+     *
+     * @public
+     * @readonly
+     */
+    public readonly continueAfter?: OPTIONAL<ObjectName>;
+
     constructor (
-        /**
-         * @summary `accessControlList`.
-         * @description
-         *
-         * VMD-specific Identifier of the ACL. ISO 9506-1:2003 §9.5.1.1.1.
-         *
-         * @public
-         * @readonly
-         */
-        readonly accessControlList: Identifier,
-        /**
-         * @summary `objectClass`.
-         * @description
-         *
-         * Object class of names to return. ISO 9506-1:2003 §9.5.1.1.2.
-         *
-         * @public
-         * @readonly
-         */
-        readonly objectClass: ObjectClass,
-        /**
-         * @summary `continueAfter`.
-         * @description
-         *
-         * Optional start-after name. If it does not match an existing name of
-         * the class, the server uses the collating sequence of ISO 9506-1:2003
-         * §5.4.2. ISO 9506-1:2003 §9.5.1.1.3.
-         *
-         * @public
-         * @readonly
-         */
-        readonly continueAfter?: OPTIONAL<ObjectName>
-    ) {}
+        accessControlList: Identifier,
+        objectClass: ObjectClass,
+        continueAfter?: OPTIONAL<ObjectName>
+    ) {
+        this.accessControlList = accessControlList;
+        this.objectClass = objectClass;
+        this.continueAfter = continueAfter;
+    }
 
     /**
      * @summary Restructures an object into a ReportAccessControlledObjects_Request

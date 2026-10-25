@@ -1,6 +1,6 @@
 /* eslint-disable */
 import {
-    ASN1Element as _Element,
+    type ASN1Element as _Element,
     ASN1TagClass as _TagClass,
     ASN1Construction as _Construction,
     ASN1UniversalType as _UniversalType,
@@ -10,8 +10,8 @@ import {
     ASN1ConstructionError as _ConstructionError,
 } from "@wildboar/asn1";
 import * as $ from "@wildboar/asn1/functional";
-import { FileName, _decode_FileName, _encode_FileName } from "../ISO-9506-MMS-1/FileName.ta.mjs";
-import { Unsigned32, _decode_Unsigned32, _encode_Unsigned32 } from "../ISO-9506-MMS-1/Unsigned32.ta.mjs";
+import { type FileName, _decode_FileName, _encode_FileName } from "../ISO-9506-MMS-1/FileName.ta.mjs";
+import { type Unsigned32, _decode_Unsigned32, _encode_Unsigned32 } from "../ISO-9506-MMS-1/Unsigned32.ta.mjs";
 
 
 /**
@@ -40,38 +40,44 @@ import { Unsigned32, _decode_Unsigned32, _encode_Unsigned32 } from "../ISO-9506-
  */
 export
 class FileOpen_Request {
+    /**
+     * @summary `fileName`.
+     * @description
+     *
+     * Unambiguously identifies a single file to
+     * open for reading in the server's virtual
+     * filestore. Wildcard resolution shall yield
+     * a single name, else an error.
+     *
+     * [ISO 9506-1:2003 Annex D, D.3.1.1.1]
+     *
+     * @public
+     * @readonly
+     */
+    public readonly fileName: FileName;
+    /**
+     * @summary `initialPosition`.
+     * @description
+     *
+     * Non-negative octet offset of the first
+     * FileRead. Zero begins at the start of the
+     * file; larger values skip that many octets.
+     * Must lie within the file.
+     *
+     * [ISO 9506-1:2003 Annex D, D.3.1.1.2]
+     *
+     * @public
+     * @readonly
+     */
+    public readonly initialPosition: Unsigned32;
+
     constructor (
-        /**
-         * @summary `fileName`.
-         * @description
-         *
-         * Unambiguously identifies a single file to
-         * open for reading in the server's virtual
-         * filestore. Wildcard resolution shall yield
-         * a single name, else an error.
-         *
-         * [ISO 9506-1:2003 Annex D, D.3.1.1.1]
-         *
-         * @public
-         * @readonly
-         */
-        readonly fileName: FileName,
-        /**
-         * @summary `initialPosition`.
-         * @description
-         *
-         * Non-negative octet offset of the first
-         * FileRead. Zero begins at the start of the
-         * file; larger values skip that many octets.
-         * Must lie within the file.
-         *
-         * [ISO 9506-1:2003 Annex D, D.3.1.1.2]
-         *
-         * @public
-         * @readonly
-         */
-        readonly initialPosition: Unsigned32
-    ) {}
+        fileName: FileName,
+        initialPosition: Unsigned32
+    ) {
+        this.fileName = fileName;
+        this.initialPosition = initialPosition;
+    }
 
     /**
      * @summary Restructures an object into a FileOpen_Request

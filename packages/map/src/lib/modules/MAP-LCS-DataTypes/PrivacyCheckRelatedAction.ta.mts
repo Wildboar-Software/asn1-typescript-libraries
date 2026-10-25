@@ -1,7 +1,7 @@
 /* eslint-disable */
 import {
-    ASN1Element as _Element,
-    ENUMERATED
+    type ASN1Element as _Element,
+    type ENUMERATED
 } from "@wildboar/asn1";
 import * as $ from "@wildboar/asn1/functional";
 
@@ -50,7 +50,7 @@ type PrivacyCheckRelatedAction = _enum_for_PrivacyCheckRelatedAction | ENUMERATE
  * @type {number}
  */
 export
-const PrivacyCheckRelatedAction_allowedWithoutNotification: PrivacyCheckRelatedAction = 0; /* LONG_NAMED_ENUMERATED_VALUE */
+const PrivacyCheckRelatedAction_allowedWithoutNotification: _enum_for_PrivacyCheckRelatedAction.allowedWithoutNotification = _enum_for_PrivacyCheckRelatedAction.allowedWithoutNotification; /* LONG_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary allowedWithoutNotification
@@ -62,7 +62,7 @@ const PrivacyCheckRelatedAction_allowedWithoutNotification: PrivacyCheckRelatedA
  * @type {number}
  */
 export
-const allowedWithoutNotification: PrivacyCheckRelatedAction = PrivacyCheckRelatedAction_allowedWithoutNotification; /* SHORT_NAMED_ENUMERATED_VALUE */
+const allowedWithoutNotification: _enum_for_PrivacyCheckRelatedAction.allowedWithoutNotification = PrivacyCheckRelatedAction_allowedWithoutNotification; /* SHORT_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary PrivacyCheckRelatedAction_allowedWithNotification
@@ -74,7 +74,7 @@ const allowedWithoutNotification: PrivacyCheckRelatedAction = PrivacyCheckRelate
  * @type {number}
  */
 export
-const PrivacyCheckRelatedAction_allowedWithNotification: PrivacyCheckRelatedAction = 1; /* LONG_NAMED_ENUMERATED_VALUE */
+const PrivacyCheckRelatedAction_allowedWithNotification: _enum_for_PrivacyCheckRelatedAction.allowedWithNotification = _enum_for_PrivacyCheckRelatedAction.allowedWithNotification; /* LONG_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary allowedWithNotification
@@ -86,7 +86,7 @@ const PrivacyCheckRelatedAction_allowedWithNotification: PrivacyCheckRelatedActi
  * @type {number}
  */
 export
-const allowedWithNotification: PrivacyCheckRelatedAction = PrivacyCheckRelatedAction_allowedWithNotification; /* SHORT_NAMED_ENUMERATED_VALUE */
+const allowedWithNotification: _enum_for_PrivacyCheckRelatedAction.allowedWithNotification = PrivacyCheckRelatedAction_allowedWithNotification; /* SHORT_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary PrivacyCheckRelatedAction_allowedIfNoResponse
@@ -98,7 +98,7 @@ const allowedWithNotification: PrivacyCheckRelatedAction = PrivacyCheckRelatedAc
  * @type {number}
  */
 export
-const PrivacyCheckRelatedAction_allowedIfNoResponse: PrivacyCheckRelatedAction = 2; /* LONG_NAMED_ENUMERATED_VALUE */
+const PrivacyCheckRelatedAction_allowedIfNoResponse: _enum_for_PrivacyCheckRelatedAction.allowedIfNoResponse = _enum_for_PrivacyCheckRelatedAction.allowedIfNoResponse; /* LONG_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary allowedIfNoResponse
@@ -110,7 +110,7 @@ const PrivacyCheckRelatedAction_allowedIfNoResponse: PrivacyCheckRelatedAction =
  * @type {number}
  */
 export
-const allowedIfNoResponse: PrivacyCheckRelatedAction = PrivacyCheckRelatedAction_allowedIfNoResponse; /* SHORT_NAMED_ENUMERATED_VALUE */
+const allowedIfNoResponse: _enum_for_PrivacyCheckRelatedAction.allowedIfNoResponse = PrivacyCheckRelatedAction_allowedIfNoResponse; /* SHORT_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary PrivacyCheckRelatedAction_restrictedIfNoResponse
@@ -122,7 +122,7 @@ const allowedIfNoResponse: PrivacyCheckRelatedAction = PrivacyCheckRelatedAction
  * @type {number}
  */
 export
-const PrivacyCheckRelatedAction_restrictedIfNoResponse: PrivacyCheckRelatedAction = 3; /* LONG_NAMED_ENUMERATED_VALUE */
+const PrivacyCheckRelatedAction_restrictedIfNoResponse: _enum_for_PrivacyCheckRelatedAction.restrictedIfNoResponse = _enum_for_PrivacyCheckRelatedAction.restrictedIfNoResponse; /* LONG_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary restrictedIfNoResponse
@@ -134,7 +134,7 @@ const PrivacyCheckRelatedAction_restrictedIfNoResponse: PrivacyCheckRelatedActio
  * @type {number}
  */
 export
-const restrictedIfNoResponse: PrivacyCheckRelatedAction = PrivacyCheckRelatedAction_restrictedIfNoResponse; /* SHORT_NAMED_ENUMERATED_VALUE */
+const restrictedIfNoResponse: _enum_for_PrivacyCheckRelatedAction.restrictedIfNoResponse = PrivacyCheckRelatedAction_restrictedIfNoResponse; /* SHORT_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary PrivacyCheckRelatedAction_notAllowed
@@ -146,7 +146,7 @@ const restrictedIfNoResponse: PrivacyCheckRelatedAction = PrivacyCheckRelatedAct
  * @type {number}
  */
 export
-const PrivacyCheckRelatedAction_notAllowed: PrivacyCheckRelatedAction = 4; /* LONG_NAMED_ENUMERATED_VALUE */
+const PrivacyCheckRelatedAction_notAllowed: _enum_for_PrivacyCheckRelatedAction.notAllowed = _enum_for_PrivacyCheckRelatedAction.notAllowed; /* LONG_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary notAllowed
@@ -158,7 +158,7 @@ const PrivacyCheckRelatedAction_notAllowed: PrivacyCheckRelatedAction = 4; /* LO
  * @type {number}
  */
 export
-const notAllowed: PrivacyCheckRelatedAction = PrivacyCheckRelatedAction_notAllowed; /* SHORT_NAMED_ENUMERATED_VALUE */
+const notAllowed: _enum_for_PrivacyCheckRelatedAction.notAllowed = PrivacyCheckRelatedAction_notAllowed; /* SHORT_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary Decodes an ASN.1 element into a(n) PrivacyCheckRelatedAction
@@ -166,7 +166,7 @@ const notAllowed: PrivacyCheckRelatedAction = PrivacyCheckRelatedAction_notAllow
  * @param el The element being decoded.
  * @returns The decoded data structure.
  */
-export const _decode_PrivacyCheckRelatedAction = $._decodeEnumerated;
+export const _decode_PrivacyCheckRelatedAction: $.ASN1Decoder<number> = $._decodeEnumerated;
 
 /**
  * @summary Encodes a(n) PrivacyCheckRelatedAction into an ASN.1 Element.
@@ -175,7 +175,7 @@ export const _decode_PrivacyCheckRelatedAction = $._decodeEnumerated;
  * @param elGetter A function that can be used to get new ASN.1 elements.
  * @returns {_Element} The PrivacyCheckRelatedAction, encoded as an ASN.1 Element.
  */
-export const _encode_PrivacyCheckRelatedAction = $._encodeEnumerated;
+export const _encode_PrivacyCheckRelatedAction: $.ASN1Encoder<number> = $._encodeEnumerated;
 
 
 /* eslint-enable */

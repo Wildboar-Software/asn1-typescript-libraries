@@ -1,6 +1,6 @@
 /* eslint-disable */
 import {
-    ASN1Element as _Element,
+    type ASN1Element as _Element,
     ASN1TagClass as _TagClass,
     ASN1Construction as _Construction,
     ASN1UniversalType as _UniversalType,
@@ -33,11 +33,14 @@ import * as $ from "@wildboar/asn1/functional";
  * @enum {number}
  */
 export
-enum _enum_for_AttributeStatus {
-    added = 0,
-    modified = 1,
-    removed = 2,
-}
+const _enum_for_AttributeStatus = {
+    added: 0,
+    modified: 1,
+    removed: 2,
+} as const;
+
+export
+type _enum_for_AttributeStatus = (typeof _enum_for_AttributeStatus)[keyof typeof _enum_for_AttributeStatus];
 
 /**
  * @summary AttributeStatus
@@ -81,7 +84,7 @@ type AttributeStatus = _enum_for_AttributeStatus;
  * @enum {number}
  */
 export
-const AttributeStatus = _enum_for_AttributeStatus;
+const AttributeStatus: typeof _enum_for_AttributeStatus = _enum_for_AttributeStatus;
 
 /**
  * @summary AttributeStatus_added
@@ -93,7 +96,7 @@ const AttributeStatus = _enum_for_AttributeStatus;
  * @type {number}
  */
 export
-const AttributeStatus_added: AttributeStatus = AttributeStatus.added; /* LONG_NAMED_ENUMERATED_VALUE */
+const AttributeStatus_added: 0 = AttributeStatus.added; /* LONG_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary added
@@ -105,7 +108,7 @@ const AttributeStatus_added: AttributeStatus = AttributeStatus.added; /* LONG_NA
  * @type {number}
  */
 export
-const added: AttributeStatus = AttributeStatus.added; /* SHORT_NAMED_ENUMERATED_VALUE */
+const added: 0 = AttributeStatus.added; /* SHORT_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary AttributeStatus_modified
@@ -117,7 +120,7 @@ const added: AttributeStatus = AttributeStatus.added; /* SHORT_NAMED_ENUMERATED_
  * @type {number}
  */
 export
-const AttributeStatus_modified: AttributeStatus = AttributeStatus.modified; /* LONG_NAMED_ENUMERATED_VALUE */
+const AttributeStatus_modified: 1 = AttributeStatus.modified; /* LONG_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary modified
@@ -129,7 +132,7 @@ const AttributeStatus_modified: AttributeStatus = AttributeStatus.modified; /* L
  * @type {number}
  */
 export
-const modified: AttributeStatus = AttributeStatus.modified; /* SHORT_NAMED_ENUMERATED_VALUE */
+const modified: 1 = AttributeStatus.modified; /* SHORT_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary AttributeStatus_removed
@@ -141,7 +144,7 @@ const modified: AttributeStatus = AttributeStatus.modified; /* SHORT_NAMED_ENUME
  * @type {number}
  */
 export
-const AttributeStatus_removed: AttributeStatus = AttributeStatus.removed; /* LONG_NAMED_ENUMERATED_VALUE */
+const AttributeStatus_removed: 2 = AttributeStatus.removed; /* LONG_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary removed
@@ -153,13 +156,25 @@ const AttributeStatus_removed: AttributeStatus = AttributeStatus.removed; /* LON
  * @type {number}
  */
 export
-const removed: AttributeStatus = AttributeStatus.removed; /* SHORT_NAMED_ENUMERATED_VALUE */
+const removed: 2 = AttributeStatus.removed; /* SHORT_NAMED_ENUMERATED_VALUE */
 
 
-export const _decode_AttributeStatus = $._decodeEnumerated;
+export function _decode_AttributeStatus(el: _Element): AttributeStatus {
+    const enumerated = $._decodeEnumerated(el);
+    switch (enumerated) {
+        case AttributeStatus.added: return AttributeStatus.added;
+        case AttributeStatus.modified: return AttributeStatus.modified;
+        case AttributeStatus.removed: return AttributeStatus.removed;
+        default:
+            throw new _ConstructionError(
+                "Invalid ENUMERATED value " + enumerated + " for AttributeStatus.",
+                el,
+            );
+    }
+}
 
 
-export const _encode_AttributeStatus = $._encodeEnumerated;
+export const _encode_AttributeStatus: $.ASN1Encoder<AttributeStatus> = $._encodeEnumerated as $.ASN1Encoder<AttributeStatus>;
 
 
 /* eslint-enable */

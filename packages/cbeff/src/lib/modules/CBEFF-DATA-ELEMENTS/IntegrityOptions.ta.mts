@@ -1,6 +1,6 @@
 /* eslint-disable */
 import {
-  BOOLEAN,
+  type BOOLEAN,
   ASN1Element as _Element,
   ASN1TagClass as _TagClass,
   ASN1Construction as _Construction,
@@ -25,10 +25,10 @@ import * as $ from '@wildboar/asn1/functional';
 export type IntegrityOptions = BOOLEAN; // BooleanType
 
 
-export const _decode_IntegrityOptions = $._decodeBoolean;
+export const _decode_IntegrityOptions: $.ASN1Decoder<boolean> = $._decodeBoolean;
 
 
-export const _encode_IntegrityOptions = $._encodeBoolean;
+export const _encode_IntegrityOptions: $.ASN1Encoder<boolean> = $._encodeBoolean;
 
 
 /* eslint-enable */

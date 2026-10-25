@@ -1,15 +1,15 @@
 /* eslint-disable */
 import {
-    OPTIONAL,
-    ASN1Element as _Element,
+    type OPTIONAL,
+    type ASN1Element as _Element,
     ASN1TagClass as _TagClass
 } from "@wildboar/asn1";
 import * as $ from "@wildboar/asn1/functional";
 import { ModifyResultType, _decode_ModifyResultType, _encode_ModifyResultType, _enum_for_ModifyResultType, modifyAcknowledge /* IMPORTED_SHORT_ENUMERATION_ITEM */ } from "../IN-SSF-SCF-datatypes/ModifyResultType.ta.mjs";
 // export { ModifyResultType, _enum_for_ModifyResultType, ModifyResultType_modifyAcknowledge /* IMPORTED_LONG_ENUMERATION_ITEM */, modifyAcknowledge /* IMPORTED_SHORT_ENUMERATION_ITEM */, ModifyResultType_modifyReject /* IMPORTED_LONG_ENUMERATION_ITEM */, modifyReject /* IMPORTED_SHORT_ENUMERATION_ITEM */, _decode_ModifyResultType, _encode_ModifyResultType } from "../IN-SSF-SCF-datatypes/ModifyResultType.ta.mjs";
-import { ATMCellRate, _decode_ATMCellRate, _encode_ATMCellRate } from "../IN-SSF-SCF-datatypes/ATMCellRate.ta.mjs";
+import { type ATMCellRate, _decode_ATMCellRate, _encode_ATMCellRate } from "../IN-SSF-SCF-datatypes/ATMCellRate.ta.mjs";
 // export { ATMCellRate, _decode_ATMCellRate, _encode_ATMCellRate } from "../IN-SSF-SCF-datatypes/ATMCellRate.ta.mjs";
-import { AdditionalATMCellRate, _decode_AdditionalATMCellRate, _encode_AdditionalATMCellRate } from "../IN-SSF-SCF-datatypes/AdditionalATMCellRate.ta.mjs";
+import { type AdditionalATMCellRate, _decode_AdditionalATMCellRate, _encode_AdditionalATMCellRate } from "../IN-SSF-SCF-datatypes/AdditionalATMCellRate.ta.mjs";
 // export { AdditionalATMCellRate, _decode_AdditionalATMCellRate, _encode_AdditionalATMCellRate } from "../IN-SSF-SCF-datatypes/AdditionalATMCellRate.ta.mjs";
 
 
@@ -92,13 +92,13 @@ class EventSpecificInformationBCSM_oModifyResultSpecificInfo {
      * @static
      * @method
      */
-    public static get _default_value_for_modifyResultType () { return modifyAcknowledge; }        /**
+    public static get _default_value_for_modifyResultType (): _enum_for_ModifyResultType { return modifyAcknowledge; }        /**
          * @summary The enum used as the type of the component `modifyResultType`
          * @public
          * @static
          */
 
-    public static _enum_for_modifyResultType = _enum_for_ModifyResultType;
+    public static _enum_for_modifyResultType: typeof _enum_for_ModifyResultType = _enum_for_ModifyResultType;
 }
 
 /**

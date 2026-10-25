@@ -5,7 +5,7 @@ import { type OPERATION } from "../CommonProtocolSpecification/OPERATION.oca.mjs
 import { abandoned } from "../DirectoryAbstractService/abandoned.oa.mjs";
 import { abandonFailed } from "../DirectoryAbstractService/abandonFailed.oa.mjs";
 import {
-    LdapArgument,
+    type LdapArgument,
     _decode_LdapArgument,
     _encode_LdapArgument,
 } from "../DirectoryAbstractService/LdapArgument.ta.mjs";

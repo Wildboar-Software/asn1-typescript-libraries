@@ -1,5 +1,5 @@
 /* eslint-disable */
-import { ASN1Element as _Element, ENUMERATED } from "@wildboar/asn1";
+import { ASN1Element as _Element, type ENUMERATED } from "@wildboar/asn1";
 import * as $ from "@wildboar/asn1/functional";
 
 export enum _enum_for_CharacterMatchTypes {
@@ -40,7 +40,7 @@ export type CharacterMatchTypes = _enum_for_CharacterMatchTypes | ENUMERATED;
  * @constant
  * @type {number}
  */
-export const CharacterMatchTypes_characterExact: CharacterMatchTypes = 0; /* LONG_NAMED_ENUMERATED_VALUE */
+export const CharacterMatchTypes_characterExact: _enum_for_CharacterMatchTypes.characterExact = _enum_for_CharacterMatchTypes.characterExact; /* LONG_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary characterExact
@@ -51,7 +51,7 @@ export const CharacterMatchTypes_characterExact: CharacterMatchTypes = 0; /* LON
  * @constant
  * @type {number}
  */
-export const characterExact: CharacterMatchTypes = CharacterMatchTypes_characterExact; /* SHORT_NAMED_ENUMERATED_VALUE */
+export const characterExact: _enum_for_CharacterMatchTypes.characterExact = CharacterMatchTypes_characterExact; /* SHORT_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary CharacterMatchTypes_characterCaseIgnore
@@ -62,7 +62,7 @@ export const characterExact: CharacterMatchTypes = CharacterMatchTypes_character
  * @constant
  * @type {number}
  */
-export const CharacterMatchTypes_characterCaseIgnore: CharacterMatchTypes = 1; /* LONG_NAMED_ENUMERATED_VALUE */
+export const CharacterMatchTypes_characterCaseIgnore: _enum_for_CharacterMatchTypes.characterCaseIgnore = _enum_for_CharacterMatchTypes.characterCaseIgnore; /* LONG_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary characterCaseIgnore
@@ -73,7 +73,7 @@ export const CharacterMatchTypes_characterCaseIgnore: CharacterMatchTypes = 1; /
  * @constant
  * @type {number}
  */
-export const characterCaseIgnore: CharacterMatchTypes = CharacterMatchTypes_characterCaseIgnore; /* SHORT_NAMED_ENUMERATED_VALUE */
+export const characterCaseIgnore: _enum_for_CharacterMatchTypes.characterCaseIgnore = CharacterMatchTypes_characterCaseIgnore; /* SHORT_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary CharacterMatchTypes_characterMapped
@@ -85,7 +85,7 @@ export const characterCaseIgnore: CharacterMatchTypes = CharacterMatchTypes_char
  * @constant
  * @type {number}
  */
-export const CharacterMatchTypes_characterMapped: CharacterMatchTypes = 2; /* LONG_NAMED_ENUMERATED_VALUE */
+export const CharacterMatchTypes_characterMapped: _enum_for_CharacterMatchTypes.characterMapped = _enum_for_CharacterMatchTypes.characterMapped; /* LONG_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary characterMapped
@@ -97,13 +97,13 @@ export const CharacterMatchTypes_characterMapped: CharacterMatchTypes = 2; /* LO
  * @constant
  * @type {number}
  */
-export const characterMapped: CharacterMatchTypes = CharacterMatchTypes_characterMapped; /* SHORT_NAMED_ENUMERATED_VALUE */
+export const characterMapped: _enum_for_CharacterMatchTypes.characterMapped = CharacterMatchTypes_characterMapped; /* SHORT_NAMED_ENUMERATED_VALUE */
 
 
-export const _decode_CharacterMatchTypes = $._decodeEnumerated;
+export const _decode_CharacterMatchTypes: $.ASN1Decoder<number> = $._decodeEnumerated;
 
 
-export const _encode_CharacterMatchTypes = $._encodeEnumerated;
+export const _encode_CharacterMatchTypes: $.ASN1Encoder<number> = $._encodeEnumerated;
 
 
 /* eslint-enable */

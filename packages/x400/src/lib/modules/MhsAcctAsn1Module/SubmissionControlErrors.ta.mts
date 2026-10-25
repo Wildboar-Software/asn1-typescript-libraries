@@ -1,6 +1,6 @@
 /* eslint-disable */
 import {
-    ASN1Element as _Element,
+    type ASN1Element as _Element,
     ASN1TagClass as _TagClass,
     ASN1Construction as _Construction,
     ASN1UniversalType as _UniversalType,
@@ -11,7 +11,7 @@ import {
 } from '@wildboar/asn1';
 import * as $ from '@wildboar/asn1/functional';
 import {
-    SubmissionError,
+    type SubmissionError,
     _decode_SubmissionError,
     _encode_SubmissionError,
 } from '../MhsAcctAsn1Module/SubmissionError.ta.mjs';
@@ -27,22 +27,13 @@ import {
  */
 export type SubmissionControlErrors = SubmissionError; // DefinedType
 
-let _cached_decoder_for_SubmissionControlErrors: $.ASN1Decoder<SubmissionControlErrors> | null = null;
-
 /**
  * @summary Decodes an ASN.1 element into a(n) SubmissionControlErrors
  * @function
  * @param {_Element} el The element being decoded.
  * @returns {SubmissionControlErrors} The decoded data structure.
  */
-export function _decode_SubmissionControlErrors(el: _Element): SubmissionControlErrors {
-    if (!_cached_decoder_for_SubmissionControlErrors) {
-        _cached_decoder_for_SubmissionControlErrors = _decode_SubmissionError;
-    }
-    return _cached_decoder_for_SubmissionControlErrors(el);
-}
-
-let _cached_encoder_for_SubmissionControlErrors: $.ASN1Encoder<SubmissionControlErrors> | null = null;
+export const _decode_SubmissionControlErrors: $.ASN1Decoder<SubmissionControlErrors> = _decode_SubmissionError;
 
 /**
  * @summary Encodes a(n) SubmissionControlErrors into an ASN.1 Element.
@@ -51,15 +42,7 @@ let _cached_encoder_for_SubmissionControlErrors: $.ASN1Encoder<SubmissionControl
  * @param elGetter A function that can be used to get new ASN.1 elements.
  * @returns {_Element} The SubmissionControlErrors, encoded as an ASN.1 Element.
  */
-export function _encode_SubmissionControlErrors(
-    value: SubmissionControlErrors,
-    elGetter: $.ASN1Encoder<SubmissionControlErrors>
-): _Element {
-    if (!_cached_encoder_for_SubmissionControlErrors) {
-        _cached_encoder_for_SubmissionControlErrors = _encode_SubmissionError;
-    }
-    return _cached_encoder_for_SubmissionControlErrors(value, elGetter);
-}
+export const _encode_SubmissionControlErrors: $.ASN1Encoder<SubmissionControlErrors> = _encode_SubmissionError;
 
 
 /* eslint-enable */

@@ -1,13 +1,13 @@
 /* eslint-disable */
 import {
-    NULL,
-    OPTIONAL,
-    ASN1Element as _Element,
+    type NULL,
+    type OPTIONAL,
+    type ASN1Element as _Element,
     ASN1TagClass as _TagClass
 } from "@wildboar/asn1";
 import * as $ from "@wildboar/asn1/functional";
-import { IMSI, _decode_IMSI, _encode_IMSI } from "../MAP-CommonDataTypes/IMSI.ta.mjs";
-import { Time, _decode_Time, _encode_Time } from "../MAP-CommonDataTypes/Time.ta.mjs";
+import { type IMSI, _decode_IMSI, _encode_IMSI } from "../MAP-CommonDataTypes/IMSI.ta.mjs";
+import { type Time, _decode_Time, _encode_Time } from "../MAP-CommonDataTypes/Time.ta.mjs";
 import { ExtensionContainer, _decode_ExtensionContainer, _encode_ExtensionContainer } from "../MAP-ExtensionDataTypes/ExtensionContainer.ta.mjs";
 import { AlertReason, _decode_AlertReason, _encode_AlertReason, _enum_for_AlertReason } from "../MAP-SM-DataTypes/AlertReason.ta.mjs";
 
@@ -26,12 +26,12 @@ import { AlertReason, _decode_AlertReason, _encode_AlertReason, _enum_for_AlertR
  * ReadyForSM-Arg ::= SEQUENCE {
  *     imsi    [0] IMSI,
  *     alertReason    AlertReason,
- *     alertReasonIndicator    NULL    OPTIONAL,
+ *     alertReasonIndicator    NULL    type OPTIONAL,
  *     -- alertReasonIndicator is set only when the alertReason 
  *     -- sent to HLR is for GPRS
- *     extensionContainer    ExtensionContainer    OPTIONAL,
+ *     extensionContainer    ExtensionContainer    type OPTIONAL,
  *     ...,
- *     additionalAlertReasonIndicator    [1] NULL    OPTIONAL,
+ *     additionalAlertReasonIndicator    [1] NULL    type OPTIONAL,
  *     -- additionalAlertReasonIndicator is set only when the alertReason
  *     -- sent to HLR is for IP-SM-GW
  *     maximumUeAvailabilityTime    Time    OPTIONAL }
@@ -41,75 +41,91 @@ import { AlertReason, _decode_AlertReason, _encode_AlertReason, _enum_for_AlertR
  */
 export
 class ReadyForSM_Arg {
+    /**
+     * @summary `imsi`.
+     * @description
+     *
+     * Subscriber IMSI.
+     *
+     * @public
+     * @readonly
+     */
+    public readonly imsi: IMSI;
+    /**
+     * @summary `alertReason`.
+     * @description
+     *
+     * ms-Present or memoryAvailable.
+     *
+     * @public
+     * @readonly
+     */
+    public readonly alertReason: AlertReason;
+    /**
+     * @summary `alertReasonIndicator`.
+     * @description
+     *
+     * Set only when alertReason sent to HLR is for GPRS (clause 17.7.6).
+     *
+     * @public
+     * @readonly
+     */
+    public readonly alertReasonIndicator?: OPTIONAL<NULL>;
+    /**
+     * @summary `extensionContainer`.
+     * @description
+     *
+     * Private or PCS extensions (3GPP TS 29.002 V19.1.0 clause 17.7.11).
+     *
+     * @public
+     * @readonly
+     */
+    public readonly extensionContainer?: OPTIONAL<ExtensionContainer>;
+    /**
+     * @summary `additionalAlertReasonIndicator`.
+     * @description
+     *
+     * Set only when alertReason sent to HLR is for IP-SM-GW (clause
+     * 17.7.6).
+     *
+     * @public
+     * @readonly
+     */
+    public readonly additionalAlertReasonIndicator?: OPTIONAL<NULL>;
+    /**
+     * @summary `maximumUeAvailabilityTime`.
+     * @description
+     *
+     * Maximum UE availability time.
+     *
+     * @public
+     * @readonly
+     */
+    public readonly maximumUeAvailabilityTime?: OPTIONAL<Time>;
+    /**
+     * @summary Extensions that are not recognized.
+     * @public
+     * @readonly
+     */
+    public readonly _unrecognizedExtensionsList: _Element[];
+
     constructor (
-        /**
-         * @summary `imsi`.
-         * @description
-         *
-         * Subscriber IMSI.
-         *
-         * @public
-         * @readonly
-         */
-        readonly imsi: IMSI,
-        /**
-         * @summary `alertReason`.
-         * @description
-         *
-         * ms-Present or memoryAvailable.
-         *
-         * @public
-         * @readonly
-         */
-        readonly alertReason: AlertReason,
-        /**
-         * @summary `alertReasonIndicator`.
-         * @description
-         *
-         * Set only when alertReason sent to HLR is for GPRS (clause 17.7.6).
-         *
-         * @public
-         * @readonly
-         */
-        readonly alertReasonIndicator?: OPTIONAL<NULL>,
-        /**
-         * @summary `extensionContainer`.
-         * @description
-         *
-         * Private or PCS extensions (3GPP TS 29.002 V19.1.0 clause 17.7.11).
-         *
-         * @public
-         * @readonly
-         */
-        readonly extensionContainer?: OPTIONAL<ExtensionContainer>,
-        /**
-         * @summary `additionalAlertReasonIndicator`.
-         * @description
-         *
-         * Set only when alertReason sent to HLR is for IP-SM-GW (clause
-         * 17.7.6).
-         *
-         * @public
-         * @readonly
-         */
-        readonly additionalAlertReasonIndicator?: OPTIONAL<NULL>,
-        /**
-         * @summary `maximumUeAvailabilityTime`.
-         * @description
-         *
-         * Maximum UE availability time.
-         *
-         * @public
-         * @readonly
-         */
-        readonly maximumUeAvailabilityTime?: OPTIONAL<Time>,
-        /**
-         * @summary Extensions that are not recognized.
-         * @public
-         * @readonly
-         */
-        readonly _unrecognizedExtensionsList: _Element[] = []
-    ) {}
+        imsi: IMSI,
+        alertReason: AlertReason,
+        alertReasonIndicator?: OPTIONAL<NULL>,
+        extensionContainer?: OPTIONAL<ExtensionContainer>,
+        additionalAlertReasonIndicator?: OPTIONAL<NULL>,
+        maximumUeAvailabilityTime?: OPTIONAL<Time>,
+        _unrecognizedExtensionsList: _Element[] = []
+    ) {
+        this.imsi = imsi;
+        this.alertReason = alertReason;
+        this.alertReasonIndicator = alertReasonIndicator;
+        this.extensionContainer = extensionContainer;
+        this.additionalAlertReasonIndicator = additionalAlertReasonIndicator;
+        this.maximumUeAvailabilityTime = maximumUeAvailabilityTime;
+        this._unrecognizedExtensionsList = _unrecognizedExtensionsList;
+    }
 
     /**
      * @summary Restructures an object into a ReadyForSM_Arg
@@ -133,7 +149,7 @@ class ReadyForSM_Arg {
          * @static
          */
 
-    public static _enum_for_alertReason = _enum_for_AlertReason;
+    public static _enum_for_alertReason: typeof _enum_for_AlertReason = _enum_for_AlertReason;
 }
 
 /**

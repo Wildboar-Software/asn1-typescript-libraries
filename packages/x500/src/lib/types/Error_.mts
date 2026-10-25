@@ -13,4 +13,4 @@ interface Error_ {
     error: ASN1Element;
 }
 
-export default Error_;
+export type { Error_ as default };

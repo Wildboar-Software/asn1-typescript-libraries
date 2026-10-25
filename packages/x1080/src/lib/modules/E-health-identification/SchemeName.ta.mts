@@ -1,8 +1,8 @@
 /* eslint-disable */
 import {
-    OBJECT_IDENTIFIER,
-    ISO646String,
-    ASN1Element as _Element,
+    type OBJECT_IDENTIFIER,
+    type ISO646String,
+    type ASN1Element as _Element,
     ASN1TagClass as _TagClass,
     ASN1Construction as _Construction,
     ASN1UniversalType as _UniversalType,

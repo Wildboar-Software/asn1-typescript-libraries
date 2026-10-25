@@ -1,6 +1,6 @@
 /* eslint-disable */
 import {
-    ASN1Element as _Element,
+    type ASN1Element as _Element,
     ASN1TagClass as _TagClass,
     ASN1Construction as _Construction,
     ASN1UniversalType as _UniversalType,
@@ -10,8 +10,8 @@ import {
     ASN1ConstructionError as _ConstructionError,
 } from "@wildboar/asn1";
 import * as $ from "@wildboar/asn1/functional";
-import { CounterID, _decode_CounterID, _encode_CounterID } from "../IN-CS2-datatypes/CounterID.ta.mjs";
-import { Integer4, _decode_Integer4, _encode_Integer4 } from "../IN-CS2-datatypes/Integer4.ta.mjs";
+import { type CounterID, _decode_CounterID, _encode_CounterID } from "../IN-CS2-datatypes/CounterID.ta.mjs";
+import { type Integer4, _decode_Integer4, _encode_Integer4 } from "../IN-CS2-datatypes/Integer4.ta.mjs";
 
 
 /**
@@ -31,20 +31,26 @@ import { Integer4, _decode_Integer4, _encode_Integer4 } from "../IN-CS2-datatype
  */
 export
 class CounterAndValue {
+    /**
+     * @summary `counterID`.
+     * @public
+     * @readonly
+     */
+    public readonly counterID: CounterID;
+    /**
+     * @summary `counterValue`.
+     * @public
+     * @readonly
+     */
+    public readonly counterValue: Integer4;
+
     constructor (
-        /**
-         * @summary `counterID`.
-         * @public
-         * @readonly
-         */
-        readonly counterID: CounterID,
-        /**
-         * @summary `counterValue`.
-         * @public
-         * @readonly
-         */
-        readonly counterValue: Integer4
-    ) {}
+        counterID: CounterID,
+        counterValue: Integer4
+    ) {
+        this.counterID = counterID;
+        this.counterValue = counterValue;
+    }
 
     /**
      * @summary Restructures an object into a CounterAndValue

@@ -1,13 +1,13 @@
 /* eslint-disable */
 import {
-    OPTIONAL,
-    ASN1Element as _Element,
+    type OPTIONAL,
+    type ASN1Element as _Element,
     ASN1TagClass as _TagClass
 } from "@wildboar/asn1";
 import * as $ from "@wildboar/asn1/functional";
-import { GMLC_List, _decode_GMLC_List, _encode_GMLC_List } from "../MAP-MS-DataTypes/GMLC-List.ta.mjs";
-import { LCS_PrivacyExceptionList, _decode_LCS_PrivacyExceptionList, _encode_LCS_PrivacyExceptionList } from "../MAP-MS-DataTypes/LCS-PrivacyExceptionList.ta.mjs";
-import { MOLR_List, _decode_MOLR_List, _encode_MOLR_List } from "../MAP-MS-DataTypes/MOLR-List.ta.mjs";
+import { type GMLC_List, _decode_GMLC_List, _encode_GMLC_List } from "../MAP-MS-DataTypes/GMLC-List.ta.mjs";
+import { type LCS_PrivacyExceptionList, _decode_LCS_PrivacyExceptionList, _encode_LCS_PrivacyExceptionList } from "../MAP-MS-DataTypes/LCS-PrivacyExceptionList.ta.mjs";
+import { type MOLR_List, _decode_MOLR_List, _encode_MOLR_List } from "../MAP-MS-DataTypes/MOLR-List.ta.mjs";
 
 
 /**
@@ -26,9 +26,9 @@ import { MOLR_List, _decode_MOLR_List, _encode_MOLR_List } from "../MAP-MS-DataT
  * 
  * ```asn1
  * LCSInformation ::= SEQUENCE {
- *     gmlc-List    [0]    GMLC-List    OPTIONAL,
- *     lcs-PrivacyExceptionList    [1]    LCS-PrivacyExceptionList    OPTIONAL,
- *     molr-List    [2]    MOLR-List    OPTIONAL,
+ *     gmlc-List    [0]    GMLC-List    type OPTIONAL,
+ *     lcs-PrivacyExceptionList    [1]    LCS-PrivacyExceptionList    type OPTIONAL,
+ *     molr-List    [2]    MOLR-List    type OPTIONAL,
  *     ...,
  *     add-lcs-PrivacyExceptionList    [3]    LCS-PrivacyExceptionList    OPTIONAL }
  * ```
@@ -37,60 +37,72 @@ import { MOLR_List, _decode_MOLR_List, _encode_MOLR_List } from "../MAP-MS-DataT
  */
 export
 class LCSInformation {
+    /**
+     * @summary `gmlc_List`.
+     * @description
+     *
+     * GMLCs permitted to issue call/session related or unrelated MT-LR for
+     * this MS (3GPP TS 23.271). (3GPP TS 29.002 V19.1.0 clause 7.6.3.61)
+     *
+     * @public
+     * @readonly
+     */
+    public readonly gmlc_List?: OPTIONAL<GMLC_List>;
+    /**
+     * @summary `lcs_PrivacyExceptionList`.
+     * @description
+     *
+     * Privacy-exception classes (up to four). (3GPP TS 29.002 V19.1.0
+     * clause 7.6.3.62)
+     *
+     * @public
+     * @readonly
+     */
+    public readonly lcs_PrivacyExceptionList?: OPTIONAL<LCS_PrivacyExceptionList>;
+    /**
+     * @summary `molr_List`.
+     * @description
+     *
+     * MO-LR classes for which a subscription exists. (3GPP TS 29.002
+     * V19.1.0 clause 7.6.3.65A)
+     *
+     * @public
+     * @readonly
+     */
+    public readonly molr_List?: OPTIONAL<MOLR_List>;
+    /**
+     * @summary `add_lcs_PrivacyExceptionList`.
+     * @description
+     *
+     * May be sent only if `lcs-PrivacyExceptionList` is present and
+     * contains four `LCS-PrivacyClass` instances; otherwise discarded.
+     * Duplicate SS-Code with the primary list yields Unexpected Data Value.
+     * (3GPP TS 29.002 V19.1.0 clauses 7.6.3.62A and 17.7.1)
+     *
+     * @public
+     * @readonly
+     */
+    public readonly add_lcs_PrivacyExceptionList?: OPTIONAL<LCS_PrivacyExceptionList>;
+    /**
+     * @summary Extensions that are not recognized.
+     * @public
+     * @readonly
+     */
+    public readonly _unrecognizedExtensionsList: _Element[];
+
     constructor (
-        /**
-         * @summary `gmlc_List`.
-         * @description
-         *
-         * GMLCs permitted to issue call/session related or unrelated MT-LR for
-         * this MS (3GPP TS 23.271). (3GPP TS 29.002 V19.1.0 clause 7.6.3.61)
-         *
-         * @public
-         * @readonly
-         */
-        readonly gmlc_List?: OPTIONAL<GMLC_List>,
-        /**
-         * @summary `lcs_PrivacyExceptionList`.
-         * @description
-         *
-         * Privacy-exception classes (up to four). (3GPP TS 29.002 V19.1.0
-         * clause 7.6.3.62)
-         *
-         * @public
-         * @readonly
-         */
-        readonly lcs_PrivacyExceptionList?: OPTIONAL<LCS_PrivacyExceptionList>,
-        /**
-         * @summary `molr_List`.
-         * @description
-         *
-         * MO-LR classes for which a subscription exists. (3GPP TS 29.002
-         * V19.1.0 clause 7.6.3.65A)
-         *
-         * @public
-         * @readonly
-         */
-        readonly molr_List?: OPTIONAL<MOLR_List>,
-        /**
-         * @summary `add_lcs_PrivacyExceptionList`.
-         * @description
-         *
-         * May be sent only if `lcs-PrivacyExceptionList` is present and
-         * contains four `LCS-PrivacyClass` instances; otherwise discarded.
-         * Duplicate SS-Code with the primary list yields Unexpected Data Value.
-         * (3GPP TS 29.002 V19.1.0 clauses 7.6.3.62A and 17.7.1)
-         *
-         * @public
-         * @readonly
-         */
-        readonly add_lcs_PrivacyExceptionList?: OPTIONAL<LCS_PrivacyExceptionList>,
-        /**
-         * @summary Extensions that are not recognized.
-         * @public
-         * @readonly
-         */
-        readonly _unrecognizedExtensionsList: _Element[] = []
-    ) {}
+        gmlc_List?: OPTIONAL<GMLC_List>,
+        lcs_PrivacyExceptionList?: OPTIONAL<LCS_PrivacyExceptionList>,
+        molr_List?: OPTIONAL<MOLR_List>,
+        add_lcs_PrivacyExceptionList?: OPTIONAL<LCS_PrivacyExceptionList>,
+        _unrecognizedExtensionsList: _Element[] = []
+    ) {
+        this.gmlc_List = gmlc_List;
+        this.lcs_PrivacyExceptionList = lcs_PrivacyExceptionList;
+        this.molr_List = molr_List;
+        this.add_lcs_PrivacyExceptionList = add_lcs_PrivacyExceptionList;
+        this._unrecognizedExtensionsList = _unrecognizedExtensionsList;
+    }
 
     /**
      * @summary Restructures an object into a LCSInformation

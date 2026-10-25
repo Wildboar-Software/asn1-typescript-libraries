@@ -1,8 +1,8 @@
 /* eslint-disable */
 import {
-    ASN1Element as _Element,
+    type ASN1Element as _Element,
     ASN1TagClass as _TagClass,
-    OPTIONAL,
+    type OPTIONAL,
 } from "@wildboar/asn1";
 import * as $ from "@wildboar/asn1/functional";
 import {
@@ -30,30 +30,36 @@ import {
  *
  */
 export class OptionalValidity {
+    /**
+     * @summary `notBefore`.
+     * @description
+     *
+     * Requested start time of the certificate
+     * ([RFC 4211 §5](https://datatracker.ietf.org/doc/html/rfc4211#section-5)).
+     *
+     * @public
+     * @readonly
+     */
+    public readonly notBefore?: OPTIONAL<Time>;
+    /**
+     * @summary `notAfter`.
+     * @description
+     *
+     * Requested expiration time of the certificate
+     * ([RFC 4211 §5](https://datatracker.ietf.org/doc/html/rfc4211#section-5)).
+     *
+     * @public
+     * @readonly
+     */
+    public readonly notAfter?: OPTIONAL<Time>;
+
     constructor(
-        /**
-         * @summary `notBefore`.
-         * @description
-         *
-         * Requested start time of the certificate
-         * ([RFC 4211 §5](https://datatracker.ietf.org/doc/html/rfc4211#section-5)).
-         *
-         * @public
-         * @readonly
-         */
-        readonly notBefore?: OPTIONAL<Time>,
-        /**
-         * @summary `notAfter`.
-         * @description
-         *
-         * Requested expiration time of the certificate
-         * ([RFC 4211 §5](https://datatracker.ietf.org/doc/html/rfc4211#section-5)).
-         *
-         * @public
-         * @readonly
-         */
-        readonly notAfter?: OPTIONAL<Time>
-    ) {}
+        notBefore?: OPTIONAL<Time>,
+        notAfter?: OPTIONAL<Time>
+    ) {
+        this.notBefore = notBefore;
+        this.notAfter = notAfter;
+    }
 
     /**
      * @summary Restructures an object into a OptionalValidity

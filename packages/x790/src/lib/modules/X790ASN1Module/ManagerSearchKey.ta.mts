@@ -1,16 +1,16 @@
 /* eslint-disable */
 import {
-    ASN1Element as _Element,
+    type ASN1Element as _Element,
 } from "@wildboar/asn1";
 import * as $ from "@wildboar/asn1/functional";
 import {
-    ManagerSearchString,
+    type ManagerSearchString,
     _decode_ManagerSearchString,
     _encode_ManagerSearchString,
 } from "../X790ASN1Module/ManagerSearchString.ta.mjs";
 
 import {
-    ObjectInstance,
+    type ObjectInstance,
     _decode_ObjectInstance,
     _encode_ObjectInstance,
 } from "../CMIP-1/ObjectInstance.ta.mjs";

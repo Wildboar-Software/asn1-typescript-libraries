@@ -1,6 +1,6 @@
 /* eslint-disable */
 import {
-  BOOLEAN,
+  type BOOLEAN,
   ASN1Element as _Element,
   ASN1TagClass as _TagClass,
   ASN1Construction as _Construction,
@@ -12,12 +12,12 @@ import {
 } from '@wildboar/asn1';
 import * as $ from '@wildboar/asn1/functional';
 import {
-  BioAPI_HANDLE,
+  type BioAPI_HANDLE,
   _decode_BioAPI_HANDLE,
   _encode_BioAPI_HANDLE,
 } from '../BIP/BioAPI-HANDLE.ta.mjs';
 import {
-  BioAPI_FMR,
+  type BioAPI_FMR,
   _decode_BioAPI_FMR,
   _encode_BioAPI_FMR,
 } from '../BIP/BioAPI-FMR.ta.mjs';
@@ -27,12 +27,12 @@ import {
   _encode_BioAPI_INPUT_BIR,
 } from '../BIP/BioAPI-INPUT-BIR.ta.mjs';
 import {
-  BioAPI_BIR_SUBTYPE,
+  type BioAPI_BIR_SUBTYPE,
   _decode_BioAPI_BIR_SUBTYPE,
   _encode_BioAPI_BIR_SUBTYPE,
 } from '../BIP/BioAPI-BIR-SUBTYPE.ta.mjs';
 import {
-  SignedInt,
+  type SignedInt,
   _decode_SignedInt,
   _encode_SignedInt,
 } from '../BIP/SignedInt.ta.mjs';
@@ -75,7 +75,7 @@ export class Verify_RequestParams {
    * @public
    * @readonly
    */
-  readonly originalBSPHandle: BioAPI_HANDLE;
+  public readonly originalBSPHandle: BioAPI_HANDLE;
   /**
    * @summary `maxFMRRequested`.
    * @description
@@ -86,7 +86,7 @@ export class Verify_RequestParams {
    * @public
    * @readonly
    */
-  readonly maxFMRRequested: BioAPI_FMR;
+  public readonly maxFMRRequested: BioAPI_FMR;
   /**
    * @summary `referenceTemplate`.
    * @description
@@ -97,7 +97,7 @@ export class Verify_RequestParams {
    * @public
    * @readonly
    */
-  readonly referenceTemplate: BioAPI_INPUT_BIR;
+  public readonly referenceTemplate: BioAPI_INPUT_BIR;
   /**
    * @summary `subtype`.
    * @description
@@ -108,7 +108,7 @@ export class Verify_RequestParams {
    * @public
    * @readonly
    */
-  readonly subtype: BioAPI_BIR_SUBTYPE;
+  public readonly subtype: BioAPI_BIR_SUBTYPE;
   /**
    * @summary `timeout`.
    * @description
@@ -118,7 +118,7 @@ export class Verify_RequestParams {
    * @public
    * @readonly
    */
-  readonly timeout: SignedInt;
+  public readonly timeout: SignedInt;
   /**
    * @summary `no_adaptedBIR`.
    * @description
@@ -130,7 +130,7 @@ export class Verify_RequestParams {
    * @public
    * @readonly
    */
-  readonly no_adaptedBIR: BOOLEAN;
+  public readonly no_adaptedBIR: BOOLEAN;
   /**
    * @summary `no_fmrAchieved`.
    * @description
@@ -142,7 +142,7 @@ export class Verify_RequestParams {
    * @public
    * @readonly
    */
-  readonly no_fmrAchieved: BOOLEAN;
+  public readonly no_fmrAchieved: BOOLEAN;
   /**
    * @summary `no_payload`.
    * @description
@@ -153,7 +153,7 @@ export class Verify_RequestParams {
    * @public
    * @readonly
    */
-  readonly no_payload: BOOLEAN;
+  public readonly no_payload: BOOLEAN;
   /**
    * @summary `no_auditData`.
    * @description
@@ -165,7 +165,7 @@ export class Verify_RequestParams {
    * @public
    * @readonly
    */
-  readonly no_auditData: BOOLEAN;
+  public readonly no_auditData: BOOLEAN;
 
   constructor(
     originalBSPHandle: BioAPI_HANDLE,

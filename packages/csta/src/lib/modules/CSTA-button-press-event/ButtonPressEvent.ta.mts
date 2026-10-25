@@ -2,16 +2,16 @@
 
 import * as $ from "@wildboar/asn1/functional";
 import {
-    OPTIONAL,
-    SEQUENCE,
-    SET,
-    IA5String,
-    ASN1Element as _Element,
+    type OPTIONAL,
+    type SEQUENCE,
+    type SET,
+    type IA5String,
+    type ASN1Element as _Element,
     ASN1TagClass as _TagClass
 } from "@wildboar/asn1";
-import { SubjectDeviceID, _decode_SubjectDeviceID, _encode_SubjectDeviceID } from "../CSTA-device-identifiers/SubjectDeviceID.ta.mjs";
+import { type SubjectDeviceID, _decode_SubjectDeviceID, _encode_SubjectDeviceID } from "../CSTA-device-identifiers/SubjectDeviceID.ta.mjs";
 
-import { ButtonID, _decode_ButtonID, _encode_ButtonID } from "../CSTA-physical-device-feature/ButtonID.ta.mjs";
+import { type ButtonID, _decode_ButtonID, _encode_ButtonID } from "../CSTA-physical-device-feature/ButtonID.ta.mjs";
 
 import { DeviceID, _decode_DeviceID, _encode_DeviceID } from "../CSTA-device-identifiers/DeviceID.ta.mjs";
 
@@ -38,8 +38,8 @@ import { CSTACommonArguments, _decode_CSTACommonArguments, _encode_CSTACommonArg
  * ButtonPressEvent ::= SEQUENCE
  * {    device                SubjectDeviceID,
  *     button                ButtonID,
- *     buttonLabel            IA5String (SIZE(0..64))            OPTIONAL,
- *     buttonAssociatedNumber        DeviceID                OPTIONAL,
+ *     buttonLabel            IA5String (SIZE(0..64))            type OPTIONAL,
+ *     buttonAssociatedNumber        DeviceID                type OPTIONAL,
  *     extensions            CSTACommonArguments            OPTIONAL }
  * ```
  * 
@@ -47,55 +47,67 @@ import { CSTACommonArguments, _decode_CSTACommonArguments, _encode_CSTACommonArg
  */
 export
 class ButtonPressEvent {
+    /**
+     * @summary `device`.
+     * @description
+     *
+     * Device where the button was pressed.
+     * @public
+     * @readonly
+     */
+    public readonly device: SubjectDeviceID;
+    /**
+     * @summary `button`.
+     * @description
+     *
+     * Button that was pressed. Reserved ButtonIDs in Table 12-3: `0`–`9`,
+     * `*`=10, `#`=11 (ECMA-269 §12.3.5).
+     * @public
+     * @readonly
+     */
+    public readonly button: ButtonID;
+    /**
+     * @summary `buttonLabel`.
+     * @description
+     *
+     * Label by which the button may be referenced.
+     * @public
+     * @readonly
+     */
+    public readonly buttonLabel?: OPTIONAL<IA5String>;
+    /**
+     * @summary `buttonAssociatedNumber`.
+     * @description
+     *
+     * Diallable-digits number associated with the button.
+     * @public
+     * @readonly
+     */
+    public readonly buttonAssociatedNumber?: OPTIONAL<DeviceID>;
+    /**
+     * @summary `extensions`.
+     * @description
+     *
+     * Optional security (timestamp, sequence, securityInfo) and
+     * privateData.
+     * @public
+     * @readonly
+     */
+    public readonly extensions?: OPTIONAL<CSTACommonArguments>;
+
     constructor (
-        /**
-         * @summary `device`.
-         * @description
-         *
-         * Device where the button was pressed.
-         * @public
-         * @readonly
-         */
-        readonly device: SubjectDeviceID,
-        /**
-         * @summary `button`.
-         * @description
-         *
-         * Button that was pressed. Reserved ButtonIDs in Table 12-3: `0`–`9`,
-         * `*`=10, `#`=11 (ECMA-269 §12.3.5).
-         * @public
-         * @readonly
-         */
-        readonly button: ButtonID,
-        /**
-         * @summary `buttonLabel`.
-         * @description
-         *
-         * Label by which the button may be referenced.
-         * @public
-         * @readonly
-         */
-        readonly buttonLabel?: OPTIONAL<IA5String>,
-        /**
-         * @summary `buttonAssociatedNumber`.
-         * @description
-         *
-         * Diallable-digits number associated with the button.
-         * @public
-         * @readonly
-         */
-        readonly buttonAssociatedNumber?: OPTIONAL<DeviceID>,
-        /**
-         * @summary `extensions`.
-         * @description
-         *
-         * Optional security (timestamp, sequence, securityInfo) and
-         * privateData.
-         * @public
-         * @readonly
-         */
-        readonly extensions?: OPTIONAL<CSTACommonArguments>
-    ) {}
+        device: SubjectDeviceID,
+        button: ButtonID,
+        buttonLabel?: OPTIONAL<IA5String>,
+        buttonAssociatedNumber?: OPTIONAL<DeviceID>,
+        extensions?: OPTIONAL<CSTACommonArguments>
+    ) {
+        this.device = device;
+        this.button = button;
+        this.buttonLabel = buttonLabel;
+        this.buttonAssociatedNumber = buttonAssociatedNumber;
+        this.extensions = extensions;
+    }
 
     /**
      * @summary Restructures an object into a ButtonPressEvent

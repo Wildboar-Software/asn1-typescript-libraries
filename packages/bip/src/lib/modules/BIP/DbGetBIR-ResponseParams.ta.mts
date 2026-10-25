@@ -11,12 +11,12 @@ import {
 } from '@wildboar/asn1';
 import * as $ from '@wildboar/asn1/functional';
 import {
-  BioAPI_BIR_HANDLE,
+  type BioAPI_BIR_HANDLE,
   _decode_BioAPI_BIR_HANDLE,
   _encode_BioAPI_BIR_HANDLE,
 } from '../BIP/BioAPI-BIR-HANDLE.ta.mjs';
 import {
-  BioAPI_DB_MARKER_HANDLE,
+  type BioAPI_DB_MARKER_HANDLE,
   _decode_BioAPI_DB_MARKER_HANDLE,
   _encode_BioAPI_DB_MARKER_HANDLE,
 } from '../BIP/BioAPI-DB-MARKER-HANDLE.ta.mjs';
@@ -52,7 +52,7 @@ export class DbGetBIR_ResponseParams {
    * @public
    * @readonly
    */
-  readonly retrievedBIR: BioAPI_BIR_HANDLE;
+  public readonly retrievedBIR: BioAPI_BIR_HANDLE;
   /**
    * @summary `markerHandle`.
    * @description
@@ -63,7 +63,7 @@ export class DbGetBIR_ResponseParams {
    * @public
    * @readonly
    */
-  readonly markerHandle: BioAPI_DB_MARKER_HANDLE;
+  public readonly markerHandle: BioAPI_DB_MARKER_HANDLE;
 
   constructor(
     retrievedBIR: BioAPI_BIR_HANDLE,

@@ -1,13 +1,13 @@
 /* eslint-disable */
 import {
     ASN1ConstructionError as _ConstructionError,
-    ASN1Element as _Element,
+    type ASN1Element as _Element,
     ASN1TagClass as _TagClass
 } from "@wildboar/asn1";
 import * as $ from "@wildboar/asn1/functional";
-import { MCC, _decode_MCC, _encode_MCC } from "../EpsHI2Operations/MCC.ta.mjs";
+import { type MCC, _decode_MCC, _encode_MCC } from "../EpsHI2Operations/MCC.ta.mjs";
 // export { MCC, _decode_MCC, _encode_MCC } from "../EpsHI2Operations/MCC.ta.mjs";
-import { MNC, _decode_MNC, _encode_MNC } from "../EpsHI2Operations/MNC.ta.mjs";
+import { type MNC, _decode_MNC, _encode_MNC } from "../EpsHI2Operations/MNC.ta.mjs";
 // export { MNC, _decode_MNC, _encode_MNC } from "../EpsHI2Operations/MNC.ta.mjs";
 
 

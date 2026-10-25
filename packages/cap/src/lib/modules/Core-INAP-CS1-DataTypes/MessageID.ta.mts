@@ -1,6 +1,6 @@
 /* eslint-disable */
 import {
-    ASN1Element as _Element,
+    type ASN1Element as _Element,
     ASN1TagClass as _TagClass,
     ASN1Construction as _Construction,
     ASN1UniversalType as _UniversalType,
@@ -10,7 +10,7 @@ import {
     ASN1ConstructionError as _ConstructionError,
 } from "@wildboar/asn1";
 import * as $ from "@wildboar/asn1/functional";
-import { Integer4, _decode_Integer4, _encode_Integer4 } from "../Core-INAP-CS1-DataTypes/Integer4.ta.mjs";
+import { type Integer4, _decode_Integer4, _encode_Integer4 } from "../Core-INAP-CS1-DataTypes/Integer4.ta.mjs";
 import { MessageID_text, _decode_MessageID_text, _encode_MessageID_text } from "../Core-INAP-CS1-DataTypes/MessageID-text.ta.mjs";
 import { MessageID_variableMessage, _decode_MessageID_variableMessage, _encode_MessageID_variableMessage } from "../Core-INAP-CS1-DataTypes/MessageID-variableMessage.ta.mjs";
 

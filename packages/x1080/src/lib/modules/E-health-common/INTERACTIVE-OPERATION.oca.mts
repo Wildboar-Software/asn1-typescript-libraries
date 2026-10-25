@@ -1,8 +1,8 @@
 /* eslint-disable */
 import {
-    INTEGER,
-    OBJECT_IDENTIFIER,
-    ASN1Element as _Element,
+    type INTEGER,
+    type OBJECT_IDENTIFIER,
+    type ASN1Element as _Element,
     ASN1TagClass as _TagClass,
     ASN1Construction as _Construction,
     ASN1UniversalType as _UniversalType,
@@ -13,18 +13,18 @@ import {
 } from '@wildboar/asn1';
 import * as $ from '@wildboar/asn1/functional';
 import {
-    SessionType,
+    type SessionType,
     _decode_SessionType,
     _encode_SessionType,
 } from '../E-health-common/SessionType.ta.mjs';
 import {
-    Requirements,
+    type Requirements,
     _enum_for_Requirements,
     _decode_Requirements,
     _encode_Requirements,
 } from '../E-health-common/Requirements.ta.mjs';
 import {
-    ExchangeMode,
+    type ExchangeMode,
     _enum_for_ExchangeMode,
     _decode_ExchangeMode,
     _encode_ExchangeMode,
@@ -46,16 +46,16 @@ import {
  * ```asn1
  * INTERACTIVE-OPERATION ::= CLASS {
  *   &id                INTEGER (0..MAX),
- *   &content-req       CONTENT-TYPE.&id          OPTIONAL,
- *   &content-rsp       CONTENT-TYPE.&id          OPTIONAL,
- *   &content-err       CONTENT-TYPE.&id          OPTIONAL,
+ *   &content-req       CONTENT-TYPE.&id          type OPTIONAL,
+ *   &content-rsp       CONTENT-TYPE.&id          type OPTIONAL,
+ *   &content-err       CONTENT-TYPE.&id          type OPTIONAL,
  *   &sessionType       SessionType,
  *   &requirements      Requirements              DEFAULT none,
- *   &Voice-options                               OPTIONAL,
- *   &Video-options                               OPTIONAL,
+ *   &Voice-options                               type OPTIONAL,
+ *   &Video-options                               type OPTIONAL,
  *   &Request,
- *   &Response                                    OPTIONAL,
- *   &Error                                       OPTIONAL,
+ *   &Response                                    type OPTIONAL,
+ *   &Error                                       type OPTIONAL,
  *   &exchangeMode      ExchangeMode              DEFAULT async }
  * WITH SYNTAX {
  *   OPERATION-ID       &id

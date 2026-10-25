@@ -1,7 +1,7 @@
 /* eslint-disable */
 import {
-    INTEGER,
-    ASN1Element as _Element,
+    type INTEGER,
+    type ASN1Element as _Element,
     ASN1TagClass as _TagClass,
     ASN1Construction as _Construction,
     ASN1UniversalType as _UniversalType,
@@ -36,28 +36,34 @@ import * as $ from "@wildboar/asn1/functional";
  */
 export
 class DataParameters_floating_point {
+    /**
+     * @summary `total`.
+     * @description
+     *
+     * Total floating-point bits. ISO 9506-2:2003 Annex B.2.6.
+     *
+     * @public
+     * @readonly
+     */
+    public readonly total: INTEGER;
+    /**
+     * @summary `exponent`.
+     * @description
+     *
+     * Exponent bits. ISO 9506-2:2003 Annex B.2.6.
+     *
+     * @public
+     * @readonly
+     */
+    public readonly exponent: INTEGER;
+
     constructor (
-        /**
-         * @summary `total`.
-         * @description
-         *
-         * Total floating-point bits. ISO 9506-2:2003 Annex B.2.6.
-         *
-         * @public
-         * @readonly
-         */
-        readonly total: INTEGER,
-        /**
-         * @summary `exponent`.
-         * @description
-         *
-         * Exponent bits. ISO 9506-2:2003 Annex B.2.6.
-         *
-         * @public
-         * @readonly
-         */
-        readonly exponent: INTEGER
-    ) {}
+        total: INTEGER,
+        exponent: INTEGER
+    ) {
+        this.total = total;
+        this.exponent = exponent;
+    }
 
     /**
      * @summary Restructures an object into a DataParameters_floating_point

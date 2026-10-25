@@ -1,7 +1,7 @@
 /* eslint-disable */
 import {
-    OPTIONAL,
-    ASN1Element as _Element,
+    type OPTIONAL,
+    type ASN1Element as _Element,
     ASN1TagClass as _TagClass,
     ASN1Construction as _Construction,
     ASN1UniversalType as _UniversalType,
@@ -36,20 +36,26 @@ import {
  *
  */
 export class BPUSubprocessInformation {
+    /**
+     * @summary `functionDefinition`.
+     * @public
+     * @readonly
+     */
+    public readonly functionDefinition: FunctionDefinition;
+    /**
+     * @summary `qualityEvaluation`.
+     * @public
+     * @readonly
+     */
+    public readonly qualityEvaluation?: OPTIONAL<QualityEvaluation>;
+
     constructor(
-        /**
-         * @summary `functionDefinition`.
-         * @public
-         * @readonly
-         */
-        readonly functionDefinition: FunctionDefinition,
-        /**
-         * @summary `qualityEvaluation`.
-         * @public
-         * @readonly
-         */
-        readonly qualityEvaluation?: OPTIONAL<QualityEvaluation>
-    ) {}
+        functionDefinition: FunctionDefinition,
+        qualityEvaluation?: OPTIONAL<QualityEvaluation>
+    ) {
+        this.functionDefinition = functionDefinition;
+        this.qualityEvaluation = qualityEvaluation;
+    }
 
     /**
      * @summary Restructures an object into a BPUSubprocessInformation

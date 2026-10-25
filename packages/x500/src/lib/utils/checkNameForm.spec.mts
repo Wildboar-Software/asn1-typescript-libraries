@@ -1,4 +1,4 @@
-import { RelativeDistinguishedName } from "../modules/InformationFramework/RelativeDistinguishedName.ta.mjs";
+import { type RelativeDistinguishedName } from "../modules/InformationFramework/RelativeDistinguishedName.ta.mjs";
 import checkNameForm from "./checkNameForm.mjs";
 import { type OBJECT_IDENTIFIER } from "@wildboar/asn1";
 import { commonName } from "../modules/SelectedAttributeTypes/commonName.oa.mjs";

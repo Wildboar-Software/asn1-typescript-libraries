@@ -1,8 +1,8 @@
 /* eslint-disable */
 import {
-    INTEGER,
-    OBJECT_IDENTIFIER,
-    ASN1Element as _Element,
+    type INTEGER,
+    type OBJECT_IDENTIFIER,
+    type ASN1Element as _Element,
     ASN1TagClass as _TagClass,
     ASN1Construction as _Construction,
     ASN1UniversalType as _UniversalType,
@@ -44,7 +44,7 @@ class Characteristic_two {
      * @public
      * @readonly
      */
-    readonly m: INTEGER;
+    public readonly m: INTEGER;
     /**
      * @summary `basis`.
      * @description
@@ -54,7 +54,7 @@ class Characteristic_two {
      * @public
      * @readonly
      */
-    readonly basis: OBJECT_IDENTIFIER;
+    public readonly basis: OBJECT_IDENTIFIER;
     /**
      * @summary `parameters`.
      * @description
@@ -64,7 +64,7 @@ class Characteristic_two {
      * @public
      * @readonly
      */
-    readonly parameters: _Element;
+    public readonly parameters: _Element;
 
     constructor (
         m: INTEGER,

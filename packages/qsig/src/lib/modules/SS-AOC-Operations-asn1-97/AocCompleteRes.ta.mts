@@ -1,12 +1,12 @@
 /* eslint-disable */
 import {
-    OPTIONAL,
-    ASN1Element as _Element,
+    type OPTIONAL,
+    type ASN1Element as _Element,
     ASN1TagClass as _TagClass
 } from "@wildboar/asn1";
 import * as $ from "@wildboar/asn1/functional";
 import { ChargingOption, _decode_ChargingOption, _encode_ChargingOption, _enum_for_ChargingOption } from "../SS-AOC-Operations-asn1-97/ChargingOption.ta.mjs";
-import { AocCompleteRes_completeResExtension, _decode_AocCompleteRes_completeResExtension, _encode_AocCompleteRes_completeResExtension } from "../SS-AOC-Operations-asn1-97/AocCompleteRes-completeResExtension.ta.mjs";
+import { type AocCompleteRes_completeResExtension, _decode_AocCompleteRes_completeResExtension, _encode_AocCompleteRes_completeResExtension } from "../SS-AOC-Operations-asn1-97/AocCompleteRes-completeResExtension.ta.mjs";
 
 /**
  * @summary AocCompleteRes
@@ -88,7 +88,7 @@ class AocCompleteRes {
          * @static
          */
 
-    public static _enum_for_chargingOption = _enum_for_ChargingOption;
+    public static _enum_for_chargingOption: typeof _enum_for_ChargingOption = _enum_for_ChargingOption;
 }
 
 /**

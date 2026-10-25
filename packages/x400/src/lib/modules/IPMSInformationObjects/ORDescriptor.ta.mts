@@ -1,7 +1,7 @@
 /* eslint-disable */
 import {
-    OPTIONAL,
-    ASN1Element as _Element,
+    type OPTIONAL,
+    type ASN1Element as _Element,
     ASN1TagClass as _TagClass,
     ASN1Construction as _Construction,
     ASN1UniversalType as _UniversalType,
@@ -17,12 +17,12 @@ import {
     _encode_ORName,
 } from '../MTSAbstractService/ORName.ta.mjs';
 import {
-    FreeFormName,
+    type FreeFormName,
     _decode_FreeFormName,
     _encode_FreeFormName,
 } from '../IPMSInformationObjects/FreeFormName.ta.mjs';
 import {
-    TelephoneNumber,
+    type TelephoneNumber,
     _decode_TelephoneNumber,
     _encode_TelephoneNumber,
 } from '../IPMSInformationObjects/TelephoneNumber.ta.mjs';
@@ -46,26 +46,34 @@ import {
  *
  */
 export class ORDescriptor {
+    /**
+     * @summary `formal_name`.
+     * @public
+     * @readonly
+     */
+    public readonly formal_name?: OPTIONAL<ORName>;
+    /**
+     * @summary `free_form_name`.
+     * @public
+     * @readonly
+     */
+    public readonly free_form_name?: OPTIONAL<FreeFormName>;
+    /**
+     * @summary `telephone_number`.
+     * @public
+     * @readonly
+     */
+    public readonly telephone_number?: OPTIONAL<TelephoneNumber>;
+
     constructor(
-        /**
-         * @summary `formal_name`.
-         * @public
-         * @readonly
-         */
-        readonly formal_name?: OPTIONAL<ORName>,
-        /**
-         * @summary `free_form_name`.
-         * @public
-         * @readonly
-         */
-        readonly free_form_name?: OPTIONAL<FreeFormName>,
-        /**
-         * @summary `telephone_number`.
-         * @public
-         * @readonly
-         */
-        readonly telephone_number?: OPTIONAL<TelephoneNumber>
-    ) {}
+        formal_name?: OPTIONAL<ORName>,
+        free_form_name?: OPTIONAL<FreeFormName>,
+        telephone_number?: OPTIONAL<TelephoneNumber>
+    ) {
+        this.formal_name = formal_name;
+        this.free_form_name = free_form_name;
+        this.telephone_number = telephone_number;
+    }
 
     /**
      * @summary Restructures an object into a ORDescriptor

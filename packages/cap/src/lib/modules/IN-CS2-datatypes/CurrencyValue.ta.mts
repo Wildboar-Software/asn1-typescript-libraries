@@ -1,7 +1,7 @@
 /* eslint-disable */
 import {
-    INTEGER,
-    ASN1Element as _Element,
+    type INTEGER,
+    type ASN1Element as _Element,
     ASN1TagClass as _TagClass,
     ASN1Construction as _Construction,
     ASN1UniversalType as _UniversalType,
@@ -11,7 +11,7 @@ import {
     ASN1ConstructionError as _ConstructionError,
 } from "@wildboar/asn1";
 import * as $ from "@wildboar/asn1/functional";
-import { CurrencyID, _decode_CurrencyID, _encode_CurrencyID } from "../IN-CS2-datatypes/CurrencyID.ta.mjs";
+import { type CurrencyID, _decode_CurrencyID, _encode_CurrencyID } from "../IN-CS2-datatypes/CurrencyID.ta.mjs";
 
 
 /**
@@ -31,20 +31,26 @@ import { CurrencyID, _decode_CurrencyID, _encode_CurrencyID } from "../IN-CS2-da
  */
 export
 class CurrencyValue {
+    /**
+     * @summary `currency`.
+     * @public
+     * @readonly
+     */
+    public readonly currency: CurrencyID;
+    /**
+     * @summary `amount`.
+     * @public
+     * @readonly
+     */
+    public readonly amount: INTEGER;
+
     constructor (
-        /**
-         * @summary `currency`.
-         * @public
-         * @readonly
-         */
-        readonly currency: CurrencyID,
-        /**
-         * @summary `amount`.
-         * @public
-         * @readonly
-         */
-        readonly amount: INTEGER
-    ) {}
+        currency: CurrencyID,
+        amount: INTEGER
+    ) {
+        this.currency = currency;
+        this.amount = amount;
+    }
 
     /**
      * @summary Restructures an object into a CurrencyValue

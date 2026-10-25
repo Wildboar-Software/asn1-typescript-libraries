@@ -1,11 +1,11 @@
 /* eslint-disable */
 import {
     ASN1ConstructionError as _ConstructionError,
-    ASN1Element as _Element,
+    type ASN1Element as _Element,
     ASN1TagClass as _TagClass
 } from "@wildboar/asn1";
 import * as $ from "@wildboar/asn1/functional";
-import { _decode_EuiccMemoryResetResponse_resetResult, _encode_EuiccMemoryResetResponse_resetResult, EuiccMemoryResetResponse_resetResult } from "../RSPDefinitions/EuiccMemoryResetResponse-resetResult.ta.mjs";
+import { _decode_EuiccMemoryResetResponse_resetResult, _encode_EuiccMemoryResetResponse_resetResult, type EuiccMemoryResetResponse_resetResult } from "../RSPDefinitions/EuiccMemoryResetResponse-resetResult.ta.mjs";
 
 
 /**
@@ -37,7 +37,7 @@ class EuiccMemoryResetResponse {
      * @public
      * @readonly
      */
-    readonly resetResult: EuiccMemoryResetResponse_resetResult;
+    public readonly resetResult: EuiccMemoryResetResponse_resetResult;
 
     constructor (
         resetResult: EuiccMemoryResetResponse_resetResult

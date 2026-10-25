@@ -1,9 +1,9 @@
 /* eslint-disable */
 import {
-    INTEGER,
-    OBJECT_IDENTIFIER,
-    OPTIONAL,
-    ASN1Element as _Element,
+    type INTEGER,
+    type OBJECT_IDENTIFIER,
+    type OPTIONAL,
+    type ASN1Element as _Element,
     ASN1Error,
     ASN1TagClass as _TagClass
 } from "@wildboar/asn1";
@@ -45,31 +45,38 @@ import { id_PK_ECDH } from "../Doc-9303-Part-11-Module/id-PK-ECDH.va.mjs";
  */
 export
 class ChipAuthenticationPublicKeyInfo {
+    /**
+     * `id-PK-DH` or `id-PK-ECDH`.
+     * @summary `protocol`.
+     * @public
+     * @readonly
+     */
+    public readonly protocol: OBJECT_IDENTIFIER;
+    /**
+     * Static public key. PKCS #3 for Diffie-Hellman, TR-03111 for elliptic
+     * curves.
+     * @summary `chipAuthenticationPublicKey`.
+     * @public
+     * @readonly
+     */
+    public readonly chipAuthenticationPublicKey: SubjectPublicKeyInfo;
+    /**
+     * Local key identifier. Required when more than one key is present, and
+     * when this key is used for PACE with Chip Authentication Mapping.
+     * @summary `keyId`.
+     * @public
+     * @readonly
+     */
+    public readonly keyId?: OPTIONAL<INTEGER>;
+
     constructor (
-        /**
-         * `id-PK-DH` or `id-PK-ECDH`.
-         * @summary `protocol`.
-         * @public
-         * @readonly
-         */
-        readonly protocol: OBJECT_IDENTIFIER,
-        /**
-         * Static public key. PKCS #3 for Diffie-Hellman, TR-03111 for elliptic
-         * curves.
-         * @summary `chipAuthenticationPublicKey`.
-         * @public
-         * @readonly
-         */
-        readonly chipAuthenticationPublicKey: SubjectPublicKeyInfo,
-        /**
-         * Local key identifier. Required when more than one key is present, and
-         * when this key is used for PACE with Chip Authentication Mapping.
-         * @summary `keyId`.
-         * @public
-         * @readonly
-         */
-        readonly keyId?: OPTIONAL<INTEGER>
+        protocol: OBJECT_IDENTIFIER,
+        chipAuthenticationPublicKey: SubjectPublicKeyInfo,
+        keyId?: OPTIONAL<INTEGER>
     ) {
+        this.protocol = protocol;
+        this.chipAuthenticationPublicKey = chipAuthenticationPublicKey;
+        this.keyId = keyId;
         if (!id_PK_DH.isEqualTo(protocol) && !id_PK_ECDH.isEqualTo(protocol)) {
             throw new ASN1Error("ChipAuthenticationPublicKeyInfo.protocol violates permitted OBJECT IDENTIFIER constraint");
         }

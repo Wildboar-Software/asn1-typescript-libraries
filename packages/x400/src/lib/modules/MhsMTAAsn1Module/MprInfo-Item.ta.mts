@@ -1,6 +1,6 @@
 /* eslint-disable */
 import {
-    ASN1Element as _Element,
+    type ASN1Element as _Element,
     ASN1TagClass as _TagClass,
     ASN1Construction as _Construction,
     ASN1UniversalType as _UniversalType,
@@ -11,17 +11,17 @@ import {
 } from '@wildboar/asn1';
 import * as $ from '@wildboar/asn1/functional';
 import {
-    EMailMpduIdentifier,
+    type EMailMpduIdentifier,
     _decode_EMailMpduIdentifier,
     _encode_EMailMpduIdentifier,
 } from '../MhsMTAAsn1Module/EMailMpduIdentifier.ta.mjs';
 import {
-    Time,
+    type Time,
     _decode_Time,
     _encode_Time,
 } from '../MTSAbstractService/Time.ta.mjs';
 import {
-    ProcessingState,
+    type ProcessingState,
     _decode_ProcessingState,
     _encode_ProcessingState,
 } from '../MhsMTAAsn1Module/ProcessingState.ta.mjs';
@@ -39,26 +39,34 @@ import {
  *
  */
 export class MprInfo_Item {
+    /**
+     * @summary `mprId`.
+     * @public
+     * @readonly
+     */
+    public readonly mprId: EMailMpduIdentifier;
+    /**
+     * @summary `arrivalTime`.
+     * @public
+     * @readonly
+     */
+    public readonly arrivalTime: Time;
+    /**
+     * @summary `processingState`.
+     * @public
+     * @readonly
+     */
+    public readonly processingState: ProcessingState;
+
     constructor(
-        /**
-         * @summary `mprId`.
-         * @public
-         * @readonly
-         */
-        readonly mprId: EMailMpduIdentifier,
-        /**
-         * @summary `arrivalTime`.
-         * @public
-         * @readonly
-         */
-        readonly arrivalTime: Time,
-        /**
-         * @summary `processingState`.
-         * @public
-         * @readonly
-         */
-        readonly processingState: ProcessingState
-    ) {}
+        mprId: EMailMpduIdentifier,
+        arrivalTime: Time,
+        processingState: ProcessingState
+    ) {
+        this.mprId = mprId;
+        this.arrivalTime = arrivalTime;
+        this.processingState = processingState;
+    }
 
     /**
      * @summary Restructures an object into a MprInfo_Item

@@ -1,7 +1,7 @@
 /* eslint-disable */
 import {
-    ASN1Element as _Element,
-    INTEGER
+    type ASN1Element as _Element,
+    type INTEGER
 } from "@wildboar/asn1";
 import * as $ from "@wildboar/asn1/functional";
 
@@ -36,7 +36,7 @@ type IpaeActivationResponse_ipaeActivationResult = INTEGER;
  * @type {number}
  */
 export
-const IpaeActivationResponse_ipaeActivationResult_ok: IpaeActivationResponse_ipaeActivationResult = 0; /* LONG_NAMED_INTEGER_VALUE */
+const IpaeActivationResponse_ipaeActivationResult_ok: 0 = 0 satisfies IpaeActivationResponse_ipaeActivationResult; /* LONG_NAMED_INTEGER_VALUE */
 
 /**
  * @summary IpaeActivationResponse_ipaeActivationResult_ok
@@ -47,7 +47,7 @@ const IpaeActivationResponse_ipaeActivationResult_ok: IpaeActivationResponse_ipa
  * @type {number}
  */
 export
-const ok: IpaeActivationResponse_ipaeActivationResult = IpaeActivationResponse_ipaeActivationResult_ok; /* SHORT_NAMED_INTEGER_VALUE */
+const ok: 0 = IpaeActivationResponse_ipaeActivationResult_ok; /* SHORT_NAMED_INTEGER_VALUE */
 
 /**
  * @summary IpaeActivationResponse_ipaeActivationResult_notSupported
@@ -58,7 +58,7 @@ const ok: IpaeActivationResponse_ipaeActivationResult = IpaeActivationResponse_i
  * @type {number}
  */
 export
-const IpaeActivationResponse_ipaeActivationResult_notSupported: IpaeActivationResponse_ipaeActivationResult = 1; /* LONG_NAMED_INTEGER_VALUE */
+const IpaeActivationResponse_ipaeActivationResult_notSupported: 1 = 1 satisfies IpaeActivationResponse_ipaeActivationResult; /* LONG_NAMED_INTEGER_VALUE */
 
 /**
  * @summary IpaeActivationResponse_ipaeActivationResult_notSupported
@@ -69,7 +69,7 @@ const IpaeActivationResponse_ipaeActivationResult_notSupported: IpaeActivationRe
  * @type {number}
  */
 export
-const notSupported: IpaeActivationResponse_ipaeActivationResult = IpaeActivationResponse_ipaeActivationResult_notSupported; /* SHORT_NAMED_INTEGER_VALUE */
+const notSupported: 1 = IpaeActivationResponse_ipaeActivationResult_notSupported; /* SHORT_NAMED_INTEGER_VALUE */
 export const _decode_IpaeActivationResponse_ipaeActivationResult: $.ASN1Decoder<IpaeActivationResponse_ipaeActivationResult> = $._decodeInteger;
 export const _encode_IpaeActivationResponse_ipaeActivationResult: $.ASN1Encoder<IpaeActivationResponse_ipaeActivationResult> = $._encodeInteger;
 

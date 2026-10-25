@@ -1,6 +1,6 @@
 /* eslint-disable */
 import {
-    ASN1Element as _Element,
+    type ASN1Element as _Element,
     ASN1TagClass as _TagClass,
     ASN1Construction as _Construction,
     ASN1UniversalType as _UniversalType,
@@ -26,12 +26,12 @@ import {
     _encode_RTORJapdu,
 } from '@wildboar/rtse';
 import {
-    RTTPapdu,
+    type RTTPapdu,
     _decode_RTTPapdu,
     _encode_RTTPapdu,
 } from '../MTSTransferProtocol/RTTPapdu.ta.mjs';
 import {
-    RTTRapdu,
+    type RTTRapdu,
     _decode_RTTRapdu,
     _encode_RTTRapdu,
 } from '../MTSTransferProtocol/RTTRapdu.ta.mjs';

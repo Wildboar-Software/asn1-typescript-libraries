@@ -1,7 +1,7 @@
 /* eslint-disable */
 import {
-    OPTIONAL,
-    ASN1Element as _Element,
+    type OPTIONAL,
+    type ASN1Element as _Element,
     ASN1TagClass as _TagClass,
     ASN1Construction as _Construction,
     ASN1UniversalType as _UniversalType,
@@ -12,17 +12,17 @@ import {
 } from '@wildboar/asn1';
 import * as $ from '@wildboar/asn1/functional';
 import {
-    DeliverId,
+    type DeliverId,
     _decode_DeliverId,
     _encode_DeliverId,
 } from '../SWMF/DeliverId.ta.mjs';
 import {
-    DistributedSoftware,
+    type DistributedSoftware,
     _decode_DistributedSoftware,
     _encode_DistributedSoftware,
 } from '../SWMF/DistributedSoftware.ta.mjs';
 import {
-    Destination,
+    type Destination,
     _decode_Destination,
     _encode_Destination,
 } from '@wildboar/attribute-asn1module';
@@ -65,60 +65,72 @@ import {
  *
  */
 export class DeliverInfo {
+    /**
+     * @summary `deliverId`.
+     * @description
+     *
+     * Optional correlation id matching this action to a later
+     * `deliverResultNotification`. User in Table 7. ITU-T Rec.
+     * X.744 (10/96) §8.3.2, §9.3 Table 7, A.8.
+     * @public
+     * @readonly
+     */
+    public readonly deliverId: OPTIONAL<DeliverId>;
+    /**
+     * @summary `targetSoftware`.
+     * @description
+     *
+     * Software units to distribute (mandatory). Several may be
+     * delivered together. ITU-T Rec. X.744 (10/96) §8.3.2,
+     * §9.3 Table 7.
+     * @public
+     * @readonly
+     */
+    public readonly targetSoftware: DistributedSoftware[];
+    /**
+     * @summary `targetSystem`.
+     * @description
+     *
+     * Destination managed system. Absent: agent chooses by local
+     * means. ITU-T Rec. X.744 (10/96) A.5.1, §9.3 Table 7.
+     * @public
+     * @readonly
+     */
+    public readonly targetSystem?: OPTIONAL<Destination>;
+    /**
+     * @summary `transferInfo`.
+     * @description
+     *
+     * Transfer protocol and protocol-specific parameters.
+     * User in Table 7. ITU-T Rec. X.744 (10/96) §8.1.4, §9.3.
+     * @public
+     * @readonly
+     */
+    public readonly transferInfo?: OPTIONAL<TransferInfo>;
+    /**
+     * @summary `additionalInfo`.
+     * @description
+     *
+     * Management extensions. User in Table 7. ITU-T Rec. X.744
+     * (10/96) §9.3 Table 7.
+     * @public
+     * @readonly
+     */
+    public readonly additionalInfo?: OPTIONAL<ManagementExtension[]>;
+
     constructor(
-        /**
-         * @summary `deliverId`.
-         * @description
-         *
-         * Optional correlation id matching this action to a later
-         * `deliverResultNotification`. User in Table 7. ITU-T Rec.
-         * X.744 (10/96) §8.3.2, §9.3 Table 7, A.8.
-         * @public
-         * @readonly
-         */
-        readonly deliverId: OPTIONAL<DeliverId>,
-        /**
-         * @summary `targetSoftware`.
-         * @description
-         *
-         * Software units to distribute (mandatory). Several may be
-         * delivered together. ITU-T Rec. X.744 (10/96) §8.3.2,
-         * §9.3 Table 7.
-         * @public
-         * @readonly
-         */
-        readonly targetSoftware: DistributedSoftware[],
-        /**
-         * @summary `targetSystem`.
-         * @description
-         *
-         * Destination managed system. Absent: agent chooses by local
-         * means. ITU-T Rec. X.744 (10/96) A.5.1, §9.3 Table 7.
-         * @public
-         * @readonly
-         */
-        readonly targetSystem?: OPTIONAL<Destination>,
-        /**
-         * @summary `transferInfo`.
-         * @description
-         *
-         * Transfer protocol and protocol-specific parameters.
-         * User in Table 7. ITU-T Rec. X.744 (10/96) §8.1.4, §9.3.
-         * @public
-         * @readonly
-         */
-        readonly transferInfo?: OPTIONAL<TransferInfo>,
-        /**
-         * @summary `additionalInfo`.
-         * @description
-         *
-         * Management extensions. User in Table 7. ITU-T Rec. X.744
-         * (10/96) §9.3 Table 7.
-         * @public
-         * @readonly
-         */
-        readonly additionalInfo?: OPTIONAL<ManagementExtension[]>
-    ) {}
+        deliverId: OPTIONAL<DeliverId>,
+        targetSoftware: DistributedSoftware[],
+        targetSystem?: OPTIONAL<Destination>,
+        transferInfo?: OPTIONAL<TransferInfo>,
+        additionalInfo?: OPTIONAL<ManagementExtension[]>
+    ) {
+        this.deliverId = deliverId;
+        this.targetSoftware = targetSoftware;
+        this.targetSystem = targetSystem;
+        this.transferInfo = transferInfo;
+        this.additionalInfo = additionalInfo;
+    }
 
     /**
      * @summary Restructures an object into a DeliverInfo

@@ -1,7 +1,7 @@
 /* eslint-disable */
 import {
-  OPTIONAL,
-  UTF8String,
+  type OPTIONAL,
+  type UTF8String,
   ASN1Element as _Element,
   ASN1TagClass as _TagClass,
   ASN1Construction as _Construction,
@@ -13,49 +13,49 @@ import {
 } from '@wildboar/asn1';
 import * as $ from '@wildboar/asn1/functional';
 import {
-  BioAPI_UUID,
+  type BioAPI_UUID,
   _decode_BioAPI_UUID,
   _encode_BioAPI_UUID,
 } from '../BIP/BioAPI-UUID.ta.mjs';
 import {
-  BioAPI_UNIT_ID,
+  type BioAPI_UNIT_ID,
   _decode_BioAPI_UNIT_ID,
   _encode_BioAPI_UNIT_ID,
 } from '../BIP/BioAPI-UNIT-ID.ta.mjs';
 import {
-  BioAPI_HANDLE,
+  type BioAPI_HANDLE,
   _decode_BioAPI_HANDLE,
   _encode_BioAPI_HANDLE,
 } from '../BIP/BioAPI-HANDLE.ta.mjs';
 import {
-  BioAPI_GUI_ENROLL_TYPE,
+  type BioAPI_GUI_ENROLL_TYPE,
   _decode_BioAPI_GUI_ENROLL_TYPE,
   _encode_BioAPI_GUI_ENROLL_TYPE,
 } from '../BIP/BioAPI-GUI-ENROLL-TYPE.ta.mjs';
 import {
-  BioAPI_GUI_OPERATION,
+  type BioAPI_GUI_OPERATION,
   _enum_for_BioAPI_GUI_OPERATION,
   _decode_BioAPI_GUI_OPERATION,
   _encode_BioAPI_GUI_OPERATION,
 } from '../BIP/BioAPI-GUI-OPERATION.ta.mjs';
 import {
-  BioAPI_GUI_MOMENT,
+  type BioAPI_GUI_MOMENT,
   _enum_for_BioAPI_GUI_MOMENT,
   _decode_BioAPI_GUI_MOMENT,
   _encode_BioAPI_GUI_MOMENT,
 } from '../BIP/BioAPI-GUI-MOMENT.ta.mjs';
 import {
-  BioAPI_RETURN,
+  type BioAPI_RETURN,
   _decode_BioAPI_RETURN,
   _encode_BioAPI_RETURN,
 } from '../BIP/BioAPI-RETURN.ta.mjs';
 import {
-  UnsignedInt,
+  type UnsignedInt,
   _decode_UnsignedInt,
   _encode_UnsignedInt,
 } from '../BIP/UnsignedInt.ta.mjs';
 import {
-  BioAPI_BIR_SUBTYPE_MASK,
+  type BioAPI_BIR_SUBTYPE_MASK,
   _decode_BioAPI_BIR_SUBTYPE_MASK,
   _encode_BioAPI_BIR_SUBTYPE_MASK,
 } from '../BIP/BioAPI-BIR-SUBTYPE-MASK.ta.mjs';
@@ -109,7 +109,7 @@ export class GUISelectEvent_NotificationParams {
    * @public
    * @readonly
    */
-  readonly guiEventSubscriptionUuid: OPTIONAL<BioAPI_UUID>;
+  public readonly guiEventSubscriptionUuid: OPTIONAL<BioAPI_UUID>;
   /**
    * @summary `bspProductUuid`.
    * @description
@@ -120,7 +120,7 @@ export class GUISelectEvent_NotificationParams {
    * @public
    * @readonly
    */
-  readonly bspProductUuid: BioAPI_UUID;
+  public readonly bspProductUuid: BioAPI_UUID;
   /**
    * @summary `unitID`.
    * @description
@@ -131,7 +131,7 @@ export class GUISelectEvent_NotificationParams {
    * @public
    * @readonly
    */
-  readonly unitID: BioAPI_UNIT_ID;
+  public readonly unitID: BioAPI_UNIT_ID;
   /**
    * @summary `originalBSPHandle`.
    * @description
@@ -143,7 +143,7 @@ export class GUISelectEvent_NotificationParams {
    * @public
    * @readonly
    */
-  readonly originalBSPHandle: OPTIONAL<BioAPI_HANDLE>;
+  public readonly originalBSPHandle: OPTIONAL<BioAPI_HANDLE>;
   /**
    * @summary `enrollType`.
    * @description
@@ -153,7 +153,7 @@ export class GUISelectEvent_NotificationParams {
    * @public
    * @readonly
    */
-  readonly enrollType: BioAPI_GUI_ENROLL_TYPE;
+  public readonly enrollType: BioAPI_GUI_ENROLL_TYPE;
   /**
    * @summary `operation`.
    * @description
@@ -163,7 +163,7 @@ export class GUISelectEvent_NotificationParams {
    * @public
    * @readonly
    */
-  readonly operation: BioAPI_GUI_OPERATION;
+  public readonly operation: BioAPI_GUI_OPERATION;
   /**
    * @summary `moment`.
    * @description
@@ -173,7 +173,7 @@ export class GUISelectEvent_NotificationParams {
    * @public
    * @readonly
    */
-  readonly moment: BioAPI_GUI_MOMENT;
+  public readonly moment: BioAPI_GUI_MOMENT;
   /**
    * @summary `resultCode`.
    * @description
@@ -183,7 +183,7 @@ export class GUISelectEvent_NotificationParams {
    * @public
    * @readonly
    */
-  readonly resultCode: BioAPI_RETURN;
+  public readonly resultCode: BioAPI_RETURN;
   /**
    * @summary `maxNumEnrollSamples`.
    * @description
@@ -193,7 +193,7 @@ export class GUISelectEvent_NotificationParams {
    * @public
    * @readonly
    */
-  readonly maxNumEnrollSamples: UnsignedInt;
+  public readonly maxNumEnrollSamples: UnsignedInt;
   /**
    * @summary `selectableInstances`.
    * @description
@@ -203,7 +203,7 @@ export class GUISelectEvent_NotificationParams {
    * @public
    * @readonly
    */
-  readonly selectableInstances: BioAPI_BIR_SUBTYPE_MASK;
+  public readonly selectableInstances: BioAPI_BIR_SUBTYPE_MASK;
   /**
    * @summary `capturedInstances`.
    * @description
@@ -213,7 +213,7 @@ export class GUISelectEvent_NotificationParams {
    * @public
    * @readonly
    */
-  readonly capturedInstances: BioAPI_BIR_SUBTYPE_MASK;
+  public readonly capturedInstances: BioAPI_BIR_SUBTYPE_MASK;
   /**
    * @summary `text`.
    * @description
@@ -223,7 +223,7 @@ export class GUISelectEvent_NotificationParams {
    * @public
    * @readonly
    */
-  readonly text?: OPTIONAL<UTF8String>;
+  public readonly text?: OPTIONAL<UTF8String>;
 
   constructor(
     guiEventSubscriptionUuid: OPTIONAL<BioAPI_UUID>,
@@ -292,14 +292,14 @@ export class GUISelectEvent_NotificationParams {
    * @static
    */
 
-  public static _enum_for_operation = _enum_for_BioAPI_GUI_OPERATION;
+  public static _enum_for_operation: typeof _enum_for_BioAPI_GUI_OPERATION = _enum_for_BioAPI_GUI_OPERATION;
   /**
    * @summary The enum used as the type of the component `moment`
    * @public
    * @static
    */
 
-  public static _enum_for_moment = _enum_for_BioAPI_GUI_MOMENT;
+  public static _enum_for_moment: typeof _enum_for_BioAPI_GUI_MOMENT = _enum_for_BioAPI_GUI_MOMENT;
 }
 
 

@@ -1,6 +1,6 @@
 import {
-    OPTIONAL,
-    ASN1Element as _Element,
+    type OPTIONAL,
+    type ASN1Element as _Element,
     ASN1TagClass as _TagClass,
 } from "@wildboar/asn1";
 import * as $ from "@wildboar/asn1/functional";
@@ -24,19 +24,25 @@ import { LocationInformation, _decode_LocationInformation, _encode_LocationInfor
  *
  */
 export class EventSpecificInformationBCSM_oTermSeizedSpecificInfo {
+    /**
+     * @summary `locationInformation`.
+     * @description
+     *
+     * Location of the MS. (3GPP TS 29.078 V19.0.0 clause 11.18).
+     *
+     * @public
+     * @readonly
+     */
+    public readonly locationInformation?: OPTIONAL<LocationInformation>;
+    public readonly _unrecognizedExtensionsList: _Element[];
+
     constructor (
-        /**
-         * @summary `locationInformation`.
-         * @description
-         *
-         * Location of the MS. (3GPP TS 29.078 V19.0.0 clause 11.18).
-         *
-         * @public
-         * @readonly
-         */
-        readonly locationInformation?: OPTIONAL<LocationInformation>,
-        readonly _unrecognizedExtensionsList: _Element[] = [],
-    ) {}
+        locationInformation?: OPTIONAL<LocationInformation>,
+        _unrecognizedExtensionsList: _Element[] = [],
+    ) {
+        this.locationInformation = locationInformation;
+        this._unrecognizedExtensionsList = _unrecognizedExtensionsList;
+    }
 
     public static _from_object (_o: { [_K in keyof (EventSpecificInformationBCSM_oTermSeizedSpecificInfo)]: (EventSpecificInformationBCSM_oTermSeizedSpecificInfo)[_K] }): EventSpecificInformationBCSM_oTermSeizedSpecificInfo {
         return new EventSpecificInformationBCSM_oTermSeizedSpecificInfo(_o.locationInformation, _o._unrecognizedExtensionsList);

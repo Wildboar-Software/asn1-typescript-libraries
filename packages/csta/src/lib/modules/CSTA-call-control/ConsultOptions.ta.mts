@@ -1,7 +1,7 @@
 /* eslint-disable */
 
 import * as $ from "@wildboar/asn1/functional";
-import { ENUMERATED, ASN1Element as _Element } from "@wildboar/asn1";
+import { type ENUMERATED, ASN1Element as _Element } from "@wildboar/asn1";
 
 
 
@@ -86,7 +86,7 @@ type ConsultOptions = _enum_for_ConsultOptions;
  * @enum {number}
  */
 export
-const ConsultOptions = _enum_for_ConsultOptions;
+const ConsultOptions: typeof _enum_for_ConsultOptions = _enum_for_ConsultOptions;
 
 /**
  * @summary ConsultOptions_unrestricted
@@ -98,7 +98,7 @@ const ConsultOptions = _enum_for_ConsultOptions;
  * @type {number}
  */
 export
-const ConsultOptions_unrestricted: ConsultOptions = ConsultOptions.unrestricted; /* LONG_NAMED_ENUMERATED_VALUE */
+const ConsultOptions_unrestricted: _enum_for_ConsultOptions.unrestricted = ConsultOptions.unrestricted; /* LONG_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary unrestricted
@@ -106,7 +106,7 @@ const ConsultOptions_unrestricted: ConsultOptions = ConsultOptions.unrestricted;
  * @type {number}
  */
 export
-const unrestricted: ConsultOptions = ConsultOptions.unrestricted; /* SHORT_NAMED_ENUMERATED_VALUE */
+const unrestricted: _enum_for_ConsultOptions.unrestricted = ConsultOptions.unrestricted; /* SHORT_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary ConsultOptions_consultOnly
@@ -118,7 +118,7 @@ const unrestricted: ConsultOptions = ConsultOptions.unrestricted; /* SHORT_NAMED
  * @type {number}
  */
 export
-const ConsultOptions_consultOnly: ConsultOptions = ConsultOptions.consultOnly; /* LONG_NAMED_ENUMERATED_VALUE */
+const ConsultOptions_consultOnly: _enum_for_ConsultOptions.consultOnly = ConsultOptions.consultOnly; /* LONG_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary consultOnly
@@ -126,7 +126,7 @@ const ConsultOptions_consultOnly: ConsultOptions = ConsultOptions.consultOnly; /
  * @type {number}
  */
 export
-const consultOnly: ConsultOptions = ConsultOptions.consultOnly; /* SHORT_NAMED_ENUMERATED_VALUE */
+const consultOnly: _enum_for_ConsultOptions.consultOnly = ConsultOptions.consultOnly; /* SHORT_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary ConsultOptions_transferOnly
@@ -138,7 +138,7 @@ const consultOnly: ConsultOptions = ConsultOptions.consultOnly; /* SHORT_NAMED_E
  * @type {number}
  */
 export
-const ConsultOptions_transferOnly: ConsultOptions = ConsultOptions.transferOnly; /* LONG_NAMED_ENUMERATED_VALUE */
+const ConsultOptions_transferOnly: _enum_for_ConsultOptions.transferOnly = ConsultOptions.transferOnly; /* LONG_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary transferOnly
@@ -146,7 +146,7 @@ const ConsultOptions_transferOnly: ConsultOptions = ConsultOptions.transferOnly;
  * @type {number}
  */
 export
-const transferOnly: ConsultOptions = ConsultOptions.transferOnly; /* SHORT_NAMED_ENUMERATED_VALUE */
+const transferOnly: _enum_for_ConsultOptions.transferOnly = ConsultOptions.transferOnly; /* SHORT_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary ConsultOptions_conferenceOnly
@@ -158,7 +158,7 @@ const transferOnly: ConsultOptions = ConsultOptions.transferOnly; /* SHORT_NAMED
  * @type {number}
  */
 export
-const ConsultOptions_conferenceOnly: ConsultOptions = ConsultOptions.conferenceOnly; /* LONG_NAMED_ENUMERATED_VALUE */
+const ConsultOptions_conferenceOnly: _enum_for_ConsultOptions.conferenceOnly = ConsultOptions.conferenceOnly; /* LONG_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary conferenceOnly
@@ -166,7 +166,7 @@ const ConsultOptions_conferenceOnly: ConsultOptions = ConsultOptions.conferenceO
  * @type {number}
  */
 export
-const conferenceOnly: ConsultOptions = ConsultOptions.conferenceOnly; /* SHORT_NAMED_ENUMERATED_VALUE */
+const conferenceOnly: _enum_for_ConsultOptions.conferenceOnly = ConsultOptions.conferenceOnly; /* SHORT_NAMED_ENUMERATED_VALUE */
 
 let _cached_decoder_for_ConsultOptions: $.ASN1Decoder<ConsultOptions> | null = null;
 

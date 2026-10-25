@@ -5,11 +5,11 @@ import {
     id_ce_roleSpecCertIdentifier,
 } from "../../modules/AttributeCertificateDefinitions/id-ce-roleSpecCertIdentifier.va.mjs";
 import {
-    AttributeCertificate,
+    type AttributeCertificate,
     _decode_AttributeCertificate,
 } from "../../modules/AttributeCertificateDefinitions/AttributeCertificate.ta.mjs";
 import {
-    RoleSpecCertIdentifierSyntax,
+    type RoleSpecCertIdentifierSyntax,
     _decode_RoleSpecCertIdentifierSyntax,
 } from "../../modules/AttributeCertificateDefinitions/RoleSpecCertIdentifierSyntax.ta.mjs";
 import {

@@ -1,8 +1,8 @@
 /* eslint-disable */
 import {
-    BOOLEAN,
-    OCTET_STRING,
-    ASN1Element as _Element,
+    type BOOLEAN,
+    type OCTET_STRING,
+    type ASN1Element as _Element,
     ASN1TagClass as _TagClass,
     ASN1Construction as _Construction,
     ASN1UniversalType as _UniversalType,
@@ -12,7 +12,7 @@ import {
     ASN1ConstructionError as _ConstructionError,
 } from "@wildboar/asn1";
 import * as $ from "@wildboar/asn1/functional";
-import { LogPointer, _decode_LogPointer, _encode_LogPointer } from "../ISO9041-VTP/LogPointer.ta.mjs";
+import { type LogPointer, _decode_LogPointer, _encode_LogPointer } from "../ISO9041-VTP/LogPointer.ta.mjs";
 
 
 /**
@@ -37,35 +37,43 @@ import { LogPointer, _decode_LogPointer, _encode_LogPointer } from "../ISO9041-V
  */
 export
 class DOupdate_repeatLogText {
+    /**
+     * @summary `finishAddress`.
+     * @description
+     * End of the logical repeat-extent; must be ≥ the current
+     * logical pointer. ISO/IEC 9040:1997 §19.4.2.
+     * @public
+     * @readonly
+     */
+    public readonly finishAddress: LogPointer;
+    /**
+     * @summary `fdrAttr`.
+     * @description
+     * TRUE (`"yes"`) apply FDR attributes; FALSE (`"no"`) do not.
+     * ISO/IEC 9040:1997 §19.4.2.
+     * @public
+     * @readonly
+     */
+    public readonly fdrAttr: BOOLEAN;
+    /**
+     * @summary `prAttrValStr`.
+     * @description
+     * Primary-attribute octets cycled across the logical
+     * repeat-extent. ISO/IEC 9040:1997 §19.4.2.
+     * @public
+     * @readonly
+     */
+    public readonly prAttrValStr: OCTET_STRING;
+
     constructor (
-        /**
-         * @summary `finishAddress`.
-         * @description
-         * End of the logical repeat-extent; must be ≥ the current
-         * logical pointer. ISO/IEC 9040:1997 §19.4.2.
-         * @public
-         * @readonly
-         */
-        readonly finishAddress: LogPointer,
-        /**
-         * @summary `fdrAttr`.
-         * @description
-         * TRUE (`"yes"`) apply FDR attributes; FALSE (`"no"`) do not.
-         * ISO/IEC 9040:1997 §19.4.2.
-         * @public
-         * @readonly
-         */
-        readonly fdrAttr: BOOLEAN,
-        /**
-         * @summary `prAttrValStr`.
-         * @description
-         * Primary-attribute octets cycled across the logical
-         * repeat-extent. ISO/IEC 9040:1997 §19.4.2.
-         * @public
-         * @readonly
-         */
-        readonly prAttrValStr: OCTET_STRING
-    ) {}
+        finishAddress: LogPointer,
+        fdrAttr: BOOLEAN,
+        prAttrValStr: OCTET_STRING
+    ) {
+        this.finishAddress = finishAddress;
+        this.fdrAttr = fdrAttr;
+        this.prAttrValStr = prAttrValStr;
+    }
 
     /**
      * @summary Restructures an object into a DOupdate_repeatLogText

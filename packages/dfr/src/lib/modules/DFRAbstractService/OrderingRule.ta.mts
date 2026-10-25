@@ -1,8 +1,8 @@
 /* eslint-disable */
 import {
-    OPTIONAL,
-    BOOLEAN,
-    ASN1Element as _Element,
+    type OPTIONAL,
+    type BOOLEAN,
+    type ASN1Element as _Element,
     ASN1TagClass as _TagClass,
     ASN1Construction as _Construction,
     ASN1UniversalType as _UniversalType,
@@ -12,7 +12,7 @@ import {
     ASN1ConstructionError as _ConstructionError,
 } from "@wildboar/asn1";
 import * as $ from "@wildboar/asn1/functional";
-import { OrderingAttributes, _decode_OrderingAttributes, _encode_OrderingAttributes } from "../DFRAbstractService/OrderingAttributes.ta.mjs";
+import { type OrderingAttributes, _decode_OrderingAttributes, _encode_OrderingAttributes } from "../DFRAbstractService/OrderingAttributes.ta.mjs";
 
 
 /**
@@ -36,26 +36,32 @@ import { OrderingAttributes, _decode_OrderingAttributes, _encode_OrderingAttribu
  */
 export
 class OrderingRule {
+    /**
+     * @summary `list_attributes`.
+     * @description
+     *
+     * If true, return ordering key values.
+     * @public
+     * @readonly
+     */
+    public readonly list_attributes: OPTIONAL<BOOLEAN>;
+    /**
+     * @summary `ordering_attributes`.
+     * @description
+     *
+     * Keys and directions, major to minor.
+     * @public
+     * @readonly
+     */
+    public readonly ordering_attributes: OrderingAttributes;
+
     constructor (
-        /**
-         * @summary `list_attributes`.
-         * @description
-         *
-         * If true, return ordering key values.
-         * @public
-         * @readonly
-         */
-        readonly list_attributes: OPTIONAL<BOOLEAN>,
-        /**
-         * @summary `ordering_attributes`.
-         * @description
-         *
-         * Keys and directions, major to minor.
-         * @public
-         * @readonly
-         */
-        readonly ordering_attributes: OrderingAttributes
-    ) {}
+        list_attributes: OPTIONAL<BOOLEAN>,
+        ordering_attributes: OrderingAttributes
+    ) {
+        this.list_attributes = list_attributes;
+        this.ordering_attributes = ordering_attributes;
+    }
 
     /**
      * @summary Restructures an object into a OrderingRule

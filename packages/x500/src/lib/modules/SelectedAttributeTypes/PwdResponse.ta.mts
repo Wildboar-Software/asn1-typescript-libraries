@@ -1,18 +1,18 @@
 /* eslint-disable */
 import {
-    ASN1Element as _Element,
+    type ASN1Element as _Element,
     ASN1TagClass as _TagClass,
-    OPTIONAL,
+    type OPTIONAL,
 } from "@wildboar/asn1";
 import * as $ from "@wildboar/asn1/functional";
 import {
-    PwdResponse_error,
+    type PwdResponse_error,
     _decode_PwdResponse_error,
     _encode_PwdResponse_error,
     _enum_for_PwdResponse_error,
 } from "../SelectedAttributeTypes/PwdResponse-error.ta.mjs";
 import {
-    PwdResponse_warning,
+    type PwdResponse_warning,
     _decode_PwdResponse_warning,
     _encode_PwdResponse_warning,
 } from "../SelectedAttributeTypes/PwdResponse-warning.ta.mjs";
@@ -42,30 +42,36 @@ import {
  *
  */
 export class PwdResponse {
+    /**
+     * @summary `warning`.
+     * @description
+     *
+     * If `timeleft` present and ≠ 0, `error` shall be absent. Shall not
+     * be present with `changeAfterReset`.
+     *
+     * @public
+     * @readonly
+     */
+    public readonly warning?: OPTIONAL<PwdResponse_warning>;
+    /**
+     * @summary `error`.
+     * @description
+     *
+     * Absent if `timeleft` present and ≠ 0. `changeAfterReset` ⇒
+     * warning shall not be present.
+     *
+     * @public
+     * @readonly
+     */
+    public readonly error?: OPTIONAL<PwdResponse_error>;
+
     constructor(
-        /**
-         * @summary `warning`.
-         * @description
-         *
-         * If `timeleft` present and ≠ 0, `error` shall be absent. Shall not
-         * be present with `changeAfterReset`.
-         *
-         * @public
-         * @readonly
-         */
-        readonly warning?: OPTIONAL<PwdResponse_warning>,
-        /**
-         * @summary `error`.
-         * @description
-         *
-         * Absent if `timeleft` present and ≠ 0. `changeAfterReset` ⇒
-         * warning shall not be present.
-         *
-         * @public
-         * @readonly
-         */
-        readonly error?: OPTIONAL<PwdResponse_error>
-    ) {}
+        warning?: OPTIONAL<PwdResponse_warning>,
+        error?: OPTIONAL<PwdResponse_error>
+    ) {
+        this.warning = warning;
+        this.error = error;
+    }
 
     /**
      * @summary Restructures an object into a PwdResponse
@@ -91,7 +97,7 @@ export class PwdResponse {
      * @static
      */
 
-    public static _enum_for_error = _enum_for_PwdResponse_error;
+    public static _enum_for_error: typeof _enum_for_PwdResponse_error = _enum_for_PwdResponse_error;
 }
 
 /**

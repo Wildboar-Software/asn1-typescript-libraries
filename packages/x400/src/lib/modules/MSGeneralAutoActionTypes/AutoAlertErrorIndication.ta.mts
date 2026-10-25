@@ -1,8 +1,8 @@
 /* eslint-disable */
 import {
-    OPTIONAL,
-    GeneralString,
-    ASN1Element as _Element,
+    type OPTIONAL,
+    type GeneralString,
+    type ASN1Element as _Element,
     ASN1TagClass as _TagClass,
     ASN1Construction as _Construction,
     ASN1UniversalType as _UniversalType,
@@ -35,20 +35,26 @@ import {
  *
  */
 export class AutoAlertErrorIndication {
+    /**
+     * @summary `failing_alert_destination`.
+     * @public
+     * @readonly
+     */
+    public readonly failing_alert_destination?: OPTIONAL<AlertDestination>;
+    /**
+     * @summary `supplementary_information`.
+     * @public
+     * @readonly
+     */
+    public readonly supplementary_information?: OPTIONAL<GeneralString>;
+
     constructor(
-        /**
-         * @summary `failing_alert_destination`.
-         * @public
-         * @readonly
-         */
-        readonly failing_alert_destination?: OPTIONAL<AlertDestination>,
-        /**
-         * @summary `supplementary_information`.
-         * @public
-         * @readonly
-         */
-        readonly supplementary_information?: OPTIONAL<GeneralString>
-    ) {}
+        failing_alert_destination?: OPTIONAL<AlertDestination>,
+        supplementary_information?: OPTIONAL<GeneralString>
+    ) {
+        this.failing_alert_destination = failing_alert_destination;
+        this.supplementary_information = supplementary_information;
+    }
 
     /**
      * @summary Restructures an object into a AutoAlertErrorIndication

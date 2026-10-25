@@ -1,5 +1,5 @@
 /* eslint-disable */
-import { OBJECT_IDENTIFIER } from "@wildboar/asn1";
+import { type OBJECT_IDENTIFIER } from "@wildboar/asn1";
 import { id_ad_ocsp } from "@wildboar/x500/PkiPmiExternalDataTypes";
 
 /**

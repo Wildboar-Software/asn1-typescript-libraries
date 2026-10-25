@@ -1,13 +1,13 @@
 /* eslint-disable */
-import { ASN1Element as _Element, OPTIONAL } from "@wildboar/asn1";
+import { ASN1Element as _Element, type OPTIONAL } from "@wildboar/asn1";
 import * as $ from "@wildboar/asn1/functional";
 import {
-    AltNameType,
+    type AltNameType,
     _decode_AltNameType,
     _encode_AltNameType,
 } from "../CertificateExtensions/AltNameType.ta.mjs";
 import {
-    GeneralName,
+    type GeneralName,
     _decode_GeneralName,
     _encode_GeneralName,
 } from "../CertificateExtensions/GeneralName.ta.mjs";
@@ -29,25 +29,31 @@ import {
  *
  */
 export class AltName {
+    /**
+     * @summary `altnameType`.
+     * @public
+     * @readonly
+     */
+    public readonly altnameType: AltNameType;
+    /**
+     * @summary `altNameValue`.
+     * @description
+     *
+     * Omitted = match any SAN of altnameType. If present, form must match
+     * altnameType.
+     *
+     * @public
+     * @readonly
+     */
+    public readonly altNameValue?: OPTIONAL<GeneralName>;
+
     constructor(
-        /**
-         * @summary `altnameType`.
-         * @public
-         * @readonly
-         */
-        readonly altnameType: AltNameType,
-        /**
-         * @summary `altNameValue`.
-         * @description
-         *
-         * Omitted = match any SAN of altnameType. If present, form must match
-         * altnameType.
-         *
-         * @public
-         * @readonly
-         */
-        readonly altNameValue?: OPTIONAL<GeneralName>
-    ) {}
+        altnameType: AltNameType,
+        altNameValue?: OPTIONAL<GeneralName>
+    ) {
+        this.altnameType = altnameType;
+        this.altNameValue = altNameValue;
+    }
 
     /**
      * @summary Restructures an object into a AltName

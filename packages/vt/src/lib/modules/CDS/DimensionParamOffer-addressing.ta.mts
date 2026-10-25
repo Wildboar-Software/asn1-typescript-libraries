@@ -1,7 +1,7 @@
 /* eslint-disable */
 import {
-    BIT_STRING,
-    ASN1Element as _Element,
+    type BIT_STRING,
+    type ASN1Element as _Element,
     ASN1TagClass as _TagClass,
     ASN1Construction as _Construction,
     ASN1UniversalType as _UniversalType,
@@ -101,8 +101,8 @@ const DimensionParamOffer_addressing_notPermitted: number = 2; /* LONG_NAMED_BIT
  */
 export
 const notPermitted: number = DimensionParamOffer_addressing_notPermitted; /* SHORT_NAMED_BIT */
-export const _decode_DimensionParamOffer_addressing = $._decodeBitString;
-export const _encode_DimensionParamOffer_addressing = $._encodeBitString;
+export const _decode_DimensionParamOffer_addressing: $.ASN1Decoder<BIT_STRING> = $._decodeBitString;
+export const _encode_DimensionParamOffer_addressing: $.ASN1Encoder<BIT_STRING> = $._encodeBitString;
 
 
 /* eslint-enable */

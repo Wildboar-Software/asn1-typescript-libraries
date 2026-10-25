@@ -1,9 +1,9 @@
 /* eslint-disable */
 import {
-    OPTIONAL,
-    BIT_STRING,
-    OCTET_STRING,
-    ASN1Element as _Element,
+    type OPTIONAL,
+    type BIT_STRING,
+    type OCTET_STRING,
+    type ASN1Element as _Element,
     ASN1TagClass as _TagClass,
     ASN1Construction as _Construction,
     ASN1UniversalType as _UniversalType,
@@ -13,8 +13,8 @@ import {
     ASN1ConstructionError as _ConstructionError,
 } from "@wildboar/asn1";
 import * as $ from "@wildboar/asn1/functional";
-import { ECPrivateKey_version, _decode_ECPrivateKey_version, _encode_ECPrivateKey_version } from "../SEC1-v1-9/ECPrivateKey-version.ta.mjs";
-import { ECDomainParameters, _decode_ECDomainParameters, _encode_ECDomainParameters } from "../SEC1-v1-9/ECDomainParameters.ta.mjs";
+import { type ECPrivateKey_version, _decode_ECPrivateKey_version, _encode_ECPrivateKey_version } from "../SEC1-v1-9/ECPrivateKey-version.ta.mjs";
+import { type ECDomainParameters, _decode_ECDomainParameters, _encode_ECDomainParameters } from "../SEC1-v1-9/ECDomainParameters.ta.mjs";
 /**
  * @summary ECPrivateKey
  * @description
@@ -47,7 +47,7 @@ class ECPrivateKey {
      * @public
      * @readonly
      */
-    readonly version: ECPrivateKey_version;
+    public readonly version: ECPrivateKey_version;
     /**
      * @summary `privateKey`.
      * @description
@@ -58,7 +58,7 @@ class ECPrivateKey {
      * @public
      * @readonly
      */
-    readonly privateKey: OCTET_STRING;
+    public readonly privateKey: OCTET_STRING;
     /**
      * @summary `parameters`.
      * @description
@@ -69,7 +69,7 @@ class ECPrivateKey {
      * @public
      * @readonly
      */
-    readonly parameters?: OPTIONAL<ECDomainParameters>;
+    public readonly parameters?: OPTIONAL<ECDomainParameters>;
     /**
      * @summary `publicKey`.
      * @description
@@ -80,7 +80,7 @@ class ECPrivateKey {
      * @public
      * @readonly
      */
-    readonly publicKey?: OPTIONAL<BIT_STRING>;
+    public readonly publicKey?: OPTIONAL<BIT_STRING>;
 
     constructor (
         version: ECPrivateKey_version,

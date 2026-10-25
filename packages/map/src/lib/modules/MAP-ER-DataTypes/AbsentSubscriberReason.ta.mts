@@ -1,7 +1,7 @@
 /* eslint-disable */
 import {
-    ASN1Element as _Element,
-    ENUMERATED
+    type ASN1Element as _Element,
+    type ENUMERATED
 } from "@wildboar/asn1";
 import * as $ from "@wildboar/asn1/functional";
 
@@ -53,7 +53,7 @@ type AbsentSubscriberReason = _enum_for_AbsentSubscriberReason | ENUMERATED;
  * @type {number}
  */
 export
-const AbsentSubscriberReason_imsiDetach: AbsentSubscriberReason = 0; /* LONG_NAMED_ENUMERATED_VALUE */
+const AbsentSubscriberReason_imsiDetach: _enum_for_AbsentSubscriberReason.imsiDetach = _enum_for_AbsentSubscriberReason.imsiDetach; /* LONG_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary imsiDetach
@@ -65,7 +65,7 @@ const AbsentSubscriberReason_imsiDetach: AbsentSubscriberReason = 0; /* LONG_NAM
  * @type {number}
  */
 export
-const imsiDetach: AbsentSubscriberReason = AbsentSubscriberReason_imsiDetach; /* SHORT_NAMED_ENUMERATED_VALUE */
+const imsiDetach: _enum_for_AbsentSubscriberReason.imsiDetach = AbsentSubscriberReason_imsiDetach; /* SHORT_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary AbsentSubscriberReason_restrictedArea
@@ -77,7 +77,7 @@ const imsiDetach: AbsentSubscriberReason = AbsentSubscriberReason_imsiDetach; /*
  * @type {number}
  */
 export
-const AbsentSubscriberReason_restrictedArea: AbsentSubscriberReason = 1; /* LONG_NAMED_ENUMERATED_VALUE */
+const AbsentSubscriberReason_restrictedArea: _enum_for_AbsentSubscriberReason.restrictedArea = _enum_for_AbsentSubscriberReason.restrictedArea; /* LONG_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary restrictedArea
@@ -89,7 +89,7 @@ const AbsentSubscriberReason_restrictedArea: AbsentSubscriberReason = 1; /* LONG
  * @type {number}
  */
 export
-const restrictedArea: AbsentSubscriberReason = AbsentSubscriberReason_restrictedArea; /* SHORT_NAMED_ENUMERATED_VALUE */
+const restrictedArea: _enum_for_AbsentSubscriberReason.restrictedArea = AbsentSubscriberReason_restrictedArea; /* SHORT_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary AbsentSubscriberReason_noPageResponse
@@ -101,7 +101,7 @@ const restrictedArea: AbsentSubscriberReason = AbsentSubscriberReason_restricted
  * @type {number}
  */
 export
-const AbsentSubscriberReason_noPageResponse: AbsentSubscriberReason = 2; /* LONG_NAMED_ENUMERATED_VALUE */
+const AbsentSubscriberReason_noPageResponse: _enum_for_AbsentSubscriberReason.noPageResponse = _enum_for_AbsentSubscriberReason.noPageResponse; /* LONG_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary noPageResponse
@@ -113,7 +113,7 @@ const AbsentSubscriberReason_noPageResponse: AbsentSubscriberReason = 2; /* LONG
  * @type {number}
  */
 export
-const noPageResponse: AbsentSubscriberReason = AbsentSubscriberReason_noPageResponse; /* SHORT_NAMED_ENUMERATED_VALUE */
+const noPageResponse: _enum_for_AbsentSubscriberReason.noPageResponse = AbsentSubscriberReason_noPageResponse; /* SHORT_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary AbsentSubscriberReason_purgedMS
@@ -127,7 +127,7 @@ const noPageResponse: AbsentSubscriberReason = AbsentSubscriberReason_noPageResp
  * @type {number}
  */
 export
-const AbsentSubscriberReason_purgedMS: AbsentSubscriberReason = 3; /* LONG_NAMED_ENUMERATED_VALUE */
+const AbsentSubscriberReason_purgedMS: _enum_for_AbsentSubscriberReason.purgedMS = _enum_for_AbsentSubscriberReason.purgedMS; /* LONG_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary purgedMS
@@ -141,7 +141,7 @@ const AbsentSubscriberReason_purgedMS: AbsentSubscriberReason = 3; /* LONG_NAMED
  * @type {number}
  */
 export
-const purgedMS: AbsentSubscriberReason = AbsentSubscriberReason_purgedMS; /* SHORT_NAMED_ENUMERATED_VALUE */
+const purgedMS: _enum_for_AbsentSubscriberReason.purgedMS = AbsentSubscriberReason_purgedMS; /* SHORT_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary AbsentSubscriberReason_mtRoamingRetry
@@ -154,7 +154,7 @@ const purgedMS: AbsentSubscriberReason = AbsentSubscriberReason_purgedMS; /* SHO
  * @type {number}
  */
 export
-const AbsentSubscriberReason_mtRoamingRetry: AbsentSubscriberReason = 4; /* LONG_NAMED_ENUMERATED_VALUE */
+const AbsentSubscriberReason_mtRoamingRetry: _enum_for_AbsentSubscriberReason.mtRoamingRetry = _enum_for_AbsentSubscriberReason.mtRoamingRetry; /* LONG_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary mtRoamingRetry
@@ -167,7 +167,7 @@ const AbsentSubscriberReason_mtRoamingRetry: AbsentSubscriberReason = 4; /* LONG
  * @type {number}
  */
 export
-const mtRoamingRetry: AbsentSubscriberReason = AbsentSubscriberReason_mtRoamingRetry; /* SHORT_NAMED_ENUMERATED_VALUE */
+const mtRoamingRetry: _enum_for_AbsentSubscriberReason.mtRoamingRetry = AbsentSubscriberReason_mtRoamingRetry; /* SHORT_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary AbsentSubscriberReason_busySubscriber
@@ -180,7 +180,7 @@ const mtRoamingRetry: AbsentSubscriberReason = AbsentSubscriberReason_mtRoamingR
  * @type {number}
  */
 export
-const AbsentSubscriberReason_busySubscriber: AbsentSubscriberReason = 5; /* LONG_NAMED_ENUMERATED_VALUE */
+const AbsentSubscriberReason_busySubscriber: _enum_for_AbsentSubscriberReason.busySubscriber = _enum_for_AbsentSubscriberReason.busySubscriber; /* LONG_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary busySubscriber
@@ -193,7 +193,7 @@ const AbsentSubscriberReason_busySubscriber: AbsentSubscriberReason = 5; /* LONG
  * @type {number}
  */
 export
-const busySubscriber: AbsentSubscriberReason = AbsentSubscriberReason_busySubscriber; /* SHORT_NAMED_ENUMERATED_VALUE */
+const busySubscriber: _enum_for_AbsentSubscriberReason.busySubscriber = AbsentSubscriberReason_busySubscriber; /* SHORT_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary Decodes an ASN.1 element into a(n) AbsentSubscriberReason
@@ -201,7 +201,7 @@ const busySubscriber: AbsentSubscriberReason = AbsentSubscriberReason_busySubscr
  * @param el The element being decoded.
  * @returns The decoded data structure.
  */
-export const _decode_AbsentSubscriberReason = $._decodeEnumerated;
+export const _decode_AbsentSubscriberReason: $.ASN1Decoder<number> = $._decodeEnumerated;
 
 /**
  * @summary Encodes a(n) AbsentSubscriberReason into an ASN.1 Element.
@@ -210,7 +210,7 @@ export const _decode_AbsentSubscriberReason = $._decodeEnumerated;
  * @param elGetter A function that can be used to get new ASN.1 elements.
  * @returns {_Element} The AbsentSubscriberReason, encoded as an ASN.1 Element.
  */
-export const _encode_AbsentSubscriberReason = $._encodeEnumerated;
+export const _encode_AbsentSubscriberReason: $.ASN1Encoder<number> = $._encodeEnumerated;
 
 
 /* eslint-enable */

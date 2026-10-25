@@ -1,12 +1,12 @@
 /* eslint-disable */
 import {
-    INTEGER,
-    OBJECT_IDENTIFIER,
-    ASN1Element as _Element,
+    type INTEGER,
+    type OBJECT_IDENTIFIER,
+    type ASN1Element as _Element,
 } from "@wildboar/asn1";
 import * as $ from "@wildboar/asn1/functional";
 import {
-    PerceivedTroubleSeverity_number,
+    type PerceivedTroubleSeverity_number,
     outOfService,
     backInService,
     serviceImpairment,

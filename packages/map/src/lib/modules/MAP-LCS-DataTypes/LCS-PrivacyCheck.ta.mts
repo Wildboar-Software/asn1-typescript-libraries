@@ -1,11 +1,11 @@
 /* eslint-disable */
 import {
-    OPTIONAL,
-    ASN1Element as _Element,
+    type OPTIONAL,
+    type ASN1Element as _Element,
     ASN1TagClass as _TagClass
 } from "@wildboar/asn1";
 import * as $ from "@wildboar/asn1/functional";
-import { PrivacyCheckRelatedAction, _decode_PrivacyCheckRelatedAction, _encode_PrivacyCheckRelatedAction, _enum_for_PrivacyCheckRelatedAction } from "../MAP-LCS-DataTypes/PrivacyCheckRelatedAction.ta.mjs";
+import { type PrivacyCheckRelatedAction, _decode_PrivacyCheckRelatedAction, _encode_PrivacyCheckRelatedAction, _enum_for_PrivacyCheckRelatedAction } from "../MAP-LCS-DataTypes/PrivacyCheckRelatedAction.ta.mjs";
 
 
 /**
@@ -20,7 +20,7 @@ import { PrivacyCheckRelatedAction, _decode_PrivacyCheckRelatedAction, _encode_P
  * ```asn1
  * LCS-PrivacyCheck ::= SEQUENCE {
  *     callSessionUnrelated    [0] PrivacyCheckRelatedAction,
- *     callSessionRelated    [1] PrivacyCheckRelatedAction    OPTIONAL,
+ *     callSessionRelated    [1] PrivacyCheckRelatedAction    type OPTIONAL,
  *     ...}
  * ```
  * 
@@ -28,34 +28,42 @@ import { PrivacyCheckRelatedAction, _decode_PrivacyCheckRelatedAction, _encode_P
  */
 export
 class LCS_PrivacyCheck {
+    /**
+     * @summary `callSessionUnrelated`.
+     * @description
+     *
+     * Action for call/session unrelated.
+     *
+     * @public
+     * @readonly
+     */
+    public readonly callSessionUnrelated: PrivacyCheckRelatedAction;
+    /**
+     * @summary `callSessionRelated`.
+     * @description
+     *
+     * Optional action for call/session related.
+     *
+     * @public
+     * @readonly
+     */
+    public readonly callSessionRelated?: OPTIONAL<PrivacyCheckRelatedAction>;
+    /**
+     * @summary Extensions that are not recognized.
+     * @public
+     * @readonly
+     */
+    public readonly _unrecognizedExtensionsList: _Element[];
+
     constructor (
-        /**
-         * @summary `callSessionUnrelated`.
-         * @description
-         *
-         * Action for call/session unrelated.
-         *
-         * @public
-         * @readonly
-         */
-        readonly callSessionUnrelated: PrivacyCheckRelatedAction,
-        /**
-         * @summary `callSessionRelated`.
-         * @description
-         *
-         * Optional action for call/session related.
-         *
-         * @public
-         * @readonly
-         */
-        readonly callSessionRelated?: OPTIONAL<PrivacyCheckRelatedAction>,
-        /**
-         * @summary Extensions that are not recognized.
-         * @public
-         * @readonly
-         */
-        readonly _unrecognizedExtensionsList: _Element[] = []
-    ) {}
+        callSessionUnrelated: PrivacyCheckRelatedAction,
+        callSessionRelated?: OPTIONAL<PrivacyCheckRelatedAction>,
+        _unrecognizedExtensionsList: _Element[] = []
+    ) {
+        this.callSessionUnrelated = callSessionUnrelated;
+        this.callSessionRelated = callSessionRelated;
+        this._unrecognizedExtensionsList = _unrecognizedExtensionsList;
+    }
 
     /**
      * @summary Restructures an object into a LCS_PrivacyCheck
@@ -79,13 +87,13 @@ class LCS_PrivacyCheck {
          * @static
          */
 
-    public static _enum_for_callSessionUnrelated = _enum_for_PrivacyCheckRelatedAction;        /**
+    public static _enum_for_callSessionUnrelated: typeof _enum_for_PrivacyCheckRelatedAction = _enum_for_PrivacyCheckRelatedAction;        /**
          * @summary The enum used as the type of the component `callSessionRelated`
          * @public
          * @static
          */
 
-    public static _enum_for_callSessionRelated = _enum_for_PrivacyCheckRelatedAction;
+    public static _enum_for_callSessionRelated: typeof _enum_for_PrivacyCheckRelatedAction = _enum_for_PrivacyCheckRelatedAction;
 }
 
 /**

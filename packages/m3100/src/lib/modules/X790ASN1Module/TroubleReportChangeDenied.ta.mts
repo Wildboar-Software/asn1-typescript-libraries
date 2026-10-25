@@ -1,7 +1,7 @@
 /* eslint-disable */
 import {
-    OPTIONAL,
-    ASN1Element as _Element,
+    type OPTIONAL,
+    type ASN1Element as _Element,
     ASN1TagClass as _TagClass,
     ASN1Construction as _Construction,
     ASN1UniversalType as _UniversalType,
@@ -12,18 +12,18 @@ import {
 } from '@wildboar/asn1';
 import * as $ from '@wildboar/asn1/functional';
 import {
-    ChangeDeniedReason,
+    type ChangeDeniedReason,
     _enum_for_ChangeDeniedReason,
     _decode_ChangeDeniedReason,
     _encode_ChangeDeniedReason,
 } from '../X790ASN1Module/ChangeDeniedReason.ta.mjs';
 import {
-    ObjectClass,
+    type ObjectClass,
     _decode_ObjectClass,
     _encode_ObjectClass,
 } from '@wildboar/cmip';
 import {
-    ObjectInstance,
+    type ObjectInstance,
     _decode_ObjectInstance,
     _encode_ObjectInstance,
 } from '@wildboar/cmip';
@@ -46,38 +46,50 @@ import {
  *
  */
 export class TroubleReportChangeDenied {
+    /**
+     * @summary `changeDeniedReason`.
+     * @public
+     * @readonly
+     */
+    public readonly changeDeniedReason: ChangeDeniedReason;
+    /**
+     * @summary `managedObjectClass`.
+     * @public
+     * @readonly
+     */
+    public readonly managedObjectClass: OPTIONAL<ObjectClass>;
+    /**
+     * @summary `managedObjectInstance`.
+     * @public
+     * @readonly
+     */
+    public readonly managedObjectInstance: ObjectInstance;
+    /**
+     * @summary `troubleReportInstance`.
+     * @public
+     * @readonly
+     */
+    public readonly troubleReportInstance: ObjectInstance;
+    /**
+     * @summary Extensions that are not recognized.
+     * @public
+     * @readonly
+     */
+    public readonly _unrecognizedExtensionsList: _Element[];
+
     constructor(
-        /**
-         * @summary `changeDeniedReason`.
-         * @public
-         * @readonly
-         */
-        readonly changeDeniedReason: ChangeDeniedReason,
-        /**
-         * @summary `managedObjectClass`.
-         * @public
-         * @readonly
-         */
-        readonly managedObjectClass: OPTIONAL<ObjectClass>,
-        /**
-         * @summary `managedObjectInstance`.
-         * @public
-         * @readonly
-         */
-        readonly managedObjectInstance: ObjectInstance,
-        /**
-         * @summary `troubleReportInstance`.
-         * @public
-         * @readonly
-         */
-        readonly troubleReportInstance: ObjectInstance,
-        /**
-         * @summary Extensions that are not recognized.
-         * @public
-         * @readonly
-         */
-        readonly _unrecognizedExtensionsList: _Element[] = []
-    ) {}
+        changeDeniedReason: ChangeDeniedReason,
+        managedObjectClass: OPTIONAL<ObjectClass>,
+        managedObjectInstance: ObjectInstance,
+        troubleReportInstance: ObjectInstance,
+        _unrecognizedExtensionsList: _Element[] = []
+    ) {
+        this.changeDeniedReason = changeDeniedReason;
+        this.managedObjectClass = managedObjectClass;
+        this.managedObjectInstance = managedObjectInstance;
+        this.troubleReportInstance = troubleReportInstance;
+        this._unrecognizedExtensionsList = _unrecognizedExtensionsList;
+    }
 
     /**
      * @summary Restructures an object into a TroubleReportChangeDenied
@@ -111,7 +123,7 @@ export class TroubleReportChangeDenied {
      * @static
      */
 
-    public static _enum_for_changeDeniedReason = _enum_for_ChangeDeniedReason;
+    public static _enum_for_changeDeniedReason: typeof _enum_for_ChangeDeniedReason = _enum_for_ChangeDeniedReason;
 }
 
 

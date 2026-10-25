@@ -11,7 +11,7 @@ import {
 } from '@wildboar/asn1';
 import * as $ from '@wildboar/asn1/functional';
 import {
-  Name,
+  type Name,
   _decode_Name,
   _encode_Name,
 } from '../InformationFramework/Name.ta.mjs';
@@ -32,22 +32,13 @@ import {
  */
 export type AE_title_form1 = Name; // DefinedType
 
-let _cached_decoder_for_AE_title_form1: $.ASN1Decoder<AE_title_form1> | null = null;
-
 /**
  * @summary Decodes an ASN.1 element into a(n) AE_title_form1
  * @function
  * @param {_Element} el The element being decoded.
  * @returns {AE_title_form1} The decoded data structure.
  */
-export function _decode_AE_title_form1(el: _Element): AE_title_form1 {
-  if (!_cached_decoder_for_AE_title_form1) {
-    _cached_decoder_for_AE_title_form1 = _decode_Name;
-  }
-  return _cached_decoder_for_AE_title_form1(el);
-}
-
-let _cached_encoder_for_AE_title_form1: $.ASN1Encoder<AE_title_form1> | null = null;
+export const _decode_AE_title_form1: $.ASN1Decoder<AE_title_form1> = _decode_Name;
 
 /**
  * @summary Encodes a(n) AE_title_form1 into an ASN.1 Element.
@@ -56,15 +47,7 @@ let _cached_encoder_for_AE_title_form1: $.ASN1Encoder<AE_title_form1> | null = n
  * @param elGetter A function that can be used to get new ASN.1 elements.
  * @returns {_Element} The AE_title_form1, encoded as an ASN.1 Element.
  */
-export function _encode_AE_title_form1(
-  value: AE_title_form1,
-  elGetter: $.ASN1Encoder<AE_title_form1>
-): _Element {
-  if (!_cached_encoder_for_AE_title_form1) {
-    _cached_encoder_for_AE_title_form1 = _encode_Name;
-  }
-  return _cached_encoder_for_AE_title_form1(value, elGetter);
-}
+export const _encode_AE_title_form1: $.ASN1Encoder<AE_title_form1> = _encode_Name;
 
 
 /* eslint-enable */

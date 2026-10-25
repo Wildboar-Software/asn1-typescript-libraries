@@ -1,6 +1,6 @@
 /* eslint-disable */
 import {
-  BIT_STRING,
+  type BIT_STRING,
   ASN1Element as _Element,
   ASN1TagClass as _TagClass,
   ASN1Construction as _Construction,
@@ -746,12 +746,12 @@ export const duplicateCertReq: number = PKIFailureInfo_duplicateCertReq; /* SHOR
 
 
 
-export const _decode_PKIFailureInfo = $._decodeBitString;
+export const _decode_PKIFailureInfo: $.ASN1Decoder<BIT_STRING> = $._decodeBitString;
 
 
 
 
-export const _encode_PKIFailureInfo = $._encodeBitString;
+export const _encode_PKIFailureInfo: $.ASN1Encoder<BIT_STRING> = $._encodeBitString;
 
 
 /* eslint-enable */

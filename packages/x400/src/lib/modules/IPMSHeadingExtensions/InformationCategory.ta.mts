@@ -1,8 +1,8 @@
 /* eslint-disable */
 import {
-    OPTIONAL,
-    OBJECT_IDENTIFIER,
-    ASN1Element as _Element,
+    type OPTIONAL,
+    type OBJECT_IDENTIFIER,
+    type ASN1Element as _Element,
     ASN1TagClass as _TagClass,
     ASN1Construction as _Construction,
     ASN1UniversalType as _UniversalType,
@@ -13,7 +13,7 @@ import {
 } from '@wildboar/asn1';
 import * as $ from '@wildboar/asn1/functional';
 import {
-    DescriptionString,
+    type DescriptionString,
     _decode_DescriptionString,
     _encode_DescriptionString,
 } from '../IPMSHeadingExtensions/DescriptionString.ta.mjs';
@@ -36,20 +36,26 @@ import {
  *
  */
 export class InformationCategory {
+    /**
+     * @summary `reference`.
+     * @public
+     * @readonly
+     */
+    public readonly reference?: OPTIONAL<OBJECT_IDENTIFIER>;
+    /**
+     * @summary `description`.
+     * @public
+     * @readonly
+     */
+    public readonly description?: OPTIONAL<DescriptionString>;
+
     constructor(
-        /**
-         * @summary `reference`.
-         * @public
-         * @readonly
-         */
-        readonly reference?: OPTIONAL<OBJECT_IDENTIFIER>,
-        /**
-         * @summary `description`.
-         * @public
-         * @readonly
-         */
-        readonly description?: OPTIONAL<DescriptionString>
-    ) {}
+        reference?: OPTIONAL<OBJECT_IDENTIFIER>,
+        description?: OPTIONAL<DescriptionString>
+    ) {
+        this.reference = reference;
+        this.description = description;
+    }
 
     /**
      * @summary Restructures an object into a InformationCategory

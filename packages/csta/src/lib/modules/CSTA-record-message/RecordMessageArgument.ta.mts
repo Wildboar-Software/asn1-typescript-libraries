@@ -2,16 +2,16 @@
 
 import * as $ from "@wildboar/asn1/functional";
 import {
-    OPTIONAL,
-    INTEGER,
-    SEQUENCE,
-    SET,
-    ASN1Element as _Element,
+    type OPTIONAL,
+    type INTEGER,
+    type SEQUENCE,
+    type SET,
+    type ASN1Element as _Element,
     ASN1TagClass as _TagClass
 } from "@wildboar/asn1";
-import { ConnectionID, _decode_ConnectionID, _encode_ConnectionID } from "../CSTA-call-connection-identifiers/ConnectionID.ta.mjs";
+import { type ConnectionID, _decode_ConnectionID, _encode_ConnectionID } from "../CSTA-call-connection-identifiers/ConnectionID.ta.mjs";
 
-import { ResourceID, _decode_ResourceID, _encode_ResourceID } from "../CSTA-device-feature-types/ResourceID.ta.mjs";
+import { type ResourceID, _decode_ResourceID, _encode_ResourceID } from "../CSTA-device-feature-types/ResourceID.ta.mjs";
 
 import {
     EncodingAlgorithm,
@@ -20,7 +20,7 @@ import {
     _encode_EncodingAlgorithm
 } from "../CSTA-device-feature-types/EncodingAlgorithm.ta.mjs";
 
-import { TerminatingConditions, _decode_TerminatingConditions, _encode_TerminatingConditions } from "../CSTA-device-feature-types/TerminatingConditions.ta.mjs";
+import { type TerminatingConditions, _decode_TerminatingConditions, _encode_TerminatingConditions } from "../CSTA-device-feature-types/TerminatingConditions.ta.mjs";
 
 import { CSTACommonArguments, _decode_CSTACommonArguments, _encode_CSTACommonArguments } from "../CSTA-extension-types/CSTACommonArguments.ta.mjs";
 
@@ -42,11 +42,11 @@ import { CSTACommonArguments, _decode_CSTACommonArguments, _encode_CSTACommonArg
  * ```asn1
  * RecordMessageArgument ::= SEQUENCE
  * {    callToBeRecorded        ConnectionID,
- *     resource            [2] IMPLICIT ResourceID            OPTIONAL,
- *     samplingRate            [0] IMPLICIT INTEGER            OPTIONAL,
- *     encodingAlgorithm        EncodingAlgorithm            OPTIONAL,
- *     maxDuration            [1] IMPLICIT INTEGER            OPTIONAL,
- *     termination            TerminatingConditions            OPTIONAL,
+ *     resource            [2] IMPLICIT ResourceID            type OPTIONAL,
+ *     samplingRate            [0] IMPLICIT INTEGER            type OPTIONAL,
+ *     encodingAlgorithm        EncodingAlgorithm            type OPTIONAL,
+ *     maxDuration            [1] IMPLICIT INTEGER            type OPTIONAL,
+ *     termination            TerminatingConditions            type OPTIONAL,
  *     extensions            CSTACommonArguments            OPTIONAL }
  * ```
  * 
@@ -54,80 +54,96 @@ import { CSTACommonArguments, _decode_CSTACommonArguments, _encode_CSTACommonArg
  */
 export
 class RecordMessageArgument {
+    /**
+     * @summary `callToBeRecorded`.
+     * @description
+     *
+     * Connection from which to record (ECMA-269 §26.1.9.1).
+     *
+     * @public
+     * @readonly
+     */
+    public readonly callToBeRecorded: ConnectionID;
+    /**
+     * @summary `resource`.
+     * @description
+     *
+     * Interactive voice resource. Required when more than one interactive
+     * voice resource exists on the connection.
+     *
+     * @public
+     * @readonly
+     */
+    public readonly resource?: OPTIONAL<ResourceID>;
+    /**
+     * @summary `samplingRate`.
+     * @description
+     *
+     * Sampling rate (ECMA-269 §26.1.9.1).
+     *
+     * @public
+     * @readonly
+     */
+    public readonly samplingRate?: OPTIONAL<INTEGER>;
+    /**
+     * @summary `encodingAlgorithm`.
+     * @description
+     *
+     * Encoding for the recording (ECMA-269 §26.1.9.1).
+     *
+     * @public
+     * @readonly
+     */
+    public readonly encodingAlgorithm?: OPTIONAL<EncodingAlgorithm>;
+    /**
+     * @summary `maxDuration`.
+     * @description
+     *
+     * Maximum duration (ECMA-269 §26.1.9.1).
+     *
+     * @public
+     * @readonly
+     */
+    public readonly maxDuration?: OPTIONAL<INTEGER>;
+    /**
+     * @summary `termination`.
+     * @description
+     *
+     * Conditions that stop recording (ECMA-269 §26.1.9.1).
+     *
+     * @public
+     * @readonly
+     */
+    public readonly termination?: OPTIONAL<TerminatingConditions>;
+    /**
+     * @summary `extensions`.
+     * @description
+     *
+     * CSTACommonArguments carrying the service-table security and
+     * privateData parameters.
+     *
+     * @public
+     * @readonly
+     */
+    public readonly extensions?: OPTIONAL<CSTACommonArguments>;
+
     constructor (
-        /**
-         * @summary `callToBeRecorded`.
-         * @description
-         *
-         * Connection from which to record (ECMA-269 §26.1.9.1).
-         *
-         * @public
-         * @readonly
-         */
-        readonly callToBeRecorded: ConnectionID,
-        /**
-         * @summary `resource`.
-         * @description
-         *
-         * Interactive voice resource. Required when more than one interactive
-         * voice resource exists on the connection.
-         *
-         * @public
-         * @readonly
-         */
-        readonly resource?: OPTIONAL<ResourceID>,
-        /**
-         * @summary `samplingRate`.
-         * @description
-         *
-         * Sampling rate (ECMA-269 §26.1.9.1).
-         *
-         * @public
-         * @readonly
-         */
-        readonly samplingRate?: OPTIONAL<INTEGER>,
-        /**
-         * @summary `encodingAlgorithm`.
-         * @description
-         *
-         * Encoding for the recording (ECMA-269 §26.1.9.1).
-         *
-         * @public
-         * @readonly
-         */
-        readonly encodingAlgorithm?: OPTIONAL<EncodingAlgorithm>,
-        /**
-         * @summary `maxDuration`.
-         * @description
-         *
-         * Maximum duration (ECMA-269 §26.1.9.1).
-         *
-         * @public
-         * @readonly
-         */
-        readonly maxDuration?: OPTIONAL<INTEGER>,
-        /**
-         * @summary `termination`.
-         * @description
-         *
-         * Conditions that stop recording (ECMA-269 §26.1.9.1).
-         *
-         * @public
-         * @readonly
-         */
-        readonly termination?: OPTIONAL<TerminatingConditions>,
-        /**
-         * @summary `extensions`.
-         * @description
-         *
-         * CSTACommonArguments carrying the service-table security and
-         * privateData parameters.
-         *
-         * @public
-         * @readonly
-         */
-        readonly extensions?: OPTIONAL<CSTACommonArguments>
-    ) {}
+        callToBeRecorded: ConnectionID,
+        resource?: OPTIONAL<ResourceID>,
+        samplingRate?: OPTIONAL<INTEGER>,
+        encodingAlgorithm?: OPTIONAL<EncodingAlgorithm>,
+        maxDuration?: OPTIONAL<INTEGER>,
+        termination?: OPTIONAL<TerminatingConditions>,
+        extensions?: OPTIONAL<CSTACommonArguments>
+    ) {
+        this.callToBeRecorded = callToBeRecorded;
+        this.resource = resource;
+        this.samplingRate = samplingRate;
+        this.encodingAlgorithm = encodingAlgorithm;
+        this.maxDuration = maxDuration;
+        this.termination = termination;
+        this.extensions = extensions;
+    }
 
     /**
      * @summary Restructures an object into a RecordMessageArgument
@@ -151,7 +167,7 @@ class RecordMessageArgument {
          * @static
          */
 
-    public static _enum_for_encodingAlgorithm = _enum_for_EncodingAlgorithm;
+    public static _enum_for_encodingAlgorithm: typeof _enum_for_EncodingAlgorithm = _enum_for_EncodingAlgorithm;
 }
 
 /**

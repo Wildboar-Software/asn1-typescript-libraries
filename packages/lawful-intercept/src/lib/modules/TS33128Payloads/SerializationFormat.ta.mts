@@ -80,7 +80,7 @@ type SerializationFormat = _enum_for_SerializationFormat;
  * @enum {number}
  */
 export
-const SerializationFormat = _enum_for_SerializationFormat;
+const SerializationFormat: typeof _enum_for_SerializationFormat = _enum_for_SerializationFormat;
 
 /**
  * @summary SerializationFormat_xml
@@ -88,7 +88,7 @@ const SerializationFormat = _enum_for_SerializationFormat;
  * @type {number}
  */
 export
-const SerializationFormat_xml: SerializationFormat = SerializationFormat.xml; /* LONG_NAMED_ENUMERATED_VALUE */
+const SerializationFormat_xml: _enum_for_SerializationFormat.xml = SerializationFormat.xml; /* LONG_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary xml
@@ -96,7 +96,7 @@ const SerializationFormat_xml: SerializationFormat = SerializationFormat.xml; /*
  * @type {number}
  */
 export
-const xml: SerializationFormat = SerializationFormat.xml; /* SHORT_NAMED_ENUMERATED_VALUE */
+const xml: _enum_for_SerializationFormat.xml = SerializationFormat.xml; /* SHORT_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary SerializationFormat_json
@@ -104,7 +104,7 @@ const xml: SerializationFormat = SerializationFormat.xml; /* SHORT_NAMED_ENUMERA
  * @type {number}
  */
 export
-const SerializationFormat_json: SerializationFormat = SerializationFormat.json; /* LONG_NAMED_ENUMERATED_VALUE */
+const SerializationFormat_json: _enum_for_SerializationFormat.json = SerializationFormat.json; /* LONG_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary json
@@ -112,7 +112,7 @@ const SerializationFormat_json: SerializationFormat = SerializationFormat.json; 
  * @type {number}
  */
 export
-const json: SerializationFormat = SerializationFormat.json; /* SHORT_NAMED_ENUMERATED_VALUE */
+const json: _enum_for_SerializationFormat.json = SerializationFormat.json; /* SHORT_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary SerializationFormat_cbor
@@ -120,7 +120,7 @@ const json: SerializationFormat = SerializationFormat.json; /* SHORT_NAMED_ENUME
  * @type {number}
  */
 export
-const SerializationFormat_cbor: SerializationFormat = SerializationFormat.cbor; /* LONG_NAMED_ENUMERATED_VALUE */
+const SerializationFormat_cbor: _enum_for_SerializationFormat.cbor = SerializationFormat.cbor; /* LONG_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary cbor
@@ -128,7 +128,7 @@ const SerializationFormat_cbor: SerializationFormat = SerializationFormat.cbor; 
  * @type {number}
  */
 export
-const cbor: SerializationFormat = SerializationFormat.cbor; /* SHORT_NAMED_ENUMERATED_VALUE */
+const cbor: _enum_for_SerializationFormat.cbor = SerializationFormat.cbor; /* SHORT_NAMED_ENUMERATED_VALUE */
 export const _decode_SerializationFormat: $.ASN1Decoder<SerializationFormat> = $._decodeEnumerated;
 export const _encode_SerializationFormat: $.ASN1Encoder<SerializationFormat> = $._encodeEnumerated;
 

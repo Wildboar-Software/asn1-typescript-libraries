@@ -2,13 +2,13 @@
 
 import * as $ from "@wildboar/asn1/functional";
 import {
-    OPTIONAL,
-    BOOLEAN,
-    INTEGER,
-    SEQUENCE,
-    SET,
-    IA5String,
-    ASN1Element as _Element,
+    type OPTIONAL,
+    type BOOLEAN,
+    type INTEGER,
+    type SEQUENCE,
+    type SET,
+    type IA5String,
+    type ASN1Element as _Element,
     ASN1TagClass as _TagClass
 } from "@wildboar/asn1";
 import {
@@ -19,7 +19,7 @@ import {
     _encode_DeviceCategory
 } from "../CSTA-capability-exchange/DeviceCategory.ta.mjs";
 
-import { GroupDeviceAttributes, _decode_GroupDeviceAttributes, _encode_GroupDeviceAttributes } from "../CSTA-capability-exchange/GroupDeviceAttributes.ta.mjs";
+import { type GroupDeviceAttributes, _decode_GroupDeviceAttributes, _encode_GroupDeviceAttributes } from "../CSTA-capability-exchange/GroupDeviceAttributes.ta.mjs";
 
 import {
     NamedDeviceTypes,
@@ -30,9 +30,9 @@ import {
 
 import { DeviceID, _decode_DeviceID, _encode_DeviceID } from "../CSTA-device-identifiers/DeviceID.ta.mjs";
 
-import { ACDModels, _decode_ACDModels, _encode_ACDModels } from "../CSTA-capability-exchange/ACDModels.ta.mjs";
+import { type ACDModels, _decode_ACDModels, _encode_ACDModels } from "../CSTA-capability-exchange/ACDModels.ta.mjs";
 
-import { AgentLogOnModels, _decode_AgentLogOnModels, _encode_AgentLogOnModels } from "../CSTA-capability-exchange/AgentLogOnModels.ta.mjs";
+import { type AgentLogOnModels, _decode_AgentLogOnModels, _encode_AgentLogOnModels } from "../CSTA-capability-exchange/AgentLogOnModels.ta.mjs";
 
 import {
     AppearanceType,
@@ -41,28 +41,28 @@ import {
     _encode_AppearanceType
 } from "../CSTA-capability-exchange/AppearanceType.ta.mjs";
 
-import { MiscMonitorCaps, _decode_MiscMonitorCaps, _encode_MiscMonitorCaps } from "../CSTA-capability-exchange/MiscMonitorCaps.ta.mjs";
+import { type MiscMonitorCaps, _decode_MiscMonitorCaps, _encode_MiscMonitorCaps } from "../CSTA-capability-exchange/MiscMonitorCaps.ta.mjs";
 
-import { TransAndConfSetup, _decode_TransAndConfSetup, _encode_TransAndConfSetup } from "../CSTA-capability-exchange/TransAndConfSetup.ta.mjs";
+import { type TransAndConfSetup, _decode_TransAndConfSetup, _encode_TransAndConfSetup } from "../CSTA-capability-exchange/TransAndConfSetup.ta.mjs";
 
 import { MonitorFilter, _decode_MonitorFilter, _encode_MonitorFilter } from "../CSTA-status-reporting/MonitorFilter.ta.mjs";
 
 import {
-    MonitorMediaClass,
+    type MonitorMediaClass,
     data /* IMPORTED_SHORT_NAMED_BIT */,
     _decode_MonitorMediaClass,
     _encode_MonitorMediaClass
 } from "../CSTA-status-reporting/MonitorMediaClass.ta.mjs";
 
-import { MediaServiceCapsList, _decode_MediaServiceCapsList, _encode_MediaServiceCapsList } from "../CSTA-capability-exchange/MediaServiceCapsList.ta.mjs";
+import { type MediaServiceCapsList, _decode_MediaServiceCapsList, _encode_MediaServiceCapsList } from "../CSTA-capability-exchange/MediaServiceCapsList.ta.mjs";
 
-import { ConnectionRateList, _decode_ConnectionRateList, _encode_ConnectionRateList } from "../CSTA-data-call-types/ConnectionRateList.ta.mjs";
+import { type ConnectionRateList, _decode_ConnectionRateList, _encode_ConnectionRateList } from "../CSTA-data-call-types/ConnectionRateList.ta.mjs";
 
-import { DelayToleranceList, _decode_DelayToleranceList, _encode_DelayToleranceList } from "../CSTA-data-call-types/DelayToleranceList.ta.mjs";
+import { type DelayToleranceList, _decode_DelayToleranceList, _encode_DelayToleranceList } from "../CSTA-data-call-types/DelayToleranceList.ta.mjs";
 
-import { NumberOfChannels, _decode_NumberOfChannels, _encode_NumberOfChannels } from "../CSTA-data-call-types/NumberOfChannels.ta.mjs";
+import { type NumberOfChannels, _decode_NumberOfChannels, _encode_NumberOfChannels } from "../CSTA-data-call-types/NumberOfChannels.ta.mjs";
 
-import { MaxChannelBind, _decode_MaxChannelBind, _encode_MaxChannelBind } from "../CSTA-data-call-types/MaxChannelBind.ta.mjs";
+import { type MaxChannelBind, _decode_MaxChannelBind, _encode_MaxChannelBind } from "../CSTA-data-call-types/MaxChannelBind.ta.mjs";
 
 import { RouteingServList, _decode_RouteingServList, _encode_RouteingServList } from "../CSTA-capability-exchange/RouteingServList.ta.mjs";
 
@@ -92,39 +92,39 @@ import { CSTACommonArguments, _decode_CSTACommonArguments, _encode_CSTACommonArg
  * ```asn1
  * GetLogicalDeviceInformationResult ::= SEQUENCE
  * {     deviceCategory                 [ 0] IMPLICIT     DeviceCategory         DEFAULT station,
- *     groupDeviceAttributes             [ 1] IMPLICIT     GroupDeviceAttributes     OPTIONAL,
- *     namedDeviceTypes             [ 2] IMPLICIT     NamedDeviceTypes     OPTIONAL,
- *     shortFormDeviceID             [ 3] DeviceID                 OPTIONAL,
+ *     groupDeviceAttributes             [ 1] IMPLICIT     GroupDeviceAttributes     type OPTIONAL,
+ *     namedDeviceTypes             [ 2] IMPLICIT     NamedDeviceTypes     type OPTIONAL,
+ *     shortFormDeviceID             [ 3] DeviceID                 type OPTIONAL,
  *     hasPhysicalElement             BOOLEAN,
  *     acdModels                 ACDModels,
- *     agentLogOnModels             [ 4] IMPLICIT     AgentLogOnModels     OPTIONAL,
+ *     agentLogOnModels             [ 4] IMPLICIT     AgentLogOnModels     type OPTIONAL,
  *     appearanceAddressable             BOOLEAN,
  *     appearanceType                 AppearanceType,
- *     appearanceList                 [ 5] IMPLICIT     SEQUENCE OF IA5String     OPTIONAL,
- *     otherPhysicalDeviceList         [ 6] IMPLICIT     SEQUENCE OF DeviceID     OPTIONAL,
- *     miscMonitorCaps             [ 7] IMPLICIT     MiscMonitorCaps     OPTIONAL,
- *     associatedGroupList             [ 8] IMPLICIT     SEQUENCE OF DeviceID     OPTIONAL,
- *     maxCallbacks                 [ 9] IMPLICIT     INTEGER         OPTIONAL,
- *     maxAutoAnswerRings             [10] IMPLICIT     INTEGER         OPTIONAL,
- *     maxActiveCalls                 [11] IMPLICIT     INTEGER         OPTIONAL,
- *     maxHeldCalls                 [12] IMPLICIT     INTEGER         OPTIONAL,
- *     maxFwdSettings                 [13] IMPLICIT     INTEGER         OPTIONAL,
- *     maxDevicesInConf             [14] IMPLICIT     INTEGER         OPTIONAL,
- *     transAndConfSetup             [15] IMPLICIT     TransAndConfSetup     OPTIONAL,
- *     deviceOnDeviceMonitorFilter         [16] IMPLICIT     MonitorFilter         OPTIONAL,
- *     deviceOnConnectionMonitorFilter        [17] IMPLICIT     MonitorFilter         OPTIONAL,
- *     callOnDeviceMonitorFilter         [18] IMPLICIT     MonitorFilter         OPTIONAL,
- *     callOnConnectionMonitorFilter         [19] IMPLICIT     MonitorFilter         OPTIONAL,
- *     mediaClassSupport             [20] IMPLICIT     MonitorMediaClass     OPTIONAL,
- *     mediaServiceCapsList             [21] IMPLICIT     MediaServiceCapsList     OPTIONAL,
- *     connectionRateList             [22] IMPLICIT     ConnectionRateList     OPTIONAL,
- *     delayToleranceList             [23] IMPLICIT     DelayToleranceList     OPTIONAL,
- *     numberOfChannels             [24] IMPLICIT     NumberOfChannels     OPTIONAL,
- *     maxChannelBind                 [25] IMPLICIT     MaxChannelBind         OPTIONAL,
- *     routeingServList             [26] IMPLICIT     RouteingServList     OPTIONAL,
- *     logDevServList                 [27] IMPLICIT     LogDevServList         OPTIONAL,
- *     logDevEvtsList                 [28] IMPLICIT     LogDevEvtsList         OPTIONAL,
- *     deviceMaintEvtsList             [29] IMPLICIT     DeviceMaintEvtsList     OPTIONAL,
+ *     appearanceList                 [ 5] IMPLICIT     SEQUENCE OF IA5String     type OPTIONAL,
+ *     otherPhysicalDeviceList         [ 6] IMPLICIT     SEQUENCE OF DeviceID     type OPTIONAL,
+ *     miscMonitorCaps             [ 7] IMPLICIT     MiscMonitorCaps     type OPTIONAL,
+ *     associatedGroupList             [ 8] IMPLICIT     SEQUENCE OF DeviceID     type OPTIONAL,
+ *     maxCallbacks                 [ 9] IMPLICIT     INTEGER         type OPTIONAL,
+ *     maxAutoAnswerRings             [10] IMPLICIT     INTEGER         type OPTIONAL,
+ *     maxActiveCalls                 [11] IMPLICIT     INTEGER         type OPTIONAL,
+ *     maxHeldCalls                 [12] IMPLICIT     INTEGER         type OPTIONAL,
+ *     maxFwdSettings                 [13] IMPLICIT     INTEGER         type OPTIONAL,
+ *     maxDevicesInConf             [14] IMPLICIT     INTEGER         type OPTIONAL,
+ *     transAndConfSetup             [15] IMPLICIT     TransAndConfSetup     type OPTIONAL,
+ *     deviceOnDeviceMonitorFilter         [16] IMPLICIT     MonitorFilter         type OPTIONAL,
+ *     deviceOnConnectionMonitorFilter        [17] IMPLICIT     MonitorFilter         type OPTIONAL,
+ *     callOnDeviceMonitorFilter         [18] IMPLICIT     MonitorFilter         type OPTIONAL,
+ *     callOnConnectionMonitorFilter         [19] IMPLICIT     MonitorFilter         type OPTIONAL,
+ *     mediaClassSupport             [20] IMPLICIT     MonitorMediaClass     type OPTIONAL,
+ *     mediaServiceCapsList             [21] IMPLICIT     MediaServiceCapsList     type OPTIONAL,
+ *     connectionRateList             [22] IMPLICIT     ConnectionRateList     type OPTIONAL,
+ *     delayToleranceList             [23] IMPLICIT     DelayToleranceList     type OPTIONAL,
+ *     numberOfChannels             [24] IMPLICIT     NumberOfChannels     type OPTIONAL,
+ *     maxChannelBind                 [25] IMPLICIT     MaxChannelBind         type OPTIONAL,
+ *     routeingServList             [26] IMPLICIT     RouteingServList     type OPTIONAL,
+ *     logDevServList                 [27] IMPLICIT     LogDevServList         type OPTIONAL,
+ *     logDevEvtsList                 [28] IMPLICIT     LogDevEvtsList         type OPTIONAL,
+ *     deviceMaintEvtsList             [29] IMPLICIT     DeviceMaintEvtsList     type OPTIONAL,
  *     extensions                 CSTACommonArguments             OPTIONAL }
  * ```
  * 
@@ -132,349 +132,421 @@ import { CSTACommonArguments, _decode_CSTACommonArguments, _encode_CSTACommonArg
  */
 export
 class GetLogicalDeviceInformationResult {
+    /**
+     * @summary `deviceCategory`.
+     * @description
+     *
+     * Category of the queried device (station default, ACD, group,
+     * network interface, park, routeing, voice unit, IV variants,
+     * conference, other).
+     * @public
+     * @readonly
+     */
+    public readonly deviceCategory: OPTIONAL<DeviceCategory>;
+    /**
+     * @summary `groupDeviceAttributes`.
+     * @description
+     *
+     * Group attributes (ACD, hunt, pick, user, agent, other). Shall
+     * be present iff `deviceCategory` is Group.
+     * @public
+     * @readonly
+     */
+    public readonly groupDeviceAttributes: OPTIONAL<GroupDeviceAttributes>;
+    /**
+     * @summary `namedDeviceTypes`.
+     * @description
+     *
+     * Named device type assigned by the SF, if any.
+     * @public
+     * @readonly
+     */
+    public readonly namedDeviceTypes: OPTIONAL<NamedDeviceTypes>;
+    /**
+     * @summary `shortFormDeviceID`.
+     * @description
+     *
+     * Shorter DeviceID the SF may use for this device.
+     * @public
+     * @readonly
+     */
+    public readonly shortFormDeviceID: OPTIONAL<DeviceID>;
+    /**
+     * @summary `hasPhysicalElement`.
+     * @description
+     *
+     * TRUE if this DeviceID also has a physical element; use Get
+     * Physical Device Information with the same identifier.
+     * @public
+     * @readonly
+     */
+    public readonly hasPhysicalElement: BOOLEAN;
+    /**
+     * @summary `acdModels`.
+     * @description
+     *
+     * ACD models at this device (visible / non-visible ACD-related
+     * devices). Meaningful when the device is an ACD device.
+     * @public
+     * @readonly
+     */
+    public readonly acdModels: ACDModels;
+    /**
+     * @summary `agentLogOnModels`.
+     * @description
+     *
+     * Agent log-on models at this device. Provided if configured at
+     * the logical element. Implicit one-step group log-on cannot
+     * coexist with log-on to an ACD device.
+     * @public
+     * @readonly
+     */
+    public readonly agentLogOnModels: OPTIONAL<AgentLogOnModels>;
+    /**
+     * @summary `appearanceAddressable`.
+     * @description
+     *
+     * TRUE if appearances are addressable via CA or EXT in the SF
+     * representation DeviceID format.
+     * @public
+     * @readonly
+     */
+    public readonly appearanceAddressable: BOOLEAN;
+    /**
+     * @summary `appearanceType`.
+     * @description
+     *
+     * Appearance model: selected/basic-standard, basic/exclusive-
+     * bridged, independent/interdependent shared-bridged.
+     * @public
+     * @readonly
+     */
+    public readonly appearanceType: AppearanceType;
+    /**
+     * @summary `appearanceList`.
+     * @description
+     *
+     * Appearance suffix strings. Mandatory if appearances are
+     * addressable and Selected-Standard or Basic-Standard.
+     * @public
+     * @readonly
+     */
+    public readonly appearanceList?: OPTIONAL<IA5String[]>;
+    /**
+     * @summary `otherPhysicalDeviceList`.
+     * @description
+     *
+     * Other physical-element DeviceIDs associated with this logical
+     * appearance. Mandatory if addressable bridged appearances.
+     * Hybrid configs: order matches `appearanceList`.
+     * @public
+     * @readonly
+     */
+    public readonly otherPhysicalDeviceList?: OPTIONAL<DeviceID[]>;
+    /**
+     * @summary `miscMonitorCaps`.
+     * @description
+     *
+     * Special monitoring (group inclusive/exclusive, ACD inclusive/
+     * exclusive, bridged-appearance scope, etc.).
+     * @public
+     * @readonly
+     */
+    public readonly miscMonitorCaps?: OPTIONAL<MiscMonitorCaps>;
+    /**
+     * @summary `associatedGroupList`.
+     * @description
+     *
+     * Group DeviceIDs associated with this device.
+     * @public
+     * @readonly
+     */
+    public readonly associatedGroupList?: OPTIONAL<DeviceID[]>;
+    /**
+     * @summary `maxCallbacks`.
+     * @description
+     *
+     * Max concurrent callback registrations; omitted if unknown.
+     * @public
+     * @readonly
+     */
+    public readonly maxCallbacks?: OPTIONAL<INTEGER>;
+    /**
+     * @summary `maxAutoAnswerRings`.
+     * @description
+     *
+     * Max auto-answer rings; omitted if unknown.
+     * @public
+     * @readonly
+     */
+    public readonly maxAutoAnswerRings?: OPTIONAL<INTEGER>;
+    /**
+     * @summary `maxActiveCalls`.
+     * @description
+     *
+     * Max concurrent active calls; omitted if unknown.
+     * @public
+     * @readonly
+     */
+    public readonly maxActiveCalls?: OPTIONAL<INTEGER>;
+    /**
+     * @summary `maxHeldCalls`.
+     * @description
+     *
+     * Max concurrent held calls; omitted if unknown.
+     * @public
+     * @readonly
+     */
+    public readonly maxHeldCalls?: OPTIONAL<INTEGER>;
+    /**
+     * @summary `maxFwdSettings`.
+     * @description
+     *
+     * Max simultaneous user forwarding-type/destination settings;
+     * omitted if unknown.
+     * @public
+     * @readonly
+     */
+    public readonly maxFwdSettings?: OPTIONAL<INTEGER>;
+    /**
+     * @summary `maxDevicesInConf`.
+     * @description
+     *
+     * Max devices this device can conference into a call (minimum
+     * supplied value is 3); omitted if unknown.
+     * @public
+     * @readonly
+     */
+    public readonly maxDevicesInConf?: OPTIONAL<INTEGER>;
+    /**
+     * @summary `transAndConfSetup`.
+     * @description
+     *
+     * How this device sets up transfer/conference. Absent means
+     * Consultation Call only.
+     * @public
+     * @readonly
+     */
+    public readonly transAndConfSetup?: OPTIONAL<TransAndConfSetup>;
+    /**
+     * @summary `deviceOnDeviceMonitorFilter`.
+     * @description
+     *
+     * Full monitorFilter this device supports for device-type
+     * monitoring. Present iff that form is supported.
+     * @public
+     * @readonly
+     */
+    public readonly deviceOnDeviceMonitorFilter?: OPTIONAL<MonitorFilter>;
+    /**
+     * @summary `deviceOnConnectionMonitorFilter`.
+     * @description
+     *
+     * MonitorFilter for connections at this device under device-type
+     * monitoring. Present iff supported.
+     * @public
+     * @readonly
+     */
+    public readonly deviceOnConnectionMonitorFilter?: OPTIONAL<MonitorFilter>;
+    /**
+     * @summary `callOnDeviceMonitorFilter`.
+     * @description
+     *
+     * MonitorFilter for call-type monitoring on the device. Present
+     * iff supported.
+     * @public
+     * @readonly
+     */
+    public readonly callOnDeviceMonitorFilter?: OPTIONAL<MonitorFilter>;
+    /**
+     * @summary `callOnConnectionMonitorFilter`.
+     * @description
+     *
+     * MonitorFilter for call-type monitoring of a connection at this
+     * device. Present iff supported.
+     * @public
+     * @readonly
+     */
+    public readonly callOnConnectionMonitorFilter?: OPTIONAL<MonitorFilter>;
+    /**
+     * @summary `mediaClassSupport`.
+     * @description
+     *
+     * Media classes this device can host (audio, data, image, voice,
+     * chat, email, message, IM, SMS, MMS, other).
+     * @public
+     * @readonly
+     */
+    public readonly mediaClassSupport?: OPTIONAL<MonitorMediaClass>;
+    /**
+     * @summary `mediaServiceCapsList`.
+     * @description
+     *
+     * Media service type/version/instance and connection modes.
+     * Present iff the device supports media access.
+     * @public
+     * @readonly
+     */
+    public readonly mediaServiceCapsList?: OPTIONAL<MediaServiceCapsList>;
+    /**
+     * @summary `connectionRateList`.
+     * @description
+     *
+     * Supported connection rates; omitted if unknown.
+     * @public
+     * @readonly
+     */
+    public readonly connectionRateList?: OPTIONAL<ConnectionRateList>;
+    /**
+     * @summary `delayToleranceList`.
+     * @description
+     *
+     * Supported delay tolerances; omitted if unknown.
+     * @public
+     * @readonly
+     */
+    public readonly delayToleranceList?: OPTIONAL<DelayToleranceList>;
+    /**
+     * @summary `numberOfChannels`.
+     * @description
+     *
+     * Available channels; omitted means unknown but at least one.
+     * @public
+     * @readonly
+     */
+    public readonly numberOfChannels?: OPTIONAL<NumberOfChannels>;
+    /**
+     * @summary `maxChannelBind`.
+     * @description
+     *
+     * Max channels per connection; omitted means one.
+     * @public
+     * @readonly
+     */
+    public readonly maxChannelBind?: OPTIONAL<MaxChannelBind>;
+    /**
+     * @summary `routeingServList`.
+     * @description
+     *
+     * Routeing services this device supports (both directions when
+     * bi-directional). Route Mode is a logical-device feature.
+     * @public
+     * @readonly
+     */
+    public readonly routeingServList?: OPTIONAL<RouteingServList>;
+    /**
+     * @summary `logDevServList`.
+     * @description
+     *
+     * Logical-device service bitmaps (call control, call associated,
+     * logical features, media, I/O, data collection, voice, location).
+     * @public
+     * @readonly
+     */
+    public readonly logDevServList?: OPTIONAL<LogDevServList>;
+    /**
+     * @summary `logDevEvtsList`.
+     * @description
+     *
+     * Logical-device event bitmaps (call control, call associated,
+     * logical, media, voice).
+     * @public
+     * @readonly
+     */
+    public readonly logDevEvtsList?: OPTIONAL<LogDevEvtsList>;
+    /**
+     * @summary `deviceMaintEvtsList`.
+     * @description
+     *
+     * Device-maintenance events this device supports.
+     * @public
+     * @readonly
+     */
+    public readonly deviceMaintEvtsList?: OPTIONAL<DeviceMaintEvtsList>;
+    /**
+     * @summary `extensions`.
+     * @description
+     *
+     * Optional security (timestamp, sequence, securityInfo) and
+     * privateData. ECMA-269 Table 13-5.
+     * @public
+     * @readonly
+     */
+    public readonly extensions?: OPTIONAL<CSTACommonArguments>;
+
     constructor (
-        /**
-         * @summary `deviceCategory`.
-         * @description
-         *
-         * Category of the queried device (station default, ACD, group,
-         * network interface, park, routeing, voice unit, IV variants,
-         * conference, other).
-         * @public
-         * @readonly
-         */
-        readonly deviceCategory: OPTIONAL<DeviceCategory>,
-        /**
-         * @summary `groupDeviceAttributes`.
-         * @description
-         *
-         * Group attributes (ACD, hunt, pick, user, agent, other). Shall
-         * be present iff `deviceCategory` is Group.
-         * @public
-         * @readonly
-         */
-        readonly groupDeviceAttributes: OPTIONAL<GroupDeviceAttributes>,
-        /**
-         * @summary `namedDeviceTypes`.
-         * @description
-         *
-         * Named device type assigned by the SF, if any.
-         * @public
-         * @readonly
-         */
-        readonly namedDeviceTypes: OPTIONAL<NamedDeviceTypes>,
-        /**
-         * @summary `shortFormDeviceID`.
-         * @description
-         *
-         * Shorter DeviceID the SF may use for this device.
-         * @public
-         * @readonly
-         */
-        readonly shortFormDeviceID: OPTIONAL<DeviceID>,
-        /**
-         * @summary `hasPhysicalElement`.
-         * @description
-         *
-         * TRUE if this DeviceID also has a physical element; use Get
-         * Physical Device Information with the same identifier.
-         * @public
-         * @readonly
-         */
-        readonly hasPhysicalElement: BOOLEAN,
-        /**
-         * @summary `acdModels`.
-         * @description
-         *
-         * ACD models at this device (visible / non-visible ACD-related
-         * devices). Meaningful when the device is an ACD device.
-         * @public
-         * @readonly
-         */
-        readonly acdModels: ACDModels,
-        /**
-         * @summary `agentLogOnModels`.
-         * @description
-         *
-         * Agent log-on models at this device. Provided if configured at
-         * the logical element. Implicit one-step group log-on cannot
-         * coexist with log-on to an ACD device.
-         * @public
-         * @readonly
-         */
-        readonly agentLogOnModels: OPTIONAL<AgentLogOnModels>,
-        /**
-         * @summary `appearanceAddressable`.
-         * @description
-         *
-         * TRUE if appearances are addressable via CA or EXT in the SF
-         * representation DeviceID format.
-         * @public
-         * @readonly
-         */
-        readonly appearanceAddressable: BOOLEAN,
-        /**
-         * @summary `appearanceType`.
-         * @description
-         *
-         * Appearance model: selected/basic-standard, basic/exclusive-
-         * bridged, independent/interdependent shared-bridged.
-         * @public
-         * @readonly
-         */
-        readonly appearanceType: AppearanceType,
-        /**
-         * @summary `appearanceList`.
-         * @description
-         *
-         * Appearance suffix strings. Mandatory if appearances are
-         * addressable and Selected-Standard or Basic-Standard.
-         * @public
-         * @readonly
-         */
-        readonly appearanceList?: OPTIONAL<IA5String[]>,
-        /**
-         * @summary `otherPhysicalDeviceList`.
-         * @description
-         *
-         * Other physical-element DeviceIDs associated with this logical
-         * appearance. Mandatory if addressable bridged appearances.
-         * Hybrid configs: order matches `appearanceList`.
-         * @public
-         * @readonly
-         */
-        readonly otherPhysicalDeviceList?: OPTIONAL<DeviceID[]>,
-        /**
-         * @summary `miscMonitorCaps`.
-         * @description
-         *
-         * Special monitoring (group inclusive/exclusive, ACD inclusive/
-         * exclusive, bridged-appearance scope, etc.).
-         * @public
-         * @readonly
-         */
-        readonly miscMonitorCaps?: OPTIONAL<MiscMonitorCaps>,
-        /**
-         * @summary `associatedGroupList`.
-         * @description
-         *
-         * Group DeviceIDs associated with this device.
-         * @public
-         * @readonly
-         */
-        readonly associatedGroupList?: OPTIONAL<DeviceID[]>,
-        /**
-         * @summary `maxCallbacks`.
-         * @description
-         *
-         * Max concurrent callback registrations; omitted if unknown.
-         * @public
-         * @readonly
-         */
-        readonly maxCallbacks?: OPTIONAL<INTEGER>,
-        /**
-         * @summary `maxAutoAnswerRings`.
-         * @description
-         *
-         * Max auto-answer rings; omitted if unknown.
-         * @public
-         * @readonly
-         */
-        readonly maxAutoAnswerRings?: OPTIONAL<INTEGER>,
-        /**
-         * @summary `maxActiveCalls`.
-         * @description
-         *
-         * Max concurrent active calls; omitted if unknown.
-         * @public
-         * @readonly
-         */
-        readonly maxActiveCalls?: OPTIONAL<INTEGER>,
-        /**
-         * @summary `maxHeldCalls`.
-         * @description
-         *
-         * Max concurrent held calls; omitted if unknown.
-         * @public
-         * @readonly
-         */
-        readonly maxHeldCalls?: OPTIONAL<INTEGER>,
-        /**
-         * @summary `maxFwdSettings`.
-         * @description
-         *
-         * Max simultaneous user forwarding-type/destination settings;
-         * omitted if unknown.
-         * @public
-         * @readonly
-         */
-        readonly maxFwdSettings?: OPTIONAL<INTEGER>,
-        /**
-         * @summary `maxDevicesInConf`.
-         * @description
-         *
-         * Max devices this device can conference into a call (minimum
-         * supplied value is 3); omitted if unknown.
-         * @public
-         * @readonly
-         */
-        readonly maxDevicesInConf?: OPTIONAL<INTEGER>,
-        /**
-         * @summary `transAndConfSetup`.
-         * @description
-         *
-         * How this device sets up transfer/conference. Absent means
-         * Consultation Call only.
-         * @public
-         * @readonly
-         */
-        readonly transAndConfSetup?: OPTIONAL<TransAndConfSetup>,
-        /**
-         * @summary `deviceOnDeviceMonitorFilter`.
-         * @description
-         *
-         * Full monitorFilter this device supports for device-type
-         * monitoring. Present iff that form is supported.
-         * @public
-         * @readonly
-         */
-        readonly deviceOnDeviceMonitorFilter?: OPTIONAL<MonitorFilter>,
-        /**
-         * @summary `deviceOnConnectionMonitorFilter`.
-         * @description
-         *
-         * MonitorFilter for connections at this device under device-type
-         * monitoring. Present iff supported.
-         * @public
-         * @readonly
-         */
-        readonly deviceOnConnectionMonitorFilter?: OPTIONAL<MonitorFilter>,
-        /**
-         * @summary `callOnDeviceMonitorFilter`.
-         * @description
-         *
-         * MonitorFilter for call-type monitoring on the device. Present
-         * iff supported.
-         * @public
-         * @readonly
-         */
-        readonly callOnDeviceMonitorFilter?: OPTIONAL<MonitorFilter>,
-        /**
-         * @summary `callOnConnectionMonitorFilter`.
-         * @description
-         *
-         * MonitorFilter for call-type monitoring of a connection at this
-         * device. Present iff supported.
-         * @public
-         * @readonly
-         */
-        readonly callOnConnectionMonitorFilter?: OPTIONAL<MonitorFilter>,
-        /**
-         * @summary `mediaClassSupport`.
-         * @description
-         *
-         * Media classes this device can host (audio, data, image, voice,
-         * chat, email, message, IM, SMS, MMS, other).
-         * @public
-         * @readonly
-         */
-        readonly mediaClassSupport?: OPTIONAL<MonitorMediaClass>,
-        /**
-         * @summary `mediaServiceCapsList`.
-         * @description
-         *
-         * Media service type/version/instance and connection modes.
-         * Present iff the device supports media access.
-         * @public
-         * @readonly
-         */
-        readonly mediaServiceCapsList?: OPTIONAL<MediaServiceCapsList>,
-        /**
-         * @summary `connectionRateList`.
-         * @description
-         *
-         * Supported connection rates; omitted if unknown.
-         * @public
-         * @readonly
-         */
-        readonly connectionRateList?: OPTIONAL<ConnectionRateList>,
-        /**
-         * @summary `delayToleranceList`.
-         * @description
-         *
-         * Supported delay tolerances; omitted if unknown.
-         * @public
-         * @readonly
-         */
-        readonly delayToleranceList?: OPTIONAL<DelayToleranceList>,
-        /**
-         * @summary `numberOfChannels`.
-         * @description
-         *
-         * Available channels; omitted means unknown but at least one.
-         * @public
-         * @readonly
-         */
-        readonly numberOfChannels?: OPTIONAL<NumberOfChannels>,
-        /**
-         * @summary `maxChannelBind`.
-         * @description
-         *
-         * Max channels per connection; omitted means one.
-         * @public
-         * @readonly
-         */
-        readonly maxChannelBind?: OPTIONAL<MaxChannelBind>,
-        /**
-         * @summary `routeingServList`.
-         * @description
-         *
-         * Routeing services this device supports (both directions when
-         * bi-directional). Route Mode is a logical-device feature.
-         * @public
-         * @readonly
-         */
-        readonly routeingServList?: OPTIONAL<RouteingServList>,
-        /**
-         * @summary `logDevServList`.
-         * @description
-         *
-         * Logical-device service bitmaps (call control, call associated,
-         * logical features, media, I/O, data collection, voice, location).
-         * @public
-         * @readonly
-         */
-        readonly logDevServList?: OPTIONAL<LogDevServList>,
-        /**
-         * @summary `logDevEvtsList`.
-         * @description
-         *
-         * Logical-device event bitmaps (call control, call associated,
-         * logical, media, voice).
-         * @public
-         * @readonly
-         */
-        readonly logDevEvtsList?: OPTIONAL<LogDevEvtsList>,
-        /**
-         * @summary `deviceMaintEvtsList`.
-         * @description
-         *
-         * Device-maintenance events this device supports.
-         * @public
-         * @readonly
-         */
-        readonly deviceMaintEvtsList?: OPTIONAL<DeviceMaintEvtsList>,
-        /**
-         * @summary `extensions`.
-         * @description
-         *
-         * Optional security (timestamp, sequence, securityInfo) and
-         * privateData. ECMA-269 Table 13-5.
-         * @public
-         * @readonly
-         */
-        readonly extensions?: OPTIONAL<CSTACommonArguments>
-    ) {}
+        deviceCategory: OPTIONAL<DeviceCategory>,
+        groupDeviceAttributes: OPTIONAL<GroupDeviceAttributes>,
+        namedDeviceTypes: OPTIONAL<NamedDeviceTypes>,
+        shortFormDeviceID: OPTIONAL<DeviceID>,
+        hasPhysicalElement: BOOLEAN,
+        acdModels: ACDModels,
+        agentLogOnModels: OPTIONAL<AgentLogOnModels>,
+        appearanceAddressable: BOOLEAN,
+        appearanceType: AppearanceType,
+        appearanceList?: OPTIONAL<IA5String[]>,
+        otherPhysicalDeviceList?: OPTIONAL<DeviceID[]>,
+        miscMonitorCaps?: OPTIONAL<MiscMonitorCaps>,
+        associatedGroupList?: OPTIONAL<DeviceID[]>,
+        maxCallbacks?: OPTIONAL<INTEGER>,
+        maxAutoAnswerRings?: OPTIONAL<INTEGER>,
+        maxActiveCalls?: OPTIONAL<INTEGER>,
+        maxHeldCalls?: OPTIONAL<INTEGER>,
+        maxFwdSettings?: OPTIONAL<INTEGER>,
+        maxDevicesInConf?: OPTIONAL<INTEGER>,
+        transAndConfSetup?: OPTIONAL<TransAndConfSetup>,
+        deviceOnDeviceMonitorFilter?: OPTIONAL<MonitorFilter>,
+        deviceOnConnectionMonitorFilter?: OPTIONAL<MonitorFilter>,
+        callOnDeviceMonitorFilter?: OPTIONAL<MonitorFilter>,
+        callOnConnectionMonitorFilter?: OPTIONAL<MonitorFilter>,
+        mediaClassSupport?: OPTIONAL<MonitorMediaClass>,
+        mediaServiceCapsList?: OPTIONAL<MediaServiceCapsList>,
+        connectionRateList?: OPTIONAL<ConnectionRateList>,
+        delayToleranceList?: OPTIONAL<DelayToleranceList>,
+        numberOfChannels?: OPTIONAL<NumberOfChannels>,
+        maxChannelBind?: OPTIONAL<MaxChannelBind>,
+        routeingServList?: OPTIONAL<RouteingServList>,
+        logDevServList?: OPTIONAL<LogDevServList>,
+        logDevEvtsList?: OPTIONAL<LogDevEvtsList>,
+        deviceMaintEvtsList?: OPTIONAL<DeviceMaintEvtsList>,
+        extensions?: OPTIONAL<CSTACommonArguments>
+    ) {
+        this.deviceCategory = deviceCategory;
+        this.groupDeviceAttributes = groupDeviceAttributes;
+        this.namedDeviceTypes = namedDeviceTypes;
+        this.shortFormDeviceID = shortFormDeviceID;
+        this.hasPhysicalElement = hasPhysicalElement;
+        this.acdModels = acdModels;
+        this.agentLogOnModels = agentLogOnModels;
+        this.appearanceAddressable = appearanceAddressable;
+        this.appearanceType = appearanceType;
+        this.appearanceList = appearanceList;
+        this.otherPhysicalDeviceList = otherPhysicalDeviceList;
+        this.miscMonitorCaps = miscMonitorCaps;
+        this.associatedGroupList = associatedGroupList;
+        this.maxCallbacks = maxCallbacks;
+        this.maxAutoAnswerRings = maxAutoAnswerRings;
+        this.maxActiveCalls = maxActiveCalls;
+        this.maxHeldCalls = maxHeldCalls;
+        this.maxFwdSettings = maxFwdSettings;
+        this.maxDevicesInConf = maxDevicesInConf;
+        this.transAndConfSetup = transAndConfSetup;
+        this.deviceOnDeviceMonitorFilter = deviceOnDeviceMonitorFilter;
+        this.deviceOnConnectionMonitorFilter = deviceOnConnectionMonitorFilter;
+        this.callOnDeviceMonitorFilter = callOnDeviceMonitorFilter;
+        this.callOnConnectionMonitorFilter = callOnConnectionMonitorFilter;
+        this.mediaClassSupport = mediaClassSupport;
+        this.mediaServiceCapsList = mediaServiceCapsList;
+        this.connectionRateList = connectionRateList;
+        this.delayToleranceList = delayToleranceList;
+        this.numberOfChannels = numberOfChannels;
+        this.maxChannelBind = maxChannelBind;
+        this.routeingServList = routeingServList;
+        this.logDevServList = logDevServList;
+        this.logDevEvtsList = logDevEvtsList;
+        this.deviceMaintEvtsList = deviceMaintEvtsList;
+        this.extensions = extensions;
+    }
 
     /**
      * @summary Restructures an object into a GetLogicalDeviceInformationResult
@@ -498,25 +570,25 @@ class GetLogicalDeviceInformationResult {
      * @static
      * @method
      */
-    public static get _default_value_for_deviceCategory () { return DeviceCategory_station; }        /**
+    public static get _default_value_for_deviceCategory (): _enum_for_DeviceCategory.station { return DeviceCategory_station; }        /**
          * @summary The enum used as the type of the component `deviceCategory`
          * @public
          * @static
          */
 
-    public static _enum_for_deviceCategory = _enum_for_DeviceCategory;        /**
+    public static _enum_for_deviceCategory: typeof _enum_for_DeviceCategory = _enum_for_DeviceCategory;        /**
          * @summary The enum used as the type of the component `namedDeviceTypes`
          * @public
          * @static
          */
 
-    public static _enum_for_namedDeviceTypes = _enum_for_NamedDeviceTypes;        /**
+    public static _enum_for_namedDeviceTypes: typeof _enum_for_NamedDeviceTypes = _enum_for_NamedDeviceTypes;        /**
          * @summary The enum used as the type of the component `appearanceType`
          * @public
          * @static
          */
 
-    public static _enum_for_appearanceType = _enum_for_AppearanceType;
+    public static _enum_for_appearanceType: typeof _enum_for_AppearanceType = _enum_for_AppearanceType;
 }
 
 /**

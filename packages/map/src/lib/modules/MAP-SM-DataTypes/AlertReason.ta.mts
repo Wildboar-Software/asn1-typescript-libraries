@@ -67,7 +67,7 @@ type AlertReason = _enum_for_AlertReason;
  * @enum {number}
  */
 export
-const AlertReason = _enum_for_AlertReason;
+const AlertReason: typeof _enum_for_AlertReason = _enum_for_AlertReason;
 
 /**
  * @summary AlertReason_ms_Present
@@ -79,7 +79,7 @@ const AlertReason = _enum_for_AlertReason;
  * @type {number}
  */
 export
-const AlertReason_ms_Present: AlertReason = AlertReason.ms_Present; /* LONG_NAMED_ENUMERATED_VALUE */
+const AlertReason_ms_Present: _enum_for_AlertReason.ms_Present = AlertReason.ms_Present; /* LONG_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary ms_Present
@@ -91,7 +91,7 @@ const AlertReason_ms_Present: AlertReason = AlertReason.ms_Present; /* LONG_NAME
  * @type {number}
  */
 export
-const ms_Present: AlertReason = AlertReason.ms_Present; /* SHORT_NAMED_ENUMERATED_VALUE */
+const ms_Present: _enum_for_AlertReason.ms_Present = AlertReason.ms_Present; /* SHORT_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary AlertReason_memoryAvailable
@@ -103,7 +103,7 @@ const ms_Present: AlertReason = AlertReason.ms_Present; /* SHORT_NAMED_ENUMERATE
  * @type {number}
  */
 export
-const AlertReason_memoryAvailable: AlertReason = AlertReason.memoryAvailable; /* LONG_NAMED_ENUMERATED_VALUE */
+const AlertReason_memoryAvailable: _enum_for_AlertReason.memoryAvailable = AlertReason.memoryAvailable; /* LONG_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary memoryAvailable
@@ -115,7 +115,7 @@ const AlertReason_memoryAvailable: AlertReason = AlertReason.memoryAvailable; /*
  * @type {number}
  */
 export
-const memoryAvailable: AlertReason = AlertReason.memoryAvailable; /* SHORT_NAMED_ENUMERATED_VALUE */
+const memoryAvailable: _enum_for_AlertReason.memoryAvailable = AlertReason.memoryAvailable; /* SHORT_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary Decodes an ASN.1 element into a(n) AlertReason
@@ -123,7 +123,7 @@ const memoryAvailable: AlertReason = AlertReason.memoryAvailable; /* SHORT_NAMED
  * @param el The element being decoded.
  * @returns The decoded data structure.
  */
-export const _decode_AlertReason = $._decodeEnumerated;
+export const _decode_AlertReason: $.ASN1Decoder<number> = $._decodeEnumerated;
 
 /**
  * @summary Encodes a(n) AlertReason into an ASN.1 Element.
@@ -132,7 +132,7 @@ export const _decode_AlertReason = $._decodeEnumerated;
  * @param elGetter A function that can be used to get new ASN.1 elements.
  * @returns {_Element} The AlertReason, encoded as an ASN.1 Element.
  */
-export const _encode_AlertReason = $._encodeEnumerated;
+export const _encode_AlertReason: $.ASN1Encoder<number> = $._encodeEnumerated;
 
 
 /* eslint-enable */

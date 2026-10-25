@@ -53,7 +53,7 @@ export class SecretQuestionType {
    * @public
    * @readonly
    */
-  readonly request: RequestType;
+  public readonly request: RequestType;
   /**
    * @summary `response`.
    * @description Hash algorithm for the challenge; the
@@ -63,7 +63,7 @@ export class SecretQuestionType {
    * @public
    * @readonly
    */
-  readonly response: ResponseType;
+  public readonly response: ResponseType;
 
   constructor(
     request: RequestType,

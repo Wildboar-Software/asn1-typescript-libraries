@@ -1,8 +1,8 @@
 /* eslint-disable */
 import {
-    OPTIONAL,
-    PrintableString,
-    ASN1Element as _Element,
+    type OPTIONAL,
+    type PrintableString,
+    type ASN1Element as _Element,
     ASN1TagClass as _TagClass,
     ASN1Construction as _Construction,
     ASN1UniversalType as _UniversalType,
@@ -38,34 +38,42 @@ import { _decode_ProfileArgumValueList, _encode_ProfileArgumValueList, ProfileAr
  */
 export
 class SPR2content {
+    /**
+     * @summary `result`.
+     * @description
+     * Result2 success or fail. ISO/IEC 9041-1:1997 §6.24.
+     * @public
+     * @readonly
+     */
+    public readonly result: Result2;
+    /**
+     * @summary `argList`.
+     * @description
+     * Selected profile-argument values. ISO/IEC
+     * 9041-1:1997 §6.24.
+     * @public
+     * @readonly
+     */
+    public readonly argList?: OPTIONAL<ProfileArgumValueList>;
+    /**
+     * @summary `retList`.
+     * @description
+     * DO/CO names agreed to be retained. ISO/IEC
+     * 9041-1:1997 §12.1.
+     * @public
+     * @readonly
+     */
+    public readonly retList?: OPTIONAL<PrintableString[]>;
+
     constructor (
-        /**
-         * @summary `result`.
-         * @description
-         * Result2 success or fail. ISO/IEC 9041-1:1997 §6.24.
-         * @public
-         * @readonly
-         */
-        readonly result: Result2,
-        /**
-         * @summary `argList`.
-         * @description
-         * Selected profile-argument values. ISO/IEC
-         * 9041-1:1997 §6.24.
-         * @public
-         * @readonly
-         */
-        readonly argList?: OPTIONAL<ProfileArgumValueList>,
-        /**
-         * @summary `retList`.
-         * @description
-         * DO/CO names agreed to be retained. ISO/IEC
-         * 9041-1:1997 §12.1.
-         * @public
-         * @readonly
-         */
-        readonly retList?: OPTIONAL<PrintableString[]>
-    ) {}
+        result: Result2,
+        argList?: OPTIONAL<ProfileArgumValueList>,
+        retList?: OPTIONAL<PrintableString[]>
+    ) {
+        this.result = result;
+        this.argList = argList;
+        this.retList = retList;
+    }
 
     /**
      * @summary Restructures an object into a SPR2content

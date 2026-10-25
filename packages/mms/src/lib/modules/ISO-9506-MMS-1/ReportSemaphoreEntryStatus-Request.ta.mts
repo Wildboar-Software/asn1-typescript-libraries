@@ -1,8 +1,8 @@
 /* eslint-disable */
 import {
-    OPTIONAL,
-    OCTET_STRING,
-    ASN1Element as _Element,
+    type OPTIONAL,
+    type OCTET_STRING,
+    type ASN1Element as _Element,
     ASN1TagClass as _TagClass,
     ASN1Construction as _Construction,
     ASN1UniversalType as _UniversalType,
@@ -12,8 +12,8 @@ import {
     ASN1ConstructionError as _ConstructionError,
 } from "@wildboar/asn1";
 import * as $ from "@wildboar/asn1/functional";
-import { ObjectName, _decode_ObjectName, _encode_ObjectName } from "../ISO-9506-MMS-1/ObjectName.ta.mjs";
-import { ReportSemaphoreEntryStatus_Request_state, _decode_ReportSemaphoreEntryStatus_Request_state, _encode_ReportSemaphoreEntryStatus_Request_state } from "../ISO-9506-MMS-1/ReportSemaphoreEntryStatus-Request-state.ta.mjs";
+import { type ObjectName, _decode_ObjectName, _encode_ObjectName } from "../ISO-9506-MMS-1/ObjectName.ta.mjs";
+import { type ReportSemaphoreEntryStatus_Request_state, _decode_ReportSemaphoreEntryStatus_Request_state, _encode_ReportSemaphoreEntryStatus_Request_state } from "../ISO-9506-MMS-1/ReportSemaphoreEntryStatus-Request-state.ta.mjs";
 
 
 /**
@@ -40,43 +40,51 @@ import { ReportSemaphoreEntryStatus_Request_state, _decode_ReportSemaphoreEntryS
  */
 export
 class ReportSemaphoreEntryStatus_Request {
+    /**
+     * @summary `semaphoreName`.
+     * @description
+     *
+     * Semaphore whose entries are reported.
+     * ISO 9506-1:2003 §16.8.1.1.1.
+     *
+     * @public
+     * @readonly
+     */
+    public readonly semaphoreName: ObjectName;
+    /**
+     * @summary `state`.
+     * @description
+     *
+     * `queued` (0) requesters; `owner` (1) owners with AA up;
+     * `hung` (2) owners after AA lost. ISO 9506-1:2003
+     * §16.1.3.9, §16.8.1.1.2.
+     *
+     * @public
+     * @readonly
+     */
+    public readonly state: ReportSemaphoreEntryStatus_Request_state;
+    /**
+     * @summary `entryIDToStartAfter`.
+     * @description
+     *
+     * Resume after this `&entryID`. If unmatched, start at the
+     * first numerically greater ID. Omit to start at the first.
+     * ISO 9506-1:2003 §16.8.1.1.3.
+     *
+     * @public
+     * @readonly
+     */
+    public readonly entryIDToStartAfter?: OPTIONAL<OCTET_STRING>;
+
     constructor (
-        /**
-         * @summary `semaphoreName`.
-         * @description
-         *
-         * Semaphore whose entries are reported.
-         * ISO 9506-1:2003 §16.8.1.1.1.
-         *
-         * @public
-         * @readonly
-         */
-        readonly semaphoreName: ObjectName,
-        /**
-         * @summary `state`.
-         * @description
-         *
-         * `queued` (0) requesters; `owner` (1) owners with AA up;
-         * `hung` (2) owners after AA lost. ISO 9506-1:2003
-         * §16.1.3.9, §16.8.1.1.2.
-         *
-         * @public
-         * @readonly
-         */
-        readonly state: ReportSemaphoreEntryStatus_Request_state,
-        /**
-         * @summary `entryIDToStartAfter`.
-         * @description
-         *
-         * Resume after this `&entryID`. If unmatched, start at the
-         * first numerically greater ID. Omit to start at the first.
-         * ISO 9506-1:2003 §16.8.1.1.3.
-         *
-         * @public
-         * @readonly
-         */
-        readonly entryIDToStartAfter?: OPTIONAL<OCTET_STRING>
-    ) {}
+        semaphoreName: ObjectName,
+        state: ReportSemaphoreEntryStatus_Request_state,
+        entryIDToStartAfter?: OPTIONAL<OCTET_STRING>
+    ) {
+        this.semaphoreName = semaphoreName;
+        this.state = state;
+        this.entryIDToStartAfter = entryIDToStartAfter;
+    }
 
     /**
      * @summary Restructures an object into a ReportSemaphoreEntryStatus_Request

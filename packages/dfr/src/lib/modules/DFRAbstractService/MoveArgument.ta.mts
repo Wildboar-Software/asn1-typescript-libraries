@@ -1,7 +1,7 @@
 /* eslint-disable */
 import {
-    OPTIONAL,
-    ASN1Element as _Element,
+    type OPTIONAL,
+    type ASN1Element as _Element,
     ASN1TagClass as _TagClass,
     ASN1Construction as _Construction,
     ASN1UniversalType as _UniversalType,
@@ -14,15 +14,15 @@ import * as $ from "@wildboar/asn1/functional";
 import { _decode_CommonUpdateArguments, _encode_CommonUpdateArguments } from "../DFRAbstractService/CommonUpdateArguments.ta.mjs";
 import { _decode_CommonArguments, _encode_CommonArguments } from "../DFRAbstractService/CommonArguments.ta.mjs";
 import { DfrObjectClass, _enum_for_DfrObjectClass, _decode_DfrObjectClass, _encode_DfrObjectClass } from "../DFRAbstractService/DfrObjectClass.ta.mjs";
-import { CommonUpdateArguments_entry, _decode_CommonUpdateArguments_entry, _encode_CommonUpdateArguments_entry } from "../DFRAbstractService/CommonUpdateArguments-entry.ta.mjs";
-import { DfrEntryName, _decode_DfrEntryName, _encode_DfrEntryName } from "../DFRAbstractService/DfrEntryName.ta.mjs";
-import { GroupMemberPosition, _decode_GroupMemberPosition, _encode_GroupMemberPosition } from "../DFRAbstractService/GroupMemberPosition.ta.mjs";
-import { EntryModification, _decode_EntryModification, _encode_EntryModification } from "../DFRAbstractService/EntryModification.ta.mjs";
+import { type CommonUpdateArguments_entry, _decode_CommonUpdateArguments_entry, _encode_CommonUpdateArguments_entry } from "../DFRAbstractService/CommonUpdateArguments-entry.ta.mjs";
+import { type DfrEntryName, _decode_DfrEntryName, _encode_DfrEntryName } from "../DFRAbstractService/DfrEntryName.ta.mjs";
+import { type GroupMemberPosition, _decode_GroupMemberPosition, _encode_GroupMemberPosition } from "../DFRAbstractService/GroupMemberPosition.ta.mjs";
+import { type EntryModification, _decode_EntryModification, _encode_EntryModification } from "../DFRAbstractService/EntryModification.ta.mjs";
 import { EntryInformationSelection, _decode_EntryInformationSelection, _encode_EntryInformationSelection } from "../DFRAbstractService/EntryInformationSelection.ta.mjs";
-import { Requested_QoS_level, _decode_Requested_QoS_level, _encode_Requested_QoS_level } from "../DOR-definition/Requested-QoS-level.ta.mjs";
-import { TaskId, _decode_TaskId, _encode_TaskId } from "../DFRAbstractService/TaskId.ta.mjs";
+import { type Requested_QoS_level, _decode_Requested_QoS_level, _encode_Requested_QoS_level } from "../DOR-definition/Requested-QoS-level.ta.mjs";
+import { type TaskId, _decode_TaskId, _encode_TaskId } from "../DFRAbstractService/TaskId.ta.mjs";
 import { Reservation, _decode_Reservation, _encode_Reservation } from "../DFRAbstractService/Reservation.ta.mjs";
-import { ErrorHandlingMode, _decode_ErrorHandlingMode, _encode_ErrorHandlingMode } from "../DFRAbstractService/ErrorHandlingMode.ta.mjs";
+import { type ErrorHandlingMode, _decode_ErrorHandlingMode, _encode_ErrorHandlingMode } from "../DFRAbstractService/ErrorHandlingMode.ta.mjs";
 import { Priority, _enum_for_Priority, Priority_medium /* IMPORTED_LONG_ENUMERATION_ITEM */, _decode_Priority, _encode_Priority } from "../DFRAbstractService/Priority.ta.mjs";
 import { Privileges, _decode_Privileges, _encode_Privileges } from "../DFRAbstractService/Privileges.ta.mjs";
 
@@ -52,137 +52,162 @@ import { Privileges, _decode_Privileges, _encode_Privileges } from "../DFRAbstra
  */
 export
 class MoveArgument {
+    /**
+     * @summary `object_class`.
+     * @description
+     *
+     * Class of the DFR-Object. Mandatory on Create; optional elsewhere and
+     * then used only to validate the named entry. ISO/IEC 10166-1:1991
+     * §8.1.5.1.
+     * @public
+     * @readonly
+     */
+    public readonly object_class?: OPTIONAL<DfrObjectClass>; /* REPLICATED_COMPONENT */
+    /**
+     * @summary `entry`.
+     * @description
+     *
+     * Local name or DOR of the object to copy, move, read, modify, delete,
+     * list, reserve, etc. Absent on Create. ISO/IEC 10166-1:1991 §8.1.5.2.
+     * @public
+     * @readonly
+     */
+    public readonly entry?: OPTIONAL<CommonUpdateArguments_entry>; /* REPLICATED_COMPONENT */
+    /**
+     * @summary `destination`.
+     * @description
+     *
+     * Parent group that will hold the created, copied, or moved entry.
+     * Required for those operations. ISO/IEC 10166-1:1991 §8.1.5.3.
+     * @public
+     * @readonly
+     */
+    public readonly destination?: OPTIONAL<DfrEntryName>; /* REPLICATED_COMPONENT */
+    /**
+     * @summary `position`.
+     * @description
+     *
+     * Where to insert the new member in the destination group
+     * (`first`/`last`/`before`/`after`). Forbidden if the parent has
+     * `dfr-ordering`; the server then places the member by that rule.
+     * ISO/IEC 10166-1:1991 §8.1.5.4.
+     * @public
+     * @readonly
+     */
+    public readonly position?: OPTIONAL<GroupMemberPosition>; /* REPLICATED_COMPONENT */
+    /**
+     * @summary `modifications`.
+     * @description
+     *
+     * Ordered updates to attributes and/or content. Mandatory on Modify;
+     * optional on Create, Copy, and Move. ISO/IEC 10166-1:1991 §8.1.5.5.
+     * @public
+     * @readonly
+     */
+    public readonly modifications?: OPTIONAL<EntryModification[]>; /* REPLICATED_COMPONENT */
+    /**
+     * @summary `selection`.
+     * @description
+     *
+     * Which attributes and/or content (or a produced DOR) to read back in
+     * the result. Mandatory on Read. ISO/IEC 10166-1:1991 §8.1.5.6.
+     * @public
+     * @readonly
+     */
+    public readonly selection?: OPTIONAL<EntryInformationSelection>; /* REPLICATED_COMPONENT */
+    /**
+     * @summary `reference_qos`.
+     * @description
+     *
+     * Constrained absent on Move. ISO/IEC 10166-1:1991 §8.2.4.1.
+     * @public
+     * @readonly
+     */
+    public readonly reference_qos?: OPTIONAL<Requested_QoS_level>; /* REPLICATED_COMPONENT */
+    /**
+     * @summary `task_id`.
+     * @description
+     *
+     * Optional identifier for this invocation, so it can later be
+     * abandoned or continued. Must not be reused until the operation
+     * completes or is abandoned. A List/Search continuation value returned
+     * after a limit may be reused here. ISO/IEC 10166-1:1991 §8.1.3.1.
+     * @public
+     * @readonly
+     */
+    public readonly task_id?: OPTIONAL<TaskId>; /* REPLICATED_COMPONENT */
+    /**
+     * @summary `reservation`.
+     * @description
+     *
+     * Requested reservation of the object this operation applies to. Omit
+     * to leave the current reservation unchanged. Raising the level or
+     * committing is done first; lowering an uncommitted reservation is
+     * done last. ISO/IEC 10166-1:1991 §8.1.3.2, §8.2.9.
+     * @public
+     * @readonly
+     */
+    public readonly reservation?: OPTIONAL<Reservation>; /* REPLICATED_COMPONENT */
+    /**
+     * @summary `error_handling`.
+     * @description
+     *
+     * Constrained absent on this operation (not a List or Copy-of-group).
+     * ISO/IEC 10166-1:1991 §8.1.3.3.
+     * @public
+     * @readonly
+     */
+    public readonly error_handling?: OPTIONAL<ErrorHandlingMode>; /* REPLICATED_COMPONENT */
+    /**
+     * @summary `priority`.
+     * @description
+     *
+     * Operational priority for a loaded server; overrides the bind default
+     * (`medium`). The server need not honour it. Unrelated to
+     * communications QoS. ISO/IEC 10166-1:1991 §8.1.3.4, §7.1.1.
+     * @public
+     * @readonly
+     */
+    public readonly priority?: OPTIONAL<Priority>; /* REPLICATED_COMPONENT */
+    /**
+     * @summary `privileges`.
+     * @description
+     *
+     * Per-operation PACs that modify bind privileges for this request only
+     * (`operation-Pac`) and/or a `proxy-pac` the server may present when
+     * accessing another application on the user's behalf. ISO/IEC
+     * 10166-1:1991 §8.1.3.5.
+     * @public
+     * @readonly
+     */
+    public readonly privileges?: OPTIONAL<Privileges>; /* REPLICATED_COMPONENT */
+
     constructor (
-        /**
-         * @summary `object_class`.
-         * @description
-         *
-         * Class of the DFR-Object. Mandatory on Create; optional elsewhere and
-         * then used only to validate the named entry. ISO/IEC 10166-1:1991
-         * §8.1.5.1.
-         * @public
-         * @readonly
-         */
-        readonly object_class?: OPTIONAL<DfrObjectClass> /* REPLICATED_COMPONENT */,
-        /**
-         * @summary `entry`.
-         * @description
-         *
-         * Local name or DOR of the object to copy, move, read, modify, delete,
-         * list, reserve, etc. Absent on Create. ISO/IEC 10166-1:1991 §8.1.5.2.
-         * @public
-         * @readonly
-         */
-        readonly entry?: OPTIONAL<CommonUpdateArguments_entry> /* REPLICATED_COMPONENT */,
-        /**
-         * @summary `destination`.
-         * @description
-         *
-         * Parent group that will hold the created, copied, or moved entry.
-         * Required for those operations. ISO/IEC 10166-1:1991 §8.1.5.3.
-         * @public
-         * @readonly
-         */
-        readonly destination?: OPTIONAL<DfrEntryName> /* REPLICATED_COMPONENT */,
-        /**
-         * @summary `position`.
-         * @description
-         *
-         * Where to insert the new member in the destination group
-         * (`first`/`last`/`before`/`after`). Forbidden if the parent has
-         * `dfr-ordering`; the server then places the member by that rule.
-         * ISO/IEC 10166-1:1991 §8.1.5.4.
-         * @public
-         * @readonly
-         */
-        readonly position?: OPTIONAL<GroupMemberPosition> /* REPLICATED_COMPONENT */,
-        /**
-         * @summary `modifications`.
-         * @description
-         *
-         * Ordered updates to attributes and/or content. Mandatory on Modify;
-         * optional on Create, Copy, and Move. ISO/IEC 10166-1:1991 §8.1.5.5.
-         * @public
-         * @readonly
-         */
-        readonly modifications?: OPTIONAL<EntryModification[]> /* REPLICATED_COMPONENT */,
-        /**
-         * @summary `selection`.
-         * @description
-         *
-         * Which attributes and/or content (or a produced DOR) to read back in
-         * the result. Mandatory on Read. ISO/IEC 10166-1:1991 §8.1.5.6.
-         * @public
-         * @readonly
-         */
-        readonly selection?: OPTIONAL<EntryInformationSelection> /* REPLICATED_COMPONENT */,
-        /**
-         * @summary `reference_qos`.
-         * @description
-         *
-         * Constrained absent on Move. ISO/IEC 10166-1:1991 §8.2.4.1.
-         * @public
-         * @readonly
-         */
-        readonly reference_qos?: OPTIONAL<Requested_QoS_level> /* REPLICATED_COMPONENT */,
-        /**
-         * @summary `task_id`.
-         * @description
-         *
-         * Optional identifier for this invocation, so it can later be
-         * abandoned or continued. Must not be reused until the operation
-         * completes or is abandoned. A List/Search continuation value returned
-         * after a limit may be reused here. ISO/IEC 10166-1:1991 §8.1.3.1.
-         * @public
-         * @readonly
-         */
-        readonly task_id?: OPTIONAL<TaskId> /* REPLICATED_COMPONENT */,
-        /**
-         * @summary `reservation`.
-         * @description
-         *
-         * Requested reservation of the object this operation applies to. Omit
-         * to leave the current reservation unchanged. Raising the level or
-         * committing is done first; lowering an uncommitted reservation is
-         * done last. ISO/IEC 10166-1:1991 §8.1.3.2, §8.2.9.
-         * @public
-         * @readonly
-         */
-        readonly reservation?: OPTIONAL<Reservation> /* REPLICATED_COMPONENT */,
-        /**
-         * @summary `error_handling`.
-         * @description
-         *
-         * Constrained absent on this operation (not a List or Copy-of-group).
-         * ISO/IEC 10166-1:1991 §8.1.3.3.
-         * @public
-         * @readonly
-         */
-        readonly error_handling?: OPTIONAL<ErrorHandlingMode> /* REPLICATED_COMPONENT */,
-        /**
-         * @summary `priority`.
-         * @description
-         *
-         * Operational priority for a loaded server; overrides the bind default
-         * (`medium`). The server need not honour it. Unrelated to
-         * communications QoS. ISO/IEC 10166-1:1991 §8.1.3.4, §7.1.1.
-         * @public
-         * @readonly
-         */
-        readonly priority?: OPTIONAL<Priority> /* REPLICATED_COMPONENT */,
-        /**
-         * @summary `privileges`.
-         * @description
-         *
-         * Per-operation PACs that modify bind privileges for this request only
-         * (`operation-Pac`) and/or a `proxy-pac` the server may present when
-         * accessing another application on the user's behalf. ISO/IEC
-         * 10166-1:1991 §8.1.3.5.
-         * @public
-         * @readonly
-         */
-        readonly privileges?: OPTIONAL<Privileges> /* REPLICATED_COMPONENT */
+        object_class?: OPTIONAL<DfrObjectClass>,
+        entry?: OPTIONAL<CommonUpdateArguments_entry>,
+        destination?: OPTIONAL<DfrEntryName>,
+        position?: OPTIONAL<GroupMemberPosition>,
+        modifications?: OPTIONAL<EntryModification[]>,
+        selection?: OPTIONAL<EntryInformationSelection>,
+        reference_qos?: OPTIONAL<Requested_QoS_level>,
+        task_id?: OPTIONAL<TaskId>,
+        reservation?: OPTIONAL<Reservation>,
+        error_handling?: OPTIONAL<ErrorHandlingMode>,
+        priority?: OPTIONAL<Priority>,
+        privileges?: OPTIONAL<Privileges>
     ) {
+        this.object_class = object_class;
+        this.entry = entry;
+        this.destination = destination;
+        this.position = position;
+        this.modifications = modifications;
+        this.selection = selection;
+        this.reference_qos = reference_qos;
+        this.task_id = task_id;
+        this.reservation = reservation;
+        this.error_handling = error_handling;
+        this.priority = priority;
+        this.privileges = privileges;
         if (entry === undefined) {
             throw new _ConstructionError("MoveArgument.entry shall be present");
         }
@@ -226,19 +251,19 @@ class MoveArgument {
      * @static
      * @method
      */
-    public static get _default_value_for_priority () { return Priority_medium; }        /**
+    public static get _default_value_for_priority (): _enum_for_Priority { return Priority_medium; }        /**
          * @summary The enum used as the type of the component `object_class`
          * @public
          * @static
          */
 
-    public static _enum_for_object_class = _enum_for_DfrObjectClass;        /**
+    public static _enum_for_object_class: typeof _enum_for_DfrObjectClass = _enum_for_DfrObjectClass;        /**
          * @summary The enum used as the type of the component `priority`
          * @public
          * @static
          */
 
-    public static _enum_for_priority = _enum_for_Priority;
+    public static _enum_for_priority: typeof _enum_for_Priority = _enum_for_Priority;
 }
 
 /**

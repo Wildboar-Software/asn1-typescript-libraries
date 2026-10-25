@@ -1,9 +1,9 @@
 /* eslint-disable */
 import {
-    OPTIONAL,
-    BOOLEAN,
-    INTEGER,
-    ASN1Element as _Element,
+    type OPTIONAL,
+    type BOOLEAN,
+    type INTEGER,
+    type ASN1Element as _Element,
     ASN1TagClass as _TagClass,
     ASN1Construction as _Construction,
     ASN1UniversalType as _UniversalType,
@@ -12,13 +12,13 @@ import {
     EmbeddedPDV as _PDV,
     ASN1ConstructionError as _ConstructionError, ASN1OverflowError } from "@wildboar/asn1";
 import * as $ from "@wildboar/asn1/functional";
-import { Capabilities, _decode_Capabilities, _encode_Capabilities } from "../V59/Capabilities.ta.mjs";
+import { type Capabilities, _decode_Capabilities, _encode_Capabilities } from "../V59/Capabilities.ta.mjs";
 
-import { V59String, _decode_V59String, _encode_V59String } from "../V59/V59String.ta.mjs";
+import { type V59String, _decode_V59String, _encode_V59String } from "../V59/V59String.ta.mjs";
 
-import { TxPowerLevel, _decode_TxPowerLevel, _encode_TxPowerLevel } from "../V59/TxPowerLevel.ta.mjs";
+import { type TxPowerLevel, _decode_TxPowerLevel, _encode_TxPowerLevel } from "../V59/TxPowerLevel.ta.mjs";
 
-import { RobBitPatt, _decode_RobBitPatt, _encode_RobBitPatt } from "../V59/RobBitPatt.ta.mjs";
+import { type RobBitPatt, _decode_RobBitPatt, _encode_RobBitPatt } from "../V59/RobBitPatt.ta.mjs";
 
 /**
  * @summary V91Diag_Item
@@ -63,7 +63,7 @@ class V91Diag_Item {
      * @public
      * @readonly
      */
-    readonly modeV91: Capabilities;
+    public readonly modeV91: Capabilities;
     /**
      * @summary `iNFO0TX`.
      * @description
@@ -75,7 +75,7 @@ class V91Diag_Item {
      * @public
      * @readonly
      */
-    readonly iNFO0TX: V59String;
+    public readonly iNFO0TX: V59String;
     /**
      * @summary `iNFO0RX`.
      * @description
@@ -87,7 +87,7 @@ class V91Diag_Item {
      * @public
      * @readonly
      */
-    readonly iNFO0RX: V59String;
+    public readonly iNFO0RX: V59String;
     /**
      * @summary `cP`.
      * @description
@@ -98,7 +98,7 @@ class V91Diag_Item {
      * @public
      * @readonly
      */
-    readonly cP: V59String;
+    public readonly cP: V59String;
     /**
      * @summary `controlChannel`.
      * @description
@@ -108,7 +108,7 @@ class V91Diag_Item {
      * @public
      * @readonly
      */
-    readonly controlChannel: BOOLEAN;
+    public readonly controlChannel: BOOLEAN;
     /**
      * @summary `v91TxPowerLevel`.
      * @description
@@ -118,7 +118,7 @@ class V91Diag_Item {
      * @public
      * @readonly
      */
-    readonly v91TxPowerLevel: TxPowerLevel;
+    public readonly v91TxPowerLevel: TxPowerLevel;
     /**
      * @summary `transparentMode`.
      * @description
@@ -127,7 +127,7 @@ class V91Diag_Item {
      * @public
      * @readonly
      */
-    readonly transparentMode: BOOLEAN;
+    public readonly transparentMode: BOOLEAN;
     /**
      * @summary `txDataHistory`.
      * @description
@@ -139,7 +139,7 @@ class V91Diag_Item {
      * @public
      * @readonly
      */
-    readonly txDataHistory: V59String;
+    public readonly txDataHistory: V59String;
     /**
      * @summary `rxDataHistory`.
      * @description
@@ -150,7 +150,7 @@ class V91Diag_Item {
      * @public
      * @readonly
      */
-    readonly rxDataHistory: V59String;
+    public readonly rxDataHistory: V59String;
     /**
      * @summary `noiseEstimate`.
      * @description
@@ -160,7 +160,7 @@ class V91Diag_Item {
      * @public
      * @readonly
      */
-    readonly noiseEstimate?: OPTIONAL<V59String>;
+    public readonly noiseEstimate?: OPTIONAL<V59String>;
     /**
      * @summary `rxSignalQuality`.
      * @description
@@ -172,7 +172,7 @@ class V91Diag_Item {
      * @public
      * @readonly
      */
-    readonly rxSignalQuality?: OPTIONAL<V59String>;
+    public readonly rxSignalQuality?: OPTIONAL<V59String>;
     /**
      * @summary `rBSpattern`.
      * @description
@@ -184,7 +184,7 @@ class V91Diag_Item {
      * @public
      * @readonly
      */
-    readonly rBSpattern?: OPTIONAL<RobBitPatt>;
+    public readonly rBSpattern?: OPTIONAL<RobBitPatt>;
     /**
      * @summary `digitalPadLoss`.
      * @description
@@ -195,7 +195,7 @@ class V91Diag_Item {
      * @public
      * @readonly
      */
-    readonly digitalPadLoss?: OPTIONAL<V59String>;
+    public readonly digitalPadLoss?: OPTIONAL<V59String>;
     /**
      * @summary `localCodecLaw`.
      * @description
@@ -205,7 +205,7 @@ class V91Diag_Item {
      * @public
      * @readonly
      */
-    readonly localCodecLaw?: OPTIONAL<BOOLEAN>;
+    public readonly localCodecLaw?: OPTIONAL<BOOLEAN>;
     /**
      * @summary `remoteCodecLaw`.
      * @description
@@ -215,7 +215,7 @@ class V91Diag_Item {
      * @public
      * @readonly
      */
-    readonly remoteCodecLaw?: OPTIONAL<BOOLEAN>;
+    public readonly remoteCodecLaw?: OPTIONAL<BOOLEAN>;
     /**
      * @summary `frameSlipsDetected`.
      * @description
@@ -225,13 +225,13 @@ class V91Diag_Item {
      * @public
      * @readonly
      */
-    readonly frameSlipsDetected?: OPTIONAL<INTEGER>;
+    public readonly frameSlipsDetected?: OPTIONAL<INTEGER>;
     /**
      * @summary Extensions that are not recognized.
      * @public
      * @readonly
      */
-    readonly _unrecognizedExtensionsList: _Element[];
+    public readonly _unrecognizedExtensionsList: _Element[];
 
     constructor (
         modeV91: Capabilities,

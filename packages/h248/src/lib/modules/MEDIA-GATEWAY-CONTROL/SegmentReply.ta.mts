@@ -1,13 +1,13 @@
 /* eslint-disable */
 import {
-    NULL,
-    OPTIONAL,
-    ASN1Element as _Element,
+    type NULL,
+    type OPTIONAL,
+    type ASN1Element as _Element,
     ASN1TagClass as _TagClass
 } from "@wildboar/asn1";
 import * as $ from "@wildboar/asn1/functional";
-import { TransactionId, _decode_TransactionId, _encode_TransactionId } from "../MEDIA-GATEWAY-CONTROL/TransactionId.ta.mjs";
-import { SegmentNumber, _decode_SegmentNumber, _encode_SegmentNumber } from "../MEDIA-GATEWAY-CONTROL/SegmentNumber.ta.mjs";
+import { type TransactionId, _decode_TransactionId, _encode_TransactionId } from "../MEDIA-GATEWAY-CONTROL/TransactionId.ta.mjs";
+import { type SegmentNumber, _decode_SegmentNumber, _encode_SegmentNumber } from "../MEDIA-GATEWAY-CONTROL/SegmentNumber.ta.mjs";
 
 
 /**
@@ -42,7 +42,7 @@ class SegmentReply {
      * @public
      * @readonly
      */
-    readonly transactionId: TransactionId;
+    public readonly transactionId: TransactionId;
     /**
      * @summary `segmentNumber`.
      * @description
@@ -52,7 +52,7 @@ class SegmentReply {
      * @public
      * @readonly
      */
-    readonly segmentNumber: SegmentNumber;
+    public readonly segmentNumber: SegmentNumber;
     /**
      * @summary `segmentationComplete`.
      * @description
@@ -63,7 +63,7 @@ class SegmentReply {
      * @public
      * @readonly
      */
-    readonly segmentationComplete?: OPTIONAL<NULL>;
+    public readonly segmentationComplete?: OPTIONAL<NULL>;
     /**
      * @summary Extensions that are not recognized.
      * @description
@@ -74,7 +74,7 @@ class SegmentReply {
      * @public
      * @readonly
      */
-    readonly _unrecognizedExtensionsList: _Element[];
+    public readonly _unrecognizedExtensionsList: _Element[];
 
     constructor (
         transactionId: TransactionId,

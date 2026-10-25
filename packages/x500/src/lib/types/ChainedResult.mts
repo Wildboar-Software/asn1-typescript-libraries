@@ -11,4 +11,4 @@ interface ChainedResult extends Result {
     chaining: ChainingResults;
 }
 
-export default ChainedResult;
+export type { ChainedResult as default };

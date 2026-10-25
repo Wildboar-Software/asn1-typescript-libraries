@@ -1,9 +1,9 @@
 /* eslint-disable */
 import {
     ASN1ConstructionError as _ConstructionError,
-    ASN1Element as _Element,
+    type ASN1Element as _Element,
     ASN1TagClass as _TagClass,
-    IA5String,
+    type IA5String,
     ASN1SizeError
 } from "@wildboar/asn1";
 import * as $ from "@wildboar/asn1/functional";
@@ -43,12 +43,12 @@ class ServiceChangeProfile {
      * @public
      * @readonly
      */
-    readonly profileName: IA5String;
+    public readonly profileName: IA5String;
 
     constructor (
         profileName: IA5String
     ) {
-        this.profileName = profileName;
+            this.profileName = profileName;
             if (profileName.length < 1 || profileName.length > 67) {
                 throw new ASN1SizeError("ServiceChangeProfile.profileName violates SIZE constraint");
             }

@@ -1,14 +1,14 @@
 /* eslint-disable */
 import {
-    BOOLEAN,
-    OPTIONAL,
-    ASN1Element as _Element,
+    type BOOLEAN,
+    type OPTIONAL,
+    type ASN1Element as _Element,
     ASN1TagClass as _TagClass
 } from "@wildboar/asn1";
 import * as $ from "@wildboar/asn1/functional";
-import { RANUENGAPID, _decode_RANUENGAPID, _encode_RANUENGAPID } from "../TS33128Payloads/RANUENGAPID.ta.mjs";
+import { type RANUENGAPID, _decode_RANUENGAPID, _encode_RANUENGAPID } from "../TS33128Payloads/RANUENGAPID.ta.mjs";
 // export { RANUENGAPID, _decode_RANUENGAPID, _encode_RANUENGAPID } from "../TS33128Payloads/RANUENGAPID.ta.mjs";
-import { CellCAGList, _decode_CellCAGList, _encode_CellCAGList } from "../TS33128Payloads/CellCAGList.ta.mjs";
+import { type CellCAGList, _decode_CellCAGList, _encode_CellCAGList } from "../TS33128Payloads/CellCAGList.ta.mjs";
 // export { CellCAGList, _decode_CellCAGList, _encode_CellCAGList } from "../TS33128Payloads/CellCAGList.ta.mjs";
 import { REDCAPIndication, _decode_REDCAPIndication, _encode_REDCAPIndication, _enum_for_REDCAPIndication } from "../TS33128Payloads/REDCAPIndication.ta.mjs";
 // export { REDCAPIndication, _enum_for_REDCAPIndication, REDCAPIndication_redCAP /* IMPORTED_LONG_ENUMERATION_ITEM */, redCAP /* IMPORTED_SHORT_ENUMERATION_ITEM */, _decode_REDCAPIndication, _encode_REDCAPIndication } from "../TS33128Payloads/REDCAPIndication.ta.mjs";
@@ -179,7 +179,7 @@ class NASTransportInitialInformation {
          * @static
          */
 
-    public static _enum_for_rEDCAPIndication = _enum_for_REDCAPIndication;
+    public static _enum_for_rEDCAPIndication: typeof _enum_for_REDCAPIndication = _enum_for_REDCAPIndication;
 }
 
 /**

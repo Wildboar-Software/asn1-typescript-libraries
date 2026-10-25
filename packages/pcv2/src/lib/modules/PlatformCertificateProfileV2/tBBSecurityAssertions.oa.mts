@@ -1,7 +1,7 @@
 /* eslint-disable */
 import { type ATTRIBUTE } from "../InformationFramework/ATTRIBUTE.oca.mjs";
 import { userApplications /* IMPORTED_SHORT_ENUMERATION_ITEM */ } from "../InformationFramework/AttributeUsage.ta.mjs";
-import { TBBSecurityAssertions_v3, _decode_TBBSecurityAssertions_v3, _encode_TBBSecurityAssertions_v3 } from "../PlatformCertificateProfileV2/TBBSecurityAssertions-v3.ta.mjs";
+import { type TBBSecurityAssertions_v3, _decode_TBBSecurityAssertions_v3, _encode_TBBSecurityAssertions_v3 } from "../PlatformCertificateProfileV2/TBBSecurityAssertions-v3.ta.mjs";
 import { tcg_at_tbbSecurityAssertions_v3 } from "../PlatformCertificateProfileV2/tcg-at-tbbSecurityAssertions-v3.va.mjs";
 
 

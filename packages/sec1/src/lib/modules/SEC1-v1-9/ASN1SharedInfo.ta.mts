@@ -1,8 +1,8 @@
 /* eslint-disable */
 import {
-    OPTIONAL,
-    OCTET_STRING,
-    ASN1Element as _Element,
+    type OPTIONAL,
+    type OCTET_STRING,
+    type ASN1Element as _Element,
     ASN1TagClass as _TagClass,
     ASN1Construction as _Construction,
     ASN1UniversalType as _UniversalType,
@@ -45,7 +45,7 @@ class ASN1SharedInfo {
      * @public
      * @readonly
      */
-    readonly keyInfo: AlgorithmIdentifier;
+    public readonly keyInfo: AlgorithmIdentifier;
     /**
      * @summary `entityUInfo`.
      * @description
@@ -56,7 +56,7 @@ class ASN1SharedInfo {
      * @public
      * @readonly
      */
-    readonly entityUInfo?: OPTIONAL<OCTET_STRING>;
+    public readonly entityUInfo?: OPTIONAL<OCTET_STRING>;
     /**
      * @summary `entityVInfo`.
      * @description
@@ -66,7 +66,7 @@ class ASN1SharedInfo {
      * @public
      * @readonly
      */
-    readonly entityVInfo?: OPTIONAL<OCTET_STRING>;
+    public readonly entityVInfo?: OPTIONAL<OCTET_STRING>;
     /**
      * @summary `suppPubInfo`.
      * @description
@@ -76,7 +76,7 @@ class ASN1SharedInfo {
      * @public
      * @readonly
      */
-    readonly suppPubInfo?: OPTIONAL<OCTET_STRING>;
+    public readonly suppPubInfo?: OPTIONAL<OCTET_STRING>;
     /**
      * @summary `suppPrivInfo`.
      * @description
@@ -86,7 +86,7 @@ class ASN1SharedInfo {
      * @public
      * @readonly
      */
-    readonly suppPrivInfo?: OPTIONAL<OCTET_STRING>;
+    public readonly suppPrivInfo?: OPTIONAL<OCTET_STRING>;
 
     constructor (
         keyInfo: AlgorithmIdentifier,

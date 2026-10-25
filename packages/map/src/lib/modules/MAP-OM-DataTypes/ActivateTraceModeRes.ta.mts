@@ -1,8 +1,8 @@
 /* eslint-disable */
 import {
-    NULL,
-    OPTIONAL,
-    ASN1Element as _Element,
+    type NULL,
+    type OPTIONAL,
+    type ASN1Element as _Element,
     ASN1TagClass as _TagClass
 } from "@wildboar/asn1";
 import * as $ from "@wildboar/asn1/functional";
@@ -20,7 +20,7 @@ import { ExtensionContainer, _decode_ExtensionContainer, _encode_ExtensionContai
  * 
  * ```asn1
  * ActivateTraceModeRes ::= SEQUENCE {
- *     extensionContainer    [0] ExtensionContainer    OPTIONAL,
+ *     extensionContainer    [0] ExtensionContainer    type OPTIONAL,
  *     ...,
  *     traceSupportIndicator    [1]    NULL    OPTIONAL
  *     }
@@ -30,35 +30,43 @@ import { ExtensionContainer, _decode_ExtensionContainer, _encode_ExtensionContai
  */
 export
 class ActivateTraceModeRes {
+    /**
+     * @summary `extensionContainer`.
+     * @description
+     *
+     * Private or PCS extensions (3GPP TS 29.002 V19.1.0 clause 17.7.11).
+     *
+     * @public
+     * @readonly
+     */
+    public readonly extensionContainer?: OPTIONAL<ExtensionContainer>;
+    /**
+     * @summary `traceSupportIndicator`.
+     * @description
+     *
+     * UMTS trace parameters supported in the VLR or SGSN (3GPP TS 29.002
+     * V19.1.0 clauses 7.6.10.9 and 9.1.1.3).
+     *
+     * @public
+     * @readonly
+     */
+    public readonly traceSupportIndicator?: OPTIONAL<NULL>;
+    /**
+     * @summary Extensions that are not recognized.
+     * @public
+     * @readonly
+     */
+    public readonly _unrecognizedExtensionsList: _Element[];
+
     constructor (
-        /**
-         * @summary `extensionContainer`.
-         * @description
-         *
-         * Private or PCS extensions (3GPP TS 29.002 V19.1.0 clause 17.7.11).
-         *
-         * @public
-         * @readonly
-         */
-        readonly extensionContainer?: OPTIONAL<ExtensionContainer>,
-        /**
-         * @summary `traceSupportIndicator`.
-         * @description
-         *
-         * UMTS trace parameters supported in the VLR or SGSN (3GPP TS 29.002
-         * V19.1.0 clauses 7.6.10.9 and 9.1.1.3).
-         *
-         * @public
-         * @readonly
-         */
-        readonly traceSupportIndicator?: OPTIONAL<NULL>,
-        /**
-         * @summary Extensions that are not recognized.
-         * @public
-         * @readonly
-         */
-        readonly _unrecognizedExtensionsList: _Element[] = []
-    ) {}
+        extensionContainer?: OPTIONAL<ExtensionContainer>,
+        traceSupportIndicator?: OPTIONAL<NULL>,
+        _unrecognizedExtensionsList: _Element[] = []
+    ) {
+        this.extensionContainer = extensionContainer;
+        this.traceSupportIndicator = traceSupportIndicator;
+        this._unrecognizedExtensionsList = _unrecognizedExtensionsList;
+    }
 
     /**
      * @summary Restructures an object into a ActivateTraceModeRes

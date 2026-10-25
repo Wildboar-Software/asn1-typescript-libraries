@@ -1,8 +1,8 @@
 /* eslint-disable */
 import {
-    OPTIONAL,
-    BOOLEAN,
-    ASN1Element as _Element,
+    type OPTIONAL,
+    type BOOLEAN,
+    type ASN1Element as _Element,
     ASN1TagClass as _TagClass,
     ASN1Construction as _Construction,
     ASN1UniversalType as _UniversalType,
@@ -12,9 +12,9 @@ import {
     ASN1ConstructionError as _ConstructionError,
 } from "@wildboar/asn1";
 import * as $ from "@wildboar/asn1/functional";
-import { ObjectName, _decode_ObjectName, _encode_ObjectName } from "../ISO-9506-MMS-1/ObjectName.ta.mjs";
-import { Priority, _decode_Priority, _encode_Priority } from "../MMS-Object-Module-1/Priority.ta.mjs";
-import { Unsigned32, _decode_Unsigned32, _encode_Unsigned32 } from "../ISO-9506-MMS-1/Unsigned32.ta.mjs";
+import { type ObjectName, _decode_ObjectName, _encode_ObjectName } from "../ISO-9506-MMS-1/ObjectName.ta.mjs";
+import { type Priority, _decode_Priority, _encode_Priority } from "../MMS-Object-Module-1/Priority.ta.mjs";
+import { type Unsigned32, _decode_Unsigned32, _encode_Unsigned32 } from "../ISO-9506-MMS-1/Unsigned32.ta.mjs";
 
 
 /**
@@ -48,70 +48,82 @@ import { Unsigned32, _decode_Unsigned32, _encode_Unsigned32 } from "../ISO-9506-
  */
 export
 class AlterEventConditionMonitoring_Request {
+    /**
+     * @summary `eventConditionName`.
+     * @description
+     *
+     * Event Condition to alter.
+     *
+     * [ISO 9506-1:2003 §19.6.1.1.1]
+     *
+     * @public
+     * @readonly
+     */
+    public readonly eventConditionName: ObjectName;
+    /**
+     * @summary `enabled`.
+     * @description
+     *
+     * Replacement `&enabled`. Omitted: unchanged. True starts monitoring; false
+     * forces `disabled`.
+     *
+     * [ISO 9506-1:2003 §19.6.1.1.2]
+     *
+     * @public
+     * @readonly
+     */
+    public readonly enabled?: OPTIONAL<BOOLEAN>;
+    /**
+     * @summary `priority`.
+     * @description
+     *
+     * Replacement `&priority`. Omitted: unchanged. Takes effect immediately.
+     *
+     * [ISO 9506-1:2003 §19.6.1.1.3]
+     *
+     * @public
+     * @readonly
+     */
+    public readonly priority?: OPTIONAL<Priority>;
+    /**
+     * @summary `alarmSummaryReports`.
+     * @description
+     *
+     * Replacement `&alarmSummaryReports`. Omitted: unchanged.
+     *
+     * [ISO 9506-1:2003 §19.6.1.1.4]
+     *
+     * @public
+     * @readonly
+     */
+    public readonly alarmSummaryReports?: OPTIONAL<BOOLEAN>;
+    /**
+     * @summary `evaluationInterval`.
+     * @description
+     *
+     * Proposed `&evaluationInterval` ms. Requires `cei`. Server may return
+     * TIME-RESOLUTION.
+     *
+     * [ISO 9506-1:2003 §19.6.1.1.5]
+     *
+     * @public
+     * @readonly
+     */
+    public readonly evaluationInterval?: OPTIONAL<Unsigned32>;
+
     constructor (
-        /**
-         * @summary `eventConditionName`.
-         * @description
-         *
-         * Event Condition to alter.
-         *
-         * [ISO 9506-1:2003 §19.6.1.1.1]
-         *
-         * @public
-         * @readonly
-         */
-        readonly eventConditionName: ObjectName,
-        /**
-         * @summary `enabled`.
-         * @description
-         *
-         * Replacement `&enabled`. Omitted: unchanged. True starts monitoring; false
-         * forces `disabled`.
-         *
-         * [ISO 9506-1:2003 §19.6.1.1.2]
-         *
-         * @public
-         * @readonly
-         */
-        readonly enabled?: OPTIONAL<BOOLEAN>,
-        /**
-         * @summary `priority`.
-         * @description
-         *
-         * Replacement `&priority`. Omitted: unchanged. Takes effect immediately.
-         *
-         * [ISO 9506-1:2003 §19.6.1.1.3]
-         *
-         * @public
-         * @readonly
-         */
-        readonly priority?: OPTIONAL<Priority>,
-        /**
-         * @summary `alarmSummaryReports`.
-         * @description
-         *
-         * Replacement `&alarmSummaryReports`. Omitted: unchanged.
-         *
-         * [ISO 9506-1:2003 §19.6.1.1.4]
-         *
-         * @public
-         * @readonly
-         */
-        readonly alarmSummaryReports?: OPTIONAL<BOOLEAN>,
-        /**
-         * @summary `evaluationInterval`.
-         * @description
-         *
-         * Proposed `&evaluationInterval` ms. Requires `cei`. Server may return
-         * TIME-RESOLUTION.
-         *
-         * [ISO 9506-1:2003 §19.6.1.1.5]
-         *
-         * @public
-         * @readonly
-         */
-        readonly evaluationInterval?: OPTIONAL<Unsigned32>
-    ) {}
+        eventConditionName: ObjectName,
+        enabled?: OPTIONAL<BOOLEAN>,
+        priority?: OPTIONAL<Priority>,
+        alarmSummaryReports?: OPTIONAL<BOOLEAN>,
+        evaluationInterval?: OPTIONAL<Unsigned32>
+    ) {
+        this.eventConditionName = eventConditionName;
+        this.enabled = enabled;
+        this.priority = priority;
+        this.alarmSummaryReports = alarmSummaryReports;
+        this.evaluationInterval = evaluationInterval;
+    }
 
     /**
      * @summary Restructures an object into a AlterEventConditionMonitoring_Request

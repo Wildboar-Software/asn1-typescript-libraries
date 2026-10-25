@@ -1,6 +1,6 @@
 /* eslint-disable */
 import {
-    ASN1Element as _Element,
+    type ASN1Element as _Element,
     ASN1TagClass as _TagClass,
     ASN1Construction as _Construction,
     ASN1UniversalType as _UniversalType,
@@ -11,12 +11,12 @@ import {
 } from '@wildboar/asn1';
 import * as $ from '@wildboar/asn1/functional';
 import {
-    BodyPartNumber,
+    type BodyPartNumber,
     _decode_BodyPartNumber,
     _encode_BodyPartNumber,
 } from '../IPMSHeadingExtensions/BodyPartNumber.ta.mjs';
 import {
-    SignatureStatus,
+    type SignatureStatus,
     _decode_SignatureStatus,
     _encode_SignatureStatus,
 } from '../MSGeneralAttributeTypes/SignatureStatus.ta.mjs';
@@ -34,20 +34,26 @@ import {
  *
  */
 export class BodyPartSignatureVerification_Item {
+    /**
+     * @summary `body_part_sequence_number`.
+     * @public
+     * @readonly
+     */
+    public readonly body_part_sequence_number: BodyPartNumber;
+    /**
+     * @summary `body_part_signature`.
+     * @public
+     * @readonly
+     */
+    public readonly body_part_signature: SignatureStatus;
+
     constructor(
-        /**
-         * @summary `body_part_sequence_number`.
-         * @public
-         * @readonly
-         */
-        readonly body_part_sequence_number: BodyPartNumber,
-        /**
-         * @summary `body_part_signature`.
-         * @public
-         * @readonly
-         */
-        readonly body_part_signature: SignatureStatus
-    ) {}
+        body_part_sequence_number: BodyPartNumber,
+        body_part_signature: SignatureStatus
+    ) {
+        this.body_part_sequence_number = body_part_sequence_number;
+        this.body_part_signature = body_part_signature;
+    }
 
     /**
      * @summary Restructures an object into a BodyPartSignatureVerification_Item

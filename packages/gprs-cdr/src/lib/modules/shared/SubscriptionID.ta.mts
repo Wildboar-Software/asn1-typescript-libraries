@@ -1,7 +1,7 @@
 /* eslint-disable */
 import {
-    UTF8String,
-    ASN1Element as _Element,
+    type UTF8String,
+    type ASN1Element as _Element,
     ASN1TagClass as _TagClass
 } from "@wildboar/asn1";
 import * as $ from "@wildboar/asn1/functional";
@@ -72,7 +72,7 @@ class SubscriptionID {
          * @static
          */
 
-    public static _enum_for_subscriptionIDType = _enum_for_SubscriptionID_subscriptionIDType;
+    public static _enum_for_subscriptionIDType: typeof _enum_for_SubscriptionID_subscriptionIDType = _enum_for_SubscriptionID_subscriptionIDType;
 }
 
 /**

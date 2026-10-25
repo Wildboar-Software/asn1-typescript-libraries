@@ -1,13 +1,13 @@
 /* eslint-disable */
 import {
-    SEQUENCE,
-    SET,
-    ASN1Element as _Element,
+    type SEQUENCE,
+    type SET,
+    type ASN1Element as _Element,
     ASN1ConstructionError as _ConstructionError,
 } from "@wildboar/asn1";
 import * as $ from "@wildboar/asn1/functional";
 import {
-    ObservedValue,
+    type ObservedValue,
     _decode_ObservedValue,
     _encode_ObservedValue,
 } from "../Attribute-ASN1Module/ObservedValue.ta.mjs";
@@ -31,20 +31,26 @@ import {
  */
 export
 class GaugeParameters_down {
+    /**
+     * @summary `high`.
+     * @public
+     * @readonly
+     */
+    public readonly high: ObservedValue;
+    /**
+     * @summary `low`.
+     * @public
+     * @readonly
+     */
+    public readonly low: ObservedValue;
+
     constructor (
-        /**
-         * @summary `high`.
-         * @public
-         * @readonly
-         */
-        readonly high: ObservedValue,
-        /**
-         * @summary `low`.
-         * @public
-         * @readonly
-         */
-        readonly low: ObservedValue
-    ) {}
+        high: ObservedValue,
+        low: ObservedValue
+    ) {
+        this.high = high;
+        this.low = low;
+    }
 
     /**
      * @summary Restructures an object into a GaugeParameters_down

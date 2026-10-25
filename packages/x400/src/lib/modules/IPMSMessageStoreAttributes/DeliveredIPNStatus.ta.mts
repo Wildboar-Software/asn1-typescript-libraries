@@ -1,7 +1,7 @@
 /* eslint-disable */
 import {
-    INTEGER,
-    ASN1Element as _Element,
+    type INTEGER,
+    type ASN1Element as _Element,
     ASN1TagClass as _TagClass,
     ASN1Construction as _Construction,
     ASN1UniversalType as _UniversalType,
@@ -34,118 +34,118 @@ export type DeliveredIPNStatus = INTEGER;
  * @constant
  * @type {number}
  */
-export const DeliveredIPNStatus_no_ipn_requested: DeliveredIPNStatus = 0; /* LONG_NAMED_INTEGER_VALUE */
+export const DeliveredIPNStatus_no_ipn_requested: 0 = 0 satisfies DeliveredIPNStatus; /* LONG_NAMED_INTEGER_VALUE */
 
 /**
  * @summary DeliveredIPNStatus_no_ipn_requested
  * @constant
  * @type {number}
  */
-export const no_ipn_requested: DeliveredIPNStatus = DeliveredIPNStatus_no_ipn_requested; /* SHORT_NAMED_INTEGER_VALUE */
+export const no_ipn_requested: 0 = DeliveredIPNStatus_no_ipn_requested; /* SHORT_NAMED_INTEGER_VALUE */
 
 /**
  * @summary DeliveredIPNStatus_an_requested
  * @constant
  * @type {number}
  */
-export const DeliveredIPNStatus_an_requested: DeliveredIPNStatus = 3; /* LONG_NAMED_INTEGER_VALUE */
+export const DeliveredIPNStatus_an_requested: 3 = 3 satisfies DeliveredIPNStatus; /* LONG_NAMED_INTEGER_VALUE */
 
 /**
  * @summary DeliveredIPNStatus_an_requested
  * @constant
  * @type {number}
  */
-export const an_requested: DeliveredIPNStatus = DeliveredIPNStatus_an_requested; /* SHORT_NAMED_INTEGER_VALUE */
+export const an_requested: 3 = DeliveredIPNStatus_an_requested; /* SHORT_NAMED_INTEGER_VALUE */
 
 /**
  * @summary DeliveredIPNStatus_nrn_requested
  * @constant
  * @type {number}
  */
-export const DeliveredIPNStatus_nrn_requested: DeliveredIPNStatus = 5; /* LONG_NAMED_INTEGER_VALUE */
+export const DeliveredIPNStatus_nrn_requested: 5 = 5 satisfies DeliveredIPNStatus; /* LONG_NAMED_INTEGER_VALUE */
 
 /**
  * @summary DeliveredIPNStatus_nrn_requested
  * @constant
  * @type {number}
  */
-export const nrn_requested: DeliveredIPNStatus = DeliveredIPNStatus_nrn_requested; /* SHORT_NAMED_INTEGER_VALUE */
+export const nrn_requested: 5 = DeliveredIPNStatus_nrn_requested; /* SHORT_NAMED_INTEGER_VALUE */
 
 /**
  * @summary DeliveredIPNStatus_rn_requested
  * @constant
  * @type {number}
  */
-export const DeliveredIPNStatus_rn_requested: DeliveredIPNStatus = 10; /* LONG_NAMED_INTEGER_VALUE */
+export const DeliveredIPNStatus_rn_requested: 10 = 10 satisfies DeliveredIPNStatus; /* LONG_NAMED_INTEGER_VALUE */
 
 /**
  * @summary DeliveredIPNStatus_rn_requested
  * @constant
  * @type {number}
  */
-export const rn_requested: DeliveredIPNStatus = DeliveredIPNStatus_rn_requested; /* SHORT_NAMED_INTEGER_VALUE */
+export const rn_requested: 10 = DeliveredIPNStatus_rn_requested; /* SHORT_NAMED_INTEGER_VALUE */
 
 /**
  * @summary DeliveredIPNStatus_an_received
  * @constant
  * @type {number}
  */
-export const DeliveredIPNStatus_an_received: DeliveredIPNStatus = 13; /* LONG_NAMED_INTEGER_VALUE */
+export const DeliveredIPNStatus_an_received: 13 = 13 satisfies DeliveredIPNStatus; /* LONG_NAMED_INTEGER_VALUE */
 
 /**
  * @summary DeliveredIPNStatus_an_received
  * @constant
  * @type {number}
  */
-export const an_received: DeliveredIPNStatus = DeliveredIPNStatus_an_received; /* SHORT_NAMED_INTEGER_VALUE */
+export const an_received: 13 = DeliveredIPNStatus_an_received; /* SHORT_NAMED_INTEGER_VALUE */
 
 /**
  * @summary DeliveredIPNStatus_ipm_auto_forwarded
  * @constant
  * @type {number}
  */
-export const DeliveredIPNStatus_ipm_auto_forwarded: DeliveredIPNStatus = 15; /* LONG_NAMED_INTEGER_VALUE */
+export const DeliveredIPNStatus_ipm_auto_forwarded: 15 = 15 satisfies DeliveredIPNStatus; /* LONG_NAMED_INTEGER_VALUE */
 
 /**
  * @summary DeliveredIPNStatus_ipm_auto_forwarded
  * @constant
  * @type {number}
  */
-export const ipm_auto_forwarded: DeliveredIPNStatus = DeliveredIPNStatus_ipm_auto_forwarded; /* SHORT_NAMED_INTEGER_VALUE */
+export const ipm_auto_forwarded: 15 = DeliveredIPNStatus_ipm_auto_forwarded; /* SHORT_NAMED_INTEGER_VALUE */
 
 /**
  * @summary DeliveredIPNStatus_ipm_discarded
  * @constant
  * @type {number}
  */
-export const DeliveredIPNStatus_ipm_discarded: DeliveredIPNStatus = 20; /* LONG_NAMED_INTEGER_VALUE */
+export const DeliveredIPNStatus_ipm_discarded: 20 = 20 satisfies DeliveredIPNStatus; /* LONG_NAMED_INTEGER_VALUE */
 
 /**
  * @summary DeliveredIPNStatus_ipm_discarded
  * @constant
  * @type {number}
  */
-export const ipm_discarded: DeliveredIPNStatus = DeliveredIPNStatus_ipm_discarded; /* SHORT_NAMED_INTEGER_VALUE */
+export const ipm_discarded: 20 = DeliveredIPNStatus_ipm_discarded; /* SHORT_NAMED_INTEGER_VALUE */
 
 /**
  * @summary DeliveredIPNStatus_rn_received
  * @constant
  * @type {number}
  */
-export const DeliveredIPNStatus_rn_received: DeliveredIPNStatus = 25; /* LONG_NAMED_INTEGER_VALUE */
+export const DeliveredIPNStatus_rn_received: 25 = 25 satisfies DeliveredIPNStatus; /* LONG_NAMED_INTEGER_VALUE */
 
 /**
  * @summary DeliveredIPNStatus_rn_received
  * @constant
  * @type {number}
  */
-export const rn_received: DeliveredIPNStatus = DeliveredIPNStatus_rn_received; /* SHORT_NAMED_INTEGER_VALUE */
+export const rn_received: 25 = DeliveredIPNStatus_rn_received; /* SHORT_NAMED_INTEGER_VALUE */
 
 
-export const _decode_DeliveredIPNStatus = $._decodeInteger;
+export const _decode_DeliveredIPNStatus: $.ASN1Decoder<INTEGER> = $._decodeInteger;
 
 
-export const _encode_DeliveredIPNStatus = $._encodeInteger;
+export const _encode_DeliveredIPNStatus: $.ASN1Encoder<INTEGER> = $._encodeInteger;
 
 
 /* eslint-enable */

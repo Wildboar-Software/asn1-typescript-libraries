@@ -2,7 +2,7 @@
 import * as $ from "@wildboar/asn1/functional";
 import { id_ce_targetingInformation } from "../AttributeCertificateDefinitions/id-ce-targetingInformation.va.mjs";
 import {
-    Targets,
+    type Targets,
     _decode_Targets,
     _encode_Targets,
 } from "../AttributeCertificateDefinitions/Targets.ta.mjs";

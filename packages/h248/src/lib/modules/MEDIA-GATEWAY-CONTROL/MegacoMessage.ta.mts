@@ -1,7 +1,7 @@
 /* eslint-disable */
 import {
-    OPTIONAL,
-    ASN1Element as _Element,
+    type OPTIONAL,
+    type ASN1Element as _Element,
     ASN1TagClass as _TagClass
 } from "@wildboar/asn1";
 import * as $ from "@wildboar/asn1/functional";
@@ -50,7 +50,7 @@ class MegacoMessage {
      * @public
      * @readonly
      */
-    readonly authHeader: OPTIONAL<AuthenticationHeader>;
+    public readonly authHeader: OPTIONAL<AuthenticationHeader>;
     /**
      * @summary `mess`.
      * @description
@@ -62,7 +62,7 @@ class MegacoMessage {
      * @public
      * @readonly
      */
-    readonly mess: Message;
+    public readonly mess: Message;
 
     constructor (
         authHeader: OPTIONAL<AuthenticationHeader>,

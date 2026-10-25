@@ -1,13 +1,13 @@
 /* eslint-disable */
 import {
     ASN1ConstructionError as _ConstructionError,
-    ASN1Element as _Element,
+    type ASN1Element as _Element,
     ASN1TagClass as _TagClass
 } from "@wildboar/asn1";
 import * as $ from "@wildboar/asn1/functional";
 import { KeyGetType, _decode_KeyGetType, _encode_KeyGetType, _enum_for_KeyGetType } from "../TS33128Payloads/KeyGetType.ta.mjs";
 // export { KeyGetType, _enum_for_KeyGetType, KeyGetType_internal /* IMPORTED_LONG_ENUMERATION_ITEM */, internal /* IMPORTED_SHORT_ENUMERATION_ITEM */, KeyGetType_external /* IMPORTED_LONG_ENUMERATION_ITEM */, external /* IMPORTED_SHORT_ENUMERATION_ITEM */, _decode_KeyGetType, _encode_KeyGetType } from "../TS33128Payloads/KeyGetType.ta.mjs";
-import { NAI, _decode_NAI, _encode_NAI } from "../TS33128Payloads/NAI.ta.mjs";
+import { type NAI, _decode_NAI, _encode_NAI } from "../TS33128Payloads/NAI.ta.mjs";
 // export { NAI, _decode_NAI, _encode_NAI } from "../TS33128Payloads/NAI.ta.mjs";
 import { AFKeyInfo, _decode_AFKeyInfo, _encode_AFKeyInfo } from "../TS33128Payloads/AFKeyInfo.ta.mjs";
 // export { AFKeyInfo, _decode_AFKeyInfo, _encode_AFKeyInfo } from "../TS33128Payloads/AFKeyInfo.ta.mjs";
@@ -115,7 +115,7 @@ class AAnFKAKMAApplicationKeyGet {
          * @static
          */
 
-    public static _enum_for_type_ = _enum_for_KeyGetType;
+    public static _enum_for_type_: typeof _enum_for_KeyGetType = _enum_for_KeyGetType;
 }
 
 /**

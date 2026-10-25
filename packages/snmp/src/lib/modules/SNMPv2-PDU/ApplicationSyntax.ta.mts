@@ -1,6 +1,6 @@
 /* eslint-disable */
 import {
-    ASN1Element as _Element,
+    type ASN1Element as _Element,
     ASN1TagClass as _TagClass,
     ASN1Construction as _Construction,
     ASN1UniversalType as _UniversalType,
@@ -10,12 +10,12 @@ import {
     ASN1ConstructionError as _ConstructionError,
 } from "@wildboar/asn1";
 import * as $ from "@wildboar/asn1/functional";
-import { IpAddress, _decode_IpAddress, _encode_IpAddress } from "../SNMPv2-PDU/IpAddress.ta.mjs";
-import { Counter32, _decode_Counter32, _encode_Counter32 } from "../SNMPv2-PDU/Counter32.ta.mjs";
-import { TimeTicks, _decode_TimeTicks, _encode_TimeTicks } from "../SNMPv2-PDU/TimeTicks.ta.mjs";
-import { Opaque, _decode_Opaque, _encode_Opaque } from "../SNMPv2-PDU/Opaque.ta.mjs";
-import { Counter64, _decode_Counter64, _encode_Counter64 } from "../SNMPv2-PDU/Counter64.ta.mjs";
-import { Unsigned32, _decode_Unsigned32, _encode_Unsigned32 } from "../SNMPv2-PDU/Unsigned32.ta.mjs";
+import { type IpAddress, _decode_IpAddress, _encode_IpAddress } from "../SNMPv2-PDU/IpAddress.ta.mjs";
+import { type Counter32, _decode_Counter32, _encode_Counter32 } from "../SNMPv2-PDU/Counter32.ta.mjs";
+import { type TimeTicks, _decode_TimeTicks, _encode_TimeTicks } from "../SNMPv2-PDU/TimeTicks.ta.mjs";
+import { type Opaque, _decode_Opaque, _encode_Opaque } from "../SNMPv2-PDU/Opaque.ta.mjs";
+import { type Counter64, _decode_Counter64, _encode_Counter64 } from "../SNMPv2-PDU/Counter64.ta.mjs";
+import { type Unsigned32, _decode_Unsigned32, _encode_Unsigned32 } from "../SNMPv2-PDU/Unsigned32.ta.mjs";
 /**
  * @summary ApplicationSyntax
  * @description

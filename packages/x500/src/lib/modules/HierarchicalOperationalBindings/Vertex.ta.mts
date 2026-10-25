@@ -1,12 +1,12 @@
 /* eslint-disable */
 import {
-    ASN1Element as _Element,
+    type ASN1Element as _Element,
     ASN1TagClass as _TagClass,
-    OPTIONAL,
+    type OPTIONAL,
 } from "@wildboar/asn1";
 import * as $ from "@wildboar/asn1/functional";
 import {
-    MasterAndShadowAccessPoints,
+    type MasterAndShadowAccessPoints,
     _decode_MasterAndShadowAccessPoints,
     _encode_MasterAndShadowAccessPoints,
 } from "../DistributedOperations/MasterAndShadowAccessPoints.ta.mjs";
@@ -21,7 +21,7 @@ import {
     _encode_Attribute,
 } from "../InformationFramework/Attribute.ta.mjs";
 import {
-    RelativeDistinguishedName,
+    type RelativeDistinguishedName,
     _decode_RelativeDistinguishedName,
     _encode_RelativeDistinguishedName,
 } from "../InformationFramework/RelativeDistinguishedName.ta.mjs";
@@ -45,58 +45,70 @@ import {
  *
  */
 export class Vertex {
+    /**
+     * @summary `rdn`.
+     * @description
+     *
+     * This vertex's RDN in the immediate-superior DN (rootward first).
+     *
+     * @public
+     * @readonly
+     */
+    public readonly rdn: RelativeDistinguishedName;
+    /**
+     * @summary `admPointInfo`.
+     * @description
+     *
+     * Present ⇒ this vertex is an administrative point; includes at least
+     * `administrativeRole`. SET SIZE (1..MAX); omit rather than empty.
+     *
+     * @public
+     * @readonly
+     */
+    public readonly admPointInfo?: OPTIONAL<Attribute[]>;
+    /**
+     * @summary `subentries`.
+     * @description
+     *
+     * Subentries of that administrative point. SET SIZE (1..MAX); omit
+     * rather than empty. Order insignificant.
+     *
+     * @public
+     * @readonly
+     */
+    public readonly subentries?: OPTIONAL<SubentryInfo[]>;
+    /**
+     * @summary `accessPoints`.
+     * @description
+     *
+     * Present ⇒ this vertex is the CP of the immediately superior naming
+     * context (immediate-superior reference). Master AP in this set equals
+     * the DOP Establish/Modify `accessPoint` parameter.
+     *
+     * @public
+     * @readonly
+     */
+    public readonly accessPoints?: OPTIONAL<MasterAndShadowAccessPoints>;
+    /**
+     * @summary Extensions that are not recognized.
+     * @public
+     * @readonly
+     */
+    public readonly _unrecognizedExtensionsList: _Element[];
+
     constructor(
-        /**
-         * @summary `rdn`.
-         * @description
-         *
-         * This vertex's RDN in the immediate-superior DN (rootward first).
-         *
-         * @public
-         * @readonly
-         */
-        readonly rdn: RelativeDistinguishedName,
-        /**
-         * @summary `admPointInfo`.
-         * @description
-         *
-         * Present ⇒ this vertex is an administrative point; includes at least
-         * `administrativeRole`. SET SIZE (1..MAX); omit rather than empty.
-         *
-         * @public
-         * @readonly
-         */
-        readonly admPointInfo?: OPTIONAL<Attribute[]>,
-        /**
-         * @summary `subentries`.
-         * @description
-         *
-         * Subentries of that administrative point. SET SIZE (1..MAX); omit
-         * rather than empty. Order insignificant.
-         *
-         * @public
-         * @readonly
-         */
-        readonly subentries?: OPTIONAL<SubentryInfo[]>,
-        /**
-         * @summary `accessPoints`.
-         * @description
-         *
-         * Present ⇒ this vertex is the CP of the immediately superior naming
-         * context (immediate-superior reference). Master AP in this set equals
-         * the DOP Establish/Modify `accessPoint` parameter.
-         *
-         * @public
-         * @readonly
-         */
-        readonly accessPoints?: OPTIONAL<MasterAndShadowAccessPoints>,
-        /**
-         * @summary Extensions that are not recognized.
-         * @public
-         * @readonly
-         */
-        readonly _unrecognizedExtensionsList: _Element[] = []
-    ) {}
+        rdn: RelativeDistinguishedName,
+        admPointInfo?: OPTIONAL<Attribute[]>,
+        subentries?: OPTIONAL<SubentryInfo[]>,
+        accessPoints?: OPTIONAL<MasterAndShadowAccessPoints>,
+        _unrecognizedExtensionsList: _Element[] = []
+    ) {
+        this.rdn = rdn;
+        this.admPointInfo = admPointInfo;
+        this.subentries = subentries;
+        this.accessPoints = accessPoints;
+        this._unrecognizedExtensionsList = _unrecognizedExtensionsList;
+    }
 
     /**
      * @summary Restructures an object into a Vertex

@@ -1,7 +1,7 @@
 /* eslint-disable */
 import {
-    OPTIONAL,
-    ASN1Element as _Element,
+    type OPTIONAL,
+    type ASN1Element as _Element,
     ASN1TagClass as _TagClass
 } from "@wildboar/asn1";
 import * as $ from "@wildboar/asn1/functional";
@@ -23,8 +23,8 @@ import { ModificationInstruction, _decode_ModificationInstruction, _encode_Modif
  * 
  * ```asn1
  * ModificationRequestFor-IP-SM-GW-Data ::= SEQUENCE {
- *     modifyRegistrationStatus    [0]    ModificationInstruction    OPTIONAL,
- *     extensionContainer    [1]    ExtensionContainer    OPTIONAL,
+ *     modifyRegistrationStatus    [0]    ModificationInstruction    type OPTIONAL,
+ *     extensionContainer    [1]    ExtensionContainer    type OPTIONAL,
  *     ...,
  *     ip-sm-gw-DiameterAddress    [2]    NetworkNodeDiameterAddress    OPTIONAL
  *     -- ip-sm-gw-DiameterAddress may be present when ModificationInstruction is "activate"
@@ -35,42 +35,52 @@ import { ModificationInstruction, _decode_ModificationInstruction, _encode_Modif
  */
 export
 class ModificationRequestFor_IP_SM_GW_Data {
+    /**
+     * @summary `modifyRegistrationStatus`.
+     * @description
+     *
+     * Activate or deactivate the IP-SM-GW registration stored in the HLR.
+     * (3GPP TS 29.002 V19.1.0 clause 8.11.4)
+     *
+     * @public
+     * @readonly
+     */
+    public readonly modifyRegistrationStatus?: OPTIONAL<ModificationInstruction>;
+    /**
+     * @summary `extensionContainer`.
+     * @public
+     * @readonly
+     */
+    public readonly extensionContainer?: OPTIONAL<ExtensionContainer>;
+    /**
+     * @summary `ip_sm_gw_DiameterAddress`.
+     * @description
+     *
+     * May be present when ModificationInstruction is `activate`. (3GPP TS
+     * 29.002 V19.1.0 clause 17.7.1)
+     *
+     * @public
+     * @readonly
+     */
+    public readonly ip_sm_gw_DiameterAddress?: OPTIONAL<NetworkNodeDiameterAddress>;
+    /**
+     * @summary Extensions that are not recognized.
+     * @public
+     * @readonly
+     */
+    public readonly _unrecognizedExtensionsList: _Element[];
+
     constructor (
-        /**
-         * @summary `modifyRegistrationStatus`.
-         * @description
-         *
-         * Activate or deactivate the IP-SM-GW registration stored in the HLR.
-         * (3GPP TS 29.002 V19.1.0 clause 8.11.4)
-         *
-         * @public
-         * @readonly
-         */
-        readonly modifyRegistrationStatus?: OPTIONAL<ModificationInstruction>,
-        /**
-         * @summary `extensionContainer`.
-         * @public
-         * @readonly
-         */
-        readonly extensionContainer?: OPTIONAL<ExtensionContainer>,
-        /**
-         * @summary `ip_sm_gw_DiameterAddress`.
-         * @description
-         *
-         * May be present when ModificationInstruction is `activate`. (3GPP TS
-         * 29.002 V19.1.0 clause 17.7.1)
-         *
-         * @public
-         * @readonly
-         */
-        readonly ip_sm_gw_DiameterAddress?: OPTIONAL<NetworkNodeDiameterAddress>,
-        /**
-         * @summary Extensions that are not recognized.
-         * @public
-         * @readonly
-         */
-        readonly _unrecognizedExtensionsList: _Element[] = []
-    ) {}
+        modifyRegistrationStatus?: OPTIONAL<ModificationInstruction>,
+        extensionContainer?: OPTIONAL<ExtensionContainer>,
+        ip_sm_gw_DiameterAddress?: OPTIONAL<NetworkNodeDiameterAddress>,
+        _unrecognizedExtensionsList: _Element[] = []
+    ) {
+        this.modifyRegistrationStatus = modifyRegistrationStatus;
+        this.extensionContainer = extensionContainer;
+        this.ip_sm_gw_DiameterAddress = ip_sm_gw_DiameterAddress;
+        this._unrecognizedExtensionsList = _unrecognizedExtensionsList;
+    }
 
     /**
      * @summary Restructures an object into a ModificationRequestFor_IP_SM_GW_Data
@@ -94,7 +104,7 @@ class ModificationRequestFor_IP_SM_GW_Data {
          * @static
          */
 
-    public static _enum_for_modifyRegistrationStatus = _enum_for_ModificationInstruction;
+    public static _enum_for_modifyRegistrationStatus: typeof _enum_for_ModificationInstruction = _enum_for_ModificationInstruction;
 }
 
 /**

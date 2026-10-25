@@ -1,7 +1,7 @@
 /* eslint-disable */
 import {
-    EXTERNAL,
-    ASN1Element as _Element,
+    type EXTERNAL,
+    type ASN1Element as _Element,
     ASN1TagClass as _TagClass,
     ASN1Construction as _Construction,
     ASN1UniversalType as _UniversalType,
@@ -49,7 +49,7 @@ export const _decode_DfrDocumentContent = (el: _Element): DfrDocumentContent => 
     }
     return value;
 };
-export const _encode_DfrDocumentContent = $._encodeExternal;
+export const _encode_DfrDocumentContent: $.ASN1Encoder<_External> = $._encodeExternal;
 
 
 /* eslint-enable */

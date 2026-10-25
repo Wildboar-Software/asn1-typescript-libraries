@@ -1,5 +1,5 @@
 /* eslint-disable */
-import { LegType } from "../IN-SSF-SCF-datatypes/LegType.ta.mjs";
+import { type LegType } from "../IN-SSF-SCF-datatypes/LegType.ta.mjs";
 // export { LegType, _decode_LegType, _encode_LegType } from "../IN-SSF-SCF-datatypes/LegType.ta.mjs";
 
 

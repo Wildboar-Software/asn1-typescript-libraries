@@ -1,13 +1,13 @@
 /* eslint-disable */
 import {
-    ASN1Element as _Element,
+    type ASN1Element as _Element,
     ASN1TagClass as _TagClass,
-    OCTET_STRING,
-    OPTIONAL,
+    type OCTET_STRING,
+    type OPTIONAL,
 } from "@wildboar/asn1";
 import * as $ from "@wildboar/asn1/functional";
 import {
-    Certificate,
+    type Certificate,
     _decode_Certificate,
     _encode_Certificate,
 } from "../AuthenticationFramework/Certificate.ta.mjs";
@@ -41,61 +41,73 @@ import {
  *
  */
 export class CertificationPath {
+    /**
+     * @summary `userKeyId`.
+     * @description
+     *
+     * Identifier of the sender's encryption public key.
+     *
+     * @public
+     * @readonly
+     */
+    public readonly userKeyId?: OPTIONAL<OCTET_STRING>;
+    /**
+     * @summary `userCertif`.
+     * @description
+     *
+     * Certificate containing the sender's encryption public key.
+     *
+     * @public
+     * @readonly
+     */
+    public readonly userCertif?: OPTIONAL<Certificate>;
+    /**
+     * @summary `verifKeyId`.
+     * @description
+     *
+     * Identifier of the sender's verification public key. If present,
+     * `userKeyId` or `userCertif` must also be present.
+     *
+     * @public
+     * @readonly
+     */
+    public readonly verifKeyId?: OPTIONAL<OCTET_STRING>;
+    /**
+     * @summary `userVerifCertif`.
+     * @description
+     *
+     * Certificate containing the sender's verification public key.
+     * Same co-presence rule as `verifKeyId`.
+     *
+     * @public
+     * @readonly
+     */
+    public readonly userVerifCertif?: OPTIONAL<Certificate>;
+    /**
+     * @summary `theCACertificates`.
+     * @description
+     *
+     * CA certificate pairs from target toward source. Requires at
+     * least one of the key/cert fields above.
+     *
+     * @public
+     * @readonly
+     */
+    public readonly theCACertificates?: OPTIONAL<CertificatePair[]>;
+
     constructor(
-        /**
-         * @summary `userKeyId`.
-         * @description
-         *
-         * Identifier of the sender's encryption public key.
-         *
-         * @public
-         * @readonly
-         */
-        readonly userKeyId?: OPTIONAL<OCTET_STRING>,
-        /**
-         * @summary `userCertif`.
-         * @description
-         *
-         * Certificate containing the sender's encryption public key.
-         *
-         * @public
-         * @readonly
-         */
-        readonly userCertif?: OPTIONAL<Certificate>,
-        /**
-         * @summary `verifKeyId`.
-         * @description
-         *
-         * Identifier of the sender's verification public key. If present,
-         * `userKeyId` or `userCertif` must also be present.
-         *
-         * @public
-         * @readonly
-         */
-        readonly verifKeyId?: OPTIONAL<OCTET_STRING>,
-        /**
-         * @summary `userVerifCertif`.
-         * @description
-         *
-         * Certificate containing the sender's verification public key.
-         * Same co-presence rule as `verifKeyId`.
-         *
-         * @public
-         * @readonly
-         */
-        readonly userVerifCertif?: OPTIONAL<Certificate>,
-        /**
-         * @summary `theCACertificates`.
-         * @description
-         *
-         * CA certificate pairs from target toward source. Requires at
-         * least one of the key/cert fields above.
-         *
-         * @public
-         * @readonly
-         */
-        readonly theCACertificates?: OPTIONAL<CertificatePair[]>
-    ) {}
+        userKeyId?: OPTIONAL<OCTET_STRING>,
+        userCertif?: OPTIONAL<Certificate>,
+        verifKeyId?: OPTIONAL<OCTET_STRING>,
+        userVerifCertif?: OPTIONAL<Certificate>,
+        theCACertificates?: OPTIONAL<CertificatePair[]>
+    ) {
+        this.userKeyId = userKeyId;
+        this.userCertif = userCertif;
+        this.verifKeyId = verifKeyId;
+        this.userVerifCertif = userVerifCertif;
+        this.theCACertificates = theCACertificates;
+    }
 
     /**
      * @summary Restructures an object into a CertificationPath

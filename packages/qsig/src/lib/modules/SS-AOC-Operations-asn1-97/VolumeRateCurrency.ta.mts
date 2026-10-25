@@ -1,11 +1,11 @@
 /* eslint-disable */
 import {
     ASN1ConstructionError as _ConstructionError,
-    ASN1Element as _Element,
+    type ASN1Element as _Element,
     ASN1TagClass as _TagClass
 } from "@wildboar/asn1";
 import * as $ from "@wildboar/asn1/functional";
-import { Currency, _decode_Currency, _encode_Currency } from "../SS-AOC-Operations-asn1-97/Currency.ta.mjs";
+import { type Currency, _decode_Currency, _encode_Currency } from "../SS-AOC-Operations-asn1-97/Currency.ta.mjs";
 import { Amount, _decode_Amount, _encode_Amount } from "../SS-AOC-Operations-asn1-97/Amount.ta.mjs";
 import { VolumeUnit, _decode_VolumeUnit, _encode_VolumeUnit, _enum_for_VolumeUnit } from "../SS-AOC-Operations-asn1-97/VolumeUnit.ta.mjs";
 
@@ -96,7 +96,7 @@ class VolumeRateCurrency {
          * @static
          */
 
-    public static _enum_for_vRVolumeUnit = _enum_for_VolumeUnit;
+    public static _enum_for_vRVolumeUnit: typeof _enum_for_VolumeUnit = _enum_for_VolumeUnit;
 }
 
 /**

@@ -1,7 +1,7 @@
 /* eslint-disable */
 import {
-    OBJECT_IDENTIFIER,
-    ASN1Element as _Element,
+    type OBJECT_IDENTIFIER,
+    type ASN1Element as _Element,
     ASN1TagClass as _TagClass,
     ASN1Construction as _Construction,
     ASN1UniversalType as _UniversalType,
@@ -30,54 +30,64 @@ import { type CR_SEQUENCE } from "../E-health-command-response/CR-SEQUENCE.oca.m
  */
 export
 class E_health_SetUp_Message_Response_interactive_conditional_accept {
+    /**
+     * @summary `id`.
+     * @description
+     *
+     * `CR-SEQUENCE.&id` of the interactive session being
+     * conditionally accepted. ITU-T Rec. X.1080.1 (10/2011)
+     * module E-health-setup.
+     *
+     * @public
+     * @readonly
+     */
+    public readonly id: OBJECT_IDENTIFIER;
+    /**
+     * @summary `reduced_requirements`.
+     * @description
+     *
+     * Reduced `CR-SEQUENCE.&requirements` relative to the
+     * request. ITU-T Rec. X.1080.1 (10/2011) module
+     * E-health-setup.
+     *
+     * @public
+     * @readonly
+     */
+    public readonly reduced_requirements: CR_SEQUENCE["&requirements"];
+    /**
+     * @summary `voice_options`.
+     * @description
+     *
+     * Voice option OID accepted for the session. ITU-T Rec.
+     * X.1080.1 (10/2011) module E-health-setup.
+     *
+     * @public
+     * @readonly
+     */
+    public readonly voice_options: OBJECT_IDENTIFIER;
+    /**
+     * @summary `video_options`.
+     * @description
+     *
+     * Video option OID accepted for the session. ITU-T Rec.
+     * X.1080.1 (10/2011) module E-health-setup.
+     *
+     * @public
+     * @readonly
+     */
+    public readonly video_options: OBJECT_IDENTIFIER;
+
     constructor (
-        /**
-         * @summary `id`.
-         * @description
-         *
-         * `CR-SEQUENCE.&id` of the interactive session being
-         * conditionally accepted. ITU-T Rec. X.1080.1 (10/2011)
-         * module E-health-setup.
-         *
-         * @public
-         * @readonly
-         */
-        readonly id: OBJECT_IDENTIFIER,
-        /**
-         * @summary `reduced_requirements`.
-         * @description
-         *
-         * Reduced `CR-SEQUENCE.&requirements` relative to the
-         * request. ITU-T Rec. X.1080.1 (10/2011) module
-         * E-health-setup.
-         *
-         * @public
-         * @readonly
-         */
-        readonly reduced_requirements: CR_SEQUENCE["&requirements"],
-        /**
-         * @summary `voice_options`.
-         * @description
-         *
-         * Voice option OID accepted for the session. ITU-T Rec.
-         * X.1080.1 (10/2011) module E-health-setup.
-         *
-         * @public
-         * @readonly
-         */
-        readonly voice_options: OBJECT_IDENTIFIER,
-        /**
-         * @summary `video_options`.
-         * @description
-         *
-         * Video option OID accepted for the session. ITU-T Rec.
-         * X.1080.1 (10/2011) module E-health-setup.
-         *
-         * @public
-         * @readonly
-         */
-        readonly video_options: OBJECT_IDENTIFIER
-    ) {}
+        id: OBJECT_IDENTIFIER,
+        reduced_requirements: CR_SEQUENCE["&requirements"],
+        voice_options: OBJECT_IDENTIFIER,
+        video_options: OBJECT_IDENTIFIER
+    ) {
+        this.id = id;
+        this.reduced_requirements = reduced_requirements;
+        this.voice_options = voice_options;
+        this.video_options = video_options;
+    }
 
     /**
      * @summary Restructures an object into a E_health_SetUp_Message_Response_interactive_conditional_accept

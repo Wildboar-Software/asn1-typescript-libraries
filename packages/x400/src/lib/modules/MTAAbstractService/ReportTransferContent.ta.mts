@@ -1,7 +1,7 @@
 /* eslint-disable */
 import {
-    OPTIONAL,
-    ASN1Element as _Element,
+    type OPTIONAL,
+    type ASN1Element as _Element,
     ASN1TagClass as _TagClass,
     ASN1Construction as _Construction,
     ASN1UniversalType as _UniversalType,
@@ -22,37 +22,37 @@ import {
     _encode_PerRecipientReportTransferFields,
 } from '../MTAAbstractService/PerRecipientReportTransferFields.ta.mjs';
 import {
-    SubjectIdentifier,
+    type SubjectIdentifier,
     _decode_SubjectIdentifier,
     _encode_SubjectIdentifier,
 } from '../MTAAbstractService/SubjectIdentifier.ta.mjs';
 import {
-    SubjectIntermediateTraceInformation,
+    type SubjectIntermediateTraceInformation,
     _decode_SubjectIntermediateTraceInformation,
     _encode_SubjectIntermediateTraceInformation,
 } from '../MTAAbstractService/SubjectIntermediateTraceInformation.ta.mjs';
 import {
-    OriginalEncodedInformationTypes,
+    type OriginalEncodedInformationTypes,
     _decode_OriginalEncodedInformationTypes,
     _encode_OriginalEncodedInformationTypes,
 } from '../MTSAbstractService/OriginalEncodedInformationTypes.ta.mjs';
 import {
-    ContentType,
+    type ContentType,
     _decode_ContentType,
     _encode_ContentType,
 } from '../MTSAbstractService/ContentType.ta.mjs';
 import {
-    ContentIdentifier,
+    type ContentIdentifier,
     _decode_ContentIdentifier,
     _encode_ContentIdentifier,
 } from '../MTSAbstractService/ContentIdentifier.ta.mjs';
 import {
-    Content,
+    type Content,
     _decode_Content,
     _encode_Content,
 } from '../MTSAbstractService/Content.ta.mjs';
 import {
-    AdditionalInformation,
+    type AdditionalInformation,
     _decode_AdditionalInformation,
     _encode_AdditionalInformation,
 } from '../MTAAbstractService/AdditionalInformation.ta.mjs';
@@ -87,64 +87,86 @@ import {
  *
  */
 export class ReportTransferContent implements PerReportTransferFields {
-    constructor(
-        /**
-         * @summary `subject_identifier`.
-         * @public
-         * @readonly
-         */
-        readonly subject_identifier: SubjectIdentifier /* REPLICATED_COMPONENT */,
-        /**
-         * @summary `subject_intermediate_trace_information`.
-         * @public
-         * @readonly
-         */
-        readonly subject_intermediate_trace_information: OPTIONAL<SubjectIntermediateTraceInformation> /* REPLICATED_COMPONENT */,
-        /**
-         * @summary `original_encoded_information_types`.
-         * @public
-         * @readonly
-         */
-        readonly original_encoded_information_types: OPTIONAL<OriginalEncodedInformationTypes> /* REPLICATED_COMPONENT */,
-        /**
-         * @summary `content_type`.
-         * @public
-         * @readonly
-         */
-        readonly content_type: OPTIONAL<ContentType> /* REPLICATED_COMPONENT */,
-        /**
-         * @summary `content_identifier`.
-         * @public
-         * @readonly
-         */
-        readonly content_identifier: OPTIONAL<ContentIdentifier> /* REPLICATED_COMPONENT */,
-        /**
-         * @summary `returned_content`.
-         * @public
-         * @readonly
-         */
-        readonly returned_content: OPTIONAL<Content> /* REPLICATED_COMPONENT */,
-        /**
-         * @summary `additional_information`.
-         * @public
-         * @readonly
-         */
-        readonly additional_information: OPTIONAL<AdditionalInformation> /* REPLICATED_COMPONENT */,
-        /**
-         * @summary `extensions`.
-         * @public
-         * @readonly
-         */
-        readonly extensions: OPTIONAL<
+    /**
+     * @summary `subject_identifier`.
+     * @public
+     * @readonly
+     */
+    public readonly subject_identifier: SubjectIdentifier; /* REPLICATED_COMPONENT */
+    /**
+     * @summary `subject_intermediate_trace_information`.
+     * @public
+     * @readonly
+     */
+    public readonly subject_intermediate_trace_information: OPTIONAL<SubjectIntermediateTraceInformation>; /* REPLICATED_COMPONENT */
+    /**
+     * @summary `original_encoded_information_types`.
+     * @public
+     * @readonly
+     */
+    public readonly original_encoded_information_types: OPTIONAL<OriginalEncodedInformationTypes>; /* REPLICATED_COMPONENT */
+    /**
+     * @summary `content_type`.
+     * @public
+     * @readonly
+     */
+    public readonly content_type: OPTIONAL<ContentType>; /* REPLICATED_COMPONENT */
+    /**
+     * @summary `content_identifier`.
+     * @public
+     * @readonly
+     */
+    public readonly content_identifier: OPTIONAL<ContentIdentifier>; /* REPLICATED_COMPONENT */
+    /**
+     * @summary `returned_content`.
+     * @public
+     * @readonly
+     */
+    public readonly returned_content: OPTIONAL<Content>; /* REPLICATED_COMPONENT */
+    /**
+     * @summary `additional_information`.
+     * @public
+     * @readonly
+     */
+    public readonly additional_information: OPTIONAL<AdditionalInformation>; /* REPLICATED_COMPONENT */
+    /**
+     * @summary `extensions`.
+     * @public
+     * @readonly
+     */
+    public readonly extensions: OPTIONAL<
             ExtensionField[]
-        > /* REPLICATED_COMPONENT */,
-        /**
-         * @summary `per_recipient_fields`.
-         * @public
-         * @readonly
-         */
-        readonly per_recipient_fields: PerRecipientReportTransferFields[]
-    ) {}
+        >; /* REPLICATED_COMPONENT */
+    /**
+     * @summary `per_recipient_fields`.
+     * @public
+     * @readonly
+     */
+    public readonly per_recipient_fields: PerRecipientReportTransferFields[];
+
+    constructor(
+        subject_identifier: SubjectIdentifier,
+        subject_intermediate_trace_information: OPTIONAL<SubjectIntermediateTraceInformation>,
+        original_encoded_information_types: OPTIONAL<OriginalEncodedInformationTypes>,
+        content_type: OPTIONAL<ContentType>,
+        content_identifier: OPTIONAL<ContentIdentifier>,
+        returned_content: OPTIONAL<Content>,
+        additional_information: OPTIONAL<AdditionalInformation>,
+        extensions: OPTIONAL<
+            ExtensionField[]
+        >,
+        per_recipient_fields: PerRecipientReportTransferFields[]
+    ) {
+        this.subject_identifier = subject_identifier;
+        this.subject_intermediate_trace_information = subject_intermediate_trace_information;
+        this.original_encoded_information_types = original_encoded_information_types;
+        this.content_type = content_type;
+        this.content_identifier = content_identifier;
+        this.returned_content = returned_content;
+        this.additional_information = additional_information;
+        this.extensions = extensions;
+        this.per_recipient_fields = per_recipient_fields;
+    }
 
     /**
      * @summary Restructures an object into a ReportTransferContent

@@ -2,16 +2,16 @@
 
 import * as $ from "@wildboar/asn1/functional";
 import {
-    SEQUENCE,
-    SET,
-    IA5String,
-    ASN1Element as _Element,
+    type SEQUENCE,
+    type SET,
+    type IA5String,
+    type ASN1Element as _Element,
     ASN1TagClass as _TagClass,
     ASN1ConstructionError as _ConstructionError
 } from "@wildboar/asn1";
-import { NenaCompanyIDType, _decode_NenaCompanyIDType, _encode_NenaCompanyIDType } from "../CSTA-call-control/NenaCompanyIDType.ta.mjs";
+import { type NenaCompanyIDType, _decode_NenaCompanyIDType, _encode_NenaCompanyIDType } from "../CSTA-call-control/NenaCompanyIDType.ta.mjs";
 
-import { TelUri247Type, _decode_TelUri247Type, _encode_TelUri247Type } from "../CSTA-call-control/TelUri247Type.ta.mjs";
+import { type TelUri247Type, _decode_TelUri247Type, _encode_TelUri247Type } from "../CSTA-call-control/TelUri247Type.ta.mjs";
 
 
 
@@ -39,40 +39,48 @@ import { TelUri247Type, _decode_TelUri247Type, _encode_TelUri247Type } from "../
  */
 export
 class ProvidedBy {
+    /**
+     * @summary `dataproviderID`.
+     * @description
+     *
+     * NENA company identifier of the location provider.
+     * ECMA-285 §9.9.
+     *
+     * @public
+     * @readonly
+     */
+    public readonly dataproviderID: NenaCompanyIDType;
+    /**
+     * @summary `telUri`.
+     * @description
+     *
+     * RFC 3966 `tel:` URI; ECMA-285 requires an emergency
+     * number available 24/7. ECMA-285 §9.9.
+     *
+     * @public
+     * @readonly
+     */
+    public readonly telUri: TelUri247Type;
+    /**
+     * @summary `uRL`.
+     * @description
+     *
+     * URL for the location provider. ECMA-285 §9.9.
+     *
+     * @public
+     * @readonly
+     */
+    public readonly uRL: IA5String;
+
     constructor (
-        /**
-         * @summary `dataproviderID`.
-         * @description
-         *
-         * NENA company identifier of the location provider.
-         * ECMA-285 §9.9.
-         *
-         * @public
-         * @readonly
-         */
-        readonly dataproviderID: NenaCompanyIDType,
-        /**
-         * @summary `telUri`.
-         * @description
-         *
-         * RFC 3966 `tel:` URI; ECMA-285 requires an emergency
-         * number available 24/7. ECMA-285 §9.9.
-         *
-         * @public
-         * @readonly
-         */
-        readonly telUri: TelUri247Type,
-        /**
-         * @summary `uRL`.
-         * @description
-         *
-         * URL for the location provider. ECMA-285 §9.9.
-         *
-         * @public
-         * @readonly
-         */
-        readonly uRL: IA5String
-    ) {}
+        dataproviderID: NenaCompanyIDType,
+        telUri: TelUri247Type,
+        uRL: IA5String
+    ) {
+        this.dataproviderID = dataproviderID;
+        this.telUri = telUri;
+        this.uRL = uRL;
+    }
 
     /**
      * @summary Restructures an object into a ProvidedBy

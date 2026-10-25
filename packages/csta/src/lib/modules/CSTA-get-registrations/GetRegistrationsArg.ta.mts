@@ -2,17 +2,17 @@
 
 import * as $ from "@wildboar/asn1/functional";
 import {
-    OPTIONAL,
-    SEQUENCE,
-    SET,
-    ASN1Element as _Element,
+    type OPTIONAL,
+    type SEQUENCE,
+    type SET,
+    type ASN1Element as _Element,
     ASN1TagClass as _TagClass
 } from "@wildboar/asn1";
 import { CSTACommonArguments, _decode_CSTACommonArguments, _encode_CSTACommonArguments } from "../CSTA-extension-types/CSTACommonArguments.ta.mjs";
 
 
 
-import { RegistrationTypeList, _decode_RegistrationTypeList, _encode_RegistrationTypeList } from "../CSTA-status-reporting/RegistrationTypeList.ta.mjs";
+import { type RegistrationTypeList, _decode_RegistrationTypeList, _encode_RegistrationTypeList } from "../CSTA-status-reporting/RegistrationTypeList.ta.mjs";
 
 /**
  * @summary GetRegistrationsArg
@@ -28,7 +28,7 @@ import { RegistrationTypeList, _decode_RegistrationTypeList, _encode_Registratio
  * 
  * ```asn1
  * GetRegistrationsArg ::= SEQUENCE
- * {     requestedRegTypes         RegistrationTypeList        OPTIONAL,
+ * {     requestedRegTypes         RegistrationTypeList        type OPTIONAL,
  *     extensions             CSTACommonArguments         OPTIONAL }
  * ```
  * 
@@ -36,28 +36,34 @@ import { RegistrationTypeList, _decode_RegistrationTypeList, _encode_Registratio
  */
 export
 class GetRegistrationsArg {
+    /**
+     * @summary `requestedRegTypes`.
+     * @description
+     *
+     * Filter: EscapeRegister, IORegister, RouteRegister,
+     * SysStatRegister. Omitted: all supported types.
+     * @public
+     * @readonly
+     */
+    public readonly requestedRegTypes?: OPTIONAL<RegistrationTypeList>;
+    /**
+     * @summary `extensions`.
+     * @description
+     *
+     * Optional security (timestamp, sequence, securityInfo) and
+     * privateData. ECMA-269 Table 14-18.
+     * @public
+     * @readonly
+     */
+    public readonly extensions?: OPTIONAL<CSTACommonArguments>;
+
     constructor (
-        /**
-         * @summary `requestedRegTypes`.
-         * @description
-         *
-         * Filter: EscapeRegister, IORegister, RouteRegister,
-         * SysStatRegister. Omitted: all supported types.
-         * @public
-         * @readonly
-         */
-        readonly requestedRegTypes?: OPTIONAL<RegistrationTypeList>,
-        /**
-         * @summary `extensions`.
-         * @description
-         *
-         * Optional security (timestamp, sequence, securityInfo) and
-         * privateData. ECMA-269 Table 14-18.
-         * @public
-         * @readonly
-         */
-        readonly extensions?: OPTIONAL<CSTACommonArguments>
-    ) {}
+        requestedRegTypes?: OPTIONAL<RegistrationTypeList>,
+        extensions?: OPTIONAL<CSTACommonArguments>
+    ) {
+        this.requestedRegTypes = requestedRegTypes;
+        this.extensions = extensions;
+    }
 
     /**
      * @summary Restructures an object into a GetRegistrationsArg

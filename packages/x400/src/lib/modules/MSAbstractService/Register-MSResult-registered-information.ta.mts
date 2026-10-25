@@ -1,7 +1,7 @@
 /* eslint-disable */
 import {
-    OPTIONAL,
-    ASN1Element as _Element,
+    type OPTIONAL,
+    type ASN1Element as _Element,
     ASN1TagClass as _TagClass,
     ASN1Construction as _Construction,
     ASN1UniversalType as _UniversalType,
@@ -32,12 +32,12 @@ import {
     _encode_MessageGroupNameAndDescriptor,
 } from '../MSAbstractService/MessageGroupNameAndDescriptor.ta.mjs';
 import {
-    MSExtensions,
+    type MSExtensions,
     _decode_MSExtensions,
     _encode_MSExtensions,
 } from '../MSAbstractService/MSExtensions.ta.mjs';
 import {
-    AttributeType,
+    type AttributeType,
     _decode_AttributeType,
     _encode_AttributeType,
 } from "./AttributeType.ta.mjs";
@@ -56,52 +56,70 @@ import {
  *
  */
 export class Register_MSResult_registered_information {
+    /**
+     * @summary `auto_action_registrations`.
+     * @public
+     * @readonly
+     */
+    public readonly auto_action_registrations?: OPTIONAL<AutoActionRegistration[]>;
+    /**
+     * @summary `list_attribute_defaults`.
+     * @public
+     * @readonly
+     */
+    public readonly list_attribute_defaults?: OPTIONAL<AttributeType[]>;
+    /**
+     * @summary `fetch_attribute_defaults`.
+     * @public
+     * @readonly
+     */
+    public readonly fetch_attribute_defaults?: OPTIONAL<AttributeType[]>;
+    /**
+     * @summary `ua_registrations`.
+     * @public
+     * @readonly
+     */
+    public readonly ua_registrations?: OPTIONAL<UARegistration[]>;
+    /**
+     * @summary `submission_defaults`.
+     * @public
+     * @readonly
+     */
+    public readonly submission_defaults?: OPTIONAL<MSSubmissionOptions>;
+    /**
+     * @summary `message_group_registrations`.
+     * @public
+     * @readonly
+     */
+    public readonly message_group_registrations?: OPTIONAL<
+            MessageGroupNameAndDescriptor[]
+        >;
+    /**
+     * @summary `register_ms_result_extensions`.
+     * @public
+     * @readonly
+     */
+    public readonly register_ms_result_extensions?: OPTIONAL<MSExtensions>;
+
     constructor(
-        /**
-         * @summary `auto_action_registrations`.
-         * @public
-         * @readonly
-         */
-        readonly auto_action_registrations?: OPTIONAL<AutoActionRegistration[]>,
-        /**
-         * @summary `list_attribute_defaults`.
-         * @public
-         * @readonly
-         */
-        readonly list_attribute_defaults?: OPTIONAL<AttributeType[]>,
-        /**
-         * @summary `fetch_attribute_defaults`.
-         * @public
-         * @readonly
-         */
-        readonly fetch_attribute_defaults?: OPTIONAL<AttributeType[]>,
-        /**
-         * @summary `ua_registrations`.
-         * @public
-         * @readonly
-         */
-        readonly ua_registrations?: OPTIONAL<UARegistration[]>,
-        /**
-         * @summary `submission_defaults`.
-         * @public
-         * @readonly
-         */
-        readonly submission_defaults?: OPTIONAL<MSSubmissionOptions>,
-        /**
-         * @summary `message_group_registrations`.
-         * @public
-         * @readonly
-         */
-        readonly message_group_registrations?: OPTIONAL<
+        auto_action_registrations?: OPTIONAL<AutoActionRegistration[]>,
+        list_attribute_defaults?: OPTIONAL<AttributeType[]>,
+        fetch_attribute_defaults?: OPTIONAL<AttributeType[]>,
+        ua_registrations?: OPTIONAL<UARegistration[]>,
+        submission_defaults?: OPTIONAL<MSSubmissionOptions>,
+        message_group_registrations?: OPTIONAL<
             MessageGroupNameAndDescriptor[]
         >,
-        /**
-         * @summary `register_ms_result_extensions`.
-         * @public
-         * @readonly
-         */
-        readonly register_ms_result_extensions?: OPTIONAL<MSExtensions>
-    ) {}
+        register_ms_result_extensions?: OPTIONAL<MSExtensions>
+    ) {
+        this.auto_action_registrations = auto_action_registrations;
+        this.list_attribute_defaults = list_attribute_defaults;
+        this.fetch_attribute_defaults = fetch_attribute_defaults;
+        this.ua_registrations = ua_registrations;
+        this.submission_defaults = submission_defaults;
+        this.message_group_registrations = message_group_registrations;
+        this.register_ms_result_extensions = register_ms_result_extensions;
+    }
 
     /**
      * @summary Restructures an object into a Register_MSResult_registered_information

@@ -1,11 +1,11 @@
 /* eslint-disable */
 import {
-    OPTIONAL,
-    ASN1Element as _Element,
+    type OPTIONAL,
+    type ASN1Element as _Element,
     ASN1TagClass as _TagClass
 } from "@wildboar/asn1";
 import * as $ from "@wildboar/asn1/functional";
-import { Ext_SS_Status, _decode_Ext_SS_Status, _encode_Ext_SS_Status } from "../MAP-CommonDataTypes/Ext-SS-Status.ta.mjs";
+import { type Ext_SS_Status, _decode_Ext_SS_Status, _encode_Ext_SS_Status } from "../MAP-CommonDataTypes/Ext-SS-Status.ta.mjs";
 import { ExtensionContainer, _decode_ExtensionContainer, _encode_ExtensionContainer } from "../MAP-ExtensionDataTypes/ExtensionContainer.ta.mjs";
 import { ModificationInstruction, _decode_ModificationInstruction, _encode_ModificationInstruction, _enum_for_ModificationInstruction } from "../MAP-MS-DataTypes/ModificationInstruction.ta.mjs";
 import { OverrideCategory, _decode_OverrideCategory, _encode_OverrideCategory, _enum_for_OverrideCategory } from "../MAP-SS-DataTypes/OverrideCategory.ta.mjs";
@@ -23,10 +23,10 @@ import { OverrideCategory, _decode_OverrideCategory, _encode_OverrideCategory, _
  * 
  * ```asn1
  * ModificationRequestFor-CLIP-Info ::= SEQUENCE {
- *     ss-Status    [0]    Ext-SS-Status    OPTIONAL,
- *     overrideCategory    [1]  OverrideCategory    OPTIONAL,
- *     modifyNotificationToCSE    [2]    ModificationInstruction    OPTIONAL,
- *     extensionContainer    [3]    ExtensionContainer    OPTIONAL,
+ *     ss-Status    [0]    Ext-SS-Status    type OPTIONAL,
+ *     overrideCategory    [1]  OverrideCategory    type OPTIONAL,
+ *     modifyNotificationToCSE    [2]    ModificationInstruction    type OPTIONAL,
+ *     extensionContainer    [3]    ExtensionContainer    type OPTIONAL,
  *     ...}
  * ```
  * 
@@ -34,52 +34,64 @@ import { OverrideCategory, _decode_OverrideCategory, _encode_OverrideCategory, _
  */
 export
 class ModificationRequestFor_CLIP_Info {
+    /**
+     * @summary `ss_Status`.
+     * @description
+     *
+     * SS-Status of the supplementary service (clause 7.6.4.2). (3GPP TS
+     * 29.002 V19.1.0 clause 7.6.3.82)
+     *
+     * @public
+     * @readonly
+     */
+    public readonly ss_Status?: OPTIONAL<Ext_SS_Status>;
+    /**
+     * @summary `overrideCategory`.
+     * @description
+     *
+     * CLIP override category. (3GPP TS 29.002 V19.1.0 clause 7.6.3.82)
+     *
+     * @public
+     * @readonly
+     */
+    public readonly overrideCategory?: OPTIONAL<OverrideCategory>;
+    /**
+     * @summary `modifyNotificationToCSE`.
+     * @description
+     *
+     * Activate or deactivate notification to the CSE. (3GPP TS 29.002
+     * V19.1.0 clauses 7.6.3.82 and 8.11.4)
+     *
+     * @public
+     * @readonly
+     */
+    public readonly modifyNotificationToCSE?: OPTIONAL<ModificationInstruction>;
+    /**
+     * @summary `extensionContainer`.
+     * @public
+     * @readonly
+     */
+    public readonly extensionContainer?: OPTIONAL<ExtensionContainer>;
+    /**
+     * @summary Extensions that are not recognized.
+     * @public
+     * @readonly
+     */
+    public readonly _unrecognizedExtensionsList: _Element[];
+
     constructor (
-        /**
-         * @summary `ss_Status`.
-         * @description
-         *
-         * SS-Status of the supplementary service (clause 7.6.4.2). (3GPP TS
-         * 29.002 V19.1.0 clause 7.6.3.82)
-         *
-         * @public
-         * @readonly
-         */
-        readonly ss_Status?: OPTIONAL<Ext_SS_Status>,
-        /**
-         * @summary `overrideCategory`.
-         * @description
-         *
-         * CLIP override category. (3GPP TS 29.002 V19.1.0 clause 7.6.3.82)
-         *
-         * @public
-         * @readonly
-         */
-        readonly overrideCategory?: OPTIONAL<OverrideCategory>,
-        /**
-         * @summary `modifyNotificationToCSE`.
-         * @description
-         *
-         * Activate or deactivate notification to the CSE. (3GPP TS 29.002
-         * V19.1.0 clauses 7.6.3.82 and 8.11.4)
-         *
-         * @public
-         * @readonly
-         */
-        readonly modifyNotificationToCSE?: OPTIONAL<ModificationInstruction>,
-        /**
-         * @summary `extensionContainer`.
-         * @public
-         * @readonly
-         */
-        readonly extensionContainer?: OPTIONAL<ExtensionContainer>,
-        /**
-         * @summary Extensions that are not recognized.
-         * @public
-         * @readonly
-         */
-        readonly _unrecognizedExtensionsList: _Element[] = []
-    ) {}
+        ss_Status?: OPTIONAL<Ext_SS_Status>,
+        overrideCategory?: OPTIONAL<OverrideCategory>,
+        modifyNotificationToCSE?: OPTIONAL<ModificationInstruction>,
+        extensionContainer?: OPTIONAL<ExtensionContainer>,
+        _unrecognizedExtensionsList: _Element[] = []
+    ) {
+        this.ss_Status = ss_Status;
+        this.overrideCategory = overrideCategory;
+        this.modifyNotificationToCSE = modifyNotificationToCSE;
+        this.extensionContainer = extensionContainer;
+        this._unrecognizedExtensionsList = _unrecognizedExtensionsList;
+    }
 
     /**
      * @summary Restructures an object into a ModificationRequestFor_CLIP_Info
@@ -103,13 +115,13 @@ class ModificationRequestFor_CLIP_Info {
          * @static
          */
 
-    public static _enum_for_overrideCategory = _enum_for_OverrideCategory;        /**
+    public static _enum_for_overrideCategory: typeof _enum_for_OverrideCategory = _enum_for_OverrideCategory;        /**
          * @summary The enum used as the type of the component `modifyNotificationToCSE`
          * @public
          * @static
          */
 
-    public static _enum_for_modifyNotificationToCSE = _enum_for_ModificationInstruction;
+    public static _enum_for_modifyNotificationToCSE: typeof _enum_for_ModificationInstruction = _enum_for_ModificationInstruction;
 }
 
 /**

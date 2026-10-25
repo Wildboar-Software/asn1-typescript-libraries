@@ -1,31 +1,31 @@
 /* eslint-disable */
 import {
-    OBJECT_IDENTIFIER,
-    OPTIONAL,
-    ASN1Element as _Element,
+    type OBJECT_IDENTIFIER,
+    type OPTIONAL,
+    type ASN1Element as _Element,
     ASN1TagClass as _TagClass,
     ASN1SizeError
 } from "@wildboar/asn1";
 import * as $ from "@wildboar/asn1/functional";
-import { LawfulInterceptionIdentifier, _decode_LawfulInterceptionIdentifier, _encode_LawfulInterceptionIdentifier } from "../HI2Operations/LawfulInterceptionIdentifier.ta.mjs";
+import { type LawfulInterceptionIdentifier, _decode_LawfulInterceptionIdentifier, _encode_LawfulInterceptionIdentifier } from "../HI2Operations/LawfulInterceptionIdentifier.ta.mjs";
 // export { LawfulInterceptionIdentifier, _decode_LawfulInterceptionIdentifier, _encode_LawfulInterceptionIdentifier } from "../HI2Operations/LawfulInterceptionIdentifier.ta.mjs";
-import { TimeStamp, _decode_TimeStamp, _encode_TimeStamp } from "../HI2Operations/TimeStamp.ta.mjs";
+import { type TimeStamp, _decode_TimeStamp, _encode_TimeStamp } from "../HI2Operations/TimeStamp.ta.mjs";
 // export { TimeStamp, _decode_TimeStamp, _encode_TimeStamp } from "../HI2Operations/TimeStamp.ta.mjs";
-import { IRI_Parameters_initiator, _decode_IRI_Parameters_initiator, _encode_IRI_Parameters_initiator, _enum_for_IRI_Parameters_initiator } from "../MBMSUmtsHI2Operations/IRI-Parameters-initiator.ta.mjs";
+import { type IRI_Parameters_initiator, _decode_IRI_Parameters_initiator, _encode_IRI_Parameters_initiator, _enum_for_IRI_Parameters_initiator } from "../MBMSUmtsHI2Operations/IRI-Parameters-initiator.ta.mjs";
 // export { IRI_Parameters_initiator, _enum_for_IRI_Parameters_initiator, IRI_Parameters_initiator_not_Available /* IMPORTED_LONG_ENUMERATION_ITEM */, not_Available /* IMPORTED_SHORT_ENUMERATION_ITEM */, IRI_Parameters_initiator_originating_Target /* IMPORTED_LONG_ENUMERATION_ITEM */, originating_Target /* IMPORTED_SHORT_ENUMERATION_ITEM */, IRI_Parameters_initiator_network_initiated /* IMPORTED_LONG_ENUMERATION_ITEM */, network_initiated /* IMPORTED_SHORT_ENUMERATION_ITEM */, IRI_Parameters_initiator_off_online_action /* IMPORTED_LONG_ENUMERATION_ITEM */, off_online_action /* IMPORTED_SHORT_ENUMERATION_ITEM */, _decode_IRI_Parameters_initiator, _encode_IRI_Parameters_initiator } from "../MBMSUmtsHI2Operations/IRI-Parameters-initiator.ta.mjs";
 import { PartyInformation, _decode_PartyInformation, _encode_PartyInformation } from "../MBMSUmtsHI2Operations/PartyInformation.ta.mjs";
 // export { PartyInformation, _decode_PartyInformation, _encode_PartyInformation } from "../MBMSUmtsHI2Operations/PartyInformation.ta.mjs";
-import { National_Parameters, _decode_National_Parameters, _encode_National_Parameters } from "../HI2Operations/National-Parameters.ta.mjs";
+import { type National_Parameters, _decode_National_Parameters, _encode_National_Parameters } from "../HI2Operations/National-Parameters.ta.mjs";
 // export { National_Parameters, _decode_National_Parameters, _encode_National_Parameters } from "../HI2Operations/National-Parameters.ta.mjs";
 import { Network_Identifier, _decode_Network_Identifier, _encode_Network_Identifier } from "../HI2Operations/Network-Identifier.ta.mjs";
 // export { Network_Identifier, _decode_Network_Identifier, _encode_Network_Identifier } from "../HI2Operations/Network-Identifier.ta.mjs";
-import { MBMSEvent, _decode_MBMSEvent, _encode_MBMSEvent, _enum_for_MBMSEvent } from "../MBMSUmtsHI2Operations/MBMSEvent.ta.mjs";
+import { type MBMSEvent, _decode_MBMSEvent, _encode_MBMSEvent, _enum_for_MBMSEvent } from "../MBMSUmtsHI2Operations/MBMSEvent.ta.mjs";
 // export { MBMSEvent, _enum_for_MBMSEvent, MBMSEvent_mBMSServiceJoining /* IMPORTED_LONG_ENUMERATION_ITEM */, mBMSServiceJoining /* IMPORTED_SHORT_ENUMERATION_ITEM */, MBMSEvent_mBMSServiceLeaving /* IMPORTED_LONG_ENUMERATION_ITEM */, mBMSServiceLeaving /* IMPORTED_SHORT_ENUMERATION_ITEM */, MBMSEvent_mBMSSubscriptionActivation /* IMPORTED_LONG_ENUMERATION_ITEM */, mBMSSubscriptionActivation /* IMPORTED_SHORT_ENUMERATION_ITEM */, MBMSEvent_mBMSSubscriptionModification /* IMPORTED_LONG_ENUMERATION_ITEM */, mBMSSubscriptionModification /* IMPORTED_SHORT_ENUMERATION_ITEM */, MBMSEvent_mBMSSubscriptionTermination /* IMPORTED_LONG_ENUMERATION_ITEM */, mBMSSubscriptionTermination /* IMPORTED_SHORT_ENUMERATION_ITEM */, MBMSEvent_startofInterceptWithMBMSServiceActive /* IMPORTED_LONG_ENUMERATION_ITEM */, startofInterceptWithMBMSServiceActive /* IMPORTED_SHORT_ENUMERATION_ITEM */, _decode_MBMSEvent, _encode_MBMSEvent } from "../MBMSUmtsHI2Operations/MBMSEvent.ta.mjs";
-import { CorrelationNumber, _decode_CorrelationNumber, _encode_CorrelationNumber } from "../MBMSUmtsHI2Operations/CorrelationNumber.ta.mjs";
+import { type CorrelationNumber, _decode_CorrelationNumber, _encode_CorrelationNumber } from "../MBMSUmtsHI2Operations/CorrelationNumber.ta.mjs";
 // export { CorrelationNumber, _decode_CorrelationNumber, _encode_CorrelationNumber } from "../MBMSUmtsHI2Operations/CorrelationNumber.ta.mjs";
 import { MBMSinformation, _decode_MBMSinformation, _encode_MBMSinformation } from "../MBMSUmtsHI2Operations/MBMSinformation.ta.mjs";
 // export { MBMSinformation, _decode_MBMSinformation, _encode_MBMSinformation } from "../MBMSUmtsHI2Operations/MBMSinformation.ta.mjs";
-import { VisitedPLMNID, _decode_VisitedPLMNID, _encode_VisitedPLMNID } from "../MBMSUmtsHI2Operations/VisitedPLMNID.ta.mjs";
+import { type VisitedPLMNID, _decode_VisitedPLMNID, _encode_VisitedPLMNID } from "../MBMSUmtsHI2Operations/VisitedPLMNID.ta.mjs";
 // export { VisitedPLMNID, _decode_VisitedPLMNID, _encode_VisitedPLMNID } from "../MBMSUmtsHI2Operations/VisitedPLMNID.ta.mjs";
 import { National_HI2_ASN1parameters, _decode_National_HI2_ASN1parameters, _encode_National_HI2_ASN1parameters } from "../HI2Operations/National-HI2-ASN1parameters.ta.mjs";
 // export { National_HI2_ASN1parameters, _decode_National_HI2_ASN1parameters, _encode_National_HI2_ASN1parameters } from "../HI2Operations/National-HI2-ASN1parameters.ta.mjs";
@@ -76,11 +76,11 @@ import { National_HI2_ASN1parameters, _decode_National_HI2_ASN1parameters, _enco
  * 
  *     national-Parameters        [6] National-Parameters OPTIONAL,
  *     networkIdentifier        [7] Network-Identifier OPTIONAL,
- *     mBMSevent                [8] MBMSEvent    OPTIONAL,
+ *     mBMSevent                [8] MBMSEvent    type OPTIONAL,
  *     correlationNumber        [9] CorrelationNumber OPTIONAL,
  *     mbmsInformation            [10] MBMSinformation OPTIONAL,
- *     visitedPLMNID            [11] VisitedPLMNID     OPTIONAL,
- *     national-HI2-ASN1parameters    [12]    National-HI2-ASN1parameters    OPTIONAL,
+ *     visitedPLMNID            [11] VisitedPLMNID     type OPTIONAL,
+ *     national-HI2-ASN1parameters    [12]    National-HI2-ASN1parameters    type OPTIONAL,
  * ...
  * }
  * ```
@@ -319,13 +319,13 @@ class IRI_Parameters {
          * @static
          */
 
-    public static _enum_for_initiator = _enum_for_IRI_Parameters_initiator;        /**
+    public static _enum_for_initiator: typeof _enum_for_IRI_Parameters_initiator = _enum_for_IRI_Parameters_initiator;        /**
          * @summary The enum used as the type of the component `mBMSevent`
          * @public
          * @static
          */
 
-    public static _enum_for_mBMSevent = _enum_for_MBMSEvent;
+    public static _enum_for_mBMSevent: typeof _enum_for_MBMSEvent = _enum_for_MBMSEvent;
 }
 
 /**

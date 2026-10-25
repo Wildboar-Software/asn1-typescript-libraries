@@ -1,6 +1,6 @@
 /* eslint-disable */
 import {
-  INTEGER,
+  type INTEGER,
   ASN1Element as _Element,
   ASN1TagClass as _TagClass,
   ASN1Construction as _Construction,
@@ -39,7 +39,7 @@ export type FADU_Lock = INTEGER;
  * @constant
  * @type {number}
  */
-export const FADU_Lock_off: FADU_Lock = 0; /* LONG_NAMED_INTEGER_VALUE */
+export const FADU_Lock_off: 0 = 0 satisfies FADU_Lock; /* LONG_NAMED_INTEGER_VALUE */
 
 
 /**
@@ -47,7 +47,7 @@ export const FADU_Lock_off: FADU_Lock = 0; /* LONG_NAMED_INTEGER_VALUE */
  * @constant
  * @type {number}
  */
-export const off: FADU_Lock = FADU_Lock_off; /* SHORT_NAMED_INTEGER_VALUE */
+export const off: 0 = FADU_Lock_off; /* SHORT_NAMED_INTEGER_VALUE */
 
 
 /**
@@ -57,7 +57,7 @@ export const off: FADU_Lock = FADU_Lock_off; /* SHORT_NAMED_INTEGER_VALUE */
  * @constant
  * @type {number}
  */
-export const FADU_Lock_on: FADU_Lock = 1; /* LONG_NAMED_INTEGER_VALUE */
+export const FADU_Lock_on: 1 = 1 satisfies FADU_Lock; /* LONG_NAMED_INTEGER_VALUE */
 
 
 /**
@@ -65,7 +65,7 @@ export const FADU_Lock_on: FADU_Lock = 1; /* LONG_NAMED_INTEGER_VALUE */
  * @constant
  * @type {number}
  */
-export const on: FADU_Lock = FADU_Lock_on; /* SHORT_NAMED_INTEGER_VALUE */
+export const on: 1 = FADU_Lock_on; /* SHORT_NAMED_INTEGER_VALUE */
 
 
 let _cached_decoder_for_FADU_Lock: $.ASN1Decoder<FADU_Lock> | null = null;

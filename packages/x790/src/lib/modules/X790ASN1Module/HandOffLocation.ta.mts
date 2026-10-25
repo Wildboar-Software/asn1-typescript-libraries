@@ -1,7 +1,7 @@
 /* eslint-disable */
 import {
-    GraphicString,
-    ASN1Element as _Element,
+    type GraphicString,
+    type ASN1Element as _Element,
     ASN1SizeError,
 } from "@wildboar/asn1";
 import * as $ from "@wildboar/asn1/functional";
@@ -27,7 +27,7 @@ export function _decode_HandOffLocation (el: _Element): HandOffLocation {
     }
     return value;
 }
-export const _encode_HandOffLocation = $._encodeGraphicString;
+export const _encode_HandOffLocation: $.ASN1Encoder<string> = $._encodeGraphicString;
 
 
 /* eslint-enable */

@@ -1,9 +1,9 @@
 /* eslint-disable */
 import {
     ASN1ConstructionError as _ConstructionError,
-    ASN1Element as _Element,
+    type ASN1Element as _Element,
     ASN1TagClass as _TagClass,
-    INTEGER,
+    type INTEGER,
     ASN1OverflowError
 } from "@wildboar/asn1";
 import * as $ from "@wildboar/asn1/functional";
@@ -117,7 +117,7 @@ class GeographicalCoordinates {
          * @static
          */
 
-    public static _enum_for_latitudeSign = _enum_for_GeographicalCoordinates_latitudeSign;
+    public static _enum_for_latitudeSign: typeof _enum_for_GeographicalCoordinates_latitudeSign = _enum_for_GeographicalCoordinates_latitudeSign;
 }
 
 /**

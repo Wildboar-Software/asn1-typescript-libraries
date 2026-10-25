@@ -3,7 +3,7 @@ import {
     ASN1Element as _Element
 } from "@wildboar/asn1";
 import * as $ from "@wildboar/asn1/functional";
-import { Credit, _decode_Credit, _encode_Credit } from "../IN-CS2-datatypes/Credit.ta.mjs";
+import { type Credit, _decode_Credit, _encode_Credit } from "../IN-CS2-datatypes/Credit.ta.mjs";
 // export { Credit, _decode_Credit, _encode_Credit } from "../IN-CS2-datatypes/Credit.ta.mjs";
 
 
@@ -21,21 +21,13 @@ import { Credit, _decode_Credit, _encode_Credit } from "../IN-CS2-datatypes/Cred
 export
 type UserCredit = Credit; // DefinedType
 
-let _cached_decoder_for_UserCredit: $.ASN1Decoder<UserCredit> | null = null;
-
 /**
  * @summary Decodes an ASN.1 element into a(n) UserCredit
  * @function
  * @param el The element being decoded.
  * @returns The decoded data structure.
  */
-export
-function _decode_UserCredit (el: _Element): UserCredit {
-    if (!_cached_decoder_for_UserCredit) { _cached_decoder_for_UserCredit = _decode_Credit; }
-    return _cached_decoder_for_UserCredit(el);
-}
-
-let _cached_encoder_for_UserCredit: $.ASN1Encoder<UserCredit> | null = null;
+export const _decode_UserCredit: $.ASN1Decoder<UserCredit> = _decode_Credit;
 
 /**
  * @summary Encodes a(n) UserCredit into an ASN.1 Element.
@@ -44,11 +36,7 @@ let _cached_encoder_for_UserCredit: $.ASN1Encoder<UserCredit> | null = null;
  * @param elGetter A function that can be used to get new ASN.1 elements.
  * @returns {_Element} The UserCredit, encoded as an ASN.1 Element.
  */
-export
-function _encode_UserCredit (value: UserCredit, elGetter: $.ASN1Encoder<any>): _Element {
-    if (!_cached_encoder_for_UserCredit) { _cached_encoder_for_UserCredit = _encode_Credit; }
-    return _cached_encoder_for_UserCredit(value, elGetter);
-}
+export const _encode_UserCredit: $.ASN1Encoder<UserCredit> = _encode_Credit;
 
 
 /* eslint-enable */

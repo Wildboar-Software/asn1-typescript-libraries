@@ -1,7 +1,7 @@
 /* eslint-disable */
 import {
-    BIT_STRING,
-    ASN1Element as _Element,
+    type BIT_STRING,
+    type ASN1Element as _Element,
     ASN1TagClass as _TagClass,
     ASN1Construction as _Construction,
     ASN1UniversalType as _UniversalType,
@@ -97,10 +97,10 @@ export const OverrideRestrictions_override_attribute_length_restriction: number 
 export const override_attribute_length_restriction: number = OverrideRestrictions_override_attribute_length_restriction; /* SHORT_NAMED_BIT */
 
 
-export const _decode_OverrideRestrictions = $._decodeBitString;
+export const _decode_OverrideRestrictions: $.ASN1Decoder<BIT_STRING> = $._decodeBitString;
 
 
-export const _encode_OverrideRestrictions = $._encodeBitString;
+export const _encode_OverrideRestrictions: $.ASN1Encoder<BIT_STRING> = $._encodeBitString;
 
 
 /* eslint-enable */

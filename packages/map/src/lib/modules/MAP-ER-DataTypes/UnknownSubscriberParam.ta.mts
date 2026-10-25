@@ -1,11 +1,11 @@
 /* eslint-disable */
 import {
-    OPTIONAL,
-    ASN1Element as _Element,
+    type OPTIONAL,
+    type ASN1Element as _Element,
     ASN1TagClass as _TagClass
 } from "@wildboar/asn1";
 import * as $ from "@wildboar/asn1/functional";
-import { UnknownSubscriberDiagnostic, _decode_UnknownSubscriberDiagnostic, _encode_UnknownSubscriberDiagnostic, _enum_for_UnknownSubscriberDiagnostic } from "../MAP-ER-DataTypes/UnknownSubscriberDiagnostic.ta.mjs";
+import { type UnknownSubscriberDiagnostic, _decode_UnknownSubscriberDiagnostic, _encode_UnknownSubscriberDiagnostic, _enum_for_UnknownSubscriberDiagnostic } from "../MAP-ER-DataTypes/UnknownSubscriberDiagnostic.ta.mjs";
 import { ExtensionContainer, _decode_ExtensionContainer, _encode_ExtensionContainer } from "../MAP-ExtensionDataTypes/ExtensionContainer.ta.mjs";
 
 
@@ -20,7 +20,7 @@ import { ExtensionContainer, _decode_ExtensionContainer, _encode_ExtensionContai
  * 
  * ```asn1
  * UnknownSubscriberParam ::= SEQUENCE {
- *     extensionContainer    ExtensionContainer    OPTIONAL,
+ *     extensionContainer    ExtensionContainer    type OPTIONAL,
  *     ...,
  *     unknownSubscriberDiagnostic    UnknownSubscriberDiagnostic    OPTIONAL}
  * ```
@@ -29,31 +29,39 @@ import { ExtensionContainer, _decode_ExtensionContainer, _encode_ExtensionContai
  */
 export
 class UnknownSubscriberParam {
+    /**
+     * @summary `extensionContainer`.
+     * @public
+     * @readonly
+     */
+    public readonly extensionContainer?: OPTIONAL<ExtensionContainer>;
+    /**
+     * @summary `unknownSubscriberDiagnostic`.
+     * @description
+     *
+     * Further diagnostic. Unknown values shall be discarded (3GPP TS 29.002
+     * V19.1.0 clause 17.7.7).
+     *
+     * @public
+     * @readonly
+     */
+    public readonly unknownSubscriberDiagnostic?: OPTIONAL<UnknownSubscriberDiagnostic>;
+    /**
+     * @summary Extensions that are not recognized.
+     * @public
+     * @readonly
+     */
+    public readonly _unrecognizedExtensionsList: _Element[];
+
     constructor (
-        /**
-         * @summary `extensionContainer`.
-         * @public
-         * @readonly
-         */
-        readonly extensionContainer?: OPTIONAL<ExtensionContainer>,
-        /**
-         * @summary `unknownSubscriberDiagnostic`.
-         * @description
-         *
-         * Further diagnostic. Unknown values shall be discarded (3GPP TS 29.002
-         * V19.1.0 clause 17.7.7).
-         *
-         * @public
-         * @readonly
-         */
-        readonly unknownSubscriberDiagnostic?: OPTIONAL<UnknownSubscriberDiagnostic>,
-        /**
-         * @summary Extensions that are not recognized.
-         * @public
-         * @readonly
-         */
-        readonly _unrecognizedExtensionsList: _Element[] = []
-    ) {}
+        extensionContainer?: OPTIONAL<ExtensionContainer>,
+        unknownSubscriberDiagnostic?: OPTIONAL<UnknownSubscriberDiagnostic>,
+        _unrecognizedExtensionsList: _Element[] = []
+    ) {
+        this.extensionContainer = extensionContainer;
+        this.unknownSubscriberDiagnostic = unknownSubscriberDiagnostic;
+        this._unrecognizedExtensionsList = _unrecognizedExtensionsList;
+    }
 
     /**
      * @summary Restructures an object into a UnknownSubscriberParam
@@ -77,7 +85,7 @@ class UnknownSubscriberParam {
          * @static
          */
 
-    public static _enum_for_unknownSubscriberDiagnostic = _enum_for_UnknownSubscriberDiagnostic;
+    public static _enum_for_unknownSubscriberDiagnostic: typeof _enum_for_UnknownSubscriberDiagnostic = _enum_for_UnknownSubscriberDiagnostic;
 }
 
 /**

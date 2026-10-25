@@ -1,19 +1,19 @@
 /* eslint-disable */
 import {
-    INTEGER,
-    OCTET_STRING,
-    OPTIONAL,
-    ASN1Element as _Element,
+    type INTEGER,
+    type OCTET_STRING,
+    type OPTIONAL,
+    type ASN1Element as _Element,
     ASN1TagClass as _TagClass,
     ASN1OverflowError,
     ASN1SizeError
 } from "@wildboar/asn1";
 import * as $ from "@wildboar/asn1/functional";
-import { IPAddress_iP_type, _decode_IPAddress_iP_type, _encode_IPAddress_iP_type, _enum_for_IPAddress_iP_type } from "../LI-PS-PDU/IPAddress-iP-type.ta.mjs";
+import { type IPAddress_iP_type, _decode_IPAddress_iP_type, _encode_IPAddress_iP_type, _enum_for_IPAddress_iP_type } from "../LI-PS-PDU/IPAddress-iP-type.ta.mjs";
 // export { IPAddress_iP_type, _enum_for_IPAddress_iP_type, IPAddress_iP_type_iPV4 /* IMPORTED_LONG_ENUMERATION_ITEM */, iPV4 /* IMPORTED_SHORT_ENUMERATION_ITEM */, IPAddress_iP_type_iPV6 /* IMPORTED_LONG_ENUMERATION_ITEM */, iPV6 /* IMPORTED_SHORT_ENUMERATION_ITEM */, _decode_IPAddress_iP_type, _encode_IPAddress_iP_type } from "../LI-PS-PDU/IPAddress-iP-type.ta.mjs";
-import { IP_value, _decode_IP_value, _encode_IP_value } from "../LI-PS-PDU/IP-value.ta.mjs";
+import { type IP_value, _decode_IP_value, _encode_IP_value } from "../LI-PS-PDU/IP-value.ta.mjs";
 // export { IP_value, _decode_IP_value, _encode_IP_value } from "../LI-PS-PDU/IP-value.ta.mjs";
-import { IPAddress_iP_assignment, _decode_IPAddress_iP_assignment, _encode_IPAddress_iP_assignment, _enum_for_IPAddress_iP_assignment } from "../LI-PS-PDU/IPAddress-iP-assignment.ta.mjs";
+import { type IPAddress_iP_assignment, _decode_IPAddress_iP_assignment, _encode_IPAddress_iP_assignment, _enum_for_IPAddress_iP_assignment } from "../LI-PS-PDU/IPAddress-iP-assignment.ta.mjs";
 // export { IPAddress_iP_assignment, _enum_for_IPAddress_iP_assignment, IPAddress_iP_assignment_static /* IMPORTED_LONG_ENUMERATION_ITEM */, static_ /* IMPORTED_SHORT_ENUMERATION_ITEM */, IPAddress_iP_assignment_dynamic /* IMPORTED_LONG_ENUMERATION_ITEM */, dynamic /* IMPORTED_SHORT_ENUMERATION_ITEM */, IPAddress_iP_assignment_notKnown /* IMPORTED_LONG_ENUMERATION_ITEM */, notKnown /* IMPORTED_SHORT_ENUMERATION_ITEM */, _decode_IPAddress_iP_assignment, _encode_IPAddress_iP_assignment } from "../LI-PS-PDU/IPAddress-iP-assignment.ta.mjs";
 
 
@@ -211,13 +211,13 @@ class IPAddress {
          * @static
          */
 
-    public static _enum_for_iP_type = _enum_for_IPAddress_iP_type;        /**
+    public static _enum_for_iP_type: typeof _enum_for_IPAddress_iP_type = _enum_for_IPAddress_iP_type;        /**
          * @summary The enum used as the type of the component `iP_assignment`
          * @public
          * @static
          */
 
-    public static _enum_for_iP_assignment = _enum_for_IPAddress_iP_assignment;
+    public static _enum_for_iP_assignment: typeof _enum_for_IPAddress_iP_assignment = _enum_for_IPAddress_iP_assignment;
 }
 
 /**

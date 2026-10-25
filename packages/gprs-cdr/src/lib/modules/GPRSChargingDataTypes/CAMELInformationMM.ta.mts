@@ -1,17 +1,17 @@
 /* eslint-disable */
 import {
-    ASN1Element as _Element,
+    type ASN1Element as _Element,
     ASN1TagClass as _TagClass,
-    BOOLEAN,
-    INTEGER,
-    OCTET_STRING,
-    OPTIONAL,
+    type BOOLEAN,
+    type INTEGER,
+    type OCTET_STRING,
+    type OPTIONAL,
     ASN1SizeError,
     ASN1OverflowError
 } from "@wildboar/asn1";
 import * as $ from "@wildboar/asn1/functional";
-import { _decode_DefaultTransactionHandling, _encode_DefaultTransactionHandling, _enum_for_DefaultTransactionHandling, DefaultTransactionHandling } from "../GPRSChargingDataTypes/DefaultTransactionHandling.ta.mjs";
-import { _decode_CAMELInformationMM_levelOfCAMELService, _encode_CAMELInformationMM_levelOfCAMELService, CAMELInformationMM_levelOfCAMELService } from "../GPRSChargingDataTypes/CAMELInformationMM-levelOfCAMELService.ta.mjs";
+import { _decode_DefaultTransactionHandling, _encode_DefaultTransactionHandling, _enum_for_DefaultTransactionHandling, type DefaultTransactionHandling } from "../GPRSChargingDataTypes/DefaultTransactionHandling.ta.mjs";
+import { _decode_CAMELInformationMM_levelOfCAMELService, _encode_CAMELInformationMM_levelOfCAMELService, type CAMELInformationMM_levelOfCAMELService } from "../GPRSChargingDataTypes/CAMELInformationMM-levelOfCAMELService.ta.mjs";
 
 
 /**
@@ -195,7 +195,7 @@ class CAMELInformationMM {
          * @static
          */
 
-    public static _enum_for_defaultTransactionHandling = _enum_for_DefaultTransactionHandling;
+    public static _enum_for_defaultTransactionHandling: typeof _enum_for_DefaultTransactionHandling = _enum_for_DefaultTransactionHandling;
 }
 
 /**

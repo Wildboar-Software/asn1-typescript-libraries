@@ -1,9 +1,9 @@
 /* eslint-disable */
 import {
-    ASN1Element as _Element,
+    type ASN1Element as _Element,
     ASN1TagClass as _TagClass,
-    BOOLEAN,
-    OPTIONAL,
+    type BOOLEAN,
+    type OPTIONAL,
 } from "@wildboar/asn1";
 import * as $ from "@wildboar/asn1/functional";
 import {
@@ -12,7 +12,7 @@ import {
     _encode_UnitOfReplication,
 } from "../DirectoryShadowAbstractService/UnitOfReplication.ta.mjs";
 import {
-    UpdateMode,
+    type UpdateMode,
     _decode_UpdateMode,
     _encode_UpdateMode,
 } from "../DirectoryShadowAbstractService/UpdateMode.ta.mjs";
@@ -43,54 +43,64 @@ import {
  *
  */
 export class ShadowingAgreementInfo {
+    /**
+     * @summary `shadowSubject`.
+     * @description
+     *
+     * Subtree, entries, and attributes to shadow. Completely within one
+     * DSA; may name beyond a naming context, but the replicated area is
+     * clipped to that context.
+     *
+     * @public
+     * @readonly
+     */
+    public readonly shadowSubject: UnitOfReplication;
+    /**
+     * @summary `updateMode`.
+     * @description
+     *
+     * DEFAULT `supplierInitiated:onChange:TRUE`. Does not forbid either
+     * party from initiating an update outside the scheduled times.
+     *
+     * @public
+     * @readonly
+     */
+    public readonly updateMode?: OPTIONAL<UpdateMode>;
+    /**
+     * @summary `master`.
+     * @description
+     *
+     * Access point of the DSA holding the mastered area. Optional;
+     * supplied only for optimization.
+     *
+     * @public
+     * @readonly
+     */
+    public readonly master?: OPTIONAL<AccessPoint>;
+    /**
+     * @summary `secondaryShadows`.
+     * @description
+     *
+     * DEFAULT FALSE. If TRUE, the consumer may later supply secondary
+     * shadow access points to the supplier via
+     * `ModificationParameter`. Not the SET OF access points itself.
+     *
+     * @public
+     * @readonly
+     */
+    public readonly secondaryShadows?: OPTIONAL<BOOLEAN>;
+
     constructor(
-        /**
-         * @summary `shadowSubject`.
-         * @description
-         *
-         * Subtree, entries, and attributes to shadow. Completely within one
-         * DSA; may name beyond a naming context, but the replicated area is
-         * clipped to that context.
-         *
-         * @public
-         * @readonly
-         */
-        readonly shadowSubject: UnitOfReplication,
-        /**
-         * @summary `updateMode`.
-         * @description
-         *
-         * DEFAULT `supplierInitiated:onChange:TRUE`. Does not forbid either
-         * party from initiating an update outside the scheduled times.
-         *
-         * @public
-         * @readonly
-         */
-        readonly updateMode?: OPTIONAL<UpdateMode>,
-        /**
-         * @summary `master`.
-         * @description
-         *
-         * Access point of the DSA holding the mastered area. Optional;
-         * supplied only for optimization.
-         *
-         * @public
-         * @readonly
-         */
-        readonly master?: OPTIONAL<AccessPoint>,
-        /**
-         * @summary `secondaryShadows`.
-         * @description
-         *
-         * DEFAULT FALSE. If TRUE, the consumer may later supply secondary
-         * shadow access points to the supplier via
-         * `ModificationParameter`. Not the SET OF access points itself.
-         *
-         * @public
-         * @readonly
-         */
-        readonly secondaryShadows?: OPTIONAL<BOOLEAN>
-    ) {}
+        shadowSubject: UnitOfReplication,
+        updateMode?: OPTIONAL<UpdateMode>,
+        master?: OPTIONAL<AccessPoint>,
+        secondaryShadows?: OPTIONAL<BOOLEAN>
+    ) {
+        this.shadowSubject = shadowSubject;
+        this.updateMode = updateMode;
+        this.master = master;
+        this.secondaryShadows = secondaryShadows;
+    }
 
     /**
      * @summary Restructures an object into a ShadowingAgreementInfo

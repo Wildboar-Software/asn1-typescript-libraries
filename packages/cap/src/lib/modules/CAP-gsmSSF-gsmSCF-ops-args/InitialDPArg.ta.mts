@@ -1,8 +1,8 @@
 /* eslint-disable */
 import {
-    OPTIONAL,
-    NULL,
-    ASN1Element as _Element,
+    type OPTIONAL,
+    type NULL,
+    type ASN1Element as _Element,
     ASN1TagClass as _TagClass,
     ASN1Construction as _Construction,
     ASN1UniversalType as _UniversalType,
@@ -28,18 +28,18 @@ import { type OriginalCalledPartyID, _decode_OriginalCalledPartyID, _encode_Orig
 import { type RedirectingPartyID, _decode_RedirectingPartyID, _encode_RedirectingPartyID } from "../CAP-datatypes/RedirectingPartyID.ta.mjs";
 import { ServiceInteractionIndicatorsTwo, _decode_ServiceInteractionIndicatorsTwo, _encode_ServiceInteractionIndicatorsTwo } from "../CAP-datatypes/ServiceInteractionIndicatorsTwo.ta.mjs";
 import { type TimeAndTimezone, _decode_TimeAndTimezone, _encode_TimeAndTimezone } from "../CAP-datatypes/TimeAndTimezone.ta.mjs";
-import { ServiceKey, _decode_ServiceKey, _encode_ServiceKey } from "../Core-INAP-CS1-DataTypes/ServiceKey.ta.mjs";
-import { CallingPartysCategory, _decode_CallingPartysCategory, _encode_CallingPartysCategory } from "../Core-INAP-CS1-DataTypes/CallingPartysCategory.ta.mjs";
-import { HighLayerCompatibility, _decode_HighLayerCompatibility, _encode_HighLayerCompatibility } from "../Core-INAP-CS1-DataTypes/HighLayerCompatibility.ta.mjs";
-import { RedirectionInformation, _decode_RedirectionInformation, _encode_RedirectionInformation } from "../Core-INAP-CS1-DataTypes/RedirectionInformation.ta.mjs";
-import { CUG_Index, _decode_CUG_Index, _encode_CUG_Index } from "../MAP-MS-DataTypes/CUG-Index.ta.mjs";
-import { CUG_Interlock, _decode_CUG_Interlock, _encode_CUG_Interlock } from "../MAP-MS-DataTypes/CUG-Interlock.ta.mjs";
-import { IMSI, _decode_IMSI, _encode_IMSI } from "../MAP-CommonDataTypes/IMSI.ta.mjs";
-import { SubscriberState, _decode_SubscriberState, _encode_SubscriberState } from "../MAP-MS-DataTypes/SubscriberState.ta.mjs";
+import { type ServiceKey, _decode_ServiceKey, _encode_ServiceKey } from "../Core-INAP-CS1-DataTypes/ServiceKey.ta.mjs";
+import { type CallingPartysCategory, _decode_CallingPartysCategory, _encode_CallingPartysCategory } from "../Core-INAP-CS1-DataTypes/CallingPartysCategory.ta.mjs";
+import { type HighLayerCompatibility, _decode_HighLayerCompatibility, _encode_HighLayerCompatibility } from "../Core-INAP-CS1-DataTypes/HighLayerCompatibility.ta.mjs";
+import { type RedirectionInformation, _decode_RedirectionInformation, _encode_RedirectionInformation } from "../Core-INAP-CS1-DataTypes/RedirectionInformation.ta.mjs";
+import { type CUG_Index, _decode_CUG_Index, _encode_CUG_Index } from "../MAP-MS-DataTypes/CUG-Index.ta.mjs";
+import { type CUG_Interlock, _decode_CUG_Interlock, _encode_CUG_Interlock } from "../MAP-MS-DataTypes/CUG-Interlock.ta.mjs";
+import { type IMSI, _decode_IMSI, _encode_IMSI } from "../MAP-CommonDataTypes/IMSI.ta.mjs";
+import { type SubscriberState, _decode_SubscriberState, _encode_SubscriberState } from "../MAP-MS-DataTypes/SubscriberState.ta.mjs";
 import { LocationInformation, _decode_LocationInformation, _encode_LocationInformation } from "../MAP-MS-DataTypes/LocationInformation.ta.mjs";
-import { Ext_BasicServiceCode, _decode_Ext_BasicServiceCode, _encode_Ext_BasicServiceCode } from "../MAP-CommonDataTypes/Ext-BasicServiceCode.ta.mjs";
-import { CallReferenceNumber, _decode_CallReferenceNumber, _encode_CallReferenceNumber } from "../MAP-CH-DataTypes/CallReferenceNumber.ta.mjs";
-import { ISDN_AddressString, _decode_ISDN_AddressString, _encode_ISDN_AddressString } from "../MAP-CommonDataTypes/ISDN-AddressString.ta.mjs";
+import { type Ext_BasicServiceCode, _decode_Ext_BasicServiceCode, _encode_Ext_BasicServiceCode } from "../MAP-CommonDataTypes/Ext-BasicServiceCode.ta.mjs";
+import { type CallReferenceNumber, _decode_CallReferenceNumber, _encode_CallReferenceNumber } from "../MAP-CH-DataTypes/CallReferenceNumber.ta.mjs";
+import { type ISDN_AddressString, _decode_ISDN_AddressString, _encode_ISDN_AddressString } from "../MAP-CommonDataTypes/ISDN-AddressString.ta.mjs";
 import { InitialDPArgExtension, _decode_InitialDPArgExtension, _encode_InitialDPArgExtension } from "../CAP-gsmSSF-gsmSCF-ops-args/InitialDPArgExtension.ta.mjs";
 
 
@@ -56,36 +56,36 @@ import { InitialDPArgExtension, _decode_InitialDPArgExtension, _encode_InitialDP
  * ```asn1
  * InitialDPArg {PARAMETERS-BOUND : bound} ::= SEQUENCE {
  *     serviceKey                [0] ServiceKey    ,
- *     calledPartyNumber            [2] CalledPartyNumber {bound}        OPTIONAL,
- *     callingPartyNumber            [3] CallingPartyNumber {bound}        OPTIONAL,
- *     callingPartysCategory        [5] CallingPartysCategory            OPTIONAL,
- *     cGEncountered            [7] CGEncountered                OPTIONAL,
- *     iPSSPCapabilities            [8] IPSSPCapabilities {bound}        OPTIONAL,
- *     locationNumber            [10] LocationNumber {bound}            OPTIONAL,
- *     originalCalledPartyID        [12] OriginalCalledPartyID {bound}        OPTIONAL,
- *     extensions                [15] Extensions {bound}            OPTIONAL,
- *     highLayerCompatibility        [23] HighLayerCompatibility            OPTIONAL,
- *     additionalCallingPartyNumber    [25] AdditionalCallingPartyNumber {bound}    OPTIONAL,
- *     bearerCapability            [27] BearerCapability {bound}        OPTIONAL,
- *     eventTypeBCSM            [28] EventTypeBCSM                OPTIONAL,
- *     redirectingPartyID            [29] RedirectingPartyID {bound}        OPTIONAL,
- *     redirectionInformation        [30] RedirectionInformation            OPTIONAL,
- *     cause                [17] Cause {bound}                OPTIONAL,
- *     serviceInteractionIndicatorsTwo    [32] ServiceInteractionIndicatorsTwo    OPTIONAL,
- *     carrier                [37] Carrier {bound}            OPTIONAL,
- *     cug-Index                [45] CUG-Index                OPTIONAL,
- *     cug-Interlock            [46] CUG-Interlock                OPTIONAL,
- *     cug-OutgoingAccess            [47] NULL                    OPTIONAL,
- *     iMSI                [50] IMSI                    OPTIONAL,
- *     subscriberState            [51] SubscriberState            OPTIONAL,
- *     locationInformation            [52] LocationInformation            OPTIONAL,
- *     ext-basicServiceCode        [53] Ext-BasicServiceCode            OPTIONAL,
- *     callReferenceNumber            [54] CallReferenceNumber            OPTIONAL,
- *     mscAddress                [55] ISDN-AddressString            OPTIONAL,
- *     calledPartyBCDNumber        [56] CalledPartyBCDNumber {bound}        OPTIONAL,
- *     timeAndTimezone            [57] TimeAndTimezone {bound}        OPTIONAL,
- *     callForwardingSS-Pending        [58] NULL                    OPTIONAL,
- *     initialDPArgExtension        [59] InitialDPArgExtension {bound}        OPTIONAL,
+ *     calledPartyNumber            [2] CalledPartyNumber {bound}        type OPTIONAL,
+ *     callingPartyNumber            [3] CallingPartyNumber {bound}        type OPTIONAL,
+ *     callingPartysCategory        [5] CallingPartysCategory            type OPTIONAL,
+ *     cGEncountered            [7] CGEncountered                type OPTIONAL,
+ *     iPSSPCapabilities            [8] IPSSPCapabilities {bound}        type OPTIONAL,
+ *     locationNumber            [10] LocationNumber {bound}            type OPTIONAL,
+ *     originalCalledPartyID        [12] OriginalCalledPartyID {bound}        type OPTIONAL,
+ *     extensions                [15] Extensions {bound}            type OPTIONAL,
+ *     highLayerCompatibility        [23] HighLayerCompatibility            type OPTIONAL,
+ *     additionalCallingPartyNumber    [25] AdditionalCallingPartyNumber {bound}    type OPTIONAL,
+ *     bearerCapability            [27] BearerCapability {bound}        type OPTIONAL,
+ *     eventTypeBCSM            [28] EventTypeBCSM                type OPTIONAL,
+ *     redirectingPartyID            [29] RedirectingPartyID {bound}        type OPTIONAL,
+ *     redirectionInformation        [30] RedirectionInformation            type OPTIONAL,
+ *     cause                [17] Cause {bound}                type OPTIONAL,
+ *     serviceInteractionIndicatorsTwo    [32] ServiceInteractionIndicatorsTwo    type OPTIONAL,
+ *     carrier                [37] Carrier {bound}            type OPTIONAL,
+ *     cug-Index                [45] CUG-Index                type OPTIONAL,
+ *     cug-Interlock            [46] CUG-Interlock                type OPTIONAL,
+ *     cug-OutgoingAccess            [47] NULL                    type OPTIONAL,
+ *     iMSI                [50] IMSI                    type OPTIONAL,
+ *     subscriberState            [51] SubscriberState            type OPTIONAL,
+ *     locationInformation            [52] LocationInformation            type OPTIONAL,
+ *     ext-basicServiceCode        [53] Ext-BasicServiceCode            type OPTIONAL,
+ *     callReferenceNumber            [54] CallReferenceNumber            type OPTIONAL,
+ *     mscAddress                [55] ISDN-AddressString            type OPTIONAL,
+ *     calledPartyBCDNumber        [56] CalledPartyBCDNumber {bound}        type OPTIONAL,
+ *     timeAndTimezone            [57] TimeAndTimezone {bound}        type OPTIONAL,
+ *     callForwardingSS-Pending        [58] NULL                    type OPTIONAL,
+ *     initialDPArgExtension        [59] InitialDPArgExtension {bound}        type OPTIONAL,
  *     ...
  *     }
  * ```
@@ -94,377 +94,443 @@ import { InitialDPArgExtension, _decode_InitialDPArgExtension, _encode_InitialDP
  */
 export
 class InitialDPArg {
+    /**
+     * @summary `serviceKey`.
+     * @description
+     *
+     * Identifies the requested IN service / SLP inside the gsmSCF; not used
+     * for SCP addressing. (3GPP TS 29.078 V19.0.0 clause 11.20.1.1).
+     *
+     * @public
+     * @readonly
+     */
+    public readonly serviceKey: ServiceKey;
+    /**
+     * @summary `calledPartyNumber`.
+     * @description
+     *
+     * Number identifying the called party in the forward direction (ETSI EN
+     * 300 356-1). Sent only for MT, MF, mobile originating on unsuccessful
+     * TDP, and trunk originating. For trunk originating, the ST (end of
+     * pulsing) is included if received or the MSC has determined the called
+     * number is complete. (3GPP TS 29.078 V19.0.0 clause 11.20.1.1).
+     *
+     * @public
+     * @readonly
+     */
+    public readonly calledPartyNumber?: OPTIONAL<CalledPartyNumber>;
+    /**
+     * @summary `callingPartyNumber`.
+     * @description
+     *
+     * Calling party number identifying the calling party or origin of the
+     * call (ETSI EN 300 356-1). (3GPP TS 29.078 V19.0.0 clause 11.20.1.1).
+     *
+     * @public
+     * @readonly
+     */
+    public readonly callingPartyNumber?: OPTIONAL<CallingPartyNumber>;
+    /**
+     * @summary `callingPartysCategory`.
+     * @description
+     *
+     * Type of calling party (e.g. operator, pay phone, ordinary
+     * subscriber); ETSI EN 300 356-1 Calling Party Category. (3GPP TS
+     * 29.078 V19.0.0 clause 11.20.1.1).
+     *
+     * @public
+     * @readonly
+     */
+    public readonly callingPartysCategory?: OPTIONAL<CallingPartysCategory>;
+    /**
+     * @summary `cGEncountered`.
+     * @description
+     *
+     * Type of call gapping this call was subjected to, if any. (3GPP TS
+     * 29.078 V19.0.0 clause 11.20.1.1).
+     *
+     * @public
+     * @readonly
+     */
+    public readonly cGEncountered?: OPTIONAL<CGEncountered>;
+    /**
+     * @summary `iPSSPCapabilities`.
+     * @description
+     *
+     * Which gsmSRF resources supported in the VMSC or GMSC are attached and
+     * available. Absent means a colocated gsmSRF is not supported. Present
+     * means colocated gsmSRF can play announcements via
+     * elementaryMessageIDs and variableMessages, play tones, and collect
+     * DTMF; other capabilities are in the parameter itself. (3GPP TS 29.078
+     * V19.0.0 clause 11.20.1.1).
+     *
+     * @public
+     * @readonly
+     */
+    public readonly iPSSPCapabilities?: OPTIONAL<IPSSPCapabilities>;
+    /**
+     * @summary `locationNumber`.
+     * @description
+     *
+     * Geographical area address for mobility services (ITU-T Q.762), used
+     * when `callingPartyNumber` has no geographical location (e.g.
+     * origin-dependent routing for a mobile calling party). (3GPP TS 29.078
+     * V19.0.0 clause 11.20.1.1).
+     *
+     * @public
+     * @readonly
+     */
+    public readonly locationNumber?: OPTIONAL<LocationNumber>;
+    /**
+     * @summary `originalCalledPartyID`.
+     * @description
+     *
+     * If the call met call forwarding on the route to gsmSSF, carries the
+     * dialled digits (EN 300 356-1 Original Called Number). (3GPP TS 29.078
+     * V19.0.0 clause 11.20.1.1).
+     *
+     * @public
+     * @readonly
+     */
+    public readonly originalCalledPartyID?: OPTIONAL<OriginalCalledPartyID>;
+    /**
+     * @summary `extensions`.
+     * @public
+     * @readonly
+     */
+    public readonly extensions?: OPTIONAL<Extensions>;
+    /**
+     * @summary `highLayerCompatibility`.
+     * @description
+     *
+     * High-layer compatibility used to determine the ISDN teleservice of a
+     * connected ISDN terminal; may also be transported by ISUP (e.g. ATP,
+     * ITU-T Q.763). (3GPP TS 29.078 V19.0.0 clause 11.20.1.1).
+     *
+     * @public
+     * @readonly
+     */
+    public readonly highLayerCompatibility?: OPTIONAL<HighLayerCompatibility>;
+    /**
+     * @summary `additionalCallingPartyNumber`.
+     * @description
+     *
+     * Calling party number provided by the calling user's access signalling
+     * (e.g. a PBX). (3GPP TS 29.078 V19.0.0 clause 11.20.1.1).
+     *
+     * @public
+     * @readonly
+     */
+    public readonly additionalCallingPartyNumber?: OPTIONAL<AdditionalCallingPartyNumber>;
+    /**
+     * @summary `bearerCapability`.
+     * @description
+     *
+     * Bearer capability or transmission-medium requirements. Included only
+     * if ISUP User Service Information is available. Choice `bearerCap`
+     * holds USI; if both USI and USI Prime are available, `bearerCap` holds
+     * User Service Information Prime. (3GPP TS 29.078 V19.0.0 clause
+     * 11.20.1.1).
+     *
+     * @public
+     * @readonly
+     */
+    public readonly bearerCapability?: OPTIONAL<BearerCapability>;
+    /**
+     * @summary `eventTypeBCSM`.
+     * @description
+     *
+     * Armed BCSM DP event that resulted in this InitialDP. (3GPP TS 29.078
+     * V19.0.0 clause 11.20.1.1).
+     *
+     * @public
+     * @readonly
+     */
+    public readonly eventTypeBCSM?: OPTIONAL<EventTypeBCSM>;
+    /**
+     * @summary `redirectingPartyID`.
+     * @description
+     *
+     * Last directory number the call was redirected from. (3GPP TS 29.078
+     * V19.0.0 clause 11.20.1.1).
+     *
+     * @public
+     * @readonly
+     */
+    public readonly redirectingPartyID?: OPTIONAL<RedirectingPartyID>;
+    /**
+     * @summary `redirectionInformation`.
+     * @description
+     *
+     * Forwarding-related information such as the redirecting counter (ITU-T
+     * Q.763 Redirection Information). (3GPP TS 29.078 V19.0.0 clause
+     * 11.20.1.1).
+     *
+     * @public
+     * @readonly
+     */
+    public readonly redirectionInformation?: OPTIONAL<RedirectionInformation>;
+    /**
+     * @summary `cause`.
+     * @description
+     *
+     * Release cause that triggered the event. For Route_Select_Failure:
+     * FailureCause if available. For T_Busy: ISUP release cause (e.g.
+     * Subscriber absent 20, User busy 17), MAP error mapped to ISUP, or
+     * forwarding-reason mapping from 3GPP TS 23.078. (3GPP TS 29.078
+     * V19.0.0 clause 11.20.1.1).
+     *
+     * @public
+     * @readonly
+     */
+    public readonly cause?: OPTIONAL<Cause>;
+    /**
+     * @summary `serviceInteractionIndicatorsTwo`.
+     * @description
+     *
+     * Resolves interactions between CAMEL-based and network-based services.
+     * (3GPP TS 29.078 V19.0.0 clause 11.20.1.1).
+     *
+     * @public
+     * @readonly
+     */
+    public readonly serviceInteractionIndicatorsTwo?: OPTIONAL<ServiceInteractionIndicatorsTwo>;
+    /**
+     * @summary `carrier`.
+     * @description
+     *
+     * Carrier selection field (how the carrier is provided, e.g.
+     * pre-subscribed) followed by carrier ID associated with the calling
+     * subscriber (MO or trunk originating), the called subscriber (MT), or
+     * the forwarding subscriber (MF). Included at gsmSSF operator
+     * discretion. (3GPP TS 29.078 V19.0.0 clause 11.20.1.1).
+     *
+     * @public
+     * @readonly
+     */
+    public readonly carrier?: OPTIONAL<Carrier>;
+    /**
+     * @summary `cug_Index`.
+     * @description
+     *
+     * Selects a CUG for an outgoing call at the user, or indicates an
+     * incoming CUG call to the user. (3GPP TS 29.078 V19.0.0 clause
+     * 11.20.1.1).
+     *
+     * @public
+     * @readonly
+     */
+    public readonly cug_Index?: OPTIONAL<CUG_Index>;
+    /**
+     * @summary `cug_Interlock`.
+     * @description
+     *
+     * Uniquely identifies a CUG within a network. (3GPP TS 29.078 V19.0.0
+     * clause 11.20.1.1).
+     *
+     * @public
+     * @readonly
+     */
+    public readonly cug_Interlock?: OPTIONAL<CUG_Interlock>;
+    /**
+     * @summary `cug_OutgoingAccess`.
+     * @description
+     *
+     * Presence means the calling user has subscribed to outgoing access
+     * inter-CUG accessibility. (3GPP TS 29.078 V19.0.0 clause 11.20.1.1).
+     *
+     * @public
+     * @readonly
+     */
+    public readonly cug_OutgoingAccess?: OPTIONAL<NULL>;
+    /**
+     * @summary `iMSI`.
+     * @description
+     *
+     * IMSI of the mobile subscriber for which the service is invoked. (3GPP
+     * TS 29.078 V19.0.0 clause 11.20.1.1).
+     *
+     * @public
+     * @readonly
+     */
+    public readonly iMSI?: OPTIONAL<IMSI>;
+    /**
+     * @summary `subscriberState`.
+     * @description
+     *
+     * State of the mobile subscriber: busy, idle, or not reachable. (3GPP
+     * TS 29.078 V19.0.0 clause 11.20.1.1).
+     *
+     * @public
+     * @readonly
+     */
+    public readonly subscriberState?: OPTIONAL<SubscriberState>;
+    /**
+     * @summary `locationInformation`.
+     * @description
+     *
+     * Location of the MS and the age of that information.
+     * UserCSGInformation is conveyed here (encoding: 3GPP TS 29.002). (3GPP
+     * TS 29.078 V19.0.0 clause 11.20.1.1).
+     *
+     * @public
+     * @readonly
+     */
+    public readonly locationInformation?: OPTIONAL<LocationInformation>;
+    /**
+     * @summary `ext_basicServiceCode`.
+     * @description
+     *
+     * Basic Service Code. (3GPP TS 29.078 V19.0.0 clause 11.20.1.1).
+     *
+     * @public
+     * @readonly
+     */
+    public readonly ext_basicServiceCode?: OPTIONAL<Ext_BasicServiceCode>;
+    /**
+     * @summary `callReferenceNumber`.
+     * @description
+     *
+     * Call reference number assigned to the call by the CCF. (3GPP TS
+     * 29.078 V19.0.0 clause 11.20.1.1).
+     *
+     * @public
+     * @readonly
+     */
+    public readonly callReferenceNumber?: OPTIONAL<CallReferenceNumber>;
+    /**
+     * @summary `mscAddress`.
+     * @description
+     *
+     * mscId assigned to the MSC. (3GPP TS 29.078 V19.0.0 clause 11.20.1.1).
+     *
+     * @public
+     * @readonly
+     */
+    public readonly mscAddress?: OPTIONAL<ISDN_AddressString>;
+    /**
+     * @summary `calledPartyBCDNumber`.
+     * @description
+     *
+     * Number identifying the called party in the forward direction; may
+     * include service-selection information including * and #. (3GPP TS
+     * 29.078 V19.0.0 clause 11.20.1.1).
+     *
+     * @public
+     * @readonly
+     */
+    public readonly calledPartyBCDNumber?: OPTIONAL<CalledPartyBCDNumber>;
+    /**
+     * @summary `timeAndTimezone`.
+     * @description
+     *
+     * Time gsmSSF was triggered, and the time zone of the invoking gsmSSF.
+     * Spec name `time&Timezone`. (3GPP TS 29.078 V19.0.0 clause 11.20.1.1).
+     *
+     * @public
+     * @readonly
+     */
+    public readonly timeAndTimezone?: OPTIONAL<TimeAndTimezone>;
+    /**
+     * @summary `callForwardingSS_Pending`.
+     * @description
+     *
+     * Presence means a forwarded-to-number was received and the call will
+     * be forwarded due to Call Forwarding SS in the GMSC or VMSC unless
+     * gsmSCF instructs otherwise. (3GPP TS 29.078 V19.0.0 clause
+     * 11.20.1.1).
+     *
+     * @public
+     * @readonly
+     */
+    public readonly callForwardingSS_Pending?: OPTIONAL<NULL>;
+    /**
+     * @summary `initialDPArgExtension`.
+     * @description
+     *
+     * Further InitialDP parameters (GMSC address, forwarding destination,
+     * MS Classmark 2, IMEI, CAMEL phases, SCUDIF compatibilities,
+     * EDS/CollectInformation/ReleaseCall extension flags, UU-Data). (3GPP
+     * TS 29.078 V19.0.0 clause 11.20.1.1).
+     *
+     * @public
+     * @readonly
+     */
+    public readonly initialDPArgExtension?: OPTIONAL<InitialDPArgExtension>;
+    /**
+     * @summary Extensions that are not recognized.
+     * @public
+     * @readonly
+     */
+    public readonly _unrecognizedExtensionsList: _Element[];
+
     constructor (
-        /**
-         * @summary `serviceKey`.
-         * @description
-         *
-         * Identifies the requested IN service / SLP inside the gsmSCF; not used
-         * for SCP addressing. (3GPP TS 29.078 V19.0.0 clause 11.20.1.1).
-         *
-         * @public
-         * @readonly
-         */
-        readonly serviceKey: ServiceKey,
-        /**
-         * @summary `calledPartyNumber`.
-         * @description
-         *
-         * Number identifying the called party in the forward direction (ETSI EN
-         * 300 356-1). Sent only for MT, MF, mobile originating on unsuccessful
-         * TDP, and trunk originating. For trunk originating, the ST (end of
-         * pulsing) is included if received or the MSC has determined the called
-         * number is complete. (3GPP TS 29.078 V19.0.0 clause 11.20.1.1).
-         *
-         * @public
-         * @readonly
-         */
-        readonly calledPartyNumber?: OPTIONAL<CalledPartyNumber>,
-        /**
-         * @summary `callingPartyNumber`.
-         * @description
-         *
-         * Calling party number identifying the calling party or origin of the
-         * call (ETSI EN 300 356-1). (3GPP TS 29.078 V19.0.0 clause 11.20.1.1).
-         *
-         * @public
-         * @readonly
-         */
-        readonly callingPartyNumber?: OPTIONAL<CallingPartyNumber>,
-        /**
-         * @summary `callingPartysCategory`.
-         * @description
-         *
-         * Type of calling party (e.g. operator, pay phone, ordinary
-         * subscriber); ETSI EN 300 356-1 Calling Party Category. (3GPP TS
-         * 29.078 V19.0.0 clause 11.20.1.1).
-         *
-         * @public
-         * @readonly
-         */
-        readonly callingPartysCategory?: OPTIONAL<CallingPartysCategory>,
-        /**
-         * @summary `cGEncountered`.
-         * @description
-         *
-         * Type of call gapping this call was subjected to, if any. (3GPP TS
-         * 29.078 V19.0.0 clause 11.20.1.1).
-         *
-         * @public
-         * @readonly
-         */
-        readonly cGEncountered?: OPTIONAL<CGEncountered>,
-        /**
-         * @summary `iPSSPCapabilities`.
-         * @description
-         *
-         * Which gsmSRF resources supported in the VMSC or GMSC are attached and
-         * available. Absent means a colocated gsmSRF is not supported. Present
-         * means colocated gsmSRF can play announcements via
-         * elementaryMessageIDs and variableMessages, play tones, and collect
-         * DTMF; other capabilities are in the parameter itself. (3GPP TS 29.078
-         * V19.0.0 clause 11.20.1.1).
-         *
-         * @public
-         * @readonly
-         */
-        readonly iPSSPCapabilities?: OPTIONAL<IPSSPCapabilities>,
-        /**
-         * @summary `locationNumber`.
-         * @description
-         *
-         * Geographical area address for mobility services (ITU-T Q.762), used
-         * when `callingPartyNumber` has no geographical location (e.g.
-         * origin-dependent routing for a mobile calling party). (3GPP TS 29.078
-         * V19.0.0 clause 11.20.1.1).
-         *
-         * @public
-         * @readonly
-         */
-        readonly locationNumber?: OPTIONAL<LocationNumber>,
-        /**
-         * @summary `originalCalledPartyID`.
-         * @description
-         *
-         * If the call met call forwarding on the route to gsmSSF, carries the
-         * dialled digits (EN 300 356-1 Original Called Number). (3GPP TS 29.078
-         * V19.0.0 clause 11.20.1.1).
-         *
-         * @public
-         * @readonly
-         */
-        readonly originalCalledPartyID?: OPTIONAL<OriginalCalledPartyID>,
-        /**
-         * @summary `extensions`.
-         * @public
-         * @readonly
-         */
-        readonly extensions?: OPTIONAL<Extensions>,
-        /**
-         * @summary `highLayerCompatibility`.
-         * @description
-         *
-         * High-layer compatibility used to determine the ISDN teleservice of a
-         * connected ISDN terminal; may also be transported by ISUP (e.g. ATP,
-         * ITU-T Q.763). (3GPP TS 29.078 V19.0.0 clause 11.20.1.1).
-         *
-         * @public
-         * @readonly
-         */
-        readonly highLayerCompatibility?: OPTIONAL<HighLayerCompatibility>,
-        /**
-         * @summary `additionalCallingPartyNumber`.
-         * @description
-         *
-         * Calling party number provided by the calling user's access signalling
-         * (e.g. a PBX). (3GPP TS 29.078 V19.0.0 clause 11.20.1.1).
-         *
-         * @public
-         * @readonly
-         */
-        readonly additionalCallingPartyNumber?: OPTIONAL<AdditionalCallingPartyNumber>,
-        /**
-         * @summary `bearerCapability`.
-         * @description
-         *
-         * Bearer capability or transmission-medium requirements. Included only
-         * if ISUP User Service Information is available. Choice `bearerCap`
-         * holds USI; if both USI and USI Prime are available, `bearerCap` holds
-         * User Service Information Prime. (3GPP TS 29.078 V19.0.0 clause
-         * 11.20.1.1).
-         *
-         * @public
-         * @readonly
-         */
-        readonly bearerCapability?: OPTIONAL<BearerCapability>,
-        /**
-         * @summary `eventTypeBCSM`.
-         * @description
-         *
-         * Armed BCSM DP event that resulted in this InitialDP. (3GPP TS 29.078
-         * V19.0.0 clause 11.20.1.1).
-         *
-         * @public
-         * @readonly
-         */
-        readonly eventTypeBCSM?: OPTIONAL<EventTypeBCSM>,
-        /**
-         * @summary `redirectingPartyID`.
-         * @description
-         *
-         * Last directory number the call was redirected from. (3GPP TS 29.078
-         * V19.0.0 clause 11.20.1.1).
-         *
-         * @public
-         * @readonly
-         */
-        readonly redirectingPartyID?: OPTIONAL<RedirectingPartyID>,
-        /**
-         * @summary `redirectionInformation`.
-         * @description
-         *
-         * Forwarding-related information such as the redirecting counter (ITU-T
-         * Q.763 Redirection Information). (3GPP TS 29.078 V19.0.0 clause
-         * 11.20.1.1).
-         *
-         * @public
-         * @readonly
-         */
-        readonly redirectionInformation?: OPTIONAL<RedirectionInformation>,
-        /**
-         * @summary `cause`.
-         * @description
-         *
-         * Release cause that triggered the event. For Route_Select_Failure:
-         * FailureCause if available. For T_Busy: ISUP release cause (e.g.
-         * Subscriber absent 20, User busy 17), MAP error mapped to ISUP, or
-         * forwarding-reason mapping from 3GPP TS 23.078. (3GPP TS 29.078
-         * V19.0.0 clause 11.20.1.1).
-         *
-         * @public
-         * @readonly
-         */
-        readonly cause?: OPTIONAL<Cause>,
-        /**
-         * @summary `serviceInteractionIndicatorsTwo`.
-         * @description
-         *
-         * Resolves interactions between CAMEL-based and network-based services.
-         * (3GPP TS 29.078 V19.0.0 clause 11.20.1.1).
-         *
-         * @public
-         * @readonly
-         */
-        readonly serviceInteractionIndicatorsTwo?: OPTIONAL<ServiceInteractionIndicatorsTwo>,
-        /**
-         * @summary `carrier`.
-         * @description
-         *
-         * Carrier selection field (how the carrier is provided, e.g.
-         * pre-subscribed) followed by carrier ID associated with the calling
-         * subscriber (MO or trunk originating), the called subscriber (MT), or
-         * the forwarding subscriber (MF). Included at gsmSSF operator
-         * discretion. (3GPP TS 29.078 V19.0.0 clause 11.20.1.1).
-         *
-         * @public
-         * @readonly
-         */
-        readonly carrier?: OPTIONAL<Carrier>,
-        /**
-         * @summary `cug_Index`.
-         * @description
-         *
-         * Selects a CUG for an outgoing call at the user, or indicates an
-         * incoming CUG call to the user. (3GPP TS 29.078 V19.0.0 clause
-         * 11.20.1.1).
-         *
-         * @public
-         * @readonly
-         */
-        readonly cug_Index?: OPTIONAL<CUG_Index>,
-        /**
-         * @summary `cug_Interlock`.
-         * @description
-         *
-         * Uniquely identifies a CUG within a network. (3GPP TS 29.078 V19.0.0
-         * clause 11.20.1.1).
-         *
-         * @public
-         * @readonly
-         */
-        readonly cug_Interlock?: OPTIONAL<CUG_Interlock>,
-        /**
-         * @summary `cug_OutgoingAccess`.
-         * @description
-         *
-         * Presence means the calling user has subscribed to outgoing access
-         * inter-CUG accessibility. (3GPP TS 29.078 V19.0.0 clause 11.20.1.1).
-         *
-         * @public
-         * @readonly
-         */
-        readonly cug_OutgoingAccess?: OPTIONAL<NULL>,
-        /**
-         * @summary `iMSI`.
-         * @description
-         *
-         * IMSI of the mobile subscriber for which the service is invoked. (3GPP
-         * TS 29.078 V19.0.0 clause 11.20.1.1).
-         *
-         * @public
-         * @readonly
-         */
-        readonly iMSI?: OPTIONAL<IMSI>,
-        /**
-         * @summary `subscriberState`.
-         * @description
-         *
-         * State of the mobile subscriber: busy, idle, or not reachable. (3GPP
-         * TS 29.078 V19.0.0 clause 11.20.1.1).
-         *
-         * @public
-         * @readonly
-         */
-        readonly subscriberState?: OPTIONAL<SubscriberState>,
-        /**
-         * @summary `locationInformation`.
-         * @description
-         *
-         * Location of the MS and the age of that information.
-         * UserCSGInformation is conveyed here (encoding: 3GPP TS 29.002). (3GPP
-         * TS 29.078 V19.0.0 clause 11.20.1.1).
-         *
-         * @public
-         * @readonly
-         */
-        readonly locationInformation?: OPTIONAL<LocationInformation>,
-        /**
-         * @summary `ext_basicServiceCode`.
-         * @description
-         *
-         * Basic Service Code. (3GPP TS 29.078 V19.0.0 clause 11.20.1.1).
-         *
-         * @public
-         * @readonly
-         */
-        readonly ext_basicServiceCode?: OPTIONAL<Ext_BasicServiceCode>,
-        /**
-         * @summary `callReferenceNumber`.
-         * @description
-         *
-         * Call reference number assigned to the call by the CCF. (3GPP TS
-         * 29.078 V19.0.0 clause 11.20.1.1).
-         *
-         * @public
-         * @readonly
-         */
-        readonly callReferenceNumber?: OPTIONAL<CallReferenceNumber>,
-        /**
-         * @summary `mscAddress`.
-         * @description
-         *
-         * mscId assigned to the MSC. (3GPP TS 29.078 V19.0.0 clause 11.20.1.1).
-         *
-         * @public
-         * @readonly
-         */
-        readonly mscAddress?: OPTIONAL<ISDN_AddressString>,
-        /**
-         * @summary `calledPartyBCDNumber`.
-         * @description
-         *
-         * Number identifying the called party in the forward direction; may
-         * include service-selection information including * and #. (3GPP TS
-         * 29.078 V19.0.0 clause 11.20.1.1).
-         *
-         * @public
-         * @readonly
-         */
-        readonly calledPartyBCDNumber?: OPTIONAL<CalledPartyBCDNumber>,
-        /**
-         * @summary `timeAndTimezone`.
-         * @description
-         *
-         * Time gsmSSF was triggered, and the time zone of the invoking gsmSSF.
-         * Spec name `time&Timezone`. (3GPP TS 29.078 V19.0.0 clause 11.20.1.1).
-         *
-         * @public
-         * @readonly
-         */
-        readonly timeAndTimezone?: OPTIONAL<TimeAndTimezone>,
-        /**
-         * @summary `callForwardingSS_Pending`.
-         * @description
-         *
-         * Presence means a forwarded-to-number was received and the call will
-         * be forwarded due to Call Forwarding SS in the GMSC or VMSC unless
-         * gsmSCF instructs otherwise. (3GPP TS 29.078 V19.0.0 clause
-         * 11.20.1.1).
-         *
-         * @public
-         * @readonly
-         */
-        readonly callForwardingSS_Pending?: OPTIONAL<NULL>,
-        /**
-         * @summary `initialDPArgExtension`.
-         * @description
-         *
-         * Further InitialDP parameters (GMSC address, forwarding destination,
-         * MS Classmark 2, IMEI, CAMEL phases, SCUDIF compatibilities,
-         * EDS/CollectInformation/ReleaseCall extension flags, UU-Data). (3GPP
-         * TS 29.078 V19.0.0 clause 11.20.1.1).
-         *
-         * @public
-         * @readonly
-         */
-        readonly initialDPArgExtension?: OPTIONAL<InitialDPArgExtension>,
-        /**
-         * @summary Extensions that are not recognized.
-         * @public
-         * @readonly
-         */
-        readonly _unrecognizedExtensionsList: _Element[] = []
-    ) {}
+        serviceKey: ServiceKey,
+        calledPartyNumber?: OPTIONAL<CalledPartyNumber>,
+        callingPartyNumber?: OPTIONAL<CallingPartyNumber>,
+        callingPartysCategory?: OPTIONAL<CallingPartysCategory>,
+        cGEncountered?: OPTIONAL<CGEncountered>,
+        iPSSPCapabilities?: OPTIONAL<IPSSPCapabilities>,
+        locationNumber?: OPTIONAL<LocationNumber>,
+        originalCalledPartyID?: OPTIONAL<OriginalCalledPartyID>,
+        extensions?: OPTIONAL<Extensions>,
+        highLayerCompatibility?: OPTIONAL<HighLayerCompatibility>,
+        additionalCallingPartyNumber?: OPTIONAL<AdditionalCallingPartyNumber>,
+        bearerCapability?: OPTIONAL<BearerCapability>,
+        eventTypeBCSM?: OPTIONAL<EventTypeBCSM>,
+        redirectingPartyID?: OPTIONAL<RedirectingPartyID>,
+        redirectionInformation?: OPTIONAL<RedirectionInformation>,
+        cause?: OPTIONAL<Cause>,
+        serviceInteractionIndicatorsTwo?: OPTIONAL<ServiceInteractionIndicatorsTwo>,
+        carrier?: OPTIONAL<Carrier>,
+        cug_Index?: OPTIONAL<CUG_Index>,
+        cug_Interlock?: OPTIONAL<CUG_Interlock>,
+        cug_OutgoingAccess?: OPTIONAL<NULL>,
+        iMSI?: OPTIONAL<IMSI>,
+        subscriberState?: OPTIONAL<SubscriberState>,
+        locationInformation?: OPTIONAL<LocationInformation>,
+        ext_basicServiceCode?: OPTIONAL<Ext_BasicServiceCode>,
+        callReferenceNumber?: OPTIONAL<CallReferenceNumber>,
+        mscAddress?: OPTIONAL<ISDN_AddressString>,
+        calledPartyBCDNumber?: OPTIONAL<CalledPartyBCDNumber>,
+        timeAndTimezone?: OPTIONAL<TimeAndTimezone>,
+        callForwardingSS_Pending?: OPTIONAL<NULL>,
+        initialDPArgExtension?: OPTIONAL<InitialDPArgExtension>,
+        _unrecognizedExtensionsList: _Element[] = []
+    ) {
+        this.serviceKey = serviceKey;
+        this.calledPartyNumber = calledPartyNumber;
+        this.callingPartyNumber = callingPartyNumber;
+        this.callingPartysCategory = callingPartysCategory;
+        this.cGEncountered = cGEncountered;
+        this.iPSSPCapabilities = iPSSPCapabilities;
+        this.locationNumber = locationNumber;
+        this.originalCalledPartyID = originalCalledPartyID;
+        this.extensions = extensions;
+        this.highLayerCompatibility = highLayerCompatibility;
+        this.additionalCallingPartyNumber = additionalCallingPartyNumber;
+        this.bearerCapability = bearerCapability;
+        this.eventTypeBCSM = eventTypeBCSM;
+        this.redirectingPartyID = redirectingPartyID;
+        this.redirectionInformation = redirectionInformation;
+        this.cause = cause;
+        this.serviceInteractionIndicatorsTwo = serviceInteractionIndicatorsTwo;
+        this.carrier = carrier;
+        this.cug_Index = cug_Index;
+        this.cug_Interlock = cug_Interlock;
+        this.cug_OutgoingAccess = cug_OutgoingAccess;
+        this.iMSI = iMSI;
+        this.subscriberState = subscriberState;
+        this.locationInformation = locationInformation;
+        this.ext_basicServiceCode = ext_basicServiceCode;
+        this.callReferenceNumber = callReferenceNumber;
+        this.mscAddress = mscAddress;
+        this.calledPartyBCDNumber = calledPartyBCDNumber;
+        this.timeAndTimezone = timeAndTimezone;
+        this.callForwardingSS_Pending = callForwardingSS_Pending;
+        this.initialDPArgExtension = initialDPArgExtension;
+        this._unrecognizedExtensionsList = _unrecognizedExtensionsList;
+    }
 
     /**
      * @summary Restructures an object into a InitialDPArg

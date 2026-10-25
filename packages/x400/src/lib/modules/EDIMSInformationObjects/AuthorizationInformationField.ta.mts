@@ -1,7 +1,7 @@
 /* eslint-disable */
 import {
-    OPTIONAL,
-    ASN1Element as _Element,
+    type OPTIONAL,
+    type ASN1Element as _Element,
     ASN1TagClass as _TagClass,
     ASN1Construction as _Construction,
     ASN1UniversalType as _UniversalType,
@@ -12,12 +12,12 @@ import {
 } from '@wildboar/asn1';
 import * as $ from '@wildboar/asn1/functional';
 import {
-    AuthorizationInformation,
+    type AuthorizationInformation,
     _decode_AuthorizationInformation,
     _encode_AuthorizationInformation,
 } from '../EDIMSInformationObjects/AuthorizationInformation.ta.mjs';
 import {
-    AuthorizationInformationQualifier,
+    type AuthorizationInformationQualifier,
     _decode_AuthorizationInformationQualifier,
     _encode_AuthorizationInformationQualifier,
 } from '../EDIMSInformationObjects/AuthorizationInformationQualifier.ta.mjs';
@@ -39,20 +39,26 @@ import {
  *
  */
 export class AuthorizationInformationField {
+    /**
+     * @summary `authorization_information`.
+     * @public
+     * @readonly
+     */
+    public readonly authorization_information: AuthorizationInformation;
+    /**
+     * @summary `authorization_information_qualifier`.
+     * @public
+     * @readonly
+     */
+    public readonly authorization_information_qualifier?: OPTIONAL<AuthorizationInformationQualifier>;
+
     constructor(
-        /**
-         * @summary `authorization_information`.
-         * @public
-         * @readonly
-         */
-        readonly authorization_information: AuthorizationInformation,
-        /**
-         * @summary `authorization_information_qualifier`.
-         * @public
-         * @readonly
-         */
-        readonly authorization_information_qualifier?: OPTIONAL<AuthorizationInformationQualifier>
-    ) {}
+        authorization_information: AuthorizationInformation,
+        authorization_information_qualifier?: OPTIONAL<AuthorizationInformationQualifier>
+    ) {
+        this.authorization_information = authorization_information;
+        this.authorization_information_qualifier = authorization_information_qualifier;
+    }
 
     /**
      * @summary Restructures an object into a AuthorizationInformationField

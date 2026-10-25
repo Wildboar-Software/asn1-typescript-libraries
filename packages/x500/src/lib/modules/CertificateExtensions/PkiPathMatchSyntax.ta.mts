@@ -1,11 +1,11 @@
 /* eslint-disable */
 import {
     ASN1ConstructionError as _ConstructionError,
-    ASN1Element as _Element,
+    type ASN1Element as _Element,
 } from "@wildboar/asn1";
 import * as $ from "@wildboar/asn1/functional";
 import {
-    Name,
+    type Name,
     _decode_Name,
     _encode_Name,
 } from "../InformationFramework/Name.ta.mjs";
@@ -28,26 +28,34 @@ import {
  *
  */
 export class PkiPathMatchSyntax {
+    /**
+     * @summary `firstIssuer`.
+     * @public
+     * @readonly
+     */
+    public readonly firstIssuer: Name;
+    /**
+     * @summary `lastSubject`.
+     * @public
+     * @readonly
+     */
+    public readonly lastSubject: Name;
+    /**
+     * @summary Extensions that are not recognized.
+     * @public
+     * @readonly
+     */
+    public readonly _unrecognizedExtensionsList: _Element[];
+
     constructor(
-        /**
-         * @summary `firstIssuer`.
-         * @public
-         * @readonly
-         */
-        readonly firstIssuer: Name,
-        /**
-         * @summary `lastSubject`.
-         * @public
-         * @readonly
-         */
-        readonly lastSubject: Name,
-        /**
-         * @summary Extensions that are not recognized.
-         * @public
-         * @readonly
-         */
-        readonly _unrecognizedExtensionsList: _Element[] = []
-    ) {}
+        firstIssuer: Name,
+        lastSubject: Name,
+        _unrecognizedExtensionsList: _Element[] = []
+    ) {
+        this.firstIssuer = firstIssuer;
+        this.lastSubject = lastSubject;
+        this._unrecognizedExtensionsList = _unrecognizedExtensionsList;
+    }
 
     /**
      * @summary Restructures an object into a PkiPathMatchSyntax

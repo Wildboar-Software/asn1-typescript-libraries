@@ -1,6 +1,6 @@
 /* eslint-disable */
 import {
-  OPTIONAL,
+  type OPTIONAL,
   ASN1Element as _Element,
   ASN1TagClass as _TagClass,
   ASN1Construction as _Construction,
@@ -11,9 +11,9 @@ import {
   ASN1ConstructionError as _ConstructionError,
 } from '@wildboar/asn1';
 import * as $ from '@wildboar/asn1/functional';
-import { Scope, _decode_Scope, _encode_Scope } from '../CMIP-1/Scope.ta.mjs';
+import { type Scope, _decode_Scope, _encode_Scope } from '../CMIP-1/Scope.ta.mjs';
 import {
-  CMISFilter,
+  type CMISFilter,
   _decode_CMISFilter,
   _encode_CMISFilter,
 } from '../CMIP-1/CMISFilter.ta.mjs';
@@ -56,7 +56,7 @@ export class ComplexityLimitation {
    * @public
    * @readonly
    */
-  readonly scope?: OPTIONAL<Scope>;
+  public readonly scope?: OPTIONAL<Scope>;
   /**
    * @summary `filter`.
    * @description
@@ -66,7 +66,7 @@ export class ComplexityLimitation {
    * @public
    * @readonly
    */
-  readonly filter?: OPTIONAL<CMISFilter>;
+  public readonly filter?: OPTIONAL<CMISFilter>;
   /**
    * @summary `sync`.
    * @description
@@ -77,13 +77,13 @@ export class ComplexityLimitation {
    * @public
    * @readonly
    */
-  readonly sync?: OPTIONAL<CMISSync>;
+  public readonly sync?: OPTIONAL<CMISSync>;
   /**
    * @summary Extensions that are not recognized.
    * @public
    * @readonly
    */
-  readonly _unrecognizedExtensionsList: _Element[];
+  public readonly _unrecognizedExtensionsList: _Element[];
 
   constructor(
     scope?: OPTIONAL<Scope>,
@@ -126,7 +126,7 @@ export class ComplexityLimitation {
    * @static
    */
 
-  public static _enum_for_sync = _enum_for_CMISSync;
+  public static _enum_for_sync: typeof _enum_for_CMISSync = _enum_for_CMISSync;
 }
 
 

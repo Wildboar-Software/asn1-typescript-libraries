@@ -1,7 +1,7 @@
 import {
-    OPTIONAL,
-    NULL,
-    ASN1Element as _Element,
+    type OPTIONAL,
+    type NULL,
+    type ASN1Element as _Element,
     ASN1TagClass as _TagClass,
 } from "@wildboar/asn1";
 import * as $ from "@wildboar/asn1/functional";
@@ -32,75 +32,91 @@ import { type Ext_BasicServiceCode, _decode_Ext_BasicServiceCode, _encode_Ext_Ba
  *
  */
 export class EventSpecificInformationBCSM_oAnswerSpecificInfo {
+    /**
+     * @summary `destinationAddress`.
+     * @description
+     *
+     * Destination address for the call, if available.
+     * (3GPP TS 29.078 V19.0.0 clause 11.18).
+     *
+     * @public
+     * @readonly
+     */
+    public readonly destinationAddress?: OPTIONAL<CalledPartyNumber>;
+    /**
+     * @summary `or_Call`.
+     * @description
+     *
+     * Call was subject to Basic Optimal Routeing (3GPP TS 23.079).
+     * (3GPP TS 29.078 V19.0.0 clause 11.18).
+     *
+     * @public
+     * @readonly
+     */
+    public readonly or_Call?: OPTIONAL<NULL>;
+    /**
+     * @summary `forwardedCall`.
+     * @description
+     *
+     * Call Forwarding supplementary service was invoked.
+     * (3GPP TS 29.078 V19.0.0 clause 11.18).
+     *
+     * @public
+     * @readonly
+     */
+    public readonly forwardedCall?: OPTIONAL<NULL>;
+    /**
+     * @summary `chargeIndicator`.
+     * @description
+     *
+     * Charge indicator, if available.
+     * (3GPP TS 29.078 V19.0.0 clause 11.18).
+     *
+     * @public
+     * @readonly
+     */
+    public readonly chargeIndicator?: OPTIONAL<ChargeIndicator>;
+    /**
+     * @summary `ext_basicServiceCode`.
+     * @description
+     *
+     * Extended Basic Service Code for SCUDIF calls (3GPP TS 23.172).
+     * (3GPP TS 29.078 V19.0.0 clause 11.18).
+     *
+     * @public
+     * @readonly
+     */
+    public readonly ext_basicServiceCode?: OPTIONAL<Ext_BasicServiceCode>;
+    /**
+     * @summary `ext_basicServiceCode2`.
+     * @description
+     *
+     * Second Extended Basic Service Code for SCUDIF calls (3GPP TS 23.172).
+     * (3GPP TS 29.078 V19.0.0 clause 11.18).
+     *
+     * @public
+     * @readonly
+     */
+    public readonly ext_basicServiceCode2?: OPTIONAL<Ext_BasicServiceCode>;
+    public readonly _unrecognizedExtensionsList: _Element[];
+
     constructor (
-        /**
-         * @summary `destinationAddress`.
-         * @description
-         *
-         * Destination address for the call, if available.
-         * (3GPP TS 29.078 V19.0.0 clause 11.18).
-         *
-         * @public
-         * @readonly
-         */
-        readonly destinationAddress?: OPTIONAL<CalledPartyNumber>,
-        /**
-         * @summary `or_Call`.
-         * @description
-         *
-         * Call was subject to Basic Optimal Routeing (3GPP TS 23.079).
-         * (3GPP TS 29.078 V19.0.0 clause 11.18).
-         *
-         * @public
-         * @readonly
-         */
-        readonly or_Call?: OPTIONAL<NULL>,
-        /**
-         * @summary `forwardedCall`.
-         * @description
-         *
-         * Call Forwarding supplementary service was invoked.
-         * (3GPP TS 29.078 V19.0.0 clause 11.18).
-         *
-         * @public
-         * @readonly
-         */
-        readonly forwardedCall?: OPTIONAL<NULL>,
-        /**
-         * @summary `chargeIndicator`.
-         * @description
-         *
-         * Charge indicator, if available.
-         * (3GPP TS 29.078 V19.0.0 clause 11.18).
-         *
-         * @public
-         * @readonly
-         */
-        readonly chargeIndicator?: OPTIONAL<ChargeIndicator>,
-        /**
-         * @summary `ext_basicServiceCode`.
-         * @description
-         *
-         * Extended Basic Service Code for SCUDIF calls (3GPP TS 23.172).
-         * (3GPP TS 29.078 V19.0.0 clause 11.18).
-         *
-         * @public
-         * @readonly
-         */
-        readonly ext_basicServiceCode?: OPTIONAL<Ext_BasicServiceCode>,
-        /**
-         * @summary `ext_basicServiceCode2`.
-         * @description
-         *
-         * Second Extended Basic Service Code for SCUDIF calls (3GPP TS 23.172).
-         * (3GPP TS 29.078 V19.0.0 clause 11.18).
-         *
-         * @public
-         * @readonly
-         */
-        readonly ext_basicServiceCode2?: OPTIONAL<Ext_BasicServiceCode>,
-        readonly _unrecognizedExtensionsList: _Element[] = [],
-    ) {}
+        destinationAddress?: OPTIONAL<CalledPartyNumber>,
+        or_Call?: OPTIONAL<NULL>,
+        forwardedCall?: OPTIONAL<NULL>,
+        chargeIndicator?: OPTIONAL<ChargeIndicator>,
+        ext_basicServiceCode?: OPTIONAL<Ext_BasicServiceCode>,
+        ext_basicServiceCode2?: OPTIONAL<Ext_BasicServiceCode>,
+        _unrecognizedExtensionsList: _Element[] = [],
+    ) {
+        this.destinationAddress = destinationAddress;
+        this.or_Call = or_Call;
+        this.forwardedCall = forwardedCall;
+        this.chargeIndicator = chargeIndicator;
+        this.ext_basicServiceCode = ext_basicServiceCode;
+        this.ext_basicServiceCode2 = ext_basicServiceCode2;
+        this._unrecognizedExtensionsList = _unrecognizedExtensionsList;
+    }
 
     public static _from_object (_o: { [_K in keyof (EventSpecificInformationBCSM_oAnswerSpecificInfo)]: (EventSpecificInformationBCSM_oAnswerSpecificInfo)[_K] }): EventSpecificInformationBCSM_oAnswerSpecificInfo {
         return new EventSpecificInformationBCSM_oAnswerSpecificInfo(_o.destinationAddress, _o.or_Call, _o.forwardedCall, _o.chargeIndicator, _o.ext_basicServiceCode, _o.ext_basicServiceCode2, _o._unrecognizedExtensionsList);

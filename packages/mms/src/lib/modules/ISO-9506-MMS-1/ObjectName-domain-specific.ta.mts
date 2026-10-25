@@ -1,6 +1,6 @@
 /* eslint-disable */
 import {
-    ASN1Element as _Element,
+    type ASN1Element as _Element,
     ASN1TagClass as _TagClass,
     ASN1Construction as _Construction,
     ASN1UniversalType as _UniversalType,
@@ -10,7 +10,7 @@ import {
     ASN1ConstructionError as _ConstructionError,
 } from "@wildboar/asn1";
 import * as $ from "@wildboar/asn1/functional";
-import { Identifier, _decode_Identifier, _encode_Identifier } from "../ISO-9506-MMS-1/Identifier.ta.mjs";
+import { type Identifier, _decode_Identifier, _encode_Identifier } from "../ISO-9506-MMS-1/Identifier.ta.mjs";
 
 
 /**
@@ -33,28 +33,34 @@ import { Identifier, _decode_Identifier, _encode_Identifier } from "../ISO-9506-
  */
 export
 class ObjectName_domain_specific {
+    /**
+     * @summary `domainID`.
+     * @description
+     *
+     * VMD-specific Identifier of the Domain that contains the object
+     * (ISO 9506-1:2003 §7.5.3.1).
+     * @public
+     * @readonly
+     */
+    public readonly domainID: Identifier;
+    /**
+     * @summary `itemID`.
+     * @description
+     *
+     * Object name unique within that Domain for this object class
+     * (ISO 9506-1:2003 §7.5.3.2).
+     * @public
+     * @readonly
+     */
+    public readonly itemID: Identifier;
+
     constructor (
-        /**
-         * @summary `domainID`.
-         * @description
-         *
-         * VMD-specific Identifier of the Domain that contains the object
-         * (ISO 9506-1:2003 §7.5.3.1).
-         * @public
-         * @readonly
-         */
-        readonly domainID: Identifier,
-        /**
-         * @summary `itemID`.
-         * @description
-         *
-         * Object name unique within that Domain for this object class
-         * (ISO 9506-1:2003 §7.5.3.2).
-         * @public
-         * @readonly
-         */
-        readonly itemID: Identifier
-    ) {}
+        domainID: Identifier,
+        itemID: Identifier
+    ) {
+        this.domainID = domainID;
+        this.itemID = itemID;
+    }
 
     /**
      * @summary Restructures an object into a ObjectName_domain_specific

@@ -1,20 +1,20 @@
 /* eslint-disable */
 import {
-    BOOLEAN,
-    INTEGER,
-    OPTIONAL,
-    ASN1Element as _Element,
+    type BOOLEAN,
+    type INTEGER,
+    type OPTIONAL,
+    type ASN1Element as _Element,
     ASN1TagClass as _TagClass
 } from "@wildboar/asn1";
 import * as $ from "@wildboar/asn1/functional";
 import { CommonInfo, _decode_CommonInfo, _encode_CommonInfo } from "../RecordSyntax-explain/CommonInfo.ta.mjs";
-import { InternationalString, _decode_InternationalString, _encode_InternationalString } from "../Z39-50-APDU-2001/InternationalString.ta.mjs";
-import { HumanString, _decode_HumanString, _encode_HumanString } from "../RecordSyntax-explain/HumanString.ta.mjs";
-import { IconObject, _decode_IconObject, _encode_IconObject } from "../RecordSyntax-explain/IconObject.ta.mjs";
+import { type InternationalString, _decode_InternationalString, _encode_InternationalString } from "../Z39-50-APDU-2001/InternationalString.ta.mjs";
+import { type HumanString, _decode_HumanString, _encode_HumanString } from "../RecordSyntax-explain/HumanString.ta.mjs";
+import { type IconObject, _decode_IconObject, _encode_IconObject } from "../RecordSyntax-explain/IconObject.ta.mjs";
 import { IntUnit, _decode_IntUnit, _encode_IntUnit } from "../Z39-50-APDU-2001/IntUnit.ta.mjs";
 import { ContactInfo, _decode_ContactInfo, _encode_ContactInfo } from "../RecordSyntax-explain/ContactInfo.ta.mjs";
-import { DatabaseList, _decode_DatabaseList, _encode_DatabaseList } from "../RecordSyntax-explain/DatabaseList.ta.mjs";
-import { NetworkAddress, _decode_NetworkAddress, _encode_NetworkAddress } from "../RecordSyntax-explain/NetworkAddress.ta.mjs";
+import { type DatabaseList, _decode_DatabaseList, _encode_DatabaseList } from "../RecordSyntax-explain/DatabaseList.ta.mjs";
+import { type NetworkAddress, _decode_NetworkAddress, _encode_NetworkAddress } from "../RecordSyntax-explain/NetworkAddress.ta.mjs";
 import { AccessInfo, _decode_AccessInfo, _encode_AccessInfo } from "../RecordSyntax-explain/AccessInfo.ta.mjs";
 
 

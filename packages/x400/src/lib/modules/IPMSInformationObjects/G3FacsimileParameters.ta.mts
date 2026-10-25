@@ -1,8 +1,8 @@
 /* eslint-disable */
 import {
-    OPTIONAL,
-    INTEGER,
-    ASN1Element as _Element,
+    type OPTIONAL,
+    type INTEGER,
+    type ASN1Element as _Element,
     ASN1TagClass as _TagClass,
     ASN1Construction as _Construction,
     ASN1UniversalType as _UniversalType,
@@ -13,7 +13,7 @@ import {
 } from '@wildboar/asn1';
 import * as $ from '@wildboar/asn1/functional';
 import {
-    G3FacsimileNonBasicParameters,
+    type G3FacsimileNonBasicParameters,
     _decode_G3FacsimileNonBasicParameters,
     _encode_G3FacsimileNonBasicParameters,
 } from '../MTSAbstractService/G3FacsimileNonBasicParameters.ta.mjs';
@@ -34,20 +34,26 @@ import {
  *
  */
 export class G3FacsimileParameters {
+    /**
+     * @summary `number_of_pages`.
+     * @public
+     * @readonly
+     */
+    public readonly number_of_pages?: OPTIONAL<INTEGER>;
+    /**
+     * @summary `non_basic_parameters`.
+     * @public
+     * @readonly
+     */
+    public readonly non_basic_parameters?: OPTIONAL<G3FacsimileNonBasicParameters>;
+
     constructor(
-        /**
-         * @summary `number_of_pages`.
-         * @public
-         * @readonly
-         */
-        readonly number_of_pages?: OPTIONAL<INTEGER>,
-        /**
-         * @summary `non_basic_parameters`.
-         * @public
-         * @readonly
-         */
-        readonly non_basic_parameters?: OPTIONAL<G3FacsimileNonBasicParameters>
-    ) {}
+        number_of_pages?: OPTIONAL<INTEGER>,
+        non_basic_parameters?: OPTIONAL<G3FacsimileNonBasicParameters>
+    ) {
+        this.number_of_pages = number_of_pages;
+        this.non_basic_parameters = non_basic_parameters;
+    }
 
     /**
      * @summary Restructures an object into a G3FacsimileParameters

@@ -1,7 +1,7 @@
 /* eslint-disable */
 import {
-    OPTIONAL,
-    ASN1Element as _Element,
+    type OPTIONAL,
+    type ASN1Element as _Element,
     ASN1TagClass as _TagClass,
     ASN1Construction as _Construction,
     ASN1UniversalType as _UniversalType,
@@ -11,7 +11,7 @@ import {
     ASN1ConstructionError as _ConstructionError,
 } from "@wildboar/asn1";
 import * as $ from "@wildboar/asn1/functional";
-import { DfrEntryName, _decode_DfrEntryName, _encode_DfrEntryName } from "../DFRAbstractService/DfrEntryName.ta.mjs";
+import { type DfrEntryName, _decode_DfrEntryName, _encode_DfrEntryName } from "../DFRAbstractService/DfrEntryName.ta.mjs";
 import { AccessProblem, _enum_for_AccessProblem, _decode_AccessProblem, _encode_AccessProblem } from "../DFRAbstractService/AccessProblem.ta.mjs";
 import { ReferentAccessProblem, _enum_for_ReferentAccessProblem, _decode_ReferentAccessProblem, _encode_ReferentAccessProblem } from "../DFRAbstractService/ReferentAccessProblem.ta.mjs";
 
@@ -38,35 +38,43 @@ import { ReferentAccessProblem, _enum_for_ReferentAccessProblem, _decode_Referen
  */
 export
 class Warning {
+    /**
+     * @summary `entry`.
+     * @description
+     *
+     * Entry that could not be processed.
+     * @public
+     * @readonly
+     */
+    public readonly entry: DfrEntryName;
+    /**
+     * @summary `accessl`.
+     * @description
+     *
+     * AccessProblem; see ISO/IEC 10166-1:1991 §8.3.3.
+     * @public
+     * @readonly
+     */
+    public readonly accessl?: OPTIONAL<AccessProblem>;
+    /**
+     * @summary `access2`.
+     * @description
+     *
+     * ReferentAccessProblem; see ISO/IEC 10166-1:1991 §8.3.5.
+     * @public
+     * @readonly
+     */
+    public readonly access2?: OPTIONAL<ReferentAccessProblem>;
+
     constructor (
-        /**
-         * @summary `entry`.
-         * @description
-         *
-         * Entry that could not be processed.
-         * @public
-         * @readonly
-         */
-        readonly entry: DfrEntryName,
-        /**
-         * @summary `accessl`.
-         * @description
-         *
-         * AccessProblem; see ISO/IEC 10166-1:1991 §8.3.3.
-         * @public
-         * @readonly
-         */
-        readonly accessl?: OPTIONAL<AccessProblem>,
-        /**
-         * @summary `access2`.
-         * @description
-         *
-         * ReferentAccessProblem; see ISO/IEC 10166-1:1991 §8.3.5.
-         * @public
-         * @readonly
-         */
-        readonly access2?: OPTIONAL<ReferentAccessProblem>
-    ) {}
+        entry: DfrEntryName,
+        accessl?: OPTIONAL<AccessProblem>,
+        access2?: OPTIONAL<ReferentAccessProblem>
+    ) {
+        this.entry = entry;
+        this.accessl = accessl;
+        this.access2 = access2;
+    }
 
     /**
      * @summary Restructures an object into a Warning
@@ -90,13 +98,13 @@ class Warning {
          * @static
          */
 
-    public static _enum_for_accessl = _enum_for_AccessProblem;        /**
+    public static _enum_for_accessl: typeof _enum_for_AccessProblem = _enum_for_AccessProblem;        /**
          * @summary The enum used as the type of the component `access2`
          * @public
          * @static
          */
 
-    public static _enum_for_access2 = _enum_for_ReferentAccessProblem;
+    public static _enum_for_access2: typeof _enum_for_ReferentAccessProblem = _enum_for_ReferentAccessProblem;
 }
 
 /**

@@ -11,7 +11,7 @@ import {
 } from '@wildboar/asn1';
 import * as $ from '@wildboar/asn1/functional';
 import {
-  MemoryAddress,
+  type MemoryAddress,
   _decode_MemoryAddress,
   _encode_MemoryAddress,
 } from '../BIP/MemoryAddress.ta.mjs';
@@ -48,7 +48,7 @@ export class ApplicationOwnedMemoryBlock {
    * @public
    * @readonly
    */
-  readonly address: MemoryAddress;
+  public readonly address: MemoryAddress;
 
   constructor(
     address: MemoryAddress

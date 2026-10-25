@@ -2,17 +2,17 @@
 
 import * as $ from "@wildboar/asn1/functional";
 import {
-    OPTIONAL,
-    INTEGER,
-    SEQUENCE,
-    SET,
-    IA5String,
-    ASN1Element as _Element,
+    type OPTIONAL,
+    type INTEGER,
+    type SEQUENCE,
+    type SET,
+    type IA5String,
+    type ASN1Element as _Element,
     ASN1TagClass as _TagClass
 } from "@wildboar/asn1";
-import { SubjectDeviceID, _decode_SubjectDeviceID, _encode_SubjectDeviceID } from "../CSTA-device-identifiers/SubjectDeviceID.ta.mjs";
+import { type SubjectDeviceID, _decode_SubjectDeviceID, _encode_SubjectDeviceID } from "../CSTA-device-identifiers/SubjectDeviceID.ta.mjs";
 
-import { DisplayID, _decode_DisplayID, _encode_DisplayID } from "../CSTA-physical-device-feature/DisplayID.ta.mjs";
+import { type DisplayID, _decode_DisplayID, _encode_DisplayID } from "../CSTA-physical-device-feature/DisplayID.ta.mjs";
 
 import {
     CharacterSet,
@@ -43,14 +43,14 @@ import { CSTACommonArguments, _decode_CSTACommonArguments, _encode_CSTACommonArg
  * ```asn1
  * DisplayUpdatedEvent ::= SEQUENCE
  * {    device                SubjectDeviceID,
- *     displayID            DisplayID                OPTIONAL,
+ *     displayID            DisplayID                type OPTIONAL,
  *     logicalRows            INTEGER,
  *     logicalColumns            INTEGER,
- *     physicalRows            [0] IMPLICIT INTEGER             OPTIONAL,
- *     physicalColumns            [1] IMPLICIT INTEGER             OPTIONAL,
- *     physicalBaseRowNumber        [2] IMPLICIT INTEGER             OPTIONAL,
- *     physicalBaseColumnNumber    [3] IMPLICIT INTEGER             OPTIONAL,
- *     characterSet            CharacterSet                OPTIONAL,
+ *     physicalRows            [0] IMPLICIT INTEGER             type OPTIONAL,
+ *     physicalColumns            [1] IMPLICIT INTEGER             type OPTIONAL,
+ *     physicalBaseRowNumber        [2] IMPLICIT INTEGER             type OPTIONAL,
+ *     physicalBaseColumnNumber    [3] IMPLICIT INTEGER             type OPTIONAL,
+ *     characterSet            CharacterSet                type OPTIONAL,
  *     contentsOfDisplay        IA5String,
  *     extensions            CSTACommonArguments            OPTIONAL }
  * ```
@@ -59,110 +59,134 @@ import { CSTACommonArguments, _decode_CSTACommonArguments, _encode_CSTACommonArg
  */
 export
 class DisplayUpdatedEvent {
+    /**
+     * @summary `device`.
+     * @description
+     *
+     * Device whose display changed.
+     * @public
+     * @readonly
+     */
+    public readonly device: SubjectDeviceID;
+    /**
+     * @summary `displayID`.
+     * @description
+     *
+     * Which display. Omit only if the device has exactly one display.
+     * @public
+     * @readonly
+     */
+    public readonly displayID: OPTIONAL<DisplayID>;
+    /**
+     * @summary `logicalRows`.
+     * @description
+     *
+     * Rows on the logical display (fixed per device).
+     * @public
+     * @readonly
+     */
+    public readonly logicalRows: INTEGER;
+    /**
+     * @summary `logicalColumns`.
+     * @description
+     *
+     * Columns on the logical display (fixed per device).
+     * @public
+     * @readonly
+     */
+    public readonly logicalColumns: INTEGER;
+    /**
+     * @summary `physicalRows`.
+     * @description
+     *
+     * Physical rows. Omit when equal to `logicalRows`.
+     * @public
+     * @readonly
+     */
+    public readonly physicalRows: OPTIONAL<INTEGER>;
+    /**
+     * @summary `physicalColumns`.
+     * @description
+     *
+     * Physical columns. Omit when equal to `logicalColumns`.
+     * @public
+     * @readonly
+     */
+    public readonly physicalColumns: OPTIONAL<INTEGER>;
+    /**
+     * @summary `physicalBaseRowNumber`.
+     * @description
+     *
+     * Logical row at the first physical row. Omit when row counts are
+     * equal.
+     * @public
+     * @readonly
+     */
+    public readonly physicalBaseRowNumber: OPTIONAL<INTEGER>;
+    /**
+     * @summary `physicalBaseColumnNumber`.
+     * @description
+     *
+     * Logical column at the first physical column. Omit when column counts
+     * are equal.
+     * @public
+     * @readonly
+     */
+    public readonly physicalBaseColumnNumber: OPTIONAL<INTEGER>;
+    /**
+     * @summary `characterSet`.
+     * @description
+     *
+     * ASCII (default), Unicode, or Proprietary. Fixed per display.
+     * @public
+     * @readonly
+     */
+    public readonly characterSet: OPTIONAL<CharacterSet>;
+    /**
+     * @summary `contentsOfDisplay`.
+     * @description
+     *
+     * Full logical display: rows concatenated, including spaces.
+     * @public
+     * @readonly
+     */
+    public readonly contentsOfDisplay: IA5String;
+    /**
+     * @summary `extensions`.
+     * @description
+     *
+     * Optional security (timestamp, sequence, securityInfo) and
+     * privateData.
+     * @public
+     * @readonly
+     */
+    public readonly extensions?: OPTIONAL<CSTACommonArguments>;
+
     constructor (
-        /**
-         * @summary `device`.
-         * @description
-         *
-         * Device whose display changed.
-         * @public
-         * @readonly
-         */
-        readonly device: SubjectDeviceID,
-        /**
-         * @summary `displayID`.
-         * @description
-         *
-         * Which display. Omit only if the device has exactly one display.
-         * @public
-         * @readonly
-         */
-        readonly displayID: OPTIONAL<DisplayID>,
-        /**
-         * @summary `logicalRows`.
-         * @description
-         *
-         * Rows on the logical display (fixed per device).
-         * @public
-         * @readonly
-         */
-        readonly logicalRows: INTEGER,
-        /**
-         * @summary `logicalColumns`.
-         * @description
-         *
-         * Columns on the logical display (fixed per device).
-         * @public
-         * @readonly
-         */
-        readonly logicalColumns: INTEGER,
-        /**
-         * @summary `physicalRows`.
-         * @description
-         *
-         * Physical rows. Omit when equal to `logicalRows`.
-         * @public
-         * @readonly
-         */
-        readonly physicalRows: OPTIONAL<INTEGER>,
-        /**
-         * @summary `physicalColumns`.
-         * @description
-         *
-         * Physical columns. Omit when equal to `logicalColumns`.
-         * @public
-         * @readonly
-         */
-        readonly physicalColumns: OPTIONAL<INTEGER>,
-        /**
-         * @summary `physicalBaseRowNumber`.
-         * @description
-         *
-         * Logical row at the first physical row. Omit when row counts are
-         * equal.
-         * @public
-         * @readonly
-         */
-        readonly physicalBaseRowNumber: OPTIONAL<INTEGER>,
-        /**
-         * @summary `physicalBaseColumnNumber`.
-         * @description
-         *
-         * Logical column at the first physical column. Omit when column counts
-         * are equal.
-         * @public
-         * @readonly
-         */
-        readonly physicalBaseColumnNumber: OPTIONAL<INTEGER>,
-        /**
-         * @summary `characterSet`.
-         * @description
-         *
-         * ASCII (default), Unicode, or Proprietary. Fixed per display.
-         * @public
-         * @readonly
-         */
-        readonly characterSet: OPTIONAL<CharacterSet>,
-        /**
-         * @summary `contentsOfDisplay`.
-         * @description
-         *
-         * Full logical display: rows concatenated, including spaces.
-         * @public
-         * @readonly
-         */
-        readonly contentsOfDisplay: IA5String,
-        /**
-         * @summary `extensions`.
-         * @description
-         *
-         * Optional security (timestamp, sequence, securityInfo) and
-         * privateData.
-         * @public
-         * @readonly
-         */
-        readonly extensions?: OPTIONAL<CSTACommonArguments>
-    ) {}
+        device: SubjectDeviceID,
+        displayID: OPTIONAL<DisplayID>,
+        logicalRows: INTEGER,
+        logicalColumns: INTEGER,
+        physicalRows: OPTIONAL<INTEGER>,
+        physicalColumns: OPTIONAL<INTEGER>,
+        physicalBaseRowNumber: OPTIONAL<INTEGER>,
+        physicalBaseColumnNumber: OPTIONAL<INTEGER>,
+        characterSet: OPTIONAL<CharacterSet>,
+        contentsOfDisplay: IA5String,
+        extensions?: OPTIONAL<CSTACommonArguments>
+    ) {
+        this.device = device;
+        this.displayID = displayID;
+        this.logicalRows = logicalRows;
+        this.logicalColumns = logicalColumns;
+        this.physicalRows = physicalRows;
+        this.physicalColumns = physicalColumns;
+        this.physicalBaseRowNumber = physicalBaseRowNumber;
+        this.physicalBaseColumnNumber = physicalBaseColumnNumber;
+        this.characterSet = characterSet;
+        this.contentsOfDisplay = contentsOfDisplay;
+        this.extensions = extensions;
+    }
 
     /**
      * @summary Restructures an object into a DisplayUpdatedEvent
@@ -186,7 +210,7 @@ class DisplayUpdatedEvent {
          * @static
          */
 
-    public static _enum_for_characterSet = _enum_for_CharacterSet;
+    public static _enum_for_characterSet: typeof _enum_for_CharacterSet = _enum_for_CharacterSet;
 }
 
 /**

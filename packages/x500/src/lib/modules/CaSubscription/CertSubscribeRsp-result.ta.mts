@@ -7,7 +7,7 @@ import {
     _encode_CertSubscribeErr,
 } from "../CaSubscription/CertSubscribeErr.ta.mjs";
 import {
-    CertSubscribeOK,
+    type CertSubscribeOK,
     _decode_CertSubscribeOK,
     _encode_CertSubscribeOK,
 } from "../CaSubscription/CertSubscribeOK.ta.mjs";

@@ -1,6 +1,6 @@
 /* eslint-disable */
 import {
-    ENUMERATED
+    type ENUMERATED
 } from "@wildboar/asn1";
 import * as $ from "@wildboar/asn1/functional";
 
@@ -50,7 +50,7 @@ type RegistrationRequest = _enum_for_RegistrationRequest | ENUMERATED;
  * @type {number}
  */
 export
-const RegistrationRequest_register: RegistrationRequest = 1; /* LONG_NAMED_ENUMERATED_VALUE */
+const RegistrationRequest_register: _enum_for_RegistrationRequest.register = _enum_for_RegistrationRequest.register; /* LONG_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary register
@@ -61,7 +61,7 @@ const RegistrationRequest_register: RegistrationRequest = 1; /* LONG_NAMED_ENUME
  * @type {number}
  */
 export
-const register: RegistrationRequest = RegistrationRequest_register; /* SHORT_NAMED_ENUMERATED_VALUE */
+const register: _enum_for_RegistrationRequest.register = RegistrationRequest_register; /* SHORT_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary RegistrationRequest_re_register
@@ -72,7 +72,7 @@ const register: RegistrationRequest = RegistrationRequest_register; /* SHORT_NAM
  * @type {number}
  */
 export
-const RegistrationRequest_re_register: RegistrationRequest = 2; /* LONG_NAMED_ENUMERATED_VALUE */
+const RegistrationRequest_re_register: _enum_for_RegistrationRequest.re_register = _enum_for_RegistrationRequest.re_register; /* LONG_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary re_register
@@ -83,7 +83,7 @@ const RegistrationRequest_re_register: RegistrationRequest = 2; /* LONG_NAMED_EN
  * @type {number}
  */
 export
-const re_register: RegistrationRequest = RegistrationRequest_re_register; /* SHORT_NAMED_ENUMERATED_VALUE */
+const re_register: _enum_for_RegistrationRequest.re_register = RegistrationRequest_re_register; /* SHORT_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary RegistrationRequest_de_register
@@ -94,7 +94,7 @@ const re_register: RegistrationRequest = RegistrationRequest_re_register; /* SHO
  * @type {number}
  */
 export
-const RegistrationRequest_de_register: RegistrationRequest = 3; /* LONG_NAMED_ENUMERATED_VALUE */
+const RegistrationRequest_de_register: _enum_for_RegistrationRequest.de_register = _enum_for_RegistrationRequest.de_register; /* LONG_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary de_register
@@ -105,7 +105,7 @@ const RegistrationRequest_de_register: RegistrationRequest = 3; /* LONG_NAMED_EN
  * @type {number}
  */
 export
-const de_register: RegistrationRequest = RegistrationRequest_de_register; /* SHORT_NAMED_ENUMERATED_VALUE */
+const de_register: _enum_for_RegistrationRequest.de_register = RegistrationRequest_de_register; /* SHORT_NAMED_ENUMERATED_VALUE */
 export const _decode_RegistrationRequest: $.ASN1Decoder<RegistrationRequest> = $._decodeEnumerated;
 export const _encode_RegistrationRequest: $.ASN1Encoder<RegistrationRequest> = $._encodeEnumerated;
 

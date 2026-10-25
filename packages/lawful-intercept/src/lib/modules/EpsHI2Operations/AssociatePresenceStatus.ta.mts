@@ -1,13 +1,13 @@
 /* eslint-disable */
 import {
     ASN1ConstructionError as _ConstructionError,
-    ASN1Element as _Element,
+    type ASN1Element as _Element,
     ASN1TagClass as _TagClass,
-    BOOLEAN,
-    UTF8String
+    type BOOLEAN,
+    type UTF8String
 } from "@wildboar/asn1";
 import * as $ from "@wildboar/asn1/functional";
-import { _decode_PresenceType, _encode_PresenceType, _enum_for_PresenceType, PresenceType } from "../EpsHI2Operations/PresenceType.ta.mjs";
+import { _decode_PresenceType, _encode_PresenceType, _enum_for_PresenceType, type PresenceType } from "../EpsHI2Operations/PresenceType.ta.mjs";
 // export { PresenceType, _enum_for_PresenceType, PresenceType_pTCClient /* IMPORTED_LONG_ENUMERATION_ITEM */, pTCClient /* IMPORTED_SHORT_ENUMERATION_ITEM */, PresenceType_pTCGroup /* IMPORTED_LONG_ENUMERATION_ITEM */, pTCGroup /* IMPORTED_SHORT_ENUMERATION_ITEM */, _decode_PresenceType, _encode_PresenceType } from "../EpsHI2Operations/PresenceType.ta.mjs";
 
 
@@ -122,7 +122,7 @@ class AssociatePresenceStatus {
          * @static
          */
 
-    public static _enum_for_presenceType = _enum_for_PresenceType;
+    public static _enum_for_presenceType: typeof _enum_for_PresenceType = _enum_for_PresenceType;
 }
 
 /**

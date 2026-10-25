@@ -1,6 +1,6 @@
 /* eslint-disable */
 import {
-  OPTIONAL,
+  type OPTIONAL,
   ASN1Element as _Element,
   ASN1TagClass as _TagClass,
   ASN1Construction as _Construction,
@@ -17,7 +17,7 @@ import {
   _encode_CertTemplate,
 } from '@wildboar/crmf';
 import {
-  Extensions,
+  type Extensions,
   _decode_Extensions,
   _encode_Extensions,
 } from '@wildboar/x500/AuthenticationFramework';
@@ -47,30 +47,36 @@ import {
  *
  */
 export class RevDetails {
+  /**
+   * @summary `certDetails`.
+   * @description
+   *
+   * `CertTemplate` identifying the certificate to revoke (as much as
+   * the requester can specify) ([RFC 4210 §5.3.9](https://datatracker.ietf.org/doc/html/rfc4210#section-5.3.9)).
+   *
+   * @public
+   * @readonly
+   */
+  public readonly certDetails: CertTemplate;
+  /**
+   * @summary `crlEntryDetails`.
+   * @description
+   *
+   * Optional CRL entry extensions (e.g., reason code) requested for
+   * the revocation ([RFC 4210 §5.3.9](https://datatracker.ietf.org/doc/html/rfc4210#section-5.3.9)).
+   *
+   * @public
+   * @readonly
+   */
+  public readonly crlEntryDetails?: OPTIONAL<Extensions>;
+
   constructor(
-    /**
-     * @summary `certDetails`.
-     * @description
-     *
-     * `CertTemplate` identifying the certificate to revoke (as much as
-     * the requester can specify) ([RFC 4210 §5.3.9](https://datatracker.ietf.org/doc/html/rfc4210#section-5.3.9)).
-     *
-     * @public
-     * @readonly
-     */
-    readonly certDetails: CertTemplate,
-    /**
-     * @summary `crlEntryDetails`.
-     * @description
-     *
-     * Optional CRL entry extensions (e.g., reason code) requested for
-     * the revocation ([RFC 4210 §5.3.9](https://datatracker.ietf.org/doc/html/rfc4210#section-5.3.9)).
-     *
-     * @public
-     * @readonly
-     */
-    readonly crlEntryDetails?: OPTIONAL<Extensions>
-  ) {}
+    certDetails: CertTemplate,
+    crlEntryDetails?: OPTIONAL<Extensions>
+  ) {
+    this.certDetails = certDetails;
+    this.crlEntryDetails = crlEntryDetails;
+  }
 
   /**
    * @summary Restructures an object into a RevDetails

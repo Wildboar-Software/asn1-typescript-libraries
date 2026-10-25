@@ -1,7 +1,7 @@
 /* eslint-disable */
 import {
-    OPTIONAL,
-    ASN1Element as _Element,
+    type OPTIONAL,
+    type ASN1Element as _Element,
     ASN1TagClass as _TagClass,
     ASN1Construction as _Construction,
     ASN1UniversalType as _UniversalType,
@@ -17,7 +17,7 @@ import {
     _encode_AlgorithmIdentifier,
 } from '@wildboar/x500/AuthenticationFramework';
 import {
-    ExtendedCertificates,
+    type ExtendedCertificates,
     _decode_ExtendedCertificates,
     _encode_ExtendedCertificates,
 } from '../MTSAbstractService/ExtendedCertificates.ta.mjs';
@@ -39,26 +39,34 @@ import {
  *
  */
 export class EncryptedParameters {
+    /**
+     * @summary `algorithm_identifier`.
+     * @public
+     * @readonly
+     */
+    public readonly algorithm_identifier: AlgorithmIdentifier;
+    /**
+     * @summary `originator_certificates`.
+     * @public
+     * @readonly
+     */
+    public readonly originator_certificates?: OPTIONAL<ExtendedCertificates>;
+    /**
+     * @summary Extensions that are not recognized.
+     * @public
+     * @readonly
+     */
+    public readonly _unrecognizedExtensionsList: _Element[];
+
     constructor(
-        /**
-         * @summary `algorithm_identifier`.
-         * @public
-         * @readonly
-         */
-        readonly algorithm_identifier: AlgorithmIdentifier,
-        /**
-         * @summary `originator_certificates`.
-         * @public
-         * @readonly
-         */
-        readonly originator_certificates?: OPTIONAL<ExtendedCertificates>,
-        /**
-         * @summary Extensions that are not recognized.
-         * @public
-         * @readonly
-         */
-        readonly _unrecognizedExtensionsList: _Element[] = []
-    ) {}
+        algorithm_identifier: AlgorithmIdentifier,
+        originator_certificates?: OPTIONAL<ExtendedCertificates>,
+        _unrecognizedExtensionsList: _Element[] = []
+    ) {
+        this.algorithm_identifier = algorithm_identifier;
+        this.originator_certificates = originator_certificates;
+        this._unrecognizedExtensionsList = _unrecognizedExtensionsList;
+    }
 
     /**
      * @summary Restructures an object into a EncryptedParameters

@@ -1,7 +1,7 @@
 /* eslint-disable */
 import {
-    OPTIONAL,
-    ASN1Element as _Element,
+    type OPTIONAL,
+    type ASN1Element as _Element,
     ASN1TagClass as _TagClass,
     ASN1Construction as _Construction,
     ASN1UniversalType as _UniversalType,
@@ -12,12 +12,12 @@ import {
 } from '@wildboar/asn1';
 import * as $ from '@wildboar/asn1/functional';
 import {
-    Criticality,
+    type Criticality,
     _decode_Criticality,
     _encode_Criticality,
 } from '../MTSAbstractService/Criticality.ta.mjs';
 import {
-    ExtensionType,
+    type ExtensionType,
     _decode_ExtensionType,
     _encode_ExtensionType,
 } from "./ExtensionType.ta.mjs";
@@ -40,26 +40,34 @@ import {
  *
  */
 export class ExtensionField {
+    /**
+     * @summary `type_`.
+     * @public
+     * @readonly
+     */
+    public readonly type_: ExtensionType;
+    /**
+     * @summary `criticality`.
+     * @public
+     * @readonly
+     */
+    public readonly criticality?: OPTIONAL<Criticality>;
+    /**
+     * @summary `value`.
+     * @public
+     * @readonly
+     */
+    public readonly value?: OPTIONAL<_Element>;
+
     constructor(
-        /**
-         * @summary `type_`.
-         * @public
-         * @readonly
-         */
-        readonly type_: ExtensionType,
-        /**
-         * @summary `criticality`.
-         * @public
-         * @readonly
-         */
-        readonly criticality?: OPTIONAL<Criticality>,
-        /**
-         * @summary `value`.
-         * @public
-         * @readonly
-         */
-        readonly value?: OPTIONAL<_Element>
-    ) {}
+        type_: ExtensionType,
+        criticality?: OPTIONAL<Criticality>,
+        value?: OPTIONAL<_Element>
+    ) {
+        this.type_ = type_;
+        this.criticality = criticality;
+        this.value = value;
+    }
 
     /**
      * @summary Restructures an object into a ExtensionField

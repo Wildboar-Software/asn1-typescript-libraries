@@ -1,6 +1,6 @@
 /* eslint-disable */
 import {
-    ASN1Element as _Element,
+    type ASN1Element as _Element,
     ASN1TagClass as _TagClass,
     ASN1Construction as _Construction,
     ASN1UniversalType as _UniversalType,
@@ -11,12 +11,12 @@ import {
 } from '@wildboar/asn1';
 import * as $ from '@wildboar/asn1/functional';
 import {
-    SessionType,
+    type SessionType,
     _decode_SessionType,
     _encode_SessionType,
 } from '../E-health-common/SessionType.ta.mjs';
 import {
-    SessionId,
+    type SessionId,
     _decode_SessionId,
     _encode_SessionId,
 } from '../E-health-common/SessionId.ta.mjs';
@@ -42,36 +42,44 @@ import {
  *
  */
 export class E_terminateRequest {
+    /**
+     * @summary `sessionType`.
+     * @description
+     *
+     * Session type of the session to terminate. ITU-T Rec.
+     * X.1080.1 (05/2018) §11.2.1 a).
+     *
+     * @public
+     * @readonly
+     */
+    public readonly sessionType: SessionType;
+    /**
+     * @summary `sessionId`.
+     * @description
+     *
+     * Identifies the particular session to terminate.
+     * ITU-T Rec. X.1080.1 (05/2018) §11.2.1 b).
+     *
+     * @public
+     * @readonly
+     */
+    public readonly sessionId: SessionId;
+    /**
+     * @summary Extensions that are not recognized.
+     * @public
+     * @readonly
+     */
+    public readonly _unrecognizedExtensionsList: _Element[];
+
     constructor(
-        /**
-         * @summary `sessionType`.
-         * @description
-         *
-         * Session type of the session to terminate. ITU-T Rec.
-         * X.1080.1 (05/2018) §11.2.1 a).
-         *
-         * @public
-         * @readonly
-         */
-        readonly sessionType: SessionType,
-        /**
-         * @summary `sessionId`.
-         * @description
-         *
-         * Identifies the particular session to terminate.
-         * ITU-T Rec. X.1080.1 (05/2018) §11.2.1 b).
-         *
-         * @public
-         * @readonly
-         */
-        readonly sessionId: SessionId,
-        /**
-         * @summary Extensions that are not recognized.
-         * @public
-         * @readonly
-         */
-        readonly _unrecognizedExtensionsList: _Element[] = []
-    ) {}
+        sessionType: SessionType,
+        sessionId: SessionId,
+        _unrecognizedExtensionsList: _Element[] = []
+    ) {
+        this.sessionType = sessionType;
+        this.sessionId = sessionId;
+        this._unrecognizedExtensionsList = _unrecognizedExtensionsList;
+    }
 
     /**
      * @summary Restructures an object into a E_terminateRequest

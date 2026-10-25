@@ -10,7 +10,7 @@ import {
   ASN1ConstructionError as _ConstructionError,
 } from '@wildboar/asn1';
 import {
-  AreaAddresses,
+  type AreaAddresses,
   _decode_AreaAddresses,
   _encode_AreaAddresses,
 } from '../ISIS/AreaAddresses.ta.mjs';

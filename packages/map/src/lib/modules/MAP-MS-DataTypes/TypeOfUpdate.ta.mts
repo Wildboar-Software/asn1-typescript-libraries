@@ -1,7 +1,7 @@
 /* eslint-disable */
 import {
-    ASN1Element as _Element,
-    ENUMERATED
+    type ASN1Element as _Element,
+    type ENUMERATED
 } from "@wildboar/asn1";
 import * as $ from "@wildboar/asn1/functional";
 
@@ -43,7 +43,7 @@ type TypeOfUpdate = _enum_for_TypeOfUpdate | ENUMERATED;
  * @type {number}
  */
 export
-const TypeOfUpdate_sgsn_change: TypeOfUpdate = 0; /* LONG_NAMED_ENUMERATED_VALUE */
+const TypeOfUpdate_sgsn_change: _enum_for_TypeOfUpdate.sgsn_change = _enum_for_TypeOfUpdate.sgsn_change; /* LONG_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary sgsn_change
@@ -51,7 +51,7 @@ const TypeOfUpdate_sgsn_change: TypeOfUpdate = 0; /* LONG_NAMED_ENUMERATED_VALUE
  * @type {number}
  */
 export
-const sgsn_change: TypeOfUpdate = TypeOfUpdate_sgsn_change; /* SHORT_NAMED_ENUMERATED_VALUE */
+const sgsn_change: _enum_for_TypeOfUpdate.sgsn_change = TypeOfUpdate_sgsn_change; /* SHORT_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary TypeOfUpdate_mme_change
@@ -59,7 +59,7 @@ const sgsn_change: TypeOfUpdate = TypeOfUpdate_sgsn_change; /* SHORT_NAMED_ENUME
  * @type {number}
  */
 export
-const TypeOfUpdate_mme_change: TypeOfUpdate = 1; /* LONG_NAMED_ENUMERATED_VALUE */
+const TypeOfUpdate_mme_change: _enum_for_TypeOfUpdate.mme_change = _enum_for_TypeOfUpdate.mme_change; /* LONG_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary mme_change
@@ -67,7 +67,7 @@ const TypeOfUpdate_mme_change: TypeOfUpdate = 1; /* LONG_NAMED_ENUMERATED_VALUE 
  * @type {number}
  */
 export
-const mme_change: TypeOfUpdate = TypeOfUpdate_mme_change; /* SHORT_NAMED_ENUMERATED_VALUE */
+const mme_change: _enum_for_TypeOfUpdate.mme_change = TypeOfUpdate_mme_change; /* SHORT_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary Decodes an ASN.1 element into a(n) TypeOfUpdate
@@ -75,7 +75,7 @@ const mme_change: TypeOfUpdate = TypeOfUpdate_mme_change; /* SHORT_NAMED_ENUMERA
  * @param el The element being decoded.
  * @returns The decoded data structure.
  */
-export const _decode_TypeOfUpdate = $._decodeEnumerated;
+export const _decode_TypeOfUpdate: $.ASN1Decoder<number> = $._decodeEnumerated;
 
 /**
  * @summary Encodes a(n) TypeOfUpdate into an ASN.1 Element.
@@ -84,7 +84,7 @@ export const _decode_TypeOfUpdate = $._decodeEnumerated;
  * @param elGetter A function that can be used to get new ASN.1 elements.
  * @returns {_Element} The TypeOfUpdate, encoded as an ASN.1 Element.
  */
-export const _encode_TypeOfUpdate = $._encodeEnumerated;
+export const _encode_TypeOfUpdate: $.ASN1Encoder<number> = $._encodeEnumerated;
 
 
 /* eslint-enable */

@@ -1,9 +1,9 @@
 /* eslint-disable */
 import {
     ASN1ConstructionError as _ConstructionError,
-    ASN1Element as _Element,
+    type ASN1Element as _Element,
     ASN1TagClass as _TagClass,
-    PrintableString
+    type PrintableString
 } from "@wildboar/asn1";
 import * as $ from "@wildboar/asn1/functional";
 
@@ -26,20 +26,26 @@ import * as $ from "@wildboar/asn1/functional";
  */
 export
 class LDSVersionInfo {
+    /**
+     * @summary `ldsVersion`.
+     * @public
+     * @readonly
+     */
+    public readonly ldsVersion: PrintableString;
+    /**
+     * @summary `unicodeVersion`.
+     * @public
+     * @readonly
+     */
+    public readonly unicodeVersion: PrintableString;
+
     constructor (
-        /**
-         * @summary `ldsVersion`.
-         * @public
-         * @readonly
-         */
-        readonly ldsVersion: PrintableString,
-        /**
-         * @summary `unicodeVersion`.
-         * @public
-         * @readonly
-         */
-        readonly unicodeVersion: PrintableString
-    ) {}
+        ldsVersion: PrintableString,
+        unicodeVersion: PrintableString
+    ) {
+        this.ldsVersion = ldsVersion;
+        this.unicodeVersion = unicodeVersion;
+    }
 
     /**
      * @summary Restructures an object into a LDSVersionInfo

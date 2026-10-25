@@ -2,12 +2,12 @@
 import { ASN1Element as _Element, ASN1TagClass as _TagClass } from "@wildboar/asn1";
 import * as $ from "@wildboar/asn1/functional";
 import {
-    AttributeCertificate as AttributeCertificateV1,
+    type AttributeCertificate as AttributeCertificateV1,
     _decode_AttributeCertificate as _decode_AttributeCertificateV1,
     _encode_AttributeCertificate as _encode_AttributeCertificateV1,
 } from "@wildboar/x500/AttributeCertificateDefinitions";
 import {
-    AttributeCertificate as AttributeCertificateV2,
+    type AttributeCertificate as AttributeCertificateV2,
     _decode_AttributeCertificate as _decode_AttributeCertificateV2,
     _encode_AttributeCertificate as _encode_AttributeCertificateV2,
 } from "@wildboar/x500/AttributeCertificateDefinitions";
@@ -22,7 +22,7 @@ import {
     _encode_OtherCertificateFormat,
 } from "../CryptographicMessageSyntax-2010/OtherCertificateFormat.ta.mjs";
 import {
-    Certificate,
+    type Certificate,
     _decode_Certificate,
     _encode_Certificate,
 } from "@wildboar/x500/AuthenticationFramework";

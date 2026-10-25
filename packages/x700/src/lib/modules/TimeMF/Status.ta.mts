@@ -1,7 +1,7 @@
 /* eslint-disable */
 import {
-    INTEGER,
-    ASN1Element as _Element,
+    type INTEGER,
+    type ASN1Element as _Element,
     ASN1TagClass as _TagClass,
     ASN1Construction as _Construction,
     ASN1UniversalType as _UniversalType,
@@ -42,104 +42,104 @@ export type Status = INTEGER;
  * @constant
  * @type {number}
  */
-export const Status_operatingWithinNominals: Status = 0; /* LONG_NAMED_INTEGER_VALUE */
+export const Status_operatingWithinNominals: 0 = 0 satisfies Status; /* LONG_NAMED_INTEGER_VALUE */
 
 /**
  * @summary Status_operatingWithinNominals
  * @constant
  * @type {number}
  */
-export const operatingWithinNominals: Status = Status_operatingWithinNominals; /* SHORT_NAMED_INTEGER_VALUE */
+export const operatingWithinNominals: 0 = Status_operatingWithinNominals; /* SHORT_NAMED_INTEGER_VALUE */
 
 /**
  * @summary Status_replyTimeout
  * @constant
  * @type {number}
  */
-export const Status_replyTimeout: Status = 1; /* LONG_NAMED_INTEGER_VALUE */
+export const Status_replyTimeout: 1 = 1 satisfies Status; /* LONG_NAMED_INTEGER_VALUE */
 
 /**
  * @summary Status_replyTimeout
  * @constant
  * @type {number}
  */
-export const replyTimeout: Status = Status_replyTimeout; /* SHORT_NAMED_INTEGER_VALUE */
+export const replyTimeout: 1 = Status_replyTimeout; /* SHORT_NAMED_INTEGER_VALUE */
 
 /**
  * @summary Status_badReplyFormat
  * @constant
  * @type {number}
  */
-export const Status_badReplyFormat: Status = 2; /* LONG_NAMED_INTEGER_VALUE */
+export const Status_badReplyFormat: 2 = 2 satisfies Status; /* LONG_NAMED_INTEGER_VALUE */
 
 /**
  * @summary Status_badReplyFormat
  * @constant
  * @type {number}
  */
-export const badReplyFormat: Status = Status_badReplyFormat; /* SHORT_NAMED_INTEGER_VALUE */
+export const badReplyFormat: 2 = Status_badReplyFormat; /* SHORT_NAMED_INTEGER_VALUE */
 
 /**
  * @summary Status_hardwareSoftwareFault
  * @constant
  * @type {number}
  */
-export const Status_hardwareSoftwareFault: Status = 3; /* LONG_NAMED_INTEGER_VALUE */
+export const Status_hardwareSoftwareFault: 3 = 3 satisfies Status; /* LONG_NAMED_INTEGER_VALUE */
 
 /**
  * @summary Status_hardwareSoftwareFault
  * @constant
  * @type {number}
  */
-export const hardwareSoftwareFault: Status = Status_hardwareSoftwareFault; /* SHORT_NAMED_INTEGER_VALUE */
+export const hardwareSoftwareFault: 3 = Status_hardwareSoftwareFault; /* SHORT_NAMED_INTEGER_VALUE */
 
 /**
  * @summary Status_propagationFailure
  * @constant
  * @type {number}
  */
-export const Status_propagationFailure: Status = 4; /* LONG_NAMED_INTEGER_VALUE */
+export const Status_propagationFailure: 4 = 4 satisfies Status; /* LONG_NAMED_INTEGER_VALUE */
 
 /**
  * @summary Status_propagationFailure
  * @constant
  * @type {number}
  */
-export const propagationFailure: Status = Status_propagationFailure; /* SHORT_NAMED_INTEGER_VALUE */
+export const propagationFailure: 4 = Status_propagationFailure; /* SHORT_NAMED_INTEGER_VALUE */
 
 /**
  * @summary Status_badDateFormatOrValue
  * @constant
  * @type {number}
  */
-export const Status_badDateFormatOrValue: Status = 5; /* LONG_NAMED_INTEGER_VALUE */
+export const Status_badDateFormatOrValue: 5 = 5 satisfies Status; /* LONG_NAMED_INTEGER_VALUE */
 
 /**
  * @summary Status_badDateFormatOrValue
  * @constant
  * @type {number}
  */
-export const badDateFormatOrValue: Status = Status_badDateFormatOrValue; /* SHORT_NAMED_INTEGER_VALUE */
+export const badDateFormatOrValue: 5 = Status_badDateFormatOrValue; /* SHORT_NAMED_INTEGER_VALUE */
 
 /**
  * @summary Status_badTimeFormatOrValue
  * @constant
  * @type {number}
  */
-export const Status_badTimeFormatOrValue: Status = 6; /* LONG_NAMED_INTEGER_VALUE */
+export const Status_badTimeFormatOrValue: 6 = 6 satisfies Status; /* LONG_NAMED_INTEGER_VALUE */
 
 /**
  * @summary Status_badTimeFormatOrValue
  * @constant
  * @type {number}
  */
-export const badTimeFormatOrValue: Status = Status_badTimeFormatOrValue; /* SHORT_NAMED_INTEGER_VALUE */
+export const badTimeFormatOrValue: 6 = Status_badTimeFormatOrValue; /* SHORT_NAMED_INTEGER_VALUE */
 
 
-export const _decode_Status = $._decodeInteger;
+export const _decode_Status: $.ASN1Decoder<INTEGER> = $._decodeInteger;
 
 
-export const _encode_Status = $._encodeInteger;
+export const _encode_Status: $.ASN1Encoder<INTEGER> = $._encodeInteger;
 
 
 /* eslint-enable */

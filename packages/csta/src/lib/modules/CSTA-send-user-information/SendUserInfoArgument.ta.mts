@@ -2,15 +2,15 @@
 
 import * as $ from "@wildboar/asn1/functional";
 import {
-    OPTIONAL,
-    SEQUENCE,
-    SET,
-    ASN1Element as _Element,
+    type OPTIONAL,
+    type SEQUENCE,
+    type SET,
+    type ASN1Element as _Element,
     ASN1TagClass as _TagClass
 } from "@wildboar/asn1";
-import { ConnectionID, _decode_ConnectionID, _encode_ConnectionID } from "../CSTA-call-connection-identifiers/ConnectionID.ta.mjs";
+import { type ConnectionID, _decode_ConnectionID, _encode_ConnectionID } from "../CSTA-call-connection-identifiers/ConnectionID.ta.mjs";
 
-import { UserData, _decode_UserData, _encode_UserData } from "../CSTA-device-feature-types/UserData.ta.mjs";
+import { type UserData, _decode_UserData, _encode_UserData } from "../CSTA-device-feature-types/UserData.ta.mjs";
 
 import { CSTACommonArguments, _decode_CSTACommonArguments, _encode_CSTACommonArguments } from "../CSTA-extension-types/CSTACommonArguments.ta.mjs";
 
@@ -38,36 +38,44 @@ import { CSTACommonArguments, _decode_CSTACommonArguments, _encode_CSTACommonArg
  */
 export
 class SendUserInfoArgument {
+    /**
+     * @summary `existingCall`.
+     * @description
+     *
+     * Connection identifying the call that sends user data.
+     * @public
+     * @readonly
+     */
+    public readonly existingCall: ConnectionID;
+    /**
+     * @summary `userData`.
+     * @description
+     *
+     * User-to-user information to send.
+     * @public
+     * @readonly
+     */
+    public readonly userData: UserData;
+    /**
+     * @summary `extensions`.
+     * @description
+     *
+     * Optional security (timestamp, sequence, securityInfo) and
+     * privateData.
+     * @public
+     * @readonly
+     */
+    public readonly extensions?: OPTIONAL<CSTACommonArguments>;
+
     constructor (
-        /**
-         * @summary `existingCall`.
-         * @description
-         *
-         * Connection identifying the call that sends user data.
-         * @public
-         * @readonly
-         */
-        readonly existingCall: ConnectionID,
-        /**
-         * @summary `userData`.
-         * @description
-         *
-         * User-to-user information to send.
-         * @public
-         * @readonly
-         */
-        readonly userData: UserData,
-        /**
-         * @summary `extensions`.
-         * @description
-         *
-         * Optional security (timestamp, sequence, securityInfo) and
-         * privateData.
-         * @public
-         * @readonly
-         */
-        readonly extensions?: OPTIONAL<CSTACommonArguments>
-    ) {}
+        existingCall: ConnectionID,
+        userData: UserData,
+        extensions?: OPTIONAL<CSTACommonArguments>
+    ) {
+        this.existingCall = existingCall;
+        this.userData = userData;
+        this.extensions = extensions;
+    }
 
     /**
      * @summary Restructures an object into a SendUserInfoArgument

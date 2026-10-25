@@ -1,16 +1,16 @@
 /* eslint-disable */
 import {
-    INTEGER,
-    NULL,
-    ASN1Element as _Element,
+    type INTEGER,
+    type NULL,
+    type ASN1Element as _Element,
     ASN1TagClass as _TagClass
 } from "@wildboar/asn1";
 import * as $ from "@wildboar/asn1/functional";
-import { Cause, _decode_Cause, _encode_Cause } from "../IN-SSF-SCF-datatypes/Cause.ta.mjs";
+import { type Cause, _decode_Cause, _encode_Cause } from "../IN-SSF-SCF-datatypes/Cause.ta.mjs";
 // export { Cause, _decode_Cause, _encode_Cause } from "../IN-SSF-SCF-datatypes/Cause.ta.mjs";
 import { InvokableService, _decode_InvokableService, _encode_InvokableService } from "../IN-SCF-SCF-datatypes/InvokableService.ta.mjs";
 // export { InvokableService, _enum_for_InvokableService, InvokableService_callingLineIdentificationRestriction /* IMPORTED_LONG_ENUMERATION_ITEM */, callingLineIdentificationRestriction /* IMPORTED_SHORT_ENUMERATION_ITEM */, InvokableService_connectedLineIdentificationRestriction /* IMPORTED_LONG_ENUMERATION_ITEM */, connectedLineIdentificationRestriction /* IMPORTED_SHORT_ENUMERATION_ITEM */, InvokableService_callWaiting /* IMPORTED_LONG_ENUMERATION_ITEM */, callWaiting /* IMPORTED_SHORT_ENUMERATION_ITEM */, InvokableService_callHold /* IMPORTED_LONG_ENUMERATION_ITEM */, callHold /* IMPORTED_SHORT_ENUMERATION_ITEM */, InvokableService_reverseCharging /* IMPORTED_LONG_ENUMERATION_ITEM */, reverseCharging /* IMPORTED_SHORT_ENUMERATION_ITEM */, InvokableService_explicitCallTransfer /* IMPORTED_LONG_ENUMERATION_ITEM */, explicitCallTransfer /* IMPORTED_SHORT_ENUMERATION_ITEM */, InvokableService_callCompletionOnBusySubscriber /* IMPORTED_LONG_ENUMERATION_ITEM */, callCompletionOnBusySubscriber /* IMPORTED_SHORT_ENUMERATION_ITEM */, _decode_InvokableService, _encode_InvokableService } from "../IN-SCF-SCF-datatypes/InvokableService.ta.mjs";
-import { NumberMatch, _decode_NumberMatch, _encode_NumberMatch } from "../IN-SCF-SCF-datatypes/NumberMatch.ta.mjs";
+import { type NumberMatch, _decode_NumberMatch, _encode_NumberMatch } from "../IN-SCF-SCF-datatypes/NumberMatch.ta.mjs";
 // export { NumberMatch, _decode_NumberMatch, _encode_NumberMatch } from "../IN-SCF-SCF-datatypes/NumberMatch.ta.mjs";
 
 

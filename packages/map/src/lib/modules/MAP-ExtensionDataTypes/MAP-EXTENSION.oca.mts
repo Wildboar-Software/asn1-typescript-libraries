@@ -1,6 +1,6 @@
 /* eslint-disable */
 import {
-    OBJECT_IDENTIFIER
+    type OBJECT_IDENTIFIER
 } from "@wildboar/asn1";
 import * as $ from "@wildboar/asn1/functional";
 
@@ -18,7 +18,7 @@ import * as $ from "@wildboar/asn1/functional";
  * 
  * ```asn1
  * MAP-EXTENSION ::= CLASS {
- *     &ExtensionType    OPTIONAL,
+ *     &ExtensionType    type OPTIONAL,
  *     &extensionId    OBJECT IDENTIFIER }
  * ```
  * 

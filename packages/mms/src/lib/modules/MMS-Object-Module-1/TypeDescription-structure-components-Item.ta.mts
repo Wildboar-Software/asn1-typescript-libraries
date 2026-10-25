@@ -1,7 +1,7 @@
 /* eslint-disable */
 import {
-    OPTIONAL,
-    ASN1Element as _Element,
+    type OPTIONAL,
+    type ASN1Element as _Element,
     ASN1TagClass as _TagClass,
     ASN1Construction as _Construction,
     ASN1UniversalType as _UniversalType,
@@ -11,8 +11,8 @@ import {
     ASN1ConstructionError as _ConstructionError,
 } from "@wildboar/asn1";
 import * as $ from "@wildboar/asn1/functional";
-import { Identifier, _decode_Identifier, _encode_Identifier } from "../ISO-9506-MMS-1/Identifier.ta.mjs";
-import { TypeSpecification, _decode_TypeSpecification, _encode_TypeSpecification } from "../ISO-9506-MMS-1/TypeSpecification.ta.mjs";
+import { type Identifier, _decode_Identifier, _encode_Identifier } from "../ISO-9506-MMS-1/Identifier.ta.mjs";
+import { type TypeSpecification, _decode_TypeSpecification, _encode_TypeSpecification } from "../ISO-9506-MMS-1/TypeSpecification.ta.mjs";
 
 
 /**
@@ -36,28 +36,34 @@ import { TypeSpecification, _decode_TypeSpecification, _encode_TypeSpecification
  */
 export
 class TypeDescription_structure_components_Item {
+    /**
+     * @summary `componentName`.
+     * @description
+     *
+     * Optional component Identifier. ISO 9506-1:2003 §14.2.2.
+     *
+     * @public
+     * @readonly
+     */
+    public readonly componentName: OPTIONAL<Identifier>;
+    /**
+     * @summary `componentType`.
+     * @description
+     *
+     * Component TypeSpecification. ISO 9506-1:2003 §14.2.2.
+     *
+     * @public
+     * @readonly
+     */
+    public readonly componentType: TypeSpecification;
+
     constructor (
-        /**
-         * @summary `componentName`.
-         * @description
-         *
-         * Optional component Identifier. ISO 9506-1:2003 §14.2.2.
-         *
-         * @public
-         * @readonly
-         */
-        readonly componentName: OPTIONAL<Identifier>,
-        /**
-         * @summary `componentType`.
-         * @description
-         *
-         * Component TypeSpecification. ISO 9506-1:2003 §14.2.2.
-         *
-         * @public
-         * @readonly
-         */
-        readonly componentType: TypeSpecification
-    ) {}
+        componentName: OPTIONAL<Identifier>,
+        componentType: TypeSpecification
+    ) {
+        this.componentName = componentName;
+        this.componentType = componentType;
+    }
 
     /**
      * @summary Restructures an object into a TypeDescription_structure_components_Item

@@ -1,9 +1,9 @@
 /* eslint-disable */
 import {
-    OPTIONAL,
-    INTEGER,
-    OBJECT_IDENTIFIER,
-    ASN1Element as _Element,
+    type OPTIONAL,
+    type INTEGER,
+    type OBJECT_IDENTIFIER,
+    type ASN1Element as _Element,
     ASN1TagClass as _TagClass,
     ASN1Construction as _Construction,
     ASN1UniversalType as _UniversalType,
@@ -19,7 +19,7 @@ import {
     _encode_CommonReqComp,
 } from '../Pbact-access/CommonReqComp.ta.mjs';
 import {
-    DistinguishedName,
+    type DistinguishedName,
     _decode_DistinguishedName,
     _encode_DistinguishedName,
 } from '@wildboar/dn';
@@ -29,7 +29,7 @@ import {
     _encode_Attribute,
 } from '@wildboar/x500/InformationFramework';
 import {
-    AttributeCertificates,
+    type AttributeCertificates,
     _decode_AttributeCertificates,
     _encode_AttributeCertificates,
 } from '../Pbact-access/AttributeCertificates.ta.mjs';
@@ -57,82 +57,96 @@ import {
  *   COMPONENTS OF CommonReqComp,
  *   object    [1] DistinguishedName,
  *   attr      [2] SEQUENCE SIZE (1..MAX) OF Attribute {{SupportedAttributes}}
- *                    OPTIONAL,
+ *                    type OPTIONAL,
  *   ... }
  * ```
  *
  */
 export class AddRequest implements CommonReqComp {
+    /**
+     * @summary `attrCerts`.
+     * @description
+     *
+     * AC or AC path holding privilege. Absent → privilege is in the
+     * accessor's end-entity PKC.
+     * ITU-T Rec. X.1080.0 (2017) Cor.1
+     * [§8.2](https://www.itu.int/rec/T-REC-X.1080.0-201703-I!Cor1).
+     *
+     * @public
+     * @readonly
+     */
+    public readonly attrCerts: OPTIONAL<AttributeCertificates>; /* REPLICATED_COMPONENT */
+    /**
+     * @summary `serviceId`.
+     * @description
+     *
+     * Service being invoked.
+     * ITU-T Rec. X.1080.0 (2017) Cor.1
+     * [§8.2](https://www.itu.int/rec/T-REC-X.1080.0-201703-I!Cor1).
+     *
+     * @public
+     * @readonly
+     */
+    public readonly serviceId: OBJECT_IDENTIFIER; /* REPLICATED_COMPONENT */
+    /**
+     * @summary `invokId`.
+     * @description
+     *
+     * 0 for the first operation, then increment. Detects missing
+     * requests and replay. Recipient echoes it in the reply.
+     * ITU-T Rec. X.1080.0 (2017) Cor.1
+     * [§8.2](https://www.itu.int/rec/T-REC-X.1080.0-201703-I!Cor1).
+     *
+     * @public
+     * @readonly
+     */
+    public readonly invokId: INTEGER; /* REPLICATED_COMPONENT */
+    /**
+     * @summary `object`.
+     * @description
+     *
+     * Distinguished name of the new object.
+     * ITU-T Rec. X.1080.0 (2017) Cor.1
+     * [§8.6](https://www.itu.int/rec/T-REC-X.1080.0-201703-I!Cor1).
+     *
+     * @public
+     * @readonly
+     */
+    public readonly object: DistinguishedName;
+    /**
+     * @summary `attr`.
+     * @description
+     *
+     * Attributes for the new object.
+     * ITU-T Rec. X.1080.0 (2017) Cor.1
+     * [§8.6](https://www.itu.int/rec/T-REC-X.1080.0-201703-I!Cor1).
+     *
+     * @public
+     * @readonly
+     */
+    public readonly attr?: OPTIONAL<Attribute[]>;
+    /**
+     * @summary Extensions that are not recognized.
+     * @public
+     * @readonly
+     */
+    public readonly _unrecognizedExtensionsList: _Element[];
+
     constructor(
-        /**
-         * @summary `attrCerts`.
-         * @description
-         *
-         * AC or AC path holding privilege. Absent → privilege is in the
-         * accessor's end-entity PKC.
-         * ITU-T Rec. X.1080.0 (2017) Cor.1
-         * [§8.2](https://www.itu.int/rec/T-REC-X.1080.0-201703-I!Cor1).
-         *
-         * @public
-         * @readonly
-         */
-        readonly attrCerts: OPTIONAL<AttributeCertificates> /* REPLICATED_COMPONENT */,
-        /**
-         * @summary `serviceId`.
-         * @description
-         *
-         * Service being invoked.
-         * ITU-T Rec. X.1080.0 (2017) Cor.1
-         * [§8.2](https://www.itu.int/rec/T-REC-X.1080.0-201703-I!Cor1).
-         *
-         * @public
-         * @readonly
-         */
-        readonly serviceId: OBJECT_IDENTIFIER /* REPLICATED_COMPONENT */,
-        /**
-         * @summary `invokId`.
-         * @description
-         *
-         * 0 for the first operation, then increment. Detects missing
-         * requests and replay. Recipient echoes it in the reply.
-         * ITU-T Rec. X.1080.0 (2017) Cor.1
-         * [§8.2](https://www.itu.int/rec/T-REC-X.1080.0-201703-I!Cor1).
-         *
-         * @public
-         * @readonly
-         */
-        readonly invokId: INTEGER /* REPLICATED_COMPONENT */,
-        /**
-         * @summary `object`.
-         * @description
-         *
-         * Distinguished name of the new object.
-         * ITU-T Rec. X.1080.0 (2017) Cor.1
-         * [§8.6](https://www.itu.int/rec/T-REC-X.1080.0-201703-I!Cor1).
-         *
-         * @public
-         * @readonly
-         */
-        readonly object: DistinguishedName,
-        /**
-         * @summary `attr`.
-         * @description
-         *
-         * Attributes for the new object.
-         * ITU-T Rec. X.1080.0 (2017) Cor.1
-         * [§8.6](https://www.itu.int/rec/T-REC-X.1080.0-201703-I!Cor1).
-         *
-         * @public
-         * @readonly
-         */
-        readonly attr?: OPTIONAL<Attribute[]>,
-        /**
-         * @summary Extensions that are not recognized.
-         * @public
-         * @readonly
-         */
-        readonly _unrecognizedExtensionsList: _Element[] = []
-    ) {}
+        attrCerts: OPTIONAL<AttributeCertificates>,
+        serviceId: OBJECT_IDENTIFIER,
+        invokId: INTEGER,
+        object: DistinguishedName,
+        attr?: OPTIONAL<Attribute[]>,
+        _unrecognizedExtensionsList: _Element[] = []
+    ) {
+        this.attrCerts = attrCerts;
+        this.serviceId = serviceId;
+        this.invokId = invokId;
+        this.object = object;
+        this.attr = attr;
+        this._unrecognizedExtensionsList = _unrecognizedExtensionsList;
+    }
 
     /**
      * @summary Restructures an object into a AddRequest

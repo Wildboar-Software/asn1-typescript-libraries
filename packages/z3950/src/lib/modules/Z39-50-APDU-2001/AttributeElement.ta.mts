@@ -1,13 +1,13 @@
 /* eslint-disable */
 import {
-    INTEGER,
-    OPTIONAL,
-    ASN1Element as _Element,
+    type INTEGER,
+    type OPTIONAL,
+    type ASN1Element as _Element,
     ASN1TagClass as _TagClass
 } from "@wildboar/asn1";
 import * as $ from "@wildboar/asn1/functional";
-import { AttributeSetId, _decode_AttributeSetId, _encode_AttributeSetId } from "../Z39-50-APDU-2001/AttributeSetId.ta.mjs";
-import { AttributeElement_attributeValue, _decode_AttributeElement_attributeValue, _encode_AttributeElement_attributeValue } from "../Z39-50-APDU-2001/AttributeElement-attributeValue.ta.mjs";
+import { type AttributeSetId, _decode_AttributeSetId, _encode_AttributeSetId } from "../Z39-50-APDU-2001/AttributeSetId.ta.mjs";
+import { type AttributeElement_attributeValue, _decode_AttributeElement_attributeValue, _encode_AttributeElement_attributeValue } from "../Z39-50-APDU-2001/AttributeElement-attributeValue.ta.mjs";
 
 
 /**

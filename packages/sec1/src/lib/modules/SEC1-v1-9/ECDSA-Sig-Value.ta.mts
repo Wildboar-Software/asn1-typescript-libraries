@@ -1,8 +1,8 @@
 /* eslint-disable */
 import {
-    OPTIONAL,
-    INTEGER,
-    ASN1Element as _Element,
+    type OPTIONAL,
+    type INTEGER,
+    type ASN1Element as _Element,
     ASN1TagClass as _TagClass,
     ASN1Construction as _Construction,
     ASN1UniversalType as _UniversalType,
@@ -12,7 +12,7 @@ import {
     ASN1ConstructionError as _ConstructionError,
 } from "@wildboar/asn1";
 import * as $ from "@wildboar/asn1/functional";
-import { ECDSA_Sig_Value_y, _decode_ECDSA_Sig_Value_y, _encode_ECDSA_Sig_Value_y } from "../SEC1-v1-9/ECDSA-Sig-Value-y.ta.mjs";
+import { type ECDSA_Sig_Value_y, _decode_ECDSA_Sig_Value_y, _encode_ECDSA_Sig_Value_y } from "../SEC1-v1-9/ECDSA-Sig-Value-y.ta.mjs";
 /**
  * @summary ECDSA_Sig_Value
  * @description
@@ -47,7 +47,7 @@ class ECDSA_Sig_Value {
      * @public
      * @readonly
      */
-    readonly r: INTEGER;
+    public readonly r: INTEGER;
     /**
      * @summary `s`.
      * @description
@@ -58,7 +58,7 @@ class ECDSA_Sig_Value {
      * @public
      * @readonly
      */
-    readonly s: INTEGER;
+    public readonly s: INTEGER;
     /**
      * @summary `a`.
      * @description
@@ -69,7 +69,7 @@ class ECDSA_Sig_Value {
      * @public
      * @readonly
      */
-    readonly a?: OPTIONAL<INTEGER>;
+    public readonly a?: OPTIONAL<INTEGER>;
     /**
      * @summary `y`.
      * @description
@@ -80,7 +80,7 @@ class ECDSA_Sig_Value {
      * @public
      * @readonly
      */
-    readonly y?: OPTIONAL<ECDSA_Sig_Value_y>;
+    public readonly y?: OPTIONAL<ECDSA_Sig_Value_y>;
 
     constructor (
         r: INTEGER,

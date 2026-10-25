@@ -11,12 +11,12 @@ import {
 } from '@wildboar/asn1';
 import * as $ from '@wildboar/asn1/functional';
 import {
-  BioAPI_HANDLE,
+  type BioAPI_HANDLE,
   _decode_BioAPI_HANDLE,
   _encode_BioAPI_HANDLE,
 } from '../BIP/BioAPI-HANDLE.ta.mjs';
 import {
-  BioAPI_UNIT_ID,
+  type BioAPI_UNIT_ID,
   _decode_BioAPI_UNIT_ID,
   _encode_BioAPI_UNIT_ID,
 } from '../BIP/BioAPI-UNIT-ID.ta.mjs';
@@ -56,7 +56,7 @@ export class GetIndicatorStatus_RequestParams {
    * @public
    * @readonly
    */
-  readonly originalBSPHandle: BioAPI_HANDLE;
+  public readonly originalBSPHandle: BioAPI_HANDLE;
   /**
    * @summary `unitID`.
    * @description
@@ -67,7 +67,7 @@ export class GetIndicatorStatus_RequestParams {
    * @public
    * @readonly
    */
-  readonly unitID: BioAPI_UNIT_ID;
+  public readonly unitID: BioAPI_UNIT_ID;
 
   constructor(
     originalBSPHandle: BioAPI_HANDLE,

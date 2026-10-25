@@ -5,7 +5,7 @@ import {
 } from "../AlgorithmInformation-2009/ParamOptions.ta.mjs";
 import { des_ede3_cbc } from "../CryptographicMessageSyntaxAlgorithms-2009/des-ede3-cbc.va.mjs";
 import {
-    IV,
+    type IV,
     _decode_IV,
     _encode_IV,
 } from "../CryptographicMessageSyntaxAlgorithms-2009/IV.ta.mjs";

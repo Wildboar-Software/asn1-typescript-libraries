@@ -1,7 +1,7 @@
 /* eslint-disable */
 import {
-    OPTIONAL,
-    ASN1Element as _Element,
+    type OPTIONAL,
+    type ASN1Element as _Element,
     ASN1TagClass as _TagClass,
     ASN1Construction as _Construction,
     ASN1UniversalType as _UniversalType,
@@ -17,7 +17,7 @@ import {
     _encode_ORDescriptor,
 } from '../IPMSInformationObjects/ORDescriptor.ta.mjs';
 import {
-    Time,
+    type Time,
     _decode_Time,
     _encode_Time,
 } from '../IPMSInformationObjects/Time.ta.mjs';
@@ -45,20 +45,26 @@ import {
  *
  */
 export class ChangeOfAddressAdvice {
+    /**
+     * @summary `new_address`.
+     * @public
+     * @readonly
+     */
+    public readonly new_address: ORDescriptor;
+    /**
+     * @summary `effective_from`.
+     * @public
+     * @readonly
+     */
+    public readonly effective_from?: OPTIONAL<Time>;
+
     constructor(
-        /**
-         * @summary `new_address`.
-         * @public
-         * @readonly
-         */
-        readonly new_address: ORDescriptor,
-        /**
-         * @summary `effective_from`.
-         * @public
-         * @readonly
-         */
-        readonly effective_from?: OPTIONAL<Time>
-    ) {}
+        new_address: ORDescriptor,
+        effective_from?: OPTIONAL<Time>
+    ) {
+        this.new_address = new_address;
+        this.effective_from = effective_from;
+    }
 
     /**
      * @summary Restructures an object into a ChangeOfAddressAdvice

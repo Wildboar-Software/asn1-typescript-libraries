@@ -1,13 +1,13 @@
 /* eslint-disable */
 import {
     ASN1ConstructionError as _ConstructionError,
-    ASN1Element as _Element,
+    type ASN1Element as _Element,
     ASN1TagClass as _TagClass,
-    INTEGER,
+    type INTEGER,
 } from "@wildboar/asn1";
 import * as $ from "@wildboar/asn1/functional";
 import {
-    DisplayText,
+    type DisplayText,
     _decode_DisplayText,
     _encode_DisplayText,
 } from "../PkiPmiExternalDataTypes/DisplayText.ta.mjs";
@@ -25,20 +25,26 @@ import {
  *
  */
 export class NoticeReference {
+    /**
+     * @summary `organization`.
+     * @public
+     * @readonly
+     */
+    public readonly organization: DisplayText;
+    /**
+     * @summary `noticeNumbers`.
+     * @public
+     * @readonly
+     */
+    public readonly noticeNumbers: INTEGER[];
+
     constructor(
-        /**
-         * @summary `organization`.
-         * @public
-         * @readonly
-         */
-        readonly organization: DisplayText,
-        /**
-         * @summary `noticeNumbers`.
-         * @public
-         * @readonly
-         */
-        readonly noticeNumbers: INTEGER[]
-    ) {}
+        organization: DisplayText,
+        noticeNumbers: INTEGER[]
+    ) {
+        this.organization = organization;
+        this.noticeNumbers = noticeNumbers;
+    }
 
     /**
      * @summary Restructures an object into a NoticeReference

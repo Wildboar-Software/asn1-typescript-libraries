@@ -1,6 +1,6 @@
 /* eslint-disable */
 import {
-    ASN1Element as _Element,
+    type ASN1Element as _Element,
     ASN1TagClass as _TagClass,
     ASN1Construction as _Construction,
     ASN1UniversalType as _UniversalType,
@@ -57,14 +57,14 @@ export type DLPolicy_conversion_with_loss_prohibited = _enum_for_DLPolicy_conver
  *
  * @enum {number}
  */
-export const DLPolicy_conversion_with_loss_prohibited = _enum_for_DLPolicy_conversion_with_loss_prohibited;
+export const DLPolicy_conversion_with_loss_prohibited: typeof _enum_for_DLPolicy_conversion_with_loss_prohibited = _enum_for_DLPolicy_conversion_with_loss_prohibited;
 
 /**
  * @summary DLPolicy_conversion_with_loss_prohibited_unchanged
  * @constant
  * @type {number}
  */
-export const DLPolicy_conversion_with_loss_prohibited_unchanged: DLPolicy_conversion_with_loss_prohibited =
+export const DLPolicy_conversion_with_loss_prohibited_unchanged: _enum_for_DLPolicy_conversion_with_loss_prohibited.unchanged =
     DLPolicy_conversion_with_loss_prohibited.unchanged; /* LONG_NAMED_ENUMERATED_VALUE */
 
 /**
@@ -72,7 +72,7 @@ export const DLPolicy_conversion_with_loss_prohibited_unchanged: DLPolicy_conver
  * @constant
  * @type {number}
  */
-export const unchanged: DLPolicy_conversion_with_loss_prohibited =
+export const unchanged: _enum_for_DLPolicy_conversion_with_loss_prohibited.unchanged =
     DLPolicy_conversion_with_loss_prohibited.unchanged; /* SHORT_NAMED_ENUMERATED_VALUE */
 
 /**
@@ -80,7 +80,7 @@ export const unchanged: DLPolicy_conversion_with_loss_prohibited =
  * @constant
  * @type {number}
  */
-export const DLPolicy_conversion_with_loss_prohibited_conversion_with_loss_allowed: DLPolicy_conversion_with_loss_prohibited =
+export const DLPolicy_conversion_with_loss_prohibited_conversion_with_loss_allowed: _enum_for_DLPolicy_conversion_with_loss_prohibited.conversion_with_loss_allowed =
     DLPolicy_conversion_with_loss_prohibited.conversion_with_loss_allowed; /* LONG_NAMED_ENUMERATED_VALUE */
 
 /**
@@ -88,7 +88,7 @@ export const DLPolicy_conversion_with_loss_prohibited_conversion_with_loss_allow
  * @constant
  * @type {number}
  */
-export const conversion_with_loss_allowed: DLPolicy_conversion_with_loss_prohibited =
+export const conversion_with_loss_allowed: _enum_for_DLPolicy_conversion_with_loss_prohibited.conversion_with_loss_allowed =
     DLPolicy_conversion_with_loss_prohibited.conversion_with_loss_allowed; /* SHORT_NAMED_ENUMERATED_VALUE */
 
 /**
@@ -96,7 +96,7 @@ export const conversion_with_loss_allowed: DLPolicy_conversion_with_loss_prohibi
  * @constant
  * @type {number}
  */
-export const DLPolicy_conversion_with_loss_prohibited_conversion_with_loss_prohibited: DLPolicy_conversion_with_loss_prohibited =
+export const DLPolicy_conversion_with_loss_prohibited_conversion_with_loss_prohibited: _enum_for_DLPolicy_conversion_with_loss_prohibited.conversion_with_loss_prohibited =
     DLPolicy_conversion_with_loss_prohibited.conversion_with_loss_prohibited; /* LONG_NAMED_ENUMERATED_VALUE */
 
 /**
@@ -104,7 +104,7 @@ export const DLPolicy_conversion_with_loss_prohibited_conversion_with_loss_prohi
  * @constant
  * @type {number}
  */
-export const conversion_with_loss_prohibited: DLPolicy_conversion_with_loss_prohibited =
+export const conversion_with_loss_prohibited: _enum_for_DLPolicy_conversion_with_loss_prohibited.conversion_with_loss_prohibited =
     DLPolicy_conversion_with_loss_prohibited.conversion_with_loss_prohibited; /* SHORT_NAMED_ENUMERATED_VALUE */
 
 let _cached_decoder_for_DLPolicy_conversion_with_loss_prohibited: $.ASN1Decoder<DLPolicy_conversion_with_loss_prohibited> | null = null;
@@ -118,7 +118,19 @@ let _cached_decoder_for_DLPolicy_conversion_with_loss_prohibited: $.ASN1Decoder<
 export function _decode_DLPolicy_conversion_with_loss_prohibited(el: _Element): DLPolicy_conversion_with_loss_prohibited {
     if (!_cached_decoder_for_DLPolicy_conversion_with_loss_prohibited) {
         _cached_decoder_for_DLPolicy_conversion_with_loss_prohibited =
-            $._decodeEnumerated;
+            function (el: _Element): DLPolicy_conversion_with_loss_prohibited {
+                const enumerated = $._decodeEnumerated(el);
+                switch (enumerated) {
+                    case DLPolicy_conversion_with_loss_prohibited.unchanged: return DLPolicy_conversion_with_loss_prohibited.unchanged;
+                    case DLPolicy_conversion_with_loss_prohibited.conversion_with_loss_allowed: return DLPolicy_conversion_with_loss_prohibited.conversion_with_loss_allowed;
+                    case DLPolicy_conversion_with_loss_prohibited.conversion_with_loss_prohibited: return DLPolicy_conversion_with_loss_prohibited.conversion_with_loss_prohibited;
+                    default:
+                        throw new _ConstructionError(
+                            'Invalid ENUMERATED value ' + enumerated + ' for DLPolicy_conversion_with_loss_prohibited.',
+                            el,
+                        );
+                }
+            };
     }
     return _cached_decoder_for_DLPolicy_conversion_with_loss_prohibited(el);
 }
@@ -138,7 +150,7 @@ export function _encode_DLPolicy_conversion_with_loss_prohibited(
 ): _Element {
     if (!_cached_encoder_for_DLPolicy_conversion_with_loss_prohibited) {
         _cached_encoder_for_DLPolicy_conversion_with_loss_prohibited =
-            $._encodeEnumerated;
+            $._encodeEnumerated as $.ASN1Encoder<DLPolicy_conversion_with_loss_prohibited>;
     }
     return _cached_encoder_for_DLPolicy_conversion_with_loss_prohibited(
         value,

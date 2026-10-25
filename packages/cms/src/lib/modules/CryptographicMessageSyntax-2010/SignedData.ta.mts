@@ -1,22 +1,22 @@
 /* eslint-disable */
 import {
-    ASN1Element as _Element,
+    type ASN1Element as _Element,
     ASN1TagClass as _TagClass,
-    OPTIONAL,
+    type OPTIONAL,
 } from "@wildboar/asn1";
 import * as $ from "@wildboar/asn1/functional";
 import {
-    CertificateSet,
+    type CertificateSet,
     _decode_CertificateSet,
     _encode_CertificateSet,
 } from "../CryptographicMessageSyntax-2010/CertificateSet.ta.mjs";
 import {
-    CMSVersion,
+    type CMSVersion,
     _decode_CMSVersion,
     _encode_CMSVersion,
 } from "../CryptographicMessageSyntax-2010/CMSVersion.ta.mjs";
 import {
-    DigestAlgorithmIdentifier,
+    type DigestAlgorithmIdentifier,
     _decode_DigestAlgorithmIdentifier,
     _encode_DigestAlgorithmIdentifier,
 } from "../CryptographicMessageSyntax-2010/DigestAlgorithmIdentifier.ta.mjs";
@@ -26,12 +26,12 @@ import {
     _encode_EncapsulatedContentInfo,
 } from "../CryptographicMessageSyntax-2010/EncapsulatedContentInfo.ta.mjs";
 import {
-    RevocationInfoChoices,
+    type RevocationInfoChoices,
     _decode_RevocationInfoChoices,
     _encode_RevocationInfoChoices,
 } from "../CryptographicMessageSyntax-2010/RevocationInfoChoices.ta.mjs";
 import {
-    SignerInfos,
+    type SignerInfos,
     _decode_SignerInfos,
     _encode_SignerInfos,
 } from "../CryptographicMessageSyntax-2010/SignerInfos.ta.mjs";
@@ -61,82 +61,96 @@ import {
  *
  */
 export class SignedData {
+    /**
+     * @summary `version`.
+     * @description
+     *
+     * Syntax version. MUST be assigned from certificates, `eContentType`, and
+     * `SignerInfo` versions per [RFC 5652 §5.1](https://datatracker.ietf.org/doc/html/rfc5652#section-5.1)
+     * (1, 3, 4, or 5).
+     *
+     * @public
+     * @readonly
+     */
+    public readonly version: CMSVersion;
+    /**
+     * @summary `digestAlgorithms`.
+     * @description
+     *
+     * Collection of digest algorithm identifiers used by one or more signers
+     * (MAY be empty). Intended to list all digests for one-pass verification
+     * ([RFC 5652 §5.1](https://datatracker.ietf.org/doc/html/rfc5652#section-5.1)).
+     *
+     * @public
+     * @readonly
+     */
+    public readonly digestAlgorithms: DigestAlgorithmIdentifier[];
+    /**
+     * @summary `encapContentInfo`.
+     * @description
+     *
+     * Signed content: content-type OID plus optional content octets
+     * ([RFC 5652 §5.1](https://datatracker.ietf.org/doc/html/rfc5652#section-5.1),
+     * [§5.2](https://datatracker.ietf.org/doc/html/rfc5652#section-5.2)).
+     *
+     * @public
+     * @readonly
+     */
+    public readonly encapContentInfo: EncapsulatedContentInfo;
+    /**
+     * @summary `certificates`.
+     * @description
+     *
+     * Optional certificates sufficient for paths from a recognized root to
+     * the signers; may be more or fewer than needed. Signer's certificate MAY
+     * be included. Version 1 attribute certificates are strongly discouraged
+     * ([RFC 5652 §5.1](https://datatracker.ietf.org/doc/html/rfc5652#section-5.1)).
+     *
+     * @public
+     * @readonly
+     */
+    public readonly certificates: OPTIONAL<CertificateSet>;
+    /**
+     * @summary `crls`.
+     * @description
+     *
+     * Optional revocation information (typically CRLs) for certificates in
+     * `certificates`; correspondence is not required
+     * ([RFC 5652 §5.1](https://datatracker.ietf.org/doc/html/rfc5652#section-5.1)).
+     *
+     * @public
+     * @readonly
+     */
+    public readonly crls: OPTIONAL<RevocationInfoChoices>;
+    /**
+     * @summary `signerInfos`.
+     * @description
+     *
+     * Per-signer information; MAY be empty. Each signer may use a different
+     * signature technique. Implementations MUST handle unimplemented
+     * `SignerInfo` versions and signature algorithms gracefully
+     * ([RFC 5652 §5.1](https://datatracker.ietf.org/doc/html/rfc5652#section-5.1)).
+     *
+     * @public
+     * @readonly
+     */
+    public readonly signerInfos: SignerInfos;
+
     constructor(
-        /**
-         * @summary `version`.
-         * @description
-         *
-         * Syntax version. MUST be assigned from certificates, `eContentType`, and
-         * `SignerInfo` versions per [RFC 5652 §5.1](https://datatracker.ietf.org/doc/html/rfc5652#section-5.1)
-         * (1, 3, 4, or 5).
-         *
-         * @public
-         * @readonly
-         */
-        readonly version: CMSVersion,
-        /**
-         * @summary `digestAlgorithms`.
-         * @description
-         *
-         * Collection of digest algorithm identifiers used by one or more signers
-         * (MAY be empty). Intended to list all digests for one-pass verification
-         * ([RFC 5652 §5.1](https://datatracker.ietf.org/doc/html/rfc5652#section-5.1)).
-         *
-         * @public
-         * @readonly
-         */
-        readonly digestAlgorithms: DigestAlgorithmIdentifier[],
-        /**
-         * @summary `encapContentInfo`.
-         * @description
-         *
-         * Signed content: content-type OID plus optional content octets
-         * ([RFC 5652 §5.1](https://datatracker.ietf.org/doc/html/rfc5652#section-5.1),
-         * [§5.2](https://datatracker.ietf.org/doc/html/rfc5652#section-5.2)).
-         *
-         * @public
-         * @readonly
-         */
-        readonly encapContentInfo: EncapsulatedContentInfo,
-        /**
-         * @summary `certificates`.
-         * @description
-         *
-         * Optional certificates sufficient for paths from a recognized root to
-         * the signers; may be more or fewer than needed. Signer's certificate MAY
-         * be included. Version 1 attribute certificates are strongly discouraged
-         * ([RFC 5652 §5.1](https://datatracker.ietf.org/doc/html/rfc5652#section-5.1)).
-         *
-         * @public
-         * @readonly
-         */
-        readonly certificates: OPTIONAL<CertificateSet>,
-        /**
-         * @summary `crls`.
-         * @description
-         *
-         * Optional revocation information (typically CRLs) for certificates in
-         * `certificates`; correspondence is not required
-         * ([RFC 5652 §5.1](https://datatracker.ietf.org/doc/html/rfc5652#section-5.1)).
-         *
-         * @public
-         * @readonly
-         */
-        readonly crls: OPTIONAL<RevocationInfoChoices>,
-        /**
-         * @summary `signerInfos`.
-         * @description
-         *
-         * Per-signer information; MAY be empty. Each signer may use a different
-         * signature technique. Implementations MUST handle unimplemented
-         * `SignerInfo` versions and signature algorithms gracefully
-         * ([RFC 5652 §5.1](https://datatracker.ietf.org/doc/html/rfc5652#section-5.1)).
-         *
-         * @public
-         * @readonly
-         */
-        readonly signerInfos: SignerInfos
-    ) {}
+        version: CMSVersion,
+        digestAlgorithms: DigestAlgorithmIdentifier[],
+        encapContentInfo: EncapsulatedContentInfo,
+        certificates: OPTIONAL<CertificateSet>,
+        crls: OPTIONAL<RevocationInfoChoices>,
+        signerInfos: SignerInfos
+    ) {
+        this.version = version;
+        this.digestAlgorithms = digestAlgorithms;
+        this.encapContentInfo = encapContentInfo;
+        this.certificates = certificates;
+        this.crls = crls;
+        this.signerInfos = signerInfos;
+    }
 
     /**
      * @summary Restructures an object into a SignedData

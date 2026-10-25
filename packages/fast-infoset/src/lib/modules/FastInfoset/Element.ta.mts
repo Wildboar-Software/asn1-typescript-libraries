@@ -1,6 +1,6 @@
 /* eslint-disable */
 import {
-  OPTIONAL,
+  type OPTIONAL,
   ASN1Element as _Element,
   ASN1TagClass as _TagClass,
   ASN1Construction as _Construction,
@@ -17,7 +17,7 @@ import {
   _encode_NamespaceAttribute,
 } from '../FastInfoset/NamespaceAttribute.ta.mjs';
 import {
-  QualifiedNameOrIndex,
+  type QualifiedNameOrIndex,
   _decode_QualifiedNameOrIndex,
   _encode_QualifiedNameOrIndex,
 } from '../FastInfoset/QualifiedNameOrIndex.ta.mjs';
@@ -27,7 +27,7 @@ import {
   _encode_Attribute,
 } from '../FastInfoset/Attribute.ta.mjs';
 import {
-  Element_children_Item,
+  type Element_children_Item,
   _decode_Element_children_Item,
   _encode_Element_children_Item,
 } from '../FastInfoset/Element-children-Item.ta.mjs';
@@ -71,7 +71,7 @@ export class Element {
    * @public
    * @readonly
    */
-  readonly namespace_attributes: OPTIONAL<NamespaceAttribute[]>;
+  public readonly namespace_attributes: OPTIONAL<NamespaceAttribute[]>;
   /**
    * @summary `qualified_name`.
    * @description [prefix], [namespace name], and [local
@@ -80,7 +80,7 @@ export class Element {
    * @public
    * @readonly
    */
-  readonly qualified_name: QualifiedNameOrIndex;
+  public readonly qualified_name: QualifiedNameOrIndex;
   /**
    * @summary `attributes`.
    * @description [attributes] (non-namespace). Sequence-of
@@ -88,7 +88,7 @@ export class Element {
    * @public
    * @readonly
    */
-  readonly attributes: OPTIONAL<Attribute[]>;
+  public readonly attributes: OPTIONAL<Attribute[]>;
   /**
    * @summary `children`.
    * @description [children]. Adjacent character information
@@ -97,7 +97,7 @@ export class Element {
    * @public
    * @readonly
    */
-  readonly children: Element_children_Item[];
+  public readonly children: Element_children_Item[];
 
   constructor(
     namespace_attributes: OPTIONAL<NamespaceAttribute[]>,

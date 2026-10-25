@@ -1,7 +1,7 @@
 /* eslint-disable */
 import {
-    BOOLEAN,
-    ASN1Element as _Element,
+    type BOOLEAN,
+    type ASN1Element as _Element,
     ASN1TagClass as _TagClass,
     ASN1Construction as _Construction,
     ASN1UniversalType as _UniversalType,
@@ -11,7 +11,7 @@ import {
     ASN1ConstructionError as _ConstructionError,
 } from "@wildboar/asn1";
 import * as $ from "@wildboar/asn1/functional";
-import { ObservedValue, _decode_ObservedValue, _encode_ObservedValue } from "../Attribute-ASN1Module/ObservedValue.ta.mjs";
+import { type ObservedValue, _decode_ObservedValue, _encode_ObservedValue } from "../Attribute-ASN1Module/ObservedValue.ta.mjs";
 /**
  * @summary NotifyThreshold
  * @description
@@ -40,7 +40,7 @@ class NotifyThreshold {
      * @public
      * @readonly
      */
-    readonly threshold: ObservedValue;
+    public readonly threshold: ObservedValue;
     /**
      * @summary `notifyOnOff`.
      * @description
@@ -51,7 +51,7 @@ class NotifyThreshold {
      * @public
      * @readonly
      */
-    readonly notifyOnOff: BOOLEAN;
+    public readonly notifyOnOff: BOOLEAN;
 
     constructor (
         threshold: ObservedValue,

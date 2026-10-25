@@ -1,6 +1,6 @@
 /* eslint-disable */
 import {
-  OPTIONAL,
+  type OPTIONAL,
   ASN1Element as _Element,
   ASN1TagClass as _TagClass,
   ASN1Construction as _Construction,
@@ -12,12 +12,12 @@ import {
 } from '@wildboar/asn1';
 import * as $ from '@wildboar/asn1/functional';
 import {
-  ASO_qualifier,
+  type ASO_qualifier,
   _decode_ASO_qualifier,
   _encode_ASO_qualifier,
 } from '../ACSE-1/ASO-qualifier.ta.mjs';
 import {
-  ASOI_identifier,
+  type ASOI_identifier,
   _decode_ASOI_identifier,
   _encode_ASOI_identifier,
 } from '../ACSE-1/ASOI-identifier.ta.mjs';

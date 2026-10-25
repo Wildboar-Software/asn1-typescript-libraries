@@ -1,10 +1,10 @@
 /* eslint-disable */
 import {
-    OPTIONAL,
-    BOOLEAN,
-    OBJECT_IDENTIFIER,
-    INSTANCE_OF,
-    ASN1Element as _Element,
+    type OPTIONAL,
+    type BOOLEAN,
+    type OBJECT_IDENTIFIER,
+    type INSTANCE_OF,
+    type ASN1Element as _Element,
     ASN1TagClass as _TagClass,
     ASN1Construction as _Construction,
     ASN1UniversalType as _UniversalType,
@@ -16,7 +16,7 @@ import {
 import * as $ from '@wildboar/asn1/functional';
 import { id_ac_mts_transfer } from '../MHSProtocolObjectIdentifiers/id-ac-mts-transfer.va.mjs';
 import {
-    AuthenticationMethod,
+    type AuthenticationMethod,
     simple_password /* IMPORTED_SHORT_NAMED_INTEGER */,
     _decode_AuthenticationMethod,
     _encode_AuthenticationMethod,
@@ -42,44 +42,58 @@ import {
  *
  */
 export class ConnectionInformation {
+    /**
+     * @summary `application_context`.
+     * @public
+     * @readonly
+     */
+    public readonly application_context?: OPTIONAL<OBJECT_IDENTIFIER>;
+    /**
+     * @summary `profiles`.
+     * @public
+     * @readonly
+     */
+    public readonly profiles?: OPTIONAL<OBJECT_IDENTIFIER[]>;
+    /**
+     * @summary `dn_used_in_a_associate`.
+     * @public
+     * @readonly
+     */
+    public readonly dn_used_in_a_associate?: OPTIONAL<BOOLEAN>;
+    /**
+     * @summary `network_address_reliable`.
+     * @public
+     * @readonly
+     */
+    public readonly network_address_reliable?: OPTIONAL<BOOLEAN>;
+    /**
+     * @summary `authentication_method`.
+     * @public
+     * @readonly
+     */
+    public readonly authentication_method?: OPTIONAL<AuthenticationMethod>;
+    /**
+     * @summary `weighting_factors`.
+     * @public
+     * @readonly
+     */
+    public readonly weighting_factors?: OPTIONAL<INSTANCE_OF>;
+
     constructor(
-        /**
-         * @summary `application_context`.
-         * @public
-         * @readonly
-         */
-        readonly application_context?: OPTIONAL<OBJECT_IDENTIFIER>,
-        /**
-         * @summary `profiles`.
-         * @public
-         * @readonly
-         */
-        readonly profiles?: OPTIONAL<OBJECT_IDENTIFIER[]>,
-        /**
-         * @summary `dn_used_in_a_associate`.
-         * @public
-         * @readonly
-         */
-        readonly dn_used_in_a_associate?: OPTIONAL<BOOLEAN>,
-        /**
-         * @summary `network_address_reliable`.
-         * @public
-         * @readonly
-         */
-        readonly network_address_reliable?: OPTIONAL<BOOLEAN>,
-        /**
-         * @summary `authentication_method`.
-         * @public
-         * @readonly
-         */
-        readonly authentication_method?: OPTIONAL<AuthenticationMethod>,
-        /**
-         * @summary `weighting_factors`.
-         * @public
-         * @readonly
-         */
-        readonly weighting_factors?: OPTIONAL<INSTANCE_OF>
-    ) {}
+        application_context?: OPTIONAL<OBJECT_IDENTIFIER>,
+        profiles?: OPTIONAL<OBJECT_IDENTIFIER[]>,
+        dn_used_in_a_associate?: OPTIONAL<BOOLEAN>,
+        network_address_reliable?: OPTIONAL<BOOLEAN>,
+        authentication_method?: OPTIONAL<AuthenticationMethod>,
+        weighting_factors?: OPTIONAL<INSTANCE_OF>
+    ) {
+        this.application_context = application_context;
+        this.profiles = profiles;
+        this.dn_used_in_a_associate = dn_used_in_a_associate;
+        this.network_address_reliable = network_address_reliable;
+        this.authentication_method = authentication_method;
+        this.weighting_factors = weighting_factors;
+    }
 
     /**
      * @summary Restructures an object into a ConnectionInformation

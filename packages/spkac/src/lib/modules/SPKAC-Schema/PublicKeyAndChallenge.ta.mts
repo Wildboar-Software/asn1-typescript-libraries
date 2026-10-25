@@ -1,9 +1,9 @@
 /* eslint-disable */
 import {
     ASN1ConstructionError as _ConstructionError,
-    ASN1Element as _Element,
+    type ASN1Element as _Element,
     ASN1TagClass as _TagClass,
-    IA5String,
+    type IA5String,
 } from "@wildboar/asn1";
 import * as $ from "@wildboar/asn1/functional";
 import {
@@ -43,7 +43,7 @@ export class PublicKeyAndChallenge {
      * @public
      * @readonly
      */
-    readonly spki: SubjectPublicKeyInfo;
+    public readonly spki: SubjectPublicKeyInfo;
     /**
      * @summary `challenge`.
      * @description
@@ -56,7 +56,7 @@ export class PublicKeyAndChallenge {
      * @public
      * @readonly
      */
-    readonly challenge: IA5String;
+    public readonly challenge: IA5String;
 
     constructor(
         spki: SubjectPublicKeyInfo,

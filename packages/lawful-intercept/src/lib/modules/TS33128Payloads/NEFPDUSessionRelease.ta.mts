@@ -1,18 +1,18 @@
 /* eslint-disable */
 import {
-    INTEGER,
-    OPTIONAL,
-    ASN1Element as _Element,
+    type INTEGER,
+    type OPTIONAL,
+    type ASN1Element as _Element,
     ASN1TagClass as _TagClass
 } from "@wildboar/asn1";
 import * as $ from "@wildboar/asn1/functional";
-import { SUPI, _decode_SUPI, _encode_SUPI } from "../TS33128Payloads/SUPI.ta.mjs";
+import { type SUPI, _decode_SUPI, _encode_SUPI } from "../TS33128Payloads/SUPI.ta.mjs";
 // export { SUPI, _decode_SUPI, _encode_SUPI } from "../TS33128Payloads/SUPI.ta.mjs";
-import { GPSI, _decode_GPSI, _encode_GPSI } from "../TS33128Payloads/GPSI.ta.mjs";
+import { type GPSI, _decode_GPSI, _encode_GPSI } from "../TS33128Payloads/GPSI.ta.mjs";
 // export { GPSI, _decode_GPSI, _encode_GPSI } from "../TS33128Payloads/GPSI.ta.mjs";
-import { PDUSessionID, _decode_PDUSessionID, _encode_PDUSessionID } from "../TS33128Payloads/PDUSessionID.ta.mjs";
+import { type PDUSessionID, _decode_PDUSessionID, _encode_PDUSessionID } from "../TS33128Payloads/PDUSessionID.ta.mjs";
 // export { PDUSessionID, _decode_PDUSessionID, _encode_PDUSessionID } from "../TS33128Payloads/PDUSessionID.ta.mjs";
-import { Timestamp, _decode_Timestamp, _encode_Timestamp } from "../TS33128Payloads/Timestamp.ta.mjs";
+import { type Timestamp, _decode_Timestamp, _encode_Timestamp } from "../TS33128Payloads/Timestamp.ta.mjs";
 // export { Timestamp, _decode_Timestamp, _encode_Timestamp } from "../TS33128Payloads/Timestamp.ta.mjs";
 import { NEFReleaseCause, _decode_NEFReleaseCause, _encode_NEFReleaseCause, _enum_for_NEFReleaseCause } from "../TS33128Payloads/NEFReleaseCause.ta.mjs";
 // export { NEFReleaseCause, _enum_for_NEFReleaseCause, NEFReleaseCause_sMFRelease /* IMPORTED_LONG_ENUMERATION_ITEM */, sMFRelease /* IMPORTED_SHORT_ENUMERATION_ITEM */, NEFReleaseCause_dNRelease /* IMPORTED_LONG_ENUMERATION_ITEM */, dNRelease /* IMPORTED_SHORT_ENUMERATION_ITEM */, NEFReleaseCause_uDMRelease /* IMPORTED_LONG_ENUMERATION_ITEM */, uDMRelease /* IMPORTED_SHORT_ENUMERATION_ITEM */, NEFReleaseCause_cHFRelease /* IMPORTED_LONG_ENUMERATION_ITEM */, cHFRelease /* IMPORTED_SHORT_ENUMERATION_ITEM */, NEFReleaseCause_localConfigurationPolicy /* IMPORTED_LONG_ENUMERATION_ITEM */, localConfigurationPolicy /* IMPORTED_SHORT_ENUMERATION_ITEM */, NEFReleaseCause_unknownCause /* IMPORTED_LONG_ENUMERATION_ITEM */, unknownCause /* IMPORTED_SHORT_ENUMERATION_ITEM */, _decode_NEFReleaseCause, _encode_NEFReleaseCause } from "../TS33128Payloads/NEFReleaseCause.ta.mjs";
@@ -212,7 +212,7 @@ class NEFPDUSessionRelease {
          * @static
          */
 
-    public static _enum_for_releaseCause = _enum_for_NEFReleaseCause;
+    public static _enum_for_releaseCause: typeof _enum_for_NEFReleaseCause = _enum_for_NEFReleaseCause;
 }
 
 /**

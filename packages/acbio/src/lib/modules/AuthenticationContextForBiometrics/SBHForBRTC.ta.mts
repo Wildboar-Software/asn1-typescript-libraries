@@ -1,6 +1,6 @@
 /* eslint-disable */
 import {
-    ASN1Element as _Element,
+    type ASN1Element as _Element,
     ASN1TagClass as _TagClass,
     ASN1Construction as _Construction,
     ASN1UniversalType as _UniversalType,
@@ -14,19 +14,19 @@ import {
     CBEFFVersion,
     _decode_CBEFFVersion,
     _encode_CBEFFVersion,
-    BIRIndex,
+    type BIRIndex,
     _decode_BIRIndex,
     _encode_BIRIndex,
     BDBValidityPeriod,
     _decode_BDBValidityPeriod,
     _encode_BDBValidityPeriod,
-    Quality,
+    type Quality,
     _decode_Quality,
     _encode_Quality,
-    EncryptionOptions,
+    type EncryptionOptions,
     _decode_EncryptionOptions,
     _encode_EncryptionOptions,
-    IntegrityOptions,
+    type IntegrityOptions,
     _decode_IntegrityOptions,
     _encode_IntegrityOptions,
     BDBFormat,
@@ -53,50 +53,66 @@ import {
  *
  */
 export class SBHForBRTC {
+    /**
+     * @summary `version`.
+     * @public
+     * @readonly
+     */
+    public readonly version: CBEFFVersion;
+    /**
+     * @summary `brtcIndex`.
+     * @public
+     * @readonly
+     */
+    public readonly brtcIndex: BIRIndex;
+    /**
+     * @summary `brtcValidityPeriod`.
+     * @public
+     * @readonly
+     */
+    public readonly brtcValidityPeriod: BDBValidityPeriod;
+    /**
+     * @summary `brtQuality`.
+     * @public
+     * @readonly
+     */
+    public readonly brtQuality: Quality;
+    /**
+     * @summary `bdbEncryptionOptions`.
+     * @public
+     * @readonly
+     */
+    public readonly bdbEncryptionOptions: EncryptionOptions;
+    /**
+     * @summary `bdbIntegrityOptions`.
+     * @public
+     * @readonly
+     */
+    public readonly bdbIntegrityOptions: IntegrityOptions;
+    /**
+     * @summary `bdbFormatForBRTC`.
+     * @public
+     * @readonly
+     */
+    public readonly bdbFormatForBRTC: BDBFormat;
+
     constructor(
-        /**
-         * @summary `version`.
-         * @public
-         * @readonly
-         */
-        readonly version: CBEFFVersion,
-        /**
-         * @summary `brtcIndex`.
-         * @public
-         * @readonly
-         */
-        readonly brtcIndex: BIRIndex,
-        /**
-         * @summary `brtcValidityPeriod`.
-         * @public
-         * @readonly
-         */
-        readonly brtcValidityPeriod: BDBValidityPeriod,
-        /**
-         * @summary `brtQuality`.
-         * @public
-         * @readonly
-         */
-        readonly brtQuality: Quality,
-        /**
-         * @summary `bdbEncryptionOptions`.
-         * @public
-         * @readonly
-         */
-        readonly bdbEncryptionOptions: EncryptionOptions,
-        /**
-         * @summary `bdbIntegrityOptions`.
-         * @public
-         * @readonly
-         */
-        readonly bdbIntegrityOptions: IntegrityOptions,
-        /**
-         * @summary `bdbFormatForBRTC`.
-         * @public
-         * @readonly
-         */
-        readonly bdbFormatForBRTC: BDBFormat
-    ) {}
+        version: CBEFFVersion,
+        brtcIndex: BIRIndex,
+        brtcValidityPeriod: BDBValidityPeriod,
+        brtQuality: Quality,
+        bdbEncryptionOptions: EncryptionOptions,
+        bdbIntegrityOptions: IntegrityOptions,
+        bdbFormatForBRTC: BDBFormat
+    ) {
+        this.version = version;
+        this.brtcIndex = brtcIndex;
+        this.brtcValidityPeriod = brtcValidityPeriod;
+        this.brtQuality = brtQuality;
+        this.bdbEncryptionOptions = bdbEncryptionOptions;
+        this.bdbIntegrityOptions = bdbIntegrityOptions;
+        this.bdbFormatForBRTC = bdbFormatForBRTC;
+    }
 
     /**
      * @summary Restructures an object into a SBHForBRTC

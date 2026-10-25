@@ -1,8 +1,8 @@
 /* eslint-disable */
 import {
-    BOOLEAN,
-    OCTET_STRING,
-    ASN1Element as _Element,
+    type BOOLEAN,
+    type OCTET_STRING,
+    type ASN1Element as _Element,
     ASN1TagClass as _TagClass,
     ASN1Construction as _Construction,
     ASN1UniversalType as _UniversalType,
@@ -49,7 +49,7 @@ class RenewCnfMsgContent {
      * @public
      * @readonly
      */
-    readonly sessionID: OCTET_STRING;
+    public readonly sessionID: OCTET_STRING;
     /**
      * @summary `downloadStatus`.
      * @description
@@ -59,7 +59,7 @@ class RenewCnfMsgContent {
      * @public
      * @readonly
      */
-    readonly downloadStatus: BOOLEAN;
+    public readonly downloadStatus: BOOLEAN;
 
     constructor (
         sessionID: OCTET_STRING,

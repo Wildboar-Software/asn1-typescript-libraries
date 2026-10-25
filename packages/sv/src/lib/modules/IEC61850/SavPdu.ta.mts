@@ -1,8 +1,8 @@
 /* eslint-disable */
 import {
-    INTEGER,
+    type INTEGER,
     ASN1ConstructionError as _ConstructionError,
-    ASN1Element as _Element,
+    type ASN1Element as _Element,
     ASN1TagClass as _TagClass,
     ASN1OverflowError,
 } from "@wildboar/asn1";
@@ -43,7 +43,7 @@ class SavPdu {
      * @public
      * @readonly
      */
-    readonly noASDU: INTEGER;
+    public readonly noASDU: INTEGER;
     /**
      * @summary `seqASDU`.
      * @description
@@ -53,7 +53,7 @@ class SavPdu {
      * @public
      * @readonly
      */
-    readonly seqASDU: ASDU[];
+    public readonly seqASDU: ASDU[];
 
     constructor (
         noASDU: INTEGER,

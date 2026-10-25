@@ -1,8 +1,8 @@
 /* eslint-disable */
 import {
-    OPTIONAL,
-    INTEGER,
-    ASN1Element as _Element,
+    type OPTIONAL,
+    type INTEGER,
+    type ASN1Element as _Element,
     ASN1TagClass as _TagClass,
     ASN1Construction as _Construction,
     ASN1UniversalType as _UniversalType,
@@ -13,7 +13,7 @@ import {
 } from '@wildboar/asn1';
 import * as $ from '@wildboar/asn1/functional';
 import {
-    SessionType,
+    type SessionType,
     _decode_SessionType,
     _encode_SessionType,
 } from "./SessionType.ta.mjs";
@@ -34,60 +34,72 @@ import {
  *
  */
 export class ErrorContent_content {
+    /**
+     * @summary `invokId`.
+     * @description
+     *
+     * Optional. The Rec does not specify its use. This field is
+     * `INTEGER (0..MAX)`; the named type `InvokeId` is
+     * `INTEGER (1..MAX)` for other modules. ITU-T Rec.
+     * X.1080.1 (05/2018) §10.2, Annex B.
+     *
+     * @public
+     * @readonly
+     */
+    public readonly invokId: OPTIONAL<INTEGER>;
+    /**
+     * @summary `sessionType`.
+     * @description
+     *
+     * Session type this error belongs to.
+     * ITU-T Rec. X.1080.1 (05/2018) §10.2, §11.1.1.
+     *
+     * @public
+     * @readonly
+     */
+    public readonly sessionType: SessionType;
+    /**
+     * @summary `sessionId`.
+     * @description
+     *
+     * Session among concurrent same-type sessions between the
+     * pair. ITU-T Rec. X.1080.1 (05/2018) §10.2, §11.1.1.
+     *
+     * @public
+     * @readonly
+     */
+    public readonly sessionId: INTEGER;
+    /**
+     * @summary `error`.
+     * @description
+     *
+     * The operation's `&Error` value. ITU-T Rec. X.1080.1
+     * (05/2018) §10.1 h), §10.2.
+     *
+     * @public
+     * @readonly
+     */
+    public readonly error: _Element;
+    /**
+     * @summary Extensions that are not recognized.
+     * @public
+     * @readonly
+     */
+    public readonly _unrecognizedExtensionsList: _Element[];
+
     constructor(
-        /**
-         * @summary `invokId`.
-         * @description
-         *
-         * Optional. The Rec does not specify its use. This field is
-         * `INTEGER (0..MAX)`; the named type `InvokeId` is
-         * `INTEGER (1..MAX)` for other modules. ITU-T Rec.
-         * X.1080.1 (05/2018) §10.2, Annex B.
-         *
-         * @public
-         * @readonly
-         */
-        readonly invokId: OPTIONAL<INTEGER>,
-        /**
-         * @summary `sessionType`.
-         * @description
-         *
-         * Session type this error belongs to.
-         * ITU-T Rec. X.1080.1 (05/2018) §10.2, §11.1.1.
-         *
-         * @public
-         * @readonly
-         */
-        readonly sessionType: SessionType,
-        /**
-         * @summary `sessionId`.
-         * @description
-         *
-         * Session among concurrent same-type sessions between the
-         * pair. ITU-T Rec. X.1080.1 (05/2018) §10.2, §11.1.1.
-         *
-         * @public
-         * @readonly
-         */
-        readonly sessionId: INTEGER,
-        /**
-         * @summary `error`.
-         * @description
-         *
-         * The operation's `&Error` value. ITU-T Rec. X.1080.1
-         * (05/2018) §10.1 h), §10.2.
-         *
-         * @public
-         * @readonly
-         */
-        readonly error: _Element,
-        /**
-         * @summary Extensions that are not recognized.
-         * @public
-         * @readonly
-         */
-        readonly _unrecognizedExtensionsList: _Element[] = []
-    ) {}
+        invokId: OPTIONAL<INTEGER>,
+        sessionType: SessionType,
+        sessionId: INTEGER,
+        error: _Element,
+        _unrecognizedExtensionsList: _Element[] = []
+    ) {
+        this.invokId = invokId;
+        this.sessionType = sessionType;
+        this.sessionId = sessionId;
+        this.error = error;
+        this._unrecognizedExtensionsList = _unrecognizedExtensionsList;
+    }
 
     /**
      * @summary Restructures an object into a ErrorContent_content

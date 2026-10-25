@@ -1,12 +1,12 @@
 /* eslint-disable */
 import {
-    OPTIONAL,
-    ASN1Element as _Element,
+    type OPTIONAL,
+    type ASN1Element as _Element,
     ASN1TagClass as _TagClass,
     ASN1SizeError
 } from "@wildboar/asn1";
 import * as $ from "@wildboar/asn1/functional";
-import { TAC, _decode_TAC, _encode_TAC } from "../TS33128Payloads/TAC.ta.mjs";
+import { type TAC, _decode_TAC, _encode_TAC } from "../TS33128Payloads/TAC.ta.mjs";
 // export { TAC, _decode_TAC, _encode_TAC } from "../TS33128Payloads/TAC.ta.mjs";
 import { BroadcastPLMNItem, _decode_BroadcastPLMNItem, _encode_BroadcastPLMNItem } from "../TS33128Payloads/BroadcastPLMNItem.ta.mjs";
 // export { BroadcastPLMNItem, _decode_BroadcastPLMNItem, _encode_BroadcastPLMNItem } from "../TS33128Payloads/BroadcastPLMNItem.ta.mjs";
@@ -92,7 +92,7 @@ class TAItem {
          * @static
          */
 
-    public static _enum_for_rATinformation = _enum_for_RATInformation;
+    public static _enum_for_rATinformation: typeof _enum_for_RATInformation = _enum_for_RATInformation;
 }
 
 /**

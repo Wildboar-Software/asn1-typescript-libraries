@@ -1,6 +1,6 @@
 /* eslint-disable */
 import {
-    ASN1Element as _Element,
+    type ASN1Element as _Element,
     ASN1TagClass as _TagClass,
     ASN1Construction as _Construction,
     ASN1UniversalType as _UniversalType,
@@ -28,18 +28,22 @@ import { OcspResponsesID, _decode_OcspResponsesID, _encode_OcspResponsesID } fro
  */
 export
 class OcspListID {
+    /**
+     * @summary `ocspResponses`.
+     * @description
+     *
+     * Identifiers of the OCSP responses used.
+     *
+     * @public
+     * @readonly
+     */
+    public readonly ocspResponses: OcspResponsesID[];
+
     constructor (
-        /**
-         * @summary `ocspResponses`.
-         * @description
-         *
-         * Identifiers of the OCSP responses used.
-         *
-         * @public
-         * @readonly
-         */
-        readonly ocspResponses: OcspResponsesID[]
-    ) {}
+        ocspResponses: OcspResponsesID[]
+    ) {
+        this.ocspResponses = ocspResponses;
+    }
 
     /**
      * @summary Restructures an object into a OcspListID

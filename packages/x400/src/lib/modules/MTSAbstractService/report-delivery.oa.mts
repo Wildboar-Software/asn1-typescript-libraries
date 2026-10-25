@@ -1,6 +1,6 @@
 /* eslint-disable */
 import {
-    ASN1Element as _Element,
+    type ASN1Element as _Element,
     ASN1TagClass as _TagClass,
     ASN1Construction as _Construction,
     ASN1UniversalType as _UniversalType,
@@ -23,7 +23,7 @@ import {
     _encode_ReportDeliveryArgument,
 } from '../MTSAbstractService/ReportDeliveryArgument.ta.mjs';
 import {
-    ReportDeliveryResult,
+    type ReportDeliveryResult,
     _decode_ReportDeliveryResult,
     _encode_ReportDeliveryResult,
 } from '../MTSAbstractService/ReportDeliveryResult.ta.mjs';

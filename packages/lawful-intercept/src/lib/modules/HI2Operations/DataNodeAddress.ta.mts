@@ -1,12 +1,12 @@
 /* eslint-disable */
 import {
-    ASN1Element as _Element,
+    type ASN1Element as _Element,
     ASN1TagClass as _TagClass
 } from "@wildboar/asn1";
 import * as $ from "@wildboar/asn1/functional";
 import { IPAddress, _decode_IPAddress, _encode_IPAddress } from "../HI2Operations/IPAddress.ta.mjs";
 // export { IPAddress, _decode_IPAddress, _encode_IPAddress } from "../HI2Operations/IPAddress.ta.mjs";
-import { X25Address, _decode_X25Address, _encode_X25Address } from "../HI2Operations/X25Address.ta.mjs";
+import { type X25Address, _decode_X25Address, _encode_X25Address } from "../HI2Operations/X25Address.ta.mjs";
 // export { X25Address, _decode_X25Address, _encode_X25Address } from "../HI2Operations/X25Address.ta.mjs";
 
 

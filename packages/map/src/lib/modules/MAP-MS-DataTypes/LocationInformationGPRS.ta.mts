@@ -1,19 +1,19 @@
 /* eslint-disable */
 import {
-    NULL,
-    OPTIONAL,
-    ASN1Element as _Element,
+    type NULL,
+    type OPTIONAL,
+    type ASN1Element as _Element,
     ASN1TagClass as _TagClass
 } from "@wildboar/asn1";
 import * as $ from "@wildboar/asn1/functional";
-import { AgeOfLocationInformation, _decode_AgeOfLocationInformation, _encode_AgeOfLocationInformation } from "../MAP-CommonDataTypes/AgeOfLocationInformation.ta.mjs";
-import { CellGlobalIdOrServiceAreaIdOrLAI, _decode_CellGlobalIdOrServiceAreaIdOrLAI, _encode_CellGlobalIdOrServiceAreaIdOrLAI } from "../MAP-CommonDataTypes/CellGlobalIdOrServiceAreaIdOrLAI.ta.mjs";
-import { ISDN_AddressString, _decode_ISDN_AddressString, _encode_ISDN_AddressString } from "../MAP-CommonDataTypes/ISDN-AddressString.ta.mjs";
-import { RAIdentity, _decode_RAIdentity, _encode_RAIdentity } from "../MAP-CommonDataTypes/RAIdentity.ta.mjs";
+import { type AgeOfLocationInformation, _decode_AgeOfLocationInformation, _encode_AgeOfLocationInformation } from "../MAP-CommonDataTypes/AgeOfLocationInformation.ta.mjs";
+import { type CellGlobalIdOrServiceAreaIdOrLAI, _decode_CellGlobalIdOrServiceAreaIdOrLAI, _encode_CellGlobalIdOrServiceAreaIdOrLAI } from "../MAP-CommonDataTypes/CellGlobalIdOrServiceAreaIdOrLAI.ta.mjs";
+import { type ISDN_AddressString, _decode_ISDN_AddressString, _encode_ISDN_AddressString } from "../MAP-CommonDataTypes/ISDN-AddressString.ta.mjs";
+import { type RAIdentity, _decode_RAIdentity, _encode_RAIdentity } from "../MAP-CommonDataTypes/RAIdentity.ta.mjs";
 import { ExtensionContainer, _decode_ExtensionContainer, _encode_ExtensionContainer } from "../MAP-ExtensionDataTypes/ExtensionContainer.ta.mjs";
-import { GeodeticInformation, _decode_GeodeticInformation, _encode_GeodeticInformation } from "../MAP-MS-DataTypes/GeodeticInformation.ta.mjs";
-import { GeographicalInformation, _decode_GeographicalInformation, _encode_GeographicalInformation } from "../MAP-MS-DataTypes/GeographicalInformation.ta.mjs";
-import { LSAIdentity, _decode_LSAIdentity, _encode_LSAIdentity } from "../MAP-MS-DataTypes/LSAIdentity.ta.mjs";
+import { type GeodeticInformation, _decode_GeodeticInformation, _encode_GeodeticInformation } from "../MAP-MS-DataTypes/GeodeticInformation.ta.mjs";
+import { type GeographicalInformation, _decode_GeographicalInformation, _encode_GeographicalInformation } from "../MAP-MS-DataTypes/GeographicalInformation.ta.mjs";
+import { type LSAIdentity, _decode_LSAIdentity, _encode_LSAIdentity } from "../MAP-MS-DataTypes/LSAIdentity.ta.mjs";
 import { UserCSGInformation, _decode_UserCSGInformation, _encode_UserCSGInformation } from "../MAP-MS-DataTypes/UserCSGInformation.ta.mjs";
 
 
@@ -32,16 +32,16 @@ import { UserCSGInformation, _decode_UserCSGInformation, _encode_UserCSGInformat
  * ```asn1
  * LocationInformationGPRS ::= SEQUENCE {
  *     cellGlobalIdOrServiceAreaIdOrLAI    [0] CellGlobalIdOrServiceAreaIdOrLAI OPTIONAL,
- *     routeingAreaIdentity    [1] RAIdentity    OPTIONAL,
- *     geographicalInformation    [2] GeographicalInformation    OPTIONAL,
- *     sgsn-Number    [3] ISDN-AddressString    OPTIONAL,
- *     selectedLSAIdentity    [4] LSAIdentity    OPTIONAL,
- *     extensionContainer    [5] ExtensionContainer    OPTIONAL,
+ *     routeingAreaIdentity    [1] RAIdentity    type OPTIONAL,
+ *     geographicalInformation    [2] GeographicalInformation    type OPTIONAL,
+ *     sgsn-Number    [3] ISDN-AddressString    type OPTIONAL,
+ *     selectedLSAIdentity    [4] LSAIdentity    type OPTIONAL,
+ *     extensionContainer    [5] ExtensionContainer    type OPTIONAL,
  *     ...,
- *     sai-Present    [6] NULL    OPTIONAL,
- *     geodeticInformation    [7] GeodeticInformation    OPTIONAL,
- *     currentLocationRetrieved    [8] NULL    OPTIONAL,
- *     ageOfLocationInformation    [9] AgeOfLocationInformation    OPTIONAL,
+ *     sai-Present    [6] NULL    type OPTIONAL,
+ *     geodeticInformation    [7] GeodeticInformation    type OPTIONAL,
+ *     currentLocationRetrieved    [8] NULL    type OPTIONAL,
+ *     ageOfLocationInformation    [9] AgeOfLocationInformation    type OPTIONAL,
  *     userCSGInformation    [10] UserCSGInformation    OPTIONAL }
  * ```
  * 
@@ -49,128 +49,154 @@ import { UserCSGInformation, _decode_UserCSGInformation, _encode_UserCSGInformat
  */
 export
 class LocationInformationGPRS {
+    /**
+     * @summary `cellGlobalIdOrServiceAreaIdOrLAI`.
+     * @description
+     *
+     * CGI, SAI, or LAI. If `sai-Present` is included, this holds a Service
+     * Area Identity. (3GPP TS 29.002 V19.1.0 clause 17.7.1)
+     *
+     * @public
+     * @readonly
+     */
+    public readonly cellGlobalIdOrServiceAreaIdOrLAI?: OPTIONAL<CellGlobalIdOrServiceAreaIdOrLAI>;
+    /**
+     * @summary `routeingAreaIdentity`.
+     * @description
+     *
+     * Routing Area Identity. (3GPP TS 29.002 V19.1.0 clause 17.7.1)
+     *
+     * @public
+     * @readonly
+     */
+    public readonly routeingAreaIdentity?: OPTIONAL<RAIdentity>;
+    /**
+     * @summary `geographicalInformation`.
+     * @description
+     *
+     * Ellipsoid point with uncertainty circle (3GPP TS 23.032). (3GPP TS
+     * 29.002 V19.1.0 clause 17.7.1)
+     *
+     * @public
+     * @readonly
+     */
+    public readonly geographicalInformation?: OPTIONAL<GeographicalInformation>;
+    /**
+     * @summary `sgsn_Number`.
+     * @description
+     *
+     * ISDN number of the serving SGSN. (3GPP TS 29.002 V19.1.0 clause
+     * 7.6.2.38)
+     *
+     * @public
+     * @readonly
+     */
+    public readonly sgsn_Number?: OPTIONAL<ISDN_AddressString>;
+    /**
+     * @summary `selectedLSAIdentity`.
+     * @description
+     *
+     * Currently selected localised service area. (3GPP TS 29.002 V19.1.0
+     * clause 17.7.1)
+     *
+     * @public
+     * @readonly
+     */
+    public readonly selectedLSAIdentity?: OPTIONAL<LSAIdentity>;
+    /**
+     * @summary `extensionContainer`.
+     * @public
+     * @readonly
+     */
+    public readonly extensionContainer?: OPTIONAL<ExtensionContainer>;
+    /**
+     * @summary `sai_Present`.
+     * @description
+     *
+     * `cellGlobalIdOrServiceAreaIdOrLAI` contains a Service Area Identity.
+     * (3GPP TS 29.002 V19.1.0 clause 17.7.1)
+     *
+     * @public
+     * @readonly
+     */
+    public readonly sai_Present?: OPTIONAL<NULL>;
+    /**
+     * @summary `geodeticInformation`.
+     * @description
+     *
+     * Calling Geodetic Location (Q.763, 1999), ellipsoid point with
+     * uncertainty circle. (3GPP TS 29.002 V19.1.0 clause 17.7.1)
+     *
+     * @public
+     * @readonly
+     */
+    public readonly geodeticInformation?: OPTIONAL<GeodeticInformation>;
+    /**
+     * @summary `currentLocationRetrieved`.
+     * @description
+     *
+     * Shall be present if the location was retrieved after successful
+     * paging. (3GPP TS 29.002 V19.1.0 clause 17.7.1)
+     *
+     * @public
+     * @readonly
+     */
+    public readonly currentLocationRetrieved?: OPTIONAL<NULL>;
+    /**
+     * @summary `ageOfLocationInformation`.
+     * @description
+     *
+     * Age of the location estimate. (3GPP TS 29.002 V19.1.0 clause 17.7.1)
+     *
+     * @public
+     * @readonly
+     */
+    public readonly ageOfLocationInformation?: OPTIONAL<AgeOfLocationInformation>;
+    /**
+     * @summary `userCSGInformation`.
+     * @description
+     *
+     * CSG ID, access mode, and CSG membership indication when access mode
+     * is Hybrid. (3GPP TS 29.002 V19.1.0 clause 17.7.1)
+     *
+     * @public
+     * @readonly
+     */
+    public readonly userCSGInformation?: OPTIONAL<UserCSGInformation>;
+    /**
+     * @summary Extensions that are not recognized.
+     * @public
+     * @readonly
+     */
+    public readonly _unrecognizedExtensionsList: _Element[];
+
     constructor (
-        /**
-         * @summary `cellGlobalIdOrServiceAreaIdOrLAI`.
-         * @description
-         *
-         * CGI, SAI, or LAI. If `sai-Present` is included, this holds a Service
-         * Area Identity. (3GPP TS 29.002 V19.1.0 clause 17.7.1)
-         *
-         * @public
-         * @readonly
-         */
-        readonly cellGlobalIdOrServiceAreaIdOrLAI?: OPTIONAL<CellGlobalIdOrServiceAreaIdOrLAI>,
-        /**
-         * @summary `routeingAreaIdentity`.
-         * @description
-         *
-         * Routing Area Identity. (3GPP TS 29.002 V19.1.0 clause 17.7.1)
-         *
-         * @public
-         * @readonly
-         */
-        readonly routeingAreaIdentity?: OPTIONAL<RAIdentity>,
-        /**
-         * @summary `geographicalInformation`.
-         * @description
-         *
-         * Ellipsoid point with uncertainty circle (3GPP TS 23.032). (3GPP TS
-         * 29.002 V19.1.0 clause 17.7.1)
-         *
-         * @public
-         * @readonly
-         */
-        readonly geographicalInformation?: OPTIONAL<GeographicalInformation>,
-        /**
-         * @summary `sgsn_Number`.
-         * @description
-         *
-         * ISDN number of the serving SGSN. (3GPP TS 29.002 V19.1.0 clause
-         * 7.6.2.38)
-         *
-         * @public
-         * @readonly
-         */
-        readonly sgsn_Number?: OPTIONAL<ISDN_AddressString>,
-        /**
-         * @summary `selectedLSAIdentity`.
-         * @description
-         *
-         * Currently selected localised service area. (3GPP TS 29.002 V19.1.0
-         * clause 17.7.1)
-         *
-         * @public
-         * @readonly
-         */
-        readonly selectedLSAIdentity?: OPTIONAL<LSAIdentity>,
-        /**
-         * @summary `extensionContainer`.
-         * @public
-         * @readonly
-         */
-        readonly extensionContainer?: OPTIONAL<ExtensionContainer>,
-        /**
-         * @summary `sai_Present`.
-         * @description
-         *
-         * `cellGlobalIdOrServiceAreaIdOrLAI` contains a Service Area Identity.
-         * (3GPP TS 29.002 V19.1.0 clause 17.7.1)
-         *
-         * @public
-         * @readonly
-         */
-        readonly sai_Present?: OPTIONAL<NULL>,
-        /**
-         * @summary `geodeticInformation`.
-         * @description
-         *
-         * Calling Geodetic Location (Q.763, 1999), ellipsoid point with
-         * uncertainty circle. (3GPP TS 29.002 V19.1.0 clause 17.7.1)
-         *
-         * @public
-         * @readonly
-         */
-        readonly geodeticInformation?: OPTIONAL<GeodeticInformation>,
-        /**
-         * @summary `currentLocationRetrieved`.
-         * @description
-         *
-         * Shall be present if the location was retrieved after successful
-         * paging. (3GPP TS 29.002 V19.1.0 clause 17.7.1)
-         *
-         * @public
-         * @readonly
-         */
-        readonly currentLocationRetrieved?: OPTIONAL<NULL>,
-        /**
-         * @summary `ageOfLocationInformation`.
-         * @description
-         *
-         * Age of the location estimate. (3GPP TS 29.002 V19.1.0 clause 17.7.1)
-         *
-         * @public
-         * @readonly
-         */
-        readonly ageOfLocationInformation?: OPTIONAL<AgeOfLocationInformation>,
-        /**
-         * @summary `userCSGInformation`.
-         * @description
-         *
-         * CSG ID, access mode, and CSG membership indication when access mode
-         * is Hybrid. (3GPP TS 29.002 V19.1.0 clause 17.7.1)
-         *
-         * @public
-         * @readonly
-         */
-        readonly userCSGInformation?: OPTIONAL<UserCSGInformation>,
-        /**
-         * @summary Extensions that are not recognized.
-         * @public
-         * @readonly
-         */
-        readonly _unrecognizedExtensionsList: _Element[] = []
-    ) {}
+        cellGlobalIdOrServiceAreaIdOrLAI?: OPTIONAL<CellGlobalIdOrServiceAreaIdOrLAI>,
+        routeingAreaIdentity?: OPTIONAL<RAIdentity>,
+        geographicalInformation?: OPTIONAL<GeographicalInformation>,
+        sgsn_Number?: OPTIONAL<ISDN_AddressString>,
+        selectedLSAIdentity?: OPTIONAL<LSAIdentity>,
+        extensionContainer?: OPTIONAL<ExtensionContainer>,
+        sai_Present?: OPTIONAL<NULL>,
+        geodeticInformation?: OPTIONAL<GeodeticInformation>,
+        currentLocationRetrieved?: OPTIONAL<NULL>,
+        ageOfLocationInformation?: OPTIONAL<AgeOfLocationInformation>,
+        userCSGInformation?: OPTIONAL<UserCSGInformation>,
+        _unrecognizedExtensionsList: _Element[] = []
+    ) {
+        this.cellGlobalIdOrServiceAreaIdOrLAI = cellGlobalIdOrServiceAreaIdOrLAI;
+        this.routeingAreaIdentity = routeingAreaIdentity;
+        this.geographicalInformation = geographicalInformation;
+        this.sgsn_Number = sgsn_Number;
+        this.selectedLSAIdentity = selectedLSAIdentity;
+        this.extensionContainer = extensionContainer;
+        this.sai_Present = sai_Present;
+        this.geodeticInformation = geodeticInformation;
+        this.currentLocationRetrieved = currentLocationRetrieved;
+        this.ageOfLocationInformation = ageOfLocationInformation;
+        this.userCSGInformation = userCSGInformation;
+        this._unrecognizedExtensionsList = _unrecognizedExtensionsList;
+    }
 
     /**
      * @summary Restructures an object into a LocationInformationGPRS

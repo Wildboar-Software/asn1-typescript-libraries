@@ -1,7 +1,7 @@
 /* eslint-disable */
 
 import * as $ from "@wildboar/asn1/functional";
-import { ENUMERATED, ASN1Element as _Element } from "@wildboar/asn1";
+import { type ENUMERATED, ASN1Element as _Element } from "@wildboar/asn1";
 
 
 
@@ -79,7 +79,7 @@ type DynamicFeatureSupported = _enum_for_DynamicFeatureSupported;
  * @enum {number}
  */
 export
-const DynamicFeatureSupported = _enum_for_DynamicFeatureSupported;
+const DynamicFeatureSupported: typeof _enum_for_DynamicFeatureSupported = _enum_for_DynamicFeatureSupported;
 
 /**
  * @summary DynamicFeatureSupported_none
@@ -87,7 +87,7 @@ const DynamicFeatureSupported = _enum_for_DynamicFeatureSupported;
  * @type {number}
  */
 export
-const DynamicFeatureSupported_none: DynamicFeatureSupported = DynamicFeatureSupported.none; /* LONG_NAMED_ENUMERATED_VALUE */
+const DynamicFeatureSupported_none: _enum_for_DynamicFeatureSupported.none = DynamicFeatureSupported.none; /* LONG_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary none
@@ -95,7 +95,7 @@ const DynamicFeatureSupported_none: DynamicFeatureSupported = DynamicFeatureSupp
  * @type {number}
  */
 export
-const none: DynamicFeatureSupported = DynamicFeatureSupported.none; /* SHORT_NAMED_ENUMERATED_VALUE */
+const none: _enum_for_DynamicFeatureSupported.none = DynamicFeatureSupported.none; /* SHORT_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary DynamicFeatureSupported_all
@@ -103,7 +103,7 @@ const none: DynamicFeatureSupported = DynamicFeatureSupported.none; /* SHORT_NAM
  * @type {number}
  */
 export
-const DynamicFeatureSupported_all: DynamicFeatureSupported = DynamicFeatureSupported.all; /* LONG_NAMED_ENUMERATED_VALUE */
+const DynamicFeatureSupported_all: _enum_for_DynamicFeatureSupported.all = DynamicFeatureSupported.all; /* LONG_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary all
@@ -111,7 +111,7 @@ const DynamicFeatureSupported_all: DynamicFeatureSupported = DynamicFeatureSuppo
  * @type {number}
  */
 export
-const all: DynamicFeatureSupported = DynamicFeatureSupported.all; /* SHORT_NAMED_ENUMERATED_VALUE */
+const all: _enum_for_DynamicFeatureSupported.all = DynamicFeatureSupported.all; /* SHORT_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary DynamicFeatureSupported_some
@@ -119,7 +119,7 @@ const all: DynamicFeatureSupported = DynamicFeatureSupported.all; /* SHORT_NAMED
  * @type {number}
  */
 export
-const DynamicFeatureSupported_some: DynamicFeatureSupported = DynamicFeatureSupported.some; /* LONG_NAMED_ENUMERATED_VALUE */
+const DynamicFeatureSupported_some: _enum_for_DynamicFeatureSupported.some = DynamicFeatureSupported.some; /* LONG_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary some
@@ -127,7 +127,7 @@ const DynamicFeatureSupported_some: DynamicFeatureSupported = DynamicFeatureSupp
  * @type {number}
  */
 export
-const some: DynamicFeatureSupported = DynamicFeatureSupported.some; /* SHORT_NAMED_ENUMERATED_VALUE */
+const some: _enum_for_DynamicFeatureSupported.some = DynamicFeatureSupported.some; /* SHORT_NAMED_ENUMERATED_VALUE */
 
 let _cached_decoder_for_DynamicFeatureSupported: $.ASN1Decoder<DynamicFeatureSupported> | null = null;
 

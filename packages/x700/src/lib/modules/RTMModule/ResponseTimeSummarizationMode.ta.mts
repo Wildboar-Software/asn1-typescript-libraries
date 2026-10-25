@@ -1,6 +1,6 @@
 /* eslint-disable */
 import {
-    ASN1Element as _Element,
+    type ASN1Element as _Element,
     ASN1TagClass as _TagClass,
     ASN1Construction as _Construction,
     ASN1UniversalType as _UniversalType,
@@ -81,7 +81,7 @@ export type ResponseTimeSummarizationMode = _enum_for_ResponseTimeSummarizationM
  *
  * @enum {number}
  */
-export const ResponseTimeSummarizationMode = _enum_for_ResponseTimeSummarizationMode;
+export const ResponseTimeSummarizationMode: typeof _enum_for_ResponseTimeSummarizationMode = _enum_for_ResponseTimeSummarizationMode;
 
 /**
  * @summary ResponseTimeSummarizationMode_rawResponseTime
@@ -93,7 +93,7 @@ export const ResponseTimeSummarizationMode = _enum_for_ResponseTimeSummarization
  * @constant
  * @type {number}
  */
-export const ResponseTimeSummarizationMode_rawResponseTime: ResponseTimeSummarizationMode =
+export const ResponseTimeSummarizationMode_rawResponseTime: _enum_for_ResponseTimeSummarizationMode.rawResponseTime =
     ResponseTimeSummarizationMode.rawResponseTime; /* LONG_NAMED_ENUMERATED_VALUE */
 
 /**
@@ -106,7 +106,7 @@ export const ResponseTimeSummarizationMode_rawResponseTime: ResponseTimeSummariz
  * @constant
  * @type {number}
  */
-export const rawResponseTime: ResponseTimeSummarizationMode =
+export const rawResponseTime: _enum_for_ResponseTimeSummarizationMode.rawResponseTime =
     ResponseTimeSummarizationMode.rawResponseTime; /* SHORT_NAMED_ENUMERATED_VALUE */
 
 /**
@@ -119,7 +119,7 @@ export const rawResponseTime: ResponseTimeSummarizationMode =
  * @constant
  * @type {number}
  */
-export const ResponseTimeSummarizationMode_responseTimePerBit: ResponseTimeSummarizationMode =
+export const ResponseTimeSummarizationMode_responseTimePerBit: _enum_for_ResponseTimeSummarizationMode.responseTimePerBit =
     ResponseTimeSummarizationMode.responseTimePerBit; /* LONG_NAMED_ENUMERATED_VALUE */
 
 /**
@@ -132,14 +132,25 @@ export const ResponseTimeSummarizationMode_responseTimePerBit: ResponseTimeSumma
  * @constant
  * @type {number}
  */
-export const responseTimePerBit: ResponseTimeSummarizationMode =
+export const responseTimePerBit: _enum_for_ResponseTimeSummarizationMode.responseTimePerBit =
     ResponseTimeSummarizationMode.responseTimePerBit; /* SHORT_NAMED_ENUMERATED_VALUE */
 
 
-export const _decode_ResponseTimeSummarizationMode = $._decodeEnumerated;
+export function _decode_ResponseTimeSummarizationMode(el: _Element): ResponseTimeSummarizationMode {
+    const enumerated = $._decodeEnumerated(el);
+    switch (enumerated) {
+        case ResponseTimeSummarizationMode.rawResponseTime: return ResponseTimeSummarizationMode.rawResponseTime;
+        case ResponseTimeSummarizationMode.responseTimePerBit: return ResponseTimeSummarizationMode.responseTimePerBit;
+        default:
+            throw new _ConstructionError(
+                'Invalid ENUMERATED value ' + enumerated + ' for ResponseTimeSummarizationMode.',
+                el,
+            );
+    }
+}
 
 
-export const _encode_ResponseTimeSummarizationMode = $._encodeEnumerated;
+export const _encode_ResponseTimeSummarizationMode: $.ASN1Encoder<ResponseTimeSummarizationMode> = $._encodeEnumerated as $.ASN1Encoder<ResponseTimeSummarizationMode>;
 
 
 /* eslint-enable */

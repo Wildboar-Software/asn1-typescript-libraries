@@ -1,13 +1,13 @@
 /* eslint-disable */
 import {
-    OCTET_STRING,
-    OPTIONAL,
-    ASN1Element as _Element,
+    type OCTET_STRING,
+    type OPTIONAL,
+    type ASN1Element as _Element,
     ASN1TagClass as _TagClass,
     ASN1SizeError
 } from "@wildboar/asn1";
 import * as $ from "@wildboar/asn1/functional";
-import { Network_Element_Identifier, _decode_Network_Element_Identifier, _encode_Network_Element_Identifier } from "../TETRA-HI2Operations/Network-Element-Identifier.ta.mjs";
+import { type Network_Element_Identifier, _decode_Network_Element_Identifier, _encode_Network_Element_Identifier } from "../TETRA-HI2Operations/Network-Element-Identifier.ta.mjs";
 // export { Network_Element_Identifier, _decode_Network_Element_Identifier, _encode_Network_Element_Identifier } from "../TETRA-HI2Operations/Network-Element-Identifier.ta.mjs";
 
 

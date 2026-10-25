@@ -12,7 +12,7 @@ import {
     _encode_OtherKey,
 } from "../PKCS-15/OtherKey.ta.mjs";
 import {
-    SecretKeyObject,
+    type SecretKeyObject,
     _get_decoder_for_SecretKeyObject,
     _get_encoder_for_SecretKeyObject,
 } from "../PKCS-15/SecretKeyObject.ta.mjs";

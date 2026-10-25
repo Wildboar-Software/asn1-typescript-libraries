@@ -1,10 +1,10 @@
 /* eslint-disable */
 import {
     ASN1ConstructionError as _ConstructionError,
-    ASN1Element as _Element,
+    type ASN1Element as _Element,
     ASN1TagClass as _TagClass,
-    BIT_STRING,
-    INTEGER,
+    type BIT_STRING,
+    type INTEGER,
 } from "@wildboar/asn1";
 import * as $ from "@wildboar/asn1/functional";
 
@@ -28,26 +28,34 @@ import * as $ from "@wildboar/asn1/functional";
  *
  */
 export class ValidationParms {
+    /**
+     * @summary `seed`.
+     * @public
+     * @readonly
+     */
+    public readonly seed: BIT_STRING;
+    /**
+     * @summary `pgenCounter`.
+     * @public
+     * @readonly
+     */
+    public readonly pgenCounter: INTEGER;
+    /**
+     * @summary Extensions that are not recognized.
+     * @public
+     * @readonly
+     */
+    public readonly _unrecognizedExtensionsList: _Element[];
+
     constructor(
-        /**
-         * @summary `seed`.
-         * @public
-         * @readonly
-         */
-        readonly seed: BIT_STRING,
-        /**
-         * @summary `pgenCounter`.
-         * @public
-         * @readonly
-         */
-        readonly pgenCounter: INTEGER,
-        /**
-         * @summary Extensions that are not recognized.
-         * @public
-         * @readonly
-         */
-        readonly _unrecognizedExtensionsList: _Element[] = []
-    ) {}
+        seed: BIT_STRING,
+        pgenCounter: INTEGER,
+        _unrecognizedExtensionsList: _Element[] = []
+    ) {
+        this.seed = seed;
+        this.pgenCounter = pgenCounter;
+        this._unrecognizedExtensionsList = _unrecognizedExtensionsList;
+    }
 
     /**
      * @summary Restructures an object into a ValidationParms

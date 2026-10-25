@@ -1,7 +1,7 @@
 /* eslint-disable */
 import {
-    ENUMERATED,
-    ASN1Element as _Element,
+    type ENUMERATED,
+    type ASN1Element as _Element,
     ASN1TagClass as _TagClass,
     ASN1Construction as _Construction,
     ASN1UniversalType as _UniversalType,
@@ -47,7 +47,7 @@ export type RepeatReport = _enum_for_RepeatReport | ENUMERATED;
  * @constant
  * @type {number}
  */
-export const RepeatReport_unspecified: RepeatReport = 0; /* LONG_NAMED_ENUMERATED_VALUE */
+export const RepeatReport_unspecified: _enum_for_RepeatReport.unspecified = _enum_for_RepeatReport.unspecified; /* LONG_NAMED_ENUMERATED_VALUE */
 
 
 /**
@@ -55,7 +55,7 @@ export const RepeatReport_unspecified: RepeatReport = 0; /* LONG_NAMED_ENUMERATE
  * @constant
  * @type {number}
  */
-export const unspecified: RepeatReport = RepeatReport_unspecified; /* SHORT_NAMED_ENUMERATED_VALUE */
+export const unspecified: _enum_for_RepeatReport.unspecified = RepeatReport_unspecified; /* SHORT_NAMED_ENUMERATED_VALUE */
 
 
 /**
@@ -63,7 +63,7 @@ export const unspecified: RepeatReport = RepeatReport_unspecified; /* SHORT_NAME
  * @constant
  * @type {number}
  */
-export const RepeatReport_recentInstallation: RepeatReport = 1; /* LONG_NAMED_ENUMERATED_VALUE */
+export const RepeatReport_recentInstallation: _enum_for_RepeatReport.recentInstallation = _enum_for_RepeatReport.recentInstallation; /* LONG_NAMED_ENUMERATED_VALUE */
 
 
 /**
@@ -71,7 +71,7 @@ export const RepeatReport_recentInstallation: RepeatReport = 1; /* LONG_NAMED_EN
  * @constant
  * @type {number}
  */
-export const recentInstallation: RepeatReport = RepeatReport_recentInstallation; /* SHORT_NAMED_ENUMERATED_VALUE */
+export const recentInstallation: _enum_for_RepeatReport.recentInstallation = RepeatReport_recentInstallation; /* SHORT_NAMED_ENUMERATED_VALUE */
 
 
 /**
@@ -79,7 +79,7 @@ export const recentInstallation: RepeatReport = RepeatReport_recentInstallation;
  * @constant
  * @type {number}
  */
-export const RepeatReport_repeat: RepeatReport = 2; /* LONG_NAMED_ENUMERATED_VALUE */
+export const RepeatReport_repeat: _enum_for_RepeatReport.repeat = _enum_for_RepeatReport.repeat; /* LONG_NAMED_ENUMERATED_VALUE */
 
 
 /**
@@ -87,7 +87,7 @@ export const RepeatReport_repeat: RepeatReport = 2; /* LONG_NAMED_ENUMERATED_VAL
  * @constant
  * @type {number}
  */
-export const repeat: RepeatReport = RepeatReport_repeat; /* SHORT_NAMED_ENUMERATED_VALUE */
+export const repeat: _enum_for_RepeatReport.repeat = RepeatReport_repeat; /* SHORT_NAMED_ENUMERATED_VALUE */
 
 
 /**
@@ -95,7 +95,7 @@ export const repeat: RepeatReport = RepeatReport_repeat; /* SHORT_NAMED_ENUMERAT
  * @constant
  * @type {number}
  */
-export const RepeatReport_bothInstallationAndRepeat: RepeatReport = 3; /* LONG_NAMED_ENUMERATED_VALUE */
+export const RepeatReport_bothInstallationAndRepeat: _enum_for_RepeatReport.bothInstallationAndRepeat = _enum_for_RepeatReport.bothInstallationAndRepeat; /* LONG_NAMED_ENUMERATED_VALUE */
 
 
 /**
@@ -103,7 +103,7 @@ export const RepeatReport_bothInstallationAndRepeat: RepeatReport = 3; /* LONG_N
  * @constant
  * @type {number}
  */
-export const bothInstallationAndRepeat: RepeatReport = RepeatReport_bothInstallationAndRepeat; /* SHORT_NAMED_ENUMERATED_VALUE */
+export const bothInstallationAndRepeat: _enum_for_RepeatReport.bothInstallationAndRepeat = RepeatReport_bothInstallationAndRepeat; /* SHORT_NAMED_ENUMERATED_VALUE */
 
 
 /**
@@ -111,7 +111,7 @@ export const bothInstallationAndRepeat: RepeatReport = RepeatReport_bothInstalla
  * @constant
  * @type {number}
  */
-export const RepeatReport_chronic: RepeatReport = 4; /* LONG_NAMED_ENUMERATED_VALUE */
+export const RepeatReport_chronic: _enum_for_RepeatReport.chronic = _enum_for_RepeatReport.chronic; /* LONG_NAMED_ENUMERATED_VALUE */
 
 
 /**
@@ -119,7 +119,7 @@ export const RepeatReport_chronic: RepeatReport = 4; /* LONG_NAMED_ENUMERATED_VA
  * @constant
  * @type {number}
  */
-export const chronic: RepeatReport = RepeatReport_chronic; /* SHORT_NAMED_ENUMERATED_VALUE */
+export const chronic: _enum_for_RepeatReport.chronic = RepeatReport_chronic; /* SHORT_NAMED_ENUMERATED_VALUE */
 
 
 /**
@@ -127,7 +127,7 @@ export const chronic: RepeatReport = RepeatReport_chronic; /* SHORT_NAMED_ENUMER
  * @constant
  * @type {number}
  */
-export const RepeatReport_bothInstallationAndChronic: RepeatReport = 5; /* LONG_NAMED_ENUMERATED_VALUE */
+export const RepeatReport_bothInstallationAndChronic: _enum_for_RepeatReport.bothInstallationAndChronic = _enum_for_RepeatReport.bothInstallationAndChronic; /* LONG_NAMED_ENUMERATED_VALUE */
 
 
 /**
@@ -135,17 +135,17 @@ export const RepeatReport_bothInstallationAndChronic: RepeatReport = 5; /* LONG_
  * @constant
  * @type {number}
  */
-export const bothInstallationAndChronic: RepeatReport = RepeatReport_bothInstallationAndChronic; /* SHORT_NAMED_ENUMERATED_VALUE */
+export const bothInstallationAndChronic: _enum_for_RepeatReport.bothInstallationAndChronic = RepeatReport_bothInstallationAndChronic; /* SHORT_NAMED_ENUMERATED_VALUE */
 
 
 
 
-export const _decode_RepeatReport = $._decodeEnumerated;
+export const _decode_RepeatReport: $.ASN1Decoder<number> = $._decodeEnumerated;
 
 
 
 
-export const _encode_RepeatReport = $._encodeEnumerated;
+export const _encode_RepeatReport: $.ASN1Encoder<number> = $._encodeEnumerated;
 
 
 /* eslint-enable */

@@ -1,7 +1,7 @@
 /* eslint-disable */
 import * as $ from "@wildboar/asn1/functional";
 import {
-    Q821_ATTRIBUTE,
+    type Q821_ATTRIBUTE,
 } from "../Q821-ASN1Module/Q821-ATTRIBUTE.oca.mjs";
 
 

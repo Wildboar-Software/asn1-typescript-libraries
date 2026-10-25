@@ -2,13 +2,13 @@
 
 import * as $ from "@wildboar/asn1/functional";
 import {
-    OPTIONAL,
-    SEQUENCE,
-    SET,
-    ASN1Element as _Element,
+    type OPTIONAL,
+    type SEQUENCE,
+    type SET,
+    type ASN1Element as _Element,
     ASN1TagClass as _TagClass
 } from "@wildboar/asn1";
-import { CDRCrossRefID, _decode_CDRCrossRefID, _encode_CDRCrossRefID } from "../CSTA-call-detail-record/CDRCrossRefID.ta.mjs";
+import { type CDRCrossRefID, _decode_CDRCrossRefID, _encode_CDRCrossRefID } from "../CSTA-call-detail-record/CDRCrossRefID.ta.mjs";
 
 import { CSTACommonArguments, _decode_CSTACommonArguments, _encode_CSTACommonArguments } from "../CSTA-extension-types/CSTACommonArguments.ta.mjs";
 
@@ -36,29 +36,35 @@ import { CSTACommonArguments, _decode_CSTACommonArguments, _encode_CSTACommonArg
  */
 export
 class StartCDRTransmissionResult {
+    /**
+     * @summary `cdrCrossRefID`.
+     * @description
+     *
+     * Identifier for this CDR transmission (ECMA-269 §27.1.4.2.1).
+     *
+     * @public
+     * @readonly
+     */
+    public readonly cdrCrossRefID: CDRCrossRefID;
+    /**
+     * @summary `extensions`.
+     * @description
+     *
+     * CSTACommonArguments carrying the service-table security and
+     * privateData parameters.
+     *
+     * @public
+     * @readonly
+     */
+    public readonly extensions?: OPTIONAL<CSTACommonArguments>;
+
     constructor (
-        /**
-         * @summary `cdrCrossRefID`.
-         * @description
-         *
-         * Identifier for this CDR transmission (ECMA-269 §27.1.4.2.1).
-         *
-         * @public
-         * @readonly
-         */
-        readonly cdrCrossRefID: CDRCrossRefID,
-        /**
-         * @summary `extensions`.
-         * @description
-         *
-         * CSTACommonArguments carrying the service-table security and
-         * privateData parameters.
-         *
-         * @public
-         * @readonly
-         */
-        readonly extensions?: OPTIONAL<CSTACommonArguments>
-    ) {}
+        cdrCrossRefID: CDRCrossRefID,
+        extensions?: OPTIONAL<CSTACommonArguments>
+    ) {
+        this.cdrCrossRefID = cdrCrossRefID;
+        this.extensions = extensions;
+    }
 
     /**
      * @summary Restructures an object into a StartCDRTransmissionResult

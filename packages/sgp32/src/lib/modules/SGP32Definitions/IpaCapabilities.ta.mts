@@ -1,12 +1,12 @@
 /* eslint-disable */
 import {
-    OPTIONAL,
-    ASN1Element as _Element,
+    type OPTIONAL,
+    type ASN1Element as _Element,
     ASN1TagClass as _TagClass
 } from "@wildboar/asn1";
 import * as $ from "@wildboar/asn1/functional";
-import { IpaCapabilities_ipaFeatures, _decode_IpaCapabilities_ipaFeatures, _encode_IpaCapabilities_ipaFeatures } from "../SGP32Definitions/IpaCapabilities-ipaFeatures.ta.mjs";
-import { IpaCapabilities_ipaSupportedProtocols, _decode_IpaCapabilities_ipaSupportedProtocols, _encode_IpaCapabilities_ipaSupportedProtocols } from "../SGP32Definitions/IpaCapabilities-ipaSupportedProtocols.ta.mjs";
+import { type IpaCapabilities_ipaFeatures, _decode_IpaCapabilities_ipaFeatures, _encode_IpaCapabilities_ipaFeatures } from "../SGP32Definitions/IpaCapabilities-ipaFeatures.ta.mjs";
+import { type IpaCapabilities_ipaSupportedProtocols, _decode_IpaCapabilities_ipaSupportedProtocols, _encode_IpaCapabilities_ipaSupportedProtocols } from "../SGP32Definitions/IpaCapabilities-ipaSupportedProtocols.ta.mjs";
 import { type VendorSpecificExtension, _decode_VendorSpecificExtension, _encode_VendorSpecificExtension } from "@wildboar/sgp22/RSPDefinitions";
 
 
@@ -48,35 +48,43 @@ import { type VendorSpecificExtension, _decode_VendorSpecificExtension, _encode_
  */
 export
 class IpaCapabilities {
+    /**
+     * @summary `ipaFeatures`.
+     * @description
+     * Required. Each bit set to 1 is a Profile-download or compact-ESipa feature
+     * this IPA supports. SGP.32 v1.2, section 4.1.
+     * @public
+     * @readonly
+     */
+    public readonly ipaFeatures: IpaCapabilities_ipaFeatures;
+    /**
+     * @summary `ipaSupportedProtocols`.
+     * @description
+     * Present when the IPA advertises eIM Package transfer. Each bit set to 1 is a
+     * supported retrieval or injection transport. SGP.32 v1.2, section 4.1.
+     * @public
+     * @readonly
+     */
+    public readonly ipaSupportedProtocols?: OPTIONAL<IpaCapabilities_ipaSupportedProtocols>;
+    /**
+     * @summary `eSipaProprietaryProtocolInformation`.
+     * @description
+     * SGP.32 v1.2 section 4.1 does not define this component. Annex C does not
+     * further define it.
+     * @public
+     * @readonly
+     */
+    public readonly eSipaProprietaryProtocolInformation?: OPTIONAL<VendorSpecificExtension>;
+
     constructor (
-        /**
-         * @summary `ipaFeatures`.
-         * @description
-         * Required. Each bit set to 1 is a Profile-download or compact-ESipa feature
-         * this IPA supports. SGP.32 v1.2, section 4.1.
-         * @public
-         * @readonly
-         */
-        readonly ipaFeatures: IpaCapabilities_ipaFeatures,
-        /**
-         * @summary `ipaSupportedProtocols`.
-         * @description
-         * Present when the IPA advertises eIM Package transfer. Each bit set to 1 is a
-         * supported retrieval or injection transport. SGP.32 v1.2, section 4.1.
-         * @public
-         * @readonly
-         */
-        readonly ipaSupportedProtocols?: OPTIONAL<IpaCapabilities_ipaSupportedProtocols>,
-        /**
-         * @summary `eSipaProprietaryProtocolInformation`.
-         * @description
-         * SGP.32 v1.2 section 4.1 does not define this component. Annex C does not
-         * further define it.
-         * @public
-         * @readonly
-         */
-        readonly eSipaProprietaryProtocolInformation?: OPTIONAL<VendorSpecificExtension>
-    ) {}
+        ipaFeatures: IpaCapabilities_ipaFeatures,
+        ipaSupportedProtocols?: OPTIONAL<IpaCapabilities_ipaSupportedProtocols>,
+        eSipaProprietaryProtocolInformation?: OPTIONAL<VendorSpecificExtension>
+    ) {
+        this.ipaFeatures = ipaFeatures;
+        this.ipaSupportedProtocols = ipaSupportedProtocols;
+        this.eSipaProprietaryProtocolInformation = eSipaProprietaryProtocolInformation;
+    }
 
     /**
      * @summary Restructures an object into a IpaCapabilities

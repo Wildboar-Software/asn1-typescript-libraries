@@ -1,7 +1,7 @@
 /* eslint-disable */
 import {
-    NULL,
-    ASN1Element as _Element,
+    type NULL,
+    type ASN1Element as _Element,
     ASN1TagClass as _TagClass,
     ASN1Construction as _Construction,
     ASN1UniversalType as _UniversalType,
@@ -12,7 +12,7 @@ import {
 } from "@wildboar/asn1";
 import * as $ from "@wildboar/asn1/functional";
 import { InformationReport, _decode_InformationReport, _encode_InformationReport } from "../ISO-9506-MMS-1/InformationReport.ta.mjs";
-import { UnsolicitedStatus, _decode_UnsolicitedStatus, _encode_UnsolicitedStatus } from "../ISO-9506-MMS-1/UnsolicitedStatus.ta.mjs";
+import { type UnsolicitedStatus, _decode_UnsolicitedStatus, _encode_UnsolicitedStatus } from "../ISO-9506-MMS-1/UnsolicitedStatus.ta.mjs";
 import { EventNotification, _decode_EventNotification, _encode_EventNotification } from "../ISO-9506-MMS-1/EventNotification.ta.mjs";
 
 

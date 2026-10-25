@@ -1,17 +1,17 @@
 /* eslint-disable */
 import {
-    OPTIONAL,
-    ASN1Element as _Element,
+    type OPTIONAL,
+    type ASN1Element as _Element,
     ASN1TagClass as _TagClass
 } from "@wildboar/asn1";
 import * as $ from "@wildboar/asn1/functional";
-import { Messaging_Party_Qualifier, _decode_Messaging_Party_Qualifier, _encode_Messaging_Party_Qualifier, _enum_for_Messaging_Party_Qualifier } from "../EmailPDU/Messaging-Party-Qualifier.ta.mjs";
+import { type Messaging_Party_Qualifier, _decode_Messaging_Party_Qualifier, _encode_Messaging_Party_Qualifier, _enum_for_Messaging_Party_Qualifier } from "../EmailPDU/Messaging-Party-Qualifier.ta.mjs";
 // export { Messaging_Party_Qualifier, _enum_for_Messaging_Party_Qualifier, Messaging_Party_Qualifier_unknown_party /* IMPORTED_LONG_ENUMERATION_ITEM */, unknown_party /* IMPORTED_SHORT_ENUMERATION_ITEM */, Messaging_Party_Qualifier_originating_party /* IMPORTED_LONG_ENUMERATION_ITEM */, originating_party /* IMPORTED_SHORT_ENUMERATION_ITEM */, Messaging_Party_Qualifier_terminating_party /* IMPORTED_LONG_ENUMERATION_ITEM */, terminating_party /* IMPORTED_SHORT_ENUMERATION_ITEM */, Messaging_Party_Qualifier_associated_party /* IMPORTED_LONG_ENUMERATION_ITEM */, associated_party /* IMPORTED_SHORT_ENUMERATION_ITEM */, _decode_Messaging_Party_Qualifier, _encode_Messaging_Party_Qualifier } from "../EmailPDU/Messaging-Party-Qualifier.ta.mjs";
-import { Messaging_Party_Identity, _decode_Messaging_Party_Identity, _encode_Messaging_Party_Identity } from "../EmailPDU/Messaging-Party-Identity.ta.mjs";
+import { type Messaging_Party_Identity, _decode_Messaging_Party_Identity, _encode_Messaging_Party_Identity } from "../EmailPDU/Messaging-Party-Identity.ta.mjs";
 // export { Messaging_Party_Identity, _decode_Messaging_Party_Identity, _encode_Messaging_Party_Identity } from "../EmailPDU/Messaging-Party-Identity.ta.mjs";
-import { Messaging_Party_Validity, _decode_Messaging_Party_Validity, _encode_Messaging_Party_Validity, _enum_for_Messaging_Party_Validity } from "../EmailPDU/Messaging-Party-Validity.ta.mjs";
+import { type Messaging_Party_Validity, _decode_Messaging_Party_Validity, _encode_Messaging_Party_Validity, _enum_for_Messaging_Party_Validity } from "../EmailPDU/Messaging-Party-Validity.ta.mjs";
 // export { Messaging_Party_Validity, _enum_for_Messaging_Party_Validity, Messaging_Party_Validity_unknown /* IMPORTED_LONG_ENUMERATION_ITEM */, Messaging_Party_Validity_trusted /* IMPORTED_LONG_ENUMERATION_ITEM */, trusted /* IMPORTED_SHORT_ENUMERATION_ITEM */, Messaging_Party_Validity_untrusted /* IMPORTED_LONG_ENUMERATION_ITEM */, untrusted /* IMPORTED_SHORT_ENUMERATION_ITEM */, _decode_Messaging_Party_Validity, _encode_Messaging_Party_Validity } from "../EmailPDU/Messaging-Party-Validity.ta.mjs";
-import { Messaging_Copy_Qualifier, _decode_Messaging_Copy_Qualifier, _encode_Messaging_Copy_Qualifier, _enum_for_Messaging_Copy_Qualifier } from "../EmailPDU/Messaging-Copy-Qualifier.ta.mjs";
+import { type Messaging_Copy_Qualifier, _decode_Messaging_Copy_Qualifier, _encode_Messaging_Copy_Qualifier, _enum_for_Messaging_Copy_Qualifier } from "../EmailPDU/Messaging-Copy-Qualifier.ta.mjs";
 // export { Messaging_Copy_Qualifier, _enum_for_Messaging_Copy_Qualifier, Messaging_Copy_Qualifier_unknown /* IMPORTED_LONG_ENUMERATION_ITEM */, Messaging_Copy_Qualifier_none /* IMPORTED_LONG_ENUMERATION_ITEM */, none /* IMPORTED_SHORT_ENUMERATION_ITEM */, Messaging_Copy_Qualifier_cc /* IMPORTED_LONG_ENUMERATION_ITEM */, cc /* IMPORTED_SHORT_ENUMERATION_ITEM */, Messaging_Copy_Qualifier_bcc /* IMPORTED_LONG_ENUMERATION_ITEM */, bcc /* IMPORTED_SHORT_ENUMERATION_ITEM */, _decode_Messaging_Copy_Qualifier, _encode_Messaging_Copy_Qualifier } from "../EmailPDU/Messaging-Copy-Qualifier.ta.mjs";
 
 
@@ -149,19 +149,19 @@ class Messaging_Party_Information {
          * @static
          */
 
-    public static _enum_for_party_qualifier = _enum_for_Messaging_Party_Qualifier;        /**
+    public static _enum_for_party_qualifier: typeof _enum_for_Messaging_Party_Qualifier = _enum_for_Messaging_Party_Qualifier;        /**
          * @summary The enum used as the type of the component `party_validity`
          * @public
          * @static
          */
 
-    public static _enum_for_party_validity = _enum_for_Messaging_Party_Validity;        /**
+    public static _enum_for_party_validity: typeof _enum_for_Messaging_Party_Validity = _enum_for_Messaging_Party_Validity;        /**
          * @summary The enum used as the type of the component `copy_qualifier`
          * @public
          * @static
          */
 
-    public static _enum_for_copy_qualifier = _enum_for_Messaging_Copy_Qualifier;
+    public static _enum_for_copy_qualifier: typeof _enum_for_Messaging_Copy_Qualifier = _enum_for_Messaging_Copy_Qualifier;
 }
 
 /**

@@ -94,7 +94,7 @@ type ChargedParty = _enum_for_ChargedParty;
  * @enum {number}
  */
 export
-const ChargedParty = _enum_for_ChargedParty;
+const ChargedParty: typeof _enum_for_ChargedParty = _enum_for_ChargedParty;
 
 /**
  * @summary ChargedParty_sender
@@ -108,7 +108,7 @@ const ChargedParty = _enum_for_ChargedParty;
  * @type {number}
  */
 export
-const ChargedParty_sender: ChargedParty = ChargedParty.sender; /* LONG_NAMED_ENUMERATED_VALUE */
+const ChargedParty_sender: _enum_for_ChargedParty.sender = ChargedParty.sender; /* LONG_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary sender
@@ -122,7 +122,7 @@ const ChargedParty_sender: ChargedParty = ChargedParty.sender; /* LONG_NAMED_ENU
  * @type {number}
  */
 export
-const sender: ChargedParty = ChargedParty.sender; /* SHORT_NAMED_ENUMERATED_VALUE */
+const sender: _enum_for_ChargedParty.sender = ChargedParty.sender; /* SHORT_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary ChargedParty_recipient
@@ -136,7 +136,7 @@ const sender: ChargedParty = ChargedParty.sender; /* SHORT_NAMED_ENUMERATED_VALU
  * @type {number}
  */
 export
-const ChargedParty_recipient: ChargedParty = ChargedParty.recipient; /* LONG_NAMED_ENUMERATED_VALUE */
+const ChargedParty_recipient: _enum_for_ChargedParty.recipient = ChargedParty.recipient; /* LONG_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary recipient
@@ -150,7 +150,7 @@ const ChargedParty_recipient: ChargedParty = ChargedParty.recipient; /* LONG_NAM
  * @type {number}
  */
 export
-const recipient: ChargedParty = ChargedParty.recipient; /* SHORT_NAMED_ENUMERATED_VALUE */
+const recipient: _enum_for_ChargedParty.recipient = ChargedParty.recipient; /* SHORT_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary ChargedParty_both
@@ -164,7 +164,7 @@ const recipient: ChargedParty = ChargedParty.recipient; /* SHORT_NAMED_ENUMERATE
  * @type {number}
  */
 export
-const ChargedParty_both: ChargedParty = ChargedParty.both; /* LONG_NAMED_ENUMERATED_VALUE */
+const ChargedParty_both: _enum_for_ChargedParty.both = ChargedParty.both; /* LONG_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary both
@@ -178,7 +178,7 @@ const ChargedParty_both: ChargedParty = ChargedParty.both; /* LONG_NAMED_ENUMERA
  * @type {number}
  */
 export
-const both: ChargedParty = ChargedParty.both; /* SHORT_NAMED_ENUMERATED_VALUE */
+const both: _enum_for_ChargedParty.both = ChargedParty.both; /* SHORT_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary ChargedParty_neither
@@ -192,7 +192,7 @@ const both: ChargedParty = ChargedParty.both; /* SHORT_NAMED_ENUMERATED_VALUE */
  * @type {number}
  */
 export
-const ChargedParty_neither: ChargedParty = ChargedParty.neither; /* LONG_NAMED_ENUMERATED_VALUE */
+const ChargedParty_neither: _enum_for_ChargedParty.neither = ChargedParty.neither; /* LONG_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary neither
@@ -206,7 +206,7 @@ const ChargedParty_neither: ChargedParty = ChargedParty.neither; /* LONG_NAMED_E
  * @type {number}
  */
 export
-const neither: ChargedParty = ChargedParty.neither; /* SHORT_NAMED_ENUMERATED_VALUE */
+const neither: _enum_for_ChargedParty.neither = ChargedParty.neither; /* SHORT_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary ChargedParty_notspecifiedbyVASP
@@ -220,7 +220,7 @@ const neither: ChargedParty = ChargedParty.neither; /* SHORT_NAMED_ENUMERATED_VA
  * @type {number}
  */
 export
-const ChargedParty_notspecifiedbyVASP: ChargedParty = ChargedParty.notspecifiedbyVASP; /* LONG_NAMED_ENUMERATED_VALUE */
+const ChargedParty_notspecifiedbyVASP: _enum_for_ChargedParty.notspecifiedbyVASP = ChargedParty.notspecifiedbyVASP; /* LONG_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary notspecifiedbyVASP
@@ -234,7 +234,7 @@ const ChargedParty_notspecifiedbyVASP: ChargedParty = ChargedParty.notspecifiedb
  * @type {number}
  */
 export
-const notspecifiedbyVASP: ChargedParty = ChargedParty.notspecifiedbyVASP; /* SHORT_NAMED_ENUMERATED_VALUE */
+const notspecifiedbyVASP: _enum_for_ChargedParty.notspecifiedbyVASP = ChargedParty.notspecifiedbyVASP; /* SHORT_NAMED_ENUMERATED_VALUE */
 
 export
 const _decode_ChargedParty: $.ASN1Decoder<ChargedParty> = $._decodeEnumerated;

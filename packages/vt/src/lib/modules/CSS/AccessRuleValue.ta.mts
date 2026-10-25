@@ -1,7 +1,7 @@
 /* eslint-disable */
 import {
-    INTEGER,
-    ASN1Element as _Element,
+    type INTEGER,
+    type ASN1Element as _Element,
     ASN1TagClass as _TagClass,
     ASN1Construction as _Construction,
     ASN1UniversalType as _UniversalType,
@@ -52,7 +52,7 @@ type AccessRuleValue = INTEGER;
  * @type {number}
  */
 export
-const AccessRuleValue_wavar: AccessRuleValue = 0; /* LONG_NAMED_INTEGER_VALUE */
+const AccessRuleValue_wavar: 0 = 0 satisfies AccessRuleValue; /* LONG_NAMED_INTEGER_VALUE */
 
 /**
  * @summary AccessRuleValue_wavar
@@ -64,7 +64,7 @@ const AccessRuleValue_wavar: AccessRuleValue = 0; /* LONG_NAMED_INTEGER_VALUE */
  * @type {number}
  */
 export
-const wavar: AccessRuleValue = AccessRuleValue_wavar; /* SHORT_NAMED_INTEGER_VALUE */
+const wavar: 0 = AccessRuleValue_wavar; /* SHORT_NAMED_INTEGER_VALUE */
 
 /**
  * @summary AccessRuleValue_waci
@@ -76,7 +76,7 @@ const wavar: AccessRuleValue = AccessRuleValue_wavar; /* SHORT_NAMED_INTEGER_VAL
  * @type {number}
  */
 export
-const AccessRuleValue_waci: AccessRuleValue = 1; /* LONG_NAMED_INTEGER_VALUE */
+const AccessRuleValue_waci: 1 = 1 satisfies AccessRuleValue; /* LONG_NAMED_INTEGER_VALUE */
 
 /**
  * @summary AccessRuleValue_waci
@@ -88,7 +88,7 @@ const AccessRuleValue_waci: AccessRuleValue = 1; /* LONG_NAMED_INTEGER_VALUE */
  * @type {number}
  */
 export
-const waci: AccessRuleValue = AccessRuleValue_waci; /* SHORT_NAMED_INTEGER_VALUE */
+const waci: 1 = AccessRuleValue_waci; /* SHORT_NAMED_INTEGER_VALUE */
 
 /**
  * @summary AccessRuleValue_waca
@@ -100,7 +100,7 @@ const waci: AccessRuleValue = AccessRuleValue_waci; /* SHORT_NAMED_INTEGER_VALUE
  * @type {number}
  */
 export
-const AccessRuleValue_waca: AccessRuleValue = 2; /* LONG_NAMED_INTEGER_VALUE */
+const AccessRuleValue_waca: 2 = 2 satisfies AccessRuleValue; /* LONG_NAMED_INTEGER_VALUE */
 
 /**
  * @summary AccessRuleValue_waca
@@ -112,7 +112,7 @@ const AccessRuleValue_waca: AccessRuleValue = 2; /* LONG_NAMED_INTEGER_VALUE */
  * @type {number}
  */
 export
-const waca: AccessRuleValue = AccessRuleValue_waca; /* SHORT_NAMED_INTEGER_VALUE */
+const waca: 2 = AccessRuleValue_waca; /* SHORT_NAMED_INTEGER_VALUE */
 
 /**
  * @summary AccessRuleValue_nsac
@@ -125,7 +125,7 @@ const waca: AccessRuleValue = AccessRuleValue_waca; /* SHORT_NAMED_INTEGER_VALUE
  * @type {number}
  */
 export
-const AccessRuleValue_nsac: AccessRuleValue = 3; /* LONG_NAMED_INTEGER_VALUE */
+const AccessRuleValue_nsac: 3 = 3 satisfies AccessRuleValue; /* LONG_NAMED_INTEGER_VALUE */
 
 /**
  * @summary AccessRuleValue_nsac
@@ -138,7 +138,7 @@ const AccessRuleValue_nsac: AccessRuleValue = 3; /* LONG_NAMED_INTEGER_VALUE */
  * @type {number}
  */
 export
-const nsac: AccessRuleValue = AccessRuleValue_nsac; /* SHORT_NAMED_INTEGER_VALUE */
+const nsac: 3 = AccessRuleValue_nsac; /* SHORT_NAMED_INTEGER_VALUE */
 
 /**
  * @summary AccessRuleValue_wavar_and_waci
@@ -152,7 +152,7 @@ const nsac: AccessRuleValue = AccessRuleValue_nsac; /* SHORT_NAMED_INTEGER_VALUE
  * @type {number}
  */
 export
-const AccessRuleValue_wavar_and_waci: AccessRuleValue = 4; /* LONG_NAMED_INTEGER_VALUE */
+const AccessRuleValue_wavar_and_waci: 4 = 4 satisfies AccessRuleValue; /* LONG_NAMED_INTEGER_VALUE */
 
 /**
  * @summary AccessRuleValue_wavar_and_waci
@@ -166,7 +166,7 @@ const AccessRuleValue_wavar_and_waci: AccessRuleValue = 4; /* LONG_NAMED_INTEGER
  * @type {number}
  */
 export
-const wavar_and_waci: AccessRuleValue = AccessRuleValue_wavar_and_waci; /* SHORT_NAMED_INTEGER_VALUE */
+const wavar_and_waci: 4 = AccessRuleValue_wavar_and_waci; /* SHORT_NAMED_INTEGER_VALUE */
 
 /**
  * @summary AccessRuleValue_wavar_and_waca
@@ -180,7 +180,7 @@ const wavar_and_waci: AccessRuleValue = AccessRuleValue_wavar_and_waci; /* SHORT
  * @type {number}
  */
 export
-const AccessRuleValue_wavar_and_waca: AccessRuleValue = 5; /* LONG_NAMED_INTEGER_VALUE */
+const AccessRuleValue_wavar_and_waca: 5 = 5 satisfies AccessRuleValue; /* LONG_NAMED_INTEGER_VALUE */
 
 /**
  * @summary AccessRuleValue_wavar_and_waca
@@ -194,7 +194,7 @@ const AccessRuleValue_wavar_and_waca: AccessRuleValue = 5; /* LONG_NAMED_INTEGER
  * @type {number}
  */
 export
-const wavar_and_waca: AccessRuleValue = AccessRuleValue_wavar_and_waca; /* SHORT_NAMED_INTEGER_VALUE */
+const wavar_and_waca: 5 = AccessRuleValue_wavar_and_waca; /* SHORT_NAMED_INTEGER_VALUE */
 
 /**
  * @summary AccessRuleValue_no_access
@@ -207,7 +207,7 @@ const wavar_and_waca: AccessRuleValue = AccessRuleValue_wavar_and_waca; /* SHORT
  * @type {number}
  */
 export
-const AccessRuleValue_no_access: AccessRuleValue = 6; /* LONG_NAMED_INTEGER_VALUE */
+const AccessRuleValue_no_access: 6 = 6 satisfies AccessRuleValue; /* LONG_NAMED_INTEGER_VALUE */
 
 /**
  * @summary AccessRuleValue_no_access
@@ -220,9 +220,9 @@ const AccessRuleValue_no_access: AccessRuleValue = 6; /* LONG_NAMED_INTEGER_VALU
  * @type {number}
  */
 export
-const no_access: AccessRuleValue = AccessRuleValue_no_access; /* SHORT_NAMED_INTEGER_VALUE */
-export const _decode_AccessRuleValue = $._decodeInteger;
-export const _encode_AccessRuleValue = $._encodeInteger;
+const no_access: 6 = AccessRuleValue_no_access; /* SHORT_NAMED_INTEGER_VALUE */
+export const _decode_AccessRuleValue: $.ASN1Decoder<INTEGER> = $._decodeInteger;
+export const _encode_AccessRuleValue: $.ASN1Encoder<INTEGER> = $._encodeInteger;
 
 
 /* eslint-enable */

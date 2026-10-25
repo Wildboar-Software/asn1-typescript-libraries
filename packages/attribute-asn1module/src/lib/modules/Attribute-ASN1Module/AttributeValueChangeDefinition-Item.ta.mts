@@ -1,7 +1,7 @@
 /* eslint-disable */
 import {
-    OPTIONAL,
-    ASN1Element as _Element,
+    type OPTIONAL,
+    type ASN1Element as _Element,
     ASN1TagClass as _TagClass,
     ASN1Construction as _Construction,
     ASN1UniversalType as _UniversalType,
@@ -11,7 +11,7 @@ import {
     ASN1ConstructionError as _ConstructionError,
 } from "@wildboar/asn1";
 import * as $ from "@wildboar/asn1/functional";
-import { AttributeId, _decode_AttributeId, _encode_AttributeId } from "@wildboar/cmip";
+import { type AttributeId, _decode_AttributeId, _encode_AttributeId } from "@wildboar/cmip";
 /**
  * @summary AttributeValueChangeDefinition_Item
  * @description
@@ -38,7 +38,7 @@ class AttributeValueChangeDefinition_Item {
      * @public
      * @readonly
      */
-    readonly attributeId: AttributeId;
+    public readonly attributeId: AttributeId;
     /**
      * @summary `oldAttributeValue`.
      * @description
@@ -49,7 +49,7 @@ class AttributeValueChangeDefinition_Item {
      * @public
      * @readonly
      */
-    readonly oldAttributeValue: OPTIONAL<_Element>;
+    public readonly oldAttributeValue: OPTIONAL<_Element>;
     /**
      * @summary `newAttributeValue`.
      * @description
@@ -59,7 +59,7 @@ class AttributeValueChangeDefinition_Item {
      * @public
      * @readonly
      */
-    readonly newAttributeValue: _Element;
+    public readonly newAttributeValue: _Element;
 
     constructor (
         attributeId: AttributeId,

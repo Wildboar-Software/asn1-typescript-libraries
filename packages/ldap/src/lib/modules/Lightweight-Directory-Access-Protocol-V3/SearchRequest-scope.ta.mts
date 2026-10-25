@@ -1,6 +1,6 @@
 /* eslint-disable */
 import {
-  ENUMERATED,
+  type ENUMERATED,
   ASN1Element as _Element,
   ASN1TagClass as _TagClass,
   ASN1Construction as _Construction,
@@ -47,7 +47,7 @@ export type SearchRequest_scope = _enum_for_SearchRequest_scope | ENUMERATED;
  * @constant
  * @type {number}
  */
-export const SearchRequest_scope_baseObject: SearchRequest_scope = 0; /* LONG_NAMED_ENUMERATED_VALUE */
+export const SearchRequest_scope_baseObject: 0 = _enum_for_SearchRequest_scope.baseObject; /* LONG_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary baseObject
@@ -58,7 +58,7 @@ export const SearchRequest_scope_baseObject: SearchRequest_scope = 0; /* LONG_NA
  * @constant
  * @type {number}
  */
-export const baseObject: SearchRequest_scope = SearchRequest_scope_baseObject; /* SHORT_NAMED_ENUMERATED_VALUE */
+export const baseObject: 0 = SearchRequest_scope_baseObject; /* SHORT_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary SearchRequest_scope_singleLevel
@@ -69,7 +69,7 @@ export const baseObject: SearchRequest_scope = SearchRequest_scope_baseObject; /
  * @constant
  * @type {number}
  */
-export const SearchRequest_scope_singleLevel: SearchRequest_scope = 1; /* LONG_NAMED_ENUMERATED_VALUE */
+export const SearchRequest_scope_singleLevel: 1 = _enum_for_SearchRequest_scope.singleLevel; /* LONG_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary singleLevel
@@ -80,7 +80,7 @@ export const SearchRequest_scope_singleLevel: SearchRequest_scope = 1; /* LONG_N
  * @constant
  * @type {number}
  */
-export const singleLevel: SearchRequest_scope = SearchRequest_scope_singleLevel; /* SHORT_NAMED_ENUMERATED_VALUE */
+export const singleLevel: 1 = SearchRequest_scope_singleLevel; /* SHORT_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary SearchRequest_scope_wholeSubtree
@@ -91,7 +91,7 @@ export const singleLevel: SearchRequest_scope = SearchRequest_scope_singleLevel;
  * @constant
  * @type {number}
  */
-export const SearchRequest_scope_wholeSubtree: SearchRequest_scope = 2; /* LONG_NAMED_ENUMERATED_VALUE */
+export const SearchRequest_scope_wholeSubtree: 2 = _enum_for_SearchRequest_scope.wholeSubtree; /* LONG_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary wholeSubtree
@@ -102,7 +102,7 @@ export const SearchRequest_scope_wholeSubtree: SearchRequest_scope = 2; /* LONG_
  * @constant
  * @type {number}
  */
-export const wholeSubtree: SearchRequest_scope = SearchRequest_scope_wholeSubtree; /* SHORT_NAMED_ENUMERATED_VALUE */
+export const wholeSubtree: 2 = SearchRequest_scope_wholeSubtree; /* SHORT_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary Decodes an ASN.1 element into a(n) SearchRequest_scope
@@ -110,7 +110,7 @@ export const wholeSubtree: SearchRequest_scope = SearchRequest_scope_wholeSubtre
  * @param {_Element} el The element being decoded.
  * @returns {SearchRequest_scope} The decoded data structure.
  */
-export const _decode_SearchRequest_scope: $.ASN1Decoder<SearchRequest_scope> = $._decodeEnumerated as $.ASN1Decoder<SearchRequest_scope>;
+export const _decode_SearchRequest_scope: $.ASN1Decoder<SearchRequest_scope> = $._decodeEnumerated;
 
 /**
  * @summary Encodes a(n) SearchRequest_scope into an ASN.1 Element.
@@ -119,6 +119,6 @@ export const _decode_SearchRequest_scope: $.ASN1Decoder<SearchRequest_scope> = $
  * @param elGetter A function that can be used to get new ASN.1 elements.
  * @returns {_Element} The SearchRequest_scope, encoded as an ASN.1 Element.
  */
-export const _encode_SearchRequest_scope: $.ASN1Encoder<SearchRequest_scope> = $._encodeEnumerated as $.ASN1Encoder<SearchRequest_scope>;
+export const _encode_SearchRequest_scope: $.ASN1Encoder<SearchRequest_scope> = $._encodeEnumerated;
 
 /* eslint-enable */

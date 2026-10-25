@@ -1,4 +1,5 @@
 /* eslint-disable */
+import { ASN1Element as _Element, ASN1ConstructionError as _ConstructionError } from "@wildboar/asn1";
 import * as $ from "@wildboar/asn1/functional";
 
 
@@ -50,7 +51,7 @@ type InfoType = _enum_for_InfoType;
  * @enum {number}
  */
 export
-const InfoType = _enum_for_InfoType;
+const InfoType: typeof _enum_for_InfoType = _enum_for_InfoType;
 
 /**
  * @summary InfoType_numericString
@@ -58,7 +59,7 @@ const InfoType = _enum_for_InfoType;
  * @type {number}
  */
 export
-const InfoType_numericString: InfoType = InfoType.numericString; /* LONG_NAMED_ENUMERATED_VALUE */
+const InfoType_numericString: _enum_for_InfoType.numericString = InfoType.numericString; /* LONG_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary numericString
@@ -66,7 +67,7 @@ const InfoType_numericString: InfoType = InfoType.numericString; /* LONG_NAMED_E
  * @type {number}
  */
 export
-const numericString: InfoType = InfoType.numericString; /* SHORT_NAMED_ENUMERATED_VALUE */
+const numericString: _enum_for_InfoType.numericString = InfoType.numericString; /* SHORT_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary InfoType_characterString
@@ -74,7 +75,7 @@ const numericString: InfoType = InfoType.numericString; /* SHORT_NAMED_ENUMERATE
  * @type {number}
  */
 export
-const InfoType_characterString: InfoType = InfoType.characterString; /* LONG_NAMED_ENUMERATED_VALUE */
+const InfoType_characterString: _enum_for_InfoType.characterString = InfoType.characterString; /* LONG_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary characterString
@@ -82,7 +83,7 @@ const InfoType_characterString: InfoType = InfoType.characterString; /* LONG_NAM
  * @type {number}
  */
 export
-const characterString: InfoType = InfoType.characterString; /* SHORT_NAMED_ENUMERATED_VALUE */
+const characterString: _enum_for_InfoType.characterString = InfoType.characterString; /* SHORT_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary InfoType_iA5String
@@ -90,7 +91,7 @@ const characterString: InfoType = InfoType.characterString; /* SHORT_NAMED_ENUME
  * @type {number}
  */
 export
-const InfoType_iA5String: InfoType = InfoType.iA5String; /* LONG_NAMED_ENUMERATED_VALUE */
+const InfoType_iA5String: _enum_for_InfoType.iA5String = InfoType.iA5String; /* LONG_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary iA5String
@@ -98,12 +99,24 @@ const InfoType_iA5String: InfoType = InfoType.iA5String; /* LONG_NAMED_ENUMERATE
  * @type {number}
  */
 export
-const iA5String: InfoType = InfoType.iA5String; /* SHORT_NAMED_ENUMERATED_VALUE */
+const iA5String: _enum_for_InfoType.iA5String = InfoType.iA5String; /* SHORT_NAMED_ENUMERATED_VALUE */
 
 export
-const _decode_InfoType: $.ASN1Decoder<InfoType> = $._decodeEnumerated;
+function _decode_InfoType(el: _Element): InfoType {
+    const enumerated = $._decodeEnumerated(el);
+    switch (enumerated) {
+        case InfoType.numericString: return InfoType.numericString;
+        case InfoType.characterString: return InfoType.characterString;
+        case InfoType.iA5String: return InfoType.iA5String;
+        default:
+            throw new _ConstructionError(
+                "Invalid ENUMERATED value " + enumerated + " for InfoType.",
+                el,
+            );
+    }
+}
 
 export
-const _encode_InfoType: $.ASN1Encoder<InfoType> = $._encodeEnumerated;
+const _encode_InfoType: $.ASN1Encoder<InfoType> = $._encodeEnumerated as $.ASN1Encoder<InfoType>;
 
 /* eslint-enable */

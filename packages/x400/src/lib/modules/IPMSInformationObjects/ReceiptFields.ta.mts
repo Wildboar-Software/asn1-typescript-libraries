@@ -1,7 +1,7 @@
 /* eslint-disable */
 import {
-    OPTIONAL,
-    ASN1Element as _Element,
+    type OPTIONAL,
+    type ASN1Element as _Element,
     ASN1TagClass as _TagClass,
     ASN1Construction as _Construction,
     ASN1UniversalType as _UniversalType,
@@ -12,7 +12,7 @@ import {
 } from '@wildboar/asn1';
 import * as $ from '@wildboar/asn1/functional';
 import {
-    ReceiptTimeField,
+    type ReceiptTimeField,
     _decode_ReceiptTimeField,
     _encode_ReceiptTimeField,
 } from '../IPMSInformationObjects/ReceiptTimeField.ta.mjs';
@@ -24,12 +24,12 @@ import {
     _encode_AcknowledgmentModeField,
 } from '../IPMSInformationObjects/AcknowledgmentModeField.ta.mjs';
 import {
-    SupplReceiptInfoField,
+    type SupplReceiptInfoField,
     _decode_SupplReceiptInfoField,
     _encode_SupplReceiptInfoField,
 } from '../IPMSInformationObjects/SupplReceiptInfoField.ta.mjs';
 import {
-    RNExtensionsField,
+    type RNExtensionsField,
     _decode_RNExtensionsField,
     _encode_RNExtensionsField,
 } from '../IPMSInformationObjects/RNExtensionsField.ta.mjs';
@@ -52,32 +52,42 @@ import {
  *
  */
 export class ReceiptFields {
+    /**
+     * @summary `receipt_time`.
+     * @public
+     * @readonly
+     */
+    public readonly receipt_time: ReceiptTimeField;
+    /**
+     * @summary `acknowledgment_mode`.
+     * @public
+     * @readonly
+     */
+    public readonly acknowledgment_mode?: OPTIONAL<AcknowledgmentModeField>;
+    /**
+     * @summary `suppl_receipt_info`.
+     * @public
+     * @readonly
+     */
+    public readonly suppl_receipt_info?: OPTIONAL<SupplReceiptInfoField>;
+    /**
+     * @summary `rn_extensions`.
+     * @public
+     * @readonly
+     */
+    public readonly rn_extensions?: OPTIONAL<RNExtensionsField>;
+
     constructor(
-        /**
-         * @summary `receipt_time`.
-         * @public
-         * @readonly
-         */
-        readonly receipt_time: ReceiptTimeField,
-        /**
-         * @summary `acknowledgment_mode`.
-         * @public
-         * @readonly
-         */
-        readonly acknowledgment_mode?: OPTIONAL<AcknowledgmentModeField>,
-        /**
-         * @summary `suppl_receipt_info`.
-         * @public
-         * @readonly
-         */
-        readonly suppl_receipt_info?: OPTIONAL<SupplReceiptInfoField>,
-        /**
-         * @summary `rn_extensions`.
-         * @public
-         * @readonly
-         */
-        readonly rn_extensions?: OPTIONAL<RNExtensionsField>
-    ) {}
+        receipt_time: ReceiptTimeField,
+        acknowledgment_mode?: OPTIONAL<AcknowledgmentModeField>,
+        suppl_receipt_info?: OPTIONAL<SupplReceiptInfoField>,
+        rn_extensions?: OPTIONAL<RNExtensionsField>
+    ) {
+        this.receipt_time = receipt_time;
+        this.acknowledgment_mode = acknowledgment_mode;
+        this.suppl_receipt_info = suppl_receipt_info;
+        this.rn_extensions = rn_extensions;
+    }
 
     /**
      * @summary Restructures an object into a ReceiptFields
@@ -117,7 +127,7 @@ export class ReceiptFields {
      * @static
      */
 
-    public static _enum_for_acknowledgment_mode = _enum_for_AcknowledgmentModeField;
+    public static _enum_for_acknowledgment_mode: typeof _enum_for_AcknowledgmentModeField = _enum_for_AcknowledgmentModeField;
 }
 
 /**

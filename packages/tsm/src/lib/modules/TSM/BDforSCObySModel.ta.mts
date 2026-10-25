@@ -1,7 +1,7 @@
 /* eslint-disable */
 import {
-    OPTIONAL,
-    ASN1Element as _Element,
+    type OPTIONAL,
+    type ASN1Element as _Element,
     ASN1TagClass as _TagClass,
     ASN1Construction as _Construction,
     ASN1UniversalType as _UniversalType,
@@ -11,11 +11,11 @@ import {
     ASN1ConstructionError as _ConstructionError,
 } from "@wildboar/asn1";
 import * as $ from "@wildboar/asn1/functional";
-import { SampleData, _decode_SampleData, _encode_SampleData } from "../TSM/SampleData.ta.mjs";
+import { type SampleData, _decode_SampleData, _encode_SampleData } from "../TSM/SampleData.ta.mjs";
 
 import { SignedData, _decode_SignedData, _encode_SignedData } from "../X9-84-CMS/SignedData.ta.mjs";
 
-import { ACBioContentInformation, _decode_ACBioContentInformation, _encode_ACBioContentInformation } from "../AuthenticationContextForBiometrics/ACBioContentInformation.ta.mjs";
+import { type ACBioContentInformation, _decode_ACBioContentInformation, _encode_ACBioContentInformation } from "../AuthenticationContextForBiometrics/ACBioContentInformation.ta.mjs";
 
 
 
@@ -42,39 +42,47 @@ import { ACBioContentInformation, _decode_ACBioContentInformation, _encode_ACBio
  */
 export
 class BDforSCObySModel {
+    /**
+     * @summary `sampleData`.
+     * @description
+     *
+     * Captured sample as BioAPI BIR (includes BSP/device info).
+     * [ISO/IEC 19784-1]; X.1084 §11.3–§11.4.
+     *
+     * @public
+     * @readonly
+     */
+    public readonly sampleData: SampleData;
+    /**
+     * @summary `digitalSignatureByClient`.
+     * @description
+     *
+     * CMS `SignedData` over the client process. X.1084 §11.9.
+     *
+     * @public
+     * @readonly
+     */
+    public readonly digitalSignatureByClient: SignedData;
+    /**
+     * @summary `aCforBioOnClient`.
+     * @description
+     *
+     * Optional ISO/IEC 24761 ACBio for the client process. X.1084 §11.1.
+     *
+     * @public
+     * @readonly
+     */
+    public readonly aCforBioOnClient?: OPTIONAL<ACBioContentInformation>;
+
     constructor (
-        /**
-         * @summary `sampleData`.
-         * @description
-         *
-         * Captured sample as BioAPI BIR (includes BSP/device info).
-         * [ISO/IEC 19784-1]; X.1084 §11.3–§11.4.
-         *
-         * @public
-         * @readonly
-         */
-        readonly sampleData: SampleData,
-        /**
-         * @summary `digitalSignatureByClient`.
-         * @description
-         *
-         * CMS `SignedData` over the client process. X.1084 §11.9.
-         *
-         * @public
-         * @readonly
-         */
-        readonly digitalSignatureByClient: SignedData,
-        /**
-         * @summary `aCforBioOnClient`.
-         * @description
-         *
-         * Optional ISO/IEC 24761 ACBio for the client process. X.1084 §11.1.
-         *
-         * @public
-         * @readonly
-         */
-        readonly aCforBioOnClient?: OPTIONAL<ACBioContentInformation>
-    ) {}
+        sampleData: SampleData,
+        digitalSignatureByClient: SignedData,
+        aCforBioOnClient?: OPTIONAL<ACBioContentInformation>
+    ) {
+        this.sampleData = sampleData;
+        this.digitalSignatureByClient = digitalSignatureByClient;
+        this.aCforBioOnClient = aCforBioOnClient;
+    }
 
     /**
      * @summary Restructures an object into a BDforSCObySModel

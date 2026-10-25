@@ -1,23 +1,23 @@
 /* eslint-disable */
 import {
-    ASN1Element as _Element,
+    type ASN1Element as _Element,
     ASN1TagClass as _TagClass,
-    OPTIONAL,
+    type OPTIONAL,
 } from "@wildboar/asn1";
 import * as $ from "@wildboar/asn1/functional";
 import {
-    HashAlgorithm,
+    type HashAlgorithm,
     _decode_HashAlgorithm,
     _encode_HashAlgorithm,
 } from "../PKIX1-PSS-OAEP-Algorithms-2009/HashAlgorithm.ta.mjs";
 import {
-    MaskGenAlgorithm,
+    type MaskGenAlgorithm,
     _decode_MaskGenAlgorithm,
     _encode_MaskGenAlgorithm,
 } from "../PKIX1-PSS-OAEP-Algorithms-2009/MaskGenAlgorithm.ta.mjs";
 import { mgf1SHA1 } from "../PKIX1-PSS-OAEP-Algorithms-2009/mgf1SHA1.va.mjs";
 import {
-    PSourceAlgorithm,
+    type PSourceAlgorithm,
     _decode_PSourceAlgorithm,
     _encode_PSourceAlgorithm,
 } from "../PKIX1-PSS-OAEP-Algorithms-2009/PSourceAlgorithm.ta.mjs";
@@ -44,26 +44,34 @@ import { sha1Identifier } from "../PKIX1-PSS-OAEP-Algorithms-2009/sha1Identifier
  *
  */
 export class RSAES_OAEP_params {
+    /**
+     * @summary `hashFunc`.
+     * @public
+     * @readonly
+     */
+    public readonly hashFunc?: OPTIONAL<HashAlgorithm>;
+    /**
+     * @summary `maskGenFunc`.
+     * @public
+     * @readonly
+     */
+    public readonly maskGenFunc?: OPTIONAL<MaskGenAlgorithm>;
+    /**
+     * @summary `pSourceFunc`.
+     * @public
+     * @readonly
+     */
+    public readonly pSourceFunc?: OPTIONAL<PSourceAlgorithm>;
+
     constructor(
-        /**
-         * @summary `hashFunc`.
-         * @public
-         * @readonly
-         */
-        readonly hashFunc?: OPTIONAL<HashAlgorithm>,
-        /**
-         * @summary `maskGenFunc`.
-         * @public
-         * @readonly
-         */
-        readonly maskGenFunc?: OPTIONAL<MaskGenAlgorithm>,
-        /**
-         * @summary `pSourceFunc`.
-         * @public
-         * @readonly
-         */
-        readonly pSourceFunc?: OPTIONAL<PSourceAlgorithm>
-    ) {}
+        hashFunc?: OPTIONAL<HashAlgorithm>,
+        maskGenFunc?: OPTIONAL<MaskGenAlgorithm>,
+        pSourceFunc?: OPTIONAL<PSourceAlgorithm>
+    ) {
+        this.hashFunc = hashFunc;
+        this.maskGenFunc = maskGenFunc;
+        this.pSourceFunc = pSourceFunc;
+    }
 
     /**
      * @summary Restructures an object into a RSAES_OAEP_params

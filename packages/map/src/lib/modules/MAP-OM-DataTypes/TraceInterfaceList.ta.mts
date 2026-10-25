@@ -1,20 +1,20 @@
 /* eslint-disable */
 import {
-    OPTIONAL,
-    ASN1Element as _Element,
+    type OPTIONAL,
+    type ASN1Element as _Element,
     ASN1TagClass as _TagClass
 } from "@wildboar/asn1";
 import * as $ from "@wildboar/asn1/functional";
-import { BMSC_InterfaceList, _decode_BMSC_InterfaceList, _encode_BMSC_InterfaceList } from "../MAP-OM-DataTypes/BMSC-InterfaceList.ta.mjs";
-import { ENB_InterfaceList, _decode_ENB_InterfaceList, _encode_ENB_InterfaceList } from "../MAP-OM-DataTypes/ENB-InterfaceList.ta.mjs";
-import { GGSN_InterfaceList, _decode_GGSN_InterfaceList, _encode_GGSN_InterfaceList } from "../MAP-OM-DataTypes/GGSN-InterfaceList.ta.mjs";
-import { MGW_InterfaceList, _decode_MGW_InterfaceList, _encode_MGW_InterfaceList } from "../MAP-OM-DataTypes/MGW-InterfaceList.ta.mjs";
-import { MME_InterfaceList, _decode_MME_InterfaceList, _encode_MME_InterfaceList } from "../MAP-OM-DataTypes/MME-InterfaceList.ta.mjs";
-import { MSC_S_InterfaceList, _decode_MSC_S_InterfaceList, _encode_MSC_S_InterfaceList } from "../MAP-OM-DataTypes/MSC-S-InterfaceList.ta.mjs";
-import { PGW_InterfaceList, _decode_PGW_InterfaceList, _encode_PGW_InterfaceList } from "../MAP-OM-DataTypes/PGW-InterfaceList.ta.mjs";
-import { RNC_InterfaceList, _decode_RNC_InterfaceList, _encode_RNC_InterfaceList } from "../MAP-OM-DataTypes/RNC-InterfaceList.ta.mjs";
-import { SGSN_InterfaceList, _decode_SGSN_InterfaceList, _encode_SGSN_InterfaceList } from "../MAP-OM-DataTypes/SGSN-InterfaceList.ta.mjs";
-import { SGW_InterfaceList, _decode_SGW_InterfaceList, _encode_SGW_InterfaceList } from "../MAP-OM-DataTypes/SGW-InterfaceList.ta.mjs";
+import { type BMSC_InterfaceList, _decode_BMSC_InterfaceList, _encode_BMSC_InterfaceList } from "../MAP-OM-DataTypes/BMSC-InterfaceList.ta.mjs";
+import { type ENB_InterfaceList, _decode_ENB_InterfaceList, _encode_ENB_InterfaceList } from "../MAP-OM-DataTypes/ENB-InterfaceList.ta.mjs";
+import { type GGSN_InterfaceList, _decode_GGSN_InterfaceList, _encode_GGSN_InterfaceList } from "../MAP-OM-DataTypes/GGSN-InterfaceList.ta.mjs";
+import { type MGW_InterfaceList, _decode_MGW_InterfaceList, _encode_MGW_InterfaceList } from "../MAP-OM-DataTypes/MGW-InterfaceList.ta.mjs";
+import { type MME_InterfaceList, _decode_MME_InterfaceList, _encode_MME_InterfaceList } from "../MAP-OM-DataTypes/MME-InterfaceList.ta.mjs";
+import { type MSC_S_InterfaceList, _decode_MSC_S_InterfaceList, _encode_MSC_S_InterfaceList } from "../MAP-OM-DataTypes/MSC-S-InterfaceList.ta.mjs";
+import { type PGW_InterfaceList, _decode_PGW_InterfaceList, _encode_PGW_InterfaceList } from "../MAP-OM-DataTypes/PGW-InterfaceList.ta.mjs";
+import { type RNC_InterfaceList, _decode_RNC_InterfaceList, _encode_RNC_InterfaceList } from "../MAP-OM-DataTypes/RNC-InterfaceList.ta.mjs";
+import { type SGSN_InterfaceList, _decode_SGSN_InterfaceList, _encode_SGSN_InterfaceList } from "../MAP-OM-DataTypes/SGSN-InterfaceList.ta.mjs";
+import { type SGW_InterfaceList, _decode_SGW_InterfaceList, _encode_SGW_InterfaceList } from "../MAP-OM-DataTypes/SGW-InterfaceList.ta.mjs";
 
 
 /**
@@ -28,16 +28,16 @@ import { SGW_InterfaceList, _decode_SGW_InterfaceList, _encode_SGW_InterfaceList
  * 
  * ```asn1
  * TraceInterfaceList ::= SEQUENCE {
- *     msc-s-List    [0] MSC-S-InterfaceList    OPTIONAL,
- *     mgw-List    [1] MGW-InterfaceList    OPTIONAL,
- *     sgsn-List    [2] SGSN-InterfaceList    OPTIONAL,
- *     ggsn-List    [3] GGSN-InterfaceList    OPTIONAL,
- *     rnc-List    [4] RNC-InterfaceList    OPTIONAL,
- *     bmsc-List    [5] BMSC-InterfaceList    OPTIONAL,
+ *     msc-s-List    [0] MSC-S-InterfaceList    type OPTIONAL,
+ *     mgw-List    [1] MGW-InterfaceList    type OPTIONAL,
+ *     sgsn-List    [2] SGSN-InterfaceList    type OPTIONAL,
+ *     ggsn-List    [3] GGSN-InterfaceList    type OPTIONAL,
+ *     rnc-List    [4] RNC-InterfaceList    type OPTIONAL,
+ *     bmsc-List    [5] BMSC-InterfaceList    type OPTIONAL,
  *     ...,
- *     mme-List    [6] MME-InterfaceList    OPTIONAL,
- *     sgw-List    [7] SGW-InterfaceList    OPTIONAL,
- *     pgw-List    [8] PGW-InterfaceList    OPTIONAL,
+ *     mme-List    [6] MME-InterfaceList    type OPTIONAL,
+ *     sgw-List    [7] SGW-InterfaceList    type OPTIONAL,
+ *     pgw-List    [8] PGW-InterfaceList    type OPTIONAL,
  *     eNB-List    [9] ENB-InterfaceList    OPTIONAL}
  * ```
  * 
@@ -45,114 +45,138 @@ import { SGW_InterfaceList, _decode_SGW_InterfaceList, _encode_SGW_InterfaceList
  */
 export
 class TraceInterfaceList {
+    /**
+     * @summary `msc_s_List`.
+     * @description
+     *
+     * Interface list for this NE (clause 17.7.2).
+     *
+     * @public
+     * @readonly
+     */
+    public readonly msc_s_List?: OPTIONAL<MSC_S_InterfaceList>;
+    /**
+     * @summary `mgw_List`.
+     * @description
+     *
+     * Interface list for this NE (clause 17.7.2).
+     *
+     * @public
+     * @readonly
+     */
+    public readonly mgw_List?: OPTIONAL<MGW_InterfaceList>;
+    /**
+     * @summary `sgsn_List`.
+     * @description
+     *
+     * Interface list for this NE (clause 17.7.2).
+     *
+     * @public
+     * @readonly
+     */
+    public readonly sgsn_List?: OPTIONAL<SGSN_InterfaceList>;
+    /**
+     * @summary `ggsn_List`.
+     * @description
+     *
+     * Interface list for this NE (clause 17.7.2).
+     *
+     * @public
+     * @readonly
+     */
+    public readonly ggsn_List?: OPTIONAL<GGSN_InterfaceList>;
+    /**
+     * @summary `rnc_List`.
+     * @description
+     *
+     * Interface list for this NE (clause 17.7.2).
+     *
+     * @public
+     * @readonly
+     */
+    public readonly rnc_List?: OPTIONAL<RNC_InterfaceList>;
+    /**
+     * @summary `bmsc_List`.
+     * @description
+     *
+     * Interface list for this NE (clause 17.7.2).
+     *
+     * @public
+     * @readonly
+     */
+    public readonly bmsc_List?: OPTIONAL<BMSC_InterfaceList>;
+    /**
+     * @summary `mme_List`.
+     * @description
+     *
+     * Interface list for this NE (clause 17.7.2).
+     *
+     * @public
+     * @readonly
+     */
+    public readonly mme_List?: OPTIONAL<MME_InterfaceList>;
+    /**
+     * @summary `sgw_List`.
+     * @description
+     *
+     * Interface list for this NE (clause 17.7.2).
+     *
+     * @public
+     * @readonly
+     */
+    public readonly sgw_List?: OPTIONAL<SGW_InterfaceList>;
+    /**
+     * @summary `pgw_List`.
+     * @description
+     *
+     * Interface list for this NE (clause 17.7.2).
+     *
+     * @public
+     * @readonly
+     */
+    public readonly pgw_List?: OPTIONAL<PGW_InterfaceList>;
+    /**
+     * @summary `eNB_List`.
+     * @description
+     *
+     * Interface list for this NE (clause 17.7.2).
+     *
+     * @public
+     * @readonly
+     */
+    public readonly eNB_List?: OPTIONAL<ENB_InterfaceList>;
+    /**
+     * @summary Extensions that are not recognized.
+     * @public
+     * @readonly
+     */
+    public readonly _unrecognizedExtensionsList: _Element[];
+
     constructor (
-        /**
-         * @summary `msc_s_List`.
-         * @description
-         *
-         * Interface list for this NE (clause 17.7.2).
-         *
-         * @public
-         * @readonly
-         */
-        readonly msc_s_List?: OPTIONAL<MSC_S_InterfaceList>,
-        /**
-         * @summary `mgw_List`.
-         * @description
-         *
-         * Interface list for this NE (clause 17.7.2).
-         *
-         * @public
-         * @readonly
-         */
-        readonly mgw_List?: OPTIONAL<MGW_InterfaceList>,
-        /**
-         * @summary `sgsn_List`.
-         * @description
-         *
-         * Interface list for this NE (clause 17.7.2).
-         *
-         * @public
-         * @readonly
-         */
-        readonly sgsn_List?: OPTIONAL<SGSN_InterfaceList>,
-        /**
-         * @summary `ggsn_List`.
-         * @description
-         *
-         * Interface list for this NE (clause 17.7.2).
-         *
-         * @public
-         * @readonly
-         */
-        readonly ggsn_List?: OPTIONAL<GGSN_InterfaceList>,
-        /**
-         * @summary `rnc_List`.
-         * @description
-         *
-         * Interface list for this NE (clause 17.7.2).
-         *
-         * @public
-         * @readonly
-         */
-        readonly rnc_List?: OPTIONAL<RNC_InterfaceList>,
-        /**
-         * @summary `bmsc_List`.
-         * @description
-         *
-         * Interface list for this NE (clause 17.7.2).
-         *
-         * @public
-         * @readonly
-         */
-        readonly bmsc_List?: OPTIONAL<BMSC_InterfaceList>,
-        /**
-         * @summary `mme_List`.
-         * @description
-         *
-         * Interface list for this NE (clause 17.7.2).
-         *
-         * @public
-         * @readonly
-         */
-        readonly mme_List?: OPTIONAL<MME_InterfaceList>,
-        /**
-         * @summary `sgw_List`.
-         * @description
-         *
-         * Interface list for this NE (clause 17.7.2).
-         *
-         * @public
-         * @readonly
-         */
-        readonly sgw_List?: OPTIONAL<SGW_InterfaceList>,
-        /**
-         * @summary `pgw_List`.
-         * @description
-         *
-         * Interface list for this NE (clause 17.7.2).
-         *
-         * @public
-         * @readonly
-         */
-        readonly pgw_List?: OPTIONAL<PGW_InterfaceList>,
-        /**
-         * @summary `eNB_List`.
-         * @description
-         *
-         * Interface list for this NE (clause 17.7.2).
-         *
-         * @public
-         * @readonly
-         */
-        readonly eNB_List?: OPTIONAL<ENB_InterfaceList>,
-        /**
-         * @summary Extensions that are not recognized.
-         * @public
-         * @readonly
-         */
-        readonly _unrecognizedExtensionsList: _Element[] = []
-    ) {}
+        msc_s_List?: OPTIONAL<MSC_S_InterfaceList>,
+        mgw_List?: OPTIONAL<MGW_InterfaceList>,
+        sgsn_List?: OPTIONAL<SGSN_InterfaceList>,
+        ggsn_List?: OPTIONAL<GGSN_InterfaceList>,
+        rnc_List?: OPTIONAL<RNC_InterfaceList>,
+        bmsc_List?: OPTIONAL<BMSC_InterfaceList>,
+        mme_List?: OPTIONAL<MME_InterfaceList>,
+        sgw_List?: OPTIONAL<SGW_InterfaceList>,
+        pgw_List?: OPTIONAL<PGW_InterfaceList>,
+        eNB_List?: OPTIONAL<ENB_InterfaceList>,
+        _unrecognizedExtensionsList: _Element[] = []
+    ) {
+        this.msc_s_List = msc_s_List;
+        this.mgw_List = mgw_List;
+        this.sgsn_List = sgsn_List;
+        this.ggsn_List = ggsn_List;
+        this.rnc_List = rnc_List;
+        this.bmsc_List = bmsc_List;
+        this.mme_List = mme_List;
+        this.sgw_List = sgw_List;
+        this.pgw_List = pgw_List;
+        this.eNB_List = eNB_List;
+        this._unrecognizedExtensionsList = _unrecognizedExtensionsList;
+    }
 
     /**
      * @summary Restructures an object into a TraceInterfaceList

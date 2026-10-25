@@ -1,5 +1,5 @@
 /* eslint-disable */
-import { ASN1Element as _Element, BIT_STRING } from "@wildboar/asn1";
+import { ASN1Element as _Element, type BIT_STRING } from "@wildboar/asn1";
 import * as $ from "@wildboar/asn1/functional";
 
 /**
@@ -151,10 +151,10 @@ export const ReasonFlags_weakAlgorithmOrKey: number = 9; /* LONG_NAMED_BIT */
 export const weakAlgorithmOrKey: number = ReasonFlags_weakAlgorithmOrKey; /* SHORT_NAMED_BIT */
 
 
-export const _decode_ReasonFlags = $._decodeBitString;
+export const _decode_ReasonFlags: $.ASN1Decoder<BIT_STRING> = $._decodeBitString;
 
 
-export const _encode_ReasonFlags = $._encodeBitString;
+export const _encode_ReasonFlags: $.ASN1Encoder<BIT_STRING> = $._encodeBitString;
 
 
 /* eslint-enable */

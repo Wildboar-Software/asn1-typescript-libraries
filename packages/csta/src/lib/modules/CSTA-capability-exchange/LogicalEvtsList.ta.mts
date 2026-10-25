@@ -2,41 +2,41 @@
 
 import * as $ from "@wildboar/asn1/functional";
 import {
-    OPTIONAL,
-    SEQUENCE,
-    SET,
-    ASN1Element as _Element,
+    type OPTIONAL,
+    type SEQUENCE,
+    type SET,
+    type ASN1Element as _Element,
     ASN1TagClass as _TagClass
 } from "@wildboar/asn1";
-import { AgentBusy, _decode_AgentBusy, _encode_AgentBusy } from "../CSTA-capability-exchange/AgentBusy.ta.mjs";
+import { type AgentBusy, _decode_AgentBusy, _encode_AgentBusy } from "../CSTA-capability-exchange/AgentBusy.ta.mjs";
 
-import { AgentLoggedOff, _decode_AgentLoggedOff, _encode_AgentLoggedOff } from "../CSTA-capability-exchange/AgentLoggedOff.ta.mjs";
+import { type AgentLoggedOff, _decode_AgentLoggedOff, _encode_AgentLoggedOff } from "../CSTA-capability-exchange/AgentLoggedOff.ta.mjs";
 
-import { AgentLoggedOn, _decode_AgentLoggedOn, _encode_AgentLoggedOn } from "../CSTA-capability-exchange/AgentLoggedOn.ta.mjs";
+import { type AgentLoggedOn, _decode_AgentLoggedOn, _encode_AgentLoggedOn } from "../CSTA-capability-exchange/AgentLoggedOn.ta.mjs";
 
-import { AgentNotReady, _decode_AgentNotReady, _encode_AgentNotReady } from "../CSTA-capability-exchange/AgentNotReady.ta.mjs";
+import { type AgentNotReady, _decode_AgentNotReady, _encode_AgentNotReady } from "../CSTA-capability-exchange/AgentNotReady.ta.mjs";
 
-import { AgentReady, _decode_AgentReady, _encode_AgentReady } from "../CSTA-capability-exchange/AgentReady.ta.mjs";
+import { type AgentReady, _decode_AgentReady, _encode_AgentReady } from "../CSTA-capability-exchange/AgentReady.ta.mjs";
 
-import { AgentWorkingAfterCall, _decode_AgentWorkingAfterCall, _encode_AgentWorkingAfterCall } from "../CSTA-capability-exchange/AgentWorkingAfterCall.ta.mjs";
+import { type AgentWorkingAfterCall, _decode_AgentWorkingAfterCall, _encode_AgentWorkingAfterCall } from "../CSTA-capability-exchange/AgentWorkingAfterCall.ta.mjs";
 
-import { AutoAnswer, _decode_AutoAnswer, _encode_AutoAnswer } from "../CSTA-capability-exchange/AutoAnswer.ta.mjs";
+import { type AutoAnswer, _decode_AutoAnswer, _encode_AutoAnswer } from "../CSTA-capability-exchange/AutoAnswer.ta.mjs";
 
-import { AutoWorkMode, _decode_AutoWorkMode, _encode_AutoWorkMode } from "../CSTA-capability-exchange/AutoWorkMode.ta.mjs";
+import { type AutoWorkMode, _decode_AutoWorkMode, _encode_AutoWorkMode } from "../CSTA-capability-exchange/AutoWorkMode.ta.mjs";
 
-import { CallBackEvent, _decode_CallBackEvent, _encode_CallBackEvent } from "../CSTA-capability-exchange/CallBackEvent.ta.mjs";
+import { type CallBackEvent, _decode_CallBackEvent, _encode_CallBackEvent } from "../CSTA-capability-exchange/CallBackEvent.ta.mjs";
 
-import { CallBackMessageEvent, _decode_CallBackMessageEvent, _encode_CallBackMessageEvent } from "../CSTA-capability-exchange/CallBackMessageEvent.ta.mjs";
+import { type CallBackMessageEvent, _decode_CallBackMessageEvent, _encode_CallBackMessageEvent } from "../CSTA-capability-exchange/CallBackMessageEvent.ta.mjs";
 
-import { CallerIDStatus, _decode_CallerIDStatus, _encode_CallerIDStatus } from "../CSTA-capability-exchange/CallerIDStatus.ta.mjs";
+import { type CallerIDStatus, _decode_CallerIDStatus, _encode_CallerIDStatus } from "../CSTA-capability-exchange/CallerIDStatus.ta.mjs";
 
-import { DoNotDisturb, _decode_DoNotDisturb, _encode_DoNotDisturb } from "../CSTA-capability-exchange/DoNotDisturb.ta.mjs";
+import { type DoNotDisturb, _decode_DoNotDisturb, _encode_DoNotDisturb } from "../CSTA-capability-exchange/DoNotDisturb.ta.mjs";
 
-import { Forwarding, _decode_Forwarding, _encode_Forwarding } from "../CSTA-capability-exchange/Forwarding.ta.mjs";
+import { type Forwarding, _decode_Forwarding, _encode_Forwarding } from "../CSTA-capability-exchange/Forwarding.ta.mjs";
 
-import { PresenceStateEvent, _decode_PresenceStateEvent, _encode_PresenceStateEvent } from "../CSTA-capability-exchange/PresenceStateEvent.ta.mjs";
+import { type PresenceStateEvent, _decode_PresenceStateEvent, _encode_PresenceStateEvent } from "../CSTA-capability-exchange/PresenceStateEvent.ta.mjs";
 
-import { RouteingMode, _decode_RouteingMode, _encode_RouteingMode } from "../CSTA-capability-exchange/RouteingMode.ta.mjs";
+import { type RouteingMode, _decode_RouteingMode, _encode_RouteingMode } from "../CSTA-capability-exchange/RouteingMode.ta.mjs";
 
 
 
@@ -54,20 +54,20 @@ import { RouteingMode, _decode_RouteingMode, _encode_RouteingMode } from "../CST
  * 
  * ```asn1
  * LogicalEvtsList ::= SEQUENCE
- * {     agentBusy             [ 0] IMPLICIT     AgentBusy             OPTIONAL,
- *     agentLoggedOff             [ 1] IMPLICIT     AgentLoggedOff             OPTIONAL,
- *     agentLoggedOn             [ 2] IMPLICIT     AgentLoggedOn             OPTIONAL,
- *     agentNotReady             [ 3] IMPLICIT     AgentNotReady             OPTIONAL,
- *     agentReady             [ 4] IMPLICIT     AgentReady             OPTIONAL,
- *     agentWorkingAfterCall         [ 5] IMPLICIT     AgentWorkingAfterCall         OPTIONAL,
- *     autoAnswer             [ 6] IMPLICIT     AutoAnswer             OPTIONAL,
- *     autoWorkMode             [ 7] IMPLICIT     AutoWorkMode             OPTIONAL,
- *     callBack             [ 8] IMPLICIT     CallBackEvent             OPTIONAL,
- *     callBackMessage         [ 9] IMPLICIT     CallBackMessageEvent         OPTIONAL,
- *     callerIDStatus             [10] IMPLICIT     CallerIDStatus             OPTIONAL,
- *     doNotDisturb             [11] IMPLICIT     DoNotDisturb             OPTIONAL,
- *     forwarding             [12] IMPLICIT     Forwarding             OPTIONAL,
- *     presenceState            [14] IMPLICIT     PresenceStateEvent        OPTIONAL,
+ * {     agentBusy             [ 0] IMPLICIT     AgentBusy             type OPTIONAL,
+ *     agentLoggedOff             [ 1] IMPLICIT     AgentLoggedOff             type OPTIONAL,
+ *     agentLoggedOn             [ 2] IMPLICIT     AgentLoggedOn             type OPTIONAL,
+ *     agentNotReady             [ 3] IMPLICIT     AgentNotReady             type OPTIONAL,
+ *     agentReady             [ 4] IMPLICIT     AgentReady             type OPTIONAL,
+ *     agentWorkingAfterCall         [ 5] IMPLICIT     AgentWorkingAfterCall         type OPTIONAL,
+ *     autoAnswer             [ 6] IMPLICIT     AutoAnswer             type OPTIONAL,
+ *     autoWorkMode             [ 7] IMPLICIT     AutoWorkMode             type OPTIONAL,
+ *     callBack             [ 8] IMPLICIT     CallBackEvent             type OPTIONAL,
+ *     callBackMessage         [ 9] IMPLICIT     CallBackMessageEvent         type OPTIONAL,
+ *     callerIDStatus             [10] IMPLICIT     CallerIDStatus             type OPTIONAL,
+ *     doNotDisturb             [11] IMPLICIT     DoNotDisturb             type OPTIONAL,
+ *     forwarding             [12] IMPLICIT     Forwarding             type OPTIONAL,
+ *     presenceState            [14] IMPLICIT     PresenceStateEvent        type OPTIONAL,
  *     routeingMode             [13] IMPLICIT     RouteingMode             OPTIONAL }
  * ```
  * 
@@ -75,143 +75,175 @@ import { RouteingMode, _decode_RouteingMode, _encode_RouteingMode } from "../CST
  */
 export
 class LogicalEvtsList {
+    /**
+     * @summary `agentBusy`.
+     * @public
+     * @readonly
+     * @description
+     * Capability bitmap for this event; omit if the SF does not support it
+     * (ECMA-269 Annex C).
+     */
+    public readonly agentBusy?: OPTIONAL<AgentBusy>;
+    /**
+     * @summary `agentLoggedOff`.
+     * @public
+     * @readonly
+     * @description
+     * Capability bitmap for this event; omit if the SF does not support it
+     * (ECMA-269 Annex C).
+     */
+    public readonly agentLoggedOff?: OPTIONAL<AgentLoggedOff>;
+    /**
+     * @summary `agentLoggedOn`.
+     * @public
+     * @readonly
+     * @description
+     * Capability bitmap for this event; omit if the SF does not support it
+     * (ECMA-269 Annex C).
+     */
+    public readonly agentLoggedOn?: OPTIONAL<AgentLoggedOn>;
+    /**
+     * @summary `agentNotReady`.
+     * @public
+     * @readonly
+     * @description
+     * Capability bitmap for this event; omit if the SF does not support it
+     * (ECMA-269 Annex C).
+     */
+    public readonly agentNotReady?: OPTIONAL<AgentNotReady>;
+    /**
+     * @summary `agentReady`.
+     * @public
+     * @readonly
+     * @description
+     * Capability bitmap for this event; omit if the SF does not support it
+     * (ECMA-269 Annex C).
+     */
+    public readonly agentReady?: OPTIONAL<AgentReady>;
+    /**
+     * @summary `agentWorkingAfterCall`.
+     * @public
+     * @readonly
+     * @description
+     * Capability bitmap for this event; omit if the SF does not support it
+     * (ECMA-269 Annex C).
+     */
+    public readonly agentWorkingAfterCall?: OPTIONAL<AgentWorkingAfterCall>;
+    /**
+     * @summary `autoAnswer`.
+     * @public
+     * @readonly
+     * @description
+     * Capability bitmap for this event; omit if the SF does not support it
+     * (ECMA-269 Annex C).
+     */
+    public readonly autoAnswer?: OPTIONAL<AutoAnswer>;
+    /**
+     * @summary `autoWorkMode`.
+     * @public
+     * @readonly
+     * @description
+     * Capability bitmap for this event; omit if the SF does not support it
+     * (ECMA-269 Annex C).
+     */
+    public readonly autoWorkMode?: OPTIONAL<AutoWorkMode>;
+    /**
+     * @summary `callBack`.
+     * @public
+     * @readonly
+     * @description
+     * Capability bitmap for this event; omit if the SF does not support it
+     * (ECMA-269 Annex C).
+     */
+    public readonly callBack?: OPTIONAL<CallBackEvent>;
+    /**
+     * @summary `callBackMessage`.
+     * @public
+     * @readonly
+     * @description
+     * Capability bitmap for this event; omit if the SF does not support it
+     * (ECMA-269 Annex C).
+     */
+    public readonly callBackMessage?: OPTIONAL<CallBackMessageEvent>;
+    /**
+     * @summary `callerIDStatus`.
+     * @public
+     * @readonly
+     * @description
+     * Capability bitmap for this event; omit if the SF does not support it
+     * (ECMA-269 Annex C).
+     */
+    public readonly callerIDStatus?: OPTIONAL<CallerIDStatus>;
+    /**
+     * @summary `doNotDisturb`.
+     * @public
+     * @readonly
+     * @description
+     * Capability bitmap for this event; omit if the SF does not support it
+     * (ECMA-269 Annex C).
+     */
+    public readonly doNotDisturb?: OPTIONAL<DoNotDisturb>;
+    /**
+     * @summary `forwarding`.
+     * @public
+     * @readonly
+     * @description
+     * Capability bitmap for this event; omit if the SF does not support it
+     * (ECMA-269 Annex C).
+     */
+    public readonly forwarding?: OPTIONAL<Forwarding>;
+    /**
+     * @summary `presenceState`.
+     * @public
+     * @readonly
+     * @description
+     * Capability bitmap for this event; omit if the SF does not support it
+     * (ECMA-269 Annex C).
+     */
+    public readonly presenceState?: OPTIONAL<PresenceStateEvent>;
+    /**
+     * @summary `routeingMode`.
+     * @public
+     * @readonly
+     * @description
+     * Capability bitmap for this event; omit if the SF does not support it
+     * (ECMA-269 Annex C).
+     */
+    public readonly routeingMode?: OPTIONAL<RouteingMode>;
+
     constructor (
-        /**
-         * @summary `agentBusy`.
-         * @public
-         * @readonly
-         * @description
-         * Capability bitmap for this event; omit if the SF does not support it
-         * (ECMA-269 Annex C).
-         */
-        readonly agentBusy?: OPTIONAL<AgentBusy>,
-        /**
-         * @summary `agentLoggedOff`.
-         * @public
-         * @readonly
-         * @description
-         * Capability bitmap for this event; omit if the SF does not support it
-         * (ECMA-269 Annex C).
-         */
-        readonly agentLoggedOff?: OPTIONAL<AgentLoggedOff>,
-        /**
-         * @summary `agentLoggedOn`.
-         * @public
-         * @readonly
-         * @description
-         * Capability bitmap for this event; omit if the SF does not support it
-         * (ECMA-269 Annex C).
-         */
-        readonly agentLoggedOn?: OPTIONAL<AgentLoggedOn>,
-        /**
-         * @summary `agentNotReady`.
-         * @public
-         * @readonly
-         * @description
-         * Capability bitmap for this event; omit if the SF does not support it
-         * (ECMA-269 Annex C).
-         */
-        readonly agentNotReady?: OPTIONAL<AgentNotReady>,
-        /**
-         * @summary `agentReady`.
-         * @public
-         * @readonly
-         * @description
-         * Capability bitmap for this event; omit if the SF does not support it
-         * (ECMA-269 Annex C).
-         */
-        readonly agentReady?: OPTIONAL<AgentReady>,
-        /**
-         * @summary `agentWorkingAfterCall`.
-         * @public
-         * @readonly
-         * @description
-         * Capability bitmap for this event; omit if the SF does not support it
-         * (ECMA-269 Annex C).
-         */
-        readonly agentWorkingAfterCall?: OPTIONAL<AgentWorkingAfterCall>,
-        /**
-         * @summary `autoAnswer`.
-         * @public
-         * @readonly
-         * @description
-         * Capability bitmap for this event; omit if the SF does not support it
-         * (ECMA-269 Annex C).
-         */
-        readonly autoAnswer?: OPTIONAL<AutoAnswer>,
-        /**
-         * @summary `autoWorkMode`.
-         * @public
-         * @readonly
-         * @description
-         * Capability bitmap for this event; omit if the SF does not support it
-         * (ECMA-269 Annex C).
-         */
-        readonly autoWorkMode?: OPTIONAL<AutoWorkMode>,
-        /**
-         * @summary `callBack`.
-         * @public
-         * @readonly
-         * @description
-         * Capability bitmap for this event; omit if the SF does not support it
-         * (ECMA-269 Annex C).
-         */
-        readonly callBack?: OPTIONAL<CallBackEvent>,
-        /**
-         * @summary `callBackMessage`.
-         * @public
-         * @readonly
-         * @description
-         * Capability bitmap for this event; omit if the SF does not support it
-         * (ECMA-269 Annex C).
-         */
-        readonly callBackMessage?: OPTIONAL<CallBackMessageEvent>,
-        /**
-         * @summary `callerIDStatus`.
-         * @public
-         * @readonly
-         * @description
-         * Capability bitmap for this event; omit if the SF does not support it
-         * (ECMA-269 Annex C).
-         */
-        readonly callerIDStatus?: OPTIONAL<CallerIDStatus>,
-        /**
-         * @summary `doNotDisturb`.
-         * @public
-         * @readonly
-         * @description
-         * Capability bitmap for this event; omit if the SF does not support it
-         * (ECMA-269 Annex C).
-         */
-        readonly doNotDisturb?: OPTIONAL<DoNotDisturb>,
-        /**
-         * @summary `forwarding`.
-         * @public
-         * @readonly
-         * @description
-         * Capability bitmap for this event; omit if the SF does not support it
-         * (ECMA-269 Annex C).
-         */
-        readonly forwarding?: OPTIONAL<Forwarding>,
-        /**
-         * @summary `presenceState`.
-         * @public
-         * @readonly
-         * @description
-         * Capability bitmap for this event; omit if the SF does not support it
-         * (ECMA-269 Annex C).
-         */
-        readonly presenceState?: OPTIONAL<PresenceStateEvent>,
-        /**
-         * @summary `routeingMode`.
-         * @public
-         * @readonly
-         * @description
-         * Capability bitmap for this event; omit if the SF does not support it
-         * (ECMA-269 Annex C).
-         */
-        readonly routeingMode?: OPTIONAL<RouteingMode>
-    ) {}
+        agentBusy?: OPTIONAL<AgentBusy>,
+        agentLoggedOff?: OPTIONAL<AgentLoggedOff>,
+        agentLoggedOn?: OPTIONAL<AgentLoggedOn>,
+        agentNotReady?: OPTIONAL<AgentNotReady>,
+        agentReady?: OPTIONAL<AgentReady>,
+        agentWorkingAfterCall?: OPTIONAL<AgentWorkingAfterCall>,
+        autoAnswer?: OPTIONAL<AutoAnswer>,
+        autoWorkMode?: OPTIONAL<AutoWorkMode>,
+        callBack?: OPTIONAL<CallBackEvent>,
+        callBackMessage?: OPTIONAL<CallBackMessageEvent>,
+        callerIDStatus?: OPTIONAL<CallerIDStatus>,
+        doNotDisturb?: OPTIONAL<DoNotDisturb>,
+        forwarding?: OPTIONAL<Forwarding>,
+        presenceState?: OPTIONAL<PresenceStateEvent>,
+        routeingMode?: OPTIONAL<RouteingMode>
+    ) {
+        this.agentBusy = agentBusy;
+        this.agentLoggedOff = agentLoggedOff;
+        this.agentLoggedOn = agentLoggedOn;
+        this.agentNotReady = agentNotReady;
+        this.agentReady = agentReady;
+        this.agentWorkingAfterCall = agentWorkingAfterCall;
+        this.autoAnswer = autoAnswer;
+        this.autoWorkMode = autoWorkMode;
+        this.callBack = callBack;
+        this.callBackMessage = callBackMessage;
+        this.callerIDStatus = callerIDStatus;
+        this.doNotDisturb = doNotDisturb;
+        this.forwarding = forwarding;
+        this.presenceState = presenceState;
+        this.routeingMode = routeingMode;
+    }
 
     /**
      * @summary Restructures an object into a LogicalEvtsList

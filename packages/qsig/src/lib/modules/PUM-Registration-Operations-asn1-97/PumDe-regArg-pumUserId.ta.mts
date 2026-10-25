@@ -3,8 +3,8 @@ import {
     ASN1Element as _Element
 } from "@wildboar/asn1";
 import * as $ from "@wildboar/asn1/functional";
-import { PartyNumber, _decode_PartyNumber, _encode_PartyNumber } from "../Addressing-Data-Elements-asn1-97/PartyNumber.ta.mjs";
-import { AlternativeId, _decode_AlternativeId, _encode_AlternativeId } from "../PUM-Registration-Operations-asn1-97/AlternativeId.ta.mjs";
+import { type PartyNumber, _decode_PartyNumber, _encode_PartyNumber } from "../Addressing-Data-Elements-asn1-97/PartyNumber.ta.mjs";
+import { type AlternativeId, _decode_AlternativeId, _encode_AlternativeId } from "../PUM-Registration-Operations-asn1-97/AlternativeId.ta.mjs";
 
 /**
  * @summary PumDe_regArg_pumUserId

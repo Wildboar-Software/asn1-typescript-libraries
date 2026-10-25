@@ -2,7 +2,7 @@
 import { ASN1Element as _Element } from "@wildboar/asn1";
 import * as $ from "@wildboar/asn1/functional";
 import {
-    DirectoryString,
+    type DirectoryString,
     _decode_DirectoryString,
     _encode_DirectoryString,
 } from "@wildboar/x500/SelectedAttributeTypes";
@@ -21,26 +21,13 @@ import {
  */
 export type X520CommonName = DirectoryString; // DefinedType
 
-
-let _cached_decoder_for_X520CommonName: $.ASN1Decoder<X520CommonName> | null = null;
-
-
 /**
  * @summary Decodes an ASN.1 element into a(n) X520CommonName
  * @function
  * @param {_Element} el The element being decoded.
  * @returns {X520CommonName} The decoded data structure.
  */
-export function _decode_X520CommonName(el: _Element): X520CommonName {
-    if (!_cached_decoder_for_X520CommonName) {
-        _cached_decoder_for_X520CommonName = _decode_DirectoryString;
-    }
-    return _cached_decoder_for_X520CommonName(el);
-}
-
-
-let _cached_encoder_for_X520CommonName: $.ASN1Encoder<X520CommonName> | null = null;
-
+export const _decode_X520CommonName: $.ASN1Decoder<X520CommonName> = _decode_DirectoryString;
 
 /**
  * @summary Encodes a(n) X520CommonName into an ASN.1 Element.
@@ -49,15 +36,7 @@ let _cached_encoder_for_X520CommonName: $.ASN1Encoder<X520CommonName> | null = n
  * @param elGetter A function that can be used to get new ASN.1 elements.
  * @returns {_Element} The X520CommonName, encoded as an ASN.1 Element.
  */
-export function _encode_X520CommonName(
-    value: X520CommonName,
-    elGetter: $.ASN1Encoder<X520CommonName>
-): _Element {
-    if (!_cached_encoder_for_X520CommonName) {
-        _cached_encoder_for_X520CommonName = _encode_DirectoryString;
-    }
-    return _cached_encoder_for_X520CommonName(value, elGetter);
-}
+export const _encode_X520CommonName: $.ASN1Encoder<X520CommonName> = _encode_DirectoryString;
 
 
 /* eslint-enable */

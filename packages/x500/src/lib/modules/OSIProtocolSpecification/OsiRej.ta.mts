@@ -1,17 +1,17 @@
 /* eslint-disable */
 import {
     ASN1ConstructionError as _ConstructionError,
-    ASN1Element as _Element,
+    type ASN1Element as _Element,
     ASN1TagClass as _TagClass,
 } from "@wildboar/asn1";
 import * as $ from "@wildboar/asn1/functional";
 import {
-    InvokeId,
+    type InvokeId,
     _decode_InvokeId,
     _encode_InvokeId,
 } from "../CommonProtocolSpecification/InvokeId.ta.mjs";
 import {
-    OsiRej_problem,
+    type OsiRej_problem,
     _decode_OsiRej_problem,
     _encode_OsiRej_problem,
 } from "../OSIProtocolSpecification/OsiRej-problem.ta.mjs";
@@ -35,26 +35,34 @@ import {
  *
  */
 export class OsiRej {
+    /**
+     * @summary `invokeId`.
+     * @public
+     * @readonly
+     */
+    public readonly invokeId: InvokeId;
+    /**
+     * @summary `problem`.
+     * @public
+     * @readonly
+     */
+    public readonly problem: OsiRej_problem;
+    /**
+     * @summary Extensions that are not recognized.
+     * @public
+     * @readonly
+     */
+    public readonly _unrecognizedExtensionsList: _Element[];
+
     constructor(
-        /**
-         * @summary `invokeId`.
-         * @public
-         * @readonly
-         */
-        readonly invokeId: InvokeId,
-        /**
-         * @summary `problem`.
-         * @public
-         * @readonly
-         */
-        readonly problem: OsiRej_problem,
-        /**
-         * @summary Extensions that are not recognized.
-         * @public
-         * @readonly
-         */
-        readonly _unrecognizedExtensionsList: _Element[] = []
-    ) {}
+        invokeId: InvokeId,
+        problem: OsiRej_problem,
+        _unrecognizedExtensionsList: _Element[] = []
+    ) {
+        this.invokeId = invokeId;
+        this.problem = problem;
+        this._unrecognizedExtensionsList = _unrecognizedExtensionsList;
+    }
 
     /**
      * @summary Restructures an object into a OsiRej

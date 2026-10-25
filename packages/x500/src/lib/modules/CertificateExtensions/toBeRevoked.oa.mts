@@ -2,7 +2,7 @@
 import { type EXTENSION } from "../AuthenticationFramework/EXTENSION.oca.mjs";
 import { id_ce_toBeRevoked } from "../CertificateExtensions/id-ce-toBeRevoked.va.mjs";
 import {
-    ToBeRevokedSyntax,
+    type ToBeRevokedSyntax,
     _decode_ToBeRevokedSyntax,
     _encode_ToBeRevokedSyntax,
 } from "../CertificateExtensions/ToBeRevokedSyntax.ta.mjs";

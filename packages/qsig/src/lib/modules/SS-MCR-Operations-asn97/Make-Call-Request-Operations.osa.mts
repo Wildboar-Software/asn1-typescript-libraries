@@ -1,5 +1,5 @@
 /* eslint-disable */
-import { OPERATION } from "../Remote-Operations-Information-Objects/OPERATION.oca.mjs";
+import { type OPERATION } from "../Remote-Operations-Information-Objects/OPERATION.oca.mjs";
 import { mCRequest } from "../SS-MCR-Operations-asn97/mCRequest.oa.mjs";
 import { mCAlerting } from "../SS-MCR-Operations-asn97/mCAlerting.oa.mjs";
 import { mCInform } from "../SS-MCR-Operations-asn97/mCInform.oa.mjs";

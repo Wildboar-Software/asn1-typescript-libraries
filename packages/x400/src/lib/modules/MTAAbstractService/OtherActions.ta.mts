@@ -1,7 +1,7 @@
 /* eslint-disable */
 import {
-    BIT_STRING,
-    ASN1Element as _Element,
+    type BIT_STRING,
+    type ASN1Element as _Element,
     ASN1TagClass as _TagClass,
     ASN1Construction as _Construction,
     ASN1UniversalType as _UniversalType,
@@ -74,10 +74,10 @@ export const OtherActions_dl_operation: number = 1; /* LONG_NAMED_BIT */
 export const dl_operation: number = OtherActions_dl_operation; /* SHORT_NAMED_BIT */
 
 
-export const _decode_OtherActions = $._decodeBitString;
+export const _decode_OtherActions: $.ASN1Decoder<BIT_STRING> = $._decodeBitString;
 
 
-export const _encode_OtherActions = $._encodeBitString;
+export const _encode_OtherActions: $.ASN1Encoder<BIT_STRING> = $._encodeBitString;
 
 
 /* eslint-enable */

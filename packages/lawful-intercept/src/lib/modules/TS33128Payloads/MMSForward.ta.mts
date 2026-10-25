@@ -1,15 +1,15 @@
 /* eslint-disable */
 import {
-    BOOLEAN,
-    OPTIONAL,
-    UTF8String,
-    ASN1Element as _Element,
+    type BOOLEAN,
+    type OPTIONAL,
+    type UTF8String,
+    type ASN1Element as _Element,
     ASN1TagClass as _TagClass
 } from "@wildboar/asn1";
 import * as $ from "@wildboar/asn1/functional";
 import { MMSVersion, _decode_MMSVersion, _encode_MMSVersion } from "../TS33128Payloads/MMSVersion.ta.mjs";
 // export { MMSVersion, _decode_MMSVersion, _encode_MMSVersion } from "../TS33128Payloads/MMSVersion.ta.mjs";
-import { Timestamp, _decode_Timestamp, _encode_Timestamp } from "../TS33128Payloads/Timestamp.ta.mjs";
+import { type Timestamp, _decode_Timestamp, _encode_Timestamp } from "../TS33128Payloads/Timestamp.ta.mjs";
 // export { Timestamp, _decode_Timestamp, _encode_Timestamp } from "../TS33128Payloads/Timestamp.ta.mjs";
 import { MMSParty, _decode_MMSParty, _encode_MMSParty } from "../TS33128Payloads/MMSParty.ta.mjs";
 // export { MMSParty, _decode_MMSParty, _encode_MMSParty } from "../TS33128Payloads/MMSParty.ta.mjs";
@@ -495,31 +495,31 @@ class MMSForward {
          * @static
          */
 
-    public static _enum_for_direction = _enum_for_MMSDirection;        /**
+    public static _enum_for_direction: typeof _enum_for_MMSDirection = _enum_for_MMSDirection;        /**
          * @summary The enum used as the type of the component `state`
          * @public
          * @static
          */
 
-    public static _enum_for_state = _enum_for_MMState;        /**
+    public static _enum_for_state: typeof _enum_for_MMState = _enum_for_MMState;        /**
          * @summary The enum used as the type of the component `replyCharging`
          * @public
          * @static
          */
 
-    public static _enum_for_replyCharging = _enum_for_MMSReplyCharging;        /**
+    public static _enum_for_replyCharging: typeof _enum_for_MMSReplyCharging = _enum_for_MMSReplyCharging;        /**
          * @summary The enum used as the type of the component `responseStatus`
          * @public
          * @static
          */
 
-    public static _enum_for_responseStatus = _enum_for_MMSResponseStatus;        /**
+    public static _enum_for_responseStatus: typeof _enum_for_MMSResponseStatus = _enum_for_MMSResponseStatus;        /**
          * @summary The enum used as the type of the component `storeStatus`
          * @public
          * @static
          */
 
-    public static _enum_for_storeStatus = _enum_for_MMSStoreStatus;
+    public static _enum_for_storeStatus: typeof _enum_for_MMSStoreStatus = _enum_for_MMSStoreStatus;
 }
 
 /**

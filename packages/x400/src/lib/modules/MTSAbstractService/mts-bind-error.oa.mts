@@ -1,6 +1,6 @@
 /* eslint-disable */
 import {
-    ASN1Element as _Element,
+    type ASN1Element as _Element,
     ASN1TagClass as _TagClass,
     ASN1Construction as _Construction,
     ASN1UniversalType as _UniversalType,
@@ -18,7 +18,7 @@ import {
     _encode_Code,
 } from '@wildboar/rose';
 import {
-    mts_bind_error_ParameterType,
+    type mts_bind_error_ParameterType,
     _decode_mts_bind_error_ParameterType,
     _encode_mts_bind_error_ParameterType,
 } from '../MTSAbstractService/mts-bind-error-ParameterType.ta.mjs';

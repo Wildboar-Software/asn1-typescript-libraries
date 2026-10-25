@@ -1,8 +1,8 @@
 /* eslint-disable */
 import {
-    OPTIONAL,
-    INTEGER,
-    ASN1Element as _Element,
+    type OPTIONAL,
+    type INTEGER,
+    type ASN1Element as _Element,
     ASN1TagClass as _TagClass,
     ASN1Construction as _Construction,
     ASN1UniversalType as _UniversalType,
@@ -13,7 +13,7 @@ import {
 } from '@wildboar/asn1';
 import * as $ from '@wildboar/asn1/functional';
 import {
-    PBKDF2_params_salt,
+    type PBKDF2_params_salt,
     _decode_PBKDF2_params_salt,
     _encode_PBKDF2_params_salt,
 } from '../CmsTelebiometric/PBKDF2-params-salt.ta.mjs';
@@ -49,59 +49,71 @@ import {
  *
  */
 export class PBKDF2_params {
+    /**
+     * @summary `salt`.
+     * @description
+     *
+     * PBKDF2 salt. This profile uses the `specified` OCTET
+     * STRING alternative.
+     * ITU-T Rec. X.1080.0 (2017) Cor.1 Annex B.5.
+     *
+     * @public
+     * @readonly
+     */
+    public readonly salt: PBKDF2_params_salt;
+    /**
+     * @summary `iterationCount`.
+     * @description
+     *
+     * PBKDF2 iteration count (`1..MAX`).
+     * ITU-T Rec. X.1080.0 (2017) Cor.1 Annex B.5.
+     *
+     * @public
+     * @readonly
+     */
+    public readonly iterationCount: INTEGER;
+    /**
+     * @summary `keyLength`.
+     * @description
+     *
+     * Optional derived-key length (`1..MAX`).
+     * ITU-T Rec. X.1080.0 (2017) Cor.1 Annex B.5.
+     *
+     * @public
+     * @readonly
+     */
+    public readonly keyLength: OPTIONAL<INTEGER>;
+    /**
+     * @summary `prf`.
+     * @description
+     *
+     * PBKDF2 pseudorandom function (`PBKDF2-PRFs`).
+     * ITU-T Rec. X.1080.0 (2017) Cor.1 Annex B.5.
+     *
+     * @public
+     * @readonly
+     */
+    public readonly prf: AlgorithmIdentifier;
+    /**
+     * @summary Extensions that are not recognized.
+     * @public
+     * @readonly
+     */
+    public readonly _unrecognizedExtensionsList: _Element[];
+
     constructor(
-        /**
-         * @summary `salt`.
-         * @description
-         *
-         * PBKDF2 salt. This profile uses the `specified` OCTET
-         * STRING alternative.
-         * ITU-T Rec. X.1080.0 (2017) Cor.1 Annex B.5.
-         *
-         * @public
-         * @readonly
-         */
-        readonly salt: PBKDF2_params_salt,
-        /**
-         * @summary `iterationCount`.
-         * @description
-         *
-         * PBKDF2 iteration count (`1..MAX`).
-         * ITU-T Rec. X.1080.0 (2017) Cor.1 Annex B.5.
-         *
-         * @public
-         * @readonly
-         */
-        readonly iterationCount: INTEGER,
-        /**
-         * @summary `keyLength`.
-         * @description
-         *
-         * Optional derived-key length (`1..MAX`).
-         * ITU-T Rec. X.1080.0 (2017) Cor.1 Annex B.5.
-         *
-         * @public
-         * @readonly
-         */
-        readonly keyLength: OPTIONAL<INTEGER>,
-        /**
-         * @summary `prf`.
-         * @description
-         *
-         * PBKDF2 pseudorandom function (`PBKDF2-PRFs`).
-         * ITU-T Rec. X.1080.0 (2017) Cor.1 Annex B.5.
-         *
-         * @public
-         * @readonly
-         */
-        readonly prf: AlgorithmIdentifier,
-        /**
-         * @summary Extensions that are not recognized.
-         * @public
-         * @readonly
-         */
-        readonly _unrecognizedExtensionsList: _Element[] = []
-    ) {}
+        salt: PBKDF2_params_salt,
+        iterationCount: INTEGER,
+        keyLength: OPTIONAL<INTEGER>,
+        prf: AlgorithmIdentifier,
+        _unrecognizedExtensionsList: _Element[] = []
+    ) {
+        this.salt = salt;
+        this.iterationCount = iterationCount;
+        this.keyLength = keyLength;
+        this.prf = prf;
+        this._unrecognizedExtensionsList = _unrecognizedExtensionsList;
+    }
 
     /**
      * @summary Restructures an object into a PBKDF2_params

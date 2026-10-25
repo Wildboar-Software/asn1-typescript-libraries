@@ -1,6 +1,6 @@
 /* eslint-disable */
 import {
-    ENUMERATED
+    type ENUMERATED
 } from "@wildboar/asn1";
 import * as $ from "@wildboar/asn1/functional";
 
@@ -70,7 +70,7 @@ type ConfEvent = _enum_for_ConfEvent | ENUMERATED;
  * @type {number}
  */
 export
-const ConfEvent_confStartSuccessfull: ConfEvent = 1; /* LONG_NAMED_ENUMERATED_VALUE */
+const ConfEvent_confStartSuccessfull: _enum_for_ConfEvent.confStartSuccessfull = _enum_for_ConfEvent.confStartSuccessfull; /* LONG_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary confStartSuccessfull
@@ -82,7 +82,7 @@ const ConfEvent_confStartSuccessfull: ConfEvent = 1; /* LONG_NAMED_ENUMERATED_VA
  * @type {number}
  */
 export
-const confStartSuccessfull: ConfEvent = ConfEvent_confStartSuccessfull; /* SHORT_NAMED_ENUMERATED_VALUE */
+const confStartSuccessfull: _enum_for_ConfEvent.confStartSuccessfull = ConfEvent_confStartSuccessfull; /* SHORT_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary ConfEvent_confStartUnsuccessfull
@@ -97,7 +97,7 @@ const confStartSuccessfull: ConfEvent = ConfEvent_confStartSuccessfull; /* SHORT
  * @type {number}
  */
 export
-const ConfEvent_confStartUnsuccessfull: ConfEvent = 2; /* LONG_NAMED_ENUMERATED_VALUE */
+const ConfEvent_confStartUnsuccessfull: _enum_for_ConfEvent.confStartUnsuccessfull = _enum_for_ConfEvent.confStartUnsuccessfull; /* LONG_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary confStartUnsuccessfull
@@ -109,7 +109,7 @@ const ConfEvent_confStartUnsuccessfull: ConfEvent = 2; /* LONG_NAMED_ENUMERATED_
  * @type {number}
  */
 export
-const confStartUnsuccessfull: ConfEvent = ConfEvent_confStartUnsuccessfull; /* SHORT_NAMED_ENUMERATED_VALUE */
+const confStartUnsuccessfull: _enum_for_ConfEvent.confStartUnsuccessfull = ConfEvent_confStartUnsuccessfull; /* SHORT_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary ConfEvent_startOfInterceptionConferenceActive
@@ -124,7 +124,7 @@ const confStartUnsuccessfull: ConfEvent = ConfEvent_confStartUnsuccessfull; /* S
  * @type {number}
  */
 export
-const ConfEvent_startOfInterceptionConferenceActive: ConfEvent = 3; /* LONG_NAMED_ENUMERATED_VALUE */
+const ConfEvent_startOfInterceptionConferenceActive: _enum_for_ConfEvent.startOfInterceptionConferenceActive = _enum_for_ConfEvent.startOfInterceptionConferenceActive; /* LONG_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary startOfInterceptionConferenceActive
@@ -137,7 +137,7 @@ const ConfEvent_startOfInterceptionConferenceActive: ConfEvent = 3; /* LONG_NAME
  * @type {number}
  */
 export
-const startOfInterceptionConferenceActive: ConfEvent = ConfEvent_startOfInterceptionConferenceActive; /* SHORT_NAMED_ENUMERATED_VALUE */
+const startOfInterceptionConferenceActive: _enum_for_ConfEvent.startOfInterceptionConferenceActive = ConfEvent_startOfInterceptionConferenceActive; /* SHORT_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary ConfEvent_confPartyJoinSuccessfull
@@ -151,7 +151,7 @@ const startOfInterceptionConferenceActive: ConfEvent = ConfEvent_startOfIntercep
  * @type {number}
  */
 export
-const ConfEvent_confPartyJoinSuccessfull: ConfEvent = 4; /* LONG_NAMED_ENUMERATED_VALUE */
+const ConfEvent_confPartyJoinSuccessfull: _enum_for_ConfEvent.confPartyJoinSuccessfull = _enum_for_ConfEvent.confPartyJoinSuccessfull; /* LONG_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary confPartyJoinSuccessfull
@@ -163,7 +163,7 @@ const ConfEvent_confPartyJoinSuccessfull: ConfEvent = 4; /* LONG_NAMED_ENUMERATE
  * @type {number}
  */
 export
-const confPartyJoinSuccessfull: ConfEvent = ConfEvent_confPartyJoinSuccessfull; /* SHORT_NAMED_ENUMERATED_VALUE */
+const confPartyJoinSuccessfull: _enum_for_ConfEvent.confPartyJoinSuccessfull = ConfEvent_confPartyJoinSuccessfull; /* SHORT_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary ConfEvent_confPartyJoinUnsuccessfull
@@ -176,7 +176,7 @@ const confPartyJoinSuccessfull: ConfEvent = ConfEvent_confPartyJoinSuccessfull; 
  * @type {number}
  */
 export
-const ConfEvent_confPartyJoinUnsuccessfull: ConfEvent = 5; /* LONG_NAMED_ENUMERATED_VALUE */
+const ConfEvent_confPartyJoinUnsuccessfull: _enum_for_ConfEvent.confPartyJoinUnsuccessfull = _enum_for_ConfEvent.confPartyJoinUnsuccessfull; /* LONG_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary confPartyJoinUnsuccessfull
@@ -188,7 +188,7 @@ const ConfEvent_confPartyJoinUnsuccessfull: ConfEvent = 5; /* LONG_NAMED_ENUMERA
  * @type {number}
  */
 export
-const confPartyJoinUnsuccessfull: ConfEvent = ConfEvent_confPartyJoinUnsuccessfull; /* SHORT_NAMED_ENUMERATED_VALUE */
+const confPartyJoinUnsuccessfull: _enum_for_ConfEvent.confPartyJoinUnsuccessfull = ConfEvent_confPartyJoinUnsuccessfull; /* SHORT_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary ConfEvent_confPartyLeaveSuccessfull
@@ -202,7 +202,7 @@ const confPartyJoinUnsuccessfull: ConfEvent = ConfEvent_confPartyJoinUnsuccessfu
  * @type {number}
  */
 export
-const ConfEvent_confPartyLeaveSuccessfull: ConfEvent = 6; /* LONG_NAMED_ENUMERATED_VALUE */
+const ConfEvent_confPartyLeaveSuccessfull: _enum_for_ConfEvent.confPartyLeaveSuccessfull = _enum_for_ConfEvent.confPartyLeaveSuccessfull; /* LONG_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary confPartyLeaveSuccessfull
@@ -214,7 +214,7 @@ const ConfEvent_confPartyLeaveSuccessfull: ConfEvent = 6; /* LONG_NAMED_ENUMERAT
  * @type {number}
  */
 export
-const confPartyLeaveSuccessfull: ConfEvent = ConfEvent_confPartyLeaveSuccessfull; /* SHORT_NAMED_ENUMERATED_VALUE */
+const confPartyLeaveSuccessfull: _enum_for_ConfEvent.confPartyLeaveSuccessfull = ConfEvent_confPartyLeaveSuccessfull; /* SHORT_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary ConfEvent_confPartyLeaveUnsuccessfull
@@ -228,7 +228,7 @@ const confPartyLeaveSuccessfull: ConfEvent = ConfEvent_confPartyLeaveSuccessfull
  * @type {number}
  */
 export
-const ConfEvent_confPartyLeaveUnsuccessfull: ConfEvent = 7; /* LONG_NAMED_ENUMERATED_VALUE */
+const ConfEvent_confPartyLeaveUnsuccessfull: _enum_for_ConfEvent.confPartyLeaveUnsuccessfull = _enum_for_ConfEvent.confPartyLeaveUnsuccessfull; /* LONG_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary confPartyLeaveUnsuccessfull
@@ -240,7 +240,7 @@ const ConfEvent_confPartyLeaveUnsuccessfull: ConfEvent = 7; /* LONG_NAMED_ENUMER
  * @type {number}
  */
 export
-const confPartyLeaveUnsuccessfull: ConfEvent = ConfEvent_confPartyLeaveUnsuccessfull; /* SHORT_NAMED_ENUMERATED_VALUE */
+const confPartyLeaveUnsuccessfull: _enum_for_ConfEvent.confPartyLeaveUnsuccessfull = ConfEvent_confPartyLeaveUnsuccessfull; /* SHORT_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary ConfEvent_confPartyBearerModifySuccessfull
@@ -254,7 +254,7 @@ const confPartyLeaveUnsuccessfull: ConfEvent = ConfEvent_confPartyLeaveUnsuccess
  * @type {number}
  */
 export
-const ConfEvent_confPartyBearerModifySuccessfull: ConfEvent = 8; /* LONG_NAMED_ENUMERATED_VALUE */
+const ConfEvent_confPartyBearerModifySuccessfull: _enum_for_ConfEvent.confPartyBearerModifySuccessfull = _enum_for_ConfEvent.confPartyBearerModifySuccessfull; /* LONG_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary confPartyBearerModifySuccessfull
@@ -266,7 +266,7 @@ const ConfEvent_confPartyBearerModifySuccessfull: ConfEvent = 8; /* LONG_NAMED_E
  * @type {number}
  */
 export
-const confPartyBearerModifySuccessfull: ConfEvent = ConfEvent_confPartyBearerModifySuccessfull; /* SHORT_NAMED_ENUMERATED_VALUE */
+const confPartyBearerModifySuccessfull: _enum_for_ConfEvent.confPartyBearerModifySuccessfull = ConfEvent_confPartyBearerModifySuccessfull; /* SHORT_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary ConfEvent_confPartyBearerModifyUnsuccessfull
@@ -280,7 +280,7 @@ const confPartyBearerModifySuccessfull: ConfEvent = ConfEvent_confPartyBearerMod
  * @type {number}
  */
 export
-const ConfEvent_confPartyBearerModifyUnsuccessfull: ConfEvent = 9; /* LONG_NAMED_ENUMERATED_VALUE */
+const ConfEvent_confPartyBearerModifyUnsuccessfull: _enum_for_ConfEvent.confPartyBearerModifyUnsuccessfull = _enum_for_ConfEvent.confPartyBearerModifyUnsuccessfull; /* LONG_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary confPartyBearerModifyUnsuccessfull
@@ -293,7 +293,7 @@ const ConfEvent_confPartyBearerModifyUnsuccessfull: ConfEvent = 9; /* LONG_NAMED
  * @type {number}
  */
 export
-const confPartyBearerModifyUnsuccessfull: ConfEvent = ConfEvent_confPartyBearerModifyUnsuccessfull; /* SHORT_NAMED_ENUMERATED_VALUE */
+const confPartyBearerModifyUnsuccessfull: _enum_for_ConfEvent.confPartyBearerModifyUnsuccessfull = ConfEvent_confPartyBearerModifyUnsuccessfull; /* SHORT_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary ConfEvent_confEndSuccessfull
@@ -308,7 +308,7 @@ const confPartyBearerModifyUnsuccessfull: ConfEvent = ConfEvent_confPartyBearerM
  * @type {number}
  */
 export
-const ConfEvent_confEndSuccessfull: ConfEvent = 10; /* LONG_NAMED_ENUMERATED_VALUE */
+const ConfEvent_confEndSuccessfull: _enum_for_ConfEvent.confEndSuccessfull = _enum_for_ConfEvent.confEndSuccessfull; /* LONG_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary confEndSuccessfull
@@ -320,7 +320,7 @@ const ConfEvent_confEndSuccessfull: ConfEvent = 10; /* LONG_NAMED_ENUMERATED_VAL
  * @type {number}
  */
 export
-const confEndSuccessfull: ConfEvent = ConfEvent_confEndSuccessfull; /* SHORT_NAMED_ENUMERATED_VALUE */
+const confEndSuccessfull: _enum_for_ConfEvent.confEndSuccessfull = ConfEvent_confEndSuccessfull; /* SHORT_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary ConfEvent_confEndUnsuccessfull
@@ -334,7 +334,7 @@ const confEndSuccessfull: ConfEvent = ConfEvent_confEndSuccessfull; /* SHORT_NAM
  * @type {number}
  */
 export
-const ConfEvent_confEndUnsuccessfull: ConfEvent = 11; /* LONG_NAMED_ENUMERATED_VALUE */
+const ConfEvent_confEndUnsuccessfull: _enum_for_ConfEvent.confEndUnsuccessfull = _enum_for_ConfEvent.confEndUnsuccessfull; /* LONG_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary confEndUnsuccessfull
@@ -346,7 +346,7 @@ const ConfEvent_confEndUnsuccessfull: ConfEvent = 11; /* LONG_NAMED_ENUMERATED_V
  * @type {number}
  */
 export
-const confEndUnsuccessfull: ConfEvent = ConfEvent_confEndUnsuccessfull; /* SHORT_NAMED_ENUMERATED_VALUE */
+const confEndUnsuccessfull: _enum_for_ConfEvent.confEndUnsuccessfull = ConfEvent_confEndUnsuccessfull; /* SHORT_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary ConfEvent_confServCreation
@@ -360,7 +360,7 @@ const confEndUnsuccessfull: ConfEvent = ConfEvent_confEndUnsuccessfull; /* SHORT
  * @type {number}
  */
 export
-const ConfEvent_confServCreation: ConfEvent = 12; /* LONG_NAMED_ENUMERATED_VALUE */
+const ConfEvent_confServCreation: _enum_for_ConfEvent.confServCreation = _enum_for_ConfEvent.confServCreation; /* LONG_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary confServCreation
@@ -373,7 +373,7 @@ const ConfEvent_confServCreation: ConfEvent = 12; /* LONG_NAMED_ENUMERATED_VALUE
  * @type {number}
  */
 export
-const confServCreation: ConfEvent = ConfEvent_confServCreation; /* SHORT_NAMED_ENUMERATED_VALUE */
+const confServCreation: _enum_for_ConfEvent.confServCreation = ConfEvent_confServCreation; /* SHORT_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary ConfEvent_confServUpdate
@@ -387,7 +387,7 @@ const confServCreation: ConfEvent = ConfEvent_confServCreation; /* SHORT_NAMED_E
  * @type {number}
  */
 export
-const ConfEvent_confServUpdate: ConfEvent = 13; /* LONG_NAMED_ENUMERATED_VALUE */
+const ConfEvent_confServUpdate: _enum_for_ConfEvent.confServUpdate = _enum_for_ConfEvent.confServUpdate; /* LONG_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary confServUpdate
@@ -399,7 +399,7 @@ const ConfEvent_confServUpdate: ConfEvent = 13; /* LONG_NAMED_ENUMERATED_VALUE *
  * @type {number}
  */
 export
-const confServUpdate: ConfEvent = ConfEvent_confServUpdate; /* SHORT_NAMED_ENUMERATED_VALUE */
+const confServUpdate: _enum_for_ConfEvent.confServUpdate = ConfEvent_confServUpdate; /* SHORT_NAMED_ENUMERATED_VALUE */
 export const _decode_ConfEvent: $.ASN1Decoder<ConfEvent> = $._decodeEnumerated;
 export const _encode_ConfEvent: $.ASN1Encoder<ConfEvent> = $._encodeEnumerated;
 

@@ -1,5 +1,5 @@
 /* eslint-disable */
-import { ASN1Element as _Element, INTEGER } from "@wildboar/asn1";
+import { ASN1Element as _Element, type INTEGER } from "@wildboar/asn1";
 import * as $ from "@wildboar/asn1/functional";
 
 
@@ -36,7 +36,7 @@ export type SecurityClassification = INTEGER;
  * @constant
  * @type {number}
  */
-export const SecurityClassification_unmarked: SecurityClassification = 0; /* LONG_NAMED_INTEGER_VALUE */
+export const SecurityClassification_unmarked: 0 = 0 satisfies SecurityClassification; /* LONG_NAMED_INTEGER_VALUE */
 
 
 /**
@@ -44,7 +44,7 @@ export const SecurityClassification_unmarked: SecurityClassification = 0; /* LON
  * @constant
  * @type {number}
  */
-export const unmarked: SecurityClassification = SecurityClassification_unmarked; /* SHORT_NAMED_INTEGER_VALUE */
+export const unmarked: 0 = SecurityClassification_unmarked; /* SHORT_NAMED_INTEGER_VALUE */
 
 
 /**
@@ -52,7 +52,7 @@ export const unmarked: SecurityClassification = SecurityClassification_unmarked;
  * @constant
  * @type {number}
  */
-export const SecurityClassification_unclassified: SecurityClassification = 1; /* LONG_NAMED_INTEGER_VALUE */
+export const SecurityClassification_unclassified: 1 = 1 satisfies SecurityClassification; /* LONG_NAMED_INTEGER_VALUE */
 
 
 /**
@@ -60,7 +60,7 @@ export const SecurityClassification_unclassified: SecurityClassification = 1; /*
  * @constant
  * @type {number}
  */
-export const unclassified: SecurityClassification = SecurityClassification_unclassified; /* SHORT_NAMED_INTEGER_VALUE */
+export const unclassified: 1 = SecurityClassification_unclassified; /* SHORT_NAMED_INTEGER_VALUE */
 
 
 /**
@@ -68,7 +68,7 @@ export const unclassified: SecurityClassification = SecurityClassification_uncla
  * @constant
  * @type {number}
  */
-export const SecurityClassification_restricted: SecurityClassification = 2; /* LONG_NAMED_INTEGER_VALUE */
+export const SecurityClassification_restricted: 2 = 2 satisfies SecurityClassification; /* LONG_NAMED_INTEGER_VALUE */
 
 
 /**
@@ -76,7 +76,7 @@ export const SecurityClassification_restricted: SecurityClassification = 2; /* L
  * @constant
  * @type {number}
  */
-export const restricted: SecurityClassification = SecurityClassification_restricted; /* SHORT_NAMED_INTEGER_VALUE */
+export const restricted: 2 = SecurityClassification_restricted; /* SHORT_NAMED_INTEGER_VALUE */
 
 
 /**
@@ -84,7 +84,7 @@ export const restricted: SecurityClassification = SecurityClassification_restric
  * @constant
  * @type {number}
  */
-export const SecurityClassification_confidential: SecurityClassification = 3; /* LONG_NAMED_INTEGER_VALUE */
+export const SecurityClassification_confidential: 3 = 3 satisfies SecurityClassification; /* LONG_NAMED_INTEGER_VALUE */
 
 
 /**
@@ -92,7 +92,7 @@ export const SecurityClassification_confidential: SecurityClassification = 3; /*
  * @constant
  * @type {number}
  */
-export const confidential: SecurityClassification = SecurityClassification_confidential; /* SHORT_NAMED_INTEGER_VALUE */
+export const confidential: 3 = SecurityClassification_confidential; /* SHORT_NAMED_INTEGER_VALUE */
 
 
 /**
@@ -100,7 +100,7 @@ export const confidential: SecurityClassification = SecurityClassification_confi
  * @constant
  * @type {number}
  */
-export const SecurityClassification_secret: SecurityClassification = 4; /* LONG_NAMED_INTEGER_VALUE */
+export const SecurityClassification_secret: 4 = 4 satisfies SecurityClassification; /* LONG_NAMED_INTEGER_VALUE */
 
 
 /**
@@ -108,7 +108,7 @@ export const SecurityClassification_secret: SecurityClassification = 4; /* LONG_
  * @constant
  * @type {number}
  */
-export const secret: SecurityClassification = SecurityClassification_secret; /* SHORT_NAMED_INTEGER_VALUE */
+export const secret: 4 = SecurityClassification_secret; /* SHORT_NAMED_INTEGER_VALUE */
 
 
 /**
@@ -116,7 +116,7 @@ export const secret: SecurityClassification = SecurityClassification_secret; /* 
  * @constant
  * @type {number}
  */
-export const SecurityClassification_top_secret: SecurityClassification = 5; /* LONG_NAMED_INTEGER_VALUE */
+export const SecurityClassification_top_secret: 5 = 5 satisfies SecurityClassification; /* LONG_NAMED_INTEGER_VALUE */
 
 
 /**
@@ -124,17 +124,17 @@ export const SecurityClassification_top_secret: SecurityClassification = 5; /* L
  * @constant
  * @type {number}
  */
-export const top_secret: SecurityClassification = SecurityClassification_top_secret; /* SHORT_NAMED_INTEGER_VALUE */
+export const top_secret: 5 = SecurityClassification_top_secret; /* SHORT_NAMED_INTEGER_VALUE */
 
 
 
 
-export const _decode_SecurityClassification = $._decodeInteger;
+export const _decode_SecurityClassification: $.ASN1Decoder<INTEGER> = $._decodeInteger;
 
 
 
 
-export const _encode_SecurityClassification = $._encodeInteger;
+export const _encode_SecurityClassification: $.ASN1Encoder<INTEGER> = $._encodeInteger;
 
 
 /* eslint-enable */

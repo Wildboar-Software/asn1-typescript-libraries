@@ -2,16 +2,16 @@
 
 import * as $ from "@wildboar/asn1/functional";
 import {
-    OPTIONAL,
-    BOOLEAN,
-    SEQUENCE,
-    SET,
-    ASN1Element as _Element,
+    type OPTIONAL,
+    type BOOLEAN,
+    type SEQUENCE,
+    type SET,
+    type ASN1Element as _Element,
     ASN1TagClass as _TagClass
 } from "@wildboar/asn1";
-import { SubjectDeviceID, _decode_SubjectDeviceID, _encode_SubjectDeviceID } from "../CSTA-device-identifiers/SubjectDeviceID.ta.mjs";
+import { type SubjectDeviceID, _decode_SubjectDeviceID, _encode_SubjectDeviceID } from "../CSTA-device-identifiers/SubjectDeviceID.ta.mjs";
 
-import { AuditoryApparatusID, _decode_AuditoryApparatusID, _encode_AuditoryApparatusID } from "../CSTA-physical-device-feature/AuditoryApparatusID.ta.mjs";
+import { type AuditoryApparatusID, _decode_AuditoryApparatusID, _encode_AuditoryApparatusID } from "../CSTA-physical-device-feature/AuditoryApparatusID.ta.mjs";
 
 import { CSTACommonArguments, _decode_CSTACommonArguments, _encode_CSTACommonArguments } from "../CSTA-extension-types/CSTACommonArguments.ta.mjs";
 
@@ -43,45 +43,55 @@ import { CSTACommonArguments, _decode_CSTACommonArguments, _encode_CSTACommonArg
  */
 export
 class SpeakerMuteEvent {
+    /**
+     * @summary `invokingDevice`.
+     * @description
+     *
+     * Device where the feature was invoked.
+     * @public
+     * @readonly
+     */
+    public readonly invokingDevice: SubjectDeviceID;
+    /**
+     * @summary `auditoryApparatus`.
+     * @description
+     *
+     * Apparatus containing the speaker whose mute changed.
+     * @public
+     * @readonly
+     */
+    public readonly auditoryApparatus: AuditoryApparatusID;
+    /**
+     * @summary `speakerMuteOn`.
+     * @description
+     *
+     * FALSE = speaker activated; TRUE = muted.
+     * @public
+     * @readonly
+     */
+    public readonly speakerMuteOn: BOOLEAN;
+    /**
+     * @summary `extensions`.
+     * @description
+     *
+     * Optional security (timestamp, sequence, securityInfo) and
+     * privateData.
+     * @public
+     * @readonly
+     */
+    public readonly extensions?: OPTIONAL<CSTACommonArguments>;
+
     constructor (
-        /**
-         * @summary `invokingDevice`.
-         * @description
-         *
-         * Device where the feature was invoked.
-         * @public
-         * @readonly
-         */
-        readonly invokingDevice: SubjectDeviceID,
-        /**
-         * @summary `auditoryApparatus`.
-         * @description
-         *
-         * Apparatus containing the speaker whose mute changed.
-         * @public
-         * @readonly
-         */
-        readonly auditoryApparatus: AuditoryApparatusID,
-        /**
-         * @summary `speakerMuteOn`.
-         * @description
-         *
-         * FALSE = speaker activated; TRUE = muted.
-         * @public
-         * @readonly
-         */
-        readonly speakerMuteOn: BOOLEAN,
-        /**
-         * @summary `extensions`.
-         * @description
-         *
-         * Optional security (timestamp, sequence, securityInfo) and
-         * privateData.
-         * @public
-         * @readonly
-         */
-        readonly extensions?: OPTIONAL<CSTACommonArguments>
-    ) {}
+        invokingDevice: SubjectDeviceID,
+        auditoryApparatus: AuditoryApparatusID,
+        speakerMuteOn: BOOLEAN,
+        extensions?: OPTIONAL<CSTACommonArguments>
+    ) {
+        this.invokingDevice = invokingDevice;
+        this.auditoryApparatus = auditoryApparatus;
+        this.speakerMuteOn = speakerMuteOn;
+        this.extensions = extensions;
+    }
 
     /**
      * @summary Restructures an object into a SpeakerMuteEvent

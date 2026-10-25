@@ -17,7 +17,7 @@ import {
 } from '@wildboar/rose';
 import type { ERROR } from '@wildboar/rose';
 import {
-  InvalidArgumentValue,
+  type InvalidArgumentValue,
   _decode_InvalidArgumentValue,
   _encode_InvalidArgumentValue,
 } from '../CMIP-1/InvalidArgumentValue.ta.mjs';

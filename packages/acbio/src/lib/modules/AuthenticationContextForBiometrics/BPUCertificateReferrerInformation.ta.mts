@@ -1,7 +1,7 @@
 /* eslint-disable */
 import {
-    OPTIONAL,
-    ASN1Element as _Element,
+    type OPTIONAL,
+    type ASN1Element as _Element,
     ASN1TagClass as _TagClass,
     ASN1Construction as _Construction,
     ASN1UniversalType as _UniversalType,
@@ -12,7 +12,7 @@ import {
 } from '@wildboar/asn1';
 import * as $ from '@wildboar/asn1/functional';
 import {
-    URI,
+    type URI,
     _decode_URI,
     _encode_URI,
 } from '../AuthenticationContextForBiometrics/URI.ta.mjs';
@@ -31,20 +31,26 @@ import {
  *
  */
 export class BPUCertificateReferrerInformation {
+    /**
+     * @summary `bpuCertificateReferrer`.
+     * @public
+     * @readonly
+     */
+    public readonly bpuCertificateReferrer: URI;
+    /**
+     * @summary `crlsReferrer`.
+     * @public
+     * @readonly
+     */
+    public readonly crlsReferrer?: OPTIONAL<URI>;
+
     constructor(
-        /**
-         * @summary `bpuCertificateReferrer`.
-         * @public
-         * @readonly
-         */
-        readonly bpuCertificateReferrer: URI,
-        /**
-         * @summary `crlsReferrer`.
-         * @public
-         * @readonly
-         */
-        readonly crlsReferrer?: OPTIONAL<URI>
-    ) {}
+        bpuCertificateReferrer: URI,
+        crlsReferrer?: OPTIONAL<URI>
+    ) {
+        this.bpuCertificateReferrer = bpuCertificateReferrer;
+        this.crlsReferrer = crlsReferrer;
+    }
 
     /**
      * @summary Restructures an object into a BPUCertificateReferrerInformation

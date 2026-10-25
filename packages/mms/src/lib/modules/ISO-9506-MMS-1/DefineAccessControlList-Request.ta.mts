@@ -1,6 +1,6 @@
 /* eslint-disable */
 import {
-    ASN1Element as _Element,
+    type ASN1Element as _Element,
     ASN1TagClass as _TagClass,
     ASN1Construction as _Construction,
     ASN1UniversalType as _UniversalType,
@@ -10,7 +10,7 @@ import {
     ASN1ConstructionError as _ConstructionError,
 } from "@wildboar/asn1";
 import * as $ from "@wildboar/asn1/functional";
-import { Identifier, _decode_Identifier, _encode_Identifier } from "../ISO-9506-MMS-1/Identifier.ta.mjs";
+import { type Identifier, _decode_Identifier, _encode_Identifier } from "../ISO-9506-MMS-1/Identifier.ta.mjs";
 import { DefineAccessControlList_Request_accessControlListElements, _decode_DefineAccessControlList_Request_accessControlListElements, _encode_DefineAccessControlList_Request_accessControlListElements } from "../ISO-9506-MMS-1/DefineAccessControlList-Request-accessControlListElements.ta.mjs";
 
 
@@ -50,30 +50,36 @@ import { DefineAccessControlList_Request_accessControlListElements, _decode_Defi
  */
 export
 class DefineAccessControlList_Request {
+    /**
+     * @summary `accessControlListName`.
+     * @description
+     *
+     * Name of the Access Control List object to create. ACL names are
+     * always VMD-specific. ISO 9506-1:2003 §9.3.1.1.1.
+     *
+     * @public
+     * @readonly
+     */
+    public readonly accessControlListName: Identifier;
+    /**
+     * @summary `accessControlListElements`.
+     * @description
+     *
+     * Zero or more Access Control Elements (service class + Access
+     * Condition). ISO 9506-1:2003 §9.3.1.1.2; ISO 9506-2:2003 §9.3.1.1.
+     *
+     * @public
+     * @readonly
+     */
+    public readonly accessControlListElements: DefineAccessControlList_Request_accessControlListElements;
+
     constructor (
-        /**
-         * @summary `accessControlListName`.
-         * @description
-         *
-         * Name of the Access Control List object to create. ACL names are
-         * always VMD-specific. ISO 9506-1:2003 §9.3.1.1.1.
-         *
-         * @public
-         * @readonly
-         */
-        readonly accessControlListName: Identifier,
-        /**
-         * @summary `accessControlListElements`.
-         * @description
-         *
-         * Zero or more Access Control Elements (service class + Access
-         * Condition). ISO 9506-1:2003 §9.3.1.1.2; ISO 9506-2:2003 §9.3.1.1.
-         *
-         * @public
-         * @readonly
-         */
-        readonly accessControlListElements: DefineAccessControlList_Request_accessControlListElements
-    ) {}
+        accessControlListName: Identifier,
+        accessControlListElements: DefineAccessControlList_Request_accessControlListElements
+    ) {
+        this.accessControlListName = accessControlListName;
+        this.accessControlListElements = accessControlListElements;
+    }
 
     /**
      * @summary Restructures an object into a DefineAccessControlList_Request

@@ -1,16 +1,16 @@
 /* eslint-disable */
 import {
-    OCTET_STRING,
-    OPTIONAL,
-    UTF8String,
-    ASN1Element as _Element,
+    type OCTET_STRING,
+    type OPTIONAL,
+    type UTF8String,
+    type ASN1Element as _Element,
     ASN1TagClass as _TagClass,
     ASN1SizeError
 } from "@wildboar/asn1";
 import * as $ from "@wildboar/asn1/functional";
-import { ProSeDirectDiscoveryEvent, _decode_ProSeDirectDiscoveryEvent, _encode_ProSeDirectDiscoveryEvent, _enum_for_ProSeDirectDiscoveryEvent } from "../ProSeHI2Operations/ProSeDirectDiscoveryEvent.ta.mjs";
+import { type ProSeDirectDiscoveryEvent, _decode_ProSeDirectDiscoveryEvent, _encode_ProSeDirectDiscoveryEvent, _enum_for_ProSeDirectDiscoveryEvent } from "../ProSeHI2Operations/ProSeDirectDiscoveryEvent.ta.mjs";
 // export { ProSeDirectDiscoveryEvent, _enum_for_ProSeDirectDiscoveryEvent, ProSeDirectDiscoveryEvent_proseDiscoveryRequest /* IMPORTED_LONG_ENUMERATION_ITEM */, proseDiscoveryRequest /* IMPORTED_SHORT_ENUMERATION_ITEM */, ProSeDirectDiscoveryEvent_proseMatchReport /* IMPORTED_LONG_ENUMERATION_ITEM */, proseMatchReport /* IMPORTED_SHORT_ENUMERATION_ITEM */, _decode_ProSeDirectDiscoveryEvent, _encode_ProSeDirectDiscoveryEvent } from "../ProSeHI2Operations/ProSeDirectDiscoveryEvent.ta.mjs";
-import { TargetRole, _decode_TargetRole, _encode_TargetRole, _enum_for_TargetRole } from "../ProSeHI2Operations/TargetRole.ta.mjs";
+import { type TargetRole, _decode_TargetRole, _encode_TargetRole, _enum_for_TargetRole } from "../ProSeHI2Operations/TargetRole.ta.mjs";
 // export { TargetRole, _enum_for_TargetRole, TargetRole_announcingUE /* IMPORTED_LONG_ENUMERATION_ITEM */, announcingUE /* IMPORTED_SHORT_ENUMERATION_ITEM */, TargetRole_monitoringUE /* IMPORTED_LONG_ENUMERATION_ITEM */, monitoringUE /* IMPORTED_SHORT_ENUMERATION_ITEM */, _decode_TargetRole, _encode_TargetRole } from "../ProSeHI2Operations/TargetRole.ta.mjs";
 import { DirectDiscoveryData, _decode_DirectDiscoveryData, _encode_DirectDiscoveryData } from "../ProSeHI2Operations/DirectDiscoveryData.ta.mjs";
 // export { DirectDiscoveryData, _decode_DirectDiscoveryData, _encode_DirectDiscoveryData } from "../ProSeHI2Operations/DirectDiscoveryData.ta.mjs";
@@ -170,13 +170,13 @@ class ProSeDirectDiscovery {
          * @static
          */
 
-    public static _enum_for_proseDirectDiscoveryEvent = _enum_for_ProSeDirectDiscoveryEvent;        /**
+    public static _enum_for_proseDirectDiscoveryEvent: typeof _enum_for_ProSeDirectDiscoveryEvent = _enum_for_ProSeDirectDiscoveryEvent;        /**
          * @summary The enum used as the type of the component `targetRole`
          * @public
          * @static
          */
 
-    public static _enum_for_targetRole = _enum_for_TargetRole;
+    public static _enum_for_targetRole: typeof _enum_for_TargetRole = _enum_for_TargetRole;
 }
 
 /**

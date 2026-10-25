@@ -1,6 +1,6 @@
 /* eslint-disable */
 import {
-  INTEGER,
+  type INTEGER,
   ASN1Element as _Element,
   ASN1TagClass as _TagClass,
   ASN1Construction as _Construction,
@@ -39,7 +39,7 @@ export type Object_Type_Attribute = INTEGER;
  * @constant
  * @type {number}
  */
-export const Object_Type_Attribute_file: Object_Type_Attribute = 0; /* LONG_NAMED_INTEGER_VALUE */
+export const Object_Type_Attribute_file: 0 = 0 satisfies Object_Type_Attribute; /* LONG_NAMED_INTEGER_VALUE */
 
 
 /**
@@ -47,7 +47,7 @@ export const Object_Type_Attribute_file: Object_Type_Attribute = 0; /* LONG_NAME
  * @constant
  * @type {number}
  */
-export const file: Object_Type_Attribute = Object_Type_Attribute_file; /* SHORT_NAMED_INTEGER_VALUE */
+export const file: 0 = Object_Type_Attribute_file; /* SHORT_NAMED_INTEGER_VALUE */
 
 
 /**
@@ -60,7 +60,7 @@ export const file: Object_Type_Attribute = Object_Type_Attribute_file; /* SHORT_
  * @constant
  * @type {number}
  */
-export const Object_Type_Attribute_file_directory: Object_Type_Attribute = 1; /* LONG_NAMED_INTEGER_VALUE */
+export const Object_Type_Attribute_file_directory: 1 = 1 satisfies Object_Type_Attribute; /* LONG_NAMED_INTEGER_VALUE */
 
 
 /**
@@ -68,7 +68,7 @@ export const Object_Type_Attribute_file_directory: Object_Type_Attribute = 1; /*
  * @constant
  * @type {number}
  */
-export const file_directory: Object_Type_Attribute = Object_Type_Attribute_file_directory; /* SHORT_NAMED_INTEGER_VALUE */
+export const file_directory: 1 = Object_Type_Attribute_file_directory; /* SHORT_NAMED_INTEGER_VALUE */
 
 
 /**
@@ -80,7 +80,7 @@ export const file_directory: Object_Type_Attribute = Object_Type_Attribute_file_
  * @constant
  * @type {number}
  */
-export const Object_Type_Attribute_reference: Object_Type_Attribute = 2; /* LONG_NAMED_INTEGER_VALUE */
+export const Object_Type_Attribute_reference: 2 = 2 satisfies Object_Type_Attribute; /* LONG_NAMED_INTEGER_VALUE */
 
 
 /**
@@ -88,17 +88,17 @@ export const Object_Type_Attribute_reference: Object_Type_Attribute = 2; /* LONG
  * @constant
  * @type {number}
  */
-export const reference: Object_Type_Attribute = Object_Type_Attribute_reference; /* SHORT_NAMED_INTEGER_VALUE */
+export const reference: 2 = Object_Type_Attribute_reference; /* SHORT_NAMED_INTEGER_VALUE */
 
 
 
 
-export const _decode_Object_Type_Attribute = $._decodeInteger;
+export const _decode_Object_Type_Attribute: $.ASN1Decoder<INTEGER> = $._decodeInteger;
 
 
 
 
-export const _encode_Object_Type_Attribute = $._encodeInteger;
+export const _encode_Object_Type_Attribute: $.ASN1Encoder<INTEGER> = $._encodeInteger;
 
 
 /* eslint-enable */

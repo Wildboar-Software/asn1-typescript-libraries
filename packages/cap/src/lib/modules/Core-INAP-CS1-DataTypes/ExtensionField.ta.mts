@@ -1,8 +1,8 @@
 /* eslint-disable */
 import {
-    OPTIONAL,
-    INTEGER,
-    ASN1Element as _Element,
+    type OPTIONAL,
+    type INTEGER,
+    type ASN1Element as _Element,
     ASN1TagClass as _TagClass,
     ASN1Construction as _Construction,
     ASN1UniversalType as _UniversalType,
@@ -36,26 +36,34 @@ import { ExtensionField_criticality, _enum_for_ExtensionField_criticality, Exten
  */
 export
 class ExtensionField {
+    /**
+     * @summary `type_`.
+     * @public
+     * @readonly
+     */
+    public readonly type_: INTEGER;
+    /**
+     * @summary `criticality`.
+     * @public
+     * @readonly
+     */
+    public readonly criticality: OPTIONAL<ExtensionField_criticality>;
+    /**
+     * @summary `value`.
+     * @public
+     * @readonly
+     */
+    public readonly value: _Element;
+
     constructor (
-        /**
-         * @summary `type_`.
-         * @public
-         * @readonly
-         */
-        readonly type_: INTEGER,
-        /**
-         * @summary `criticality`.
-         * @public
-         * @readonly
-         */
-        readonly criticality: OPTIONAL<ExtensionField_criticality>,
-        /**
-         * @summary `value`.
-         * @public
-         * @readonly
-         */
-        readonly value: _Element,
-    ) {}
+        type_: INTEGER,
+        criticality: OPTIONAL<ExtensionField_criticality>,
+        value: _Element,
+    ) {
+        this.type_ = type_;
+        this.criticality = criticality;
+        this.value = value;
+    }
 
     /**
      * @summary Restructures an object into a ExtensionField
@@ -79,13 +87,13 @@ class ExtensionField {
      * @static
      * @method
      */
-    public static get _default_value_for_criticality () { return ExtensionField_criticality_ignore; }        /**
+    public static get _default_value_for_criticality (): _enum_for_ExtensionField_criticality.ignore { return ExtensionField_criticality_ignore; }        /**
          * @summary The enum used as the type of the component `criticality`
          * @public
          * @static
          */
 
-    public static _enum_for_criticality = _enum_for_ExtensionField_criticality;
+    public static _enum_for_criticality: typeof _enum_for_ExtensionField_criticality = _enum_for_ExtensionField_criticality;
 }
 
 /**

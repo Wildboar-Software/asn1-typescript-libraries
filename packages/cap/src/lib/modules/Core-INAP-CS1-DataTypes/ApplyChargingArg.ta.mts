@@ -1,8 +1,8 @@
 /* eslint-disable */
 import {
-    OPTIONAL,
-    BOOLEAN,
-    ASN1Element as _Element,
+    type OPTIONAL,
+    type BOOLEAN,
+    type ASN1Element as _Element,
     ASN1TagClass as _TagClass,
     ASN1Construction as _Construction,
     ASN1UniversalType as _UniversalType,
@@ -12,8 +12,8 @@ import {
     ASN1ConstructionError as _ConstructionError,
 } from "@wildboar/asn1";
 import * as $ from "@wildboar/asn1/functional";
-import { AChBillingChargingCharacteristics, _decode_AChBillingChargingCharacteristics, _encode_AChBillingChargingCharacteristics } from "../Core-INAP-CS1-DataTypes/AChBillingChargingCharacteristics.ta.mjs";
-import { LegID, _decode_LegID, _encode_LegID } from "../Core-INAP-CS1-DataTypes/LegID.ta.mjs";
+import { type AChBillingChargingCharacteristics, _decode_AChBillingChargingCharacteristics, _encode_AChBillingChargingCharacteristics } from "../Core-INAP-CS1-DataTypes/AChBillingChargingCharacteristics.ta.mjs";
+import { type LegID, _decode_LegID, _encode_LegID } from "../Core-INAP-CS1-DataTypes/LegID.ta.mjs";
 import { ExtensionField, _decode_ExtensionField, _encode_ExtensionField } from "../Core-INAP-CS1-DataTypes/ExtensionField.ta.mjs";
 
 
@@ -27,7 +27,7 @@ import { ExtensionField, _decode_ExtensionField, _encode_ExtensionField } from "
  * ApplyChargingArg ::= SEQUENCE {
  *      aChBillingChargingCharacteristics     [0] AChBillingChargingCharacteristics,
  *      sendCalculationToSCPIndication     [1] BOOLEAN     DEFAULT FALSE,
- *      partyToCharge     [2] LegID     OPTIONAL,
+ *      partyToCharge     [2] LegID     type OPTIONAL,
  *      extensions     [3] SEQUENCE SIZE(1..numOfExtensions) OF ExtensionField     OPTIONAL
  * --  ...
  *      }
@@ -37,32 +37,42 @@ import { ExtensionField, _decode_ExtensionField, _encode_ExtensionField } from "
  */
 export
 class ApplyChargingArg {
+    /**
+     * @summary `aChBillingChargingCharacteristics`.
+     * @public
+     * @readonly
+     */
+    public readonly aChBillingChargingCharacteristics: AChBillingChargingCharacteristics;
+    /**
+     * @summary `sendCalculationToSCPIndication`.
+     * @public
+     * @readonly
+     */
+    public readonly sendCalculationToSCPIndication?: OPTIONAL<BOOLEAN>;
+    /**
+     * @summary `partyToCharge`.
+     * @public
+     * @readonly
+     */
+    public readonly partyToCharge?: OPTIONAL<LegID>;
+    /**
+     * @summary `extensions`.
+     * @public
+     * @readonly
+     */
+    public readonly extensions?: OPTIONAL<ExtensionField[]>;
+
     constructor (
-        /**
-         * @summary `aChBillingChargingCharacteristics`.
-         * @public
-         * @readonly
-         */
-        readonly aChBillingChargingCharacteristics: AChBillingChargingCharacteristics,
-        /**
-         * @summary `sendCalculationToSCPIndication`.
-         * @public
-         * @readonly
-         */
-        readonly sendCalculationToSCPIndication?: OPTIONAL<BOOLEAN>,
-        /**
-         * @summary `partyToCharge`.
-         * @public
-         * @readonly
-         */
-        readonly partyToCharge?: OPTIONAL<LegID>,
-        /**
-         * @summary `extensions`.
-         * @public
-         * @readonly
-         */
-        readonly extensions?: OPTIONAL<ExtensionField[]>
-    ) {}
+        aChBillingChargingCharacteristics: AChBillingChargingCharacteristics,
+        sendCalculationToSCPIndication?: OPTIONAL<BOOLEAN>,
+        partyToCharge?: OPTIONAL<LegID>,
+        extensions?: OPTIONAL<ExtensionField[]>
+    ) {
+        this.aChBillingChargingCharacteristics = aChBillingChargingCharacteristics;
+        this.sendCalculationToSCPIndication = sendCalculationToSCPIndication;
+        this.partyToCharge = partyToCharge;
+        this.extensions = extensions;
+    }
 
     /**
      * @summary Restructures an object into a ApplyChargingArg

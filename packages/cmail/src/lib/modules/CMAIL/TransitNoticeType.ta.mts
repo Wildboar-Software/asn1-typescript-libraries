@@ -44,7 +44,7 @@ export class TransitNoticeType {
    * @public
    * @readonly
    */
-  readonly digitalPostmark: DigitalPostmarkType;
+  public readonly digitalPostmark: DigitalPostmarkType;
 
   constructor(
     digitalPostmark: DigitalPostmarkType

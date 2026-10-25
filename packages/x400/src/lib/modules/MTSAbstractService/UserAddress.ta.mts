@@ -1,6 +1,6 @@
 /* eslint-disable */
 import {
-    ASN1Element as _Element,
+    type ASN1Element as _Element,
     ASN1TagClass as _TagClass,
     ASN1Construction as _Construction,
     ASN1UniversalType as _UniversalType,
@@ -16,7 +16,7 @@ import {
     _encode_UserAddress_x121,
 } from '../MTSAbstractService/UserAddress-x121.ta.mjs';
 import {
-    PSAPAddress,
+    type PSAPAddress,
     _decode_PSAPAddress,
     _encode_PSAPAddress,
 } from '../MTSAbstractService/PSAPAddress.ta.mjs';

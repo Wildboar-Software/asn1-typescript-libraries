@@ -1,5 +1,5 @@
 /* eslint-disable */
-import { OPERATION } from "../Remote-Operations-Information-Objects/OPERATION.oca.mjs";
+import { type OPERATION } from "../Remote-Operations-Information-Objects/OPERATION.oca.mjs";
 import { callTransferIdentify } from "../Call-Transfer-Operations-asn1-97/callTransferIdentify.oa.mjs";
 import { callTransferAbandon } from "../Call-Transfer-Operations-asn1-97/callTransferAbandon.oa.mjs";
 import { callTransferInitiate } from "../Call-Transfer-Operations-asn1-97/callTransferInitiate.oa.mjs";

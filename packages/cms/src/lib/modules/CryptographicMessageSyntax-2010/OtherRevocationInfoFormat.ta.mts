@@ -1,9 +1,9 @@
 /* eslint-disable */
 import {
     ASN1ConstructionError as _ConstructionError,
-    ASN1Element as _Element,
+    type ASN1Element as _Element,
     ASN1TagClass as _TagClass,
-    OBJECT_IDENTIFIER,
+    type OBJECT_IDENTIFIER,
 } from "@wildboar/asn1";
 import * as $ from "@wildboar/asn1/functional";
 
@@ -25,20 +25,26 @@ import * as $ from "@wildboar/asn1/functional";
  *
  */
 export class OtherRevocationInfoFormat {
+    /**
+     * @summary `otherRevInfoFormat`.
+     * @public
+     * @readonly
+     */
+    public readonly otherRevInfoFormat: OBJECT_IDENTIFIER;
+    /**
+     * @summary `otherRevInfo`.
+     * @public
+     * @readonly
+     */
+    public readonly otherRevInfo: _Element;
+
     constructor(
-        /**
-         * @summary `otherRevInfoFormat`.
-         * @public
-         * @readonly
-         */
-        readonly otherRevInfoFormat: OBJECT_IDENTIFIER,
-        /**
-         * @summary `otherRevInfo`.
-         * @public
-         * @readonly
-         */
-        readonly otherRevInfo: _Element
-    ) {}
+        otherRevInfoFormat: OBJECT_IDENTIFIER,
+        otherRevInfo: _Element
+    ) {
+        this.otherRevInfoFormat = otherRevInfoFormat;
+        this.otherRevInfo = otherRevInfo;
+    }
 
     /**
      * @summary Restructures an object into a OtherRevocationInfoFormat

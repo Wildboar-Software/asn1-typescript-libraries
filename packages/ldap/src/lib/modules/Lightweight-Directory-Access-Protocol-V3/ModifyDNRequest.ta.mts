@@ -1,7 +1,7 @@
 /* eslint-disable */
 import {
-  OPTIONAL,
-  BOOLEAN,
+  type OPTIONAL,
+  type BOOLEAN,
   ASN1Element as _Element,
   ASN1TagClass as _TagClass,
   ASN1Construction as _Construction,
@@ -13,12 +13,12 @@ import {
 } from '@wildboar/asn1';
 import * as $ from '@wildboar/asn1/functional';
 import {
-  LDAPDN,
+  type LDAPDN,
   _decode_LDAPDN,
   _encode_LDAPDN,
 } from '../Lightweight-Directory-Access-Protocol-V3/LDAPDN.ta.mjs';
 import {
-  RelativeLDAPDN,
+  type RelativeLDAPDN,
   _decode_RelativeLDAPDN,
   _encode_RelativeLDAPDN,
 } from '../Lightweight-Directory-Access-Protocol-V3/RelativeLDAPDN.ta.mjs';
@@ -55,7 +55,7 @@ export class ModifyDNRequest {
    * @public
    * @readonly
    */
-  readonly entry: LDAPDN;
+  public readonly entry: LDAPDN;
   /**
    * @summary `newrdn`.
    * @description
@@ -66,7 +66,7 @@ export class ModifyDNRequest {
    * @public
    * @readonly
    */
-  readonly newrdn: RelativeLDAPDN;
+  public readonly newrdn: RelativeLDAPDN;
   /**
    * @summary `deleteoldrdn`.
    * @description
@@ -77,7 +77,7 @@ export class ModifyDNRequest {
    * @public
    * @readonly
    */
-  readonly deleteoldrdn: BOOLEAN;
+  public readonly deleteoldrdn: BOOLEAN;
   /**
    * @summary `newSuperior`.
    * @description
@@ -88,13 +88,13 @@ export class ModifyDNRequest {
    * @public
    * @readonly
    */
-  readonly newSuperior?: OPTIONAL<LDAPDN>;
+  public readonly newSuperior?: OPTIONAL<LDAPDN>;
   /**
    * @summary Extensions that are not recognized.
    * @public
    * @readonly
    */
-  readonly _unrecognizedExtensionsList: _Element[];
+  public readonly _unrecognizedExtensionsList: _Element[];
 
   constructor(
     entry: LDAPDN,

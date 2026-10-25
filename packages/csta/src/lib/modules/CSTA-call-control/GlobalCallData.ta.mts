@@ -2,16 +2,16 @@
 
 import * as $ from "@wildboar/asn1/functional";
 import {
-    OPTIONAL,
-    SEQUENCE,
-    SET,
-    IA5String,
-    ASN1Element as _Element,
+    type OPTIONAL,
+    type SEQUENCE,
+    type SET,
+    type IA5String,
+    type ASN1Element as _Element,
     ASN1TagClass as _TagClass
 } from "@wildboar/asn1";
-import { GlobalCallLinkageID, _decode_GlobalCallLinkageID, _encode_GlobalCallLinkageID } from "../CSTA-call-control/GlobalCallLinkageID.ta.mjs";
+import { type GlobalCallLinkageID, _decode_GlobalCallLinkageID, _encode_GlobalCallLinkageID } from "../CSTA-call-control/GlobalCallLinkageID.ta.mjs";
 
-import { TimeInfo, _decode_TimeInfo, _encode_TimeInfo } from "../CSTA-security/TimeInfo.ta.mjs";
+import { type TimeInfo, _decode_TimeInfo, _encode_TimeInfo } from "../CSTA-security/TimeInfo.ta.mjs";
 
 
 
@@ -31,7 +31,7 @@ import { TimeInfo, _decode_TimeInfo, _encode_TimeInfo } from "../CSTA-security/T
  * 
  * ```asn1
  * GlobalCallData ::= SEQUENCE 
- * {    globalCallSwitchingSubDomainName        IA5String (SIZE(1..64))        OPTIONAL, 
+ * {    globalCallSwitchingSubDomainName        IA5String (SIZE(1..64))        type OPTIONAL, 
  *     globalCallLinkageID                GlobalCallLinkageID, 
  *     callLinkageIDTimestamp                TimeInfo            OPTIONAL }
  * ```
@@ -40,44 +40,52 @@ import { TimeInfo, _decode_TimeInfo, _encode_TimeInfo } from "../CSTA-security/T
  */
 export
 class GlobalCallData {
+    /**
+     * @summary `globalCallSwitchingSubDomainName`.
+     * @description
+     *
+     * Name of the sub-domain that created this global call
+     * data. Required if `globalCallLinkageID` is not itself
+     * globally unique; otherwise optional. ECMA-269 §12.2.5.
+     *
+     * @public
+     * @readonly
+     */
+    public readonly globalCallSwitchingSubDomainName: OPTIONAL<IA5String>;
+    /**
+     * @summary `globalCallLinkageID`.
+     * @description
+     *
+     * Sub-domain-specific or H.225 globally unique linkage ID.
+     * Max length of the sub-domain form comes from capability
+     * exchange. ECMA-269 §12.2.5.
+     *
+     * @public
+     * @readonly
+     */
+    public readonly globalCallLinkageID: GlobalCallLinkageID;
+    /**
+     * @summary `callLinkageIDTimestamp`.
+     * @description
+     *
+     * Time this `globalCallData` was created or last updated.
+     * Format as `TimeInfo` (ECMA-269 §12.2.29). ECMA-269
+     * §12.2.5.
+     *
+     * @public
+     * @readonly
+     */
+    public readonly callLinkageIDTimestamp?: OPTIONAL<TimeInfo>;
+
     constructor (
-        /**
-         * @summary `globalCallSwitchingSubDomainName`.
-         * @description
-         *
-         * Name of the sub-domain that created this global call
-         * data. Required if `globalCallLinkageID` is not itself
-         * globally unique; otherwise optional. ECMA-269 §12.2.5.
-         *
-         * @public
-         * @readonly
-         */
-        readonly globalCallSwitchingSubDomainName: OPTIONAL<IA5String>,
-        /**
-         * @summary `globalCallLinkageID`.
-         * @description
-         *
-         * Sub-domain-specific or H.225 globally unique linkage ID.
-         * Max length of the sub-domain form comes from capability
-         * exchange. ECMA-269 §12.2.5.
-         *
-         * @public
-         * @readonly
-         */
-        readonly globalCallLinkageID: GlobalCallLinkageID,
-        /**
-         * @summary `callLinkageIDTimestamp`.
-         * @description
-         *
-         * Time this `globalCallData` was created or last updated.
-         * Format as `TimeInfo` (ECMA-269 §12.2.29). ECMA-269
-         * §12.2.5.
-         *
-         * @public
-         * @readonly
-         */
-        readonly callLinkageIDTimestamp?: OPTIONAL<TimeInfo>
-    ) {}
+        globalCallSwitchingSubDomainName: OPTIONAL<IA5String>,
+        globalCallLinkageID: GlobalCallLinkageID,
+        callLinkageIDTimestamp?: OPTIONAL<TimeInfo>
+    ) {
+        this.globalCallSwitchingSubDomainName = globalCallSwitchingSubDomainName;
+        this.globalCallLinkageID = globalCallLinkageID;
+        this.callLinkageIDTimestamp = callLinkageIDTimestamp;
+    }
 
     /**
      * @summary Restructures an object into a GlobalCallData

@@ -1,13 +1,13 @@
 /* eslint-disable */
 import {
-    ASN1Element as _Element,
+    type ASN1Element as _Element,
     ASN1TagClass as _TagClass,
-    OBJECT_IDENTIFIER,
-    OPTIONAL,
+    type OBJECT_IDENTIFIER,
+    type OPTIONAL,
 } from "@wildboar/asn1";
 import * as $ from "@wildboar/asn1/functional";
 import {
-    AttributeType,
+    type AttributeType,
     _decode_AttributeType,
     _encode_AttributeType,
 } from "../InformationFramework/AttributeType.ta.mjs";
@@ -36,32 +36,42 @@ import {
  *
  */
 export class MRSubstitution {
+    /**
+     * @summary `attribute`.
+     * @public
+     * @readonly
+     */
+    public readonly attribute: AttributeType;
+    /**
+     * @summary `oldMatchingRule`.
+     * @public
+     * @readonly
+     */
+    public readonly oldMatchingRule?: OPTIONAL<OBJECT_IDENTIFIER>;
+    /**
+     * @summary `newMatchingRule`.
+     * @public
+     * @readonly
+     */
+    public readonly newMatchingRule?: OPTIONAL<OBJECT_IDENTIFIER>;
+    /**
+     * @summary Extensions that are not recognized.
+     * @public
+     * @readonly
+     */
+    public readonly _unrecognizedExtensionsList: _Element[];
+
     constructor(
-        /**
-         * @summary `attribute`.
-         * @public
-         * @readonly
-         */
-        readonly attribute: AttributeType,
-        /**
-         * @summary `oldMatchingRule`.
-         * @public
-         * @readonly
-         */
-        readonly oldMatchingRule?: OPTIONAL<OBJECT_IDENTIFIER>,
-        /**
-         * @summary `newMatchingRule`.
-         * @public
-         * @readonly
-         */
-        readonly newMatchingRule?: OPTIONAL<OBJECT_IDENTIFIER>,
-        /**
-         * @summary Extensions that are not recognized.
-         * @public
-         * @readonly
-         */
-        readonly _unrecognizedExtensionsList: _Element[] = []
-    ) {}
+        attribute: AttributeType,
+        oldMatchingRule?: OPTIONAL<OBJECT_IDENTIFIER>,
+        newMatchingRule?: OPTIONAL<OBJECT_IDENTIFIER>,
+        _unrecognizedExtensionsList: _Element[] = []
+    ) {
+        this.attribute = attribute;
+        this.oldMatchingRule = oldMatchingRule;
+        this.newMatchingRule = newMatchingRule;
+        this._unrecognizedExtensionsList = _unrecognizedExtensionsList;
+    }
 
     /**
      * @summary Restructures an object into a MRSubstitution

@@ -1,6 +1,6 @@
 /* eslint-disable */
 import {
-    INTEGER
+    type INTEGER
 } from "@wildboar/asn1";
 import * as $ from "@wildboar/asn1/functional";
 
@@ -40,7 +40,7 @@ type CltuGetParameter_parProtocolAbortMode_parameterValue = INTEGER;
  * @type {number}
  */
 export
-const CltuGetParameter_parProtocolAbortMode_parameterValue_abort: CltuGetParameter_parProtocolAbortMode_parameterValue = 0; /* LONG_NAMED_INTEGER_VALUE */
+const CltuGetParameter_parProtocolAbortMode_parameterValue_abort: 0 = 0 satisfies CltuGetParameter_parProtocolAbortMode_parameterValue; /* LONG_NAMED_INTEGER_VALUE */
 
 /**
  * @summary CltuGetParameter_parProtocolAbortMode_parameterValue_abort
@@ -52,7 +52,7 @@ const CltuGetParameter_parProtocolAbortMode_parameterValue_abort: CltuGetParamet
  * @type {number}
  */
 export
-const abort: CltuGetParameter_parProtocolAbortMode_parameterValue = CltuGetParameter_parProtocolAbortMode_parameterValue_abort; /* SHORT_NAMED_INTEGER_VALUE */
+const abort: 0 = CltuGetParameter_parProtocolAbortMode_parameterValue_abort; /* SHORT_NAMED_INTEGER_VALUE */
 
 /**
  * @summary CltuGetParameter_parProtocolAbortMode_parameterValue_continue_
@@ -68,7 +68,7 @@ const abort: CltuGetParameter_parProtocolAbortMode_parameterValue = CltuGetParam
  * @type {number}
  */
 export
-const CltuGetParameter_parProtocolAbortMode_parameterValue_continue_: CltuGetParameter_parProtocolAbortMode_parameterValue = 1; /* LONG_NAMED_INTEGER_VALUE */
+const CltuGetParameter_parProtocolAbortMode_parameterValue_continue_: 1 = 1 satisfies CltuGetParameter_parProtocolAbortMode_parameterValue; /* LONG_NAMED_INTEGER_VALUE */
 
 /**
  * @summary CltuGetParameter_parProtocolAbortMode_parameterValue_continue_
@@ -80,7 +80,7 @@ const CltuGetParameter_parProtocolAbortMode_parameterValue_continue_: CltuGetPar
  * @type {number}
  */
 export
-const continue_: CltuGetParameter_parProtocolAbortMode_parameterValue = CltuGetParameter_parProtocolAbortMode_parameterValue_continue_; /* SHORT_NAMED_INTEGER_VALUE */
+const continue_: 1 = CltuGetParameter_parProtocolAbortMode_parameterValue_continue_; /* SHORT_NAMED_INTEGER_VALUE */
 export const _decode_CltuGetParameter_parProtocolAbortMode_parameterValue: $.ASN1Decoder<CltuGetParameter_parProtocolAbortMode_parameterValue> = $._decodeInteger;
 export const _encode_CltuGetParameter_parProtocolAbortMode_parameterValue: $.ASN1Encoder<CltuGetParameter_parProtocolAbortMode_parameterValue> = $._encodeInteger;
 

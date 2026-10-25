@@ -119,7 +119,7 @@ type ChangeCondition = _enum_for_ChangeCondition;
  * @enum {number}
  */
 export
-const ChangeCondition = _enum_for_ChangeCondition;
+const ChangeCondition: typeof _enum_for_ChangeCondition = _enum_for_ChangeCondition;
 
 /**
  * @summary ChangeCondition_serviceChange
@@ -133,7 +133,7 @@ const ChangeCondition = _enum_for_ChangeCondition;
  * @type {number}
  */
 export
-const ChangeCondition_serviceChange: ChangeCondition = ChangeCondition.serviceChange; /* LONG_NAMED_ENUMERATED_VALUE */
+const ChangeCondition_serviceChange: _enum_for_ChangeCondition.serviceChange = ChangeCondition.serviceChange; /* LONG_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary serviceChange
@@ -141,7 +141,7 @@ const ChangeCondition_serviceChange: ChangeCondition = ChangeCondition.serviceCh
  * @type {number}
  */
 export
-const serviceChange: ChangeCondition = ChangeCondition.serviceChange; /* SHORT_NAMED_ENUMERATED_VALUE */
+const serviceChange: _enum_for_ChangeCondition.serviceChange = ChangeCondition.serviceChange; /* SHORT_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary ChangeCondition_volumeLimit
@@ -156,7 +156,7 @@ const serviceChange: ChangeCondition = ChangeCondition.serviceChange; /* SHORT_N
  * @type {number}
  */
 export
-const ChangeCondition_volumeLimit: ChangeCondition = ChangeCondition.volumeLimit; /* LONG_NAMED_ENUMERATED_VALUE */
+const ChangeCondition_volumeLimit: _enum_for_ChangeCondition.volumeLimit = ChangeCondition.volumeLimit; /* LONG_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary volumeLimit
@@ -164,7 +164,7 @@ const ChangeCondition_volumeLimit: ChangeCondition = ChangeCondition.volumeLimit
  * @type {number}
  */
 export
-const volumeLimit: ChangeCondition = ChangeCondition.volumeLimit; /* SHORT_NAMED_ENUMERATED_VALUE */
+const volumeLimit: _enum_for_ChangeCondition.volumeLimit = ChangeCondition.volumeLimit; /* SHORT_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary ChangeCondition_timeLimit
@@ -179,7 +179,7 @@ const volumeLimit: ChangeCondition = ChangeCondition.volumeLimit; /* SHORT_NAMED
  * @type {number}
  */
 export
-const ChangeCondition_timeLimit: ChangeCondition = ChangeCondition.timeLimit; /* LONG_NAMED_ENUMERATED_VALUE */
+const ChangeCondition_timeLimit: _enum_for_ChangeCondition.timeLimit = ChangeCondition.timeLimit; /* LONG_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary timeLimit
@@ -187,7 +187,7 @@ const ChangeCondition_timeLimit: ChangeCondition = ChangeCondition.timeLimit; /*
  * @type {number}
  */
 export
-const timeLimit: ChangeCondition = ChangeCondition.timeLimit; /* SHORT_NAMED_ENUMERATED_VALUE */
+const timeLimit: _enum_for_ChangeCondition.timeLimit = ChangeCondition.timeLimit; /* SHORT_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary ChangeCondition_numberofTalkBurstLimit
@@ -203,7 +203,7 @@ const timeLimit: ChangeCondition = ChangeCondition.timeLimit; /* SHORT_NAMED_ENU
  * @type {number}
  */
 export
-const ChangeCondition_numberofTalkBurstLimit: ChangeCondition = ChangeCondition.numberofTalkBurstLimit; /* LONG_NAMED_ENUMERATED_VALUE */
+const ChangeCondition_numberofTalkBurstLimit: _enum_for_ChangeCondition.numberofTalkBurstLimit = ChangeCondition.numberofTalkBurstLimit; /* LONG_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary numberofTalkBurstLimit
@@ -211,7 +211,7 @@ const ChangeCondition_numberofTalkBurstLimit: ChangeCondition = ChangeCondition.
  * @type {number}
  */
 export
-const numberofTalkBurstLimit: ChangeCondition = ChangeCondition.numberofTalkBurstLimit; /* SHORT_NAMED_ENUMERATED_VALUE */
+const numberofTalkBurstLimit: _enum_for_ChangeCondition.numberofTalkBurstLimit = ChangeCondition.numberofTalkBurstLimit; /* SHORT_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary ChangeCondition_numberofActiveParticipants
@@ -225,7 +225,7 @@ const numberofTalkBurstLimit: ChangeCondition = ChangeCondition.numberofTalkBurs
  * @type {number}
  */
 export
-const ChangeCondition_numberofActiveParticipants: ChangeCondition = ChangeCondition.numberofActiveParticipants; /* LONG_NAMED_ENUMERATED_VALUE */
+const ChangeCondition_numberofActiveParticipants: _enum_for_ChangeCondition.numberofActiveParticipants = ChangeCondition.numberofActiveParticipants; /* LONG_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary numberofActiveParticipants
@@ -233,7 +233,7 @@ const ChangeCondition_numberofActiveParticipants: ChangeCondition = ChangeCondit
  * @type {number}
  */
 export
-const numberofActiveParticipants: ChangeCondition = ChangeCondition.numberofActiveParticipants; /* SHORT_NAMED_ENUMERATED_VALUE */
+const numberofActiveParticipants: _enum_for_ChangeCondition.numberofActiveParticipants = ChangeCondition.numberofActiveParticipants; /* SHORT_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary ChangeCondition_tariffTime
@@ -247,7 +247,7 @@ const numberofActiveParticipants: ChangeCondition = ChangeCondition.numberofActi
  * @type {number}
  */
 export
-const ChangeCondition_tariffTime: ChangeCondition = ChangeCondition.tariffTime; /* LONG_NAMED_ENUMERATED_VALUE */
+const ChangeCondition_tariffTime: _enum_for_ChangeCondition.tariffTime = ChangeCondition.tariffTime; /* LONG_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary tariffTime
@@ -255,7 +255,7 @@ const ChangeCondition_tariffTime: ChangeCondition = ChangeCondition.tariffTime; 
  * @type {number}
  */
 export
-const tariffTime: ChangeCondition = ChangeCondition.tariffTime; /* SHORT_NAMED_ENUMERATED_VALUE */
+const tariffTime: _enum_for_ChangeCondition.tariffTime = ChangeCondition.tariffTime; /* SHORT_NAMED_ENUMERATED_VALUE */
 
 export
 const _decode_ChangeCondition: $.ASN1Decoder<ChangeCondition> = $._decodeEnumerated;

@@ -1,9 +1,9 @@
 /* eslint-disable */
 import {
-    ASN1Element as _Element,
+    type ASN1Element as _Element,
     ASN1TagClass as _TagClass,
-    OCTET_STRING,
-    OPTIONAL,
+    type OCTET_STRING,
+    type OPTIONAL,
     ASN1SizeError
 } from "@wildboar/asn1";
 import * as $ from "@wildboar/asn1/functional";
@@ -29,10 +29,10 @@ import * as $ from "@wildboar/asn1/functional";
  * ```asn1
  * ProtConfigOptions ::= SEQUENCE
  * {
- *     ueToNetwork                           [1]  OCTET STRING (SIZE(1..251))        OPTIONAL,
+ *     ueToNetwork                           [1]  OCTET STRING (SIZE(1..251))        type OPTIONAL,
  *     -- This shall be coded with octet 3 onwards of the Protocol Configuration Options IE in
  *     -- accordance with 3GPP TS 24.008 [9].
- *      networkToUe                           [2]  OCTET STRING (SIZE(1..251))        OPTIONAL,
+ *      networkToUe                           [2]  OCTET STRING (SIZE(1..251))        type OPTIONAL,
  *     -- This shall be coded with octet 3 onwards of the Protocol Configuration Options IE in
  *     -- accordance with 3GPP TS 24.008 [9].
  * ...

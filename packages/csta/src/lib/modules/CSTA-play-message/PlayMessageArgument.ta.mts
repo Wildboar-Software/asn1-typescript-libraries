@@ -2,18 +2,18 @@
 
 import * as $ from "@wildboar/asn1/functional";
 import {
-    OPTIONAL,
-    INTEGER,
-    SEQUENCE,
-    SET,
-    ASN1Element as _Element,
+    type OPTIONAL,
+    type INTEGER,
+    type SEQUENCE,
+    type SET,
+    type ASN1Element as _Element,
     ASN1TagClass as _TagClass
 } from "@wildboar/asn1";
-import { MessageID, _decode_MessageID, _encode_MessageID } from "../CSTA-device-feature-types/MessageID.ta.mjs";
+import { type MessageID, _decode_MessageID, _encode_MessageID } from "../CSTA-device-feature-types/MessageID.ta.mjs";
 
-import { ConnectionID, _decode_ConnectionID, _encode_ConnectionID } from "../CSTA-call-connection-identifiers/ConnectionID.ta.mjs";
+import { type ConnectionID, _decode_ConnectionID, _encode_ConnectionID } from "../CSTA-call-connection-identifiers/ConnectionID.ta.mjs";
 
-import { TerminatingConditions, _decode_TerminatingConditions, _encode_TerminatingConditions } from "../CSTA-device-feature-types/TerminatingConditions.ta.mjs";
+import { type TerminatingConditions, _decode_TerminatingConditions, _encode_TerminatingConditions } from "../CSTA-device-feature-types/TerminatingConditions.ta.mjs";
 
 import { CSTACommonArguments, _decode_CSTACommonArguments, _encode_CSTACommonArguments } from "../CSTA-extension-types/CSTACommonArguments.ta.mjs";
 
@@ -35,8 +35,8 @@ import { CSTACommonArguments, _decode_CSTACommonArguments, _encode_CSTACommonArg
  * PlayMessageArgument ::= SEQUENCE
  * {    messageToBePlayed        MessageID,
  *     overConnection            ConnectionID,
- *     duration            INTEGER                    OPTIONAL,
- *     termination            TerminatingConditions            OPTIONAL,
+ *     duration            INTEGER                    type OPTIONAL,
+ *     termination            TerminatingConditions            type OPTIONAL,
  *     extensions            CSTACommonArguments            OPTIONAL }
  * ```
  * 
@@ -44,59 +44,71 @@ import { CSTACommonArguments, _decode_CSTACommonArguments, _encode_CSTACommonArg
  */
 export
 class PlayMessageArgument {
+    /**
+     * @summary `messageToBePlayed`.
+     * @description
+     *
+     * Message to play (ECMA-269 §26.1.6.1).
+     *
+     * @public
+     * @readonly
+     */
+    public readonly messageToBePlayed: MessageID;
+    /**
+     * @summary `overConnection`.
+     * @description
+     *
+     * Connection on which to play (ECMA-269 §26.1.6.1).
+     *
+     * @public
+     * @readonly
+     */
+    public readonly overConnection: ConnectionID;
+    /**
+     * @summary `duration`.
+     * @description
+     *
+     * Play duration, when specified (ECMA-269 §26.1.6.1).
+     *
+     * @public
+     * @readonly
+     */
+    public readonly duration?: OPTIONAL<INTEGER>;
+    /**
+     * @summary `termination`.
+     * @description
+     *
+     * Conditions that stop playback (ECMA-269 §26.1.6.1).
+     *
+     * @public
+     * @readonly
+     */
+    public readonly termination?: OPTIONAL<TerminatingConditions>;
+    /**
+     * @summary `extensions`.
+     * @description
+     *
+     * CSTACommonArguments carrying the service-table security and
+     * privateData parameters.
+     *
+     * @public
+     * @readonly
+     */
+    public readonly extensions?: OPTIONAL<CSTACommonArguments>;
+
     constructor (
-        /**
-         * @summary `messageToBePlayed`.
-         * @description
-         *
-         * Message to play (ECMA-269 §26.1.6.1).
-         *
-         * @public
-         * @readonly
-         */
-        readonly messageToBePlayed: MessageID,
-        /**
-         * @summary `overConnection`.
-         * @description
-         *
-         * Connection on which to play (ECMA-269 §26.1.6.1).
-         *
-         * @public
-         * @readonly
-         */
-        readonly overConnection: ConnectionID,
-        /**
-         * @summary `duration`.
-         * @description
-         *
-         * Play duration, when specified (ECMA-269 §26.1.6.1).
-         *
-         * @public
-         * @readonly
-         */
-        readonly duration?: OPTIONAL<INTEGER>,
-        /**
-         * @summary `termination`.
-         * @description
-         *
-         * Conditions that stop playback (ECMA-269 §26.1.6.1).
-         *
-         * @public
-         * @readonly
-         */
-        readonly termination?: OPTIONAL<TerminatingConditions>,
-        /**
-         * @summary `extensions`.
-         * @description
-         *
-         * CSTACommonArguments carrying the service-table security and
-         * privateData parameters.
-         *
-         * @public
-         * @readonly
-         */
-        readonly extensions?: OPTIONAL<CSTACommonArguments>
-    ) {}
+        messageToBePlayed: MessageID,
+        overConnection: ConnectionID,
+        duration?: OPTIONAL<INTEGER>,
+        termination?: OPTIONAL<TerminatingConditions>,
+        extensions?: OPTIONAL<CSTACommonArguments>
+    ) {
+        this.messageToBePlayed = messageToBePlayed;
+        this.overConnection = overConnection;
+        this.duration = duration;
+        this.termination = termination;
+        this.extensions = extensions;
+    }
 
     /**
      * @summary Restructures an object into a PlayMessageArgument

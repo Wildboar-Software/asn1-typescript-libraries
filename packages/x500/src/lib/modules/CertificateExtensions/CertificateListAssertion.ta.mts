@@ -1,12 +1,12 @@
 /* eslint-disable */
 import {
-    ASN1Element as _Element,
+    type ASN1Element as _Element,
     ASN1TagClass as _TagClass,
-    OPTIONAL,
+    type OPTIONAL,
 } from "@wildboar/asn1";
 import * as $ from "@wildboar/asn1/functional";
 import {
-    Time,
+    type Time,
     _decode_Time,
     _encode_Time,
 } from "../AuthenticationFramework/Time.ta.mjs";
@@ -16,22 +16,22 @@ import {
     _encode_AuthorityKeyIdentifier,
 } from "../CertificateExtensions/AuthorityKeyIdentifier.ta.mjs";
 import {
-    CRLNumber,
+    type CRLNumber,
     _decode_CRLNumber,
     _encode_CRLNumber,
 } from "../CertificateExtensions/CRLNumber.ta.mjs";
 import {
-    DistributionPointName,
+    type DistributionPointName,
     _decode_DistributionPointName,
     _encode_DistributionPointName,
 } from "../CertificateExtensions/DistributionPointName.ta.mjs";
 import {
-    ReasonFlags,
+    type ReasonFlags,
     _decode_ReasonFlags,
     _encode_ReasonFlags,
 } from "../CertificateExtensions/ReasonFlags.ta.mjs";
 import {
-    Name,
+    type Name,
     _decode_Name,
     _encode_Name,
 } from "../InformationFramework/Name.ta.mjs";
@@ -49,11 +49,11 @@ import {
  *
  * ```asn1
  * CertificateListAssertion ::= SEQUENCE {
- *   issuer                       Name                   OPTIONAL,
- *   minCRLNumber            [0]  CRLNumber              OPTIONAL,
- *   maxCRLNumber            [1]  CRLNumber              OPTIONAL,
- *   reasonFlags                  ReasonFlags            OPTIONAL,
- *   dateAndTime                  Time                   OPTIONAL,
+ *   issuer                       Name                   type OPTIONAL,
+ *   minCRLNumber            [0]  CRLNumber              type OPTIONAL,
+ *   maxCRLNumber            [1]  CRLNumber              type OPTIONAL,
+ *   reasonFlags                  ReasonFlags            type OPTIONAL,
+ *   dateAndTime                  Time                   type OPTIONAL,
  *   distributionPoint       [2]  DistributionPointName  OPTIONAL,
  *   authorityKeyIdentifier  [3]  AuthorityKeyIdentifier OPTIONAL,
  *   ... }
@@ -61,69 +61,87 @@ import {
  *
  */
 export class CertificateListAssertion {
+    /**
+     * @summary `issuer`.
+     * @public
+     * @readonly
+     */
+    public readonly issuer?: OPTIONAL<Name>;
+    /**
+     * @summary `minCRLNumber`.
+     * @description
+     *
+     * Stored cRLNumber ≥ this. No cRLNumber extension => no match.
+     *
+     * @public
+     * @readonly
+     */
+    public readonly minCRLNumber?: OPTIONAL<CRLNumber>;
+    /**
+     * @summary `maxCRLNumber`.
+     * @description
+     *
+     * Stored cRLNumber ≤ this. No cRLNumber extension => no match.
+     *
+     * @public
+     * @readonly
+     */
+    public readonly maxCRLNumber?: OPTIONAL<CRLNumber>;
+    /**
+     * @summary `reasonFlags`.
+     * @description
+     *
+     * Any presented 1-bit in IDP onlySomeReasons, or match if CRL has no
+     * reasons/IDP.
+     *
+     * @public
+     * @readonly
+     */
+    public readonly reasonFlags?: OPTIONAL<ReasonFlags>;
+    /**
+     * @summary `dateAndTime`.
+     * @public
+     * @readonly
+     */
+    public readonly dateAndTime?: OPTIONAL<Time>;
+    /**
+     * @summary `distributionPoint`.
+     * @public
+     * @readonly
+     */
+    public readonly distributionPoint?: OPTIONAL<DistributionPointName>;
+    /**
+     * @summary `authorityKeyIdentifier`.
+     * @public
+     * @readonly
+     */
+    public readonly authorityKeyIdentifier?: OPTIONAL<AuthorityKeyIdentifier>;
+    /**
+     * @summary Extensions that are not recognized.
+     * @public
+     * @readonly
+     */
+    public readonly _unrecognizedExtensionsList: _Element[];
+
     constructor(
-        /**
-         * @summary `issuer`.
-         * @public
-         * @readonly
-         */
-        readonly issuer?: OPTIONAL<Name>,
-        /**
-         * @summary `minCRLNumber`.
-         * @description
-         *
-         * Stored cRLNumber ≥ this. No cRLNumber extension => no match.
-         *
-         * @public
-         * @readonly
-         */
-        readonly minCRLNumber?: OPTIONAL<CRLNumber>,
-        /**
-         * @summary `maxCRLNumber`.
-         * @description
-         *
-         * Stored cRLNumber ≤ this. No cRLNumber extension => no match.
-         *
-         * @public
-         * @readonly
-         */
-        readonly maxCRLNumber?: OPTIONAL<CRLNumber>,
-        /**
-         * @summary `reasonFlags`.
-         * @description
-         *
-         * Any presented 1-bit in IDP onlySomeReasons, or match if CRL has no
-         * reasons/IDP.
-         *
-         * @public
-         * @readonly
-         */
-        readonly reasonFlags?: OPTIONAL<ReasonFlags>,
-        /**
-         * @summary `dateAndTime`.
-         * @public
-         * @readonly
-         */
-        readonly dateAndTime?: OPTIONAL<Time>,
-        /**
-         * @summary `distributionPoint`.
-         * @public
-         * @readonly
-         */
-        readonly distributionPoint?: OPTIONAL<DistributionPointName>,
-        /**
-         * @summary `authorityKeyIdentifier`.
-         * @public
-         * @readonly
-         */
-        readonly authorityKeyIdentifier?: OPTIONAL<AuthorityKeyIdentifier>,
-        /**
-         * @summary Extensions that are not recognized.
-         * @public
-         * @readonly
-         */
-        readonly _unrecognizedExtensionsList: _Element[] = []
-    ) {}
+        issuer?: OPTIONAL<Name>,
+        minCRLNumber?: OPTIONAL<CRLNumber>,
+        maxCRLNumber?: OPTIONAL<CRLNumber>,
+        reasonFlags?: OPTIONAL<ReasonFlags>,
+        dateAndTime?: OPTIONAL<Time>,
+        distributionPoint?: OPTIONAL<DistributionPointName>,
+        authorityKeyIdentifier?: OPTIONAL<AuthorityKeyIdentifier>,
+        _unrecognizedExtensionsList: _Element[] = []
+    ) {
+        this.issuer = issuer;
+        this.minCRLNumber = minCRLNumber;
+        this.maxCRLNumber = maxCRLNumber;
+        this.reasonFlags = reasonFlags;
+        this.dateAndTime = dateAndTime;
+        this.distributionPoint = distributionPoint;
+        this.authorityKeyIdentifier = authorityKeyIdentifier;
+        this._unrecognizedExtensionsList = _unrecognizedExtensionsList;
+    }
 
     /**
      * @summary Restructures an object into a CertificateListAssertion

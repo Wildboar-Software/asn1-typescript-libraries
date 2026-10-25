@@ -1,7 +1,7 @@
 /* eslint-disable */
 import {
-    OPTIONAL,
-    ASN1Element as _Element,
+    type OPTIONAL,
+    type ASN1Element as _Element,
     ASN1TagClass as _TagClass,
     ASN1Construction as _Construction,
     ASN1UniversalType as _UniversalType,
@@ -12,7 +12,7 @@ import {
 } from '@wildboar/asn1';
 import * as $ from '@wildboar/asn1/functional';
 import {
-    NormalValue_value,
+    type NormalValue_value,
     _decode_NormalValue_value,
     _encode_NormalValue_value,
 } from '../E-health-Data-Message/NormalValue-value.ta.mjs';
@@ -47,28 +47,34 @@ import {
  *
  */
 export class NormalValue {
+    /**
+     * @summary `value`.
+     * @description
+     *
+     * Range, low-limit, or high-limit of the normal interval.
+     *
+     * @public
+     * @readonly
+     */
+    public readonly value: NormalValue_value;
+    /**
+     * @summary `conditions`.
+     * @description
+     *
+     * Optional conditions under which this interval applies.
+     *
+     * @public
+     * @readonly
+     */
+    public readonly conditions?: OPTIONAL<Condition[]>;
+
     constructor(
-        /**
-         * @summary `value`.
-         * @description
-         *
-         * Range, low-limit, or high-limit of the normal interval.
-         *
-         * @public
-         * @readonly
-         */
-        readonly value: NormalValue_value,
-        /**
-         * @summary `conditions`.
-         * @description
-         *
-         * Optional conditions under which this interval applies.
-         *
-         * @public
-         * @readonly
-         */
-        readonly conditions?: OPTIONAL<Condition[]>
-    ) {}
+        value: NormalValue_value,
+        conditions?: OPTIONAL<Condition[]>
+    ) {
+        this.value = value;
+        this.conditions = conditions;
+    }
 
     /**
      * @summary Restructures an object into a NormalValue

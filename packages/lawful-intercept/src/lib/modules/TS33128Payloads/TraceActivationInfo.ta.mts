@@ -1,16 +1,16 @@
 /* eslint-disable */
 import {
-    BIT_STRING,
-    OCTET_STRING,
-    OPTIONAL,
-    ASN1Element as _Element,
+    type BIT_STRING,
+    type OCTET_STRING,
+    type OPTIONAL,
+    type ASN1Element as _Element,
     ASN1TagClass as _TagClass,
     ASN1SizeError
 } from "@wildboar/asn1";
 import * as $ from "@wildboar/asn1/functional";
 import { TraceDepth, _decode_TraceDepth, _encode_TraceDepth, _enum_for_TraceDepth } from "../TS33128Payloads/TraceDepth.ta.mjs";
 // export { TraceDepth, _enum_for_TraceDepth, TraceDepth_minimum /* IMPORTED_LONG_ENUMERATION_ITEM */, minimum /* IMPORTED_SHORT_ENUMERATION_ITEM */, TraceDepth_medium /* IMPORTED_LONG_ENUMERATION_ITEM */, medium /* IMPORTED_SHORT_ENUMERATION_ITEM */, TraceDepth_maximum /* IMPORTED_LONG_ENUMERATION_ITEM */, maximum /* IMPORTED_SHORT_ENUMERATION_ITEM */, TraceDepth_minimumWithoutVendorSpecificExtension /* IMPORTED_LONG_ENUMERATION_ITEM */, minimumWithoutVendorSpecificExtension /* IMPORTED_SHORT_ENUMERATION_ITEM */, TraceDepth_mediumWithoutVendorSpecificExtension /* IMPORTED_LONG_ENUMERATION_ITEM */, mediumWithoutVendorSpecificExtension /* IMPORTED_SHORT_ENUMERATION_ITEM */, TraceDepth_maximumWithoutVendorSpecificExtension /* IMPORTED_LONG_ENUMERATION_ITEM */, maximumWithoutVendorSpecificExtension /* IMPORTED_SHORT_ENUMERATION_ITEM */, _decode_TraceDepth, _encode_TraceDepth } from "../TS33128Payloads/TraceDepth.ta.mjs";
-import { IPAddress, _decode_IPAddress, _encode_IPAddress } from "../TS33128Payloads/IPAddress.ta.mjs";
+import { type IPAddress, _decode_IPAddress, _encode_IPAddress } from "../TS33128Payloads/IPAddress.ta.mjs";
 // export { IPAddress, _decode_IPAddress, _encode_IPAddress } from "../TS33128Payloads/IPAddress.ta.mjs";
 import { MDTConfiguration, _decode_MDTConfiguration, _encode_MDTConfiguration, _enum_for_MDTConfiguration } from "../TS33128Payloads/MDTConfiguration.ta.mjs";
 // export { MDTConfiguration, _enum_for_MDTConfiguration, MDTConfiguration_mDTConfigurationNR /* IMPORTED_LONG_ENUMERATION_ITEM */, mDTConfigurationNR /* IMPORTED_SHORT_ENUMERATION_ITEM */, MDTConfiguration_mDTConfigurationEUTRA /* IMPORTED_LONG_ENUMERATION_ITEM */, mDTConfigurationEUTRA /* IMPORTED_SHORT_ENUMERATION_ITEM */, _decode_MDTConfiguration, _encode_MDTConfiguration } from "../TS33128Payloads/MDTConfiguration.ta.mjs";
@@ -119,13 +119,13 @@ class TraceActivationInfo {
          * @static
          */
 
-    public static _enum_for_traceDepth = _enum_for_TraceDepth;        /**
+    public static _enum_for_traceDepth: typeof _enum_for_TraceDepth = _enum_for_TraceDepth;        /**
          * @summary The enum used as the type of the component `mDTConfiguration`
          * @public
          * @static
          */
 
-    public static _enum_for_mDTConfiguration = _enum_for_MDTConfiguration;
+    public static _enum_for_mDTConfiguration: typeof _enum_for_MDTConfiguration = _enum_for_MDTConfiguration;
 }
 
 /**

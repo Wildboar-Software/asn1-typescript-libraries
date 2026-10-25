@@ -1,8 +1,8 @@
 /* eslint-disable */
 import {
-    OPTIONAL,
-    NULL,
-    ASN1Element as _Element,
+    type OPTIONAL,
+    type NULL,
+    type ASN1Element as _Element,
     ASN1TagClass as _TagClass,
     ASN1Construction as _Construction,
     ASN1UniversalType as _UniversalType,
@@ -38,44 +38,54 @@ import * as $ from "@wildboar/asn1/functional";
  */
 export
 class FieldParamIdent {
+    /**
+     * @summary `capability`.
+     * @description
+     * Invite `field-definition-capability` (default `"no"`).
+     * ISO/IEC 9040:1997 §18.1, §18.2.2.
+     * @public
+     * @readonly
+     */
+    public readonly capability?: OPTIONAL<NULL>;
+    /**
+     * @summary `maxFields`.
+     * @description
+     * Invite `max-fields` (F-dimension bound; default 1).
+     * ISO/IEC 9040:1997 §18.2.2.
+     * @public
+     * @readonly
+     */
+    public readonly maxFields?: OPTIONAL<NULL>;
+    /**
+     * @summary `maxFieldElements`.
+     * @description
+     * Invite `max-field-elements` (S-dimension bound; default 1).
+     * ISO/IEC 9040:1997 §18.2.2.
+     * @public
+     * @readonly
+     */
+    public readonly maxFieldElements?: OPTIONAL<NULL>;
+    /**
+     * @summary `accessOutside`.
+     * @description
+     * Invite `access-outside-fields` (default `"allowed"`).
+     * ISO/IEC 9040:1997 §18.2.2, §19.5.
+     * @public
+     * @readonly
+     */
+    public readonly accessOutside?: OPTIONAL<NULL>;
+
     constructor (
-        /**
-         * @summary `capability`.
-         * @description
-         * Invite `field-definition-capability` (default `"no"`).
-         * ISO/IEC 9040:1997 §18.1, §18.2.2.
-         * @public
-         * @readonly
-         */
-        readonly capability?: OPTIONAL<NULL>,
-        /**
-         * @summary `maxFields`.
-         * @description
-         * Invite `max-fields` (F-dimension bound; default 1).
-         * ISO/IEC 9040:1997 §18.2.2.
-         * @public
-         * @readonly
-         */
-        readonly maxFields?: OPTIONAL<NULL>,
-        /**
-         * @summary `maxFieldElements`.
-         * @description
-         * Invite `max-field-elements` (S-dimension bound; default 1).
-         * ISO/IEC 9040:1997 §18.2.2.
-         * @public
-         * @readonly
-         */
-        readonly maxFieldElements?: OPTIONAL<NULL>,
-        /**
-         * @summary `accessOutside`.
-         * @description
-         * Invite `access-outside-fields` (default `"allowed"`).
-         * ISO/IEC 9040:1997 §18.2.2, §19.5.
-         * @public
-         * @readonly
-         */
-        readonly accessOutside?: OPTIONAL<NULL>
-    ) {}
+        capability?: OPTIONAL<NULL>,
+        maxFields?: OPTIONAL<NULL>,
+        maxFieldElements?: OPTIONAL<NULL>,
+        accessOutside?: OPTIONAL<NULL>
+    ) {
+        this.capability = capability;
+        this.maxFields = maxFields;
+        this.maxFieldElements = maxFieldElements;
+        this.accessOutside = accessOutside;
+    }
 
     /**
      * @summary Restructures an object into a FieldParamIdent

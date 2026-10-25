@@ -1,6 +1,6 @@
 /* eslint-disable */
 import {
-    ASN1Element as _Element,
+    type ASN1Element as _Element,
     ASN1TagClass as _TagClass,
     ASN1Construction as _Construction,
     ASN1UniversalType as _UniversalType,
@@ -64,7 +64,7 @@ export type PropertyList_getReplace = _enum_for_PropertyList_getReplace;
  *
  * @enum {number}
  */
-export const PropertyList_getReplace = _enum_for_PropertyList_getReplace;
+export const PropertyList_getReplace: typeof _enum_for_PropertyList_getReplace = _enum_for_PropertyList_getReplace;
 
 
 /**
@@ -75,7 +75,7 @@ export const PropertyList_getReplace = _enum_for_PropertyList_getReplace;
  * @constant
  * @type {number}
  */
-export const PropertyList_getReplace_gET: PropertyList_getReplace =
+export const PropertyList_getReplace_gET: _enum_for_PropertyList_getReplace.gET =
     PropertyList_getReplace.gET; /* LONG_NAMED_ENUMERATED_VALUE */
 
 
@@ -87,7 +87,7 @@ export const PropertyList_getReplace_gET: PropertyList_getReplace =
  * @constant
  * @type {number}
  */
-export const gET: PropertyList_getReplace =
+export const gET: _enum_for_PropertyList_getReplace.gET =
     PropertyList_getReplace.gET; /* SHORT_NAMED_ENUMERATED_VALUE */
 
 
@@ -99,7 +99,7 @@ export const gET: PropertyList_getReplace =
  * @constant
  * @type {number}
  */
-export const PropertyList_getReplace_rEPLACE: PropertyList_getReplace =
+export const PropertyList_getReplace_rEPLACE: _enum_for_PropertyList_getReplace.rEPLACE =
     PropertyList_getReplace.rEPLACE; /* LONG_NAMED_ENUMERATED_VALUE */
 
 
@@ -111,7 +111,7 @@ export const PropertyList_getReplace_rEPLACE: PropertyList_getReplace =
  * @constant
  * @type {number}
  */
-export const rEPLACE: PropertyList_getReplace =
+export const rEPLACE: _enum_for_PropertyList_getReplace.rEPLACE =
     PropertyList_getReplace.rEPLACE; /* SHORT_NAMED_ENUMERATED_VALUE */
 
 
@@ -123,7 +123,7 @@ export const rEPLACE: PropertyList_getReplace =
  * @constant
  * @type {number}
  */
-export const PropertyList_getReplace_gET_REPLACE: PropertyList_getReplace =
+export const PropertyList_getReplace_gET_REPLACE: _enum_for_PropertyList_getReplace.gET_REPLACE =
     PropertyList_getReplace.gET_REPLACE; /* LONG_NAMED_ENUMERATED_VALUE */
 
 
@@ -135,18 +135,30 @@ export const PropertyList_getReplace_gET_REPLACE: PropertyList_getReplace =
  * @constant
  * @type {number}
  */
-export const gET_REPLACE: PropertyList_getReplace =
+export const gET_REPLACE: _enum_for_PropertyList_getReplace.gET_REPLACE =
     PropertyList_getReplace.gET_REPLACE; /* SHORT_NAMED_ENUMERATED_VALUE */
 
 
 
 
-export const _decode_PropertyList_getReplace = $._decodeEnumerated;
+export function _decode_PropertyList_getReplace(el: _Element): PropertyList_getReplace {
+    const enumerated = $._decodeEnumerated(el);
+    switch (enumerated) {
+        case PropertyList_getReplace.gET: return PropertyList_getReplace.gET;
+        case PropertyList_getReplace.rEPLACE: return PropertyList_getReplace.rEPLACE;
+        case PropertyList_getReplace.gET_REPLACE: return PropertyList_getReplace.gET_REPLACE;
+        default:
+            throw new _ConstructionError(
+                'Invalid ENUMERATED value ' + enumerated + ' for PropertyList_getReplace.',
+                el,
+            );
+    }
+}
 
 
 
 
-export const _encode_PropertyList_getReplace = $._encodeEnumerated;
+export const _encode_PropertyList_getReplace: $.ASN1Encoder<PropertyList_getReplace> = $._encodeEnumerated as $.ASN1Encoder<PropertyList_getReplace>;
 
 
 /* eslint-enable */

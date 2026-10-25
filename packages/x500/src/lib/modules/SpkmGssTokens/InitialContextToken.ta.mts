@@ -1,17 +1,17 @@
 /* eslint-disable */
 import {
     ASN1ConstructionError as _ConstructionError,
-    ASN1Element as _Element,
+    type ASN1Element as _Element,
     ASN1TagClass as _TagClass,
 } from "@wildboar/asn1";
 import * as $ from "@wildboar/asn1/functional";
 import {
-    MechType,
+    type MechType,
     _decode_MechType,
     _encode_MechType,
 } from "../SpkmGssTokens/MechType.ta.mjs";
 import {
-    SPKMInnerContextToken,
+    type SPKMInnerContextToken,
     _decode_SPKMInnerContextToken,
     _encode_SPKMInnerContextToken,
 } from "../SpkmGssTokens/SPKMInnerContextToken.ta.mjs";
@@ -36,29 +36,35 @@ import {
  *
  */
 export class InitialContextToken {
+    /**
+     * @summary `thisMech`.
+     * @description
+     *
+     * `spkm-1` or `spkm-2`.
+     *
+     * @public
+     * @readonly
+     */
+    public readonly thisMech: MechType;
+    /**
+     * @summary `innerContextToken`.
+     * @description
+     *
+     * The SPKM token; CHOICE tag `[0]`–`[6]` is the token-id for
+     * parsing.
+     *
+     * @public
+     * @readonly
+     */
+    public readonly innerContextToken: SPKMInnerContextToken;
+
     constructor(
-        /**
-         * @summary `thisMech`.
-         * @description
-         *
-         * `spkm-1` or `spkm-2`.
-         *
-         * @public
-         * @readonly
-         */
-        readonly thisMech: MechType,
-        /**
-         * @summary `innerContextToken`.
-         * @description
-         *
-         * The SPKM token; CHOICE tag `[0]`–`[6]` is the token-id for
-         * parsing.
-         *
-         * @public
-         * @readonly
-         */
-        readonly innerContextToken: SPKMInnerContextToken
-    ) {}
+        thisMech: MechType,
+        innerContextToken: SPKMInnerContextToken
+    ) {
+        this.thisMech = thisMech;
+        this.innerContextToken = innerContextToken;
+    }
 
     /**
      * @summary Restructures an object into a InitialContextToken

@@ -1,12 +1,12 @@
 /* eslint-disable */
 import {
-    OPTIONAL,
-    ASN1Element as _Element,
+    type OPTIONAL,
+    type ASN1Element as _Element,
     ASN1TagClass as _TagClass
 } from "@wildboar/asn1";
 import * as $ from "@wildboar/asn1/functional";
-import { SmsDeliverResChoice, _decode_SmsDeliverResChoice, _encode_SmsDeliverResChoice } from "../Short-Message-Service-Operations-asn1-97/SmsDeliverResChoice.ta.mjs";
-import { SmsExtension, _decode_SmsExtension, _encode_SmsExtension } from "../Short-Message-Service-Operations-asn1-97/SmsExtension.ta.mjs";
+import { type SmsDeliverResChoice, _decode_SmsDeliverResChoice, _encode_SmsDeliverResChoice } from "../Short-Message-Service-Operations-asn1-97/SmsDeliverResChoice.ta.mjs";
+import { type SmsExtension, _decode_SmsExtension, _encode_SmsExtension } from "../Short-Message-Service-Operations-asn1-97/SmsExtension.ta.mjs";
 
 /**
  * @summary SmsDeliverRes

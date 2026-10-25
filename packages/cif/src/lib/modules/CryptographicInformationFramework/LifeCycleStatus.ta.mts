@@ -1,7 +1,7 @@
 /* eslint-disable */
 import {
-    ENUMERATED,
-    ASN1Element as _Element,
+    type ENUMERATED,
+    type ASN1Element as _Element,
     ASN1TagClass as _TagClass,
     ASN1Construction as _Construction,
     ASN1UniversalType as _UniversalType,
@@ -58,7 +58,7 @@ type LifeCycleStatus = _enum_for_LifeCycleStatus | ENUMERATED;
  * @type {number}
  */
 export
-const LifeCycleStatus_creation: LifeCycleStatus = 0; /* LONG_NAMED_ENUMERATED_VALUE */
+const LifeCycleStatus_creation: _enum_for_LifeCycleStatus.creation = _enum_for_LifeCycleStatus.creation; /* LONG_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary creation
@@ -66,7 +66,7 @@ const LifeCycleStatus_creation: LifeCycleStatus = 0; /* LONG_NAMED_ENUMERATED_VA
  * @type {number}
  */
 export
-const creation: LifeCycleStatus = LifeCycleStatus_creation; /* SHORT_NAMED_ENUMERATED_VALUE */
+const creation: _enum_for_LifeCycleStatus.creation = LifeCycleStatus_creation; /* SHORT_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary LifeCycleStatus_init
@@ -76,7 +76,7 @@ const creation: LifeCycleStatus = LifeCycleStatus_creation; /* SHORT_NAMED_ENUME
  * @type {number}
  */
 export
-const LifeCycleStatus_init: LifeCycleStatus = 1; /* LONG_NAMED_ENUMERATED_VALUE */
+const LifeCycleStatus_init: _enum_for_LifeCycleStatus.init = _enum_for_LifeCycleStatus.init; /* LONG_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary init
@@ -84,7 +84,7 @@ const LifeCycleStatus_init: LifeCycleStatus = 1; /* LONG_NAMED_ENUMERATED_VALUE 
  * @type {number}
  */
 export
-const init: LifeCycleStatus = LifeCycleStatus_init; /* SHORT_NAMED_ENUMERATED_VALUE */
+const init: _enum_for_LifeCycleStatus.init = LifeCycleStatus_init; /* SHORT_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary LifeCycleStatus_op_activated
@@ -94,7 +94,7 @@ const init: LifeCycleStatus = LifeCycleStatus_init; /* SHORT_NAMED_ENUMERATED_VA
  * @type {number}
  */
 export
-const LifeCycleStatus_op_activated: LifeCycleStatus = 2; /* LONG_NAMED_ENUMERATED_VALUE */
+const LifeCycleStatus_op_activated: _enum_for_LifeCycleStatus.op_activated = _enum_for_LifeCycleStatus.op_activated; /* LONG_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary op_activated
@@ -102,7 +102,7 @@ const LifeCycleStatus_op_activated: LifeCycleStatus = 2; /* LONG_NAMED_ENUMERATE
  * @type {number}
  */
 export
-const op_activated: LifeCycleStatus = LifeCycleStatus_op_activated; /* SHORT_NAMED_ENUMERATED_VALUE */
+const op_activated: _enum_for_LifeCycleStatus.op_activated = LifeCycleStatus_op_activated; /* SHORT_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary LifeCycleStatus_op_deactivated
@@ -112,7 +112,7 @@ const op_activated: LifeCycleStatus = LifeCycleStatus_op_activated; /* SHORT_NAM
  * @type {number}
  */
 export
-const LifeCycleStatus_op_deactivated: LifeCycleStatus = 3; /* LONG_NAMED_ENUMERATED_VALUE */
+const LifeCycleStatus_op_deactivated: _enum_for_LifeCycleStatus.op_deactivated = _enum_for_LifeCycleStatus.op_deactivated; /* LONG_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary op_deactivated
@@ -120,7 +120,7 @@ const LifeCycleStatus_op_deactivated: LifeCycleStatus = 3; /* LONG_NAMED_ENUMERA
  * @type {number}
  */
 export
-const op_deactivated: LifeCycleStatus = LifeCycleStatus_op_deactivated; /* SHORT_NAMED_ENUMERATED_VALUE */
+const op_deactivated: _enum_for_LifeCycleStatus.op_deactivated = LifeCycleStatus_op_deactivated; /* SHORT_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary LifeCycleStatus_termination
@@ -130,7 +130,7 @@ const op_deactivated: LifeCycleStatus = LifeCycleStatus_op_deactivated; /* SHORT
  * @type {number}
  */
 export
-const LifeCycleStatus_termination: LifeCycleStatus = 4; /* LONG_NAMED_ENUMERATED_VALUE */
+const LifeCycleStatus_termination: _enum_for_LifeCycleStatus.termination = _enum_for_LifeCycleStatus.termination; /* LONG_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary termination
@@ -138,7 +138,7 @@ const LifeCycleStatus_termination: LifeCycleStatus = 4; /* LONG_NAMED_ENUMERATED
  * @type {number}
  */
 export
-const termination: LifeCycleStatus = LifeCycleStatus_termination; /* SHORT_NAMED_ENUMERATED_VALUE */
+const termination: _enum_for_LifeCycleStatus.termination = LifeCycleStatus_termination; /* SHORT_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary LifeCycleStatus_proprietary
@@ -148,7 +148,7 @@ const termination: LifeCycleStatus = LifeCycleStatus_termination; /* SHORT_NAMED
  * @type {number}
  */
 export
-const LifeCycleStatus_proprietary: LifeCycleStatus = 5; /* LONG_NAMED_ENUMERATED_VALUE */
+const LifeCycleStatus_proprietary: _enum_for_LifeCycleStatus.proprietary = _enum_for_LifeCycleStatus.proprietary; /* LONG_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary proprietary
@@ -156,9 +156,9 @@ const LifeCycleStatus_proprietary: LifeCycleStatus = 5; /* LONG_NAMED_ENUMERATED
  * @type {number}
  */
 export
-const proprietary: LifeCycleStatus = LifeCycleStatus_proprietary; /* SHORT_NAMED_ENUMERATED_VALUE */
-export const _decode_LifeCycleStatus = $._decodeEnumerated;
-export const _encode_LifeCycleStatus = $._encodeEnumerated;
+const proprietary: _enum_for_LifeCycleStatus.proprietary = LifeCycleStatus_proprietary; /* SHORT_NAMED_ENUMERATED_VALUE */
+export const _decode_LifeCycleStatus: $.ASN1Decoder<number> = $._decodeEnumerated;
+export const _encode_LifeCycleStatus: $.ASN1Encoder<number> = $._encodeEnumerated;
 
 
 /* eslint-enable */

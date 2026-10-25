@@ -1,8 +1,8 @@
 /* eslint-disable */
 import {
-    OPTIONAL,
-    NULL,
-    ASN1Element as _Element,
+    type OPTIONAL,
+    type NULL,
+    type ASN1Element as _Element,
     ASN1TagClass as _TagClass,
     ASN1Construction as _Construction,
     ASN1UniversalType as _UniversalType,
@@ -19,9 +19,9 @@ import { type Extensions, _decode_Extensions, _encode_Extensions } from "../CAP-
 import { type GenericNumbers, _decode_GenericNumbers, _encode_GenericNumbers } from "../CAP-datatypes/GenericNumbers.ta.mjs";
 import { type NAOliInfo, _decode_NAOliInfo, _encode_NAOliInfo } from "../CAP-datatypes/NAOliInfo.ta.mjs";
 import { ServiceInteractionIndicatorsTwo, _decode_ServiceInteractionIndicatorsTwo, _encode_ServiceInteractionIndicatorsTwo } from "../CAP-datatypes/ServiceInteractionIndicatorsTwo.ta.mjs";
-import { CallingPartysCategory, _decode_CallingPartysCategory, _encode_CallingPartysCategory } from "../Core-INAP-CS1-DataTypes/CallingPartysCategory.ta.mjs";
-import { CUG_Interlock, _decode_CUG_Interlock, _encode_CUG_Interlock } from "../MAP-MS-DataTypes/CUG-Interlock.ta.mjs";
-import { SuppressionOfAnnouncement, _decode_SuppressionOfAnnouncement, _encode_SuppressionOfAnnouncement } from "../MAP-CH-DataTypes/SuppressionOfAnnouncement.ta.mjs";
+import { type CallingPartysCategory, _decode_CallingPartysCategory, _encode_CallingPartysCategory } from "../Core-INAP-CS1-DataTypes/CallingPartysCategory.ta.mjs";
+import { type CUG_Interlock, _decode_CUG_Interlock, _encode_CUG_Interlock } from "../MAP-MS-DataTypes/CUG-Interlock.ta.mjs";
+import { type SuppressionOfAnnouncement, _decode_SuppressionOfAnnouncement, _encode_SuppressionOfAnnouncement } from "../MAP-CH-DataTypes/SuppressionOfAnnouncement.ta.mjs";
 import { ContinueWithArgumentArgExtension, _decode_ContinueWithArgumentArgExtension, _encode_ContinueWithArgumentArgExtension } from "../CAP-gsmSSF-gsmSCF-ops-args/ContinueWithArgumentArgExtension.ta.mjs";
 
 
@@ -37,19 +37,19 @@ import { ContinueWithArgumentArgExtension, _decode_ContinueWithArgumentArgExtens
  * 
  * ```asn1
  * ContinueWithArgumentArg {PARAMETERS-BOUND : bound} ::= SEQUENCE {
- *     alertingPattern            [1] AlertingPattern                OPTIONAL,
- *     extensions                [6] Extensions {bound}            OPTIONAL,
- *     serviceInteractionIndicatorsTwo    [7] ServiceInteractionIndicatorsTwo        OPTIONAL,
- *     callingPartysCategory        [12] CallingPartysCategory            OPTIONAL,
- *     genericNumbers            [16] GenericNumbers {bound}            OPTIONAL,
- *     cug-Interlock            [17] CUG-Interlock                OPTIONAL,
- *     cug-OutgoingAccess            [18] NULL                    OPTIONAL,
- *     chargeNumber            [50] ChargeNumber {bound}            OPTIONAL,
- *     carrier                [52] Carrier {bound}            OPTIONAL,
- *     suppressionOfAnnouncement        [55] SuppressionOfAnnouncement        OPTIONAL,
- *     naOliInfo                [56] NAOliInfo                OPTIONAL,
- *     bor-InterrogationRequested        [57] NULL                    OPTIONAL,
- *     suppress-O-CSI            [58] NULL                    OPTIONAL,
+ *     alertingPattern            [1] AlertingPattern                type OPTIONAL,
+ *     extensions                [6] Extensions {bound}            type OPTIONAL,
+ *     serviceInteractionIndicatorsTwo    [7] ServiceInteractionIndicatorsTwo        type OPTIONAL,
+ *     callingPartysCategory        [12] CallingPartysCategory            type OPTIONAL,
+ *     genericNumbers            [16] GenericNumbers {bound}            type OPTIONAL,
+ *     cug-Interlock            [17] CUG-Interlock                type OPTIONAL,
+ *     cug-OutgoingAccess            [18] NULL                    type OPTIONAL,
+ *     chargeNumber            [50] ChargeNumber {bound}            type OPTIONAL,
+ *     carrier                [52] Carrier {bound}            type OPTIONAL,
+ *     suppressionOfAnnouncement        [55] SuppressionOfAnnouncement        type OPTIONAL,
+ *     naOliInfo                [56] NAOliInfo                type OPTIONAL,
+ *     bor-InterrogationRequested        [57] NULL                    type OPTIONAL,
+ *     suppress-O-CSI            [58] NULL                    type OPTIONAL,
  *     continueWithArgumentArgExtension    [59] ContinueWithArgumentArgExtension {bound} OPTIONAL,
  *     ...
  *     }
@@ -59,168 +59,200 @@ import { ContinueWithArgumentArgExtension, _decode_ContinueWithArgumentArgExtens
  */
 export
 class ContinueWithArgumentArg {
+    /**
+     * @summary `alertingPattern`.
+     * @description
+     *
+     * Type of alerting to apply (3GPP TS 29.002). (3GPP TS 29.078 V19.0.0
+     * clause 11.12.1.1).
+     *
+     * @public
+     * @readonly
+     */
+    public readonly alertingPattern?: OPTIONAL<AlertingPattern>;
+    /**
+     * @summary `extensions`.
+     * @public
+     * @readonly
+     */
+    public readonly extensions?: OPTIONAL<Extensions>;
+    /**
+     * @summary `serviceInteractionIndicatorsTwo`.
+     * @description
+     *
+     * Resolves interactions between CAMEL-based and network-based services.
+     * (3GPP TS 29.078 V19.0.0 clause 11.12.1.1).
+     *
+     * @public
+     * @readonly
+     */
+    public readonly serviceInteractionIndicatorsTwo?: OPTIONAL<ServiceInteractionIndicatorsTwo>;
+    /**
+     * @summary `callingPartysCategory`.
+     * @description
+     *
+     * Type of calling party (e.g. operator, pay phone, ordinary
+     * subscriber). (3GPP TS 29.078 V19.0.0 clause 11.12.1.1).
+     *
+     * @public
+     * @readonly
+     */
+    public readonly callingPartysCategory?: OPTIONAL<CallingPartysCategory>;
+    /**
+     * @summary `genericNumbers`.
+     * @description
+     *
+     * Lets gsmSCF set the network Generic Number; used to transfer
+     * Additional Calling Party Number. (3GPP TS 29.078 V19.0.0 clause
+     * 11.12.1.1).
+     *
+     * @public
+     * @readonly
+     */
+    public readonly genericNumbers?: OPTIONAL<GenericNumbers>;
+    /**
+     * @summary `cug_Interlock`.
+     * @description
+     *
+     * Uniquely identifies a CUG within a network. (3GPP TS 29.078 V19.0.0
+     * clause 11.12.1.1).
+     *
+     * @public
+     * @readonly
+     */
+    public readonly cug_Interlock?: OPTIONAL<CUG_Interlock>;
+    /**
+     * @summary `cug_OutgoingAccess`.
+     * @description
+     *
+     * Presence means the calling user has subscribed to outgoing access
+     * inter-CUG accessibility. (3GPP TS 29.078 V19.0.0 clause 11.12.1.1).
+     *
+     * @public
+     * @readonly
+     */
+    public readonly cug_OutgoingAccess?: OPTIONAL<NULL>;
+    /**
+     * @summary `chargeNumber`.
+     * @description
+     *
+     * Number identifying the entity to be charged; chargeable number for a
+     * North American long-distance carrier (ANSI T1.113-1995). (3GPP TS
+     * 29.078 V19.0.0 clause 11.12.1.1).
+     *
+     * @public
+     * @readonly
+     */
+    public readonly chargeNumber?: OPTIONAL<ChargeNumber>;
+    /**
+     * @summary `carrier`.
+     * @description
+     *
+     * Carrier selection field (how the carrier is provided, e.g.
+     * pre-subscribed) followed by carrier ID digits for routing to a
+     * carrier. (3GPP TS 29.078 V19.0.0 clause 11.12.1.1).
+     *
+     * @public
+     * @readonly
+     */
+    public readonly carrier?: OPTIONAL<Carrier>;
+    /**
+     * @summary `suppressionOfAnnouncement`.
+     * @description
+     *
+     * Announcements and tones played in the exchange at unsuccessful
+     * call-setup attempts shall be suppressed. (3GPP TS 29.078 V19.0.0
+     * clause 11.12.1.1).
+     *
+     * @public
+     * @readonly
+     */
+    public readonly suppressionOfAnnouncement?: OPTIONAL<SuppressionOfAnnouncement>;
+    /**
+     * @summary `naOliInfo`.
+     * @description
+     *
+     * Originating line information identifying the charged-party number
+     * type to the carrier. (3GPP TS 29.078 V19.0.0 clause 11.12.1.1).
+     *
+     * @public
+     * @readonly
+     */
+    public readonly naOliInfo?: OPTIONAL<NAOliInfo>;
+    /**
+     * @summary `bor_InterrogationRequested`.
+     * @description
+     *
+     * Presence means Basic Optimal Routeing is requested for the call.
+     * (3GPP TS 29.078 V19.0.0 clause 11.12.1.1).
+     *
+     * @public
+     * @readonly
+     */
+    public readonly bor_InterrogationRequested?: OPTIONAL<NULL>;
+    /**
+     * @summary `suppress_O_CSI`.
+     * @description
+     *
+     * Presence means O-CSI shall be suppressed for the forwarding or
+     * deflecting leg. (3GPP TS 29.078 V19.0.0 clause 11.12.1.1).
+     *
+     * @public
+     * @readonly
+     */
+    public readonly suppress_O_CSI?: OPTIONAL<NULL>;
+    /**
+     * @summary `continueWithArgumentArgExtension`.
+     * @description
+     *
+     * Extension SEQUENCE: suppress D-CSI, N-CSI, outgoing call barring, and
+     * the leg or Call Segment this ContinueWithArgument applies to. (3GPP
+     * TS 29.078 V19.0.0 clause 11.12.1.1).
+     *
+     * @public
+     * @readonly
+     */
+    public readonly continueWithArgumentArgExtension?: OPTIONAL<ContinueWithArgumentArgExtension>;
+    /**
+     * @summary Extensions that are not recognized.
+     * @public
+     * @readonly
+     */
+    public readonly _unrecognizedExtensionsList: _Element[];
+
     constructor (
-        /**
-         * @summary `alertingPattern`.
-         * @description
-         *
-         * Type of alerting to apply (3GPP TS 29.002). (3GPP TS 29.078 V19.0.0
-         * clause 11.12.1.1).
-         *
-         * @public
-         * @readonly
-         */
-        readonly alertingPattern?: OPTIONAL<AlertingPattern>,
-        /**
-         * @summary `extensions`.
-         * @public
-         * @readonly
-         */
-        readonly extensions?: OPTIONAL<Extensions>,
-        /**
-         * @summary `serviceInteractionIndicatorsTwo`.
-         * @description
-         *
-         * Resolves interactions between CAMEL-based and network-based services.
-         * (3GPP TS 29.078 V19.0.0 clause 11.12.1.1).
-         *
-         * @public
-         * @readonly
-         */
-        readonly serviceInteractionIndicatorsTwo?: OPTIONAL<ServiceInteractionIndicatorsTwo>,
-        /**
-         * @summary `callingPartysCategory`.
-         * @description
-         *
-         * Type of calling party (e.g. operator, pay phone, ordinary
-         * subscriber). (3GPP TS 29.078 V19.0.0 clause 11.12.1.1).
-         *
-         * @public
-         * @readonly
-         */
-        readonly callingPartysCategory?: OPTIONAL<CallingPartysCategory>,
-        /**
-         * @summary `genericNumbers`.
-         * @description
-         *
-         * Lets gsmSCF set the network Generic Number; used to transfer
-         * Additional Calling Party Number. (3GPP TS 29.078 V19.0.0 clause
-         * 11.12.1.1).
-         *
-         * @public
-         * @readonly
-         */
-        readonly genericNumbers?: OPTIONAL<GenericNumbers>,
-        /**
-         * @summary `cug_Interlock`.
-         * @description
-         *
-         * Uniquely identifies a CUG within a network. (3GPP TS 29.078 V19.0.0
-         * clause 11.12.1.1).
-         *
-         * @public
-         * @readonly
-         */
-        readonly cug_Interlock?: OPTIONAL<CUG_Interlock>,
-        /**
-         * @summary `cug_OutgoingAccess`.
-         * @description
-         *
-         * Presence means the calling user has subscribed to outgoing access
-         * inter-CUG accessibility. (3GPP TS 29.078 V19.0.0 clause 11.12.1.1).
-         *
-         * @public
-         * @readonly
-         */
-        readonly cug_OutgoingAccess?: OPTIONAL<NULL>,
-        /**
-         * @summary `chargeNumber`.
-         * @description
-         *
-         * Number identifying the entity to be charged; chargeable number for a
-         * North American long-distance carrier (ANSI T1.113-1995). (3GPP TS
-         * 29.078 V19.0.0 clause 11.12.1.1).
-         *
-         * @public
-         * @readonly
-         */
-        readonly chargeNumber?: OPTIONAL<ChargeNumber>,
-        /**
-         * @summary `carrier`.
-         * @description
-         *
-         * Carrier selection field (how the carrier is provided, e.g.
-         * pre-subscribed) followed by carrier ID digits for routing to a
-         * carrier. (3GPP TS 29.078 V19.0.0 clause 11.12.1.1).
-         *
-         * @public
-         * @readonly
-         */
-        readonly carrier?: OPTIONAL<Carrier>,
-        /**
-         * @summary `suppressionOfAnnouncement`.
-         * @description
-         *
-         * Announcements and tones played in the exchange at unsuccessful
-         * call-setup attempts shall be suppressed. (3GPP TS 29.078 V19.0.0
-         * clause 11.12.1.1).
-         *
-         * @public
-         * @readonly
-         */
-        readonly suppressionOfAnnouncement?: OPTIONAL<SuppressionOfAnnouncement>,
-        /**
-         * @summary `naOliInfo`.
-         * @description
-         *
-         * Originating line information identifying the charged-party number
-         * type to the carrier. (3GPP TS 29.078 V19.0.0 clause 11.12.1.1).
-         *
-         * @public
-         * @readonly
-         */
-        readonly naOliInfo?: OPTIONAL<NAOliInfo>,
-        /**
-         * @summary `bor_InterrogationRequested`.
-         * @description
-         *
-         * Presence means Basic Optimal Routeing is requested for the call.
-         * (3GPP TS 29.078 V19.0.0 clause 11.12.1.1).
-         *
-         * @public
-         * @readonly
-         */
-        readonly bor_InterrogationRequested?: OPTIONAL<NULL>,
-        /**
-         * @summary `suppress_O_CSI`.
-         * @description
-         *
-         * Presence means O-CSI shall be suppressed for the forwarding or
-         * deflecting leg. (3GPP TS 29.078 V19.0.0 clause 11.12.1.1).
-         *
-         * @public
-         * @readonly
-         */
-        readonly suppress_O_CSI?: OPTIONAL<NULL>,
-        /**
-         * @summary `continueWithArgumentArgExtension`.
-         * @description
-         *
-         * Extension SEQUENCE: suppress D-CSI, N-CSI, outgoing call barring, and
-         * the leg or Call Segment this ContinueWithArgument applies to. (3GPP
-         * TS 29.078 V19.0.0 clause 11.12.1.1).
-         *
-         * @public
-         * @readonly
-         */
-        readonly continueWithArgumentArgExtension?: OPTIONAL<ContinueWithArgumentArgExtension>,
-        /**
-         * @summary Extensions that are not recognized.
-         * @public
-         * @readonly
-         */
-        readonly _unrecognizedExtensionsList: _Element[] = []
-    ) {}
+        alertingPattern?: OPTIONAL<AlertingPattern>,
+        extensions?: OPTIONAL<Extensions>,
+        serviceInteractionIndicatorsTwo?: OPTIONAL<ServiceInteractionIndicatorsTwo>,
+        callingPartysCategory?: OPTIONAL<CallingPartysCategory>,
+        genericNumbers?: OPTIONAL<GenericNumbers>,
+        cug_Interlock?: OPTIONAL<CUG_Interlock>,
+        cug_OutgoingAccess?: OPTIONAL<NULL>,
+        chargeNumber?: OPTIONAL<ChargeNumber>,
+        carrier?: OPTIONAL<Carrier>,
+        suppressionOfAnnouncement?: OPTIONAL<SuppressionOfAnnouncement>,
+        naOliInfo?: OPTIONAL<NAOliInfo>,
+        bor_InterrogationRequested?: OPTIONAL<NULL>,
+        suppress_O_CSI?: OPTIONAL<NULL>,
+        continueWithArgumentArgExtension?: OPTIONAL<ContinueWithArgumentArgExtension>,
+        _unrecognizedExtensionsList: _Element[] = []
+    ) {
+        this.alertingPattern = alertingPattern;
+        this.extensions = extensions;
+        this.serviceInteractionIndicatorsTwo = serviceInteractionIndicatorsTwo;
+        this.callingPartysCategory = callingPartysCategory;
+        this.genericNumbers = genericNumbers;
+        this.cug_Interlock = cug_Interlock;
+        this.cug_OutgoingAccess = cug_OutgoingAccess;
+        this.chargeNumber = chargeNumber;
+        this.carrier = carrier;
+        this.suppressionOfAnnouncement = suppressionOfAnnouncement;
+        this.naOliInfo = naOliInfo;
+        this.bor_InterrogationRequested = bor_InterrogationRequested;
+        this.suppress_O_CSI = suppress_O_CSI;
+        this.continueWithArgumentArgExtension = continueWithArgumentArgExtension;
+        this._unrecognizedExtensionsList = _unrecognizedExtensionsList;
+    }
 
     /**
      * @summary Restructures an object into a ContinueWithArgumentArg

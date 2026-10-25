@@ -1,7 +1,7 @@
 /* eslint-disable */
 import {
-    OPTIONAL,
-    ASN1Element as _Element,
+    type OPTIONAL,
+    type ASN1Element as _Element,
     ASN1TagClass as _TagClass,
     ASN1Construction as _Construction,
     ASN1UniversalType as _UniversalType,
@@ -11,8 +11,8 @@ import {
     ASN1ConstructionError as _ConstructionError,
 } from "@wildboar/asn1";
 import * as $ from "@wildboar/asn1/functional";
-import { InformationType, _decode_InformationType, _encode_InformationType } from "../GMI-AttributeModule/InformationType.ta.mjs";
-import { InformationData, _decode_InformationData, _encode_InformationData } from "../GMI-AttributeModule/InformationData.ta.mjs";
+import { type InformationType, _decode_InformationType, _encode_InformationType } from "../GMI-AttributeModule/InformationType.ta.mjs";
+import { type InformationData, _decode_InformationData, _encode_InformationData } from "../GMI-AttributeModule/InformationData.ta.mjs";
 
 /**
  * @summary CommunicationsInformation
@@ -61,7 +61,7 @@ class CommunicationsInformation {
      * @public
      * @readonly
      */
-    readonly informationType: InformationType;
+    public readonly informationType: InformationType;
     /**
      * @summary `informationData`.
      * @description
@@ -73,7 +73,7 @@ class CommunicationsInformation {
      * @public
      * @readonly
      */
-    readonly informationData?: OPTIONAL<InformationData>;
+    public readonly informationData?: OPTIONAL<InformationData>;
 
     constructor (
         informationType: InformationType,

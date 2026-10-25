@@ -1,11 +1,11 @@
 /* eslint-disable */
 import {
     ASN1ConstructionError as _ConstructionError,
-    ASN1Element as _Element,
+    type ASN1Element as _Element,
     ASN1TagClass as _TagClass
 } from "@wildboar/asn1";
 import * as $ from "@wildboar/asn1/functional";
-import { CSGID, _decode_CSGID, _encode_CSGID } from "../TS33128Payloads/CSGID.ta.mjs";
+import { type CSGID, _decode_CSGID, _encode_CSGID } from "../TS33128Payloads/CSGID.ta.mjs";
 // export { CSGID, _decode_CSGID, _encode_CSGID } from "../TS33128Payloads/CSGID.ta.mjs";
 import { CSGAccessMode, _decode_CSGAccessMode, _encode_CSGAccessMode, _enum_for_CSGAccessMode } from "../TS33128Payloads/CSGAccessMode.ta.mjs";
 // export { CSGAccessMode, _enum_for_CSGAccessMode, CSGAccessMode_closedMode /* IMPORTED_LONG_ENUMERATION_ITEM */, closedMode /* IMPORTED_SHORT_ENUMERATION_ITEM */, CSGAccessMode_hybridMode /* IMPORTED_LONG_ENUMERATION_ITEM */, hybridMode /* IMPORTED_SHORT_ENUMERATION_ITEM */, _decode_CSGAccessMode, _encode_CSGAccessMode } from "../TS33128Payloads/CSGAccessMode.ta.mjs";
@@ -118,13 +118,13 @@ class UserCSGInformation {
          * @static
          */
 
-    public static _enum_for_cSGAccessMode = _enum_for_CSGAccessMode;        /**
+    public static _enum_for_cSGAccessMode: typeof _enum_for_CSGAccessMode = _enum_for_CSGAccessMode;        /**
          * @summary The enum used as the type of the component `cSGMembershipIndication`
          * @public
          * @static
          */
 
-    public static _enum_for_cSGMembershipIndication = _enum_for_CSGMembershipIndication;
+    public static _enum_for_cSGMembershipIndication: typeof _enum_for_CSGMembershipIndication = _enum_for_CSGMembershipIndication;
 }
 
 /**

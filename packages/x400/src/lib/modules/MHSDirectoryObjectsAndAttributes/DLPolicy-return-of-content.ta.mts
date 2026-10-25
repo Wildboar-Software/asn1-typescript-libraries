@@ -1,6 +1,6 @@
 /* eslint-disable */
 import {
-    ASN1Element as _Element,
+    type ASN1Element as _Element,
     ASN1TagClass as _TagClass,
     ASN1Construction as _Construction,
     ASN1UniversalType as _UniversalType,
@@ -57,14 +57,14 @@ export type DLPolicy_return_of_content = _enum_for_DLPolicy_return_of_content;
  *
  * @enum {number}
  */
-export const DLPolicy_return_of_content = _enum_for_DLPolicy_return_of_content;
+export const DLPolicy_return_of_content: typeof _enum_for_DLPolicy_return_of_content = _enum_for_DLPolicy_return_of_content;
 
 /**
  * @summary DLPolicy_return_of_content_unchanged
  * @constant
  * @type {number}
  */
-export const DLPolicy_return_of_content_unchanged: DLPolicy_return_of_content =
+export const DLPolicy_return_of_content_unchanged: _enum_for_DLPolicy_return_of_content.unchanged =
     DLPolicy_return_of_content.unchanged; /* LONG_NAMED_ENUMERATED_VALUE */
 
 /**
@@ -72,7 +72,7 @@ export const DLPolicy_return_of_content_unchanged: DLPolicy_return_of_content =
  * @constant
  * @type {number}
  */
-export const unchanged: DLPolicy_return_of_content =
+export const unchanged: _enum_for_DLPolicy_return_of_content.unchanged =
     DLPolicy_return_of_content.unchanged; /* SHORT_NAMED_ENUMERATED_VALUE */
 
 /**
@@ -80,7 +80,7 @@ export const unchanged: DLPolicy_return_of_content =
  * @constant
  * @type {number}
  */
-export const DLPolicy_return_of_content_content_return_not_requested: DLPolicy_return_of_content =
+export const DLPolicy_return_of_content_content_return_not_requested: _enum_for_DLPolicy_return_of_content.content_return_not_requested =
     DLPolicy_return_of_content.content_return_not_requested; /* LONG_NAMED_ENUMERATED_VALUE */
 
 /**
@@ -88,7 +88,7 @@ export const DLPolicy_return_of_content_content_return_not_requested: DLPolicy_r
  * @constant
  * @type {number}
  */
-export const content_return_not_requested: DLPolicy_return_of_content =
+export const content_return_not_requested: _enum_for_DLPolicy_return_of_content.content_return_not_requested =
     DLPolicy_return_of_content.content_return_not_requested; /* SHORT_NAMED_ENUMERATED_VALUE */
 
 /**
@@ -96,7 +96,7 @@ export const content_return_not_requested: DLPolicy_return_of_content =
  * @constant
  * @type {number}
  */
-export const DLPolicy_return_of_content_content_return_requested: DLPolicy_return_of_content =
+export const DLPolicy_return_of_content_content_return_requested: _enum_for_DLPolicy_return_of_content.content_return_requested =
     DLPolicy_return_of_content.content_return_requested; /* LONG_NAMED_ENUMERATED_VALUE */
 
 /**
@@ -104,14 +104,26 @@ export const DLPolicy_return_of_content_content_return_requested: DLPolicy_retur
  * @constant
  * @type {number}
  */
-export const content_return_requested: DLPolicy_return_of_content =
+export const content_return_requested: _enum_for_DLPolicy_return_of_content.content_return_requested =
     DLPolicy_return_of_content.content_return_requested; /* SHORT_NAMED_ENUMERATED_VALUE */
 
 
-export const _decode_DLPolicy_return_of_content = $._decodeEnumerated;
+export function _decode_DLPolicy_return_of_content(el: _Element): DLPolicy_return_of_content {
+    const enumerated = $._decodeEnumerated(el);
+    switch (enumerated) {
+        case DLPolicy_return_of_content.unchanged: return DLPolicy_return_of_content.unchanged;
+        case DLPolicy_return_of_content.content_return_not_requested: return DLPolicy_return_of_content.content_return_not_requested;
+        case DLPolicy_return_of_content.content_return_requested: return DLPolicy_return_of_content.content_return_requested;
+        default:
+            throw new _ConstructionError(
+                'Invalid ENUMERATED value ' + enumerated + ' for DLPolicy_return_of_content.',
+                el,
+            );
+    }
+}
 
 
-export const _encode_DLPolicy_return_of_content = $._encodeEnumerated;
+export const _encode_DLPolicy_return_of_content: $.ASN1Encoder<DLPolicy_return_of_content> = $._encodeEnumerated as $.ASN1Encoder<DLPolicy_return_of_content>;
 
 
 /* eslint-enable */

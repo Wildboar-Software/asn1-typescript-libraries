@@ -1,12 +1,12 @@
 /* eslint-disable */
 import {
-    ASN1Element as _Element,
+    type ASN1Element as _Element,
     ASN1TagClass as _TagClass,
-    OPTIONAL,
+    type OPTIONAL,
 } from "@wildboar/asn1";
 import * as $ from "@wildboar/asn1/functional";
 import {
-    DITcontext,
+    type DITcontext,
     _decode_DITcontext,
     _encode_DITcontext,
 } from "../HierarchicalOperationalBindings/DITcontext.ta.mjs";
@@ -36,48 +36,58 @@ import {
  *
  */
 export class SuperiorToSubordinate {
+    /**
+     * @summary `contextPrefixInfo`.
+     * @description
+     *
+     * DITcontext (`SEQUENCE OF Vertex`); order = RDNs of the immediate
+     * superior, rootward first. Empty ⇒ superior is the DIT root.
+     *
+     * @public
+     * @readonly
+     */
+    public readonly contextPrefixInfo: DITcontext;
+    /**
+     * @summary `entryInfo`.
+     * @description
+     *
+     * Attributes of the new CP entry. SET SIZE (1..MAX); omit rather than
+     * empty SET. Absent on modification.
+     *
+     * @public
+     * @readonly
+     */
+    public readonly entryInfo?: OPTIONAL<Attribute[]>;
+    /**
+     * @summary `immediateSuperiorInfo`.
+     * @description
+     *
+     * Copy from the immediately superior entry, especially `objectClass` and
+     * `entryACI`, to optimize an otherwise empty List of that superior.
+     * SET SIZE (1..MAX); omit rather than empty SET.
+     *
+     * @public
+     * @readonly
+     */
+    public readonly immediateSuperiorInfo?: OPTIONAL<Attribute[]>;
+    /**
+     * @summary Extensions that are not recognized.
+     * @public
+     * @readonly
+     */
+    public readonly _unrecognizedExtensionsList: _Element[];
+
     constructor(
-        /**
-         * @summary `contextPrefixInfo`.
-         * @description
-         *
-         * DITcontext (`SEQUENCE OF Vertex`); order = RDNs of the immediate
-         * superior, rootward first. Empty ⇒ superior is the DIT root.
-         *
-         * @public
-         * @readonly
-         */
-        readonly contextPrefixInfo: DITcontext,
-        /**
-         * @summary `entryInfo`.
-         * @description
-         *
-         * Attributes of the new CP entry. SET SIZE (1..MAX); omit rather than
-         * empty SET. Absent on modification.
-         *
-         * @public
-         * @readonly
-         */
-        readonly entryInfo?: OPTIONAL<Attribute[]>,
-        /**
-         * @summary `immediateSuperiorInfo`.
-         * @description
-         *
-         * Copy from the immediately superior entry, especially `objectClass` and
-         * `entryACI`, to optimize an otherwise empty List of that superior.
-         * SET SIZE (1..MAX); omit rather than empty SET.
-         *
-         * @public
-         * @readonly
-         */
-        readonly immediateSuperiorInfo?: OPTIONAL<Attribute[]>,
-        /**
-         * @summary Extensions that are not recognized.
-         * @public
-         * @readonly
-         */
-        readonly _unrecognizedExtensionsList: _Element[] = []
-    ) {}
+        contextPrefixInfo: DITcontext,
+        entryInfo?: OPTIONAL<Attribute[]>,
+        immediateSuperiorInfo?: OPTIONAL<Attribute[]>,
+        _unrecognizedExtensionsList: _Element[] = []
+    ) {
+        this.contextPrefixInfo = contextPrefixInfo;
+        this.entryInfo = entryInfo;
+        this.immediateSuperiorInfo = immediateSuperiorInfo;
+        this._unrecognizedExtensionsList = _unrecognizedExtensionsList;
+    }
 
     /**
      * @summary Restructures an object into a SuperiorToSubordinate

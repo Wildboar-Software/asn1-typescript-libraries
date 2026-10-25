@@ -1,5 +1,5 @@
 /* eslint-disable */
-import { ASN1Element as _Element, UTF8String } from "@wildboar/asn1";
+import { ASN1Element as _Element, type UTF8String } from "@wildboar/asn1";
 import * as $ from "@wildboar/asn1/functional";
 
 /**
@@ -17,10 +17,10 @@ import * as $ from "@wildboar/asn1/functional";
 export type AttributeName = UTF8String; // UTF8String
 
 
-export const _decode_AttributeName = $._decodeUTF8String;
+export const _decode_AttributeName: $.ASN1Decoder<string> = $._decodeUTF8String;
 
 
-export const _encode_AttributeName = $._encodeUTF8String;
+export const _encode_AttributeName: $.ASN1Encoder<string> = $._encodeUTF8String;
 
 
 /* eslint-enable */

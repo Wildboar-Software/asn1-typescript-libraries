@@ -1,7 +1,7 @@
 /* eslint-disable */
 import {
-    ASN1Element as _Element,
-    INTEGER
+    type ASN1Element as _Element,
+    type INTEGER
 } from "@wildboar/asn1";
 import * as $ from "@wildboar/asn1/functional";
 
@@ -40,7 +40,7 @@ type EimPackageResultErrorCode = INTEGER;
  * TransferEimPackage (section 5.14.4).
  */
 export
-const EimPackageResultErrorCode_invalidPackageFormat: EimPackageResultErrorCode = 1; /* LONG_NAMED_INTEGER_VALUE */
+const EimPackageResultErrorCode_invalidPackageFormat: 1 = 1 satisfies EimPackageResultErrorCode; /* LONG_NAMED_INTEGER_VALUE */
 
 /**
  * @summary EimPackageResultErrorCode_invalidPackageFormat
@@ -51,7 +51,7 @@ const EimPackageResultErrorCode_invalidPackageFormat: EimPackageResultErrorCode 
  * Activation Code (SGP.32 v1.2, sections 3.2 and 5.14.4).
  */
 export
-const invalidPackageFormat: EimPackageResultErrorCode = EimPackageResultErrorCode_invalidPackageFormat; /* SHORT_NAMED_INTEGER_VALUE */
+const invalidPackageFormat: 1 = EimPackageResultErrorCode_invalidPackageFormat; /* SHORT_NAMED_INTEGER_VALUE */
 
 /**
  * @summary EimPackageResultErrorCode_unknownPackage
@@ -63,7 +63,7 @@ const invalidPackageFormat: EimPackageResultErrorCode = EimPackageResultErrorCod
  * maps status 8.31.1 reason 1.1 Unknown to this code.
  */
 export
-const EimPackageResultErrorCode_unknownPackage: EimPackageResultErrorCode = 2; /* LONG_NAMED_INTEGER_VALUE */
+const EimPackageResultErrorCode_unknownPackage: 2 = 2 satisfies EimPackageResultErrorCode; /* LONG_NAMED_INTEGER_VALUE */
 
 /**
  * @summary EimPackageResultErrorCode_unknownPackage
@@ -74,7 +74,7 @@ const EimPackageResultErrorCode_unknownPackage: EimPackageResultErrorCode = 2; /
  * IPA (SGP.32 v1.2, section 5.14.4).
  */
 export
-const unknownPackage: EimPackageResultErrorCode = EimPackageResultErrorCode_unknownPackage; /* SHORT_NAMED_INTEGER_VALUE */
+const unknownPackage: 2 = EimPackageResultErrorCode_unknownPackage; /* SHORT_NAMED_INTEGER_VALUE */
 
 /**
  * @summary EimPackageResultErrorCode_undefinedError
@@ -86,7 +86,7 @@ const unknownPackage: EimPackageResultErrorCode = EimPackageResultErrorCode_unkn
  * enumeration.
  */
 export
-const EimPackageResultErrorCode_undefinedError: EimPackageResultErrorCode = 127; /* LONG_NAMED_INTEGER_VALUE */
+const EimPackageResultErrorCode_undefinedError: 127 = 127 satisfies EimPackageResultErrorCode; /* LONG_NAMED_INTEGER_VALUE */
 
 /**
  * @summary EimPackageResultErrorCode_undefinedError
@@ -97,7 +97,7 @@ const EimPackageResultErrorCode_undefinedError: EimPackageResultErrorCode = 127;
  * the condition that produces it.
  */
 export
-const undefinedError: EimPackageResultErrorCode = EimPackageResultErrorCode_undefinedError; /* SHORT_NAMED_INTEGER_VALUE */
+const undefinedError: 127 = EimPackageResultErrorCode_undefinedError; /* SHORT_NAMED_INTEGER_VALUE */
 export const _decode_EimPackageResultErrorCode: $.ASN1Decoder<EimPackageResultErrorCode> = $._decodeInteger;
 export const _encode_EimPackageResultErrorCode: $.ASN1Encoder<EimPackageResultErrorCode> = $._encodeInteger;
 

@@ -1,6 +1,6 @@
 /* eslint-disable */
 import {
-    ASN1Element as _Element,
+    type ASN1Element as _Element,
     ASN1TagClass as _TagClass,
     ASN1Construction as _Construction,
     ASN1UniversalType as _UniversalType,
@@ -54,21 +54,21 @@ export type Priority = _enum_for_Priority;
  * @constant
  * @type {number}
  */
-export const Priority_normal: Priority = _enum_for_Priority.normal; /* LONG_NAMED_ENUMERATED_VALUE */
+export const Priority_normal: _enum_for_Priority.normal = _enum_for_Priority.normal; /* LONG_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary Priority_non_urgent
  * @constant
  * @type {number}
  */
-export const Priority_non_urgent: Priority = _enum_for_Priority.non_urgent; /* LONG_NAMED_ENUMERATED_VALUE */
+export const Priority_non_urgent: _enum_for_Priority.non_urgent = _enum_for_Priority.non_urgent; /* LONG_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary Priority_urgent
  * @constant
  * @type {number}
  */
-export const Priority_urgent: Priority = _enum_for_Priority.urgent; /* LONG_NAMED_ENUMERATED_VALUE */
+export const Priority_urgent: _enum_for_Priority.urgent = _enum_for_Priority.urgent; /* LONG_NAMED_ENUMERATED_VALUE */
 
 
 /**
@@ -76,21 +76,21 @@ export const Priority_urgent: Priority = _enum_for_Priority.urgent; /* LONG_NAME
  * @constant
  * @type {number}
  */
- export const normal: Priority = _enum_for_Priority.normal; /* SHORT_NAMED_ENUMERATED_VALUE */
+ export const normal: _enum_for_Priority.normal = _enum_for_Priority.normal; /* SHORT_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary normal
  * @constant
  * @type {number}
  */
- export const non_urgent: Priority = _enum_for_Priority.non_urgent; /* SHORT_NAMED_ENUMERATED_VALUE */
+ export const non_urgent: _enum_for_Priority.non_urgent = _enum_for_Priority.non_urgent; /* SHORT_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary normal
  * @constant
  * @type {number}
  */
- export const urgent: Priority = _enum_for_Priority.urgent; /* SHORT_NAMED_ENUMERATED_VALUE */
+ export const urgent: _enum_for_Priority.urgent = _enum_for_Priority.urgent; /* SHORT_NAMED_ENUMERATED_VALUE */
 
 
 
@@ -101,7 +101,17 @@ export const Priority_urgent: Priority = _enum_for_Priority.urgent; /* LONG_NAME
  * @returns {Priority} The decoded data structure.
  */
  export function _decode_Priority (el: _Element): Priority {
-    return $._decodeEnumerated(el);
+        const enumerated = $._decodeEnumerated(el);
+    switch (enumerated) {
+        case _enum_for_Priority.normal: return _enum_for_Priority.normal;
+        case _enum_for_Priority.non_urgent: return _enum_for_Priority.non_urgent;
+        case _enum_for_Priority.urgent: return _enum_for_Priority.urgent;
+        default:
+            throw new _ConstructionError(
+                'Invalid ENUMERATED value ' + enumerated + ' for Priority.',
+                el,
+            );
+    }
 }
 
 /**

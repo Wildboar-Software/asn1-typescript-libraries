@@ -11,7 +11,7 @@ import {
 } from '@wildboar/asn1';
 import * as $ from '@wildboar/asn1/functional';
 import {
-  NonIdentifyingStringOrIndex,
+  type NonIdentifyingStringOrIndex,
   _decode_NonIdentifyingStringOrIndex,
   _encode_NonIdentifyingStringOrIndex,
 } from '../FastInfoset/NonIdentifyingStringOrIndex.ta.mjs';
@@ -44,7 +44,7 @@ export class CharacterChunk {
    * @public
    * @readonly
    */
-  readonly character_codes: NonIdentifyingStringOrIndex;
+  public readonly character_codes: NonIdentifyingStringOrIndex;
 
   constructor(
     character_codes: NonIdentifyingStringOrIndex

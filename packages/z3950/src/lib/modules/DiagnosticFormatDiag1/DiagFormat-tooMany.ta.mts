@@ -1,12 +1,12 @@
 /* eslint-disable */
 import {
-    ASN1Element as _Element,
+    type ASN1Element as _Element,
     ASN1TagClass as _TagClass,
-    INTEGER,
-    OPTIONAL
+    type INTEGER,
+    type OPTIONAL
 } from "@wildboar/asn1";
 import * as $ from "@wildboar/asn1/functional";
-import { _decode_DiagFormat_tooMany_tooManyWhat, _encode_DiagFormat_tooMany_tooManyWhat, DiagFormat_tooMany_tooManyWhat } from "../DiagnosticFormatDiag1/DiagFormat-tooMany-tooManyWhat.ta.mjs";
+import { _decode_DiagFormat_tooMany_tooManyWhat, _encode_DiagFormat_tooMany_tooManyWhat, type DiagFormat_tooMany_tooManyWhat } from "../DiagnosticFormatDiag1/DiagFormat-tooMany-tooManyWhat.ta.mjs";
 
 
 /**

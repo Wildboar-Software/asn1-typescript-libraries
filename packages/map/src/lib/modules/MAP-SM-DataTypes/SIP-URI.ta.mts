@@ -1,7 +1,7 @@
 /* eslint-disable */
 import {
-    ASN1Element as _Element,
-    OCTET_STRING
+    type ASN1Element as _Element,
+    type OCTET_STRING
 } from "@wildboar/asn1";
 import * as $ from "@wildboar/asn1/functional";
 
@@ -29,7 +29,7 @@ type SIP_URI = OCTET_STRING; // OctetStringType
  * @param el The element being decoded.
  * @returns The decoded data structure.
  */
-export const _decode_SIP_URI = $._decodeOctetString;
+export const _decode_SIP_URI: $.ASN1Decoder<OCTET_STRING> = $._decodeOctetString;
 
 /**
  * @summary Encodes a(n) SIP_URI into an ASN.1 Element.
@@ -38,7 +38,7 @@ export const _decode_SIP_URI = $._decodeOctetString;
  * @param elGetter A function that can be used to get new ASN.1 elements.
  * @returns {_Element} The SIP_URI, encoded as an ASN.1 Element.
  */
-export const _encode_SIP_URI = $._encodeOctetString;
+export const _encode_SIP_URI: $.ASN1Encoder<OCTET_STRING> = $._encodeOctetString;
 
 
 /* eslint-enable */

@@ -64,7 +64,7 @@ type SmsGmsc_Alert_Event = _enum_for_SmsGmsc_Alert_Event;
  * @enum {number}
  */
 export
-const SmsGmsc_Alert_Event = _enum_for_SmsGmsc_Alert_Event;
+const SmsGmsc_Alert_Event: typeof _enum_for_SmsGmsc_Alert_Event = _enum_for_SmsGmsc_Alert_Event;
 
 /**
  * @summary SmsGmsc_Alert_Event_msAvailableForMtSms
@@ -76,7 +76,7 @@ const SmsGmsc_Alert_Event = _enum_for_SmsGmsc_Alert_Event;
  * @type {number}
  */
 export
-const SmsGmsc_Alert_Event_msAvailableForMtSms: SmsGmsc_Alert_Event = SmsGmsc_Alert_Event.msAvailableForMtSms; /* LONG_NAMED_ENUMERATED_VALUE */
+const SmsGmsc_Alert_Event_msAvailableForMtSms: _enum_for_SmsGmsc_Alert_Event.msAvailableForMtSms = SmsGmsc_Alert_Event.msAvailableForMtSms; /* LONG_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary msAvailableForMtSms
@@ -88,7 +88,7 @@ const SmsGmsc_Alert_Event_msAvailableForMtSms: SmsGmsc_Alert_Event = SmsGmsc_Ale
  * @type {number}
  */
 export
-const msAvailableForMtSms: SmsGmsc_Alert_Event = SmsGmsc_Alert_Event.msAvailableForMtSms; /* SHORT_NAMED_ENUMERATED_VALUE */
+const msAvailableForMtSms: _enum_for_SmsGmsc_Alert_Event.msAvailableForMtSms = SmsGmsc_Alert_Event.msAvailableForMtSms; /* SHORT_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary SmsGmsc_Alert_Event_msUnderNewServingNode
@@ -100,7 +100,7 @@ const msAvailableForMtSms: SmsGmsc_Alert_Event = SmsGmsc_Alert_Event.msAvailable
  * @type {number}
  */
 export
-const SmsGmsc_Alert_Event_msUnderNewServingNode: SmsGmsc_Alert_Event = SmsGmsc_Alert_Event.msUnderNewServingNode; /* LONG_NAMED_ENUMERATED_VALUE */
+const SmsGmsc_Alert_Event_msUnderNewServingNode: _enum_for_SmsGmsc_Alert_Event.msUnderNewServingNode = SmsGmsc_Alert_Event.msUnderNewServingNode; /* LONG_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary msUnderNewServingNode
@@ -112,7 +112,7 @@ const SmsGmsc_Alert_Event_msUnderNewServingNode: SmsGmsc_Alert_Event = SmsGmsc_A
  * @type {number}
  */
 export
-const msUnderNewServingNode: SmsGmsc_Alert_Event = SmsGmsc_Alert_Event.msUnderNewServingNode; /* SHORT_NAMED_ENUMERATED_VALUE */
+const msUnderNewServingNode: _enum_for_SmsGmsc_Alert_Event.msUnderNewServingNode = SmsGmsc_Alert_Event.msUnderNewServingNode; /* SHORT_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary Decodes an ASN.1 element into a(n) SmsGmsc_Alert_Event
@@ -120,7 +120,7 @@ const msUnderNewServingNode: SmsGmsc_Alert_Event = SmsGmsc_Alert_Event.msUnderNe
  * @param el The element being decoded.
  * @returns The decoded data structure.
  */
-export const _decode_SmsGmsc_Alert_Event = $._decodeEnumerated;
+export const _decode_SmsGmsc_Alert_Event: $.ASN1Decoder<number> = $._decodeEnumerated;
 
 /**
  * @summary Encodes a(n) SmsGmsc_Alert_Event into an ASN.1 Element.
@@ -129,7 +129,7 @@ export const _decode_SmsGmsc_Alert_Event = $._decodeEnumerated;
  * @param elGetter A function that can be used to get new ASN.1 elements.
  * @returns {_Element} The SmsGmsc_Alert_Event, encoded as an ASN.1 Element.
  */
-export const _encode_SmsGmsc_Alert_Event = $._encodeEnumerated;
+export const _encode_SmsGmsc_Alert_Event: $.ASN1Encoder<number> = $._encodeEnumerated;
 
 
 /* eslint-enable */

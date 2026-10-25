@@ -1,7 +1,7 @@
 /* eslint-disable */
 import {
-    OPTIONAL,
-    ASN1Element as _Element,
+    type OPTIONAL,
+    type ASN1Element as _Element,
     ASN1TagClass as _TagClass,
     ASN1Construction as _Construction,
     ASN1UniversalType as _UniversalType,
@@ -12,17 +12,17 @@ import {
 } from '@wildboar/asn1';
 import * as $ from '@wildboar/asn1/functional';
 import {
-    ActualRecipientName,
+    type ActualRecipientName,
     _decode_ActualRecipientName,
     _encode_ActualRecipientName,
 } from '../MTSAbstractService/ActualRecipientName.ta.mjs';
 import {
-    OriginallyIntendedRecipientName,
+    type OriginallyIntendedRecipientName,
     _decode_OriginallyIntendedRecipientName,
     _encode_OriginallyIntendedRecipientName,
 } from '../MTSAbstractService/OriginallyIntendedRecipientName.ta.mjs';
 import {
-    PerRecipientReportFields_report_type,
+    type PerRecipientReportFields_report_type,
     _decode_PerRecipientReportFields_report_type,
     _encode_PerRecipientReportFields_report_type,
 } from '../MTSAbstractService/PerRecipientReportFields-report-type.ta.mjs';
@@ -48,26 +48,34 @@ import {
  *
  */
 export class PerRecipientReportFields {
+    /**
+     * @summary `actual_recipient_name`.
+     * @public
+     * @readonly
+     */
+    public readonly actual_recipient_name: ActualRecipientName;
+    /**
+     * @summary `originally_intended_recipient_name`.
+     * @public
+     * @readonly
+     */
+    public readonly originally_intended_recipient_name: OPTIONAL<OriginallyIntendedRecipientName>;
+    /**
+     * @summary `report_type`.
+     * @public
+     * @readonly
+     */
+    public readonly report_type: PerRecipientReportFields_report_type;
+
     constructor(
-        /**
-         * @summary `actual_recipient_name`.
-         * @public
-         * @readonly
-         */
-        readonly actual_recipient_name: ActualRecipientName,
-        /**
-         * @summary `originally_intended_recipient_name`.
-         * @public
-         * @readonly
-         */
-        readonly originally_intended_recipient_name: OPTIONAL<OriginallyIntendedRecipientName>,
-        /**
-         * @summary `report_type`.
-         * @public
-         * @readonly
-         */
-        readonly report_type: PerRecipientReportFields_report_type
-    ) {}
+        actual_recipient_name: ActualRecipientName,
+        originally_intended_recipient_name: OPTIONAL<OriginallyIntendedRecipientName>,
+        report_type: PerRecipientReportFields_report_type
+    ) {
+        this.actual_recipient_name = actual_recipient_name;
+        this.originally_intended_recipient_name = originally_intended_recipient_name;
+        this.report_type = report_type;
+    }
 
     /**
      * @summary Restructures an object into a PerRecipientReportFields

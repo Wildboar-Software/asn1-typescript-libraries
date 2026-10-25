@@ -1,13 +1,13 @@
 /* eslint-disable */
 import {
-    OPTIONAL,
-    ASN1Element as _Element,
+    type OPTIONAL,
+    type ASN1Element as _Element,
     ASN1TagClass as _TagClass
 } from "@wildboar/asn1";
 import * as $ from "@wildboar/asn1/functional";
-import { TriggerResults, _decode_TriggerResults, _encode_TriggerResults } from "../IN-SSF-SCF-datatypes/TriggerResults.ta.mjs";
+import { type TriggerResults, _decode_TriggerResults, _encode_TriggerResults } from "../IN-SSF-SCF-datatypes/TriggerResults.ta.mjs";
 // export { TriggerResults, _decode_TriggerResults, _encode_TriggerResults } from "../IN-SSF-SCF-datatypes/TriggerResults.ta.mjs";
-import { Extensions, _decode_Extensions, _encode_Extensions } from "../IN-common-datatypes/Extensions.ta.mjs";
+import { type Extensions, _decode_Extensions, _encode_Extensions } from "../IN-common-datatypes/Extensions.ta.mjs";
 // export { Extensions, _decode_Extensions, _encode_Extensions } from "../IN-common-datatypes/Extensions.ta.mjs";
 
 

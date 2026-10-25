@@ -1,42 +1,42 @@
 /* eslint-disable */
 import {
-    ASN1Element as _Element,
+    type ASN1Element as _Element,
     ASN1TagClass as _TagClass,
-    OPTIONAL,
+    type OPTIONAL,
 } from "@wildboar/asn1";
 import * as $ from "@wildboar/asn1/functional";
 import {
-    CMSVersion,
+    type CMSVersion,
     _decode_CMSVersion,
     _encode_CMSVersion,
 } from "../CryptographicMessageSyntax/CMSVersion.ta.mjs";
 import {
-    DigestAlgorithmIdentifier,
+    type DigestAlgorithmIdentifier,
     _decode_DigestAlgorithmIdentifier,
     _encode_DigestAlgorithmIdentifier,
 } from "../CryptographicMessageSyntax/DigestAlgorithmIdentifier.ta.mjs";
 import {
-    SignatureAlgorithmIdentifier,
+    type SignatureAlgorithmIdentifier,
     _decode_SignatureAlgorithmIdentifier,
     _encode_SignatureAlgorithmIdentifier,
 } from "../CryptographicMessageSyntax/SignatureAlgorithmIdentifier.ta.mjs";
 import {
-    SignatureValue,
+    type SignatureValue,
     _decode_SignatureValue,
     _encode_SignatureValue,
 } from "../CryptographicMessageSyntax/SignatureValue.ta.mjs";
 import {
-    SignedAttributes,
+    type SignedAttributes,
     _decode_SignedAttributes,
     _encode_SignedAttributes,
 } from "../CryptographicMessageSyntax/SignedAttributes.ta.mjs";
 import {
-    SignerIdentifier,
+    type SignerIdentifier,
     _decode_SignerIdentifier,
     _encode_SignerIdentifier,
 } from "../CryptographicMessageSyntax/SignerIdentifier.ta.mjs";
 import {
-    UnsignedAttributes,
+    type UnsignedAttributes,
     _decode_UnsignedAttributes,
     _encode_UnsignedAttributes,
 } from "../CryptographicMessageSyntax/UnsignedAttributes.ta.mjs";
@@ -61,50 +61,66 @@ import {
  *
  */
 export class SignerInfo {
+    /**
+     * @summary `version`.
+     * @public
+     * @readonly
+     */
+    public readonly version: CMSVersion;
+    /**
+     * @summary `sid`.
+     * @public
+     * @readonly
+     */
+    public readonly sid: SignerIdentifier;
+    /**
+     * @summary `digestAlgorithm`.
+     * @public
+     * @readonly
+     */
+    public readonly digestAlgorithm: DigestAlgorithmIdentifier;
+    /**
+     * @summary `signedAttrs`.
+     * @public
+     * @readonly
+     */
+    public readonly signedAttrs: OPTIONAL<SignedAttributes>;
+    /**
+     * @summary `signatureAlgorithm`.
+     * @public
+     * @readonly
+     */
+    public readonly signatureAlgorithm: SignatureAlgorithmIdentifier;
+    /**
+     * @summary `signature`.
+     * @public
+     * @readonly
+     */
+    public readonly signature: SignatureValue;
+    /**
+     * @summary `unsignedAttrs`.
+     * @public
+     * @readonly
+     */
+    public readonly unsignedAttrs?: OPTIONAL<UnsignedAttributes>;
+
     constructor(
-        /**
-         * @summary `version`.
-         * @public
-         * @readonly
-         */
-        readonly version: CMSVersion,
-        /**
-         * @summary `sid`.
-         * @public
-         * @readonly
-         */
-        readonly sid: SignerIdentifier,
-        /**
-         * @summary `digestAlgorithm`.
-         * @public
-         * @readonly
-         */
-        readonly digestAlgorithm: DigestAlgorithmIdentifier,
-        /**
-         * @summary `signedAttrs`.
-         * @public
-         * @readonly
-         */
-        readonly signedAttrs: OPTIONAL<SignedAttributes>,
-        /**
-         * @summary `signatureAlgorithm`.
-         * @public
-         * @readonly
-         */
-        readonly signatureAlgorithm: SignatureAlgorithmIdentifier,
-        /**
-         * @summary `signature`.
-         * @public
-         * @readonly
-         */
-        readonly signature: SignatureValue,
-        /**
-         * @summary `unsignedAttrs`.
-         * @public
-         * @readonly
-         */
-        readonly unsignedAttrs?: OPTIONAL<UnsignedAttributes>
-    ) {}
+        version: CMSVersion,
+        sid: SignerIdentifier,
+        digestAlgorithm: DigestAlgorithmIdentifier,
+        signedAttrs: OPTIONAL<SignedAttributes>,
+        signatureAlgorithm: SignatureAlgorithmIdentifier,
+        signature: SignatureValue,
+        unsignedAttrs?: OPTIONAL<UnsignedAttributes>
+    ) {
+        this.version = version;
+        this.sid = sid;
+        this.digestAlgorithm = digestAlgorithm;
+        this.signedAttrs = signedAttrs;
+        this.signatureAlgorithm = signatureAlgorithm;
+        this.signature = signature;
+        this.unsignedAttrs = unsignedAttrs;
+    }
 
     /**
      * @summary Restructures an object into a SignerInfo

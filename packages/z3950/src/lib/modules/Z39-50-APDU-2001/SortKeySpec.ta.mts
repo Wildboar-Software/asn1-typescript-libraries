@@ -1,14 +1,14 @@
 /* eslint-disable */
 import {
-    OPTIONAL,
-    ASN1Element as _Element,
+    type OPTIONAL,
+    type ASN1Element as _Element,
     ASN1TagClass as _TagClass
 } from "@wildboar/asn1";
 import * as $ from "@wildboar/asn1/functional";
-import { SortElement, _decode_SortElement, _encode_SortElement } from "../Z39-50-APDU-2001/SortElement.ta.mjs";
-import { SortKeySpec_sortRelation, _decode_SortKeySpec_sortRelation, _encode_SortKeySpec_sortRelation } from "../Z39-50-APDU-2001/SortKeySpec-sortRelation.ta.mjs";
-import { SortKeySpec_caseSensitivity, _decode_SortKeySpec_caseSensitivity, _encode_SortKeySpec_caseSensitivity } from "../Z39-50-APDU-2001/SortKeySpec-caseSensitivity.ta.mjs";
-import { SortKeySpec_missingValueAction, _decode_SortKeySpec_missingValueAction, _encode_SortKeySpec_missingValueAction } from "../Z39-50-APDU-2001/SortKeySpec-missingValueAction.ta.mjs";
+import { type SortElement, _decode_SortElement, _encode_SortElement } from "../Z39-50-APDU-2001/SortElement.ta.mjs";
+import { type SortKeySpec_sortRelation, _decode_SortKeySpec_sortRelation, _encode_SortKeySpec_sortRelation } from "../Z39-50-APDU-2001/SortKeySpec-sortRelation.ta.mjs";
+import { type SortKeySpec_caseSensitivity, _decode_SortKeySpec_caseSensitivity, _encode_SortKeySpec_caseSensitivity } from "../Z39-50-APDU-2001/SortKeySpec-caseSensitivity.ta.mjs";
+import { type SortKeySpec_missingValueAction, _decode_SortKeySpec_missingValueAction, _encode_SortKeySpec_missingValueAction } from "../Z39-50-APDU-2001/SortKeySpec-missingValueAction.ta.mjs";
 
 
 /**

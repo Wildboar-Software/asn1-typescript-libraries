@@ -1,11 +1,11 @@
 /* eslint-disable */
 import {
     ASN1ConstructionError as _ConstructionError,
-    ASN1Element as _Element,
+    type ASN1Element as _Element,
     ASN1TagClass as _TagClass
 } from "@wildboar/asn1";
 import * as $ from "@wildboar/asn1/functional";
-import { TransactionId, _decode_TransactionId, _encode_TransactionId } from "../RSPDefinitions/TransactionId.ta.mjs";
+import { type TransactionId, _decode_TransactionId, _encode_TransactionId } from "../RSPDefinitions/TransactionId.ta.mjs";
 import { EventEntries, _decode_EventEntries, _encode_EventEntries } from "../RSPDefinitions/EventEntries.ta.mjs";
 
 
@@ -40,7 +40,7 @@ class AuthenticateClientOkEs11 {
      * @public
      * @readonly
      */
-    readonly transactionId: TransactionId;
+    public readonly transactionId: TransactionId;
     /**
      * @summary `eventEntries`.
      * @description
@@ -51,7 +51,7 @@ class AuthenticateClientOkEs11 {
      * @public
      * @readonly
      */
-    readonly eventEntries: EventEntries[];
+    public readonly eventEntries: EventEntries[];
 
     constructor (
         transactionId: TransactionId,

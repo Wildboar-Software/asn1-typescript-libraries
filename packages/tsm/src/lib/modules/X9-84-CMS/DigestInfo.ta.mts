@@ -1,7 +1,7 @@
 /* eslint-disable */
 import {
-    OCTET_STRING,
-    ASN1Element as _Element,
+    type OCTET_STRING,
+    type ASN1Element as _Element,
     ASN1TagClass as _TagClass,
     ASN1Construction as _Construction,
     ASN1UniversalType as _UniversalType,
@@ -11,7 +11,7 @@ import {
     ASN1ConstructionError as _ConstructionError,
 } from "@wildboar/asn1";
 import * as $ from "@wildboar/asn1/functional";
-import { DigestAlgorithmIdentifier, _decode_DigestAlgorithmIdentifier, _encode_DigestAlgorithmIdentifier } from "../X9-84-CMS/DigestAlgorithmIdentifier.ta.mjs";
+import { type DigestAlgorithmIdentifier, _decode_DigestAlgorithmIdentifier, _encode_DigestAlgorithmIdentifier } from "../X9-84-CMS/DigestAlgorithmIdentifier.ta.mjs";
 
 
 
@@ -32,20 +32,26 @@ import { DigestAlgorithmIdentifier, _decode_DigestAlgorithmIdentifier, _encode_D
  */
 export
 class DigestInfo {
+    /**
+     * @summary `hashAlgorithm`.
+     * @public
+     * @readonly
+     */
+    public readonly hashAlgorithm: DigestAlgorithmIdentifier;
+    /**
+     * @summary `digest`.
+     * @public
+     * @readonly
+     */
+    public readonly digest: OCTET_STRING;
+
     constructor (
-        /**
-         * @summary `hashAlgorithm`.
-         * @public
-         * @readonly
-         */
-        readonly hashAlgorithm: DigestAlgorithmIdentifier,
-        /**
-         * @summary `digest`.
-         * @public
-         * @readonly
-         */
-        readonly digest: OCTET_STRING
-    ) {}
+        hashAlgorithm: DigestAlgorithmIdentifier,
+        digest: OCTET_STRING
+    ) {
+        this.hashAlgorithm = hashAlgorithm;
+        this.digest = digest;
+    }
 
     /**
      * @summary Restructures an object into a DigestInfo

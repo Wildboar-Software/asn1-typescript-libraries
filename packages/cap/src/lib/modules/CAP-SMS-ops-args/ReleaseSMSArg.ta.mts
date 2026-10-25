@@ -1,6 +1,6 @@
 /* eslint-disable */
 import {
-    ASN1Element as _Element,
+    type ASN1Element as _Element,
     ASN1TagClass as _TagClass,
     ASN1Construction as _Construction,
     ASN1UniversalType as _UniversalType,
@@ -32,21 +32,13 @@ import { type RPCause, _decode_RPCause, _encode_RPCause } from "../CAP-datatypes
 export
 type ReleaseSMSArg = RPCause; // DefinedType
 
-let _cached_decoder_for_ReleaseSMSArg: $.ASN1Decoder<ReleaseSMSArg> | null = null;
-
 /**
  * @summary Decodes an ASN.1 element into a(n) ReleaseSMSArg
  * @function
  * @param el The element being decoded.
  * @returns The decoded data structure.
  */
-export
-function _decode_ReleaseSMSArg (el: _Element): ReleaseSMSArg {
-    if (!_cached_decoder_for_ReleaseSMSArg) { _cached_decoder_for_ReleaseSMSArg = _decode_RPCause; }
-    return _cached_decoder_for_ReleaseSMSArg(el);
-}
-
-let _cached_encoder_for_ReleaseSMSArg: $.ASN1Encoder<ReleaseSMSArg> | null = null;
+export const _decode_ReleaseSMSArg: $.ASN1Decoder<ReleaseSMSArg> = _decode_RPCause;
 
 /**
  * @summary Encodes a(n) ReleaseSMSArg into an ASN.1 Element.
@@ -55,11 +47,7 @@ let _cached_encoder_for_ReleaseSMSArg: $.ASN1Encoder<ReleaseSMSArg> | null = nul
  * @param elGetter A function that can be used to get new ASN.1 elements.
  * @returns {_Element} The ReleaseSMSArg, encoded as an ASN.1 Element.
  */
-export
-function _encode_ReleaseSMSArg (value: ReleaseSMSArg, elGetter: $.ASN1Encoder<any>): _Element {
-    if (!_cached_encoder_for_ReleaseSMSArg) { _cached_encoder_for_ReleaseSMSArg = _encode_RPCause; }
-    return _cached_encoder_for_ReleaseSMSArg(value, elGetter);
-}
+export const _encode_ReleaseSMSArg: $.ASN1Encoder<ReleaseSMSArg> = _encode_RPCause;
 
 
 /* eslint-enable */

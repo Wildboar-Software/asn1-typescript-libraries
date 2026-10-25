@@ -1,7 +1,7 @@
 /* eslint-disable */
 import {
-    OPTIONAL,
-    ASN1Element as _Element,
+    type OPTIONAL,
+    type ASN1Element as _Element,
     ASN1TagClass as _TagClass,
     ASN1Construction as _Construction,
     ASN1UniversalType as _UniversalType,
@@ -12,7 +12,7 @@ import {
 } from "@wildboar/asn1";
 import * as $ from "@wildboar/asn1/functional";
 import { type Extensions, _decode_Extensions, _encode_Extensions } from "../CAP-datatypes/Extensions.ta.mjs";
-import { LegID, _decode_LegID, _encode_LegID } from "../Core-INAP-CS1-DataTypes/LegID.ta.mjs";
+import { type LegID, _decode_LegID, _encode_LegID } from "../Core-INAP-CS1-DataTypes/LegID.ta.mjs";
 
 
 /**
@@ -27,7 +27,7 @@ import { LegID, _decode_LegID, _encode_LegID } from "../Core-INAP-CS1-DataTypes/
  * ```asn1
  * MoveLegArg {PARAMETERS-BOUND : bound} ::= SEQUENCE {
  *     legIDToMove                [0]    LegID,
- *     extensions                [2]    Extensions {bound}            OPTIONAL,
+ *     extensions                [2]    Extensions {bound}            type OPTIONAL,
  *     ...
  *     }
  * ```
@@ -36,31 +36,39 @@ import { LegID, _decode_LegID, _encode_LegID } from "../Core-INAP-CS1-DataTypes/
  */
 export
 class MoveLegArg {
+    /**
+     * @summary `legIDToMove`.
+     * @description
+     *
+     * Leg that shall be moved to CSID1. Sending Side LegID. (3GPP TS 29.078
+     * V19.0.0 clauses 4.1.5 and 11.22.1.1).
+     *
+     * @public
+     * @readonly
+     */
+    public readonly legIDToMove: LegID;
+    /**
+     * @summary `extensions`.
+     * @public
+     * @readonly
+     */
+    public readonly extensions?: OPTIONAL<Extensions>;
+    /**
+     * @summary Extensions that are not recognized.
+     * @public
+     * @readonly
+     */
+    public readonly _unrecognizedExtensionsList: _Element[];
+
     constructor (
-        /**
-         * @summary `legIDToMove`.
-         * @description
-         *
-         * Leg that shall be moved to CSID1. Sending Side LegID. (3GPP TS 29.078
-         * V19.0.0 clauses 4.1.5 and 11.22.1.1).
-         *
-         * @public
-         * @readonly
-         */
-        readonly legIDToMove: LegID,
-        /**
-         * @summary `extensions`.
-         * @public
-         * @readonly
-         */
-        readonly extensions?: OPTIONAL<Extensions>,
-        /**
-         * @summary Extensions that are not recognized.
-         * @public
-         * @readonly
-         */
-        readonly _unrecognizedExtensionsList: _Element[] = []
-    ) {}
+        legIDToMove: LegID,
+        extensions?: OPTIONAL<Extensions>,
+        _unrecognizedExtensionsList: _Element[] = []
+    ) {
+        this.legIDToMove = legIDToMove;
+        this.extensions = extensions;
+        this._unrecognizedExtensionsList = _unrecognizedExtensionsList;
+    }
 
     /**
      * @summary Restructures an object into a MoveLegArg

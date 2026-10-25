@@ -1,8 +1,8 @@
 /* eslint-disable */
 import {
-    OPTIONAL,
-    INTEGER,
-    ASN1Element as _Element,
+    type OPTIONAL,
+    type INTEGER,
+    type ASN1Element as _Element,
     ASN1TagClass as _TagClass,
     ASN1Construction as _Construction,
     ASN1UniversalType as _UniversalType,
@@ -35,32 +35,41 @@ import { InfoType, _enum_for_InfoType, InfoType_numericString /* IMPORTED_LONG_E
  */
 export
 class Constraints {
+    /**
+     * @summary `maximumNumberOfDigits`.
+     * @public
+     * @readonly
+     */
+    public readonly maximumNumberOfDigits: INTEGER;
+    /**
+     * @summary `minimumNumberOfDigits`.
+     * @public
+     * @readonly
+     */
+    public readonly minimumNumberOfDigits: INTEGER;
+    /**
+     * @summary `typeOfRequestedInfo`.
+     * @public
+     * @readonly
+     */
+    public readonly typeOfRequestedInfo?: OPTIONAL<InfoType>;
+    /**
+     * @summary `numberOfAllowedRetries`.
+     * @public
+     * @readonly
+     */
+    public readonly numberOfAllowedRetries?: OPTIONAL<INTEGER>;
+
     constructor (
-        /**
-         * @summary `maximumNumberOfDigits`.
-         * @public
-         * @readonly
-         */
-        readonly maximumNumberOfDigits: INTEGER,
-        /**
-         * @summary `minimumNumberOfDigits`.
-         * @public
-         * @readonly
-         */
-        readonly minimumNumberOfDigits: INTEGER,
-        /**
-         * @summary `typeOfRequestedInfo`.
-         * @public
-         * @readonly
-         */
-        readonly typeOfRequestedInfo?: OPTIONAL<InfoType>,
-        /**
-         * @summary `numberOfAllowedRetries`.
-         * @public
-         * @readonly
-         */
-        readonly numberOfAllowedRetries?: OPTIONAL<INTEGER>
+        maximumNumberOfDigits: INTEGER,
+        minimumNumberOfDigits: INTEGER,
+        typeOfRequestedInfo?: OPTIONAL<InfoType>,
+        numberOfAllowedRetries?: OPTIONAL<INTEGER>
     ) {
+        this.maximumNumberOfDigits = maximumNumberOfDigits;
+        this.minimumNumberOfDigits = minimumNumberOfDigits;
+        this.typeOfRequestedInfo = typeOfRequestedInfo;
+        this.numberOfAllowedRetries = numberOfAllowedRetries;
         if ((typeof maximumNumberOfDigits === "bigint" ? (maximumNumberOfDigits < 1n || maximumNumberOfDigits > 127n) : (maximumNumberOfDigits < 1 || maximumNumberOfDigits > 127))) {
             throw new ASN1OverflowError("Constraints.maximumNumberOfDigits violates INTEGER constraint");
         }
@@ -94,7 +103,7 @@ class Constraints {
      * @static
      * @method
      */
-    public static get _default_value_for_typeOfRequestedInfo () { return InfoType_numericString; }
+    public static get _default_value_for_typeOfRequestedInfo (): _enum_for_InfoType { return InfoType_numericString; }
     /**
      * @summary Getter that returns the default value for `numberOfAllowedRetries`.
      * @public
@@ -107,7 +116,7 @@ class Constraints {
          * @static
          */
 
-    public static _enum_for_typeOfRequestedInfo = _enum_for_InfoType;
+    public static _enum_for_typeOfRequestedInfo: typeof _enum_for_InfoType = _enum_for_InfoType;
 }
 
 /**

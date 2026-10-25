@@ -1,7 +1,7 @@
 /* eslint-disable */
 import {
-    BIT_STRING,
-    ASN1Element as _Element,
+    type BIT_STRING,
+    type ASN1Element as _Element,
     ASN1TagClass as _TagClass,
     ASN1Construction as _Construction,
     ASN1UniversalType as _UniversalType,
@@ -330,10 +330,10 @@ export const G3FacsimileNonBasicParameters_processable_mode_26: number = 71; /* 
 export const processable_mode_26: number = G3FacsimileNonBasicParameters_processable_mode_26; /* SHORT_NAMED_BIT */
 
 
-export const _decode_G3FacsimileNonBasicParameters = $._decodeBitString;
+export const _decode_G3FacsimileNonBasicParameters: $.ASN1Decoder<BIT_STRING> = $._decodeBitString;
 
 
-export const _encode_G3FacsimileNonBasicParameters = $._encodeBitString;
+export const _encode_G3FacsimileNonBasicParameters: $.ASN1Encoder<BIT_STRING> = $._encodeBitString;
 
 
 /* eslint-enable */

@@ -1,7 +1,7 @@
 /* eslint-disable */
 import {
-    INTEGER,
-    ASN1Element as _Element,
+    type INTEGER,
+    type ASN1Element as _Element,
     ASN1TagClass as _TagClass,
     ASN1Construction as _Construction,
     ASN1UniversalType as _UniversalType,
@@ -11,7 +11,7 @@ import {
     ASN1ConstructionError as _ConstructionError,
 } from "@wildboar/asn1";
 import * as $ from "@wildboar/asn1/functional";
-import { DisplayText, _decode_DisplayText, _encode_DisplayText } from "../ETS-ElectronicSignatureFormats-ExplicitSyntax97/DisplayText.ta.mjs";
+import { type DisplayText, _decode_DisplayText, _encode_DisplayText } from "../ETS-ElectronicSignatureFormats-ExplicitSyntax97/DisplayText.ta.mjs";
 /**
  * @summary NoticeReference
  * @description
@@ -31,28 +31,34 @@ import { DisplayText, _decode_DisplayText, _encode_DisplayText } from "../ETS-El
  */
 export
 class NoticeReference {
+    /**
+     * @summary `organization`.
+     * @description
+     *
+     * Organization that originated the referenced notice.
+     *
+     * @public
+     * @readonly
+     */
+    public readonly organization: DisplayText;
+    /**
+     * @summary `noticeNumbers`.
+     * @description
+     *
+     * Notice numbers within that organization.
+     *
+     * @public
+     * @readonly
+     */
+    public readonly noticeNumbers: INTEGER[];
+
     constructor (
-        /**
-         * @summary `organization`.
-         * @description
-         *
-         * Organization that originated the referenced notice.
-         *
-         * @public
-         * @readonly
-         */
-        readonly organization: DisplayText,
-        /**
-         * @summary `noticeNumbers`.
-         * @description
-         *
-         * Notice numbers within that organization.
-         *
-         * @public
-         * @readonly
-         */
-        readonly noticeNumbers: INTEGER[]
-    ) {}
+        organization: DisplayText,
+        noticeNumbers: INTEGER[]
+    ) {
+        this.organization = organization;
+        this.noticeNumbers = noticeNumbers;
+    }
 
     /**
      * @summary Restructures an object into a NoticeReference

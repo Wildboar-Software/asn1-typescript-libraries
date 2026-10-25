@@ -1,6 +1,6 @@
 /* eslint-disable */
 import {
-    ASN1Element as _Element,
+    type ASN1Element as _Element,
     ASN1TagClass as _TagClass,
     ASN1Construction as _Construction,
     ASN1UniversalType as _UniversalType,
@@ -16,7 +16,7 @@ import {
     _encode_ORName,
 } from '../MTSAbstractService/ORName.ta.mjs';
 import {
-    LocalReference,
+    type LocalReference,
     _decode_LocalReference,
     _encode_LocalReference,
 } from '../EDIMSInformationObjects/LocalReference.ta.mjs';
@@ -40,20 +40,26 @@ import {
  *
  */
 export class EDIMIdentifier {
+    /**
+     * @summary `user`.
+     * @public
+     * @readonly
+     */
+    public readonly user: ORName;
+    /**
+     * @summary `user_relative_identifier`.
+     * @public
+     * @readonly
+     */
+    public readonly user_relative_identifier: LocalReference;
+
     constructor(
-        /**
-         * @summary `user`.
-         * @public
-         * @readonly
-         */
-        readonly user: ORName,
-        /**
-         * @summary `user_relative_identifier`.
-         * @public
-         * @readonly
-         */
-        readonly user_relative_identifier: LocalReference
-    ) {}
+        user: ORName,
+        user_relative_identifier: LocalReference
+    ) {
+        this.user = user;
+        this.user_relative_identifier = user_relative_identifier;
+    }
 
     /**
      * @summary Restructures an object into a EDIMIdentifier

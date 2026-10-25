@@ -2,13 +2,13 @@
 
 import * as $ from "@wildboar/asn1/functional";
 import {
-    OPTIONAL,
-    INTEGER,
-    ENUMERATED,
-    SEQUENCE,
-    SET,
-    IA5String,
-    ASN1Element as _Element,
+    type OPTIONAL,
+    type INTEGER,
+    type ENUMERATED,
+    type SEQUENCE,
+    type SET,
+    type IA5String,
+    type ASN1Element as _Element,
     ASN1TagClass as _TagClass
 } from "@wildboar/asn1";
 import {
@@ -45,7 +45,7 @@ import {
  *     {    transmit             (0),
  *         receive             (1),
  *         transmitAndReceive         (2),
- *         none                 (3) }         OPTIONAL,
+ *         none                 (3) }         type OPTIONAL,
  *     numberOfChannels         INTEGER         DEFAULT    1,
  *     mediaSessionInformation        IA5String        OPTIONAL      }
  * ```
@@ -54,41 +54,49 @@ import {
  */
 export
 class ConnectionInformation {
+    /**
+     * @summary `flowDirection`.
+     * @description
+     *
+     * Transmit, Receive, Transmit and Receive, or None. Absent means
+     * unknown. ECMA-269 §12.2.8.
+     *
+     * @public
+     * @readonly
+     */
+    public readonly flowDirection?: OPTIONAL<ConnectionInformation_flowDirection>;
+    /**
+     * @summary `numberOfChannels`.
+     * @description
+     *
+     * Media-stream channels on this connection. Default (and when absent)
+     * is one. ECMA-269 §12.2.8.
+     *
+     * @public
+     * @readonly
+     */
+    public readonly numberOfChannels?: OPTIONAL<INTEGER>;
+    /**
+     * @summary `mediaSessionInformation`.
+     * @description
+     *
+     * Protocol-specific session data (e.g. derived from SDP). Format and
+     * meaning are switching-function specific. ECMA-269 §12.2.8.
+     *
+     * @public
+     * @readonly
+     */
+    public readonly mediaSessionInformation?: OPTIONAL<IA5String>;
+
     constructor (
-        /**
-         * @summary `flowDirection`.
-         * @description
-         *
-         * Transmit, Receive, Transmit and Receive, or None. Absent means
-         * unknown. ECMA-269 §12.2.8.
-         *
-         * @public
-         * @readonly
-         */
-        readonly flowDirection?: OPTIONAL<ConnectionInformation_flowDirection>,
-        /**
-         * @summary `numberOfChannels`.
-         * @description
-         *
-         * Media-stream channels on this connection. Default (and when absent)
-         * is one. ECMA-269 §12.2.8.
-         *
-         * @public
-         * @readonly
-         */
-        readonly numberOfChannels?: OPTIONAL<INTEGER>,
-        /**
-         * @summary `mediaSessionInformation`.
-         * @description
-         *
-         * Protocol-specific session data (e.g. derived from SDP). Format and
-         * meaning are switching-function specific. ECMA-269 §12.2.8.
-         *
-         * @public
-         * @readonly
-         */
-        readonly mediaSessionInformation?: OPTIONAL<IA5String>
-    ) {}
+        flowDirection?: OPTIONAL<ConnectionInformation_flowDirection>,
+        numberOfChannels?: OPTIONAL<INTEGER>,
+        mediaSessionInformation?: OPTIONAL<IA5String>
+    ) {
+        this.flowDirection = flowDirection;
+        this.numberOfChannels = numberOfChannels;
+        this.mediaSessionInformation = mediaSessionInformation;
+    }
 
     /**
      * @summary Restructures an object into a ConnectionInformation
@@ -118,7 +126,7 @@ class ConnectionInformation {
          * @static
          */
 
-    public static _enum_for_flowDirection = _enum_for_ConnectionInformation_flowDirection;
+    public static _enum_for_flowDirection: typeof _enum_for_ConnectionInformation_flowDirection = _enum_for_ConnectionInformation_flowDirection;
 }
 
 /**

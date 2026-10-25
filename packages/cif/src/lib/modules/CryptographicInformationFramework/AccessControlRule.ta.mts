@@ -1,7 +1,7 @@
 /* eslint-disable */
 import {
-    OPTIONAL,
-    ASN1Element as _Element,
+    type OPTIONAL,
+    type ASN1Element as _Element,
     ASN1TagClass as _TagClass,
     ASN1Construction as _Construction,
     ASN1UniversalType as _UniversalType,
@@ -11,10 +11,10 @@ import {
     ASN1ConstructionError as _ConstructionError,
 } from "@wildboar/asn1";
 import * as $ from "@wildboar/asn1/functional";
-import { AccessMode, _decode_AccessMode, _encode_AccessMode } from "../CryptographicInformationFramework/AccessMode.ta.mjs";
-import { SecurityCondition, _decode_SecurityCondition, _encode_SecurityCondition } from "../CryptographicInformationFramework/SecurityCondition.ta.mjs";
-import { CommunicationMode, _decode_CommunicationMode, _encode_CommunicationMode } from "../CryptographicInformationFramework/CommunicationMode.ta.mjs";
-import { LifeCycleStatus, _enum_for_LifeCycleStatus, _decode_LifeCycleStatus, _encode_LifeCycleStatus } from "../CryptographicInformationFramework/LifeCycleStatus.ta.mjs";
+import { type AccessMode, _decode_AccessMode, _encode_AccessMode } from "../CryptographicInformationFramework/AccessMode.ta.mjs";
+import { type SecurityCondition, _decode_SecurityCondition, _encode_SecurityCondition } from "../CryptographicInformationFramework/SecurityCondition.ta.mjs";
+import { type CommunicationMode, _decode_CommunicationMode, _encode_CommunicationMode } from "../CryptographicInformationFramework/CommunicationMode.ta.mjs";
+import { type LifeCycleStatus, _enum_for_LifeCycleStatus, _decode_LifeCycleStatus, _encode_LifeCycleStatus } from "../CryptographicInformationFramework/LifeCycleStatus.ta.mjs";
 import { RangeOfDate, _decode_RangeOfDate, _encode_RangeOfDate } from "../CryptographicInformationFramework/RangeOfDate.ta.mjs";
 
 
@@ -43,59 +43,73 @@ import { RangeOfDate, _decode_RangeOfDate, _encode_RangeOfDate } from "../Crypto
  */
 export
 class AccessControlRule {
+    /**
+     * @summary `accessMode`.
+     * @description
+     * Which operations this rule covers. ISO/IEC 7816-15:2016 §8.2.8.
+     * @public
+     * @readonly
+     */
+    public readonly accessMode: AccessMode;
+    /**
+     * @summary `securityCondition`.
+     * @description
+     * Boolean expression over authentication methods. ISO/IEC 7816-15:2016
+     * §8.2.8.
+     * @public
+     * @readonly
+     */
+    public readonly securityCondition: SecurityCondition;
+    /**
+     * @summary `communicationMode`.
+     * @description
+     * Physical interface to which the rule applies (ISO/IEC 7816-4
+     * transport type descriptor). ISO/IEC 7816-15:2016 §8.2.8.
+     * @public
+     * @readonly
+     */
+    public readonly communicationMode?: OPTIONAL<CommunicationMode>;
+    /**
+     * @summary `lifeCycleStatus`.
+     * @description
+     * File/DO life-cycle state to which the rule applies (ISO/IEC 7816-4).
+     * ISO/IEC 7816-15:2016 §8.2.8.
+     * @public
+     * @readonly
+     */
+    public readonly lifeCycleStatus?: OPTIONAL<LifeCycleStatus>;
+    /**
+     * @summary `verifLimitDates`.
+     * @description
+     * Interval during which this rule may be verified; outside it the rule
+     * cannot be verified. May be used with a trusted timestamp presented to
+     * the card. ISO/IEC 7816-15:2016 §8.2.8.
+     * @public
+     * @readonly
+     */
+    public readonly verifLimitDates?: OPTIONAL<RangeOfDate>;
+    /**
+     * @summary Extensions that are not recognized.
+     * @public
+     * @readonly
+     */
+    public readonly _unrecognizedExtensionsList: _Element[];
+
     constructor (
-        /**
-         * @summary `accessMode`.
-         * @description
-         * Which operations this rule covers. ISO/IEC 7816-15:2016 §8.2.8.
-         * @public
-         * @readonly
-         */
-        readonly accessMode: AccessMode,
-        /**
-         * @summary `securityCondition`.
-         * @description
-         * Boolean expression over authentication methods. ISO/IEC 7816-15:2016
-         * §8.2.8.
-         * @public
-         * @readonly
-         */
-        readonly securityCondition: SecurityCondition,
-        /**
-         * @summary `communicationMode`.
-         * @description
-         * Physical interface to which the rule applies (ISO/IEC 7816-4
-         * transport type descriptor). ISO/IEC 7816-15:2016 §8.2.8.
-         * @public
-         * @readonly
-         */
-        readonly communicationMode?: OPTIONAL<CommunicationMode>,
-        /**
-         * @summary `lifeCycleStatus`.
-         * @description
-         * File/DO life-cycle state to which the rule applies (ISO/IEC 7816-4).
-         * ISO/IEC 7816-15:2016 §8.2.8.
-         * @public
-         * @readonly
-         */
-        readonly lifeCycleStatus?: OPTIONAL<LifeCycleStatus>,
-        /**
-         * @summary `verifLimitDates`.
-         * @description
-         * Interval during which this rule may be verified; outside it the rule
-         * cannot be verified. May be used with a trusted timestamp presented to
-         * the card. ISO/IEC 7816-15:2016 §8.2.8.
-         * @public
-         * @readonly
-         */
-        readonly verifLimitDates?: OPTIONAL<RangeOfDate>,
-        /**
-         * @summary Extensions that are not recognized.
-         * @public
-         * @readonly
-         */
-        readonly _unrecognizedExtensionsList: _Element[] = []
-    ) {}
+        accessMode: AccessMode,
+        securityCondition: SecurityCondition,
+        communicationMode?: OPTIONAL<CommunicationMode>,
+        lifeCycleStatus?: OPTIONAL<LifeCycleStatus>,
+        verifLimitDates?: OPTIONAL<RangeOfDate>,
+        _unrecognizedExtensionsList: _Element[] = []
+    ) {
+        this.accessMode = accessMode;
+        this.securityCondition = securityCondition;
+        this.communicationMode = communicationMode;
+        this.lifeCycleStatus = lifeCycleStatus;
+        this.verifLimitDates = verifLimitDates;
+        this._unrecognizedExtensionsList = _unrecognizedExtensionsList;
+    }
 
     /**
      * @summary Restructures an object into a AccessControlRule
@@ -119,7 +133,7 @@ class AccessControlRule {
          * @static
          */
 
-    public static _enum_for_lifeCycleStatus = _enum_for_LifeCycleStatus;
+    public static _enum_for_lifeCycleStatus: typeof _enum_for_LifeCycleStatus = _enum_for_LifeCycleStatus;
 }
 
 /**

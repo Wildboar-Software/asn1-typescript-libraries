@@ -1,7 +1,7 @@
 /* eslint-disable */
 import {
-    OPTIONAL,
-    ASN1Element as _Element,
+    type OPTIONAL,
+    type ASN1Element as _Element,
     ASN1TagClass as _TagClass
 } from "@wildboar/asn1";
 import * as $ from "@wildboar/asn1/functional";
@@ -37,14 +37,14 @@ class LogotypeImage {
      * @public
      * @readonly
      */
-    readonly imageDetails: LogotypeDetails;
+    public readonly imageDetails: LogotypeDetails;
     /**
      * Pixel size, color, and language, used to choose among image
      * variants. Absent when the issuer supplies none.
      * @public
      * @readonly
      */
-    readonly imageInfo?: OPTIONAL<LogotypeImageInfo>;
+    public readonly imageInfo?: OPTIONAL<LogotypeImageInfo>;
 
     constructor (
         imageDetails: LogotypeDetails,

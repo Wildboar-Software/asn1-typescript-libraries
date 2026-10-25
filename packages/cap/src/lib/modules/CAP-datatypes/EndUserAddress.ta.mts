@@ -1,7 +1,7 @@
 import {
-    OPTIONAL,
-    OCTET_STRING,
-    ASN1Element as _Element,
+    type OPTIONAL,
+    type OCTET_STRING,
+    type ASN1Element as _Element,
     ASN1SizeError,
     ASN1TagClass as _TagClass,
 } from "@wildboar/asn1";
@@ -28,41 +28,48 @@ import * as $ from "@wildboar/asn1/functional";
  *
  */
 export class EndUserAddress {
+    /**
+     * @summary `pDPTypeOrganization`.
+     * @description
+     *
+     * Encode in the four LSBs (3GPP TS 29.060). Sender sets the four MSBs
+     * to 1; receiver ignores them. (3GPP TS 29.078 V19.0.0 clause 5.1).
+     *
+     * @public
+     * @readonly
+     */
+    public readonly pDPTypeOrganization: OCTET_STRING;
+    /**
+     * @summary `pDPTypeNumber`.
+     * @description
+     *
+     * PDP type number; 3GPP TS 29.060 encoding.
+     * (3GPP TS 29.078 V19.0.0 clause 5.1).
+     *
+     * @public
+     * @readonly
+     */
+    public readonly pDPTypeNumber: OCTET_STRING;
+    /**
+     * @summary `pDPAddress`.
+     * @description
+     *
+     * PDP address; 3GPP TS 29.060 encoding. Size is `PARAMETERS-BOUND`
+     * min/max PDPAddressLength. (3GPP TS 29.078 V19.0.0 clause 5.1).
+     *
+     * @public
+     * @readonly
+     */
+    public readonly pDPAddress?: OPTIONAL<OCTET_STRING>;
+
     constructor (
-        /**
-         * @summary `pDPTypeOrganization`.
-         * @description
-         *
-         * Encode in the four LSBs (3GPP TS 29.060). Sender sets the four MSBs
-         * to 1; receiver ignores them. (3GPP TS 29.078 V19.0.0 clause 5.1).
-         *
-         * @public
-         * @readonly
-         */
-        readonly pDPTypeOrganization: OCTET_STRING,
-        /**
-         * @summary `pDPTypeNumber`.
-         * @description
-         *
-         * PDP type number; 3GPP TS 29.060 encoding.
-         * (3GPP TS 29.078 V19.0.0 clause 5.1).
-         *
-         * @public
-         * @readonly
-         */
-        readonly pDPTypeNumber: OCTET_STRING,
-        /**
-         * @summary `pDPAddress`.
-         * @description
-         *
-         * PDP address; 3GPP TS 29.060 encoding. Size is `PARAMETERS-BOUND`
-         * min/max PDPAddressLength. (3GPP TS 29.078 V19.0.0 clause 5.1).
-         *
-         * @public
-         * @readonly
-         */
-        readonly pDPAddress?: OPTIONAL<OCTET_STRING>,
+        pDPTypeOrganization: OCTET_STRING,
+        pDPTypeNumber: OCTET_STRING,
+        pDPAddress?: OPTIONAL<OCTET_STRING>,
     ) {
+        this.pDPTypeOrganization = pDPTypeOrganization;
+        this.pDPTypeNumber = pDPTypeNumber;
+        this.pDPAddress = pDPAddress;
         if (pDPTypeOrganization.length !== 1) {
             throw new ASN1SizeError("EndUserAddress.pDPTypeOrganization violates SIZE constraint");
         }

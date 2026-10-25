@@ -1,20 +1,20 @@
 /* eslint-disable */
 import {
-    NULL,
-    OPTIONAL,
-    ASN1Element as _Element,
+    type NULL,
+    type OPTIONAL,
+    type ASN1Element as _Element,
     ASN1TagClass as _TagClass
 } from "@wildboar/asn1";
 import * as $ from "@wildboar/asn1/functional";
-import { IMSI, _decode_IMSI, _encode_IMSI } from "../MAP-CommonDataTypes/IMSI.ta.mjs";
+import { type IMSI, _decode_IMSI, _encode_IMSI } from "../MAP-CommonDataTypes/IMSI.ta.mjs";
 import { ExtensionContainer, _decode_ExtensionContainer, _encode_ExtensionContainer } from "../MAP-ExtensionDataTypes/ExtensionContainer.ta.mjs";
-import { BasicServiceList, _decode_BasicServiceList, _encode_BasicServiceList } from "../MAP-MS-DataTypes/BasicServiceList.ta.mjs";
-import { EPS_SubscriptionDataWithdraw, _decode_EPS_SubscriptionDataWithdraw, _encode_EPS_SubscriptionDataWithdraw } from "../MAP-MS-DataTypes/EPS-SubscriptionDataWithdraw.ta.mjs";
-import { GPRSSubscriptionDataWithdraw, _decode_GPRSSubscriptionDataWithdraw, _encode_GPRSSubscriptionDataWithdraw } from "../MAP-MS-DataTypes/GPRSSubscriptionDataWithdraw.ta.mjs";
-import { LSAInformationWithdraw, _decode_LSAInformationWithdraw, _encode_LSAInformationWithdraw } from "../MAP-MS-DataTypes/LSAInformationWithdraw.ta.mjs";
-import { SpecificCSI_Withdraw, _decode_SpecificCSI_Withdraw, _encode_SpecificCSI_Withdraw } from "../MAP-MS-DataTypes/SpecificCSI-Withdraw.ta.mjs";
-import { ZoneCode, _decode_ZoneCode, _encode_ZoneCode } from "../MAP-MS-DataTypes/ZoneCode.ta.mjs";
-import { SS_List, _decode_SS_List, _encode_SS_List } from "../MAP-SS-DataTypes/SS-List.ta.mjs";
+import { type BasicServiceList, _decode_BasicServiceList, _encode_BasicServiceList } from "../MAP-MS-DataTypes/BasicServiceList.ta.mjs";
+import { type EPS_SubscriptionDataWithdraw, _decode_EPS_SubscriptionDataWithdraw, _encode_EPS_SubscriptionDataWithdraw } from "../MAP-MS-DataTypes/EPS-SubscriptionDataWithdraw.ta.mjs";
+import { type GPRSSubscriptionDataWithdraw, _decode_GPRSSubscriptionDataWithdraw, _encode_GPRSSubscriptionDataWithdraw } from "../MAP-MS-DataTypes/GPRSSubscriptionDataWithdraw.ta.mjs";
+import { type LSAInformationWithdraw, _decode_LSAInformationWithdraw, _encode_LSAInformationWithdraw } from "../MAP-MS-DataTypes/LSAInformationWithdraw.ta.mjs";
+import { type SpecificCSI_Withdraw, _decode_SpecificCSI_Withdraw, _encode_SpecificCSI_Withdraw } from "../MAP-MS-DataTypes/SpecificCSI-Withdraw.ta.mjs";
+import { type ZoneCode, _decode_ZoneCode, _encode_ZoneCode } from "../MAP-MS-DataTypes/ZoneCode.ta.mjs";
+import { type SS_List, _decode_SS_List, _encode_SS_List } from "../MAP-SS-DataTypes/SS-List.ta.mjs";
 
 
 /**
@@ -36,39 +36,39 @@ import { SS_List, _decode_SS_List, _encode_SS_List } from "../MAP-SS-DataTypes/S
  * ```asn1
  * DeleteSubscriberDataArg ::= SEQUENCE {
  *     imsi    [0] IMSI,
- *     basicServiceList    [1] BasicServiceList    OPTIONAL,
+ *     basicServiceList    [1] BasicServiceList    type OPTIONAL,
  *     -- The exception handling for reception of unsupported/not allocated
  *     -- basicServiceCodes is defined in clause 6.8.2
- *     ss-List    [2] SS-List    OPTIONAL,
- *     roamingRestrictionDueToUnsupportedFeature [4] NULL    OPTIONAL,
- *     regionalSubscriptionIdentifier    [5] ZoneCode    OPTIONAL,
- *     vbsGroupIndication    [7] NULL    OPTIONAL,
- *     vgcsGroupIndication    [8] NULL    OPTIONAL,
- *     camelSubscriptionInfoWithdraw    [9] NULL    OPTIONAL,
- *     extensionContainer    [6] ExtensionContainer    OPTIONAL,
+ *     ss-List    [2] SS-List    type OPTIONAL,
+ *     roamingRestrictionDueToUnsupportedFeature [4] NULL    type OPTIONAL,
+ *     regionalSubscriptionIdentifier    [5] ZoneCode    type OPTIONAL,
+ *     vbsGroupIndication    [7] NULL    type OPTIONAL,
+ *     vgcsGroupIndication    [8] NULL    type OPTIONAL,
+ *     camelSubscriptionInfoWithdraw    [9] NULL    type OPTIONAL,
+ *     extensionContainer    [6] ExtensionContainer    type OPTIONAL,
  *     ...,
- *     gprsSubscriptionDataWithdraw    [10] GPRSSubscriptionDataWithdraw    OPTIONAL,
- *     roamingRestrictedInSgsnDueToUnsuppportedFeature [11] NULL    OPTIONAL,
- *     lsaInformationWithdraw    [12] LSAInformationWithdraw    OPTIONAL,
- *     gmlc-ListWithdraw    [13]    NULL    OPTIONAL,
- *     istInformationWithdraw    [14] NULL    OPTIONAL,
- *     specificCSI-Withdraw    [15] SpecificCSI-Withdraw    OPTIONAL,
- *     chargingCharacteristicsWithdraw    [16] NULL    OPTIONAL,
- *     stn-srWithdraw    [17] NULL    OPTIONAL,
- *     epsSubscriptionDataWithdraw    [18] EPS-SubscriptionDataWithdraw    OPTIONAL,
- *     apn-oi-replacementWithdraw    [19] NULL    OPTIONAL,
- *     csg-SubscriptionDeleted    [20]    NULL    OPTIONAL,
- *     subscribedPeriodicTAU-RAU-TimerWithdraw    [22]    NULL    OPTIONAL,
- *     subscribedPeriodicLAU-TimerWithdraw    [23]    NULL    OPTIONAL,
- *     subscribed-vsrvccWithdraw    [21] NULL    OPTIONAL,
- *     vplmn-Csg-SubscriptionDeleted    [24]    NULL    OPTIONAL,
- *     additionalMSISDN-Withdraw    [25]    NULL    OPTIONAL,
- *     cs-to-ps-SRVCC-Withdraw    [26]    NULL    OPTIONAL,
- *     imsiGroupIdList-Withdraw    [27]    NULL    OPTIONAL,
- *     userPlaneIntegrityProtectionWithdraw    [28] NULL    OPTIONAL,
- *     dl-Buffering-Suggested-Packet-Count-Withdraw    [29] NULL    OPTIONAL,
- *     ue-UsageTypeWithdraw    [30] NULL    OPTIONAL,
- *     reset-idsWithdraw    [31]    NULL    OPTIONAL,
+ *     gprsSubscriptionDataWithdraw    [10] GPRSSubscriptionDataWithdraw    type OPTIONAL,
+ *     roamingRestrictedInSgsnDueToUnsuppportedFeature [11] NULL    type OPTIONAL,
+ *     lsaInformationWithdraw    [12] LSAInformationWithdraw    type OPTIONAL,
+ *     gmlc-ListWithdraw    [13]    NULL    type OPTIONAL,
+ *     istInformationWithdraw    [14] NULL    type OPTIONAL,
+ *     specificCSI-Withdraw    [15] SpecificCSI-Withdraw    type OPTIONAL,
+ *     chargingCharacteristicsWithdraw    [16] NULL    type OPTIONAL,
+ *     stn-srWithdraw    [17] NULL    type OPTIONAL,
+ *     epsSubscriptionDataWithdraw    [18] EPS-SubscriptionDataWithdraw    type OPTIONAL,
+ *     apn-oi-replacementWithdraw    [19] NULL    type OPTIONAL,
+ *     csg-SubscriptionDeleted    [20]    NULL    type OPTIONAL,
+ *     subscribedPeriodicTAU-RAU-TimerWithdraw    [22]    NULL    type OPTIONAL,
+ *     subscribedPeriodicLAU-TimerWithdraw    [23]    NULL    type OPTIONAL,
+ *     subscribed-vsrvccWithdraw    [21] NULL    type OPTIONAL,
+ *     vplmn-Csg-SubscriptionDeleted    [24]    NULL    type OPTIONAL,
+ *     additionalMSISDN-Withdraw    [25]    NULL    type OPTIONAL,
+ *     cs-to-ps-SRVCC-Withdraw    [26]    NULL    type OPTIONAL,
+ *     imsiGroupIdList-Withdraw    [27]    NULL    type OPTIONAL,
+ *     userPlaneIntegrityProtectionWithdraw    [28] NULL    type OPTIONAL,
+ *     dl-Buffering-Suggested-Packet-Count-Withdraw    [29] NULL    type OPTIONAL,
+ *     ue-UsageTypeWithdraw    [30] NULL    type OPTIONAL,
+ *     reset-idsWithdraw    [31]    NULL    type OPTIONAL,
  *     iab-OperationWithdraw    [32]    NULL    OPTIONAL }
  * ```
  * 
@@ -76,374 +76,442 @@ import { SS_List, _decode_SS_List, _encode_SS_List } from "../MAP-SS-DataTypes/S
  */
 export
 class DeleteSubscriberDataArg {
+    /**
+     * @summary `imsi`.
+     * @description
+     *
+     * IMSI of the subscriber whose data is withdrawn (3GPP TS 29.002
+     * V19.1.0 clauses 8.8.2.2 and 7.6.2.1).
+     *
+     * @public
+     * @readonly
+     */
+    public readonly imsi: IMSI;
+    /**
+     * @summary `basicServiceList`.
+     * @description
+     *
+     * Withdraw one, several or all basic services. Unsupported codes are
+     * ignored by VLR/SGSN; IWF shall ignore the parameter. Not applicable
+     * for the CSS (3GPP TS 29.002 V19.1.0 clause 8.8.2.3).
+     *
+     * @public
+     * @readonly
+     */
+    public readonly basicServiceList?: OPTIONAL<BasicServiceList>;
+    /**
+     * @summary `ss_List`.
+     * @description
+     *
+     * Withdraw supplementary services. Used by VLR, SGSN and IWF for Call
+     * Barring and LCS; otherwise VLR only (SGSN/IWF shall ignore). Not
+     * applicable for the CSS (3GPP TS 29.002 V19.1.0 clause 8.8.2.3).
+     *
+     * @public
+     * @readonly
+     */
+    public readonly ss_List?: OPTIONAL<SS_List>;
+    /**
+     * @summary `roamingRestrictionDueToUnsupportedFeature`.
+     * @description
+     *
+     * Delete Roaming Restriction Due To Unsupported Feature. VLR shall
+     * check if the current LA is now allowed. VLR only; SGSN/IWF shall
+     * ignore. Not applicable for the CSS (3GPP TS 29.002 V19.1.0 clause
+     * 8.8.2.3).
+     *
+     * @public
+     * @readonly
+     */
+    public readonly roamingRestrictionDueToUnsupportedFeature?: OPTIONAL<NULL>;
+    /**
+     * @summary `regionalSubscriptionIdentifier`.
+     * @description
+     *
+     * Single Zone Code meaning all Zone Codes shall be deleted. Binary
+     * coding shall not be checked. Not sent to networks that do not support
+     * Regional Subscription. Not applicable for the CSS (3GPP TS 29.002
+     * V19.1.0 clause 8.8.2.3).
+     *
+     * @public
+     * @readonly
+     */
+    public readonly regionalSubscriptionIdentifier?: OPTIONAL<ZoneCode>;
+    /**
+     * @summary `vbsGroupIndication`.
+     * @description
+     *
+     * Delete all VBS Group Ids. VLR only; SGSN/IWF shall ignore. Ignored if
+     * VBS is not supported or no Group Ids are stored. Not applicable for
+     * the CSS (3GPP TS 29.002 V19.1.0 clause 8.8.2.3).
+     *
+     * @public
+     * @readonly
+     */
+    public readonly vbsGroupIndication?: OPTIONAL<NULL>;
+    /**
+     * @summary `vgcsGroupIndication`.
+     * @description
+     *
+     * Delete all VGCS Group Ids. VLR only; SGSN shall ignore. Not
+     * applicable for the CSS (3GPP TS 29.002 V19.1.0 clause 8.8.2.3).
+     *
+     * @public
+     * @readonly
+     */
+    public readonly vgcsGroupIndication?: OPTIONAL<NULL>;
+    /**
+     * @summary `camelSubscriptionInfoWithdraw`.
+     * @description
+     *
+     * Delete all CAMEL Subscription Info from VLR or SGSN. Should not be
+     * sent with Specific CSI Withdraw. IWF shall ignore. Not applicable for
+     * the CSS (3GPP TS 29.002 V19.1.0 clause 8.8.2.3).
+     *
+     * @public
+     * @readonly
+     */
+    public readonly camelSubscriptionInfoWithdraw?: OPTIONAL<NULL>;
+    /**
+     * @summary `extensionContainer`.
+     * @public
+     * @readonly
+     */
+    public readonly extensionContainer?: OPTIONAL<ExtensionContainer>;
+    /**
+     * @summary `gprsSubscriptionDataWithdraw`.
+     * @description
+     *
+     * Delete all or a subset of GPRS Subscription Data. SGSN only; VLR
+     * shall ignore. Not applicable for the CSS (3GPP TS 29.002 V19.1.0
+     * clause 8.8.2.3).
+     *
+     * @public
+     * @readonly
+     */
+    public readonly gprsSubscriptionDataWithdraw?: OPTIONAL<GPRSSubscriptionDataWithdraw>;
+    /**
+     * @summary `roamingRestrictedInSgsnDueToUnsuppportedFeature`.
+     * @description
+     *
+     * Delete Roaming Restricted In SGSN/MME Due To Unsupported Feature.
+     * SGSN and IWF only; VLR shall ignore. Not applicable for the CSS (3GPP
+     * TS 29.002 V19.1.0 clause 8.8.2.3).
+     *
+     * @public
+     * @readonly
+     */
+    public readonly roamingRestrictedInSgsnDueToUnsuppportedFeature?: OPTIONAL<NULL>;
+    /**
+     * @summary `lsaInformationWithdraw`.
+     * @description
+     *
+     * Delete all or a subset of LSA Information. Used by VLR and SGSN. Not
+     * applicable for the CSS (3GPP TS 29.002 V19.1.0 clause 8.8.2.3).
+     *
+     * @public
+     * @readonly
+     */
+    public readonly lsaInformationWithdraw?: OPTIONAL<LSAInformationWithdraw>;
+    /**
+     * @summary `gmlc_ListWithdraw`.
+     * @description
+     *
+     * Delete the subscriber's LCS GMLC List from VLR or SGSN. Used by VLR,
+     * SGSN and IWF. Not applicable for the CSS (3GPP TS 29.002 V19.1.0
+     * clauses 8.8.2.3 and 7.6.3.65C).
+     *
+     * @public
+     * @readonly
+     */
+    public readonly gmlc_ListWithdraw?: OPTIONAL<NULL>;
+    /**
+     * @summary `istInformationWithdraw`.
+     * @description
+     *
+     * IST condition removed for the subscriber (3GPP TS 43.035). Not
+     * applicable for the CSS (3GPP TS 29.002 V19.1.0 clause 8.8.2.3).
+     *
+     * @public
+     * @readonly
+     */
+    public readonly istInformationWithdraw?: OPTIONAL<NULL>;
+    /**
+     * @summary `specificCSI_Withdraw`.
+     * @description
+     *
+     * Delete named CSI elements (O-CSI, SS-CSI, TIF-CSI, D-CSI, VT-CSI,
+     * MO/MT-SMS-CSI, M-CSI, MG-CSI, GPRS-CSI). Not sent to VLRs that do not
+     * support CAMEL phase 3+. Should not be sent with CAMEL Subscription
+     * Info Withdraw. IWF shall ignore (3GPP TS 29.002 V19.1.0 clause
+     * 8.8.2.3).
+     *
+     * @public
+     * @readonly
+     */
+    public readonly specificCSI_Withdraw?: OPTIONAL<SpecificCSI_Withdraw>;
+    /**
+     * @summary `chargingCharacteristicsWithdraw`.
+     * @description
+     *
+     * Replace Subscribed Charging Characteristics with a local default in
+     * SGSN or MME (3GPP TS 32.251). SGSN and IWF only; VLR shall ignore
+     * (3GPP TS 29.002 V19.1.0 clause 8.8.2.3).
+     *
+     * @public
+     * @readonly
+     */
+    public readonly chargingCharacteristicsWithdraw?: OPTIONAL<NULL>;
+    /**
+     * @summary `stn_srWithdraw`.
+     * @description
+     *
+     * Delete STN-SR from SGSN or MME. SGSN and IWF only; VLR shall ignore
+     * (3GPP TS 29.002 V19.1.0 clause 8.8.2.3).
+     *
+     * @public
+     * @readonly
+     */
+    public readonly stn_srWithdraw?: OPTIONAL<NULL>;
+    /**
+     * @summary `epsSubscriptionDataWithdraw`.
+     * @description
+     *
+     * Delete all or a subset of EPS Subscription Data. SGSN and MME only;
+     * VLR shall ignore (3GPP TS 29.002 V19.1.0 clause 8.8.2.3).
+     *
+     * @public
+     * @readonly
+     */
+    public readonly epsSubscriptionDataWithdraw?: OPTIONAL<EPS_SubscriptionDataWithdraw>;
+    /**
+     * @summary `apn_oi_replacementWithdraw`.
+     * @description
+     *
+     * Delete APN-OI-Replacement from SGSN or MME. SGSN and IWF only; VLR
+     * shall ignore (3GPP TS 29.002 V19.1.0 clause 8.8.2.3).
+     *
+     * @public
+     * @readonly
+     */
+    public readonly apn_oi_replacementWithdraw?: OPTIONAL<NULL>;
+    /**
+     * @summary `csg_SubscriptionDeleted`.
+     * @description
+     *
+     * Delete CSG Subscription Information received from HLR/HSS. Used by
+     * VLR, SGSN and IWF. Not applicable for the CSS (3GPP TS 29.002 V19.1.0
+     * clause 8.8.2.3).
+     *
+     * @public
+     * @readonly
+     */
+    public readonly csg_SubscriptionDeleted?: OPTIONAL<NULL>;
+    /**
+     * @summary `subscribedPeriodicTAU_RAU_TimerWithdraw`.
+     * @description
+     *
+     * Delete Subscribed Periodic RAU-TAU Timer from SGSN or MME. SGSN and
+     * IWF only; VLR shall ignore (3GPP TS 29.002 V19.1.0 clause 8.8.2.3).
+     *
+     * @public
+     * @readonly
+     */
+    public readonly subscribedPeriodicTAU_RAU_TimerWithdraw?: OPTIONAL<NULL>;
+    /**
+     * @summary `subscribedPeriodicLAU_TimerWithdraw`.
+     * @description
+     *
+     * Delete Subscribed Periodic LAU Timer from the VLR. VLR only; MME/SGSN
+     * shall ignore (3GPP TS 29.002 V19.1.0 clause 8.8.2.3).
+     *
+     * @public
+     * @readonly
+     */
+    public readonly subscribedPeriodicLAU_TimerWithdraw?: OPTIONAL<NULL>;
+    /**
+     * @summary `subscribed_vsrvccWithdraw`.
+     * @description
+     *
+     * Delete Subscribed vSRVCC from the MME. MME and IWF only; SGSN or VLR
+     * shall ignore (3GPP TS 29.002 V19.1.0 clause 8.8.2.3).
+     *
+     * @public
+     * @readonly
+     */
+    public readonly subscribed_vsrvccWithdraw?: OPTIONAL<NULL>;
+    /**
+     * @summary `vplmn_Csg_SubscriptionDeleted`.
+     * @description
+     *
+     * Delete CSG Subscription Information received from the CSS. Used by
+     * VLR and SGSN; ignore if received from HLR/HSS (3GPP TS 29.002 V19.1.0
+     * clause 8.8.2.3).
+     *
+     * @public
+     * @readonly
+     */
+    public readonly vplmn_Csg_SubscriptionDeleted?: OPTIONAL<NULL>;
+    /**
+     * @summary `additionalMSISDN_Withdraw`.
+     * @description
+     *
+     * Delete Additional MSISDN from SGSN or MME. Used by SGSN and IWF (3GPP
+     * TS 29.002 V19.1.0 clause 8.8.2.3).
+     *
+     * @public
+     * @readonly
+     */
+    public readonly additionalMSISDN_Withdraw?: OPTIONAL<NULL>;
+    /**
+     * @summary `cs_to_ps_SRVCC_Withdraw`.
+     * @description
+     *
+     * CS to PS SRVCC is no longer subscribed (3GPP TS 29.002 V19.1.0 clause
+     * 8.8.2.3).
+     *
+     * @public
+     * @readonly
+     */
+    public readonly cs_to_ps_SRVCC_Withdraw?: OPTIONAL<NULL>;
+    /**
+     * @summary `imsiGroupIdList_Withdraw`.
+     * @public
+     * @readonly
+     */
+    public readonly imsiGroupIdList_Withdraw?: OPTIONAL<NULL>;
+    /**
+     * @summary `userPlaneIntegrityProtectionWithdraw`.
+     * @description
+     *
+     * User Plane Integrity Protection may no longer be required (3GPP TS
+     * 29.002 V19.1.0 clause 8.8.2.3).
+     *
+     * @public
+     * @readonly
+     */
+    public readonly userPlaneIntegrityProtectionWithdraw?: OPTIONAL<NULL>;
+    /**
+     * @summary `dl_Buffering_Suggested_Packet_Count_Withdraw`.
+     * @description
+     *
+     * A suggested DL-Buffering Packet Count is no longer subscribed (3GPP
+     * TS 29.002 V19.1.0 clause 8.8.2.3).
+     *
+     * @public
+     * @readonly
+     */
+    public readonly dl_Buffering_Suggested_Packet_Count_Withdraw?: OPTIONAL<NULL>;
+    /**
+     * @summary `ue_UsageTypeWithdraw`.
+     * @description
+     *
+     * UE-Usage-Type is no longer subscribed. Not applicable for VLRs. Sent
+     * toward SGSN or MME (via IWF) that supports Dedicated Core Network if
+     * that subscription is removed (3GPP TS 29.002 V19.1.0 clause 8.8.2.3).
+     *
+     * @public
+     * @readonly
+     */
+    public readonly ue_UsageTypeWithdraw?: OPTIONAL<NULL>;
+    /**
+     * @summary `reset_idsWithdraw`.
+     * @description
+     *
+     * By its presence, Reset-IDs are no longer subscribed (3GPP TS 29.002
+     * V19.1.0 clause 8.8.2.3).
+     *
+     * @public
+     * @readonly
+     */
+    public readonly reset_idsWithdraw?: OPTIONAL<NULL>;
+    /**
+     * @summary `iab_OperationWithdraw`.
+     * @description
+     *
+     * By its presence, IAB operation is no longer authorized for the UE
+     * (3GPP TS 29.002 V19.1.0 clause 8.8.2.3).
+     *
+     * @public
+     * @readonly
+     */
+    public readonly iab_OperationWithdraw?: OPTIONAL<NULL>;
+    /**
+     * @summary Extensions that are not recognized.
+     * @public
+     * @readonly
+     */
+    public readonly _unrecognizedExtensionsList: _Element[];
+
     constructor (
-        /**
-         * @summary `imsi`.
-         * @description
-         *
-         * IMSI of the subscriber whose data is withdrawn (3GPP TS 29.002
-         * V19.1.0 clauses 8.8.2.2 and 7.6.2.1).
-         *
-         * @public
-         * @readonly
-         */
-        readonly imsi: IMSI,
-        /**
-         * @summary `basicServiceList`.
-         * @description
-         *
-         * Withdraw one, several or all basic services. Unsupported codes are
-         * ignored by VLR/SGSN; IWF shall ignore the parameter. Not applicable
-         * for the CSS (3GPP TS 29.002 V19.1.0 clause 8.8.2.3).
-         *
-         * @public
-         * @readonly
-         */
-        readonly basicServiceList?: OPTIONAL<BasicServiceList>,
-        /**
-         * @summary `ss_List`.
-         * @description
-         *
-         * Withdraw supplementary services. Used by VLR, SGSN and IWF for Call
-         * Barring and LCS; otherwise VLR only (SGSN/IWF shall ignore). Not
-         * applicable for the CSS (3GPP TS 29.002 V19.1.0 clause 8.8.2.3).
-         *
-         * @public
-         * @readonly
-         */
-        readonly ss_List?: OPTIONAL<SS_List>,
-        /**
-         * @summary `roamingRestrictionDueToUnsupportedFeature`.
-         * @description
-         *
-         * Delete Roaming Restriction Due To Unsupported Feature. VLR shall
-         * check if the current LA is now allowed. VLR only; SGSN/IWF shall
-         * ignore. Not applicable for the CSS (3GPP TS 29.002 V19.1.0 clause
-         * 8.8.2.3).
-         *
-         * @public
-         * @readonly
-         */
-        readonly roamingRestrictionDueToUnsupportedFeature?: OPTIONAL<NULL>,
-        /**
-         * @summary `regionalSubscriptionIdentifier`.
-         * @description
-         *
-         * Single Zone Code meaning all Zone Codes shall be deleted. Binary
-         * coding shall not be checked. Not sent to networks that do not support
-         * Regional Subscription. Not applicable for the CSS (3GPP TS 29.002
-         * V19.1.0 clause 8.8.2.3).
-         *
-         * @public
-         * @readonly
-         */
-        readonly regionalSubscriptionIdentifier?: OPTIONAL<ZoneCode>,
-        /**
-         * @summary `vbsGroupIndication`.
-         * @description
-         *
-         * Delete all VBS Group Ids. VLR only; SGSN/IWF shall ignore. Ignored if
-         * VBS is not supported or no Group Ids are stored. Not applicable for
-         * the CSS (3GPP TS 29.002 V19.1.0 clause 8.8.2.3).
-         *
-         * @public
-         * @readonly
-         */
-        readonly vbsGroupIndication?: OPTIONAL<NULL>,
-        /**
-         * @summary `vgcsGroupIndication`.
-         * @description
-         *
-         * Delete all VGCS Group Ids. VLR only; SGSN shall ignore. Not
-         * applicable for the CSS (3GPP TS 29.002 V19.1.0 clause 8.8.2.3).
-         *
-         * @public
-         * @readonly
-         */
-        readonly vgcsGroupIndication?: OPTIONAL<NULL>,
-        /**
-         * @summary `camelSubscriptionInfoWithdraw`.
-         * @description
-         *
-         * Delete all CAMEL Subscription Info from VLR or SGSN. Should not be
-         * sent with Specific CSI Withdraw. IWF shall ignore. Not applicable for
-         * the CSS (3GPP TS 29.002 V19.1.0 clause 8.8.2.3).
-         *
-         * @public
-         * @readonly
-         */
-        readonly camelSubscriptionInfoWithdraw?: OPTIONAL<NULL>,
-        /**
-         * @summary `extensionContainer`.
-         * @public
-         * @readonly
-         */
-        readonly extensionContainer?: OPTIONAL<ExtensionContainer>,
-        /**
-         * @summary `gprsSubscriptionDataWithdraw`.
-         * @description
-         *
-         * Delete all or a subset of GPRS Subscription Data. SGSN only; VLR
-         * shall ignore. Not applicable for the CSS (3GPP TS 29.002 V19.1.0
-         * clause 8.8.2.3).
-         *
-         * @public
-         * @readonly
-         */
-        readonly gprsSubscriptionDataWithdraw?: OPTIONAL<GPRSSubscriptionDataWithdraw>,
-        /**
-         * @summary `roamingRestrictedInSgsnDueToUnsuppportedFeature`.
-         * @description
-         *
-         * Delete Roaming Restricted In SGSN/MME Due To Unsupported Feature.
-         * SGSN and IWF only; VLR shall ignore. Not applicable for the CSS (3GPP
-         * TS 29.002 V19.1.0 clause 8.8.2.3).
-         *
-         * @public
-         * @readonly
-         */
-        readonly roamingRestrictedInSgsnDueToUnsuppportedFeature?: OPTIONAL<NULL>,
-        /**
-         * @summary `lsaInformationWithdraw`.
-         * @description
-         *
-         * Delete all or a subset of LSA Information. Used by VLR and SGSN. Not
-         * applicable for the CSS (3GPP TS 29.002 V19.1.0 clause 8.8.2.3).
-         *
-         * @public
-         * @readonly
-         */
-        readonly lsaInformationWithdraw?: OPTIONAL<LSAInformationWithdraw>,
-        /**
-         * @summary `gmlc_ListWithdraw`.
-         * @description
-         *
-         * Delete the subscriber's LCS GMLC List from VLR or SGSN. Used by VLR,
-         * SGSN and IWF. Not applicable for the CSS (3GPP TS 29.002 V19.1.0
-         * clauses 8.8.2.3 and 7.6.3.65C).
-         *
-         * @public
-         * @readonly
-         */
-        readonly gmlc_ListWithdraw?: OPTIONAL<NULL>,
-        /**
-         * @summary `istInformationWithdraw`.
-         * @description
-         *
-         * IST condition removed for the subscriber (3GPP TS 43.035). Not
-         * applicable for the CSS (3GPP TS 29.002 V19.1.0 clause 8.8.2.3).
-         *
-         * @public
-         * @readonly
-         */
-        readonly istInformationWithdraw?: OPTIONAL<NULL>,
-        /**
-         * @summary `specificCSI_Withdraw`.
-         * @description
-         *
-         * Delete named CSI elements (O-CSI, SS-CSI, TIF-CSI, D-CSI, VT-CSI,
-         * MO/MT-SMS-CSI, M-CSI, MG-CSI, GPRS-CSI). Not sent to VLRs that do not
-         * support CAMEL phase 3+. Should not be sent with CAMEL Subscription
-         * Info Withdraw. IWF shall ignore (3GPP TS 29.002 V19.1.0 clause
-         * 8.8.2.3).
-         *
-         * @public
-         * @readonly
-         */
-        readonly specificCSI_Withdraw?: OPTIONAL<SpecificCSI_Withdraw>,
-        /**
-         * @summary `chargingCharacteristicsWithdraw`.
-         * @description
-         *
-         * Replace Subscribed Charging Characteristics with a local default in
-         * SGSN or MME (3GPP TS 32.251). SGSN and IWF only; VLR shall ignore
-         * (3GPP TS 29.002 V19.1.0 clause 8.8.2.3).
-         *
-         * @public
-         * @readonly
-         */
-        readonly chargingCharacteristicsWithdraw?: OPTIONAL<NULL>,
-        /**
-         * @summary `stn_srWithdraw`.
-         * @description
-         *
-         * Delete STN-SR from SGSN or MME. SGSN and IWF only; VLR shall ignore
-         * (3GPP TS 29.002 V19.1.0 clause 8.8.2.3).
-         *
-         * @public
-         * @readonly
-         */
-        readonly stn_srWithdraw?: OPTIONAL<NULL>,
-        /**
-         * @summary `epsSubscriptionDataWithdraw`.
-         * @description
-         *
-         * Delete all or a subset of EPS Subscription Data. SGSN and MME only;
-         * VLR shall ignore (3GPP TS 29.002 V19.1.0 clause 8.8.2.3).
-         *
-         * @public
-         * @readonly
-         */
-        readonly epsSubscriptionDataWithdraw?: OPTIONAL<EPS_SubscriptionDataWithdraw>,
-        /**
-         * @summary `apn_oi_replacementWithdraw`.
-         * @description
-         *
-         * Delete APN-OI-Replacement from SGSN or MME. SGSN and IWF only; VLR
-         * shall ignore (3GPP TS 29.002 V19.1.0 clause 8.8.2.3).
-         *
-         * @public
-         * @readonly
-         */
-        readonly apn_oi_replacementWithdraw?: OPTIONAL<NULL>,
-        /**
-         * @summary `csg_SubscriptionDeleted`.
-         * @description
-         *
-         * Delete CSG Subscription Information received from HLR/HSS. Used by
-         * VLR, SGSN and IWF. Not applicable for the CSS (3GPP TS 29.002 V19.1.0
-         * clause 8.8.2.3).
-         *
-         * @public
-         * @readonly
-         */
-        readonly csg_SubscriptionDeleted?: OPTIONAL<NULL>,
-        /**
-         * @summary `subscribedPeriodicTAU_RAU_TimerWithdraw`.
-         * @description
-         *
-         * Delete Subscribed Periodic RAU-TAU Timer from SGSN or MME. SGSN and
-         * IWF only; VLR shall ignore (3GPP TS 29.002 V19.1.0 clause 8.8.2.3).
-         *
-         * @public
-         * @readonly
-         */
-        readonly subscribedPeriodicTAU_RAU_TimerWithdraw?: OPTIONAL<NULL>,
-        /**
-         * @summary `subscribedPeriodicLAU_TimerWithdraw`.
-         * @description
-         *
-         * Delete Subscribed Periodic LAU Timer from the VLR. VLR only; MME/SGSN
-         * shall ignore (3GPP TS 29.002 V19.1.0 clause 8.8.2.3).
-         *
-         * @public
-         * @readonly
-         */
-        readonly subscribedPeriodicLAU_TimerWithdraw?: OPTIONAL<NULL>,
-        /**
-         * @summary `subscribed_vsrvccWithdraw`.
-         * @description
-         *
-         * Delete Subscribed vSRVCC from the MME. MME and IWF only; SGSN or VLR
-         * shall ignore (3GPP TS 29.002 V19.1.0 clause 8.8.2.3).
-         *
-         * @public
-         * @readonly
-         */
-        readonly subscribed_vsrvccWithdraw?: OPTIONAL<NULL>,
-        /**
-         * @summary `vplmn_Csg_SubscriptionDeleted`.
-         * @description
-         *
-         * Delete CSG Subscription Information received from the CSS. Used by
-         * VLR and SGSN; ignore if received from HLR/HSS (3GPP TS 29.002 V19.1.0
-         * clause 8.8.2.3).
-         *
-         * @public
-         * @readonly
-         */
-        readonly vplmn_Csg_SubscriptionDeleted?: OPTIONAL<NULL>,
-        /**
-         * @summary `additionalMSISDN_Withdraw`.
-         * @description
-         *
-         * Delete Additional MSISDN from SGSN or MME. Used by SGSN and IWF (3GPP
-         * TS 29.002 V19.1.0 clause 8.8.2.3).
-         *
-         * @public
-         * @readonly
-         */
-        readonly additionalMSISDN_Withdraw?: OPTIONAL<NULL>,
-        /**
-         * @summary `cs_to_ps_SRVCC_Withdraw`.
-         * @description
-         *
-         * CS to PS SRVCC is no longer subscribed (3GPP TS 29.002 V19.1.0 clause
-         * 8.8.2.3).
-         *
-         * @public
-         * @readonly
-         */
-        readonly cs_to_ps_SRVCC_Withdraw?: OPTIONAL<NULL>,
-        /**
-         * @summary `imsiGroupIdList_Withdraw`.
-         * @public
-         * @readonly
-         */
-        readonly imsiGroupIdList_Withdraw?: OPTIONAL<NULL>,
-        /**
-         * @summary `userPlaneIntegrityProtectionWithdraw`.
-         * @description
-         *
-         * User Plane Integrity Protection may no longer be required (3GPP TS
-         * 29.002 V19.1.0 clause 8.8.2.3).
-         *
-         * @public
-         * @readonly
-         */
-        readonly userPlaneIntegrityProtectionWithdraw?: OPTIONAL<NULL>,
-        /**
-         * @summary `dl_Buffering_Suggested_Packet_Count_Withdraw`.
-         * @description
-         *
-         * A suggested DL-Buffering Packet Count is no longer subscribed (3GPP
-         * TS 29.002 V19.1.0 clause 8.8.2.3).
-         *
-         * @public
-         * @readonly
-         */
-        readonly dl_Buffering_Suggested_Packet_Count_Withdraw?: OPTIONAL<NULL>,
-        /**
-         * @summary `ue_UsageTypeWithdraw`.
-         * @description
-         *
-         * UE-Usage-Type is no longer subscribed. Not applicable for VLRs. Sent
-         * toward SGSN or MME (via IWF) that supports Dedicated Core Network if
-         * that subscription is removed (3GPP TS 29.002 V19.1.0 clause 8.8.2.3).
-         *
-         * @public
-         * @readonly
-         */
-        readonly ue_UsageTypeWithdraw?: OPTIONAL<NULL>,
-        /**
-         * @summary `reset_idsWithdraw`.
-         * @description
-         *
-         * By its presence, Reset-IDs are no longer subscribed (3GPP TS 29.002
-         * V19.1.0 clause 8.8.2.3).
-         *
-         * @public
-         * @readonly
-         */
-        readonly reset_idsWithdraw?: OPTIONAL<NULL>,
-        /**
-         * @summary `iab_OperationWithdraw`.
-         * @description
-         *
-         * By its presence, IAB operation is no longer authorized for the UE
-         * (3GPP TS 29.002 V19.1.0 clause 8.8.2.3).
-         *
-         * @public
-         * @readonly
-         */
-        readonly iab_OperationWithdraw?: OPTIONAL<NULL>,
-        /**
-         * @summary Extensions that are not recognized.
-         * @public
-         * @readonly
-         */
-        readonly _unrecognizedExtensionsList: _Element[] = []
-    ) {}
+        imsi: IMSI,
+        basicServiceList?: OPTIONAL<BasicServiceList>,
+        ss_List?: OPTIONAL<SS_List>,
+        roamingRestrictionDueToUnsupportedFeature?: OPTIONAL<NULL>,
+        regionalSubscriptionIdentifier?: OPTIONAL<ZoneCode>,
+        vbsGroupIndication?: OPTIONAL<NULL>,
+        vgcsGroupIndication?: OPTIONAL<NULL>,
+        camelSubscriptionInfoWithdraw?: OPTIONAL<NULL>,
+        extensionContainer?: OPTIONAL<ExtensionContainer>,
+        gprsSubscriptionDataWithdraw?: OPTIONAL<GPRSSubscriptionDataWithdraw>,
+        roamingRestrictedInSgsnDueToUnsuppportedFeature?: OPTIONAL<NULL>,
+        lsaInformationWithdraw?: OPTIONAL<LSAInformationWithdraw>,
+        gmlc_ListWithdraw?: OPTIONAL<NULL>,
+        istInformationWithdraw?: OPTIONAL<NULL>,
+        specificCSI_Withdraw?: OPTIONAL<SpecificCSI_Withdraw>,
+        chargingCharacteristicsWithdraw?: OPTIONAL<NULL>,
+        stn_srWithdraw?: OPTIONAL<NULL>,
+        epsSubscriptionDataWithdraw?: OPTIONAL<EPS_SubscriptionDataWithdraw>,
+        apn_oi_replacementWithdraw?: OPTIONAL<NULL>,
+        csg_SubscriptionDeleted?: OPTIONAL<NULL>,
+        subscribedPeriodicTAU_RAU_TimerWithdraw?: OPTIONAL<NULL>,
+        subscribedPeriodicLAU_TimerWithdraw?: OPTIONAL<NULL>,
+        subscribed_vsrvccWithdraw?: OPTIONAL<NULL>,
+        vplmn_Csg_SubscriptionDeleted?: OPTIONAL<NULL>,
+        additionalMSISDN_Withdraw?: OPTIONAL<NULL>,
+        cs_to_ps_SRVCC_Withdraw?: OPTIONAL<NULL>,
+        imsiGroupIdList_Withdraw?: OPTIONAL<NULL>,
+        userPlaneIntegrityProtectionWithdraw?: OPTIONAL<NULL>,
+        dl_Buffering_Suggested_Packet_Count_Withdraw?: OPTIONAL<NULL>,
+        ue_UsageTypeWithdraw?: OPTIONAL<NULL>,
+        reset_idsWithdraw?: OPTIONAL<NULL>,
+        iab_OperationWithdraw?: OPTIONAL<NULL>,
+        _unrecognizedExtensionsList: _Element[] = []
+    ) {
+        this.imsi = imsi;
+        this.basicServiceList = basicServiceList;
+        this.ss_List = ss_List;
+        this.roamingRestrictionDueToUnsupportedFeature = roamingRestrictionDueToUnsupportedFeature;
+        this.regionalSubscriptionIdentifier = regionalSubscriptionIdentifier;
+        this.vbsGroupIndication = vbsGroupIndication;
+        this.vgcsGroupIndication = vgcsGroupIndication;
+        this.camelSubscriptionInfoWithdraw = camelSubscriptionInfoWithdraw;
+        this.extensionContainer = extensionContainer;
+        this.gprsSubscriptionDataWithdraw = gprsSubscriptionDataWithdraw;
+        this.roamingRestrictedInSgsnDueToUnsuppportedFeature = roamingRestrictedInSgsnDueToUnsuppportedFeature;
+        this.lsaInformationWithdraw = lsaInformationWithdraw;
+        this.gmlc_ListWithdraw = gmlc_ListWithdraw;
+        this.istInformationWithdraw = istInformationWithdraw;
+        this.specificCSI_Withdraw = specificCSI_Withdraw;
+        this.chargingCharacteristicsWithdraw = chargingCharacteristicsWithdraw;
+        this.stn_srWithdraw = stn_srWithdraw;
+        this.epsSubscriptionDataWithdraw = epsSubscriptionDataWithdraw;
+        this.apn_oi_replacementWithdraw = apn_oi_replacementWithdraw;
+        this.csg_SubscriptionDeleted = csg_SubscriptionDeleted;
+        this.subscribedPeriodicTAU_RAU_TimerWithdraw = subscribedPeriodicTAU_RAU_TimerWithdraw;
+        this.subscribedPeriodicLAU_TimerWithdraw = subscribedPeriodicLAU_TimerWithdraw;
+        this.subscribed_vsrvccWithdraw = subscribed_vsrvccWithdraw;
+        this.vplmn_Csg_SubscriptionDeleted = vplmn_Csg_SubscriptionDeleted;
+        this.additionalMSISDN_Withdraw = additionalMSISDN_Withdraw;
+        this.cs_to_ps_SRVCC_Withdraw = cs_to_ps_SRVCC_Withdraw;
+        this.imsiGroupIdList_Withdraw = imsiGroupIdList_Withdraw;
+        this.userPlaneIntegrityProtectionWithdraw = userPlaneIntegrityProtectionWithdraw;
+        this.dl_Buffering_Suggested_Packet_Count_Withdraw = dl_Buffering_Suggested_Packet_Count_Withdraw;
+        this.ue_UsageTypeWithdraw = ue_UsageTypeWithdraw;
+        this.reset_idsWithdraw = reset_idsWithdraw;
+        this.iab_OperationWithdraw = iab_OperationWithdraw;
+        this._unrecognizedExtensionsList = _unrecognizedExtensionsList;
+    }
 
     /**
      * @summary Restructures an object into a DeleteSubscriberDataArg

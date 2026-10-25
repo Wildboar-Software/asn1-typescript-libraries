@@ -49,7 +49,7 @@ class SMR_Unbind {
      * @public
      * @readonly
      */
-    readonly _unrecognizedExtensionsList: _Element[];
+    public readonly _unrecognizedExtensionsList: _Element[];
 
     constructor (
         _unrecognizedExtensionsList: _Element[] = []

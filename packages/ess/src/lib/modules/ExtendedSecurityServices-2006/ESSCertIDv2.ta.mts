@@ -1,12 +1,12 @@
 /* eslint-disable */
 import {
-    ASN1Element as _Element,
+    type ASN1Element as _Element,
     ASN1TagClass as _TagClass,
-    OPTIONAL,
+    type OPTIONAL,
 } from "@wildboar/asn1";
 import * as $ from "@wildboar/asn1/functional";
 import {
-    Hash,
+    type Hash,
     _decode_Hash,
     _encode_Hash,
 } from "../ExtendedSecurityServices-2006/Hash.ta.mjs";
@@ -43,43 +43,51 @@ import {
  *
  */
 export class ESSCertIDv2 {
+    /**
+     * @summary `hashAlgorithm`.
+     * @description
+     *
+     * Algorithm used to compute `certHash`. DEFAULT
+     * `{algorithm id-sha256}` ([RFC 5035 §4](https://datatracker.ietf.org/doc/html/rfc5035#section-4)).
+     *
+     * @public
+     * @readonly
+     */
+    public readonly hashAlgorithm: OPTIONAL<AlgorithmIdentifier>;
+    /**
+     * @summary `certHash`.
+     * @description
+     *
+     * Hash of the entire DER-encoded certificate (including the signature),
+     * using `hashAlgorithm` ([RFC 5035 §4](https://datatracker.ietf.org/doc/html/rfc5035#section-4)).
+     *
+     * @public
+     * @readonly
+     */
+    public readonly certHash: Hash;
+    /**
+     * @summary `issuerSerial`.
+     * @description
+     *
+     * Optional certificate identification; normally present unless inferable
+     * (for example from `SignerInfo.sid`). Attribute and additional public-key
+     * certificates SHOULD be identified with `IssuerSerial` when not included
+     * in `SignedData` ([RFC 5035 §4](https://datatracker.ietf.org/doc/html/rfc5035#section-4)).
+     *
+     * @public
+     * @readonly
+     */
+    public readonly issuerSerial?: OPTIONAL<IssuerSerial>;
+
     constructor(
-        /**
-         * @summary `hashAlgorithm`.
-         * @description
-         *
-         * Algorithm used to compute `certHash`. DEFAULT
-         * `{algorithm id-sha256}` ([RFC 5035 §4](https://datatracker.ietf.org/doc/html/rfc5035#section-4)).
-         *
-         * @public
-         * @readonly
-         */
-        readonly hashAlgorithm: OPTIONAL<AlgorithmIdentifier>,
-        /**
-         * @summary `certHash`.
-         * @description
-         *
-         * Hash of the entire DER-encoded certificate (including the signature),
-         * using `hashAlgorithm` ([RFC 5035 §4](https://datatracker.ietf.org/doc/html/rfc5035#section-4)).
-         *
-         * @public
-         * @readonly
-         */
-        readonly certHash: Hash,
-        /**
-         * @summary `issuerSerial`.
-         * @description
-         *
-         * Optional certificate identification; normally present unless inferable
-         * (for example from `SignerInfo.sid`). Attribute and additional public-key
-         * certificates SHOULD be identified with `IssuerSerial` when not included
-         * in `SignedData` ([RFC 5035 §4](https://datatracker.ietf.org/doc/html/rfc5035#section-4)).
-         *
-         * @public
-         * @readonly
-         */
-        readonly issuerSerial?: OPTIONAL<IssuerSerial>
-    ) {}
+        hashAlgorithm: OPTIONAL<AlgorithmIdentifier>,
+        certHash: Hash,
+        issuerSerial?: OPTIONAL<IssuerSerial>
+    ) {
+        this.hashAlgorithm = hashAlgorithm;
+        this.certHash = certHash;
+        this.issuerSerial = issuerSerial;
+    }
 
     /**
      * @summary Restructures an object into a ESSCertIDv2

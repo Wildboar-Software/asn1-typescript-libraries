@@ -1,11 +1,11 @@
 /* eslint-disable */
 import {
     ASN1SizeError,
-    BOOLEAN,
-    IA5String,
-    OBJECT_IDENTIFIER,
-    OPTIONAL,
-    ASN1Element as _Element,
+    type BOOLEAN,
+    type IA5String,
+    type OBJECT_IDENTIFIER,
+    type OPTIONAL,
+    type ASN1Element as _Element,
     ASN1TagClass as _TagClass
 } from "@wildboar/asn1";
 import * as $ from "@wildboar/asn1/functional";
@@ -255,19 +255,19 @@ class CommonCriteriaMeasures {
          * @static
          */
 
-    public static _enum_for_assurancelevel = _enum_for_EvaluationAssuranceLevel;        /**
+    public static _enum_for_assurancelevel: typeof _enum_for_EvaluationAssuranceLevel = _enum_for_EvaluationAssuranceLevel;        /**
          * @summary The enum used as the type of the component `evaluationStatus`
          * @public
          * @static
          */
 
-    public static _enum_for_evaluationStatus = _enum_for_EvaluationStatus;        /**
+    public static _enum_for_evaluationStatus: typeof _enum_for_EvaluationStatus = _enum_for_EvaluationStatus;        /**
          * @summary The enum used as the type of the component `strengthOfFunction`
          * @public
          * @static
          */
 
-    public static _enum_for_strengthOfFunction = _enum_for_StrengthOfFunction;
+    public static _enum_for_strengthOfFunction: typeof _enum_for_StrengthOfFunction = _enum_for_StrengthOfFunction;
 }
 
 /**

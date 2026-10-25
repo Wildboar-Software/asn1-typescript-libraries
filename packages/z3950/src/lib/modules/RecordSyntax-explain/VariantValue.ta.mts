@@ -1,12 +1,12 @@
 /* eslint-disable */
 import {
-    OPTIONAL,
-    ASN1Element as _Element,
+    type OPTIONAL,
+    type ASN1Element as _Element,
     ASN1TagClass as _TagClass
 } from "@wildboar/asn1";
 import * as $ from "@wildboar/asn1/functional";
-import { PrimitiveDataType, _decode_PrimitiveDataType, _encode_PrimitiveDataType } from "../RecordSyntax-explain/PrimitiveDataType.ta.mjs";
-import { ValueSet, _decode_ValueSet, _encode_ValueSet } from "../RecordSyntax-explain/ValueSet.ta.mjs";
+import { type PrimitiveDataType, _decode_PrimitiveDataType, _encode_PrimitiveDataType } from "../RecordSyntax-explain/PrimitiveDataType.ta.mjs";
+import { type ValueSet, _decode_ValueSet, _encode_ValueSet } from "../RecordSyntax-explain/ValueSet.ta.mjs";
 
 
 /**

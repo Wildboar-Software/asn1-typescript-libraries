@@ -1,6 +1,6 @@
 /* eslint-disable */
 import {
-    ASN1Element as _Element,
+    type ASN1Element as _Element,
     ASN1TagClass as _TagClass,
     ASN1Construction as _Construction,
     ASN1UniversalType as _UniversalType,
@@ -16,7 +16,7 @@ import {
     _encode_Proxy,
 } from '../AccessControl-ASN1Module/Proxy.ta.mjs';
 import {
-    InitiatorName,
+    type InitiatorName,
     _decode_InitiatorName,
     _encode_InitiatorName,
 } from '../AccessControl-ASN1Module/InitiatorName.ta.mjs';

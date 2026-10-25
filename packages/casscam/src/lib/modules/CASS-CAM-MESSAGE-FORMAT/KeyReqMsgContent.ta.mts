@@ -1,8 +1,8 @@
 /* eslint-disable */
 import {
-    BIT_STRING,
-    OCTET_STRING,
-    ASN1Element as _Element,
+    type BIT_STRING,
+    type OCTET_STRING,
+    type ASN1Element as _Element,
     ASN1TagClass as _TagClass,
     ASN1Construction as _Construction,
     ASN1UniversalType as _UniversalType,
@@ -54,7 +54,7 @@ class KeyReqMsgContent {
      * @public
      * @readonly
      */
-    readonly sessionID: OCTET_STRING;
+    public readonly sessionID: OCTET_STRING;
     /**
      * @summary `keyParingID`.
      * @description
@@ -66,7 +66,7 @@ class KeyReqMsgContent {
      * @public
      * @readonly
      */
-    readonly keyParingID: OCTET_STRING;
+    public readonly keyParingID: OCTET_STRING;
     /**
      * @summary `cAMCertificate`.
      * @description
@@ -78,7 +78,7 @@ class KeyReqMsgContent {
      * @public
      * @readonly
      */
-    readonly cAMCertificate: BIT_STRING;
+    public readonly cAMCertificate: BIT_STRING;
 
     constructor (
         sessionID: OCTET_STRING,

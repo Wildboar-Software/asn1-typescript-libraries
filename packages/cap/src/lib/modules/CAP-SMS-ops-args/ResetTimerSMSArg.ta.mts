@@ -1,7 +1,7 @@
 /* eslint-disable */
 import {
-    OPTIONAL,
-    ASN1Element as _Element,
+    type OPTIONAL,
+    type ASN1Element as _Element,
     ASN1TagClass as _TagClass,
     ASN1Construction as _Construction,
     ASN1UniversalType as _UniversalType,
@@ -12,7 +12,7 @@ import {
 } from "@wildboar/asn1";
 import * as $ from "@wildboar/asn1/functional";
 import { type Extensions, _decode_Extensions, _encode_Extensions } from "../CAP-datatypes/Extensions.ta.mjs";
-import { TimerID, _decode_TimerID, _encode_TimerID, tssf } from "../CAP-datatypes/TimerID.ta.mjs";
+import { TimerID, _decode_TimerID, _encode_TimerID, _enum_for_TimerID, tssf } from "../CAP-datatypes/TimerID.ta.mjs";
 import { type TimerValue, _decode_TimerValue, _encode_TimerValue } from "../CAP-datatypes/TimerValue.ta.mjs";
 
 
@@ -31,7 +31,7 @@ import { type TimerValue, _decode_TimerValue, _encode_TimerValue } from "../CAP-
  * ResetTimerSMSArg {PARAMETERS-BOUND : bound} ::= SEQUENCE {
  *     timerID                [0] TimerID    DEFAULT tssf,
  *     timervalue                [1] TimerValue,
- *     extensions                [2] Extensions {bound}            OPTIONAL,
+ *     extensions                [2] Extensions {bound}            type OPTIONAL,
  *     ...
  *     }
  * ```
@@ -40,42 +40,52 @@ import { type TimerValue, _decode_TimerValue, _encode_TimerValue } from "../CAP-
  */
 export
 class ResetTimerSMSArg {
+    /**
+     * @summary `timerID`.
+     * @description
+     *
+     * Which timer to reset. Only `tssf` is permitted. ASN.1 default
+     * `tssf`. (3GPP TS 29.078 V19.0.0 clause 12.8.1.1).
+     *
+     * @public
+     * @readonly
+     */
+    public readonly timerID: OPTIONAL<TimerID>;
+    /**
+     * @summary `timervalue`.
+     * @description
+     *
+     * Value to which the timer shall be set.
+     * (3GPP TS 29.078 V19.0.0 clause 12.8.1.1).
+     *
+     * @public
+     * @readonly
+     */
+    public readonly timervalue: TimerValue;
+    /**
+     * @summary `extensions`.
+     * @public
+     * @readonly
+     */
+    public readonly extensions?: OPTIONAL<Extensions>;
+    /**
+     * @summary Extensions that are not recognized.
+     * @public
+     * @readonly
+     */
+    public readonly _unrecognizedExtensionsList: _Element[];
+
     constructor (
-        /**
-         * @summary `timerID`.
-         * @description
-         *
-         * Which timer to reset. Only `tssf` is permitted. ASN.1 default
-         * `tssf`. (3GPP TS 29.078 V19.0.0 clause 12.8.1.1).
-         *
-         * @public
-         * @readonly
-         */
-        readonly timerID: OPTIONAL<TimerID>,
-        /**
-         * @summary `timervalue`.
-         * @description
-         *
-         * Value to which the timer shall be set.
-         * (3GPP TS 29.078 V19.0.0 clause 12.8.1.1).
-         *
-         * @public
-         * @readonly
-         */
-        readonly timervalue: TimerValue,
-        /**
-         * @summary `extensions`.
-         * @public
-         * @readonly
-         */
-        readonly extensions?: OPTIONAL<Extensions>,
-        /**
-         * @summary Extensions that are not recognized.
-         * @public
-         * @readonly
-         */
-        readonly _unrecognizedExtensionsList: _Element[] = []
-    ) {}
+        timerID: OPTIONAL<TimerID>,
+        timervalue: TimerValue,
+        extensions?: OPTIONAL<Extensions>,
+        _unrecognizedExtensionsList: _Element[] = []
+    ) {
+        this.timerID = timerID;
+        this.timervalue = timervalue;
+        this.extensions = extensions;
+        this._unrecognizedExtensionsList = _unrecognizedExtensionsList;
+    }
 
     /**
      * @summary Restructures an object into a ResetTimerSMSArg
@@ -99,7 +109,7 @@ class ResetTimerSMSArg {
      * @static
      * @method
      */
-    public static get _default_value_for_timerID () { return tssf; }
+    public static get _default_value_for_timerID (): _enum_for_TimerID { return tssf; }
 }
 
 /**

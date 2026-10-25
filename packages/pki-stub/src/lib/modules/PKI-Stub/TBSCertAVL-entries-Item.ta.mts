@@ -1,7 +1,7 @@
 /* eslint-disable */
 import {
-    OPTIONAL,
-    ASN1Element as _Element,
+    type OPTIONAL,
+    type ASN1Element as _Element,
     ASN1TagClass as _TagClass,
     ASN1Construction as _Construction,
     ASN1UniversalType as _UniversalType,
@@ -12,17 +12,17 @@ import {
 } from "@wildboar/asn1";
 import * as $ from "@wildboar/asn1/functional";
 import {
-    TBSCertAVL_entries_Item_idType,
+    type TBSCertAVL_entries_Item_idType,
     _decode_TBSCertAVL_entries_Item_idType,
     _encode_TBSCertAVL_entries_Item_idType,
 } from "../PKI-Stub/TBSCertAVL-entries-Item-idType.ta.mjs";
 import {
-    Extensions,
+    type Extensions,
     _decode_Extensions,
     _encode_Extensions,
 } from "../PKI-Stub/Extensions.ta.mjs";
 import {
-    ScopeRestrictions,
+    type ScopeRestrictions,
     _decode_ScopeRestrictions,
     _encode_ScopeRestrictions,
 } from "../AuthenticationFramework/ScopeRestrictions.ta.mjs";

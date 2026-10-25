@@ -1,6 +1,6 @@
 /* eslint-disable */
 import {
-    ASN1Element as _Element,
+    type ASN1Element as _Element,
     ASN1TagClass as _TagClass,
     ASN1Construction as _Construction,
     ASN1UniversalType as _UniversalType,
@@ -84,7 +84,7 @@ type NameConstraint = _enum_for_NameConstraint;
  * @enum {number}
  */
 export
-const NameConstraint = _enum_for_NameConstraint;
+const NameConstraint: typeof _enum_for_NameConstraint = _enum_for_NameConstraint;
 
 /**
  * @summary NameConstraint_no_name_constraint
@@ -95,7 +95,7 @@ const NameConstraint = _enum_for_NameConstraint;
  * @type {number}
  */
 export
-const NameConstraint_no_name_constraint: NameConstraint = NameConstraint.no_name_constraint; /* LONG_NAMED_ENUMERATED_VALUE */
+const NameConstraint_no_name_constraint: _enum_for_NameConstraint.no_name_constraint = NameConstraint.no_name_constraint; /* LONG_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary no_name_constraint
@@ -106,7 +106,7 @@ const NameConstraint_no_name_constraint: NameConstraint = NameConstraint.no_name
  * @type {number}
  */
 export
-const no_name_constraint: NameConstraint = NameConstraint.no_name_constraint; /* SHORT_NAMED_ENUMERATED_VALUE */
+const no_name_constraint: _enum_for_NameConstraint.no_name_constraint = NameConstraint.no_name_constraint; /* SHORT_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary NameConstraint_local_unambiguity
@@ -117,7 +117,7 @@ const no_name_constraint: NameConstraint = NameConstraint.no_name_constraint; /*
  * @type {number}
  */
 export
-const NameConstraint_local_unambiguity: NameConstraint = NameConstraint.local_unambiguity; /* LONG_NAMED_ENUMERATED_VALUE */
+const NameConstraint_local_unambiguity: _enum_for_NameConstraint.local_unambiguity = NameConstraint.local_unambiguity; /* LONG_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary local_unambiguity
@@ -128,7 +128,7 @@ const NameConstraint_local_unambiguity: NameConstraint = NameConstraint.local_un
  * @type {number}
  */
 export
-const local_unambiguity: NameConstraint = NameConstraint.local_unambiguity; /* SHORT_NAMED_ENUMERATED_VALUE */
+const local_unambiguity: _enum_for_NameConstraint.local_unambiguity = NameConstraint.local_unambiguity; /* SHORT_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary NameConstraint_global_unambiguity
@@ -139,7 +139,7 @@ const local_unambiguity: NameConstraint = NameConstraint.local_unambiguity; /* S
  * @type {number}
  */
 export
-const NameConstraint_global_unambiguity: NameConstraint = NameConstraint.global_unambiguity; /* LONG_NAMED_ENUMERATED_VALUE */
+const NameConstraint_global_unambiguity: _enum_for_NameConstraint.global_unambiguity = NameConstraint.global_unambiguity; /* LONG_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary global_unambiguity
@@ -150,9 +150,21 @@ const NameConstraint_global_unambiguity: NameConstraint = NameConstraint.global_
  * @type {number}
  */
 export
-const global_unambiguity: NameConstraint = NameConstraint.global_unambiguity; /* SHORT_NAMED_ENUMERATED_VALUE */
-export const _decode_NameConstraint = $._decodeEnumerated;
-export const _encode_NameConstraint = $._encodeEnumerated;
+const global_unambiguity: _enum_for_NameConstraint.global_unambiguity = NameConstraint.global_unambiguity; /* SHORT_NAMED_ENUMERATED_VALUE */
+export function _decode_NameConstraint(el: _Element): NameConstraint {
+    const enumerated = $._decodeEnumerated(el);
+    switch (enumerated) {
+        case NameConstraint.no_name_constraint: return NameConstraint.no_name_constraint;
+        case NameConstraint.local_unambiguity: return NameConstraint.local_unambiguity;
+        case NameConstraint.global_unambiguity: return NameConstraint.global_unambiguity;
+        default:
+            throw new _ConstructionError(
+                "Invalid ENUMERATED value " + enumerated + " for NameConstraint.",
+                el,
+            );
+    }
+}
+export const _encode_NameConstraint: $.ASN1Encoder<NameConstraint> = $._encodeEnumerated as $.ASN1Encoder<NameConstraint>;
 
 
 /* eslint-enable */

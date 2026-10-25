@@ -1,11 +1,11 @@
 /* eslint-disable */
 import {
-    ASN1Element as _Element,
+    type ASN1Element as _Element,
     ASN1TagClass as _TagClass
 } from "@wildboar/asn1";
 import * as $ from "@wildboar/asn1/functional";
 import { DefaultDiagFormat, _decode_DefaultDiagFormat, _encode_DefaultDiagFormat } from "../Z39-50-APDU-2001/DefaultDiagFormat.ta.mjs";
-import { DiagFormat, _decode_DiagFormat, _encode_DiagFormat } from "../DiagnosticFormatDiag1/DiagFormat.ta.mjs";
+import { type DiagFormat, _decode_DiagFormat, _encode_DiagFormat } from "../DiagnosticFormatDiag1/DiagFormat.ta.mjs";
 
 
 /**

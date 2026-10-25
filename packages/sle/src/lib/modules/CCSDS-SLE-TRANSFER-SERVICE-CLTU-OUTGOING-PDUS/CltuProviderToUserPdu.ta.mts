@@ -1,6 +1,6 @@
 /* eslint-disable */
 import {
-    ASN1Element as _Element,
+    type ASN1Element as _Element,
     ASN1TagClass as _TagClass
 } from "@wildboar/asn1";
 import * as $ from "@wildboar/asn1/functional";
@@ -14,7 +14,7 @@ import { CltuThrowEventReturn, _decode_CltuThrowEventReturn, _encode_CltuThrowEv
 import { CltuTransferDataReturn, _decode_CltuTransferDataReturn, _encode_CltuTransferDataReturn } from "../CCSDS-SLE-TRANSFER-SERVICE-CLTU-OUTGOING-PDUS/CltuTransferDataReturn.ta.mjs";
 import { CltuAsyncNotifyInvocation, _decode_CltuAsyncNotifyInvocation, _encode_CltuAsyncNotifyInvocation } from "../CCSDS-SLE-TRANSFER-SERVICE-CLTU-OUTGOING-PDUS/CltuAsyncNotifyInvocation.ta.mjs";
 import { CltuStatusReportInvocation, _decode_CltuStatusReportInvocation, _encode_CltuStatusReportInvocation } from "../CCSDS-SLE-TRANSFER-SERVICE-CLTU-OUTGOING-PDUS/CltuStatusReportInvocation.ta.mjs";
-import { SlePeerAbort, _decode_SlePeerAbort, _encode_SlePeerAbort } from "../CCSDS-SLE-TRANSFER-SERVICE-BIND-TYPES/SlePeerAbort.ta.mjs";
+import { type SlePeerAbort, _decode_SlePeerAbort, _encode_SlePeerAbort } from "../CCSDS-SLE-TRANSFER-SERVICE-BIND-TYPES/SlePeerAbort.ta.mjs";
 
 
 /**

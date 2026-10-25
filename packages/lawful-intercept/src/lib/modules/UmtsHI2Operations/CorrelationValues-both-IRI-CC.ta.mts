@@ -1,13 +1,13 @@
 /* eslint-disable */
 import {
     ASN1ConstructionError as _ConstructionError,
-    ASN1Element as _Element,
+    type ASN1Element as _Element,
     ASN1TagClass as _TagClass
 } from "@wildboar/asn1";
 import * as $ from "@wildboar/asn1/functional";
 import { IRI_to_CC_Correlation, _decode_IRI_to_CC_Correlation, _encode_IRI_to_CC_Correlation } from "../UmtsHI2Operations/IRI-to-CC-Correlation.ta.mjs";
 // export { IRI_to_CC_Correlation, _decode_IRI_to_CC_Correlation, _encode_IRI_to_CC_Correlation } from "../UmtsHI2Operations/IRI-to-CC-Correlation.ta.mjs";
-import { IRI_to_IRI_Correlation, _decode_IRI_to_IRI_Correlation, _encode_IRI_to_IRI_Correlation } from "../UmtsHI2Operations/IRI-to-IRI-Correlation.ta.mjs";
+import { type IRI_to_IRI_Correlation, _decode_IRI_to_IRI_Correlation, _encode_IRI_to_IRI_Correlation } from "../UmtsHI2Operations/IRI-to-IRI-Correlation.ta.mjs";
 // export { IRI_to_IRI_Correlation, _decode_IRI_to_IRI_Correlation, _encode_IRI_to_IRI_Correlation } from "../UmtsHI2Operations/IRI-to-IRI-Correlation.ta.mjs";
 
 

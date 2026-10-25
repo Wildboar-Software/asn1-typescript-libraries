@@ -1,8 +1,8 @@
 /* eslint-disable */
 import {
-    OPTIONAL,
-    INTEGER,
-    ASN1Element as _Element,
+    type OPTIONAL,
+    type INTEGER,
+    type ASN1Element as _Element,
     ASN1TagClass as _TagClass,
     ASN1Construction as _Construction,
     ASN1UniversalType as _UniversalType,
@@ -13,7 +13,7 @@ import {
     ASN1OverflowError,
 } from "@wildboar/asn1";
 import * as $ from "@wildboar/asn1/functional";
-import { ElementaryMessageID, _decode_ElementaryMessageID, _encode_ElementaryMessageID } from "../IN-CS2-datatypes/ElementaryMessageID.ta.mjs";
+import { type ElementaryMessageID, _decode_ElementaryMessageID, _encode_ElementaryMessageID } from "../IN-CS2-datatypes/ElementaryMessageID.ta.mjs";
 import { InformationToRecord_controlDigits, _decode_InformationToRecord_controlDigits, _encode_InformationToRecord_controlDigits } from "../IN-CS2-datatypes/InformationToRecord-controlDigits.ta.mjs";
 
 
@@ -46,32 +46,41 @@ import { InformationToRecord_controlDigits, _decode_InformationToRecord_controlD
  */
 export
 class InformationToRecord {
+    /**
+     * @summary `messageID`.
+     * @public
+     * @readonly
+     */
+    public readonly messageID: OPTIONAL<ElementaryMessageID>;
+    /**
+     * @summary `messageDeletionTimeOut`.
+     * @public
+     * @readonly
+     */
+    public readonly messageDeletionTimeOut: OPTIONAL<INTEGER>;
+    /**
+     * @summary `timeToRecord`.
+     * @public
+     * @readonly
+     */
+    public readonly timeToRecord: OPTIONAL<INTEGER>;
+    /**
+     * @summary `controlDigits`.
+     * @public
+     * @readonly
+     */
+    public readonly controlDigits: InformationToRecord_controlDigits;
+
     constructor (
-        /**
-         * @summary `messageID`.
-         * @public
-         * @readonly
-         */
-        readonly messageID: OPTIONAL<ElementaryMessageID>,
-        /**
-         * @summary `messageDeletionTimeOut`.
-         * @public
-         * @readonly
-         */
-        readonly messageDeletionTimeOut: OPTIONAL<INTEGER>,
-        /**
-         * @summary `timeToRecord`.
-         * @public
-         * @readonly
-         */
-        readonly timeToRecord: OPTIONAL<INTEGER>,
-        /**
-         * @summary `controlDigits`.
-         * @public
-         * @readonly
-         */
-        readonly controlDigits: InformationToRecord_controlDigits
+        messageID: OPTIONAL<ElementaryMessageID>,
+        messageDeletionTimeOut: OPTIONAL<INTEGER>,
+        timeToRecord: OPTIONAL<INTEGER>,
+        controlDigits: InformationToRecord_controlDigits
     ) {
+        this.messageID = messageID;
+        this.messageDeletionTimeOut = messageDeletionTimeOut;
+        this.timeToRecord = timeToRecord;
+        this.controlDigits = controlDigits;
         if (messageDeletionTimeOut !== undefined && (typeof messageDeletionTimeOut === "bigint" ? (messageDeletionTimeOut < 1n || messageDeletionTimeOut > 3600n) : (messageDeletionTimeOut < 1 || messageDeletionTimeOut > 3600))) {
             throw new ASN1OverflowError("InformationToRecord.messageDeletionTimeOut violates INTEGER constraint");
         }

@@ -1,9 +1,9 @@
 /* eslint-disable */
 import {
-    REAL,
-    SEQUENCE,
-    SET,
-    ASN1Element as _Element,
+    type REAL,
+    type SEQUENCE,
+    type SET,
+    type ASN1Element as _Element,
     ASN1TagClass as _TagClass,
     ASN1ConstructionError as _ConstructionError,
 } from "@wildboar/asn1";
@@ -32,20 +32,26 @@ import {
  */
 export
 class ValueDuration {
+    /**
+     * @summary `value`.
+     * @public
+     * @readonly
+     */
+    public readonly value: REAL;
+    /**
+     * @summary `duration`.
+     * @public
+     * @readonly
+     */
+    public readonly duration: TimeInterval;
+
     constructor (
-        /**
-         * @summary `value`.
-         * @public
-         * @readonly
-         */
-        readonly value: REAL,
-        /**
-         * @summary `duration`.
-         * @public
-         * @readonly
-         */
-        readonly duration: TimeInterval
-    ) {}
+        value: REAL,
+        duration: TimeInterval
+    ) {
+        this.value = value;
+        this.duration = duration;
+    }
 
     /**
      * @summary Restructures an object into a ValueDuration

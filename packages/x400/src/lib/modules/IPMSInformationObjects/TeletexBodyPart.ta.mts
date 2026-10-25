@@ -1,6 +1,6 @@
 /* eslint-disable */
 import {
-    ASN1Element as _Element,
+    type ASN1Element as _Element,
     ASN1TagClass as _TagClass,
     ASN1Construction as _Construction,
     ASN1UniversalType as _UniversalType,
@@ -16,7 +16,7 @@ import {
     _encode_TeletexParameters,
 } from '../IPMSInformationObjects/TeletexParameters.ta.mjs';
 import {
-    TeletexData,
+    type TeletexData,
     _decode_TeletexData,
     _encode_TeletexData,
 } from '../IPMSInformationObjects/TeletexData.ta.mjs';
@@ -37,20 +37,26 @@ import {
  *
  */
 export class TeletexBodyPart {
+    /**
+     * @summary `parameters`.
+     * @public
+     * @readonly
+     */
+    public readonly parameters: TeletexParameters;
+    /**
+     * @summary `data`.
+     * @public
+     * @readonly
+     */
+    public readonly data: TeletexData;
+
     constructor(
-        /**
-         * @summary `parameters`.
-         * @public
-         * @readonly
-         */
-        readonly parameters: TeletexParameters,
-        /**
-         * @summary `data`.
-         * @public
-         * @readonly
-         */
-        readonly data: TeletexData
-    ) {}
+        parameters: TeletexParameters,
+        data: TeletexData
+    ) {
+        this.parameters = parameters;
+        this.data = data;
+    }
 
     /**
      * @summary Restructures an object into a TeletexBodyPart

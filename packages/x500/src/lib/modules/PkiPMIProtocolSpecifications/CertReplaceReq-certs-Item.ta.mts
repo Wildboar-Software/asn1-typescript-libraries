@@ -1,17 +1,17 @@
 /* eslint-disable */
 import {
     ASN1ConstructionError as _ConstructionError,
-    ASN1Element as _Element,
+    type ASN1Element as _Element,
     ASN1TagClass as _TagClass,
 } from "@wildboar/asn1";
 import * as $ from "@wildboar/asn1/functional";
 import {
-    Certificate,
+    type Certificate,
     _decode_Certificate,
     _encode_Certificate,
 } from "../AuthenticationFramework/Certificate.ta.mjs";
 import {
-    CertificateSerialNumber,
+    type CertificateSerialNumber,
     _decode_CertificateSerialNumber,
     _encode_CertificateSerialNumber,
 } from "../AuthenticationFramework/CertificateSerialNumber.ta.mjs";
@@ -27,26 +27,34 @@ import {
  *
  */
 export class CertReplaceReq_certs_Item {
+    /**
+     * @summary `old`.
+     * @public
+     * @readonly
+     */
+    public readonly old: CertificateSerialNumber;
+    /**
+     * @summary `new_`.
+     * @public
+     * @readonly
+     */
+    public readonly new_: Certificate;
+    /**
+     * @summary Extensions that are not recognized.
+     * @public
+     * @readonly
+     */
+    public readonly _unrecognizedExtensionsList: _Element[];
+
     constructor(
-        /**
-         * @summary `old`.
-         * @public
-         * @readonly
-         */
-        readonly old: CertificateSerialNumber,
-        /**
-         * @summary `new_`.
-         * @public
-         * @readonly
-         */
-        readonly new_: Certificate,
-        /**
-         * @summary Extensions that are not recognized.
-         * @public
-         * @readonly
-         */
-        readonly _unrecognizedExtensionsList: _Element[] = []
-    ) {}
+        old: CertificateSerialNumber,
+        new_: Certificate,
+        _unrecognizedExtensionsList: _Element[] = []
+    ) {
+        this.old = old;
+        this.new_ = new_;
+        this._unrecognizedExtensionsList = _unrecognizedExtensionsList;
+    }
 
     /**
      * @summary Restructures an object into a CertReplaceReq_certs_Item

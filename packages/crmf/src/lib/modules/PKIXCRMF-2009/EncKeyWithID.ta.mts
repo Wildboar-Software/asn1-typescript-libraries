@@ -1,12 +1,12 @@
 /* eslint-disable */
 import {
-    ASN1Element as _Element,
+    type ASN1Element as _Element,
     ASN1TagClass as _TagClass,
-    OPTIONAL,
+    type OPTIONAL,
 } from "@wildboar/asn1";
 import * as $ from "@wildboar/asn1/functional";
 import {
-    EncKeyWithID_identifier,
+    type EncKeyWithID_identifier,
     _decode_EncKeyWithID_identifier,
     _encode_EncKeyWithID_identifier,
 } from "../PKIXCRMF-2009/EncKeyWithID-identifier.ta.mjs";
@@ -42,31 +42,37 @@ import {
  *
  */
 export class EncKeyWithID {
+    /**
+     * @summary `privateKey`.
+     * @description
+     *
+     * Encoded private key (`PrivateKeyInfo`)
+     * ([RFC 4211 §4.2.1](https://datatracker.ietf.org/doc/html/rfc4211#section-4.2.1)).
+     *
+     * @public
+     * @readonly
+     */
+    public readonly privateKey: PrivateKeyInfo;
+    /**
+     * @summary `identifier`.
+     * @description
+     *
+     * Name the CA/RA can associate with the requestor (UTF8 token
+     * or `GeneralName`, often a certificate DN). MUST be present
+     * for POP ([RFC 4211 §4.2.1](https://datatracker.ietf.org/doc/html/rfc4211#section-4.2.1)).
+     *
+     * @public
+     * @readonly
+     */
+    public readonly identifier?: OPTIONAL<EncKeyWithID_identifier>;
+
     constructor(
-        /**
-         * @summary `privateKey`.
-         * @description
-         *
-         * Encoded private key (`PrivateKeyInfo`)
-         * ([RFC 4211 §4.2.1](https://datatracker.ietf.org/doc/html/rfc4211#section-4.2.1)).
-         *
-         * @public
-         * @readonly
-         */
-        readonly privateKey: PrivateKeyInfo,
-        /**
-         * @summary `identifier`.
-         * @description
-         *
-         * Name the CA/RA can associate with the requestor (UTF8 token
-         * or `GeneralName`, often a certificate DN). MUST be present
-         * for POP ([RFC 4211 §4.2.1](https://datatracker.ietf.org/doc/html/rfc4211#section-4.2.1)).
-         *
-         * @public
-         * @readonly
-         */
-        readonly identifier?: OPTIONAL<EncKeyWithID_identifier>
-    ) {}
+        privateKey: PrivateKeyInfo,
+        identifier?: OPTIONAL<EncKeyWithID_identifier>
+    ) {
+        this.privateKey = privateKey;
+        this.identifier = identifier;
+    }
 
     /**
      * @summary Restructures an object into a EncKeyWithID

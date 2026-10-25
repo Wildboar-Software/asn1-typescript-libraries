@@ -1,7 +1,7 @@
 /* eslint-disable */
 import {
-    OPTIONAL,
-    ASN1Element as _Element,
+    type OPTIONAL,
+    type ASN1Element as _Element,
     ASN1TagClass as _TagClass,
     ASN1Construction as _Construction,
     ASN1UniversalType as _UniversalType,
@@ -11,7 +11,7 @@ import {
     ASN1ConstructionError as _ConstructionError,
 } from "@wildboar/asn1";
 import * as $ from "@wildboar/asn1/functional";
-import { ObjectName, _decode_ObjectName, _encode_ObjectName } from "../ISO-9506-MMS-1/ObjectName.ta.mjs";
+import { type ObjectName, _decode_ObjectName, _encode_ObjectName } from "../ISO-9506-MMS-1/ObjectName.ta.mjs";
 import { InitializeJournal_Request_limitSpecification, _decode_InitializeJournal_Request_limitSpecification, _encode_InitializeJournal_Request_limitSpecification } from "../ISO-9506-MMS-1/InitializeJournal-Request-limitSpecification.ta.mjs";
 
 
@@ -39,30 +39,36 @@ import { InitializeJournal_Request_limitSpecification, _decode_InitializeJournal
  */
 export
 class InitializeJournal_Request {
+    /**
+     * @summary `journalName`.
+     * @description
+     *
+     * Journal to initialize. ISO 9506-1:2003 §23.4.1.1.1.
+     *
+     * @public
+     * @readonly
+     */
+    public readonly journalName: ObjectName;
+    /**
+     * @summary `limitSpecification`.
+     * @description
+     *
+     * If absent, all entries are deleted. If present, entries
+     * through `limitingTime` (and optionally `limitingEntry`)
+     * are deleted. ISO 9506-1:2003 §23.4.1.1.2.
+     *
+     * @public
+     * @readonly
+     */
+    public readonly limitSpecification?: OPTIONAL<InitializeJournal_Request_limitSpecification>;
+
     constructor (
-        /**
-         * @summary `journalName`.
-         * @description
-         *
-         * Journal to initialize. ISO 9506-1:2003 §23.4.1.1.1.
-         *
-         * @public
-         * @readonly
-         */
-        readonly journalName: ObjectName,
-        /**
-         * @summary `limitSpecification`.
-         * @description
-         *
-         * If absent, all entries are deleted. If present, entries
-         * through `limitingTime` (and optionally `limitingEntry`)
-         * are deleted. ISO 9506-1:2003 §23.4.1.1.2.
-         *
-         * @public
-         * @readonly
-         */
-        readonly limitSpecification?: OPTIONAL<InitializeJournal_Request_limitSpecification>
-    ) {}
+        journalName: ObjectName,
+        limitSpecification?: OPTIONAL<InitializeJournal_Request_limitSpecification>
+    ) {
+        this.journalName = journalName;
+        this.limitSpecification = limitSpecification;
+    }
 
     /**
      * @summary Restructures an object into a InitializeJournal_Request

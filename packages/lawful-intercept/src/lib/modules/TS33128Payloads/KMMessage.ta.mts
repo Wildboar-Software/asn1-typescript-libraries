@@ -1,18 +1,18 @@
 /* eslint-disable */
 import {
-    OPTIONAL,
-    UTF8String,
-    ASN1Element as _Element,
+    type OPTIONAL,
+    type UTF8String,
+    type ASN1Element as _Element,
     ASN1TagClass as _TagClass
 } from "@wildboar/asn1";
 import * as $ from "@wildboar/asn1/functional";
 import { KMSRequestName, _decode_KMSRequestName, _encode_KMSRequestName, _enum_for_KMSRequestName } from "../TS33128Payloads/KMSRequestName.ta.mjs";
 // export { KMSRequestName, _enum_for_KMSRequestName, KMSRequestName_kMSInitialize /* IMPORTED_LONG_ENUMERATION_ITEM */, kMSInitialize /* IMPORTED_SHORT_ENUMERATION_ITEM */, KMSRequestName_kMSKeyProvision /* IMPORTED_LONG_ENUMERATION_ITEM */, kMSKeyProvision /* IMPORTED_SHORT_ENUMERATION_ITEM */, KMSRequestName_kMSCert /* IMPORTED_LONG_ENUMERATION_ITEM */, kMSCert /* IMPORTED_SHORT_ENUMERATION_ITEM */, KMSRequestName_kMSCertCache /* IMPORTED_LONG_ENUMERATION_ITEM */, kMSCertCache /* IMPORTED_SHORT_ENUMERATION_ITEM */, KMSRequestName_kMSLookup /* IMPORTED_LONG_ENUMERATION_ITEM */, kMSLookup /* IMPORTED_SHORT_ENUMERATION_ITEM */, KMSRequestName_kMSRedirectUpload /* IMPORTED_LONG_ENUMERATION_ITEM */, kMSRedirectUpload /* IMPORTED_SHORT_ENUMERATION_ITEM */, _decode_KMSRequestName, _encode_KMSRequestName } from "../TS33128Payloads/KMSRequestName.ta.mjs";
-import { KMSRequestBody, _decode_KMSRequestBody, _encode_KMSRequestBody } from "../TS33128Payloads/KMSRequestBody.ta.mjs";
+import { type KMSRequestBody, _decode_KMSRequestBody, _encode_KMSRequestBody } from "../TS33128Payloads/KMSRequestBody.ta.mjs";
 // export { KMSRequestBody, _decode_KMSRequestBody, _encode_KMSRequestBody } from "../TS33128Payloads/KMSRequestBody.ta.mjs";
-import { KMSResponseBody, _decode_KMSResponseBody, _encode_KMSResponseBody } from "../TS33128Payloads/KMSResponseBody.ta.mjs";
+import { type KMSResponseBody, _decode_KMSResponseBody, _encode_KMSResponseBody } from "../TS33128Payloads/KMSResponseBody.ta.mjs";
 // export { KMSResponseBody, _decode_KMSResponseBody, _encode_KMSResponseBody } from "../TS33128Payloads/KMSResponseBody.ta.mjs";
-import { KMSResponseBodyKRR, _decode_KMSResponseBodyKRR, _encode_KMSResponseBodyKRR } from "../TS33128Payloads/KMSResponseBodyKRR.ta.mjs";
+import { type KMSResponseBodyKRR, _decode_KMSResponseBodyKRR, _encode_KMSResponseBodyKRR } from "../TS33128Payloads/KMSResponseBodyKRR.ta.mjs";
 // export { KMSResponseBodyKRR, _decode_KMSResponseBodyKRR, _encode_KMSResponseBodyKRR } from "../TS33128Payloads/KMSResponseBodyKRR.ta.mjs";
 
 
@@ -156,7 +156,7 @@ class KMMessage {
          * @static
          */
 
-    public static _enum_for_kMSRequestName = _enum_for_KMSRequestName;
+    public static _enum_for_kMSRequestName: typeof _enum_for_KMSRequestName = _enum_for_KMSRequestName;
 }
 
 /**

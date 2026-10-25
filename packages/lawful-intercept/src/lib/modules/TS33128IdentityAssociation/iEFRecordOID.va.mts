@@ -1,6 +1,6 @@
 /* eslint-disable */
 import {
-    RELATIVE_OID
+    type RELATIVE_OID
 } from "@wildboar/asn1";
 import { tS33128IdentityAssociationOID } from "../TS33128IdentityAssociation/tS33128IdentityAssociationOID.va.mjs";
 // export { tS33128IdentityAssociationOID } from "../TS33128IdentityAssociation/tS33128IdentityAssociationOID.va.mjs";

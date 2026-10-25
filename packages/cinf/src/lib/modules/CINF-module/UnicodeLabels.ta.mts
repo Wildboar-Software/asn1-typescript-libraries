@@ -1,6 +1,6 @@
 /* eslint-disable */
 import {
-  INTEGER,
+  type INTEGER,
   ASN1Element as _Element,
   ASN1TagClass as _TagClass,
   ASN1Construction as _Construction,
@@ -12,7 +12,7 @@ import {
 } from '@wildboar/asn1';
 import * as $ from '@wildboar/asn1/functional';
 import {
-  Non_numericUnicodeLabel,
+  type Non_numericUnicodeLabel,
   _decode_Non_numericUnicodeLabel,
   _encode_Non_numericUnicodeLabel,
 } from '../CINF-module/Non-numericUnicodeLabel.ta.mjs';
@@ -50,7 +50,7 @@ export class UnicodeLabels {
    * @public
    * @readonly
    */
-  readonly numericLabel: INTEGER;
+  public readonly numericLabel: INTEGER;
   /**
    * @summary `non_numeric`.
    * @description
@@ -62,7 +62,7 @@ export class UnicodeLabels {
    * @public
    * @readonly
    */
-  readonly non_numeric: Non_numericUnicodeLabel[];
+  public readonly non_numeric: Non_numericUnicodeLabel[];
 
   constructor(
     numericLabel: INTEGER,

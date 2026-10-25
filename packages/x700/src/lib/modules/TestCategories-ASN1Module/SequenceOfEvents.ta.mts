@@ -1,8 +1,8 @@
 /* eslint-disable */
 import {
-    INTEGER,
-    OBJECT_IDENTIFIER,
-    ASN1Element as _Element,
+    type INTEGER,
+    type OBJECT_IDENTIFIER,
+    type ASN1Element as _Element,
     ASN1TagClass as _TagClass,
     ASN1Construction as _Construction,
     ASN1UniversalType as _UniversalType,
@@ -19,17 +19,17 @@ import {
     _encode_SignalDirection,
 } from '../TestCategories-ASN1Module/SignalDirection.ta.mjs';
 import {
-    MORTs,
+    type MORTs,
     _decode_MORTs,
     _encode_MORTs,
 } from '../Test-ASN1Module/MORTs.ta.mjs';
 import {
-    AssociatedObjects,
+    type AssociatedObjects,
     _decode_AssociatedObjects,
     _encode_AssociatedObjects,
 } from '../Test-ASN1Module/AssociatedObjects.ta.mjs';
 import {
-    WaitDuration,
+    type WaitDuration,
     _decode_WaitDuration,
     _encode_WaitDuration,
 } from '../TestCategories-ASN1Module/WaitDuration.ta.mjs';
@@ -64,74 +64,90 @@ import {
  *
  */
 export class SequenceOfEvents {
+    /**
+     * @summary `eventId`.
+     * @description
+     *
+     * Number of this event. X.737 §7.6.6, A.6.20.
+     * @public
+     * @readonly
+     */
+    public readonly eventId: INTEGER;
+    /**
+     * @summary `signalType`.
+     * @description
+     *
+     * Id of the signal (`CDTC-SIGNAL-TYPE.&id` in `SignalTypeSet`). Cor.2.
+     * @public
+     * @readonly
+     */
+    public readonly signalType: OBJECT_IDENTIFIER;
+    /**
+     * @summary `signalValue`.
+     * @description
+     *
+     * Value syntax `CDTC-SIGNAL-TYPE.&Value` for that type. Cor.2.
+     * @public
+     * @readonly
+     */
+    public readonly signalValue: _Element;
+    /**
+     * @summary `signalDirection`.
+     * @description
+     *
+     * Insert (`send`) or expect (`receive`). X.737 §7.6.2.2.
+     * @public
+     * @readonly
+     */
+    public readonly signalDirection: SignalDirection;
+    /**
+     * @summary `mORTs`.
+     * @description
+     *
+     * MORT into which the signal is inserted or from which it is received.
+     * X.737 §7.6.6.
+     * @public
+     * @readonly
+     */
+    public readonly mORTs: MORTs;
+    /**
+     * @summary `associatedObjects`.
+     * @description
+     *
+     * AO (PCO) where the signal is inserted or received. X.737 §7.6.6.
+     * @public
+     * @readonly
+     */
+    public readonly associatedObjects: AssociatedObjects;
+    /**
+     * @summary `waitDuration`.
+     * @description
+     *
+     * Receive: time allowed until the signal.
+     * Send: wait after the previous event before inserting. X.737
+     * §7.6.2.2, §8.1.20.
+     * @public
+     * @readonly
+     */
+    public readonly waitDuration: WaitDuration;
+
     constructor(
-        /**
-         * @summary `eventId`.
-         * @description
-         *
-         * Number of this event. X.737 §7.6.6, A.6.20.
-         * @public
-         * @readonly
-         */
-        readonly eventId: INTEGER,
-        /**
-         * @summary `signalType`.
-         * @description
-         *
-         * Id of the signal (`CDTC-SIGNAL-TYPE.&id` in `SignalTypeSet`). Cor.2.
-         * @public
-         * @readonly
-         */
-        readonly signalType: OBJECT_IDENTIFIER,
-        /**
-         * @summary `signalValue`.
-         * @description
-         *
-         * Value syntax `CDTC-SIGNAL-TYPE.&Value` for that type. Cor.2.
-         * @public
-         * @readonly
-         */
-        readonly signalValue: _Element,
-        /**
-         * @summary `signalDirection`.
-         * @description
-         *
-         * Insert (`send`) or expect (`receive`). X.737 §7.6.2.2.
-         * @public
-         * @readonly
-         */
-        readonly signalDirection: SignalDirection,
-        /**
-         * @summary `mORTs`.
-         * @description
-         *
-         * MORT into which the signal is inserted or from which it is received.
-         * X.737 §7.6.6.
-         * @public
-         * @readonly
-         */
-        readonly mORTs: MORTs,
-        /**
-         * @summary `associatedObjects`.
-         * @description
-         *
-         * AO (PCO) where the signal is inserted or received. X.737 §7.6.6.
-         * @public
-         * @readonly
-         */
-        readonly associatedObjects: AssociatedObjects,
-        /**
-         * @summary `waitDuration`.
-         * @description
-         *
-         * Receive: time allowed until the signal.
-         * Send: wait after the previous event before inserting. X.737
-         * §7.6.2.2, §8.1.20.
-         * @public
-         * @readonly
-         */
-        readonly waitDuration: WaitDuration
-    ) {}
+        eventId: INTEGER,
+        signalType: OBJECT_IDENTIFIER,
+        signalValue: _Element,
+        signalDirection: SignalDirection,
+        mORTs: MORTs,
+        associatedObjects: AssociatedObjects,
+        waitDuration: WaitDuration
+    ) {
+        this.eventId = eventId;
+        this.signalType = signalType;
+        this.signalValue = signalValue;
+        this.signalDirection = signalDirection;
+        this.mORTs = mORTs;
+        this.associatedObjects = associatedObjects;
+        this.waitDuration = waitDuration;
+    }
 
     /**
      * @summary Restructures an object into a SequenceOfEvents
@@ -165,7 +181,7 @@ export class SequenceOfEvents {
      * @static
      */
 
-    public static _enum_for_signalDirection = _enum_for_SignalDirection;
+    public static _enum_for_signalDirection: typeof _enum_for_SignalDirection = _enum_for_SignalDirection;
 }
 
 /**

@@ -1,12 +1,12 @@
 /* eslint-disable */
 import {
-    OPTIONAL,
-    ASN1Element as _Element,
+    type OPTIONAL,
+    type ASN1Element as _Element,
     ASN1TagClass as _TagClass
 } from "@wildboar/asn1";
 import * as $ from "@wildboar/asn1/functional";
-import { DiagFormat_term_problem, _decode_DiagFormat_term_problem, _encode_DiagFormat_term_problem } from "../DiagnosticFormatDiag1/DiagFormat-term-problem.ta.mjs";
-import { Term, _decode_Term, _encode_Term } from "../Z39-50-APDU-2001/Term.ta.mjs";
+import { type DiagFormat_term_problem, _decode_DiagFormat_term_problem, _encode_DiagFormat_term_problem } from "../DiagnosticFormatDiag1/DiagFormat-term-problem.ta.mjs";
+import { type Term, _decode_Term, _encode_Term } from "../Z39-50-APDU-2001/Term.ta.mjs";
 
 
 /**

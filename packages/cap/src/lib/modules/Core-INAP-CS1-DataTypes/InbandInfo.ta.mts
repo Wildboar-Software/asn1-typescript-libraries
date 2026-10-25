@@ -1,8 +1,8 @@
 /* eslint-disable */
 import {
-    OPTIONAL,
-    INTEGER,
-    ASN1Element as _Element,
+    type OPTIONAL,
+    type INTEGER,
+    type ASN1Element as _Element,
     ASN1TagClass as _TagClass,
     ASN1Construction as _Construction,
     ASN1UniversalType as _UniversalType,
@@ -13,7 +13,7 @@ import {
     ASN1OverflowError,
 } from "@wildboar/asn1";
 import * as $ from "@wildboar/asn1/functional";
-import { MessageID, _decode_MessageID, _encode_MessageID } from "../Core-INAP-CS1-DataTypes/MessageID.ta.mjs";
+import { type MessageID, _decode_MessageID, _encode_MessageID } from "../Core-INAP-CS1-DataTypes/MessageID.ta.mjs";
 
 
 /**
@@ -25,8 +25,8 @@ import { MessageID, _decode_MessageID, _encode_MessageID } from "../Core-INAP-CS
  * ```asn1
  * InbandInfo ::= SEQUENCE {
  *      messageID     [0] MessageID,
- *      numberOfRepetitions     [1] INTEGER (1..127)          OPTIONAL,
- *      duration     [2] INTEGER (0..32767)          OPTIONAL,
+ *      numberOfRepetitions     [1] INTEGER (1..127)          type OPTIONAL,
+ *      duration     [2] INTEGER (0..32767)          type OPTIONAL,
  *      interval     [3] INTEGER (0..32767)          OPTIONAL
  *      }
  * ```
@@ -35,32 +35,41 @@ import { MessageID, _decode_MessageID, _encode_MessageID } from "../Core-INAP-CS
  */
 export
 class InbandInfo {
+    /**
+     * @summary `messageID`.
+     * @public
+     * @readonly
+     */
+    public readonly messageID: MessageID;
+    /**
+     * @summary `numberOfRepetitions`.
+     * @public
+     * @readonly
+     */
+    public readonly numberOfRepetitions?: OPTIONAL<INTEGER>;
+    /**
+     * @summary `duration`.
+     * @public
+     * @readonly
+     */
+    public readonly duration?: OPTIONAL<INTEGER>;
+    /**
+     * @summary `interval`.
+     * @public
+     * @readonly
+     */
+    public readonly interval?: OPTIONAL<INTEGER>;
+
     constructor (
-        /**
-         * @summary `messageID`.
-         * @public
-         * @readonly
-         */
-        readonly messageID: MessageID,
-        /**
-         * @summary `numberOfRepetitions`.
-         * @public
-         * @readonly
-         */
-        readonly numberOfRepetitions?: OPTIONAL<INTEGER>,
-        /**
-         * @summary `duration`.
-         * @public
-         * @readonly
-         */
-        readonly duration?: OPTIONAL<INTEGER>,
-        /**
-         * @summary `interval`.
-         * @public
-         * @readonly
-         */
-        readonly interval?: OPTIONAL<INTEGER>
+        messageID: MessageID,
+        numberOfRepetitions?: OPTIONAL<INTEGER>,
+        duration?: OPTIONAL<INTEGER>,
+        interval?: OPTIONAL<INTEGER>
     ) {
+        this.messageID = messageID;
+        this.numberOfRepetitions = numberOfRepetitions;
+        this.duration = duration;
+        this.interval = interval;
         if (numberOfRepetitions !== undefined && (typeof numberOfRepetitions === "bigint" ? (numberOfRepetitions < 1n || numberOfRepetitions > 127n) : (numberOfRepetitions < 1 || numberOfRepetitions > 127))) {
             throw new ASN1OverflowError("InbandInfo.numberOfRepetitions violates INTEGER constraint");
         }

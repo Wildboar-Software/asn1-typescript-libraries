@@ -1,5 +1,5 @@
 /* eslint-disable */
-import { ASN1Element as _Element, ENUMERATED } from "@wildboar/asn1";
+import { ASN1Element as _Element, type ENUMERATED } from "@wildboar/asn1";
 import * as $ from "@wildboar/asn1/functional";
 
 export enum _enum_for_AVMPversion {
@@ -27,48 +27,48 @@ export type AVMPversion = _enum_for_AVMPversion | ENUMERATED;
  * @constant
  * @type {number}
  */
-export const AVMPversion_v1: AVMPversion = 1; /* LONG_NAMED_ENUMERATED_VALUE */
+export const AVMPversion_v1: _enum_for_AVMPversion.v1 = _enum_for_AVMPversion.v1; /* LONG_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary v1
  * @constant
  * @type {number}
  */
-export const v1: AVMPversion = AVMPversion_v1; /* SHORT_NAMED_ENUMERATED_VALUE */
+export const v1: _enum_for_AVMPversion.v1 = AVMPversion_v1; /* SHORT_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary AVMPversion_v2
  * @constant
  * @type {number}
  */
-export const AVMPversion_v2: AVMPversion = 2; /* LONG_NAMED_ENUMERATED_VALUE */
+export const AVMPversion_v2: _enum_for_AVMPversion.v2 = _enum_for_AVMPversion.v2; /* LONG_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary v2
  * @constant
  * @type {number}
  */
-export const v2: AVMPversion = AVMPversion_v2; /* SHORT_NAMED_ENUMERATED_VALUE */
+export const v2: _enum_for_AVMPversion.v2 = AVMPversion_v2; /* SHORT_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary AVMPversion_v3
  * @constant
  * @type {number}
  */
-export const AVMPversion_v3: AVMPversion = 3; /* LONG_NAMED_ENUMERATED_VALUE */
+export const AVMPversion_v3: _enum_for_AVMPversion.v3 = _enum_for_AVMPversion.v3; /* LONG_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary v3
  * @constant
  * @type {number}
  */
-export const v3: AVMPversion = AVMPversion_v3; /* SHORT_NAMED_ENUMERATED_VALUE */
+export const v3: _enum_for_AVMPversion.v3 = AVMPversion_v3; /* SHORT_NAMED_ENUMERATED_VALUE */
 
 
-export const _decode_AVMPversion = $._decodeEnumerated;
+export const _decode_AVMPversion: $.ASN1Decoder<number> = $._decodeEnumerated;
 
 
-export const _encode_AVMPversion = $._encodeEnumerated;
+export const _encode_AVMPversion: $.ASN1Encoder<number> = $._encodeEnumerated;
 
 
 /* eslint-enable */

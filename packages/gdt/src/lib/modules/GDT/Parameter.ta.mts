@@ -1,12 +1,12 @@
 /* eslint-disable */
 import {
-    ASN1Element as _Element,
+    type ASN1Element as _Element,
     ASN1TagClass as _TagClass,
-    OCTET_STRING,
-    OPTIONAL
+    type OCTET_STRING,
+    type OPTIONAL
 } from "@wildboar/asn1";
 import * as $ from "@wildboar/asn1/functional";
-import { _decode_ParameterType, _encode_ParameterType, ParameterType } from "../GDT/ParameterType.ta.mjs";
+import { _decode_ParameterType, _encode_ParameterType, type ParameterType } from "../GDT/ParameterType.ta.mjs";
 
 
 /**
@@ -32,19 +32,19 @@ class Parameter {
      * @public
      * @readonly
      */
-    readonly id: ParameterType;
+    public readonly id: ParameterType;
     /**
      * @summary `value`.
      * @public
      * @readonly
      */
-    readonly value?: OPTIONAL<OCTET_STRING[]>;
+    public readonly value?: OPTIONAL<OCTET_STRING[]>;
     /**
      * @summary Extensions that are not recognized.
      * @public
      * @readonly
      */
-    readonly _unrecognizedExtensionsList: _Element[];
+    public readonly _unrecognizedExtensionsList: _Element[];
 
     constructor (
         id: ParameterType,

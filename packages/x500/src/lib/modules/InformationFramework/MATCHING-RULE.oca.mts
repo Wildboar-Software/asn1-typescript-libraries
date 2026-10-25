@@ -1,5 +1,5 @@
 /* eslint-disable */
-import { OBJECT_IDENTIFIER, UTF8String } from "@wildboar/asn1";
+import { type OBJECT_IDENTIFIER, type UTF8String } from "@wildboar/asn1";
 import * as $ from "@wildboar/asn1/functional";
 import { type ATTRIBUTE } from "../InformationFramework/ATTRIBUTE.oca.mjs";
 /**
@@ -18,7 +18,7 @@ import { type ATTRIBUTE } from "../InformationFramework/ATTRIBUTE.oca.mjs";
  * ```asn1
  * MATCHING-RULE ::= CLASS {
  *   &ParentMatchingRules    MATCHING-RULE OPTIONAL,
- *   &AssertionType          OPTIONAL,
+ *   &AssertionType          type OPTIONAL,
  *   &uniqueMatchIndicator   ATTRIBUTE OPTIONAL,
  *   &ldapSyntax             SYNTAX-NAME.&id OPTIONAL,
  *   &ldapName               SEQUENCE SIZE(1..MAX) OF UTF8String OPTIONAL,

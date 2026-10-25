@@ -1,7 +1,7 @@
 /* eslint-disable */
 import {
-    OPTIONAL,
-    ASN1Element as _Element,
+    type OPTIONAL,
+    type ASN1Element as _Element,
     ASN1TagClass as _TagClass,
     ASN1Construction as _Construction,
     ASN1UniversalType as _UniversalType,
@@ -12,12 +12,12 @@ import {
 } from '@wildboar/asn1';
 import * as $ from '@wildboar/asn1/functional';
 import {
-    OptionalIdentifier,
+    type OptionalIdentifier,
     _decode_OptionalIdentifier,
     _encode_OptionalIdentifier,
 } from '../GrmAttributeDefinitionModule/OptionalIdentifier.ta.mjs';
 import {
-    Identifier,
+    type Identifier,
     _decode_Identifier,
     _encode_Identifier,
 } from '../DefinitionASN1Module/Identifier.ta.mjs';
@@ -42,29 +42,35 @@ import {
  *
  */
 export class OptionalIdentifierAndRole {
+    /**
+     * @summary `optionalOperationName`.
+     * @description
+     *
+     * Optional operation or notification name from the related
+     * relationship class template. ITU-T Rec. X.725 (11/95)
+     * A.2.3.5.
+     * @public
+     * @readonly
+     */
+    public readonly optionalOperationName: OptionalIdentifier;
+    /**
+     * @summary `optionalRoleName`.
+     * @description
+     *
+     * Role the operation refers to. Optional if the relationship
+     * defines only one role. ITU-T Rec. X.725 (11/95) A.2.3.5.
+     * @public
+     * @readonly
+     */
+    public readonly optionalRoleName?: OPTIONAL<Identifier>;
+
     constructor(
-        /**
-         * @summary `optionalOperationName`.
-         * @description
-         *
-         * Optional operation or notification name from the related
-         * relationship class template. ITU-T Rec. X.725 (11/95)
-         * A.2.3.5.
-         * @public
-         * @readonly
-         */
-        readonly optionalOperationName: OptionalIdentifier,
-        /**
-         * @summary `optionalRoleName`.
-         * @description
-         *
-         * Role the operation refers to. Optional if the relationship
-         * defines only one role. ITU-T Rec. X.725 (11/95) A.2.3.5.
-         * @public
-         * @readonly
-         */
-        readonly optionalRoleName?: OPTIONAL<Identifier>
-    ) {}
+        optionalOperationName: OptionalIdentifier,
+        optionalRoleName?: OPTIONAL<Identifier>
+    ) {
+        this.optionalOperationName = optionalOperationName;
+        this.optionalRoleName = optionalRoleName;
+    }
 
     /**
      * @summary Restructures an object into a OptionalIdentifierAndRole

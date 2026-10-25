@@ -1,7 +1,7 @@
 /* eslint-disable */
 import {
-    OPTIONAL,
-    ASN1Element as _Element,
+    type OPTIONAL,
+    type ASN1Element as _Element,
     ASN1TagClass as _TagClass,
     ASN1Construction as _Construction,
     ASN1UniversalType as _UniversalType,
@@ -11,9 +11,9 @@ import {
     ASN1ConstructionError as _ConstructionError,
 } from "@wildboar/asn1";
 import * as $ from "@wildboar/asn1/functional";
-import { GetEventEnrollmentAttributes_Request_scopeOfRequest, client /* IMPORTED_SHORT_NAMED_INTEGER */, _decode_GetEventEnrollmentAttributes_Request_scopeOfRequest, _encode_GetEventEnrollmentAttributes_Request_scopeOfRequest } from "../ISO-9506-MMS-1/GetEventEnrollmentAttributes-Request-scopeOfRequest.ta.mjs";
-import { ObjectName, _decode_ObjectName, _encode_ObjectName } from "../ISO-9506-MMS-1/ObjectName.ta.mjs";
-import { Nullable, _get_decoder_for_Nullable, _get_encoder_for_Nullable } from "../ISO-9506-MMS-1/Nullable.ta.mjs";
+import { type GetEventEnrollmentAttributes_Request_scopeOfRequest, client /* IMPORTED_SHORT_NAMED_INTEGER */, _decode_GetEventEnrollmentAttributes_Request_scopeOfRequest, _encode_GetEventEnrollmentAttributes_Request_scopeOfRequest } from "../ISO-9506-MMS-1/GetEventEnrollmentAttributes-Request-scopeOfRequest.ta.mjs";
+import { type ObjectName, _decode_ObjectName, _encode_ObjectName } from "../ISO-9506-MMS-1/ObjectName.ta.mjs";
+import { type Nullable, _get_decoder_for_Nullable, _get_encoder_for_Nullable } from "../ISO-9506-MMS-1/Nullable.ta.mjs";
 import { ApplicationReference, _decode_ApplicationReference, _encode_ApplicationReference } from "../MMS-Environment-1/ApplicationReference.ta.mjs";
 
 
@@ -48,82 +48,96 @@ import { ApplicationReference, _decode_ApplicationReference, _encode_Application
  */
 export
 class GetEventEnrollmentAttributes_Request {
+    /**
+     * @summary `scopeOfRequest`.
+     * @description
+     *
+     * Which enrollments: `specific`, `client` (default), `ec`, or `ea`.
+     *
+     * [ISO 9506-1:2003 §21.4.1.1.1]
+     * [ISO 9506-2:2003 §21.4.1.1]
+     *
+     * @public
+     * @readonly
+     */
+    public readonly scopeOfRequest?: OPTIONAL<GetEventEnrollmentAttributes_Request_scopeOfRequest>;
+    /**
+     * @summary `eventEnrollmentNames`.
+     * @description
+     *
+     * Names when scope is `specific`.
+     *
+     * [ISO 9506-1:2003 §21.4.1.1.2]
+     *
+     * @public
+     * @readonly
+     */
+    public readonly eventEnrollmentNames?: OPTIONAL<ObjectName[]>;
+    /**
+     * @summary `clientApplication`.
+     * @description
+     *
+     * Client filter. Omitted if the requesting client. Requires `tpy`.
+     *
+     * [ISO 9506-1:2003 §21.4.1.1.3]
+     * [ISO 9506-2:2003 §21.4.1.3]
+     *
+     * @public
+     * @readonly
+     */
+    public readonly clientApplication?: OPTIONAL<Nullable<ApplicationReference>>;
+    /**
+     * @summary `eventConditionName`.
+     * @description
+     *
+     * Event Condition when scope is `ec`.
+     *
+     * [ISO 9506-1:2003 §21.4.1.1.4]
+     *
+     * @public
+     * @readonly
+     */
+    public readonly eventConditionName?: OPTIONAL<ObjectName>;
+    /**
+     * @summary `eventActionName`.
+     * @description
+     *
+     * Event Action when scope is `ea`.
+     *
+     * [ISO 9506-1:2003 §21.4.1.1.5]
+     *
+     * @public
+     * @readonly
+     */
+    public readonly eventActionName?: OPTIONAL<ObjectName>;
+    /**
+     * @summary `continueAfter`.
+     * @description
+     *
+     * Last enrollment name from a prior `moreFollows` response.
+     *
+     * [ISO 9506-1:2003 §21.4.1.1.6]
+     *
+     * @public
+     * @readonly
+     */
+    public readonly continueAfter?: OPTIONAL<ObjectName>;
+
     constructor (
-        /**
-         * @summary `scopeOfRequest`.
-         * @description
-         *
-         * Which enrollments: `specific`, `client` (default), `ec`, or `ea`.
-         *
-         * [ISO 9506-1:2003 §21.4.1.1.1]
-         * [ISO 9506-2:2003 §21.4.1.1]
-         *
-         * @public
-         * @readonly
-         */
-        readonly scopeOfRequest?: OPTIONAL<GetEventEnrollmentAttributes_Request_scopeOfRequest>,
-        /**
-         * @summary `eventEnrollmentNames`.
-         * @description
-         *
-         * Names when scope is `specific`.
-         *
-         * [ISO 9506-1:2003 §21.4.1.1.2]
-         *
-         * @public
-         * @readonly
-         */
-        readonly eventEnrollmentNames?: OPTIONAL<ObjectName[]>,
-        /**
-         * @summary `clientApplication`.
-         * @description
-         *
-         * Client filter. Omitted if the requesting client. Requires `tpy`.
-         *
-         * [ISO 9506-1:2003 §21.4.1.1.3]
-         * [ISO 9506-2:2003 §21.4.1.3]
-         *
-         * @public
-         * @readonly
-         */
-        readonly clientApplication?: OPTIONAL<Nullable<ApplicationReference>>,
-        /**
-         * @summary `eventConditionName`.
-         * @description
-         *
-         * Event Condition when scope is `ec`.
-         *
-         * [ISO 9506-1:2003 §21.4.1.1.4]
-         *
-         * @public
-         * @readonly
-         */
-        readonly eventConditionName?: OPTIONAL<ObjectName>,
-        /**
-         * @summary `eventActionName`.
-         * @description
-         *
-         * Event Action when scope is `ea`.
-         *
-         * [ISO 9506-1:2003 §21.4.1.1.5]
-         *
-         * @public
-         * @readonly
-         */
-        readonly eventActionName?: OPTIONAL<ObjectName>,
-        /**
-         * @summary `continueAfter`.
-         * @description
-         *
-         * Last enrollment name from a prior `moreFollows` response.
-         *
-         * [ISO 9506-1:2003 §21.4.1.1.6]
-         *
-         * @public
-         * @readonly
-         */
-        readonly continueAfter?: OPTIONAL<ObjectName>
-    ) {}
+        scopeOfRequest?: OPTIONAL<GetEventEnrollmentAttributes_Request_scopeOfRequest>,
+        eventEnrollmentNames?: OPTIONAL<ObjectName[]>,
+        clientApplication?: OPTIONAL<Nullable<ApplicationReference>>,
+        eventConditionName?: OPTIONAL<ObjectName>,
+        eventActionName?: OPTIONAL<ObjectName>,
+        continueAfter?: OPTIONAL<ObjectName>
+    ) {
+        this.scopeOfRequest = scopeOfRequest;
+        this.eventEnrollmentNames = eventEnrollmentNames;
+        this.clientApplication = clientApplication;
+        this.eventConditionName = eventConditionName;
+        this.eventActionName = eventActionName;
+        this.continueAfter = continueAfter;
+    }
 
     /**
      * @summary Restructures an object into a GetEventEnrollmentAttributes_Request
@@ -147,7 +161,7 @@ class GetEventEnrollmentAttributes_Request {
      * @static
      * @method
      */
-    public static get _default_value_for_scopeOfRequest () { return client; }
+    public static get _default_value_for_scopeOfRequest (): 1 { return client; }
 }
 
 /**

@@ -1,8 +1,8 @@
 /* eslint-disable */
 import {
-    OPTIONAL,
-    BOOLEAN,
-    ASN1Element as _Element,
+    type OPTIONAL,
+    type BOOLEAN,
+    type ASN1Element as _Element,
     ASN1TagClass as _TagClass,
     ASN1Construction as _Construction,
     ASN1UniversalType as _UniversalType,
@@ -35,31 +35,37 @@ import { SemaphoreEntry, _decode_SemaphoreEntry, _encode_SemaphoreEntry } from "
  */
 export
 class ReportSemaphoreEntryStatus_Response {
+    /**
+     * @summary `listOfSemaphoreEntry`.
+     * @description
+     *
+     * Possibly empty. Ordered by `&entryID`.
+     * ISO 9506-1:2003 §16.8.1.2.1.
+     *
+     * @public
+     * @readonly
+     */
+    public readonly listOfSemaphoreEntry: SemaphoreEntry[];
+    /**
+     * @summary `moreFollows`.
+     * @description
+     *
+     * True if more entries remain. False if this list holds the
+     * last item or is empty. Default true. ISO 9506-1:2003
+     * §16.8.1.2.2.
+     *
+     * @public
+     * @readonly
+     */
+    public readonly moreFollows?: OPTIONAL<BOOLEAN>;
+
     constructor (
-        /**
-         * @summary `listOfSemaphoreEntry`.
-         * @description
-         *
-         * Possibly empty. Ordered by `&entryID`.
-         * ISO 9506-1:2003 §16.8.1.2.1.
-         *
-         * @public
-         * @readonly
-         */
-        readonly listOfSemaphoreEntry: SemaphoreEntry[],
-        /**
-         * @summary `moreFollows`.
-         * @description
-         *
-         * True if more entries remain. False if this list holds the
-         * last item or is empty. Default true. ISO 9506-1:2003
-         * §16.8.1.2.2.
-         *
-         * @public
-         * @readonly
-         */
-        readonly moreFollows?: OPTIONAL<BOOLEAN>
-    ) {}
+        listOfSemaphoreEntry: SemaphoreEntry[],
+        moreFollows?: OPTIONAL<BOOLEAN>
+    ) {
+        this.listOfSemaphoreEntry = listOfSemaphoreEntry;
+        this.moreFollows = moreFollows;
+    }
 
     /**
      * @summary Restructures an object into a ReportSemaphoreEntryStatus_Response

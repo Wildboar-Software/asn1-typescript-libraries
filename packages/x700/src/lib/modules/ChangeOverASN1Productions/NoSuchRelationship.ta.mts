@@ -1,8 +1,8 @@
 /* eslint-disable */
 import {
-    OPTIONAL,
-    OBJECT_IDENTIFIER,
-    ASN1Element as _Element,
+    type OPTIONAL,
+    type OBJECT_IDENTIFIER,
+    type ASN1Element as _Element,
     ASN1TagClass as _TagClass,
     ASN1Construction as _Construction,
     ASN1UniversalType as _UniversalType,
@@ -13,7 +13,7 @@ import {
 } from '@wildboar/asn1';
 import * as $ from '@wildboar/asn1/functional';
 import {
-    RelationshipInstance,
+    type RelationshipInstance,
     _decode_RelationshipInstance,
     _encode_RelationshipInstance,
 } from '../ChangeOverASN1Productions/RelationshipInstance.ta.mjs';
@@ -39,41 +39,49 @@ import {
  *
  */
 export class NoSuchRelationship {
+    /**
+     * @summary `relationshipClass`.
+     * @description
+     *
+     * Relationship class that was required. ITU-T Rec. X.751
+     * (11/95)
+     * [§8.7.6](https://www.itu.int/rec/T-REC-X.751-199511-I).
+     * @public
+     * @readonly
+     */
+    public readonly relationshipClass: OBJECT_IDENTIFIER;
+    /**
+     * @summary `relationshipBinding`.
+     * @description
+     *
+     * Optional relationship-binding identifier. ITU-T Rec.
+     * X.751 (11/95)
+     * [§8.7.6](https://www.itu.int/rec/T-REC-X.751-199511-I).
+     * @public
+     * @readonly
+     */
+    public readonly relationshipBinding?: OPTIONAL<OBJECT_IDENTIFIER>;
+    /**
+     * @summary `relationshipInstance`.
+     * @description
+     *
+     * Optional names of relationship-instance participants. ITU-T
+     * Rec. X.751 (11/95)
+     * [§8.7.6](https://www.itu.int/rec/T-REC-X.751-199511-I).
+     * @public
+     * @readonly
+     */
+    public readonly relationshipInstance?: OPTIONAL<RelationshipInstance>;
+
     constructor(
-        /**
-         * @summary `relationshipClass`.
-         * @description
-         *
-         * Relationship class that was required. ITU-T Rec. X.751
-         * (11/95)
-         * [§8.7.6](https://www.itu.int/rec/T-REC-X.751-199511-I).
-         * @public
-         * @readonly
-         */
-        readonly relationshipClass: OBJECT_IDENTIFIER,
-        /**
-         * @summary `relationshipBinding`.
-         * @description
-         *
-         * Optional relationship-binding identifier. ITU-T Rec.
-         * X.751 (11/95)
-         * [§8.7.6](https://www.itu.int/rec/T-REC-X.751-199511-I).
-         * @public
-         * @readonly
-         */
-        readonly relationshipBinding?: OPTIONAL<OBJECT_IDENTIFIER>,
-        /**
-         * @summary `relationshipInstance`.
-         * @description
-         *
-         * Optional names of relationship-instance participants. ITU-T
-         * Rec. X.751 (11/95)
-         * [§8.7.6](https://www.itu.int/rec/T-REC-X.751-199511-I).
-         * @public
-         * @readonly
-         */
-        readonly relationshipInstance?: OPTIONAL<RelationshipInstance>
-    ) {}
+        relationshipClass: OBJECT_IDENTIFIER,
+        relationshipBinding?: OPTIONAL<OBJECT_IDENTIFIER>,
+        relationshipInstance?: OPTIONAL<RelationshipInstance>
+    ) {
+        this.relationshipClass = relationshipClass;
+        this.relationshipBinding = relationshipBinding;
+        this.relationshipInstance = relationshipInstance;
+    }
 
     /**
      * @summary Restructures an object into a NoSuchRelationship

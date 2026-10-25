@@ -1,13 +1,13 @@
 /* eslint-disable */
 import {
     ASN1ConstructionError as _ConstructionError,
-    ASN1Element as _Element,
+    type ASN1Element as _Element,
     ASN1TagClass as _TagClass,
-    OBJECT_IDENTIFIER,
+    type OBJECT_IDENTIFIER,
 } from "@wildboar/asn1";
 import * as $ from "@wildboar/asn1/functional";
 import {
-    AttributeValue,
+    type AttributeValue,
     _decode_AttributeValue,
     _encode_AttributeValue,
 } from "../CryptographicMessageSyntax/AttributeValue.ta.mjs";
@@ -27,20 +27,26 @@ import {
  *
  */
 export class Attribute {
+    /**
+     * @summary `attrType`.
+     * @public
+     * @readonly
+     */
+    public readonly attrType: OBJECT_IDENTIFIER;
+    /**
+     * @summary `attrValues`.
+     * @public
+     * @readonly
+     */
+    public readonly attrValues: AttributeValue[];
+
     constructor(
-        /**
-         * @summary `attrType`.
-         * @public
-         * @readonly
-         */
-        readonly attrType: OBJECT_IDENTIFIER,
-        /**
-         * @summary `attrValues`.
-         * @public
-         * @readonly
-         */
-        readonly attrValues: AttributeValue[]
-    ) {}
+        attrType: OBJECT_IDENTIFIER,
+        attrValues: AttributeValue[]
+    ) {
+        this.attrType = attrType;
+        this.attrValues = attrValues;
+    }
 
     /**
      * @summary Restructures an object into a Attribute

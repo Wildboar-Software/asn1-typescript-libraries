@@ -1,18 +1,18 @@
 /* eslint-disable */
 import {
-    ASN1Element as _Element,
+    type ASN1Element as _Element,
     ASN1TagClass as _TagClass,
-    OPTIONAL,
+    type OPTIONAL,
 } from "@wildboar/asn1";
 import * as $ from "@wildboar/asn1/functional";
 import {
-    CRLReason,
+    type CRLReason,
     _decode_CRLReason,
     _encode_CRLReason,
     _enum_for_CRLReason,
 } from "../CertificateExtensions/CRLReason.ta.mjs";
 import {
-    HoldInstruction,
+    type HoldInstruction,
     _decode_HoldInstruction,
     _encode_HoldInstruction,
 } from "../CertificateExtensions/HoldInstruction.ta.mjs";
@@ -35,30 +35,38 @@ import {
  *
  */
 export class ReasonInfo {
+    /**
+     * @summary `reasonCode`.
+     * @public
+     * @readonly
+     */
+    public readonly reasonCode: CRLReason;
+    /**
+     * @summary `holdInstructionCode`.
+     * @description
+     *
+     * Only with CRLReason certificateHold.
+     *
+     * @public
+     * @readonly
+     */
+    public readonly holdInstructionCode?: OPTIONAL<HoldInstruction>;
+    /**
+     * @summary Extensions that are not recognized.
+     * @public
+     * @readonly
+     */
+    public readonly _unrecognizedExtensionsList: _Element[];
+
     constructor(
-        /**
-         * @summary `reasonCode`.
-         * @public
-         * @readonly
-         */
-        readonly reasonCode: CRLReason,
-        /**
-         * @summary `holdInstructionCode`.
-         * @description
-         *
-         * Only with CRLReason certificateHold.
-         *
-         * @public
-         * @readonly
-         */
-        readonly holdInstructionCode?: OPTIONAL<HoldInstruction>,
-        /**
-         * @summary Extensions that are not recognized.
-         * @public
-         * @readonly
-         */
-        readonly _unrecognizedExtensionsList: _Element[] = []
-    ) {}
+        reasonCode: CRLReason,
+        holdInstructionCode?: OPTIONAL<HoldInstruction>,
+        _unrecognizedExtensionsList: _Element[] = []
+    ) {
+        this.reasonCode = reasonCode;
+        this.holdInstructionCode = holdInstructionCode;
+        this._unrecognizedExtensionsList = _unrecognizedExtensionsList;
+    }
 
     /**
      * @summary Restructures an object into a ReasonInfo
@@ -88,7 +96,7 @@ export class ReasonInfo {
      * @static
      */
 
-    public static _enum_for_reasonCode = _enum_for_CRLReason;
+    public static _enum_for_reasonCode: typeof _enum_for_CRLReason = _enum_for_CRLReason;
 }
 
 /**

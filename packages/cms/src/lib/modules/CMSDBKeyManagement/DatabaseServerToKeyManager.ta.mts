@@ -1,8 +1,8 @@
 /* eslint-disable */
 import {
-    ASN1Element as _Element,
+    type ASN1Element as _Element,
     ASN1TagClass as _TagClass,
-    OPTIONAL,
+    type OPTIONAL,
 } from "@wildboar/asn1";
 import * as $ from "@wildboar/asn1/functional";
 import {
@@ -11,7 +11,7 @@ import {
     _encode_MasterKeyEncryptedHMACkey,
 } from "../CMSDBKeyManagement/MasterKeyEncryptedHMACkey.ta.mjs";
 import {
-    UniqueIdentifier,
+    type UniqueIdentifier,
     _decode_UniqueIdentifier,
     _encode_UniqueIdentifier,
 } from "../CMSDBKeyManagement/UniqueIdentifier.ta.mjs";
@@ -35,20 +35,26 @@ import {
  *
  */
 export class DatabaseServerToKeyManager {
+    /**
+     * @summary `encryptedKey`.
+     * @public
+     * @readonly
+     */
+    public readonly encryptedKey: MasterKeyEncryptedHMACkey;
+    /**
+     * @summary `uniqueID`.
+     * @public
+     * @readonly
+     */
+    public readonly uniqueID?: OPTIONAL<UniqueIdentifier>;
+
     constructor(
-        /**
-         * @summary `encryptedKey`.
-         * @public
-         * @readonly
-         */
-        readonly encryptedKey: MasterKeyEncryptedHMACkey,
-        /**
-         * @summary `uniqueID`.
-         * @public
-         * @readonly
-         */
-        readonly uniqueID?: OPTIONAL<UniqueIdentifier>
-    ) {}
+        encryptedKey: MasterKeyEncryptedHMACkey,
+        uniqueID?: OPTIONAL<UniqueIdentifier>
+    ) {
+        this.encryptedKey = encryptedKey;
+        this.uniqueID = uniqueID;
+    }
 
     /**
      * @summary Restructures an object into a DatabaseServerToKeyManager

@@ -1,6 +1,6 @@
 /* eslint-disable */
 import {
-    ASN1Element as _Element,
+    type ASN1Element as _Element,
     ASN1TagClass as _TagClass,
     ASN1Construction as _Construction,
     ASN1UniversalType as _UniversalType,
@@ -16,7 +16,7 @@ import {
     _encode_OrderedAttribute_attribute_values_Item,
 } from '../MSAbstractService/OrderedAttribute-attribute-values-Item.ta.mjs';
 import {
-    AttributeType,
+    type AttributeType,
     _decode_AttributeType,
     _encode_AttributeType,
 } from "./AttributeType.ta.mjs";
@@ -45,20 +45,26 @@ import {
  *
  */
 export class OrderedAttribute {
+    /**
+     * @summary `attribute_type`.
+     * @public
+     * @readonly
+     */
+    public readonly attribute_type: AttributeType;
+    /**
+     * @summary `attribute_values`.
+     * @public
+     * @readonly
+     */
+    public readonly attribute_values: OrderedAttribute_attribute_values_Item[];
+
     constructor(
-        /**
-         * @summary `attribute_type`.
-         * @public
-         * @readonly
-         */
-        readonly attribute_type: AttributeType,
-        /**
-         * @summary `attribute_values`.
-         * @public
-         * @readonly
-         */
-        readonly attribute_values: OrderedAttribute_attribute_values_Item[]
-    ) {}
+        attribute_type: AttributeType,
+        attribute_values: OrderedAttribute_attribute_values_Item[]
+    ) {
+        this.attribute_type = attribute_type;
+        this.attribute_values = attribute_values;
+    }
 
     /**
      * @summary Restructures an object into a OrderedAttribute

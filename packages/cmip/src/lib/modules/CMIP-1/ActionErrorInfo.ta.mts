@@ -11,13 +11,13 @@ import {
 } from '@wildboar/asn1';
 import * as $ from '@wildboar/asn1/functional';
 import {
-  ActionErrorInfo_errorStatus,
+  type ActionErrorInfo_errorStatus,
   _enum_for_ActionErrorInfo_errorStatus,
   _decode_ActionErrorInfo_errorStatus,
   _encode_ActionErrorInfo_errorStatus,
 } from '../CMIP-1/ActionErrorInfo-errorStatus.ta.mjs';
 import {
-  ActionErrorInfo_errorInfo,
+  type ActionErrorInfo_errorInfo,
   _decode_ActionErrorInfo_errorInfo,
   _encode_ActionErrorInfo_errorInfo,
 } from '../CMIP-1/ActionErrorInfo-errorInfo.ta.mjs';
@@ -59,7 +59,7 @@ export class ActionErrorInfo {
    * @public
    * @readonly
    */
-  readonly errorStatus: ActionErrorInfo_errorStatus;
+  public readonly errorStatus: ActionErrorInfo_errorStatus;
   /**
    * @summary `errorInfo`.
    * @description
@@ -70,13 +70,13 @@ export class ActionErrorInfo {
    * @public
    * @readonly
    */
-  readonly errorInfo: ActionErrorInfo_errorInfo;
+  public readonly errorInfo: ActionErrorInfo_errorInfo;
   /**
    * @summary Extensions that are not recognized.
    * @public
    * @readonly
    */
-  readonly _unrecognizedExtensionsList: _Element[];
+  public readonly _unrecognizedExtensionsList: _Element[];
 
   constructor(
     errorStatus: ActionErrorInfo_errorStatus,
@@ -116,7 +116,7 @@ export class ActionErrorInfo {
    * @static
    */
 
-  public static _enum_for_errorStatus = _enum_for_ActionErrorInfo_errorStatus;
+  public static _enum_for_errorStatus: typeof _enum_for_ActionErrorInfo_errorStatus = _enum_for_ActionErrorInfo_errorStatus;
 }
 
 

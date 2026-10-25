@@ -1,6 +1,6 @@
 /* eslint-disable */
 import {
-    INTEGER
+    type INTEGER
 } from "@wildboar/asn1";
 import * as $ from "@wildboar/asn1/functional";
 
@@ -31,14 +31,14 @@ type LogotypeImageType = INTEGER;
  * @constant
  */
 export
-const LogotypeImageType_grayScale: LogotypeImageType = 0; /* LONG_NAMED_INTEGER_VALUE */
+const LogotypeImageType_grayScale: 0 = 0 satisfies LogotypeImageType; /* LONG_NAMED_INTEGER_VALUE */
 
 /**
  * Alias of {@link LogotypeImageType_grayScale}.
  * @constant
  */
 export
-const grayScale: LogotypeImageType = LogotypeImageType_grayScale; /* SHORT_NAMED_INTEGER_VALUE */
+const grayScale: 0 = LogotypeImageType_grayScale; /* SHORT_NAMED_INTEGER_VALUE */
 
 /**
  * Color image (`color(1)`). Default for {@link LogotypeImageInfo.type_}
@@ -48,16 +48,16 @@ const grayScale: LogotypeImageType = LogotypeImageType_grayScale; /* SHORT_NAMED
  * @constant
  */
 export
-const LogotypeImageType_color: LogotypeImageType = 1; /* LONG_NAMED_INTEGER_VALUE */
+const LogotypeImageType_color: 1 = 1 satisfies LogotypeImageType; /* LONG_NAMED_INTEGER_VALUE */
 
 /**
  * Alias of {@link LogotypeImageType_color}.
  * @constant
  */
 export
-const color: LogotypeImageType = LogotypeImageType_color; /* SHORT_NAMED_INTEGER_VALUE */
-export const _decode_LogotypeImageType = $._decodeInteger;
-export const _encode_LogotypeImageType = $._encodeInteger;
+const color: 1 = LogotypeImageType_color; /* SHORT_NAMED_INTEGER_VALUE */
+export const _decode_LogotypeImageType: $.ASN1Decoder<INTEGER> = $._decodeInteger;
+export const _encode_LogotypeImageType: $.ASN1Encoder<INTEGER> = $._encodeInteger;
 
 
 /* eslint-enable */

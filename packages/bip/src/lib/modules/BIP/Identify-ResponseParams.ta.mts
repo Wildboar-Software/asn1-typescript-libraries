@@ -1,6 +1,6 @@
 /* eslint-disable */
 import {
-  OPTIONAL,
+  type OPTIONAL,
   ASN1Element as _Element,
   ASN1TagClass as _TagClass,
   ASN1Construction as _Construction,
@@ -17,7 +17,7 @@ import {
   _encode_BioAPI_CANDIDATE,
 } from '../BIP/BioAPI-CANDIDATE.ta.mjs';
 import {
-  BioAPI_BIR_HANDLE,
+  type BioAPI_BIR_HANDLE,
   _decode_BioAPI_BIR_HANDLE,
   _encode_BioAPI_BIR_HANDLE,
 } from '../BIP/BioAPI-BIR-HANDLE.ta.mjs';
@@ -55,7 +55,7 @@ export class Identify_ResponseParams {
    * @public
    * @readonly
    */
-  readonly candidates: BioAPI_CANDIDATE[];
+  public readonly candidates: BioAPI_CANDIDATE[];
   /**
    * @summary `auditData`.
    * @description
@@ -66,7 +66,7 @@ export class Identify_ResponseParams {
    * @public
    * @readonly
    */
-  readonly auditData?: OPTIONAL<BioAPI_BIR_HANDLE>;
+  public readonly auditData?: OPTIONAL<BioAPI_BIR_HANDLE>;
 
   constructor(
     candidates: BioAPI_CANDIDATE[],

@@ -1,18 +1,18 @@
 /* eslint-disable */
 import {
-    BOOLEAN,
-    OPTIONAL,
-    ASN1Element as _Element,
+    type BOOLEAN,
+    type OPTIONAL,
+    type ASN1Element as _Element,
     ASN1TagClass as _TagClass
 } from "@wildboar/asn1";
 import * as $ from "@wildboar/asn1/functional";
-import { QFI, _decode_QFI, _encode_QFI } from "../TS33128Payloads/QFI.ta.mjs";
+import { type QFI, _decode_QFI, _encode_QFI } from "../TS33128Payloads/QFI.ta.mjs";
 // export { QFI, _decode_QFI, _encode_QFI } from "../TS33128Payloads/QFI.ta.mjs";
-import { QOSRules, _decode_QOSRules, _encode_QOSRules } from "../TS33128Payloads/QOSRules.ta.mjs";
+import { type QOSRules, _decode_QOSRules, _encode_QOSRules } from "../TS33128Payloads/QOSRules.ta.mjs";
 // export { QOSRules, _decode_QOSRules, _encode_QOSRules } from "../TS33128Payloads/QOSRules.ta.mjs";
-import { EPSBearerID, _decode_EPSBearerID, _encode_EPSBearerID } from "../TS33128Payloads/EPSBearerID.ta.mjs";
+import { type EPSBearerID, _decode_EPSBearerID, _encode_EPSBearerID } from "../TS33128Payloads/EPSBearerID.ta.mjs";
 // export { EPSBearerID, _decode_EPSBearerID, _encode_EPSBearerID } from "../TS33128Payloads/EPSBearerID.ta.mjs";
-import { QOSFlowDescription, _decode_QOSFlowDescription, _encode_QOSFlowDescription } from "../TS33128Payloads/QOSFlowDescription.ta.mjs";
+import { type QOSFlowDescription, _decode_QOSFlowDescription, _encode_QOSFlowDescription } from "../TS33128Payloads/QOSFlowDescription.ta.mjs";
 // export { QOSFlowDescription, _decode_QOSFlowDescription, _encode_QOSFlowDescription } from "../TS33128Payloads/QOSFlowDescription.ta.mjs";
 import { QOSFlowProfile, _decode_QOSFlowProfile, _encode_QOSFlowProfile } from "../TS33128Payloads/QOSFlowProfile.ta.mjs";
 // export { QOSFlowProfile, _decode_QOSFlowProfile, _encode_QOSFlowProfile } from "../TS33128Payloads/QOSFlowProfile.ta.mjs";
@@ -134,7 +134,7 @@ class QOSFlowList {
          * @static
          */
 
-    public static _enum_for_associatedANType = _enum_for_AccessType;
+    public static _enum_for_associatedANType: typeof _enum_for_AccessType = _enum_for_AccessType;
 }
 
 /**

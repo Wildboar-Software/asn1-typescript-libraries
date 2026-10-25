@@ -2,17 +2,17 @@
 
 import * as $ from "@wildboar/asn1/functional";
 import {
-    OPTIONAL,
-    SEQUENCE,
-    SET,
-    ASN1Element as _Element,
+    type OPTIONAL,
+    type SEQUENCE,
+    type SET,
+    type ASN1Element as _Element,
     ASN1TagClass as _TagClass
 } from "@wildboar/asn1";
 import { DeviceID, _decode_DeviceID, _encode_DeviceID } from "../CSTA-device-identifiers/DeviceID.ta.mjs";
 
-import { CorrelatorData, _decode_CorrelatorData, _encode_CorrelatorData } from "../CSTA-device-feature-types/CorrelatorData.ta.mjs";
+import { type CorrelatorData, _decode_CorrelatorData, _encode_CorrelatorData } from "../CSTA-device-feature-types/CorrelatorData.ta.mjs";
 
-import { UserData, _decode_UserData, _encode_UserData } from "../CSTA-device-feature-types/UserData.ta.mjs";
+import { type UserData, _decode_UserData, _encode_UserData } from "../CSTA-device-feature-types/UserData.ta.mjs";
 
 import { CSTACommonArguments, _decode_CSTACommonArguments, _encode_CSTACommonArguments } from "../CSTA-extension-types/CSTACommonArguments.ta.mjs";
 
@@ -34,9 +34,9 @@ import { CSTACommonArguments, _decode_CSTACommonArguments, _encode_CSTACommonArg
  * ```asn1
  * GroupPickupCallArgument ::= SEQUENCE
  * {     newDestination             DeviceID,
- *     pickGroup             DeviceID             OPTIONAL,
- *     correlatorData             CorrelatorData             OPTIONAL,
- *     userData             UserData             OPTIONAL,
+ *     pickGroup             DeviceID             type OPTIONAL,
+ *     correlatorData             CorrelatorData             type OPTIONAL,
+ *     userData             UserData             type OPTIONAL,
  *     extensions             CSTACommonArguments         OPTIONAL }
  * ```
  * 
@@ -44,65 +44,77 @@ import { CSTACommonArguments, _decode_CSTACommonArguments, _encode_CSTACommonArg
  */
 export
 class GroupPickupCallArgument {
+    /**
+     * @summary `newDestination`.
+     * @description
+     *
+     * Mandatory. Device that will be Connected. Must be a
+     * complete DeviceID (FR 5). Forwarding and DND are ignored
+     * (FR 3).
+     *
+     * @public
+     * @readonly
+     */
+    public readonly newDestination: DeviceID;
+    /**
+     * @summary `pickGroup`.
+     * @description
+     *
+     * Optional pick-group DeviceID. If omitted, the switching
+     * function uses the group administered for
+     * `newDestination` (FR 2). Must be a complete DeviceID
+     * when present (FR 5).
+     *
+     * @public
+     * @readonly
+     */
+    public readonly pickGroup?: OPTIONAL<DeviceID>;
+    /**
+     * @summary `correlatorData`.
+     * @description
+     *
+     * Optional correlator data attached before resulting state
+     * transitions (§12.2.10).
+     *
+     * @public
+     * @readonly
+     */
+    public readonly correlatorData?: OPTIONAL<CorrelatorData>;
+    /**
+     * @summary `userData`.
+     * @description
+     *
+     * Optional user data sent with the pickup (§12.2.30).
+     *
+     * @public
+     * @readonly
+     */
+    public readonly userData?: OPTIONAL<UserData>;
+    /**
+     * @summary `extensions`.
+     * @description
+     *
+     * Optional `CSTACommonArguments` carrying the security and
+     * privateData parameters from the ECMA-269 service table.
+     *
+     * @public
+     * @readonly
+     */
+    public readonly extensions?: OPTIONAL<CSTACommonArguments>;
+
     constructor (
-        /**
-         * @summary `newDestination`.
-         * @description
-         *
-         * Mandatory. Device that will be Connected. Must be a
-         * complete DeviceID (FR 5). Forwarding and DND are ignored
-         * (FR 3).
-         *
-         * @public
-         * @readonly
-         */
-        readonly newDestination: DeviceID,
-        /**
-         * @summary `pickGroup`.
-         * @description
-         *
-         * Optional pick-group DeviceID. If omitted, the switching
-         * function uses the group administered for
-         * `newDestination` (FR 2). Must be a complete DeviceID
-         * when present (FR 5).
-         *
-         * @public
-         * @readonly
-         */
-        readonly pickGroup?: OPTIONAL<DeviceID>,
-        /**
-         * @summary `correlatorData`.
-         * @description
-         *
-         * Optional correlator data attached before resulting state
-         * transitions (§12.2.10).
-         *
-         * @public
-         * @readonly
-         */
-        readonly correlatorData?: OPTIONAL<CorrelatorData>,
-        /**
-         * @summary `userData`.
-         * @description
-         *
-         * Optional user data sent with the pickup (§12.2.30).
-         *
-         * @public
-         * @readonly
-         */
-        readonly userData?: OPTIONAL<UserData>,
-        /**
-         * @summary `extensions`.
-         * @description
-         *
-         * Optional `CSTACommonArguments` carrying the security and
-         * privateData parameters from the ECMA-269 service table.
-         *
-         * @public
-         * @readonly
-         */
-        readonly extensions?: OPTIONAL<CSTACommonArguments>
-    ) {}
+        newDestination: DeviceID,
+        pickGroup?: OPTIONAL<DeviceID>,
+        correlatorData?: OPTIONAL<CorrelatorData>,
+        userData?: OPTIONAL<UserData>,
+        extensions?: OPTIONAL<CSTACommonArguments>
+    ) {
+        this.newDestination = newDestination;
+        this.pickGroup = pickGroup;
+        this.correlatorData = correlatorData;
+        this.userData = userData;
+        this.extensions = extensions;
+    }
 
     /**
      * @summary Restructures an object into a GroupPickupCallArgument

@@ -1,6 +1,6 @@
 /* eslint-disable */
 import {
-    INTEGER
+    type INTEGER
 } from "@wildboar/asn1";
 import * as $ from "@wildboar/asn1/functional";
 
@@ -39,7 +39,7 @@ type UplinkStatus = INTEGER;
  * @type {number}
  */
 export
-const UplinkStatus_uplinkStatusNotAvailable: UplinkStatus = 0; /* LONG_NAMED_INTEGER_VALUE */
+const UplinkStatus_uplinkStatusNotAvailable: 0 = 0 satisfies UplinkStatus; /* LONG_NAMED_INTEGER_VALUE */
 
 /**
  * @summary UplinkStatus_uplinkStatusNotAvailable
@@ -50,7 +50,7 @@ const UplinkStatus_uplinkStatusNotAvailable: UplinkStatus = 0; /* LONG_NAMED_INT
  * @type {number}
  */
 export
-const uplinkStatusNotAvailable: UplinkStatus = UplinkStatus_uplinkStatusNotAvailable; /* SHORT_NAMED_INTEGER_VALUE */
+const uplinkStatusNotAvailable: 0 = UplinkStatus_uplinkStatusNotAvailable; /* SHORT_NAMED_INTEGER_VALUE */
 
 /**
  * @summary UplinkStatus_noRfAvailable
@@ -62,7 +62,7 @@ const uplinkStatusNotAvailable: UplinkStatus = UplinkStatus_uplinkStatusNotAvail
  * @type {number}
  */
 export
-const UplinkStatus_noRfAvailable: UplinkStatus = 1; /* LONG_NAMED_INTEGER_VALUE */
+const UplinkStatus_noRfAvailable: 1 = 1 satisfies UplinkStatus; /* LONG_NAMED_INTEGER_VALUE */
 
 /**
  * @summary UplinkStatus_noRfAvailable
@@ -73,7 +73,7 @@ const UplinkStatus_noRfAvailable: UplinkStatus = 1; /* LONG_NAMED_INTEGER_VALUE 
  * @type {number}
  */
 export
-const noRfAvailable: UplinkStatus = UplinkStatus_noRfAvailable; /* SHORT_NAMED_INTEGER_VALUE */
+const noRfAvailable: 1 = UplinkStatus_noRfAvailable; /* SHORT_NAMED_INTEGER_VALUE */
 
 /**
  * @summary UplinkStatus_noBitLock
@@ -85,7 +85,7 @@ const noRfAvailable: UplinkStatus = UplinkStatus_noRfAvailable; /* SHORT_NAMED_I
  * @type {number}
  */
 export
-const UplinkStatus_noBitLock: UplinkStatus = 2; /* LONG_NAMED_INTEGER_VALUE */
+const UplinkStatus_noBitLock: 2 = 2 satisfies UplinkStatus; /* LONG_NAMED_INTEGER_VALUE */
 
 /**
  * @summary UplinkStatus_noBitLock
@@ -97,7 +97,7 @@ const UplinkStatus_noBitLock: UplinkStatus = 2; /* LONG_NAMED_INTEGER_VALUE */
  * @type {number}
  */
 export
-const noBitLock: UplinkStatus = UplinkStatus_noBitLock; /* SHORT_NAMED_INTEGER_VALUE */
+const noBitLock: 2 = UplinkStatus_noBitLock; /* SHORT_NAMED_INTEGER_VALUE */
 
 /**
  * @summary UplinkStatus_nominal
@@ -110,7 +110,7 @@ const noBitLock: UplinkStatus = UplinkStatus_noBitLock; /* SHORT_NAMED_INTEGER_V
  * @type {number}
  */
 export
-const UplinkStatus_nominal: UplinkStatus = 3; /* LONG_NAMED_INTEGER_VALUE */
+const UplinkStatus_nominal: 3 = 3 satisfies UplinkStatus; /* LONG_NAMED_INTEGER_VALUE */
 
 /**
  * @summary UplinkStatus_nominal
@@ -122,7 +122,7 @@ const UplinkStatus_nominal: UplinkStatus = 3; /* LONG_NAMED_INTEGER_VALUE */
  * @type {number}
  */
 export
-const nominal: UplinkStatus = UplinkStatus_nominal; /* SHORT_NAMED_INTEGER_VALUE */
+const nominal: 3 = UplinkStatus_nominal; /* SHORT_NAMED_INTEGER_VALUE */
 export const _decode_UplinkStatus: $.ASN1Decoder<UplinkStatus> = $._decodeInteger;
 export const _encode_UplinkStatus: $.ASN1Encoder<UplinkStatus> = $._encodeInteger;
 

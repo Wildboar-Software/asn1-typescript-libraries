@@ -1,7 +1,7 @@
 /* eslint-disable */
 import {
-    OPTIONAL,
-    ASN1Element as _Element,
+    type OPTIONAL,
+    type ASN1Element as _Element,
     ASN1TagClass as _TagClass,
     ASN1Construction as _Construction,
     ASN1UniversalType as _UniversalType,
@@ -11,9 +11,9 @@ import {
     ASN1ConstructionError as _ConstructionError,
 } from "@wildboar/asn1";
 import * as $ from "@wildboar/asn1/functional";
-import { Capabilities, _decode_Capabilities, _encode_Capabilities } from "../V59/Capabilities.ta.mjs";
+import { type Capabilities, _decode_Capabilities, _encode_Capabilities } from "../V59/Capabilities.ta.mjs";
 
-import { V59String, _decode_V59String, _encode_V59String } from "../V59/V59String.ta.mjs";
+import { type V59String, _decode_V59String, _encode_V59String } from "../V59/V59String.ta.mjs";
 
 /**
  * @summary ModeCapability_Item_protocolmode
@@ -46,7 +46,7 @@ class ModeCapability_Item_protocolmode {
      * @public
      * @readonly
      */
-    readonly modeV42: Capabilities;
+    public readonly modeV42: Capabilities;
     /**
      * @summary `modeV42B`.
      * @description
@@ -56,7 +56,7 @@ class ModeCapability_Item_protocolmode {
      * @public
      * @readonly
      */
-    readonly modeV42B: Capabilities;
+    public readonly modeV42B: Capabilities;
     /**
      * @summary `modeV44`.
      * @description
@@ -66,7 +66,7 @@ class ModeCapability_Item_protocolmode {
      * @public
      * @readonly
      */
-    readonly modeV44: Capabilities;
+    public readonly modeV44: Capabilities;
     /**
      * @summary `otherProtMode`.
      * @description
@@ -76,13 +76,13 @@ class ModeCapability_Item_protocolmode {
      * @public
      * @readonly
      */
-    readonly otherProtMode?: OPTIONAL<V59String>;
+    public readonly otherProtMode?: OPTIONAL<V59String>;
     /**
      * @summary Extensions that are not recognized.
      * @public
      * @readonly
      */
-    readonly _unrecognizedExtensionsList: _Element[];
+    public readonly _unrecognizedExtensionsList: _Element[];
 
     constructor (
         modeV42: Capabilities,

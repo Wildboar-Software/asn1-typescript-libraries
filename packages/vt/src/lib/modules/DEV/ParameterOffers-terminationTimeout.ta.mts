@@ -1,6 +1,6 @@
 /* eslint-disable */
 import {
-    ASN1Element as _Element,
+    type ASN1Element as _Element,
     ASN1TagClass as _TagClass,
     ASN1Construction as _Construction,
     ASN1UniversalType as _UniversalType,
@@ -10,7 +10,7 @@ import {
     ASN1ConstructionError as _ConstructionError,
 } from "@wildboar/asn1";
 import * as $ from "@wildboar/asn1/functional";
-import { TimeOffer, _decode_TimeOffer, _encode_TimeOffer } from "../DEV/TimeOffer.ta.mjs";
+import { type TimeOffer, _decode_TimeOffer, _encode_TimeOffer } from "../DEV/TimeOffer.ta.mjs";
 import { ParameterOffers_terminationTimeout_eventId, _decode_ParameterOffers_terminationTimeout_eventId, _encode_ParameterOffers_terminationTimeout_eventId } from "../DEV/ParameterOffers-terminationTimeout-eventId.ta.mjs";
 
 
@@ -39,26 +39,32 @@ import { ParameterOffers_terminationTimeout_eventId, _decode_ParameterOffers_ter
  */
 export
 class ParameterOffers_terminationTimeout {
+    /**
+     * @summary `timeOffer`.
+     * @description
+     * Offered timeouts as values or ranges of `(multiplier,
+     * exponent)`. T=0 means infinite. ISO/IEC 9040:1997 §23.4.
+     * @public
+     * @readonly
+     */
+    public readonly timeOffer: TimeOffer;
+    /**
+     * @summary `eventId`.
+     * @description
+     * Offered event-id: non-zero positive integer or `"null"`.
+     * ISO/IEC 9040:1997 §23.4.
+     * @public
+     * @readonly
+     */
+    public readonly eventId: ParameterOffers_terminationTimeout_eventId;
+
     constructor (
-        /**
-         * @summary `timeOffer`.
-         * @description
-         * Offered timeouts as values or ranges of `(multiplier,
-         * exponent)`. T=0 means infinite. ISO/IEC 9040:1997 §23.4.
-         * @public
-         * @readonly
-         */
-        readonly timeOffer: TimeOffer,
-        /**
-         * @summary `eventId`.
-         * @description
-         * Offered event-id: non-zero positive integer or `"null"`.
-         * ISO/IEC 9040:1997 §23.4.
-         * @public
-         * @readonly
-         */
-        readonly eventId: ParameterOffers_terminationTimeout_eventId
-    ) {}
+        timeOffer: TimeOffer,
+        eventId: ParameterOffers_terminationTimeout_eventId
+    ) {
+        this.timeOffer = timeOffer;
+        this.eventId = eventId;
+    }
 
     /**
      * @summary Restructures an object into a ParameterOffers_terminationTimeout

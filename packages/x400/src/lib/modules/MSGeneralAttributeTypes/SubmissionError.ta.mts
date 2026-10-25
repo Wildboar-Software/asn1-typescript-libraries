@@ -1,7 +1,7 @@
 /* eslint-disable */
 import {
-    NULL,
-    ASN1Element as _Element,
+    type NULL,
+    type ASN1Element as _Element,
     ASN1TagClass as _TagClass,
     ASN1Construction as _Construction,
     ASN1UniversalType as _UniversalType,
@@ -12,12 +12,12 @@ import {
 } from '@wildboar/asn1';
 import * as $ from '@wildboar/asn1/functional';
 import {
-    ImproperlySpecifiedRecipients,
+    type ImproperlySpecifiedRecipients,
     _decode_ImproperlySpecifiedRecipients,
     _encode_ImproperlySpecifiedRecipients,
 } from '../MTSAbstractService/ImproperlySpecifiedRecipients.ta.mjs';
 import {
-    SecurityProblem,
+    type SecurityProblem,
     _decode_SecurityProblem,
     _encode_SecurityProblem,
 } from '../MTSAbstractService/SecurityProblem.ta.mjs';
@@ -32,7 +32,7 @@ import {
     _encode_MessageGroupErrorParameter,
 } from '../MSAbstractService/MessageGroupErrorParameter.ta.mjs';
 import {
-    MSExtensionErrorParameter,
+    type MSExtensionErrorParameter,
     _decode_MSExtensionErrorParameter,
     _encode_MSExtensionErrorParameter,
 } from '../MSAbstractService/MSExtensionErrorParameter.ta.mjs';

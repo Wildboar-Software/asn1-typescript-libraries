@@ -1,8 +1,8 @@
 /* eslint-disable */
 import {
-    ASN1Element as _Element,
+    type ASN1Element as _Element,
     ASN1OverflowError,
-    INTEGER
+    type INTEGER
 } from "@wildboar/asn1";
 import * as $ from "@wildboar/asn1/functional";
 
@@ -40,7 +40,7 @@ export const _decode_TariffDuration = (el: _Element): TariffDuration => {
     }
     return value;
 };
-export const _encode_TariffDuration = $._encodeInteger;
+export const _encode_TariffDuration: $.ASN1Encoder<INTEGER> = $._encodeInteger;
 
 
 /* eslint-enable */

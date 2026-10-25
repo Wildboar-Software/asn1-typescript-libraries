@@ -1,8 +1,8 @@
 /* eslint-disable */
 import {
-    BOOLEAN,
-    OCTET_STRING,
-    ASN1Element as _Element,
+    type BOOLEAN,
+    type OCTET_STRING,
+    type ASN1Element as _Element,
     ASN1TagClass as _TagClass,
     ASN1Construction as _Construction,
     ASN1UniversalType as _UniversalType,
@@ -49,7 +49,7 @@ class LogRqtMsgContent {
      * @public
      * @readonly
      */
-    readonly sessionID: OCTET_STRING;
+    public readonly sessionID: OCTET_STRING;
     /**
      * @summary `logRequest_Req`.
      * @description
@@ -59,7 +59,7 @@ class LogRqtMsgContent {
      * @public
      * @readonly
      */
-    readonly logRequest_Req: BOOLEAN;
+    public readonly logRequest_Req: BOOLEAN;
 
     constructor (
         sessionID: OCTET_STRING,

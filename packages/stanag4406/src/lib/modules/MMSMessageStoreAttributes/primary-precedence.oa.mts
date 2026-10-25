@@ -1,7 +1,7 @@
 /* eslint-disable */
 import { type ATTRIBUTE } from "../InformationFramework/ATTRIBUTE.oca.mjs";
 import { userApplications /* IMPORTED_SHORT_ENUMERATION_ITEM */ } from "@wildboar/x500/InformationFramework";
-import { _decode_MMHSPrecedence, _encode_MMHSPrecedence, MMHSPrecedence } from "../MMSHeadingExtensions/MMHSPrecedence.ta.mjs";
+import { _decode_MMHSPrecedence, _encode_MMHSPrecedence, type MMHSPrecedence } from "../MMSHeadingExtensions/MMHSPrecedence.ta.mjs";
 import { id_nato_mmhs_hat_primary_precedence } from "../MMSObjectIdentifiers/id-nato-mmhs-hat-primary-precedence.va.mjs";
 
 

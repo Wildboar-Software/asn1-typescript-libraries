@@ -1,5 +1,5 @@
 /* eslint-disable */
-import { ASN1Element as _Element, ENUMERATED } from "@wildboar/asn1";
+import { ASN1Element as _Element, type ENUMERATED } from "@wildboar/asn1";
 import * as $ from "@wildboar/asn1/functional";
 
 export enum _enum_for_JoinArgument_joinSubset {
@@ -36,7 +36,7 @@ export type JoinArgument_joinSubset =
  * @constant
  * @type {number}
  */
-export const JoinArgument_joinSubset_baseObject: JoinArgument_joinSubset = 0; /* LONG_NAMED_ENUMERATED_VALUE */
+export const JoinArgument_joinSubset_baseObject: _enum_for_JoinArgument_joinSubset.baseObject = _enum_for_JoinArgument_joinSubset.baseObject; /* LONG_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary baseObject
@@ -47,41 +47,41 @@ export const JoinArgument_joinSubset_baseObject: JoinArgument_joinSubset = 0; /*
  * @constant
  * @type {number}
  */
-export const baseObject: JoinArgument_joinSubset = JoinArgument_joinSubset_baseObject; /* SHORT_NAMED_ENUMERATED_VALUE */
+export const baseObject: _enum_for_JoinArgument_joinSubset.baseObject = JoinArgument_joinSubset_baseObject; /* SHORT_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary JoinArgument_joinSubset_oneLevel
  * @constant
  * @type {number}
  */
-export const JoinArgument_joinSubset_oneLevel: JoinArgument_joinSubset = 1; /* LONG_NAMED_ENUMERATED_VALUE */
+export const JoinArgument_joinSubset_oneLevel: _enum_for_JoinArgument_joinSubset.oneLevel = _enum_for_JoinArgument_joinSubset.oneLevel; /* LONG_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary oneLevel
  * @constant
  * @type {number}
  */
-export const oneLevel: JoinArgument_joinSubset = JoinArgument_joinSubset_oneLevel; /* SHORT_NAMED_ENUMERATED_VALUE */
+export const oneLevel: _enum_for_JoinArgument_joinSubset.oneLevel = JoinArgument_joinSubset_oneLevel; /* SHORT_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary JoinArgument_joinSubset_wholeSubtree
  * @constant
  * @type {number}
  */
-export const JoinArgument_joinSubset_wholeSubtree: JoinArgument_joinSubset = 2; /* LONG_NAMED_ENUMERATED_VALUE */
+export const JoinArgument_joinSubset_wholeSubtree: _enum_for_JoinArgument_joinSubset.wholeSubtree = _enum_for_JoinArgument_joinSubset.wholeSubtree; /* LONG_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary wholeSubtree
  * @constant
  * @type {number}
  */
-export const wholeSubtree: JoinArgument_joinSubset = JoinArgument_joinSubset_wholeSubtree; /* SHORT_NAMED_ENUMERATED_VALUE */
+export const wholeSubtree: _enum_for_JoinArgument_joinSubset.wholeSubtree = JoinArgument_joinSubset_wholeSubtree; /* SHORT_NAMED_ENUMERATED_VALUE */
 
 
-export const _decode_JoinArgument_joinSubset = $._decodeEnumerated;
+export const _decode_JoinArgument_joinSubset: $.ASN1Decoder<number> = $._decodeEnumerated;
 
 
-export const _encode_JoinArgument_joinSubset = $._encodeEnumerated;
+export const _encode_JoinArgument_joinSubset: $.ASN1Encoder<number> = $._encodeEnumerated;
 
 
 /* eslint-enable */

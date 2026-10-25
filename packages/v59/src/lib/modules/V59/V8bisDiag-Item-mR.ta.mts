@@ -1,6 +1,6 @@
 /* eslint-disable */
 import {
-    ASN1Element as _Element,
+    type ASN1Element as _Element,
     ASN1TagClass as _TagClass,
     ASN1Construction as _Construction,
     ASN1UniversalType as _UniversalType,
@@ -10,9 +10,9 @@ import {
     ASN1ConstructionError as _ConstructionError,
 } from "@wildboar/asn1";
 import * as $ from "@wildboar/asn1/functional";
-import { V8bisSignalType, _decode_V8bisSignalType, _encode_V8bisSignalType } from "../V59/V8bisSignalType.ta.mjs";
+import { type V8bisSignalType, _decode_V8bisSignalType, _encode_V8bisSignalType } from "../V59/V8bisSignalType.ta.mjs";
 
-import { V59String, _decode_V59String, _encode_V59String } from "../V59/V59String.ta.mjs";
+import { type V59String, _decode_V59String, _encode_V59String } from "../V59/V59String.ta.mjs";
 
 /**
  * @summary V8bisDiag_Item_mR
@@ -40,7 +40,7 @@ class V8bisDiag_Item_mR {
      * @public
      * @readonly
      */
-    readonly mRtype: V8bisSignalType;
+    public readonly mRtype: V8bisSignalType;
     /**
      * @summary `mRSequence`.
      * @description
@@ -52,7 +52,7 @@ class V8bisDiag_Item_mR {
      * @public
      * @readonly
      */
-    readonly mRSequence: V59String;
+    public readonly mRSequence: V59String;
 
     constructor (
         mRtype: V8bisSignalType,

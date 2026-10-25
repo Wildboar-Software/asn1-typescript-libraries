@@ -1,17 +1,17 @@
 /* eslint-disable */
 import {
-    ASN1Element as _Element,
+    type ASN1Element as _Element,
     ASN1TagClass as _TagClass,
-    OPTIONAL,
+    type OPTIONAL,
 } from "@wildboar/asn1";
 import * as $ from "@wildboar/asn1/functional";
 import {
-    G3FacsimileNonBasicParameters,
+    type G3FacsimileNonBasicParameters,
     _decode_G3FacsimileNonBasicParameters,
     _encode_G3FacsimileNonBasicParameters,
 } from "../PkiPmiExternalDataTypes/G3FacsimileNonBasicParameters.ta.mjs";
 import {
-    TelephoneNumber,
+    type TelephoneNumber,
     _decode_TelephoneNumber,
     _encode_TelephoneNumber,
 } from "../SelectedAttributeTypes/TelephoneNumber.ta.mjs";
@@ -33,36 +33,44 @@ import {
  *
  */
 export class FacsimileTelephoneNumber {
+    /**
+     * @summary `telephoneNumber`.
+     * @description
+     *
+     * E.123 telephone number. The only component used by
+     * facsimileNumberMatch / facsimileNumberSubstringsMatch.
+     *
+     * @public
+     * @readonly
+     */
+    public readonly telephoneNumber: TelephoneNumber;
+    /**
+     * @summary `parameters`.
+     * @description
+     *
+     * Optional G3NonBasicParameters (T.30). Ignored by equality and
+     * substring matching.
+     *
+     * @public
+     * @readonly
+     */
+    public readonly parameters?: OPTIONAL<G3FacsimileNonBasicParameters>;
+    /**
+     * @summary Extensions that are not recognized.
+     * @public
+     * @readonly
+     */
+    public readonly _unrecognizedExtensionsList: _Element[];
+
     constructor(
-        /**
-         * @summary `telephoneNumber`.
-         * @description
-         *
-         * E.123 telephone number. The only component used by
-         * facsimileNumberMatch / facsimileNumberSubstringsMatch.
-         *
-         * @public
-         * @readonly
-         */
-        readonly telephoneNumber: TelephoneNumber,
-        /**
-         * @summary `parameters`.
-         * @description
-         *
-         * Optional G3NonBasicParameters (T.30). Ignored by equality and
-         * substring matching.
-         *
-         * @public
-         * @readonly
-         */
-        readonly parameters?: OPTIONAL<G3FacsimileNonBasicParameters>,
-        /**
-         * @summary Extensions that are not recognized.
-         * @public
-         * @readonly
-         */
-        readonly _unrecognizedExtensionsList: _Element[] = []
-    ) {}
+        telephoneNumber: TelephoneNumber,
+        parameters?: OPTIONAL<G3FacsimileNonBasicParameters>,
+        _unrecognizedExtensionsList: _Element[] = []
+    ) {
+        this.telephoneNumber = telephoneNumber;
+        this.parameters = parameters;
+        this._unrecognizedExtensionsList = _unrecognizedExtensionsList;
+    }
 
     /**
      * @summary Restructures an object into a FacsimileTelephoneNumber

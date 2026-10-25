@@ -1,7 +1,7 @@
 /* eslint-disable */
 import {
-    OPTIONAL,
-    ASN1Element as _Element,
+    type OPTIONAL,
+    type ASN1Element as _Element,
     ASN1TagClass as _TagClass,
     ASN1Construction as _Construction,
     ASN1UniversalType as _UniversalType,
@@ -29,7 +29,7 @@ import { type PDPID, _decode_PDPID, _encode_PDPID } from "../CAP-datatypes/PDPID
  * ```asn1
  * ReleaseGPRSArg {PARAMETERS-BOUND : bound} ::= SEQUENCE {
  *     gprsCause                [0] GPRSCause {bound},
- *     pDPID                [1]    PDPID                    OPTIONAL,
+ *     pDPID                [1]    PDPID                    type OPTIONAL,
  *     ...
  *     }
  * ```
@@ -38,39 +38,47 @@ import { type PDPID, _decode_PDPID, _encode_PDPID } from "../CAP-datatypes/PDPID
  */
 export
 class ReleaseGPRSArg {
+    /**
+     * @summary `gprsCause`.
+     * @description
+     *
+     * Reason for releasing the GPRS Session or a specific PDP
+     * Context. The gprsSSF may use this for indications to the MS
+     * or the cause in the release message (spec: gPRSCause).
+     * (3GPP TS 29.078 V19.0.0 clause 13.11.1.1).
+     *
+     * @public
+     * @readonly
+     */
+    public readonly gprsCause: GPRSCause;
+    /**
+     * @summary `pDPID`.
+     * @description
+     *
+     * Identifies the PDP Context, within a GPRS Session dialogue,
+     * which shall be released. unknownPDPID if unknown.
+     * (3GPP TS 29.078 V19.0.0 clause 13.11.1.1).
+     *
+     * @public
+     * @readonly
+     */
+    public readonly pDPID?: OPTIONAL<PDPID>;
+    /**
+     * @summary Extensions that are not recognized.
+     * @public
+     * @readonly
+     */
+    public readonly _unrecognizedExtensionsList: _Element[];
+
     constructor (
-        /**
-         * @summary `gprsCause`.
-         * @description
-         *
-         * Reason for releasing the GPRS Session or a specific PDP
-         * Context. The gprsSSF may use this for indications to the MS
-         * or the cause in the release message (spec: gPRSCause).
-         * (3GPP TS 29.078 V19.0.0 clause 13.11.1.1).
-         *
-         * @public
-         * @readonly
-         */
-        readonly gprsCause: GPRSCause,
-        /**
-         * @summary `pDPID`.
-         * @description
-         *
-         * Identifies the PDP Context, within a GPRS Session dialogue,
-         * which shall be released. unknownPDPID if unknown.
-         * (3GPP TS 29.078 V19.0.0 clause 13.11.1.1).
-         *
-         * @public
-         * @readonly
-         */
-        readonly pDPID?: OPTIONAL<PDPID>,
-        /**
-         * @summary Extensions that are not recognized.
-         * @public
-         * @readonly
-         */
-        readonly _unrecognizedExtensionsList: _Element[] = []
-    ) {}
+        gprsCause: GPRSCause,
+        pDPID?: OPTIONAL<PDPID>,
+        _unrecognizedExtensionsList: _Element[] = []
+    ) {
+        this.gprsCause = gprsCause;
+        this.pDPID = pDPID;
+        this._unrecognizedExtensionsList = _unrecognizedExtensionsList;
+    }
 
     /**
      * @summary Restructures an object into a ReleaseGPRSArg

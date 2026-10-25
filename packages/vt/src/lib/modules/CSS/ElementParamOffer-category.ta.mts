@@ -1,7 +1,7 @@
 /* eslint-disable */
 import {
-    BIT_STRING,
-    ASN1Element as _Element,
+    type BIT_STRING,
+    type ASN1Element as _Element,
     ASN1TagClass as _TagClass,
     ASN1Construction as _Construction,
     ASN1UniversalType as _UniversalType,
@@ -156,8 +156,8 @@ const ElementParamOffer_category_transparent: number = 4; /* LONG_NAMED_BIT */
  */
 export
 const transparent: number = ElementParamOffer_category_transparent; /* SHORT_NAMED_BIT */
-export const _decode_ElementParamOffer_category = $._decodeBitString;
-export const _encode_ElementParamOffer_category = $._encodeBitString;
+export const _decode_ElementParamOffer_category: $.ASN1Decoder<BIT_STRING> = $._decodeBitString;
+export const _encode_ElementParamOffer_category: $.ASN1Encoder<BIT_STRING> = $._encodeBitString;
 
 
 /* eslint-enable */

@@ -45,7 +45,7 @@ export class F_CHANGE_LINK_ATTRIB_request {
    * @public
    * @readonly
    */
-  readonly attributes: Change_Attributes;
+  public readonly attributes: Change_Attributes;
 
   constructor(
     attributes: Change_Attributes

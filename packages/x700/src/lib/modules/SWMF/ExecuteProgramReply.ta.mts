@@ -1,9 +1,9 @@
 /* eslint-disable */
 import {
-    OPTIONAL,
-    INTEGER,
-    GeneralizedTime,
-    ASN1Element as _Element,
+    type OPTIONAL,
+    type INTEGER,
+    type GeneralizedTime,
+    type ASN1Element as _Element,
     ASN1TagClass as _TagClass,
     ASN1Construction as _Construction,
     ASN1UniversalType as _UniversalType,
@@ -14,7 +14,7 @@ import {
 } from '@wildboar/asn1';
 import * as $ from '@wildboar/asn1/functional';
 import {
-    Identity,
+    type Identity,
     _decode_Identity,
     _encode_Identity,
 } from '../SWMF/Identity.ta.mjs';
@@ -46,49 +46,59 @@ import {
  *
  */
 export class ExecuteProgramReply {
+    /**
+     * @summary `processId`.
+     * @description
+     *
+     * Identifier of the started process. Conditional in Table 8
+     * (present in a positive reply). ITU-T Rec. X.744 (10/96)
+     * §9.4 Table 8, A.5.2.
+     * @public
+     * @readonly
+     */
+    public readonly processId: INTEGER;
+    /**
+     * @summary `processOwner`.
+     * @description
+     *
+     * Owner of the started process. ITU-T Rec. X.744 (10/96)
+     * §9.4 Table 8, A.5.2.
+     * @public
+     * @readonly
+     */
+    public readonly processOwner: Identity;
+    /**
+     * @summary `startTime`.
+     * @description
+     *
+     * Time execution began. ITU-T Rec. X.744 (10/96) §9.4
+     * Table 8, A.5.2.
+     * @public
+     * @readonly
+     */
+    public readonly startTime: GeneralizedTime;
+    /**
+     * @summary `additionalInfo`.
+     * @description
+     *
+     * Management extensions. User in Table 8. ITU-T Rec. X.744
+     * (10/96) §9.4 Table 8.
+     * @public
+     * @readonly
+     */
+    public readonly additionalInfo?: OPTIONAL<ManagementExtension[]>;
+
     constructor(
-        /**
-         * @summary `processId`.
-         * @description
-         *
-         * Identifier of the started process. Conditional in Table 8
-         * (present in a positive reply). ITU-T Rec. X.744 (10/96)
-         * §9.4 Table 8, A.5.2.
-         * @public
-         * @readonly
-         */
-        readonly processId: INTEGER,
-        /**
-         * @summary `processOwner`.
-         * @description
-         *
-         * Owner of the started process. ITU-T Rec. X.744 (10/96)
-         * §9.4 Table 8, A.5.2.
-         * @public
-         * @readonly
-         */
-        readonly processOwner: Identity,
-        /**
-         * @summary `startTime`.
-         * @description
-         *
-         * Time execution began. ITU-T Rec. X.744 (10/96) §9.4
-         * Table 8, A.5.2.
-         * @public
-         * @readonly
-         */
-        readonly startTime: GeneralizedTime,
-        /**
-         * @summary `additionalInfo`.
-         * @description
-         *
-         * Management extensions. User in Table 8. ITU-T Rec. X.744
-         * (10/96) §9.4 Table 8.
-         * @public
-         * @readonly
-         */
-        readonly additionalInfo?: OPTIONAL<ManagementExtension[]>
-    ) {}
+        processId: INTEGER,
+        processOwner: Identity,
+        startTime: GeneralizedTime,
+        additionalInfo?: OPTIONAL<ManagementExtension[]>
+    ) {
+        this.processId = processId;
+        this.processOwner = processOwner;
+        this.startTime = startTime;
+        this.additionalInfo = additionalInfo;
+    }
 
     /**
      * @summary Restructures an object into a ExecuteProgramReply

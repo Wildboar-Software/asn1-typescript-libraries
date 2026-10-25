@@ -1,25 +1,25 @@
 /* eslint-disable */
 import {
-    ASN1Element as _Element,
+    type ASN1Element as _Element,
     ASN1TagClass as _TagClass,
-    GeneralizedTime,
-    OPTIONAL,
+    type GeneralizedTime,
+    type OPTIONAL,
 } from "@wildboar/asn1";
 import * as $ from "@wildboar/asn1/functional";
 import {
-    AVMPsequence,
+    type AVMPsequence,
     _decode_AVMPsequence,
     _encode_AVMPsequence,
 } from "../PkiPMIProtocolSpecifications/AVMPsequence.ta.mjs";
 import {
-    AVMPversion,
+    type AVMPversion,
     AVMPversion_v1 /* IMPORTED_LONG_ENUMERATION_ITEM */,
     _decode_AVMPversion,
     _encode_AVMPversion,
     _enum_for_AVMPversion,
 } from "../PkiPMIProtocolSpecifications/AVMPversion.ta.mjs";
 import {
-    DeleteAvlRsp_result,
+    type DeleteAvlRsp_result,
     _decode_DeleteAvlRsp_result,
     _encode_DeleteAvlRsp_result,
 } from "../PkiPMIProtocolSpecifications/DeleteAvlRsp-result.ta.mjs";
@@ -46,38 +46,50 @@ import {
  *
  */
 export class DeleteAvlRsp implements AVMPcommonComponents {
+    /**
+     * @summary `version`.
+     * @public
+     * @readonly
+     */
+    public readonly version: OPTIONAL<AVMPversion>; /* REPLICATED_COMPONENT */
+    /**
+     * @summary `timeStamp`.
+     * @public
+     * @readonly
+     */
+    public readonly timeStamp: GeneralizedTime; /* REPLICATED_COMPONENT */
+    /**
+     * @summary `sequence`.
+     * @public
+     * @readonly
+     */
+    public readonly sequence: AVMPsequence; /* REPLICATED_COMPONENT */
+    /**
+     * @summary `result`.
+     * @public
+     * @readonly
+     */
+    public readonly result: DeleteAvlRsp_result;
+    /**
+     * @summary Extensions that are not recognized.
+     * @public
+     * @readonly
+     */
+    public readonly _unrecognizedExtensionsList: _Element[];
+
     constructor(
-        /**
-         * @summary `version`.
-         * @public
-         * @readonly
-         */
-        readonly version: OPTIONAL<AVMPversion> /* REPLICATED_COMPONENT */,
-        /**
-         * @summary `timeStamp`.
-         * @public
-         * @readonly
-         */
-        readonly timeStamp: GeneralizedTime /* REPLICATED_COMPONENT */,
-        /**
-         * @summary `sequence`.
-         * @public
-         * @readonly
-         */
-        readonly sequence: AVMPsequence /* REPLICATED_COMPONENT */,
-        /**
-         * @summary `result`.
-         * @public
-         * @readonly
-         */
-        readonly result: DeleteAvlRsp_result,
-        /**
-         * @summary Extensions that are not recognized.
-         * @public
-         * @readonly
-         */
-        readonly _unrecognizedExtensionsList: _Element[] = []
-    ) {}
+        version: OPTIONAL<AVMPversion>,
+        timeStamp: GeneralizedTime,
+        sequence: AVMPsequence,
+        result: DeleteAvlRsp_result,
+        _unrecognizedExtensionsList: _Element[] = []
+    ) {
+        this.version = version;
+        this.timeStamp = timeStamp;
+        this.sequence = sequence;
+        this.result = result;
+        this._unrecognizedExtensionsList = _unrecognizedExtensionsList;
+    }
 
     /**
      * @summary Restructures an object into a DeleteAvlRsp
@@ -118,7 +130,7 @@ export class DeleteAvlRsp implements AVMPcommonComponents {
      * @static
      */
 
-    public static _enum_for_version = _enum_for_AVMPversion;
+    public static _enum_for_version: typeof _enum_for_AVMPversion = _enum_for_AVMPversion;
 }
 
 /**

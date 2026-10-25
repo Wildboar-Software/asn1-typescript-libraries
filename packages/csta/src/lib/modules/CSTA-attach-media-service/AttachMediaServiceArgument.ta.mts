@@ -2,14 +2,14 @@
 
 import * as $ from "@wildboar/asn1/functional";
 import {
-    OPTIONAL,
-    INTEGER,
-    SEQUENCE,
-    SET,
-    ASN1Element as _Element,
+    type OPTIONAL,
+    type INTEGER,
+    type SEQUENCE,
+    type SET,
+    type ASN1Element as _Element,
     ASN1TagClass as _TagClass
 } from "@wildboar/asn1";
-import { ConnectionID, _decode_ConnectionID, _encode_ConnectionID } from "../CSTA-call-connection-identifiers/ConnectionID.ta.mjs";
+import { type ConnectionID, _decode_ConnectionID, _encode_ConnectionID } from "../CSTA-call-connection-identifiers/ConnectionID.ta.mjs";
 
 import {
     MediaServiceType,
@@ -18,7 +18,7 @@ import {
     _encode_MediaServiceType
 } from "../CSTA-media-services/MediaServiceType.ta.mjs";
 
-import { MediaServiceInstanceID, _decode_MediaServiceInstanceID, _encode_MediaServiceInstanceID } from "../CSTA-media-services/MediaServiceInstanceID.ta.mjs";
+import { type MediaServiceInstanceID, _decode_MediaServiceInstanceID, _encode_MediaServiceInstanceID } from "../CSTA-media-services/MediaServiceInstanceID.ta.mjs";
 
 import {
     ConnectionMode,
@@ -48,10 +48,10 @@ import { CSTACommonArguments, _decode_CSTACommonArguments, _encode_CSTACommonArg
  * AttachMediaServiceArgument ::= SEQUENCE
  * {    connection             ConnectionID,
  *     mediaServiceType         MediaServiceType,
- *     mediaServiceVersion        INTEGER                    OPTIONAL,
- *     mediaServiceInstanceID         MediaServiceInstanceID            OPTIONAL,
+ *     mediaServiceVersion        INTEGER                    type OPTIONAL,
+ *     mediaServiceInstanceID         MediaServiceInstanceID            type OPTIONAL,
  *     connectionMode            ConnectionMode,
- *     requestedConnectionState    LocalConnectionState            OPTIONAL,
+ *     requestedConnectionState    LocalConnectionState            type OPTIONAL,
  *     extensions             CSTACommonArguments             OPTIONAL }
  * ```
  * 
@@ -59,73 +59,89 @@ import { CSTACommonArguments, _decode_CSTACommonArguments, _encode_CSTACommonArg
  */
 export
 class AttachMediaServiceArgument {
+    /**
+     * @summary `connection`.
+     * @description
+     *
+     * Connection at the attaching device.
+     * @public
+     * @readonly
+     */
+    public readonly connection: ConnectionID;
+    /**
+     * @summary `mediaServiceType`.
+     * @description
+     *
+     * Requested media service type.
+     * @public
+     * @readonly
+     */
+    public readonly mediaServiceType: MediaServiceType;
+    /**
+     * @summary `mediaServiceVersion`.
+     * @description
+     *
+     * Version of the media service.
+     * @public
+     * @readonly
+     */
+    public readonly mediaServiceVersion: OPTIONAL<INTEGER>;
+    /**
+     * @summary `mediaServiceInstanceID`.
+     * @description
+     *
+     * Desired media service instance.
+     * @public
+     * @readonly
+     */
+    public readonly mediaServiceInstanceID: OPTIONAL<MediaServiceInstanceID>;
+    /**
+     * @summary `connectionMode`.
+     * @description
+     *
+     * How the MAD is added (consultation/conference/deflect/join/
+     * transfer variants) or `direct` if already in the call.
+     * @public
+     * @readonly
+     */
+    public readonly connectionMode: ConnectionMode;
+    /**
+     * @summary `requestedConnectionState`.
+     * @description
+     *
+     * Requested local connection state after attach.
+     * @public
+     * @readonly
+     */
+    public readonly requestedConnectionState?: OPTIONAL<LocalConnectionState>;
+    /**
+     * @summary `extensions`.
+     * @description
+     *
+     * Optional security (timestamp, sequence, securityInfo) and
+     * privateData.
+     * @public
+     * @readonly
+     */
+    public readonly extensions?: OPTIONAL<CSTACommonArguments>;
+
     constructor (
-        /**
-         * @summary `connection`.
-         * @description
-         *
-         * Connection at the attaching device.
-         * @public
-         * @readonly
-         */
-        readonly connection: ConnectionID,
-        /**
-         * @summary `mediaServiceType`.
-         * @description
-         *
-         * Requested media service type.
-         * @public
-         * @readonly
-         */
-        readonly mediaServiceType: MediaServiceType,
-        /**
-         * @summary `mediaServiceVersion`.
-         * @description
-         *
-         * Version of the media service.
-         * @public
-         * @readonly
-         */
-        readonly mediaServiceVersion: OPTIONAL<INTEGER>,
-        /**
-         * @summary `mediaServiceInstanceID`.
-         * @description
-         *
-         * Desired media service instance.
-         * @public
-         * @readonly
-         */
-        readonly mediaServiceInstanceID: OPTIONAL<MediaServiceInstanceID>,
-        /**
-         * @summary `connectionMode`.
-         * @description
-         *
-         * How the MAD is added (consultation/conference/deflect/join/
-         * transfer variants) or `direct` if already in the call.
-         * @public
-         * @readonly
-         */
-        readonly connectionMode: ConnectionMode,
-        /**
-         * @summary `requestedConnectionState`.
-         * @description
-         *
-         * Requested local connection state after attach.
-         * @public
-         * @readonly
-         */
-        readonly requestedConnectionState?: OPTIONAL<LocalConnectionState>,
-        /**
-         * @summary `extensions`.
-         * @description
-         *
-         * Optional security (timestamp, sequence, securityInfo) and
-         * privateData.
-         * @public
-         * @readonly
-         */
-        readonly extensions?: OPTIONAL<CSTACommonArguments>
-    ) {}
+        connection: ConnectionID,
+        mediaServiceType: MediaServiceType,
+        mediaServiceVersion: OPTIONAL<INTEGER>,
+        mediaServiceInstanceID: OPTIONAL<MediaServiceInstanceID>,
+        connectionMode: ConnectionMode,
+        requestedConnectionState?: OPTIONAL<LocalConnectionState>,
+        extensions?: OPTIONAL<CSTACommonArguments>
+    ) {
+        this.connection = connection;
+        this.mediaServiceType = mediaServiceType;
+        this.mediaServiceVersion = mediaServiceVersion;
+        this.mediaServiceInstanceID = mediaServiceInstanceID;
+        this.connectionMode = connectionMode;
+        this.requestedConnectionState = requestedConnectionState;
+        this.extensions = extensions;
+    }
 
     /**
      * @summary Restructures an object into a AttachMediaServiceArgument
@@ -149,13 +165,13 @@ class AttachMediaServiceArgument {
          * @static
          */
 
-    public static _enum_for_mediaServiceType = _enum_for_MediaServiceType;        /**
+    public static _enum_for_mediaServiceType: typeof _enum_for_MediaServiceType = _enum_for_MediaServiceType;        /**
          * @summary The enum used as the type of the component `connectionMode`
          * @public
          * @static
          */
 
-    public static _enum_for_connectionMode = _enum_for_ConnectionMode;
+    public static _enum_for_connectionMode: typeof _enum_for_ConnectionMode = _enum_for_ConnectionMode;
 }
 
 /**

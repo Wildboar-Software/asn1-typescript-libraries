@@ -1,10 +1,10 @@
 /* eslint-disable */
 import {
-    ASN1Element as _Element,
+    type ASN1Element as _Element,
     ASN1TagClass as _TagClass,
-    INTEGER,
-    OCTET_STRING,
-    OPTIONAL,
+    type INTEGER,
+    type OCTET_STRING,
+    type OPTIONAL,
 } from "@wildboar/asn1";
 import * as $ from "@wildboar/asn1/functional";
 import {
@@ -32,26 +32,34 @@ import {
  *
  */
 export class MacData {
+    /**
+     * @summary `mac`.
+     * @public
+     * @readonly
+     */
+    public readonly mac: DigestInfo;
+    /**
+     * @summary `macSalt`.
+     * @public
+     * @readonly
+     */
+    public readonly macSalt: OCTET_STRING;
+    /**
+     * @summary `iterations`.
+     * @public
+     * @readonly
+     */
+    public readonly iterations?: OPTIONAL<INTEGER>;
+
     constructor(
-        /**
-         * @summary `mac`.
-         * @public
-         * @readonly
-         */
-        readonly mac: DigestInfo,
-        /**
-         * @summary `macSalt`.
-         * @public
-         * @readonly
-         */
-        readonly macSalt: OCTET_STRING,
-        /**
-         * @summary `iterations`.
-         * @public
-         * @readonly
-         */
-        readonly iterations?: OPTIONAL<INTEGER>
-    ) {}
+        mac: DigestInfo,
+        macSalt: OCTET_STRING,
+        iterations?: OPTIONAL<INTEGER>
+    ) {
+        this.mac = mac;
+        this.macSalt = macSalt;
+        this.iterations = iterations;
+    }
 
     /**
      * @summary Restructures an object into a MacData

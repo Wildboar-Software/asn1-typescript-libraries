@@ -1,7 +1,7 @@
 /* eslint-disable */
 import {
-    INTEGER,
-    ASN1Element as _Element,
+    type INTEGER,
+    type ASN1Element as _Element,
     ASN1TagClass as _TagClass,
     ASN1Construction as _Construction,
     ASN1UniversalType as _UniversalType,
@@ -37,40 +37,50 @@ import * as $ from "@wildboar/asn1/functional";
  */
 export
 class TimeOffer_Item_range {
+    /**
+     * @summary `lowerMultiplier`.
+     * @description
+     * Lower-bound timeout multiplier T. ISO/IEC 9040:1997 §23.4.
+     * @public
+     * @readonly
+     */
+    public readonly lowerMultiplier: INTEGER;
+    /**
+     * @summary `lowerExponent`.
+     * @description
+     * Lower-bound timeout exponent E. ISO/IEC 9040:1997 §23.4.
+     * @public
+     * @readonly
+     */
+    public readonly lowerExponent: INTEGER;
+    /**
+     * @summary `upperMultiplier`.
+     * @description
+     * Upper-bound timeout multiplier T. ISO/IEC 9040:1997 §23.4.
+     * @public
+     * @readonly
+     */
+    public readonly upperMultiplier: INTEGER;
+    /**
+     * @summary `upperExponent`.
+     * @description
+     * Upper-bound timeout exponent E. ISO/IEC 9040:1997 §23.4.
+     * @public
+     * @readonly
+     */
+    public readonly upperExponent: INTEGER;
+
     constructor (
-        /**
-         * @summary `lowerMultiplier`.
-         * @description
-         * Lower-bound timeout multiplier T. ISO/IEC 9040:1997 §23.4.
-         * @public
-         * @readonly
-         */
-        readonly lowerMultiplier: INTEGER,
-        /**
-         * @summary `lowerExponent`.
-         * @description
-         * Lower-bound timeout exponent E. ISO/IEC 9040:1997 §23.4.
-         * @public
-         * @readonly
-         */
-        readonly lowerExponent: INTEGER,
-        /**
-         * @summary `upperMultiplier`.
-         * @description
-         * Upper-bound timeout multiplier T. ISO/IEC 9040:1997 §23.4.
-         * @public
-         * @readonly
-         */
-        readonly upperMultiplier: INTEGER,
-        /**
-         * @summary `upperExponent`.
-         * @description
-         * Upper-bound timeout exponent E. ISO/IEC 9040:1997 §23.4.
-         * @public
-         * @readonly
-         */
-        readonly upperExponent: INTEGER
-    ) {}
+        lowerMultiplier: INTEGER,
+        lowerExponent: INTEGER,
+        upperMultiplier: INTEGER,
+        upperExponent: INTEGER
+    ) {
+        this.lowerMultiplier = lowerMultiplier;
+        this.lowerExponent = lowerExponent;
+        this.upperMultiplier = upperMultiplier;
+        this.upperExponent = upperExponent;
+    }
 
     /**
      * @summary Restructures an object into a TimeOffer_Item_range

@@ -1,6 +1,6 @@
 /* eslint-disable */
 import {
-    ASN1Element as _Element,
+    type ASN1Element as _Element,
     ASN1TagClass as _TagClass,
     ASN1Construction as _Construction,
     ASN1UniversalType as _UniversalType,
@@ -11,7 +11,7 @@ import {
 } from '@wildboar/asn1';
 import * as $ from '@wildboar/asn1/functional';
 import {
-    SubmissionError,
+    type SubmissionError,
     _decode_SubmissionError,
     _encode_SubmissionError,
 } from '../MhsAcctAsn1Module/SubmissionError.ta.mjs';
@@ -31,22 +31,13 @@ import {
  */
 export type ProbeSubmissionErrors = SubmissionError; // DefinedType
 
-let _cached_decoder_for_ProbeSubmissionErrors: $.ASN1Decoder<ProbeSubmissionErrors> | null = null;
-
 /**
  * @summary Decodes an ASN.1 element into a(n) ProbeSubmissionErrors
  * @function
  * @param {_Element} el The element being decoded.
  * @returns {ProbeSubmissionErrors} The decoded data structure.
  */
-export function _decode_ProbeSubmissionErrors(el: _Element): ProbeSubmissionErrors {
-    if (!_cached_decoder_for_ProbeSubmissionErrors) {
-        _cached_decoder_for_ProbeSubmissionErrors = _decode_SubmissionError;
-    }
-    return _cached_decoder_for_ProbeSubmissionErrors(el);
-}
-
-let _cached_encoder_for_ProbeSubmissionErrors: $.ASN1Encoder<ProbeSubmissionErrors> | null = null;
+export const _decode_ProbeSubmissionErrors: $.ASN1Decoder<ProbeSubmissionErrors> = _decode_SubmissionError;
 
 /**
  * @summary Encodes a(n) ProbeSubmissionErrors into an ASN.1 Element.
@@ -55,15 +46,7 @@ let _cached_encoder_for_ProbeSubmissionErrors: $.ASN1Encoder<ProbeSubmissionErro
  * @param elGetter A function that can be used to get new ASN.1 elements.
  * @returns {_Element} The ProbeSubmissionErrors, encoded as an ASN.1 Element.
  */
-export function _encode_ProbeSubmissionErrors(
-    value: ProbeSubmissionErrors,
-    elGetter: $.ASN1Encoder<ProbeSubmissionErrors>
-): _Element {
-    if (!_cached_encoder_for_ProbeSubmissionErrors) {
-        _cached_encoder_for_ProbeSubmissionErrors = _encode_SubmissionError;
-    }
-    return _cached_encoder_for_ProbeSubmissionErrors(value, elGetter);
-}
+export const _encode_ProbeSubmissionErrors: $.ASN1Encoder<ProbeSubmissionErrors> = _encode_SubmissionError;
 
 
 /* eslint-enable */

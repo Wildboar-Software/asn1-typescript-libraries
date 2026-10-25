@@ -2,7 +2,7 @@
 import type { ALGORITHM } from "@wildboar/x500/AuthenticationFramework";
 import { id_ckm_key_agree_hash } from "../CMSObjectIdentifiers/id-ckm-key-agree-hash.va.mjs";
 import {
-    DigestAlgorithmIdentifier,
+    type DigestAlgorithmIdentifier,
     _decode_DigestAlgorithmIdentifier,
     _encode_DigestAlgorithmIdentifier,
 } from "../CryptographicMessageSyntax-2010/DigestAlgorithmIdentifier.ta.mjs";

@@ -11,22 +11,22 @@ import {
 } from '@wildboar/asn1';
 import * as $ from '@wildboar/asn1/functional';
 import {
-  ASO_qualifier_form1,
+  type ASO_qualifier_form1,
   _decode_ASO_qualifier_form1,
   _encode_ASO_qualifier_form1,
 } from '../ACSE-1/ASO-qualifier-form1.ta.mjs';
 import {
-  ASO_qualifier_form2,
+  type ASO_qualifier_form2,
   _decode_ASO_qualifier_form2,
   _encode_ASO_qualifier_form2,
 } from '../ACSE-1/ASO-qualifier-form2.ta.mjs';
 import {
-  ASO_qualifier_form3,
+  type ASO_qualifier_form3,
   _decode_ASO_qualifier_form3,
   _encode_ASO_qualifier_form3,
 } from '../ACSE-1/ASO-qualifier-form3.ta.mjs';
 import {
-  ASO_qualifier_form4,
+  type ASO_qualifier_form4,
   _decode_ASO_qualifier_form4,
   _encode_ASO_qualifier_form4,
 } from '../ACSE-1/ASO-qualifier-form4.ta.mjs';

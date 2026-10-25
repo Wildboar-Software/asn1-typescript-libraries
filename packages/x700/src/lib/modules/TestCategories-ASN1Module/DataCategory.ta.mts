@@ -1,7 +1,7 @@
 /* eslint-disable */
 import {
-    INTEGER,
-    ASN1Element as _Element,
+    type INTEGER,
+    type ASN1Element as _Element,
     ASN1TagClass as _TagClass,
     ASN1Construction as _Construction,
     ASN1UniversalType as _UniversalType,
@@ -38,7 +38,7 @@ export type DataCategory = INTEGER;
  * @constant
  * @type {number}
  */
-export const DataCategory_bits: DataCategory = 0; /* LONG_NAMED_INTEGER_VALUE */
+export const DataCategory_bits: 0 = 0 satisfies DataCategory; /* LONG_NAMED_INTEGER_VALUE */
 
 /**
  * @summary DataCategory_bits
@@ -48,7 +48,7 @@ export const DataCategory_bits: DataCategory = 0; /* LONG_NAMED_INTEGER_VALUE */
  * @constant
  * @type {number}
  */
-export const bits: DataCategory = DataCategory_bits; /* SHORT_NAMED_INTEGER_VALUE */
+export const bits: 0 = DataCategory_bits; /* SHORT_NAMED_INTEGER_VALUE */
 
 /**
  * @summary DataCategory_octets
@@ -58,7 +58,7 @@ export const bits: DataCategory = DataCategory_bits; /* SHORT_NAMED_INTEGER_VALU
  * @constant
  * @type {number}
  */
-export const DataCategory_octets: DataCategory = 1; /* LONG_NAMED_INTEGER_VALUE */
+export const DataCategory_octets: 1 = 1 satisfies DataCategory; /* LONG_NAMED_INTEGER_VALUE */
 
 /**
  * @summary DataCategory_octets
@@ -68,7 +68,7 @@ export const DataCategory_octets: DataCategory = 1; /* LONG_NAMED_INTEGER_VALUE 
  * @constant
  * @type {number}
  */
-export const octets: DataCategory = DataCategory_octets; /* SHORT_NAMED_INTEGER_VALUE */
+export const octets: 1 = DataCategory_octets; /* SHORT_NAMED_INTEGER_VALUE */
 
 /**
  * @summary DataCategory_blocks
@@ -78,7 +78,7 @@ export const octets: DataCategory = DataCategory_octets; /* SHORT_NAMED_INTEGER_
  * @constant
  * @type {number}
  */
-export const DataCategory_blocks: DataCategory = 2; /* LONG_NAMED_INTEGER_VALUE */
+export const DataCategory_blocks: 2 = 2 satisfies DataCategory; /* LONG_NAMED_INTEGER_VALUE */
 
 /**
  * @summary DataCategory_blocks
@@ -88,7 +88,7 @@ export const DataCategory_blocks: DataCategory = 2; /* LONG_NAMED_INTEGER_VALUE 
  * @constant
  * @type {number}
  */
-export const blocks: DataCategory = DataCategory_blocks; /* SHORT_NAMED_INTEGER_VALUE */
+export const blocks: 2 = DataCategory_blocks; /* SHORT_NAMED_INTEGER_VALUE */
 
 /**
  * @summary DataCategory_packets
@@ -98,7 +98,7 @@ export const blocks: DataCategory = DataCategory_blocks; /* SHORT_NAMED_INTEGER_
  * @constant
  * @type {number}
  */
-export const DataCategory_packets: DataCategory = 3; /* LONG_NAMED_INTEGER_VALUE */
+export const DataCategory_packets: 3 = 3 satisfies DataCategory; /* LONG_NAMED_INTEGER_VALUE */
 
 /**
  * @summary DataCategory_packets
@@ -108,13 +108,13 @@ export const DataCategory_packets: DataCategory = 3; /* LONG_NAMED_INTEGER_VALUE
  * @constant
  * @type {number}
  */
-export const packets: DataCategory = DataCategory_packets; /* SHORT_NAMED_INTEGER_VALUE */
+export const packets: 3 = DataCategory_packets; /* SHORT_NAMED_INTEGER_VALUE */
 
 
-export const _decode_DataCategory = $._decodeInteger;
+export const _decode_DataCategory: $.ASN1Decoder<INTEGER> = $._decodeInteger;
 
 
-export const _encode_DataCategory = $._encodeInteger;
+export const _encode_DataCategory: $.ASN1Encoder<INTEGER> = $._encodeInteger;
 
 
 /* eslint-enable */

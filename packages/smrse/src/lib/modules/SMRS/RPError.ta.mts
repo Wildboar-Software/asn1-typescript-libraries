@@ -1,15 +1,15 @@
 /* eslint-disable */
 import {
-    BOOLEAN,
-    OPTIONAL,
-    ASN1Element as _Element,
+    type BOOLEAN,
+    type OPTIONAL,
+    type ASN1Element as _Element,
     ASN1TagClass as _TagClass
 } from "@wildboar/asn1";
 import * as $ from "@wildboar/asn1/functional";
-import { Error_reason, _decode_Error_reason, _encode_Error_reason } from "../SMRS/Error-reason.ta.mjs";
-import { RP_MR, _decode_RP_MR, _encode_RP_MR } from "../SMRS/RP-MR.ta.mjs";
+import { type Error_reason, _decode_Error_reason, _encode_Error_reason } from "../SMRS/Error-reason.ta.mjs";
+import { type RP_MR, _decode_RP_MR, _encode_RP_MR } from "../SMRS/RP-MR.ta.mjs";
 import { SMS_Address, _decode_SMS_Address, _encode_SMS_Address } from "../SMRS/SMS-Address.ta.mjs";
-import { RP_UD, _decode_RP_UD, _encode_RP_UD } from "../SMRS/RP-UD.ta.mjs";
+import { type RP_UD, _decode_RP_UD, _encode_RP_UD } from "../SMRS/RP-UD.ta.mjs";
 
 
 /**
@@ -55,7 +55,7 @@ class RPError {
      * @public
      * @readonly
      */
-    readonly error_reason: Error_reason;
+    public readonly error_reason: Error_reason;
     /**
      * @summary `msg_waiting_set`.
      * @description
@@ -66,7 +66,7 @@ class RPError {
      * @public
      * @readonly
      */
-    readonly msg_waiting_set: BOOLEAN;
+    public readonly msg_waiting_set: BOOLEAN;
     /**
      * @summary `message_reference`.
      * @description
@@ -77,7 +77,7 @@ class RPError {
      * @public
      * @readonly
      */
-    readonly message_reference: RP_MR;
+    public readonly message_reference: RP_MR;
     /**
      * @summary `alerting_MS_ISDN`.
      * @description
@@ -88,7 +88,7 @@ class RPError {
      * @public
      * @readonly
      */
-    readonly alerting_MS_ISDN?: OPTIONAL<SMS_Address>;
+    public readonly alerting_MS_ISDN?: OPTIONAL<SMS_Address>;
     /**
      * @summary `sm_diag_info`.
      * @description
@@ -99,7 +99,7 @@ class RPError {
      * @public
      * @readonly
      */
-    readonly sm_diag_info?: OPTIONAL<RP_UD>;
+    public readonly sm_diag_info?: OPTIONAL<RP_UD>;
     /**
      * @summary Extensions that are not recognized.
      * @description
@@ -110,7 +110,7 @@ class RPError {
      * @public
      * @readonly
      */
-    readonly _unrecognizedExtensionsList: _Element[];
+    public readonly _unrecognizedExtensionsList: _Element[];
 
     constructor (
         error_reason: Error_reason,

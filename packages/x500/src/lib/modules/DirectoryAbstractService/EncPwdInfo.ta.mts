@@ -1,8 +1,8 @@
 /* eslint-disable */
 import {
-    ASN1Element as _Element,
+    type ASN1Element as _Element,
     ASN1TagClass as _TagClass,
-    OPTIONAL,
+    type OPTIONAL,
 } from "@wildboar/asn1";
 import * as $ from "@wildboar/asn1/functional";
 import {
@@ -36,35 +36,43 @@ import {
  *
  */
 export class EncPwdInfo {
+    /**
+     * @summary `algorithms`.
+     * @description
+     *
+     * Algorithms the DSA supports. Bind/Compare: 1–2 (current + recently
+     * expired). Change-password: current + all history algs.
+     *
+     * @public
+     * @readonly
+     */
+    public readonly algorithms?: OPTIONAL<AlgorithmIdentifier[]>;
+    /**
+     * @summary `pwdQualityRule`.
+     * @description
+     *
+     * OPTIONAL SEQUENCE OF ATAV. Password construction rules.
+     *
+     * @public
+     * @readonly
+     */
+    public readonly pwdQualityRule?: OPTIONAL<AttributeTypeAndValue[]>;
+    /**
+     * @summary Extensions that are not recognized.
+     * @public
+     * @readonly
+     */
+    public readonly _unrecognizedExtensionsList: _Element[];
+
     constructor(
-        /**
-         * @summary `algorithms`.
-         * @description
-         *
-         * Algorithms the DSA supports. Bind/Compare: 1–2 (current + recently
-         * expired). Change-password: current + all history algs.
-         *
-         * @public
-         * @readonly
-         */
-        readonly algorithms?: OPTIONAL<AlgorithmIdentifier[]>,
-        /**
-         * @summary `pwdQualityRule`.
-         * @description
-         *
-         * OPTIONAL SEQUENCE OF ATAV. Password construction rules.
-         *
-         * @public
-         * @readonly
-         */
-        readonly pwdQualityRule?: OPTIONAL<AttributeTypeAndValue[]>,
-        /**
-         * @summary Extensions that are not recognized.
-         * @public
-         * @readonly
-         */
-        readonly _unrecognizedExtensionsList: _Element[] = []
-    ) {}
+        algorithms?: OPTIONAL<AlgorithmIdentifier[]>,
+        pwdQualityRule?: OPTIONAL<AttributeTypeAndValue[]>,
+        _unrecognizedExtensionsList: _Element[] = []
+    ) {
+        this.algorithms = algorithms;
+        this.pwdQualityRule = pwdQualityRule;
+        this._unrecognizedExtensionsList = _unrecognizedExtensionsList;
+    }
 
     /**
      * @summary Restructures an object into a EncPwdInfo

@@ -1,7 +1,7 @@
 /* eslint-disable */
 import {
-    INTEGER,
-    ASN1Element as _Element,
+    type INTEGER,
+    type ASN1Element as _Element,
     ASN1TagClass as _TagClass,
     ASN1Construction as _Construction,
     ASN1UniversalType as _UniversalType,
@@ -34,7 +34,7 @@ export type Presentation_context_deletion_result_list_Item = INTEGER;
  * @constant
  * @type {number}
  */
-export const Presentation_context_deletion_result_list_Item_acceptance: Presentation_context_deletion_result_list_Item = 0; /* LONG_NAMED_INTEGER_VALUE */
+export const Presentation_context_deletion_result_list_Item_acceptance: 0 = 0 satisfies Presentation_context_deletion_result_list_Item; /* LONG_NAMED_INTEGER_VALUE */
 
 
 /**
@@ -42,7 +42,7 @@ export const Presentation_context_deletion_result_list_Item_acceptance: Presenta
  * @constant
  * @type {number}
  */
-export const acceptance: Presentation_context_deletion_result_list_Item = Presentation_context_deletion_result_list_Item_acceptance; /* SHORT_NAMED_INTEGER_VALUE */
+export const acceptance: 0 = Presentation_context_deletion_result_list_Item_acceptance; /* SHORT_NAMED_INTEGER_VALUE */
 
 
 /**
@@ -50,7 +50,7 @@ export const acceptance: Presentation_context_deletion_result_list_Item = Presen
  * @constant
  * @type {number}
  */
-export const Presentation_context_deletion_result_list_Item_user_rejection: Presentation_context_deletion_result_list_Item = 1; /* LONG_NAMED_INTEGER_VALUE */
+export const Presentation_context_deletion_result_list_Item_user_rejection: 1 = 1 satisfies Presentation_context_deletion_result_list_Item; /* LONG_NAMED_INTEGER_VALUE */
 
 
 /**
@@ -58,7 +58,7 @@ export const Presentation_context_deletion_result_list_Item_user_rejection: Pres
  * @constant
  * @type {number}
  */
-export const user_rejection: Presentation_context_deletion_result_list_Item = Presentation_context_deletion_result_list_Item_user_rejection; /* SHORT_NAMED_INTEGER_VALUE */
+export const user_rejection: 1 = Presentation_context_deletion_result_list_Item_user_rejection; /* SHORT_NAMED_INTEGER_VALUE */
 
 
 let _cached_decoder_for_Presentation_context_deletion_result_list_Item: $.ASN1Decoder<Presentation_context_deletion_result_list_Item> | null = null;

@@ -1,7 +1,7 @@
 /* eslint-disable */
 import {
-    INTEGER,
-    ASN1Element as _Element,
+    type INTEGER,
+    type ASN1Element as _Element,
     ASN1TagClass as _TagClass,
     ASN1Construction as _Construction,
     ASN1UniversalType as _UniversalType,
@@ -44,174 +44,174 @@ export type ReferenceClockType = INTEGER;
  * @constant
  * @type {number}
  */
-export const ReferenceClockType_unspecifiedOrUnknown: ReferenceClockType = 0; /* LONG_NAMED_INTEGER_VALUE */
+export const ReferenceClockType_unspecifiedOrUnknown: 0 = 0 satisfies ReferenceClockType; /* LONG_NAMED_INTEGER_VALUE */
 
 /**
  * @summary ReferenceClockType_unspecifiedOrUnknown
  * @constant
  * @type {number}
  */
-export const unspecifiedOrUnknown: ReferenceClockType = ReferenceClockType_unspecifiedOrUnknown; /* SHORT_NAMED_INTEGER_VALUE */
+export const unspecifiedOrUnknown: 0 = ReferenceClockType_unspecifiedOrUnknown; /* SHORT_NAMED_INTEGER_VALUE */
 
 /**
  * @summary ReferenceClockType_calibratedAtomicClock
  * @constant
  * @type {number}
  */
-export const ReferenceClockType_calibratedAtomicClock: ReferenceClockType = 1; /* LONG_NAMED_INTEGER_VALUE */
+export const ReferenceClockType_calibratedAtomicClock: 1 = 1 satisfies ReferenceClockType; /* LONG_NAMED_INTEGER_VALUE */
 
 /**
  * @summary ReferenceClockType_calibratedAtomicClock
  * @constant
  * @type {number}
  */
-export const calibratedAtomicClock: ReferenceClockType = ReferenceClockType_calibratedAtomicClock; /* SHORT_NAMED_INTEGER_VALUE */
+export const calibratedAtomicClock: 1 = ReferenceClockType_calibratedAtomicClock; /* SHORT_NAMED_INTEGER_VALUE */
 
 /**
  * @summary ReferenceClockType_radioVLForLF
  * @constant
  * @type {number}
  */
-export const ReferenceClockType_radioVLForLF: ReferenceClockType = 2; /* LONG_NAMED_INTEGER_VALUE */
+export const ReferenceClockType_radioVLForLF: 2 = 2 satisfies ReferenceClockType; /* LONG_NAMED_INTEGER_VALUE */
 
 /**
  * @summary ReferenceClockType_radioVLForLF
  * @constant
  * @type {number}
  */
-export const radioVLForLF: ReferenceClockType = ReferenceClockType_radioVLForLF; /* SHORT_NAMED_INTEGER_VALUE */
+export const radioVLForLF: 2 = ReferenceClockType_radioVLForLF; /* SHORT_NAMED_INTEGER_VALUE */
 
 /**
  * @summary ReferenceClockType_radioHF
  * @constant
  * @type {number}
  */
-export const ReferenceClockType_radioHF: ReferenceClockType = 3; /* LONG_NAMED_INTEGER_VALUE */
+export const ReferenceClockType_radioHF: 3 = 3 satisfies ReferenceClockType; /* LONG_NAMED_INTEGER_VALUE */
 
 /**
  * @summary ReferenceClockType_radioHF
  * @constant
  * @type {number}
  */
-export const radioHF: ReferenceClockType = ReferenceClockType_radioHF; /* SHORT_NAMED_INTEGER_VALUE */
+export const radioHF: 3 = ReferenceClockType_radioHF; /* SHORT_NAMED_INTEGER_VALUE */
 
 /**
  * @summary ReferenceClockType_radioUHF
  * @constant
  * @type {number}
  */
-export const ReferenceClockType_radioUHF: ReferenceClockType = 4; /* LONG_NAMED_INTEGER_VALUE */
+export const ReferenceClockType_radioUHF: 4 = 4 satisfies ReferenceClockType; /* LONG_NAMED_INTEGER_VALUE */
 
 /**
  * @summary ReferenceClockType_radioUHF
  * @constant
  * @type {number}
  */
-export const radioUHF: ReferenceClockType = ReferenceClockType_radioUHF; /* SHORT_NAMED_INTEGER_VALUE */
+export const radioUHF: 4 = ReferenceClockType_radioUHF; /* SHORT_NAMED_INTEGER_VALUE */
 
 /**
  * @summary ReferenceClockType_localNet
  * @constant
  * @type {number}
  */
-export const ReferenceClockType_localNet: ReferenceClockType = 5; /* LONG_NAMED_INTEGER_VALUE */
+export const ReferenceClockType_localNet: 5 = 5 satisfies ReferenceClockType; /* LONG_NAMED_INTEGER_VALUE */
 
 /**
  * @summary ReferenceClockType_localNet
  * @constant
  * @type {number}
  */
-export const localNet: ReferenceClockType = ReferenceClockType_localNet; /* SHORT_NAMED_INTEGER_VALUE */
+export const localNet: 5 = ReferenceClockType_localNet; /* SHORT_NAMED_INTEGER_VALUE */
 
 /**
  * @summary ReferenceClockType_synch
  * @constant
  * @type {number}
  */
-export const ReferenceClockType_synch: ReferenceClockType = 6; /* LONG_NAMED_INTEGER_VALUE */
+export const ReferenceClockType_synch: 6 = 6 satisfies ReferenceClockType; /* LONG_NAMED_INTEGER_VALUE */
 
 /**
  * @summary ReferenceClockType_synch
  * @constant
  * @type {number}
  */
-export const synch: ReferenceClockType = ReferenceClockType_synch; /* SHORT_NAMED_INTEGER_VALUE */
+export const synch: 6 = ReferenceClockType_synch; /* SHORT_NAMED_INTEGER_VALUE */
 
 /**
  * @summary ReferenceClockType_wallclock
  * @constant
  * @type {number}
  */
-export const ReferenceClockType_wallclock: ReferenceClockType = 7; /* LONG_NAMED_INTEGER_VALUE */
+export const ReferenceClockType_wallclock: 7 = 7 satisfies ReferenceClockType; /* LONG_NAMED_INTEGER_VALUE */
 
 /**
  * @summary ReferenceClockType_wallclock
  * @constant
  * @type {number}
  */
-export const wallclock: ReferenceClockType = ReferenceClockType_wallclock; /* SHORT_NAMED_INTEGER_VALUE */
+export const wallclock: 7 = ReferenceClockType_wallclock; /* SHORT_NAMED_INTEGER_VALUE */
 
 /**
  * @summary ReferenceClockType_telephoneModem
  * @constant
  * @type {number}
  */
-export const ReferenceClockType_telephoneModem: ReferenceClockType = 8; /* LONG_NAMED_INTEGER_VALUE */
+export const ReferenceClockType_telephoneModem: 8 = 8 satisfies ReferenceClockType; /* LONG_NAMED_INTEGER_VALUE */
 
 /**
  * @summary ReferenceClockType_telephoneModem
  * @constant
  * @type {number}
  */
-export const telephoneModem: ReferenceClockType = ReferenceClockType_telephoneModem; /* SHORT_NAMED_INTEGER_VALUE */
+export const telephoneModem: 8 = ReferenceClockType_telephoneModem; /* SHORT_NAMED_INTEGER_VALUE */
 
 /**
  * @summary ReferenceClockType_gps
  * @constant
  * @type {number}
  */
-export const ReferenceClockType_gps: ReferenceClockType = 9; /* LONG_NAMED_INTEGER_VALUE */
+export const ReferenceClockType_gps: 9 = 9 satisfies ReferenceClockType; /* LONG_NAMED_INTEGER_VALUE */
 
 /**
  * @summary ReferenceClockType_gps
  * @constant
  * @type {number}
  */
-export const gps: ReferenceClockType = ReferenceClockType_gps; /* SHORT_NAMED_INTEGER_VALUE */
+export const gps: 9 = ReferenceClockType_gps; /* SHORT_NAMED_INTEGER_VALUE */
 
 /**
  * @summary ReferenceClockType_loranC
  * @constant
  * @type {number}
  */
-export const ReferenceClockType_loranC: ReferenceClockType = 10; /* LONG_NAMED_INTEGER_VALUE */
+export const ReferenceClockType_loranC: 10 = 10 satisfies ReferenceClockType; /* LONG_NAMED_INTEGER_VALUE */
 
 /**
  * @summary ReferenceClockType_loranC
  * @constant
  * @type {number}
  */
-export const loranC: ReferenceClockType = ReferenceClockType_loranC; /* SHORT_NAMED_INTEGER_VALUE */
+export const loranC: 10 = ReferenceClockType_loranC; /* SHORT_NAMED_INTEGER_VALUE */
 
 /**
  * @summary ReferenceClockType_other
  * @constant
  * @type {number}
  */
-export const ReferenceClockType_other: ReferenceClockType = 11; /* LONG_NAMED_INTEGER_VALUE */
+export const ReferenceClockType_other: 11 = 11 satisfies ReferenceClockType; /* LONG_NAMED_INTEGER_VALUE */
 
 /**
  * @summary ReferenceClockType_other
  * @constant
  * @type {number}
  */
-export const other: ReferenceClockType = ReferenceClockType_other; /* SHORT_NAMED_INTEGER_VALUE */
+export const other: 11 = ReferenceClockType_other; /* SHORT_NAMED_INTEGER_VALUE */
 
 
-export const _decode_ReferenceClockType = $._decodeInteger;
+export const _decode_ReferenceClockType: $.ASN1Decoder<INTEGER> = $._decodeInteger;
 
 
-export const _encode_ReferenceClockType = $._encodeInteger;
+export const _encode_ReferenceClockType: $.ASN1Encoder<INTEGER> = $._encodeInteger;
 
 
 /* eslint-enable */

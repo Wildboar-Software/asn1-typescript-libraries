@@ -1,13 +1,13 @@
 /* eslint-disable */
 import {
-    OPTIONAL,
-    ASN1Element as _Element,
+    type OPTIONAL,
+    type ASN1Element as _Element,
     ASN1TagClass as _TagClass
 } from "@wildboar/asn1";
 import * as $ from "@wildboar/asn1/functional";
-import { GERANPositioningData, _decode_GERANPositioningData, _encode_GERANPositioningData } from "../TS33128Payloads/GERANPositioningData.ta.mjs";
+import { type GERANPositioningData, _decode_GERANPositioningData, _encode_GERANPositioningData } from "../TS33128Payloads/GERANPositioningData.ta.mjs";
 // export { GERANPositioningData, _decode_GERANPositioningData, _encode_GERANPositioningData } from "../TS33128Payloads/GERANPositioningData.ta.mjs";
-import { GERANGANSSPositioningData, _decode_GERANGANSSPositioningData, _encode_GERANGANSSPositioningData } from "../TS33128Payloads/GERANGANSSPositioningData.ta.mjs";
+import { type GERANGANSSPositioningData, _decode_GERANGANSSPositioningData, _encode_GERANGANSSPositioningData } from "../TS33128Payloads/GERANGANSSPositioningData.ta.mjs";
 // export { GERANGANSSPositioningData, _decode_GERANGANSSPositioningData, _encode_GERANGANSSPositioningData } from "../TS33128Payloads/GERANGANSSPositioningData.ta.mjs";
 
 

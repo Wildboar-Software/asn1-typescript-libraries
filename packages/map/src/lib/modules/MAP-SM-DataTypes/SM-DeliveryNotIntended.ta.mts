@@ -1,7 +1,7 @@
 /* eslint-disable */
 import {
-    ASN1Element as _Element,
-    ENUMERATED
+    type ASN1Element as _Element,
+    type ENUMERATED
 } from "@wildboar/asn1";
 import * as $ from "@wildboar/asn1/functional";
 
@@ -44,7 +44,7 @@ type SM_DeliveryNotIntended = _enum_for_SM_DeliveryNotIntended | ENUMERATED;
  * @type {number}
  */
 export
-const SM_DeliveryNotIntended_onlyIMSI_requested: SM_DeliveryNotIntended = 0; /* LONG_NAMED_ENUMERATED_VALUE */
+const SM_DeliveryNotIntended_onlyIMSI_requested: _enum_for_SM_DeliveryNotIntended.onlyIMSI_requested = _enum_for_SM_DeliveryNotIntended.onlyIMSI_requested; /* LONG_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary onlyIMSI_requested
@@ -56,7 +56,7 @@ const SM_DeliveryNotIntended_onlyIMSI_requested: SM_DeliveryNotIntended = 0; /* 
  * @type {number}
  */
 export
-const onlyIMSI_requested: SM_DeliveryNotIntended = SM_DeliveryNotIntended_onlyIMSI_requested; /* SHORT_NAMED_ENUMERATED_VALUE */
+const onlyIMSI_requested: _enum_for_SM_DeliveryNotIntended.onlyIMSI_requested = SM_DeliveryNotIntended_onlyIMSI_requested; /* SHORT_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary SM_DeliveryNotIntended_onlyMCC_MNC_requested
@@ -68,7 +68,7 @@ const onlyIMSI_requested: SM_DeliveryNotIntended = SM_DeliveryNotIntended_onlyIM
  * @type {number}
  */
 export
-const SM_DeliveryNotIntended_onlyMCC_MNC_requested: SM_DeliveryNotIntended = 1; /* LONG_NAMED_ENUMERATED_VALUE */
+const SM_DeliveryNotIntended_onlyMCC_MNC_requested: _enum_for_SM_DeliveryNotIntended.onlyMCC_MNC_requested = _enum_for_SM_DeliveryNotIntended.onlyMCC_MNC_requested; /* LONG_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary onlyMCC_MNC_requested
@@ -80,7 +80,7 @@ const SM_DeliveryNotIntended_onlyMCC_MNC_requested: SM_DeliveryNotIntended = 1; 
  * @type {number}
  */
 export
-const onlyMCC_MNC_requested: SM_DeliveryNotIntended = SM_DeliveryNotIntended_onlyMCC_MNC_requested; /* SHORT_NAMED_ENUMERATED_VALUE */
+const onlyMCC_MNC_requested: _enum_for_SM_DeliveryNotIntended.onlyMCC_MNC_requested = SM_DeliveryNotIntended_onlyMCC_MNC_requested; /* SHORT_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary Decodes an ASN.1 element into a(n) SM_DeliveryNotIntended
@@ -88,7 +88,7 @@ const onlyMCC_MNC_requested: SM_DeliveryNotIntended = SM_DeliveryNotIntended_onl
  * @param el The element being decoded.
  * @returns The decoded data structure.
  */
-export const _decode_SM_DeliveryNotIntended = $._decodeEnumerated;
+export const _decode_SM_DeliveryNotIntended: $.ASN1Decoder<number> = $._decodeEnumerated;
 
 /**
  * @summary Encodes a(n) SM_DeliveryNotIntended into an ASN.1 Element.
@@ -97,7 +97,7 @@ export const _decode_SM_DeliveryNotIntended = $._decodeEnumerated;
  * @param elGetter A function that can be used to get new ASN.1 elements.
  * @returns {_Element} The SM_DeliveryNotIntended, encoded as an ASN.1 Element.
  */
-export const _encode_SM_DeliveryNotIntended = $._encodeEnumerated;
+export const _encode_SM_DeliveryNotIntended: $.ASN1Encoder<number> = $._encodeEnumerated;
 
 
 /* eslint-enable */

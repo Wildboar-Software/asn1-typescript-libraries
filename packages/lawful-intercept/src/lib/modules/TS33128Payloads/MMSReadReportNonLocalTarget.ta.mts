@@ -1,8 +1,8 @@
 /* eslint-disable */
 import {
-    OPTIONAL,
-    UTF8String,
-    ASN1Element as _Element,
+    type OPTIONAL,
+    type UTF8String,
+    type ASN1Element as _Element,
     ASN1TagClass as _TagClass
 } from "@wildboar/asn1";
 import * as $ from "@wildboar/asn1/functional";
@@ -12,11 +12,11 @@ import { MMSParty, _decode_MMSParty, _encode_MMSParty } from "../TS33128Payloads
 // export { MMSParty, _decode_MMSParty, _encode_MMSParty } from "../TS33128Payloads/MMSParty.ta.mjs";
 import { MMSDirection, _decode_MMSDirection, _encode_MMSDirection, _enum_for_MMSDirection } from "../TS33128Payloads/MMSDirection.ta.mjs";
 // export { MMSDirection, _enum_for_MMSDirection, MMSDirection_fromTarget /* IMPORTED_LONG_ENUMERATION_ITEM */, fromTarget /* IMPORTED_SHORT_ENUMERATION_ITEM */, MMSDirection_toTarget /* IMPORTED_LONG_ENUMERATION_ITEM */, toTarget /* IMPORTED_SHORT_ENUMERATION_ITEM */, _decode_MMSDirection, _encode_MMSDirection } from "../TS33128Payloads/MMSDirection.ta.mjs";
-import { Timestamp, _decode_Timestamp, _encode_Timestamp } from "../TS33128Payloads/Timestamp.ta.mjs";
+import { type Timestamp, _decode_Timestamp, _encode_Timestamp } from "../TS33128Payloads/Timestamp.ta.mjs";
 // export { Timestamp, _decode_Timestamp, _encode_Timestamp } from "../TS33128Payloads/Timestamp.ta.mjs";
 import { MMSReadStatus, _decode_MMSReadStatus, _encode_MMSReadStatus, _enum_for_MMSReadStatus } from "../TS33128Payloads/MMSReadStatus.ta.mjs";
 // export { MMSReadStatus, _enum_for_MMSReadStatus, MMSReadStatus_read /* IMPORTED_LONG_ENUMERATION_ITEM */, read /* IMPORTED_SHORT_ENUMERATION_ITEM */, MMSReadStatus_deletedWithoutBeingRead /* IMPORTED_LONG_ENUMERATION_ITEM */, deletedWithoutBeingRead /* IMPORTED_SHORT_ENUMERATION_ITEM */, _decode_MMSReadStatus, _encode_MMSReadStatus } from "../TS33128Payloads/MMSReadStatus.ta.mjs";
-import { MMSReadStatusText, _decode_MMSReadStatusText, _encode_MMSReadStatusText } from "../TS33128Payloads/MMSReadStatusText.ta.mjs";
+import { type MMSReadStatusText, _decode_MMSReadStatusText, _encode_MMSReadStatusText } from "../TS33128Payloads/MMSReadStatusText.ta.mjs";
 // export { MMSReadStatusText, _decode_MMSReadStatusText, _encode_MMSReadStatusText } from "../TS33128Payloads/MMSReadStatusText.ta.mjs";
 
 
@@ -278,13 +278,13 @@ class MMSReadReportNonLocalTarget {
          * @static
          */
 
-    public static _enum_for_direction = _enum_for_MMSDirection;        /**
+    public static _enum_for_direction: typeof _enum_for_MMSDirection = _enum_for_MMSDirection;        /**
          * @summary The enum used as the type of the component `readStatus`
          * @public
          * @static
          */
 
-    public static _enum_for_readStatus = _enum_for_MMSReadStatus;
+    public static _enum_for_readStatus: typeof _enum_for_MMSReadStatus = _enum_for_MMSReadStatus;
 }
 
 /**

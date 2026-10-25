@@ -11,7 +11,7 @@ import {
 } from '@wildboar/asn1';
 import * as $ from '@wildboar/asn1/functional';
 import {
-  CMPCertificate,
+  type CMPCertificate,
   _decode_CMPCertificate,
   _encode_CMPCertificate,
 } from '../PKIXCMP-2009/CMPCertificate.ta.mjs';
@@ -37,41 +37,49 @@ import {
  *
  */
 export class CAKeyUpdAnnContent {
+  /**
+   * @summary `oldWithNew`.
+   * @description
+   *
+   * Old CA public key signed with the new private key
+   * ([RFC 4210 §4.4.1](https://datatracker.ietf.org/doc/html/rfc4210#section-4.4.1), [RFC 4210 §5.3.13](https://datatracker.ietf.org/doc/html/rfc4210#section-5.3.13)).
+   *
+   * @public
+   * @readonly
+   */
+  public readonly oldWithNew: CMPCertificate;
+  /**
+   * @summary `newWithOld`.
+   * @description
+   *
+   * New CA public key signed with the old private key
+   * ([RFC 4210 §4.4.1](https://datatracker.ietf.org/doc/html/rfc4210#section-4.4.1), [RFC 4210 §5.3.13](https://datatracker.ietf.org/doc/html/rfc4210#section-5.3.13)).
+   *
+   * @public
+   * @readonly
+   */
+  public readonly newWithOld: CMPCertificate;
+  /**
+   * @summary `newWithNew`.
+   * @description
+   *
+   * New CA public key signed with the new private key
+   * ([RFC 4210 §4.4.1](https://datatracker.ietf.org/doc/html/rfc4210#section-4.4.1), [RFC 4210 §5.3.13](https://datatracker.ietf.org/doc/html/rfc4210#section-5.3.13)).
+   *
+   * @public
+   * @readonly
+   */
+  public readonly newWithNew: CMPCertificate;
+
   constructor(
-    /**
-     * @summary `oldWithNew`.
-     * @description
-     *
-     * Old CA public key signed with the new private key
-     * ([RFC 4210 §4.4.1](https://datatracker.ietf.org/doc/html/rfc4210#section-4.4.1), [RFC 4210 §5.3.13](https://datatracker.ietf.org/doc/html/rfc4210#section-5.3.13)).
-     *
-     * @public
-     * @readonly
-     */
-    readonly oldWithNew: CMPCertificate,
-    /**
-     * @summary `newWithOld`.
-     * @description
-     *
-     * New CA public key signed with the old private key
-     * ([RFC 4210 §4.4.1](https://datatracker.ietf.org/doc/html/rfc4210#section-4.4.1), [RFC 4210 §5.3.13](https://datatracker.ietf.org/doc/html/rfc4210#section-5.3.13)).
-     *
-     * @public
-     * @readonly
-     */
-    readonly newWithOld: CMPCertificate,
-    /**
-     * @summary `newWithNew`.
-     * @description
-     *
-     * New CA public key signed with the new private key
-     * ([RFC 4210 §4.4.1](https://datatracker.ietf.org/doc/html/rfc4210#section-4.4.1), [RFC 4210 §5.3.13](https://datatracker.ietf.org/doc/html/rfc4210#section-5.3.13)).
-     *
-     * @public
-     * @readonly
-     */
-    readonly newWithNew: CMPCertificate
-  ) {}
+    oldWithNew: CMPCertificate,
+    newWithOld: CMPCertificate,
+    newWithNew: CMPCertificate
+  ) {
+    this.oldWithNew = oldWithNew;
+    this.newWithOld = newWithOld;
+    this.newWithNew = newWithNew;
+  }
 
   /**
    * @summary Restructures an object into a CAKeyUpdAnnContent

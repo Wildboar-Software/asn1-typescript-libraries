@@ -1,12 +1,12 @@
 /* eslint-disable */
 import {
-    RELATIVE_OID,
+    type RELATIVE_OID,
     ASN1ConstructionError as _ConstructionError,
-    ASN1Element as _Element,
+    type ASN1Element as _Element,
     ASN1TagClass as _TagClass
 } from "@wildboar/asn1";
 import * as $ from "@wildboar/asn1/functional";
-import { XIRIEvent, _decode_XIRIEvent, _encode_XIRIEvent } from "../TS33128Payloads/XIRIEvent.ta.mjs";
+import { type XIRIEvent, _decode_XIRIEvent, _encode_XIRIEvent } from "../TS33128Payloads/XIRIEvent.ta.mjs";
 // export { XIRIEvent, _decode_XIRIEvent, _encode_XIRIEvent } from "../TS33128Payloads/XIRIEvent.ta.mjs";
 
 

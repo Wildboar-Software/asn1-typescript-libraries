@@ -1,7 +1,7 @@
 /* eslint-disable */
 import {
-    OPTIONAL,
-    ASN1Element as _Element,
+    type OPTIONAL,
+    type ASN1Element as _Element,
     ASN1TagClass as _TagClass,
     ASN1Construction as _Construction,
     ASN1UniversalType as _UniversalType,
@@ -12,12 +12,12 @@ import {
 } from '@wildboar/asn1';
 import * as $ from '@wildboar/asn1/functional';
 import {
-    UserSecurityLabel,
+    type UserSecurityLabel,
     _decode_UserSecurityLabel,
     _encode_UserSecurityLabel,
 } from '../MTSAbstractService88/UserSecurityLabel.ta.mjs';
 import {
-    RecipientAssignedAlternateRecipient,
+    type RecipientAssignedAlternateRecipient,
     _decode_RecipientAssignedAlternateRecipient,
     _encode_RecipientAssignedAlternateRecipient,
 } from '../MTSAbstractService/RecipientAssignedAlternateRecipient.ta.mjs';
@@ -39,20 +39,26 @@ import {
  *
  */
 export class LabelAndRedirection {
+    /**
+     * @summary `user_security_label`.
+     * @public
+     * @readonly
+     */
+    public readonly user_security_label?: OPTIONAL<UserSecurityLabel>;
+    /**
+     * @summary `recipient_assigned_alternate_recipient`.
+     * @public
+     * @readonly
+     */
+    public readonly recipient_assigned_alternate_recipient?: OPTIONAL<RecipientAssignedAlternateRecipient>;
+
     constructor(
-        /**
-         * @summary `user_security_label`.
-         * @public
-         * @readonly
-         */
-        readonly user_security_label?: OPTIONAL<UserSecurityLabel>,
-        /**
-         * @summary `recipient_assigned_alternate_recipient`.
-         * @public
-         * @readonly
-         */
-        readonly recipient_assigned_alternate_recipient?: OPTIONAL<RecipientAssignedAlternateRecipient>
-    ) {}
+        user_security_label?: OPTIONAL<UserSecurityLabel>,
+        recipient_assigned_alternate_recipient?: OPTIONAL<RecipientAssignedAlternateRecipient>
+    ) {
+        this.user_security_label = user_security_label;
+        this.recipient_assigned_alternate_recipient = recipient_assigned_alternate_recipient;
+    }
 
     /**
      * @summary Restructures an object into a LabelAndRedirection

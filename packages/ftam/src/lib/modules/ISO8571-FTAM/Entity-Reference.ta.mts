@@ -1,6 +1,6 @@
 /* eslint-disable */
 import {
-  INTEGER,
+  type INTEGER,
   ASN1Element as _Element,
   ASN1TagClass as _TagClass,
   ASN1Construction as _Construction,
@@ -46,7 +46,7 @@ export type Entity_Reference = INTEGER;
  * @constant
  * @type {number}
  */
-export const Entity_Reference_no_categorization_possible: Entity_Reference = 0; /* LONG_NAMED_INTEGER_VALUE */
+export const Entity_Reference_no_categorization_possible: 0 = 0 satisfies Entity_Reference; /* LONG_NAMED_INTEGER_VALUE */
 
 
 /**
@@ -54,7 +54,7 @@ export const Entity_Reference_no_categorization_possible: Entity_Reference = 0; 
  * @constant
  * @type {number}
  */
-export const no_categorization_possible: Entity_Reference = Entity_Reference_no_categorization_possible; /* SHORT_NAMED_INTEGER_VALUE */
+export const no_categorization_possible: 0 = Entity_Reference_no_categorization_possible; /* SHORT_NAMED_INTEGER_VALUE */
 
 
 /**
@@ -67,7 +67,7 @@ export const no_categorization_possible: Entity_Reference = Entity_Reference_no_
  * @constant
  * @type {number}
  */
-export const Entity_Reference_initiating_file_service_user: Entity_Reference = 1; /* LONG_NAMED_INTEGER_VALUE */
+export const Entity_Reference_initiating_file_service_user: 1 = 1 satisfies Entity_Reference; /* LONG_NAMED_INTEGER_VALUE */
 
 
 /**
@@ -75,7 +75,7 @@ export const Entity_Reference_initiating_file_service_user: Entity_Reference = 1
  * @constant
  * @type {number}
  */
-export const initiating_file_service_user: Entity_Reference = Entity_Reference_initiating_file_service_user; /* SHORT_NAMED_INTEGER_VALUE */
+export const initiating_file_service_user: 1 = Entity_Reference_initiating_file_service_user; /* SHORT_NAMED_INTEGER_VALUE */
 
 
 /**
@@ -88,7 +88,7 @@ export const initiating_file_service_user: Entity_Reference = Entity_Reference_i
  * @constant
  * @type {number}
  */
-export const Entity_Reference_initiating_file_protocol_machine: Entity_Reference = 2; /* LONG_NAMED_INTEGER_VALUE */
+export const Entity_Reference_initiating_file_protocol_machine: 2 = 2 satisfies Entity_Reference; /* LONG_NAMED_INTEGER_VALUE */
 
 
 /**
@@ -96,7 +96,7 @@ export const Entity_Reference_initiating_file_protocol_machine: Entity_Reference
  * @constant
  * @type {number}
  */
-export const initiating_file_protocol_machine: Entity_Reference = Entity_Reference_initiating_file_protocol_machine; /* SHORT_NAMED_INTEGER_VALUE */
+export const initiating_file_protocol_machine: 2 = Entity_Reference_initiating_file_protocol_machine; /* SHORT_NAMED_INTEGER_VALUE */
 
 
 /**
@@ -110,7 +110,7 @@ export const initiating_file_protocol_machine: Entity_Reference = Entity_Referen
  * @constant
  * @type {number}
  */
-export const Entity_Reference_service_supporting_the_file_protocol_machine: Entity_Reference = 3; /* LONG_NAMED_INTEGER_VALUE */
+export const Entity_Reference_service_supporting_the_file_protocol_machine: 3 = 3 satisfies Entity_Reference; /* LONG_NAMED_INTEGER_VALUE */
 
 
 /**
@@ -118,7 +118,7 @@ export const Entity_Reference_service_supporting_the_file_protocol_machine: Enti
  * @constant
  * @type {number}
  */
-export const service_supporting_the_file_protocol_machine: Entity_Reference = Entity_Reference_service_supporting_the_file_protocol_machine; /* SHORT_NAMED_INTEGER_VALUE */
+export const service_supporting_the_file_protocol_machine: 3 = Entity_Reference_service_supporting_the_file_protocol_machine; /* SHORT_NAMED_INTEGER_VALUE */
 
 
 /**
@@ -131,7 +131,7 @@ export const service_supporting_the_file_protocol_machine: Entity_Reference = En
  * @constant
  * @type {number}
  */
-export const Entity_Reference_responding_file_protocol_machine: Entity_Reference = 4; /* LONG_NAMED_INTEGER_VALUE */
+export const Entity_Reference_responding_file_protocol_machine: 4 = 4 satisfies Entity_Reference; /* LONG_NAMED_INTEGER_VALUE */
 
 
 /**
@@ -139,7 +139,7 @@ export const Entity_Reference_responding_file_protocol_machine: Entity_Reference
  * @constant
  * @type {number}
  */
-export const responding_file_protocol_machine: Entity_Reference = Entity_Reference_responding_file_protocol_machine; /* SHORT_NAMED_INTEGER_VALUE */
+export const responding_file_protocol_machine: 4 = Entity_Reference_responding_file_protocol_machine; /* SHORT_NAMED_INTEGER_VALUE */
 
 
 /**
@@ -153,7 +153,7 @@ export const responding_file_protocol_machine: Entity_Reference = Entity_Referen
  * @constant
  * @type {number}
  */
-export const Entity_Reference_responding_file_service_user: Entity_Reference = 5; /* LONG_NAMED_INTEGER_VALUE */
+export const Entity_Reference_responding_file_service_user: 5 = 5 satisfies Entity_Reference; /* LONG_NAMED_INTEGER_VALUE */
 
 
 /**
@@ -161,17 +161,17 @@ export const Entity_Reference_responding_file_service_user: Entity_Reference = 5
  * @constant
  * @type {number}
  */
-export const responding_file_service_user: Entity_Reference = Entity_Reference_responding_file_service_user; /* SHORT_NAMED_INTEGER_VALUE */
+export const responding_file_service_user: 5 = Entity_Reference_responding_file_service_user; /* SHORT_NAMED_INTEGER_VALUE */
 
 
 
 
-export const _decode_Entity_Reference = $._decodeInteger;
+export const _decode_Entity_Reference: $.ASN1Decoder<INTEGER> = $._decodeInteger;
 
 
 
 
-export const _encode_Entity_Reference = $._encodeInteger;
+export const _encode_Entity_Reference: $.ASN1Encoder<INTEGER> = $._encodeInteger;
 
 
 /* eslint-enable */

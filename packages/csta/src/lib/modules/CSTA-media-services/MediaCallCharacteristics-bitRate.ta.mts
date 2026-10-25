@@ -1,7 +1,7 @@
 /* eslint-disable */
 
 import * as $ from "@wildboar/asn1/functional";
-import { ENUMERATED, ASN1Element as _Element } from "@wildboar/asn1";
+import { type ENUMERATED, ASN1Element as _Element } from "@wildboar/asn1";
 
 
 
@@ -72,7 +72,7 @@ type MediaCallCharacteristics_bitRate = _enum_for_MediaCallCharacteristics_bitRa
  * @enum {number}
  */
 export
-const MediaCallCharacteristics_bitRate = _enum_for_MediaCallCharacteristics_bitRate;
+const MediaCallCharacteristics_bitRate: typeof _enum_for_MediaCallCharacteristics_bitRate = _enum_for_MediaCallCharacteristics_bitRate;
 
 /**
  * @summary MediaCallCharacteristics_bitRate_constant
@@ -84,7 +84,7 @@ const MediaCallCharacteristics_bitRate = _enum_for_MediaCallCharacteristics_bitR
  * @type {number}
  */
 export
-const MediaCallCharacteristics_bitRate_constant: MediaCallCharacteristics_bitRate = MediaCallCharacteristics_bitRate.constant; /* LONG_NAMED_ENUMERATED_VALUE */
+const MediaCallCharacteristics_bitRate_constant: _enum_for_MediaCallCharacteristics_bitRate.constant = MediaCallCharacteristics_bitRate.constant; /* LONG_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary constant
@@ -92,7 +92,7 @@ const MediaCallCharacteristics_bitRate_constant: MediaCallCharacteristics_bitRat
  * @type {number}
  */
 export
-const constant: MediaCallCharacteristics_bitRate = MediaCallCharacteristics_bitRate.constant; /* SHORT_NAMED_ENUMERATED_VALUE */
+const constant: _enum_for_MediaCallCharacteristics_bitRate.constant = MediaCallCharacteristics_bitRate.constant; /* SHORT_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary MediaCallCharacteristics_bitRate_variable
@@ -104,7 +104,7 @@ const constant: MediaCallCharacteristics_bitRate = MediaCallCharacteristics_bitR
  * @type {number}
  */
 export
-const MediaCallCharacteristics_bitRate_variable: MediaCallCharacteristics_bitRate = MediaCallCharacteristics_bitRate.variable; /* LONG_NAMED_ENUMERATED_VALUE */
+const MediaCallCharacteristics_bitRate_variable: _enum_for_MediaCallCharacteristics_bitRate.variable = MediaCallCharacteristics_bitRate.variable; /* LONG_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary variable
@@ -112,7 +112,7 @@ const MediaCallCharacteristics_bitRate_variable: MediaCallCharacteristics_bitRat
  * @type {number}
  */
 export
-const variable: MediaCallCharacteristics_bitRate = MediaCallCharacteristics_bitRate.variable; /* SHORT_NAMED_ENUMERATED_VALUE */
+const variable: _enum_for_MediaCallCharacteristics_bitRate.variable = MediaCallCharacteristics_bitRate.variable; /* SHORT_NAMED_ENUMERATED_VALUE */
 
 let _cached_decoder_for_MediaCallCharacteristics_bitRate: $.ASN1Decoder<MediaCallCharacteristics_bitRate> | null = null;
 

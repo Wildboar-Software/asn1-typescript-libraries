@@ -1,7 +1,7 @@
 /* eslint-disable */
 import {
-    ASN1Element as _Element,
-    ENUMERATED
+    type ASN1Element as _Element,
+    type ENUMERATED
 } from "@wildboar/asn1";
 import * as $ from "@wildboar/asn1/functional";
 
@@ -43,7 +43,7 @@ type OccurrenceInfo = _enum_for_OccurrenceInfo | ENUMERATED;
  * @type {number}
  */
 export
-const OccurrenceInfo_oneTimeEvent: OccurrenceInfo = 0; /* LONG_NAMED_ENUMERATED_VALUE */
+const OccurrenceInfo_oneTimeEvent: _enum_for_OccurrenceInfo.oneTimeEvent = _enum_for_OccurrenceInfo.oneTimeEvent; /* LONG_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary oneTimeEvent
@@ -55,7 +55,7 @@ const OccurrenceInfo_oneTimeEvent: OccurrenceInfo = 0; /* LONG_NAMED_ENUMERATED_
  * @type {number}
  */
 export
-const oneTimeEvent: OccurrenceInfo = OccurrenceInfo_oneTimeEvent; /* SHORT_NAMED_ENUMERATED_VALUE */
+const oneTimeEvent: _enum_for_OccurrenceInfo.oneTimeEvent = OccurrenceInfo_oneTimeEvent; /* SHORT_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary OccurrenceInfo_multipleTimeEvent
@@ -67,7 +67,7 @@ const oneTimeEvent: OccurrenceInfo = OccurrenceInfo_oneTimeEvent; /* SHORT_NAMED
  * @type {number}
  */
 export
-const OccurrenceInfo_multipleTimeEvent: OccurrenceInfo = 1; /* LONG_NAMED_ENUMERATED_VALUE */
+const OccurrenceInfo_multipleTimeEvent: _enum_for_OccurrenceInfo.multipleTimeEvent = _enum_for_OccurrenceInfo.multipleTimeEvent; /* LONG_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary multipleTimeEvent
@@ -79,7 +79,7 @@ const OccurrenceInfo_multipleTimeEvent: OccurrenceInfo = 1; /* LONG_NAMED_ENUMER
  * @type {number}
  */
 export
-const multipleTimeEvent: OccurrenceInfo = OccurrenceInfo_multipleTimeEvent; /* SHORT_NAMED_ENUMERATED_VALUE */
+const multipleTimeEvent: _enum_for_OccurrenceInfo.multipleTimeEvent = OccurrenceInfo_multipleTimeEvent; /* SHORT_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary Decodes an ASN.1 element into a(n) OccurrenceInfo
@@ -87,7 +87,7 @@ const multipleTimeEvent: OccurrenceInfo = OccurrenceInfo_multipleTimeEvent; /* S
  * @param el The element being decoded.
  * @returns The decoded data structure.
  */
-export const _decode_OccurrenceInfo = $._decodeEnumerated;
+export const _decode_OccurrenceInfo: $.ASN1Decoder<number> = $._decodeEnumerated;
 
 /**
  * @summary Encodes a(n) OccurrenceInfo into an ASN.1 Element.
@@ -96,7 +96,7 @@ export const _decode_OccurrenceInfo = $._decodeEnumerated;
  * @param elGetter A function that can be used to get new ASN.1 elements.
  * @returns {_Element} The OccurrenceInfo, encoded as an ASN.1 Element.
  */
-export const _encode_OccurrenceInfo = $._encodeEnumerated;
+export const _encode_OccurrenceInfo: $.ASN1Encoder<number> = $._encodeEnumerated;
 
 
 /* eslint-enable */

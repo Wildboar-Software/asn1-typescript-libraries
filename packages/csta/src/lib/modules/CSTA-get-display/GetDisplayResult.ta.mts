@@ -2,13 +2,13 @@
 
 import * as $ from "@wildboar/asn1/functional";
 import {
-    OPTIONAL,
-    SEQUENCE,
-    SET,
-    ASN1Element as _Element,
+    type OPTIONAL,
+    type SEQUENCE,
+    type SET,
+    type ASN1Element as _Element,
     ASN1TagClass as _TagClass
 } from "@wildboar/asn1";
-import { DisplayList, _decode_DisplayList, _encode_DisplayList } from "../CSTA-get-display/DisplayList.ta.mjs";
+import { type DisplayList, _decode_DisplayList, _encode_DisplayList } from "../CSTA-get-display/DisplayList.ta.mjs";
 
 import { CSTACommonArguments, _decode_CSTACommonArguments, _encode_CSTACommonArguments } from "../CSTA-extension-types/CSTACommonArguments.ta.mjs";
 
@@ -35,27 +35,33 @@ import { CSTACommonArguments, _decode_CSTACommonArguments, _encode_CSTACommonArg
  */
 export
 class GetDisplayResult {
+    /**
+     * @summary `displayList`.
+     * @description
+     *
+     * One entry per queried display.
+     * @public
+     * @readonly
+     */
+    public readonly displayList: DisplayList;
+    /**
+     * @summary `extensions`.
+     * @description
+     *
+     * Optional security (timestamp, sequence, securityInfo) and
+     * privateData.
+     * @public
+     * @readonly
+     */
+    public readonly extensions?: OPTIONAL<CSTACommonArguments>;
+
     constructor (
-        /**
-         * @summary `displayList`.
-         * @description
-         *
-         * One entry per queried display.
-         * @public
-         * @readonly
-         */
-        readonly displayList: DisplayList,
-        /**
-         * @summary `extensions`.
-         * @description
-         *
-         * Optional security (timestamp, sequence, securityInfo) and
-         * privateData.
-         * @public
-         * @readonly
-         */
-        readonly extensions?: OPTIONAL<CSTACommonArguments>
-    ) {}
+        displayList: DisplayList,
+        extensions?: OPTIONAL<CSTACommonArguments>
+    ) {
+        this.displayList = displayList;
+        this.extensions = extensions;
+    }
 
     /**
      * @summary Restructures an object into a GetDisplayResult

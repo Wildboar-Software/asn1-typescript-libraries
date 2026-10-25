@@ -11,7 +11,7 @@ import {
 } from '@wildboar/asn1';
 import * as $ from '@wildboar/asn1/functional';
 import {
-  DateTimeType,
+  type DateTimeType,
   _decode_DateTimeType,
   _encode_DateTimeType,
 } from '../XSD/DateTimeType.ta.mjs';
@@ -32,26 +32,13 @@ import {
  */
 export type GMonth = DateTimeType; // DefinedType
 
-
-let _cached_decoder_for_GMonth: $.ASN1Decoder<GMonth> | null = null;
-
-
 /**
  * @summary Decodes an ASN.1 element into a(n) GMonth
  * @function
  * @param {_Element} el The element being decoded.
  * @returns {GMonth} The decoded data structure.
  */
-export function _decode_GMonth(el: _Element): GMonth {
-  if (!_cached_decoder_for_GMonth) {
-    _cached_decoder_for_GMonth = _decode_DateTimeType;
-  }
-  return _cached_decoder_for_GMonth(el);
-}
-
-
-let _cached_encoder_for_GMonth: $.ASN1Encoder<GMonth> | null = null;
-
+export const _decode_GMonth: $.ASN1Decoder<GMonth> = _decode_DateTimeType;
 
 /**
  * @summary Encodes a(n) GMonth into an ASN.1 Element.
@@ -60,12 +47,7 @@ let _cached_encoder_for_GMonth: $.ASN1Encoder<GMonth> | null = null;
  * @param elGetter A function that can be used to get new ASN.1 elements.
  * @returns {_Element} The GMonth, encoded as an ASN.1 Element.
  */
-export function _encode_GMonth(value: GMonth, elGetter: $.ASN1Encoder<GMonth>): _Element {
-  if (!_cached_encoder_for_GMonth) {
-    _cached_encoder_for_GMonth = _encode_DateTimeType;
-  }
-  return _cached_encoder_for_GMonth(value, elGetter);
-}
+export const _encode_GMonth: $.ASN1Encoder<GMonth> = _encode_DateTimeType;
 
 
 /* eslint-enable */

@@ -1,6 +1,6 @@
 /* eslint-disable */
 import {
-    ASN1Element as _Element,
+    type ASN1Element as _Element,
     ASN1TagClass as _TagClass,
     ASN1Construction as _Construction,
     ASN1UniversalType as _UniversalType,
@@ -35,7 +35,8 @@ const _enum_for_OperationalState = {
     enabled: 1,
 } as const;
 
-export type _enum_for_OperationalState = (typeof _enum_for_OperationalState)[keyof typeof _enum_for_OperationalState];
+export
+type _enum_for_OperationalState = (typeof _enum_for_OperationalState)[keyof typeof _enum_for_OperationalState];
 
 /**
  * @summary OperationalState
@@ -73,7 +74,7 @@ type OperationalState = _enum_for_OperationalState;
  * @enum {number}
  */
 export
-const OperationalState = _enum_for_OperationalState;
+const OperationalState: typeof _enum_for_OperationalState = _enum_for_OperationalState;
 
 /**
  * @summary OperationalState_disabled
@@ -86,7 +87,7 @@ const OperationalState = _enum_for_OperationalState;
  * @type {number}
  */
 export
-const OperationalState_disabled: OperationalState = OperationalState.disabled; /* LONG_NAMED_ENUMERATED_VALUE */
+const OperationalState_disabled: 0 = OperationalState.disabled; /* LONG_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary disabled
@@ -99,7 +100,7 @@ const OperationalState_disabled: OperationalState = OperationalState.disabled; /
  * @type {number}
  */
 export
-const disabled: OperationalState = OperationalState.disabled; /* SHORT_NAMED_ENUMERATED_VALUE */
+const disabled: 0 = OperationalState.disabled; /* SHORT_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary OperationalState_enabled
@@ -112,7 +113,7 @@ const disabled: OperationalState = OperationalState.disabled; /* SHORT_NAMED_ENU
  * @type {number}
  */
 export
-const OperationalState_enabled: OperationalState = OperationalState.enabled; /* LONG_NAMED_ENUMERATED_VALUE */
+const OperationalState_enabled: 1 = OperationalState.enabled; /* LONG_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary enabled
@@ -125,13 +126,24 @@ const OperationalState_enabled: OperationalState = OperationalState.enabled; /* 
  * @type {number}
  */
 export
-const enabled: OperationalState = OperationalState.enabled; /* SHORT_NAMED_ENUMERATED_VALUE */
+const enabled: 1 = OperationalState.enabled; /* SHORT_NAMED_ENUMERATED_VALUE */
 
 
-export const _decode_OperationalState = $._decodeEnumerated as $.ASN1Decoder<OperationalState>;
+export function _decode_OperationalState(el: _Element): OperationalState {
+    const enumerated = $._decodeEnumerated(el);
+    switch (enumerated) {
+        case OperationalState.disabled: return OperationalState.disabled;
+        case OperationalState.enabled: return OperationalState.enabled;
+        default:
+            throw new _ConstructionError(
+                "Invalid ENUMERATED value " + enumerated + " for OperationalState.",
+                el,
+            );
+    }
+}
 
 
-export const _encode_OperationalState = $._encodeEnumerated as $.ASN1Encoder<OperationalState>;
+export const _encode_OperationalState: $.ASN1Encoder<OperationalState> = $._encodeEnumerated as $.ASN1Encoder<OperationalState>;
 
 
 /* eslint-enable */

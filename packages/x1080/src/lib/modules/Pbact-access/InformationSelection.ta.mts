@@ -1,6 +1,6 @@
 /* eslint-disable */
 import {
-    ASN1Element as _Element,
+    type ASN1Element as _Element,
     ASN1TagClass as _TagClass,
     ASN1Construction as _Construction,
     ASN1UniversalType as _UniversalType,
@@ -11,12 +11,12 @@ import {
 } from '@wildboar/asn1';
 import * as $ from '@wildboar/asn1/functional';
 import {
-    InformationSelection_attributes,
+    type InformationSelection_attributes,
     _decode_InformationSelection_attributes,
     _encode_InformationSelection_attributes,
 } from '../Pbact-access/InformationSelection-attributes.ta.mjs';
 import {
-    InformationSelection_infoTypes,
+    type InformationSelection_infoTypes,
     _enum_for_InformationSelection_infoTypes,
     _decode_InformationSelection_infoTypes,
     _encode_InformationSelection_infoTypes,
@@ -49,38 +49,46 @@ import {
  *
  */
 export class InformationSelection {
+    /**
+     * @summary `attributes`.
+     * @description
+     *
+     * All attributes, or a list of `ATTRIBUTE.&id`.
+     * ITU-T Rec. X.1080.0 (2017) Cor.1
+     * [§8.11](https://www.itu.int/rec/T-REC-X.1080.0-201703-I!Cor1).
+     *
+     * @public
+     * @readonly
+     */
+    public readonly attributes: InformationSelection_attributes;
+    /**
+     * @summary `infoTypes`.
+     * @description
+     *
+     * Attribute types only, or types and values.
+     * ITU-T Rec. X.1080.0 (2017) Cor.1
+     * [§8.11](https://www.itu.int/rec/T-REC-X.1080.0-201703-I!Cor1).
+     *
+     * @public
+     * @readonly
+     */
+    public readonly infoTypes: InformationSelection_infoTypes;
+    /**
+     * @summary Extensions that are not recognized.
+     * @public
+     * @readonly
+     */
+    public readonly _unrecognizedExtensionsList: _Element[];
+
     constructor(
-        /**
-         * @summary `attributes`.
-         * @description
-         *
-         * All attributes, or a list of `ATTRIBUTE.&id`.
-         * ITU-T Rec. X.1080.0 (2017) Cor.1
-         * [§8.11](https://www.itu.int/rec/T-REC-X.1080.0-201703-I!Cor1).
-         *
-         * @public
-         * @readonly
-         */
-        readonly attributes: InformationSelection_attributes,
-        /**
-         * @summary `infoTypes`.
-         * @description
-         *
-         * Attribute types only, or types and values.
-         * ITU-T Rec. X.1080.0 (2017) Cor.1
-         * [§8.11](https://www.itu.int/rec/T-REC-X.1080.0-201703-I!Cor1).
-         *
-         * @public
-         * @readonly
-         */
-        readonly infoTypes: InformationSelection_infoTypes,
-        /**
-         * @summary Extensions that are not recognized.
-         * @public
-         * @readonly
-         */
-        readonly _unrecognizedExtensionsList: _Element[] = []
-    ) {}
+        attributes: InformationSelection_attributes,
+        infoTypes: InformationSelection_infoTypes,
+        _unrecognizedExtensionsList: _Element[] = []
+    ) {
+        this.attributes = attributes;
+        this.infoTypes = infoTypes;
+        this._unrecognizedExtensionsList = _unrecognizedExtensionsList;
+    }
 
     /**
      * @summary Restructures an object into a InformationSelection
@@ -110,7 +118,7 @@ export class InformationSelection {
      * @static
      */
 
-    public static _enum_for_infoTypes = _enum_for_InformationSelection_infoTypes;
+    public static _enum_for_infoTypes: typeof _enum_for_InformationSelection_infoTypes = _enum_for_InformationSelection_infoTypes;
 }
 
 

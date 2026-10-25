@@ -1,8 +1,8 @@
 /* eslint-disable */
 import {
-    ASN1Element as _Element,
+    type ASN1Element as _Element,
     ASN1TagClass as _TagClass,
-    INTEGER,
+    type INTEGER,
     ASN1OverflowError,
 } from "@wildboar/asn1";
 import * as $ from "@wildboar/asn1/functional";
@@ -47,7 +47,7 @@ type NetworkProtocolProfile = INTEGER;
  * @see https://ecma-international.org/publications-and-standards/standards/ecma-165/
  */
 export
-const NetworkProtocolProfile_acse: NetworkProtocolProfile = 19; /* LONG_NAMED_INTEGER_VALUE */
+const NetworkProtocolProfile_acse: 19 = 19 satisfies NetworkProtocolProfile; /* LONG_NAMED_INTEGER_VALUE */
 
 /**
  * @summary acse
@@ -56,7 +56,7 @@ const NetworkProtocolProfile_acse: NetworkProtocolProfile = 19; /* LONG_NAMED_IN
  * @type {number}
  */
 export
-const acse: NetworkProtocolProfile = NetworkProtocolProfile_acse; /* SHORT_NAMED_INTEGER_VALUE */
+const acse: 19 = NetworkProtocolProfile_acse; /* SHORT_NAMED_INTEGER_VALUE */
 
 /**
  * @summary NetworkProtocolProfile_dse
@@ -69,7 +69,7 @@ const acse: NetworkProtocolProfile = NetworkProtocolProfile_acse; /* SHORT_NAMED
  * @see https://ecma-international.org/publications-and-standards/standards/ecma-165/
  */
 export
-const NetworkProtocolProfile_dse: NetworkProtocolProfile = 32; /* LONG_NAMED_INTEGER_VALUE */
+const NetworkProtocolProfile_dse: 32 = 32 satisfies NetworkProtocolProfile; /* LONG_NAMED_INTEGER_VALUE */
 
 /**
  * @summary dse
@@ -78,7 +78,7 @@ const NetworkProtocolProfile_dse: NetworkProtocolProfile = 32; /* LONG_NAMED_INT
  * @type {number}
  */
 export
-const dse: NetworkProtocolProfile = NetworkProtocolProfile_dse; /* SHORT_NAMED_INTEGER_VALUE */
+const dse: 32 = NetworkProtocolProfile_dse; /* SHORT_NAMED_INTEGER_VALUE */
 
 let _cached_decoder_for_NetworkProtocolProfile: $.ASN1Decoder<NetworkProtocolProfile> | null = null;
 

@@ -1,15 +1,15 @@
 /* eslint-disable */
 import {
-    OPTIONAL,
-    ASN1Element as _Element,
+    type OPTIONAL,
+    type ASN1Element as _Element,
     ASN1TagClass as _TagClass
 } from "@wildboar/asn1";
 import * as $ from "@wildboar/asn1/functional";
 import { Standard_Supplementary_Services, _decode_Standard_Supplementary_Services, _encode_Standard_Supplementary_Services } from "./Standard-Supplementary-Services.ta.mjs";
 // export { Standard_Supplementary_Services, _decode_Standard_Supplementary_Services, _encode_Standard_Supplementary_Services } from "./Standard-Supplementary-Services.ta.mjs";
-import { Non_Standard_Supplementary_Services, _decode_Non_Standard_Supplementary_Services, _encode_Non_Standard_Supplementary_Services } from "./Non-Standard-Supplementary-Services.ta.mjs";
+import { type Non_Standard_Supplementary_Services, _decode_Non_Standard_Supplementary_Services, _encode_Non_Standard_Supplementary_Services } from "./Non-Standard-Supplementary-Services.ta.mjs";
 // export { Non_Standard_Supplementary_Services, _decode_Non_Standard_Supplementary_Services, _encode_Non_Standard_Supplementary_Services } from "./Non-Standard-Supplementary-Services.ta.mjs";
-import { Other_Services, _decode_Other_Services, _encode_Other_Services } from "./Other-Services.ta.mjs";
+import { type Other_Services, _decode_Other_Services, _encode_Other_Services } from "./Other-Services.ta.mjs";
 // export { Other_Services, _decode_Other_Services, _encode_Other_Services } from "./Other-Services.ta.mjs";
 
 

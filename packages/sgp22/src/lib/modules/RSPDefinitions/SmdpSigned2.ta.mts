@@ -1,13 +1,13 @@
 /* eslint-disable */
 import {
-    BOOLEAN,
-    OCTET_STRING,
-    OPTIONAL,
-    ASN1Element as _Element,
+    type BOOLEAN,
+    type OCTET_STRING,
+    type OPTIONAL,
+    type ASN1Element as _Element,
     ASN1TagClass as _TagClass
 } from "@wildboar/asn1";
 import * as $ from "@wildboar/asn1/functional";
-import { TransactionId, _decode_TransactionId, _encode_TransactionId } from "../RSPDefinitions/TransactionId.ta.mjs";
+import { type TransactionId, _decode_TransactionId, _encode_TransactionId } from "../RSPDefinitions/TransactionId.ta.mjs";
 
 
 /**
@@ -43,7 +43,7 @@ class SmdpSigned2 {
      * @public
      * @readonly
      */
-    readonly transactionId: TransactionId;
+    public readonly transactionId: TransactionId;
     /**
      * @summary `ccRequiredFlag`.
      * @description
@@ -55,7 +55,7 @@ class SmdpSigned2 {
      * @public
      * @readonly
      */
-    readonly ccRequiredFlag: BOOLEAN;
+    public readonly ccRequiredFlag: BOOLEAN;
     /**
      * @summary `bppEuiccOtpk`.
      * @description
@@ -68,7 +68,7 @@ class SmdpSigned2 {
      * @public
      * @readonly
      */
-    readonly bppEuiccOtpk?: OPTIONAL<OCTET_STRING>;
+    public readonly bppEuiccOtpk?: OPTIONAL<OCTET_STRING>;
 
     constructor (
         transactionId: TransactionId,

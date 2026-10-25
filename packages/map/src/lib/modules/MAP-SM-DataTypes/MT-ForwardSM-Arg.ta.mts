@@ -1,20 +1,20 @@
 /* eslint-disable */
 import {
-    NULL,
-    OPTIONAL,
-    ASN1Element as _Element,
+    type NULL,
+    type OPTIONAL,
+    type ASN1Element as _Element,
     ASN1TagClass as _TagClass
 } from "@wildboar/asn1";
 import * as $ from "@wildboar/asn1/functional";
-import { ISDN_AddressString, _decode_ISDN_AddressString, _encode_ISDN_AddressString } from "../MAP-CommonDataTypes/ISDN-AddressString.ta.mjs";
+import { type ISDN_AddressString, _decode_ISDN_AddressString, _encode_ISDN_AddressString } from "../MAP-CommonDataTypes/ISDN-AddressString.ta.mjs";
 import { NetworkNodeDiameterAddress, _decode_NetworkNodeDiameterAddress, _encode_NetworkNodeDiameterAddress } from "../MAP-CommonDataTypes/NetworkNodeDiameterAddress.ta.mjs";
-import { SignalInfo, _decode_SignalInfo, _encode_SignalInfo } from "../MAP-CommonDataTypes/SignalInfo.ta.mjs";
-import { Time, _decode_Time, _encode_Time } from "../MAP-CommonDataTypes/Time.ta.mjs";
+import { type SignalInfo, _decode_SignalInfo, _encode_SignalInfo } from "../MAP-CommonDataTypes/SignalInfo.ta.mjs";
+import { type Time, _decode_Time, _encode_Time } from "../MAP-CommonDataTypes/Time.ta.mjs";
 import { ExtensionContainer, _decode_ExtensionContainer, _encode_ExtensionContainer } from "../MAP-ExtensionDataTypes/ExtensionContainer.ta.mjs";
 import { CorrelationID, _decode_CorrelationID, _encode_CorrelationID } from "../MAP-SM-DataTypes/CorrelationID.ta.mjs";
-import { SM_DeliveryTimerValue, _decode_SM_DeliveryTimerValue, _encode_SM_DeliveryTimerValue } from "../MAP-SM-DataTypes/SM-DeliveryTimerValue.ta.mjs";
-import { SM_RP_DA, _decode_SM_RP_DA, _encode_SM_RP_DA } from "../MAP-SM-DataTypes/SM-RP-DA.ta.mjs";
-import { SM_RP_OA, _decode_SM_RP_OA, _encode_SM_RP_OA } from "../MAP-SM-DataTypes/SM-RP-OA.ta.mjs";
+import { type SM_DeliveryTimerValue, _decode_SM_DeliveryTimerValue, _encode_SM_DeliveryTimerValue } from "../MAP-SM-DataTypes/SM-DeliveryTimerValue.ta.mjs";
+import { type SM_RP_DA, _decode_SM_RP_DA, _encode_SM_RP_DA } from "../MAP-SM-DataTypes/SM-RP-DA.ta.mjs";
+import { type SM_RP_OA, _decode_SM_RP_OA, _encode_SM_RP_OA } from "../MAP-SM-DataTypes/SM-RP-OA.ta.mjs";
 
 
 /**
@@ -32,15 +32,15 @@ import { SM_RP_OA, _decode_SM_RP_OA, _encode_SM_RP_OA } from "../MAP-SM-DataType
  *     sm-RP-DA    SM-RP-DA,
  *     sm-RP-OA    SM-RP-OA,
  *     sm-RP-UI    SignalInfo,
- *     moreMessagesToSend    NULL    OPTIONAL,
- *     extensionContainer    ExtensionContainer    OPTIONAL,
+ *     moreMessagesToSend    NULL    type OPTIONAL,
+ *     extensionContainer    ExtensionContainer    type OPTIONAL,
  *     ...,
- *     smDeliveryTimer    SM-DeliveryTimerValue    OPTIONAL,
- *     smDeliveryStartTime    Time    OPTIONAL,
- *     smsOverIP-OnlyIndicator    [0] NULL    OPTIONAL,
- *     correlationID    [1] CorrelationID    OPTIONAL,
- *     maximumRetransmissionTime    [2] Time    OPTIONAL,
- *     smsGmscAddress    [3] ISDN-AddressString    OPTIONAL,
+ *     smDeliveryTimer    SM-DeliveryTimerValue    type OPTIONAL,
+ *     smDeliveryStartTime    Time    type OPTIONAL,
+ *     smsOverIP-OnlyIndicator    [0] NULL    type OPTIONAL,
+ *     correlationID    [1] CorrelationID    type OPTIONAL,
+ *     maximumRetransmissionTime    [2] Time    type OPTIONAL,
+ *     smsGmscAddress    [3] ISDN-AddressString    type OPTIONAL,
  *     smsGmscDiameterAddress    [4] NetworkNodeDiameterAddress    OPTIONAL }
  * ```
  * 
@@ -48,134 +48,162 @@ import { SM_RP_OA, _decode_SM_RP_OA, _encode_SM_RP_OA } from "../MAP-SM-DataType
  */
 export
 class MT_ForwardSM_Arg {
+    /**
+     * @summary `sm_RP_DA`.
+     * @description
+     *
+     * Destination address.
+     *
+     * @public
+     * @readonly
+     */
+    public readonly sm_RP_DA: SM_RP_DA;
+    /**
+     * @summary `sm_RP_OA`.
+     * @description
+     *
+     * Originating address (typically SC).
+     *
+     * @public
+     * @readonly
+     */
+    public readonly sm_RP_OA: SM_RP_OA;
+    /**
+     * @summary `sm_RP_UI`.
+     * @description
+     *
+     * Short message TPDU.
+     *
+     * @public
+     * @readonly
+     */
+    public readonly sm_RP_UI: SignalInfo;
+    /**
+     * @summary `moreMessagesToSend`.
+     * @description
+     *
+     * More MT SMs to follow.
+     *
+     * @public
+     * @readonly
+     */
+    public readonly moreMessagesToSend?: OPTIONAL<NULL>;
+    /**
+     * @summary `extensionContainer`.
+     * @description
+     *
+     * Private or PCS extensions (3GPP TS 29.002 V19.1.0 clause 17.7.11).
+     *
+     * @public
+     * @readonly
+     */
+    public readonly extensionContainer?: OPTIONAL<ExtensionContainer>;
+    /**
+     * @summary `smDeliveryTimer`.
+     * @description
+     *
+     * Value used by the SMS-GMSC (clause 17.7.6).
+     *
+     * @public
+     * @readonly
+     */
+    public readonly smDeliveryTimer?: OPTIONAL<SM_DeliveryTimerValue>;
+    /**
+     * @summary `smDeliveryStartTime`.
+     * @description
+     *
+     * Start time of the delivery timer.
+     *
+     * @public
+     * @readonly
+     */
+    public readonly smDeliveryStartTime?: OPTIONAL<Time>;
+    /**
+     * @summary `smsOverIP_OnlyIndicator`.
+     * @description
+     *
+     * SMS over IP only.
+     *
+     * @public
+     * @readonly
+     */
+    public readonly smsOverIP_OnlyIndicator?: OPTIONAL<NULL>;
+    /**
+     * @summary `correlationID`.
+     * @description
+     *
+     * HLR / SIP URI correlation.
+     *
+     * @public
+     * @readonly
+     */
+    public readonly correlationID?: OPTIONAL<CorrelationID>;
+    /**
+     * @summary `maximumRetransmissionTime`.
+     * @description
+     *
+     * Maximum retransmission time.
+     *
+     * @public
+     * @readonly
+     */
+    public readonly maximumRetransmissionTime?: OPTIONAL<Time>;
+    /**
+     * @summary `smsGmscAddress`.
+     * @description
+     *
+     * SMS-GMSC ISDN address.
+     *
+     * @public
+     * @readonly
+     */
+    public readonly smsGmscAddress?: OPTIONAL<ISDN_AddressString>;
+    /**
+     * @summary `smsGmscDiameterAddress`.
+     * @description
+     *
+     * SMS-GMSC Diameter address.
+     *
+     * @public
+     * @readonly
+     */
+    public readonly smsGmscDiameterAddress?: OPTIONAL<NetworkNodeDiameterAddress>;
+    /**
+     * @summary Extensions that are not recognized.
+     * @public
+     * @readonly
+     */
+    public readonly _unrecognizedExtensionsList: _Element[];
+
     constructor (
-        /**
-         * @summary `sm_RP_DA`.
-         * @description
-         *
-         * Destination address.
-         *
-         * @public
-         * @readonly
-         */
-        readonly sm_RP_DA: SM_RP_DA,
-        /**
-         * @summary `sm_RP_OA`.
-         * @description
-         *
-         * Originating address (typically SC).
-         *
-         * @public
-         * @readonly
-         */
-        readonly sm_RP_OA: SM_RP_OA,
-        /**
-         * @summary `sm_RP_UI`.
-         * @description
-         *
-         * Short message TPDU.
-         *
-         * @public
-         * @readonly
-         */
-        readonly sm_RP_UI: SignalInfo,
-        /**
-         * @summary `moreMessagesToSend`.
-         * @description
-         *
-         * More MT SMs to follow.
-         *
-         * @public
-         * @readonly
-         */
-        readonly moreMessagesToSend?: OPTIONAL<NULL>,
-        /**
-         * @summary `extensionContainer`.
-         * @description
-         *
-         * Private or PCS extensions (3GPP TS 29.002 V19.1.0 clause 17.7.11).
-         *
-         * @public
-         * @readonly
-         */
-        readonly extensionContainer?: OPTIONAL<ExtensionContainer>,
-        /**
-         * @summary `smDeliveryTimer`.
-         * @description
-         *
-         * Value used by the SMS-GMSC (clause 17.7.6).
-         *
-         * @public
-         * @readonly
-         */
-        readonly smDeliveryTimer?: OPTIONAL<SM_DeliveryTimerValue>,
-        /**
-         * @summary `smDeliveryStartTime`.
-         * @description
-         *
-         * Start time of the delivery timer.
-         *
-         * @public
-         * @readonly
-         */
-        readonly smDeliveryStartTime?: OPTIONAL<Time>,
-        /**
-         * @summary `smsOverIP_OnlyIndicator`.
-         * @description
-         *
-         * SMS over IP only.
-         *
-         * @public
-         * @readonly
-         */
-        readonly smsOverIP_OnlyIndicator?: OPTIONAL<NULL>,
-        /**
-         * @summary `correlationID`.
-         * @description
-         *
-         * HLR / SIP URI correlation.
-         *
-         * @public
-         * @readonly
-         */
-        readonly correlationID?: OPTIONAL<CorrelationID>,
-        /**
-         * @summary `maximumRetransmissionTime`.
-         * @description
-         *
-         * Maximum retransmission time.
-         *
-         * @public
-         * @readonly
-         */
-        readonly maximumRetransmissionTime?: OPTIONAL<Time>,
-        /**
-         * @summary `smsGmscAddress`.
-         * @description
-         *
-         * SMS-GMSC ISDN address.
-         *
-         * @public
-         * @readonly
-         */
-        readonly smsGmscAddress?: OPTIONAL<ISDN_AddressString>,
-        /**
-         * @summary `smsGmscDiameterAddress`.
-         * @description
-         *
-         * SMS-GMSC Diameter address.
-         *
-         * @public
-         * @readonly
-         */
-        readonly smsGmscDiameterAddress?: OPTIONAL<NetworkNodeDiameterAddress>,
-        /**
-         * @summary Extensions that are not recognized.
-         * @public
-         * @readonly
-         */
-        readonly _unrecognizedExtensionsList: _Element[] = []
-    ) {}
+        sm_RP_DA: SM_RP_DA,
+        sm_RP_OA: SM_RP_OA,
+        sm_RP_UI: SignalInfo,
+        moreMessagesToSend?: OPTIONAL<NULL>,
+        extensionContainer?: OPTIONAL<ExtensionContainer>,
+        smDeliveryTimer?: OPTIONAL<SM_DeliveryTimerValue>,
+        smDeliveryStartTime?: OPTIONAL<Time>,
+        smsOverIP_OnlyIndicator?: OPTIONAL<NULL>,
+        correlationID?: OPTIONAL<CorrelationID>,
+        maximumRetransmissionTime?: OPTIONAL<Time>,
+        smsGmscAddress?: OPTIONAL<ISDN_AddressString>,
+        smsGmscDiameterAddress?: OPTIONAL<NetworkNodeDiameterAddress>,
+        _unrecognizedExtensionsList: _Element[] = []
+    ) {
+        this.sm_RP_DA = sm_RP_DA;
+        this.sm_RP_OA = sm_RP_OA;
+        this.sm_RP_UI = sm_RP_UI;
+        this.moreMessagesToSend = moreMessagesToSend;
+        this.extensionContainer = extensionContainer;
+        this.smDeliveryTimer = smDeliveryTimer;
+        this.smDeliveryStartTime = smDeliveryStartTime;
+        this.smsOverIP_OnlyIndicator = smsOverIP_OnlyIndicator;
+        this.correlationID = correlationID;
+        this.maximumRetransmissionTime = maximumRetransmissionTime;
+        this.smsGmscAddress = smsGmscAddress;
+        this.smsGmscDiameterAddress = smsGmscDiameterAddress;
+        this._unrecognizedExtensionsList = _unrecognizedExtensionsList;
+    }
 
     /**
      * @summary Restructures an object into a MT_ForwardSM_Arg

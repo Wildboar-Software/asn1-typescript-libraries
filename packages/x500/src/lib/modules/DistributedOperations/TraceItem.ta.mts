@@ -1,8 +1,8 @@
 /* eslint-disable */
 import {
-    ASN1Element as _Element,
+    type ASN1Element as _Element,
     ASN1TagClass as _TagClass,
-    OPTIONAL,
+    type OPTIONAL,
 } from "@wildboar/asn1";
 import * as $ from "@wildboar/asn1/functional";
 import {
@@ -11,7 +11,7 @@ import {
     _encode_OperationProgress,
 } from "../DistributedOperations/OperationProgress.ta.mjs";
 import {
-    Name,
+    type Name,
     _decode_Name,
     _encode_Name,
 } from "../InformationFramework/Name.ta.mjs";
@@ -36,50 +36,60 @@ import {
  *
  */
 export class TraceItem {
+    /**
+     * @summary `dsa`.
+     * @description
+     *
+     * Name of the DSA adding the item (the one about to chain).
+     *
+     * @public
+     * @readonly
+     */
+    public readonly dsa: Name;
+    /**
+     * @summary `targetObject`.
+     * @description
+     *
+     * Incoming ChainingArguments.targetObject. Omit if the request came
+     * from a DUA (implied = DAP object/baseObject), from an LDAP client
+     * (implied = LDAP object/base), or equal to the outgoing (actual or
+     * implied) targetObject.
+     *
+     * @public
+     * @readonly
+     */
+    public readonly targetObject: OPTIONAL<Name>;
+    /**
+     * @summary `operationProgress`.
+     * @description
+     *
+     * From DAP CommonArguments (default `notStarted` if absent); LDAP
+     * client ⇒ `notStarted`; incoming DSP ⇒
+     * ChainingArguments.operationProgress (default `notStarted` if
+     * absent).
+     *
+     * @public
+     * @readonly
+     */
+    public readonly operationProgress: OperationProgress;
+    /**
+     * @summary Extensions that are not recognized.
+     * @public
+     * @readonly
+     */
+    public readonly _unrecognizedExtensionsList: _Element[];
+
     constructor(
-        /**
-         * @summary `dsa`.
-         * @description
-         *
-         * Name of the DSA adding the item (the one about to chain).
-         *
-         * @public
-         * @readonly
-         */
-        readonly dsa: Name,
-        /**
-         * @summary `targetObject`.
-         * @description
-         *
-         * Incoming ChainingArguments.targetObject. Omit if the request came
-         * from a DUA (implied = DAP object/baseObject), from an LDAP client
-         * (implied = LDAP object/base), or equal to the outgoing (actual or
-         * implied) targetObject.
-         *
-         * @public
-         * @readonly
-         */
-        readonly targetObject: OPTIONAL<Name>,
-        /**
-         * @summary `operationProgress`.
-         * @description
-         *
-         * From DAP CommonArguments (default `notStarted` if absent); LDAP
-         * client ⇒ `notStarted`; incoming DSP ⇒
-         * ChainingArguments.operationProgress (default `notStarted` if
-         * absent).
-         *
-         * @public
-         * @readonly
-         */
-        readonly operationProgress: OperationProgress,
-        /**
-         * @summary Extensions that are not recognized.
-         * @public
-         * @readonly
-         */
-        readonly _unrecognizedExtensionsList: _Element[] = []
-    ) {}
+        dsa: Name,
+        targetObject: OPTIONAL<Name>,
+        operationProgress: OperationProgress,
+        _unrecognizedExtensionsList: _Element[] = []
+    ) {
+        this.dsa = dsa;
+        this.targetObject = targetObject;
+        this.operationProgress = operationProgress;
+        this._unrecognizedExtensionsList = _unrecognizedExtensionsList;
+    }
 
     /**
      * @summary Restructures an object into a TraceItem

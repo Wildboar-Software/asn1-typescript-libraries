@@ -1,6 +1,6 @@
 /* eslint-disable */
 import {
-    ASN1Element as _Element,
+    type ASN1Element as _Element,
     ASN1TagClass as _TagClass,
     ASN1Construction as _Construction,
     ASN1UniversalType as _UniversalType,
@@ -58,7 +58,7 @@ export type LoopbackControl_status = _enum_for_LoopbackControl_status;
  *
  * @enum {number}
  */
-export const LoopbackControl_status = _enum_for_LoopbackControl_status;
+export const LoopbackControl_status: typeof _enum_for_LoopbackControl_status = _enum_for_LoopbackControl_status;
 
 
 /**
@@ -66,7 +66,7 @@ export const LoopbackControl_status = _enum_for_LoopbackControl_status;
  * @constant
  * @type {number}
  */
-export const LoopbackControl_status_noLoopback: LoopbackControl_status =
+export const LoopbackControl_status_noLoopback: _enum_for_LoopbackControl_status.noLoopback =
     LoopbackControl_status.noLoopback; /* LONG_NAMED_ENUMERATED_VALUE */
 
 
@@ -75,7 +75,7 @@ export const LoopbackControl_status_noLoopback: LoopbackControl_status =
  * @constant
  * @type {number}
  */
-export const noLoopback: LoopbackControl_status =
+export const noLoopback: _enum_for_LoopbackControl_status.noLoopback =
     LoopbackControl_status.noLoopback; /* SHORT_NAMED_ENUMERATED_VALUE */
 
 
@@ -84,7 +84,7 @@ export const noLoopback: LoopbackControl_status =
  * @constant
  * @type {number}
  */
-export const LoopbackControl_status_endALoopedBack: LoopbackControl_status =
+export const LoopbackControl_status_endALoopedBack: _enum_for_LoopbackControl_status.endALoopedBack =
     LoopbackControl_status.endALoopedBack; /* LONG_NAMED_ENUMERATED_VALUE */
 
 
@@ -93,7 +93,7 @@ export const LoopbackControl_status_endALoopedBack: LoopbackControl_status =
  * @constant
  * @type {number}
  */
-export const endALoopedBack: LoopbackControl_status =
+export const endALoopedBack: _enum_for_LoopbackControl_status.endALoopedBack =
     LoopbackControl_status.endALoopedBack; /* SHORT_NAMED_ENUMERATED_VALUE */
 
 
@@ -102,7 +102,7 @@ export const endALoopedBack: LoopbackControl_status =
  * @constant
  * @type {number}
  */
-export const LoopbackControl_status_endBLoopedBack: LoopbackControl_status =
+export const LoopbackControl_status_endBLoopedBack: _enum_for_LoopbackControl_status.endBLoopedBack =
     LoopbackControl_status.endBLoopedBack; /* LONG_NAMED_ENUMERATED_VALUE */
 
 
@@ -111,18 +111,30 @@ export const LoopbackControl_status_endBLoopedBack: LoopbackControl_status =
  * @constant
  * @type {number}
  */
-export const endBLoopedBack: LoopbackControl_status =
+export const endBLoopedBack: _enum_for_LoopbackControl_status.endBLoopedBack =
     LoopbackControl_status.endBLoopedBack; /* SHORT_NAMED_ENUMERATED_VALUE */
 
 
 
 
-export const _decode_LoopbackControl_status = $._decodeEnumerated;
+export function _decode_LoopbackControl_status(el: _Element): LoopbackControl_status {
+    const enumerated = $._decodeEnumerated(el);
+    switch (enumerated) {
+        case LoopbackControl_status.noLoopback: return LoopbackControl_status.noLoopback;
+        case LoopbackControl_status.endALoopedBack: return LoopbackControl_status.endALoopedBack;
+        case LoopbackControl_status.endBLoopedBack: return LoopbackControl_status.endBLoopedBack;
+        default:
+            throw new _ConstructionError(
+                'Invalid ENUMERATED value ' + enumerated + ' for LoopbackControl_status.',
+                el,
+            );
+    }
+}
 
 
 
 
-export const _encode_LoopbackControl_status = $._encodeEnumerated;
+export const _encode_LoopbackControl_status: $.ASN1Encoder<LoopbackControl_status> = $._encodeEnumerated as $.ASN1Encoder<LoopbackControl_status>;
 
 
 /* eslint-enable */

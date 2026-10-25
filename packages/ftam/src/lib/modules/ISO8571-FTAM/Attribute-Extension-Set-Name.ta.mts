@@ -11,12 +11,12 @@ import {
 } from '@wildboar/asn1';
 import * as $ from '@wildboar/asn1/functional';
 import {
-  Extension_Set_Identifier,
+  type Extension_Set_Identifier,
   _decode_Extension_Set_Identifier,
   _encode_Extension_Set_Identifier,
 } from '../ISO8571-FTAM/Extension-Set-Identifier.ta.mjs';
 import {
-  Extension_Attribute_identifier,
+  type Extension_Attribute_identifier,
   _decode_Extension_Attribute_identifier,
   _encode_Extension_Attribute_identifier,
 } from '../ISO8571-FTAM/Extension-Attribute-identifier.ta.mjs';
@@ -48,7 +48,7 @@ export class Attribute_Extension_Set_Name {
    * @public
    * @readonly
    */
-  readonly extension_set_identifier: Extension_Set_Identifier;
+  public readonly extension_set_identifier: Extension_Set_Identifier;
   /**
    * @summary `extension_attribute_names`.
    * @description
@@ -58,7 +58,7 @@ export class Attribute_Extension_Set_Name {
    * @public
    * @readonly
    */
-  readonly extension_attribute_names: Extension_Attribute_identifier[];
+  public readonly extension_attribute_names: Extension_Attribute_identifier[];
 
   constructor(
     extension_set_identifier: Extension_Set_Identifier,

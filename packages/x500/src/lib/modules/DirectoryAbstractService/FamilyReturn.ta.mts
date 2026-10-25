@@ -1,13 +1,13 @@
 /* eslint-disable */
 import {
-    ASN1Element as _Element,
+    type ASN1Element as _Element,
     ASN1TagClass as _TagClass,
-    OBJECT_IDENTIFIER,
-    OPTIONAL,
+    type OBJECT_IDENTIFIER,
+    type OPTIONAL,
 } from "@wildboar/asn1";
 import * as $ from "@wildboar/asn1/functional";
 import {
-    FamilyReturn_memberSelect,
+    type FamilyReturn_memberSelect,
     _decode_FamilyReturn_memberSelect,
     _encode_FamilyReturn_memberSelect,
     _enum_for_FamilyReturn_memberSelect,
@@ -35,38 +35,46 @@ import {
  *
  */
 export class FamilyReturn {
+    /**
+     * @summary `memberSelect`.
+     * @description
+     *
+     * Which compound-entry members to return. Contributing vs
+     * participating are the same for Read/ModifyEntry.
+     *
+     * @public
+     * @readonly
+     */
+    public readonly memberSelect: FamilyReturn_memberSelect;
+    /**
+     * @summary `familySelect`.
+     * @description
+     *
+     * SEQUENCE SIZE (1..MAX) of structural OC of members immediately
+     * subordinate to the ancestor. Order insignificant. Adds those
+     * families' child members on top of `memberSelect`. No effect if
+     * `memberSelect` is `compoundEntry`.
+     *
+     * @public
+     * @readonly
+     */
+    public readonly familySelect?: OPTIONAL<OBJECT_IDENTIFIER[]>;
+    /**
+     * @summary Extensions that are not recognized.
+     * @public
+     * @readonly
+     */
+    public readonly _unrecognizedExtensionsList: _Element[];
+
     constructor(
-        /**
-         * @summary `memberSelect`.
-         * @description
-         *
-         * Which compound-entry members to return. Contributing vs
-         * participating are the same for Read/ModifyEntry.
-         *
-         * @public
-         * @readonly
-         */
-        readonly memberSelect: FamilyReturn_memberSelect,
-        /**
-         * @summary `familySelect`.
-         * @description
-         *
-         * SEQUENCE SIZE (1..MAX) of structural OC of members immediately
-         * subordinate to the ancestor. Order insignificant. Adds those
-         * families' child members on top of `memberSelect`. No effect if
-         * `memberSelect` is `compoundEntry`.
-         *
-         * @public
-         * @readonly
-         */
-        readonly familySelect?: OPTIONAL<OBJECT_IDENTIFIER[]>,
-        /**
-         * @summary Extensions that are not recognized.
-         * @public
-         * @readonly
-         */
-        readonly _unrecognizedExtensionsList: _Element[] = []
-    ) {}
+        memberSelect: FamilyReturn_memberSelect,
+        familySelect?: OPTIONAL<OBJECT_IDENTIFIER[]>,
+        _unrecognizedExtensionsList: _Element[] = []
+    ) {
+        this.memberSelect = memberSelect;
+        this.familySelect = familySelect;
+        this._unrecognizedExtensionsList = _unrecognizedExtensionsList;
+    }
 
     /**
      * @summary Restructures an object into a FamilyReturn
@@ -96,7 +104,7 @@ export class FamilyReturn {
      * @static
      */
 
-    public static _enum_for_memberSelect = _enum_for_FamilyReturn_memberSelect;
+    public static _enum_for_memberSelect: typeof _enum_for_FamilyReturn_memberSelect = _enum_for_FamilyReturn_memberSelect;
 }
 
 /**

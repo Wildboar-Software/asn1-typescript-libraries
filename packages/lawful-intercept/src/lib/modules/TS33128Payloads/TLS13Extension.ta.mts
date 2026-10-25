@@ -1,8 +1,8 @@
 /* eslint-disable */
 import {
-    OCTET_STRING,
+    type OCTET_STRING,
     ASN1ConstructionError as _ConstructionError,
-    ASN1Element as _Element,
+    type ASN1Element as _Element,
     ASN1TagClass as _TagClass,
     ASN1SizeError
 } from "@wildboar/asn1";
@@ -80,7 +80,7 @@ class TLS13Extension {
          * @static
          */
 
-    public static _enum_for_extensionType = _enum_for_TLS13ExtensionType;
+    public static _enum_for_extensionType: typeof _enum_for_TLS13ExtensionType = _enum_for_TLS13ExtensionType;
 }
 
 /**

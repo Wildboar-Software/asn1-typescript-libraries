@@ -1,7 +1,7 @@
 /* eslint-disable */
 import {
-    BIT_STRING,
-    ASN1Element as _Element,
+    type BIT_STRING,
+    type ASN1Element as _Element,
     ASN1TagClass as _TagClass,
     ASN1Construction as _Construction,
     ASN1UniversalType as _UniversalType,
@@ -77,8 +77,8 @@ const ParameterOffers_trigger_no: number = 1; /* LONG_NAMED_BIT */
  */
 export
 const no: number = ParameterOffers_trigger_no; /* SHORT_NAMED_BIT */
-export const _decode_ParameterOffers_trigger = $._decodeBitString;
-export const _encode_ParameterOffers_trigger = $._encodeBitString;
+export const _decode_ParameterOffers_trigger: $.ASN1Decoder<BIT_STRING> = $._decodeBitString;
+export const _encode_ParameterOffers_trigger: $.ASN1Encoder<BIT_STRING> = $._encodeBitString;
 
 
 /* eslint-enable */

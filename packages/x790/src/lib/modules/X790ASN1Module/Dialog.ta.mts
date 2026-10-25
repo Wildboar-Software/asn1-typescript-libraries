@@ -1,7 +1,7 @@
 /* eslint-disable */
 import {
-    GraphicString,
-    ASN1Element as _Element,
+    type GraphicString,
+    type ASN1Element as _Element,
     ASN1SizeError,
 } from "@wildboar/asn1";
 import * as $ from "@wildboar/asn1/functional";
@@ -27,7 +27,7 @@ export function _decode_Dialog (el: _Element): Dialog {
     }
     return value;
 }
-export const _encode_Dialog = $._encodeGraphicString;
+export const _encode_Dialog: $.ASN1Encoder<string> = $._encodeGraphicString;
 
 
 /* eslint-enable */

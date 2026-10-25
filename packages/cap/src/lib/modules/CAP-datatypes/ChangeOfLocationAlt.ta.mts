@@ -1,5 +1,5 @@
 import {
-    ASN1Element as _Element,
+    type ASN1Element as _Element,
     ASN1TagClass as _TagClass,
 } from "@wildboar/asn1";
 import * as $ from "@wildboar/asn1/functional";
@@ -19,9 +19,13 @@ import * as $ from "@wildboar/asn1/functional";
  *
  */
 export class ChangeOfLocationAlt {
+    public readonly _unrecognizedExtensionsList: _Element[];
+
     constructor (
-        readonly _unrecognizedExtensionsList: _Element[] = [],
-    ) {}
+        _unrecognizedExtensionsList: _Element[] = [],
+    ) {
+        this._unrecognizedExtensionsList = _unrecognizedExtensionsList;
+    }
 
     public static _from_object (_o: { [_K in keyof (ChangeOfLocationAlt)]: (ChangeOfLocationAlt)[_K] }): ChangeOfLocationAlt {
         return new ChangeOfLocationAlt(_o._unrecognizedExtensionsList);

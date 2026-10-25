@@ -1,7 +1,7 @@
 /* eslint-disable */
 import {
-    INTEGER,
-    ASN1Element as _Element,
+    type INTEGER,
+    type ASN1Element as _Element,
     ASN1TagClass as _TagClass,
     ASN1Construction as _Construction,
     ASN1UniversalType as _UniversalType,
@@ -39,7 +39,7 @@ type ASQcontent_class = INTEGER;
  * @type {number}
  */
 export
-const ASQcontent_class_basic: ASQcontent_class = 1; /* LONG_NAMED_INTEGER_VALUE */
+const ASQcontent_class_basic: 1 = 1 satisfies ASQcontent_class; /* LONG_NAMED_INTEGER_VALUE */
 
 /**
  * @summary ASQcontent_class_basic
@@ -49,9 +49,9 @@ const ASQcontent_class_basic: ASQcontent_class = 1; /* LONG_NAMED_INTEGER_VALUE 
  * @type {number}
  */
 export
-const basic: ASQcontent_class = ASQcontent_class_basic; /* SHORT_NAMED_INTEGER_VALUE */
-export const _decode_ASQcontent_class = $._decodeInteger;
-export const _encode_ASQcontent_class = $._encodeInteger;
+const basic: 1 = ASQcontent_class_basic; /* SHORT_NAMED_INTEGER_VALUE */
+export const _decode_ASQcontent_class: $.ASN1Decoder<INTEGER> = $._decodeInteger;
+export const _encode_ASQcontent_class: $.ASN1Encoder<INTEGER> = $._encodeInteger;
 
 
 /* eslint-enable */

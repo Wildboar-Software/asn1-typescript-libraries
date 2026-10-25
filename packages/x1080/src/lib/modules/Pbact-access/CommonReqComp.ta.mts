@@ -1,9 +1,9 @@
 /* eslint-disable */
 import {
-    OPTIONAL,
-    INTEGER,
-    OBJECT_IDENTIFIER,
-    ASN1Element as _Element,
+    type OPTIONAL,
+    type INTEGER,
+    type OBJECT_IDENTIFIER,
+    type ASN1Element as _Element,
     ASN1TagClass as _TagClass,
     ASN1Construction as _Construction,
     ASN1UniversalType as _UniversalType,
@@ -14,7 +14,7 @@ import {
 } from '@wildboar/asn1';
 import * as $ from '@wildboar/asn1/functional';
 import {
-    AttributeCertificates,
+    type AttributeCertificates,
     _decode_AttributeCertificates,
     _encode_AttributeCertificates,
 } from '../Pbact-access/AttributeCertificates.ta.mjs';
@@ -41,52 +41,62 @@ import {
  *
  */
 export class CommonReqComp {
+    /**
+     * @summary `attrCerts`.
+     * @description
+     *
+     * AC or AC path holding privilege. Absent → privilege is in the
+     * accessor's end-entity PKC.
+     * ITU-T Rec. X.1080.0 (2017) Cor.1
+     * [§8.2](https://www.itu.int/rec/T-REC-X.1080.0-201703-I!Cor1).
+     *
+     * @public
+     * @readonly
+     */
+    public readonly attrCerts: OPTIONAL<AttributeCertificates>;
+    /**
+     * @summary `serviceId`.
+     * @description
+     *
+     * Service being invoked.
+     * ITU-T Rec. X.1080.0 (2017) Cor.1
+     * [§8.2](https://www.itu.int/rec/T-REC-X.1080.0-201703-I!Cor1).
+     *
+     * @public
+     * @readonly
+     */
+    public readonly serviceId: OBJECT_IDENTIFIER;
+    /**
+     * @summary `invokId`.
+     * @description
+     *
+     * 0 for the first operation, then increment. Detects missing
+     * requests and replay. Recipient echoes it in the reply.
+     * ITU-T Rec. X.1080.0 (2017) Cor.1
+     * [§8.2](https://www.itu.int/rec/T-REC-X.1080.0-201703-I!Cor1).
+     *
+     * @public
+     * @readonly
+     */
+    public readonly invokId: INTEGER;
+    /**
+     * @summary Extensions that are not recognized.
+     * @public
+     * @readonly
+     */
+    public readonly _unrecognizedExtensionsList: _Element[];
+
     constructor(
-        /**
-         * @summary `attrCerts`.
-         * @description
-         *
-         * AC or AC path holding privilege. Absent → privilege is in the
-         * accessor's end-entity PKC.
-         * ITU-T Rec. X.1080.0 (2017) Cor.1
-         * [§8.2](https://www.itu.int/rec/T-REC-X.1080.0-201703-I!Cor1).
-         *
-         * @public
-         * @readonly
-         */
-        readonly attrCerts: OPTIONAL<AttributeCertificates>,
-        /**
-         * @summary `serviceId`.
-         * @description
-         *
-         * Service being invoked.
-         * ITU-T Rec. X.1080.0 (2017) Cor.1
-         * [§8.2](https://www.itu.int/rec/T-REC-X.1080.0-201703-I!Cor1).
-         *
-         * @public
-         * @readonly
-         */
-        readonly serviceId: OBJECT_IDENTIFIER,
-        /**
-         * @summary `invokId`.
-         * @description
-         *
-         * 0 for the first operation, then increment. Detects missing
-         * requests and replay. Recipient echoes it in the reply.
-         * ITU-T Rec. X.1080.0 (2017) Cor.1
-         * [§8.2](https://www.itu.int/rec/T-REC-X.1080.0-201703-I!Cor1).
-         *
-         * @public
-         * @readonly
-         */
-        readonly invokId: INTEGER,
-        /**
-         * @summary Extensions that are not recognized.
-         * @public
-         * @readonly
-         */
-        readonly _unrecognizedExtensionsList: _Element[] = []
-    ) {}
+        attrCerts: OPTIONAL<AttributeCertificates>,
+        serviceId: OBJECT_IDENTIFIER,
+        invokId: INTEGER,
+        _unrecognizedExtensionsList: _Element[] = []
+    ) {
+        this.attrCerts = attrCerts;
+        this.serviceId = serviceId;
+        this.invokId = invokId;
+        this._unrecognizedExtensionsList = _unrecognizedExtensionsList;
+    }
 
     /**
      * @summary Restructures an object into a CommonReqComp

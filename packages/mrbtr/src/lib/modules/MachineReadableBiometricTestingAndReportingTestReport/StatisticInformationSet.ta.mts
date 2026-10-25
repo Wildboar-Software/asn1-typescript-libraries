@@ -1,9 +1,9 @@
 /* eslint-disable */
 import {
-    OPTIONAL,
-    INTEGER,
-    REAL,
-    ASN1Element as _Element,
+    type OPTIONAL,
+    type INTEGER,
+    type REAL,
+    type ASN1Element as _Element,
     ASN1TagClass as _TagClass,
     ASN1Construction as _Construction,
     ASN1UniversalType as _UniversalType,
@@ -44,90 +44,108 @@ import { UnitTime, _enum_for_UnitTime, _decode_UnitTime, _encode_UnitTime } from
  */
 export
 class StatisticInformationSet {
+    /**
+     * @summary `unitTime`.
+     * @description
+     *
+     * Unit for the numeric fields: millisecond or second
+     * (Clause 6.4.4.3.1).
+     *
+     * @public
+     * @readonly
+     */
+    public readonly unitTime: UnitTime;
+    /**
+     * @summary `numberOfMeasurements`.
+     * @description
+     *
+     * Count of measurements. Mandatory when the variable is random
+     * (Annex B.9); optional in the ASN.1 (Clause 6.4.4.3.1).
+     *
+     * @public
+     * @readonly
+     */
+    public readonly numberOfMeasurements?: OPTIONAL<INTEGER>;
+    /**
+     * @summary `median`.
+     * @description
+     *
+     * Median of the measured values (Clause 6.4.4.3.1).
+     *
+     * @public
+     * @readonly
+     */
+    public readonly median?: OPTIONAL<REAL>;
+    /**
+     * @summary `mean`.
+     * @description
+     *
+     * Mean of the measured values (Clause 6.4.4.3.1).
+     *
+     * @public
+     * @readonly
+     */
+    public readonly mean?: OPTIONAL<REAL>;
+    /**
+     * @summary `minimum`.
+     * @description
+     *
+     * Minimum of the measured values (Clause 6.4.4.3.1).
+     *
+     * @public
+     * @readonly
+     */
+    public readonly minimum?: OPTIONAL<REAL>;
+    /**
+     * @summary `maximum`.
+     * @description
+     *
+     * Maximum of the measured values (Clause 6.4.4.3.1).
+     *
+     * @public
+     * @readonly
+     */
+    public readonly maximum?: OPTIONAL<REAL>;
+    /**
+     * @summary `stdDev`.
+     * @description
+     *
+     * Standard deviation (Clause 6.4.4.3.1).
+     *
+     * @public
+     * @readonly
+     */
+    public readonly stdDev?: OPTIONAL<REAL>;
+    /**
+     * @summary `medAbsDev`.
+     * @description
+     *
+     * Median absolute deviation (Clause 6.4.4.3.1).
+     *
+     * @public
+     * @readonly
+     */
+    public readonly medAbsDev?: OPTIONAL<REAL>;
+
     constructor (
-        /**
-         * @summary `unitTime`.
-         * @description
-         *
-         * Unit for the numeric fields: millisecond or second
-         * (Clause 6.4.4.3.1).
-         *
-         * @public
-         * @readonly
-         */
-        readonly unitTime: UnitTime,
-        /**
-         * @summary `numberOfMeasurements`.
-         * @description
-         *
-         * Count of measurements. Mandatory when the variable is random
-         * (Annex B.9); optional in the ASN.1 (Clause 6.4.4.3.1).
-         *
-         * @public
-         * @readonly
-         */
-        readonly numberOfMeasurements?: OPTIONAL<INTEGER>,
-        /**
-         * @summary `median`.
-         * @description
-         *
-         * Median of the measured values (Clause 6.4.4.3.1).
-         *
-         * @public
-         * @readonly
-         */
-        readonly median?: OPTIONAL<REAL>,
-        /**
-         * @summary `mean`.
-         * @description
-         *
-         * Mean of the measured values (Clause 6.4.4.3.1).
-         *
-         * @public
-         * @readonly
-         */
-        readonly mean?: OPTIONAL<REAL>,
-        /**
-         * @summary `minimum`.
-         * @description
-         *
-         * Minimum of the measured values (Clause 6.4.4.3.1).
-         *
-         * @public
-         * @readonly
-         */
-        readonly minimum?: OPTIONAL<REAL>,
-        /**
-         * @summary `maximum`.
-         * @description
-         *
-         * Maximum of the measured values (Clause 6.4.4.3.1).
-         *
-         * @public
-         * @readonly
-         */
-        readonly maximum?: OPTIONAL<REAL>,
-        /**
-         * @summary `stdDev`.
-         * @description
-         *
-         * Standard deviation (Clause 6.4.4.3.1).
-         *
-         * @public
-         * @readonly
-         */
-        readonly stdDev?: OPTIONAL<REAL>,
-        /**
-         * @summary `medAbsDev`.
-         * @description
-         *
-         * Median absolute deviation (Clause 6.4.4.3.1).
-         *
-         * @public
-         * @readonly
-         */
-        readonly medAbsDev?: OPTIONAL<REAL>
-    ) {}
+        unitTime: UnitTime,
+        numberOfMeasurements?: OPTIONAL<INTEGER>,
+        median?: OPTIONAL<REAL>,
+        mean?: OPTIONAL<REAL>,
+        minimum?: OPTIONAL<REAL>,
+        maximum?: OPTIONAL<REAL>,
+        stdDev?: OPTIONAL<REAL>,
+        medAbsDev?: OPTIONAL<REAL>
+    ) {
+        this.unitTime = unitTime;
+        this.numberOfMeasurements = numberOfMeasurements;
+        this.median = median;
+        this.mean = mean;
+        this.minimum = minimum;
+        this.maximum = maximum;
+        this.stdDev = stdDev;
+        this.medAbsDev = medAbsDev;
+    }
 
     /**
      * @summary Restructures an object into a StatisticInformationSet
@@ -151,7 +169,7 @@ class StatisticInformationSet {
          * @static
          */
 
-    public static _enum_for_unitTime = _enum_for_UnitTime;
+    public static _enum_for_unitTime: typeof _enum_for_UnitTime = _enum_for_UnitTime;
 }
 
 /**

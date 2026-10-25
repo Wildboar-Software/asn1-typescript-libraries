@@ -1,14 +1,14 @@
 /* eslint-disable */
 import {
-    SEQUENCE,
-    SET,
-    ASN1Element as _Element,
+    type SEQUENCE,
+    type SET,
+    type ASN1Element as _Element,
     ASN1TagClass as _TagClass,
     ASN1ConstructionError as _ConstructionError,
 } from "@wildboar/asn1";
 import * as $ from "@wildboar/asn1/functional";
 import {
-    ObjectInstance,
+    type ObjectInstance,
     _decode_ObjectInstance,
     _encode_ObjectInstance,
 } from "../CMIP-1/ObjectInstance.ta.mjs";
@@ -38,20 +38,26 @@ import {
  */
 export
 class RangeOfObjects {
+    /**
+     * @summary `superiorObjectName`.
+     * @public
+     * @readonly
+     */
+    public readonly superiorObjectName: ObjectInstance;
+    /**
+     * @summary `terminalRDNRange`.
+     * @public
+     * @readonly
+     */
+    public readonly terminalRDNRange: TerminalRDNRange;
+
     constructor (
-        /**
-         * @summary `superiorObjectName`.
-         * @public
-         * @readonly
-         */
-        readonly superiorObjectName: ObjectInstance,
-        /**
-         * @summary `terminalRDNRange`.
-         * @public
-         * @readonly
-         */
-        readonly terminalRDNRange: TerminalRDNRange
-    ) {}
+        superiorObjectName: ObjectInstance,
+        terminalRDNRange: TerminalRDNRange
+    ) {
+        this.superiorObjectName = superiorObjectName;
+        this.terminalRDNRange = terminalRDNRange;
+    }
 
     /**
      * @summary Restructures an object into a RangeOfObjects

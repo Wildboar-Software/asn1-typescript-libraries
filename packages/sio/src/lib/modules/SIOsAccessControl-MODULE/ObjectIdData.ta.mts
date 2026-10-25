@@ -1,13 +1,13 @@
 /* eslint-disable */
 import {
     ASN1ConstructionError as _ConstructionError,
-    ASN1Element as _Element,
+    type ASN1Element as _Element,
     ASN1TagClass as _TagClass,
-    OBJECT_IDENTIFIER,
+    type OBJECT_IDENTIFIER,
 } from "@wildboar/asn1";
 import * as $ from "@wildboar/asn1/functional";
 import {
-    ObjectIdName,
+    type ObjectIdName,
     _decode_ObjectIdName,
     _encode_ObjectIdName,
 } from "../SIOsAccessControl-MODULE/ObjectIdName.ta.mjs";
@@ -32,30 +32,36 @@ import {
  *
  */
 export class ObjectIdData {
+    /**
+     * @summary `objectId`.
+     * @description
+     *
+     * OID assigned to the object (typically a security policy).
+     * X.841 §6.2.2.3.
+     *
+     * @public
+     * @readonly
+     */
+    public readonly objectId: OBJECT_IDENTIFIER;
+    /**
+     * @summary `objectIdName`.
+     * @description
+     *
+     * Display name of that object. SIZE 1..256
+     * (`ubObjectIdNameLength`). X.841 §6.2.2.3.
+     *
+     * @public
+     * @readonly
+     */
+    public readonly objectIdName: ObjectIdName;
+
     constructor(
-        /**
-         * @summary `objectId`.
-         * @description
-         *
-         * OID assigned to the object (typically a security policy).
-         * X.841 §6.2.2.3.
-         *
-         * @public
-         * @readonly
-         */
-        readonly objectId: OBJECT_IDENTIFIER,
-        /**
-         * @summary `objectIdName`.
-         * @description
-         *
-         * Display name of that object. SIZE 1..256
-         * (`ubObjectIdNameLength`). X.841 §6.2.2.3.
-         *
-         * @public
-         * @readonly
-         */
-        readonly objectIdName: ObjectIdName
-    ) {}
+        objectId: OBJECT_IDENTIFIER,
+        objectIdName: ObjectIdName
+    ) {
+        this.objectId = objectId;
+        this.objectIdName = objectIdName;
+    }
 
     /**
      * @summary Restructures an object into a ObjectIdData

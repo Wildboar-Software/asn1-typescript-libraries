@@ -1,13 +1,13 @@
 /* eslint-disable */
 import {
-    NULL,
-    OPTIONAL,
-    ASN1Element as _Element,
+    type NULL,
+    type OPTIONAL,
+    type ASN1Element as _Element,
     ASN1TagClass as _TagClass
 } from "@wildboar/asn1";
 import * as $ from "@wildboar/asn1/functional";
-import { PLMN_Id, _decode_PLMN_Id, _encode_PLMN_Id } from "../MAP-CommonDataTypes/PLMN-Id.ta.mjs";
-import { RAN_Technology, _decode_RAN_Technology, _encode_RAN_Technology, _enum_for_RAN_Technology } from "../MAP-LCS-DataTypes/RAN-Technology.ta.mjs";
+import { type PLMN_Id, _decode_PLMN_Id, _encode_PLMN_Id } from "../MAP-CommonDataTypes/PLMN-Id.ta.mjs";
+import { type RAN_Technology, _decode_RAN_Technology, _encode_RAN_Technology, _enum_for_RAN_Technology } from "../MAP-LCS-DataTypes/RAN-Technology.ta.mjs";
 
 
 /**
@@ -21,8 +21,8 @@ import { RAN_Technology, _decode_RAN_Technology, _encode_RAN_Technology, _enum_f
  * ```asn1
  * ReportingPLMN ::= SEQUENCE {
  *     plmn-Id        [0] PLMN-Id,
- *     ran-Technology        [1] RAN-Technology    OPTIONAL,
- *     ran-PeriodicLocationSupport    [2] NULL        OPTIONAL,
+ *     ran-Technology        [1] RAN-Technology    type OPTIONAL,
+ *     ran-PeriodicLocationSupport    [2] NULL        type OPTIONAL,
  *     ...}
  * ```
  * 
@@ -30,44 +30,54 @@ import { RAN_Technology, _decode_RAN_Technology, _encode_RAN_Technology, _enum_f
  */
 export
 class ReportingPLMN {
+    /**
+     * @summary `plmn_Id`.
+     * @description
+     *
+     * PLMN identity.
+     *
+     * @public
+     * @readonly
+     */
+    public readonly plmn_Id: PLMN_Id;
+    /**
+     * @summary `ran_Technology`.
+     * @description
+     *
+     * gsm or umts.
+     *
+     * @public
+     * @readonly
+     */
+    public readonly ran_Technology?: OPTIONAL<RAN_Technology>;
+    /**
+     * @summary `ran_PeriodicLocationSupport`.
+     * @description
+     *
+     * Periodic location supported in this RAN.
+     *
+     * @public
+     * @readonly
+     */
+    public readonly ran_PeriodicLocationSupport?: OPTIONAL<NULL>;
+    /**
+     * @summary Extensions that are not recognized.
+     * @public
+     * @readonly
+     */
+    public readonly _unrecognizedExtensionsList: _Element[];
+
     constructor (
-        /**
-         * @summary `plmn_Id`.
-         * @description
-         *
-         * PLMN identity.
-         *
-         * @public
-         * @readonly
-         */
-        readonly plmn_Id: PLMN_Id,
-        /**
-         * @summary `ran_Technology`.
-         * @description
-         *
-         * gsm or umts.
-         *
-         * @public
-         * @readonly
-         */
-        readonly ran_Technology?: OPTIONAL<RAN_Technology>,
-        /**
-         * @summary `ran_PeriodicLocationSupport`.
-         * @description
-         *
-         * Periodic location supported in this RAN.
-         *
-         * @public
-         * @readonly
-         */
-        readonly ran_PeriodicLocationSupport?: OPTIONAL<NULL>,
-        /**
-         * @summary Extensions that are not recognized.
-         * @public
-         * @readonly
-         */
-        readonly _unrecognizedExtensionsList: _Element[] = []
-    ) {}
+        plmn_Id: PLMN_Id,
+        ran_Technology?: OPTIONAL<RAN_Technology>,
+        ran_PeriodicLocationSupport?: OPTIONAL<NULL>,
+        _unrecognizedExtensionsList: _Element[] = []
+    ) {
+        this.plmn_Id = plmn_Id;
+        this.ran_Technology = ran_Technology;
+        this.ran_PeriodicLocationSupport = ran_PeriodicLocationSupport;
+        this._unrecognizedExtensionsList = _unrecognizedExtensionsList;
+    }
 
     /**
      * @summary Restructures an object into a ReportingPLMN
@@ -91,7 +101,7 @@ class ReportingPLMN {
          * @static
          */
 
-    public static _enum_for_ran_Technology = _enum_for_RAN_Technology;
+    public static _enum_for_ran_Technology: typeof _enum_for_RAN_Technology = _enum_for_RAN_Technology;
 }
 
 /**

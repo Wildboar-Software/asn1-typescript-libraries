@@ -1,8 +1,8 @@
 /* eslint-disable */
 import {
-    OPTIONAL,
-    OCTET_STRING,
-    ASN1Element as _Element,
+    type OPTIONAL,
+    type OCTET_STRING,
+    type ASN1Element as _Element,
     ASN1TagClass as _TagClass,
     ASN1Construction as _Construction,
     ASN1UniversalType as _UniversalType,
@@ -35,25 +35,31 @@ import * as $ from "@wildboar/asn1/functional";
  */
 export
 class Path_efidOrTagChoice_tagRef {
+    /**
+     * @summary `tag`.
+     * @description
+     * Data-object tag. ISO/IEC 7816-15:2016 §8.2.5.
+     * @public
+     * @readonly
+     */
+    public readonly tag: OCTET_STRING;
+    /**
+     * @summary `efidOrPath`.
+     * @description
+     * Optional EF that contains the tagged object. ISO/IEC 7816-15:2016
+     * §8.2.5.
+     * @public
+     * @readonly
+     */
+    public readonly efidOrPath?: OPTIONAL<OCTET_STRING>;
+
     constructor (
-        /**
-         * @summary `tag`.
-         * @description
-         * Data-object tag. ISO/IEC 7816-15:2016 §8.2.5.
-         * @public
-         * @readonly
-         */
-        readonly tag: OCTET_STRING,
-        /**
-         * @summary `efidOrPath`.
-         * @description
-         * Optional EF that contains the tagged object. ISO/IEC 7816-15:2016
-         * §8.2.5.
-         * @public
-         * @readonly
-         */
-        readonly efidOrPath?: OPTIONAL<OCTET_STRING>
-    ) {}
+        tag: OCTET_STRING,
+        efidOrPath?: OPTIONAL<OCTET_STRING>
+    ) {
+        this.tag = tag;
+        this.efidOrPath = efidOrPath;
+    }
 
     /**
      * @summary Restructures an object into a Path_efidOrTagChoice_tagRef

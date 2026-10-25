@@ -1,8 +1,8 @@
 /* eslint-disable */
 import {
-    BOOLEAN,
-    GraphicString,
-    ASN1Element as _Element,
+    type BOOLEAN,
+    type GraphicString,
+    type ASN1Element as _Element,
     ASN1TagClass as _TagClass,
     ASN1Construction as _Construction,
     ASN1UniversalType as _UniversalType,
@@ -30,26 +30,34 @@ import * as $ from '@wildboar/asn1/functional';
  *
  */
 export class LinkEndCharacteristics {
+    /**
+     * @summary `endID`.
+     * @public
+     * @readonly
+     */
+    public readonly endID: GraphicString;
+    /**
+     * @summary `loopbackSupported`.
+     * @public
+     * @readonly
+     */
+    public readonly loopbackSupported: BOOLEAN;
+    /**
+     * @summary Extensions that are not recognized.
+     * @public
+     * @readonly
+     */
+    public readonly _unrecognizedExtensionsList: _Element[];
+
     constructor(
-        /**
-         * @summary `endID`.
-         * @public
-         * @readonly
-         */
-        readonly endID: GraphicString,
-        /**
-         * @summary `loopbackSupported`.
-         * @public
-         * @readonly
-         */
-        readonly loopbackSupported: BOOLEAN,
-        /**
-         * @summary Extensions that are not recognized.
-         * @public
-         * @readonly
-         */
-        readonly _unrecognizedExtensionsList: _Element[] = []
-    ) {}
+        endID: GraphicString,
+        loopbackSupported: BOOLEAN,
+        _unrecognizedExtensionsList: _Element[] = []
+    ) {
+        this.endID = endID;
+        this.loopbackSupported = loopbackSupported;
+        this._unrecognizedExtensionsList = _unrecognizedExtensionsList;
+    }
 
     /**
      * @summary Restructures an object into a LinkEndCharacteristics

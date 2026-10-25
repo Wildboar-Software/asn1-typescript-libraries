@@ -11,7 +11,7 @@ import {
 } from '@wildboar/asn1';
 import * as $ from '@wildboar/asn1/functional';
 import {
-  Concurrency_Key,
+  type Concurrency_Key,
   _decode_Concurrency_Key,
   _encode_Concurrency_Key,
 } from '../ISO8571-FTAM/Concurrency-Key.ta.mjs';
@@ -52,7 +52,7 @@ export class Concurrency_Access {
    * @public
    * @readonly
    */
-  readonly read: Concurrency_Key;
+  public readonly read: Concurrency_Key;
   /**
    * @summary `insert`.
    * @description
@@ -62,7 +62,7 @@ export class Concurrency_Access {
    * @public
    * @readonly
    */
-  readonly insert: Concurrency_Key;
+  public readonly insert: Concurrency_Key;
   /**
    * @summary `replace`.
    * @description
@@ -72,7 +72,7 @@ export class Concurrency_Access {
    * @public
    * @readonly
    */
-  readonly replace: Concurrency_Key;
+  public readonly replace: Concurrency_Key;
   /**
    * @summary `extend`.
    * @description
@@ -82,7 +82,7 @@ export class Concurrency_Access {
    * @public
    * @readonly
    */
-  readonly extend: Concurrency_Key;
+  public readonly extend: Concurrency_Key;
   /**
    * @summary `erase`.
    * @description
@@ -92,7 +92,7 @@ export class Concurrency_Access {
    * @public
    * @readonly
    */
-  readonly erase: Concurrency_Key;
+  public readonly erase: Concurrency_Key;
   /**
    * @summary `read_attribute`.
    * @description
@@ -102,7 +102,7 @@ export class Concurrency_Access {
    * @public
    * @readonly
    */
-  readonly read_attribute: Concurrency_Key;
+  public readonly read_attribute: Concurrency_Key;
   /**
    * @summary `change_attribute`.
    * @description
@@ -112,7 +112,7 @@ export class Concurrency_Access {
    * @public
    * @readonly
    */
-  readonly change_attribute: Concurrency_Key;
+  public readonly change_attribute: Concurrency_Key;
   /**
    * @summary `delete_Object`.
    * @description
@@ -123,7 +123,7 @@ export class Concurrency_Access {
    * @public
    * @readonly
    */
-  readonly delete_Object: Concurrency_Key;
+  public readonly delete_Object: Concurrency_Key;
 
   constructor(
     read: Concurrency_Key,

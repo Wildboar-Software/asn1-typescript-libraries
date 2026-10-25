@@ -1,7 +1,7 @@
 /* eslint-disable */
 import {
-  OPTIONAL,
-  BOOLEAN,
+  type OPTIONAL,
+  type BOOLEAN,
   ASN1Element as _Element,
   ASN1TagClass as _TagClass,
   ASN1Construction as _Construction,
@@ -12,10 +12,10 @@ import {
   ASN1ConstructionError as _ConstructionError,
 } from '@wildboar/asn1';
 import * as $ from '@wildboar/asn1/functional';
-import { AnyURI, _decode_AnyURI, _encode_AnyURI } from '../XSD/AnyURI.ta.mjs';
+import { type AnyURI, _decode_AnyURI, _encode_AnyURI } from '../XSD/AnyURI.ta.mjs';
 import { ultimateReceiver } from '../ASN1SOAP/ultimateReceiver.va.mjs';
 import {
-  Content,
+  type Content,
   _decode_Content,
   _encode_Content,
 } from '../ASN1SOAP/Content.ta.mjs';
@@ -60,7 +60,7 @@ export class HeaderBlock {
    * @public
    * @readonly
    */
-  readonly mustUnderstand: OPTIONAL<BOOLEAN>;
+  public readonly mustUnderstand: OPTIONAL<BOOLEAN>;
   /**
    * @summary `relay`.
    * @description If present and not `FALSE`, maps to SOAP
@@ -73,7 +73,7 @@ export class HeaderBlock {
    * @public
    * @readonly
    */
-  readonly relay: OPTIONAL<BOOLEAN>;
+  public readonly relay: OPTIONAL<BOOLEAN>;
   /**
    * @summary `role`.
    * @description SOAP role URI this block is targeted at.
@@ -85,7 +85,7 @@ export class HeaderBlock {
    * @public
    * @readonly
    */
-  readonly role: OPTIONAL<AnyURI>;
+  public readonly role: OPTIONAL<AnyURI>;
   /**
    * @summary `content`.
    * @description Header-block payload: an embedded ASN.1
@@ -94,7 +94,7 @@ export class HeaderBlock {
    * @public
    * @readonly
    */
-  readonly content: Content;
+  public readonly content: Content;
 
   constructor(
     mustUnderstand: OPTIONAL<BOOLEAN>,

@@ -1,13 +1,13 @@
 /* eslint-disable */
 import {
-    ASN1Element as _Element,
+    type ASN1Element as _Element,
     ASN1TagClass as _TagClass,
-    OBJECT_IDENTIFIER,
-    OPTIONAL,
+    type OBJECT_IDENTIFIER,
+    type OPTIONAL,
 } from "@wildboar/asn1";
 import * as $ from "@wildboar/asn1/functional";
 import {
-    KeyUsage,
+    type KeyUsage,
     _decode_KeyUsage,
     _encode_KeyUsage,
 } from "@wildboar/x500/CertificateExtensions";
@@ -28,20 +28,26 @@ import {
  *
  */
 export class Usage {
+    /**
+     * @summary `keyUsage`.
+     * @public
+     * @readonly
+     */
+    public readonly keyUsage?: OPTIONAL<KeyUsage>;
+    /**
+     * @summary `extKeyUsage`.
+     * @public
+     * @readonly
+     */
+    public readonly extKeyUsage?: OPTIONAL<OBJECT_IDENTIFIER[]>;
+
     constructor(
-        /**
-         * @summary `keyUsage`.
-         * @public
-         * @readonly
-         */
-        readonly keyUsage?: OPTIONAL<KeyUsage>,
-        /**
-         * @summary `extKeyUsage`.
-         * @public
-         * @readonly
-         */
-        readonly extKeyUsage?: OPTIONAL<OBJECT_IDENTIFIER[]>
-    ) {}
+        keyUsage?: OPTIONAL<KeyUsage>,
+        extKeyUsage?: OPTIONAL<OBJECT_IDENTIFIER[]>
+    ) {
+        this.keyUsage = keyUsage;
+        this.extKeyUsage = extKeyUsage;
+    }
 
     /**
      * @summary Restructures an object into a Usage

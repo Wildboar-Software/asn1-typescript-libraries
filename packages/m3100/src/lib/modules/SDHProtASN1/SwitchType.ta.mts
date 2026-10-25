@@ -1,6 +1,6 @@
 /* eslint-disable */
 import {
-    ASN1Element as _Element,
+    type ASN1Element as _Element,
     ASN1TagClass as _TagClass,
     ASN1Construction as _Construction,
     ASN1UniversalType as _UniversalType,
@@ -58,7 +58,7 @@ export type SwitchType = _enum_for_SwitchType;
  *
  * @enum {number}
  */
-export const SwitchType = _enum_for_SwitchType;
+export const SwitchType: typeof _enum_for_SwitchType = _enum_for_SwitchType;
 
 
 /**
@@ -66,7 +66,7 @@ export const SwitchType = _enum_for_SwitchType;
  * @constant
  * @type {number}
  */
-export const SwitchType_manual: SwitchType =
+export const SwitchType_manual: _enum_for_SwitchType.manual =
     SwitchType.manual; /* LONG_NAMED_ENUMERATED_VALUE */
 
 
@@ -75,7 +75,7 @@ export const SwitchType_manual: SwitchType =
  * @constant
  * @type {number}
  */
-export const manual: SwitchType =
+export const manual: _enum_for_SwitchType.manual =
     SwitchType.manual; /* SHORT_NAMED_ENUMERATED_VALUE */
 
 
@@ -84,7 +84,7 @@ export const manual: SwitchType =
  * @constant
  * @type {number}
  */
-export const SwitchType_forced: SwitchType =
+export const SwitchType_forced: _enum_for_SwitchType.forced =
     SwitchType.forced; /* LONG_NAMED_ENUMERATED_VALUE */
 
 
@@ -93,7 +93,7 @@ export const SwitchType_forced: SwitchType =
  * @constant
  * @type {number}
  */
-export const forced: SwitchType =
+export const forced: _enum_for_SwitchType.forced =
     SwitchType.forced; /* SHORT_NAMED_ENUMERATED_VALUE */
 
 
@@ -102,7 +102,7 @@ export const forced: SwitchType =
  * @constant
  * @type {number}
  */
-export const SwitchType_lockout: SwitchType =
+export const SwitchType_lockout: _enum_for_SwitchType.lockout =
     SwitchType.lockout; /* LONG_NAMED_ENUMERATED_VALUE */
 
 
@@ -111,18 +111,30 @@ export const SwitchType_lockout: SwitchType =
  * @constant
  * @type {number}
  */
-export const lockout: SwitchType =
+export const lockout: _enum_for_SwitchType.lockout =
     SwitchType.lockout; /* SHORT_NAMED_ENUMERATED_VALUE */
 
 
 
 
-export const _decode_SwitchType = $._decodeEnumerated;
+export function _decode_SwitchType(el: _Element): SwitchType {
+    const enumerated = $._decodeEnumerated(el);
+    switch (enumerated) {
+        case SwitchType.manual: return SwitchType.manual;
+        case SwitchType.forced: return SwitchType.forced;
+        case SwitchType.lockout: return SwitchType.lockout;
+        default:
+            throw new _ConstructionError(
+                'Invalid ENUMERATED value ' + enumerated + ' for SwitchType.',
+                el,
+            );
+    }
+}
 
 
 
 
-export const _encode_SwitchType = $._encodeEnumerated;
+export const _encode_SwitchType: $.ASN1Encoder<SwitchType> = $._encodeEnumerated as $.ASN1Encoder<SwitchType>;
 
 
 /* eslint-enable */

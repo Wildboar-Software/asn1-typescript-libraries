@@ -1,4 +1,5 @@
 /* eslint-disable */
+import { ASN1Element as _Element, ASN1ConstructionError as _ConstructionError } from "@wildboar/asn1";
 import * as $ from "@wildboar/asn1/functional";
 
 
@@ -56,7 +57,7 @@ type EventTypeBCUSM = _enum_for_EventTypeBCUSM;
  * @enum {number}
  */
 export
-const EventTypeBCUSM = _enum_for_EventTypeBCUSM;
+const EventTypeBCUSM: typeof _enum_for_EventTypeBCUSM = _enum_for_EventTypeBCUSM;
 
 /**
  * @summary EventTypeBCUSM_componentReceived
@@ -64,7 +65,7 @@ const EventTypeBCUSM = _enum_for_EventTypeBCUSM;
  * @type {number}
  */
 export
-const EventTypeBCUSM_componentReceived: EventTypeBCUSM = EventTypeBCUSM.componentReceived; /* LONG_NAMED_ENUMERATED_VALUE */
+const EventTypeBCUSM_componentReceived: _enum_for_EventTypeBCUSM.componentReceived = EventTypeBCUSM.componentReceived; /* LONG_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary componentReceived
@@ -72,7 +73,7 @@ const EventTypeBCUSM_componentReceived: EventTypeBCUSM = EventTypeBCUSM.componen
  * @type {number}
  */
 export
-const componentReceived: EventTypeBCUSM = EventTypeBCUSM.componentReceived; /* SHORT_NAMED_ENUMERATED_VALUE */
+const componentReceived: _enum_for_EventTypeBCUSM.componentReceived = EventTypeBCUSM.componentReceived; /* SHORT_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary EventTypeBCUSM_associationReleaseRequested
@@ -80,7 +81,7 @@ const componentReceived: EventTypeBCUSM = EventTypeBCUSM.componentReceived; /* S
  * @type {number}
  */
 export
-const EventTypeBCUSM_associationReleaseRequested: EventTypeBCUSM = EventTypeBCUSM.associationReleaseRequested; /* LONG_NAMED_ENUMERATED_VALUE */
+const EventTypeBCUSM_associationReleaseRequested: _enum_for_EventTypeBCUSM.associationReleaseRequested = EventTypeBCUSM.associationReleaseRequested; /* LONG_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary associationReleaseRequested
@@ -88,7 +89,7 @@ const EventTypeBCUSM_associationReleaseRequested: EventTypeBCUSM = EventTypeBCUS
  * @type {number}
  */
 export
-const associationReleaseRequested: EventTypeBCUSM = EventTypeBCUSM.associationReleaseRequested; /* SHORT_NAMED_ENUMERATED_VALUE */
+const associationReleaseRequested: _enum_for_EventTypeBCUSM.associationReleaseRequested = EventTypeBCUSM.associationReleaseRequested; /* SHORT_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary EventTypeBCUSM_activationReceivedAndAuthorized
@@ -96,7 +97,7 @@ const associationReleaseRequested: EventTypeBCUSM = EventTypeBCUSM.associationRe
  * @type {number}
  */
 export
-const EventTypeBCUSM_activationReceivedAndAuthorized: EventTypeBCUSM = EventTypeBCUSM.activationReceivedAndAuthorized; /* LONG_NAMED_ENUMERATED_VALUE */
+const EventTypeBCUSM_activationReceivedAndAuthorized: _enum_for_EventTypeBCUSM.activationReceivedAndAuthorized = EventTypeBCUSM.activationReceivedAndAuthorized; /* LONG_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary activationReceivedAndAuthorized
@@ -104,12 +105,24 @@ const EventTypeBCUSM_activationReceivedAndAuthorized: EventTypeBCUSM = EventType
  * @type {number}
  */
 export
-const activationReceivedAndAuthorized: EventTypeBCUSM = EventTypeBCUSM.activationReceivedAndAuthorized; /* SHORT_NAMED_ENUMERATED_VALUE */
+const activationReceivedAndAuthorized: _enum_for_EventTypeBCUSM.activationReceivedAndAuthorized = EventTypeBCUSM.activationReceivedAndAuthorized; /* SHORT_NAMED_ENUMERATED_VALUE */
 
 export
-const _decode_EventTypeBCUSM: $.ASN1Decoder<EventTypeBCUSM> = $._decodeEnumerated;
+function _decode_EventTypeBCUSM(el: _Element): EventTypeBCUSM {
+    const enumerated = $._decodeEnumerated(el);
+    switch (enumerated) {
+        case EventTypeBCUSM.componentReceived: return EventTypeBCUSM.componentReceived;
+        case EventTypeBCUSM.associationReleaseRequested: return EventTypeBCUSM.associationReleaseRequested;
+        case EventTypeBCUSM.activationReceivedAndAuthorized: return EventTypeBCUSM.activationReceivedAndAuthorized;
+        default:
+            throw new _ConstructionError(
+                "Invalid ENUMERATED value " + enumerated + " for EventTypeBCUSM.",
+                el,
+            );
+    }
+}
 
 export
-const _encode_EventTypeBCUSM: $.ASN1Encoder<EventTypeBCUSM> = $._encodeEnumerated;
+const _encode_EventTypeBCUSM: $.ASN1Encoder<EventTypeBCUSM> = $._encodeEnumerated as $.ASN1Encoder<EventTypeBCUSM>;
 
 /* eslint-enable */

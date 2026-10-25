@@ -1,11 +1,11 @@
 /* eslint-disable */
 import {
-    OPTIONAL,
-    ASN1Element as _Element,
+    type OPTIONAL,
+    type ASN1Element as _Element,
     ASN1TagClass as _TagClass
 } from "@wildboar/asn1";
 import * as $ from "@wildboar/asn1/functional";
-import { EMLPP_Priority, _decode_EMLPP_Priority, _encode_EMLPP_Priority } from "../MAP-CommonDataTypes/EMLPP-Priority.ta.mjs";
+import { type EMLPP_Priority, _decode_EMLPP_Priority, _encode_EMLPP_Priority } from "../MAP-CommonDataTypes/EMLPP-Priority.ta.mjs";
 import { ExtensionContainer, _decode_ExtensionContainer, _encode_ExtensionContainer } from "../MAP-ExtensionDataTypes/ExtensionContainer.ta.mjs";
 
 
@@ -25,7 +25,7 @@ import { ExtensionContainer, _decode_ExtensionContainer, _encode_ExtensionContai
  * EMLPP-Info ::= SEQUENCE {
  *     maximumentitledPriority    EMLPP-Priority,
  *     defaultPriority    EMLPP-Priority,
- *     extensionContainer    ExtensionContainer    OPTIONAL,
+ *     extensionContainer    ExtensionContainer    type OPTIONAL,
  *     ...}
  * ```
  * 
@@ -33,46 +33,56 @@ import { ExtensionContainer, _decode_ExtensionContainer, _encode_ExtensionContai
  */
 export
 class EMLPP_Info {
+    /**
+     * @summary `maximumentitledPriority`.
+     * @description
+     *
+     * Highest eMLPP priority the subscriber may apply for an outgoing call
+     * set-up. (3GPP TS 29.002 V19.1.0 clause 7.6.4.41).
+     *
+     * @public
+     * @readonly
+     */
+    public readonly maximumentitledPriority: EMLPP_Priority;
+    /**
+     * @summary `defaultPriority`.
+     * @description
+     *
+     * Priority assigned if no explicit priority is indicated at call
+     * set-up. (3GPP TS 29.002 V19.1.0 clause 7.6.4.41).
+     *
+     * @public
+     * @readonly
+     */
+    public readonly defaultPriority: EMLPP_Priority;
+    /**
+     * @summary `extensionContainer`.
+     * @description
+     *
+     * Private extensions. (3GPP TS 29.002 V19.1.0 clause 17.7.8).
+     *
+     * @public
+     * @readonly
+     */
+    public readonly extensionContainer?: OPTIONAL<ExtensionContainer>;
+    /**
+     * @summary Extensions that are not recognized.
+     * @public
+     * @readonly
+     */
+    public readonly _unrecognizedExtensionsList: _Element[];
+
     constructor (
-        /**
-         * @summary `maximumentitledPriority`.
-         * @description
-         *
-         * Highest eMLPP priority the subscriber may apply for an outgoing call
-         * set-up. (3GPP TS 29.002 V19.1.0 clause 7.6.4.41).
-         *
-         * @public
-         * @readonly
-         */
-        readonly maximumentitledPriority: EMLPP_Priority,
-        /**
-         * @summary `defaultPriority`.
-         * @description
-         *
-         * Priority assigned if no explicit priority is indicated at call
-         * set-up. (3GPP TS 29.002 V19.1.0 clause 7.6.4.41).
-         *
-         * @public
-         * @readonly
-         */
-        readonly defaultPriority: EMLPP_Priority,
-        /**
-         * @summary `extensionContainer`.
-         * @description
-         *
-         * Private extensions. (3GPP TS 29.002 V19.1.0 clause 17.7.8).
-         *
-         * @public
-         * @readonly
-         */
-        readonly extensionContainer?: OPTIONAL<ExtensionContainer>,
-        /**
-         * @summary Extensions that are not recognized.
-         * @public
-         * @readonly
-         */
-        readonly _unrecognizedExtensionsList: _Element[] = []
-    ) {}
+        maximumentitledPriority: EMLPP_Priority,
+        defaultPriority: EMLPP_Priority,
+        extensionContainer?: OPTIONAL<ExtensionContainer>,
+        _unrecognizedExtensionsList: _Element[] = []
+    ) {
+        this.maximumentitledPriority = maximumentitledPriority;
+        this.defaultPriority = defaultPriority;
+        this.extensionContainer = extensionContainer;
+        this._unrecognizedExtensionsList = _unrecognizedExtensionsList;
+    }
 
     /**
      * @summary Restructures an object into a EMLPP_Info

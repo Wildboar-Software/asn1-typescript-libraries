@@ -1,10 +1,10 @@
 /* eslint-disable */
 import {
-    ASN1Element as _Element,
+    type ASN1Element as _Element,
     ASN1TagClass as _TagClass,
-    BOOLEAN,
-    INTEGER,
-    OPTIONAL,
+    type BOOLEAN,
+    type INTEGER,
+    type OPTIONAL,
 } from "@wildboar/asn1";
 import * as $ from "@wildboar/asn1/functional";
 import {
@@ -13,7 +13,7 @@ import {
     _encode_AccessPointInformation,
 } from "../DistributedOperations/AccessPointInformation.ta.mjs";
 import {
-    Exclusions,
+    type Exclusions,
     _decode_Exclusions,
     _encode_Exclusions,
 } from "../DistributedOperations/Exclusions.ta.mjs";
@@ -23,13 +23,13 @@ import {
     _encode_OperationProgress,
 } from "../DistributedOperations/OperationProgress.ta.mjs";
 import {
-    ReferenceType,
+    type ReferenceType,
     _decode_ReferenceType,
     _encode_ReferenceType,
     _enum_for_ReferenceType,
 } from "../DistributedOperations/ReferenceType.ta.mjs";
 import {
-    Name,
+    type Name,
     _decode_Name,
     _encode_Name,
 } from "../InformationFramework/Name.ta.mjs";
@@ -64,131 +64,155 @@ import {
  *
  */
 export class ContinuationReference {
+    /**
+     * @summary `targetObject`.
+     * @description
+     *
+     * Name to use when continuing (may differ from incoming
+     * `targetObject` after alias deref or after locating a Search
+     * base).
+     *
+     * @public
+     * @readonly
+     */
+    public readonly targetObject: Name;
+    /**
+     * @summary `aliasedRDNs`.
+     * @description
+     *
+     * How many RDNs of `targetObject` came from alias deref. Present
+     * only if an alias was dereferenced. 1988 compatibility; 1993+
+     * shall not include this in CommonArguments.
+     *
+     * @public
+     * @readonly
+     */
+    public readonly aliasedRDNs: OPTIONAL<INTEGER>;
+    /**
+     * @summary `operationProgress`.
+     * @description
+     *
+     * How much name resolution is done; governs the next DSA/DUA if the
+     * CR is followed.
+     *
+     * @public
+     * @readonly
+     */
+    public readonly operationProgress: OperationProgress;
+    /**
+     * @summary `rdnsResolved`.
+     * @description
+     *
+     * How many RDNs were actually resolved via internal references
+     * only. Needed when some RDNs were assumed correct from a cross
+     * reference.
+     *
+     * @public
+     * @readonly
+     */
+    public readonly rdnsResolved: OPTIONAL<INTEGER>;
+    /**
+     * @summary `referenceType`.
+     * @description
+     *
+     * Knowledge type used to generate this continuation. With
+     * `returnToDUA` TRUE, may be `self`.
+     *
+     * @public
+     * @readonly
+     */
+    public readonly referenceType: ReferenceType;
+    /**
+     * @summary `accessPoints`.
+     * @description
+     *
+     * SET OF AccessPointInformation. More than one item only for
+     * NSSRs. Order insignificant.
+     *
+     * @public
+     * @readonly
+     */
+    public readonly accessPoints: AccessPointInformation[];
+    /**
+     * @summary `entryOnly`.
+     * @description
+     *
+     * DEFAULT FALSE. TRUE iff original Search subset was oneLevel and
+     * an alias was an immediate subordinate of baseObject. Completing
+     * DSA evaluates only the named entry. Else absent or FALSE.
+     *
+     * @public
+     * @readonly
+     */
+    public readonly entryOnly?: OPTIONAL<BOOLEAN>;
+    /**
+     * @summary `exclusions`.
+     * @description
+     *
+     * Subordinate naming contexts the receiving DSA should not explore.
+     * Same Exclusions rules (relative, SIZE (1..MAX); omit rather than
+     * empty SET).
+     *
+     * @public
+     * @readonly
+     */
+    public readonly exclusions?: OPTIONAL<Exclusions>;
+    /**
+     * @summary `returnToDUA`.
+     * @description
+     *
+     * DEFAULT FALSE. TRUE ⇒ unwilling to return data via an
+     * intermediate DSA; DUA/LDAP client should bind directly
+     * (DAP/LDAP). May set `referenceType` to `self`.
+     *
+     * @public
+     * @readonly
+     */
+    public readonly returnToDUA?: OPTIONAL<BOOLEAN>;
+    /**
+     * @summary `nameResolveOnMaster`.
+     * @description
+     *
+     * DEFAULT FALSE. Set when NSSRs were encountered. TRUE ⇒ remaining
+     * RDNs from `nextRDNToBeResolved` shall not use copies (incl.
+     * writeable copies); each remaining RDN at that entry's master.
+     *
+     * @public
+     * @readonly
+     */
+    public readonly nameResolveOnMaster?: OPTIONAL<BOOLEAN>;
+    /**
+     * @summary Extensions that are not recognized.
+     * @public
+     * @readonly
+     */
+    public readonly _unrecognizedExtensionsList: _Element[];
+
     constructor(
-        /**
-         * @summary `targetObject`.
-         * @description
-         *
-         * Name to use when continuing (may differ from incoming
-         * `targetObject` after alias deref or after locating a Search
-         * base).
-         *
-         * @public
-         * @readonly
-         */
-        readonly targetObject: Name,
-        /**
-         * @summary `aliasedRDNs`.
-         * @description
-         *
-         * How many RDNs of `targetObject` came from alias deref. Present
-         * only if an alias was dereferenced. 1988 compatibility; 1993+
-         * shall not include this in CommonArguments.
-         *
-         * @public
-         * @readonly
-         */
-        readonly aliasedRDNs: OPTIONAL<INTEGER>,
-        /**
-         * @summary `operationProgress`.
-         * @description
-         *
-         * How much name resolution is done; governs the next DSA/DUA if the
-         * CR is followed.
-         *
-         * @public
-         * @readonly
-         */
-        readonly operationProgress: OperationProgress,
-        /**
-         * @summary `rdnsResolved`.
-         * @description
-         *
-         * How many RDNs were actually resolved via internal references
-         * only. Needed when some RDNs were assumed correct from a cross
-         * reference.
-         *
-         * @public
-         * @readonly
-         */
-        readonly rdnsResolved: OPTIONAL<INTEGER>,
-        /**
-         * @summary `referenceType`.
-         * @description
-         *
-         * Knowledge type used to generate this continuation. With
-         * `returnToDUA` TRUE, may be `self`.
-         *
-         * @public
-         * @readonly
-         */
-        readonly referenceType: ReferenceType,
-        /**
-         * @summary `accessPoints`.
-         * @description
-         *
-         * SET OF AccessPointInformation. More than one item only for
-         * NSSRs. Order insignificant.
-         *
-         * @public
-         * @readonly
-         */
-        readonly accessPoints: AccessPointInformation[],
-        /**
-         * @summary `entryOnly`.
-         * @description
-         *
-         * DEFAULT FALSE. TRUE iff original Search subset was oneLevel and
-         * an alias was an immediate subordinate of baseObject. Completing
-         * DSA evaluates only the named entry. Else absent or FALSE.
-         *
-         * @public
-         * @readonly
-         */
-        readonly entryOnly?: OPTIONAL<BOOLEAN>,
-        /**
-         * @summary `exclusions`.
-         * @description
-         *
-         * Subordinate naming contexts the receiving DSA should not explore.
-         * Same Exclusions rules (relative, SIZE (1..MAX); omit rather than
-         * empty SET).
-         *
-         * @public
-         * @readonly
-         */
-        readonly exclusions?: OPTIONAL<Exclusions>,
-        /**
-         * @summary `returnToDUA`.
-         * @description
-         *
-         * DEFAULT FALSE. TRUE ⇒ unwilling to return data via an
-         * intermediate DSA; DUA/LDAP client should bind directly
-         * (DAP/LDAP). May set `referenceType` to `self`.
-         *
-         * @public
-         * @readonly
-         */
-        readonly returnToDUA?: OPTIONAL<BOOLEAN>,
-        /**
-         * @summary `nameResolveOnMaster`.
-         * @description
-         *
-         * DEFAULT FALSE. Set when NSSRs were encountered. TRUE ⇒ remaining
-         * RDNs from `nextRDNToBeResolved` shall not use copies (incl.
-         * writeable copies); each remaining RDN at that entry's master.
-         *
-         * @public
-         * @readonly
-         */
-        readonly nameResolveOnMaster?: OPTIONAL<BOOLEAN>,
-        /**
-         * @summary Extensions that are not recognized.
-         * @public
-         * @readonly
-         */
-        readonly _unrecognizedExtensionsList: _Element[] = []
-    ) {}
+        targetObject: Name,
+        aliasedRDNs: OPTIONAL<INTEGER>,
+        operationProgress: OperationProgress,
+        rdnsResolved: OPTIONAL<INTEGER>,
+        referenceType: ReferenceType,
+        accessPoints: AccessPointInformation[],
+        entryOnly?: OPTIONAL<BOOLEAN>,
+        exclusions?: OPTIONAL<Exclusions>,
+        returnToDUA?: OPTIONAL<BOOLEAN>,
+        nameResolveOnMaster?: OPTIONAL<BOOLEAN>,
+        _unrecognizedExtensionsList: _Element[] = []
+    ) {
+        this.targetObject = targetObject;
+        this.aliasedRDNs = aliasedRDNs;
+        this.operationProgress = operationProgress;
+        this.rdnsResolved = rdnsResolved;
+        this.referenceType = referenceType;
+        this.accessPoints = accessPoints;
+        this.entryOnly = entryOnly;
+        this.exclusions = exclusions;
+        this.returnToDUA = returnToDUA;
+        this.nameResolveOnMaster = nameResolveOnMaster;
+        this._unrecognizedExtensionsList = _unrecognizedExtensionsList;
+    }
 
     /**
      * @summary Restructures an object into a ContinuationReference
@@ -253,7 +277,7 @@ export class ContinuationReference {
      * @static
      */
 
-    public static _enum_for_referenceType = _enum_for_ReferenceType;
+    public static _enum_for_referenceType: typeof _enum_for_ReferenceType = _enum_for_ReferenceType;
 }
 
 /**

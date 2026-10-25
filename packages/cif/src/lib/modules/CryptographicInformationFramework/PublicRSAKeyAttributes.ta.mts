@@ -1,9 +1,9 @@
 /* eslint-disable */
 import {
-    OPTIONAL,
-    INTEGER,
-    NULL,
-    ASN1Element as _Element,
+    type OPTIONAL,
+    type INTEGER,
+    type NULL,
+    type ASN1Element as _Element,
     ASN1TagClass as _TagClass,
     ASN1Construction as _Construction,
     ASN1UniversalType as _UniversalType,
@@ -13,10 +13,10 @@ import {
     ASN1ConstructionError as _ConstructionError,
 } from "@wildboar/asn1";
 import * as $ from "@wildboar/asn1/functional";
-import { ObjectValue, _get_decoder_for_ObjectValue, _get_encoder_for_ObjectValue } from "../CryptographicInformationFramework/ObjectValue.ta.mjs";
-import { RSAPublicKeyChoice, _decode_RSAPublicKeyChoice, _encode_RSAPublicKeyChoice } from "../CryptographicInformationFramework/RSAPublicKeyChoice.ta.mjs";
-import { KeyInfo, _get_decoder_for_KeyInfo, _get_encoder_for_KeyInfo } from "../CryptographicInformationFramework/KeyInfo.ta.mjs";
-import { PublicKeyOperations, _decode_PublicKeyOperations, _encode_PublicKeyOperations } from "../CryptographicInformationFramework/PublicKeyOperations.ta.mjs";
+import { type ObjectValue, _get_decoder_for_ObjectValue, _get_encoder_for_ObjectValue } from "../CryptographicInformationFramework/ObjectValue.ta.mjs";
+import { type RSAPublicKeyChoice, _decode_RSAPublicKeyChoice, _encode_RSAPublicKeyChoice } from "../CryptographicInformationFramework/RSAPublicKeyChoice.ta.mjs";
+import { type KeyInfo, _get_decoder_for_KeyInfo, _get_encoder_for_KeyInfo } from "../CryptographicInformationFramework/KeyInfo.ta.mjs";
+import { type PublicKeyOperations, _decode_PublicKeyOperations, _encode_PublicKeyOperations } from "../CryptographicInformationFramework/PublicKeyOperations.ta.mjs";
 
 
 /**
@@ -40,42 +40,52 @@ import { PublicKeyOperations, _decode_PublicKeyOperations, _encode_PublicKeyOper
  */
 export
 class PublicRSAKeyAttributes {
+    /**
+     * @summary `value`.
+     * @description
+     * `ObjectValue` of `RSAPublicKeyChoice` or a card-specific public RSA
+     * key (typically via `Path`). ISO/IEC 7816-15:2016 §8.5.2.
+     * @public
+     * @readonly
+     */
+    public readonly value: ObjectValue<RSAPublicKeyChoice>;
+    /**
+     * @summary `modulusLength`.
+     * @description
+     * Modulus length in bits, needed to format data to encrypt before
+     * sending it to the card. ISO/IEC 7816-15:2016 §8.5.2.
+     * @public
+     * @readonly
+     */
+    public readonly modulusLength: INTEGER;
+    /**
+     * @summary `keyInfo`.
+     * @description
+     * If present, overrides `CIAInfo.supportedAlgorithms` referenced by
+     * `CommonKeyAttributes.algReference`. Omit when available by other
+     * means. ISO/IEC 7816-15:2016 §8.4.2.
+     * @public
+     * @readonly
+     */
+    public readonly keyInfo?: OPTIONAL<KeyInfo<NULL, PublicKeyOperations>>;
+    /**
+     * @summary Extensions that are not recognized.
+     * @public
+     * @readonly
+     */
+    public readonly _unrecognizedExtensionsList: _Element[];
+
     constructor (
-        /**
-         * @summary `value`.
-         * @description
-         * `ObjectValue` of `RSAPublicKeyChoice` or a card-specific public RSA
-         * key (typically via `Path`). ISO/IEC 7816-15:2016 §8.5.2.
-         * @public
-         * @readonly
-         */
-        readonly value: ObjectValue<RSAPublicKeyChoice>,
-        /**
-         * @summary `modulusLength`.
-         * @description
-         * Modulus length in bits, needed to format data to encrypt before
-         * sending it to the card. ISO/IEC 7816-15:2016 §8.5.2.
-         * @public
-         * @readonly
-         */
-        readonly modulusLength: INTEGER,
-        /**
-         * @summary `keyInfo`.
-         * @description
-         * If present, overrides `CIAInfo.supportedAlgorithms` referenced by
-         * `CommonKeyAttributes.algReference`. Omit when available by other
-         * means. ISO/IEC 7816-15:2016 §8.4.2.
-         * @public
-         * @readonly
-         */
-        readonly keyInfo?: OPTIONAL<KeyInfo<NULL, PublicKeyOperations>>,
-        /**
-         * @summary Extensions that are not recognized.
-         * @public
-         * @readonly
-         */
-        readonly _unrecognizedExtensionsList: _Element[] = []
-    ) {}
+        value: ObjectValue<RSAPublicKeyChoice>,
+        modulusLength: INTEGER,
+        keyInfo?: OPTIONAL<KeyInfo<NULL, PublicKeyOperations>>,
+        _unrecognizedExtensionsList: _Element[] = []
+    ) {
+        this.value = value;
+        this.modulusLength = modulusLength;
+        this.keyInfo = keyInfo;
+        this._unrecognizedExtensionsList = _unrecognizedExtensionsList;
+    }
 
     /**
      * @summary Restructures an object into a PublicRSAKeyAttributes

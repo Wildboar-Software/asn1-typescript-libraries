@@ -1,11 +1,11 @@
 /* eslint-disable */
 import {
-    OPTIONAL,
-    ASN1Element as _Element,
+    type OPTIONAL,
+    type ASN1Element as _Element,
     ASN1TagClass as _TagClass
 } from "@wildboar/asn1";
 import * as $ from "@wildboar/asn1/functional";
-import { AbsentSubscriberReason, _decode_AbsentSubscriberReason, _encode_AbsentSubscriberReason, _enum_for_AbsentSubscriberReason } from "../MAP-ER-DataTypes/AbsentSubscriberReason.ta.mjs";
+import { type AbsentSubscriberReason, _decode_AbsentSubscriberReason, _encode_AbsentSubscriberReason, _enum_for_AbsentSubscriberReason } from "../MAP-ER-DataTypes/AbsentSubscriberReason.ta.mjs";
 import { ExtensionContainer, _decode_ExtensionContainer, _encode_ExtensionContainer } from "../MAP-ExtensionDataTypes/ExtensionContainer.ta.mjs";
 
 
@@ -22,7 +22,7 @@ import { ExtensionContainer, _decode_ExtensionContainer, _encode_ExtensionContai
  * 
  * ```asn1
  * AbsentSubscriberParam ::= SEQUENCE {
- *     extensionContainer    ExtensionContainer    OPTIONAL,
+ *     extensionContainer    ExtensionContainer    type OPTIONAL,
  *     ...,
  *     absentSubscriberReason    [0] AbsentSubscriberReason    OPTIONAL}
  * ```
@@ -31,32 +31,40 @@ import { ExtensionContainer, _decode_ExtensionContainer, _encode_ExtensionContai
  */
 export
 class AbsentSubscriberParam {
+    /**
+     * @summary `extensionContainer`.
+     * @public
+     * @readonly
+     */
+    public readonly extensionContainer?: OPTIONAL<ExtensionContainer>;
+    /**
+     * @summary `absentSubscriberReason`.
+     * @description
+     *
+     * Whether the subscriber was IMSI detached, in a restricted area, or
+     * did not respond to paging, or a later-defined reason. Unknown values
+     * shall be ignored (3GPP TS 29.002 V19.1.0 clauses 7.6.1.4 and 17.7.7).
+     *
+     * @public
+     * @readonly
+     */
+    public readonly absentSubscriberReason?: OPTIONAL<AbsentSubscriberReason>;
+    /**
+     * @summary Extensions that are not recognized.
+     * @public
+     * @readonly
+     */
+    public readonly _unrecognizedExtensionsList: _Element[];
+
     constructor (
-        /**
-         * @summary `extensionContainer`.
-         * @public
-         * @readonly
-         */
-        readonly extensionContainer?: OPTIONAL<ExtensionContainer>,
-        /**
-         * @summary `absentSubscriberReason`.
-         * @description
-         *
-         * Whether the subscriber was IMSI detached, in a restricted area, or
-         * did not respond to paging, or a later-defined reason. Unknown values
-         * shall be ignored (3GPP TS 29.002 V19.1.0 clauses 7.6.1.4 and 17.7.7).
-         *
-         * @public
-         * @readonly
-         */
-        readonly absentSubscriberReason?: OPTIONAL<AbsentSubscriberReason>,
-        /**
-         * @summary Extensions that are not recognized.
-         * @public
-         * @readonly
-         */
-        readonly _unrecognizedExtensionsList: _Element[] = []
-    ) {}
+        extensionContainer?: OPTIONAL<ExtensionContainer>,
+        absentSubscriberReason?: OPTIONAL<AbsentSubscriberReason>,
+        _unrecognizedExtensionsList: _Element[] = []
+    ) {
+        this.extensionContainer = extensionContainer;
+        this.absentSubscriberReason = absentSubscriberReason;
+        this._unrecognizedExtensionsList = _unrecognizedExtensionsList;
+    }
 
     /**
      * @summary Restructures an object into a AbsentSubscriberParam
@@ -80,7 +88,7 @@ class AbsentSubscriberParam {
          * @static
          */
 
-    public static _enum_for_absentSubscriberReason = _enum_for_AbsentSubscriberReason;
+    public static _enum_for_absentSubscriberReason: typeof _enum_for_AbsentSubscriberReason = _enum_for_AbsentSubscriberReason;
 }
 
 /**

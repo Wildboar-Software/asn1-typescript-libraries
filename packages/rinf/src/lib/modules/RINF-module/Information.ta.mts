@@ -1,6 +1,6 @@
 /* eslint-disable */
 import {
-  OPTIONAL,
+  type OPTIONAL,
   ASN1Element as _Element,
   ASN1TagClass as _TagClass,
   ASN1Construction as _Construction,
@@ -12,7 +12,7 @@ import {
 } from '@wildboar/asn1';
 import * as $ from '@wildboar/asn1/functional';
 import {
-  HTMLString,
+  type HTMLString,
   _decode_HTMLString,
   _encode_HTMLString,
 } from '../RINF-module/HTMLString.ta.mjs';
@@ -57,7 +57,7 @@ export class Information {
    * @public
    * @readonly
    */
-  readonly description: HTMLString;
+  public readonly description: HTMLString;
   /**
    * @summary `additionalInformation`.
    * @description
@@ -68,7 +68,7 @@ export class Information {
    * @public
    * @readonly
    */
-  readonly additionalInformation?: OPTIONAL<HTMLString>;
+  public readonly additionalInformation?: OPTIONAL<HTMLString>;
   /**
    * @summary `firstRegistration`.
    * @description
@@ -80,7 +80,7 @@ export class Information {
    * @public
    * @readonly
    */
-  readonly firstRegistration?: OPTIONAL<RegistrationDetails>;
+  public readonly firstRegistration?: OPTIONAL<RegistrationDetails>;
   /**
    * @summary `currentRegistration`.
    * @description
@@ -92,7 +92,7 @@ export class Information {
    * @public
    * @readonly
    */
-  readonly currentRegistration?: OPTIONAL<RegistrationDetails>;
+  public readonly currentRegistration?: OPTIONAL<RegistrationDetails>;
 
   constructor(
     description: HTMLString,

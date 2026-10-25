@@ -1,6 +1,6 @@
 /* eslint-disable */
 import {
-    ASN1Element as _Element,
+    type ASN1Element as _Element,
     ASN1TagClass as _TagClass,
     ASN1Construction as _Construction,
     ASN1UniversalType as _UniversalType,
@@ -29,14 +29,18 @@ import {
  *
  */
 export class sequence_number_error_ParameterType {
+    /**
+     * @summary `problems`.
+     * @public
+     * @readonly
+     */
+    public readonly problems: sequence_number_error_ParameterType_problems_Item[];
+
     constructor(
-        /**
-         * @summary `problems`.
-         * @public
-         * @readonly
-         */
-        readonly problems: sequence_number_error_ParameterType_problems_Item[]
-    ) {}
+        problems: sequence_number_error_ParameterType_problems_Item[]
+    ) {
+        this.problems = problems;
+    }
 
     /**
      * @summary Restructures an object into a sequence_number_error_ParameterType

@@ -2,19 +2,19 @@
 
 import * as $ from "@wildboar/asn1/functional";
 import {
-    OPTIONAL,
-    SEQUENCE,
-    SET,
-    ASN1Element as _Element,
+    type OPTIONAL,
+    type SEQUENCE,
+    type SET,
+    type ASN1Element as _Element,
     ASN1TagClass as _TagClass
 } from "@wildboar/asn1";
-import { SubjectDeviceID, _decode_SubjectDeviceID, _encode_SubjectDeviceID } from "../CSTA-device-identifiers/SubjectDeviceID.ta.mjs";
+import { type SubjectDeviceID, _decode_SubjectDeviceID, _encode_SubjectDeviceID } from "../CSTA-device-identifiers/SubjectDeviceID.ta.mjs";
 
-import { AgentID, _decode_AgentID, _encode_AgentID } from "../CSTA-device-feature-types/AgentID.ta.mjs";
+import { type AgentID, _decode_AgentID, _encode_AgentID } from "../CSTA-device-feature-types/AgentID.ta.mjs";
 
 import { DeviceID, _decode_DeviceID, _encode_DeviceID } from "../CSTA-device-identifiers/DeviceID.ta.mjs";
 
-import { AgentPassword, _decode_AgentPassword, _encode_AgentPassword } from "../CSTA-device-feature-types/AgentPassword.ta.mjs";
+import { type AgentPassword, _decode_AgentPassword, _encode_AgentPassword } from "../CSTA-device-feature-types/AgentPassword.ta.mjs";
 
 import {
     EventCause,
@@ -45,10 +45,10 @@ import { CSTACommonArguments, _decode_CSTACommonArguments, _encode_CSTACommonArg
  * ```asn1
  * AgentLoggedOnEvent ::= SEQUENCE
  * {    agentDevice             SubjectDeviceID,
- *     agentID                [2] IMPLICIT AgentID            OPTIONAL,
- *     acdGroup            DeviceID                OPTIONAL,
- *     agentPassword            [3] IMPLICIT AgentPassword        OPTIONAL,
- *     cause                EventCause                OPTIONAL,
+ *     agentID                [2] IMPLICIT AgentID            type OPTIONAL,
+ *     acdGroup            DeviceID                type OPTIONAL,
+ *     agentPassword            [3] IMPLICIT AgentPassword        type OPTIONAL,
+ *     cause                EventCause                type OPTIONAL,
  *     extensions             CSTACommonArguments            OPTIONAL }
  * ```
  * 
@@ -56,64 +56,78 @@ import { CSTACommonArguments, _decode_CSTACommonArguments, _encode_CSTACommonArg
  */
 export
 class AgentLoggedOnEvent {
+    /**
+     * @summary `agentDevice`.
+     * @description
+     *
+     * Device at which the agent logged on.
+     * @public
+     * @readonly
+     */
+    public readonly agentDevice: SubjectDeviceID;
+    /**
+     * @summary `agentID`.
+     * @description
+     *
+     * Required if multiple agentIDs exist at the agent device.
+     * @public
+     * @readonly
+     */
+    public readonly agentID?: OPTIONAL<AgentID>;
+    /**
+     * @summary `acdGroup`.
+     * @description
+     *
+     * ACD group to which the agent logged on. Present iff the event is
+     * associated with ACD group activity (§6.1.1.6.5); otherwise absent.
+     * @public
+     * @readonly
+     */
+    public readonly acdGroup?: OPTIONAL<DeviceID>;
+    /**
+     * @summary `agentPassword`.
+     * @description
+     *
+     * Password used; the SF may omit it for security.
+     * @public
+     * @readonly
+     */
+    public readonly agentPassword?: OPTIONAL<AgentPassword>;
+    /**
+     * @summary `cause`.
+     * @description
+     *
+     * Reason for the event.
+     * @public
+     * @readonly
+     */
+    public readonly cause?: OPTIONAL<EventCause>;
+    /**
+     * @summary `extensions`.
+     * @description
+     *
+     * Optional security (timestamp, sequence, securityInfo) and
+     * privateData.
+     * @public
+     * @readonly
+     */
+    public readonly extensions?: OPTIONAL<CSTACommonArguments>;
+
     constructor (
-        /**
-         * @summary `agentDevice`.
-         * @description
-         *
-         * Device at which the agent logged on.
-         * @public
-         * @readonly
-         */
-        readonly agentDevice: SubjectDeviceID,
-        /**
-         * @summary `agentID`.
-         * @description
-         *
-         * Required if multiple agentIDs exist at the agent device.
-         * @public
-         * @readonly
-         */
-        readonly agentID?: OPTIONAL<AgentID>,
-        /**
-         * @summary `acdGroup`.
-         * @description
-         *
-         * ACD group to which the agent logged on. Present iff the event is
-         * associated with ACD group activity (§6.1.1.6.5); otherwise absent.
-         * @public
-         * @readonly
-         */
-        readonly acdGroup?: OPTIONAL<DeviceID>,
-        /**
-         * @summary `agentPassword`.
-         * @description
-         *
-         * Password used; the SF may omit it for security.
-         * @public
-         * @readonly
-         */
-        readonly agentPassword?: OPTIONAL<AgentPassword>,
-        /**
-         * @summary `cause`.
-         * @description
-         *
-         * Reason for the event.
-         * @public
-         * @readonly
-         */
-        readonly cause?: OPTIONAL<EventCause>,
-        /**
-         * @summary `extensions`.
-         * @description
-         *
-         * Optional security (timestamp, sequence, securityInfo) and
-         * privateData.
-         * @public
-         * @readonly
-         */
-        readonly extensions?: OPTIONAL<CSTACommonArguments>
-    ) {}
+        agentDevice: SubjectDeviceID,
+        agentID?: OPTIONAL<AgentID>,
+        acdGroup?: OPTIONAL<DeviceID>,
+        agentPassword?: OPTIONAL<AgentPassword>,
+        cause?: OPTIONAL<EventCause>,
+        extensions?: OPTIONAL<CSTACommonArguments>
+    ) {
+        this.agentDevice = agentDevice;
+        this.agentID = agentID;
+        this.acdGroup = acdGroup;
+        this.agentPassword = agentPassword;
+        this.cause = cause;
+        this.extensions = extensions;
+    }
 
     /**
      * @summary Restructures an object into a AgentLoggedOnEvent
@@ -137,7 +151,7 @@ class AgentLoggedOnEvent {
          * @static
          */
 
-    public static _enum_for_cause = _enum_for_EventCause;
+    public static _enum_for_cause: typeof _enum_for_EventCause = _enum_for_EventCause;
 }
 
 /**

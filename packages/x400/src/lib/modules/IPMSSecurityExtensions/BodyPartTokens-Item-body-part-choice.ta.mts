@@ -1,6 +1,6 @@
 /* eslint-disable */
 import {
-    ASN1Element as _Element,
+    type ASN1Element as _Element,
     ASN1TagClass as _TagClass,
     ASN1Construction as _Construction,
     ASN1UniversalType as _UniversalType,
@@ -16,7 +16,7 @@ import {
     _encode_EncryptionToken,
 } from '../IPMSSecurityExtensions/EncryptionToken.ta.mjs';
 import {
-    BodyPartTokens,
+    type BodyPartTokens,
     _decode_BodyPartTokens,
     _encode_BodyPartTokens,
 } from '../IPMSSecurityExtensions/BodyPartTokens.ta.mjs';

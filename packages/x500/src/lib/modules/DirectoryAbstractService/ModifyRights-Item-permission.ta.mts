@@ -1,5 +1,5 @@
 /* eslint-disable */
-import { ASN1Element as _Element, BIT_STRING } from "@wildboar/asn1";
+import { ASN1Element as _Element, type BIT_STRING } from "@wildboar/asn1";
 import * as $ from "@wildboar/asn1/functional";
 
 /**
@@ -102,10 +102,10 @@ export const ModifyRights_Item_permission_move: number = 3; /* LONG_NAMED_BIT */
 export const move: number = ModifyRights_Item_permission_move; /* SHORT_NAMED_BIT */
 
 
-export const _decode_ModifyRights_Item_permission = $._decodeBitString;
+export const _decode_ModifyRights_Item_permission: $.ASN1Decoder<BIT_STRING> = $._decodeBitString;
 
 
-export const _encode_ModifyRights_Item_permission = $._encodeBitString;
+export const _encode_ModifyRights_Item_permission: $.ASN1Encoder<BIT_STRING> = $._encodeBitString;
 
 
 /* eslint-enable */

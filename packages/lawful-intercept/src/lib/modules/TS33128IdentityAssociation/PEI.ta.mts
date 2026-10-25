@@ -1,16 +1,16 @@
 /* eslint-disable */
 import {
-    ASN1Element as _Element,
+    type ASN1Element as _Element,
     ASN1TagClass as _TagClass
 } from "@wildboar/asn1";
 import * as $ from "@wildboar/asn1/functional";
-import { IMEI, _decode_IMEI, _encode_IMEI } from "../TS33128IdentityAssociation/IMEI.ta.mjs";
+import { type IMEI, _decode_IMEI, _encode_IMEI } from "../TS33128IdentityAssociation/IMEI.ta.mjs";
 // export { IMEI, _decode_IMEI, _encode_IMEI } from "../TS33128IdentityAssociation/IMEI.ta.mjs";
-import { IMEISV, _decode_IMEISV, _encode_IMEISV } from "../TS33128IdentityAssociation/IMEISV.ta.mjs";
+import { type IMEISV, _decode_IMEISV, _encode_IMEISV } from "../TS33128IdentityAssociation/IMEISV.ta.mjs";
 // export { IMEISV, _decode_IMEISV, _encode_IMEISV } from "../TS33128IdentityAssociation/IMEISV.ta.mjs";
-import { MACAddress, _decode_MACAddress, _encode_MACAddress } from "../TS33128IdentityAssociation/MACAddress.ta.mjs";
+import { type MACAddress, _decode_MACAddress, _encode_MACAddress } from "../TS33128IdentityAssociation/MACAddress.ta.mjs";
 // export { MACAddress, _decode_MACAddress, _encode_MACAddress } from "../TS33128IdentityAssociation/MACAddress.ta.mjs";
-import { EUI64, _decode_EUI64, _encode_EUI64 } from "../TS33128IdentityAssociation/EUI64.ta.mjs";
+import { type EUI64, _decode_EUI64, _encode_EUI64 } from "../TS33128IdentityAssociation/EUI64.ta.mjs";
 // export { EUI64, _decode_EUI64, _encode_EUI64 } from "../TS33128IdentityAssociation/EUI64.ta.mjs";
 
 

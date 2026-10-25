@@ -1,11 +1,11 @@
 /* eslint-disable */
 import {
     ASN1ConstructionError as _ConstructionError,
-    ASN1Element as _Element,
+    type ASN1Element as _Element,
     ASN1TagClass as _TagClass
 } from "@wildboar/asn1";
 import * as $ from "@wildboar/asn1/functional";
-import { _decode_ConfigureImmediateProfileEnablingResponse_configImmediateEnableResult, _encode_ConfigureImmediateProfileEnablingResponse_configImmediateEnableResult, ConfigureImmediateProfileEnablingResponse_configImmediateEnableResult } from "../SGP32Definitions/ConfigureImmediateProfileEnablingResponse-configImmediateEnableResult.ta.mjs";
+import { _decode_ConfigureImmediateProfileEnablingResponse_configImmediateEnableResult, _encode_ConfigureImmediateProfileEnablingResponse_configImmediateEnableResult, type ConfigureImmediateProfileEnablingResponse_configImmediateEnableResult } from "../SGP32Definitions/ConfigureImmediateProfileEnablingResponse-configImmediateEnableResult.ta.mjs";
 
 
 /**
@@ -37,22 +37,26 @@ import { _decode_ConfigureImmediateProfileEnablingResponse_configImmediateEnable
  */
 export
 class ConfigureImmediateProfileEnablingResponse {
+    /**
+     * @summary `configImmediateEnableResult`.
+     * @description
+     *
+     * ok when the requested immediate-enabling change was applied,
+     * insufficientMemory when default SM-DP+ data cannot be stored, or
+     * associatedEimAlreadyExists when eIM Configuration Data is already present.
+     * The command is atomic.
+     *
+     * SGP.32 v1.2, section 5.9.17.
+     * @public
+     * @readonly
+     */
+    public readonly configImmediateEnableResult: ConfigureImmediateProfileEnablingResponse_configImmediateEnableResult;
+
     constructor (
-        /**
-         * @summary `configImmediateEnableResult`.
-         * @description
-         *
-         * ok when the requested immediate-enabling change was applied,
-         * insufficientMemory when default SM-DP+ data cannot be stored, or
-         * associatedEimAlreadyExists when eIM Configuration Data is already present.
-         * The command is atomic.
-         *
-         * SGP.32 v1.2, section 5.9.17.
-         * @public
-         * @readonly
-         */
-        readonly configImmediateEnableResult: ConfigureImmediateProfileEnablingResponse_configImmediateEnableResult
-    ) {}
+        configImmediateEnableResult: ConfigureImmediateProfileEnablingResponse_configImmediateEnableResult
+    ) {
+        this.configImmediateEnableResult = configImmediateEnableResult;
+    }
 
     /**
      * @summary Restructures an object into a ConfigureImmediateProfileEnablingResponse

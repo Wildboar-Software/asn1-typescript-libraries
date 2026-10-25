@@ -1,6 +1,6 @@
 /* eslint-disable */
 import {
-    ASN1Element as _Element,
+    type ASN1Element as _Element,
     ASN1TagClass as _TagClass,
     ASN1Construction as _Construction,
     ASN1UniversalType as _UniversalType,
@@ -16,7 +16,7 @@ import {
     _encode_G3FacsimileParameters,
 } from '../IPMSInformationObjects/G3FacsimileParameters.ta.mjs';
 import {
-    G3FacsimileData,
+    type G3FacsimileData,
     _decode_G3FacsimileData,
     _encode_G3FacsimileData,
 } from '../IPMSInformationObjects/G3FacsimileData.ta.mjs';
@@ -37,20 +37,26 @@ import {
  *
  */
 export class G3FacsimileBodyPart {
+    /**
+     * @summary `parameters`.
+     * @public
+     * @readonly
+     */
+    public readonly parameters: G3FacsimileParameters;
+    /**
+     * @summary `data`.
+     * @public
+     * @readonly
+     */
+    public readonly data: G3FacsimileData;
+
     constructor(
-        /**
-         * @summary `parameters`.
-         * @public
-         * @readonly
-         */
-        readonly parameters: G3FacsimileParameters,
-        /**
-         * @summary `data`.
-         * @public
-         * @readonly
-         */
-        readonly data: G3FacsimileData
-    ) {}
+        parameters: G3FacsimileParameters,
+        data: G3FacsimileData
+    ) {
+        this.parameters = parameters;
+        this.data = data;
+    }
 
     /**
      * @summary Restructures an object into a G3FacsimileBodyPart

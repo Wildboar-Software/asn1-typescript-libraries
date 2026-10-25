@@ -1,6 +1,6 @@
 /* eslint-disable */
 import {
-    BOOLEAN,
+    type BOOLEAN,
 } from "@wildboar/asn1";
 import * as $ from "@wildboar/asn1/functional";
 
@@ -18,8 +18,8 @@ import * as $ from "@wildboar/asn1/functional";
  */
 export
 type AfterHrsRepairAuth = BOOLEAN; // BooleanType
-export const _decode_AfterHrsRepairAuth = $._decodeBoolean;
-export const _encode_AfterHrsRepairAuth = $._encodeBoolean;
+export const _decode_AfterHrsRepairAuth: $.ASN1Decoder<boolean> = $._decodeBoolean;
+export const _encode_AfterHrsRepairAuth: $.ASN1Encoder<boolean> = $._encodeBoolean;
 
 
 /* eslint-enable */

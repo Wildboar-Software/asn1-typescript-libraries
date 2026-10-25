@@ -1,7 +1,7 @@
 /* eslint-disable */
 import {
-    OPTIONAL,
-    ASN1Element as _Element,
+    type OPTIONAL,
+    type ASN1Element as _Element,
     ASN1TagClass as _TagClass,
     ASN1Construction as _Construction,
     ASN1UniversalType as _UniversalType,
@@ -12,7 +12,7 @@ import {
 } from '@wildboar/asn1';
 import * as $ from '@wildboar/asn1/functional';
 import {
-    TestInvocationId,
+    type TestInvocationId,
     _decode_TestInvocationId,
     _encode_TestInvocationId,
 } from '../Test-ASN1Module/TestInvocationId.ta.mjs';
@@ -22,47 +22,47 @@ import {
     _encode_TestSessionId,
 } from '../Test-ASN1Module/TestSessionId.ta.mjs';
 import {
-    TestOutcome,
+    type TestOutcome,
     _decode_TestOutcome,
     _encode_TestOutcome,
 } from '../Test-ASN1Module/TestOutcome.ta.mjs';
 import {
-    MORTs,
+    type MORTs,
     _decode_MORTs,
     _encode_MORTs,
 } from '../Test-ASN1Module/MORTs.ta.mjs';
 import {
-    AssociatedObjects,
+    type AssociatedObjects,
     _decode_AssociatedObjects,
     _encode_AssociatedObjects,
 } from '../Test-ASN1Module/AssociatedObjects.ta.mjs';
 import {
-    MonitoredAttributes,
+    type MonitoredAttributes,
     _decode_MonitoredAttributes,
     _encode_MonitoredAttributes,
 } from '@wildboar/attribute-asn1module';
 import {
-    ProposedRepairActions,
+    type ProposedRepairActions,
     _decode_ProposedRepairActions,
     _encode_ProposedRepairActions,
 } from '@wildboar/attribute-asn1module';
 import {
-    AdditionalText,
+    type AdditionalText,
     _decode_AdditionalText,
     _encode_AdditionalText,
 } from '@wildboar/attribute-asn1module';
 import {
-    AdditionalInformation,
+    type AdditionalInformation,
     _decode_AdditionalInformation,
     _encode_AdditionalInformation,
 } from '@wildboar/attribute-asn1module';
 import {
-    NotificationIdentifier,
+    type NotificationIdentifier,
     _decode_NotificationIdentifier,
     _encode_NotificationIdentifier,
 } from '@wildboar/attribute-asn1module';
 import {
-    CorrelatedNotifications,
+    type CorrelatedNotifications,
     _decode_CorrelatedNotifications,
     _encode_CorrelatedNotifications,
 } from '@wildboar/attribute-asn1module';
@@ -98,138 +98,162 @@ import {
  *
  */
 export class TestResultInfo {
+    /**
+     * @summary `testInvocationId`.
+     * @description
+     *
+     * Required if this TO was part of a related test; identifies the
+     * invocation. ITU-T Rec. X.745 (11/93) §9.9, 8.1.3.
+     * [§9.9](https://www.itu.int/rec/T-REC-X.745-199311-I)
+     *
+     * @public
+     * @readonly
+     */
+    public readonly testInvocationId?: OPTIONAL<TestInvocationId>;
+    /**
+     * @summary `testSessionId`.
+     * @description
+     *
+     * Present if the conductor supplied it at initiation. ITU-T Rec. X.745
+     * (11/93) §9.9, 7.3.2.
+     * [§9.9](https://www.itu.int/rec/T-REC-X.745-199311-I)
+     *
+     * @public
+     * @readonly
+     */
+    public readonly testSessionId?: OPTIONAL<TestSessionId>;
+    /**
+     * @summary `testOutcome`.
+     * @description
+     *
+     * Present if this is the last report for this execution of this TO.
+     * ITU-T Rec. X.745 (11/93) §7.2.3, 9.9.
+     * [§7.2.3](https://www.itu.int/rec/T-REC-X.745-199311-I)
+     *
+     * @public
+     * @readonly
+     */
+    public readonly testOutcome?: OPTIONAL<TestOutcome>;
+    /**
+     * @summary `mORTs`.
+     * @description
+     *
+     * MORTs; mandatory here if also used in the test request. ITU-T Rec.
+     * X.745 (11/93) §8.1.2.
+     * [§8.1.2](https://www.itu.int/rec/T-REC-X.745-199311-I)
+     *
+     * @public
+     * @readonly
+     */
+    public readonly mORTs?: OPTIONAL<MORTs>;
+    /**
+     * @summary `associatedObjects`.
+     * @description
+     *
+     * AOs involved in this execution, if any. ITU-T Rec. X.745 (11/93)
+     * §8.1.1, 9.9.
+     * [§8.1.1](https://www.itu.int/rec/T-REC-X.745-199311-I)
+     *
+     * @public
+     * @readonly
+     */
+    public readonly associatedObjects?: OPTIONAL<AssociatedObjects>;
+    /**
+     * @summary `monitoredAttributes`.
+     * @description
+     *
+     * X.733 monitoredAttributes of the TO. ITU-T Rec. X.745 (11/93) §8.6,
+     * 9.9.
+     * [§8.6](https://www.itu.int/rec/T-REC-X.745-199311-I)
+     *
+     * @public
+     * @readonly
+     */
+    public readonly monitoredAttributes?: OPTIONAL<MonitoredAttributes>;
+    /**
+     * @summary `proposedRepairActions`.
+     * @description
+     *
+     * X.733 proposedRepairActions; typical when outcome is fail. ITU-T Rec.
+     * X.745 (11/93) §7.2.3, 8.6.
+     * [§7.2.3](https://www.itu.int/rec/T-REC-X.745-199311-I)
+     *
+     * @public
+     * @readonly
+     */
+    public readonly proposedRepairActions?: OPTIONAL<ProposedRepairActions>;
+    /**
+     * @summary `additionalText`.
+     * @description
+     *
+     * X.733 additionalText. ITU-T Rec. X.745 (11/93) §8.6, 9.9.
+     * [§8.6](https://www.itu.int/rec/T-REC-X.745-199311-I)
+     *
+     * @public
+     * @readonly
+     */
+    public readonly additionalText?: OPTIONAL<AdditionalText>;
+    /**
+     * @summary `additionalInformation`.
+     * @description
+     *
+     * X.733 additionalInformation; category-specific result data. ITU-T
+     * Rec. X.745 (11/93) §8.6, 7.4.6.2.
+     * [§8.6](https://www.itu.int/rec/T-REC-X.745-199311-I)
+     *
+     * @public
+     * @readonly
+     */
+    public readonly additionalInformation?: OPTIONAL<AdditionalInformation>;
+    /**
+     * @summary `notificationIdentifier`.
+     * @description
+     *
+     * X.733 notificationIdentifier. ITU-T Rec. X.745 (11/93) §8.6, 9.9.
+     * [§8.6](https://www.itu.int/rec/T-REC-X.745-199311-I)
+     *
+     * @public
+     * @readonly
+     */
+    public readonly notificationIdentifier?: OPTIONAL<NotificationIdentifier>;
+    /**
+     * @summary `correlatedNotifications`.
+     * @description
+     *
+     * X.733 correlatedNotifications (Cor.2 spelling fix in the GDMO
+     * template). ITU-T Rec. X.745 (11/93) §8.6, 9.9.
+     * [§8.6](https://www.itu.int/rec/T-REC-X.745-199311-I)
+     *
+     * @public
+     * @readonly
+     */
+    public readonly correlatedNotifications?: OPTIONAL<CorrelatedNotifications>;
+
     constructor(
-        /**
-         * @summary `testInvocationId`.
-         * @description
-         *
-         * Required if this TO was part of a related test; identifies the
-         * invocation. ITU-T Rec. X.745 (11/93) §9.9, 8.1.3.
-         * [§9.9](https://www.itu.int/rec/T-REC-X.745-199311-I)
-         *
-         * @public
-         * @readonly
-         */
-        readonly testInvocationId?: OPTIONAL<TestInvocationId>,
-        /**
-         * @summary `testSessionId`.
-         * @description
-         *
-         * Present if the conductor supplied it at initiation. ITU-T Rec. X.745
-         * (11/93) §9.9, 7.3.2.
-         * [§9.9](https://www.itu.int/rec/T-REC-X.745-199311-I)
-         *
-         * @public
-         * @readonly
-         */
-        readonly testSessionId?: OPTIONAL<TestSessionId>,
-        /**
-         * @summary `testOutcome`.
-         * @description
-         *
-         * Present if this is the last report for this execution of this TO.
-         * ITU-T Rec. X.745 (11/93) §7.2.3, 9.9.
-         * [§7.2.3](https://www.itu.int/rec/T-REC-X.745-199311-I)
-         *
-         * @public
-         * @readonly
-         */
-        readonly testOutcome?: OPTIONAL<TestOutcome>,
-        /**
-         * @summary `mORTs`.
-         * @description
-         *
-         * MORTs; mandatory here if also used in the test request. ITU-T Rec.
-         * X.745 (11/93) §8.1.2.
-         * [§8.1.2](https://www.itu.int/rec/T-REC-X.745-199311-I)
-         *
-         * @public
-         * @readonly
-         */
-        readonly mORTs?: OPTIONAL<MORTs>,
-        /**
-         * @summary `associatedObjects`.
-         * @description
-         *
-         * AOs involved in this execution, if any. ITU-T Rec. X.745 (11/93)
-         * §8.1.1, 9.9.
-         * [§8.1.1](https://www.itu.int/rec/T-REC-X.745-199311-I)
-         *
-         * @public
-         * @readonly
-         */
-        readonly associatedObjects?: OPTIONAL<AssociatedObjects>,
-        /**
-         * @summary `monitoredAttributes`.
-         * @description
-         *
-         * X.733 monitoredAttributes of the TO. ITU-T Rec. X.745 (11/93) §8.6,
-         * 9.9.
-         * [§8.6](https://www.itu.int/rec/T-REC-X.745-199311-I)
-         *
-         * @public
-         * @readonly
-         */
-        readonly monitoredAttributes?: OPTIONAL<MonitoredAttributes>,
-        /**
-         * @summary `proposedRepairActions`.
-         * @description
-         *
-         * X.733 proposedRepairActions; typical when outcome is fail. ITU-T Rec.
-         * X.745 (11/93) §7.2.3, 8.6.
-         * [§7.2.3](https://www.itu.int/rec/T-REC-X.745-199311-I)
-         *
-         * @public
-         * @readonly
-         */
-        readonly proposedRepairActions?: OPTIONAL<ProposedRepairActions>,
-        /**
-         * @summary `additionalText`.
-         * @description
-         *
-         * X.733 additionalText. ITU-T Rec. X.745 (11/93) §8.6, 9.9.
-         * [§8.6](https://www.itu.int/rec/T-REC-X.745-199311-I)
-         *
-         * @public
-         * @readonly
-         */
-        readonly additionalText?: OPTIONAL<AdditionalText>,
-        /**
-         * @summary `additionalInformation`.
-         * @description
-         *
-         * X.733 additionalInformation; category-specific result data. ITU-T
-         * Rec. X.745 (11/93) §8.6, 7.4.6.2.
-         * [§8.6](https://www.itu.int/rec/T-REC-X.745-199311-I)
-         *
-         * @public
-         * @readonly
-         */
-        readonly additionalInformation?: OPTIONAL<AdditionalInformation>,
-        /**
-         * @summary `notificationIdentifier`.
-         * @description
-         *
-         * X.733 notificationIdentifier. ITU-T Rec. X.745 (11/93) §8.6, 9.9.
-         * [§8.6](https://www.itu.int/rec/T-REC-X.745-199311-I)
-         *
-         * @public
-         * @readonly
-         */
-        readonly notificationIdentifier?: OPTIONAL<NotificationIdentifier>,
-        /**
-         * @summary `correlatedNotifications`.
-         * @description
-         *
-         * X.733 correlatedNotifications (Cor.2 spelling fix in the GDMO
-         * template). ITU-T Rec. X.745 (11/93) §8.6, 9.9.
-         * [§8.6](https://www.itu.int/rec/T-REC-X.745-199311-I)
-         *
-         * @public
-         * @readonly
-         */
-        readonly correlatedNotifications?: OPTIONAL<CorrelatedNotifications>
-    ) {}
+        testInvocationId?: OPTIONAL<TestInvocationId>,
+        testSessionId?: OPTIONAL<TestSessionId>,
+        testOutcome?: OPTIONAL<TestOutcome>,
+        mORTs?: OPTIONAL<MORTs>,
+        associatedObjects?: OPTIONAL<AssociatedObjects>,
+        monitoredAttributes?: OPTIONAL<MonitoredAttributes>,
+        proposedRepairActions?: OPTIONAL<ProposedRepairActions>,
+        additionalText?: OPTIONAL<AdditionalText>,
+        additionalInformation?: OPTIONAL<AdditionalInformation>,
+        notificationIdentifier?: OPTIONAL<NotificationIdentifier>,
+        correlatedNotifications?: OPTIONAL<CorrelatedNotifications>
+    ) {
+        this.testInvocationId = testInvocationId;
+        this.testSessionId = testSessionId;
+        this.testOutcome = testOutcome;
+        this.mORTs = mORTs;
+        this.associatedObjects = associatedObjects;
+        this.monitoredAttributes = monitoredAttributes;
+        this.proposedRepairActions = proposedRepairActions;
+        this.additionalText = additionalText;
+        this.additionalInformation = additionalInformation;
+        this.notificationIdentifier = notificationIdentifier;
+        this.correlatedNotifications = correlatedNotifications;
+    }
 
     /**
      * @summary Restructures an object into a TestResultInfo

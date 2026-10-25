@@ -1,6 +1,6 @@
 /* eslint-disable */
 import {
-    ASN1Element as _Element,
+    type ASN1Element as _Element,
     ASN1TagClass as _TagClass,
     ASN1Construction as _Construction,
     ASN1UniversalType as _UniversalType,
@@ -10,7 +10,7 @@ import {
     ASN1ConstructionError as _ConstructionError,
 } from "@wildboar/asn1";
 import * as $ from "@wildboar/asn1/functional";
-import { UINT8, _decode_UINT8, _encode_UINT8 } from "../TSM/UINT8.ta.mjs";
+import { type UINT8, _decode_UINT8, _encode_UINT8 } from "../TSM/UINT8.ta.mjs";
 
 
 
@@ -34,28 +34,34 @@ import { UINT8, _decode_UINT8, _encode_UINT8 } from "../TSM/UINT8.ta.mjs";
  */
 export
 class ProtocolVersion {
+    /**
+     * @summary `major`.
+     * @description
+     *
+     * TLS-style major version. X.1084 §10.3.1.
+     *
+     * @public
+     * @readonly
+     */
+    public readonly major: UINT8;
+    /**
+     * @summary `minor`.
+     * @description
+     *
+     * TLS-style minor version. X.1084 §10.3.1.
+     *
+     * @public
+     * @readonly
+     */
+    public readonly minor: UINT8;
+
     constructor (
-        /**
-         * @summary `major`.
-         * @description
-         *
-         * TLS-style major version. X.1084 §10.3.1.
-         *
-         * @public
-         * @readonly
-         */
-        readonly major: UINT8,
-        /**
-         * @summary `minor`.
-         * @description
-         *
-         * TLS-style minor version. X.1084 §10.3.1.
-         *
-         * @public
-         * @readonly
-         */
-        readonly minor: UINT8
-    ) {}
+        major: UINT8,
+        minor: UINT8
+    ) {
+        this.major = major;
+        this.minor = minor;
+    }
 
     /**
      * @summary Restructures an object into a ProtocolVersion

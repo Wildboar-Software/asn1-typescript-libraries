@@ -1,6 +1,6 @@
 /* eslint-disable */
 import {
-    ASN1Element as _Element,
+    type ASN1Element as _Element,
     ASN1TagClass as _TagClass,
     ASN1Construction as _Construction,
     ASN1UniversalType as _UniversalType,
@@ -10,8 +10,8 @@ import {
     ASN1ConstructionError as _ConstructionError,
 } from "@wildboar/asn1";
 import * as $ from "@wildboar/asn1/functional";
-import { PathOrObjects, _get_decoder_for_PathOrObjects, _get_encoder_for_PathOrObjects } from "../CryptographicInformationFramework/PathOrObjects.ta.mjs";
-import { PublicKeyChoice, _decode_PublicKeyChoice, _encode_PublicKeyChoice } from "../CryptographicInformationFramework/PublicKeyChoice.ta.mjs";
+import { type PathOrObjects, _get_decoder_for_PathOrObjects, _get_encoder_for_PathOrObjects } from "../CryptographicInformationFramework/PathOrObjects.ta.mjs";
+import { type PublicKeyChoice, _decode_PublicKeyChoice, _encode_PublicKeyChoice } from "../CryptographicInformationFramework/PublicKeyChoice.ta.mjs";
 
 
 /**

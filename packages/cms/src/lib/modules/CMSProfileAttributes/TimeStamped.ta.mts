@@ -1,16 +1,16 @@
 /* eslint-disable */
 import {
-    ASN1Element as _Element,
+    type ASN1Element as _Element,
     ASN1TagClass as _TagClass,
-    OPTIONAL,
+    type OPTIONAL,
 } from "@wildboar/asn1";
 import * as $ from "@wildboar/asn1/functional";
 import {
-    TimeStamp,
+    type TimeStamp,
     _decode_TimeStamp,
     _encode_TimeStamp,
 } from "../CMSProfileAttributes/TimeStamp.ta.mjs";
-import { URI, _decode_URI, _encode_URI } from "../CMSProfileAttributes/URI.ta.mjs";
+import { type URI, _decode_URI, _encode_URI } from "../CMSProfileAttributes/URI.ta.mjs";
 
 /**
  * @summary TimeStamped
@@ -30,20 +30,26 @@ import { URI, _decode_URI, _encode_URI } from "../CMSProfileAttributes/URI.ta.mj
  *
  */
 export class TimeStamped {
+    /**
+     * @summary `timeStampValue`.
+     * @public
+     * @readonly
+     */
+    public readonly timeStampValue: TimeStamp;
+    /**
+     * @summary `timeStampService`.
+     * @public
+     * @readonly
+     */
+    public readonly timeStampService?: OPTIONAL<URI>;
+
     constructor(
-        /**
-         * @summary `timeStampValue`.
-         * @public
-         * @readonly
-         */
-        readonly timeStampValue: TimeStamp,
-        /**
-         * @summary `timeStampService`.
-         * @public
-         * @readonly
-         */
-        readonly timeStampService?: OPTIONAL<URI>
-    ) {}
+        timeStampValue: TimeStamp,
+        timeStampService?: OPTIONAL<URI>
+    ) {
+        this.timeStampValue = timeStampValue;
+        this.timeStampService = timeStampService;
+    }
 
     /**
      * @summary Restructures an object into a TimeStamped

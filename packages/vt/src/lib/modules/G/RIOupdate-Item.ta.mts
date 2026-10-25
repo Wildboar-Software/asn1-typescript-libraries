@@ -1,8 +1,8 @@
 /* eslint-disable */
 import {
-    OPTIONAL,
-    PrintableString,
-    ASN1Element as _Element,
+    type OPTIONAL,
+    type PrintableString,
+    type ASN1Element as _Element,
     ASN1TagClass as _TagClass,
     ASN1Construction as _Construction,
     ASN1UniversalType as _UniversalType,
@@ -12,7 +12,7 @@ import {
     ASN1ConstructionError as _ConstructionError,
 } from "@wildboar/asn1";
 import * as $ from "@wildboar/asn1/functional";
-import { RIOupdate_Item_operation, _decode_RIOupdate_Item_operation, _encode_RIOupdate_Item_operation } from "../G/RIOupdate-Item-operation.ta.mjs";
+import { type RIOupdate_Item_operation, _decode_RIOupdate_Item_operation, _encode_RIOupdate_Item_operation } from "../G/RIOupdate-Item-operation.ta.mjs";
 import { type ObjectUpdate, _decode_ObjectUpdate, _encode_ObjectUpdate } from "../ISO9041-VTP/ObjectUpdate.ta.mjs";
 
 
@@ -41,34 +41,42 @@ import { type ObjectUpdate, _decode_ObjectUpdate, _encode_ObjectUpdate } from ".
  */
 export
 class RIOupdate_Item {
+    /**
+     * @summary `recordId`.
+     * @description
+     * Named record within the RIO. ISO/IEC 9041-1:1997 §12.2.5.
+     * @public
+     * @readonly
+     */
+    public readonly recordId: OPTIONAL<PrintableString>;
+    /**
+     * @summary `operation`.
+     * @description
+     * eraseRIO(0) / deleteRecord(1) / createRecord(2). ISO/IEC
+     * 9041-1:1997 §12.2.5.
+     * @public
+     * @readonly
+     */
+    public readonly operation: RIOupdate_Item_operation;
+    /**
+     * @summary `updates`.
+     * @description
+     * Present only for Create Record; omitted ⇒ the record is empty.
+     * ISO/IEC 9041-1:1997 §12.2.5.
+     * @public
+     * @readonly
+     */
+    public readonly updates?: OPTIONAL<ObjectUpdate[]>;
+
     constructor (
-        /**
-         * @summary `recordId`.
-         * @description
-         * Named record within the RIO. ISO/IEC 9041-1:1997 §12.2.5.
-         * @public
-         * @readonly
-         */
-        readonly recordId: OPTIONAL<PrintableString>,
-        /**
-         * @summary `operation`.
-         * @description
-         * eraseRIO(0) / deleteRecord(1) / createRecord(2). ISO/IEC
-         * 9041-1:1997 §12.2.5.
-         * @public
-         * @readonly
-         */
-        readonly operation: RIOupdate_Item_operation,
-        /**
-         * @summary `updates`.
-         * @description
-         * Present only for Create Record; omitted ⇒ the record is empty.
-         * ISO/IEC 9041-1:1997 §12.2.5.
-         * @public
-         * @readonly
-         */
-        readonly updates?: OPTIONAL<ObjectUpdate[]>
-    ) {}
+        recordId: OPTIONAL<PrintableString>,
+        operation: RIOupdate_Item_operation,
+        updates?: OPTIONAL<ObjectUpdate[]>
+    ) {
+        this.recordId = recordId;
+        this.operation = operation;
+        this.updates = updates;
+    }
 
     /**
      * @summary Restructures an object into a RIOupdate_Item

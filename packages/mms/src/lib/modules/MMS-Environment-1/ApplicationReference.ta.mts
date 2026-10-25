@@ -1,7 +1,7 @@
 /* eslint-disable */
 import {
-    OPTIONAL,
-    ASN1Element as _Element,
+    type OPTIONAL,
+    type ASN1Element as _Element,
     ASN1TagClass as _TagClass,
     ASN1Construction as _Construction,
     ASN1UniversalType as _UniversalType,
@@ -11,10 +11,10 @@ import {
     ASN1ConstructionError as _ConstructionError,
 } from "@wildboar/asn1";
 import * as $ from "@wildboar/asn1/functional";
-import { AP_title, _decode_AP_title, _encode_AP_title } from "../ACSE-1/AP-title.ta.mjs";
-import { AP_invocation_identifier, _decode_AP_invocation_identifier, _encode_AP_invocation_identifier } from "../ACSE-1/AP-invocation-identifier.ta.mjs";
-import { AE_qualifier, _decode_AE_qualifier, _encode_AE_qualifier } from "../ACSE-1/AE-qualifier.ta.mjs";
-import { AE_invocation_identifier, _decode_AE_invocation_identifier, _encode_AE_invocation_identifier } from "../ACSE-1/AE-invocation-identifier.ta.mjs";
+import { type AP_title, _decode_AP_title, _encode_AP_title } from "../ACSE-1/AP-title.ta.mjs";
+import { type AP_invocation_identifier, _decode_AP_invocation_identifier, _encode_AP_invocation_identifier } from "../ACSE-1/AP-invocation-identifier.ta.mjs";
+import { type AE_qualifier, _decode_AE_qualifier, _encode_AE_qualifier } from "../ACSE-1/AE-qualifier.ta.mjs";
+import { type AE_invocation_identifier, _decode_AE_invocation_identifier, _encode_AE_invocation_identifier } from "../ACSE-1/AE-invocation-identifier.ta.mjs";
 
 
 /**
@@ -41,49 +41,59 @@ import { AE_invocation_identifier, _decode_AE_invocation_identifier, _encode_AE_
  */
 export
 class ApplicationReference {
+    /**
+     * @summary `ap_title`.
+     * @description
+     *
+     * AP-title of the referenced AE. Optional; omit when the communication
+     * system does not supply it (ISO 9506-1:2003 §6.6; ISO 9506-2:2003
+     * Annex A).
+     * @public
+     * @readonly
+     */
+    public readonly ap_title?: OPTIONAL<AP_title>;
+    /**
+     * @summary `ap_invocation_id`.
+     * @description
+     *
+     * AP-invocation-identifier of the referenced AE. Optional
+     * (ISO 9506-1:2003 §6.6; ISO 9506-2:2003 Annex A).
+     * @public
+     * @readonly
+     */
+    public readonly ap_invocation_id?: OPTIONAL<AP_invocation_identifier>;
+    /**
+     * @summary `ae_qualifier`.
+     * @description
+     *
+     * AE-qualifier of the referenced AE. Optional (ISO 9506-1:2003 §6.6;
+     * ISO 9506-2:2003 Annex A).
+     * @public
+     * @readonly
+     */
+    public readonly ae_qualifier?: OPTIONAL<AE_qualifier>;
+    /**
+     * @summary `ae_invocation_id`.
+     * @description
+     *
+     * AE-invocation-identifier of the referenced AE. Optional
+     * (ISO 9506-1:2003 §6.6; ISO 9506-2:2003 Annex A).
+     * @public
+     * @readonly
+     */
+    public readonly ae_invocation_id?: OPTIONAL<AE_invocation_identifier>;
+
     constructor (
-        /**
-         * @summary `ap_title`.
-         * @description
-         *
-         * AP-title of the referenced AE. Optional; omit when the communication
-         * system does not supply it (ISO 9506-1:2003 §6.6; ISO 9506-2:2003
-         * Annex A).
-         * @public
-         * @readonly
-         */
-        readonly ap_title?: OPTIONAL<AP_title>,
-        /**
-         * @summary `ap_invocation_id`.
-         * @description
-         *
-         * AP-invocation-identifier of the referenced AE. Optional
-         * (ISO 9506-1:2003 §6.6; ISO 9506-2:2003 Annex A).
-         * @public
-         * @readonly
-         */
-        readonly ap_invocation_id?: OPTIONAL<AP_invocation_identifier>,
-        /**
-         * @summary `ae_qualifier`.
-         * @description
-         *
-         * AE-qualifier of the referenced AE. Optional (ISO 9506-1:2003 §6.6;
-         * ISO 9506-2:2003 Annex A).
-         * @public
-         * @readonly
-         */
-        readonly ae_qualifier?: OPTIONAL<AE_qualifier>,
-        /**
-         * @summary `ae_invocation_id`.
-         * @description
-         *
-         * AE-invocation-identifier of the referenced AE. Optional
-         * (ISO 9506-1:2003 §6.6; ISO 9506-2:2003 Annex A).
-         * @public
-         * @readonly
-         */
-        readonly ae_invocation_id?: OPTIONAL<AE_invocation_identifier>
-    ) {}
+        ap_title?: OPTIONAL<AP_title>,
+        ap_invocation_id?: OPTIONAL<AP_invocation_identifier>,
+        ae_qualifier?: OPTIONAL<AE_qualifier>,
+        ae_invocation_id?: OPTIONAL<AE_invocation_identifier>
+    ) {
+        this.ap_title = ap_title;
+        this.ap_invocation_id = ap_invocation_id;
+        this.ae_qualifier = ae_qualifier;
+        this.ae_invocation_id = ae_invocation_id;
+    }
 
     /**
      * @summary Restructures an object into a ApplicationReference

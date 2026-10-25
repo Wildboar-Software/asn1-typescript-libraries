@@ -1,6 +1,6 @@
 /* eslint-disable */
 import {
-  OBJECT_IDENTIFIER,
+  type OBJECT_IDENTIFIER,
   ASN1Element as _Element,
   ASN1TagClass as _TagClass,
   ASN1Construction as _Construction,
@@ -29,20 +29,26 @@ import * as $ from '@wildboar/asn1/functional';
  *
  */
 export class OtherRevInfo {
+  /**
+   * @summary `riType`.
+   * @public
+   * @readonly
+   */
+  public readonly riType: OBJECT_IDENTIFIER;
+  /**
+   * @summary `riValue`.
+   * @public
+   * @readonly
+   */
+  public readonly riValue: _Element;
+
   constructor(
-    /**
-     * @summary `riType`.
-     * @public
-     * @readonly
-     */
-    readonly riType: OBJECT_IDENTIFIER,
-    /**
-     * @summary `riValue`.
-     * @public
-     * @readonly
-     */
-    readonly riValue: _Element
-  ) {}
+    riType: OBJECT_IDENTIFIER,
+    riValue: _Element
+  ) {
+    this.riType = riType;
+    this.riValue = riValue;
+  }
 
   /**
    * @summary Restructures an object into a OtherRevInfo

@@ -1,6 +1,6 @@
 /* eslint-disable */
 import {
-    ASN1Element as _Element,
+    type ASN1Element as _Element,
     ASN1TagClass as _TagClass,
     ASN1Construction as _Construction,
     ASN1UniversalType as _UniversalType,
@@ -11,7 +11,7 @@ import {
 } from '@wildboar/asn1';
 import * as $ from '@wildboar/asn1/functional';
 import {
-    IndicatedTests,
+    type IndicatedTests,
     _decode_IndicatedTests,
     _encode_IndicatedTests,
 } from '../Test-ASN1Module/IndicatedTests.ta.mjs';
@@ -41,31 +41,37 @@ import {
  *
  */
 export class TestSuspendResumeInfo {
+    /**
+     * @summary `indicatedTests`.
+     * @description
+     *
+     * Session id (best-effort) or invocation ids (all-or-error). ITU-T Rec.
+     * X.745 (11/93) §8.4.2.2, 7.2.4.
+     * [§8.4.2.2](https://www.itu.int/rec/T-REC-X.745-199311-I)
+     *
+     * @public
+     * @readonly
+     */
+    public readonly indicatedTests: IndicatedTests;
+    /**
+     * @summary `suspendResumeChoice`.
+     * @description
+     *
+     * suspend or resume. ITU-T Rec. X.745 (11/93) §8.4.2.3.
+     * [§8.4.2.3](https://www.itu.int/rec/T-REC-X.745-199311-I)
+     *
+     * @public
+     * @readonly
+     */
+    public readonly suspendResumeChoice: SuspendResumeChoice;
+
     constructor(
-        /**
-         * @summary `indicatedTests`.
-         * @description
-         *
-         * Session id (best-effort) or invocation ids (all-or-error). ITU-T Rec.
-         * X.745 (11/93) §8.4.2.2, 7.2.4.
-         * [§8.4.2.2](https://www.itu.int/rec/T-REC-X.745-199311-I)
-         *
-         * @public
-         * @readonly
-         */
-        readonly indicatedTests: IndicatedTests,
-        /**
-         * @summary `suspendResumeChoice`.
-         * @description
-         *
-         * suspend or resume. ITU-T Rec. X.745 (11/93) §8.4.2.3.
-         * [§8.4.2.3](https://www.itu.int/rec/T-REC-X.745-199311-I)
-         *
-         * @public
-         * @readonly
-         */
-        readonly suspendResumeChoice: SuspendResumeChoice
-    ) {}
+        indicatedTests: IndicatedTests,
+        suspendResumeChoice: SuspendResumeChoice
+    ) {
+        this.indicatedTests = indicatedTests;
+        this.suspendResumeChoice = suspendResumeChoice;
+    }
 
     /**
      * @summary Restructures an object into a TestSuspendResumeInfo
@@ -94,7 +100,7 @@ export class TestSuspendResumeInfo {
      * @static
      */
 
-    public static _enum_for_suspendResumeChoice = _enum_for_SuspendResumeChoice;
+    public static _enum_for_suspendResumeChoice: typeof _enum_for_SuspendResumeChoice = _enum_for_SuspendResumeChoice;
 }
 
 /**

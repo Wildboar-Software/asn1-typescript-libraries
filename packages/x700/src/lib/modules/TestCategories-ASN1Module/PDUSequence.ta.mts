@@ -1,7 +1,7 @@
 /* eslint-disable */
 import {
-    OPTIONAL,
-    ASN1Element as _Element,
+    type OPTIONAL,
+    type ASN1Element as _Element,
     ASN1TagClass as _TagClass,
     ASN1Construction as _Construction,
     ASN1UniversalType as _UniversalType,
@@ -12,7 +12,7 @@ import {
 } from '@wildboar/asn1';
 import * as $ from '@wildboar/asn1/functional';
 import {
-    PDUType,
+    type PDUType,
     _decode_PDUType,
     _encode_PDUType,
 } from '../TestCategories-ASN1Module/PDUType.ta.mjs';
@@ -22,12 +22,12 @@ import {
     _encode_Parameter,
 } from '../TestCategories-ASN1Module/Parameter.ta.mjs';
 import {
-    ContCond,
+    type ContCond,
     _decode_ContCond,
     _encode_ContCond,
 } from '../TestCategories-ASN1Module/ContCond.ta.mjs';
 import {
-    WaitDuration,
+    type WaitDuration,
     _decode_WaitDuration,
     _encode_WaitDuration,
 } from '../TestCategories-ASN1Module/WaitDuration.ta.mjs';
@@ -56,46 +56,56 @@ import {
  *
  */
 export class PDUSequence {
+    /**
+     * @summary `pDUType`.
+     * @description
+     *
+     * Type of PDU to transmit (OID). X.737 §7.5.6.
+     * @public
+     * @readonly
+     */
+    public readonly pDUType: PDUType;
+    /**
+     * @summary `parameter`.
+     * @description
+     *
+     * Parameters of that PDU. X.737 A.7.
+     * @public
+     * @readonly
+     */
+    public readonly parameter: Parameter;
+    /**
+     * @summary `contCond`.
+     * @description
+     *
+     * When to send the next element: fixed
+     * interval, or after matching `pDUReception`. X.737 §7.5.6.
+     * @public
+     * @readonly
+     */
+    public readonly contCond: ContCond;
+    /**
+     * @summary `waitDuration`.
+     * @description
+     *
+     * Wait associated with this element.
+     * Optional. X.737 A.7.
+     * @public
+     * @readonly
+     */
+    public readonly waitDuration?: OPTIONAL<WaitDuration>;
+
     constructor(
-        /**
-         * @summary `pDUType`.
-         * @description
-         *
-         * Type of PDU to transmit (OID). X.737 §7.5.6.
-         * @public
-         * @readonly
-         */
-        readonly pDUType: PDUType,
-        /**
-         * @summary `parameter`.
-         * @description
-         *
-         * Parameters of that PDU. X.737 A.7.
-         * @public
-         * @readonly
-         */
-        readonly parameter: Parameter,
-        /**
-         * @summary `contCond`.
-         * @description
-         *
-         * When to send the next element: fixed
-         * interval, or after matching `pDUReception`. X.737 §7.5.6.
-         * @public
-         * @readonly
-         */
-        readonly contCond: ContCond,
-        /**
-         * @summary `waitDuration`.
-         * @description
-         *
-         * Wait associated with this element.
-         * Optional. X.737 A.7.
-         * @public
-         * @readonly
-         */
-        readonly waitDuration?: OPTIONAL<WaitDuration>
-    ) {}
+        pDUType: PDUType,
+        parameter: Parameter,
+        contCond: ContCond,
+        waitDuration?: OPTIONAL<WaitDuration>
+    ) {
+        this.pDUType = pDUType;
+        this.parameter = parameter;
+        this.contCond = contCond;
+        this.waitDuration = waitDuration;
+    }
 
     /**
      * @summary Restructures an object into a PDUSequence

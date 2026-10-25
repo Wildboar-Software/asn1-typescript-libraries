@@ -1,6 +1,6 @@
 /* eslint-disable */
 import {
-    ENUMERATED
+    type ENUMERATED
 } from "@wildboar/asn1";
 import * as $ from "@wildboar/asn1/functional";
 
@@ -49,7 +49,7 @@ type ProSeTargetType = _enum_for_ProSeTargetType | ENUMERATED;
  * @type {number}
  */
 export
-const ProSeTargetType_pRoSeRemoteUE: ProSeTargetType = 1; /* LONG_NAMED_ENUMERATED_VALUE */
+const ProSeTargetType_pRoSeRemoteUE: _enum_for_ProSeTargetType.pRoSeRemoteUE = _enum_for_ProSeTargetType.pRoSeRemoteUE; /* LONG_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary pRoSeRemoteUE
@@ -60,7 +60,7 @@ const ProSeTargetType_pRoSeRemoteUE: ProSeTargetType = 1; /* LONG_NAMED_ENUMERAT
  * @type {number}
  */
 export
-const pRoSeRemoteUE: ProSeTargetType = ProSeTargetType_pRoSeRemoteUE; /* SHORT_NAMED_ENUMERATED_VALUE */
+const pRoSeRemoteUE: _enum_for_ProSeTargetType.pRoSeRemoteUE = ProSeTargetType_pRoSeRemoteUE; /* SHORT_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary ProSeTargetType_pRoSeUEtoNwRelay
@@ -72,7 +72,7 @@ const pRoSeRemoteUE: ProSeTargetType = ProSeTargetType_pRoSeRemoteUE; /* SHORT_N
  * @type {number}
  */
 export
-const ProSeTargetType_pRoSeUEtoNwRelay: ProSeTargetType = 2; /* LONG_NAMED_ENUMERATED_VALUE */
+const ProSeTargetType_pRoSeUEtoNwRelay: _enum_for_ProSeTargetType.pRoSeUEtoNwRelay = _enum_for_ProSeTargetType.pRoSeUEtoNwRelay; /* LONG_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary pRoSeUEtoNwRelay
@@ -83,7 +83,7 @@ const ProSeTargetType_pRoSeUEtoNwRelay: ProSeTargetType = 2; /* LONG_NAMED_ENUME
  * @type {number}
  */
 export
-const pRoSeUEtoNwRelay: ProSeTargetType = ProSeTargetType_pRoSeUEtoNwRelay; /* SHORT_NAMED_ENUMERATED_VALUE */
+const pRoSeUEtoNwRelay: _enum_for_ProSeTargetType.pRoSeUEtoNwRelay = ProSeTargetType_pRoSeUEtoNwRelay; /* SHORT_NAMED_ENUMERATED_VALUE */
 export const _decode_ProSeTargetType: $.ASN1Decoder<ProSeTargetType> = $._decodeEnumerated;
 export const _encode_ProSeTargetType: $.ASN1Encoder<ProSeTargetType> = $._encodeEnumerated;
 

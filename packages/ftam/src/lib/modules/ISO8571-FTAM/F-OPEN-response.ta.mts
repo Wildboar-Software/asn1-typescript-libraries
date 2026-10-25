@@ -1,8 +1,8 @@
 /* eslint-disable */
 import {
-  OPTIONAL,
-  BOOLEAN,
-  INTEGER,
+  type OPTIONAL,
+  type BOOLEAN,
+  type INTEGER,
   ASN1Element as _Element,
   ASN1TagClass as _TagClass,
   ASN1Construction as _Construction,
@@ -14,19 +14,19 @@ import {
 } from '@wildboar/asn1';
 import * as $ from '@wildboar/asn1/functional';
 import {
-  State_Result,
+  type State_Result,
   State_Result_success,
   _decode_State_Result,
   _encode_State_Result,
 } from '../ISO8571-FTAM/State-Result.ta.mjs';
 import {
-  Action_Result,
+  type Action_Result,
     Action_Result_success,
   _decode_Action_Result,
   _encode_Action_Result,
 } from '../ISO8571-FTAM/Action-Result.ta.mjs';
 import {
-  Contents_Type_Attribute,
+  type Contents_Type_Attribute,
   _decode_Contents_Type_Attribute,
   _encode_Contents_Type_Attribute,
 } from '../ISO8571-FTAM/Contents-Type-Attribute.ta.mjs';
@@ -36,23 +36,23 @@ import {
   _encode_Concurrency_Control,
 } from '../ISO8571-FTAM/Concurrency-Control.ta.mjs';
 import {
-  Shared_ASE_Information,
+  type Shared_ASE_Information,
   _decode_Shared_ASE_Information,
   _encode_Shared_ASE_Information,
 } from '../ISO8571-FTAM/Shared-ASE-Information.ta.mjs';
 import {
-  Diagnostic,
+  type Diagnostic,
   _decode_Diagnostic,
   _encode_Diagnostic,
 } from '../ISO8571-FTAM/Diagnostic.ta.mjs';
 import {
-  F_OPEN_response_recovery_mode,
+  type F_OPEN_response_recovery_mode,
   none /* IMPORTED_SHORT_NAMED_INTEGER */,
   _decode_F_OPEN_response_recovery_mode,
   _encode_F_OPEN_response_recovery_mode,
 } from '../ISO8571-FTAM/F-OPEN-response-recovery-mode.ta.mjs';
 import {
-  Degree_Of_Overlap,
+  type Degree_Of_Overlap,
   _decode_Degree_Of_Overlap,
   _encode_Degree_Of_Overlap,
 } from '../ISO8571-FTAM/Degree-Of-Overlap.ta.mjs';
@@ -100,7 +100,7 @@ export class F_OPEN_response {
    * @public
    * @readonly
    */
-  readonly state_result: OPTIONAL<State_Result>;
+  public readonly state_result: OPTIONAL<State_Result>;
   /**
    * @summary `action_result`.
    * @description
@@ -110,7 +110,7 @@ export class F_OPEN_response {
    * @public
    * @readonly
    */
-  readonly action_result: OPTIONAL<Action_Result>;
+  public readonly action_result: OPTIONAL<Action_Result>;
   /**
    * @summary `contents_type`.
    * @description
@@ -122,7 +122,7 @@ export class F_OPEN_response {
    * @public
    * @readonly
    */
-  readonly contents_type: Contents_Type_Attribute;
+  public readonly contents_type: Contents_Type_Attribute;
   /**
    * @summary `concurrency_control`.
    * @description
@@ -133,7 +133,7 @@ export class F_OPEN_response {
    * @public
    * @readonly
    */
-  readonly concurrency_control?: OPTIONAL<Concurrency_Control>;
+  public readonly concurrency_control?: OPTIONAL<Concurrency_Control>;
   /**
    * @summary `shared_ASE_information`.
    * @description
@@ -143,7 +143,7 @@ export class F_OPEN_response {
    * @public
    * @readonly
    */
-  readonly shared_ASE_information?: OPTIONAL<Shared_ASE_Information>;
+  public readonly shared_ASE_information?: OPTIONAL<Shared_ASE_Information>;
   /**
    * @summary `diagnostic`.
    * @description
@@ -153,7 +153,7 @@ export class F_OPEN_response {
    * @public
    * @readonly
    */
-  readonly diagnostic?: OPTIONAL<Diagnostic>;
+  public readonly diagnostic?: OPTIONAL<Diagnostic>;
   /**
    * @summary `recovery_mode`.
    * @description
@@ -164,7 +164,7 @@ export class F_OPEN_response {
    * @public
    * @readonly
    */
-  readonly recovery_mode?: OPTIONAL<F_OPEN_response_recovery_mode>;
+  public readonly recovery_mode?: OPTIONAL<F_OPEN_response_recovery_mode>;
   /**
    * @summary `presentation_action`.
    * @description
@@ -175,7 +175,7 @@ export class F_OPEN_response {
    * @public
    * @readonly
    */
-  readonly presentation_action?: OPTIONAL<BOOLEAN>;
+  public readonly presentation_action?: OPTIONAL<BOOLEAN>;
   /**
    * @summary `degree_of_overlap`.
    * @description
@@ -186,7 +186,7 @@ export class F_OPEN_response {
    * @public
    * @readonly
    */
-  readonly degree_of_overlap?: OPTIONAL<Degree_Of_Overlap>;
+  public readonly degree_of_overlap?: OPTIONAL<Degree_Of_Overlap>;
   /**
    * @summary `transfer_window`.
    * @description
@@ -197,7 +197,7 @@ export class F_OPEN_response {
    * @public
    * @readonly
    */
-  readonly transfer_window?: OPTIONAL<INTEGER>;
+  public readonly transfer_window?: OPTIONAL<INTEGER>;
 
   constructor(
     state_result: OPTIONAL<State_Result>,

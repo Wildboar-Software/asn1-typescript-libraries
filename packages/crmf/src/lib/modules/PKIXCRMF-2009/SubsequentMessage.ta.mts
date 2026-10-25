@@ -1,5 +1,5 @@
 /* eslint-disable */
-import { ASN1Element as _Element, INTEGER } from "@wildboar/asn1";
+import { ASN1Element as _Element, type INTEGER } from "@wildboar/asn1";
 import * as $ from "@wildboar/asn1/functional";
 
 
@@ -35,7 +35,7 @@ export type SubsequentMessage = INTEGER;
  * @constant
  * @type {number}
  */
-export const SubsequentMessage_encrCert: SubsequentMessage = 0; /* LONG_NAMED_INTEGER_VALUE */
+export const SubsequentMessage_encrCert: 0 = 0 satisfies SubsequentMessage; /* LONG_NAMED_INTEGER_VALUE */
 
 
 /**
@@ -49,7 +49,7 @@ export const SubsequentMessage_encrCert: SubsequentMessage = 0; /* LONG_NAMED_IN
  * @constant
  * @type {number}
  */
-export const encrCert: SubsequentMessage = SubsequentMessage_encrCert; /* SHORT_NAMED_INTEGER_VALUE */
+export const encrCert: 0 = SubsequentMessage_encrCert; /* SHORT_NAMED_INTEGER_VALUE */
 
 
 /**
@@ -62,7 +62,7 @@ export const encrCert: SubsequentMessage = SubsequentMessage_encrCert; /* SHORT_
  * @constant
  * @type {number}
  */
-export const SubsequentMessage_challengeResp: SubsequentMessage = 1; /* LONG_NAMED_INTEGER_VALUE */
+export const SubsequentMessage_challengeResp: 1 = 1 satisfies SubsequentMessage; /* LONG_NAMED_INTEGER_VALUE */
 
 
 /**
@@ -75,17 +75,17 @@ export const SubsequentMessage_challengeResp: SubsequentMessage = 1; /* LONG_NAM
  * @constant
  * @type {number}
  */
-export const challengeResp: SubsequentMessage = SubsequentMessage_challengeResp; /* SHORT_NAMED_INTEGER_VALUE */
+export const challengeResp: 1 = SubsequentMessage_challengeResp; /* SHORT_NAMED_INTEGER_VALUE */
 
 
 
 
-export const _decode_SubsequentMessage = $._decodeInteger;
+export const _decode_SubsequentMessage: $.ASN1Decoder<INTEGER> = $._decodeInteger;
 
 
 
 
-export const _encode_SubsequentMessage = $._encodeInteger;
+export const _encode_SubsequentMessage: $.ASN1Encoder<INTEGER> = $._encodeInteger;
 
 
 /* eslint-enable */

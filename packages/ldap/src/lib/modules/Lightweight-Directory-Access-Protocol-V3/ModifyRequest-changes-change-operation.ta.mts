@@ -1,6 +1,6 @@
 /* eslint-disable */
 import {
-  ENUMERATED,
+  type ENUMERATED,
   ASN1Element as _Element,
   ASN1TagClass as _TagClass,
   ASN1Construction as _Construction,
@@ -54,7 +54,7 @@ export type ModifyRequest_changes_change_operation =
  * @constant
  * @type {number}
  */
-export const ModifyRequest_changes_change_operation_add: ModifyRequest_changes_change_operation = 0; /* LONG_NAMED_ENUMERATED_VALUE */
+export const ModifyRequest_changes_change_operation_add: 0 = _enum_for_ModifyRequest_changes_change_operation.add; /* LONG_NAMED_ENUMERATED_VALUE */
 
 
 /**
@@ -66,7 +66,7 @@ export const ModifyRequest_changes_change_operation_add: ModifyRequest_changes_c
  * @constant
  * @type {number}
  */
-export const add: ModifyRequest_changes_change_operation = ModifyRequest_changes_change_operation_add; /* SHORT_NAMED_ENUMERATED_VALUE */
+export const add: 0 = ModifyRequest_changes_change_operation_add; /* SHORT_NAMED_ENUMERATED_VALUE */
 
 
 /**
@@ -79,7 +79,7 @@ export const add: ModifyRequest_changes_change_operation = ModifyRequest_changes
  * @constant
  * @type {number}
  */
-export const ModifyRequest_changes_change_operation_delete_: ModifyRequest_changes_change_operation = 1; /* LONG_NAMED_ENUMERATED_VALUE */
+export const ModifyRequest_changes_change_operation_delete_: 1 = _enum_for_ModifyRequest_changes_change_operation.delete_; /* LONG_NAMED_ENUMERATED_VALUE */
 
 
 /**
@@ -92,7 +92,7 @@ export const ModifyRequest_changes_change_operation_delete_: ModifyRequest_chang
  * @constant
  * @type {number}
  */
-export const delete_: ModifyRequest_changes_change_operation = ModifyRequest_changes_change_operation_delete_; /* SHORT_NAMED_ENUMERATED_VALUE */
+export const delete_: 1 = ModifyRequest_changes_change_operation_delete_; /* SHORT_NAMED_ENUMERATED_VALUE */
 
 
 /**
@@ -105,7 +105,7 @@ export const delete_: ModifyRequest_changes_change_operation = ModifyRequest_cha
  * @constant
  * @type {number}
  */
-export const ModifyRequest_changes_change_operation_replace: ModifyRequest_changes_change_operation = 2; /* LONG_NAMED_ENUMERATED_VALUE */
+export const ModifyRequest_changes_change_operation_replace: 2 = _enum_for_ModifyRequest_changes_change_operation.replace; /* LONG_NAMED_ENUMERATED_VALUE */
 
 
 /**
@@ -118,7 +118,7 @@ export const ModifyRequest_changes_change_operation_replace: ModifyRequest_chang
  * @constant
  * @type {number}
  */
-export const replace: ModifyRequest_changes_change_operation = ModifyRequest_changes_change_operation_replace; /* SHORT_NAMED_ENUMERATED_VALUE */
+export const replace: 2 = ModifyRequest_changes_change_operation_replace; /* SHORT_NAMED_ENUMERATED_VALUE */
 
 
 /**
@@ -128,7 +128,7 @@ export const replace: ModifyRequest_changes_change_operation = ModifyRequest_cha
  * @returns {ModifyRequest_changes_change_operation} The decoded data structure.
  */
 export function _decode_ModifyRequest_changes_change_operation(el: _Element): ModifyRequest_changes_change_operation {
-  return $._decodeEnumerated(el) as ModifyRequest_changes_change_operation;
+  return $._decodeEnumerated(el);
 }
 
 
@@ -143,7 +143,7 @@ export function _encode_ModifyRequest_changes_change_operation(
   value: ModifyRequest_changes_change_operation,
   elGetter: $.ASN1Encoder<ModifyRequest_changes_change_operation>
 ): _Element {
-  return $._encodeEnumerated(value, elGetter as $.ASN1Encoder<number>);
+  return $._encodeEnumerated(value, elGetter);
 }
 
 

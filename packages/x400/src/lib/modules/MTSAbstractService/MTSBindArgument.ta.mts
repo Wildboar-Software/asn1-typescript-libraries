@@ -1,7 +1,7 @@
 /* eslint-disable */
 import {
-    OPTIONAL,
-    ASN1Element as _Element,
+    type OPTIONAL,
+    type ASN1Element as _Element,
     ASN1TagClass as _TagClass,
     ASN1Construction as _Construction,
     ASN1UniversalType as _UniversalType,
@@ -12,7 +12,7 @@ import {
 } from '@wildboar/asn1';
 import * as $ from '@wildboar/asn1/functional';
 import {
-    ObjectName,
+    type ObjectName,
     _decode_ObjectName,
     _encode_ObjectName,
 } from '../MTSAbstractService/ObjectName.ta.mjs';
@@ -22,12 +22,12 @@ import {
     _encode_MessagesWaiting,
 } from '../MTSAbstractService/MessagesWaiting.ta.mjs';
 import {
-    InitiatorCredentials,
+    type InitiatorCredentials,
     _decode_InitiatorCredentials,
     _encode_InitiatorCredentials,
 } from '../MTSAbstractService/InitiatorCredentials.ta.mjs';
 import {
-    SecurityContext,
+    type SecurityContext,
     _decode_SecurityContext,
     _encode_SecurityContext,
 } from '../MTSAbstractService/SecurityContext.ta.mjs';
@@ -58,44 +58,58 @@ import {
  *
  */
 export class MTSBindArgument {
+    /**
+     * @summary `initiator_name`.
+     * @public
+     * @readonly
+     */
+    public readonly initiator_name: ObjectName;
+    /**
+     * @summary `messages_waiting`.
+     * @public
+     * @readonly
+     */
+    public readonly messages_waiting: OPTIONAL<MessagesWaiting>;
+    /**
+     * @summary `initiator_credentials`.
+     * @public
+     * @readonly
+     */
+    public readonly initiator_credentials: InitiatorCredentials;
+    /**
+     * @summary `security_context`.
+     * @public
+     * @readonly
+     */
+    public readonly security_context?: OPTIONAL<SecurityContext>;
+    /**
+     * @summary `extensions`.
+     * @public
+     * @readonly
+     */
+    public readonly extensions?: OPTIONAL<ExtensionField[]>;
+    /**
+     * @summary Extensions that are not recognized.
+     * @public
+     * @readonly
+     */
+    public readonly _unrecognizedExtensionsList: _Element[];
+
     constructor(
-        /**
-         * @summary `initiator_name`.
-         * @public
-         * @readonly
-         */
-        readonly initiator_name: ObjectName,
-        /**
-         * @summary `messages_waiting`.
-         * @public
-         * @readonly
-         */
-        readonly messages_waiting: OPTIONAL<MessagesWaiting>,
-        /**
-         * @summary `initiator_credentials`.
-         * @public
-         * @readonly
-         */
-        readonly initiator_credentials: InitiatorCredentials,
-        /**
-         * @summary `security_context`.
-         * @public
-         * @readonly
-         */
-        readonly security_context?: OPTIONAL<SecurityContext>,
-        /**
-         * @summary `extensions`.
-         * @public
-         * @readonly
-         */
-        readonly extensions?: OPTIONAL<ExtensionField[]>,
-        /**
-         * @summary Extensions that are not recognized.
-         * @public
-         * @readonly
-         */
-        readonly _unrecognizedExtensionsList: _Element[] = []
-    ) {}
+        initiator_name: ObjectName,
+        messages_waiting: OPTIONAL<MessagesWaiting>,
+        initiator_credentials: InitiatorCredentials,
+        security_context?: OPTIONAL<SecurityContext>,
+        extensions?: OPTIONAL<ExtensionField[]>,
+        _unrecognizedExtensionsList: _Element[] = []
+    ) {
+        this.initiator_name = initiator_name;
+        this.messages_waiting = messages_waiting;
+        this.initiator_credentials = initiator_credentials;
+        this.security_context = security_context;
+        this.extensions = extensions;
+        this._unrecognizedExtensionsList = _unrecognizedExtensionsList;
+    }
 
     /**
      * @summary Restructures an object into a MTSBindArgument

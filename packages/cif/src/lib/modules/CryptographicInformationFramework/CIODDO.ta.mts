@@ -1,9 +1,9 @@
 /* eslint-disable */
 import {
-    OPTIONAL,
-    OCTET_STRING,
-    OBJECT_IDENTIFIER,
-    ASN1Element as _Element,
+    type OPTIONAL,
+    type OCTET_STRING,
+    type OBJECT_IDENTIFIER,
+    type ASN1Element as _Element,
     ASN1TagClass as _TagClass,
     ASN1Construction as _Construction,
     ASN1UniversalType as _UniversalType,
@@ -45,58 +45,72 @@ import { SecurityFileOrObject, _decode_SecurityFileOrObject, _encode_SecurityFil
  */
 export
 class CIODDO {
+    /**
+     * @summary `providerId`.
+     * @description
+     * OID uniquely identifying the CIA provider. ISO/IEC 7816-15:2016 §7.4.
+     * @public
+     * @readonly
+     */
+    public readonly providerId?: OPTIONAL<OBJECT_IDENTIFIER>;
+    /**
+     * @summary `odfPath`.
+     * @description
+     * Non-default path (or constructed DO without CPT) to EF.OD. Enables
+     * sharing/non-standard Fids. ISO/IEC 7816-15:2016 §7.4.
+     * @public
+     * @readonly
+     */
+    public readonly odfPath?: OPTIONAL<Path>;
+    /**
+     * @summary `ciaInfoPath`.
+     * @description
+     * Non-default path to EF.CIAInfo; several CIAs may share one CIAInfo.
+     * ISO/IEC 7816-15:2016 §7.4.
+     * @public
+     * @readonly
+     */
+    public readonly ciaInfoPath?: OPTIONAL<Path>;
+    /**
+     * @summary `aid`.
+     * @description
+     * Application to which this CIA applies (ISO/IEC 7816-4 AID, 1..16
+     * octets). ISO/IEC 7816-15:2016 §7.4.
+     * @public
+     * @readonly
+     */
+    public readonly aid?: OPTIONAL<OCTET_STRING>;
+    /**
+     * @summary `securityFileOrObject`.
+     * @description
+     * Security protocol descriptors. Execution order follows
+     * `index`/`precondition`. ISO/IEC 7816-15:2016 §7.4.
+     * @public
+     * @readonly
+     */
+    public readonly securityFileOrObject?: OPTIONAL<SecurityFileOrObject[]>;
+    /**
+     * @summary Extensions that are not recognized.
+     * @public
+     * @readonly
+     */
+    public readonly _unrecognizedExtensionsList: _Element[];
+
     constructor (
-        /**
-         * @summary `providerId`.
-         * @description
-         * OID uniquely identifying the CIA provider. ISO/IEC 7816-15:2016 §7.4.
-         * @public
-         * @readonly
-         */
-        readonly providerId?: OPTIONAL<OBJECT_IDENTIFIER>,
-        /**
-         * @summary `odfPath`.
-         * @description
-         * Non-default path (or constructed DO without CPT) to EF.OD. Enables
-         * sharing/non-standard Fids. ISO/IEC 7816-15:2016 §7.4.
-         * @public
-         * @readonly
-         */
-        readonly odfPath?: OPTIONAL<Path>,
-        /**
-         * @summary `ciaInfoPath`.
-         * @description
-         * Non-default path to EF.CIAInfo; several CIAs may share one CIAInfo.
-         * ISO/IEC 7816-15:2016 §7.4.
-         * @public
-         * @readonly
-         */
-        readonly ciaInfoPath?: OPTIONAL<Path>,
-        /**
-         * @summary `aid`.
-         * @description
-         * Application to which this CIA applies (ISO/IEC 7816-4 AID, 1..16
-         * octets). ISO/IEC 7816-15:2016 §7.4.
-         * @public
-         * @readonly
-         */
-        readonly aid?: OPTIONAL<OCTET_STRING>,
-        /**
-         * @summary `securityFileOrObject`.
-         * @description
-         * Security protocol descriptors. Execution order follows
-         * `index`/`precondition`. ISO/IEC 7816-15:2016 §7.4.
-         * @public
-         * @readonly
-         */
-        readonly securityFileOrObject?: OPTIONAL<SecurityFileOrObject[]>,
-        /**
-         * @summary Extensions that are not recognized.
-         * @public
-         * @readonly
-         */
-        readonly _unrecognizedExtensionsList: _Element[] = []
-    ) {}
+        providerId?: OPTIONAL<OBJECT_IDENTIFIER>,
+        odfPath?: OPTIONAL<Path>,
+        ciaInfoPath?: OPTIONAL<Path>,
+        aid?: OPTIONAL<OCTET_STRING>,
+        securityFileOrObject?: OPTIONAL<SecurityFileOrObject[]>,
+        _unrecognizedExtensionsList: _Element[] = []
+    ) {
+        this.providerId = providerId;
+        this.odfPath = odfPath;
+        this.ciaInfoPath = ciaInfoPath;
+        this.aid = aid;
+        this.securityFileOrObject = securityFileOrObject;
+        this._unrecognizedExtensionsList = _unrecognizedExtensionsList;
+    }
 
     /**
      * @summary Restructures an object into a CIODDO

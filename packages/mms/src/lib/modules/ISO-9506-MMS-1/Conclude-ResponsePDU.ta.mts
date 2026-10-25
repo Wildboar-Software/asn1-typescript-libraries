@@ -1,7 +1,7 @@
 /* eslint-disable */
 import {
-    NULL,
-    ASN1Element as _Element,
+    type NULL,
+    type ASN1Element as _Element,
     ASN1TagClass as _TagClass,
     ASN1Construction as _Construction,
     ASN1UniversalType as _UniversalType,
@@ -32,8 +32,8 @@ import * as $ from "@wildboar/asn1/functional";
  */
 export
 type Conclude_ResponsePDU = NULL; // NullType
-export const _decode_Conclude_ResponsePDU = $._decodeNull;
-export const _encode_Conclude_ResponsePDU = $._encodeNull;
+export const _decode_Conclude_ResponsePDU: $.ASN1Decoder<null> = $._decodeNull;
+export const _encode_Conclude_ResponsePDU: $.ASN1Encoder<null> = $._encodeNull;
 
 
 /* eslint-enable */

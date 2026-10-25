@@ -2,13 +2,13 @@
 import { id_opcode_abandon } from "../CommonProtocolSpecification/id-opcode-abandon.va.mjs";
 import { type OPERATION } from "../CommonProtocolSpecification/OPERATION.oca.mjs";
 import {
-    AbandonArgument,
+    type AbandonArgument,
     _decode_AbandonArgument,
     _encode_AbandonArgument,
 } from "../DirectoryAbstractService/AbandonArgument.ta.mjs";
 import { abandonFailed } from "../DirectoryAbstractService/abandonFailed.oa.mjs";
 import {
-    AbandonResult,
+    type AbandonResult,
     _decode_AbandonResult,
     _encode_AbandonResult,
 } from "../DirectoryAbstractService/AbandonResult.ta.mjs";

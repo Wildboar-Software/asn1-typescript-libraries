@@ -1,8 +1,8 @@
 /* eslint-disable */
 import {
-    BOOLEAN,
-    OBJECT_IDENTIFIER,
-    ASN1Element as _Element,
+    type BOOLEAN,
+    type OBJECT_IDENTIFIER,
+    type ASN1Element as _Element,
     ASN1TagClass as _TagClass,
     ASN1Construction as _Construction,
     ASN1UniversalType as _UniversalType,
@@ -12,7 +12,7 @@ import {
     ASN1ConstructionError as _ConstructionError,
 } from "@wildboar/asn1";
 import * as $ from "@wildboar/asn1/functional";
-import { ParamOptions, _enum_for_ParamOptions, _decode_ParamOptions, _encode_ParamOptions } from "../AlgorithmInformation-2009/ParamOptions.ta.mjs";
+import { type ParamOptions, _enum_for_ParamOptions, _decode_ParamOptions, _encode_ParamOptions } from "../AlgorithmInformation-2009/ParamOptions.ta.mjs";
 import { type SMIME_CAPS } from "../AlgorithmInformation-2009/SMIME-CAPS.oca.mjs";
 
 /**
@@ -29,7 +29,7 @@ import { type SMIME_CAPS } from "../AlgorithmInformation-2009/SMIME-CAPS.oca.mjs
  * ```asn1
  * MAC-ALGORITHM ::= CLASS {
  * &id                OBJECT IDENTIFIER UNIQUE,
- * &Params        OPTIONAL,
+ * &Params        type OPTIONAL,
  * &paramPresence    ParamOptions DEFAULT absent,
  * &keyed        BOOLEAN,
  * &smimeCaps        SMIME-CAPS OPTIONAL

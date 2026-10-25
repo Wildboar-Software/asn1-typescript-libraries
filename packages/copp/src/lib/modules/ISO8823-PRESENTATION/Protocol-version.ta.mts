@@ -1,7 +1,7 @@
 /* eslint-disable */
 import {
-    BIT_STRING,
-    ASN1Element as _Element,
+    type BIT_STRING,
+    type ASN1Element as _Element,
     ASN1TagClass as _TagClass,
     ASN1Construction as _Construction,
     ASN1UniversalType as _UniversalType,
@@ -53,12 +53,12 @@ export const version_1: number = Protocol_version_version_1; /* SHORT_NAMED_BIT 
 
 
 
-export const _decode_Protocol_version = $._decodeBitString;
+export const _decode_Protocol_version: $.ASN1Decoder<BIT_STRING> = $._decodeBitString;
 
 
 
 
-export const _encode_Protocol_version = $._encodeBitString;
+export const _encode_Protocol_version: $.ASN1Encoder<BIT_STRING> = $._encodeBitString;
 
 
 /* eslint-enable */

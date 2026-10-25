@@ -1,6 +1,6 @@
 /* eslint-disable */
 import {
-    ASN1Element as _Element,
+    type ASN1Element as _Element,
     ASN1TagClass as _TagClass,
     ASN1Construction as _Construction,
     ASN1UniversalType as _UniversalType,
@@ -12,7 +12,7 @@ import {
 import * as $ from "@wildboar/asn1/functional";
 import { SignedData, _decode_SignedData, _encode_SignedData } from "../X9-84-CMS/SignedData.ta.mjs";
 
-import { SignedDataACBio, _decode_SignedDataACBio, _encode_SignedDataACBio } from "../AuthenticationContextForBiometrics/SignedDataACBio.ta.mjs";
+import { type SignedDataACBio, _decode_SignedDataACBio, _encode_SignedDataACBio } from "../AuthenticationContextForBiometrics/SignedDataACBio.ta.mjs";
 
 
 

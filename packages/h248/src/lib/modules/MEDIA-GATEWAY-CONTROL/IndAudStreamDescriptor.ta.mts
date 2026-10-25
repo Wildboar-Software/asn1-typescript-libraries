@@ -1,11 +1,11 @@
 /* eslint-disable */
 import {
     ASN1ConstructionError as _ConstructionError,
-    ASN1Element as _Element,
+    type ASN1Element as _Element,
     ASN1TagClass as _TagClass
 } from "@wildboar/asn1";
 import * as $ from "@wildboar/asn1/functional";
-import { StreamID, _decode_StreamID, _encode_StreamID } from "../MEDIA-GATEWAY-CONTROL/StreamID.ta.mjs";
+import { type StreamID, _decode_StreamID, _encode_StreamID } from "../MEDIA-GATEWAY-CONTROL/StreamID.ta.mjs";
 import { IndAudStreamParms, _decode_IndAudStreamParms, _encode_IndAudStreamParms } from "../MEDIA-GATEWAY-CONTROL/IndAudStreamParms.ta.mjs";
 
 
@@ -38,7 +38,7 @@ class IndAudStreamDescriptor {
      * @public
      * @readonly
      */
-    readonly streamID: StreamID;
+    public readonly streamID: StreamID;
     /**
      * @summary `streamParms`.
      * @description
@@ -49,7 +49,7 @@ class IndAudStreamDescriptor {
      * @public
      * @readonly
      */
-    readonly streamParms: IndAudStreamParms;
+    public readonly streamParms: IndAudStreamParms;
 
     constructor (
         streamID: StreamID,

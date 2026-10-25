@@ -8,7 +8,7 @@ import { type OPERATION } from "../Remote-Operations-Information-Objects/OPERATI
 
 import { CallBackNonCallRelatedArgument, _decode_CallBackNonCallRelatedArgument, _encode_CallBackNonCallRelatedArgument } from "../CSTA-call-back-non-call-related/CallBackNonCallRelatedArgument.ta.mjs";
 
-import { CallBackNonCallRelatedResult, _decode_CallBackNonCallRelatedResult, _encode_CallBackNonCallRelatedResult } from "../CSTA-call-back-non-call-related/CallBackNonCallRelatedResult.ta.mjs";
+import { type CallBackNonCallRelatedResult, _decode_CallBackNonCallRelatedResult, _encode_CallBackNonCallRelatedResult } from "../CSTA-call-back-non-call-related/CallBackNonCallRelatedResult.ta.mjs";
 
 import { universalFailure } from "../CSTA-error-definition/universalFailure.oa.mjs";
 

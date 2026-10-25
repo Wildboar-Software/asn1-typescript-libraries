@@ -1,6 +1,6 @@
 /* eslint-disable */
 import {
-    INTEGER
+    type INTEGER
 } from "@wildboar/asn1";
 import * as $ from "@wildboar/asn1/functional";
 
@@ -28,7 +28,7 @@ type AuthAction = INTEGER;
  * @type {number}
  */
 export
-const AuthAction_aa_auth_request: AuthAction = 0; /* LONG_NAMED_INTEGER_VALUE */
+const AuthAction_aa_auth_request: 0 = 0 satisfies AuthAction; /* LONG_NAMED_INTEGER_VALUE */
 
 /**
  * @summary AuthAction_aa_auth_request
@@ -36,7 +36,7 @@ const AuthAction_aa_auth_request: AuthAction = 0; /* LONG_NAMED_INTEGER_VALUE */
  * @type {number}
  */
 export
-const aa_auth_request: AuthAction = AuthAction_aa_auth_request; /* SHORT_NAMED_INTEGER_VALUE */
+const aa_auth_request: 0 = AuthAction_aa_auth_request; /* SHORT_NAMED_INTEGER_VALUE */
 
 /**
  * @summary AuthAction_aa_auth_result
@@ -44,7 +44,7 @@ const aa_auth_request: AuthAction = AuthAction_aa_auth_request; /* SHORT_NAMED_I
  * @type {number}
  */
 export
-const AuthAction_aa_auth_result: AuthAction = 1; /* LONG_NAMED_INTEGER_VALUE */
+const AuthAction_aa_auth_result: 1 = 1 satisfies AuthAction; /* LONG_NAMED_INTEGER_VALUE */
 
 /**
  * @summary AuthAction_aa_auth_result
@@ -52,9 +52,9 @@ const AuthAction_aa_auth_result: AuthAction = 1; /* LONG_NAMED_INTEGER_VALUE */
  * @type {number}
  */
 export
-const aa_auth_result: AuthAction = AuthAction_aa_auth_result; /* SHORT_NAMED_INTEGER_VALUE */
-export const _decode_AuthAction = $._decodeInteger;
-export const _encode_AuthAction = $._encodeInteger;
+const aa_auth_result: 1 = AuthAction_aa_auth_result; /* SHORT_NAMED_INTEGER_VALUE */
+export const _decode_AuthAction: $.ASN1Decoder<INTEGER> = $._decodeInteger;
+export const _encode_AuthAction: $.ASN1Encoder<INTEGER> = $._encodeInteger;
 
 
 /* eslint-enable */

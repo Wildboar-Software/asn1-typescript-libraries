@@ -1,12 +1,12 @@
 /* eslint-disable */
 import {
-    NULL,
-    ASN1Element as _Element,
+    type NULL,
+    type ASN1Element as _Element,
     ASN1TagClass as _TagClass,
     ASN1SizeError
 } from "@wildboar/asn1";
 import * as $ from "@wildboar/asn1/functional";
-import { Apid, _decode_Apid, _encode_Apid } from "../CCSDS-SLE-TRANSFER-SERVICE-FSP-STRUCTURES/Apid.ta.mjs";
+import { type Apid, _decode_Apid, _encode_Apid } from "../CCSDS-SLE-TRANSFER-SERVICE-FSP-STRUCTURES/Apid.ta.mjs";
 
 
 /**

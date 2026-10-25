@@ -2,31 +2,31 @@
 
 import * as $ from "@wildboar/asn1/functional";
 import {
-    OPTIONAL,
-    SEQUENCE,
-    SET,
-    ASN1Element as _Element,
+    type OPTIONAL,
+    type SEQUENCE,
+    type SET,
+    type ASN1Element as _Element,
     ASN1TagClass as _TagClass
 } from "@wildboar/asn1";
-import { ChangeSystemStatusFilter, _decode_ChangeSystemStatusFilter, _encode_ChangeSystemStatusFilter } from "../CSTA-capability-exchange/ChangeSystemStatusFilter.ta.mjs";
+import { type ChangeSystemStatusFilter, _decode_ChangeSystemStatusFilter, _encode_ChangeSystemStatusFilter } from "../CSTA-capability-exchange/ChangeSystemStatusFilter.ta.mjs";
 
-import { SystemRegister, _decode_SystemRegister, _encode_SystemRegister } from "../CSTA-capability-exchange/SystemRegister.ta.mjs";
+import { type SystemRegister, _decode_SystemRegister, _encode_SystemRegister } from "../CSTA-capability-exchange/SystemRegister.ta.mjs";
 
-import { SystemStatusRegisterAbort, _decode_SystemStatusRegisterAbort, _encode_SystemStatusRegisterAbort } from "../CSTA-capability-exchange/SystemStatusRegisterAbort.ta.mjs";
+import { type SystemStatusRegisterAbort, _decode_SystemStatusRegisterAbort, _encode_SystemStatusRegisterAbort } from "../CSTA-capability-exchange/SystemStatusRegisterAbort.ta.mjs";
 
-import { SystemStatusRegisterCancel, _decode_SystemStatusRegisterCancel, _encode_SystemStatusRegisterCancel } from "../CSTA-capability-exchange/SystemStatusRegisterCancel.ta.mjs";
+import { type SystemStatusRegisterCancel, _decode_SystemStatusRegisterCancel, _encode_SystemStatusRegisterCancel } from "../CSTA-capability-exchange/SystemStatusRegisterCancel.ta.mjs";
 
-import { RequestSystemStatus, _decode_RequestSystemStatus, _encode_RequestSystemStatus } from "../CSTA-capability-exchange/RequestSystemStatus.ta.mjs";
+import { type RequestSystemStatus, _decode_RequestSystemStatus, _encode_RequestSystemStatus } from "../CSTA-capability-exchange/RequestSystemStatus.ta.mjs";
 
-import { SystemStatus, _decode_SystemStatus, _encode_SystemStatus } from "../CSTA-capability-exchange/SystemStatus.ta.mjs";
+import { type SystemStatus, _decode_SystemStatus, _encode_SystemStatus } from "../CSTA-capability-exchange/SystemStatus.ta.mjs";
 
-import { SwFunctionCapsChanged, _decode_SwFunctionCapsChanged, _encode_SwFunctionCapsChanged } from "../CSTA-capability-exchange/SwFunctionCapsChanged.ta.mjs";
+import { type SwFunctionCapsChanged, _decode_SwFunctionCapsChanged, _encode_SwFunctionCapsChanged } from "../CSTA-capability-exchange/SwFunctionCapsChanged.ta.mjs";
 
-import { SwFunctionDevicesChanged, _decode_SwFunctionDevicesChanged, _encode_SwFunctionDevicesChanged } from "../CSTA-capability-exchange/SwFunctionDevicesChanged.ta.mjs";
+import { type SwFunctionDevicesChanged, _decode_SwFunctionDevicesChanged, _encode_SwFunctionDevicesChanged } from "../CSTA-capability-exchange/SwFunctionDevicesChanged.ta.mjs";
 
-import { GetRegistrations, _decode_GetRegistrations, _encode_GetRegistrations } from "../CSTA-capability-exchange/GetRegistrations.ta.mjs";
+import { type GetRegistrations, _decode_GetRegistrations, _encode_GetRegistrations } from "../CSTA-capability-exchange/GetRegistrations.ta.mjs";
 
-import { RegistrationInfo, _decode_RegistrationInfo, _encode_RegistrationInfo } from "../CSTA-capability-exchange/RegistrationInfo.ta.mjs";
+import { type RegistrationInfo, _decode_RegistrationInfo, _encode_RegistrationInfo } from "../CSTA-capability-exchange/RegistrationInfo.ta.mjs";
 
 
 
@@ -44,15 +44,15 @@ import { RegistrationInfo, _decode_RegistrationInfo, _encode_RegistrationInfo } 
  * 
  * ```asn1
  * SystemStatusServList ::= SEQUENCE
- * {     changeSystemStatusFilter     [ 0] IMPLICIT ChangeSystemStatusFilter        OPTIONAL,
- *     systemRegister             [ 1] IMPLICIT SystemRegister             OPTIONAL,
- *     systemStatusRegisterAbort     [ 2] IMPLICIT SystemStatusRegisterAbort     OPTIONAL,
- *     systemStatusRegisterCancel     [ 3] IMPLICIT SystemStatusRegisterCancel     OPTIONAL,
- *     requestSystemStatus         [ 4] IMPLICIT RequestSystemStatus         OPTIONAL,
- *     systemStatus             [ 5] IMPLICIT SystemStatus             OPTIONAL,
- *     swFunctionCapsChanged         [ 6] IMPLICIT SwFunctionCapsChanged         OPTIONAL,
- *     swFunctionDevicesChanged     [ 7] IMPLICIT SwFunctionDevicesChanged         OPTIONAL,
- *     getRegistrations        [ 8] IMPLICIT GetRegistrations            OPTIONAL,
+ * {     changeSystemStatusFilter     [ 0] IMPLICIT ChangeSystemStatusFilter        type OPTIONAL,
+ *     systemRegister             [ 1] IMPLICIT SystemRegister             type OPTIONAL,
+ *     systemStatusRegisterAbort     [ 2] IMPLICIT SystemStatusRegisterAbort     type OPTIONAL,
+ *     systemStatusRegisterCancel     [ 3] IMPLICIT SystemStatusRegisterCancel     type OPTIONAL,
+ *     requestSystemStatus         [ 4] IMPLICIT RequestSystemStatus         type OPTIONAL,
+ *     systemStatus             [ 5] IMPLICIT SystemStatus             type OPTIONAL,
+ *     swFunctionCapsChanged         [ 6] IMPLICIT SwFunctionCapsChanged         type OPTIONAL,
+ *     swFunctionDevicesChanged     [ 7] IMPLICIT SwFunctionDevicesChanged         type OPTIONAL,
+ *     getRegistrations        [ 8] IMPLICIT GetRegistrations            type OPTIONAL,
  *     registrationInfo        [ 9] IMPLICIT RegistrationInfo            OPTIONAL }
  * ```
  * 
@@ -60,98 +60,120 @@ import { RegistrationInfo, _decode_RegistrationInfo, _encode_RegistrationInfo } 
  */
 export
 class SystemStatusServList {
+    /**
+     * @summary `changeSystemStatusFilter`.
+     * @public
+     * @readonly
+     * @description
+     * Capability bitmap for this service; omit if the SF does not support
+     * it (ECMA-269 Annex C).
+     */
+    public readonly changeSystemStatusFilter?: OPTIONAL<ChangeSystemStatusFilter>;
+    /**
+     * @summary `systemRegister`.
+     * @public
+     * @readonly
+     * @description
+     * Capability bitmap for this service; omit if the SF does not support
+     * it (ECMA-269 Annex C).
+     */
+    public readonly systemRegister?: OPTIONAL<SystemRegister>;
+    /**
+     * @summary `systemStatusRegisterAbort`.
+     * @public
+     * @readonly
+     * @description
+     * Capability bitmap for this service; omit if the SF does not support
+     * it (ECMA-269 Annex C).
+     */
+    public readonly systemStatusRegisterAbort?: OPTIONAL<SystemStatusRegisterAbort>;
+    /**
+     * @summary `systemStatusRegisterCancel`.
+     * @public
+     * @readonly
+     * @description
+     * Capability bitmap for this service; omit if the SF does not support
+     * it (ECMA-269 Annex C).
+     */
+    public readonly systemStatusRegisterCancel?: OPTIONAL<SystemStatusRegisterCancel>;
+    /**
+     * @summary `requestSystemStatus`.
+     * @public
+     * @readonly
+     * @description
+     * Capability bitmap for this service; omit if the SF does not support
+     * it (ECMA-269 Annex C).
+     */
+    public readonly requestSystemStatus?: OPTIONAL<RequestSystemStatus>;
+    /**
+     * @summary `systemStatus`.
+     * @public
+     * @readonly
+     * @description
+     * Capability bitmap for this service; omit if the SF does not support
+     * it (ECMA-269 Annex C).
+     */
+    public readonly systemStatus?: OPTIONAL<SystemStatus>;
+    /**
+     * @summary `swFunctionCapsChanged`.
+     * @public
+     * @readonly
+     * @description
+     * Capability bitmap for this service; omit if the SF does not support
+     * it (ECMA-269 Annex C).
+     */
+    public readonly swFunctionCapsChanged?: OPTIONAL<SwFunctionCapsChanged>;
+    /**
+     * @summary `swFunctionDevicesChanged`.
+     * @public
+     * @readonly
+     * @description
+     * Capability bitmap for this service; omit if the SF does not support
+     * it (ECMA-269 Annex C).
+     */
+    public readonly swFunctionDevicesChanged?: OPTIONAL<SwFunctionDevicesChanged>;
+    /**
+     * @summary `getRegistrations`.
+     * @public
+     * @readonly
+     * @description
+     * Capability bitmap for this service; omit if the SF does not support
+     * it (ECMA-269 Annex C).
+     */
+    public readonly getRegistrations?: OPTIONAL<GetRegistrations>;
+    /**
+     * @summary `registrationInfo`.
+     * @public
+     * @readonly
+     * @description
+     * Capability bitmap for this service; omit if the SF does not support
+     * it (ECMA-269 Annex C).
+     */
+    public readonly registrationInfo?: OPTIONAL<RegistrationInfo>;
+
     constructor (
-        /**
-         * @summary `changeSystemStatusFilter`.
-         * @public
-         * @readonly
-         * @description
-         * Capability bitmap for this service; omit if the SF does not support
-         * it (ECMA-269 Annex C).
-         */
-        readonly changeSystemStatusFilter?: OPTIONAL<ChangeSystemStatusFilter>,
-        /**
-         * @summary `systemRegister`.
-         * @public
-         * @readonly
-         * @description
-         * Capability bitmap for this service; omit if the SF does not support
-         * it (ECMA-269 Annex C).
-         */
-        readonly systemRegister?: OPTIONAL<SystemRegister>,
-        /**
-         * @summary `systemStatusRegisterAbort`.
-         * @public
-         * @readonly
-         * @description
-         * Capability bitmap for this service; omit if the SF does not support
-         * it (ECMA-269 Annex C).
-         */
-        readonly systemStatusRegisterAbort?: OPTIONAL<SystemStatusRegisterAbort>,
-        /**
-         * @summary `systemStatusRegisterCancel`.
-         * @public
-         * @readonly
-         * @description
-         * Capability bitmap for this service; omit if the SF does not support
-         * it (ECMA-269 Annex C).
-         */
-        readonly systemStatusRegisterCancel?: OPTIONAL<SystemStatusRegisterCancel>,
-        /**
-         * @summary `requestSystemStatus`.
-         * @public
-         * @readonly
-         * @description
-         * Capability bitmap for this service; omit if the SF does not support
-         * it (ECMA-269 Annex C).
-         */
-        readonly requestSystemStatus?: OPTIONAL<RequestSystemStatus>,
-        /**
-         * @summary `systemStatus`.
-         * @public
-         * @readonly
-         * @description
-         * Capability bitmap for this service; omit if the SF does not support
-         * it (ECMA-269 Annex C).
-         */
-        readonly systemStatus?: OPTIONAL<SystemStatus>,
-        /**
-         * @summary `swFunctionCapsChanged`.
-         * @public
-         * @readonly
-         * @description
-         * Capability bitmap for this service; omit if the SF does not support
-         * it (ECMA-269 Annex C).
-         */
-        readonly swFunctionCapsChanged?: OPTIONAL<SwFunctionCapsChanged>,
-        /**
-         * @summary `swFunctionDevicesChanged`.
-         * @public
-         * @readonly
-         * @description
-         * Capability bitmap for this service; omit if the SF does not support
-         * it (ECMA-269 Annex C).
-         */
-        readonly swFunctionDevicesChanged?: OPTIONAL<SwFunctionDevicesChanged>,
-        /**
-         * @summary `getRegistrations`.
-         * @public
-         * @readonly
-         * @description
-         * Capability bitmap for this service; omit if the SF does not support
-         * it (ECMA-269 Annex C).
-         */
-        readonly getRegistrations?: OPTIONAL<GetRegistrations>,
-        /**
-         * @summary `registrationInfo`.
-         * @public
-         * @readonly
-         * @description
-         * Capability bitmap for this service; omit if the SF does not support
-         * it (ECMA-269 Annex C).
-         */
-        readonly registrationInfo?: OPTIONAL<RegistrationInfo>
-    ) {}
+        changeSystemStatusFilter?: OPTIONAL<ChangeSystemStatusFilter>,
+        systemRegister?: OPTIONAL<SystemRegister>,
+        systemStatusRegisterAbort?: OPTIONAL<SystemStatusRegisterAbort>,
+        systemStatusRegisterCancel?: OPTIONAL<SystemStatusRegisterCancel>,
+        requestSystemStatus?: OPTIONAL<RequestSystemStatus>,
+        systemStatus?: OPTIONAL<SystemStatus>,
+        swFunctionCapsChanged?: OPTIONAL<SwFunctionCapsChanged>,
+        swFunctionDevicesChanged?: OPTIONAL<SwFunctionDevicesChanged>,
+        getRegistrations?: OPTIONAL<GetRegistrations>,
+        registrationInfo?: OPTIONAL<RegistrationInfo>
+    ) {
+        this.changeSystemStatusFilter = changeSystemStatusFilter;
+        this.systemRegister = systemRegister;
+        this.systemStatusRegisterAbort = systemStatusRegisterAbort;
+        this.systemStatusRegisterCancel = systemStatusRegisterCancel;
+        this.requestSystemStatus = requestSystemStatus;
+        this.systemStatus = systemStatus;
+        this.swFunctionCapsChanged = swFunctionCapsChanged;
+        this.swFunctionDevicesChanged = swFunctionDevicesChanged;
+        this.getRegistrations = getRegistrations;
+        this.registrationInfo = registrationInfo;
+    }
 
     /**
      * @summary Restructures an object into a SystemStatusServList

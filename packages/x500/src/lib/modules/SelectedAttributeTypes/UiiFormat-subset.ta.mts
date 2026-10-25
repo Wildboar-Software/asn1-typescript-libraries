@@ -1,5 +1,5 @@
 /* eslint-disable */
-import { ASN1Element as _Element } from "@wildboar/asn1";
+import { ASN1Element as _Element, ASN1ConstructionError as _ConstructionError } from "@wildboar/asn1";
 import * as $ from "@wildboar/asn1/functional";
 
 /**
@@ -55,7 +55,7 @@ export type UiiFormat_subset = _enum_for_UiiFormat_subset;
  *
  * @enum {number}
  */
-export const UiiFormat_subset = _enum_for_UiiFormat_subset;
+export const UiiFormat_subset: typeof _enum_for_UiiFormat_subset = _enum_for_UiiFormat_subset;
 
 /**
  * @summary UiiFormat_subset_baseObject
@@ -66,7 +66,7 @@ export const UiiFormat_subset = _enum_for_UiiFormat_subset;
  * @constant
  * @type {number}
  */
-export const UiiFormat_subset_baseObject: UiiFormat_subset =
+export const UiiFormat_subset_baseObject: _enum_for_UiiFormat_subset.baseObject =
     UiiFormat_subset.baseObject; /* LONG_NAMED_ENUMERATED_VALUE */
 
 /**
@@ -78,7 +78,7 @@ export const UiiFormat_subset_baseObject: UiiFormat_subset =
  * @constant
  * @type {number}
  */
-export const baseObject: UiiFormat_subset =
+export const baseObject: _enum_for_UiiFormat_subset.baseObject =
     UiiFormat_subset.baseObject; /* SHORT_NAMED_ENUMERATED_VALUE */
 
 /**
@@ -86,7 +86,7 @@ export const baseObject: UiiFormat_subset =
  * @constant
  * @type {number}
  */
-export const UiiFormat_subset_oneLevel: UiiFormat_subset =
+export const UiiFormat_subset_oneLevel: _enum_for_UiiFormat_subset.oneLevel =
     UiiFormat_subset.oneLevel; /* LONG_NAMED_ENUMERATED_VALUE */
 
 /**
@@ -94,7 +94,7 @@ export const UiiFormat_subset_oneLevel: UiiFormat_subset =
  * @constant
  * @type {number}
  */
-export const oneLevel: UiiFormat_subset =
+export const oneLevel: _enum_for_UiiFormat_subset.oneLevel =
     UiiFormat_subset.oneLevel; /* SHORT_NAMED_ENUMERATED_VALUE */
 
 /**
@@ -102,7 +102,7 @@ export const oneLevel: UiiFormat_subset =
  * @constant
  * @type {number}
  */
-export const UiiFormat_subset_wholeSubtree: UiiFormat_subset =
+export const UiiFormat_subset_wholeSubtree: _enum_for_UiiFormat_subset.wholeSubtree =
     UiiFormat_subset.wholeSubtree; /* LONG_NAMED_ENUMERATED_VALUE */
 
 /**
@@ -110,14 +110,26 @@ export const UiiFormat_subset_wholeSubtree: UiiFormat_subset =
  * @constant
  * @type {number}
  */
-export const wholeSubtree: UiiFormat_subset =
+export const wholeSubtree: _enum_for_UiiFormat_subset.wholeSubtree =
     UiiFormat_subset.wholeSubtree; /* SHORT_NAMED_ENUMERATED_VALUE */
 
 
-export const _decode_UiiFormat_subset = $._decodeEnumerated;
+export function _decode_UiiFormat_subset(el: _Element): UiiFormat_subset {
+    const enumerated = $._decodeEnumerated(el);
+    switch (enumerated) {
+        case UiiFormat_subset.baseObject: return UiiFormat_subset.baseObject;
+        case UiiFormat_subset.oneLevel: return UiiFormat_subset.oneLevel;
+        case UiiFormat_subset.wholeSubtree: return UiiFormat_subset.wholeSubtree;
+        default:
+            throw new _ConstructionError(
+                "Invalid ENUMERATED value " + enumerated + " for UiiFormat_subset.",
+                el,
+            );
+    }
+}
 
 
-export const _encode_UiiFormat_subset = $._encodeEnumerated;
+export const _encode_UiiFormat_subset: $.ASN1Encoder<UiiFormat_subset> = $._encodeEnumerated as $.ASN1Encoder<UiiFormat_subset>;
 
 
 /* eslint-enable */

@@ -1,9 +1,9 @@
 /* eslint-disable */
 import {
-    BOOLEAN,
-    INTEGER,
-    OPTIONAL,
-    ASN1Element as _Element,
+    type BOOLEAN,
+    type INTEGER,
+    type OPTIONAL,
+    type ASN1Element as _Element,
     ASN1TagClass as _TagClass
 } from "@wildboar/asn1";
 import * as $ from "@wildboar/asn1/functional";
@@ -315,19 +315,19 @@ class PTCFloorControl {
          * @static
          */
 
-    public static _enum_for_pTCDirection = _enum_for_Direction;        /**
+    public static _enum_for_pTCDirection: typeof _enum_for_Direction = _enum_for_Direction;        /**
          * @summary The enum used as the type of the component `pTCTalkBurstPriority`
          * @public
          * @static
          */
 
-    public static _enum_for_pTCTalkBurstPriority = _enum_for_PTCTBPriorityLevel;        /**
+    public static _enum_for_pTCTalkBurstPriority: typeof _enum_for_PTCTBPriorityLevel = _enum_for_PTCTBPriorityLevel;        /**
          * @summary The enum used as the type of the component `pTCTalkBurstReason`
          * @public
          * @static
          */
 
-    public static _enum_for_pTCTalkBurstReason = _enum_for_PTCTBReasonCode;
+    public static _enum_for_pTCTalkBurstReason: typeof _enum_for_PTCTBReasonCode = _enum_for_PTCTBReasonCode;
 }
 
 /**

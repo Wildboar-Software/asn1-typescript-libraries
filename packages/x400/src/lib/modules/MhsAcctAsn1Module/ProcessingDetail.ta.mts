@@ -1,6 +1,6 @@
 /* eslint-disable */
 import {
-    ASN1Element as _Element,
+    type ASN1Element as _Element,
     ASN1TagClass as _TagClass,
     ASN1Construction as _Construction,
     ASN1UniversalType as _UniversalType,
@@ -11,7 +11,7 @@ import {
 } from '@wildboar/asn1';
 import * as $ from '@wildboar/asn1/functional';
 import {
-    NameResolutionProcessingInfo,
+    type NameResolutionProcessingInfo,
     _decode_NameResolutionProcessingInfo,
     _encode_NameResolutionProcessingInfo,
 } from '../MhsAcctAsn1Module/NameResolutionProcessingInfo.ta.mjs';
@@ -26,12 +26,12 @@ import {
     _encode_RedirectionProcessingInfo,
 } from '../MhsAcctAsn1Module/RedirectionProcessingInfo.ta.mjs';
 import {
-    DeferralOfDeliveryProcessingInfo,
+    type DeferralOfDeliveryProcessingInfo,
     _decode_DeferralOfDeliveryProcessingInfo,
     _encode_DeferralOfDeliveryProcessingInfo,
 } from '../MhsAcctAsn1Module/DeferralOfDeliveryProcessingInfo.ta.mjs';
 import {
-    ConversionProcessingInfo,
+    type ConversionProcessingInfo,
     _decode_ConversionProcessingInfo,
     _encode_ConversionProcessingInfo,
 } from '../MhsAcctAsn1Module/ConversionProcessingInfo.ta.mjs';

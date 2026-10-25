@@ -1,26 +1,26 @@
 /* eslint-disable */
 import {
-    BOOLEAN,
-    IA5String,
-    INTEGER,
-    NULL,
-    OCTET_STRING,
-    OPTIONAL,
-    ASN1Element as _Element,
+    type BOOLEAN,
+    type IA5String,
+    type INTEGER,
+    type NULL,
+    type OCTET_STRING,
+    type OPTIONAL,
+    type ASN1Element as _Element,
     ASN1TagClass as _TagClass,
     ASN1SizeError,
     ASN1OverflowError
 } from "@wildboar/asn1";
 import * as $ from "@wildboar/asn1/functional";
-import { RecordType, _decode_RecordType, _encode_RecordType } from "../GPRSChargingDataTypes/RecordType.ta.mjs";
-import { GSNAddress, _decode_GSNAddress, _encode_GSNAddress } from "../GPRSChargingDataTypes/GSNAddress.ta.mjs";
-import { PDPAddress, _decode_PDPAddress, _encode_PDPAddress } from "../GPRSChargingDataTypes/PDPAddress.ta.mjs";
+import { type RecordType, _decode_RecordType, _encode_RecordType } from "../GPRSChargingDataTypes/RecordType.ta.mjs";
+import { type GSNAddress, _decode_GSNAddress, _encode_GSNAddress } from "../GPRSChargingDataTypes/GSNAddress.ta.mjs";
+import { type PDPAddress, _decode_PDPAddress, _encode_PDPAddress } from "../GPRSChargingDataTypes/PDPAddress.ta.mjs";
 import { ChangeOfCharCondition, _decode_ChangeOfCharCondition, _encode_ChangeOfCharCondition } from "../GPRSChargingDataTypes/ChangeOfCharCondition.ta.mjs";
-import { CauseForRecClosing, _decode_CauseForRecClosing, _encode_CauseForRecClosing } from "../GPRSChargingDataTypes/CauseForRecClosing.ta.mjs";
-import { Diagnostics, _decode_Diagnostics, _encode_Diagnostics } from "../GPRSChargingDataTypes/Diagnostics.ta.mjs";
+import { type CauseForRecClosing, _decode_CauseForRecClosing, _encode_CauseForRecClosing } from "../GPRSChargingDataTypes/CauseForRecClosing.ta.mjs";
+import { type Diagnostics, _decode_Diagnostics, _encode_Diagnostics } from "../GPRSChargingDataTypes/Diagnostics.ta.mjs";
 import { ManagementExtension, _decode_ManagementExtension, _encode_ManagementExtension } from "../GPRSChargingDataTypes/ManagementExtension.ta.mjs";
 import { APNSelectionMode, _decode_APNSelectionMode, _encode_APNSelectionMode, _enum_for_APNSelectionMode } from "../GPRSChargingDataTypes/APNSelectionMode.ta.mjs";
-import { ChChSelectionMode, _decode_ChChSelectionMode, _encode_ChChSelectionMode, _enum_for_ChChSelectionMode } from "../GPRSChargingDataTypes/ChChSelectionMode.ta.mjs";
+import { type ChChSelectionMode, _decode_ChChSelectionMode, _encode_ChChSelectionMode, _enum_for_ChChSelectionMode } from "../GPRSChargingDataTypes/ChChSelectionMode.ta.mjs";
 import { PSFurnishChargingInformation, _decode_PSFurnishChargingInformation, _encode_PSFurnishChargingInformation } from "../GPRSChargingDataTypes/PSFurnishChargingInformation.ta.mjs";
 import { ChangeOfServiceCondition, _decode_ChangeOfServiceCondition, _encode_ChangeOfServiceCondition } from "../GPRSChargingDataTypes/ChangeOfServiceCondition.ta.mjs";
 import { ServingNodeType, _decode_ServingNodeType, _encode_ServingNodeType } from "../GPRSChargingDataTypes/ServingNodeType.ta.mjs";
@@ -39,7 +39,7 @@ import { ServingPLMNRateControl, _decode_ServingPLMNRateControl, _encode_Serving
 import { APNRateControl, _decode_APNRateControl, _encode_APNRateControl } from "../GPRSChargingDataTypes/APNRateControl.ta.mjs";
 import { MOExceptionDataCounter, _decode_MOExceptionDataCounter, _encode_MOExceptionDataCounter } from "../GPRSChargingDataTypes/MOExceptionDataCounter.ta.mjs";
 import { ChargingPerIPCANSessionIndicator, _decode_ChargingPerIPCANSessionIndicator, _encode_ChargingPerIPCANSessionIndicator, _enum_for_ChargingPerIPCANSessionIndicator } from "../GPRSChargingDataTypes/ChargingPerIPCANSessionIndicator.ta.mjs";
-import { ThreeGPPPSDataOffStatus, _decode_ThreeGPPPSDataOffStatus, _encode_ThreeGPPPSDataOffStatus, _enum_for_ThreeGPPPSDataOffStatus } from "../GPRSChargingDataTypes/ThreeGPPPSDataOffStatus.ta.mjs";
+import { type ThreeGPPPSDataOffStatus, _decode_ThreeGPPPSDataOffStatus, _encode_ThreeGPPPSDataOffStatus, _enum_for_ThreeGPPPSDataOffStatus } from "../GPRSChargingDataTypes/ThreeGPPPSDataOffStatus.ta.mjs";
 import { SCSASAddress, _decode_SCSASAddress, _encode_SCSASAddress } from "../GPRSChargingDataTypes/SCSASAddress.ta.mjs";
 import { RANSecondaryRATUsageReport, _decode_RANSecondaryRATUsageReport, _encode_RANSecondaryRATUsageReport } from "../GPRSChargingDataTypes/RANSecondaryRATUsageReport.ta.mjs";
 
@@ -1557,49 +1557,49 @@ class PGWRecord {
          * @static
          */
 
-    public static _enum_for_apnSelectionMode = _enum_for_APNSelectionMode;        /**
+    public static _enum_for_apnSelectionMode: typeof _enum_for_APNSelectionMode = _enum_for_APNSelectionMode;        /**
          * @summary The enum used as the type of the component `chChSelectionMode`
          * @public
          * @static
          */
 
-    public static _enum_for_chChSelectionMode = _enum_for_ChChSelectionMode;        /**
+    public static _enum_for_chChSelectionMode: typeof _enum_for_ChChSelectionMode = _enum_for_ChChSelectionMode;        /**
          * @summary The enum used as the type of the component `cNOperatorSelectionEnt`
          * @public
          * @static
          */
 
-    public static _enum_for_cNOperatorSelectionEnt = _enum_for_CNOperatorSelectionEntity;        /**
+    public static _enum_for_cNOperatorSelectionEnt: typeof _enum_for_CNOperatorSelectionEntity = _enum_for_CNOperatorSelectionEntity;        /**
          * @summary The enum used as the type of the component `nBIFOMMode`
          * @public
          * @static
          */
 
-    public static _enum_for_nBIFOMMode = _enum_for_NBIFOMMode;        /**
+    public static _enum_for_nBIFOMMode: typeof _enum_for_NBIFOMMode = _enum_for_NBIFOMMode;        /**
          * @summary The enum used as the type of the component `nBIFOMSupport`
          * @public
          * @static
          */
 
-    public static _enum_for_nBIFOMSupport = _enum_for_NBIFOMSupport;        /**
+    public static _enum_for_nBIFOMSupport: typeof _enum_for_NBIFOMSupport = _enum_for_NBIFOMSupport;        /**
          * @summary The enum used as the type of the component `sGiPtPTunnellingMethod`
          * @public
          * @static
          */
 
-    public static _enum_for_sGiPtPTunnellingMethod = _enum_for_SGiPtPTunnellingMethod;        /**
+    public static _enum_for_sGiPtPTunnellingMethod: typeof _enum_for_SGiPtPTunnellingMethod = _enum_for_SGiPtPTunnellingMethod;        /**
          * @summary The enum used as the type of the component `chargingPerIPCANSessionIndicator`
          * @public
          * @static
          */
 
-    public static _enum_for_chargingPerIPCANSessionIndicator = _enum_for_ChargingPerIPCANSessionIndicator;        /**
+    public static _enum_for_chargingPerIPCANSessionIndicator: typeof _enum_for_ChargingPerIPCANSessionIndicator = _enum_for_ChargingPerIPCANSessionIndicator;        /**
          * @summary The enum used as the type of the component `threeGPPPSDataOffStatus`
          * @public
          * @static
          */
 
-    public static _enum_for_threeGPPPSDataOffStatus = _enum_for_ThreeGPPPSDataOffStatus;
+    public static _enum_for_threeGPPPSDataOffStatus: typeof _enum_for_ThreeGPPPSDataOffStatus = _enum_for_ThreeGPPPSDataOffStatus;
 }
 
 /**

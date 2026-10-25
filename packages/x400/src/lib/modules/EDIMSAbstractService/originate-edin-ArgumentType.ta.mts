@@ -1,6 +1,6 @@
 /* eslint-disable */
 import {
-    ASN1Element as _Element,
+    type ASN1Element as _Element,
     ASN1TagClass as _TagClass,
     ASN1Construction as _Construction,
     ASN1UniversalType as _UniversalType,
@@ -16,7 +16,7 @@ import {
     _encode_MessageSubmissionEnvelope,
 } from '../MTSAbstractService/MessageSubmissionEnvelope.ta.mjs';
 import {
-    EDIN,
+    type EDIN,
     _decode_EDIN,
     _encode_EDIN,
 } from '../EDIMSInformationObjects/EDIN.ta.mjs';
@@ -34,20 +34,26 @@ import {
  *
  */
 export class originate_edin_ArgumentType {
+    /**
+     * @summary `envelope`.
+     * @public
+     * @readonly
+     */
+    public readonly envelope: MessageSubmissionEnvelope;
+    /**
+     * @summary `content`.
+     * @public
+     * @readonly
+     */
+    public readonly content: EDIN;
+
     constructor(
-        /**
-         * @summary `envelope`.
-         * @public
-         * @readonly
-         */
-        readonly envelope: MessageSubmissionEnvelope,
-        /**
-         * @summary `content`.
-         * @public
-         * @readonly
-         */
-        readonly content: EDIN
-    ) {}
+        envelope: MessageSubmissionEnvelope,
+        content: EDIN
+    ) {
+        this.envelope = envelope;
+        this.content = content;
+    }
 
     /**
      * @summary Restructures an object into a originate_edin_ArgumentType

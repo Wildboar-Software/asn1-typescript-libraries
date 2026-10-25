@@ -1,7 +1,7 @@
 /* eslint-disable */
 import {
-    INTEGER,
-    ASN1Element as _Element,
+    type INTEGER,
+    type ASN1Element as _Element,
     ASN1TagClass as _TagClass,
     ASN1Construction as _Construction,
     ASN1UniversalType as _UniversalType,
@@ -37,104 +37,104 @@ export type EntryType = INTEGER;
  * @constant
  * @type {number}
  */
-export const EntryType_delivered_message: EntryType = 0; /* LONG_NAMED_INTEGER_VALUE */
+export const EntryType_delivered_message: 0 = 0 satisfies EntryType; /* LONG_NAMED_INTEGER_VALUE */
 
 /**
  * @summary EntryType_delivered_message
  * @constant
  * @type {number}
  */
-export const delivered_message: EntryType = EntryType_delivered_message; /* SHORT_NAMED_INTEGER_VALUE */
+export const delivered_message: 0 = EntryType_delivered_message; /* SHORT_NAMED_INTEGER_VALUE */
 
 /**
  * @summary EntryType_delivered_report
  * @constant
  * @type {number}
  */
-export const EntryType_delivered_report: EntryType = 1; /* LONG_NAMED_INTEGER_VALUE */
+export const EntryType_delivered_report: 1 = 1 satisfies EntryType; /* LONG_NAMED_INTEGER_VALUE */
 
 /**
  * @summary EntryType_delivered_report
  * @constant
  * @type {number}
  */
-export const delivered_report: EntryType = EntryType_delivered_report; /* SHORT_NAMED_INTEGER_VALUE */
+export const delivered_report: 1 = EntryType_delivered_report; /* SHORT_NAMED_INTEGER_VALUE */
 
 /**
  * @summary EntryType_returned_content
  * @constant
  * @type {number}
  */
-export const EntryType_returned_content: EntryType = 2; /* LONG_NAMED_INTEGER_VALUE */
+export const EntryType_returned_content: 2 = 2 satisfies EntryType; /* LONG_NAMED_INTEGER_VALUE */
 
 /**
  * @summary EntryType_returned_content
  * @constant
  * @type {number}
  */
-export const returned_content: EntryType = EntryType_returned_content; /* SHORT_NAMED_INTEGER_VALUE */
+export const returned_content: 2 = EntryType_returned_content; /* SHORT_NAMED_INTEGER_VALUE */
 
 /**
  * @summary EntryType_submitted_message
  * @constant
  * @type {number}
  */
-export const EntryType_submitted_message: EntryType = 3; /* LONG_NAMED_INTEGER_VALUE */
+export const EntryType_submitted_message: 3 = 3 satisfies EntryType; /* LONG_NAMED_INTEGER_VALUE */
 
 /**
  * @summary EntryType_submitted_message
  * @constant
  * @type {number}
  */
-export const submitted_message: EntryType = EntryType_submitted_message; /* SHORT_NAMED_INTEGER_VALUE */
+export const submitted_message: 3 = EntryType_submitted_message; /* SHORT_NAMED_INTEGER_VALUE */
 
 /**
  * @summary EntryType_submitted_probe
  * @constant
  * @type {number}
  */
-export const EntryType_submitted_probe: EntryType = 4; /* LONG_NAMED_INTEGER_VALUE */
+export const EntryType_submitted_probe: 4 = 4 satisfies EntryType; /* LONG_NAMED_INTEGER_VALUE */
 
 /**
  * @summary EntryType_submitted_probe
  * @constant
  * @type {number}
  */
-export const submitted_probe: EntryType = EntryType_submitted_probe; /* SHORT_NAMED_INTEGER_VALUE */
+export const submitted_probe: 4 = EntryType_submitted_probe; /* SHORT_NAMED_INTEGER_VALUE */
 
 /**
  * @summary EntryType_draft_message
  * @constant
  * @type {number}
  */
-export const EntryType_draft_message: EntryType = 5; /* LONG_NAMED_INTEGER_VALUE */
+export const EntryType_draft_message: 5 = 5 satisfies EntryType; /* LONG_NAMED_INTEGER_VALUE */
 
 /**
  * @summary EntryType_draft_message
  * @constant
  * @type {number}
  */
-export const draft_message: EntryType = EntryType_draft_message; /* SHORT_NAMED_INTEGER_VALUE */
+export const draft_message: 5 = EntryType_draft_message; /* SHORT_NAMED_INTEGER_VALUE */
 
 /**
  * @summary EntryType_auto_action_event
  * @constant
  * @type {number}
  */
-export const EntryType_auto_action_event: EntryType = 6; /* LONG_NAMED_INTEGER_VALUE */
+export const EntryType_auto_action_event: 6 = 6 satisfies EntryType; /* LONG_NAMED_INTEGER_VALUE */
 
 /**
  * @summary EntryType_auto_action_event
  * @constant
  * @type {number}
  */
-export const auto_action_event: EntryType = EntryType_auto_action_event; /* SHORT_NAMED_INTEGER_VALUE */
+export const auto_action_event: 6 = EntryType_auto_action_event; /* SHORT_NAMED_INTEGER_VALUE */
 
 
-export const _decode_EntryType = $._decodeInteger;
+export const _decode_EntryType: $.ASN1Decoder<INTEGER> = $._decodeInteger;
 
 
-export const _encode_EntryType = $._encodeInteger;
+export const _encode_EntryType: $.ASN1Encoder<INTEGER> = $._encodeInteger;
 
 
 /* eslint-enable */

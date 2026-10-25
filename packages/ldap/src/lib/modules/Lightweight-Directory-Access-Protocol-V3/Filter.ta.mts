@@ -21,7 +21,7 @@ import {
   _encode_SubstringFilter,
 } from '../Lightweight-Directory-Access-Protocol-V3/SubstringFilter.ta.mjs';
 import {
-  AttributeDescription,
+  type AttributeDescription,
   _decode_AttributeDescription,
   _encode_AttributeDescription,
 } from '../Lightweight-Directory-Access-Protocol-V3/AttributeDescription.ta.mjs';

@@ -1,11 +1,11 @@
 /* eslint-disable */
 import {
-    OPTIONAL,
-    ASN1Element as _Element,
+    type OPTIONAL,
+    type ASN1Element as _Element,
     ASN1TagClass as _TagClass
 } from "@wildboar/asn1";
 import * as $ from "@wildboar/asn1/functional";
-import { RUF_Outcome, _decode_RUF_Outcome, _encode_RUF_Outcome, _enum_for_RUF_Outcome } from "../MAP-CH-DataTypes/RUF-Outcome.ta.mjs";
+import { type RUF_Outcome, _decode_RUF_Outcome, _encode_RUF_Outcome, _enum_for_RUF_Outcome } from "../MAP-CH-DataTypes/RUF-Outcome.ta.mjs";
 import { ExtensionContainer, _decode_ExtensionContainer, _encode_ExtensionContainer } from "../MAP-ExtensionDataTypes/ExtensionContainer.ta.mjs";
 
 
@@ -21,7 +21,7 @@ import { ExtensionContainer, _decode_ExtensionContainer, _encode_ExtensionContai
  * ```asn1
  * RemoteUserFreeRes ::= SEQUENCE{
  *     ruf-Outcome    [0]    RUF-Outcome,
- *     extensionContainer    [1]    ExtensionContainer    OPTIONAL,
+ *     extensionContainer    [1]    ExtensionContainer    type OPTIONAL,
  *     ...}
  * ```
  * 
@@ -29,34 +29,42 @@ import { ExtensionContainer, _decode_ExtensionContainer, _encode_ExtensionContai
  */
 export
 class RemoteUserFreeRes {
+    /**
+     * @summary `ruf_Outcome`.
+     * @description
+     *
+     * RUF outcome including T4/T10 expiry notes.
+     *
+     * @public
+     * @readonly
+     */
+    public readonly ruf_Outcome: RUF_Outcome;
+    /**
+     * @summary `extensionContainer`.
+     * @description
+     *
+     * Private or PCS extensions (3GPP TS 29.002 V19.1.0 clause 17.7.11).
+     *
+     * @public
+     * @readonly
+     */
+    public readonly extensionContainer?: OPTIONAL<ExtensionContainer>;
+    /**
+     * @summary Extensions that are not recognized.
+     * @public
+     * @readonly
+     */
+    public readonly _unrecognizedExtensionsList: _Element[];
+
     constructor (
-        /**
-         * @summary `ruf_Outcome`.
-         * @description
-         *
-         * RUF outcome including T4/T10 expiry notes.
-         *
-         * @public
-         * @readonly
-         */
-        readonly ruf_Outcome: RUF_Outcome,
-        /**
-         * @summary `extensionContainer`.
-         * @description
-         *
-         * Private or PCS extensions (3GPP TS 29.002 V19.1.0 clause 17.7.11).
-         *
-         * @public
-         * @readonly
-         */
-        readonly extensionContainer?: OPTIONAL<ExtensionContainer>,
-        /**
-         * @summary Extensions that are not recognized.
-         * @public
-         * @readonly
-         */
-        readonly _unrecognizedExtensionsList: _Element[] = []
-    ) {}
+        ruf_Outcome: RUF_Outcome,
+        extensionContainer?: OPTIONAL<ExtensionContainer>,
+        _unrecognizedExtensionsList: _Element[] = []
+    ) {
+        this.ruf_Outcome = ruf_Outcome;
+        this.extensionContainer = extensionContainer;
+        this._unrecognizedExtensionsList = _unrecognizedExtensionsList;
+    }
 
     /**
      * @summary Restructures an object into a RemoteUserFreeRes
@@ -80,7 +88,7 @@ class RemoteUserFreeRes {
          * @static
          */
 
-    public static _enum_for_ruf_Outcome = _enum_for_RUF_Outcome;
+    public static _enum_for_ruf_Outcome: typeof _enum_for_RUF_Outcome = _enum_for_RUF_Outcome;
 }
 
 /**

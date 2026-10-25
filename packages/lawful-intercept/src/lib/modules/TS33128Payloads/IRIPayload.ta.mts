@@ -1,16 +1,16 @@
 /* eslint-disable */
 import {
-    OPTIONAL,
-    RELATIVE_OID,
-    ASN1Element as _Element,
+    type OPTIONAL,
+    type RELATIVE_OID,
+    type ASN1Element as _Element,
     ASN1TagClass as _TagClass
 } from "@wildboar/asn1";
 import * as $ from "@wildboar/asn1/functional";
-import { IRIEvent, _decode_IRIEvent, _encode_IRIEvent } from "../TS33128Payloads/IRIEvent.ta.mjs";
+import { type IRIEvent, _decode_IRIEvent, _encode_IRIEvent } from "../TS33128Payloads/IRIEvent.ta.mjs";
 // export { IRIEvent, _decode_IRIEvent, _encode_IRIEvent } from "../TS33128Payloads/IRIEvent.ta.mjs";
 import { IRITargetIdentifier, _decode_IRITargetIdentifier, _encode_IRITargetIdentifier } from "../TS33128Payloads/IRITargetIdentifier.ta.mjs";
 // export { IRITargetIdentifier, _decode_IRITargetIdentifier, _encode_IRITargetIdentifier } from "../TS33128Payloads/IRITargetIdentifier.ta.mjs";
-import { MediatedFromIndicator, _decode_MediatedFromIndicator, _encode_MediatedFromIndicator } from "../TS33128Payloads/MediatedFromIndicator.ta.mjs";
+import { type MediatedFromIndicator, _decode_MediatedFromIndicator, _encode_MediatedFromIndicator } from "../TS33128Payloads/MediatedFromIndicator.ta.mjs";
 // export { MediatedFromIndicator, _decode_MediatedFromIndicator, _encode_MediatedFromIndicator } from "../TS33128Payloads/MediatedFromIndicator.ta.mjs";
 
 

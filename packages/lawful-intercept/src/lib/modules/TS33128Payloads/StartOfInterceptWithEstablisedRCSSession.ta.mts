@@ -1,18 +1,18 @@
 /* eslint-disable */
 import {
-    OPTIONAL,
-    ASN1Element as _Element,
+    type OPTIONAL,
+    type ASN1Element as _Element,
     ASN1TagClass as _TagClass,
     ASN1SizeError
 } from "@wildboar/asn1";
 import * as $ from "@wildboar/asn1/functional";
-import { RCSIdentity, _decode_RCSIdentity, _encode_RCSIdentity } from "../TS33128Payloads/RCSIdentity.ta.mjs";
+import { type RCSIdentity, _decode_RCSIdentity, _encode_RCSIdentity } from "../TS33128Payloads/RCSIdentity.ta.mjs";
 // export { RCSIdentity, _decode_RCSIdentity, _encode_RCSIdentity } from "../TS33128Payloads/RCSIdentity.ta.mjs";
-import { RCSDestinations, _decode_RCSDestinations, _encode_RCSDestinations } from "../TS33128Payloads/RCSDestinations.ta.mjs";
+import { type RCSDestinations, _decode_RCSDestinations, _encode_RCSDestinations } from "../TS33128Payloads/RCSDestinations.ta.mjs";
 // export { RCSDestinations, _decode_RCSDestinations, _encode_RCSDestinations } from "../TS33128Payloads/RCSDestinations.ta.mjs";
-import { RCSConversationID, _decode_RCSConversationID, _encode_RCSConversationID } from "../TS33128Payloads/RCSConversationID.ta.mjs";
+import { type RCSConversationID, _decode_RCSConversationID, _encode_RCSConversationID } from "../TS33128Payloads/RCSConversationID.ta.mjs";
 // export { RCSConversationID, _decode_RCSConversationID, _encode_RCSConversationID } from "../TS33128Payloads/RCSConversationID.ta.mjs";
-import { RCSContributionID, _decode_RCSContributionID, _encode_RCSContributionID } from "../TS33128Payloads/RCSContributionID.ta.mjs";
+import { type RCSContributionID, _decode_RCSContributionID, _encode_RCSContributionID } from "../TS33128Payloads/RCSContributionID.ta.mjs";
 // export { RCSContributionID, _decode_RCSContributionID, _encode_RCSContributionID } from "../TS33128Payloads/RCSContributionID.ta.mjs";
 import { RCSSessionType, _decode_RCSSessionType, _encode_RCSSessionType, _enum_for_RCSSessionType } from "../TS33128Payloads/RCSSessionType.ta.mjs";
 // export { RCSSessionType, _enum_for_RCSSessionType, RCSSessionType_largeMessageStandalone /* IMPORTED_LONG_ENUMERATION_ITEM */, largeMessageStandalone /* IMPORTED_SHORT_ENUMERATION_ITEM */, RCSSessionType_oneTo1Chat /* IMPORTED_LONG_ENUMERATION_ITEM */, oneTo1Chat /* IMPORTED_SHORT_ENUMERATION_ITEM */, _decode_RCSSessionType, _encode_RCSSessionType } from "../TS33128Payloads/RCSSessionType.ta.mjs";
@@ -20,7 +20,7 @@ import { RCSSessionEndpoints, _decode_RCSSessionEndpoints, _encode_RCSSessionEnd
 // export { RCSSessionEndpoints, _enum_for_RCSSessionEndpoints, RCSSessionEndpoints_remoteOnly /* IMPORTED_LONG_ENUMERATION_ITEM */, remoteOnly /* IMPORTED_SHORT_ENUMERATION_ITEM */, RCSSessionEndpoints_localOnly /* IMPORTED_LONG_ENUMERATION_ITEM */, localOnly /* IMPORTED_SHORT_ENUMERATION_ITEM */, RCSSessionEndpoints_localAndRemote /* IMPORTED_LONG_ENUMERATION_ITEM */, localAndRemote /* IMPORTED_SHORT_ENUMERATION_ITEM */, _decode_RCSSessionEndpoints, _encode_RCSSessionEndpoints } from "../TS33128Payloads/RCSSessionEndpoints.ta.mjs";
 import { RCSSIPSessionExchange, _decode_RCSSIPSessionExchange, _encode_RCSSIPSessionExchange } from "../TS33128Payloads/RCSSIPSessionExchange.ta.mjs";
 // export { RCSSIPSessionExchange, _decode_RCSSIPSessionExchange, _encode_RCSSIPSessionExchange } from "../TS33128Payloads/RCSSIPSessionExchange.ta.mjs";
-import { RCSSessionContext, _decode_RCSSessionContext, _encode_RCSSessionContext } from "../TS33128Payloads/RCSSessionContext.ta.mjs";
+import { type RCSSessionContext, _decode_RCSSessionContext, _encode_RCSSessionContext } from "../TS33128Payloads/RCSSessionContext.ta.mjs";
 // export { RCSSessionContext, _decode_RCSSessionContext, _encode_RCSSessionContext } from "../TS33128Payloads/RCSSessionContext.ta.mjs";
 import { Location, _decode_Location, _encode_Location } from "../TS33128Payloads/Location.ta.mjs";
 // export { Location, _decode_Location, _encode_Location } from "../TS33128Payloads/Location.ta.mjs";
@@ -169,13 +169,13 @@ class StartOfInterceptWithEstablisedRCSSession {
          * @static
          */
 
-    public static _enum_for_rCSSessionType = _enum_for_RCSSessionType;        /**
+    public static _enum_for_rCSSessionType: typeof _enum_for_RCSSessionType = _enum_for_RCSSessionType;        /**
          * @summary The enum used as the type of the component `rCSSessionEndpoints`
          * @public
          * @static
          */
 
-    public static _enum_for_rCSSessionEndpoints = _enum_for_RCSSessionEndpoints;
+    public static _enum_for_rCSSessionEndpoints: typeof _enum_for_RCSSessionEndpoints = _enum_for_RCSSessionEndpoints;
 }
 
 /**

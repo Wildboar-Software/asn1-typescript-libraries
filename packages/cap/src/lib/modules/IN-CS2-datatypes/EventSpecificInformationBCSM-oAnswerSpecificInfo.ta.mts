@@ -1,7 +1,7 @@
 /* eslint-disable */
 import {
-    OPTIONAL,
-    ASN1Element as _Element,
+    type OPTIONAL,
+    type ASN1Element as _Element,
     ASN1TagClass as _TagClass,
     ASN1Construction as _Construction,
     ASN1UniversalType as _UniversalType,
@@ -11,7 +11,7 @@ import {
     ASN1ConstructionError as _ConstructionError,
 } from "@wildboar/asn1";
 import * as $ from "@wildboar/asn1/functional";
-import { BackwardGVNS, _decode_BackwardGVNS, _encode_BackwardGVNS } from "../IN-CS2-datatypes/BackwardGVNS.ta.mjs";
+import { type BackwardGVNS, _decode_BackwardGVNS, _encode_BackwardGVNS } from "../IN-CS2-datatypes/BackwardGVNS.ta.mjs";
 
 
 /**
@@ -31,20 +31,26 @@ import { BackwardGVNS, _decode_BackwardGVNS, _encode_BackwardGVNS } from "../IN-
  */
 export
 class EventSpecificInformationBCSM_oAnswerSpecificInfo {
+    /**
+     * @summary `backwardGVNS`.
+     * @public
+     * @readonly
+     */
+    public readonly backwardGVNS?: OPTIONAL<BackwardGVNS>;
+    /**
+     * @summary Extensions that are not recognized.
+     * @public
+     * @readonly
+     */
+    public readonly _unrecognizedExtensionsList: _Element[];
+
     constructor (
-        /**
-         * @summary `backwardGVNS`.
-         * @public
-         * @readonly
-         */
-        readonly backwardGVNS?: OPTIONAL<BackwardGVNS>,
-        /**
-         * @summary Extensions that are not recognized.
-         * @public
-         * @readonly
-         */
-        readonly _unrecognizedExtensionsList: _Element[] = []
-    ) {}
+        backwardGVNS?: OPTIONAL<BackwardGVNS>,
+        _unrecognizedExtensionsList: _Element[] = []
+    ) {
+        this.backwardGVNS = backwardGVNS;
+        this._unrecognizedExtensionsList = _unrecognizedExtensionsList;
+    }
 
     /**
      * @summary Restructures an object into a EventSpecificInformationBCSM_oAnswerSpecificInfo

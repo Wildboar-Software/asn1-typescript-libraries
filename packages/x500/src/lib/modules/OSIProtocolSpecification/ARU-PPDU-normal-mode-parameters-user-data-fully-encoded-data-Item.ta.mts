@@ -1,17 +1,17 @@
 /* eslint-disable */
 import {
     ASN1ConstructionError as _ConstructionError,
-    ASN1Element as _Element,
+    type ASN1Element as _Element,
     ASN1TagClass as _TagClass,
 } from "@wildboar/asn1";
 import * as $ from "@wildboar/asn1/functional";
 import {
-    ARU_PPDU_normal_mode_parameters_user_data_fully_encoded_data_Item_pdv,
+    type ARU_PPDU_normal_mode_parameters_user_data_fully_encoded_data_Item_pdv,
     _decode_ARU_PPDU_normal_mode_parameters_user_data_fully_encoded_data_Item_pdv,
     _encode_ARU_PPDU_normal_mode_parameters_user_data_fully_encoded_data_Item_pdv,
 } from "../OSIProtocolSpecification/ARU-PPDU-normal-mode-parameters-user-data-fully-encoded-data-Item-pdv.ta.mjs";
 import {
-    Presentation_context_identifier,
+    type Presentation_context_identifier,
     _decode_Presentation_context_identifier,
     _encode_Presentation_context_identifier,
 } from "../OSIProtocolSpecification/Presentation-context-identifier.ta.mjs";
@@ -27,20 +27,26 @@ import {
  *
  */
 export class ARU_PPDU_normal_mode_parameters_user_data_fully_encoded_data_Item {
+    /**
+     * @summary `presentation_context_identifier`.
+     * @public
+     * @readonly
+     */
+    public readonly presentation_context_identifier: Presentation_context_identifier;
+    /**
+     * @summary `presentation_data_values`.
+     * @public
+     * @readonly
+     */
+    public readonly presentation_data_values: ARU_PPDU_normal_mode_parameters_user_data_fully_encoded_data_Item_pdv;
+
     constructor(
-        /**
-         * @summary `presentation_context_identifier`.
-         * @public
-         * @readonly
-         */
-        readonly presentation_context_identifier: Presentation_context_identifier,
-        /**
-         * @summary `presentation_data_values`.
-         * @public
-         * @readonly
-         */
-        readonly presentation_data_values: ARU_PPDU_normal_mode_parameters_user_data_fully_encoded_data_Item_pdv
-    ) {}
+        presentation_context_identifier: Presentation_context_identifier,
+        presentation_data_values: ARU_PPDU_normal_mode_parameters_user_data_fully_encoded_data_Item_pdv
+    ) {
+        this.presentation_context_identifier = presentation_context_identifier;
+        this.presentation_data_values = presentation_data_values;
+    }
 
     /**
      * @summary Restructures an object into a ARU_PPDU_normal_mode_parameters_user_data_fully_encoded_data_Item

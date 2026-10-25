@@ -1,7 +1,7 @@
 /* eslint-disable */
 import {
-    INTEGER,
-    ASN1Element as _Element,
+    type INTEGER,
+    type ASN1Element as _Element,
     ASN1TagClass as _TagClass,
     ASN1Construction as _Construction,
     ASN1UniversalType as _UniversalType,
@@ -31,62 +31,62 @@ export type DLPolicy_priority = INTEGER;
  * @constant
  * @type {number}
  */
-export const DLPolicy_priority_unchanged: DLPolicy_priority = 0; /* LONG_NAMED_INTEGER_VALUE */
+export const DLPolicy_priority_unchanged: 0 = 0 satisfies DLPolicy_priority; /* LONG_NAMED_INTEGER_VALUE */
 
 /**
  * @summary DLPolicy_priority_unchanged
  * @constant
  * @type {number}
  */
-export const unchanged: DLPolicy_priority = DLPolicy_priority_unchanged; /* SHORT_NAMED_INTEGER_VALUE */
+export const unchanged: 0 = DLPolicy_priority_unchanged; /* SHORT_NAMED_INTEGER_VALUE */
 
 /**
  * @summary DLPolicy_priority_normal
  * @constant
  * @type {number}
  */
-export const DLPolicy_priority_normal: DLPolicy_priority = 1; /* LONG_NAMED_INTEGER_VALUE */
+export const DLPolicy_priority_normal: 1 = 1 satisfies DLPolicy_priority; /* LONG_NAMED_INTEGER_VALUE */
 
 /**
  * @summary DLPolicy_priority_normal
  * @constant
  * @type {number}
  */
-export const normal: DLPolicy_priority = DLPolicy_priority_normal; /* SHORT_NAMED_INTEGER_VALUE */
+export const normal: 1 = DLPolicy_priority_normal; /* SHORT_NAMED_INTEGER_VALUE */
 
 /**
  * @summary DLPolicy_priority_non_urgent
  * @constant
  * @type {number}
  */
-export const DLPolicy_priority_non_urgent: DLPolicy_priority = 2; /* LONG_NAMED_INTEGER_VALUE */
+export const DLPolicy_priority_non_urgent: 2 = 2 satisfies DLPolicy_priority; /* LONG_NAMED_INTEGER_VALUE */
 
 /**
  * @summary DLPolicy_priority_non_urgent
  * @constant
  * @type {number}
  */
-export const non_urgent: DLPolicy_priority = DLPolicy_priority_non_urgent; /* SHORT_NAMED_INTEGER_VALUE */
+export const non_urgent: 2 = DLPolicy_priority_non_urgent; /* SHORT_NAMED_INTEGER_VALUE */
 
 /**
  * @summary DLPolicy_priority_urgent
  * @constant
  * @type {number}
  */
-export const DLPolicy_priority_urgent: DLPolicy_priority = 3; /* LONG_NAMED_INTEGER_VALUE */
+export const DLPolicy_priority_urgent: 3 = 3 satisfies DLPolicy_priority; /* LONG_NAMED_INTEGER_VALUE */
 
 /**
  * @summary DLPolicy_priority_urgent
  * @constant
  * @type {number}
  */
-export const urgent: DLPolicy_priority = DLPolicy_priority_urgent; /* SHORT_NAMED_INTEGER_VALUE */
+export const urgent: 3 = DLPolicy_priority_urgent; /* SHORT_NAMED_INTEGER_VALUE */
 
 
-export const _decode_DLPolicy_priority = $._decodeInteger;
+export const _decode_DLPolicy_priority: $.ASN1Decoder<INTEGER> = $._decodeInteger;
 
 
-export const _encode_DLPolicy_priority = $._encodeInteger;
+export const _encode_DLPolicy_priority: $.ASN1Encoder<INTEGER> = $._encodeInteger;
 
 
 /* eslint-enable */

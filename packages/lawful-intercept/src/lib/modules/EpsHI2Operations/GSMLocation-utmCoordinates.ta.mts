@@ -1,15 +1,15 @@
 /* eslint-disable */
 import {
-    INTEGER,
-    OPTIONAL,
-    PrintableString,
-    ASN1Element as _Element,
+    type INTEGER,
+    type OPTIONAL,
+    type PrintableString,
+    type ASN1Element as _Element,
     ASN1TagClass as _TagClass,
     ASN1OverflowError,
     ASN1SizeError
 } from "@wildboar/asn1";
 import * as $ from "@wildboar/asn1/functional";
-import { MapDatum, _decode_MapDatum, _encode_MapDatum, _enum_for_MapDatum, wGS84 /* IMPORTED_SHORT_ENUMERATION_ITEM */ } from "../EpsHI2Operations/MapDatum.ta.mjs";
+import { type MapDatum, _decode_MapDatum, _encode_MapDatum, _enum_for_MapDatum, wGS84 /* IMPORTED_SHORT_ENUMERATION_ITEM */ } from "../EpsHI2Operations/MapDatum.ta.mjs";
 // export { MapDatum, _enum_for_MapDatum, MapDatum_wGS84 /* IMPORTED_LONG_ENUMERATION_ITEM */, wGS84 /* IMPORTED_SHORT_ENUMERATION_ITEM */, MapDatum_wGS72 /* IMPORTED_LONG_ENUMERATION_ITEM */, wGS72 /* IMPORTED_SHORT_ENUMERATION_ITEM */, MapDatum_eD50 /* IMPORTED_LONG_ENUMERATION_ITEM */, eD50 /* IMPORTED_SHORT_ENUMERATION_ITEM */, _decode_MapDatum, _encode_MapDatum } from "../EpsHI2Operations/MapDatum.ta.mjs";
 
 
@@ -130,7 +130,7 @@ class GSMLocation_utmCoordinates {
      * @static
      * @method
      */
-    public static get _default_value_for_mapDatum () { return wGS84; }        /**
+    public static get _default_value_for_mapDatum (): _enum_for_MapDatum { return wGS84; }        /**
          * @summary The enum used as the type of the component `mapDatum`
          * @description
          * 
@@ -140,7 +140,7 @@ class GSMLocation_utmCoordinates {
          * @static
          */
 
-    public static _enum_for_mapDatum = _enum_for_MapDatum;
+    public static _enum_for_mapDatum: typeof _enum_for_MapDatum = _enum_for_MapDatum;
 }
 
 /**

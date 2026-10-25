@@ -1,8 +1,8 @@
 /* eslint-disable */
 import {
-  OPTIONAL,
-  OBJECT_IDENTIFIER,
-  GeneralizedTime,
+  type OPTIONAL,
+  type OBJECT_IDENTIFIER,
+  type GeneralizedTime,
   ASN1Element as _Element,
   ASN1TagClass as _TagClass,
   ASN1Construction as _Construction,
@@ -14,7 +14,7 @@ import {
 } from '@wildboar/asn1';
 import * as $ from '@wildboar/asn1/functional';
 import {
-  CertReference,
+  type CertReference,
   _decode_CertReference,
   _encode_CertReference,
 } from '../SCVP-2009/CertReference.ta.mjs';
@@ -26,17 +26,17 @@ import {
   _encode_ReplyStatus,
 } from '../SCVP-2009/ReplyStatus.ta.mjs';
 import {
-  ReplyChecks,
+  type ReplyChecks,
   _decode_ReplyChecks,
   _encode_ReplyChecks,
 } from '../SCVP-2009/ReplyChecks.ta.mjs';
 import {
-  ReplyWantBacks,
+  type ReplyWantBacks,
   _decode_ReplyWantBacks,
   _encode_ReplyWantBacks,
 } from '../SCVP-2009/ReplyWantBacks.ta.mjs';
 import {
-  Extensions,
+  type Extensions,
   _decode_Extensions,
   _encode_Extensions,
 } from '@wildboar/x500/AuthenticationFramework';
@@ -69,93 +69,111 @@ import {
  *
  */
 export class CertReply {
+  /**
+   * @summary `cert`.
+   * @description
+   *
+   * Reference to the certificate this reply concerns
+   * ([RFC 5055 §4.9.1](https://datatracker.ietf.org/doc/html/rfc5055#section-4.9.1)).
+   *
+   * @public
+   * @readonly
+   */
+  public readonly cert: CertReference;
+  /**
+   * @summary `replyStatus`.
+   * @description
+   *
+   * Per-certificate status (DEFAULT `success`) ([RFC 5055 §4.9.2](https://datatracker.ietf.org/doc/html/rfc5055#section-4.9.2)).
+   *
+   * @public
+   * @readonly
+   */
+  public readonly replyStatus: OPTIONAL<ReplyStatus>;
+  /**
+   * @summary `replyValTime`.
+   * @description
+   *
+   * Time at which the information in this reply was correct
+   * ([RFC 5055 §4.9.3](https://datatracker.ietf.org/doc/html/rfc5055#section-4.9.3)).
+   *
+   * @public
+   * @readonly
+   */
+  public readonly replyValTime: GeneralizedTime;
+  /**
+   * @summary `replyChecks`.
+   * @description
+   *
+   * Results for each requested check ([RFC 5055 §4.9.4](https://datatracker.ietf.org/doc/html/rfc5055#section-4.9.4)).
+   *
+   * @public
+   * @readonly
+   */
+  public readonly replyChecks: ReplyChecks;
+  /**
+   * @summary `replyWantBacks`.
+   * @description
+   *
+   * Payloads for each requested wantBack ([RFC 5055 §4.9.5](https://datatracker.ietf.org/doc/html/rfc5055#section-4.9.5)).
+   *
+   * @public
+   * @readonly
+   */
+  public readonly replyWantBacks: ReplyWantBacks;
+  /**
+   * @summary `validationErrors`.
+   * @description
+   *
+   * Optional validation-algorithm error OIDs (`BasicValidationErrorSet`
+   * / `NameValidationErrorSet`) ([RFC 5055 §4.9.6](https://datatracker.ietf.org/doc/html/rfc5055#section-4.9.6)).
+   *
+   * @public
+   * @readonly
+   */
+  public readonly validationErrors?: OPTIONAL<OBJECT_IDENTIFIER[]>;
+  /**
+   * @summary `nextUpdate`.
+   * @description
+   *
+   * Optional time when fresher status may be available
+   * ([RFC 5055 §4.9.7](https://datatracker.ietf.org/doc/html/rfc5055#section-4.9.7)).
+   *
+   * @public
+   * @readonly
+   */
+  public readonly nextUpdate?: OPTIONAL<GeneralizedTime>;
+  /**
+   * @summary `certReplyExtensions`.
+   * @description
+   *
+   * Optional reply extensions matching requested query extensions
+   * ([RFC 5055 §4.9.8](https://datatracker.ietf.org/doc/html/rfc5055#section-4.9.8)).
+   *
+   * @public
+   * @readonly
+   */
+  public readonly certReplyExtensions?: OPTIONAL<Extensions>;
+
   constructor(
-    /**
-     * @summary `cert`.
-     * @description
-     *
-     * Reference to the certificate this reply concerns
-     * ([RFC 5055 §4.9.1](https://datatracker.ietf.org/doc/html/rfc5055#section-4.9.1)).
-     *
-     * @public
-     * @readonly
-     */
-    readonly cert: CertReference,
-    /**
-     * @summary `replyStatus`.
-     * @description
-     *
-     * Per-certificate status (DEFAULT `success`) ([RFC 5055 §4.9.2](https://datatracker.ietf.org/doc/html/rfc5055#section-4.9.2)).
-     *
-     * @public
-     * @readonly
-     */
-    readonly replyStatus: OPTIONAL<ReplyStatus>,
-    /**
-     * @summary `replyValTime`.
-     * @description
-     *
-     * Time at which the information in this reply was correct
-     * ([RFC 5055 §4.9.3](https://datatracker.ietf.org/doc/html/rfc5055#section-4.9.3)).
-     *
-     * @public
-     * @readonly
-     */
-    readonly replyValTime: GeneralizedTime,
-    /**
-     * @summary `replyChecks`.
-     * @description
-     *
-     * Results for each requested check ([RFC 5055 §4.9.4](https://datatracker.ietf.org/doc/html/rfc5055#section-4.9.4)).
-     *
-     * @public
-     * @readonly
-     */
-    readonly replyChecks: ReplyChecks,
-    /**
-     * @summary `replyWantBacks`.
-     * @description
-     *
-     * Payloads for each requested wantBack ([RFC 5055 §4.9.5](https://datatracker.ietf.org/doc/html/rfc5055#section-4.9.5)).
-     *
-     * @public
-     * @readonly
-     */
-    readonly replyWantBacks: ReplyWantBacks,
-    /**
-     * @summary `validationErrors`.
-     * @description
-     *
-     * Optional validation-algorithm error OIDs (`BasicValidationErrorSet`
-     * / `NameValidationErrorSet`) ([RFC 5055 §4.9.6](https://datatracker.ietf.org/doc/html/rfc5055#section-4.9.6)).
-     *
-     * @public
-     * @readonly
-     */
-    readonly validationErrors?: OPTIONAL<OBJECT_IDENTIFIER[]>,
-    /**
-     * @summary `nextUpdate`.
-     * @description
-     *
-     * Optional time when fresher status may be available
-     * ([RFC 5055 §4.9.7](https://datatracker.ietf.org/doc/html/rfc5055#section-4.9.7)).
-     *
-     * @public
-     * @readonly
-     */
-    readonly nextUpdate?: OPTIONAL<GeneralizedTime>,
-    /**
-     * @summary `certReplyExtensions`.
-     * @description
-     *
-     * Optional reply extensions matching requested query extensions
-     * ([RFC 5055 §4.9.8](https://datatracker.ietf.org/doc/html/rfc5055#section-4.9.8)).
-     *
-     * @public
-     * @readonly
-     */
-    readonly certReplyExtensions?: OPTIONAL<Extensions>
-  ) {}
+    cert: CertReference,
+    replyStatus: OPTIONAL<ReplyStatus>,
+    replyValTime: GeneralizedTime,
+    replyChecks: ReplyChecks,
+    replyWantBacks: ReplyWantBacks,
+    validationErrors?: OPTIONAL<OBJECT_IDENTIFIER[]>,
+    nextUpdate?: OPTIONAL<GeneralizedTime>,
+    certReplyExtensions?: OPTIONAL<Extensions>
+  ) {
+    this.cert = cert;
+    this.replyStatus = replyStatus;
+    this.replyValTime = replyValTime;
+    this.replyChecks = replyChecks;
+    this.replyWantBacks = replyWantBacks;
+    this.validationErrors = validationErrors;
+    this.nextUpdate = nextUpdate;
+    this.certReplyExtensions = certReplyExtensions;
+  }
 
   /**
    * @summary Restructures an object into a CertReply
@@ -199,7 +217,7 @@ export class CertReply {
    * @static
    */
 
-  public static _enum_for_replyStatus = _enum_for_ReplyStatus;
+  public static _enum_for_replyStatus: typeof _enum_for_ReplyStatus = _enum_for_ReplyStatus;
 }
 
 /**

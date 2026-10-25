@@ -1,7 +1,7 @@
 /* eslint-disable */
 
 import * as $ from "@wildboar/asn1/functional";
-import { ENUMERATED, ASN1Element as _Element } from "@wildboar/asn1";
+import { type ENUMERATED, ASN1Element as _Element } from "@wildboar/asn1";
 
 
 
@@ -73,7 +73,7 @@ type CharacterSet = _enum_for_CharacterSet;
  * @enum {number}
  */
 export
-const CharacterSet = _enum_for_CharacterSet;
+const CharacterSet: typeof _enum_for_CharacterSet = _enum_for_CharacterSet;
 
 /**
  * @summary CharacterSet_ascii
@@ -85,7 +85,7 @@ const CharacterSet = _enum_for_CharacterSet;
  * @type {number}
  */
 export
-const CharacterSet_ascii: CharacterSet = CharacterSet.ascii; /* LONG_NAMED_ENUMERATED_VALUE */
+const CharacterSet_ascii: _enum_for_CharacterSet.ascii = CharacterSet.ascii; /* LONG_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary ascii
@@ -93,7 +93,7 @@ const CharacterSet_ascii: CharacterSet = CharacterSet.ascii; /* LONG_NAMED_ENUME
  * @type {number}
  */
 export
-const ascii: CharacterSet = CharacterSet.ascii; /* SHORT_NAMED_ENUMERATED_VALUE */
+const ascii: _enum_for_CharacterSet.ascii = CharacterSet.ascii; /* SHORT_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary CharacterSet_unicode
@@ -105,7 +105,7 @@ const ascii: CharacterSet = CharacterSet.ascii; /* SHORT_NAMED_ENUMERATED_VALUE 
  * @type {number}
  */
 export
-const CharacterSet_unicode: CharacterSet = CharacterSet.unicode; /* LONG_NAMED_ENUMERATED_VALUE */
+const CharacterSet_unicode: _enum_for_CharacterSet.unicode = CharacterSet.unicode; /* LONG_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary unicode
@@ -113,7 +113,7 @@ const CharacterSet_unicode: CharacterSet = CharacterSet.unicode; /* LONG_NAMED_E
  * @type {number}
  */
 export
-const unicode: CharacterSet = CharacterSet.unicode; /* SHORT_NAMED_ENUMERATED_VALUE */
+const unicode: _enum_for_CharacterSet.unicode = CharacterSet.unicode; /* SHORT_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary CharacterSet_proprietary
@@ -125,7 +125,7 @@ const unicode: CharacterSet = CharacterSet.unicode; /* SHORT_NAMED_ENUMERATED_VA
  * @type {number}
  */
 export
-const CharacterSet_proprietary: CharacterSet = CharacterSet.proprietary; /* LONG_NAMED_ENUMERATED_VALUE */
+const CharacterSet_proprietary: _enum_for_CharacterSet.proprietary = CharacterSet.proprietary; /* LONG_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary proprietary
@@ -133,7 +133,7 @@ const CharacterSet_proprietary: CharacterSet = CharacterSet.proprietary; /* LONG
  * @type {number}
  */
 export
-const proprietary: CharacterSet = CharacterSet.proprietary; /* SHORT_NAMED_ENUMERATED_VALUE */
+const proprietary: _enum_for_CharacterSet.proprietary = CharacterSet.proprietary; /* SHORT_NAMED_ENUMERATED_VALUE */
 
 let _cached_decoder_for_CharacterSet: $.ASN1Decoder<CharacterSet> | null = null;
 

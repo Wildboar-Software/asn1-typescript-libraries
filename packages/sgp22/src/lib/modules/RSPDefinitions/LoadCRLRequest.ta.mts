@@ -1,7 +1,7 @@
 /* eslint-disable */
 import {
     ASN1ConstructionError as _ConstructionError,
-    ASN1Element as _Element,
+    type ASN1Element as _Element,
     ASN1TagClass as _TagClass
 } from "@wildboar/asn1";
 import * as $ from "@wildboar/asn1/functional";
@@ -41,7 +41,7 @@ class LoadCRLRequest {
      * @public
      * @readonly
      */
-    readonly crl: _Element;
+    public readonly crl: _Element;
 
     constructor (
         crl: _Element

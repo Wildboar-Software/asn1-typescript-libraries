@@ -2,14 +2,14 @@
 
 import * as $ from "@wildboar/asn1/functional";
 import {
-    OPTIONAL,
-    BOOLEAN,
-    SEQUENCE,
-    SET,
-    ASN1Element as _Element,
+    type OPTIONAL,
+    type BOOLEAN,
+    type SEQUENCE,
+    type SET,
+    type ASN1Element as _Element,
     ASN1TagClass as _TagClass
 } from "@wildboar/asn1";
-import { AgentID, _decode_AgentID, _encode_AgentID } from "../CSTA-device-feature-types/AgentID.ta.mjs";
+import { type AgentID, _decode_AgentID, _encode_AgentID } from "../CSTA-device-feature-types/AgentID.ta.mjs";
 
 import { AgentInfo, _decode_AgentInfo, _encode_AgentInfo } from "../CSTA-get-agent-state/AgentInfo.ta.mjs";
 
@@ -29,7 +29,7 @@ import { AgentInfo, _decode_AgentInfo, _encode_AgentInfo } from "../CSTA-get-age
  * 
  * ```asn1
  * AgentStateEntry ::= SEQUENCE
- * {    agentID                AgentID                    OPTIONAL,
+ * {    agentID                AgentID                    type OPTIONAL,
  *     loggedOn            BOOLEAN,
  *     agentInfo            SEQUENCE OF AgentInfo             OPTIONAL }
  * ```
@@ -38,36 +38,44 @@ import { AgentInfo, _decode_AgentInfo, _encode_AgentInfo } from "../CSTA-get-age
  */
 export
 class AgentStateEntry {
+    /**
+     * @summary `agentID`.
+     * @description
+     *
+     * Required if multiple agentIDs are associated with the device.
+     * @public
+     * @readonly
+     */
+    public readonly agentID: OPTIONAL<AgentID>;
+    /**
+     * @summary `loggedOn`.
+     * @description
+     *
+     * TRUE = logged on; FALSE = not logged on.
+     * @public
+     * @readonly
+     */
+    public readonly loggedOn: BOOLEAN;
+    /**
+     * @summary `agentInfo`.
+     * @description
+     *
+     * Per-group/state rows. A specific agent may have more than one state
+     * association.
+     * @public
+     * @readonly
+     */
+    public readonly agentInfo?: OPTIONAL<AgentInfo[]>;
+
     constructor (
-        /**
-         * @summary `agentID`.
-         * @description
-         *
-         * Required if multiple agentIDs are associated with the device.
-         * @public
-         * @readonly
-         */
-        readonly agentID: OPTIONAL<AgentID>,
-        /**
-         * @summary `loggedOn`.
-         * @description
-         *
-         * TRUE = logged on; FALSE = not logged on.
-         * @public
-         * @readonly
-         */
-        readonly loggedOn: BOOLEAN,
-        /**
-         * @summary `agentInfo`.
-         * @description
-         *
-         * Per-group/state rows. A specific agent may have more than one state
-         * association.
-         * @public
-         * @readonly
-         */
-        readonly agentInfo?: OPTIONAL<AgentInfo[]>
-    ) {}
+        agentID: OPTIONAL<AgentID>,
+        loggedOn: BOOLEAN,
+        agentInfo?: OPTIONAL<AgentInfo[]>
+    ) {
+        this.agentID = agentID;
+        this.loggedOn = loggedOn;
+        this.agentInfo = agentInfo;
+    }
 
     /**
      * @summary Restructures an object into a AgentStateEntry

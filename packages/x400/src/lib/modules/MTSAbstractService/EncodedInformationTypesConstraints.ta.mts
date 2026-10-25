@@ -1,7 +1,7 @@
 /* eslint-disable */
 import {
-    OPTIONAL,
-    ASN1Element as _Element,
+    type OPTIONAL,
+    type ASN1Element as _Element,
     ASN1TagClass as _TagClass,
     ASN1Construction as _Construction,
     ASN1UniversalType as _UniversalType,
@@ -12,7 +12,7 @@ import {
 } from '@wildboar/asn1';
 import * as $ from '@wildboar/asn1/functional';
 import {
-    ExtendedEncodedInformationTypes,
+    type ExtendedEncodedInformationTypes,
     _decode_ExtendedEncodedInformationTypes,
     _encode_ExtendedEncodedInformationTypes,
 } from '../MTSAbstractService/ExtendedEncodedInformationTypes.ta.mjs';
@@ -39,26 +39,34 @@ import {
  *
  */
 export class EncodedInformationTypesConstraints {
+    /**
+     * @summary `unacceptable_eits`.
+     * @public
+     * @readonly
+     */
+    public readonly unacceptable_eits?: OPTIONAL<ExtendedEncodedInformationTypes>;
+    /**
+     * @summary `acceptable_eits`.
+     * @public
+     * @readonly
+     */
+    public readonly acceptable_eits?: OPTIONAL<ExtendedEncodedInformationTypes>;
+    /**
+     * @summary `exclusively_acceptable_eits`.
+     * @public
+     * @readonly
+     */
+    public readonly exclusively_acceptable_eits?: OPTIONAL<ExtendedEncodedInformationTypes>;
+
     constructor(
-        /**
-         * @summary `unacceptable_eits`.
-         * @public
-         * @readonly
-         */
-        readonly unacceptable_eits?: OPTIONAL<ExtendedEncodedInformationTypes>,
-        /**
-         * @summary `acceptable_eits`.
-         * @public
-         * @readonly
-         */
-        readonly acceptable_eits?: OPTIONAL<ExtendedEncodedInformationTypes>,
-        /**
-         * @summary `exclusively_acceptable_eits`.
-         * @public
-         * @readonly
-         */
-        readonly exclusively_acceptable_eits?: OPTIONAL<ExtendedEncodedInformationTypes>
-    ) {}
+        unacceptable_eits?: OPTIONAL<ExtendedEncodedInformationTypes>,
+        acceptable_eits?: OPTIONAL<ExtendedEncodedInformationTypes>,
+        exclusively_acceptable_eits?: OPTIONAL<ExtendedEncodedInformationTypes>
+    ) {
+        this.unacceptable_eits = unacceptable_eits;
+        this.acceptable_eits = acceptable_eits;
+        this.exclusively_acceptable_eits = exclusively_acceptable_eits;
+    }
 
     /**
      * @summary Restructures an object into a EncodedInformationTypesConstraints

@@ -1,7 +1,7 @@
 /* eslint-disable */
 import {
-    OPTIONAL,
-    ASN1Element as _Element,
+    type OPTIONAL,
+    type ASN1Element as _Element,
     ASN1TagClass as _TagClass,
     ASN1Construction as _Construction,
     ASN1UniversalType as _UniversalType,
@@ -34,25 +34,31 @@ import * as $ from "@wildboar/asn1/functional";
  */
 export
 class KeyInfo_paramsAndOps<ParameterType, OperationsType> {
+    /**
+     * @summary `parameters`.
+     * @description
+     * Algorithm-specific parameters. ISO/IEC 7816-15:2016 §8.2.14.
+     * @public
+     * @readonly
+     */
+    public readonly parameters: ParameterType;
+    /**
+     * @summary `operations`.
+     * @description
+     * Operations the card supports with this key. ISO/IEC 7816-15:2016
+     * §8.2.14.
+     * @public
+     * @readonly
+     */
+    public readonly operations?: OPTIONAL<OperationsType>;
+
     constructor (
-        /**
-         * @summary `parameters`.
-         * @description
-         * Algorithm-specific parameters. ISO/IEC 7816-15:2016 §8.2.14.
-         * @public
-         * @readonly
-         */
-        readonly parameters: ParameterType,
-        /**
-         * @summary `operations`.
-         * @description
-         * Operations the card supports with this key. ISO/IEC 7816-15:2016
-         * §8.2.14.
-         * @public
-         * @readonly
-         */
-        readonly operations?: OPTIONAL<OperationsType>
-    ) {}
+        parameters: ParameterType,
+        operations?: OPTIONAL<OperationsType>
+    ) {
+        this.parameters = parameters;
+        this.operations = operations;
+    }
 
     /**
      * @summary Restructures an object into a KeyInfo_paramsAndOps

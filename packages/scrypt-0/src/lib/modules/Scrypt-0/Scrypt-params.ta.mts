@@ -1,9 +1,9 @@
 /* eslint-disable */
 import {
-    OPTIONAL,
-    INTEGER,
-    OCTET_STRING,
-    ASN1Element as _Element,
+    type OPTIONAL,
+    type INTEGER,
+    type OCTET_STRING,
+    type ASN1Element as _Element,
     ASN1TagClass as _TagClass,
 } from "@wildboar/asn1";
 import * as $ from "@wildboar/asn1/functional";
@@ -47,7 +47,7 @@ class Scrypt_params {
      * @public
      * @readonly
      */
-    readonly salt: OCTET_STRING;
+    public readonly salt: OCTET_STRING;
     /**
      * @summary `costParameter`.
      * @description
@@ -59,7 +59,7 @@ class Scrypt_params {
      * @public
      * @readonly
      */
-    readonly costParameter: INTEGER;
+    public readonly costParameter: INTEGER;
     /**
      * @summary `blockSize`.
      * @description
@@ -70,7 +70,7 @@ class Scrypt_params {
      * @public
      * @readonly
      */
-    readonly blockSize: INTEGER;
+    public readonly blockSize: INTEGER;
     /**
      * @summary `parallelizationParameter`.
      * @description
@@ -84,7 +84,7 @@ class Scrypt_params {
      * @public
      * @readonly
      */
-    readonly parallelizationParameter: INTEGER;
+    public readonly parallelizationParameter: INTEGER;
     /**
      * @summary `keyLength`.
      * @description
@@ -102,7 +102,7 @@ class Scrypt_params {
      * @public
      * @readonly
      */
-    readonly keyLength?: OPTIONAL<INTEGER>;
+    public readonly keyLength?: OPTIONAL<INTEGER>;
 
     constructor (
         salt: OCTET_STRING,

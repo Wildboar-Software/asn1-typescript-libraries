@@ -1,10 +1,10 @@
 /* eslint-disable */
 import {
-    ASN1Element as _Element,
+    type ASN1Element as _Element,
     ASN1Error
 } from "@wildboar/asn1";
 import * as $ from "@wildboar/asn1/functional";
-import { _decode_ParameterName, _encode_ParameterName, ParameterName,
+import { _decode_ParameterName, _encode_ParameterName, type ParameterName,
     ParameterName_bufferSize,
     ParameterName_deliveryMode,
     ParameterName_latencyLimit,
@@ -81,8 +81,6 @@ function _decode_RcfParameterName (el: _Element): RcfParameterName {
     return _decoded;
 }
 
-let _cached_encoder_for_RcfParameterName: $.ASN1Encoder<RcfParameterName> | null = null;
-
 /**
  * @summary Encodes a(n) RcfParameterName into an ASN.1 Element.
  * @function
@@ -90,11 +88,7 @@ let _cached_encoder_for_RcfParameterName: $.ASN1Encoder<RcfParameterName> | null
  * @param elGetter A function that can be used to get new ASN.1 elements.
  * @returns {_Element} The RcfParameterName, encoded as an ASN.1 Element.
  */
-export
-function _encode_RcfParameterName (value: RcfParameterName, elGetter: $.ASN1Encoder<any>): _Element {
-    if (!_cached_encoder_for_RcfParameterName) { _cached_encoder_for_RcfParameterName = _encode_ParameterName; }
-    return _cached_encoder_for_RcfParameterName(value, elGetter);
-}
+export const _encode_RcfParameterName: $.ASN1Encoder<RcfParameterName> = _encode_ParameterName;
 
 
 /* eslint-enable */

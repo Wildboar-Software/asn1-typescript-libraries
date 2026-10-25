@@ -1,7 +1,7 @@
 /* eslint-disable */
 import {
-    OPTIONAL,
-    ASN1Element as _Element,
+    type OPTIONAL,
+    type ASN1Element as _Element,
     ASN1TagClass as _TagClass,
     ASN1Construction as _Construction,
     ASN1UniversalType as _UniversalType,
@@ -12,28 +12,28 @@ import {
 } from '@wildboar/asn1';
 import * as $ from '@wildboar/asn1/functional';
 import {
-    CMSVersion,
+    type CMSVersion,
     _decode_CMSVersion,
     _encode_CMSVersion,
     OriginatorInfo,
     _decode_OriginatorInfo,
     _encode_OriginatorInfo,
-    RecipientInfos,
+    type RecipientInfos,
     _decode_RecipientInfos,
     _encode_RecipientInfos,
-    MessageAuthenticationCodeAlgorithm,
+    type MessageAuthenticationCodeAlgorithm,
     _decode_MessageAuthenticationCodeAlgorithm,
     _encode_MessageAuthenticationCodeAlgorithm,
-    DigestAlgorithmIdentifier,
+    type DigestAlgorithmIdentifier,
     _decode_DigestAlgorithmIdentifier,
     _encode_DigestAlgorithmIdentifier,
-    AuthAttributes,
+    type AuthAttributes,
     _decode_AuthAttributes,
     _encode_AuthAttributes,
-    MessageAuthenticationCode,
+    type MessageAuthenticationCode,
     _decode_MessageAuthenticationCode,
     _encode_MessageAuthenticationCode,
-    UnauthAttributes,
+    type UnauthAttributes,
     _decode_UnauthAttributes,
     _encode_UnauthAttributes,
 } from '@wildboar/cms';
@@ -60,62 +60,82 @@ import {
  *
  */
 export class AUTHENTICATEDDATA<EncapsulatedContentInfo> {
+    /**
+     * @summary `version`.
+     * @public
+     * @readonly
+     */
+    public readonly version: CMSVersion;
+    /**
+     * @summary `originatorInfo`.
+     * @public
+     * @readonly
+     */
+    public readonly originatorInfo: OPTIONAL<OriginatorInfo>;
+    /**
+     * @summary `recipientInfos`.
+     * @public
+     * @readonly
+     */
+    public readonly recipientInfos: RecipientInfos;
+    /**
+     * @summary `macAlgorithm`.
+     * @public
+     * @readonly
+     */
+    public readonly macAlgorithm: MessageAuthenticationCodeAlgorithm;
+    /**
+     * @summary `digestAlgorithm`.
+     * @public
+     * @readonly
+     */
+    public readonly digestAlgorithm: OPTIONAL<DigestAlgorithmIdentifier>;
+    /**
+     * @summary `encapContentInfo`.
+     * @public
+     * @readonly
+     */
+    public readonly encapContentInfo: EncapsulatedContentInfo;
+    /**
+     * @summary `authAttrs`.
+     * @public
+     * @readonly
+     */
+    public readonly authAttrs: OPTIONAL<AuthAttributes>;
+    /**
+     * @summary `mac`.
+     * @public
+     * @readonly
+     */
+    public readonly mac: MessageAuthenticationCode;
+    /**
+     * @summary `unauthAttrs`.
+     * @public
+     * @readonly
+     */
+    public readonly unauthAttrs?: OPTIONAL<UnauthAttributes>;
+
     constructor(
-        /**
-         * @summary `version`.
-         * @public
-         * @readonly
-         */
-        readonly version: CMSVersion,
-        /**
-         * @summary `originatorInfo`.
-         * @public
-         * @readonly
-         */
-        readonly originatorInfo: OPTIONAL<OriginatorInfo>,
-        /**
-         * @summary `recipientInfos`.
-         * @public
-         * @readonly
-         */
-        readonly recipientInfos: RecipientInfos,
-        /**
-         * @summary `macAlgorithm`.
-         * @public
-         * @readonly
-         */
-        readonly macAlgorithm: MessageAuthenticationCodeAlgorithm,
-        /**
-         * @summary `digestAlgorithm`.
-         * @public
-         * @readonly
-         */
-        readonly digestAlgorithm: OPTIONAL<DigestAlgorithmIdentifier>,
-        /**
-         * @summary `encapContentInfo`.
-         * @public
-         * @readonly
-         */
-        readonly encapContentInfo: EncapsulatedContentInfo,
-        /**
-         * @summary `authAttrs`.
-         * @public
-         * @readonly
-         */
-        readonly authAttrs: OPTIONAL<AuthAttributes>,
-        /**
-         * @summary `mac`.
-         * @public
-         * @readonly
-         */
-        readonly mac: MessageAuthenticationCode,
-        /**
-         * @summary `unauthAttrs`.
-         * @public
-         * @readonly
-         */
-        readonly unauthAttrs?: OPTIONAL<UnauthAttributes>
-    ) {}
+        version: CMSVersion,
+        originatorInfo: OPTIONAL<OriginatorInfo>,
+        recipientInfos: RecipientInfos,
+        macAlgorithm: MessageAuthenticationCodeAlgorithm,
+        digestAlgorithm: OPTIONAL<DigestAlgorithmIdentifier>,
+        encapContentInfo: EncapsulatedContentInfo,
+        authAttrs: OPTIONAL<AuthAttributes>,
+        mac: MessageAuthenticationCode,
+        unauthAttrs?: OPTIONAL<UnauthAttributes>
+    ) {
+        this.version = version;
+        this.originatorInfo = originatorInfo;
+        this.recipientInfos = recipientInfos;
+        this.macAlgorithm = macAlgorithm;
+        this.digestAlgorithm = digestAlgorithm;
+        this.encapContentInfo = encapContentInfo;
+        this.authAttrs = authAttrs;
+        this.mac = mac;
+        this.unauthAttrs = unauthAttrs;
+    }
 
     /**
      * @summary Restructures an object into a AUTHENTICATEDDATA

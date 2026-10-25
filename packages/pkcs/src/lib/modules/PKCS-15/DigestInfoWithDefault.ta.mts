@@ -1,9 +1,9 @@
 /* eslint-disable */
 import {
-    ASN1Element as _Element,
+    type ASN1Element as _Element,
     ASN1TagClass as _TagClass,
-    OCTET_STRING,
-    OPTIONAL,
+    type OCTET_STRING,
+    type OPTIONAL,
 } from "@wildboar/asn1";
 import * as $ from "@wildboar/asn1/functional";
 import {
@@ -29,20 +29,26 @@ import { alg_id_sha1 } from "../PKCS-15/alg-id-sha1.va.mjs";
  *
  */
 export class DigestInfoWithDefault {
+    /**
+     * @summary `digestAlg`.
+     * @public
+     * @readonly
+     */
+    public readonly digestAlg: OPTIONAL<AlgorithmIdentifier>;
+    /**
+     * @summary `digest`.
+     * @public
+     * @readonly
+     */
+    public readonly digest: OCTET_STRING;
+
     constructor(
-        /**
-         * @summary `digestAlg`.
-         * @public
-         * @readonly
-         */
-        readonly digestAlg: OPTIONAL<AlgorithmIdentifier>,
-        /**
-         * @summary `digest`.
-         * @public
-         * @readonly
-         */
-        readonly digest: OCTET_STRING
-    ) {}
+        digestAlg: OPTIONAL<AlgorithmIdentifier>,
+        digest: OCTET_STRING
+    ) {
+        this.digestAlg = digestAlg;
+        this.digest = digest;
+    }
 
     /**
      * @summary Restructures an object into a DigestInfoWithDefault

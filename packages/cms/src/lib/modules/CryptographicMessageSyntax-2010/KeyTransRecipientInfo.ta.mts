@@ -1,23 +1,23 @@
 /* eslint-disable */
 import {
     ASN1ConstructionError as _ConstructionError,
-    ASN1Element as _Element,
+    type ASN1Element as _Element,
     ASN1TagClass as _TagClass,
 } from "@wildboar/asn1";
 import * as $ from "@wildboar/asn1/functional";
 import { AlgorithmIdentifier, _decode_AlgorithmIdentifier, _encode_AlgorithmIdentifier } from "@wildboar/x500/AuthenticationFramework";
 import {
-    CMSVersion,
+    type CMSVersion,
     _decode_CMSVersion,
     _encode_CMSVersion,
 } from "../CryptographicMessageSyntax-2010/CMSVersion.ta.mjs";
 import {
-    EncryptedKey,
+    type EncryptedKey,
     _decode_EncryptedKey,
     _encode_EncryptedKey,
 } from "../CryptographicMessageSyntax-2010/EncryptedKey.ta.mjs";
 import {
-    RecipientIdentifier,
+    type RecipientIdentifier,
     _decode_RecipientIdentifier,
     _encode_RecipientIdentifier,
 } from "../CryptographicMessageSyntax-2010/RecipientIdentifier.ta.mjs";
@@ -42,50 +42,60 @@ import {
  *
  */
 export class KeyTransRecipientInfo {
+    /**
+     * @summary `version`.
+     * @description
+     *
+     * 0 if `rid` is `issuerAndSerialNumber`; 2 if `rid` is
+     * `subjectKeyIdentifier` ([RFC 5652 §6.2.1](https://datatracker.ietf.org/doc/html/rfc5652#section-6.2.1)).
+     *
+     * @public
+     * @readonly
+     */
+    public readonly version: CMSVersion;
+    /**
+     * @summary `rid`.
+     * @description
+     *
+     * Recipient's certificate identifier ([RFC 5652 §6.2.1](https://datatracker.ietf.org/doc/html/rfc5652#section-6.2.1)).
+     *
+     * @public
+     * @readonly
+     */
+    public readonly rid: RecipientIdentifier;
+    /**
+     * @summary `keyEncryptionAlgorithm`.
+     * @description
+     *
+     * Key-encryption (key transport) algorithm used to encrypt the CEK
+     * ([RFC 5652 §6.2.1](https://datatracker.ietf.org/doc/html/rfc5652#section-6.2.1)).
+     *
+     * @public
+     * @readonly
+     */
+    public readonly keyEncryptionAlgorithm: AlgorithmIdentifier;
+    /**
+     * @summary `encryptedKey`.
+     * @description
+     *
+     * CEK encrypted for this recipient ([RFC 5652 §6.2.1](https://datatracker.ietf.org/doc/html/rfc5652#section-6.2.1)).
+     *
+     * @public
+     * @readonly
+     */
+    public readonly encryptedKey: EncryptedKey;
+
     constructor(
-        /**
-         * @summary `version`.
-         * @description
-         *
-         * 0 if `rid` is `issuerAndSerialNumber`; 2 if `rid` is
-         * `subjectKeyIdentifier` ([RFC 5652 §6.2.1](https://datatracker.ietf.org/doc/html/rfc5652#section-6.2.1)).
-         *
-         * @public
-         * @readonly
-         */
-        readonly version: CMSVersion,
-        /**
-         * @summary `rid`.
-         * @description
-         *
-         * Recipient's certificate identifier ([RFC 5652 §6.2.1](https://datatracker.ietf.org/doc/html/rfc5652#section-6.2.1)).
-         *
-         * @public
-         * @readonly
-         */
-        readonly rid: RecipientIdentifier,
-        /**
-         * @summary `keyEncryptionAlgorithm`.
-         * @description
-         *
-         * Key-encryption (key transport) algorithm used to encrypt the CEK
-         * ([RFC 5652 §6.2.1](https://datatracker.ietf.org/doc/html/rfc5652#section-6.2.1)).
-         *
-         * @public
-         * @readonly
-         */
-        readonly keyEncryptionAlgorithm: AlgorithmIdentifier,
-        /**
-         * @summary `encryptedKey`.
-         * @description
-         *
-         * CEK encrypted for this recipient ([RFC 5652 §6.2.1](https://datatracker.ietf.org/doc/html/rfc5652#section-6.2.1)).
-         *
-         * @public
-         * @readonly
-         */
-        readonly encryptedKey: EncryptedKey
-    ) {}
+        version: CMSVersion,
+        rid: RecipientIdentifier,
+        keyEncryptionAlgorithm: AlgorithmIdentifier,
+        encryptedKey: EncryptedKey
+    ) {
+        this.version = version;
+        this.rid = rid;
+        this.keyEncryptionAlgorithm = keyEncryptionAlgorithm;
+        this.encryptedKey = encryptedKey;
+    }
 
     /**
      * @summary Restructures an object into a KeyTransRecipientInfo

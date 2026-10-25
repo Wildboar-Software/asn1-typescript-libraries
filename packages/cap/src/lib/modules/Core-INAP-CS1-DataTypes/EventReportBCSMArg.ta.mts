@@ -1,7 +1,7 @@
 /* eslint-disable */
 import {
-    OPTIONAL,
-    ASN1Element as _Element,
+    type OPTIONAL,
+    type ASN1Element as _Element,
     ASN1TagClass as _TagClass,
     ASN1Construction as _Construction,
     ASN1UniversalType as _UniversalType,
@@ -12,8 +12,8 @@ import {
 } from "@wildboar/asn1";
 import * as $ from "@wildboar/asn1/functional";
 import { EventTypeBCSM, _enum_for_EventTypeBCSM, _decode_EventTypeBCSM, _encode_EventTypeBCSM } from "../Core-INAP-CS1-DataTypes/EventTypeBCSM.ta.mjs";
-import { EventSpecificInformationBCSM, _decode_EventSpecificInformationBCSM, _encode_EventSpecificInformationBCSM } from "../Core-INAP-CS1-DataTypes/EventSpecificInformationBCSM.ta.mjs";
-import { LegID, _decode_LegID, _encode_LegID } from "../Core-INAP-CS1-DataTypes/LegID.ta.mjs";
+import { type EventSpecificInformationBCSM, _decode_EventSpecificInformationBCSM, _encode_EventSpecificInformationBCSM } from "../Core-INAP-CS1-DataTypes/EventSpecificInformationBCSM.ta.mjs";
+import { type LegID, _decode_LegID, _encode_LegID } from "../Core-INAP-CS1-DataTypes/LegID.ta.mjs";
 import { MiscCallInfo, _decode_MiscCallInfo, _encode_MiscCallInfo } from "../Core-INAP-CS1-DataTypes/MiscCallInfo.ta.mjs";
 import { ExtensionField, _decode_ExtensionField, _encode_ExtensionField } from "../Core-INAP-CS1-DataTypes/ExtensionField.ta.mjs";
 
@@ -27,8 +27,8 @@ import { ExtensionField, _decode_ExtensionField, _encode_ExtensionField } from "
  * ```asn1
  * EventReportBCSMArg ::= SEQUENCE {
  *      eventTypeBCSM     [0] EventTypeBCSM,
- *      eventSpecificInformationBCSM     [2] EventSpecificInformationBCSM     OPTIONAL,
- *      legID     [3] LegID     OPTIONAL,
+ *      eventSpecificInformationBCSM     [2] EventSpecificInformationBCSM     type OPTIONAL,
+ *      legID     [3] LegID     type OPTIONAL,
  *      miscCallInfo     [4] MiscCallInfo     DEFAULT {messageType request},
  *      extensions     [5] SEQUENCE SIZE(1..numOfExtensions) OF ExtensionField     OPTIONAL
  * --  ...
@@ -39,38 +39,50 @@ import { ExtensionField, _decode_ExtensionField, _encode_ExtensionField } from "
  */
 export
 class EventReportBCSMArg {
+    /**
+     * @summary `eventTypeBCSM`.
+     * @public
+     * @readonly
+     */
+    public readonly eventTypeBCSM: EventTypeBCSM;
+    /**
+     * @summary `eventSpecificInformationBCSM`.
+     * @public
+     * @readonly
+     */
+    public readonly eventSpecificInformationBCSM?: OPTIONAL<EventSpecificInformationBCSM>;
+    /**
+     * @summary `legID`.
+     * @public
+     * @readonly
+     */
+    public readonly legID?: OPTIONAL<LegID>;
+    /**
+     * @summary `miscCallInfo`.
+     * @public
+     * @readonly
+     */
+    public readonly miscCallInfo?: OPTIONAL<MiscCallInfo>;
+    /**
+     * @summary `extensions`.
+     * @public
+     * @readonly
+     */
+    public readonly extensions?: OPTIONAL<ExtensionField[]>;
+
     constructor (
-        /**
-         * @summary `eventTypeBCSM`.
-         * @public
-         * @readonly
-         */
-        readonly eventTypeBCSM: EventTypeBCSM,
-        /**
-         * @summary `eventSpecificInformationBCSM`.
-         * @public
-         * @readonly
-         */
-        readonly eventSpecificInformationBCSM?: OPTIONAL<EventSpecificInformationBCSM>,
-        /**
-         * @summary `legID`.
-         * @public
-         * @readonly
-         */
-        readonly legID?: OPTIONAL<LegID>,
-        /**
-         * @summary `miscCallInfo`.
-         * @public
-         * @readonly
-         */
-        readonly miscCallInfo?: OPTIONAL<MiscCallInfo>,
-        /**
-         * @summary `extensions`.
-         * @public
-         * @readonly
-         */
-        readonly extensions?: OPTIONAL<ExtensionField[]>
-    ) {}
+        eventTypeBCSM: EventTypeBCSM,
+        eventSpecificInformationBCSM?: OPTIONAL<EventSpecificInformationBCSM>,
+        legID?: OPTIONAL<LegID>,
+        miscCallInfo?: OPTIONAL<MiscCallInfo>,
+        extensions?: OPTIONAL<ExtensionField[]>
+    ) {
+        this.eventTypeBCSM = eventTypeBCSM;
+        this.eventSpecificInformationBCSM = eventSpecificInformationBCSM;
+        this.legID = legID;
+        this.miscCallInfo = miscCallInfo;
+        this.extensions = extensions;
+    }
 
     /**
      * @summary Restructures an object into a EventReportBCSMArg
@@ -94,13 +106,13 @@ class EventReportBCSMArg {
      * @static
      * @method
      */
-    public static get _default_value_for_miscCallInfo () { return MiscCallInfo._from_object({ messageType: MiscCallInfo._enum_for_messageType.request }); }        /**
+    public static get _default_value_for_miscCallInfo (): MiscCallInfo { return MiscCallInfo._from_object({ messageType: MiscCallInfo._enum_for_messageType.request }); }        /**
          * @summary The enum used as the type of the component `eventTypeBCSM`
          * @public
          * @static
          */
 
-    public static _enum_for_eventTypeBCSM = _enum_for_EventTypeBCSM;
+    public static _enum_for_eventTypeBCSM: typeof _enum_for_EventTypeBCSM = _enum_for_EventTypeBCSM;
 }
 
 /**

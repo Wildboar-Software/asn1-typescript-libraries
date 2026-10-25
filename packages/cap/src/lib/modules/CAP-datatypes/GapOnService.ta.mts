@@ -1,5 +1,5 @@
 import {
-    ASN1Element as _Element,
+    type ASN1Element as _Element,
     ASN1TagClass as _TagClass,
 } from "@wildboar/asn1";
 import * as $ from "@wildboar/asn1/functional";
@@ -23,10 +23,16 @@ import { type ServiceKey, _decode_ServiceKey, _encode_ServiceKey } from "../Core
  *
  */
 export class GapOnService {
+    public readonly serviceKey: ServiceKey;
+    public readonly _unrecognizedExtensionsList: _Element[];
+
     constructor (
-        readonly serviceKey: ServiceKey,
-        readonly _unrecognizedExtensionsList: _Element[] = [],
-    ) {}
+        serviceKey: ServiceKey,
+        _unrecognizedExtensionsList: _Element[] = [],
+    ) {
+        this.serviceKey = serviceKey;
+        this._unrecognizedExtensionsList = _unrecognizedExtensionsList;
+    }
 
     public static _from_object (_o: { [_K in keyof (GapOnService)]: (GapOnService)[_K] }): GapOnService {
         return new GapOnService(_o.serviceKey, _o._unrecognizedExtensionsList);

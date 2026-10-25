@@ -8,7 +8,7 @@ import { type OPERATION } from "../Remote-Operations-Information-Objects/OPERATI
 
 import { FastDataArgument, _decode_FastDataArgument, _encode_FastDataArgument } from "../CSTA-fast-data/FastDataArgument.ta.mjs";
 
-import { FastDataResult, _decode_FastDataResult, _encode_FastDataResult } from "../CSTA-fast-data/FastDataResult.ta.mjs";
+import { type FastDataResult, _decode_FastDataResult, _encode_FastDataResult } from "../CSTA-fast-data/FastDataResult.ta.mjs";
 
 import { universalFailure } from "../CSTA-error-definition/universalFailure.oa.mjs";
 

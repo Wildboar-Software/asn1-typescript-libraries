@@ -1,7 +1,7 @@
 /* eslint-disable */
 import {
-    ASN1Element as _Element,
-    IA5String,
+    type ASN1Element as _Element,
+    type IA5String,
     ASN1SizeError
 } from "@wildboar/asn1";
 import * as $ from "@wildboar/asn1/functional";
@@ -35,7 +35,7 @@ export const _decode_PathName = (el: _Element): PathName => {
     }
     return value;
 };
-export const _encode_PathName = $._encodeIA5String;
+export const _encode_PathName: $.ASN1Encoder<string> = $._encodeIA5String;
 
 
 /* eslint-enable */

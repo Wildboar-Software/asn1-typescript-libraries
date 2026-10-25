@@ -1,20 +1,20 @@
 /* eslint-disable */
 import {
-    OPTIONAL,
-    ASN1Element as _Element,
+    type OPTIONAL,
+    type ASN1Element as _Element,
     ASN1TagClass as _TagClass
 } from "@wildboar/asn1";
 import * as $ from "@wildboar/asn1/functional";
 import { ExtensionContainer, _decode_ExtensionContainer, _encode_ExtensionContainer } from "../MAP-ExtensionDataTypes/ExtensionContainer.ta.mjs";
-import { BearerServiceList, _decode_BearerServiceList, _encode_BearerServiceList } from "../MAP-MS-DataTypes/BearerServiceList.ta.mjs";
-import { Ext_SupportedFeatures, _decode_Ext_SupportedFeatures, _encode_Ext_SupportedFeatures } from "../MAP-MS-DataTypes/Ext-SupportedFeatures.ta.mjs";
-import { ODB_GeneralData, _decode_ODB_GeneralData, _encode_ODB_GeneralData } from "../MAP-MS-DataTypes/ODB-GeneralData.ta.mjs";
-import { OfferedCamel4CSIs, _decode_OfferedCamel4CSIs, _encode_OfferedCamel4CSIs } from "../MAP-MS-DataTypes/OfferedCamel4CSIs.ta.mjs";
+import { type BearerServiceList, _decode_BearerServiceList, _encode_BearerServiceList } from "../MAP-MS-DataTypes/BearerServiceList.ta.mjs";
+import { type Ext_SupportedFeatures, _decode_Ext_SupportedFeatures, _encode_Ext_SupportedFeatures } from "../MAP-MS-DataTypes/Ext-SupportedFeatures.ta.mjs";
+import { type ODB_GeneralData, _decode_ODB_GeneralData, _encode_ODB_GeneralData } from "../MAP-MS-DataTypes/ODB-GeneralData.ta.mjs";
+import { type OfferedCamel4CSIs, _decode_OfferedCamel4CSIs, _encode_OfferedCamel4CSIs } from "../MAP-MS-DataTypes/OfferedCamel4CSIs.ta.mjs";
 import { RegionalSubscriptionResponse, _decode_RegionalSubscriptionResponse, _encode_RegionalSubscriptionResponse, _enum_for_RegionalSubscriptionResponse } from "../MAP-MS-DataTypes/RegionalSubscriptionResponse.ta.mjs";
-import { SupportedCamelPhases, _decode_SupportedCamelPhases, _encode_SupportedCamelPhases } from "../MAP-MS-DataTypes/SupportedCamelPhases.ta.mjs";
-import { SupportedFeatures, _decode_SupportedFeatures, _encode_SupportedFeatures } from "../MAP-MS-DataTypes/SupportedFeatures.ta.mjs";
-import { TeleserviceList, _decode_TeleserviceList, _encode_TeleserviceList } from "../MAP-MS-DataTypes/TeleserviceList.ta.mjs";
-import { SS_List, _decode_SS_List, _encode_SS_List } from "../MAP-SS-DataTypes/SS-List.ta.mjs";
+import { type SupportedCamelPhases, _decode_SupportedCamelPhases, _encode_SupportedCamelPhases } from "../MAP-MS-DataTypes/SupportedCamelPhases.ta.mjs";
+import { type SupportedFeatures, _decode_SupportedFeatures, _encode_SupportedFeatures } from "../MAP-MS-DataTypes/SupportedFeatures.ta.mjs";
+import { type TeleserviceList, _decode_TeleserviceList, _encode_TeleserviceList } from "../MAP-MS-DataTypes/TeleserviceList.ta.mjs";
+import { type SS_List, _decode_SS_List, _encode_SS_List } from "../MAP-SS-DataTypes/SS-List.ta.mjs";
 
 
 /**
@@ -30,16 +30,16 @@ import { SS_List, _decode_SS_List, _encode_SS_List } from "../MAP-SS-DataTypes/S
  * 
  * ```asn1
  * InsertSubscriberDataRes ::= SEQUENCE {
- *     teleserviceList    [1] TeleserviceList    OPTIONAL,
- *     bearerServiceList    [2] BearerServiceList    OPTIONAL,
- *     ss-List    [3] SS-List    OPTIONAL,
- *     odb-GeneralData    [4] ODB-GeneralData    OPTIONAL,
- *     regionalSubscriptionResponse    [5] RegionalSubscriptionResponse    OPTIONAL,
- *     supportedCamelPhases    [6] SupportedCamelPhases    OPTIONAL,
- *     extensionContainer    [7] ExtensionContainer    OPTIONAL,
+ *     teleserviceList    [1] TeleserviceList    type OPTIONAL,
+ *     bearerServiceList    [2] BearerServiceList    type OPTIONAL,
+ *     ss-List    [3] SS-List    type OPTIONAL,
+ *     odb-GeneralData    [4] ODB-GeneralData    type OPTIONAL,
+ *     regionalSubscriptionResponse    [5] RegionalSubscriptionResponse    type OPTIONAL,
+ *     supportedCamelPhases    [6] SupportedCamelPhases    type OPTIONAL,
+ *     extensionContainer    [7] ExtensionContainer    type OPTIONAL,
  *     ... ,
- *     offeredCamel4CSIs    [8] OfferedCamel4CSIs    OPTIONAL,
- *     supportedFeatures    [9] SupportedFeatures    OPTIONAL,
+ *     offeredCamel4CSIs    [8] OfferedCamel4CSIs    type OPTIONAL,
+ *     supportedFeatures    [9] SupportedFeatures    type OPTIONAL,
  *     ext-SupportedFeatures    [10] Ext-SupportedFeatures    OPTIONAL }
  * ```
  * 
@@ -47,121 +47,145 @@ import { SS_List, _decode_SS_List, _encode_SS_List } from "../MAP-SS-DataTypes/S
  */
 export
 class InsertSubscriberDataRes {
+    /**
+     * @summary `teleserviceList`.
+     * @description
+     *
+     * Extensible teleservices from the request that the VLR/SGSN/IWF does
+     * not support/allocate. (3GPP TS 29.002 V19.1.0 clause 8.8.1.3)
+     *
+     * @public
+     * @readonly
+     */
+    public readonly teleserviceList?: OPTIONAL<TeleserviceList>;
+    /**
+     * @summary `bearerServiceList`.
+     * @description
+     *
+     * Extensible bearer services from the request that the VLR does not
+     * support/allocate. (3GPP TS 29.002 V19.1.0 clause 8.8.1.3)
+     *
+     * @public
+     * @readonly
+     */
+    public readonly bearerServiceList?: OPTIONAL<BearerServiceList>;
+    /**
+     * @summary `ss_List`.
+     * @description
+     *
+     * SS-Codes provided to the subscriber but not supported/allocated by
+     * the VLR/SGSN/IWF. (3GPP TS 29.002 V19.1.0 clause 8.8.1.3)
+     *
+     * @public
+     * @readonly
+     */
+    public readonly ss_List?: OPTIONAL<SS_List>;
+    /**
+     * @summary `odb_GeneralData`.
+     * @description
+     *
+     * ODB general categories not supported/allocated by the VLR/SGSN/IWF.
+     * (3GPP TS 29.002 V19.1.0 clause 8.8.1.3)
+     *
+     * @public
+     * @readonly
+     */
+    public readonly odb_GeneralData?: OPTIONAL<ODB_GeneralData>;
+    /**
+     * @summary `regionalSubscriptionResponse`.
+     * @description
+     *
+     * MSC/SGSN/MME area entirely restricted, too many zone codes, zone code
+     * conflict, or regional subscription not supported. (3GPP TS 29.002
+     * V19.1.0 clauses 8.8.1.3 and 7.6.3.12)
+     *
+     * @public
+     * @readonly
+     */
+    public readonly regionalSubscriptionResponse?: OPTIONAL<RegionalSubscriptionResponse>;
+    /**
+     * @summary `supportedCamelPhases`.
+     * @description
+     *
+     * CAMEL phases supported in the VLR or SGSN (3GPP TS 23.078). A node
+     * supporting none may omit this. An IWF shall omit it. (3GPP TS 29.002
+     * V19.1.0 clause 8.8.1.3)
+     *
+     * @public
+     * @readonly
+     */
+    public readonly supportedCamelPhases?: OPTIONAL<SupportedCamelPhases>;
+    /**
+     * @summary `extensionContainer`.
+     * @public
+     * @readonly
+     */
+    public readonly extensionContainer?: OPTIONAL<ExtensionContainer>;
+    /**
+     * @summary `offeredCamel4CSIs`.
+     * @description
+     *
+     * CAMEL phase 4 CSIs offered in the VMSC/VLR or SGSN. An IWF shall omit
+     * this. (3GPP TS 29.002 V19.1.0 clauses 8.8.1.3 and 7.6.3.36D)
+     *
+     * @public
+     * @readonly
+     */
+    public readonly offeredCamel4CSIs?: OPTIONAL<OfferedCamel4CSIs>;
+    /**
+     * @summary `supportedFeatures`.
+     * @description
+     *
+     * IWF forwards feature-support indications received from MME or SGSN
+     * via S6a/S6d. (3GPP TS 29.002 V19.1.0 clause 8.8.1.3)
+     *
+     * @public
+     * @readonly
+     */
+    public readonly supportedFeatures?: OPTIONAL<SupportedFeatures>;
+    /**
+     * @summary `ext_SupportedFeatures`.
+     * @description
+     *
+     * Extended feature-support indications forwarded by an IWF from
+     * S6a/S6d. (3GPP TS 29.002 V19.1.0 clause 8.8.1.3)
+     *
+     * @public
+     * @readonly
+     */
+    public readonly ext_SupportedFeatures?: OPTIONAL<Ext_SupportedFeatures>;
+    /**
+     * @summary Extensions that are not recognized.
+     * @public
+     * @readonly
+     */
+    public readonly _unrecognizedExtensionsList: _Element[];
+
     constructor (
-        /**
-         * @summary `teleserviceList`.
-         * @description
-         *
-         * Extensible teleservices from the request that the VLR/SGSN/IWF does
-         * not support/allocate. (3GPP TS 29.002 V19.1.0 clause 8.8.1.3)
-         *
-         * @public
-         * @readonly
-         */
-        readonly teleserviceList?: OPTIONAL<TeleserviceList>,
-        /**
-         * @summary `bearerServiceList`.
-         * @description
-         *
-         * Extensible bearer services from the request that the VLR does not
-         * support/allocate. (3GPP TS 29.002 V19.1.0 clause 8.8.1.3)
-         *
-         * @public
-         * @readonly
-         */
-        readonly bearerServiceList?: OPTIONAL<BearerServiceList>,
-        /**
-         * @summary `ss_List`.
-         * @description
-         *
-         * SS-Codes provided to the subscriber but not supported/allocated by
-         * the VLR/SGSN/IWF. (3GPP TS 29.002 V19.1.0 clause 8.8.1.3)
-         *
-         * @public
-         * @readonly
-         */
-        readonly ss_List?: OPTIONAL<SS_List>,
-        /**
-         * @summary `odb_GeneralData`.
-         * @description
-         *
-         * ODB general categories not supported/allocated by the VLR/SGSN/IWF.
-         * (3GPP TS 29.002 V19.1.0 clause 8.8.1.3)
-         *
-         * @public
-         * @readonly
-         */
-        readonly odb_GeneralData?: OPTIONAL<ODB_GeneralData>,
-        /**
-         * @summary `regionalSubscriptionResponse`.
-         * @description
-         *
-         * MSC/SGSN/MME area entirely restricted, too many zone codes, zone code
-         * conflict, or regional subscription not supported. (3GPP TS 29.002
-         * V19.1.0 clauses 8.8.1.3 and 7.6.3.12)
-         *
-         * @public
-         * @readonly
-         */
-        readonly regionalSubscriptionResponse?: OPTIONAL<RegionalSubscriptionResponse>,
-        /**
-         * @summary `supportedCamelPhases`.
-         * @description
-         *
-         * CAMEL phases supported in the VLR or SGSN (3GPP TS 23.078). A node
-         * supporting none may omit this. An IWF shall omit it. (3GPP TS 29.002
-         * V19.1.0 clause 8.8.1.3)
-         *
-         * @public
-         * @readonly
-         */
-        readonly supportedCamelPhases?: OPTIONAL<SupportedCamelPhases>,
-        /**
-         * @summary `extensionContainer`.
-         * @public
-         * @readonly
-         */
-        readonly extensionContainer?: OPTIONAL<ExtensionContainer>,
-        /**
-         * @summary `offeredCamel4CSIs`.
-         * @description
-         *
-         * CAMEL phase 4 CSIs offered in the VMSC/VLR or SGSN. An IWF shall omit
-         * this. (3GPP TS 29.002 V19.1.0 clauses 8.8.1.3 and 7.6.3.36D)
-         *
-         * @public
-         * @readonly
-         */
-        readonly offeredCamel4CSIs?: OPTIONAL<OfferedCamel4CSIs>,
-        /**
-         * @summary `supportedFeatures`.
-         * @description
-         *
-         * IWF forwards feature-support indications received from MME or SGSN
-         * via S6a/S6d. (3GPP TS 29.002 V19.1.0 clause 8.8.1.3)
-         *
-         * @public
-         * @readonly
-         */
-        readonly supportedFeatures?: OPTIONAL<SupportedFeatures>,
-        /**
-         * @summary `ext_SupportedFeatures`.
-         * @description
-         *
-         * Extended feature-support indications forwarded by an IWF from
-         * S6a/S6d. (3GPP TS 29.002 V19.1.0 clause 8.8.1.3)
-         *
-         * @public
-         * @readonly
-         */
-        readonly ext_SupportedFeatures?: OPTIONAL<Ext_SupportedFeatures>,
-        /**
-         * @summary Extensions that are not recognized.
-         * @public
-         * @readonly
-         */
-        readonly _unrecognizedExtensionsList: _Element[] = []
-    ) {}
+        teleserviceList?: OPTIONAL<TeleserviceList>,
+        bearerServiceList?: OPTIONAL<BearerServiceList>,
+        ss_List?: OPTIONAL<SS_List>,
+        odb_GeneralData?: OPTIONAL<ODB_GeneralData>,
+        regionalSubscriptionResponse?: OPTIONAL<RegionalSubscriptionResponse>,
+        supportedCamelPhases?: OPTIONAL<SupportedCamelPhases>,
+        extensionContainer?: OPTIONAL<ExtensionContainer>,
+        offeredCamel4CSIs?: OPTIONAL<OfferedCamel4CSIs>,
+        supportedFeatures?: OPTIONAL<SupportedFeatures>,
+        ext_SupportedFeatures?: OPTIONAL<Ext_SupportedFeatures>,
+        _unrecognizedExtensionsList: _Element[] = []
+    ) {
+        this.teleserviceList = teleserviceList;
+        this.bearerServiceList = bearerServiceList;
+        this.ss_List = ss_List;
+        this.odb_GeneralData = odb_GeneralData;
+        this.regionalSubscriptionResponse = regionalSubscriptionResponse;
+        this.supportedCamelPhases = supportedCamelPhases;
+        this.extensionContainer = extensionContainer;
+        this.offeredCamel4CSIs = offeredCamel4CSIs;
+        this.supportedFeatures = supportedFeatures;
+        this.ext_SupportedFeatures = ext_SupportedFeatures;
+        this._unrecognizedExtensionsList = _unrecognizedExtensionsList;
+    }
 
     /**
      * @summary Restructures an object into a InsertSubscriberDataRes
@@ -185,7 +209,7 @@ class InsertSubscriberDataRes {
          * @static
          */
 
-    public static _enum_for_regionalSubscriptionResponse = _enum_for_RegionalSubscriptionResponse;
+    public static _enum_for_regionalSubscriptionResponse: typeof _enum_for_RegionalSubscriptionResponse = _enum_for_RegionalSubscriptionResponse;
 }
 
 /**

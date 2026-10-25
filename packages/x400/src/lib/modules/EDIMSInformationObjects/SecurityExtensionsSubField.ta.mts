@@ -1,6 +1,6 @@
 /* eslint-disable */
 import {
-    ASN1Element as _Element,
+    type ASN1Element as _Element,
     ASN1TagClass as _TagClass,
     ASN1Construction as _Construction,
     ASN1UniversalType as _UniversalType,
@@ -29,22 +29,13 @@ import {
  */
 export type SecurityExtensionsSubField = ExtensionField; // DefinedType
 
-let _cached_decoder_for_SecurityExtensionsSubField: $.ASN1Decoder<SecurityExtensionsSubField> | null = null;
-
 /**
  * @summary Decodes an ASN.1 element into a(n) SecurityExtensionsSubField
  * @function
  * @param {_Element} el The element being decoded.
  * @returns {SecurityExtensionsSubField} The decoded data structure.
  */
-export function _decode_SecurityExtensionsSubField(el: _Element): SecurityExtensionsSubField {
-    if (!_cached_decoder_for_SecurityExtensionsSubField) {
-        _cached_decoder_for_SecurityExtensionsSubField = _decode_ExtensionField;
-    }
-    return _cached_decoder_for_SecurityExtensionsSubField(el);
-}
-
-let _cached_encoder_for_SecurityExtensionsSubField: $.ASN1Encoder<SecurityExtensionsSubField> | null = null;
+export const _decode_SecurityExtensionsSubField: $.ASN1Decoder<SecurityExtensionsSubField> = _decode_ExtensionField;
 
 /**
  * @summary Encodes a(n) SecurityExtensionsSubField into an ASN.1 Element.
@@ -53,15 +44,7 @@ let _cached_encoder_for_SecurityExtensionsSubField: $.ASN1Encoder<SecurityExtens
  * @param elGetter A function that can be used to get new ASN.1 elements.
  * @returns {_Element} The SecurityExtensionsSubField, encoded as an ASN.1 Element.
  */
-export function _encode_SecurityExtensionsSubField(
-    value: SecurityExtensionsSubField,
-    elGetter: $.ASN1Encoder<SecurityExtensionsSubField>
-): _Element {
-    if (!_cached_encoder_for_SecurityExtensionsSubField) {
-        _cached_encoder_for_SecurityExtensionsSubField = _encode_ExtensionField;
-    }
-    return _cached_encoder_for_SecurityExtensionsSubField(value, elGetter);
-}
+export const _encode_SecurityExtensionsSubField: $.ASN1Encoder<SecurityExtensionsSubField> = _encode_ExtensionField;
 
 
 /* eslint-enable */

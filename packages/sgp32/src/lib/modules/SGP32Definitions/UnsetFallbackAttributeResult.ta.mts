@@ -1,7 +1,7 @@
 /* eslint-disable */
 import {
-    ASN1Element as _Element,
-    INTEGER
+    type ASN1Element as _Element,
+    type INTEGER
 } from "@wildboar/asn1";
 import * as $ from "@wildboar/asn1/functional";
 
@@ -38,7 +38,7 @@ type UnsetFallbackAttributeResult = INTEGER;
  * @type {number}
  */
 export
-const UnsetFallbackAttributeResult_ok: UnsetFallbackAttributeResult = 0; /* LONG_NAMED_INTEGER_VALUE */
+const UnsetFallbackAttributeResult_ok: 0 = 0 satisfies UnsetFallbackAttributeResult; /* LONG_NAMED_INTEGER_VALUE */
 
 /**
  * @summary UnsetFallbackAttributeResult_ok
@@ -48,7 +48,7 @@ const UnsetFallbackAttributeResult_ok: UnsetFallbackAttributeResult = 0; /* LONG
  * @type {number}
  */
 export
-const ok: UnsetFallbackAttributeResult = UnsetFallbackAttributeResult_ok; /* SHORT_NAMED_INTEGER_VALUE */
+const ok: 0 = UnsetFallbackAttributeResult_ok; /* SHORT_NAMED_INTEGER_VALUE */
 
 /**
  * @summary UnsetFallbackAttributeResult_noFallbackAttribute
@@ -59,7 +59,7 @@ const ok: UnsetFallbackAttributeResult = UnsetFallbackAttributeResult_ok; /* SHO
  * @type {number}
  */
 export
-const UnsetFallbackAttributeResult_noFallbackAttribute: UnsetFallbackAttributeResult = 2; /* LONG_NAMED_INTEGER_VALUE */
+const UnsetFallbackAttributeResult_noFallbackAttribute: 2 = 2 satisfies UnsetFallbackAttributeResult; /* LONG_NAMED_INTEGER_VALUE */
 
 /**
  * @summary UnsetFallbackAttributeResult_noFallbackAttribute
@@ -69,7 +69,7 @@ const UnsetFallbackAttributeResult_noFallbackAttribute: UnsetFallbackAttributeRe
  * @type {number}
  */
 export
-const noFallbackAttribute: UnsetFallbackAttributeResult = UnsetFallbackAttributeResult_noFallbackAttribute; /* SHORT_NAMED_INTEGER_VALUE */
+const noFallbackAttribute: 2 = UnsetFallbackAttributeResult_noFallbackAttribute; /* SHORT_NAMED_INTEGER_VALUE */
 
 /**
  * @summary UnsetFallbackAttributeResult_fallbackProfileEnabled
@@ -80,7 +80,7 @@ const noFallbackAttribute: UnsetFallbackAttributeResult = UnsetFallbackAttribute
  * @type {number}
  */
 export
-const UnsetFallbackAttributeResult_fallbackProfileEnabled: UnsetFallbackAttributeResult = 3; /* LONG_NAMED_INTEGER_VALUE */
+const UnsetFallbackAttributeResult_fallbackProfileEnabled: 3 = 3 satisfies UnsetFallbackAttributeResult; /* LONG_NAMED_INTEGER_VALUE */
 
 /**
  * @summary UnsetFallbackAttributeResult_fallbackProfileEnabled
@@ -90,7 +90,7 @@ const UnsetFallbackAttributeResult_fallbackProfileEnabled: UnsetFallbackAttribut
  * @type {number}
  */
 export
-const fallbackProfileEnabled: UnsetFallbackAttributeResult = UnsetFallbackAttributeResult_fallbackProfileEnabled; /* SHORT_NAMED_INTEGER_VALUE */
+const fallbackProfileEnabled: 3 = UnsetFallbackAttributeResult_fallbackProfileEnabled; /* SHORT_NAMED_INTEGER_VALUE */
 
 /**
  * @summary UnsetFallbackAttributeResult_commandError
@@ -101,7 +101,7 @@ const fallbackProfileEnabled: UnsetFallbackAttributeResult = UnsetFallbackAttrib
  * @type {number}
  */
 export
-const UnsetFallbackAttributeResult_commandError: UnsetFallbackAttributeResult = 7; /* LONG_NAMED_INTEGER_VALUE */
+const UnsetFallbackAttributeResult_commandError: 7 = 7 satisfies UnsetFallbackAttributeResult; /* LONG_NAMED_INTEGER_VALUE */
 
 /**
  * @summary UnsetFallbackAttributeResult_commandError
@@ -111,7 +111,7 @@ const UnsetFallbackAttributeResult_commandError: UnsetFallbackAttributeResult = 
  * @type {number}
  */
 export
-const commandError: UnsetFallbackAttributeResult = UnsetFallbackAttributeResult_commandError; /* SHORT_NAMED_INTEGER_VALUE */
+const commandError: 7 = UnsetFallbackAttributeResult_commandError; /* SHORT_NAMED_INTEGER_VALUE */
 
 /**
  * @summary UnsetFallbackAttributeResult_undefinedError
@@ -122,7 +122,7 @@ const commandError: UnsetFallbackAttributeResult = UnsetFallbackAttributeResult_
  * @type {number}
  */
 export
-const UnsetFallbackAttributeResult_undefinedError: UnsetFallbackAttributeResult = 127; /* LONG_NAMED_INTEGER_VALUE */
+const UnsetFallbackAttributeResult_undefinedError: 127 = 127 satisfies UnsetFallbackAttributeResult; /* LONG_NAMED_INTEGER_VALUE */
 
 /**
  * @summary UnsetFallbackAttributeResult_undefinedError
@@ -132,7 +132,7 @@ const UnsetFallbackAttributeResult_undefinedError: UnsetFallbackAttributeResult 
  * @type {number}
  */
 export
-const undefinedError: UnsetFallbackAttributeResult = UnsetFallbackAttributeResult_undefinedError; /* SHORT_NAMED_INTEGER_VALUE */
+const undefinedError: 127 = UnsetFallbackAttributeResult_undefinedError; /* SHORT_NAMED_INTEGER_VALUE */
 export const _decode_UnsetFallbackAttributeResult: $.ASN1Decoder<UnsetFallbackAttributeResult> = $._decodeInteger;
 export const _encode_UnsetFallbackAttributeResult: $.ASN1Encoder<UnsetFallbackAttributeResult> = $._encodeInteger;
 

@@ -1,6 +1,6 @@
 /* eslint-disable */
 import {
-    ENUMERATED
+    type ENUMERATED
 } from "@wildboar/asn1";
 import * as $ from "@wildboar/asn1/functional";
 
@@ -139,7 +139,7 @@ type FrameType = _enum_for_FrameType | ENUMERATED;
  * @type {number}
  */
 export
-const FrameType_ipFrame: FrameType = 0; /* LONG_NAMED_ENUMERATED_VALUE */
+const FrameType_ipFrame: _enum_for_FrameType.ipFrame = _enum_for_FrameType.ipFrame; /* LONG_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary ipFrame
@@ -153,7 +153,7 @@ const FrameType_ipFrame: FrameType = 0; /* LONG_NAMED_ENUMERATED_VALUE */
  * @type {number}
  */
 export
-const ipFrame: FrameType = FrameType_ipFrame; /* SHORT_NAMED_ENUMERATED_VALUE */
+const ipFrame: _enum_for_FrameType.ipFrame = FrameType_ipFrame; /* SHORT_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary FrameType_udpFrame
@@ -167,7 +167,7 @@ const ipFrame: FrameType = FrameType_ipFrame; /* SHORT_NAMED_ENUMERATED_VALUE */
  * @type {number}
  */
 export
-const FrameType_udpFrame: FrameType = 1; /* LONG_NAMED_ENUMERATED_VALUE */
+const FrameType_udpFrame: _enum_for_FrameType.udpFrame = _enum_for_FrameType.udpFrame; /* LONG_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary udpFrame
@@ -181,7 +181,7 @@ const FrameType_udpFrame: FrameType = 1; /* LONG_NAMED_ENUMERATED_VALUE */
  * @type {number}
  */
 export
-const udpFrame: FrameType = FrameType_udpFrame; /* SHORT_NAMED_ENUMERATED_VALUE */
+const udpFrame: _enum_for_FrameType.udpFrame = FrameType_udpFrame; /* SHORT_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary FrameType_rtpFrame
@@ -195,7 +195,7 @@ const udpFrame: FrameType = FrameType_udpFrame; /* SHORT_NAMED_ENUMERATED_VALUE 
  * @type {number}
  */
 export
-const FrameType_rtpFrame: FrameType = 2; /* LONG_NAMED_ENUMERATED_VALUE */
+const FrameType_rtpFrame: _enum_for_FrameType.rtpFrame = _enum_for_FrameType.rtpFrame; /* LONG_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary rtpFrame
@@ -209,7 +209,7 @@ const FrameType_rtpFrame: FrameType = 2; /* LONG_NAMED_ENUMERATED_VALUE */
  * @type {number}
  */
 export
-const rtpFrame: FrameType = FrameType_rtpFrame; /* SHORT_NAMED_ENUMERATED_VALUE */
+const rtpFrame: _enum_for_FrameType.rtpFrame = FrameType_rtpFrame; /* SHORT_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary FrameType_audioFrame
@@ -224,7 +224,7 @@ const rtpFrame: FrameType = FrameType_rtpFrame; /* SHORT_NAMED_ENUMERATED_VALUE 
  * @type {number}
  */
 export
-const FrameType_audioFrame: FrameType = 3; /* LONG_NAMED_ENUMERATED_VALUE */
+const FrameType_audioFrame: _enum_for_FrameType.audioFrame = _enum_for_FrameType.audioFrame; /* LONG_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary audioFrame
@@ -239,7 +239,7 @@ const FrameType_audioFrame: FrameType = 3; /* LONG_NAMED_ENUMERATED_VALUE */
  * @type {number}
  */
 export
-const audioFrame: FrameType = FrameType_audioFrame; /* SHORT_NAMED_ENUMERATED_VALUE */
+const audioFrame: _enum_for_FrameType.audioFrame = FrameType_audioFrame; /* SHORT_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary FrameType_tcpFrame
@@ -253,7 +253,7 @@ const audioFrame: FrameType = FrameType_audioFrame; /* SHORT_NAMED_ENUMERATED_VA
  * @type {number}
  */
 export
-const FrameType_tcpFrame: FrameType = 4; /* LONG_NAMED_ENUMERATED_VALUE */
+const FrameType_tcpFrame: _enum_for_FrameType.tcpFrame = _enum_for_FrameType.tcpFrame; /* LONG_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary tcpFrame
@@ -267,7 +267,7 @@ const FrameType_tcpFrame: FrameType = 4; /* LONG_NAMED_ENUMERATED_VALUE */
  * @type {number}
  */
 export
-const tcpFrame: FrameType = FrameType_tcpFrame; /* SHORT_NAMED_ENUMERATED_VALUE */
+const tcpFrame: _enum_for_FrameType.tcpFrame = FrameType_tcpFrame; /* SHORT_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary FrameType_artificialRtpFrame
@@ -284,7 +284,7 @@ const tcpFrame: FrameType = FrameType_tcpFrame; /* SHORT_NAMED_ENUMERATED_VALUE 
  * @type {number}
  */
 export
-const FrameType_artificialRtpFrame: FrameType = 5; /* LONG_NAMED_ENUMERATED_VALUE */
+const FrameType_artificialRtpFrame: _enum_for_FrameType.artificialRtpFrame = _enum_for_FrameType.artificialRtpFrame; /* LONG_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary artificialRtpFrame
@@ -301,7 +301,7 @@ const FrameType_artificialRtpFrame: FrameType = 5; /* LONG_NAMED_ENUMERATED_VALU
  * @type {number}
  */
 export
-const artificialRtpFrame: FrameType = FrameType_artificialRtpFrame; /* SHORT_NAMED_ENUMERATED_VALUE */
+const artificialRtpFrame: _enum_for_FrameType.artificialRtpFrame = FrameType_artificialRtpFrame; /* SHORT_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary FrameType_udptlFrame
@@ -317,7 +317,7 @@ const artificialRtpFrame: FrameType = FrameType_artificialRtpFrame; /* SHORT_NAM
  * @type {number}
  */
 export
-const FrameType_udptlFrame: FrameType = 6; /* LONG_NAMED_ENUMERATED_VALUE */
+const FrameType_udptlFrame: _enum_for_FrameType.udptlFrame = _enum_for_FrameType.udptlFrame; /* LONG_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary udptlFrame
@@ -333,7 +333,7 @@ const FrameType_udptlFrame: FrameType = 6; /* LONG_NAMED_ENUMERATED_VALUE */
  * @type {number}
  */
 export
-const udptlFrame: FrameType = FrameType_udptlFrame; /* SHORT_NAMED_ENUMERATED_VALUE */
+const udptlFrame: _enum_for_FrameType.udptlFrame = FrameType_udptlFrame; /* SHORT_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary FrameType_msrpFrame
@@ -349,7 +349,7 @@ const udptlFrame: FrameType = FrameType_udptlFrame; /* SHORT_NAMED_ENUMERATED_VA
  * @type {number}
  */
 export
-const FrameType_msrpFrame: FrameType = 7; /* LONG_NAMED_ENUMERATED_VALUE */
+const FrameType_msrpFrame: _enum_for_FrameType.msrpFrame = _enum_for_FrameType.msrpFrame; /* LONG_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary msrpFrame
@@ -365,7 +365,7 @@ const FrameType_msrpFrame: FrameType = 7; /* LONG_NAMED_ENUMERATED_VALUE */
  * @type {number}
  */
 export
-const msrpFrame: FrameType = FrameType_msrpFrame; /* SHORT_NAMED_ENUMERATED_VALUE */
+const msrpFrame: _enum_for_FrameType.msrpFrame = FrameType_msrpFrame; /* SHORT_NAMED_ENUMERATED_VALUE */
 export const _decode_FrameType: $.ASN1Decoder<FrameType> = $._decodeEnumerated;
 export const _encode_FrameType: $.ASN1Encoder<FrameType> = $._encodeEnumerated;
 

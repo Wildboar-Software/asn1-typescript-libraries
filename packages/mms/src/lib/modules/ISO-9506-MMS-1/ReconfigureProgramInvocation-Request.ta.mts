@@ -1,7 +1,7 @@
 /* eslint-disable */
 import {
-    OPTIONAL,
-    ASN1Element as _Element,
+    type OPTIONAL,
+    type ASN1Element as _Element,
     ASN1TagClass as _TagClass,
     ASN1Construction as _Construction,
     ASN1UniversalType as _UniversalType,
@@ -11,7 +11,7 @@ import {
     ASN1ConstructionError as _ConstructionError,
 } from "@wildboar/asn1";
 import * as $ from "@wildboar/asn1/functional";
-import { Identifier, _decode_Identifier, _encode_Identifier } from "../ISO-9506-MMS-1/Identifier.ta.mjs";
+import { type Identifier, _decode_Identifier, _encode_Identifier } from "../ISO-9506-MMS-1/Identifier.ta.mjs";
 
 
 /**
@@ -37,52 +37,62 @@ import { Identifier, _decode_Identifier, _encode_Identifier } from "../ISO-9506-
  */
 export
 class ReconfigureProgramInvocation_Request {
+    /**
+     * @summary `oldProgramInvocationName`.
+     * @description
+     *
+     * Existing PI to reconfigure; must be `running`. ISO 9506-1:2003
+     * §12.12.1.1.1.
+     *
+     * @public
+     * @readonly
+     */
+    public readonly oldProgramInvocationName: Identifier;
+    /**
+     * @summary `newProgramInvocationName`.
+     * @description
+     *
+     * If present, new `&name`; must not already be in use. ISO 9506-1:2003
+     * §12.12.1.1.2.
+     *
+     * @public
+     * @readonly
+     */
+    public readonly newProgramInvocationName: OPTIONAL<Identifier>;
+    /**
+     * @summary `domainsToAdd`.
+     * @description
+     *
+     * Zero or more Domains to add to `&Domains`. ISO 9506-1:2003
+     * §12.12.1.1.3.
+     *
+     * @public
+     * @readonly
+     */
+    public readonly domainsToAdd: Identifier[];
+    /**
+     * @summary `domainsToRemove`.
+     * @description
+     *
+     * Zero or more Domains to remove from `&Domains`. ISO 9506-1:2003
+     * §12.12.1.1.4.
+     *
+     * @public
+     * @readonly
+     */
+    public readonly domainsToRemove: Identifier[];
+
     constructor (
-        /**
-         * @summary `oldProgramInvocationName`.
-         * @description
-         *
-         * Existing PI to reconfigure; must be `running`. ISO 9506-1:2003
-         * §12.12.1.1.1.
-         *
-         * @public
-         * @readonly
-         */
-        readonly oldProgramInvocationName: Identifier,
-        /**
-         * @summary `newProgramInvocationName`.
-         * @description
-         *
-         * If present, new `&name`; must not already be in use. ISO 9506-1:2003
-         * §12.12.1.1.2.
-         *
-         * @public
-         * @readonly
-         */
-        readonly newProgramInvocationName: OPTIONAL<Identifier>,
-        /**
-         * @summary `domainsToAdd`.
-         * @description
-         *
-         * Zero or more Domains to add to `&Domains`. ISO 9506-1:2003
-         * §12.12.1.1.3.
-         *
-         * @public
-         * @readonly
-         */
-        readonly domainsToAdd: Identifier[],
-        /**
-         * @summary `domainsToRemove`.
-         * @description
-         *
-         * Zero or more Domains to remove from `&Domains`. ISO 9506-1:2003
-         * §12.12.1.1.4.
-         *
-         * @public
-         * @readonly
-         */
-        readonly domainsToRemove: Identifier[]
-    ) {}
+        oldProgramInvocationName: Identifier,
+        newProgramInvocationName: OPTIONAL<Identifier>,
+        domainsToAdd: Identifier[],
+        domainsToRemove: Identifier[]
+    ) {
+        this.oldProgramInvocationName = oldProgramInvocationName;
+        this.newProgramInvocationName = newProgramInvocationName;
+        this.domainsToAdd = domainsToAdd;
+        this.domainsToRemove = domainsToRemove;
+    }
 
     /**
      * @summary Restructures an object into a ReconfigureProgramInvocation_Request

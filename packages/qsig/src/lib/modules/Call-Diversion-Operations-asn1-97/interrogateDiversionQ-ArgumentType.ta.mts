@@ -1,14 +1,14 @@
 /* eslint-disable */
 import {
-    OPTIONAL,
-    ASN1Element as _Element,
+    type OPTIONAL,
+    type ASN1Element as _Element,
     ASN1TagClass as _TagClass
 } from "@wildboar/asn1";
 import * as $ from "@wildboar/asn1/functional";
 import { Procedure, _decode_Procedure, _encode_Procedure, _enum_for_Procedure } from "../Call-Diversion-Operations-asn1-97/Procedure.ta.mjs";
 import { BasicService, _decode_BasicService, _encode_BasicService, _enum_for_BasicService, allServices /* IMPORTED_SHORT_ENUMERATION_ITEM */ } from "../Call-Diversion-Operations-asn1-97/BasicService.ta.mjs";
-import { PartyNumber, _decode_PartyNumber, _encode_PartyNumber } from "../Addressing-Data-Elements-asn1-97/PartyNumber.ta.mjs";
-import { _decode_interrogateDiversionQ_ArgumentType_extension, _encode_interrogateDiversionQ_ArgumentType_extension, interrogateDiversionQ_ArgumentType_extension } from "../Call-Diversion-Operations-asn1-97/interrogateDiversionQ-ArgumentType-extension.ta.mjs";
+import { type PartyNumber, _decode_PartyNumber, _encode_PartyNumber } from "../Addressing-Data-Elements-asn1-97/PartyNumber.ta.mjs";
+import { _decode_interrogateDiversionQ_ArgumentType_extension, _encode_interrogateDiversionQ_ArgumentType_extension, type interrogateDiversionQ_ArgumentType_extension } from "../Call-Diversion-Operations-asn1-97/interrogateDiversionQ-ArgumentType-extension.ta.mjs";
 
 /**
  * @summary interrogateDiversionQ_ArgumentType
@@ -129,19 +129,19 @@ class interrogateDiversionQ_ArgumentType {
      * @static
      * @method
      */
-    public static get _default_value_for_basicService () { return allServices; }        /**
+    public static get _default_value_for_basicService (): _enum_for_BasicService.allServices { return allServices; }        /**
          * @summary The enum used as the type of the component `procedure`
          * @public
          * @static
          */
 
-    public static _enum_for_procedure = _enum_for_Procedure;        /**
+    public static _enum_for_procedure: typeof _enum_for_Procedure = _enum_for_Procedure;        /**
          * @summary The enum used as the type of the component `basicService`
          * @public
          * @static
          */
 
-    public static _enum_for_basicService = _enum_for_BasicService;
+    public static _enum_for_basicService: typeof _enum_for_BasicService = _enum_for_BasicService;
 }
 
 /**

@@ -1,7 +1,7 @@
 /* eslint-disable */
 import {
-    OCTET_STRING,
-    ASN1Element as _Element,
+    type OCTET_STRING,
+    type ASN1Element as _Element,
     ASN1TagClass as _TagClass,
     ASN1Construction as _Construction,
     ASN1UniversalType as _UniversalType,
@@ -28,12 +28,12 @@ export type BiometricProcessSecurity = OCTET_STRING; // OctetStringType
 
 
 
-export const _decode_BiometricProcessSecurity = $._decodeOctetString;
+export const _decode_BiometricProcessSecurity: $.ASN1Decoder<OCTET_STRING> = $._decodeOctetString;
 
 
 
 
-export const _encode_BiometricProcessSecurity = $._encodeOctetString;
+export const _encode_BiometricProcessSecurity: $.ASN1Encoder<OCTET_STRING> = $._encodeOctetString;
 
 
 /* eslint-enable */

@@ -1,17 +1,17 @@
 /* eslint-disable */
 import {
     ASN1ConstructionError as _ConstructionError,
-    ASN1Element as _Element,
+    type ASN1Element as _Element,
     ASN1TagClass as _TagClass,
 } from "@wildboar/asn1";
 import * as $ from "@wildboar/asn1/functional";
 import {
-    AccessMode,
+    type AccessMode,
     _decode_AccessMode,
     _encode_AccessMode,
 } from "../PKCS-15/AccessMode.ta.mjs";
 import {
-    SecurityCondition,
+    type SecurityCondition,
     _decode_SecurityCondition,
     _encode_SecurityCondition,
 } from "../PKCS-15/SecurityCondition.ta.mjs";
@@ -32,26 +32,34 @@ import {
  *
  */
 export class AccessControlRule {
+    /**
+     * @summary `accessMode`.
+     * @public
+     * @readonly
+     */
+    public readonly accessMode: AccessMode;
+    /**
+     * @summary `securityCondition`.
+     * @public
+     * @readonly
+     */
+    public readonly securityCondition: SecurityCondition;
+    /**
+     * @summary Extensions that are not recognized.
+     * @public
+     * @readonly
+     */
+    public readonly _unrecognizedExtensionsList: _Element[];
+
     constructor(
-        /**
-         * @summary `accessMode`.
-         * @public
-         * @readonly
-         */
-        readonly accessMode: AccessMode,
-        /**
-         * @summary `securityCondition`.
-         * @public
-         * @readonly
-         */
-        readonly securityCondition: SecurityCondition,
-        /**
-         * @summary Extensions that are not recognized.
-         * @public
-         * @readonly
-         */
-        readonly _unrecognizedExtensionsList: _Element[] = []
-    ) {}
+        accessMode: AccessMode,
+        securityCondition: SecurityCondition,
+        _unrecognizedExtensionsList: _Element[] = []
+    ) {
+        this.accessMode = accessMode;
+        this.securityCondition = securityCondition;
+        this._unrecognizedExtensionsList = _unrecognizedExtensionsList;
+    }
 
     /**
      * @summary Restructures an object into a AccessControlRule

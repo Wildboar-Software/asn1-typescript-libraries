@@ -1,8 +1,8 @@
 /* eslint-disable */
 import {
-    OCTET_STRING,
-    OPTIONAL,
-    ASN1Element as _Element,
+    type OCTET_STRING,
+    type OPTIONAL,
+    type ASN1Element as _Element,
     ASN1TagClass as _TagClass
 } from "@wildboar/asn1";
 import * as $ from "@wildboar/asn1/functional";
@@ -23,9 +23,9 @@ import { Location, _decode_Location, _encode_Location } from "../UmtsHI2Operatio
  * ```asn1
  * PANI-Location ::= SEQUENCE
  * {
- *     raw-Location     [1] OCTET STRING    OPTIONAL,
+ *     raw-Location     [1] OCTET STRING    type OPTIONAL,
  *     -- raw copy of the location string from the P-Access-Network-Info header
- *     location          [2] Location         OPTIONAL,
+ *     location          [2] Location         type OPTIONAL,
  * 
  *     ...
  * }

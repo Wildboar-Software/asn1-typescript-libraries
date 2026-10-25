@@ -1,5 +1,5 @@
 /* eslint-disable */
-import { ASN1Element as _Element, INTEGER } from "@wildboar/asn1";
+import { ASN1Element as _Element, type INTEGER } from "@wildboar/asn1";
 import * as $ from "@wildboar/asn1/functional";
 
 /**
@@ -19,42 +19,42 @@ export type Associate_source_diagnostic_acse_service_provider = INTEGER;
  * @constant
  * @type {number}
  */
-export const Associate_source_diagnostic_acse_service_provider_null_: Associate_source_diagnostic_acse_service_provider = 0; /* LONG_NAMED_INTEGER_VALUE */
+export const Associate_source_diagnostic_acse_service_provider_null_: 0 = 0 satisfies Associate_source_diagnostic_acse_service_provider; /* LONG_NAMED_INTEGER_VALUE */
 
 /**
  * @summary Associate_source_diagnostic_acse_service_provider_null_
  * @constant
  * @type {number}
  */
-export const null_: Associate_source_diagnostic_acse_service_provider = Associate_source_diagnostic_acse_service_provider_null_; /* SHORT_NAMED_INTEGER_VALUE */
+export const null_: 0 = Associate_source_diagnostic_acse_service_provider_null_; /* SHORT_NAMED_INTEGER_VALUE */
 
 /**
  * @summary Associate_source_diagnostic_acse_service_provider_no_reason_given
  * @constant
  * @type {number}
  */
-export const Associate_source_diagnostic_acse_service_provider_no_reason_given: Associate_source_diagnostic_acse_service_provider = 1; /* LONG_NAMED_INTEGER_VALUE */
+export const Associate_source_diagnostic_acse_service_provider_no_reason_given: 1 = 1 satisfies Associate_source_diagnostic_acse_service_provider; /* LONG_NAMED_INTEGER_VALUE */
 
 /**
  * @summary Associate_source_diagnostic_acse_service_provider_no_reason_given
  * @constant
  * @type {number}
  */
-export const no_reason_given: Associate_source_diagnostic_acse_service_provider = Associate_source_diagnostic_acse_service_provider_no_reason_given; /* SHORT_NAMED_INTEGER_VALUE */
+export const no_reason_given: 1 = Associate_source_diagnostic_acse_service_provider_no_reason_given; /* SHORT_NAMED_INTEGER_VALUE */
 
 /**
  * @summary Associate_source_diagnostic_acse_service_provider_no_common_acse_version
  * @constant
  * @type {number}
  */
-export const Associate_source_diagnostic_acse_service_provider_no_common_acse_version: Associate_source_diagnostic_acse_service_provider = 2; /* LONG_NAMED_INTEGER_VALUE */
+export const Associate_source_diagnostic_acse_service_provider_no_common_acse_version: 2 = 2 satisfies Associate_source_diagnostic_acse_service_provider; /* LONG_NAMED_INTEGER_VALUE */
 
 /**
  * @summary Associate_source_diagnostic_acse_service_provider_no_common_acse_version
  * @constant
  * @type {number}
  */
-export const no_common_acse_version: Associate_source_diagnostic_acse_service_provider = Associate_source_diagnostic_acse_service_provider_no_common_acse_version; /* SHORT_NAMED_INTEGER_VALUE */
+export const no_common_acse_version: 2 = Associate_source_diagnostic_acse_service_provider_no_common_acse_version; /* SHORT_NAMED_INTEGER_VALUE */
 
 let _cached_decoder_for_Associate_source_diagnostic_acse_service_provider: $.ASN1Decoder<Associate_source_diagnostic_acse_service_provider> | null = null;
 

@@ -1,6 +1,6 @@
 /* eslint-disable */
 import {
-    ENUMERATED
+    type ENUMERATED
 } from "@wildboar/asn1";
 import * as $ from "@wildboar/asn1/functional";
 
@@ -278,7 +278,7 @@ type TETRA_LI_Event = _enum_for_TETRA_LI_Event | ENUMERATED;
  * @type {number}
  */
 export
-const TETRA_LI_Event_callSetupMobileOriginating: TETRA_LI_Event = 1; /* LONG_NAMED_ENUMERATED_VALUE */
+const TETRA_LI_Event_callSetupMobileOriginating: _enum_for_TETRA_LI_Event.callSetupMobileOriginating = _enum_for_TETRA_LI_Event.callSetupMobileOriginating; /* LONG_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary callSetupMobileOriginating
@@ -299,7 +299,7 @@ const TETRA_LI_Event_callSetupMobileOriginating: TETRA_LI_Event = 1; /* LONG_NAM
  * @type {number}
  */
 export
-const callSetupMobileOriginating: TETRA_LI_Event = TETRA_LI_Event_callSetupMobileOriginating; /* SHORT_NAMED_ENUMERATED_VALUE */
+const callSetupMobileOriginating: _enum_for_TETRA_LI_Event.callSetupMobileOriginating = TETRA_LI_Event_callSetupMobileOriginating; /* SHORT_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary TETRA_LI_Event_callSetupMobileTerminating
@@ -317,7 +317,7 @@ const callSetupMobileOriginating: TETRA_LI_Event = TETRA_LI_Event_callSetupMobil
  * @type {number}
  */
 export
-const TETRA_LI_Event_callSetupMobileTerminating: TETRA_LI_Event = 2; /* LONG_NAMED_ENUMERATED_VALUE */
+const TETRA_LI_Event_callSetupMobileTerminating: _enum_for_TETRA_LI_Event.callSetupMobileTerminating = _enum_for_TETRA_LI_Event.callSetupMobileTerminating; /* LONG_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary callSetupMobileTerminating
@@ -335,7 +335,7 @@ const TETRA_LI_Event_callSetupMobileTerminating: TETRA_LI_Event = 2; /* LONG_NAM
  * @type {number}
  */
 export
-const callSetupMobileTerminating: TETRA_LI_Event = TETRA_LI_Event_callSetupMobileTerminating; /* SHORT_NAMED_ENUMERATED_VALUE */
+const callSetupMobileTerminating: _enum_for_TETRA_LI_Event.callSetupMobileTerminating = TETRA_LI_Event_callSetupMobileTerminating; /* SHORT_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary TETRA_LI_Event_ringing
@@ -352,7 +352,7 @@ const callSetupMobileTerminating: TETRA_LI_Event = TETRA_LI_Event_callSetupMobil
  * @type {number}
  */
 export
-const TETRA_LI_Event_ringing: TETRA_LI_Event = 3; /* LONG_NAMED_ENUMERATED_VALUE */
+const TETRA_LI_Event_ringing: _enum_for_TETRA_LI_Event.ringing = _enum_for_TETRA_LI_Event.ringing; /* LONG_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary ringing
@@ -369,7 +369,7 @@ const TETRA_LI_Event_ringing: TETRA_LI_Event = 3; /* LONG_NAMED_ENUMERATED_VALUE
  * @type {number}
  */
 export
-const ringing: TETRA_LI_Event = TETRA_LI_Event_ringing; /* SHORT_NAMED_ENUMERATED_VALUE */
+const ringing: _enum_for_TETRA_LI_Event.ringing = TETRA_LI_Event_ringing; /* SHORT_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary TETRA_LI_Event_queueing
@@ -386,7 +386,7 @@ const ringing: TETRA_LI_Event = TETRA_LI_Event_ringing; /* SHORT_NAMED_ENUMERATE
  * @type {number}
  */
 export
-const TETRA_LI_Event_queueing: TETRA_LI_Event = 4; /* LONG_NAMED_ENUMERATED_VALUE */
+const TETRA_LI_Event_queueing: _enum_for_TETRA_LI_Event.queueing = _enum_for_TETRA_LI_Event.queueing; /* LONG_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary queueing
@@ -403,7 +403,7 @@ const TETRA_LI_Event_queueing: TETRA_LI_Event = 4; /* LONG_NAMED_ENUMERATED_VALU
  * @type {number}
  */
 export
-const queueing: TETRA_LI_Event = TETRA_LI_Event_queueing; /* SHORT_NAMED_ENUMERATED_VALUE */
+const queueing: _enum_for_TETRA_LI_Event.queueing = TETRA_LI_Event_queueing; /* SHORT_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary TETRA_LI_Event_connected
@@ -420,7 +420,7 @@ const queueing: TETRA_LI_Event = TETRA_LI_Event_queueing; /* SHORT_NAMED_ENUMERA
  * @type {number}
  */
 export
-const TETRA_LI_Event_connected: TETRA_LI_Event = 5; /* LONG_NAMED_ENUMERATED_VALUE */
+const TETRA_LI_Event_connected: _enum_for_TETRA_LI_Event.connected = _enum_for_TETRA_LI_Event.connected; /* LONG_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary connected
@@ -437,7 +437,7 @@ const TETRA_LI_Event_connected: TETRA_LI_Event = 5; /* LONG_NAMED_ENUMERATED_VAL
  * @type {number}
  */
 export
-const connected: TETRA_LI_Event = TETRA_LI_Event_connected; /* SHORT_NAMED_ENUMERATED_VALUE */
+const connected: _enum_for_TETRA_LI_Event.connected = TETRA_LI_Event_connected; /* SHORT_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary TETRA_LI_Event_handover
@@ -455,7 +455,7 @@ const connected: TETRA_LI_Event = TETRA_LI_Event_connected; /* SHORT_NAMED_ENUME
  * @type {number}
  */
 export
-const TETRA_LI_Event_handover: TETRA_LI_Event = 6; /* LONG_NAMED_ENUMERATED_VALUE */
+const TETRA_LI_Event_handover: _enum_for_TETRA_LI_Event.handover = _enum_for_TETRA_LI_Event.handover; /* LONG_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary handover
@@ -473,7 +473,7 @@ const TETRA_LI_Event_handover: TETRA_LI_Event = 6; /* LONG_NAMED_ENUMERATED_VALU
  * @type {number}
  */
 export
-const handover: TETRA_LI_Event = TETRA_LI_Event_handover; /* SHORT_NAMED_ENUMERATED_VALUE */
+const handover: _enum_for_TETRA_LI_Event.handover = TETRA_LI_Event_handover; /* SHORT_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary TETRA_LI_Event_callRelease
@@ -494,7 +494,7 @@ const handover: TETRA_LI_Event = TETRA_LI_Event_handover; /* SHORT_NAMED_ENUMERA
  * @type {number}
  */
 export
-const TETRA_LI_Event_callRelease: TETRA_LI_Event = 7; /* LONG_NAMED_ENUMERATED_VALUE */
+const TETRA_LI_Event_callRelease: _enum_for_TETRA_LI_Event.callRelease = _enum_for_TETRA_LI_Event.callRelease; /* LONG_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary callRelease
@@ -515,7 +515,7 @@ const TETRA_LI_Event_callRelease: TETRA_LI_Event = 7; /* LONG_NAMED_ENUMERATED_V
  * @type {number}
  */
 export
-const callRelease: TETRA_LI_Event = TETRA_LI_Event_callRelease; /* SHORT_NAMED_ENUMERATED_VALUE */
+const callRelease: _enum_for_TETRA_LI_Event.callRelease = TETRA_LI_Event_callRelease; /* SHORT_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary TETRA_LI_Event_locationUpdate
@@ -532,7 +532,7 @@ const callRelease: TETRA_LI_Event = TETRA_LI_Event_callRelease; /* SHORT_NAMED_E
  * @type {number}
  */
 export
-const TETRA_LI_Event_locationUpdate: TETRA_LI_Event = 8; /* LONG_NAMED_ENUMERATED_VALUE */
+const TETRA_LI_Event_locationUpdate: _enum_for_TETRA_LI_Event.locationUpdate = _enum_for_TETRA_LI_Event.locationUpdate; /* LONG_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary locationUpdate
@@ -549,7 +549,7 @@ const TETRA_LI_Event_locationUpdate: TETRA_LI_Event = 8; /* LONG_NAMED_ENUMERATE
  * @type {number}
  */
 export
-const locationUpdate: TETRA_LI_Event = TETRA_LI_Event_locationUpdate; /* SHORT_NAMED_ENUMERATED_VALUE */
+const locationUpdate: _enum_for_TETRA_LI_Event.locationUpdate = TETRA_LI_Event_locationUpdate; /* SHORT_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary TETRA_LI_Event_sDSMobileOriginating
@@ -567,7 +567,7 @@ const locationUpdate: TETRA_LI_Event = TETRA_LI_Event_locationUpdate; /* SHORT_N
  * @type {number}
  */
 export
-const TETRA_LI_Event_sDSMobileOriginating: TETRA_LI_Event = 9; /* LONG_NAMED_ENUMERATED_VALUE */
+const TETRA_LI_Event_sDSMobileOriginating: _enum_for_TETRA_LI_Event.sDSMobileOriginating = _enum_for_TETRA_LI_Event.sDSMobileOriginating; /* LONG_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary sDSMobileOriginating
@@ -585,7 +585,7 @@ const TETRA_LI_Event_sDSMobileOriginating: TETRA_LI_Event = 9; /* LONG_NAMED_ENU
  * @type {number}
  */
 export
-const sDSMobileOriginating: TETRA_LI_Event = TETRA_LI_Event_sDSMobileOriginating; /* SHORT_NAMED_ENUMERATED_VALUE */
+const sDSMobileOriginating: _enum_for_TETRA_LI_Event.sDSMobileOriginating = TETRA_LI_Event_sDSMobileOriginating; /* SHORT_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary TETRA_LI_Event_sDSMobileTerminating
@@ -602,7 +602,7 @@ const sDSMobileOriginating: TETRA_LI_Event = TETRA_LI_Event_sDSMobileOriginating
  * @type {number}
  */
 export
-const TETRA_LI_Event_sDSMobileTerminating: TETRA_LI_Event = 10; /* LONG_NAMED_ENUMERATED_VALUE */
+const TETRA_LI_Event_sDSMobileTerminating: _enum_for_TETRA_LI_Event.sDSMobileTerminating = _enum_for_TETRA_LI_Event.sDSMobileTerminating; /* LONG_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary sDSMobileTerminating
@@ -619,7 +619,7 @@ const TETRA_LI_Event_sDSMobileTerminating: TETRA_LI_Event = 10; /* LONG_NAMED_EN
  * @type {number}
  */
 export
-const sDSMobileTerminating: TETRA_LI_Event = TETRA_LI_Event_sDSMobileTerminating; /* SHORT_NAMED_ENUMERATED_VALUE */
+const sDSMobileTerminating: _enum_for_TETRA_LI_Event.sDSMobileTerminating = TETRA_LI_Event_sDSMobileTerminating; /* SHORT_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary TETRA_LI_Event_callForward
@@ -638,7 +638,7 @@ const sDSMobileTerminating: TETRA_LI_Event = TETRA_LI_Event_sDSMobileTerminating
  * @type {number}
  */
 export
-const TETRA_LI_Event_callForward: TETRA_LI_Event = 11; /* LONG_NAMED_ENUMERATED_VALUE */
+const TETRA_LI_Event_callForward: _enum_for_TETRA_LI_Event.callForward = _enum_for_TETRA_LI_Event.callForward; /* LONG_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary callForward
@@ -657,7 +657,7 @@ const TETRA_LI_Event_callForward: TETRA_LI_Event = 11; /* LONG_NAMED_ENUMERATED_
  * @type {number}
  */
 export
-const callForward: TETRA_LI_Event = TETRA_LI_Event_callForward; /* SHORT_NAMED_ENUMERATED_VALUE */
+const callForward: _enum_for_TETRA_LI_Event.callForward = TETRA_LI_Event_callForward; /* SHORT_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary TETRA_LI_Event_callHold
@@ -676,7 +676,7 @@ const callForward: TETRA_LI_Event = TETRA_LI_Event_callForward; /* SHORT_NAMED_E
  * @type {number}
  */
 export
-const TETRA_LI_Event_callHold: TETRA_LI_Event = 12; /* LONG_NAMED_ENUMERATED_VALUE */
+const TETRA_LI_Event_callHold: _enum_for_TETRA_LI_Event.callHold = _enum_for_TETRA_LI_Event.callHold; /* LONG_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary callHold
@@ -695,7 +695,7 @@ const TETRA_LI_Event_callHold: TETRA_LI_Event = 12; /* LONG_NAMED_ENUMERATED_VAL
  * @type {number}
  */
 export
-const callHold: TETRA_LI_Event = TETRA_LI_Event_callHold; /* SHORT_NAMED_ENUMERATED_VALUE */
+const callHold: _enum_for_TETRA_LI_Event.callHold = TETRA_LI_Event_callHold; /* SHORT_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary TETRA_LI_Event_groupIndication
@@ -716,7 +716,7 @@ const callHold: TETRA_LI_Event = TETRA_LI_Event_callHold; /* SHORT_NAMED_ENUMERA
  * @type {number}
  */
 export
-const TETRA_LI_Event_groupIndication: TETRA_LI_Event = 13; /* LONG_NAMED_ENUMERATED_VALUE */
+const TETRA_LI_Event_groupIndication: _enum_for_TETRA_LI_Event.groupIndication = _enum_for_TETRA_LI_Event.groupIndication; /* LONG_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary groupIndication
@@ -737,7 +737,7 @@ const TETRA_LI_Event_groupIndication: TETRA_LI_Event = 13; /* LONG_NAMED_ENUMERA
  * @type {number}
  */
 export
-const groupIndication: TETRA_LI_Event = TETRA_LI_Event_groupIndication; /* SHORT_NAMED_ENUMERATED_VALUE */
+const groupIndication: _enum_for_TETRA_LI_Event.groupIndication = TETRA_LI_Event_groupIndication; /* SHORT_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary TETRA_LI_Event_txGranted
@@ -756,7 +756,7 @@ const groupIndication: TETRA_LI_Event = TETRA_LI_Event_groupIndication; /* SHORT
  * @type {number}
  */
 export
-const TETRA_LI_Event_txGranted: TETRA_LI_Event = 14; /* LONG_NAMED_ENUMERATED_VALUE */
+const TETRA_LI_Event_txGranted: _enum_for_TETRA_LI_Event.txGranted = _enum_for_TETRA_LI_Event.txGranted; /* LONG_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary txGranted
@@ -775,7 +775,7 @@ const TETRA_LI_Event_txGranted: TETRA_LI_Event = 14; /* LONG_NAMED_ENUMERATED_VA
  * @type {number}
  */
 export
-const txGranted: TETRA_LI_Event = TETRA_LI_Event_txGranted; /* SHORT_NAMED_ENUMERATED_VALUE */
+const txGranted: _enum_for_TETRA_LI_Event.txGranted = TETRA_LI_Event_txGranted; /* SHORT_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary TETRA_LI_Event_mobileOn
@@ -792,7 +792,7 @@ const txGranted: TETRA_LI_Event = TETRA_LI_Event_txGranted; /* SHORT_NAMED_ENUME
  * @type {number}
  */
 export
-const TETRA_LI_Event_mobileOn: TETRA_LI_Event = 15; /* LONG_NAMED_ENUMERATED_VALUE */
+const TETRA_LI_Event_mobileOn: _enum_for_TETRA_LI_Event.mobileOn = _enum_for_TETRA_LI_Event.mobileOn; /* LONG_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary mobileOn
@@ -809,7 +809,7 @@ const TETRA_LI_Event_mobileOn: TETRA_LI_Event = 15; /* LONG_NAMED_ENUMERATED_VAL
  * @type {number}
  */
 export
-const mobileOn: TETRA_LI_Event = TETRA_LI_Event_mobileOn; /* SHORT_NAMED_ENUMERATED_VALUE */
+const mobileOn: _enum_for_TETRA_LI_Event.mobileOn = TETRA_LI_Event_mobileOn; /* SHORT_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary TETRA_LI_Event_mobileOff
@@ -826,7 +826,7 @@ const mobileOn: TETRA_LI_Event = TETRA_LI_Event_mobileOn; /* SHORT_NAMED_ENUMERA
  * @type {number}
  */
 export
-const TETRA_LI_Event_mobileOff: TETRA_LI_Event = 16; /* LONG_NAMED_ENUMERATED_VALUE */
+const TETRA_LI_Event_mobileOff: _enum_for_TETRA_LI_Event.mobileOff = _enum_for_TETRA_LI_Event.mobileOff; /* LONG_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary mobileOff
@@ -843,7 +843,7 @@ const TETRA_LI_Event_mobileOff: TETRA_LI_Event = 16; /* LONG_NAMED_ENUMERATED_VA
  * @type {number}
  */
 export
-const mobileOff: TETRA_LI_Event = TETRA_LI_Event_mobileOff; /* SHORT_NAMED_ENUMERATED_VALUE */
+const mobileOff: _enum_for_TETRA_LI_Event.mobileOff = TETRA_LI_Event_mobileOff; /* SHORT_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary TETRA_LI_Event_dMO
@@ -861,7 +861,7 @@ const mobileOff: TETRA_LI_Event = TETRA_LI_Event_mobileOff; /* SHORT_NAMED_ENUME
  * @type {number}
  */
 export
-const TETRA_LI_Event_dMO: TETRA_LI_Event = 17; /* LONG_NAMED_ENUMERATED_VALUE */
+const TETRA_LI_Event_dMO: _enum_for_TETRA_LI_Event.dMO = _enum_for_TETRA_LI_Event.dMO; /* LONG_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary dMO
@@ -879,7 +879,7 @@ const TETRA_LI_Event_dMO: TETRA_LI_Event = 17; /* LONG_NAMED_ENUMERATED_VALUE */
  * @type {number}
  */
 export
-const dMO: TETRA_LI_Event = TETRA_LI_Event_dMO; /* SHORT_NAMED_ENUMERATED_VALUE */
+const dMO: _enum_for_TETRA_LI_Event.dMO = TETRA_LI_Event_dMO; /* SHORT_NAMED_ENUMERATED_VALUE */
 export const _decode_TETRA_LI_Event: $.ASN1Decoder<TETRA_LI_Event> = $._decodeEnumerated;
 export const _encode_TETRA_LI_Event: $.ASN1Encoder<TETRA_LI_Event> = $._encodeEnumerated;
 

@@ -2,9 +2,9 @@
 
 import * as $ from "@wildboar/asn1/functional";
 import {
-    OPTIONAL,
-    INTEGER,
-    SEQUENCE,
+    type OPTIONAL,
+    type INTEGER,
+    type SEQUENCE,
     ASN1Element as _Element
 } from "@wildboar/asn1";
 import { CallMediaInfoList_Item, _decode_CallMediaInfoList_Item, _encode_CallMediaInfoList_Item } from "../CSTA-status-reporting/CallMediaInfoList-Item.ta.mjs";
@@ -24,9 +24,9 @@ import { CallMediaInfoList_Item, _decode_CallMediaInfoList_Item, _encode_CallMed
  * ```asn1
  * CallMediaInfoList  ::=  SEQUENCE OF SEQUENCE
  * {     mediaServiceType         [0] IMPLICIT MediaServiceType,
- *     mediaServiceVersion         [1] IMPLICIT INTEGER             OPTIONAL,
- *     mediaServiceInstance         [2] IMPLICIT MediaServiceInstanceID    OPTIONAL,
- *     mediaStreamID             [3] IMPLICIT MediaStreamID         OPTIONAL,
+ *     mediaServiceVersion         [1] IMPLICIT INTEGER             type OPTIONAL,
+ *     mediaServiceInstance         [2] IMPLICIT MediaServiceInstanceID    type OPTIONAL,
+ *     mediaStreamID             [3] IMPLICIT MediaStreamID         type OPTIONAL,
  *     connectionInformation         [4] IMPLICIT ConnectionInformation     OPTIONAL }
  * ```
  */

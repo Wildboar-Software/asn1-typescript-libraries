@@ -1,12 +1,12 @@
 /* eslint-disable */
 import {
-    OPTIONAL,
-    ASN1Element as _Element,
+    type OPTIONAL,
+    type ASN1Element as _Element,
     ASN1TagClass as _TagClass
 } from "@wildboar/asn1";
 import * as $ from "@wildboar/asn1/functional";
-import { CallOutcome, _decode_CallOutcome, _encode_CallOutcome, _enum_for_CallOutcome } from "../MAP-CH-DataTypes/CallOutcome.ta.mjs";
-import { MonitoringMode, _decode_MonitoringMode, _encode_MonitoringMode, _enum_for_MonitoringMode } from "../MAP-CH-DataTypes/MonitoringMode.ta.mjs";
+import { type CallOutcome, _decode_CallOutcome, _encode_CallOutcome, _enum_for_CallOutcome } from "../MAP-CH-DataTypes/CallOutcome.ta.mjs";
+import { type MonitoringMode, _decode_MonitoringMode, _encode_MonitoringMode, _enum_for_MonitoringMode } from "../MAP-CH-DataTypes/MonitoringMode.ta.mjs";
 import { ExtensionContainer, _decode_ExtensionContainer, _encode_ExtensionContainer } from "../MAP-ExtensionDataTypes/ExtensionContainer.ta.mjs";
 
 
@@ -20,9 +20,9 @@ import { ExtensionContainer, _decode_ExtensionContainer, _encode_ExtensionContai
  * 
  * ```asn1
  * CallReportData ::= SEQUENCE{
- *     monitoringMode    [0]    MonitoringMode    OPTIONAL,
- *     callOutcome    [1]    CallOutcome    OPTIONAL,
- *     extensionContainer    [2]    ExtensionContainer    OPTIONAL,
+ *     monitoringMode    [0]    MonitoringMode    type OPTIONAL,
+ *     callOutcome    [1]    CallOutcome    type OPTIONAL,
+ *     extensionContainer    [2]    ExtensionContainer    type OPTIONAL,
  *     ...}
  * ```
  * 
@@ -30,44 +30,54 @@ import { ExtensionContainer, _decode_ExtensionContainer, _encode_ExtensionContai
  */
 export
 class CallReportData {
+    /**
+     * @summary `monitoringMode`.
+     * @description
+     *
+     * a-side or b-side.
+     *
+     * @public
+     * @readonly
+     */
+    public readonly monitoringMode?: OPTIONAL<MonitoringMode>;
+    /**
+     * @summary `callOutcome`.
+     * @description
+     *
+     * success, failure or busy.
+     *
+     * @public
+     * @readonly
+     */
+    public readonly callOutcome?: OPTIONAL<CallOutcome>;
+    /**
+     * @summary `extensionContainer`.
+     * @description
+     *
+     * Private or PCS extensions (3GPP TS 29.002 V19.1.0 clause 17.7.11).
+     *
+     * @public
+     * @readonly
+     */
+    public readonly extensionContainer?: OPTIONAL<ExtensionContainer>;
+    /**
+     * @summary Extensions that are not recognized.
+     * @public
+     * @readonly
+     */
+    public readonly _unrecognizedExtensionsList: _Element[];
+
     constructor (
-        /**
-         * @summary `monitoringMode`.
-         * @description
-         *
-         * a-side or b-side.
-         *
-         * @public
-         * @readonly
-         */
-        readonly monitoringMode?: OPTIONAL<MonitoringMode>,
-        /**
-         * @summary `callOutcome`.
-         * @description
-         *
-         * success, failure or busy.
-         *
-         * @public
-         * @readonly
-         */
-        readonly callOutcome?: OPTIONAL<CallOutcome>,
-        /**
-         * @summary `extensionContainer`.
-         * @description
-         *
-         * Private or PCS extensions (3GPP TS 29.002 V19.1.0 clause 17.7.11).
-         *
-         * @public
-         * @readonly
-         */
-        readonly extensionContainer?: OPTIONAL<ExtensionContainer>,
-        /**
-         * @summary Extensions that are not recognized.
-         * @public
-         * @readonly
-         */
-        readonly _unrecognizedExtensionsList: _Element[] = []
-    ) {}
+        monitoringMode?: OPTIONAL<MonitoringMode>,
+        callOutcome?: OPTIONAL<CallOutcome>,
+        extensionContainer?: OPTIONAL<ExtensionContainer>,
+        _unrecognizedExtensionsList: _Element[] = []
+    ) {
+        this.monitoringMode = monitoringMode;
+        this.callOutcome = callOutcome;
+        this.extensionContainer = extensionContainer;
+        this._unrecognizedExtensionsList = _unrecognizedExtensionsList;
+    }
 
     /**
      * @summary Restructures an object into a CallReportData
@@ -91,13 +101,13 @@ class CallReportData {
          * @static
          */
 
-    public static _enum_for_monitoringMode = _enum_for_MonitoringMode;        /**
+    public static _enum_for_monitoringMode: typeof _enum_for_MonitoringMode = _enum_for_MonitoringMode;        /**
          * @summary The enum used as the type of the component `callOutcome`
          * @public
          * @static
          */
 
-    public static _enum_for_callOutcome = _enum_for_CallOutcome;
+    public static _enum_for_callOutcome: typeof _enum_for_CallOutcome = _enum_for_CallOutcome;
 }
 
 /**

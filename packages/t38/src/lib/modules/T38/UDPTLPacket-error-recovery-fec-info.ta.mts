@@ -1,7 +1,7 @@
 /* eslint-disable */
 import {
-  INTEGER,
-  OCTET_STRING,
+  type INTEGER,
+  type OCTET_STRING,
   ASN1Element as _Element,
   ASN1TagClass as _TagClass,
   ASN1Construction as _Construction,
@@ -46,7 +46,7 @@ export class UDPTLPacket_error_recovery_fec_info {
    * @public
    * @readonly
    */
-  readonly fec_npackets: INTEGER;
+  public readonly fec_npackets: INTEGER;
   /**
    * @summary `fec_data`.
    * @description One octet string per FEC message (`m` is the
@@ -56,7 +56,7 @@ export class UDPTLPacket_error_recovery_fec_info {
    * @public
    * @readonly
    */
-  readonly fec_data: OCTET_STRING[];
+  public readonly fec_data: OCTET_STRING[];
 
   constructor(
     fec_npackets: INTEGER,

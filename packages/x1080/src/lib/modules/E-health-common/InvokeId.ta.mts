@@ -1,7 +1,7 @@
 /* eslint-disable */
 import {
-    INTEGER,
-    ASN1Element as _Element,
+    type INTEGER,
+    type ASN1Element as _Element,
     ASN1TagClass as _TagClass,
     ASN1Construction as _Construction,
     ASN1UniversalType as _UniversalType,
@@ -33,12 +33,12 @@ export type InvokeId = INTEGER;
 
 
 
-export const _decode_InvokeId = $._decodeInteger;
+export const _decode_InvokeId: $.ASN1Decoder<INTEGER> = $._decodeInteger;
 
 
 
 
-export const _encode_InvokeId = $._encodeInteger;
+export const _encode_InvokeId: $.ASN1Encoder<INTEGER> = $._encodeInteger;
 
 
 /* eslint-enable */

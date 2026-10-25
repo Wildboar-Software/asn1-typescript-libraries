@@ -2,14 +2,14 @@
 
 import * as $ from "@wildboar/asn1/functional";
 import {
-    OPTIONAL,
-    BOOLEAN,
-    SEQUENCE,
-    SET,
-    ASN1Element as _Element,
+    type OPTIONAL,
+    type BOOLEAN,
+    type SEQUENCE,
+    type SET,
+    type ASN1Element as _Element,
     ASN1TagClass as _TagClass
 } from "@wildboar/asn1";
-import { SubjectDeviceID, _decode_SubjectDeviceID, _encode_SubjectDeviceID } from "../CSTA-device-identifiers/SubjectDeviceID.ta.mjs";
+import { type SubjectDeviceID, _decode_SubjectDeviceID, _encode_SubjectDeviceID } from "../CSTA-device-identifiers/SubjectDeviceID.ta.mjs";
 
 import { DeviceID, _decode_DeviceID, _encode_DeviceID } from "../CSTA-device-identifiers/DeviceID.ta.mjs";
 
@@ -35,7 +35,7 @@ import { CSTACommonArguments, _decode_CSTACommonArguments, _encode_CSTACommonArg
  * ```asn1
  * MessageWaitingEvent ::= SEQUENCE
  * {    targetDevice            SubjectDeviceID,
- *     deviceForMessage        DeviceID                OPTIONAL,
+ *     deviceForMessage        DeviceID                type OPTIONAL,
  *     messageWaitingOn        BOOLEAN,
  *     extensions            CSTACommonArguments            OPTIONAL }
  * ```
@@ -44,45 +44,55 @@ import { CSTACommonArguments, _decode_CSTACommonArguments, _encode_CSTACommonArg
  */
 export
 class MessageWaitingEvent {
+    /**
+     * @summary `targetDevice`.
+     * @description
+     *
+     * Device whose message-waiting feature changed.
+     * @public
+     * @readonly
+     */
+    public readonly targetDevice: SubjectDeviceID;
+    /**
+     * @summary `deviceForMessage`.
+     * @description
+     *
+     * Device where the message is waiting.
+     * @public
+     * @readonly
+     */
+    public readonly deviceForMessage: OPTIONAL<DeviceID>;
+    /**
+     * @summary `messageWaitingOn`.
+     * @description
+     *
+     * FALSE = off; TRUE = on.
+     * @public
+     * @readonly
+     */
+    public readonly messageWaitingOn: BOOLEAN;
+    /**
+     * @summary `extensions`.
+     * @description
+     *
+     * Optional security (timestamp, sequence, securityInfo) and
+     * privateData.
+     * @public
+     * @readonly
+     */
+    public readonly extensions?: OPTIONAL<CSTACommonArguments>;
+
     constructor (
-        /**
-         * @summary `targetDevice`.
-         * @description
-         *
-         * Device whose message-waiting feature changed.
-         * @public
-         * @readonly
-         */
-        readonly targetDevice: SubjectDeviceID,
-        /**
-         * @summary `deviceForMessage`.
-         * @description
-         *
-         * Device where the message is waiting.
-         * @public
-         * @readonly
-         */
-        readonly deviceForMessage: OPTIONAL<DeviceID>,
-        /**
-         * @summary `messageWaitingOn`.
-         * @description
-         *
-         * FALSE = off; TRUE = on.
-         * @public
-         * @readonly
-         */
-        readonly messageWaitingOn: BOOLEAN,
-        /**
-         * @summary `extensions`.
-         * @description
-         *
-         * Optional security (timestamp, sequence, securityInfo) and
-         * privateData.
-         * @public
-         * @readonly
-         */
-        readonly extensions?: OPTIONAL<CSTACommonArguments>
-    ) {}
+        targetDevice: SubjectDeviceID,
+        deviceForMessage: OPTIONAL<DeviceID>,
+        messageWaitingOn: BOOLEAN,
+        extensions?: OPTIONAL<CSTACommonArguments>
+    ) {
+        this.targetDevice = targetDevice;
+        this.deviceForMessage = deviceForMessage;
+        this.messageWaitingOn = messageWaitingOn;
+        this.extensions = extensions;
+    }
 
     /**
      * @summary Restructures an object into a MessageWaitingEvent

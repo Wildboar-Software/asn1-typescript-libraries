@@ -1,9 +1,9 @@
 /* eslint-disable */
 import {
-    ASN1Element as _Element,
+    type ASN1Element as _Element,
     ASN1TagClass as _TagClass,
-    INTEGER,
-    OPTIONAL,
+    type INTEGER,
+    type OPTIONAL,
 } from "@wildboar/asn1";
 import * as $ from "@wildboar/asn1/functional";
 import {
@@ -37,44 +37,58 @@ import {
  *
  */
 export class RelaxationPolicy {
+    /**
+     * @summary `basic`.
+     * @public
+     * @readonly
+     */
+    public readonly basic?: OPTIONAL<MRMapping>;
+    /**
+     * @summary `tightenings`.
+     * @public
+     * @readonly
+     */
+    public readonly tightenings?: OPTIONAL<MRMapping[]>;
+    /**
+     * @summary `relaxations`.
+     * @public
+     * @readonly
+     */
+    public readonly relaxations?: OPTIONAL<MRMapping[]>;
+    /**
+     * @summary `maximum`.
+     * @public
+     * @readonly
+     */
+    public readonly maximum?: OPTIONAL<INTEGER>;
+    /**
+     * @summary `minimum`.
+     * @public
+     * @readonly
+     */
+    public readonly minimum?: OPTIONAL<INTEGER>;
+    /**
+     * @summary Extensions that are not recognized.
+     * @public
+     * @readonly
+     */
+    public readonly _unrecognizedExtensionsList: _Element[];
+
     constructor(
-        /**
-         * @summary `basic`.
-         * @public
-         * @readonly
-         */
-        readonly basic?: OPTIONAL<MRMapping>,
-        /**
-         * @summary `tightenings`.
-         * @public
-         * @readonly
-         */
-        readonly tightenings?: OPTIONAL<MRMapping[]>,
-        /**
-         * @summary `relaxations`.
-         * @public
-         * @readonly
-         */
-        readonly relaxations?: OPTIONAL<MRMapping[]>,
-        /**
-         * @summary `maximum`.
-         * @public
-         * @readonly
-         */
-        readonly maximum?: OPTIONAL<INTEGER>,
-        /**
-         * @summary `minimum`.
-         * @public
-         * @readonly
-         */
-        readonly minimum?: OPTIONAL<INTEGER>,
-        /**
-         * @summary Extensions that are not recognized.
-         * @public
-         * @readonly
-         */
-        readonly _unrecognizedExtensionsList: _Element[] = []
-    ) {}
+        basic?: OPTIONAL<MRMapping>,
+        tightenings?: OPTIONAL<MRMapping[]>,
+        relaxations?: OPTIONAL<MRMapping[]>,
+        maximum?: OPTIONAL<INTEGER>,
+        minimum?: OPTIONAL<INTEGER>,
+        _unrecognizedExtensionsList: _Element[] = []
+    ) {
+        this.basic = basic;
+        this.tightenings = tightenings;
+        this.relaxations = relaxations;
+        this.maximum = maximum;
+        this.minimum = minimum;
+        this._unrecognizedExtensionsList = _unrecognizedExtensionsList;
+    }
 
     /**
      * @summary Restructures an object into a RelaxationPolicy

@@ -1,9 +1,9 @@
 /* eslint-disable */
 import {
-    ASN1Element as _Element,
+    type ASN1Element as _Element,
     ASN1TagClass as _TagClass,
-    OCTET_STRING,
-    OPTIONAL
+    type OCTET_STRING,
+    type OPTIONAL
 } from "@wildboar/asn1";
 import * as $ from "@wildboar/asn1/functional";
 
@@ -47,7 +47,7 @@ class OperatorId {
      * @public
      * @readonly
      */
-    readonly mccMnc: OCTET_STRING;
+    public readonly mccMnc: OCTET_STRING;
     /**
      * @summary `gid1`.
      * @description
@@ -61,7 +61,7 @@ class OperatorId {
      * @public
      * @readonly
      */
-    readonly gid1?: OPTIONAL<OCTET_STRING>;
+    public readonly gid1?: OPTIONAL<OCTET_STRING>;
     /**
      * @summary `gid2`.
      * @description
@@ -72,7 +72,7 @@ class OperatorId {
      * @public
      * @readonly
      */
-    readonly gid2?: OPTIONAL<OCTET_STRING>;
+    public readonly gid2?: OPTIONAL<OCTET_STRING>;
 
     constructor (
         mccMnc: OCTET_STRING,

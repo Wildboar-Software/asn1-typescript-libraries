@@ -1,12 +1,12 @@
 /* eslint-disable */
 import {
-    ASN1Element as _Element,
+    type ASN1Element as _Element,
     ASN1TagClass as _TagClass,
-    OPTIONAL,
+    type OPTIONAL,
 } from "@wildboar/asn1";
 import * as $ from "@wildboar/asn1/functional";
 import {
-    DisplayText,
+    type DisplayText,
     _decode_DisplayText,
     _encode_DisplayText,
 } from "../PkiPmiExternalDataTypes/DisplayText.ta.mjs";
@@ -29,20 +29,26 @@ import {
  *
  */
 export class UserNotice {
+    /**
+     * @summary `noticeRef`.
+     * @public
+     * @readonly
+     */
+    public readonly noticeRef?: OPTIONAL<NoticeReference>;
+    /**
+     * @summary `explicitText`.
+     * @public
+     * @readonly
+     */
+    public readonly explicitText?: OPTIONAL<DisplayText>;
+
     constructor(
-        /**
-         * @summary `noticeRef`.
-         * @public
-         * @readonly
-         */
-        readonly noticeRef?: OPTIONAL<NoticeReference>,
-        /**
-         * @summary `explicitText`.
-         * @public
-         * @readonly
-         */
-        readonly explicitText?: OPTIONAL<DisplayText>
-    ) {}
+        noticeRef?: OPTIONAL<NoticeReference>,
+        explicitText?: OPTIONAL<DisplayText>
+    ) {
+        this.noticeRef = noticeRef;
+        this.explicitText = explicitText;
+    }
 
     /**
      * @summary Restructures an object into a UserNotice

@@ -1,7 +1,7 @@
 /* eslint-disable */
 import {
-    OPTIONAL,
-    ASN1Element as _Element,
+    type OPTIONAL,
+    type ASN1Element as _Element,
     ASN1TagClass as _TagClass,
     ASN1Construction as _Construction,
     ASN1UniversalType as _UniversalType,
@@ -38,16 +38,16 @@ import { ServiceInteractionIndicatorsTwo, _decode_ServiceInteractionIndicatorsTw
  * ```asn1
  * EstablishTemporaryConnectionArg {PARAMETERS-BOUND : bound} ::= SEQUENCE {
  *     assistingSSPIPRoutingAddress    [0] AssistingSSPIPRoutingAddress {bound},
- *     correlationID            [1] CorrelationID {bound}            OPTIONAL,
- *     scfID                [3] ScfID {bound}                OPTIONAL,
- *     extensions                [4] Extensions {bound}            OPTIONAL,
- *     carrier                [5] Carrier {bound}                OPTIONAL,
- *     serviceInteractionIndicatorsTwo    [6] ServiceInteractionIndicatorsTwo        OPTIONAL,
- *     callSegmentID            [7]    CallSegmentID {bound}            OPTIONAL,
- *     naOliInfo                [50] NAOliInfo                OPTIONAL,
- *     chargeNumber            [51] ChargeNumber {bound}            OPTIONAL,
+ *     correlationID            [1] CorrelationID {bound}            type OPTIONAL,
+ *     scfID                [3] ScfID {bound}                type OPTIONAL,
+ *     extensions                [4] Extensions {bound}            type OPTIONAL,
+ *     carrier                [5] Carrier {bound}                type OPTIONAL,
+ *     serviceInteractionIndicatorsTwo    [6] ServiceInteractionIndicatorsTwo        type OPTIONAL,
+ *     callSegmentID            [7]    CallSegmentID {bound}            type OPTIONAL,
+ *     naOliInfo                [50] NAOliInfo                type OPTIONAL,
+ *     chargeNumber            [51] ChargeNumber {bound}            type OPTIONAL,
  *     ...,
- *     originalCalledPartyID        [52] OriginalCalledPartyID {bound}        OPTIONAL,
+ *     originalCalledPartyID        [52] OriginalCalledPartyID {bound}        type OPTIONAL,
  *     callingPartyNumber            [53] CallingPartyNumber {bound}        OPTIONAL
  *     }
  * ```
@@ -56,143 +56,169 @@ import { ServiceInteractionIndicatorsTwo, _decode_ServiceInteractionIndicatorsTw
  */
 export
 class EstablishTemporaryConnectionArg {
+    /**
+     * @summary `assistingSSPIPRoutingAddress`.
+     * @description
+     *
+     * Destination address of the gsmSRF for the assist procedure. May embed
+     * `correlationID` and `scfID` only if those are not sent as separate
+     * parameters. When connecting across PLMNs without a bilateral
+     * agreement to pass them separately, this address shall contain routing
+     * digits, correlationID, and scfID. (3GPP TS 29.078 V19.0.0 clause
+     * 11.17.1.1).
+     *
+     * @public
+     * @readonly
+     */
+    public readonly assistingSSPIPRoutingAddress: AssistingSSPIPRoutingAddress;
+    /**
+     * @summary `correlationID`.
+     * @description
+     *
+     * Lets gsmSCF associate AssistRequestInstructions from the assisting
+     * gsmSSF or gsmSRF with the initiating gsmSSF's request. Use only if
+     * not embedded in `assistingSSPIPRoutingAddress`. Mapping onto the
+     * signalling system is network-operator defined. (3GPP TS 29.078
+     * V19.0.0 clause 11.17.1.1).
+     *
+     * @public
+     * @readonly
+     */
+    public readonly correlationID?: OPTIONAL<CorrelationID>;
+    /**
+     * @summary `scfID`.
+     * @description
+     *
+     * gsmSCF identifier so the assisting gsmSSF knows where to send
+     * AssistRequestInstructions. Use only if not embedded in
+     * `assistingSSPIPRoutingAddress`. Across an inter-network boundary,
+     * encoding must be understood in both networks; length beyond 10 bytes
+     * requires bilateral agreement. (3GPP TS 29.078 V19.0.0 clause
+     * 11.17.1.1).
+     *
+     * @public
+     * @readonly
+     */
+    public readonly scfID?: OPTIONAL<ScfID>;
+    /**
+     * @summary `extensions`.
+     * @public
+     * @readonly
+     */
+    public readonly extensions?: OPTIONAL<Extensions>;
+    /**
+     * @summary `carrier`.
+     * @description
+     *
+     * Carrier selection field (how the carrier is provided, e.g.
+     * pre-subscribed) followed by carrier ID digits for routing to a
+     * carrier. (3GPP TS 29.078 V19.0.0 clause 11.17.1.1).
+     *
+     * @public
+     * @readonly
+     */
+    public readonly carrier?: OPTIONAL<Carrier>;
+    /**
+     * @summary `serviceInteractionIndicatorsTwo`.
+     * @description
+     *
+     * Controls through-connection to the Calling Party. (3GPP TS 29.078
+     * V19.0.0 clause 11.17.1.1).
+     *
+     * @public
+     * @readonly
+     */
+    public readonly serviceInteractionIndicatorsTwo?: OPTIONAL<ServiceInteractionIndicatorsTwo>;
+    /**
+     * @summary `callSegmentID`.
+     * @description
+     *
+     * Call Segment to which the temporary connection shall be established.
+     * (3GPP TS 29.078 V19.0.0 clause 11.17.1.1).
+     *
+     * @public
+     * @readonly
+     */
+    public readonly callSegmentID?: OPTIONAL<CallSegmentID>;
+    /**
+     * @summary `naOliInfo`.
+     * @description
+     *
+     * Originating line information identifying the charged-party number
+     * type to the carrier. (3GPP TS 29.078 V19.0.0 clause 11.17.1.1).
+     *
+     * @public
+     * @readonly
+     */
+    public readonly naOliInfo?: OPTIONAL<NAOliInfo>;
+    /**
+     * @summary `chargeNumber`.
+     * @description
+     *
+     * Number identifying the entity to be charged; chargeable number for a
+     * North American long-distance carrier (ANSI T1.113-1995). (3GPP TS
+     * 29.078 V19.0.0 clause 11.17.1.1).
+     *
+     * @public
+     * @readonly
+     */
+    public readonly chargeNumber?: OPTIONAL<ChargeNumber>;
+    /**
+     * @summary `originalCalledPartyID`.
+     * @description
+     *
+     * Identifies the original called party. (3GPP TS 29.078 V19.0.0 clause
+     * 11.17.1.1).
+     *
+     * @public
+     * @readonly
+     */
+    public readonly originalCalledPartyID?: OPTIONAL<OriginalCalledPartyID>;
+    /**
+     * @summary `callingPartyNumber`.
+     * @description
+     *
+     * Identifies the calling party. (3GPP TS 29.078 V19.0.0 clause
+     * 11.17.1.1).
+     *
+     * @public
+     * @readonly
+     */
+    public readonly callingPartyNumber?: OPTIONAL<CallingPartyNumber>;
+    /**
+     * @summary Extensions that are not recognized.
+     * @public
+     * @readonly
+     */
+    public readonly _unrecognizedExtensionsList: _Element[];
+
     constructor (
-        /**
-         * @summary `assistingSSPIPRoutingAddress`.
-         * @description
-         *
-         * Destination address of the gsmSRF for the assist procedure. May embed
-         * `correlationID` and `scfID` only if those are not sent as separate
-         * parameters. When connecting across PLMNs without a bilateral
-         * agreement to pass them separately, this address shall contain routing
-         * digits, correlationID, and scfID. (3GPP TS 29.078 V19.0.0 clause
-         * 11.17.1.1).
-         *
-         * @public
-         * @readonly
-         */
-        readonly assistingSSPIPRoutingAddress: AssistingSSPIPRoutingAddress,
-        /**
-         * @summary `correlationID`.
-         * @description
-         *
-         * Lets gsmSCF associate AssistRequestInstructions from the assisting
-         * gsmSSF or gsmSRF with the initiating gsmSSF's request. Use only if
-         * not embedded in `assistingSSPIPRoutingAddress`. Mapping onto the
-         * signalling system is network-operator defined. (3GPP TS 29.078
-         * V19.0.0 clause 11.17.1.1).
-         *
-         * @public
-         * @readonly
-         */
-        readonly correlationID?: OPTIONAL<CorrelationID>,
-        /**
-         * @summary `scfID`.
-         * @description
-         *
-         * gsmSCF identifier so the assisting gsmSSF knows where to send
-         * AssistRequestInstructions. Use only if not embedded in
-         * `assistingSSPIPRoutingAddress`. Across an inter-network boundary,
-         * encoding must be understood in both networks; length beyond 10 bytes
-         * requires bilateral agreement. (3GPP TS 29.078 V19.0.0 clause
-         * 11.17.1.1).
-         *
-         * @public
-         * @readonly
-         */
-        readonly scfID?: OPTIONAL<ScfID>,
-        /**
-         * @summary `extensions`.
-         * @public
-         * @readonly
-         */
-        readonly extensions?: OPTIONAL<Extensions>,
-        /**
-         * @summary `carrier`.
-         * @description
-         *
-         * Carrier selection field (how the carrier is provided, e.g.
-         * pre-subscribed) followed by carrier ID digits for routing to a
-         * carrier. (3GPP TS 29.078 V19.0.0 clause 11.17.1.1).
-         *
-         * @public
-         * @readonly
-         */
-        readonly carrier?: OPTIONAL<Carrier>,
-        /**
-         * @summary `serviceInteractionIndicatorsTwo`.
-         * @description
-         *
-         * Controls through-connection to the Calling Party. (3GPP TS 29.078
-         * V19.0.0 clause 11.17.1.1).
-         *
-         * @public
-         * @readonly
-         */
-        readonly serviceInteractionIndicatorsTwo?: OPTIONAL<ServiceInteractionIndicatorsTwo>,
-        /**
-         * @summary `callSegmentID`.
-         * @description
-         *
-         * Call Segment to which the temporary connection shall be established.
-         * (3GPP TS 29.078 V19.0.0 clause 11.17.1.1).
-         *
-         * @public
-         * @readonly
-         */
-        readonly callSegmentID?: OPTIONAL<CallSegmentID>,
-        /**
-         * @summary `naOliInfo`.
-         * @description
-         *
-         * Originating line information identifying the charged-party number
-         * type to the carrier. (3GPP TS 29.078 V19.0.0 clause 11.17.1.1).
-         *
-         * @public
-         * @readonly
-         */
-        readonly naOliInfo?: OPTIONAL<NAOliInfo>,
-        /**
-         * @summary `chargeNumber`.
-         * @description
-         *
-         * Number identifying the entity to be charged; chargeable number for a
-         * North American long-distance carrier (ANSI T1.113-1995). (3GPP TS
-         * 29.078 V19.0.0 clause 11.17.1.1).
-         *
-         * @public
-         * @readonly
-         */
-        readonly chargeNumber?: OPTIONAL<ChargeNumber>,
-        /**
-         * @summary `originalCalledPartyID`.
-         * @description
-         *
-         * Identifies the original called party. (3GPP TS 29.078 V19.0.0 clause
-         * 11.17.1.1).
-         *
-         * @public
-         * @readonly
-         */
-        readonly originalCalledPartyID?: OPTIONAL<OriginalCalledPartyID>,
-        /**
-         * @summary `callingPartyNumber`.
-         * @description
-         *
-         * Identifies the calling party. (3GPP TS 29.078 V19.0.0 clause
-         * 11.17.1.1).
-         *
-         * @public
-         * @readonly
-         */
-        readonly callingPartyNumber?: OPTIONAL<CallingPartyNumber>,
-        /**
-         * @summary Extensions that are not recognized.
-         * @public
-         * @readonly
-         */
-        readonly _unrecognizedExtensionsList: _Element[] = []
-    ) {}
+        assistingSSPIPRoutingAddress: AssistingSSPIPRoutingAddress,
+        correlationID?: OPTIONAL<CorrelationID>,
+        scfID?: OPTIONAL<ScfID>,
+        extensions?: OPTIONAL<Extensions>,
+        carrier?: OPTIONAL<Carrier>,
+        serviceInteractionIndicatorsTwo?: OPTIONAL<ServiceInteractionIndicatorsTwo>,
+        callSegmentID?: OPTIONAL<CallSegmentID>,
+        naOliInfo?: OPTIONAL<NAOliInfo>,
+        chargeNumber?: OPTIONAL<ChargeNumber>,
+        originalCalledPartyID?: OPTIONAL<OriginalCalledPartyID>,
+        callingPartyNumber?: OPTIONAL<CallingPartyNumber>,
+        _unrecognizedExtensionsList: _Element[] = []
+    ) {
+        this.assistingSSPIPRoutingAddress = assistingSSPIPRoutingAddress;
+        this.correlationID = correlationID;
+        this.scfID = scfID;
+        this.extensions = extensions;
+        this.carrier = carrier;
+        this.serviceInteractionIndicatorsTwo = serviceInteractionIndicatorsTwo;
+        this.callSegmentID = callSegmentID;
+        this.naOliInfo = naOliInfo;
+        this.chargeNumber = chargeNumber;
+        this.originalCalledPartyID = originalCalledPartyID;
+        this.callingPartyNumber = callingPartyNumber;
+        this._unrecognizedExtensionsList = _unrecognizedExtensionsList;
+    }
 
     /**
      * @summary Restructures an object into a EstablishTemporaryConnectionArg

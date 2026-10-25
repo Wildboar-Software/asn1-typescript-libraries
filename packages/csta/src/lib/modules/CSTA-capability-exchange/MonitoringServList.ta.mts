@@ -2,21 +2,21 @@
 
 import * as $ from "@wildboar/asn1/functional";
 import {
-    OPTIONAL,
-    SEQUENCE,
-    SET,
-    ASN1Element as _Element,
+    type OPTIONAL,
+    type SEQUENCE,
+    type SET,
+    type ASN1Element as _Element,
     ASN1TagClass as _TagClass
 } from "@wildboar/asn1";
-import { ChangeMonitorFilter, _decode_ChangeMonitorFilter, _encode_ChangeMonitorFilter } from "../CSTA-capability-exchange/ChangeMonitorFilter.ta.mjs";
+import { type ChangeMonitorFilter, _decode_ChangeMonitorFilter, _encode_ChangeMonitorFilter } from "../CSTA-capability-exchange/ChangeMonitorFilter.ta.mjs";
 
-import { MonitorStart, _decode_MonitorStart, _encode_MonitorStart } from "../CSTA-capability-exchange/MonitorStart.ta.mjs";
+import { type MonitorStart, _decode_MonitorStart, _encode_MonitorStart } from "../CSTA-capability-exchange/MonitorStart.ta.mjs";
 
-import { MonitorStop, _decode_MonitorStop, _encode_MonitorStop } from "../CSTA-capability-exchange/MonitorStop.ta.mjs";
+import { type MonitorStop, _decode_MonitorStop, _encode_MonitorStop } from "../CSTA-capability-exchange/MonitorStop.ta.mjs";
 
-import { GetMonitors, _decode_GetMonitors, _encode_GetMonitors } from "../CSTA-capability-exchange/GetMonitors.ta.mjs";
+import { type GetMonitors, _decode_GetMonitors, _encode_GetMonitors } from "../CSTA-capability-exchange/GetMonitors.ta.mjs";
 
-import { MonitorInfo, _decode_MonitorInfo, _encode_MonitorInfo } from "../CSTA-capability-exchange/MonitorInfo.ta.mjs";
+import { type MonitorInfo, _decode_MonitorInfo, _encode_MonitorInfo } from "../CSTA-capability-exchange/MonitorInfo.ta.mjs";
 
 
 
@@ -34,10 +34,10 @@ import { MonitorInfo, _decode_MonitorInfo, _encode_MonitorInfo } from "../CSTA-c
  * 
  * ```asn1
  * MonitoringServList ::= SEQUENCE
- * {     changeMonitorFilter         [ 0] IMPLICIT ChangeMonitorFilter         OPTIONAL,
- *     monitorStart             [ 1] IMPLICIT MonitorStart             OPTIONAL,
- *     monitorStop             [ 2] IMPLICIT MonitorStop             OPTIONAL,
- *     getMonitors            [ 3] IMPLICIT GetMonitors            OPTIONAL,
+ * {     changeMonitorFilter         [ 0] IMPLICIT ChangeMonitorFilter         type OPTIONAL,
+ *     monitorStart             [ 1] IMPLICIT MonitorStart             type OPTIONAL,
+ *     monitorStop             [ 2] IMPLICIT MonitorStop             type OPTIONAL,
+ *     getMonitors            [ 3] IMPLICIT GetMonitors            type OPTIONAL,
  *     monitorInfo            [ 4] IMPLICIT MonitorInfo            OPTIONAL }
  * ```
  * 
@@ -45,53 +45,65 @@ import { MonitorInfo, _decode_MonitorInfo, _encode_MonitorInfo } from "../CSTA-c
  */
 export
 class MonitoringServList {
+    /**
+     * @summary `changeMonitorFilter`.
+     * @public
+     * @readonly
+     * @description
+     * Capability bitmap for this service; omit if the SF does not support
+     * it (ECMA-269 Annex C).
+     */
+    public readonly changeMonitorFilter?: OPTIONAL<ChangeMonitorFilter>;
+    /**
+     * @summary `monitorStart`.
+     * @public
+     * @readonly
+     * @description
+     * Capability bitmap for this service; omit if the SF does not support
+     * it (ECMA-269 Annex C).
+     */
+    public readonly monitorStart?: OPTIONAL<MonitorStart>;
+    /**
+     * @summary `monitorStop`.
+     * @public
+     * @readonly
+     * @description
+     * Capability bitmap for this service; omit if the SF does not support
+     * it (ECMA-269 Annex C).
+     */
+    public readonly monitorStop?: OPTIONAL<MonitorStop>;
+    /**
+     * @summary `getMonitors`.
+     * @public
+     * @readonly
+     * @description
+     * Capability bitmap for this service; omit if the SF does not support
+     * it (ECMA-269 Annex C).
+     */
+    public readonly getMonitors?: OPTIONAL<GetMonitors>;
+    /**
+     * @summary `monitorInfo`.
+     * @public
+     * @readonly
+     * @description
+     * Capability bitmap for this service; omit if the SF does not support
+     * it (ECMA-269 Annex C).
+     */
+    public readonly monitorInfo?: OPTIONAL<MonitorInfo>;
+
     constructor (
-        /**
-         * @summary `changeMonitorFilter`.
-         * @public
-         * @readonly
-         * @description
-         * Capability bitmap for this service; omit if the SF does not support
-         * it (ECMA-269 Annex C).
-         */
-        readonly changeMonitorFilter?: OPTIONAL<ChangeMonitorFilter>,
-        /**
-         * @summary `monitorStart`.
-         * @public
-         * @readonly
-         * @description
-         * Capability bitmap for this service; omit if the SF does not support
-         * it (ECMA-269 Annex C).
-         */
-        readonly monitorStart?: OPTIONAL<MonitorStart>,
-        /**
-         * @summary `monitorStop`.
-         * @public
-         * @readonly
-         * @description
-         * Capability bitmap for this service; omit if the SF does not support
-         * it (ECMA-269 Annex C).
-         */
-        readonly monitorStop?: OPTIONAL<MonitorStop>,
-        /**
-         * @summary `getMonitors`.
-         * @public
-         * @readonly
-         * @description
-         * Capability bitmap for this service; omit if the SF does not support
-         * it (ECMA-269 Annex C).
-         */
-        readonly getMonitors?: OPTIONAL<GetMonitors>,
-        /**
-         * @summary `monitorInfo`.
-         * @public
-         * @readonly
-         * @description
-         * Capability bitmap for this service; omit if the SF does not support
-         * it (ECMA-269 Annex C).
-         */
-        readonly monitorInfo?: OPTIONAL<MonitorInfo>
-    ) {}
+        changeMonitorFilter?: OPTIONAL<ChangeMonitorFilter>,
+        monitorStart?: OPTIONAL<MonitorStart>,
+        monitorStop?: OPTIONAL<MonitorStop>,
+        getMonitors?: OPTIONAL<GetMonitors>,
+        monitorInfo?: OPTIONAL<MonitorInfo>
+    ) {
+        this.changeMonitorFilter = changeMonitorFilter;
+        this.monitorStart = monitorStart;
+        this.monitorStop = monitorStop;
+        this.getMonitors = getMonitors;
+        this.monitorInfo = monitorInfo;
+    }
 
     /**
      * @summary Restructures an object into a MonitoringServList

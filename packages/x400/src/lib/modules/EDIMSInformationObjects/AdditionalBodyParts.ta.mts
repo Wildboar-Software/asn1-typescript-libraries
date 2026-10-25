@@ -1,6 +1,6 @@
 /* eslint-disable */
 import {
-    ASN1Element as _Element,
+    type ASN1Element as _Element,
     ASN1TagClass as _TagClass,
     ASN1Construction as _Construction,
     ASN1UniversalType as _UniversalType,
@@ -11,7 +11,7 @@ import {
 } from '@wildboar/asn1';
 import * as $ from '@wildboar/asn1/functional';
 import {
-    AdditionalBodyParts_Item,
+    type AdditionalBodyParts_Item,
     _decode_AdditionalBodyParts_Item,
     _encode_AdditionalBodyParts_Item,
 } from '../EDIMSInformationObjects/AdditionalBodyParts-Item.ta.mjs';

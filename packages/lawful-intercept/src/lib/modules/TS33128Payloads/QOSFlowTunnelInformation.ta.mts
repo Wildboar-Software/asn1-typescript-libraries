@@ -1,13 +1,13 @@
 /* eslint-disable */
 import {
     ASN1ConstructionError as _ConstructionError,
-    ASN1Element as _Element,
+    type ASN1Element as _Element,
     ASN1TagClass as _TagClass
 } from "@wildboar/asn1";
 import * as $ from "@wildboar/asn1/functional";
 import { FTEID, _decode_FTEID, _encode_FTEID } from "../TS33128Payloads/FTEID.ta.mjs";
 // export { FTEID, _decode_FTEID, _encode_FTEID } from "../TS33128Payloads/FTEID.ta.mjs";
-import { QOSFlowLists, _decode_QOSFlowLists, _encode_QOSFlowLists } from "../TS33128Payloads/QOSFlowLists.ta.mjs";
+import { type QOSFlowLists, _decode_QOSFlowLists, _encode_QOSFlowLists } from "../TS33128Payloads/QOSFlowLists.ta.mjs";
 // export { QOSFlowLists, _decode_QOSFlowLists, _encode_QOSFlowLists } from "../TS33128Payloads/QOSFlowLists.ta.mjs";
 
 

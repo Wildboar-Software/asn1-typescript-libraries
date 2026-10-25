@@ -1,4 +1,5 @@
 /* eslint-disable */
+import { ASN1Element as _Element, ASN1ConstructionError as _ConstructionError } from "@wildboar/asn1";
 import * as $ from "@wildboar/asn1/functional";
 
 
@@ -50,7 +51,7 @@ type ForwardingCondition = _enum_for_ForwardingCondition;
  * @enum {number}
  */
 export
-const ForwardingCondition = _enum_for_ForwardingCondition;
+const ForwardingCondition: typeof _enum_for_ForwardingCondition = _enum_for_ForwardingCondition;
 
 /**
  * @summary ForwardingCondition_busy
@@ -58,7 +59,7 @@ const ForwardingCondition = _enum_for_ForwardingCondition;
  * @type {number}
  */
 export
-const ForwardingCondition_busy: ForwardingCondition = ForwardingCondition.busy; /* LONG_NAMED_ENUMERATED_VALUE */
+const ForwardingCondition_busy: _enum_for_ForwardingCondition.busy = ForwardingCondition.busy; /* LONG_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary busy
@@ -66,7 +67,7 @@ const ForwardingCondition_busy: ForwardingCondition = ForwardingCondition.busy; 
  * @type {number}
  */
 export
-const busy: ForwardingCondition = ForwardingCondition.busy; /* SHORT_NAMED_ENUMERATED_VALUE */
+const busy: _enum_for_ForwardingCondition.busy = ForwardingCondition.busy; /* SHORT_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary ForwardingCondition_noanswer
@@ -74,7 +75,7 @@ const busy: ForwardingCondition = ForwardingCondition.busy; /* SHORT_NAMED_ENUME
  * @type {number}
  */
 export
-const ForwardingCondition_noanswer: ForwardingCondition = ForwardingCondition.noanswer; /* LONG_NAMED_ENUMERATED_VALUE */
+const ForwardingCondition_noanswer: _enum_for_ForwardingCondition.noanswer = ForwardingCondition.noanswer; /* LONG_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary noanswer
@@ -82,7 +83,7 @@ const ForwardingCondition_noanswer: ForwardingCondition = ForwardingCondition.no
  * @type {number}
  */
 export
-const noanswer: ForwardingCondition = ForwardingCondition.noanswer; /* SHORT_NAMED_ENUMERATED_VALUE */
+const noanswer: _enum_for_ForwardingCondition.noanswer = ForwardingCondition.noanswer; /* SHORT_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary ForwardingCondition_any_
@@ -90,7 +91,7 @@ const noanswer: ForwardingCondition = ForwardingCondition.noanswer; /* SHORT_NAM
  * @type {number}
  */
 export
-const ForwardingCondition_any_: ForwardingCondition = ForwardingCondition.any_; /* LONG_NAMED_ENUMERATED_VALUE */
+const ForwardingCondition_any_: _enum_for_ForwardingCondition.any_ = ForwardingCondition.any_; /* LONG_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary any_
@@ -98,12 +99,24 @@ const ForwardingCondition_any_: ForwardingCondition = ForwardingCondition.any_; 
  * @type {number}
  */
 export
-const any_: ForwardingCondition = ForwardingCondition.any_; /* SHORT_NAMED_ENUMERATED_VALUE */
+const any_: _enum_for_ForwardingCondition.any_ = ForwardingCondition.any_; /* SHORT_NAMED_ENUMERATED_VALUE */
 
 export
-const _decode_ForwardingCondition: $.ASN1Decoder<ForwardingCondition> = $._decodeEnumerated;
+function _decode_ForwardingCondition(el: _Element): ForwardingCondition {
+    const enumerated = $._decodeEnumerated(el);
+    switch (enumerated) {
+        case ForwardingCondition.busy: return ForwardingCondition.busy;
+        case ForwardingCondition.noanswer: return ForwardingCondition.noanswer;
+        case ForwardingCondition.any_: return ForwardingCondition.any_;
+        default:
+            throw new _ConstructionError(
+                "Invalid ENUMERATED value " + enumerated + " for ForwardingCondition.",
+                el,
+            );
+    }
+}
 
 export
-const _encode_ForwardingCondition: $.ASN1Encoder<ForwardingCondition> = $._encodeEnumerated;
+const _encode_ForwardingCondition: $.ASN1Encoder<ForwardingCondition> = $._encodeEnumerated as $.ASN1Encoder<ForwardingCondition>;
 
 /* eslint-enable */

@@ -1,9 +1,9 @@
 /* eslint-disable */
 import {
-    OPTIONAL,
-    INTEGER,
-    VisibleString,
-    ASN1Element as _Element,
+    type OPTIONAL,
+    type INTEGER,
+    type VisibleString,
+    type ASN1Element as _Element,
     ASN1TagClass as _TagClass,
     ASN1Construction as _Construction,
     ASN1UniversalType as _UniversalType,
@@ -48,58 +48,70 @@ import { Event_Condition_instance, _decode_Event_Condition_instance, _encode_Eve
  */
 export
 class Semaphore_instance_definition_details {
+    /**
+     * @summary `accessControl`.
+     * @description
+     *
+     * SCI encoding of the object's ACL (ISO 9506-1:2003 §9). ISO
+     * 9506-2:2003 Annex B.
+     *
+     * @public
+     * @readonly
+     */
+    public readonly accessControl: Access_Control_List_instance;
+    /**
+     * @summary `class_`.
+     * @public
+     * @readonly
+     */
+    public readonly class_: Semaphore_instance_definition_details_class;
+    /**
+     * @summary `numberOfTokens`.
+     * @description
+     *
+     * Token class: max owners. ISO 9506-1:2003 §16.1.1.4; ISO 9506-2:2003
+     * Annex B.1.10.
+     *
+     * @public
+     * @readonly
+     */
+    public readonly numberOfTokens: OPTIONAL<INTEGER>;
+    /**
+     * @summary `namedTokens`.
+     * @description
+     *
+     * Pool class: named-token strings. ISO 9506-1:2003 §16.1.1.6; ISO
+     * 9506-2:2003 Annex B.1.10.
+     *
+     * @public
+     * @readonly
+     */
+    public readonly namedTokens: OPTIONAL<VisibleString[]>;
+    /**
+     * @summary `eventCondition`.
+     * @description
+     *
+     * Configured Event Condition (PI monitor or semaphore match). ISO
+     * 9506-2:2003 Annex B.
+     *
+     * @public
+     * @readonly
+     */
+    public readonly eventCondition: Event_Condition_instance;
+
     constructor (
-        /**
-         * @summary `accessControl`.
-         * @description
-         *
-         * SCI encoding of the object's ACL (ISO 9506-1:2003 §9). ISO
-         * 9506-2:2003 Annex B.
-         *
-         * @public
-         * @readonly
-         */
-        readonly accessControl: Access_Control_List_instance,
-        /**
-         * @summary `class_`.
-         * @public
-         * @readonly
-         */
-        readonly class_: Semaphore_instance_definition_details_class,
-        /**
-         * @summary `numberOfTokens`.
-         * @description
-         *
-         * Token class: max owners. ISO 9506-1:2003 §16.1.1.4; ISO 9506-2:2003
-         * Annex B.1.10.
-         *
-         * @public
-         * @readonly
-         */
-        readonly numberOfTokens: OPTIONAL<INTEGER>,
-        /**
-         * @summary `namedTokens`.
-         * @description
-         *
-         * Pool class: named-token strings. ISO 9506-1:2003 §16.1.1.6; ISO
-         * 9506-2:2003 Annex B.1.10.
-         *
-         * @public
-         * @readonly
-         */
-        readonly namedTokens: OPTIONAL<VisibleString[]>,
-        /**
-         * @summary `eventCondition`.
-         * @description
-         *
-         * Configured Event Condition (PI monitor or semaphore match). ISO
-         * 9506-2:2003 Annex B.
-         *
-         * @public
-         * @readonly
-         */
-        readonly eventCondition: Event_Condition_instance
-    ) {}
+        accessControl: Access_Control_List_instance,
+        class_: Semaphore_instance_definition_details_class,
+        numberOfTokens: OPTIONAL<INTEGER>,
+        namedTokens: OPTIONAL<VisibleString[]>,
+        eventCondition: Event_Condition_instance
+    ) {
+        this.accessControl = accessControl;
+        this.class_ = class_;
+        this.numberOfTokens = numberOfTokens;
+        this.namedTokens = namedTokens;
+        this.eventCondition = eventCondition;
+    }
 
     /**
      * @summary Restructures an object into a Semaphore_instance_definition_details
@@ -123,7 +135,7 @@ class Semaphore_instance_definition_details {
          * @static
          */
 
-    public static _enum_for_class_ = _enum_for_Semaphore_instance_definition_details_class;
+    public static _enum_for_class_: typeof _enum_for_Semaphore_instance_definition_details_class = _enum_for_Semaphore_instance_definition_details_class;
 }
 
 /**

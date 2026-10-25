@@ -1,5 +1,5 @@
 /* eslint-disable */
-import { ASN1Element as _Element } from "@wildboar/asn1";
+import { ASN1Element as _Element, ASN1ConstructionError as _ConstructionError } from "@wildboar/asn1";
 import * as $ from "@wildboar/asn1/functional";
 
 /**
@@ -57,14 +57,14 @@ export type Knowledge_knowledgeType = _enum_for_Knowledge_knowledgeType;
  *
  * @enum {number}
  */
-export const Knowledge_knowledgeType = _enum_for_Knowledge_knowledgeType;
+export const Knowledge_knowledgeType: typeof _enum_for_Knowledge_knowledgeType = _enum_for_Knowledge_knowledgeType;
 
 /**
  * @summary Knowledge_knowledgeType_master
  * @constant
  * @type {number}
  */
-export const Knowledge_knowledgeType_master: Knowledge_knowledgeType =
+export const Knowledge_knowledgeType_master: _enum_for_Knowledge_knowledgeType.master =
     Knowledge_knowledgeType.master; /* LONG_NAMED_ENUMERATED_VALUE */
 
 /**
@@ -72,7 +72,7 @@ export const Knowledge_knowledgeType_master: Knowledge_knowledgeType =
  * @constant
  * @type {number}
  */
-export const master: Knowledge_knowledgeType =
+export const master: _enum_for_Knowledge_knowledgeType.master =
     Knowledge_knowledgeType.master; /* SHORT_NAMED_ENUMERATED_VALUE */
 
 /**
@@ -80,7 +80,7 @@ export const master: Knowledge_knowledgeType =
  * @constant
  * @type {number}
  */
-export const Knowledge_knowledgeType_shadow: Knowledge_knowledgeType =
+export const Knowledge_knowledgeType_shadow: _enum_for_Knowledge_knowledgeType.shadow =
     Knowledge_knowledgeType.shadow; /* LONG_NAMED_ENUMERATED_VALUE */
 
 /**
@@ -88,7 +88,7 @@ export const Knowledge_knowledgeType_shadow: Knowledge_knowledgeType =
  * @constant
  * @type {number}
  */
-export const shadow: Knowledge_knowledgeType =
+export const shadow: _enum_for_Knowledge_knowledgeType.shadow =
     Knowledge_knowledgeType.shadow; /* SHORT_NAMED_ENUMERATED_VALUE */
 
 /**
@@ -96,7 +96,7 @@ export const shadow: Knowledge_knowledgeType =
  * @constant
  * @type {number}
  */
-export const Knowledge_knowledgeType_both: Knowledge_knowledgeType =
+export const Knowledge_knowledgeType_both: _enum_for_Knowledge_knowledgeType.both =
     Knowledge_knowledgeType.both; /* LONG_NAMED_ENUMERATED_VALUE */
 
 /**
@@ -104,14 +104,26 @@ export const Knowledge_knowledgeType_both: Knowledge_knowledgeType =
  * @constant
  * @type {number}
  */
-export const both: Knowledge_knowledgeType =
+export const both: _enum_for_Knowledge_knowledgeType.both =
     Knowledge_knowledgeType.both; /* SHORT_NAMED_ENUMERATED_VALUE */
 
 
-export const _decode_Knowledge_knowledgeType = $._decodeEnumerated;
+export function _decode_Knowledge_knowledgeType(el: _Element): Knowledge_knowledgeType {
+    const enumerated = $._decodeEnumerated(el);
+    switch (enumerated) {
+        case Knowledge_knowledgeType.master: return Knowledge_knowledgeType.master;
+        case Knowledge_knowledgeType.shadow: return Knowledge_knowledgeType.shadow;
+        case Knowledge_knowledgeType.both: return Knowledge_knowledgeType.both;
+        default:
+            throw new _ConstructionError(
+                "Invalid ENUMERATED value " + enumerated + " for Knowledge_knowledgeType.",
+                el,
+            );
+    }
+}
 
 
-export const _encode_Knowledge_knowledgeType = $._encodeEnumerated;
+export const _encode_Knowledge_knowledgeType: $.ASN1Encoder<Knowledge_knowledgeType> = $._encodeEnumerated as $.ASN1Encoder<Knowledge_knowledgeType>;
 
 
 /* eslint-enable */

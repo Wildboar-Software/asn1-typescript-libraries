@@ -1,9 +1,9 @@
 /* eslint-disable */
 import {
   joint_iso_itu_t,
-  OPTIONAL,
-  BIT_STRING,
-  OBJECT_IDENTIFIER,
+  type OPTIONAL,
+  type BIT_STRING,
+  type OBJECT_IDENTIFIER,
   ASN1Element as _Element,
   ASN1TagClass as _TagClass,
   ASN1Construction as _Construction,
@@ -44,65 +44,77 @@ import {
  *
  */
 export class gulsSignatureTransformation_XformedDataType {
+  /**
+   * @summary `initEncRules`.
+   * @description
+   *
+   * Initial encoding rules for the (locally reconstructed)
+   * intermediate value. Default CER. ITU-T Rec. X.830
+   * (04/95) Annex D.5.
+   *
+   * @public
+   * @readonly
+   */
+  public readonly initEncRules: OPTIONAL<OBJECT_IDENTIFIER>;
+  /**
+   * @summary `signOrSealAlgorithm`.
+   * @description
+   *
+   * Signing or sealing algorithm and its parameters. ITU-T
+   * Rec. X.830 (04/95) Annex D.5.
+   *
+   * @public
+   * @readonly
+   */
+  public readonly signOrSealAlgorithm: OPTIONAL<AlgorithmIdentifier>;
+  /**
+   * @summary `hashAlgorithm`.
+   * @description
+   *
+   * Hash function, if one is required and not implied by
+   * `signOrSealAlgorithm`. ITU-T Rec. X.830 (04/95)
+   * Annex D.5.
+   *
+   * @public
+   * @readonly
+   */
+  public readonly hashAlgorithm: OPTIONAL<AlgorithmIdentifier>;
+  /**
+   * @summary `keyInformation`.
+   * @description
+   *
+   * Key material in a `KEY-INFORMATION` format from the
+   * supported classes. ITU-T Rec. X.830 (04/95) Annex D.5.
+   *
+   * @public
+   * @readonly
+   */
+  public readonly keyInformation: OPTIONAL<gulsSignatureTransformation_XformedDataType_keyInformation>;
+  /**
+   * @summary `appendix`.
+   * @description
+   *
+   * Signature or seal (D.5 procedure). ITU-T Rec. X.830
+   * (04/95) Annex D.5.
+   *
+   * @public
+   * @readonly
+   */
+  public readonly appendix: BIT_STRING;
+
   constructor(
-    /**
-     * @summary `initEncRules`.
-     * @description
-     *
-     * Initial encoding rules for the (locally reconstructed)
-     * intermediate value. Default CER. ITU-T Rec. X.830
-     * (04/95) Annex D.5.
-     *
-     * @public
-     * @readonly
-     */
-    readonly initEncRules: OPTIONAL<OBJECT_IDENTIFIER>,
-    /**
-     * @summary `signOrSealAlgorithm`.
-     * @description
-     *
-     * Signing or sealing algorithm and its parameters. ITU-T
-     * Rec. X.830 (04/95) Annex D.5.
-     *
-     * @public
-     * @readonly
-     */
-    readonly signOrSealAlgorithm: OPTIONAL<AlgorithmIdentifier>,
-    /**
-     * @summary `hashAlgorithm`.
-     * @description
-     *
-     * Hash function, if one is required and not implied by
-     * `signOrSealAlgorithm`. ITU-T Rec. X.830 (04/95)
-     * Annex D.5.
-     *
-     * @public
-     * @readonly
-     */
-    readonly hashAlgorithm: OPTIONAL<AlgorithmIdentifier>,
-    /**
-     * @summary `keyInformation`.
-     * @description
-     *
-     * Key material in a `KEY-INFORMATION` format from the
-     * supported classes. ITU-T Rec. X.830 (04/95) Annex D.5.
-     *
-     * @public
-     * @readonly
-     */
-    readonly keyInformation: OPTIONAL<gulsSignatureTransformation_XformedDataType_keyInformation>,
-    /**
-     * @summary `appendix`.
-     * @description
-     *
-     * Signature or seal (D.5 procedure). ITU-T Rec. X.830
-     * (04/95) Annex D.5.
-     *
-     * @public
-     * @readonly
-     */
-    readonly appendix: BIT_STRING
-  ) {}
+    initEncRules: OPTIONAL<OBJECT_IDENTIFIER>,
+    signOrSealAlgorithm: OPTIONAL<AlgorithmIdentifier>,
+    hashAlgorithm: OPTIONAL<AlgorithmIdentifier>,
+    keyInformation: OPTIONAL<gulsSignatureTransformation_XformedDataType_keyInformation>,
+    appendix: BIT_STRING
+  ) {
+    this.initEncRules = initEncRules;
+    this.signOrSealAlgorithm = signOrSealAlgorithm;
+    this.hashAlgorithm = hashAlgorithm;
+    this.keyInformation = keyInformation;
+    this.appendix = appendix;
+  }
 
   /**
    * @summary Restructures an object into a gulsSignatureTransformation_XformedDataType

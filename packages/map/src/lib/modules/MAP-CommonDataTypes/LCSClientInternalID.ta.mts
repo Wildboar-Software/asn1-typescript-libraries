@@ -1,7 +1,7 @@
 /* eslint-disable */
 import {
-    ASN1Element as _Element,
-    ENUMERATED
+    type ASN1Element as _Element,
+    type ENUMERATED
 } from "@wildboar/asn1";
 import * as $ from "@wildboar/asn1/functional";
 
@@ -52,7 +52,7 @@ type LCSClientInternalID = _enum_for_LCSClientInternalID | ENUMERATED;
  * @type {number}
  */
 export
-const LCSClientInternalID_broadcastService: LCSClientInternalID = 0; /* LONG_NAMED_ENUMERATED_VALUE */
+const LCSClientInternalID_broadcastService: _enum_for_LCSClientInternalID.broadcastService = _enum_for_LCSClientInternalID.broadcastService; /* LONG_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary broadcastService
@@ -64,7 +64,7 @@ const LCSClientInternalID_broadcastService: LCSClientInternalID = 0; /* LONG_NAM
  * @type {number}
  */
 export
-const broadcastService: LCSClientInternalID = LCSClientInternalID_broadcastService; /* SHORT_NAMED_ENUMERATED_VALUE */
+const broadcastService: _enum_for_LCSClientInternalID.broadcastService = LCSClientInternalID_broadcastService; /* SHORT_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary LCSClientInternalID_o_andM_HPLMN
@@ -76,7 +76,7 @@ const broadcastService: LCSClientInternalID = LCSClientInternalID_broadcastServi
  * @type {number}
  */
 export
-const LCSClientInternalID_o_andM_HPLMN: LCSClientInternalID = 1; /* LONG_NAMED_ENUMERATED_VALUE */
+const LCSClientInternalID_o_andM_HPLMN: _enum_for_LCSClientInternalID.o_andM_HPLMN = _enum_for_LCSClientInternalID.o_andM_HPLMN; /* LONG_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary o_andM_HPLMN
@@ -88,7 +88,7 @@ const LCSClientInternalID_o_andM_HPLMN: LCSClientInternalID = 1; /* LONG_NAMED_E
  * @type {number}
  */
 export
-const o_andM_HPLMN: LCSClientInternalID = LCSClientInternalID_o_andM_HPLMN; /* SHORT_NAMED_ENUMERATED_VALUE */
+const o_andM_HPLMN: _enum_for_LCSClientInternalID.o_andM_HPLMN = LCSClientInternalID_o_andM_HPLMN; /* SHORT_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary LCSClientInternalID_o_andM_VPLMN
@@ -100,7 +100,7 @@ const o_andM_HPLMN: LCSClientInternalID = LCSClientInternalID_o_andM_HPLMN; /* S
  * @type {number}
  */
 export
-const LCSClientInternalID_o_andM_VPLMN: LCSClientInternalID = 2; /* LONG_NAMED_ENUMERATED_VALUE */
+const LCSClientInternalID_o_andM_VPLMN: _enum_for_LCSClientInternalID.o_andM_VPLMN = _enum_for_LCSClientInternalID.o_andM_VPLMN; /* LONG_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary o_andM_VPLMN
@@ -112,7 +112,7 @@ const LCSClientInternalID_o_andM_VPLMN: LCSClientInternalID = 2; /* LONG_NAMED_E
  * @type {number}
  */
 export
-const o_andM_VPLMN: LCSClientInternalID = LCSClientInternalID_o_andM_VPLMN; /* SHORT_NAMED_ENUMERATED_VALUE */
+const o_andM_VPLMN: _enum_for_LCSClientInternalID.o_andM_VPLMN = LCSClientInternalID_o_andM_VPLMN; /* SHORT_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary LCSClientInternalID_anonymousLocation
@@ -124,7 +124,7 @@ const o_andM_VPLMN: LCSClientInternalID = LCSClientInternalID_o_andM_VPLMN; /* S
  * @type {number}
  */
 export
-const LCSClientInternalID_anonymousLocation: LCSClientInternalID = 3; /* LONG_NAMED_ENUMERATED_VALUE */
+const LCSClientInternalID_anonymousLocation: _enum_for_LCSClientInternalID.anonymousLocation = _enum_for_LCSClientInternalID.anonymousLocation; /* LONG_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary anonymousLocation
@@ -136,7 +136,7 @@ const LCSClientInternalID_anonymousLocation: LCSClientInternalID = 3; /* LONG_NA
  * @type {number}
  */
 export
-const anonymousLocation: LCSClientInternalID = LCSClientInternalID_anonymousLocation; /* SHORT_NAMED_ENUMERATED_VALUE */
+const anonymousLocation: _enum_for_LCSClientInternalID.anonymousLocation = LCSClientInternalID_anonymousLocation; /* SHORT_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary LCSClientInternalID_targetMSsubscribedService
@@ -149,7 +149,7 @@ const anonymousLocation: LCSClientInternalID = LCSClientInternalID_anonymousLoca
  * @type {number}
  */
 export
-const LCSClientInternalID_targetMSsubscribedService: LCSClientInternalID = 4; /* LONG_NAMED_ENUMERATED_VALUE */
+const LCSClientInternalID_targetMSsubscribedService: _enum_for_LCSClientInternalID.targetMSsubscribedService = _enum_for_LCSClientInternalID.targetMSsubscribedService; /* LONG_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary targetMSsubscribedService
@@ -162,7 +162,7 @@ const LCSClientInternalID_targetMSsubscribedService: LCSClientInternalID = 4; /*
  * @type {number}
  */
 export
-const targetMSsubscribedService: LCSClientInternalID = LCSClientInternalID_targetMSsubscribedService; /* SHORT_NAMED_ENUMERATED_VALUE */
+const targetMSsubscribedService: _enum_for_LCSClientInternalID.targetMSsubscribedService = LCSClientInternalID_targetMSsubscribedService; /* SHORT_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary Decodes an ASN.1 element into a(n) LCSClientInternalID
@@ -170,7 +170,7 @@ const targetMSsubscribedService: LCSClientInternalID = LCSClientInternalID_targe
  * @param el The element being decoded.
  * @returns The decoded data structure.
  */
-export const _decode_LCSClientInternalID = $._decodeEnumerated;
+export const _decode_LCSClientInternalID: $.ASN1Decoder<number> = $._decodeEnumerated;
 
 /**
  * @summary Encodes a(n) LCSClientInternalID into an ASN.1 Element.
@@ -179,7 +179,7 @@ export const _decode_LCSClientInternalID = $._decodeEnumerated;
  * @param elGetter A function that can be used to get new ASN.1 elements.
  * @returns {_Element} The LCSClientInternalID, encoded as an ASN.1 Element.
  */
-export const _encode_LCSClientInternalID = $._encodeEnumerated;
+export const _encode_LCSClientInternalID: $.ASN1Encoder<number> = $._encodeEnumerated;
 
 
 /* eslint-enable */

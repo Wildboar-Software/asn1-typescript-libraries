@@ -1,6 +1,6 @@
 /* eslint-disable */
 import {
-    INTEGER
+    type INTEGER
 } from "@wildboar/asn1";
 import * as $ from "@wildboar/asn1/functional";
 
@@ -35,7 +35,7 @@ type SortKeySpec_caseSensitivity = INTEGER;
  * @type {number}
  */
 export
-const SortKeySpec_caseSensitivity_caseSensitive: SortKeySpec_caseSensitivity = 0; /* LONG_NAMED_INTEGER_VALUE */
+const SortKeySpec_caseSensitivity_caseSensitive: 0 = 0 satisfies SortKeySpec_caseSensitivity; /* LONG_NAMED_INTEGER_VALUE */
 
 /**
  * @summary SortKeySpec_caseSensitivity_caseSensitive
@@ -48,7 +48,7 @@ const SortKeySpec_caseSensitivity_caseSensitive: SortKeySpec_caseSensitivity = 0
  * @type {number}
  */
 export
-const caseSensitive: SortKeySpec_caseSensitivity = SortKeySpec_caseSensitivity_caseSensitive; /* SHORT_NAMED_INTEGER_VALUE */
+const caseSensitive: 0 = SortKeySpec_caseSensitivity_caseSensitive; /* SHORT_NAMED_INTEGER_VALUE */
 
 /**
  * @summary SortKeySpec_caseSensitivity_caseInsensitive
@@ -61,7 +61,7 @@ const caseSensitive: SortKeySpec_caseSensitivity = SortKeySpec_caseSensitivity_c
  * @type {number}
  */
 export
-const SortKeySpec_caseSensitivity_caseInsensitive: SortKeySpec_caseSensitivity = 1; /* LONG_NAMED_INTEGER_VALUE */
+const SortKeySpec_caseSensitivity_caseInsensitive: 1 = 1 satisfies SortKeySpec_caseSensitivity; /* LONG_NAMED_INTEGER_VALUE */
 
 /**
  * @summary SortKeySpec_caseSensitivity_caseInsensitive
@@ -74,7 +74,7 @@ const SortKeySpec_caseSensitivity_caseInsensitive: SortKeySpec_caseSensitivity =
  * @type {number}
  */
 export
-const caseInsensitive: SortKeySpec_caseSensitivity = SortKeySpec_caseSensitivity_caseInsensitive; /* SHORT_NAMED_INTEGER_VALUE */
+const caseInsensitive: 1 = SortKeySpec_caseSensitivity_caseInsensitive; /* SHORT_NAMED_INTEGER_VALUE */
 export const _decode_SortKeySpec_caseSensitivity: $.ASN1Decoder<SortKeySpec_caseSensitivity> = $._decodeInteger;
 export const _encode_SortKeySpec_caseSensitivity: $.ASN1Encoder<SortKeySpec_caseSensitivity> = $._encodeInteger;
 

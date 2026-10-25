@@ -1,6 +1,6 @@
 /* eslint-disable */
 import {
-    ASN1Element as _Element,
+    type ASN1Element as _Element,
     ASN1TagClass as _TagClass,
     ASN1Construction as _Construction,
     ASN1UniversalType as _UniversalType,
@@ -87,7 +87,7 @@ export type IntermediateResponse = _enum_for_IntermediateResponse;
  *
  * @enum {number}
  */
-export const IntermediateResponse = _enum_for_IntermediateResponse;
+export const IntermediateResponse: typeof _enum_for_IntermediateResponse = _enum_for_IntermediateResponse;
 
 /**
  * @summary IntermediateResponse_inProgress
@@ -97,7 +97,7 @@ export const IntermediateResponse = _enum_for_IntermediateResponse;
  * @constant
  * @type {number}
  */
-export const IntermediateResponse_inProgress: IntermediateResponse =
+export const IntermediateResponse_inProgress: _enum_for_IntermediateResponse.inProgress =
     IntermediateResponse.inProgress; /* LONG_NAMED_ENUMERATED_VALUE */
 
 /**
@@ -108,7 +108,7 @@ export const IntermediateResponse_inProgress: IntermediateResponse =
  * @constant
  * @type {number}
  */
-export const inProgress: IntermediateResponse =
+export const inProgress: _enum_for_IntermediateResponse.inProgress =
     IntermediateResponse.inProgress; /* SHORT_NAMED_ENUMERATED_VALUE */
 
 /**
@@ -119,7 +119,7 @@ export const inProgress: IntermediateResponse =
  * @constant
  * @type {number}
  */
-export const IntermediateResponse_delayedMeasurement: IntermediateResponse =
+export const IntermediateResponse_delayedMeasurement: _enum_for_IntermediateResponse.delayedMeasurement =
     IntermediateResponse.delayedMeasurement; /* LONG_NAMED_ENUMERATED_VALUE */
 
 /**
@@ -130,7 +130,7 @@ export const IntermediateResponse_delayedMeasurement: IntermediateResponse =
  * @constant
  * @type {number}
  */
-export const delayedMeasurement: IntermediateResponse =
+export const delayedMeasurement: _enum_for_IntermediateResponse.delayedMeasurement =
     IntermediateResponse.delayedMeasurement; /* SHORT_NAMED_ENUMERATED_VALUE */
 
 /**
@@ -141,7 +141,7 @@ export const delayedMeasurement: IntermediateResponse =
  * @constant
  * @type {number}
  */
-export const IntermediateResponse_interruptedMeasurement: IntermediateResponse =
+export const IntermediateResponse_interruptedMeasurement: _enum_for_IntermediateResponse.interruptedMeasurement =
     IntermediateResponse.interruptedMeasurement; /* LONG_NAMED_ENUMERATED_VALUE */
 
 /**
@@ -152,7 +152,7 @@ export const IntermediateResponse_interruptedMeasurement: IntermediateResponse =
  * @constant
  * @type {number}
  */
-export const interruptedMeasurement: IntermediateResponse =
+export const interruptedMeasurement: _enum_for_IntermediateResponse.interruptedMeasurement =
     IntermediateResponse.interruptedMeasurement; /* SHORT_NAMED_ENUMERATED_VALUE */
 
 /**
@@ -163,7 +163,7 @@ export const interruptedMeasurement: IntermediateResponse =
  * @constant
  * @type {number}
  */
-export const IntermediateResponse_repeatLater: IntermediateResponse =
+export const IntermediateResponse_repeatLater: _enum_for_IntermediateResponse.repeatLater =
     IntermediateResponse.repeatLater; /* LONG_NAMED_ENUMERATED_VALUE */
 
 /**
@@ -174,7 +174,7 @@ export const IntermediateResponse_repeatLater: IntermediateResponse =
  * @constant
  * @type {number}
  */
-export const repeatLater: IntermediateResponse =
+export const repeatLater: _enum_for_IntermediateResponse.repeatLater =
     IntermediateResponse.repeatLater; /* SHORT_NAMED_ENUMERATED_VALUE */
 
 /**
@@ -185,7 +185,7 @@ export const repeatLater: IntermediateResponse =
  * @constant
  * @type {number}
  */
-export const IntermediateResponse_noAcknowledgement: IntermediateResponse =
+export const IntermediateResponse_noAcknowledgement: _enum_for_IntermediateResponse.noAcknowledgement =
     IntermediateResponse.noAcknowledgement; /* LONG_NAMED_ENUMERATED_VALUE */
 
 /**
@@ -196,14 +196,28 @@ export const IntermediateResponse_noAcknowledgement: IntermediateResponse =
  * @constant
  * @type {number}
  */
-export const noAcknowledgement: IntermediateResponse =
+export const noAcknowledgement: _enum_for_IntermediateResponse.noAcknowledgement =
     IntermediateResponse.noAcknowledgement; /* SHORT_NAMED_ENUMERATED_VALUE */
 
 
-export const _decode_IntermediateResponse = $._decodeEnumerated;
+export function _decode_IntermediateResponse(el: _Element): IntermediateResponse {
+    const enumerated = $._decodeEnumerated(el);
+    switch (enumerated) {
+        case IntermediateResponse.inProgress: return IntermediateResponse.inProgress;
+        case IntermediateResponse.delayedMeasurement: return IntermediateResponse.delayedMeasurement;
+        case IntermediateResponse.interruptedMeasurement: return IntermediateResponse.interruptedMeasurement;
+        case IntermediateResponse.repeatLater: return IntermediateResponse.repeatLater;
+        case IntermediateResponse.noAcknowledgement: return IntermediateResponse.noAcknowledgement;
+        default:
+            throw new _ConstructionError(
+                'Invalid ENUMERATED value ' + enumerated + ' for IntermediateResponse.',
+                el,
+            );
+    }
+}
 
 
-export const _encode_IntermediateResponse = $._encodeEnumerated;
+export const _encode_IntermediateResponse: $.ASN1Encoder<IntermediateResponse> = $._encodeEnumerated as $.ASN1Encoder<IntermediateResponse>;
 
 
 /* eslint-enable */

@@ -11,7 +11,7 @@ import {
 } from '@wildboar/asn1';
 import * as $ from '@wildboar/asn1/functional';
 import {
-  BIPMessage_nature,
+  type BIPMessage_nature,
   _decode_BIPMessage_nature,
   _encode_BIPMessage_nature,
 } from '../BIP/BIPMessage-nature.ta.mjs';
@@ -50,13 +50,13 @@ export class BIPMessage {
    * @public
    * @readonly
    */
-  readonly nature: BIPMessage_nature;
+  public readonly nature: BIPMessage_nature;
   /**
    * @summary Extensions that are not recognized.
    * @public
    * @readonly
    */
-  readonly _unrecognizedExtensionsList: _Element[];
+  public readonly _unrecognizedExtensionsList: _Element[];
 
   constructor(
     nature: BIPMessage_nature,

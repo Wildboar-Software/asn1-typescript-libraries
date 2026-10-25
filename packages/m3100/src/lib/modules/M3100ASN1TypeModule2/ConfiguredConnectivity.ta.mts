@@ -1,6 +1,6 @@
 /* eslint-disable */
 import {
-    ASN1Element as _Element,
+    type ASN1Element as _Element,
     ASN1TagClass as _TagClass,
     ASN1Construction as _Construction,
     ASN1UniversalType as _UniversalType,
@@ -65,7 +65,7 @@ export type ConfiguredConnectivity = _enum_for_ConfiguredConnectivity;
  *
  * @enum {number}
  */
-export const ConfiguredConnectivity = _enum_for_ConfiguredConnectivity;
+export const ConfiguredConnectivity: typeof _enum_for_ConfiguredConnectivity = _enum_for_ConfiguredConnectivity;
 
 
 /**
@@ -73,7 +73,7 @@ export const ConfiguredConnectivity = _enum_for_ConfiguredConnectivity;
  * @constant
  * @type {number}
  */
-export const ConfiguredConnectivity_sourceConnect: ConfiguredConnectivity =
+export const ConfiguredConnectivity_sourceConnect: _enum_for_ConfiguredConnectivity.sourceConnect =
     ConfiguredConnectivity.sourceConnect; /* LONG_NAMED_ENUMERATED_VALUE */
 
 
@@ -82,7 +82,7 @@ export const ConfiguredConnectivity_sourceConnect: ConfiguredConnectivity =
  * @constant
  * @type {number}
  */
-export const sourceConnect: ConfiguredConnectivity =
+export const sourceConnect: _enum_for_ConfiguredConnectivity.sourceConnect =
     ConfiguredConnectivity.sourceConnect; /* SHORT_NAMED_ENUMERATED_VALUE */
 
 
@@ -91,7 +91,7 @@ export const sourceConnect: ConfiguredConnectivity =
  * @constant
  * @type {number}
  */
-export const ConfiguredConnectivity_sinkConnect: ConfiguredConnectivity =
+export const ConfiguredConnectivity_sinkConnect: _enum_for_ConfiguredConnectivity.sinkConnect =
     ConfiguredConnectivity.sinkConnect; /* LONG_NAMED_ENUMERATED_VALUE */
 
 
@@ -100,7 +100,7 @@ export const ConfiguredConnectivity_sinkConnect: ConfiguredConnectivity =
  * @constant
  * @type {number}
  */
-export const sinkConnect: ConfiguredConnectivity =
+export const sinkConnect: _enum_for_ConfiguredConnectivity.sinkConnect =
     ConfiguredConnectivity.sinkConnect; /* SHORT_NAMED_ENUMERATED_VALUE */
 
 
@@ -109,7 +109,7 @@ export const sinkConnect: ConfiguredConnectivity =
  * @constant
  * @type {number}
  */
-export const ConfiguredConnectivity_bidirectionalConnect: ConfiguredConnectivity =
+export const ConfiguredConnectivity_bidirectionalConnect: _enum_for_ConfiguredConnectivity.bidirectionalConnect =
     ConfiguredConnectivity.bidirectionalConnect; /* LONG_NAMED_ENUMERATED_VALUE */
 
 
@@ -118,7 +118,7 @@ export const ConfiguredConnectivity_bidirectionalConnect: ConfiguredConnectivity
  * @constant
  * @type {number}
  */
-export const bidirectionalConnect: ConfiguredConnectivity =
+export const bidirectionalConnect: _enum_for_ConfiguredConnectivity.bidirectionalConnect =
     ConfiguredConnectivity.bidirectionalConnect; /* SHORT_NAMED_ENUMERATED_VALUE */
 
 
@@ -127,7 +127,7 @@ export const bidirectionalConnect: ConfiguredConnectivity =
  * @constant
  * @type {number}
  */
-export const ConfiguredConnectivity_noConnect: ConfiguredConnectivity =
+export const ConfiguredConnectivity_noConnect: _enum_for_ConfiguredConnectivity.noConnect =
     ConfiguredConnectivity.noConnect; /* LONG_NAMED_ENUMERATED_VALUE */
 
 
@@ -136,18 +136,31 @@ export const ConfiguredConnectivity_noConnect: ConfiguredConnectivity =
  * @constant
  * @type {number}
  */
-export const noConnect: ConfiguredConnectivity =
+export const noConnect: _enum_for_ConfiguredConnectivity.noConnect =
     ConfiguredConnectivity.noConnect; /* SHORT_NAMED_ENUMERATED_VALUE */
 
 
 
 
-export const _decode_ConfiguredConnectivity = $._decodeEnumerated;
+export function _decode_ConfiguredConnectivity(el: _Element): ConfiguredConnectivity {
+    const enumerated = $._decodeEnumerated(el);
+    switch (enumerated) {
+        case ConfiguredConnectivity.sourceConnect: return ConfiguredConnectivity.sourceConnect;
+        case ConfiguredConnectivity.sinkConnect: return ConfiguredConnectivity.sinkConnect;
+        case ConfiguredConnectivity.bidirectionalConnect: return ConfiguredConnectivity.bidirectionalConnect;
+        case ConfiguredConnectivity.noConnect: return ConfiguredConnectivity.noConnect;
+        default:
+            throw new _ConstructionError(
+                'Invalid ENUMERATED value ' + enumerated + ' for ConfiguredConnectivity.',
+                el,
+            );
+    }
+}
 
 
 
 
-export const _encode_ConfiguredConnectivity = $._encodeEnumerated;
+export const _encode_ConfiguredConnectivity: $.ASN1Encoder<ConfiguredConnectivity> = $._encodeEnumerated as $.ASN1Encoder<ConfiguredConnectivity>;
 
 
 /* eslint-enable */

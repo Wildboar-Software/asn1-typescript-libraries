@@ -1,6 +1,6 @@
 /* eslint-disable */
 import {
-    ASN1Element as _Element,
+    type ASN1Element as _Element,
     ASN1TagClass as _TagClass,
     ASN1Construction as _Construction,
     ASN1UniversalType as _UniversalType,
@@ -16,7 +16,7 @@ import {
     _encode_DaysOfMonth,
 } from '../Schedulerev1-ASN1Module/DaysOfMonth.ta.mjs';
 import {
-    TimesOfDayWps,
+    type TimesOfDayWps,
     _decode_TimesOfDayWps,
     _encode_TimesOfDayWps,
 } from '../Schedulerev1-ASN1Module/TimesOfDayWps.ta.mjs';
@@ -38,31 +38,37 @@ import {
  *
  */
 export class MonthMask_Item {
+    /**
+     * @summary `daysOfMonth`.
+     * @description
+     *
+     * Days of the month this mask covers (from first and/or from
+     * last). If omitted at create, defaults to every day. ITU-T
+     * Rec. X.746 (02/00)
+     * [§8.3.6.2](https://www.itu.int/rec/T-REC-X.746-200002-I).
+     * @public
+     * @readonly
+     */
+    public readonly daysOfMonth: DaysOfMonth;
+    /**
+     * @summary `timesOfDayWps`.
+     * @description
+     *
+     * Intervals or trigger times on the selected days. ITU-T
+     * Rec. X.746 (02/00)
+     * [§8.3.6.2](https://www.itu.int/rec/T-REC-X.746-200002-I).
+     * @public
+     * @readonly
+     */
+    public readonly timesOfDayWps: TimesOfDayWps;
+
     constructor(
-        /**
-         * @summary `daysOfMonth`.
-         * @description
-         *
-         * Days of the month this mask covers (from first and/or from
-         * last). If omitted at create, defaults to every day. ITU-T
-         * Rec. X.746 (02/00)
-         * [§8.3.6.2](https://www.itu.int/rec/T-REC-X.746-200002-I).
-         * @public
-         * @readonly
-         */
-        readonly daysOfMonth: DaysOfMonth,
-        /**
-         * @summary `timesOfDayWps`.
-         * @description
-         *
-         * Intervals or trigger times on the selected days. ITU-T
-         * Rec. X.746 (02/00)
-         * [§8.3.6.2](https://www.itu.int/rec/T-REC-X.746-200002-I).
-         * @public
-         * @readonly
-         */
-        readonly timesOfDayWps: TimesOfDayWps
-    ) {}
+        daysOfMonth: DaysOfMonth,
+        timesOfDayWps: TimesOfDayWps
+    ) {
+        this.daysOfMonth = daysOfMonth;
+        this.timesOfDayWps = timesOfDayWps;
+    }
 
     /**
      * @summary Restructures an object into a MonthMask_Item

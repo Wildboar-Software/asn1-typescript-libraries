@@ -1,23 +1,23 @@
 /* eslint-disable */
 import {
-    ASN1Element as _Element,
+    type ASN1Element as _Element,
     ASN1TagClass as _TagClass,
-    OCTET_STRING,
-    OPTIONAL,
+    type OCTET_STRING,
+    type OPTIONAL,
 } from "@wildboar/asn1";
 import * as $ from "@wildboar/asn1/functional";
 import {
-    CMSVersion,
+    type CMSVersion,
     _decode_CMSVersion,
     _encode_CMSVersion,
 } from "../CMSSigncryption/CMSVersion.ta.mjs";
 import {
-    Attributes,
+    type Attributes,
     _decode_Attributes,
     _encode_Attributes,
 } from "../CryptographicMessageSyntax-2010/Attributes.ta.mjs";
 import {
-    EncryptedContentInfo,
+    type EncryptedContentInfo,
     _decode_EncryptedContentInfo,
     _encode_EncryptedContentInfo,
 } from "../CryptographicMessageSyntax-2010/EncryptedContentInfo.ta.mjs";
@@ -43,32 +43,42 @@ import {
  *
  */
 export class NamedKeyEncryptedData {
+    /**
+     * @summary `version`.
+     * @public
+     * @readonly
+     */
+    public readonly version: CMSVersion;
+    /**
+     * @summary `keyName`.
+     * @public
+     * @readonly
+     */
+    public readonly keyName: OPTIONAL<OCTET_STRING>;
+    /**
+     * @summary `encryptedContentInfo`.
+     * @public
+     * @readonly
+     */
+    public readonly encryptedContentInfo: EncryptedContentInfo;
+    /**
+     * @summary `unprotectedAttrs`.
+     * @public
+     * @readonly
+     */
+    public readonly unprotectedAttrs?: OPTIONAL<Attributes>;
+
     constructor(
-        /**
-         * @summary `version`.
-         * @public
-         * @readonly
-         */
-        readonly version: CMSVersion,
-        /**
-         * @summary `keyName`.
-         * @public
-         * @readonly
-         */
-        readonly keyName: OPTIONAL<OCTET_STRING>,
-        /**
-         * @summary `encryptedContentInfo`.
-         * @public
-         * @readonly
-         */
-        readonly encryptedContentInfo: EncryptedContentInfo,
-        /**
-         * @summary `unprotectedAttrs`.
-         * @public
-         * @readonly
-         */
-        readonly unprotectedAttrs?: OPTIONAL<Attributes>
-    ) {}
+        version: CMSVersion,
+        keyName: OPTIONAL<OCTET_STRING>,
+        encryptedContentInfo: EncryptedContentInfo,
+        unprotectedAttrs?: OPTIONAL<Attributes>
+    ) {
+        this.version = version;
+        this.keyName = keyName;
+        this.encryptedContentInfo = encryptedContentInfo;
+        this.unprotectedAttrs = unprotectedAttrs;
+    }
 
     /**
      * @summary Restructures an object into a NamedKeyEncryptedData

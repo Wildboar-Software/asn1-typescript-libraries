@@ -1,9 +1,9 @@
 /* eslint-disable */
 import {
-    ASN1Element as _Element,
+    type ASN1Element as _Element,
     ASN1TagClass as _TagClass,
-    BIT_STRING,
-    OPTIONAL
+    type BIT_STRING,
+    type OPTIONAL
 } from "@wildboar/asn1";
 import * as $ from "@wildboar/asn1/functional";
 import { _decode_ActivityClassType, _encode_ActivityClassType, _enum_for_ActivityClassType, ActivityClassType } from "../EN301040/ActivityClassType.ta.mjs";
@@ -210,31 +210,31 @@ class ActivityType {
          * @static
          */
 
-    public static _enum_for_cctivity = _enum_for_ActivityClassType;        /**
+    public static _enum_for_cctivity: typeof _enum_for_ActivityClassType = _enum_for_ActivityClassType;        /**
          * @summary The enum used as the type of the component `callRelation`
          * @public
          * @static
          */
 
-    public static _enum_for_callRelation = _enum_for_ActivityType_callRelation;        /**
+    public static _enum_for_callRelation: typeof _enum_for_ActivityType_callRelation = _enum_for_ActivityType_callRelation;        /**
          * @summary The enum used as the type of the component `direction`
          * @public
          * @static
          */
 
-    public static _enum_for_direction = _enum_for_ActivityType_direction;        /**
+    public static _enum_for_direction: typeof _enum_for_ActivityType_direction = _enum_for_ActivityType_direction;        /**
          * @summary The enum used as the type of the component `scope`
          * @public
          * @static
          */
 
-    public static _enum_for_scope = _enum_for_ActivityType_scope;        /**
+    public static _enum_for_scope: typeof _enum_for_ActivityType_scope = _enum_for_ActivityType_scope;        /**
          * @summary The enum used as the type of the component `sStype`
          * @public
          * @static
          */
 
-    public static _enum_for_sStype = _enum_for_SSType;
+    public static _enum_for_sStype: typeof _enum_for_SSType = _enum_for_SSType;
 }
 
 /**

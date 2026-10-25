@@ -1,9 +1,9 @@
 /* eslint-disable */
 import {
-    OPTIONAL,
-    BOOLEAN,
-    VisibleString,
-    ASN1Element as _Element,
+    type OPTIONAL,
+    type BOOLEAN,
+    type VisibleString,
+    type ASN1Element as _Element,
     ASN1TagClass as _TagClass,
     ASN1Construction as _Construction,
     ASN1UniversalType as _UniversalType,
@@ -13,9 +13,9 @@ import {
     ASN1ConstructionError as _ConstructionError,
 } from "@wildboar/asn1";
 import * as $ from "@wildboar/asn1/functional";
-import { Address, _decode_Address, _encode_Address } from "../MMS-Object-Module-1/Address.ta.mjs";
-import { TypeDescription, _decode_TypeDescription, _encode_TypeDescription } from "../MMS-Object-Module-1/TypeDescription.ta.mjs";
-import { Identifier, _decode_Identifier, _encode_Identifier } from "../ISO-9506-MMS-1/Identifier.ta.mjs";
+import { type Address, _decode_Address, _encode_Address } from "../MMS-Object-Module-1/Address.ta.mjs";
+import { type TypeDescription, _decode_TypeDescription, _encode_TypeDescription } from "../MMS-Object-Module-1/TypeDescription.ta.mjs";
+import { type Identifier, _decode_Identifier, _encode_Identifier } from "../ISO-9506-MMS-1/Identifier.ta.mjs";
 
 
 /**
@@ -42,69 +42,81 @@ import { Identifier, _decode_Identifier, _encode_Identifier } from "../ISO-9506-
  */
 export
 class GetVariableAccessAttributes_Response {
+    /**
+     * @summary `mmsDeletable`.
+     * @description
+     *
+     * MMS Deletable of the referenced object
+     * (ISO 9506-1:2003 §9.1.4).
+     * ISO 9506-1:2003 §14.9.1.2.1.
+     *
+     * @public
+     * @readonly
+     */
+    public readonly mmsDeletable: BOOLEAN;
+    /**
+     * @summary `address`.
+     * @description
+     *
+     * Present iff `vadr` was negotiated and the object is
+     * a Named Variable with `&accessMethod` public; then
+     * it is that `&address`. Otherwise omitted.
+     * ISO 9506-1:2003 §14.9.1.2.2.
+     *
+     * @public
+     * @readonly
+     */
+    public readonly address: OPTIONAL<Address>;
+    /**
+     * @summary `typeDescription`.
+     * @description
+     *
+     * `&typeDescription` of the Named or Unnamed Variable.
+     * ISO 9506-1:2003 §14.9.1.2.3.
+     *
+     * @public
+     * @readonly
+     */
+    public readonly typeDescription: TypeDescription;
+    /**
+     * @summary `accessControlList`.
+     * @description
+     *
+     * `&accessControl`. Present iff `aco` CBB was
+     * negotiated. Absent in minor versions 1 and 2.
+     * ISO 9506-1:2003 §14.9.1.2.4.
+     * ISO 9506-2:2003 §14.9.2.1.
+     *
+     * @public
+     * @readonly
+     */
+    public readonly accessControlList?: OPTIONAL<Identifier>;
+    /**
+     * @summary `meaning`.
+     * @description
+     *
+     * Named Variable `&meaning` if present. Present iff
+     * Kind Of Variable is NAMED and `sem` CBB was
+     * negotiated. ISO 9506-1:2003 §14.9.1.2.5.
+     *
+     * @public
+     * @readonly
+     */
+    public readonly meaning?: OPTIONAL<VisibleString>;
+
     constructor (
-        /**
-         * @summary `mmsDeletable`.
-         * @description
-         *
-         * MMS Deletable of the referenced object
-         * (ISO 9506-1:2003 §9.1.4).
-         * ISO 9506-1:2003 §14.9.1.2.1.
-         *
-         * @public
-         * @readonly
-         */
-        readonly mmsDeletable: BOOLEAN,
-        /**
-         * @summary `address`.
-         * @description
-         *
-         * Present iff `vadr` was negotiated and the object is
-         * a Named Variable with `&accessMethod` public; then
-         * it is that `&address`. Otherwise omitted.
-         * ISO 9506-1:2003 §14.9.1.2.2.
-         *
-         * @public
-         * @readonly
-         */
-        readonly address: OPTIONAL<Address>,
-        /**
-         * @summary `typeDescription`.
-         * @description
-         *
-         * `&typeDescription` of the Named or Unnamed Variable.
-         * ISO 9506-1:2003 §14.9.1.2.3.
-         *
-         * @public
-         * @readonly
-         */
-        readonly typeDescription: TypeDescription,
-        /**
-         * @summary `accessControlList`.
-         * @description
-         *
-         * `&accessControl`. Present iff `aco` CBB was
-         * negotiated. Absent in minor versions 1 and 2.
-         * ISO 9506-1:2003 §14.9.1.2.4.
-         * ISO 9506-2:2003 §14.9.2.1.
-         *
-         * @public
-         * @readonly
-         */
-        readonly accessControlList?: OPTIONAL<Identifier>,
-        /**
-         * @summary `meaning`.
-         * @description
-         *
-         * Named Variable `&meaning` if present. Present iff
-         * Kind Of Variable is NAMED and `sem` CBB was
-         * negotiated. ISO 9506-1:2003 §14.9.1.2.5.
-         *
-         * @public
-         * @readonly
-         */
-        readonly meaning?: OPTIONAL<VisibleString>
-    ) {}
+        mmsDeletable: BOOLEAN,
+        address: OPTIONAL<Address>,
+        typeDescription: TypeDescription,
+        accessControlList?: OPTIONAL<Identifier>,
+        meaning?: OPTIONAL<VisibleString>
+    ) {
+        this.mmsDeletable = mmsDeletable;
+        this.address = address;
+        this.typeDescription = typeDescription;
+        this.accessControlList = accessControlList;
+        this.meaning = meaning;
+    }
 
     /**
      * @summary Restructures an object into a GetVariableAccessAttributes_Response

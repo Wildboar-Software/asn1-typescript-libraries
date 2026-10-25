@@ -1,13 +1,13 @@
 /* eslint-disable */
 import {
-    OCTET_STRING,
+    type OCTET_STRING,
     ASN1ConstructionError as _ConstructionError,
-    ASN1Element as _Element,
+    type ASN1Element as _Element,
     ASN1TagClass as _TagClass,
     ASN1SizeError
 } from "@wildboar/asn1";
 import * as $ from "@wildboar/asn1/functional";
-import { WildcardField, _decode_WildcardField, _encode_WildcardField } from "../MEDIA-GATEWAY-CONTROL/WildcardField.ta.mjs";
+import { type WildcardField, _decode_WildcardField, _encode_WildcardField } from "../MEDIA-GATEWAY-CONTROL/WildcardField.ta.mjs";
 
 
 /**
@@ -54,7 +54,7 @@ class TerminationID {
      * @public
      * @readonly
      */
-    readonly wildcard: WildcardField[];
+    public readonly wildcard: WildcardField[];
     /**
      * @summary `id`.
      * @description
@@ -66,7 +66,7 @@ class TerminationID {
      * @public
      * @readonly
      */
-    readonly id: OCTET_STRING;
+    public readonly id: OCTET_STRING;
     /**
      * @summary Extensions that are not recognized.
      * @description
@@ -77,16 +77,16 @@ class TerminationID {
      * @public
      * @readonly
      */
-    readonly _unrecognizedExtensionsList: _Element[];
+    public readonly _unrecognizedExtensionsList: _Element[];
 
     constructor (
         wildcard: WildcardField[],
         id: OCTET_STRING,
         _unrecognizedExtensionsList: _Element[] = []
     ) {
-        this.wildcard = wildcard;
-        this.id = id;
-        this._unrecognizedExtensionsList = _unrecognizedExtensionsList;
+            this.wildcard = wildcard;
+            this.id = id;
+            this._unrecognizedExtensionsList = _unrecognizedExtensionsList;
             if (id.length < 1 || id.length > 8) {
                 throw new ASN1SizeError("TerminationID.id violates SIZE constraint");
             }

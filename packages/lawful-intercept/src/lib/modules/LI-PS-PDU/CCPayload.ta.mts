@@ -1,18 +1,18 @@
 /* eslint-disable */
 import {
-    GeneralizedTime,
-    OPTIONAL,
-    ASN1Element as _Element,
+    type GeneralizedTime,
+    type OPTIONAL,
+    type ASN1Element as _Element,
     ASN1TagClass as _TagClass
 } from "@wildboar/asn1";
 import * as $ from "@wildboar/asn1/functional";
-import { PayloadDirection, _decode_PayloadDirection, _encode_PayloadDirection, _enum_for_PayloadDirection } from "../LI-PS-PDU/PayloadDirection.ta.mjs";
+import { type PayloadDirection, _decode_PayloadDirection, _encode_PayloadDirection, _enum_for_PayloadDirection } from "../LI-PS-PDU/PayloadDirection.ta.mjs";
 // export { PayloadDirection, _enum_for_PayloadDirection, PayloadDirection_fromTarget /* IMPORTED_LONG_ENUMERATION_ITEM */, fromTarget /* IMPORTED_SHORT_ENUMERATION_ITEM */, PayloadDirection_toTarget /* IMPORTED_LONG_ENUMERATION_ITEM */, toTarget /* IMPORTED_SHORT_ENUMERATION_ITEM */, PayloadDirection_indeterminate /* IMPORTED_LONG_ENUMERATION_ITEM */, indeterminate /* IMPORTED_SHORT_ENUMERATION_ITEM */, PayloadDirection_combined /* IMPORTED_LONG_ENUMERATION_ITEM */, combined /* IMPORTED_SHORT_ENUMERATION_ITEM */, PayloadDirection_notapplicable /* IMPORTED_LONG_ENUMERATION_ITEM */, notapplicable /* IMPORTED_SHORT_ENUMERATION_ITEM */, _decode_PayloadDirection, _encode_PayloadDirection } from "../LI-PS-PDU/PayloadDirection.ta.mjs";
-import { CCContents, _decode_CCContents, _encode_CCContents } from "../LI-PS-PDU/CCContents.ta.mjs";
+import { type CCContents, _decode_CCContents, _encode_CCContents } from "../LI-PS-PDU/CCContents.ta.mjs";
 // export { CCContents, _decode_CCContents, _encode_CCContents } from "../LI-PS-PDU/CCContents.ta.mjs";
 import { MicroSecondTimeStamp, _decode_MicroSecondTimeStamp, _encode_MicroSecondTimeStamp } from "../LI-PS-PDU/MicroSecondTimeStamp.ta.mjs";
 // export { MicroSecondTimeStamp, _decode_MicroSecondTimeStamp, _encode_MicroSecondTimeStamp } from "../LI-PS-PDU/MicroSecondTimeStamp.ta.mjs";
-import { TimeStampQualifier, _decode_TimeStampQualifier, _encode_TimeStampQualifier, _enum_for_TimeStampQualifier } from "../LI-PS-PDU/TimeStampQualifier.ta.mjs";
+import { type TimeStampQualifier, _decode_TimeStampQualifier, _encode_TimeStampQualifier, _enum_for_TimeStampQualifier } from "../LI-PS-PDU/TimeStampQualifier.ta.mjs";
 // export { TimeStampQualifier, _enum_for_TimeStampQualifier, TimeStampQualifier_unknown /* IMPORTED_LONG_ENUMERATION_ITEM */, unknown /* IMPORTED_SHORT_ENUMERATION_ITEM */, TimeStampQualifier_timeOfInterception /* IMPORTED_LONG_ENUMERATION_ITEM */, timeOfInterception /* IMPORTED_SHORT_ENUMERATION_ITEM */, TimeStampQualifier_timeOfMediation /* IMPORTED_LONG_ENUMERATION_ITEM */, timeOfMediation /* IMPORTED_SHORT_ENUMERATION_ITEM */, TimeStampQualifier_timeOfAggregation /* IMPORTED_LONG_ENUMERATION_ITEM */, timeOfAggregation /* IMPORTED_SHORT_ENUMERATION_ITEM */, _decode_TimeStampQualifier, _encode_TimeStampQualifier } from "../LI-PS-PDU/TimeStampQualifier.ta.mjs";
 
 
@@ -179,13 +179,13 @@ class CCPayload {
          * @static
          */
 
-    public static _enum_for_payloadDirection = _enum_for_PayloadDirection;        /**
+    public static _enum_for_payloadDirection: typeof _enum_for_PayloadDirection = _enum_for_PayloadDirection;        /**
          * @summary The enum used as the type of the component `timeStampQualifier`
          * @public
          * @static
          */
 
-    public static _enum_for_timeStampQualifier = _enum_for_TimeStampQualifier;
+    public static _enum_for_timeStampQualifier: typeof _enum_for_TimeStampQualifier = _enum_for_TimeStampQualifier;
 }
 
 /**

@@ -1,25 +1,25 @@
 /* eslint-disable */
 import {
-    INTEGER,
-    OCTET_STRING,
-    OPTIONAL,
-    RELATIVE_OID,
-    ASN1Element as _Element,
+    type INTEGER,
+    type OCTET_STRING,
+    type OPTIONAL,
+    type RELATIVE_OID,
+    type ASN1Element as _Element,
     ASN1TagClass as _TagClass,
     ASN1OverflowError
 } from "@wildboar/asn1";
 import * as $ from "@wildboar/asn1/functional";
-import { Messaging_System_Type, _decode_Messaging_System_Type, _encode_Messaging_System_Type, _enum_for_Messaging_System_Type } from "../EmailPDU/Messaging-System-Type.ta.mjs";
+import { type Messaging_System_Type, _decode_Messaging_System_Type, _encode_Messaging_System_Type, _enum_for_Messaging_System_Type } from "../EmailPDU/Messaging-System-Type.ta.mjs";
 // export { Messaging_System_Type, _enum_for_Messaging_System_Type, Messaging_System_Type_unified_messaging /* IMPORTED_LONG_ENUMERATION_ITEM */, unified_messaging /* IMPORTED_SHORT_ENUMERATION_ITEM */, _decode_Messaging_System_Type, _encode_Messaging_System_Type } from "../EmailPDU/Messaging-System-Type.ta.mjs";
-import { Messaging_Event_Category, _decode_Messaging_Event_Category, _encode_Messaging_Event_Category } from "../EmailPDU/Messaging-Event-Category.ta.mjs";
+import { type Messaging_Event_Category, _decode_Messaging_Event_Category, _encode_Messaging_Event_Category } from "../EmailPDU/Messaging-Event-Category.ta.mjs";
 // export { Messaging_Event_Category, _decode_Messaging_Event_Category, _encode_Messaging_Event_Category } from "../EmailPDU/Messaging-Event-Category.ta.mjs";
-import { Messaging_Status, _decode_Messaging_Status, _encode_Messaging_Status, _enum_for_Messaging_Status } from "../EmailPDU/Messaging-Status.ta.mjs";
+import { type Messaging_Status, _decode_Messaging_Status, _encode_Messaging_Status, _enum_for_Messaging_Status } from "../EmailPDU/Messaging-Status.ta.mjs";
 // export { Messaging_Status, _enum_for_Messaging_Status, Messaging_Status_unknown /* IMPORTED_LONG_ENUMERATION_ITEM */, Messaging_Status_not_applicable /* IMPORTED_LONG_ENUMERATION_ITEM */, not_applicable /* IMPORTED_SHORT_ENUMERATION_ITEM */, Messaging_Status_operation_failed /* IMPORTED_LONG_ENUMERATION_ITEM */, operation_failed /* IMPORTED_SHORT_ENUMERATION_ITEM */, Messaging_Status_operation_succeeded /* IMPORTED_LONG_ENUMERATION_ITEM */, operation_succeeded /* IMPORTED_SHORT_ENUMERATION_ITEM */, Messaging_Status_operation_cancelled /* IMPORTED_LONG_ENUMERATION_ITEM */, operation_cancelled /* IMPORTED_SHORT_ENUMERATION_ITEM */, Messaging_Status_operation_started /* IMPORTED_LONG_ENUMERATION_ITEM */, operation_started /* IMPORTED_SHORT_ENUMERATION_ITEM */, Messaging_Status_operation_lost /* IMPORTED_LONG_ENUMERATION_ITEM */, operation_lost /* IMPORTED_SHORT_ENUMERATION_ITEM */, _decode_Messaging_Status, _encode_Messaging_Status } from "../EmailPDU/Messaging-Status.ta.mjs";
 import { Messaging_Party_Information, _decode_Messaging_Party_Information, _encode_Messaging_Party_Information } from "../EmailPDU/Messaging-Party-Information.ta.mjs";
 // export { Messaging_Party_Information, _decode_Messaging_Party_Information, _encode_Messaging_Party_Information } from "../EmailPDU/Messaging-Party-Information.ta.mjs";
-import { Messaging_Trigger, _decode_Messaging_Trigger, _encode_Messaging_Trigger, _enum_for_Messaging_Trigger } from "../EmailPDU/Messaging-Trigger.ta.mjs";
+import { type Messaging_Trigger, _decode_Messaging_Trigger, _encode_Messaging_Trigger, _enum_for_Messaging_Trigger } from "../EmailPDU/Messaging-Trigger.ta.mjs";
 // export { Messaging_Trigger, _enum_for_Messaging_Trigger, Messaging_Trigger_unknown /* IMPORTED_LONG_ENUMERATION_ITEM */, Messaging_Trigger_user /* IMPORTED_LONG_ENUMERATION_ITEM */, user /* IMPORTED_SHORT_ENUMERATION_ITEM */, Messaging_Trigger_user_agent /* IMPORTED_LONG_ENUMERATION_ITEM */, user_agent /* IMPORTED_SHORT_ENUMERATION_ITEM */, Messaging_Trigger_system /* IMPORTED_LONG_ENUMERATION_ITEM */, system /* IMPORTED_SHORT_ENUMERATION_ITEM */, Messaging_Trigger_system_operator /* IMPORTED_LONG_ENUMERATION_ITEM */, system_operator /* IMPORTED_SHORT_ENUMERATION_ITEM */, _decode_Messaging_Trigger, _encode_Messaging_Trigger } from "../EmailPDU/Messaging-Trigger.ta.mjs";
-import { Messaging_Property, _decode_Messaging_Property, _encode_Messaging_Property } from "../EmailPDU/Messaging-Property.ta.mjs";
+import { type Messaging_Property, _decode_Messaging_Property, _encode_Messaging_Property } from "../EmailPDU/Messaging-Property.ta.mjs";
 // export { Messaging_Property, _decode_Messaging_Property, _encode_Messaging_Property } from "../EmailPDU/Messaging-Property.ta.mjs";
 
 
@@ -296,19 +296,19 @@ class MessagingIRI {
          * @static
          */
 
-    public static _enum_for_system_type = _enum_for_Messaging_System_Type;        /**
+    public static _enum_for_system_type: typeof _enum_for_Messaging_System_Type = _enum_for_Messaging_System_Type;        /**
          * @summary The enum used as the type of the component `status`
          * @public
          * @static
          */
 
-    public static _enum_for_status = _enum_for_Messaging_Status;        /**
+    public static _enum_for_status: typeof _enum_for_Messaging_Status = _enum_for_Messaging_Status;        /**
          * @summary The enum used as the type of the component `trigger`
          * @public
          * @static
          */
 
-    public static _enum_for_trigger = _enum_for_Messaging_Trigger;
+    public static _enum_for_trigger: typeof _enum_for_Messaging_Trigger = _enum_for_Messaging_Trigger;
 }
 
 /**

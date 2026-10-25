@@ -1,6 +1,6 @@
 /* eslint-disable */
 import {
-    ASN1Element as _Element,
+    type ASN1Element as _Element,
     ASN1TagClass as _TagClass,
     ASN1Construction as _Construction,
     ASN1UniversalType as _UniversalType,
@@ -64,14 +64,14 @@ export type ConversionWithLossProhibited = _enum_for_ConversionWithLossProhibite
  *
  * @enum {number}
  */
-export const ConversionWithLossProhibited = _enum_for_ConversionWithLossProhibited;
+export const ConversionWithLossProhibited: typeof _enum_for_ConversionWithLossProhibited = _enum_for_ConversionWithLossProhibited;
 
 /**
  * @summary ConversionWithLossProhibited_conversion_with_loss_allowed
  * @constant
  * @type {number}
  */
-export const ConversionWithLossProhibited_conversion_with_loss_allowed: ConversionWithLossProhibited =
+export const ConversionWithLossProhibited_conversion_with_loss_allowed: _enum_for_ConversionWithLossProhibited.conversion_with_loss_allowed =
     ConversionWithLossProhibited.conversion_with_loss_allowed; /* LONG_NAMED_ENUMERATED_VALUE */
 
 /**
@@ -79,7 +79,7 @@ export const ConversionWithLossProhibited_conversion_with_loss_allowed: Conversi
  * @constant
  * @type {number}
  */
-export const conversion_with_loss_allowed: ConversionWithLossProhibited =
+export const conversion_with_loss_allowed: _enum_for_ConversionWithLossProhibited.conversion_with_loss_allowed =
     ConversionWithLossProhibited.conversion_with_loss_allowed; /* SHORT_NAMED_ENUMERATED_VALUE */
 
 /**
@@ -87,7 +87,7 @@ export const conversion_with_loss_allowed: ConversionWithLossProhibited =
  * @constant
  * @type {number}
  */
-export const ConversionWithLossProhibited_conversion_with_loss_prohibited: ConversionWithLossProhibited =
+export const ConversionWithLossProhibited_conversion_with_loss_prohibited: _enum_for_ConversionWithLossProhibited.conversion_with_loss_prohibited =
     ConversionWithLossProhibited.conversion_with_loss_prohibited; /* LONG_NAMED_ENUMERATED_VALUE */
 
 /**
@@ -95,14 +95,25 @@ export const ConversionWithLossProhibited_conversion_with_loss_prohibited: Conve
  * @constant
  * @type {number}
  */
-export const conversion_with_loss_prohibited: ConversionWithLossProhibited =
+export const conversion_with_loss_prohibited: _enum_for_ConversionWithLossProhibited.conversion_with_loss_prohibited =
     ConversionWithLossProhibited.conversion_with_loss_prohibited; /* SHORT_NAMED_ENUMERATED_VALUE */
 
 
-export const _decode_ConversionWithLossProhibited = $._decodeEnumerated;
+export function _decode_ConversionWithLossProhibited(el: _Element): ConversionWithLossProhibited {
+    const enumerated = $._decodeEnumerated(el);
+    switch (enumerated) {
+        case ConversionWithLossProhibited.conversion_with_loss_allowed: return ConversionWithLossProhibited.conversion_with_loss_allowed;
+        case ConversionWithLossProhibited.conversion_with_loss_prohibited: return ConversionWithLossProhibited.conversion_with_loss_prohibited;
+        default:
+            throw new _ConstructionError(
+                'Invalid ENUMERATED value ' + enumerated + ' for ConversionWithLossProhibited.',
+                el,
+            );
+    }
+}
 
 
-export const _encode_ConversionWithLossProhibited = $._encodeEnumerated;
+export const _encode_ConversionWithLossProhibited: $.ASN1Encoder<ConversionWithLossProhibited> = $._encodeEnumerated as $.ASN1Encoder<ConversionWithLossProhibited>;
 
 
 /* eslint-enable */

@@ -1,7 +1,7 @@
 /* eslint-disable */
 import {
-    INTEGER,
-    ASN1Element as _Element,
+    type INTEGER,
+    type ASN1Element as _Element,
     ASN1TagClass as _TagClass,
     ASN1Construction as _Construction,
     ASN1UniversalType as _UniversalType,
@@ -40,7 +40,7 @@ export type TestDirection = INTEGER;
  * @constant
  * @type {number}
  */
-export const TestDirection_atoZ: TestDirection = 0; /* LONG_NAMED_INTEGER_VALUE */
+export const TestDirection_atoZ: 0 = 0 satisfies TestDirection; /* LONG_NAMED_INTEGER_VALUE */
 
 /**
  * @summary TestDirection_atoZ
@@ -50,7 +50,7 @@ export const TestDirection_atoZ: TestDirection = 0; /* LONG_NAMED_INTEGER_VALUE 
  * @constant
  * @type {number}
  */
-export const atoZ: TestDirection = TestDirection_atoZ; /* SHORT_NAMED_INTEGER_VALUE */
+export const atoZ: 0 = TestDirection_atoZ; /* SHORT_NAMED_INTEGER_VALUE */
 
 /**
  * @summary TestDirection_ztoA
@@ -60,7 +60,7 @@ export const atoZ: TestDirection = TestDirection_atoZ; /* SHORT_NAMED_INTEGER_VA
  * @constant
  * @type {number}
  */
-export const TestDirection_ztoA: TestDirection = 1; /* LONG_NAMED_INTEGER_VALUE */
+export const TestDirection_ztoA: 1 = 1 satisfies TestDirection; /* LONG_NAMED_INTEGER_VALUE */
 
 /**
  * @summary TestDirection_ztoA
@@ -70,7 +70,7 @@ export const TestDirection_ztoA: TestDirection = 1; /* LONG_NAMED_INTEGER_VALUE 
  * @constant
  * @type {number}
  */
-export const ztoA: TestDirection = TestDirection_ztoA; /* SHORT_NAMED_INTEGER_VALUE */
+export const ztoA: 1 = TestDirection_ztoA; /* SHORT_NAMED_INTEGER_VALUE */
 
 /**
  * @summary TestDirection_bothDirections
@@ -80,7 +80,7 @@ export const ztoA: TestDirection = TestDirection_ztoA; /* SHORT_NAMED_INTEGER_VA
  * @constant
  * @type {number}
  */
-export const TestDirection_bothDirections: TestDirection = 2; /* LONG_NAMED_INTEGER_VALUE */
+export const TestDirection_bothDirections: 2 = 2 satisfies TestDirection; /* LONG_NAMED_INTEGER_VALUE */
 
 /**
  * @summary TestDirection_bothDirections
@@ -90,7 +90,7 @@ export const TestDirection_bothDirections: TestDirection = 2; /* LONG_NAMED_INTE
  * @constant
  * @type {number}
  */
-export const bothDirections: TestDirection = TestDirection_bothDirections; /* SHORT_NAMED_INTEGER_VALUE */
+export const bothDirections: 2 = TestDirection_bothDirections; /* SHORT_NAMED_INTEGER_VALUE */
 
 /**
  * @summary TestDirection_transmitFromNearEnd
@@ -100,7 +100,7 @@ export const bothDirections: TestDirection = TestDirection_bothDirections; /* SH
  * @constant
  * @type {number}
  */
-export const TestDirection_transmitFromNearEnd: TestDirection = 3; /* LONG_NAMED_INTEGER_VALUE */
+export const TestDirection_transmitFromNearEnd: 3 = 3 satisfies TestDirection; /* LONG_NAMED_INTEGER_VALUE */
 
 /**
  * @summary TestDirection_transmitFromNearEnd
@@ -110,7 +110,7 @@ export const TestDirection_transmitFromNearEnd: TestDirection = 3; /* LONG_NAMED
  * @constant
  * @type {number}
  */
-export const transmitFromNearEnd: TestDirection = TestDirection_transmitFromNearEnd; /* SHORT_NAMED_INTEGER_VALUE */
+export const transmitFromNearEnd: 3 = TestDirection_transmitFromNearEnd; /* SHORT_NAMED_INTEGER_VALUE */
 
 /**
  * @summary TestDirection_receiveFromNearEnd
@@ -120,7 +120,7 @@ export const transmitFromNearEnd: TestDirection = TestDirection_transmitFromNear
  * @constant
  * @type {number}
  */
-export const TestDirection_receiveFromNearEnd: TestDirection = 4; /* LONG_NAMED_INTEGER_VALUE */
+export const TestDirection_receiveFromNearEnd: 4 = 4 satisfies TestDirection; /* LONG_NAMED_INTEGER_VALUE */
 
 /**
  * @summary TestDirection_receiveFromNearEnd
@@ -130,13 +130,13 @@ export const TestDirection_receiveFromNearEnd: TestDirection = 4; /* LONG_NAMED_
  * @constant
  * @type {number}
  */
-export const receiveFromNearEnd: TestDirection = TestDirection_receiveFromNearEnd; /* SHORT_NAMED_INTEGER_VALUE */
+export const receiveFromNearEnd: 4 = TestDirection_receiveFromNearEnd; /* SHORT_NAMED_INTEGER_VALUE */
 
 
-export const _decode_TestDirection = $._decodeInteger;
+export const _decode_TestDirection: $.ASN1Decoder<INTEGER> = $._decodeInteger;
 
 
-export const _encode_TestDirection = $._encodeInteger;
+export const _encode_TestDirection: $.ASN1Encoder<INTEGER> = $._encodeInteger;
 
 
 /* eslint-enable */

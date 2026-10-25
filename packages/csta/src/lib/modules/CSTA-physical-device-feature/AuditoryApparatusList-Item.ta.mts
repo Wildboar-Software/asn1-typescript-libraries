@@ -2,13 +2,13 @@
 
 import * as $ from "@wildboar/asn1/functional";
 import {
-    SEQUENCE,
-    SET,
-    ASN1Element as _Element,
+    type SEQUENCE,
+    type SET,
+    type ASN1Element as _Element,
     ASN1TagClass as _TagClass,
     ASN1ConstructionError as _ConstructionError
 } from "@wildboar/asn1";
-import { AuditoryApparatusID, _decode_AuditoryApparatusID, _encode_AuditoryApparatusID } from "../CSTA-physical-device-feature/AuditoryApparatusID.ta.mjs";
+import { type AuditoryApparatusID, _decode_AuditoryApparatusID, _encode_AuditoryApparatusID } from "../CSTA-physical-device-feature/AuditoryApparatusID.ta.mjs";
 
 import {
     AuditoryApparatusList_Item_auditoryApparatusType,
@@ -18,24 +18,24 @@ import {
 } from "../CSTA-physical-device-feature/AuditoryApparatusList-Item-auditoryApparatusType.ta.mjs";
 
 import {
-    AuditoryApparatusList_Item_speaker,
+    type AuditoryApparatusList_Item_speaker,
     _decode_AuditoryApparatusList_Item_speaker,
     _encode_AuditoryApparatusList_Item_speaker
 } from "../CSTA-physical-device-feature/AuditoryApparatusList-Item-speaker.ta.mjs";
 
 import {
-    AuditoryApparatusList_Item_microphone,
+    type AuditoryApparatusList_Item_microphone,
     _decode_AuditoryApparatusList_Item_microphone,
     _encode_AuditoryApparatusList_Item_microphone
 } from "../CSTA-physical-device-feature/AuditoryApparatusList-Item-microphone.ta.mjs";
 
 import {
-    AuditoryApparatusList_Item_hookswitch,
+    type AuditoryApparatusList_Item_hookswitch,
     _decode_AuditoryApparatusList_Item_hookswitch,
     _encode_AuditoryApparatusList_Item_hookswitch
 } from "../CSTA-physical-device-feature/AuditoryApparatusList-Item-hookswitch.ta.mjs";
 
-import { HookswitchID, _decode_HookswitchID, _encode_HookswitchID } from "../CSTA-physical-device-feature/HookswitchID.ta.mjs";
+import { type HookswitchID, _decode_HookswitchID, _encode_HookswitchID } from "../CSTA-physical-device-feature/HookswitchID.ta.mjs";
 
 
 
@@ -65,72 +65,86 @@ import { HookswitchID, _decode_HookswitchID, _encode_HookswitchID } from "../CST
  */
 export
 class AuditoryApparatusList_Item {
+    /**
+     * @summary `auditoryApparatus`.
+     * @description
+     *
+     * Identifier of this apparatus. ECMA-269 §12.3.4.
+     *
+     * @public
+     * @readonly
+     */
+    public readonly auditoryApparatus: AuditoryApparatusID;
+    /**
+     * @summary `auditoryApparatusType`.
+     * @description
+     *
+     * Speakerphone, handset, headset, speaker-only, or other. ECMA-285
+     * §9.16.
+     *
+     * @public
+     * @readonly
+     */
+    public readonly auditoryApparatusType: AuditoryApparatusList_Item_auditoryApparatusType;
+    /**
+     * @summary `speaker`.
+     * @description
+     *
+     * Whether a speaker is present and volume/mute can be set or read.
+     * ECMA-285 §9.16.
+     *
+     * @public
+     * @readonly
+     */
+    public readonly speaker: AuditoryApparatusList_Item_speaker;
+    /**
+     * @summary `microphone`.
+     * @description
+     *
+     * Whether a microphone is present and gain/mute can be set or read.
+     * ECMA-285 §9.16.
+     *
+     * @public
+     * @readonly
+     */
+    public readonly microphone: AuditoryApparatusList_Item_microphone;
+    /**
+     * @summary `hookswitch`.
+     * @description
+     *
+     * Whether hookswitch can be set and whether it is on-hook. ECMA-285
+     * §9.16.
+     *
+     * @public
+     * @readonly
+     */
+    public readonly hookswitch: AuditoryApparatusList_Item_hookswitch;
+    /**
+     * @summary `hookswitchID`.
+     * @description
+     *
+     * Hookswitch of this apparatus. ECMA-269 §12.3.14.
+     *
+     * @public
+     * @readonly
+     */
+    public readonly hookswitchID: HookswitchID;
+
     constructor (
-        /**
-         * @summary `auditoryApparatus`.
-         * @description
-         *
-         * Identifier of this apparatus. ECMA-269 §12.3.4.
-         *
-         * @public
-         * @readonly
-         */
-        readonly auditoryApparatus: AuditoryApparatusID,
-        /**
-         * @summary `auditoryApparatusType`.
-         * @description
-         *
-         * Speakerphone, handset, headset, speaker-only, or other. ECMA-285
-         * §9.16.
-         *
-         * @public
-         * @readonly
-         */
-        readonly auditoryApparatusType: AuditoryApparatusList_Item_auditoryApparatusType,
-        /**
-         * @summary `speaker`.
-         * @description
-         *
-         * Whether a speaker is present and volume/mute can be set or read.
-         * ECMA-285 §9.16.
-         *
-         * @public
-         * @readonly
-         */
-        readonly speaker: AuditoryApparatusList_Item_speaker,
-        /**
-         * @summary `microphone`.
-         * @description
-         *
-         * Whether a microphone is present and gain/mute can be set or read.
-         * ECMA-285 §9.16.
-         *
-         * @public
-         * @readonly
-         */
-        readonly microphone: AuditoryApparatusList_Item_microphone,
-        /**
-         * @summary `hookswitch`.
-         * @description
-         *
-         * Whether hookswitch can be set and whether it is on-hook. ECMA-285
-         * §9.16.
-         *
-         * @public
-         * @readonly
-         */
-        readonly hookswitch: AuditoryApparatusList_Item_hookswitch,
-        /**
-         * @summary `hookswitchID`.
-         * @description
-         *
-         * Hookswitch of this apparatus. ECMA-269 §12.3.14.
-         *
-         * @public
-         * @readonly
-         */
-        readonly hookswitchID: HookswitchID
-    ) {}
+        auditoryApparatus: AuditoryApparatusID,
+        auditoryApparatusType: AuditoryApparatusList_Item_auditoryApparatusType,
+        speaker: AuditoryApparatusList_Item_speaker,
+        microphone: AuditoryApparatusList_Item_microphone,
+        hookswitch: AuditoryApparatusList_Item_hookswitch,
+        hookswitchID: HookswitchID
+    ) {
+        this.auditoryApparatus = auditoryApparatus;
+        this.auditoryApparatusType = auditoryApparatusType;
+        this.speaker = speaker;
+        this.microphone = microphone;
+        this.hookswitch = hookswitch;
+        this.hookswitchID = hookswitchID;
+    }
 
     /**
      * @summary Restructures an object into a AuditoryApparatusList_Item
@@ -154,7 +168,7 @@ class AuditoryApparatusList_Item {
          * @static
          */
 
-    public static _enum_for_auditoryApparatusType = _enum_for_AuditoryApparatusList_Item_auditoryApparatusType;
+    public static _enum_for_auditoryApparatusType: typeof _enum_for_AuditoryApparatusList_Item_auditoryApparatusType = _enum_for_AuditoryApparatusList_Item_auditoryApparatusType;
 }
 
 /**

@@ -1,7 +1,7 @@
 /* eslint-disable */
 
 import * as $ from "@wildboar/asn1/functional";
-import { ENUMERATED, ASN1Element as _Element } from "@wildboar/asn1";
+import { type ENUMERATED, ASN1Element as _Element } from "@wildboar/asn1";
 
 
 
@@ -188,7 +188,7 @@ type SystemResourceAvailabilityErrors = _enum_for_SystemResourceAvailabilityErro
  * @enum {number}
  */
 export
-const SystemResourceAvailabilityErrors = _enum_for_SystemResourceAvailabilityErrors;
+const SystemResourceAvailabilityErrors: typeof _enum_for_SystemResourceAvailabilityErrors = _enum_for_SystemResourceAvailabilityErrors;
 
 /**
  * @summary SystemResourceAvailabilityErrors_generic
@@ -200,7 +200,7 @@ const SystemResourceAvailabilityErrors = _enum_for_SystemResourceAvailabilityErr
  * @see https://ecma-international.org/publications-and-standards/standards/ecma-269/
  */
 export
-const SystemResourceAvailabilityErrors_generic: SystemResourceAvailabilityErrors = SystemResourceAvailabilityErrors.generic; /* LONG_NAMED_ENUMERATED_VALUE */
+const SystemResourceAvailabilityErrors_generic: _enum_for_SystemResourceAvailabilityErrors.generic = SystemResourceAvailabilityErrors.generic; /* LONG_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary generic
@@ -209,7 +209,7 @@ const SystemResourceAvailabilityErrors_generic: SystemResourceAvailabilityErrors
  * @type {number}
  */
 export
-const generic: SystemResourceAvailabilityErrors = SystemResourceAvailabilityErrors.generic; /* SHORT_NAMED_ENUMERATED_VALUE */
+const generic: _enum_for_SystemResourceAvailabilityErrors.generic = SystemResourceAvailabilityErrors.generic; /* SHORT_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary SystemResourceAvailabilityErrors_resourceBusy
@@ -221,7 +221,7 @@ const generic: SystemResourceAvailabilityErrors = SystemResourceAvailabilityErro
  * @see https://ecma-international.org/publications-and-standards/standards/ecma-269/
  */
 export
-const SystemResourceAvailabilityErrors_resourceBusy: SystemResourceAvailabilityErrors = SystemResourceAvailabilityErrors.resourceBusy; /* LONG_NAMED_ENUMERATED_VALUE */
+const SystemResourceAvailabilityErrors_resourceBusy: _enum_for_SystemResourceAvailabilityErrors.resourceBusy = SystemResourceAvailabilityErrors.resourceBusy; /* LONG_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary resourceBusy
@@ -230,7 +230,7 @@ const SystemResourceAvailabilityErrors_resourceBusy: SystemResourceAvailabilityE
  * @type {number}
  */
 export
-const resourceBusy: SystemResourceAvailabilityErrors = SystemResourceAvailabilityErrors.resourceBusy; /* SHORT_NAMED_ENUMERATED_VALUE */
+const resourceBusy: _enum_for_SystemResourceAvailabilityErrors.resourceBusy = SystemResourceAvailabilityErrors.resourceBusy; /* SHORT_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary SystemResourceAvailabilityErrors_internalResourceBusy
@@ -240,7 +240,7 @@ const resourceBusy: SystemResourceAvailabilityErrors = SystemResourceAvailabilit
  * @see https://ecma-international.org/publications-and-standards/standards/ecma-269/
  */
 export
-const SystemResourceAvailabilityErrors_internalResourceBusy: SystemResourceAvailabilityErrors = SystemResourceAvailabilityErrors.internalResourceBusy; /* LONG_NAMED_ENUMERATED_VALUE */
+const SystemResourceAvailabilityErrors_internalResourceBusy: _enum_for_SystemResourceAvailabilityErrors.internalResourceBusy = SystemResourceAvailabilityErrors.internalResourceBusy; /* LONG_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary internalResourceBusy
@@ -250,7 +250,7 @@ const SystemResourceAvailabilityErrors_internalResourceBusy: SystemResourceAvail
  * @type {number}
  */
 export
-const internalResourceBusy: SystemResourceAvailabilityErrors = SystemResourceAvailabilityErrors.internalResourceBusy; /* SHORT_NAMED_ENUMERATED_VALUE */
+const internalResourceBusy: _enum_for_SystemResourceAvailabilityErrors.internalResourceBusy = SystemResourceAvailabilityErrors.internalResourceBusy; /* SHORT_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary SystemResourceAvailabilityErrors_classifierBusy
@@ -260,7 +260,7 @@ const internalResourceBusy: SystemResourceAvailabilityErrors = SystemResourceAva
  * @see https://ecma-international.org/publications-and-standards/standards/ecma-269/
  */
 export
-const SystemResourceAvailabilityErrors_classifierBusy: SystemResourceAvailabilityErrors = SystemResourceAvailabilityErrors.classifierBusy; /* LONG_NAMED_ENUMERATED_VALUE */
+const SystemResourceAvailabilityErrors_classifierBusy: _enum_for_SystemResourceAvailabilityErrors.classifierBusy = SystemResourceAvailabilityErrors.classifierBusy; /* LONG_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary classifierBusy
@@ -270,7 +270,7 @@ const SystemResourceAvailabilityErrors_classifierBusy: SystemResourceAvailabilit
  * @type {number}
  */
 export
-const classifierBusy: SystemResourceAvailabilityErrors = SystemResourceAvailabilityErrors.classifierBusy; /* SHORT_NAMED_ENUMERATED_VALUE */
+const classifierBusy: _enum_for_SystemResourceAvailabilityErrors.classifierBusy = SystemResourceAvailabilityErrors.classifierBusy; /* SHORT_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary SystemResourceAvailabilityErrors_noMediaChannelsAvailable
@@ -282,7 +282,7 @@ const classifierBusy: SystemResourceAvailabilityErrors = SystemResourceAvailabil
  * @see https://ecma-international.org/publications-and-standards/standards/ecma-269/
  */
 export
-const SystemResourceAvailabilityErrors_noMediaChannelsAvailable: SystemResourceAvailabilityErrors = SystemResourceAvailabilityErrors.noMediaChannelsAvailable; /* LONG_NAMED_ENUMERATED_VALUE */
+const SystemResourceAvailabilityErrors_noMediaChannelsAvailable: _enum_for_SystemResourceAvailabilityErrors.noMediaChannelsAvailable = SystemResourceAvailabilityErrors.noMediaChannelsAvailable; /* LONG_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary noMediaChannelsAvailable
@@ -292,7 +292,7 @@ const SystemResourceAvailabilityErrors_noMediaChannelsAvailable: SystemResourceA
  * @type {number}
  */
 export
-const noMediaChannelsAvailable: SystemResourceAvailabilityErrors = SystemResourceAvailabilityErrors.noMediaChannelsAvailable; /* SHORT_NAMED_ENUMERATED_VALUE */
+const noMediaChannelsAvailable: _enum_for_SystemResourceAvailabilityErrors.noMediaChannelsAvailable = SystemResourceAvailabilityErrors.noMediaChannelsAvailable; /* SHORT_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary SystemResourceAvailabilityErrors_channelsInUseForBridgedDevices
@@ -304,7 +304,7 @@ const noMediaChannelsAvailable: SystemResourceAvailabilityErrors = SystemResourc
  * @see https://ecma-international.org/publications-and-standards/standards/ecma-269/
  */
 export
-const SystemResourceAvailabilityErrors_channelsInUseForBridgedDevices: SystemResourceAvailabilityErrors = SystemResourceAvailabilityErrors.channelsInUseForBridgedDevices; /* LONG_NAMED_ENUMERATED_VALUE */
+const SystemResourceAvailabilityErrors_channelsInUseForBridgedDevices: _enum_for_SystemResourceAvailabilityErrors.channelsInUseForBridgedDevices = SystemResourceAvailabilityErrors.channelsInUseForBridgedDevices; /* LONG_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary channelsInUseForBridgedDevices
@@ -315,7 +315,7 @@ const SystemResourceAvailabilityErrors_channelsInUseForBridgedDevices: SystemRes
  * @type {number}
  */
 export
-const channelsInUseForBridgedDevices: SystemResourceAvailabilityErrors = SystemResourceAvailabilityErrors.channelsInUseForBridgedDevices; /* SHORT_NAMED_ENUMERATED_VALUE */
+const channelsInUseForBridgedDevices: _enum_for_SystemResourceAvailabilityErrors.channelsInUseForBridgedDevices = SystemResourceAvailabilityErrors.channelsInUseForBridgedDevices; /* SHORT_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary SystemResourceAvailabilityErrors_channelsInUseForData
@@ -327,7 +327,7 @@ const channelsInUseForBridgedDevices: SystemResourceAvailabilityErrors = SystemR
  * @see https://ecma-international.org/publications-and-standards/standards/ecma-269/
  */
 export
-const SystemResourceAvailabilityErrors_channelsInUseForData: SystemResourceAvailabilityErrors = SystemResourceAvailabilityErrors.channelsInUseForData; /* LONG_NAMED_ENUMERATED_VALUE */
+const SystemResourceAvailabilityErrors_channelsInUseForData: _enum_for_SystemResourceAvailabilityErrors.channelsInUseForData = SystemResourceAvailabilityErrors.channelsInUseForData; /* LONG_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary channelsInUseForData
@@ -337,7 +337,7 @@ const SystemResourceAvailabilityErrors_channelsInUseForData: SystemResourceAvail
  * @type {number}
  */
 export
-const channelsInUseForData: SystemResourceAvailabilityErrors = SystemResourceAvailabilityErrors.channelsInUseForData; /* SHORT_NAMED_ENUMERATED_VALUE */
+const channelsInUseForData: _enum_for_SystemResourceAvailabilityErrors.channelsInUseForData = SystemResourceAvailabilityErrors.channelsInUseForData; /* SHORT_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary SystemResourceAvailabilityErrors_toneDetectorBusy
@@ -347,7 +347,7 @@ const channelsInUseForData: SystemResourceAvailabilityErrors = SystemResourceAva
  * @see https://ecma-international.org/publications-and-standards/standards/ecma-269/
  */
 export
-const SystemResourceAvailabilityErrors_toneDetectorBusy: SystemResourceAvailabilityErrors = SystemResourceAvailabilityErrors.toneDetectorBusy; /* LONG_NAMED_ENUMERATED_VALUE */
+const SystemResourceAvailabilityErrors_toneDetectorBusy: _enum_for_SystemResourceAvailabilityErrors.toneDetectorBusy = SystemResourceAvailabilityErrors.toneDetectorBusy; /* LONG_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary toneDetectorBusy
@@ -357,7 +357,7 @@ const SystemResourceAvailabilityErrors_toneDetectorBusy: SystemResourceAvailabil
  * @type {number}
  */
 export
-const toneDetectorBusy: SystemResourceAvailabilityErrors = SystemResourceAvailabilityErrors.toneDetectorBusy; /* SHORT_NAMED_ENUMERATED_VALUE */
+const toneDetectorBusy: _enum_for_SystemResourceAvailabilityErrors.toneDetectorBusy = SystemResourceAvailabilityErrors.toneDetectorBusy; /* SHORT_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary SystemResourceAvailabilityErrors_toneGeneratorBusy
@@ -367,7 +367,7 @@ const toneDetectorBusy: SystemResourceAvailabilityErrors = SystemResourceAvailab
  * @see https://ecma-international.org/publications-and-standards/standards/ecma-269/
  */
 export
-const SystemResourceAvailabilityErrors_toneGeneratorBusy: SystemResourceAvailabilityErrors = SystemResourceAvailabilityErrors.toneGeneratorBusy; /* LONG_NAMED_ENUMERATED_VALUE */
+const SystemResourceAvailabilityErrors_toneGeneratorBusy: _enum_for_SystemResourceAvailabilityErrors.toneGeneratorBusy = SystemResourceAvailabilityErrors.toneGeneratorBusy; /* LONG_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary toneGeneratorBusy
@@ -377,7 +377,7 @@ const SystemResourceAvailabilityErrors_toneGeneratorBusy: SystemResourceAvailabi
  * @type {number}
  */
 export
-const toneGeneratorBusy: SystemResourceAvailabilityErrors = SystemResourceAvailabilityErrors.toneGeneratorBusy; /* SHORT_NAMED_ENUMERATED_VALUE */
+const toneGeneratorBusy: _enum_for_SystemResourceAvailabilityErrors.toneGeneratorBusy = SystemResourceAvailabilityErrors.toneGeneratorBusy; /* SHORT_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary SystemResourceAvailabilityErrors_networkBusy
@@ -387,7 +387,7 @@ const toneGeneratorBusy: SystemResourceAvailabilityErrors = SystemResourceAvaila
  * @see https://ecma-international.org/publications-and-standards/standards/ecma-269/
  */
 export
-const SystemResourceAvailabilityErrors_networkBusy: SystemResourceAvailabilityErrors = SystemResourceAvailabilityErrors.networkBusy; /* LONG_NAMED_ENUMERATED_VALUE */
+const SystemResourceAvailabilityErrors_networkBusy: _enum_for_SystemResourceAvailabilityErrors.networkBusy = SystemResourceAvailabilityErrors.networkBusy; /* LONG_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary networkBusy
@@ -396,7 +396,7 @@ const SystemResourceAvailabilityErrors_networkBusy: SystemResourceAvailabilityEr
  * @type {number}
  */
 export
-const networkBusy: SystemResourceAvailabilityErrors = SystemResourceAvailabilityErrors.networkBusy; /* SHORT_NAMED_ENUMERATED_VALUE */
+const networkBusy: _enum_for_SystemResourceAvailabilityErrors.networkBusy = SystemResourceAvailabilityErrors.networkBusy; /* SHORT_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary SystemResourceAvailabilityErrors_resourceOutOfService
@@ -408,7 +408,7 @@ const networkBusy: SystemResourceAvailabilityErrors = SystemResourceAvailability
  * @see https://ecma-international.org/publications-and-standards/standards/ecma-269/
  */
 export
-const SystemResourceAvailabilityErrors_resourceOutOfService: SystemResourceAvailabilityErrors = SystemResourceAvailabilityErrors.resourceOutOfService; /* LONG_NAMED_ENUMERATED_VALUE */
+const SystemResourceAvailabilityErrors_resourceOutOfService: _enum_for_SystemResourceAvailabilityErrors.resourceOutOfService = SystemResourceAvailabilityErrors.resourceOutOfService; /* LONG_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary resourceOutOfService
@@ -418,7 +418,7 @@ const SystemResourceAvailabilityErrors_resourceOutOfService: SystemResourceAvail
  * @type {number}
  */
 export
-const resourceOutOfService: SystemResourceAvailabilityErrors = SystemResourceAvailabilityErrors.resourceOutOfService; /* SHORT_NAMED_ENUMERATED_VALUE */
+const resourceOutOfService: _enum_for_SystemResourceAvailabilityErrors.resourceOutOfService = SystemResourceAvailabilityErrors.resourceOutOfService; /* SHORT_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary SystemResourceAvailabilityErrors_deviceOutOfService
@@ -430,7 +430,7 @@ const resourceOutOfService: SystemResourceAvailabilityErrors = SystemResourceAva
  * @see https://ecma-international.org/publications-and-standards/standards/ecma-269/
  */
 export
-const SystemResourceAvailabilityErrors_deviceOutOfService: SystemResourceAvailabilityErrors = SystemResourceAvailabilityErrors.deviceOutOfService; /* LONG_NAMED_ENUMERATED_VALUE */
+const SystemResourceAvailabilityErrors_deviceOutOfService: _enum_for_SystemResourceAvailabilityErrors.deviceOutOfService = SystemResourceAvailabilityErrors.deviceOutOfService; /* LONG_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary deviceOutOfService
@@ -440,7 +440,7 @@ const SystemResourceAvailabilityErrors_deviceOutOfService: SystemResourceAvailab
  * @type {number}
  */
 export
-const deviceOutOfService: SystemResourceAvailabilityErrors = SystemResourceAvailabilityErrors.deviceOutOfService; /* SHORT_NAMED_ENUMERATED_VALUE */
+const deviceOutOfService: _enum_for_SystemResourceAvailabilityErrors.deviceOutOfService = SystemResourceAvailabilityErrors.deviceOutOfService; /* SHORT_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary SystemResourceAvailabilityErrors_activeDeviceOutOfService
@@ -451,7 +451,7 @@ const deviceOutOfService: SystemResourceAvailabilityErrors = SystemResourceAvail
  * @see https://ecma-international.org/publications-and-standards/standards/ecma-269/
  */
 export
-const SystemResourceAvailabilityErrors_activeDeviceOutOfService: SystemResourceAvailabilityErrors = SystemResourceAvailabilityErrors.activeDeviceOutOfService; /* LONG_NAMED_ENUMERATED_VALUE */
+const SystemResourceAvailabilityErrors_activeDeviceOutOfService: _enum_for_SystemResourceAvailabilityErrors.activeDeviceOutOfService = SystemResourceAvailabilityErrors.activeDeviceOutOfService; /* LONG_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary activeDeviceOutOfService
@@ -461,7 +461,7 @@ const SystemResourceAvailabilityErrors_activeDeviceOutOfService: SystemResourceA
  * @type {number}
  */
 export
-const activeDeviceOutOfService: SystemResourceAvailabilityErrors = SystemResourceAvailabilityErrors.activeDeviceOutOfService; /* SHORT_NAMED_ENUMERATED_VALUE */
+const activeDeviceOutOfService: _enum_for_SystemResourceAvailabilityErrors.activeDeviceOutOfService = SystemResourceAvailabilityErrors.activeDeviceOutOfService; /* SHORT_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary SystemResourceAvailabilityErrors_calledDeviceOutOfService
@@ -472,7 +472,7 @@ const activeDeviceOutOfService: SystemResourceAvailabilityErrors = SystemResourc
  * @see https://ecma-international.org/publications-and-standards/standards/ecma-269/
  */
 export
-const SystemResourceAvailabilityErrors_calledDeviceOutOfService: SystemResourceAvailabilityErrors = SystemResourceAvailabilityErrors.calledDeviceOutOfService; /* LONG_NAMED_ENUMERATED_VALUE */
+const SystemResourceAvailabilityErrors_calledDeviceOutOfService: _enum_for_SystemResourceAvailabilityErrors.calledDeviceOutOfService = SystemResourceAvailabilityErrors.calledDeviceOutOfService; /* LONG_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary calledDeviceOutOfService
@@ -482,7 +482,7 @@ const SystemResourceAvailabilityErrors_calledDeviceOutOfService: SystemResourceA
  * @type {number}
  */
 export
-const calledDeviceOutOfService: SystemResourceAvailabilityErrors = SystemResourceAvailabilityErrors.calledDeviceOutOfService; /* SHORT_NAMED_ENUMERATED_VALUE */
+const calledDeviceOutOfService: _enum_for_SystemResourceAvailabilityErrors.calledDeviceOutOfService = SystemResourceAvailabilityErrors.calledDeviceOutOfService; /* SHORT_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary SystemResourceAvailabilityErrors_callingDeviceOutOfService
@@ -493,7 +493,7 @@ const calledDeviceOutOfService: SystemResourceAvailabilityErrors = SystemResourc
  * @see https://ecma-international.org/publications-and-standards/standards/ecma-269/
  */
 export
-const SystemResourceAvailabilityErrors_callingDeviceOutOfService: SystemResourceAvailabilityErrors = SystemResourceAvailabilityErrors.callingDeviceOutOfService; /* LONG_NAMED_ENUMERATED_VALUE */
+const SystemResourceAvailabilityErrors_callingDeviceOutOfService: _enum_for_SystemResourceAvailabilityErrors.callingDeviceOutOfService = SystemResourceAvailabilityErrors.callingDeviceOutOfService; /* LONG_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary callingDeviceOutOfService
@@ -503,7 +503,7 @@ const SystemResourceAvailabilityErrors_callingDeviceOutOfService: SystemResource
  * @type {number}
  */
 export
-const callingDeviceOutOfService: SystemResourceAvailabilityErrors = SystemResourceAvailabilityErrors.callingDeviceOutOfService; /* SHORT_NAMED_ENUMERATED_VALUE */
+const callingDeviceOutOfService: _enum_for_SystemResourceAvailabilityErrors.callingDeviceOutOfService = SystemResourceAvailabilityErrors.callingDeviceOutOfService; /* SHORT_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary SystemResourceAvailabilityErrors_callToParkDeviceOutOfService
@@ -514,7 +514,7 @@ const callingDeviceOutOfService: SystemResourceAvailabilityErrors = SystemResour
  * @see https://ecma-international.org/publications-and-standards/standards/ecma-269/
  */
 export
-const SystemResourceAvailabilityErrors_callToParkDeviceOutOfService: SystemResourceAvailabilityErrors = SystemResourceAvailabilityErrors.callToParkDeviceOutOfService; /* LONG_NAMED_ENUMERATED_VALUE */
+const SystemResourceAvailabilityErrors_callToParkDeviceOutOfService: _enum_for_SystemResourceAvailabilityErrors.callToParkDeviceOutOfService = SystemResourceAvailabilityErrors.callToParkDeviceOutOfService; /* LONG_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary callToParkDeviceOutOfService
@@ -525,7 +525,7 @@ const SystemResourceAvailabilityErrors_callToParkDeviceOutOfService: SystemResou
  * @type {number}
  */
 export
-const callToParkDeviceOutOfService: SystemResourceAvailabilityErrors = SystemResourceAvailabilityErrors.callToParkDeviceOutOfService; /* SHORT_NAMED_ENUMERATED_VALUE */
+const callToParkDeviceOutOfService: _enum_for_SystemResourceAvailabilityErrors.callToParkDeviceOutOfService = SystemResourceAvailabilityErrors.callToParkDeviceOutOfService; /* SHORT_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary SystemResourceAvailabilityErrors_destinationDeviceOutOfService
@@ -536,7 +536,7 @@ const callToParkDeviceOutOfService: SystemResourceAvailabilityErrors = SystemRes
  * @see https://ecma-international.org/publications-and-standards/standards/ecma-269/
  */
 export
-const SystemResourceAvailabilityErrors_destinationDeviceOutOfService: SystemResourceAvailabilityErrors = SystemResourceAvailabilityErrors.destinationDeviceOutOfService; /* LONG_NAMED_ENUMERATED_VALUE */
+const SystemResourceAvailabilityErrors_destinationDeviceOutOfService: _enum_for_SystemResourceAvailabilityErrors.destinationDeviceOutOfService = SystemResourceAvailabilityErrors.destinationDeviceOutOfService; /* LONG_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary destinationDeviceOutOfService
@@ -547,7 +547,7 @@ const SystemResourceAvailabilityErrors_destinationDeviceOutOfService: SystemReso
  * @type {number}
  */
 export
-const destinationDeviceOutOfService: SystemResourceAvailabilityErrors = SystemResourceAvailabilityErrors.destinationDeviceOutOfService; /* SHORT_NAMED_ENUMERATED_VALUE */
+const destinationDeviceOutOfService: _enum_for_SystemResourceAvailabilityErrors.destinationDeviceOutOfService = SystemResourceAvailabilityErrors.destinationDeviceOutOfService; /* SHORT_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary SystemResourceAvailabilityErrors_divertingDeviceOutOfService
@@ -557,7 +557,7 @@ const destinationDeviceOutOfService: SystemResourceAvailabilityErrors = SystemRe
  * @see https://ecma-international.org/publications-and-standards/standards/ecma-269/
  */
 export
-const SystemResourceAvailabilityErrors_divertingDeviceOutOfService: SystemResourceAvailabilityErrors = SystemResourceAvailabilityErrors.divertingDeviceOutOfService; /* LONG_NAMED_ENUMERATED_VALUE */
+const SystemResourceAvailabilityErrors_divertingDeviceOutOfService: _enum_for_SystemResourceAvailabilityErrors.divertingDeviceOutOfService = SystemResourceAvailabilityErrors.divertingDeviceOutOfService; /* LONG_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary divertingDeviceOutOfService
@@ -568,7 +568,7 @@ const SystemResourceAvailabilityErrors_divertingDeviceOutOfService: SystemResour
  * @type {number}
  */
 export
-const divertingDeviceOutOfService: SystemResourceAvailabilityErrors = SystemResourceAvailabilityErrors.divertingDeviceOutOfService; /* SHORT_NAMED_ENUMERATED_VALUE */
+const divertingDeviceOutOfService: _enum_for_SystemResourceAvailabilityErrors.divertingDeviceOutOfService = SystemResourceAvailabilityErrors.divertingDeviceOutOfService; /* SHORT_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary SystemResourceAvailabilityErrors_heldDeviceOutOfService
@@ -579,7 +579,7 @@ const divertingDeviceOutOfService: SystemResourceAvailabilityErrors = SystemReso
  * @see https://ecma-international.org/publications-and-standards/standards/ecma-269/
  */
 export
-const SystemResourceAvailabilityErrors_heldDeviceOutOfService: SystemResourceAvailabilityErrors = SystemResourceAvailabilityErrors.heldDeviceOutOfService; /* LONG_NAMED_ENUMERATED_VALUE */
+const SystemResourceAvailabilityErrors_heldDeviceOutOfService: _enum_for_SystemResourceAvailabilityErrors.heldDeviceOutOfService = SystemResourceAvailabilityErrors.heldDeviceOutOfService; /* LONG_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary heldDeviceOutOfService
@@ -589,7 +589,7 @@ const SystemResourceAvailabilityErrors_heldDeviceOutOfService: SystemResourceAva
  * @type {number}
  */
 export
-const heldDeviceOutOfService: SystemResourceAvailabilityErrors = SystemResourceAvailabilityErrors.heldDeviceOutOfService; /* SHORT_NAMED_ENUMERATED_VALUE */
+const heldDeviceOutOfService: _enum_for_SystemResourceAvailabilityErrors.heldDeviceOutOfService = SystemResourceAvailabilityErrors.heldDeviceOutOfService; /* SHORT_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary SystemResourceAvailabilityErrors_parkToDeviceOutOfService
@@ -600,7 +600,7 @@ const heldDeviceOutOfService: SystemResourceAvailabilityErrors = SystemResourceA
  * @see https://ecma-international.org/publications-and-standards/standards/ecma-269/
  */
 export
-const SystemResourceAvailabilityErrors_parkToDeviceOutOfService: SystemResourceAvailabilityErrors = SystemResourceAvailabilityErrors.parkToDeviceOutOfService; /* LONG_NAMED_ENUMERATED_VALUE */
+const SystemResourceAvailabilityErrors_parkToDeviceOutOfService: _enum_for_SystemResourceAvailabilityErrors.parkToDeviceOutOfService = SystemResourceAvailabilityErrors.parkToDeviceOutOfService; /* LONG_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary parkToDeviceOutOfService
@@ -610,7 +610,7 @@ const SystemResourceAvailabilityErrors_parkToDeviceOutOfService: SystemResourceA
  * @type {number}
  */
 export
-const parkToDeviceOutOfService: SystemResourceAvailabilityErrors = SystemResourceAvailabilityErrors.parkToDeviceOutOfService; /* SHORT_NAMED_ENUMERATED_VALUE */
+const parkToDeviceOutOfService: _enum_for_SystemResourceAvailabilityErrors.parkToDeviceOutOfService = SystemResourceAvailabilityErrors.parkToDeviceOutOfService; /* SHORT_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary SystemResourceAvailabilityErrors_pickupDeviceOutOfService
@@ -621,7 +621,7 @@ const parkToDeviceOutOfService: SystemResourceAvailabilityErrors = SystemResourc
  * @see https://ecma-international.org/publications-and-standards/standards/ecma-269/
  */
 export
-const SystemResourceAvailabilityErrors_pickupDeviceOutOfService: SystemResourceAvailabilityErrors = SystemResourceAvailabilityErrors.pickupDeviceOutOfService; /* LONG_NAMED_ENUMERATED_VALUE */
+const SystemResourceAvailabilityErrors_pickupDeviceOutOfService: _enum_for_SystemResourceAvailabilityErrors.pickupDeviceOutOfService = SystemResourceAvailabilityErrors.pickupDeviceOutOfService; /* LONG_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary pickupDeviceOutOfService
@@ -631,7 +631,7 @@ const SystemResourceAvailabilityErrors_pickupDeviceOutOfService: SystemResourceA
  * @type {number}
  */
 export
-const pickupDeviceOutOfService: SystemResourceAvailabilityErrors = SystemResourceAvailabilityErrors.pickupDeviceOutOfService; /* SHORT_NAMED_ENUMERATED_VALUE */
+const pickupDeviceOutOfService: _enum_for_SystemResourceAvailabilityErrors.pickupDeviceOutOfService = SystemResourceAvailabilityErrors.pickupDeviceOutOfService; /* SHORT_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary SystemResourceAvailabilityErrors_networkOutOfService
@@ -641,7 +641,7 @@ const pickupDeviceOutOfService: SystemResourceAvailabilityErrors = SystemResourc
  * @see https://ecma-international.org/publications-and-standards/standards/ecma-269/
  */
 export
-const SystemResourceAvailabilityErrors_networkOutOfService: SystemResourceAvailabilityErrors = SystemResourceAvailabilityErrors.networkOutOfService; /* LONG_NAMED_ENUMERATED_VALUE */
+const SystemResourceAvailabilityErrors_networkOutOfService: _enum_for_SystemResourceAvailabilityErrors.networkOutOfService = SystemResourceAvailabilityErrors.networkOutOfService; /* LONG_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary networkOutOfService
@@ -651,7 +651,7 @@ const SystemResourceAvailabilityErrors_networkOutOfService: SystemResourceAvaila
  * @type {number}
  */
 export
-const networkOutOfService: SystemResourceAvailabilityErrors = SystemResourceAvailabilityErrors.networkOutOfService; /* SHORT_NAMED_ENUMERATED_VALUE */
+const networkOutOfService: _enum_for_SystemResourceAvailabilityErrors.networkOutOfService = SystemResourceAvailabilityErrors.networkOutOfService; /* SHORT_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary SystemResourceAvailabilityErrors_otherResourceOutOfService
@@ -663,7 +663,7 @@ const networkOutOfService: SystemResourceAvailabilityErrors = SystemResourceAvai
  * @see https://ecma-international.org/publications-and-standards/standards/ecma-269/
  */
 export
-const SystemResourceAvailabilityErrors_otherResourceOutOfService: SystemResourceAvailabilityErrors = SystemResourceAvailabilityErrors.otherResourceOutOfService; /* LONG_NAMED_ENUMERATED_VALUE */
+const SystemResourceAvailabilityErrors_otherResourceOutOfService: _enum_for_SystemResourceAvailabilityErrors.otherResourceOutOfService = SystemResourceAvailabilityErrors.otherResourceOutOfService; /* LONG_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary otherResourceOutOfService
@@ -673,7 +673,7 @@ const SystemResourceAvailabilityErrors_otherResourceOutOfService: SystemResource
  * @type {number}
  */
 export
-const otherResourceOutOfService: SystemResourceAvailabilityErrors = SystemResourceAvailabilityErrors.otherResourceOutOfService; /* SHORT_NAMED_ENUMERATED_VALUE */
+const otherResourceOutOfService: _enum_for_SystemResourceAvailabilityErrors.otherResourceOutOfService = SystemResourceAvailabilityErrors.otherResourceOutOfService; /* SHORT_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary SystemResourceAvailabilityErrors_resourceLimitExceeded
@@ -685,7 +685,7 @@ const otherResourceOutOfService: SystemResourceAvailabilityErrors = SystemResour
  * @see https://ecma-international.org/publications-and-standards/standards/ecma-269/
  */
 export
-const SystemResourceAvailabilityErrors_resourceLimitExceeded: SystemResourceAvailabilityErrors = SystemResourceAvailabilityErrors.resourceLimitExceeded; /* LONG_NAMED_ENUMERATED_VALUE */
+const SystemResourceAvailabilityErrors_resourceLimitExceeded: _enum_for_SystemResourceAvailabilityErrors.resourceLimitExceeded = SystemResourceAvailabilityErrors.resourceLimitExceeded; /* LONG_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary resourceLimitExceeded
@@ -695,7 +695,7 @@ const SystemResourceAvailabilityErrors_resourceLimitExceeded: SystemResourceAvai
  * @type {number}
  */
 export
-const resourceLimitExceeded: SystemResourceAvailabilityErrors = SystemResourceAvailabilityErrors.resourceLimitExceeded; /* SHORT_NAMED_ENUMERATED_VALUE */
+const resourceLimitExceeded: _enum_for_SystemResourceAvailabilityErrors.resourceLimitExceeded = SystemResourceAvailabilityErrors.resourceLimitExceeded; /* SHORT_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary SystemResourceAvailabilityErrors_overallMonitorLimitExceeded
@@ -707,7 +707,7 @@ const resourceLimitExceeded: SystemResourceAvailabilityErrors = SystemResourceAv
  * @see https://ecma-international.org/publications-and-standards/standards/ecma-269/
  */
 export
-const SystemResourceAvailabilityErrors_overallMonitorLimitExceeded: SystemResourceAvailabilityErrors = SystemResourceAvailabilityErrors.overallMonitorLimitExceeded; /* LONG_NAMED_ENUMERATED_VALUE */
+const SystemResourceAvailabilityErrors_overallMonitorLimitExceeded: _enum_for_SystemResourceAvailabilityErrors.overallMonitorLimitExceeded = SystemResourceAvailabilityErrors.overallMonitorLimitExceeded; /* LONG_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary overallMonitorLimitExceeded
@@ -718,7 +718,7 @@ const SystemResourceAvailabilityErrors_overallMonitorLimitExceeded: SystemResour
  * @type {number}
  */
 export
-const overallMonitorLimitExceeded: SystemResourceAvailabilityErrors = SystemResourceAvailabilityErrors.overallMonitorLimitExceeded; /* SHORT_NAMED_ENUMERATED_VALUE */
+const overallMonitorLimitExceeded: _enum_for_SystemResourceAvailabilityErrors.overallMonitorLimitExceeded = SystemResourceAvailabilityErrors.overallMonitorLimitExceeded; /* SHORT_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary SystemResourceAvailabilityErrors_conferenceMemberLimitExceeded
@@ -729,7 +729,7 @@ const overallMonitorLimitExceeded: SystemResourceAvailabilityErrors = SystemReso
  * @see https://ecma-international.org/publications-and-standards/standards/ecma-269/
  */
 export
-const SystemResourceAvailabilityErrors_conferenceMemberLimitExceeded: SystemResourceAvailabilityErrors = SystemResourceAvailabilityErrors.conferenceMemberLimitExceeded; /* LONG_NAMED_ENUMERATED_VALUE */
+const SystemResourceAvailabilityErrors_conferenceMemberLimitExceeded: _enum_for_SystemResourceAvailabilityErrors.conferenceMemberLimitExceeded = SystemResourceAvailabilityErrors.conferenceMemberLimitExceeded; /* LONG_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary conferenceMemberLimitExceeded
@@ -740,7 +740,7 @@ const SystemResourceAvailabilityErrors_conferenceMemberLimitExceeded: SystemReso
  * @type {number}
  */
 export
-const conferenceMemberLimitExceeded: SystemResourceAvailabilityErrors = SystemResourceAvailabilityErrors.conferenceMemberLimitExceeded; /* SHORT_NAMED_ENUMERATED_VALUE */
+const conferenceMemberLimitExceeded: _enum_for_SystemResourceAvailabilityErrors.conferenceMemberLimitExceeded = SystemResourceAvailabilityErrors.conferenceMemberLimitExceeded; /* SHORT_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary SystemResourceAvailabilityErrors_registrationLimitExceeded
@@ -752,7 +752,7 @@ const conferenceMemberLimitExceeded: SystemResourceAvailabilityErrors = SystemRe
  * @see https://ecma-international.org/publications-and-standards/standards/ecma-269/
  */
 export
-const SystemResourceAvailabilityErrors_registrationLimitExceeded: SystemResourceAvailabilityErrors = SystemResourceAvailabilityErrors.registrationLimitExceeded; /* LONG_NAMED_ENUMERATED_VALUE */
+const SystemResourceAvailabilityErrors_registrationLimitExceeded: _enum_for_SystemResourceAvailabilityErrors.registrationLimitExceeded = SystemResourceAvailabilityErrors.registrationLimitExceeded; /* LONG_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary registrationLimitExceeded
@@ -762,7 +762,7 @@ const SystemResourceAvailabilityErrors_registrationLimitExceeded: SystemResource
  * @type {number}
  */
 export
-const registrationLimitExceeded: SystemResourceAvailabilityErrors = SystemResourceAvailabilityErrors.registrationLimitExceeded; /* SHORT_NAMED_ENUMERATED_VALUE */
+const registrationLimitExceeded: _enum_for_SystemResourceAvailabilityErrors.registrationLimitExceeded = SystemResourceAvailabilityErrors.registrationLimitExceeded; /* SHORT_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary SystemResourceAvailabilityErrors_conferenceResourceCannotBeSatisfied
@@ -773,7 +773,7 @@ const registrationLimitExceeded: SystemResourceAvailabilityErrors = SystemResour
  * @see https://ecma-international.org/publications-and-standards/standards/ecma-269/
  */
 export
-const SystemResourceAvailabilityErrors_conferenceResourceCannotBeSatisfied: SystemResourceAvailabilityErrors = SystemResourceAvailabilityErrors.conferenceResourceCannotBeSatisfied; /* LONG_NAMED_ENUMERATED_VALUE */
+const SystemResourceAvailabilityErrors_conferenceResourceCannotBeSatisfied: _enum_for_SystemResourceAvailabilityErrors.conferenceResourceCannotBeSatisfied = SystemResourceAvailabilityErrors.conferenceResourceCannotBeSatisfied; /* LONG_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary conferenceResourceCannotBeSatisfied
@@ -784,7 +784,7 @@ const SystemResourceAvailabilityErrors_conferenceResourceCannotBeSatisfied: Syst
  * @type {number}
  */
 export
-const conferenceResourceCannotBeSatisfied: SystemResourceAvailabilityErrors = SystemResourceAvailabilityErrors.conferenceResourceCannotBeSatisfied; /* SHORT_NAMED_ENUMERATED_VALUE */
+const conferenceResourceCannotBeSatisfied: _enum_for_SystemResourceAvailabilityErrors.conferenceResourceCannotBeSatisfied = SystemResourceAvailabilityErrors.conferenceResourceCannotBeSatisfied; /* SHORT_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary SystemResourceAvailabilityErrors_maxDevicesExceeded
@@ -794,7 +794,7 @@ const conferenceResourceCannotBeSatisfied: SystemResourceAvailabilityErrors = Sy
  * @see https://ecma-international.org/publications-and-standards/standards/ecma-269/
  */
 export
-const SystemResourceAvailabilityErrors_maxDevicesExceeded: SystemResourceAvailabilityErrors = SystemResourceAvailabilityErrors.maxDevicesExceeded; /* LONG_NAMED_ENUMERATED_VALUE */
+const SystemResourceAvailabilityErrors_maxDevicesExceeded: _enum_for_SystemResourceAvailabilityErrors.maxDevicesExceeded = SystemResourceAvailabilityErrors.maxDevicesExceeded; /* LONG_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary maxDevicesExceeded
@@ -804,7 +804,7 @@ const SystemResourceAvailabilityErrors_maxDevicesExceeded: SystemResourceAvailab
  * @type {number}
  */
 export
-const maxDevicesExceeded: SystemResourceAvailabilityErrors = SystemResourceAvailabilityErrors.maxDevicesExceeded; /* SHORT_NAMED_ENUMERATED_VALUE */
+const maxDevicesExceeded: _enum_for_SystemResourceAvailabilityErrors.maxDevicesExceeded = SystemResourceAvailabilityErrors.maxDevicesExceeded; /* SHORT_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary SystemResourceAvailabilityErrors_startTimeOutOfRange
@@ -814,7 +814,7 @@ const maxDevicesExceeded: SystemResourceAvailabilityErrors = SystemResourceAvail
  * @see https://ecma-international.org/publications-and-standards/standards/ecma-269/
  */
 export
-const SystemResourceAvailabilityErrors_startTimeOutOfRange: SystemResourceAvailabilityErrors = SystemResourceAvailabilityErrors.startTimeOutOfRange; /* LONG_NAMED_ENUMERATED_VALUE */
+const SystemResourceAvailabilityErrors_startTimeOutOfRange: _enum_for_SystemResourceAvailabilityErrors.startTimeOutOfRange = SystemResourceAvailabilityErrors.startTimeOutOfRange; /* LONG_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary startTimeOutOfRange
@@ -824,7 +824,7 @@ const SystemResourceAvailabilityErrors_startTimeOutOfRange: SystemResourceAvaila
  * @type {number}
  */
 export
-const startTimeOutOfRange: SystemResourceAvailabilityErrors = SystemResourceAvailabilityErrors.startTimeOutOfRange; /* SHORT_NAMED_ENUMERATED_VALUE */
+const startTimeOutOfRange: _enum_for_SystemResourceAvailabilityErrors.startTimeOutOfRange = SystemResourceAvailabilityErrors.startTimeOutOfRange; /* SHORT_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary SystemResourceAvailabilityErrors_durationExceeded
@@ -834,7 +834,7 @@ const startTimeOutOfRange: SystemResourceAvailabilityErrors = SystemResourceAvai
  * @see https://ecma-international.org/publications-and-standards/standards/ecma-269/
  */
 export
-const SystemResourceAvailabilityErrors_durationExceeded: SystemResourceAvailabilityErrors = SystemResourceAvailabilityErrors.durationExceeded; /* LONG_NAMED_ENUMERATED_VALUE */
+const SystemResourceAvailabilityErrors_durationExceeded: _enum_for_SystemResourceAvailabilityErrors.durationExceeded = SystemResourceAvailabilityErrors.durationExceeded; /* LONG_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary durationExceeded
@@ -844,7 +844,7 @@ const SystemResourceAvailabilityErrors_durationExceeded: SystemResourceAvailabil
  * @type {number}
  */
 export
-const durationExceeded: SystemResourceAvailabilityErrors = SystemResourceAvailabilityErrors.durationExceeded; /* SHORT_NAMED_ENUMERATED_VALUE */
+const durationExceeded: _enum_for_SystemResourceAvailabilityErrors.durationExceeded = SystemResourceAvailabilityErrors.durationExceeded; /* SHORT_NAMED_ENUMERATED_VALUE */
 
 let _cached_decoder_for_SystemResourceAvailabilityErrors: $.ASN1Decoder<SystemResourceAvailabilityErrors> | null = null;
 

@@ -1,6 +1,6 @@
 /* eslint-disable */
 import {
-  OPTIONAL,
+  type OPTIONAL,
   ASN1Element as _Element,
   ASN1TagClass as _TagClass,
   ASN1Construction as _Construction,
@@ -12,7 +12,7 @@ import {
 } from '@wildboar/asn1';
 import * as $ from '@wildboar/asn1/functional';
 import {
-  BioAPI_HANDLE,
+  type BioAPI_HANDLE,
   _decode_BioAPI_HANDLE,
   _encode_BioAPI_HANDLE,
 } from '../BIP/BioAPI-HANDLE.ta.mjs';
@@ -60,7 +60,7 @@ export class ProcessWithAuxBIR_RequestParams {
    * @public
    * @readonly
    */
-  readonly originalBSPHandle: BioAPI_HANDLE;
+  public readonly originalBSPHandle: BioAPI_HANDLE;
   /**
    * @summary `capturedBIR`.
    * @description
@@ -71,7 +71,7 @@ export class ProcessWithAuxBIR_RequestParams {
    * @public
    * @readonly
    */
-  readonly capturedBIR: BioAPI_INPUT_BIR;
+  public readonly capturedBIR: BioAPI_INPUT_BIR;
   /**
    * @summary `auxiliaryData`.
    * @description
@@ -82,7 +82,7 @@ export class ProcessWithAuxBIR_RequestParams {
    * @public
    * @readonly
    */
-  readonly auxiliaryData: BioAPI_INPUT_BIR;
+  public readonly auxiliaryData: BioAPI_INPUT_BIR;
   /**
    * @summary `outputFormat`.
    * @description
@@ -93,7 +93,7 @@ export class ProcessWithAuxBIR_RequestParams {
    * @public
    * @readonly
    */
-  readonly outputFormat?: OPTIONAL<BioAPI_BIR_BIOMETRIC_DATA_FORMAT>;
+  public readonly outputFormat?: OPTIONAL<BioAPI_BIR_BIOMETRIC_DATA_FORMAT>;
 
   constructor(
     originalBSPHandle: BioAPI_HANDLE,

@@ -1,6 +1,6 @@
 /* eslint-disable */
 import {
-  INTEGER,
+  type INTEGER,
   ASN1Element as _Element,
   ASN1TagClass as _TagClass,
   ASN1Construction as _Construction,
@@ -28,10 +28,10 @@ import * as $ from '@wildboar/asn1/functional';
 export type Presentation_context_identifier = INTEGER;
 
 
-export const _decode_Presentation_context_identifier = $._decodeInteger;
+export const _decode_Presentation_context_identifier: $.ASN1Decoder<INTEGER> = $._decodeInteger;
 
 
-export const _encode_Presentation_context_identifier = $._encodeInteger;
+export const _encode_Presentation_context_identifier: $.ASN1Encoder<INTEGER> = $._encodeInteger;
 
 
 /* eslint-enable */

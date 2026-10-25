@@ -2,13 +2,13 @@
 
 import * as $ from "@wildboar/asn1/functional";
 import {
-    OPTIONAL,
-    SEQUENCE,
-    SET,
-    ASN1Element as _Element,
+    type OPTIONAL,
+    type SEQUENCE,
+    type SET,
+    type ASN1Element as _Element,
     ASN1TagClass as _TagClass
 } from "@wildboar/asn1";
-import { MessageID, _decode_MessageID, _encode_MessageID } from "../CSTA-device-feature-types/MessageID.ta.mjs";
+import { type MessageID, _decode_MessageID, _encode_MessageID } from "../CSTA-device-feature-types/MessageID.ta.mjs";
 
 import {
     AttributeToQuery,
@@ -17,9 +17,9 @@ import {
     _encode_AttributeToQuery
 } from "../CSTA-query-voice-attribute/AttributeToQuery.ta.mjs";
 
-import { ResourceID, _decode_ResourceID, _encode_ResourceID } from "../CSTA-device-feature-types/ResourceID.ta.mjs";
+import { type ResourceID, _decode_ResourceID, _encode_ResourceID } from "../CSTA-device-feature-types/ResourceID.ta.mjs";
 
-import { ConnectionID, _decode_ConnectionID, _encode_ConnectionID } from "../CSTA-call-connection-identifiers/ConnectionID.ta.mjs";
+import { type ConnectionID, _decode_ConnectionID, _encode_ConnectionID } from "../CSTA-call-connection-identifiers/ConnectionID.ta.mjs";
 
 import { CSTACommonArguments, _decode_CSTACommonArguments, _encode_CSTACommonArguments } from "../CSTA-extension-types/CSTACommonArguments.ta.mjs";
 
@@ -43,8 +43,8 @@ import { CSTACommonArguments, _decode_CSTACommonArguments, _encode_CSTACommonArg
  * QueryVoiceAttributeArgument ::= SEQUENCE
  * {    messageToQuery            MessageID,
  *     attributeToQuery        AttributeToQuery, 
- *     resource            [0] IMPLICIT ResourceID            OPTIONAL,
- *     connection            ConnectionID                OPTIONAL,
+ *     resource            [0] IMPLICIT ResourceID            type OPTIONAL,
+ *     connection            ConnectionID                type OPTIONAL,
  *     extensions            CSTACommonArguments            OPTIONAL }
  * ```
  * 
@@ -52,61 +52,73 @@ import { CSTACommonArguments, _decode_CSTACommonArguments, _encode_CSTACommonArg
  */
 export
 class QueryVoiceAttributeArgument {
+    /**
+     * @summary `messageToQuery`.
+     * @description
+     *
+     * Message whose attribute is queried (ECMA-269 §26.1.7.1).
+     *
+     * @public
+     * @readonly
+     */
+    public readonly messageToQuery: MessageID;
+    /**
+     * @summary `attributeToQuery`.
+     * @description
+     *
+     * Which attribute to read (ECMA-269 §26.1.7.1).
+     *
+     * @public
+     * @readonly
+     */
+    public readonly attributeToQuery: AttributeToQuery;
+    /**
+     * @summary `resource`.
+     * @description
+     *
+     * Interactive voice resource. Required when more than one interactive
+     * voice resource exists on the connection.
+     *
+     * @public
+     * @readonly
+     */
+    public readonly resource?: OPTIONAL<ResourceID>;
+    /**
+     * @summary `connection`.
+     * @description
+     *
+     * Required if the attribute pertains to an Interactive Voice Device
+     * (ECMA-269 §26.1.7.1).
+     *
+     * @public
+     * @readonly
+     */
+    public readonly connection?: OPTIONAL<ConnectionID>;
+    /**
+     * @summary `extensions`.
+     * @description
+     *
+     * CSTACommonArguments carrying the service-table security and
+     * privateData parameters.
+     *
+     * @public
+     * @readonly
+     */
+    public readonly extensions?: OPTIONAL<CSTACommonArguments>;
+
     constructor (
-        /**
-         * @summary `messageToQuery`.
-         * @description
-         *
-         * Message whose attribute is queried (ECMA-269 §26.1.7.1).
-         *
-         * @public
-         * @readonly
-         */
-        readonly messageToQuery: MessageID,
-        /**
-         * @summary `attributeToQuery`.
-         * @description
-         *
-         * Which attribute to read (ECMA-269 §26.1.7.1).
-         *
-         * @public
-         * @readonly
-         */
-        readonly attributeToQuery: AttributeToQuery,
-        /**
-         * @summary `resource`.
-         * @description
-         *
-         * Interactive voice resource. Required when more than one interactive
-         * voice resource exists on the connection.
-         *
-         * @public
-         * @readonly
-         */
-        readonly resource?: OPTIONAL<ResourceID>,
-        /**
-         * @summary `connection`.
-         * @description
-         *
-         * Required if the attribute pertains to an Interactive Voice Device
-         * (ECMA-269 §26.1.7.1).
-         *
-         * @public
-         * @readonly
-         */
-        readonly connection?: OPTIONAL<ConnectionID>,
-        /**
-         * @summary `extensions`.
-         * @description
-         *
-         * CSTACommonArguments carrying the service-table security and
-         * privateData parameters.
-         *
-         * @public
-         * @readonly
-         */
-        readonly extensions?: OPTIONAL<CSTACommonArguments>
-    ) {}
+        messageToQuery: MessageID,
+        attributeToQuery: AttributeToQuery,
+        resource?: OPTIONAL<ResourceID>,
+        connection?: OPTIONAL<ConnectionID>,
+        extensions?: OPTIONAL<CSTACommonArguments>
+    ) {
+        this.messageToQuery = messageToQuery;
+        this.attributeToQuery = attributeToQuery;
+        this.resource = resource;
+        this.connection = connection;
+        this.extensions = extensions;
+    }
 
     /**
      * @summary Restructures an object into a QueryVoiceAttributeArgument
@@ -130,7 +142,7 @@ class QueryVoiceAttributeArgument {
          * @static
          */
 
-    public static _enum_for_attributeToQuery = _enum_for_AttributeToQuery;
+    public static _enum_for_attributeToQuery: typeof _enum_for_AttributeToQuery = _enum_for_AttributeToQuery;
 }
 
 /**

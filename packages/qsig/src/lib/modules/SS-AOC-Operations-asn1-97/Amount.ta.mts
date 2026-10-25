@@ -1,11 +1,11 @@
 /* eslint-disable */
 import {
     ASN1ConstructionError as _ConstructionError,
-    ASN1Element as _Element,
+    type ASN1Element as _Element,
     ASN1TagClass as _TagClass
 } from "@wildboar/asn1";
 import * as $ from "@wildboar/asn1/functional";
-import { CurrencyAmount, _decode_CurrencyAmount, _encode_CurrencyAmount } from "../SS-AOC-Operations-asn1-97/CurrencyAmount.ta.mjs";
+import { type CurrencyAmount, _decode_CurrencyAmount, _encode_CurrencyAmount } from "../SS-AOC-Operations-asn1-97/CurrencyAmount.ta.mjs";
 import { Multiplier, _decode_Multiplier, _encode_Multiplier, _enum_for_Multiplier } from "../SS-AOC-Operations-asn1-97/Multiplier.ta.mjs";
 
 /**
@@ -82,7 +82,7 @@ class Amount {
          * @static
          */
 
-    public static _enum_for_multiplier = _enum_for_Multiplier;
+    public static _enum_for_multiplier: typeof _enum_for_Multiplier = _enum_for_Multiplier;
 }
 
 /**

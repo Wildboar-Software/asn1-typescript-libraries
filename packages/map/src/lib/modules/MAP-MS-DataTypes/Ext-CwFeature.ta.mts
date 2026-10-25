@@ -1,12 +1,12 @@
 /* eslint-disable */
 import {
     ASN1ConstructionError as _ConstructionError,
-    ASN1Element as _Element,
+    type ASN1Element as _Element,
     ASN1TagClass as _TagClass
 } from "@wildboar/asn1";
 import * as $ from "@wildboar/asn1/functional";
-import { Ext_BasicServiceCode, _decode_Ext_BasicServiceCode, _encode_Ext_BasicServiceCode } from "../MAP-CommonDataTypes/Ext-BasicServiceCode.ta.mjs";
-import { Ext_SS_Status, _decode_Ext_SS_Status, _encode_Ext_SS_Status } from "../MAP-CommonDataTypes/Ext-SS-Status.ta.mjs";
+import { type Ext_BasicServiceCode, _decode_Ext_BasicServiceCode, _encode_Ext_BasicServiceCode } from "../MAP-CommonDataTypes/Ext-BasicServiceCode.ta.mjs";
+import { type Ext_SS_Status, _decode_Ext_SS_Status, _encode_Ext_SS_Status } from "../MAP-CommonDataTypes/Ext-SS-Status.ta.mjs";
 
 
 /**
@@ -29,26 +29,34 @@ import { Ext_SS_Status, _decode_Ext_SS_Status, _encode_Ext_SS_Status } from "../
  */
 export
 class Ext_CwFeature {
+    /**
+     * @summary `basicService`.
+     * @public
+     * @readonly
+     */
+    public readonly basicService: Ext_BasicServiceCode;
+    /**
+     * @summary `ss_Status`.
+     * @public
+     * @readonly
+     */
+    public readonly ss_Status: Ext_SS_Status;
+    /**
+     * @summary Extensions that are not recognized.
+     * @public
+     * @readonly
+     */
+    public readonly _unrecognizedExtensionsList: _Element[];
+
     constructor (
-        /**
-         * @summary `basicService`.
-         * @public
-         * @readonly
-         */
-        readonly basicService: Ext_BasicServiceCode,
-        /**
-         * @summary `ss_Status`.
-         * @public
-         * @readonly
-         */
-        readonly ss_Status: Ext_SS_Status,
-        /**
-         * @summary Extensions that are not recognized.
-         * @public
-         * @readonly
-         */
-        readonly _unrecognizedExtensionsList: _Element[] = []
-    ) {}
+        basicService: Ext_BasicServiceCode,
+        ss_Status: Ext_SS_Status,
+        _unrecognizedExtensionsList: _Element[] = []
+    ) {
+        this.basicService = basicService;
+        this.ss_Status = ss_Status;
+        this._unrecognizedExtensionsList = _unrecognizedExtensionsList;
+    }
 
     /**
      * @summary Restructures an object into a Ext_CwFeature

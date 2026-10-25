@@ -1,6 +1,6 @@
 /* eslint-disable */
 import {
-    ASN1Element as _Element,
+    type ASN1Element as _Element,
     ASN1TagClass as _TagClass,
     ASN1Construction as _Construction,
     ASN1UniversalType as _UniversalType,
@@ -11,7 +11,7 @@ import {
 } from '@wildboar/asn1';
 import * as $ from '@wildboar/asn1/functional';
 import {
-    RetrievalError,
+    type RetrievalError,
     _decode_RetrievalError,
     _encode_RetrievalError,
 } from '../MhsAcctAsn1Module/RetrievalError.ta.mjs';
@@ -30,22 +30,13 @@ import {
  */
 export type SummarizeErrors = RetrievalError; // DefinedType
 
-let _cached_decoder_for_SummarizeErrors: $.ASN1Decoder<SummarizeErrors> | null = null;
-
 /**
  * @summary Decodes an ASN.1 element into a(n) SummarizeErrors
  * @function
  * @param {_Element} el The element being decoded.
  * @returns {SummarizeErrors} The decoded data structure.
  */
-export function _decode_SummarizeErrors(el: _Element): SummarizeErrors {
-    if (!_cached_decoder_for_SummarizeErrors) {
-        _cached_decoder_for_SummarizeErrors = _decode_RetrievalError;
-    }
-    return _cached_decoder_for_SummarizeErrors(el);
-}
-
-let _cached_encoder_for_SummarizeErrors: $.ASN1Encoder<SummarizeErrors> | null = null;
+export const _decode_SummarizeErrors: $.ASN1Decoder<SummarizeErrors> = _decode_RetrievalError;
 
 /**
  * @summary Encodes a(n) SummarizeErrors into an ASN.1 Element.
@@ -54,15 +45,7 @@ let _cached_encoder_for_SummarizeErrors: $.ASN1Encoder<SummarizeErrors> | null =
  * @param elGetter A function that can be used to get new ASN.1 elements.
  * @returns {_Element} The SummarizeErrors, encoded as an ASN.1 Element.
  */
-export function _encode_SummarizeErrors(
-    value: SummarizeErrors,
-    elGetter: $.ASN1Encoder<SummarizeErrors>
-): _Element {
-    if (!_cached_encoder_for_SummarizeErrors) {
-        _cached_encoder_for_SummarizeErrors = _encode_RetrievalError;
-    }
-    return _cached_encoder_for_SummarizeErrors(value, elGetter);
-}
+export const _encode_SummarizeErrors: $.ASN1Encoder<SummarizeErrors> = _encode_RetrievalError;
 
 
 /* eslint-enable */

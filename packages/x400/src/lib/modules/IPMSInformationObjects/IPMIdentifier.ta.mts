@@ -1,7 +1,7 @@
 /* eslint-disable */
 import {
-    OPTIONAL,
-    ASN1Element as _Element,
+    type OPTIONAL,
+    type ASN1Element as _Element,
     ASN1TagClass as _TagClass,
     ASN1Construction as _Construction,
     ASN1UniversalType as _UniversalType,
@@ -17,7 +17,7 @@ import {
     _encode_ORName,
 } from '../MTSAbstractService/ORName.ta.mjs';
 import {
-    LocalIPMIdentifier,
+    type LocalIPMIdentifier,
     _decode_LocalIPMIdentifier,
     _encode_LocalIPMIdentifier,
 } from '../IPMSInformationObjects/LocalIPMIdentifier.ta.mjs';
@@ -38,20 +38,26 @@ import {
  *
  */
 export class IPMIdentifier {
+    /**
+     * @summary `user`.
+     * @public
+     * @readonly
+     */
+    public readonly user: OPTIONAL<ORName>;
+    /**
+     * @summary `user_relative_identifier`.
+     * @public
+     * @readonly
+     */
+    public readonly user_relative_identifier: LocalIPMIdentifier;
+
     constructor(
-        /**
-         * @summary `user`.
-         * @public
-         * @readonly
-         */
-        readonly user: OPTIONAL<ORName>,
-        /**
-         * @summary `user_relative_identifier`.
-         * @public
-         * @readonly
-         */
-        readonly user_relative_identifier: LocalIPMIdentifier
-    ) {}
+        user: OPTIONAL<ORName>,
+        user_relative_identifier: LocalIPMIdentifier
+    ) {
+        this.user = user;
+        this.user_relative_identifier = user_relative_identifier;
+    }
 
     /**
      * @summary Restructures an object into a IPMIdentifier

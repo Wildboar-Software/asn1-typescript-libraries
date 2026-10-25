@@ -1,6 +1,6 @@
 /* eslint-disable */
 import { encryptionAlgorithm } from "../AlgorithmObjectIdentifiers/encryptionAlgorithm.va.mjs";
-import { ID } from "../AlgorithmObjectIdentifiers/ID.ta.mjs";
+import { type ID } from "../AlgorithmObjectIdentifiers/ID.ta.mjs";
 /**
  * @summary id_ea
  * @description

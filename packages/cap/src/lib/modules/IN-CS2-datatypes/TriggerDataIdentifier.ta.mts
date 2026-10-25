@@ -1,7 +1,7 @@
 /* eslint-disable */
 import {
-    OPTIONAL,
-    ASN1Element as _Element,
+    type OPTIONAL,
+    type ASN1Element as _Element,
     ASN1TagClass as _TagClass,
     ASN1Construction as _Construction,
     ASN1UniversalType as _UniversalType,
@@ -12,7 +12,7 @@ import {
 } from "@wildboar/asn1";
 import * as $ from "@wildboar/asn1/functional";
 import { EventTypeBCSM, _enum_for_EventTypeBCSM, _decode_EventTypeBCSM, _encode_EventTypeBCSM } from "../IN-CS2-datatypes/EventTypeBCSM.ta.mjs";
-import { ProfileIdentifier, _decode_ProfileIdentifier, _encode_ProfileIdentifier } from "../IN-CS2-datatypes/ProfileIdentifier.ta.mjs";
+import { type ProfileIdentifier, _decode_ProfileIdentifier, _encode_ProfileIdentifier } from "../IN-CS2-datatypes/ProfileIdentifier.ta.mjs";
 import { ExtensionField, _decode_ExtensionField, _encode_ExtensionField } from "../IN-CS2-datatypes/ExtensionField.ta.mjs";
 
 
@@ -36,26 +36,34 @@ import { ExtensionField, _decode_ExtensionField, _encode_ExtensionField } from "
  */
 export
 class TriggerDataIdentifier {
+    /**
+     * @summary `triggerID`.
+     * @public
+     * @readonly
+     */
+    public readonly triggerID: EventTypeBCSM;
+    /**
+     * @summary `profileIdentifier`.
+     * @public
+     * @readonly
+     */
+    public readonly profileIdentifier: ProfileIdentifier;
+    /**
+     * @summary `extensions`.
+     * @public
+     * @readonly
+     */
+    public readonly extensions?: OPTIONAL<ExtensionField[]>;
+
     constructor (
-        /**
-         * @summary `triggerID`.
-         * @public
-         * @readonly
-         */
-        readonly triggerID: EventTypeBCSM,
-        /**
-         * @summary `profileIdentifier`.
-         * @public
-         * @readonly
-         */
-        readonly profileIdentifier: ProfileIdentifier,
-        /**
-         * @summary `extensions`.
-         * @public
-         * @readonly
-         */
-        readonly extensions?: OPTIONAL<ExtensionField[]>
-    ) {}
+        triggerID: EventTypeBCSM,
+        profileIdentifier: ProfileIdentifier,
+        extensions?: OPTIONAL<ExtensionField[]>
+    ) {
+        this.triggerID = triggerID;
+        this.profileIdentifier = profileIdentifier;
+        this.extensions = extensions;
+    }
 
     /**
      * @summary Restructures an object into a TriggerDataIdentifier
@@ -79,7 +87,7 @@ class TriggerDataIdentifier {
          * @static
          */
 
-    public static _enum_for_triggerID = _enum_for_EventTypeBCSM;
+    public static _enum_for_triggerID: typeof _enum_for_EventTypeBCSM = _enum_for_EventTypeBCSM;
 }
 
 /**

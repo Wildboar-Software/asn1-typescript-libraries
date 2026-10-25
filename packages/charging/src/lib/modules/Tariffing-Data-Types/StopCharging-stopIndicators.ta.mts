@@ -1,8 +1,8 @@
 /* eslint-disable */
 import {
-    ASN1Element as _Element,
+    type ASN1Element as _Element,
     ASN1SizeError,
-    BIT_STRING
+    type BIT_STRING
 } from "@wildboar/asn1";
 import * as $ from "@wildboar/asn1/functional";
 import { maxStopIndicatorsLen } from "../Tariffing-Data-Types/maxStopIndicatorsLen.va.mjs";
@@ -65,7 +65,7 @@ export const _decode_StopCharging_stopIndicators = (el: _Element): StopCharging_
     }
     return value;
 };
-export const _encode_StopCharging_stopIndicators = $._encodeBitString;
+export const _encode_StopCharging_stopIndicators: $.ASN1Encoder<BIT_STRING> = $._encodeBitString;
 
 
 /* eslint-enable */

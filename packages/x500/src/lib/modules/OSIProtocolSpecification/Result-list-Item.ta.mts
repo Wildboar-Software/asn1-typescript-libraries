@@ -1,22 +1,22 @@
 /* eslint-disable */
 import {
-    ASN1Element as _Element,
+    type ASN1Element as _Element,
     ASN1TagClass as _TagClass,
-    OPTIONAL,
+    type OPTIONAL,
 } from "@wildboar/asn1";
 import * as $ from "@wildboar/asn1/functional";
 import {
-    Result_list_Item_provider_reason,
+    type Result_list_Item_provider_reason,
     _decode_Result_list_Item_provider_reason,
     _encode_Result_list_Item_provider_reason,
 } from "../OSIProtocolSpecification/Result-list-Item-provider-reason.ta.mjs";
 import {
-    Result,
+    type Result,
     _decode_Result,
     _encode_Result,
 } from "../OSIProtocolSpecification/Result.ta.mjs";
 import {
-    Transfer_syntax_name,
+    type Transfer_syntax_name,
     _decode_Transfer_syntax_name,
     _encode_Transfer_syntax_name,
 } from "../OSIProtocolSpecification/Transfer-syntax-name.ta.mjs";
@@ -32,26 +32,34 @@ import {
  *
  */
 export class Result_list_Item {
+    /**
+     * @summary `result`.
+     * @public
+     * @readonly
+     */
+    public readonly result: Result;
+    /**
+     * @summary `transfer_syntax_name`.
+     * @public
+     * @readonly
+     */
+    public readonly transfer_syntax_name?: OPTIONAL<Transfer_syntax_name>;
+    /**
+     * @summary `provider_reason`.
+     * @public
+     * @readonly
+     */
+    public readonly provider_reason?: OPTIONAL<Result_list_Item_provider_reason>;
+
     constructor(
-        /**
-         * @summary `result`.
-         * @public
-         * @readonly
-         */
-        readonly result: Result,
-        /**
-         * @summary `transfer_syntax_name`.
-         * @public
-         * @readonly
-         */
-        readonly transfer_syntax_name?: OPTIONAL<Transfer_syntax_name>,
-        /**
-         * @summary `provider_reason`.
-         * @public
-         * @readonly
-         */
-        readonly provider_reason?: OPTIONAL<Result_list_Item_provider_reason>
-    ) {}
+        result: Result,
+        transfer_syntax_name?: OPTIONAL<Transfer_syntax_name>,
+        provider_reason?: OPTIONAL<Result_list_Item_provider_reason>
+    ) {
+        this.result = result;
+        this.transfer_syntax_name = transfer_syntax_name;
+        this.provider_reason = provider_reason;
+    }
 
     /**
      * @summary Restructures an object into a Result_list_Item

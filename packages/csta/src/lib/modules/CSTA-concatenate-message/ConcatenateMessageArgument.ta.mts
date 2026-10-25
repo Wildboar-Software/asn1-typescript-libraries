@@ -2,13 +2,13 @@
 
 import * as $ from "@wildboar/asn1/functional";
 import {
-    OPTIONAL,
-    SEQUENCE,
-    SET,
-    ASN1Element as _Element,
+    type OPTIONAL,
+    type SEQUENCE,
+    type SET,
+    type ASN1Element as _Element,
     ASN1TagClass as _TagClass
 } from "@wildboar/asn1";
-import { MessageID, _decode_MessageID, _encode_MessageID } from "../CSTA-device-feature-types/MessageID.ta.mjs";
+import { type MessageID, _decode_MessageID, _encode_MessageID } from "../CSTA-device-feature-types/MessageID.ta.mjs";
 
 import { CSTACommonArguments, _decode_CSTACommonArguments, _encode_CSTACommonArguments } from "../CSTA-extension-types/CSTACommonArguments.ta.mjs";
 
@@ -36,29 +36,35 @@ import { CSTACommonArguments, _decode_CSTACommonArguments, _encode_CSTACommonArg
  */
 export
 class ConcatenateMessageArgument {
+    /**
+     * @summary `messagesToConcatenate`.
+     * @description
+     *
+     * Messages in concatenation order (ECMA-269 §26.1.3.1).
+     *
+     * @public
+     * @readonly
+     */
+    public readonly messagesToConcatenate: MessageID[];
+    /**
+     * @summary `extensions`.
+     * @description
+     *
+     * CSTACommonArguments carrying the service-table security and
+     * privateData parameters.
+     *
+     * @public
+     * @readonly
+     */
+    public readonly extensions?: OPTIONAL<CSTACommonArguments>;
+
     constructor (
-        /**
-         * @summary `messagesToConcatenate`.
-         * @description
-         *
-         * Messages in concatenation order (ECMA-269 §26.1.3.1).
-         *
-         * @public
-         * @readonly
-         */
-        readonly messagesToConcatenate: MessageID[],
-        /**
-         * @summary `extensions`.
-         * @description
-         *
-         * CSTACommonArguments carrying the service-table security and
-         * privateData parameters.
-         *
-         * @public
-         * @readonly
-         */
-        readonly extensions?: OPTIONAL<CSTACommonArguments>
-    ) {}
+        messagesToConcatenate: MessageID[],
+        extensions?: OPTIONAL<CSTACommonArguments>
+    ) {
+        this.messagesToConcatenate = messagesToConcatenate;
+        this.extensions = extensions;
+    }
 
     /**
      * @summary Restructures an object into a ConcatenateMessageArgument

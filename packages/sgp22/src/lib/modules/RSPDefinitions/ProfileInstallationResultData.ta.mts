@@ -1,14 +1,14 @@
 /* eslint-disable */
 import {
-    OBJECT_IDENTIFIER,
+    type OBJECT_IDENTIFIER,
     ASN1ConstructionError as _ConstructionError,
-    ASN1Element as _Element,
+    type ASN1Element as _Element,
     ASN1TagClass as _TagClass
 } from "@wildboar/asn1";
 import * as $ from "@wildboar/asn1/functional";
-import { TransactionId, _decode_TransactionId, _encode_TransactionId } from "../RSPDefinitions/TransactionId.ta.mjs";
+import { type TransactionId, _decode_TransactionId, _encode_TransactionId } from "../RSPDefinitions/TransactionId.ta.mjs";
 import { NotificationMetadata, _decode_NotificationMetadata, _encode_NotificationMetadata } from "../RSPDefinitions/NotificationMetadata.ta.mjs";
-import { ProfileInstallationResultData_finalResult, _decode_ProfileInstallationResultData_finalResult, _encode_ProfileInstallationResultData_finalResult } from "../RSPDefinitions/ProfileInstallationResultData-finalResult.ta.mjs";
+import { type ProfileInstallationResultData_finalResult, _decode_ProfileInstallationResultData_finalResult, _encode_ProfileInstallationResultData_finalResult } from "../RSPDefinitions/ProfileInstallationResultData-finalResult.ta.mjs";
 
 
 /**
@@ -49,7 +49,7 @@ class ProfileInstallationResultData {
      * @public
      * @readonly
      */
-    readonly transactionId: TransactionId;
+    public readonly transactionId: TransactionId;
     /**
      * @summary `notificationMetadata`.
      * @description
@@ -61,7 +61,7 @@ class ProfileInstallationResultData {
      * @public
      * @readonly
      */
-    readonly notificationMetadata: NotificationMetadata;
+    public readonly notificationMetadata: NotificationMetadata;
     /**
      * @summary `smdpOid`.
      * @description
@@ -72,7 +72,7 @@ class ProfileInstallationResultData {
      * @public
      * @readonly
      */
-    readonly smdpOid: OBJECT_IDENTIFIER;
+    public readonly smdpOid: OBJECT_IDENTIFIER;
     /**
      * @summary `finalResult`.
      * @description
@@ -82,7 +82,7 @@ class ProfileInstallationResultData {
      * @public
      * @readonly
      */
-    readonly finalResult: ProfileInstallationResultData_finalResult;
+    public readonly finalResult: ProfileInstallationResultData_finalResult;
 
     constructor (
         transactionId: TransactionId,

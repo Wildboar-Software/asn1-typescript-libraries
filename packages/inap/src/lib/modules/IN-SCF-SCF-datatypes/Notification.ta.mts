@@ -1,4 +1,5 @@
 /* eslint-disable */
+import { ASN1Element as _Element, ASN1ConstructionError as _ConstructionError } from "@wildboar/asn1";
 import * as $ from "@wildboar/asn1/functional";
 
 
@@ -65,7 +66,7 @@ type Notification = _enum_for_Notification;
  * @enum {number}
  */
 export
-const Notification = _enum_for_Notification;
+const Notification: typeof _enum_for_Notification = _enum_for_Notification;
 
 /**
  * @summary Notification_userAbandon
@@ -73,7 +74,7 @@ const Notification = _enum_for_Notification;
  * @type {number}
  */
 export
-const Notification_userAbandon: Notification = Notification.userAbandon; /* LONG_NAMED_ENUMERATED_VALUE */
+const Notification_userAbandon: _enum_for_Notification.userAbandon = Notification.userAbandon; /* LONG_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary userAbandon
@@ -81,7 +82,7 @@ const Notification_userAbandon: Notification = Notification.userAbandon; /* LONG
  * @type {number}
  */
 export
-const userAbandon: Notification = Notification.userAbandon; /* SHORT_NAMED_ENUMERATED_VALUE */
+const userAbandon: _enum_for_Notification.userAbandon = Notification.userAbandon; /* SHORT_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary Notification_callFailure
@@ -89,7 +90,7 @@ const userAbandon: Notification = Notification.userAbandon; /* SHORT_NAMED_ENUME
  * @type {number}
  */
 export
-const Notification_callFailure: Notification = Notification.callFailure; /* LONG_NAMED_ENUMERATED_VALUE */
+const Notification_callFailure: _enum_for_Notification.callFailure = Notification.callFailure; /* LONG_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary callFailure
@@ -97,7 +98,7 @@ const Notification_callFailure: Notification = Notification.callFailure; /* LONG
  * @type {number}
  */
 export
-const callFailure: Notification = Notification.callFailure; /* SHORT_NAMED_ENUMERATED_VALUE */
+const callFailure: _enum_for_Notification.callFailure = Notification.callFailure; /* SHORT_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary Notification_noReply
@@ -105,7 +106,7 @@ const callFailure: Notification = Notification.callFailure; /* SHORT_NAMED_ENUME
  * @type {number}
  */
 export
-const Notification_noReply: Notification = Notification.noReply; /* LONG_NAMED_ENUMERATED_VALUE */
+const Notification_noReply: _enum_for_Notification.noReply = Notification.noReply; /* LONG_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary noReply
@@ -113,7 +114,7 @@ const Notification_noReply: Notification = Notification.noReply; /* LONG_NAMED_E
  * @type {number}
  */
 export
-const noReply: Notification = Notification.noReply; /* SHORT_NAMED_ENUMERATED_VALUE */
+const noReply: _enum_for_Notification.noReply = Notification.noReply; /* SHORT_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary Notification_callRelease
@@ -121,7 +122,7 @@ const noReply: Notification = Notification.noReply; /* SHORT_NAMED_ENUMERATED_VA
  * @type {number}
  */
 export
-const Notification_callRelease: Notification = Notification.callRelease; /* LONG_NAMED_ENUMERATED_VALUE */
+const Notification_callRelease: _enum_for_Notification.callRelease = Notification.callRelease; /* LONG_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary callRelease
@@ -129,7 +130,7 @@ const Notification_callRelease: Notification = Notification.callRelease; /* LONG
  * @type {number}
  */
 export
-const callRelease: Notification = Notification.callRelease; /* SHORT_NAMED_ENUMERATED_VALUE */
+const callRelease: _enum_for_Notification.callRelease = Notification.callRelease; /* SHORT_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary Notification_ssInvocation
@@ -137,7 +138,7 @@ const callRelease: Notification = Notification.callRelease; /* SHORT_NAMED_ENUME
  * @type {number}
  */
 export
-const Notification_ssInvocation: Notification = Notification.ssInvocation; /* LONG_NAMED_ENUMERATED_VALUE */
+const Notification_ssInvocation: _enum_for_Notification.ssInvocation = Notification.ssInvocation; /* LONG_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary ssInvocation
@@ -145,7 +146,7 @@ const Notification_ssInvocation: Notification = Notification.ssInvocation; /* LO
  * @type {number}
  */
 export
-const ssInvocation: Notification = Notification.ssInvocation; /* SHORT_NAMED_ENUMERATED_VALUE */
+const ssInvocation: _enum_for_Notification.ssInvocation = Notification.ssInvocation; /* SHORT_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary Notification_creditLimitReached
@@ -153,7 +154,7 @@ const ssInvocation: Notification = Notification.ssInvocation; /* SHORT_NAMED_ENU
  * @type {number}
  */
 export
-const Notification_creditLimitReached: Notification = Notification.creditLimitReached; /* LONG_NAMED_ENUMERATED_VALUE */
+const Notification_creditLimitReached: _enum_for_Notification.creditLimitReached = Notification.creditLimitReached; /* LONG_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary creditLimitReached
@@ -161,7 +162,7 @@ const Notification_creditLimitReached: Notification = Notification.creditLimitRe
  * @type {number}
  */
 export
-const creditLimitReached: Notification = Notification.creditLimitReached; /* SHORT_NAMED_ENUMERATED_VALUE */
+const creditLimitReached: _enum_for_Notification.creditLimitReached = Notification.creditLimitReached; /* SHORT_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary Notification_callDuration
@@ -169,7 +170,7 @@ const creditLimitReached: Notification = Notification.creditLimitReached; /* SHO
  * @type {number}
  */
 export
-const Notification_callDuration: Notification = Notification.callDuration; /* LONG_NAMED_ENUMERATED_VALUE */
+const Notification_callDuration: _enum_for_Notification.callDuration = Notification.callDuration; /* LONG_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary callDuration
@@ -177,7 +178,7 @@ const Notification_callDuration: Notification = Notification.callDuration; /* LO
  * @type {number}
  */
 export
-const callDuration: Notification = Notification.callDuration; /* SHORT_NAMED_ENUMERATED_VALUE */
+const callDuration: _enum_for_Notification.callDuration = Notification.callDuration; /* SHORT_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary Notification_calledNumber
@@ -185,7 +186,7 @@ const callDuration: Notification = Notification.callDuration; /* SHORT_NAMED_ENU
  * @type {number}
  */
 export
-const Notification_calledNumber: Notification = Notification.calledNumber; /* LONG_NAMED_ENUMERATED_VALUE */
+const Notification_calledNumber: _enum_for_Notification.calledNumber = Notification.calledNumber; /* LONG_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary calledNumber
@@ -193,7 +194,7 @@ const Notification_calledNumber: Notification = Notification.calledNumber; /* LO
  * @type {number}
  */
 export
-const calledNumber: Notification = Notification.calledNumber; /* SHORT_NAMED_ENUMERATED_VALUE */
+const calledNumber: _enum_for_Notification.calledNumber = Notification.calledNumber; /* SHORT_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary Notification_answeredCall
@@ -201,7 +202,7 @@ const calledNumber: Notification = Notification.calledNumber; /* SHORT_NAMED_ENU
  * @type {number}
  */
 export
-const Notification_answeredCall: Notification = Notification.answeredCall; /* LONG_NAMED_ENUMERATED_VALUE */
+const Notification_answeredCall: _enum_for_Notification.answeredCall = Notification.answeredCall; /* LONG_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary answeredCall
@@ -209,12 +210,30 @@ const Notification_answeredCall: Notification = Notification.answeredCall; /* LO
  * @type {number}
  */
 export
-const answeredCall: Notification = Notification.answeredCall; /* SHORT_NAMED_ENUMERATED_VALUE */
+const answeredCall: _enum_for_Notification.answeredCall = Notification.answeredCall; /* SHORT_NAMED_ENUMERATED_VALUE */
 
 export
-const _decode_Notification: $.ASN1Decoder<Notification> = $._decodeEnumerated;
+function _decode_Notification(el: _Element): Notification {
+    const enumerated = $._decodeEnumerated(el);
+    switch (enumerated) {
+        case Notification.userAbandon: return Notification.userAbandon;
+        case Notification.callFailure: return Notification.callFailure;
+        case Notification.noReply: return Notification.noReply;
+        case Notification.callRelease: return Notification.callRelease;
+        case Notification.ssInvocation: return Notification.ssInvocation;
+        case Notification.creditLimitReached: return Notification.creditLimitReached;
+        case Notification.callDuration: return Notification.callDuration;
+        case Notification.calledNumber: return Notification.calledNumber;
+        case Notification.answeredCall: return Notification.answeredCall;
+        default:
+            throw new _ConstructionError(
+                "Invalid ENUMERATED value " + enumerated + " for Notification.",
+                el,
+            );
+    }
+}
 
 export
-const _encode_Notification: $.ASN1Encoder<Notification> = $._encodeEnumerated;
+const _encode_Notification: $.ASN1Encoder<Notification> = $._encodeEnumerated as $.ASN1Encoder<Notification>;
 
 /* eslint-enable */

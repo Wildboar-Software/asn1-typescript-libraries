@@ -1,6 +1,6 @@
 /* eslint-disable */
 import {
-    ASN1Element as _Element,
+    type ASN1Element as _Element,
     ASN1TagClass as _TagClass,
     ASN1Construction as _Construction,
     ASN1UniversalType as _UniversalType,
@@ -27,8 +27,8 @@ import * as $ from "@wildboar/asn1/functional";
  */
 export
 type AE_qualifier = _Element; // ObjectClassFieldType
-export const _decode_AE_qualifier = $._decodeAny;
-export const _encode_AE_qualifier = $._encodeAny;
+export const _decode_AE_qualifier: $.ASN1Decoder<_Element> = $._decodeAny;
+export const _encode_AE_qualifier: $.ASN1Encoder<_Element> = $._encodeAny;
 
 
 /* eslint-enable */

@@ -1,21 +1,21 @@
 /* eslint-disable */
 import {
-    OPTIONAL,
-    ASN1Element as _Element,
+    type OPTIONAL,
+    type ASN1Element as _Element,
     ASN1TagClass as _TagClass
 } from "@wildboar/asn1";
 import * as $ from "@wildboar/asn1/functional";
-import { MGW_EventList, _decode_MGW_EventList, _encode_MGW_EventList } from "../MAP-OM-DataTypes/MGW-EventList.ta.mjs";
-import { MGW_InterfaceList, _decode_MGW_InterfaceList, _encode_MGW_InterfaceList } from "../MAP-OM-DataTypes/MGW-InterfaceList.ta.mjs";
-import { MSC_S_EventList, _decode_MSC_S_EventList, _encode_MSC_S_EventList } from "../MAP-OM-DataTypes/MSC-S-EventList.ta.mjs";
-import { MSC_S_InterfaceList, _decode_MSC_S_InterfaceList, _encode_MSC_S_InterfaceList } from "../MAP-OM-DataTypes/MSC-S-InterfaceList.ta.mjs";
-import { RNC_InterfaceList, _decode_RNC_InterfaceList, _encode_RNC_InterfaceList } from "../MAP-OM-DataTypes/RNC-InterfaceList.ta.mjs";
-import { TraceDepth, _decode_TraceDepth, _encode_TraceDepth, _enum_for_TraceDepth } from "../MAP-OM-DataTypes/TraceDepth.ta.mjs";
-import { TraceDepthExtension, _decode_TraceDepthExtension, _encode_TraceDepthExtension, _enum_for_TraceDepthExtension } from "../MAP-OM-DataTypes/TraceDepthExtension.ta.mjs";
-import { TraceRecordingSessionReference, _decode_TraceRecordingSessionReference, _encode_TraceRecordingSessionReference } from "../MAP-OM-DataTypes/TraceRecordingSessionReference.ta.mjs";
-import { TraceReference, _decode_TraceReference, _encode_TraceReference } from "../MAP-OM-DataTypes/TraceReference.ta.mjs";
-import { TraceReference2, _decode_TraceReference2, _encode_TraceReference2 } from "../MAP-OM-DataTypes/TraceReference2.ta.mjs";
-import { TraceType, _decode_TraceType, _encode_TraceType } from "../MAP-OM-DataTypes/TraceType.ta.mjs";
+import { type MGW_EventList, _decode_MGW_EventList, _encode_MGW_EventList } from "../MAP-OM-DataTypes/MGW-EventList.ta.mjs";
+import { type MGW_InterfaceList, _decode_MGW_InterfaceList, _encode_MGW_InterfaceList } from "../MAP-OM-DataTypes/MGW-InterfaceList.ta.mjs";
+import { type MSC_S_EventList, _decode_MSC_S_EventList, _encode_MSC_S_EventList } from "../MAP-OM-DataTypes/MSC-S-EventList.ta.mjs";
+import { type MSC_S_InterfaceList, _decode_MSC_S_InterfaceList, _encode_MSC_S_InterfaceList } from "../MAP-OM-DataTypes/MSC-S-InterfaceList.ta.mjs";
+import { type RNC_InterfaceList, _decode_RNC_InterfaceList, _encode_RNC_InterfaceList } from "../MAP-OM-DataTypes/RNC-InterfaceList.ta.mjs";
+import { type TraceDepth, _decode_TraceDepth, _encode_TraceDepth, _enum_for_TraceDepth } from "../MAP-OM-DataTypes/TraceDepth.ta.mjs";
+import { type TraceDepthExtension, _decode_TraceDepthExtension, _encode_TraceDepthExtension, _enum_for_TraceDepthExtension } from "../MAP-OM-DataTypes/TraceDepthExtension.ta.mjs";
+import { type TraceRecordingSessionReference, _decode_TraceRecordingSessionReference, _encode_TraceRecordingSessionReference } from "../MAP-OM-DataTypes/TraceRecordingSessionReference.ta.mjs";
+import { type TraceReference, _decode_TraceReference, _encode_TraceReference } from "../MAP-OM-DataTypes/TraceReference.ta.mjs";
+import { type TraceReference2, _decode_TraceReference2, _encode_TraceReference2 } from "../MAP-OM-DataTypes/TraceReference2.ta.mjs";
+import { type TraceType, _decode_TraceType, _encode_TraceType } from "../MAP-OM-DataTypes/TraceType.ta.mjs";
 
 
 /**
@@ -30,21 +30,21 @@ import { TraceType, _decode_TraceType, _encode_TraceType } from "../MAP-OM-DataT
  * 
  * ```asn1
  * TracePropagationList ::= SEQUENCE {
- *     traceReference    [0] TraceReference    OPTIONAL,
- *     traceType    [1] TraceType    OPTIONAL,
- *     traceReference2    [2] TraceReference2    OPTIONAL,
+ *     traceReference    [0] TraceReference    type OPTIONAL,
+ *     traceType    [1] TraceType    type OPTIONAL,
+ *     traceReference2    [2] TraceReference2    type OPTIONAL,
  *     traceRecordingSessionReference    [3] TraceRecordingSessionReference OPTIONAL,
- *     rnc-TraceDepth    [4] TraceDepth    OPTIONAL,
- *     rnc-InterfaceList    [5] RNC-InterfaceList    OPTIONAL,
- *     msc-s-TraceDepth    [6] TraceDepth    OPTIONAL,
- *     msc-s-InterfaceList    [7] MSC-S-InterfaceList    OPTIONAL,
- *     msc-s-EventList    [8] MSC-S-EventList    OPTIONAL,
- *     mgw-TraceDepth    [9] TraceDepth    OPTIONAL,
- *     mgw-InterfaceList    [10] MGW-InterfaceList    OPTIONAL,
- *     mgw-EventList    [11] MGW-EventList    OPTIONAL,
+ *     rnc-TraceDepth    [4] TraceDepth    type OPTIONAL,
+ *     rnc-InterfaceList    [5] RNC-InterfaceList    type OPTIONAL,
+ *     msc-s-TraceDepth    [6] TraceDepth    type OPTIONAL,
+ *     msc-s-InterfaceList    [7] MSC-S-InterfaceList    type OPTIONAL,
+ *     msc-s-EventList    [8] MSC-S-EventList    type OPTIONAL,
+ *     mgw-TraceDepth    [9] TraceDepth    type OPTIONAL,
+ *     mgw-InterfaceList    [10] MGW-InterfaceList    type OPTIONAL,
+ *     mgw-EventList    [11] MGW-EventList    type OPTIONAL,
  *     ...,
- *     rnc-TraceDepthExtension    [12] TraceDepthExtension    OPTIONAL,
- *     msc-s-TraceDepthExtension    [13] TraceDepthExtension    OPTIONAL,
+ *     rnc-TraceDepthExtension    [12] TraceDepthExtension    type OPTIONAL,
+ *     msc-s-TraceDepthExtension    [13] TraceDepthExtension    type OPTIONAL,
  *     mgw-TraceDepthExtension    [14] TraceDepthExtension    OPTIONAL
  * }
  * ```
@@ -53,164 +53,198 @@ import { TraceType, _decode_TraceType, _encode_TraceType } from "../MAP-OM-DataT
  */
 export
 class TracePropagationList {
+    /**
+     * @summary `traceReference`.
+     * @description
+     *
+     * GSM-only trace reference.
+     *
+     * @public
+     * @readonly
+     */
+    public readonly traceReference?: OPTIONAL<TraceReference>;
+    /**
+     * @summary `traceType`.
+     * @description
+     *
+     * GSM-only trace type.
+     *
+     * @public
+     * @readonly
+     */
+    public readonly traceType?: OPTIONAL<TraceType>;
+    /**
+     * @summary `traceReference2`.
+     * @description
+     *
+     * UMTS trace reference.
+     *
+     * @public
+     * @readonly
+     */
+    public readonly traceReference2?: OPTIONAL<TraceReference2>;
+    /**
+     * @summary `traceRecordingSessionReference`.
+     * @description
+     *
+     * Trace recording session reference.
+     *
+     * @public
+     * @readonly
+     */
+    public readonly traceRecordingSessionReference?: OPTIONAL<TraceRecordingSessionReference>;
+    /**
+     * @summary `rnc_TraceDepth`.
+     * @description
+     *
+     * RNC trace depth.
+     *
+     * @public
+     * @readonly
+     */
+    public readonly rnc_TraceDepth?: OPTIONAL<TraceDepth>;
+    /**
+     * @summary `rnc_InterfaceList`.
+     * @description
+     *
+     * RNC interfaces.
+     *
+     * @public
+     * @readonly
+     */
+    public readonly rnc_InterfaceList?: OPTIONAL<RNC_InterfaceList>;
+    /**
+     * @summary `msc_s_TraceDepth`.
+     * @description
+     *
+     * MSC-S trace depth.
+     *
+     * @public
+     * @readonly
+     */
+    public readonly msc_s_TraceDepth?: OPTIONAL<TraceDepth>;
+    /**
+     * @summary `msc_s_InterfaceList`.
+     * @description
+     *
+     * MSC-S interfaces.
+     *
+     * @public
+     * @readonly
+     */
+    public readonly msc_s_InterfaceList?: OPTIONAL<MSC_S_InterfaceList>;
+    /**
+     * @summary `msc_s_EventList`.
+     * @description
+     *
+     * MSC-S events.
+     *
+     * @public
+     * @readonly
+     */
+    public readonly msc_s_EventList?: OPTIONAL<MSC_S_EventList>;
+    /**
+     * @summary `mgw_TraceDepth`.
+     * @description
+     *
+     * MGW trace depth.
+     *
+     * @public
+     * @readonly
+     */
+    public readonly mgw_TraceDepth?: OPTIONAL<TraceDepth>;
+    /**
+     * @summary `mgw_InterfaceList`.
+     * @description
+     *
+     * MGW interfaces.
+     *
+     * @public
+     * @readonly
+     */
+    public readonly mgw_InterfaceList?: OPTIONAL<MGW_InterfaceList>;
+    /**
+     * @summary `mgw_EventList`.
+     * @description
+     *
+     * MGW events.
+     *
+     * @public
+     * @readonly
+     */
+    public readonly mgw_EventList?: OPTIONAL<MGW_EventList>;
+    /**
+     * @summary `rnc_TraceDepthExtension`.
+     * @description
+     *
+     * RNC depth extension; send matching TraceDepth too.
+     *
+     * @public
+     * @readonly
+     */
+    public readonly rnc_TraceDepthExtension?: OPTIONAL<TraceDepthExtension>;
+    /**
+     * @summary `msc_s_TraceDepthExtension`.
+     * @description
+     *
+     * MSC-S depth extension; send matching TraceDepth too.
+     *
+     * @public
+     * @readonly
+     */
+    public readonly msc_s_TraceDepthExtension?: OPTIONAL<TraceDepthExtension>;
+    /**
+     * @summary `mgw_TraceDepthExtension`.
+     * @description
+     *
+     * MGW depth extension; send matching TraceDepth too.
+     *
+     * @public
+     * @readonly
+     */
+    public readonly mgw_TraceDepthExtension?: OPTIONAL<TraceDepthExtension>;
+    /**
+     * @summary Extensions that are not recognized.
+     * @public
+     * @readonly
+     */
+    public readonly _unrecognizedExtensionsList: _Element[];
+
     constructor (
-        /**
-         * @summary `traceReference`.
-         * @description
-         *
-         * GSM-only trace reference.
-         *
-         * @public
-         * @readonly
-         */
-        readonly traceReference?: OPTIONAL<TraceReference>,
-        /**
-         * @summary `traceType`.
-         * @description
-         *
-         * GSM-only trace type.
-         *
-         * @public
-         * @readonly
-         */
-        readonly traceType?: OPTIONAL<TraceType>,
-        /**
-         * @summary `traceReference2`.
-         * @description
-         *
-         * UMTS trace reference.
-         *
-         * @public
-         * @readonly
-         */
-        readonly traceReference2?: OPTIONAL<TraceReference2>,
-        /**
-         * @summary `traceRecordingSessionReference`.
-         * @description
-         *
-         * Trace recording session reference.
-         *
-         * @public
-         * @readonly
-         */
-        readonly traceRecordingSessionReference?: OPTIONAL<TraceRecordingSessionReference>,
-        /**
-         * @summary `rnc_TraceDepth`.
-         * @description
-         *
-         * RNC trace depth.
-         *
-         * @public
-         * @readonly
-         */
-        readonly rnc_TraceDepth?: OPTIONAL<TraceDepth>,
-        /**
-         * @summary `rnc_InterfaceList`.
-         * @description
-         *
-         * RNC interfaces.
-         *
-         * @public
-         * @readonly
-         */
-        readonly rnc_InterfaceList?: OPTIONAL<RNC_InterfaceList>,
-        /**
-         * @summary `msc_s_TraceDepth`.
-         * @description
-         *
-         * MSC-S trace depth.
-         *
-         * @public
-         * @readonly
-         */
-        readonly msc_s_TraceDepth?: OPTIONAL<TraceDepth>,
-        /**
-         * @summary `msc_s_InterfaceList`.
-         * @description
-         *
-         * MSC-S interfaces.
-         *
-         * @public
-         * @readonly
-         */
-        readonly msc_s_InterfaceList?: OPTIONAL<MSC_S_InterfaceList>,
-        /**
-         * @summary `msc_s_EventList`.
-         * @description
-         *
-         * MSC-S events.
-         *
-         * @public
-         * @readonly
-         */
-        readonly msc_s_EventList?: OPTIONAL<MSC_S_EventList>,
-        /**
-         * @summary `mgw_TraceDepth`.
-         * @description
-         *
-         * MGW trace depth.
-         *
-         * @public
-         * @readonly
-         */
-        readonly mgw_TraceDepth?: OPTIONAL<TraceDepth>,
-        /**
-         * @summary `mgw_InterfaceList`.
-         * @description
-         *
-         * MGW interfaces.
-         *
-         * @public
-         * @readonly
-         */
-        readonly mgw_InterfaceList?: OPTIONAL<MGW_InterfaceList>,
-        /**
-         * @summary `mgw_EventList`.
-         * @description
-         *
-         * MGW events.
-         *
-         * @public
-         * @readonly
-         */
-        readonly mgw_EventList?: OPTIONAL<MGW_EventList>,
-        /**
-         * @summary `rnc_TraceDepthExtension`.
-         * @description
-         *
-         * RNC depth extension; send matching TraceDepth too.
-         *
-         * @public
-         * @readonly
-         */
-        readonly rnc_TraceDepthExtension?: OPTIONAL<TraceDepthExtension>,
-        /**
-         * @summary `msc_s_TraceDepthExtension`.
-         * @description
-         *
-         * MSC-S depth extension; send matching TraceDepth too.
-         *
-         * @public
-         * @readonly
-         */
-        readonly msc_s_TraceDepthExtension?: OPTIONAL<TraceDepthExtension>,
-        /**
-         * @summary `mgw_TraceDepthExtension`.
-         * @description
-         *
-         * MGW depth extension; send matching TraceDepth too.
-         *
-         * @public
-         * @readonly
-         */
-        readonly mgw_TraceDepthExtension?: OPTIONAL<TraceDepthExtension>,
-        /**
-         * @summary Extensions that are not recognized.
-         * @public
-         * @readonly
-         */
-        readonly _unrecognizedExtensionsList: _Element[] = []
-    ) {}
+        traceReference?: OPTIONAL<TraceReference>,
+        traceType?: OPTIONAL<TraceType>,
+        traceReference2?: OPTIONAL<TraceReference2>,
+        traceRecordingSessionReference?: OPTIONAL<TraceRecordingSessionReference>,
+        rnc_TraceDepth?: OPTIONAL<TraceDepth>,
+        rnc_InterfaceList?: OPTIONAL<RNC_InterfaceList>,
+        msc_s_TraceDepth?: OPTIONAL<TraceDepth>,
+        msc_s_InterfaceList?: OPTIONAL<MSC_S_InterfaceList>,
+        msc_s_EventList?: OPTIONAL<MSC_S_EventList>,
+        mgw_TraceDepth?: OPTIONAL<TraceDepth>,
+        mgw_InterfaceList?: OPTIONAL<MGW_InterfaceList>,
+        mgw_EventList?: OPTIONAL<MGW_EventList>,
+        rnc_TraceDepthExtension?: OPTIONAL<TraceDepthExtension>,
+        msc_s_TraceDepthExtension?: OPTIONAL<TraceDepthExtension>,
+        mgw_TraceDepthExtension?: OPTIONAL<TraceDepthExtension>,
+        _unrecognizedExtensionsList: _Element[] = []
+    ) {
+        this.traceReference = traceReference;
+        this.traceType = traceType;
+        this.traceReference2 = traceReference2;
+        this.traceRecordingSessionReference = traceRecordingSessionReference;
+        this.rnc_TraceDepth = rnc_TraceDepth;
+        this.rnc_InterfaceList = rnc_InterfaceList;
+        this.msc_s_TraceDepth = msc_s_TraceDepth;
+        this.msc_s_InterfaceList = msc_s_InterfaceList;
+        this.msc_s_EventList = msc_s_EventList;
+        this.mgw_TraceDepth = mgw_TraceDepth;
+        this.mgw_InterfaceList = mgw_InterfaceList;
+        this.mgw_EventList = mgw_EventList;
+        this.rnc_TraceDepthExtension = rnc_TraceDepthExtension;
+        this.msc_s_TraceDepthExtension = msc_s_TraceDepthExtension;
+        this.mgw_TraceDepthExtension = mgw_TraceDepthExtension;
+        this._unrecognizedExtensionsList = _unrecognizedExtensionsList;
+    }
 
     /**
      * @summary Restructures an object into a TracePropagationList
@@ -234,37 +268,37 @@ class TracePropagationList {
          * @static
          */
 
-    public static _enum_for_rnc_TraceDepth = _enum_for_TraceDepth;        /**
+    public static _enum_for_rnc_TraceDepth: typeof _enum_for_TraceDepth = _enum_for_TraceDepth;        /**
          * @summary The enum used as the type of the component `msc_s_TraceDepth`
          * @public
          * @static
          */
 
-    public static _enum_for_msc_s_TraceDepth = _enum_for_TraceDepth;        /**
+    public static _enum_for_msc_s_TraceDepth: typeof _enum_for_TraceDepth = _enum_for_TraceDepth;        /**
          * @summary The enum used as the type of the component `mgw_TraceDepth`
          * @public
          * @static
          */
 
-    public static _enum_for_mgw_TraceDepth = _enum_for_TraceDepth;        /**
+    public static _enum_for_mgw_TraceDepth: typeof _enum_for_TraceDepth = _enum_for_TraceDepth;        /**
          * @summary The enum used as the type of the component `rnc_TraceDepthExtension`
          * @public
          * @static
          */
 
-    public static _enum_for_rnc_TraceDepthExtension = _enum_for_TraceDepthExtension;        /**
+    public static _enum_for_rnc_TraceDepthExtension: typeof _enum_for_TraceDepthExtension = _enum_for_TraceDepthExtension;        /**
          * @summary The enum used as the type of the component `msc_s_TraceDepthExtension`
          * @public
          * @static
          */
 
-    public static _enum_for_msc_s_TraceDepthExtension = _enum_for_TraceDepthExtension;        /**
+    public static _enum_for_msc_s_TraceDepthExtension: typeof _enum_for_TraceDepthExtension = _enum_for_TraceDepthExtension;        /**
          * @summary The enum used as the type of the component `mgw_TraceDepthExtension`
          * @public
          * @static
          */
 
-    public static _enum_for_mgw_TraceDepthExtension = _enum_for_TraceDepthExtension;
+    public static _enum_for_mgw_TraceDepthExtension: typeof _enum_for_TraceDepthExtension = _enum_for_TraceDepthExtension;
 }
 
 /**

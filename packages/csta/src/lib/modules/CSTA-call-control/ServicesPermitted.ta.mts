@@ -2,21 +2,21 @@
 
 import * as $ from "@wildboar/asn1/functional";
 import {
-    SEQUENCE,
-    SET,
-    ASN1Element as _Element,
+    type SEQUENCE,
+    type SET,
+    type ASN1Element as _Element,
     ASN1TagClass as _TagClass,
     ASN1ConstructionError as _ConstructionError
 } from "@wildboar/asn1";
-import { CallControlServices, _decode_CallControlServices, _encode_CallControlServices } from "../CSTA-application-context-information-csta3/CallControlServices.ta.mjs";
+import { type CallControlServices, _decode_CallControlServices, _encode_CallControlServices } from "../CSTA-application-context-information-csta3/CallControlServices.ta.mjs";
 
-import { CallAssociatedServices, _decode_CallAssociatedServices, _encode_CallAssociatedServices } from "../CSTA-application-context-information-csta3/CallAssociatedServices.ta.mjs";
+import { type CallAssociatedServices, _decode_CallAssociatedServices, _encode_CallAssociatedServices } from "../CSTA-application-context-information-csta3/CallAssociatedServices.ta.mjs";
 
-import { MediaAttachmentServices, _decode_MediaAttachmentServices, _encode_MediaAttachmentServices } from "../CSTA-application-context-information-csta3/MediaAttachmentServices.ta.mjs";
+import { type MediaAttachmentServices, _decode_MediaAttachmentServices, _encode_MediaAttachmentServices } from "../CSTA-application-context-information-csta3/MediaAttachmentServices.ta.mjs";
 
-import { RouteingServices, _decode_RouteingServices, _encode_RouteingServices } from "../CSTA-application-context-information-csta3/RouteingServices.ta.mjs";
+import { type RouteingServices, _decode_RouteingServices, _encode_RouteingServices } from "../CSTA-application-context-information-csta3/RouteingServices.ta.mjs";
 
-import { VoiceUnitServices, _decode_VoiceUnitServices, _encode_VoiceUnitServices } from "../CSTA-application-context-information-csta3/VoiceUnitServices.ta.mjs";
+import { type VoiceUnitServices, _decode_VoiceUnitServices, _encode_VoiceUnitServices } from "../CSTA-application-context-information-csta3/VoiceUnitServices.ta.mjs";
 
 
 
@@ -51,59 +51,71 @@ import { VoiceUnitServices, _decode_VoiceUnitServices, _encode_VoiceUnitServices
  */
 export
 class ServicesPermitted {
+    /**
+     * @summary `callControlServices`.
+     * @description
+     *
+     * Permitted call-control services (ECMA-269 Table 17-1).
+     *
+     * @public
+     * @readonly
+     */
+    public readonly callControlServices: CallControlServices;
+    /**
+     * @summary `callAssociatedServices`.
+     * @description
+     *
+     * Permitted call-associated services (ECMA-269 Table 18-1).
+     *
+     * @public
+     * @readonly
+     */
+    public readonly callAssociatedServices: CallAssociatedServices;
+    /**
+     * @summary `mediaAttachmentServices`.
+     * @description
+     *
+     * Permitted media-attachment services (ECMA-269
+     * Table 19-1).
+     *
+     * @public
+     * @readonly
+     */
+    public readonly mediaAttachmentServices: MediaAttachmentServices;
+    /**
+     * @summary `routeingServices`.
+     * @description
+     *
+     * Permitted routeing services (ECMA-269 Table 20-7).
+     *
+     * @public
+     * @readonly
+     */
+    public readonly routeingServices: RouteingServices;
+    /**
+     * @summary `voiceUnitServices`.
+     * @description
+     *
+     * Permitted voice-unit services (ECMA-269 Table 26-1).
+     *
+     * @public
+     * @readonly
+     */
+    public readonly voiceUnitServices: VoiceUnitServices;
+
     constructor (
-        /**
-         * @summary `callControlServices`.
-         * @description
-         *
-         * Permitted call-control services (ECMA-269 Table 17-1).
-         *
-         * @public
-         * @readonly
-         */
-        readonly callControlServices: CallControlServices,
-        /**
-         * @summary `callAssociatedServices`.
-         * @description
-         *
-         * Permitted call-associated services (ECMA-269 Table 18-1).
-         *
-         * @public
-         * @readonly
-         */
-        readonly callAssociatedServices: CallAssociatedServices,
-        /**
-         * @summary `mediaAttachmentServices`.
-         * @description
-         *
-         * Permitted media-attachment services (ECMA-269
-         * Table 19-1).
-         *
-         * @public
-         * @readonly
-         */
-        readonly mediaAttachmentServices: MediaAttachmentServices,
-        /**
-         * @summary `routeingServices`.
-         * @description
-         *
-         * Permitted routeing services (ECMA-269 Table 20-7).
-         *
-         * @public
-         * @readonly
-         */
-        readonly routeingServices: RouteingServices,
-        /**
-         * @summary `voiceUnitServices`.
-         * @description
-         *
-         * Permitted voice-unit services (ECMA-269 Table 26-1).
-         *
-         * @public
-         * @readonly
-         */
-        readonly voiceUnitServices: VoiceUnitServices
-    ) {}
+        callControlServices: CallControlServices,
+        callAssociatedServices: CallAssociatedServices,
+        mediaAttachmentServices: MediaAttachmentServices,
+        routeingServices: RouteingServices,
+        voiceUnitServices: VoiceUnitServices
+    ) {
+        this.callControlServices = callControlServices;
+        this.callAssociatedServices = callAssociatedServices;
+        this.mediaAttachmentServices = mediaAttachmentServices;
+        this.routeingServices = routeingServices;
+        this.voiceUnitServices = voiceUnitServices;
+    }
 
     /**
      * @summary Restructures an object into a ServicesPermitted

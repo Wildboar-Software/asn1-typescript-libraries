@@ -1,7 +1,7 @@
 /* eslint-disable */
 import {
-    OPTIONAL,
-    ASN1Element as _Element,
+    type OPTIONAL,
+    type ASN1Element as _Element,
     ASN1TagClass as _TagClass,
     ASN1Construction as _Construction,
     ASN1UniversalType as _UniversalType,
@@ -42,7 +42,7 @@ import {
     _encode_MSSubmissionOptions,
 } from '../MSAbstractService/MSSubmissionOptions.ta.mjs';
 import {
-    MessageGroupRegistrations,
+    type MessageGroupRegistrations,
     _decode_MessageGroupRegistrations,
     _encode_MessageGroupRegistrations,
 } from '../MSAbstractService/MessageGroupRegistrations.ta.mjs';
@@ -52,12 +52,12 @@ import {
     _encode_RegistrationTypes,
 } from '../MSAbstractService/RegistrationTypes.ta.mjs';
 import {
-    MSExtensions,
+    type MSExtensions,
     _decode_MSExtensions,
     _encode_MSExtensions,
 } from '../MSAbstractService/MSExtensions.ta.mjs';
 import {
-    AttributeType,
+    type AttributeType,
     _decode_AttributeType,
     _encode_AttributeType,
 } from "./AttributeType.ta.mjs";
@@ -76,7 +76,7 @@ import {
  *     [0]  SET SIZE (1..ub-auto-registrations) OF AutoActionRegistration OPTIONAL,
  *   auto-action-deregistrations
  *     [1]  SET SIZE (1..ub-auto-registrations) OF AutoActionDeregistration
- *       OPTIONAL,
+ *       type OPTIONAL,
  *   list-attribute-defaults
  *     [2]  SET SIZE (0..ub-default-registrations) OF
  *            X413ATTRIBUTE.&id({AttributeTable}) OPTIONAL,
@@ -106,76 +106,102 @@ import {
  *
  */
 export class Register_MSArgument {
+    /**
+     * @summary `auto_action_registrations`.
+     * @public
+     * @readonly
+     */
+    public readonly auto_action_registrations?: OPTIONAL<AutoActionRegistration[]>;
+    /**
+     * @summary `auto_action_deregistrations`.
+     * @public
+     * @readonly
+     */
+    public readonly auto_action_deregistrations?: OPTIONAL<
+            AutoActionDeregistration[]
+        >;
+    /**
+     * @summary `list_attribute_defaults`.
+     * @public
+     * @readonly
+     */
+    public readonly list_attribute_defaults?: OPTIONAL<AttributeType[]>;
+    /**
+     * @summary `fetch_attribute_defaults`.
+     * @public
+     * @readonly
+     */
+    public readonly fetch_attribute_defaults?: OPTIONAL<AttributeType[]>;
+    /**
+     * @summary `change_credentials`.
+     * @public
+     * @readonly
+     */
+    public readonly change_credentials?: OPTIONAL<Register_MSArgument_change_credentials>;
+    /**
+     * @summary `user_security_labels`.
+     * @public
+     * @readonly
+     */
+    public readonly user_security_labels?: OPTIONAL<SecurityLabel[]>;
+    /**
+     * @summary `ua_registrations`.
+     * @public
+     * @readonly
+     */
+    public readonly ua_registrations?: OPTIONAL<UARegistration[]>;
+    /**
+     * @summary `submission_defaults`.
+     * @public
+     * @readonly
+     */
+    public readonly submission_defaults?: OPTIONAL<MSSubmissionOptions>;
+    /**
+     * @summary `message_group_registrations`.
+     * @public
+     * @readonly
+     */
+    public readonly message_group_registrations?: OPTIONAL<MessageGroupRegistrations>;
+    /**
+     * @summary `registration_status_request`.
+     * @public
+     * @readonly
+     */
+    public readonly registration_status_request?: OPTIONAL<RegistrationTypes>;
+    /**
+     * @summary `register_ms_extensions`.
+     * @public
+     * @readonly
+     */
+    public readonly register_ms_extensions?: OPTIONAL<MSExtensions>;
+
     constructor(
-        /**
-         * @summary `auto_action_registrations`.
-         * @public
-         * @readonly
-         */
-        readonly auto_action_registrations?: OPTIONAL<AutoActionRegistration[]>,
-        /**
-         * @summary `auto_action_deregistrations`.
-         * @public
-         * @readonly
-         */
-        readonly auto_action_deregistrations?: OPTIONAL<
+        auto_action_registrations?: OPTIONAL<AutoActionRegistration[]>,
+        auto_action_deregistrations?: OPTIONAL<
             AutoActionDeregistration[]
         >,
-        /**
-         * @summary `list_attribute_defaults`.
-         * @public
-         * @readonly
-         */
-        readonly list_attribute_defaults?: OPTIONAL<AttributeType[]>,
-        /**
-         * @summary `fetch_attribute_defaults`.
-         * @public
-         * @readonly
-         */
-        readonly fetch_attribute_defaults?: OPTIONAL<AttributeType[]>,
-        /**
-         * @summary `change_credentials`.
-         * @public
-         * @readonly
-         */
-        readonly change_credentials?: OPTIONAL<Register_MSArgument_change_credentials>,
-        /**
-         * @summary `user_security_labels`.
-         * @public
-         * @readonly
-         */
-        readonly user_security_labels?: OPTIONAL<SecurityLabel[]>,
-        /**
-         * @summary `ua_registrations`.
-         * @public
-         * @readonly
-         */
-        readonly ua_registrations?: OPTIONAL<UARegistration[]>,
-        /**
-         * @summary `submission_defaults`.
-         * @public
-         * @readonly
-         */
-        readonly submission_defaults?: OPTIONAL<MSSubmissionOptions>,
-        /**
-         * @summary `message_group_registrations`.
-         * @public
-         * @readonly
-         */
-        readonly message_group_registrations?: OPTIONAL<MessageGroupRegistrations>,
-        /**
-         * @summary `registration_status_request`.
-         * @public
-         * @readonly
-         */
-        readonly registration_status_request?: OPTIONAL<RegistrationTypes>,
-        /**
-         * @summary `register_ms_extensions`.
-         * @public
-         * @readonly
-         */
-        readonly register_ms_extensions?: OPTIONAL<MSExtensions>
-    ) {}
+        list_attribute_defaults?: OPTIONAL<AttributeType[]>,
+        fetch_attribute_defaults?: OPTIONAL<AttributeType[]>,
+        change_credentials?: OPTIONAL<Register_MSArgument_change_credentials>,
+        user_security_labels?: OPTIONAL<SecurityLabel[]>,
+        ua_registrations?: OPTIONAL<UARegistration[]>,
+        submission_defaults?: OPTIONAL<MSSubmissionOptions>,
+        message_group_registrations?: OPTIONAL<MessageGroupRegistrations>,
+        registration_status_request?: OPTIONAL<RegistrationTypes>,
+        register_ms_extensions?: OPTIONAL<MSExtensions>
+    ) {
+        this.auto_action_registrations = auto_action_registrations;
+        this.auto_action_deregistrations = auto_action_deregistrations;
+        this.list_attribute_defaults = list_attribute_defaults;
+        this.fetch_attribute_defaults = fetch_attribute_defaults;
+        this.change_credentials = change_credentials;
+        this.user_security_labels = user_security_labels;
+        this.ua_registrations = ua_registrations;
+        this.submission_defaults = submission_defaults;
+        this.message_group_registrations = message_group_registrations;
+        this.registration_status_request = registration_status_request;
+        this.register_ms_extensions = register_ms_extensions;
+    }
 
     /**
      * @summary Restructures an object into a Register_MSArgument

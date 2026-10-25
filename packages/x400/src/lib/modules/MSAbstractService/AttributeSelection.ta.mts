@@ -1,8 +1,8 @@
 /* eslint-disable */
 import {
-    OPTIONAL,
-    INTEGER,
-    ASN1Element as _Element,
+    type OPTIONAL,
+    type INTEGER,
+    type ASN1Element as _Element,
     ASN1TagClass as _TagClass,
     ASN1Construction as _Construction,
     ASN1UniversalType as _UniversalType,
@@ -13,7 +13,7 @@ import {
 } from '@wildboar/asn1';
 import * as $ from '@wildboar/asn1/functional';
 import {
-    AttributeType,
+    type AttributeType,
     _decode_AttributeType,
     _encode_AttributeType,
 } from "./AttributeType.ta.mjs";
@@ -40,26 +40,34 @@ import {
  *
  */
 export class AttributeSelection {
+    /**
+     * @summary `type_`.
+     * @public
+     * @readonly
+     */
+    public readonly type_: AttributeType;
+    /**
+     * @summary `from_`.
+     * @public
+     * @readonly
+     */
+    public readonly from_?: OPTIONAL<INTEGER>;
+    /**
+     * @summary `count`.
+     * @public
+     * @readonly
+     */
+    public readonly count?: OPTIONAL<INTEGER>;
+
     constructor(
-        /**
-         * @summary `type_`.
-         * @public
-         * @readonly
-         */
-        readonly type_: AttributeType,
-        /**
-         * @summary `from_`.
-         * @public
-         * @readonly
-         */
-        readonly from_?: OPTIONAL<INTEGER>,
-        /**
-         * @summary `count`.
-         * @public
-         * @readonly
-         */
-        readonly count?: OPTIONAL<INTEGER>
-    ) {}
+        type_: AttributeType,
+        from_?: OPTIONAL<INTEGER>,
+        count?: OPTIONAL<INTEGER>
+    ) {
+        this.type_ = type_;
+        this.from_ = from_;
+        this.count = count;
+    }
 
     /**
      * @summary Restructures an object into a AttributeSelection

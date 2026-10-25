@@ -8,7 +8,7 @@ import { type OPERATION } from "../Remote-Operations-Information-Objects/OPERATI
 
 import { SetDoNotDisturbArgument, _decode_SetDoNotDisturbArgument, _encode_SetDoNotDisturbArgument } from "../CSTA-set-do-not-disturb/SetDoNotDisturbArgument.ta.mjs";
 
-import { SetDoNotDisturbResult, _decode_SetDoNotDisturbResult, _encode_SetDoNotDisturbResult } from "../CSTA-set-do-not-disturb/SetDoNotDisturbResult.ta.mjs";
+import { type SetDoNotDisturbResult, _decode_SetDoNotDisturbResult, _encode_SetDoNotDisturbResult } from "../CSTA-set-do-not-disturb/SetDoNotDisturbResult.ta.mjs";
 
 import { universalFailure } from "../CSTA-error-definition/universalFailure.oa.mjs";
 

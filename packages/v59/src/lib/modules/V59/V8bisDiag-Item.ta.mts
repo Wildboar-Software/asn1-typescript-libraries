@@ -1,7 +1,7 @@
 /* eslint-disable */
 import {
-    INTEGER,
-    ASN1Element as _Element,
+    type INTEGER,
+    type ASN1Element as _Element,
     ASN1TagClass as _TagClass,
     ASN1Construction as _Construction,
     ASN1UniversalType as _UniversalType,
@@ -73,7 +73,7 @@ class V8bisDiag_Item {
      * @public
      * @readonly
      */
-    readonly v8bisTransaction: INTEGER;
+    public readonly v8bisTransaction: INTEGER;
     /**
      * @summary `mR`.
      * @description
@@ -83,7 +83,7 @@ class V8bisDiag_Item {
      * @public
      * @readonly
      */
-    readonly mR: V8bisDiag_Item_mR;
+    public readonly mR: V8bisDiag_Item_mR;
     /**
      * @summary `cR`.
      * @description
@@ -93,7 +93,7 @@ class V8bisDiag_Item {
      * @public
      * @readonly
      */
-    readonly cR: V8bisDiag_Item_cR;
+    public readonly cR: V8bisDiag_Item_cR;
     /**
      * @summary `cL`.
      * @description
@@ -102,7 +102,7 @@ class V8bisDiag_Item {
      * @public
      * @readonly
      */
-    readonly cL: V8bisDiag_Item_cL;
+    public readonly cL: V8bisDiag_Item_cL;
     /**
      * @summary `cLR`.
      * @description
@@ -111,7 +111,7 @@ class V8bisDiag_Item {
      * @public
      * @readonly
      */
-    readonly cLR: V8bisDiag_Item_cLR;
+    public readonly cLR: V8bisDiag_Item_cLR;
     /**
      * @summary `eS`.
      * @description
@@ -121,7 +121,7 @@ class V8bisDiag_Item {
      * @public
      * @readonly
      */
-    readonly eS: V8bisDiag_Item_eS;
+    public readonly eS: V8bisDiag_Item_eS;
     /**
      * @summary `ackNak`.
      * @description
@@ -131,7 +131,7 @@ class V8bisDiag_Item {
      * @public
      * @readonly
      */
-    readonly ackNak: V8bisDiag_Item_ackNak;
+    public readonly ackNak: V8bisDiag_Item_ackNak;
 
     constructor (
         v8bisTransaction: INTEGER,

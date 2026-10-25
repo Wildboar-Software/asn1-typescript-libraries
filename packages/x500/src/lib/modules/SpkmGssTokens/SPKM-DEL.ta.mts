@@ -1,9 +1,9 @@
 /* eslint-disable */
 import {
     ASN1ConstructionError as _ConstructionError,
-    ASN1Element as _Element,
+    type ASN1Element as _Element,
     ASN1TagClass as _TagClass,
-    BIT_STRING,
+    type BIT_STRING,
 } from "@wildboar/asn1";
 import * as $ from "@wildboar/asn1/functional";
 import {
@@ -30,28 +30,34 @@ import {
  *
  */
 export class SPKM_DEL {
+    /**
+     * @summary `del_header`.
+     * @description
+     *
+     * Plaintext header; checksum input is header||empty.
+     *
+     * @public
+     * @readonly
+     */
+    public readonly del_header: Del_Header;
+    /**
+     * @summary `int_cksum`.
+     * @description
+     *
+     * Checksum of the header only (empty user data).
+     *
+     * @public
+     * @readonly
+     */
+    public readonly int_cksum: BIT_STRING;
+
     constructor(
-        /**
-         * @summary `del_header`.
-         * @description
-         *
-         * Plaintext header; checksum input is header||empty.
-         *
-         * @public
-         * @readonly
-         */
-        readonly del_header: Del_Header,
-        /**
-         * @summary `int_cksum`.
-         * @description
-         *
-         * Checksum of the header only (empty user data).
-         *
-         * @public
-         * @readonly
-         */
-        readonly int_cksum: BIT_STRING
-    ) {}
+        del_header: Del_Header,
+        int_cksum: BIT_STRING
+    ) {
+        this.del_header = del_header;
+        this.int_cksum = int_cksum;
+    }
 
     /**
      * @summary Restructures an object into a SPKM_DEL

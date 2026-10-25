@@ -77,7 +77,7 @@ type ReasonforCancellation = _enum_for_ReasonforCancellation;
  * @enum {number}
  */
 export
-const ReasonforCancellation = _enum_for_ReasonforCancellation;
+const ReasonforCancellation: typeof _enum_for_ReasonforCancellation = _enum_for_ReasonforCancellation;
 
 /**
  * @summary ReasonforCancellation_proximityAlerted
@@ -92,7 +92,7 @@ const ReasonforCancellation = _enum_for_ReasonforCancellation;
  * @type {number}
  */
 export
-const ReasonforCancellation_proximityAlerted: ReasonforCancellation = ReasonforCancellation.proximityAlerted; /* LONG_NAMED_ENUMERATED_VALUE */
+const ReasonforCancellation_proximityAlerted: _enum_for_ReasonforCancellation.proximityAlerted = ReasonforCancellation.proximityAlerted; /* LONG_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary proximityAlerted
@@ -105,7 +105,7 @@ const ReasonforCancellation_proximityAlerted: ReasonforCancellation = ReasonforC
  * @type {number}
  */
 export
-const proximityAlerted: ReasonforCancellation = ReasonforCancellation.proximityAlerted; /* SHORT_NAMED_ENUMERATED_VALUE */
+const proximityAlerted: _enum_for_ReasonforCancellation.proximityAlerted = ReasonforCancellation.proximityAlerted; /* SHORT_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary ReasonforCancellation_timeExpiredWithNoRrenewal
@@ -120,7 +120,7 @@ const proximityAlerted: ReasonforCancellation = ReasonforCancellation.proximityA
  * @type {number}
  */
 export
-const ReasonforCancellation_timeExpiredWithNoRrenewal: ReasonforCancellation = ReasonforCancellation.timeExpiredWithNoRrenewal; /* LONG_NAMED_ENUMERATED_VALUE */
+const ReasonforCancellation_timeExpiredWithNoRrenewal: _enum_for_ReasonforCancellation.timeExpiredWithNoRrenewal = ReasonforCancellation.timeExpiredWithNoRrenewal; /* LONG_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary timeExpiredWithNoRrenewal
@@ -133,7 +133,7 @@ const ReasonforCancellation_timeExpiredWithNoRrenewal: ReasonforCancellation = R
  * @type {number}
  */
 export
-const timeExpiredWithNoRrenewal: ReasonforCancellation = ReasonforCancellation.timeExpiredWithNoRrenewal; /* SHORT_NAMED_ENUMERATED_VALUE */
+const timeExpiredWithNoRrenewal: _enum_for_ReasonforCancellation.timeExpiredWithNoRrenewal = ReasonforCancellation.timeExpiredWithNoRrenewal; /* SHORT_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary ReasonforCancellation_requestorCancellation
@@ -147,7 +147,7 @@ const timeExpiredWithNoRrenewal: ReasonforCancellation = ReasonforCancellation.t
  * @type {number}
  */
 export
-const ReasonforCancellation_requestorCancellation: ReasonforCancellation = ReasonforCancellation.requestorCancellation; /* LONG_NAMED_ENUMERATED_VALUE */
+const ReasonforCancellation_requestorCancellation: _enum_for_ReasonforCancellation.requestorCancellation = ReasonforCancellation.requestorCancellation; /* LONG_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary requestorCancellation
@@ -160,7 +160,7 @@ const ReasonforCancellation_requestorCancellation: ReasonforCancellation = Reaso
  * @type {number}
  */
 export
-const requestorCancellation: ReasonforCancellation = ReasonforCancellation.requestorCancellation; /* SHORT_NAMED_ENUMERATED_VALUE */
+const requestorCancellation: _enum_for_ReasonforCancellation.requestorCancellation = ReasonforCancellation.requestorCancellation; /* SHORT_NAMED_ENUMERATED_VALUE */
 
 export
 const _decode_ReasonforCancellation: $.ASN1Decoder<ReasonforCancellation> = $._decodeEnumerated;

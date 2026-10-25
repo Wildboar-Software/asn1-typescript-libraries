@@ -1,7 +1,7 @@
 /* eslint-disable */
 import {
-    INTEGER,
-    ASN1Element as _Element,
+    type INTEGER,
+    type ASN1Element as _Element,
     ASN1TagClass as _TagClass,
     ASN1Construction as _Construction,
     ASN1UniversalType as _UniversalType,
@@ -42,7 +42,7 @@ export type Mode_selector_mode_value = INTEGER;
  * @constant
  * @type {number}
  */
-export const Mode_selector_mode_value_x410_1984_mode: Mode_selector_mode_value = 0; /* LONG_NAMED_INTEGER_VALUE */
+export const Mode_selector_mode_value_x410_1984_mode: 0 = 0 satisfies Mode_selector_mode_value; /* LONG_NAMED_INTEGER_VALUE */
 
 
 /**
@@ -50,7 +50,7 @@ export const Mode_selector_mode_value_x410_1984_mode: Mode_selector_mode_value =
  * @constant
  * @type {number}
  */
-export const x410_1984_mode: Mode_selector_mode_value = Mode_selector_mode_value_x410_1984_mode; /* SHORT_NAMED_INTEGER_VALUE */
+export const x410_1984_mode: 0 = Mode_selector_mode_value_x410_1984_mode; /* SHORT_NAMED_INTEGER_VALUE */
 
 
 /**
@@ -62,7 +62,7 @@ export const x410_1984_mode: Mode_selector_mode_value = Mode_selector_mode_value
  * @constant
  * @type {number}
  */
-export const Mode_selector_mode_value_normal_mode: Mode_selector_mode_value = 1; /* LONG_NAMED_INTEGER_VALUE */
+export const Mode_selector_mode_value_normal_mode: 1 = 1 satisfies Mode_selector_mode_value; /* LONG_NAMED_INTEGER_VALUE */
 
 
 /**
@@ -70,17 +70,17 @@ export const Mode_selector_mode_value_normal_mode: Mode_selector_mode_value = 1;
  * @constant
  * @type {number}
  */
-export const normal_mode: Mode_selector_mode_value = Mode_selector_mode_value_normal_mode; /* SHORT_NAMED_INTEGER_VALUE */
+export const normal_mode: 1 = Mode_selector_mode_value_normal_mode; /* SHORT_NAMED_INTEGER_VALUE */
 
 
 
 
-export const _decode_Mode_selector_mode_value = $._decodeInteger;
+export const _decode_Mode_selector_mode_value: $.ASN1Decoder<INTEGER> = $._decodeInteger;
 
 
 
 
-export const _encode_Mode_selector_mode_value = $._encodeInteger;
+export const _encode_Mode_selector_mode_value: $.ASN1Encoder<INTEGER> = $._encodeInteger;
 
 
 /* eslint-enable */

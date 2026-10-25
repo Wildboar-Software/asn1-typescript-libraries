@@ -1,8 +1,8 @@
 /* eslint-disable */
 import {
-    OPTIONAL,
-    INTEGER,
-    ASN1Element as _Element,
+    type OPTIONAL,
+    type INTEGER,
+    type ASN1Element as _Element,
     ASN1TagClass as _TagClass,
     ASN1Construction as _Construction,
     ASN1UniversalType as _UniversalType,
@@ -13,7 +13,7 @@ import {
 } from '@wildboar/asn1';
 import * as $ from '@wildboar/asn1/functional';
 import {
-    SignalReceived,
+    type SignalReceived,
     _decode_SignalReceived,
     _encode_SignalReceived,
 } from '../TestCategories-ASN1Module/SignalReceived.ta.mjs';
@@ -49,38 +49,46 @@ import {
  *
  */
 export class ResourceBoundaryTestResults {
+    /**
+     * @summary `signalReceived`.
+     * @description
+     *
+     * Signal seen at a PCO when it was
+     * unexpected or wrong. Optional (cases 2 and 3). X.737 §7.6.8.
+     * @public
+     * @readonly
+     */
+    public readonly signalReceived?: OPTIONAL<SignalReceived>;
+    /**
+     * @summary `intermediateResourceBoundaryTestOutcome`.
+     * @description
+     *
+     * Which of §7.6.7 cases 1–4 triggered this
+     * report. Optional. X.737 §7.6.8.
+     * @public
+     * @readonly
+     */
+    public readonly intermediateResourceBoundaryTestOutcome?: OPTIONAL<IntermediateResourceBoundaryTestOutcome>;
+    /**
+     * @summary `eventId`.
+     * @description
+     *
+     * Failed event's id (cases 3 and 4). Optional.
+     * X.737 §7.6.8, §8.1.16.
+     * @public
+     * @readonly
+     */
+    public readonly eventId?: OPTIONAL<INTEGER>;
+
     constructor(
-        /**
-         * @summary `signalReceived`.
-         * @description
-         *
-         * Signal seen at a PCO when it was
-         * unexpected or wrong. Optional (cases 2 and 3). X.737 §7.6.8.
-         * @public
-         * @readonly
-         */
-        readonly signalReceived?: OPTIONAL<SignalReceived>,
-        /**
-         * @summary `intermediateResourceBoundaryTestOutcome`.
-         * @description
-         *
-         * Which of §7.6.7 cases 1–4 triggered this
-         * report. Optional. X.737 §7.6.8.
-         * @public
-         * @readonly
-         */
-        readonly intermediateResourceBoundaryTestOutcome?: OPTIONAL<IntermediateResourceBoundaryTestOutcome>,
-        /**
-         * @summary `eventId`.
-         * @description
-         *
-         * Failed event's id (cases 3 and 4). Optional.
-         * X.737 §7.6.8, §8.1.16.
-         * @public
-         * @readonly
-         */
-        readonly eventId?: OPTIONAL<INTEGER>
-    ) {}
+        signalReceived?: OPTIONAL<SignalReceived>,
+        intermediateResourceBoundaryTestOutcome?: OPTIONAL<IntermediateResourceBoundaryTestOutcome>,
+        eventId?: OPTIONAL<INTEGER>
+    ) {
+        this.signalReceived = signalReceived;
+        this.intermediateResourceBoundaryTestOutcome = intermediateResourceBoundaryTestOutcome;
+        this.eventId = eventId;
+    }
 
     /**
      * @summary Restructures an object into a ResourceBoundaryTestResults
@@ -112,7 +120,7 @@ export class ResourceBoundaryTestResults {
      * @static
      */
 
-    public static _enum_for_intermediateResourceBoundaryTestOutcome = _enum_for_IntermediateResourceBoundaryTestOutcome;
+    public static _enum_for_intermediateResourceBoundaryTestOutcome: typeof _enum_for_IntermediateResourceBoundaryTestOutcome = _enum_for_IntermediateResourceBoundaryTestOutcome;
 }
 
 /**

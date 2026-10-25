@@ -1,6 +1,6 @@
 /* eslint-disable */
 import {
-    ASN1Element as _Element,
+    type ASN1Element as _Element,
     ASN1TagClass as _TagClass,
     ASN1Construction as _Construction,
     ASN1UniversalType as _UniversalType,
@@ -32,11 +32,14 @@ import * as $ from "@wildboar/asn1/functional";
  * @enum {number}
  */
 export
-enum _enum_for_StrengthOfFunction {
-    basic = 0,
-    medium = 1,
-    high = 2,
-}
+const _enum_for_StrengthOfFunction = {
+    basic: 0,
+    medium: 1,
+    high: 2,
+} as const;
+
+export
+type _enum_for_StrengthOfFunction = (typeof _enum_for_StrengthOfFunction)[keyof typeof _enum_for_StrengthOfFunction];
 
 /**
  * @summary StrengthOfFunction
@@ -78,7 +81,7 @@ type StrengthOfFunction = _enum_for_StrengthOfFunction;
  * @enum {number}
  */
 export
-const StrengthOfFunction = _enum_for_StrengthOfFunction;
+const StrengthOfFunction: typeof _enum_for_StrengthOfFunction = _enum_for_StrengthOfFunction;
 
 /**
  * @summary StrengthOfFunction_basic
@@ -90,7 +93,7 @@ const StrengthOfFunction = _enum_for_StrengthOfFunction;
  * @type {number}
  */
 export
-const StrengthOfFunction_basic: StrengthOfFunction = StrengthOfFunction.basic; /* LONG_NAMED_ENUMERATED_VALUE */
+const StrengthOfFunction_basic: 0 = StrengthOfFunction.basic; /* LONG_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary basic
@@ -102,7 +105,7 @@ const StrengthOfFunction_basic: StrengthOfFunction = StrengthOfFunction.basic; /
  * @type {number}
  */
 export
-const basic: StrengthOfFunction = StrengthOfFunction.basic; /* SHORT_NAMED_ENUMERATED_VALUE */
+const basic: 0 = StrengthOfFunction.basic; /* SHORT_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary StrengthOfFunction_medium
@@ -114,7 +117,7 @@ const basic: StrengthOfFunction = StrengthOfFunction.basic; /* SHORT_NAMED_ENUME
  * @type {number}
  */
 export
-const StrengthOfFunction_medium: StrengthOfFunction = StrengthOfFunction.medium; /* LONG_NAMED_ENUMERATED_VALUE */
+const StrengthOfFunction_medium: 1 = StrengthOfFunction.medium; /* LONG_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary medium
@@ -126,7 +129,7 @@ const StrengthOfFunction_medium: StrengthOfFunction = StrengthOfFunction.medium;
  * @type {number}
  */
 export
-const medium: StrengthOfFunction = StrengthOfFunction.medium; /* SHORT_NAMED_ENUMERATED_VALUE */
+const medium: 1 = StrengthOfFunction.medium; /* SHORT_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary StrengthOfFunction_high
@@ -138,7 +141,7 @@ const medium: StrengthOfFunction = StrengthOfFunction.medium; /* SHORT_NAMED_ENU
  * @type {number}
  */
 export
-const StrengthOfFunction_high: StrengthOfFunction = StrengthOfFunction.high; /* LONG_NAMED_ENUMERATED_VALUE */
+const StrengthOfFunction_high: 2 = StrengthOfFunction.high; /* LONG_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary high
@@ -150,13 +153,25 @@ const StrengthOfFunction_high: StrengthOfFunction = StrengthOfFunction.high; /* 
  * @type {number}
  */
 export
-const high: StrengthOfFunction = StrengthOfFunction.high; /* SHORT_NAMED_ENUMERATED_VALUE */
+const high: 2 = StrengthOfFunction.high; /* SHORT_NAMED_ENUMERATED_VALUE */
 
 
-export const _decode_StrengthOfFunction = $._decodeEnumerated;
+export function _decode_StrengthOfFunction(el: _Element): StrengthOfFunction {
+    const enumerated = $._decodeEnumerated(el);
+    switch (enumerated) {
+        case StrengthOfFunction.basic: return StrengthOfFunction.basic;
+        case StrengthOfFunction.medium: return StrengthOfFunction.medium;
+        case StrengthOfFunction.high: return StrengthOfFunction.high;
+        default:
+            throw new _ConstructionError(
+                "Invalid ENUMERATED value " + enumerated + " for StrengthOfFunction.",
+                el,
+            );
+    }
+}
 
 
-export const _encode_StrengthOfFunction = $._encodeEnumerated;
+export const _encode_StrengthOfFunction: $.ASN1Encoder<StrengthOfFunction> = $._encodeEnumerated as $.ASN1Encoder<StrengthOfFunction>;
 
 
 /* eslint-enable */

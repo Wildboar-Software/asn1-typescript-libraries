@@ -1,7 +1,7 @@
 /* eslint-disable */
 import {
-    OPTIONAL,
-    ASN1Element as _Element,
+    type OPTIONAL,
+    type ASN1Element as _Element,
     ASN1TagClass as _TagClass
 } from "@wildboar/asn1";
 import * as $ from "@wildboar/asn1/functional";
@@ -11,7 +11,7 @@ import { EPSSubscriberIDs, _decode_EPSSubscriberIDs, _encode_EPSSubscriberIDs } 
 // export { EPSSubscriberIDs, _decode_EPSSubscriberIDs, _encode_EPSSubscriberIDs } from "../TS33128Payloads/EPSSubscriberIDs.ta.mjs";
 import { EPSPDNCnxInfo, _decode_EPSPDNCnxInfo, _encode_EPSPDNCnxInfo } from "../TS33128Payloads/EPSPDNCnxInfo.ta.mjs";
 // export { EPSPDNCnxInfo, _decode_EPSPDNCnxInfo, _encode_EPSPDNCnxInfo } from "../TS33128Payloads/EPSPDNCnxInfo.ta.mjs";
-import { EPSBearerInfo, _decode_EPSBearerInfo, _encode_EPSBearerInfo } from "../TS33128Payloads/EPSBearerInfo.ta.mjs";
+import { type EPSBearerInfo, _decode_EPSBearerInfo, _encode_EPSBearerInfo } from "../TS33128Payloads/EPSBearerInfo.ta.mjs";
 // export { EPSBearerInfo, _decode_EPSBearerInfo, _encode_EPSBearerInfo } from "../TS33128Payloads/EPSBearerInfo.ta.mjs";
 
 
@@ -137,7 +137,7 @@ class EPS5GSComboInfo {
          * @static
          */
 
-    public static _enum_for_ePSInterworkingIndication = _enum_for_EPSInterworkingIndication;
+    public static _enum_for_ePSInterworkingIndication: typeof _enum_for_EPSInterworkingIndication = _enum_for_EPSInterworkingIndication;
 }
 
 /**

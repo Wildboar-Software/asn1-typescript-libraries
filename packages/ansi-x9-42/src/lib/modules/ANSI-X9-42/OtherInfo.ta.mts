@@ -1,9 +1,9 @@
 /* eslint-disable */
 import {
-    ASN1Element as _Element,
+    type ASN1Element as _Element,
     ASN1TagClass as _TagClass,
-    OCTET_STRING,
-    OPTIONAL,
+    type OCTET_STRING,
+    type OPTIONAL,
 } from "@wildboar/asn1";
 import * as $ from "@wildboar/asn1/functional";
 import {
@@ -49,7 +49,7 @@ export class OtherInfo {
      * @public
      * @readonly
      */
-    readonly keyInfo: AlgorithmIdentifier;
+    public readonly keyInfo: AlgorithmIdentifier;
     /**
      * @summary `partyUInfo`.
      * @description
@@ -61,7 +61,7 @@ export class OtherInfo {
      * @public
      * @readonly
      */
-    readonly partyUInfo?: OPTIONAL<OCTET_STRING>;
+    public readonly partyUInfo?: OPTIONAL<OCTET_STRING>;
     /**
      * @summary `partyVInfo`.
      * @description
@@ -73,7 +73,7 @@ export class OtherInfo {
      * @public
      * @readonly
      */
-    readonly partyVInfo?: OPTIONAL<OCTET_STRING>;
+    public readonly partyVInfo?: OPTIONAL<OCTET_STRING>;
     /**
      * @summary `suppPubInfo`.
      * @description
@@ -85,7 +85,7 @@ export class OtherInfo {
      * @public
      * @readonly
      */
-    readonly suppPubInfo?: OPTIONAL<OCTET_STRING>;
+    public readonly suppPubInfo?: OPTIONAL<OCTET_STRING>;
     /**
      * @summary `suppPrivInfo`.
      * @description
@@ -97,7 +97,7 @@ export class OtherInfo {
      * @public
      * @readonly
      */
-    readonly suppPrivInfo?: OPTIONAL<OCTET_STRING>;
+    public readonly suppPrivInfo?: OPTIONAL<OCTET_STRING>;
 
     constructor(
         keyInfo: AlgorithmIdentifier,

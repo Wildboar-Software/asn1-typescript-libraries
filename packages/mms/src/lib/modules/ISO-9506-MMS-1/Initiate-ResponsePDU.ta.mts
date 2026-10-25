@@ -1,7 +1,7 @@
 /* eslint-disable */
 import {
-    OPTIONAL,
-    ASN1Element as _Element,
+    type OPTIONAL,
+    type ASN1Element as _Element,
     ASN1TagClass as _TagClass,
     ASN1Construction as _Construction,
     ASN1UniversalType as _UniversalType,
@@ -11,9 +11,9 @@ import {
     ASN1ConstructionError as _ConstructionError,
 } from "@wildboar/asn1";
 import * as $ from "@wildboar/asn1/functional";
-import { Integer32, _decode_Integer32, _encode_Integer32 } from "../ISO-9506-MMS-1/Integer32.ta.mjs";
-import { Integer16, _decode_Integer16, _encode_Integer16 } from "../ISO-9506-MMS-1/Integer16.ta.mjs";
-import { Integer8, _decode_Integer8, _encode_Integer8 } from "../ISO-9506-MMS-1/Integer8.ta.mjs";
+import { type Integer32, _decode_Integer32, _encode_Integer32 } from "../ISO-9506-MMS-1/Integer32.ta.mjs";
+import { type Integer16, _decode_Integer16, _encode_Integer16 } from "../ISO-9506-MMS-1/Integer16.ta.mjs";
+import { type Integer8, _decode_Integer8, _encode_Integer8 } from "../ISO-9506-MMS-1/Integer8.ta.mjs";
 import { Initiate_ResponsePDU_initResponseDetail, _decode_Initiate_ResponsePDU_initResponseDetail, _encode_Initiate_ResponsePDU_initResponseDetail } from "../ISO-9506-MMS-1/Initiate-ResponsePDU-initResponseDetail.ta.mjs";
 
 
@@ -50,59 +50,71 @@ import { Initiate_ResponsePDU_initResponseDetail, _decode_Initiate_ResponsePDU_i
  */
 export
 class Initiate_ResponsePDU {
+    /**
+     * @summary `localDetailCalled`.
+     * @description
+     *
+     * Called implementation detail. Content is a local matter; not further
+     * standardized (ISO 9506-1:2003 §8.2.1.2.1).
+     * @public
+     * @readonly
+     */
+    public readonly localDetailCalled: OPTIONAL<Integer32>;
+    /**
+     * @summary `negotiatedMaxServOutstandingCalling`.
+     * @description
+     *
+     * Agreed maximum Transaction objects at the calling MMS-user. ≤
+     * proposed; not less than zero (ISO 9506-1:2003 §8.2.1.2.2).
+     * @public
+     * @readonly
+     */
+    public readonly negotiatedMaxServOutstandingCalling: Integer16;
+    /**
+     * @summary `negotiatedMaxServOutstandingCalled`.
+     * @description
+     *
+     * Agreed maximum Transaction objects at the called MMS-user. ≤
+     * proposed; not less than zero (ISO 9506-1:2003 §8.2.1.2.3).
+     * @public
+     * @readonly
+     */
+    public readonly negotiatedMaxServOutstandingCalled: Integer16;
+    /**
+     * @summary `negotiatedDataStructureNestingLevel`.
+     * @description
+     *
+     * Agreed Type Specification nesting. Omit for unlimited. Zero means
+     * only simple types. ≤ proposed; not less than zero (ISO 9506-1:2003
+     * §8.2.1.2.4).
+     * @public
+     * @readonly
+     */
+    public readonly negotiatedDataStructureNestingLevel: OPTIONAL<Integer8>;
+    /**
+     * @summary `initResponseDetail`.
+     * @description
+     *
+     * Negotiated minor version, parameter CBBs, and services supported
+     * (ISO 9506-1:2003 §8.2; ISO 9506-2:2003 §8.2).
+     * @public
+     * @readonly
+     */
+    public readonly initResponseDetail: Initiate_ResponsePDU_initResponseDetail;
+
     constructor (
-        /**
-         * @summary `localDetailCalled`.
-         * @description
-         *
-         * Called implementation detail. Content is a local matter; not further
-         * standardized (ISO 9506-1:2003 §8.2.1.2.1).
-         * @public
-         * @readonly
-         */
-        readonly localDetailCalled: OPTIONAL<Integer32>,
-        /**
-         * @summary `negotiatedMaxServOutstandingCalling`.
-         * @description
-         *
-         * Agreed maximum Transaction objects at the calling MMS-user. ≤
-         * proposed; not less than zero (ISO 9506-1:2003 §8.2.1.2.2).
-         * @public
-         * @readonly
-         */
-        readonly negotiatedMaxServOutstandingCalling: Integer16,
-        /**
-         * @summary `negotiatedMaxServOutstandingCalled`.
-         * @description
-         *
-         * Agreed maximum Transaction objects at the called MMS-user. ≤
-         * proposed; not less than zero (ISO 9506-1:2003 §8.2.1.2.3).
-         * @public
-         * @readonly
-         */
-        readonly negotiatedMaxServOutstandingCalled: Integer16,
-        /**
-         * @summary `negotiatedDataStructureNestingLevel`.
-         * @description
-         *
-         * Agreed Type Specification nesting. Omit for unlimited. Zero means
-         * only simple types. ≤ proposed; not less than zero (ISO 9506-1:2003
-         * §8.2.1.2.4).
-         * @public
-         * @readonly
-         */
-        readonly negotiatedDataStructureNestingLevel: OPTIONAL<Integer8>,
-        /**
-         * @summary `initResponseDetail`.
-         * @description
-         *
-         * Negotiated minor version, parameter CBBs, and services supported
-         * (ISO 9506-1:2003 §8.2; ISO 9506-2:2003 §8.2).
-         * @public
-         * @readonly
-         */
-        readonly initResponseDetail: Initiate_ResponsePDU_initResponseDetail
-    ) {}
+        localDetailCalled: OPTIONAL<Integer32>,
+        negotiatedMaxServOutstandingCalling: Integer16,
+        negotiatedMaxServOutstandingCalled: Integer16,
+        negotiatedDataStructureNestingLevel: OPTIONAL<Integer8>,
+        initResponseDetail: Initiate_ResponsePDU_initResponseDetail
+    ) {
+        this.localDetailCalled = localDetailCalled;
+        this.negotiatedMaxServOutstandingCalling = negotiatedMaxServOutstandingCalling;
+        this.negotiatedMaxServOutstandingCalled = negotiatedMaxServOutstandingCalled;
+        this.negotiatedDataStructureNestingLevel = negotiatedDataStructureNestingLevel;
+        this.initResponseDetail = initResponseDetail;
+    }
 
     /**
      * @summary Restructures an object into a Initiate_ResponsePDU

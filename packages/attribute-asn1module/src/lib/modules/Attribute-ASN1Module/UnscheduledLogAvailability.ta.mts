@@ -1,6 +1,6 @@
 /* eslint-disable */
 import {
-    ASN1Element as _Element,
+    type ASN1Element as _Element,
     ASN1TagClass as _TagClass,
     ASN1Construction as _Construction,
     ASN1UniversalType as _UniversalType,
@@ -10,7 +10,7 @@ import {
     ASN1ConstructionError as _ConstructionError,
 } from "@wildboar/asn1";
 import * as $ from "@wildboar/asn1/functional";
-import { AvailabilityStatus, _decode_AvailabilityStatus, _encode_AvailabilityStatus } from "../Attribute-ASN1Module/AvailabilityStatus.ta.mjs";
+import { type AvailabilityStatus, _decode_AvailabilityStatus, _encode_AvailabilityStatus } from "../Attribute-ASN1Module/AvailabilityStatus.ta.mjs";
 /**
  * @summary UnscheduledLogAvailability
  * @description
@@ -27,21 +27,13 @@ import { AvailabilityStatus, _decode_AvailabilityStatus, _encode_AvailabilitySta
 export
 type UnscheduledLogAvailability = AvailabilityStatus; // DefinedType
 
-let _cached_decoder_for_UnscheduledLogAvailability: $.ASN1Decoder<UnscheduledLogAvailability> | null = null;
-
 /**
  * @summary Decodes an ASN.1 element into a(n) UnscheduledLogAvailability
  * @function
  * @param {_Element} el The element being decoded.
  * @returns {UnscheduledLogAvailability} The decoded data structure.
  */
-export
-function _decode_UnscheduledLogAvailability (el: _Element): UnscheduledLogAvailability {
-    if (!_cached_decoder_for_UnscheduledLogAvailability) { _cached_decoder_for_UnscheduledLogAvailability = _decode_AvailabilityStatus; }
-    return _cached_decoder_for_UnscheduledLogAvailability(el);
-}
-
-let _cached_encoder_for_UnscheduledLogAvailability: $.ASN1Encoder<UnscheduledLogAvailability> | null = null;
+export const _decode_UnscheduledLogAvailability: $.ASN1Decoder<UnscheduledLogAvailability> = _decode_AvailabilityStatus;
 
 /**
  * @summary Encodes a(n) UnscheduledLogAvailability into an ASN.1 Element.
@@ -50,11 +42,7 @@ let _cached_encoder_for_UnscheduledLogAvailability: $.ASN1Encoder<UnscheduledLog
  * @param elGetter A function that can be used to get new ASN.1 elements.
  * @returns {_Element} The UnscheduledLogAvailability, encoded as an ASN.1 Element.
  */
-export
-function _encode_UnscheduledLogAvailability (value: UnscheduledLogAvailability, elGetter: $.ASN1Encoder<UnscheduledLogAvailability>): _Element {
-    if (!_cached_encoder_for_UnscheduledLogAvailability) { _cached_encoder_for_UnscheduledLogAvailability = _encode_AvailabilityStatus; }
-    return _cached_encoder_for_UnscheduledLogAvailability(value, elGetter);
-}
+export const _encode_UnscheduledLogAvailability: $.ASN1Encoder<UnscheduledLogAvailability> = _encode_AvailabilityStatus;
 
 
 /* eslint-enable */

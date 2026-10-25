@@ -1,6 +1,6 @@
 /* eslint-disable */
 import {
-    ASN1Element as _Element,
+    type ASN1Element as _Element,
     ASN1TagClass as _TagClass
 } from "@wildboar/asn1";
 import * as $ from "@wildboar/asn1/functional";
@@ -8,8 +8,8 @@ import { InitiateAuthenticationRequestEsipa, _decode_InitiateAuthenticationReque
 import { AuthenticateClientRequestEsipa, _decode_AuthenticateClientRequestEsipa, _encode_AuthenticateClientRequestEsipa } from "../SGP32Definitions/AuthenticateClientRequestEsipa.ta.mjs";
 import { GetBoundProfilePackageRequestEsipa, _decode_GetBoundProfilePackageRequestEsipa, _encode_GetBoundProfilePackageRequestEsipa } from "../SGP32Definitions/GetBoundProfilePackageRequestEsipa.ta.mjs";
 import { CancelSessionRequestEsipa, _decode_CancelSessionRequestEsipa, _encode_CancelSessionRequestEsipa } from "../SGP32Definitions/CancelSessionRequestEsipa.ta.mjs";
-import { HandleNotificationEsipa, _decode_HandleNotificationEsipa, _encode_HandleNotificationEsipa } from "../SGP32Definitions/HandleNotificationEsipa.ta.mjs";
-import { TransferEimPackageResponse, _decode_TransferEimPackageResponse, _encode_TransferEimPackageResponse } from "../SGP32Definitions/TransferEimPackageResponse.ta.mjs";
+import { type HandleNotificationEsipa, _decode_HandleNotificationEsipa, _encode_HandleNotificationEsipa } from "../SGP32Definitions/HandleNotificationEsipa.ta.mjs";
+import { type TransferEimPackageResponse, _decode_TransferEimPackageResponse, _encode_TransferEimPackageResponse } from "../SGP32Definitions/TransferEimPackageResponse.ta.mjs";
 import { GetEimPackageRequest, _decode_GetEimPackageRequest, _encode_GetEimPackageRequest } from "../SGP32Definitions/GetEimPackageRequest.ta.mjs";
 import { ProvideEimPackageResult, _decode_ProvideEimPackageResult, _encode_ProvideEimPackageResult } from "../SGP32Definitions/ProvideEimPackageResult.ta.mjs";
 

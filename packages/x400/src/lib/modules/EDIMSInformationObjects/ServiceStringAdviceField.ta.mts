@@ -1,7 +1,7 @@
 /* eslint-disable */
 import {
-    OPTIONAL,
-    ASN1Element as _Element,
+    type OPTIONAL,
+    type ASN1Element as _Element,
     ASN1TagClass as _TagClass,
     ASN1Construction as _Construction,
     ASN1UniversalType as _UniversalType,
@@ -12,32 +12,32 @@ import {
 } from '@wildboar/asn1';
 import * as $ from '@wildboar/asn1/functional';
 import {
-    ComponentDataElementSeparator,
+    type ComponentDataElementSeparator,
     _decode_ComponentDataElementSeparator,
     _encode_ComponentDataElementSeparator,
 } from '../EDIMSInformationObjects/ComponentDataElementSeparator.ta.mjs';
 import {
-    DataElementSeparator,
+    type DataElementSeparator,
     _decode_DataElementSeparator,
     _encode_DataElementSeparator,
 } from '../EDIMSInformationObjects/DataElementSeparator.ta.mjs';
 import {
-    DecimalNotation,
+    type DecimalNotation,
     _decode_DecimalNotation,
     _encode_DecimalNotation,
 } from '../EDIMSInformationObjects/DecimalNotation.ta.mjs';
 import {
-    ReleaseIndicator,
+    type ReleaseIndicator,
     _decode_ReleaseIndicator,
     _encode_ReleaseIndicator,
 } from '../EDIMSInformationObjects/ReleaseIndicator.ta.mjs';
 import {
-    Reserved,
+    type Reserved,
     _decode_Reserved,
     _encode_Reserved,
 } from '../EDIMSInformationObjects/Reserved.ta.mjs';
 import {
-    SegmentTerminator,
+    type SegmentTerminator,
     _decode_SegmentTerminator,
     _encode_SegmentTerminator,
 } from '../EDIMSInformationObjects/SegmentTerminator.ta.mjs';
@@ -62,44 +62,58 @@ import {
  *
  */
 export class ServiceStringAdviceField {
+    /**
+     * @summary `component_data_element_separator`.
+     * @public
+     * @readonly
+     */
+    public readonly component_data_element_separator: ComponentDataElementSeparator;
+    /**
+     * @summary `data_element_separator`.
+     * @public
+     * @readonly
+     */
+    public readonly data_element_separator: DataElementSeparator;
+    /**
+     * @summary `decimal_notation`.
+     * @public
+     * @readonly
+     */
+    public readonly decimal_notation: DecimalNotation;
+    /**
+     * @summary `release_indicator`.
+     * @public
+     * @readonly
+     */
+    public readonly release_indicator: OPTIONAL<ReleaseIndicator>;
+    /**
+     * @summary `reserved`.
+     * @public
+     * @readonly
+     */
+    public readonly reserved: OPTIONAL<Reserved>;
+    /**
+     * @summary `segment_terminator`.
+     * @public
+     * @readonly
+     */
+    public readonly segment_terminator: SegmentTerminator;
+
     constructor(
-        /**
-         * @summary `component_data_element_separator`.
-         * @public
-         * @readonly
-         */
-        readonly component_data_element_separator: ComponentDataElementSeparator,
-        /**
-         * @summary `data_element_separator`.
-         * @public
-         * @readonly
-         */
-        readonly data_element_separator: DataElementSeparator,
-        /**
-         * @summary `decimal_notation`.
-         * @public
-         * @readonly
-         */
-        readonly decimal_notation: DecimalNotation,
-        /**
-         * @summary `release_indicator`.
-         * @public
-         * @readonly
-         */
-        readonly release_indicator: OPTIONAL<ReleaseIndicator>,
-        /**
-         * @summary `reserved`.
-         * @public
-         * @readonly
-         */
-        readonly reserved: OPTIONAL<Reserved>,
-        /**
-         * @summary `segment_terminator`.
-         * @public
-         * @readonly
-         */
-        readonly segment_terminator: SegmentTerminator
-    ) {}
+        component_data_element_separator: ComponentDataElementSeparator,
+        data_element_separator: DataElementSeparator,
+        decimal_notation: DecimalNotation,
+        release_indicator: OPTIONAL<ReleaseIndicator>,
+        reserved: OPTIONAL<Reserved>,
+        segment_terminator: SegmentTerminator
+    ) {
+        this.component_data_element_separator = component_data_element_separator;
+        this.data_element_separator = data_element_separator;
+        this.decimal_notation = decimal_notation;
+        this.release_indicator = release_indicator;
+        this.reserved = reserved;
+        this.segment_terminator = segment_terminator;
+    }
 
     /**
      * @summary Restructures an object into a ServiceStringAdviceField

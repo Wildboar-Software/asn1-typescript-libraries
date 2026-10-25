@@ -1,6 +1,6 @@
 /* eslint-disable */
 import {
-    ASN1Element as _Element,
+    type ASN1Element as _Element,
     ASN1TagClass as _TagClass,
     ASN1Construction as _Construction,
     ASN1UniversalType as _UniversalType,
@@ -87,14 +87,14 @@ export type ReportSummary = _enum_for_ReportSummary;
  *
  * @enum {number}
  */
-export const ReportSummary = _enum_for_ReportSummary;
+export const ReportSummary: typeof _enum_for_ReportSummary = _enum_for_ReportSummary;
 
 /**
  * @summary ReportSummary_no_report_requested
  * @constant
  * @type {number}
  */
-export const ReportSummary_no_report_requested: ReportSummary =
+export const ReportSummary_no_report_requested: _enum_for_ReportSummary.no_report_requested =
     ReportSummary.no_report_requested; /* LONG_NAMED_ENUMERATED_VALUE */
 
 /**
@@ -102,7 +102,7 @@ export const ReportSummary_no_report_requested: ReportSummary =
  * @constant
  * @type {number}
  */
-export const no_report_requested: ReportSummary =
+export const no_report_requested: _enum_for_ReportSummary.no_report_requested =
     ReportSummary.no_report_requested; /* SHORT_NAMED_ENUMERATED_VALUE */
 
 /**
@@ -110,7 +110,7 @@ export const no_report_requested: ReportSummary =
  * @constant
  * @type {number}
  */
-export const ReportSummary_no_report_received: ReportSummary =
+export const ReportSummary_no_report_received: _enum_for_ReportSummary.no_report_received =
     ReportSummary.no_report_received; /* LONG_NAMED_ENUMERATED_VALUE */
 
 /**
@@ -118,7 +118,7 @@ export const ReportSummary_no_report_received: ReportSummary =
  * @constant
  * @type {number}
  */
-export const no_report_received: ReportSummary =
+export const no_report_received: _enum_for_ReportSummary.no_report_received =
     ReportSummary.no_report_received; /* SHORT_NAMED_ENUMERATED_VALUE */
 
 /**
@@ -126,7 +126,7 @@ export const no_report_received: ReportSummary =
  * @constant
  * @type {number}
  */
-export const ReportSummary_report_outstanding: ReportSummary =
+export const ReportSummary_report_outstanding: _enum_for_ReportSummary.report_outstanding =
     ReportSummary.report_outstanding; /* LONG_NAMED_ENUMERATED_VALUE */
 
 /**
@@ -134,7 +134,7 @@ export const ReportSummary_report_outstanding: ReportSummary =
  * @constant
  * @type {number}
  */
-export const report_outstanding: ReportSummary =
+export const report_outstanding: _enum_for_ReportSummary.report_outstanding =
     ReportSummary.report_outstanding; /* SHORT_NAMED_ENUMERATED_VALUE */
 
 /**
@@ -142,7 +142,7 @@ export const report_outstanding: ReportSummary =
  * @constant
  * @type {number}
  */
-export const ReportSummary_delivery_cancelled: ReportSummary =
+export const ReportSummary_delivery_cancelled: _enum_for_ReportSummary.delivery_cancelled =
     ReportSummary.delivery_cancelled; /* LONG_NAMED_ENUMERATED_VALUE */
 
 /**
@@ -150,7 +150,7 @@ export const ReportSummary_delivery_cancelled: ReportSummary =
  * @constant
  * @type {number}
  */
-export const delivery_cancelled: ReportSummary =
+export const delivery_cancelled: _enum_for_ReportSummary.delivery_cancelled =
     ReportSummary.delivery_cancelled; /* SHORT_NAMED_ENUMERATED_VALUE */
 
 /**
@@ -158,7 +158,7 @@ export const delivery_cancelled: ReportSummary =
  * @constant
  * @type {number}
  */
-export const ReportSummary_delivery_report_from_another_recipient: ReportSummary =
+export const ReportSummary_delivery_report_from_another_recipient: _enum_for_ReportSummary.delivery_report_from_another_recipient =
     ReportSummary.delivery_report_from_another_recipient; /* LONG_NAMED_ENUMERATED_VALUE */
 
 /**
@@ -166,7 +166,7 @@ export const ReportSummary_delivery_report_from_another_recipient: ReportSummary
  * @constant
  * @type {number}
  */
-export const delivery_report_from_another_recipient: ReportSummary =
+export const delivery_report_from_another_recipient: _enum_for_ReportSummary.delivery_report_from_another_recipient =
     ReportSummary.delivery_report_from_another_recipient; /* SHORT_NAMED_ENUMERATED_VALUE */
 
 /**
@@ -174,7 +174,7 @@ export const delivery_report_from_another_recipient: ReportSummary =
  * @constant
  * @type {number}
  */
-export const ReportSummary_non_delivery_report_from_another_recipient: ReportSummary =
+export const ReportSummary_non_delivery_report_from_another_recipient: _enum_for_ReportSummary.non_delivery_report_from_another_recipient =
     ReportSummary.non_delivery_report_from_another_recipient; /* LONG_NAMED_ENUMERATED_VALUE */
 
 /**
@@ -182,7 +182,7 @@ export const ReportSummary_non_delivery_report_from_another_recipient: ReportSum
  * @constant
  * @type {number}
  */
-export const non_delivery_report_from_another_recipient: ReportSummary =
+export const non_delivery_report_from_another_recipient: _enum_for_ReportSummary.non_delivery_report_from_another_recipient =
     ReportSummary.non_delivery_report_from_another_recipient; /* SHORT_NAMED_ENUMERATED_VALUE */
 
 /**
@@ -190,7 +190,7 @@ export const non_delivery_report_from_another_recipient: ReportSummary =
  * @constant
  * @type {number}
  */
-export const ReportSummary_delivery_report_from_intended_recipient: ReportSummary =
+export const ReportSummary_delivery_report_from_intended_recipient: _enum_for_ReportSummary.delivery_report_from_intended_recipient =
     ReportSummary.delivery_report_from_intended_recipient; /* LONG_NAMED_ENUMERATED_VALUE */
 
 /**
@@ -198,7 +198,7 @@ export const ReportSummary_delivery_report_from_intended_recipient: ReportSummar
  * @constant
  * @type {number}
  */
-export const delivery_report_from_intended_recipient: ReportSummary =
+export const delivery_report_from_intended_recipient: _enum_for_ReportSummary.delivery_report_from_intended_recipient =
     ReportSummary.delivery_report_from_intended_recipient; /* SHORT_NAMED_ENUMERATED_VALUE */
 
 /**
@@ -206,7 +206,7 @@ export const delivery_report_from_intended_recipient: ReportSummary =
  * @constant
  * @type {number}
  */
-export const ReportSummary_non_delivery_report_from_intended_recipient: ReportSummary =
+export const ReportSummary_non_delivery_report_from_intended_recipient: _enum_for_ReportSummary.non_delivery_report_from_intended_recipient =
     ReportSummary.non_delivery_report_from_intended_recipient; /* LONG_NAMED_ENUMERATED_VALUE */
 
 /**
@@ -214,14 +214,31 @@ export const ReportSummary_non_delivery_report_from_intended_recipient: ReportSu
  * @constant
  * @type {number}
  */
-export const non_delivery_report_from_intended_recipient: ReportSummary =
+export const non_delivery_report_from_intended_recipient: _enum_for_ReportSummary.non_delivery_report_from_intended_recipient =
     ReportSummary.non_delivery_report_from_intended_recipient; /* SHORT_NAMED_ENUMERATED_VALUE */
 
 
-export const _decode_ReportSummary = $._decodeEnumerated;
+export function _decode_ReportSummary(el: _Element): ReportSummary {
+    const enumerated = $._decodeEnumerated(el);
+    switch (enumerated) {
+        case ReportSummary.no_report_requested: return ReportSummary.no_report_requested;
+        case ReportSummary.no_report_received: return ReportSummary.no_report_received;
+        case ReportSummary.report_outstanding: return ReportSummary.report_outstanding;
+        case ReportSummary.delivery_cancelled: return ReportSummary.delivery_cancelled;
+        case ReportSummary.delivery_report_from_another_recipient: return ReportSummary.delivery_report_from_another_recipient;
+        case ReportSummary.non_delivery_report_from_another_recipient: return ReportSummary.non_delivery_report_from_another_recipient;
+        case ReportSummary.delivery_report_from_intended_recipient: return ReportSummary.delivery_report_from_intended_recipient;
+        case ReportSummary.non_delivery_report_from_intended_recipient: return ReportSummary.non_delivery_report_from_intended_recipient;
+        default:
+            throw new _ConstructionError(
+                'Invalid ENUMERATED value ' + enumerated + ' for ReportSummary.',
+                el,
+            );
+    }
+}
 
 
-export const _encode_ReportSummary = $._encodeEnumerated;
+export const _encode_ReportSummary: $.ASN1Encoder<ReportSummary> = $._encodeEnumerated as $.ASN1Encoder<ReportSummary>;
 
 
 /* eslint-enable */

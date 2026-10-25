@@ -1,11 +1,11 @@
 /* eslint-disable */
 import {
-    ASN1Element as _Element,
+    type ASN1Element as _Element,
     ASN1TagClass as _TagClass
 } from "@wildboar/asn1";
 import * as $ from "@wildboar/asn1/functional";
-import { Digits, _decode_Digits, _encode_Digits } from "../LNPDQP-Protocol/Digits.ta.mjs";
-import { BillingIndicators, _decode_BillingIndicators, _encode_BillingIndicators } from "../LNPDQP-Protocol/BillingIndicators.ta.mjs";
+import { type Digits, _decode_Digits, _encode_Digits } from "../LNPDQP-Protocol/Digits.ta.mjs";
+import { type BillingIndicators, _decode_BillingIndicators, _encode_BillingIndicators } from "../LNPDQP-Protocol/BillingIndicators.ta.mjs";
 
 
 /**
@@ -33,13 +33,13 @@ class ConnectionControlArg {
      * @public
      * @readonly
      */
-    readonly digits: Digits;
+    public readonly digits: Digits;
     /**
      * @summary `billingIndicators`.
      * @public
      * @readonly
      */
-    readonly billingIndicators: BillingIndicators;
+    public readonly billingIndicators: BillingIndicators;
 
     constructor (
         digits: Digits,

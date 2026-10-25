@@ -1,8 +1,8 @@
 /* eslint-disable */
 import {
-    OPTIONAL,
-    BOOLEAN,
-    ASN1Element as _Element,
+    type OPTIONAL,
+    type BOOLEAN,
+    type ASN1Element as _Element,
     ASN1TagClass as _TagClass,
     ASN1Construction as _Construction,
     ASN1UniversalType as _UniversalType,
@@ -12,8 +12,8 @@ import {
     ASN1ConstructionError as _ConstructionError,
 } from "@wildboar/asn1";
 import * as $ from "@wildboar/asn1/functional";
-import { CollectedInfo, _decode_CollectedInfo, _encode_CollectedInfo } from "../Core-INAP-CS1-DataTypes/CollectedInfo.ta.mjs";
-import { InformationToSend, _decode_InformationToSend, _encode_InformationToSend } from "../Core-INAP-CS1-DataTypes/InformationToSend.ta.mjs";
+import { type CollectedInfo, _decode_CollectedInfo, _encode_CollectedInfo } from "../Core-INAP-CS1-DataTypes/CollectedInfo.ta.mjs";
+import { type InformationToSend, _decode_InformationToSend, _encode_InformationToSend } from "../Core-INAP-CS1-DataTypes/InformationToSend.ta.mjs";
 import { ExtensionField, _decode_ExtensionField, _encode_ExtensionField } from "../Core-INAP-CS1-DataTypes/ExtensionField.ta.mjs";
 
 
@@ -27,7 +27,7 @@ import { ExtensionField, _decode_ExtensionField, _encode_ExtensionField } from "
  * PromptAndCollectUserInformationArg ::= SEQUENCE {
  *      collectedInfo     [0] CollectedInfo,
  *      disconnectFromIPForbidden     [1] BOOLEAN     DEFAULT TRUE,
- *      informationToSend      [2] InformationToSend     OPTIONAL,
+ *      informationToSend      [2] InformationToSend     type OPTIONAL,
  *      extensions     [3] SEQUENCE SIZE(1..numOfExtensions) OF ExtensionField     OPTIONAL
  * --  ...
  *      }
@@ -37,32 +37,42 @@ import { ExtensionField, _decode_ExtensionField, _encode_ExtensionField } from "
  */
 export
 class PromptAndCollectUserInformationArg {
+    /**
+     * @summary `collectedInfo`.
+     * @public
+     * @readonly
+     */
+    public readonly collectedInfo: CollectedInfo;
+    /**
+     * @summary `disconnectFromIPForbidden`.
+     * @public
+     * @readonly
+     */
+    public readonly disconnectFromIPForbidden?: OPTIONAL<BOOLEAN>;
+    /**
+     * @summary `informationToSend`.
+     * @public
+     * @readonly
+     */
+    public readonly informationToSend?: OPTIONAL<InformationToSend>;
+    /**
+     * @summary `extensions`.
+     * @public
+     * @readonly
+     */
+    public readonly extensions?: OPTIONAL<ExtensionField[]>;
+
     constructor (
-        /**
-         * @summary `collectedInfo`.
-         * @public
-         * @readonly
-         */
-        readonly collectedInfo: CollectedInfo,
-        /**
-         * @summary `disconnectFromIPForbidden`.
-         * @public
-         * @readonly
-         */
-        readonly disconnectFromIPForbidden?: OPTIONAL<BOOLEAN>,
-        /**
-         * @summary `informationToSend`.
-         * @public
-         * @readonly
-         */
-        readonly informationToSend?: OPTIONAL<InformationToSend>,
-        /**
-         * @summary `extensions`.
-         * @public
-         * @readonly
-         */
-        readonly extensions?: OPTIONAL<ExtensionField[]>
-    ) {}
+        collectedInfo: CollectedInfo,
+        disconnectFromIPForbidden?: OPTIONAL<BOOLEAN>,
+        informationToSend?: OPTIONAL<InformationToSend>,
+        extensions?: OPTIONAL<ExtensionField[]>
+    ) {
+        this.collectedInfo = collectedInfo;
+        this.disconnectFromIPForbidden = disconnectFromIPForbidden;
+        this.informationToSend = informationToSend;
+        this.extensions = extensions;
+    }
 
     /**
      * @summary Restructures an object into a PromptAndCollectUserInformationArg

@@ -1,6 +1,6 @@
 /* eslint-disable */
 import {
-    ASN1Element as _Element,
+    type ASN1Element as _Element,
     ASN1TagClass as _TagClass,
     ASN1Construction as _Construction,
     ASN1UniversalType as _UniversalType,
@@ -10,7 +10,7 @@ import {
     ASN1ConstructionError as _ConstructionError,
 } from "@wildboar/asn1";
 import * as $ from "@wildboar/asn1/functional";
-import { DfrEntryName, _decode_DfrEntryName, _encode_DfrEntryName } from "../DFRAbstractService/DfrEntryName.ta.mjs";
+import { type DfrEntryName, _decode_DfrEntryName, _encode_DfrEntryName } from "../DFRAbstractService/DfrEntryName.ta.mjs";
 import { VersionManagementProblem, _enum_for_VersionManagementProblem, _decode_VersionManagementProblem, _encode_VersionManagementProblem } from "../DFRAbstractService/VersionManagementProblem.ta.mjs";
 
 
@@ -35,26 +35,32 @@ import { VersionManagementProblem, _enum_for_VersionManagementProblem, _decode_V
  */
 export
 class versionManagementError_ParameterType {
+    /**
+     * @summary `entry`.
+     * @description
+     *
+     * Entry or potential previous version.
+     * @public
+     * @readonly
+     */
+    public readonly entry: DfrEntryName;
+    /**
+     * @summary `problem`.
+     * @description
+     *
+     * Why versioning failed.
+     * @public
+     * @readonly
+     */
+    public readonly problem: VersionManagementProblem;
+
     constructor (
-        /**
-         * @summary `entry`.
-         * @description
-         *
-         * Entry or potential previous version.
-         * @public
-         * @readonly
-         */
-        readonly entry: DfrEntryName,
-        /**
-         * @summary `problem`.
-         * @description
-         *
-         * Why versioning failed.
-         * @public
-         * @readonly
-         */
-        readonly problem: VersionManagementProblem
-    ) {}
+        entry: DfrEntryName,
+        problem: VersionManagementProblem
+    ) {
+        this.entry = entry;
+        this.problem = problem;
+    }
 
     /**
      * @summary Restructures an object into a versionManagementError_ParameterType
@@ -78,7 +84,7 @@ class versionManagementError_ParameterType {
          * @static
          */
 
-    public static _enum_for_problem = _enum_for_VersionManagementProblem;
+    public static _enum_for_problem: typeof _enum_for_VersionManagementProblem = _enum_for_VersionManagementProblem;
 }
 
 /**

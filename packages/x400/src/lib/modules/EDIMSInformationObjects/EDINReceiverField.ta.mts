@@ -1,7 +1,7 @@
 /* eslint-disable */
 import {
-    OPTIONAL,
-    ASN1Element as _Element,
+    type OPTIONAL,
+    type ASN1Element as _Element,
     ASN1TagClass as _TagClass,
     ASN1Construction as _Construction,
     ASN1UniversalType as _UniversalType,
@@ -22,7 +22,7 @@ import {
     _encode_EDIMIdentifier,
 } from '../EDIMSInformationObjects/EDIMIdentifier.ta.mjs';
 import {
-    FirstRecipientField,
+    type FirstRecipientField,
     _decode_FirstRecipientField,
     _encode_FirstRecipientField,
 } from '../EDIMSInformationObjects/FirstRecipientField.ta.mjs';
@@ -44,26 +44,34 @@ import {
  *
  */
 export class EDINReceiverField {
+    /**
+     * @summary `edin_receiver_name`.
+     * @public
+     * @readonly
+     */
+    public readonly edin_receiver_name: ORName;
+    /**
+     * @summary `original_edim_identifier`.
+     * @public
+     * @readonly
+     */
+    public readonly original_edim_identifier?: OPTIONAL<EDIMIdentifier>;
+    /**
+     * @summary `first_recipient`.
+     * @public
+     * @readonly
+     */
+    public readonly first_recipient?: OPTIONAL<FirstRecipientField>;
+
     constructor(
-        /**
-         * @summary `edin_receiver_name`.
-         * @public
-         * @readonly
-         */
-        readonly edin_receiver_name: ORName,
-        /**
-         * @summary `original_edim_identifier`.
-         * @public
-         * @readonly
-         */
-        readonly original_edim_identifier?: OPTIONAL<EDIMIdentifier>,
-        /**
-         * @summary `first_recipient`.
-         * @public
-         * @readonly
-         */
-        readonly first_recipient?: OPTIONAL<FirstRecipientField>
-    ) {}
+        edin_receiver_name: ORName,
+        original_edim_identifier?: OPTIONAL<EDIMIdentifier>,
+        first_recipient?: OPTIONAL<FirstRecipientField>
+    ) {
+        this.edin_receiver_name = edin_receiver_name;
+        this.original_edim_identifier = original_edim_identifier;
+        this.first_recipient = first_recipient;
+    }
 
     /**
      * @summary Restructures an object into a EDINReceiverField

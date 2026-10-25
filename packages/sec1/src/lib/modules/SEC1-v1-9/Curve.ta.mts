@@ -1,8 +1,8 @@
 /* eslint-disable */
 import {
-    OPTIONAL,
-    BIT_STRING,
-    ASN1Element as _Element,
+    type OPTIONAL,
+    type BIT_STRING,
+    type ASN1Element as _Element,
     ASN1TagClass as _TagClass,
     ASN1Construction as _Construction,
     ASN1UniversalType as _UniversalType,
@@ -12,7 +12,7 @@ import {
     ASN1ConstructionError as _ConstructionError,
 } from "@wildboar/asn1";
 import * as $ from "@wildboar/asn1/functional";
-import { FieldElement, _decode_FieldElement, _encode_FieldElement } from "../SEC1-v1-9/FieldElement.ta.mjs";
+import { type FieldElement, _decode_FieldElement, _encode_FieldElement } from "../SEC1-v1-9/FieldElement.ta.mjs";
 /**
  * @summary Curve
  * @description
@@ -47,7 +47,7 @@ class Curve {
      * @public
      * @readonly
      */
-    readonly a: FieldElement;
+    public readonly a: FieldElement;
     /**
      * @summary `b`.
      * @description
@@ -58,7 +58,7 @@ class Curve {
      * @public
      * @readonly
      */
-    readonly b: FieldElement;
+    public readonly b: FieldElement;
     /**
      * @summary `seed`.
      * @description
@@ -70,7 +70,7 @@ class Curve {
      * @public
      * @readonly
      */
-    readonly seed?: OPTIONAL<BIT_STRING>;
+    public readonly seed?: OPTIONAL<BIT_STRING>;
 
     constructor (
         a: FieldElement,

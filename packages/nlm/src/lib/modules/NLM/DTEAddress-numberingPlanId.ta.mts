@@ -1,6 +1,6 @@
 /* eslint-disable */
 import {
-    ASN1Element as _Element,
+    type ASN1Element as _Element,
     ASN1TagClass as _TagClass,
     ASN1Construction as _Construction,
     ASN1UniversalType as _UniversalType,
@@ -72,7 +72,7 @@ export type DTEAddress_numberingPlanId = _enum_for_DTEAddress_numberingPlanId;
  *
  * @enum {number}
  */
-export const DTEAddress_numberingPlanId = _enum_for_DTEAddress_numberingPlanId;
+export const DTEAddress_numberingPlanId: typeof _enum_for_DTEAddress_numberingPlanId = _enum_for_DTEAddress_numberingPlanId;
 
 
 /**
@@ -86,7 +86,7 @@ export const DTEAddress_numberingPlanId = _enum_for_DTEAddress_numberingPlanId;
  * @constant
  * @type {number}
  */
-export const DTEAddress_numberingPlanId_unknown: DTEAddress_numberingPlanId =
+export const DTEAddress_numberingPlanId_unknown: 0 =
     DTEAddress_numberingPlanId.unknown; /* LONG_NAMED_ENUMERATED_VALUE */
 
 
@@ -101,7 +101,7 @@ export const DTEAddress_numberingPlanId_unknown: DTEAddress_numberingPlanId =
  * @constant
  * @type {number}
  */
-export const unknown: DTEAddress_numberingPlanId =
+export const unknown: 0 =
     DTEAddress_numberingPlanId.unknown; /* SHORT_NAMED_ENUMERATED_VALUE */
 
 
@@ -116,7 +116,7 @@ export const unknown: DTEAddress_numberingPlanId =
  * @constant
  * @type {number}
  */
-export const DTEAddress_numberingPlanId_x121: DTEAddress_numberingPlanId =
+export const DTEAddress_numberingPlanId_x121: 1 =
     DTEAddress_numberingPlanId.x121; /* LONG_NAMED_ENUMERATED_VALUE */
 
 
@@ -131,7 +131,7 @@ export const DTEAddress_numberingPlanId_x121: DTEAddress_numberingPlanId =
  * @constant
  * @type {number}
  */
-export const x121: DTEAddress_numberingPlanId =
+export const x121: 1 =
     DTEAddress_numberingPlanId.x121; /* SHORT_NAMED_ENUMERATED_VALUE */
 
 
@@ -146,7 +146,7 @@ export const x121: DTEAddress_numberingPlanId =
  * @constant
  * @type {number}
  */
-export const DTEAddress_numberingPlanId_e164: DTEAddress_numberingPlanId =
+export const DTEAddress_numberingPlanId_e164: 2 =
     DTEAddress_numberingPlanId.e164; /* LONG_NAMED_ENUMERATED_VALUE */
 
 
@@ -161,18 +161,30 @@ export const DTEAddress_numberingPlanId_e164: DTEAddress_numberingPlanId =
  * @constant
  * @type {number}
  */
-export const e164: DTEAddress_numberingPlanId =
+export const e164: 2 =
     DTEAddress_numberingPlanId.e164; /* SHORT_NAMED_ENUMERATED_VALUE */
 
 
 
 
-export const _decode_DTEAddress_numberingPlanId = $._decodeEnumerated as $.ASN1Decoder<DTEAddress_numberingPlanId>;
+export function _decode_DTEAddress_numberingPlanId(el: _Element): DTEAddress_numberingPlanId {
+    const enumerated = $._decodeEnumerated(el);
+    switch (enumerated) {
+        case DTEAddress_numberingPlanId.unknown: return DTEAddress_numberingPlanId.unknown;
+        case DTEAddress_numberingPlanId.x121: return DTEAddress_numberingPlanId.x121;
+        case DTEAddress_numberingPlanId.e164: return DTEAddress_numberingPlanId.e164;
+        default:
+            throw new _ConstructionError(
+                'Invalid ENUMERATED value ' + enumerated + ' for DTEAddress_numberingPlanId.',
+                el,
+            );
+    }
+}
 
 
 
 
-export const _encode_DTEAddress_numberingPlanId = $._encodeEnumerated as $.ASN1Encoder<DTEAddress_numberingPlanId>;
+export const _encode_DTEAddress_numberingPlanId: $.ASN1Encoder<DTEAddress_numberingPlanId> = $._encodeEnumerated as $.ASN1Encoder<DTEAddress_numberingPlanId>;
 
 
 /* eslint-enable */

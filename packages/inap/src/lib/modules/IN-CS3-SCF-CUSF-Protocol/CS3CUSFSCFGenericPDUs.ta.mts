@@ -3,7 +3,7 @@ import {
     ASN1Element as _Element
 } from "@wildboar/asn1";
 import * as $ from "@wildboar/asn1/functional";
-import { TCMessage, _decode_TCMessage, _encode_TCMessage } from "../TCAPMessages/TCMessage.ta.mjs";
+import { type TCMessage, _decode_TCMessage, _encode_TCMessage } from "../TCAPMessages/TCMessage.ta.mjs";
 // export { TCMessage, _decode_TCMessage, _encode_TCMessage } from "../TCAPMessages/TCMessage.ta.mjs";
 
 
@@ -21,21 +21,13 @@ import { TCMessage, _decode_TCMessage, _encode_TCMessage } from "../TCAPMessages
 export
 type CS3CUSFSCFGenericPDUs = TCMessage; // DefinedType
 
-let _cached_decoder_for_CS3CUSFSCFGenericPDUs: $.ASN1Decoder<CS3CUSFSCFGenericPDUs> | null = null;
-
 /**
  * @summary Decodes an ASN.1 element into a(n) CS3CUSFSCFGenericPDUs
  * @function
  * @param el The element being decoded.
  * @returns The decoded data structure.
  */
-export
-function _decode_CS3CUSFSCFGenericPDUs (el: _Element): CS3CUSFSCFGenericPDUs {
-    if (!_cached_decoder_for_CS3CUSFSCFGenericPDUs) { _cached_decoder_for_CS3CUSFSCFGenericPDUs = _decode_TCMessage; }
-    return _cached_decoder_for_CS3CUSFSCFGenericPDUs(el);
-}
-
-let _cached_encoder_for_CS3CUSFSCFGenericPDUs: $.ASN1Encoder<CS3CUSFSCFGenericPDUs> | null = null;
+export const _decode_CS3CUSFSCFGenericPDUs: $.ASN1Decoder<CS3CUSFSCFGenericPDUs> = _decode_TCMessage;
 
 /**
  * @summary Encodes a(n) CS3CUSFSCFGenericPDUs into an ASN.1 Element.
@@ -44,11 +36,7 @@ let _cached_encoder_for_CS3CUSFSCFGenericPDUs: $.ASN1Encoder<CS3CUSFSCFGenericPD
  * @param elGetter A function that can be used to get new ASN.1 elements.
  * @returns {_Element} The CS3CUSFSCFGenericPDUs, encoded as an ASN.1 Element.
  */
-export
-function _encode_CS3CUSFSCFGenericPDUs (value: CS3CUSFSCFGenericPDUs, elGetter: $.ASN1Encoder<any>): _Element {
-    if (!_cached_encoder_for_CS3CUSFSCFGenericPDUs) { _cached_encoder_for_CS3CUSFSCFGenericPDUs = _encode_TCMessage; }
-    return _cached_encoder_for_CS3CUSFSCFGenericPDUs(value, elGetter);
-}
+export const _encode_CS3CUSFSCFGenericPDUs: $.ASN1Encoder<CS3CUSFSCFGenericPDUs> = _encode_TCMessage;
 
 
 /* eslint-enable */

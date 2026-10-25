@@ -1,6 +1,6 @@
 /* eslint-disable */
 import {
-    ASN1Element as _Element,
+    type ASN1Element as _Element,
     ASN1TagClass as _TagClass,
     ASN1Construction as _Construction,
     ASN1UniversalType as _UniversalType,
@@ -11,7 +11,7 @@ import {
 } from '@wildboar/asn1';
 import * as $ from '@wildboar/asn1/functional';
 import {
-    TimeInterval,
+    type TimeInterval,
     _decode_TimeInterval,
     _encode_TimeInterval,
 } from '../TimeMF/TimeInterval.ta.mjs';
@@ -32,22 +32,13 @@ import {
  */
 export type MaxSkew = TimeInterval; // DefinedType
 
-let _cached_decoder_for_MaxSkew: $.ASN1Decoder<MaxSkew> | null = null;
-
 /**
  * @summary Decodes an ASN.1 element into a(n) MaxSkew
  * @function
  * @param {_Element} el The element being decoded.
  * @returns {MaxSkew} The decoded data structure.
  */
-export function _decode_MaxSkew(el: _Element): MaxSkew {
-    if (!_cached_decoder_for_MaxSkew) {
-        _cached_decoder_for_MaxSkew = _decode_TimeInterval;
-    }
-    return _cached_decoder_for_MaxSkew(el);
-}
-
-let _cached_encoder_for_MaxSkew: $.ASN1Encoder<MaxSkew> | null = null;
+export const _decode_MaxSkew: $.ASN1Decoder<MaxSkew> = _decode_TimeInterval;
 
 /**
  * @summary Encodes a(n) MaxSkew into an ASN.1 Element.
@@ -56,15 +47,7 @@ let _cached_encoder_for_MaxSkew: $.ASN1Encoder<MaxSkew> | null = null;
  * @param elGetter A function that can be used to get new ASN.1 elements.
  * @returns {_Element} The MaxSkew, encoded as an ASN.1 Element.
  */
-export function _encode_MaxSkew(
-    value: MaxSkew,
-    elGetter: $.ASN1Encoder<MaxSkew>
-): _Element {
-    if (!_cached_encoder_for_MaxSkew) {
-        _cached_encoder_for_MaxSkew = _encode_TimeInterval;
-    }
-    return _cached_encoder_for_MaxSkew(value, elGetter);
-}
+export const _encode_MaxSkew: $.ASN1Encoder<MaxSkew> = _encode_TimeInterval;
 
 
 /* eslint-enable */

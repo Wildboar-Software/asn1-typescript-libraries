@@ -1,7 +1,7 @@
 /* eslint-disable */
 import type { ATTRIBUTE } from "@wildboar/x500/InformationFramework";
 import {
-    CertReq,
+    type CertReq,
     _decode_CertReq,
     _encode_CertReq,
 } from "../PKIXCRMF-2009/CertReq.ta.mjs";

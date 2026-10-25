@@ -1,13 +1,13 @@
 /* eslint-disable */
 import {
-    OPTIONAL,
-    ASN1Element as _Element,
+    type OPTIONAL,
+    type ASN1Element as _Element,
     ASN1TagClass as _TagClass
 } from "@wildboar/asn1";
 import * as $ from "@wildboar/asn1/functional";
-import { EventParameterName, _decode_EventParameterName, _encode_EventParameterName } from "../MEDIA-GATEWAY-CONTROL/EventParameterName.ta.mjs";
-import { EventParamValues, _decode_EventParamValues, _encode_EventParamValues } from "../MEDIA-GATEWAY-CONTROL/EventParamValues.ta.mjs";
-import { EventParameter_extraInfo, _decode_EventParameter_extraInfo, _encode_EventParameter_extraInfo } from "../MEDIA-GATEWAY-CONTROL/EventParameter-extraInfo.ta.mjs";
+import { type EventParameterName, _decode_EventParameterName, _encode_EventParameterName } from "../MEDIA-GATEWAY-CONTROL/EventParameterName.ta.mjs";
+import { type EventParamValues, _decode_EventParamValues, _encode_EventParamValues } from "../MEDIA-GATEWAY-CONTROL/EventParamValues.ta.mjs";
+import { type EventParameter_extraInfo, _decode_EventParameter_extraInfo, _encode_EventParameter_extraInfo } from "../MEDIA-GATEWAY-CONTROL/EventParameter-extraInfo.ta.mjs";
 
 
 /**
@@ -58,7 +58,7 @@ class EventParameter {
      * @public
      * @readonly
      */
-    readonly eventParameterName: EventParameterName;
+    public readonly eventParameterName: EventParameterName;
     /**
      * @summary `eventParamValue`.
      * @description
@@ -70,7 +70,7 @@ class EventParameter {
      * @public
      * @readonly
      */
-    readonly eventParamValue: EventParamValues;
+    public readonly eventParamValue: EventParamValues;
     /**
      * @summary `extraInfo`.
      * @description
@@ -81,7 +81,7 @@ class EventParameter {
      * @public
      * @readonly
      */
-    readonly extraInfo?: OPTIONAL<EventParameter_extraInfo>;
+    public readonly extraInfo?: OPTIONAL<EventParameter_extraInfo>;
     /**
      * @summary Extensions that are not recognized.
      * @description
@@ -92,7 +92,7 @@ class EventParameter {
      * @public
      * @readonly
      */
-    readonly _unrecognizedExtensionsList: _Element[];
+    public readonly _unrecognizedExtensionsList: _Element[];
 
     constructor (
         eventParameterName: EventParameterName,

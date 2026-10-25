@@ -1,7 +1,7 @@
 /* eslint-disable */
 import {
-    BIT_STRING,
-    ASN1Element as _Element,
+    type BIT_STRING,
+    type ASN1Element as _Element,
     ASN1TagClass as _TagClass,
     ASN1Construction as _Construction,
     ASN1UniversalType as _UniversalType,
@@ -117,8 +117,8 @@ const CommunicationMode_contactC6: number = 4; /* LONG_NAMED_BIT */
  */
 export
 const contactC6: number = CommunicationMode_contactC6; /* SHORT_NAMED_BIT */
-export const _decode_CommunicationMode = $._decodeBitString;
-export const _encode_CommunicationMode = $._encodeBitString;
+export const _decode_CommunicationMode: $.ASN1Decoder<BIT_STRING> = $._decodeBitString;
+export const _encode_CommunicationMode: $.ASN1Encoder<BIT_STRING> = $._encodeBitString;
 
 
 /* eslint-enable */

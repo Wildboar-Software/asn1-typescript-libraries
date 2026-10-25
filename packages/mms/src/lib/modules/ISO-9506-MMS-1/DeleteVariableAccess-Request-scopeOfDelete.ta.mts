@@ -1,7 +1,7 @@
 /* eslint-disable */
 import {
-    INTEGER,
-    ASN1Element as _Element,
+    type INTEGER,
+    type ASN1Element as _Element,
     ASN1TagClass as _TagClass,
     ASN1Construction as _Construction,
     ASN1UniversalType as _UniversalType,
@@ -47,7 +47,7 @@ type DeleteVariableAccess_Request_scopeOfDelete = INTEGER;
  * @type {number}
  */
 export
-const DeleteVariableAccess_Request_scopeOfDelete_specific: DeleteVariableAccess_Request_scopeOfDelete = 0; /* LONG_NAMED_INTEGER_VALUE */
+const DeleteVariableAccess_Request_scopeOfDelete_specific: 0 = 0 satisfies DeleteVariableAccess_Request_scopeOfDelete; /* LONG_NAMED_INTEGER_VALUE */
 
 /**
  * @summary DeleteVariableAccess_Request_scopeOfDelete_specific
@@ -60,7 +60,7 @@ const DeleteVariableAccess_Request_scopeOfDelete_specific: DeleteVariableAccess_
  * @type {number}
  */
 export
-const specific: DeleteVariableAccess_Request_scopeOfDelete = DeleteVariableAccess_Request_scopeOfDelete_specific; /* SHORT_NAMED_INTEGER_VALUE */
+const specific: 0 = DeleteVariableAccess_Request_scopeOfDelete_specific; /* SHORT_NAMED_INTEGER_VALUE */
 
 /**
  * @summary DeleteVariableAccess_Request_scopeOfDelete_aa_specific
@@ -74,7 +74,7 @@ const specific: DeleteVariableAccess_Request_scopeOfDelete = DeleteVariableAcces
  * @type {number}
  */
 export
-const DeleteVariableAccess_Request_scopeOfDelete_aa_specific: DeleteVariableAccess_Request_scopeOfDelete = 1; /* LONG_NAMED_INTEGER_VALUE */
+const DeleteVariableAccess_Request_scopeOfDelete_aa_specific: 1 = 1 satisfies DeleteVariableAccess_Request_scopeOfDelete; /* LONG_NAMED_INTEGER_VALUE */
 
 /**
  * @summary DeleteVariableAccess_Request_scopeOfDelete_aa_specific
@@ -88,7 +88,7 @@ const DeleteVariableAccess_Request_scopeOfDelete_aa_specific: DeleteVariableAcce
  * @type {number}
  */
 export
-const aa_specific: DeleteVariableAccess_Request_scopeOfDelete = DeleteVariableAccess_Request_scopeOfDelete_aa_specific; /* SHORT_NAMED_INTEGER_VALUE */
+const aa_specific: 1 = DeleteVariableAccess_Request_scopeOfDelete_aa_specific; /* SHORT_NAMED_INTEGER_VALUE */
 
 /**
  * @summary DeleteVariableAccess_Request_scopeOfDelete_domain
@@ -102,7 +102,7 @@ const aa_specific: DeleteVariableAccess_Request_scopeOfDelete = DeleteVariableAc
  * @type {number}
  */
 export
-const DeleteVariableAccess_Request_scopeOfDelete_domain: DeleteVariableAccess_Request_scopeOfDelete = 2; /* LONG_NAMED_INTEGER_VALUE */
+const DeleteVariableAccess_Request_scopeOfDelete_domain: 2 = 2 satisfies DeleteVariableAccess_Request_scopeOfDelete; /* LONG_NAMED_INTEGER_VALUE */
 
 /**
  * @summary DeleteVariableAccess_Request_scopeOfDelete_domain
@@ -116,7 +116,7 @@ const DeleteVariableAccess_Request_scopeOfDelete_domain: DeleteVariableAccess_Re
  * @type {number}
  */
 export
-const domain: DeleteVariableAccess_Request_scopeOfDelete = DeleteVariableAccess_Request_scopeOfDelete_domain; /* SHORT_NAMED_INTEGER_VALUE */
+const domain: 2 = DeleteVariableAccess_Request_scopeOfDelete_domain; /* SHORT_NAMED_INTEGER_VALUE */
 
 /**
  * @summary DeleteVariableAccess_Request_scopeOfDelete_vmd
@@ -129,7 +129,7 @@ const domain: DeleteVariableAccess_Request_scopeOfDelete = DeleteVariableAccess_
  * @type {number}
  */
 export
-const DeleteVariableAccess_Request_scopeOfDelete_vmd: DeleteVariableAccess_Request_scopeOfDelete = 3; /* LONG_NAMED_INTEGER_VALUE */
+const DeleteVariableAccess_Request_scopeOfDelete_vmd: 3 = 3 satisfies DeleteVariableAccess_Request_scopeOfDelete; /* LONG_NAMED_INTEGER_VALUE */
 
 /**
  * @summary DeleteVariableAccess_Request_scopeOfDelete_vmd
@@ -142,9 +142,9 @@ const DeleteVariableAccess_Request_scopeOfDelete_vmd: DeleteVariableAccess_Reque
  * @type {number}
  */
 export
-const vmd: DeleteVariableAccess_Request_scopeOfDelete = DeleteVariableAccess_Request_scopeOfDelete_vmd; /* SHORT_NAMED_INTEGER_VALUE */
-export const _decode_DeleteVariableAccess_Request_scopeOfDelete = $._decodeInteger;
-export const _encode_DeleteVariableAccess_Request_scopeOfDelete = $._encodeInteger;
+const vmd: 3 = DeleteVariableAccess_Request_scopeOfDelete_vmd; /* SHORT_NAMED_INTEGER_VALUE */
+export const _decode_DeleteVariableAccess_Request_scopeOfDelete: $.ASN1Decoder<INTEGER> = $._decodeInteger;
+export const _encode_DeleteVariableAccess_Request_scopeOfDelete: $.ASN1Encoder<INTEGER> = $._encodeInteger;
 
 
 /* eslint-enable */

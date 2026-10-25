@@ -1,6 +1,6 @@
 /* eslint-disable */
 import {
-    ASN1Element as _Element,
+    type ASN1Element as _Element,
     ASN1TagClass as _TagClass,
     ASN1Construction as _Construction,
     ASN1UniversalType as _UniversalType,
@@ -10,7 +10,7 @@ import {
     ASN1ConstructionError as _ConstructionError,
 } from "@wildboar/asn1";
 import * as $ from "@wildboar/asn1/functional";
-import { ObjectName, _decode_ObjectName, _encode_ObjectName } from "../ISO-9506-MMS-1/ObjectName.ta.mjs";
+import { type ObjectName, _decode_ObjectName, _encode_ObjectName } from "../ISO-9506-MMS-1/ObjectName.ta.mjs";
 import { DefineNamedVariableList_Request_listOfVariable_Item, _decode_DefineNamedVariableList_Request_listOfVariable_Item, _encode_DefineNamedVariableList_Request_listOfVariable_Item } from "../ISO-9506-MMS-1/DefineNamedVariableList-Request-listOfVariable-Item.ta.mjs";
 
 
@@ -39,30 +39,36 @@ import { DefineNamedVariableList_Request_listOfVariable_Item, _decode_DefineName
  */
 export
 class DefineNamedVariableList_Request {
+    /**
+     * @summary `variableListName`.
+     * @description
+     *
+     * Unique `&name` of the Named Variable List.
+     * ISO 9506-1:2003 §14.12.1.1.1.
+     *
+     * @public
+     * @readonly
+     */
+    public readonly variableListName: ObjectName;
+    /**
+     * @summary `listOfVariable`.
+     * @description
+     *
+     * Variables accessed via this list, in stored order.
+     * ISO 9506-1:2003 §14.12.1.1.2.
+     *
+     * @public
+     * @readonly
+     */
+    public readonly listOfVariable: DefineNamedVariableList_Request_listOfVariable_Item[];
+
     constructor (
-        /**
-         * @summary `variableListName`.
-         * @description
-         *
-         * Unique `&name` of the Named Variable List.
-         * ISO 9506-1:2003 §14.12.1.1.1.
-         *
-         * @public
-         * @readonly
-         */
-        readonly variableListName: ObjectName,
-        /**
-         * @summary `listOfVariable`.
-         * @description
-         *
-         * Variables accessed via this list, in stored order.
-         * ISO 9506-1:2003 §14.12.1.1.2.
-         *
-         * @public
-         * @readonly
-         */
-        readonly listOfVariable: DefineNamedVariableList_Request_listOfVariable_Item[]
-    ) {}
+        variableListName: ObjectName,
+        listOfVariable: DefineNamedVariableList_Request_listOfVariable_Item[]
+    ) {
+        this.variableListName = variableListName;
+        this.listOfVariable = listOfVariable;
+    }
 
     /**
      * @summary Restructures an object into a DefineNamedVariableList_Request

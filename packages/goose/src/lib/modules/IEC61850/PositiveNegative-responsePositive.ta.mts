@@ -1,12 +1,12 @@
 /* eslint-disable */
 import {
-    OPTIONAL,
-    VisibleString,
-    ASN1Element as _Element,
+    type OPTIONAL,
+    type VisibleString,
+    type ASN1Element as _Element,
     ASN1TagClass as _TagClass
 } from "@wildboar/asn1";
 import * as $ from "@wildboar/asn1/functional";
-import { RequestResults, _decode_RequestResults, _encode_RequestResults } from "../IEC61850/RequestResults.ta.mjs";
+import { type RequestResults, _decode_RequestResults, _encode_RequestResults } from "../IEC61850/RequestResults.ta.mjs";
 
 
 /**

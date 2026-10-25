@@ -1,6 +1,6 @@
 /* eslint-disable */
 import {
-    NULL
+    type NULL
 } from "@wildboar/asn1";
 import * as $ from "@wildboar/asn1/functional";
 import { type NOTIFICATION } from "../Notification-class-asn1-97/NOTIFICATION.oca.mjs";

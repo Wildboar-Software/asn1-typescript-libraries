@@ -1,6 +1,6 @@
 /* eslint-disable */
 import {
-    ASN1Element as _Element,
+    type ASN1Element as _Element,
     ASN1TagClass as _TagClass,
     ASN1Construction as _Construction,
     ASN1UniversalType as _UniversalType,
@@ -77,7 +77,7 @@ type Purpose = _enum_for_Purpose;
  * @enum {number}
  */
 export
-const Purpose = _enum_for_Purpose;
+const Purpose: typeof _enum_for_Purpose = _enum_for_Purpose;
 
 /**
  * @summary Purpose_reference
@@ -89,7 +89,7 @@ const Purpose = _enum_for_Purpose;
  * @type {number}
  */
 export
-const Purpose_reference: Purpose = Purpose.reference; /* LONG_NAMED_ENUMERATED_VALUE */
+const Purpose_reference: _enum_for_Purpose.reference = Purpose.reference; /* LONG_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary reference
@@ -97,7 +97,7 @@ const Purpose_reference: Purpose = Purpose.reference; /* LONG_NAMED_ENUMERATED_V
  * @type {number}
  */
 export
-const reference: Purpose = Purpose.reference; /* SHORT_NAMED_ENUMERATED_VALUE */
+const reference: _enum_for_Purpose.reference = Purpose.reference; /* SHORT_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary Purpose_sample
@@ -109,7 +109,7 @@ const reference: Purpose = Purpose.reference; /* SHORT_NAMED_ENUMERATED_VALUE */
  * @type {number}
  */
 export
-const Purpose_sample: Purpose = Purpose.sample; /* LONG_NAMED_ENUMERATED_VALUE */
+const Purpose_sample: _enum_for_Purpose.sample = Purpose.sample; /* LONG_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary sample
@@ -117,7 +117,7 @@ const Purpose_sample: Purpose = Purpose.sample; /* LONG_NAMED_ENUMERATED_VALUE *
  * @type {number}
  */
 export
-const sample: Purpose = Purpose.sample; /* SHORT_NAMED_ENUMERATED_VALUE */
+const sample: _enum_for_Purpose.sample = Purpose.sample; /* SHORT_NAMED_ENUMERATED_VALUE */
 
 
 /**
@@ -126,7 +126,7 @@ const sample: Purpose = Purpose.sample; /* SHORT_NAMED_ENUMERATED_VALUE */
  * @param el The element being decoded.
  * @returns The decoded data structure.
  */
-export const _decode_Purpose = $._decodeEnumerated;
+export const _decode_Purpose: $.ASN1Decoder<number> = $._decodeEnumerated;
 
 
 /**
@@ -136,7 +136,7 @@ export const _decode_Purpose = $._decodeEnumerated;
  * @param elGetter A function that can be used to get new ASN.1 elements.
  * @returns {_Element} The Purpose, encoded as an ASN.1 Element.
  */
-export const _encode_Purpose = $._encodeEnumerated;
+export const _encode_Purpose: $.ASN1Encoder<number> = $._encodeEnumerated;
 
 
 /* eslint-enable */

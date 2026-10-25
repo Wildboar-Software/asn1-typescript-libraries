@@ -1,7 +1,7 @@
 /* eslint-disable */
 import {
-    OPTIONAL,
-    ASN1Element as _Element,
+    type OPTIONAL,
+    type ASN1Element as _Element,
     ASN1TagClass as _TagClass,
     ASN1Construction as _Construction,
     ASN1UniversalType as _UniversalType,
@@ -12,12 +12,12 @@ import {
 } from '@wildboar/asn1';
 import * as $ from '@wildboar/asn1/functional';
 import {
-    InformationType,
+    type InformationType,
     _decode_InformationType,
     _encode_InformationType,
 } from '../GMI-AttributeModule/InformationType.ta.mjs';
 import {
-    InformationData,
+    type InformationData,
     _decode_InformationData,
     _encode_InformationData,
 } from '../GMI-AttributeModule/InformationData.ta.mjs';
@@ -45,28 +45,34 @@ import {
  *
  */
 export class CommunicationsInformation {
+    /**
+     * @summary `informationType`.
+     * @description
+     *
+     * Type of the reported communications information
+     * (X.723 §9.10). Bound as attribute id `informationType`.
+     * @public
+     * @readonly
+     */
+    public readonly informationType: InformationType;
+    /**
+     * @summary `informationData`.
+     * @description
+     *
+     * Optional structured payload (X.723 §9.9). Bound as
+     * attribute id `informationData`.
+     * @public
+     * @readonly
+     */
+    public readonly informationData?: OPTIONAL<InformationData>;
+
     constructor(
-        /**
-         * @summary `informationType`.
-         * @description
-         *
-         * Type of the reported communications information
-         * (X.723 §9.10). Bound as attribute id `informationType`.
-         * @public
-         * @readonly
-         */
-        readonly informationType: InformationType,
-        /**
-         * @summary `informationData`.
-         * @description
-         *
-         * Optional structured payload (X.723 §9.9). Bound as
-         * attribute id `informationData`.
-         * @public
-         * @readonly
-         */
-        readonly informationData?: OPTIONAL<InformationData>
-    ) {}
+        informationType: InformationType,
+        informationData?: OPTIONAL<InformationData>
+    ) {
+        this.informationType = informationType;
+        this.informationData = informationData;
+    }
 
     /**
      * @summary Restructures an object into a CommunicationsInformation

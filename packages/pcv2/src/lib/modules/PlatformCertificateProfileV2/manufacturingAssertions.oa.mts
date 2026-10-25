@@ -1,7 +1,7 @@
 /* eslint-disable */
 import { type ATTRIBUTE } from "../InformationFramework/ATTRIBUTE.oca.mjs";
 import { userApplications /* IMPORTED_SHORT_ENUMERATION_ITEM */ } from "../InformationFramework/AttributeUsage.ta.mjs";
-import { ManufacturingAssertions, _decode_ManufacturingAssertions, _encode_ManufacturingAssertions } from "../PlatformCertificateProfileV2/ManufacturingAssertions.ta.mjs";
+import { type ManufacturingAssertions, _decode_ManufacturingAssertions, _encode_ManufacturingAssertions } from "../PlatformCertificateProfileV2/ManufacturingAssertions.ta.mjs";
 import { tcg_at_manufacturingAssertions } from "../PlatformCertificateProfileV2/tcg-at-manufacturingAssertions.va.mjs";
 
 

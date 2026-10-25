@@ -1,7 +1,7 @@
 /* eslint-disable */
 import {
-    OPTIONAL,
-    ASN1Element as _Element,
+    type OPTIONAL,
+    type ASN1Element as _Element,
     ASN1TagClass as _TagClass,
     ASN1Construction as _Construction,
     ASN1UniversalType as _UniversalType,
@@ -27,7 +27,7 @@ import {
     _encode_MessageSubmissionEnvelope,
 } from '../MTSAbstractService/MessageSubmissionEnvelope.ta.mjs';
 import {
-    Content,
+    type Content,
     _decode_Content,
     _encode_Content,
 } from '../MTSAbstractService/Content.ta.mjs';
@@ -54,26 +54,34 @@ import {
  *
  */
 export class MSMessageSubmissionArgument implements MessageSubmissionArgument {
+    /**
+     * @summary `envelope`.
+     * @public
+     * @readonly
+     */
+    public readonly envelope: MessageSubmissionEnvelope; /* REPLICATED_COMPONENT */
+    /**
+     * @summary `content`.
+     * @public
+     * @readonly
+     */
+    public readonly content: Content; /* REPLICATED_COMPONENT */
+    /**
+     * @summary `submission_options`.
+     * @public
+     * @readonly
+     */
+    public readonly submission_options?: OPTIONAL<MSSubmissionOptions>;
+
     constructor(
-        /**
-         * @summary `envelope`.
-         * @public
-         * @readonly
-         */
-        readonly envelope: MessageSubmissionEnvelope /* REPLICATED_COMPONENT */,
-        /**
-         * @summary `content`.
-         * @public
-         * @readonly
-         */
-        readonly content: Content /* REPLICATED_COMPONENT */,
-        /**
-         * @summary `submission_options`.
-         * @public
-         * @readonly
-         */
-        readonly submission_options?: OPTIONAL<MSSubmissionOptions>
-    ) {}
+        envelope: MessageSubmissionEnvelope,
+        content: Content,
+        submission_options?: OPTIONAL<MSSubmissionOptions>
+    ) {
+        this.envelope = envelope;
+        this.content = content;
+        this.submission_options = submission_options;
+    }
 
     /**
      * @summary Restructures an object into a MSMessageSubmissionArgument

@@ -1,8 +1,8 @@
 /* eslint-disable */
 import {
-    ASN1Element as _Element,
+    type ASN1Element as _Element,
     ASN1TagClass as _TagClass,
-    OPTIONAL,
+    type OPTIONAL,
 } from "@wildboar/asn1";
 import * as $ from "@wildboar/asn1/functional";
 import {
@@ -10,7 +10,7 @@ import {
     _decode_AlgorithmIdentifier,
     _encode_AlgorithmIdentifier,
 } from "@wildboar/x500/AuthenticationFramework";
-import { Label, _decode_Label, _encode_Label } from "../PKCS-15/Label.ta.mjs";
+import { type Label, _decode_Label, _encode_Label } from "../PKCS-15/Label.ta.mjs";
 
 /**
  * @summary PasswordInfo
@@ -28,26 +28,34 @@ import { Label, _decode_Label, _encode_Label } from "../PKCS-15/Label.ta.mjs";
  *
  */
 export class PasswordInfo {
+    /**
+     * @summary `hint`.
+     * @public
+     * @readonly
+     */
+    public readonly hint: OPTIONAL<Label>;
+    /**
+     * @summary `algId`.
+     * @public
+     * @readonly
+     */
+    public readonly algId: AlgorithmIdentifier;
+    /**
+     * @summary Extensions that are not recognized.
+     * @public
+     * @readonly
+     */
+    public readonly _unrecognizedExtensionsList: _Element[];
+
     constructor(
-        /**
-         * @summary `hint`.
-         * @public
-         * @readonly
-         */
-        readonly hint: OPTIONAL<Label>,
-        /**
-         * @summary `algId`.
-         * @public
-         * @readonly
-         */
-        readonly algId: AlgorithmIdentifier,
-        /**
-         * @summary Extensions that are not recognized.
-         * @public
-         * @readonly
-         */
-        readonly _unrecognizedExtensionsList: _Element[] = []
-    ) {}
+        hint: OPTIONAL<Label>,
+        algId: AlgorithmIdentifier,
+        _unrecognizedExtensionsList: _Element[] = []
+    ) {
+        this.hint = hint;
+        this.algId = algId;
+        this._unrecognizedExtensionsList = _unrecognizedExtensionsList;
+    }
 
     /**
      * @summary Restructures an object into a PasswordInfo

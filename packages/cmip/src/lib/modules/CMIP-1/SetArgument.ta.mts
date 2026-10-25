@@ -1,6 +1,6 @@
 /* eslint-disable */
 import {
-  OPTIONAL,
+  type OPTIONAL,
   ASN1Element as _Element,
   ASN1TagClass as _TagClass,
   ASN1Construction as _Construction,
@@ -17,7 +17,7 @@ import {
   _encode_BaseManagedObjectId,
 } from '../CMIP-1/BaseManagedObjectId.ta.mjs';
 import {
-  AccessControl,
+  type AccessControl,
   _decode_AccessControl,
   _encode_AccessControl,
 } from '../CMIP-1/AccessControl.ta.mjs';
@@ -28,12 +28,12 @@ import {
   _decode_CMISSync,
   _encode_CMISSync,
 } from '../CMIP-1/CMISSync.ta.mjs';
-import { Scope, _decode_Scope, _encode_Scope } from '../CMIP-1/Scope.ta.mjs';
+import { type Scope, _decode_Scope, _encode_Scope } from '../CMIP-1/Scope.ta.mjs';
 import {
     Scope_namedNumbers_baseObject,
 } from '../CMIP-1/Scope-namedNumbers.ta.mjs';
 import {
-  CMISFilter,
+  type CMISFilter,
   _decode_CMISFilter,
   _encode_CMISFilter,
 } from '../CMIP-1/CMISFilter.ta.mjs';
@@ -43,12 +43,12 @@ import {
   _encode_SetArgument_modificationList_Item,
 } from '../CMIP-1/SetArgument-modificationList-Item.ta.mjs';
 import {
-  ObjectClass,
+  type ObjectClass,
   _decode_ObjectClass,
   _encode_ObjectClass,
 } from '../CMIP-1/ObjectClass.ta.mjs';
 import {
-  ObjectInstance,
+  type ObjectInstance,
   _decode_ObjectInstance,
   _encode_ObjectInstance,
 } from '../CMIP-1/ObjectInstance.ta.mjs';
@@ -103,7 +103,7 @@ export class SetArgument implements BaseManagedObjectId {
    * @public
    * @readonly
    */
-  readonly baseManagedObjectClass: ObjectClass;
+  public readonly baseManagedObjectClass: ObjectClass; /* REPLICATED_COMPONENT */
   /**
    * @summary `baseManagedObjectInstance`.
    * @description
@@ -113,7 +113,7 @@ export class SetArgument implements BaseManagedObjectId {
    * @public
    * @readonly
    */
-  readonly baseManagedObjectInstance: ObjectInstance;
+  public readonly baseManagedObjectInstance: ObjectInstance; /* REPLICATED_COMPONENT */
   /**
    * @summary `accessControl`.
    * @description
@@ -123,7 +123,7 @@ export class SetArgument implements BaseManagedObjectId {
    * @public
    * @readonly
    */
-  readonly accessControl: OPTIONAL<AccessControl>;
+  public readonly accessControl: OPTIONAL<AccessControl>;
   /**
    * @summary `synchronization`.
    * @description
@@ -134,7 +134,7 @@ export class SetArgument implements BaseManagedObjectId {
    * @public
    * @readonly
    */
-  readonly synchronization: OPTIONAL<CMISSync>;
+  public readonly synchronization: OPTIONAL<CMISSync>;
   /**
    * @summary `scope`.
    * @description
@@ -144,7 +144,7 @@ export class SetArgument implements BaseManagedObjectId {
    * @public
    * @readonly
    */
-  readonly scope: OPTIONAL<Scope>;
+  public readonly scope: OPTIONAL<Scope>;
   /**
    * @summary `filter`.
    * @description
@@ -155,7 +155,7 @@ export class SetArgument implements BaseManagedObjectId {
    * @public
    * @readonly
    */
-  readonly filter: OPTIONAL<CMISFilter>;
+  public readonly filter: OPTIONAL<CMISFilter>;
   /**
    * @summary `modificationList`.
    * @description
@@ -167,17 +167,17 @@ export class SetArgument implements BaseManagedObjectId {
    * @public
    * @readonly
    */
-  readonly modificationList: SetArgument_modificationList_Item[];
+  public readonly modificationList: SetArgument_modificationList_Item[];
   /**
    * @summary Extensions that are not recognized.
    * @public
    * @readonly
    */
-  readonly _unrecognizedExtensionsList: _Element[];
+  public readonly _unrecognizedExtensionsList: _Element[];
 
   constructor(
-    baseManagedObjectClass: ObjectClass /* REPLICATED_COMPONENT */,
-    baseManagedObjectInstance: ObjectInstance /* REPLICATED_COMPONENT */,
+    baseManagedObjectClass: ObjectClass,
+    baseManagedObjectInstance: ObjectInstance,
     accessControl: OPTIONAL<AccessControl>,
     synchronization: OPTIONAL<CMISSync>,
     scope: OPTIONAL<Scope>,
@@ -255,7 +255,7 @@ export class SetArgument implements BaseManagedObjectId {
    * @static
    */
 
-  public static _enum_for_synchronization = _enum_for_CMISSync;
+  public static _enum_for_synchronization: typeof _enum_for_CMISSync = _enum_for_CMISSync;
 }
 
 

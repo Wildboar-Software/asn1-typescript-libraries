@@ -1,9 +1,9 @@
 /* eslint-disable */
 import {
     ASN1ConstructionError as _ConstructionError,
-    ASN1Element as _Element,
+    type ASN1Element as _Element,
     ASN1TagClass as _TagClass,
-    OBJECT_IDENTIFIER,
+    type OBJECT_IDENTIFIER,
 } from "@wildboar/asn1";
 import * as $ from "@wildboar/asn1/functional";
 
@@ -22,20 +22,26 @@ import * as $ from "@wildboar/asn1/functional";
  *
  */
 export class CertBag {
+    /**
+     * @summary `certId`.
+     * @public
+     * @readonly
+     */
+    public readonly certId: OBJECT_IDENTIFIER;
+    /**
+     * @summary `certValue`.
+     * @public
+     * @readonly
+     */
+    public readonly certValue: _Element;
+
     constructor(
-        /**
-         * @summary `certId`.
-         * @public
-         * @readonly
-         */
-        readonly certId: OBJECT_IDENTIFIER,
-        /**
-         * @summary `certValue`.
-         * @public
-         * @readonly
-         */
-        readonly certValue: _Element
-    ) {}
+        certId: OBJECT_IDENTIFIER,
+        certValue: _Element
+    ) {
+        this.certId = certId;
+        this.certValue = certValue;
+    }
 
     /**
      * @summary Restructures an object into a CertBag

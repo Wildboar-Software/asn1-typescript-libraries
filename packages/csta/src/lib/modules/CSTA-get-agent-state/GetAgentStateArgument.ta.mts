@@ -2,10 +2,10 @@
 
 import * as $ from "@wildboar/asn1/functional";
 import {
-    OPTIONAL,
-    SEQUENCE,
-    SET,
-    ASN1Element as _Element,
+    type OPTIONAL,
+    type SEQUENCE,
+    type SET,
+    type ASN1Element as _Element,
     ASN1TagClass as _TagClass
 } from "@wildboar/asn1";
 import { DeviceID, _decode_DeviceID, _encode_DeviceID } from "../CSTA-device-identifiers/DeviceID.ta.mjs";
@@ -28,7 +28,7 @@ import { CSTACommonArguments, _decode_CSTACommonArguments, _encode_CSTACommonArg
  * ```asn1
  * GetAgentStateArgument ::= SEQUENCE
  * {    device                 DeviceID,
- *     acdGroup            DeviceID                 OPTIONAL,
+ *     acdGroup            DeviceID                 type OPTIONAL,
  *     extensions            CSTACommonArguments            OPTIONAL }
  * ```
  * 
@@ -36,36 +36,44 @@ import { CSTACommonArguments, _decode_CSTACommonArguments, _encode_CSTACommonArg
  */
 export
 class GetAgentStateArgument {
+    /**
+     * @summary `device`.
+     * @description
+     *
+     * Device whose agent state is queried.
+     * @public
+     * @readonly
+     */
+    public readonly device: DeviceID;
+    /**
+     * @summary `acdGroup`.
+     * @description
+     *
+     * If provided, limit the result to this ACD group.
+     * @public
+     * @readonly
+     */
+    public readonly acdGroup?: OPTIONAL<DeviceID>;
+    /**
+     * @summary `extensions`.
+     * @description
+     *
+     * Optional security (timestamp, sequence, securityInfo) and
+     * privateData.
+     * @public
+     * @readonly
+     */
+    public readonly extensions?: OPTIONAL<CSTACommonArguments>;
+
     constructor (
-        /**
-         * @summary `device`.
-         * @description
-         *
-         * Device whose agent state is queried.
-         * @public
-         * @readonly
-         */
-        readonly device: DeviceID,
-        /**
-         * @summary `acdGroup`.
-         * @description
-         *
-         * If provided, limit the result to this ACD group.
-         * @public
-         * @readonly
-         */
-        readonly acdGroup?: OPTIONAL<DeviceID>,
-        /**
-         * @summary `extensions`.
-         * @description
-         *
-         * Optional security (timestamp, sequence, securityInfo) and
-         * privateData.
-         * @public
-         * @readonly
-         */
-        readonly extensions?: OPTIONAL<CSTACommonArguments>
-    ) {}
+        device: DeviceID,
+        acdGroup?: OPTIONAL<DeviceID>,
+        extensions?: OPTIONAL<CSTACommonArguments>
+    ) {
+        this.device = device;
+        this.acdGroup = acdGroup;
+        this.extensions = extensions;
+    }
 
     /**
      * @summary Restructures an object into a GetAgentStateArgument

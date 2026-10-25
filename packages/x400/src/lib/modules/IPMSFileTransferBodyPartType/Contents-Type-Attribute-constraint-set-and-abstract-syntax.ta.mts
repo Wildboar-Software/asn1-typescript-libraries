@@ -1,6 +1,6 @@
 /* eslint-disable */
 import {
-    ASN1Element as _Element,
+    type ASN1Element as _Element,
     ASN1TagClass as _TagClass,
     ASN1Construction as _Construction,
     ASN1UniversalType as _UniversalType,
@@ -11,12 +11,12 @@ import {
 } from '@wildboar/asn1';
 import * as $ from '@wildboar/asn1/functional';
 import {
-    Constraint_Set_Name,
+    type Constraint_Set_Name,
     _decode_Constraint_Set_Name,
     _encode_Constraint_Set_Name,
 } from '../IPMSFileTransferBodyPartType/Constraint-Set-Name.ta.mjs';
 import {
-    Abstract_Syntax_Name,
+    type Abstract_Syntax_Name,
     _decode_Abstract_Syntax_Name,
     _encode_Abstract_Syntax_Name,
 } from '../IPMSFileTransferBodyPartType/Abstract-Syntax-Name.ta.mjs';
@@ -34,20 +34,26 @@ import {
  *
  */
 export class Contents_Type_Attribute_constraint_set_and_abstract_syntax {
+    /**
+     * @summary `constraint_set_name`.
+     * @public
+     * @readonly
+     */
+    public readonly constraint_set_name: Constraint_Set_Name;
+    /**
+     * @summary `abstract_syntax_name`.
+     * @public
+     * @readonly
+     */
+    public readonly abstract_syntax_name: Abstract_Syntax_Name;
+
     constructor(
-        /**
-         * @summary `constraint_set_name`.
-         * @public
-         * @readonly
-         */
-        readonly constraint_set_name: Constraint_Set_Name,
-        /**
-         * @summary `abstract_syntax_name`.
-         * @public
-         * @readonly
-         */
-        readonly abstract_syntax_name: Abstract_Syntax_Name
-    ) {}
+        constraint_set_name: Constraint_Set_Name,
+        abstract_syntax_name: Abstract_Syntax_Name
+    ) {
+        this.constraint_set_name = constraint_set_name;
+        this.abstract_syntax_name = abstract_syntax_name;
+    }
 
     /**
      * @summary Restructures an object into a Contents_Type_Attribute_constraint_set_and_abstract_syntax

@@ -1,8 +1,8 @@
 /* eslint-disable */
 import {
-    OPTIONAL,
-    INTEGER,
-    ASN1Element as _Element,
+    type OPTIONAL,
+    type INTEGER,
+    type ASN1Element as _Element,
     ASN1TagClass as _TagClass,
     ASN1Construction as _Construction,
     ASN1UniversalType as _UniversalType,
@@ -15,11 +15,11 @@ import * as $ from '@wildboar/asn1/functional';
 import {
     _decode_RTORQapdu,
     _encode_RTORQapdu,
-    RTORQapdu_dialogueMode,
+    type RTORQapdu_dialogueMode,
     monologue /* IMPORTED_SHORT_NAMED_INTEGER */,
     _decode_RTORQapdu_dialogueMode,
     _encode_RTORQapdu_dialogueMode,
-    ConnectionData,
+    type ConnectionData,
     _decode_ConnectionData,
     _encode_ConnectionData,
 } from '@wildboar/rtse';

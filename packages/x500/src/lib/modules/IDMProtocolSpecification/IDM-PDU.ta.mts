@@ -2,7 +2,7 @@
 import { ASN1Element as _Element, ASN1TagClass as _TagClass } from "@wildboar/asn1";
 import * as $ from "@wildboar/asn1/functional";
 import {
-    Abort,
+    type Abort,
     _decode_Abort,
     _encode_Abort,
 } from "../IDMProtocolSpecification/Abort.ta.mjs";
@@ -42,17 +42,17 @@ import {
     _encode_Request,
 } from "../IDMProtocolSpecification/Request.ta.mjs";
 import {
-    StartTLS,
+    type StartTLS,
     _decode_StartTLS,
     _encode_StartTLS,
 } from "../IDMProtocolSpecification/StartTLS.ta.mjs";
 import {
-    TLSResponse,
+    type TLSResponse,
     _decode_TLSResponse,
     _encode_TLSResponse,
 } from "../IDMProtocolSpecification/TLSResponse.ta.mjs";
 import {
-    Unbind,
+    type Unbind,
     _decode_Unbind,
     _encode_Unbind,
 } from "../IDMProtocolSpecification/Unbind.ta.mjs";

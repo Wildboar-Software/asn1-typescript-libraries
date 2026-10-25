@@ -1,7 +1,7 @@
 /* eslint-disable */
 import {
     ObjectIdentifier as _OID,
-    OBJECT_IDENTIFIER
+    type OBJECT_IDENTIFIER
 } from "@wildboar/asn1";
 import { z39_50 } from "../ANSI-Z39-50-ObjectIdentifier/z39-50.va.mjs";
 

@@ -1,11 +1,11 @@
 /* eslint-disable */
 import {
-    OPTIONAL,
-    ASN1Element as _Element,
+    type OPTIONAL,
+    type ASN1Element as _Element,
     ASN1TagClass as _TagClass
 } from "@wildboar/asn1";
 import * as $ from "@wildboar/asn1/functional";
-import { AddressString, _decode_AddressString, _encode_AddressString } from "../MAP-CommonDataTypes/AddressString.ta.mjs";
+import { type AddressString, _decode_AddressString, _encode_AddressString } from "../MAP-CommonDataTypes/AddressString.ta.mjs";
 import { ExtensionContainer, _decode_ExtensionContainer, _encode_ExtensionContainer } from "../MAP-ExtensionDataTypes/ExtensionContainer.ta.mjs";
 import { CallHoldData, _decode_CallHoldData, _encode_CallHoldData } from "../MAP-MS-DataTypes/CallHoldData.ta.mjs";
 import { CallWaitingData, _decode_CallWaitingData, _encode_CallWaitingData } from "../MAP-MS-DataTypes/CallWaitingData.ta.mjs";
@@ -13,7 +13,7 @@ import { CAMEL_SubscriptionInfo, _decode_CAMEL_SubscriptionInfo, _encode_CAMEL_S
 import { ClipData, _decode_ClipData, _encode_ClipData } from "../MAP-MS-DataTypes/ClipData.ta.mjs";
 import { ClirData, _decode_ClirData, _encode_ClirData } from "../MAP-MS-DataTypes/ClirData.ta.mjs";
 import { EctData, _decode_EctData, _encode_EctData } from "../MAP-MS-DataTypes/EctData.ta.mjs";
-import { Ext_SS_InfoFor_CSE, _decode_Ext_SS_InfoFor_CSE, _encode_Ext_SS_InfoFor_CSE } from "../MAP-MS-DataTypes/Ext-SS-InfoFor-CSE.ta.mjs";
+import { type Ext_SS_InfoFor_CSE, _decode_Ext_SS_InfoFor_CSE, _encode_Ext_SS_InfoFor_CSE } from "../MAP-MS-DataTypes/Ext-SS-InfoFor-CSE.ta.mjs";
 import { ODB_Info, _decode_ODB_Info, _encode_ODB_Info } from "../MAP-MS-DataTypes/ODB-Info.ta.mjs";
 
 
@@ -30,16 +30,16 @@ import { ODB_Info, _decode_ODB_Info, _encode_ODB_Info } from "../MAP-MS-DataType
  * 
  * ```asn1
  * AnyTimeModificationRes ::= SEQUENCE {
- *     ss-InfoFor-CSE    [0]    Ext-SS-InfoFor-CSE    OPTIONAL,
- *     camel-SubscriptionInfo    [1]    CAMEL-SubscriptionInfo    OPTIONAL,
- *     extensionContainer    [2]    ExtensionContainer    OPTIONAL,
+ *     ss-InfoFor-CSE    [0]    Ext-SS-InfoFor-CSE    type OPTIONAL,
+ *     camel-SubscriptionInfo    [1]    CAMEL-SubscriptionInfo    type OPTIONAL,
+ *     extensionContainer    [2]    ExtensionContainer    type OPTIONAL,
  *     ...,
- *     odb-Info    [3]    ODB-Info    OPTIONAL,
- *     cw-Data    [4]    CallWaitingData    OPTIONAL,
- *     ch-Data    [5]    CallHoldData    OPTIONAL,
- *     clip-Data    [6] ClipData    OPTIONAL,
- *     clir-Data    [7]    ClirData    OPTIONAL,
- *     ect-data    [8] EctData    OPTIONAL,
+ *     odb-Info    [3]    ODB-Info    type OPTIONAL,
+ *     cw-Data    [4]    CallWaitingData    type OPTIONAL,
+ *     ch-Data    [5]    CallHoldData    type OPTIONAL,
+ *     clip-Data    [6] ClipData    type OPTIONAL,
+ *     clir-Data    [7]    ClirData    type OPTIONAL,
+ *     ect-data    [8] EctData    type OPTIONAL,
  *     serviceCentreAddress    [9] AddressString    OPTIONAL
  *  }
  * ```
@@ -48,119 +48,143 @@ import { ODB_Info, _decode_ODB_Info, _encode_ODB_Info } from "../MAP-MS-DataType
  */
 export
 class AnyTimeModificationRes {
+    /**
+     * @summary `ss_InfoFor_CSE`.
+     * @description
+     *
+     * Ext forwarding or call-barring information for CSE after modification
+     * (3GPP TS 29.002 V19.1.0 clauses 8.11.4.2, 7.6.3.79 and 7.6.3.80).
+     *
+     * @public
+     * @readonly
+     */
+    public readonly ss_InfoFor_CSE?: OPTIONAL<Ext_SS_InfoFor_CSE>;
+    /**
+     * @summary `camel_SubscriptionInfo`.
+     * @description
+     *
+     * CSI after modification (3GPP TS 29.002 V19.1.0 clauses 8.11.4.2 and
+     * 7.6.3.78).
+     *
+     * @public
+     * @readonly
+     */
+    public readonly camel_SubscriptionInfo?: OPTIONAL<CAMEL_SubscriptionInfo>;
+    /**
+     * @summary `extensionContainer`.
+     * @public
+     * @readonly
+     */
+    public readonly extensionContainer?: OPTIONAL<ExtensionContainer>;
+    /**
+     * @summary `odb_Info`.
+     * @description
+     *
+     * ODB data and Notification to CSE flag (3GPP TS 29.002 V19.1.0 clauses
+     * 8.11.4.2 and 7.6.3.88).
+     *
+     * @public
+     * @readonly
+     */
+    public readonly odb_Info?: OPTIONAL<ODB_Info>;
+    /**
+     * @summary `cw_Data`.
+     * @description
+     *
+     * Call Waiting data after modification (3GPP TS 29.002 V19.1.0 clause
+     * 8.11.4.2).
+     *
+     * @public
+     * @readonly
+     */
+    public readonly cw_Data?: OPTIONAL<CallWaitingData>;
+    /**
+     * @summary `ch_Data`.
+     * @description
+     *
+     * Call Hold data after modification (3GPP TS 29.002 V19.1.0 clause
+     * 8.11.4.2).
+     *
+     * @public
+     * @readonly
+     */
+    public readonly ch_Data?: OPTIONAL<CallHoldData>;
+    /**
+     * @summary `clip_Data`.
+     * @description
+     *
+     * CLIP data after modification (3GPP TS 29.002 V19.1.0 clause
+     * 8.11.4.2).
+     *
+     * @public
+     * @readonly
+     */
+    public readonly clip_Data?: OPTIONAL<ClipData>;
+    /**
+     * @summary `clir_Data`.
+     * @description
+     *
+     * CLIR data after modification (3GPP TS 29.002 V19.1.0 clause
+     * 8.11.4.2).
+     *
+     * @public
+     * @readonly
+     */
+    public readonly clir_Data?: OPTIONAL<ClirData>;
+    /**
+     * @summary `ect_data`.
+     * @description
+     *
+     * ECT data after modification (3GPP TS 29.002 V19.1.0 clause 8.11.4.2).
+     *
+     * @public
+     * @readonly
+     */
+    public readonly ect_data?: OPTIONAL<EctData>;
+    /**
+     * @summary `serviceCentreAddress`.
+     * @description
+     *
+     * SC Address retrieved when IP-SM-GW uses this service to update the
+     * IP-SM-GW Number (3GPP TS 29.002 V19.1.0 clauses 8.11.4.1 and
+     * 7.6.2.27).
+     *
+     * @public
+     * @readonly
+     */
+    public readonly serviceCentreAddress?: OPTIONAL<AddressString>;
+    /**
+     * @summary Extensions that are not recognized.
+     * @public
+     * @readonly
+     */
+    public readonly _unrecognizedExtensionsList: _Element[];
+
     constructor (
-        /**
-         * @summary `ss_InfoFor_CSE`.
-         * @description
-         *
-         * Ext forwarding or call-barring information for CSE after modification
-         * (3GPP TS 29.002 V19.1.0 clauses 8.11.4.2, 7.6.3.79 and 7.6.3.80).
-         *
-         * @public
-         * @readonly
-         */
-        readonly ss_InfoFor_CSE?: OPTIONAL<Ext_SS_InfoFor_CSE>,
-        /**
-         * @summary `camel_SubscriptionInfo`.
-         * @description
-         *
-         * CSI after modification (3GPP TS 29.002 V19.1.0 clauses 8.11.4.2 and
-         * 7.6.3.78).
-         *
-         * @public
-         * @readonly
-         */
-        readonly camel_SubscriptionInfo?: OPTIONAL<CAMEL_SubscriptionInfo>,
-        /**
-         * @summary `extensionContainer`.
-         * @public
-         * @readonly
-         */
-        readonly extensionContainer?: OPTIONAL<ExtensionContainer>,
-        /**
-         * @summary `odb_Info`.
-         * @description
-         *
-         * ODB data and Notification to CSE flag (3GPP TS 29.002 V19.1.0 clauses
-         * 8.11.4.2 and 7.6.3.88).
-         *
-         * @public
-         * @readonly
-         */
-        readonly odb_Info?: OPTIONAL<ODB_Info>,
-        /**
-         * @summary `cw_Data`.
-         * @description
-         *
-         * Call Waiting data after modification (3GPP TS 29.002 V19.1.0 clause
-         * 8.11.4.2).
-         *
-         * @public
-         * @readonly
-         */
-        readonly cw_Data?: OPTIONAL<CallWaitingData>,
-        /**
-         * @summary `ch_Data`.
-         * @description
-         *
-         * Call Hold data after modification (3GPP TS 29.002 V19.1.0 clause
-         * 8.11.4.2).
-         *
-         * @public
-         * @readonly
-         */
-        readonly ch_Data?: OPTIONAL<CallHoldData>,
-        /**
-         * @summary `clip_Data`.
-         * @description
-         *
-         * CLIP data after modification (3GPP TS 29.002 V19.1.0 clause
-         * 8.11.4.2).
-         *
-         * @public
-         * @readonly
-         */
-        readonly clip_Data?: OPTIONAL<ClipData>,
-        /**
-         * @summary `clir_Data`.
-         * @description
-         *
-         * CLIR data after modification (3GPP TS 29.002 V19.1.0 clause
-         * 8.11.4.2).
-         *
-         * @public
-         * @readonly
-         */
-        readonly clir_Data?: OPTIONAL<ClirData>,
-        /**
-         * @summary `ect_data`.
-         * @description
-         *
-         * ECT data after modification (3GPP TS 29.002 V19.1.0 clause 8.11.4.2).
-         *
-         * @public
-         * @readonly
-         */
-        readonly ect_data?: OPTIONAL<EctData>,
-        /**
-         * @summary `serviceCentreAddress`.
-         * @description
-         *
-         * SC Address retrieved when IP-SM-GW uses this service to update the
-         * IP-SM-GW Number (3GPP TS 29.002 V19.1.0 clauses 8.11.4.1 and
-         * 7.6.2.27).
-         *
-         * @public
-         * @readonly
-         */
-        readonly serviceCentreAddress?: OPTIONAL<AddressString>,
-        /**
-         * @summary Extensions that are not recognized.
-         * @public
-         * @readonly
-         */
-        readonly _unrecognizedExtensionsList: _Element[] = []
-    ) {}
+        ss_InfoFor_CSE?: OPTIONAL<Ext_SS_InfoFor_CSE>,
+        camel_SubscriptionInfo?: OPTIONAL<CAMEL_SubscriptionInfo>,
+        extensionContainer?: OPTIONAL<ExtensionContainer>,
+        odb_Info?: OPTIONAL<ODB_Info>,
+        cw_Data?: OPTIONAL<CallWaitingData>,
+        ch_Data?: OPTIONAL<CallHoldData>,
+        clip_Data?: OPTIONAL<ClipData>,
+        clir_Data?: OPTIONAL<ClirData>,
+        ect_data?: OPTIONAL<EctData>,
+        serviceCentreAddress?: OPTIONAL<AddressString>,
+        _unrecognizedExtensionsList: _Element[] = []
+    ) {
+        this.ss_InfoFor_CSE = ss_InfoFor_CSE;
+        this.camel_SubscriptionInfo = camel_SubscriptionInfo;
+        this.extensionContainer = extensionContainer;
+        this.odb_Info = odb_Info;
+        this.cw_Data = cw_Data;
+        this.ch_Data = ch_Data;
+        this.clip_Data = clip_Data;
+        this.clir_Data = clir_Data;
+        this.ect_data = ect_data;
+        this.serviceCentreAddress = serviceCentreAddress;
+        this._unrecognizedExtensionsList = _unrecognizedExtensionsList;
+    }
 
     /**
      * @summary Restructures an object into a AnyTimeModificationRes

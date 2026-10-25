@@ -1,6 +1,6 @@
 /* eslint-disable */
 import {
-  OBJECT_IDENTIFIER,
+  type OBJECT_IDENTIFIER,
   ASN1Element as _Element,
   ASN1TagClass as _TagClass,
   ASN1Construction as _Construction,
@@ -44,7 +44,7 @@ export class Parameter {
    * @public
    * @readonly
    */
-  readonly paramId: OBJECT_IDENTIFIER;
+  public readonly paramId: OBJECT_IDENTIFIER;
   /**
    * @summary `paramInfo`.
    * @description
@@ -56,7 +56,7 @@ export class Parameter {
    * @public
    * @readonly
    */
-  readonly paramInfo: _Element;
+  public readonly paramInfo: _Element;
 
   constructor(
     paramId: OBJECT_IDENTIFIER,

@@ -1,5 +1,5 @@
 /* eslint-disable */
-import { OPERATION } from "../Remote-Operations-Information-Objects/OPERATION.oca.mjs";
+import { type OPERATION } from "../Remote-Operations-Information-Objects/OPERATION.oca.mjs";
 import { display } from "../SS-SD-Operations-asn1-97/display.oa.mjs";
 import { keypad } from "../SS-SD-Operations-asn1-97/keypad.oa.mjs";
 

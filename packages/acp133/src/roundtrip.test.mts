@@ -7,12 +7,12 @@ import {
 import * as $ from "@wildboar/asn1/functional";
 import { AlgorithmIdentifier } from "@wildboar/pki-stub";
 import {
-    Addressees,
+    type Addressees,
     _decode_Addressees,
     _encode_Addressees,
 } from "./lib/modules/ACP133CommonContent/Addressees.ta.mjs";
 import {
-    MLReceiptPolicy,
+    type MLReceiptPolicy,
     _decode_MLReceiptPolicy,
     _encode_MLReceiptPolicy,
 } from "./lib/modules/ACP133CommonContent/MLReceiptPolicy.ta.mjs";

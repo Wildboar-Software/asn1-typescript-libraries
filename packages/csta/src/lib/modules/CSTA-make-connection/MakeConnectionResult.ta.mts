@@ -2,13 +2,13 @@
 
 import * as $ from "@wildboar/asn1/functional";
 import {
-    OPTIONAL,
-    SEQUENCE,
-    SET,
-    ASN1Element as _Element,
+    type OPTIONAL,
+    type SEQUENCE,
+    type SET,
+    type ASN1Element as _Element,
     ASN1TagClass as _TagClass
 } from "@wildboar/asn1";
-import { ConnectionID, _decode_ConnectionID, _encode_ConnectionID } from "../CSTA-call-connection-identifiers/ConnectionID.ta.mjs";
+import { type ConnectionID, _decode_ConnectionID, _encode_ConnectionID } from "../CSTA-call-connection-identifiers/ConnectionID.ta.mjs";
 
 import { MediaCallCharacteristics, _decode_MediaCallCharacteristics, _encode_MediaCallCharacteristics } from "../CSTA-media-services/MediaCallCharacteristics.ta.mjs";
 
@@ -36,9 +36,9 @@ import { CSTACommonArguments, _decode_CSTACommonArguments, _encode_CSTACommonArg
  * ```asn1
  * MakeConnectionResult ::= SEQUENCE
  * {     initiatingDevice         ConnectionID,
- *     mediaCallCharacteristics     [0] IMPLICIT MediaCallCharacteristics         OPTIONAL,
- *     initiatedCallInfo         [1] IMPLICIT ConnectionInformation         OPTIONAL,
- *     callLinkageData         [2] IMPLICIT CallLinkageData             OPTIONAL,
+ *     mediaCallCharacteristics     [0] IMPLICIT MediaCallCharacteristics         type OPTIONAL,
+ *     initiatedCallInfo         [1] IMPLICIT ConnectionInformation         type OPTIONAL,
+ *     callLinkageData         [2] IMPLICIT CallLinkageData             type OPTIONAL,
  *     extensions             CSTACommonArguments                 OPTIONAL }
  * ```
  * 
@@ -46,61 +46,73 @@ import { CSTACommonArguments, _decode_CSTACommonArguments, _encode_CSTACommonArg
  */
 export
 class MakeConnectionResult {
+    /**
+     * @summary `initiatingDevice`.
+     * @description
+     *
+     * Mandatory. Initiating device's connection in the new
+     * call.
+     *
+     * @public
+     * @readonly
+     */
+    public readonly initiatingDevice: ConnectionID;
+    /**
+     * @summary `mediaCallCharacteristics`.
+     * @description
+     *
+     * Optional. Media characteristics actually used; may be
+     * adjusted from the request (§12.2.20).
+     *
+     * @public
+     * @readonly
+     */
+    public readonly mediaCallCharacteristics?: OPTIONAL<MediaCallCharacteristics>;
+    /**
+     * @summary `initiatedCallInfo`.
+     * @description
+     *
+     * Optional connection information (§12.2.8).
+     *
+     * @public
+     * @readonly
+     */
+    public readonly initiatedCallInfo?: OPTIONAL<ConnectionInformation>;
+    /**
+     * @summary `callLinkageData`.
+     * @description
+     *
+     * Optional call-linkage identifiers (§12.2.5).
+     *
+     * @public
+     * @readonly
+     */
+    public readonly callLinkageData?: OPTIONAL<CallLinkageData>;
+    /**
+     * @summary `extensions`.
+     * @description
+     *
+     * Optional `CSTACommonArguments` carrying the security and
+     * privateData parameters from the ECMA-269 service table.
+     *
+     * @public
+     * @readonly
+     */
+    public readonly extensions?: OPTIONAL<CSTACommonArguments>;
+
     constructor (
-        /**
-         * @summary `initiatingDevice`.
-         * @description
-         *
-         * Mandatory. Initiating device's connection in the new
-         * call.
-         *
-         * @public
-         * @readonly
-         */
-        readonly initiatingDevice: ConnectionID,
-        /**
-         * @summary `mediaCallCharacteristics`.
-         * @description
-         *
-         * Optional. Media characteristics actually used; may be
-         * adjusted from the request (§12.2.20).
-         *
-         * @public
-         * @readonly
-         */
-        readonly mediaCallCharacteristics?: OPTIONAL<MediaCallCharacteristics>,
-        /**
-         * @summary `initiatedCallInfo`.
-         * @description
-         *
-         * Optional connection information (§12.2.8).
-         *
-         * @public
-         * @readonly
-         */
-        readonly initiatedCallInfo?: OPTIONAL<ConnectionInformation>,
-        /**
-         * @summary `callLinkageData`.
-         * @description
-         *
-         * Optional call-linkage identifiers (§12.2.5).
-         *
-         * @public
-         * @readonly
-         */
-        readonly callLinkageData?: OPTIONAL<CallLinkageData>,
-        /**
-         * @summary `extensions`.
-         * @description
-         *
-         * Optional `CSTACommonArguments` carrying the security and
-         * privateData parameters from the ECMA-269 service table.
-         *
-         * @public
-         * @readonly
-         */
-        readonly extensions?: OPTIONAL<CSTACommonArguments>
-    ) {}
+        initiatingDevice: ConnectionID,
+        mediaCallCharacteristics?: OPTIONAL<MediaCallCharacteristics>,
+        initiatedCallInfo?: OPTIONAL<ConnectionInformation>,
+        callLinkageData?: OPTIONAL<CallLinkageData>,
+        extensions?: OPTIONAL<CSTACommonArguments>
+    ) {
+        this.initiatingDevice = initiatingDevice;
+        this.mediaCallCharacteristics = mediaCallCharacteristics;
+        this.initiatedCallInfo = initiatedCallInfo;
+        this.callLinkageData = callLinkageData;
+        this.extensions = extensions;
+    }
 
     /**
      * @summary Restructures an object into a MakeConnectionResult

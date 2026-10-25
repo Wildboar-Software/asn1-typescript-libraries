@@ -2,12 +2,12 @@
 
 import * as $ from "@wildboar/asn1/functional";
 import {
-    OPTIONAL,
-    INTEGER,
-    SEQUENCE,
-    SET,
-    IA5String,
-    ASN1Element as _Element,
+    type OPTIONAL,
+    type INTEGER,
+    type SEQUENCE,
+    type SET,
+    type IA5String,
+    type ASN1Element as _Element,
     ASN1TagClass as _TagClass
 } from "@wildboar/asn1";
 
@@ -29,7 +29,7 @@ import {
  * ```asn1
  * DigitsData ::= SEQUENCE
  * {    digitsDetected            IA5String (SIZE(0..64)),
- *     digitsDuration            [0] IMPLICIT SEQUENCE OF INTEGER    OPTIONAL,
+ *     digitsDuration            [0] IMPLICIT SEQUENCE OF INTEGER    type OPTIONAL,
  *     digitsPauseDuration        [1] IMPLICIT SEQUENCE OF INTEGER    OPTIONAL }
  * ```
  * 
@@ -37,40 +37,48 @@ import {
  */
 export
 class DigitsData {
+    /**
+     * @summary `digitsDetected`.
+     * @description
+     *
+     * IA5 DTMF/rotary digit string, size 0..64 (ECMA-269 §25.1.1.1).
+     *
+     * @public
+     * @readonly
+     */
+    public readonly digitsDetected: IA5String;
+    /**
+     * @summary `digitsDuration`.
+     * @description
+     *
+     * Per-digit durations; if present, one per detected digit. DTMF only
+     * (ECMA-269 §25.1.1.1).
+     *
+     * @public
+     * @readonly
+     */
+    public readonly digitsDuration?: OPTIONAL<INTEGER[]>;
+    /**
+     * @summary `digitsPauseDuration`.
+     * @description
+     *
+     * Pause before each digit; if present, one per detected digit (ECMA-269
+     * §25.1.1.1).
+     *
+     * @public
+     * @readonly
+     */
+    public readonly digitsPauseDuration?: OPTIONAL<INTEGER[]>;
+
     constructor (
-        /**
-         * @summary `digitsDetected`.
-         * @description
-         *
-         * IA5 DTMF/rotary digit string, size 0..64 (ECMA-269 §25.1.1.1).
-         *
-         * @public
-         * @readonly
-         */
-        readonly digitsDetected: IA5String,
-        /**
-         * @summary `digitsDuration`.
-         * @description
-         *
-         * Per-digit durations; if present, one per detected digit. DTMF only
-         * (ECMA-269 §25.1.1.1).
-         *
-         * @public
-         * @readonly
-         */
-        readonly digitsDuration?: OPTIONAL<INTEGER[]>,
-        /**
-         * @summary `digitsPauseDuration`.
-         * @description
-         *
-         * Pause before each digit; if present, one per detected digit (ECMA-269
-         * §25.1.1.1).
-         *
-         * @public
-         * @readonly
-         */
-        readonly digitsPauseDuration?: OPTIONAL<INTEGER[]>
-    ) {}
+        digitsDetected: IA5String,
+        digitsDuration?: OPTIONAL<INTEGER[]>,
+        digitsPauseDuration?: OPTIONAL<INTEGER[]>
+    ) {
+        this.digitsDetected = digitsDetected;
+        this.digitsDuration = digitsDuration;
+        this.digitsPauseDuration = digitsPauseDuration;
+    }
 
     /**
      * @summary Restructures an object into a DigitsData

@@ -2,17 +2,17 @@
 
 import * as $ from "@wildboar/asn1/functional";
 import {
-    OPTIONAL,
-    SEQUENCE,
-    SET,
-    ASN1Element as _Element,
+    type OPTIONAL,
+    type SEQUENCE,
+    type SET,
+    type ASN1Element as _Element,
     ASN1TagClass as _TagClass
 } from "@wildboar/asn1";
-import { ConnectionID, _decode_ConnectionID, _encode_ConnectionID } from "../CSTA-call-connection-identifiers/ConnectionID.ta.mjs";
+import { type ConnectionID, _decode_ConnectionID, _encode_ConnectionID } from "../CSTA-call-connection-identifiers/ConnectionID.ta.mjs";
 
-import { CorrelatorData, _decode_CorrelatorData, _encode_CorrelatorData } from "../CSTA-device-feature-types/CorrelatorData.ta.mjs";
+import { type CorrelatorData, _decode_CorrelatorData, _encode_CorrelatorData } from "../CSTA-device-feature-types/CorrelatorData.ta.mjs";
 
-import { UserData, _decode_UserData, _encode_UserData } from "../CSTA-device-feature-types/UserData.ta.mjs";
+import { type UserData, _decode_UserData, _encode_UserData } from "../CSTA-device-feature-types/UserData.ta.mjs";
 
 import {
     EventCause,
@@ -42,9 +42,9 @@ import { CSTACommonArguments, _decode_CSTACommonArguments, _encode_CSTACommonArg
  * ```asn1
  * ClearConnectionArgument ::= SEQUENCE
  * {    connectionToBeCleared         ConnectionID,
- *     correlatorData             CorrelatorData             OPTIONAL,
- *     userData             UserData             OPTIONAL,
- *     reason                EventCause            OPTIONAL,
+ *     correlatorData             CorrelatorData             type OPTIONAL,
+ *     userData             UserData             type OPTIONAL,
+ *     reason                EventCause            type OPTIONAL,
  *     extensions             CSTACommonArguments         OPTIONAL }
  * ```
  * 
@@ -52,65 +52,77 @@ import { CSTACommonArguments, _decode_CSTACommonArguments, _encode_CSTACommonArg
  */
 export
 class ClearConnectionArgument {
+    /**
+     * @summary `connectionToBeCleared`.
+     * @description
+     *
+     * Mandatory. Connection to release. Final state Hold,
+     * Queued, or Null depending on configuration.
+     *
+     * @public
+     * @readonly
+     */
+    public readonly connectionToBeCleared: ConnectionID;
+    /**
+     * @summary `correlatorData`.
+     * @description
+     *
+     * Optional correlator data to attach before resulting
+     * state transitions (§12.2.10). A null string clears
+     * existing data.
+     *
+     * @public
+     * @readonly
+     */
+    public readonly correlatorData?: OPTIONAL<CorrelatorData>;
+    /**
+     * @summary `userData`.
+     * @description
+     *
+     * Optional user data sent to parties in the call
+     * (§12.2.30).
+     *
+     * @public
+     * @readonly
+     */
+    public readonly userData?: OPTIONAL<UserData>;
+    /**
+     * @summary `reason`.
+     * @description
+     *
+     * Optional `EventCause` explaining the clear, for
+     * underlying signalling (e.g. busy when rejecting an
+     * offered call) (FR 4, §12.2.15).
+     *
+     * @public
+     * @readonly
+     */
+    public readonly reason?: OPTIONAL<EventCause>;
+    /**
+     * @summary `extensions`.
+     * @description
+     *
+     * Optional `CSTACommonArguments` carrying the security and
+     * privateData parameters from the ECMA-269 service table.
+     *
+     * @public
+     * @readonly
+     */
+    public readonly extensions?: OPTIONAL<CSTACommonArguments>;
+
     constructor (
-        /**
-         * @summary `connectionToBeCleared`.
-         * @description
-         *
-         * Mandatory. Connection to release. Final state Hold,
-         * Queued, or Null depending on configuration.
-         *
-         * @public
-         * @readonly
-         */
-        readonly connectionToBeCleared: ConnectionID,
-        /**
-         * @summary `correlatorData`.
-         * @description
-         *
-         * Optional correlator data to attach before resulting
-         * state transitions (§12.2.10). A null string clears
-         * existing data.
-         *
-         * @public
-         * @readonly
-         */
-        readonly correlatorData?: OPTIONAL<CorrelatorData>,
-        /**
-         * @summary `userData`.
-         * @description
-         *
-         * Optional user data sent to parties in the call
-         * (§12.2.30).
-         *
-         * @public
-         * @readonly
-         */
-        readonly userData?: OPTIONAL<UserData>,
-        /**
-         * @summary `reason`.
-         * @description
-         *
-         * Optional `EventCause` explaining the clear, for
-         * underlying signalling (e.g. busy when rejecting an
-         * offered call) (FR 4, §12.2.15).
-         *
-         * @public
-         * @readonly
-         */
-        readonly reason?: OPTIONAL<EventCause>,
-        /**
-         * @summary `extensions`.
-         * @description
-         *
-         * Optional `CSTACommonArguments` carrying the security and
-         * privateData parameters from the ECMA-269 service table.
-         *
-         * @public
-         * @readonly
-         */
-        readonly extensions?: OPTIONAL<CSTACommonArguments>
-    ) {}
+        connectionToBeCleared: ConnectionID,
+        correlatorData?: OPTIONAL<CorrelatorData>,
+        userData?: OPTIONAL<UserData>,
+        reason?: OPTIONAL<EventCause>,
+        extensions?: OPTIONAL<CSTACommonArguments>
+    ) {
+        this.connectionToBeCleared = connectionToBeCleared;
+        this.correlatorData = correlatorData;
+        this.userData = userData;
+        this.reason = reason;
+        this.extensions = extensions;
+    }
 
     /**
      * @summary Restructures an object into a ClearConnectionArgument
@@ -134,7 +146,7 @@ class ClearConnectionArgument {
          * @static
          */
 
-    public static _enum_for_reason = _enum_for_EventCause;
+    public static _enum_for_reason: typeof _enum_for_EventCause = _enum_for_EventCause;
 }
 
 /**

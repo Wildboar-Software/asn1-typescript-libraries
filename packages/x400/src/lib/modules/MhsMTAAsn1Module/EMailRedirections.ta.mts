@@ -1,6 +1,6 @@
 /* eslint-disable */
 import {
-    ASN1Element as _Element,
+    type ASN1Element as _Element,
     ASN1TagClass as _TagClass,
     ASN1Construction as _Construction,
     ASN1UniversalType as _UniversalType,
@@ -11,12 +11,12 @@ import {
 } from '@wildboar/asn1';
 import * as $ from '@wildboar/asn1/functional';
 import {
-    Label,
+    type Label,
     _decode_Label,
     _encode_Label,
 } from '../MhsMTAAsn1Module/Label.ta.mjs';
 import {
-    EMailRedirections_address,
+    type EMailRedirections_address,
     _decode_EMailRedirections_address,
     _encode_EMailRedirections_address,
 } from '../MhsMTAAsn1Module/EMailRedirections-address.ta.mjs';
@@ -38,20 +38,26 @@ import {
  *
  */
 export class EMailRedirections {
+    /**
+     * @summary `label`.
+     * @public
+     * @readonly
+     */
+    public readonly label: Label;
+    /**
+     * @summary `address`.
+     * @public
+     * @readonly
+     */
+    public readonly address: EMailRedirections_address;
+
     constructor(
-        /**
-         * @summary `label`.
-         * @public
-         * @readonly
-         */
-        readonly label: Label,
-        /**
-         * @summary `address`.
-         * @public
-         * @readonly
-         */
-        readonly address: EMailRedirections_address
-    ) {}
+        label: Label,
+        address: EMailRedirections_address
+    ) {
+        this.label = label;
+        this.address = address;
+    }
 
     /**
      * @summary Restructures an object into a EMailRedirections

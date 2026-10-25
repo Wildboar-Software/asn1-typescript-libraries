@@ -1,11 +1,11 @@
 /* eslint-disable */
 import {
     ASN1ConstructionError as _ConstructionError,
-    ASN1Element as _Element,
+    type ASN1Element as _Element,
     ASN1TagClass as _TagClass
 } from "@wildboar/asn1";
 import * as $ from "@wildboar/asn1/functional";
-import { _decode_ExecuteFallbackMechanismResponse_executeFallbackMechanismResult, _encode_ExecuteFallbackMechanismResponse_executeFallbackMechanismResult, ExecuteFallbackMechanismResponse_executeFallbackMechanismResult } from "../SGP32Definitions/ExecuteFallbackMechanismResponse-executeFallbackMechanismResult.ta.mjs";
+import { _decode_ExecuteFallbackMechanismResponse_executeFallbackMechanismResult, _encode_ExecuteFallbackMechanismResponse_executeFallbackMechanismResult, type ExecuteFallbackMechanismResponse_executeFallbackMechanismResult } from "../SGP32Definitions/ExecuteFallbackMechanismResponse-executeFallbackMechanismResult.ta.mjs";
 
 
 /**
@@ -35,18 +35,22 @@ import { _decode_ExecuteFallbackMechanismResponse_executeFallbackMechanismResult
  */
 export
 class ExecuteFallbackMechanismResponse {
+    /**
+     * @summary `executeFallbackMechanismResult`.
+     * @description
+     * Outcome of enabling the Fallback Profile and disabling the previously
+     * enabled Profile (SGP.32 v1.2, section 5.9.20). SGP.32 v1.2 does not further
+     * define undefinedError(127).
+     * @public
+     * @readonly
+     */
+    public readonly executeFallbackMechanismResult: ExecuteFallbackMechanismResponse_executeFallbackMechanismResult;
+
     constructor (
-        /**
-         * @summary `executeFallbackMechanismResult`.
-         * @description
-         * Outcome of enabling the Fallback Profile and disabling the previously
-         * enabled Profile (SGP.32 v1.2, section 5.9.20). SGP.32 v1.2 does not further
-         * define undefinedError(127).
-         * @public
-         * @readonly
-         */
-        readonly executeFallbackMechanismResult: ExecuteFallbackMechanismResponse_executeFallbackMechanismResult
-    ) {}
+        executeFallbackMechanismResult: ExecuteFallbackMechanismResponse_executeFallbackMechanismResult
+    ) {
+        this.executeFallbackMechanismResult = executeFallbackMechanismResult;
+    }
 
     /**
      * @summary Restructures an object into a ExecuteFallbackMechanismResponse

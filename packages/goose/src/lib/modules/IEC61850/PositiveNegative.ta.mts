@@ -1,11 +1,11 @@
 /* eslint-disable */
 import {
-    ASN1Element as _Element,
+    type ASN1Element as _Element,
     ASN1TagClass as _TagClass
 } from "@wildboar/asn1";
 import * as $ from "@wildboar/asn1/functional";
 import { PositiveNegative_responsePositive, _decode_PositiveNegative_responsePositive, _encode_PositiveNegative_responsePositive } from "../IEC61850/PositiveNegative-responsePositive.ta.mjs";
-import { GlbErrors, _decode_GlbErrors, _encode_GlbErrors } from "../IEC61850/GlbErrors.ta.mjs";
+import { type GlbErrors, _decode_GlbErrors, _encode_GlbErrors } from "../IEC61850/GlbErrors.ta.mjs";
 
 
 /**

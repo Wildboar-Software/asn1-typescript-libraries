@@ -1,5 +1,5 @@
 /* eslint-disable */
-import { ASN1Element as _Element, INTEGER } from "@wildboar/asn1";
+import { ASN1Element as _Element, type INTEGER } from "@wildboar/asn1";
 import * as $ from "@wildboar/asn1/functional";
 
 
@@ -18,12 +18,12 @@ export type ECPrivateKey = INTEGER;
 
 
 
-export const _decode_ECPrivateKey = $._decodeInteger;
+export const _decode_ECPrivateKey: $.ASN1Decoder<INTEGER> = $._decodeInteger;
 
 
 
 
-export const _encode_ECPrivateKey = $._encodeInteger;
+export const _encode_ECPrivateKey: $.ASN1Encoder<INTEGER> = $._encodeInteger;
 
 
 /* eslint-enable */

@@ -8,7 +8,7 @@ import {
     _decode_BasicAttConstraintsSyntax,
 } from "../../modules/AttributeCertificateDefinitions/BasicAttConstraintsSyntax.ta.mjs";
 import {
-    AttributeCertificate,
+    type AttributeCertificate,
     _decode_AttributeCertificate,
 } from "../../modules/AttributeCertificateDefinitions/AttributeCertificate.ta.mjs";
 import type {

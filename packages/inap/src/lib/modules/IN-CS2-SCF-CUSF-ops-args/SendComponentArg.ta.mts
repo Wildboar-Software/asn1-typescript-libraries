@@ -1,21 +1,21 @@
 /* eslint-disable */
 import {
-    OPTIONAL,
-    ASN1Element as _Element,
+    type OPTIONAL,
+    type ASN1Element as _Element,
     ASN1TagClass as _TagClass
 } from "@wildboar/asn1";
 import * as $ from "@wildboar/asn1/functional";
 import { ComponentType, _decode_ComponentType, _encode_ComponentType, _enum_for_ComponentType } from "../IN-CS2-datatypes/ComponentType.ta.mjs";
 // export { ComponentType, _enum_for_ComponentType, ComponentType_any /* IMPORTED_LONG_ENUMERATION_ITEM */, any_ /* IMPORTED_SHORT_ENUMERATION_ITEM */, ComponentType_invoke /* IMPORTED_LONG_ENUMERATION_ITEM */, invoke /* IMPORTED_SHORT_ENUMERATION_ITEM */, ComponentType_rResult /* IMPORTED_LONG_ENUMERATION_ITEM */, rResult /* IMPORTED_SHORT_ENUMERATION_ITEM */, ComponentType_rError /* IMPORTED_LONG_ENUMERATION_ITEM */, rError /* IMPORTED_SHORT_ENUMERATION_ITEM */, ComponentType_rReject /* IMPORTED_LONG_ENUMERATION_ITEM */, rReject /* IMPORTED_SHORT_ENUMERATION_ITEM */, _decode_ComponentType, _encode_ComponentType } from "../IN-CS2-datatypes/ComponentType.ta.mjs";
-import { ComponentCorrelationID, _decode_ComponentCorrelationID, _encode_ComponentCorrelationID } from "../IN-CS2-datatypes/ComponentCorrelationID.ta.mjs";
+import { type ComponentCorrelationID, _decode_ComponentCorrelationID, _encode_ComponentCorrelationID } from "../IN-CS2-datatypes/ComponentCorrelationID.ta.mjs";
 // export { ComponentCorrelationID, _decode_ComponentCorrelationID, _encode_ComponentCorrelationID } from "../IN-CS2-datatypes/ComponentCorrelationID.ta.mjs";
 import { Message, Message_rELeaseCOMPlete /* IMPORTED_LONG_ENUMERATION_ITEM */, _decode_Message, _encode_Message, _enum_for_Message } from "../IN-CS2-datatypes/Message.ta.mjs";
 // export { Message, _enum_for_Message, Message_rELease /* IMPORTED_LONG_ENUMERATION_ITEM */, rELease /* IMPORTED_SHORT_ENUMERATION_ITEM */, Message_rELeaseCOMPlete /* IMPORTED_LONG_ENUMERATION_ITEM */, rELeaseCOMPlete /* IMPORTED_SHORT_ENUMERATION_ITEM */, Message_fACility /* IMPORTED_LONG_ENUMERATION_ITEM */, fACility /* IMPORTED_SHORT_ENUMERATION_ITEM */, _decode_Message, _encode_Message } from "../IN-CS2-datatypes/Message.ta.mjs";
-import { Duration, _decode_Duration, _encode_Duration } from "../IN-CS2-datatypes/Duration.ta.mjs";
+import { type Duration, _decode_Duration, _encode_Duration } from "../IN-CS2-datatypes/Duration.ta.mjs";
 // export { Duration, _decode_Duration, _encode_Duration } from "../IN-CS2-datatypes/Duration.ta.mjs";
 import { ExtensionField, _decode_ExtensionField, _encode_ExtensionField } from "../IN-CS2-datatypes/ExtensionField.ta.mjs";
 // export { ExtensionField, _decode_ExtensionField, _encode_ExtensionField } from "../IN-CS2-datatypes/ExtensionField.ta.mjs";
-import { Component, _decode_Component, _encode_Component } from "../IN-CS2-datatypes/Component.ta.mjs";
+import { type Component, _decode_Component, _encode_Component } from "../IN-CS2-datatypes/Component.ta.mjs";
 // export { Component, _decode_Component, _encode_Component } from "../IN-CS2-datatypes/Component.ta.mjs";
 
 
@@ -126,19 +126,19 @@ class SendComponentArg {
      * @static
      * @method
      */
-    public static get _default_value_for_message () { return Message_rELeaseCOMPlete; }        /**
+    public static get _default_value_for_message (): _enum_for_Message { return Message_rELeaseCOMPlete; }        /**
          * @summary The enum used as the type of the component `componentType`
          * @public
          * @static
          */
 
-    public static _enum_for_componentType = _enum_for_ComponentType;        /**
+    public static _enum_for_componentType: typeof _enum_for_ComponentType = _enum_for_ComponentType;        /**
          * @summary The enum used as the type of the component `message`
          * @public
          * @static
          */
 
-    public static _enum_for_message = _enum_for_Message;
+    public static _enum_for_message: typeof _enum_for_Message = _enum_for_Message;
 }
 
 /**

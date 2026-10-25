@@ -1,6 +1,6 @@
 /* eslint-disable */
 import {
-    ASN1Element as _Element,
+    type ASN1Element as _Element,
     ASN1TagClass as _TagClass,
     ASN1Construction as _Construction,
     ASN1UniversalType as _UniversalType,
@@ -11,12 +11,12 @@ import {
 } from '@wildboar/asn1';
 import * as $ from '@wildboar/asn1/functional';
 import {
-    DistinguishedName,
+    type DistinguishedName,
     _decode_DistinguishedName,
     _encode_DistinguishedName,
 } from '@wildboar/dn';
 import {
-    ReadResult_result,
+    type ReadResult_result,
     _decode_ReadResult_result,
     _encode_ReadResult_result,
 } from '../Pbact-access/ReadResult-result.ta.mjs';
@@ -44,38 +44,46 @@ import {
  *
  */
 export class ReadResult {
+    /**
+     * @summary `object`.
+     * @description
+     *
+     * Distinguished name of the object that was read.
+     * ITU-T Rec. X.1080.0 (2017) Cor.1
+     * [§8.4](https://www.itu.int/rec/T-REC-X.1080.0-201703-I!Cor1).
+     *
+     * @public
+     * @readonly
+     */
+    public readonly object: DistinguishedName;
+    /**
+     * @summary `result`.
+     * @description
+     *
+     * Success (`ObjectInformation`) or failure (`AccessdErr`).
+     * ITU-T Rec. X.1080.0 (2017) Cor.1
+     * [§8.4](https://www.itu.int/rec/T-REC-X.1080.0-201703-I!Cor1).
+     *
+     * @public
+     * @readonly
+     */
+    public readonly result: ReadResult_result;
+    /**
+     * @summary Extensions that are not recognized.
+     * @public
+     * @readonly
+     */
+    public readonly _unrecognizedExtensionsList: _Element[];
+
     constructor(
-        /**
-         * @summary `object`.
-         * @description
-         *
-         * Distinguished name of the object that was read.
-         * ITU-T Rec. X.1080.0 (2017) Cor.1
-         * [§8.4](https://www.itu.int/rec/T-REC-X.1080.0-201703-I!Cor1).
-         *
-         * @public
-         * @readonly
-         */
-        readonly object: DistinguishedName,
-        /**
-         * @summary `result`.
-         * @description
-         *
-         * Success (`ObjectInformation`) or failure (`AccessdErr`).
-         * ITU-T Rec. X.1080.0 (2017) Cor.1
-         * [§8.4](https://www.itu.int/rec/T-REC-X.1080.0-201703-I!Cor1).
-         *
-         * @public
-         * @readonly
-         */
-        readonly result: ReadResult_result,
-        /**
-         * @summary Extensions that are not recognized.
-         * @public
-         * @readonly
-         */
-        readonly _unrecognizedExtensionsList: _Element[] = []
-    ) {}
+        object: DistinguishedName,
+        result: ReadResult_result,
+        _unrecognizedExtensionsList: _Element[] = []
+    ) {
+        this.object = object;
+        this.result = result;
+        this._unrecognizedExtensionsList = _unrecognizedExtensionsList;
+    }
 
     /**
      * @summary Restructures an object into a ReadResult

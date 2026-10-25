@@ -1,15 +1,15 @@
 /* eslint-disable */
 import {
-    ASN1Element as _Element,
+    type ASN1Element as _Element,
     ASN1TagClass as _TagClass,
-    INTEGER,
-    OCTET_STRING,
-    OPTIONAL,
+    type INTEGER,
+    type OCTET_STRING,
+    type OPTIONAL,
     ASN1SizeError,
     ASN1OverflowError
 } from "@wildboar/asn1";
 import * as $ from "@wildboar/asn1/functional";
-import { _decode_DefaultTransactionHandling, _encode_DefaultTransactionHandling, _enum_for_DefaultTransactionHandling, DefaultTransactionHandling } from "../GPRSChargingDataTypes/DefaultTransactionHandling.ta.mjs";
+import { _decode_DefaultTransactionHandling, _encode_DefaultTransactionHandling, _enum_for_DefaultTransactionHandling, type DefaultTransactionHandling } from "../GPRSChargingDataTypes/DefaultTransactionHandling.ta.mjs";
 
 
 /**
@@ -188,7 +188,7 @@ class CAMELInformationSMS {
          * @static
          */
 
-    public static _enum_for_defaultSMSHandling = _enum_for_DefaultTransactionHandling;
+    public static _enum_for_defaultSMSHandling: typeof _enum_for_DefaultTransactionHandling = _enum_for_DefaultTransactionHandling;
 }
 
 /**

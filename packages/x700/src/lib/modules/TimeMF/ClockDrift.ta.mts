@@ -1,7 +1,7 @@
 /* eslint-disable */
 import {
-    REAL,
-    ASN1Element as _Element,
+    type REAL,
+    type ASN1Element as _Element,
     ASN1TagClass as _TagClass,
     ASN1Construction as _Construction,
     ASN1UniversalType as _UniversalType,
@@ -30,10 +30,10 @@ import * as $ from '@wildboar/asn1/functional';
 export type ClockDrift = REAL; // RealType
 
 
-export const _decode_ClockDrift = $._decodeReal;
+export const _decode_ClockDrift: $.ASN1Decoder<number> = $._decodeReal;
 
 
-export const _encode_ClockDrift = $._encodeReal;
+export const _encode_ClockDrift: $.ASN1Encoder<number> = $._encodeReal;
 
 
 /* eslint-enable */

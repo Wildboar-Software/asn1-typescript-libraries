@@ -1,12 +1,12 @@
 /* eslint-disable */
 import {
-    OPTIONAL,
-    ASN1Element as _Element,
+    type OPTIONAL,
+    type ASN1Element as _Element,
     ASN1TagClass as _TagClass
 } from "@wildboar/asn1";
 import * as $ from "@wildboar/asn1/functional";
-import { AocInterimArg_interimCharge, _decode_AocInterimArg_interimCharge, _encode_AocInterimArg_interimCharge } from "../SS-AOC-Operations-asn1-97/AocInterimArg-interimCharge.ta.mjs";
-import { AocInterimArg_interimArgExtension, _decode_AocInterimArg_interimArgExtension, _encode_AocInterimArg_interimArgExtension } from "../SS-AOC-Operations-asn1-97/AocInterimArg-interimArgExtension.ta.mjs";
+import { type AocInterimArg_interimCharge, _decode_AocInterimArg_interimCharge, _encode_AocInterimArg_interimCharge } from "../SS-AOC-Operations-asn1-97/AocInterimArg-interimCharge.ta.mjs";
+import { type AocInterimArg_interimArgExtension, _decode_AocInterimArg_interimArgExtension, _encode_AocInterimArg_interimArgExtension } from "../SS-AOC-Operations-asn1-97/AocInterimArg-interimArgExtension.ta.mjs";
 
 /**
  * @summary AocInterimArg

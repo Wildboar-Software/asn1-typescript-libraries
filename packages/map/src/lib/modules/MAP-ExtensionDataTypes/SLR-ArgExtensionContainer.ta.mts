@@ -1,11 +1,11 @@
 /* eslint-disable */
 import {
-    OPTIONAL,
-    ASN1Element as _Element,
+    type OPTIONAL,
+    type ASN1Element as _Element,
     ASN1TagClass as _TagClass
 } from "@wildboar/asn1";
 import * as $ from "@wildboar/asn1/functional";
-import { PrivateExtensionList, _decode_PrivateExtensionList, _encode_PrivateExtensionList } from "../MAP-ExtensionDataTypes/PrivateExtensionList.ta.mjs";
+import { type PrivateExtensionList, _decode_PrivateExtensionList, _encode_PrivateExtensionList } from "../MAP-ExtensionDataTypes/PrivateExtensionList.ta.mjs";
 import { SLR_Arg_PCS_Extensions, _decode_SLR_Arg_PCS_Extensions, _encode_SLR_Arg_PCS_Extensions } from "../MAP-ExtensionDataTypes/SLR-Arg-PCS-Extensions.ta.mjs";
 
 
@@ -21,8 +21,8 @@ import { SLR_Arg_PCS_Extensions, _decode_SLR_Arg_PCS_Extensions, _encode_SLR_Arg
  * 
  * ```asn1
  * SLR-ArgExtensionContainer ::= SEQUENCE {
- *     privateExtensionList    [0]PrivateExtensionList    OPTIONAL, 
- *     slr-Arg-PCS-Extensions    [1]SLR-Arg-PCS-Extensions    OPTIONAL,
+ *     privateExtensionList    [0]PrivateExtensionList    type OPTIONAL, 
+ *     slr-Arg-PCS-Extensions    [1]SLR-Arg-PCS-Extensions    type OPTIONAL,
  *     ...}
  * ```
  * 
@@ -30,37 +30,45 @@ import { SLR_Arg_PCS_Extensions, _decode_SLR_Arg_PCS_Extensions, _encode_SLR_Arg
  */
 export
 class SLR_ArgExtensionContainer {
+    /**
+     * @summary `privateExtensionList`.
+     * @description
+     *
+     * Private extensions. Unsupported private extensions shall be discarded
+     * if received (3GPP TS 29.002 V19.1.0 clause 17.7.11).
+     *
+     * @public
+     * @readonly
+     */
+    public readonly privateExtensionList?: OPTIONAL<PrivateExtensionList>;
+    /**
+     * @summary `slr_Arg_PCS_Extensions`.
+     * @description
+     *
+     * PCS extensions for Subscriber Location Report argument, including
+     * optional `na-ESRK-Request` (3GPP TS 29.002 V19.1.0 clauses 17.7.11
+     * and 7.6.11.19).
+     *
+     * @public
+     * @readonly
+     */
+    public readonly slr_Arg_PCS_Extensions?: OPTIONAL<SLR_Arg_PCS_Extensions>;
+    /**
+     * @summary Extensions that are not recognized.
+     * @public
+     * @readonly
+     */
+    public readonly _unrecognizedExtensionsList: _Element[];
+
     constructor (
-        /**
-         * @summary `privateExtensionList`.
-         * @description
-         *
-         * Private extensions. Unsupported private extensions shall be discarded
-         * if received (3GPP TS 29.002 V19.1.0 clause 17.7.11).
-         *
-         * @public
-         * @readonly
-         */
-        readonly privateExtensionList?: OPTIONAL<PrivateExtensionList>,
-        /**
-         * @summary `slr_Arg_PCS_Extensions`.
-         * @description
-         *
-         * PCS extensions for Subscriber Location Report argument, including
-         * optional `na-ESRK-Request` (3GPP TS 29.002 V19.1.0 clauses 17.7.11
-         * and 7.6.11.19).
-         *
-         * @public
-         * @readonly
-         */
-        readonly slr_Arg_PCS_Extensions?: OPTIONAL<SLR_Arg_PCS_Extensions>,
-        /**
-         * @summary Extensions that are not recognized.
-         * @public
-         * @readonly
-         */
-        readonly _unrecognizedExtensionsList: _Element[] = []
-    ) {}
+        privateExtensionList?: OPTIONAL<PrivateExtensionList>,
+        slr_Arg_PCS_Extensions?: OPTIONAL<SLR_Arg_PCS_Extensions>,
+        _unrecognizedExtensionsList: _Element[] = []
+    ) {
+        this.privateExtensionList = privateExtensionList;
+        this.slr_Arg_PCS_Extensions = slr_Arg_PCS_Extensions;
+        this._unrecognizedExtensionsList = _unrecognizedExtensionsList;
+    }
 
     /**
      * @summary Restructures an object into a SLR_ArgExtensionContainer

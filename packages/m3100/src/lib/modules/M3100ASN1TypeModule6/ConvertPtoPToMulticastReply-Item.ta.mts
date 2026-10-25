@@ -1,6 +1,6 @@
 /* eslint-disable */
 import {
-    ASN1Element as _Element,
+    type ASN1Element as _Element,
     ASN1TagClass as _TagClass,
     ASN1Construction as _Construction,
     ASN1UniversalType as _UniversalType,
@@ -16,7 +16,7 @@ import {
     _encode_ConvertPtoPToMulticastReply_Item_success,
 } from '../M3100ASN1TypeModule6/ConvertPtoPToMulticastReply-Item-success.ta.mjs';
 import {
-    Failed,
+    type Failed,
     _decode_Failed,
     _encode_Failed,
 } from '../ASN1DefinedTypesModule/Failed.ta.mjs';

@@ -1,15 +1,15 @@
 /* eslint-disable */
 import {
     ASN1ConstructionError as _ConstructionError,
-    ASN1Element as _Element,
+    type ASN1Element as _Element,
     ASN1TagClass as _TagClass,
     ASN1Error
 } from "@wildboar/asn1";
 import * as $ from "@wildboar/asn1/functional";
-import { ParameterName, _decode_ParameterName, _encode_ParameterName,
+import { type ParameterName, _decode_ParameterName, _encode_ParameterName,
     ParameterName_segmentHeader
 } from "../CCSDS-SLE-TRANSFER-SERVICE-COMMON-TYPES/ParameterName.ta.mjs";
-import { FspGetParameter_parSegmHeader_parameterValue, _decode_FspGetParameter_parSegmHeader_parameterValue, _encode_FspGetParameter_parSegmHeader_parameterValue } from "../CCSDS-SLE-TRANSFER-SERVICE-FSP-STRUCTURES/FspGetParameter-parSegmHeader-parameterValue.ta.mjs";
+import { type FspGetParameter_parSegmHeader_parameterValue, _decode_FspGetParameter_parSegmHeader_parameterValue, _encode_FspGetParameter_parSegmHeader_parameterValue } from "../CCSDS-SLE-TRANSFER-SERVICE-FSP-STRUCTURES/FspGetParameter-parSegmHeader-parameterValue.ta.mjs";
 
 
 

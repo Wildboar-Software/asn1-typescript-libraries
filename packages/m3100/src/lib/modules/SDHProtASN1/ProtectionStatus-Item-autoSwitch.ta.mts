@@ -1,7 +1,7 @@
 /* eslint-disable */
 import {
-    OPTIONAL,
-    ASN1Element as _Element,
+    type OPTIONAL,
+    type ASN1Element as _Element,
     ASN1TagClass as _TagClass,
     ASN1Construction as _Construction,
     ASN1UniversalType as _UniversalType,
@@ -24,12 +24,12 @@ import {
     _encode_SwitchStatus,
 } from '../SDHProtASN1/SwitchStatus.ta.mjs';
 import {
-    FromAndToProtectionUnit,
+    type FromAndToProtectionUnit,
     _decode_FromAndToProtectionUnit,
     _encode_FromAndToProtectionUnit,
 } from '../SDHProtASN1/FromAndToProtectionUnit.ta.mjs';
 import {
-    AutoSwitchReason,
+    type AutoSwitchReason,
     _decode_AutoSwitchReason,
     _encode_AutoSwitchReason,
 } from '../SDHProtASN1/AutoSwitchReason.ta.mjs';
@@ -46,32 +46,42 @@ import {
  *
  */
 export class ProtectionStatus_Item_autoSwitch {
+    /**
+     * @summary `requestSource`.
+     * @public
+     * @readonly
+     */
+    public readonly requestSource: OPTIONAL<RequestSource>;
+    /**
+     * @summary `switchStatus`.
+     * @public
+     * @readonly
+     */
+    public readonly switchStatus: SwitchStatus;
+    /**
+     * @summary `relatedChannel`.
+     * @public
+     * @readonly
+     */
+    public readonly relatedChannel: FromAndToProtectionUnit;
+    /**
+     * @summary `autoSwitchReason`.
+     * @public
+     * @readonly
+     */
+    public readonly autoSwitchReason: AutoSwitchReason;
+
     constructor(
-        /**
-         * @summary `requestSource`.
-         * @public
-         * @readonly
-         */
-        readonly requestSource: OPTIONAL<RequestSource>,
-        /**
-         * @summary `switchStatus`.
-         * @public
-         * @readonly
-         */
-        readonly switchStatus: SwitchStatus,
-        /**
-         * @summary `relatedChannel`.
-         * @public
-         * @readonly
-         */
-        readonly relatedChannel: FromAndToProtectionUnit,
-        /**
-         * @summary `autoSwitchReason`.
-         * @public
-         * @readonly
-         */
-        readonly autoSwitchReason: AutoSwitchReason
-    ) {}
+        requestSource: OPTIONAL<RequestSource>,
+        switchStatus: SwitchStatus,
+        relatedChannel: FromAndToProtectionUnit,
+        autoSwitchReason: AutoSwitchReason
+    ) {
+        this.requestSource = requestSource;
+        this.switchStatus = switchStatus;
+        this.relatedChannel = relatedChannel;
+        this.autoSwitchReason = autoSwitchReason;
+    }
 
     /**
      * @summary Restructures an object into a ProtectionStatus_Item_autoSwitch
@@ -104,14 +114,14 @@ export class ProtectionStatus_Item_autoSwitch {
      * @static
      */
 
-    public static _enum_for_requestSource = _enum_for_RequestSource;
+    public static _enum_for_requestSource: typeof _enum_for_RequestSource = _enum_for_RequestSource;
     /**
      * @summary The enum used as the type of the component `switchStatus`
      * @public
      * @static
      */
 
-    public static _enum_for_switchStatus = _enum_for_SwitchStatus;
+    public static _enum_for_switchStatus: typeof _enum_for_SwitchStatus = _enum_for_SwitchStatus;
 }
 
 

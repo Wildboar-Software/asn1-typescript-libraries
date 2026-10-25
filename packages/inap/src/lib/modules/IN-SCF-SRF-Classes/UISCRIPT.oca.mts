@@ -1,6 +1,6 @@
 /* eslint-disable */
 import * as $ from "@wildboar/asn1/functional";
-import { Code } from "../Remote-Operations-Information-Objects/Code.ta.mjs";
+import { type Code } from "../Remote-Operations-Information-Objects/Code.ta.mjs";
 // export { Code, _decode_Code, _encode_Code } from "../Remote-Operations-Information-Objects/Code.ta.mjs";
 
 
@@ -13,7 +13,7 @@ import { Code } from "../Remote-Operations-Information-Objects/Code.ta.mjs";
  * ```asn1
  * UISCRIPT ::= CLASS {
  *   &SpecificInfo  OPTIONAL,
- *   &Result        OPTIONAL,
+ *   &Result        type OPTIONAL,
  *   &id            Code
  * }
  * WITH SYNTAX {

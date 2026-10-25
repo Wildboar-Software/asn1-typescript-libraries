@@ -1,38 +1,38 @@
 /* eslint-disable */
 import {
-    NULL,
-    OPTIONAL,
-    ASN1Element as _Element,
+    type NULL,
+    type OPTIONAL,
+    type ASN1Element as _Element,
     ASN1TagClass as _TagClass
 } from "@wildboar/asn1";
 import * as $ from "@wildboar/asn1/functional";
-import { AgeOfLocationInformation, _decode_AgeOfLocationInformation, _encode_AgeOfLocationInformation } from "../MAP-CommonDataTypes/AgeOfLocationInformation.ta.mjs";
-import { CellGlobalIdOrServiceAreaIdOrLAI, _decode_CellGlobalIdOrServiceAreaIdOrLAI, _encode_CellGlobalIdOrServiceAreaIdOrLAI } from "../MAP-CommonDataTypes/CellGlobalIdOrServiceAreaIdOrLAI.ta.mjs";
-import { GSN_Address, _decode_GSN_Address, _encode_GSN_Address } from "../MAP-CommonDataTypes/GSN-Address.ta.mjs";
-import { IMEI, _decode_IMEI, _encode_IMEI } from "../MAP-CommonDataTypes/IMEI.ta.mjs";
-import { IMSI, _decode_IMSI, _encode_IMSI } from "../MAP-CommonDataTypes/IMSI.ta.mjs";
-import { ISDN_AddressString, _decode_ISDN_AddressString, _encode_ISDN_AddressString } from "../MAP-CommonDataTypes/ISDN-AddressString.ta.mjs";
-import { LCSServiceTypeID, _decode_LCSServiceTypeID, _encode_LCSServiceTypeID } from "../MAP-CommonDataTypes/LCSServiceTypeID.ta.mjs";
+import { type AgeOfLocationInformation, _decode_AgeOfLocationInformation, _encode_AgeOfLocationInformation } from "../MAP-CommonDataTypes/AgeOfLocationInformation.ta.mjs";
+import { type CellGlobalIdOrServiceAreaIdOrLAI, _decode_CellGlobalIdOrServiceAreaIdOrLAI, _encode_CellGlobalIdOrServiceAreaIdOrLAI } from "../MAP-CommonDataTypes/CellGlobalIdOrServiceAreaIdOrLAI.ta.mjs";
+import { type GSN_Address, _decode_GSN_Address, _encode_GSN_Address } from "../MAP-CommonDataTypes/GSN-Address.ta.mjs";
+import { type IMEI, _decode_IMEI, _encode_IMEI } from "../MAP-CommonDataTypes/IMEI.ta.mjs";
+import { type IMSI, _decode_IMSI, _encode_IMSI } from "../MAP-CommonDataTypes/IMSI.ta.mjs";
+import { type ISDN_AddressString, _decode_ISDN_AddressString, _encode_ISDN_AddressString } from "../MAP-CommonDataTypes/ISDN-AddressString.ta.mjs";
+import { type LCSServiceTypeID, _decode_LCSServiceTypeID, _encode_LCSServiceTypeID } from "../MAP-CommonDataTypes/LCSServiceTypeID.ta.mjs";
 import { SLR_ArgExtensionContainer, _decode_SLR_ArgExtensionContainer, _encode_SLR_ArgExtensionContainer } from "../MAP-ExtensionDataTypes/SLR-ArgExtensionContainer.ta.mjs";
-import { AccuracyFulfilmentIndicator, _decode_AccuracyFulfilmentIndicator, _encode_AccuracyFulfilmentIndicator, _enum_for_AccuracyFulfilmentIndicator } from "../MAP-LCS-DataTypes/AccuracyFulfilmentIndicator.ta.mjs";
-import { Add_GeographicalInformation, _decode_Add_GeographicalInformation, _encode_Add_GeographicalInformation } from "../MAP-LCS-DataTypes/Add-GeographicalInformation.ta.mjs";
+import { type AccuracyFulfilmentIndicator, _decode_AccuracyFulfilmentIndicator, _encode_AccuracyFulfilmentIndicator, _enum_for_AccuracyFulfilmentIndicator } from "../MAP-LCS-DataTypes/AccuracyFulfilmentIndicator.ta.mjs";
+import { type Add_GeographicalInformation, _decode_Add_GeographicalInformation, _encode_Add_GeographicalInformation } from "../MAP-LCS-DataTypes/Add-GeographicalInformation.ta.mjs";
 import { Deferredmt_lrData, _decode_Deferredmt_lrData, _encode_Deferredmt_lrData } from "../MAP-LCS-DataTypes/Deferredmt-lrData.ta.mjs";
-import { Ext_GeographicalInformation, _decode_Ext_GeographicalInformation, _encode_Ext_GeographicalInformation } from "../MAP-LCS-DataTypes/Ext-GeographicalInformation.ta.mjs";
-import { GeranGANSSpositioningData, _decode_GeranGANSSpositioningData, _encode_GeranGANSSpositioningData } from "../MAP-LCS-DataTypes/GeranGANSSpositioningData.ta.mjs";
+import { type Ext_GeographicalInformation, _decode_Ext_GeographicalInformation, _encode_Ext_GeographicalInformation } from "../MAP-LCS-DataTypes/Ext-GeographicalInformation.ta.mjs";
+import { type GeranGANSSpositioningData, _decode_GeranGANSSpositioningData, _encode_GeranGANSSpositioningData } from "../MAP-LCS-DataTypes/GeranGANSSpositioningData.ta.mjs";
 import { LCS_ClientID, _decode_LCS_ClientID, _encode_LCS_ClientID } from "../MAP-LCS-DataTypes/LCS-ClientID.ta.mjs";
-import { LCS_Event, _decode_LCS_Event, _encode_LCS_Event, _enum_for_LCS_Event } from "../MAP-LCS-DataTypes/LCS-Event.ta.mjs";
-import { LCS_ReferenceNumber, _decode_LCS_ReferenceNumber, _encode_LCS_ReferenceNumber } from "../MAP-LCS-DataTypes/LCS-ReferenceNumber.ta.mjs";
+import { type LCS_Event, _decode_LCS_Event, _encode_LCS_Event, _enum_for_LCS_Event } from "../MAP-LCS-DataTypes/LCS-Event.ta.mjs";
+import { type LCS_ReferenceNumber, _decode_LCS_ReferenceNumber, _encode_LCS_ReferenceNumber } from "../MAP-LCS-DataTypes/LCS-ReferenceNumber.ta.mjs";
 import { LCSLocationInfo, _decode_LCSLocationInfo, _encode_LCSLocationInfo } from "../MAP-LCS-DataTypes/LCSLocationInfo.ta.mjs";
 import { PeriodicLDRInfo, _decode_PeriodicLDRInfo, _encode_PeriodicLDRInfo } from "../MAP-LCS-DataTypes/PeriodicLDRInfo.ta.mjs";
-import { PositioningDataInformation, _decode_PositioningDataInformation, _encode_PositioningDataInformation } from "../MAP-LCS-DataTypes/PositioningDataInformation.ta.mjs";
-import { SequenceNumber, _decode_SequenceNumber, _encode_SequenceNumber } from "../MAP-LCS-DataTypes/SequenceNumber.ta.mjs";
-import { ServingNodeAddress, _decode_ServingNodeAddress, _encode_ServingNodeAddress } from "../MAP-LCS-DataTypes/ServingNodeAddress.ta.mjs";
-import { UtranAdditionalPositioningData, _decode_UtranAdditionalPositioningData, _encode_UtranAdditionalPositioningData } from "../MAP-LCS-DataTypes/UtranAdditionalPositioningData.ta.mjs";
-import { UtranBaroPressureMeas, _decode_UtranBaroPressureMeas, _encode_UtranBaroPressureMeas } from "../MAP-LCS-DataTypes/UtranBaroPressureMeas.ta.mjs";
-import { UtranCivicAddress, _decode_UtranCivicAddress, _encode_UtranCivicAddress } from "../MAP-LCS-DataTypes/UtranCivicAddress.ta.mjs";
-import { UtranGANSSpositioningData, _decode_UtranGANSSpositioningData, _encode_UtranGANSSpositioningData } from "../MAP-LCS-DataTypes/UtranGANSSpositioningData.ta.mjs";
-import { UtranPositioningDataInfo, _decode_UtranPositioningDataInfo, _encode_UtranPositioningDataInfo } from "../MAP-LCS-DataTypes/UtranPositioningDataInfo.ta.mjs";
-import { VelocityEstimate, _decode_VelocityEstimate, _encode_VelocityEstimate } from "../MAP-LCS-DataTypes/VelocityEstimate.ta.mjs";
+import { type PositioningDataInformation, _decode_PositioningDataInformation, _encode_PositioningDataInformation } from "../MAP-LCS-DataTypes/PositioningDataInformation.ta.mjs";
+import { type SequenceNumber, _decode_SequenceNumber, _encode_SequenceNumber } from "../MAP-LCS-DataTypes/SequenceNumber.ta.mjs";
+import { type ServingNodeAddress, _decode_ServingNodeAddress, _encode_ServingNodeAddress } from "../MAP-LCS-DataTypes/ServingNodeAddress.ta.mjs";
+import { type UtranAdditionalPositioningData, _decode_UtranAdditionalPositioningData, _encode_UtranAdditionalPositioningData } from "../MAP-LCS-DataTypes/UtranAdditionalPositioningData.ta.mjs";
+import { type UtranBaroPressureMeas, _decode_UtranBaroPressureMeas, _encode_UtranBaroPressureMeas } from "../MAP-LCS-DataTypes/UtranBaroPressureMeas.ta.mjs";
+import { type UtranCivicAddress, _decode_UtranCivicAddress, _encode_UtranCivicAddress } from "../MAP-LCS-DataTypes/UtranCivicAddress.ta.mjs";
+import { type UtranGANSSpositioningData, _decode_UtranGANSSpositioningData, _encode_UtranGANSSpositioningData } from "../MAP-LCS-DataTypes/UtranGANSSpositioningData.ta.mjs";
+import { type UtranPositioningDataInfo, _decode_UtranPositioningDataInfo, _encode_UtranPositioningDataInfo } from "../MAP-LCS-DataTypes/UtranPositioningDataInfo.ta.mjs";
+import { type VelocityEstimate, _decode_VelocityEstimate, _encode_VelocityEstimate } from "../MAP-LCS-DataTypes/VelocityEstimate.ta.mjs";
 
 
 /**
@@ -54,35 +54,35 @@ import { VelocityEstimate, _decode_VelocityEstimate, _encode_VelocityEstimate } 
  *     lcs-Event    LCS-Event,
  *     lcs-ClientID    LCS-ClientID, 
  *     lcsLocationInfo    LCSLocationInfo,
- *     msisdn    [0] ISDN-AddressString    OPTIONAL,
- *     imsi    [1] IMSI    OPTIONAL,
- *     imei    [2] IMEI    OPTIONAL,
- *     na-ESRD    [3] ISDN-AddressString    OPTIONAL,
- *     na-ESRK    [4] ISDN-AddressString    OPTIONAL,
- *     locationEstimate    [5] Ext-GeographicalInformation    OPTIONAL,
- *     ageOfLocationEstimate    [6] AgeOfLocationInformation    OPTIONAL,
- *     slr-ArgExtensionContainer    [7] SLR-ArgExtensionContainer    OPTIONAL,
+ *     msisdn    [0] ISDN-AddressString    type OPTIONAL,
+ *     imsi    [1] IMSI    type OPTIONAL,
+ *     imei    [2] IMEI    type OPTIONAL,
+ *     na-ESRD    [3] ISDN-AddressString    type OPTIONAL,
+ *     na-ESRK    [4] ISDN-AddressString    type OPTIONAL,
+ *     locationEstimate    [5] Ext-GeographicalInformation    type OPTIONAL,
+ *     ageOfLocationEstimate    [6] AgeOfLocationInformation    type OPTIONAL,
+ *     slr-ArgExtensionContainer    [7] SLR-ArgExtensionContainer    type OPTIONAL,
  *     ... ,
- *     add-LocationEstimate    [8] Add-GeographicalInformation    OPTIONAL,
- *     deferredmt-lrData    [9] Deferredmt-lrData    OPTIONAL, 
- *     lcs-ReferenceNumber    [10] LCS-ReferenceNumber    OPTIONAL,
- *     geranPositioningData    [11] PositioningDataInformation    OPTIONAL,
- *     utranPositioningData    [12] UtranPositioningDataInfo    OPTIONAL,
- *     cellIdOrSai    [13]    CellGlobalIdOrServiceAreaIdOrLAI    OPTIONAL,
- *     h-gmlc-Address    [14]    GSN-Address    OPTIONAL,
- *     lcsServiceTypeID    [15]    LCSServiceTypeID    OPTIONAL,
- *     sai-Present    [17] NULL    OPTIONAL,
- *     pseudonymIndicator    [18] NULL    OPTIONAL,
- *     accuracyFulfilmentIndicator    [19] AccuracyFulfilmentIndicator    OPTIONAL,
- *     velocityEstimate    [20] VelocityEstimate    OPTIONAL,
- *     sequenceNumber    [21] SequenceNumber    OPTIONAL,
- *     periodicLDRInfo    [22] PeriodicLDRInfo    OPTIONAL,
- *     mo-lrShortCircuitIndicator    [23] NULL    OPTIONAL,
- *     geranGANSSpositioningData    [24] GeranGANSSpositioningData    OPTIONAL,
- *     utranGANSSpositioningData    [25] UtranGANSSpositioningData    OPTIONAL,
- *     targetServingNodeForHandover    [26] ServingNodeAddress    OPTIONAL,
- *     utranAdditionalPositioningData    [27] UtranAdditionalPositioningData    OPTIONAL,
- *     utranBaroPressureMeas    [28] UtranBaroPressureMeas    OPTIONAL,
+ *     add-LocationEstimate    [8] Add-GeographicalInformation    type OPTIONAL,
+ *     deferredmt-lrData    [9] Deferredmt-lrData    type OPTIONAL, 
+ *     lcs-ReferenceNumber    [10] LCS-ReferenceNumber    type OPTIONAL,
+ *     geranPositioningData    [11] PositioningDataInformation    type OPTIONAL,
+ *     utranPositioningData    [12] UtranPositioningDataInfo    type OPTIONAL,
+ *     cellIdOrSai    [13]    CellGlobalIdOrServiceAreaIdOrLAI    type OPTIONAL,
+ *     h-gmlc-Address    [14]    GSN-Address    type OPTIONAL,
+ *     lcsServiceTypeID    [15]    LCSServiceTypeID    type OPTIONAL,
+ *     sai-Present    [17] NULL    type OPTIONAL,
+ *     pseudonymIndicator    [18] NULL    type OPTIONAL,
+ *     accuracyFulfilmentIndicator    [19] AccuracyFulfilmentIndicator    type OPTIONAL,
+ *     velocityEstimate    [20] VelocityEstimate    type OPTIONAL,
+ *     sequenceNumber    [21] SequenceNumber    type OPTIONAL,
+ *     periodicLDRInfo    [22] PeriodicLDRInfo    type OPTIONAL,
+ *     mo-lrShortCircuitIndicator    [23] NULL    type OPTIONAL,
+ *     geranGANSSpositioningData    [24] GeranGANSSpositioningData    type OPTIONAL,
+ *     utranGANSSpositioningData    [25] UtranGANSSpositioningData    type OPTIONAL,
+ *     targetServingNodeForHandover    [26] ServingNodeAddress    type OPTIONAL,
+ *     utranAdditionalPositioningData    [27] UtranAdditionalPositioningData    type OPTIONAL,
+ *     utranBaroPressureMeas    [28] UtranBaroPressureMeas    type OPTIONAL,
  *     utranCivicAddress    [29] UtranCivicAddress    OPTIONAL }
  * ```
  * 
@@ -90,339 +90,407 @@ import { VelocityEstimate, _decode_VelocityEstimate, _encode_VelocityEstimate } 
  */
 export
 class SubscriberLocationReport_Arg {
+    /**
+     * @summary `lcs_Event`.
+     * @description
+     *
+     * Event that triggered the report (3GPP TS 29.002 V19.1.0 clause
+     * 7.6.11.5).
+     *
+     * @public
+     * @readonly
+     */
+    public readonly lcs_Event: LCS_Event;
+    /**
+     * @summary `lcs_ClientID`.
+     * @description
+     *
+     * LCS client (3GPP TS 29.002 V19.1.0 clause 7.6.11.4).
+     *
+     * @public
+     * @readonly
+     */
+    public readonly lcs_ClientID: LCS_ClientID;
+    /**
+     * @summary `lcsLocationInfo`.
+     * @description
+     *
+     * Serving node.
+     *
+     * @public
+     * @readonly
+     */
+    public readonly lcsLocationInfo: LCSLocationInfo;
+    /**
+     * @summary `msisdn`.
+     * @description
+     *
+     * One of MSISDN or IMSI is mandatory.
+     *
+     * @public
+     * @readonly
+     */
+    public readonly msisdn?: OPTIONAL<ISDN_AddressString>;
+    /**
+     * @summary `imsi`.
+     * @description
+     *
+     * One of MSISDN or IMSI is mandatory.
+     *
+     * @public
+     * @readonly
+     */
+    public readonly imsi?: OPTIONAL<IMSI>;
+    /**
+     * @summary `imei`.
+     * @description
+     *
+     * IMEI.
+     *
+     * @public
+     * @readonly
+     */
+    public readonly imei?: OPTIONAL<IMEI>;
+    /**
+     * @summary `na_ESRD`.
+     * @description
+     *
+     * North American Emergency Services Routing Digits (3GPP TS 29.002
+     * V19.1.0 clause 7.6.11.13).
+     *
+     * @public
+     * @readonly
+     */
+    public readonly na_ESRD?: OPTIONAL<ISDN_AddressString>;
+    /**
+     * @summary `na_ESRK`.
+     * @description
+     *
+     * North American Emergency Services Routing Key (3GPP TS 29.002 V19.1.0
+     * clause 7.6.11.14).
+     *
+     * @public
+     * @readonly
+     */
+    public readonly na_ESRK?: OPTIONAL<ISDN_AddressString>;
+    /**
+     * @summary `locationEstimate`.
+     * @description
+     *
+     * Preferred over add-LocationEstimate (3GPP TS 29.002 V19.1.0 clause
+     * 7.6.11.11).
+     *
+     * @public
+     * @readonly
+     */
+    public readonly locationEstimate?: OPTIONAL<Ext_GeographicalInformation>;
+    /**
+     * @summary `ageOfLocationEstimate`.
+     * @description
+     *
+     * Age of the estimate (3GPP TS 29.002 V19.1.0 clause 7.6.11.1).
+     *
+     * @public
+     * @readonly
+     */
+    public readonly ageOfLocationEstimate?: OPTIONAL<AgeOfLocationInformation>;
+    /**
+     * @summary `slr_ArgExtensionContainer`.
+     * @description
+     *
+     * SLR-specific extension container (may include NA-ESRK Request).
+     *
+     * @public
+     * @readonly
+     */
+    public readonly slr_ArgExtensionContainer?: OPTIONAL<SLR_ArgExtensionContainer>;
+    /**
+     * @summary `add_LocationEstimate`.
+     * @description
+     *
+     * Additional estimate (3GPP TS 29.002 V19.1.0 clause 7.6.11.21).
+     *
+     * @public
+     * @readonly
+     */
+    public readonly add_LocationEstimate?: OPTIONAL<Add_GeographicalInformation>;
+    /**
+     * @summary `deferredmt_lrData`.
+     * @description
+     *
+     * Deferred MT-LR data (3GPP TS 29.002 V19.1.0 clause 7.6.11.3).
+     *
+     * @public
+     * @readonly
+     */
+    public readonly deferredmt_lrData?: OPTIONAL<Deferredmt_lrData>;
+    /**
+     * @summary `lcs_ReferenceNumber`.
+     * @description
+     *
+     * Required for deferred MT-LR (clause 17.7.13).
+     *
+     * @public
+     * @readonly
+     */
+    public readonly lcs_ReferenceNumber?: OPTIONAL<LCS_ReferenceNumber>;
+    /**
+     * @summary `geranPositioningData`.
+     * @description
+     *
+     * GERAN positioning data (3GPP TS 29.002 V19.1.0 clause 7.6.11.11A).
+     *
+     * @public
+     * @readonly
+     */
+    public readonly geranPositioningData?: OPTIONAL<PositioningDataInformation>;
+    /**
+     * @summary `utranPositioningData`.
+     * @description
+     *
+     * UTRAN positioning data (3GPP TS 29.002 V19.1.0 clause 7.6.11.11B).
+     *
+     * @public
+     * @readonly
+     */
+    public readonly utranPositioningData?: OPTIONAL<UtranPositioningDataInfo>;
+    /**
+     * @summary `cellIdOrSai`.
+     * @description
+     *
+     * CGI or SAI (3GPP TS 29.002 V19.1.0 clause 7.6.11.22).
+     *
+     * @public
+     * @readonly
+     */
+    public readonly cellIdOrSai?: OPTIONAL<CellGlobalIdOrServiceAreaIdOrLAI>;
+    /**
+     * @summary `h_gmlc_Address`.
+     * @description
+     *
+     * Home GMLC.
+     *
+     * @public
+     * @readonly
+     */
+    public readonly h_gmlc_Address?: OPTIONAL<GSN_Address>;
+    /**
+     * @summary `lcsServiceTypeID`.
+     * @description
+     *
+     * LCS Service Type (3GPP TS 29.002 V19.1.0 clause 7.6.11.15).
+     *
+     * @public
+     * @readonly
+     */
+    public readonly lcsServiceTypeID?: OPTIONAL<LCSServiceTypeID>;
+    /**
+     * @summary `sai_Present`.
+     * @description
+     *
+     * cellIdOrSai is a Service Area Identity.
+     *
+     * @public
+     * @readonly
+     */
+    public readonly sai_Present?: OPTIONAL<NULL>;
+    /**
+     * @summary `pseudonymIndicator`.
+     * @description
+     *
+     * Pseudonym used.
+     *
+     * @public
+     * @readonly
+     */
+    public readonly pseudonymIndicator?: OPTIONAL<NULL>;
+    /**
+     * @summary `accuracyFulfilmentIndicator`.
+     * @description
+     *
+     * Accuracy fulfilment (3GPP TS 29.002 V19.1.0 clause 7.6.11.28).
+     *
+     * @public
+     * @readonly
+     */
+    public readonly accuracyFulfilmentIndicator?: OPTIONAL<AccuracyFulfilmentIndicator>;
+    /**
+     * @summary `velocityEstimate`.
+     * @description
+     *
+     * Velocity (3GPP TS 29.002 V19.1.0 clause 7.6.11.27).
+     *
+     * @public
+     * @readonly
+     */
+    public readonly velocityEstimate?: OPTIONAL<VelocityEstimate>;
+    /**
+     * @summary `sequenceNumber`.
+     * @description
+     *
+     * Periodic report sequence (3GPP TS 29.002 V19.1.0 clause 7.6.11.32).
+     *
+     * @public
+     * @readonly
+     */
+    public readonly sequenceNumber?: OPTIONAL<SequenceNumber>;
+    /**
+     * @summary `periodicLDRInfo`.
+     * @description
+     *
+     * Periodic LDR info (3GPP TS 29.002 V19.1.0 clause 7.6.11.31).
+     *
+     * @public
+     * @readonly
+     */
+    public readonly periodicLDRInfo?: OPTIONAL<PeriodicLDRInfo>;
+    /**
+     * @summary `mo_lrShortCircuitIndicator`.
+     * @description
+     *
+     * MO-LR short circuit (3GPP TS 29.002 V19.1.0 clause 7.6.11.29).
+     *
+     * @public
+     * @readonly
+     */
+    public readonly mo_lrShortCircuitIndicator?: OPTIONAL<NULL>;
+    /**
+     * @summary `geranGANSSpositioningData`.
+     * @description
+     *
+     * GERAN GANSS (3GPP TS 29.002 V19.1.0 clause 7.6.11.11C).
+     *
+     * @public
+     * @readonly
+     */
+    public readonly geranGANSSpositioningData?: OPTIONAL<GeranGANSSpositioningData>;
+    /**
+     * @summary `utranGANSSpositioningData`.
+     * @description
+     *
+     * UTRAN GANSS (3GPP TS 29.002 V19.1.0 clause 7.6.11.11D).
+     *
+     * @public
+     * @readonly
+     */
+    public readonly utranGANSSpositioningData?: OPTIONAL<UtranGANSSpositioningData>;
+    /**
+     * @summary `targetServingNodeForHandover`.
+     * @description
+     *
+     * Serving node after handover.
+     *
+     * @public
+     * @readonly
+     */
+    public readonly targetServingNodeForHandover?: OPTIONAL<ServingNodeAddress>;
+    /**
+     * @summary `utranAdditionalPositioningData`.
+     * @description
+     *
+     * Additional UTRAN positioning (3GPP TS 29.002 V19.1.0 clause
+     * 7.6.11.11E).
+     *
+     * @public
+     * @readonly
+     */
+    public readonly utranAdditionalPositioningData?: OPTIONAL<UtranAdditionalPositioningData>;
+    /**
+     * @summary `utranBaroPressureMeas`.
+     * @description
+     *
+     * Barometric pressure (3GPP TS 29.002 V19.1.0 clause 7.6.11.11F).
+     *
+     * @public
+     * @readonly
+     */
+    public readonly utranBaroPressureMeas?: OPTIONAL<UtranBaroPressureMeas>;
+    /**
+     * @summary `utranCivicAddress`.
+     * @description
+     *
+     * Civic address (3GPP TS 29.002 V19.1.0 clause 7.6.11.11G).
+     *
+     * @public
+     * @readonly
+     */
+    public readonly utranCivicAddress?: OPTIONAL<UtranCivicAddress>;
+    /**
+     * @summary Extensions that are not recognized.
+     * @public
+     * @readonly
+     */
+    public readonly _unrecognizedExtensionsList: _Element[];
+
     constructor (
-        /**
-         * @summary `lcs_Event`.
-         * @description
-         *
-         * Event that triggered the report (3GPP TS 29.002 V19.1.0 clause
-         * 7.6.11.5).
-         *
-         * @public
-         * @readonly
-         */
-        readonly lcs_Event: LCS_Event,
-        /**
-         * @summary `lcs_ClientID`.
-         * @description
-         *
-         * LCS client (3GPP TS 29.002 V19.1.0 clause 7.6.11.4).
-         *
-         * @public
-         * @readonly
-         */
-        readonly lcs_ClientID: LCS_ClientID,
-        /**
-         * @summary `lcsLocationInfo`.
-         * @description
-         *
-         * Serving node.
-         *
-         * @public
-         * @readonly
-         */
-        readonly lcsLocationInfo: LCSLocationInfo,
-        /**
-         * @summary `msisdn`.
-         * @description
-         *
-         * One of MSISDN or IMSI is mandatory.
-         *
-         * @public
-         * @readonly
-         */
-        readonly msisdn?: OPTIONAL<ISDN_AddressString>,
-        /**
-         * @summary `imsi`.
-         * @description
-         *
-         * One of MSISDN or IMSI is mandatory.
-         *
-         * @public
-         * @readonly
-         */
-        readonly imsi?: OPTIONAL<IMSI>,
-        /**
-         * @summary `imei`.
-         * @description
-         *
-         * IMEI.
-         *
-         * @public
-         * @readonly
-         */
-        readonly imei?: OPTIONAL<IMEI>,
-        /**
-         * @summary `na_ESRD`.
-         * @description
-         *
-         * North American Emergency Services Routing Digits (3GPP TS 29.002
-         * V19.1.0 clause 7.6.11.13).
-         *
-         * @public
-         * @readonly
-         */
-        readonly na_ESRD?: OPTIONAL<ISDN_AddressString>,
-        /**
-         * @summary `na_ESRK`.
-         * @description
-         *
-         * North American Emergency Services Routing Key (3GPP TS 29.002 V19.1.0
-         * clause 7.6.11.14).
-         *
-         * @public
-         * @readonly
-         */
-        readonly na_ESRK?: OPTIONAL<ISDN_AddressString>,
-        /**
-         * @summary `locationEstimate`.
-         * @description
-         *
-         * Preferred over add-LocationEstimate (3GPP TS 29.002 V19.1.0 clause
-         * 7.6.11.11).
-         *
-         * @public
-         * @readonly
-         */
-        readonly locationEstimate?: OPTIONAL<Ext_GeographicalInformation>,
-        /**
-         * @summary `ageOfLocationEstimate`.
-         * @description
-         *
-         * Age of the estimate (3GPP TS 29.002 V19.1.0 clause 7.6.11.1).
-         *
-         * @public
-         * @readonly
-         */
-        readonly ageOfLocationEstimate?: OPTIONAL<AgeOfLocationInformation>,
-        /**
-         * @summary `slr_ArgExtensionContainer`.
-         * @description
-         *
-         * SLR-specific extension container (may include NA-ESRK Request).
-         *
-         * @public
-         * @readonly
-         */
-        readonly slr_ArgExtensionContainer?: OPTIONAL<SLR_ArgExtensionContainer>,
-        /**
-         * @summary `add_LocationEstimate`.
-         * @description
-         *
-         * Additional estimate (3GPP TS 29.002 V19.1.0 clause 7.6.11.21).
-         *
-         * @public
-         * @readonly
-         */
-        readonly add_LocationEstimate?: OPTIONAL<Add_GeographicalInformation>,
-        /**
-         * @summary `deferredmt_lrData`.
-         * @description
-         *
-         * Deferred MT-LR data (3GPP TS 29.002 V19.1.0 clause 7.6.11.3).
-         *
-         * @public
-         * @readonly
-         */
-        readonly deferredmt_lrData?: OPTIONAL<Deferredmt_lrData>,
-        /**
-         * @summary `lcs_ReferenceNumber`.
-         * @description
-         *
-         * Required for deferred MT-LR (clause 17.7.13).
-         *
-         * @public
-         * @readonly
-         */
-        readonly lcs_ReferenceNumber?: OPTIONAL<LCS_ReferenceNumber>,
-        /**
-         * @summary `geranPositioningData`.
-         * @description
-         *
-         * GERAN positioning data (3GPP TS 29.002 V19.1.0 clause 7.6.11.11A).
-         *
-         * @public
-         * @readonly
-         */
-        readonly geranPositioningData?: OPTIONAL<PositioningDataInformation>,
-        /**
-         * @summary `utranPositioningData`.
-         * @description
-         *
-         * UTRAN positioning data (3GPP TS 29.002 V19.1.0 clause 7.6.11.11B).
-         *
-         * @public
-         * @readonly
-         */
-        readonly utranPositioningData?: OPTIONAL<UtranPositioningDataInfo>,
-        /**
-         * @summary `cellIdOrSai`.
-         * @description
-         *
-         * CGI or SAI (3GPP TS 29.002 V19.1.0 clause 7.6.11.22).
-         *
-         * @public
-         * @readonly
-         */
-        readonly cellIdOrSai?: OPTIONAL<CellGlobalIdOrServiceAreaIdOrLAI>,
-        /**
-         * @summary `h_gmlc_Address`.
-         * @description
-         *
-         * Home GMLC.
-         *
-         * @public
-         * @readonly
-         */
-        readonly h_gmlc_Address?: OPTIONAL<GSN_Address>,
-        /**
-         * @summary `lcsServiceTypeID`.
-         * @description
-         *
-         * LCS Service Type (3GPP TS 29.002 V19.1.0 clause 7.6.11.15).
-         *
-         * @public
-         * @readonly
-         */
-        readonly lcsServiceTypeID?: OPTIONAL<LCSServiceTypeID>,
-        /**
-         * @summary `sai_Present`.
-         * @description
-         *
-         * cellIdOrSai is a Service Area Identity.
-         *
-         * @public
-         * @readonly
-         */
-        readonly sai_Present?: OPTIONAL<NULL>,
-        /**
-         * @summary `pseudonymIndicator`.
-         * @description
-         *
-         * Pseudonym used.
-         *
-         * @public
-         * @readonly
-         */
-        readonly pseudonymIndicator?: OPTIONAL<NULL>,
-        /**
-         * @summary `accuracyFulfilmentIndicator`.
-         * @description
-         *
-         * Accuracy fulfilment (3GPP TS 29.002 V19.1.0 clause 7.6.11.28).
-         *
-         * @public
-         * @readonly
-         */
-        readonly accuracyFulfilmentIndicator?: OPTIONAL<AccuracyFulfilmentIndicator>,
-        /**
-         * @summary `velocityEstimate`.
-         * @description
-         *
-         * Velocity (3GPP TS 29.002 V19.1.0 clause 7.6.11.27).
-         *
-         * @public
-         * @readonly
-         */
-        readonly velocityEstimate?: OPTIONAL<VelocityEstimate>,
-        /**
-         * @summary `sequenceNumber`.
-         * @description
-         *
-         * Periodic report sequence (3GPP TS 29.002 V19.1.0 clause 7.6.11.32).
-         *
-         * @public
-         * @readonly
-         */
-        readonly sequenceNumber?: OPTIONAL<SequenceNumber>,
-        /**
-         * @summary `periodicLDRInfo`.
-         * @description
-         *
-         * Periodic LDR info (3GPP TS 29.002 V19.1.0 clause 7.6.11.31).
-         *
-         * @public
-         * @readonly
-         */
-        readonly periodicLDRInfo?: OPTIONAL<PeriodicLDRInfo>,
-        /**
-         * @summary `mo_lrShortCircuitIndicator`.
-         * @description
-         *
-         * MO-LR short circuit (3GPP TS 29.002 V19.1.0 clause 7.6.11.29).
-         *
-         * @public
-         * @readonly
-         */
-        readonly mo_lrShortCircuitIndicator?: OPTIONAL<NULL>,
-        /**
-         * @summary `geranGANSSpositioningData`.
-         * @description
-         *
-         * GERAN GANSS (3GPP TS 29.002 V19.1.0 clause 7.6.11.11C).
-         *
-         * @public
-         * @readonly
-         */
-        readonly geranGANSSpositioningData?: OPTIONAL<GeranGANSSpositioningData>,
-        /**
-         * @summary `utranGANSSpositioningData`.
-         * @description
-         *
-         * UTRAN GANSS (3GPP TS 29.002 V19.1.0 clause 7.6.11.11D).
-         *
-         * @public
-         * @readonly
-         */
-        readonly utranGANSSpositioningData?: OPTIONAL<UtranGANSSpositioningData>,
-        /**
-         * @summary `targetServingNodeForHandover`.
-         * @description
-         *
-         * Serving node after handover.
-         *
-         * @public
-         * @readonly
-         */
-        readonly targetServingNodeForHandover?: OPTIONAL<ServingNodeAddress>,
-        /**
-         * @summary `utranAdditionalPositioningData`.
-         * @description
-         *
-         * Additional UTRAN positioning (3GPP TS 29.002 V19.1.0 clause
-         * 7.6.11.11E).
-         *
-         * @public
-         * @readonly
-         */
-        readonly utranAdditionalPositioningData?: OPTIONAL<UtranAdditionalPositioningData>,
-        /**
-         * @summary `utranBaroPressureMeas`.
-         * @description
-         *
-         * Barometric pressure (3GPP TS 29.002 V19.1.0 clause 7.6.11.11F).
-         *
-         * @public
-         * @readonly
-         */
-        readonly utranBaroPressureMeas?: OPTIONAL<UtranBaroPressureMeas>,
-        /**
-         * @summary `utranCivicAddress`.
-         * @description
-         *
-         * Civic address (3GPP TS 29.002 V19.1.0 clause 7.6.11.11G).
-         *
-         * @public
-         * @readonly
-         */
-        readonly utranCivicAddress?: OPTIONAL<UtranCivicAddress>,
-        /**
-         * @summary Extensions that are not recognized.
-         * @public
-         * @readonly
-         */
-        readonly _unrecognizedExtensionsList: _Element[] = []
-    ) {}
+        lcs_Event: LCS_Event,
+        lcs_ClientID: LCS_ClientID,
+        lcsLocationInfo: LCSLocationInfo,
+        msisdn?: OPTIONAL<ISDN_AddressString>,
+        imsi?: OPTIONAL<IMSI>,
+        imei?: OPTIONAL<IMEI>,
+        na_ESRD?: OPTIONAL<ISDN_AddressString>,
+        na_ESRK?: OPTIONAL<ISDN_AddressString>,
+        locationEstimate?: OPTIONAL<Ext_GeographicalInformation>,
+        ageOfLocationEstimate?: OPTIONAL<AgeOfLocationInformation>,
+        slr_ArgExtensionContainer?: OPTIONAL<SLR_ArgExtensionContainer>,
+        add_LocationEstimate?: OPTIONAL<Add_GeographicalInformation>,
+        deferredmt_lrData?: OPTIONAL<Deferredmt_lrData>,
+        lcs_ReferenceNumber?: OPTIONAL<LCS_ReferenceNumber>,
+        geranPositioningData?: OPTIONAL<PositioningDataInformation>,
+        utranPositioningData?: OPTIONAL<UtranPositioningDataInfo>,
+        cellIdOrSai?: OPTIONAL<CellGlobalIdOrServiceAreaIdOrLAI>,
+        h_gmlc_Address?: OPTIONAL<GSN_Address>,
+        lcsServiceTypeID?: OPTIONAL<LCSServiceTypeID>,
+        sai_Present?: OPTIONAL<NULL>,
+        pseudonymIndicator?: OPTIONAL<NULL>,
+        accuracyFulfilmentIndicator?: OPTIONAL<AccuracyFulfilmentIndicator>,
+        velocityEstimate?: OPTIONAL<VelocityEstimate>,
+        sequenceNumber?: OPTIONAL<SequenceNumber>,
+        periodicLDRInfo?: OPTIONAL<PeriodicLDRInfo>,
+        mo_lrShortCircuitIndicator?: OPTIONAL<NULL>,
+        geranGANSSpositioningData?: OPTIONAL<GeranGANSSpositioningData>,
+        utranGANSSpositioningData?: OPTIONAL<UtranGANSSpositioningData>,
+        targetServingNodeForHandover?: OPTIONAL<ServingNodeAddress>,
+        utranAdditionalPositioningData?: OPTIONAL<UtranAdditionalPositioningData>,
+        utranBaroPressureMeas?: OPTIONAL<UtranBaroPressureMeas>,
+        utranCivicAddress?: OPTIONAL<UtranCivicAddress>,
+        _unrecognizedExtensionsList: _Element[] = []
+    ) {
+        this.lcs_Event = lcs_Event;
+        this.lcs_ClientID = lcs_ClientID;
+        this.lcsLocationInfo = lcsLocationInfo;
+        this.msisdn = msisdn;
+        this.imsi = imsi;
+        this.imei = imei;
+        this.na_ESRD = na_ESRD;
+        this.na_ESRK = na_ESRK;
+        this.locationEstimate = locationEstimate;
+        this.ageOfLocationEstimate = ageOfLocationEstimate;
+        this.slr_ArgExtensionContainer = slr_ArgExtensionContainer;
+        this.add_LocationEstimate = add_LocationEstimate;
+        this.deferredmt_lrData = deferredmt_lrData;
+        this.lcs_ReferenceNumber = lcs_ReferenceNumber;
+        this.geranPositioningData = geranPositioningData;
+        this.utranPositioningData = utranPositioningData;
+        this.cellIdOrSai = cellIdOrSai;
+        this.h_gmlc_Address = h_gmlc_Address;
+        this.lcsServiceTypeID = lcsServiceTypeID;
+        this.sai_Present = sai_Present;
+        this.pseudonymIndicator = pseudonymIndicator;
+        this.accuracyFulfilmentIndicator = accuracyFulfilmentIndicator;
+        this.velocityEstimate = velocityEstimate;
+        this.sequenceNumber = sequenceNumber;
+        this.periodicLDRInfo = periodicLDRInfo;
+        this.mo_lrShortCircuitIndicator = mo_lrShortCircuitIndicator;
+        this.geranGANSSpositioningData = geranGANSSpositioningData;
+        this.utranGANSSpositioningData = utranGANSSpositioningData;
+        this.targetServingNodeForHandover = targetServingNodeForHandover;
+        this.utranAdditionalPositioningData = utranAdditionalPositioningData;
+        this.utranBaroPressureMeas = utranBaroPressureMeas;
+        this.utranCivicAddress = utranCivicAddress;
+        this._unrecognizedExtensionsList = _unrecognizedExtensionsList;
+    }
 
     /**
      * @summary Restructures an object into a SubscriberLocationReport_Arg
@@ -446,13 +514,13 @@ class SubscriberLocationReport_Arg {
          * @static
          */
 
-    public static _enum_for_lcs_Event = _enum_for_LCS_Event;        /**
+    public static _enum_for_lcs_Event: typeof _enum_for_LCS_Event = _enum_for_LCS_Event;        /**
          * @summary The enum used as the type of the component `accuracyFulfilmentIndicator`
          * @public
          * @static
          */
 
-    public static _enum_for_accuracyFulfilmentIndicator = _enum_for_AccuracyFulfilmentIndicator;
+    public static _enum_for_accuracyFulfilmentIndicator: typeof _enum_for_AccuracyFulfilmentIndicator = _enum_for_AccuracyFulfilmentIndicator;
 }
 
 /**

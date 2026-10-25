@@ -11,12 +11,12 @@ import {
 } from '@wildboar/asn1';
 import * as $ from '@wildboar/asn1/functional';
 import {
-  Int32,
+  type Int32,
   _decode_Int32,
   _encode_Int32,
 } from '../KerberosV5Spec2/Int32.ta.mjs';
 import {
-  KerberosString,
+  type KerberosString,
   _decode_KerberosString,
   _encode_KerberosString,
 } from '../KerberosV5Spec2/KerberosString.ta.mjs';
@@ -51,7 +51,7 @@ export class PrincipalName {
    * @public
    * @readonly
    */
-  readonly name_type: Int32;
+  public readonly name_type: Int32;
   /**
    * @summary `name_string`.
    * @description
@@ -62,7 +62,7 @@ export class PrincipalName {
    * @public
    * @readonly
    */
-  readonly name_string: KerberosString[];
+  public readonly name_string: KerberosString[];
 
   constructor(
     name_type: Int32,

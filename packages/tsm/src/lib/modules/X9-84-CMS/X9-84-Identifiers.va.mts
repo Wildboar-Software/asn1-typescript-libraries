@@ -1,7 +1,7 @@
 /* eslint-disable */
 import {
-    NULL,
-    OBJECT_IDENTIFIER,
+    type NULL,
+    type OBJECT_IDENTIFIER,
     ObjectIdentifier as _OID,
 } from "@wildboar/asn1";
 import * as $ from "@wildboar/asn1/functional";
@@ -14,8 +14,8 @@ import { type ALGORITHM } from "../X9-84-CMS/ALGORITHM.oca.mjs";
  */
 
 export type NoIV = NULL;
-export const _decode_NoIV = $._decodeNull;
-export const _encode_NoIV = $._encodeNull;
+export const _decode_NoIV: $.ASN1Decoder<null> = $._decodeNull;
+export const _encode_NoIV: $.ASN1Encoder<null> = $._encodeNull;
 
 export const id_data: OBJECT_IDENTIFIER = _OID.fromParts([
     1, 2, 840, 113549, 1, 7, 1,

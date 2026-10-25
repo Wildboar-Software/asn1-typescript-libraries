@@ -1,7 +1,7 @@
 /* eslint-disable */
 // export { Priority, _decode_Priority, _encode_Priority } from "../Remote-Operations-Information-Objects/Priority.ta.mjs";
 // export { Code, _decode_Code, _encode_Code } from "../Remote-Operations-Information-Objects/Code.ta.mjs";
-import { ReferralParameter, _decode_ReferralParameter, _encode_ReferralParameter } from "../IN-errortypes/ReferralParameter.ta.mjs";
+import { type ReferralParameter, _decode_ReferralParameter, _encode_ReferralParameter } from "../IN-errortypes/ReferralParameter.ta.mjs";
 // export { ReferralParameter, _decode_ReferralParameter, _encode_ReferralParameter } from "../IN-errortypes/ReferralParameter.ta.mjs";
 import { errcode_scfReferral } from "../IN-errorcodes/errcode-scfReferral.va.mjs";
 // export { errcode_scfReferral } from "../IN-errorcodes/errcode-scfReferral.va.mjs";

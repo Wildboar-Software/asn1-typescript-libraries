@@ -1,7 +1,7 @@
 /* eslint-disable */
 import {
-    ENUMERATED,
-    ASN1Element as _Element,
+    type ENUMERATED,
+    type ASN1Element as _Element,
     ASN1TagClass as _TagClass,
     ASN1Construction as _Construction,
     ASN1UniversalType as _UniversalType,
@@ -44,7 +44,7 @@ export type InitiateLoopbackError =
  * @constant
  * @type {number}
  */
-export const InitiateLoopbackError_unavailableLCS: InitiateLoopbackError = 1; /* LONG_NAMED_ENUMERATED_VALUE */
+export const InitiateLoopbackError_unavailableLCS: _enum_for_InitiateLoopbackError.unavailableLCS = _enum_for_InitiateLoopbackError.unavailableLCS; /* LONG_NAMED_ENUMERATED_VALUE */
 
 
 /**
@@ -52,7 +52,7 @@ export const InitiateLoopbackError_unavailableLCS: InitiateLoopbackError = 1; /*
  * @constant
  * @type {number}
  */
-export const unavailableLCS: InitiateLoopbackError = InitiateLoopbackError_unavailableLCS; /* SHORT_NAMED_ENUMERATED_VALUE */
+export const unavailableLCS: _enum_for_InitiateLoopbackError.unavailableLCS = InitiateLoopbackError_unavailableLCS; /* SHORT_NAMED_ENUMERATED_VALUE */
 
 
 /**
@@ -60,7 +60,7 @@ export const unavailableLCS: InitiateLoopbackError = InitiateLoopbackError_unava
  * @constant
  * @type {number}
  */
-export const InitiateLoopbackError_offDutyLCS: InitiateLoopbackError = 2; /* LONG_NAMED_ENUMERATED_VALUE */
+export const InitiateLoopbackError_offDutyLCS: _enum_for_InitiateLoopbackError.offDutyLCS = _enum_for_InitiateLoopbackError.offDutyLCS; /* LONG_NAMED_ENUMERATED_VALUE */
 
 
 /**
@@ -68,7 +68,7 @@ export const InitiateLoopbackError_offDutyLCS: InitiateLoopbackError = 2; /* LON
  * @constant
  * @type {number}
  */
-export const offDutyLCS: InitiateLoopbackError = InitiateLoopbackError_offDutyLCS; /* SHORT_NAMED_ENUMERATED_VALUE */
+export const offDutyLCS: _enum_for_InitiateLoopbackError.offDutyLCS = InitiateLoopbackError_offDutyLCS; /* SHORT_NAMED_ENUMERATED_VALUE */
 
 
 /**
@@ -76,7 +76,7 @@ export const offDutyLCS: InitiateLoopbackError = InitiateLoopbackError_offDutyLC
  * @constant
  * @type {number}
  */
-export const InitiateLoopbackError_loopbackNotSupported: InitiateLoopbackError = 3; /* LONG_NAMED_ENUMERATED_VALUE */
+export const InitiateLoopbackError_loopbackNotSupported: _enum_for_InitiateLoopbackError.loopbackNotSupported = _enum_for_InitiateLoopbackError.loopbackNotSupported; /* LONG_NAMED_ENUMERATED_VALUE */
 
 
 /**
@@ -84,17 +84,17 @@ export const InitiateLoopbackError_loopbackNotSupported: InitiateLoopbackError =
  * @constant
  * @type {number}
  */
-export const loopbackNotSupported: InitiateLoopbackError = InitiateLoopbackError_loopbackNotSupported; /* SHORT_NAMED_ENUMERATED_VALUE */
+export const loopbackNotSupported: _enum_for_InitiateLoopbackError.loopbackNotSupported = InitiateLoopbackError_loopbackNotSupported; /* SHORT_NAMED_ENUMERATED_VALUE */
 
 
 
 
-export const _decode_InitiateLoopbackError = $._decodeEnumerated;
+export const _decode_InitiateLoopbackError: $.ASN1Decoder<number> = $._decodeEnumerated;
 
 
 
 
-export const _encode_InitiateLoopbackError = $._encodeEnumerated;
+export const _encode_InitiateLoopbackError: $.ASN1Encoder<number> = $._encodeEnumerated;
 
 
 /* eslint-enable */

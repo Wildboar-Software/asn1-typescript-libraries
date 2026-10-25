@@ -1,11 +1,11 @@
 /* eslint-disable */
 import {
     ASN1ConstructionError,
-    ASN1Element as _Element,
+    type ASN1Element as _Element,
     ASN1OverflowError
 } from "@wildboar/asn1";
 import * as $ from "@wildboar/asn1/functional";
-import { InvokeId, _decode_InvokeId, _encode_InvokeId } from "../Facility-Information-Element-Components/InvokeId.ta.mjs";
+import { type InvokeId, _decode_InvokeId, _encode_InvokeId } from "../Facility-Information-Element-Components/InvokeId.ta.mjs";
 
 
 /**
@@ -52,8 +52,6 @@ function _decode_GFPInvokeIDSet (el: _Element): GFPInvokeIDSet {
     return value;
 }
 
-let _cached_encoder_for_GFPInvokeIDSet: $.ASN1Encoder<GFPInvokeIDSet> | null = null;
-
 /**
  * @summary Encodes a(n) GFPInvokeIDSet into an ASN.1 Element.
  * @function
@@ -61,11 +59,7 @@ let _cached_encoder_for_GFPInvokeIDSet: $.ASN1Encoder<GFPInvokeIDSet> | null = n
  * @param elGetter A function that can be used to get new ASN.1 elements.
  * @returns {_Element} The GFPInvokeIDSet, encoded as an ASN.1 Element.
  */
-export
-function _encode_GFPInvokeIDSet (value: GFPInvokeIDSet, elGetter: $.ASN1Encoder<any>): _Element {
-    if (!_cached_encoder_for_GFPInvokeIDSet) { _cached_encoder_for_GFPInvokeIDSet = _encode_InvokeId; }
-    return _cached_encoder_for_GFPInvokeIDSet(value, elGetter);
-}
+export const _encode_GFPInvokeIDSet: $.ASN1Encoder<GFPInvokeIDSet> = _encode_InvokeId;
 
 
 /* eslint-enable */

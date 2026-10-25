@@ -5,7 +5,7 @@ import {
 } from "../InformationFramework/AttributeUsage.ta.mjs";
 import { id_at_userPwd } from "../PasswordPolicy/id-at-userPwd.va.mjs";
 import {
-    UserPwd,
+    type UserPwd,
     _decode_UserPwd,
     _encode_UserPwd,
 } from "../PasswordPolicy/UserPwd.ta.mjs";

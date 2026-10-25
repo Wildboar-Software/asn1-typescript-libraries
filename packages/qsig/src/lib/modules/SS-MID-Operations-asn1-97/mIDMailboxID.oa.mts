@@ -1,7 +1,7 @@
 /* eslint-disable */
 import { type OPERATION } from "../Remote-Operations-Information-Objects/OPERATION.oca.mjs";
 import { MIDMailboxIDArg, _decode_MIDMailboxIDArg, _encode_MIDMailboxIDArg } from "../SS-MID-Operations-asn1-97/MIDMailboxIDArg.ta.mjs";
-import { MIDDummyRes, _decode_MIDDummyRes, _encode_MIDDummyRes } from "../SS-MID-Operations-asn1-97/MIDDummyRes.ta.mjs";
+import { type MIDDummyRes, _decode_MIDDummyRes, _encode_MIDDummyRes } from "../SS-MID-Operations-asn1-97/MIDDummyRes.ta.mjs";
 import { userNotSubscribed } from "../General-Error-List/userNotSubscribed.oa.mjs";
 import { invalidServedUserNr } from "../General-Error-List/invalidServedUserNr.oa.mjs";
 import { invalidMailbox } from "../SS-MID-Operations-asn1-97/invalidMailbox.oa.mjs";

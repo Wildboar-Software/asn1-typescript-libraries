@@ -1,6 +1,6 @@
 /* eslint-disable */
 import {
-  INTEGER,
+  type INTEGER,
   ASN1Element as _Element,
   ASN1TagClass as _TagClass,
   ASN1Construction as _Construction,
@@ -46,7 +46,7 @@ export class BioAPI_DATE {
    * @public
    * @readonly
    */
-  readonly year: INTEGER;
+  public readonly year: INTEGER;
   /**
    * @summary `month`.
    * @description
@@ -57,7 +57,7 @@ export class BioAPI_DATE {
    * @public
    * @readonly
    */
-  readonly month: INTEGER;
+  public readonly month: INTEGER;
   /**
    * @summary `day`.
    * @description
@@ -68,7 +68,7 @@ export class BioAPI_DATE {
    * @public
    * @readonly
    */
-  readonly day: INTEGER;
+  public readonly day: INTEGER;
 
   constructor(
     year: INTEGER,

@@ -1,17 +1,18 @@
 /* eslint-disable */
 import {
-    OPTIONAL,
-    ASN1Element as _Element,
+    type OCTET_STRING,
+    type OPTIONAL,
+    type ASN1Element as _Element,
     ASN1TagClass as _TagClass
 } from "@wildboar/asn1";
 import * as $ from "@wildboar/asn1/functional";
-import { USIServiceIndicator, _decode_USIServiceIndicator, _encode_USIServiceIndicator } from "../IN-CS2-datatypes/USIServiceIndicator.ta.mjs";
+import { type USIServiceIndicator, _decode_USIServiceIndicator, _encode_USIServiceIndicator } from "../IN-CS2-datatypes/USIServiceIndicator.ta.mjs";
 // export { USIServiceIndicator, _decode_USIServiceIndicator, _encode_USIServiceIndicator } from "../IN-CS2-datatypes/USIServiceIndicator.ta.mjs";
-import { LegID, _decode_LegID, _encode_LegID } from "../IN-CS2-datatypes/LegID.ta.mjs";
+import { type LegID, _decode_LegID, _encode_LegID } from "../IN-CS2-datatypes/LegID.ta.mjs";
 // export { LegID, _decode_LegID, _encode_LegID } from "../IN-CS2-datatypes/LegID.ta.mjs";
 import { leg1 } from "../IN-CS2-datatypes/leg1.va.mjs";
 // export { leg1 } from "../IN-CS2-datatypes/leg1.va.mjs";
-import { USIInformation, _decode_USIInformation, _encode_USIInformation } from "../IN-CS2-datatypes/USIInformation.ta.mjs";
+import { type USIInformation, _decode_USIInformation, _encode_USIInformation } from "../IN-CS2-datatypes/USIInformation.ta.mjs";
 // export { USIInformation, _decode_USIInformation, _encode_USIInformation } from "../IN-CS2-datatypes/USIInformation.ta.mjs";
 import { ExtensionField, _decode_ExtensionField, _encode_ExtensionField } from "../IN-CS2-datatypes/ExtensionField.ta.mjs";
 // export { ExtensionField, _decode_ExtensionField, _encode_ExtensionField } from "../IN-CS2-datatypes/ExtensionField.ta.mjs";
@@ -106,7 +107,9 @@ class SendSTUIArg {
      * @static
      * @method
      */
-    public static get _default_value_for_legID () { return { sendingSideID: leg1 }; }
+    public static get _default_value_for_legID (): {
+        sendingSideID: OCTET_STRING;
+    } { return { sendingSideID: leg1 }; }
 }
 
 /**

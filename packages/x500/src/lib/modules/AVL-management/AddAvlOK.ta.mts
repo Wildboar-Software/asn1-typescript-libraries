@@ -1,9 +1,9 @@
 /* eslint-disable */
 import {
     ASN1ConstructionError as _ConstructionError,
-    ASN1Element as _Element,
+    type ASN1Element as _Element,
     ASN1TagClass as _TagClass,
-    NULL,
+    type NULL,
 } from "@wildboar/asn1";
 import * as $ from "@wildboar/asn1/functional";
 
@@ -23,24 +23,30 @@ import * as $ from "@wildboar/asn1/functional";
  *
  */
 export class AddAvlOK {
+    /**
+     * @summary `ok`.
+     * @description
+     *
+     * Success marker (`NULL`).
+     *
+     * @public
+     * @readonly
+     */
+    public readonly ok: NULL;
+    /**
+     * @summary Extensions that are not recognized.
+     * @public
+     * @readonly
+     */
+    public readonly _unrecognizedExtensionsList: _Element[];
+
     constructor(
-        /**
-         * @summary `ok`.
-         * @description
-         *
-         * Success marker (`NULL`).
-         *
-         * @public
-         * @readonly
-         */
-        readonly ok: NULL,
-        /**
-         * @summary Extensions that are not recognized.
-         * @public
-         * @readonly
-         */
-        readonly _unrecognizedExtensionsList: _Element[] = []
-    ) {}
+        ok: NULL,
+        _unrecognizedExtensionsList: _Element[] = []
+    ) {
+        this.ok = ok;
+        this._unrecognizedExtensionsList = _unrecognizedExtensionsList;
+    }
 
     /**
      * @summary Restructures an object into a AddAvlOK

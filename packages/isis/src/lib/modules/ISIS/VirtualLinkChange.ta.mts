@@ -77,7 +77,7 @@ export type VirtualLinkChange = _enum_for_VirtualLinkChange;
  *
  * @enum {number}
  */
-export const VirtualLinkChange = _enum_for_VirtualLinkChange;
+export const VirtualLinkChange: typeof _enum_for_VirtualLinkChange = _enum_for_VirtualLinkChange;
 
 /**
  * @summary VirtualLinkChange_deleted
@@ -90,7 +90,7 @@ export const VirtualLinkChange = _enum_for_VirtualLinkChange;
  * @constant
  * @type {number}
  */
-export const VirtualLinkChange_deleted: VirtualLinkChange =
+export const VirtualLinkChange_deleted: 0 =
   VirtualLinkChange.deleted; /* LONG_NAMED_ENUMERATED_VALUE */
 
 /**
@@ -98,7 +98,7 @@ export const VirtualLinkChange_deleted: VirtualLinkChange =
  * @constant
  * @type {number}
  */
-export const deleted: VirtualLinkChange =
+export const deleted: 0 =
   VirtualLinkChange.deleted; /* SHORT_NAMED_ENUMERATED_VALUE */
 
 /**
@@ -112,7 +112,7 @@ export const deleted: VirtualLinkChange =
  * @constant
  * @type {number}
  */
-export const VirtualLinkChange_created: VirtualLinkChange =
+export const VirtualLinkChange_created: 1 =
   VirtualLinkChange.created; /* LONG_NAMED_ENUMERATED_VALUE */
 
 /**
@@ -120,14 +120,25 @@ export const VirtualLinkChange_created: VirtualLinkChange =
  * @constant
  * @type {number}
  */
-export const created: VirtualLinkChange =
+export const created: 1 =
   VirtualLinkChange.created; /* SHORT_NAMED_ENUMERATED_VALUE */
 
 
-export const _decode_VirtualLinkChange = $._decodeEnumerated as $.ASN1Decoder<VirtualLinkChange>;
+export function _decode_VirtualLinkChange(el: _Element): VirtualLinkChange {
+  const enumerated = $._decodeEnumerated(el);
+  switch (enumerated) {
+    case VirtualLinkChange.deleted: return VirtualLinkChange.deleted;
+    case VirtualLinkChange.created: return VirtualLinkChange.created;
+    default:
+      throw new _ConstructionError(
+        'Invalid ENUMERATED value ' + enumerated + ' for VirtualLinkChange.',
+        el,
+      );
+  }
+}
 
 
-export const _encode_VirtualLinkChange = $._encodeEnumerated as $.ASN1Encoder<VirtualLinkChange>;
+export const _encode_VirtualLinkChange: $.ASN1Encoder<VirtualLinkChange> = $._encodeEnumerated as $.ASN1Encoder<VirtualLinkChange>;
 
 
 /* eslint-enable */

@@ -1,13 +1,13 @@
 /* eslint-disable */
 import {
-    ASN1Element as _Element,
+    type ASN1Element as _Element,
     ASN1TagClass as _TagClass,
-    OCTET_STRING,
-    OPTIONAL,
+    type OCTET_STRING,
+    type OPTIONAL,
 } from "@wildboar/asn1";
 import * as $ from "@wildboar/asn1/functional";
 import {
-    ContentEncryptionAlgorithmIdentifier,
+    type ContentEncryptionAlgorithmIdentifier,
     _decode_ContentEncryptionAlgorithmIdentifier,
     _encode_ContentEncryptionAlgorithmIdentifier,
 } from "../CryptographicMessageSyntax-2010/ContentEncryptionAlgorithmIdentifier.ta.mjs";
@@ -30,26 +30,34 @@ import {
  *
  */
 export class EncryptedRecipientID {
+    /**
+     * @summary `algorithm`.
+     * @public
+     * @readonly
+     */
+    public readonly algorithm: OPTIONAL<ContentEncryptionAlgorithmIdentifier>;
+    /**
+     * @summary `keyID`.
+     * @public
+     * @readonly
+     */
+    public readonly keyID: OPTIONAL<OCTET_STRING>;
+    /**
+     * @summary `ciphertext`.
+     * @public
+     * @readonly
+     */
+    public readonly ciphertext: OCTET_STRING;
+
     constructor(
-        /**
-         * @summary `algorithm`.
-         * @public
-         * @readonly
-         */
-        readonly algorithm: OPTIONAL<ContentEncryptionAlgorithmIdentifier>,
-        /**
-         * @summary `keyID`.
-         * @public
-         * @readonly
-         */
-        readonly keyID: OPTIONAL<OCTET_STRING>,
-        /**
-         * @summary `ciphertext`.
-         * @public
-         * @readonly
-         */
-        readonly ciphertext: OCTET_STRING
-    ) {}
+        algorithm: OPTIONAL<ContentEncryptionAlgorithmIdentifier>,
+        keyID: OPTIONAL<OCTET_STRING>,
+        ciphertext: OCTET_STRING
+    ) {
+        this.algorithm = algorithm;
+        this.keyID = keyID;
+        this.ciphertext = ciphertext;
+    }
 
     /**
      * @summary Restructures an object into a EncryptedRecipientID

@@ -1,5 +1,5 @@
 import {
-    ASN1Element as _Element,
+    type ASN1Element as _Element,
     ASN1SizeError,
 } from "@wildboar/asn1";
 import * as $ from "@wildboar/asn1/functional";
@@ -24,4 +24,4 @@ export const _decode_ChangeOfPositionControlInfo = (el: _Element): ChangeOfPosit
     }
     return value;
 };
-export const _encode_ChangeOfPositionControlInfo = $._encodeSequenceOf<ChangeOfLocation>(() => _encode_ChangeOfLocation, $.BER);
+export const _encode_ChangeOfPositionControlInfo: $.SequenceOfEncoder<ChangeOfLocation> = $._encodeSequenceOf<ChangeOfLocation>(() => _encode_ChangeOfLocation, $.BER);

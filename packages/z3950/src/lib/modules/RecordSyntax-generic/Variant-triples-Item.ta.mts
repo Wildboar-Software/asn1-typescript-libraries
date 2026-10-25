@@ -1,13 +1,13 @@
 /* eslint-disable */
 import {
-    INTEGER,
-    OBJECT_IDENTIFIER,
-    OPTIONAL,
-    ASN1Element as _Element,
+    type INTEGER,
+    type OBJECT_IDENTIFIER,
+    type OPTIONAL,
+    type ASN1Element as _Element,
     ASN1TagClass as _TagClass
 } from "@wildboar/asn1";
 import * as $ from "@wildboar/asn1/functional";
-import { Variant_triples_Item_value, _decode_Variant_triples_Item_value, _encode_Variant_triples_Item_value } from "../RecordSyntax-generic/Variant-triples-Item-value.ta.mjs";
+import { type Variant_triples_Item_value, _decode_Variant_triples_Item_value, _encode_Variant_triples_Item_value } from "../RecordSyntax-generic/Variant-triples-Item-value.ta.mjs";
 
 
 /**

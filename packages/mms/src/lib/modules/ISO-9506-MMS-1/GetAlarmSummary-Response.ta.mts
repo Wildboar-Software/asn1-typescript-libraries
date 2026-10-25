@@ -1,8 +1,8 @@
 /* eslint-disable */
 import {
-    OPTIONAL,
-    BOOLEAN,
-    ASN1Element as _Element,
+    type OPTIONAL,
+    type BOOLEAN,
+    type ASN1Element as _Element,
     ASN1TagClass as _TagClass,
     ASN1Construction as _Construction,
     ASN1UniversalType as _UniversalType,
@@ -38,35 +38,41 @@ import { AlarmSummary, _decode_AlarmSummary, _encode_AlarmSummary } from "../ISO
  */
 export
 class GetAlarmSummary_Response {
+    /**
+     * @summary `listOfAlarmSummary`.
+     * @description
+     *
+     * One Alarm Summary per matching monitored Event
+     * Condition, in collation sequence.
+     *
+     * [ISO 9506-1:2003 §18.5.1.2.1]
+     *
+     * @public
+     * @readonly
+     */
+    public readonly listOfAlarmSummary: AlarmSummary[];
+    /**
+     * @summary `moreFollows`.
+     * @description
+     *
+     * True if this response is incomplete and a
+     * continuation request is needed. If true, the list
+     * contains at least one entry. Default false.
+     *
+     * [ISO 9506-1:2003 §18.5.1.2.2]
+     *
+     * @public
+     * @readonly
+     */
+    public readonly moreFollows?: OPTIONAL<BOOLEAN>;
+
     constructor (
-        /**
-         * @summary `listOfAlarmSummary`.
-         * @description
-         *
-         * One Alarm Summary per matching monitored Event
-         * Condition, in collation sequence.
-         *
-         * [ISO 9506-1:2003 §18.5.1.2.1]
-         *
-         * @public
-         * @readonly
-         */
-        readonly listOfAlarmSummary: AlarmSummary[],
-        /**
-         * @summary `moreFollows`.
-         * @description
-         *
-         * True if this response is incomplete and a
-         * continuation request is needed. If true, the list
-         * contains at least one entry. Default false.
-         *
-         * [ISO 9506-1:2003 §18.5.1.2.2]
-         *
-         * @public
-         * @readonly
-         */
-        readonly moreFollows?: OPTIONAL<BOOLEAN>
-    ) {}
+        listOfAlarmSummary: AlarmSummary[],
+        moreFollows?: OPTIONAL<BOOLEAN>
+    ) {
+        this.listOfAlarmSummary = listOfAlarmSummary;
+        this.moreFollows = moreFollows;
+    }
 
     /**
      * @summary Restructures an object into a GetAlarmSummary_Response

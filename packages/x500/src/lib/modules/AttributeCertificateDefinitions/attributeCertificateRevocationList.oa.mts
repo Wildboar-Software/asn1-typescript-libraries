@@ -1,7 +1,7 @@
 /* eslint-disable */
 import { id_at_attributeCertificateRevocationList } from "../AttributeCertificateDefinitions/id-at-attributeCertificateRevocationList.va.mjs";
 import {
-    CertificateList,
+    type CertificateList,
     _decode_CertificateList,
     _encode_CertificateList,
 } from "../AuthenticationFramework/CertificateList.ta.mjs";

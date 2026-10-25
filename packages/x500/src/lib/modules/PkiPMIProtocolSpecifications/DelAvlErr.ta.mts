@@ -1,12 +1,12 @@
 /* eslint-disable */
 import {
     ASN1ConstructionError as _ConstructionError,
-    ASN1Element as _Element,
+    type ASN1Element as _Element,
     ASN1TagClass as _TagClass,
 } from "@wildboar/asn1";
 import * as $ from "@wildboar/asn1/functional";
 import {
-    AVMP_error,
+    type AVMP_error,
     _decode_AVMP_error,
     _encode_AVMP_error,
     _enum_for_AVMP_error,
@@ -25,20 +25,26 @@ import {
  *
  */
 export class DelAvlErr {
+    /**
+     * @summary `notOK`.
+     * @public
+     * @readonly
+     */
+    public readonly notOK: AVMP_error;
+    /**
+     * @summary Extensions that are not recognized.
+     * @public
+     * @readonly
+     */
+    public readonly _unrecognizedExtensionsList: _Element[];
+
     constructor(
-        /**
-         * @summary `notOK`.
-         * @public
-         * @readonly
-         */
-        readonly notOK: AVMP_error,
-        /**
-         * @summary Extensions that are not recognized.
-         * @public
-         * @readonly
-         */
-        readonly _unrecognizedExtensionsList: _Element[] = []
-    ) {}
+        notOK: AVMP_error,
+        _unrecognizedExtensionsList: _Element[] = []
+    ) {
+        this.notOK = notOK;
+        this._unrecognizedExtensionsList = _unrecognizedExtensionsList;
+    }
 
     /**
      * @summary Restructures an object into a DelAvlErr
@@ -64,7 +70,7 @@ export class DelAvlErr {
      * @static
      */
 
-    public static _enum_for_notOK = _enum_for_AVMP_error;
+    public static _enum_for_notOK: typeof _enum_for_AVMP_error = _enum_for_AVMP_error;
 }
 
 /**

@@ -1,7 +1,7 @@
 /* eslint-disable */
 import {
-    BIT_STRING,
-    ASN1Element as _Element,
+    type BIT_STRING,
+    type ASN1Element as _Element,
     ASN1TagClass as _TagClass,
     ASN1Construction as _Construction,
     ASN1UniversalType as _UniversalType,
@@ -52,10 +52,10 @@ export const DeliveryFlags_implicit_conversion_prohibited: number = 1; /* LONG_N
 export const implicit_conversion_prohibited: number = DeliveryFlags_implicit_conversion_prohibited; /* SHORT_NAMED_BIT */
 
 
-export const _decode_DeliveryFlags = $._decodeBitString;
+export const _decode_DeliveryFlags: $.ASN1Decoder<BIT_STRING> = $._decodeBitString;
 
 
-export const _encode_DeliveryFlags = $._encodeBitString;
+export const _encode_DeliveryFlags: $.ASN1Encoder<BIT_STRING> = $._encodeBitString;
 
 
 /* eslint-enable */

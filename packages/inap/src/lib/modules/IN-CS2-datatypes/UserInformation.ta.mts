@@ -1,11 +1,11 @@
 /* eslint-disable */
 import {
-    OPTIONAL,
-    ASN1Element as _Element,
+    type OPTIONAL,
+    type ASN1Element as _Element,
     ASN1TagClass as _TagClass
 } from "@wildboar/asn1";
 import * as $ from "@wildboar/asn1/functional";
-import { InfoToSend, _decode_InfoToSend, _encode_InfoToSend } from "../IN-CS2-datatypes/InfoToSend.ta.mjs";
+import { type InfoToSend, _decode_InfoToSend, _encode_InfoToSend } from "../IN-CS2-datatypes/InfoToSend.ta.mjs";
 // export { InfoToSend, _decode_InfoToSend, _encode_InfoToSend } from "../IN-CS2-datatypes/InfoToSend.ta.mjs";
 import { Constraints, _decode_Constraints, _encode_Constraints } from "../IN-CS2-datatypes/Constraints.ta.mjs";
 // export { Constraints, _decode_Constraints, _encode_Constraints } from "../IN-CS2-datatypes/Constraints.ta.mjs";

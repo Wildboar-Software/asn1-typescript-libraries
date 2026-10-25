@@ -67,7 +67,7 @@ type InterrogationType = _enum_for_InterrogationType;
  * @enum {number}
  */
 export
-const InterrogationType = _enum_for_InterrogationType;
+const InterrogationType: typeof _enum_for_InterrogationType = _enum_for_InterrogationType;
 
 /**
  * @summary InterrogationType_basicCall
@@ -79,7 +79,7 @@ const InterrogationType = _enum_for_InterrogationType;
  * @type {number}
  */
 export
-const InterrogationType_basicCall: InterrogationType = InterrogationType.basicCall; /* LONG_NAMED_ENUMERATED_VALUE */
+const InterrogationType_basicCall: _enum_for_InterrogationType.basicCall = InterrogationType.basicCall; /* LONG_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary basicCall
@@ -91,7 +91,7 @@ const InterrogationType_basicCall: InterrogationType = InterrogationType.basicCa
  * @type {number}
  */
 export
-const basicCall: InterrogationType = InterrogationType.basicCall; /* SHORT_NAMED_ENUMERATED_VALUE */
+const basicCall: _enum_for_InterrogationType.basicCall = InterrogationType.basicCall; /* SHORT_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary InterrogationType_forwarding
@@ -103,7 +103,7 @@ const basicCall: InterrogationType = InterrogationType.basicCall; /* SHORT_NAMED
  * @type {number}
  */
 export
-const InterrogationType_forwarding: InterrogationType = InterrogationType.forwarding; /* LONG_NAMED_ENUMERATED_VALUE */
+const InterrogationType_forwarding: _enum_for_InterrogationType.forwarding = InterrogationType.forwarding; /* LONG_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary forwarding
@@ -115,7 +115,7 @@ const InterrogationType_forwarding: InterrogationType = InterrogationType.forwar
  * @type {number}
  */
 export
-const forwarding: InterrogationType = InterrogationType.forwarding; /* SHORT_NAMED_ENUMERATED_VALUE */
+const forwarding: _enum_for_InterrogationType.forwarding = InterrogationType.forwarding; /* SHORT_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary Decodes an ASN.1 element into a(n) InterrogationType
@@ -123,7 +123,7 @@ const forwarding: InterrogationType = InterrogationType.forwarding; /* SHORT_NAM
  * @param el The element being decoded.
  * @returns The decoded data structure.
  */
-export const _decode_InterrogationType = $._decodeEnumerated;
+export const _decode_InterrogationType: $.ASN1Decoder<number> = $._decodeEnumerated;
 
 /**
  * @summary Encodes a(n) InterrogationType into an ASN.1 Element.
@@ -132,7 +132,7 @@ export const _decode_InterrogationType = $._decodeEnumerated;
  * @param elGetter A function that can be used to get new ASN.1 elements.
  * @returns {_Element} The InterrogationType, encoded as an ASN.1 Element.
  */
-export const _encode_InterrogationType = $._encodeEnumerated;
+export const _encode_InterrogationType: $.ASN1Encoder<number> = $._encodeEnumerated;
 
 
 /* eslint-enable */

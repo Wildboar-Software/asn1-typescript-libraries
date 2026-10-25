@@ -7,7 +7,7 @@ import {
     _get_encoder_for_KeyInfo_paramsAndOps,
 } from "../PKCS-15/KeyInfo-paramsAndOps.ta.mjs";
 import {
-    Reference,
+    type Reference,
     _decode_Reference,
     _encode_Reference,
 } from "../PKCS-15/Reference.ta.mjs";

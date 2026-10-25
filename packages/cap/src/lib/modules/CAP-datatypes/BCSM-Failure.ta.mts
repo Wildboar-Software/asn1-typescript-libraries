@@ -1,6 +1,6 @@
 import {
-    OPTIONAL,
-    ASN1Element as _Element,
+    type OPTIONAL,
+    type ASN1Element as _Element,
     ASN1TagClass as _TagClass,
 } from "@wildboar/asn1";
 import * as $ from "@wildboar/asn1/functional";
@@ -26,33 +26,41 @@ import { type Cause, _decode_Cause, _encode_Cause } from "./Cause.ta.mjs";
  *
  */
 export class BCSM_Failure {
+    /**
+     * @summary `legID`.
+     * @description
+     *
+     * Released leg. Receiving Side LegID (gsmSSF → gsmSCF). LegID 1 =
+     * calling party; 2 = called party from InitialDP; > 2 = called party
+     * from InitiateCallAttempt.
+     * (3GPP TS 29.078 V19.0.0 clauses 11.16 and 4.1.5).
+     *
+     * @public
+     * @readonly
+     */
+    public readonly legID?: OPTIONAL<LegID>;
+    /**
+     * @summary `cause`.
+     * @description
+     *
+     * Cause for releasing this BCSM. gsmSCF may use it to decide further
+     * call handling. (3GPP TS 29.078 V19.0.0 clause 11.16).
+     *
+     * @public
+     * @readonly
+     */
+    public readonly cause?: OPTIONAL<Cause>;
+    public readonly _unrecognizedExtensionsList: _Element[];
+
     constructor (
-        /**
-         * @summary `legID`.
-         * @description
-         *
-         * Released leg. Receiving Side LegID (gsmSSF → gsmSCF). LegID 1 =
-         * calling party; 2 = called party from InitialDP; > 2 = called party
-         * from InitiateCallAttempt.
-         * (3GPP TS 29.078 V19.0.0 clauses 11.16 and 4.1.5).
-         *
-         * @public
-         * @readonly
-         */
-        readonly legID?: OPTIONAL<LegID>,
-        /**
-         * @summary `cause`.
-         * @description
-         *
-         * Cause for releasing this BCSM. gsmSCF may use it to decide further
-         * call handling. (3GPP TS 29.078 V19.0.0 clause 11.16).
-         *
-         * @public
-         * @readonly
-         */
-        readonly cause?: OPTIONAL<Cause>,
-        readonly _unrecognizedExtensionsList: _Element[] = [],
-    ) {}
+        legID?: OPTIONAL<LegID>,
+        cause?: OPTIONAL<Cause>,
+        _unrecognizedExtensionsList: _Element[] = [],
+    ) {
+        this.legID = legID;
+        this.cause = cause;
+        this._unrecognizedExtensionsList = _unrecognizedExtensionsList;
+    }
 
     public static _from_object (_o: { [_K in keyof (BCSM_Failure)]: (BCSM_Failure)[_K] }): BCSM_Failure {
         return new BCSM_Failure(_o.legID, _o.cause, _o._unrecognizedExtensionsList);

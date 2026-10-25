@@ -1,14 +1,14 @@
 /* eslint-disable */
 import {
-    OCTET_STRING,
-    OPTIONAL,
-    ASN1Element as _Element,
+    type OCTET_STRING,
+    type OPTIONAL,
+    type ASN1Element as _Element,
     ASN1TagClass as _TagClass,
     ASN1SizeError
 } from "@wildboar/asn1";
 import * as $ from "@wildboar/asn1/functional";
 import { LCSClientExternalID, _decode_LCSClientExternalID, _encode_LCSClientExternalID } from "./LCSClientExternalID.ta.mjs";
-import { LCSClientIdentity_lcsClientInternalID, _decode_LCSClientIdentity_lcsClientInternalID, _encode_LCSClientIdentity_lcsClientInternalID, _enum_for_LCSClientIdentity_lcsClientInternalID } from "./LCSClientIdentity-lcsClientInternalID.ta.mjs";
+import { type LCSClientIdentity_lcsClientInternalID, _decode_LCSClientIdentity_lcsClientInternalID, _encode_LCSClientIdentity_lcsClientInternalID, _enum_for_LCSClientIdentity_lcsClientInternalID } from "./LCSClientIdentity-lcsClientInternalID.ta.mjs";
 
 
 /**
@@ -140,7 +140,7 @@ class LCSClientIdentity {
          * @static
          */
 
-    public static _enum_for_lcsClientInternalID = _enum_for_LCSClientIdentity_lcsClientInternalID;
+    public static _enum_for_lcsClientInternalID: typeof _enum_for_LCSClientIdentity_lcsClientInternalID = _enum_for_LCSClientIdentity_lcsClientInternalID;
 }
 
 /**

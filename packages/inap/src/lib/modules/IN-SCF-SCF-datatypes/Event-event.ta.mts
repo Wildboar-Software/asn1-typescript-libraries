@@ -1,4 +1,5 @@
 /* eslint-disable */
+import { ASN1Element as _Element, ASN1ConstructionError as _ConstructionError } from "@wildboar/asn1";
 import * as $ from "@wildboar/asn1/functional";
 
 
@@ -69,7 +70,7 @@ type Event_event = _enum_for_Event_event;
  * @enum {number}
  */
 export
-const Event_event = _enum_for_Event_event;
+const Event_event: typeof _enum_for_Event_event = _enum_for_Event_event;
 
 /**
  * @summary Event_event_now
@@ -77,7 +78,7 @@ const Event_event = _enum_for_Event_event;
  * @type {number}
  */
 export
-const Event_event_now: Event_event = Event_event.now; /* LONG_NAMED_ENUMERATED_VALUE */
+const Event_event_now: _enum_for_Event_event.now = Event_event.now; /* LONG_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary now
@@ -85,7 +86,7 @@ const Event_event_now: Event_event = Event_event.now; /* LONG_NAMED_ENUMERATED_V
  * @type {number}
  */
 export
-const now: Event_event = Event_event.now; /* SHORT_NAMED_ENUMERATED_VALUE */
+const now: _enum_for_Event_event.now = Event_event.now; /* SHORT_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary Event_event_answer
@@ -93,7 +94,7 @@ const now: Event_event = Event_event.now; /* SHORT_NAMED_ENUMERATED_VALUE */
  * @type {number}
  */
 export
-const Event_event_answer: Event_event = Event_event.answer; /* LONG_NAMED_ENUMERATED_VALUE */
+const Event_event_answer: _enum_for_Event_event.answer = Event_event.answer; /* LONG_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary answer
@@ -101,7 +102,7 @@ const Event_event_answer: Event_event = Event_event.answer; /* LONG_NAMED_ENUMER
  * @type {number}
  */
 export
-const answer: Event_event = Event_event.answer; /* SHORT_NAMED_ENUMERATED_VALUE */
+const answer: _enum_for_Event_event.answer = Event_event.answer; /* SHORT_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary Event_event_user_interaction
@@ -109,7 +110,7 @@ const answer: Event_event = Event_event.answer; /* SHORT_NAMED_ENUMERATED_VALUE 
  * @type {number}
  */
 export
-const Event_event_user_interaction: Event_event = Event_event.user_interaction; /* LONG_NAMED_ENUMERATED_VALUE */
+const Event_event_user_interaction: _enum_for_Event_event.user_interaction = Event_event.user_interaction; /* LONG_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary user_interaction
@@ -117,7 +118,7 @@ const Event_event_user_interaction: Event_event = Event_event.user_interaction; 
  * @type {number}
  */
 export
-const user_interaction: Event_event = Event_event.user_interaction; /* SHORT_NAMED_ENUMERATED_VALUE */
+const user_interaction: _enum_for_Event_event.user_interaction = Event_event.user_interaction; /* SHORT_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary Event_event_failure
@@ -125,7 +126,7 @@ const user_interaction: Event_event = Event_event.user_interaction; /* SHORT_NAM
  * @type {number}
  */
 export
-const Event_event_failure: Event_event = Event_event.failure; /* LONG_NAMED_ENUMERATED_VALUE */
+const Event_event_failure: _enum_for_Event_event.failure = Event_event.failure; /* LONG_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary failure
@@ -133,12 +134,25 @@ const Event_event_failure: Event_event = Event_event.failure; /* LONG_NAMED_ENUM
  * @type {number}
  */
 export
-const failure: Event_event = Event_event.failure; /* SHORT_NAMED_ENUMERATED_VALUE */
+const failure: _enum_for_Event_event.failure = Event_event.failure; /* SHORT_NAMED_ENUMERATED_VALUE */
 
 export
-const _decode_Event_event: $.ASN1Decoder<Event_event> = $._decodeEnumerated;
+function _decode_Event_event(el: _Element): Event_event {
+    const enumerated = $._decodeEnumerated(el);
+    switch (enumerated) {
+        case Event_event.now: return Event_event.now;
+        case Event_event.answer: return Event_event.answer;
+        case Event_event.user_interaction: return Event_event.user_interaction;
+        case Event_event.failure: return Event_event.failure;
+        default:
+            throw new _ConstructionError(
+                "Invalid ENUMERATED value " + enumerated + " for Event_event.",
+                el,
+            );
+    }
+}
 
 export
-const _encode_Event_event: $.ASN1Encoder<Event_event> = $._encodeEnumerated;
+const _encode_Event_event: $.ASN1Encoder<Event_event> = $._encodeEnumerated as $.ASN1Encoder<Event_event>;
 
 /* eslint-enable */

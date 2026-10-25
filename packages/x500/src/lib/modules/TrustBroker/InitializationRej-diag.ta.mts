@@ -1,5 +1,5 @@
 /* eslint-disable */
-import { ASN1Element as _Element, ENUMERATED } from "@wildboar/asn1";
+import { ASN1Element as _Element, type ENUMERATED } from "@wildboar/asn1";
 import * as $ from "@wildboar/asn1/functional";
 
 export enum _enum_for_InitializationRej_diag {
@@ -33,7 +33,7 @@ export type InitializationRej_diag =
  * @constant
  * @type {number}
  */
-export const InitializationRej_diag_unsupportedVersions: InitializationRej_diag = 0; /* LONG_NAMED_ENUMERATED_VALUE */
+export const InitializationRej_diag_unsupportedVersions: _enum_for_InitializationRej_diag.unsupportedVersions = _enum_for_InitializationRej_diag.unsupportedVersions; /* LONG_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary unsupportedVersions
@@ -44,13 +44,13 @@ export const InitializationRej_diag_unsupportedVersions: InitializationRej_diag 
  * @constant
  * @type {number}
  */
-export const unsupportedVersions: InitializationRej_diag = InitializationRej_diag_unsupportedVersions; /* SHORT_NAMED_ENUMERATED_VALUE */
+export const unsupportedVersions: _enum_for_InitializationRej_diag.unsupportedVersions = InitializationRej_diag_unsupportedVersions; /* SHORT_NAMED_ENUMERATED_VALUE */
 
 
-export const _decode_InitializationRej_diag = $._decodeEnumerated;
+export const _decode_InitializationRej_diag: $.ASN1Decoder<number> = $._decodeEnumerated;
 
 
-export const _encode_InitializationRej_diag = $._encodeEnumerated;
+export const _encode_InitializationRej_diag: $.ASN1Encoder<number> = $._encodeEnumerated;
 
 
 /* eslint-enable */

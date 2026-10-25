@@ -1,7 +1,7 @@
 /* eslint-disable */
 import {
-    OPTIONAL,
-    ASN1Element as _Element,
+    type OPTIONAL,
+    type ASN1Element as _Element,
     ASN1TagClass as _TagClass,
     ASN1Construction as _Construction,
     ASN1UniversalType as _UniversalType,
@@ -11,8 +11,8 @@ import {
     ASN1ConstructionError as _ConstructionError,
 } from "@wildboar/asn1";
 import * as $ from "@wildboar/asn1/functional";
-import { BiometricType, _decode_BiometricType, _encode_BiometricType } from "../CBEFF-DATA-ELEMENTS/BiometricType.ta.mjs";
-import { BiometricSubtype, _decode_BiometricSubtype, _encode_BiometricSubtype } from "../CBEFF-DATA-ELEMENTS/BiometricSubtype.ta.mjs";
+import { type BiometricType, _decode_BiometricType, _encode_BiometricType } from "../CBEFF-DATA-ELEMENTS/BiometricType.ta.mjs";
+import { type BiometricSubtype, _decode_BiometricSubtype, _encode_BiometricSubtype } from "../CBEFF-DATA-ELEMENTS/BiometricSubtype.ta.mjs";
 
 
 /**
@@ -37,31 +37,37 @@ import { BiometricSubtype, _decode_BiometricSubtype, _encode_BiometricSubtype } 
  */
 export
 class Modality {
+    /**
+     * @summary `type_`.
+     * @description
+     *
+     * CBEFF biometric type (e.g. face, iris). Mandatory unless the
+     * product output is a comparison score or comparison result
+     * (Clause 6.4.2.3).
+     *
+     * @public
+     * @readonly
+     */
+    public readonly type_: BiometricType;
+    /**
+     * @summary `subtype`.
+     * @description
+     *
+     * CBEFF biometric subtype (e.g. index finger code 02)
+     * (Clause 6.4.2.3, Annex B.4).
+     *
+     * @public
+     * @readonly
+     */
+    public readonly subtype?: OPTIONAL<BiometricSubtype>;
+
     constructor (
-        /**
-         * @summary `type_`.
-         * @description
-         *
-         * CBEFF biometric type (e.g. face, iris). Mandatory unless the
-         * product output is a comparison score or comparison result
-         * (Clause 6.4.2.3).
-         *
-         * @public
-         * @readonly
-         */
-        readonly type_: BiometricType,
-        /**
-         * @summary `subtype`.
-         * @description
-         *
-         * CBEFF biometric subtype (e.g. index finger code 02)
-         * (Clause 6.4.2.3, Annex B.4).
-         *
-         * @public
-         * @readonly
-         */
-        readonly subtype?: OPTIONAL<BiometricSubtype>
-    ) {}
+        type_: BiometricType,
+        subtype?: OPTIONAL<BiometricSubtype>
+    ) {
+        this.type_ = type_;
+        this.subtype = subtype;
+    }
 
     /**
      * @summary Restructures an object into a Modality

@@ -2,19 +2,19 @@
 
 import * as $ from "@wildboar/asn1/functional";
 import {
-    OPTIONAL,
-    SEQUENCE,
-    SET,
-    ASN1Element as _Element,
+    type OPTIONAL,
+    type SEQUENCE,
+    type SET,
+    type ASN1Element as _Element,
     ASN1TagClass as _TagClass
 } from "@wildboar/asn1";
-import { ConnectionID, _decode_ConnectionID, _encode_ConnectionID } from "../CSTA-call-connection-identifiers/ConnectionID.ta.mjs";
+import { type ConnectionID, _decode_ConnectionID, _encode_ConnectionID } from "../CSTA-call-connection-identifiers/ConnectionID.ta.mjs";
 
-import { PeriodToReview, _decode_PeriodToReview, _encode_PeriodToReview } from "../CSTA-review/PeriodToReview.ta.mjs";
+import { type PeriodToReview, _decode_PeriodToReview, _encode_PeriodToReview } from "../CSTA-review/PeriodToReview.ta.mjs";
 
-import { MessageID, _decode_MessageID, _encode_MessageID } from "../CSTA-device-feature-types/MessageID.ta.mjs";
+import { type MessageID, _decode_MessageID, _encode_MessageID } from "../CSTA-device-feature-types/MessageID.ta.mjs";
 
-import { ResourceID, _decode_ResourceID, _encode_ResourceID } from "../CSTA-device-feature-types/ResourceID.ta.mjs";
+import { type ResourceID, _decode_ResourceID, _encode_ResourceID } from "../CSTA-device-feature-types/ResourceID.ta.mjs";
 
 import { CSTACommonArguments, _decode_CSTACommonArguments, _encode_CSTACommonArguments } from "../CSTA-extension-types/CSTACommonArguments.ta.mjs";
 
@@ -37,8 +37,8 @@ import { CSTACommonArguments, _decode_CSTACommonArguments, _encode_CSTACommonArg
  * ReviewArgument ::= SEQUENCE
  * {    connection            ConnectionID,
  *     periodToReview            PeriodToReview,
- *     messageToReview            MessageID                OPTIONAL,  --corrected 06/2001
- *     resource            [0] IMPLICIT ResourceID            OPTIONAL,
+ *     messageToReview            MessageID                type OPTIONAL,  --corrected 06/2001
+ *     resource            [0] IMPLICIT ResourceID            type OPTIONAL,
  *     extensions            CSTACommonArguments            OPTIONAL }
  * ```
  * 
@@ -46,62 +46,74 @@ import { CSTACommonArguments, _decode_CSTACommonArguments, _encode_CSTACommonArg
  */
 export
 class ReviewArgument {
+    /**
+     * @summary `connection`.
+     * @description
+     *
+     * Connection on which to review (ECMA-269 §26.1.12.1).
+     *
+     * @public
+     * @readonly
+     */
+    public readonly connection: ConnectionID;
+    /**
+     * @summary `periodToReview`.
+     * @description
+     *
+     * From start of message, or length in milliseconds (ECMA-269
+     * §26.1.12.1).
+     *
+     * @public
+     * @readonly
+     */
+    public readonly periodToReview: PeriodToReview;
+    /**
+     * @summary `messageToReview`.
+     * @description
+     *
+     * Mandatory if several messages are active on the connection; otherwise
+     * the currently active message (ECMA-269 §26.1.12.1).
+     *
+     * @public
+     * @readonly
+     */
+    public readonly messageToReview?: OPTIONAL<MessageID>;
+    /**
+     * @summary `resource`.
+     * @description
+     *
+     * Interactive voice resource. Required when more than one interactive
+     * voice resource exists on the connection.
+     *
+     * @public
+     * @readonly
+     */
+    public readonly resource?: OPTIONAL<ResourceID>;
+    /**
+     * @summary `extensions`.
+     * @description
+     *
+     * CSTACommonArguments carrying the service-table security and
+     * privateData parameters.
+     *
+     * @public
+     * @readonly
+     */
+    public readonly extensions?: OPTIONAL<CSTACommonArguments>;
+
     constructor (
-        /**
-         * @summary `connection`.
-         * @description
-         *
-         * Connection on which to review (ECMA-269 §26.1.12.1).
-         *
-         * @public
-         * @readonly
-         */
-        readonly connection: ConnectionID,
-        /**
-         * @summary `periodToReview`.
-         * @description
-         *
-         * From start of message, or length in milliseconds (ECMA-269
-         * §26.1.12.1).
-         *
-         * @public
-         * @readonly
-         */
-        readonly periodToReview: PeriodToReview,
-        /**
-         * @summary `messageToReview`.
-         * @description
-         *
-         * Mandatory if several messages are active on the connection; otherwise
-         * the currently active message (ECMA-269 §26.1.12.1).
-         *
-         * @public
-         * @readonly
-         */
-        readonly messageToReview?: OPTIONAL<MessageID>,
-        /**
-         * @summary `resource`.
-         * @description
-         *
-         * Interactive voice resource. Required when more than one interactive
-         * voice resource exists on the connection.
-         *
-         * @public
-         * @readonly
-         */
-        readonly resource?: OPTIONAL<ResourceID>,
-        /**
-         * @summary `extensions`.
-         * @description
-         *
-         * CSTACommonArguments carrying the service-table security and
-         * privateData parameters.
-         *
-         * @public
-         * @readonly
-         */
-        readonly extensions?: OPTIONAL<CSTACommonArguments>
-    ) {}
+        connection: ConnectionID,
+        periodToReview: PeriodToReview,
+        messageToReview?: OPTIONAL<MessageID>,
+        resource?: OPTIONAL<ResourceID>,
+        extensions?: OPTIONAL<CSTACommonArguments>
+    ) {
+        this.connection = connection;
+        this.periodToReview = periodToReview;
+        this.messageToReview = messageToReview;
+        this.resource = resource;
+        this.extensions = extensions;
+    }
 
     /**
      * @summary Restructures an object into a ReviewArgument

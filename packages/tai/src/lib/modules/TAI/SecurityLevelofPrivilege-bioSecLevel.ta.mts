@@ -1,7 +1,7 @@
 /* eslint-disable */
 import {
-    INTEGER,
-    ASN1Element as _Element,
+    type INTEGER,
+    type ASN1Element as _Element,
     ASN1TagClass as _TagClass,
     ASN1Construction as _Construction,
     ASN1UniversalType as _UniversalType,
@@ -11,7 +11,7 @@ import {
     ASN1ConstructionError as _ConstructionError,
 } from "@wildboar/asn1";
 import * as $ from "@wildboar/asn1/functional";
-import { UniqueIdentifierOfBioParaInfo, _decode_UniqueIdentifierOfBioParaInfo, _encode_UniqueIdentifierOfBioParaInfo } from "../TAI/UniqueIdentifierOfBioParaInfo.ta.mjs";
+import { type UniqueIdentifierOfBioParaInfo, _decode_UniqueIdentifierOfBioParaInfo, _encode_UniqueIdentifierOfBioParaInfo } from "../TAI/UniqueIdentifierOfBioParaInfo.ta.mjs";
 /**
  * @summary SecurityLevelofPrivilege_bioSecLevel
  * @description

@@ -1,6 +1,6 @@
 /* eslint-disable */
 import {
-    ASN1Element as _Element,
+    type ASN1Element as _Element,
     ASN1TagClass as _TagClass,
     ASN1Construction as _Construction,
     ASN1UniversalType as _UniversalType,
@@ -10,8 +10,8 @@ import {
     ASN1ConstructionError as _ConstructionError,
 } from "@wildboar/asn1";
 import * as $ from "@wildboar/asn1/functional";
-import { ECDomainParameters, _decode_ECDomainParameters, _encode_ECDomainParameters } from "../SEC1-v1-9/ECDomainParameters.ta.mjs";
-import { ECCAlgorithms, _decode_ECCAlgorithms, _encode_ECCAlgorithms } from "../SEC1-v1-9/ECCAlgorithms.ta.mjs";
+import { type ECDomainParameters, _decode_ECDomainParameters, _encode_ECDomainParameters } from "../SEC1-v1-9/ECDomainParameters.ta.mjs";
+import { type ECCAlgorithms, _decode_ECCAlgorithms, _encode_ECCAlgorithms } from "../SEC1-v1-9/ECCAlgorithms.ta.mjs";
 /**
  * @summary ECPKRestrictions
  * @description
@@ -41,7 +41,7 @@ class ECPKRestrictions {
      * @public
      * @readonly
      */
-    readonly ecDomain: ECDomainParameters;
+    public readonly ecDomain: ECDomainParameters;
     /**
      * @summary `eccAlgorithms`.
      * @description
@@ -52,7 +52,7 @@ class ECPKRestrictions {
      * @public
      * @readonly
      */
-    readonly eccAlgorithms: ECCAlgorithms;
+    public readonly eccAlgorithms: ECCAlgorithms;
 
     constructor (
         ecDomain: ECDomainParameters,

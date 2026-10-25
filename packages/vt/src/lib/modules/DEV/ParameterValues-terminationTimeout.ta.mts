@@ -1,7 +1,7 @@
 /* eslint-disable */
 import {
-    INTEGER,
-    ASN1Element as _Element,
+    type INTEGER,
+    type ASN1Element as _Element,
     ASN1TagClass as _TagClass,
     ASN1Construction as _Construction,
     ASN1UniversalType as _UniversalType,
@@ -11,7 +11,7 @@ import {
     ASN1ConstructionError as _ConstructionError,
 } from "@wildboar/asn1";
 import * as $ from "@wildboar/asn1/functional";
-import { ParameterValues_terminationTimeout_eventId, _decode_ParameterValues_terminationTimeout_eventId, _encode_ParameterValues_terminationTimeout_eventId } from "../DEV/ParameterValues-terminationTimeout-eventId.ta.mjs";
+import { type ParameterValues_terminationTimeout_eventId, _decode_ParameterValues_terminationTimeout_eventId, _encode_ParameterValues_terminationTimeout_eventId } from "../DEV/ParameterValues-terminationTimeout-eventId.ta.mjs";
 
 
 /**
@@ -40,35 +40,43 @@ import { ParameterValues_terminationTimeout_eventId, _decode_ParameterValues_ter
  */
 export
 class ParameterValues_terminationTimeout {
+    /**
+     * @summary `timeMultiplier`.
+     * @description
+     * Timeout multiplier T. Must not be negative; T=0 means
+     * infinite. ISO/IEC 9040:1997 §23.4.
+     * @public
+     * @readonly
+     */
+    public readonly timeMultiplier: INTEGER;
+    /**
+     * @summary `timeExponent`.
+     * @description
+     * Timeout exponent E. T and E encode the timeout per ISO/IEC
+     * 9040:1997 §23.4.
+     * @public
+     * @readonly
+     */
+    public readonly timeExponent: INTEGER;
+    /**
+     * @summary `eventId`.
+     * @description
+     * Agreed event-id: non-zero positive integer or `"null"`.
+     * ISO/IEC 9040:1997 §23.4.
+     * @public
+     * @readonly
+     */
+    public readonly eventId: ParameterValues_terminationTimeout_eventId;
+
     constructor (
-        /**
-         * @summary `timeMultiplier`.
-         * @description
-         * Timeout multiplier T. Must not be negative; T=0 means
-         * infinite. ISO/IEC 9040:1997 §23.4.
-         * @public
-         * @readonly
-         */
-        readonly timeMultiplier: INTEGER,
-        /**
-         * @summary `timeExponent`.
-         * @description
-         * Timeout exponent E. T and E encode the timeout per ISO/IEC
-         * 9040:1997 §23.4.
-         * @public
-         * @readonly
-         */
-        readonly timeExponent: INTEGER,
-        /**
-         * @summary `eventId`.
-         * @description
-         * Agreed event-id: non-zero positive integer or `"null"`.
-         * ISO/IEC 9040:1997 §23.4.
-         * @public
-         * @readonly
-         */
-        readonly eventId: ParameterValues_terminationTimeout_eventId
-    ) {}
+        timeMultiplier: INTEGER,
+        timeExponent: INTEGER,
+        eventId: ParameterValues_terminationTimeout_eventId
+    ) {
+        this.timeMultiplier = timeMultiplier;
+        this.timeExponent = timeExponent;
+        this.eventId = eventId;
+    }
 
     /**
      * @summary Restructures an object into a ParameterValues_terminationTimeout

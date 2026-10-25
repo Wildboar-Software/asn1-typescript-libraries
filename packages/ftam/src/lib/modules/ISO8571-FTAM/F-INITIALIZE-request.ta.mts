@@ -1,8 +1,8 @@
 /* eslint-disable */
 import {
-  OPTIONAL,
-  BOOLEAN,
-  INTEGER,
+  type OPTIONAL,
+  type BOOLEAN,
+  type INTEGER,
   TRUE_BIT,
   FALSE_BIT,
   ASN1Element as _Element,
@@ -16,57 +16,57 @@ import {
 } from '@wildboar/asn1';
 import * as $ from '@wildboar/asn1/functional';
 import {
-  Protocol_Version,
+  type Protocol_Version,
   _decode_Protocol_Version,
   _encode_Protocol_Version,
 } from '../ISO8571-FTAM/Protocol-Version.ta.mjs';
 import {
-  Implementation_Information,
+  type Implementation_Information,
   _decode_Implementation_Information,
   _encode_Implementation_Information,
 } from '../ISO8571-FTAM/Implementation-Information.ta.mjs';
 import {
-  Service_Class,
+  type Service_Class,
   _decode_Service_Class,
   _encode_Service_Class,
 } from '../ISO8571-FTAM/Service-Class.ta.mjs';
 import {
-  Functional_Units,
+  type Functional_Units,
   _decode_Functional_Units,
   _encode_Functional_Units,
 } from '../ISO8571-FTAM/Functional-Units.ta.mjs';
 import {
-  Attribute_Groups,
+  type Attribute_Groups,
   _decode_Attribute_Groups,
   _encode_Attribute_Groups,
 } from '../ISO8571-FTAM/Attribute-Groups.ta.mjs';
 import {
-  Shared_ASE_Information,
+  type Shared_ASE_Information,
   _decode_Shared_ASE_Information,
   _encode_Shared_ASE_Information,
 } from '../ISO8571-FTAM/Shared-ASE-Information.ta.mjs';
 import {
-  FTAM_Quality_of_Service,
+  type FTAM_Quality_of_Service,
   _decode_FTAM_Quality_of_Service,
   _encode_FTAM_Quality_of_Service,
 } from '../ISO8571-FTAM/FTAM-Quality-of-Service.ta.mjs';
 import {
-  Contents_Type_List,
+  type Contents_Type_List,
   _decode_Contents_Type_List,
   _encode_Contents_Type_List,
 } from '../ISO8571-FTAM/Contents-Type-List.ta.mjs';
 import {
-  User_Identity,
+  type User_Identity,
   _decode_User_Identity,
   _encode_User_Identity,
 } from '../ISO8571-FTAM/User-Identity.ta.mjs';
 import {
-  Account,
+  type Account,
   _decode_Account,
   _encode_Account,
 } from '../ISO8571-FTAM/Account.ta.mjs';
 import {
-  Password,
+  type Password,
   _decode_Password,
   _encode_Password,
 } from '../ISO8571-FTAM/Password.ta.mjs';
@@ -115,7 +115,7 @@ export class F_INITIALIZE_request {
    * @public
    * @readonly
    */
-  readonly protocol_Version: OPTIONAL<Protocol_Version>;
+  public readonly protocol_Version: OPTIONAL<Protocol_Version>;
   /**
    * @summary `implementation_information`.
    * @description
@@ -126,7 +126,7 @@ export class F_INITIALIZE_request {
    * @public
    * @readonly
    */
-  readonly implementation_information: OPTIONAL<Implementation_Information>;
+  public readonly implementation_information: OPTIONAL<Implementation_Information>;
   /**
    * @summary `presentation_tontext_management`.
    * @description
@@ -141,7 +141,7 @@ export class F_INITIALIZE_request {
    * @public
    * @readonly
    */
-  readonly presentation_tontext_management: OPTIONAL<BOOLEAN>;
+  public readonly presentation_tontext_management: OPTIONAL<BOOLEAN>;
   /**
    * @summary `service_class`.
    * @description
@@ -153,7 +153,7 @@ export class F_INITIALIZE_request {
    * @public
    * @readonly
    */
-  readonly service_class: OPTIONAL<Service_Class>;
+  public readonly service_class: OPTIONAL<Service_Class>;
   /**
    * @summary `functional_units`.
    * @description
@@ -165,7 +165,7 @@ export class F_INITIALIZE_request {
    * @public
    * @readonly
    */
-  readonly functional_units: Functional_Units;
+  public readonly functional_units: Functional_Units;
   /**
    * @summary `attribute_groups`.
    * @description
@@ -178,7 +178,7 @@ export class F_INITIALIZE_request {
    * @public
    * @readonly
    */
-  readonly attribute_groups: OPTIONAL<Attribute_Groups>;
+  public readonly attribute_groups: OPTIONAL<Attribute_Groups>;
   /**
    * @summary `shared_ASE_information`.
    * @description
@@ -190,7 +190,7 @@ export class F_INITIALIZE_request {
    * @public
    * @readonly
    */
-  readonly shared_ASE_information: OPTIONAL<Shared_ASE_Information>;
+  public readonly shared_ASE_information: OPTIONAL<Shared_ASE_Information>;
   /**
    * @summary `ftam_quality_of_Service`.
    * @description
@@ -202,7 +202,7 @@ export class F_INITIALIZE_request {
    * @public
    * @readonly
    */
-  readonly ftam_quality_of_Service: FTAM_Quality_of_Service;
+  public readonly ftam_quality_of_Service: FTAM_Quality_of_Service;
   /**
    * @summary `contents_type_list`.
    * @description
@@ -214,7 +214,7 @@ export class F_INITIALIZE_request {
    * @public
    * @readonly
    */
-  readonly contents_type_list?: OPTIONAL<Contents_Type_List>;
+  public readonly contents_type_list?: OPTIONAL<Contents_Type_List>;
   /**
    * @summary `initiator_identity`.
    * @description
@@ -226,7 +226,7 @@ export class F_INITIALIZE_request {
    * @public
    * @readonly
    */
-  readonly initiator_identity?: OPTIONAL<User_Identity>;
+  public readonly initiator_identity?: OPTIONAL<User_Identity>;
   /**
    * @summary `account`.
    * @description
@@ -238,7 +238,7 @@ export class F_INITIALIZE_request {
    * @public
    * @readonly
    */
-  readonly account?: OPTIONAL<Account>;
+  public readonly account?: OPTIONAL<Account>;
   /**
    * @summary `filestore_password`.
    * @description
@@ -250,7 +250,7 @@ export class F_INITIALIZE_request {
    * @public
    * @readonly
    */
-  readonly filestore_password?: OPTIONAL<Password>;
+  public readonly filestore_password?: OPTIONAL<Password>;
   /**
    * @summary `checkpoint_window`.
    * @description
@@ -263,7 +263,7 @@ export class F_INITIALIZE_request {
    * @public
    * @readonly
    */
-  readonly checkpoint_window?: OPTIONAL<INTEGER>;
+  public readonly checkpoint_window?: OPTIONAL<INTEGER>;
 
   constructor(
     protocol_Version: OPTIONAL<Protocol_Version>,

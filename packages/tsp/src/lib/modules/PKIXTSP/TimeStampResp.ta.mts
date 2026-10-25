@@ -1,8 +1,8 @@
 /* eslint-disable */
 import {
-    ASN1Element as _Element,
+    type ASN1Element as _Element,
     ASN1TagClass as _TagClass,
-    OPTIONAL,
+    type OPTIONAL,
 } from "@wildboar/asn1";
 import * as $ from "@wildboar/asn1/functional";
 import {
@@ -11,7 +11,7 @@ import {
     _encode_PKIStatusInfo,
 } from "../PKIXTSP/PKIStatusInfo.ta.mjs";
 import {
-    TimeStampToken,
+    type TimeStampToken,
     _decode_TimeStampToken,
     _encode_TimeStampToken,
 } from "../PKIXTSP/TimeStampToken.ta.mjs";
@@ -39,33 +39,39 @@ import {
  *
  */
 export class TimeStampResp {
+    /**
+     * @summary `status`.
+     * @description
+     *
+     * Outcome of the request. Based on CMP status
+     * ([RFC 2510](https://datatracker.ietf.org/doc/html/rfc2510) §3.2.3)
+     * as adapted in
+     * [RFC 3161 §2.4.2](https://datatracker.ietf.org/doc/html/rfc3161#section-2.4.2).
+     *
+     * @public
+     * @readonly
+     */
+    public readonly status: PKIStatusInfo;
+    /**
+     * @summary `timeStampToken`.
+     * @description
+     *
+     * Present if and only if `status` is `granted`(0) or
+     * `grantedWithMods`(1)
+     * ([RFC 3161 §2.4.2](https://datatracker.ietf.org/doc/html/rfc3161#section-2.4.2)).
+     *
+     * @public
+     * @readonly
+     */
+    public readonly timeStampToken?: OPTIONAL<TimeStampToken>;
+
     constructor(
-        /**
-         * @summary `status`.
-         * @description
-         *
-         * Outcome of the request. Based on CMP status
-         * ([RFC 2510](https://datatracker.ietf.org/doc/html/rfc2510) §3.2.3)
-         * as adapted in
-         * [RFC 3161 §2.4.2](https://datatracker.ietf.org/doc/html/rfc3161#section-2.4.2).
-         *
-         * @public
-         * @readonly
-         */
-        readonly status: PKIStatusInfo,
-        /**
-         * @summary `timeStampToken`.
-         * @description
-         *
-         * Present if and only if `status` is `granted`(0) or
-         * `grantedWithMods`(1)
-         * ([RFC 3161 §2.4.2](https://datatracker.ietf.org/doc/html/rfc3161#section-2.4.2)).
-         *
-         * @public
-         * @readonly
-         */
-        readonly timeStampToken?: OPTIONAL<TimeStampToken>
-    ) {}
+        status: PKIStatusInfo,
+        timeStampToken?: OPTIONAL<TimeStampToken>
+    ) {
+        this.status = status;
+        this.timeStampToken = timeStampToken;
+    }
 
     /**
      * @summary Restructures an object into a TimeStampResp

@@ -1,8 +1,8 @@
 /* eslint-disable */
 import {
-    OPTIONAL,
-    INTEGER,
-    ASN1Element as _Element,
+    type OPTIONAL,
+    type INTEGER,
+    type ASN1Element as _Element,
     ASN1TagClass as _TagClass,
     ASN1Construction as _Construction,
     ASN1UniversalType as _UniversalType,
@@ -13,18 +13,18 @@ import {
 } from '@wildboar/asn1';
 import * as $ from '@wildboar/asn1/functional';
 import {
-    Version,
+    type Version,
     v0 /* IMPORTED_SHORT_NAMED_INTEGER */,
     _decode_Version,
     _encode_Version,
 } from '../AuthenticationContextForBiometrics/Version.ta.mjs';
 import {
-    HashList,
+    type HashList,
     _decode_HashList,
     _encode_HashList,
 } from '../AuthenticationContextForBiometrics/HashList.ta.mjs';
 import {
-    URI,
+    type URI,
     _decode_URI,
     _encode_URI,
 } from '../AuthenticationContextForBiometrics/URI.ta.mjs';
@@ -44,7 +44,7 @@ import {
     _encode_PKICertificateInformation,
 } from '../AuthenticationContextForBiometrics/PKICertificateInformation.ta.mjs';
 import {
-    SequenceOfACBioInstances,
+    type SequenceOfACBioInstances,
     _decode_SequenceOfACBioInstances,
     _encode_SequenceOfACBioInstances,
 } from '../AuthenticationContextForBiometrics/SequenceOfACBioInstances.ta.mjs';
@@ -69,56 +69,74 @@ import {
  *
  */
 export class BDBForBRTC {
+    /**
+     * @summary `version`.
+     * @public
+     * @readonly
+     */
+    public readonly version: OPTIONAL<Version>;
+    /**
+     * @summary `originalBDBHashList`.
+     * @public
+     * @readonly
+     */
+    public readonly originalBDBHashList: HashList;
+    /**
+     * @summary `originalBIRReferrer`.
+     * @public
+     * @readonly
+     */
+    public readonly originalBIRReferrer: OPTIONAL<URI>;
+    /**
+     * @summary `originalBIRPatronFormat`.
+     * @public
+     * @readonly
+     */
+    public readonly originalBIRPatronFormat: PatronFormat;
+    /**
+     * @summary `originalBDBPosition`.
+     * @public
+     * @readonly
+     */
+    public readonly originalBDBPosition: INTEGER;
+    /**
+     * @summary `userInformation`.
+     * @public
+     * @readonly
+     */
+    public readonly userInformation?: OPTIONAL<UserInformation>;
+    /**
+     * @summary `pkiCertificateInformation`.
+     * @public
+     * @readonly
+     */
+    public readonly pkiCertificateInformation?: OPTIONAL<PKICertificateInformation>;
+    /**
+     * @summary `enrolmentACBioInstances`.
+     * @public
+     * @readonly
+     */
+    public readonly enrolmentACBioInstances?: OPTIONAL<SequenceOfACBioInstances>;
+
     constructor(
-        /**
-         * @summary `version`.
-         * @public
-         * @readonly
-         */
-        readonly version: OPTIONAL<Version>,
-        /**
-         * @summary `originalBDBHashList`.
-         * @public
-         * @readonly
-         */
-        readonly originalBDBHashList: HashList,
-        /**
-         * @summary `originalBIRReferrer`.
-         * @public
-         * @readonly
-         */
-        readonly originalBIRReferrer: OPTIONAL<URI>,
-        /**
-         * @summary `originalBIRPatronFormat`.
-         * @public
-         * @readonly
-         */
-        readonly originalBIRPatronFormat: PatronFormat,
-        /**
-         * @summary `originalBDBPosition`.
-         * @public
-         * @readonly
-         */
-        readonly originalBDBPosition: INTEGER,
-        /**
-         * @summary `userInformation`.
-         * @public
-         * @readonly
-         */
-        readonly userInformation?: OPTIONAL<UserInformation>,
-        /**
-         * @summary `pkiCertificateInformation`.
-         * @public
-         * @readonly
-         */
-        readonly pkiCertificateInformation?: OPTIONAL<PKICertificateInformation>,
-        /**
-         * @summary `enrolmentACBioInstances`.
-         * @public
-         * @readonly
-         */
-        readonly enrolmentACBioInstances?: OPTIONAL<SequenceOfACBioInstances>
-    ) {}
+        version: OPTIONAL<Version>,
+        originalBDBHashList: HashList,
+        originalBIRReferrer: OPTIONAL<URI>,
+        originalBIRPatronFormat: PatronFormat,
+        originalBDBPosition: INTEGER,
+        userInformation?: OPTIONAL<UserInformation>,
+        pkiCertificateInformation?: OPTIONAL<PKICertificateInformation>,
+        enrolmentACBioInstances?: OPTIONAL<SequenceOfACBioInstances>
+    ) {
+        this.version = version;
+        this.originalBDBHashList = originalBDBHashList;
+        this.originalBIRReferrer = originalBIRReferrer;
+        this.originalBIRPatronFormat = originalBIRPatronFormat;
+        this.originalBDBPosition = originalBDBPosition;
+        this.userInformation = userInformation;
+        this.pkiCertificateInformation = pkiCertificateInformation;
+        this.enrolmentACBioInstances = enrolmentACBioInstances;
+    }
 
     /**
      * @summary Restructures an object into a BDBForBRTC

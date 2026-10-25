@@ -1,12 +1,12 @@
 /* eslint-disable */
 import {
-    NULL,
-    OPTIONAL,
-    ASN1Element as _Element,
+    type NULL,
+    type OPTIONAL,
+    type ASN1Element as _Element,
     ASN1TagClass as _TagClass
 } from "@wildboar/asn1";
 import * as $ from "@wildboar/asn1/functional";
-import { ISDN_AddressString, _decode_ISDN_AddressString, _encode_ISDN_AddressString } from "../MAP-CommonDataTypes/ISDN-AddressString.ta.mjs";
+import { type ISDN_AddressString, _decode_ISDN_AddressString, _encode_ISDN_AddressString } from "../MAP-CommonDataTypes/ISDN-AddressString.ta.mjs";
 import { ExtensionContainer, _decode_ExtensionContainer, _encode_ExtensionContainer } from "../MAP-ExtensionDataTypes/ExtensionContainer.ta.mjs";
 
 
@@ -24,8 +24,8 @@ import { ExtensionContainer, _decode_ExtensionContainer, _encode_ExtensionContai
  * ```asn1
  * RestoreDataRes ::= SEQUENCE {
  *     hlr-Number    ISDN-AddressString,
- *     msNotReachable    NULL    OPTIONAL,
- *     extensionContainer    ExtensionContainer    OPTIONAL,
+ *     msNotReachable    NULL    type OPTIONAL,
+ *     extensionContainer    ExtensionContainer    type OPTIONAL,
  *     ...}
  * ```
  * 
@@ -33,45 +33,55 @@ import { ExtensionContainer, _decode_ExtensionContainer, _encode_ExtensionContai
  */
 export
 class RestoreDataRes {
+    /**
+     * @summary `hlr_Number`.
+     * @description
+     *
+     * ISDN number of an HLR. Mandatory in a successful Update Location,
+     * Update GPRS Location, or Restore Data result.
+     *
+     * (3GPP TS 29.002 V19.1.0 clause 7.6.2.13).
+     *
+     * @public
+     * @readonly
+     */
+    public readonly hlr_Number: ISDN_AddressString;
+    /**
+     * @summary `msNotReachable`.
+     * @description
+     *
+     * MS Not Reachable Flag returned after Restore Data.
+     *
+     * (3GPP TS 29.002 V19.1.0 clause 8.10.3).
+     *
+     * @public
+     * @readonly
+     */
+    public readonly msNotReachable?: OPTIONAL<NULL>;
+    /**
+     * @summary `extensionContainer`.
+     * @public
+     * @readonly
+     */
+    public readonly extensionContainer?: OPTIONAL<ExtensionContainer>;
+    /**
+     * @summary Extensions that are not recognized.
+     * @public
+     * @readonly
+     */
+    public readonly _unrecognizedExtensionsList: _Element[];
+
     constructor (
-        /**
-         * @summary `hlr_Number`.
-         * @description
-         *
-         * ISDN number of an HLR. Mandatory in a successful Update Location,
-         * Update GPRS Location, or Restore Data result.
-         *
-         * (3GPP TS 29.002 V19.1.0 clause 7.6.2.13).
-         *
-         * @public
-         * @readonly
-         */
-        readonly hlr_Number: ISDN_AddressString,
-        /**
-         * @summary `msNotReachable`.
-         * @description
-         *
-         * MS Not Reachable Flag returned after Restore Data.
-         *
-         * (3GPP TS 29.002 V19.1.0 clause 8.10.3).
-         *
-         * @public
-         * @readonly
-         */
-        readonly msNotReachable?: OPTIONAL<NULL>,
-        /**
-         * @summary `extensionContainer`.
-         * @public
-         * @readonly
-         */
-        readonly extensionContainer?: OPTIONAL<ExtensionContainer>,
-        /**
-         * @summary Extensions that are not recognized.
-         * @public
-         * @readonly
-         */
-        readonly _unrecognizedExtensionsList: _Element[] = []
-    ) {}
+        hlr_Number: ISDN_AddressString,
+        msNotReachable?: OPTIONAL<NULL>,
+        extensionContainer?: OPTIONAL<ExtensionContainer>,
+        _unrecognizedExtensionsList: _Element[] = []
+    ) {
+        this.hlr_Number = hlr_Number;
+        this.msNotReachable = msNotReachable;
+        this.extensionContainer = extensionContainer;
+        this._unrecognizedExtensionsList = _unrecognizedExtensionsList;
+    }
 
     /**
      * @summary Restructures an object into a RestoreDataRes

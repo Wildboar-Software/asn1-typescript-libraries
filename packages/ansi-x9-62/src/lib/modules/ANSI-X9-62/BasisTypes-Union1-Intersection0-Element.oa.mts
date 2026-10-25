@@ -2,7 +2,7 @@
 import { type CHARACTERISTIC_TWO } from "../ANSI-X9-62/CHARACTERISTIC-TWO.oca.mjs";
 import { tpBasis } from "../ANSI-X9-62/tpBasis.va.mjs";
 import {
-    Trinomial,
+    type Trinomial,
     _decode_Trinomial,
     _encode_Trinomial,
 } from "../ANSI-X9-62/Trinomial.ta.mjs";

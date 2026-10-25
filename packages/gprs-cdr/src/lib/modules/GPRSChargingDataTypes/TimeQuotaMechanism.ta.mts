@@ -1,8 +1,8 @@
 /* eslint-disable */
 import {
-    INTEGER,
+    type INTEGER,
     ASN1ConstructionError as _ConstructionError,
-    ASN1Element as _Element,
+    type ASN1Element as _Element,
     ASN1TagClass as _TagClass
 } from "@wildboar/asn1";
 import * as $ from "@wildboar/asn1/functional";
@@ -76,7 +76,7 @@ class TimeQuotaMechanism {
          * @static
          */
 
-    public static _enum_for_timeQuotaType = _enum_for_TimeQuotaType;
+    public static _enum_for_timeQuotaType: typeof _enum_for_TimeQuotaType = _enum_for_TimeQuotaType;
 }
 
 /**

@@ -17,7 +17,7 @@ import {
 } from '@wildboar/rose';
 import type { ERROR } from '@wildboar/rose';
 import {
-  ObjectInstance,
+  type ObjectInstance,
   _decode_ObjectInstance,
   _encode_ObjectInstance,
 } from '../CMIP-1/ObjectInstance.ta.mjs';

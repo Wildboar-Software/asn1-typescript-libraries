@@ -1,9 +1,9 @@
 /* eslint-disable */
 import {
-    ASN1Element as _Element,
+    type ASN1Element as _Element,
     ASN1TagClass as _TagClass,
-    INTEGER,
-    OPTIONAL,
+    type INTEGER,
+    type OPTIONAL,
 } from "@wildboar/asn1";
 import * as $ from "@wildboar/asn1/functional";
 import {
@@ -54,57 +54,67 @@ import {
  *
  */
 export class ConfidentialityLabel {
+    /**
+     * @summary `security_policy_identifier`.
+     * @description
+     *
+     * Policy that interprets `security-classification` and
+     * `security-categories`. Compared with clearance `policyId`
+     * and the SPIF `securityPolicyIdData`. X.841 §6.1.2,
+     * §7.1.
+     *
+     * @public
+     * @readonly
+     */
+    public readonly security_policy_identifier?: OPTIONAL<SecurityPolicyIdentifier>;
+    /**
+     * @summary `security_classification`.
+     * @description
+     *
+     * Hierarchical classification of the labelled object.
+     * Corresponds to a SPIF `labelAndCertValue` and to a bit
+     * in clearance `classList`. X.841 §6.1.2, §7.1.
+     *
+     * @public
+     * @readonly
+     */
+    public readonly security_classification?: OPTIONAL<INTEGER>;
+    /**
+     * @summary `privacy_mark`.
+     * @description
+     *
+     * Human-readable privacy marking (PrintableString or
+     * UTF8String, SIZE 1..128). X.841 §6.1.2.
+     *
+     * @public
+     * @readonly
+     */
+    public readonly privacy_mark?: OPTIONAL<PrivacyMark>;
+    /**
+     * @summary `security_categories`.
+     * @description
+     *
+     * Non-hierarchical categories (restrictive, permissive,
+     * enumerated). SET SIZE (1..MAX) if present. Access: at
+     * least one match per permissive tag; all restrictive
+     * tags. X.841 §6.1.2, §7.2.
+     *
+     * @public
+     * @readonly
+     */
+    public readonly security_categories?: OPTIONAL<SecurityCategories>;
+
     constructor(
-        /**
-         * @summary `security_policy_identifier`.
-         * @description
-         *
-         * Policy that interprets `security-classification` and
-         * `security-categories`. Compared with clearance `policyId`
-         * and the SPIF `securityPolicyIdData`. X.841 §6.1.2,
-         * §7.1.
-         *
-         * @public
-         * @readonly
-         */
-        readonly security_policy_identifier?: OPTIONAL<SecurityPolicyIdentifier>,
-        /**
-         * @summary `security_classification`.
-         * @description
-         *
-         * Hierarchical classification of the labelled object.
-         * Corresponds to a SPIF `labelAndCertValue` and to a bit
-         * in clearance `classList`. X.841 §6.1.2, §7.1.
-         *
-         * @public
-         * @readonly
-         */
-        readonly security_classification?: OPTIONAL<INTEGER>,
-        /**
-         * @summary `privacy_mark`.
-         * @description
-         *
-         * Human-readable privacy marking (PrintableString or
-         * UTF8String, SIZE 1..128). X.841 §6.1.2.
-         *
-         * @public
-         * @readonly
-         */
-        readonly privacy_mark?: OPTIONAL<PrivacyMark>,
-        /**
-         * @summary `security_categories`.
-         * @description
-         *
-         * Non-hierarchical categories (restrictive, permissive,
-         * enumerated). SET SIZE (1..MAX) if present. Access: at
-         * least one match per permissive tag; all restrictive
-         * tags. X.841 §6.1.2, §7.2.
-         *
-         * @public
-         * @readonly
-         */
-        readonly security_categories?: OPTIONAL<SecurityCategories>
-    ) {}
+        security_policy_identifier?: OPTIONAL<SecurityPolicyIdentifier>,
+        security_classification?: OPTIONAL<INTEGER>,
+        privacy_mark?: OPTIONAL<PrivacyMark>,
+        security_categories?: OPTIONAL<SecurityCategories>
+    ) {
+        this.security_policy_identifier = security_policy_identifier;
+        this.security_classification = security_classification;
+        this.privacy_mark = privacy_mark;
+        this.security_categories = security_categories;
+    }
 
     /**
      * @summary Restructures an object into a ConfidentialityLabel

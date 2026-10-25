@@ -1,7 +1,7 @@
 /* eslint-disable */
 import {
-    INTEGER,
-    ASN1Element as _Element,
+    type INTEGER,
+    type ASN1Element as _Element,
     ASN1OverflowError,
 } from "@wildboar/asn1";
 import * as $ from "@wildboar/asn1/functional";
@@ -44,7 +44,7 @@ type DataHeaderSourceIndicator = INTEGER;
  * @see https://ecma-international.org/publications-and-standards/standards/ecma-325/
  */
 export
-const DataHeaderSourceIndicator_originalSender: DataHeaderSourceIndicator = 1; /* LONG_NAMED_INTEGER_VALUE */
+const DataHeaderSourceIndicator_originalSender: 1 = 1 satisfies DataHeaderSourceIndicator; /* LONG_NAMED_INTEGER_VALUE */
 
 /**
  * @summary originalSender
@@ -53,7 +53,7 @@ const DataHeaderSourceIndicator_originalSender: DataHeaderSourceIndicator = 1; /
  * @type {number}
  */
 export
-const originalSender: DataHeaderSourceIndicator = DataHeaderSourceIndicator_originalSender; /* SHORT_NAMED_INTEGER_VALUE */
+const originalSender: 1 = DataHeaderSourceIndicator_originalSender; /* SHORT_NAMED_INTEGER_VALUE */
 
 /**
  * @summary DataHeaderSourceIndicator_originalReceiver
@@ -66,7 +66,7 @@ const originalSender: DataHeaderSourceIndicator = DataHeaderSourceIndicator_orig
  * @see https://ecma-international.org/publications-and-standards/standards/ecma-325/
  */
 export
-const DataHeaderSourceIndicator_originalReceiver: DataHeaderSourceIndicator = 2; /* LONG_NAMED_INTEGER_VALUE */
+const DataHeaderSourceIndicator_originalReceiver: 2 = 2 satisfies DataHeaderSourceIndicator; /* LONG_NAMED_INTEGER_VALUE */
 
 /**
  * @summary originalReceiver
@@ -75,7 +75,7 @@ const DataHeaderSourceIndicator_originalReceiver: DataHeaderSourceIndicator = 2;
  * @type {number}
  */
 export
-const originalReceiver: DataHeaderSourceIndicator = DataHeaderSourceIndicator_originalReceiver; /* SHORT_NAMED_INTEGER_VALUE */
+const originalReceiver: 2 = DataHeaderSourceIndicator_originalReceiver; /* SHORT_NAMED_INTEGER_VALUE */
 
 /**
  * @summary DataHeaderSourceIndicator_sMSC
@@ -88,7 +88,7 @@ const originalReceiver: DataHeaderSourceIndicator = DataHeaderSourceIndicator_or
  * @see https://ecma-international.org/publications-and-standards/standards/ecma-325/
  */
 export
-const DataHeaderSourceIndicator_sMSC: DataHeaderSourceIndicator = 3; /* LONG_NAMED_INTEGER_VALUE */
+const DataHeaderSourceIndicator_sMSC: 3 = 3 satisfies DataHeaderSourceIndicator; /* LONG_NAMED_INTEGER_VALUE */
 
 /**
  * @summary sMSC
@@ -97,7 +97,7 @@ const DataHeaderSourceIndicator_sMSC: DataHeaderSourceIndicator = 3; /* LONG_NAM
  * @type {number}
  */
 export
-const sMSC: DataHeaderSourceIndicator = DataHeaderSourceIndicator_sMSC; /* SHORT_NAMED_INTEGER_VALUE */
+const sMSC: 3 = DataHeaderSourceIndicator_sMSC; /* SHORT_NAMED_INTEGER_VALUE */
 
 export
 const _decode_DataHeaderSourceIndicator = (el: _Element): DataHeaderSourceIndicator => {

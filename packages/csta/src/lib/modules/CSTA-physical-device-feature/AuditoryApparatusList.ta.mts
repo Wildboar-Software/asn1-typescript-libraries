@@ -1,7 +1,7 @@
 /* eslint-disable */
 
 import * as $ from "@wildboar/asn1/functional";
-import { ENUMERATED, SEQUENCE, ASN1Element as _Element } from "@wildboar/asn1";
+import { type ENUMERATED, type SEQUENCE, ASN1Element as _Element } from "@wildboar/asn1";
 import { AuditoryApparatusList_Item, _decode_AuditoryApparatusList_Item, _encode_AuditoryApparatusList_Item } from "../CSTA-physical-device-feature/AuditoryApparatusList-Item.ta.mjs";
 
 

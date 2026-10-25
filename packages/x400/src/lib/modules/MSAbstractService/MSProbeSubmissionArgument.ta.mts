@@ -1,7 +1,7 @@
 /* eslint-disable */
 import {
-    OPTIONAL,
-    ASN1Element as _Element,
+    type OPTIONAL,
+    type ASN1Element as _Element,
     ASN1TagClass as _TagClass,
     ASN1Construction as _Construction,
     ASN1UniversalType as _UniversalType,
@@ -12,7 +12,7 @@ import {
 } from '@wildboar/asn1';
 import * as $ from '@wildboar/asn1/functional';
 import {
-    ProbeSubmissionArgument,
+    type ProbeSubmissionArgument,
     _decode_ProbeSubmissionArgument,
     _encode_ProbeSubmissionArgument,
 } from '../MTSAbstractService/ProbeSubmissionArgument.ta.mjs';
@@ -22,32 +22,32 @@ import {
     _encode_MSSubmissionOptions,
 } from '../MSAbstractService/MSSubmissionOptions.ta.mjs';
 import {
-    OriginatorName,
+    type OriginatorName,
     _decode_OriginatorName,
     _encode_OriginatorName,
 } from '../MTSAbstractService/OriginatorName.ta.mjs';
 import {
-    OriginalEncodedInformationTypes,
+    type OriginalEncodedInformationTypes,
     _decode_OriginalEncodedInformationTypes,
     _encode_OriginalEncodedInformationTypes,
 } from '../MTSAbstractService/OriginalEncodedInformationTypes.ta.mjs';
 import {
-    ContentType,
+    type ContentType,
     _decode_ContentType,
     _encode_ContentType,
 } from '../MTSAbstractService/ContentType.ta.mjs';
 import {
-    ContentIdentifier,
+    type ContentIdentifier,
     _decode_ContentIdentifier,
     _encode_ContentIdentifier,
 } from '../MTSAbstractService/ContentIdentifier.ta.mjs';
 import {
-    ContentLength,
+    type ContentLength,
     _decode_ContentLength,
     _encode_ContentLength,
 } from '../MTSAbstractService/ContentLength.ta.mjs';
 import {
-    PerMessageIndicators,
+    type PerMessageIndicators,
     _decode_PerMessageIndicators,
     _encode_PerMessageIndicators,
 } from '../MTSAbstractService/PerMessageIndicators.ta.mjs';
@@ -86,64 +86,86 @@ import {
  *
  */
 export class MSProbeSubmissionArgument implements ProbeSubmissionArgument {
-    constructor(
-        /**
-         * @summary `originator_name`.
-         * @public
-         * @readonly
-         */
-        readonly originator_name: OriginatorName /* REPLICATED_COMPONENT */,
-        /**
-         * @summary `original_encoded_information_types`.
-         * @public
-         * @readonly
-         */
-        readonly original_encoded_information_types: OPTIONAL<OriginalEncodedInformationTypes> /* REPLICATED_COMPONENT */,
-        /**
-         * @summary `content_type`.
-         * @public
-         * @readonly
-         */
-        readonly content_type: ContentType /* REPLICATED_COMPONENT */,
-        /**
-         * @summary `content_identifier`.
-         * @public
-         * @readonly
-         */
-        readonly content_identifier: OPTIONAL<ContentIdentifier> /* REPLICATED_COMPONENT */,
-        /**
-         * @summary `content_length`.
-         * @public
-         * @readonly
-         */
-        readonly content_length: OPTIONAL<ContentLength> /* REPLICATED_COMPONENT */,
-        /**
-         * @summary `per_message_indicators`.
-         * @public
-         * @readonly
-         */
-        readonly per_message_indicators: OPTIONAL<PerMessageIndicators> /* REPLICATED_COMPONENT */,
-        /**
-         * @summary `extensions`.
-         * @public
-         * @readonly
-         */
-        readonly extensions: OPTIONAL<
+    /**
+     * @summary `originator_name`.
+     * @public
+     * @readonly
+     */
+    public readonly originator_name: OriginatorName; /* REPLICATED_COMPONENT */
+    /**
+     * @summary `original_encoded_information_types`.
+     * @public
+     * @readonly
+     */
+    public readonly original_encoded_information_types: OPTIONAL<OriginalEncodedInformationTypes>; /* REPLICATED_COMPONENT */
+    /**
+     * @summary `content_type`.
+     * @public
+     * @readonly
+     */
+    public readonly content_type: ContentType; /* REPLICATED_COMPONENT */
+    /**
+     * @summary `content_identifier`.
+     * @public
+     * @readonly
+     */
+    public readonly content_identifier: OPTIONAL<ContentIdentifier>; /* REPLICATED_COMPONENT */
+    /**
+     * @summary `content_length`.
+     * @public
+     * @readonly
+     */
+    public readonly content_length: OPTIONAL<ContentLength>; /* REPLICATED_COMPONENT */
+    /**
+     * @summary `per_message_indicators`.
+     * @public
+     * @readonly
+     */
+    public readonly per_message_indicators: OPTIONAL<PerMessageIndicators>; /* REPLICATED_COMPONENT */
+    /**
+     * @summary `extensions`.
+     * @public
+     * @readonly
+     */
+    public readonly extensions: OPTIONAL<
             ExtensionField[]
-        > /* REPLICATED_COMPONENT */,
-        /**
-         * @summary `per_recipient_fields`.
-         * @public
-         * @readonly
-         */
-        readonly per_recipient_fields: PerRecipientProbeSubmissionFields[] /* REPLICATED_COMPONENT */,
-        /**
-         * @summary `submission_options`.
-         * @public
-         * @readonly
-         */
-        readonly submission_options?: OPTIONAL<MSSubmissionOptions>
-    ) {}
+        >; /* REPLICATED_COMPONENT */
+    /**
+     * @summary `per_recipient_fields`.
+     * @public
+     * @readonly
+     */
+    public readonly per_recipient_fields: PerRecipientProbeSubmissionFields[]; /* REPLICATED_COMPONENT */
+    /**
+     * @summary `submission_options`.
+     * @public
+     * @readonly
+     */
+    public readonly submission_options?: OPTIONAL<MSSubmissionOptions>;
+
+    constructor(
+        originator_name: OriginatorName,
+        original_encoded_information_types: OPTIONAL<OriginalEncodedInformationTypes>,
+        content_type: ContentType,
+        content_identifier: OPTIONAL<ContentIdentifier>,
+        content_length: OPTIONAL<ContentLength>,
+        per_message_indicators: OPTIONAL<PerMessageIndicators>,
+        extensions: OPTIONAL<
+            ExtensionField[]
+        >,
+        per_recipient_fields: PerRecipientProbeSubmissionFields[],
+        submission_options?: OPTIONAL<MSSubmissionOptions>
+    ) {
+        this.originator_name = originator_name;
+        this.original_encoded_information_types = original_encoded_information_types;
+        this.content_type = content_type;
+        this.content_identifier = content_identifier;
+        this.content_length = content_length;
+        this.per_message_indicators = per_message_indicators;
+        this.extensions = extensions;
+        this.per_recipient_fields = per_recipient_fields;
+        this.submission_options = submission_options;
+    }
 
     /**
      * @summary Restructures an object into a MSProbeSubmissionArgument

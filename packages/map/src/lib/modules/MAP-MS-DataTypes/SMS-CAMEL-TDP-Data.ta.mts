@@ -1,15 +1,15 @@
 /* eslint-disable */
 import {
-    OPTIONAL,
-    ASN1Element as _Element,
+    type OPTIONAL,
+    type ASN1Element as _Element,
     ASN1TagClass as _TagClass
 } from "@wildboar/asn1";
 import * as $ from "@wildboar/asn1/functional";
-import { ISDN_AddressString, _decode_ISDN_AddressString, _encode_ISDN_AddressString } from "../MAP-CommonDataTypes/ISDN-AddressString.ta.mjs";
+import { type ISDN_AddressString, _decode_ISDN_AddressString, _encode_ISDN_AddressString } from "../MAP-CommonDataTypes/ISDN-AddressString.ta.mjs";
 import { ExtensionContainer, _decode_ExtensionContainer, _encode_ExtensionContainer } from "../MAP-ExtensionDataTypes/ExtensionContainer.ta.mjs";
-import { DefaultSMS_Handling, _decode_DefaultSMS_Handling, _encode_DefaultSMS_Handling, _enum_for_DefaultSMS_Handling } from "../MAP-MS-DataTypes/DefaultSMS-Handling.ta.mjs";
-import { SMS_TriggerDetectionPoint, _decode_SMS_TriggerDetectionPoint, _encode_SMS_TriggerDetectionPoint, _enum_for_SMS_TriggerDetectionPoint } from "../MAP-MS-DataTypes/SMS-TriggerDetectionPoint.ta.mjs";
-import { ServiceKey, _decode_ServiceKey, _encode_ServiceKey } from "../MAP-MS-DataTypes/ServiceKey.ta.mjs";
+import { type DefaultSMS_Handling, _decode_DefaultSMS_Handling, _encode_DefaultSMS_Handling, _enum_for_DefaultSMS_Handling } from "../MAP-MS-DataTypes/DefaultSMS-Handling.ta.mjs";
+import { type SMS_TriggerDetectionPoint, _decode_SMS_TriggerDetectionPoint, _encode_SMS_TriggerDetectionPoint, _enum_for_SMS_TriggerDetectionPoint } from "../MAP-MS-DataTypes/SMS-TriggerDetectionPoint.ta.mjs";
+import { type ServiceKey, _decode_ServiceKey, _encode_ServiceKey } from "../MAP-MS-DataTypes/ServiceKey.ta.mjs";
 
 
 /**
@@ -29,7 +29,7 @@ import { ServiceKey, _decode_ServiceKey, _encode_ServiceKey } from "../MAP-MS-Da
  *     serviceKey    [1] ServiceKey,
  *     gsmSCF-Address    [2] ISDN-AddressString,
  *     defaultSMS-Handling    [3] DefaultSMS-Handling,
- *     extensionContainer    [4] ExtensionContainer    OPTIONAL,
+ *     extensionContainer    [4] ExtensionContainer    type OPTIONAL,
  *     ...
  *     }
  * ```
@@ -38,70 +38,84 @@ import { ServiceKey, _decode_ServiceKey, _encode_ServiceKey } from "../MAP-MS-Da
  */
 export
 class SMS_CAMEL_TDP_Data {
+    /**
+     * @summary `sms_TriggerDetectionPoint`.
+     * @description
+     *
+     * SMS CAMEL trigger detection point.
+     *
+     * (3GPP TS 29.002 V19.1.0 clause 17.7.1).
+     *
+     * @public
+     * @readonly
+     */
+    public readonly sms_TriggerDetectionPoint: SMS_TriggerDetectionPoint;
+    /**
+     * @summary `serviceKey`.
+     * @description
+     *
+     * Identifies CAMEL service logic in the gsmSCF.
+     *
+     * (3GPP TS 29.002 V19.1.0 clause 17.7.1).
+     *
+     * @public
+     * @readonly
+     */
+    public readonly serviceKey: ServiceKey;
+    /**
+     * @summary `gsmSCF_Address`.
+     * @description
+     *
+     * ISDN number assigned to the gsmSCF. In an IP Multimedia CN, contains
+     * the IM-SSF address when IM-SSF takes the gsmSCF role.
+     *
+     * (3GPP TS 29.002 V19.1.0 clause 7.6.2.58).
+     *
+     * @public
+     * @readonly
+     */
+    public readonly gsmSCF_Address: ISDN_AddressString;
+    /**
+     * @summary `defaultSMS_Handling`.
+     * @description
+     *
+     * Default handling if the gsmSCF does not respond for this SMS CAMEL
+     * TDP.
+     *
+     * (3GPP TS 29.002 V19.1.0 clause 17.7.1).
+     *
+     * @public
+     * @readonly
+     */
+    public readonly defaultSMS_Handling: DefaultSMS_Handling;
+    /**
+     * @summary `extensionContainer`.
+     * @public
+     * @readonly
+     */
+    public readonly extensionContainer?: OPTIONAL<ExtensionContainer>;
+    /**
+     * @summary Extensions that are not recognized.
+     * @public
+     * @readonly
+     */
+    public readonly _unrecognizedExtensionsList: _Element[];
+
     constructor (
-        /**
-         * @summary `sms_TriggerDetectionPoint`.
-         * @description
-         *
-         * SMS CAMEL trigger detection point.
-         *
-         * (3GPP TS 29.002 V19.1.0 clause 17.7.1).
-         *
-         * @public
-         * @readonly
-         */
-        readonly sms_TriggerDetectionPoint: SMS_TriggerDetectionPoint,
-        /**
-         * @summary `serviceKey`.
-         * @description
-         *
-         * Identifies CAMEL service logic in the gsmSCF.
-         *
-         * (3GPP TS 29.002 V19.1.0 clause 17.7.1).
-         *
-         * @public
-         * @readonly
-         */
-        readonly serviceKey: ServiceKey,
-        /**
-         * @summary `gsmSCF_Address`.
-         * @description
-         *
-         * ISDN number assigned to the gsmSCF. In an IP Multimedia CN, contains
-         * the IM-SSF address when IM-SSF takes the gsmSCF role.
-         *
-         * (3GPP TS 29.002 V19.1.0 clause 7.6.2.58).
-         *
-         * @public
-         * @readonly
-         */
-        readonly gsmSCF_Address: ISDN_AddressString,
-        /**
-         * @summary `defaultSMS_Handling`.
-         * @description
-         *
-         * Default handling if the gsmSCF does not respond for this SMS CAMEL
-         * TDP.
-         *
-         * (3GPP TS 29.002 V19.1.0 clause 17.7.1).
-         *
-         * @public
-         * @readonly
-         */
-        readonly defaultSMS_Handling: DefaultSMS_Handling,
-        /**
-         * @summary `extensionContainer`.
-         * @public
-         * @readonly
-         */
-        readonly extensionContainer?: OPTIONAL<ExtensionContainer>,
-        /**
-         * @summary Extensions that are not recognized.
-         * @public
-         * @readonly
-         */
-        readonly _unrecognizedExtensionsList: _Element[] = []
-    ) {}
+        sms_TriggerDetectionPoint: SMS_TriggerDetectionPoint,
+        serviceKey: ServiceKey,
+        gsmSCF_Address: ISDN_AddressString,
+        defaultSMS_Handling: DefaultSMS_Handling,
+        extensionContainer?: OPTIONAL<ExtensionContainer>,
+        _unrecognizedExtensionsList: _Element[] = []
+    ) {
+        this.sms_TriggerDetectionPoint = sms_TriggerDetectionPoint;
+        this.serviceKey = serviceKey;
+        this.gsmSCF_Address = gsmSCF_Address;
+        this.defaultSMS_Handling = defaultSMS_Handling;
+        this.extensionContainer = extensionContainer;
+        this._unrecognizedExtensionsList = _unrecognizedExtensionsList;
+    }
 
     /**
      * @summary Restructures an object into a SMS_CAMEL_TDP_Data
@@ -125,13 +139,13 @@ class SMS_CAMEL_TDP_Data {
          * @static
          */
 
-    public static _enum_for_sms_TriggerDetectionPoint = _enum_for_SMS_TriggerDetectionPoint;        /**
+    public static _enum_for_sms_TriggerDetectionPoint: typeof _enum_for_SMS_TriggerDetectionPoint = _enum_for_SMS_TriggerDetectionPoint;        /**
          * @summary The enum used as the type of the component `defaultSMS_Handling`
          * @public
          * @static
          */
 
-    public static _enum_for_defaultSMS_Handling = _enum_for_DefaultSMS_Handling;
+    public static _enum_for_defaultSMS_Handling: typeof _enum_for_DefaultSMS_Handling = _enum_for_DefaultSMS_Handling;
 }
 
 /**

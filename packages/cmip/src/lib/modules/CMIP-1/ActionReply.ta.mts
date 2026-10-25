@@ -45,7 +45,7 @@ export class ActionReply {
    * @public
    * @readonly
    */
-  readonly actionType: CMIP_ACTION["&id"];
+  public readonly actionType: CMIP_ACTION["&id"];
   /**
    * @summary `actionReplyInfo`.
    * @description
@@ -55,7 +55,7 @@ export class ActionReply {
    * @public
    * @readonly
    */
-  readonly actionReplyInfo: _Element;
+  public readonly actionReplyInfo: _Element;
 
   constructor(
     actionType: CMIP_ACTION["&id"],

@@ -1,8 +1,8 @@
 /* eslint-disable */
 import {
-    ASN1Element as _Element,
+    type ASN1Element as _Element,
     ASN1SizeError,
-    BIT_STRING
+    type BIT_STRING
 } from "@wildboar/asn1";
 import * as $ from "@wildboar/asn1/functional";
 import { maxTariffIndicatorsLen } from "../Tariffing-Data-Types/maxTariffIndicatorsLen.va.mjs";
@@ -63,7 +63,7 @@ export const _decode_TariffCurrencyFormat_tariffControlIndicators = (el: _Elemen
     }
     return value;
 };
-export const _encode_TariffCurrencyFormat_tariffControlIndicators = $._encodeBitString;
+export const _encode_TariffCurrencyFormat_tariffControlIndicators: $.ASN1Encoder<BIT_STRING> = $._encodeBitString;
 
 
 /* eslint-enable */

@@ -90,7 +90,7 @@ type EPSInterworkingIndication = _enum_for_EPSInterworkingIndication;
  * @enum {number}
  */
 export
-const EPSInterworkingIndication = _enum_for_EPSInterworkingIndication;
+const EPSInterworkingIndication: typeof _enum_for_EPSInterworkingIndication = _enum_for_EPSInterworkingIndication;
 
 /**
  * @summary EPSInterworkingIndication_none
@@ -98,7 +98,7 @@ const EPSInterworkingIndication = _enum_for_EPSInterworkingIndication;
  * @type {number}
  */
 export
-const EPSInterworkingIndication_none: EPSInterworkingIndication = EPSInterworkingIndication.none; /* LONG_NAMED_ENUMERATED_VALUE */
+const EPSInterworkingIndication_none: _enum_for_EPSInterworkingIndication.none = EPSInterworkingIndication.none; /* LONG_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary none
@@ -106,7 +106,7 @@ const EPSInterworkingIndication_none: EPSInterworkingIndication = EPSInterworkin
  * @type {number}
  */
 export
-const none: EPSInterworkingIndication = EPSInterworkingIndication.none; /* SHORT_NAMED_ENUMERATED_VALUE */
+const none: _enum_for_EPSInterworkingIndication.none = EPSInterworkingIndication.none; /* SHORT_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary EPSInterworkingIndication_withN26
@@ -114,7 +114,7 @@ const none: EPSInterworkingIndication = EPSInterworkingIndication.none; /* SHORT
  * @type {number}
  */
 export
-const EPSInterworkingIndication_withN26: EPSInterworkingIndication = EPSInterworkingIndication.withN26; /* LONG_NAMED_ENUMERATED_VALUE */
+const EPSInterworkingIndication_withN26: _enum_for_EPSInterworkingIndication.withN26 = EPSInterworkingIndication.withN26; /* LONG_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary withN26
@@ -122,7 +122,7 @@ const EPSInterworkingIndication_withN26: EPSInterworkingIndication = EPSInterwor
  * @type {number}
  */
 export
-const withN26: EPSInterworkingIndication = EPSInterworkingIndication.withN26; /* SHORT_NAMED_ENUMERATED_VALUE */
+const withN26: _enum_for_EPSInterworkingIndication.withN26 = EPSInterworkingIndication.withN26; /* SHORT_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary EPSInterworkingIndication_withoutN26
@@ -130,7 +130,7 @@ const withN26: EPSInterworkingIndication = EPSInterworkingIndication.withN26; /*
  * @type {number}
  */
 export
-const EPSInterworkingIndication_withoutN26: EPSInterworkingIndication = EPSInterworkingIndication.withoutN26; /* LONG_NAMED_ENUMERATED_VALUE */
+const EPSInterworkingIndication_withoutN26: _enum_for_EPSInterworkingIndication.withoutN26 = EPSInterworkingIndication.withoutN26; /* LONG_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary withoutN26
@@ -138,7 +138,7 @@ const EPSInterworkingIndication_withoutN26: EPSInterworkingIndication = EPSInter
  * @type {number}
  */
 export
-const withoutN26: EPSInterworkingIndication = EPSInterworkingIndication.withoutN26; /* SHORT_NAMED_ENUMERATED_VALUE */
+const withoutN26: _enum_for_EPSInterworkingIndication.withoutN26 = EPSInterworkingIndication.withoutN26; /* SHORT_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary EPSInterworkingIndication_iwkNon3GPP
@@ -146,7 +146,7 @@ const withoutN26: EPSInterworkingIndication = EPSInterworkingIndication.withoutN
  * @type {number}
  */
 export
-const EPSInterworkingIndication_iwkNon3GPP: EPSInterworkingIndication = EPSInterworkingIndication.iwkNon3GPP; /* LONG_NAMED_ENUMERATED_VALUE */
+const EPSInterworkingIndication_iwkNon3GPP: _enum_for_EPSInterworkingIndication.iwkNon3GPP = EPSInterworkingIndication.iwkNon3GPP; /* LONG_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary iwkNon3GPP
@@ -154,7 +154,7 @@ const EPSInterworkingIndication_iwkNon3GPP: EPSInterworkingIndication = EPSInter
  * @type {number}
  */
 export
-const iwkNon3GPP: EPSInterworkingIndication = EPSInterworkingIndication.iwkNon3GPP; /* SHORT_NAMED_ENUMERATED_VALUE */
+const iwkNon3GPP: _enum_for_EPSInterworkingIndication.iwkNon3GPP = EPSInterworkingIndication.iwkNon3GPP; /* SHORT_NAMED_ENUMERATED_VALUE */
 export const _decode_EPSInterworkingIndication: $.ASN1Decoder<EPSInterworkingIndication> = $._decodeEnumerated;
 export const _encode_EPSInterworkingIndication: $.ASN1Encoder<EPSInterworkingIndication> = $._encodeEnumerated;
 

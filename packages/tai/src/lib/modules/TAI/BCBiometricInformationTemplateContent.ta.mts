@@ -1,7 +1,7 @@
 /* eslint-disable */
 import {
-    OPTIONAL,
-    ASN1Element as _Element,
+    type OPTIONAL,
+    type ASN1Element as _Element,
     ASN1TagClass as _TagClass,
     ASN1Construction as _Construction,
     ASN1UniversalType as _UniversalType,
@@ -11,8 +11,8 @@ import {
     ASN1ConstructionError as _ConstructionError,
 } from "@wildboar/asn1";
 import * as $ from "@wildboar/asn1/functional";
-import { BiometricTemplateVersion, _decode_BiometricTemplateVersion, _encode_BiometricTemplateVersion } from "../TAI/BiometricTemplateVersion.ta.mjs";
-import { BiometricTemplateInfo, _decode_BiometricTemplateInfo, _encode_BiometricTemplateInfo } from "../TAI/BiometricTemplateInfo.ta.mjs";
+import { type BiometricTemplateVersion, _decode_BiometricTemplateVersion, _encode_BiometricTemplateVersion } from "../TAI/BiometricTemplateVersion.ta.mjs";
+import { type BiometricTemplateInfo, _decode_BiometricTemplateInfo, _encode_BiometricTemplateInfo } from "../TAI/BiometricTemplateInfo.ta.mjs";
 import { AlgorithmIdentifier, _decode_AlgorithmIdentifier, _encode_AlgorithmIdentifier } from "@wildboar/x500/AuthenticationFramework";
 import { BioTempIssuer, _decode_BioTempIssuer, _encode_BioTempIssuer } from "../TAI/BioTempIssuer.ta.mjs";
 
@@ -39,53 +39,63 @@ import { BioTempIssuer, _decode_BioTempIssuer, _encode_BioTempIssuer } from "../
  */
 export
 class BCBiometricInformationTemplateContent {
+    /**
+     * @summary `biometricTemplateVersion`.
+     * @description
+     *
+     * Version of the BIT in the BC. Only `v0(0)` is defined.
+     * X.1089 §8.6.
+     *
+     * @public
+     * @readonly
+     */
+    public readonly biometricTemplateVersion: BiometricTemplateVersion;
+    /**
+     * @summary `biometricTemplateInfo`.
+     * @description
+     *
+     * BIT data in the BC (CBEFF patron format or a later
+     * alternative). X.1089 §8.7.
+     *
+     * @public
+     * @readonly
+     */
+    public readonly biometricTemplateInfo: BiometricTemplateInfo;
+    /**
+     * @summary `issuerDigitalSignatureAlgorithm`.
+     * @description
+     *
+     * Algorithm used to sign this BIT. X.509
+     * `AlgorithmIdentifier` from `SupportedAlgorithms`.
+     * X.1089 §8.6.
+     *
+     * @public
+     * @readonly
+     */
+    public readonly issuerDigitalSignatureAlgorithm?: OPTIONAL<AlgorithmIdentifier>;
+    /**
+     * @summary `bioTempIssuer`.
+     * @description
+     *
+     * Issuer of this BIT, which may differ from the BC
+     * issuer. X.1089 §8.6.
+     *
+     * @public
+     * @readonly
+     */
+    public readonly bioTempIssuer?: OPTIONAL<BioTempIssuer>;
+
     constructor (
-        /**
-         * @summary `biometricTemplateVersion`.
-         * @description
-         *
-         * Version of the BIT in the BC. Only `v0(0)` is defined.
-         * X.1089 §8.6.
-         *
-         * @public
-         * @readonly
-         */
-        readonly biometricTemplateVersion: BiometricTemplateVersion,
-        /**
-         * @summary `biometricTemplateInfo`.
-         * @description
-         *
-         * BIT data in the BC (CBEFF patron format or a later
-         * alternative). X.1089 §8.7.
-         *
-         * @public
-         * @readonly
-         */
-        readonly biometricTemplateInfo: BiometricTemplateInfo,
-        /**
-         * @summary `issuerDigitalSignatureAlgorithm`.
-         * @description
-         *
-         * Algorithm used to sign this BIT. X.509
-         * `AlgorithmIdentifier` from `SupportedAlgorithms`.
-         * X.1089 §8.6.
-         *
-         * @public
-         * @readonly
-         */
-        readonly issuerDigitalSignatureAlgorithm?: OPTIONAL<AlgorithmIdentifier>,
-        /**
-         * @summary `bioTempIssuer`.
-         * @description
-         *
-         * Issuer of this BIT, which may differ from the BC
-         * issuer. X.1089 §8.6.
-         *
-         * @public
-         * @readonly
-         */
-        readonly bioTempIssuer?: OPTIONAL<BioTempIssuer>
-    ) {}
+        biometricTemplateVersion: BiometricTemplateVersion,
+        biometricTemplateInfo: BiometricTemplateInfo,
+        issuerDigitalSignatureAlgorithm?: OPTIONAL<AlgorithmIdentifier>,
+        bioTempIssuer?: OPTIONAL<BioTempIssuer>
+    ) {
+        this.biometricTemplateVersion = biometricTemplateVersion;
+        this.biometricTemplateInfo = biometricTemplateInfo;
+        this.issuerDigitalSignatureAlgorithm = issuerDigitalSignatureAlgorithm;
+        this.bioTempIssuer = bioTempIssuer;
+    }
 
     /**
      * @summary Restructures an object into a BCBiometricInformationTemplateContent

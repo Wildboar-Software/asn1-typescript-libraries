@@ -1,8 +1,8 @@
 /* eslint-disable */
 import {
-    OPTIONAL,
-    BOOLEAN,
-    ASN1Element as _Element,
+    type OPTIONAL,
+    type BOOLEAN,
+    type ASN1Element as _Element,
     ASN1TagClass as _TagClass,
     ASN1Construction as _Construction,
     ASN1UniversalType as _UniversalType,
@@ -13,7 +13,7 @@ import {
 } from '@wildboar/asn1';
 import * as $ from '@wildboar/asn1/functional';
 import {
-    SupplementaryInformation,
+    type SupplementaryInformation,
     _decode_SupplementaryInformation,
     _encode_SupplementaryInformation,
 } from '../MTSAbstractService/SupplementaryInformation.ta.mjs';
@@ -31,20 +31,26 @@ import {
  *
  */
 export class change_auto_acknowledgment_ArgumentType {
+    /**
+     * @summary `auto_acknowledge_IPMs`.
+     * @public
+     * @readonly
+     */
+    public readonly auto_acknowledge_IPMs: BOOLEAN;
+    /**
+     * @summary `auto_acknowledge_suppl_receipt_info`.
+     * @public
+     * @readonly
+     */
+    public readonly auto_acknowledge_suppl_receipt_info?: OPTIONAL<SupplementaryInformation>;
+
     constructor(
-        /**
-         * @summary `auto_acknowledge_IPMs`.
-         * @public
-         * @readonly
-         */
-        readonly auto_acknowledge_IPMs: BOOLEAN,
-        /**
-         * @summary `auto_acknowledge_suppl_receipt_info`.
-         * @public
-         * @readonly
-         */
-        readonly auto_acknowledge_suppl_receipt_info?: OPTIONAL<SupplementaryInformation>
-    ) {}
+        auto_acknowledge_IPMs: BOOLEAN,
+        auto_acknowledge_suppl_receipt_info?: OPTIONAL<SupplementaryInformation>
+    ) {
+        this.auto_acknowledge_IPMs = auto_acknowledge_IPMs;
+        this.auto_acknowledge_suppl_receipt_info = auto_acknowledge_suppl_receipt_info;
+    }
 
     /**
      * @summary Restructures an object into a change_auto_acknowledgment_ArgumentType

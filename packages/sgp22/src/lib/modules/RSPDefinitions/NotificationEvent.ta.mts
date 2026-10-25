@@ -1,7 +1,7 @@
 /* eslint-disable */
 import {
-    ASN1Element as _Element,
-    BIT_STRING
+    type ASN1Element as _Element,
+    type BIT_STRING
 } from "@wildboar/asn1";
 import * as $ from "@wildboar/asn1/functional";
 
@@ -125,8 +125,8 @@ const NotificationEvent_notificationDelete: number = 3; /* LONG_NAMED_BIT */
  */
 export
 const notificationDelete: number = NotificationEvent_notificationDelete; /* SHORT_NAMED_BIT */
-export const _decode_NotificationEvent = $._decodeBitString;
-export const _encode_NotificationEvent = $._encodeBitString;
+export const _decode_NotificationEvent: $.ASN1Decoder<BIT_STRING> = $._decodeBitString;
+export const _encode_NotificationEvent: $.ASN1Encoder<BIT_STRING> = $._encodeBitString;
 
 
 /* eslint-enable */

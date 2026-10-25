@@ -1,7 +1,7 @@
 /* eslint-disable */
 import {
-    OPTIONAL,
-    ASN1Element as _Element,
+    type OPTIONAL,
+    type ASN1Element as _Element,
     ASN1TagClass as _TagClass,
     ASN1Construction as _Construction,
     ASN1UniversalType as _UniversalType,
@@ -12,7 +12,7 @@ import {
 } from '@wildboar/asn1';
 import * as $ from '@wildboar/asn1/functional';
 import {
-    VideotexSyntax,
+    type VideotexSyntax,
     _decode_VideotexSyntax,
     _encode_VideotexSyntax,
 } from '../IPMSInformationObjects/VideotexSyntax.ta.mjs';
@@ -31,14 +31,18 @@ import {
  *
  */
 export class VideotexParameters {
+    /**
+     * @summary `syntax`.
+     * @public
+     * @readonly
+     */
+    public readonly syntax?: OPTIONAL<VideotexSyntax>;
+
     constructor(
-        /**
-         * @summary `syntax`.
-         * @public
-         * @readonly
-         */
-        readonly syntax?: OPTIONAL<VideotexSyntax>
-    ) {}
+        syntax?: OPTIONAL<VideotexSyntax>
+    ) {
+        this.syntax = syntax;
+    }
 
     /**
      * @summary Restructures an object into a VideotexParameters

@@ -2,15 +2,15 @@
 
 import * as $ from "@wildboar/asn1/functional";
 import {
-    OPTIONAL,
-    SEQUENCE,
-    SET,
-    ASN1Element as _Element,
+    type OPTIONAL,
+    type SEQUENCE,
+    type SET,
+    type ASN1Element as _Element,
     ASN1TagClass as _TagClass
 } from "@wildboar/asn1";
-import { AuditoryApparatusID, _decode_AuditoryApparatusID, _encode_AuditoryApparatusID } from "../CSTA-physical-device-feature/AuditoryApparatusID.ta.mjs";
+import { type AuditoryApparatusID, _decode_AuditoryApparatusID, _encode_AuditoryApparatusID } from "../CSTA-physical-device-feature/AuditoryApparatusID.ta.mjs";
 
-import { VolAbs, _decode_VolAbs, _encode_VolAbs } from "../CSTA-physical-device-feature/VolAbs.ta.mjs";
+import { type VolAbs, _decode_VolAbs, _encode_VolAbs } from "../CSTA-physical-device-feature/VolAbs.ta.mjs";
 
 
 
@@ -36,27 +36,33 @@ import { VolAbs, _decode_VolAbs, _encode_VolAbs } from "../CSTA-physical-device-
  */
 export
 class SpeakerVolumeList_Item {
+    /**
+     * @summary `auditoryApparatus`.
+     * @description
+     *
+     * Apparatus that owns the speaker.
+     * @public
+     * @readonly
+     */
+    public readonly auditoryApparatus: AuditoryApparatusID;
+    /**
+     * @summary `speakerVolAbs`.
+     * @description
+     *
+     * Absolute volume. 0 silence, 100 maximum; 1–99 device-specific.
+     * Absent: unknown.
+     * @public
+     * @readonly
+     */
+    public readonly speakerVolAbs?: OPTIONAL<VolAbs>;
+
     constructor (
-        /**
-         * @summary `auditoryApparatus`.
-         * @description
-         *
-         * Apparatus that owns the speaker.
-         * @public
-         * @readonly
-         */
-        readonly auditoryApparatus: AuditoryApparatusID,
-        /**
-         * @summary `speakerVolAbs`.
-         * @description
-         *
-         * Absolute volume. 0 silence, 100 maximum; 1–99 device-specific.
-         * Absent: unknown.
-         * @public
-         * @readonly
-         */
-        readonly speakerVolAbs?: OPTIONAL<VolAbs>
-    ) {}
+        auditoryApparatus: AuditoryApparatusID,
+        speakerVolAbs?: OPTIONAL<VolAbs>
+    ) {
+        this.auditoryApparatus = auditoryApparatus;
+        this.speakerVolAbs = speakerVolAbs;
+    }
 
     /**
      * @summary Restructures an object into a SpeakerVolumeList_Item

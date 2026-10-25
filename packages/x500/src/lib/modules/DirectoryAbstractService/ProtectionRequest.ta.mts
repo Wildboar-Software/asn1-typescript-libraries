@@ -1,5 +1,5 @@
 /* eslint-disable */
-import { ASN1Element as _Element, INTEGER } from "@wildboar/asn1";
+import { ASN1Element as _Element, type INTEGER } from "@wildboar/asn1";
 import * as $ from "@wildboar/asn1/functional";
 
 /**
@@ -26,7 +26,7 @@ export type ProtectionRequest = INTEGER;
  * @constant
  * @type {number}
  */
-export const ProtectionRequest_none: ProtectionRequest = 0; /* LONG_NAMED_INTEGER_VALUE */
+export const ProtectionRequest_none: 0 = 0 satisfies ProtectionRequest; /* LONG_NAMED_INTEGER_VALUE */
 
 /**
  * @summary ProtectionRequest_none
@@ -37,7 +37,7 @@ export const ProtectionRequest_none: ProtectionRequest = 0; /* LONG_NAMED_INTEGE
  * @constant
  * @type {number}
  */
-export const none: ProtectionRequest = ProtectionRequest_none; /* SHORT_NAMED_INTEGER_VALUE */
+export const none: 0 = ProtectionRequest_none; /* SHORT_NAMED_INTEGER_VALUE */
 
 /**
  * @summary ProtectionRequest_signed
@@ -48,7 +48,7 @@ export const none: ProtectionRequest = ProtectionRequest_none; /* SHORT_NAMED_IN
  * @constant
  * @type {number}
  */
-export const ProtectionRequest_signed: ProtectionRequest = 1; /* LONG_NAMED_INTEGER_VALUE */
+export const ProtectionRequest_signed: 1 = 1 satisfies ProtectionRequest; /* LONG_NAMED_INTEGER_VALUE */
 
 /**
  * @summary ProtectionRequest_signed
@@ -59,13 +59,13 @@ export const ProtectionRequest_signed: ProtectionRequest = 1; /* LONG_NAMED_INTE
  * @constant
  * @type {number}
  */
-export const signed: ProtectionRequest = ProtectionRequest_signed; /* SHORT_NAMED_INTEGER_VALUE */
+export const signed: 1 = ProtectionRequest_signed; /* SHORT_NAMED_INTEGER_VALUE */
 
 
-export const _decode_ProtectionRequest = $._decodeInteger;
+export const _decode_ProtectionRequest: $.ASN1Decoder<INTEGER> = $._decodeInteger;
 
 
-export const _encode_ProtectionRequest = $._encodeInteger;
+export const _encode_ProtectionRequest: $.ASN1Encoder<INTEGER> = $._encodeInteger;
 
 
 /* eslint-enable */

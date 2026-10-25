@@ -1,6 +1,6 @@
 /* eslint-disable */
 import {
-  OPTIONAL,
+  type OPTIONAL,
   ASN1Element as _Element,
   ASN1TagClass as _TagClass,
   ASN1Construction as _Construction,
@@ -12,22 +12,22 @@ import {
 } from '@wildboar/asn1';
 import * as $ from '@wildboar/asn1/functional';
 import {
-  OrigTransactionID,
+  type OrigTransactionID,
   _decode_OrigTransactionID,
   _encode_OrigTransactionID,
 } from '../TCAPMessages/OrigTransactionID.ta.mjs';
 import {
-  DestTransactionID,
+  type DestTransactionID,
   _decode_DestTransactionID,
   _encode_DestTransactionID,
 } from '../TCAPMessages/DestTransactionID.ta.mjs';
 import {
-  DialoguePortion,
+  type DialoguePortion,
   _decode_DialoguePortion,
   _encode_DialoguePortion,
 } from '../TCAPMessages/DialoguePortion.ta.mjs';
 import {
-  ComponentPortion,
+  type ComponentPortion,
   _decode_ComponentPortion,
   _encode_ComponentPortion,
 } from '../TCAPMessages/ComponentPortion.ta.mjs';
@@ -54,54 +54,64 @@ import {
  *
  */
 export class Continue {
+  /**
+   * @summary `otid`.
+   * @description
+   *
+   * Originating Transaction ID assigned by this sender
+   * (1–4 octets). Mandatory on Continue (Table 9).
+   *
+   * @public
+   * @readonly
+   */
+  public readonly otid: OrigTransactionID;
+  /**
+   * @summary `dtid`.
+   * @description
+   *
+   * Destination Transaction ID: the peer's originating ID
+   * (1–4 octets). Mandatory on Continue (Table 9).
+   *
+   * @public
+   * @readonly
+   */
+  public readonly dtid: DestTransactionID;
+  /**
+   * @summary `dialoguePortion`.
+   * @description
+   *
+   * Optional EXTERNAL for a structured-dialogue APDU
+   * (`dialogue-as-id`) or user information. ITU-T Rec.
+   * Q.773 (06/97) §4.2.3.
+   *
+   * @public
+   * @readonly
+   */
+  public readonly dialoguePortion?: OPTIONAL<DialoguePortion>;
+  /**
+   * @summary `components`.
+   * @description
+   *
+   * Optional; if present, one or more Components. The
+   * Component Portion tag shall be present only if this
+   * field is present (Table 6 note b).
+   *
+   * @public
+   * @readonly
+   */
+  public readonly components?: OPTIONAL<ComponentPortion>;
+
   constructor(
-    /**
-     * @summary `otid`.
-     * @description
-     *
-     * Originating Transaction ID assigned by this sender
-     * (1–4 octets). Mandatory on Continue (Table 9).
-     *
-     * @public
-     * @readonly
-     */
-    readonly otid: OrigTransactionID,
-    /**
-     * @summary `dtid`.
-     * @description
-     *
-     * Destination Transaction ID: the peer's originating ID
-     * (1–4 octets). Mandatory on Continue (Table 9).
-     *
-     * @public
-     * @readonly
-     */
-    readonly dtid: DestTransactionID,
-    /**
-     * @summary `dialoguePortion`.
-     * @description
-     *
-     * Optional EXTERNAL for a structured-dialogue APDU
-     * (`dialogue-as-id`) or user information. ITU-T Rec.
-     * Q.773 (06/97) §4.2.3.
-     *
-     * @public
-     * @readonly
-     */
-    readonly dialoguePortion?: OPTIONAL<DialoguePortion>,
-    /**
-     * @summary `components`.
-     * @description
-     *
-     * Optional; if present, one or more Components. The
-     * Component Portion tag shall be present only if this
-     * field is present (Table 6 note b).
-     *
-     * @public
-     * @readonly
-     */
-    readonly components?: OPTIONAL<ComponentPortion>
-  ) {}
+    otid: OrigTransactionID,
+    dtid: DestTransactionID,
+    dialoguePortion?: OPTIONAL<DialoguePortion>,
+    components?: OPTIONAL<ComponentPortion>
+  ) {
+    this.otid = otid;
+    this.dtid = dtid;
+    this.dialoguePortion = dialoguePortion;
+    this.components = components;
+  }
 
   /**
    * @summary Restructures an object into a Continue

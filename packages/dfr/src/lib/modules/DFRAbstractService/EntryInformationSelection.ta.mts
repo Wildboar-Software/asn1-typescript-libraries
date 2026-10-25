@@ -1,7 +1,7 @@
 /* eslint-disable */
 import {
-    OPTIONAL,
-    ASN1Element as _Element,
+    type OPTIONAL,
+    type ASN1Element as _Element,
     ASN1TagClass as _TagClass,
     ASN1Construction as _Construction,
     ASN1UniversalType as _UniversalType,
@@ -12,7 +12,7 @@ import {
 } from "@wildboar/asn1";
 import * as $ from "@wildboar/asn1/functional";
 import { EntryInformationSelection_read_selector, _enum_for_EntryInformationSelection_read_selector, EntryInformationSelection_read_selector_attributes_only /* IMPORTED_LONG_ENUMERATION_ITEM */, _decode_EntryInformationSelection_read_selector, _encode_EntryInformationSelection_read_selector } from "../DFRAbstractService/EntryInformationSelection-read-selector.ta.mjs";
-import { AttributeSelection, _decode_AttributeSelection, _encode_AttributeSelection } from "../DFRAbstractService/AttributeSelection.ta.mjs";
+import { type AttributeSelection, _decode_AttributeSelection, _encode_AttributeSelection } from "../DFRAbstractService/AttributeSelection.ta.mjs";
 
 
 /**
@@ -46,26 +46,32 @@ import { AttributeSelection, _decode_AttributeSelection, _encode_AttributeSelect
  */
 export
 class EntryInformationSelection {
+    /**
+     * @summary `read_selector`.
+     * @description
+     *
+     * Attributes, content, DOR, or combinations.
+     * @public
+     * @readonly
+     */
+    public readonly read_selector?: OPTIONAL<EntryInformationSelection_read_selector>;
+    /**
+     * @summary `attribute_selection`.
+     * @description
+     *
+     * Which attributes, and optionally in what order.
+     * @public
+     * @readonly
+     */
+    public readonly attribute_selection?: OPTIONAL<AttributeSelection>;
+
     constructor (
-        /**
-         * @summary `read_selector`.
-         * @description
-         *
-         * Attributes, content, DOR, or combinations.
-         * @public
-         * @readonly
-         */
-        readonly read_selector?: OPTIONAL<EntryInformationSelection_read_selector>,
-        /**
-         * @summary `attribute_selection`.
-         * @description
-         *
-         * Which attributes, and optionally in what order.
-         * @public
-         * @readonly
-         */
-        readonly attribute_selection?: OPTIONAL<AttributeSelection>
-    ) {}
+        read_selector?: OPTIONAL<EntryInformationSelection_read_selector>,
+        attribute_selection?: OPTIONAL<AttributeSelection>
+    ) {
+        this.read_selector = read_selector;
+        this.attribute_selection = attribute_selection;
+    }
 
     /**
      * @summary Restructures an object into a EntryInformationSelection
@@ -89,13 +95,13 @@ class EntryInformationSelection {
      * @static
      * @method
      */
-    public static get _default_value_for_read_selector () { return EntryInformationSelection_read_selector_attributes_only; }        /**
+    public static get _default_value_for_read_selector (): _enum_for_EntryInformationSelection_read_selector.attributes_only { return EntryInformationSelection_read_selector_attributes_only; }        /**
          * @summary The enum used as the type of the component `read_selector`
          * @public
          * @static
          */
 
-    public static _enum_for_read_selector = _enum_for_EntryInformationSelection_read_selector;
+    public static _enum_for_read_selector: typeof _enum_for_EntryInformationSelection_read_selector = _enum_for_EntryInformationSelection_read_selector;
 }
 
 /**

@@ -1,6 +1,6 @@
 /* eslint-disable */
 import {
-  INTEGER,
+  type INTEGER,
   ASN1Element as _Element,
   ASN1TagClass as _TagClass,
   ASN1Construction as _Construction,
@@ -32,10 +32,10 @@ import * as $ from '@wildboar/asn1/functional';
 export type IntermediateSystemPriority = INTEGER;
 
 
-export const _decode_IntermediateSystemPriority = $._decodeInteger;
+export const _decode_IntermediateSystemPriority: $.ASN1Decoder<INTEGER> = $._decodeInteger;
 
 
-export const _encode_IntermediateSystemPriority = $._encodeInteger;
+export const _encode_IntermediateSystemPriority: $.ASN1Encoder<INTEGER> = $._encodeInteger;
 
 
 /* eslint-enable */

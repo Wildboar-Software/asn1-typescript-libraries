@@ -1,6 +1,6 @@
 /* eslint-disable */
 import {
-  OPTIONAL,
+  type OPTIONAL,
   ASN1Element as _Element,
   ASN1TagClass as _TagClass,
   ASN1Construction as _Construction,
@@ -12,28 +12,28 @@ import {
 } from '@wildboar/asn1';
 import * as $ from '@wildboar/asn1/functional';
 import {
-  ABRT_source,
+  type ABRT_source,
   _decode_ABRT_source,
   _encode_ABRT_source,
 } from '../ACSE-1/ABRT-source.ta.mjs';
 import {
-  ABRT_diagnostic,
+  type ABRT_diagnostic,
   _enum_for_ABRT_diagnostic,
   _decode_ABRT_diagnostic,
   _encode_ABRT_diagnostic,
 } from '../ACSE-1/ABRT-diagnostic.ta.mjs';
 import {
-  Association_data,
+  type Association_data,
   _decode_Association_data,
   _encode_Association_data,
 } from '../ACSE-1/Association-data.ta.mjs';
 import {
-  ASO_qualifier,
+  type ASO_qualifier,
   _decode_ASO_qualifier,
   _encode_ASO_qualifier,
 } from '../ACSE-1/ASO-qualifier.ta.mjs';
 import {
-  ASOI_identifier,
+  type ASOI_identifier,
   _decode_ASOI_identifier,
   _encode_ASOI_identifier,
 } from '../ACSE-1/ASOI-identifier.ta.mjs';
@@ -185,7 +185,7 @@ export class ABRT_apdu {
    * @static
    */
 
-  public static _enum_for_abort_diagnostic = _enum_for_ABRT_diagnostic;
+  public static _enum_for_abort_diagnostic: typeof _enum_for_ABRT_diagnostic = _enum_for_ABRT_diagnostic;
 }
 
 /**

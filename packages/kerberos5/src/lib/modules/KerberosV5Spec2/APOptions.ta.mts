@@ -11,7 +11,7 @@ import {
 } from '@wildboar/asn1';
 import * as $ from '@wildboar/asn1/functional';
 import {
-  KerberosFlags,
+  type KerberosFlags,
   _decode_KerberosFlags,
   _encode_KerberosFlags,
 } from '../KerberosV5Spec2/KerberosFlags.ta.mjs';
@@ -33,26 +33,13 @@ import {
  */
 export type APOptions = KerberosFlags; // DefinedType
 
-
-let _cached_decoder_for_APOptions: $.ASN1Decoder<APOptions> | null = null;
-
-
 /**
  * @summary Decodes an ASN.1 element into a(n) APOptions
  * @function
  * @param {_Element} el The element being decoded.
  * @returns {APOptions} The decoded data structure.
  */
-export function _decode_APOptions(el: _Element): APOptions {
-  if (!_cached_decoder_for_APOptions) {
-    _cached_decoder_for_APOptions = _decode_KerberosFlags;
-  }
-  return _cached_decoder_for_APOptions(el);
-}
-
-
-let _cached_encoder_for_APOptions: $.ASN1Encoder<APOptions> | null = null;
-
+export const _decode_APOptions: $.ASN1Decoder<APOptions> = _decode_KerberosFlags;
 
 /**
  * @summary Encodes a(n) APOptions into an ASN.1 Element.
@@ -61,15 +48,7 @@ let _cached_encoder_for_APOptions: $.ASN1Encoder<APOptions> | null = null;
  * @param elGetter A function that can be used to get new ASN.1 elements.
  * @returns {_Element} The APOptions, encoded as an ASN.1 Element.
  */
-export function _encode_APOptions(
-  value: APOptions,
-  elGetter: $.ASN1Encoder<APOptions>
-): _Element {
-  if (!_cached_encoder_for_APOptions) {
-    _cached_encoder_for_APOptions = _encode_KerberosFlags;
-  }
-  return _cached_encoder_for_APOptions(value, elGetter);
-}
+export const _encode_APOptions: $.ASN1Encoder<APOptions> = _encode_KerberosFlags;
 
 
 /* eslint-enable */

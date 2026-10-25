@@ -1,41 +1,41 @@
 /* eslint-disable */
 import {
-    INTEGER,
-    OCTET_STRING,
-    OPTIONAL,
-    ASN1Element as _Element,
+    type INTEGER,
+    type OCTET_STRING,
+    type OPTIONAL,
+    type ASN1Element as _Element,
     ASN1TagClass as _TagClass
 } from "@wildboar/asn1";
 import * as $ from "@wildboar/asn1/functional";
-import { RequestedType, _decode_RequestedType, _encode_RequestedType } from "../IN-CS2-datatypes/RequestedType.ta.mjs";
+import { type RequestedType, _decode_RequestedType, _encode_RequestedType } from "../IN-CS2-datatypes/RequestedType.ta.mjs";
 // export { RequestedType, _decode_RequestedType, _encode_RequestedType } from "../IN-CS2-datatypes/RequestedType.ta.mjs";
-import { CallingPartyNumber, _decode_CallingPartyNumber, _encode_CallingPartyNumber } from "../IN-CS2-datatypes/CallingPartyNumber.ta.mjs";
+import { type CallingPartyNumber, _decode_CallingPartyNumber, _encode_CallingPartyNumber } from "../IN-CS2-datatypes/CallingPartyNumber.ta.mjs";
 // export { CallingPartyNumber, _decode_CallingPartyNumber, _encode_CallingPartyNumber } from "../IN-CS2-datatypes/CallingPartyNumber.ta.mjs";
-import { LocationNumber, _decode_LocationNumber, _encode_LocationNumber } from "../IN-CS2-datatypes/LocationNumber.ta.mjs";
+import { type LocationNumber, _decode_LocationNumber, _encode_LocationNumber } from "../IN-CS2-datatypes/LocationNumber.ta.mjs";
 // export { LocationNumber, _decode_LocationNumber, _encode_LocationNumber } from "../IN-CS2-datatypes/LocationNumber.ta.mjs";
-import { CalledPartyNumber, _decode_CalledPartyNumber, _encode_CalledPartyNumber } from "../IN-CS2-datatypes/CalledPartyNumber.ta.mjs";
+import { type CalledPartyNumber, _decode_CalledPartyNumber, _encode_CalledPartyNumber } from "../IN-CS2-datatypes/CalledPartyNumber.ta.mjs";
 // export { CalledPartyNumber, _decode_CalledPartyNumber, _encode_CalledPartyNumber } from "../IN-CS2-datatypes/CalledPartyNumber.ta.mjs";
-import { Digits, _decode_Digits, _encode_Digits } from "../IN-CS2-datatypes/Digits.ta.mjs";
+import { type Digits, _decode_Digits, _encode_Digits } from "../IN-CS2-datatypes/Digits.ta.mjs";
 // export { Digits, _decode_Digits, _encode_Digits } from "../IN-CS2-datatypes/Digits.ta.mjs";
-import { RedirectingPartyID, _decode_RedirectingPartyID, _encode_RedirectingPartyID } from "../IN-CS2-datatypes/RedirectingPartyID.ta.mjs";
+import { type RedirectingPartyID, _decode_RedirectingPartyID, _encode_RedirectingPartyID } from "../IN-CS2-datatypes/RedirectingPartyID.ta.mjs";
 // export { RedirectingPartyID, _decode_RedirectingPartyID, _encode_RedirectingPartyID } from "../IN-CS2-datatypes/RedirectingPartyID.ta.mjs";
-import { RedirectionInformation, _decode_RedirectionInformation, _encode_RedirectionInformation } from "../IN-CS2-datatypes/RedirectionInformation.ta.mjs";
+import { type RedirectionInformation, _decode_RedirectionInformation, _encode_RedirectionInformation } from "../IN-CS2-datatypes/RedirectionInformation.ta.mjs";
 // export { RedirectionInformation, _decode_RedirectionInformation, _encode_RedirectionInformation } from "../IN-CS2-datatypes/RedirectionInformation.ta.mjs";
-import { OriginalCalledPartyID, _decode_OriginalCalledPartyID, _encode_OriginalCalledPartyID } from "../IN-CS2-datatypes/OriginalCalledPartyID.ta.mjs";
+import { type OriginalCalledPartyID, _decode_OriginalCalledPartyID, _encode_OriginalCalledPartyID } from "../IN-CS2-datatypes/OriginalCalledPartyID.ta.mjs";
 // export { OriginalCalledPartyID, _decode_OriginalCalledPartyID, _encode_OriginalCalledPartyID } from "../IN-CS2-datatypes/OriginalCalledPartyID.ta.mjs";
-import { HighLayerCompatibility, _decode_HighLayerCompatibility, _encode_HighLayerCompatibility } from "../IN-CS2-datatypes/HighLayerCompatibility.ta.mjs";
+import { type HighLayerCompatibility, _decode_HighLayerCompatibility, _encode_HighLayerCompatibility } from "../IN-CS2-datatypes/HighLayerCompatibility.ta.mjs";
 // export { HighLayerCompatibility, _decode_HighLayerCompatibility, _encode_HighLayerCompatibility } from "../IN-CS2-datatypes/HighLayerCompatibility.ta.mjs";
-import { BearerCapability, _decode_BearerCapability, _encode_BearerCapability } from "../IN-CS2-datatypes/BearerCapability.ta.mjs";
+import { type BearerCapability, _decode_BearerCapability, _encode_BearerCapability } from "../IN-CS2-datatypes/BearerCapability.ta.mjs";
 // export { BearerCapability, _decode_BearerCapability, _encode_BearerCapability } from "../IN-CS2-datatypes/BearerCapability.ta.mjs";
 import { InvokableService, _decode_InvokableService, _encode_InvokableService, _enum_for_InvokableService } from "../IN-CS2-datatypes/InvokableService.ta.mjs";
 // export { InvokableService, _enum_for_InvokableService, InvokableService_callingLineIdentificationRestriction /* IMPORTED_LONG_ENUMERATION_ITEM */, InvokableService_connectedLineIdentificationRestriction /* IMPORTED_LONG_ENUMERATION_ITEM */, InvokableService_callWaiting /* IMPORTED_LONG_ENUMERATION_ITEM */, callWaiting /* IMPORTED_SHORT_ENUMERATION_ITEM */, InvokableService_callHold /* IMPORTED_LONG_ENUMERATION_ITEM */, callHold /* IMPORTED_SHORT_ENUMERATION_ITEM */, InvokableService_reverseCharging /* IMPORTED_LONG_ENUMERATION_ITEM */, InvokableService_explicitCallTransfer /* IMPORTED_LONG_ENUMERATION_ITEM */, explicitCallTransfer /* IMPORTED_SHORT_ENUMERATION_ITEM */, InvokableService_callCompletionOnBusySubscriber /* IMPORTED_LONG_ENUMERATION_ITEM */, callCompletionOnBusySubscriber /* IMPORTED_SHORT_ENUMERATION_ITEM */, _decode_InvokableService, _encode_InvokableService } from "../IN-CS2-datatypes/InvokableService.ta.mjs";
-import { ActivableServices, _decode_ActivableServices, _encode_ActivableServices } from "../IN-CS2-datatypes/ActivableServices.ta.mjs";
+import { type ActivableServices, _decode_ActivableServices, _encode_ActivableServices } from "../IN-CS2-datatypes/ActivableServices.ta.mjs";
 // export { ActivableServices, ActivableServices_callingLineIdentificationPresentation /* IMPORTED_LONG_NAMED_BIT */, callingLineIdentificationPresentation /* IMPORTED_SHORT_NAMED_BIT */, ActivableServices_callingLineIdentificationRestriction /* IMPORTED_LONG_NAMED_BIT */, ActivableServices_connectedLineIdentificationPresentation /* IMPORTED_LONG_NAMED_BIT */, connectedLineIdentificationPresentation /* IMPORTED_SHORT_NAMED_BIT */, ActivableServices_connectedLineIdentificationRestriction /* IMPORTED_LONG_NAMED_BIT */, ActivableServices_callForwardingOnNoReply /* IMPORTED_LONG_NAMED_BIT */, callForwardingOnNoReply /* IMPORTED_SHORT_NAMED_BIT */, ActivableServices_callForwardingUnconditional /* IMPORTED_LONG_NAMED_BIT */, callForwardingUnconditional /* IMPORTED_SHORT_NAMED_BIT */, ActivableServices_callForwardingOnBusy /* IMPORTED_LONG_NAMED_BIT */, callForwardingOnBusy /* IMPORTED_SHORT_NAMED_BIT */, ActivableServices_callForwardingOnNotReachable /* IMPORTED_LONG_NAMED_BIT */, callForwardingOnNotReachable /* IMPORTED_SHORT_NAMED_BIT */, ActivableServices_reverseCharging /* IMPORTED_LONG_NAMED_BIT */, ActivableServices_adviceOfChargeOnStart /* IMPORTED_LONG_NAMED_BIT */, adviceOfChargeOnStart /* IMPORTED_SHORT_NAMED_BIT */, ActivableServices_adviceOfChargeAtEnd /* IMPORTED_LONG_NAMED_BIT */, adviceOfChargeAtEnd /* IMPORTED_SHORT_NAMED_BIT */, ActivableServices_adviceOfChargeDuringCall /* IMPORTED_LONG_NAMED_BIT */, adviceOfChargeDuringCall /* IMPORTED_SHORT_NAMED_BIT */, ActivableServices_timeDependentRouting /* IMPORTED_LONG_NAMED_BIT */, timeDependentRouting /* IMPORTED_SHORT_NAMED_BIT */, ActivableServices_callingPartingDependentRouting /* IMPORTED_LONG_NAMED_BIT */, callingPartingDependentRouting /* IMPORTED_SHORT_NAMED_BIT */, ActivableServices_outgoingCallBarring /* IMPORTED_LONG_NAMED_BIT */, outgoingCallBarring /* IMPORTED_SHORT_NAMED_BIT */, ActivableServices_incomingCallBarring /* IMPORTED_LONG_NAMED_BIT */, incomingCallBarring /* IMPORTED_SHORT_NAMED_BIT */, _decode_ActivableServices, _encode_ActivableServices } from "../IN-CS2-datatypes/ActivableServices.ta.mjs";
-import { Cause, _decode_Cause, _encode_Cause } from "../IN-CS2-datatypes/Cause.ta.mjs";
+import { type Cause, _decode_Cause, _encode_Cause } from "../IN-CS2-datatypes/Cause.ta.mjs";
 // export { Cause, _decode_Cause, _encode_Cause } from "../IN-CS2-datatypes/Cause.ta.mjs";
-import { UserInteractionModes, _decode_UserInteractionModes, _encode_UserInteractionModes } from "../IN-CS2-datatypes/UserInteractionModes.ta.mjs";
+import { type UserInteractionModes, _decode_UserInteractionModes, _encode_UserInteractionModes } from "../IN-CS2-datatypes/UserInteractionModes.ta.mjs";
 // export { UserInteractionModes, UserInteractionModes_voiceMessage /* IMPORTED_LONG_NAMED_BIT */, voiceMessage /* IMPORTED_SHORT_NAMED_BIT */, UserInteractionModes_tone /* IMPORTED_LONG_NAMED_BIT */, tone /* IMPORTED_SHORT_NAMED_BIT */, UserInteractionModes_display /* IMPORTED_LONG_NAMED_BIT */, display /* IMPORTED_SHORT_NAMED_BIT */, _decode_UserInteractionModes, _encode_UserInteractionModes } from "../IN-CS2-datatypes/UserInteractionModes.ta.mjs";
-import { CallingPartysCategory, _decode_CallingPartysCategory, _encode_CallingPartysCategory } from "../IN-CS2-datatypes/CallingPartysCategory.ta.mjs";
+import { type CallingPartysCategory, _decode_CallingPartysCategory, _encode_CallingPartysCategory } from "../IN-CS2-datatypes/CallingPartysCategory.ta.mjs";
 // export { CallingPartysCategory, _decode_CallingPartysCategory, _encode_CallingPartysCategory } from "../IN-CS2-datatypes/CallingPartysCategory.ta.mjs";
 import { SecurityParameters, _decode_SecurityParameters, _encode_SecurityParameters } from "../DirectoryAbstractService/SecurityParameters.ta.mjs";
 // export { SecurityParameters, _decode_SecurityParameters, _encode_SecurityParameters } from "../DirectoryAbstractService/SecurityParameters.ta.mjs";
@@ -266,7 +266,7 @@ class HandlingInformationRequestArg_Type {
          * @static
          */
 
-    public static _enum_for_invokedSupplementaryService = _enum_for_InvokableService;
+    public static _enum_for_invokedSupplementaryService: typeof _enum_for_InvokableService = _enum_for_InvokableService;
 }
 
 /**

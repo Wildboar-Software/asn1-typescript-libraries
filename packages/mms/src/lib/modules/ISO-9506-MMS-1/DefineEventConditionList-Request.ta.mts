@@ -1,7 +1,7 @@
 /* eslint-disable */
 import {
-    OPTIONAL,
-    ASN1Element as _Element,
+    type OPTIONAL,
+    type ASN1Element as _Element,
     ASN1TagClass as _TagClass,
     ASN1Construction as _Construction,
     ASN1UniversalType as _UniversalType,
@@ -11,7 +11,7 @@ import {
     ASN1ConstructionError as _ConstructionError,
 } from "@wildboar/asn1";
 import * as $ from "@wildboar/asn1/functional";
-import { ObjectName, _decode_ObjectName, _encode_ObjectName } from "../ISO-9506-MMS-1/ObjectName.ta.mjs";
+import { type ObjectName, _decode_ObjectName, _encode_ObjectName } from "../ISO-9506-MMS-1/ObjectName.ta.mjs";
 
 
 /**
@@ -41,44 +41,52 @@ import { ObjectName, _decode_ObjectName, _encode_ObjectName } from "../ISO-9506-
  */
 export
 class DefineEventConditionList_Request {
+    /**
+     * @summary `eventConditionListName`.
+     * @description
+     *
+     * Name of the Event Condition List to create.
+     *
+     * [ISO 9506-1:2003 §22.2.1.1.1]
+     *
+     * @public
+     * @readonly
+     */
+    public readonly eventConditionListName: ObjectName;
+    /**
+     * @summary `listOfEventConditionName`.
+     * @description
+     *
+     * Member Event Conditions. Must be non-empty if `recl` was not negotiated.
+     *
+     * [ISO 9506-1:2003 §22.2.1.1.2]
+     *
+     * @public
+     * @readonly
+     */
+    public readonly listOfEventConditionName: ObjectName[];
+    /**
+     * @summary `listOfEventConditionListName`.
+     * @description
+     *
+     * Nested lists. Present iff `recl`. No circular references.
+     *
+     * [ISO 9506-1:2003 §22.2.1.1.3]
+     *
+     * @public
+     * @readonly
+     */
+    public readonly listOfEventConditionListName?: OPTIONAL<ObjectName[]>;
+
     constructor (
-        /**
-         * @summary `eventConditionListName`.
-         * @description
-         *
-         * Name of the Event Condition List to create.
-         *
-         * [ISO 9506-1:2003 §22.2.1.1.1]
-         *
-         * @public
-         * @readonly
-         */
-        readonly eventConditionListName: ObjectName,
-        /**
-         * @summary `listOfEventConditionName`.
-         * @description
-         *
-         * Member Event Conditions. Must be non-empty if `recl` was not negotiated.
-         *
-         * [ISO 9506-1:2003 §22.2.1.1.2]
-         *
-         * @public
-         * @readonly
-         */
-        readonly listOfEventConditionName: ObjectName[],
-        /**
-         * @summary `listOfEventConditionListName`.
-         * @description
-         *
-         * Nested lists. Present iff `recl`. No circular references.
-         *
-         * [ISO 9506-1:2003 §22.2.1.1.3]
-         *
-         * @public
-         * @readonly
-         */
-        readonly listOfEventConditionListName?: OPTIONAL<ObjectName[]>
-    ) {}
+        eventConditionListName: ObjectName,
+        listOfEventConditionName: ObjectName[],
+        listOfEventConditionListName?: OPTIONAL<ObjectName[]>
+    ) {
+        this.eventConditionListName = eventConditionListName;
+        this.listOfEventConditionName = listOfEventConditionName;
+        this.listOfEventConditionListName = listOfEventConditionListName;
+    }
 
     /**
      * @summary Restructures an object into a DefineEventConditionList_Request

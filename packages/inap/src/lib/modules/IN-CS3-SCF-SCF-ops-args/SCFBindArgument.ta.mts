@@ -1,15 +1,15 @@
 /* eslint-disable */
 import {
-    OPTIONAL,
-    ASN1Element as _Element,
+    type OPTIONAL,
+    type ASN1Element as _Element,
     ASN1TagClass as _TagClass
 } from "@wildboar/asn1";
 import * as $ from "@wildboar/asn1/functional";
-import { AgreementID, _decode_AgreementID, _encode_AgreementID } from "../IN-CS3-SCF-SCF-datatypes/AgreementID.ta.mjs";
+import { type AgreementID, _decode_AgreementID, _encode_AgreementID } from "../IN-CS3-SCF-SCF-datatypes/AgreementID.ta.mjs";
 // export { AgreementID, _decode_AgreementID, _encode_AgreementID } from "../IN-CS3-SCF-SCF-datatypes/AgreementID.ta.mjs";
-import { ScfAddress, _decode_ScfAddress, _encode_ScfAddress } from "../IN-CS3-SCF-SCF-datatypes/ScfAddress.ta.mjs";
+import { type ScfAddress, _decode_ScfAddress, _encode_ScfAddress } from "../IN-CS3-SCF-SCF-datatypes/ScfAddress.ta.mjs";
 // export { ScfAddress, _decode_ScfAddress, _encode_ScfAddress } from "../IN-CS3-SCF-SCF-datatypes/ScfAddress.ta.mjs";
-import { Credentials, _decode_Credentials, _encode_Credentials } from "../DirectoryAbstractService/Credentials.ta.mjs";
+import { type Credentials, _decode_Credentials, _encode_Credentials } from "../DirectoryAbstractService/Credentials.ta.mjs";
 // export { Credentials, _decode_Credentials, _encode_Credentials } from "../DirectoryAbstractService/Credentials.ta.mjs";
 
 

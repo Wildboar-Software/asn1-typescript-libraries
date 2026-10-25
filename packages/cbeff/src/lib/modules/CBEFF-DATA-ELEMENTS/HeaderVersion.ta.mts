@@ -11,12 +11,12 @@ import {
 } from '@wildboar/asn1';
 import * as $ from '@wildboar/asn1/functional';
 import {
-  HeaderVersion_header_major,
+  type HeaderVersion_header_major,
   _decode_HeaderVersion_header_major,
   _encode_HeaderVersion_header_major,
 } from '../CBEFF-DATA-ELEMENTS/HeaderVersion-header-major.ta.mjs';
 import {
-  HeaderVersion_header_minor,
+  type HeaderVersion_header_minor,
   _decode_HeaderVersion_header_minor,
   _encode_HeaderVersion_header_minor,
 } from '../CBEFF-DATA-ELEMENTS/HeaderVersion-header-minor.ta.mjs';
@@ -40,13 +40,13 @@ export class HeaderVersion {
    * @public
    * @readonly
    */
-  readonly header_major: HeaderVersion_header_major;
+  public readonly header_major: HeaderVersion_header_major;
   /**
    * @summary `header_minor`.
    * @public
    * @readonly
    */
-  readonly header_minor: HeaderVersion_header_minor;
+  public readonly header_minor: HeaderVersion_header_minor;
 
   constructor(
     header_major: HeaderVersion_header_major,

@@ -5,7 +5,7 @@ import {
 } from "../InformationFramework/AttributeUsage.ta.mjs";
 import { id_at_intEmail } from "../SelectedAttributeTypes/id-at-intEmail.va.mjs";
 import {
-    IntEmail,
+    type IntEmail,
     _decode_IntEmail,
     _encode_IntEmail,
 } from "../SelectedAttributeTypes/IntEmail.ta.mjs";

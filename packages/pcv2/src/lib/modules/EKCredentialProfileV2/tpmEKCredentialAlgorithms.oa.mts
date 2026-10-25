@@ -1,7 +1,7 @@
 /* eslint-disable */
 import { type ATTRIBUTE } from "../InformationFramework/ATTRIBUTE.oca.mjs";
 import { userApplications /* IMPORTED_SHORT_ENUMERATION_ITEM */ } from "../InformationFramework/AttributeUsage.ta.mjs";
-import { EKCredentialAlgorithmList, _decode_EKCredentialAlgorithmList, _encode_EKCredentialAlgorithmList } from "../EKCredentialProfileV2/EKCredentialAlgorithmList.ta.mjs";
+import { type EKCredentialAlgorithmList, _decode_EKCredentialAlgorithmList, _encode_EKCredentialAlgorithmList } from "../EKCredentialProfileV2/EKCredentialAlgorithmList.ta.mjs";
 import { tcg_at_tpmEKCredentialAlgorithms } from "../EKCredentialProfileV2/tcg-at-tpmEKCredentialAlgorithms.va.mjs";
 
 

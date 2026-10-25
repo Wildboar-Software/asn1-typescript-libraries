@@ -1,7 +1,7 @@
 /* eslint-disable */
 import {
-    OCTET_STRING,
-    ASN1Element as _Element,
+    type OCTET_STRING,
+    type ASN1Element as _Element,
     ASN1TagClass as _TagClass,
     ASN1Construction as _Construction,
     ASN1UniversalType as _UniversalType,
@@ -11,7 +11,7 @@ import {
     ASN1ConstructionError as _ConstructionError,
 } from "@wildboar/asn1";
 import * as $ from "@wildboar/asn1/functional";
-import { ECPoint, _decode_ECPoint, _encode_ECPoint } from "../SEC1-v1-9/ECPoint.ta.mjs";
+import { type ECPoint, _decode_ECPoint, _encode_ECPoint } from "../SEC1-v1-9/ECPoint.ta.mjs";
 /**
  * @summary ECIES_Ciphertext_Value
  * @description
@@ -45,7 +45,7 @@ class ECIES_Ciphertext_Value {
      * @public
      * @readonly
      */
-    readonly ephemeralPublicKey: ECPoint;
+    public readonly ephemeralPublicKey: ECPoint;
     /**
      * @summary `symmetricCiphertext`.
      * @description
@@ -56,7 +56,7 @@ class ECIES_Ciphertext_Value {
      * @public
      * @readonly
      */
-    readonly symmetricCiphertext: OCTET_STRING;
+    public readonly symmetricCiphertext: OCTET_STRING;
     /**
      * @summary `macTag`.
      * @description
@@ -67,7 +67,7 @@ class ECIES_Ciphertext_Value {
      * @public
      * @readonly
      */
-    readonly macTag: OCTET_STRING;
+    public readonly macTag: OCTET_STRING;
 
     constructor (
         ephemeralPublicKey: ECPoint,

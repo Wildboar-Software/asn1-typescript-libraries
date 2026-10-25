@@ -1,11 +1,11 @@
 /* eslint-disable */
 import {
-    OPTIONAL,
-    ASN1Element as _Element,
+    type OPTIONAL,
+    type ASN1Element as _Element,
     ASN1TagClass as _TagClass
 } from "@wildboar/asn1";
 import * as $ from "@wildboar/asn1/functional";
-import { DigitMapName, _decode_DigitMapName, _encode_DigitMapName } from "../MEDIA-GATEWAY-CONTROL/DigitMapName.ta.mjs";
+import { type DigitMapName, _decode_DigitMapName, _encode_DigitMapName } from "../MEDIA-GATEWAY-CONTROL/DigitMapName.ta.mjs";
 
 
 /**
@@ -39,7 +39,7 @@ class IndAudDigitMapDescriptor {
      * @public
      * @readonly
      */
-    readonly digitMapName?: OPTIONAL<DigitMapName>;
+    public readonly digitMapName?: OPTIONAL<DigitMapName>;
 
     constructor (
         digitMapName?: OPTIONAL<DigitMapName>

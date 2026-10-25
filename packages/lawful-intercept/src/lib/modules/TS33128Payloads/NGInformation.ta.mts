@@ -1,18 +1,18 @@
 /* eslint-disable */
 import {
-    BOOLEAN,
-    OPTIONAL,
-    ASN1Element as _Element,
+    type BOOLEAN,
+    type OPTIONAL,
+    type ASN1Element as _Element,
     ASN1TagClass as _TagClass
 } from "@wildboar/asn1";
 import * as $ from "@wildboar/asn1/functional";
 import { GlobalRANNodeID, _decode_GlobalRANNodeID, _encode_GlobalRANNodeID } from "../TS33128Payloads/GlobalRANNodeID.ta.mjs";
 // export { GlobalRANNodeID, _decode_GlobalRANNodeID, _encode_GlobalRANNodeID } from "../TS33128Payloads/GlobalRANNodeID.ta.mjs";
-import { RANNodeName, _decode_RANNodeName, _encode_RANNodeName } from "../TS33128Payloads/RANNodeName.ta.mjs";
+import { type RANNodeName, _decode_RANNodeName, _encode_RANNodeName } from "../TS33128Payloads/RANNodeName.ta.mjs";
 // export { RANNodeName, _decode_RANNodeName, _encode_RANNodeName } from "../TS33128Payloads/RANNodeName.ta.mjs";
-import { SupportedTAList, _decode_SupportedTAList, _encode_SupportedTAList } from "../TS33128Payloads/SupportedTAList.ta.mjs";
+import { type SupportedTAList, _decode_SupportedTAList, _encode_SupportedTAList } from "../TS33128Payloads/SupportedTAList.ta.mjs";
 // export { SupportedTAList, _decode_SupportedTAList, _encode_SupportedTAList } from "../TS33128Payloads/SupportedTAList.ta.mjs";
-import { PLMNSupportList, _decode_PLMNSupportList, _encode_PLMNSupportList } from "../TS33128Payloads/PLMNSupportList.ta.mjs";
+import { type PLMNSupportList, _decode_PLMNSupportList, _encode_PLMNSupportList } from "../TS33128Payloads/PLMNSupportList.ta.mjs";
 // export { PLMNSupportList, _decode_PLMNSupportList, _encode_PLMNSupportList } from "../TS33128Payloads/PLMNSupportList.ta.mjs";
 
 

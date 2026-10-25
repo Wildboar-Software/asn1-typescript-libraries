@@ -1,6 +1,6 @@
 /* eslint-disable */
 import {
-    ASN1Element as _Element,
+    type ASN1Element as _Element,
     ASN1TagClass as _TagClass,
     ASN1Construction as _Construction,
     ASN1UniversalType as _UniversalType,
@@ -11,12 +11,12 @@ import {
 } from '@wildboar/asn1';
 import * as $ from '@wildboar/asn1/functional';
 import {
-    MessageSubmissionIdentifier,
+    type MessageSubmissionIdentifier,
     _decode_MessageSubmissionIdentifier,
     _encode_MessageSubmissionIdentifier,
 } from '../MTSAbstractService/MessageSubmissionIdentifier.ta.mjs';
 import {
-    MessageSubmissionTime,
+    type MessageSubmissionTime,
     _decode_MessageSubmissionTime,
     _encode_MessageSubmissionTime,
 } from '../MTSAbstractService/MessageSubmissionTime.ta.mjs';
@@ -34,20 +34,26 @@ import {
  *
  */
 export class originate_edim_ResultType {
+    /**
+     * @summary `submission_identifier`.
+     * @public
+     * @readonly
+     */
+    public readonly submission_identifier: MessageSubmissionIdentifier;
+    /**
+     * @summary `submission_time`.
+     * @public
+     * @readonly
+     */
+    public readonly submission_time: MessageSubmissionTime;
+
     constructor(
-        /**
-         * @summary `submission_identifier`.
-         * @public
-         * @readonly
-         */
-        readonly submission_identifier: MessageSubmissionIdentifier,
-        /**
-         * @summary `submission_time`.
-         * @public
-         * @readonly
-         */
-        readonly submission_time: MessageSubmissionTime
-    ) {}
+        submission_identifier: MessageSubmissionIdentifier,
+        submission_time: MessageSubmissionTime
+    ) {
+        this.submission_identifier = submission_identifier;
+        this.submission_time = submission_time;
+    }
 
     /**
      * @summary Restructures an object into a originate_edim_ResultType

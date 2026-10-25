@@ -1,9 +1,9 @@
 /* eslint-disable */
 import {
     ASN1ConstructionError as _ConstructionError,
-    ASN1Element as _Element,
+    type ASN1Element as _Element,
     ASN1TagClass as _TagClass,
-    BIT_STRING,
+    type BIT_STRING,
 } from "@wildboar/asn1";
 import * as $ from "@wildboar/asn1/functional";
 import {
@@ -30,26 +30,34 @@ import {
  *
  */
 export class SIGNATURE {
+    /**
+     * @summary `agorithmIdentifier`.
+     * @public
+     * @readonly
+     */
+    public readonly agorithmIdentifier: AlgorithmIdentifier;
+    /**
+     * @summary `signature`.
+     * @public
+     * @readonly
+     */
+    public readonly signature: BIT_STRING;
+    /**
+     * @summary Extensions that are not recognized.
+     * @public
+     * @readonly
+     */
+    public readonly _unrecognizedExtensionsList: _Element[];
+
     constructor(
-        /**
-         * @summary `agorithmIdentifier`.
-         * @public
-         * @readonly
-         */
-        readonly agorithmIdentifier: AlgorithmIdentifier,
-        /**
-         * @summary `signature`.
-         * @public
-         * @readonly
-         */
-        readonly signature: BIT_STRING,
-        /**
-         * @summary Extensions that are not recognized.
-         * @public
-         * @readonly
-         */
-        readonly _unrecognizedExtensionsList: _Element[] = []
-    ) {}
+        agorithmIdentifier: AlgorithmIdentifier,
+        signature: BIT_STRING,
+        _unrecognizedExtensionsList: _Element[] = []
+    ) {
+        this.agorithmIdentifier = agorithmIdentifier;
+        this.signature = signature;
+        this._unrecognizedExtensionsList = _unrecognizedExtensionsList;
+    }
 
     /**
      * @summary Restructures an object into a SIGNATURE

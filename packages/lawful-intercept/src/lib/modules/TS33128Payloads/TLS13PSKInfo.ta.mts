@@ -1,8 +1,8 @@
 /* eslint-disable */
 import {
-    OCTET_STRING,
+    type OCTET_STRING,
     ASN1ConstructionError as _ConstructionError,
-    ASN1Element as _Element,
+    type ASN1Element as _Element,
     ASN1TagClass as _TagClass
 } from "@wildboar/asn1";
 import * as $ from "@wildboar/asn1/functional";
@@ -101,13 +101,13 @@ class TLS13PSKInfo {
          * @static
          */
 
-    public static _enum_for_pSKKeyExchangeMode = _enum_for_TLS13PSKKeyExchangeMode;        /**
+    public static _enum_for_pSKKeyExchangeMode: typeof _enum_for_TLS13PSKKeyExchangeMode = _enum_for_TLS13PSKKeyExchangeMode;        /**
          * @summary The enum used as the type of the component `hashAlgorithm`
          * @public
          * @static
          */
 
-    public static _enum_for_hashAlgorithm = _enum_for_TLS13PSKHashAlgorithm;
+    public static _enum_for_hashAlgorithm: typeof _enum_for_TLS13PSKHashAlgorithm = _enum_for_TLS13PSKHashAlgorithm;
 }
 
 /**

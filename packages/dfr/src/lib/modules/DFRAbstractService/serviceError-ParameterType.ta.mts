@@ -1,6 +1,6 @@
 /* eslint-disable */
 import {
-    ASN1Element as _Element,
+    type ASN1Element as _Element,
     ASN1TagClass as _TagClass,
     ASN1Construction as _Construction,
     ASN1UniversalType as _UniversalType,
@@ -31,17 +31,21 @@ import { ServiceProblem, _enum_for_ServiceProblem, _decode_ServiceProblem, _enco
  */
 export
 class serviceError_ParameterType {
+    /**
+     * @summary `problem`.
+     * @description
+     *
+     * Operational reason the request failed.
+     * @public
+     * @readonly
+     */
+    public readonly problem: ServiceProblem;
+
     constructor (
-        /**
-         * @summary `problem`.
-         * @description
-         *
-         * Operational reason the request failed.
-         * @public
-         * @readonly
-         */
-        readonly problem: ServiceProblem
-    ) {}
+        problem: ServiceProblem
+    ) {
+        this.problem = problem;
+    }
 
     /**
      * @summary Restructures an object into a serviceError_ParameterType
@@ -65,7 +69,7 @@ class serviceError_ParameterType {
          * @static
          */
 
-    public static _enum_for_problem = _enum_for_ServiceProblem;
+    public static _enum_for_problem: typeof _enum_for_ServiceProblem = _enum_for_ServiceProblem;
 }
 
 /**

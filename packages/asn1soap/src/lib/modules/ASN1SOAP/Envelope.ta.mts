@@ -10,9 +10,9 @@ import {
   ASN1ConstructionError as _ConstructionError,
 } from '@wildboar/asn1';
 import * as $ from '@wildboar/asn1/functional';
-import { Header, _decode_Header, _encode_Header } from '../ASN1SOAP/Header.ta.mjs';
+import { type Header, _decode_Header, _encode_Header } from '../ASN1SOAP/Header.ta.mjs';
 import {
-  Envelope_body_or_fault,
+  type Envelope_body_or_fault,
   _decode_Envelope_body_or_fault,
   _encode_Envelope_body_or_fault,
 } from '../ASN1SOAP/Envelope-body-or-fault.ta.mjs';
@@ -53,7 +53,7 @@ export class Envelope {
    * @public
    * @readonly
    */
-  readonly header: Header;
+  public readonly header: Header;
   /**
    * @summary `body_or_fault`.
    * @description Either a Body or a Fault. A SOAP message with
@@ -64,7 +64,7 @@ export class Envelope {
    * @public
    * @readonly
    */
-  readonly body_or_fault: Envelope_body_or_fault;
+  public readonly body_or_fault: Envelope_body_or_fault;
 
   constructor(
     header: Header,

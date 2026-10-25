@@ -1,16 +1,16 @@
 /* eslint-disable */
 import {
-    OBJECT_IDENTIFIER,
-    OPTIONAL,
-    ASN1Element as _Element,
+    type OBJECT_IDENTIFIER,
+    type OPTIONAL,
+    type ASN1Element as _Element,
     ASN1TagClass as _TagClass
 } from "@wildboar/asn1";
 import * as $ from "@wildboar/asn1/functional";
-import { LawfulInterceptionIdentifier, _decode_LawfulInterceptionIdentifier, _encode_LawfulInterceptionIdentifier } from "../HI2Operations/LawfulInterceptionIdentifier.ta.mjs";
+import { type LawfulInterceptionIdentifier, _decode_LawfulInterceptionIdentifier, _encode_LawfulInterceptionIdentifier } from "../HI2Operations/LawfulInterceptionIdentifier.ta.mjs";
 // export { LawfulInterceptionIdentifier, _decode_LawfulInterceptionIdentifier, _encode_LawfulInterceptionIdentifier } from "../HI2Operations/LawfulInterceptionIdentifier.ta.mjs";
 import { CommunicationIdentifier, _decode_CommunicationIdentifier, _encode_CommunicationIdentifier } from "../HI2Operations/CommunicationIdentifier.ta.mjs";
 // export { CommunicationIdentifier, _decode_CommunicationIdentifier, _encode_CommunicationIdentifier } from "../HI2Operations/CommunicationIdentifier.ta.mjs";
-import { TimeStamp, _decode_TimeStamp, _encode_TimeStamp } from "../HI2Operations/TimeStamp.ta.mjs";
+import { type TimeStamp, _decode_TimeStamp, _encode_TimeStamp } from "../HI2Operations/TimeStamp.ta.mjs";
 // export { TimeStamp, _decode_TimeStamp, _encode_TimeStamp } from "../HI2Operations/TimeStamp.ta.mjs";
 import { ThreeGPP_National_HI1_ASN1parameters, _decode_ThreeGPP_National_HI1_ASN1parameters, _encode_ThreeGPP_National_HI1_ASN1parameters } from "../ThreeGPP-HI1NotificationOperations/ThreeGPP-National-HI1-ASN1parameters.ta.mjs";
 // export { ThreeGPP_National_HI1_ASN1parameters, _decode_ThreeGPP_National_HI1_ASN1parameters, _encode_ThreeGPP_National_HI1_ASN1parameters } from "../ThreeGPP-HI1NotificationOperations/ThreeGPP-National-HI1-ASN1parameters.ta.mjs";
@@ -18,7 +18,7 @@ import { Target_Information, _decode_Target_Information, _encode_Target_Informat
 // export { Target_Information, _decode_Target_Information, _encode_Target_Information } from "../ThreeGPP-HI1NotificationOperations/Target-Information.ta.mjs";
 import { Network_Identifier, _decode_Network_Identifier, _encode_Network_Identifier } from "../HI2Operations/Network-Identifier.ta.mjs";
 // export { Network_Identifier, _decode_Network_Identifier, _encode_Network_Identifier } from "../HI2Operations/Network-Identifier.ta.mjs";
-import { BroadcastStatus, _decode_BroadcastStatus, _encode_BroadcastStatus, _enum_for_BroadcastStatus } from "../ThreeGPP-HI1NotificationOperations/BroadcastStatus.ta.mjs";
+import { type BroadcastStatus, _decode_BroadcastStatus, _encode_BroadcastStatus, _enum_for_BroadcastStatus } from "../ThreeGPP-HI1NotificationOperations/BroadcastStatus.ta.mjs";
 // export { BroadcastStatus, _enum_for_BroadcastStatus, BroadcastStatus_succesfull /* IMPORTED_LONG_ENUMERATION_ITEM */, succesfull /* IMPORTED_SHORT_ENUMERATION_ITEM */, BroadcastStatus_unsuccesfull /* IMPORTED_LONG_ENUMERATION_ITEM */, unsuccesfull /* IMPORTED_SHORT_ENUMERATION_ITEM */, _decode_BroadcastStatus, _encode_BroadcastStatus } from "../ThreeGPP-HI1NotificationOperations/BroadcastStatus.ta.mjs";
 
 
@@ -215,7 +215,7 @@ class Notification {
          * @static
          */
 
-    public static _enum_for_broadcastStatus = _enum_for_BroadcastStatus;
+    public static _enum_for_broadcastStatus: typeof _enum_for_BroadcastStatus = _enum_for_BroadcastStatus;
 }
 
 /**

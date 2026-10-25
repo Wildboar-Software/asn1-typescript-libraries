@@ -1,6 +1,6 @@
 /* eslint-disable */
 import {
-  ENUMERATED,
+  type ENUMERATED,
   ASN1Element as _Element,
   ASN1TagClass as _TagClass,
   ASN1Construction as _Construction,
@@ -88,7 +88,7 @@ export type LDAPResult_resultCode =
  * @constant
  * @type {number}
  */
-export const LDAPResult_resultCode_success: LDAPResult_resultCode = 0; /* LONG_NAMED_ENUMERATED_VALUE */
+export const LDAPResult_resultCode_success: 0 = _enum_for_LDAPResult_resultCode.success; /* LONG_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary success
@@ -100,7 +100,7 @@ export const LDAPResult_resultCode_success: LDAPResult_resultCode = 0; /* LONG_N
  * @constant
  * @type {number}
  */
-export const success: LDAPResult_resultCode = LDAPResult_resultCode_success; /* SHORT_NAMED_ENUMERATED_VALUE */
+export const success: 0 = LDAPResult_resultCode_success; /* SHORT_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary LDAPResult_resultCode_operationsError
@@ -112,7 +112,7 @@ export const success: LDAPResult_resultCode = LDAPResult_resultCode_success; /* 
  * @constant
  * @type {number}
  */
-export const LDAPResult_resultCode_operationsError: LDAPResult_resultCode = 1; /* LONG_NAMED_ENUMERATED_VALUE */
+export const LDAPResult_resultCode_operationsError: 1 = _enum_for_LDAPResult_resultCode.operationsError; /* LONG_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary operationsError
@@ -124,7 +124,7 @@ export const LDAPResult_resultCode_operationsError: LDAPResult_resultCode = 1; /
  * @constant
  * @type {number}
  */
-export const operationsError: LDAPResult_resultCode = LDAPResult_resultCode_operationsError; /* SHORT_NAMED_ENUMERATED_VALUE */
+export const operationsError: 1 = LDAPResult_resultCode_operationsError; /* SHORT_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary LDAPResult_resultCode_protocolError
@@ -137,7 +137,7 @@ export const operationsError: LDAPResult_resultCode = LDAPResult_resultCode_oper
  * @constant
  * @type {number}
  */
-export const LDAPResult_resultCode_protocolError: LDAPResult_resultCode = 2; /* LONG_NAMED_ENUMERATED_VALUE */
+export const LDAPResult_resultCode_protocolError: 2 = _enum_for_LDAPResult_resultCode.protocolError; /* LONG_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary protocolError
@@ -150,7 +150,7 @@ export const LDAPResult_resultCode_protocolError: LDAPResult_resultCode = 2; /* 
  * @constant
  * @type {number}
  */
-export const protocolError: LDAPResult_resultCode = LDAPResult_resultCode_protocolError; /* SHORT_NAMED_ENUMERATED_VALUE */
+export const protocolError: 2 = LDAPResult_resultCode_protocolError; /* SHORT_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary LDAPResult_resultCode_timeLimitExceeded
@@ -162,7 +162,7 @@ export const protocolError: LDAPResult_resultCode = LDAPResult_resultCode_protoc
  * @constant
  * @type {number}
  */
-export const LDAPResult_resultCode_timeLimitExceeded: LDAPResult_resultCode = 3; /* LONG_NAMED_ENUMERATED_VALUE */
+export const LDAPResult_resultCode_timeLimitExceeded: 3 = _enum_for_LDAPResult_resultCode.timeLimitExceeded; /* LONG_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary timeLimitExceeded
@@ -174,7 +174,7 @@ export const LDAPResult_resultCode_timeLimitExceeded: LDAPResult_resultCode = 3;
  * @constant
  * @type {number}
  */
-export const timeLimitExceeded: LDAPResult_resultCode = LDAPResult_resultCode_timeLimitExceeded; /* SHORT_NAMED_ENUMERATED_VALUE */
+export const timeLimitExceeded: 3 = LDAPResult_resultCode_timeLimitExceeded; /* SHORT_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary LDAPResult_resultCode_sizeLimitExceeded
@@ -186,7 +186,7 @@ export const timeLimitExceeded: LDAPResult_resultCode = LDAPResult_resultCode_ti
  * @constant
  * @type {number}
  */
-export const LDAPResult_resultCode_sizeLimitExceeded: LDAPResult_resultCode = 4; /* LONG_NAMED_ENUMERATED_VALUE */
+export const LDAPResult_resultCode_sizeLimitExceeded: 4 = _enum_for_LDAPResult_resultCode.sizeLimitExceeded; /* LONG_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary sizeLimitExceeded
@@ -198,7 +198,7 @@ export const LDAPResult_resultCode_sizeLimitExceeded: LDAPResult_resultCode = 4;
  * @constant
  * @type {number}
  */
-export const sizeLimitExceeded: LDAPResult_resultCode = LDAPResult_resultCode_sizeLimitExceeded; /* SHORT_NAMED_ENUMERATED_VALUE */
+export const sizeLimitExceeded: 4 = LDAPResult_resultCode_sizeLimitExceeded; /* SHORT_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary LDAPResult_resultCode_compareFalse
@@ -210,7 +210,7 @@ export const sizeLimitExceeded: LDAPResult_resultCode = LDAPResult_resultCode_si
  * @constant
  * @type {number}
  */
-export const LDAPResult_resultCode_compareFalse: LDAPResult_resultCode = 5; /* LONG_NAMED_ENUMERATED_VALUE */
+export const LDAPResult_resultCode_compareFalse: 5 = _enum_for_LDAPResult_resultCode.compareFalse; /* LONG_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary compareFalse
@@ -222,7 +222,7 @@ export const LDAPResult_resultCode_compareFalse: LDAPResult_resultCode = 5; /* L
  * @constant
  * @type {number}
  */
-export const compareFalse: LDAPResult_resultCode = LDAPResult_resultCode_compareFalse; /* SHORT_NAMED_ENUMERATED_VALUE */
+export const compareFalse: 5 = LDAPResult_resultCode_compareFalse; /* SHORT_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary LDAPResult_resultCode_compareTrue
@@ -233,7 +233,7 @@ export const compareFalse: LDAPResult_resultCode = LDAPResult_resultCode_compare
  * @constant
  * @type {number}
  */
-export const LDAPResult_resultCode_compareTrue: LDAPResult_resultCode = 6; /* LONG_NAMED_ENUMERATED_VALUE */
+export const LDAPResult_resultCode_compareTrue: 6 = _enum_for_LDAPResult_resultCode.compareTrue; /* LONG_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary compareTrue
@@ -244,7 +244,7 @@ export const LDAPResult_resultCode_compareTrue: LDAPResult_resultCode = 6; /* LO
  * @constant
  * @type {number}
  */
-export const compareTrue: LDAPResult_resultCode = LDAPResult_resultCode_compareTrue; /* SHORT_NAMED_ENUMERATED_VALUE */
+export const compareTrue: 6 = LDAPResult_resultCode_compareTrue; /* SHORT_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary LDAPResult_resultCode_authMethodNotSupported
@@ -256,7 +256,7 @@ export const compareTrue: LDAPResult_resultCode = LDAPResult_resultCode_compareT
  * @constant
  * @type {number}
  */
-export const LDAPResult_resultCode_authMethodNotSupported: LDAPResult_resultCode = 7; /* LONG_NAMED_ENUMERATED_VALUE */
+export const LDAPResult_resultCode_authMethodNotSupported: 7 = _enum_for_LDAPResult_resultCode.authMethodNotSupported; /* LONG_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary authMethodNotSupported
@@ -268,7 +268,7 @@ export const LDAPResult_resultCode_authMethodNotSupported: LDAPResult_resultCode
  * @constant
  * @type {number}
  */
-export const authMethodNotSupported: LDAPResult_resultCode = LDAPResult_resultCode_authMethodNotSupported; /* SHORT_NAMED_ENUMERATED_VALUE */
+export const authMethodNotSupported: 7 = LDAPResult_resultCode_authMethodNotSupported; /* SHORT_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary LDAPResult_resultCode_strongerAuthRequired
@@ -280,7 +280,7 @@ export const authMethodNotSupported: LDAPResult_resultCode = LDAPResult_resultCo
  * @constant
  * @type {number}
  */
-export const LDAPResult_resultCode_strongerAuthRequired: LDAPResult_resultCode = 8; /* LONG_NAMED_ENUMERATED_VALUE */
+export const LDAPResult_resultCode_strongerAuthRequired: 8 = _enum_for_LDAPResult_resultCode.strongerAuthRequired; /* LONG_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary strongerAuthRequired
@@ -292,7 +292,7 @@ export const LDAPResult_resultCode_strongerAuthRequired: LDAPResult_resultCode =
  * @constant
  * @type {number}
  */
-export const strongerAuthRequired: LDAPResult_resultCode = LDAPResult_resultCode_strongerAuthRequired; /* SHORT_NAMED_ENUMERATED_VALUE */
+export const strongerAuthRequired: 8 = LDAPResult_resultCode_strongerAuthRequired; /* SHORT_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary LDAPResult_resultCode_referral
@@ -304,7 +304,7 @@ export const strongerAuthRequired: LDAPResult_resultCode = LDAPResult_resultCode
  * @constant
  * @type {number}
  */
-export const LDAPResult_resultCode_referral: LDAPResult_resultCode = 10; /* LONG_NAMED_ENUMERATED_VALUE */
+export const LDAPResult_resultCode_referral: 10 = _enum_for_LDAPResult_resultCode.referral; /* LONG_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary referral
@@ -316,7 +316,7 @@ export const LDAPResult_resultCode_referral: LDAPResult_resultCode = 10; /* LONG
  * @constant
  * @type {number}
  */
-export const referral: LDAPResult_resultCode = LDAPResult_resultCode_referral; /* SHORT_NAMED_ENUMERATED_VALUE */
+export const referral: 10 = LDAPResult_resultCode_referral; /* SHORT_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary LDAPResult_resultCode_adminLimitExceeded
@@ -327,7 +327,7 @@ export const referral: LDAPResult_resultCode = LDAPResult_resultCode_referral; /
  * @constant
  * @type {number}
  */
-export const LDAPResult_resultCode_adminLimitExceeded: LDAPResult_resultCode = 11; /* LONG_NAMED_ENUMERATED_VALUE */
+export const LDAPResult_resultCode_adminLimitExceeded: 11 = _enum_for_LDAPResult_resultCode.adminLimitExceeded; /* LONG_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary adminLimitExceeded
@@ -338,7 +338,7 @@ export const LDAPResult_resultCode_adminLimitExceeded: LDAPResult_resultCode = 1
  * @constant
  * @type {number}
  */
-export const adminLimitExceeded: LDAPResult_resultCode = LDAPResult_resultCode_adminLimitExceeded; /* SHORT_NAMED_ENUMERATED_VALUE */
+export const adminLimitExceeded: 11 = LDAPResult_resultCode_adminLimitExceeded; /* SHORT_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary LDAPResult_resultCode_unavailableCriticalExtension
@@ -349,7 +349,7 @@ export const adminLimitExceeded: LDAPResult_resultCode = LDAPResult_resultCode_a
  * @constant
  * @type {number}
  */
-export const LDAPResult_resultCode_unavailableCriticalExtension: LDAPResult_resultCode = 12; /* LONG_NAMED_ENUMERATED_VALUE */
+export const LDAPResult_resultCode_unavailableCriticalExtension: 12 = _enum_for_LDAPResult_resultCode.unavailableCriticalExtension; /* LONG_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary unavailableCriticalExtension
@@ -360,7 +360,7 @@ export const LDAPResult_resultCode_unavailableCriticalExtension: LDAPResult_resu
  * @constant
  * @type {number}
  */
-export const unavailableCriticalExtension: LDAPResult_resultCode = LDAPResult_resultCode_unavailableCriticalExtension; /* SHORT_NAMED_ENUMERATED_VALUE */
+export const unavailableCriticalExtension: 12 = LDAPResult_resultCode_unavailableCriticalExtension; /* SHORT_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary LDAPResult_resultCode_confidentialityRequired
@@ -371,7 +371,7 @@ export const unavailableCriticalExtension: LDAPResult_resultCode = LDAPResult_re
  * @constant
  * @type {number}
  */
-export const LDAPResult_resultCode_confidentialityRequired: LDAPResult_resultCode = 13; /* LONG_NAMED_ENUMERATED_VALUE */
+export const LDAPResult_resultCode_confidentialityRequired: 13 = _enum_for_LDAPResult_resultCode.confidentialityRequired; /* LONG_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary confidentialityRequired
@@ -382,7 +382,7 @@ export const LDAPResult_resultCode_confidentialityRequired: LDAPResult_resultCod
  * @constant
  * @type {number}
  */
-export const confidentialityRequired: LDAPResult_resultCode = LDAPResult_resultCode_confidentialityRequired; /* SHORT_NAMED_ENUMERATED_VALUE */
+export const confidentialityRequired: 13 = LDAPResult_resultCode_confidentialityRequired; /* SHORT_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary LDAPResult_resultCode_saslBindInProgress
@@ -393,7 +393,7 @@ export const confidentialityRequired: LDAPResult_resultCode = LDAPResult_resultC
  * @constant
  * @type {number}
  */
-export const LDAPResult_resultCode_saslBindInProgress: LDAPResult_resultCode = 14; /* LONG_NAMED_ENUMERATED_VALUE */
+export const LDAPResult_resultCode_saslBindInProgress: 14 = _enum_for_LDAPResult_resultCode.saslBindInProgress; /* LONG_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary saslBindInProgress
@@ -404,7 +404,7 @@ export const LDAPResult_resultCode_saslBindInProgress: LDAPResult_resultCode = 1
  * @constant
  * @type {number}
  */
-export const saslBindInProgress: LDAPResult_resultCode = LDAPResult_resultCode_saslBindInProgress; /* SHORT_NAMED_ENUMERATED_VALUE */
+export const saslBindInProgress: 14 = LDAPResult_resultCode_saslBindInProgress; /* SHORT_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary LDAPResult_resultCode_noSuchAttribute
@@ -415,7 +415,7 @@ export const saslBindInProgress: LDAPResult_resultCode = LDAPResult_resultCode_s
  * @constant
  * @type {number}
  */
-export const LDAPResult_resultCode_noSuchAttribute: LDAPResult_resultCode = 16; /* LONG_NAMED_ENUMERATED_VALUE */
+export const LDAPResult_resultCode_noSuchAttribute: 16 = _enum_for_LDAPResult_resultCode.noSuchAttribute; /* LONG_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary noSuchAttribute
@@ -426,7 +426,7 @@ export const LDAPResult_resultCode_noSuchAttribute: LDAPResult_resultCode = 16; 
  * @constant
  * @type {number}
  */
-export const noSuchAttribute: LDAPResult_resultCode = LDAPResult_resultCode_noSuchAttribute; /* SHORT_NAMED_ENUMERATED_VALUE */
+export const noSuchAttribute: 16 = LDAPResult_resultCode_noSuchAttribute; /* SHORT_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary LDAPResult_resultCode_undefinedAttributeType
@@ -437,7 +437,7 @@ export const noSuchAttribute: LDAPResult_resultCode = LDAPResult_resultCode_noSu
  * @constant
  * @type {number}
  */
-export const LDAPResult_resultCode_undefinedAttributeType: LDAPResult_resultCode = 17; /* LONG_NAMED_ENUMERATED_VALUE */
+export const LDAPResult_resultCode_undefinedAttributeType: 17 = _enum_for_LDAPResult_resultCode.undefinedAttributeType; /* LONG_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary undefinedAttributeType
@@ -448,7 +448,7 @@ export const LDAPResult_resultCode_undefinedAttributeType: LDAPResult_resultCode
  * @constant
  * @type {number}
  */
-export const undefinedAttributeType: LDAPResult_resultCode = LDAPResult_resultCode_undefinedAttributeType; /* SHORT_NAMED_ENUMERATED_VALUE */
+export const undefinedAttributeType: 17 = LDAPResult_resultCode_undefinedAttributeType; /* SHORT_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary LDAPResult_resultCode_inappropriateMatching
@@ -460,7 +460,7 @@ export const undefinedAttributeType: LDAPResult_resultCode = LDAPResult_resultCo
  * @constant
  * @type {number}
  */
-export const LDAPResult_resultCode_inappropriateMatching: LDAPResult_resultCode = 18; /* LONG_NAMED_ENUMERATED_VALUE */
+export const LDAPResult_resultCode_inappropriateMatching: 18 = _enum_for_LDAPResult_resultCode.inappropriateMatching; /* LONG_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary inappropriateMatching
@@ -472,7 +472,7 @@ export const LDAPResult_resultCode_inappropriateMatching: LDAPResult_resultCode 
  * @constant
  * @type {number}
  */
-export const inappropriateMatching: LDAPResult_resultCode = LDAPResult_resultCode_inappropriateMatching; /* SHORT_NAMED_ENUMERATED_VALUE */
+export const inappropriateMatching: 18 = LDAPResult_resultCode_inappropriateMatching; /* SHORT_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary LDAPResult_resultCode_constraintViolation
@@ -484,7 +484,7 @@ export const inappropriateMatching: LDAPResult_resultCode = LDAPResult_resultCod
  * @constant
  * @type {number}
  */
-export const LDAPResult_resultCode_constraintViolation: LDAPResult_resultCode = 19; /* LONG_NAMED_ENUMERATED_VALUE */
+export const LDAPResult_resultCode_constraintViolation: 19 = _enum_for_LDAPResult_resultCode.constraintViolation; /* LONG_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary constraintViolation
@@ -496,7 +496,7 @@ export const LDAPResult_resultCode_constraintViolation: LDAPResult_resultCode = 
  * @constant
  * @type {number}
  */
-export const constraintViolation: LDAPResult_resultCode = LDAPResult_resultCode_constraintViolation; /* SHORT_NAMED_ENUMERATED_VALUE */
+export const constraintViolation: 19 = LDAPResult_resultCode_constraintViolation; /* SHORT_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary LDAPResult_resultCode_attributeOrValueExists
@@ -507,7 +507,7 @@ export const constraintViolation: LDAPResult_resultCode = LDAPResult_resultCode_
  * @constant
  * @type {number}
  */
-export const LDAPResult_resultCode_attributeOrValueExists: LDAPResult_resultCode = 20; /* LONG_NAMED_ENUMERATED_VALUE */
+export const LDAPResult_resultCode_attributeOrValueExists: 20 = _enum_for_LDAPResult_resultCode.attributeOrValueExists; /* LONG_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary attributeOrValueExists
@@ -518,7 +518,7 @@ export const LDAPResult_resultCode_attributeOrValueExists: LDAPResult_resultCode
  * @constant
  * @type {number}
  */
-export const attributeOrValueExists: LDAPResult_resultCode = LDAPResult_resultCode_attributeOrValueExists; /* SHORT_NAMED_ENUMERATED_VALUE */
+export const attributeOrValueExists: 20 = LDAPResult_resultCode_attributeOrValueExists; /* SHORT_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary LDAPResult_resultCode_invalidAttributeSyntax
@@ -530,7 +530,7 @@ export const attributeOrValueExists: LDAPResult_resultCode = LDAPResult_resultCo
  * @constant
  * @type {number}
  */
-export const LDAPResult_resultCode_invalidAttributeSyntax: LDAPResult_resultCode = 21; /* LONG_NAMED_ENUMERATED_VALUE */
+export const LDAPResult_resultCode_invalidAttributeSyntax: 21 = _enum_for_LDAPResult_resultCode.invalidAttributeSyntax; /* LONG_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary invalidAttributeSyntax
@@ -542,7 +542,7 @@ export const LDAPResult_resultCode_invalidAttributeSyntax: LDAPResult_resultCode
  * @constant
  * @type {number}
  */
-export const invalidAttributeSyntax: LDAPResult_resultCode = LDAPResult_resultCode_invalidAttributeSyntax; /* SHORT_NAMED_ENUMERATED_VALUE */
+export const invalidAttributeSyntax: 21 = LDAPResult_resultCode_invalidAttributeSyntax; /* SHORT_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary LDAPResult_resultCode_noSuchObject
@@ -554,7 +554,7 @@ export const invalidAttributeSyntax: LDAPResult_resultCode = LDAPResult_resultCo
  * @constant
  * @type {number}
  */
-export const LDAPResult_resultCode_noSuchObject: LDAPResult_resultCode = 32; /* LONG_NAMED_ENUMERATED_VALUE */
+export const LDAPResult_resultCode_noSuchObject: 32 = _enum_for_LDAPResult_resultCode.noSuchObject; /* LONG_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary noSuchObject
@@ -566,7 +566,7 @@ export const LDAPResult_resultCode_noSuchObject: LDAPResult_resultCode = 32; /* 
  * @constant
  * @type {number}
  */
-export const noSuchObject: LDAPResult_resultCode = LDAPResult_resultCode_noSuchObject; /* SHORT_NAMED_ENUMERATED_VALUE */
+export const noSuchObject: 32 = LDAPResult_resultCode_noSuchObject; /* SHORT_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary LDAPResult_resultCode_aliasProblem
@@ -577,7 +577,7 @@ export const noSuchObject: LDAPResult_resultCode = LDAPResult_resultCode_noSuchO
  * @constant
  * @type {number}
  */
-export const LDAPResult_resultCode_aliasProblem: LDAPResult_resultCode = 33; /* LONG_NAMED_ENUMERATED_VALUE */
+export const LDAPResult_resultCode_aliasProblem: 33 = _enum_for_LDAPResult_resultCode.aliasProblem; /* LONG_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary aliasProblem
@@ -588,7 +588,7 @@ export const LDAPResult_resultCode_aliasProblem: LDAPResult_resultCode = 33; /* 
  * @constant
  * @type {number}
  */
-export const aliasProblem: LDAPResult_resultCode = LDAPResult_resultCode_aliasProblem; /* SHORT_NAMED_ENUMERATED_VALUE */
+export const aliasProblem: 33 = LDAPResult_resultCode_aliasProblem; /* SHORT_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary LDAPResult_resultCode_invalidDNSyntax
@@ -600,7 +600,7 @@ export const aliasProblem: LDAPResult_resultCode = LDAPResult_resultCode_aliasPr
  * @constant
  * @type {number}
  */
-export const LDAPResult_resultCode_invalidDNSyntax: LDAPResult_resultCode = 34; /* LONG_NAMED_ENUMERATED_VALUE */
+export const LDAPResult_resultCode_invalidDNSyntax: 34 = _enum_for_LDAPResult_resultCode.invalidDNSyntax; /* LONG_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary invalidDNSyntax
@@ -612,7 +612,7 @@ export const LDAPResult_resultCode_invalidDNSyntax: LDAPResult_resultCode = 34; 
  * @constant
  * @type {number}
  */
-export const invalidDNSyntax: LDAPResult_resultCode = LDAPResult_resultCode_invalidDNSyntax; /* SHORT_NAMED_ENUMERATED_VALUE */
+export const invalidDNSyntax: 34 = LDAPResult_resultCode_invalidDNSyntax; /* SHORT_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary LDAPResult_resultCode_aliasDereferencingProblem
@@ -624,7 +624,7 @@ export const invalidDNSyntax: LDAPResult_resultCode = LDAPResult_resultCode_inva
  * @constant
  * @type {number}
  */
-export const LDAPResult_resultCode_aliasDereferencingProblem: LDAPResult_resultCode = 36; /* LONG_NAMED_ENUMERATED_VALUE */
+export const LDAPResult_resultCode_aliasDereferencingProblem: 36 = _enum_for_LDAPResult_resultCode.aliasDereferencingProblem; /* LONG_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary aliasDereferencingProblem
@@ -636,7 +636,7 @@ export const LDAPResult_resultCode_aliasDereferencingProblem: LDAPResult_resultC
  * @constant
  * @type {number}
  */
-export const aliasDereferencingProblem: LDAPResult_resultCode = LDAPResult_resultCode_aliasDereferencingProblem; /* SHORT_NAMED_ENUMERATED_VALUE */
+export const aliasDereferencingProblem: 36 = LDAPResult_resultCode_aliasDereferencingProblem; /* SHORT_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary LDAPResult_resultCode_inappropriateAuthentication
@@ -647,7 +647,7 @@ export const aliasDereferencingProblem: LDAPResult_resultCode = LDAPResult_resul
  * @constant
  * @type {number}
  */
-export const LDAPResult_resultCode_inappropriateAuthentication: LDAPResult_resultCode = 48; /* LONG_NAMED_ENUMERATED_VALUE */
+export const LDAPResult_resultCode_inappropriateAuthentication: 48 = _enum_for_LDAPResult_resultCode.inappropriateAuthentication; /* LONG_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary inappropriateAuthentication
@@ -658,7 +658,7 @@ export const LDAPResult_resultCode_inappropriateAuthentication: LDAPResult_resul
  * @constant
  * @type {number}
  */
-export const inappropriateAuthentication: LDAPResult_resultCode = LDAPResult_resultCode_inappropriateAuthentication; /* SHORT_NAMED_ENUMERATED_VALUE */
+export const inappropriateAuthentication: 48 = LDAPResult_resultCode_inappropriateAuthentication; /* SHORT_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary LDAPResult_resultCode_invalidCredentials
@@ -670,7 +670,7 @@ export const inappropriateAuthentication: LDAPResult_resultCode = LDAPResult_res
  * @constant
  * @type {number}
  */
-export const LDAPResult_resultCode_invalidCredentials: LDAPResult_resultCode = 49; /* LONG_NAMED_ENUMERATED_VALUE */
+export const LDAPResult_resultCode_invalidCredentials: 49 = _enum_for_LDAPResult_resultCode.invalidCredentials; /* LONG_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary invalidCredentials
@@ -682,7 +682,7 @@ export const LDAPResult_resultCode_invalidCredentials: LDAPResult_resultCode = 4
  * @constant
  * @type {number}
  */
-export const invalidCredentials: LDAPResult_resultCode = LDAPResult_resultCode_invalidCredentials; /* SHORT_NAMED_ENUMERATED_VALUE */
+export const invalidCredentials: 49 = LDAPResult_resultCode_invalidCredentials; /* SHORT_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary LDAPResult_resultCode_insufficientAccessRights
@@ -693,7 +693,7 @@ export const invalidCredentials: LDAPResult_resultCode = LDAPResult_resultCode_i
  * @constant
  * @type {number}
  */
-export const LDAPResult_resultCode_insufficientAccessRights: LDAPResult_resultCode = 50; /* LONG_NAMED_ENUMERATED_VALUE */
+export const LDAPResult_resultCode_insufficientAccessRights: 50 = _enum_for_LDAPResult_resultCode.insufficientAccessRights; /* LONG_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary insufficientAccessRights
@@ -704,7 +704,7 @@ export const LDAPResult_resultCode_insufficientAccessRights: LDAPResult_resultCo
  * @constant
  * @type {number}
  */
-export const insufficientAccessRights: LDAPResult_resultCode = LDAPResult_resultCode_insufficientAccessRights; /* SHORT_NAMED_ENUMERATED_VALUE */
+export const insufficientAccessRights: 50 = LDAPResult_resultCode_insufficientAccessRights; /* SHORT_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary LDAPResult_resultCode_busy
@@ -715,7 +715,7 @@ export const insufficientAccessRights: LDAPResult_resultCode = LDAPResult_result
  * @constant
  * @type {number}
  */
-export const LDAPResult_resultCode_busy: LDAPResult_resultCode = 51; /* LONG_NAMED_ENUMERATED_VALUE */
+export const LDAPResult_resultCode_busy: 51 = _enum_for_LDAPResult_resultCode.busy; /* LONG_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary busy
@@ -726,7 +726,7 @@ export const LDAPResult_resultCode_busy: LDAPResult_resultCode = 51; /* LONG_NAM
  * @constant
  * @type {number}
  */
-export const busy: LDAPResult_resultCode = LDAPResult_resultCode_busy; /* SHORT_NAMED_ENUMERATED_VALUE */
+export const busy: 51 = LDAPResult_resultCode_busy; /* SHORT_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary LDAPResult_resultCode_unavailable
@@ -737,7 +737,7 @@ export const busy: LDAPResult_resultCode = LDAPResult_resultCode_busy; /* SHORT_
  * @constant
  * @type {number}
  */
-export const LDAPResult_resultCode_unavailable: LDAPResult_resultCode = 52; /* LONG_NAMED_ENUMERATED_VALUE */
+export const LDAPResult_resultCode_unavailable: 52 = _enum_for_LDAPResult_resultCode.unavailable; /* LONG_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary unavailable
@@ -748,7 +748,7 @@ export const LDAPResult_resultCode_unavailable: LDAPResult_resultCode = 52; /* L
  * @constant
  * @type {number}
  */
-export const unavailable: LDAPResult_resultCode = LDAPResult_resultCode_unavailable; /* SHORT_NAMED_ENUMERATED_VALUE */
+export const unavailable: 52 = LDAPResult_resultCode_unavailable; /* SHORT_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary LDAPResult_resultCode_unwillingToPerform
@@ -759,7 +759,7 @@ export const unavailable: LDAPResult_resultCode = LDAPResult_resultCode_unavaila
  * @constant
  * @type {number}
  */
-export const LDAPResult_resultCode_unwillingToPerform: LDAPResult_resultCode = 53; /* LONG_NAMED_ENUMERATED_VALUE */
+export const LDAPResult_resultCode_unwillingToPerform: 53 = _enum_for_LDAPResult_resultCode.unwillingToPerform; /* LONG_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary unwillingToPerform
@@ -770,7 +770,7 @@ export const LDAPResult_resultCode_unwillingToPerform: LDAPResult_resultCode = 5
  * @constant
  * @type {number}
  */
-export const unwillingToPerform: LDAPResult_resultCode = LDAPResult_resultCode_unwillingToPerform; /* SHORT_NAMED_ENUMERATED_VALUE */
+export const unwillingToPerform: 53 = LDAPResult_resultCode_unwillingToPerform; /* SHORT_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary LDAPResult_resultCode_loopDetect
@@ -781,7 +781,7 @@ export const unwillingToPerform: LDAPResult_resultCode = LDAPResult_resultCode_u
  * @constant
  * @type {number}
  */
-export const LDAPResult_resultCode_loopDetect: LDAPResult_resultCode = 54; /* LONG_NAMED_ENUMERATED_VALUE */
+export const LDAPResult_resultCode_loopDetect: 54 = _enum_for_LDAPResult_resultCode.loopDetect; /* LONG_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary loopDetect
@@ -792,7 +792,7 @@ export const LDAPResult_resultCode_loopDetect: LDAPResult_resultCode = 54; /* LO
  * @constant
  * @type {number}
  */
-export const loopDetect: LDAPResult_resultCode = LDAPResult_resultCode_loopDetect; /* SHORT_NAMED_ENUMERATED_VALUE */
+export const loopDetect: 54 = LDAPResult_resultCode_loopDetect; /* SHORT_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary LDAPResult_resultCode_namingViolation
@@ -803,7 +803,7 @@ export const loopDetect: LDAPResult_resultCode = LDAPResult_resultCode_loopDetec
  * @constant
  * @type {number}
  */
-export const LDAPResult_resultCode_namingViolation: LDAPResult_resultCode = 64; /* LONG_NAMED_ENUMERATED_VALUE */
+export const LDAPResult_resultCode_namingViolation: 64 = _enum_for_LDAPResult_resultCode.namingViolation; /* LONG_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary namingViolation
@@ -814,7 +814,7 @@ export const LDAPResult_resultCode_namingViolation: LDAPResult_resultCode = 64; 
  * @constant
  * @type {number}
  */
-export const namingViolation: LDAPResult_resultCode = LDAPResult_resultCode_namingViolation; /* SHORT_NAMED_ENUMERATED_VALUE */
+export const namingViolation: 64 = LDAPResult_resultCode_namingViolation; /* SHORT_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary LDAPResult_resultCode_objectClassViolation
@@ -825,7 +825,7 @@ export const namingViolation: LDAPResult_resultCode = LDAPResult_resultCode_nami
  * @constant
  * @type {number}
  */
-export const LDAPResult_resultCode_objectClassViolation: LDAPResult_resultCode = 65; /* LONG_NAMED_ENUMERATED_VALUE */
+export const LDAPResult_resultCode_objectClassViolation: 65 = _enum_for_LDAPResult_resultCode.objectClassViolation; /* LONG_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary objectClassViolation
@@ -836,7 +836,7 @@ export const LDAPResult_resultCode_objectClassViolation: LDAPResult_resultCode =
  * @constant
  * @type {number}
  */
-export const objectClassViolation: LDAPResult_resultCode = LDAPResult_resultCode_objectClassViolation; /* SHORT_NAMED_ENUMERATED_VALUE */
+export const objectClassViolation: 65 = LDAPResult_resultCode_objectClassViolation; /* SHORT_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary LDAPResult_resultCode_notAllowedOnNonLeaf
@@ -848,7 +848,7 @@ export const objectClassViolation: LDAPResult_resultCode = LDAPResult_resultCode
  * @constant
  * @type {number}
  */
-export const LDAPResult_resultCode_notAllowedOnNonLeaf: LDAPResult_resultCode = 66; /* LONG_NAMED_ENUMERATED_VALUE */
+export const LDAPResult_resultCode_notAllowedOnNonLeaf: 66 = _enum_for_LDAPResult_resultCode.notAllowedOnNonLeaf; /* LONG_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary notAllowedOnNonLeaf
@@ -860,7 +860,7 @@ export const LDAPResult_resultCode_notAllowedOnNonLeaf: LDAPResult_resultCode = 
  * @constant
  * @type {number}
  */
-export const notAllowedOnNonLeaf: LDAPResult_resultCode = LDAPResult_resultCode_notAllowedOnNonLeaf; /* SHORT_NAMED_ENUMERATED_VALUE */
+export const notAllowedOnNonLeaf: 66 = LDAPResult_resultCode_notAllowedOnNonLeaf; /* SHORT_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary LDAPResult_resultCode_notAllowedOnRDN
@@ -871,7 +871,7 @@ export const notAllowedOnNonLeaf: LDAPResult_resultCode = LDAPResult_resultCode_
  * @constant
  * @type {number}
  */
-export const LDAPResult_resultCode_notAllowedOnRDN: LDAPResult_resultCode = 67; /* LONG_NAMED_ENUMERATED_VALUE */
+export const LDAPResult_resultCode_notAllowedOnRDN: 67 = _enum_for_LDAPResult_resultCode.notAllowedOnRDN; /* LONG_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary notAllowedOnRDN
@@ -882,7 +882,7 @@ export const LDAPResult_resultCode_notAllowedOnRDN: LDAPResult_resultCode = 67; 
  * @constant
  * @type {number}
  */
-export const notAllowedOnRDN: LDAPResult_resultCode = LDAPResult_resultCode_notAllowedOnRDN; /* SHORT_NAMED_ENUMERATED_VALUE */
+export const notAllowedOnRDN: 67 = LDAPResult_resultCode_notAllowedOnRDN; /* SHORT_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary LDAPResult_resultCode_entryAlreadyExists
@@ -893,7 +893,7 @@ export const notAllowedOnRDN: LDAPResult_resultCode = LDAPResult_resultCode_notA
  * @constant
  * @type {number}
  */
-export const LDAPResult_resultCode_entryAlreadyExists: LDAPResult_resultCode = 68; /* LONG_NAMED_ENUMERATED_VALUE */
+export const LDAPResult_resultCode_entryAlreadyExists: 68 = _enum_for_LDAPResult_resultCode.entryAlreadyExists; /* LONG_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary entryAlreadyExists
@@ -904,7 +904,7 @@ export const LDAPResult_resultCode_entryAlreadyExists: LDAPResult_resultCode = 6
  * @constant
  * @type {number}
  */
-export const entryAlreadyExists: LDAPResult_resultCode = LDAPResult_resultCode_entryAlreadyExists; /* SHORT_NAMED_ENUMERATED_VALUE */
+export const entryAlreadyExists: 68 = LDAPResult_resultCode_entryAlreadyExists; /* SHORT_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary LDAPResult_resultCode_objectClassModsProhibited
@@ -915,7 +915,7 @@ export const entryAlreadyExists: LDAPResult_resultCode = LDAPResult_resultCode_e
  * @constant
  * @type {number}
  */
-export const LDAPResult_resultCode_objectClassModsProhibited: LDAPResult_resultCode = 69; /* LONG_NAMED_ENUMERATED_VALUE */
+export const LDAPResult_resultCode_objectClassModsProhibited: 69 = _enum_for_LDAPResult_resultCode.objectClassModsProhibited; /* LONG_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary objectClassModsProhibited
@@ -926,7 +926,7 @@ export const LDAPResult_resultCode_objectClassModsProhibited: LDAPResult_resultC
  * @constant
  * @type {number}
  */
-export const objectClassModsProhibited: LDAPResult_resultCode = LDAPResult_resultCode_objectClassModsProhibited; /* SHORT_NAMED_ENUMERATED_VALUE */
+export const objectClassModsProhibited: 69 = LDAPResult_resultCode_objectClassModsProhibited; /* SHORT_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary LDAPResult_resultCode_affectsMultipleDSAs
@@ -938,7 +938,7 @@ export const objectClassModsProhibited: LDAPResult_resultCode = LDAPResult_resul
  * @constant
  * @type {number}
  */
-export const LDAPResult_resultCode_affectsMultipleDSAs: LDAPResult_resultCode = 71; /* LONG_NAMED_ENUMERATED_VALUE */
+export const LDAPResult_resultCode_affectsMultipleDSAs: 71 = _enum_for_LDAPResult_resultCode.affectsMultipleDSAs; /* LONG_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary affectsMultipleDSAs
@@ -950,7 +950,7 @@ export const LDAPResult_resultCode_affectsMultipleDSAs: LDAPResult_resultCode = 
  * @constant
  * @type {number}
  */
-export const affectsMultipleDSAs: LDAPResult_resultCode = LDAPResult_resultCode_affectsMultipleDSAs; /* SHORT_NAMED_ENUMERATED_VALUE */
+export const affectsMultipleDSAs: 71 = LDAPResult_resultCode_affectsMultipleDSAs; /* SHORT_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary LDAPResult_resultCode_other
@@ -961,7 +961,7 @@ export const affectsMultipleDSAs: LDAPResult_resultCode = LDAPResult_resultCode_
  * @constant
  * @type {number}
  */
-export const LDAPResult_resultCode_other: LDAPResult_resultCode = 80; /* LONG_NAMED_ENUMERATED_VALUE */
+export const LDAPResult_resultCode_other: 80 = _enum_for_LDAPResult_resultCode.other; /* LONG_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary other
@@ -972,7 +972,7 @@ export const LDAPResult_resultCode_other: LDAPResult_resultCode = 80; /* LONG_NA
  * @constant
  * @type {number}
  */
-export const other: LDAPResult_resultCode = LDAPResult_resultCode_other; /* SHORT_NAMED_ENUMERATED_VALUE */
+export const other: 80 = LDAPResult_resultCode_other; /* SHORT_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary Decodes an ASN.1 element into a(n) LDAPResult_resultCode
@@ -980,7 +980,7 @@ export const other: LDAPResult_resultCode = LDAPResult_resultCode_other; /* SHOR
  * @param {_Element} el The element being decoded.
  * @returns {LDAPResult_resultCode} The decoded data structure.
  */
-export const _decode_LDAPResult_resultCode: $.ASN1Decoder<LDAPResult_resultCode> = $._decodeEnumerated as $.ASN1Decoder<LDAPResult_resultCode>;
+export const _decode_LDAPResult_resultCode: $.ASN1Decoder<LDAPResult_resultCode> = $._decodeEnumerated;
 
 /**
  * @summary Encodes a(n) LDAPResult_resultCode into an ASN.1 Element.
@@ -989,6 +989,6 @@ export const _decode_LDAPResult_resultCode: $.ASN1Decoder<LDAPResult_resultCode>
  * @param elGetter A function that can be used to get new ASN.1 elements.
  * @returns {_Element} The LDAPResult_resultCode, encoded as an ASN.1 Element.
  */
-export const _encode_LDAPResult_resultCode: $.ASN1Encoder<LDAPResult_resultCode> = $._encodeEnumerated as $.ASN1Encoder<LDAPResult_resultCode>;
+export const _encode_LDAPResult_resultCode: $.ASN1Encoder<LDAPResult_resultCode> = $._encodeEnumerated;
 
 /* eslint-enable */

@@ -1,17 +1,17 @@
 /* eslint-disable */
 import {
-    ASN1Element as _Element,
+    type ASN1Element as _Element,
     ASN1TagClass as _TagClass,
-    OPTIONAL,
+    type OPTIONAL,
 } from "@wildboar/asn1";
 import * as $ from "@wildboar/asn1/functional";
 import {
-    ModifiedValidity_validFrom,
+    type ModifiedValidity_validFrom,
     _decode_ModifiedValidity_validFrom,
     _encode_ModifiedValidity_validFrom,
 } from "../OperationalBindingManagement/ModifiedValidity-validFrom.ta.mjs";
 import {
-    ModifiedValidity_validUntil,
+    type ModifiedValidity_validUntil,
     _decode_ModifiedValidity_validUntil,
     _encode_ModifiedValidity_validUntil,
 } from "../OperationalBindingManagement/ModifiedValidity-validUntil.ta.mjs";
@@ -42,26 +42,34 @@ import {
  *
  */
 export class ModifiedValidity {
+    /**
+     * @summary `validFrom`.
+     * @public
+     * @readonly
+     */
+    public readonly validFrom?: OPTIONAL<ModifiedValidity_validFrom>;
+    /**
+     * @summary `validUntil`.
+     * @public
+     * @readonly
+     */
+    public readonly validUntil?: OPTIONAL<ModifiedValidity_validUntil>;
+    /**
+     * @summary Extensions that are not recognized.
+     * @public
+     * @readonly
+     */
+    public readonly _unrecognizedExtensionsList: _Element[];
+
     constructor(
-        /**
-         * @summary `validFrom`.
-         * @public
-         * @readonly
-         */
-        readonly validFrom?: OPTIONAL<ModifiedValidity_validFrom>,
-        /**
-         * @summary `validUntil`.
-         * @public
-         * @readonly
-         */
-        readonly validUntil?: OPTIONAL<ModifiedValidity_validUntil>,
-        /**
-         * @summary Extensions that are not recognized.
-         * @public
-         * @readonly
-         */
-        readonly _unrecognizedExtensionsList: _Element[] = []
-    ) {}
+        validFrom?: OPTIONAL<ModifiedValidity_validFrom>,
+        validUntil?: OPTIONAL<ModifiedValidity_validUntil>,
+        _unrecognizedExtensionsList: _Element[] = []
+    ) {
+        this.validFrom = validFrom;
+        this.validUntil = validUntil;
+        this._unrecognizedExtensionsList = _unrecognizedExtensionsList;
+    }
 
     /**
      * @summary Restructures an object into a ModifiedValidity

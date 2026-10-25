@@ -1,7 +1,7 @@
 /* eslint-disable */
 import {
-    PrintableString,
-    ASN1Element as _Element,
+    type PrintableString,
+    type ASN1Element as _Element,
     ASN1TagClass as _TagClass,
     ASN1Construction as _Construction,
     ASN1UniversalType as _UniversalType,
@@ -41,26 +41,32 @@ import { RIOreference_operations_Item, _decode_RIOreference_operations_Item, _en
  */
 export
 class RIOreference {
+    /**
+     * @summary `rioName`.
+     * @description
+     * Name of the Reference Information Object. ISO/IEC 9041-1:1997
+     * §12.2.
+     * @public
+     * @readonly
+     */
+    public readonly rioName: PrintableString;
+    /**
+     * @summary `operations`.
+     * @description
+     * executeRecord / callRecord on named records. ISO/IEC
+     * 9041-1:1997 §12.2.
+     * @public
+     * @readonly
+     */
+    public readonly operations: RIOreference_operations_Item[];
+
     constructor (
-        /**
-         * @summary `rioName`.
-         * @description
-         * Name of the Reference Information Object. ISO/IEC 9041-1:1997
-         * §12.2.
-         * @public
-         * @readonly
-         */
-        readonly rioName: PrintableString,
-        /**
-         * @summary `operations`.
-         * @description
-         * executeRecord / callRecord on named records. ISO/IEC
-         * 9041-1:1997 §12.2.
-         * @public
-         * @readonly
-         */
-        readonly operations: RIOreference_operations_Item[]
-    ) {}
+        rioName: PrintableString,
+        operations: RIOreference_operations_Item[]
+    ) {
+        this.rioName = rioName;
+        this.operations = operations;
+    }
 
     /**
      * @summary Restructures an object into a RIOreference

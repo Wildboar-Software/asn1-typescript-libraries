@@ -1,7 +1,7 @@
 /* eslint-disable */
 import {
-    BIT_STRING,
-    ASN1Element as _Element,
+    type BIT_STRING,
+    type ASN1Element as _Element,
     ASN1TagClass as _TagClass,
     ASN1Construction as _Construction,
     ASN1UniversalType as _UniversalType,
@@ -562,8 +562,8 @@ const AdditionalSupportOptions_alterEventConditionListMonitoring: number = 22; /
  */
 export
 const alterEventConditionListMonitoring: number = AdditionalSupportOptions_alterEventConditionListMonitoring; /* SHORT_NAMED_BIT */
-export const _decode_AdditionalSupportOptions = $._decodeBitString;
-export const _encode_AdditionalSupportOptions = $._encodeBitString;
+export const _decode_AdditionalSupportOptions: $.ASN1Decoder<BIT_STRING> = $._decodeBitString;
+export const _encode_AdditionalSupportOptions: $.ASN1Encoder<BIT_STRING> = $._encodeBitString;
 
 
 /* eslint-enable */

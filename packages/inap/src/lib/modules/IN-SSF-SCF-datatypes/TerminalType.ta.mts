@@ -1,4 +1,5 @@
 /* eslint-disable */
+import { ASN1Element as _Element, ASN1ConstructionError as _ConstructionError } from "@wildboar/asn1";
 import * as $ from "@wildboar/asn1/functional";
 
 
@@ -59,7 +60,7 @@ type TerminalType = _enum_for_TerminalType;
  * @enum {number}
  */
 export
-const TerminalType = _enum_for_TerminalType;
+const TerminalType: typeof _enum_for_TerminalType = _enum_for_TerminalType;
 
 /**
  * @summary TerminalType_unknown
@@ -67,7 +68,7 @@ const TerminalType = _enum_for_TerminalType;
  * @type {number}
  */
 export
-const TerminalType_unknown: TerminalType = TerminalType.unknown; /* LONG_NAMED_ENUMERATED_VALUE */
+const TerminalType_unknown: _enum_for_TerminalType.unknown = TerminalType.unknown; /* LONG_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary unknown
@@ -75,7 +76,7 @@ const TerminalType_unknown: TerminalType = TerminalType.unknown; /* LONG_NAMED_E
  * @type {number}
  */
 export
-const unknown: TerminalType = TerminalType.unknown; /* SHORT_NAMED_ENUMERATED_VALUE */
+const unknown: _enum_for_TerminalType.unknown = TerminalType.unknown; /* SHORT_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary TerminalType_dialPulse
@@ -83,7 +84,7 @@ const unknown: TerminalType = TerminalType.unknown; /* SHORT_NAMED_ENUMERATED_VA
  * @type {number}
  */
 export
-const TerminalType_dialPulse: TerminalType = TerminalType.dialPulse; /* LONG_NAMED_ENUMERATED_VALUE */
+const TerminalType_dialPulse: _enum_for_TerminalType.dialPulse = TerminalType.dialPulse; /* LONG_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary dialPulse
@@ -91,7 +92,7 @@ const TerminalType_dialPulse: TerminalType = TerminalType.dialPulse; /* LONG_NAM
  * @type {number}
  */
 export
-const dialPulse: TerminalType = TerminalType.dialPulse; /* SHORT_NAMED_ENUMERATED_VALUE */
+const dialPulse: _enum_for_TerminalType.dialPulse = TerminalType.dialPulse; /* SHORT_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary TerminalType_dtmf
@@ -99,7 +100,7 @@ const dialPulse: TerminalType = TerminalType.dialPulse; /* SHORT_NAMED_ENUMERATE
  * @type {number}
  */
 export
-const TerminalType_dtmf: TerminalType = TerminalType.dtmf; /* LONG_NAMED_ENUMERATED_VALUE */
+const TerminalType_dtmf: _enum_for_TerminalType.dtmf = TerminalType.dtmf; /* LONG_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary dtmf
@@ -107,7 +108,7 @@ const TerminalType_dtmf: TerminalType = TerminalType.dtmf; /* LONG_NAMED_ENUMERA
  * @type {number}
  */
 export
-const dtmf: TerminalType = TerminalType.dtmf; /* SHORT_NAMED_ENUMERATED_VALUE */
+const dtmf: _enum_for_TerminalType.dtmf = TerminalType.dtmf; /* SHORT_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary TerminalType_isdn
@@ -115,7 +116,7 @@ const dtmf: TerminalType = TerminalType.dtmf; /* SHORT_NAMED_ENUMERATED_VALUE */
  * @type {number}
  */
 export
-const TerminalType_isdn: TerminalType = TerminalType.isdn; /* LONG_NAMED_ENUMERATED_VALUE */
+const TerminalType_isdn: _enum_for_TerminalType.isdn = TerminalType.isdn; /* LONG_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary isdn
@@ -123,7 +124,7 @@ const TerminalType_isdn: TerminalType = TerminalType.isdn; /* LONG_NAMED_ENUMERA
  * @type {number}
  */
 export
-const isdn: TerminalType = TerminalType.isdn; /* SHORT_NAMED_ENUMERATED_VALUE */
+const isdn: _enum_for_TerminalType.isdn = TerminalType.isdn; /* SHORT_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary TerminalType_isdnNoDtmf
@@ -131,7 +132,7 @@ const isdn: TerminalType = TerminalType.isdn; /* SHORT_NAMED_ENUMERATED_VALUE */
  * @type {number}
  */
 export
-const TerminalType_isdnNoDtmf: TerminalType = TerminalType.isdnNoDtmf; /* LONG_NAMED_ENUMERATED_VALUE */
+const TerminalType_isdnNoDtmf: _enum_for_TerminalType.isdnNoDtmf = TerminalType.isdnNoDtmf; /* LONG_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary isdnNoDtmf
@@ -139,7 +140,7 @@ const TerminalType_isdnNoDtmf: TerminalType = TerminalType.isdnNoDtmf; /* LONG_N
  * @type {number}
  */
 export
-const isdnNoDtmf: TerminalType = TerminalType.isdnNoDtmf; /* SHORT_NAMED_ENUMERATED_VALUE */
+const isdnNoDtmf: _enum_for_TerminalType.isdnNoDtmf = TerminalType.isdnNoDtmf; /* SHORT_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary TerminalType_spare
@@ -147,7 +148,7 @@ const isdnNoDtmf: TerminalType = TerminalType.isdnNoDtmf; /* SHORT_NAMED_ENUMERA
  * @type {number}
  */
 export
-const TerminalType_spare: TerminalType = TerminalType.spare; /* LONG_NAMED_ENUMERATED_VALUE */
+const TerminalType_spare: _enum_for_TerminalType.spare = TerminalType.spare; /* LONG_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary spare
@@ -155,12 +156,27 @@ const TerminalType_spare: TerminalType = TerminalType.spare; /* LONG_NAMED_ENUME
  * @type {number}
  */
 export
-const spare: TerminalType = TerminalType.spare; /* SHORT_NAMED_ENUMERATED_VALUE */
+const spare: _enum_for_TerminalType.spare = TerminalType.spare; /* SHORT_NAMED_ENUMERATED_VALUE */
 
 export
-const _decode_TerminalType: $.ASN1Decoder<TerminalType> = $._decodeEnumerated;
+function _decode_TerminalType(el: _Element): TerminalType {
+    const enumerated = $._decodeEnumerated(el);
+    switch (enumerated) {
+        case TerminalType.unknown: return TerminalType.unknown;
+        case TerminalType.dialPulse: return TerminalType.dialPulse;
+        case TerminalType.dtmf: return TerminalType.dtmf;
+        case TerminalType.isdn: return TerminalType.isdn;
+        case TerminalType.isdnNoDtmf: return TerminalType.isdnNoDtmf;
+        case TerminalType.spare: return TerminalType.spare;
+        default:
+            throw new _ConstructionError(
+                "Invalid ENUMERATED value " + enumerated + " for TerminalType.",
+                el,
+            );
+    }
+}
 
 export
-const _encode_TerminalType: $.ASN1Encoder<TerminalType> = $._encodeEnumerated;
+const _encode_TerminalType: $.ASN1Encoder<TerminalType> = $._encodeEnumerated as $.ASN1Encoder<TerminalType>;
 
 /* eslint-enable */

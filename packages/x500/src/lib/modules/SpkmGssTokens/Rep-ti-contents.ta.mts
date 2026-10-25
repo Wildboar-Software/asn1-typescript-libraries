@@ -1,11 +1,11 @@
 /* eslint-disable */
 import {
-    ASN1Element as _Element,
+    type ASN1Element as _Element,
     ASN1TagClass as _TagClass,
-    BIT_STRING,
-    INTEGER,
-    OPTIONAL,
-    UTCTime,
+    type BIT_STRING,
+    type INTEGER,
+    type OPTIONAL,
+    type UTCTime,
 } from "@wildboar/asn1";
 import * as $ from "@wildboar/asn1/functional";
 import {
@@ -19,7 +19,7 @@ import {
     _encode_Validity,
 } from "../AuthenticationFramework/Validity.ta.mjs";
 import {
-    Name,
+    type Name,
     _decode_Name,
     _encode_Name,
 } from "../InformationFramework/Name.ta.mjs";
@@ -29,7 +29,7 @@ import {
     _encode_Context_Data,
 } from "../SpkmGssTokens/Context-Data.ta.mjs";
 import {
-    Random_Integer,
+    type Random_Integer,
     _decode_Random_Integer,
     _encode_Random_Integer,
 } from "../SpkmGssTokens/Random-Integer.ta.mjs";
@@ -65,138 +65,164 @@ import {
  *
  */
 export class Rep_ti_contents {
+    /**
+     * @summary `tok_id`.
+     * @description
+     *
+     * Must be 512 (0x0200).
+     *
+     * @public
+     * @readonly
+     */
+    public readonly tok_id: INTEGER;
+    /**
+     * @summary `context_id`.
+     * @description
+     *
+     * Initiator random concatenated with target random (the context-id
+     * for all later tokens).
+     *
+     * @public
+     * @readonly
+     */
+    public readonly context_id: Random_Integer;
+    /**
+     * @summary `pvno`.
+     * @description
+     *
+     * Exactly one bit: the chosen version. Omit if the initiator had
+     * only that bit set. Dummy-field retry if REQ version is unsupported
+     * but another offered version is.
+     *
+     * @public
+     * @readonly
+     */
+    public readonly pvno: OPTIONAL<BIT_STRING>;
+    /**
+     * @summary `timestamp`.
+     * @description
+     *
+     * Mandatory for SPKM-2.
+     *
+     * @public
+     * @readonly
+     */
+    public readonly timestamp: OPTIONAL<UTCTime>;
+    /**
+     * @summary `randTarg`.
+     * @description
+     *
+     * Target nonce; echoed in `SPKM-REP-IT`.
+     *
+     * @public
+     * @readonly
+     */
+    public readonly randTarg: Random_Integer;
+    /**
+     * @summary `src_name`.
+     * @description
+     *
+     * Must contain whatever value was in the REQ token (including
+     * absent if the initiator was anonymous).
+     *
+     * @public
+     * @readonly
+     */
+    public readonly src_name: OPTIONAL<Name>;
+    /**
+     * @summary `targ_name`.
+     * @description
+     *
+     * Target name; echoed in `SPKM-REP-IT`.
+     *
+     * @public
+     * @readonly
+     */
+    public readonly targ_name: Name;
+    /**
+     * @summary `randSrc`.
+     * @description
+     *
+     * Echo of the initiator's `randSrc`.
+     *
+     * @public
+     * @readonly
+     */
+    public readonly randSrc: Random_Integer;
+    /**
+     * @summary `rep_data`.
+     * @description
+     *
+     * Agreed algorithms/options. C/I lists are subsets of the offer in
+     * the same relative order; `owf-alg` is exactly one algorithm.
+     *
+     * @public
+     * @readonly
+     */
+    public readonly rep_data: Context_Data;
+    /**
+     * @summary `validity`.
+     * @description
+     *
+     * Present only if the target can support a *shorter* lifetime than
+     * the REQ offered. Span is authoritative, not absolute times.
+     *
+     * @public
+     * @readonly
+     */
+    public readonly validity?: OPTIONAL<Validity>;
+    /**
+     * @summary `key_estb_id`.
+     * @description
+     *
+     * Present if the target picks a K-ALG other than the initiator's
+     * first. Must be a member of the initiator's `key-estb-set`.
+     *
+     * @public
+     * @readonly
+     */
+    public readonly key_estb_id?: OPTIONAL<AlgorithmIdentifier>;
+    /**
+     * @summary `key_estb_str`.
+     * @description
+     *
+     * (1) Response to initiator's two-pass `key-estb-req`, or (2) key
+     * material for `key-estb-id`, or (3) key material for the first
+     * offered K-ALG if the initiator omitted `key-estb-req` — then
+     * this field is required. Key length: L ≤ M ≤ U.
+     *
+     * @public
+     * @readonly
+     */
+    public readonly key_estb_str?: OPTIONAL<BIT_STRING>;
+
     constructor(
-        /**
-         * @summary `tok_id`.
-         * @description
-         *
-         * Must be 512 (0x0200).
-         *
-         * @public
-         * @readonly
-         */
-        readonly tok_id: INTEGER,
-        /**
-         * @summary `context_id`.
-         * @description
-         *
-         * Initiator random concatenated with target random (the context-id
-         * for all later tokens).
-         *
-         * @public
-         * @readonly
-         */
-        readonly context_id: Random_Integer,
-        /**
-         * @summary `pvno`.
-         * @description
-         *
-         * Exactly one bit: the chosen version. Omit if the initiator had
-         * only that bit set. Dummy-field retry if REQ version is unsupported
-         * but another offered version is.
-         *
-         * @public
-         * @readonly
-         */
-        readonly pvno: OPTIONAL<BIT_STRING>,
-        /**
-         * @summary `timestamp`.
-         * @description
-         *
-         * Mandatory for SPKM-2.
-         *
-         * @public
-         * @readonly
-         */
-        readonly timestamp: OPTIONAL<UTCTime>,
-        /**
-         * @summary `randTarg`.
-         * @description
-         *
-         * Target nonce; echoed in `SPKM-REP-IT`.
-         *
-         * @public
-         * @readonly
-         */
-        readonly randTarg: Random_Integer,
-        /**
-         * @summary `src_name`.
-         * @description
-         *
-         * Must contain whatever value was in the REQ token (including
-         * absent if the initiator was anonymous).
-         *
-         * @public
-         * @readonly
-         */
-        readonly src_name: OPTIONAL<Name>,
-        /**
-         * @summary `targ_name`.
-         * @description
-         *
-         * Target name; echoed in `SPKM-REP-IT`.
-         *
-         * @public
-         * @readonly
-         */
-        readonly targ_name: Name,
-        /**
-         * @summary `randSrc`.
-         * @description
-         *
-         * Echo of the initiator's `randSrc`.
-         *
-         * @public
-         * @readonly
-         */
-        readonly randSrc: Random_Integer,
-        /**
-         * @summary `rep_data`.
-         * @description
-         *
-         * Agreed algorithms/options. C/I lists are subsets of the offer in
-         * the same relative order; `owf-alg` is exactly one algorithm.
-         *
-         * @public
-         * @readonly
-         */
-        readonly rep_data: Context_Data,
-        /**
-         * @summary `validity`.
-         * @description
-         *
-         * Present only if the target can support a *shorter* lifetime than
-         * the REQ offered. Span is authoritative, not absolute times.
-         *
-         * @public
-         * @readonly
-         */
-        readonly validity?: OPTIONAL<Validity>,
-        /**
-         * @summary `key_estb_id`.
-         * @description
-         *
-         * Present if the target picks a K-ALG other than the initiator's
-         * first. Must be a member of the initiator's `key-estb-set`.
-         *
-         * @public
-         * @readonly
-         */
-        readonly key_estb_id?: OPTIONAL<AlgorithmIdentifier>,
-        /**
-         * @summary `key_estb_str`.
-         * @description
-         *
-         * (1) Response to initiator's two-pass `key-estb-req`, or (2) key
-         * material for `key-estb-id`, or (3) key material for the first
-         * offered K-ALG if the initiator omitted `key-estb-req` — then
-         * this field is required. Key length: L ≤ M ≤ U.
-         *
-         * @public
-         * @readonly
-         */
-        readonly key_estb_str?: OPTIONAL<BIT_STRING>
-    ) {}
+        tok_id: INTEGER,
+        context_id: Random_Integer,
+        pvno: OPTIONAL<BIT_STRING>,
+        timestamp: OPTIONAL<UTCTime>,
+        randTarg: Random_Integer,
+        src_name: OPTIONAL<Name>,
+        targ_name: Name,
+        randSrc: Random_Integer,
+        rep_data: Context_Data,
+        validity?: OPTIONAL<Validity>,
+        key_estb_id?: OPTIONAL<AlgorithmIdentifier>,
+        key_estb_str?: OPTIONAL<BIT_STRING>
+    ) {
+        this.tok_id = tok_id;
+        this.context_id = context_id;
+        this.pvno = pvno;
+        this.timestamp = timestamp;
+        this.randTarg = randTarg;
+        this.src_name = src_name;
+        this.targ_name = targ_name;
+        this.randSrc = randSrc;
+        this.rep_data = rep_data;
+        this.validity = validity;
+        this.key_estb_id = key_estb_id;
+        this.key_estb_str = key_estb_str;
+    }
 
     /**
      * @summary Restructures an object into a Rep_ti_contents

@@ -2,13 +2,13 @@
 
 import * as $ from "@wildboar/asn1/functional";
 import {
-    OPTIONAL,
-    SEQUENCE,
-    SET,
-    ASN1Element as _Element,
+    type OPTIONAL,
+    type SEQUENCE,
+    type SET,
+    type ASN1Element as _Element,
     ASN1TagClass as _TagClass
 } from "@wildboar/asn1";
-import { ConnectionID, _decode_ConnectionID, _encode_ConnectionID } from "../CSTA-call-connection-identifiers/ConnectionID.ta.mjs";
+import { type ConnectionID, _decode_ConnectionID, _encode_ConnectionID } from "../CSTA-call-connection-identifiers/ConnectionID.ta.mjs";
 
 import { ConnectionInformation, _decode_ConnectionInformation, _encode_ConnectionInformation } from "../CSTA-media-services/ConnectionInformation.ta.mjs";
 
@@ -38,36 +38,44 @@ import { CSTACommonArguments, _decode_CSTACommonArguments, _encode_CSTACommonArg
  */
 export
 class ChangeConnectionInformationArgument {
+    /**
+     * @summary `connectionToBeChanged`.
+     * @description
+     *
+     * Connection whose connection information is changed.
+     * @public
+     * @readonly
+     */
+    public readonly connectionToBeChanged: ConnectionID;
+    /**
+     * @summary `requestedConnectionInfo`.
+     * @description
+     *
+     * Requested connection information (e.g. flow direction).
+     * @public
+     * @readonly
+     */
+    public readonly requestedConnectionInfo: ConnectionInformation;
+    /**
+     * @summary `extensions`.
+     * @description
+     *
+     * Optional security (timestamp, sequence, securityInfo) and
+     * privateData.
+     * @public
+     * @readonly
+     */
+    public readonly extensions?: OPTIONAL<CSTACommonArguments>;
+
     constructor (
-        /**
-         * @summary `connectionToBeChanged`.
-         * @description
-         *
-         * Connection whose connection information is changed.
-         * @public
-         * @readonly
-         */
-        readonly connectionToBeChanged: ConnectionID,
-        /**
-         * @summary `requestedConnectionInfo`.
-         * @description
-         *
-         * Requested connection information (e.g. flow direction).
-         * @public
-         * @readonly
-         */
-        readonly requestedConnectionInfo: ConnectionInformation,
-        /**
-         * @summary `extensions`.
-         * @description
-         *
-         * Optional security (timestamp, sequence, securityInfo) and
-         * privateData.
-         * @public
-         * @readonly
-         */
-        readonly extensions?: OPTIONAL<CSTACommonArguments>
-    ) {}
+        connectionToBeChanged: ConnectionID,
+        requestedConnectionInfo: ConnectionInformation,
+        extensions?: OPTIONAL<CSTACommonArguments>
+    ) {
+        this.connectionToBeChanged = connectionToBeChanged;
+        this.requestedConnectionInfo = requestedConnectionInfo;
+        this.extensions = extensions;
+    }
 
     /**
      * @summary Restructures an object into a ChangeConnectionInformationArgument

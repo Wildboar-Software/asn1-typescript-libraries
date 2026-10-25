@@ -2,18 +2,18 @@
 
 import * as $ from "@wildboar/asn1/functional";
 import {
-    OPTIONAL,
-    SEQUENCE,
-    SET,
-    ASN1Element as _Element,
+    type OPTIONAL,
+    type SEQUENCE,
+    type SET,
+    type ASN1Element as _Element,
     ASN1TagClass as _TagClass
 } from "@wildboar/asn1";
-import { ConnectionID, _decode_ConnectionID, _encode_ConnectionID } from "../CSTA-call-connection-identifiers/ConnectionID.ta.mjs";
+import { type ConnectionID, _decode_ConnectionID, _encode_ConnectionID } from "../CSTA-call-connection-identifiers/ConnectionID.ta.mjs";
 
-import { ConnectionList_Item_endpoint, _decode_ConnectionList_Item_endpoint, _encode_ConnectionList_Item_endpoint } from "../CSTA-connection-states/ConnectionList-Item-endpoint.ta.mjs";
+import { type ConnectionList_Item_endpoint, _decode_ConnectionList_Item_endpoint, _encode_ConnectionList_Item_endpoint } from "../CSTA-connection-states/ConnectionList-Item-endpoint.ta.mjs";
 
 import {
-    ConnectionList_Item_associatedNID,
+    type ConnectionList_Item_associatedNID,
     _decode_ConnectionList_Item_associatedNID,
     _encode_ConnectionList_Item_associatedNID
 } from "../CSTA-connection-states/ConnectionList-Item-associatedNID.ta.mjs";
@@ -49,67 +49,79 @@ import { ConnectionInformation, _decode_ConnectionInformation, _encode_Connectio
  */
 export
 class ConnectionList_Item {
+    /**
+     * @summary `newConnection`.
+     * @description
+     *
+     * Connection in the resulting call. Optional for
+     * `transferringDevice` in the Transferred event; otherwise
+     * mandatory (ECMA-269 §12.2.9).
+     *
+     * @public
+     * @readonly
+     */
+    public readonly newConnection?: OPTIONAL<ConnectionID>;
+    /**
+     * @summary `oldConnection`.
+     * @description
+     *
+     * Connection in the original call. Mandatory if the switching
+     * function previously reported that CallID; otherwise optional
+     * (ECMA-269 §12.2.9).
+     *
+     * @public
+     * @readonly
+     */
+    public readonly oldConnection?: OPTIONAL<ConnectionID>;
+    /**
+     * @summary `endpoint`.
+     * @description
+     *
+     * Internal device, or for external calls the far-end device if
+     * known. Statuses: Provided, Not Known, Restricted
+     * (ECMA-269 §12.2.9).
+     *
+     * @public
+     * @readonly
+     */
+    public readonly endpoint?: OPTIONAL<ConnectionList_Item_endpoint>;
+    /**
+     * @summary `associatedNID`.
+     * @description
+     *
+     * Network Interface Device for an external far-end. Mandatory
+     * on external calls; omit for devices inside the sub-domain.
+     * Statuses: Provided or Not Known (ECMA-269 §12.2.9).
+     *
+     * @public
+     * @readonly
+     */
+    public readonly associatedNID?: OPTIONAL<ConnectionList_Item_associatedNID>;
+    /**
+     * @summary `resultingConnectionInfo`.
+     * @description
+     *
+     * Flow direction and channel characteristics of the resulting
+     * connection (ECMA-269 §12.2.9).
+     *
+     * @public
+     * @readonly
+     */
+    public readonly resultingConnectionInfo?: OPTIONAL<ConnectionInformation>;
+
     constructor (
-        /**
-         * @summary `newConnection`.
-         * @description
-         *
-         * Connection in the resulting call. Optional for
-         * `transferringDevice` in the Transferred event; otherwise
-         * mandatory (ECMA-269 §12.2.9).
-         *
-         * @public
-         * @readonly
-         */
-        readonly newConnection?: OPTIONAL<ConnectionID>,
-        /**
-         * @summary `oldConnection`.
-         * @description
-         *
-         * Connection in the original call. Mandatory if the switching
-         * function previously reported that CallID; otherwise optional
-         * (ECMA-269 §12.2.9).
-         *
-         * @public
-         * @readonly
-         */
-        readonly oldConnection?: OPTIONAL<ConnectionID>,
-        /**
-         * @summary `endpoint`.
-         * @description
-         *
-         * Internal device, or for external calls the far-end device if
-         * known. Statuses: Provided, Not Known, Restricted
-         * (ECMA-269 §12.2.9).
-         *
-         * @public
-         * @readonly
-         */
-        readonly endpoint?: OPTIONAL<ConnectionList_Item_endpoint>,
-        /**
-         * @summary `associatedNID`.
-         * @description
-         *
-         * Network Interface Device for an external far-end. Mandatory
-         * on external calls; omit for devices inside the sub-domain.
-         * Statuses: Provided or Not Known (ECMA-269 §12.2.9).
-         *
-         * @public
-         * @readonly
-         */
-        readonly associatedNID?: OPTIONAL<ConnectionList_Item_associatedNID>,
-        /**
-         * @summary `resultingConnectionInfo`.
-         * @description
-         *
-         * Flow direction and channel characteristics of the resulting
-         * connection (ECMA-269 §12.2.9).
-         *
-         * @public
-         * @readonly
-         */
-        readonly resultingConnectionInfo?: OPTIONAL<ConnectionInformation>
-    ) {}
+        newConnection?: OPTIONAL<ConnectionID>,
+        oldConnection?: OPTIONAL<ConnectionID>,
+        endpoint?: OPTIONAL<ConnectionList_Item_endpoint>,
+        associatedNID?: OPTIONAL<ConnectionList_Item_associatedNID>,
+        resultingConnectionInfo?: OPTIONAL<ConnectionInformation>
+    ) {
+        this.newConnection = newConnection;
+        this.oldConnection = oldConnection;
+        this.endpoint = endpoint;
+        this.associatedNID = associatedNID;
+        this.resultingConnectionInfo = resultingConnectionInfo;
+    }
 
     /**
      * @summary Restructures an object into a ConnectionList_Item

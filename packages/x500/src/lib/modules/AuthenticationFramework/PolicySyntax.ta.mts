@@ -1,17 +1,17 @@
 /* eslint-disable */
 import {
     ASN1ConstructionError as _ConstructionError,
-    ASN1Element as _Element,
+    type ASN1Element as _Element,
     ASN1TagClass as _TagClass,
 } from "@wildboar/asn1";
 import * as $ from "@wildboar/asn1/functional";
 import {
-    InfoSyntax,
+    type InfoSyntax,
     _decode_InfoSyntax,
     _encode_InfoSyntax,
 } from "../AuthenticationFramework/InfoSyntax.ta.mjs";
 import {
-    PolicyID,
+    type PolicyID,
     _decode_PolicyID,
     _encode_PolicyID,
 } from "../AuthenticationFramework/PolicyID.ta.mjs";
@@ -33,26 +33,34 @@ import {
  *
  */
 export class PolicySyntax {
+    /**
+     * @summary `policyIdentifier`.
+     * @public
+     * @readonly
+     */
+    public readonly policyIdentifier: PolicyID;
+    /**
+     * @summary `policySyntax`.
+     * @public
+     * @readonly
+     */
+    public readonly policySyntax: InfoSyntax;
+    /**
+     * @summary Extensions that are not recognized.
+     * @public
+     * @readonly
+     */
+    public readonly _unrecognizedExtensionsList: _Element[];
+
     constructor(
-        /**
-         * @summary `policyIdentifier`.
-         * @public
-         * @readonly
-         */
-        readonly policyIdentifier: PolicyID,
-        /**
-         * @summary `policySyntax`.
-         * @public
-         * @readonly
-         */
-        readonly policySyntax: InfoSyntax,
-        /**
-         * @summary Extensions that are not recognized.
-         * @public
-         * @readonly
-         */
-        readonly _unrecognizedExtensionsList: _Element[] = []
-    ) {}
+        policyIdentifier: PolicyID,
+        policySyntax: InfoSyntax,
+        _unrecognizedExtensionsList: _Element[] = []
+    ) {
+        this.policyIdentifier = policyIdentifier;
+        this.policySyntax = policySyntax;
+        this._unrecognizedExtensionsList = _unrecognizedExtensionsList;
+    }
 
     /**
      * @summary Restructures an object into a PolicySyntax

@@ -1,6 +1,6 @@
 /* eslint-disable */
 import {
-  NULL,
+  type NULL,
   ASN1Element as _Element,
   ASN1TagClass as _TagClass,
   ASN1Construction as _Construction,
@@ -33,12 +33,12 @@ export type RedirectGUIEvents_ResponseParams = NULL; // NullType
 
 
 
-export const _decode_RedirectGUIEvents_ResponseParams = $._decodeNull;
+export const _decode_RedirectGUIEvents_ResponseParams: $.ASN1Decoder<null> = $._decodeNull;
 
 
 
 
-export const _encode_RedirectGUIEvents_ResponseParams = $._encodeNull;
+export const _encode_RedirectGUIEvents_ResponseParams: $.ASN1Encoder<null> = $._encodeNull;
 
 
 /* eslint-enable */

@@ -1,6 +1,6 @@
 import {
-    INTEGER,
-    ASN1Element as _Element,
+    type INTEGER,
+    type ASN1Element as _Element,
     ASN1OverflowError,
     ASN1TagClass as _TagClass,
 } from "@wildboar/asn1";
@@ -29,4 +29,4 @@ export const _decode_TariffSwitchInterval = (el: _Element): TariffSwitchInterval
     }
     return value;
 };
-export const _encode_TariffSwitchInterval = $._encodeInteger;
+export const _encode_TariffSwitchInterval: $.ASN1Encoder<INTEGER> = $._encodeInteger;

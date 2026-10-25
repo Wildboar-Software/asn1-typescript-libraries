@@ -1,5 +1,5 @@
 /* eslint-disable */
-import { MAP_EXTENSION } from "../MAP-ExtensionDataTypes/MAP-EXTENSION.oca.mjs";
+import { type MAP_EXTENSION } from "../MAP-ExtensionDataTypes/MAP-EXTENSION.oca.mjs";
 
 
 /**

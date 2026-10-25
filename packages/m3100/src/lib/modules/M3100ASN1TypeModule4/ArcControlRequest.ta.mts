@@ -1,7 +1,7 @@
 /* eslint-disable */
 import {
-    OPTIONAL,
-    ASN1Element as _Element,
+    type OPTIONAL,
+    type ASN1Element as _Element,
     ASN1TagClass as _TagClass,
     ASN1Construction as _Construction,
     ASN1UniversalType as _UniversalType,
@@ -12,7 +12,7 @@ import {
 } from '@wildboar/asn1';
 import * as $ from '@wildboar/asn1/functional';
 import {
-    ArcTime,
+    type ArcTime,
     _decode_ArcTime,
     _encode_ArcTime,
 } from '../M3100ASN1TypeModule4/ArcTime.ta.mjs';
@@ -23,7 +23,7 @@ import {
     _encode_ArcState,
 } from '../M3100ASN1TypeModule4/ArcState.ta.mjs';
 import {
-    AdditionalInformation,
+    type AdditionalInformation,
     _decode_AdditionalInformation,
     _encode_AdditionalInformation,
 } from '@wildboar/attribute-asn1module';
@@ -44,26 +44,34 @@ import {
  *
  */
 export class ArcControlRequest {
+    /**
+     * @summary `time`.
+     * @public
+     * @readonly
+     */
+    public readonly time: OPTIONAL<ArcTime>;
+    /**
+     * @summary `newState`.
+     * @public
+     * @readonly
+     */
+    public readonly newState: ArcState;
+    /**
+     * @summary `additionalInfo`.
+     * @public
+     * @readonly
+     */
+    public readonly additionalInfo?: OPTIONAL<AdditionalInformation>;
+
     constructor(
-        /**
-         * @summary `time`.
-         * @public
-         * @readonly
-         */
-        readonly time: OPTIONAL<ArcTime>,
-        /**
-         * @summary `newState`.
-         * @public
-         * @readonly
-         */
-        readonly newState: ArcState,
-        /**
-         * @summary `additionalInfo`.
-         * @public
-         * @readonly
-         */
-        readonly additionalInfo?: OPTIONAL<AdditionalInformation>
-    ) {}
+        time: OPTIONAL<ArcTime>,
+        newState: ArcState,
+        additionalInfo?: OPTIONAL<AdditionalInformation>
+    ) {
+        this.time = time;
+        this.newState = newState;
+        this.additionalInfo = additionalInfo;
+    }
 
     /**
      * @summary Restructures an object into a ArcControlRequest
@@ -98,7 +106,7 @@ export class ArcControlRequest {
      * @static
      */
 
-    public static _enum_for_newState = _enum_for_ArcState;
+    public static _enum_for_newState: typeof _enum_for_ArcState = _enum_for_ArcState;
 }
 
 

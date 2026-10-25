@@ -1,9 +1,9 @@
 /* eslint-disable */
 import {
-    OPTIONAL,
-    BOOLEAN,
-    INTEGER,
-    ASN1Element as _Element,
+    type OPTIONAL,
+    type BOOLEAN,
+    type INTEGER,
+    type ASN1Element as _Element,
     ASN1TagClass as _TagClass,
     ASN1Construction as _Construction,
     ASN1UniversalType as _UniversalType,
@@ -12,7 +12,7 @@ import {
     EmbeddedPDV as _PDV,
     ASN1ConstructionError as _ConstructionError, ASN1OverflowError } from "@wildboar/asn1";
 import * as $ from "@wildboar/asn1/functional";
-import { V59String, _decode_V59String, _encode_V59String } from "../V59/V59String.ta.mjs";
+import { type V59String, _decode_V59String, _encode_V59String } from "../V59/V59String.ta.mjs";
 
 /**
  * @summary CnxDiag_Item
@@ -54,7 +54,7 @@ class CnxDiag_Item {
      * @public
      * @readonly
      */
-    readonly txCarrier: V59String;
+    public readonly txCarrier: V59String;
     /**
      * @summary `rxCarrier`.
      * @description
@@ -66,7 +66,7 @@ class CnxDiag_Item {
      * @public
      * @readonly
      */
-    readonly rxCarrier: V59String;
+    public readonly rxCarrier: V59String;
     /**
      * @summary `carrierLosses`.
      * @description
@@ -77,7 +77,7 @@ class CnxDiag_Item {
      * @public
      * @readonly
      */
-    readonly carrierLosses: INTEGER;
+    public readonly carrierLosses: INTEGER;
     /**
      * @summary `renegRequests`.
      * @description
@@ -87,7 +87,7 @@ class CnxDiag_Item {
      * @public
      * @readonly
      */
-    readonly renegRequests: INTEGER;
+    public readonly renegRequests: INTEGER;
     /**
      * @summary `renegSuccesses`.
      * @description
@@ -97,7 +97,7 @@ class CnxDiag_Item {
      * @public
      * @readonly
      */
-    readonly renegSuccesses: INTEGER;
+    public readonly renegSuccesses: INTEGER;
     /**
      * @summary `retrainRequests`.
      * @description
@@ -107,7 +107,7 @@ class CnxDiag_Item {
      * @public
      * @readonly
      */
-    readonly retrainRequests: INTEGER;
+    public readonly retrainRequests: INTEGER;
     /**
      * @summary `retrainSuccesses`.
      * @description
@@ -117,7 +117,7 @@ class CnxDiag_Item {
      * @public
      * @readonly
      */
-    readonly retrainSuccesses: INTEGER;
+    public readonly retrainSuccesses: INTEGER;
     /**
      * @summary `callWaiting`.
      * @description
@@ -127,7 +127,7 @@ class CnxDiag_Item {
      * @public
      * @readonly
      */
-    readonly callWaiting: OPTIONAL<INTEGER>;
+    public readonly callWaiting: OPTIONAL<INTEGER>;
     /**
      * @summary `duration`.
      * @description
@@ -138,7 +138,7 @@ class CnxDiag_Item {
      * @public
      * @readonly
      */
-    readonly duration: OPTIONAL<V59String>;
+    public readonly duration: OPTIONAL<V59String>;
     /**
      * @summary `caller`.
      * @description
@@ -147,7 +147,7 @@ class CnxDiag_Item {
      * @public
      * @readonly
      */
-    readonly caller: BOOLEAN;
+    public readonly caller: BOOLEAN;
     /**
      * @summary `reverseRoles`.
      * @description
@@ -156,13 +156,13 @@ class CnxDiag_Item {
      * @public
      * @readonly
      */
-    readonly reverseRoles?: OPTIONAL<BOOLEAN>;
+    public readonly reverseRoles?: OPTIONAL<BOOLEAN>;
     /**
      * @summary Extensions that are not recognized.
      * @public
      * @readonly
      */
-    readonly _unrecognizedExtensionsList: _Element[];
+    public readonly _unrecognizedExtensionsList: _Element[];
 
     constructor (
         txCarrier: V59String,

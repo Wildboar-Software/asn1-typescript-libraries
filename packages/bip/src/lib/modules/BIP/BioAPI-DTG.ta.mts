@@ -47,13 +47,13 @@ export class BioAPI_DTG {
    * @public
    * @readonly
    */
-  readonly date: BioAPI_DATE;
+  public readonly date: BioAPI_DATE;
   /**
    * @summary `time`.
    * @public
    * @readonly
    */
-  readonly time: BioAPI_TIME;
+  public readonly time: BioAPI_TIME;
 
   constructor(
     date: BioAPI_DATE,

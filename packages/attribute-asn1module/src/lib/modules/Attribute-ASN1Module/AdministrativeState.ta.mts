@@ -1,6 +1,6 @@
 /* eslint-disable */
 import {
-    ASN1Element as _Element,
+    type ASN1Element as _Element,
     ASN1TagClass as _TagClass,
     ASN1Construction as _Construction,
     ASN1UniversalType as _UniversalType,
@@ -36,7 +36,8 @@ const _enum_for_AdministrativeState = {
     shuttingDown: 2,
 } as const;
 
-export type _enum_for_AdministrativeState = (typeof _enum_for_AdministrativeState)[keyof typeof _enum_for_AdministrativeState];
+export
+type _enum_for_AdministrativeState = (typeof _enum_for_AdministrativeState)[keyof typeof _enum_for_AdministrativeState];
 
 /**
  * @summary AdministrativeState
@@ -74,7 +75,7 @@ type AdministrativeState = _enum_for_AdministrativeState;
  * @enum {number}
  */
 export
-const AdministrativeState = _enum_for_AdministrativeState;
+const AdministrativeState: typeof _enum_for_AdministrativeState = _enum_for_AdministrativeState;
 
 /**
  * @summary AdministrativeState_locked
@@ -88,7 +89,7 @@ const AdministrativeState = _enum_for_AdministrativeState;
  * @type {number}
  */
 export
-const AdministrativeState_locked: AdministrativeState = AdministrativeState.locked; /* LONG_NAMED_ENUMERATED_VALUE */
+const AdministrativeState_locked: 0 = AdministrativeState.locked; /* LONG_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary locked
@@ -102,7 +103,7 @@ const AdministrativeState_locked: AdministrativeState = AdministrativeState.lock
  * @type {number}
  */
 export
-const locked: AdministrativeState = AdministrativeState.locked; /* SHORT_NAMED_ENUMERATED_VALUE */
+const locked: 0 = AdministrativeState.locked; /* SHORT_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary AdministrativeState_unlocked
@@ -115,7 +116,7 @@ const locked: AdministrativeState = AdministrativeState.locked; /* SHORT_NAMED_E
  * @type {number}
  */
 export
-const AdministrativeState_unlocked: AdministrativeState = AdministrativeState.unlocked; /* LONG_NAMED_ENUMERATED_VALUE */
+const AdministrativeState_unlocked: 1 = AdministrativeState.unlocked; /* LONG_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary unlocked
@@ -128,7 +129,7 @@ const AdministrativeState_unlocked: AdministrativeState = AdministrativeState.un
  * @type {number}
  */
 export
-const unlocked: AdministrativeState = AdministrativeState.unlocked; /* SHORT_NAMED_ENUMERATED_VALUE */
+const unlocked: 1 = AdministrativeState.unlocked; /* SHORT_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary AdministrativeState_shuttingDown
@@ -141,7 +142,7 @@ const unlocked: AdministrativeState = AdministrativeState.unlocked; /* SHORT_NAM
  * @type {number}
  */
 export
-const AdministrativeState_shuttingDown: AdministrativeState = AdministrativeState.shuttingDown; /* LONG_NAMED_ENUMERATED_VALUE */
+const AdministrativeState_shuttingDown: 2 = AdministrativeState.shuttingDown; /* LONG_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary shuttingDown
@@ -154,13 +155,25 @@ const AdministrativeState_shuttingDown: AdministrativeState = AdministrativeStat
  * @type {number}
  */
 export
-const shuttingDown: AdministrativeState = AdministrativeState.shuttingDown; /* SHORT_NAMED_ENUMERATED_VALUE */
+const shuttingDown: 2 = AdministrativeState.shuttingDown; /* SHORT_NAMED_ENUMERATED_VALUE */
 
 
-export const _decode_AdministrativeState = $._decodeEnumerated as $.ASN1Decoder<AdministrativeState>;
+export function _decode_AdministrativeState(el: _Element): AdministrativeState {
+    const enumerated = $._decodeEnumerated(el);
+    switch (enumerated) {
+        case AdministrativeState.locked: return AdministrativeState.locked;
+        case AdministrativeState.unlocked: return AdministrativeState.unlocked;
+        case AdministrativeState.shuttingDown: return AdministrativeState.shuttingDown;
+        default:
+            throw new _ConstructionError(
+                "Invalid ENUMERATED value " + enumerated + " for AdministrativeState.",
+                el,
+            );
+    }
+}
 
 
-export const _encode_AdministrativeState = $._encodeEnumerated as $.ASN1Encoder<AdministrativeState>;
+export const _encode_AdministrativeState: $.ASN1Encoder<AdministrativeState> = $._encodeEnumerated as $.ASN1Encoder<AdministrativeState>;
 
 
 /* eslint-enable */

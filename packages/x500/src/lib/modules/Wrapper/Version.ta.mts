@@ -1,5 +1,5 @@
 /* eslint-disable */
-import { ASN1Element as _Element, BIT_STRING } from "@wildboar/asn1";
+import { ASN1Element as _Element, type BIT_STRING } from "@wildboar/asn1";
 import * as $ from "@wildboar/asn1/functional";
 
 /**
@@ -35,10 +35,10 @@ export const Version_v1: number = 0; /* LONG_NAMED_BIT */
 export const v1: number = Version_v1; /* SHORT_NAMED_BIT */
 
 
-export const _decode_Version = $._decodeBitString;
+export const _decode_Version: $.ASN1Decoder<BIT_STRING> = $._decodeBitString;
 
 
-export const _encode_Version = $._encodeBitString;
+export const _encode_Version: $.ASN1Encoder<BIT_STRING> = $._encodeBitString;
 
 
 /* eslint-enable */

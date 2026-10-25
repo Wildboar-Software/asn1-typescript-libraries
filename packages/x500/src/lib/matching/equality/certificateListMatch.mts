@@ -1,13 +1,13 @@
-import EqualityMatcher from "../../types/EqualityMatcher.mjs";
+import type EqualityMatcher from "../../types/EqualityMatcher.mjs";
 import { readDecoded } from "../readValue.mjs";
-import { ASN1Element, DERElement, FALSE_BIT, INTEGER, TRUE_BIT, OBJECT_IDENTIFIER } from "@wildboar/asn1";
+import { ASN1Element, DERElement, FALSE_BIT, type INTEGER, TRUE_BIT, type OBJECT_IDENTIFIER } from "@wildboar/asn1";
 import { compareName } from "@wildboar/dn";
 import {
     CertificateListAssertion,
     _decode_CertificateListAssertion,
 } from "../../modules/CertificateExtensions/CertificateListAssertion.ta.mjs";
 import {
-    CertificateList,
+    type CertificateList,
     _decode_CertificateList,
 } from "../../modules/AuthenticationFramework/CertificateList.ta.mjs";
 import {

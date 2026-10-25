@@ -1,8 +1,8 @@
 /* eslint-disable */
 import {
-    OPTIONAL,
-    OBJECT_IDENTIFIER,
-    ASN1Element as _Element,
+    type OPTIONAL,
+    type OBJECT_IDENTIFIER,
+    type ASN1Element as _Element,
     ASN1TagClass as _TagClass,
     ASN1Construction as _Construction,
     ASN1UniversalType as _UniversalType,
@@ -13,7 +13,7 @@ import {
 } from '@wildboar/asn1';
 import * as $ from '@wildboar/asn1/functional';
 import {
-    AlphaCode,
+    type AlphaCode,
     _decode_AlphaCode,
     _encode_AlphaCode,
 } from '../IPMSHeadingExtensions/AlphaCode.ta.mjs';
@@ -42,26 +42,34 @@ import {
  *
  */
 export class DistributionCode {
+    /**
+     * @summary `oid_code`.
+     * @public
+     * @readonly
+     */
+    public readonly oid_code?: OPTIONAL<OBJECT_IDENTIFIER>;
+    /**
+     * @summary `alphanumeric_code`.
+     * @public
+     * @readonly
+     */
+    public readonly alphanumeric_code?: OPTIONAL<AlphaCode>;
+    /**
+     * @summary `or_descriptor`.
+     * @public
+     * @readonly
+     */
+    public readonly or_descriptor?: OPTIONAL<ORDescriptor>;
+
     constructor(
-        /**
-         * @summary `oid_code`.
-         * @public
-         * @readonly
-         */
-        readonly oid_code?: OPTIONAL<OBJECT_IDENTIFIER>,
-        /**
-         * @summary `alphanumeric_code`.
-         * @public
-         * @readonly
-         */
-        readonly alphanumeric_code?: OPTIONAL<AlphaCode>,
-        /**
-         * @summary `or_descriptor`.
-         * @public
-         * @readonly
-         */
-        readonly or_descriptor?: OPTIONAL<ORDescriptor>
-    ) {}
+        oid_code?: OPTIONAL<OBJECT_IDENTIFIER>,
+        alphanumeric_code?: OPTIONAL<AlphaCode>,
+        or_descriptor?: OPTIONAL<ORDescriptor>
+    ) {
+        this.oid_code = oid_code;
+        this.alphanumeric_code = alphanumeric_code;
+        this.or_descriptor = or_descriptor;
+    }
 
     /**
      * @summary Restructures an object into a DistributionCode

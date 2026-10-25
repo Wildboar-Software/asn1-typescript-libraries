@@ -1,7 +1,7 @@
 /* eslint-disable */
 import {
-    OPTIONAL,
-    ASN1Element as _Element,
+    type OPTIONAL,
+    type ASN1Element as _Element,
     ASN1TagClass as _TagClass,
     ASN1Construction as _Construction,
     ASN1UniversalType as _UniversalType,
@@ -17,17 +17,17 @@ import {
     _encode_ActionResponse,
 } from '../UsageMeteringFunction/ActionResponse.ta.mjs';
 import {
-    ReportingTriggers,
+    type ReportingTriggers,
     _decode_ReportingTriggers,
     _encode_ReportingTriggers,
 } from '../UsageMeteringFunction/ReportingTriggers.ta.mjs';
 import {
-    AccountableObjectsReferenceList,
+    type AccountableObjectsReferenceList,
     _decode_AccountableObjectsReferenceList,
     _encode_AccountableObjectsReferenceList,
 } from '../UsageMeteringFunction/AccountableObjectsReferenceList.ta.mjs';
 import {
-    DataObjectsReferenceList,
+    type DataObjectsReferenceList,
     _decode_DataObjectsReferenceList,
     _encode_DataObjectsReferenceList,
 } from '../UsageMeteringFunction/DataObjectsReferenceList.ta.mjs';
@@ -63,63 +63,75 @@ import {
  *
  */
 export class ControlInfo {
+    /**
+     * @summary `actionResponse`.
+     * @description
+     *
+     * Data objects on which the action succeeded, failed, or
+     * was indeterminate. Mandatory in the control notification
+     * (Table 10). ITU-T Rec. X.742 (04/95) §8.1.4, §9.1.2.
+     * @public
+     * @readonly
+     */
+    public readonly actionResponse: ActionResponse;
+    /**
+     * @summary `reportingTriggers`.
+     * @description
+     *
+     * Reporting triggers currently in force on the control
+     * object. User optional in the notification (Table 10).
+     * ITU-T Rec. X.742 (04/95) §8.1.3, §9.1.2.
+     * @public
+     * @readonly
+     */
+    public readonly reportingTriggers: OPTIONAL<ReportingTriggers>;
+    /**
+     * @summary `accountableObjectsReferenceList`.
+     * @description
+     *
+     * Accountable objects this control object covers. User
+     * optional in the notification (Table 10). ITU-T Rec.
+     * X.742 (04/95) §8.1.3, §9.1.2.
+     * @public
+     * @readonly
+     */
+    public readonly accountableObjectsReferenceList: OPTIONAL<AccountableObjectsReferenceList>;
+    /**
+     * @summary `dataObjectsReferenceList`.
+     * @description
+     *
+     * Data objects this control object currently references.
+     * User optional in the notification (Table 10). ITU-T Rec.
+     * X.742 (04/95) §8.1.3, §9.1.2.
+     * @public
+     * @readonly
+     */
+    public readonly dataObjectsReferenceList: OPTIONAL<DataObjectsReferenceList>;
+    /**
+     * @summary `additionalInformation`.
+     * @description
+     *
+     * Management extensions. Required in this SEQUENCE (may be
+     * empty); Table 10 does not list a corresponding event
+     * parameter. ITU-T Rec. X.742 (04/95) A.9.
+     * @public
+     * @readonly
+     */
+    public readonly additionalInformation: ManagementExtension[];
+
     constructor(
-        /**
-         * @summary `actionResponse`.
-         * @description
-         *
-         * Data objects on which the action succeeded, failed, or
-         * was indeterminate. Mandatory in the control notification
-         * (Table 10). ITU-T Rec. X.742 (04/95) §8.1.4, §9.1.2.
-         * @public
-         * @readonly
-         */
-        readonly actionResponse: ActionResponse,
-        /**
-         * @summary `reportingTriggers`.
-         * @description
-         *
-         * Reporting triggers currently in force on the control
-         * object. User optional in the notification (Table 10).
-         * ITU-T Rec. X.742 (04/95) §8.1.3, §9.1.2.
-         * @public
-         * @readonly
-         */
-        readonly reportingTriggers: OPTIONAL<ReportingTriggers>,
-        /**
-         * @summary `accountableObjectsReferenceList`.
-         * @description
-         *
-         * Accountable objects this control object covers. User
-         * optional in the notification (Table 10). ITU-T Rec.
-         * X.742 (04/95) §8.1.3, §9.1.2.
-         * @public
-         * @readonly
-         */
-        readonly accountableObjectsReferenceList: OPTIONAL<AccountableObjectsReferenceList>,
-        /**
-         * @summary `dataObjectsReferenceList`.
-         * @description
-         *
-         * Data objects this control object currently references.
-         * User optional in the notification (Table 10). ITU-T Rec.
-         * X.742 (04/95) §8.1.3, §9.1.2.
-         * @public
-         * @readonly
-         */
-        readonly dataObjectsReferenceList: OPTIONAL<DataObjectsReferenceList>,
-        /**
-         * @summary `additionalInformation`.
-         * @description
-         *
-         * Management extensions. Required in this SEQUENCE (may be
-         * empty); Table 10 does not list a corresponding event
-         * parameter. ITU-T Rec. X.742 (04/95) A.9.
-         * @public
-         * @readonly
-         */
-        readonly additionalInformation: ManagementExtension[]
-    ) {}
+        actionResponse: ActionResponse,
+        reportingTriggers: OPTIONAL<ReportingTriggers>,
+        accountableObjectsReferenceList: OPTIONAL<AccountableObjectsReferenceList>,
+        dataObjectsReferenceList: OPTIONAL<DataObjectsReferenceList>,
+        additionalInformation: ManagementExtension[]
+    ) {
+        this.actionResponse = actionResponse;
+        this.reportingTriggers = reportingTriggers;
+        this.accountableObjectsReferenceList = accountableObjectsReferenceList;
+        this.dataObjectsReferenceList = dataObjectsReferenceList;
+        this.additionalInformation = additionalInformation;
+    }
 
     /**
      * @summary Restructures an object into a ControlInfo

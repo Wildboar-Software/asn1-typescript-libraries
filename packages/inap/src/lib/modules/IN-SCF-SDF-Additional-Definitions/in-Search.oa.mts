@@ -4,9 +4,9 @@ import { type ERROR } from "../Remote-Operations-Information-Objects/ERROR.oca.m
 import { type OPERATION } from "../Remote-Operations-Information-Objects/OPERATION.oca.mjs";
 // export { Priority, _decode_Priority, _encode_Priority } from "../Remote-Operations-Information-Objects/Priority.ta.mjs";
 // export { Code, _decode_Code, _encode_Code } from "../Remote-Operations-Information-Objects/Code.ta.mjs";
-import { IN_SearchArgument, _decode_IN_SearchArgument, _encode_IN_SearchArgument } from "../IN-SCF-SDF-Additional-Definitions/IN-SearchArgument.ta.mjs";
+import { type IN_SearchArgument, _decode_IN_SearchArgument, _encode_IN_SearchArgument } from "../IN-SCF-SDF-Additional-Definitions/IN-SearchArgument.ta.mjs";
 // export { IN_SearchArgument, _decode_IN_SearchArgument, _encode_IN_SearchArgument } from "../IN-SCF-SDF-Additional-Definitions/IN-SearchArgument.ta.mjs";
-import { IN_SearchResult, _decode_IN_SearchResult, _encode_IN_SearchResult } from "../IN-SCF-SDF-Additional-Definitions/IN-SearchResult.ta.mjs";
+import { type IN_SearchResult, _decode_IN_SearchResult, _encode_IN_SearchResult } from "../IN-SCF-SDF-Additional-Definitions/IN-SearchResult.ta.mjs";
 // export { IN_SearchResult, _decode_IN_SearchResult, _encode_IN_SearchResult } from "../IN-SCF-SDF-Additional-Definitions/IN-SearchResult.ta.mjs";
 import { nameError } from "../DirectoryAbstractService/nameError.oa.mjs";
 // export { nameError } from "../DirectoryAbstractService/nameError.oa.mjs";

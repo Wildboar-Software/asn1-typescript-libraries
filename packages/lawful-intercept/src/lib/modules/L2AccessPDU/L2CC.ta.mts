@@ -1,12 +1,12 @@
 /* eslint-disable */
 import {
-    RELATIVE_OID,
+    type RELATIVE_OID,
     ASN1ConstructionError as _ConstructionError,
-    ASN1Element as _Element,
+    type ASN1Element as _Element,
     ASN1TagClass as _TagClass
 } from "@wildboar/asn1";
 import * as $ from "@wildboar/asn1/functional";
-import { L2CC_l2CCContents, _decode_L2CC_l2CCContents, _encode_L2CC_l2CCContents } from "../L2AccessPDU/L2CC-l2CCContents.ta.mjs";
+import { type L2CC_l2CCContents, _decode_L2CC_l2CCContents, _encode_L2CC_l2CCContents } from "../L2AccessPDU/L2CC-l2CCContents.ta.mjs";
 // export { L2CC_l2CCContents, _decode_L2CC_l2CCContents, _encode_L2CC_l2CCContents } from "../L2AccessPDU/L2CC-l2CCContents.ta.mjs";
 
 

@@ -1,8 +1,8 @@
 /* eslint-disable */
 import {
-  OPTIONAL,
-  BOOLEAN,
-  INTEGER,
+  type OPTIONAL,
+  type BOOLEAN,
+  type INTEGER,
   ASN1Element as _Element,
   ASN1TagClass as _TagClass,
   ASN1Construction as _Construction,
@@ -14,23 +14,23 @@ import {
 } from '@wildboar/asn1';
 import * as $ from '@wildboar/asn1/functional';
 import {
-  State_Result,
+  type State_Result,
   State_Result_success,
   _decode_State_Result,
   _encode_State_Result,
 } from '../ISO8571-FTAM/State-Result.ta.mjs';
 import {
-  Action_Result,
+  type Action_Result,
   _decode_Action_Result,
   _encode_Action_Result,
 } from '../ISO8571-FTAM/Action-Result.ta.mjs';
 import {
-  Contents_Type_Attribute,
+  type Contents_Type_Attribute,
   _decode_Contents_Type_Attribute,
   _encode_Contents_Type_Attribute,
 } from '../ISO8571-FTAM/Contents-Type-Attribute.ta.mjs';
 import {
-  Diagnostic,
+  type Diagnostic,
   _decode_Diagnostic,
   _encode_Diagnostic,
 } from '../ISO8571-FTAM/Diagnostic.ta.mjs';
@@ -77,7 +77,7 @@ export class F_RECOVER_response {
    * @public
    * @readonly
    */
-  readonly state_result: OPTIONAL<State_Result>;
+  public readonly state_result: OPTIONAL<State_Result>;
   /**
    * @summary `action_result`.
    * @description
@@ -87,7 +87,7 @@ export class F_RECOVER_response {
    * @public
    * @readonly
    */
-  readonly action_result: OPTIONAL<Action_Result>;
+  public readonly action_result: OPTIONAL<Action_Result>;
   /**
    * @summary `contents_type`.
    * @description
@@ -98,7 +98,7 @@ export class F_RECOVER_response {
    * @public
    * @readonly
    */
-  readonly contents_type: Contents_Type_Attribute;
+  public readonly contents_type: Contents_Type_Attribute;
   /**
    * @summary `recovety_Point`.
    * @description
@@ -111,7 +111,7 @@ export class F_RECOVER_response {
    * @public
    * @readonly
    */
-  readonly recovety_Point?: OPTIONAL<INTEGER>;
+  public readonly recovety_Point?: OPTIONAL<INTEGER>;
   /**
    * @summary `diagnostic`.
    * @description
@@ -121,7 +121,7 @@ export class F_RECOVER_response {
    * @public
    * @readonly
    */
-  readonly diagnostic?: OPTIONAL<Diagnostic>;
+  public readonly diagnostic?: OPTIONAL<Diagnostic>;
   /**
    * @summary `presentation_action`.
    * @description
@@ -132,7 +132,7 @@ export class F_RECOVER_response {
    * @public
    * @readonly
    */
-  readonly presentation_action?: OPTIONAL<BOOLEAN>;
+  public readonly presentation_action?: OPTIONAL<BOOLEAN>;
   /**
    * @summary `concurrent_recovery_point`.
    * @description
@@ -143,7 +143,7 @@ export class F_RECOVER_response {
    * @public
    * @readonly
    */
-  readonly concurrent_recovery_point?: OPTIONAL<INTEGER>;
+  public readonly concurrent_recovery_point?: OPTIONAL<INTEGER>;
   /**
    * @summary `last_transfer_end_read_request`.
    * @description
@@ -153,7 +153,7 @@ export class F_RECOVER_response {
    * @public
    * @readonly
    */
-  readonly last_transfer_end_read_request?: OPTIONAL<INTEGER>;
+  public readonly last_transfer_end_read_request?: OPTIONAL<INTEGER>;
   /**
    * @summary `last_transfer_end_write_request`.
    * @description
@@ -163,7 +163,7 @@ export class F_RECOVER_response {
    * @public
    * @readonly
    */
-  readonly last_transfer_end_write_request?: OPTIONAL<INTEGER>;
+  public readonly last_transfer_end_write_request?: OPTIONAL<INTEGER>;
 
   constructor(
     state_result: OPTIONAL<State_Result>,

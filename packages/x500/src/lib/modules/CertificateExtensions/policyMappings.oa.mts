@@ -2,7 +2,7 @@
 import { type EXTENSION } from "../AuthenticationFramework/EXTENSION.oca.mjs";
 import { id_ce_policyMappings } from "../CertificateExtensions/id-ce-policyMappings.va.mjs";
 import {
-    PolicyMappingsSyntax,
+    type PolicyMappingsSyntax,
     _decode_PolicyMappingsSyntax,
     _encode_PolicyMappingsSyntax,
 } from "../CertificateExtensions/PolicyMappingsSyntax.ta.mjs";

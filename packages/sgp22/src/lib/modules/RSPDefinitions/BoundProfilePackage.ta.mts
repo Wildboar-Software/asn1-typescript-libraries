@@ -1,8 +1,8 @@
 /* eslint-disable */
 import {
-    OCTET_STRING,
-    OPTIONAL,
-    ASN1Element as _Element,
+    type OCTET_STRING,
+    type OPTIONAL,
+    type ASN1Element as _Element,
     ASN1TagClass as _TagClass
 } from "@wildboar/asn1";
 import * as $ from "@wildboar/asn1/functional";
@@ -46,7 +46,7 @@ class BoundProfilePackage {
      * @public
      * @readonly
      */
-    readonly initialiseSecureChannelRequest: InitialiseSecureChannelRequest;
+    public readonly initialiseSecureChannelRequest: InitialiseSecureChannelRequest;
     /**
      * @summary `firstSequenceOf87`.
      * @description
@@ -58,7 +58,7 @@ class BoundProfilePackage {
      * @public
      * @readonly
      */
-    readonly firstSequenceOf87: OCTET_STRING[];
+    public readonly firstSequenceOf87: OCTET_STRING[];
     /**
      * @summary `sequenceOf88`.
      * @description
@@ -71,7 +71,7 @@ class BoundProfilePackage {
      * @public
      * @readonly
      */
-    readonly sequenceOf88: OCTET_STRING[];
+    public readonly sequenceOf88: OCTET_STRING[];
     /**
      * @summary `secondSequenceOf87`.
      * @description
@@ -84,7 +84,7 @@ class BoundProfilePackage {
      * @public
      * @readonly
      */
-    readonly secondSequenceOf87: OPTIONAL<OCTET_STRING[]>;
+    public readonly secondSequenceOf87: OPTIONAL<OCTET_STRING[]>;
     /**
      * @summary `sequenceOf86`.
      * @description
@@ -96,7 +96,7 @@ class BoundProfilePackage {
      * @public
      * @readonly
      */
-    readonly sequenceOf86: OCTET_STRING[];
+    public readonly sequenceOf86: OCTET_STRING[];
 
     constructor (
         initialiseSecureChannelRequest: InitialiseSecureChannelRequest,

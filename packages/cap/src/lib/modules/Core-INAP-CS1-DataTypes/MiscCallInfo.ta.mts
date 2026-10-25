@@ -1,6 +1,6 @@
 /* eslint-disable */
 import {
-    ASN1Element as _Element,
+    type ASN1Element as _Element,
     ASN1TagClass as _TagClass,
     ASN1Construction as _Construction,
     ASN1UniversalType as _UniversalType,
@@ -32,14 +32,18 @@ import { MiscCallInfo_messageType, _enum_for_MiscCallInfo_messageType, _decode_M
  */
 export
 class MiscCallInfo {
+    /**
+     * @summary `messageType`.
+     * @public
+     * @readonly
+     */
+    public readonly messageType: MiscCallInfo_messageType;
+
     constructor (
-        /**
-         * @summary `messageType`.
-         * @public
-         * @readonly
-         */
-        readonly messageType: MiscCallInfo_messageType
-    ) {}
+        messageType: MiscCallInfo_messageType
+    ) {
+        this.messageType = messageType;
+    }
 
     /**
      * @summary Restructures an object into a MiscCallInfo
@@ -63,7 +67,7 @@ class MiscCallInfo {
          * @static
          */
 
-    public static _enum_for_messageType = _enum_for_MiscCallInfo_messageType;
+    public static _enum_for_messageType: typeof _enum_for_MiscCallInfo_messageType = _enum_for_MiscCallInfo_messageType;
 }
 
 /**

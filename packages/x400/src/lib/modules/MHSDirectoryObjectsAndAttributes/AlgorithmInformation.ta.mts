@@ -1,7 +1,7 @@
 /* eslint-disable */
 import {
-    OPTIONAL,
-    ASN1Element as _Element,
+    type OPTIONAL,
+    type ASN1Element as _Element,
     ASN1TagClass as _TagClass,
     ASN1Construction as _Construction,
     ASN1UniversalType as _UniversalType,
@@ -39,26 +39,34 @@ import {
  *
  */
 export class AlgorithmInformation {
+    /**
+     * @summary `algorithm_identifier`.
+     * @public
+     * @readonly
+     */
+    public readonly algorithm_identifier: AlgorithmIdentifier;
+    /**
+     * @summary `originator_certificate_selector`.
+     * @public
+     * @readonly
+     */
+    public readonly originator_certificate_selector?: OPTIONAL<CertificateAssertion>;
+    /**
+     * @summary `recipient_certificate_selector`.
+     * @public
+     * @readonly
+     */
+    public readonly recipient_certificate_selector?: OPTIONAL<CertificateAssertion>;
+
     constructor(
-        /**
-         * @summary `algorithm_identifier`.
-         * @public
-         * @readonly
-         */
-        readonly algorithm_identifier: AlgorithmIdentifier,
-        /**
-         * @summary `originator_certificate_selector`.
-         * @public
-         * @readonly
-         */
-        readonly originator_certificate_selector?: OPTIONAL<CertificateAssertion>,
-        /**
-         * @summary `recipient_certificate_selector`.
-         * @public
-         * @readonly
-         */
-        readonly recipient_certificate_selector?: OPTIONAL<CertificateAssertion>
-    ) {}
+        algorithm_identifier: AlgorithmIdentifier,
+        originator_certificate_selector?: OPTIONAL<CertificateAssertion>,
+        recipient_certificate_selector?: OPTIONAL<CertificateAssertion>
+    ) {
+        this.algorithm_identifier = algorithm_identifier;
+        this.originator_certificate_selector = originator_certificate_selector;
+        this.recipient_certificate_selector = recipient_certificate_selector;
+    }
 
     /**
      * @summary Restructures an object into a AlgorithmInformation

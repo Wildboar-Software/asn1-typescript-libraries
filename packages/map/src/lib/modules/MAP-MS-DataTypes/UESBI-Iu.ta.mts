@@ -1,12 +1,12 @@
 /* eslint-disable */
 import {
-    OPTIONAL,
-    ASN1Element as _Element,
+    type OPTIONAL,
+    type ASN1Element as _Element,
     ASN1TagClass as _TagClass
 } from "@wildboar/asn1";
 import * as $ from "@wildboar/asn1/functional";
-import { UESBI_IuA, _decode_UESBI_IuA, _encode_UESBI_IuA } from "../MAP-MS-DataTypes/UESBI-IuA.ta.mjs";
-import { UESBI_IuB, _decode_UESBI_IuB, _encode_UESBI_IuB } from "../MAP-MS-DataTypes/UESBI-IuB.ta.mjs";
+import { type UESBI_IuA, _decode_UESBI_IuA, _encode_UESBI_IuA } from "../MAP-MS-DataTypes/UESBI-IuA.ta.mjs";
+import { type UESBI_IuB, _decode_UESBI_IuB, _encode_UESBI_IuB } from "../MAP-MS-DataTypes/UESBI-IuB.ta.mjs";
 
 
 /**
@@ -22,8 +22,8 @@ import { UESBI_IuB, _decode_UESBI_IuB, _encode_UESBI_IuB } from "../MAP-MS-DataT
  * 
  * ```asn1
  * UESBI-Iu ::= SEQUENCE {
- *     uesbi-IuA    [0] UESBI-IuA    OPTIONAL,
- *     uesbi-IuB    [1] UESBI-IuB    OPTIONAL,
+ *     uesbi-IuA    [0] UESBI-IuA    type OPTIONAL,
+ *     uesbi-IuB    [1] UESBI-IuB    type OPTIONAL,
  *     ...}
  * ```
  * 
@@ -31,38 +31,46 @@ import { UESBI_IuB, _decode_UESBI_IuB, _encode_UESBI_IuB } from "../MAP-MS-DataT
  */
 export
 class UESBI_Iu {
+    /**
+     * @summary `uesbi_IuA`.
+     * @description
+     *
+     * UESBI-IuA as in 3GPP TS 25.413.
+     *
+     * (3GPP TS 29.002 V19.1.0 clause 7.6.6.20).
+     *
+     * @public
+     * @readonly
+     */
+    public readonly uesbi_IuA?: OPTIONAL<UESBI_IuA>;
+    /**
+     * @summary `uesbi_IuB`.
+     * @description
+     *
+     * UESBI-IuB as in 3GPP TS 25.413.
+     *
+     * (3GPP TS 29.002 V19.1.0 clause 7.6.6.20).
+     *
+     * @public
+     * @readonly
+     */
+    public readonly uesbi_IuB?: OPTIONAL<UESBI_IuB>;
+    /**
+     * @summary Extensions that are not recognized.
+     * @public
+     * @readonly
+     */
+    public readonly _unrecognizedExtensionsList: _Element[];
+
     constructor (
-        /**
-         * @summary `uesbi_IuA`.
-         * @description
-         *
-         * UESBI-IuA as in 3GPP TS 25.413.
-         *
-         * (3GPP TS 29.002 V19.1.0 clause 7.6.6.20).
-         *
-         * @public
-         * @readonly
-         */
-        readonly uesbi_IuA?: OPTIONAL<UESBI_IuA>,
-        /**
-         * @summary `uesbi_IuB`.
-         * @description
-         *
-         * UESBI-IuB as in 3GPP TS 25.413.
-         *
-         * (3GPP TS 29.002 V19.1.0 clause 7.6.6.20).
-         *
-         * @public
-         * @readonly
-         */
-        readonly uesbi_IuB?: OPTIONAL<UESBI_IuB>,
-        /**
-         * @summary Extensions that are not recognized.
-         * @public
-         * @readonly
-         */
-        readonly _unrecognizedExtensionsList: _Element[] = []
-    ) {}
+        uesbi_IuA?: OPTIONAL<UESBI_IuA>,
+        uesbi_IuB?: OPTIONAL<UESBI_IuB>,
+        _unrecognizedExtensionsList: _Element[] = []
+    ) {
+        this.uesbi_IuA = uesbi_IuA;
+        this.uesbi_IuB = uesbi_IuB;
+        this._unrecognizedExtensionsList = _unrecognizedExtensionsList;
+    }
 
     /**
      * @summary Restructures an object into a UESBI_Iu

@@ -2,9 +2,9 @@
 
 import * as $ from "@wildboar/asn1/functional";
 import {
-    OPTIONAL,
-    BOOLEAN,
-    SEQUENCE,
+    type OPTIONAL,
+    type BOOLEAN,
+    type SEQUENCE,
     ASN1Element as _Element
 } from "@wildboar/asn1";
 import { CallBackList_Item, _decode_CallBackList_Item, _encode_CallBackList_Item } from "../CSTA-get-call-back/CallBackList-Item.ta.mjs";

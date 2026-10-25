@@ -1,5 +1,5 @@
 /* eslint-disable */
-import { ASN1Element as _Element, INTEGER } from "@wildboar/asn1";
+import { ASN1Element as _Element, type INTEGER } from "@wildboar/asn1";
 import * as $ from "@wildboar/asn1/functional";
 
 
@@ -23,12 +23,12 @@ export type LabelAndCertValue = INTEGER;
 
 
 
-export const _decode_LabelAndCertValue = $._decodeInteger;
+export const _decode_LabelAndCertValue: $.ASN1Decoder<INTEGER> = $._decodeInteger;
 
 
 
 
-export const _encode_LabelAndCertValue = $._encodeInteger;
+export const _encode_LabelAndCertValue: $.ASN1Encoder<INTEGER> = $._encodeInteger;
 
 
 /* eslint-enable */

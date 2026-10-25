@@ -1,6 +1,6 @@
 /* eslint-disable */
 import {
-  INTEGER,
+  type INTEGER,
   ASN1Element as _Element,
   ASN1TagClass as _TagClass,
   ASN1Construction as _Construction,
@@ -36,7 +36,7 @@ export type FADU_Identity_begin_end = INTEGER;
  * @constant
  * @type {number}
  */
-export const FADU_Identity_begin_end_begin: FADU_Identity_begin_end = 0; /* LONG_NAMED_INTEGER_VALUE */
+export const FADU_Identity_begin_end_begin: 0 = 0 satisfies FADU_Identity_begin_end; /* LONG_NAMED_INTEGER_VALUE */
 
 
 /**
@@ -44,7 +44,7 @@ export const FADU_Identity_begin_end_begin: FADU_Identity_begin_end = 0; /* LONG
  * @constant
  * @type {number}
  */
-export const begin: FADU_Identity_begin_end = FADU_Identity_begin_end_begin; /* SHORT_NAMED_INTEGER_VALUE */
+export const begin: 0 = FADU_Identity_begin_end_begin; /* SHORT_NAMED_INTEGER_VALUE */
 
 
 /**
@@ -54,7 +54,7 @@ export const begin: FADU_Identity_begin_end = FADU_Identity_begin_end_begin; /* 
  * @constant
  * @type {number}
  */
-export const FADU_Identity_begin_end_end: FADU_Identity_begin_end = 1; /* LONG_NAMED_INTEGER_VALUE */
+export const FADU_Identity_begin_end_end: 1 = 1 satisfies FADU_Identity_begin_end; /* LONG_NAMED_INTEGER_VALUE */
 
 
 /**
@@ -62,17 +62,17 @@ export const FADU_Identity_begin_end_end: FADU_Identity_begin_end = 1; /* LONG_N
  * @constant
  * @type {number}
  */
-export const end: FADU_Identity_begin_end = FADU_Identity_begin_end_end; /* SHORT_NAMED_INTEGER_VALUE */
+export const end: 1 = FADU_Identity_begin_end_end; /* SHORT_NAMED_INTEGER_VALUE */
 
 
 
 
-export const _decode_FADU_Identity_begin_end = $._decodeInteger;
+export const _decode_FADU_Identity_begin_end: $.ASN1Decoder<INTEGER> = $._decodeInteger;
 
 
 
 
-export const _encode_FADU_Identity_begin_end = $._encodeInteger;
+export const _encode_FADU_Identity_begin_end: $.ASN1Encoder<INTEGER> = $._encodeInteger;
 
 
 /* eslint-enable */

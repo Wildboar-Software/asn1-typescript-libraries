@@ -1,7 +1,7 @@
 /* eslint-disable */
 import {
-  OPTIONAL,
-  INTEGER,
+  type OPTIONAL,
+  type INTEGER,
   ASN1Element as _Element,
   ASN1TagClass as _TagClass,
   ASN1Construction as _Construction,
@@ -13,7 +13,7 @@ import {
 } from '@wildboar/asn1';
 import * as $ from '@wildboar/asn1/functional';
 import {
-  Realm,
+  type Realm,
   _decode_Realm,
   _encode_Realm,
 } from '../KerberosV5Spec2/Realm.ta.mjs';
@@ -28,12 +28,12 @@ import {
   _encode_Checksum,
 } from '../KerberosV5Spec2/Checksum.ta.mjs';
 import {
-  Microseconds,
+  type Microseconds,
   _decode_Microseconds,
   _encode_Microseconds,
 } from '../KerberosV5Spec2/Microseconds.ta.mjs';
 import {
-  KerberosTime,
+  type KerberosTime,
   _decode_KerberosTime,
   _encode_KerberosTime,
 } from '../KerberosV5Spec2/KerberosTime.ta.mjs';
@@ -43,12 +43,12 @@ import {
   _encode_EncryptionKey,
 } from '../KerberosV5Spec2/EncryptionKey.ta.mjs';
 import {
-  UInt32,
+  type UInt32,
   _decode_UInt32,
   _encode_UInt32,
 } from '../KerberosV5Spec2/UInt32.ta.mjs';
 import {
-  AuthorizationData,
+  type AuthorizationData,
   _decode_AuthorizationData,
   _encode_AuthorizationData,
 } from '../KerberosV5Spec2/AuthorizationData.ta.mjs';
@@ -89,7 +89,7 @@ export class Authenticator {
    * @public
    * @readonly
    */
-  readonly authenticator_vno: INTEGER;
+  public readonly authenticator_vno: INTEGER;
   /**
    * @summary `crealm`.
    * @description
@@ -99,7 +99,7 @@ export class Authenticator {
    * @public
    * @readonly
    */
-  readonly crealm: Realm;
+  public readonly crealm: Realm;
   /**
    * @summary `cname`.
    * @description
@@ -109,7 +109,7 @@ export class Authenticator {
    * @public
    * @readonly
    */
-  readonly cname: PrincipalName;
+  public readonly cname: PrincipalName;
   /**
    * @summary `cksum`.
    * @description
@@ -121,7 +121,7 @@ export class Authenticator {
    * @public
    * @readonly
    */
-  readonly cksum: OPTIONAL<Checksum>;
+  public readonly cksum: OPTIONAL<Checksum>;
   /**
    * @summary `cusec`.
    * @description
@@ -132,7 +132,7 @@ export class Authenticator {
    * @public
    * @readonly
    */
-  readonly cusec: Microseconds;
+  public readonly cusec: Microseconds;
   /**
    * @summary `ctime`.
    * @description
@@ -142,7 +142,7 @@ export class Authenticator {
    * @public
    * @readonly
    */
-  readonly ctime: KerberosTime;
+  public readonly ctime: KerberosTime;
   /**
    * @summary `subkey`.
    * @description
@@ -154,7 +154,7 @@ export class Authenticator {
    * @public
    * @readonly
    */
-  readonly subkey?: OPTIONAL<EncryptionKey>;
+  public readonly subkey?: OPTIONAL<EncryptionKey>;
   /**
    * @summary `seq_number`.
    * @description
@@ -166,7 +166,7 @@ export class Authenticator {
    * @public
    * @readonly
    */
-  readonly seq_number?: OPTIONAL<UInt32>;
+  public readonly seq_number?: OPTIONAL<UInt32>;
   /**
    * @summary `authorization_data`.
    * @description
@@ -177,7 +177,7 @@ export class Authenticator {
    * @public
    * @readonly
    */
-  readonly authorization_data?: OPTIONAL<AuthorizationData>;
+  public readonly authorization_data?: OPTIONAL<AuthorizationData>;
 
   constructor(
     authenticator_vno: INTEGER,

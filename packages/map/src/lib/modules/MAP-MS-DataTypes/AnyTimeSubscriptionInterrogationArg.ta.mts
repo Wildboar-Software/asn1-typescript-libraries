@@ -1,13 +1,13 @@
 /* eslint-disable */
 import {
-    NULL,
-    OPTIONAL,
-    ASN1Element as _Element,
+    type NULL,
+    type OPTIONAL,
+    type ASN1Element as _Element,
     ASN1TagClass as _TagClass
 } from "@wildboar/asn1";
 import * as $ from "@wildboar/asn1/functional";
-import { ISDN_AddressString, _decode_ISDN_AddressString, _encode_ISDN_AddressString } from "../MAP-CommonDataTypes/ISDN-AddressString.ta.mjs";
-import { SubscriberIdentity, _decode_SubscriberIdentity, _encode_SubscriberIdentity } from "../MAP-CommonDataTypes/SubscriberIdentity.ta.mjs";
+import { type ISDN_AddressString, _decode_ISDN_AddressString, _encode_ISDN_AddressString } from "../MAP-CommonDataTypes/ISDN-AddressString.ta.mjs";
+import { type SubscriberIdentity, _decode_SubscriberIdentity, _encode_SubscriberIdentity } from "../MAP-CommonDataTypes/SubscriberIdentity.ta.mjs";
 import { ExtensionContainer, _decode_ExtensionContainer, _encode_ExtensionContainer } from "../MAP-ExtensionDataTypes/ExtensionContainer.ta.mjs";
 import { RequestedSubscriptionInfo, _decode_RequestedSubscriptionInfo, _encode_RequestedSubscriptionInfo } from "../MAP-MS-DataTypes/RequestedSubscriptionInfo.ta.mjs";
 
@@ -30,8 +30,8 @@ import { RequestedSubscriptionInfo, _decode_RequestedSubscriptionInfo, _encode_R
  *     subscriberIdentity    [0] SubscriberIdentity,
  *     requestedSubscriptionInfo    [1] RequestedSubscriptionInfo,
  *     gsmSCF-Address    [2] ISDN-AddressString,
- *     extensionContainer    [3] ExtensionContainer    OPTIONAL,
- *     longFTN-Supported    [4]    NULL    OPTIONAL,
+ *     extensionContainer    [3] ExtensionContainer    type OPTIONAL,
+ *     longFTN-Supported    [4]    NULL    type OPTIONAL,
  *     ...}
  * ```
  * 
@@ -39,65 +39,79 @@ import { RequestedSubscriptionInfo, _decode_RequestedSubscriptionInfo, _encode_R
  */
 export
 class AnyTimeSubscriptionInterrogationArg {
+    /**
+     * @summary `subscriberIdentity`.
+     * @description
+     *
+     * IMSI or MSISDN of the subscriber whose subscription data is requested
+     * (3GPP TS 29.002 V19.1.0 clauses 8.11.3.2 and 7.6.2).
+     *
+     * @public
+     * @readonly
+     */
+    public readonly subscriberIdentity: SubscriberIdentity;
+    /**
+     * @summary `requestedSubscriptionInfo`.
+     * @description
+     *
+     * Subscription information being requested (3GPP TS 29.002 V19.1.0
+     * clauses 8.11.3.2 and 7.6.3.86).
+     *
+     * @public
+     * @readonly
+     */
+    public readonly requestedSubscriptionInfo: RequestedSubscriptionInfo;
+    /**
+     * @summary `gsmSCF_Address`.
+     * @description
+     *
+     * Address of the interrogating gsmSCF (IM-SSF address when IM-SSF takes
+     * the gsmSCF role). The HLR may use it to screen the request (3GPP TS
+     * 29.002 V19.1.0 clauses 8.11.3.3 and 7.6.2.58).
+     *
+     * @public
+     * @readonly
+     */
+    public readonly gsmSCF_Address: ISDN_AddressString;
+    /**
+     * @summary `extensionContainer`.
+     * @public
+     * @readonly
+     */
+    public readonly extensionContainer?: OPTIONAL<ExtensionContainer>;
+    /**
+     * @summary `longFTN_Supported`.
+     * @description
+     *
+     * Indicates that the gsmSCF supports Long Forwarded-to Numbers (3GPP TS
+     * 29.002 V19.1.0 clauses 8.11.3.2 and 7.6.2.22B).
+     *
+     * @public
+     * @readonly
+     */
+    public readonly longFTN_Supported?: OPTIONAL<NULL>;
+    /**
+     * @summary Extensions that are not recognized.
+     * @public
+     * @readonly
+     */
+    public readonly _unrecognizedExtensionsList: _Element[];
+
     constructor (
-        /**
-         * @summary `subscriberIdentity`.
-         * @description
-         *
-         * IMSI or MSISDN of the subscriber whose subscription data is requested
-         * (3GPP TS 29.002 V19.1.0 clauses 8.11.3.2 and 7.6.2).
-         *
-         * @public
-         * @readonly
-         */
-        readonly subscriberIdentity: SubscriberIdentity,
-        /**
-         * @summary `requestedSubscriptionInfo`.
-         * @description
-         *
-         * Subscription information being requested (3GPP TS 29.002 V19.1.0
-         * clauses 8.11.3.2 and 7.6.3.86).
-         *
-         * @public
-         * @readonly
-         */
-        readonly requestedSubscriptionInfo: RequestedSubscriptionInfo,
-        /**
-         * @summary `gsmSCF_Address`.
-         * @description
-         *
-         * Address of the interrogating gsmSCF (IM-SSF address when IM-SSF takes
-         * the gsmSCF role). The HLR may use it to screen the request (3GPP TS
-         * 29.002 V19.1.0 clauses 8.11.3.3 and 7.6.2.58).
-         *
-         * @public
-         * @readonly
-         */
-        readonly gsmSCF_Address: ISDN_AddressString,
-        /**
-         * @summary `extensionContainer`.
-         * @public
-         * @readonly
-         */
-        readonly extensionContainer?: OPTIONAL<ExtensionContainer>,
-        /**
-         * @summary `longFTN_Supported`.
-         * @description
-         *
-         * Indicates that the gsmSCF supports Long Forwarded-to Numbers (3GPP TS
-         * 29.002 V19.1.0 clauses 8.11.3.2 and 7.6.2.22B).
-         *
-         * @public
-         * @readonly
-         */
-        readonly longFTN_Supported?: OPTIONAL<NULL>,
-        /**
-         * @summary Extensions that are not recognized.
-         * @public
-         * @readonly
-         */
-        readonly _unrecognizedExtensionsList: _Element[] = []
-    ) {}
+        subscriberIdentity: SubscriberIdentity,
+        requestedSubscriptionInfo: RequestedSubscriptionInfo,
+        gsmSCF_Address: ISDN_AddressString,
+        extensionContainer?: OPTIONAL<ExtensionContainer>,
+        longFTN_Supported?: OPTIONAL<NULL>,
+        _unrecognizedExtensionsList: _Element[] = []
+    ) {
+        this.subscriberIdentity = subscriberIdentity;
+        this.requestedSubscriptionInfo = requestedSubscriptionInfo;
+        this.gsmSCF_Address = gsmSCF_Address;
+        this.extensionContainer = extensionContainer;
+        this.longFTN_Supported = longFTN_Supported;
+        this._unrecognizedExtensionsList = _unrecognizedExtensionsList;
+    }
 
     /**
      * @summary Restructures an object into a AnyTimeSubscriptionInterrogationArg

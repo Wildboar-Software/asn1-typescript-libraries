@@ -1,20 +1,20 @@
 /* eslint-disable */
 import {
-    OBJECT_IDENTIFIER,
-    OPTIONAL,
-    ASN1Element as _Element,
+    type OBJECT_IDENTIFIER,
+    type OPTIONAL,
+    type ASN1Element as _Element,
     ASN1TagClass as _TagClass
 } from "@wildboar/asn1";
 import * as $ from "@wildboar/asn1/functional";
-import { UMTS_Content_Report_version, _decode_UMTS_Content_Report_version, _encode_UMTS_Content_Report_version, _enum_for_UMTS_Content_Report_version } from "../UMTS-HI3CircuitLIOperations/UMTS-Content-Report-version.ta.mjs";
+import { type UMTS_Content_Report_version, _decode_UMTS_Content_Report_version, _encode_UMTS_Content_Report_version, _enum_for_UMTS_Content_Report_version } from "../UMTS-HI3CircuitLIOperations/UMTS-Content-Report-version.ta.mjs";
 // export { UMTS_Content_Report_version, _enum_for_UMTS_Content_Report_version, UMTS_Content_Report_version_version1 /* IMPORTED_LONG_ENUMERATION_ITEM */, version1 /* IMPORTED_SHORT_ENUMERATION_ITEM */, UMTS_Content_Report_version_version8 /* IMPORTED_LONG_ENUMERATION_ITEM */, version8 /* IMPORTED_SHORT_ENUMERATION_ITEM */, _decode_UMTS_Content_Report_version, _encode_UMTS_Content_Report_version } from "../UMTS-HI3CircuitLIOperations/UMTS-Content-Report-version.ta.mjs";
-import { LawfulInterceptionIdentifier, _decode_LawfulInterceptionIdentifier, _encode_LawfulInterceptionIdentifier } from "../HI2Operations/LawfulInterceptionIdentifier.ta.mjs";
+import { type LawfulInterceptionIdentifier, _decode_LawfulInterceptionIdentifier, _encode_LawfulInterceptionIdentifier } from "../HI2Operations/LawfulInterceptionIdentifier.ta.mjs";
 // export { LawfulInterceptionIdentifier, _decode_LawfulInterceptionIdentifier, _encode_LawfulInterceptionIdentifier } from "../HI2Operations/LawfulInterceptionIdentifier.ta.mjs";
 import { CommunicationIdentifier, _decode_CommunicationIdentifier, _encode_CommunicationIdentifier } from "../HI2Operations/CommunicationIdentifier.ta.mjs";
 // export { CommunicationIdentifier, _decode_CommunicationIdentifier, _encode_CommunicationIdentifier } from "../HI2Operations/CommunicationIdentifier.ta.mjs";
-import { TimeStamp, _decode_TimeStamp, _encode_TimeStamp } from "../HI2Operations/TimeStamp.ta.mjs";
+import { type TimeStamp, _decode_TimeStamp, _encode_TimeStamp } from "../HI2Operations/TimeStamp.ta.mjs";
 // export { TimeStamp, _decode_TimeStamp, _encode_TimeStamp } from "../HI2Operations/TimeStamp.ta.mjs";
-import { UMTS_Content_Report_initiator, _decode_UMTS_Content_Report_initiator, _encode_UMTS_Content_Report_initiator, _enum_for_UMTS_Content_Report_initiator } from "../UMTS-HI3CircuitLIOperations/UMTS-Content-Report-initiator.ta.mjs";
+import { type UMTS_Content_Report_initiator, _decode_UMTS_Content_Report_initiator, _encode_UMTS_Content_Report_initiator, _enum_for_UMTS_Content_Report_initiator } from "../UMTS-HI3CircuitLIOperations/UMTS-Content-Report-initiator.ta.mjs";
 // export { UMTS_Content_Report_initiator, _enum_for_UMTS_Content_Report_initiator, UMTS_Content_Report_initiator_originating_party /* IMPORTED_LONG_ENUMERATION_ITEM */, originating_party /* IMPORTED_SHORT_ENUMERATION_ITEM */, UMTS_Content_Report_initiator_terminating_party /* IMPORTED_LONG_ENUMERATION_ITEM */, terminating_party /* IMPORTED_SHORT_ENUMERATION_ITEM */, UMTS_Content_Report_initiator_forwarded_to_party /* IMPORTED_LONG_ENUMERATION_ITEM */, forwarded_to_party /* IMPORTED_SHORT_ENUMERATION_ITEM */, UMTS_Content_Report_initiator_undefined_party /* IMPORTED_LONG_ENUMERATION_ITEM */, undefined_party /* IMPORTED_SHORT_ENUMERATION_ITEM */, _decode_UMTS_Content_Report_initiator, _encode_UMTS_Content_Report_initiator } from "../UMTS-HI3CircuitLIOperations/UMTS-Content-Report-initiator.ta.mjs";
 import { Supplementary_Services, _decode_Supplementary_Services, _encode_Supplementary_Services } from "../HI2Operations/Supplementary-Services.ta.mjs";
 // export { Supplementary_Services, _decode_Supplementary_Services, _encode_Supplementary_Services } from "../HI2Operations/Supplementary-Services.ta.mjs";
@@ -216,13 +216,13 @@ class UMTS_Content_Report {
          * @static
          */
 
-    public static _enum_for_version = _enum_for_UMTS_Content_Report_version;        /**
+    public static _enum_for_version: typeof _enum_for_UMTS_Content_Report_version = _enum_for_UMTS_Content_Report_version;        /**
          * @summary The enum used as the type of the component `initiator`
          * @public
          * @static
          */
 
-    public static _enum_for_initiator = _enum_for_UMTS_Content_Report_initiator;
+    public static _enum_for_initiator: typeof _enum_for_UMTS_Content_Report_initiator = _enum_for_UMTS_Content_Report_initiator;
 }
 
 /**

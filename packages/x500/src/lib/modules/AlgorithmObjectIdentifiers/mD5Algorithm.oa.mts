@@ -1,5 +1,5 @@
 /* eslint-disable */
-import { NULL, ObjectIdentifier as _OID } from "@wildboar/asn1";
+import { type NULL, ObjectIdentifier as _OID } from "@wildboar/asn1";
 import * as $ from "@wildboar/asn1/functional";
 import { type ALGORITHM } from "../AuthenticationFramework/ALGORITHM.oca.mjs";
 /**

@@ -1,6 +1,6 @@
 /* eslint-disable */
 import {
-  ENUMERATED,
+  type ENUMERATED,
   ASN1Element as _Element,
   ASN1TagClass as _TagClass,
   ASN1Construction as _Construction,
@@ -55,7 +55,7 @@ export type BioAPI_INDICATOR_STATUS =
  * @constant
  * @type {number}
  */
-export const BioAPI_INDICATOR_STATUS_accept: BioAPI_INDICATOR_STATUS = 0; /* LONG_NAMED_ENUMERATED_VALUE */
+export const BioAPI_INDICATOR_STATUS_accept: 0 = _enum_for_BioAPI_INDICATOR_STATUS.accept; /* LONG_NAMED_ENUMERATED_VALUE */
 
 
 /**
@@ -63,7 +63,7 @@ export const BioAPI_INDICATOR_STATUS_accept: BioAPI_INDICATOR_STATUS = 0; /* LON
  * @constant
  * @type {number}
  */
-export const accept: BioAPI_INDICATOR_STATUS = BioAPI_INDICATOR_STATUS_accept; /* SHORT_NAMED_ENUMERATED_VALUE */
+export const accept: 0 = BioAPI_INDICATOR_STATUS_accept; /* SHORT_NAMED_ENUMERATED_VALUE */
 
 
 /**
@@ -71,7 +71,7 @@ export const accept: BioAPI_INDICATOR_STATUS = BioAPI_INDICATOR_STATUS_accept; /
  * @constant
  * @type {number}
  */
-export const BioAPI_INDICATOR_STATUS_reject: BioAPI_INDICATOR_STATUS = 1; /* LONG_NAMED_ENUMERATED_VALUE */
+export const BioAPI_INDICATOR_STATUS_reject: 1 = _enum_for_BioAPI_INDICATOR_STATUS.reject; /* LONG_NAMED_ENUMERATED_VALUE */
 
 
 /**
@@ -79,7 +79,7 @@ export const BioAPI_INDICATOR_STATUS_reject: BioAPI_INDICATOR_STATUS = 1; /* LON
  * @constant
  * @type {number}
  */
-export const reject: BioAPI_INDICATOR_STATUS = BioAPI_INDICATOR_STATUS_reject; /* SHORT_NAMED_ENUMERATED_VALUE */
+export const reject: 1 = BioAPI_INDICATOR_STATUS_reject; /* SHORT_NAMED_ENUMERATED_VALUE */
 
 
 /**
@@ -87,7 +87,7 @@ export const reject: BioAPI_INDICATOR_STATUS = BioAPI_INDICATOR_STATUS_reject; /
  * @constant
  * @type {number}
  */
-export const BioAPI_INDICATOR_STATUS_ready: BioAPI_INDICATOR_STATUS = 2; /* LONG_NAMED_ENUMERATED_VALUE */
+export const BioAPI_INDICATOR_STATUS_ready: 2 = _enum_for_BioAPI_INDICATOR_STATUS.ready; /* LONG_NAMED_ENUMERATED_VALUE */
 
 
 /**
@@ -95,7 +95,7 @@ export const BioAPI_INDICATOR_STATUS_ready: BioAPI_INDICATOR_STATUS = 2; /* LONG
  * @constant
  * @type {number}
  */
-export const ready: BioAPI_INDICATOR_STATUS = BioAPI_INDICATOR_STATUS_ready; /* SHORT_NAMED_ENUMERATED_VALUE */
+export const ready: 2 = BioAPI_INDICATOR_STATUS_ready; /* SHORT_NAMED_ENUMERATED_VALUE */
 
 
 /**
@@ -103,7 +103,7 @@ export const ready: BioAPI_INDICATOR_STATUS = BioAPI_INDICATOR_STATUS_ready; /* 
  * @constant
  * @type {number}
  */
-export const BioAPI_INDICATOR_STATUS_busy: BioAPI_INDICATOR_STATUS = 3; /* LONG_NAMED_ENUMERATED_VALUE */
+export const BioAPI_INDICATOR_STATUS_busy: 3 = _enum_for_BioAPI_INDICATOR_STATUS.busy; /* LONG_NAMED_ENUMERATED_VALUE */
 
 
 /**
@@ -111,7 +111,7 @@ export const BioAPI_INDICATOR_STATUS_busy: BioAPI_INDICATOR_STATUS = 3; /* LONG_
  * @constant
  * @type {number}
  */
-export const busy: BioAPI_INDICATOR_STATUS = BioAPI_INDICATOR_STATUS_busy; /* SHORT_NAMED_ENUMERATED_VALUE */
+export const busy: 3 = BioAPI_INDICATOR_STATUS_busy; /* SHORT_NAMED_ENUMERATED_VALUE */
 
 
 /**
@@ -119,7 +119,7 @@ export const busy: BioAPI_INDICATOR_STATUS = BioAPI_INDICATOR_STATUS_busy; /* SH
  * @constant
  * @type {number}
  */
-export const BioAPI_INDICATOR_STATUS_failure: BioAPI_INDICATOR_STATUS = 4; /* LONG_NAMED_ENUMERATED_VALUE */
+export const BioAPI_INDICATOR_STATUS_failure: 4 = _enum_for_BioAPI_INDICATOR_STATUS.failure; /* LONG_NAMED_ENUMERATED_VALUE */
 
 
 /**
@@ -127,17 +127,17 @@ export const BioAPI_INDICATOR_STATUS_failure: BioAPI_INDICATOR_STATUS = 4; /* LO
  * @constant
  * @type {number}
  */
-export const failure: BioAPI_INDICATOR_STATUS = BioAPI_INDICATOR_STATUS_failure; /* SHORT_NAMED_ENUMERATED_VALUE */
+export const failure: 4 = BioAPI_INDICATOR_STATUS_failure; /* SHORT_NAMED_ENUMERATED_VALUE */
 
 
 
 
-export const _decode_BioAPI_INDICATOR_STATUS = $._decodeEnumerated;
+export const _decode_BioAPI_INDICATOR_STATUS: $.ASN1Decoder<BioAPI_INDICATOR_STATUS> = $._decodeEnumerated as $.ASN1Decoder<BioAPI_INDICATOR_STATUS>;
 
 
 
 
-export const _encode_BioAPI_INDICATOR_STATUS = $._encodeEnumerated;
+export const _encode_BioAPI_INDICATOR_STATUS: $.ASN1Encoder<BioAPI_INDICATOR_STATUS> = $._encodeEnumerated as $.ASN1Encoder<BioAPI_INDICATOR_STATUS>;
 
 
 /* eslint-enable */

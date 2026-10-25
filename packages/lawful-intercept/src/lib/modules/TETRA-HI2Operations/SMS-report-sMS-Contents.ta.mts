@@ -1,17 +1,17 @@
 /* eslint-disable */
 import {
-    OCTET_STRING,
-    OPTIONAL,
-    ASN1Element as _Element,
+    type OCTET_STRING,
+    type OPTIONAL,
+    type ASN1Element as _Element,
     ASN1TagClass as _TagClass,
     ASN1SizeError
 } from "@wildboar/asn1";
 import * as $ from "@wildboar/asn1/functional";
-import { SMS_report_sMS_Contents_initiator, _decode_SMS_report_sMS_Contents_initiator, _encode_SMS_report_sMS_Contents_initiator, _enum_for_SMS_report_sMS_Contents_initiator } from "../TETRA-HI2Operations/SMS-report-sMS-Contents-initiator.ta.mjs";
+import { type SMS_report_sMS_Contents_initiator, _decode_SMS_report_sMS_Contents_initiator, _encode_SMS_report_sMS_Contents_initiator, _enum_for_SMS_report_sMS_Contents_initiator } from "../TETRA-HI2Operations/SMS-report-sMS-Contents-initiator.ta.mjs";
 // export { SMS_report_sMS_Contents_initiator, _enum_for_SMS_report_sMS_Contents_initiator, SMS_report_sMS_Contents_initiator_target /* IMPORTED_LONG_ENUMERATION_ITEM */, target /* IMPORTED_SHORT_ENUMERATION_ITEM */, SMS_report_sMS_Contents_initiator_server /* IMPORTED_LONG_ENUMERATION_ITEM */, server /* IMPORTED_SHORT_ENUMERATION_ITEM */, SMS_report_sMS_Contents_initiator_undefined_party /* IMPORTED_LONG_ENUMERATION_ITEM */, undefined_party /* IMPORTED_SHORT_ENUMERATION_ITEM */, _decode_SMS_report_sMS_Contents_initiator, _encode_SMS_report_sMS_Contents_initiator } from "../TETRA-HI2Operations/SMS-report-sMS-Contents-initiator.ta.mjs";
-import { SMS_report_sMS_Contents_transfer_status, _decode_SMS_report_sMS_Contents_transfer_status, _encode_SMS_report_sMS_Contents_transfer_status, _enum_for_SMS_report_sMS_Contents_transfer_status } from "../TETRA-HI2Operations/SMS-report-sMS-Contents-transfer-status.ta.mjs";
+import { type SMS_report_sMS_Contents_transfer_status, _decode_SMS_report_sMS_Contents_transfer_status, _encode_SMS_report_sMS_Contents_transfer_status, _enum_for_SMS_report_sMS_Contents_transfer_status } from "../TETRA-HI2Operations/SMS-report-sMS-Contents-transfer-status.ta.mjs";
 // export { SMS_report_sMS_Contents_transfer_status, _enum_for_SMS_report_sMS_Contents_transfer_status, SMS_report_sMS_Contents_transfer_status_succeed_transfer /* IMPORTED_LONG_ENUMERATION_ITEM */, succeed_transfer /* IMPORTED_SHORT_ENUMERATION_ITEM */, SMS_report_sMS_Contents_transfer_status_not_succeed_transfer /* IMPORTED_LONG_ENUMERATION_ITEM */, not_succeed_transfer /* IMPORTED_SHORT_ENUMERATION_ITEM */, SMS_report_sMS_Contents_transfer_status_undefined /* IMPORTED_LONG_ENUMERATION_ITEM */, _decode_SMS_report_sMS_Contents_transfer_status, _encode_SMS_report_sMS_Contents_transfer_status } from "../TETRA-HI2Operations/SMS-report-sMS-Contents-transfer-status.ta.mjs";
-import { SMS_report_sMS_Contents_other_message, _decode_SMS_report_sMS_Contents_other_message, _encode_SMS_report_sMS_Contents_other_message, _enum_for_SMS_report_sMS_Contents_other_message } from "../TETRA-HI2Operations/SMS-report-sMS-Contents-other-message.ta.mjs";
+import { type SMS_report_sMS_Contents_other_message, _decode_SMS_report_sMS_Contents_other_message, _encode_SMS_report_sMS_Contents_other_message, _enum_for_SMS_report_sMS_Contents_other_message } from "../TETRA-HI2Operations/SMS-report-sMS-Contents-other-message.ta.mjs";
 // export { SMS_report_sMS_Contents_other_message, _enum_for_SMS_report_sMS_Contents_other_message, SMS_report_sMS_Contents_other_message_yes /* IMPORTED_LONG_ENUMERATION_ITEM */, yes /* IMPORTED_SHORT_ENUMERATION_ITEM */, SMS_report_sMS_Contents_other_message_no /* IMPORTED_LONG_ENUMERATION_ITEM */, no /* IMPORTED_SHORT_ENUMERATION_ITEM */, SMS_report_sMS_Contents_other_message_undefined /* IMPORTED_LONG_ENUMERATION_ITEM */, _decode_SMS_report_sMS_Contents_other_message, _encode_SMS_report_sMS_Contents_other_message } from "../TETRA-HI2Operations/SMS-report-sMS-Contents-other-message.ta.mjs";
 
 
@@ -47,7 +47,7 @@ import { SMS_report_sMS_Contents_other_message, _decode_SMS_report_sMS_Contents_
  *         undefined(2),
  *         ...
  *     }
- *     OPTIONAL,
+ *     type OPTIONAL,
  *     other-message         [3] ENUMERATED
  *     {
  *         -- In case of terminating call, indicates if the server will send other SMS.
@@ -56,7 +56,7 @@ import { SMS_report_sMS_Contents_other_message, _decode_SMS_report_sMS_Contents_
  *         undefined(2),
  *         ...
  *     }
- *     OPTIONAL,
+ *     type OPTIONAL,
  *     content                     [4] OCTET STRING (SIZE (1..270)) OPTIONAL,
  *     -- Encoded in the format defined for the SMS mobile.
  *     ...
@@ -174,19 +174,19 @@ class SMS_report_sMS_Contents {
          * @static
          */
 
-    public static _enum_for_initiator = _enum_for_SMS_report_sMS_Contents_initiator;        /**
+    public static _enum_for_initiator: typeof _enum_for_SMS_report_sMS_Contents_initiator = _enum_for_SMS_report_sMS_Contents_initiator;        /**
          * @summary The enum used as the type of the component `transfer_status`
          * @public
          * @static
          */
 
-    public static _enum_for_transfer_status = _enum_for_SMS_report_sMS_Contents_transfer_status;        /**
+    public static _enum_for_transfer_status: typeof _enum_for_SMS_report_sMS_Contents_transfer_status = _enum_for_SMS_report_sMS_Contents_transfer_status;        /**
          * @summary The enum used as the type of the component `other_message`
          * @public
          * @static
          */
 
-    public static _enum_for_other_message = _enum_for_SMS_report_sMS_Contents_other_message;
+    public static _enum_for_other_message: typeof _enum_for_SMS_report_sMS_Contents_other_message = _enum_for_SMS_report_sMS_Contents_other_message;
 }
 
 /**

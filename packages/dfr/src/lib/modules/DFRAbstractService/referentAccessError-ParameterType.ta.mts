@@ -1,6 +1,6 @@
 /* eslint-disable */
 import {
-    ASN1Element as _Element,
+    type ASN1Element as _Element,
     ASN1TagClass as _TagClass,
     ASN1Construction as _Construction,
     ASN1UniversalType as _UniversalType,
@@ -10,7 +10,7 @@ import {
     ASN1ConstructionError as _ConstructionError,
 } from "@wildboar/asn1";
 import * as $ from "@wildboar/asn1/functional";
-import { referentAccessError_ParameterType_entry, _decode_referentAccessError_ParameterType_entry, _encode_referentAccessError_ParameterType_entry } from "../DFRAbstractService/referentAccessError-ParameterType-entry.ta.mjs";
+import { type referentAccessError_ParameterType_entry, _decode_referentAccessError_ParameterType_entry, _encode_referentAccessError_ParameterType_entry } from "../DFRAbstractService/referentAccessError-ParameterType-entry.ta.mjs";
 import { ReferentAccessProblem, _enum_for_ReferentAccessProblem, _decode_ReferentAccessProblem, _encode_ReferentAccessProblem } from "../DFRAbstractService/ReferentAccessProblem.ta.mjs";
 
 
@@ -37,26 +37,32 @@ import { ReferentAccessProblem, _enum_for_ReferentAccessProblem, _decode_Referen
  */
 export
 class referentAccessError_ParameterType {
+    /**
+     * @summary `entry`.
+     * @description
+     *
+     * The reference, as a DfrEntryName or a DOR.
+     * @public
+     * @readonly
+     */
+    public readonly entry: referentAccessError_ParameterType_entry;
+    /**
+     * @summary `problem`.
+     * @description
+     *
+     * What failed about the referent.
+     * @public
+     * @readonly
+     */
+    public readonly problem: ReferentAccessProblem;
+
     constructor (
-        /**
-         * @summary `entry`.
-         * @description
-         *
-         * The reference, as a DfrEntryName or a DOR.
-         * @public
-         * @readonly
-         */
-        readonly entry: referentAccessError_ParameterType_entry,
-        /**
-         * @summary `problem`.
-         * @description
-         *
-         * What failed about the referent.
-         * @public
-         * @readonly
-         */
-        readonly problem: ReferentAccessProblem
-    ) {}
+        entry: referentAccessError_ParameterType_entry,
+        problem: ReferentAccessProblem
+    ) {
+        this.entry = entry;
+        this.problem = problem;
+    }
 
     /**
      * @summary Restructures an object into a referentAccessError_ParameterType
@@ -80,7 +86,7 @@ class referentAccessError_ParameterType {
          * @static
          */
 
-    public static _enum_for_problem = _enum_for_ReferentAccessProblem;
+    public static _enum_for_problem: typeof _enum_for_ReferentAccessProblem = _enum_for_ReferentAccessProblem;
 }
 
 /**

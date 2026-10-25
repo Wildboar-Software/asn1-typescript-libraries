@@ -1,13 +1,13 @@
 /* eslint-disable */
 import {
     ASN1ConstructionError as _ConstructionError,
-    ASN1Element as _Element,
+    type ASN1Element as _Element,
     ASN1TagClass as _TagClass
 } from "@wildboar/asn1";
 import * as $ from "@wildboar/asn1/functional";
-import { WGS84LatitudeDecimal, _decode_WGS84LatitudeDecimal, _encode_WGS84LatitudeDecimal } from "../Common-Parameters/WGS84LatitudeDecimal.ta.mjs";
+import { type WGS84LatitudeDecimal, _decode_WGS84LatitudeDecimal, _encode_WGS84LatitudeDecimal } from "../Common-Parameters/WGS84LatitudeDecimal.ta.mjs";
 // export { WGS84LatitudeDecimal, _decode_WGS84LatitudeDecimal, _encode_WGS84LatitudeDecimal } from "../Common-Parameters/WGS84LatitudeDecimal.ta.mjs";
-import { WGS84LongitudeDecimal, _decode_WGS84LongitudeDecimal, _encode_WGS84LongitudeDecimal } from "../Common-Parameters/WGS84LongitudeDecimal.ta.mjs";
+import { type WGS84LongitudeDecimal, _decode_WGS84LongitudeDecimal, _encode_WGS84LongitudeDecimal } from "../Common-Parameters/WGS84LongitudeDecimal.ta.mjs";
 // export { WGS84LongitudeDecimal, _decode_WGS84LongitudeDecimal, _encode_WGS84LongitudeDecimal } from "../Common-Parameters/WGS84LongitudeDecimal.ta.mjs";
 
 

@@ -1,6 +1,6 @@
 import {
-    OPTIONAL,
-    ASN1Element as _Element,
+    type OPTIONAL,
+    type ASN1Element as _Element,
     ASN1TagClass as _TagClass,
 } from "@wildboar/asn1";
 import * as $ from "@wildboar/asn1/functional";
@@ -33,16 +33,34 @@ import { type GSN_Address, _decode_GSN_Address, _encode_GSN_Address } from "../M
  *
  */
 export class GPRSEventSpecificInformation_pDPContextEstablishmentAcknowledgementSpecificInformation {
+    public readonly accessPointName?: OPTIONAL<AccessPointName>;
+    public readonly chargingID?: OPTIONAL<GPRSChargingID>;
+    public readonly endUserAddress?: OPTIONAL<EndUserAddress>;
+    public readonly qualityOfService?: OPTIONAL<QualityOfService>;
+    public readonly locationInformationGPRS?: OPTIONAL<LocationInformationGPRS>;
+    public readonly timeAndTimeZone?: OPTIONAL<TimeAndTimezone>;
+    public readonly gGSNAddress?: OPTIONAL<GSN_Address>;
+    public readonly _unrecognizedExtensionsList: _Element[];
+
     constructor (
-        readonly accessPointName?: OPTIONAL<AccessPointName>,
-        readonly chargingID?: OPTIONAL<GPRSChargingID>,
-        readonly endUserAddress?: OPTIONAL<EndUserAddress>,
-        readonly qualityOfService?: OPTIONAL<QualityOfService>,
-        readonly locationInformationGPRS?: OPTIONAL<LocationInformationGPRS>,
-        readonly timeAndTimeZone?: OPTIONAL<TimeAndTimezone>,
-        readonly gGSNAddress?: OPTIONAL<GSN_Address>,
-        readonly _unrecognizedExtensionsList: _Element[] = [],
-    ) {}
+        accessPointName?: OPTIONAL<AccessPointName>,
+        chargingID?: OPTIONAL<GPRSChargingID>,
+        endUserAddress?: OPTIONAL<EndUserAddress>,
+        qualityOfService?: OPTIONAL<QualityOfService>,
+        locationInformationGPRS?: OPTIONAL<LocationInformationGPRS>,
+        timeAndTimeZone?: OPTIONAL<TimeAndTimezone>,
+        gGSNAddress?: OPTIONAL<GSN_Address>,
+        _unrecognizedExtensionsList: _Element[] = [],
+    ) {
+        this.accessPointName = accessPointName;
+        this.chargingID = chargingID;
+        this.endUserAddress = endUserAddress;
+        this.qualityOfService = qualityOfService;
+        this.locationInformationGPRS = locationInformationGPRS;
+        this.timeAndTimeZone = timeAndTimeZone;
+        this.gGSNAddress = gGSNAddress;
+        this._unrecognizedExtensionsList = _unrecognizedExtensionsList;
+    }
 
     public static _from_object (_o: { [_K in keyof (GPRSEventSpecificInformation_pDPContextEstablishmentAcknowledgementSpecificInformation)]: (GPRSEventSpecificInformation_pDPContextEstablishmentAcknowledgementSpecificInformation)[_K] }): GPRSEventSpecificInformation_pDPContextEstablishmentAcknowledgementSpecificInformation {
         return new GPRSEventSpecificInformation_pDPContextEstablishmentAcknowledgementSpecificInformation(_o.accessPointName, _o.chargingID, _o.endUserAddress, _o.qualityOfService, _o.locationInformationGPRS, _o.timeAndTimeZone, _o.gGSNAddress, _o._unrecognizedExtensionsList);

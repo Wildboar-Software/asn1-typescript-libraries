@@ -1,6 +1,6 @@
 /* eslint-disable */
 import {
-    ASN1Element as _Element,
+    type ASN1Element as _Element,
     ASN1TagClass as _TagClass,
     ASN1Construction as _Construction,
     ASN1UniversalType as _UniversalType,
@@ -58,7 +58,7 @@ export type InvokeProtectionError = _enum_for_InvokeProtectionError;
  *
  * @enum {number}
  */
-export const InvokeProtectionError = _enum_for_InvokeProtectionError;
+export const InvokeProtectionError: typeof _enum_for_InvokeProtectionError = _enum_for_InvokeProtectionError;
 
 
 /**
@@ -66,7 +66,7 @@ export const InvokeProtectionError = _enum_for_InvokeProtectionError;
  * @constant
  * @type {number}
  */
-export const InvokeProtectionError_preempted: InvokeProtectionError =
+export const InvokeProtectionError_preempted: _enum_for_InvokeProtectionError.preempted =
     InvokeProtectionError.preempted; /* LONG_NAMED_ENUMERATED_VALUE */
 
 
@@ -75,7 +75,7 @@ export const InvokeProtectionError_preempted: InvokeProtectionError =
  * @constant
  * @type {number}
  */
-export const preempted: InvokeProtectionError =
+export const preempted: _enum_for_InvokeProtectionError.preempted =
     InvokeProtectionError.preempted; /* SHORT_NAMED_ENUMERATED_VALUE */
 
 
@@ -84,7 +84,7 @@ export const preempted: InvokeProtectionError =
  * @constant
  * @type {number}
  */
-export const InvokeProtectionError_failure: InvokeProtectionError =
+export const InvokeProtectionError_failure: _enum_for_InvokeProtectionError.failure =
     InvokeProtectionError.failure; /* LONG_NAMED_ENUMERATED_VALUE */
 
 
@@ -93,7 +93,7 @@ export const InvokeProtectionError_failure: InvokeProtectionError =
  * @constant
  * @type {number}
  */
-export const failure: InvokeProtectionError =
+export const failure: _enum_for_InvokeProtectionError.failure =
     InvokeProtectionError.failure; /* SHORT_NAMED_ENUMERATED_VALUE */
 
 
@@ -102,7 +102,7 @@ export const failure: InvokeProtectionError =
  * @constant
  * @type {number}
  */
-export const InvokeProtectionError_timeout: InvokeProtectionError =
+export const InvokeProtectionError_timeout: _enum_for_InvokeProtectionError.timeout =
     InvokeProtectionError.timeout; /* LONG_NAMED_ENUMERATED_VALUE */
 
 
@@ -111,18 +111,30 @@ export const InvokeProtectionError_timeout: InvokeProtectionError =
  * @constant
  * @type {number}
  */
-export const timeout: InvokeProtectionError =
+export const timeout: _enum_for_InvokeProtectionError.timeout =
     InvokeProtectionError.timeout; /* SHORT_NAMED_ENUMERATED_VALUE */
 
 
 
 
-export const _decode_InvokeProtectionError = $._decodeEnumerated;
+export function _decode_InvokeProtectionError(el: _Element): InvokeProtectionError {
+    const enumerated = $._decodeEnumerated(el);
+    switch (enumerated) {
+        case InvokeProtectionError.preempted: return InvokeProtectionError.preempted;
+        case InvokeProtectionError.failure: return InvokeProtectionError.failure;
+        case InvokeProtectionError.timeout: return InvokeProtectionError.timeout;
+        default:
+            throw new _ConstructionError(
+                'Invalid ENUMERATED value ' + enumerated + ' for InvokeProtectionError.',
+                el,
+            );
+    }
+}
 
 
 
 
-export const _encode_InvokeProtectionError = $._encodeEnumerated;
+export const _encode_InvokeProtectionError: $.ASN1Encoder<InvokeProtectionError> = $._encodeEnumerated as $.ASN1Encoder<InvokeProtectionError>;
 
 
 /* eslint-enable */

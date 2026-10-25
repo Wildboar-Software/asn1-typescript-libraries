@@ -1,16 +1,16 @@
 /* eslint-disable */
 import {
     ASN1ConstructionError as _ConstructionError,
-    ASN1Element as _Element,
+    type ASN1Element as _Element,
     ASN1TagClass as _TagClass
 } from "@wildboar/asn1";
 import * as $ from "@wildboar/asn1/functional";
-import { Credentials, _decode_Credentials, _encode_Credentials } from "../CCSDS-SLE-TRANSFER-SERVICE-COMMON-TYPES/Credentials.ta.mjs";
-import { AuthorityIdentifier, _decode_AuthorityIdentifier, _encode_AuthorityIdentifier } from "../CCSDS-SLE-TRANSFER-SERVICE-BIND-TYPES/AuthorityIdentifier.ta.mjs";
-import { PortId, _decode_PortId, _encode_PortId } from "../CCSDS-SLE-TRANSFER-SERVICE-BIND-TYPES/PortId.ta.mjs";
-import { ApplicationIdentifier, _decode_ApplicationIdentifier, _encode_ApplicationIdentifier } from "../CCSDS-SLE-TRANSFER-SERVICE-BIND-TYPES/ApplicationIdentifier.ta.mjs";
-import { VersionNumber, _decode_VersionNumber, _encode_VersionNumber } from "../CCSDS-SLE-TRANSFER-SERVICE-BIND-TYPES/VersionNumber.ta.mjs";
-import { ServiceInstanceIdentifier, _decode_ServiceInstanceIdentifier, _encode_ServiceInstanceIdentifier } from "../CCSDS-SLE-TRANSFER-SERVICE-SERVICE-INSTANCE-ID/ServiceInstanceIdentifier.ta.mjs";
+import { type Credentials, _decode_Credentials, _encode_Credentials } from "../CCSDS-SLE-TRANSFER-SERVICE-COMMON-TYPES/Credentials.ta.mjs";
+import { type AuthorityIdentifier, _decode_AuthorityIdentifier, _encode_AuthorityIdentifier } from "../CCSDS-SLE-TRANSFER-SERVICE-BIND-TYPES/AuthorityIdentifier.ta.mjs";
+import { type PortId, _decode_PortId, _encode_PortId } from "../CCSDS-SLE-TRANSFER-SERVICE-BIND-TYPES/PortId.ta.mjs";
+import { type ApplicationIdentifier, _decode_ApplicationIdentifier, _encode_ApplicationIdentifier } from "../CCSDS-SLE-TRANSFER-SERVICE-BIND-TYPES/ApplicationIdentifier.ta.mjs";
+import { type VersionNumber, _decode_VersionNumber, _encode_VersionNumber } from "../CCSDS-SLE-TRANSFER-SERVICE-BIND-TYPES/VersionNumber.ta.mjs";
+import { type ServiceInstanceIdentifier, _decode_ServiceInstanceIdentifier, _encode_ServiceInstanceIdentifier } from "../CCSDS-SLE-TRANSFER-SERVICE-SERVICE-INSTANCE-ID/ServiceInstanceIdentifier.ta.mjs";
 
 
 /**

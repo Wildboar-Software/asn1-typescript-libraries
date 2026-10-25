@@ -1,6 +1,6 @@
 /* eslint-disable */
 import {
-  OBJECT_IDENTIFIER,
+  type OBJECT_IDENTIFIER,
   ASN1Element as _Element,
   ASN1TagClass as _TagClass,
   ASN1Construction as _Construction,
@@ -42,7 +42,7 @@ export class Extension_Attribute {
    * @public
    * @readonly
    */
-  readonly extension_attribute_identifier: OBJECT_IDENTIFIER;
+  public readonly extension_attribute_identifier: OBJECT_IDENTIFIER;
   /**
    * @summary `extension_attribute`.
    * @description
@@ -52,7 +52,7 @@ export class Extension_Attribute {
    * @public
    * @readonly
    */
-  readonly extension_attribute: _Element;
+  public readonly extension_attribute: _Element;
 
   constructor(
     extension_attribute_identifier: OBJECT_IDENTIFIER,

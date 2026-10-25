@@ -1,12 +1,12 @@
 /* eslint-disable */
 import {
     ASN1ConstructionError as _ConstructionError,
-    ASN1Element as _Element,
+    type ASN1Element as _Element,
     ASN1TagClass as _TagClass
 } from "@wildboar/asn1";
 import * as $ from "@wildboar/asn1/functional";
-import { LCSCodewordString, _decode_LCSCodewordString, _encode_LCSCodewordString } from "../MAP-LCS-DataTypes/LCSCodewordString.ta.mjs";
-import { USSD_DataCodingScheme, _decode_USSD_DataCodingScheme, _encode_USSD_DataCodingScheme } from "../MAP-SS-DataTypes/USSD-DataCodingScheme.ta.mjs";
+import { type LCSCodewordString, _decode_LCSCodewordString, _encode_LCSCodewordString } from "../MAP-LCS-DataTypes/LCSCodewordString.ta.mjs";
+import { type USSD_DataCodingScheme, _decode_USSD_DataCodingScheme, _encode_USSD_DataCodingScheme } from "../MAP-SS-DataTypes/USSD-DataCodingScheme.ta.mjs";
 
 
 /**
@@ -29,34 +29,42 @@ import { USSD_DataCodingScheme, _decode_USSD_DataCodingScheme, _encode_USSD_Data
  */
 export
 class LCSCodeword {
+    /**
+     * @summary `dataCodingScheme`.
+     * @description
+     *
+     * USSD DCS.
+     *
+     * @public
+     * @readonly
+     */
+    public readonly dataCodingScheme: USSD_DataCodingScheme;
+    /**
+     * @summary `lcsCodewordString`.
+     * @description
+     *
+     * Codeword string, 1..20.
+     *
+     * @public
+     * @readonly
+     */
+    public readonly lcsCodewordString: LCSCodewordString;
+    /**
+     * @summary Extensions that are not recognized.
+     * @public
+     * @readonly
+     */
+    public readonly _unrecognizedExtensionsList: _Element[];
+
     constructor (
-        /**
-         * @summary `dataCodingScheme`.
-         * @description
-         *
-         * USSD DCS.
-         *
-         * @public
-         * @readonly
-         */
-        readonly dataCodingScheme: USSD_DataCodingScheme,
-        /**
-         * @summary `lcsCodewordString`.
-         * @description
-         *
-         * Codeword string, 1..20.
-         *
-         * @public
-         * @readonly
-         */
-        readonly lcsCodewordString: LCSCodewordString,
-        /**
-         * @summary Extensions that are not recognized.
-         * @public
-         * @readonly
-         */
-        readonly _unrecognizedExtensionsList: _Element[] = []
-    ) {}
+        dataCodingScheme: USSD_DataCodingScheme,
+        lcsCodewordString: LCSCodewordString,
+        _unrecognizedExtensionsList: _Element[] = []
+    ) {
+        this.dataCodingScheme = dataCodingScheme;
+        this.lcsCodewordString = lcsCodewordString;
+        this._unrecognizedExtensionsList = _unrecognizedExtensionsList;
+    }
 
     /**
      * @summary Restructures an object into a LCSCodeword

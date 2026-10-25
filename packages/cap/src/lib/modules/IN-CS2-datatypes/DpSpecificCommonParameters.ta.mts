@@ -1,7 +1,7 @@
 /* eslint-disable */
 import {
-    OPTIONAL,
-    ASN1Element as _Element,
+    type OPTIONAL,
+    type ASN1Element as _Element,
     ASN1TagClass as _TagClass,
     ASN1Construction as _Construction,
     ASN1UniversalType as _UniversalType,
@@ -12,27 +12,27 @@ import {
 } from "@wildboar/asn1";
 import * as $ from "@wildboar/asn1/functional";
 import { ServiceAddressInformation, _decode_ServiceAddressInformation, _encode_ServiceAddressInformation } from "../IN-CS2-datatypes/ServiceAddressInformation.ta.mjs";
-import { BearerCapability, _decode_BearerCapability, _encode_BearerCapability } from "../IN-CS2-datatypes/BearerCapability.ta.mjs";
-import { CalledPartyNumber, _decode_CalledPartyNumber, _encode_CalledPartyNumber } from "../IN-CS2-datatypes/CalledPartyNumber.ta.mjs";
-import { CallingPartyNumber, _decode_CallingPartyNumber, _encode_CallingPartyNumber } from "../IN-CS2-datatypes/CallingPartyNumber.ta.mjs";
-import { CallingPartysCategory, _decode_CallingPartysCategory, _encode_CallingPartysCategory } from "../IN-CS2-datatypes/CallingPartysCategory.ta.mjs";
-import { IPSSPCapabilities, _decode_IPSSPCapabilities, _encode_IPSSPCapabilities } from "../IN-CS2-datatypes/IPSSPCapabilities.ta.mjs";
-import { IPAvailable, _decode_IPAvailable, _encode_IPAvailable } from "../IN-CS2-datatypes/IPAvailable.ta.mjs";
-import { ISDNAccessRelatedInformation, _decode_ISDNAccessRelatedInformation, _encode_ISDNAccessRelatedInformation } from "../IN-CS2-datatypes/ISDNAccessRelatedInformation.ta.mjs";
+import { type BearerCapability, _decode_BearerCapability, _encode_BearerCapability } from "../IN-CS2-datatypes/BearerCapability.ta.mjs";
+import { type CalledPartyNumber, _decode_CalledPartyNumber, _encode_CalledPartyNumber } from "../IN-CS2-datatypes/CalledPartyNumber.ta.mjs";
+import { type CallingPartyNumber, _decode_CallingPartyNumber, _encode_CallingPartyNumber } from "../IN-CS2-datatypes/CallingPartyNumber.ta.mjs";
+import { type CallingPartysCategory, _decode_CallingPartysCategory, _encode_CallingPartysCategory } from "../IN-CS2-datatypes/CallingPartysCategory.ta.mjs";
+import { type IPSSPCapabilities, _decode_IPSSPCapabilities, _encode_IPSSPCapabilities } from "../IN-CS2-datatypes/IPSSPCapabilities.ta.mjs";
+import { type IPAvailable, _decode_IPAvailable, _encode_IPAvailable } from "../IN-CS2-datatypes/IPAvailable.ta.mjs";
+import { type ISDNAccessRelatedInformation, _decode_ISDNAccessRelatedInformation, _encode_ISDNAccessRelatedInformation } from "../IN-CS2-datatypes/ISDNAccessRelatedInformation.ta.mjs";
 import { CGEncountered, _enum_for_CGEncountered, _decode_CGEncountered, _encode_CGEncountered } from "../IN-CS2-datatypes/CGEncountered.ta.mjs";
-import { LocationNumber, _decode_LocationNumber, _encode_LocationNumber } from "../IN-CS2-datatypes/LocationNumber.ta.mjs";
-import { ServiceProfileIdentifier, _decode_ServiceProfileIdentifier, _encode_ServiceProfileIdentifier } from "../IN-CS2-datatypes/ServiceProfileIdentifier.ta.mjs";
+import { type LocationNumber, _decode_LocationNumber, _encode_LocationNumber } from "../IN-CS2-datatypes/LocationNumber.ta.mjs";
+import { type ServiceProfileIdentifier, _decode_ServiceProfileIdentifier, _encode_ServiceProfileIdentifier } from "../IN-CS2-datatypes/ServiceProfileIdentifier.ta.mjs";
 import { TerminalType, _enum_for_TerminalType, _decode_TerminalType, _encode_TerminalType } from "../IN-CS2-datatypes/TerminalType.ta.mjs";
 import { ExtensionField, _decode_ExtensionField, _encode_ExtensionField } from "../IN-CS2-datatypes/ExtensionField.ta.mjs";
-import { ChargeNumber, _decode_ChargeNumber, _encode_ChargeNumber } from "../IN-CS2-datatypes/ChargeNumber.ta.mjs";
-import { ServingAreaID, _decode_ServingAreaID, _encode_ServingAreaID } from "../IN-CS2-datatypes/ServingAreaID.ta.mjs";
-import { ServiceInteractionIndicators, _decode_ServiceInteractionIndicators, _encode_ServiceInteractionIndicators } from "../IN-CS2-datatypes/ServiceInteractionIndicators.ta.mjs";
-import { INServiceCompatibilityIndication, _decode_INServiceCompatibilityIndication, _encode_INServiceCompatibilityIndication } from "../IN-CS2-datatypes/INServiceCompatibilityIndication.ta.mjs";
+import { type ChargeNumber, _decode_ChargeNumber, _encode_ChargeNumber } from "../IN-CS2-datatypes/ChargeNumber.ta.mjs";
+import { type ServingAreaID, _decode_ServingAreaID, _encode_ServingAreaID } from "../IN-CS2-datatypes/ServingAreaID.ta.mjs";
+import { type ServiceInteractionIndicators, _decode_ServiceInteractionIndicators, _encode_ServiceInteractionIndicators } from "../IN-CS2-datatypes/ServiceInteractionIndicators.ta.mjs";
+import { type INServiceCompatibilityIndication, _decode_INServiceCompatibilityIndication, _encode_INServiceCompatibilityIndication } from "../IN-CS2-datatypes/INServiceCompatibilityIndication.ta.mjs";
 import { ServiceInteractionIndicatorsTwo, _decode_ServiceInteractionIndicatorsTwo, _encode_ServiceInteractionIndicatorsTwo } from "../IN-CS2-datatypes/ServiceInteractionIndicatorsTwo.ta.mjs";
-import { USIServiceIndicator, _decode_USIServiceIndicator, _encode_USIServiceIndicator } from "../IN-CS2-datatypes/USIServiceIndicator.ta.mjs";
-import { USIInformation, _decode_USIInformation, _encode_USIInformation } from "../IN-CS2-datatypes/USIInformation.ta.mjs";
-import { ForwardGVNS, _decode_ForwardGVNS, _encode_ForwardGVNS } from "../IN-CS2-datatypes/ForwardGVNS.ta.mjs";
-import { CSAID, _decode_CSAID, _encode_CSAID } from "../IN-CS2-datatypes/CSAID.ta.mjs";
+import { type USIServiceIndicator, _decode_USIServiceIndicator, _encode_USIServiceIndicator } from "../IN-CS2-datatypes/USIServiceIndicator.ta.mjs";
+import { type USIInformation, _decode_USIInformation, _encode_USIInformation } from "../IN-CS2-datatypes/USIInformation.ta.mjs";
+import { type ForwardGVNS, _decode_ForwardGVNS, _encode_ForwardGVNS } from "../IN-CS2-datatypes/ForwardGVNS.ta.mjs";
+import { type CSAID, _decode_CSAID, _encode_CSAID } from "../IN-CS2-datatypes/CSAID.ta.mjs";
 
 
 /**
@@ -78,146 +78,194 @@ import { CSAID, _decode_CSAID, _encode_CSAID } from "../IN-CS2-datatypes/CSAID.t
  */
 export
 class DpSpecificCommonParameters {
+    /**
+     * @summary `serviceAddressInformation`.
+     * @public
+     * @readonly
+     */
+    public readonly serviceAddressInformation: ServiceAddressInformation;
+    /**
+     * @summary `bearerCapability`.
+     * @public
+     * @readonly
+     */
+    public readonly bearerCapability?: OPTIONAL<BearerCapability>;
+    /**
+     * @summary `calledPartyNumber`.
+     * @public
+     * @readonly
+     */
+    public readonly calledPartyNumber?: OPTIONAL<CalledPartyNumber>;
+    /**
+     * @summary `callingPartyNumber`.
+     * @public
+     * @readonly
+     */
+    public readonly callingPartyNumber?: OPTIONAL<CallingPartyNumber>;
+    /**
+     * @summary `callingPartysCategory`.
+     * @public
+     * @readonly
+     */
+    public readonly callingPartysCategory?: OPTIONAL<CallingPartysCategory>;
+    /**
+     * @summary `iPSSPCapabilities`.
+     * @public
+     * @readonly
+     */
+    public readonly iPSSPCapabilities?: OPTIONAL<IPSSPCapabilities>;
+    /**
+     * @summary `iPAvailable`.
+     * @public
+     * @readonly
+     */
+    public readonly iPAvailable?: OPTIONAL<IPAvailable>;
+    /**
+     * @summary `iSDNAccessRelatedInformation`.
+     * @public
+     * @readonly
+     */
+    public readonly iSDNAccessRelatedInformation?: OPTIONAL<ISDNAccessRelatedInformation>;
+    /**
+     * @summary `cGEncountered`.
+     * @public
+     * @readonly
+     */
+    public readonly cGEncountered?: OPTIONAL<CGEncountered>;
+    /**
+     * @summary `locationNumber`.
+     * @public
+     * @readonly
+     */
+    public readonly locationNumber?: OPTIONAL<LocationNumber>;
+    /**
+     * @summary `serviceProfileIdentifier`.
+     * @public
+     * @readonly
+     */
+    public readonly serviceProfileIdentifier?: OPTIONAL<ServiceProfileIdentifier>;
+    /**
+     * @summary `terminalType`.
+     * @public
+     * @readonly
+     */
+    public readonly terminalType?: OPTIONAL<TerminalType>;
+    /**
+     * @summary `extensions`.
+     * @public
+     * @readonly
+     */
+    public readonly extensions?: OPTIONAL<ExtensionField[]>;
+    /**
+     * @summary `chargeNumber`.
+     * @public
+     * @readonly
+     */
+    public readonly chargeNumber?: OPTIONAL<ChargeNumber>;
+    /**
+     * @summary `servingAreaID`.
+     * @public
+     * @readonly
+     */
+    public readonly servingAreaID?: OPTIONAL<ServingAreaID>;
+    /**
+     * @summary `serviceInteractionIndicators`.
+     * @public
+     * @readonly
+     */
+    public readonly serviceInteractionIndicators?: OPTIONAL<ServiceInteractionIndicators>;
+    /**
+     * @summary `iNServiceCompatibilityIndication`.
+     * @public
+     * @readonly
+     */
+    public readonly iNServiceCompatibilityIndication?: OPTIONAL<INServiceCompatibilityIndication>;
+    /**
+     * @summary `serviceInteractionIndicatorsTwo`.
+     * @public
+     * @readonly
+     */
+    public readonly serviceInteractionIndicatorsTwo?: OPTIONAL<ServiceInteractionIndicatorsTwo>;
+    /**
+     * @summary `uSIServiceIndicator`.
+     * @public
+     * @readonly
+     */
+    public readonly uSIServiceIndicator?: OPTIONAL<USIServiceIndicator>;
+    /**
+     * @summary `uSIInformation`.
+     * @public
+     * @readonly
+     */
+    public readonly uSIInformation?: OPTIONAL<USIInformation>;
+    /**
+     * @summary `forwardGVNS`.
+     * @public
+     * @readonly
+     */
+    public readonly forwardGVNS?: OPTIONAL<ForwardGVNS>;
+    /**
+     * @summary `createdCallSegmentAssociation`.
+     * @public
+     * @readonly
+     */
+    public readonly createdCallSegmentAssociation?: OPTIONAL<CSAID>;
+    /**
+     * @summary Extensions that are not recognized.
+     * @public
+     * @readonly
+     */
+    public readonly _unrecognizedExtensionsList: _Element[];
+
     constructor (
-        /**
-         * @summary `serviceAddressInformation`.
-         * @public
-         * @readonly
-         */
-        readonly serviceAddressInformation: ServiceAddressInformation,
-        /**
-         * @summary `bearerCapability`.
-         * @public
-         * @readonly
-         */
-        readonly bearerCapability?: OPTIONAL<BearerCapability>,
-        /**
-         * @summary `calledPartyNumber`.
-         * @public
-         * @readonly
-         */
-        readonly calledPartyNumber?: OPTIONAL<CalledPartyNumber>,
-        /**
-         * @summary `callingPartyNumber`.
-         * @public
-         * @readonly
-         */
-        readonly callingPartyNumber?: OPTIONAL<CallingPartyNumber>,
-        /**
-         * @summary `callingPartysCategory`.
-         * @public
-         * @readonly
-         */
-        readonly callingPartysCategory?: OPTIONAL<CallingPartysCategory>,
-        /**
-         * @summary `iPSSPCapabilities`.
-         * @public
-         * @readonly
-         */
-        readonly iPSSPCapabilities?: OPTIONAL<IPSSPCapabilities>,
-        /**
-         * @summary `iPAvailable`.
-         * @public
-         * @readonly
-         */
-        readonly iPAvailable?: OPTIONAL<IPAvailable>,
-        /**
-         * @summary `iSDNAccessRelatedInformation`.
-         * @public
-         * @readonly
-         */
-        readonly iSDNAccessRelatedInformation?: OPTIONAL<ISDNAccessRelatedInformation>,
-        /**
-         * @summary `cGEncountered`.
-         * @public
-         * @readonly
-         */
-        readonly cGEncountered?: OPTIONAL<CGEncountered>,
-        /**
-         * @summary `locationNumber`.
-         * @public
-         * @readonly
-         */
-        readonly locationNumber?: OPTIONAL<LocationNumber>,
-        /**
-         * @summary `serviceProfileIdentifier`.
-         * @public
-         * @readonly
-         */
-        readonly serviceProfileIdentifier?: OPTIONAL<ServiceProfileIdentifier>,
-        /**
-         * @summary `terminalType`.
-         * @public
-         * @readonly
-         */
-        readonly terminalType?: OPTIONAL<TerminalType>,
-        /**
-         * @summary `extensions`.
-         * @public
-         * @readonly
-         */
-        readonly extensions?: OPTIONAL<ExtensionField[]>,
-        /**
-         * @summary `chargeNumber`.
-         * @public
-         * @readonly
-         */
-        readonly chargeNumber?: OPTIONAL<ChargeNumber>,
-        /**
-         * @summary `servingAreaID`.
-         * @public
-         * @readonly
-         */
-        readonly servingAreaID?: OPTIONAL<ServingAreaID>,
-        /**
-         * @summary `serviceInteractionIndicators`.
-         * @public
-         * @readonly
-         */
-        readonly serviceInteractionIndicators?: OPTIONAL<ServiceInteractionIndicators>,
-        /**
-         * @summary `iNServiceCompatibilityIndication`.
-         * @public
-         * @readonly
-         */
-        readonly iNServiceCompatibilityIndication?: OPTIONAL<INServiceCompatibilityIndication>,
-        /**
-         * @summary `serviceInteractionIndicatorsTwo`.
-         * @public
-         * @readonly
-         */
-        readonly serviceInteractionIndicatorsTwo?: OPTIONAL<ServiceInteractionIndicatorsTwo>,
-        /**
-         * @summary `uSIServiceIndicator`.
-         * @public
-         * @readonly
-         */
-        readonly uSIServiceIndicator?: OPTIONAL<USIServiceIndicator>,
-        /**
-         * @summary `uSIInformation`.
-         * @public
-         * @readonly
-         */
-        readonly uSIInformation?: OPTIONAL<USIInformation>,
-        /**
-         * @summary `forwardGVNS`.
-         * @public
-         * @readonly
-         */
-        readonly forwardGVNS?: OPTIONAL<ForwardGVNS>,
-        /**
-         * @summary `createdCallSegmentAssociation`.
-         * @public
-         * @readonly
-         */
-        readonly createdCallSegmentAssociation?: OPTIONAL<CSAID>,
-        /**
-         * @summary Extensions that are not recognized.
-         * @public
-         * @readonly
-         */
-        readonly _unrecognizedExtensionsList: _Element[] = []
-    ) {}
+        serviceAddressInformation: ServiceAddressInformation,
+        bearerCapability?: OPTIONAL<BearerCapability>,
+        calledPartyNumber?: OPTIONAL<CalledPartyNumber>,
+        callingPartyNumber?: OPTIONAL<CallingPartyNumber>,
+        callingPartysCategory?: OPTIONAL<CallingPartysCategory>,
+        iPSSPCapabilities?: OPTIONAL<IPSSPCapabilities>,
+        iPAvailable?: OPTIONAL<IPAvailable>,
+        iSDNAccessRelatedInformation?: OPTIONAL<ISDNAccessRelatedInformation>,
+        cGEncountered?: OPTIONAL<CGEncountered>,
+        locationNumber?: OPTIONAL<LocationNumber>,
+        serviceProfileIdentifier?: OPTIONAL<ServiceProfileIdentifier>,
+        terminalType?: OPTIONAL<TerminalType>,
+        extensions?: OPTIONAL<ExtensionField[]>,
+        chargeNumber?: OPTIONAL<ChargeNumber>,
+        servingAreaID?: OPTIONAL<ServingAreaID>,
+        serviceInteractionIndicators?: OPTIONAL<ServiceInteractionIndicators>,
+        iNServiceCompatibilityIndication?: OPTIONAL<INServiceCompatibilityIndication>,
+        serviceInteractionIndicatorsTwo?: OPTIONAL<ServiceInteractionIndicatorsTwo>,
+        uSIServiceIndicator?: OPTIONAL<USIServiceIndicator>,
+        uSIInformation?: OPTIONAL<USIInformation>,
+        forwardGVNS?: OPTIONAL<ForwardGVNS>,
+        createdCallSegmentAssociation?: OPTIONAL<CSAID>,
+        _unrecognizedExtensionsList: _Element[] = []
+    ) {
+        this.serviceAddressInformation = serviceAddressInformation;
+        this.bearerCapability = bearerCapability;
+        this.calledPartyNumber = calledPartyNumber;
+        this.callingPartyNumber = callingPartyNumber;
+        this.callingPartysCategory = callingPartysCategory;
+        this.iPSSPCapabilities = iPSSPCapabilities;
+        this.iPAvailable = iPAvailable;
+        this.iSDNAccessRelatedInformation = iSDNAccessRelatedInformation;
+        this.cGEncountered = cGEncountered;
+        this.locationNumber = locationNumber;
+        this.serviceProfileIdentifier = serviceProfileIdentifier;
+        this.terminalType = terminalType;
+        this.extensions = extensions;
+        this.chargeNumber = chargeNumber;
+        this.servingAreaID = servingAreaID;
+        this.serviceInteractionIndicators = serviceInteractionIndicators;
+        this.iNServiceCompatibilityIndication = iNServiceCompatibilityIndication;
+        this.serviceInteractionIndicatorsTwo = serviceInteractionIndicatorsTwo;
+        this.uSIServiceIndicator = uSIServiceIndicator;
+        this.uSIInformation = uSIInformation;
+        this.forwardGVNS = forwardGVNS;
+        this.createdCallSegmentAssociation = createdCallSegmentAssociation;
+        this._unrecognizedExtensionsList = _unrecognizedExtensionsList;
+    }
 
     /**
      * @summary Restructures an object into a DpSpecificCommonParameters
@@ -241,13 +289,13 @@ class DpSpecificCommonParameters {
          * @static
          */
 
-    public static _enum_for_cGEncountered = _enum_for_CGEncountered;        /**
+    public static _enum_for_cGEncountered: typeof _enum_for_CGEncountered = _enum_for_CGEncountered;        /**
          * @summary The enum used as the type of the component `terminalType`
          * @public
          * @static
          */
 
-    public static _enum_for_terminalType = _enum_for_TerminalType;
+    public static _enum_for_terminalType: typeof _enum_for_TerminalType = _enum_for_TerminalType;
 }
 
 /**

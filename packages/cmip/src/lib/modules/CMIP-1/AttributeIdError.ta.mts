@@ -11,13 +11,13 @@ import {
 } from '@wildboar/asn1';
 import * as $ from '@wildboar/asn1/functional';
 import {
-  AttributeIdError_errorStatus,
+  type AttributeIdError_errorStatus,
   _enum_for_AttributeIdError_errorStatus,
   _decode_AttributeIdError_errorStatus,
   _encode_AttributeIdError_errorStatus,
 } from '../CMIP-1/AttributeIdError-errorStatus.ta.mjs';
 import {
-  AttributeId,
+  type AttributeId,
   _decode_AttributeId,
   _encode_AttributeId,
 } from '../CMIP-1/AttributeId.ta.mjs';
@@ -53,7 +53,7 @@ export class AttributeIdError {
    * @public
    * @readonly
    */
-  readonly errorStatus: AttributeIdError_errorStatus;
+  public readonly errorStatus: AttributeIdError_errorStatus;
   /**
    * @summary `attributeId`.
    * @description
@@ -63,13 +63,13 @@ export class AttributeIdError {
    * @public
    * @readonly
    */
-  readonly attributeId: AttributeId;
+  public readonly attributeId: AttributeId;
   /**
    * @summary Extensions that are not recognized.
    * @public
    * @readonly
    */
-  readonly _unrecognizedExtensionsList: _Element[];
+  public readonly _unrecognizedExtensionsList: _Element[];
 
   constructor(
     errorStatus: AttributeIdError_errorStatus,
@@ -109,7 +109,7 @@ export class AttributeIdError {
    * @static
    */
 
-  public static _enum_for_errorStatus = _enum_for_AttributeIdError_errorStatus;
+  public static _enum_for_errorStatus: typeof _enum_for_AttributeIdError_errorStatus = _enum_for_AttributeIdError_errorStatus;
 }
 
 

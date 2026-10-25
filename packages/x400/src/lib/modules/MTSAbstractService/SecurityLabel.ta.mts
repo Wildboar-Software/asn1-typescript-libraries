@@ -1,7 +1,7 @@
 /* eslint-disable */
 import {
-    OPTIONAL,
-    ASN1Element as _Element,
+    type OPTIONAL,
+    type ASN1Element as _Element,
     ASN1TagClass as _TagClass,
     ASN1Construction as _Construction,
     ASN1UniversalType as _UniversalType,
@@ -12,22 +12,22 @@ import {
 } from '@wildboar/asn1';
 import * as $ from '@wildboar/asn1/functional';
 import {
-    SecurityPolicyIdentifier,
+    type SecurityPolicyIdentifier,
     _decode_SecurityPolicyIdentifier,
     _encode_SecurityPolicyIdentifier,
 } from '../MTSAbstractService/SecurityPolicyIdentifier.ta.mjs';
 import {
-    SecurityClassification,
+    type SecurityClassification,
     _decode_SecurityClassification,
     _encode_SecurityClassification,
 } from '../MTSAbstractService/SecurityClassification.ta.mjs';
 import {
-    PrivacyMark,
+    type PrivacyMark,
     _decode_PrivacyMark,
     _encode_PrivacyMark,
 } from '../MTSAbstractService/PrivacyMark.ta.mjs';
 import {
-    SecurityCategories,
+    type SecurityCategories,
     _decode_SecurityCategories,
     _encode_SecurityCategories,
 } from '../MTSAbstractService/SecurityCategories.ta.mjs';
@@ -52,32 +52,42 @@ import {
  *
  */
 export class SecurityLabel {
+    /**
+     * @summary `security_policy_identifier`.
+     * @public
+     * @readonly
+     */
+    public readonly security_policy_identifier?: OPTIONAL<SecurityPolicyIdentifier>;
+    /**
+     * @summary `security_classification`.
+     * @public
+     * @readonly
+     */
+    public readonly security_classification?: OPTIONAL<SecurityClassification>;
+    /**
+     * @summary `privacy_mark`.
+     * @public
+     * @readonly
+     */
+    public readonly privacy_mark?: OPTIONAL<PrivacyMark>;
+    /**
+     * @summary `security_categories`.
+     * @public
+     * @readonly
+     */
+    public readonly security_categories?: OPTIONAL<SecurityCategories>;
+
     constructor(
-        /**
-         * @summary `security_policy_identifier`.
-         * @public
-         * @readonly
-         */
-        readonly security_policy_identifier?: OPTIONAL<SecurityPolicyIdentifier>,
-        /**
-         * @summary `security_classification`.
-         * @public
-         * @readonly
-         */
-        readonly security_classification?: OPTIONAL<SecurityClassification>,
-        /**
-         * @summary `privacy_mark`.
-         * @public
-         * @readonly
-         */
-        readonly privacy_mark?: OPTIONAL<PrivacyMark>,
-        /**
-         * @summary `security_categories`.
-         * @public
-         * @readonly
-         */
-        readonly security_categories?: OPTIONAL<SecurityCategories>
-    ) {}
+        security_policy_identifier?: OPTIONAL<SecurityPolicyIdentifier>,
+        security_classification?: OPTIONAL<SecurityClassification>,
+        privacy_mark?: OPTIONAL<PrivacyMark>,
+        security_categories?: OPTIONAL<SecurityCategories>
+    ) {
+        this.security_policy_identifier = security_policy_identifier;
+        this.security_classification = security_classification;
+        this.privacy_mark = privacy_mark;
+        this.security_categories = security_categories;
+    }
 
     /**
      * @summary Restructures an object into a SecurityLabel

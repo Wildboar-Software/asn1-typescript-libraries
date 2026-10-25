@@ -1,6 +1,6 @@
 /* eslint-disable */
 import {
-    INTEGER
+    type INTEGER
 } from "@wildboar/asn1";
 import * as $ from "@wildboar/asn1/functional";
 
@@ -33,7 +33,7 @@ type RoamingRecord_jIPQuryStatus = INTEGER;
  * @type {number}
  */
 export
-const RoamingRecord_jIPQuryStatus_successfulQuery: RoamingRecord_jIPQuryStatus = 1; /* LONG_NAMED_INTEGER_VALUE */
+const RoamingRecord_jIPQuryStatus_successfulQuery: 1 = 1 satisfies RoamingRecord_jIPQuryStatus; /* LONG_NAMED_INTEGER_VALUE */
 
 /**
  * @summary RoamingRecord_jIPQuryStatus_successfulQuery
@@ -41,7 +41,7 @@ const RoamingRecord_jIPQuryStatus_successfulQuery: RoamingRecord_jIPQuryStatus =
  * @type {number}
  */
 export
-const successfulQuery: RoamingRecord_jIPQuryStatus = RoamingRecord_jIPQuryStatus_successfulQuery; /* SHORT_NAMED_INTEGER_VALUE */
+const successfulQuery: 1 = RoamingRecord_jIPQuryStatus_successfulQuery; /* SHORT_NAMED_INTEGER_VALUE */
 
 /**
  * @summary RoamingRecord_jIPQuryStatus_noQueryResponseMsg
@@ -49,7 +49,7 @@ const successfulQuery: RoamingRecord_jIPQuryStatus = RoamingRecord_jIPQuryStatus
  * @type {number}
  */
 export
-const RoamingRecord_jIPQuryStatus_noQueryResponseMsg: RoamingRecord_jIPQuryStatus = 2; /* LONG_NAMED_INTEGER_VALUE */
+const RoamingRecord_jIPQuryStatus_noQueryResponseMsg: 2 = 2 satisfies RoamingRecord_jIPQuryStatus; /* LONG_NAMED_INTEGER_VALUE */
 
 /**
  * @summary RoamingRecord_jIPQuryStatus_noQueryResponseMsg
@@ -57,7 +57,7 @@ const RoamingRecord_jIPQuryStatus_noQueryResponseMsg: RoamingRecord_jIPQuryStatu
  * @type {number}
  */
 export
-const noQueryResponseMsg: RoamingRecord_jIPQuryStatus = RoamingRecord_jIPQuryStatus_noQueryResponseMsg; /* SHORT_NAMED_INTEGER_VALUE */
+const noQueryResponseMsg: 2 = RoamingRecord_jIPQuryStatus_noQueryResponseMsg; /* SHORT_NAMED_INTEGER_VALUE */
 
 /**
  * @summary RoamingRecord_jIPQuryStatus_queryProtocolErr
@@ -65,7 +65,7 @@ const noQueryResponseMsg: RoamingRecord_jIPQuryStatus = RoamingRecord_jIPQurySta
  * @type {number}
  */
 export
-const RoamingRecord_jIPQuryStatus_queryProtocolErr: RoamingRecord_jIPQuryStatus = 4; /* LONG_NAMED_INTEGER_VALUE */
+const RoamingRecord_jIPQuryStatus_queryProtocolErr: 4 = 4 satisfies RoamingRecord_jIPQuryStatus; /* LONG_NAMED_INTEGER_VALUE */
 
 /**
  * @summary RoamingRecord_jIPQuryStatus_queryProtocolErr
@@ -73,7 +73,7 @@ const RoamingRecord_jIPQuryStatus_queryProtocolErr: RoamingRecord_jIPQuryStatus 
  * @type {number}
  */
 export
-const queryProtocolErr: RoamingRecord_jIPQuryStatus = RoamingRecord_jIPQuryStatus_queryProtocolErr; /* SHORT_NAMED_INTEGER_VALUE */
+const queryProtocolErr: 4 = RoamingRecord_jIPQuryStatus_queryProtocolErr; /* SHORT_NAMED_INTEGER_VALUE */
 
 /**
  * @summary RoamingRecord_jIPQuryStatus_queryResponseDataErr
@@ -81,7 +81,7 @@ const queryProtocolErr: RoamingRecord_jIPQuryStatus = RoamingRecord_jIPQuryStatu
  * @type {number}
  */
 export
-const RoamingRecord_jIPQuryStatus_queryResponseDataErr: RoamingRecord_jIPQuryStatus = 5; /* LONG_NAMED_INTEGER_VALUE */
+const RoamingRecord_jIPQuryStatus_queryResponseDataErr: 5 = 5 satisfies RoamingRecord_jIPQuryStatus; /* LONG_NAMED_INTEGER_VALUE */
 
 /**
  * @summary RoamingRecord_jIPQuryStatus_queryResponseDataErr
@@ -89,7 +89,7 @@ const RoamingRecord_jIPQuryStatus_queryResponseDataErr: RoamingRecord_jIPQurySta
  * @type {number}
  */
 export
-const queryResponseDataErr: RoamingRecord_jIPQuryStatus = RoamingRecord_jIPQuryStatus_queryResponseDataErr; /* SHORT_NAMED_INTEGER_VALUE */
+const queryResponseDataErr: 5 = RoamingRecord_jIPQuryStatus_queryResponseDataErr; /* SHORT_NAMED_INTEGER_VALUE */
 
 /**
  * @summary RoamingRecord_jIPQuryStatus_queryRejected
@@ -97,7 +97,7 @@ const queryResponseDataErr: RoamingRecord_jIPQuryStatus = RoamingRecord_jIPQuryS
  * @type {number}
  */
 export
-const RoamingRecord_jIPQuryStatus_queryRejected: RoamingRecord_jIPQuryStatus = 6; /* LONG_NAMED_INTEGER_VALUE */
+const RoamingRecord_jIPQuryStatus_queryRejected: 6 = 6 satisfies RoamingRecord_jIPQuryStatus; /* LONG_NAMED_INTEGER_VALUE */
 
 /**
  * @summary RoamingRecord_jIPQuryStatus_queryRejected
@@ -105,7 +105,7 @@ const RoamingRecord_jIPQuryStatus_queryRejected: RoamingRecord_jIPQuryStatus = 6
  * @type {number}
  */
 export
-const queryRejected: RoamingRecord_jIPQuryStatus = RoamingRecord_jIPQuryStatus_queryRejected; /* SHORT_NAMED_INTEGER_VALUE */
+const queryRejected: 6 = RoamingRecord_jIPQuryStatus_queryRejected; /* SHORT_NAMED_INTEGER_VALUE */
 
 /**
  * @summary RoamingRecord_jIPQuryStatus_queryNotPerformed
@@ -113,7 +113,7 @@ const queryRejected: RoamingRecord_jIPQuryStatus = RoamingRecord_jIPQuryStatus_q
  * @type {number}
  */
 export
-const RoamingRecord_jIPQuryStatus_queryNotPerformed: RoamingRecord_jIPQuryStatus = 9; /* LONG_NAMED_INTEGER_VALUE */
+const RoamingRecord_jIPQuryStatus_queryNotPerformed: 9 = 9 satisfies RoamingRecord_jIPQuryStatus; /* LONG_NAMED_INTEGER_VALUE */
 
 /**
  * @summary RoamingRecord_jIPQuryStatus_queryNotPerformed
@@ -121,7 +121,7 @@ const RoamingRecord_jIPQuryStatus_queryNotPerformed: RoamingRecord_jIPQuryStatus
  * @type {number}
  */
 export
-const queryNotPerformed: RoamingRecord_jIPQuryStatus = RoamingRecord_jIPQuryStatus_queryNotPerformed; /* SHORT_NAMED_INTEGER_VALUE */
+const queryNotPerformed: 9 = RoamingRecord_jIPQuryStatus_queryNotPerformed; /* SHORT_NAMED_INTEGER_VALUE */
 
 /**
  * @summary RoamingRecord_jIPQuryStatus_queryUnsuccessful
@@ -129,7 +129,7 @@ const queryNotPerformed: RoamingRecord_jIPQuryStatus = RoamingRecord_jIPQuryStat
  * @type {number}
  */
 export
-const RoamingRecord_jIPQuryStatus_queryUnsuccessful: RoamingRecord_jIPQuryStatus = 99; /* LONG_NAMED_INTEGER_VALUE */
+const RoamingRecord_jIPQuryStatus_queryUnsuccessful: 99 = 99 satisfies RoamingRecord_jIPQuryStatus; /* LONG_NAMED_INTEGER_VALUE */
 
 /**
  * @summary RoamingRecord_jIPQuryStatus_queryUnsuccessful
@@ -137,7 +137,7 @@ const RoamingRecord_jIPQuryStatus_queryUnsuccessful: RoamingRecord_jIPQuryStatus
  * @type {number}
  */
 export
-const queryUnsuccessful: RoamingRecord_jIPQuryStatus = RoamingRecord_jIPQuryStatus_queryUnsuccessful; /* SHORT_NAMED_INTEGER_VALUE */
+const queryUnsuccessful: 99 = RoamingRecord_jIPQuryStatus_queryUnsuccessful; /* SHORT_NAMED_INTEGER_VALUE */
 
 export
 const _decode_RoamingRecord_jIPQuryStatus: $.ASN1Decoder<RoamingRecord_jIPQuryStatus> = $._decodeInteger;

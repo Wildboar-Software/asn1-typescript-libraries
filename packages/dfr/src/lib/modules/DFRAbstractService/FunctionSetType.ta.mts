@@ -1,6 +1,6 @@
 /* eslint-disable */
 import {
-    ASN1Element as _Element,
+    type ASN1Element as _Element,
     ASN1TagClass as _TagClass,
     ASN1Construction as _Construction,
     ASN1UniversalType as _UniversalType,
@@ -87,7 +87,7 @@ type FunctionSetType = _enum_for_FunctionSetType;
  * @enum {number}
  */
 export
-const FunctionSetType = _enum_for_FunctionSetType;
+const FunctionSetType: typeof _enum_for_FunctionSetType = _enum_for_FunctionSetType;
 
 /**
  * @summary FunctionSetType_flat_store
@@ -98,7 +98,7 @@ const FunctionSetType = _enum_for_FunctionSetType;
  * @type {number}
  */
 export
-const FunctionSetType_flat_store: FunctionSetType = FunctionSetType.flat_store; /* LONG_NAMED_ENUMERATED_VALUE */
+const FunctionSetType_flat_store: _enum_for_FunctionSetType.flat_store = FunctionSetType.flat_store; /* LONG_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary flat_store
@@ -109,7 +109,7 @@ const FunctionSetType_flat_store: FunctionSetType = FunctionSetType.flat_store; 
  * @type {number}
  */
 export
-const flat_store: FunctionSetType = FunctionSetType.flat_store; /* SHORT_NAMED_ENUMERATED_VALUE */
+const flat_store: _enum_for_FunctionSetType.flat_store = FunctionSetType.flat_store; /* SHORT_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary FunctionSetType_pre_defined_store
@@ -120,7 +120,7 @@ const flat_store: FunctionSetType = FunctionSetType.flat_store; /* SHORT_NAMED_E
  * @type {number}
  */
 export
-const FunctionSetType_pre_defined_store: FunctionSetType = FunctionSetType.pre_defined_store; /* LONG_NAMED_ENUMERATED_VALUE */
+const FunctionSetType_pre_defined_store: _enum_for_FunctionSetType.pre_defined_store = FunctionSetType.pre_defined_store; /* LONG_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary pre_defined_store
@@ -131,7 +131,7 @@ const FunctionSetType_pre_defined_store: FunctionSetType = FunctionSetType.pre_d
  * @type {number}
  */
 export
-const pre_defined_store: FunctionSetType = FunctionSetType.pre_defined_store; /* SHORT_NAMED_ENUMERATED_VALUE */
+const pre_defined_store: _enum_for_FunctionSetType.pre_defined_store = FunctionSetType.pre_defined_store; /* SHORT_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary FunctionSetType_full_set
@@ -142,7 +142,7 @@ const pre_defined_store: FunctionSetType = FunctionSetType.pre_defined_store; /*
  * @type {number}
  */
 export
-const FunctionSetType_full_set: FunctionSetType = FunctionSetType.full_set; /* LONG_NAMED_ENUMERATED_VALUE */
+const FunctionSetType_full_set: _enum_for_FunctionSetType.full_set = FunctionSetType.full_set; /* LONG_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary full_set
@@ -153,9 +153,21 @@ const FunctionSetType_full_set: FunctionSetType = FunctionSetType.full_set; /* L
  * @type {number}
  */
 export
-const full_set: FunctionSetType = FunctionSetType.full_set; /* SHORT_NAMED_ENUMERATED_VALUE */
-export const _decode_FunctionSetType = $._decodeEnumerated;
-export const _encode_FunctionSetType = $._encodeEnumerated;
+const full_set: _enum_for_FunctionSetType.full_set = FunctionSetType.full_set; /* SHORT_NAMED_ENUMERATED_VALUE */
+export function _decode_FunctionSetType(el: _Element): FunctionSetType {
+    const enumerated = $._decodeEnumerated(el);
+    switch (enumerated) {
+        case FunctionSetType.flat_store: return FunctionSetType.flat_store;
+        case FunctionSetType.pre_defined_store: return FunctionSetType.pre_defined_store;
+        case FunctionSetType.full_set: return FunctionSetType.full_set;
+        default:
+            throw new _ConstructionError(
+                "Invalid ENUMERATED value " + enumerated + " for FunctionSetType.",
+                el,
+            );
+    }
+}
+export const _encode_FunctionSetType: $.ASN1Encoder<FunctionSetType> = $._encodeEnumerated as $.ASN1Encoder<FunctionSetType>;
 
 
 /* eslint-enable */

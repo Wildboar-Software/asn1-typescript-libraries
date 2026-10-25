@@ -1,7 +1,7 @@
 /* eslint-disable */
 
 import * as $ from "@wildboar/asn1/functional";
-import { ENUMERATED, ASN1Element as _Element } from "@wildboar/asn1";
+import { type ENUMERATED, ASN1Element as _Element } from "@wildboar/asn1";
 
 
 
@@ -78,7 +78,7 @@ type DetectionAction = _enum_for_DetectionAction;
  * @enum {number}
  */
 export
-const DetectionAction = _enum_for_DetectionAction;
+const DetectionAction: typeof _enum_for_DetectionAction = _enum_for_DetectionAction;
 
 /**
  * @summary DetectionAction_clearCalledConnection
@@ -86,7 +86,7 @@ const DetectionAction = _enum_for_DetectionAction;
  * @type {number}
  */
 export
-const DetectionAction_clearCalledConnection: DetectionAction = DetectionAction.clearCalledConnection; /* LONG_NAMED_ENUMERATED_VALUE */
+const DetectionAction_clearCalledConnection: _enum_for_DetectionAction.clearCalledConnection = DetectionAction.clearCalledConnection; /* LONG_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary clearCalledConnection
@@ -94,7 +94,7 @@ const DetectionAction_clearCalledConnection: DetectionAction = DetectionAction.c
  * @type {number}
  */
 export
-const clearCalledConnection: DetectionAction = DetectionAction.clearCalledConnection; /* SHORT_NAMED_ENUMERATED_VALUE */
+const clearCalledConnection: _enum_for_DetectionAction.clearCalledConnection = DetectionAction.clearCalledConnection; /* SHORT_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary DetectionAction_remainConnected
@@ -102,7 +102,7 @@ const clearCalledConnection: DetectionAction = DetectionAction.clearCalledConnec
  * @type {number}
  */
 export
-const DetectionAction_remainConnected: DetectionAction = DetectionAction.remainConnected; /* LONG_NAMED_ENUMERATED_VALUE */
+const DetectionAction_remainConnected: _enum_for_DetectionAction.remainConnected = DetectionAction.remainConnected; /* LONG_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary remainConnected
@@ -110,7 +110,7 @@ const DetectionAction_remainConnected: DetectionAction = DetectionAction.remainC
  * @type {number}
  */
 export
-const remainConnected: DetectionAction = DetectionAction.remainConnected; /* SHORT_NAMED_ENUMERATED_VALUE */
+const remainConnected: _enum_for_DetectionAction.remainConnected = DetectionAction.remainConnected; /* SHORT_NAMED_ENUMERATED_VALUE */
 
 let _cached_decoder_for_DetectionAction: $.ASN1Decoder<DetectionAction> | null = null;
 

@@ -1,6 +1,6 @@
 /* eslint-disable */
 import {
-    ASN1Element as _Element,
+    type ASN1Element as _Element,
     ASN1TagClass as _TagClass,
     ASN1Construction as _Construction,
     ASN1UniversalType as _UniversalType,
@@ -10,7 +10,7 @@ import {
     ASN1ConstructionError as _ConstructionError,
 } from "@wildboar/asn1";
 import * as $ from "@wildboar/asn1/functional";
-import { Time, _decode_Time, _encode_Time } from "../PKI-Stub/Time.ta.mjs";
+import { type Time, _decode_Time, _encode_Time } from "../PKI-Stub/Time.ta.mjs";
 import getDateFromTime from "../../../getDateFromTime.mjs";
 import getTimeFromDate from "../../../getTimeFromDate.mjs";
 import {

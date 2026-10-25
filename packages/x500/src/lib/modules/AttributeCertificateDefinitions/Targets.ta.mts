@@ -2,7 +2,7 @@
 import { ASN1Element as _Element } from "@wildboar/asn1";
 import * as $ from "@wildboar/asn1/functional";
 import {
-    Target,
+    type Target,
     _decode_Target,
     _encode_Target,
 } from "../AttributeCertificateDefinitions/Target.ta.mjs";

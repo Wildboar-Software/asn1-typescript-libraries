@@ -1,6 +1,6 @@
 /* eslint-disable */
 import {
-  ENUMERATED,
+  type ENUMERATED,
   ASN1Element as _Element,
   ASN1TagClass as _TagClass,
   ASN1Construction as _Construction,
@@ -55,7 +55,7 @@ export type BioAPI_UNIT_EVENT_TYPE =
  * @constant
  * @type {number}
  */
-export const BioAPI_UNIT_EVENT_TYPE_insert: BioAPI_UNIT_EVENT_TYPE = 0; /* LONG_NAMED_ENUMERATED_VALUE */
+export const BioAPI_UNIT_EVENT_TYPE_insert: 0 = _enum_for_BioAPI_UNIT_EVENT_TYPE.insert; /* LONG_NAMED_ENUMERATED_VALUE */
 
 
 /**
@@ -63,7 +63,7 @@ export const BioAPI_UNIT_EVENT_TYPE_insert: BioAPI_UNIT_EVENT_TYPE = 0; /* LONG_
  * @constant
  * @type {number}
  */
-export const insert: BioAPI_UNIT_EVENT_TYPE = BioAPI_UNIT_EVENT_TYPE_insert; /* SHORT_NAMED_ENUMERATED_VALUE */
+export const insert: 0 = BioAPI_UNIT_EVENT_TYPE_insert; /* SHORT_NAMED_ENUMERATED_VALUE */
 
 
 /**
@@ -71,7 +71,7 @@ export const insert: BioAPI_UNIT_EVENT_TYPE = BioAPI_UNIT_EVENT_TYPE_insert; /* 
  * @constant
  * @type {number}
  */
-export const BioAPI_UNIT_EVENT_TYPE_remove: BioAPI_UNIT_EVENT_TYPE = 1; /* LONG_NAMED_ENUMERATED_VALUE */
+export const BioAPI_UNIT_EVENT_TYPE_remove: 1 = _enum_for_BioAPI_UNIT_EVENT_TYPE.remove; /* LONG_NAMED_ENUMERATED_VALUE */
 
 
 /**
@@ -79,7 +79,7 @@ export const BioAPI_UNIT_EVENT_TYPE_remove: BioAPI_UNIT_EVENT_TYPE = 1; /* LONG_
  * @constant
  * @type {number}
  */
-export const remove: BioAPI_UNIT_EVENT_TYPE = BioAPI_UNIT_EVENT_TYPE_remove; /* SHORT_NAMED_ENUMERATED_VALUE */
+export const remove: 1 = BioAPI_UNIT_EVENT_TYPE_remove; /* SHORT_NAMED_ENUMERATED_VALUE */
 
 
 /**
@@ -87,7 +87,7 @@ export const remove: BioAPI_UNIT_EVENT_TYPE = BioAPI_UNIT_EVENT_TYPE_remove; /* 
  * @constant
  * @type {number}
  */
-export const BioAPI_UNIT_EVENT_TYPE_fault: BioAPI_UNIT_EVENT_TYPE = 2; /* LONG_NAMED_ENUMERATED_VALUE */
+export const BioAPI_UNIT_EVENT_TYPE_fault: 2 = _enum_for_BioAPI_UNIT_EVENT_TYPE.fault; /* LONG_NAMED_ENUMERATED_VALUE */
 
 
 /**
@@ -95,7 +95,7 @@ export const BioAPI_UNIT_EVENT_TYPE_fault: BioAPI_UNIT_EVENT_TYPE = 2; /* LONG_N
  * @constant
  * @type {number}
  */
-export const fault: BioAPI_UNIT_EVENT_TYPE = BioAPI_UNIT_EVENT_TYPE_fault; /* SHORT_NAMED_ENUMERATED_VALUE */
+export const fault: 2 = BioAPI_UNIT_EVENT_TYPE_fault; /* SHORT_NAMED_ENUMERATED_VALUE */
 
 
 /**
@@ -103,7 +103,7 @@ export const fault: BioAPI_UNIT_EVENT_TYPE = BioAPI_UNIT_EVENT_TYPE_fault; /* SH
  * @constant
  * @type {number}
  */
-export const BioAPI_UNIT_EVENT_TYPE_sourcePresent: BioAPI_UNIT_EVENT_TYPE = 3; /* LONG_NAMED_ENUMERATED_VALUE */
+export const BioAPI_UNIT_EVENT_TYPE_sourcePresent: 3 = _enum_for_BioAPI_UNIT_EVENT_TYPE.sourcePresent; /* LONG_NAMED_ENUMERATED_VALUE */
 
 
 /**
@@ -111,7 +111,7 @@ export const BioAPI_UNIT_EVENT_TYPE_sourcePresent: BioAPI_UNIT_EVENT_TYPE = 3; /
  * @constant
  * @type {number}
  */
-export const sourcePresent: BioAPI_UNIT_EVENT_TYPE = BioAPI_UNIT_EVENT_TYPE_sourcePresent; /* SHORT_NAMED_ENUMERATED_VALUE */
+export const sourcePresent: 3 = BioAPI_UNIT_EVENT_TYPE_sourcePresent; /* SHORT_NAMED_ENUMERATED_VALUE */
 
 
 /**
@@ -119,7 +119,7 @@ export const sourcePresent: BioAPI_UNIT_EVENT_TYPE = BioAPI_UNIT_EVENT_TYPE_sour
  * @constant
  * @type {number}
  */
-export const BioAPI_UNIT_EVENT_TYPE_sourceRemoved: BioAPI_UNIT_EVENT_TYPE = 4; /* LONG_NAMED_ENUMERATED_VALUE */
+export const BioAPI_UNIT_EVENT_TYPE_sourceRemoved: 4 = _enum_for_BioAPI_UNIT_EVENT_TYPE.sourceRemoved; /* LONG_NAMED_ENUMERATED_VALUE */
 
 
 /**
@@ -127,17 +127,17 @@ export const BioAPI_UNIT_EVENT_TYPE_sourceRemoved: BioAPI_UNIT_EVENT_TYPE = 4; /
  * @constant
  * @type {number}
  */
-export const sourceRemoved: BioAPI_UNIT_EVENT_TYPE = BioAPI_UNIT_EVENT_TYPE_sourceRemoved; /* SHORT_NAMED_ENUMERATED_VALUE */
+export const sourceRemoved: 4 = BioAPI_UNIT_EVENT_TYPE_sourceRemoved; /* SHORT_NAMED_ENUMERATED_VALUE */
 
 
 
 
-export const _decode_BioAPI_UNIT_EVENT_TYPE = $._decodeEnumerated;
+export const _decode_BioAPI_UNIT_EVENT_TYPE: $.ASN1Decoder<BioAPI_UNIT_EVENT_TYPE> = $._decodeEnumerated as $.ASN1Decoder<BioAPI_UNIT_EVENT_TYPE>;
 
 
 
 
-export const _encode_BioAPI_UNIT_EVENT_TYPE = $._encodeEnumerated;
+export const _encode_BioAPI_UNIT_EVENT_TYPE: $.ASN1Encoder<BioAPI_UNIT_EVENT_TYPE> = $._encodeEnumerated as $.ASN1Encoder<BioAPI_UNIT_EVENT_TYPE>;
 
 
 /* eslint-enable */

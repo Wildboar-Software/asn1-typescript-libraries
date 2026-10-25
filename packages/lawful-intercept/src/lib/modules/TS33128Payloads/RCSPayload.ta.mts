@@ -1,10 +1,10 @@
 /* eslint-disable */
 import {
-    ASN1Element as _Element,
+    type ASN1Element as _Element,
     ASN1TagClass as _TagClass
 } from "@wildboar/asn1";
 import * as $ from "@wildboar/asn1/functional";
-import { EncapsulatedRCSPayload, _decode_EncapsulatedRCSPayload, _encode_EncapsulatedRCSPayload } from "../TS33128Payloads/EncapsulatedRCSPayload.ta.mjs";
+import { type EncapsulatedRCSPayload, _decode_EncapsulatedRCSPayload, _encode_EncapsulatedRCSPayload } from "../TS33128Payloads/EncapsulatedRCSPayload.ta.mjs";
 // export { EncapsulatedRCSPayload, _decode_EncapsulatedRCSPayload, _encode_EncapsulatedRCSPayload } from "../TS33128Payloads/EncapsulatedRCSPayload.ta.mjs";
 import { ModifiedRCSPayload, _decode_ModifiedRCSPayload, _encode_ModifiedRCSPayload } from "../TS33128Payloads/ModifiedRCSPayload.ta.mjs";
 // export { ModifiedRCSPayload, _decode_ModifiedRCSPayload, _encode_ModifiedRCSPayload } from "../TS33128Payloads/ModifiedRCSPayload.ta.mjs";

@@ -1,13 +1,13 @@
 /* eslint-disable */
 import {
-    OPTIONAL,
-    ASN1Element as _Element,
+    type OPTIONAL,
+    type ASN1Element as _Element,
     ASN1TagClass as _TagClass
 } from "@wildboar/asn1";
 import * as $ from "@wildboar/asn1/functional";
-import { EmergencyGroupState_clientEmergencyState, _decode_EmergencyGroupState_clientEmergencyState, _encode_EmergencyGroupState_clientEmergencyState, _enum_for_EmergencyGroupState_clientEmergencyState } from "../EpsHI2Operations/EmergencyGroupState-clientEmergencyState.ta.mjs";
+import { type EmergencyGroupState_clientEmergencyState, _decode_EmergencyGroupState_clientEmergencyState, _encode_EmergencyGroupState_clientEmergencyState, _enum_for_EmergencyGroupState_clientEmergencyState } from "../EpsHI2Operations/EmergencyGroupState-clientEmergencyState.ta.mjs";
 // export { EmergencyGroupState_clientEmergencyState, _enum_for_EmergencyGroupState_clientEmergencyState, EmergencyGroupState_clientEmergencyState_inform /* IMPORTED_LONG_ENUMERATION_ITEM */, inform /* IMPORTED_SHORT_ENUMERATION_ITEM */, EmergencyGroupState_clientEmergencyState_response /* IMPORTED_LONG_ENUMERATION_ITEM */, response /* IMPORTED_SHORT_ENUMERATION_ITEM */, EmergencyGroupState_clientEmergencyState_cancelInform /* IMPORTED_LONG_ENUMERATION_ITEM */, EmergencyGroupState_clientEmergencyState_cancelResponse /* IMPORTED_LONG_ENUMERATION_ITEM */, _decode_EmergencyGroupState_clientEmergencyState, _encode_EmergencyGroupState_clientEmergencyState } from "../EpsHI2Operations/EmergencyGroupState-clientEmergencyState.ta.mjs";
-import { EmergencyGroupState_groupEmergencyState, _decode_EmergencyGroupState_groupEmergencyState, _encode_EmergencyGroupState_groupEmergencyState, _enum_for_EmergencyGroupState_groupEmergencyState } from "../EpsHI2Operations/EmergencyGroupState-groupEmergencyState.ta.mjs";
+import { type EmergencyGroupState_groupEmergencyState, _decode_EmergencyGroupState_groupEmergencyState, _encode_EmergencyGroupState_groupEmergencyState, _enum_for_EmergencyGroupState_groupEmergencyState } from "../EpsHI2Operations/EmergencyGroupState-groupEmergencyState.ta.mjs";
 // export { EmergencyGroupState_groupEmergencyState, _enum_for_EmergencyGroupState_groupEmergencyState, EmergencyGroupState_groupEmergencyState_inForm /* IMPORTED_LONG_ENUMERATION_ITEM */, inForm /* IMPORTED_SHORT_ENUMERATION_ITEM */, EmergencyGroupState_groupEmergencyState_reSponse /* IMPORTED_LONG_ENUMERATION_ITEM */, reSponse /* IMPORTED_SHORT_ENUMERATION_ITEM */, EmergencyGroupState_groupEmergencyState_cancelInform /* IMPORTED_LONG_ENUMERATION_ITEM */, EmergencyGroupState_groupEmergencyState_cancelResponse /* IMPORTED_LONG_ENUMERATION_ITEM */, _decode_EmergencyGroupState_groupEmergencyState, _encode_EmergencyGroupState_groupEmergencyState } from "../EpsHI2Operations/EmergencyGroupState-groupEmergencyState.ta.mjs";
 
 
@@ -128,7 +128,7 @@ class EmergencyGroupState {
          * @static
          */
 
-    public static _enum_for_clientEmergencyState = _enum_for_EmergencyGroupState_clientEmergencyState;        /**
+    public static _enum_for_clientEmergencyState: typeof _enum_for_EmergencyGroupState_clientEmergencyState = _enum_for_EmergencyGroupState_clientEmergencyState;        /**
          * @summary The enum used as the type of the component `groupEmergencyState`
          * @description
          * 
@@ -140,7 +140,7 @@ class EmergencyGroupState {
          * @static
          */
 
-    public static _enum_for_groupEmergencyState = _enum_for_EmergencyGroupState_groupEmergencyState;
+    public static _enum_for_groupEmergencyState: typeof _enum_for_EmergencyGroupState_groupEmergencyState = _enum_for_EmergencyGroupState_groupEmergencyState;
 }
 
 /**

@@ -1,6 +1,6 @@
 /* eslint-disable */
 import {
-    ASN1Element as _Element,
+    type ASN1Element as _Element,
     ASN1TagClass as _TagClass,
     ASN1Construction as _Construction,
     ASN1UniversalType as _UniversalType,
@@ -11,12 +11,12 @@ import {
 } from '@wildboar/asn1';
 import * as $ from '@wildboar/asn1/functional';
 import {
-    EMailSimpleCredentials,
+    type EMailSimpleCredentials,
     _decode_EMailSimpleCredentials,
     _encode_EMailSimpleCredentials,
 } from '../MhsMTAAsn1Module/EMailSimpleCredentials.ta.mjs';
 import {
-    EMailStrongCredentials,
+    type EMailStrongCredentials,
     _decode_EMailStrongCredentials,
     _encode_EMailStrongCredentials,
 } from '../MhsMTAAsn1Module/EMailStrongCredentials.ta.mjs';

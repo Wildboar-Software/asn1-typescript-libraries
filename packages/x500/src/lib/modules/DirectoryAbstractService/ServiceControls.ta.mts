@@ -1,14 +1,14 @@
 /* eslint-disable */
 import {
-    ASN1Element as _Element,
+    type ASN1Element as _Element,
     ASN1TagClass as _TagClass,
-    INTEGER,
-    OBJECT_IDENTIFIER,
-    OPTIONAL,
+    type INTEGER,
+    type OBJECT_IDENTIFIER,
+    type OPTIONAL,
 } from "@wildboar/asn1";
 import * as $ from "@wildboar/asn1/functional";
 import {
-    ServiceControlOptions,
+    type ServiceControlOptions,
     _decode_ServiceControlOptions,
     _encode_ServiceControlOptions,
 } from "../DirectoryAbstractService/ServiceControlOptions.ta.mjs";
@@ -19,12 +19,12 @@ import {
 } from "../DirectoryAbstractService/ServiceControls-manageDSAITPlaneRef.ta.mjs";
 import {
     medium /* IMPORTED_SHORT_NAMED_INTEGER */,
-    ServiceControls_priority,
+    type ServiceControls_priority,
     _decode_ServiceControls_priority,
     _encode_ServiceControls_priority,
 } from "../DirectoryAbstractService/ServiceControls-priority.ta.mjs";
 import {
-    ServiceControls_scopeOfReferral,
+    type ServiceControls_scopeOfReferral,
     _decode_ServiceControls_scopeOfReferral,
     _encode_ServiceControls_scopeOfReferral,
 } from "../DirectoryAbstractService/ServiceControls-scopeOfReferral.ta.mjs";
@@ -58,118 +58,140 @@ import {
  *
  */
 export class ServiceControls {
+    /**
+     * @summary `options`.
+     * @description
+     *
+     * DEFAULT `{}`. Empty ≡ prefer chaining not required, chaining allowed,
+     * copies allowed, aliases deref'd except modify, subentries
+     * inaccessible.
+     *
+     * @public
+     * @readonly
+     */
+    public readonly options?: OPTIONAL<ServiceControlOptions>;
+    /**
+     * @summary `priority`.
+     * @description
+     *
+     * DEFAULT `medium`. Not a guaranteed queue; no relationship to
+     * lower-layer priority.
+     *
+     * @public
+     * @readonly
+     */
+    public readonly priority?: OPTIONAL<ServiceControls_priority>;
+    /**
+     * @summary `timeLimit`.
+     * @description
+     *
+     * Max elapsed seconds (not CPU). Omitted ⇒ no limit. List/Search
+     * timeout ⇒ arbitrary selection of accumulated results. Multiple DSAs
+     * may consume the elapsed time.
+     *
+     * @public
+     * @readonly
+     */
+    public readonly timeLimit?: OPTIONAL<INTEGER>;
+    /**
+     * @summary `sizeLimit`.
+     * @description
+     *
+     * List/Search only. Max entries when not paging. Exceeded ⇒ arbitrary
+     * selection of that many; rest discarded. Ignored by the paging DSA
+     * if paging is actually performed; contributing DSAs still honour it.
+     *
+     * @public
+     * @readonly
+     */
+    public readonly sizeLimit?: OPTIONAL<INTEGER>;
+    /**
+     * @summary `scopeOfReferral`.
+     * @description
+     *
+     * Restricts referrals (both referral error and unexplored) to DSAs in
+     * that scope: `dmd`(0) vs `country`(1).
+     *
+     * @public
+     * @readonly
+     */
+    public readonly scopeOfReferral?: OPTIONAL<ServiceControls_scopeOfReferral>;
+    /**
+     * @summary `attributeSizeLimit`.
+     * @description
+     *
+     * Max size of type+all values in local concrete syntax octets of the
+     * holding DSA (imprecise). Exceeded ⇒ omit ALL values of that attr
+     * and set `incompleteEntry`. Omitted ⇒ no limit. DN attribute values
+     * are exempt.
+     *
+     * @public
+     * @readonly
+     */
+    public readonly attributeSizeLimit?: OPTIONAL<INTEGER>;
+    /**
+     * @summary `manageDSAITPlaneRef`.
+     * @description
+     *
+     * Ignored unless `manageDSAIT` is SET. Identifies the replication
+     * plane by supplying DSA name + shadowing agreement ID.
+     *
+     * @public
+     * @readonly
+     */
+    public readonly manageDSAITPlaneRef?: OPTIONAL<ServiceControls_manageDSAITPlaneRef>;
+    /**
+     * @summary `serviceType`.
+     * @description
+     *
+     * Only for Search starting evaluation in a service-specific admin
+     * area; else ignored. Improves diagnostics on bad searches.
+     *
+     * @public
+     * @readonly
+     */
+    public readonly serviceType?: OPTIONAL<OBJECT_IDENTIFIER>;
+    /**
+     * @summary `userClass`.
+     * @description
+     *
+     * Same restriction as `serviceType`. Lets the requester pick a
+     * different user-class than the Directory would apply.
+     *
+     * @public
+     * @readonly
+     */
+    public readonly userClass?: OPTIONAL<INTEGER>;
+    /**
+     * @summary Extensions that are not recognized.
+     * @public
+     * @readonly
+     */
+    public readonly _unrecognizedExtensionsList: _Element[];
+
     constructor(
-        /**
-         * @summary `options`.
-         * @description
-         *
-         * DEFAULT `{}`. Empty ≡ prefer chaining not required, chaining allowed,
-         * copies allowed, aliases deref'd except modify, subentries
-         * inaccessible.
-         *
-         * @public
-         * @readonly
-         */
-        readonly options?: OPTIONAL<ServiceControlOptions>,
-        /**
-         * @summary `priority`.
-         * @description
-         *
-         * DEFAULT `medium`. Not a guaranteed queue; no relationship to
-         * lower-layer priority.
-         *
-         * @public
-         * @readonly
-         */
-        readonly priority?: OPTIONAL<ServiceControls_priority>,
-        /**
-         * @summary `timeLimit`.
-         * @description
-         *
-         * Max elapsed seconds (not CPU). Omitted ⇒ no limit. List/Search
-         * timeout ⇒ arbitrary selection of accumulated results. Multiple DSAs
-         * may consume the elapsed time.
-         *
-         * @public
-         * @readonly
-         */
-        readonly timeLimit?: OPTIONAL<INTEGER>,
-        /**
-         * @summary `sizeLimit`.
-         * @description
-         *
-         * List/Search only. Max entries when not paging. Exceeded ⇒ arbitrary
-         * selection of that many; rest discarded. Ignored by the paging DSA
-         * if paging is actually performed; contributing DSAs still honour it.
-         *
-         * @public
-         * @readonly
-         */
-        readonly sizeLimit?: OPTIONAL<INTEGER>,
-        /**
-         * @summary `scopeOfReferral`.
-         * @description
-         *
-         * Restricts referrals (both referral error and unexplored) to DSAs in
-         * that scope: `dmd`(0) vs `country`(1).
-         *
-         * @public
-         * @readonly
-         */
-        readonly scopeOfReferral?: OPTIONAL<ServiceControls_scopeOfReferral>,
-        /**
-         * @summary `attributeSizeLimit`.
-         * @description
-         *
-         * Max size of type+all values in local concrete syntax octets of the
-         * holding DSA (imprecise). Exceeded ⇒ omit ALL values of that attr
-         * and set `incompleteEntry`. Omitted ⇒ no limit. DN attribute values
-         * are exempt.
-         *
-         * @public
-         * @readonly
-         */
-        readonly attributeSizeLimit?: OPTIONAL<INTEGER>,
-        /**
-         * @summary `manageDSAITPlaneRef`.
-         * @description
-         *
-         * Ignored unless `manageDSAIT` is SET. Identifies the replication
-         * plane by supplying DSA name + shadowing agreement ID.
-         *
-         * @public
-         * @readonly
-         */
-        readonly manageDSAITPlaneRef?: OPTIONAL<ServiceControls_manageDSAITPlaneRef>,
-        /**
-         * @summary `serviceType`.
-         * @description
-         *
-         * Only for Search starting evaluation in a service-specific admin
-         * area; else ignored. Improves diagnostics on bad searches.
-         *
-         * @public
-         * @readonly
-         */
-        readonly serviceType?: OPTIONAL<OBJECT_IDENTIFIER>,
-        /**
-         * @summary `userClass`.
-         * @description
-         *
-         * Same restriction as `serviceType`. Lets the requester pick a
-         * different user-class than the Directory would apply.
-         *
-         * @public
-         * @readonly
-         */
-        readonly userClass?: OPTIONAL<INTEGER>,
-        /**
-         * @summary Extensions that are not recognized.
-         * @public
-         * @readonly
-         */
-        readonly _unrecognizedExtensionsList: _Element[] = []
-    ) {}
+        options?: OPTIONAL<ServiceControlOptions>,
+        priority?: OPTIONAL<ServiceControls_priority>,
+        timeLimit?: OPTIONAL<INTEGER>,
+        sizeLimit?: OPTIONAL<INTEGER>,
+        scopeOfReferral?: OPTIONAL<ServiceControls_scopeOfReferral>,
+        attributeSizeLimit?: OPTIONAL<INTEGER>,
+        manageDSAITPlaneRef?: OPTIONAL<ServiceControls_manageDSAITPlaneRef>,
+        serviceType?: OPTIONAL<OBJECT_IDENTIFIER>,
+        userClass?: OPTIONAL<INTEGER>,
+        _unrecognizedExtensionsList: _Element[] = []
+    ) {
+        this.options = options;
+        this.priority = priority;
+        this.timeLimit = timeLimit;
+        this.sizeLimit = sizeLimit;
+        this.scopeOfReferral = scopeOfReferral;
+        this.attributeSizeLimit = attributeSizeLimit;
+        this.manageDSAITPlaneRef = manageDSAITPlaneRef;
+        this.serviceType = serviceType;
+        this.userClass = userClass;
+        this._unrecognizedExtensionsList = _unrecognizedExtensionsList;
+    }
 
     /**
      * @summary Restructures an object into a ServiceControls

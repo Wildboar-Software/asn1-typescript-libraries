@@ -1,12 +1,12 @@
 /* eslint-disable */
 import {
-    ASN1Element as _Element,
-    BOOLEAN,
-    OBJECT_IDENTIFIER,
-    OPTIONAL,
+    type ASN1Element as _Element,
+    type BOOLEAN,
+    type OBJECT_IDENTIFIER,
+    type OPTIONAL,
 } from "@wildboar/asn1";
 import * as $ from "@wildboar/asn1/functional";
-import { ContextCombination } from "../ServiceAdministration/ContextCombination.ta.mjs";
+import { type ContextCombination } from "../ServiceAdministration/ContextCombination.ta.mjs";
 import { ContextProfile } from "../ServiceAdministration/ContextProfile.ta.mjs";
 import { MatchingUse } from "../ServiceAdministration/MatchingUse.ta.mjs";
 /**
@@ -22,13 +22,13 @@ import { MatchingUse } from "../ServiceAdministration/MatchingUse.ta.mjs";
  * ```asn1
  * REQUEST-ATTRIBUTE ::= CLASS {
  *   &attributeType         ATTRIBUTE.&id,
- *   &SelectedValues        ATTRIBUTE.&Type                 OPTIONAL,
+ *   &SelectedValues        ATTRIBUTE.&Type                 type OPTIONAL,
  *   &DefaultValues         SEQUENCE {
- *     entryType              OBJECT-CLASS.&id            OPTIONAL,
+ *     entryType              OBJECT-CLASS.&id            type OPTIONAL,
  *     values                 SEQUENCE OF ATTRIBUTE.&Type } OPTIONAL,
- *   &contexts              SEQUENCE OF ContextProfile      OPTIONAL,
- *   &contextCombination    ContextCombination              OPTIONAL,
- *   &MatchingUse           MatchingUse                     OPTIONAL,
+ *   &contexts              SEQUENCE OF ContextProfile      type OPTIONAL,
+ *   &contextCombination    ContextCombination              type OPTIONAL,
+ *   &MatchingUse           MatchingUse                     type OPTIONAL,
  *   &includeSubtypes       BOOLEAN                         DEFAULT FALSE }
  * WITH SYNTAX {
  *   ATTRIBUTE TYPE         &attributeType

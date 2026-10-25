@@ -1,6 +1,6 @@
 /* eslint-disable */
 import {
-  OPTIONAL,
+  type OPTIONAL,
   TRUE_BIT,
   ASN1Element as _Element,
   ASN1TagClass as _TagClass,
@@ -13,73 +13,73 @@ import {
 } from '@wildboar/asn1';
 import * as $ from '@wildboar/asn1/functional';
 import {
-  AARQ_apdu_protocol_version,
+  type AARQ_apdu_protocol_version,
   AARQ_apdu_protocol_version_version1 /* IMPORTED_LONG_NAMED_BIT */,
   _decode_AARQ_apdu_protocol_version,
   _encode_AARQ_apdu_protocol_version,
 } from '../ACSE-1/AARQ-apdu-protocol-version.ta.mjs';
 import {
-  ASO_context_name,
+  type ASO_context_name,
   _decode_ASO_context_name,
   _encode_ASO_context_name,
 } from '../ACSE-1/ASO-context-name.ta.mjs';
 import {
-  AP_title,
+  type AP_title,
   _decode_AP_title,
   _encode_AP_title,
 } from '../ACSE-1/AP-title.ta.mjs';
 import {
-  AE_qualifier,
+  type AE_qualifier,
   _decode_AE_qualifier,
   _encode_AE_qualifier,
 } from '../ACSE-1/AE-qualifier.ta.mjs';
 import {
-  AP_invocation_identifier,
+  type AP_invocation_identifier,
   _decode_AP_invocation_identifier,
   _encode_AP_invocation_identifier,
 } from '../ACSE-1/AP-invocation-identifier.ta.mjs';
 import {
-  AE_invocation_identifier,
+  type AE_invocation_identifier,
   _decode_AE_invocation_identifier,
   _encode_AE_invocation_identifier,
 } from '../ACSE-1/AE-invocation-identifier.ta.mjs';
 import {
-  ACSE_requirements,
+  type ACSE_requirements,
   _decode_ACSE_requirements,
   _encode_ACSE_requirements,
 } from '../ACSE-1/ACSE-requirements.ta.mjs';
 import {
-  Mechanism_name,
+  type Mechanism_name,
   _decode_Mechanism_name,
   _encode_Mechanism_name,
 } from '../ACSE-1/Mechanism-name.ta.mjs';
 import {
-  Authentication_value,
+  type Authentication_value,
   _decode_Authentication_value,
   _encode_Authentication_value,
 } from '../ACSE-1/Authentication-value.ta.mjs';
 import {
-  ASO_context_name_list,
+  type ASO_context_name_list,
   _decode_ASO_context_name_list,
   _encode_ASO_context_name_list,
 } from '../ACSE-1/ASO-context-name-list.ta.mjs';
 import {
-  Implementation_data,
+  type Implementation_data,
   _decode_Implementation_data,
   _encode_Implementation_data,
 } from '../ACSE-1/Implementation-data.ta.mjs';
 import {
-  Association_data,
+  type Association_data,
   _decode_Association_data,
   _encode_Association_data,
 } from '../ACSE-1/Association-data.ta.mjs';
 import {
-  Syntactic_context_list,
+  type Syntactic_context_list,
   _decode_Syntactic_context_list,
   _encode_Syntactic_context_list,
 } from '../ACSE-1/Syntactic-context-list.ta.mjs';
 import {
-  ASOI_tag,
+  type ASOI_tag,
   _decode_ASOI_tag,
   _encode_ASOI_tag,
 } from '../ACSE-1/ASOI-tag.ta.mjs';

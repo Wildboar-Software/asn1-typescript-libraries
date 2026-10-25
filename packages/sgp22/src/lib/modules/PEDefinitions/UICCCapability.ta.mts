@@ -1,7 +1,7 @@
 /* eslint-disable */
 import {
-    ASN1Element as _Element,
-    BIT_STRING
+    type ASN1Element as _Element,
+    type BIT_STRING
 } from "@wildboar/asn1";
 import * as $ from "@wildboar/asn1/functional";
 
@@ -800,8 +800,8 @@ const UICCCapability_iotminimal: number = 31; /* LONG_NAMED_BIT */
  */
 export
 const iotminimal: number = UICCCapability_iotminimal; /* SHORT_NAMED_BIT */
-export const _decode_UICCCapability = $._decodeBitString;
-export const _encode_UICCCapability = $._encodeBitString;
+export const _decode_UICCCapability: $.ASN1Decoder<BIT_STRING> = $._decodeBitString;
+export const _encode_UICCCapability: $.ASN1Encoder<BIT_STRING> = $._encodeBitString;
 
 
 /* eslint-enable */

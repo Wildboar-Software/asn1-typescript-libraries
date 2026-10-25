@@ -1,6 +1,6 @@
 /* eslint-disable */
 import {
-    ASN1Element as _Element,
+    type ASN1Element as _Element,
     ASN1TagClass as _TagClass,
     ASN1Construction as _Construction,
     ASN1UniversalType as _UniversalType,
@@ -30,14 +30,18 @@ import {
  *
  */
 export class subscription_error_ParameterType {
+    /**
+     * @summary `problem`.
+     * @public
+     * @readonly
+     */
+    public readonly problem: SubscriptionProblem;
+
     constructor(
-        /**
-         * @summary `problem`.
-         * @public
-         * @readonly
-         */
-        readonly problem: SubscriptionProblem
-    ) {}
+        problem: SubscriptionProblem
+    ) {
+        this.problem = problem;
+    }
 
     /**
      * @summary Restructures an object into a subscription_error_ParameterType
@@ -65,7 +69,7 @@ export class subscription_error_ParameterType {
      * @static
      */
 
-    public static _enum_for_problem = _enum_for_SubscriptionProblem;
+    public static _enum_for_problem: typeof _enum_for_SubscriptionProblem = _enum_for_SubscriptionProblem;
 }
 
 /**

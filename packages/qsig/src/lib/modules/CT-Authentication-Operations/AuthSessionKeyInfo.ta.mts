@@ -1,13 +1,13 @@
 /* eslint-disable */
 import {
     ASN1ConstructionError as _ConstructionError,
-    ASN1Element as _Element,
+    type ASN1Element as _Element,
     ASN1TagClass as _TagClass
 } from "@wildboar/asn1";
 import * as $ from "@wildboar/asn1/functional";
-import { AuthSessionKey, _decode_AuthSessionKey, _encode_AuthSessionKey } from "../CT-Authentication-Operations/AuthSessionKey.ta.mjs";
+import { type AuthSessionKey, _decode_AuthSessionKey, _encode_AuthSessionKey } from "../CT-Authentication-Operations/AuthSessionKey.ta.mjs";
 // export { AuthSessionKey, _decode_AuthSessionKey, _encode_AuthSessionKey } from "../CT-Authentication-Operations/AuthSessionKey.ta.mjs";
-import { CalculationParam, _decode_CalculationParam, _encode_CalculationParam } from "../CT-Authentication-Operations/CalculationParam.ta.mjs";
+import { type CalculationParam, _decode_CalculationParam, _encode_CalculationParam } from "../CT-Authentication-Operations/CalculationParam.ta.mjs";
 // export { CalculationParam, _decode_CalculationParam, _encode_CalculationParam } from "../CT-Authentication-Operations/CalculationParam.ta.mjs";
 
 
@@ -166,7 +166,7 @@ let _cached_encoder_for_AuthSessionKeyInfo: $.ASN1Encoder<AuthSessionKeyInfo> | 
  */
 export
 function _encode_AuthSessionKeyInfo (value: AuthSessionKeyInfo, elGetter: $.ASN1Encoder<any>): _Element {
-    if (!_cached_encoder_for_AuthSessionKeyInfo) { _cached_encoder_for_AuthSessionKeyInfo = function (value: AuthSessionKeyInfo, elGetter: $.ASN1Encoder<AuthSessionKeyInfo>): _Element {
+    if (!_cached_encoder_for_AuthSessionKeyInfo) { _cached_encoder_for_AuthSessionKeyInfo = function (value: AuthSessionKeyInfo): _Element {
     return $._encodeSequence([
         /* REQUIRED   */ _encode_AuthSessionKey(value.authSessionKey, $.BER),
         /* REQUIRED   */ _encode_CalculationParam(value.calculationParam, $.BER)

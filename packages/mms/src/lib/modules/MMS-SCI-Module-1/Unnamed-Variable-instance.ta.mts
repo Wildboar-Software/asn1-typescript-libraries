@@ -1,6 +1,6 @@
 /* eslint-disable */
 import {
-    ASN1Element as _Element,
+    type ASN1Element as _Element,
     ASN1TagClass as _TagClass,
     ASN1Construction as _Construction,
     ASN1UniversalType as _UniversalType,
@@ -10,9 +10,9 @@ import {
     ASN1ConstructionError as _ConstructionError,
 } from "@wildboar/asn1";
 import * as $ from "@wildboar/asn1/functional";
-import { Address, _decode_Address, _encode_Address } from "../MMS-Object-Module-1/Address.ta.mjs";
+import { type Address, _decode_Address, _encode_Address } from "../MMS-Object-Module-1/Address.ta.mjs";
 import { Access_Control_List_instance, _decode_Access_Control_List_instance, _encode_Access_Control_List_instance } from "../MMS-SCI-Module-1/Access-Control-List-instance.ta.mjs";
-import { TypeDescription, _decode_TypeDescription, _encode_TypeDescription } from "../MMS-Object-Module-1/TypeDescription.ta.mjs";
+import { type TypeDescription, _decode_TypeDescription, _encode_TypeDescription } from "../MMS-Object-Module-1/TypeDescription.ta.mjs";
 
 
 /**
@@ -37,41 +37,49 @@ import { TypeDescription, _decode_TypeDescription, _encode_TypeDescription } fro
  */
 export
 class Unnamed_Variable_instance {
+    /**
+     * @summary `address`.
+     * @description
+     *
+     * Unnamed-variable or public address. ISO 9506-1:2003 §14.1.2.1; ISO
+     * 9506-2:2003 Annex B.
+     *
+     * @public
+     * @readonly
+     */
+    public readonly address: Address;
+    /**
+     * @summary `accessControl`.
+     * @description
+     *
+     * SCI encoding of the object's ACL (ISO 9506-1:2003 §9). ISO
+     * 9506-2:2003 Annex B.
+     *
+     * @public
+     * @readonly
+     */
+    public readonly accessControl: Access_Control_List_instance;
+    /**
+     * @summary `typeDescription`.
+     * @description
+     *
+     * Configured TypeDescription. ISO 9506-1:2003 §14.2; ISO 9506-2:2003
+     * Annex B.
+     *
+     * @public
+     * @readonly
+     */
+    public readonly typeDescription: TypeDescription;
+
     constructor (
-        /**
-         * @summary `address`.
-         * @description
-         *
-         * Unnamed-variable or public address. ISO 9506-1:2003 §14.1.2.1; ISO
-         * 9506-2:2003 Annex B.
-         *
-         * @public
-         * @readonly
-         */
-        readonly address: Address,
-        /**
-         * @summary `accessControl`.
-         * @description
-         *
-         * SCI encoding of the object's ACL (ISO 9506-1:2003 §9). ISO
-         * 9506-2:2003 Annex B.
-         *
-         * @public
-         * @readonly
-         */
-        readonly accessControl: Access_Control_List_instance,
-        /**
-         * @summary `typeDescription`.
-         * @description
-         *
-         * Configured TypeDescription. ISO 9506-1:2003 §14.2; ISO 9506-2:2003
-         * Annex B.
-         *
-         * @public
-         * @readonly
-         */
-        readonly typeDescription: TypeDescription
-    ) {}
+        address: Address,
+        accessControl: Access_Control_List_instance,
+        typeDescription: TypeDescription
+    ) {
+        this.address = address;
+        this.accessControl = accessControl;
+        this.typeDescription = typeDescription;
+    }
 
     /**
      * @summary Restructures an object into a Unnamed_Variable_instance

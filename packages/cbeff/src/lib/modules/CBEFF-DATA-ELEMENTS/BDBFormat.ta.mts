@@ -1,6 +1,6 @@
 /* eslint-disable */
 import {
-  INTEGER,
+  type INTEGER,
   ASN1Element as _Element,
   ASN1TagClass as _TagClass,
   ASN1Construction as _Construction,
@@ -32,13 +32,13 @@ export class BDBFormat {
    * @public
    * @readonly
    */
-  readonly format_owner: INTEGER;
+  public readonly format_owner: INTEGER;
   /**
    * @summary `format_type`.
    * @public
    * @readonly
    */
-  readonly format_type: INTEGER;
+  public readonly format_type: INTEGER;
 
   constructor(
     format_owner: INTEGER,

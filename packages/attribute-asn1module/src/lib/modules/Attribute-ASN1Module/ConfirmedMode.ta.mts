@@ -1,7 +1,7 @@
 /* eslint-disable */
 import {
-    BOOLEAN,
-    ASN1Element as _Element,
+    type BOOLEAN,
+    type ASN1Element as _Element,
     ASN1TagClass as _TagClass,
     ASN1Construction as _Construction,
     ASN1UniversalType as _UniversalType,
@@ -32,10 +32,10 @@ export
 type ConfirmedMode = BOOLEAN; // BooleanType
 
 
-export const _decode_ConfirmedMode = $._decodeBoolean;
+export const _decode_ConfirmedMode: $.ASN1Decoder<boolean> = $._decodeBoolean;
 
 
-export const _encode_ConfirmedMode = $._encodeBoolean;
+export const _encode_ConfirmedMode: $.ASN1Encoder<boolean> = $._encodeBoolean;
 
 
 /* eslint-enable */

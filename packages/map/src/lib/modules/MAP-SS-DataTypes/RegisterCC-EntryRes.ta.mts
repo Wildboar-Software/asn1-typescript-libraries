@@ -1,7 +1,7 @@
 /* eslint-disable */
 import {
-    OPTIONAL,
-    ASN1Element as _Element,
+    type OPTIONAL,
+    type ASN1Element as _Element,
     ASN1TagClass as _TagClass
 } from "@wildboar/asn1";
 import * as $ from "@wildboar/asn1/functional";
@@ -19,7 +19,7 @@ import { CCBS_Feature, _decode_CCBS_Feature, _encode_CCBS_Feature } from "../MAP
  * 
  * ```asn1
  * RegisterCC-EntryRes ::= SEQUENCE {
- *     ccbs-Feature    [0] CCBS-Feature    OPTIONAL,
+ *     ccbs-Feature    [0] CCBS-Feature    type OPTIONAL,
  *     ...}
  * ```
  * 
@@ -27,24 +27,30 @@ import { CCBS_Feature, _decode_CCBS_Feature, _encode_CCBS_Feature } from "../MAP
  */
 export
 class RegisterCC_EntryRes {
+    /**
+     * @summary `ccbs_Feature`.
+     * @description
+     *
+     * Registered CCBS feature.
+     *
+     * @public
+     * @readonly
+     */
+    public readonly ccbs_Feature?: OPTIONAL<CCBS_Feature>;
+    /**
+     * @summary Extensions that are not recognized.
+     * @public
+     * @readonly
+     */
+    public readonly _unrecognizedExtensionsList: _Element[];
+
     constructor (
-        /**
-         * @summary `ccbs_Feature`.
-         * @description
-         *
-         * Registered CCBS feature.
-         *
-         * @public
-         * @readonly
-         */
-        readonly ccbs_Feature?: OPTIONAL<CCBS_Feature>,
-        /**
-         * @summary Extensions that are not recognized.
-         * @public
-         * @readonly
-         */
-        readonly _unrecognizedExtensionsList: _Element[] = []
-    ) {}
+        ccbs_Feature?: OPTIONAL<CCBS_Feature>,
+        _unrecognizedExtensionsList: _Element[] = []
+    ) {
+        this.ccbs_Feature = ccbs_Feature;
+        this._unrecognizedExtensionsList = _unrecognizedExtensionsList;
+    }
 
     /**
      * @summary Restructures an object into a RegisterCC_EntryRes

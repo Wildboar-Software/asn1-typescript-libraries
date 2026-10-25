@@ -1,6 +1,6 @@
 /* eslint-disable */
 import {
-    ENUMERATED
+    type ENUMERATED
 } from "@wildboar/asn1";
 import * as $ from "@wildboar/asn1/functional";
 
@@ -58,7 +58,7 @@ type GcseEvent = _enum_for_GcseEvent | ENUMERATED;
  * @type {number}
  */
 export
-const GcseEvent_activationOfGcseGroupComms: GcseEvent = 1; /* LONG_NAMED_ENUMERATED_VALUE */
+const GcseEvent_activationOfGcseGroupComms: _enum_for_GcseEvent.activationOfGcseGroupComms = _enum_for_GcseEvent.activationOfGcseGroupComms; /* LONG_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary activationOfGcseGroupComms
@@ -71,7 +71,7 @@ const GcseEvent_activationOfGcseGroupComms: GcseEvent = 1; /* LONG_NAMED_ENUMERA
  * @type {number}
  */
 export
-const activationOfGcseGroupComms: GcseEvent = GcseEvent_activationOfGcseGroupComms; /* SHORT_NAMED_ENUMERATED_VALUE */
+const activationOfGcseGroupComms: _enum_for_GcseEvent.activationOfGcseGroupComms = GcseEvent_activationOfGcseGroupComms; /* SHORT_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary GcseEvent_startOfInterceptionGcseGroupComms
@@ -87,7 +87,7 @@ const activationOfGcseGroupComms: GcseEvent = GcseEvent_activationOfGcseGroupCom
  * @type {number}
  */
 export
-const GcseEvent_startOfInterceptionGcseGroupComms: GcseEvent = 2; /* LONG_NAMED_ENUMERATED_VALUE */
+const GcseEvent_startOfInterceptionGcseGroupComms: _enum_for_GcseEvent.startOfInterceptionGcseGroupComms = _enum_for_GcseEvent.startOfInterceptionGcseGroupComms; /* LONG_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary startOfInterceptionGcseGroupComms
@@ -100,7 +100,7 @@ const GcseEvent_startOfInterceptionGcseGroupComms: GcseEvent = 2; /* LONG_NAMED_
  * @type {number}
  */
 export
-const startOfInterceptionGcseGroupComms: GcseEvent = GcseEvent_startOfInterceptionGcseGroupComms; /* SHORT_NAMED_ENUMERATED_VALUE */
+const startOfInterceptionGcseGroupComms: _enum_for_GcseEvent.startOfInterceptionGcseGroupComms = GcseEvent_startOfInterceptionGcseGroupComms; /* SHORT_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary GcseEvent_userAdded
@@ -114,7 +114,7 @@ const startOfInterceptionGcseGroupComms: GcseEvent = GcseEvent_startOfIntercepti
  * @type {number}
  */
 export
-const GcseEvent_userAdded: GcseEvent = 3; /* LONG_NAMED_ENUMERATED_VALUE */
+const GcseEvent_userAdded: _enum_for_GcseEvent.userAdded = _enum_for_GcseEvent.userAdded; /* LONG_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary userAdded
@@ -126,7 +126,7 @@ const GcseEvent_userAdded: GcseEvent = 3; /* LONG_NAMED_ENUMERATED_VALUE */
  * @type {number}
  */
 export
-const userAdded: GcseEvent = GcseEvent_userAdded; /* SHORT_NAMED_ENUMERATED_VALUE */
+const userAdded: _enum_for_GcseEvent.userAdded = GcseEvent_userAdded; /* SHORT_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary GcseEvent_userDropped
@@ -140,7 +140,7 @@ const userAdded: GcseEvent = GcseEvent_userAdded; /* SHORT_NAMED_ENUMERATED_VALU
  * @type {number}
  */
 export
-const GcseEvent_userDropped: GcseEvent = 4; /* LONG_NAMED_ENUMERATED_VALUE */
+const GcseEvent_userDropped: _enum_for_GcseEvent.userDropped = _enum_for_GcseEvent.userDropped; /* LONG_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary userDropped
@@ -152,7 +152,7 @@ const GcseEvent_userDropped: GcseEvent = 4; /* LONG_NAMED_ENUMERATED_VALUE */
  * @type {number}
  */
 export
-const userDropped: GcseEvent = GcseEvent_userDropped; /* SHORT_NAMED_ENUMERATED_VALUE */
+const userDropped: _enum_for_GcseEvent.userDropped = GcseEvent_userDropped; /* SHORT_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary GcseEvent_targetConnectionModification
@@ -166,7 +166,7 @@ const userDropped: GcseEvent = GcseEvent_userDropped; /* SHORT_NAMED_ENUMERATED_
  * @type {number}
  */
 export
-const GcseEvent_targetConnectionModification: GcseEvent = 5; /* LONG_NAMED_ENUMERATED_VALUE */
+const GcseEvent_targetConnectionModification: _enum_for_GcseEvent.targetConnectionModification = _enum_for_GcseEvent.targetConnectionModification; /* LONG_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary targetConnectionModification
@@ -179,7 +179,7 @@ const GcseEvent_targetConnectionModification: GcseEvent = 5; /* LONG_NAMED_ENUME
  * @type {number}
  */
 export
-const targetConnectionModification: GcseEvent = GcseEvent_targetConnectionModification; /* SHORT_NAMED_ENUMERATED_VALUE */
+const targetConnectionModification: _enum_for_GcseEvent.targetConnectionModification = GcseEvent_targetConnectionModification; /* SHORT_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary GcseEvent_targetdropped
@@ -194,7 +194,7 @@ const targetConnectionModification: GcseEvent = GcseEvent_targetConnectionModifi
  * @type {number}
  */
 export
-const GcseEvent_targetdropped: GcseEvent = 6; /* LONG_NAMED_ENUMERATED_VALUE */
+const GcseEvent_targetdropped: _enum_for_GcseEvent.targetdropped = _enum_for_GcseEvent.targetdropped; /* LONG_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary targetdropped
@@ -206,7 +206,7 @@ const GcseEvent_targetdropped: GcseEvent = 6; /* LONG_NAMED_ENUMERATED_VALUE */
  * @type {number}
  */
 export
-const targetdropped: GcseEvent = GcseEvent_targetdropped; /* SHORT_NAMED_ENUMERATED_VALUE */
+const targetdropped: _enum_for_GcseEvent.targetdropped = GcseEvent_targetdropped; /* SHORT_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary GcseEvent_deactivationOfGcseGroupComms
@@ -221,7 +221,7 @@ const targetdropped: GcseEvent = GcseEvent_targetdropped; /* SHORT_NAMED_ENUMERA
  * @type {number}
  */
 export
-const GcseEvent_deactivationOfGcseGroupComms: GcseEvent = 7; /* LONG_NAMED_ENUMERATED_VALUE */
+const GcseEvent_deactivationOfGcseGroupComms: _enum_for_GcseEvent.deactivationOfGcseGroupComms = _enum_for_GcseEvent.deactivationOfGcseGroupComms; /* LONG_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary deactivationOfGcseGroupComms
@@ -233,7 +233,7 @@ const GcseEvent_deactivationOfGcseGroupComms: GcseEvent = 7; /* LONG_NAMED_ENUME
  * @type {number}
  */
 export
-const deactivationOfGcseGroupComms: GcseEvent = GcseEvent_deactivationOfGcseGroupComms; /* SHORT_NAMED_ENUMERATED_VALUE */
+const deactivationOfGcseGroupComms: _enum_for_GcseEvent.deactivationOfGcseGroupComms = GcseEvent_deactivationOfGcseGroupComms; /* SHORT_NAMED_ENUMERATED_VALUE */
 export const _decode_GcseEvent: $.ASN1Decoder<GcseEvent> = $._decodeEnumerated;
 export const _encode_GcseEvent: $.ASN1Encoder<GcseEvent> = $._encodeEnumerated;
 

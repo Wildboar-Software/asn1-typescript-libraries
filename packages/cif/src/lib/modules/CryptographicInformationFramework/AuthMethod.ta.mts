@@ -1,7 +1,7 @@
 /* eslint-disable */
 import {
-    BIT_STRING,
-    ASN1Element as _Element,
+    type BIT_STRING,
+    type ASN1Element as _Element,
     ASN1TagClass as _TagClass,
     ASN1Construction as _Construction,
     ASN1UniversalType as _UniversalType,
@@ -98,8 +98,8 @@ const AuthMethod_always: number = 3; /* LONG_NAMED_BIT */
  */
 export
 const always: number = AuthMethod_always; /* SHORT_NAMED_BIT */
-export const _decode_AuthMethod = $._decodeBitString;
-export const _encode_AuthMethod = $._encodeBitString;
+export const _decode_AuthMethod: $.ASN1Decoder<BIT_STRING> = $._decodeBitString;
+export const _encode_AuthMethod: $.ASN1Encoder<BIT_STRING> = $._encodeBitString;
 
 
 /* eslint-enable */

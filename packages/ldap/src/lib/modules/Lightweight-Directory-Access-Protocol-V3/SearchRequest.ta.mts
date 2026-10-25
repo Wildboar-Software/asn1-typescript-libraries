@@ -1,7 +1,7 @@
 /* eslint-disable */
 import {
-  BOOLEAN,
-  INTEGER,
+  type BOOLEAN,
+  type INTEGER,
   ASN1Element as _Element,
   ASN1TagClass as _TagClass,
   ASN1Construction as _Construction,
@@ -13,12 +13,12 @@ import {
 } from '@wildboar/asn1';
 import * as $ from '@wildboar/asn1/functional';
 import {
-  LDAPDN,
+  type LDAPDN,
   _decode_LDAPDN,
   _encode_LDAPDN,
 } from '../Lightweight-Directory-Access-Protocol-V3/LDAPDN.ta.mjs';
 import {
-  SearchRequest_scope,
+  type SearchRequest_scope,
   _enum_for_SearchRequest_scope,
   _decode_SearchRequest_scope,
   _encode_SearchRequest_scope,
@@ -30,12 +30,12 @@ import {
   _encode_SearchRequest_derefAliases,
 } from '../Lightweight-Directory-Access-Protocol-V3/SearchRequest-derefAliases.ta.mjs';
 import {
-  Filter,
+  type Filter,
   _decode_Filter,
   _encode_Filter,
 } from '../Lightweight-Directory-Access-Protocol-V3/Filter.ta.mjs';
 import {
-  AttributeSelection,
+  type AttributeSelection,
   _decode_AttributeSelection,
   _encode_AttributeSelection,
 } from '../Lightweight-Directory-Access-Protocol-V3/AttributeSelection.ta.mjs';
@@ -81,7 +81,7 @@ export class SearchRequest {
    * @public
    * @readonly
    */
-  readonly baseObject: LDAPDN;
+  public readonly baseObject: LDAPDN;
   /**
    * @summary `scope`.
    * @description
@@ -93,7 +93,7 @@ export class SearchRequest {
    * @public
    * @readonly
    */
-  readonly scope: SearchRequest_scope;
+  public readonly scope: SearchRequest_scope;
   /**
    * @summary `derefAliases`.
    * @description
@@ -104,7 +104,7 @@ export class SearchRequest {
    * @public
    * @readonly
    */
-  readonly derefAliases: SearchRequest_derefAliases;
+  public readonly derefAliases: SearchRequest_derefAliases;
   /**
    * @summary `sizeLimit`.
    * @description
@@ -115,7 +115,7 @@ export class SearchRequest {
    * @public
    * @readonly
    */
-  readonly sizeLimit: INTEGER;
+  public readonly sizeLimit: INTEGER;
   /**
    * @summary `timeLimit`.
    * @description
@@ -125,7 +125,7 @@ export class SearchRequest {
    * @public
    * @readonly
    */
-  readonly timeLimit: INTEGER;
+  public readonly timeLimit: INTEGER;
   /**
    * @summary `typesOnly`.
    * @description
@@ -136,7 +136,7 @@ export class SearchRequest {
    * @public
    * @readonly
    */
-  readonly typesOnly: BOOLEAN;
+  public readonly typesOnly: BOOLEAN;
   /**
    * @summary `filter`.
    * @description
@@ -148,7 +148,7 @@ export class SearchRequest {
    * @public
    * @readonly
    */
-  readonly filter: Filter;
+  public readonly filter: Filter;
   /**
    * @summary `attributes`.
    * @description
@@ -160,13 +160,13 @@ export class SearchRequest {
    * @public
    * @readonly
    */
-  readonly attributes: AttributeSelection;
+  public readonly attributes: AttributeSelection;
   /**
    * @summary Extensions that are not recognized.
    * @public
    * @readonly
    */
-  readonly _unrecognizedExtensionsList: _Element[];
+  public readonly _unrecognizedExtensionsList: _Element[];
 
   constructor(
     baseObject: LDAPDN,
@@ -224,14 +224,14 @@ export class SearchRequest {
    * @static
    */
 
-  public static _enum_for_scope = _enum_for_SearchRequest_scope;
+  public static _enum_for_scope: typeof _enum_for_SearchRequest_scope = _enum_for_SearchRequest_scope;
   /**
    * @summary The enum used as the type of the component `derefAliases`
    * @public
    * @static
    */
 
-  public static _enum_for_derefAliases = _enum_for_SearchRequest_derefAliases;
+  public static _enum_for_derefAliases: typeof _enum_for_SearchRequest_derefAliases = _enum_for_SearchRequest_derefAliases;
 }
 
 

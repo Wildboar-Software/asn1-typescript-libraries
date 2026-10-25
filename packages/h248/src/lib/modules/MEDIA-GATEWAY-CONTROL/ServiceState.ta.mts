@@ -1,6 +1,6 @@
 /* eslint-disable */
 import {
-    ENUMERATED
+    type ENUMERATED
 } from "@wildboar/asn1";
 import * as $ from "@wildboar/asn1/functional";
 
@@ -74,7 +74,7 @@ type ServiceState = _enum_for_ServiceState | ENUMERATED;
  * @type {number}
  */
 export
-const ServiceState_test: ServiceState = 0; /* LONG_NAMED_ENUMERATED_VALUE */
+const ServiceState_test: 0 = _enum_for_ServiceState.test; /* LONG_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary test
@@ -82,7 +82,7 @@ const ServiceState_test: ServiceState = 0; /* LONG_NAMED_ENUMERATED_VALUE */
  * @type {number}
  */
 export
-const test: ServiceState = ServiceState_test; /* SHORT_NAMED_ENUMERATED_VALUE */
+const test: 0 = ServiceState_test; /* SHORT_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary ServiceState_outOfSvc
@@ -96,7 +96,7 @@ const test: ServiceState = ServiceState_test; /* SHORT_NAMED_ENUMERATED_VALUE */
  * @type {number}
  */
 export
-const ServiceState_outOfSvc: ServiceState = 1; /* LONG_NAMED_ENUMERATED_VALUE */
+const ServiceState_outOfSvc: 1 = _enum_for_ServiceState.outOfSvc; /* LONG_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary outOfSvc
@@ -104,7 +104,7 @@ const ServiceState_outOfSvc: ServiceState = 1; /* LONG_NAMED_ENUMERATED_VALUE */
  * @type {number}
  */
 export
-const outOfSvc: ServiceState = ServiceState_outOfSvc; /* SHORT_NAMED_ENUMERATED_VALUE */
+const outOfSvc: 1 = ServiceState_outOfSvc; /* SHORT_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary ServiceState_inSvc
@@ -117,7 +117,7 @@ const outOfSvc: ServiceState = ServiceState_outOfSvc; /* SHORT_NAMED_ENUMERATED_
  * @type {number}
  */
 export
-const ServiceState_inSvc: ServiceState = 2; /* LONG_NAMED_ENUMERATED_VALUE */
+const ServiceState_inSvc: 2 = _enum_for_ServiceState.inSvc; /* LONG_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary inSvc
@@ -125,9 +125,9 @@ const ServiceState_inSvc: ServiceState = 2; /* LONG_NAMED_ENUMERATED_VALUE */
  * @type {number}
  */
 export
-const inSvc: ServiceState = ServiceState_inSvc; /* SHORT_NAMED_ENUMERATED_VALUE */
-export const _decode_ServiceState = $._decodeEnumerated as $.ASN1Decoder<ServiceState>;
-export const _encode_ServiceState = $._encodeEnumerated as $.ASN1Encoder<ServiceState>;
+const inSvc: 2 = ServiceState_inSvc; /* SHORT_NAMED_ENUMERATED_VALUE */
+export const _decode_ServiceState: $.ASN1Decoder<ServiceState> = $._decodeEnumerated as $.ASN1Decoder<ServiceState>;
+export const _encode_ServiceState: $.ASN1Encoder<ServiceState> = $._encodeEnumerated as $.ASN1Encoder<ServiceState>;
 
 
 /* eslint-enable */

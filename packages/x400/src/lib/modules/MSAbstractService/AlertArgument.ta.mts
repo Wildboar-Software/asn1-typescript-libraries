@@ -1,8 +1,8 @@
 /* eslint-disable */
 import {
-    OPTIONAL,
-    INTEGER,
-    ASN1Element as _Element,
+    type OPTIONAL,
+    type INTEGER,
+    type ASN1Element as _Element,
     ASN1TagClass as _TagClass,
     ASN1Construction as _Construction,
     ASN1UniversalType as _UniversalType,
@@ -34,20 +34,26 @@ import {
  *
  */
 export class AlertArgument {
+    /**
+     * @summary `alert_registration_identifier`.
+     * @public
+     * @readonly
+     */
+    public readonly alert_registration_identifier: INTEGER;
+    /**
+     * @summary `new_entry`.
+     * @public
+     * @readonly
+     */
+    public readonly new_entry?: OPTIONAL<EntryInformation>;
+
     constructor(
-        /**
-         * @summary `alert_registration_identifier`.
-         * @public
-         * @readonly
-         */
-        readonly alert_registration_identifier: INTEGER,
-        /**
-         * @summary `new_entry`.
-         * @public
-         * @readonly
-         */
-        readonly new_entry?: OPTIONAL<EntryInformation>
-    ) {}
+        alert_registration_identifier: INTEGER,
+        new_entry?: OPTIONAL<EntryInformation>
+    ) {
+        this.alert_registration_identifier = alert_registration_identifier;
+        this.new_entry = new_entry;
+    }
 
     /**
      * @summary Restructures an object into a AlertArgument

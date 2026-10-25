@@ -1,15 +1,15 @@
 /* eslint-disable */
 import {
     ASN1SizeError,
-    BIT_STRING,
-    INTEGER,
+    type BIT_STRING,
+    type INTEGER,
     ASN1ConstructionError as _ConstructionError,
-    ASN1Element as _Element,
+    type ASN1Element as _Element,
     ASN1TagClass as _TagClass
 } from "@wildboar/asn1";
 import * as $ from "@wildboar/asn1/functional";
 import { assertIntegerRange } from "../../assertIntegerRange.mjs";
-import { Singletons, _decode_Singletons, _encode_Singletons } from "../PKIS/Singletons.ta.mjs";
+import { type Singletons, _decode_Singletons, _encode_Singletons } from "../PKIS/Singletons.ta.mjs";
 
 
 /**

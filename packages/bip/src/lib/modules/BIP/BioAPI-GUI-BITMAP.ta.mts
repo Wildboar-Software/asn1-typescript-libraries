@@ -1,6 +1,6 @@
 /* eslint-disable */
 import {
-  OPTIONAL,
+  type OPTIONAL,
   ASN1Element as _Element,
   ASN1TagClass as _TagClass,
   ASN1Construction as _Construction,
@@ -12,17 +12,17 @@ import {
 } from '@wildboar/asn1';
 import * as $ from '@wildboar/asn1/functional';
 import {
-  BioAPI_BIR_SUBTYPE_MASK,
+  type BioAPI_BIR_SUBTYPE_MASK,
   _decode_BioAPI_BIR_SUBTYPE_MASK,
   _encode_BioAPI_BIR_SUBTYPE_MASK,
 } from '../BIP/BioAPI-BIR-SUBTYPE-MASK.ta.mjs';
 import {
-  UnsignedInt,
+  type UnsignedInt,
   _decode_UnsignedInt,
   _encode_UnsignedInt,
 } from '../BIP/UnsignedInt.ta.mjs';
 import {
-  BioAPI_DATA,
+  type BioAPI_DATA,
   _decode_BioAPI_DATA,
   _encode_BioAPI_DATA,
 } from '../BIP/BioAPI-DATA.ta.mjs';
@@ -55,19 +55,19 @@ export class BioAPI_GUI_BITMAP {
    * @public
    * @readonly
    */
-  readonly subtypeMask: BioAPI_BIR_SUBTYPE_MASK;
+  public readonly subtypeMask: BioAPI_BIR_SUBTYPE_MASK;
   /**
    * @summary `width`.
    * @public
    * @readonly
    */
-  readonly width: UnsignedInt;
+  public readonly width: UnsignedInt;
   /**
    * @summary `height`.
    * @public
    * @readonly
    */
-  readonly height: UnsignedInt;
+  public readonly height: UnsignedInt;
   /**
    * @summary `bitmap`.
    * @description
@@ -78,7 +78,7 @@ export class BioAPI_GUI_BITMAP {
    * @public
    * @readonly
    */
-  readonly bitmap?: OPTIONAL<BioAPI_DATA>;
+  public readonly bitmap?: OPTIONAL<BioAPI_DATA>;
 
   constructor(
     subtypeMask: BioAPI_BIR_SUBTYPE_MASK,

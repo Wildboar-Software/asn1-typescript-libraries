@@ -1,6 +1,6 @@
 /* eslint-disable */
 import {
-  BIT_STRING,
+  type BIT_STRING,
   ASN1Element as _Element,
   ASN1TagClass as _TagClass,
   ASN1Construction as _Construction,
@@ -12,7 +12,7 @@ import {
 } from '@wildboar/asn1';
 import * as $ from '@wildboar/asn1/functional';
 import {
-  Equality_Comparision,
+  type Equality_Comparision,
   _decode_Equality_Comparision,
   _encode_Equality_Comparision,
 } from '../ISO8571-FTAM/Equality-Comparision.ta.mjs';
@@ -46,7 +46,7 @@ export class Bitstring_Pattern {
    * @public
    * @readonly
    */
-  readonly equality_comparision: Equality_Comparision;
+  public readonly equality_comparision: Equality_Comparision;
   /**
    * @summary `match_bitstring`.
    * @description
@@ -56,7 +56,7 @@ export class Bitstring_Pattern {
    * @public
    * @readonly
    */
-  readonly match_bitstring: BIT_STRING;
+  public readonly match_bitstring: BIT_STRING;
   /**
    * @summary `significance_bitstring`.
    * @description
@@ -66,7 +66,7 @@ export class Bitstring_Pattern {
    * @public
    * @readonly
    */
-  readonly significance_bitstring: BIT_STRING;
+  public readonly significance_bitstring: BIT_STRING;
 
   constructor(
     equality_comparision: Equality_Comparision,

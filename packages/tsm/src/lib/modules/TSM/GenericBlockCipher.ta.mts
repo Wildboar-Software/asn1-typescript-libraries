@@ -1,6 +1,6 @@
 /* eslint-disable */
 import {
-    ASN1Element as _Element,
+    type ASN1Element as _Element,
     ASN1TagClass as _TagClass,
     ASN1Construction as _Construction,
     ASN1UniversalType as _UniversalType,
@@ -11,9 +11,9 @@ import {
     ASN1SizeError,
 } from "@wildboar/asn1";
 import * as $ from "@wildboar/asn1/functional";
-import { Opaque, _decode_Opaque, _encode_Opaque } from "../TSM/Opaque.ta.mjs";
+import { type Opaque, _decode_Opaque, _encode_Opaque } from "../TSM/Opaque.ta.mjs";
 
-import { HASH, _get_decoder_for_HASH, _get_encoder_for_HASH } from "../TSM/HASH.ta.mjs";
+import { type HASH, _get_decoder_for_HASH, _get_encoder_for_HASH } from "../TSM/HASH.ta.mjs";
 
 
 
@@ -43,38 +43,46 @@ import { HASH, _get_decoder_for_HASH, _get_encoder_for_HASH } from "../TSM/HASH.
  */
 export
 class GenericBlockCipher {
+    /**
+     * @summary `content`.
+     * @description
+     *
+     * Encrypted record payload, `SIZE(0..65535)`. X.1084 Annex A.
+     *
+     * @public
+     * @readonly
+     */
+    public readonly content: Opaque;
+    /**
+     * @summary `mAC`.
+     * @description
+     *
+     * Record MAC, `HASH{Opaque}`. X.1084 Annex A.
+     *
+     * @public
+     * @readonly
+     */
+    public readonly mAC: HASH<Opaque>;
+    /**
+     * @summary `padding`.
+     * @description
+     *
+     * Block padding: each octet is (padding length − 1). X.1084 Annex A.
+     *
+     * @public
+     * @readonly
+     */
+    public readonly padding: Opaque;
+
     constructor (
-        /**
-         * @summary `content`.
-         * @description
-         *
-         * Encrypted record payload, `SIZE(0..65535)`. X.1084 Annex A.
-         *
-         * @public
-         * @readonly
-         */
-        readonly content: Opaque,
-        /**
-         * @summary `mAC`.
-         * @description
-         *
-         * Record MAC, `HASH{Opaque}`. X.1084 Annex A.
-         *
-         * @public
-         * @readonly
-         */
-        readonly mAC: HASH<Opaque>,
-        /**
-         * @summary `padding`.
-         * @description
-         *
-         * Block padding: each octet is (padding length − 1). X.1084 Annex A.
-         *
-         * @public
-         * @readonly
-         */
-        readonly padding: Opaque
-    ) {}
+        content: Opaque,
+        mAC: HASH<Opaque>,
+        padding: Opaque
+    ) {
+        this.content = content;
+        this.mAC = mAC;
+        this.padding = padding;
+    }
 
     /**
      * @summary Restructures an object into a GenericBlockCipher

@@ -1,6 +1,6 @@
 /* eslint-disable */
 import {
-    ASN1Element as _Element,
+    type ASN1Element as _Element,
     ASN1TagClass as _TagClass,
     ASN1Construction as _Construction,
     ASN1UniversalType as _UniversalType,
@@ -10,8 +10,8 @@ import {
     ASN1ConstructionError as _ConstructionError,
 } from "@wildboar/asn1";
 import * as $ from "@wildboar/asn1/functional";
-import { BdcPKCInformation, _decode_BdcPKCInformation, _encode_BdcPKCInformation } from "../TAI/BdcPKCInformation.ta.mjs";
-import { BPUReportInformation, _decode_BPUReportInformation, _encode_BPUReportInformation } from "../TAI/BPUReportInformation.ta.mjs";
+import { type BdcPKCInformation, _decode_BdcPKCInformation, _encode_BdcPKCInformation } from "../TAI/BdcPKCInformation.ta.mjs";
+import { type BPUReportInformation, _decode_BPUReportInformation, _encode_BPUReportInformation } from "../TAI/BPUReportInformation.ta.mjs";
 
 /**
  * @summary BDCReportContentInformation
@@ -33,31 +33,37 @@ import { BPUReportInformation, _decode_BPUReportInformation, _encode_BPUReportIn
  */
 export
 class BDCReportContentInformation {
+    /**
+     * @summary `bdcPKCInformation`.
+     * @description
+     *
+     * Device X.509 public-key certificate, or a URI pointing
+     * to it. X.1089 §10.3, §10.5.
+     *
+     * @public
+     * @readonly
+     */
+    public readonly bdcPKCInformation: BdcPKCInformation;
+    /**
+     * @summary `bdcReportInformation`.
+     * @description
+     *
+     * ACBio certified report of BPU processing (and security
+     * levels used), or a URI referring to it. X.1089 §7,
+     * §10.4.
+     *
+     * @public
+     * @readonly
+     */
+    public readonly bdcReportInformation: BPUReportInformation;
+
     constructor (
-        /**
-         * @summary `bdcPKCInformation`.
-         * @description
-         *
-         * Device X.509 public-key certificate, or a URI pointing
-         * to it. X.1089 §10.3, §10.5.
-         *
-         * @public
-         * @readonly
-         */
-        readonly bdcPKCInformation: BdcPKCInformation,
-        /**
-         * @summary `bdcReportInformation`.
-         * @description
-         *
-         * ACBio certified report of BPU processing (and security
-         * levels used), or a URI referring to it. X.1089 §7,
-         * §10.4.
-         *
-         * @public
-         * @readonly
-         */
-        readonly bdcReportInformation: BPUReportInformation
-    ) {}
+        bdcPKCInformation: BdcPKCInformation,
+        bdcReportInformation: BPUReportInformation
+    ) {
+        this.bdcPKCInformation = bdcPKCInformation;
+        this.bdcReportInformation = bdcReportInformation;
+    }
 
     /**
      * @summary Restructures an object into a BDCReportContentInformation

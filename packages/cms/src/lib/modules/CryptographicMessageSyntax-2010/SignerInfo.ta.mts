@@ -1,42 +1,42 @@
 /* eslint-disable */
 import {
-    ASN1Element as _Element,
+    type ASN1Element as _Element,
     ASN1TagClass as _TagClass,
-    OPTIONAL,
+    type OPTIONAL,
 } from "@wildboar/asn1";
 import * as $ from "@wildboar/asn1/functional";
 import {
-    Attributes,
+    type Attributes,
     _decode_Attributes,
     _encode_Attributes,
 } from "../CryptographicMessageSyntax-2010/Attributes.ta.mjs";
 import {
-    CMSVersion,
+    type CMSVersion,
     _decode_CMSVersion,
     _encode_CMSVersion,
 } from "../CryptographicMessageSyntax-2010/CMSVersion.ta.mjs";
 import {
-    DigestAlgorithmIdentifier,
+    type DigestAlgorithmIdentifier,
     _decode_DigestAlgorithmIdentifier,
     _encode_DigestAlgorithmIdentifier,
 } from "../CryptographicMessageSyntax-2010/DigestAlgorithmIdentifier.ta.mjs";
 import {
-    SignatureAlgorithmIdentifier,
+    type SignatureAlgorithmIdentifier,
     _decode_SignatureAlgorithmIdentifier,
     _encode_SignatureAlgorithmIdentifier,
 } from "../CryptographicMessageSyntax-2010/SignatureAlgorithmIdentifier.ta.mjs";
 import {
-    SignatureValue,
+    type SignatureValue,
     _decode_SignatureValue,
     _encode_SignatureValue,
 } from "../CryptographicMessageSyntax-2010/SignatureValue.ta.mjs";
 import {
-    SignedAttributes,
+    type SignedAttributes,
     _decode_SignedAttributes,
     _encode_SignedAttributes,
 } from "../CryptographicMessageSyntax-2010/SignedAttributes.ta.mjs";
 import {
-    SignerIdentifier,
+    type SignerIdentifier,
     _decode_SignerIdentifier,
     _encode_SignerIdentifier,
 } from "../CryptographicMessageSyntax-2010/SignerIdentifier.ta.mjs";
@@ -65,88 +65,104 @@ import {
  *
  */
 export class SignerInfo {
+    /**
+     * @summary `version`.
+     * @description
+     *
+     * Syntax version: 1 if `sid` is `issuerAndSerialNumber`; 3 if `sid` is
+     * `subjectKeyIdentifier` ([RFC 5652 §5.3](https://datatracker.ietf.org/doc/html/rfc5652#section-5.3)).
+     *
+     * @public
+     * @readonly
+     */
+    public readonly version: CMSVersion;
+    /**
+     * @summary `sid`.
+     * @description
+     *
+     * Signer identifier: issuer+serial or subject key identifier
+     * ([RFC 5652 §5.3](https://datatracker.ietf.org/doc/html/rfc5652#section-5.3)).
+     *
+     * @public
+     * @readonly
+     */
+    public readonly sid: SignerIdentifier;
+    /**
+     * @summary `digestAlgorithm`.
+     * @description
+     *
+     * Message-digest algorithm (and parameters) used by this signer; SHOULD
+     * also appear in `SignedData.digestAlgorithms`
+     * ([RFC 5652 §5.3](https://datatracker.ietf.org/doc/html/rfc5652#section-5.3)).
+     *
+     * @public
+     * @readonly
+     */
+    public readonly digestAlgorithm: DigestAlgorithmIdentifier;
+    /**
+     * @summary `signedAttrs`.
+     * @description
+     *
+     * Optional signed attributes. MUST be present if content type is other
+     * than `id-data`; MUST include `content-type` and `message-digest` when
+     * present ([RFC 5652 §5.3](https://datatracker.ietf.org/doc/html/rfc5652#section-5.3)).
+     *
+     * @public
+     * @readonly
+     */
+    public readonly signedAttrs: OPTIONAL<SignedAttributes>;
+    /**
+     * @summary `signatureAlgorithm`.
+     * @description
+     *
+     * Signature algorithm (and parameters) used by this signer
+     * ([RFC 5652 §5.3](https://datatracker.ietf.org/doc/html/rfc5652#section-5.3)).
+     *
+     * @public
+     * @readonly
+     */
+    public readonly signatureAlgorithm: SignatureAlgorithmIdentifier;
+    /**
+     * @summary `signature`.
+     * @description
+     *
+     * Result of the signature generation process over the message digest
+     * ([RFC 5652 §5.3](https://datatracker.ietf.org/doc/html/rfc5652#section-5.3),
+     * [§5.5](https://datatracker.ietf.org/doc/html/rfc5652#section-5.5)).
+     *
+     * @public
+     * @readonly
+     */
+    public readonly signature: SignatureValue;
+    /**
+     * @summary `unsignedAttrs`.
+     * @description
+     *
+     * Optional unsigned attributes (e.g., countersignatures); not covered by
+     * this signature ([RFC 5652 §5.3](https://datatracker.ietf.org/doc/html/rfc5652#section-5.3)).
+     *
+     * @public
+     * @readonly
+     */
+    public readonly unsignedAttrs?: OPTIONAL<Attributes>;
+
     constructor(
-        /**
-         * @summary `version`.
-         * @description
-         *
-         * Syntax version: 1 if `sid` is `issuerAndSerialNumber`; 3 if `sid` is
-         * `subjectKeyIdentifier` ([RFC 5652 §5.3](https://datatracker.ietf.org/doc/html/rfc5652#section-5.3)).
-         *
-         * @public
-         * @readonly
-         */
-        readonly version: CMSVersion,
-        /**
-         * @summary `sid`.
-         * @description
-         *
-         * Signer identifier: issuer+serial or subject key identifier
-         * ([RFC 5652 §5.3](https://datatracker.ietf.org/doc/html/rfc5652#section-5.3)).
-         *
-         * @public
-         * @readonly
-         */
-        readonly sid: SignerIdentifier,
-        /**
-         * @summary `digestAlgorithm`.
-         * @description
-         *
-         * Message-digest algorithm (and parameters) used by this signer; SHOULD
-         * also appear in `SignedData.digestAlgorithms`
-         * ([RFC 5652 §5.3](https://datatracker.ietf.org/doc/html/rfc5652#section-5.3)).
-         *
-         * @public
-         * @readonly
-         */
-        readonly digestAlgorithm: DigestAlgorithmIdentifier,
-        /**
-         * @summary `signedAttrs`.
-         * @description
-         *
-         * Optional signed attributes. MUST be present if content type is other
-         * than `id-data`; MUST include `content-type` and `message-digest` when
-         * present ([RFC 5652 §5.3](https://datatracker.ietf.org/doc/html/rfc5652#section-5.3)).
-         *
-         * @public
-         * @readonly
-         */
-        readonly signedAttrs: OPTIONAL<SignedAttributes>,
-        /**
-         * @summary `signatureAlgorithm`.
-         * @description
-         *
-         * Signature algorithm (and parameters) used by this signer
-         * ([RFC 5652 §5.3](https://datatracker.ietf.org/doc/html/rfc5652#section-5.3)).
-         *
-         * @public
-         * @readonly
-         */
-        readonly signatureAlgorithm: SignatureAlgorithmIdentifier,
-        /**
-         * @summary `signature`.
-         * @description
-         *
-         * Result of the signature generation process over the message digest
-         * ([RFC 5652 §5.3](https://datatracker.ietf.org/doc/html/rfc5652#section-5.3),
-         * [§5.5](https://datatracker.ietf.org/doc/html/rfc5652#section-5.5)).
-         *
-         * @public
-         * @readonly
-         */
-        readonly signature: SignatureValue,
-        /**
-         * @summary `unsignedAttrs`.
-         * @description
-         *
-         * Optional unsigned attributes (e.g., countersignatures); not covered by
-         * this signature ([RFC 5652 §5.3](https://datatracker.ietf.org/doc/html/rfc5652#section-5.3)).
-         *
-         * @public
-         * @readonly
-         */
-        readonly unsignedAttrs?: OPTIONAL<Attributes>
-    ) {}
+        version: CMSVersion,
+        sid: SignerIdentifier,
+        digestAlgorithm: DigestAlgorithmIdentifier,
+        signedAttrs: OPTIONAL<SignedAttributes>,
+        signatureAlgorithm: SignatureAlgorithmIdentifier,
+        signature: SignatureValue,
+        unsignedAttrs?: OPTIONAL<Attributes>
+    ) {
+        this.version = version;
+        this.sid = sid;
+        this.digestAlgorithm = digestAlgorithm;
+        this.signedAttrs = signedAttrs;
+        this.signatureAlgorithm = signatureAlgorithm;
+        this.signature = signature;
+        this.unsignedAttrs = unsignedAttrs;
+    }
 
     /**
      * @summary Restructures an object into a SignerInfo

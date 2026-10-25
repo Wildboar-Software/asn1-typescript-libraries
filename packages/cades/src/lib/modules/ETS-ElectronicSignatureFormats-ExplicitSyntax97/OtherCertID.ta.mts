@@ -1,7 +1,7 @@
 /* eslint-disable */
 import {
-    OPTIONAL,
-    ASN1Element as _Element,
+    type OPTIONAL,
+    type ASN1Element as _Element,
     ASN1TagClass as _TagClass,
     ASN1Construction as _Construction,
     ASN1UniversalType as _UniversalType,
@@ -11,7 +11,7 @@ import {
     ASN1ConstructionError as _ConstructionError,
 } from "@wildboar/asn1";
 import * as $ from "@wildboar/asn1/functional";
-import { OtherHash, _decode_OtherHash, _encode_OtherHash } from "../ETS-ElectronicSignatureFormats-ExplicitSyntax97/OtherHash.ta.mjs";
+import { type OtherHash, _decode_OtherHash, _encode_OtherHash } from "../ETS-ElectronicSignatureFormats-ExplicitSyntax97/OtherHash.ta.mjs";
 import {
     IssuerSerial,
     _decode_IssuerSerial,
@@ -41,30 +41,36 @@ import {
  */
 export
 class OtherCertID {
+    /**
+     * @summary `otherCertHash`.
+     * @description
+     *
+     * Hash of the referenced certificate. Shall match that
+     * certificate.
+     *
+     * @public
+     * @readonly
+     */
+    public readonly otherCertHash: OtherHash;
+    /**
+     * @summary `issuerSerial`.
+     * @description
+     *
+     * Issuer name and serial number. Required when this
+     * identifier is used in `complete-certificate-references`.
+     *
+     * @public
+     * @readonly
+     */
+    public readonly issuerSerial?: OPTIONAL<IssuerSerial>;
+
     constructor (
-        /**
-         * @summary `otherCertHash`.
-         * @description
-         *
-         * Hash of the referenced certificate. Shall match that
-         * certificate.
-         *
-         * @public
-         * @readonly
-         */
-        readonly otherCertHash: OtherHash,
-        /**
-         * @summary `issuerSerial`.
-         * @description
-         *
-         * Issuer name and serial number. Required when this
-         * identifier is used in `complete-certificate-references`.
-         *
-         * @public
-         * @readonly
-         */
-        readonly issuerSerial?: OPTIONAL<IssuerSerial>
-    ) {}
+        otherCertHash: OtherHash,
+        issuerSerial?: OPTIONAL<IssuerSerial>
+    ) {
+        this.otherCertHash = otherCertHash;
+        this.issuerSerial = issuerSerial;
+    }
 
     /**
      * @summary Restructures an object into a OtherCertID

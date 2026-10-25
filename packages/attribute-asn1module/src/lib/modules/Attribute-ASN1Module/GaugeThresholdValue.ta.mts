@@ -1,6 +1,6 @@
 /* eslint-disable */
 import {
-    ASN1Element as _Element,
+    type ASN1Element as _Element,
     ASN1TagClass as _TagClass,
     ASN1Construction as _Construction,
     ASN1UniversalType as _UniversalType,
@@ -10,7 +10,7 @@ import {
     ASN1ConstructionError as _ConstructionError,
 } from "@wildboar/asn1";
 import * as $ from "@wildboar/asn1/functional";
-import { ObservedValue, _decode_ObservedValue, _encode_ObservedValue } from "../Attribute-ASN1Module/ObservedValue.ta.mjs";
+import { type ObservedValue, _decode_ObservedValue, _encode_ObservedValue } from "../Attribute-ASN1Module/ObservedValue.ta.mjs";
 /**
  * @summary GaugeThresholdValue
  * @description
@@ -27,21 +27,13 @@ import { ObservedValue, _decode_ObservedValue, _encode_ObservedValue } from "../
 export
 type GaugeThresholdValue = ObservedValue; // DefinedType
 
-let _cached_decoder_for_GaugeThresholdValue: $.ASN1Decoder<GaugeThresholdValue> | null = null;
-
 /**
  * @summary Decodes an ASN.1 element into a(n) GaugeThresholdValue
  * @function
  * @param {_Element} el The element being decoded.
  * @returns {GaugeThresholdValue} The decoded data structure.
  */
-export
-function _decode_GaugeThresholdValue (el: _Element): GaugeThresholdValue {
-    if (!_cached_decoder_for_GaugeThresholdValue) { _cached_decoder_for_GaugeThresholdValue = _decode_ObservedValue; }
-    return _cached_decoder_for_GaugeThresholdValue(el);
-}
-
-let _cached_encoder_for_GaugeThresholdValue: $.ASN1Encoder<GaugeThresholdValue> | null = null;
+export const _decode_GaugeThresholdValue: $.ASN1Decoder<GaugeThresholdValue> = _decode_ObservedValue;
 
 /**
  * @summary Encodes a(n) GaugeThresholdValue into an ASN.1 Element.
@@ -50,11 +42,7 @@ let _cached_encoder_for_GaugeThresholdValue: $.ASN1Encoder<GaugeThresholdValue> 
  * @param elGetter A function that can be used to get new ASN.1 elements.
  * @returns {_Element} The GaugeThresholdValue, encoded as an ASN.1 Element.
  */
-export
-function _encode_GaugeThresholdValue (value: GaugeThresholdValue, elGetter: $.ASN1Encoder<GaugeThresholdValue>): _Element {
-    if (!_cached_encoder_for_GaugeThresholdValue) { _cached_encoder_for_GaugeThresholdValue = _encode_ObservedValue; }
-    return _cached_encoder_for_GaugeThresholdValue(value, elGetter);
-}
+export const _encode_GaugeThresholdValue: $.ASN1Encoder<GaugeThresholdValue> = _encode_ObservedValue;
 
 
 /* eslint-enable */

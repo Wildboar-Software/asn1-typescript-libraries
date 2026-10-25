@@ -1,7 +1,7 @@
 /* eslint-disable */
 import {
-    OPTIONAL,
-    ASN1Element as _Element,
+    type OPTIONAL,
+    type ASN1Element as _Element,
     ASN1TagClass as _TagClass,
     ASN1Construction as _Construction,
     ASN1UniversalType as _UniversalType,
@@ -12,12 +12,12 @@ import {
 } from '@wildboar/asn1';
 import * as $ from '@wildboar/asn1/functional';
 import {
-    ActionTypeId,
+    type ActionTypeId,
     _decode_ActionTypeId,
     _encode_ActionTypeId,
 } from '@wildboar/cmip';
 import {
-    FilterList,
+    type FilterList,
     _decode_FilterList,
     _encode_FilterList,
 } from '../AccessControl-ASN1Module/FilterList.ta.mjs';
@@ -39,30 +39,36 @@ import {
  *
  */
 export class ActionFilterList_Item {
+    /**
+     * @summary `actionTypeId`.
+     * @description
+     *
+     * Action type included in the target. If no
+     * `attributeFilterList`, all information values of this
+     * action are targeted. X.741 A.2.6, A.5.4.
+     * @public
+     * @readonly
+     */
+    public readonly actionTypeId: ActionTypeId;
+    /**
+     * @summary `attributeFilterList`.
+     * @description
+     *
+     * Optional CMIS filters on this action's arguments.
+     * Omit to leave argument values unconstrained. X.741
+     * A.2.6, A.5.4.
+     * @public
+     * @readonly
+     */
+    public readonly attributeFilterList?: OPTIONAL<FilterList>;
+
     constructor(
-        /**
-         * @summary `actionTypeId`.
-         * @description
-         *
-         * Action type included in the target. If no
-         * `attributeFilterList`, all information values of this
-         * action are targeted. X.741 A.2.6, A.5.4.
-         * @public
-         * @readonly
-         */
-        readonly actionTypeId: ActionTypeId,
-        /**
-         * @summary `attributeFilterList`.
-         * @description
-         *
-         * Optional CMIS filters on this action's arguments.
-         * Omit to leave argument values unconstrained. X.741
-         * A.2.6, A.5.4.
-         * @public
-         * @readonly
-         */
-        readonly attributeFilterList?: OPTIONAL<FilterList>
-    ) {}
+        actionTypeId: ActionTypeId,
+        attributeFilterList?: OPTIONAL<FilterList>
+    ) {
+        this.actionTypeId = actionTypeId;
+        this.attributeFilterList = attributeFilterList;
+    }
 
     /**
      * @summary Restructures an object into a ActionFilterList_Item

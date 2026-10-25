@@ -1,7 +1,7 @@
 /* eslint-disable */
 import {
-    OPTIONAL,
-    ASN1Element as _Element,
+    type OPTIONAL,
+    type ASN1Element as _Element,
     ASN1TagClass as _TagClass
 } from "@wildboar/asn1";
 import * as $ from "@wildboar/asn1/functional";
@@ -20,8 +20,8 @@ import { ModificationInstruction, _decode_ModificationInstruction, _encode_Modif
  * 
  * ```asn1
  * ModificationRequestFor-CSG ::= SEQUENCE {
- *     modifyNotificationToCSE    [0]    ModificationInstruction    OPTIONAL,
- *     extensionContainer    [1]    ExtensionContainer    OPTIONAL,
+ *     modifyNotificationToCSE    [0]    ModificationInstruction    type OPTIONAL,
+ *     extensionContainer    [1]    ExtensionContainer    type OPTIONAL,
  *     ...}
  * ```
  * 
@@ -29,31 +29,39 @@ import { ModificationInstruction, _decode_ModificationInstruction, _encode_Modif
  */
 export
 class ModificationRequestFor_CSG {
+    /**
+     * @summary `modifyNotificationToCSE`.
+     * @description
+     *
+     * Activate or deactivate notification to the CSE. (3GPP TS 29.002
+     * V19.1.0 clauses 7.6.3.82 and 8.11.4)
+     *
+     * @public
+     * @readonly
+     */
+    public readonly modifyNotificationToCSE?: OPTIONAL<ModificationInstruction>;
+    /**
+     * @summary `extensionContainer`.
+     * @public
+     * @readonly
+     */
+    public readonly extensionContainer?: OPTIONAL<ExtensionContainer>;
+    /**
+     * @summary Extensions that are not recognized.
+     * @public
+     * @readonly
+     */
+    public readonly _unrecognizedExtensionsList: _Element[];
+
     constructor (
-        /**
-         * @summary `modifyNotificationToCSE`.
-         * @description
-         *
-         * Activate or deactivate notification to the CSE. (3GPP TS 29.002
-         * V19.1.0 clauses 7.6.3.82 and 8.11.4)
-         *
-         * @public
-         * @readonly
-         */
-        readonly modifyNotificationToCSE?: OPTIONAL<ModificationInstruction>,
-        /**
-         * @summary `extensionContainer`.
-         * @public
-         * @readonly
-         */
-        readonly extensionContainer?: OPTIONAL<ExtensionContainer>,
-        /**
-         * @summary Extensions that are not recognized.
-         * @public
-         * @readonly
-         */
-        readonly _unrecognizedExtensionsList: _Element[] = []
-    ) {}
+        modifyNotificationToCSE?: OPTIONAL<ModificationInstruction>,
+        extensionContainer?: OPTIONAL<ExtensionContainer>,
+        _unrecognizedExtensionsList: _Element[] = []
+    ) {
+        this.modifyNotificationToCSE = modifyNotificationToCSE;
+        this.extensionContainer = extensionContainer;
+        this._unrecognizedExtensionsList = _unrecognizedExtensionsList;
+    }
 
     /**
      * @summary Restructures an object into a ModificationRequestFor_CSG
@@ -77,7 +85,7 @@ class ModificationRequestFor_CSG {
          * @static
          */
 
-    public static _enum_for_modifyNotificationToCSE = _enum_for_ModificationInstruction;
+    public static _enum_for_modifyNotificationToCSE: typeof _enum_for_ModificationInstruction = _enum_for_ModificationInstruction;
 }
 
 /**

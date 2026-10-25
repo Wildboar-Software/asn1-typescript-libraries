@@ -1,7 +1,7 @@
 /* eslint-disable */
 import {
-    OPTIONAL,
-    ASN1Element as _Element,
+    type OPTIONAL,
+    type ASN1Element as _Element,
     ASN1TagClass as _TagClass,
     ASN1Construction as _Construction,
     ASN1UniversalType as _UniversalType,
@@ -11,8 +11,8 @@ import {
     ASN1ConstructionError as _ConstructionError,
 } from "@wildboar/asn1";
 import * as $ from "@wildboar/asn1/functional";
-import { VariableSpecification, _decode_VariableSpecification, _encode_VariableSpecification } from "../ISO-9506-MMS-1/VariableSpecification.ta.mjs";
-import { AlternateAccess, _decode_AlternateAccess, _encode_AlternateAccess } from "../ISO-9506-MMS-1/AlternateAccess.ta.mjs";
+import { type VariableSpecification, _decode_VariableSpecification, _encode_VariableSpecification } from "../ISO-9506-MMS-1/VariableSpecification.ta.mjs";
+import { type AlternateAccess, _decode_AlternateAccess, _encode_AlternateAccess } from "../ISO-9506-MMS-1/AlternateAccess.ta.mjs";
 
 
 /**
@@ -35,31 +35,37 @@ import { AlternateAccess, _decode_AlternateAccess, _encode_AlternateAccess } fro
  */
 export
 class DefineNamedVariableList_Request_listOfVariable_Item {
+    /**
+     * @summary `variableSpecification`.
+     * @description
+     *
+     * NAMED, UNNAMED, or SINGLE variable for this element.
+     * ISO 9506-1:2003 §14.12.1.1.2.1, §14.5.2.
+     *
+     * @public
+     * @readonly
+     */
+    public readonly variableSpecification: VariableSpecification;
+    /**
+     * @summary `alternateAccess`.
+     * @description
+     *
+     * Alternate Access when this element is accessed
+     * (`valt`). Omit for full access.
+     * ISO 9506-1:2003 §14.12.1.1.2.2, §14.3.
+     *
+     * @public
+     * @readonly
+     */
+    public readonly alternateAccess?: OPTIONAL<AlternateAccess>;
+
     constructor (
-        /**
-         * @summary `variableSpecification`.
-         * @description
-         *
-         * NAMED, UNNAMED, or SINGLE variable for this element.
-         * ISO 9506-1:2003 §14.12.1.1.2.1, §14.5.2.
-         *
-         * @public
-         * @readonly
-         */
-        readonly variableSpecification: VariableSpecification,
-        /**
-         * @summary `alternateAccess`.
-         * @description
-         *
-         * Alternate Access when this element is accessed
-         * (`valt`). Omit for full access.
-         * ISO 9506-1:2003 §14.12.1.1.2.2, §14.3.
-         *
-         * @public
-         * @readonly
-         */
-        readonly alternateAccess?: OPTIONAL<AlternateAccess>
-    ) {}
+        variableSpecification: VariableSpecification,
+        alternateAccess?: OPTIONAL<AlternateAccess>
+    ) {
+        this.variableSpecification = variableSpecification;
+        this.alternateAccess = alternateAccess;
+    }
 
     /**
      * @summary Restructures an object into a DefineNamedVariableList_Request_listOfVariable_Item

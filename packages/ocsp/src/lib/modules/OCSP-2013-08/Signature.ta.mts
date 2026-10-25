@@ -1,9 +1,9 @@
 /* eslint-disable */
 import {
-    ASN1Element as _Element,
+    type ASN1Element as _Element,
     ASN1TagClass as _TagClass,
-    BIT_STRING,
-    OPTIONAL,
+    type BIT_STRING,
+    type OPTIONAL,
 } from "@wildboar/asn1";
 import * as $ from "@wildboar/asn1/functional";
 import {
@@ -12,7 +12,7 @@ import {
     _encode_AlgorithmIdentifier,
 } from "@wildboar/pki-stub";
 import {
-    Certificate,
+    type Certificate,
     _decode_Certificate,
     _encode_Certificate,
 } from "@wildboar/pki-stub";
@@ -39,45 +39,53 @@ import {
  *
  */
 export class Signature {
+    /**
+     * @summary `signatureAlgorithm`.
+     * @description
+     *
+     * Algorithm identifier and any associated parameters for the
+     * request signature
+     * ([RFC 6960 §4.1.1](https://datatracker.ietf.org/doc/html/rfc6960#section-4.1.1)).
+     *
+     * @public
+     * @readonly
+     */
+    public readonly signatureAlgorithm: AlgorithmIdentifier;
+    /**
+     * @summary `signature`.
+     * @description
+     *
+     * Signature value over `tbsRequest`
+     * ([RFC 6960 §4.1.1](https://datatracker.ietf.org/doc/html/rfc6960#section-4.1.1)).
+     *
+     * @public
+     * @readonly
+     */
+    public readonly signature: BIT_STRING;
+    /**
+     * @summary `certs`.
+     * @description
+     *
+     * Optional certificates that help the OCSP responder verify
+     * the requestor's signature (normally up to but not including
+     * the client's root certificate)
+     * ([RFC 6960 §4.1.1](https://datatracker.ietf.org/doc/html/rfc6960#section-4.1.1),
+     * [§4.1.2](https://datatracker.ietf.org/doc/html/rfc6960#section-4.1.2)).
+     *
+     * @public
+     * @readonly
+     */
+    public readonly certs?: OPTIONAL<Certificate[]>;
+
     constructor(
-        /**
-         * @summary `signatureAlgorithm`.
-         * @description
-         *
-         * Algorithm identifier and any associated parameters for the
-         * request signature
-         * ([RFC 6960 §4.1.1](https://datatracker.ietf.org/doc/html/rfc6960#section-4.1.1)).
-         *
-         * @public
-         * @readonly
-         */
-        readonly signatureAlgorithm: AlgorithmIdentifier,
-        /**
-         * @summary `signature`.
-         * @description
-         *
-         * Signature value over `tbsRequest`
-         * ([RFC 6960 §4.1.1](https://datatracker.ietf.org/doc/html/rfc6960#section-4.1.1)).
-         *
-         * @public
-         * @readonly
-         */
-        readonly signature: BIT_STRING,
-        /**
-         * @summary `certs`.
-         * @description
-         *
-         * Optional certificates that help the OCSP responder verify
-         * the requestor's signature (normally up to but not including
-         * the client's root certificate)
-         * ([RFC 6960 §4.1.1](https://datatracker.ietf.org/doc/html/rfc6960#section-4.1.1),
-         * [§4.1.2](https://datatracker.ietf.org/doc/html/rfc6960#section-4.1.2)).
-         *
-         * @public
-         * @readonly
-         */
-        readonly certs?: OPTIONAL<Certificate[]>
-    ) {}
+        signatureAlgorithm: AlgorithmIdentifier,
+        signature: BIT_STRING,
+        certs?: OPTIONAL<Certificate[]>
+    ) {
+        this.signatureAlgorithm = signatureAlgorithm;
+        this.signature = signature;
+        this.certs = certs;
+    }
 
     /**
      * @summary Restructures an object into a Signature

@@ -1,6 +1,6 @@
 /* eslint-disable */
 import {
-    INTEGER
+    type INTEGER
 } from "@wildboar/asn1";
 import * as $ from "@wildboar/asn1/functional";
 
@@ -38,7 +38,7 @@ type DiagnosticRcfGet_specific = INTEGER;
  * @type {number}
  */
 export
-const DiagnosticRcfGet_specific_unknownParameter: DiagnosticRcfGet_specific = 0; /* LONG_NAMED_INTEGER_VALUE */
+const DiagnosticRcfGet_specific_unknownParameter: 0 = 0 satisfies DiagnosticRcfGet_specific; /* LONG_NAMED_INTEGER_VALUE */
 
 /**
  * @summary DiagnosticRcfGet_specific_unknownParameter
@@ -50,7 +50,7 @@ const DiagnosticRcfGet_specific_unknownParameter: DiagnosticRcfGet_specific = 0;
  * @type {number}
  */
 export
-const unknownParameter: DiagnosticRcfGet_specific = DiagnosticRcfGet_specific_unknownParameter; /* SHORT_NAMED_INTEGER_VALUE */
+const unknownParameter: 0 = DiagnosticRcfGet_specific_unknownParameter; /* SHORT_NAMED_INTEGER_VALUE */
 export const _decode_DiagnosticRcfGet_specific: $.ASN1Decoder<DiagnosticRcfGet_specific> = $._decodeInteger;
 export const _encode_DiagnosticRcfGet_specific: $.ASN1Encoder<DiagnosticRcfGet_specific> = $._encodeInteger;
 

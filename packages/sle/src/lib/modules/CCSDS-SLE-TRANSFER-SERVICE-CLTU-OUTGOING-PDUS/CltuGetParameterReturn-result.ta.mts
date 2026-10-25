@@ -1,11 +1,11 @@
 /* eslint-disable */
 import {
-    ASN1Element as _Element,
+    type ASN1Element as _Element,
     ASN1TagClass as _TagClass
 } from "@wildboar/asn1";
 import * as $ from "@wildboar/asn1/functional";
-import { CltuGetParameter, _decode_CltuGetParameter, _encode_CltuGetParameter } from "../CCSDS-SLE-TRANSFER-SERVICE-CLTU-STRUCTURES/CltuGetParameter.ta.mjs";
-import { DiagnosticCltuGetParameter, _decode_DiagnosticCltuGetParameter, _encode_DiagnosticCltuGetParameter } from "../CCSDS-SLE-TRANSFER-SERVICE-CLTU-STRUCTURES/DiagnosticCltuGetParameter.ta.mjs";
+import { type CltuGetParameter, _decode_CltuGetParameter, _encode_CltuGetParameter } from "../CCSDS-SLE-TRANSFER-SERVICE-CLTU-STRUCTURES/CltuGetParameter.ta.mjs";
+import { type DiagnosticCltuGetParameter, _decode_DiagnosticCltuGetParameter, _encode_DiagnosticCltuGetParameter } from "../CCSDS-SLE-TRANSFER-SERVICE-CLTU-STRUCTURES/DiagnosticCltuGetParameter.ta.mjs";
 
 
 /**

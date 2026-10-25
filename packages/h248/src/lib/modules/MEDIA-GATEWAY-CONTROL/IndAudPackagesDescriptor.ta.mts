@@ -1,13 +1,13 @@
 /* eslint-disable */
 import {
-    INTEGER,
+    type INTEGER,
     ASN1ConstructionError as _ConstructionError,
-    ASN1Element as _Element,
+    type ASN1Element as _Element,
     ASN1TagClass as _TagClass,
     ASN1OverflowError
 } from "@wildboar/asn1";
 import * as $ from "@wildboar/asn1/functional";
-import { Name, _decode_Name, _encode_Name } from "../MEDIA-GATEWAY-CONTROL/Name.ta.mjs";
+import { type Name, _decode_Name, _encode_Name } from "../MEDIA-GATEWAY-CONTROL/Name.ta.mjs";
 
 
 /**
@@ -43,7 +43,7 @@ class IndAudPackagesDescriptor {
      * @public
      * @readonly
      */
-    readonly packageName: Name;
+    public readonly packageName: Name;
     /**
      * @summary `packageVersion`.
      * @description
@@ -53,7 +53,7 @@ class IndAudPackagesDescriptor {
      * @public
      * @readonly
      */
-    readonly packageVersion: INTEGER;
+    public readonly packageVersion: INTEGER;
     /**
      * @summary Extensions that are not recognized.
      * @description
@@ -64,16 +64,16 @@ class IndAudPackagesDescriptor {
      * @public
      * @readonly
      */
-    readonly _unrecognizedExtensionsList: _Element[];
+    public readonly _unrecognizedExtensionsList: _Element[];
 
     constructor (
         packageName: Name,
         packageVersion: INTEGER,
         _unrecognizedExtensionsList: _Element[] = []
     ) {
-        this.packageName = packageName;
-        this.packageVersion = packageVersion;
-        this._unrecognizedExtensionsList = _unrecognizedExtensionsList;
+            this.packageName = packageName;
+            this.packageVersion = packageVersion;
+            this._unrecognizedExtensionsList = _unrecognizedExtensionsList;
             const n = typeof packageVersion === "bigint" ? packageVersion : BigInt(packageVersion);
             if (n < 0n || n > 99n) {
                 throw new ASN1OverflowError("IndAudPackagesDescriptor.packageVersion violates INTEGER range");

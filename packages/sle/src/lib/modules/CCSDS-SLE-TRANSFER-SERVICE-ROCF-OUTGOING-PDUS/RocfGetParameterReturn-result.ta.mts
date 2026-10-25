@@ -1,11 +1,11 @@
 /* eslint-disable */
 import {
-    ASN1Element as _Element,
+    type ASN1Element as _Element,
     ASN1TagClass as _TagClass
 } from "@wildboar/asn1";
 import * as $ from "@wildboar/asn1/functional";
-import { RocfGetParameter, _decode_RocfGetParameter, _encode_RocfGetParameter } from "../CCSDS-SLE-TRANSFER-SERVICE-ROCF-STRUCTURES/RocfGetParameter.ta.mjs";
-import { DiagnosticRocfGet, _decode_DiagnosticRocfGet, _encode_DiagnosticRocfGet } from "../CCSDS-SLE-TRANSFER-SERVICE-ROCF-STRUCTURES/DiagnosticRocfGet.ta.mjs";
+import { type RocfGetParameter, _decode_RocfGetParameter, _encode_RocfGetParameter } from "../CCSDS-SLE-TRANSFER-SERVICE-ROCF-STRUCTURES/RocfGetParameter.ta.mjs";
+import { type DiagnosticRocfGet, _decode_DiagnosticRocfGet, _encode_DiagnosticRocfGet } from "../CCSDS-SLE-TRANSFER-SERVICE-ROCF-STRUCTURES/DiagnosticRocfGet.ta.mjs";
 
 
 /**

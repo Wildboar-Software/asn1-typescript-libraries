@@ -1,7 +1,7 @@
 /* eslint-disable */
 import {
-  OCTET_STRING,
-  OBJECT_IDENTIFIER,
+  type OCTET_STRING,
+  type OBJECT_IDENTIFIER,
   ASN1Element as _Element,
   ASN1TagClass as _TagClass,
   ASN1Construction as _Construction,
@@ -31,29 +31,35 @@ import * as $ from '@wildboar/asn1/functional';
  *
  */
 export class ReplyWantBack {
+  /**
+   * @summary `wb`.
+   * @description
+   *
+   * WantBack OID from the request ([RFC 5055 §4.9.5](https://datatracker.ietf.org/doc/html/rfc5055#section-4.9.5)).
+   *
+   * @public
+   * @readonly
+   */
+  public readonly wb: OBJECT_IDENTIFIER;
+  /**
+   * @summary `value`.
+   * @description
+   *
+   * OCTET STRING containing the DER encoding of the wantBack type
+   * ([RFC 5055 §4.9.5](https://datatracker.ietf.org/doc/html/rfc5055#section-4.9.5)).
+   *
+   * @public
+   * @readonly
+   */
+  public readonly value: OCTET_STRING;
+
   constructor(
-    /**
-     * @summary `wb`.
-     * @description
-     *
-     * WantBack OID from the request ([RFC 5055 §4.9.5](https://datatracker.ietf.org/doc/html/rfc5055#section-4.9.5)).
-     *
-     * @public
-     * @readonly
-     */
-    readonly wb: OBJECT_IDENTIFIER,
-    /**
-     * @summary `value`.
-     * @description
-     *
-     * OCTET STRING containing the DER encoding of the wantBack type
-     * ([RFC 5055 §4.9.5](https://datatracker.ietf.org/doc/html/rfc5055#section-4.9.5)).
-     *
-     * @public
-     * @readonly
-     */
-    readonly value: OCTET_STRING
-  ) {}
+    wb: OBJECT_IDENTIFIER,
+    value: OCTET_STRING
+  ) {
+    this.wb = wb;
+    this.value = value;
+  }
 
   /**
    * @summary Restructures an object into a ReplyWantBack

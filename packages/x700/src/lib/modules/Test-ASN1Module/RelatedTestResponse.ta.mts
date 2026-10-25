@@ -1,6 +1,6 @@
 /* eslint-disable */
 import {
-    ASN1Element as _Element,
+    type ASN1Element as _Element,
     ASN1TagClass as _TagClass,
     ASN1Construction as _Construction,
     ASN1UniversalType as _UniversalType,
@@ -11,7 +11,7 @@ import {
 } from '@wildboar/asn1';
 import * as $ from '@wildboar/asn1/functional';
 import {
-    TestInvocationId,
+    type TestInvocationId,
     _decode_TestInvocationId,
     _encode_TestInvocationId,
 } from '../Test-ASN1Module/TestInvocationId.ta.mjs';
@@ -40,32 +40,38 @@ import {
  *
  */
 export class RelatedTestResponse {
+    /**
+     * @summary `testInvocationId`.
+     * @description
+     *
+     * Single TARR+integer invocation id shared by all related TOs. ITU-T
+     * Rec. X.745 (11/93) §7.3.1.
+     * [§7.3.1](https://www.itu.int/rec/T-REC-X.745-199311-I)
+     *
+     * @public
+     * @readonly
+     */
+    public readonly testInvocationId: TestInvocationId;
+    /**
+     * @summary `testObjectResponseList`.
+     * @description
+     *
+     * Created TOs in the same sequence as the request, for correlation.
+     * ITU-T Rec. X.745 (11/93) §8.4.3.3.
+     * [§8.4.3.3](https://www.itu.int/rec/T-REC-X.745-199311-I)
+     *
+     * @public
+     * @readonly
+     */
+    public readonly testObjectResponseList: TestObjectResponse[];
+
     constructor(
-        /**
-         * @summary `testInvocationId`.
-         * @description
-         *
-         * Single TARR+integer invocation id shared by all related TOs. ITU-T
-         * Rec. X.745 (11/93) §7.3.1.
-         * [§7.3.1](https://www.itu.int/rec/T-REC-X.745-199311-I)
-         *
-         * @public
-         * @readonly
-         */
-        readonly testInvocationId: TestInvocationId,
-        /**
-         * @summary `testObjectResponseList`.
-         * @description
-         *
-         * Created TOs in the same sequence as the request, for correlation.
-         * ITU-T Rec. X.745 (11/93) §8.4.3.3.
-         * [§8.4.3.3](https://www.itu.int/rec/T-REC-X.745-199311-I)
-         *
-         * @public
-         * @readonly
-         */
-        readonly testObjectResponseList: TestObjectResponse[]
-    ) {}
+        testInvocationId: TestInvocationId,
+        testObjectResponseList: TestObjectResponse[]
+    ) {
+        this.testInvocationId = testInvocationId;
+        this.testObjectResponseList = testObjectResponseList;
+    }
 
     /**
      * @summary Restructures an object into a RelatedTestResponse

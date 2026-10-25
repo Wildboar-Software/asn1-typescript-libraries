@@ -1,8 +1,8 @@
 /* eslint-disable */
 import {
-    OPTIONAL,
-    INTEGER,
-    ASN1Element as _Element,
+    type OPTIONAL,
+    type INTEGER,
+    type ASN1Element as _Element,
     ASN1TagClass as _TagClass,
     ASN1Construction as _Construction,
     ASN1UniversalType as _UniversalType,
@@ -44,60 +44,74 @@ import * as $ from "@wildboar/asn1/functional";
  */
 export
 class CCOupdate {
+    /**
+     * @summary `kCoordinate`.
+     * @description
+     * Field-element coordinate of the context. ISO/IEC 9040:1997
+     * §3.3.69; ISO/IEC 9041-1:1997 §12.2.1.
+     * @public
+     * @readonly
+     */
+    public readonly kCoordinate: INTEGER;
+    /**
+     * @summary `fCoordinate`.
+     * @description
+     * Field coordinate of the context. ISO/IEC 9040:1997 §3.3.69;
+     * ISO/IEC 9041-1:1997 §12.2.1.
+     * @public
+     * @readonly
+     */
+    public readonly fCoordinate: INTEGER;
+    /**
+     * @summary `zCoordinate`.
+     * @description
+     * Required when VT-dimensions = three. ISO/IEC 9041-1:1997
+     * §12.2.1.
+     * @public
+     * @readonly
+     */
+    public readonly zCoordinate?: OPTIONAL<INTEGER>;
+    /**
+     * @summary `entryControlIndex`.
+     * @description
+     * Required on a termination update. ISO/IEC 9041-1:1997 §12.2.1.
+     * @public
+     * @readonly
+     */
+    public readonly entryControlIndex?: OPTIONAL<INTEGER>;
+    /**
+     * @summary `deviceObjectIndex`.
+     * @description
+     * Required on a termination update. ISO/IEC 9041-1:1997 §12.2.1.
+     * @public
+     * @readonly
+     */
+    public readonly deviceObjectIndex?: OPTIONAL<INTEGER>;
+    /**
+     * @summary `feprIndex`.
+     * @description
+     * Field Entry Pilot Record index. Required on a termination
+     * update. ISO/IEC 9041-1:1997 §12.2.1.
+     * @public
+     * @readonly
+     */
+    public readonly feprIndex?: OPTIONAL<INTEGER>;
+
     constructor (
-        /**
-         * @summary `kCoordinate`.
-         * @description
-         * Field-element coordinate of the context. ISO/IEC 9040:1997
-         * §3.3.69; ISO/IEC 9041-1:1997 §12.2.1.
-         * @public
-         * @readonly
-         */
-        readonly kCoordinate: INTEGER,
-        /**
-         * @summary `fCoordinate`.
-         * @description
-         * Field coordinate of the context. ISO/IEC 9040:1997 §3.3.69;
-         * ISO/IEC 9041-1:1997 §12.2.1.
-         * @public
-         * @readonly
-         */
-        readonly fCoordinate: INTEGER,
-        /**
-         * @summary `zCoordinate`.
-         * @description
-         * Required when VT-dimensions = three. ISO/IEC 9041-1:1997
-         * §12.2.1.
-         * @public
-         * @readonly
-         */
-        readonly zCoordinate?: OPTIONAL<INTEGER>,
-        /**
-         * @summary `entryControlIndex`.
-         * @description
-         * Required on a termination update. ISO/IEC 9041-1:1997 §12.2.1.
-         * @public
-         * @readonly
-         */
-        readonly entryControlIndex?: OPTIONAL<INTEGER>,
-        /**
-         * @summary `deviceObjectIndex`.
-         * @description
-         * Required on a termination update. ISO/IEC 9041-1:1997 §12.2.1.
-         * @public
-         * @readonly
-         */
-        readonly deviceObjectIndex?: OPTIONAL<INTEGER>,
-        /**
-         * @summary `feprIndex`.
-         * @description
-         * Field Entry Pilot Record index. Required on a termination
-         * update. ISO/IEC 9041-1:1997 §12.2.1.
-         * @public
-         * @readonly
-         */
-        readonly feprIndex?: OPTIONAL<INTEGER>
-    ) {}
+        kCoordinate: INTEGER,
+        fCoordinate: INTEGER,
+        zCoordinate?: OPTIONAL<INTEGER>,
+        entryControlIndex?: OPTIONAL<INTEGER>,
+        deviceObjectIndex?: OPTIONAL<INTEGER>,
+        feprIndex?: OPTIONAL<INTEGER>
+    ) {
+        this.kCoordinate = kCoordinate;
+        this.fCoordinate = fCoordinate;
+        this.zCoordinate = zCoordinate;
+        this.entryControlIndex = entryControlIndex;
+        this.deviceObjectIndex = deviceObjectIndex;
+        this.feprIndex = feprIndex;
+    }
 
     /**
      * @summary Restructures an object into a CCOupdate

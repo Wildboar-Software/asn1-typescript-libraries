@@ -1,6 +1,6 @@
 /* eslint-disable */
 import {
-  INTEGER,
+  type INTEGER,
   ASN1Element as _Element,
   ASN1TagClass as _TagClass,
   ASN1Construction as _Construction,
@@ -35,56 +35,56 @@ export type P_context_result_list_Item_provider_reason = INTEGER;
  * @constant
  * @type {number}
  */
-export const P_context_result_list_Item_provider_reason_reason_not_specified: P_context_result_list_Item_provider_reason = 0; /* LONG_NAMED_INTEGER_VALUE */
+export const P_context_result_list_Item_provider_reason_reason_not_specified: 0 = 0 satisfies P_context_result_list_Item_provider_reason; /* LONG_NAMED_INTEGER_VALUE */
 
 /**
  * @summary P_context_result_list_Item_provider_reason_reason_not_specified
  * @constant
  * @type {number}
  */
-export const reason_not_specified: P_context_result_list_Item_provider_reason = P_context_result_list_Item_provider_reason_reason_not_specified; /* SHORT_NAMED_INTEGER_VALUE */
+export const reason_not_specified: 0 = P_context_result_list_Item_provider_reason_reason_not_specified; /* SHORT_NAMED_INTEGER_VALUE */
 
 /**
  * @summary P_context_result_list_Item_provider_reason_abstract_syntax_not_supported
  * @constant
  * @type {number}
  */
-export const P_context_result_list_Item_provider_reason_abstract_syntax_not_supported: P_context_result_list_Item_provider_reason = 1; /* LONG_NAMED_INTEGER_VALUE */
+export const P_context_result_list_Item_provider_reason_abstract_syntax_not_supported: 1 = 1 satisfies P_context_result_list_Item_provider_reason; /* LONG_NAMED_INTEGER_VALUE */
 
 /**
  * @summary P_context_result_list_Item_provider_reason_abstract_syntax_not_supported
  * @constant
  * @type {number}
  */
-export const abstract_syntax_not_supported: P_context_result_list_Item_provider_reason = P_context_result_list_Item_provider_reason_abstract_syntax_not_supported; /* SHORT_NAMED_INTEGER_VALUE */
+export const abstract_syntax_not_supported: 1 = P_context_result_list_Item_provider_reason_abstract_syntax_not_supported; /* SHORT_NAMED_INTEGER_VALUE */
 
 /**
  * @summary P_context_result_list_Item_provider_reason_proposed_transfer_syntaxes_not_supported
  * @constant
  * @type {number}
  */
-export const P_context_result_list_Item_provider_reason_proposed_transfer_syntaxes_not_supported: P_context_result_list_Item_provider_reason = 2; /* LONG_NAMED_INTEGER_VALUE */
+export const P_context_result_list_Item_provider_reason_proposed_transfer_syntaxes_not_supported: 2 = 2 satisfies P_context_result_list_Item_provider_reason; /* LONG_NAMED_INTEGER_VALUE */
 
 /**
  * @summary P_context_result_list_Item_provider_reason_proposed_transfer_syntaxes_not_supported
  * @constant
  * @type {number}
  */
-export const proposed_transfer_syntaxes_not_supported: P_context_result_list_Item_provider_reason = P_context_result_list_Item_provider_reason_proposed_transfer_syntaxes_not_supported; /* SHORT_NAMED_INTEGER_VALUE */
+export const proposed_transfer_syntaxes_not_supported: 2 = P_context_result_list_Item_provider_reason_proposed_transfer_syntaxes_not_supported; /* SHORT_NAMED_INTEGER_VALUE */
 
 /**
  * @summary P_context_result_list_Item_provider_reason_local_limit_on_DCS_exceeded
  * @constant
  * @type {number}
  */
-export const P_context_result_list_Item_provider_reason_local_limit_on_DCS_exceeded: P_context_result_list_Item_provider_reason = 3; /* LONG_NAMED_INTEGER_VALUE */
+export const P_context_result_list_Item_provider_reason_local_limit_on_DCS_exceeded: 3 = 3 satisfies P_context_result_list_Item_provider_reason; /* LONG_NAMED_INTEGER_VALUE */
 
 /**
  * @summary P_context_result_list_Item_provider_reason_local_limit_on_DCS_exceeded
  * @constant
  * @type {number}
  */
-export const local_limit_on_DCS_exceeded: P_context_result_list_Item_provider_reason = P_context_result_list_Item_provider_reason_local_limit_on_DCS_exceeded; /* SHORT_NAMED_INTEGER_VALUE */
+export const local_limit_on_DCS_exceeded: 3 = P_context_result_list_Item_provider_reason_local_limit_on_DCS_exceeded; /* SHORT_NAMED_INTEGER_VALUE */
 
 let _cached_decoder_for_P_context_result_list_Item_provider_reason: $.ASN1Decoder<P_context_result_list_Item_provider_reason> | null = null;
 

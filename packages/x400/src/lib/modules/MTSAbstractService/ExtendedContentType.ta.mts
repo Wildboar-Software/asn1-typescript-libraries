@@ -1,7 +1,7 @@
 /* eslint-disable */
 import {
-    RELATIVE_OID,
-    ASN1Element as _Element,
+    type RELATIVE_OID,
+    type ASN1Element as _Element,
     ASN1TagClass as _TagClass,
     ASN1Construction as _Construction,
     ASN1UniversalType as _UniversalType,
@@ -28,10 +28,10 @@ import * as $ from '@wildboar/asn1/functional';
 export type ExtendedContentType = RELATIVE_OID; // RelativeOIDType
 
 
-export const _decode_ExtendedContentType = $._decodeRelativeOID;
+export const _decode_ExtendedContentType: $.ASN1Decoder<RELATIVE_OID> = $._decodeRelativeOID;
 
 
-export const _encode_ExtendedContentType = $._encodeRelativeOID;
+export const _encode_ExtendedContentType: $.ASN1Encoder<RELATIVE_OID> = $._encodeRelativeOID;
 
 
 /* eslint-enable */

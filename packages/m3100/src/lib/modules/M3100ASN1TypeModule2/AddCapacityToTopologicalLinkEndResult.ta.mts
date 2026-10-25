@@ -1,6 +1,6 @@
 /* eslint-disable */
 import {
-    ASN1Element as _Element,
+    type ASN1Element as _Element,
     ASN1TagClass as _TagClass,
     ASN1Construction as _Construction,
     ASN1UniversalType as _UniversalType,
@@ -11,12 +11,12 @@ import {
 } from '@wildboar/asn1';
 import * as $ from '@wildboar/asn1/functional';
 import {
-    PointCapacity,
+    type PointCapacity,
     _decode_PointCapacity,
     _encode_PointCapacity,
 } from '../M3100ASN1TypeModule2/PointCapacity.ta.mjs';
 import {
-    NWTPList,
+    type NWTPList,
     _decode_NWTPList,
     _encode_NWTPList,
 } from '../M3100ASN1TypeModule2/NWTPList.ta.mjs';
@@ -37,26 +37,34 @@ import {
  *
  */
 export class AddCapacityToTopologicalLinkEndResult {
+    /**
+     * @summary `resultingCapacity`.
+     * @public
+     * @readonly
+     */
+    public readonly resultingCapacity: PointCapacity;
+    /**
+     * @summary `resultingnetworkCTPs`.
+     * @public
+     * @readonly
+     */
+    public readonly resultingnetworkCTPs: NWTPList;
+    /**
+     * @summary `resultingProvisionedLinkEndCapacity`.
+     * @public
+     * @readonly
+     */
+    public readonly resultingProvisionedLinkEndCapacity: PointCapacity;
+
     constructor(
-        /**
-         * @summary `resultingCapacity`.
-         * @public
-         * @readonly
-         */
-        readonly resultingCapacity: PointCapacity,
-        /**
-         * @summary `resultingnetworkCTPs`.
-         * @public
-         * @readonly
-         */
-        readonly resultingnetworkCTPs: NWTPList,
-        /**
-         * @summary `resultingProvisionedLinkEndCapacity`.
-         * @public
-         * @readonly
-         */
-        readonly resultingProvisionedLinkEndCapacity: PointCapacity
-    ) {}
+        resultingCapacity: PointCapacity,
+        resultingnetworkCTPs: NWTPList,
+        resultingProvisionedLinkEndCapacity: PointCapacity
+    ) {
+        this.resultingCapacity = resultingCapacity;
+        this.resultingnetworkCTPs = resultingnetworkCTPs;
+        this.resultingProvisionedLinkEndCapacity = resultingProvisionedLinkEndCapacity;
+    }
 
     /**
      * @summary Restructures an object into a AddCapacityToTopologicalLinkEndResult

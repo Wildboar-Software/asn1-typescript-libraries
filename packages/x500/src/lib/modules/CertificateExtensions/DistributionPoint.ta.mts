@@ -1,22 +1,22 @@
 /* eslint-disable */
 import {
-    ASN1Element as _Element,
+    type ASN1Element as _Element,
     ASN1TagClass as _TagClass,
-    OPTIONAL,
+    type OPTIONAL,
 } from "@wildboar/asn1";
 import * as $ from "@wildboar/asn1/functional";
 import {
-    DistributionPointName,
+    type DistributionPointName,
     _decode_DistributionPointName,
     _encode_DistributionPointName,
 } from "../CertificateExtensions/DistributionPointName.ta.mjs";
 import {
-    GeneralNames,
+    type GeneralNames,
     _decode_GeneralNames,
     _encode_GeneralNames,
 } from "../CertificateExtensions/GeneralNames.ta.mjs";
 import {
-    ReasonFlags,
+    type ReasonFlags,
     _decode_ReasonFlags,
     _encode_ReasonFlags,
 } from "../CertificateExtensions/ReasonFlags.ta.mjs";
@@ -42,45 +42,55 @@ import {
  *
  */
 export class DistributionPoint {
+    /**
+     * @summary `distributionPoint`.
+     * @description
+     *
+     * Omitted = DP name defaults to CRL issuer. fullName vs
+     * nameRelativeToCRLIssuer.
+     *
+     * @public
+     * @readonly
+     */
+    public readonly distributionPoint?: OPTIONAL<DistributionPointName>;
+    /**
+     * @summary `reasons`.
+     * @description
+     *
+     * Omitted = all reasons. Not the same as all-zero bits.
+     *
+     * @public
+     * @readonly
+     */
+    public readonly reasons?: OPTIONAL<ReasonFlags>;
+    /**
+     * @summary `cRLIssuer`.
+     * @description
+     *
+     * Omitted = CRL issued by the certificate issuer.
+     *
+     * @public
+     * @readonly
+     */
+    public readonly cRLIssuer?: OPTIONAL<GeneralNames>;
+    /**
+     * @summary Extensions that are not recognized.
+     * @public
+     * @readonly
+     */
+    public readonly _unrecognizedExtensionsList: _Element[];
+
     constructor(
-        /**
-         * @summary `distributionPoint`.
-         * @description
-         *
-         * Omitted = DP name defaults to CRL issuer. fullName vs
-         * nameRelativeToCRLIssuer.
-         *
-         * @public
-         * @readonly
-         */
-        readonly distributionPoint?: OPTIONAL<DistributionPointName>,
-        /**
-         * @summary `reasons`.
-         * @description
-         *
-         * Omitted = all reasons. Not the same as all-zero bits.
-         *
-         * @public
-         * @readonly
-         */
-        readonly reasons?: OPTIONAL<ReasonFlags>,
-        /**
-         * @summary `cRLIssuer`.
-         * @description
-         *
-         * Omitted = CRL issued by the certificate issuer.
-         *
-         * @public
-         * @readonly
-         */
-        readonly cRLIssuer?: OPTIONAL<GeneralNames>,
-        /**
-         * @summary Extensions that are not recognized.
-         * @public
-         * @readonly
-         */
-        readonly _unrecognizedExtensionsList: _Element[] = []
-    ) {}
+        distributionPoint?: OPTIONAL<DistributionPointName>,
+        reasons?: OPTIONAL<ReasonFlags>,
+        cRLIssuer?: OPTIONAL<GeneralNames>,
+        _unrecognizedExtensionsList: _Element[] = []
+    ) {
+        this.distributionPoint = distributionPoint;
+        this.reasons = reasons;
+        this.cRLIssuer = cRLIssuer;
+        this._unrecognizedExtensionsList = _unrecognizedExtensionsList;
+    }
 
     /**
      * @summary Restructures an object into a DistributionPoint

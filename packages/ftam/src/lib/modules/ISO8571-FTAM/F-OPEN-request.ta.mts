@@ -1,8 +1,8 @@
 /* eslint-disable */
 import {
-  OPTIONAL,
-  BOOLEAN,
-  INTEGER,
+  type OPTIONAL,
+  type BOOLEAN,
+  type INTEGER,
   TRUE_BIT,
   ASN1Element as _Element,
   ASN1TagClass as _TagClass,
@@ -15,13 +15,13 @@ import {
 } from '@wildboar/asn1';
 import * as $ from '@wildboar/asn1/functional';
 import {
-  F_OPEN_request_processing_mode,
+  type F_OPEN_request_processing_mode,
   F_OPEN_request_processing_mode_f_read /* IMPORTED_LONG_NAMED_BIT */,
   _decode_F_OPEN_request_processing_mode,
   _encode_F_OPEN_request_processing_mode,
 } from '../ISO8571-FTAM/F-OPEN-request-processing-mode.ta.mjs';
 import {
-  F_OPEN_request_contents_type,
+  type F_OPEN_request_contents_type,
   _decode_F_OPEN_request_contents_type,
   _encode_F_OPEN_request_contents_type,
 } from '../ISO8571-FTAM/F-OPEN-request-contents-type.ta.mjs';
@@ -31,28 +31,28 @@ import {
   _encode_Concurrency_Control,
 } from '../ISO8571-FTAM/Concurrency-Control.ta.mjs';
 import {
-  Shared_ASE_Information,
+  type Shared_ASE_Information,
   _decode_Shared_ASE_Information,
   _encode_Shared_ASE_Information,
 } from '../ISO8571-FTAM/Shared-ASE-Information.ta.mjs';
 import {
-  Activity_Identifier,
+  type Activity_Identifier,
   _decode_Activity_Identifier,
   _encode_Activity_Identifier,
 } from '../ISO8571-FTAM/Activity-Identifier.ta.mjs';
 import {
-  F_OPEN_request_recovery_mode,
+  type F_OPEN_request_recovery_mode,
   none /* IMPORTED_SHORT_NAMED_INTEGER */,
   _decode_F_OPEN_request_recovery_mode,
   _encode_F_OPEN_request_recovery_mode,
 } from '../ISO8571-FTAM/F-OPEN-request-recovery-mode.ta.mjs';
 import {
-  Abstract_Syntax_Name,
+  type Abstract_Syntax_Name,
   _decode_Abstract_Syntax_Name,
   _encode_Abstract_Syntax_Name,
 } from '../ISO8571-FTAM/Abstract-Syntax-Name.ta.mjs';
 import {
-  Degree_Of_Overlap,
+  type Degree_Of_Overlap,
   _decode_Degree_Of_Overlap,
   _encode_Degree_Of_Overlap,
 } from '../ISO8571-FTAM/Degree-Of-Overlap.ta.mjs';
@@ -107,7 +107,7 @@ export class F_OPEN_request {
    * @public
    * @readonly
    */
-  readonly processing_mode: OPTIONAL<F_OPEN_request_processing_mode>;
+  public readonly processing_mode: OPTIONAL<F_OPEN_request_processing_mode>;
   /**
    * @summary `contents_type`.
    * @description
@@ -120,7 +120,7 @@ export class F_OPEN_request {
    * @public
    * @readonly
    */
-  readonly contents_type: F_OPEN_request_contents_type;
+  public readonly contents_type: F_OPEN_request_contents_type;
   /**
    * @summary `concurrency_control`.
    * @description
@@ -131,7 +131,7 @@ export class F_OPEN_request {
    * @public
    * @readonly
    */
-  readonly concurrency_control?: OPTIONAL<Concurrency_Control>;
+  public readonly concurrency_control?: OPTIONAL<Concurrency_Control>;
   /**
    * @summary `shared_ASE_information`.
    * @description
@@ -141,7 +141,7 @@ export class F_OPEN_request {
    * @public
    * @readonly
    */
-  readonly shared_ASE_information?: OPTIONAL<Shared_ASE_Information>;
+  public readonly shared_ASE_information?: OPTIONAL<Shared_ASE_Information>;
   /**
    * @summary `enable_fadu_locking`.
    * @description
@@ -154,7 +154,7 @@ export class F_OPEN_request {
    * @public
    * @readonly
    */
-  readonly enable_fadu_locking?: OPTIONAL<BOOLEAN>;
+  public readonly enable_fadu_locking?: OPTIONAL<BOOLEAN>;
   /**
    * @summary `activity_identifier`.
    * @description
@@ -165,7 +165,7 @@ export class F_OPEN_request {
    * @public
    * @readonly
    */
-  readonly activity_identifier?: OPTIONAL<Activity_Identifier>;
+  public readonly activity_identifier?: OPTIONAL<Activity_Identifier>;
   /**
    * @summary `recovery_mode`.
    * @description
@@ -178,7 +178,7 @@ export class F_OPEN_request {
    * @public
    * @readonly
    */
-  readonly recovery_mode?: OPTIONAL<F_OPEN_request_recovery_mode>;
+  public readonly recovery_mode?: OPTIONAL<F_OPEN_request_recovery_mode>;
   /**
    * @summary `remove_contexts`.
    * @description
@@ -189,7 +189,7 @@ export class F_OPEN_request {
    * @public
    * @readonly
    */
-  readonly remove_contexts?: OPTIONAL<Abstract_Syntax_Name[]>;
+  public readonly remove_contexts?: OPTIONAL<Abstract_Syntax_Name[]>;
   /**
    * @summary `define_contexts`.
    * @description
@@ -200,7 +200,7 @@ export class F_OPEN_request {
    * @public
    * @readonly
    */
-  readonly define_contexts?: OPTIONAL<Abstract_Syntax_Name[]>;
+  public readonly define_contexts?: OPTIONAL<Abstract_Syntax_Name[]>;
   /**
    * @summary `degree_of_overlap`.
    * @description
@@ -211,7 +211,7 @@ export class F_OPEN_request {
    * @public
    * @readonly
    */
-  readonly degree_of_overlap?: OPTIONAL<Degree_Of_Overlap>;
+  public readonly degree_of_overlap?: OPTIONAL<Degree_Of_Overlap>;
   /**
    * @summary `transfer_window`.
    * @description
@@ -222,7 +222,7 @@ export class F_OPEN_request {
    * @public
    * @readonly
    */
-  readonly transfer_window?: OPTIONAL<INTEGER>;
+  public readonly transfer_window?: OPTIONAL<INTEGER>;
 
   constructor(
     processing_mode: OPTIONAL<F_OPEN_request_processing_mode>,

@@ -1,12 +1,12 @@
 /* eslint-disable */
 import {
     ASN1ConstructionError as _ConstructionError,
-    ASN1Element as _Element,
+    type ASN1Element as _Element,
     ASN1TagClass as _TagClass,
 } from "@wildboar/asn1";
 import * as $ from "@wildboar/asn1/functional";
 import {
-    Identifier,
+    type Identifier,
     _decode_Identifier,
     _encode_Identifier,
 } from "../PKCS-15/Identifier.ta.mjs";
@@ -26,20 +26,26 @@ import {
  *
  */
 export class CommonAuthenticationObjectAttributes {
+    /**
+     * @summary `authId`.
+     * @public
+     * @readonly
+     */
+    public readonly authId: Identifier;
+    /**
+     * @summary Extensions that are not recognized.
+     * @public
+     * @readonly
+     */
+    public readonly _unrecognizedExtensionsList: _Element[];
+
     constructor(
-        /**
-         * @summary `authId`.
-         * @public
-         * @readonly
-         */
-        readonly authId: Identifier,
-        /**
-         * @summary Extensions that are not recognized.
-         * @public
-         * @readonly
-         */
-        readonly _unrecognizedExtensionsList: _Element[] = []
-    ) {}
+        authId: Identifier,
+        _unrecognizedExtensionsList: _Element[] = []
+    ) {
+        this.authId = authId;
+        this._unrecognizedExtensionsList = _unrecognizedExtensionsList;
+    }
 
     /**
      * @summary Restructures an object into a CommonAuthenticationObjectAttributes

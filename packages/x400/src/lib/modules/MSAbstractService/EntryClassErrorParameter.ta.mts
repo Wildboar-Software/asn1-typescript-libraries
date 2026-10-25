@@ -1,6 +1,6 @@
 /* eslint-disable */
 import {
-    ASN1Element as _Element,
+    type ASN1Element as _Element,
     ASN1TagClass as _TagClass,
     ASN1Construction as _Construction,
     ASN1UniversalType as _UniversalType,
@@ -11,12 +11,12 @@ import {
 } from '@wildboar/asn1';
 import * as $ from '@wildboar/asn1/functional';
 import {
-    EntryClass,
+    type EntryClass,
     _decode_EntryClass,
     _encode_EntryClass,
 } from '../MSAbstractService/EntryClass.ta.mjs';
 import {
-    EntryClassErrorParameter_problem,
+    type EntryClassErrorParameter_problem,
     _decode_EntryClassErrorParameter_problem,
     _encode_EntryClassErrorParameter_problem,
 } from '../MSAbstractService/EntryClassErrorParameter-problem.ta.mjs';
@@ -39,20 +39,26 @@ import {
  *
  */
 export class EntryClassErrorParameter {
+    /**
+     * @summary `entry_class`.
+     * @public
+     * @readonly
+     */
+    public readonly entry_class: EntryClass;
+    /**
+     * @summary `problem`.
+     * @public
+     * @readonly
+     */
+    public readonly problem: EntryClassErrorParameter_problem;
+
     constructor(
-        /**
-         * @summary `entry_class`.
-         * @public
-         * @readonly
-         */
-        readonly entry_class: EntryClass,
-        /**
-         * @summary `problem`.
-         * @public
-         * @readonly
-         */
-        readonly problem: EntryClassErrorParameter_problem
-    ) {}
+        entry_class: EntryClass,
+        problem: EntryClassErrorParameter_problem
+    ) {
+        this.entry_class = entry_class;
+        this.problem = problem;
+    }
 
     /**
      * @summary Restructures an object into a EntryClassErrorParameter

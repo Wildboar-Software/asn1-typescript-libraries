@@ -2,13 +2,13 @@
 
 import * as $ from "@wildboar/asn1/functional";
 import {
-    OPTIONAL,
-    SEQUENCE,
-    SET,
-    ASN1Element as _Element,
+    type OPTIONAL,
+    type SEQUENCE,
+    type SET,
+    type ASN1Element as _Element,
     ASN1TagClass as _TagClass
 } from "@wildboar/asn1";
-import { ConnectionID, _decode_ConnectionID, _encode_ConnectionID } from "../CSTA-call-connection-identifiers/ConnectionID.ta.mjs";
+import { type ConnectionID, _decode_ConnectionID, _encode_ConnectionID } from "../CSTA-call-connection-identifiers/ConnectionID.ta.mjs";
 
 import { ConnectionInformation, _decode_ConnectionInformation, _encode_ConnectionInformation } from "../CSTA-media-services/ConnectionInformation.ta.mjs";
 
@@ -34,9 +34,9 @@ import { CSTACommonArguments, _decode_CSTACommonArguments, _encode_CSTACommonArg
  * 
  * ```asn1
  * IntrudeCallResult ::= SEQUENCE
- * {     conferencedCall         ConnectionID                 OPTIONAL,
- *     conferencedCallInfo         ConnectionInformation             OPTIONAL,
- *     callLinkageDataList        [1] IMPLICIT CallLinkageDataList    OPTIONAL,
+ * {     conferencedCall         ConnectionID                 type OPTIONAL,
+ *     conferencedCallInfo         ConnectionInformation             type OPTIONAL,
+ *     callLinkageDataList        [1] IMPLICIT CallLinkageDataList    type OPTIONAL,
  *     extensions             CSTACommonArguments             OPTIONAL }
  * ```
  * 
@@ -44,52 +44,62 @@ import { CSTACommonArguments, _decode_CSTACommonArguments, _encode_CSTACommonArg
  */
 export
 class IntrudeCallResult {
+    /**
+     * @summary `conferencedCall`.
+     * @description
+     *
+     * Optional. Intruding device's connection in the resulting
+     * conference (when one is formed).
+     *
+     * @public
+     * @readonly
+     */
+    public readonly conferencedCall?: OPTIONAL<ConnectionID>;
+    /**
+     * @summary `conferencedCallInfo`.
+     * @description
+     *
+     * Optional connection information for `conferencedCall`
+     * (§12.2.8).
+     *
+     * @public
+     * @readonly
+     */
+    public readonly conferencedCallInfo?: OPTIONAL<ConnectionInformation>;
+    /**
+     * @summary `callLinkageDataList`.
+     * @description
+     *
+     * Optional call-linkage data pairing old and new call
+     * identities (§12.2.5, §12.3.9 FR 8).
+     *
+     * @public
+     * @readonly
+     */
+    public readonly callLinkageDataList?: OPTIONAL<CallLinkageDataList>;
+    /**
+     * @summary `extensions`.
+     * @description
+     *
+     * Optional `CSTACommonArguments` carrying the security and
+     * privateData parameters from the ECMA-269 service table.
+     *
+     * @public
+     * @readonly
+     */
+    public readonly extensions?: OPTIONAL<CSTACommonArguments>;
+
     constructor (
-        /**
-         * @summary `conferencedCall`.
-         * @description
-         *
-         * Optional. Intruding device's connection in the resulting
-         * conference (when one is formed).
-         *
-         * @public
-         * @readonly
-         */
-        readonly conferencedCall?: OPTIONAL<ConnectionID>,
-        /**
-         * @summary `conferencedCallInfo`.
-         * @description
-         *
-         * Optional connection information for `conferencedCall`
-         * (§12.2.8).
-         *
-         * @public
-         * @readonly
-         */
-        readonly conferencedCallInfo?: OPTIONAL<ConnectionInformation>,
-        /**
-         * @summary `callLinkageDataList`.
-         * @description
-         *
-         * Optional call-linkage data pairing old and new call
-         * identities (§12.2.5, §12.3.9 FR 8).
-         *
-         * @public
-         * @readonly
-         */
-        readonly callLinkageDataList?: OPTIONAL<CallLinkageDataList>,
-        /**
-         * @summary `extensions`.
-         * @description
-         *
-         * Optional `CSTACommonArguments` carrying the security and
-         * privateData parameters from the ECMA-269 service table.
-         *
-         * @public
-         * @readonly
-         */
-        readonly extensions?: OPTIONAL<CSTACommonArguments>
-    ) {}
+        conferencedCall?: OPTIONAL<ConnectionID>,
+        conferencedCallInfo?: OPTIONAL<ConnectionInformation>,
+        callLinkageDataList?: OPTIONAL<CallLinkageDataList>,
+        extensions?: OPTIONAL<CSTACommonArguments>
+    ) {
+        this.conferencedCall = conferencedCall;
+        this.conferencedCallInfo = conferencedCallInfo;
+        this.callLinkageDataList = callLinkageDataList;
+        this.extensions = extensions;
+    }
 
     /**
      * @summary Restructures an object into a IntrudeCallResult

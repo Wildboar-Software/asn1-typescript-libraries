@@ -1,8 +1,8 @@
 /* eslint-disable */
 import {
-    NULL,
-    OPTIONAL,
-    ASN1Element as _Element,
+    type NULL,
+    type OPTIONAL,
+    type ASN1Element as _Element,
     ASN1TagClass as _TagClass
 } from "@wildboar/asn1";
 import * as $ from "@wildboar/asn1/functional";
@@ -20,9 +20,9 @@ import { ExtensionContainer, _decode_ExtensionContainer, _encode_ExtensionContai
  * 
  * ```asn1
  * CCBS-Indicators ::= SEQUENCE {
- *     ccbs-Possible    [0]    NULL    OPTIONAL,
- *     keepCCBS-CallIndicator    [1]    NULL    OPTIONAL,
- *     extensionContainer    [2]    ExtensionContainer    OPTIONAL,
+ *     ccbs-Possible    [0]    NULL    type OPTIONAL,
+ *     keepCCBS-CallIndicator    [1]    NULL    type OPTIONAL,
+ *     extensionContainer    [2]    ExtensionContainer    type OPTIONAL,
  *     ...}
  * ```
  * 
@@ -30,44 +30,54 @@ import { ExtensionContainer, _decode_ExtensionContainer, _encode_ExtensionContai
  */
 export
 class CCBS_Indicators {
+    /**
+     * @summary `ccbs_Possible`.
+     * @description
+     *
+     * See 3GPP TS 23.093 (clause 10.1.3).
+     *
+     * @public
+     * @readonly
+     */
+    public readonly ccbs_Possible?: OPTIONAL<NULL>;
+    /**
+     * @summary `keepCCBS_CallIndicator`.
+     * @description
+     *
+     * See 3GPP TS 23.093 (clause 10.1.3).
+     *
+     * @public
+     * @readonly
+     */
+    public readonly keepCCBS_CallIndicator?: OPTIONAL<NULL>;
+    /**
+     * @summary `extensionContainer`.
+     * @description
+     *
+     * Private or PCS extensions (3GPP TS 29.002 V19.1.0 clause 17.7.11).
+     *
+     * @public
+     * @readonly
+     */
+    public readonly extensionContainer?: OPTIONAL<ExtensionContainer>;
+    /**
+     * @summary Extensions that are not recognized.
+     * @public
+     * @readonly
+     */
+    public readonly _unrecognizedExtensionsList: _Element[];
+
     constructor (
-        /**
-         * @summary `ccbs_Possible`.
-         * @description
-         *
-         * See 3GPP TS 23.093 (clause 10.1.3).
-         *
-         * @public
-         * @readonly
-         */
-        readonly ccbs_Possible?: OPTIONAL<NULL>,
-        /**
-         * @summary `keepCCBS_CallIndicator`.
-         * @description
-         *
-         * See 3GPP TS 23.093 (clause 10.1.3).
-         *
-         * @public
-         * @readonly
-         */
-        readonly keepCCBS_CallIndicator?: OPTIONAL<NULL>,
-        /**
-         * @summary `extensionContainer`.
-         * @description
-         *
-         * Private or PCS extensions (3GPP TS 29.002 V19.1.0 clause 17.7.11).
-         *
-         * @public
-         * @readonly
-         */
-        readonly extensionContainer?: OPTIONAL<ExtensionContainer>,
-        /**
-         * @summary Extensions that are not recognized.
-         * @public
-         * @readonly
-         */
-        readonly _unrecognizedExtensionsList: _Element[] = []
-    ) {}
+        ccbs_Possible?: OPTIONAL<NULL>,
+        keepCCBS_CallIndicator?: OPTIONAL<NULL>,
+        extensionContainer?: OPTIONAL<ExtensionContainer>,
+        _unrecognizedExtensionsList: _Element[] = []
+    ) {
+        this.ccbs_Possible = ccbs_Possible;
+        this.keepCCBS_CallIndicator = keepCCBS_CallIndicator;
+        this.extensionContainer = extensionContainer;
+        this._unrecognizedExtensionsList = _unrecognizedExtensionsList;
+    }
 
     /**
      * @summary Restructures an object into a CCBS_Indicators

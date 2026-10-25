@@ -1,8 +1,8 @@
 /* eslint-disable */
 import {
-    OPTIONAL,
-    INTEGER,
-    ASN1Element as _Element,
+    type OPTIONAL,
+    type INTEGER,
+    type ASN1Element as _Element,
     ASN1TagClass as _TagClass,
     ASN1Construction as _Construction,
     ASN1UniversalType as _UniversalType,
@@ -13,10 +13,10 @@ import {
 } from "@wildboar/asn1";
 import * as $ from "@wildboar/asn1/functional";
 import { _decode_CommonListSearchResult, _encode_CommonListSearchResult } from "../DFRAbstractService/CommonListSearchResult.ta.mjs";
-import { DfrEntryList, _decode_DfrEntryList, _encode_DfrEntryList } from "../DFRAbstractService/DfrEntryList.ta.mjs";
+import { type DfrEntryList, _decode_DfrEntryList, _encode_DfrEntryList } from "../DFRAbstractService/DfrEntryList.ta.mjs";
 import { LimitEncountered, _enum_for_LimitEncountered, _decode_LimitEncountered, _encode_LimitEncountered } from "../DFRAbstractService/LimitEncountered.ta.mjs";
 import { Warning, _decode_Warning, _encode_Warning } from "../DFRAbstractService/Warning.ta.mjs";
-import { TaskId, _decode_TaskId, _encode_TaskId } from "../DFRAbstractService/TaskId.ta.mjs";
+import { type TaskId, _decode_TaskId, _encode_TaskId } from "../DFRAbstractService/TaskId.ta.mjs";
 
 
 /**
@@ -43,67 +43,80 @@ import { TaskId, _decode_TaskId, _encode_TaskId } from "../DFRAbstractService/Ta
  */
 export
 class SearchResult {
+    /**
+     * @summary `number_of_entries`.
+     * @description
+     *
+     * How many entries are returned in `entry-list`. ISO/IEC 10166-1:1991
+     * §8.1.6.
+     * @public
+     * @readonly
+     */
+    public readonly number_of_entries: INTEGER; /* REPLICATED_COMPONENT */
+    /**
+     * @summary `limit_encountered`.
+     * @description
+     *
+     * Which limit stopped the operation. Absent if none was hit. ISO/IEC
+     * 10166-1:1991 §8.1.6.1.
+     * @public
+     * @readonly
+     */
+    public readonly limit_encountered: OPTIONAL<LimitEncountered>; /* REPLICATED_COMPONENT */
+    /**
+     * @summary `entry_list`.
+     * @description
+     *
+     * Matching or listed entries in the requested order. UPI and object
+     * class are always present. ISO/IEC 10166-1:1991 §8.1.6.2.
+     * @public
+     * @readonly
+     */
+    public readonly entry_list: DfrEntryList; /* REPLICATED_COMPONENT */
+    /**
+     * @summary `warnings`.
+     * @description
+     *
+     * Access problems for members that were skipped. Never reported if the
+     * user has no read right to the entry. ISO/IEC 10166-1:1991 §8.1.3.3.
+     * @public
+     * @readonly
+     */
+    public readonly warnings?: OPTIONAL<Warning[]>; /* REPLICATED_COMPONENT */
+    /**
+     * @summary `continuation`.
+     * @description
+     *
+     * TaskId to resume this List/Search after a limit. Present only with
+     * `limit-encountered`. ISO/IEC 10166-1:1991 §8.1.6.1.
+     * @public
+     * @readonly
+     */
+    public readonly continuation?: OPTIONAL<TaskId>; /* REPLICATED_COMPONENT */
+    /**
+     * @summary `removed_entries`.
+     * @description
+     *
+     * Entries removed from the SRL in update mode.
+     * @public
+     * @readonly
+     */
+    public readonly removed_entries?: OPTIONAL<DfrEntryList>;
+
     constructor (
-        /**
-         * @summary `number_of_entries`.
-         * @description
-         *
-         * How many entries are returned in `entry-list`. ISO/IEC 10166-1:1991
-         * §8.1.6.
-         * @public
-         * @readonly
-         */
-        readonly number_of_entries: INTEGER /* REPLICATED_COMPONENT */,
-        /**
-         * @summary `limit_encountered`.
-         * @description
-         *
-         * Which limit stopped the operation. Absent if none was hit. ISO/IEC
-         * 10166-1:1991 §8.1.6.1.
-         * @public
-         * @readonly
-         */
-        readonly limit_encountered: OPTIONAL<LimitEncountered> /* REPLICATED_COMPONENT */,
-        /**
-         * @summary `entry_list`.
-         * @description
-         *
-         * Matching or listed entries in the requested order. UPI and object
-         * class are always present. ISO/IEC 10166-1:1991 §8.1.6.2.
-         * @public
-         * @readonly
-         */
-        readonly entry_list: DfrEntryList /* REPLICATED_COMPONENT */,
-        /**
-         * @summary `warnings`.
-         * @description
-         *
-         * Access problems for members that were skipped. Never reported if the
-         * user has no read right to the entry. ISO/IEC 10166-1:1991 §8.1.3.3.
-         * @public
-         * @readonly
-         */
-        readonly warnings?: OPTIONAL<Warning[]> /* REPLICATED_COMPONENT */,
-        /**
-         * @summary `continuation`.
-         * @description
-         *
-         * TaskId to resume this List/Search after a limit. Present only with
-         * `limit-encountered`. ISO/IEC 10166-1:1991 §8.1.6.1.
-         * @public
-         * @readonly
-         */
-        readonly continuation?: OPTIONAL<TaskId> /* REPLICATED_COMPONENT */,
-        /**
-         * @summary `removed_entries`.
-         * @description
-         *
-         * Entries removed from the SRL in update mode.
-         * @public
-         * @readonly
-         */
-        readonly removed_entries?: OPTIONAL<DfrEntryList>
+        number_of_entries: INTEGER,
+        limit_encountered: OPTIONAL<LimitEncountered>,
+        entry_list: DfrEntryList,
+        warnings?: OPTIONAL<Warning[]>,
+        continuation?: OPTIONAL<TaskId>,
+        removed_entries?: OPTIONAL<DfrEntryList>
     ) {
+        this.number_of_entries = number_of_entries;
+        this.limit_encountered = limit_encountered;
+        this.entry_list = entry_list;
+        this.warnings = warnings;
+        this.continuation = continuation;
+        this.removed_entries = removed_entries;
         if (warnings !== undefined) {
             throw new _ConstructionError("SearchResult.warnings shall be absent");
         }
@@ -137,7 +150,7 @@ class SearchResult {
          * @static
          */
 
-    public static _enum_for_limit_encountered = _enum_for_LimitEncountered;
+    public static _enum_for_limit_encountered: typeof _enum_for_LimitEncountered = _enum_for_LimitEncountered;
 }
 
 /**

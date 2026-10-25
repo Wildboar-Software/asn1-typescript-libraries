@@ -2,17 +2,17 @@
 
 import * as $ from "@wildboar/asn1/functional";
 import {
-    OPTIONAL,
-    SEQUENCE,
-    SET,
-    ASN1Element as _Element,
+    type OPTIONAL,
+    type SEQUENCE,
+    type SET,
+    type ASN1Element as _Element,
     ASN1TagClass as _TagClass
 } from "@wildboar/asn1";
-import { ConnectionID, _decode_ConnectionID, _encode_ConnectionID } from "../CSTA-call-connection-identifiers/ConnectionID.ta.mjs";
+import { type ConnectionID, _decode_ConnectionID, _encode_ConnectionID } from "../CSTA-call-connection-identifiers/ConnectionID.ta.mjs";
 
 import { DeviceID, _decode_DeviceID, _encode_DeviceID } from "../CSTA-device-identifiers/DeviceID.ta.mjs";
 
-import { CorrelatorData, _decode_CorrelatorData, _encode_CorrelatorData } from "../CSTA-device-feature-types/CorrelatorData.ta.mjs";
+import { type CorrelatorData, _decode_CorrelatorData, _encode_CorrelatorData } from "../CSTA-device-feature-types/CorrelatorData.ta.mjs";
 
 import { CSTACommonArguments, _decode_CSTACommonArguments, _encode_CSTACommonArguments } from "../CSTA-extension-types/CSTACommonArguments.ta.mjs";
 
@@ -36,7 +36,7 @@ import { CSTACommonArguments, _decode_CSTACommonArguments, _encode_CSTACommonArg
  * DialDigitsArgument ::= SEQUENCE
  * {     diallingConnection         ConnectionID,
  *     diallingSequence         DeviceID,
- *     correlatorData             CorrelatorData             OPTIONAL,
+ *     correlatorData             CorrelatorData             type OPTIONAL,
  *     extensions             CSTACommonArguments         OPTIONAL }
  * ```
  * 
@@ -44,56 +44,66 @@ import { CSTACommonArguments, _decode_CSTACommonArguments, _encode_CSTACommonArg
  */
 export
 class DialDigitsArgument {
+    /**
+     * @summary `diallingConnection`.
+     * @description
+     *
+     * Mandatory. Connection on which digits are dialled.
+     * Initial state Initiated; final Initiated or Connected
+     * (§17.1.12.3.1).
+     *
+     * @public
+     * @readonly
+     */
+    public readonly diallingConnection: ConnectionID;
+    /**
+     * @summary `diallingSequence`.
+     * @description
+     *
+     * Mandatory. Digits to dial. Any DeviceID format if no
+     * digits have been dialled yet; otherwise Diallable Digits.
+     * A trailing `;` means more digits will follow (FR 3–4).
+     * If the switching function treats dialling as complete it
+     * ignores later digits (FR 7).
+     *
+     * @public
+     * @readonly
+     */
+    public readonly diallingSequence: DeviceID;
+    /**
+     * @summary `correlatorData`.
+     * @description
+     *
+     * Optional correlator data attached before resulting state
+     * transitions (§12.2.10).
+     *
+     * @public
+     * @readonly
+     */
+    public readonly correlatorData?: OPTIONAL<CorrelatorData>;
+    /**
+     * @summary `extensions`.
+     * @description
+     *
+     * Optional `CSTACommonArguments` carrying the security and
+     * privateData parameters from the ECMA-269 service table.
+     *
+     * @public
+     * @readonly
+     */
+    public readonly extensions?: OPTIONAL<CSTACommonArguments>;
+
     constructor (
-        /**
-         * @summary `diallingConnection`.
-         * @description
-         *
-         * Mandatory. Connection on which digits are dialled.
-         * Initial state Initiated; final Initiated or Connected
-         * (§17.1.12.3.1).
-         *
-         * @public
-         * @readonly
-         */
-        readonly diallingConnection: ConnectionID,
-        /**
-         * @summary `diallingSequence`.
-         * @description
-         *
-         * Mandatory. Digits to dial. Any DeviceID format if no
-         * digits have been dialled yet; otherwise Diallable Digits.
-         * A trailing `;` means more digits will follow (FR 3–4).
-         * If the switching function treats dialling as complete it
-         * ignores later digits (FR 7).
-         *
-         * @public
-         * @readonly
-         */
-        readonly diallingSequence: DeviceID,
-        /**
-         * @summary `correlatorData`.
-         * @description
-         *
-         * Optional correlator data attached before resulting state
-         * transitions (§12.2.10).
-         *
-         * @public
-         * @readonly
-         */
-        readonly correlatorData?: OPTIONAL<CorrelatorData>,
-        /**
-         * @summary `extensions`.
-         * @description
-         *
-         * Optional `CSTACommonArguments` carrying the security and
-         * privateData parameters from the ECMA-269 service table.
-         *
-         * @public
-         * @readonly
-         */
-        readonly extensions?: OPTIONAL<CSTACommonArguments>
-    ) {}
+        diallingConnection: ConnectionID,
+        diallingSequence: DeviceID,
+        correlatorData?: OPTIONAL<CorrelatorData>,
+        extensions?: OPTIONAL<CSTACommonArguments>
+    ) {
+        this.diallingConnection = diallingConnection;
+        this.diallingSequence = diallingSequence;
+        this.correlatorData = correlatorData;
+        this.extensions = extensions;
+    }
 
     /**
      * @summary Restructures an object into a DialDigitsArgument

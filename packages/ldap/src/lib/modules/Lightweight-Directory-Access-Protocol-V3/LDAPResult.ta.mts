@@ -1,6 +1,6 @@
 /* eslint-disable */
 import {
-  OPTIONAL,
+  type OPTIONAL,
   ASN1Element as _Element,
   ASN1TagClass as _TagClass,
   ASN1Construction as _Construction,
@@ -12,23 +12,23 @@ import {
 } from '@wildboar/asn1';
 import * as $ from '@wildboar/asn1/functional';
 import {
-  LDAPResult_resultCode,
+  type LDAPResult_resultCode,
   _enum_for_LDAPResult_resultCode,
   _decode_LDAPResult_resultCode,
   _encode_LDAPResult_resultCode,
 } from '../Lightweight-Directory-Access-Protocol-V3/LDAPResult-resultCode.ta.mjs';
 import {
-  LDAPDN,
+  type LDAPDN,
   _decode_LDAPDN,
   _encode_LDAPDN,
 } from '../Lightweight-Directory-Access-Protocol-V3/LDAPDN.ta.mjs';
 import {
-  LDAPString,
+  type LDAPString,
   _decode_LDAPString,
   _encode_LDAPString,
 } from '../Lightweight-Directory-Access-Protocol-V3/LDAPString.ta.mjs';
 import {
-  Referral,
+  type Referral,
   _decode_Referral,
   _encode_Referral,
 } from '../Lightweight-Directory-Access-Protocol-V3/Referral.ta.mjs';
@@ -99,7 +99,7 @@ export class LDAPResult {
    * @public
    * @readonly
    */
-  readonly resultCode: LDAPResult_resultCode;
+  public readonly resultCode: LDAPResult_resultCode;
   /**
    * @summary `matchedDN`.
    * @description
@@ -112,7 +112,7 @@ export class LDAPResult {
    * @public
    * @readonly
    */
-  readonly matchedDN: LDAPDN;
+  public readonly matchedDN: LDAPDN;
   /**
    * @summary `diagnosticMessage`.
    * @description
@@ -123,7 +123,7 @@ export class LDAPResult {
    * @public
    * @readonly
    */
-  readonly diagnosticMessage: LDAPString;
+  public readonly diagnosticMessage: LDAPString;
   /**
    * @summary `referral`.
    * @description
@@ -134,13 +134,13 @@ export class LDAPResult {
    * @public
    * @readonly
    */
-  readonly referral?: OPTIONAL<Referral>;
+  public readonly referral?: OPTIONAL<Referral>;
   /**
    * @summary Extensions that are not recognized.
    * @public
    * @readonly
    */
-  readonly _unrecognizedExtensionsList: _Element[];
+  public readonly _unrecognizedExtensionsList: _Element[];
 
   constructor(
     resultCode: LDAPResult_resultCode,
@@ -186,7 +186,7 @@ export class LDAPResult {
    * @static
    */
 
-  public static _enum_for_resultCode = _enum_for_LDAPResult_resultCode;
+  public static _enum_for_resultCode: typeof _enum_for_LDAPResult_resultCode = _enum_for_LDAPResult_resultCode;
 }
 
 

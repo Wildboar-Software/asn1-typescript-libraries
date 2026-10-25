@@ -1,7 +1,7 @@
 /* eslint-disable */
 import {
-    OPTIONAL,
-    ASN1Element as _Element,
+    type OPTIONAL,
+    type ASN1Element as _Element,
     ASN1TagClass as _TagClass,
     ASN1Construction as _Construction,
     ASN1UniversalType as _UniversalType,
@@ -12,9 +12,9 @@ import {
 } from "@wildboar/asn1";
 import * as $ from "@wildboar/asn1/functional";
 import { Path, _decode_Path, _encode_Path } from "../CryptographicInformationFramework/Path.ta.mjs";
-import { KeyInfo, _get_decoder_for_KeyInfo, _get_encoder_for_KeyInfo } from "../CryptographicInformationFramework/KeyInfo.ta.mjs";
-import { Parameters, _decode_Parameters, _encode_Parameters } from "../ANSI-X9-62/Parameters.ta.mjs";
-import { PublicKeyOperations, _decode_PublicKeyOperations, _encode_PublicKeyOperations } from "../CryptographicInformationFramework/PublicKeyOperations.ta.mjs";
+import { type KeyInfo, _get_decoder_for_KeyInfo, _get_encoder_for_KeyInfo } from "../CryptographicInformationFramework/KeyInfo.ta.mjs";
+import { type Parameters, _decode_Parameters, _encode_Parameters } from "../ANSI-X9-62/Parameters.ta.mjs";
+import { type PublicKeyOperations, _decode_PublicKeyOperations, _encode_PublicKeyOperations } from "../CryptographicInformationFramework/PublicKeyOperations.ta.mjs";
 
 
 /**
@@ -39,33 +39,41 @@ import { PublicKeyOperations, _decode_PublicKeyOperations, _encode_PublicKeyOper
  */
 export
 class PrivateECKeyAttributes {
+    /**
+     * @summary `value`.
+     * @description
+     * Path to the file holding the private key; empty path if no file need
+     * be specified. ISO/IEC 7816-15:2016 §8.4. EC.
+     * @public
+     * @readonly
+     */
+    public readonly value: Path;
+    /**
+     * @summary `keyInfo`.
+     * @description
+     * If present, overrides `CIAInfo.supportedAlgorithms` referenced by
+     * `CommonKeyAttributes.algReference`. Omit when available by other
+     * means. ISO/IEC 7816-15:2016 §8.4.2.
+     * @public
+     * @readonly
+     */
+    public readonly keyInfo?: OPTIONAL<KeyInfo<Parameters, PublicKeyOperations>>;
+    /**
+     * @summary Extensions that are not recognized.
+     * @public
+     * @readonly
+     */
+    public readonly _unrecognizedExtensionsList: _Element[];
+
     constructor (
-        /**
-         * @summary `value`.
-         * @description
-         * Path to the file holding the private key; empty path if no file need
-         * be specified. ISO/IEC 7816-15:2016 §8.4. EC.
-         * @public
-         * @readonly
-         */
-        readonly value: Path,
-        /**
-         * @summary `keyInfo`.
-         * @description
-         * If present, overrides `CIAInfo.supportedAlgorithms` referenced by
-         * `CommonKeyAttributes.algReference`. Omit when available by other
-         * means. ISO/IEC 7816-15:2016 §8.4.2.
-         * @public
-         * @readonly
-         */
-        readonly keyInfo?: OPTIONAL<KeyInfo<Parameters, PublicKeyOperations>>,
-        /**
-         * @summary Extensions that are not recognized.
-         * @public
-         * @readonly
-         */
-        readonly _unrecognizedExtensionsList: _Element[] = []
-    ) {}
+        value: Path,
+        keyInfo?: OPTIONAL<KeyInfo<Parameters, PublicKeyOperations>>,
+        _unrecognizedExtensionsList: _Element[] = []
+    ) {
+        this.value = value;
+        this.keyInfo = keyInfo;
+        this._unrecognizedExtensionsList = _unrecognizedExtensionsList;
+    }
 
     /**
      * @summary Restructures an object into a PrivateECKeyAttributes

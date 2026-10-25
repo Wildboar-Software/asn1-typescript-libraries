@@ -1,7 +1,7 @@
 /* eslint-disable */
 import {
-    OPTIONAL,
-    ASN1Element as _Element,
+    type OPTIONAL,
+    type ASN1Element as _Element,
     ASN1TagClass as _TagClass,
     ASN1Construction as _Construction,
     ASN1UniversalType as _UniversalType,
@@ -12,12 +12,12 @@ import {
 } from '@wildboar/asn1';
 import * as $ from '@wildboar/asn1/functional';
 import {
-    PrimaryOrRemoved,
+    type PrimaryOrRemoved,
     _decode_PrimaryOrRemoved,
     _encode_PrimaryOrRemoved,
 } from '../EDIMSInformationObjects/PrimaryOrRemoved.ta.mjs';
 import {
-    AdditionalBodyParts,
+    type AdditionalBodyParts,
     _decode_AdditionalBodyParts,
     _encode_AdditionalBodyParts,
 } from '../EDIMSInformationObjects/AdditionalBodyParts.ta.mjs';
@@ -38,20 +38,26 @@ import {
  *
  */
 export class BodyOrRemoved {
+    /**
+     * @summary `primary_or_removed`.
+     * @public
+     * @readonly
+     */
+    public readonly primary_or_removed: PrimaryOrRemoved;
+    /**
+     * @summary `additional_body_parts`.
+     * @public
+     * @readonly
+     */
+    public readonly additional_body_parts?: OPTIONAL<AdditionalBodyParts>;
+
     constructor(
-        /**
-         * @summary `primary_or_removed`.
-         * @public
-         * @readonly
-         */
-        readonly primary_or_removed: PrimaryOrRemoved,
-        /**
-         * @summary `additional_body_parts`.
-         * @public
-         * @readonly
-         */
-        readonly additional_body_parts?: OPTIONAL<AdditionalBodyParts>
-    ) {}
+        primary_or_removed: PrimaryOrRemoved,
+        additional_body_parts?: OPTIONAL<AdditionalBodyParts>
+    ) {
+        this.primary_or_removed = primary_or_removed;
+        this.additional_body_parts = additional_body_parts;
+    }
 
     /**
      * @summary Restructures an object into a BodyOrRemoved

@@ -1,11 +1,11 @@
 /* eslint-disable */
 import {
-    OPTIONAL,
-    ASN1Element as _Element,
+    type OPTIONAL,
+    type ASN1Element as _Element,
     ASN1TagClass as _TagClass
 } from "@wildboar/asn1";
 import * as $ from "@wildboar/asn1/functional";
-import { Identity, _decode_Identity, _encode_Identity } from "../MAP-CommonDataTypes/Identity.ta.mjs";
+import { type Identity, _decode_Identity, _encode_Identity } from "../MAP-CommonDataTypes/Identity.ta.mjs";
 import { ExtensionContainer, _decode_ExtensionContainer, _encode_ExtensionContainer } from "../MAP-ExtensionDataTypes/ExtensionContainer.ta.mjs";
 
 
@@ -24,7 +24,7 @@ import { ExtensionContainer, _decode_ExtensionContainer, _encode_ExtensionContai
  * ```asn1
  * CancelVcsgLocationArg ::= SEQUENCE {
  *     identity    Identity,
- *     extensionContainer    ExtensionContainer    OPTIONAL,
+ *     extensionContainer    ExtensionContainer    type OPTIONAL,
  *     ...
  *     }
  * ```
@@ -33,31 +33,39 @@ import { ExtensionContainer, _decode_ExtensionContainer, _encode_ExtensionContai
  */
 export
 class CancelVcsgLocationArg {
+    /**
+     * @summary `identity`.
+     * @description
+     *
+     * IMSI of the subscriber whose VCSG roaming record is to be deleted
+     * (3GPP TS 29.002 V19.1.0 clauses 8.1.10.3 and 7.6.2.1).
+     *
+     * @public
+     * @readonly
+     */
+    public readonly identity: Identity;
+    /**
+     * @summary `extensionContainer`.
+     * @public
+     * @readonly
+     */
+    public readonly extensionContainer?: OPTIONAL<ExtensionContainer>;
+    /**
+     * @summary Extensions that are not recognized.
+     * @public
+     * @readonly
+     */
+    public readonly _unrecognizedExtensionsList: _Element[];
+
     constructor (
-        /**
-         * @summary `identity`.
-         * @description
-         *
-         * IMSI of the subscriber whose VCSG roaming record is to be deleted
-         * (3GPP TS 29.002 V19.1.0 clauses 8.1.10.3 and 7.6.2.1).
-         *
-         * @public
-         * @readonly
-         */
-        readonly identity: Identity,
-        /**
-         * @summary `extensionContainer`.
-         * @public
-         * @readonly
-         */
-        readonly extensionContainer?: OPTIONAL<ExtensionContainer>,
-        /**
-         * @summary Extensions that are not recognized.
-         * @public
-         * @readonly
-         */
-        readonly _unrecognizedExtensionsList: _Element[] = []
-    ) {}
+        identity: Identity,
+        extensionContainer?: OPTIONAL<ExtensionContainer>,
+        _unrecognizedExtensionsList: _Element[] = []
+    ) {
+        this.identity = identity;
+        this.extensionContainer = extensionContainer;
+        this._unrecognizedExtensionsList = _unrecognizedExtensionsList;
+    }
 
     /**
      * @summary Restructures an object into a CancelVcsgLocationArg

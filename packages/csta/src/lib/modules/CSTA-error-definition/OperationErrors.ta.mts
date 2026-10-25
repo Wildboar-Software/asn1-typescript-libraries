@@ -1,7 +1,7 @@
 /* eslint-disable */
 
 import * as $ from "@wildboar/asn1/functional";
-import { ENUMERATED, ASN1Element as _Element } from "@wildboar/asn1";
+import { type ENUMERATED, ASN1Element as _Element } from "@wildboar/asn1";
 
 
 
@@ -839,7 +839,7 @@ type OperationErrors = _enum_for_OperationErrors;
  * @enum {number}
  */
 export
-const OperationErrors = _enum_for_OperationErrors;
+const OperationErrors: typeof _enum_for_OperationErrors = _enum_for_OperationErrors;
 
 /**
  * @summary OperationErrors_generic
@@ -851,7 +851,7 @@ const OperationErrors = _enum_for_OperationErrors;
  * @see https://ecma-international.org/publications-and-standards/standards/ecma-269/
  */
 export
-const OperationErrors_generic: OperationErrors = OperationErrors.generic; /* LONG_NAMED_ENUMERATED_VALUE */
+const OperationErrors_generic: _enum_for_OperationErrors.generic = OperationErrors.generic; /* LONG_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary generic
@@ -860,7 +860,7 @@ const OperationErrors_generic: OperationErrors = OperationErrors.generic; /* LON
  * @type {number}
  */
 export
-const generic: OperationErrors = OperationErrors.generic; /* SHORT_NAMED_ENUMERATED_VALUE */
+const generic: _enum_for_OperationErrors.generic = OperationErrors.generic; /* SHORT_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary OperationErrors_atLeastOneConditionalParameterNotProvided
@@ -871,7 +871,7 @@ const generic: OperationErrors = OperationErrors.generic; /* SHORT_NAMED_ENUMERA
  * @see https://ecma-international.org/publications-and-standards/standards/ecma-269/
  */
 export
-const OperationErrors_atLeastOneConditionalParameterNotProvided: OperationErrors = OperationErrors.atLeastOneConditionalParameterNotProvided; /* LONG_NAMED_ENUMERATED_VALUE */
+const OperationErrors_atLeastOneConditionalParameterNotProvided: _enum_for_OperationErrors.atLeastOneConditionalParameterNotProvided = OperationErrors.atLeastOneConditionalParameterNotProvided; /* LONG_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary atLeastOneConditionalParameterNotProvided
@@ -881,7 +881,7 @@ const OperationErrors_atLeastOneConditionalParameterNotProvided: OperationErrors
  * @type {number}
  */
 export
-const atLeastOneConditionalParameterNotProvided: OperationErrors = OperationErrors.atLeastOneConditionalParameterNotProvided; /* SHORT_NAMED_ENUMERATED_VALUE */
+const atLeastOneConditionalParameterNotProvided: _enum_for_OperationErrors.atLeastOneConditionalParameterNotProvided = OperationErrors.atLeastOneConditionalParameterNotProvided; /* SHORT_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary OperationErrors_featureAlreadySet
@@ -892,7 +892,7 @@ const atLeastOneConditionalParameterNotProvided: OperationErrors = OperationErro
  * @see https://ecma-international.org/publications-and-standards/standards/ecma-269/
  */
 export
-const OperationErrors_featureAlreadySet: OperationErrors = OperationErrors.featureAlreadySet; /* LONG_NAMED_ENUMERATED_VALUE */
+const OperationErrors_featureAlreadySet: _enum_for_OperationErrors.featureAlreadySet = OperationErrors.featureAlreadySet; /* LONG_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary featureAlreadySet
@@ -901,7 +901,7 @@ const OperationErrors_featureAlreadySet: OperationErrors = OperationErrors.featu
  * @type {number}
  */
 export
-const featureAlreadySet: OperationErrors = OperationErrors.featureAlreadySet; /* SHORT_NAMED_ENUMERATED_VALUE */
+const featureAlreadySet: _enum_for_OperationErrors.featureAlreadySet = OperationErrors.featureAlreadySet; /* SHORT_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary OperationErrors_invalidMsgID
@@ -913,7 +913,7 @@ const featureAlreadySet: OperationErrors = OperationErrors.featureAlreadySet; /*
  * @see https://ecma-international.org/publications-and-standards/standards/ecma-269/
  */
 export
-const OperationErrors_invalidMsgID: OperationErrors = OperationErrors.invalidMsgID; /* LONG_NAMED_ENUMERATED_VALUE */
+const OperationErrors_invalidMsgID: _enum_for_OperationErrors.invalidMsgID = OperationErrors.invalidMsgID; /* LONG_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary invalidMsgID
@@ -922,7 +922,7 @@ const OperationErrors_invalidMsgID: OperationErrors = OperationErrors.invalidMsg
  * @type {number}
  */
 export
-const invalidMsgID: OperationErrors = OperationErrors.invalidMsgID; /* SHORT_NAMED_ENUMERATED_VALUE */
+const invalidMsgID: _enum_for_OperationErrors.invalidMsgID = OperationErrors.invalidMsgID; /* SHORT_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary OperationErrors_invalidParameterValue
@@ -934,7 +934,7 @@ const invalidMsgID: OperationErrors = OperationErrors.invalidMsgID; /* SHORT_NAM
  * @see https://ecma-international.org/publications-and-standards/standards/ecma-269/
  */
 export
-const OperationErrors_invalidParameterValue: OperationErrors = OperationErrors.invalidParameterValue; /* LONG_NAMED_ENUMERATED_VALUE */
+const OperationErrors_invalidParameterValue: _enum_for_OperationErrors.invalidParameterValue = OperationErrors.invalidParameterValue; /* LONG_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary invalidParameterValue
@@ -943,7 +943,7 @@ const OperationErrors_invalidParameterValue: OperationErrors = OperationErrors.i
  * @type {number}
  */
 export
-const invalidParameterValue: OperationErrors = OperationErrors.invalidParameterValue; /* SHORT_NAMED_ENUMERATED_VALUE */
+const invalidParameterValue: _enum_for_OperationErrors.invalidParameterValue = OperationErrors.invalidParameterValue; /* SHORT_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary OperationErrors_invalidAccountCode
@@ -953,7 +953,7 @@ const invalidParameterValue: OperationErrors = OperationErrors.invalidParameterV
  * @see https://ecma-international.org/publications-and-standards/standards/ecma-269/
  */
 export
-const OperationErrors_invalidAccountCode: OperationErrors = OperationErrors.invalidAccountCode; /* LONG_NAMED_ENUMERATED_VALUE */
+const OperationErrors_invalidAccountCode: _enum_for_OperationErrors.invalidAccountCode = OperationErrors.invalidAccountCode; /* LONG_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary invalidAccountCode
@@ -962,7 +962,7 @@ const OperationErrors_invalidAccountCode: OperationErrors = OperationErrors.inva
  * @type {number}
  */
 export
-const invalidAccountCode: OperationErrors = OperationErrors.invalidAccountCode; /* SHORT_NAMED_ENUMERATED_VALUE */
+const invalidAccountCode: _enum_for_OperationErrors.invalidAccountCode = OperationErrors.invalidAccountCode; /* SHORT_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary OperationErrors_invalidAgentGroup
@@ -972,7 +972,7 @@ const invalidAccountCode: OperationErrors = OperationErrors.invalidAccountCode; 
  * @see https://ecma-international.org/publications-and-standards/standards/ecma-269/
  */
 export
-const OperationErrors_invalidAgentGroup: OperationErrors = OperationErrors.invalidAgentGroup; /* LONG_NAMED_ENUMERATED_VALUE */
+const OperationErrors_invalidAgentGroup: _enum_for_OperationErrors.invalidAgentGroup = OperationErrors.invalidAgentGroup; /* LONG_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary invalidAgentGroup
@@ -981,7 +981,7 @@ const OperationErrors_invalidAgentGroup: OperationErrors = OperationErrors.inval
  * @type {number}
  */
 export
-const invalidAgentGroup: OperationErrors = OperationErrors.invalidAgentGroup; /* SHORT_NAMED_ENUMERATED_VALUE */
+const invalidAgentGroup: _enum_for_OperationErrors.invalidAgentGroup = OperationErrors.invalidAgentGroup; /* SHORT_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary OperationErrors_invalidAgentIdentifier
@@ -991,7 +991,7 @@ const invalidAgentGroup: OperationErrors = OperationErrors.invalidAgentGroup; /*
  * @see https://ecma-international.org/publications-and-standards/standards/ecma-269/
  */
 export
-const OperationErrors_invalidAgentIdentifier: OperationErrors = OperationErrors.invalidAgentIdentifier; /* LONG_NAMED_ENUMERATED_VALUE */
+const OperationErrors_invalidAgentIdentifier: _enum_for_OperationErrors.invalidAgentIdentifier = OperationErrors.invalidAgentIdentifier; /* LONG_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary invalidAgentIdentifier
@@ -1000,7 +1000,7 @@ const OperationErrors_invalidAgentIdentifier: OperationErrors = OperationErrors.
  * @type {number}
  */
 export
-const invalidAgentIdentifier: OperationErrors = OperationErrors.invalidAgentIdentifier; /* SHORT_NAMED_ENUMERATED_VALUE */
+const invalidAgentIdentifier: _enum_for_OperationErrors.invalidAgentIdentifier = OperationErrors.invalidAgentIdentifier; /* SHORT_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary OperationErrors_invalidAgentPassword
@@ -1010,7 +1010,7 @@ const invalidAgentIdentifier: OperationErrors = OperationErrors.invalidAgentIden
  * @see https://ecma-international.org/publications-and-standards/standards/ecma-269/
  */
 export
-const OperationErrors_invalidAgentPassword: OperationErrors = OperationErrors.invalidAgentPassword; /* LONG_NAMED_ENUMERATED_VALUE */
+const OperationErrors_invalidAgentPassword: _enum_for_OperationErrors.invalidAgentPassword = OperationErrors.invalidAgentPassword; /* LONG_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary invalidAgentPassword
@@ -1019,7 +1019,7 @@ const OperationErrors_invalidAgentPassword: OperationErrors = OperationErrors.in
  * @type {number}
  */
 export
-const invalidAgentPassword: OperationErrors = OperationErrors.invalidAgentPassword; /* SHORT_NAMED_ENUMERATED_VALUE */
+const invalidAgentPassword: _enum_for_OperationErrors.invalidAgentPassword = OperationErrors.invalidAgentPassword; /* SHORT_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary OperationErrors_invalidAgentState
@@ -1029,7 +1029,7 @@ const invalidAgentPassword: OperationErrors = OperationErrors.invalidAgentPasswo
  * @see https://ecma-international.org/publications-and-standards/standards/ecma-269/
  */
 export
-const OperationErrors_invalidAgentState: OperationErrors = OperationErrors.invalidAgentState; /* LONG_NAMED_ENUMERATED_VALUE */
+const OperationErrors_invalidAgentState: _enum_for_OperationErrors.invalidAgentState = OperationErrors.invalidAgentState; /* LONG_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary invalidAgentState
@@ -1038,7 +1038,7 @@ const OperationErrors_invalidAgentState: OperationErrors = OperationErrors.inval
  * @type {number}
  */
 export
-const invalidAgentState: OperationErrors = OperationErrors.invalidAgentState; /* SHORT_NAMED_ENUMERATED_VALUE */
+const invalidAgentState: _enum_for_OperationErrors.invalidAgentState = OperationErrors.invalidAgentState; /* SHORT_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary OperationErrors_invalidAlertTime
@@ -1048,7 +1048,7 @@ const invalidAgentState: OperationErrors = OperationErrors.invalidAgentState; /*
  * @see https://ecma-international.org/publications-and-standards/standards/ecma-269/
  */
 export
-const OperationErrors_invalidAlertTime: OperationErrors = OperationErrors.invalidAlertTime; /* LONG_NAMED_ENUMERATED_VALUE */
+const OperationErrors_invalidAlertTime: _enum_for_OperationErrors.invalidAlertTime = OperationErrors.invalidAlertTime; /* LONG_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary invalidAlertTime
@@ -1057,7 +1057,7 @@ const OperationErrors_invalidAlertTime: OperationErrors = OperationErrors.invali
  * @type {number}
  */
 export
-const invalidAlertTime: OperationErrors = OperationErrors.invalidAlertTime; /* SHORT_NAMED_ENUMERATED_VALUE */
+const invalidAlertTime: _enum_for_OperationErrors.invalidAlertTime = OperationErrors.invalidAlertTime; /* SHORT_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary OperationErrors_invalidAllocationState
@@ -1069,7 +1069,7 @@ const invalidAlertTime: OperationErrors = OperationErrors.invalidAlertTime; /* S
  * @see https://ecma-international.org/publications-and-standards/standards/ecma-269/
  */
 export
-const OperationErrors_invalidAllocationState: OperationErrors = OperationErrors.invalidAllocationState; /* LONG_NAMED_ENUMERATED_VALUE */
+const OperationErrors_invalidAllocationState: _enum_for_OperationErrors.invalidAllocationState = OperationErrors.invalidAllocationState; /* LONG_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary invalidAllocationState
@@ -1078,7 +1078,7 @@ const OperationErrors_invalidAllocationState: OperationErrors = OperationErrors.
  * @type {number}
  */
 export
-const invalidAllocationState: OperationErrors = OperationErrors.invalidAllocationState; /* SHORT_NAMED_ENUMERATED_VALUE */
+const invalidAllocationState: _enum_for_OperationErrors.invalidAllocationState = OperationErrors.invalidAllocationState; /* SHORT_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary OperationErrors_invalidAuthCode
@@ -1088,7 +1088,7 @@ const invalidAllocationState: OperationErrors = OperationErrors.invalidAllocatio
  * @see https://ecma-international.org/publications-and-standards/standards/ecma-269/
  */
 export
-const OperationErrors_invalidAuthCode: OperationErrors = OperationErrors.invalidAuthCode; /* LONG_NAMED_ENUMERATED_VALUE */
+const OperationErrors_invalidAuthCode: _enum_for_OperationErrors.invalidAuthCode = OperationErrors.invalidAuthCode; /* LONG_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary invalidAuthCode
@@ -1097,7 +1097,7 @@ const OperationErrors_invalidAuthCode: OperationErrors = OperationErrors.invalid
  * @type {number}
  */
 export
-const invalidAuthCode: OperationErrors = OperationErrors.invalidAuthCode; /* SHORT_NAMED_ENUMERATED_VALUE */
+const invalidAuthCode: _enum_for_OperationErrors.invalidAuthCode = OperationErrors.invalidAuthCode; /* SHORT_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary OperationErrors_invalidAutoAnswer
@@ -1107,7 +1107,7 @@ const invalidAuthCode: OperationErrors = OperationErrors.invalidAuthCode; /* SHO
  * @see https://ecma-international.org/publications-and-standards/standards/ecma-269/
  */
 export
-const OperationErrors_invalidAutoAnswer: OperationErrors = OperationErrors.invalidAutoAnswer; /* LONG_NAMED_ENUMERATED_VALUE */
+const OperationErrors_invalidAutoAnswer: _enum_for_OperationErrors.invalidAutoAnswer = OperationErrors.invalidAutoAnswer; /* LONG_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary invalidAutoAnswer
@@ -1116,7 +1116,7 @@ const OperationErrors_invalidAutoAnswer: OperationErrors = OperationErrors.inval
  * @type {number}
  */
 export
-const invalidAutoAnswer: OperationErrors = OperationErrors.invalidAutoAnswer; /* SHORT_NAMED_ENUMERATED_VALUE */
+const invalidAutoAnswer: _enum_for_OperationErrors.invalidAutoAnswer = OperationErrors.invalidAutoAnswer; /* SHORT_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary OperationErrors_invalidBitRate
@@ -1126,7 +1126,7 @@ const invalidAutoAnswer: OperationErrors = OperationErrors.invalidAutoAnswer; /*
  * @see https://ecma-international.org/publications-and-standards/standards/ecma-269/
  */
 export
-const OperationErrors_invalidBitRate: OperationErrors = OperationErrors.invalidBitRate; /* LONG_NAMED_ENUMERATED_VALUE */
+const OperationErrors_invalidBitRate: _enum_for_OperationErrors.invalidBitRate = OperationErrors.invalidBitRate; /* LONG_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary invalidBitRate
@@ -1135,7 +1135,7 @@ const OperationErrors_invalidBitRate: OperationErrors = OperationErrors.invalidB
  * @type {number}
  */
 export
-const invalidBitRate: OperationErrors = OperationErrors.invalidBitRate; /* SHORT_NAMED_ENUMERATED_VALUE */
+const invalidBitRate: _enum_for_OperationErrors.invalidBitRate = OperationErrors.invalidBitRate; /* SHORT_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary OperationErrors_invalidButtonIdentifier
@@ -1145,7 +1145,7 @@ const invalidBitRate: OperationErrors = OperationErrors.invalidBitRate; /* SHORT
  * @see https://ecma-international.org/publications-and-standards/standards/ecma-269/
  */
 export
-const OperationErrors_invalidButtonIdentifier: OperationErrors = OperationErrors.invalidButtonIdentifier; /* LONG_NAMED_ENUMERATED_VALUE */
+const OperationErrors_invalidButtonIdentifier: _enum_for_OperationErrors.invalidButtonIdentifier = OperationErrors.invalidButtonIdentifier; /* LONG_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary invalidButtonIdentifier
@@ -1154,7 +1154,7 @@ const OperationErrors_invalidButtonIdentifier: OperationErrors = OperationErrors
  * @type {number}
  */
 export
-const invalidButtonIdentifier: OperationErrors = OperationErrors.invalidButtonIdentifier; /* SHORT_NAMED_ENUMERATED_VALUE */
+const invalidButtonIdentifier: _enum_for_OperationErrors.invalidButtonIdentifier = OperationErrors.invalidButtonIdentifier; /* SHORT_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary OperationErrors_invalidCallType
@@ -1164,7 +1164,7 @@ const invalidButtonIdentifier: OperationErrors = OperationErrors.invalidButtonId
  * @see https://ecma-international.org/publications-and-standards/standards/ecma-269/
  */
 export
-const OperationErrors_invalidCallType: OperationErrors = OperationErrors.invalidCallType; /* LONG_NAMED_ENUMERATED_VALUE */
+const OperationErrors_invalidCallType: _enum_for_OperationErrors.invalidCallType = OperationErrors.invalidCallType; /* LONG_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary invalidCallType
@@ -1173,7 +1173,7 @@ const OperationErrors_invalidCallType: OperationErrors = OperationErrors.invalid
  * @type {number}
  */
 export
-const invalidCallType: OperationErrors = OperationErrors.invalidCallType; /* SHORT_NAMED_ENUMERATED_VALUE */
+const invalidCallType: _enum_for_OperationErrors.invalidCallType = OperationErrors.invalidCallType; /* SHORT_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary OperationErrors_invalidConnectionRate
@@ -1183,7 +1183,7 @@ const invalidCallType: OperationErrors = OperationErrors.invalidCallType; /* SHO
  * @see https://ecma-international.org/publications-and-standards/standards/ecma-269/
  */
 export
-const OperationErrors_invalidConnectionRate: OperationErrors = OperationErrors.invalidConnectionRate; /* LONG_NAMED_ENUMERATED_VALUE */
+const OperationErrors_invalidConnectionRate: _enum_for_OperationErrors.invalidConnectionRate = OperationErrors.invalidConnectionRate; /* LONG_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary invalidConnectionRate
@@ -1192,7 +1192,7 @@ const OperationErrors_invalidConnectionRate: OperationErrors = OperationErrors.i
  * @type {number}
  */
 export
-const invalidConnectionRate: OperationErrors = OperationErrors.invalidConnectionRate; /* SHORT_NAMED_ENUMERATED_VALUE */
+const invalidConnectionRate: _enum_for_OperationErrors.invalidConnectionRate = OperationErrors.invalidConnectionRate; /* SHORT_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary OperationErrors_invalidConsultPurpose
@@ -1202,7 +1202,7 @@ const invalidConnectionRate: OperationErrors = OperationErrors.invalidConnection
  * @see https://ecma-international.org/publications-and-standards/standards/ecma-269/
  */
 export
-const OperationErrors_invalidConsultPurpose: OperationErrors = OperationErrors.invalidConsultPurpose; /* LONG_NAMED_ENUMERATED_VALUE */
+const OperationErrors_invalidConsultPurpose: _enum_for_OperationErrors.invalidConsultPurpose = OperationErrors.invalidConsultPurpose; /* LONG_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary invalidConsultPurpose
@@ -1211,7 +1211,7 @@ const OperationErrors_invalidConsultPurpose: OperationErrors = OperationErrors.i
  * @type {number}
  */
 export
-const invalidConsultPurpose: OperationErrors = OperationErrors.invalidConsultPurpose; /* SHORT_NAMED_ENUMERATED_VALUE */
+const invalidConsultPurpose: _enum_for_OperationErrors.invalidConsultPurpose = OperationErrors.invalidConsultPurpose; /* SHORT_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary OperationErrors_invalidCorrelatorData
@@ -1221,7 +1221,7 @@ const invalidConsultPurpose: OperationErrors = OperationErrors.invalidConsultPur
  * @see https://ecma-international.org/publications-and-standards/standards/ecma-269/
  */
 export
-const OperationErrors_invalidCorrelatorData: OperationErrors = OperationErrors.invalidCorrelatorData; /* LONG_NAMED_ENUMERATED_VALUE */
+const OperationErrors_invalidCorrelatorData: _enum_for_OperationErrors.invalidCorrelatorData = OperationErrors.invalidCorrelatorData; /* LONG_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary invalidCorrelatorData
@@ -1230,7 +1230,7 @@ const OperationErrors_invalidCorrelatorData: OperationErrors = OperationErrors.i
  * @type {number}
  */
 export
-const invalidCorrelatorData: OperationErrors = OperationErrors.invalidCorrelatorData; /* SHORT_NAMED_ENUMERATED_VALUE */
+const invalidCorrelatorData: _enum_for_OperationErrors.invalidCorrelatorData = OperationErrors.invalidCorrelatorData; /* SHORT_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary OperationErrors_invalidCrossRefID
@@ -1242,7 +1242,7 @@ const invalidCorrelatorData: OperationErrors = OperationErrors.invalidCorrelator
  * @see https://ecma-international.org/publications-and-standards/standards/ecma-269/
  */
 export
-const OperationErrors_invalidCrossRefID: OperationErrors = OperationErrors.invalidCrossRefID; /* LONG_NAMED_ENUMERATED_VALUE */
+const OperationErrors_invalidCrossRefID: _enum_for_OperationErrors.invalidCrossRefID = OperationErrors.invalidCrossRefID; /* LONG_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary invalidCrossRefID
@@ -1251,7 +1251,7 @@ const OperationErrors_invalidCrossRefID: OperationErrors = OperationErrors.inval
  * @type {number}
  */
 export
-const invalidCrossRefID: OperationErrors = OperationErrors.invalidCrossRefID; /* SHORT_NAMED_ENUMERATED_VALUE */
+const invalidCrossRefID: _enum_for_OperationErrors.invalidCrossRefID = OperationErrors.invalidCrossRefID; /* SHORT_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary OperationErrors_invalidDelayTolerance
@@ -1261,7 +1261,7 @@ const invalidCrossRefID: OperationErrors = OperationErrors.invalidCrossRefID; /*
  * @see https://ecma-international.org/publications-and-standards/standards/ecma-269/
  */
 export
-const OperationErrors_invalidDelayTolerance: OperationErrors = OperationErrors.invalidDelayTolerance; /* LONG_NAMED_ENUMERATED_VALUE */
+const OperationErrors_invalidDelayTolerance: _enum_for_OperationErrors.invalidDelayTolerance = OperationErrors.invalidDelayTolerance; /* LONG_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary invalidDelayTolerance
@@ -1270,7 +1270,7 @@ const OperationErrors_invalidDelayTolerance: OperationErrors = OperationErrors.i
  * @type {number}
  */
 export
-const invalidDelayTolerance: OperationErrors = OperationErrors.invalidDelayTolerance; /* SHORT_NAMED_ENUMERATED_VALUE */
+const invalidDelayTolerance: _enum_for_OperationErrors.invalidDelayTolerance = OperationErrors.invalidDelayTolerance; /* SHORT_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary OperationErrors_invalidDestination
@@ -1283,7 +1283,7 @@ const invalidDelayTolerance: OperationErrors = OperationErrors.invalidDelayToler
  * @see https://ecma-international.org/publications-and-standards/standards/ecma-269/
  */
 export
-const OperationErrors_invalidDestination: OperationErrors = OperationErrors.invalidDestination; /* LONG_NAMED_ENUMERATED_VALUE */
+const OperationErrors_invalidDestination: _enum_for_OperationErrors.invalidDestination = OperationErrors.invalidDestination; /* LONG_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary invalidDestination
@@ -1292,7 +1292,7 @@ const OperationErrors_invalidDestination: OperationErrors = OperationErrors.inva
  * @type {number}
  */
 export
-const invalidDestination: OperationErrors = OperationErrors.invalidDestination; /* SHORT_NAMED_ENUMERATED_VALUE */
+const invalidDestination: _enum_for_OperationErrors.invalidDestination = OperationErrors.invalidDestination; /* SHORT_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary OperationErrors_invalidDestinationDetect
@@ -1302,7 +1302,7 @@ const invalidDestination: OperationErrors = OperationErrors.invalidDestination; 
  * @see https://ecma-international.org/publications-and-standards/standards/ecma-269/
  */
 export
-const OperationErrors_invalidDestinationDetect: OperationErrors = OperationErrors.invalidDestinationDetect; /* LONG_NAMED_ENUMERATED_VALUE */
+const OperationErrors_invalidDestinationDetect: _enum_for_OperationErrors.invalidDestinationDetect = OperationErrors.invalidDestinationDetect; /* LONG_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary invalidDestinationDetect
@@ -1311,7 +1311,7 @@ const OperationErrors_invalidDestinationDetect: OperationErrors = OperationError
  * @type {number}
  */
 export
-const invalidDestinationDetect: OperationErrors = OperationErrors.invalidDestinationDetect; /* SHORT_NAMED_ENUMERATED_VALUE */
+const invalidDestinationDetect: _enum_for_OperationErrors.invalidDestinationDetect = OperationErrors.invalidDestinationDetect; /* SHORT_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary OperationErrors_invalidDoNotDisturb
@@ -1321,7 +1321,7 @@ const invalidDestinationDetect: OperationErrors = OperationErrors.invalidDestina
  * @see https://ecma-international.org/publications-and-standards/standards/ecma-269/
  */
 export
-const OperationErrors_invalidDoNotDisturb: OperationErrors = OperationErrors.invalidDoNotDisturb; /* LONG_NAMED_ENUMERATED_VALUE */
+const OperationErrors_invalidDoNotDisturb: _enum_for_OperationErrors.invalidDoNotDisturb = OperationErrors.invalidDoNotDisturb; /* LONG_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary invalidDoNotDisturb
@@ -1330,7 +1330,7 @@ const OperationErrors_invalidDoNotDisturb: OperationErrors = OperationErrors.inv
  * @type {number}
  */
 export
-const invalidDoNotDisturb: OperationErrors = OperationErrors.invalidDoNotDisturb; /* SHORT_NAMED_ENUMERATED_VALUE */
+const invalidDoNotDisturb: _enum_for_OperationErrors.invalidDoNotDisturb = OperationErrors.invalidDoNotDisturb; /* SHORT_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary OperationErrors_invalidEscapeCrossRefID
@@ -1341,7 +1341,7 @@ const invalidDoNotDisturb: OperationErrors = OperationErrors.invalidDoNotDisturb
  * @see https://ecma-international.org/publications-and-standards/standards/ecma-269/
  */
 export
-const OperationErrors_invalidEscapeCrossRefID: OperationErrors = OperationErrors.invalidEscapeCrossRefID; /* LONG_NAMED_ENUMERATED_VALUE */
+const OperationErrors_invalidEscapeCrossRefID: _enum_for_OperationErrors.invalidEscapeCrossRefID = OperationErrors.invalidEscapeCrossRefID; /* LONG_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary invalidEscapeCrossRefID
@@ -1350,7 +1350,7 @@ const OperationErrors_invalidEscapeCrossRefID: OperationErrors = OperationErrors
  * @type {number}
  */
 export
-const invalidEscapeCrossRefID: OperationErrors = OperationErrors.invalidEscapeCrossRefID; /* SHORT_NAMED_ENUMERATED_VALUE */
+const invalidEscapeCrossRefID: _enum_for_OperationErrors.invalidEscapeCrossRefID = OperationErrors.invalidEscapeCrossRefID; /* SHORT_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary OperationErrors_invalidFeature
@@ -1361,7 +1361,7 @@ const invalidEscapeCrossRefID: OperationErrors = OperationErrors.invalidEscapeCr
  * @see https://ecma-international.org/publications-and-standards/standards/ecma-269/
  */
 export
-const OperationErrors_invalidFeature: OperationErrors = OperationErrors.invalidFeature; /* LONG_NAMED_ENUMERATED_VALUE */
+const OperationErrors_invalidFeature: _enum_for_OperationErrors.invalidFeature = OperationErrors.invalidFeature; /* LONG_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary invalidFeature
@@ -1370,7 +1370,7 @@ const OperationErrors_invalidFeature: OperationErrors = OperationErrors.invalidF
  * @type {number}
  */
 export
-const invalidFeature: OperationErrors = OperationErrors.invalidFeature; /* SHORT_NAMED_ENUMERATED_VALUE */
+const invalidFeature: _enum_for_OperationErrors.invalidFeature = OperationErrors.invalidFeature; /* SHORT_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary OperationErrors_invalidFile
@@ -1380,7 +1380,7 @@ const invalidFeature: OperationErrors = OperationErrors.invalidFeature; /* SHORT
  * @see https://ecma-international.org/publications-and-standards/standards/ecma-269/
  */
 export
-const OperationErrors_invalidFile: OperationErrors = OperationErrors.invalidFile; /* LONG_NAMED_ENUMERATED_VALUE */
+const OperationErrors_invalidFile: _enum_for_OperationErrors.invalidFile = OperationErrors.invalidFile; /* LONG_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary invalidFile
@@ -1389,7 +1389,7 @@ const OperationErrors_invalidFile: OperationErrors = OperationErrors.invalidFile
  * @type {number}
  */
 export
-const invalidFile: OperationErrors = OperationErrors.invalidFile; /* SHORT_NAMED_ENUMERATED_VALUE */
+const invalidFile: _enum_for_OperationErrors.invalidFile = OperationErrors.invalidFile; /* SHORT_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary OperationErrors_invalidFlowDirection
@@ -1399,7 +1399,7 @@ const invalidFile: OperationErrors = OperationErrors.invalidFile; /* SHORT_NAMED
  * @see https://ecma-international.org/publications-and-standards/standards/ecma-269/
  */
 export
-const OperationErrors_invalidFlowDirection: OperationErrors = OperationErrors.invalidFlowDirection; /* LONG_NAMED_ENUMERATED_VALUE */
+const OperationErrors_invalidFlowDirection: _enum_for_OperationErrors.invalidFlowDirection = OperationErrors.invalidFlowDirection; /* LONG_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary invalidFlowDirection
@@ -1408,7 +1408,7 @@ const OperationErrors_invalidFlowDirection: OperationErrors = OperationErrors.in
  * @type {number}
  */
 export
-const invalidFlowDirection: OperationErrors = OperationErrors.invalidFlowDirection; /* SHORT_NAMED_ENUMERATED_VALUE */
+const invalidFlowDirection: _enum_for_OperationErrors.invalidFlowDirection = OperationErrors.invalidFlowDirection; /* SHORT_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary OperationErrors_invalidForwardingDestination
@@ -1419,7 +1419,7 @@ const invalidFlowDirection: OperationErrors = OperationErrors.invalidFlowDirecti
  * @see https://ecma-international.org/publications-and-standards/standards/ecma-269/
  */
 export
-const OperationErrors_invalidForwardingDestination: OperationErrors = OperationErrors.invalidForwardingDestination; /* LONG_NAMED_ENUMERATED_VALUE */
+const OperationErrors_invalidForwardingDestination: _enum_for_OperationErrors.invalidForwardingDestination = OperationErrors.invalidForwardingDestination; /* LONG_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary invalidForwardingDestination
@@ -1428,7 +1428,7 @@ const OperationErrors_invalidForwardingDestination: OperationErrors = OperationE
  * @type {number}
  */
 export
-const invalidForwardingDestination: OperationErrors = OperationErrors.invalidForwardingDestination; /* SHORT_NAMED_ENUMERATED_VALUE */
+const invalidForwardingDestination: _enum_for_OperationErrors.invalidForwardingDestination = OperationErrors.invalidForwardingDestination; /* SHORT_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary OperationErrors_invalidForwardingFlag
@@ -1438,7 +1438,7 @@ const invalidForwardingDestination: OperationErrors = OperationErrors.invalidFor
  * @see https://ecma-international.org/publications-and-standards/standards/ecma-269/
  */
 export
-const OperationErrors_invalidForwardingFlag: OperationErrors = OperationErrors.invalidForwardingFlag; /* LONG_NAMED_ENUMERATED_VALUE */
+const OperationErrors_invalidForwardingFlag: _enum_for_OperationErrors.invalidForwardingFlag = OperationErrors.invalidForwardingFlag; /* LONG_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary invalidForwardingFlag
@@ -1447,7 +1447,7 @@ const OperationErrors_invalidForwardingFlag: OperationErrors = OperationErrors.i
  * @type {number}
  */
 export
-const invalidForwardingFlag: OperationErrors = OperationErrors.invalidForwardingFlag; /* SHORT_NAMED_ENUMERATED_VALUE */
+const invalidForwardingFlag: _enum_for_OperationErrors.invalidForwardingFlag = OperationErrors.invalidForwardingFlag; /* SHORT_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary OperationErrors_invalidForwardingType
@@ -1457,7 +1457,7 @@ const invalidForwardingFlag: OperationErrors = OperationErrors.invalidForwarding
  * @see https://ecma-international.org/publications-and-standards/standards/ecma-269/
  */
 export
-const OperationErrors_invalidForwardingType: OperationErrors = OperationErrors.invalidForwardingType; /* LONG_NAMED_ENUMERATED_VALUE */
+const OperationErrors_invalidForwardingType: _enum_for_OperationErrors.invalidForwardingType = OperationErrors.invalidForwardingType; /* LONG_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary invalidForwardingType
@@ -1466,7 +1466,7 @@ const OperationErrors_invalidForwardingType: OperationErrors = OperationErrors.i
  * @type {number}
  */
 export
-const invalidForwardingType: OperationErrors = OperationErrors.invalidForwardingType; /* SHORT_NAMED_ENUMERATED_VALUE */
+const invalidForwardingType: _enum_for_OperationErrors.invalidForwardingType = OperationErrors.invalidForwardingType; /* SHORT_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary OperationErrors_invalidHookswitchType
@@ -1476,7 +1476,7 @@ const invalidForwardingType: OperationErrors = OperationErrors.invalidForwarding
  * @see https://ecma-international.org/publications-and-standards/standards/ecma-269/
  */
 export
-const OperationErrors_invalidHookswitchType: OperationErrors = OperationErrors.invalidHookswitchType; /* LONG_NAMED_ENUMERATED_VALUE */
+const OperationErrors_invalidHookswitchType: _enum_for_OperationErrors.invalidHookswitchType = OperationErrors.invalidHookswitchType; /* LONG_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary invalidHookswitchType
@@ -1485,7 +1485,7 @@ const OperationErrors_invalidHookswitchType: OperationErrors = OperationErrors.i
  * @type {number}
  */
 export
-const invalidHookswitchType: OperationErrors = OperationErrors.invalidHookswitchType; /* SHORT_NAMED_ENUMERATED_VALUE */
+const invalidHookswitchType: _enum_for_OperationErrors.invalidHookswitchType = OperationErrors.invalidHookswitchType; /* SHORT_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary OperationErrors_invalidHookswitchComponent
@@ -1495,7 +1495,7 @@ const invalidHookswitchType: OperationErrors = OperationErrors.invalidHookswitch
  * @see https://ecma-international.org/publications-and-standards/standards/ecma-269/
  */
 export
-const OperationErrors_invalidHookswitchComponent: OperationErrors = OperationErrors.invalidHookswitchComponent; /* LONG_NAMED_ENUMERATED_VALUE */
+const OperationErrors_invalidHookswitchComponent: _enum_for_OperationErrors.invalidHookswitchComponent = OperationErrors.invalidHookswitchComponent; /* LONG_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary invalidHookswitchComponent
@@ -1504,7 +1504,7 @@ const OperationErrors_invalidHookswitchComponent: OperationErrors = OperationErr
  * @type {number}
  */
 export
-const invalidHookswitchComponent: OperationErrors = OperationErrors.invalidHookswitchComponent; /* SHORT_NAMED_ENUMERATED_VALUE */
+const invalidHookswitchComponent: _enum_for_OperationErrors.invalidHookswitchComponent = OperationErrors.invalidHookswitchComponent; /* SHORT_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary OperationErrors_invalidLampMode
@@ -1514,7 +1514,7 @@ const invalidHookswitchComponent: OperationErrors = OperationErrors.invalidHooks
  * @see https://ecma-international.org/publications-and-standards/standards/ecma-269/
  */
 export
-const OperationErrors_invalidLampMode: OperationErrors = OperationErrors.invalidLampMode; /* LONG_NAMED_ENUMERATED_VALUE */
+const OperationErrors_invalidLampMode: _enum_for_OperationErrors.invalidLampMode = OperationErrors.invalidLampMode; /* LONG_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary invalidLampMode
@@ -1523,7 +1523,7 @@ const OperationErrors_invalidLampMode: OperationErrors = OperationErrors.invalid
  * @type {number}
  */
 export
-const invalidLampMode: OperationErrors = OperationErrors.invalidLampMode; /* SHORT_NAMED_ENUMERATED_VALUE */
+const invalidLampMode: _enum_for_OperationErrors.invalidLampMode = OperationErrors.invalidLampMode; /* SHORT_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary OperationErrors_invalidLampID
@@ -1533,7 +1533,7 @@ const invalidLampMode: OperationErrors = OperationErrors.invalidLampMode; /* SHO
  * @see https://ecma-international.org/publications-and-standards/standards/ecma-269/
  */
 export
-const OperationErrors_invalidLampID: OperationErrors = OperationErrors.invalidLampID; /* LONG_NAMED_ENUMERATED_VALUE */
+const OperationErrors_invalidLampID: _enum_for_OperationErrors.invalidLampID = OperationErrors.invalidLampID; /* LONG_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary invalidLampID
@@ -1542,7 +1542,7 @@ const OperationErrors_invalidLampID: OperationErrors = OperationErrors.invalidLa
  * @type {number}
  */
 export
-const invalidLampID: OperationErrors = OperationErrors.invalidLampID; /* SHORT_NAMED_ENUMERATED_VALUE */
+const invalidLampID: _enum_for_OperationErrors.invalidLampID = OperationErrors.invalidLampID; /* SHORT_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary OperationErrors_invalidMessageWaitingSetting
@@ -1553,7 +1553,7 @@ const invalidLampID: OperationErrors = OperationErrors.invalidLampID; /* SHORT_N
  * @see https://ecma-international.org/publications-and-standards/standards/ecma-269/
  */
 export
-const OperationErrors_invalidMessageWaitingSetting: OperationErrors = OperationErrors.invalidMessageWaitingSetting; /* LONG_NAMED_ENUMERATED_VALUE */
+const OperationErrors_invalidMessageWaitingSetting: _enum_for_OperationErrors.invalidMessageWaitingSetting = OperationErrors.invalidMessageWaitingSetting; /* LONG_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary invalidMessageWaitingSetting
@@ -1562,7 +1562,7 @@ const OperationErrors_invalidMessageWaitingSetting: OperationErrors = OperationE
  * @type {number}
  */
 export
-const invalidMessageWaitingSetting: OperationErrors = OperationErrors.invalidMessageWaitingSetting; /* SHORT_NAMED_ENUMERATED_VALUE */
+const invalidMessageWaitingSetting: _enum_for_OperationErrors.invalidMessageWaitingSetting = OperationErrors.invalidMessageWaitingSetting; /* SHORT_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary OperationErrors_invalidMicrophoneGain
@@ -1572,7 +1572,7 @@ const invalidMessageWaitingSetting: OperationErrors = OperationErrors.invalidMes
  * @see https://ecma-international.org/publications-and-standards/standards/ecma-269/
  */
 export
-const OperationErrors_invalidMicrophoneGain: OperationErrors = OperationErrors.invalidMicrophoneGain; /* LONG_NAMED_ENUMERATED_VALUE */
+const OperationErrors_invalidMicrophoneGain: _enum_for_OperationErrors.invalidMicrophoneGain = OperationErrors.invalidMicrophoneGain; /* LONG_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary invalidMicrophoneGain
@@ -1581,7 +1581,7 @@ const OperationErrors_invalidMicrophoneGain: OperationErrors = OperationErrors.i
  * @type {number}
  */
 export
-const invalidMicrophoneGain: OperationErrors = OperationErrors.invalidMicrophoneGain; /* SHORT_NAMED_ENUMERATED_VALUE */
+const invalidMicrophoneGain: _enum_for_OperationErrors.invalidMicrophoneGain = OperationErrors.invalidMicrophoneGain; /* SHORT_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary OperationErrors_invalidMicrophoneMute
@@ -1591,7 +1591,7 @@ const invalidMicrophoneGain: OperationErrors = OperationErrors.invalidMicrophone
  * @see https://ecma-international.org/publications-and-standards/standards/ecma-269/
  */
 export
-const OperationErrors_invalidMicrophoneMute: OperationErrors = OperationErrors.invalidMicrophoneMute; /* LONG_NAMED_ENUMERATED_VALUE */
+const OperationErrors_invalidMicrophoneMute: _enum_for_OperationErrors.invalidMicrophoneMute = OperationErrors.invalidMicrophoneMute; /* LONG_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary invalidMicrophoneMute
@@ -1600,7 +1600,7 @@ const OperationErrors_invalidMicrophoneMute: OperationErrors = OperationErrors.i
  * @type {number}
  */
 export
-const invalidMicrophoneMute: OperationErrors = OperationErrors.invalidMicrophoneMute; /* SHORT_NAMED_ENUMERATED_VALUE */
+const invalidMicrophoneMute: _enum_for_OperationErrors.invalidMicrophoneMute = OperationErrors.invalidMicrophoneMute; /* SHORT_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary OperationErrors_invalidMonitorCrossRefID
@@ -1611,7 +1611,7 @@ const invalidMicrophoneMute: OperationErrors = OperationErrors.invalidMicrophone
  * @see https://ecma-international.org/publications-and-standards/standards/ecma-269/
  */
 export
-const OperationErrors_invalidMonitorCrossRefID: OperationErrors = OperationErrors.invalidMonitorCrossRefID; /* LONG_NAMED_ENUMERATED_VALUE */
+const OperationErrors_invalidMonitorCrossRefID: _enum_for_OperationErrors.invalidMonitorCrossRefID = OperationErrors.invalidMonitorCrossRefID; /* LONG_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary invalidMonitorCrossRefID
@@ -1620,7 +1620,7 @@ const OperationErrors_invalidMonitorCrossRefID: OperationErrors = OperationError
  * @type {number}
  */
 export
-const invalidMonitorCrossRefID: OperationErrors = OperationErrors.invalidMonitorCrossRefID; /* SHORT_NAMED_ENUMERATED_VALUE */
+const invalidMonitorCrossRefID: _enum_for_OperationErrors.invalidMonitorCrossRefID = OperationErrors.invalidMonitorCrossRefID; /* SHORT_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary OperationErrors_invalidMonitorFilter
@@ -1630,7 +1630,7 @@ const invalidMonitorCrossRefID: OperationErrors = OperationErrors.invalidMonitor
  * @see https://ecma-international.org/publications-and-standards/standards/ecma-269/
  */
 export
-const OperationErrors_invalidMonitorFilter: OperationErrors = OperationErrors.invalidMonitorFilter; /* LONG_NAMED_ENUMERATED_VALUE */
+const OperationErrors_invalidMonitorFilter: _enum_for_OperationErrors.invalidMonitorFilter = OperationErrors.invalidMonitorFilter; /* LONG_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary invalidMonitorFilter
@@ -1639,7 +1639,7 @@ const OperationErrors_invalidMonitorFilter: OperationErrors = OperationErrors.in
  * @type {number}
  */
 export
-const invalidMonitorFilter: OperationErrors = OperationErrors.invalidMonitorFilter; /* SHORT_NAMED_ENUMERATED_VALUE */
+const invalidMonitorFilter: _enum_for_OperationErrors.invalidMonitorFilter = OperationErrors.invalidMonitorFilter; /* SHORT_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary OperationErrors_invalidMonitorObject
@@ -1649,7 +1649,7 @@ const invalidMonitorFilter: OperationErrors = OperationErrors.invalidMonitorFilt
  * @see https://ecma-international.org/publications-and-standards/standards/ecma-269/
  */
 export
-const OperationErrors_invalidMonitorObject: OperationErrors = OperationErrors.invalidMonitorObject; /* LONG_NAMED_ENUMERATED_VALUE */
+const OperationErrors_invalidMonitorObject: _enum_for_OperationErrors.invalidMonitorObject = OperationErrors.invalidMonitorObject; /* LONG_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary invalidMonitorObject
@@ -1658,7 +1658,7 @@ const OperationErrors_invalidMonitorObject: OperationErrors = OperationErrors.in
  * @type {number}
  */
 export
-const invalidMonitorObject: OperationErrors = OperationErrors.invalidMonitorObject; /* SHORT_NAMED_ENUMERATED_VALUE */
+const invalidMonitorObject: _enum_for_OperationErrors.invalidMonitorObject = OperationErrors.invalidMonitorObject; /* SHORT_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary OperationErrors_invalidMonitorType
@@ -1668,7 +1668,7 @@ const invalidMonitorObject: OperationErrors = OperationErrors.invalidMonitorObje
  * @see https://ecma-international.org/publications-and-standards/standards/ecma-269/
  */
 export
-const OperationErrors_invalidMonitorType: OperationErrors = OperationErrors.invalidMonitorType; /* LONG_NAMED_ENUMERATED_VALUE */
+const OperationErrors_invalidMonitorType: _enum_for_OperationErrors.invalidMonitorType = OperationErrors.invalidMonitorType; /* LONG_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary invalidMonitorType
@@ -1677,7 +1677,7 @@ const OperationErrors_invalidMonitorType: OperationErrors = OperationErrors.inva
  * @type {number}
  */
 export
-const invalidMonitorType: OperationErrors = OperationErrors.invalidMonitorType; /* SHORT_NAMED_ENUMERATED_VALUE */
+const invalidMonitorType: _enum_for_OperationErrors.invalidMonitorType = OperationErrors.invalidMonitorType; /* SHORT_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary OperationErrors_invalidNumberOFChannels
@@ -1687,7 +1687,7 @@ const invalidMonitorType: OperationErrors = OperationErrors.invalidMonitorType; 
  * @see https://ecma-international.org/publications-and-standards/standards/ecma-269/
  */
 export
-const OperationErrors_invalidNumberOFChannels: OperationErrors = OperationErrors.invalidNumberOFChannels; /* LONG_NAMED_ENUMERATED_VALUE */
+const OperationErrors_invalidNumberOFChannels: _enum_for_OperationErrors.invalidNumberOFChannels = OperationErrors.invalidNumberOFChannels; /* LONG_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary invalidNumberOFChannels
@@ -1696,7 +1696,7 @@ const OperationErrors_invalidNumberOFChannels: OperationErrors = OperationErrors
  * @type {number}
  */
 export
-const invalidNumberOFChannels: OperationErrors = OperationErrors.invalidNumberOFChannels; /* SHORT_NAMED_ENUMERATED_VALUE */
+const invalidNumberOFChannels: _enum_for_OperationErrors.invalidNumberOFChannels = OperationErrors.invalidNumberOFChannels; /* SHORT_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary OperationErrors_invalidParticipationType
@@ -1706,7 +1706,7 @@ const invalidNumberOFChannels: OperationErrors = OperationErrors.invalidNumberOF
  * @see https://ecma-international.org/publications-and-standards/standards/ecma-269/
  */
 export
-const OperationErrors_invalidParticipationType: OperationErrors = OperationErrors.invalidParticipationType; /* LONG_NAMED_ENUMERATED_VALUE */
+const OperationErrors_invalidParticipationType: _enum_for_OperationErrors.invalidParticipationType = OperationErrors.invalidParticipationType; /* LONG_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary invalidParticipationType
@@ -1715,7 +1715,7 @@ const OperationErrors_invalidParticipationType: OperationErrors = OperationError
  * @type {number}
  */
 export
-const invalidParticipationType: OperationErrors = OperationErrors.invalidParticipationType; /* SHORT_NAMED_ENUMERATED_VALUE */
+const invalidParticipationType: _enum_for_OperationErrors.invalidParticipationType = OperationErrors.invalidParticipationType; /* SHORT_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary OperationErrors_invalidRemainRetry
@@ -1725,7 +1725,7 @@ const invalidParticipationType: OperationErrors = OperationErrors.invalidPartici
  * @see https://ecma-international.org/publications-and-standards/standards/ecma-269/
  */
 export
-const OperationErrors_invalidRemainRetry: OperationErrors = OperationErrors.invalidRemainRetry; /* LONG_NAMED_ENUMERATED_VALUE */
+const OperationErrors_invalidRemainRetry: _enum_for_OperationErrors.invalidRemainRetry = OperationErrors.invalidRemainRetry; /* LONG_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary invalidRemainRetry
@@ -1734,7 +1734,7 @@ const OperationErrors_invalidRemainRetry: OperationErrors = OperationErrors.inva
  * @type {number}
  */
 export
-const invalidRemainRetry: OperationErrors = OperationErrors.invalidRemainRetry; /* SHORT_NAMED_ENUMERATED_VALUE */
+const invalidRemainRetry: _enum_for_OperationErrors.invalidRemainRetry = OperationErrors.invalidRemainRetry; /* SHORT_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary OperationErrors_invalidRingCount
@@ -1744,7 +1744,7 @@ const invalidRemainRetry: OperationErrors = OperationErrors.invalidRemainRetry; 
  * @see https://ecma-international.org/publications-and-standards/standards/ecma-269/
  */
 export
-const OperationErrors_invalidRingCount: OperationErrors = OperationErrors.invalidRingCount; /* LONG_NAMED_ENUMERATED_VALUE */
+const OperationErrors_invalidRingCount: _enum_for_OperationErrors.invalidRingCount = OperationErrors.invalidRingCount; /* LONG_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary invalidRingCount
@@ -1753,7 +1753,7 @@ const OperationErrors_invalidRingCount: OperationErrors = OperationErrors.invali
  * @type {number}
  */
 export
-const invalidRingCount: OperationErrors = OperationErrors.invalidRingCount; /* SHORT_NAMED_ENUMERATED_VALUE */
+const invalidRingCount: _enum_for_OperationErrors.invalidRingCount = OperationErrors.invalidRingCount; /* SHORT_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary OperationErrors_invalidRingPattern
@@ -1763,7 +1763,7 @@ const invalidRingCount: OperationErrors = OperationErrors.invalidRingCount; /* S
  * @see https://ecma-international.org/publications-and-standards/standards/ecma-269/
  */
 export
-const OperationErrors_invalidRingPattern: OperationErrors = OperationErrors.invalidRingPattern; /* LONG_NAMED_ENUMERATED_VALUE */
+const OperationErrors_invalidRingPattern: _enum_for_OperationErrors.invalidRingPattern = OperationErrors.invalidRingPattern; /* LONG_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary invalidRingPattern
@@ -1772,7 +1772,7 @@ const OperationErrors_invalidRingPattern: OperationErrors = OperationErrors.inva
  * @type {number}
  */
 export
-const invalidRingPattern: OperationErrors = OperationErrors.invalidRingPattern; /* SHORT_NAMED_ENUMERATED_VALUE */
+const invalidRingPattern: _enum_for_OperationErrors.invalidRingPattern = OperationErrors.invalidRingPattern; /* SHORT_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary OperationErrors_invalidRingVolume
@@ -1782,7 +1782,7 @@ const invalidRingPattern: OperationErrors = OperationErrors.invalidRingPattern; 
  * @see https://ecma-international.org/publications-and-standards/standards/ecma-269/
  */
 export
-const OperationErrors_invalidRingVolume: OperationErrors = OperationErrors.invalidRingVolume; /* LONG_NAMED_ENUMERATED_VALUE */
+const OperationErrors_invalidRingVolume: _enum_for_OperationErrors.invalidRingVolume = OperationErrors.invalidRingVolume; /* LONG_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary invalidRingVolume
@@ -1791,7 +1791,7 @@ const OperationErrors_invalidRingVolume: OperationErrors = OperationErrors.inval
  * @type {number}
  */
 export
-const invalidRingVolume: OperationErrors = OperationErrors.invalidRingVolume; /* SHORT_NAMED_ENUMERATED_VALUE */
+const invalidRingVolume: _enum_for_OperationErrors.invalidRingVolume = OperationErrors.invalidRingVolume; /* SHORT_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary OperationErrors_invalidRouteingAlgorithm
@@ -1803,7 +1803,7 @@ const invalidRingVolume: OperationErrors = OperationErrors.invalidRingVolume; /*
  * @see https://ecma-international.org/publications-and-standards/standards/ecma-269/
  */
 export
-const OperationErrors_invalidRouteingAlgorithm: OperationErrors = OperationErrors.invalidRouteingAlgorithm; /* LONG_NAMED_ENUMERATED_VALUE */
+const OperationErrors_invalidRouteingAlgorithm: _enum_for_OperationErrors.invalidRouteingAlgorithm = OperationErrors.invalidRouteingAlgorithm; /* LONG_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary invalidRouteingAlgorithm
@@ -1812,7 +1812,7 @@ const OperationErrors_invalidRouteingAlgorithm: OperationErrors = OperationError
  * @type {number}
  */
 export
-const invalidRouteingAlgorithm: OperationErrors = OperationErrors.invalidRouteingAlgorithm; /* SHORT_NAMED_ENUMERATED_VALUE */
+const invalidRouteingAlgorithm: _enum_for_OperationErrors.invalidRouteingAlgorithm = OperationErrors.invalidRouteingAlgorithm; /* SHORT_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary OperationErrors_invalidRouteingCrossRefID
@@ -1823,7 +1823,7 @@ const invalidRouteingAlgorithm: OperationErrors = OperationErrors.invalidRoutein
  * @see https://ecma-international.org/publications-and-standards/standards/ecma-269/
  */
 export
-const OperationErrors_invalidRouteingCrossRefID: OperationErrors = OperationErrors.invalidRouteingCrossRefID; /* LONG_NAMED_ENUMERATED_VALUE */
+const OperationErrors_invalidRouteingCrossRefID: _enum_for_OperationErrors.invalidRouteingCrossRefID = OperationErrors.invalidRouteingCrossRefID; /* LONG_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary invalidRouteingCrossRefID
@@ -1832,7 +1832,7 @@ const OperationErrors_invalidRouteingCrossRefID: OperationErrors = OperationErro
  * @type {number}
  */
 export
-const invalidRouteingCrossRefID: OperationErrors = OperationErrors.invalidRouteingCrossRefID; /* SHORT_NAMED_ENUMERATED_VALUE */
+const invalidRouteingCrossRefID: _enum_for_OperationErrors.invalidRouteingCrossRefID = OperationErrors.invalidRouteingCrossRefID; /* SHORT_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary OperationErrors_invalidRouteRegistrationCrossRefID
@@ -1843,7 +1843,7 @@ const invalidRouteingCrossRefID: OperationErrors = OperationErrors.invalidRoutei
  * @see https://ecma-international.org/publications-and-standards/standards/ecma-269/
  */
 export
-const OperationErrors_invalidRouteRegistrationCrossRefID: OperationErrors = OperationErrors.invalidRouteRegistrationCrossRefID; /* LONG_NAMED_ENUMERATED_VALUE */
+const OperationErrors_invalidRouteRegistrationCrossRefID: _enum_for_OperationErrors.invalidRouteRegistrationCrossRefID = OperationErrors.invalidRouteRegistrationCrossRefID; /* LONG_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary invalidRouteRegistrationCrossRefID
@@ -1853,7 +1853,7 @@ const OperationErrors_invalidRouteRegistrationCrossRefID: OperationErrors = Oper
  * @type {number}
  */
 export
-const invalidRouteRegistrationCrossRefID: OperationErrors = OperationErrors.invalidRouteRegistrationCrossRefID; /* SHORT_NAMED_ENUMERATED_VALUE */
+const invalidRouteRegistrationCrossRefID: _enum_for_OperationErrors.invalidRouteRegistrationCrossRefID = OperationErrors.invalidRouteRegistrationCrossRefID; /* SHORT_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary OperationErrors_invalidSpeakerVolume
@@ -1863,7 +1863,7 @@ const invalidRouteRegistrationCrossRefID: OperationErrors = OperationErrors.inva
  * @see https://ecma-international.org/publications-and-standards/standards/ecma-269/
  */
 export
-const OperationErrors_invalidSpeakerVolume: OperationErrors = OperationErrors.invalidSpeakerVolume; /* LONG_NAMED_ENUMERATED_VALUE */
+const OperationErrors_invalidSpeakerVolume: _enum_for_OperationErrors.invalidSpeakerVolume = OperationErrors.invalidSpeakerVolume; /* LONG_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary invalidSpeakerVolume
@@ -1872,7 +1872,7 @@ const OperationErrors_invalidSpeakerVolume: OperationErrors = OperationErrors.in
  * @type {number}
  */
 export
-const invalidSpeakerVolume: OperationErrors = OperationErrors.invalidSpeakerVolume; /* SHORT_NAMED_ENUMERATED_VALUE */
+const invalidSpeakerVolume: _enum_for_OperationErrors.invalidSpeakerVolume = OperationErrors.invalidSpeakerVolume; /* SHORT_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary OperationErrors_invalidSpeakerMute
@@ -1882,7 +1882,7 @@ const invalidSpeakerVolume: OperationErrors = OperationErrors.invalidSpeakerVolu
  * @see https://ecma-international.org/publications-and-standards/standards/ecma-269/
  */
 export
-const OperationErrors_invalidSpeakerMute: OperationErrors = OperationErrors.invalidSpeakerMute; /* LONG_NAMED_ENUMERATED_VALUE */
+const OperationErrors_invalidSpeakerMute: _enum_for_OperationErrors.invalidSpeakerMute = OperationErrors.invalidSpeakerMute; /* LONG_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary invalidSpeakerMute
@@ -1891,7 +1891,7 @@ const OperationErrors_invalidSpeakerMute: OperationErrors = OperationErrors.inva
  * @type {number}
  */
 export
-const invalidSpeakerMute: OperationErrors = OperationErrors.invalidSpeakerMute; /* SHORT_NAMED_ENUMERATED_VALUE */
+const invalidSpeakerMute: _enum_for_OperationErrors.invalidSpeakerMute = OperationErrors.invalidSpeakerMute; /* SHORT_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary OperationErrors_invalidSwitchingSubdomainCharsType
@@ -1902,7 +1902,7 @@ const invalidSpeakerMute: OperationErrors = OperationErrors.invalidSpeakerMute; 
  * @see https://ecma-international.org/publications-and-standards/standards/ecma-269/
  */
 export
-const OperationErrors_invalidSwitchingSubdomainCharsType: OperationErrors = OperationErrors.invalidSwitchingSubdomainCharsType; /* LONG_NAMED_ENUMERATED_VALUE */
+const OperationErrors_invalidSwitchingSubdomainCharsType: _enum_for_OperationErrors.invalidSwitchingSubdomainCharsType = OperationErrors.invalidSwitchingSubdomainCharsType; /* LONG_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary invalidSwitchingSubdomainCharsType
@@ -1912,7 +1912,7 @@ const OperationErrors_invalidSwitchingSubdomainCharsType: OperationErrors = Oper
  * @type {number}
  */
 export
-const invalidSwitchingSubdomainCharsType: OperationErrors = OperationErrors.invalidSwitchingSubdomainCharsType; /* SHORT_NAMED_ENUMERATED_VALUE */
+const invalidSwitchingSubdomainCharsType: _enum_for_OperationErrors.invalidSwitchingSubdomainCharsType = OperationErrors.invalidSwitchingSubdomainCharsType; /* SHORT_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary OperationErrors_invalidObjectType
@@ -1924,7 +1924,7 @@ const invalidSwitchingSubdomainCharsType: OperationErrors = OperationErrors.inva
  * @see https://ecma-international.org/publications-and-standards/standards/ecma-269/
  */
 export
-const OperationErrors_invalidObjectType: OperationErrors = OperationErrors.invalidObjectType; /* LONG_NAMED_ENUMERATED_VALUE */
+const OperationErrors_invalidObjectType: _enum_for_OperationErrors.invalidObjectType = OperationErrors.invalidObjectType; /* LONG_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary invalidObjectType
@@ -1933,7 +1933,7 @@ const OperationErrors_invalidObjectType: OperationErrors = OperationErrors.inval
  * @type {number}
  */
 export
-const invalidObjectType: OperationErrors = OperationErrors.invalidObjectType; /* SHORT_NAMED_ENUMERATED_VALUE */
+const invalidObjectType: _enum_for_OperationErrors.invalidObjectType = OperationErrors.invalidObjectType; /* SHORT_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary OperationErrors_invalidActiveCallObject
@@ -1944,7 +1944,7 @@ const invalidObjectType: OperationErrors = OperationErrors.invalidObjectType; /*
  * @see https://ecma-international.org/publications-and-standards/standards/ecma-269/
  */
 export
-const OperationErrors_invalidActiveCallObject: OperationErrors = OperationErrors.invalidActiveCallObject; /* LONG_NAMED_ENUMERATED_VALUE */
+const OperationErrors_invalidActiveCallObject: _enum_for_OperationErrors.invalidActiveCallObject = OperationErrors.invalidActiveCallObject; /* LONG_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary invalidActiveCallObject
@@ -1953,7 +1953,7 @@ const OperationErrors_invalidActiveCallObject: OperationErrors = OperationErrors
  * @type {number}
  */
 export
-const invalidActiveCallObject: OperationErrors = OperationErrors.invalidActiveCallObject; /* SHORT_NAMED_ENUMERATED_VALUE */
+const invalidActiveCallObject: _enum_for_OperationErrors.invalidActiveCallObject = OperationErrors.invalidActiveCallObject; /* SHORT_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary OperationErrors_invalidCalledDeviceObjectType
@@ -1963,7 +1963,7 @@ const invalidActiveCallObject: OperationErrors = OperationErrors.invalidActiveCa
  * @see https://ecma-international.org/publications-and-standards/standards/ecma-269/
  */
 export
-const OperationErrors_invalidCalledDeviceObjectType: OperationErrors = OperationErrors.invalidCalledDeviceObjectType; /* LONG_NAMED_ENUMERATED_VALUE */
+const OperationErrors_invalidCalledDeviceObjectType: _enum_for_OperationErrors.invalidCalledDeviceObjectType = OperationErrors.invalidCalledDeviceObjectType; /* LONG_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary invalidCalledDeviceObjectType
@@ -1972,7 +1972,7 @@ const OperationErrors_invalidCalledDeviceObjectType: OperationErrors = Operation
  * @type {number}
  */
 export
-const invalidCalledDeviceObjectType: OperationErrors = OperationErrors.invalidCalledDeviceObjectType; /* SHORT_NAMED_ENUMERATED_VALUE */
+const invalidCalledDeviceObjectType: _enum_for_OperationErrors.invalidCalledDeviceObjectType = OperationErrors.invalidCalledDeviceObjectType; /* SHORT_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary OperationErrors_invalidCallingDeviceObjectType
@@ -1982,7 +1982,7 @@ const invalidCalledDeviceObjectType: OperationErrors = OperationErrors.invalidCa
  * @see https://ecma-international.org/publications-and-standards/standards/ecma-269/
  */
 export
-const OperationErrors_invalidCallingDeviceObjectType: OperationErrors = OperationErrors.invalidCallingDeviceObjectType; /* LONG_NAMED_ENUMERATED_VALUE */
+const OperationErrors_invalidCallingDeviceObjectType: _enum_for_OperationErrors.invalidCallingDeviceObjectType = OperationErrors.invalidCallingDeviceObjectType; /* LONG_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary invalidCallingDeviceObjectType
@@ -1991,7 +1991,7 @@ const OperationErrors_invalidCallingDeviceObjectType: OperationErrors = Operatio
  * @type {number}
  */
 export
-const invalidCallingDeviceObjectType: OperationErrors = OperationErrors.invalidCallingDeviceObjectType; /* SHORT_NAMED_ENUMERATED_VALUE */
+const invalidCallingDeviceObjectType: _enum_for_OperationErrors.invalidCallingDeviceObjectType = OperationErrors.invalidCallingDeviceObjectType; /* SHORT_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary OperationErrors_invalidCallToBePickedUpObjectType
@@ -2003,7 +2003,7 @@ const invalidCallingDeviceObjectType: OperationErrors = OperationErrors.invalidC
  * @see https://ecma-international.org/publications-and-standards/standards/ecma-269/
  */
 export
-const OperationErrors_invalidCallToBePickedUpObjectType: OperationErrors = OperationErrors.invalidCallToBePickedUpObjectType; /* LONG_NAMED_ENUMERATED_VALUE */
+const OperationErrors_invalidCallToBePickedUpObjectType: _enum_for_OperationErrors.invalidCallToBePickedUpObjectType = OperationErrors.invalidCallToBePickedUpObjectType; /* LONG_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary invalidCallToBePickedUpObjectType
@@ -2013,7 +2013,7 @@ const OperationErrors_invalidCallToBePickedUpObjectType: OperationErrors = Opera
  * @type {number}
  */
 export
-const invalidCallToBePickedUpObjectType: OperationErrors = OperationErrors.invalidCallToBePickedUpObjectType; /* SHORT_NAMED_ENUMERATED_VALUE */
+const invalidCallToBePickedUpObjectType: _enum_for_OperationErrors.invalidCallToBePickedUpObjectType = OperationErrors.invalidCallToBePickedUpObjectType; /* SHORT_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary OperationErrors_invalidCallToDivertObjectType
@@ -2023,7 +2023,7 @@ const invalidCallToBePickedUpObjectType: OperationErrors = OperationErrors.inval
  * @see https://ecma-international.org/publications-and-standards/standards/ecma-269/
  */
 export
-const OperationErrors_invalidCallToDivertObjectType: OperationErrors = OperationErrors.invalidCallToDivertObjectType; /* LONG_NAMED_ENUMERATED_VALUE */
+const OperationErrors_invalidCallToDivertObjectType: _enum_for_OperationErrors.invalidCallToDivertObjectType = OperationErrors.invalidCallToDivertObjectType; /* LONG_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary invalidCallToDivertObjectType
@@ -2032,7 +2032,7 @@ const OperationErrors_invalidCallToDivertObjectType: OperationErrors = Operation
  * @type {number}
  */
 export
-const invalidCallToDivertObjectType: OperationErrors = OperationErrors.invalidCallToDivertObjectType; /* SHORT_NAMED_ENUMERATED_VALUE */
+const invalidCallToDivertObjectType: _enum_for_OperationErrors.invalidCallToDivertObjectType = OperationErrors.invalidCallToDivertObjectType; /* SHORT_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary OperationErrors_invalidCallToParkObjectType
@@ -2043,7 +2043,7 @@ const invalidCallToDivertObjectType: OperationErrors = OperationErrors.invalidCa
  * @see https://ecma-international.org/publications-and-standards/standards/ecma-269/
  */
 export
-const OperationErrors_invalidCallToParkObjectType: OperationErrors = OperationErrors.invalidCallToParkObjectType; /* LONG_NAMED_ENUMERATED_VALUE */
+const OperationErrors_invalidCallToParkObjectType: _enum_for_OperationErrors.invalidCallToParkObjectType = OperationErrors.invalidCallToParkObjectType; /* LONG_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary invalidCallToParkObjectType
@@ -2052,7 +2052,7 @@ const OperationErrors_invalidCallToParkObjectType: OperationErrors = OperationEr
  * @type {number}
  */
 export
-const invalidCallToParkObjectType: OperationErrors = OperationErrors.invalidCallToParkObjectType; /* SHORT_NAMED_ENUMERATED_VALUE */
+const invalidCallToParkObjectType: _enum_for_OperationErrors.invalidCallToParkObjectType = OperationErrors.invalidCallToParkObjectType; /* SHORT_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary OperationErrors_invalidDestinationDeviceObject
@@ -2063,7 +2063,7 @@ const invalidCallToParkObjectType: OperationErrors = OperationErrors.invalidCall
  * @see https://ecma-international.org/publications-and-standards/standards/ecma-269/
  */
 export
-const OperationErrors_invalidDestinationDeviceObject: OperationErrors = OperationErrors.invalidDestinationDeviceObject; /* LONG_NAMED_ENUMERATED_VALUE */
+const OperationErrors_invalidDestinationDeviceObject: _enum_for_OperationErrors.invalidDestinationDeviceObject = OperationErrors.invalidDestinationDeviceObject; /* LONG_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary invalidDestinationDeviceObject
@@ -2072,7 +2072,7 @@ const OperationErrors_invalidDestinationDeviceObject: OperationErrors = Operatio
  * @type {number}
  */
 export
-const invalidDestinationDeviceObject: OperationErrors = OperationErrors.invalidDestinationDeviceObject; /* SHORT_NAMED_ENUMERATED_VALUE */
+const invalidDestinationDeviceObject: _enum_for_OperationErrors.invalidDestinationDeviceObject = OperationErrors.invalidDestinationDeviceObject; /* SHORT_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary OperationErrors_invalidHeldCallObject
@@ -2083,7 +2083,7 @@ const invalidDestinationDeviceObject: OperationErrors = OperationErrors.invalidD
  * @see https://ecma-international.org/publications-and-standards/standards/ecma-269/
  */
 export
-const OperationErrors_invalidHeldCallObject: OperationErrors = OperationErrors.invalidHeldCallObject; /* LONG_NAMED_ENUMERATED_VALUE */
+const OperationErrors_invalidHeldCallObject: _enum_for_OperationErrors.invalidHeldCallObject = OperationErrors.invalidHeldCallObject; /* LONG_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary invalidHeldCallObject
@@ -2092,7 +2092,7 @@ const OperationErrors_invalidHeldCallObject: OperationErrors = OperationErrors.i
  * @type {number}
  */
 export
-const invalidHeldCallObject: OperationErrors = OperationErrors.invalidHeldCallObject; /* SHORT_NAMED_ENUMERATED_VALUE */
+const invalidHeldCallObject: _enum_for_OperationErrors.invalidHeldCallObject = OperationErrors.invalidHeldCallObject; /* SHORT_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary OperationErrors_invalidMonitorObjectType
@@ -2102,7 +2102,7 @@ const invalidHeldCallObject: OperationErrors = OperationErrors.invalidHeldCallOb
  * @see https://ecma-international.org/publications-and-standards/standards/ecma-269/
  */
 export
-const OperationErrors_invalidMonitorObjectType: OperationErrors = OperationErrors.invalidMonitorObjectType; /* LONG_NAMED_ENUMERATED_VALUE */
+const OperationErrors_invalidMonitorObjectType: _enum_for_OperationErrors.invalidMonitorObjectType = OperationErrors.invalidMonitorObjectType; /* LONG_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary invalidMonitorObjectType
@@ -2111,7 +2111,7 @@ const OperationErrors_invalidMonitorObjectType: OperationErrors = OperationError
  * @type {number}
  */
 export
-const invalidMonitorObjectType: OperationErrors = OperationErrors.invalidMonitorObjectType; /* SHORT_NAMED_ENUMERATED_VALUE */
+const invalidMonitorObjectType: _enum_for_OperationErrors.invalidMonitorObjectType = OperationErrors.invalidMonitorObjectType; /* SHORT_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary OperationErrors_invalidParkToObjectType
@@ -2121,7 +2121,7 @@ const invalidMonitorObjectType: OperationErrors = OperationErrors.invalidMonitor
  * @see https://ecma-international.org/publications-and-standards/standards/ecma-269/
  */
 export
-const OperationErrors_invalidParkToObjectType: OperationErrors = OperationErrors.invalidParkToObjectType; /* LONG_NAMED_ENUMERATED_VALUE */
+const OperationErrors_invalidParkToObjectType: _enum_for_OperationErrors.invalidParkToObjectType = OperationErrors.invalidParkToObjectType; /* LONG_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary invalidParkToObjectType
@@ -2130,7 +2130,7 @@ const OperationErrors_invalidParkToObjectType: OperationErrors = OperationErrors
  * @type {number}
  */
 export
-const invalidParkToObjectType: OperationErrors = OperationErrors.invalidParkToObjectType; /* SHORT_NAMED_ENUMERATED_VALUE */
+const invalidParkToObjectType: _enum_for_OperationErrors.invalidParkToObjectType = OperationErrors.invalidParkToObjectType; /* SHORT_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary OperationErrors_messageIDRequired
@@ -2140,7 +2140,7 @@ const invalidParkToObjectType: OperationErrors = OperationErrors.invalidParkToOb
  * @see https://ecma-international.org/publications-and-standards/standards/ecma-269/
  */
 export
-const OperationErrors_messageIDRequired: OperationErrors = OperationErrors.messageIDRequired; /* LONG_NAMED_ENUMERATED_VALUE */
+const OperationErrors_messageIDRequired: _enum_for_OperationErrors.messageIDRequired = OperationErrors.messageIDRequired; /* LONG_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary messageIDRequired
@@ -2149,7 +2149,7 @@ const OperationErrors_messageIDRequired: OperationErrors = OperationErrors.messa
  * @type {number}
  */
 export
-const messageIDRequired: OperationErrors = OperationErrors.messageIDRequired; /* SHORT_NAMED_ENUMERATED_VALUE */
+const messageIDRequired: _enum_for_OperationErrors.messageIDRequired = OperationErrors.messageIDRequired; /* SHORT_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary OperationErrors_notDifferentDevices
@@ -2160,7 +2160,7 @@ const messageIDRequired: OperationErrors = OperationErrors.messageIDRequired; /*
  * @see https://ecma-international.org/publications-and-standards/standards/ecma-269/
  */
 export
-const OperationErrors_notDifferentDevices: OperationErrors = OperationErrors.notDifferentDevices; /* LONG_NAMED_ENUMERATED_VALUE */
+const OperationErrors_notDifferentDevices: _enum_for_OperationErrors.notDifferentDevices = OperationErrors.notDifferentDevices; /* LONG_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary notDifferentDevices
@@ -2169,7 +2169,7 @@ const OperationErrors_notDifferentDevices: OperationErrors = OperationErrors.not
  * @type {number}
  */
 export
-const notDifferentDevices: OperationErrors = OperationErrors.notDifferentDevices; /* SHORT_NAMED_ENUMERATED_VALUE */
+const notDifferentDevices: _enum_for_OperationErrors.notDifferentDevices = OperationErrors.notDifferentDevices; /* SHORT_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary OperationErrors_notSameDevice
@@ -2180,7 +2180,7 @@ const notDifferentDevices: OperationErrors = OperationErrors.notDifferentDevices
  * @see https://ecma-international.org/publications-and-standards/standards/ecma-269/
  */
 export
-const OperationErrors_notSameDevice: OperationErrors = OperationErrors.notSameDevice; /* LONG_NAMED_ENUMERATED_VALUE */
+const OperationErrors_notSameDevice: _enum_for_OperationErrors.notSameDevice = OperationErrors.notSameDevice; /* LONG_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary notSameDevice
@@ -2189,7 +2189,7 @@ const OperationErrors_notSameDevice: OperationErrors = OperationErrors.notSameDe
  * @type {number}
  */
 export
-const notSameDevice: OperationErrors = OperationErrors.notSameDevice; /* SHORT_NAMED_ENUMERATED_VALUE */
+const notSameDevice: _enum_for_OperationErrors.notSameDevice = OperationErrors.notSameDevice; /* SHORT_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary OperationErrors_objectNotKnown
@@ -2200,7 +2200,7 @@ const notSameDevice: OperationErrors = OperationErrors.notSameDevice; /* SHORT_N
  * @see https://ecma-international.org/publications-and-standards/standards/ecma-269/
  */
 export
-const OperationErrors_objectNotKnown: OperationErrors = OperationErrors.objectNotKnown; /* LONG_NAMED_ENUMERATED_VALUE */
+const OperationErrors_objectNotKnown: _enum_for_OperationErrors.objectNotKnown = OperationErrors.objectNotKnown; /* LONG_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary objectNotKnown
@@ -2209,7 +2209,7 @@ const OperationErrors_objectNotKnown: OperationErrors = OperationErrors.objectNo
  * @type {number}
  */
 export
-const objectNotKnown: OperationErrors = OperationErrors.objectNotKnown; /* SHORT_NAMED_ENUMERATED_VALUE */
+const objectNotKnown: _enum_for_OperationErrors.objectNotKnown = OperationErrors.objectNotKnown; /* SHORT_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary OperationErrors_invalidCallID
@@ -2221,7 +2221,7 @@ const objectNotKnown: OperationErrors = OperationErrors.objectNotKnown; /* SHORT
  * @see https://ecma-international.org/publications-and-standards/standards/ecma-269/
  */
 export
-const OperationErrors_invalidCallID: OperationErrors = OperationErrors.invalidCallID; /* LONG_NAMED_ENUMERATED_VALUE */
+const OperationErrors_invalidCallID: _enum_for_OperationErrors.invalidCallID = OperationErrors.invalidCallID; /* LONG_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary invalidCallID
@@ -2230,7 +2230,7 @@ const OperationErrors_invalidCallID: OperationErrors = OperationErrors.invalidCa
  * @type {number}
  */
 export
-const invalidCallID: OperationErrors = OperationErrors.invalidCallID; /* SHORT_NAMED_ENUMERATED_VALUE */
+const invalidCallID: _enum_for_OperationErrors.invalidCallID = OperationErrors.invalidCallID; /* SHORT_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary OperationErrors_invalidActiveCallID
@@ -2242,7 +2242,7 @@ const invalidCallID: OperationErrors = OperationErrors.invalidCallID; /* SHORT_N
  * @see https://ecma-international.org/publications-and-standards/standards/ecma-269/
  */
 export
-const OperationErrors_invalidActiveCallID: OperationErrors = OperationErrors.invalidActiveCallID; /* LONG_NAMED_ENUMERATED_VALUE */
+const OperationErrors_invalidActiveCallID: _enum_for_OperationErrors.invalidActiveCallID = OperationErrors.invalidActiveCallID; /* LONG_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary invalidActiveCallID
@@ -2251,7 +2251,7 @@ const OperationErrors_invalidActiveCallID: OperationErrors = OperationErrors.inv
  * @type {number}
  */
 export
-const invalidActiveCallID: OperationErrors = OperationErrors.invalidActiveCallID; /* SHORT_NAMED_ENUMERATED_VALUE */
+const invalidActiveCallID: _enum_for_OperationErrors.invalidActiveCallID = OperationErrors.invalidActiveCallID; /* SHORT_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary OperationErrors_invalidHeldCallID
@@ -2263,7 +2263,7 @@ const invalidActiveCallID: OperationErrors = OperationErrors.invalidActiveCallID
  * @see https://ecma-international.org/publications-and-standards/standards/ecma-269/
  */
 export
-const OperationErrors_invalidHeldCallID: OperationErrors = OperationErrors.invalidHeldCallID; /* LONG_NAMED_ENUMERATED_VALUE */
+const OperationErrors_invalidHeldCallID: _enum_for_OperationErrors.invalidHeldCallID = OperationErrors.invalidHeldCallID; /* LONG_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary invalidHeldCallID
@@ -2272,7 +2272,7 @@ const OperationErrors_invalidHeldCallID: OperationErrors = OperationErrors.inval
  * @type {number}
  */
 export
-const invalidHeldCallID: OperationErrors = OperationErrors.invalidHeldCallID; /* SHORT_NAMED_ENUMERATED_VALUE */
+const invalidHeldCallID: _enum_for_OperationErrors.invalidHeldCallID = OperationErrors.invalidHeldCallID; /* SHORT_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary OperationErrors_invalidConnectionID
@@ -2283,7 +2283,7 @@ const invalidHeldCallID: OperationErrors = OperationErrors.invalidHeldCallID; /*
  * @see https://ecma-international.org/publications-and-standards/standards/ecma-269/
  */
 export
-const OperationErrors_invalidConnectionID: OperationErrors = OperationErrors.invalidConnectionID; /* LONG_NAMED_ENUMERATED_VALUE */
+const OperationErrors_invalidConnectionID: _enum_for_OperationErrors.invalidConnectionID = OperationErrors.invalidConnectionID; /* LONG_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary invalidConnectionID
@@ -2292,7 +2292,7 @@ const OperationErrors_invalidConnectionID: OperationErrors = OperationErrors.inv
  * @type {number}
  */
 export
-const invalidConnectionID: OperationErrors = OperationErrors.invalidConnectionID; /* SHORT_NAMED_ENUMERATED_VALUE */
+const invalidConnectionID: _enum_for_OperationErrors.invalidConnectionID = OperationErrors.invalidConnectionID; /* SHORT_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary OperationErrors_invalidActiveConnectionID
@@ -2303,7 +2303,7 @@ const invalidConnectionID: OperationErrors = OperationErrors.invalidConnectionID
  * @see https://ecma-international.org/publications-and-standards/standards/ecma-269/
  */
 export
-const OperationErrors_invalidActiveConnectionID: OperationErrors = OperationErrors.invalidActiveConnectionID; /* LONG_NAMED_ENUMERATED_VALUE */
+const OperationErrors_invalidActiveConnectionID: _enum_for_OperationErrors.invalidActiveConnectionID = OperationErrors.invalidActiveConnectionID; /* LONG_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary invalidActiveConnectionID
@@ -2312,7 +2312,7 @@ const OperationErrors_invalidActiveConnectionID: OperationErrors = OperationErro
  * @type {number}
  */
 export
-const invalidActiveConnectionID: OperationErrors = OperationErrors.invalidActiveConnectionID; /* SHORT_NAMED_ENUMERATED_VALUE */
+const invalidActiveConnectionID: _enum_for_OperationErrors.invalidActiveConnectionID = OperationErrors.invalidActiveConnectionID; /* SHORT_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary OperationErrors_invalidHeldConnectionID
@@ -2323,7 +2323,7 @@ const invalidActiveConnectionID: OperationErrors = OperationErrors.invalidActive
  * @see https://ecma-international.org/publications-and-standards/standards/ecma-269/
  */
 export
-const OperationErrors_invalidHeldConnectionID: OperationErrors = OperationErrors.invalidHeldConnectionID; /* LONG_NAMED_ENUMERATED_VALUE */
+const OperationErrors_invalidHeldConnectionID: _enum_for_OperationErrors.invalidHeldConnectionID = OperationErrors.invalidHeldConnectionID; /* LONG_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary invalidHeldConnectionID
@@ -2332,7 +2332,7 @@ const OperationErrors_invalidHeldConnectionID: OperationErrors = OperationErrors
  * @type {number}
  */
 export
-const invalidHeldConnectionID: OperationErrors = OperationErrors.invalidHeldConnectionID; /* SHORT_NAMED_ENUMERATED_VALUE */
+const invalidHeldConnectionID: _enum_for_OperationErrors.invalidHeldConnectionID = OperationErrors.invalidHeldConnectionID; /* SHORT_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary OperationErrors_invalidDeviceID
@@ -2344,7 +2344,7 @@ const invalidHeldConnectionID: OperationErrors = OperationErrors.invalidHeldConn
  * @see https://ecma-international.org/publications-and-standards/standards/ecma-269/
  */
 export
-const OperationErrors_invalidDeviceID: OperationErrors = OperationErrors.invalidDeviceID; /* LONG_NAMED_ENUMERATED_VALUE */
+const OperationErrors_invalidDeviceID: _enum_for_OperationErrors.invalidDeviceID = OperationErrors.invalidDeviceID; /* LONG_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary invalidDeviceID
@@ -2353,7 +2353,7 @@ const OperationErrors_invalidDeviceID: OperationErrors = OperationErrors.invalid
  * @type {number}
  */
 export
-const invalidDeviceID: OperationErrors = OperationErrors.invalidDeviceID; /* SHORT_NAMED_ENUMERATED_VALUE */
+const invalidDeviceID: _enum_for_OperationErrors.invalidDeviceID = OperationErrors.invalidDeviceID; /* SHORT_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary OperationErrors_invalidActiveDeviceID
@@ -2365,7 +2365,7 @@ const invalidDeviceID: OperationErrors = OperationErrors.invalidDeviceID; /* SHO
  * @see https://ecma-international.org/publications-and-standards/standards/ecma-269/
  */
 export
-const OperationErrors_invalidActiveDeviceID: OperationErrors = OperationErrors.invalidActiveDeviceID; /* LONG_NAMED_ENUMERATED_VALUE */
+const OperationErrors_invalidActiveDeviceID: _enum_for_OperationErrors.invalidActiveDeviceID = OperationErrors.invalidActiveDeviceID; /* LONG_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary invalidActiveDeviceID
@@ -2374,7 +2374,7 @@ const OperationErrors_invalidActiveDeviceID: OperationErrors = OperationErrors.i
  * @type {number}
  */
 export
-const invalidActiveDeviceID: OperationErrors = OperationErrors.invalidActiveDeviceID; /* SHORT_NAMED_ENUMERATED_VALUE */
+const invalidActiveDeviceID: _enum_for_OperationErrors.invalidActiveDeviceID = OperationErrors.invalidActiveDeviceID; /* SHORT_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary OperationErrors_invalidCalledDeviceID
@@ -2384,7 +2384,7 @@ const invalidActiveDeviceID: OperationErrors = OperationErrors.invalidActiveDevi
  * @see https://ecma-international.org/publications-and-standards/standards/ecma-269/
  */
 export
-const OperationErrors_invalidCalledDeviceID: OperationErrors = OperationErrors.invalidCalledDeviceID; /* LONG_NAMED_ENUMERATED_VALUE */
+const OperationErrors_invalidCalledDeviceID: _enum_for_OperationErrors.invalidCalledDeviceID = OperationErrors.invalidCalledDeviceID; /* LONG_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary invalidCalledDeviceID
@@ -2393,7 +2393,7 @@ const OperationErrors_invalidCalledDeviceID: OperationErrors = OperationErrors.i
  * @type {number}
  */
 export
-const invalidCalledDeviceID: OperationErrors = OperationErrors.invalidCalledDeviceID; /* SHORT_NAMED_ENUMERATED_VALUE */
+const invalidCalledDeviceID: _enum_for_OperationErrors.invalidCalledDeviceID = OperationErrors.invalidCalledDeviceID; /* SHORT_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary OperationErrors_invalidCallingDeviceID
@@ -2403,7 +2403,7 @@ const invalidCalledDeviceID: OperationErrors = OperationErrors.invalidCalledDevi
  * @see https://ecma-international.org/publications-and-standards/standards/ecma-269/
  */
 export
-const OperationErrors_invalidCallingDeviceID: OperationErrors = OperationErrors.invalidCallingDeviceID; /* LONG_NAMED_ENUMERATED_VALUE */
+const OperationErrors_invalidCallingDeviceID: _enum_for_OperationErrors.invalidCallingDeviceID = OperationErrors.invalidCallingDeviceID; /* LONG_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary invalidCallingDeviceID
@@ -2412,7 +2412,7 @@ const OperationErrors_invalidCallingDeviceID: OperationErrors = OperationErrors.
  * @type {number}
  */
 export
-const invalidCallingDeviceID: OperationErrors = OperationErrors.invalidCallingDeviceID; /* SHORT_NAMED_ENUMERATED_VALUE */
+const invalidCallingDeviceID: _enum_for_OperationErrors.invalidCallingDeviceID = OperationErrors.invalidCallingDeviceID; /* SHORT_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary OperationErrors_invalidCallToParkDeviceID
@@ -2424,7 +2424,7 @@ const invalidCallingDeviceID: OperationErrors = OperationErrors.invalidCallingDe
  * @see https://ecma-international.org/publications-and-standards/standards/ecma-269/
  */
 export
-const OperationErrors_invalidCallToParkDeviceID: OperationErrors = OperationErrors.invalidCallToParkDeviceID; /* LONG_NAMED_ENUMERATED_VALUE */
+const OperationErrors_invalidCallToParkDeviceID: _enum_for_OperationErrors.invalidCallToParkDeviceID = OperationErrors.invalidCallToParkDeviceID; /* LONG_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary invalidCallToParkDeviceID
@@ -2433,7 +2433,7 @@ const OperationErrors_invalidCallToParkDeviceID: OperationErrors = OperationErro
  * @type {number}
  */
 export
-const invalidCallToParkDeviceID: OperationErrors = OperationErrors.invalidCallToParkDeviceID; /* SHORT_NAMED_ENUMERATED_VALUE */
+const invalidCallToParkDeviceID: _enum_for_OperationErrors.invalidCallToParkDeviceID = OperationErrors.invalidCallToParkDeviceID; /* SHORT_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary OperationErrors_invalidDestinationDeviceID
@@ -2444,7 +2444,7 @@ const invalidCallToParkDeviceID: OperationErrors = OperationErrors.invalidCallTo
  * @see https://ecma-international.org/publications-and-standards/standards/ecma-269/
  */
 export
-const OperationErrors_invalidDestinationDeviceID: OperationErrors = OperationErrors.invalidDestinationDeviceID; /* LONG_NAMED_ENUMERATED_VALUE */
+const OperationErrors_invalidDestinationDeviceID: _enum_for_OperationErrors.invalidDestinationDeviceID = OperationErrors.invalidDestinationDeviceID; /* LONG_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary invalidDestinationDeviceID
@@ -2453,7 +2453,7 @@ const OperationErrors_invalidDestinationDeviceID: OperationErrors = OperationErr
  * @type {number}
  */
 export
-const invalidDestinationDeviceID: OperationErrors = OperationErrors.invalidDestinationDeviceID; /* SHORT_NAMED_ENUMERATED_VALUE */
+const invalidDestinationDeviceID: _enum_for_OperationErrors.invalidDestinationDeviceID = OperationErrors.invalidDestinationDeviceID; /* SHORT_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary OperationErrors_invalidDivertingDeviceID
@@ -2463,7 +2463,7 @@ const invalidDestinationDeviceID: OperationErrors = OperationErrors.invalidDesti
  * @see https://ecma-international.org/publications-and-standards/standards/ecma-269/
  */
 export
-const OperationErrors_invalidDivertingDeviceID: OperationErrors = OperationErrors.invalidDivertingDeviceID; /* LONG_NAMED_ENUMERATED_VALUE */
+const OperationErrors_invalidDivertingDeviceID: _enum_for_OperationErrors.invalidDivertingDeviceID = OperationErrors.invalidDivertingDeviceID; /* LONG_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary invalidDivertingDeviceID
@@ -2472,7 +2472,7 @@ const OperationErrors_invalidDivertingDeviceID: OperationErrors = OperationError
  * @type {number}
  */
 export
-const invalidDivertingDeviceID: OperationErrors = OperationErrors.invalidDivertingDeviceID; /* SHORT_NAMED_ENUMERATED_VALUE */
+const invalidDivertingDeviceID: _enum_for_OperationErrors.invalidDivertingDeviceID = OperationErrors.invalidDivertingDeviceID; /* SHORT_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary OperationErrors_invalidHeldDeviceID
@@ -2484,7 +2484,7 @@ const invalidDivertingDeviceID: OperationErrors = OperationErrors.invalidDiverti
  * @see https://ecma-international.org/publications-and-standards/standards/ecma-269/
  */
 export
-const OperationErrors_invalidHeldDeviceID: OperationErrors = OperationErrors.invalidHeldDeviceID; /* LONG_NAMED_ENUMERATED_VALUE */
+const OperationErrors_invalidHeldDeviceID: _enum_for_OperationErrors.invalidHeldDeviceID = OperationErrors.invalidHeldDeviceID; /* LONG_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary invalidHeldDeviceID
@@ -2493,7 +2493,7 @@ const OperationErrors_invalidHeldDeviceID: OperationErrors = OperationErrors.inv
  * @type {number}
  */
 export
-const invalidHeldDeviceID: OperationErrors = OperationErrors.invalidHeldDeviceID; /* SHORT_NAMED_ENUMERATED_VALUE */
+const invalidHeldDeviceID: _enum_for_OperationErrors.invalidHeldDeviceID = OperationErrors.invalidHeldDeviceID; /* SHORT_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary OperationErrors_invalidParkToDeviceID
@@ -2503,7 +2503,7 @@ const invalidHeldDeviceID: OperationErrors = OperationErrors.invalidHeldDeviceID
  * @see https://ecma-international.org/publications-and-standards/standards/ecma-269/
  */
 export
-const OperationErrors_invalidParkToDeviceID: OperationErrors = OperationErrors.invalidParkToDeviceID; /* LONG_NAMED_ENUMERATED_VALUE */
+const OperationErrors_invalidParkToDeviceID: _enum_for_OperationErrors.invalidParkToDeviceID = OperationErrors.invalidParkToDeviceID; /* LONG_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary invalidParkToDeviceID
@@ -2512,7 +2512,7 @@ const OperationErrors_invalidParkToDeviceID: OperationErrors = OperationErrors.i
  * @type {number}
  */
 export
-const invalidParkToDeviceID: OperationErrors = OperationErrors.invalidParkToDeviceID; /* SHORT_NAMED_ENUMERATED_VALUE */
+const invalidParkToDeviceID: _enum_for_OperationErrors.invalidParkToDeviceID = OperationErrors.invalidParkToDeviceID; /* SHORT_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary OperationErrors_invalidPickUpDeviceID
@@ -2523,7 +2523,7 @@ const invalidParkToDeviceID: OperationErrors = OperationErrors.invalidParkToDevi
  * @see https://ecma-international.org/publications-and-standards/standards/ecma-269/
  */
 export
-const OperationErrors_invalidPickUpDeviceID: OperationErrors = OperationErrors.invalidPickUpDeviceID; /* LONG_NAMED_ENUMERATED_VALUE */
+const OperationErrors_invalidPickUpDeviceID: _enum_for_OperationErrors.invalidPickUpDeviceID = OperationErrors.invalidPickUpDeviceID; /* LONG_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary invalidPickUpDeviceID
@@ -2532,7 +2532,7 @@ const OperationErrors_invalidPickUpDeviceID: OperationErrors = OperationErrors.i
  * @type {number}
  */
 export
-const invalidPickUpDeviceID: OperationErrors = OperationErrors.invalidPickUpDeviceID; /* SHORT_NAMED_ENUMERATED_VALUE */
+const invalidPickUpDeviceID: _enum_for_OperationErrors.invalidPickUpDeviceID = OperationErrors.invalidPickUpDeviceID; /* SHORT_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary OperationErrors_parameterNotSupported
@@ -2543,7 +2543,7 @@ const invalidPickUpDeviceID: OperationErrors = OperationErrors.invalidPickUpDevi
  * @see https://ecma-international.org/publications-and-standards/standards/ecma-269/
  */
 export
-const OperationErrors_parameterNotSupported: OperationErrors = OperationErrors.parameterNotSupported; /* LONG_NAMED_ENUMERATED_VALUE */
+const OperationErrors_parameterNotSupported: _enum_for_OperationErrors.parameterNotSupported = OperationErrors.parameterNotSupported; /* LONG_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary parameterNotSupported
@@ -2552,7 +2552,7 @@ const OperationErrors_parameterNotSupported: OperationErrors = OperationErrors.p
  * @type {number}
  */
 export
-const parameterNotSupported: OperationErrors = OperationErrors.parameterNotSupported; /* SHORT_NAMED_ENUMERATED_VALUE */
+const parameterNotSupported: _enum_for_OperationErrors.parameterNotSupported = OperationErrors.parameterNotSupported; /* SHORT_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary OperationErrors_accountCodeNotSupported
@@ -2562,7 +2562,7 @@ const parameterNotSupported: OperationErrors = OperationErrors.parameterNotSuppo
  * @see https://ecma-international.org/publications-and-standards/standards/ecma-269/
  */
 export
-const OperationErrors_accountCodeNotSupported: OperationErrors = OperationErrors.accountCodeNotSupported; /* LONG_NAMED_ENUMERATED_VALUE */
+const OperationErrors_accountCodeNotSupported: _enum_for_OperationErrors.accountCodeNotSupported = OperationErrors.accountCodeNotSupported; /* LONG_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary accountCodeNotSupported
@@ -2571,7 +2571,7 @@ const OperationErrors_accountCodeNotSupported: OperationErrors = OperationErrors
  * @type {number}
  */
 export
-const accountCodeNotSupported: OperationErrors = OperationErrors.accountCodeNotSupported; /* SHORT_NAMED_ENUMERATED_VALUE */
+const accountCodeNotSupported: _enum_for_OperationErrors.accountCodeNotSupported = OperationErrors.accountCodeNotSupported; /* SHORT_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary OperationErrors_agentGroupNotSupported
@@ -2581,7 +2581,7 @@ const accountCodeNotSupported: OperationErrors = OperationErrors.accountCodeNotS
  * @see https://ecma-international.org/publications-and-standards/standards/ecma-269/
  */
 export
-const OperationErrors_agentGroupNotSupported: OperationErrors = OperationErrors.agentGroupNotSupported; /* LONG_NAMED_ENUMERATED_VALUE */
+const OperationErrors_agentGroupNotSupported: _enum_for_OperationErrors.agentGroupNotSupported = OperationErrors.agentGroupNotSupported; /* LONG_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary agentGroupNotSupported
@@ -2590,7 +2590,7 @@ const OperationErrors_agentGroupNotSupported: OperationErrors = OperationErrors.
  * @type {number}
  */
 export
-const agentGroupNotSupported: OperationErrors = OperationErrors.agentGroupNotSupported; /* SHORT_NAMED_ENUMERATED_VALUE */
+const agentGroupNotSupported: _enum_for_OperationErrors.agentGroupNotSupported = OperationErrors.agentGroupNotSupported; /* SHORT_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary OperationErrors_agentPasswordNotSupported
@@ -2601,7 +2601,7 @@ const agentGroupNotSupported: OperationErrors = OperationErrors.agentGroupNotSup
  * @see https://ecma-international.org/publications-and-standards/standards/ecma-269/
  */
 export
-const OperationErrors_agentPasswordNotSupported: OperationErrors = OperationErrors.agentPasswordNotSupported; /* LONG_NAMED_ENUMERATED_VALUE */
+const OperationErrors_agentPasswordNotSupported: _enum_for_OperationErrors.agentPasswordNotSupported = OperationErrors.agentPasswordNotSupported; /* LONG_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary agentPasswordNotSupported
@@ -2610,7 +2610,7 @@ const OperationErrors_agentPasswordNotSupported: OperationErrors = OperationErro
  * @type {number}
  */
 export
-const agentPasswordNotSupported: OperationErrors = OperationErrors.agentPasswordNotSupported; /* SHORT_NAMED_ENUMERATED_VALUE */
+const agentPasswordNotSupported: _enum_for_OperationErrors.agentPasswordNotSupported = OperationErrors.agentPasswordNotSupported; /* SHORT_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary OperationErrors_agentStateNotSupported
@@ -2620,7 +2620,7 @@ const agentPasswordNotSupported: OperationErrors = OperationErrors.agentPassword
  * @see https://ecma-international.org/publications-and-standards/standards/ecma-269/
  */
 export
-const OperationErrors_agentStateNotSupported: OperationErrors = OperationErrors.agentStateNotSupported; /* LONG_NAMED_ENUMERATED_VALUE */
+const OperationErrors_agentStateNotSupported: _enum_for_OperationErrors.agentStateNotSupported = OperationErrors.agentStateNotSupported; /* LONG_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary agentStateNotSupported
@@ -2629,7 +2629,7 @@ const OperationErrors_agentStateNotSupported: OperationErrors = OperationErrors.
  * @type {number}
  */
 export
-const agentStateNotSupported: OperationErrors = OperationErrors.agentStateNotSupported; /* SHORT_NAMED_ENUMERATED_VALUE */
+const agentStateNotSupported: _enum_for_OperationErrors.agentStateNotSupported = OperationErrors.agentStateNotSupported; /* SHORT_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary OperationErrors_alertTimeNotSupported
@@ -2639,7 +2639,7 @@ const agentStateNotSupported: OperationErrors = OperationErrors.agentStateNotSup
  * @see https://ecma-international.org/publications-and-standards/standards/ecma-269/
  */
 export
-const OperationErrors_alertTimeNotSupported: OperationErrors = OperationErrors.alertTimeNotSupported; /* LONG_NAMED_ENUMERATED_VALUE */
+const OperationErrors_alertTimeNotSupported: _enum_for_OperationErrors.alertTimeNotSupported = OperationErrors.alertTimeNotSupported; /* LONG_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary alertTimeNotSupported
@@ -2648,7 +2648,7 @@ const OperationErrors_alertTimeNotSupported: OperationErrors = OperationErrors.a
  * @type {number}
  */
 export
-const alertTimeNotSupported: OperationErrors = OperationErrors.alertTimeNotSupported; /* SHORT_NAMED_ENUMERATED_VALUE */
+const alertTimeNotSupported: _enum_for_OperationErrors.alertTimeNotSupported = OperationErrors.alertTimeNotSupported; /* SHORT_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary OperationErrors_allocationNotSupported
@@ -2658,7 +2658,7 @@ const alertTimeNotSupported: OperationErrors = OperationErrors.alertTimeNotSuppo
  * @see https://ecma-international.org/publications-and-standards/standards/ecma-269/
  */
 export
-const OperationErrors_allocationNotSupported: OperationErrors = OperationErrors.allocationNotSupported; /* LONG_NAMED_ENUMERATED_VALUE */
+const OperationErrors_allocationNotSupported: _enum_for_OperationErrors.allocationNotSupported = OperationErrors.allocationNotSupported; /* LONG_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary allocationNotSupported
@@ -2667,7 +2667,7 @@ const OperationErrors_allocationNotSupported: OperationErrors = OperationErrors.
  * @type {number}
  */
 export
-const allocationNotSupported: OperationErrors = OperationErrors.allocationNotSupported; /* SHORT_NAMED_ENUMERATED_VALUE */
+const allocationNotSupported: _enum_for_OperationErrors.allocationNotSupported = OperationErrors.allocationNotSupported; /* SHORT_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary OperationErrors_authorisationCodeNotSupported
@@ -2677,7 +2677,7 @@ const allocationNotSupported: OperationErrors = OperationErrors.allocationNotSup
  * @see https://ecma-international.org/publications-and-standards/standards/ecma-269/
  */
 export
-const OperationErrors_authorisationCodeNotSupported: OperationErrors = OperationErrors.authorisationCodeNotSupported; /* LONG_NAMED_ENUMERATED_VALUE */
+const OperationErrors_authorisationCodeNotSupported: _enum_for_OperationErrors.authorisationCodeNotSupported = OperationErrors.authorisationCodeNotSupported; /* LONG_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary authorisationCodeNotSupported
@@ -2686,7 +2686,7 @@ const OperationErrors_authorisationCodeNotSupported: OperationErrors = Operation
  * @type {number}
  */
 export
-const authorisationCodeNotSupported: OperationErrors = OperationErrors.authorisationCodeNotSupported; /* SHORT_NAMED_ENUMERATED_VALUE */
+const authorisationCodeNotSupported: _enum_for_OperationErrors.authorisationCodeNotSupported = OperationErrors.authorisationCodeNotSupported; /* SHORT_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary OperationErrors_autoAnswerNotSupported
@@ -2696,7 +2696,7 @@ const authorisationCodeNotSupported: OperationErrors = OperationErrors.authorisa
  * @see https://ecma-international.org/publications-and-standards/standards/ecma-269/
  */
 export
-const OperationErrors_autoAnswerNotSupported: OperationErrors = OperationErrors.autoAnswerNotSupported; /* LONG_NAMED_ENUMERATED_VALUE */
+const OperationErrors_autoAnswerNotSupported: _enum_for_OperationErrors.autoAnswerNotSupported = OperationErrors.autoAnswerNotSupported; /* LONG_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary autoAnswerNotSupported
@@ -2705,7 +2705,7 @@ const OperationErrors_autoAnswerNotSupported: OperationErrors = OperationErrors.
  * @type {number}
  */
 export
-const autoAnswerNotSupported: OperationErrors = OperationErrors.autoAnswerNotSupported; /* SHORT_NAMED_ENUMERATED_VALUE */
+const autoAnswerNotSupported: _enum_for_OperationErrors.autoAnswerNotSupported = OperationErrors.autoAnswerNotSupported; /* SHORT_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary OperationErrors_bitRateNotSupported
@@ -2715,7 +2715,7 @@ const autoAnswerNotSupported: OperationErrors = OperationErrors.autoAnswerNotSup
  * @see https://ecma-international.org/publications-and-standards/standards/ecma-269/
  */
 export
-const OperationErrors_bitRateNotSupported: OperationErrors = OperationErrors.bitRateNotSupported; /* LONG_NAMED_ENUMERATED_VALUE */
+const OperationErrors_bitRateNotSupported: _enum_for_OperationErrors.bitRateNotSupported = OperationErrors.bitRateNotSupported; /* LONG_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary bitRateNotSupported
@@ -2724,7 +2724,7 @@ const OperationErrors_bitRateNotSupported: OperationErrors = OperationErrors.bit
  * @type {number}
  */
 export
-const bitRateNotSupported: OperationErrors = OperationErrors.bitRateNotSupported; /* SHORT_NAMED_ENUMERATED_VALUE */
+const bitRateNotSupported: _enum_for_OperationErrors.bitRateNotSupported = OperationErrors.bitRateNotSupported; /* SHORT_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary OperationErrors_buttonNotSupported
@@ -2734,7 +2734,7 @@ const bitRateNotSupported: OperationErrors = OperationErrors.bitRateNotSupported
  * @see https://ecma-international.org/publications-and-standards/standards/ecma-269/
  */
 export
-const OperationErrors_buttonNotSupported: OperationErrors = OperationErrors.buttonNotSupported; /* LONG_NAMED_ENUMERATED_VALUE */
+const OperationErrors_buttonNotSupported: _enum_for_OperationErrors.buttonNotSupported = OperationErrors.buttonNotSupported; /* LONG_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary buttonNotSupported
@@ -2743,7 +2743,7 @@ const OperationErrors_buttonNotSupported: OperationErrors = OperationErrors.butt
  * @type {number}
  */
 export
-const buttonNotSupported: OperationErrors = OperationErrors.buttonNotSupported; /* SHORT_NAMED_ENUMERATED_VALUE */
+const buttonNotSupported: _enum_for_OperationErrors.buttonNotSupported = OperationErrors.buttonNotSupported; /* SHORT_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary OperationErrors_callTypeNotSupported
@@ -2753,7 +2753,7 @@ const buttonNotSupported: OperationErrors = OperationErrors.buttonNotSupported; 
  * @see https://ecma-international.org/publications-and-standards/standards/ecma-269/
  */
 export
-const OperationErrors_callTypeNotSupported: OperationErrors = OperationErrors.callTypeNotSupported; /* LONG_NAMED_ENUMERATED_VALUE */
+const OperationErrors_callTypeNotSupported: _enum_for_OperationErrors.callTypeNotSupported = OperationErrors.callTypeNotSupported; /* LONG_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary callTypeNotSupported
@@ -2762,7 +2762,7 @@ const OperationErrors_callTypeNotSupported: OperationErrors = OperationErrors.ca
  * @type {number}
  */
 export
-const callTypeNotSupported: OperationErrors = OperationErrors.callTypeNotSupported; /* SHORT_NAMED_ENUMERATED_VALUE */
+const callTypeNotSupported: _enum_for_OperationErrors.callTypeNotSupported = OperationErrors.callTypeNotSupported; /* SHORT_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary OperationErrors_charactersToSendNotSupported
@@ -2772,7 +2772,7 @@ const callTypeNotSupported: OperationErrors = OperationErrors.callTypeNotSupport
  * @see https://ecma-international.org/publications-and-standards/standards/ecma-269/
  */
 export
-const OperationErrors_charactersToSendNotSupported: OperationErrors = OperationErrors.charactersToSendNotSupported; /* LONG_NAMED_ENUMERATED_VALUE */
+const OperationErrors_charactersToSendNotSupported: _enum_for_OperationErrors.charactersToSendNotSupported = OperationErrors.charactersToSendNotSupported; /* LONG_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary charactersToSendNotSupported
@@ -2781,7 +2781,7 @@ const OperationErrors_charactersToSendNotSupported: OperationErrors = OperationE
  * @type {number}
  */
 export
-const charactersToSendNotSupported: OperationErrors = OperationErrors.charactersToSendNotSupported; /* SHORT_NAMED_ENUMERATED_VALUE */
+const charactersToSendNotSupported: _enum_for_OperationErrors.charactersToSendNotSupported = OperationErrors.charactersToSendNotSupported; /* SHORT_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary OperationErrors_connectionRateNotSupported
@@ -2791,7 +2791,7 @@ const charactersToSendNotSupported: OperationErrors = OperationErrors.characters
  * @see https://ecma-international.org/publications-and-standards/standards/ecma-269/
  */
 export
-const OperationErrors_connectionRateNotSupported: OperationErrors = OperationErrors.connectionRateNotSupported; /* LONG_NAMED_ENUMERATED_VALUE */
+const OperationErrors_connectionRateNotSupported: _enum_for_OperationErrors.connectionRateNotSupported = OperationErrors.connectionRateNotSupported; /* LONG_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary connectionRateNotSupported
@@ -2800,7 +2800,7 @@ const OperationErrors_connectionRateNotSupported: OperationErrors = OperationErr
  * @type {number}
  */
 export
-const connectionRateNotSupported: OperationErrors = OperationErrors.connectionRateNotSupported; /* SHORT_NAMED_ENUMERATED_VALUE */
+const connectionRateNotSupported: _enum_for_OperationErrors.connectionRateNotSupported = OperationErrors.connectionRateNotSupported; /* SHORT_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary OperationErrors_connectionReservationNotSupported
@@ -2810,7 +2810,7 @@ const connectionRateNotSupported: OperationErrors = OperationErrors.connectionRa
  * @see https://ecma-international.org/publications-and-standards/standards/ecma-269/
  */
 export
-const OperationErrors_connectionReservationNotSupported: OperationErrors = OperationErrors.connectionReservationNotSupported; /* LONG_NAMED_ENUMERATED_VALUE */
+const OperationErrors_connectionReservationNotSupported: _enum_for_OperationErrors.connectionReservationNotSupported = OperationErrors.connectionReservationNotSupported; /* LONG_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary connectionReservationNotSupported
@@ -2820,7 +2820,7 @@ const OperationErrors_connectionReservationNotSupported: OperationErrors = Opera
  * @type {number}
  */
 export
-const connectionReservationNotSupported: OperationErrors = OperationErrors.connectionReservationNotSupported; /* SHORT_NAMED_ENUMERATED_VALUE */
+const connectionReservationNotSupported: _enum_for_OperationErrors.connectionReservationNotSupported = OperationErrors.connectionReservationNotSupported; /* SHORT_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary OperationErrors_consultPurposeNotSupported
@@ -2830,7 +2830,7 @@ const connectionReservationNotSupported: OperationErrors = OperationErrors.conne
  * @see https://ecma-international.org/publications-and-standards/standards/ecma-269/
  */
 export
-const OperationErrors_consultPurposeNotSupported: OperationErrors = OperationErrors.consultPurposeNotSupported; /* LONG_NAMED_ENUMERATED_VALUE */
+const OperationErrors_consultPurposeNotSupported: _enum_for_OperationErrors.consultPurposeNotSupported = OperationErrors.consultPurposeNotSupported; /* LONG_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary consultPurposeNotSupported
@@ -2839,7 +2839,7 @@ const OperationErrors_consultPurposeNotSupported: OperationErrors = OperationErr
  * @type {number}
  */
 export
-const consultPurposeNotSupported: OperationErrors = OperationErrors.consultPurposeNotSupported; /* SHORT_NAMED_ENUMERATED_VALUE */
+const consultPurposeNotSupported: _enum_for_OperationErrors.consultPurposeNotSupported = OperationErrors.consultPurposeNotSupported; /* SHORT_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary OperationErrors_correlatorDataNotSupported
@@ -2849,7 +2849,7 @@ const consultPurposeNotSupported: OperationErrors = OperationErrors.consultPurpo
  * @see https://ecma-international.org/publications-and-standards/standards/ecma-269/
  */
 export
-const OperationErrors_correlatorDataNotSupported: OperationErrors = OperationErrors.correlatorDataNotSupported; /* LONG_NAMED_ENUMERATED_VALUE */
+const OperationErrors_correlatorDataNotSupported: _enum_for_OperationErrors.correlatorDataNotSupported = OperationErrors.correlatorDataNotSupported; /* LONG_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary correlatorDataNotSupported
@@ -2858,7 +2858,7 @@ const OperationErrors_correlatorDataNotSupported: OperationErrors = OperationErr
  * @type {number}
  */
 export
-const correlatorDataNotSupported: OperationErrors = OperationErrors.correlatorDataNotSupported; /* SHORT_NAMED_ENUMERATED_VALUE */
+const correlatorDataNotSupported: _enum_for_OperationErrors.correlatorDataNotSupported = OperationErrors.correlatorDataNotSupported; /* SHORT_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary OperationErrors_delayToleranceNotSupported
@@ -2868,7 +2868,7 @@ const correlatorDataNotSupported: OperationErrors = OperationErrors.correlatorDa
  * @see https://ecma-international.org/publications-and-standards/standards/ecma-269/
  */
 export
-const OperationErrors_delayToleranceNotSupported: OperationErrors = OperationErrors.delayToleranceNotSupported; /* LONG_NAMED_ENUMERATED_VALUE */
+const OperationErrors_delayToleranceNotSupported: _enum_for_OperationErrors.delayToleranceNotSupported = OperationErrors.delayToleranceNotSupported; /* LONG_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary delayToleranceNotSupported
@@ -2877,7 +2877,7 @@ const OperationErrors_delayToleranceNotSupported: OperationErrors = OperationErr
  * @type {number}
  */
 export
-const delayToleranceNotSupported: OperationErrors = OperationErrors.delayToleranceNotSupported; /* SHORT_NAMED_ENUMERATED_VALUE */
+const delayToleranceNotSupported: _enum_for_OperationErrors.delayToleranceNotSupported = OperationErrors.delayToleranceNotSupported; /* SHORT_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary OperationErrors_destinationDetectNotSupported
@@ -2887,7 +2887,7 @@ const delayToleranceNotSupported: OperationErrors = OperationErrors.delayToleran
  * @see https://ecma-international.org/publications-and-standards/standards/ecma-269/
  */
 export
-const OperationErrors_destinationDetectNotSupported: OperationErrors = OperationErrors.destinationDetectNotSupported; /* LONG_NAMED_ENUMERATED_VALUE */
+const OperationErrors_destinationDetectNotSupported: _enum_for_OperationErrors.destinationDetectNotSupported = OperationErrors.destinationDetectNotSupported; /* LONG_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary destinationDetectNotSupported
@@ -2896,7 +2896,7 @@ const OperationErrors_destinationDetectNotSupported: OperationErrors = Operation
  * @type {number}
  */
 export
-const destinationDetectNotSupported: OperationErrors = OperationErrors.destinationDetectNotSupported; /* SHORT_NAMED_ENUMERATED_VALUE */
+const destinationDetectNotSupported: _enum_for_OperationErrors.destinationDetectNotSupported = OperationErrors.destinationDetectNotSupported; /* SHORT_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary OperationErrors_digitModeNotSupported
@@ -2906,7 +2906,7 @@ const destinationDetectNotSupported: OperationErrors = OperationErrors.destinati
  * @see https://ecma-international.org/publications-and-standards/standards/ecma-269/
  */
 export
-const OperationErrors_digitModeNotSupported: OperationErrors = OperationErrors.digitModeNotSupported; /* LONG_NAMED_ENUMERATED_VALUE */
+const OperationErrors_digitModeNotSupported: _enum_for_OperationErrors.digitModeNotSupported = OperationErrors.digitModeNotSupported; /* LONG_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary digitModeNotSupported
@@ -2915,7 +2915,7 @@ const OperationErrors_digitModeNotSupported: OperationErrors = OperationErrors.d
  * @type {number}
  */
 export
-const digitModeNotSupported: OperationErrors = OperationErrors.digitModeNotSupported; /* SHORT_NAMED_ENUMERATED_VALUE */
+const digitModeNotSupported: _enum_for_OperationErrors.digitModeNotSupported = OperationErrors.digitModeNotSupported; /* SHORT_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary OperationErrors_errorValueNotSupported
@@ -2925,7 +2925,7 @@ const digitModeNotSupported: OperationErrors = OperationErrors.digitModeNotSuppo
  * @see https://ecma-international.org/publications-and-standards/standards/ecma-269/
  */
 export
-const OperationErrors_errorValueNotSupported: OperationErrors = OperationErrors.errorValueNotSupported; /* LONG_NAMED_ENUMERATED_VALUE */
+const OperationErrors_errorValueNotSupported: _enum_for_OperationErrors.errorValueNotSupported = OperationErrors.errorValueNotSupported; /* LONG_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary errorValueNotSupported
@@ -2934,7 +2934,7 @@ const OperationErrors_errorValueNotSupported: OperationErrors = OperationErrors.
  * @type {number}
  */
 export
-const errorValueNotSupported: OperationErrors = OperationErrors.errorValueNotSupported; /* SHORT_NAMED_ENUMERATED_VALUE */
+const errorValueNotSupported: _enum_for_OperationErrors.errorValueNotSupported = OperationErrors.errorValueNotSupported; /* SHORT_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary OperationErrors_flowDirectionNotSupported
@@ -2944,7 +2944,7 @@ const errorValueNotSupported: OperationErrors = OperationErrors.errorValueNotSup
  * @see https://ecma-international.org/publications-and-standards/standards/ecma-269/
  */
 export
-const OperationErrors_flowDirectionNotSupported: OperationErrors = OperationErrors.flowDirectionNotSupported; /* LONG_NAMED_ENUMERATED_VALUE */
+const OperationErrors_flowDirectionNotSupported: _enum_for_OperationErrors.flowDirectionNotSupported = OperationErrors.flowDirectionNotSupported; /* LONG_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary flowDirectionNotSupported
@@ -2953,7 +2953,7 @@ const OperationErrors_flowDirectionNotSupported: OperationErrors = OperationErro
  * @type {number}
  */
 export
-const flowDirectionNotSupported: OperationErrors = OperationErrors.flowDirectionNotSupported; /* SHORT_NAMED_ENUMERATED_VALUE */
+const flowDirectionNotSupported: _enum_for_OperationErrors.flowDirectionNotSupported = OperationErrors.flowDirectionNotSupported; /* SHORT_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary OperationErrors_forwardingDestinationNotSupported
@@ -2964,7 +2964,7 @@ const flowDirectionNotSupported: OperationErrors = OperationErrors.flowDirection
  * @see https://ecma-international.org/publications-and-standards/standards/ecma-269/
  */
 export
-const OperationErrors_forwardingDestinationNotSupported: OperationErrors = OperationErrors.forwardingDestinationNotSupported; /* LONG_NAMED_ENUMERATED_VALUE */
+const OperationErrors_forwardingDestinationNotSupported: _enum_for_OperationErrors.forwardingDestinationNotSupported = OperationErrors.forwardingDestinationNotSupported; /* LONG_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary forwardingDestinationNotSupported
@@ -2974,7 +2974,7 @@ const OperationErrors_forwardingDestinationNotSupported: OperationErrors = Opera
  * @type {number}
  */
 export
-const forwardingDestinationNotSupported: OperationErrors = OperationErrors.forwardingDestinationNotSupported; /* SHORT_NAMED_ENUMERATED_VALUE */
+const forwardingDestinationNotSupported: _enum_for_OperationErrors.forwardingDestinationNotSupported = OperationErrors.forwardingDestinationNotSupported; /* SHORT_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary OperationErrors_lampNotSupported
@@ -2984,7 +2984,7 @@ const forwardingDestinationNotSupported: OperationErrors = OperationErrors.forwa
  * @see https://ecma-international.org/publications-and-standards/standards/ecma-269/
  */
 export
-const OperationErrors_lampNotSupported: OperationErrors = OperationErrors.lampNotSupported; /* LONG_NAMED_ENUMERATED_VALUE */
+const OperationErrors_lampNotSupported: _enum_for_OperationErrors.lampNotSupported = OperationErrors.lampNotSupported; /* LONG_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary lampNotSupported
@@ -2993,7 +2993,7 @@ const OperationErrors_lampNotSupported: OperationErrors = OperationErrors.lampNo
  * @type {number}
  */
 export
-const lampNotSupported: OperationErrors = OperationErrors.lampNotSupported; /* SHORT_NAMED_ENUMERATED_VALUE */
+const lampNotSupported: _enum_for_OperationErrors.lampNotSupported = OperationErrors.lampNotSupported; /* SHORT_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary OperationErrors_monitorTypeNotSupported
@@ -3003,7 +3003,7 @@ const lampNotSupported: OperationErrors = OperationErrors.lampNotSupported; /* S
  * @see https://ecma-international.org/publications-and-standards/standards/ecma-269/
  */
 export
-const OperationErrors_monitorTypeNotSupported: OperationErrors = OperationErrors.monitorTypeNotSupported; /* LONG_NAMED_ENUMERATED_VALUE */
+const OperationErrors_monitorTypeNotSupported: _enum_for_OperationErrors.monitorTypeNotSupported = OperationErrors.monitorTypeNotSupported; /* LONG_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary monitorTypeNotSupported
@@ -3012,7 +3012,7 @@ const OperationErrors_monitorTypeNotSupported: OperationErrors = OperationErrors
  * @type {number}
  */
 export
-const monitorTypeNotSupported: OperationErrors = OperationErrors.monitorTypeNotSupported; /* SHORT_NAMED_ENUMERATED_VALUE */
+const monitorTypeNotSupported: _enum_for_OperationErrors.monitorTypeNotSupported = OperationErrors.monitorTypeNotSupported; /* SHORT_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary OperationErrors_numberOfChannelsNotSupported
@@ -3022,7 +3022,7 @@ const monitorTypeNotSupported: OperationErrors = OperationErrors.monitorTypeNotS
  * @see https://ecma-international.org/publications-and-standards/standards/ecma-269/
  */
 export
-const OperationErrors_numberOfChannelsNotSupported: OperationErrors = OperationErrors.numberOfChannelsNotSupported; /* LONG_NAMED_ENUMERATED_VALUE */
+const OperationErrors_numberOfChannelsNotSupported: _enum_for_OperationErrors.numberOfChannelsNotSupported = OperationErrors.numberOfChannelsNotSupported; /* LONG_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary numberOfChannelsNotSupported
@@ -3031,7 +3031,7 @@ const OperationErrors_numberOfChannelsNotSupported: OperationErrors = OperationE
  * @type {number}
  */
 export
-const numberOfChannelsNotSupported: OperationErrors = OperationErrors.numberOfChannelsNotSupported; /* SHORT_NAMED_ENUMERATED_VALUE */
+const numberOfChannelsNotSupported: _enum_for_OperationErrors.numberOfChannelsNotSupported = OperationErrors.numberOfChannelsNotSupported; /* SHORT_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary OperationErrors_parameterTypeNotSupported
@@ -3042,7 +3042,7 @@ const numberOfChannelsNotSupported: OperationErrors = OperationErrors.numberOfCh
  * @see https://ecma-international.org/publications-and-standards/standards/ecma-269/
  */
 export
-const OperationErrors_parameterTypeNotSupported: OperationErrors = OperationErrors.parameterTypeNotSupported; /* LONG_NAMED_ENUMERATED_VALUE */
+const OperationErrors_parameterTypeNotSupported: _enum_for_OperationErrors.parameterTypeNotSupported = OperationErrors.parameterTypeNotSupported; /* LONG_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary parameterTypeNotSupported
@@ -3051,7 +3051,7 @@ const OperationErrors_parameterTypeNotSupported: OperationErrors = OperationErro
  * @type {number}
  */
 export
-const parameterTypeNotSupported: OperationErrors = OperationErrors.parameterTypeNotSupported; /* SHORT_NAMED_ENUMERATED_VALUE */
+const parameterTypeNotSupported: _enum_for_OperationErrors.parameterTypeNotSupported = OperationErrors.parameterTypeNotSupported; /* SHORT_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary OperationErrors_priorityNotSupported
@@ -3061,7 +3061,7 @@ const parameterTypeNotSupported: OperationErrors = OperationErrors.parameterType
  * @see https://ecma-international.org/publications-and-standards/standards/ecma-269/
  */
 export
-const OperationErrors_priorityNotSupported: OperationErrors = OperationErrors.priorityNotSupported; /* LONG_NAMED_ENUMERATED_VALUE */
+const OperationErrors_priorityNotSupported: _enum_for_OperationErrors.priorityNotSupported = OperationErrors.priorityNotSupported; /* LONG_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary priorityNotSupported
@@ -3070,7 +3070,7 @@ const OperationErrors_priorityNotSupported: OperationErrors = OperationErrors.pr
  * @type {number}
  */
 export
-const priorityNotSupported: OperationErrors = OperationErrors.priorityNotSupported; /* SHORT_NAMED_ENUMERATED_VALUE */
+const priorityNotSupported: _enum_for_OperationErrors.priorityNotSupported = OperationErrors.priorityNotSupported; /* SHORT_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary OperationErrors_privateDataNotSupported
@@ -3080,7 +3080,7 @@ const priorityNotSupported: OperationErrors = OperationErrors.priorityNotSupport
  * @see https://ecma-international.org/publications-and-standards/standards/ecma-269/
  */
 export
-const OperationErrors_privateDataNotSupported: OperationErrors = OperationErrors.privateDataNotSupported; /* LONG_NAMED_ENUMERATED_VALUE */
+const OperationErrors_privateDataNotSupported: _enum_for_OperationErrors.privateDataNotSupported = OperationErrors.privateDataNotSupported; /* LONG_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary privateDataNotSupported
@@ -3089,7 +3089,7 @@ const OperationErrors_privateDataNotSupported: OperationErrors = OperationErrors
  * @type {number}
  */
 export
-const privateDataNotSupported: OperationErrors = OperationErrors.privateDataNotSupported; /* SHORT_NAMED_ENUMERATED_VALUE */
+const privateDataNotSupported: _enum_for_OperationErrors.privateDataNotSupported = OperationErrors.privateDataNotSupported; /* SHORT_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary OperationErrors_pulseDurationNotSupported
@@ -3099,7 +3099,7 @@ const privateDataNotSupported: OperationErrors = OperationErrors.privateDataNotS
  * @see https://ecma-international.org/publications-and-standards/standards/ecma-269/
  */
 export
-const OperationErrors_pulseDurationNotSupported: OperationErrors = OperationErrors.pulseDurationNotSupported; /* LONG_NAMED_ENUMERATED_VALUE */
+const OperationErrors_pulseDurationNotSupported: _enum_for_OperationErrors.pulseDurationNotSupported = OperationErrors.pulseDurationNotSupported; /* LONG_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary pulseDurationNotSupported
@@ -3108,7 +3108,7 @@ const OperationErrors_pulseDurationNotSupported: OperationErrors = OperationErro
  * @type {number}
  */
 export
-const pulseDurationNotSupported: OperationErrors = OperationErrors.pulseDurationNotSupported; /* SHORT_NAMED_ENUMERATED_VALUE */
+const pulseDurationNotSupported: _enum_for_OperationErrors.pulseDurationNotSupported = OperationErrors.pulseDurationNotSupported; /* SHORT_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary OperationErrors_pulseRateNotSupported
@@ -3118,7 +3118,7 @@ const pulseDurationNotSupported: OperationErrors = OperationErrors.pulseDuration
  * @see https://ecma-international.org/publications-and-standards/standards/ecma-269/
  */
 export
-const OperationErrors_pulseRateNotSupported: OperationErrors = OperationErrors.pulseRateNotSupported; /* LONG_NAMED_ENUMERATED_VALUE */
+const OperationErrors_pulseRateNotSupported: _enum_for_OperationErrors.pulseRateNotSupported = OperationErrors.pulseRateNotSupported; /* LONG_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary pulseRateNotSupported
@@ -3127,7 +3127,7 @@ const OperationErrors_pulseRateNotSupported: OperationErrors = OperationErrors.p
  * @type {number}
  */
 export
-const pulseRateNotSupported: OperationErrors = OperationErrors.pulseRateNotSupported; /* SHORT_NAMED_ENUMERATED_VALUE */
+const pulseRateNotSupported: _enum_for_OperationErrors.pulseRateNotSupported = OperationErrors.pulseRateNotSupported; /* SHORT_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary OperationErrors_remainRetryNotSupported
@@ -3137,7 +3137,7 @@ const pulseRateNotSupported: OperationErrors = OperationErrors.pulseRateNotSuppo
  * @see https://ecma-international.org/publications-and-standards/standards/ecma-269/
  */
 export
-const OperationErrors_remainRetryNotSupported: OperationErrors = OperationErrors.remainRetryNotSupported; /* LONG_NAMED_ENUMERATED_VALUE */
+const OperationErrors_remainRetryNotSupported: _enum_for_OperationErrors.remainRetryNotSupported = OperationErrors.remainRetryNotSupported; /* LONG_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary remainRetryNotSupported
@@ -3146,7 +3146,7 @@ const OperationErrors_remainRetryNotSupported: OperationErrors = OperationErrors
  * @type {number}
  */
 export
-const remainRetryNotSupported: OperationErrors = OperationErrors.remainRetryNotSupported; /* SHORT_NAMED_ENUMERATED_VALUE */
+const remainRetryNotSupported: _enum_for_OperationErrors.remainRetryNotSupported = OperationErrors.remainRetryNotSupported; /* SHORT_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary OperationErrors_ringCountNotSupported
@@ -3156,7 +3156,7 @@ const remainRetryNotSupported: OperationErrors = OperationErrors.remainRetryNotS
  * @see https://ecma-international.org/publications-and-standards/standards/ecma-269/
  */
 export
-const OperationErrors_ringCountNotSupported: OperationErrors = OperationErrors.ringCountNotSupported; /* LONG_NAMED_ENUMERATED_VALUE */
+const OperationErrors_ringCountNotSupported: _enum_for_OperationErrors.ringCountNotSupported = OperationErrors.ringCountNotSupported; /* LONG_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary ringCountNotSupported
@@ -3165,7 +3165,7 @@ const OperationErrors_ringCountNotSupported: OperationErrors = OperationErrors.r
  * @type {number}
  */
 export
-const ringCountNotSupported: OperationErrors = OperationErrors.ringCountNotSupported; /* SHORT_NAMED_ENUMERATED_VALUE */
+const ringCountNotSupported: _enum_for_OperationErrors.ringCountNotSupported = OperationErrors.ringCountNotSupported; /* SHORT_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary OperationErrors_routeUsedNotSupported
@@ -3175,7 +3175,7 @@ const ringCountNotSupported: OperationErrors = OperationErrors.ringCountNotSuppo
  * @see https://ecma-international.org/publications-and-standards/standards/ecma-269/
  */
 export
-const OperationErrors_routeUsedNotSupported: OperationErrors = OperationErrors.routeUsedNotSupported; /* LONG_NAMED_ENUMERATED_VALUE */
+const OperationErrors_routeUsedNotSupported: _enum_for_OperationErrors.routeUsedNotSupported = OperationErrors.routeUsedNotSupported; /* LONG_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary routeUsedNotSupported
@@ -3184,7 +3184,7 @@ const OperationErrors_routeUsedNotSupported: OperationErrors = OperationErrors.r
  * @type {number}
  */
 export
-const routeUsedNotSupported: OperationErrors = OperationErrors.routeUsedNotSupported; /* SHORT_NAMED_ENUMERATED_VALUE */
+const routeUsedNotSupported: _enum_for_OperationErrors.routeUsedNotSupported = OperationErrors.routeUsedNotSupported; /* SHORT_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary OperationErrors_securityNotSupported
@@ -3194,7 +3194,7 @@ const routeUsedNotSupported: OperationErrors = OperationErrors.routeUsedNotSuppo
  * @see https://ecma-international.org/publications-and-standards/standards/ecma-269/
  */
 export
-const OperationErrors_securityNotSupported: OperationErrors = OperationErrors.securityNotSupported; /* LONG_NAMED_ENUMERATED_VALUE */
+const OperationErrors_securityNotSupported: _enum_for_OperationErrors.securityNotSupported = OperationErrors.securityNotSupported; /* LONG_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary securityNotSupported
@@ -3203,7 +3203,7 @@ const OperationErrors_securityNotSupported: OperationErrors = OperationErrors.se
  * @type {number}
  */
 export
-const securityNotSupported: OperationErrors = OperationErrors.securityNotSupported; /* SHORT_NAMED_ENUMERATED_VALUE */
+const securityNotSupported: _enum_for_OperationErrors.securityNotSupported = OperationErrors.securityNotSupported; /* SHORT_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary OperationErrors_swSubdomainCCIETypeNotSupported
@@ -3214,7 +3214,7 @@ const securityNotSupported: OperationErrors = OperationErrors.securityNotSupport
  * @see https://ecma-international.org/publications-and-standards/standards/ecma-269/
  */
 export
-const OperationErrors_swSubdomainCCIETypeNotSupported: OperationErrors = OperationErrors.swSubdomainCCIETypeNotSupported; /* LONG_NAMED_ENUMERATED_VALUE */
+const OperationErrors_swSubdomainCCIETypeNotSupported: _enum_for_OperationErrors.swSubdomainCCIETypeNotSupported = OperationErrors.swSubdomainCCIETypeNotSupported; /* LONG_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary swSubdomainCCIETypeNotSupported
@@ -3224,7 +3224,7 @@ const OperationErrors_swSubdomainCCIETypeNotSupported: OperationErrors = Operati
  * @type {number}
  */
 export
-const swSubdomainCCIETypeNotSupported: OperationErrors = OperationErrors.swSubdomainCCIETypeNotSupported; /* SHORT_NAMED_ENUMERATED_VALUE */
+const swSubdomainCCIETypeNotSupported: _enum_for_OperationErrors.swSubdomainCCIETypeNotSupported = OperationErrors.swSubdomainCCIETypeNotSupported; /* SHORT_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary OperationErrors_toneDurationNotSupported
@@ -3234,7 +3234,7 @@ const swSubdomainCCIETypeNotSupported: OperationErrors = OperationErrors.swSubdo
  * @see https://ecma-international.org/publications-and-standards/standards/ecma-269/
  */
 export
-const OperationErrors_toneDurationNotSupported: OperationErrors = OperationErrors.toneDurationNotSupported; /* LONG_NAMED_ENUMERATED_VALUE */
+const OperationErrors_toneDurationNotSupported: _enum_for_OperationErrors.toneDurationNotSupported = OperationErrors.toneDurationNotSupported; /* LONG_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary toneDurationNotSupported
@@ -3243,7 +3243,7 @@ const OperationErrors_toneDurationNotSupported: OperationErrors = OperationError
  * @type {number}
  */
 export
-const toneDurationNotSupported: OperationErrors = OperationErrors.toneDurationNotSupported; /* SHORT_NAMED_ENUMERATED_VALUE */
+const toneDurationNotSupported: _enum_for_OperationErrors.toneDurationNotSupported = OperationErrors.toneDurationNotSupported; /* SHORT_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary OperationErrors_sysStatRegIDNotSupported
@@ -3253,7 +3253,7 @@ const toneDurationNotSupported: OperationErrors = OperationErrors.toneDurationNo
  * @see https://ecma-international.org/publications-and-standards/standards/ecma-269/
  */
 export
-const OperationErrors_sysStatRegIDNotSupported: OperationErrors = OperationErrors.sysStatRegIDNotSupported; /* LONG_NAMED_ENUMERATED_VALUE */
+const OperationErrors_sysStatRegIDNotSupported: _enum_for_OperationErrors.sysStatRegIDNotSupported = OperationErrors.sysStatRegIDNotSupported; /* LONG_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary sysStatRegIDNotSupported
@@ -3262,7 +3262,7 @@ const OperationErrors_sysStatRegIDNotSupported: OperationErrors = OperationError
  * @type {number}
  */
 export
-const sysStatRegIDNotSupported: OperationErrors = OperationErrors.sysStatRegIDNotSupported; /* SHORT_NAMED_ENUMERATED_VALUE */
+const sysStatRegIDNotSupported: _enum_for_OperationErrors.sysStatRegIDNotSupported = OperationErrors.sysStatRegIDNotSupported; /* SHORT_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary OperationErrors_userDataNotSupported
@@ -3272,7 +3272,7 @@ const sysStatRegIDNotSupported: OperationErrors = OperationErrors.sysStatRegIDNo
  * @see https://ecma-international.org/publications-and-standards/standards/ecma-269/
  */
 export
-const OperationErrors_userDataNotSupported: OperationErrors = OperationErrors.userDataNotSupported; /* LONG_NAMED_ENUMERATED_VALUE */
+const OperationErrors_userDataNotSupported: _enum_for_OperationErrors.userDataNotSupported = OperationErrors.userDataNotSupported; /* LONG_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary userDataNotSupported
@@ -3281,7 +3281,7 @@ const OperationErrors_userDataNotSupported: OperationErrors = OperationErrors.us
  * @type {number}
  */
 export
-const userDataNotSupported: OperationErrors = OperationErrors.userDataNotSupported; /* SHORT_NAMED_ENUMERATED_VALUE */
+const userDataNotSupported: _enum_for_OperationErrors.userDataNotSupported = OperationErrors.userDataNotSupported; /* SHORT_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary OperationErrors_privilegeViolationSpecifiedDevice
@@ -3293,7 +3293,7 @@ const userDataNotSupported: OperationErrors = OperationErrors.userDataNotSupport
  * @see https://ecma-international.org/publications-and-standards/standards/ecma-269/
  */
 export
-const OperationErrors_privilegeViolationSpecifiedDevice: OperationErrors = OperationErrors.privilegeViolationSpecifiedDevice; /* LONG_NAMED_ENUMERATED_VALUE */
+const OperationErrors_privilegeViolationSpecifiedDevice: _enum_for_OperationErrors.privilegeViolationSpecifiedDevice = OperationErrors.privilegeViolationSpecifiedDevice; /* LONG_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary privilegeViolationSpecifiedDevice
@@ -3303,7 +3303,7 @@ const OperationErrors_privilegeViolationSpecifiedDevice: OperationErrors = Opera
  * @type {number}
  */
 export
-const privilegeViolationSpecifiedDevice: OperationErrors = OperationErrors.privilegeViolationSpecifiedDevice; /* SHORT_NAMED_ENUMERATED_VALUE */
+const privilegeViolationSpecifiedDevice: _enum_for_OperationErrors.privilegeViolationSpecifiedDevice = OperationErrors.privilegeViolationSpecifiedDevice; /* SHORT_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary OperationErrors_privilegeViolationActiveDevice
@@ -3314,7 +3314,7 @@ const privilegeViolationSpecifiedDevice: OperationErrors = OperationErrors.privi
  * @see https://ecma-international.org/publications-and-standards/standards/ecma-269/
  */
 export
-const OperationErrors_privilegeViolationActiveDevice: OperationErrors = OperationErrors.privilegeViolationActiveDevice; /* LONG_NAMED_ENUMERATED_VALUE */
+const OperationErrors_privilegeViolationActiveDevice: _enum_for_OperationErrors.privilegeViolationActiveDevice = OperationErrors.privilegeViolationActiveDevice; /* LONG_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary privilegeViolationActiveDevice
@@ -3323,7 +3323,7 @@ const OperationErrors_privilegeViolationActiveDevice: OperationErrors = Operatio
  * @type {number}
  */
 export
-const privilegeViolationActiveDevice: OperationErrors = OperationErrors.privilegeViolationActiveDevice; /* SHORT_NAMED_ENUMERATED_VALUE */
+const privilegeViolationActiveDevice: _enum_for_OperationErrors.privilegeViolationActiveDevice = OperationErrors.privilegeViolationActiveDevice; /* SHORT_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary OperationErrors_privilegeViolationCalledDevice
@@ -3335,7 +3335,7 @@ const privilegeViolationActiveDevice: OperationErrors = OperationErrors.privileg
  * @see https://ecma-international.org/publications-and-standards/standards/ecma-269/
  */
 export
-const OperationErrors_privilegeViolationCalledDevice: OperationErrors = OperationErrors.privilegeViolationCalledDevice; /* LONG_NAMED_ENUMERATED_VALUE */
+const OperationErrors_privilegeViolationCalledDevice: _enum_for_OperationErrors.privilegeViolationCalledDevice = OperationErrors.privilegeViolationCalledDevice; /* LONG_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary privilegeViolationCalledDevice
@@ -3344,7 +3344,7 @@ const OperationErrors_privilegeViolationCalledDevice: OperationErrors = Operatio
  * @type {number}
  */
 export
-const privilegeViolationCalledDevice: OperationErrors = OperationErrors.privilegeViolationCalledDevice; /* SHORT_NAMED_ENUMERATED_VALUE */
+const privilegeViolationCalledDevice: _enum_for_OperationErrors.privilegeViolationCalledDevice = OperationErrors.privilegeViolationCalledDevice; /* SHORT_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary OperationErrors_privilegeViolationCallingDevice
@@ -3356,7 +3356,7 @@ const privilegeViolationCalledDevice: OperationErrors = OperationErrors.privileg
  * @see https://ecma-international.org/publications-and-standards/standards/ecma-269/
  */
 export
-const OperationErrors_privilegeViolationCallingDevice: OperationErrors = OperationErrors.privilegeViolationCallingDevice; /* LONG_NAMED_ENUMERATED_VALUE */
+const OperationErrors_privilegeViolationCallingDevice: _enum_for_OperationErrors.privilegeViolationCallingDevice = OperationErrors.privilegeViolationCallingDevice; /* LONG_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary privilegeViolationCallingDevice
@@ -3366,7 +3366,7 @@ const OperationErrors_privilegeViolationCallingDevice: OperationErrors = Operati
  * @type {number}
  */
 export
-const privilegeViolationCallingDevice: OperationErrors = OperationErrors.privilegeViolationCallingDevice; /* SHORT_NAMED_ENUMERATED_VALUE */
+const privilegeViolationCallingDevice: _enum_for_OperationErrors.privilegeViolationCallingDevice = OperationErrors.privilegeViolationCallingDevice; /* SHORT_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary OperationErrors_privilegeViolationCallToParkDevice
@@ -3377,7 +3377,7 @@ const privilegeViolationCallingDevice: OperationErrors = OperationErrors.privile
  * @see https://ecma-international.org/publications-and-standards/standards/ecma-269/
  */
 export
-const OperationErrors_privilegeViolationCallToParkDevice: OperationErrors = OperationErrors.privilegeViolationCallToParkDevice; /* LONG_NAMED_ENUMERATED_VALUE */
+const OperationErrors_privilegeViolationCallToParkDevice: _enum_for_OperationErrors.privilegeViolationCallToParkDevice = OperationErrors.privilegeViolationCallToParkDevice; /* LONG_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary privilegeViolationCallToParkDevice
@@ -3387,7 +3387,7 @@ const OperationErrors_privilegeViolationCallToParkDevice: OperationErrors = Oper
  * @type {number}
  */
 export
-const privilegeViolationCallToParkDevice: OperationErrors = OperationErrors.privilegeViolationCallToParkDevice; /* SHORT_NAMED_ENUMERATED_VALUE */
+const privilegeViolationCallToParkDevice: _enum_for_OperationErrors.privilegeViolationCallToParkDevice = OperationErrors.privilegeViolationCallToParkDevice; /* SHORT_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary OperationErrors_privilegeViolationDestinationDevice
@@ -3398,7 +3398,7 @@ const privilegeViolationCallToParkDevice: OperationErrors = OperationErrors.priv
  * @see https://ecma-international.org/publications-and-standards/standards/ecma-269/
  */
 export
-const OperationErrors_privilegeViolationDestinationDevice: OperationErrors = OperationErrors.privilegeViolationDestinationDevice; /* LONG_NAMED_ENUMERATED_VALUE */
+const OperationErrors_privilegeViolationDestinationDevice: _enum_for_OperationErrors.privilegeViolationDestinationDevice = OperationErrors.privilegeViolationDestinationDevice; /* LONG_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary privilegeViolationDestinationDevice
@@ -3408,7 +3408,7 @@ const OperationErrors_privilegeViolationDestinationDevice: OperationErrors = Ope
  * @type {number}
  */
 export
-const privilegeViolationDestinationDevice: OperationErrors = OperationErrors.privilegeViolationDestinationDevice; /* SHORT_NAMED_ENUMERATED_VALUE */
+const privilegeViolationDestinationDevice: _enum_for_OperationErrors.privilegeViolationDestinationDevice = OperationErrors.privilegeViolationDestinationDevice; /* SHORT_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary OperationErrors_privilegeViolationOnDivertingDevice
@@ -3419,7 +3419,7 @@ const privilegeViolationDestinationDevice: OperationErrors = OperationErrors.pri
  * @see https://ecma-international.org/publications-and-standards/standards/ecma-269/
  */
 export
-const OperationErrors_privilegeViolationOnDivertingDevice: OperationErrors = OperationErrors.privilegeViolationOnDivertingDevice; /* LONG_NAMED_ENUMERATED_VALUE */
+const OperationErrors_privilegeViolationOnDivertingDevice: _enum_for_OperationErrors.privilegeViolationOnDivertingDevice = OperationErrors.privilegeViolationOnDivertingDevice; /* LONG_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary privilegeViolationOnDivertingDevice
@@ -3429,7 +3429,7 @@ const OperationErrors_privilegeViolationOnDivertingDevice: OperationErrors = Ope
  * @type {number}
  */
 export
-const privilegeViolationOnDivertingDevice: OperationErrors = OperationErrors.privilegeViolationOnDivertingDevice; /* SHORT_NAMED_ENUMERATED_VALUE */
+const privilegeViolationOnDivertingDevice: _enum_for_OperationErrors.privilegeViolationOnDivertingDevice = OperationErrors.privilegeViolationOnDivertingDevice; /* SHORT_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary OperationErrors_privilegeViolationHeldDevice
@@ -3440,7 +3440,7 @@ const privilegeViolationOnDivertingDevice: OperationErrors = OperationErrors.pri
  * @see https://ecma-international.org/publications-and-standards/standards/ecma-269/
  */
 export
-const OperationErrors_privilegeViolationHeldDevice: OperationErrors = OperationErrors.privilegeViolationHeldDevice; /* LONG_NAMED_ENUMERATED_VALUE */
+const OperationErrors_privilegeViolationHeldDevice: _enum_for_OperationErrors.privilegeViolationHeldDevice = OperationErrors.privilegeViolationHeldDevice; /* LONG_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary privilegeViolationHeldDevice
@@ -3449,7 +3449,7 @@ const OperationErrors_privilegeViolationHeldDevice: OperationErrors = OperationE
  * @type {number}
  */
 export
-const privilegeViolationHeldDevice: OperationErrors = OperationErrors.privilegeViolationHeldDevice; /* SHORT_NAMED_ENUMERATED_VALUE */
+const privilegeViolationHeldDevice: _enum_for_OperationErrors.privilegeViolationHeldDevice = OperationErrors.privilegeViolationHeldDevice; /* SHORT_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary OperationErrors_privilegeViolationOnParkToDevice
@@ -3459,7 +3459,7 @@ const privilegeViolationHeldDevice: OperationErrors = OperationErrors.privilegeV
  * @see https://ecma-international.org/publications-and-standards/standards/ecma-269/
  */
 export
-const OperationErrors_privilegeViolationOnParkToDevice: OperationErrors = OperationErrors.privilegeViolationOnParkToDevice; /* LONG_NAMED_ENUMERATED_VALUE */
+const OperationErrors_privilegeViolationOnParkToDevice: _enum_for_OperationErrors.privilegeViolationOnParkToDevice = OperationErrors.privilegeViolationOnParkToDevice; /* LONG_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary privilegeViolationOnParkToDevice
@@ -3469,7 +3469,7 @@ const OperationErrors_privilegeViolationOnParkToDevice: OperationErrors = Operat
  * @type {number}
  */
 export
-const privilegeViolationOnParkToDevice: OperationErrors = OperationErrors.privilegeViolationOnParkToDevice; /* SHORT_NAMED_ENUMERATED_VALUE */
+const privilegeViolationOnParkToDevice: _enum_for_OperationErrors.privilegeViolationOnParkToDevice = OperationErrors.privilegeViolationOnParkToDevice; /* SHORT_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary OperationErrors_privilegeViolationPickUpDevice
@@ -3481,7 +3481,7 @@ const privilegeViolationOnParkToDevice: OperationErrors = OperationErrors.privil
  * @see https://ecma-international.org/publications-and-standards/standards/ecma-269/
  */
 export
-const OperationErrors_privilegeViolationPickUpDevice: OperationErrors = OperationErrors.privilegeViolationPickUpDevice; /* LONG_NAMED_ENUMERATED_VALUE */
+const OperationErrors_privilegeViolationPickUpDevice: _enum_for_OperationErrors.privilegeViolationPickUpDevice = OperationErrors.privilegeViolationPickUpDevice; /* LONG_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary privilegeViolationPickUpDevice
@@ -3490,7 +3490,7 @@ const OperationErrors_privilegeViolationPickUpDevice: OperationErrors = Operatio
  * @type {number}
  */
 export
-const privilegeViolationPickUpDevice: OperationErrors = OperationErrors.privilegeViolationPickUpDevice; /* SHORT_NAMED_ENUMERATED_VALUE */
+const privilegeViolationPickUpDevice: _enum_for_OperationErrors.privilegeViolationPickUpDevice = OperationErrors.privilegeViolationPickUpDevice; /* SHORT_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary OperationErrors_routeingTimerExpired
@@ -3501,7 +3501,7 @@ const privilegeViolationPickUpDevice: OperationErrors = OperationErrors.privileg
  * @see https://ecma-international.org/publications-and-standards/standards/ecma-269/
  */
 export
-const OperationErrors_routeingTimerExpired: OperationErrors = OperationErrors.routeingTimerExpired; /* LONG_NAMED_ENUMERATED_VALUE */
+const OperationErrors_routeingTimerExpired: _enum_for_OperationErrors.routeingTimerExpired = OperationErrors.routeingTimerExpired; /* LONG_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary routeingTimerExpired
@@ -3510,7 +3510,7 @@ const OperationErrors_routeingTimerExpired: OperationErrors = OperationErrors.ro
  * @type {number}
  */
 export
-const routeingTimerExpired: OperationErrors = OperationErrors.routeingTimerExpired; /* SHORT_NAMED_ENUMERATED_VALUE */
+const routeingTimerExpired: _enum_for_OperationErrors.routeingTimerExpired = OperationErrors.routeingTimerExpired; /* SHORT_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary OperationErrors_requestIncompatibleWithObject
@@ -3522,7 +3522,7 @@ const routeingTimerExpired: OperationErrors = OperationErrors.routeingTimerExpir
  * @see https://ecma-international.org/publications-and-standards/standards/ecma-269/
  */
 export
-const OperationErrors_requestIncompatibleWithObject: OperationErrors = OperationErrors.requestIncompatibleWithObject; /* LONG_NAMED_ENUMERATED_VALUE */
+const OperationErrors_requestIncompatibleWithObject: _enum_for_OperationErrors.requestIncompatibleWithObject = OperationErrors.requestIncompatibleWithObject; /* LONG_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary requestIncompatibleWithObject
@@ -3531,7 +3531,7 @@ const OperationErrors_requestIncompatibleWithObject: OperationErrors = Operation
  * @type {number}
  */
 export
-const requestIncompatibleWithObject: OperationErrors = OperationErrors.requestIncompatibleWithObject; /* SHORT_NAMED_ENUMERATED_VALUE */
+const requestIncompatibleWithObject: _enum_for_OperationErrors.requestIncompatibleWithObject = OperationErrors.requestIncompatibleWithObject; /* SHORT_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary OperationErrors_requestIncompatibleWithConnection
@@ -3543,7 +3543,7 @@ const requestIncompatibleWithObject: OperationErrors = OperationErrors.requestIn
  * @see https://ecma-international.org/publications-and-standards/standards/ecma-269/
  */
 export
-const OperationErrors_requestIncompatibleWithConnection: OperationErrors = OperationErrors.requestIncompatibleWithConnection; /* LONG_NAMED_ENUMERATED_VALUE */
+const OperationErrors_requestIncompatibleWithConnection: _enum_for_OperationErrors.requestIncompatibleWithConnection = OperationErrors.requestIncompatibleWithConnection; /* LONG_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary requestIncompatibleWithConnection
@@ -3553,7 +3553,7 @@ const OperationErrors_requestIncompatibleWithConnection: OperationErrors = Opera
  * @type {number}
  */
 export
-const requestIncompatibleWithConnection: OperationErrors = OperationErrors.requestIncompatibleWithConnection; /* SHORT_NAMED_ENUMERATED_VALUE */
+const requestIncompatibleWithConnection: _enum_for_OperationErrors.requestIncompatibleWithConnection = OperationErrors.requestIncompatibleWithConnection; /* SHORT_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary OperationErrors_requestIncompatibleWithActiveConnection
@@ -3564,7 +3564,7 @@ const requestIncompatibleWithConnection: OperationErrors = OperationErrors.reque
  * @see https://ecma-international.org/publications-and-standards/standards/ecma-269/
  */
 export
-const OperationErrors_requestIncompatibleWithActiveConnection: OperationErrors = OperationErrors.requestIncompatibleWithActiveConnection; /* LONG_NAMED_ENUMERATED_VALUE */
+const OperationErrors_requestIncompatibleWithActiveConnection: _enum_for_OperationErrors.requestIncompatibleWithActiveConnection = OperationErrors.requestIncompatibleWithActiveConnection; /* LONG_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary requestIncompatibleWithActiveConnection
@@ -3574,7 +3574,7 @@ const OperationErrors_requestIncompatibleWithActiveConnection: OperationErrors =
  * @type {number}
  */
 export
-const requestIncompatibleWithActiveConnection: OperationErrors = OperationErrors.requestIncompatibleWithActiveConnection; /* SHORT_NAMED_ENUMERATED_VALUE */
+const requestIncompatibleWithActiveConnection: _enum_for_OperationErrors.requestIncompatibleWithActiveConnection = OperationErrors.requestIncompatibleWithActiveConnection; /* SHORT_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary OperationErrors_requestIncompatibleWithHeldConnection
@@ -3584,7 +3584,7 @@ const requestIncompatibleWithActiveConnection: OperationErrors = OperationErrors
  * @see https://ecma-international.org/publications-and-standards/standards/ecma-269/
  */
 export
-const OperationErrors_requestIncompatibleWithHeldConnection: OperationErrors = OperationErrors.requestIncompatibleWithHeldConnection; /* LONG_NAMED_ENUMERATED_VALUE */
+const OperationErrors_requestIncompatibleWithHeldConnection: _enum_for_OperationErrors.requestIncompatibleWithHeldConnection = OperationErrors.requestIncompatibleWithHeldConnection; /* LONG_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary requestIncompatibleWithHeldConnection
@@ -3594,7 +3594,7 @@ const OperationErrors_requestIncompatibleWithHeldConnection: OperationErrors = O
  * @type {number}
  */
 export
-const requestIncompatibleWithHeldConnection: OperationErrors = OperationErrors.requestIncompatibleWithHeldConnection; /* SHORT_NAMED_ENUMERATED_VALUE */
+const requestIncompatibleWithHeldConnection: _enum_for_OperationErrors.requestIncompatibleWithHeldConnection = OperationErrors.requestIncompatibleWithHeldConnection; /* SHORT_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary OperationErrors_requestIncompatibleWithDevice
@@ -3605,7 +3605,7 @@ const requestIncompatibleWithHeldConnection: OperationErrors = OperationErrors.r
  * @see https://ecma-international.org/publications-and-standards/standards/ecma-269/
  */
 export
-const OperationErrors_requestIncompatibleWithDevice: OperationErrors = OperationErrors.requestIncompatibleWithDevice; /* LONG_NAMED_ENUMERATED_VALUE */
+const OperationErrors_requestIncompatibleWithDevice: _enum_for_OperationErrors.requestIncompatibleWithDevice = OperationErrors.requestIncompatibleWithDevice; /* LONG_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary requestIncompatibleWithDevice
@@ -3614,7 +3614,7 @@ const OperationErrors_requestIncompatibleWithDevice: OperationErrors = Operation
  * @type {number}
  */
 export
-const requestIncompatibleWithDevice: OperationErrors = OperationErrors.requestIncompatibleWithDevice; /* SHORT_NAMED_ENUMERATED_VALUE */
+const requestIncompatibleWithDevice: _enum_for_OperationErrors.requestIncompatibleWithDevice = OperationErrors.requestIncompatibleWithDevice; /* SHORT_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary OperationErrors_requestIncompatibleWithCalledDevice
@@ -3624,7 +3624,7 @@ const requestIncompatibleWithDevice: OperationErrors = OperationErrors.requestIn
  * @see https://ecma-international.org/publications-and-standards/standards/ecma-269/
  */
 export
-const OperationErrors_requestIncompatibleWithCalledDevice: OperationErrors = OperationErrors.requestIncompatibleWithCalledDevice; /* LONG_NAMED_ENUMERATED_VALUE */
+const OperationErrors_requestIncompatibleWithCalledDevice: _enum_for_OperationErrors.requestIncompatibleWithCalledDevice = OperationErrors.requestIncompatibleWithCalledDevice; /* LONG_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary requestIncompatibleWithCalledDevice
@@ -3634,7 +3634,7 @@ const OperationErrors_requestIncompatibleWithCalledDevice: OperationErrors = Ope
  * @type {number}
  */
 export
-const requestIncompatibleWithCalledDevice: OperationErrors = OperationErrors.requestIncompatibleWithCalledDevice; /* SHORT_NAMED_ENUMERATED_VALUE */
+const requestIncompatibleWithCalledDevice: _enum_for_OperationErrors.requestIncompatibleWithCalledDevice = OperationErrors.requestIncompatibleWithCalledDevice; /* SHORT_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary OperationErrors_requestIncompatibleWithCallingDevice
@@ -3644,7 +3644,7 @@ const requestIncompatibleWithCalledDevice: OperationErrors = OperationErrors.req
  * @see https://ecma-international.org/publications-and-standards/standards/ecma-269/
  */
 export
-const OperationErrors_requestIncompatibleWithCallingDevice: OperationErrors = OperationErrors.requestIncompatibleWithCallingDevice; /* LONG_NAMED_ENUMERATED_VALUE */
+const OperationErrors_requestIncompatibleWithCallingDevice: _enum_for_OperationErrors.requestIncompatibleWithCallingDevice = OperationErrors.requestIncompatibleWithCallingDevice; /* LONG_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary requestIncompatibleWithCallingDevice
@@ -3654,7 +3654,7 @@ const OperationErrors_requestIncompatibleWithCallingDevice: OperationErrors = Op
  * @type {number}
  */
 export
-const requestIncompatibleWithCallingDevice: OperationErrors = OperationErrors.requestIncompatibleWithCallingDevice; /* SHORT_NAMED_ENUMERATED_VALUE */
+const requestIncompatibleWithCallingDevice: _enum_for_OperationErrors.requestIncompatibleWithCallingDevice = OperationErrors.requestIncompatibleWithCallingDevice; /* SHORT_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary OperationErrors_requestIncompatibleWithSubjectDevice
@@ -3666,7 +3666,7 @@ const requestIncompatibleWithCallingDevice: OperationErrors = OperationErrors.re
  * @see https://ecma-international.org/publications-and-standards/standards/ecma-269/
  */
 export
-const OperationErrors_requestIncompatibleWithSubjectDevice: OperationErrors = OperationErrors.requestIncompatibleWithSubjectDevice; /* LONG_NAMED_ENUMERATED_VALUE */
+const OperationErrors_requestIncompatibleWithSubjectDevice: _enum_for_OperationErrors.requestIncompatibleWithSubjectDevice = OperationErrors.requestIncompatibleWithSubjectDevice; /* LONG_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary requestIncompatibleWithSubjectDevice
@@ -3676,7 +3676,7 @@ const OperationErrors_requestIncompatibleWithSubjectDevice: OperationErrors = Op
  * @type {number}
  */
 export
-const requestIncompatibleWithSubjectDevice: OperationErrors = OperationErrors.requestIncompatibleWithSubjectDevice; /* SHORT_NAMED_ENUMERATED_VALUE */
+const requestIncompatibleWithSubjectDevice: _enum_for_OperationErrors.requestIncompatibleWithSubjectDevice = OperationErrors.requestIncompatibleWithSubjectDevice; /* SHORT_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary OperationErrors_requestIncompatibleWithActiveDevice
@@ -3688,7 +3688,7 @@ const requestIncompatibleWithSubjectDevice: OperationErrors = OperationErrors.re
  * @see https://ecma-international.org/publications-and-standards/standards/ecma-269/
  */
 export
-const OperationErrors_requestIncompatibleWithActiveDevice: OperationErrors = OperationErrors.requestIncompatibleWithActiveDevice; /* LONG_NAMED_ENUMERATED_VALUE */
+const OperationErrors_requestIncompatibleWithActiveDevice: _enum_for_OperationErrors.requestIncompatibleWithActiveDevice = OperationErrors.requestIncompatibleWithActiveDevice; /* LONG_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary requestIncompatibleWithActiveDevice
@@ -3698,7 +3698,7 @@ const OperationErrors_requestIncompatibleWithActiveDevice: OperationErrors = Ope
  * @type {number}
  */
 export
-const requestIncompatibleWithActiveDevice: OperationErrors = OperationErrors.requestIncompatibleWithActiveDevice; /* SHORT_NAMED_ENUMERATED_VALUE */
+const requestIncompatibleWithActiveDevice: _enum_for_OperationErrors.requestIncompatibleWithActiveDevice = OperationErrors.requestIncompatibleWithActiveDevice; /* SHORT_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary OperationErrors_requestIncompatibleWithCallToParkDevice
@@ -3708,7 +3708,7 @@ const requestIncompatibleWithActiveDevice: OperationErrors = OperationErrors.req
  * @see https://ecma-international.org/publications-and-standards/standards/ecma-269/
  */
 export
-const OperationErrors_requestIncompatibleWithCallToParkDevice: OperationErrors = OperationErrors.requestIncompatibleWithCallToParkDevice; /* LONG_NAMED_ENUMERATED_VALUE */
+const OperationErrors_requestIncompatibleWithCallToParkDevice: _enum_for_OperationErrors.requestIncompatibleWithCallToParkDevice = OperationErrors.requestIncompatibleWithCallToParkDevice; /* LONG_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary requestIncompatibleWithCallToParkDevice
@@ -3718,7 +3718,7 @@ const OperationErrors_requestIncompatibleWithCallToParkDevice: OperationErrors =
  * @type {number}
  */
 export
-const requestIncompatibleWithCallToParkDevice: OperationErrors = OperationErrors.requestIncompatibleWithCallToParkDevice; /* SHORT_NAMED_ENUMERATED_VALUE */
+const requestIncompatibleWithCallToParkDevice: _enum_for_OperationErrors.requestIncompatibleWithCallToParkDevice = OperationErrors.requestIncompatibleWithCallToParkDevice; /* SHORT_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary OperationErrors_requestIncompatibleWithDestinationDevice
@@ -3729,7 +3729,7 @@ const requestIncompatibleWithCallToParkDevice: OperationErrors = OperationErrors
  * @see https://ecma-international.org/publications-and-standards/standards/ecma-269/
  */
 export
-const OperationErrors_requestIncompatibleWithDestinationDevice: OperationErrors = OperationErrors.requestIncompatibleWithDestinationDevice; /* LONG_NAMED_ENUMERATED_VALUE */
+const OperationErrors_requestIncompatibleWithDestinationDevice: _enum_for_OperationErrors.requestIncompatibleWithDestinationDevice = OperationErrors.requestIncompatibleWithDestinationDevice; /* LONG_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary requestIncompatibleWithDestinationDevice
@@ -3739,7 +3739,7 @@ const OperationErrors_requestIncompatibleWithDestinationDevice: OperationErrors 
  * @type {number}
  */
 export
-const requestIncompatibleWithDestinationDevice: OperationErrors = OperationErrors.requestIncompatibleWithDestinationDevice; /* SHORT_NAMED_ENUMERATED_VALUE */
+const requestIncompatibleWithDestinationDevice: _enum_for_OperationErrors.requestIncompatibleWithDestinationDevice = OperationErrors.requestIncompatibleWithDestinationDevice; /* SHORT_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary OperationErrors_requestIncompatibleWithDivertingDevice
@@ -3750,7 +3750,7 @@ const requestIncompatibleWithDestinationDevice: OperationErrors = OperationError
  * @see https://ecma-international.org/publications-and-standards/standards/ecma-269/
  */
 export
-const OperationErrors_requestIncompatibleWithDivertingDevice: OperationErrors = OperationErrors.requestIncompatibleWithDivertingDevice; /* LONG_NAMED_ENUMERATED_VALUE */
+const OperationErrors_requestIncompatibleWithDivertingDevice: _enum_for_OperationErrors.requestIncompatibleWithDivertingDevice = OperationErrors.requestIncompatibleWithDivertingDevice; /* LONG_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary requestIncompatibleWithDivertingDevice
@@ -3760,7 +3760,7 @@ const OperationErrors_requestIncompatibleWithDivertingDevice: OperationErrors = 
  * @type {number}
  */
 export
-const requestIncompatibleWithDivertingDevice: OperationErrors = OperationErrors.requestIncompatibleWithDivertingDevice; /* SHORT_NAMED_ENUMERATED_VALUE */
+const requestIncompatibleWithDivertingDevice: _enum_for_OperationErrors.requestIncompatibleWithDivertingDevice = OperationErrors.requestIncompatibleWithDivertingDevice; /* SHORT_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary OperationErrors_requestIncompatibleWithHeldDevice
@@ -3770,7 +3770,7 @@ const requestIncompatibleWithDivertingDevice: OperationErrors = OperationErrors.
  * @see https://ecma-international.org/publications-and-standards/standards/ecma-269/
  */
 export
-const OperationErrors_requestIncompatibleWithHeldDevice: OperationErrors = OperationErrors.requestIncompatibleWithHeldDevice; /* LONG_NAMED_ENUMERATED_VALUE */
+const OperationErrors_requestIncompatibleWithHeldDevice: _enum_for_OperationErrors.requestIncompatibleWithHeldDevice = OperationErrors.requestIncompatibleWithHeldDevice; /* LONG_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary requestIncompatibleWithHeldDevice
@@ -3780,7 +3780,7 @@ const OperationErrors_requestIncompatibleWithHeldDevice: OperationErrors = Opera
  * @type {number}
  */
 export
-const requestIncompatibleWithHeldDevice: OperationErrors = OperationErrors.requestIncompatibleWithHeldDevice; /* SHORT_NAMED_ENUMERATED_VALUE */
+const requestIncompatibleWithHeldDevice: _enum_for_OperationErrors.requestIncompatibleWithHeldDevice = OperationErrors.requestIncompatibleWithHeldDevice; /* SHORT_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary OperationErrors_requestIncompatibleWithMedia
@@ -3792,7 +3792,7 @@ const requestIncompatibleWithHeldDevice: OperationErrors = OperationErrors.reque
  * @see https://ecma-international.org/publications-and-standards/standards/ecma-269/
  */
 export
-const OperationErrors_requestIncompatibleWithMedia: OperationErrors = OperationErrors.requestIncompatibleWithMedia; /* LONG_NAMED_ENUMERATED_VALUE */
+const OperationErrors_requestIncompatibleWithMedia: _enum_for_OperationErrors.requestIncompatibleWithMedia = OperationErrors.requestIncompatibleWithMedia; /* LONG_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary requestIncompatibleWithMedia
@@ -3801,7 +3801,7 @@ const OperationErrors_requestIncompatibleWithMedia: OperationErrors = OperationE
  * @type {number}
  */
 export
-const requestIncompatibleWithMedia: OperationErrors = OperationErrors.requestIncompatibleWithMedia; /* SHORT_NAMED_ENUMERATED_VALUE */
+const requestIncompatibleWithMedia: _enum_for_OperationErrors.requestIncompatibleWithMedia = OperationErrors.requestIncompatibleWithMedia; /* SHORT_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary OperationErrors_requestIncompatibleWithParkToDevice
@@ -3811,7 +3811,7 @@ const requestIncompatibleWithMedia: OperationErrors = OperationErrors.requestInc
  * @see https://ecma-international.org/publications-and-standards/standards/ecma-269/
  */
 export
-const OperationErrors_requestIncompatibleWithParkToDevice: OperationErrors = OperationErrors.requestIncompatibleWithParkToDevice; /* LONG_NAMED_ENUMERATED_VALUE */
+const OperationErrors_requestIncompatibleWithParkToDevice: _enum_for_OperationErrors.requestIncompatibleWithParkToDevice = OperationErrors.requestIncompatibleWithParkToDevice; /* LONG_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary requestIncompatibleWithParkToDevice
@@ -3821,7 +3821,7 @@ const OperationErrors_requestIncompatibleWithParkToDevice: OperationErrors = Ope
  * @type {number}
  */
 export
-const requestIncompatibleWithParkToDevice: OperationErrors = OperationErrors.requestIncompatibleWithParkToDevice; /* SHORT_NAMED_ENUMERATED_VALUE */
+const requestIncompatibleWithParkToDevice: _enum_for_OperationErrors.requestIncompatibleWithParkToDevice = OperationErrors.requestIncompatibleWithParkToDevice; /* SHORT_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary OperationErrors_requestIncompatibleWithPickupDevice
@@ -3832,7 +3832,7 @@ const requestIncompatibleWithParkToDevice: OperationErrors = OperationErrors.req
  * @see https://ecma-international.org/publications-and-standards/standards/ecma-269/
  */
 export
-const OperationErrors_requestIncompatibleWithPickupDevice: OperationErrors = OperationErrors.requestIncompatibleWithPickupDevice; /* LONG_NAMED_ENUMERATED_VALUE */
+const OperationErrors_requestIncompatibleWithPickupDevice: _enum_for_OperationErrors.requestIncompatibleWithPickupDevice = OperationErrors.requestIncompatibleWithPickupDevice; /* LONG_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary requestIncompatibleWithPickupDevice
@@ -3842,7 +3842,7 @@ const OperationErrors_requestIncompatibleWithPickupDevice: OperationErrors = Ope
  * @type {number}
  */
 export
-const requestIncompatibleWithPickupDevice: OperationErrors = OperationErrors.requestIncompatibleWithPickupDevice; /* SHORT_NAMED_ENUMERATED_VALUE */
+const requestIncompatibleWithPickupDevice: _enum_for_OperationErrors.requestIncompatibleWithPickupDevice = OperationErrors.requestIncompatibleWithPickupDevice; /* SHORT_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary OperationErrors_serviceNotSupported
@@ -3852,7 +3852,7 @@ const requestIncompatibleWithPickupDevice: OperationErrors = OperationErrors.req
  * @see https://ecma-international.org/publications-and-standards/standards/ecma-269/
  */
 export
-const OperationErrors_serviceNotSupported: OperationErrors = OperationErrors.serviceNotSupported; /* LONG_NAMED_ENUMERATED_VALUE */
+const OperationErrors_serviceNotSupported: _enum_for_OperationErrors.serviceNotSupported = OperationErrors.serviceNotSupported; /* LONG_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary serviceNotSupported
@@ -3861,7 +3861,7 @@ const OperationErrors_serviceNotSupported: OperationErrors = OperationErrors.ser
  * @type {number}
  */
 export
-const serviceNotSupported: OperationErrors = OperationErrors.serviceNotSupported; /* SHORT_NAMED_ENUMERATED_VALUE */
+const serviceNotSupported: _enum_for_OperationErrors.serviceNotSupported = OperationErrors.serviceNotSupported; /* SHORT_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary OperationErrors_securityViolation
@@ -3871,7 +3871,7 @@ const serviceNotSupported: OperationErrors = OperationErrors.serviceNotSupported
  * @see https://ecma-international.org/publications-and-standards/standards/ecma-269/
  */
 export
-const OperationErrors_securityViolation: OperationErrors = OperationErrors.securityViolation; /* LONG_NAMED_ENUMERATED_VALUE */
+const OperationErrors_securityViolation: _enum_for_OperationErrors.securityViolation = OperationErrors.securityViolation; /* LONG_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary securityViolation
@@ -3880,7 +3880,7 @@ const OperationErrors_securityViolation: OperationErrors = OperationErrors.secur
  * @type {number}
  */
 export
-const securityViolation: OperationErrors = OperationErrors.securityViolation; /* SHORT_NAMED_ENUMERATED_VALUE */
+const securityViolation: _enum_for_OperationErrors.securityViolation = OperationErrors.securityViolation; /* SHORT_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary OperationErrors_valueOutOfRange
@@ -3892,7 +3892,7 @@ const securityViolation: OperationErrors = OperationErrors.securityViolation; /*
  * @see https://ecma-international.org/publications-and-standards/standards/ecma-269/
  */
 export
-const OperationErrors_valueOutOfRange: OperationErrors = OperationErrors.valueOutOfRange; /* LONG_NAMED_ENUMERATED_VALUE */
+const OperationErrors_valueOutOfRange: _enum_for_OperationErrors.valueOutOfRange = OperationErrors.valueOutOfRange; /* LONG_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary valueOutOfRange
@@ -3901,7 +3901,7 @@ const OperationErrors_valueOutOfRange: OperationErrors = OperationErrors.valueOu
  * @type {number}
  */
 export
-const valueOutOfRange: OperationErrors = OperationErrors.valueOutOfRange; /* SHORT_NAMED_ENUMERATED_VALUE */
+const valueOutOfRange: _enum_for_OperationErrors.valueOutOfRange = OperationErrors.valueOutOfRange; /* SHORT_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary OperationErrors_agentStateOutOfRange
@@ -3912,7 +3912,7 @@ const valueOutOfRange: OperationErrors = OperationErrors.valueOutOfRange; /* SHO
  * @see https://ecma-international.org/publications-and-standards/standards/ecma-269/
  */
 export
-const OperationErrors_agentStateOutOfRange: OperationErrors = OperationErrors.agentStateOutOfRange; /* LONG_NAMED_ENUMERATED_VALUE */
+const OperationErrors_agentStateOutOfRange: _enum_for_OperationErrors.agentStateOutOfRange = OperationErrors.agentStateOutOfRange; /* LONG_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary agentStateOutOfRange
@@ -3921,7 +3921,7 @@ const OperationErrors_agentStateOutOfRange: OperationErrors = OperationErrors.ag
  * @type {number}
  */
 export
-const agentStateOutOfRange: OperationErrors = OperationErrors.agentStateOutOfRange; /* SHORT_NAMED_ENUMERATED_VALUE */
+const agentStateOutOfRange: _enum_for_OperationErrors.agentStateOutOfRange = OperationErrors.agentStateOutOfRange; /* SHORT_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary OperationErrors_alertTimeOutOfRange
@@ -3931,7 +3931,7 @@ const agentStateOutOfRange: OperationErrors = OperationErrors.agentStateOutOfRan
  * @see https://ecma-international.org/publications-and-standards/standards/ecma-269/
  */
 export
-const OperationErrors_alertTimeOutOfRange: OperationErrors = OperationErrors.alertTimeOutOfRange; /* LONG_NAMED_ENUMERATED_VALUE */
+const OperationErrors_alertTimeOutOfRange: _enum_for_OperationErrors.alertTimeOutOfRange = OperationErrors.alertTimeOutOfRange; /* LONG_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary alertTimeOutOfRange
@@ -3940,7 +3940,7 @@ const OperationErrors_alertTimeOutOfRange: OperationErrors = OperationErrors.ale
  * @type {number}
  */
 export
-const alertTimeOutOfRange: OperationErrors = OperationErrors.alertTimeOutOfRange; /* SHORT_NAMED_ENUMERATED_VALUE */
+const alertTimeOutOfRange: _enum_for_OperationErrors.alertTimeOutOfRange = OperationErrors.alertTimeOutOfRange; /* SHORT_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary OperationErrors_allocationOutOfRange
@@ -3950,7 +3950,7 @@ const alertTimeOutOfRange: OperationErrors = OperationErrors.alertTimeOutOfRange
  * @see https://ecma-international.org/publications-and-standards/standards/ecma-269/
  */
 export
-const OperationErrors_allocationOutOfRange: OperationErrors = OperationErrors.allocationOutOfRange; /* LONG_NAMED_ENUMERATED_VALUE */
+const OperationErrors_allocationOutOfRange: _enum_for_OperationErrors.allocationOutOfRange = OperationErrors.allocationOutOfRange; /* LONG_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary allocationOutOfRange
@@ -3959,7 +3959,7 @@ const OperationErrors_allocationOutOfRange: OperationErrors = OperationErrors.al
  * @type {number}
  */
 export
-const allocationOutOfRange: OperationErrors = OperationErrors.allocationOutOfRange; /* SHORT_NAMED_ENUMERATED_VALUE */
+const allocationOutOfRange: _enum_for_OperationErrors.allocationOutOfRange = OperationErrors.allocationOutOfRange; /* SHORT_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary OperationErrors_autoAnswerOutOfRange
@@ -3969,7 +3969,7 @@ const allocationOutOfRange: OperationErrors = OperationErrors.allocationOutOfRan
  * @see https://ecma-international.org/publications-and-standards/standards/ecma-269/
  */
 export
-const OperationErrors_autoAnswerOutOfRange: OperationErrors = OperationErrors.autoAnswerOutOfRange; /* LONG_NAMED_ENUMERATED_VALUE */
+const OperationErrors_autoAnswerOutOfRange: _enum_for_OperationErrors.autoAnswerOutOfRange = OperationErrors.autoAnswerOutOfRange; /* LONG_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary autoAnswerOutOfRange
@@ -3978,7 +3978,7 @@ const OperationErrors_autoAnswerOutOfRange: OperationErrors = OperationErrors.au
  * @type {number}
  */
 export
-const autoAnswerOutOfRange: OperationErrors = OperationErrors.autoAnswerOutOfRange; /* SHORT_NAMED_ENUMERATED_VALUE */
+const autoAnswerOutOfRange: _enum_for_OperationErrors.autoAnswerOutOfRange = OperationErrors.autoAnswerOutOfRange; /* SHORT_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary OperationErrors_bitRateOutOfRange
@@ -3988,7 +3988,7 @@ const autoAnswerOutOfRange: OperationErrors = OperationErrors.autoAnswerOutOfRan
  * @see https://ecma-international.org/publications-and-standards/standards/ecma-269/
  */
 export
-const OperationErrors_bitRateOutOfRange: OperationErrors = OperationErrors.bitRateOutOfRange; /* LONG_NAMED_ENUMERATED_VALUE */
+const OperationErrors_bitRateOutOfRange: _enum_for_OperationErrors.bitRateOutOfRange = OperationErrors.bitRateOutOfRange; /* LONG_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary bitRateOutOfRange
@@ -3997,7 +3997,7 @@ const OperationErrors_bitRateOutOfRange: OperationErrors = OperationErrors.bitRa
  * @type {number}
  */
 export
-const bitRateOutOfRange: OperationErrors = OperationErrors.bitRateOutOfRange; /* SHORT_NAMED_ENUMERATED_VALUE */
+const bitRateOutOfRange: _enum_for_OperationErrors.bitRateOutOfRange = OperationErrors.bitRateOutOfRange; /* SHORT_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary OperationErrors_callTypeOutOfRange
@@ -4007,7 +4007,7 @@ const bitRateOutOfRange: OperationErrors = OperationErrors.bitRateOutOfRange; /*
  * @see https://ecma-international.org/publications-and-standards/standards/ecma-269/
  */
 export
-const OperationErrors_callTypeOutOfRange: OperationErrors = OperationErrors.callTypeOutOfRange; /* LONG_NAMED_ENUMERATED_VALUE */
+const OperationErrors_callTypeOutOfRange: _enum_for_OperationErrors.callTypeOutOfRange = OperationErrors.callTypeOutOfRange; /* LONG_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary callTypeOutOfRange
@@ -4016,7 +4016,7 @@ const OperationErrors_callTypeOutOfRange: OperationErrors = OperationErrors.call
  * @type {number}
  */
 export
-const callTypeOutOfRange: OperationErrors = OperationErrors.callTypeOutOfRange; /* SHORT_NAMED_ENUMERATED_VALUE */
+const callTypeOutOfRange: _enum_for_OperationErrors.callTypeOutOfRange = OperationErrors.callTypeOutOfRange; /* SHORT_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary OperationErrors_connectionRateOutOfRange
@@ -4027,7 +4027,7 @@ const callTypeOutOfRange: OperationErrors = OperationErrors.callTypeOutOfRange; 
  * @see https://ecma-international.org/publications-and-standards/standards/ecma-269/
  */
 export
-const OperationErrors_connectionRateOutOfRange: OperationErrors = OperationErrors.connectionRateOutOfRange; /* LONG_NAMED_ENUMERATED_VALUE */
+const OperationErrors_connectionRateOutOfRange: _enum_for_OperationErrors.connectionRateOutOfRange = OperationErrors.connectionRateOutOfRange; /* LONG_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary connectionRateOutOfRange
@@ -4036,7 +4036,7 @@ const OperationErrors_connectionRateOutOfRange: OperationErrors = OperationError
  * @type {number}
  */
 export
-const connectionRateOutOfRange: OperationErrors = OperationErrors.connectionRateOutOfRange; /* SHORT_NAMED_ENUMERATED_VALUE */
+const connectionRateOutOfRange: _enum_for_OperationErrors.connectionRateOutOfRange = OperationErrors.connectionRateOutOfRange; /* SHORT_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary OperationErrors_connectionReservoationOutOfRange
@@ -4046,7 +4046,7 @@ const connectionRateOutOfRange: OperationErrors = OperationErrors.connectionRate
  * @see https://ecma-international.org/publications-and-standards/standards/ecma-269/
  */
 export
-const OperationErrors_connectionReservoationOutOfRange: OperationErrors = OperationErrors.connectionReservoationOutOfRange; /* LONG_NAMED_ENUMERATED_VALUE */
+const OperationErrors_connectionReservoationOutOfRange: _enum_for_OperationErrors.connectionReservoationOutOfRange = OperationErrors.connectionReservoationOutOfRange; /* LONG_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary connectionReservoationOutOfRange
@@ -4056,7 +4056,7 @@ const OperationErrors_connectionReservoationOutOfRange: OperationErrors = Operat
  * @type {number}
  */
 export
-const connectionReservoationOutOfRange: OperationErrors = OperationErrors.connectionReservoationOutOfRange; /* SHORT_NAMED_ENUMERATED_VALUE */
+const connectionReservoationOutOfRange: _enum_for_OperationErrors.connectionReservoationOutOfRange = OperationErrors.connectionReservoationOutOfRange; /* SHORT_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary OperationErrors_consultPurposeOutOfRange
@@ -4067,7 +4067,7 @@ const connectionReservoationOutOfRange: OperationErrors = OperationErrors.connec
  * @see https://ecma-international.org/publications-and-standards/standards/ecma-269/
  */
 export
-const OperationErrors_consultPurposeOutOfRange: OperationErrors = OperationErrors.consultPurposeOutOfRange; /* LONG_NAMED_ENUMERATED_VALUE */
+const OperationErrors_consultPurposeOutOfRange: _enum_for_OperationErrors.consultPurposeOutOfRange = OperationErrors.consultPurposeOutOfRange; /* LONG_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary consultPurposeOutOfRange
@@ -4076,7 +4076,7 @@ const OperationErrors_consultPurposeOutOfRange: OperationErrors = OperationError
  * @type {number}
  */
 export
-const consultPurposeOutOfRange: OperationErrors = OperationErrors.consultPurposeOutOfRange; /* SHORT_NAMED_ENUMERATED_VALUE */
+const consultPurposeOutOfRange: _enum_for_OperationErrors.consultPurposeOutOfRange = OperationErrors.consultPurposeOutOfRange; /* SHORT_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary OperationErrors_correlatorDataOutOfRange
@@ -4088,7 +4088,7 @@ const consultPurposeOutOfRange: OperationErrors = OperationErrors.consultPurpose
  * @see https://ecma-international.org/publications-and-standards/standards/ecma-269/
  */
 export
-const OperationErrors_correlatorDataOutOfRange: OperationErrors = OperationErrors.correlatorDataOutOfRange; /* LONG_NAMED_ENUMERATED_VALUE */
+const OperationErrors_correlatorDataOutOfRange: _enum_for_OperationErrors.correlatorDataOutOfRange = OperationErrors.correlatorDataOutOfRange; /* LONG_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary correlatorDataOutOfRange
@@ -4097,7 +4097,7 @@ const OperationErrors_correlatorDataOutOfRange: OperationErrors = OperationError
  * @type {number}
  */
 export
-const correlatorDataOutOfRange: OperationErrors = OperationErrors.correlatorDataOutOfRange; /* SHORT_NAMED_ENUMERATED_VALUE */
+const correlatorDataOutOfRange: _enum_for_OperationErrors.correlatorDataOutOfRange = OperationErrors.correlatorDataOutOfRange; /* SHORT_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary OperationErrors_delayToleranceOutOfRange
@@ -4108,7 +4108,7 @@ const correlatorDataOutOfRange: OperationErrors = OperationErrors.correlatorData
  * @see https://ecma-international.org/publications-and-standards/standards/ecma-269/
  */
 export
-const OperationErrors_delayToleranceOutOfRange: OperationErrors = OperationErrors.delayToleranceOutOfRange; /* LONG_NAMED_ENUMERATED_VALUE */
+const OperationErrors_delayToleranceOutOfRange: _enum_for_OperationErrors.delayToleranceOutOfRange = OperationErrors.delayToleranceOutOfRange; /* LONG_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary delayToleranceOutOfRange
@@ -4117,7 +4117,7 @@ const OperationErrors_delayToleranceOutOfRange: OperationErrors = OperationError
  * @type {number}
  */
 export
-const delayToleranceOutOfRange: OperationErrors = OperationErrors.delayToleranceOutOfRange; /* SHORT_NAMED_ENUMERATED_VALUE */
+const delayToleranceOutOfRange: _enum_for_OperationErrors.delayToleranceOutOfRange = OperationErrors.delayToleranceOutOfRange; /* SHORT_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary OperationErrors_destinationDetectOutOfRange
@@ -4128,7 +4128,7 @@ const delayToleranceOutOfRange: OperationErrors = OperationErrors.delayTolerance
  * @see https://ecma-international.org/publications-and-standards/standards/ecma-269/
  */
 export
-const OperationErrors_destinationDetectOutOfRange: OperationErrors = OperationErrors.destinationDetectOutOfRange; /* LONG_NAMED_ENUMERATED_VALUE */
+const OperationErrors_destinationDetectOutOfRange: _enum_for_OperationErrors.destinationDetectOutOfRange = OperationErrors.destinationDetectOutOfRange; /* LONG_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary destinationDetectOutOfRange
@@ -4137,7 +4137,7 @@ const OperationErrors_destinationDetectOutOfRange: OperationErrors = OperationEr
  * @type {number}
  */
 export
-const destinationDetectOutOfRange: OperationErrors = OperationErrors.destinationDetectOutOfRange; /* SHORT_NAMED_ENUMERATED_VALUE */
+const destinationDetectOutOfRange: _enum_for_OperationErrors.destinationDetectOutOfRange = OperationErrors.destinationDetectOutOfRange; /* SHORT_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary OperationErrors_digitModeOutOfRange
@@ -4147,7 +4147,7 @@ const destinationDetectOutOfRange: OperationErrors = OperationErrors.destination
  * @see https://ecma-international.org/publications-and-standards/standards/ecma-269/
  */
 export
-const OperationErrors_digitModeOutOfRange: OperationErrors = OperationErrors.digitModeOutOfRange; /* LONG_NAMED_ENUMERATED_VALUE */
+const OperationErrors_digitModeOutOfRange: _enum_for_OperationErrors.digitModeOutOfRange = OperationErrors.digitModeOutOfRange; /* LONG_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary digitModeOutOfRange
@@ -4156,7 +4156,7 @@ const OperationErrors_digitModeOutOfRange: OperationErrors = OperationErrors.dig
  * @type {number}
  */
 export
-const digitModeOutOfRange: OperationErrors = OperationErrors.digitModeOutOfRange; /* SHORT_NAMED_ENUMERATED_VALUE */
+const digitModeOutOfRange: _enum_for_OperationErrors.digitModeOutOfRange = OperationErrors.digitModeOutOfRange; /* SHORT_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary OperationErrors_doNotDisturbOutOfRange
@@ -4166,7 +4166,7 @@ const digitModeOutOfRange: OperationErrors = OperationErrors.digitModeOutOfRange
  * @see https://ecma-international.org/publications-and-standards/standards/ecma-269/
  */
 export
-const OperationErrors_doNotDisturbOutOfRange: OperationErrors = OperationErrors.doNotDisturbOutOfRange; /* LONG_NAMED_ENUMERATED_VALUE */
+const OperationErrors_doNotDisturbOutOfRange: _enum_for_OperationErrors.doNotDisturbOutOfRange = OperationErrors.doNotDisturbOutOfRange; /* LONG_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary doNotDisturbOutOfRange
@@ -4175,7 +4175,7 @@ const OperationErrors_doNotDisturbOutOfRange: OperationErrors = OperationErrors.
  * @type {number}
  */
 export
-const doNotDisturbOutOfRange: OperationErrors = OperationErrors.doNotDisturbOutOfRange; /* SHORT_NAMED_ENUMERATED_VALUE */
+const doNotDisturbOutOfRange: _enum_for_OperationErrors.doNotDisturbOutOfRange = OperationErrors.doNotDisturbOutOfRange; /* SHORT_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary OperationErrors_flowDirectionOutOfRange
@@ -4185,7 +4185,7 @@ const doNotDisturbOutOfRange: OperationErrors = OperationErrors.doNotDisturbOutO
  * @see https://ecma-international.org/publications-and-standards/standards/ecma-269/
  */
 export
-const OperationErrors_flowDirectionOutOfRange: OperationErrors = OperationErrors.flowDirectionOutOfRange; /* LONG_NAMED_ENUMERATED_VALUE */
+const OperationErrors_flowDirectionOutOfRange: _enum_for_OperationErrors.flowDirectionOutOfRange = OperationErrors.flowDirectionOutOfRange; /* LONG_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary flowDirectionOutOfRange
@@ -4194,7 +4194,7 @@ const OperationErrors_flowDirectionOutOfRange: OperationErrors = OperationErrors
  * @type {number}
  */
 export
-const flowDirectionOutOfRange: OperationErrors = OperationErrors.flowDirectionOutOfRange; /* SHORT_NAMED_ENUMERATED_VALUE */
+const flowDirectionOutOfRange: _enum_for_OperationErrors.flowDirectionOutOfRange = OperationErrors.flowDirectionOutOfRange; /* SHORT_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary OperationErrors_forwardingFlagOutOfRange
@@ -4204,7 +4204,7 @@ const flowDirectionOutOfRange: OperationErrors = OperationErrors.flowDirectionOu
  * @see https://ecma-international.org/publications-and-standards/standards/ecma-269/
  */
 export
-const OperationErrors_forwardingFlagOutOfRange: OperationErrors = OperationErrors.forwardingFlagOutOfRange; /* LONG_NAMED_ENUMERATED_VALUE */
+const OperationErrors_forwardingFlagOutOfRange: _enum_for_OperationErrors.forwardingFlagOutOfRange = OperationErrors.forwardingFlagOutOfRange; /* LONG_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary forwardingFlagOutOfRange
@@ -4213,7 +4213,7 @@ const OperationErrors_forwardingFlagOutOfRange: OperationErrors = OperationError
  * @type {number}
  */
 export
-const forwardingFlagOutOfRange: OperationErrors = OperationErrors.forwardingFlagOutOfRange; /* SHORT_NAMED_ENUMERATED_VALUE */
+const forwardingFlagOutOfRange: _enum_for_OperationErrors.forwardingFlagOutOfRange = OperationErrors.forwardingFlagOutOfRange; /* SHORT_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary OperationErrors_forwardingTypeOutOfRange
@@ -4224,7 +4224,7 @@ const forwardingFlagOutOfRange: OperationErrors = OperationErrors.forwardingFlag
  * @see https://ecma-international.org/publications-and-standards/standards/ecma-269/
  */
 export
-const OperationErrors_forwardingTypeOutOfRange: OperationErrors = OperationErrors.forwardingTypeOutOfRange; /* LONG_NAMED_ENUMERATED_VALUE */
+const OperationErrors_forwardingTypeOutOfRange: _enum_for_OperationErrors.forwardingTypeOutOfRange = OperationErrors.forwardingTypeOutOfRange; /* LONG_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary forwardingTypeOutOfRange
@@ -4233,7 +4233,7 @@ const OperationErrors_forwardingTypeOutOfRange: OperationErrors = OperationError
  * @type {number}
  */
 export
-const forwardingTypeOutOfRange: OperationErrors = OperationErrors.forwardingTypeOutOfRange; /* SHORT_NAMED_ENUMERATED_VALUE */
+const forwardingTypeOutOfRange: _enum_for_OperationErrors.forwardingTypeOutOfRange = OperationErrors.forwardingTypeOutOfRange; /* SHORT_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary OperationErrors_hookswitchComponentOutOfRange
@@ -4244,7 +4244,7 @@ const forwardingTypeOutOfRange: OperationErrors = OperationErrors.forwardingType
  * @see https://ecma-international.org/publications-and-standards/standards/ecma-269/
  */
 export
-const OperationErrors_hookswitchComponentOutOfRange: OperationErrors = OperationErrors.hookswitchComponentOutOfRange; /* LONG_NAMED_ENUMERATED_VALUE */
+const OperationErrors_hookswitchComponentOutOfRange: _enum_for_OperationErrors.hookswitchComponentOutOfRange = OperationErrors.hookswitchComponentOutOfRange; /* LONG_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary hookswitchComponentOutOfRange
@@ -4253,7 +4253,7 @@ const OperationErrors_hookswitchComponentOutOfRange: OperationErrors = Operation
  * @type {number}
  */
 export
-const hookswitchComponentOutOfRange: OperationErrors = OperationErrors.hookswitchComponentOutOfRange; /* SHORT_NAMED_ENUMERATED_VALUE */
+const hookswitchComponentOutOfRange: _enum_for_OperationErrors.hookswitchComponentOutOfRange = OperationErrors.hookswitchComponentOutOfRange; /* SHORT_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary OperationErrors_hookswitchTypeOutOfRange
@@ -4263,7 +4263,7 @@ const hookswitchComponentOutOfRange: OperationErrors = OperationErrors.hookswitc
  * @see https://ecma-international.org/publications-and-standards/standards/ecma-269/
  */
 export
-const OperationErrors_hookswitchTypeOutOfRange: OperationErrors = OperationErrors.hookswitchTypeOutOfRange; /* LONG_NAMED_ENUMERATED_VALUE */
+const OperationErrors_hookswitchTypeOutOfRange: _enum_for_OperationErrors.hookswitchTypeOutOfRange = OperationErrors.hookswitchTypeOutOfRange; /* LONG_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary hookswitchTypeOutOfRange
@@ -4272,7 +4272,7 @@ const OperationErrors_hookswitchTypeOutOfRange: OperationErrors = OperationError
  * @type {number}
  */
 export
-const hookswitchTypeOutOfRange: OperationErrors = OperationErrors.hookswitchTypeOutOfRange; /* SHORT_NAMED_ENUMERATED_VALUE */
+const hookswitchTypeOutOfRange: _enum_for_OperationErrors.hookswitchTypeOutOfRange = OperationErrors.hookswitchTypeOutOfRange; /* SHORT_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary OperationErrors_lampModeOutOfRange
@@ -4282,7 +4282,7 @@ const hookswitchTypeOutOfRange: OperationErrors = OperationErrors.hookswitchType
  * @see https://ecma-international.org/publications-and-standards/standards/ecma-269/
  */
 export
-const OperationErrors_lampModeOutOfRange: OperationErrors = OperationErrors.lampModeOutOfRange; /* LONG_NAMED_ENUMERATED_VALUE */
+const OperationErrors_lampModeOutOfRange: _enum_for_OperationErrors.lampModeOutOfRange = OperationErrors.lampModeOutOfRange; /* LONG_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary lampModeOutOfRange
@@ -4291,7 +4291,7 @@ const OperationErrors_lampModeOutOfRange: OperationErrors = OperationErrors.lamp
  * @type {number}
  */
 export
-const lampModeOutOfRange: OperationErrors = OperationErrors.lampModeOutOfRange; /* SHORT_NAMED_ENUMERATED_VALUE */
+const lampModeOutOfRange: _enum_for_OperationErrors.lampModeOutOfRange = OperationErrors.lampModeOutOfRange; /* SHORT_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary OperationErrors_messageWaitingSettingOutOfRange
@@ -4303,7 +4303,7 @@ const lampModeOutOfRange: OperationErrors = OperationErrors.lampModeOutOfRange; 
  * @see https://ecma-international.org/publications-and-standards/standards/ecma-269/
  */
 export
-const OperationErrors_messageWaitingSettingOutOfRange: OperationErrors = OperationErrors.messageWaitingSettingOutOfRange; /* LONG_NAMED_ENUMERATED_VALUE */
+const OperationErrors_messageWaitingSettingOutOfRange: _enum_for_OperationErrors.messageWaitingSettingOutOfRange = OperationErrors.messageWaitingSettingOutOfRange; /* LONG_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary messageWaitingSettingOutOfRange
@@ -4313,7 +4313,7 @@ const OperationErrors_messageWaitingSettingOutOfRange: OperationErrors = Operati
  * @type {number}
  */
 export
-const messageWaitingSettingOutOfRange: OperationErrors = OperationErrors.messageWaitingSettingOutOfRange; /* SHORT_NAMED_ENUMERATED_VALUE */
+const messageWaitingSettingOutOfRange: _enum_for_OperationErrors.messageWaitingSettingOutOfRange = OperationErrors.messageWaitingSettingOutOfRange; /* SHORT_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary OperationErrors_micGainOutOfRange
@@ -4323,7 +4323,7 @@ const messageWaitingSettingOutOfRange: OperationErrors = OperationErrors.message
  * @see https://ecma-international.org/publications-and-standards/standards/ecma-269/
  */
 export
-const OperationErrors_micGainOutOfRange: OperationErrors = OperationErrors.micGainOutOfRange; /* LONG_NAMED_ENUMERATED_VALUE */
+const OperationErrors_micGainOutOfRange: _enum_for_OperationErrors.micGainOutOfRange = OperationErrors.micGainOutOfRange; /* LONG_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary micGainOutOfRange
@@ -4332,7 +4332,7 @@ const OperationErrors_micGainOutOfRange: OperationErrors = OperationErrors.micGa
  * @type {number}
  */
 export
-const micGainOutOfRange: OperationErrors = OperationErrors.micGainOutOfRange; /* SHORT_NAMED_ENUMERATED_VALUE */
+const micGainOutOfRange: _enum_for_OperationErrors.micGainOutOfRange = OperationErrors.micGainOutOfRange; /* SHORT_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary OperationErrors_micMuteOutOfRange
@@ -4342,7 +4342,7 @@ const micGainOutOfRange: OperationErrors = OperationErrors.micGainOutOfRange; /*
  * @see https://ecma-international.org/publications-and-standards/standards/ecma-269/
  */
 export
-const OperationErrors_micMuteOutOfRange: OperationErrors = OperationErrors.micMuteOutOfRange; /* LONG_NAMED_ENUMERATED_VALUE */
+const OperationErrors_micMuteOutOfRange: _enum_for_OperationErrors.micMuteOutOfRange = OperationErrors.micMuteOutOfRange; /* LONG_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary micMuteOutOfRange
@@ -4351,7 +4351,7 @@ const OperationErrors_micMuteOutOfRange: OperationErrors = OperationErrors.micMu
  * @type {number}
  */
 export
-const micMuteOutOfRange: OperationErrors = OperationErrors.micMuteOutOfRange; /* SHORT_NAMED_ENUMERATED_VALUE */
+const micMuteOutOfRange: _enum_for_OperationErrors.micMuteOutOfRange = OperationErrors.micMuteOutOfRange; /* SHORT_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary OperationErrors_monitorTypeOutOfRange
@@ -4361,7 +4361,7 @@ const micMuteOutOfRange: OperationErrors = OperationErrors.micMuteOutOfRange; /*
  * @see https://ecma-international.org/publications-and-standards/standards/ecma-269/
  */
 export
-const OperationErrors_monitorTypeOutOfRange: OperationErrors = OperationErrors.monitorTypeOutOfRange; /* LONG_NAMED_ENUMERATED_VALUE */
+const OperationErrors_monitorTypeOutOfRange: _enum_for_OperationErrors.monitorTypeOutOfRange = OperationErrors.monitorTypeOutOfRange; /* LONG_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary monitorTypeOutOfRange
@@ -4370,7 +4370,7 @@ const OperationErrors_monitorTypeOutOfRange: OperationErrors = OperationErrors.m
  * @type {number}
  */
 export
-const monitorTypeOutOfRange: OperationErrors = OperationErrors.monitorTypeOutOfRange; /* SHORT_NAMED_ENUMERATED_VALUE */
+const monitorTypeOutOfRange: _enum_for_OperationErrors.monitorTypeOutOfRange = OperationErrors.monitorTypeOutOfRange; /* SHORT_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary OperationErrors_numberOfChannelsOutOfRange
@@ -4381,7 +4381,7 @@ const monitorTypeOutOfRange: OperationErrors = OperationErrors.monitorTypeOutOfR
  * @see https://ecma-international.org/publications-and-standards/standards/ecma-269/
  */
 export
-const OperationErrors_numberOfChannelsOutOfRange: OperationErrors = OperationErrors.numberOfChannelsOutOfRange; /* LONG_NAMED_ENUMERATED_VALUE */
+const OperationErrors_numberOfChannelsOutOfRange: _enum_for_OperationErrors.numberOfChannelsOutOfRange = OperationErrors.numberOfChannelsOutOfRange; /* LONG_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary numberOfChannelsOutOfRange
@@ -4390,7 +4390,7 @@ const OperationErrors_numberOfChannelsOutOfRange: OperationErrors = OperationErr
  * @type {number}
  */
 export
-const numberOfChannelsOutOfRange: OperationErrors = OperationErrors.numberOfChannelsOutOfRange; /* SHORT_NAMED_ENUMERATED_VALUE */
+const numberOfChannelsOutOfRange: _enum_for_OperationErrors.numberOfChannelsOutOfRange = OperationErrors.numberOfChannelsOutOfRange; /* SHORT_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary OperationErrors_participationTypeOutOfRange
@@ -4400,7 +4400,7 @@ const numberOfChannelsOutOfRange: OperationErrors = OperationErrors.numberOfChan
  * @see https://ecma-international.org/publications-and-standards/standards/ecma-269/
  */
 export
-const OperationErrors_participationTypeOutOfRange: OperationErrors = OperationErrors.participationTypeOutOfRange; /* LONG_NAMED_ENUMERATED_VALUE */
+const OperationErrors_participationTypeOutOfRange: _enum_for_OperationErrors.participationTypeOutOfRange = OperationErrors.participationTypeOutOfRange; /* LONG_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary participationTypeOutOfRange
@@ -4409,7 +4409,7 @@ const OperationErrors_participationTypeOutOfRange: OperationErrors = OperationEr
  * @type {number}
  */
 export
-const participationTypeOutOfRange: OperationErrors = OperationErrors.participationTypeOutOfRange; /* SHORT_NAMED_ENUMERATED_VALUE */
+const participationTypeOutOfRange: _enum_for_OperationErrors.participationTypeOutOfRange = OperationErrors.participationTypeOutOfRange; /* SHORT_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary OperationErrors_pulseDurationOutOfRange
@@ -4419,7 +4419,7 @@ const participationTypeOutOfRange: OperationErrors = OperationErrors.participati
  * @see https://ecma-international.org/publications-and-standards/standards/ecma-269/
  */
 export
-const OperationErrors_pulseDurationOutOfRange: OperationErrors = OperationErrors.pulseDurationOutOfRange; /* LONG_NAMED_ENUMERATED_VALUE */
+const OperationErrors_pulseDurationOutOfRange: _enum_for_OperationErrors.pulseDurationOutOfRange = OperationErrors.pulseDurationOutOfRange; /* LONG_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary pulseDurationOutOfRange
@@ -4428,7 +4428,7 @@ const OperationErrors_pulseDurationOutOfRange: OperationErrors = OperationErrors
  * @type {number}
  */
 export
-const pulseDurationOutOfRange: OperationErrors = OperationErrors.pulseDurationOutOfRange; /* SHORT_NAMED_ENUMERATED_VALUE */
+const pulseDurationOutOfRange: _enum_for_OperationErrors.pulseDurationOutOfRange = OperationErrors.pulseDurationOutOfRange; /* SHORT_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary OperationErrors_pulseRateOutOfRange
@@ -4438,7 +4438,7 @@ const pulseDurationOutOfRange: OperationErrors = OperationErrors.pulseDurationOu
  * @see https://ecma-international.org/publications-and-standards/standards/ecma-269/
  */
 export
-const OperationErrors_pulseRateOutOfRange: OperationErrors = OperationErrors.pulseRateOutOfRange; /* LONG_NAMED_ENUMERATED_VALUE */
+const OperationErrors_pulseRateOutOfRange: _enum_for_OperationErrors.pulseRateOutOfRange = OperationErrors.pulseRateOutOfRange; /* LONG_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary pulseRateOutOfRange
@@ -4447,7 +4447,7 @@ const OperationErrors_pulseRateOutOfRange: OperationErrors = OperationErrors.pul
  * @type {number}
  */
 export
-const pulseRateOutOfRange: OperationErrors = OperationErrors.pulseRateOutOfRange; /* SHORT_NAMED_ENUMERATED_VALUE */
+const pulseRateOutOfRange: _enum_for_OperationErrors.pulseRateOutOfRange = OperationErrors.pulseRateOutOfRange; /* SHORT_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary OperationErrors_ringCountOutOfRange
@@ -4457,7 +4457,7 @@ const pulseRateOutOfRange: OperationErrors = OperationErrors.pulseRateOutOfRange
  * @see https://ecma-international.org/publications-and-standards/standards/ecma-269/
  */
 export
-const OperationErrors_ringCountOutOfRange: OperationErrors = OperationErrors.ringCountOutOfRange; /* LONG_NAMED_ENUMERATED_VALUE */
+const OperationErrors_ringCountOutOfRange: _enum_for_OperationErrors.ringCountOutOfRange = OperationErrors.ringCountOutOfRange; /* LONG_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary ringCountOutOfRange
@@ -4466,7 +4466,7 @@ const OperationErrors_ringCountOutOfRange: OperationErrors = OperationErrors.rin
  * @type {number}
  */
 export
-const ringCountOutOfRange: OperationErrors = OperationErrors.ringCountOutOfRange; /* SHORT_NAMED_ENUMERATED_VALUE */
+const ringCountOutOfRange: _enum_for_OperationErrors.ringCountOutOfRange = OperationErrors.ringCountOutOfRange; /* SHORT_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary OperationErrors_ringPatternOutOfRange
@@ -4476,7 +4476,7 @@ const ringCountOutOfRange: OperationErrors = OperationErrors.ringCountOutOfRange
  * @see https://ecma-international.org/publications-and-standards/standards/ecma-269/
  */
 export
-const OperationErrors_ringPatternOutOfRange: OperationErrors = OperationErrors.ringPatternOutOfRange; /* LONG_NAMED_ENUMERATED_VALUE */
+const OperationErrors_ringPatternOutOfRange: _enum_for_OperationErrors.ringPatternOutOfRange = OperationErrors.ringPatternOutOfRange; /* LONG_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary ringPatternOutOfRange
@@ -4485,7 +4485,7 @@ const OperationErrors_ringPatternOutOfRange: OperationErrors = OperationErrors.r
  * @type {number}
  */
 export
-const ringPatternOutOfRange: OperationErrors = OperationErrors.ringPatternOutOfRange; /* SHORT_NAMED_ENUMERATED_VALUE */
+const ringPatternOutOfRange: _enum_for_OperationErrors.ringPatternOutOfRange = OperationErrors.ringPatternOutOfRange; /* SHORT_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary OperationErrors_ringVolumnOutOfRange
@@ -4495,7 +4495,7 @@ const ringPatternOutOfRange: OperationErrors = OperationErrors.ringPatternOutOfR
  * @see https://ecma-international.org/publications-and-standards/standards/ecma-269/
  */
 export
-const OperationErrors_ringVolumnOutOfRange: OperationErrors = OperationErrors.ringVolumnOutOfRange; /* LONG_NAMED_ENUMERATED_VALUE */
+const OperationErrors_ringVolumnOutOfRange: _enum_for_OperationErrors.ringVolumnOutOfRange = OperationErrors.ringVolumnOutOfRange; /* LONG_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary ringVolumnOutOfRange
@@ -4504,7 +4504,7 @@ const OperationErrors_ringVolumnOutOfRange: OperationErrors = OperationErrors.ri
  * @type {number}
  */
 export
-const ringVolumnOutOfRange: OperationErrors = OperationErrors.ringVolumnOutOfRange; /* SHORT_NAMED_ENUMERATED_VALUE */
+const ringVolumnOutOfRange: _enum_for_OperationErrors.ringVolumnOutOfRange = OperationErrors.ringVolumnOutOfRange; /* SHORT_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary OperationErrors_routeingAlgorithmOutOfRange
@@ -4515,7 +4515,7 @@ const ringVolumnOutOfRange: OperationErrors = OperationErrors.ringVolumnOutOfRan
  * @see https://ecma-international.org/publications-and-standards/standards/ecma-269/
  */
 export
-const OperationErrors_routeingAlgorithmOutOfRange: OperationErrors = OperationErrors.routeingAlgorithmOutOfRange; /* LONG_NAMED_ENUMERATED_VALUE */
+const OperationErrors_routeingAlgorithmOutOfRange: _enum_for_OperationErrors.routeingAlgorithmOutOfRange = OperationErrors.routeingAlgorithmOutOfRange; /* LONG_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary routeingAlgorithmOutOfRange
@@ -4524,7 +4524,7 @@ const OperationErrors_routeingAlgorithmOutOfRange: OperationErrors = OperationEr
  * @type {number}
  */
 export
-const routeingAlgorithmOutOfRange: OperationErrors = OperationErrors.routeingAlgorithmOutOfRange; /* SHORT_NAMED_ENUMERATED_VALUE */
+const routeingAlgorithmOutOfRange: _enum_for_OperationErrors.routeingAlgorithmOutOfRange = OperationErrors.routeingAlgorithmOutOfRange; /* SHORT_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary OperationErrors_speakerMuteOutOfRange
@@ -4534,7 +4534,7 @@ const routeingAlgorithmOutOfRange: OperationErrors = OperationErrors.routeingAlg
  * @see https://ecma-international.org/publications-and-standards/standards/ecma-269/
  */
 export
-const OperationErrors_speakerMuteOutOfRange: OperationErrors = OperationErrors.speakerMuteOutOfRange; /* LONG_NAMED_ENUMERATED_VALUE */
+const OperationErrors_speakerMuteOutOfRange: _enum_for_OperationErrors.speakerMuteOutOfRange = OperationErrors.speakerMuteOutOfRange; /* LONG_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary speakerMuteOutOfRange
@@ -4543,7 +4543,7 @@ const OperationErrors_speakerMuteOutOfRange: OperationErrors = OperationErrors.s
  * @type {number}
  */
 export
-const speakerMuteOutOfRange: OperationErrors = OperationErrors.speakerMuteOutOfRange; /* SHORT_NAMED_ENUMERATED_VALUE */
+const speakerMuteOutOfRange: _enum_for_OperationErrors.speakerMuteOutOfRange = OperationErrors.speakerMuteOutOfRange; /* SHORT_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary OperationErrors_speakerVolumeOutOfRange
@@ -4553,7 +4553,7 @@ const speakerMuteOutOfRange: OperationErrors = OperationErrors.speakerMuteOutOfR
  * @see https://ecma-international.org/publications-and-standards/standards/ecma-269/
  */
 export
-const OperationErrors_speakerVolumeOutOfRange: OperationErrors = OperationErrors.speakerVolumeOutOfRange; /* LONG_NAMED_ENUMERATED_VALUE */
+const OperationErrors_speakerVolumeOutOfRange: _enum_for_OperationErrors.speakerVolumeOutOfRange = OperationErrors.speakerVolumeOutOfRange; /* LONG_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary speakerVolumeOutOfRange
@@ -4562,7 +4562,7 @@ const OperationErrors_speakerVolumeOutOfRange: OperationErrors = OperationErrors
  * @type {number}
  */
 export
-const speakerVolumeOutOfRange: OperationErrors = OperationErrors.speakerVolumeOutOfRange; /* SHORT_NAMED_ENUMERATED_VALUE */
+const speakerVolumeOutOfRange: _enum_for_OperationErrors.speakerVolumeOutOfRange = OperationErrors.speakerVolumeOutOfRange; /* SHORT_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary OperationErrors_switchingCcittTypeOutOfRange
@@ -4573,7 +4573,7 @@ const speakerVolumeOutOfRange: OperationErrors = OperationErrors.speakerVolumeOu
  * @see https://ecma-international.org/publications-and-standards/standards/ecma-269/
  */
 export
-const OperationErrors_switchingCcittTypeOutOfRange: OperationErrors = OperationErrors.switchingCcittTypeOutOfRange; /* LONG_NAMED_ENUMERATED_VALUE */
+const OperationErrors_switchingCcittTypeOutOfRange: _enum_for_OperationErrors.switchingCcittTypeOutOfRange = OperationErrors.switchingCcittTypeOutOfRange; /* LONG_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary switchingCcittTypeOutOfRange
@@ -4582,7 +4582,7 @@ const OperationErrors_switchingCcittTypeOutOfRange: OperationErrors = OperationE
  * @type {number}
  */
 export
-const switchingCcittTypeOutOfRange: OperationErrors = OperationErrors.switchingCcittTypeOutOfRange; /* SHORT_NAMED_ENUMERATED_VALUE */
+const switchingCcittTypeOutOfRange: _enum_for_OperationErrors.switchingCcittTypeOutOfRange = OperationErrors.switchingCcittTypeOutOfRange; /* SHORT_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary OperationErrors_systemStatusOutOfRange
@@ -4593,7 +4593,7 @@ const switchingCcittTypeOutOfRange: OperationErrors = OperationErrors.switchingC
  * @see https://ecma-international.org/publications-and-standards/standards/ecma-269/
  */
 export
-const OperationErrors_systemStatusOutOfRange: OperationErrors = OperationErrors.systemStatusOutOfRange; /* LONG_NAMED_ENUMERATED_VALUE */
+const OperationErrors_systemStatusOutOfRange: _enum_for_OperationErrors.systemStatusOutOfRange = OperationErrors.systemStatusOutOfRange; /* LONG_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary systemStatusOutOfRange
@@ -4602,7 +4602,7 @@ const OperationErrors_systemStatusOutOfRange: OperationErrors = OperationErrors.
  * @type {number}
  */
 export
-const systemStatusOutOfRange: OperationErrors = OperationErrors.systemStatusOutOfRange; /* SHORT_NAMED_ENUMERATED_VALUE */
+const systemStatusOutOfRange: _enum_for_OperationErrors.systemStatusOutOfRange = OperationErrors.systemStatusOutOfRange; /* SHORT_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary OperationErrors_toneCharacterOutOfRange
@@ -4614,7 +4614,7 @@ const systemStatusOutOfRange: OperationErrors = OperationErrors.systemStatusOutO
  * @see https://ecma-international.org/publications-and-standards/standards/ecma-269/
  */
 export
-const OperationErrors_toneCharacterOutOfRange: OperationErrors = OperationErrors.toneCharacterOutOfRange; /* LONG_NAMED_ENUMERATED_VALUE */
+const OperationErrors_toneCharacterOutOfRange: _enum_for_OperationErrors.toneCharacterOutOfRange = OperationErrors.toneCharacterOutOfRange; /* LONG_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary toneCharacterOutOfRange
@@ -4623,7 +4623,7 @@ const OperationErrors_toneCharacterOutOfRange: OperationErrors = OperationErrors
  * @type {number}
  */
 export
-const toneCharacterOutOfRange: OperationErrors = OperationErrors.toneCharacterOutOfRange; /* SHORT_NAMED_ENUMERATED_VALUE */
+const toneCharacterOutOfRange: _enum_for_OperationErrors.toneCharacterOutOfRange = OperationErrors.toneCharacterOutOfRange; /* SHORT_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary OperationErrors_toneDurationOutOfRange
@@ -4633,7 +4633,7 @@ const toneCharacterOutOfRange: OperationErrors = OperationErrors.toneCharacterOu
  * @see https://ecma-international.org/publications-and-standards/standards/ecma-269/
  */
 export
-const OperationErrors_toneDurationOutOfRange: OperationErrors = OperationErrors.toneDurationOutOfRange; /* LONG_NAMED_ENUMERATED_VALUE */
+const OperationErrors_toneDurationOutOfRange: _enum_for_OperationErrors.toneDurationOutOfRange = OperationErrors.toneDurationOutOfRange; /* LONG_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary toneDurationOutOfRange
@@ -4642,7 +4642,7 @@ const OperationErrors_toneDurationOutOfRange: OperationErrors = OperationErrors.
  * @type {number}
  */
 export
-const toneDurationOutOfRange: OperationErrors = OperationErrors.toneDurationOutOfRange; /* SHORT_NAMED_ENUMERATED_VALUE */
+const toneDurationOutOfRange: _enum_for_OperationErrors.toneDurationOutOfRange = OperationErrors.toneDurationOutOfRange; /* SHORT_NAMED_ENUMERATED_VALUE */
 
 let _cached_decoder_for_OperationErrors: $.ASN1Decoder<OperationErrors> | null = null;
 

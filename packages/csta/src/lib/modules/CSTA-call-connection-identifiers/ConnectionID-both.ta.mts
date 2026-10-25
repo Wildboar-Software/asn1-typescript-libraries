@@ -2,15 +2,15 @@
 
 import * as $ from "@wildboar/asn1/functional";
 import {
-    SEQUENCE,
-    SET,
-    ASN1Element as _Element,
+    type SEQUENCE,
+    type SET,
+    type ASN1Element as _Element,
     ASN1TagClass as _TagClass,
     ASN1ConstructionError as _ConstructionError
 } from "@wildboar/asn1";
-import { CallID, _decode_CallID, _encode_CallID } from "../CSTA-call-connection-identifiers/CallID.ta.mjs";
+import { type CallID, _decode_CallID, _encode_CallID } from "../CSTA-call-connection-identifiers/CallID.ta.mjs";
 
-import { LocalDeviceID, _decode_LocalDeviceID, _encode_LocalDeviceID } from "../CSTA-call-connection-identifiers/LocalDeviceID.ta.mjs";
+import { type LocalDeviceID, _decode_LocalDeviceID, _encode_LocalDeviceID } from "../CSTA-call-connection-identifiers/LocalDeviceID.ta.mjs";
 
 
 
@@ -39,32 +39,38 @@ import { LocalDeviceID, _decode_LocalDeviceID, _encode_LocalDeviceID } from "../
  */
 export
 class ConnectionID_both {
+    /**
+     * @summary `callID`.
+     * @description
+     *
+     * Switching-function identifier for the call. Unique among calls
+     * in the switching sub-domain. Max length from capabilities
+     * exchange (ECMA-269 §12.3.9, §6.1.2.1).
+     *
+     * @public
+     * @readonly
+     */
+    public readonly callID: CallID;
+    /**
+     * @summary `deviceID`.
+     * @description
+     *
+     * Device in the connection: static (`DeviceID`) or dynamic
+     * (opaque, valid only for this participation)
+     * (ECMA-269 §12.3.9, §6.1.6).
+     *
+     * @public
+     * @readonly
+     */
+    public readonly deviceID: LocalDeviceID;
+
     constructor (
-        /**
-         * @summary `callID`.
-         * @description
-         *
-         * Switching-function identifier for the call. Unique among calls
-         * in the switching sub-domain. Max length from capabilities
-         * exchange (ECMA-269 §12.3.9, §6.1.2.1).
-         *
-         * @public
-         * @readonly
-         */
-        readonly callID: CallID,
-        /**
-         * @summary `deviceID`.
-         * @description
-         *
-         * Device in the connection: static (`DeviceID`) or dynamic
-         * (opaque, valid only for this participation)
-         * (ECMA-269 §12.3.9, §6.1.6).
-         *
-         * @public
-         * @readonly
-         */
-        readonly deviceID: LocalDeviceID
-    ) {}
+        callID: CallID,
+        deviceID: LocalDeviceID
+    ) {
+        this.callID = callID;
+        this.deviceID = deviceID;
+    }
 
     /**
      * @summary Restructures an object into a ConnectionID_both

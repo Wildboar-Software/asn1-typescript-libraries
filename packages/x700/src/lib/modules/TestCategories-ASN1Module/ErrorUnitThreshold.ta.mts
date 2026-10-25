@@ -1,6 +1,6 @@
 /* eslint-disable */
 import {
-    ASN1Element as _Element,
+    type ASN1Element as _Element,
     ASN1TagClass as _TagClass,
     ASN1Construction as _Construction,
     ASN1UniversalType as _UniversalType,
@@ -11,12 +11,12 @@ import {
 } from '@wildboar/asn1';
 import * as $ from '@wildboar/asn1/functional';
 import {
-    UnitsType,
+    type UnitsType,
     _decode_UnitsType,
     _encode_UnitsType,
 } from '../TestCategories-ASN1Module/UnitsType.ta.mjs';
 import {
-    UnitsTotal,
+    type UnitsTotal,
     _decode_UnitsTotal,
     _encode_UnitsTotal,
 } from '../TestCategories-ASN1Module/UnitsTotal.ta.mjs';
@@ -42,26 +42,32 @@ import {
  *
  */
 export class ErrorUnitThreshold {
+    /**
+     * @summary `unitType`.
+     * @description
+     *
+     * OID identifying the unit counted. X.737 A.7.
+     * @public
+     * @readonly
+     */
+    public readonly unitType: UnitsType;
+    /**
+     * @summary `unitsTotal`.
+     * @description
+     *
+     * Count of those units that is the threshold. X.737 A.7.
+     * @public
+     * @readonly
+     */
+    public readonly unitsTotal: UnitsTotal;
+
     constructor(
-        /**
-         * @summary `unitType`.
-         * @description
-         *
-         * OID identifying the unit counted. X.737 A.7.
-         * @public
-         * @readonly
-         */
-        readonly unitType: UnitsType,
-        /**
-         * @summary `unitsTotal`.
-         * @description
-         *
-         * Count of those units that is the threshold. X.737 A.7.
-         * @public
-         * @readonly
-         */
-        readonly unitsTotal: UnitsTotal
-    ) {}
+        unitType: UnitsType,
+        unitsTotal: UnitsTotal
+    ) {
+        this.unitType = unitType;
+        this.unitsTotal = unitsTotal;
+    }
 
     /**
      * @summary Restructures an object into a ErrorUnitThreshold

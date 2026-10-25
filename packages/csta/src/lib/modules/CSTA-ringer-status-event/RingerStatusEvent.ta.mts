@@ -2,16 +2,16 @@
 
 import * as $ from "@wildboar/asn1/functional";
 import {
-    OPTIONAL,
-    INTEGER,
-    SEQUENCE,
-    SET,
-    ASN1Element as _Element,
+    type OPTIONAL,
+    type INTEGER,
+    type SEQUENCE,
+    type SET,
+    type ASN1Element as _Element,
     ASN1TagClass as _TagClass
 } from "@wildboar/asn1";
-import { SubjectDeviceID, _decode_SubjectDeviceID, _encode_SubjectDeviceID } from "../CSTA-device-identifiers/SubjectDeviceID.ta.mjs";
+import { type SubjectDeviceID, _decode_SubjectDeviceID, _encode_SubjectDeviceID } from "../CSTA-device-identifiers/SubjectDeviceID.ta.mjs";
 
-import { RingerID, _decode_RingerID, _encode_RingerID } from "../CSTA-physical-device-feature/RingerID.ta.mjs";
+import { type RingerID, _decode_RingerID, _encode_RingerID } from "../CSTA-physical-device-feature/RingerID.ta.mjs";
 
 import {
     RingMode,
@@ -20,7 +20,7 @@ import {
     _encode_RingMode
 } from "../CSTA-physical-device-feature/RingMode.ta.mjs";
 
-import { Volume, _decode_Volume, _encode_Volume } from "../CSTA-physical-device-feature/Volume.ta.mjs";
+import { type Volume, _decode_Volume, _encode_Volume } from "../CSTA-physical-device-feature/Volume.ta.mjs";
 
 import { CSTACommonArguments, _decode_CSTACommonArguments, _encode_CSTACommonArguments } from "../CSTA-extension-types/CSTACommonArguments.ta.mjs";
 
@@ -46,11 +46,11 @@ import { CSTACommonArguments, _decode_CSTACommonArguments, _encode_CSTACommonArg
  * RingerStatusEvent ::= SEQUENCE
  * {    device                SubjectDeviceID,
  *     ringer                 RingerID,
- *     ringMode             RingMode                OPTIONAL,
- *     ringCount             [0] IMPLICIT INTEGER (0..1000)         OPTIONAL,
- *     ringDuration            [3] IMPLICIT INTEGER            OPTIONAL,
- *     ringPattern             [1] IMPLICIT INTEGER             OPTIONAL,
- *     ringVolume             [2] Volume                OPTIONAL,
+ *     ringMode             RingMode                type OPTIONAL,
+ *     ringCount             [0] IMPLICIT INTEGER (0..1000)         type OPTIONAL,
+ *     ringDuration            [3] IMPLICIT INTEGER            type OPTIONAL,
+ *     ringPattern             [1] IMPLICIT INTEGER             type OPTIONAL,
+ *     ringVolume             [2] Volume                type OPTIONAL,
  *     extensions            CSTACommonArguments            OPTIONAL }
  * ```
  * 
@@ -58,84 +58,102 @@ import { CSTACommonArguments, _decode_CSTACommonArguments, _encode_CSTACommonArg
  */
 export
 class RingerStatusEvent {
+    /**
+     * @summary `device`.
+     * @description
+     *
+     * Device whose ringer status changed.
+     * @public
+     * @readonly
+     */
+    public readonly device: SubjectDeviceID;
+    /**
+     * @summary `ringer`.
+     * @description
+     *
+     * Ringer that changed.
+     * @public
+     * @readonly
+     */
+    public readonly ringer: RingerID;
+    /**
+     * @summary `ringMode`.
+     * @description
+     *
+     * `ringing` includes the quiet phase of a cycle; `not ringing` means
+     * not in an active cycle.
+     * @public
+     * @readonly
+     */
+    public readonly ringMode?: OPTIONAL<RingMode>;
+    /**
+     * @summary `ringCount`.
+     * @description
+     *
+     * Complete cycles 0–999; 1000 means greater than 999.
+     * @public
+     * @readonly
+     */
+    public readonly ringCount?: OPTIONAL<INTEGER>;
+    /**
+     * @summary `ringDuration`.
+     * @description
+     *
+     * Seconds ringing. Omit if `ringCount` is provided.
+     * @public
+     * @readonly
+     */
+    public readonly ringDuration?: OPTIONAL<INTEGER>;
+    /**
+     * @summary `ringPattern`.
+     * @description
+     *
+     * Device-specific ringing pattern.
+     * @public
+     * @readonly
+     */
+    public readonly ringPattern?: OPTIONAL<INTEGER>;
+    /**
+     * @summary `ringVolume`.
+     * @description
+     *
+     * Absolute 0–100 (0 silence, 100 max; 1–99 device-specific) or
+     * increment/decrement by a switch-specified step. Loudness is
+     * ringer-specific.
+     * @public
+     * @readonly
+     */
+    public readonly ringVolume?: OPTIONAL<Volume>;
+    /**
+     * @summary `extensions`.
+     * @description
+     *
+     * Optional security (timestamp, sequence, securityInfo) and
+     * privateData.
+     * @public
+     * @readonly
+     */
+    public readonly extensions?: OPTIONAL<CSTACommonArguments>;
+
     constructor (
-        /**
-         * @summary `device`.
-         * @description
-         *
-         * Device whose ringer status changed.
-         * @public
-         * @readonly
-         */
-        readonly device: SubjectDeviceID,
-        /**
-         * @summary `ringer`.
-         * @description
-         *
-         * Ringer that changed.
-         * @public
-         * @readonly
-         */
-        readonly ringer: RingerID,
-        /**
-         * @summary `ringMode`.
-         * @description
-         *
-         * `ringing` includes the quiet phase of a cycle; `not ringing` means
-         * not in an active cycle.
-         * @public
-         * @readonly
-         */
-        readonly ringMode?: OPTIONAL<RingMode>,
-        /**
-         * @summary `ringCount`.
-         * @description
-         *
-         * Complete cycles 0–999; 1000 means greater than 999.
-         * @public
-         * @readonly
-         */
-        readonly ringCount?: OPTIONAL<INTEGER>,
-        /**
-         * @summary `ringDuration`.
-         * @description
-         *
-         * Seconds ringing. Omit if `ringCount` is provided.
-         * @public
-         * @readonly
-         */
-        readonly ringDuration?: OPTIONAL<INTEGER>,
-        /**
-         * @summary `ringPattern`.
-         * @description
-         *
-         * Device-specific ringing pattern.
-         * @public
-         * @readonly
-         */
-        readonly ringPattern?: OPTIONAL<INTEGER>,
-        /**
-         * @summary `ringVolume`.
-         * @description
-         *
-         * Absolute 0–100 (0 silence, 100 max; 1–99 device-specific) or
-         * increment/decrement by a switch-specified step. Loudness is
-         * ringer-specific.
-         * @public
-         * @readonly
-         */
-        readonly ringVolume?: OPTIONAL<Volume>,
-        /**
-         * @summary `extensions`.
-         * @description
-         *
-         * Optional security (timestamp, sequence, securityInfo) and
-         * privateData.
-         * @public
-         * @readonly
-         */
-        readonly extensions?: OPTIONAL<CSTACommonArguments>
-    ) {}
+        device: SubjectDeviceID,
+        ringer: RingerID,
+        ringMode?: OPTIONAL<RingMode>,
+        ringCount?: OPTIONAL<INTEGER>,
+        ringDuration?: OPTIONAL<INTEGER>,
+        ringPattern?: OPTIONAL<INTEGER>,
+        ringVolume?: OPTIONAL<Volume>,
+        extensions?: OPTIONAL<CSTACommonArguments>
+    ) {
+        this.device = device;
+        this.ringer = ringer;
+        this.ringMode = ringMode;
+        this.ringCount = ringCount;
+        this.ringDuration = ringDuration;
+        this.ringPattern = ringPattern;
+        this.ringVolume = ringVolume;
+        this.extensions = extensions;
+    }
 
     /**
      * @summary Restructures an object into a RingerStatusEvent
@@ -159,7 +177,7 @@ class RingerStatusEvent {
          * @static
          */
 
-    public static _enum_for_ringMode = _enum_for_RingMode;
+    public static _enum_for_ringMode: typeof _enum_for_RingMode = _enum_for_RingMode;
 }
 
 /**

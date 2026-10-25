@@ -1,6 +1,6 @@
 /* eslint-disable */
 import {
-  OPTIONAL,
+  type OPTIONAL,
   ASN1Element as _Element,
   ASN1TagClass as _TagClass,
   ASN1Construction as _Construction,
@@ -17,17 +17,17 @@ import {
   _encode_KrbCredInfo,
 } from '../KerberosV5Spec2/KrbCredInfo.ta.mjs';
 import {
-  UInt32,
+  type UInt32,
   _decode_UInt32,
   _encode_UInt32,
 } from '../KerberosV5Spec2/UInt32.ta.mjs';
 import {
-  KerberosTime,
+  type KerberosTime,
   _decode_KerberosTime,
   _encode_KerberosTime,
 } from '../KerberosV5Spec2/KerberosTime.ta.mjs';
 import {
-  Microseconds,
+  type Microseconds,
   _decode_Microseconds,
   _encode_Microseconds,
 } from '../KerberosV5Spec2/Microseconds.ta.mjs';
@@ -68,7 +68,7 @@ export class EncKrbCredPart {
    * @public
    * @readonly
    */
-  readonly ticket_info: KrbCredInfo[];
+  public readonly ticket_info: KrbCredInfo[];
   /**
    * @summary `nonce`.
    * @description
@@ -79,7 +79,7 @@ export class EncKrbCredPart {
    * @public
    * @readonly
    */
-  readonly nonce?: OPTIONAL<UInt32>;
+  public readonly nonce?: OPTIONAL<UInt32>;
   /**
    * @summary `timestamp`.
    * @description
@@ -89,7 +89,7 @@ export class EncKrbCredPart {
    * @public
    * @readonly
    */
-  readonly timestamp?: OPTIONAL<KerberosTime>;
+  public readonly timestamp?: OPTIONAL<KerberosTime>;
   /**
    * @summary `usec`.
    * @description
@@ -99,7 +99,7 @@ export class EncKrbCredPart {
    * @public
    * @readonly
    */
-  readonly usec?: OPTIONAL<Microseconds>;
+  public readonly usec?: OPTIONAL<Microseconds>;
   /**
    * @summary `s_address`.
    * @description
@@ -109,7 +109,7 @@ export class EncKrbCredPart {
    * @public
    * @readonly
    */
-  readonly s_address?: OPTIONAL<HostAddress>;
+  public readonly s_address?: OPTIONAL<HostAddress>;
   /**
    * @summary `r_address`.
    * @description
@@ -119,7 +119,7 @@ export class EncKrbCredPart {
    * @public
    * @readonly
    */
-  readonly r_address?: OPTIONAL<HostAddress>;
+  public readonly r_address?: OPTIONAL<HostAddress>;
 
   constructor(
     ticket_info: KrbCredInfo[],

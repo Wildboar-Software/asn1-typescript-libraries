@@ -1,7 +1,7 @@
 /* eslint-disable */
 import {
-    OPTIONAL,
-    ASN1Element as _Element,
+    type OPTIONAL,
+    type ASN1Element as _Element,
     ASN1TagClass as _TagClass,
     ASN1Construction as _Construction,
     ASN1UniversalType as _UniversalType,
@@ -12,12 +12,12 @@ import {
 } from '@wildboar/asn1';
 import * as $ from '@wildboar/asn1/functional';
 import {
-    ProblemCause,
+    type ProblemCause,
     _decode_ProblemCause,
     _encode_ProblemCause,
 } from '../ASN1DefinedTypesModule/ProblemCause.ta.mjs';
 import {
-    ObjectInstance,
+    type ObjectInstance,
     _decode_ObjectInstance,
     _encode_ObjectInstance,
 } from '@wildboar/cmip';
@@ -37,20 +37,26 @@ import {
  *
  */
 export class LogicalProblem {
+    /**
+     * @summary `problemCause`.
+     * @public
+     * @readonly
+     */
+    public readonly problemCause: ProblemCause;
+    /**
+     * @summary `incorrectInstances`.
+     * @public
+     * @readonly
+     */
+    public readonly incorrectInstances?: OPTIONAL<ObjectInstance[]>;
+
     constructor(
-        /**
-         * @summary `problemCause`.
-         * @public
-         * @readonly
-         */
-        readonly problemCause: ProblemCause,
-        /**
-         * @summary `incorrectInstances`.
-         * @public
-         * @readonly
-         */
-        readonly incorrectInstances?: OPTIONAL<ObjectInstance[]>
-    ) {}
+        problemCause: ProblemCause,
+        incorrectInstances?: OPTIONAL<ObjectInstance[]>
+    ) {
+        this.problemCause = problemCause;
+        this.incorrectInstances = incorrectInstances;
+    }
 
     /**
      * @summary Restructures an object into a LogicalProblem

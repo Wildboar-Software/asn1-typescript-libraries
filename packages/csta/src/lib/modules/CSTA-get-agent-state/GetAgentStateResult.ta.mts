@@ -2,13 +2,13 @@
 
 import * as $ from "@wildboar/asn1/functional";
 import {
-    OPTIONAL,
-    SEQUENCE,
-    SET,
-    ASN1Element as _Element,
+    type OPTIONAL,
+    type SEQUENCE,
+    type SET,
+    type ASN1Element as _Element,
     ASN1TagClass as _TagClass
 } from "@wildboar/asn1";
-import { AgentStateList, _decode_AgentStateList, _encode_AgentStateList } from "../CSTA-get-agent-state/AgentStateList.ta.mjs";
+import { type AgentStateList, _decode_AgentStateList, _encode_AgentStateList } from "../CSTA-get-agent-state/AgentStateList.ta.mjs";
 
 import { CSTACommonArguments, _decode_CSTACommonArguments, _encode_CSTACommonArguments } from "../CSTA-extension-types/CSTACommonArguments.ta.mjs";
 
@@ -35,27 +35,33 @@ import { CSTACommonArguments, _decode_CSTACommonArguments, _encode_CSTACommonArg
  */
 export
 class GetAgentStateResult {
+    /**
+     * @summary `agentStateList`.
+     * @description
+     *
+     * Agent IDs and/or states and ACD groups for the device. SIZE (1..32).
+     * @public
+     * @readonly
+     */
+    public readonly agentStateList: AgentStateList;
+    /**
+     * @summary `extensions`.
+     * @description
+     *
+     * Optional security (timestamp, sequence, securityInfo) and
+     * privateData.
+     * @public
+     * @readonly
+     */
+    public readonly extensions?: OPTIONAL<CSTACommonArguments>;
+
     constructor (
-        /**
-         * @summary `agentStateList`.
-         * @description
-         *
-         * Agent IDs and/or states and ACD groups for the device. SIZE (1..32).
-         * @public
-         * @readonly
-         */
-        readonly agentStateList: AgentStateList,
-        /**
-         * @summary `extensions`.
-         * @description
-         *
-         * Optional security (timestamp, sequence, securityInfo) and
-         * privateData.
-         * @public
-         * @readonly
-         */
-        readonly extensions?: OPTIONAL<CSTACommonArguments>
-    ) {}
+        agentStateList: AgentStateList,
+        extensions?: OPTIONAL<CSTACommonArguments>
+    ) {
+        this.agentStateList = agentStateList;
+        this.extensions = extensions;
+    }
 
     /**
      * @summary Restructures an object into a GetAgentStateResult

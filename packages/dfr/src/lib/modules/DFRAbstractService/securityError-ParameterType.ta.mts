@@ -1,6 +1,6 @@
 /* eslint-disable */
 import {
-    ASN1Element as _Element,
+    type ASN1Element as _Element,
     ASN1TagClass as _TagClass,
     ASN1Construction as _Construction,
     ASN1UniversalType as _UniversalType,
@@ -31,17 +31,21 @@ import { SecurityProblem, _enum_for_SecurityProblem, _decode_SecurityProblem, _e
  */
 export
 class securityError_ParameterType {
+    /**
+     * @summary `problem`.
+     * @description
+     *
+     * Why security checks failed.
+     * @public
+     * @readonly
+     */
+    public readonly problem: SecurityProblem;
+
     constructor (
-        /**
-         * @summary `problem`.
-         * @description
-         *
-         * Why security checks failed.
-         * @public
-         * @readonly
-         */
-        readonly problem: SecurityProblem
-    ) {}
+        problem: SecurityProblem
+    ) {
+        this.problem = problem;
+    }
 
     /**
      * @summary Restructures an object into a securityError_ParameterType
@@ -65,7 +69,7 @@ class securityError_ParameterType {
          * @static
          */
 
-    public static _enum_for_problem = _enum_for_SecurityProblem;
+    public static _enum_for_problem: typeof _enum_for_SecurityProblem = _enum_for_SecurityProblem;
 }
 
 /**

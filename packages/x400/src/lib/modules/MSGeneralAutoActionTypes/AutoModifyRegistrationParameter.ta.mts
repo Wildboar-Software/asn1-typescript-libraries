@@ -1,7 +1,7 @@
 /* eslint-disable */
 import {
-    OPTIONAL,
-    ASN1Element as _Element,
+    type OPTIONAL,
+    type ASN1Element as _Element,
     ASN1TagClass as _TagClass,
     ASN1Construction as _Construction,
     ASN1UniversalType as _UniversalType,
@@ -12,13 +12,13 @@ import {
 } from '@wildboar/asn1';
 import * as $ from '@wildboar/asn1/functional';
 import {
-    EntryClass,
+    type EntryClass,
     delivery /* IMPORTED_SHORT_NAMED_INTEGER */,
     _decode_EntryClass,
     _encode_EntryClass,
 } from '../MSAbstractService/EntryClass.ta.mjs';
 import {
-    Filter,
+    type Filter,
     _decode_Filter,
     _encode_Filter,
 } from '../MSAbstractService/Filter.ta.mjs';
@@ -45,26 +45,34 @@ import {
  *
  */
 export class AutoModifyRegistrationParameter {
+    /**
+     * @summary `entry_class`.
+     * @public
+     * @readonly
+     */
+    public readonly entry_class: OPTIONAL<EntryClass>;
+    /**
+     * @summary `filter`.
+     * @public
+     * @readonly
+     */
+    public readonly filter: OPTIONAL<Filter>;
+    /**
+     * @summary `modifications`.
+     * @public
+     * @readonly
+     */
+    public readonly modifications: EntryModification[];
+
     constructor(
-        /**
-         * @summary `entry_class`.
-         * @public
-         * @readonly
-         */
-        readonly entry_class: OPTIONAL<EntryClass>,
-        /**
-         * @summary `filter`.
-         * @public
-         * @readonly
-         */
-        readonly filter: OPTIONAL<Filter>,
-        /**
-         * @summary `modifications`.
-         * @public
-         * @readonly
-         */
-        readonly modifications: EntryModification[]
-    ) {}
+        entry_class: OPTIONAL<EntryClass>,
+        filter: OPTIONAL<Filter>,
+        modifications: EntryModification[]
+    ) {
+        this.entry_class = entry_class;
+        this.filter = filter;
+        this.modifications = modifications;
+    }
 
     /**
      * @summary Restructures an object into a AutoModifyRegistrationParameter

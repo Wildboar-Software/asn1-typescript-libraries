@@ -1,6 +1,6 @@
 /* eslint-disable */
 import {
-    ASN1Element as _Element,
+    type ASN1Element as _Element,
     ASN1TagClass as _TagClass,
     ASN1Construction as _Construction,
     ASN1UniversalType as _UniversalType,
@@ -90,7 +90,7 @@ type UpdateProblem = _enum_for_UpdateProblem;
  * @enum {number}
  */
 export
-const UpdateProblem = _enum_for_UpdateProblem;
+const UpdateProblem: typeof _enum_for_UpdateProblem = _enum_for_UpdateProblem;
 
 /**
  * @summary UpdateProblem_inappropriate_object_class
@@ -101,7 +101,7 @@ const UpdateProblem = _enum_for_UpdateProblem;
  * @type {number}
  */
 export
-const UpdateProblem_inappropriate_object_class: UpdateProblem = UpdateProblem.inappropriate_object_class; /* LONG_NAMED_ENUMERATED_VALUE */
+const UpdateProblem_inappropriate_object_class: _enum_for_UpdateProblem.inappropriate_object_class = UpdateProblem.inappropriate_object_class; /* LONG_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary inappropriate_object_class
@@ -112,7 +112,7 @@ const UpdateProblem_inappropriate_object_class: UpdateProblem = UpdateProblem.in
  * @type {number}
  */
 export
-const inappropriate_object_class: UpdateProblem = UpdateProblem.inappropriate_object_class; /* SHORT_NAMED_ENUMERATED_VALUE */
+const inappropriate_object_class: _enum_for_UpdateProblem.inappropriate_object_class = UpdateProblem.inappropriate_object_class; /* SHORT_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary UpdateProblem_insufficient_access_rights
@@ -123,7 +123,7 @@ const inappropriate_object_class: UpdateProblem = UpdateProblem.inappropriate_ob
  * @type {number}
  */
 export
-const UpdateProblem_insufficient_access_rights: UpdateProblem = UpdateProblem.insufficient_access_rights; /* LONG_NAMED_ENUMERATED_VALUE */
+const UpdateProblem_insufficient_access_rights: _enum_for_UpdateProblem.insufficient_access_rights = UpdateProblem.insufficient_access_rights; /* LONG_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary insufficient_access_rights
@@ -134,7 +134,7 @@ const UpdateProblem_insufficient_access_rights: UpdateProblem = UpdateProblem.in
  * @type {number}
  */
 export
-const insufficient_access_rights: UpdateProblem = UpdateProblem.insufficient_access_rights; /* SHORT_NAMED_ENUMERATED_VALUE */
+const insufficient_access_rights: _enum_for_UpdateProblem.insufficient_access_rights = UpdateProblem.insufficient_access_rights; /* SHORT_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary UpdateProblem_reserved_by_a_user
@@ -145,7 +145,7 @@ const insufficient_access_rights: UpdateProblem = UpdateProblem.insufficient_acc
  * @type {number}
  */
 export
-const UpdateProblem_reserved_by_a_user: UpdateProblem = UpdateProblem.reserved_by_a_user; /* LONG_NAMED_ENUMERATED_VALUE */
+const UpdateProblem_reserved_by_a_user: _enum_for_UpdateProblem.reserved_by_a_user = UpdateProblem.reserved_by_a_user; /* LONG_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary reserved_by_a_user
@@ -156,7 +156,7 @@ const UpdateProblem_reserved_by_a_user: UpdateProblem = UpdateProblem.reserved_b
  * @type {number}
  */
 export
-const reserved_by_a_user: UpdateProblem = UpdateProblem.reserved_by_a_user; /* SHORT_NAMED_ENUMERATED_VALUE */
+const reserved_by_a_user: _enum_for_UpdateProblem.reserved_by_a_user = UpdateProblem.reserved_by_a_user; /* SHORT_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary UpdateProblem_illegal_content_modification
@@ -167,7 +167,7 @@ const reserved_by_a_user: UpdateProblem = UpdateProblem.reserved_by_a_user; /* S
  * @type {number}
  */
 export
-const UpdateProblem_illegal_content_modification: UpdateProblem = UpdateProblem.illegal_content_modification; /* LONG_NAMED_ENUMERATED_VALUE */
+const UpdateProblem_illegal_content_modification: _enum_for_UpdateProblem.illegal_content_modification = UpdateProblem.illegal_content_modification; /* LONG_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary illegal_content_modification
@@ -178,7 +178,7 @@ const UpdateProblem_illegal_content_modification: UpdateProblem = UpdateProblem.
  * @type {number}
  */
 export
-const illegal_content_modification: UpdateProblem = UpdateProblem.illegal_content_modification; /* SHORT_NAMED_ENUMERATED_VALUE */
+const illegal_content_modification: _enum_for_UpdateProblem.illegal_content_modification = UpdateProblem.illegal_content_modification; /* SHORT_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary UpdateProblem_group_membership_criteria_violation
@@ -190,7 +190,7 @@ const illegal_content_modification: UpdateProblem = UpdateProblem.illegal_conten
  * @type {number}
  */
 export
-const UpdateProblem_group_membership_criteria_violation: UpdateProblem = UpdateProblem.group_membership_criteria_violation; /* LONG_NAMED_ENUMERATED_VALUE */
+const UpdateProblem_group_membership_criteria_violation: _enum_for_UpdateProblem.group_membership_criteria_violation = UpdateProblem.group_membership_criteria_violation; /* LONG_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary group_membership_criteria_violation
@@ -202,7 +202,7 @@ const UpdateProblem_group_membership_criteria_violation: UpdateProblem = UpdateP
  * @type {number}
  */
 export
-const group_membership_criteria_violation: UpdateProblem = UpdateProblem.group_membership_criteria_violation; /* SHORT_NAMED_ENUMERATED_VALUE */
+const group_membership_criteria_violation: _enum_for_UpdateProblem.group_membership_criteria_violation = UpdateProblem.group_membership_criteria_violation; /* SHORT_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary UpdateProblem_reference_loop_detected
@@ -215,7 +215,7 @@ const group_membership_criteria_violation: UpdateProblem = UpdateProblem.group_m
  * @type {number}
  */
 export
-const UpdateProblem_reference_loop_detected: UpdateProblem = UpdateProblem.reference_loop_detected; /* LONG_NAMED_ENUMERATED_VALUE */
+const UpdateProblem_reference_loop_detected: _enum_for_UpdateProblem.reference_loop_detected = UpdateProblem.reference_loop_detected; /* LONG_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary reference_loop_detected
@@ -228,9 +228,24 @@ const UpdateProblem_reference_loop_detected: UpdateProblem = UpdateProblem.refer
  * @type {number}
  */
 export
-const reference_loop_detected: UpdateProblem = UpdateProblem.reference_loop_detected; /* SHORT_NAMED_ENUMERATED_VALUE */
-export const _decode_UpdateProblem = $._decodeEnumerated;
-export const _encode_UpdateProblem = $._encodeEnumerated;
+const reference_loop_detected: _enum_for_UpdateProblem.reference_loop_detected = UpdateProblem.reference_loop_detected; /* SHORT_NAMED_ENUMERATED_VALUE */
+export function _decode_UpdateProblem(el: _Element): UpdateProblem {
+    const enumerated = $._decodeEnumerated(el);
+    switch (enumerated) {
+        case UpdateProblem.inappropriate_object_class: return UpdateProblem.inappropriate_object_class;
+        case UpdateProblem.insufficient_access_rights: return UpdateProblem.insufficient_access_rights;
+        case UpdateProblem.reserved_by_a_user: return UpdateProblem.reserved_by_a_user;
+        case UpdateProblem.illegal_content_modification: return UpdateProblem.illegal_content_modification;
+        case UpdateProblem.group_membership_criteria_violation: return UpdateProblem.group_membership_criteria_violation;
+        case UpdateProblem.reference_loop_detected: return UpdateProblem.reference_loop_detected;
+        default:
+            throw new _ConstructionError(
+                "Invalid ENUMERATED value " + enumerated + " for UpdateProblem.",
+                el,
+            );
+    }
+}
+export const _encode_UpdateProblem: $.ASN1Encoder<UpdateProblem> = $._encodeEnumerated as $.ASN1Encoder<UpdateProblem>;
 
 
 /* eslint-enable */

@@ -1,8 +1,8 @@
 /* eslint-disable */
 import {
-    OPTIONAL,
-    OBJECT_IDENTIFIER,
-    ASN1Element as _Element,
+    type OPTIONAL,
+    type OBJECT_IDENTIFIER,
+    type ASN1Element as _Element,
     ASN1TagClass as _TagClass,
     ASN1Construction as _Construction,
     ASN1UniversalType as _UniversalType,
@@ -13,7 +13,7 @@ import {
 } from '@wildboar/asn1';
 import * as $ from '@wildboar/asn1/functional';
 import {
-    SchemeName,
+    type SchemeName,
     _decode_SchemeName,
     _encode_SchemeName,
 } from './SchemeName.ta.mjs';
@@ -36,57 +36,67 @@ import {
  *   scheme         SOFTWARE-SCHEME.&id({SoftwareSchemes}),
  *   schemeName     SOFTWARE-SCHEME.&name ({SoftwareSchemes}{@.scheme}) OPTIONAL,
  *   manufacturerId SOFTWARE-SCHEME.&Manufacturer ({SoftwareSchemes}{@.scheme})
- *                    OPTIONAL,
+ *                    type OPTIONAL,
  *   software       SOFTWARE-SCHEME.&Software ({SoftwareSchemes}{@.scheme})}
  * ```
  *
  */
 export class SoftwareIdentification {
+    /**
+     * @summary `scheme`.
+     * @description
+     *
+     * `SOFTWARE-SCHEME.&id` of the identification scheme.
+     *
+     * @public
+     * @readonly
+     */
+    public readonly scheme: OBJECT_IDENTIFIER;
+    /**
+     * @summary `schemeName`.
+     * @description
+     *
+     * Optional `SOFTWARE-SCHEME.&name`. ISO646String is not
+     * necessarily unique.
+     *
+     * @public
+     * @readonly
+     */
+    public readonly schemeName: OPTIONAL<SchemeName>;
+    /**
+     * @summary `manufacturerId`.
+     * @description
+     *
+     * Optional `SOFTWARE-SCHEME.&Manufacturer`. Absent if a
+     * generic term is used in `software`.
+     *
+     * @public
+     * @readonly
+     */
+    public readonly manufacturerId: OPTIONAL<_Element>;
+    /**
+     * @summary `software`.
+     * @description
+     *
+     * `SOFTWARE-SCHEME.&Software`: generic description or complete
+     * product reference.
+     *
+     * @public
+     * @readonly
+     */
+    public readonly software: _Element;
+
     constructor(
-        /**
-         * @summary `scheme`.
-         * @description
-         *
-         * `SOFTWARE-SCHEME.&id` of the identification scheme.
-         *
-         * @public
-         * @readonly
-         */
-        readonly scheme: OBJECT_IDENTIFIER,
-        /**
-         * @summary `schemeName`.
-         * @description
-         *
-         * Optional `SOFTWARE-SCHEME.&name`. ISO646String is not
-         * necessarily unique.
-         *
-         * @public
-         * @readonly
-         */
-        readonly schemeName: OPTIONAL<SchemeName>,
-        /**
-         * @summary `manufacturerId`.
-         * @description
-         *
-         * Optional `SOFTWARE-SCHEME.&Manufacturer`. Absent if a
-         * generic term is used in `software`.
-         *
-         * @public
-         * @readonly
-         */
-        readonly manufacturerId: OPTIONAL<_Element>,
-        /**
-         * @summary `software`.
-         * @description
-         *
-         * `SOFTWARE-SCHEME.&Software`: generic description or complete
-         * product reference.
-         *
-         * @public
-         * @readonly
-         */
-        readonly software: _Element
-    ) {}
+        scheme: OBJECT_IDENTIFIER,
+        schemeName: OPTIONAL<SchemeName>,
+        manufacturerId: OPTIONAL<_Element>,
+        software: _Element
+    ) {
+        this.scheme = scheme;
+        this.schemeName = schemeName;
+        this.manufacturerId = manufacturerId;
+        this.software = software;
+    }
 
     /**
      * @summary Restructures an object into a SoftwareIdentification

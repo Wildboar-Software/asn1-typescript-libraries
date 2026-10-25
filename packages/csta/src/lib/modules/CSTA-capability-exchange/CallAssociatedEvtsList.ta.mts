@@ -2,21 +2,21 @@
 
 import * as $ from "@wildboar/asn1/functional";
 import {
-    OPTIONAL,
-    SEQUENCE,
-    SET,
-    ASN1Element as _Element,
+    type OPTIONAL,
+    type SEQUENCE,
+    type SET,
+    type ASN1Element as _Element,
     ASN1TagClass as _TagClass
 } from "@wildboar/asn1";
-import { CallInformation, _decode_CallInformation, _encode_CallInformation } from "../CSTA-capability-exchange/CallInformation.ta.mjs";
+import { type CallInformation, _decode_CallInformation, _encode_CallInformation } from "../CSTA-capability-exchange/CallInformation.ta.mjs";
 
-import { Charging, _decode_Charging, _encode_Charging } from "../CSTA-capability-exchange/Charging.ta.mjs";
+import { type Charging, _decode_Charging, _encode_Charging } from "../CSTA-capability-exchange/Charging.ta.mjs";
 
-import { DigitsGenerated, _decode_DigitsGenerated, _encode_DigitsGenerated } from "../CSTA-capability-exchange/DigitsGenerated.ta.mjs";
+import { type DigitsGenerated, _decode_DigitsGenerated, _encode_DigitsGenerated } from "../CSTA-capability-exchange/DigitsGenerated.ta.mjs";
 
-import { TelephonyTonesGenerated, _decode_TelephonyTonesGenerated, _encode_TelephonyTonesGenerated } from "../CSTA-capability-exchange/TelephonyTonesGenerated.ta.mjs";
+import { type TelephonyTonesGenerated, _decode_TelephonyTonesGenerated, _encode_TelephonyTonesGenerated } from "../CSTA-capability-exchange/TelephonyTonesGenerated.ta.mjs";
 
-import { ServiceCompletionFailure, _decode_ServiceCompletionFailure, _encode_ServiceCompletionFailure } from "../CSTA-capability-exchange/ServiceCompletionFailure.ta.mjs";
+import { type ServiceCompletionFailure, _decode_ServiceCompletionFailure, _encode_ServiceCompletionFailure } from "../CSTA-capability-exchange/ServiceCompletionFailure.ta.mjs";
 
 
 
@@ -34,10 +34,10 @@ import { ServiceCompletionFailure, _decode_ServiceCompletionFailure, _encode_Ser
  * 
  * ```asn1
  * CallAssociatedEvtsList ::= SEQUENCE
- * {     callInformation         [0] IMPLICIT     CallInformation         OPTIONAL,
- *     charging             [1] IMPLICIT     Charging             OPTIONAL,
- *     digitsGenerated         [2] IMPLICIT     DigitsGenerated         OPTIONAL,
- *     telephonyTonesGenerated     [3] IMPLICIT     TelephonyTonesGenerated     OPTIONAL,
+ * {     callInformation         [0] IMPLICIT     CallInformation         type OPTIONAL,
+ *     charging             [1] IMPLICIT     Charging             type OPTIONAL,
+ *     digitsGenerated         [2] IMPLICIT     DigitsGenerated         type OPTIONAL,
+ *     telephonyTonesGenerated     [3] IMPLICIT     TelephonyTonesGenerated     type OPTIONAL,
  *     serviceCompletionFailure     [4] IMPLICIT     ServiceCompletionFailure     OPTIONAL }
  * ```
  * 
@@ -45,53 +45,65 @@ import { ServiceCompletionFailure, _decode_ServiceCompletionFailure, _encode_Ser
  */
 export
 class CallAssociatedEvtsList {
+    /**
+     * @summary `callInformation`.
+     * @public
+     * @readonly
+     * @description
+     * Capability bitmap for this event; omit if the SF does not support it
+     * (ECMA-269 Annex C).
+     */
+    public readonly callInformation?: OPTIONAL<CallInformation>;
+    /**
+     * @summary `charging`.
+     * @public
+     * @readonly
+     * @description
+     * Capability bitmap for this event; omit if the SF does not support it
+     * (ECMA-269 Annex C).
+     */
+    public readonly charging?: OPTIONAL<Charging>;
+    /**
+     * @summary `digitsGenerated`.
+     * @public
+     * @readonly
+     * @description
+     * Capability bitmap for this event; omit if the SF does not support it
+     * (ECMA-269 Annex C).
+     */
+    public readonly digitsGenerated?: OPTIONAL<DigitsGenerated>;
+    /**
+     * @summary `telephonyTonesGenerated`.
+     * @public
+     * @readonly
+     * @description
+     * Capability bitmap for this event; omit if the SF does not support it
+     * (ECMA-269 Annex C).
+     */
+    public readonly telephonyTonesGenerated?: OPTIONAL<TelephonyTonesGenerated>;
+    /**
+     * @summary `serviceCompletionFailure`.
+     * @public
+     * @readonly
+     * @description
+     * Capability bitmap for this event; omit if the SF does not support it
+     * (ECMA-269 Annex C).
+     */
+    public readonly serviceCompletionFailure?: OPTIONAL<ServiceCompletionFailure>;
+
     constructor (
-        /**
-         * @summary `callInformation`.
-         * @public
-         * @readonly
-         * @description
-         * Capability bitmap for this event; omit if the SF does not support it
-         * (ECMA-269 Annex C).
-         */
-        readonly callInformation?: OPTIONAL<CallInformation>,
-        /**
-         * @summary `charging`.
-         * @public
-         * @readonly
-         * @description
-         * Capability bitmap for this event; omit if the SF does not support it
-         * (ECMA-269 Annex C).
-         */
-        readonly charging?: OPTIONAL<Charging>,
-        /**
-         * @summary `digitsGenerated`.
-         * @public
-         * @readonly
-         * @description
-         * Capability bitmap for this event; omit if the SF does not support it
-         * (ECMA-269 Annex C).
-         */
-        readonly digitsGenerated?: OPTIONAL<DigitsGenerated>,
-        /**
-         * @summary `telephonyTonesGenerated`.
-         * @public
-         * @readonly
-         * @description
-         * Capability bitmap for this event; omit if the SF does not support it
-         * (ECMA-269 Annex C).
-         */
-        readonly telephonyTonesGenerated?: OPTIONAL<TelephonyTonesGenerated>,
-        /**
-         * @summary `serviceCompletionFailure`.
-         * @public
-         * @readonly
-         * @description
-         * Capability bitmap for this event; omit if the SF does not support it
-         * (ECMA-269 Annex C).
-         */
-        readonly serviceCompletionFailure?: OPTIONAL<ServiceCompletionFailure>
-    ) {}
+        callInformation?: OPTIONAL<CallInformation>,
+        charging?: OPTIONAL<Charging>,
+        digitsGenerated?: OPTIONAL<DigitsGenerated>,
+        telephonyTonesGenerated?: OPTIONAL<TelephonyTonesGenerated>,
+        serviceCompletionFailure?: OPTIONAL<ServiceCompletionFailure>
+    ) {
+        this.callInformation = callInformation;
+        this.charging = charging;
+        this.digitsGenerated = digitsGenerated;
+        this.telephonyTonesGenerated = telephonyTonesGenerated;
+        this.serviceCompletionFailure = serviceCompletionFailure;
+    }
 
     /**
      * @summary Restructures an object into a CallAssociatedEvtsList

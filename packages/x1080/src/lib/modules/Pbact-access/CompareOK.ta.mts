@@ -1,8 +1,8 @@
 /* eslint-disable */
 import {
-    OPTIONAL,
-    BOOLEAN,
-    ASN1Element as _Element,
+    type OPTIONAL,
+    type BOOLEAN,
+    type ASN1Element as _Element,
     ASN1TagClass as _TagClass,
     ASN1Construction as _Construction,
     ASN1UniversalType as _UniversalType,
@@ -33,38 +33,46 @@ import * as $ from '@wildboar/asn1/functional';
  *
  */
 export class CompareOK {
+    /**
+     * @summary `matched`.
+     * @description
+     *
+     * TRUE if the type or a subtype matches.
+     * ITU-T Rec. X.1080.0 (2017) Cor.1
+     * [§8.5](https://www.itu.int/rec/T-REC-X.1080.0-201703-I!Cor1).
+     *
+     * @public
+     * @readonly
+     */
+    public readonly matched: BOOLEAN;
+    /**
+     * @summary `matchedSubtype`.
+     * @description
+     *
+     * TRUE if the match was against a subtype. Default FALSE.
+     * ITU-T Rec. X.1080.0 (2017) Cor.1
+     * [§8.5](https://www.itu.int/rec/T-REC-X.1080.0-201703-I!Cor1).
+     *
+     * @public
+     * @readonly
+     */
+    public readonly matchedSubtype?: OPTIONAL<BOOLEAN>;
+    /**
+     * @summary Extensions that are not recognized.
+     * @public
+     * @readonly
+     */
+    public readonly _unrecognizedExtensionsList: _Element[];
+
     constructor(
-        /**
-         * @summary `matched`.
-         * @description
-         *
-         * TRUE if the type or a subtype matches.
-         * ITU-T Rec. X.1080.0 (2017) Cor.1
-         * [§8.5](https://www.itu.int/rec/T-REC-X.1080.0-201703-I!Cor1).
-         *
-         * @public
-         * @readonly
-         */
-        readonly matched: BOOLEAN,
-        /**
-         * @summary `matchedSubtype`.
-         * @description
-         *
-         * TRUE if the match was against a subtype. Default FALSE.
-         * ITU-T Rec. X.1080.0 (2017) Cor.1
-         * [§8.5](https://www.itu.int/rec/T-REC-X.1080.0-201703-I!Cor1).
-         *
-         * @public
-         * @readonly
-         */
-        readonly matchedSubtype?: OPTIONAL<BOOLEAN>,
-        /**
-         * @summary Extensions that are not recognized.
-         * @public
-         * @readonly
-         */
-        readonly _unrecognizedExtensionsList: _Element[] = []
-    ) {}
+        matched: BOOLEAN,
+        matchedSubtype?: OPTIONAL<BOOLEAN>,
+        _unrecognizedExtensionsList: _Element[] = []
+    ) {
+        this.matched = matched;
+        this.matchedSubtype = matchedSubtype;
+        this._unrecognizedExtensionsList = _unrecognizedExtensionsList;
+    }
 
     /**
      * @summary Restructures an object into a CompareOK

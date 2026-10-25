@@ -1,5 +1,5 @@
 /* eslint-disable */
-import { BearerServiceCode } from "../MAP-BS-Code/BearerServiceCode.ta.mjs";
+import { type BearerServiceCode } from "../MAP-BS-Code/BearerServiceCode.ta.mjs";
 
 
 /**

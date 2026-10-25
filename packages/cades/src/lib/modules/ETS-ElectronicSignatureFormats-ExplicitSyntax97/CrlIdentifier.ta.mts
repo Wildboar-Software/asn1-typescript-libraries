@@ -1,9 +1,9 @@
 /* eslint-disable */
 import {
-    OPTIONAL,
-    INTEGER,
-    UTCTime,
-    ASN1Element as _Element,
+    type OPTIONAL,
+    type INTEGER,
+    type UTCTime,
+    type ASN1Element as _Element,
     ASN1TagClass as _TagClass,
     ASN1Construction as _Construction,
     ASN1UniversalType as _UniversalType,
@@ -14,7 +14,7 @@ import {
 } from "@wildboar/asn1";
 import * as $ from "@wildboar/asn1/functional";
 import {
-    Name, _decode_Name, _encode_Name
+    type Name, _decode_Name, _encode_Name
 } from "@wildboar/dn";
 
 
@@ -38,39 +38,47 @@ import {
  */
 export
 class CrlIdentifier {
+    /**
+     * @summary `crlissuer`.
+     * @description
+     *
+     * CRL issuer distinguished name.
+     *
+     * @public
+     * @readonly
+     */
+    public readonly crlissuer: Name;
+    /**
+     * @summary `crlIssuedTime`.
+     * @description
+     *
+     * Time the CRL was issued; shall match `thisUpdate` in
+     * the CRL.
+     *
+     * @public
+     * @readonly
+     */
+    public readonly crlIssuedTime: UTCTime;
+    /**
+     * @summary `crlNumber`.
+     * @description
+     *
+     * CRL number extension value, if present on the CRL.
+     *
+     * @public
+     * @readonly
+     */
+    public readonly crlNumber?: OPTIONAL<INTEGER>;
+
     constructor (
-        /**
-         * @summary `crlissuer`.
-         * @description
-         *
-         * CRL issuer distinguished name.
-         *
-         * @public
-         * @readonly
-         */
-        readonly crlissuer: Name,
-        /**
-         * @summary `crlIssuedTime`.
-         * @description
-         *
-         * Time the CRL was issued; shall match `thisUpdate` in
-         * the CRL.
-         *
-         * @public
-         * @readonly
-         */
-        readonly crlIssuedTime: UTCTime,
-        /**
-         * @summary `crlNumber`.
-         * @description
-         *
-         * CRL number extension value, if present on the CRL.
-         *
-         * @public
-         * @readonly
-         */
-        readonly crlNumber?: OPTIONAL<INTEGER>
-    ) {}
+        crlissuer: Name,
+        crlIssuedTime: UTCTime,
+        crlNumber?: OPTIONAL<INTEGER>
+    ) {
+        this.crlissuer = crlissuer;
+        this.crlIssuedTime = crlIssuedTime;
+        this.crlNumber = crlNumber;
+    }
 
     /**
      * @summary Restructures an object into a CrlIdentifier

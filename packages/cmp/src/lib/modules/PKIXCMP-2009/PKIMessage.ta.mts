@@ -1,6 +1,6 @@
 /* eslint-disable */
 import {
-  OPTIONAL,
+  type OPTIONAL,
   ASN1Element as _Element,
   ASN1TagClass as _TagClass,
   ASN1Construction as _Construction,
@@ -17,17 +17,17 @@ import {
   _encode_PKIHeader,
 } from '../PKIXCMP-2009/PKIHeader.ta.mjs';
 import {
-  PKIBody,
+  type PKIBody,
   _decode_PKIBody,
   _encode_PKIBody,
 } from '../PKIXCMP-2009/PKIBody.ta.mjs';
 import {
-  PKIProtection,
+  type PKIProtection,
   _decode_PKIProtection,
   _encode_PKIProtection,
 } from '../PKIXCMP-2009/PKIProtection.ta.mjs';
 import {
-  CMPCertificate,
+  type CMPCertificate,
   _decode_CMPCertificate,
   _encode_CMPCertificate,
 } from '../PKIXCMP-2009/CMPCertificate.ta.mjs';
@@ -58,55 +58,65 @@ import {
  *
  */
 export class PKIMessage {
+  /**
+   * @summary `header`.
+   * @description
+   *
+   * Common header (`PKIHeader`) for addressing and transaction
+   * identification ([RFC 4210 §5.1.1](https://datatracker.ietf.org/doc/html/rfc4210#section-5.1.1)).
+   *
+   * @public
+   * @readonly
+   */
+  public readonly header: PKIHeader;
+  /**
+   * @summary `body`.
+   * @description
+   *
+   * Message-specific body (`PKIBody` CHOICE)
+   * ([RFC 4210 §5.1.2](https://datatracker.ietf.org/doc/html/rfc4210#section-5.1.2), [RFC 4210 §5.3](https://datatracker.ietf.org/doc/html/rfc4210#section-5.3)).
+   *
+   * @public
+   * @readonly
+   */
+  public readonly body: PKIBody;
+  /**
+   * @summary `protection`.
+   * @description
+   *
+   * Optional integrity bits (`BIT STRING`). Input is the DER encoding of
+   * `ProtectedPart` (`header`, `body`) ([RFC 4210 §5.1.3](https://datatracker.ietf.org/doc/html/rfc4210#section-5.1.3)). MAY be
+   * omitted when external protection (e.g., CMS) is applied instead.
+   *
+   * @public
+   * @readonly
+   */
+  public readonly protection?: OPTIONAL<PKIProtection>;
+  /**
+   * @summary `extraCerts`.
+   * @description
+   *
+   * Optional certificates that may help the recipient (e.g., for the EE
+   * to verify its new certificate when the issuing CA is not a root).
+   * The recipient may need to sort or select among them
+   * ([RFC 4210 §5.1](https://datatracker.ietf.org/doc/html/rfc4210#section-5.1)).
+   *
+   * @public
+   * @readonly
+   */
+  public readonly extraCerts?: OPTIONAL<CMPCertificate[]>;
+
   constructor(
-    /**
-     * @summary `header`.
-     * @description
-     *
-     * Common header (`PKIHeader`) for addressing and transaction
-     * identification ([RFC 4210 §5.1.1](https://datatracker.ietf.org/doc/html/rfc4210#section-5.1.1)).
-     *
-     * @public
-     * @readonly
-     */
-    readonly header: PKIHeader,
-    /**
-     * @summary `body`.
-     * @description
-     *
-     * Message-specific body (`PKIBody` CHOICE)
-     * ([RFC 4210 §5.1.2](https://datatracker.ietf.org/doc/html/rfc4210#section-5.1.2), [RFC 4210 §5.3](https://datatracker.ietf.org/doc/html/rfc4210#section-5.3)).
-     *
-     * @public
-     * @readonly
-     */
-    readonly body: PKIBody,
-    /**
-     * @summary `protection`.
-     * @description
-     *
-     * Optional integrity bits (`BIT STRING`). Input is the DER encoding of
-     * `ProtectedPart` (`header`, `body`) ([RFC 4210 §5.1.3](https://datatracker.ietf.org/doc/html/rfc4210#section-5.1.3)). MAY be
-     * omitted when external protection (e.g., CMS) is applied instead.
-     *
-     * @public
-     * @readonly
-     */
-    readonly protection?: OPTIONAL<PKIProtection>,
-    /**
-     * @summary `extraCerts`.
-     * @description
-     *
-     * Optional certificates that may help the recipient (e.g., for the EE
-     * to verify its new certificate when the issuing CA is not a root).
-     * The recipient may need to sort or select among them
-     * ([RFC 4210 §5.1](https://datatracker.ietf.org/doc/html/rfc4210#section-5.1)).
-     *
-     * @public
-     * @readonly
-     */
-    readonly extraCerts?: OPTIONAL<CMPCertificate[]>
-  ) {}
+    header: PKIHeader,
+    body: PKIBody,
+    protection?: OPTIONAL<PKIProtection>,
+    extraCerts?: OPTIONAL<CMPCertificate[]>
+  ) {
+    this.header = header;
+    this.body = body;
+    this.protection = protection;
+    this.extraCerts = extraCerts;
+  }
 
   /**
    * @summary Restructures an object into a PKIMessage

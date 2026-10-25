@@ -1,21 +1,21 @@
 /* eslint-disable */
 import {
     ASN1ConstructionError as _ConstructionError,
-    ASN1Element as _Element,
+    type ASN1Element as _Element,
     ASN1TagClass as _TagClass,
 } from "@wildboar/asn1";
 import * as $ from "@wildboar/asn1/functional";
 import {
-    Certificate,
+    type Certificate,
     _decode_Certificate,
     _encode_Certificate,
 } from "@wildboar/x500/AuthenticationFramework";
 import {
-    Attributes,
+    type Attributes,
     _decode_Attributes,
     _encode_Attributes,
 } from "../PKCS7/Attributes.ta.mjs";
-import { Version, _decode_Version, _encode_Version } from "../PKCS7/Version.ta.mjs";
+import { type Version, _decode_Version, _encode_Version } from "../PKCS7/Version.ta.mjs";
 
 
 /**
@@ -34,26 +34,34 @@ import { Version, _decode_Version, _encode_Version } from "../PKCS7/Version.ta.m
  *
  */
 export class ExtendedCertificateInfo {
+    /**
+     * @summary `version`.
+     * @public
+     * @readonly
+     */
+    public readonly version: Version;
+    /**
+     * @summary `certificate`.
+     * @public
+     * @readonly
+     */
+    public readonly certificate: Certificate;
+    /**
+     * @summary `attributes`.
+     * @public
+     * @readonly
+     */
+    public readonly attributes: Attributes;
+
     constructor(
-        /**
-         * @summary `version`.
-         * @public
-         * @readonly
-         */
-        readonly version: Version,
-        /**
-         * @summary `certificate`.
-         * @public
-         * @readonly
-         */
-        readonly certificate: Certificate,
-        /**
-         * @summary `attributes`.
-         * @public
-         * @readonly
-         */
-        readonly attributes: Attributes
-    ) {}
+        version: Version,
+        certificate: Certificate,
+        attributes: Attributes
+    ) {
+        this.version = version;
+        this.certificate = certificate;
+        this.attributes = attributes;
+    }
 
     /**
      * @summary Restructures an object into a ExtendedCertificateInfo

@@ -1,7 +1,7 @@
 /* eslint-disable */
 import {
-    PrintableString,
-    ASN1Element as _Element,
+    type PrintableString,
+    type ASN1Element as _Element,
     ASN1TagClass as _TagClass,
     ASN1Construction as _Construction,
     ASN1UniversalType as _UniversalType,
@@ -11,7 +11,7 @@ import {
     ASN1ConstructionError as _ConstructionError,
 } from "@wildboar/asn1";
 import * as $ from "@wildboar/asn1/functional";
-import { COupdate_objectUpdate, _decode_COupdate_objectUpdate, _encode_COupdate_objectUpdate } from "../G/COupdate-objectUpdate.ta.mjs";
+import { type COupdate_objectUpdate, _decode_COupdate_objectUpdate, _encode_COupdate_objectUpdate } from "../G/COupdate-objectUpdate.ta.mjs";
 
 
 /**
@@ -66,26 +66,32 @@ import { COupdate_objectUpdate, _decode_COupdate_objectUpdate, _encode_COupdate_
  */
 export
 class COupdate {
+    /**
+     * @summary `coName`.
+     * @description
+     * Name of the CSS control object being updated. ISO/IEC
+     * 9041-1:1997 §6.12.2, §12.2.
+     * @public
+     * @readonly
+     */
+    public readonly coName: PrintableString;
+    /**
+     * @summary `objectUpdate`.
+     * @description
+     * Typed update; choice is constrained by CO-structure. ISO/IEC
+     * 9041-1:1997 §12.2.
+     * @public
+     * @readonly
+     */
+    public readonly objectUpdate: COupdate_objectUpdate;
+
     constructor (
-        /**
-         * @summary `coName`.
-         * @description
-         * Name of the CSS control object being updated. ISO/IEC
-         * 9041-1:1997 §6.12.2, §12.2.
-         * @public
-         * @readonly
-         */
-        readonly coName: PrintableString,
-        /**
-         * @summary `objectUpdate`.
-         * @description
-         * Typed update; choice is constrained by CO-structure. ISO/IEC
-         * 9041-1:1997 §12.2.
-         * @public
-         * @readonly
-         */
-        readonly objectUpdate: COupdate_objectUpdate
-    ) {}
+        coName: PrintableString,
+        objectUpdate: COupdate_objectUpdate
+    ) {
+        this.coName = coName;
+        this.objectUpdate = objectUpdate;
+    }
 
     /**
      * @summary Restructures an object into a COupdate

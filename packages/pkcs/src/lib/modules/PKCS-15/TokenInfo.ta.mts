@@ -1,10 +1,10 @@
 /* eslint-disable */
 import {
-    ASN1Element as _Element,
+    type ASN1Element as _Element,
     ASN1TagClass as _TagClass,
-    OCTET_STRING,
-    OPTIONAL,
-    PrintableString,
+    type OCTET_STRING,
+    type OPTIONAL,
+    type PrintableString,
 } from "@wildboar/asn1";
 import * as $ from "@wildboar/asn1/functional";
 import {
@@ -12,9 +12,9 @@ import {
     _decode_AlgorithmInfo,
     _encode_AlgorithmInfo,
 } from "../PKCS-15/AlgorithmInfo.ta.mjs";
-import { Label, _decode_Label, _encode_Label } from "../PKCS-15/Label.ta.mjs";
+import { type Label, _decode_Label, _encode_Label } from "../PKCS-15/Label.ta.mjs";
 import {
-    LastUpdate,
+    type LastUpdate,
     _decode_LastUpdate,
     _encode_LastUpdate,
 } from "../PKCS-15/LastUpdate.ta.mjs";
@@ -29,12 +29,12 @@ import {
     _encode_SecurityEnvironmentInfo,
 } from "../PKCS-15/SecurityEnvironmentInfo.ta.mjs";
 import {
-    TokenFlags,
+    type TokenFlags,
     _decode_TokenFlags,
     _encode_TokenFlags,
 } from "../PKCS-15/TokenFlags.ta.mjs";
 import {
-    TokenInfo_version,
+    type TokenInfo_version,
     _decode_TokenInfo_version,
     _encode_TokenInfo_version,
 } from "../PKCS-15/TokenInfo-version.ta.mjs";
@@ -65,86 +65,114 @@ import {
  *
  */
 export class TokenInfo {
+    /**
+     * @summary `version`.
+     * @public
+     * @readonly
+     */
+    public readonly version: TokenInfo_version;
+    /**
+     * @summary `serialNumber`.
+     * @public
+     * @readonly
+     */
+    public readonly serialNumber: OCTET_STRING;
+    /**
+     * @summary `manufacturerID`.
+     * @public
+     * @readonly
+     */
+    public readonly manufacturerID: OPTIONAL<Label>;
+    /**
+     * @summary `label`.
+     * @public
+     * @readonly
+     */
+    public readonly label: OPTIONAL<Label>;
+    /**
+     * @summary `tokenflags`.
+     * @public
+     * @readonly
+     */
+    public readonly tokenflags: TokenFlags;
+    /**
+     * @summary `seInfo`.
+     * @public
+     * @readonly
+     */
+    public readonly seInfo?: OPTIONAL<SecurityEnvironmentInfo[]>;
+    /**
+     * @summary `recordInfo`.
+     * @public
+     * @readonly
+     */
+    public readonly recordInfo?: OPTIONAL<RecordInfo>;
+    /**
+     * @summary `supportedAlgorithms`.
+     * @public
+     * @readonly
+     */
+    public readonly supportedAlgorithms?: OPTIONAL<AlgorithmInfo[]>;
+    /**
+     * @summary `issuerId`.
+     * @public
+     * @readonly
+     */
+    public readonly issuerId?: OPTIONAL<Label>;
+    /**
+     * @summary `holderId`.
+     * @public
+     * @readonly
+     */
+    public readonly holderId?: OPTIONAL<Label>;
+    /**
+     * @summary `lastUpdate`.
+     * @public
+     * @readonly
+     */
+    public readonly lastUpdate?: OPTIONAL<LastUpdate>;
+    /**
+     * @summary `preferredLanguage`.
+     * @public
+     * @readonly
+     */
+    public readonly preferredLanguage?: OPTIONAL<PrintableString>;
+    /**
+     * @summary Extensions that are not recognized.
+     * @public
+     * @readonly
+     */
+    public readonly _unrecognizedExtensionsList: _Element[];
+
     constructor(
-        /**
-         * @summary `version`.
-         * @public
-         * @readonly
-         */
-        readonly version: TokenInfo_version,
-        /**
-         * @summary `serialNumber`.
-         * @public
-         * @readonly
-         */
-        readonly serialNumber: OCTET_STRING,
-        /**
-         * @summary `manufacturerID`.
-         * @public
-         * @readonly
-         */
-        readonly manufacturerID: OPTIONAL<Label>,
-        /**
-         * @summary `label`.
-         * @public
-         * @readonly
-         */
-        readonly label: OPTIONAL<Label>,
-        /**
-         * @summary `tokenflags`.
-         * @public
-         * @readonly
-         */
-        readonly tokenflags: TokenFlags,
-        /**
-         * @summary `seInfo`.
-         * @public
-         * @readonly
-         */
-        readonly seInfo?: OPTIONAL<SecurityEnvironmentInfo[]>,
-        /**
-         * @summary `recordInfo`.
-         * @public
-         * @readonly
-         */
-        readonly recordInfo?: OPTIONAL<RecordInfo>,
-        /**
-         * @summary `supportedAlgorithms`.
-         * @public
-         * @readonly
-         */
-        readonly supportedAlgorithms?: OPTIONAL<AlgorithmInfo[]>,
-        /**
-         * @summary `issuerId`.
-         * @public
-         * @readonly
-         */
-        readonly issuerId?: OPTIONAL<Label>,
-        /**
-         * @summary `holderId`.
-         * @public
-         * @readonly
-         */
-        readonly holderId?: OPTIONAL<Label>,
-        /**
-         * @summary `lastUpdate`.
-         * @public
-         * @readonly
-         */
-        readonly lastUpdate?: OPTIONAL<LastUpdate>,
-        /**
-         * @summary `preferredLanguage`.
-         * @public
-         * @readonly
-         */
-        readonly preferredLanguage?: OPTIONAL<PrintableString>,
-        /**
-         * @summary Extensions that are not recognized.
-         * @public
-         * @readonly
-         */
-        readonly _unrecognizedExtensionsList: _Element[] = []
-    ) {}
+        version: TokenInfo_version,
+        serialNumber: OCTET_STRING,
+        manufacturerID: OPTIONAL<Label>,
+        label: OPTIONAL<Label>,
+        tokenflags: TokenFlags,
+        seInfo?: OPTIONAL<SecurityEnvironmentInfo[]>,
+        recordInfo?: OPTIONAL<RecordInfo>,
+        supportedAlgorithms?: OPTIONAL<AlgorithmInfo[]>,
+        issuerId?: OPTIONAL<Label>,
+        holderId?: OPTIONAL<Label>,
+        lastUpdate?: OPTIONAL<LastUpdate>,
+        preferredLanguage?: OPTIONAL<PrintableString>,
+        _unrecognizedExtensionsList: _Element[] = []
+    ) {
+        this.version = version;
+        this.serialNumber = serialNumber;
+        this.manufacturerID = manufacturerID;
+        this.label = label;
+        this.tokenflags = tokenflags;
+        this.seInfo = seInfo;
+        this.recordInfo = recordInfo;
+        this.supportedAlgorithms = supportedAlgorithms;
+        this.issuerId = issuerId;
+        this.holderId = holderId;
+        this.lastUpdate = lastUpdate;
+        this.preferredLanguage = preferredLanguage;
+        this._unrecognizedExtensionsList = _unrecognizedExtensionsList;
+    }
 
     /**
      * @summary Restructures an object into a TokenInfo

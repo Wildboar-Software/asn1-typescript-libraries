@@ -2,13 +2,13 @@
 
 import * as $ from "@wildboar/asn1/functional";
 import {
-    OPTIONAL,
-    SEQUENCE,
-    SET,
-    ASN1Element as _Element,
+    type OPTIONAL,
+    type SEQUENCE,
+    type SET,
+    type ASN1Element as _Element,
     ASN1TagClass as _TagClass
 } from "@wildboar/asn1";
-import { ConnectionID, _decode_ConnectionID, _encode_ConnectionID } from "../CSTA-call-connection-identifiers/ConnectionID.ta.mjs";
+import { type ConnectionID, _decode_ConnectionID, _encode_ConnectionID } from "../CSTA-call-connection-identifiers/ConnectionID.ta.mjs";
 
 import {
     MediaServiceType,
@@ -43,37 +43,45 @@ import { CSTACommonArguments, _decode_CSTACommonArguments, _encode_CSTACommonArg
  */
 export
 class DetachMediaServiceArgument {
+    /**
+     * @summary `connection`.
+     * @description
+     *
+     * Connection at the media-access device if used; otherwise the
+     * connection at the detaching device.
+     * @public
+     * @readonly
+     */
+    public readonly connection: ConnectionID;
+    /**
+     * @summary `mediaServiceType`.
+     * @description
+     *
+     * Media service type to detach.
+     * @public
+     * @readonly
+     */
+    public readonly mediaServiceType: MediaServiceType;
+    /**
+     * @summary `extensions`.
+     * @description
+     *
+     * Optional security (timestamp, sequence, securityInfo) and
+     * privateData.
+     * @public
+     * @readonly
+     */
+    public readonly extensions?: OPTIONAL<CSTACommonArguments>;
+
     constructor (
-        /**
-         * @summary `connection`.
-         * @description
-         *
-         * Connection at the media-access device if used; otherwise the
-         * connection at the detaching device.
-         * @public
-         * @readonly
-         */
-        readonly connection: ConnectionID,
-        /**
-         * @summary `mediaServiceType`.
-         * @description
-         *
-         * Media service type to detach.
-         * @public
-         * @readonly
-         */
-        readonly mediaServiceType: MediaServiceType,
-        /**
-         * @summary `extensions`.
-         * @description
-         *
-         * Optional security (timestamp, sequence, securityInfo) and
-         * privateData.
-         * @public
-         * @readonly
-         */
-        readonly extensions?: OPTIONAL<CSTACommonArguments>
-    ) {}
+        connection: ConnectionID,
+        mediaServiceType: MediaServiceType,
+        extensions?: OPTIONAL<CSTACommonArguments>
+    ) {
+        this.connection = connection;
+        this.mediaServiceType = mediaServiceType;
+        this.extensions = extensions;
+    }
 
     /**
      * @summary Restructures an object into a DetachMediaServiceArgument
@@ -97,7 +105,7 @@ class DetachMediaServiceArgument {
          * @static
          */
 
-    public static _enum_for_mediaServiceType = _enum_for_MediaServiceType;
+    public static _enum_for_mediaServiceType: typeof _enum_for_MediaServiceType = _enum_for_MediaServiceType;
 }
 
 /**

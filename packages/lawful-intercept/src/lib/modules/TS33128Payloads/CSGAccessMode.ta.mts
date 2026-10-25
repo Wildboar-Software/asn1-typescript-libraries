@@ -89,7 +89,7 @@ type CSGAccessMode = _enum_for_CSGAccessMode;
  * @enum {number}
  */
 export
-const CSGAccessMode = _enum_for_CSGAccessMode;
+const CSGAccessMode: typeof _enum_for_CSGAccessMode = _enum_for_CSGAccessMode;
 
 /**
  * @summary CSGAccessMode_closedMode
@@ -97,7 +97,7 @@ const CSGAccessMode = _enum_for_CSGAccessMode;
  * @type {number}
  */
 export
-const CSGAccessMode_closedMode: CSGAccessMode = CSGAccessMode.closedMode; /* LONG_NAMED_ENUMERATED_VALUE */
+const CSGAccessMode_closedMode: _enum_for_CSGAccessMode.closedMode = CSGAccessMode.closedMode; /* LONG_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary closedMode
@@ -105,7 +105,7 @@ const CSGAccessMode_closedMode: CSGAccessMode = CSGAccessMode.closedMode; /* LON
  * @type {number}
  */
 export
-const closedMode: CSGAccessMode = CSGAccessMode.closedMode; /* SHORT_NAMED_ENUMERATED_VALUE */
+const closedMode: _enum_for_CSGAccessMode.closedMode = CSGAccessMode.closedMode; /* SHORT_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary CSGAccessMode_hybridMode
@@ -119,7 +119,7 @@ const closedMode: CSGAccessMode = CSGAccessMode.closedMode; /* SHORT_NAMED_ENUME
  * @type {number}
  */
 export
-const CSGAccessMode_hybridMode: CSGAccessMode = CSGAccessMode.hybridMode; /* LONG_NAMED_ENUMERATED_VALUE */
+const CSGAccessMode_hybridMode: _enum_for_CSGAccessMode.hybridMode = CSGAccessMode.hybridMode; /* LONG_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary hybridMode
@@ -133,7 +133,7 @@ const CSGAccessMode_hybridMode: CSGAccessMode = CSGAccessMode.hybridMode; /* LON
  * @type {number}
  */
 export
-const hybridMode: CSGAccessMode = CSGAccessMode.hybridMode; /* SHORT_NAMED_ENUMERATED_VALUE */
+const hybridMode: _enum_for_CSGAccessMode.hybridMode = CSGAccessMode.hybridMode; /* SHORT_NAMED_ENUMERATED_VALUE */
 export const _decode_CSGAccessMode: $.ASN1Decoder<CSGAccessMode> = $._decodeEnumerated;
 export const _encode_CSGAccessMode: $.ASN1Encoder<CSGAccessMode> = $._encodeEnumerated;
 

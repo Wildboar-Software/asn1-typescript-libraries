@@ -109,7 +109,7 @@ type AttributeStatus = _enum_for_AttributeStatus;
  * @enum {number}
  */
 export
-const AttributeStatus = _enum_for_AttributeStatus;
+const AttributeStatus: typeof _enum_for_AttributeStatus = _enum_for_AttributeStatus;
 
 /**
  * @summary AttributeStatus_added
@@ -125,7 +125,7 @@ const AttributeStatus = _enum_for_AttributeStatus;
  * @type {number}
  */
 export
-const AttributeStatus_added: AttributeStatus = AttributeStatus.added; /* LONG_NAMED_ENUMERATED_VALUE */
+const AttributeStatus_added: _enum_for_AttributeStatus.added = AttributeStatus.added; /* LONG_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary added
@@ -141,7 +141,7 @@ const AttributeStatus_added: AttributeStatus = AttributeStatus.added; /* LONG_NA
  * @type {number}
  */
 export
-const added: AttributeStatus = AttributeStatus.added; /* SHORT_NAMED_ENUMERATED_VALUE */
+const added: _enum_for_AttributeStatus.added = AttributeStatus.added; /* SHORT_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary AttributeStatus_modified
@@ -157,7 +157,7 @@ const added: AttributeStatus = AttributeStatus.added; /* SHORT_NAMED_ENUMERATED_
  * @type {number}
  */
 export
-const AttributeStatus_modified: AttributeStatus = AttributeStatus.modified; /* LONG_NAMED_ENUMERATED_VALUE */
+const AttributeStatus_modified: _enum_for_AttributeStatus.modified = AttributeStatus.modified; /* LONG_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary modified
@@ -173,7 +173,7 @@ const AttributeStatus_modified: AttributeStatus = AttributeStatus.modified; /* L
  * @type {number}
  */
 export
-const modified: AttributeStatus = AttributeStatus.modified; /* SHORT_NAMED_ENUMERATED_VALUE */
+const modified: _enum_for_AttributeStatus.modified = AttributeStatus.modified; /* SHORT_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary AttributeStatus_removed
@@ -189,7 +189,7 @@ const modified: AttributeStatus = AttributeStatus.modified; /* SHORT_NAMED_ENUME
  * @type {number}
  */
 export
-const AttributeStatus_removed: AttributeStatus = AttributeStatus.removed; /* LONG_NAMED_ENUMERATED_VALUE */
+const AttributeStatus_removed: _enum_for_AttributeStatus.removed = AttributeStatus.removed; /* LONG_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary removed
@@ -205,7 +205,7 @@ const AttributeStatus_removed: AttributeStatus = AttributeStatus.removed; /* LON
  * @type {number}
  */
 export
-const removed: AttributeStatus = AttributeStatus.removed; /* SHORT_NAMED_ENUMERATED_VALUE */
+const removed: _enum_for_AttributeStatus.removed = AttributeStatus.removed; /* SHORT_NAMED_ENUMERATED_VALUE */
 
 export
 const _decode_AttributeStatus: $.ASN1Decoder<AttributeStatus> = $._decodeEnumerated;

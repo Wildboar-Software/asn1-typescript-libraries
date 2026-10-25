@@ -1,11 +1,11 @@
 /* eslint-disable */
 import {
-    ASN1Element as _Element,
+    type ASN1Element as _Element,
     ASN1TagClass as _TagClass
 } from "@wildboar/asn1";
 import * as $ from "@wildboar/asn1/functional";
-import { GSEMngtRequests, _decode_GSEMngtRequests, _encode_GSEMngtRequests } from "../IEC61850/GSEMngtRequests.ta.mjs";
-import { GSEMngtResponses, _decode_GSEMngtResponses, _encode_GSEMngtResponses } from "../IEC61850/GSEMngtResponses.ta.mjs";
+import { type GSEMngtRequests, _decode_GSEMngtRequests, _encode_GSEMngtRequests } from "../IEC61850/GSEMngtRequests.ta.mjs";
+import { type GSEMngtResponses, _decode_GSEMngtResponses, _encode_GSEMngtResponses } from "../IEC61850/GSEMngtResponses.ta.mjs";
 
 
 /**

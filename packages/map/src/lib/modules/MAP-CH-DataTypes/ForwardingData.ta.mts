@@ -1,15 +1,15 @@
 /* eslint-disable */
 import {
-    OPTIONAL,
-    ASN1Element as _Element,
+    type OPTIONAL,
+    type ASN1Element as _Element,
     ASN1TagClass as _TagClass
 } from "@wildboar/asn1";
 import * as $ from "@wildboar/asn1/functional";
-import { FTN_AddressString, _decode_FTN_AddressString, _encode_FTN_AddressString } from "../MAP-CommonDataTypes/FTN-AddressString.ta.mjs";
-import { ISDN_AddressString, _decode_ISDN_AddressString, _encode_ISDN_AddressString } from "../MAP-CommonDataTypes/ISDN-AddressString.ta.mjs";
-import { ISDN_SubaddressString, _decode_ISDN_SubaddressString, _encode_ISDN_SubaddressString } from "../MAP-CommonDataTypes/ISDN-SubaddressString.ta.mjs";
+import { type FTN_AddressString, _decode_FTN_AddressString, _encode_FTN_AddressString } from "../MAP-CommonDataTypes/FTN-AddressString.ta.mjs";
+import { type ISDN_AddressString, _decode_ISDN_AddressString, _encode_ISDN_AddressString } from "../MAP-CommonDataTypes/ISDN-AddressString.ta.mjs";
+import { type ISDN_SubaddressString, _decode_ISDN_SubaddressString, _encode_ISDN_SubaddressString } from "../MAP-CommonDataTypes/ISDN-SubaddressString.ta.mjs";
 import { ExtensionContainer, _decode_ExtensionContainer, _encode_ExtensionContainer } from "../MAP-ExtensionDataTypes/ExtensionContainer.ta.mjs";
-import { ForwardingOptions, _decode_ForwardingOptions, _encode_ForwardingOptions } from "../MAP-SS-DataTypes/ForwardingOptions.ta.mjs";
+import { type ForwardingOptions, _decode_ForwardingOptions, _encode_ForwardingOptions } from "../MAP-SS-DataTypes/ForwardingOptions.ta.mjs";
 
 
 /**
@@ -24,13 +24,13 @@ import { ForwardingOptions, _decode_ForwardingOptions, _encode_ForwardingOptions
  * 
  * ```asn1
  * ForwardingData ::= SEQUENCE {
- *     forwardedToNumber    [5] ISDN-AddressString    OPTIONAL,
+ *     forwardedToNumber    [5] ISDN-AddressString    type OPTIONAL,
  *     -- When this datatype is sent from an HLR which supports CAMEL Phase 2
  *     -- to a GMSC which supports CAMEL Phase 2 the GMSC shall not check the
  *     -- format of the number
- *     forwardedToSubaddress    [4] ISDN-SubaddressString    OPTIONAL,
- *     forwardingOptions    [6] ForwardingOptions    OPTIONAL,
- *     extensionContainer    [7] ExtensionContainer    OPTIONAL,
+ *     forwardedToSubaddress    [4] ISDN-SubaddressString    type OPTIONAL,
+ *     forwardingOptions    [6] ForwardingOptions    type OPTIONAL,
+ *     extensionContainer    [7] ExtensionContainer    type OPTIONAL,
  *     ...,
  *     longForwardedToNumber    [8] FTN-AddressString    OPTIONAL}
  * ```
@@ -39,65 +39,79 @@ import { ForwardingOptions, _decode_ForwardingOptions, _encode_ForwardingOptions
  */
 export
 class ForwardingData {
+    /**
+     * @summary `forwardedToNumber`.
+     * @description
+     *
+     * Use and presence as in 3GPP TS 23.018 and Use and presence as in 3GPP
+     * TS 23.079 (clause 10.1.3).
+     *
+     * @public
+     * @readonly
+     */
+    public readonly forwardedToNumber?: OPTIONAL<ISDN_AddressString>;
+    /**
+     * @summary `forwardedToSubaddress`.
+     * @description
+     *
+     * Optional forwarded-to subaddress.
+     *
+     * @public
+     * @readonly
+     */
+    public readonly forwardedToSubaddress?: OPTIONAL<ISDN_SubaddressString>;
+    /**
+     * @summary `forwardingOptions`.
+     * @description
+     *
+     * Notification to calling party and redirecting presentation.
+     *
+     * @public
+     * @readonly
+     */
+    public readonly forwardingOptions?: OPTIONAL<ForwardingOptions>;
+    /**
+     * @summary `extensionContainer`.
+     * @description
+     *
+     * Private or PCS extensions (3GPP TS 29.002 V19.1.0 clause 17.7.11).
+     *
+     * @public
+     * @readonly
+     */
+    public readonly extensionContainer?: OPTIONAL<ExtensionContainer>;
+    /**
+     * @summary `longForwardedToNumber`.
+     * @description
+     *
+     * Long forwarded-to number if used.
+     *
+     * @public
+     * @readonly
+     */
+    public readonly longForwardedToNumber?: OPTIONAL<FTN_AddressString>;
+    /**
+     * @summary Extensions that are not recognized.
+     * @public
+     * @readonly
+     */
+    public readonly _unrecognizedExtensionsList: _Element[];
+
     constructor (
-        /**
-         * @summary `forwardedToNumber`.
-         * @description
-         *
-         * Use and presence as in 3GPP TS 23.018 and Use and presence as in 3GPP
-         * TS 23.079 (clause 10.1.3).
-         *
-         * @public
-         * @readonly
-         */
-        readonly forwardedToNumber?: OPTIONAL<ISDN_AddressString>,
-        /**
-         * @summary `forwardedToSubaddress`.
-         * @description
-         *
-         * Optional forwarded-to subaddress.
-         *
-         * @public
-         * @readonly
-         */
-        readonly forwardedToSubaddress?: OPTIONAL<ISDN_SubaddressString>,
-        /**
-         * @summary `forwardingOptions`.
-         * @description
-         *
-         * Notification to calling party and redirecting presentation.
-         *
-         * @public
-         * @readonly
-         */
-        readonly forwardingOptions?: OPTIONAL<ForwardingOptions>,
-        /**
-         * @summary `extensionContainer`.
-         * @description
-         *
-         * Private or PCS extensions (3GPP TS 29.002 V19.1.0 clause 17.7.11).
-         *
-         * @public
-         * @readonly
-         */
-        readonly extensionContainer?: OPTIONAL<ExtensionContainer>,
-        /**
-         * @summary `longForwardedToNumber`.
-         * @description
-         *
-         * Long forwarded-to number if used.
-         *
-         * @public
-         * @readonly
-         */
-        readonly longForwardedToNumber?: OPTIONAL<FTN_AddressString>,
-        /**
-         * @summary Extensions that are not recognized.
-         * @public
-         * @readonly
-         */
-        readonly _unrecognizedExtensionsList: _Element[] = []
-    ) {}
+        forwardedToNumber?: OPTIONAL<ISDN_AddressString>,
+        forwardedToSubaddress?: OPTIONAL<ISDN_SubaddressString>,
+        forwardingOptions?: OPTIONAL<ForwardingOptions>,
+        extensionContainer?: OPTIONAL<ExtensionContainer>,
+        longForwardedToNumber?: OPTIONAL<FTN_AddressString>,
+        _unrecognizedExtensionsList: _Element[] = []
+    ) {
+        this.forwardedToNumber = forwardedToNumber;
+        this.forwardedToSubaddress = forwardedToSubaddress;
+        this.forwardingOptions = forwardingOptions;
+        this.extensionContainer = extensionContainer;
+        this.longForwardedToNumber = longForwardedToNumber;
+        this._unrecognizedExtensionsList = _unrecognizedExtensionsList;
+    }
 
     /**
      * @summary Restructures an object into a ForwardingData

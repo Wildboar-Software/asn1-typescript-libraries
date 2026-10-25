@@ -1,7 +1,7 @@
 /* eslint-disable */
 import {
     ASN1ConstructionError as _ConstructionError,
-    ASN1Element as _Element,
+    type ASN1Element as _Element,
     ASN1TagClass as _TagClass
 } from "@wildboar/asn1";
 import * as $ from "@wildboar/asn1/functional";
@@ -34,22 +34,28 @@ import { DeviationDescription, _decode_DeviationDescription, _encode_DeviationDe
  */
 export
 class Deviation {
+    /**
+     * Documents this entry applies to.
+     * @summary `documents`.
+     * @public
+     * @readonly
+     */
+    public readonly documents: DeviationDocuments;
+    /**
+     * Defects that apply to those documents.
+     * @summary `descriptions`.
+     * @public
+     * @readonly
+     */
+    public readonly descriptions: DeviationDescription[];
+
     constructor (
-        /**
-         * Documents this entry applies to.
-         * @summary `documents`.
-         * @public
-         * @readonly
-         */
-        readonly documents: DeviationDocuments,
-        /**
-         * Defects that apply to those documents.
-         * @summary `descriptions`.
-         * @public
-         * @readonly
-         */
-        readonly descriptions: DeviationDescription[]
-    ) {}
+        documents: DeviationDocuments,
+        descriptions: DeviationDescription[]
+    ) {
+        this.documents = documents;
+        this.descriptions = descriptions;
+    }
 
     /**
      * @summary Restructures an object into a Deviation

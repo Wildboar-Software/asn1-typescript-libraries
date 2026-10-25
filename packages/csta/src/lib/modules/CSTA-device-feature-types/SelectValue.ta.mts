@@ -1,7 +1,7 @@
 /* eslint-disable */
 
 import * as $ from "@wildboar/asn1/functional";
-import { ENUMERATED, ASN1Element as _Element } from "@wildboar/asn1";
+import { type ENUMERATED, ASN1Element as _Element } from "@wildboar/asn1";
 
 
 
@@ -81,7 +81,7 @@ type SelectValue = _enum_for_SelectValue;
  * @enum {number}
  */
 export
-const SelectValue = _enum_for_SelectValue;
+const SelectValue: typeof _enum_for_SelectValue = _enum_for_SelectValue;
 
 /**
  * @summary SelectValue_normal
@@ -91,7 +91,7 @@ const SelectValue = _enum_for_SelectValue;
  * @see https://ecma-international.org/publications-and-standards/standards/ecma-285/
  */
 export
-const SelectValue_normal: SelectValue = SelectValue.normal; /* LONG_NAMED_ENUMERATED_VALUE */
+const SelectValue_normal: _enum_for_SelectValue.normal = SelectValue.normal; /* LONG_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary normal
@@ -100,7 +100,7 @@ const SelectValue_normal: SelectValue = SelectValue.normal; /* LONG_NAMED_ENUMER
  * @type {number}
  */
 export
-const normal: SelectValue = SelectValue.normal; /* SHORT_NAMED_ENUMERATED_VALUE */
+const normal: _enum_for_SelectValue.normal = SelectValue.normal; /* SHORT_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary SelectValue_leastCost
@@ -110,7 +110,7 @@ const normal: SelectValue = SelectValue.normal; /* SHORT_NAMED_ENUMERATED_VALUE 
  * @see https://ecma-international.org/publications-and-standards/standards/ecma-285/
  */
 export
-const SelectValue_leastCost: SelectValue = SelectValue.leastCost; /* LONG_NAMED_ENUMERATED_VALUE */
+const SelectValue_leastCost: _enum_for_SelectValue.leastCost = SelectValue.leastCost; /* LONG_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary leastCost
@@ -119,7 +119,7 @@ const SelectValue_leastCost: SelectValue = SelectValue.leastCost; /* LONG_NAMED_
  * @type {number}
  */
 export
-const leastCost: SelectValue = SelectValue.leastCost; /* SHORT_NAMED_ENUMERATED_VALUE */
+const leastCost: _enum_for_SelectValue.leastCost = SelectValue.leastCost; /* SHORT_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary SelectValue_emergency
@@ -129,7 +129,7 @@ const leastCost: SelectValue = SelectValue.leastCost; /* SHORT_NAMED_ENUMERATED_
  * @see https://ecma-international.org/publications-and-standards/standards/ecma-285/
  */
 export
-const SelectValue_emergency: SelectValue = SelectValue.emergency; /* LONG_NAMED_ENUMERATED_VALUE */
+const SelectValue_emergency: _enum_for_SelectValue.emergency = SelectValue.emergency; /* LONG_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary emergency
@@ -138,7 +138,7 @@ const SelectValue_emergency: SelectValue = SelectValue.emergency; /* LONG_NAMED_
  * @type {number}
  */
 export
-const emergency: SelectValue = SelectValue.emergency; /* SHORT_NAMED_ENUMERATED_VALUE */
+const emergency: _enum_for_SelectValue.emergency = SelectValue.emergency; /* SHORT_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary SelectValue_aCD
@@ -148,7 +148,7 @@ const emergency: SelectValue = SelectValue.emergency; /* SHORT_NAMED_ENUMERATED_
  * @see https://ecma-international.org/publications-and-standards/standards/ecma-285/
  */
 export
-const SelectValue_aCD: SelectValue = SelectValue.aCD; /* LONG_NAMED_ENUMERATED_VALUE */
+const SelectValue_aCD: _enum_for_SelectValue.aCD = SelectValue.aCD; /* LONG_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary aCD
@@ -157,7 +157,7 @@ const SelectValue_aCD: SelectValue = SelectValue.aCD; /* LONG_NAMED_ENUMERATED_V
  * @type {number}
  */
 export
-const aCD: SelectValue = SelectValue.aCD; /* SHORT_NAMED_ENUMERATED_VALUE */
+const aCD: _enum_for_SelectValue.aCD = SelectValue.aCD; /* SHORT_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary SelectValue_userDefined
@@ -167,7 +167,7 @@ const aCD: SelectValue = SelectValue.aCD; /* SHORT_NAMED_ENUMERATED_VALUE */
  * @see https://ecma-international.org/publications-and-standards/standards/ecma-285/
  */
 export
-const SelectValue_userDefined: SelectValue = SelectValue.userDefined; /* LONG_NAMED_ENUMERATED_VALUE */
+const SelectValue_userDefined: _enum_for_SelectValue.userDefined = SelectValue.userDefined; /* LONG_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary userDefined
@@ -176,7 +176,7 @@ const SelectValue_userDefined: SelectValue = SelectValue.userDefined; /* LONG_NA
  * @type {number}
  */
 export
-const userDefined: SelectValue = SelectValue.userDefined; /* SHORT_NAMED_ENUMERATED_VALUE */
+const userDefined: _enum_for_SelectValue.userDefined = SelectValue.userDefined; /* SHORT_NAMED_ENUMERATED_VALUE */
 
 let _cached_decoder_for_SelectValue: $.ASN1Decoder<SelectValue> | null = null;
 

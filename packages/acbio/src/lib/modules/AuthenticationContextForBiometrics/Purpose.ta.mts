@@ -1,6 +1,6 @@
 /* eslint-disable */
 import {
-    ASN1Element as _Element,
+    type ASN1Element as _Element,
     ASN1TagClass as _TagClass,
     ASN1Construction as _Construction,
     ASN1UniversalType as _UniversalType,
@@ -25,10 +25,12 @@ import * as $ from '@wildboar/asn1/functional';
  * ```
  * @enum {number}
  */
-export enum _enum_for_Purpose {
-    reference = 1,
-    sample = 2,
-}
+export const _enum_for_Purpose = {
+    reference: 1,
+    sample: 2,
+} as const;
+
+export type _enum_for_Purpose = (typeof _enum_for_Purpose)[keyof typeof _enum_for_Purpose];
 
 
 /**
@@ -62,7 +64,7 @@ export type Purpose = _enum_for_Purpose;
  *
  * @enum {number}
  */
-export const Purpose = _enum_for_Purpose;
+export const Purpose: typeof _enum_for_Purpose = _enum_for_Purpose;
 
 
 /**
@@ -70,7 +72,7 @@ export const Purpose = _enum_for_Purpose;
  * @constant
  * @type {number}
  */
-export const Purpose_reference: Purpose =
+export const Purpose_reference: 1 =
     Purpose.reference; /* LONG_NAMED_ENUMERATED_VALUE */
 
 
@@ -79,7 +81,7 @@ export const Purpose_reference: Purpose =
  * @constant
  * @type {number}
  */
-export const reference: Purpose =
+export const reference: 1 =
     Purpose.reference; /* SHORT_NAMED_ENUMERATED_VALUE */
 
 
@@ -88,7 +90,7 @@ export const reference: Purpose =
  * @constant
  * @type {number}
  */
-export const Purpose_sample: Purpose =
+export const Purpose_sample: 2 =
     Purpose.sample; /* LONG_NAMED_ENUMERATED_VALUE */
 
 
@@ -97,18 +99,29 @@ export const Purpose_sample: Purpose =
  * @constant
  * @type {number}
  */
-export const sample: Purpose =
+export const sample: 2 =
     Purpose.sample; /* SHORT_NAMED_ENUMERATED_VALUE */
 
 
 
 
-export const _decode_Purpose = $._decodeEnumerated;
+export function _decode_Purpose(el: _Element): Purpose {
+    const enumerated = $._decodeEnumerated(el);
+    switch (enumerated) {
+        case Purpose.reference: return Purpose.reference;
+        case Purpose.sample: return Purpose.sample;
+        default:
+            throw new _ConstructionError(
+                'Invalid ENUMERATED value ' + enumerated + ' for Purpose.',
+                el,
+            );
+    }
+}
 
 
 
 
-export const _encode_Purpose = $._encodeEnumerated;
+export const _encode_Purpose: $.ASN1Encoder<Purpose> = $._encodeEnumerated as $.ASN1Encoder<Purpose>;
 
 
 /* eslint-enable */

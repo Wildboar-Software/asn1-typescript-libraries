@@ -76,7 +76,7 @@ type LocationType = _enum_for_LocationType;
  * @enum {number}
  */
 export
-const LocationType = _enum_for_LocationType;
+const LocationType: typeof _enum_for_LocationType = _enum_for_LocationType;
 
 /**
  * @summary LocationType_currentLocation
@@ -90,7 +90,7 @@ const LocationType = _enum_for_LocationType;
  * @type {number}
  */
 export
-const LocationType_currentLocation: LocationType = LocationType.currentLocation; /* LONG_NAMED_ENUMERATED_VALUE */
+const LocationType_currentLocation: _enum_for_LocationType.currentLocation = LocationType.currentLocation; /* LONG_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary currentLocation
@@ -102,7 +102,7 @@ const LocationType_currentLocation: LocationType = LocationType.currentLocation;
  * @type {number}
  */
 export
-const currentLocation: LocationType = LocationType.currentLocation; /* SHORT_NAMED_ENUMERATED_VALUE */
+const currentLocation: _enum_for_LocationType.currentLocation = LocationType.currentLocation; /* SHORT_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary LocationType_lastKnownLocation
@@ -116,7 +116,7 @@ const currentLocation: LocationType = LocationType.currentLocation; /* SHORT_NAM
  * @type {number}
  */
 export
-const LocationType_lastKnownLocation: LocationType = LocationType.lastKnownLocation; /* LONG_NAMED_ENUMERATED_VALUE */
+const LocationType_lastKnownLocation: _enum_for_LocationType.lastKnownLocation = LocationType.lastKnownLocation; /* LONG_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary lastKnownLocation
@@ -129,7 +129,7 @@ const LocationType_lastKnownLocation: LocationType = LocationType.lastKnownLocat
  * @type {number}
  */
 export
-const lastKnownLocation: LocationType = LocationType.lastKnownLocation; /* SHORT_NAMED_ENUMERATED_VALUE */
+const lastKnownLocation: _enum_for_LocationType.lastKnownLocation = LocationType.lastKnownLocation; /* SHORT_NAMED_ENUMERATED_VALUE */
 
 export
 const _decode_LocationType: $.ASN1Decoder<LocationType> = $._decodeEnumerated;

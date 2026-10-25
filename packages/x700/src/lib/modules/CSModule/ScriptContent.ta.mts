@@ -1,7 +1,7 @@
 /* eslint-disable */
 import {
-    GeneralString,
-    ASN1Element as _Element,
+    type GeneralString,
+    type ASN1Element as _Element,
     ASN1TagClass as _TagClass,
     ASN1Construction as _Construction,
     ASN1UniversalType as _UniversalType,
@@ -32,10 +32,10 @@ import * as $ from '@wildboar/asn1/functional';
 export type ScriptContent = GeneralString; // GeneralString
 
 
-export const _decode_ScriptContent = $._decodeGeneralString;
+export const _decode_ScriptContent: $.ASN1Decoder<string> = $._decodeGeneralString;
 
 
-export const _encode_ScriptContent = $._encodeGeneralString;
+export const _encode_ScriptContent: $.ASN1Encoder<string> = $._encodeGeneralString;
 
 
 /* eslint-enable */

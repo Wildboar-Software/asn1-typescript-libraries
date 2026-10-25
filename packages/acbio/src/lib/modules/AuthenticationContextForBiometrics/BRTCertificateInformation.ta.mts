@@ -1,6 +1,6 @@
 /* eslint-disable */
 import {
-    ASN1Element as _Element,
+    type ASN1Element as _Element,
     ASN1TagClass as _TagClass,
     ASN1Construction as _Construction,
     ASN1UniversalType as _UniversalType,
@@ -11,12 +11,12 @@ import {
 } from '@wildboar/asn1';
 import * as $ from '@wildboar/asn1/functional';
 import {
-    BRTCertificateList,
+    type BRTCertificateList,
     _decode_BRTCertificateList,
     _encode_BRTCertificateList,
 } from '../AuthenticationContextForBiometrics/BRTCertificateList.ta.mjs';
 import {
-    BRTCertificateReferrerList,
+    type BRTCertificateReferrerList,
     _decode_BRTCertificateReferrerList,
     _encode_BRTCertificateReferrerList,
 } from '../AuthenticationContextForBiometrics/BRTCertificateReferrerList.ta.mjs';

@@ -1,22 +1,22 @@
 /* eslint-disable */
 import {
     ASN1ConstructionError as _ConstructionError,
-    ASN1Element as _Element,
+    type ASN1Element as _Element,
     ASN1TagClass as _TagClass,
 } from "@wildboar/asn1";
 import * as $ from "@wildboar/asn1/functional";
 import {
-    CMSVersion,
+    type CMSVersion,
     _decode_CMSVersion,
     _encode_CMSVersion,
 } from "../CryptographicMessageSyntax-2010/CMSVersion.ta.mjs";
 import {
-    Digest,
+    type Digest,
     _decode_Digest,
     _encode_Digest,
 } from "../CryptographicMessageSyntax-2010/Digest.ta.mjs";
 import {
-    DigestAlgorithmIdentifier,
+    type DigestAlgorithmIdentifier,
     _decode_DigestAlgorithmIdentifier,
     _encode_DigestAlgorithmIdentifier,
 } from "../CryptographicMessageSyntax-2010/DigestAlgorithmIdentifier.ta.mjs";
@@ -46,56 +46,68 @@ import {
  *
  */
 export class DigestedData {
+    /**
+     * @summary `version`.
+     * @description
+     *
+     * 1 if `eContentType` is `id-data`; 2 otherwise
+     * ([RFC 5652 §7](https://datatracker.ietf.org/doc/html/rfc5652#section-7)).
+     *
+     * @public
+     * @readonly
+     */
+    public readonly version: CMSVersion;
+    /**
+     * @summary `digestAlgorithm`.
+     * @description
+     *
+     * Message-digest algorithm identifier
+     * ([RFC 5652 §7](https://datatracker.ietf.org/doc/html/rfc5652#section-7)).
+     *
+     * @public
+     * @readonly
+     */
+    public readonly digestAlgorithm: DigestAlgorithmIdentifier;
+    /**
+     * @summary `encapContentInfo`.
+     * @description
+     *
+     * Content that was digested ([RFC 5652 §7](https://datatracker.ietf.org/doc/html/rfc5652#section-7)).
+     *
+     * @public
+     * @readonly
+     */
+    public readonly encapContentInfo: EncapsulatedContentInfo;
+    /**
+     * @summary `digest`.
+     * @description
+     *
+     * Message digest of the content ([RFC 5652 §7](https://datatracker.ietf.org/doc/html/rfc5652#section-7)).
+     *
+     * @public
+     * @readonly
+     */
+    public readonly digest: Digest;
+    /**
+     * @summary Extensions that are not recognized.
+     * @public
+     * @readonly
+     */
+    public readonly _unrecognizedExtensionsList: _Element[];
+
     constructor(
-        /**
-         * @summary `version`.
-         * @description
-         *
-         * 1 if `eContentType` is `id-data`; 2 otherwise
-         * ([RFC 5652 §7](https://datatracker.ietf.org/doc/html/rfc5652#section-7)).
-         *
-         * @public
-         * @readonly
-         */
-        readonly version: CMSVersion,
-        /**
-         * @summary `digestAlgorithm`.
-         * @description
-         *
-         * Message-digest algorithm identifier
-         * ([RFC 5652 §7](https://datatracker.ietf.org/doc/html/rfc5652#section-7)).
-         *
-         * @public
-         * @readonly
-         */
-        readonly digestAlgorithm: DigestAlgorithmIdentifier,
-        /**
-         * @summary `encapContentInfo`.
-         * @description
-         *
-         * Content that was digested ([RFC 5652 §7](https://datatracker.ietf.org/doc/html/rfc5652#section-7)).
-         *
-         * @public
-         * @readonly
-         */
-        readonly encapContentInfo: EncapsulatedContentInfo,
-        /**
-         * @summary `digest`.
-         * @description
-         *
-         * Message digest of the content ([RFC 5652 §7](https://datatracker.ietf.org/doc/html/rfc5652#section-7)).
-         *
-         * @public
-         * @readonly
-         */
-        readonly digest: Digest,
-        /**
-         * @summary Extensions that are not recognized.
-         * @public
-         * @readonly
-         */
-        readonly _unrecognizedExtensionsList: _Element[] = []
-    ) {}
+        version: CMSVersion,
+        digestAlgorithm: DigestAlgorithmIdentifier,
+        encapContentInfo: EncapsulatedContentInfo,
+        digest: Digest,
+        _unrecognizedExtensionsList: _Element[] = []
+    ) {
+        this.version = version;
+        this.digestAlgorithm = digestAlgorithm;
+        this.encapContentInfo = encapContentInfo;
+        this.digest = digest;
+        this._unrecognizedExtensionsList = _unrecognizedExtensionsList;
+    }
 
     /**
      * @summary Restructures an object into a DigestedData

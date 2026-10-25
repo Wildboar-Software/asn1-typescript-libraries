@@ -1,7 +1,7 @@
 /* eslint-disable */
 import {
-    OPTIONAL,
-    ASN1Element as _Element,
+    type OPTIONAL,
+    type ASN1Element as _Element,
     ASN1TagClass as _TagClass,
     ASN1Construction as _Construction,
     ASN1UniversalType as _UniversalType,
@@ -11,7 +11,7 @@ import {
     ASN1ConstructionError as _ConstructionError,
 } from "@wildboar/asn1";
 import * as $ from "@wildboar/asn1/functional";
-import { MMSString, _decode_MMSString, _encode_MMSString } from "../ISO-9506-MMS-1/MMSString.ta.mjs";
+import { type MMSString, _decode_MMSString, _encode_MMSString } from "../ISO-9506-MMS-1/MMSString.ta.mjs";
 
 
 /**
@@ -35,20 +35,24 @@ import { MMSString, _decode_MMSString, _encode_MMSString } from "../ISO-9506-MMS
  */
 export
 class GetCapabilityList_Request {
+    /**
+     * @summary `continueAfter`.
+     * @description
+     *
+     * If present, the returned list begins after this capability string. If
+     * it does not match, the server uses ISO 9506-1:2003 §5.4.2 collating.
+     * ISO 9506-1:2003 §10.8.1.1.1.
+     *
+     * @public
+     * @readonly
+     */
+    public readonly continueAfter?: OPTIONAL<MMSString>;
+
     constructor (
-        /**
-         * @summary `continueAfter`.
-         * @description
-         *
-         * If present, the returned list begins after this capability string. If
-         * it does not match, the server uses ISO 9506-1:2003 §5.4.2 collating.
-         * ISO 9506-1:2003 §10.8.1.1.1.
-         *
-         * @public
-         * @readonly
-         */
-        readonly continueAfter?: OPTIONAL<MMSString>
-    ) {}
+        continueAfter?: OPTIONAL<MMSString>
+    ) {
+        this.continueAfter = continueAfter;
+    }
 
     /**
      * @summary Restructures an object into a GetCapabilityList_Request

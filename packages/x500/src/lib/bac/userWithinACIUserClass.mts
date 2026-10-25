@@ -37,8 +37,8 @@ import deniesAccess from "./deniesAccess.mjs";
  *
  * ```asn1
  * UserClasses ::= SEQUENCE {
- *   allUsers   [0]  NULL                                      OPTIONAL,
- *   thisEntry  [1]  NULL                                      OPTIONAL,
+ *   allUsers   [0]  NULL                                      type OPTIONAL,
+ *   thisEntry  [1]  NULL                                      type OPTIONAL,
  *   name       [2]  SET SIZE (1..MAX) OF NameAndOptionalUID   OPTIONAL,
  *   userGroup  [3]  SET SIZE (1..MAX) OF NameAndOptionalUID   OPTIONAL,
  *                   -- dn component shall be the name of an

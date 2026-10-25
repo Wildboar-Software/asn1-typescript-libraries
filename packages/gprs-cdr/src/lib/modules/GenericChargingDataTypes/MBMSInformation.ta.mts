@@ -1,9 +1,9 @@
 /* eslint-disable */
 import {
-    BOOLEAN,
-    OCTET_STRING,
-    OPTIONAL,
-    ASN1Element as _Element,
+    type BOOLEAN,
+    type OCTET_STRING,
+    type OPTIONAL,
+    type ASN1Element as _Element,
     ASN1TagClass as _TagClass,
     ASN1SizeError
 } from "@wildboar/asn1";
@@ -11,7 +11,7 @@ import * as $ from "@wildboar/asn1/functional";
 import { MBMSServiceType, _decode_MBMSServiceType, _encode_MBMSServiceType, _enum_for_MBMSServiceType } from "../GenericChargingDataTypes/MBMSServiceType.ta.mjs";
 import { MBMSUserServiceType, _decode_MBMSUserServiceType, _encode_MBMSUserServiceType, _enum_for_MBMSUserServiceType } from "../GenericChargingDataTypes/MBMSUserServiceType.ta.mjs";
 import { MBMS2G3GIndicator, _decode_MBMS2G3GIndicator, _encode_MBMS2G3GIndicator, _enum_for_MBMS2G3GIndicator } from "../GenericChargingDataTypes/MBMS2G3GIndicator.ta.mjs";
-import { IPAddress, _decode_IPAddress, _encode_IPAddress } from "../GenericChargingDataTypes/IPAddress.ta.mjs";
+import { type IPAddress, _decode_IPAddress, _encode_IPAddress } from "../GenericChargingDataTypes/IPAddress.ta.mjs";
 import { CNIPMulticastDistribution, _decode_CNIPMulticastDistribution, _encode_CNIPMulticastDistribution, _enum_for_CNIPMulticastDistribution } from "../GenericChargingDataTypes/CNIPMulticastDistribution.ta.mjs";
 
 
@@ -189,25 +189,25 @@ class MBMSInformation {
          * @static
          */
 
-    public static _enum_for_mBMSServiceType = _enum_for_MBMSServiceType;        /**
+    public static _enum_for_mBMSServiceType: typeof _enum_for_MBMSServiceType = _enum_for_MBMSServiceType;        /**
          * @summary The enum used as the type of the component `mBMSUserServiceType`
          * @public
          * @static
          */
 
-    public static _enum_for_mBMSUserServiceType = _enum_for_MBMSUserServiceType;        /**
+    public static _enum_for_mBMSUserServiceType: typeof _enum_for_MBMSUserServiceType = _enum_for_MBMSUserServiceType;        /**
          * @summary The enum used as the type of the component `mBMS2G3GIndicator`
          * @public
          * @static
          */
 
-    public static _enum_for_mBMS2G3GIndicator = _enum_for_MBMS2G3GIndicator;        /**
+    public static _enum_for_mBMS2G3GIndicator: typeof _enum_for_MBMS2G3GIndicator = _enum_for_MBMS2G3GIndicator;        /**
          * @summary The enum used as the type of the component `cNIPMulticastDistribution`
          * @public
          * @static
          */
 
-    public static _enum_for_cNIPMulticastDistribution = _enum_for_CNIPMulticastDistribution;
+    public static _enum_for_cNIPMulticastDistribution: typeof _enum_for_CNIPMulticastDistribution = _enum_for_CNIPMulticastDistribution;
 }
 
 /**

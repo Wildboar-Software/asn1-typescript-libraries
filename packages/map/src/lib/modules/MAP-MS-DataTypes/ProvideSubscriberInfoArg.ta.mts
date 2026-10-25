@@ -1,13 +1,13 @@
 /* eslint-disable */
 import {
-    OPTIONAL,
-    ASN1Element as _Element,
+    type OPTIONAL,
+    type ASN1Element as _Element,
     ASN1TagClass as _TagClass
 } from "@wildboar/asn1";
 import * as $ from "@wildboar/asn1/functional";
-import { EMLPP_Priority, _decode_EMLPP_Priority, _encode_EMLPP_Priority } from "../MAP-CommonDataTypes/EMLPP-Priority.ta.mjs";
-import { IMSI, _decode_IMSI, _encode_IMSI } from "../MAP-CommonDataTypes/IMSI.ta.mjs";
-import { LMSI, _decode_LMSI, _encode_LMSI } from "../MAP-CommonDataTypes/LMSI.ta.mjs";
+import { type EMLPP_Priority, _decode_EMLPP_Priority, _encode_EMLPP_Priority } from "../MAP-CommonDataTypes/EMLPP-Priority.ta.mjs";
+import { type IMSI, _decode_IMSI, _encode_IMSI } from "../MAP-CommonDataTypes/IMSI.ta.mjs";
+import { type LMSI, _decode_LMSI, _encode_LMSI } from "../MAP-CommonDataTypes/LMSI.ta.mjs";
 import { ExtensionContainer, _decode_ExtensionContainer, _encode_ExtensionContainer } from "../MAP-ExtensionDataTypes/ExtensionContainer.ta.mjs";
 import { RequestedInfo, _decode_RequestedInfo, _encode_RequestedInfo } from "../MAP-MS-DataTypes/RequestedInfo.ta.mjs";
 
@@ -27,9 +27,9 @@ import { RequestedInfo, _decode_RequestedInfo, _encode_RequestedInfo } from "../
  * ```asn1
  * ProvideSubscriberInfoArg ::= SEQUENCE {
  *     imsi    [0] IMSI,
- *     lmsi    [1] LMSI    OPTIONAL,
+ *     lmsi    [1] LMSI    type OPTIONAL,
  *     requestedInfo    [2] RequestedInfo,
- *     extensionContainer    [3] ExtensionContainer    OPTIONAL,
+ *     extensionContainer    [3] ExtensionContainer    type OPTIONAL,
  *     ...,
  *     callPriority    [4]    EMLPP-Priority    OPTIONAL
  *     }
@@ -39,73 +39,87 @@ import { RequestedInfo, _decode_RequestedInfo, _encode_RequestedInfo } from "../
  */
 export
 class ProvideSubscriberInfoArg {
+    /**
+     * @summary `imsi`.
+     * @description
+     *
+     * International Mobile Subscriber Identity as in 3GPP TS 23.003.
+     *
+     * (3GPP TS 29.002 V19.1.0 clause 7.6.2.1).
+     *
+     * @public
+     * @readonly
+     */
+    public readonly imsi: IMSI;
+    /**
+     * @summary `lmsi`.
+     * @description
+     *
+     * Local identity allocated by the VLR for internal data management.
+     * Providing it is an operator option; HLR shall support LMSI handling.
+     * Shall not be sent to the SGSN.
+     *
+     * (3GPP TS 29.002 V19.1.0 clause 7.6.2.16).
+     *
+     * @public
+     * @readonly
+     */
+    public readonly lmsi: OPTIONAL<LMSI>;
+    /**
+     * @summary `requestedInfo`.
+     * @description
+     *
+     * Which subscriber information is requested (3GPP TS 23.018 and
+     * 23.078).
+     *
+     * (3GPP TS 29.002 V19.1.0 clause 7.6.3.31).
+     *
+     * @public
+     * @readonly
+     */
+    public readonly requestedInfo: RequestedInfo;
+    /**
+     * @summary `extensionContainer`.
+     * @public
+     * @readonly
+     */
+    public readonly extensionContainer?: OPTIONAL<ExtensionContainer>;
+    /**
+     * @summary `callPriority`.
+     * @description
+     *
+     * eMLPP priority of the call (3GPP TS 23.067 / 24.067). In Provide
+     * Subscriber Info, present if the HLR supports it and Call Priority was
+     * received in MAP_SEND_ROUTING_INFORMATION.
+     *
+     * (3GPP TS 29.002 V19.1.0 clauses 7.6.5.19 and 8.11.2.3).
+     *
+     * @public
+     * @readonly
+     */
+    public readonly callPriority?: OPTIONAL<EMLPP_Priority>;
+    /**
+     * @summary Extensions that are not recognized.
+     * @public
+     * @readonly
+     */
+    public readonly _unrecognizedExtensionsList: _Element[];
+
     constructor (
-        /**
-         * @summary `imsi`.
-         * @description
-         *
-         * International Mobile Subscriber Identity as in 3GPP TS 23.003.
-         *
-         * (3GPP TS 29.002 V19.1.0 clause 7.6.2.1).
-         *
-         * @public
-         * @readonly
-         */
-        readonly imsi: IMSI,
-        /**
-         * @summary `lmsi`.
-         * @description
-         *
-         * Local identity allocated by the VLR for internal data management.
-         * Providing it is an operator option; HLR shall support LMSI handling.
-         * Shall not be sent to the SGSN.
-         *
-         * (3GPP TS 29.002 V19.1.0 clause 7.6.2.16).
-         *
-         * @public
-         * @readonly
-         */
-        readonly lmsi: OPTIONAL<LMSI>,
-        /**
-         * @summary `requestedInfo`.
-         * @description
-         *
-         * Which subscriber information is requested (3GPP TS 23.018 and
-         * 23.078).
-         *
-         * (3GPP TS 29.002 V19.1.0 clause 7.6.3.31).
-         *
-         * @public
-         * @readonly
-         */
-        readonly requestedInfo: RequestedInfo,
-        /**
-         * @summary `extensionContainer`.
-         * @public
-         * @readonly
-         */
-        readonly extensionContainer?: OPTIONAL<ExtensionContainer>,
-        /**
-         * @summary `callPriority`.
-         * @description
-         *
-         * eMLPP priority of the call (3GPP TS 23.067 / 24.067). In Provide
-         * Subscriber Info, present if the HLR supports it and Call Priority was
-         * received in MAP_SEND_ROUTING_INFORMATION.
-         *
-         * (3GPP TS 29.002 V19.1.0 clauses 7.6.5.19 and 8.11.2.3).
-         *
-         * @public
-         * @readonly
-         */
-        readonly callPriority?: OPTIONAL<EMLPP_Priority>,
-        /**
-         * @summary Extensions that are not recognized.
-         * @public
-         * @readonly
-         */
-        readonly _unrecognizedExtensionsList: _Element[] = []
-    ) {}
+        imsi: IMSI,
+        lmsi: OPTIONAL<LMSI>,
+        requestedInfo: RequestedInfo,
+        extensionContainer?: OPTIONAL<ExtensionContainer>,
+        callPriority?: OPTIONAL<EMLPP_Priority>,
+        _unrecognizedExtensionsList: _Element[] = []
+    ) {
+        this.imsi = imsi;
+        this.lmsi = lmsi;
+        this.requestedInfo = requestedInfo;
+        this.extensionContainer = extensionContainer;
+        this.callPriority = callPriority;
+        this._unrecognizedExtensionsList = _unrecognizedExtensionsList;
+    }
 
     /**
      * @summary Restructures an object into a ProvideSubscriberInfoArg

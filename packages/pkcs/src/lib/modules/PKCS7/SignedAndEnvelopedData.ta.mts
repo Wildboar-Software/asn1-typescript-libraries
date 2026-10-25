@@ -1,22 +1,22 @@
 /* eslint-disable */
 import {
-    ASN1Element as _Element,
+    type ASN1Element as _Element,
     ASN1TagClass as _TagClass,
-    OPTIONAL,
+    type OPTIONAL,
 } from "@wildboar/asn1";
 import * as $ from "@wildboar/asn1/functional";
 import {
-    CertificateRevocationLists,
+    type CertificateRevocationLists,
     _decode_CertificateRevocationLists,
     _encode_CertificateRevocationLists,
 } from "../PKCS7/CertificateRevocationLists.ta.mjs";
 import {
-    CertificateSet,
+    type CertificateSet,
     _decode_CertificateSet,
     _encode_CertificateSet,
 } from "../PKCS7/CertificateSet.ta.mjs";
 import {
-    DigestAlgorithmIdentifiers,
+    type DigestAlgorithmIdentifiers,
     _decode_DigestAlgorithmIdentifiers,
     _encode_DigestAlgorithmIdentifiers,
 } from "../PKCS7/DigestAlgorithmIdentifiers.ta.mjs";
@@ -35,7 +35,7 @@ import {
     _decode_SignerInfo,
     _encode_SignerInfo,
 } from "../PKCS7/SignerInfo.ta.mjs";
-import { Version, _decode_Version, _encode_Version } from "../PKCS7/Version.ta.mjs";
+import { type Version, _decode_Version, _encode_Version } from "../PKCS7/Version.ta.mjs";
 
 /**
  * @summary SignedAndEnvelopedData
@@ -67,50 +67,66 @@ import { Version, _decode_Version, _encode_Version } from "../PKCS7/Version.ta.m
  *
  */
 export class SignedAndEnvelopedData {
+    /**
+     * @summary `version`.
+     * @public
+     * @readonly
+     */
+    public readonly version: Version;
+    /**
+     * @summary `recipientInfos`.
+     * @public
+     * @readonly
+     */
+    public readonly recipientInfos: KeyTransportRecipientInfo[];
+    /**
+     * @summary `digestAlgorithms`.
+     * @public
+     * @readonly
+     */
+    public readonly digestAlgorithms: DigestAlgorithmIdentifiers;
+    /**
+     * @summary `encryptedContentInfo`.
+     * @public
+     * @readonly
+     */
+    public readonly encryptedContentInfo: EncryptedContentInfo;
+    /**
+     * @summary `certificates`.
+     * @public
+     * @readonly
+     */
+    public readonly certificates: OPTIONAL<CertificateSet>;
+    /**
+     * @summary `crls`.
+     * @public
+     * @readonly
+     */
+    public readonly crls: OPTIONAL<CertificateRevocationLists>;
+    /**
+     * @summary `signerInfos`.
+     * @public
+     * @readonly
+     */
+    public readonly signerInfos: SignerInfo[];
+
     constructor(
-        /**
-         * @summary `version`.
-         * @public
-         * @readonly
-         */
-        readonly version: Version,
-        /**
-         * @summary `recipientInfos`.
-         * @public
-         * @readonly
-         */
-        readonly recipientInfos: KeyTransportRecipientInfo[],
-        /**
-         * @summary `digestAlgorithms`.
-         * @public
-         * @readonly
-         */
-        readonly digestAlgorithms: DigestAlgorithmIdentifiers,
-        /**
-         * @summary `encryptedContentInfo`.
-         * @public
-         * @readonly
-         */
-        readonly encryptedContentInfo: EncryptedContentInfo,
-        /**
-         * @summary `certificates`.
-         * @public
-         * @readonly
-         */
-        readonly certificates: OPTIONAL<CertificateSet>,
-        /**
-         * @summary `crls`.
-         * @public
-         * @readonly
-         */
-        readonly crls: OPTIONAL<CertificateRevocationLists>,
-        /**
-         * @summary `signerInfos`.
-         * @public
-         * @readonly
-         */
-        readonly signerInfos: SignerInfo[]
-    ) {}
+        version: Version,
+        recipientInfos: KeyTransportRecipientInfo[],
+        digestAlgorithms: DigestAlgorithmIdentifiers,
+        encryptedContentInfo: EncryptedContentInfo,
+        certificates: OPTIONAL<CertificateSet>,
+        crls: OPTIONAL<CertificateRevocationLists>,
+        signerInfos: SignerInfo[]
+    ) {
+        this.version = version;
+        this.recipientInfos = recipientInfos;
+        this.digestAlgorithms = digestAlgorithms;
+        this.encryptedContentInfo = encryptedContentInfo;
+        this.certificates = certificates;
+        this.crls = crls;
+        this.signerInfos = signerInfos;
+    }
 
     /**
      * @summary Restructures an object into a SignedAndEnvelopedData

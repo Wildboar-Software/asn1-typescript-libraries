@@ -73,7 +73,7 @@ export type MappingType = _enum_for_MappingType;
  *
  * @enum {number}
  */
-export const MappingType = _enum_for_MappingType;
+export const MappingType: typeof _enum_for_MappingType = _enum_for_MappingType;
 
 /**
  * @summary MappingType_none
@@ -86,7 +86,7 @@ export const MappingType = _enum_for_MappingType;
  * @constant
  * @type {number}
  */
-export const MappingType_none: MappingType =
+export const MappingType_none: 0 =
   MappingType.none; /* LONG_NAMED_ENUMERATED_VALUE */
 
 /**
@@ -94,7 +94,7 @@ export const MappingType_none: MappingType =
  * @constant
  * @type {number}
  */
-export const none: MappingType =
+export const none: 0 =
   MappingType.none; /* SHORT_NAMED_ENUMERATED_VALUE */
 
 /**
@@ -109,7 +109,7 @@ export const none: MappingType =
  * @constant
  * @type {number}
  */
-export const MappingType_explicit: MappingType =
+export const MappingType_explicit: 1 =
   MappingType.explicit; /* LONG_NAMED_ENUMERATED_VALUE */
 
 /**
@@ -117,7 +117,7 @@ export const MappingType_explicit: MappingType =
  * @constant
  * @type {number}
  */
-export const explicit: MappingType =
+export const explicit: 1 =
   MappingType.explicit; /* SHORT_NAMED_ENUMERATED_VALUE */
 
 /**
@@ -132,7 +132,7 @@ export const explicit: MappingType =
  * @constant
  * @type {number}
  */
-export const MappingType_extractIDI: MappingType =
+export const MappingType_extractIDI: 2 =
   MappingType.extractIDI; /* LONG_NAMED_ENUMERATED_VALUE */
 
 /**
@@ -140,7 +140,7 @@ export const MappingType_extractIDI: MappingType =
  * @constant
  * @type {number}
  */
-export const extractIDI: MappingType =
+export const extractIDI: 2 =
   MappingType.extractIDI; /* SHORT_NAMED_ENUMERATED_VALUE */
 
 /**
@@ -155,7 +155,7 @@ export const extractIDI: MappingType =
  * @constant
  * @type {number}
  */
-export const MappingType_extractDSP: MappingType =
+export const MappingType_extractDSP: 3 =
   MappingType.extractDSP; /* LONG_NAMED_ENUMERATED_VALUE */
 
 /**
@@ -163,14 +163,27 @@ export const MappingType_extractDSP: MappingType =
  * @constant
  * @type {number}
  */
-export const extractDSP: MappingType =
+export const extractDSP: 3 =
   MappingType.extractDSP; /* SHORT_NAMED_ENUMERATED_VALUE */
 
 
-export const _decode_MappingType = $._decodeEnumerated as $.ASN1Decoder<MappingType>;
+export function _decode_MappingType(el: _Element): MappingType {
+  const enumerated = $._decodeEnumerated(el);
+  switch (enumerated) {
+    case MappingType.none: return MappingType.none;
+    case MappingType.explicit: return MappingType.explicit;
+    case MappingType.extractIDI: return MappingType.extractIDI;
+    case MappingType.extractDSP: return MappingType.extractDSP;
+    default:
+      throw new _ConstructionError(
+        'Invalid ENUMERATED value ' + enumerated + ' for MappingType.',
+        el,
+      );
+  }
+}
 
 
-export const _encode_MappingType = $._encodeEnumerated as $.ASN1Encoder<MappingType>;
+export const _encode_MappingType: $.ASN1Encoder<MappingType> = $._encodeEnumerated as $.ASN1Encoder<MappingType>;
 
 
 /* eslint-enable */

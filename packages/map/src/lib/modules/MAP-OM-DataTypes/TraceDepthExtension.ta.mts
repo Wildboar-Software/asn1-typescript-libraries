@@ -1,7 +1,7 @@
 /* eslint-disable */
 import {
-    ASN1Element as _Element,
-    ENUMERATED
+    type ASN1Element as _Element,
+    type ENUMERATED
 } from "@wildboar/asn1";
 import * as $ from "@wildboar/asn1/functional";
 
@@ -47,7 +47,7 @@ type TraceDepthExtension = _enum_for_TraceDepthExtension | ENUMERATED;
  * @type {number}
  */
 export
-const TraceDepthExtension_minimumWithoutVendorSpecificExtension: TraceDepthExtension = 0; /* LONG_NAMED_ENUMERATED_VALUE */
+const TraceDepthExtension_minimumWithoutVendorSpecificExtension: _enum_for_TraceDepthExtension.minimumWithoutVendorSpecificExtension = _enum_for_TraceDepthExtension.minimumWithoutVendorSpecificExtension; /* LONG_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary minimumWithoutVendorSpecificExtension
@@ -60,7 +60,7 @@ const TraceDepthExtension_minimumWithoutVendorSpecificExtension: TraceDepthExten
  * @type {number}
  */
 export
-const minimumWithoutVendorSpecificExtension: TraceDepthExtension = TraceDepthExtension_minimumWithoutVendorSpecificExtension; /* SHORT_NAMED_ENUMERATED_VALUE */
+const minimumWithoutVendorSpecificExtension: _enum_for_TraceDepthExtension.minimumWithoutVendorSpecificExtension = TraceDepthExtension_minimumWithoutVendorSpecificExtension; /* SHORT_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary TraceDepthExtension_mediumWithoutVendorSpecificExtension
@@ -73,7 +73,7 @@ const minimumWithoutVendorSpecificExtension: TraceDepthExtension = TraceDepthExt
  * @type {number}
  */
 export
-const TraceDepthExtension_mediumWithoutVendorSpecificExtension: TraceDepthExtension = 1; /* LONG_NAMED_ENUMERATED_VALUE */
+const TraceDepthExtension_mediumWithoutVendorSpecificExtension: _enum_for_TraceDepthExtension.mediumWithoutVendorSpecificExtension = _enum_for_TraceDepthExtension.mediumWithoutVendorSpecificExtension; /* LONG_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary mediumWithoutVendorSpecificExtension
@@ -86,7 +86,7 @@ const TraceDepthExtension_mediumWithoutVendorSpecificExtension: TraceDepthExtens
  * @type {number}
  */
 export
-const mediumWithoutVendorSpecificExtension: TraceDepthExtension = TraceDepthExtension_mediumWithoutVendorSpecificExtension; /* SHORT_NAMED_ENUMERATED_VALUE */
+const mediumWithoutVendorSpecificExtension: _enum_for_TraceDepthExtension.mediumWithoutVendorSpecificExtension = TraceDepthExtension_mediumWithoutVendorSpecificExtension; /* SHORT_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary TraceDepthExtension_maximumWithoutVendorSpecificExtension
@@ -99,7 +99,7 @@ const mediumWithoutVendorSpecificExtension: TraceDepthExtension = TraceDepthExte
  * @type {number}
  */
 export
-const TraceDepthExtension_maximumWithoutVendorSpecificExtension: TraceDepthExtension = 2; /* LONG_NAMED_ENUMERATED_VALUE */
+const TraceDepthExtension_maximumWithoutVendorSpecificExtension: _enum_for_TraceDepthExtension.maximumWithoutVendorSpecificExtension = _enum_for_TraceDepthExtension.maximumWithoutVendorSpecificExtension; /* LONG_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary maximumWithoutVendorSpecificExtension
@@ -112,7 +112,7 @@ const TraceDepthExtension_maximumWithoutVendorSpecificExtension: TraceDepthExten
  * @type {number}
  */
 export
-const maximumWithoutVendorSpecificExtension: TraceDepthExtension = TraceDepthExtension_maximumWithoutVendorSpecificExtension; /* SHORT_NAMED_ENUMERATED_VALUE */
+const maximumWithoutVendorSpecificExtension: _enum_for_TraceDepthExtension.maximumWithoutVendorSpecificExtension = TraceDepthExtension_maximumWithoutVendorSpecificExtension; /* SHORT_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary Decodes an ASN.1 element into a(n) TraceDepthExtension
@@ -120,7 +120,7 @@ const maximumWithoutVendorSpecificExtension: TraceDepthExtension = TraceDepthExt
  * @param el The element being decoded.
  * @returns The decoded data structure.
  */
-export const _decode_TraceDepthExtension = $._decodeEnumerated;
+export const _decode_TraceDepthExtension: $.ASN1Decoder<number> = $._decodeEnumerated;
 
 /**
  * @summary Encodes a(n) TraceDepthExtension into an ASN.1 Element.
@@ -129,7 +129,7 @@ export const _decode_TraceDepthExtension = $._decodeEnumerated;
  * @param elGetter A function that can be used to get new ASN.1 elements.
  * @returns {_Element} The TraceDepthExtension, encoded as an ASN.1 Element.
  */
-export const _encode_TraceDepthExtension = $._encodeEnumerated;
+export const _encode_TraceDepthExtension: $.ASN1Encoder<number> = $._encodeEnumerated;
 
 
 /* eslint-enable */

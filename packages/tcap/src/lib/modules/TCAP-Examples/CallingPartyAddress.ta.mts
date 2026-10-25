@@ -1,6 +1,6 @@
 /* eslint-disable */
 import {
-    ASN1Element as _Element,
+    type ASN1Element as _Element,
     ASN1TagClass as _TagClass,
     ASN1Construction as _Construction,
     ASN1UniversalType as _UniversalType,
@@ -27,22 +27,13 @@ import {
  */
 export type CallingPartyAddress = IsdnNumber; // DefinedType
 
-let _cached_decoder_for_CallingPartyAddress: $.ASN1Decoder<CallingPartyAddress> | null = null;
-
 /**
  * @summary Decodes an ASN.1 element into a(n) CallingPartyAddress
  * @function
  * @param {_Element} el The element being decoded.
  * @returns {CallingPartyAddress} The decoded data structure.
  */
-export function _decode_CallingPartyAddress(el: _Element): CallingPartyAddress {
-    if (!_cached_decoder_for_CallingPartyAddress) {
-        _cached_decoder_for_CallingPartyAddress = _decode_IsdnNumber;
-    }
-    return _cached_decoder_for_CallingPartyAddress(el);
-}
-
-let _cached_encoder_for_CallingPartyAddress: $.ASN1Encoder<CallingPartyAddress> | null = null;
+export const _decode_CallingPartyAddress: $.ASN1Decoder<CallingPartyAddress> = _decode_IsdnNumber;
 
 /**
  * @summary Encodes a(n) CallingPartyAddress into an ASN.1 Element.
@@ -51,15 +42,7 @@ let _cached_encoder_for_CallingPartyAddress: $.ASN1Encoder<CallingPartyAddress> 
  * @param elGetter A function that can be used to get new ASN.1 elements.
  * @returns {_Element} The CallingPartyAddress, encoded as an ASN.1 Element.
  */
-export function _encode_CallingPartyAddress(
-    value: CallingPartyAddress,
-    elGetter: $.ASN1Encoder<CallingPartyAddress>
-): _Element {
-    if (!_cached_encoder_for_CallingPartyAddress) {
-        _cached_encoder_for_CallingPartyAddress = _encode_IsdnNumber;
-    }
-    return _cached_encoder_for_CallingPartyAddress(value, elGetter);
-}
+export const _encode_CallingPartyAddress: $.ASN1Encoder<CallingPartyAddress> = _encode_IsdnNumber;
 
 
 /* eslint-enable */

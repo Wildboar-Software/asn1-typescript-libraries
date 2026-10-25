@@ -1,18 +1,18 @@
 /* eslint-disable */
 import {
-    INTEGER,
-    OBJECT_IDENTIFIER,
-    OPTIONAL,
-    ASN1Element as _Element,
+    type INTEGER,
+    type OBJECT_IDENTIFIER,
+    type OPTIONAL,
+    type ASN1Element as _Element,
     ASN1TagClass as _TagClass,
     ASN1OverflowError
 } from "@wildboar/asn1";
 import * as $ from "@wildboar/asn1/functional";
-import { LawfulInterceptionIdentifier, _decode_LawfulInterceptionIdentifier, _encode_LawfulInterceptionIdentifier } from "../HI2Operations/LawfulInterceptionIdentifier.ta.mjs";
+import { type LawfulInterceptionIdentifier, _decode_LawfulInterceptionIdentifier, _encode_LawfulInterceptionIdentifier } from "../HI2Operations/LawfulInterceptionIdentifier.ta.mjs";
 // export { LawfulInterceptionIdentifier, _decode_LawfulInterceptionIdentifier, _encode_LawfulInterceptionIdentifier } from "../HI2Operations/LawfulInterceptionIdentifier.ta.mjs";
-import { ConfCorrelation, _decode_ConfCorrelation, _encode_ConfCorrelation } from "../CONFHI2Operations/ConfCorrelation.ta.mjs";
+import { type ConfCorrelation, _decode_ConfCorrelation, _encode_ConfCorrelation } from "../CONFHI2Operations/ConfCorrelation.ta.mjs";
 // export { ConfCorrelation, _decode_ConfCorrelation, _encode_ConfCorrelation } from "../CONFHI2Operations/ConfCorrelation.ta.mjs";
-import { TimeStamp, _decode_TimeStamp, _encode_TimeStamp } from "../HI2Operations/TimeStamp.ta.mjs";
+import { type TimeStamp, _decode_TimeStamp, _encode_TimeStamp } from "../HI2Operations/TimeStamp.ta.mjs";
 // export { TimeStamp, _decode_TimeStamp, _encode_TimeStamp } from "../HI2Operations/TimeStamp.ta.mjs";
 import { TPDU_direction, _decode_TPDU_direction, _encode_TPDU_direction, _enum_for_TPDU_direction } from "../CONF-HI3-IMS/TPDU-direction.ta.mjs";
 // export { TPDU_direction, _enum_for_TPDU_direction, TPDU_direction_from_target /* IMPORTED_LONG_ENUMERATION_ITEM */, from_target /* IMPORTED_SHORT_ENUMERATION_ITEM */, TPDU_direction_to_target /* IMPORTED_LONG_ENUMERATION_ITEM */, to_target /* IMPORTED_SHORT_ENUMERATION_ITEM */, TPDU_direction_unknown /* IMPORTED_LONG_ENUMERATION_ITEM */, unknown /* IMPORTED_SHORT_ENUMERATION_ITEM */, TPDU_direction_conftarget /* IMPORTED_LONG_ENUMERATION_ITEM */, conftarget /* IMPORTED_SHORT_ENUMERATION_ITEM */, TPDU_direction_from_mixer /* IMPORTED_LONG_ENUMERATION_ITEM */, from_mixer /* IMPORTED_SHORT_ENUMERATION_ITEM */, TPDU_direction_to_mixer /* IMPORTED_LONG_ENUMERATION_ITEM */, to_mixer /* IMPORTED_SHORT_ENUMERATION_ITEM */, TPDU_direction_combined /* IMPORTED_LONG_ENUMERATION_ITEM */, combined /* IMPORTED_SHORT_ENUMERATION_ITEM */, _decode_TPDU_direction, _encode_TPDU_direction } from "../CONF-HI3-IMS/TPDU-direction.ta.mjs";
@@ -192,7 +192,7 @@ class ConfLIC_header {
          * @static
          */
 
-    public static _enum_for_t_PDU_direction = _enum_for_TPDU_direction;
+    public static _enum_for_t_PDU_direction: typeof _enum_for_TPDU_direction = _enum_for_TPDU_direction;
 }
 
 /**

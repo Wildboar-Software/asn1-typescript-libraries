@@ -11,22 +11,22 @@ import {
 } from '@wildboar/asn1';
 import * as $ from '@wildboar/asn1/functional';
 import {
-  EndpointIRI,
+  type EndpointIRI,
   _decode_EndpointIRI,
   _encode_EndpointIRI,
 } from '../BIP/EndpointIRI.ta.mjs';
 import {
-  UnsignedInt,
+  type UnsignedInt,
   _decode_UnsignedInt,
   _encode_UnsignedInt,
 } from '../BIP/UnsignedInt.ta.mjs';
 import {
-  BIPAcknowledgement_params,
+  type BIPAcknowledgement_params,
   _decode_BIPAcknowledgement_params,
   _encode_BIPAcknowledgement_params,
 } from '../BIP/BIPAcknowledgement-params.ta.mjs';
 import {
-  BioAPI_RETURN,
+  type BioAPI_RETURN,
   _decode_BioAPI_RETURN,
   _encode_BioAPI_RETURN,
 } from '../BIP/BioAPI-RETURN.ta.mjs';
@@ -69,7 +69,7 @@ export class BIPAcknowledgement {
    * @public
    * @readonly
    */
-  readonly masterEndpointIRI: EndpointIRI;
+  public readonly masterEndpointIRI: EndpointIRI;
   /**
    * @summary `slaveEndpointIRI`.
    * @description
@@ -80,7 +80,7 @@ export class BIPAcknowledgement {
    * @public
    * @readonly
    */
-  readonly slaveEndpointIRI: EndpointIRI;
+  public readonly slaveEndpointIRI: EndpointIRI;
   /**
    * @summary `linkNumber`.
    * @description
@@ -90,7 +90,7 @@ export class BIPAcknowledgement {
    * @public
    * @readonly
    */
-  readonly linkNumber: UnsignedInt;
+  public readonly linkNumber: UnsignedInt;
   /**
    * @summary `notificationId`.
    * @description
@@ -101,7 +101,7 @@ export class BIPAcknowledgement {
    * @public
    * @readonly
    */
-  readonly notificationId: UnsignedInt;
+  public readonly notificationId: UnsignedInt;
   /**
    * @summary `params`.
    * @description
@@ -113,7 +113,7 @@ export class BIPAcknowledgement {
    * @public
    * @readonly
    */
-  readonly params: BIPAcknowledgement_params;
+  public readonly params: BIPAcknowledgement_params;
   /**
    * @summary `returnValue`.
    * @description
@@ -124,7 +124,7 @@ export class BIPAcknowledgement {
    * @public
    * @readonly
    */
-  readonly returnValue: BioAPI_RETURN;
+  public readonly returnValue: BioAPI_RETURN;
 
   constructor(
     masterEndpointIRI: EndpointIRI,

@@ -1,7 +1,7 @@
 /* eslint-disable */
 
 import * as $ from "@wildboar/asn1/functional";
-import { ENUMERATED, ASN1Element as _Element } from "@wildboar/asn1";
+import { type ENUMERATED, ASN1Element as _Element } from "@wildboar/asn1";
 
 
 
@@ -86,7 +86,7 @@ type GetLocationTrackingCapabilitiesResult_collectionFilterDefault = _enum_for_G
  * @enum {number}
  */
 export
-const GetLocationTrackingCapabilitiesResult_collectionFilterDefault = _enum_for_GetLocationTrackingCapabilitiesResult_collectionFilterDefault;
+const GetLocationTrackingCapabilitiesResult_collectionFilterDefault: typeof _enum_for_GetLocationTrackingCapabilitiesResult_collectionFilterDefault = _enum_for_GetLocationTrackingCapabilitiesResult_collectionFilterDefault;
 
 /**
  * @summary GetLocationTrackingCapabilitiesResult_collectionFilterDefault_horizontalMovement
@@ -98,7 +98,7 @@ const GetLocationTrackingCapabilitiesResult_collectionFilterDefault = _enum_for_
  * @type {number}
  */
 export
-const GetLocationTrackingCapabilitiesResult_collectionFilterDefault_horizontalMovement: GetLocationTrackingCapabilitiesResult_collectionFilterDefault = GetLocationTrackingCapabilitiesResult_collectionFilterDefault.horizontalMovement; /* LONG_NAMED_ENUMERATED_VALUE */
+const GetLocationTrackingCapabilitiesResult_collectionFilterDefault_horizontalMovement: _enum_for_GetLocationTrackingCapabilitiesResult_collectionFilterDefault.horizontalMovement = GetLocationTrackingCapabilitiesResult_collectionFilterDefault.horizontalMovement; /* LONG_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary horizontalMovement
@@ -110,7 +110,7 @@ const GetLocationTrackingCapabilitiesResult_collectionFilterDefault_horizontalMo
  * @type {number}
  */
 export
-const horizontalMovement: GetLocationTrackingCapabilitiesResult_collectionFilterDefault = GetLocationTrackingCapabilitiesResult_collectionFilterDefault.horizontalMovement; /* SHORT_NAMED_ENUMERATED_VALUE */
+const horizontalMovement: _enum_for_GetLocationTrackingCapabilitiesResult_collectionFilterDefault.horizontalMovement = GetLocationTrackingCapabilitiesResult_collectionFilterDefault.horizontalMovement; /* SHORT_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary GetLocationTrackingCapabilitiesResult_collectionFilterDefault_verticalMovement
@@ -122,7 +122,7 @@ const horizontalMovement: GetLocationTrackingCapabilitiesResult_collectionFilter
  * @type {number}
  */
 export
-const GetLocationTrackingCapabilitiesResult_collectionFilterDefault_verticalMovement: GetLocationTrackingCapabilitiesResult_collectionFilterDefault = GetLocationTrackingCapabilitiesResult_collectionFilterDefault.verticalMovement; /* LONG_NAMED_ENUMERATED_VALUE */
+const GetLocationTrackingCapabilitiesResult_collectionFilterDefault_verticalMovement: _enum_for_GetLocationTrackingCapabilitiesResult_collectionFilterDefault.verticalMovement = GetLocationTrackingCapabilitiesResult_collectionFilterDefault.verticalMovement; /* LONG_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary verticalMovement
@@ -134,7 +134,7 @@ const GetLocationTrackingCapabilitiesResult_collectionFilterDefault_verticalMove
  * @type {number}
  */
 export
-const verticalMovement: GetLocationTrackingCapabilitiesResult_collectionFilterDefault = GetLocationTrackingCapabilitiesResult_collectionFilterDefault.verticalMovement; /* SHORT_NAMED_ENUMERATED_VALUE */
+const verticalMovement: _enum_for_GetLocationTrackingCapabilitiesResult_collectionFilterDefault.verticalMovement = GetLocationTrackingCapabilitiesResult_collectionFilterDefault.verticalMovement; /* SHORT_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary GetLocationTrackingCapabilitiesResult_collectionFilterDefault_civicAddressChange
@@ -146,7 +146,7 @@ const verticalMovement: GetLocationTrackingCapabilitiesResult_collectionFilterDe
  * @type {number}
  */
 export
-const GetLocationTrackingCapabilitiesResult_collectionFilterDefault_civicAddressChange: GetLocationTrackingCapabilitiesResult_collectionFilterDefault = GetLocationTrackingCapabilitiesResult_collectionFilterDefault.civicAddressChange; /* LONG_NAMED_ENUMERATED_VALUE */
+const GetLocationTrackingCapabilitiesResult_collectionFilterDefault_civicAddressChange: _enum_for_GetLocationTrackingCapabilitiesResult_collectionFilterDefault.civicAddressChange = GetLocationTrackingCapabilitiesResult_collectionFilterDefault.civicAddressChange; /* LONG_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary civicAddressChange
@@ -158,7 +158,7 @@ const GetLocationTrackingCapabilitiesResult_collectionFilterDefault_civicAddress
  * @type {number}
  */
 export
-const civicAddressChange: GetLocationTrackingCapabilitiesResult_collectionFilterDefault = GetLocationTrackingCapabilitiesResult_collectionFilterDefault.civicAddressChange; /* SHORT_NAMED_ENUMERATED_VALUE */
+const civicAddressChange: _enum_for_GetLocationTrackingCapabilitiesResult_collectionFilterDefault.civicAddressChange = GetLocationTrackingCapabilitiesResult_collectionFilterDefault.civicAddressChange; /* SHORT_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary GetLocationTrackingCapabilitiesResult_collectionFilterDefault_none
@@ -170,7 +170,7 @@ const civicAddressChange: GetLocationTrackingCapabilitiesResult_collectionFilter
  * @type {number}
  */
 export
-const GetLocationTrackingCapabilitiesResult_collectionFilterDefault_none: GetLocationTrackingCapabilitiesResult_collectionFilterDefault = GetLocationTrackingCapabilitiesResult_collectionFilterDefault.none; /* LONG_NAMED_ENUMERATED_VALUE */
+const GetLocationTrackingCapabilitiesResult_collectionFilterDefault_none: _enum_for_GetLocationTrackingCapabilitiesResult_collectionFilterDefault.none = GetLocationTrackingCapabilitiesResult_collectionFilterDefault.none; /* LONG_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary none
@@ -182,7 +182,7 @@ const GetLocationTrackingCapabilitiesResult_collectionFilterDefault_none: GetLoc
  * @type {number}
  */
 export
-const none: GetLocationTrackingCapabilitiesResult_collectionFilterDefault = GetLocationTrackingCapabilitiesResult_collectionFilterDefault.none; /* SHORT_NAMED_ENUMERATED_VALUE */
+const none: _enum_for_GetLocationTrackingCapabilitiesResult_collectionFilterDefault.none = GetLocationTrackingCapabilitiesResult_collectionFilterDefault.none; /* SHORT_NAMED_ENUMERATED_VALUE */
 
 let _cached_decoder_for_GetLocationTrackingCapabilitiesResult_collectionFilterDefault: $.ASN1Decoder<GetLocationTrackingCapabilitiesResult_collectionFilterDefault> | null = null;
 

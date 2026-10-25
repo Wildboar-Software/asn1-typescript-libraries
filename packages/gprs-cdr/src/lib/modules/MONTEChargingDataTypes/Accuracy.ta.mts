@@ -84,7 +84,7 @@ type Accuracy = _enum_for_Accuracy;
  * @enum {number}
  */
 export
-const Accuracy = _enum_for_Accuracy;
+const Accuracy: typeof _enum_for_Accuracy = _enum_for_Accuracy;
 
 /**
  * @summary Accuracy_cGIECGI
@@ -98,7 +98,7 @@ const Accuracy = _enum_for_Accuracy;
  * @type {number}
  */
 export
-const Accuracy_cGIECGI: Accuracy = Accuracy.cGIECGI; /* LONG_NAMED_ENUMERATED_VALUE */
+const Accuracy_cGIECGI: _enum_for_Accuracy.cGIECGI = Accuracy.cGIECGI; /* LONG_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary cGIECGI
@@ -110,7 +110,7 @@ const Accuracy_cGIECGI: Accuracy = Accuracy.cGIECGI; /* LONG_NAMED_ENUMERATED_VA
  * @type {number}
  */
 export
-const cGIECGI: Accuracy = Accuracy.cGIECGI; /* SHORT_NAMED_ENUMERATED_VALUE */
+const cGIECGI: _enum_for_Accuracy.cGIECGI = Accuracy.cGIECGI; /* SHORT_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary Accuracy_eNB
@@ -124,7 +124,7 @@ const cGIECGI: Accuracy = Accuracy.cGIECGI; /* SHORT_NAMED_ENUMERATED_VALUE */
  * @type {number}
  */
 export
-const Accuracy_eNB: Accuracy = Accuracy.eNB; /* LONG_NAMED_ENUMERATED_VALUE */
+const Accuracy_eNB: _enum_for_Accuracy.eNB = Accuracy.eNB; /* LONG_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary eNB
@@ -136,7 +136,7 @@ const Accuracy_eNB: Accuracy = Accuracy.eNB; /* LONG_NAMED_ENUMERATED_VALUE */
  * @type {number}
  */
 export
-const eNB: Accuracy = Accuracy.eNB; /* SHORT_NAMED_ENUMERATED_VALUE */
+const eNB: _enum_for_Accuracy.eNB = Accuracy.eNB; /* SHORT_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary Accuracy_lATARA
@@ -151,7 +151,7 @@ const eNB: Accuracy = Accuracy.eNB; /* SHORT_NAMED_ENUMERATED_VALUE */
  * @type {number}
  */
 export
-const Accuracy_lATARA: Accuracy = Accuracy.lATARA; /* LONG_NAMED_ENUMERATED_VALUE */
+const Accuracy_lATARA: _enum_for_Accuracy.lATARA = Accuracy.lATARA; /* LONG_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary lATARA
@@ -163,7 +163,7 @@ const Accuracy_lATARA: Accuracy = Accuracy.lATARA; /* LONG_NAMED_ENUMERATED_VALU
  * @type {number}
  */
 export
-const lATARA: Accuracy = Accuracy.lATARA; /* SHORT_NAMED_ENUMERATED_VALUE */
+const lATARA: _enum_for_Accuracy.lATARA = Accuracy.lATARA; /* SHORT_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary Accuracy_pRA
@@ -176,7 +176,7 @@ const lATARA: Accuracy = Accuracy.lATARA; /* SHORT_NAMED_ENUMERATED_VALUE */
  * @type {number}
  */
 export
-const Accuracy_pRA: Accuracy = Accuracy.pRA; /* LONG_NAMED_ENUMERATED_VALUE */
+const Accuracy_pRA: _enum_for_Accuracy.pRA = Accuracy.pRA; /* LONG_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary pRA
@@ -189,7 +189,7 @@ const Accuracy_pRA: Accuracy = Accuracy.pRA; /* LONG_NAMED_ENUMERATED_VALUE */
  * @type {number}
  */
 export
-const pRA: Accuracy = Accuracy.pRA; /* SHORT_NAMED_ENUMERATED_VALUE */
+const pRA: _enum_for_Accuracy.pRA = Accuracy.pRA; /* SHORT_NAMED_ENUMERATED_VALUE */
 
 export
 const _decode_Accuracy: $.ASN1Decoder<Accuracy> = $._decodeEnumerated;

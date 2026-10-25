@@ -1,7 +1,7 @@
 /* eslint-disable */
 import {
-    BIT_STRING,
-    ASN1Element as _Element,
+    type BIT_STRING,
+    type ASN1Element as _Element,
     ASN1TagClass as _TagClass,
     ASN1Construction as _Construction,
     ASN1UniversalType as _UniversalType,
@@ -44,7 +44,7 @@ class SubjectPublicKeyInfo {
      * @public
      * @readonly
      */
-    readonly algorithm: AlgorithmIdentifier;
+    public readonly algorithm: AlgorithmIdentifier;
     /**
      * @summary `subjectPublicKey`.
      * @description
@@ -55,7 +55,7 @@ class SubjectPublicKeyInfo {
      * @public
      * @readonly
      */
-    readonly subjectPublicKey: BIT_STRING;
+    public readonly subjectPublicKey: BIT_STRING;
 
     constructor (
         algorithm: AlgorithmIdentifier,

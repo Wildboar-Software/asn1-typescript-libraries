@@ -1,10 +1,10 @@
 /* eslint-disable */
 import {
-    INTEGER,
-    OBJECT_IDENTIFIER,
-    SEQUENCE,
-    SET,
-    ASN1Element as _Element,
+    type INTEGER,
+    type OBJECT_IDENTIFIER,
+    type SEQUENCE,
+    type SET,
+    type ASN1Element as _Element,
     ASN1TagClass as _TagClass,
     ASN1ConstructionError as _ConstructionError,
 } from "@wildboar/asn1";
@@ -30,26 +30,34 @@ import * as $ from "@wildboar/asn1/functional";
  */
 export
 class TerminalRDNRange {
+    /**
+     * @summary `attributeId`.
+     * @public
+     * @readonly
+     */
+    public readonly attributeId: OBJECT_IDENTIFIER;
+    /**
+     * @summary `firstObjectInRange`.
+     * @public
+     * @readonly
+     */
+    public readonly firstObjectInRange: INTEGER;
+    /**
+     * @summary `lastObjectInRange`.
+     * @public
+     * @readonly
+     */
+    public readonly lastObjectInRange: INTEGER;
+
     constructor (
-        /**
-         * @summary `attributeId`.
-         * @public
-         * @readonly
-         */
-        readonly attributeId: OBJECT_IDENTIFIER,
-        /**
-         * @summary `firstObjectInRange`.
-         * @public
-         * @readonly
-         */
-        readonly firstObjectInRange: INTEGER,
-        /**
-         * @summary `lastObjectInRange`.
-         * @public
-         * @readonly
-         */
-        readonly lastObjectInRange: INTEGER
-    ) {}
+        attributeId: OBJECT_IDENTIFIER,
+        firstObjectInRange: INTEGER,
+        lastObjectInRange: INTEGER
+    ) {
+        this.attributeId = attributeId;
+        this.firstObjectInRange = firstObjectInRange;
+        this.lastObjectInRange = lastObjectInRange;
+    }
 
     /**
      * @summary Restructures an object into a TerminalRDNRange

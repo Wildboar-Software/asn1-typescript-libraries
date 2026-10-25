@@ -1,6 +1,6 @@
 /* eslint-disable */
 import {
-  VisibleString,
+  type VisibleString,
   ASN1Element as _Element,
   ASN1TagClass as _TagClass,
   ASN1Construction as _Construction,
@@ -41,12 +41,12 @@ export type EndpointIRI = VisibleString; // VisibleString
 
 
 
-export const _decode_EndpointIRI = $._decodeVisibleString;
+export const _decode_EndpointIRI: $.ASN1Decoder<string> = $._decodeVisibleString;
 
 
 
 
-export const _encode_EndpointIRI = $._encodeVisibleString;
+export const _encode_EndpointIRI: $.ASN1Encoder<string> = $._encodeVisibleString;
 
 
 /* eslint-enable */

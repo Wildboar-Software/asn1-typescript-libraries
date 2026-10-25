@@ -1,7 +1,7 @@
 /* eslint-disable */
 import {
-    OPTIONAL,
-    ASN1Element as _Element,
+    type OPTIONAL,
+    type ASN1Element as _Element,
     ASN1TagClass as _TagClass,
     ASN1Construction as _Construction,
     ASN1UniversalType as _UniversalType,
@@ -39,20 +39,26 @@ import {
  *
  */
 export class AutoActionError {
+    /**
+     * @summary `error_code`.
+     * @public
+     * @readonly
+     */
+    public readonly error_code: Code;
+    /**
+     * @summary `error_parameter`.
+     * @public
+     * @readonly
+     */
+    public readonly error_parameter?: OPTIONAL<_Element>;
+
     constructor(
-        /**
-         * @summary `error_code`.
-         * @public
-         * @readonly
-         */
-        readonly error_code: Code,
-        /**
-         * @summary `error_parameter`.
-         * @public
-         * @readonly
-         */
-        readonly error_parameter?: OPTIONAL<_Element>
-    ) {}
+        error_code: Code,
+        error_parameter?: OPTIONAL<_Element>
+    ) {
+        this.error_code = error_code;
+        this.error_parameter = error_parameter;
+    }
 
     /**
      * @summary Restructures an object into a AutoActionError

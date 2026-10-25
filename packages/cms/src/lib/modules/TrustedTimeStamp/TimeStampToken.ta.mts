@@ -31,7 +31,7 @@ export type TimeStampToken = ContentInfo; // DefinedType
  * @param {_Element} el The element being decoded.
  * @returns {TimeStampToken} The decoded data structure.
  */
-export const _decode_TimeStampToken = _decode_ContentInfo;
+export const _decode_TimeStampToken: typeof _decode_ContentInfo = _decode_ContentInfo;
 
 
 /**
@@ -41,7 +41,7 @@ export const _decode_TimeStampToken = _decode_ContentInfo;
  * @param elGetter A function that can be used to get new ASN.1 elements.
  * @returns {_Element} The TimeStampToken, encoded as an ASN.1 Element.
  */
-export const _encode_TimeStampToken = _encode_ContentInfo;
+export const _encode_TimeStampToken: typeof _encode_ContentInfo = _encode_ContentInfo;
 
 
 /* eslint-enable */

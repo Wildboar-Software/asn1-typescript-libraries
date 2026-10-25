@@ -1,6 +1,6 @@
 /* eslint-disable */
 import {
-    ASN1Element as _Element,
+    type ASN1Element as _Element,
     ASN1TagClass as _TagClass,
     ASN1Construction as _Construction,
     ASN1UniversalType as _UniversalType,
@@ -11,12 +11,12 @@ import {
 } from '@wildboar/asn1';
 import * as $ from '@wildboar/asn1/functional';
 import {
-    ProbeSubmissionIdentifier,
+    type ProbeSubmissionIdentifier,
     _decode_ProbeSubmissionIdentifier,
     _encode_ProbeSubmissionIdentifier,
 } from '../MTSAbstractService/ProbeSubmissionIdentifier.ta.mjs';
 import {
-    ProbeSubmissionTime,
+    type ProbeSubmissionTime,
     _decode_ProbeSubmissionTime,
     _encode_ProbeSubmissionTime,
 } from '../MTSAbstractService/ProbeSubmissionTime.ta.mjs';
@@ -34,20 +34,26 @@ import {
  *
  */
 export class originate_probe_ResultType {
+    /**
+     * @summary `submission_identifier`.
+     * @public
+     * @readonly
+     */
+    public readonly submission_identifier: ProbeSubmissionIdentifier;
+    /**
+     * @summary `submission_time`.
+     * @public
+     * @readonly
+     */
+    public readonly submission_time: ProbeSubmissionTime;
+
     constructor(
-        /**
-         * @summary `submission_identifier`.
-         * @public
-         * @readonly
-         */
-        readonly submission_identifier: ProbeSubmissionIdentifier,
-        /**
-         * @summary `submission_time`.
-         * @public
-         * @readonly
-         */
-        readonly submission_time: ProbeSubmissionTime
-    ) {}
+        submission_identifier: ProbeSubmissionIdentifier,
+        submission_time: ProbeSubmissionTime
+    ) {
+        this.submission_identifier = submission_identifier;
+        this.submission_time = submission_time;
+    }
 
     /**
      * @summary Restructures an object into a originate_probe_ResultType

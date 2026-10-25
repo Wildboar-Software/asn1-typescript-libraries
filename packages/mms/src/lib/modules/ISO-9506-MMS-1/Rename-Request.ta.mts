@@ -1,6 +1,6 @@
 /* eslint-disable */
 import {
-    ASN1Element as _Element,
+    type ASN1Element as _Element,
     ASN1TagClass as _TagClass,
     ASN1Construction as _Construction,
     ASN1UniversalType as _UniversalType,
@@ -10,9 +10,9 @@ import {
     ASN1ConstructionError as _ConstructionError,
 } from "@wildboar/asn1";
 import * as $ from "@wildboar/asn1/functional";
-import { ObjectClass, _decode_ObjectClass, _encode_ObjectClass } from "../ISO-9506-MMS-1/ObjectClass.ta.mjs";
-import { ObjectName, _decode_ObjectName, _encode_ObjectName } from "../ISO-9506-MMS-1/ObjectName.ta.mjs";
-import { Identifier, _decode_Identifier, _encode_Identifier } from "../ISO-9506-MMS-1/Identifier.ta.mjs";
+import { type ObjectClass, _decode_ObjectClass, _encode_ObjectClass } from "../ISO-9506-MMS-1/ObjectClass.ta.mjs";
+import { type ObjectName, _decode_ObjectName, _encode_ObjectName } from "../ISO-9506-MMS-1/ObjectName.ta.mjs";
+import { type Identifier, _decode_Identifier, _encode_Identifier } from "../ISO-9506-MMS-1/Identifier.ta.mjs";
 
 
 /**
@@ -38,39 +38,47 @@ import { Identifier, _decode_Identifier, _encode_Identifier } from "../ISO-9506-
  */
 export
 class Rename_Request {
+    /**
+     * @summary `objectClass`.
+     * @description
+     *
+     * Class of the object to rename. ISO 9506-1:2003 §10.7.1.1.1.
+     *
+     * @public
+     * @readonly
+     */
+    public readonly objectClass: ObjectClass;
+    /**
+     * @summary `currentName`.
+     * @description
+     *
+     * Current object name. ISO 9506-1:2003 §10.7.1.1.2.
+     *
+     * @public
+     * @readonly
+     */
+    public readonly currentName: ObjectName;
+    /**
+     * @summary `newIdentifier`.
+     * @description
+     *
+     * New identifier part of the object name (scope unchanged).
+     * ISO 9506-1:2003 §10.7.1.1.3.
+     *
+     * @public
+     * @readonly
+     */
+    public readonly newIdentifier: Identifier;
+
     constructor (
-        /**
-         * @summary `objectClass`.
-         * @description
-         *
-         * Class of the object to rename. ISO 9506-1:2003 §10.7.1.1.1.
-         *
-         * @public
-         * @readonly
-         */
-        readonly objectClass: ObjectClass,
-        /**
-         * @summary `currentName`.
-         * @description
-         *
-         * Current object name. ISO 9506-1:2003 §10.7.1.1.2.
-         *
-         * @public
-         * @readonly
-         */
-        readonly currentName: ObjectName,
-        /**
-         * @summary `newIdentifier`.
-         * @description
-         *
-         * New identifier part of the object name (scope unchanged).
-         * ISO 9506-1:2003 §10.7.1.1.3.
-         *
-         * @public
-         * @readonly
-         */
-        readonly newIdentifier: Identifier
-    ) {}
+        objectClass: ObjectClass,
+        currentName: ObjectName,
+        newIdentifier: Identifier
+    ) {
+        this.objectClass = objectClass;
+        this.currentName = currentName;
+        this.newIdentifier = newIdentifier;
+    }
 
     /**
      * @summary Restructures an object into a Rename_Request

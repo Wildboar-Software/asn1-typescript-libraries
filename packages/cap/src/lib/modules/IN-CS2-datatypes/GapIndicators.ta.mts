@@ -1,6 +1,6 @@
 /* eslint-disable */
 import {
-    ASN1Element as _Element,
+    type ASN1Element as _Element,
     ASN1TagClass as _TagClass,
     ASN1Construction as _Construction,
     ASN1UniversalType as _UniversalType,
@@ -10,8 +10,8 @@ import {
     ASN1ConstructionError as _ConstructionError,
 } from "@wildboar/asn1";
 import * as $ from "@wildboar/asn1/functional";
-import { Duration, _decode_Duration, _encode_Duration } from "../IN-CS2-datatypes/Duration.ta.mjs";
-import { Interval, _decode_Interval, _encode_Interval } from "../IN-CS2-datatypes/Interval.ta.mjs";
+import { type Duration, _decode_Duration, _encode_Duration } from "../IN-CS2-datatypes/Duration.ta.mjs";
+import { type Interval, _decode_Interval, _encode_Interval } from "../IN-CS2-datatypes/Interval.ta.mjs";
 
 
 /**
@@ -31,20 +31,26 @@ import { Interval, _decode_Interval, _encode_Interval } from "../IN-CS2-datatype
  */
 export
 class GapIndicators {
+    /**
+     * @summary `duration`.
+     * @public
+     * @readonly
+     */
+    public readonly duration: Duration;
+    /**
+     * @summary `gapInterval`.
+     * @public
+     * @readonly
+     */
+    public readonly gapInterval: Interval;
+
     constructor (
-        /**
-         * @summary `duration`.
-         * @public
-         * @readonly
-         */
-        readonly duration: Duration,
-        /**
-         * @summary `gapInterval`.
-         * @public
-         * @readonly
-         */
-        readonly gapInterval: Interval
-    ) {}
+        duration: Duration,
+        gapInterval: Interval
+    ) {
+        this.duration = duration;
+        this.gapInterval = gapInterval;
+    }
 
     /**
      * @summary Restructures an object into a GapIndicators

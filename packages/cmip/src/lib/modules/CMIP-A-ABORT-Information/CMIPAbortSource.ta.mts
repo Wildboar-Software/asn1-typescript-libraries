@@ -65,7 +65,7 @@ export type CMIPAbortSource = _enum_for_CMIPAbortSource;
  *
  * @enum {number}
  */
-export const CMIPAbortSource = _enum_for_CMIPAbortSource;
+export const CMIPAbortSource: typeof _enum_for_CMIPAbortSource = _enum_for_CMIPAbortSource;
 
 
 /**
@@ -78,7 +78,7 @@ export const CMIPAbortSource = _enum_for_CMIPAbortSource;
  * @constant
  * @type {number}
  */
-export const CMIPAbortSource_cmiseServiceUser: CMIPAbortSource =
+export const CMIPAbortSource_cmiseServiceUser: 0 =
   CMIPAbortSource.cmiseServiceUser; /* LONG_NAMED_ENUMERATED_VALUE */
 
 
@@ -91,7 +91,7 @@ export const CMIPAbortSource_cmiseServiceUser: CMIPAbortSource =
  * @constant
  * @type {number}
  */
-export const cmiseServiceUser: CMIPAbortSource =
+export const cmiseServiceUser: 0 =
   CMIPAbortSource.cmiseServiceUser; /* SHORT_NAMED_ENUMERATED_VALUE */
 
 
@@ -105,7 +105,7 @@ export const cmiseServiceUser: CMIPAbortSource =
  * @constant
  * @type {number}
  */
-export const CMIPAbortSource_cmiseServiceProvider: CMIPAbortSource =
+export const CMIPAbortSource_cmiseServiceProvider: 1 =
   CMIPAbortSource.cmiseServiceProvider; /* LONG_NAMED_ENUMERATED_VALUE */
 
 
@@ -118,18 +118,18 @@ export const CMIPAbortSource_cmiseServiceProvider: CMIPAbortSource =
  * @constant
  * @type {number}
  */
-export const cmiseServiceProvider: CMIPAbortSource =
+export const cmiseServiceProvider: 1 =
   CMIPAbortSource.cmiseServiceProvider; /* SHORT_NAMED_ENUMERATED_VALUE */
 
 
 
 
-export const _decode_CMIPAbortSource = $._decodeEnumerated as $.ASN1Decoder<CMIPAbortSource>;
+export const _decode_CMIPAbortSource: $.ASN1Decoder<CMIPAbortSource> = $._decodeEnumerated as $.ASN1Decoder<CMIPAbortSource>;
 
 
 
 
-export const _encode_CMIPAbortSource = $._encodeEnumerated as $.ASN1Encoder<CMIPAbortSource>;
+export const _encode_CMIPAbortSource: $.ASN1Encoder<CMIPAbortSource> = $._encodeEnumerated as $.ASN1Encoder<CMIPAbortSource>;
 
 
 /* eslint-enable */

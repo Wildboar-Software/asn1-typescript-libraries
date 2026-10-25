@@ -1,6 +1,6 @@
 /* eslint-disable */
 import {
-    ASN1Element as _Element,
+    type ASN1Element as _Element,
     ASN1TagClass as _TagClass,
     ASN1Construction as _Construction,
     ASN1UniversalType as _UniversalType,
@@ -34,14 +34,18 @@ import {
  *
  */
 export class AttributeError {
+    /**
+     * @summary `problems`.
+     * @public
+     * @readonly
+     */
+    public readonly problems: AttributeError_problems_Item[];
+
     constructor(
-        /**
-         * @summary `problems`.
-         * @public
-         * @readonly
-         */
-        readonly problems: AttributeError_problems_Item[]
-    ) {}
+        problems: AttributeError_problems_Item[]
+    ) {
+        this.problems = problems;
+    }
 
     /**
      * @summary Restructures an object into a AttributeError

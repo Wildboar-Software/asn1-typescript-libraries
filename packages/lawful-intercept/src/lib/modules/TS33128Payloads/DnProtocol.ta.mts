@@ -69,7 +69,7 @@ type DnProtocol = _enum_for_DnProtocol;
  * @enum {number}
  */
 export
-const DnProtocol = _enum_for_DnProtocol;
+const DnProtocol: typeof _enum_for_DnProtocol = _enum_for_DnProtocol;
 
 /**
  * @summary DnProtocol_dnsQname
@@ -77,7 +77,7 @@ const DnProtocol = _enum_for_DnProtocol;
  * @type {number}
  */
 export
-const DnProtocol_dnsQname: DnProtocol = DnProtocol.dnsQname; /* LONG_NAMED_ENUMERATED_VALUE */
+const DnProtocol_dnsQname: _enum_for_DnProtocol.dnsQname = DnProtocol.dnsQname; /* LONG_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary dnsQname
@@ -85,7 +85,7 @@ const DnProtocol_dnsQname: DnProtocol = DnProtocol.dnsQname; /* LONG_NAMED_ENUME
  * @type {number}
  */
 export
-const dnsQname: DnProtocol = DnProtocol.dnsQname; /* SHORT_NAMED_ENUMERATED_VALUE */
+const dnsQname: _enum_for_DnProtocol.dnsQname = DnProtocol.dnsQname; /* SHORT_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary DnProtocol_tlsSni
@@ -93,7 +93,7 @@ const dnsQname: DnProtocol = DnProtocol.dnsQname; /* SHORT_NAMED_ENUMERATED_VALU
  * @type {number}
  */
 export
-const DnProtocol_tlsSni: DnProtocol = DnProtocol.tlsSni; /* LONG_NAMED_ENUMERATED_VALUE */
+const DnProtocol_tlsSni: _enum_for_DnProtocol.tlsSni = DnProtocol.tlsSni; /* LONG_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary tlsSni
@@ -101,7 +101,7 @@ const DnProtocol_tlsSni: DnProtocol = DnProtocol.tlsSni; /* LONG_NAMED_ENUMERATE
  * @type {number}
  */
 export
-const tlsSni: DnProtocol = DnProtocol.tlsSni; /* SHORT_NAMED_ENUMERATED_VALUE */
+const tlsSni: _enum_for_DnProtocol.tlsSni = DnProtocol.tlsSni; /* SHORT_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary DnProtocol_tlsSan
@@ -109,7 +109,7 @@ const tlsSni: DnProtocol = DnProtocol.tlsSni; /* SHORT_NAMED_ENUMERATED_VALUE */
  * @type {number}
  */
 export
-const DnProtocol_tlsSan: DnProtocol = DnProtocol.tlsSan; /* LONG_NAMED_ENUMERATED_VALUE */
+const DnProtocol_tlsSan: _enum_for_DnProtocol.tlsSan = DnProtocol.tlsSan; /* LONG_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary tlsSan
@@ -117,7 +117,7 @@ const DnProtocol_tlsSan: DnProtocol = DnProtocol.tlsSan; /* LONG_NAMED_ENUMERATE
  * @type {number}
  */
 export
-const tlsSan: DnProtocol = DnProtocol.tlsSan; /* SHORT_NAMED_ENUMERATED_VALUE */
+const tlsSan: _enum_for_DnProtocol.tlsSan = DnProtocol.tlsSan; /* SHORT_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary DnProtocol_tlsScn
@@ -125,7 +125,7 @@ const tlsSan: DnProtocol = DnProtocol.tlsSan; /* SHORT_NAMED_ENUMERATED_VALUE */
  * @type {number}
  */
 export
-const DnProtocol_tlsScn: DnProtocol = DnProtocol.tlsScn; /* LONG_NAMED_ENUMERATED_VALUE */
+const DnProtocol_tlsScn: _enum_for_DnProtocol.tlsScn = DnProtocol.tlsScn; /* LONG_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary tlsScn
@@ -133,7 +133,7 @@ const DnProtocol_tlsScn: DnProtocol = DnProtocol.tlsScn; /* LONG_NAMED_ENUMERATE
  * @type {number}
  */
 export
-const tlsScn: DnProtocol = DnProtocol.tlsScn; /* SHORT_NAMED_ENUMERATED_VALUE */
+const tlsScn: _enum_for_DnProtocol.tlsScn = DnProtocol.tlsScn; /* SHORT_NAMED_ENUMERATED_VALUE */
 export const _decode_DnProtocol: $.ASN1Decoder<DnProtocol> = $._decodeEnumerated;
 export const _encode_DnProtocol: $.ASN1Encoder<DnProtocol> = $._encodeEnumerated;
 

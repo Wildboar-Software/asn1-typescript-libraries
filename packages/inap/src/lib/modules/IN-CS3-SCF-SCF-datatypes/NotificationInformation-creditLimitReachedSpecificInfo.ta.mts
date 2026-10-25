@@ -1,11 +1,11 @@
 /* eslint-disable */
 import {
-    OPTIONAL,
-    ASN1Element as _Element,
+    type OPTIONAL,
+    type ASN1Element as _Element,
     ASN1TagClass as _TagClass
 } from "@wildboar/asn1";
 import * as $ from "@wildboar/asn1/functional";
-import { DateAndTime, _decode_DateAndTime, _encode_DateAndTime } from "../IN-CS3-SSF-SCF-datatypes/DateAndTime.ta.mjs";
+import { type DateAndTime, _decode_DateAndTime, _encode_DateAndTime } from "../IN-CS3-SSF-SCF-datatypes/DateAndTime.ta.mjs";
 // export { DateAndTime, _decode_DateAndTime, _encode_DateAndTime } from "../IN-CS3-SSF-SCF-datatypes/DateAndTime.ta.mjs";
 
 

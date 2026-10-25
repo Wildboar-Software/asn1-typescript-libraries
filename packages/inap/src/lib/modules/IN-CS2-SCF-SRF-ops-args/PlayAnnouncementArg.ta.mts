@@ -1,16 +1,16 @@
 /* eslint-disable */
 import {
-    BOOLEAN,
-    OPTIONAL,
-    ASN1Element as _Element,
+    type BOOLEAN,
+    type OPTIONAL,
+    type ASN1Element as _Element,
     ASN1TagClass as _TagClass
 } from "@wildboar/asn1";
 import * as $ from "@wildboar/asn1/functional";
-import { InformationToSend, _decode_InformationToSend, _encode_InformationToSend } from "../IN-CS2-datatypes/InformationToSend.ta.mjs";
+import { type InformationToSend, _decode_InformationToSend, _encode_InformationToSend } from "../IN-CS2-datatypes/InformationToSend.ta.mjs";
 // export { InformationToSend, _decode_InformationToSend, _encode_InformationToSend } from "../IN-CS2-datatypes/InformationToSend.ta.mjs";
 import { ExtensionField, _decode_ExtensionField, _encode_ExtensionField } from "../IN-CS2-datatypes/ExtensionField.ta.mjs";
 // export { ExtensionField, _decode_ExtensionField, _encode_ExtensionField } from "../IN-CS2-datatypes/ExtensionField.ta.mjs";
-import { PlayAnnouncementArg_connectedParty, _decode_PlayAnnouncementArg_connectedParty, _encode_PlayAnnouncementArg_connectedParty } from "../IN-CS2-SCF-SRF-ops-args/PlayAnnouncementArg-connectedParty.ta.mjs";
+import { type PlayAnnouncementArg_connectedParty, _decode_PlayAnnouncementArg_connectedParty, _encode_PlayAnnouncementArg_connectedParty } from "../IN-CS2-SCF-SRF-ops-args/PlayAnnouncementArg-connectedParty.ta.mjs";
 // export { PlayAnnouncementArg_connectedParty, _decode_PlayAnnouncementArg_connectedParty, _encode_PlayAnnouncementArg_connectedParty } from "../IN-CS2-SCF-SRF-ops-args/PlayAnnouncementArg-connectedParty.ta.mjs";
 
 

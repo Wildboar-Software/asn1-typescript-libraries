@@ -1,6 +1,6 @@
 /* eslint-disable */
 import {
-  UTF8String,
+  type UTF8String,
   ASN1Element as _Element,
   ASN1TagClass as _TagClass,
   ASN1Construction as _Construction,
@@ -33,10 +33,10 @@ import * as $ from '@wildboar/asn1/functional';
 export type HTMLString = UTF8String; // UTF8String
 
 
-export const _decode_HTMLString = $._decodeUTF8String;
+export const _decode_HTMLString: $.ASN1Decoder<string> = $._decodeUTF8String;
 
 
-export const _encode_HTMLString = $._encodeUTF8String;
+export const _encode_HTMLString: $.ASN1Encoder<string> = $._encodeUTF8String;
 
 
 /* eslint-enable */

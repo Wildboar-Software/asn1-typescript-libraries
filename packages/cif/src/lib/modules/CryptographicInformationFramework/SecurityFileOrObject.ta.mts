@@ -1,9 +1,9 @@
 /* eslint-disable */
 import {
-    OPTIONAL,
-    INTEGER,
-    OBJECT_IDENTIFIER,
-    ASN1Element as _Element,
+    type OPTIONAL,
+    type INTEGER,
+    type OBJECT_IDENTIFIER,
+    type ASN1Element as _Element,
     ASN1TagClass as _TagClass,
     ASN1Construction as _Construction,
     ASN1UniversalType as _UniversalType,
@@ -14,8 +14,8 @@ import {
     ASN1OverflowError,
 } from "@wildboar/asn1";
 import * as $ from "@wildboar/asn1/functional";
-import { Label, _decode_Label, _encode_Label } from "../CryptographicInformationFramework/Label.ta.mjs";
-import { CommunicationMode, _decode_CommunicationMode, _encode_CommunicationMode } from "../CryptographicInformationFramework/CommunicationMode.ta.mjs";
+import { type Label, _decode_Label, _encode_Label } from "../CryptographicInformationFramework/Label.ta.mjs";
+import { type CommunicationMode, _decode_CommunicationMode, _encode_CommunicationMode } from "../CryptographicInformationFramework/CommunicationMode.ta.mjs";
 import { Path, _decode_Path, _encode_Path } from "../CryptographicInformationFramework/Path.ta.mjs";
 import { cia_ub_index } from "../CryptographicInformationFramework/cia-ub-index.va.mjs";
 
@@ -46,75 +46,92 @@ import { cia_ub_index } from "../CryptographicInformationFramework/cia-ub-index.
  */
 export
 class SecurityFileOrObject {
+    /**
+     * @summary `label`.
+     * @description
+     * May identify the security file or object. ISO/IEC 7816-15:2016 §7.4.
+     * @public
+     * @readonly
+     */
+    public readonly label: OPTIONAL<Label>;
+    /**
+     * @summary `communicationMode`.
+     * @description
+     * Physical interface to which the protocols apply. ISO/IEC 7816-15:2016
+     * §7.4.
+     * @public
+     * @readonly
+     */
+    public readonly communicationMode: OPTIONAL<CommunicationMode>;
+    /**
+     * @summary `fileOrObjectPath`.
+     * @description
+     * Path to the file or DO nesting protocol OIDs and parameters. ISO/IEC
+     * 7816-15:2016 §7.4.
+     * @public
+     * @readonly
+     */
+    public readonly fileOrObjectPath: Path;
+    /**
+     * @summary `protocol`.
+     * @description
+     * Which of possibly several protocols in that file to use. ISO/IEC
+     * 7816-15:2016 §7.4.
+     * @public
+     * @readonly
+     */
+    public readonly protocol?: OPTIONAL<OBJECT_IDENTIFIER>;
+    /**
+     * @summary `cioSecurityId`.
+     * @description
+     * Authentication object required for the preliminary protocol. ISO/IEC
+     * 7816-15:2016 §7.4.
+     * @public
+     * @readonly
+     */
+    public readonly cioSecurityId?: OPTIONAL<INTEGER>;
+    /**
+     * @summary `index`.
+     * @description
+     * Index of this descriptor (for `precondition` links). ISO/IEC
+     * 7816-15:2016 §7.4.
+     * @public
+     * @readonly
+     */
+    public readonly index?: OPTIONAL<INTEGER>;
+    /**
+     * @summary `precondition`.
+     * @description
+     * Index of a protocol that must run first. ISO/IEC 7816-15:2016 §7.4.
+     * @public
+     * @readonly
+     */
+    public readonly precondition?: OPTIONAL<INTEGER>;
+    /**
+     * @summary Extensions that are not recognized.
+     * @public
+     * @readonly
+     */
+    public readonly _unrecognizedExtensionsList: _Element[];
+
     constructor (
-        /**
-         * @summary `label`.
-         * @description
-         * May identify the security file or object. ISO/IEC 7816-15:2016 §7.4.
-         * @public
-         * @readonly
-         */
-        readonly label: OPTIONAL<Label>,
-        /**
-         * @summary `communicationMode`.
-         * @description
-         * Physical interface to which the protocols apply. ISO/IEC 7816-15:2016
-         * §7.4.
-         * @public
-         * @readonly
-         */
-        readonly communicationMode: OPTIONAL<CommunicationMode>,
-        /**
-         * @summary `fileOrObjectPath`.
-         * @description
-         * Path to the file or DO nesting protocol OIDs and parameters. ISO/IEC
-         * 7816-15:2016 §7.4.
-         * @public
-         * @readonly
-         */
-        readonly fileOrObjectPath: Path,
-        /**
-         * @summary `protocol`.
-         * @description
-         * Which of possibly several protocols in that file to use. ISO/IEC
-         * 7816-15:2016 §7.4.
-         * @public
-         * @readonly
-         */
-        readonly protocol?: OPTIONAL<OBJECT_IDENTIFIER>,
-        /**
-         * @summary `cioSecurityId`.
-         * @description
-         * Authentication object required for the preliminary protocol. ISO/IEC
-         * 7816-15:2016 §7.4.
-         * @public
-         * @readonly
-         */
-        readonly cioSecurityId?: OPTIONAL<INTEGER>,
-        /**
-         * @summary `index`.
-         * @description
-         * Index of this descriptor (for `precondition` links). ISO/IEC
-         * 7816-15:2016 §7.4.
-         * @public
-         * @readonly
-         */
-        readonly index?: OPTIONAL<INTEGER>,
-        /**
-         * @summary `precondition`.
-         * @description
-         * Index of a protocol that must run first. ISO/IEC 7816-15:2016 §7.4.
-         * @public
-         * @readonly
-         */
-        readonly precondition?: OPTIONAL<INTEGER>,
-        /**
-         * @summary Extensions that are not recognized.
-         * @public
-         * @readonly
-         */
-        readonly _unrecognizedExtensionsList: _Element[] = []
+        label: OPTIONAL<Label>,
+        communicationMode: OPTIONAL<CommunicationMode>,
+        fileOrObjectPath: Path,
+        protocol?: OPTIONAL<OBJECT_IDENTIFIER>,
+        cioSecurityId?: OPTIONAL<INTEGER>,
+        index?: OPTIONAL<INTEGER>,
+        precondition?: OPTIONAL<INTEGER>,
+        _unrecognizedExtensionsList: _Element[] = []
     ) {
+        this.label = label;
+        this.communicationMode = communicationMode;
+        this.fileOrObjectPath = fileOrObjectPath;
+        this.protocol = protocol;
+        this.cioSecurityId = cioSecurityId;
+        this.index = index;
+        this.precondition = precondition;
+        this._unrecognizedExtensionsList = _unrecognizedExtensionsList;
         for (const [name, value] of [["index", index], ["precondition", precondition]] as const) {
             if (value === undefined) {
                 continue;

@@ -1,17 +1,17 @@
 /* eslint-disable */
 import {
     ASN1ConstructionError as _ConstructionError,
-    ASN1Element as _Element,
+    type ASN1Element as _Element,
     ASN1TagClass as _TagClass,
 } from "@wildboar/asn1";
 import * as $ from "@wildboar/asn1/functional";
 import {
-    EncryptedData,
+    type EncryptedData,
     _decode_EncryptedData,
     _encode_EncryptedData,
 } from "../AsymmetricKeyPackageModuleV1/EncryptedData.ta.mjs";
 import {
-    EncryptionAlgorithmIdentifier,
+    type EncryptionAlgorithmIdentifier,
     _decode_EncryptionAlgorithmIdentifier,
     _encode_EncryptionAlgorithmIdentifier,
 } from "../AsymmetricKeyPackageModuleV1/EncryptionAlgorithmIdentifier.ta.mjs";
@@ -30,20 +30,26 @@ import {
  *
  */
 export class EncryptedPrivateKeyInfo {
+    /**
+     * @summary `encryptionAlgorithm`.
+     * @public
+     * @readonly
+     */
+    public readonly encryptionAlgorithm: EncryptionAlgorithmIdentifier;
+    /**
+     * @summary `encryptedData`.
+     * @public
+     * @readonly
+     */
+    public readonly encryptedData: EncryptedData;
+
     constructor(
-        /**
-         * @summary `encryptionAlgorithm`.
-         * @public
-         * @readonly
-         */
-        readonly encryptionAlgorithm: EncryptionAlgorithmIdentifier,
-        /**
-         * @summary `encryptedData`.
-         * @public
-         * @readonly
-         */
-        readonly encryptedData: EncryptedData
-    ) {}
+        encryptionAlgorithm: EncryptionAlgorithmIdentifier,
+        encryptedData: EncryptedData
+    ) {
+        this.encryptionAlgorithm = encryptionAlgorithm;
+        this.encryptedData = encryptedData;
+    }
 
     /**
      * @summary Restructures an object into a EncryptedPrivateKeyInfo

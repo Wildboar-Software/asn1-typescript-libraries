@@ -1,6 +1,6 @@
 /* eslint-disable */
 import {
-    IA5String
+    type IA5String
 } from "@wildboar/asn1";
 import * as $ from "@wildboar/asn1/functional";
 
@@ -21,8 +21,8 @@ import * as $ from "@wildboar/asn1/functional";
  */
 export
 type ErrorText = IA5String; // IA5String
-export const _decode_ErrorText = $._decodeIA5String;
-export const _encode_ErrorText = $._encodeIA5String;
+export const _decode_ErrorText: $.ASN1Decoder<string> = $._decodeIA5String;
+export const _encode_ErrorText: $.ASN1Encoder<string> = $._encodeIA5String;
 
 
 /* eslint-enable */

@@ -1,6 +1,6 @@
 /* eslint-disable */
 import {
-    ASN1Element as _Element,
+    type ASN1Element as _Element,
     ASN1TagClass as _TagClass,
     ASN1Construction as _Construction,
     ASN1UniversalType as _UniversalType,
@@ -17,7 +17,7 @@ import {
     _encode_SwitchStatus,
 } from '../SDHProtASN1/SwitchStatus.ta.mjs';
 import {
-    FromAndToProtectionUnit,
+    type FromAndToProtectionUnit,
     _decode_FromAndToProtectionUnit,
     _encode_FromAndToProtectionUnit,
 } from '../M3100ASN1Module3/FromAndToProtectionUnit.ta.mjs';
@@ -34,20 +34,26 @@ import {
  *
  */
 export class ProtectionStatusR1_Item_manualSwitch {
+    /**
+     * @summary `switchStatus`.
+     * @public
+     * @readonly
+     */
+    public readonly switchStatus: SwitchStatus;
+    /**
+     * @summary `relatedUnit`.
+     * @public
+     * @readonly
+     */
+    public readonly relatedUnit: FromAndToProtectionUnit;
+
     constructor(
-        /**
-         * @summary `switchStatus`.
-         * @public
-         * @readonly
-         */
-        readonly switchStatus: SwitchStatus,
-        /**
-         * @summary `relatedUnit`.
-         * @public
-         * @readonly
-         */
-        readonly relatedUnit: FromAndToProtectionUnit
-    ) {}
+        switchStatus: SwitchStatus,
+        relatedUnit: FromAndToProtectionUnit
+    ) {
+        this.switchStatus = switchStatus;
+        this.relatedUnit = relatedUnit;
+    }
 
     /**
      * @summary Restructures an object into a ProtectionStatusR1_Item_manualSwitch
@@ -78,7 +84,7 @@ export class ProtectionStatusR1_Item_manualSwitch {
      * @static
      */
 
-    public static _enum_for_switchStatus = _enum_for_SwitchStatus;
+    public static _enum_for_switchStatus: typeof _enum_for_SwitchStatus = _enum_for_SwitchStatus;
 }
 
 

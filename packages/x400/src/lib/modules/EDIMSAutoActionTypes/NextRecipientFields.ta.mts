@@ -1,7 +1,7 @@
 /* eslint-disable */
 import {
-    OPTIONAL,
-    ASN1Element as _Element,
+    type OPTIONAL,
+    type ASN1Element as _Element,
     ASN1TagClass as _TagClass,
     ASN1Construction as _Construction,
     ASN1UniversalType as _UniversalType,
@@ -13,12 +13,12 @@ import {
 } from '@wildboar/asn1';
 import * as $ from '@wildboar/asn1/functional';
 import {
-    RecipientField,
+    type RecipientField,
     _decode_RecipientField,
     _encode_RecipientField,
 } from '../EDIMSInformationObjects/RecipientField.ta.mjs';
 import {
-    ActionRequestField,
+    type ActionRequestField,
     _decode_ActionRequestField,
     _encode_ActionRequestField,
 } from '../EDIMSInformationObjects/ActionRequestField.ta.mjs';
@@ -28,7 +28,7 @@ import {
     _encode_EDINotificationRequestsField,
 } from '../EDIMSInformationObjects/EDINotificationRequestsField.ta.mjs';
 import {
-    ResponsibilityPassingAllowedField,
+    type ResponsibilityPassingAllowedField,
     _decode_ResponsibilityPassingAllowedField,
     _encode_ResponsibilityPassingAllowedField,
 } from '../EDIMSInformationObjects/ResponsibilityPassingAllowedField.ta.mjs';
@@ -58,32 +58,42 @@ import {
  *
  */
 export class NextRecipientFields {
+    /**
+     * @summary `next_recipient`.
+     * @public
+     * @readonly
+     */
+    public readonly next_recipient: RecipientField;
+    /**
+     * @summary `next_recipient_action_request`.
+     * @public
+     * @readonly
+     */
+    public readonly next_recipient_action_request?: OPTIONAL<ActionRequestField>;
+    /**
+     * @summary `next_recipient_edi_notification_requests_field`.
+     * @public
+     * @readonly
+     */
+    public readonly next_recipient_edi_notification_requests_field?: OPTIONAL<EDINotificationRequestsField>;
+    /**
+     * @summary `next_responsibility_passing_allowed`.
+     * @public
+     * @readonly
+     */
+    public readonly next_responsibility_passing_allowed?: OPTIONAL<ResponsibilityPassingAllowedField>;
+
     constructor(
-        /**
-         * @summary `next_recipient`.
-         * @public
-         * @readonly
-         */
-        readonly next_recipient: RecipientField,
-        /**
-         * @summary `next_recipient_action_request`.
-         * @public
-         * @readonly
-         */
-        readonly next_recipient_action_request?: OPTIONAL<ActionRequestField>,
-        /**
-         * @summary `next_recipient_edi_notification_requests_field`.
-         * @public
-         * @readonly
-         */
-        readonly next_recipient_edi_notification_requests_field?: OPTIONAL<EDINotificationRequestsField>,
-        /**
-         * @summary `next_responsibility_passing_allowed`.
-         * @public
-         * @readonly
-         */
-        readonly next_responsibility_passing_allowed?: OPTIONAL<ResponsibilityPassingAllowedField>
-    ) {}
+        next_recipient: RecipientField,
+        next_recipient_action_request?: OPTIONAL<ActionRequestField>,
+        next_recipient_edi_notification_requests_field?: OPTIONAL<EDINotificationRequestsField>,
+        next_responsibility_passing_allowed?: OPTIONAL<ResponsibilityPassingAllowedField>
+    ) {
+        this.next_recipient = next_recipient;
+        this.next_recipient_action_request = next_recipient_action_request;
+        this.next_recipient_edi_notification_requests_field = next_recipient_edi_notification_requests_field;
+        this.next_responsibility_passing_allowed = next_responsibility_passing_allowed;
+    }
 
     /**
      * @summary Restructures an object into a NextRecipientFields

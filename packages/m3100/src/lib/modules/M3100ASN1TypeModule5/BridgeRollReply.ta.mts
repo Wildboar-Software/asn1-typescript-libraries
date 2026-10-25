@@ -1,6 +1,6 @@
 /* eslint-disable */
 import {
-    ASN1Element as _Element,
+    type ASN1Element as _Element,
     ASN1TagClass as _TagClass,
     ASN1Construction as _Construction,
     ASN1UniversalType as _UniversalType,
@@ -11,7 +11,7 @@ import {
 } from '@wildboar/asn1';
 import * as $ from '@wildboar/asn1/functional';
 import {
-    BridgeRollReply_Item,
+    type BridgeRollReply_Item,
     _decode_BridgeRollReply_Item,
     _encode_BridgeRollReply_Item,
 } from '../M3100ASN1TypeModule5/BridgeRollReply-Item.ta.mjs';

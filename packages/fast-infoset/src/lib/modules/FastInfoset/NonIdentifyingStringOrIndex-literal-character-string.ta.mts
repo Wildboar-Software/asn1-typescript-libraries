@@ -1,6 +1,6 @@
 /* eslint-disable */
 import {
-  BOOLEAN,
+  type BOOLEAN,
   ASN1Element as _Element,
   ASN1TagClass as _TagClass,
   ASN1Construction as _Construction,
@@ -45,7 +45,7 @@ export class NonIdentifyingStringOrIndex_literal_character_string {
    * @public
    * @readonly
    */
-  readonly add_to_table: BOOLEAN;
+  public readonly add_to_table: BOOLEAN;
   /**
    * @summary `character_string`.
    * @description The character string in the encoding named
@@ -54,7 +54,7 @@ export class NonIdentifyingStringOrIndex_literal_character_string {
    * @public
    * @readonly
    */
-  readonly character_string: EncodedCharacterString;
+  public readonly character_string: EncodedCharacterString;
 
   constructor(
     add_to_table: BOOLEAN,

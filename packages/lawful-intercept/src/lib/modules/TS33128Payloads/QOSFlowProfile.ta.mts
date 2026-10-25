@@ -1,11 +1,11 @@
 /* eslint-disable */
 import {
     ASN1ConstructionError as _ConstructionError,
-    ASN1Element as _Element,
+    type ASN1Element as _Element,
     ASN1TagClass as _TagClass
 } from "@wildboar/asn1";
 import * as $ from "@wildboar/asn1/functional";
-import { FiveQI, _decode_FiveQI, _encode_FiveQI } from "../TS33128Payloads/FiveQI.ta.mjs";
+import { type FiveQI, _decode_FiveQI, _encode_FiveQI } from "../TS33128Payloads/FiveQI.ta.mjs";
 // export { FiveQI, _decode_FiveQI, _encode_FiveQI } from "../TS33128Payloads/FiveQI.ta.mjs";
 
 

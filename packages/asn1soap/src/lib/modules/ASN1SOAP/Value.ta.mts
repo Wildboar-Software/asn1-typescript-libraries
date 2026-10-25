@@ -81,7 +81,7 @@ export type Value = _enum_for_Value;
  *
  * @enum {number}
  */
-export const Value = _enum_for_Value;
+export const Value: typeof _enum_for_Value = _enum_for_Value;
 
 
 /**
@@ -92,7 +92,7 @@ export const Value = _enum_for_Value;
  * @constant
  * @type {number}
  */
-export const Value_versionMismatch: Value =
+export const Value_versionMismatch: 0 =
   Value.versionMismatch; /* LONG_NAMED_ENUMERATED_VALUE */
 
 
@@ -103,7 +103,7 @@ export const Value_versionMismatch: Value =
  * @constant
  * @type {number}
  */
-export const versionMismatch: Value =
+export const versionMismatch: 0 =
   Value.versionMismatch; /* SHORT_NAMED_ENUMERATED_VALUE */
 
 
@@ -116,7 +116,7 @@ export const versionMismatch: Value =
  * @constant
  * @type {number}
  */
-export const Value_mustUnderstand: Value =
+export const Value_mustUnderstand: 1 =
   Value.mustUnderstand; /* LONG_NAMED_ENUMERATED_VALUE */
 
 
@@ -127,7 +127,7 @@ export const Value_mustUnderstand: Value =
  * @constant
  * @type {number}
  */
-export const mustUnderstand: Value =
+export const mustUnderstand: 1 =
   Value.mustUnderstand; /* SHORT_NAMED_ENUMERATED_VALUE */
 
 
@@ -139,7 +139,7 @@ export const mustUnderstand: Value =
  * @constant
  * @type {number}
  */
-export const Value_dataEncodingUnknown: Value =
+export const Value_dataEncodingUnknown: 2 =
   Value.dataEncodingUnknown; /* LONG_NAMED_ENUMERATED_VALUE */
 
 
@@ -150,7 +150,7 @@ export const Value_dataEncodingUnknown: Value =
  * @constant
  * @type {number}
  */
-export const dataEncodingUnknown: Value =
+export const dataEncodingUnknown: 2 =
   Value.dataEncodingUnknown; /* SHORT_NAMED_ENUMERATED_VALUE */
 
 
@@ -165,7 +165,7 @@ export const dataEncodingUnknown: Value =
  * @constant
  * @type {number}
  */
-export const Value_sender: Value =
+export const Value_sender: 3 =
   Value.sender; /* LONG_NAMED_ENUMERATED_VALUE */
 
 
@@ -175,7 +175,7 @@ export const Value_sender: Value =
  * @constant
  * @type {number}
  */
-export const sender: Value = Value.sender; /* SHORT_NAMED_ENUMERATED_VALUE */
+export const sender: 3 = Value.sender; /* SHORT_NAMED_ENUMERATED_VALUE */
 
 
 /**
@@ -187,7 +187,7 @@ export const sender: Value = Value.sender; /* SHORT_NAMED_ENUMERATED_VALUE */
  * @constant
  * @type {number}
  */
-export const Value_receiver: Value =
+export const Value_receiver: 4 =
   Value.receiver; /* LONG_NAMED_ENUMERATED_VALUE */
 
 
@@ -197,17 +197,17 @@ export const Value_receiver: Value =
  * @constant
  * @type {number}
  */
-export const receiver: Value =
+export const receiver: 4 =
   Value.receiver; /* SHORT_NAMED_ENUMERATED_VALUE */
 
 
 
-export const _decode_Value = $._decodeEnumerated as $.ASN1Decoder<Value>;
+export const _decode_Value: $.ASN1Decoder<Value> = $._decodeEnumerated as $.ASN1Decoder<Value>;
 
 
 
 
-export const _encode_Value = $._encodeEnumerated as $.ASN1Encoder<Value>;
+export const _encode_Value: $.ASN1Encoder<Value> = $._encodeEnumerated as $.ASN1Encoder<Value>;
 
 
 /* eslint-enable */

@@ -1,6 +1,6 @@
 /* eslint-disable */
 import {
-  ENUMERATED,
+  type ENUMERATED,
   ASN1Element as _Element,
   ASN1TagClass as _TagClass,
   ASN1Construction as _Construction,
@@ -48,7 +48,7 @@ export type CancelProblem = _enum_for_CancelProblem | ENUMERATED;
  * @constant
  * @type {number}
  */
-export const CancelProblem_unknownOperation: CancelProblem = 0; /* LONG_NAMED_ENUMERATED_VALUE */
+export const CancelProblem_unknownOperation: 0 = _enum_for_CancelProblem.unknownOperation; /* LONG_NAMED_ENUMERATED_VALUE */
 
 
 /**
@@ -57,7 +57,7 @@ export const CancelProblem_unknownOperation: CancelProblem = 0; /* LONG_NAMED_EN
  * @constant
  * @type {number}
  */
-export const unknownOperation: CancelProblem = CancelProblem_unknownOperation; /* SHORT_NAMED_ENUMERATED_VALUE */
+export const unknownOperation: 0 = CancelProblem_unknownOperation; /* SHORT_NAMED_ENUMERATED_VALUE */
 
 
 /**
@@ -66,7 +66,7 @@ export const unknownOperation: CancelProblem = CancelProblem_unknownOperation; /
  * @constant
  * @type {number}
  */
-export const CancelProblem_tooLate: CancelProblem = 1; /* LONG_NAMED_ENUMERATED_VALUE */
+export const CancelProblem_tooLate: 1 = _enum_for_CancelProblem.tooLate; /* LONG_NAMED_ENUMERATED_VALUE */
 
 
 /**
@@ -75,7 +75,7 @@ export const CancelProblem_tooLate: CancelProblem = 1; /* LONG_NAMED_ENUMERATED_
  * @constant
  * @type {number}
  */
-export const tooLate: CancelProblem = CancelProblem_tooLate; /* SHORT_NAMED_ENUMERATED_VALUE */
+export const tooLate: 1 = CancelProblem_tooLate; /* SHORT_NAMED_ENUMERATED_VALUE */
 
 
 /**
@@ -84,7 +84,7 @@ export const tooLate: CancelProblem = CancelProblem_tooLate; /* SHORT_NAMED_ENUM
  * @constant
  * @type {number}
  */
-export const CancelProblem_operationNotCancellable: CancelProblem = 2; /* LONG_NAMED_ENUMERATED_VALUE */
+export const CancelProblem_operationNotCancellable: 2 = _enum_for_CancelProblem.operationNotCancellable; /* LONG_NAMED_ENUMERATED_VALUE */
 
 
 /**
@@ -93,17 +93,17 @@ export const CancelProblem_operationNotCancellable: CancelProblem = 2; /* LONG_N
  * @constant
  * @type {number}
  */
-export const operationNotCancellable: CancelProblem = CancelProblem_operationNotCancellable; /* SHORT_NAMED_ENUMERATED_VALUE */
+export const operationNotCancellable: 2 = CancelProblem_operationNotCancellable; /* SHORT_NAMED_ENUMERATED_VALUE */
 
 
 
 
-export const _decode_CancelProblem = $._decodeEnumerated;
+export const _decode_CancelProblem: $.ASN1Decoder<number> = $._decodeEnumerated;
 
 
 
 
-export const _encode_CancelProblem = $._encodeEnumerated;
+export const _encode_CancelProblem: $.ASN1Encoder<number> = $._encodeEnumerated;
 
 
 /* eslint-enable */

@@ -1,6 +1,6 @@
 /* eslint-disable */
 import {
-    ASN1Element as _Element,
+    type ASN1Element as _Element,
     ASN1TagClass as _TagClass,
     ASN1Construction as _Construction,
     ASN1UniversalType as _UniversalType,
@@ -17,7 +17,7 @@ import {
     _encode_CmsErrorCode,
 } from '../CmsTelebiometric/CmsErrorCode.ta.mjs';
 import {
-    PbactErr,
+    type PbactErr,
     _enum_for_PbactErr,
     _decode_PbactErr,
     _encode_PbactErr,

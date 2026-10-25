@@ -1,22 +1,22 @@
 /* eslint-disable */
 import {
-    BOOLEAN,
-    GraphicString,
-    INTEGER,
-    NULL,
-    OCTET_STRING,
-    OPTIONAL,
-    ASN1Element as _Element,
+    type BOOLEAN,
+    type GraphicString,
+    type INTEGER,
+    type NULL,
+    type OCTET_STRING,
+    type OPTIONAL,
+    type ASN1Element as _Element,
     ASN1TagClass as _TagClass,
     ASN1SizeError,
     ASN1OverflowError
 } from "@wildboar/asn1";
 import * as $ from "@wildboar/asn1/functional";
-import { RecordType, _decode_RecordType, _encode_RecordType } from "../CSChargingDataTypes/RecordType.ta.mjs";
-import { TrunkGroup, _decode_TrunkGroup, _encode_TrunkGroup } from "../CSChargingDataTypes/TrunkGroup.ta.mjs";
+import { type RecordType, _decode_RecordType, _encode_RecordType } from "../CSChargingDataTypes/RecordType.ta.mjs";
+import { type TrunkGroup, _decode_TrunkGroup, _encode_TrunkGroup } from "../CSChargingDataTypes/TrunkGroup.ta.mjs";
 import { LocationAreaAndCell, _decode_LocationAreaAndCell, _encode_LocationAreaAndCell } from "../CSChargingDataTypes/LocationAreaAndCell.ta.mjs";
 import { LocationChange, _decode_LocationChange, _encode_LocationChange } from "../CSChargingDataTypes/LocationChange.ta.mjs";
-import { BasicService, _decode_BasicService, _encode_BasicService } from "../CSChargingDataTypes/BasicService.ta.mjs";
+import { type BasicService, _decode_BasicService, _encode_BasicService } from "../CSChargingDataTypes/BasicService.ta.mjs";
 import { TransparencyInd, _decode_TransparencyInd, _encode_TransparencyInd, _enum_for_TransparencyInd } from "../CSChargingDataTypes/TransparencyInd.ta.mjs";
 import { ChangeOfService, _decode_ChangeOfService, _encode_ChangeOfService } from "../CSChargingDataTypes/ChangeOfService.ta.mjs";
 import { SuppServiceUsed, _decode_SuppServiceUsed, _encode_SuppServiceUsed } from "../CSChargingDataTypes/SuppServiceUsed.ta.mjs";
@@ -26,19 +26,19 @@ import { ChangeOfClassmark, _decode_ChangeOfClassmark, _encode_ChangeOfClassmark
 import { RadioChanRequested, _decode_RadioChanRequested, _encode_RadioChanRequested, _enum_for_RadioChanRequested } from "../CSChargingDataTypes/RadioChanRequested.ta.mjs";
 import { TrafficChannel, _decode_TrafficChannel, _encode_TrafficChannel, _enum_for_TrafficChannel } from "../CSChargingDataTypes/TrafficChannel.ta.mjs";
 import { ChangeOfRadioChannel, _decode_ChangeOfRadioChannel, _encode_ChangeOfRadioChannel } from "../CSChargingDataTypes/ChangeOfRadioChannel.ta.mjs";
-import { CauseForTerm, _decode_CauseForTerm, _encode_CauseForTerm } from "../CSChargingDataTypes/CauseForTerm.ta.mjs";
-import { HLRIntResult, _decode_HLRIntResult, _encode_HLRIntResult } from "../CSChargingDataTypes/HLRIntResult.ta.mjs";
+import { type CauseForTerm, _decode_CauseForTerm, _encode_CauseForTerm } from "../CSChargingDataTypes/CauseForTerm.ta.mjs";
+import { type HLRIntResult, _decode_HLRIntResult, _encode_HLRIntResult } from "../CSChargingDataTypes/HLRIntResult.ta.mjs";
 import { AdditionalChgInfo, _decode_AdditionalChgInfo, _encode_AdditionalChgInfo } from "../CSChargingDataTypes/AdditionalChgInfo.ta.mjs";
 import { ManagementExtension, _decode_ManagementExtension, _encode_ManagementExtension } from "../CSChargingDataTypes/ManagementExtension.ta.mjs";
 import { HSCSDParmsChange, _decode_HSCSDParmsChange, _encode_HSCSDParmsChange } from "../CSChargingDataTypes/HSCSDParmsChange.ta.mjs";
 import { Fnur, _decode_Fnur, _encode_Fnur, _enum_for_Fnur } from "../CSChargingDataTypes/Fnur.ta.mjs";
 import { AiurRequested, _decode_AiurRequested, _encode_AiurRequested, _enum_for_AiurRequested } from "../CSChargingDataTypes/AiurRequested.ta.mjs";
 import { ChannelCoding, _decode_ChannelCoding, _encode_ChannelCoding, _enum_for_ChannelCoding } from "../CSChargingDataTypes/ChannelCoding.ta.mjs";
-import { SystemType, _decode_SystemType, _encode_SystemType, _enum_for_SystemType } from "../CSChargingDataTypes/SystemType.ta.mjs";
-import { MTCallRecord_lrnSoInd, _decode_MTCallRecord_lrnSoInd, _encode_MTCallRecord_lrnSoInd } from "../CSChargingDataTypes/MTCallRecord-lrnSoInd.ta.mjs";
-import { MTCallRecord_lrnQuryStatus, _decode_MTCallRecord_lrnQuryStatus, _encode_MTCallRecord_lrnQuryStatus } from "../CSChargingDataTypes/MTCallRecord-lrnQuryStatus.ta.mjs";
-import { MTCallRecord_jIPSoInd, _decode_MTCallRecord_jIPSoInd, _encode_MTCallRecord_jIPSoInd } from "../CSChargingDataTypes/MTCallRecord-jIPSoInd.ta.mjs";
-import { MTCallRecord_jIPQuryStatus, _decode_MTCallRecord_jIPQuryStatus, _encode_MTCallRecord_jIPQuryStatus } from "../CSChargingDataTypes/MTCallRecord-jIPQuryStatus.ta.mjs";
+import { type SystemType, _decode_SystemType, _encode_SystemType, _enum_for_SystemType } from "../CSChargingDataTypes/SystemType.ta.mjs";
+import { type MTCallRecord_lrnSoInd, _decode_MTCallRecord_lrnSoInd, _encode_MTCallRecord_lrnSoInd } from "../CSChargingDataTypes/MTCallRecord-lrnSoInd.ta.mjs";
+import { type MTCallRecord_lrnQuryStatus, _decode_MTCallRecord_lrnQuryStatus, _encode_MTCallRecord_lrnQuryStatus } from "../CSChargingDataTypes/MTCallRecord-lrnQuryStatus.ta.mjs";
+import { type MTCallRecord_jIPSoInd, _decode_MTCallRecord_jIPSoInd, _encode_MTCallRecord_jIPSoInd } from "../CSChargingDataTypes/MTCallRecord-jIPSoInd.ta.mjs";
+import { type MTCallRecord_jIPQuryStatus, _decode_MTCallRecord_jIPQuryStatus, _encode_MTCallRecord_jIPQuryStatus } from "../CSChargingDataTypes/MTCallRecord-jIPQuryStatus.ta.mjs";
 import { PartialRecordType, _decode_PartialRecordType, _encode_PartialRecordType, _enum_for_PartialRecordType } from "../CSChargingDataTypes/PartialRecordType.ta.mjs";
 import { GuaranteedBitRate, _decode_GuaranteedBitRate, _encode_GuaranteedBitRate, _enum_for_GuaranteedBitRate } from "../CSChargingDataTypes/GuaranteedBitRate.ta.mjs";
 import { MaximumBitRate, _decode_MaximumBitRate, _encode_MaximumBitRate, _enum_for_MaximumBitRate } from "../CSChargingDataTypes/MaximumBitRate.ta.mjs";
@@ -1404,67 +1404,67 @@ class MTCallRecord {
          * @static
          */
 
-    public static _enum_for_transparencyIndicator = _enum_for_TransparencyInd;        /**
+    public static _enum_for_transparencyIndicator: typeof _enum_for_TransparencyInd = _enum_for_TransparencyInd;        /**
          * @summary The enum used as the type of the component `radioChanRequested`
          * @public
          * @static
          */
 
-    public static _enum_for_radioChanRequested = _enum_for_RadioChanRequested;        /**
+    public static _enum_for_radioChanRequested: typeof _enum_for_RadioChanRequested = _enum_for_RadioChanRequested;        /**
          * @summary The enum used as the type of the component `radioChanUsed`
          * @public
          * @static
          */
 
-    public static _enum_for_radioChanUsed = _enum_for_TrafficChannel;        /**
+    public static _enum_for_radioChanUsed: typeof _enum_for_TrafficChannel = _enum_for_TrafficChannel;        /**
          * @summary The enum used as the type of the component `fnur`
          * @public
          * @static
          */
 
-    public static _enum_for_fnur = _enum_for_Fnur;        /**
+    public static _enum_for_fnur: typeof _enum_for_Fnur = _enum_for_Fnur;        /**
          * @summary The enum used as the type of the component `aiurRequested`
          * @public
          * @static
          */
 
-    public static _enum_for_aiurRequested = _enum_for_AiurRequested;        /**
+    public static _enum_for_aiurRequested: typeof _enum_for_AiurRequested = _enum_for_AiurRequested;        /**
          * @summary The enum used as the type of the component `chanCodingUsed`
          * @public
          * @static
          */
 
-    public static _enum_for_chanCodingUsed = _enum_for_ChannelCoding;        /**
+    public static _enum_for_chanCodingUsed: typeof _enum_for_ChannelCoding = _enum_for_ChannelCoding;        /**
          * @summary The enum used as the type of the component `systemType`
          * @public
          * @static
          */
 
-    public static _enum_for_systemType = _enum_for_SystemType;        /**
+    public static _enum_for_systemType: typeof _enum_for_SystemType = _enum_for_SystemType;        /**
          * @summary The enum used as the type of the component `partialRecordType`
          * @public
          * @static
          */
 
-    public static _enum_for_partialRecordType = _enum_for_PartialRecordType;        /**
+    public static _enum_for_partialRecordType: typeof _enum_for_PartialRecordType = _enum_for_PartialRecordType;        /**
          * @summary The enum used as the type of the component `guaranteedBitRate`
          * @public
          * @static
          */
 
-    public static _enum_for_guaranteedBitRate = _enum_for_GuaranteedBitRate;        /**
+    public static _enum_for_guaranteedBitRate: typeof _enum_for_GuaranteedBitRate = _enum_for_GuaranteedBitRate;        /**
          * @summary The enum used as the type of the component `maximumBitRate`
          * @public
          * @static
          */
 
-    public static _enum_for_maximumBitRate = _enum_for_MaximumBitRate;        /**
+    public static _enum_for_maximumBitRate: typeof _enum_for_MaximumBitRate = _enum_for_MaximumBitRate;        /**
          * @summary The enum used as the type of the component `reasonForServiceChange`
          * @public
          * @static
          */
 
-    public static _enum_for_reasonForServiceChange = _enum_for_ReasonForServiceChange;
+    public static _enum_for_reasonForServiceChange: typeof _enum_for_ReasonForServiceChange = _enum_for_ReasonForServiceChange;
 }
 
 /**

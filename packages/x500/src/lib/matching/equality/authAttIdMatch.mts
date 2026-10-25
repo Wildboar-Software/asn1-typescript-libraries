@@ -5,11 +5,11 @@ import {
     id_ce_basicAttConstraints,
 } from "../../modules/AttributeCertificateDefinitions/id-ce-basicAttConstraints.va.mjs";
 import {
-    AuthorityAttributeIdentifierSyntax,
+    type AuthorityAttributeIdentifierSyntax,
     _decode_AuthorityAttributeIdentifierSyntax,
 } from "../../modules/AttributeCertificateDefinitions/AuthorityAttributeIdentifierSyntax.ta.mjs";
 import {
-    AttributeCertificate,
+    type AttributeCertificate,
     _decode_AttributeCertificate,
 } from "../../modules/AttributeCertificateDefinitions/AttributeCertificate.ta.mjs";
 import type {

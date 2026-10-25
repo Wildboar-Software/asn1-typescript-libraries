@@ -1,13 +1,13 @@
 /* eslint-disable */
 import {
-    NULL,
-    ASN1Element as _Element,
+    type NULL,
+    type ASN1Element as _Element,
     ASN1TagClass as _TagClass
 } from "@wildboar/asn1";
 import * as $ from "@wildboar/asn1/functional";
-import { IPRoutingAddress, _decode_IPRoutingAddress, _encode_IPRoutingAddress } from "../IN-CS-1-Datatypes/IPRoutingAddress.ta.mjs";
+import { type IPRoutingAddress, _decode_IPRoutingAddress, _encode_IPRoutingAddress } from "../IN-CS-1-Datatypes/IPRoutingAddress.ta.mjs";
 // export { IPRoutingAddress, _decode_IPRoutingAddress, _encode_IPRoutingAddress } from "../IN-CS-1-Datatypes/IPRoutingAddress.ta.mjs";
-import { LegID, _decode_LegID, _encode_LegID } from "../IN-CS-1-Datatypes/LegID.ta.mjs";
+import { type LegID, _decode_LegID, _encode_LegID } from "../IN-CS-1-Datatypes/LegID.ta.mjs";
 // export { LegID, _decode_LegID, _encode_LegID } from "../IN-CS-1-Datatypes/LegID.ta.mjs";
 import { ConnectToResourceArg_resourceAddress_both, _decode_ConnectToResourceArg_resourceAddress_both, _encode_ConnectToResourceArg_resourceAddress_both } from "../IN-CS-1-Datatypes/ConnectToResourceArg-resourceAddress-both.ta.mjs";
 // export { ConnectToResourceArg_resourceAddress_both, _decode_ConnectToResourceArg_resourceAddress_both, _encode_ConnectToResourceArg_resourceAddress_both } from "../IN-CS-1-Datatypes/ConnectToResourceArg-resourceAddress-both.ta.mjs";

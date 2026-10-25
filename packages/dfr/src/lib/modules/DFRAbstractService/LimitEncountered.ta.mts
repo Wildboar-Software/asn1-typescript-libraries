@@ -1,6 +1,6 @@
 /* eslint-disable */
 import {
-    ASN1Element as _Element,
+    type ASN1Element as _Element,
     ASN1TagClass as _TagClass,
     ASN1Construction as _Construction,
     ASN1UniversalType as _UniversalType,
@@ -81,7 +81,7 @@ type LimitEncountered = _enum_for_LimitEncountered;
  * @enum {number}
  */
 export
-const LimitEncountered = _enum_for_LimitEncountered;
+const LimitEncountered: typeof _enum_for_LimitEncountered = _enum_for_LimitEncountered;
 
 /**
  * @summary LimitEncountered_time_limit
@@ -92,7 +92,7 @@ const LimitEncountered = _enum_for_LimitEncountered;
  * @type {number}
  */
 export
-const LimitEncountered_time_limit: LimitEncountered = LimitEncountered.time_limit; /* LONG_NAMED_ENUMERATED_VALUE */
+const LimitEncountered_time_limit: _enum_for_LimitEncountered.time_limit = LimitEncountered.time_limit; /* LONG_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary time_limit
@@ -103,7 +103,7 @@ const LimitEncountered_time_limit: LimitEncountered = LimitEncountered.time_limi
  * @type {number}
  */
 export
-const time_limit: LimitEncountered = LimitEncountered.time_limit; /* SHORT_NAMED_ENUMERATED_VALUE */
+const time_limit: _enum_for_LimitEncountered.time_limit = LimitEncountered.time_limit; /* SHORT_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary LimitEncountered_count_limit
@@ -114,7 +114,7 @@ const time_limit: LimitEncountered = LimitEncountered.time_limit; /* SHORT_NAMED
  * @type {number}
  */
 export
-const LimitEncountered_count_limit: LimitEncountered = LimitEncountered.count_limit; /* LONG_NAMED_ENUMERATED_VALUE */
+const LimitEncountered_count_limit: _enum_for_LimitEncountered.count_limit = LimitEncountered.count_limit; /* LONG_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary count_limit
@@ -125,7 +125,7 @@ const LimitEncountered_count_limit: LimitEncountered = LimitEncountered.count_li
  * @type {number}
  */
 export
-const count_limit: LimitEncountered = LimitEncountered.count_limit; /* SHORT_NAMED_ENUMERATED_VALUE */
+const count_limit: _enum_for_LimitEncountered.count_limit = LimitEncountered.count_limit; /* SHORT_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary LimitEncountered_length_exceeded
@@ -136,7 +136,7 @@ const count_limit: LimitEncountered = LimitEncountered.count_limit; /* SHORT_NAM
  * @type {number}
  */
 export
-const LimitEncountered_length_exceeded: LimitEncountered = LimitEncountered.length_exceeded; /* LONG_NAMED_ENUMERATED_VALUE */
+const LimitEncountered_length_exceeded: _enum_for_LimitEncountered.length_exceeded = LimitEncountered.length_exceeded; /* LONG_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary length_exceeded
@@ -147,9 +147,21 @@ const LimitEncountered_length_exceeded: LimitEncountered = LimitEncountered.leng
  * @type {number}
  */
 export
-const length_exceeded: LimitEncountered = LimitEncountered.length_exceeded; /* SHORT_NAMED_ENUMERATED_VALUE */
-export const _decode_LimitEncountered = $._decodeEnumerated;
-export const _encode_LimitEncountered = $._encodeEnumerated;
+const length_exceeded: _enum_for_LimitEncountered.length_exceeded = LimitEncountered.length_exceeded; /* SHORT_NAMED_ENUMERATED_VALUE */
+export function _decode_LimitEncountered(el: _Element): LimitEncountered {
+    const enumerated = $._decodeEnumerated(el);
+    switch (enumerated) {
+        case LimitEncountered.time_limit: return LimitEncountered.time_limit;
+        case LimitEncountered.count_limit: return LimitEncountered.count_limit;
+        case LimitEncountered.length_exceeded: return LimitEncountered.length_exceeded;
+        default:
+            throw new _ConstructionError(
+                "Invalid ENUMERATED value " + enumerated + " for LimitEncountered.",
+                el,
+            );
+    }
+}
+export const _encode_LimitEncountered: $.ASN1Encoder<LimitEncountered> = $._encodeEnumerated as $.ASN1Encoder<LimitEncountered>;
 
 
 /* eslint-enable */

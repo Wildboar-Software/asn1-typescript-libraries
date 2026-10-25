@@ -1,6 +1,6 @@
 /* eslint-disable */
 import {
-    ASN1Element as _Element,
+    type ASN1Element as _Element,
     ASN1TagClass as _TagClass,
     ASN1Construction as _Construction,
     ASN1UniversalType as _UniversalType,
@@ -11,7 +11,7 @@ import {
 } from '@wildboar/asn1';
 import * as $ from '@wildboar/asn1/functional';
 import {
-    DistributedSoftware,
+    type DistributedSoftware,
     _decode_DistributedSoftware,
     _encode_DistributedSoftware,
 } from '../SWMF/DistributedSoftware.ta.mjs';
@@ -46,28 +46,34 @@ import {
  *
  */
 export class InstallInfo {
+    /**
+     * @summary `targetSoftware`.
+     * @description
+     *
+     * Software units to install (mandatory). ITU-T Rec. X.744
+     * (10/96) §9.5 Table 9.
+     * @public
+     * @readonly
+     */
+    public readonly targetSoftware: DistributedSoftware[];
+    /**
+     * @summary `installInfo`.
+     * @description
+     *
+     * Installation-specific extensions (mandatory in Table 9).
+     * ITU-T Rec. X.744 (10/96) §9.5 Table 9.
+     * @public
+     * @readonly
+     */
+    public readonly installInfo: ManagementExtension[];
+
     constructor(
-        /**
-         * @summary `targetSoftware`.
-         * @description
-         *
-         * Software units to install (mandatory). ITU-T Rec. X.744
-         * (10/96) §9.5 Table 9.
-         * @public
-         * @readonly
-         */
-        readonly targetSoftware: DistributedSoftware[],
-        /**
-         * @summary `installInfo`.
-         * @description
-         *
-         * Installation-specific extensions (mandatory in Table 9).
-         * ITU-T Rec. X.744 (10/96) §9.5 Table 9.
-         * @public
-         * @readonly
-         */
-        readonly installInfo: ManagementExtension[]
-    ) {}
+        targetSoftware: DistributedSoftware[],
+        installInfo: ManagementExtension[]
+    ) {
+        this.targetSoftware = targetSoftware;
+        this.installInfo = installInfo;
+    }
 
     /**
      * @summary Restructures an object into a InstallInfo

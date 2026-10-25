@@ -7,7 +7,7 @@ import {
     _encode_CertSubscribeErr,
 } from "../PkiPMIProtocolSpecifications/CertSubscribeErr.ta.mjs";
 import {
-    CertSubscribeOK,
+    type CertSubscribeOK,
     _decode_CertSubscribeOK,
     _encode_CertSubscribeOK,
 } from "../PkiPMIProtocolSpecifications/CertSubscribeOK.ta.mjs";

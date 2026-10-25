@@ -1,8 +1,8 @@
 /* eslint-disable */
 import {
-  BIT_STRING,
-  EXTERNAL,
-  GraphicString,
+  type BIT_STRING,
+  type EXTERNAL,
+  type GraphicString,
   ASN1Element as _Element,
   ASN1TagClass as _TagClass,
   ASN1Construction as _Construction,

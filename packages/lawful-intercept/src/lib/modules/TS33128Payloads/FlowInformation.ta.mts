@@ -1,8 +1,8 @@
 /* eslint-disable */
 import {
-    OCTET_STRING,
-    OPTIONAL,
-    ASN1Element as _Element,
+    type OCTET_STRING,
+    type OPTIONAL,
+    type ASN1Element as _Element,
     ASN1TagClass as _TagClass,
     ASN1SizeError
 } from "@wildboar/asn1";
@@ -120,7 +120,7 @@ class FlowInformation {
          * @static
          */
 
-    public static _enum_for_flowDirection = _enum_for_FlowDirection;
+    public static _enum_for_flowDirection: typeof _enum_for_FlowDirection = _enum_for_FlowDirection;
 }
 
 /**

@@ -1,5 +1,5 @@
 import {
-    ASN1Element as _Element,
+    type ASN1Element as _Element,
 } from "@wildboar/asn1";
 import * as $ from "@wildboar/asn1/functional";
 
@@ -30,7 +30,7 @@ export enum _enum_for_UnavailableNetworkResource {
     endUserFailure = 4,
 }
 export type UnavailableNetworkResource = _enum_for_UnavailableNetworkResource;
-export const UnavailableNetworkResource = _enum_for_UnavailableNetworkResource;
+export const UnavailableNetworkResource: typeof _enum_for_UnavailableNetworkResource = _enum_for_UnavailableNetworkResource;
 /**
  * @summary UnavailableNetworkResource_unavailableResources
  * @description
@@ -39,7 +39,7 @@ export const UnavailableNetworkResource = _enum_for_UnavailableNetworkResource;
  *
  * @constant
  */
-export const UnavailableNetworkResource_unavailableResources: UnavailableNetworkResource = UnavailableNetworkResource.unavailableResources;
+export const UnavailableNetworkResource_unavailableResources: _enum_for_UnavailableNetworkResource.unavailableResources = UnavailableNetworkResource.unavailableResources;
 /**
  * @summary unavailableResources
  * @description
@@ -48,7 +48,7 @@ export const UnavailableNetworkResource_unavailableResources: UnavailableNetwork
  *
  * @constant
  */
-export const unavailableResources: UnavailableNetworkResource = UnavailableNetworkResource.unavailableResources;
+export const unavailableResources: _enum_for_UnavailableNetworkResource.unavailableResources = UnavailableNetworkResource.unavailableResources;
 /**
  * @summary UnavailableNetworkResource_componentFailure
  * @description
@@ -57,7 +57,7 @@ export const unavailableResources: UnavailableNetworkResource = UnavailableNetwo
  *
  * @constant
  */
-export const UnavailableNetworkResource_componentFailure: UnavailableNetworkResource = UnavailableNetworkResource.componentFailure;
+export const UnavailableNetworkResource_componentFailure: _enum_for_UnavailableNetworkResource.componentFailure = UnavailableNetworkResource.componentFailure;
 /**
  * @summary componentFailure
  * @description
@@ -66,7 +66,7 @@ export const UnavailableNetworkResource_componentFailure: UnavailableNetworkReso
  *
  * @constant
  */
-export const componentFailure: UnavailableNetworkResource = UnavailableNetworkResource.componentFailure;
+export const componentFailure: _enum_for_UnavailableNetworkResource.componentFailure = UnavailableNetworkResource.componentFailure;
 /**
  * @summary UnavailableNetworkResource_basicCallProcessingException
  * @description
@@ -75,7 +75,7 @@ export const componentFailure: UnavailableNetworkResource = UnavailableNetworkRe
  *
  * @constant
  */
-export const UnavailableNetworkResource_basicCallProcessingException: UnavailableNetworkResource = UnavailableNetworkResource.basicCallProcessingException;
+export const UnavailableNetworkResource_basicCallProcessingException: _enum_for_UnavailableNetworkResource.basicCallProcessingException = UnavailableNetworkResource.basicCallProcessingException;
 /**
  * @summary basicCallProcessingException
  * @description
@@ -84,7 +84,7 @@ export const UnavailableNetworkResource_basicCallProcessingException: Unavailabl
  *
  * @constant
  */
-export const basicCallProcessingException: UnavailableNetworkResource = UnavailableNetworkResource.basicCallProcessingException;
+export const basicCallProcessingException: _enum_for_UnavailableNetworkResource.basicCallProcessingException = UnavailableNetworkResource.basicCallProcessingException;
 /**
  * @summary UnavailableNetworkResource_resourceStatusFailure
  * @description
@@ -93,7 +93,7 @@ export const basicCallProcessingException: UnavailableNetworkResource = Unavaila
  *
  * @constant
  */
-export const UnavailableNetworkResource_resourceStatusFailure: UnavailableNetworkResource = UnavailableNetworkResource.resourceStatusFailure;
+export const UnavailableNetworkResource_resourceStatusFailure: _enum_for_UnavailableNetworkResource.resourceStatusFailure = UnavailableNetworkResource.resourceStatusFailure;
 /**
  * @summary resourceStatusFailure
  * @description
@@ -102,7 +102,7 @@ export const UnavailableNetworkResource_resourceStatusFailure: UnavailableNetwor
  *
  * @constant
  */
-export const resourceStatusFailure: UnavailableNetworkResource = UnavailableNetworkResource.resourceStatusFailure;
+export const resourceStatusFailure: _enum_for_UnavailableNetworkResource.resourceStatusFailure = UnavailableNetworkResource.resourceStatusFailure;
 /**
  * @summary UnavailableNetworkResource_endUserFailure
  * @description
@@ -111,7 +111,7 @@ export const resourceStatusFailure: UnavailableNetworkResource = UnavailableNetw
  *
  * @constant
  */
-export const UnavailableNetworkResource_endUserFailure: UnavailableNetworkResource = UnavailableNetworkResource.endUserFailure;
+export const UnavailableNetworkResource_endUserFailure: _enum_for_UnavailableNetworkResource.endUserFailure = UnavailableNetworkResource.endUserFailure;
 /**
  * @summary endUserFailure
  * @description
@@ -120,6 +120,6 @@ export const UnavailableNetworkResource_endUserFailure: UnavailableNetworkResour
  *
  * @constant
  */
-export const endUserFailure: UnavailableNetworkResource = UnavailableNetworkResource.endUserFailure;
-export const _decode_UnavailableNetworkResource = $._decodeEnumerated;
-export const _encode_UnavailableNetworkResource = $._encodeEnumerated;
+export const endUserFailure: _enum_for_UnavailableNetworkResource.endUserFailure = UnavailableNetworkResource.endUserFailure;
+export const _decode_UnavailableNetworkResource: $.ASN1Decoder<number> = $._decodeEnumerated;
+export const _encode_UnavailableNetworkResource: $.ASN1Encoder<number> = $._encodeEnumerated;

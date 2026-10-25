@@ -1,12 +1,12 @@
 /* eslint-disable */
 import {
-    BOOLEAN,
+    type BOOLEAN,
     ASN1ConstructionError as _ConstructionError,
-    ASN1Element as _Element,
+    type ASN1Element as _Element,
     ASN1TagClass as _TagClass
 } from "@wildboar/asn1";
 import * as $ from "@wildboar/asn1/functional";
-import { EnableProfileRequest_profileIdentifier, _decode_EnableProfileRequest_profileIdentifier, _encode_EnableProfileRequest_profileIdentifier } from "../RSPDefinitions/EnableProfileRequest-profileIdentifier.ta.mjs";
+import { type EnableProfileRequest_profileIdentifier, _decode_EnableProfileRequest_profileIdentifier, _encode_EnableProfileRequest_profileIdentifier } from "../RSPDefinitions/EnableProfileRequest-profileIdentifier.ta.mjs";
 
 
 /**
@@ -48,7 +48,7 @@ class EnableProfileRequest {
      * @public
      * @readonly
      */
-    readonly profileIdentifier: EnableProfileRequest_profileIdentifier;
+    public readonly profileIdentifier: EnableProfileRequest_profileIdentifier;
     /**
      * @summary `refreshFlag`.
      * @description
@@ -60,7 +60,7 @@ class EnableProfileRequest {
      * @public
      * @readonly
      */
-    readonly refreshFlag: BOOLEAN;
+    public readonly refreshFlag: BOOLEAN;
 
     constructor (
         profileIdentifier: EnableProfileRequest_profileIdentifier,

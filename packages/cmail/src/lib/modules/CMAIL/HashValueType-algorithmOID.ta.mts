@@ -71,7 +71,7 @@ export type HashValueType_algorithmOID = _enum_for_HashValueType_algorithmOID;
  *
  * @enum {number}
  */
-export const HashValueType_algorithmOID = _enum_for_HashValueType_algorithmOID;
+export const HashValueType_algorithmOID: typeof _enum_for_HashValueType_algorithmOID = _enum_for_HashValueType_algorithmOID;
 
 
 /**
@@ -80,7 +80,7 @@ export const HashValueType_algorithmOID = _enum_for_HashValueType_algorithmOID;
  * @constant
  * @type {number}
  */
-export const HashValueType_algorithmOID_sha_1: HashValueType_algorithmOID =
+export const HashValueType_algorithmOID_sha_1: 0 =
   HashValueType_algorithmOID.sha_1; /* LONG_NAMED_ENUMERATED_VALUE */
 
 
@@ -90,7 +90,7 @@ export const HashValueType_algorithmOID_sha_1: HashValueType_algorithmOID =
  * @constant
  * @type {number}
  */
-export const sha_1: HashValueType_algorithmOID =
+export const sha_1: 0 =
   HashValueType_algorithmOID.sha_1; /* SHORT_NAMED_ENUMERATED_VALUE */
 
 
@@ -100,7 +100,7 @@ export const sha_1: HashValueType_algorithmOID =
  * @constant
  * @type {number}
  */
-export const HashValueType_algorithmOID_sha_256: HashValueType_algorithmOID =
+export const HashValueType_algorithmOID_sha_256: 1 =
   HashValueType_algorithmOID.sha_256; /* LONG_NAMED_ENUMERATED_VALUE */
 
 
@@ -110,18 +110,18 @@ export const HashValueType_algorithmOID_sha_256: HashValueType_algorithmOID =
  * @constant
  * @type {number}
  */
-export const sha_256: HashValueType_algorithmOID =
+export const sha_256: 1 =
   HashValueType_algorithmOID.sha_256; /* SHORT_NAMED_ENUMERATED_VALUE */
 
 
 
 
-export const _decode_HashValueType_algorithmOID = $._decodeEnumerated as $.ASN1Decoder<HashValueType_algorithmOID>;
+export const _decode_HashValueType_algorithmOID: $.ASN1Decoder<HashValueType_algorithmOID> = $._decodeEnumerated as $.ASN1Decoder<HashValueType_algorithmOID>;
 
 
 
 
-export const _encode_HashValueType_algorithmOID = $._encodeEnumerated as $.ASN1Encoder<HashValueType_algorithmOID>;
+export const _encode_HashValueType_algorithmOID: $.ASN1Encoder<HashValueType_algorithmOID> = $._encodeEnumerated as $.ASN1Encoder<HashValueType_algorithmOID>;
 
 
 /* eslint-enable */

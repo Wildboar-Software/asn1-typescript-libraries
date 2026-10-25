@@ -1,8 +1,8 @@
 /* eslint-disable */
 import {
-    ASN1Element as _Element,
+    type ASN1Element as _Element,
     ASN1TagClass as _TagClass,
-    BOOLEAN
+    type BOOLEAN
 } from "@wildboar/asn1";
 import * as $ from "@wildboar/asn1/functional";
 import { _decode_ACRInterimLost, _encode_ACRInterimLost, _enum_for_ACRInterimLost, ACRInterimLost } from "../IMSChargingDataTypes/ACRInterimLost.ta.mjs";
@@ -108,7 +108,7 @@ class Incomplete_CDR_Indication {
          * @static
          */
 
-    public static _enum_for_aCRInterimLost = _enum_for_ACRInterimLost;
+    public static _enum_for_aCRInterimLost: typeof _enum_for_ACRInterimLost = _enum_for_ACRInterimLost;
 }
 
 /**

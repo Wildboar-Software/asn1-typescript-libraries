@@ -1,9 +1,9 @@
 /* eslint-disable */
 import {
     ASN1ConstructionError as _ConstructionError,
-    ASN1Element as _Element,
+    type ASN1Element as _Element,
     ASN1TagClass as _TagClass,
-    OBJECT_IDENTIFIER,
+    type OBJECT_IDENTIFIER,
 } from "@wildboar/asn1";
 import * as $ from "@wildboar/asn1/functional";
 /**
@@ -21,34 +21,42 @@ import * as $ from "@wildboar/asn1/functional";
  *
  */
 export class KeyAgreement_keyEncryptionAlgorithm {
+    /**
+     * @summary `algorithm`.
+     * @description
+     *
+     * ALGORITHM.&id from `SupportedKeyEncryptionAlgorithm`.
+     *
+     * @public
+     * @readonly
+     */
+    public readonly algorithm: OBJECT_IDENTIFIER;
+    /**
+     * @summary `parameters`.
+     * @description
+     *
+     * ALGORITHM.&Type. Missing vs not-allowed → PkiWaError 15/16.
+     *
+     * @public
+     * @readonly
+     */
+    public readonly parameters: _Element;
+    /**
+     * @summary Extensions that are not recognized.
+     * @public
+     * @readonly
+     */
+    public readonly _unrecognizedExtensionsList: _Element[];
+
     constructor(
-        /**
-         * @summary `algorithm`.
-         * @description
-         *
-         * ALGORITHM.&id from `SupportedKeyEncryptionAlgorithm`.
-         *
-         * @public
-         * @readonly
-         */
-        readonly algorithm: OBJECT_IDENTIFIER,
-        /**
-         * @summary `parameters`.
-         * @description
-         *
-         * ALGORITHM.&Type. Missing vs not-allowed → PkiWaError 15/16.
-         *
-         * @public
-         * @readonly
-         */
-        readonly parameters: _Element,
-        /**
-         * @summary Extensions that are not recognized.
-         * @public
-         * @readonly
-         */
-        readonly _unrecognizedExtensionsList: _Element[] = []
-    ) {}
+        algorithm: OBJECT_IDENTIFIER,
+        parameters: _Element,
+        _unrecognizedExtensionsList: _Element[] = []
+    ) {
+        this.algorithm = algorithm;
+        this.parameters = parameters;
+        this._unrecognizedExtensionsList = _unrecognizedExtensionsList;
+    }
 
     /**
      * @summary Restructures an object into a KeyAgreement_keyEncryptionAlgorithm

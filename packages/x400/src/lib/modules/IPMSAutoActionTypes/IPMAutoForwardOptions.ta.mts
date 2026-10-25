@@ -1,7 +1,7 @@
 /* eslint-disable */
 import {
-    BIT_STRING,
-    ASN1Element as _Element,
+    type BIT_STRING,
+    type ASN1Element as _Element,
     ASN1TagClass as _TagClass,
     ASN1Construction as _Construction,
     ASN1UniversalType as _UniversalType,
@@ -174,10 +174,10 @@ export const IPMAutoForwardOptions_delete_delivered_object: number = 5; /* LONG_
 export const delete_delivered_object: number = IPMAutoForwardOptions_delete_delivered_object; /* SHORT_NAMED_BIT */
 
 
-export const _decode_IPMAutoForwardOptions = $._decodeBitString;
+export const _decode_IPMAutoForwardOptions: $.ASN1Decoder<BIT_STRING> = $._decodeBitString;
 
 
-export const _encode_IPMAutoForwardOptions = $._encodeBitString;
+export const _encode_IPMAutoForwardOptions: $.ASN1Encoder<BIT_STRING> = $._encodeBitString;
 
 
 /* eslint-enable */

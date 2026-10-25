@@ -1,6 +1,6 @@
 /* eslint-disable */
 import {
-    ASN1Element as _Element,
+    type ASN1Element as _Element,
     ASN1TagClass as _TagClass,
     ASN1Construction as _Construction,
     ASN1UniversalType as _UniversalType,
@@ -29,22 +29,13 @@ import {
  */
 export type RedirectionClass = MessageClass; // DefinedType
 
-let _cached_decoder_for_RedirectionClass: $.ASN1Decoder<RedirectionClass> | null = null;
-
 /**
  * @summary Decodes an ASN.1 element into a(n) RedirectionClass
  * @function
  * @param {_Element} el The element being decoded.
  * @returns {RedirectionClass} The decoded data structure.
  */
-export function _decode_RedirectionClass(el: _Element): RedirectionClass {
-    if (!_cached_decoder_for_RedirectionClass) {
-        _cached_decoder_for_RedirectionClass = _decode_MessageClass;
-    }
-    return _cached_decoder_for_RedirectionClass(el);
-}
-
-let _cached_encoder_for_RedirectionClass: $.ASN1Encoder<RedirectionClass> | null = null;
+export const _decode_RedirectionClass: $.ASN1Decoder<RedirectionClass> = _decode_MessageClass;
 
 /**
  * @summary Encodes a(n) RedirectionClass into an ASN.1 Element.
@@ -53,15 +44,7 @@ let _cached_encoder_for_RedirectionClass: $.ASN1Encoder<RedirectionClass> | null
  * @param elGetter A function that can be used to get new ASN.1 elements.
  * @returns {_Element} The RedirectionClass, encoded as an ASN.1 Element.
  */
-export function _encode_RedirectionClass(
-    value: RedirectionClass,
-    elGetter: $.ASN1Encoder<RedirectionClass>
-): _Element {
-    if (!_cached_encoder_for_RedirectionClass) {
-        _cached_encoder_for_RedirectionClass = _encode_MessageClass;
-    }
-    return _cached_encoder_for_RedirectionClass(value, elGetter);
-}
+export const _encode_RedirectionClass: $.ASN1Encoder<RedirectionClass> = _encode_MessageClass;
 
 
 /* eslint-enable */

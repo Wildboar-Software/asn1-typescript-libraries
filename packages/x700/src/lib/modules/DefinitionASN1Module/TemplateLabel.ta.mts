@@ -1,7 +1,7 @@
 /* eslint-disable */
 import {
-    OPTIONAL,
-    ASN1Element as _Element,
+    type OPTIONAL,
+    type ASN1Element as _Element,
     ASN1TagClass as _TagClass,
     ASN1Construction as _Construction,
     ASN1UniversalType as _UniversalType,
@@ -12,12 +12,12 @@ import {
 } from '@wildboar/asn1';
 import * as $ from '@wildboar/asn1/functional';
 import {
-    TemplateName,
+    type TemplateName,
     _decode_TemplateName,
     _encode_TemplateName,
 } from '../DefinitionASN1Module/TemplateName.ta.mjs';
 import {
-    TemplateLabel_documentId,
+    type TemplateLabel_documentId,
     _decode_TemplateLabel_documentId,
     _encode_TemplateLabel_documentId,
 } from '../DefinitionASN1Module/TemplateLabel-documentId.ta.mjs';
@@ -45,27 +45,33 @@ import {
  *
  */
 export class TemplateLabel {
+    /**
+     * @summary `localName`.
+     * @description
+     *
+     * Template label within the document (GDMO label).
+     * @public
+     * @readonly
+     */
+    public readonly localName: TemplateName;
+    /**
+     * @summary `documentId`.
+     * @description
+     *
+     * Document that defines the template, if it is not the current
+     * document. Graphic name or document OID.
+     * @public
+     * @readonly
+     */
+    public readonly documentId?: OPTIONAL<TemplateLabel_documentId>;
+
     constructor(
-        /**
-         * @summary `localName`.
-         * @description
-         *
-         * Template label within the document (GDMO label).
-         * @public
-         * @readonly
-         */
-        readonly localName: TemplateName,
-        /**
-         * @summary `documentId`.
-         * @description
-         *
-         * Document that defines the template, if it is not the current
-         * document. Graphic name or document OID.
-         * @public
-         * @readonly
-         */
-        readonly documentId?: OPTIONAL<TemplateLabel_documentId>
-    ) {}
+        localName: TemplateName,
+        documentId?: OPTIONAL<TemplateLabel_documentId>
+    ) {
+        this.localName = localName;
+        this.documentId = documentId;
+    }
 
     /**
      * @summary Restructures an object into a TemplateLabel

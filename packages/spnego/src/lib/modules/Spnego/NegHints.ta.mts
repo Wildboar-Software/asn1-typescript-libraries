@@ -1,10 +1,10 @@
 /* eslint-disable */
 import {
-    ASN1Element as _Element,
+    type ASN1Element as _Element,
     ASN1TagClass as _TagClass,
-    GeneralString,
-    OCTET_STRING,
-    OPTIONAL
+    type GeneralString,
+    type OCTET_STRING,
+    type OPTIONAL
 } from "@wildboar/asn1";
 import * as $ from "@wildboar/asn1/functional";
 
@@ -32,13 +32,13 @@ class NegHints {
      * @public
      * @readonly
      */
-    readonly hintName?: OPTIONAL<GeneralString>;
+    public readonly hintName?: OPTIONAL<GeneralString>;
     /**
      * @summary `hintAddress`.
      * @public
      * @readonly
      */
-    readonly hintAddress?: OPTIONAL<OCTET_STRING>;
+    public readonly hintAddress?: OPTIONAL<OCTET_STRING>;
 
     constructor (
         hintName?: OPTIONAL<GeneralString>,

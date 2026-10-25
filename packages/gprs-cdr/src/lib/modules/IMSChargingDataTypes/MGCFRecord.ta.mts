@@ -1,21 +1,21 @@
 /* eslint-disable */
 import {
-    GraphicString,
-    INTEGER,
-    NULL,
-    OCTET_STRING,
-    OPTIONAL,
-    UTF8String,
-    ASN1Element as _Element,
+    type GraphicString,
+    type INTEGER,
+    type NULL,
+    type OCTET_STRING,
+    type OPTIONAL,
+    type UTF8String,
+    type ASN1Element as _Element,
     ASN1TagClass as _TagClass,
     ASN1SizeError,
     ASN1OverflowError
 } from "@wildboar/asn1";
 import * as $ from "@wildboar/asn1/functional";
-import { RecordType, _decode_RecordType, _encode_RecordType } from "../IMSChargingDataTypes/RecordType.ta.mjs";
+import { type RecordType, _decode_RecordType, _encode_RecordType } from "../IMSChargingDataTypes/RecordType.ta.mjs";
 import { Role_of_Node, _decode_Role_of_Node, _encode_Role_of_Node, _enum_for_Role_of_Node } from "../IMSChargingDataTypes/Role-of-Node.ta.mjs";
-import { NodeAddress, _decode_NodeAddress, _encode_NodeAddress } from "../IMSChargingDataTypes/NodeAddress.ta.mjs";
-import { InvolvedParty, _decode_InvolvedParty, _encode_InvolvedParty } from "../IMSChargingDataTypes/InvolvedParty.ta.mjs";
+import { type NodeAddress, _decode_NodeAddress, _encode_NodeAddress } from "../IMSChargingDataTypes/NodeAddress.ta.mjs";
+import { type InvolvedParty, _decode_InvolvedParty, _encode_InvolvedParty } from "../IMSChargingDataTypes/InvolvedParty.ta.mjs";
 import { InterOperatorIdentifiers, _decode_InterOperatorIdentifiers, _encode_InterOperatorIdentifiers } from "../IMSChargingDataTypes/InterOperatorIdentifiers.ta.mjs";
 import { CauseForRecordClosing, _decode_CauseForRecordClosing, _encode_CauseForRecordClosing, _enum_for_CauseForRecordClosing } from "../IMSChargingDataTypes/CauseForRecordClosing.ta.mjs";
 import { Incomplete_CDR_Indication, _decode_Incomplete_CDR_Indication, _encode_Incomplete_CDR_Indication } from "../IMSChargingDataTypes/Incomplete-CDR-Indication.ta.mjs";
@@ -23,9 +23,9 @@ import { Media_Components_List, _decode_Media_Components_List, _encode_Media_Com
 import { ManagementExtension, _decode_ManagementExtension, _encode_ManagementExtension } from "../IMSChargingDataTypes/ManagementExtension.ta.mjs";
 import { Early_Media_Components_List, _decode_Early_Media_Components_List, _encode_Early_Media_Components_List } from "../IMSChargingDataTypes/Early-Media-Components-List.ta.mjs";
 import { SessionPriority, _decode_SessionPriority, _encode_SessionPriority, _enum_for_SessionPriority } from "../IMSChargingDataTypes/SessionPriority.ta.mjs";
-import { RealTimeTariffInformation, _decode_RealTimeTariffInformation, _encode_RealTimeTariffInformation } from "../IMSChargingDataTypes/RealTimeTariffInformation.ta.mjs";
+import { type RealTimeTariffInformation, _decode_RealTimeTariffInformation, _encode_RealTimeTariffInformation } from "../IMSChargingDataTypes/RealTimeTariffInformation.ta.mjs";
 import { AccessNetworkInfoChange, _decode_AccessNetworkInfoChange, _encode_AccessNetworkInfoChange } from "../IMSChargingDataTypes/AccessNetworkInfoChange.ta.mjs";
-import { TrunkGroupID, _decode_TrunkGroupID, _encode_TrunkGroupID } from "../IMSChargingDataTypes/TrunkGroupID.ta.mjs";
+import { type TrunkGroupID, _decode_TrunkGroupID, _encode_TrunkGroupID } from "../IMSChargingDataTypes/TrunkGroupID.ta.mjs";
 import { TransmissionMedium, _decode_TransmissionMedium, _encode_TransmissionMedium } from "../IMSChargingDataTypes/TransmissionMedium.ta.mjs";
 import { ISUPCause, _decode_ISUPCause, _encode_ISUPCause } from "../IMSChargingDataTypes/ISUPCause.ta.mjs";
 
@@ -1015,19 +1015,19 @@ class MGCFRecord {
          * @static
          */
 
-    public static _enum_for_role_of_Node = _enum_for_Role_of_Node;        /**
+    public static _enum_for_role_of_Node: typeof _enum_for_Role_of_Node = _enum_for_Role_of_Node;        /**
          * @summary The enum used as the type of the component `causeForRecordClosing`
          * @public
          * @static
          */
 
-    public static _enum_for_causeForRecordClosing = _enum_for_CauseForRecordClosing;        /**
+    public static _enum_for_causeForRecordClosing: typeof _enum_for_CauseForRecordClosing = _enum_for_CauseForRecordClosing;        /**
          * @summary The enum used as the type of the component `sessionPriority`
          * @public
          * @static
          */
 
-    public static _enum_for_sessionPriority = _enum_for_SessionPriority;
+    public static _enum_for_sessionPriority: typeof _enum_for_SessionPriority = _enum_for_SessionPriority;
 }
 
 /**

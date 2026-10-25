@@ -1,7 +1,7 @@
 /* eslint-disable */
 import { id_algo_multipleIcvAlgo } from "../CryptoTools/id-algo-multipleIcvAlgo.va.mjs";
 import {
-    MultipleIcvAlgo,
+    type MultipleIcvAlgo,
     _decode_MultipleIcvAlgo,
     _encode_MultipleIcvAlgo,
 } from "../CryptoTools/MultipleIcvAlgo.ta.mjs";

@@ -1,12 +1,12 @@
 /* eslint-disable */
 import {
     ASN1ConstructionError as _ConstructionError,
-    ASN1Element as _Element,
+    type ASN1Element as _Element,
     ASN1TagClass as _TagClass
 } from "@wildboar/asn1";
 import * as $ from "@wildboar/asn1/functional";
-import { AreaIdentification, _decode_AreaIdentification, _encode_AreaIdentification } from "../MAP-LCS-DataTypes/AreaIdentification.ta.mjs";
-import { AreaType, _decode_AreaType, _encode_AreaType, _enum_for_AreaType } from "../MAP-LCS-DataTypes/AreaType.ta.mjs";
+import { type AreaIdentification, _decode_AreaIdentification, _encode_AreaIdentification } from "../MAP-LCS-DataTypes/AreaIdentification.ta.mjs";
+import { type AreaType, _decode_AreaType, _encode_AreaType, _enum_for_AreaType } from "../MAP-LCS-DataTypes/AreaType.ta.mjs";
 
 
 /**
@@ -28,34 +28,42 @@ import { AreaType, _decode_AreaType, _encode_AreaType, _enum_for_AreaType } from
  */
 export
 class Area {
+    /**
+     * @summary `areaType`.
+     * @description
+     *
+     * countryCode, plmnId, LAI, RAI, CGI or utranCellId.
+     *
+     * @public
+     * @readonly
+     */
+    public readonly areaType: AreaType;
+    /**
+     * @summary `areaIdentification`.
+     * @description
+     *
+     * 2..7 octets; MCC/MNC plus LAC/RAC/CI/UC-Id (clause 17.7.13).
+     *
+     * @public
+     * @readonly
+     */
+    public readonly areaIdentification: AreaIdentification;
+    /**
+     * @summary Extensions that are not recognized.
+     * @public
+     * @readonly
+     */
+    public readonly _unrecognizedExtensionsList: _Element[];
+
     constructor (
-        /**
-         * @summary `areaType`.
-         * @description
-         *
-         * countryCode, plmnId, LAI, RAI, CGI or utranCellId.
-         *
-         * @public
-         * @readonly
-         */
-        readonly areaType: AreaType,
-        /**
-         * @summary `areaIdentification`.
-         * @description
-         *
-         * 2..7 octets; MCC/MNC plus LAC/RAC/CI/UC-Id (clause 17.7.13).
-         *
-         * @public
-         * @readonly
-         */
-        readonly areaIdentification: AreaIdentification,
-        /**
-         * @summary Extensions that are not recognized.
-         * @public
-         * @readonly
-         */
-        readonly _unrecognizedExtensionsList: _Element[] = []
-    ) {}
+        areaType: AreaType,
+        areaIdentification: AreaIdentification,
+        _unrecognizedExtensionsList: _Element[] = []
+    ) {
+        this.areaType = areaType;
+        this.areaIdentification = areaIdentification;
+        this._unrecognizedExtensionsList = _unrecognizedExtensionsList;
+    }
 
     /**
      * @summary Restructures an object into a Area
@@ -79,7 +87,7 @@ class Area {
          * @static
          */
 
-    public static _enum_for_areaType = _enum_for_AreaType;
+    public static _enum_for_areaType: typeof _enum_for_AreaType = _enum_for_AreaType;
 }
 
 /**

@@ -1,5 +1,5 @@
 /* eslint-disable */
-import { ASN1Element as _Element, INTEGER } from "@wildboar/asn1";
+import { ASN1Element as _Element, type INTEGER } from "@wildboar/asn1";
 import * as $ from "@wildboar/asn1/functional";
 
 
@@ -21,7 +21,7 @@ export type RC5_CBC_Parameters_version = INTEGER;
  * @constant
  * @type {number}
  */
-export const RC5_CBC_Parameters_version_v1_0: RC5_CBC_Parameters_version = 16; /* LONG_NAMED_INTEGER_VALUE */
+export const RC5_CBC_Parameters_version_v1_0: 16 = 16 satisfies RC5_CBC_Parameters_version; /* LONG_NAMED_INTEGER_VALUE */
 
 
 /**
@@ -29,17 +29,17 @@ export const RC5_CBC_Parameters_version_v1_0: RC5_CBC_Parameters_version = 16; /
  * @constant
  * @type {number}
  */
-export const v1_0: RC5_CBC_Parameters_version = RC5_CBC_Parameters_version_v1_0; /* SHORT_NAMED_INTEGER_VALUE */
+export const v1_0: 16 = RC5_CBC_Parameters_version_v1_0; /* SHORT_NAMED_INTEGER_VALUE */
 
 
 
 
-export const _decode_RC5_CBC_Parameters_version = $._decodeInteger;
+export const _decode_RC5_CBC_Parameters_version: $.ASN1Decoder<INTEGER> = $._decodeInteger;
 
 
 
 
-export const _encode_RC5_CBC_Parameters_version = $._encodeInteger;
+export const _encode_RC5_CBC_Parameters_version: $.ASN1Encoder<INTEGER> = $._encodeInteger;
 
 
 /* eslint-enable */

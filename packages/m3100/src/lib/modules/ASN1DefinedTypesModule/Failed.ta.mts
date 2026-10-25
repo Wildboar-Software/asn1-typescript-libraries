@@ -1,6 +1,6 @@
 /* eslint-disable */
 import {
-    ASN1Element as _Element,
+    type ASN1Element as _Element,
     ASN1TagClass as _TagClass,
     ASN1Construction as _Construction,
     ASN1UniversalType as _UniversalType,
@@ -16,7 +16,7 @@ import {
     _encode_LogicalProblem,
 } from '../ASN1DefinedTypesModule/LogicalProblem.ta.mjs';
 import {
-    ResourceProblem,
+    type ResourceProblem,
     _decode_ResourceProblem,
     _encode_ResourceProblem,
 } from '../ASN1DefinedTypesModule/ResourceProblem.ta.mjs';

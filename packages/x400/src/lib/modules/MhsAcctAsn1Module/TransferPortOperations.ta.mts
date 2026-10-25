@@ -1,6 +1,6 @@
 /* eslint-disable */
 import {
-    ASN1Element as _Element,
+    type ASN1Element as _Element,
     ASN1TagClass as _TagClass,
     ASN1Construction as _Construction,
     ASN1UniversalType as _UniversalType,
@@ -11,7 +11,7 @@ import {
 } from '@wildboar/asn1';
 import * as $ from '@wildboar/asn1/functional';
 import {
-    EventTypeId,
+    type EventTypeId,
     _decode_EventTypeId,
     _encode_EventTypeId,
 } from '@wildboar/cmip';
@@ -32,22 +32,13 @@ import {
  */
 export type TransferPortOperations = EventTypeId; // DefinedType
 
-let _cached_decoder_for_TransferPortOperations: $.ASN1Decoder<TransferPortOperations> | null = null;
-
 /**
  * @summary Decodes an ASN.1 element into a(n) TransferPortOperations
  * @function
  * @param {_Element} el The element being decoded.
  * @returns {TransferPortOperations} The decoded data structure.
  */
-export function _decode_TransferPortOperations(el: _Element): TransferPortOperations {
-    if (!_cached_decoder_for_TransferPortOperations) {
-        _cached_decoder_for_TransferPortOperations = _decode_EventTypeId;
-    }
-    return _cached_decoder_for_TransferPortOperations(el);
-}
-
-let _cached_encoder_for_TransferPortOperations: $.ASN1Encoder<TransferPortOperations> | null = null;
+export const _decode_TransferPortOperations: $.ASN1Decoder<TransferPortOperations> = _decode_EventTypeId;
 
 /**
  * @summary Encodes a(n) TransferPortOperations into an ASN.1 Element.
@@ -56,15 +47,7 @@ let _cached_encoder_for_TransferPortOperations: $.ASN1Encoder<TransferPortOperat
  * @param elGetter A function that can be used to get new ASN.1 elements.
  * @returns {_Element} The TransferPortOperations, encoded as an ASN.1 Element.
  */
-export function _encode_TransferPortOperations(
-    value: TransferPortOperations,
-    elGetter: $.ASN1Encoder<TransferPortOperations>
-): _Element {
-    if (!_cached_encoder_for_TransferPortOperations) {
-        _cached_encoder_for_TransferPortOperations = _encode_EventTypeId;
-    }
-    return _cached_encoder_for_TransferPortOperations(value, elGetter);
-}
+export const _encode_TransferPortOperations: $.ASN1Encoder<TransferPortOperations> = _encode_EventTypeId;
 
 
 /* eslint-enable */

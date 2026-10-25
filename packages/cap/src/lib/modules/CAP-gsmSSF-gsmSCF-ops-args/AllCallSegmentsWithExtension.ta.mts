@@ -1,7 +1,7 @@
 /* eslint-disable */
 import {
-    OPTIONAL,
-    ASN1Element as _Element,
+    type OPTIONAL,
+    type ASN1Element as _Element,
     ASN1TagClass as _TagClass,
     ASN1Construction as _Construction,
     ASN1UniversalType as _UniversalType,
@@ -12,7 +12,7 @@ import {
 } from "@wildboar/asn1";
 import * as $ from "@wildboar/asn1/functional";
 import { type Extensions, _decode_Extensions, _encode_Extensions } from "../CAP-datatypes/Extensions.ta.mjs";
-import { AllCallSegments, _decode_AllCallSegments, _encode_AllCallSegments } from "../CAP-gsmSSF-gsmSCF-ops-args/AllCallSegments.ta.mjs";
+import { type AllCallSegments, _decode_AllCallSegments, _encode_AllCallSegments } from "../CAP-gsmSSF-gsmSCF-ops-args/AllCallSegments.ta.mjs";
 
 
 /**
@@ -35,26 +35,32 @@ import { AllCallSegments, _decode_AllCallSegments, _encode_AllCallSegments } fro
  */
 export
 class AllCallSegmentsWithExtension {
+    /**
+     * @summary `allCallSegments`.
+     * @description
+     *
+     * Cause for releasing the call (tones or release-message cause).
+     * Default decimal 31 (normal unspecified). (3GPP TS 29.078 V19.0.0
+     * clause 11.26.1.1).
+     *
+     * @public
+     * @readonly
+     */
+    public readonly allCallSegments: AllCallSegments;
+    /**
+     * @summary `extensions`.
+     * @public
+     * @readonly
+     */
+    public readonly extensions?: OPTIONAL<Extensions>;
+
     constructor (
-        /**
-         * @summary `allCallSegments`.
-         * @description
-         *
-         * Cause for releasing the call (tones or release-message cause).
-         * Default decimal 31 (normal unspecified). (3GPP TS 29.078 V19.0.0
-         * clause 11.26.1.1).
-         *
-         * @public
-         * @readonly
-         */
-        readonly allCallSegments: AllCallSegments,
-        /**
-         * @summary `extensions`.
-         * @public
-         * @readonly
-         */
-        readonly extensions?: OPTIONAL<Extensions>
-    ) {}
+        allCallSegments: AllCallSegments,
+        extensions?: OPTIONAL<Extensions>
+    ) {
+        this.allCallSegments = allCallSegments;
+        this.extensions = extensions;
+    }
 
     /**
      * @summary Restructures an object into a AllCallSegmentsWithExtension

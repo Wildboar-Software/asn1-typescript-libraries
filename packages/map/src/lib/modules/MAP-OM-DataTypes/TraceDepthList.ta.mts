@@ -1,12 +1,12 @@
 /* eslint-disable */
 import {
-    OPTIONAL,
-    ASN1Element as _Element,
+    type OPTIONAL,
+    type ASN1Element as _Element,
     ASN1TagClass as _TagClass
 } from "@wildboar/asn1";
 import * as $ from "@wildboar/asn1/functional";
-import { TraceDepth, _decode_TraceDepth, _encode_TraceDepth, _enum_for_TraceDepth } from "../MAP-OM-DataTypes/TraceDepth.ta.mjs";
-import { TraceDepthExtension, _decode_TraceDepthExtension, _encode_TraceDepthExtension, _enum_for_TraceDepthExtension } from "../MAP-OM-DataTypes/TraceDepthExtension.ta.mjs";
+import { type TraceDepth, _decode_TraceDepth, _encode_TraceDepth, _enum_for_TraceDepth } from "../MAP-OM-DataTypes/TraceDepth.ta.mjs";
+import { type TraceDepthExtension, _decode_TraceDepthExtension, _encode_TraceDepthExtension, _enum_for_TraceDepthExtension } from "../MAP-OM-DataTypes/TraceDepthExtension.ta.mjs";
 
 
 /**
@@ -22,26 +22,26 @@ import { TraceDepthExtension, _decode_TraceDepthExtension, _encode_TraceDepthExt
  * 
  * ```asn1
  * TraceDepthList ::= SEQUENCE {
- *     msc-s-TraceDepth    [0] TraceDepth    OPTIONAL,
- *     mgw-TraceDepth    [1] TraceDepth    OPTIONAL,
- *     sgsn-TraceDepth    [2] TraceDepth    OPTIONAL,
- *     ggsn-TraceDepth    [3] TraceDepth    OPTIONAL,
- *     rnc-TraceDepth    [4] TraceDepth    OPTIONAL,
- *     bmsc-TraceDepth    [5] TraceDepth    OPTIONAL,
+ *     msc-s-TraceDepth    [0] TraceDepth    type OPTIONAL,
+ *     mgw-TraceDepth    [1] TraceDepth    type OPTIONAL,
+ *     sgsn-TraceDepth    [2] TraceDepth    type OPTIONAL,
+ *     ggsn-TraceDepth    [3] TraceDepth    type OPTIONAL,
+ *     rnc-TraceDepth    [4] TraceDepth    type OPTIONAL,
+ *     bmsc-TraceDepth    [5] TraceDepth    type OPTIONAL,
  *     ... ,
- *     mme-TraceDepth    [6] TraceDepth    OPTIONAL,
- *     sgw-TraceDepth    [7] TraceDepth    OPTIONAL,
- *     pgw-TraceDepth    [8] TraceDepth    OPTIONAL,
- *     eNB-TraceDepth    [9] TraceDepth    OPTIONAL,
- *     msc-s-TraceDepthExtension    [10] TraceDepthExtension    OPTIONAL,
- *     mgw-TraceDepthExtension    [11] TraceDepthExtension    OPTIONAL,
- *     sgsn-TraceDepthExtension    [12] TraceDepthExtension    OPTIONAL,
- *     ggsn-TraceDepthExtension    [13] TraceDepthExtension    OPTIONAL,
- *     rnc-TraceDepthExtension    [14] TraceDepthExtension    OPTIONAL,
- *     bmsc-TraceDepthExtension    [15] TraceDepthExtension    OPTIONAL,
- *     mme-TraceDepthExtension    [16] TraceDepthExtension    OPTIONAL,
- *     sgw-TraceDepthExtension    [17] TraceDepthExtension    OPTIONAL,
- *     pgw-TraceDepthExtension    [18] TraceDepthExtension    OPTIONAL,
+ *     mme-TraceDepth    [6] TraceDepth    type OPTIONAL,
+ *     sgw-TraceDepth    [7] TraceDepth    type OPTIONAL,
+ *     pgw-TraceDepth    [8] TraceDepth    type OPTIONAL,
+ *     eNB-TraceDepth    [9] TraceDepth    type OPTIONAL,
+ *     msc-s-TraceDepthExtension    [10] TraceDepthExtension    type OPTIONAL,
+ *     mgw-TraceDepthExtension    [11] TraceDepthExtension    type OPTIONAL,
+ *     sgsn-TraceDepthExtension    [12] TraceDepthExtension    type OPTIONAL,
+ *     ggsn-TraceDepthExtension    [13] TraceDepthExtension    type OPTIONAL,
+ *     rnc-TraceDepthExtension    [14] TraceDepthExtension    type OPTIONAL,
+ *     bmsc-TraceDepthExtension    [15] TraceDepthExtension    type OPTIONAL,
+ *     mme-TraceDepthExtension    [16] TraceDepthExtension    type OPTIONAL,
+ *     sgw-TraceDepthExtension    [17] TraceDepthExtension    type OPTIONAL,
+ *     pgw-TraceDepthExtension    [18] TraceDepthExtension    type OPTIONAL,
  *     eNB-TraceDepthExtension    [19] TraceDepthExtension    OPTIONAL }
  * ```
  * 
@@ -49,214 +49,258 @@ import { TraceDepthExtension, _decode_TraceDepthExtension, _encode_TraceDepthExt
  */
 export
 class TraceDepthList {
+    /**
+     * @summary `msc_s_TraceDepth`.
+     * @description
+     *
+     * Trace depth for this NE (clause 17.7.2).
+     *
+     * @public
+     * @readonly
+     */
+    public readonly msc_s_TraceDepth?: OPTIONAL<TraceDepth>;
+    /**
+     * @summary `mgw_TraceDepth`.
+     * @description
+     *
+     * Trace depth for this NE (clause 17.7.2).
+     *
+     * @public
+     * @readonly
+     */
+    public readonly mgw_TraceDepth?: OPTIONAL<TraceDepth>;
+    /**
+     * @summary `sgsn_TraceDepth`.
+     * @description
+     *
+     * Trace depth for this NE (clause 17.7.2).
+     *
+     * @public
+     * @readonly
+     */
+    public readonly sgsn_TraceDepth?: OPTIONAL<TraceDepth>;
+    /**
+     * @summary `ggsn_TraceDepth`.
+     * @description
+     *
+     * Trace depth for this NE (clause 17.7.2).
+     *
+     * @public
+     * @readonly
+     */
+    public readonly ggsn_TraceDepth?: OPTIONAL<TraceDepth>;
+    /**
+     * @summary `rnc_TraceDepth`.
+     * @description
+     *
+     * Trace depth for this NE (clause 17.7.2).
+     *
+     * @public
+     * @readonly
+     */
+    public readonly rnc_TraceDepth?: OPTIONAL<TraceDepth>;
+    /**
+     * @summary `bmsc_TraceDepth`.
+     * @description
+     *
+     * Trace depth for this NE (clause 17.7.2).
+     *
+     * @public
+     * @readonly
+     */
+    public readonly bmsc_TraceDepth?: OPTIONAL<TraceDepth>;
+    /**
+     * @summary `mme_TraceDepth`.
+     * @description
+     *
+     * Trace depth for this NE (clause 17.7.2).
+     *
+     * @public
+     * @readonly
+     */
+    public readonly mme_TraceDepth?: OPTIONAL<TraceDepth>;
+    /**
+     * @summary `sgw_TraceDepth`.
+     * @description
+     *
+     * Trace depth for this NE (clause 17.7.2).
+     *
+     * @public
+     * @readonly
+     */
+    public readonly sgw_TraceDepth?: OPTIONAL<TraceDepth>;
+    /**
+     * @summary `pgw_TraceDepth`.
+     * @description
+     *
+     * Trace depth for this NE (clause 17.7.2).
+     *
+     * @public
+     * @readonly
+     */
+    public readonly pgw_TraceDepth?: OPTIONAL<TraceDepth>;
+    /**
+     * @summary `eNB_TraceDepth`.
+     * @description
+     *
+     * Trace depth for this NE (clause 17.7.2).
+     *
+     * @public
+     * @readonly
+     */
+    public readonly eNB_TraceDepth?: OPTIONAL<TraceDepth>;
+    /**
+     * @summary `msc_s_TraceDepthExtension`.
+     * @description
+     *
+     * Trace depth for this NE (clause 17.7.2).
+     *
+     * @public
+     * @readonly
+     */
+    public readonly msc_s_TraceDepthExtension?: OPTIONAL<TraceDepthExtension>;
+    /**
+     * @summary `mgw_TraceDepthExtension`.
+     * @description
+     *
+     * Trace depth for this NE (clause 17.7.2).
+     *
+     * @public
+     * @readonly
+     */
+    public readonly mgw_TraceDepthExtension?: OPTIONAL<TraceDepthExtension>;
+    /**
+     * @summary `sgsn_TraceDepthExtension`.
+     * @description
+     *
+     * Trace depth for this NE (clause 17.7.2).
+     *
+     * @public
+     * @readonly
+     */
+    public readonly sgsn_TraceDepthExtension?: OPTIONAL<TraceDepthExtension>;
+    /**
+     * @summary `ggsn_TraceDepthExtension`.
+     * @description
+     *
+     * Trace depth for this NE (clause 17.7.2).
+     *
+     * @public
+     * @readonly
+     */
+    public readonly ggsn_TraceDepthExtension?: OPTIONAL<TraceDepthExtension>;
+    /**
+     * @summary `rnc_TraceDepthExtension`.
+     * @description
+     *
+     * Trace depth for this NE (clause 17.7.2).
+     *
+     * @public
+     * @readonly
+     */
+    public readonly rnc_TraceDepthExtension?: OPTIONAL<TraceDepthExtension>;
+    /**
+     * @summary `bmsc_TraceDepthExtension`.
+     * @description
+     *
+     * Trace depth for this NE (clause 17.7.2).
+     *
+     * @public
+     * @readonly
+     */
+    public readonly bmsc_TraceDepthExtension?: OPTIONAL<TraceDepthExtension>;
+    /**
+     * @summary `mme_TraceDepthExtension`.
+     * @description
+     *
+     * Trace depth for this NE (clause 17.7.2).
+     *
+     * @public
+     * @readonly
+     */
+    public readonly mme_TraceDepthExtension?: OPTIONAL<TraceDepthExtension>;
+    /**
+     * @summary `sgw_TraceDepthExtension`.
+     * @description
+     *
+     * Trace depth for this NE (clause 17.7.2).
+     *
+     * @public
+     * @readonly
+     */
+    public readonly sgw_TraceDepthExtension?: OPTIONAL<TraceDepthExtension>;
+    /**
+     * @summary `pgw_TraceDepthExtension`.
+     * @description
+     *
+     * Trace depth for this NE (clause 17.7.2).
+     *
+     * @public
+     * @readonly
+     */
+    public readonly pgw_TraceDepthExtension?: OPTIONAL<TraceDepthExtension>;
+    /**
+     * @summary `eNB_TraceDepthExtension`.
+     * @description
+     *
+     * Trace depth for this NE (clause 17.7.2).
+     *
+     * @public
+     * @readonly
+     */
+    public readonly eNB_TraceDepthExtension?: OPTIONAL<TraceDepthExtension>;
+    /**
+     * @summary Extensions that are not recognized.
+     * @public
+     * @readonly
+     */
+    public readonly _unrecognizedExtensionsList: _Element[];
+
     constructor (
-        /**
-         * @summary `msc_s_TraceDepth`.
-         * @description
-         *
-         * Trace depth for this NE (clause 17.7.2).
-         *
-         * @public
-         * @readonly
-         */
-        readonly msc_s_TraceDepth?: OPTIONAL<TraceDepth>,
-        /**
-         * @summary `mgw_TraceDepth`.
-         * @description
-         *
-         * Trace depth for this NE (clause 17.7.2).
-         *
-         * @public
-         * @readonly
-         */
-        readonly mgw_TraceDepth?: OPTIONAL<TraceDepth>,
-        /**
-         * @summary `sgsn_TraceDepth`.
-         * @description
-         *
-         * Trace depth for this NE (clause 17.7.2).
-         *
-         * @public
-         * @readonly
-         */
-        readonly sgsn_TraceDepth?: OPTIONAL<TraceDepth>,
-        /**
-         * @summary `ggsn_TraceDepth`.
-         * @description
-         *
-         * Trace depth for this NE (clause 17.7.2).
-         *
-         * @public
-         * @readonly
-         */
-        readonly ggsn_TraceDepth?: OPTIONAL<TraceDepth>,
-        /**
-         * @summary `rnc_TraceDepth`.
-         * @description
-         *
-         * Trace depth for this NE (clause 17.7.2).
-         *
-         * @public
-         * @readonly
-         */
-        readonly rnc_TraceDepth?: OPTIONAL<TraceDepth>,
-        /**
-         * @summary `bmsc_TraceDepth`.
-         * @description
-         *
-         * Trace depth for this NE (clause 17.7.2).
-         *
-         * @public
-         * @readonly
-         */
-        readonly bmsc_TraceDepth?: OPTIONAL<TraceDepth>,
-        /**
-         * @summary `mme_TraceDepth`.
-         * @description
-         *
-         * Trace depth for this NE (clause 17.7.2).
-         *
-         * @public
-         * @readonly
-         */
-        readonly mme_TraceDepth?: OPTIONAL<TraceDepth>,
-        /**
-         * @summary `sgw_TraceDepth`.
-         * @description
-         *
-         * Trace depth for this NE (clause 17.7.2).
-         *
-         * @public
-         * @readonly
-         */
-        readonly sgw_TraceDepth?: OPTIONAL<TraceDepth>,
-        /**
-         * @summary `pgw_TraceDepth`.
-         * @description
-         *
-         * Trace depth for this NE (clause 17.7.2).
-         *
-         * @public
-         * @readonly
-         */
-        readonly pgw_TraceDepth?: OPTIONAL<TraceDepth>,
-        /**
-         * @summary `eNB_TraceDepth`.
-         * @description
-         *
-         * Trace depth for this NE (clause 17.7.2).
-         *
-         * @public
-         * @readonly
-         */
-        readonly eNB_TraceDepth?: OPTIONAL<TraceDepth>,
-        /**
-         * @summary `msc_s_TraceDepthExtension`.
-         * @description
-         *
-         * Trace depth for this NE (clause 17.7.2).
-         *
-         * @public
-         * @readonly
-         */
-        readonly msc_s_TraceDepthExtension?: OPTIONAL<TraceDepthExtension>,
-        /**
-         * @summary `mgw_TraceDepthExtension`.
-         * @description
-         *
-         * Trace depth for this NE (clause 17.7.2).
-         *
-         * @public
-         * @readonly
-         */
-        readonly mgw_TraceDepthExtension?: OPTIONAL<TraceDepthExtension>,
-        /**
-         * @summary `sgsn_TraceDepthExtension`.
-         * @description
-         *
-         * Trace depth for this NE (clause 17.7.2).
-         *
-         * @public
-         * @readonly
-         */
-        readonly sgsn_TraceDepthExtension?: OPTIONAL<TraceDepthExtension>,
-        /**
-         * @summary `ggsn_TraceDepthExtension`.
-         * @description
-         *
-         * Trace depth for this NE (clause 17.7.2).
-         *
-         * @public
-         * @readonly
-         */
-        readonly ggsn_TraceDepthExtension?: OPTIONAL<TraceDepthExtension>,
-        /**
-         * @summary `rnc_TraceDepthExtension`.
-         * @description
-         *
-         * Trace depth for this NE (clause 17.7.2).
-         *
-         * @public
-         * @readonly
-         */
-        readonly rnc_TraceDepthExtension?: OPTIONAL<TraceDepthExtension>,
-        /**
-         * @summary `bmsc_TraceDepthExtension`.
-         * @description
-         *
-         * Trace depth for this NE (clause 17.7.2).
-         *
-         * @public
-         * @readonly
-         */
-        readonly bmsc_TraceDepthExtension?: OPTIONAL<TraceDepthExtension>,
-        /**
-         * @summary `mme_TraceDepthExtension`.
-         * @description
-         *
-         * Trace depth for this NE (clause 17.7.2).
-         *
-         * @public
-         * @readonly
-         */
-        readonly mme_TraceDepthExtension?: OPTIONAL<TraceDepthExtension>,
-        /**
-         * @summary `sgw_TraceDepthExtension`.
-         * @description
-         *
-         * Trace depth for this NE (clause 17.7.2).
-         *
-         * @public
-         * @readonly
-         */
-        readonly sgw_TraceDepthExtension?: OPTIONAL<TraceDepthExtension>,
-        /**
-         * @summary `pgw_TraceDepthExtension`.
-         * @description
-         *
-         * Trace depth for this NE (clause 17.7.2).
-         *
-         * @public
-         * @readonly
-         */
-        readonly pgw_TraceDepthExtension?: OPTIONAL<TraceDepthExtension>,
-        /**
-         * @summary `eNB_TraceDepthExtension`.
-         * @description
-         *
-         * Trace depth for this NE (clause 17.7.2).
-         *
-         * @public
-         * @readonly
-         */
-        readonly eNB_TraceDepthExtension?: OPTIONAL<TraceDepthExtension>,
-        /**
-         * @summary Extensions that are not recognized.
-         * @public
-         * @readonly
-         */
-        readonly _unrecognizedExtensionsList: _Element[] = []
-    ) {}
+        msc_s_TraceDepth?: OPTIONAL<TraceDepth>,
+        mgw_TraceDepth?: OPTIONAL<TraceDepth>,
+        sgsn_TraceDepth?: OPTIONAL<TraceDepth>,
+        ggsn_TraceDepth?: OPTIONAL<TraceDepth>,
+        rnc_TraceDepth?: OPTIONAL<TraceDepth>,
+        bmsc_TraceDepth?: OPTIONAL<TraceDepth>,
+        mme_TraceDepth?: OPTIONAL<TraceDepth>,
+        sgw_TraceDepth?: OPTIONAL<TraceDepth>,
+        pgw_TraceDepth?: OPTIONAL<TraceDepth>,
+        eNB_TraceDepth?: OPTIONAL<TraceDepth>,
+        msc_s_TraceDepthExtension?: OPTIONAL<TraceDepthExtension>,
+        mgw_TraceDepthExtension?: OPTIONAL<TraceDepthExtension>,
+        sgsn_TraceDepthExtension?: OPTIONAL<TraceDepthExtension>,
+        ggsn_TraceDepthExtension?: OPTIONAL<TraceDepthExtension>,
+        rnc_TraceDepthExtension?: OPTIONAL<TraceDepthExtension>,
+        bmsc_TraceDepthExtension?: OPTIONAL<TraceDepthExtension>,
+        mme_TraceDepthExtension?: OPTIONAL<TraceDepthExtension>,
+        sgw_TraceDepthExtension?: OPTIONAL<TraceDepthExtension>,
+        pgw_TraceDepthExtension?: OPTIONAL<TraceDepthExtension>,
+        eNB_TraceDepthExtension?: OPTIONAL<TraceDepthExtension>,
+        _unrecognizedExtensionsList: _Element[] = []
+    ) {
+        this.msc_s_TraceDepth = msc_s_TraceDepth;
+        this.mgw_TraceDepth = mgw_TraceDepth;
+        this.sgsn_TraceDepth = sgsn_TraceDepth;
+        this.ggsn_TraceDepth = ggsn_TraceDepth;
+        this.rnc_TraceDepth = rnc_TraceDepth;
+        this.bmsc_TraceDepth = bmsc_TraceDepth;
+        this.mme_TraceDepth = mme_TraceDepth;
+        this.sgw_TraceDepth = sgw_TraceDepth;
+        this.pgw_TraceDepth = pgw_TraceDepth;
+        this.eNB_TraceDepth = eNB_TraceDepth;
+        this.msc_s_TraceDepthExtension = msc_s_TraceDepthExtension;
+        this.mgw_TraceDepthExtension = mgw_TraceDepthExtension;
+        this.sgsn_TraceDepthExtension = sgsn_TraceDepthExtension;
+        this.ggsn_TraceDepthExtension = ggsn_TraceDepthExtension;
+        this.rnc_TraceDepthExtension = rnc_TraceDepthExtension;
+        this.bmsc_TraceDepthExtension = bmsc_TraceDepthExtension;
+        this.mme_TraceDepthExtension = mme_TraceDepthExtension;
+        this.sgw_TraceDepthExtension = sgw_TraceDepthExtension;
+        this.pgw_TraceDepthExtension = pgw_TraceDepthExtension;
+        this.eNB_TraceDepthExtension = eNB_TraceDepthExtension;
+        this._unrecognizedExtensionsList = _unrecognizedExtensionsList;
+    }
 
     /**
      * @summary Restructures an object into a TraceDepthList
@@ -280,121 +324,121 @@ class TraceDepthList {
          * @static
          */
 
-    public static _enum_for_msc_s_TraceDepth = _enum_for_TraceDepth;        /**
+    public static _enum_for_msc_s_TraceDepth: typeof _enum_for_TraceDepth = _enum_for_TraceDepth;        /**
          * @summary The enum used as the type of the component `mgw_TraceDepth`
          * @public
          * @static
          */
 
-    public static _enum_for_mgw_TraceDepth = _enum_for_TraceDepth;        /**
+    public static _enum_for_mgw_TraceDepth: typeof _enum_for_TraceDepth = _enum_for_TraceDepth;        /**
          * @summary The enum used as the type of the component `sgsn_TraceDepth`
          * @public
          * @static
          */
 
-    public static _enum_for_sgsn_TraceDepth = _enum_for_TraceDepth;        /**
+    public static _enum_for_sgsn_TraceDepth: typeof _enum_for_TraceDepth = _enum_for_TraceDepth;        /**
          * @summary The enum used as the type of the component `ggsn_TraceDepth`
          * @public
          * @static
          */
 
-    public static _enum_for_ggsn_TraceDepth = _enum_for_TraceDepth;        /**
+    public static _enum_for_ggsn_TraceDepth: typeof _enum_for_TraceDepth = _enum_for_TraceDepth;        /**
          * @summary The enum used as the type of the component `rnc_TraceDepth`
          * @public
          * @static
          */
 
-    public static _enum_for_rnc_TraceDepth = _enum_for_TraceDepth;        /**
+    public static _enum_for_rnc_TraceDepth: typeof _enum_for_TraceDepth = _enum_for_TraceDepth;        /**
          * @summary The enum used as the type of the component `bmsc_TraceDepth`
          * @public
          * @static
          */
 
-    public static _enum_for_bmsc_TraceDepth = _enum_for_TraceDepth;        /**
+    public static _enum_for_bmsc_TraceDepth: typeof _enum_for_TraceDepth = _enum_for_TraceDepth;        /**
          * @summary The enum used as the type of the component `mme_TraceDepth`
          * @public
          * @static
          */
 
-    public static _enum_for_mme_TraceDepth = _enum_for_TraceDepth;        /**
+    public static _enum_for_mme_TraceDepth: typeof _enum_for_TraceDepth = _enum_for_TraceDepth;        /**
          * @summary The enum used as the type of the component `sgw_TraceDepth`
          * @public
          * @static
          */
 
-    public static _enum_for_sgw_TraceDepth = _enum_for_TraceDepth;        /**
+    public static _enum_for_sgw_TraceDepth: typeof _enum_for_TraceDepth = _enum_for_TraceDepth;        /**
          * @summary The enum used as the type of the component `pgw_TraceDepth`
          * @public
          * @static
          */
 
-    public static _enum_for_pgw_TraceDepth = _enum_for_TraceDepth;        /**
+    public static _enum_for_pgw_TraceDepth: typeof _enum_for_TraceDepth = _enum_for_TraceDepth;        /**
          * @summary The enum used as the type of the component `eNB_TraceDepth`
          * @public
          * @static
          */
 
-    public static _enum_for_eNB_TraceDepth = _enum_for_TraceDepth;        /**
+    public static _enum_for_eNB_TraceDepth: typeof _enum_for_TraceDepth = _enum_for_TraceDepth;        /**
          * @summary The enum used as the type of the component `msc_s_TraceDepthExtension`
          * @public
          * @static
          */
 
-    public static _enum_for_msc_s_TraceDepthExtension = _enum_for_TraceDepthExtension;        /**
+    public static _enum_for_msc_s_TraceDepthExtension: typeof _enum_for_TraceDepthExtension = _enum_for_TraceDepthExtension;        /**
          * @summary The enum used as the type of the component `mgw_TraceDepthExtension`
          * @public
          * @static
          */
 
-    public static _enum_for_mgw_TraceDepthExtension = _enum_for_TraceDepthExtension;        /**
+    public static _enum_for_mgw_TraceDepthExtension: typeof _enum_for_TraceDepthExtension = _enum_for_TraceDepthExtension;        /**
          * @summary The enum used as the type of the component `sgsn_TraceDepthExtension`
          * @public
          * @static
          */
 
-    public static _enum_for_sgsn_TraceDepthExtension = _enum_for_TraceDepthExtension;        /**
+    public static _enum_for_sgsn_TraceDepthExtension: typeof _enum_for_TraceDepthExtension = _enum_for_TraceDepthExtension;        /**
          * @summary The enum used as the type of the component `ggsn_TraceDepthExtension`
          * @public
          * @static
          */
 
-    public static _enum_for_ggsn_TraceDepthExtension = _enum_for_TraceDepthExtension;        /**
+    public static _enum_for_ggsn_TraceDepthExtension: typeof _enum_for_TraceDepthExtension = _enum_for_TraceDepthExtension;        /**
          * @summary The enum used as the type of the component `rnc_TraceDepthExtension`
          * @public
          * @static
          */
 
-    public static _enum_for_rnc_TraceDepthExtension = _enum_for_TraceDepthExtension;        /**
+    public static _enum_for_rnc_TraceDepthExtension: typeof _enum_for_TraceDepthExtension = _enum_for_TraceDepthExtension;        /**
          * @summary The enum used as the type of the component `bmsc_TraceDepthExtension`
          * @public
          * @static
          */
 
-    public static _enum_for_bmsc_TraceDepthExtension = _enum_for_TraceDepthExtension;        /**
+    public static _enum_for_bmsc_TraceDepthExtension: typeof _enum_for_TraceDepthExtension = _enum_for_TraceDepthExtension;        /**
          * @summary The enum used as the type of the component `mme_TraceDepthExtension`
          * @public
          * @static
          */
 
-    public static _enum_for_mme_TraceDepthExtension = _enum_for_TraceDepthExtension;        /**
+    public static _enum_for_mme_TraceDepthExtension: typeof _enum_for_TraceDepthExtension = _enum_for_TraceDepthExtension;        /**
          * @summary The enum used as the type of the component `sgw_TraceDepthExtension`
          * @public
          * @static
          */
 
-    public static _enum_for_sgw_TraceDepthExtension = _enum_for_TraceDepthExtension;        /**
+    public static _enum_for_sgw_TraceDepthExtension: typeof _enum_for_TraceDepthExtension = _enum_for_TraceDepthExtension;        /**
          * @summary The enum used as the type of the component `pgw_TraceDepthExtension`
          * @public
          * @static
          */
 
-    public static _enum_for_pgw_TraceDepthExtension = _enum_for_TraceDepthExtension;        /**
+    public static _enum_for_pgw_TraceDepthExtension: typeof _enum_for_TraceDepthExtension = _enum_for_TraceDepthExtension;        /**
          * @summary The enum used as the type of the component `eNB_TraceDepthExtension`
          * @public
          * @static
          */
 
-    public static _enum_for_eNB_TraceDepthExtension = _enum_for_TraceDepthExtension;
+    public static _enum_for_eNB_TraceDepthExtension: typeof _enum_for_TraceDepthExtension = _enum_for_TraceDepthExtension;
 }
 
 /**

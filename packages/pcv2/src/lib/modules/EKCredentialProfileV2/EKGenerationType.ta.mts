@@ -139,7 +139,7 @@ type EKGenerationType = _enum_for_EKGenerationType;
  * @enum {number}
  */
 export
-const EKGenerationType = _enum_for_EKGenerationType;
+const EKGenerationType: typeof _enum_for_EKGenerationType = _enum_for_EKGenerationType;
 
 /**
  * @summary EKGenerationType_internal
@@ -155,7 +155,7 @@ const EKGenerationType = _enum_for_EKGenerationType;
  * @type {number}
  */
 export
-const EKGenerationType_internal: EKGenerationType = EKGenerationType.internal; /* LONG_NAMED_ENUMERATED_VALUE */
+const EKGenerationType_internal: _enum_for_EKGenerationType.internal = EKGenerationType.internal; /* LONG_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary internal
@@ -171,7 +171,7 @@ const EKGenerationType_internal: EKGenerationType = EKGenerationType.internal; /
  * @type {number}
  */
 export
-const internal: EKGenerationType = EKGenerationType.internal; /* SHORT_NAMED_ENUMERATED_VALUE */
+const internal: _enum_for_EKGenerationType.internal = EKGenerationType.internal; /* SHORT_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary EKGenerationType_injected
@@ -188,7 +188,7 @@ const internal: EKGenerationType = EKGenerationType.internal; /* SHORT_NAMED_ENU
  * @type {number}
  */
 export
-const EKGenerationType_injected: EKGenerationType = EKGenerationType.injected; /* LONG_NAMED_ENUMERATED_VALUE */
+const EKGenerationType_injected: _enum_for_EKGenerationType.injected = EKGenerationType.injected; /* LONG_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary injected
@@ -205,7 +205,7 @@ const EKGenerationType_injected: EKGenerationType = EKGenerationType.injected; /
  * @type {number}
  */
 export
-const injected: EKGenerationType = EKGenerationType.injected; /* SHORT_NAMED_ENUMERATED_VALUE */
+const injected: _enum_for_EKGenerationType.injected = EKGenerationType.injected; /* SHORT_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary EKGenerationType_internalRevocable
@@ -222,7 +222,7 @@ const injected: EKGenerationType = EKGenerationType.injected; /* SHORT_NAMED_ENU
  * @type {number}
  */
 export
-const EKGenerationType_internalRevocable: EKGenerationType = EKGenerationType.internalRevocable; /* LONG_NAMED_ENUMERATED_VALUE */
+const EKGenerationType_internalRevocable: _enum_for_EKGenerationType.internalRevocable = EKGenerationType.internalRevocable; /* LONG_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary internalRevocable
@@ -239,7 +239,7 @@ const EKGenerationType_internalRevocable: EKGenerationType = EKGenerationType.in
  * @type {number}
  */
 export
-const internalRevocable: EKGenerationType = EKGenerationType.internalRevocable; /* SHORT_NAMED_ENUMERATED_VALUE */
+const internalRevocable: _enum_for_EKGenerationType.internalRevocable = EKGenerationType.internalRevocable; /* SHORT_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary EKGenerationType_injectedRevocable
@@ -256,7 +256,7 @@ const internalRevocable: EKGenerationType = EKGenerationType.internalRevocable; 
  * @type {number}
  */
 export
-const EKGenerationType_injectedRevocable: EKGenerationType = EKGenerationType.injectedRevocable; /* LONG_NAMED_ENUMERATED_VALUE */
+const EKGenerationType_injectedRevocable: _enum_for_EKGenerationType.injectedRevocable = EKGenerationType.injectedRevocable; /* LONG_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary injectedRevocable
@@ -273,7 +273,7 @@ const EKGenerationType_injectedRevocable: EKGenerationType = EKGenerationType.in
  * @type {number}
  */
 export
-const injectedRevocable: EKGenerationType = EKGenerationType.injectedRevocable; /* SHORT_NAMED_ENUMERATED_VALUE */
+const injectedRevocable: _enum_for_EKGenerationType.injectedRevocable = EKGenerationType.injectedRevocable; /* SHORT_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary EKGenerationType_firmwareLimited
@@ -294,7 +294,7 @@ const injectedRevocable: EKGenerationType = EKGenerationType.injectedRevocable; 
  * @type {number}
  */
 export
-const EKGenerationType_firmwareLimited: EKGenerationType = EKGenerationType.firmwareLimited; /* LONG_NAMED_ENUMERATED_VALUE */
+const EKGenerationType_firmwareLimited: _enum_for_EKGenerationType.firmwareLimited = EKGenerationType.firmwareLimited; /* LONG_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary firmwareLimited
@@ -315,7 +315,7 @@ const EKGenerationType_firmwareLimited: EKGenerationType = EKGenerationType.firm
  * @type {number}
  */
 export
-const firmwareLimited: EKGenerationType = EKGenerationType.firmwareLimited; /* SHORT_NAMED_ENUMERATED_VALUE */
+const firmwareLimited: _enum_for_EKGenerationType.firmwareLimited = EKGenerationType.firmwareLimited; /* SHORT_NAMED_ENUMERATED_VALUE */
 
 export
 const _decode_EKGenerationType: $.ASN1Decoder<EKGenerationType> = $._decodeEnumerated;

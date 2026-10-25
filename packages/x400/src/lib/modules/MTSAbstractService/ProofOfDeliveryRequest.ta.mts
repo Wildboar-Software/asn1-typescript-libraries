@@ -1,6 +1,6 @@
 /* eslint-disable */
 import {
-    ASN1Element as _Element,
+    type ASN1Element as _Element,
     ASN1TagClass as _TagClass,
     ASN1Construction as _Construction,
     ASN1UniversalType as _UniversalType,
@@ -63,14 +63,14 @@ export type ProofOfDeliveryRequest = _enum_for_ProofOfDeliveryRequest;
  *
  * @enum {number}
  */
-export const ProofOfDeliveryRequest = _enum_for_ProofOfDeliveryRequest;
+export const ProofOfDeliveryRequest: typeof _enum_for_ProofOfDeliveryRequest = _enum_for_ProofOfDeliveryRequest;
 
 /**
  * @summary ProofOfDeliveryRequest_proof_of_delivery_not_requested
  * @constant
  * @type {number}
  */
-export const ProofOfDeliveryRequest_proof_of_delivery_not_requested: ProofOfDeliveryRequest =
+export const ProofOfDeliveryRequest_proof_of_delivery_not_requested: _enum_for_ProofOfDeliveryRequest.proof_of_delivery_not_requested =
     ProofOfDeliveryRequest.proof_of_delivery_not_requested; /* LONG_NAMED_ENUMERATED_VALUE */
 
 /**
@@ -78,7 +78,7 @@ export const ProofOfDeliveryRequest_proof_of_delivery_not_requested: ProofOfDeli
  * @constant
  * @type {number}
  */
-export const proof_of_delivery_not_requested: ProofOfDeliveryRequest =
+export const proof_of_delivery_not_requested: _enum_for_ProofOfDeliveryRequest.proof_of_delivery_not_requested =
     ProofOfDeliveryRequest.proof_of_delivery_not_requested; /* SHORT_NAMED_ENUMERATED_VALUE */
 
 /**
@@ -86,7 +86,7 @@ export const proof_of_delivery_not_requested: ProofOfDeliveryRequest =
  * @constant
  * @type {number}
  */
-export const ProofOfDeliveryRequest_proof_of_delivery_requested: ProofOfDeliveryRequest =
+export const ProofOfDeliveryRequest_proof_of_delivery_requested: _enum_for_ProofOfDeliveryRequest.proof_of_delivery_requested =
     ProofOfDeliveryRequest.proof_of_delivery_requested; /* LONG_NAMED_ENUMERATED_VALUE */
 
 /**
@@ -94,14 +94,25 @@ export const ProofOfDeliveryRequest_proof_of_delivery_requested: ProofOfDelivery
  * @constant
  * @type {number}
  */
-export const proof_of_delivery_requested: ProofOfDeliveryRequest =
+export const proof_of_delivery_requested: _enum_for_ProofOfDeliveryRequest.proof_of_delivery_requested =
     ProofOfDeliveryRequest.proof_of_delivery_requested; /* SHORT_NAMED_ENUMERATED_VALUE */
 
 
-export const _decode_ProofOfDeliveryRequest = $._decodeEnumerated;
+export function _decode_ProofOfDeliveryRequest(el: _Element): ProofOfDeliveryRequest {
+    const enumerated = $._decodeEnumerated(el);
+    switch (enumerated) {
+        case ProofOfDeliveryRequest.proof_of_delivery_not_requested: return ProofOfDeliveryRequest.proof_of_delivery_not_requested;
+        case ProofOfDeliveryRequest.proof_of_delivery_requested: return ProofOfDeliveryRequest.proof_of_delivery_requested;
+        default:
+            throw new _ConstructionError(
+                'Invalid ENUMERATED value ' + enumerated + ' for ProofOfDeliveryRequest.',
+                el,
+            );
+    }
+}
 
 
-export const _encode_ProofOfDeliveryRequest = $._encodeEnumerated;
+export const _encode_ProofOfDeliveryRequest: $.ASN1Encoder<ProofOfDeliveryRequest> = $._encodeEnumerated as $.ASN1Encoder<ProofOfDeliveryRequest>;
 
 
 /* eslint-enable */

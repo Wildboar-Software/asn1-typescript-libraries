@@ -1,17 +1,17 @@
 /* eslint-disable */
 import {
     ASN1ConstructionError as _ConstructionError,
-    ASN1Element as _Element,
+    type ASN1Element as _Element,
     ASN1TagClass as _TagClass,
 } from "@wildboar/asn1";
 import * as $ from "@wildboar/asn1/functional";
 import {
-    Presentation_context_identifier,
+    type Presentation_context_identifier,
     _decode_Presentation_context_identifier,
     _encode_Presentation_context_identifier,
 } from "../OSIProtocolSpecification/Presentation-context-identifier.ta.mjs";
 import {
-    Transfer_syntax_name,
+    type Transfer_syntax_name,
     _decode_Transfer_syntax_name,
     _encode_Transfer_syntax_name,
 } from "../OSIProtocolSpecification/Transfer-syntax-name.ta.mjs";
@@ -27,20 +27,26 @@ import {
  *
  */
 export class Presentation_context_identifier_list_Item {
+    /**
+     * @summary `presentation_context_identifier`.
+     * @public
+     * @readonly
+     */
+    public readonly presentation_context_identifier: Presentation_context_identifier;
+    /**
+     * @summary `transfer_syntax_name`.
+     * @public
+     * @readonly
+     */
+    public readonly transfer_syntax_name: Transfer_syntax_name;
+
     constructor(
-        /**
-         * @summary `presentation_context_identifier`.
-         * @public
-         * @readonly
-         */
-        readonly presentation_context_identifier: Presentation_context_identifier,
-        /**
-         * @summary `transfer_syntax_name`.
-         * @public
-         * @readonly
-         */
-        readonly transfer_syntax_name: Transfer_syntax_name
-    ) {}
+        presentation_context_identifier: Presentation_context_identifier,
+        transfer_syntax_name: Transfer_syntax_name
+    ) {
+        this.presentation_context_identifier = presentation_context_identifier;
+        this.transfer_syntax_name = transfer_syntax_name;
+    }
 
     /**
      * @summary Restructures an object into a Presentation_context_identifier_list_Item

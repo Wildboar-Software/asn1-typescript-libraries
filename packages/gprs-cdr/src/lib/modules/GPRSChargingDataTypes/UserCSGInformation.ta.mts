@@ -1,10 +1,10 @@
 /* eslint-disable */
 import {
-    ASN1Element as _Element,
+    type ASN1Element as _Element,
     ASN1TagClass as _TagClass,
-    NULL,
-    OCTET_STRING,
-    OPTIONAL,
+    type NULL,
+    type OCTET_STRING,
+    type OPTIONAL,
     ASN1SizeError
 } from "@wildboar/asn1";
 import * as $ from "@wildboar/asn1/functional";
@@ -116,7 +116,7 @@ class UserCSGInformation {
          * @static
          */
 
-    public static _enum_for_cSGAccessMode = _enum_for_CSGAccessMode;
+    public static _enum_for_cSGAccessMode: typeof _enum_for_CSGAccessMode = _enum_for_CSGAccessMode;
 }
 
 /**

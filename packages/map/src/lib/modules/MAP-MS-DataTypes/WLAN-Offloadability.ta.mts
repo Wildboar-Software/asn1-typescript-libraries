@@ -1,7 +1,7 @@
 /* eslint-disable */
 import {
-    OPTIONAL,
-    ASN1Element as _Element,
+    type OPTIONAL,
+    type ASN1Element as _Element,
     ASN1TagClass as _TagClass
 } from "@wildboar/asn1";
 import * as $ from "@wildboar/asn1/functional";
@@ -21,9 +21,9 @@ import { WLAN_Offloadability_Indication, _decode_WLAN_Offloadability_Indication,
  * 
  * ```asn1
  * WLAN-Offloadability ::= SEQUENCE {
- *     wlan-offloadability-EUTRAN    [0] WLAN-Offloadability-Indication     OPTIONAL,
- *     wlan-offloadability-UTRAN    [1] WLAN-Offloadability-Indication    OPTIONAL,
- *     extensionContainer    [2] ExtensionContainer    OPTIONAL,
+ *     wlan-offloadability-EUTRAN    [0] WLAN-Offloadability-Indication     type OPTIONAL,
+ *     wlan-offloadability-UTRAN    [1] WLAN-Offloadability-Indication    type OPTIONAL,
+ *     extensionContainer    [2] ExtensionContainer    type OPTIONAL,
  *     ... }
  * ```
  * 
@@ -31,44 +31,54 @@ import { WLAN_Offloadability_Indication, _decode_WLAN_Offloadability_Indication,
  */
 export
 class WLAN_Offloadability {
+    /**
+     * @summary `wlan_offloadability_EUTRAN`.
+     * @description
+     *
+     * WLAN offloadability for E-UTRAN (3GPP TS 29.272).
+     *
+     * (3GPP TS 29.002 V19.1.0 clause 7.6.3.101).
+     *
+     * @public
+     * @readonly
+     */
+    public readonly wlan_offloadability_EUTRAN?: OPTIONAL<WLAN_Offloadability_Indication>;
+    /**
+     * @summary `wlan_offloadability_UTRAN`.
+     * @description
+     *
+     * WLAN offloadability for UTRAN (3GPP TS 29.272).
+     *
+     * (3GPP TS 29.002 V19.1.0 clause 7.6.3.101).
+     *
+     * @public
+     * @readonly
+     */
+    public readonly wlan_offloadability_UTRAN?: OPTIONAL<WLAN_Offloadability_Indication>;
+    /**
+     * @summary `extensionContainer`.
+     * @public
+     * @readonly
+     */
+    public readonly extensionContainer?: OPTIONAL<ExtensionContainer>;
+    /**
+     * @summary Extensions that are not recognized.
+     * @public
+     * @readonly
+     */
+    public readonly _unrecognizedExtensionsList: _Element[];
+
     constructor (
-        /**
-         * @summary `wlan_offloadability_EUTRAN`.
-         * @description
-         *
-         * WLAN offloadability for E-UTRAN (3GPP TS 29.272).
-         *
-         * (3GPP TS 29.002 V19.1.0 clause 7.6.3.101).
-         *
-         * @public
-         * @readonly
-         */
-        readonly wlan_offloadability_EUTRAN?: OPTIONAL<WLAN_Offloadability_Indication>,
-        /**
-         * @summary `wlan_offloadability_UTRAN`.
-         * @description
-         *
-         * WLAN offloadability for UTRAN (3GPP TS 29.272).
-         *
-         * (3GPP TS 29.002 V19.1.0 clause 7.6.3.101).
-         *
-         * @public
-         * @readonly
-         */
-        readonly wlan_offloadability_UTRAN?: OPTIONAL<WLAN_Offloadability_Indication>,
-        /**
-         * @summary `extensionContainer`.
-         * @public
-         * @readonly
-         */
-        readonly extensionContainer?: OPTIONAL<ExtensionContainer>,
-        /**
-         * @summary Extensions that are not recognized.
-         * @public
-         * @readonly
-         */
-        readonly _unrecognizedExtensionsList: _Element[] = []
-    ) {}
+        wlan_offloadability_EUTRAN?: OPTIONAL<WLAN_Offloadability_Indication>,
+        wlan_offloadability_UTRAN?: OPTIONAL<WLAN_Offloadability_Indication>,
+        extensionContainer?: OPTIONAL<ExtensionContainer>,
+        _unrecognizedExtensionsList: _Element[] = []
+    ) {
+        this.wlan_offloadability_EUTRAN = wlan_offloadability_EUTRAN;
+        this.wlan_offloadability_UTRAN = wlan_offloadability_UTRAN;
+        this.extensionContainer = extensionContainer;
+        this._unrecognizedExtensionsList = _unrecognizedExtensionsList;
+    }
 
     /**
      * @summary Restructures an object into a WLAN_Offloadability
@@ -92,13 +102,13 @@ class WLAN_Offloadability {
          * @static
          */
 
-    public static _enum_for_wlan_offloadability_EUTRAN = _enum_for_WLAN_Offloadability_Indication;        /**
+    public static _enum_for_wlan_offloadability_EUTRAN: typeof _enum_for_WLAN_Offloadability_Indication = _enum_for_WLAN_Offloadability_Indication;        /**
          * @summary The enum used as the type of the component `wlan_offloadability_UTRAN`
          * @public
          * @static
          */
 
-    public static _enum_for_wlan_offloadability_UTRAN = _enum_for_WLAN_Offloadability_Indication;
+    public static _enum_for_wlan_offloadability_UTRAN: typeof _enum_for_WLAN_Offloadability_Indication = _enum_for_WLAN_Offloadability_Indication;
 }
 
 /**

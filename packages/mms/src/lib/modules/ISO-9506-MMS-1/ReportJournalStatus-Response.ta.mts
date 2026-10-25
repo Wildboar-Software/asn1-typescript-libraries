@@ -1,8 +1,8 @@
 /* eslint-disable */
 import {
-    OPTIONAL,
-    BOOLEAN,
-    ASN1Element as _Element,
+    type OPTIONAL,
+    type BOOLEAN,
+    type ASN1Element as _Element,
     ASN1TagClass as _TagClass,
     ASN1Construction as _Construction,
     ASN1UniversalType as _UniversalType,
@@ -12,8 +12,8 @@ import {
     ASN1ConstructionError as _ConstructionError,
 } from "@wildboar/asn1";
 import * as $ from "@wildboar/asn1/functional";
-import { Unsigned32, _decode_Unsigned32, _encode_Unsigned32 } from "../ISO-9506-MMS-1/Unsigned32.ta.mjs";
-import { Identifier, _decode_Identifier, _encode_Identifier } from "../ISO-9506-MMS-1/Identifier.ta.mjs";
+import { type Unsigned32, _decode_Unsigned32, _encode_Unsigned32 } from "../ISO-9506-MMS-1/Unsigned32.ta.mjs";
+import { type Identifier, _decode_Identifier, _encode_Identifier } from "../ISO-9506-MMS-1/Identifier.ta.mjs";
 
 
 /**
@@ -39,42 +39,50 @@ import { Identifier, _decode_Identifier, _encode_Identifier } from "../ISO-9506-
  */
 export
 class ReportJournalStatus_Response {
+    /**
+     * @summary `currentEntries`.
+     * @description
+     *
+     * How many Journal Entry objects the Journal currently
+     * references. ISO 9506-1:2003 §23.5.1.2.1.
+     *
+     * @public
+     * @readonly
+     */
+    public readonly currentEntries: Unsigned32;
+    /**
+     * @summary `mmsDeletable`.
+     * @description
+     *
+     * True if DeleteJournal may delete this Journal.
+     * ISO 9506-1:2003 §23.5.1.2.2.
+     *
+     * @public
+     * @readonly
+     */
+    public readonly mmsDeletable: BOOLEAN;
+    /**
+     * @summary `accessControlList`.
+     * @description
+     *
+     * ACL name. Present iff CBB `aco` was negotiated. Shall not
+     * appear in minor version one or two. ISO 9506-1:2003
+     * §23.5.1.2.3. ISO 9506-2:2003 §23.5.2.1.
+     *
+     * @public
+     * @readonly
+     */
+    public readonly accessControlList?: OPTIONAL<Identifier>;
+
     constructor (
-        /**
-         * @summary `currentEntries`.
-         * @description
-         *
-         * How many Journal Entry objects the Journal currently
-         * references. ISO 9506-1:2003 §23.5.1.2.1.
-         *
-         * @public
-         * @readonly
-         */
-        readonly currentEntries: Unsigned32,
-        /**
-         * @summary `mmsDeletable`.
-         * @description
-         *
-         * True if DeleteJournal may delete this Journal.
-         * ISO 9506-1:2003 §23.5.1.2.2.
-         *
-         * @public
-         * @readonly
-         */
-        readonly mmsDeletable: BOOLEAN,
-        /**
-         * @summary `accessControlList`.
-         * @description
-         *
-         * ACL name. Present iff CBB `aco` was negotiated. Shall not
-         * appear in minor version one or two. ISO 9506-1:2003
-         * §23.5.1.2.3. ISO 9506-2:2003 §23.5.2.1.
-         *
-         * @public
-         * @readonly
-         */
-        readonly accessControlList?: OPTIONAL<Identifier>
-    ) {}
+        currentEntries: Unsigned32,
+        mmsDeletable: BOOLEAN,
+        accessControlList?: OPTIONAL<Identifier>
+    ) {
+        this.currentEntries = currentEntries;
+        this.mmsDeletable = mmsDeletable;
+        this.accessControlList = accessControlList;
+    }
 
     /**
      * @summary Restructures an object into a ReportJournalStatus_Response

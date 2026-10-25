@@ -2,13 +2,13 @@
 
 import * as $ from "@wildboar/asn1/functional";
 import {
-    OPTIONAL,
-    SEQUENCE,
-    SET,
-    ASN1Element as _Element,
+    type OPTIONAL,
+    type SEQUENCE,
+    type SET,
+    type ASN1Element as _Element,
     ASN1TagClass as _TagClass
 } from "@wildboar/asn1";
-import { SysStatRegisterID, _decode_SysStatRegisterID, _encode_SysStatRegisterID } from "../CSTA-device-feature-types/SysStatRegisterID.ta.mjs";
+import { type SysStatRegisterID, _decode_SysStatRegisterID, _encode_SysStatRegisterID } from "../CSTA-device-feature-types/SysStatRegisterID.ta.mjs";
 
 import {
     SystemStatus,
@@ -34,7 +34,7 @@ import { CSTACommonArguments, _decode_CSTACommonArguments, _encode_CSTACommonArg
  * 
  * ```asn1
  * SystemStatusArg ::= SEQUENCE
- * {     sysStatRegisterID         SysStatRegisterID         OPTIONAL,
+ * {     sysStatRegisterID         SysStatRegisterID         type OPTIONAL,
  *     systemStatus             SystemStatus,
  *     extensions             CSTACommonArguments         OPTIONAL }
  * ```
@@ -43,37 +43,45 @@ import { CSTACommonArguments, _decode_CSTACommonArguments, _encode_CSTACommonArg
  */
 export
 class SystemStatusArg {
+    /**
+     * @summary `sysStatRegisterID`.
+     * @description
+     *
+     * Mandatory if SF is the requester and registration is
+     * supported; otherwise absent.
+     * @public
+     * @readonly
+     */
+    public readonly sysStatRegisterID: OPTIONAL<SysStatRegisterID>;
+    /**
+     * @summary `systemStatus`.
+     * @description
+     *
+     * Status of the function issuing this request. See §12.2.28.
+     * @public
+     * @readonly
+     */
+    public readonly systemStatus: SystemStatus;
+    /**
+     * @summary `extensions`.
+     * @description
+     *
+     * Optional security (timestamp, sequence, securityInfo) and
+     * privateData. ECMA-269 Table 14-12.
+     * @public
+     * @readonly
+     */
+    public readonly extensions?: OPTIONAL<CSTACommonArguments>;
+
     constructor (
-        /**
-         * @summary `sysStatRegisterID`.
-         * @description
-         *
-         * Mandatory if SF is the requester and registration is
-         * supported; otherwise absent.
-         * @public
-         * @readonly
-         */
-        readonly sysStatRegisterID: OPTIONAL<SysStatRegisterID>,
-        /**
-         * @summary `systemStatus`.
-         * @description
-         *
-         * Status of the function issuing this request. See §12.2.28.
-         * @public
-         * @readonly
-         */
-        readonly systemStatus: SystemStatus,
-        /**
-         * @summary `extensions`.
-         * @description
-         *
-         * Optional security (timestamp, sequence, securityInfo) and
-         * privateData. ECMA-269 Table 14-12.
-         * @public
-         * @readonly
-         */
-        readonly extensions?: OPTIONAL<CSTACommonArguments>
-    ) {}
+        sysStatRegisterID: OPTIONAL<SysStatRegisterID>,
+        systemStatus: SystemStatus,
+        extensions?: OPTIONAL<CSTACommonArguments>
+    ) {
+        this.sysStatRegisterID = sysStatRegisterID;
+        this.systemStatus = systemStatus;
+        this.extensions = extensions;
+    }
 
     /**
      * @summary Restructures an object into a SystemStatusArg
@@ -97,7 +105,7 @@ class SystemStatusArg {
          * @static
          */
 
-    public static _enum_for_systemStatus = _enum_for_SystemStatus;
+    public static _enum_for_systemStatus: typeof _enum_for_SystemStatus = _enum_for_SystemStatus;
 }
 
 /**

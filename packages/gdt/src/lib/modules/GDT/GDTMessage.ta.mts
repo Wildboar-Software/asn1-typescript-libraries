@@ -1,12 +1,12 @@
 /* eslint-disable */
 import {
-    OPTIONAL,
-    ASN1Element as _Element,
+    type OPTIONAL,
+    type ASN1Element as _Element,
     ASN1TagClass as _TagClass
 } from "@wildboar/asn1";
 import * as $ from "@wildboar/asn1/functional";
 import { Header, _decode_Header, _encode_Header } from "../GDT/Header.ta.mjs";
-import { Body, _decode_Body, _encode_Body } from "../GDT/Body.ta.mjs";
+import { type Body, _decode_Body, _encode_Body } from "../GDT/Body.ta.mjs";
 
 
 /**
@@ -32,19 +32,19 @@ class GDTMessage {
      * @public
      * @readonly
      */
-    readonly header: Header;
+    public readonly header: Header;
     /**
      * @summary `body`.
      * @public
      * @readonly
      */
-    readonly body?: OPTIONAL<Body>;
+    public readonly body?: OPTIONAL<Body>;
     /**
      * @summary Extensions that are not recognized.
      * @public
      * @readonly
      */
-    readonly _unrecognizedExtensionsList: _Element[];
+    public readonly _unrecognizedExtensionsList: _Element[];
 
     constructor (
         header: Header,

@@ -1,6 +1,6 @@
 /* eslint-disable */
 import {
-    ASN1Element as _Element,
+    type ASN1Element as _Element,
     ASN1TagClass as _TagClass,
     ASN1Construction as _Construction,
     ASN1UniversalType as _UniversalType,
@@ -10,7 +10,7 @@ import {
     ASN1ConstructionError as _ConstructionError,
 } from "@wildboar/asn1";
 import * as $ from "@wildboar/asn1/functional";
-import { Pointer, _decode_Pointer, _encode_Pointer } from "../ISO9041-VTP/Pointer.ta.mjs";
+import { type Pointer, _decode_Pointer, _encode_Pointer } from "../ISO9041-VTP/Pointer.ta.mjs";
 
 
 /**
@@ -34,25 +34,31 @@ import { Pointer, _decode_Pointer, _encode_Pointer } from "../ISO9041-VTP/Pointe
  */
 export
 class AttrExtent_address {
+    /**
+     * @summary `beginning`.
+     * @description
+     * Start of the attribute extent. ISO/IEC 9040:1997 §19.4.1.3.
+     * @public
+     * @readonly
+     */
+    public readonly beginning: Pointer;
+    /**
+     * @summary `ending`.
+     * @description
+     * End of the attribute extent; must be ≥ `beginning`.
+     * ISO/IEC 9040:1997 §19.4.1.3.
+     * @public
+     * @readonly
+     */
+    public readonly ending: Pointer;
+
     constructor (
-        /**
-         * @summary `beginning`.
-         * @description
-         * Start of the attribute extent. ISO/IEC 9040:1997 §19.4.1.3.
-         * @public
-         * @readonly
-         */
-        readonly beginning: Pointer,
-        /**
-         * @summary `ending`.
-         * @description
-         * End of the attribute extent; must be ≥ `beginning`.
-         * ISO/IEC 9040:1997 §19.4.1.3.
-         * @public
-         * @readonly
-         */
-        readonly ending: Pointer
-    ) {}
+        beginning: Pointer,
+        ending: Pointer
+    ) {
+        this.beginning = beginning;
+        this.ending = ending;
+    }
 
     /**
      * @summary Restructures an object into a AttrExtent_address

@@ -1,8 +1,8 @@
 /* eslint-disable */
 import {
-    OBJECT_IDENTIFIER,
-    OPTIONAL,
-    ASN1Element as _Element,
+    type OBJECT_IDENTIFIER,
+    type OPTIONAL,
+    type ASN1Element as _Element,
     ASN1TagClass as _TagClass
 } from "@wildboar/asn1";
 import * as $ from "@wildboar/asn1/functional";
@@ -27,7 +27,7 @@ import { ExtensionContainer, _decode_ExtensionContainer, _encode_ExtensionContai
  * MAP-RefuseInfo ::= SEQUENCE {
  *     reason    Reason,
  *     ...,
- *     extensionContainer    ExtensionContainer    OPTIONAL,
+ *     extensionContainer    ExtensionContainer    type OPTIONAL,
  *     -- extensionContainer must not be used in version 2
  *     alternativeApplicationContext    OBJECT IDENTIFIER    OPTIONAL
  *     -- alternativeApplicationContext must not be used in version 2
@@ -38,49 +38,59 @@ import { ExtensionContainer, _decode_ExtensionContainer, _encode_ExtensionContai
  */
 export
 class MAP_RefuseInfo {
+    /**
+     * @summary `reason`.
+     * @description
+     *
+     * MAP-level refuse reason encoded in this PDU. Service primitive
+     * Refuse-reason also includes Application-context-not-supported, Remote
+     * node not reachable, and Potential version incompatibility (3GPP TS
+     * 29.002 V19.1.0 clause 7.3.1).
+     *
+     * @public
+     * @readonly
+     */
+    public readonly reason: Reason;
+    /**
+     * @summary `extensionContainer`.
+     * @description
+     *
+     * Must not be used in version 2 (3GPP TS 29.002 V19.1.0 clause 17.4).
+     *
+     * @public
+     * @readonly
+     */
+    public readonly extensionContainer?: OPTIONAL<ExtensionContainer>;
+    /**
+     * @summary `alternativeApplicationContext`.
+     * @description
+     *
+     * Highest version of the application context supported by the refusing
+     * entity. Must not be used in version 2 (3GPP TS 29.002 V19.1.0 clauses
+     * 7.3.1 and 17.4).
+     *
+     * @public
+     * @readonly
+     */
+    public readonly alternativeApplicationContext?: OPTIONAL<OBJECT_IDENTIFIER>;
+    /**
+     * @summary Extensions that are not recognized.
+     * @public
+     * @readonly
+     */
+    public readonly _unrecognizedExtensionsList: _Element[];
+
     constructor (
-        /**
-         * @summary `reason`.
-         * @description
-         *
-         * MAP-level refuse reason encoded in this PDU. Service primitive
-         * Refuse-reason also includes Application-context-not-supported, Remote
-         * node not reachable, and Potential version incompatibility (3GPP TS
-         * 29.002 V19.1.0 clause 7.3.1).
-         *
-         * @public
-         * @readonly
-         */
-        readonly reason: Reason,
-        /**
-         * @summary `extensionContainer`.
-         * @description
-         *
-         * Must not be used in version 2 (3GPP TS 29.002 V19.1.0 clause 17.4).
-         *
-         * @public
-         * @readonly
-         */
-        readonly extensionContainer?: OPTIONAL<ExtensionContainer>,
-        /**
-         * @summary `alternativeApplicationContext`.
-         * @description
-         *
-         * Highest version of the application context supported by the refusing
-         * entity. Must not be used in version 2 (3GPP TS 29.002 V19.1.0 clauses
-         * 7.3.1 and 17.4).
-         *
-         * @public
-         * @readonly
-         */
-        readonly alternativeApplicationContext?: OPTIONAL<OBJECT_IDENTIFIER>,
-        /**
-         * @summary Extensions that are not recognized.
-         * @public
-         * @readonly
-         */
-        readonly _unrecognizedExtensionsList: _Element[] = []
-    ) {}
+        reason: Reason,
+        extensionContainer?: OPTIONAL<ExtensionContainer>,
+        alternativeApplicationContext?: OPTIONAL<OBJECT_IDENTIFIER>,
+        _unrecognizedExtensionsList: _Element[] = []
+    ) {
+        this.reason = reason;
+        this.extensionContainer = extensionContainer;
+        this.alternativeApplicationContext = alternativeApplicationContext;
+        this._unrecognizedExtensionsList = _unrecognizedExtensionsList;
+    }
 
     /**
      * @summary Restructures an object into a MAP_RefuseInfo
@@ -104,7 +114,7 @@ class MAP_RefuseInfo {
          * @static
          */
 
-    public static _enum_for_reason = _enum_for_Reason;
+    public static _enum_for_reason: typeof _enum_for_Reason = _enum_for_Reason;
 }
 
 /**

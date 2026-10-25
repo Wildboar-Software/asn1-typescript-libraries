@@ -2,7 +2,7 @@
 import { ASN1Element as _Element } from "@wildboar/asn1";
 import * as $ from "@wildboar/asn1/functional";
 import {
-    CertSubscribeOK_Item,
+    type CertSubscribeOK_Item,
     _decode_CertSubscribeOK_Item,
     _encode_CertSubscribeOK_Item,
 } from "../PkiPMIProtocolSpecifications/CertSubscribeOK-Item.ta.mjs";

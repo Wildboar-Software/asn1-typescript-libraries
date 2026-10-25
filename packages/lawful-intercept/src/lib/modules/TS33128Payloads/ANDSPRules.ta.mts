@@ -1,10 +1,10 @@
 /* eslint-disable */
 import {
-    ASN1Element as _Element,
+    type ASN1Element as _Element,
     ASN1SizeError
 } from "@wildboar/asn1";
 import * as $ from "@wildboar/asn1/functional";
-import { ANDSPRule, _decode_ANDSPRule, _encode_ANDSPRule } from "../TS33128Payloads/ANDSPRule.ta.mjs";
+import { type ANDSPRule, _decode_ANDSPRule, _encode_ANDSPRule } from "../TS33128Payloads/ANDSPRule.ta.mjs";
 // export { ANDSPRule, _decode_ANDSPRule, _encode_ANDSPRule } from "../TS33128Payloads/ANDSPRule.ta.mjs";
 
 

@@ -1,5 +1,5 @@
 /* eslint-disable */
-import { OPERATION } from "../Remote-Operations-Information-Objects/OPERATION.oca.mjs";
+import { type OPERATION } from "../Remote-Operations-Information-Objects/OPERATION.oca.mjs";
 import { recallAlerting } from "../Recall-Operations-asn1-97/recallAlerting.oa.mjs";
 import { recallAnswered } from "../Recall-Operations-asn1-97/recallAnswered.oa.mjs";
 

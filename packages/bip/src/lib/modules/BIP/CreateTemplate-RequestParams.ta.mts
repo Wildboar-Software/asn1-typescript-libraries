@@ -1,7 +1,7 @@
 /* eslint-disable */
 import {
-  OPTIONAL,
-  BOOLEAN,
+  type OPTIONAL,
+  type BOOLEAN,
   ASN1Element as _Element,
   ASN1TagClass as _TagClass,
   ASN1Construction as _Construction,
@@ -13,7 +13,7 @@ import {
 } from '@wildboar/asn1';
 import * as $ from '@wildboar/asn1/functional';
 import {
-  BioAPI_HANDLE,
+  type BioAPI_HANDLE,
   _decode_BioAPI_HANDLE,
   _encode_BioAPI_HANDLE,
 } from '../BIP/BioAPI-HANDLE.ta.mjs';
@@ -28,7 +28,7 @@ import {
   _encode_BioAPI_BIR_BIOMETRIC_DATA_FORMAT,
 } from '../BIP/BioAPI-BIR-BIOMETRIC-DATA-FORMAT.ta.mjs';
 import {
-  BioAPI_DATA,
+  type BioAPI_DATA,
   _decode_BioAPI_DATA,
   _encode_BioAPI_DATA,
 } from '../BIP/BioAPI-DATA.ta.mjs';
@@ -68,7 +68,7 @@ export class CreateTemplate_RequestParams {
    * @public
    * @readonly
    */
-  readonly originalBSPHandle: BioAPI_HANDLE;
+  public readonly originalBSPHandle: BioAPI_HANDLE;
   /**
    * @summary `capturedBIR`.
    * @description
@@ -79,7 +79,7 @@ export class CreateTemplate_RequestParams {
    * @public
    * @readonly
    */
-  readonly capturedBIR: BioAPI_INPUT_BIR;
+  public readonly capturedBIR: BioAPI_INPUT_BIR;
   /**
    * @summary `referenceTemplate`.
    * @description
@@ -90,7 +90,7 @@ export class CreateTemplate_RequestParams {
    * @public
    * @readonly
    */
-  readonly referenceTemplate: OPTIONAL<BioAPI_INPUT_BIR>;
+  public readonly referenceTemplate: OPTIONAL<BioAPI_INPUT_BIR>;
   /**
    * @summary `outputFormat`.
    * @description
@@ -101,7 +101,7 @@ export class CreateTemplate_RequestParams {
    * @public
    * @readonly
    */
-  readonly outputFormat: OPTIONAL<BioAPI_BIR_BIOMETRIC_DATA_FORMAT>;
+  public readonly outputFormat: OPTIONAL<BioAPI_BIR_BIOMETRIC_DATA_FORMAT>;
   /**
    * @summary `payload`.
    * @description
@@ -112,7 +112,7 @@ export class CreateTemplate_RequestParams {
    * @public
    * @readonly
    */
-  readonly payload: OPTIONAL<BioAPI_DATA>;
+  public readonly payload: OPTIONAL<BioAPI_DATA>;
   /**
    * @summary `no_templateUuid`.
    * @description
@@ -125,7 +125,7 @@ export class CreateTemplate_RequestParams {
    * @public
    * @readonly
    */
-  readonly no_templateUuid: BOOLEAN;
+  public readonly no_templateUuid: BOOLEAN;
 
   constructor(
     originalBSPHandle: BioAPI_HANDLE,

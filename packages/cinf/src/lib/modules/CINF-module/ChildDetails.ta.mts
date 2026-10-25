@@ -1,6 +1,6 @@
 /* eslint-disable */
 import {
-  BOOLEAN,
+  type BOOLEAN,
   ASN1Element as _Element,
   ASN1TagClass as _TagClass,
   ASN1Construction as _Construction,
@@ -51,7 +51,7 @@ export class ChildDetails {
    * @public
    * @readonly
    */
-  readonly orsSupported: BOOLEAN;
+  public readonly orsSupported: BOOLEAN;
   /**
    * @summary `unicodeLabels`.
    * @description
@@ -62,7 +62,7 @@ export class ChildDetails {
    * @public
    * @readonly
    */
-  readonly unicodeLabels: UnicodeLabels;
+  public readonly unicodeLabels: UnicodeLabels;
 
   constructor(
     orsSupported: BOOLEAN,

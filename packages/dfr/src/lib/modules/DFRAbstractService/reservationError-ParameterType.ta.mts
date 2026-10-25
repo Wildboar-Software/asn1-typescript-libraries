@@ -1,6 +1,6 @@
 /* eslint-disable */
 import {
-    ASN1Element as _Element,
+    type ASN1Element as _Element,
     ASN1TagClass as _TagClass,
     ASN1Construction as _Construction,
     ASN1UniversalType as _UniversalType,
@@ -10,7 +10,7 @@ import {
     ASN1ConstructionError as _ConstructionError,
 } from "@wildboar/asn1";
 import * as $ from "@wildboar/asn1/functional";
-import { DfrEntryName, _decode_DfrEntryName, _encode_DfrEntryName } from "../DFRAbstractService/DfrEntryName.ta.mjs";
+import { type DfrEntryName, _decode_DfrEntryName, _encode_DfrEntryName } from "../DFRAbstractService/DfrEntryName.ta.mjs";
 import { ReservationProblem, _enum_for_ReservationProblem, _decode_ReservationProblem, _encode_ReservationProblem } from "../DFRAbstractService/ReservationProblem.ta.mjs";
 
 
@@ -33,26 +33,32 @@ import { ReservationProblem, _enum_for_ReservationProblem, _decode_ReservationPr
  */
 export
 class reservationError_ParameterType {
+    /**
+     * @summary `entry`.
+     * @description
+     *
+     * Entry whose reservation could not be changed.
+     * @public
+     * @readonly
+     */
+    public readonly entry: DfrEntryName;
+    /**
+     * @summary `problem`.
+     * @description
+     *
+     * Why.
+     * @public
+     * @readonly
+     */
+    public readonly problem: ReservationProblem;
+
     constructor (
-        /**
-         * @summary `entry`.
-         * @description
-         *
-         * Entry whose reservation could not be changed.
-         * @public
-         * @readonly
-         */
-        readonly entry: DfrEntryName,
-        /**
-         * @summary `problem`.
-         * @description
-         *
-         * Why.
-         * @public
-         * @readonly
-         */
-        readonly problem: ReservationProblem
-    ) {}
+        entry: DfrEntryName,
+        problem: ReservationProblem
+    ) {
+        this.entry = entry;
+        this.problem = problem;
+    }
 
     /**
      * @summary Restructures an object into a reservationError_ParameterType
@@ -76,7 +82,7 @@ class reservationError_ParameterType {
          * @static
          */
 
-    public static _enum_for_problem = _enum_for_ReservationProblem;
+    public static _enum_for_problem: typeof _enum_for_ReservationProblem = _enum_for_ReservationProblem;
 }
 
 /**

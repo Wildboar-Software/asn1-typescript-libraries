@@ -1,7 +1,7 @@
 /* eslint-disable */
 import {
-    INTEGER,
-    ASN1Element as _Element,
+    type INTEGER,
+    type ASN1Element as _Element,
     ASN1TagClass as _TagClass,
     ASN1Construction as _Construction,
     ASN1UniversalType as _UniversalType,
@@ -41,7 +41,7 @@ export type TimeZone = INTEGER;
  * @constant
  * @type {number}
  */
-export const TimeZone_unknown: TimeZone = 781; /* LONG_NAMED_INTEGER_VALUE */
+export const TimeZone_unknown: 781 = 781 satisfies TimeZone; /* LONG_NAMED_INTEGER_VALUE */
 
 /**
  * @summary TimeZone_unknown
@@ -53,13 +53,13 @@ export const TimeZone_unknown: TimeZone = 781; /* LONG_NAMED_INTEGER_VALUE */
  * @constant
  * @type {number}
  */
-export const unknown: TimeZone = TimeZone_unknown; /* SHORT_NAMED_INTEGER_VALUE */
+export const unknown: 781 = TimeZone_unknown; /* SHORT_NAMED_INTEGER_VALUE */
 
 
-export const _decode_TimeZone = $._decodeInteger;
+export const _decode_TimeZone: $.ASN1Decoder<INTEGER> = $._decodeInteger;
 
 
-export const _encode_TimeZone = $._encodeInteger;
+export const _encode_TimeZone: $.ASN1Encoder<INTEGER> = $._encodeInteger;
 
 
 /* eslint-enable */

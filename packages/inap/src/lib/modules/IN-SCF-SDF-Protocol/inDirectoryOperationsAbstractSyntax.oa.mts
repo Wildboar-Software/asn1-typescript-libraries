@@ -1,8 +1,8 @@
 /* eslint-disable */
 import {
-    ABSTRACT_SYNTAX
+    type ABSTRACT_SYNTAX
 } from "@wildboar/asn1";
-import { BasicDAP_PDUs, _decode_BasicDAP_PDUs, _encode_BasicDAP_PDUs } from "../IN-SCF-SDF-Protocol/BasicDAP-PDUs.ta.mjs";
+import { type BasicDAP_PDUs, _decode_BasicDAP_PDUs, _encode_BasicDAP_PDUs } from "../IN-SCF-SDF-Protocol/BasicDAP-PDUs.ta.mjs";
 // export { BasicDAP_PDUs, _decode_BasicDAP_PDUs, _encode_BasicDAP_PDUs } from "../IN-SCF-SDF-Protocol/BasicDAP-PDUs.ta.mjs";
 import { id_as_indirectoryOperationsAS } from "../IN-object-identifiers/id-as-indirectoryOperationsAS.va.mjs";
 // export { id_as_indirectoryOperationsAS } from "../IN-object-identifiers/id-as-indirectoryOperationsAS.va.mjs";

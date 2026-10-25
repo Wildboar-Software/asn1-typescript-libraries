@@ -1,6 +1,6 @@
 /* eslint-disable */
 import {
-    ENUMERATED
+    type ENUMERATED
 } from "@wildboar/asn1";
 import * as $ from "@wildboar/asn1/functional";
 
@@ -54,7 +54,7 @@ type IPVersion = _enum_for_IPVersion | ENUMERATED;
  * @type {number}
  */
 export
-const IPVersion_iPV4: IPVersion = 1; /* LONG_NAMED_ENUMERATED_VALUE */
+const IPVersion_iPV4: _enum_for_IPVersion.iPV4 = _enum_for_IPVersion.iPV4; /* LONG_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary iPV4
@@ -66,7 +66,7 @@ const IPVersion_iPV4: IPVersion = 1; /* LONG_NAMED_ENUMERATED_VALUE */
  * @type {number}
  */
 export
-const iPV4: IPVersion = IPVersion_iPV4; /* SHORT_NAMED_ENUMERATED_VALUE */
+const iPV4: _enum_for_IPVersion.iPV4 = IPVersion_iPV4; /* SHORT_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary IPVersion_iPV6
@@ -82,7 +82,7 @@ const iPV4: IPVersion = IPVersion_iPV4; /* SHORT_NAMED_ENUMERATED_VALUE */
  * @type {number}
  */
 export
-const IPVersion_iPV6: IPVersion = 2; /* LONG_NAMED_ENUMERATED_VALUE */
+const IPVersion_iPV6: _enum_for_IPVersion.iPV6 = _enum_for_IPVersion.iPV6; /* LONG_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary iPV6
@@ -94,7 +94,7 @@ const IPVersion_iPV6: IPVersion = 2; /* LONG_NAMED_ENUMERATED_VALUE */
  * @type {number}
  */
 export
-const iPV6: IPVersion = IPVersion_iPV6; /* SHORT_NAMED_ENUMERATED_VALUE */
+const iPV6: _enum_for_IPVersion.iPV6 = IPVersion_iPV6; /* SHORT_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary IPVersion_iPV4andV6
@@ -110,7 +110,7 @@ const iPV6: IPVersion = IPVersion_iPV6; /* SHORT_NAMED_ENUMERATED_VALUE */
  * @type {number}
  */
 export
-const IPVersion_iPV4andV6: IPVersion = 3; /* LONG_NAMED_ENUMERATED_VALUE */
+const IPVersion_iPV4andV6: _enum_for_IPVersion.iPV4andV6 = _enum_for_IPVersion.iPV4andV6; /* LONG_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary iPV4andV6
@@ -122,7 +122,7 @@ const IPVersion_iPV4andV6: IPVersion = 3; /* LONG_NAMED_ENUMERATED_VALUE */
  * @type {number}
  */
 export
-const iPV4andV6: IPVersion = IPVersion_iPV4andV6; /* SHORT_NAMED_ENUMERATED_VALUE */
+const iPV4andV6: _enum_for_IPVersion.iPV4andV6 = IPVersion_iPV4andV6; /* SHORT_NAMED_ENUMERATED_VALUE */
 export const _decode_IPVersion: $.ASN1Decoder<IPVersion> = $._decodeEnumerated;
 export const _encode_IPVersion: $.ASN1Encoder<IPVersion> = $._encodeEnumerated;
 

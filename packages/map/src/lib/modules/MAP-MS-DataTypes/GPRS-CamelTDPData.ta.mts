@@ -1,15 +1,15 @@
 /* eslint-disable */
 import {
-    OPTIONAL,
-    ASN1Element as _Element,
+    type OPTIONAL,
+    type ASN1Element as _Element,
     ASN1TagClass as _TagClass
 } from "@wildboar/asn1";
 import * as $ from "@wildboar/asn1/functional";
-import { ISDN_AddressString, _decode_ISDN_AddressString, _encode_ISDN_AddressString } from "../MAP-CommonDataTypes/ISDN-AddressString.ta.mjs";
+import { type ISDN_AddressString, _decode_ISDN_AddressString, _encode_ISDN_AddressString } from "../MAP-CommonDataTypes/ISDN-AddressString.ta.mjs";
 import { ExtensionContainer, _decode_ExtensionContainer, _encode_ExtensionContainer } from "../MAP-ExtensionDataTypes/ExtensionContainer.ta.mjs";
-import { DefaultGPRS_Handling, _decode_DefaultGPRS_Handling, _encode_DefaultGPRS_Handling, _enum_for_DefaultGPRS_Handling } from "../MAP-MS-DataTypes/DefaultGPRS-Handling.ta.mjs";
-import { GPRS_TriggerDetectionPoint, _decode_GPRS_TriggerDetectionPoint, _encode_GPRS_TriggerDetectionPoint, _enum_for_GPRS_TriggerDetectionPoint } from "../MAP-MS-DataTypes/GPRS-TriggerDetectionPoint.ta.mjs";
-import { ServiceKey, _decode_ServiceKey, _encode_ServiceKey } from "../MAP-MS-DataTypes/ServiceKey.ta.mjs";
+import { type DefaultGPRS_Handling, _decode_DefaultGPRS_Handling, _encode_DefaultGPRS_Handling, _enum_for_DefaultGPRS_Handling } from "../MAP-MS-DataTypes/DefaultGPRS-Handling.ta.mjs";
+import { type GPRS_TriggerDetectionPoint, _decode_GPRS_TriggerDetectionPoint, _encode_GPRS_TriggerDetectionPoint, _enum_for_GPRS_TriggerDetectionPoint } from "../MAP-MS-DataTypes/GPRS-TriggerDetectionPoint.ta.mjs";
+import { type ServiceKey, _decode_ServiceKey, _encode_ServiceKey } from "../MAP-MS-DataTypes/ServiceKey.ta.mjs";
 
 
 /**
@@ -27,7 +27,7 @@ import { ServiceKey, _decode_ServiceKey, _encode_ServiceKey } from "../MAP-MS-Da
  *     serviceKey    [1] ServiceKey,
  *     gsmSCF-Address    [2] ISDN-AddressString,
  *     defaultSessionHandling    [3] DefaultGPRS-Handling,
- *     extensionContainer    [4] ExtensionContainer    OPTIONAL,
+ *     extensionContainer    [4] ExtensionContainer    type OPTIONAL,
  *     ...
  *     }
  * ```
@@ -36,60 +36,74 @@ import { ServiceKey, _decode_ServiceKey, _encode_ServiceKey } from "../MAP-MS-Da
  */
 export
 class GPRS_CamelTDPData {
+    /**
+     * @summary `gprs_TriggerDetectionPoint`.
+     * @description
+     *
+     * If any value other than the listed GPRS TDPs is received, the whole
+     * GPRS-CamelTDPData sequence shall be ignored (3GPP TS 29.002 V19.1.0
+     * clause 17.7.1).
+     *
+     * @public
+     * @readonly
+     */
+    public readonly gprs_TriggerDetectionPoint: GPRS_TriggerDetectionPoint;
+    /**
+     * @summary `serviceKey`.
+     * @public
+     * @readonly
+     */
+    public readonly serviceKey: ServiceKey;
+    /**
+     * @summary `gsmSCF_Address`.
+     * @description
+     *
+     * ISDN number assigned to the gsmSCF (3GPP TS 29.002 V19.1.0 clause
+     * 7.6.2.58).
+     *
+     * @public
+     * @readonly
+     */
+    public readonly gsmSCF_Address: ISDN_AddressString;
+    /**
+     * @summary `defaultSessionHandling`.
+     * @description
+     *
+     * Default GPRS handling if the CAMEL service is not available (3GPP TS
+     * 29.002 V19.1.0 clause 17.7.1).
+     *
+     * @public
+     * @readonly
+     */
+    public readonly defaultSessionHandling: DefaultGPRS_Handling;
+    /**
+     * @summary `extensionContainer`.
+     * @public
+     * @readonly
+     */
+    public readonly extensionContainer?: OPTIONAL<ExtensionContainer>;
+    /**
+     * @summary Extensions that are not recognized.
+     * @public
+     * @readonly
+     */
+    public readonly _unrecognizedExtensionsList: _Element[];
+
     constructor (
-        /**
-         * @summary `gprs_TriggerDetectionPoint`.
-         * @description
-         *
-         * If any value other than the listed GPRS TDPs is received, the whole
-         * GPRS-CamelTDPData sequence shall be ignored (3GPP TS 29.002 V19.1.0
-         * clause 17.7.1).
-         *
-         * @public
-         * @readonly
-         */
-        readonly gprs_TriggerDetectionPoint: GPRS_TriggerDetectionPoint,
-        /**
-         * @summary `serviceKey`.
-         * @public
-         * @readonly
-         */
-        readonly serviceKey: ServiceKey,
-        /**
-         * @summary `gsmSCF_Address`.
-         * @description
-         *
-         * ISDN number assigned to the gsmSCF (3GPP TS 29.002 V19.1.0 clause
-         * 7.6.2.58).
-         *
-         * @public
-         * @readonly
-         */
-        readonly gsmSCF_Address: ISDN_AddressString,
-        /**
-         * @summary `defaultSessionHandling`.
-         * @description
-         *
-         * Default GPRS handling if the CAMEL service is not available (3GPP TS
-         * 29.002 V19.1.0 clause 17.7.1).
-         *
-         * @public
-         * @readonly
-         */
-        readonly defaultSessionHandling: DefaultGPRS_Handling,
-        /**
-         * @summary `extensionContainer`.
-         * @public
-         * @readonly
-         */
-        readonly extensionContainer?: OPTIONAL<ExtensionContainer>,
-        /**
-         * @summary Extensions that are not recognized.
-         * @public
-         * @readonly
-         */
-        readonly _unrecognizedExtensionsList: _Element[] = []
-    ) {}
+        gprs_TriggerDetectionPoint: GPRS_TriggerDetectionPoint,
+        serviceKey: ServiceKey,
+        gsmSCF_Address: ISDN_AddressString,
+        defaultSessionHandling: DefaultGPRS_Handling,
+        extensionContainer?: OPTIONAL<ExtensionContainer>,
+        _unrecognizedExtensionsList: _Element[] = []
+    ) {
+        this.gprs_TriggerDetectionPoint = gprs_TriggerDetectionPoint;
+        this.serviceKey = serviceKey;
+        this.gsmSCF_Address = gsmSCF_Address;
+        this.defaultSessionHandling = defaultSessionHandling;
+        this.extensionContainer = extensionContainer;
+        this._unrecognizedExtensionsList = _unrecognizedExtensionsList;
+    }
 
     /**
      * @summary Restructures an object into a GPRS_CamelTDPData
@@ -113,13 +127,13 @@ class GPRS_CamelTDPData {
          * @static
          */
 
-    public static _enum_for_gprs_TriggerDetectionPoint = _enum_for_GPRS_TriggerDetectionPoint;        /**
+    public static _enum_for_gprs_TriggerDetectionPoint: typeof _enum_for_GPRS_TriggerDetectionPoint = _enum_for_GPRS_TriggerDetectionPoint;        /**
          * @summary The enum used as the type of the component `defaultSessionHandling`
          * @public
          * @static
          */
 
-    public static _enum_for_defaultSessionHandling = _enum_for_DefaultGPRS_Handling;
+    public static _enum_for_defaultSessionHandling: typeof _enum_for_DefaultGPRS_Handling = _enum_for_DefaultGPRS_Handling;
 }
 
 /**

@@ -2,22 +2,22 @@
 
 import * as $ from "@wildboar/asn1/functional";
 import {
-    OPTIONAL,
-    BOOLEAN,
-    SEQUENCE,
-    SET,
-    ASN1Element as _Element,
+    type OPTIONAL,
+    type BOOLEAN,
+    type SEQUENCE,
+    type SET,
+    type ASN1Element as _Element,
     ASN1TagClass as _TagClass
 } from "@wildboar/asn1";
-import { RouteingCrossRefID, _decode_RouteingCrossRefID, _encode_RouteingCrossRefID } from "../CSTA-device-feature-types/RouteingCrossRefID.ta.mjs";
+import { type RouteingCrossRefID, _decode_RouteingCrossRefID, _encode_RouteingCrossRefID } from "../CSTA-device-feature-types/RouteingCrossRefID.ta.mjs";
 
-import { RouteRegisterReqID, _decode_RouteRegisterReqID, _encode_RouteRegisterReqID } from "../CSTA-device-feature-types/RouteRegisterReqID.ta.mjs";
+import { type RouteRegisterReqID, _decode_RouteRegisterReqID, _encode_RouteRegisterReqID } from "../CSTA-device-feature-types/RouteRegisterReqID.ta.mjs";
 
-import { CalledDeviceID, _decode_CalledDeviceID, _encode_CalledDeviceID } from "../CSTA-device-identifiers/CalledDeviceID.ta.mjs";
+import { type CalledDeviceID, _decode_CalledDeviceID, _encode_CalledDeviceID } from "../CSTA-device-identifiers/CalledDeviceID.ta.mjs";
 
-import { CallingDeviceID, _decode_CallingDeviceID, _encode_CallingDeviceID } from "../CSTA-device-identifiers/CallingDeviceID.ta.mjs";
+import { type CallingDeviceID, _decode_CallingDeviceID, _encode_CallingDeviceID } from "../CSTA-device-identifiers/CallingDeviceID.ta.mjs";
 
-import { CorrelatorData, _decode_CorrelatorData, _encode_CorrelatorData } from "../CSTA-device-feature-types/CorrelatorData.ta.mjs";
+import { type CorrelatorData, _decode_CorrelatorData, _encode_CorrelatorData } from "../CSTA-device-feature-types/CorrelatorData.ta.mjs";
 
 import { CallLinkageData, _decode_CallLinkageData, _encode_CallLinkageData } from "../CSTA-call-control/CallLinkageData.ta.mjs";
 
@@ -39,12 +39,12 @@ import { CSTACommonArguments, _decode_CSTACommonArguments, _encode_CSTACommonArg
  * ```asn1
  * RouteUsedRequestArgument ::= SEQUENCE
  * {    crossRefIdentifier        RouteingCrossRefID,
- *     routeRegisterReqID        [0] IMPLICIT RouteRegisterReqID        OPTIONAL,
+ *     routeRegisterReqID        [0] IMPLICIT RouteRegisterReqID        type OPTIONAL,
  *     routeUsed            CalledDeviceID,
- *     callingDevice            CallingDeviceID                OPTIONAL,
- *     domain                BOOLEAN                    OPTIONAL,
- *     correlatorData            [1] IMPLICIT CorrelatorData        OPTIONAL,
- *     callLinkageData            [2] IMPLICIT CallLinkageData        OPTIONAL,
+ *     callingDevice            CallingDeviceID                type OPTIONAL,
+ *     domain                BOOLEAN                    type OPTIONAL,
+ *     correlatorData            [1] IMPLICIT CorrelatorData        type OPTIONAL,
+ *     callLinkageData            [2] IMPLICIT CallLinkageData        type OPTIONAL,
  *     extensions            CSTACommonArguments            OPTIONAL }
  * ```
  * 
@@ -52,81 +52,99 @@ import { CSTACommonArguments, _decode_CSTACommonArguments, _encode_CSTACommonArg
  */
 export
 class RouteUsedRequestArgument {
+    /**
+     * @summary `crossRefIdentifier`.
+     * @description
+     *
+     * Dialogue whose actual destination is reported.
+     * @public
+     * @readonly
+     */
+    public readonly crossRefIdentifier: RouteingCrossRefID;
+    /**
+     * @summary `routeRegisterReqID`.
+     * @description
+     *
+     * Registration for this dialogue, if registration is used.
+     * @public
+     * @readonly
+     */
+    public readonly routeRegisterReqID: OPTIONAL<RouteRegisterReqID>;
+    /**
+     * @summary `routeUsed`.
+     * @description
+     *
+     * Actual destination used for the call.
+     * @public
+     * @readonly
+     */
+    public readonly routeUsed: CalledDeviceID;
+    /**
+     * @summary `callingDevice`.
+     * @description
+     *
+     * Calling device, if provided.
+     * @public
+     * @readonly
+     */
+    public readonly callingDevice?: OPTIONAL<CallingDeviceID>;
+    /**
+     * @summary `domain`.
+     * @description
+     *
+     * Whether the destination is in the SF's domain, if provided.
+     * @public
+     * @readonly
+     */
+    public readonly domain?: OPTIONAL<BOOLEAN>;
+    /**
+     * @summary `correlatorData`.
+     * @description
+     *
+     * Correlator data associated with the call.
+     * @public
+     * @readonly
+     */
+    public readonly correlatorData?: OPTIONAL<CorrelatorData>;
+    /**
+     * @summary `callLinkageData`.
+     * @description
+     *
+     * Call/thread linkage identifiers.
+     * @public
+     * @readonly
+     */
+    public readonly callLinkageData?: OPTIONAL<CallLinkageData>;
+    /**
+     * @summary `extensions`.
+     * @description
+     *
+     * Optional security (timestamp, sequence, securityInfo) and
+     * privateData.
+     * @public
+     * @readonly
+     */
+    public readonly extensions?: OPTIONAL<CSTACommonArguments>;
+
     constructor (
-        /**
-         * @summary `crossRefIdentifier`.
-         * @description
-         *
-         * Dialogue whose actual destination is reported.
-         * @public
-         * @readonly
-         */
-        readonly crossRefIdentifier: RouteingCrossRefID,
-        /**
-         * @summary `routeRegisterReqID`.
-         * @description
-         *
-         * Registration for this dialogue, if registration is used.
-         * @public
-         * @readonly
-         */
-        readonly routeRegisterReqID: OPTIONAL<RouteRegisterReqID>,
-        /**
-         * @summary `routeUsed`.
-         * @description
-         *
-         * Actual destination used for the call.
-         * @public
-         * @readonly
-         */
-        readonly routeUsed: CalledDeviceID,
-        /**
-         * @summary `callingDevice`.
-         * @description
-         *
-         * Calling device, if provided.
-         * @public
-         * @readonly
-         */
-        readonly callingDevice?: OPTIONAL<CallingDeviceID>,
-        /**
-         * @summary `domain`.
-         * @description
-         *
-         * Whether the destination is in the SF's domain, if provided.
-         * @public
-         * @readonly
-         */
-        readonly domain?: OPTIONAL<BOOLEAN>,
-        /**
-         * @summary `correlatorData`.
-         * @description
-         *
-         * Correlator data associated with the call.
-         * @public
-         * @readonly
-         */
-        readonly correlatorData?: OPTIONAL<CorrelatorData>,
-        /**
-         * @summary `callLinkageData`.
-         * @description
-         *
-         * Call/thread linkage identifiers.
-         * @public
-         * @readonly
-         */
-        readonly callLinkageData?: OPTIONAL<CallLinkageData>,
-        /**
-         * @summary `extensions`.
-         * @description
-         *
-         * Optional security (timestamp, sequence, securityInfo) and
-         * privateData.
-         * @public
-         * @readonly
-         */
-        readonly extensions?: OPTIONAL<CSTACommonArguments>
-    ) {}
+        crossRefIdentifier: RouteingCrossRefID,
+        routeRegisterReqID: OPTIONAL<RouteRegisterReqID>,
+        routeUsed: CalledDeviceID,
+        callingDevice?: OPTIONAL<CallingDeviceID>,
+        domain?: OPTIONAL<BOOLEAN>,
+        correlatorData?: OPTIONAL<CorrelatorData>,
+        callLinkageData?: OPTIONAL<CallLinkageData>,
+        extensions?: OPTIONAL<CSTACommonArguments>
+    ) {
+        this.crossRefIdentifier = crossRefIdentifier;
+        this.routeRegisterReqID = routeRegisterReqID;
+        this.routeUsed = routeUsed;
+        this.callingDevice = callingDevice;
+        this.domain = domain;
+        this.correlatorData = correlatorData;
+        this.callLinkageData = callLinkageData;
+        this.extensions = extensions;
+    }
 
     /**
      * @summary Restructures an object into a RouteUsedRequestArgument

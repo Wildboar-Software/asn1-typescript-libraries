@@ -1,13 +1,13 @@
 /* eslint-disable */
 import {
-    NULL,
-    OPTIONAL,
-    ASN1Element as _Element,
+    type NULL,
+    type OPTIONAL,
+    type ASN1Element as _Element,
     ASN1TagClass as _TagClass
 } from "@wildboar/asn1";
 import * as $ from "@wildboar/asn1/functional";
 import { ExtensionContainer, _decode_ExtensionContainer, _encode_ExtensionContainer } from "../MAP-ExtensionDataTypes/ExtensionContainer.ta.mjs";
-import { CUG_Interlock, _decode_CUG_Interlock, _encode_CUG_Interlock } from "../MAP-MS-DataTypes/CUG-Interlock.ta.mjs";
+import { type CUG_Interlock, _decode_CUG_Interlock, _encode_CUG_Interlock } from "../MAP-MS-DataTypes/CUG-Interlock.ta.mjs";
 
 
 /**
@@ -22,8 +22,8 @@ import { CUG_Interlock, _decode_CUG_Interlock, _encode_CUG_Interlock } from "../
  * ```asn1
  * CUG-CheckInfo ::= SEQUENCE {
  *     cug-Interlock    CUG-Interlock,
- *     cug-OutgoingAccess    NULL    OPTIONAL,
- *     extensionContainer    ExtensionContainer    OPTIONAL,
+ *     cug-OutgoingAccess    NULL    type OPTIONAL,
+ *     extensionContainer    ExtensionContainer    type OPTIONAL,
  *     ...}
  * ```
  * 
@@ -31,44 +31,54 @@ import { CUG_Interlock, _decode_CUG_Interlock, _encode_CUG_Interlock } from "../
  */
 export
 class CUG_CheckInfo {
+    /**
+     * @summary `cug_Interlock`.
+     * @description
+     *
+     * Use and presence as in 3GPP TS 23.018 (clause 10.1.3).
+     *
+     * @public
+     * @readonly
+     */
+    public readonly cug_Interlock: CUG_Interlock;
+    /**
+     * @summary `cug_OutgoingAccess`.
+     * @description
+     *
+     * Use and presence as in 3GPP TS 23.018 (clause 10.1.3).
+     *
+     * @public
+     * @readonly
+     */
+    public readonly cug_OutgoingAccess?: OPTIONAL<NULL>;
+    /**
+     * @summary `extensionContainer`.
+     * @description
+     *
+     * Private or PCS extensions (3GPP TS 29.002 V19.1.0 clause 17.7.11).
+     *
+     * @public
+     * @readonly
+     */
+    public readonly extensionContainer?: OPTIONAL<ExtensionContainer>;
+    /**
+     * @summary Extensions that are not recognized.
+     * @public
+     * @readonly
+     */
+    public readonly _unrecognizedExtensionsList: _Element[];
+
     constructor (
-        /**
-         * @summary `cug_Interlock`.
-         * @description
-         *
-         * Use and presence as in 3GPP TS 23.018 (clause 10.1.3).
-         *
-         * @public
-         * @readonly
-         */
-        readonly cug_Interlock: CUG_Interlock,
-        /**
-         * @summary `cug_OutgoingAccess`.
-         * @description
-         *
-         * Use and presence as in 3GPP TS 23.018 (clause 10.1.3).
-         *
-         * @public
-         * @readonly
-         */
-        readonly cug_OutgoingAccess?: OPTIONAL<NULL>,
-        /**
-         * @summary `extensionContainer`.
-         * @description
-         *
-         * Private or PCS extensions (3GPP TS 29.002 V19.1.0 clause 17.7.11).
-         *
-         * @public
-         * @readonly
-         */
-        readonly extensionContainer?: OPTIONAL<ExtensionContainer>,
-        /**
-         * @summary Extensions that are not recognized.
-         * @public
-         * @readonly
-         */
-        readonly _unrecognizedExtensionsList: _Element[] = []
-    ) {}
+        cug_Interlock: CUG_Interlock,
+        cug_OutgoingAccess?: OPTIONAL<NULL>,
+        extensionContainer?: OPTIONAL<ExtensionContainer>,
+        _unrecognizedExtensionsList: _Element[] = []
+    ) {
+        this.cug_Interlock = cug_Interlock;
+        this.cug_OutgoingAccess = cug_OutgoingAccess;
+        this.extensionContainer = extensionContainer;
+        this._unrecognizedExtensionsList = _unrecognizedExtensionsList;
+    }
 
     /**
      * @summary Restructures an object into a CUG_CheckInfo

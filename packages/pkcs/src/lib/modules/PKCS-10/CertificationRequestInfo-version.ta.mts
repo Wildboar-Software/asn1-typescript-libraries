@@ -1,5 +1,5 @@
 /* eslint-disable */
-import { ASN1Element as _Element, INTEGER } from "@wildboar/asn1";
+import { ASN1Element as _Element, type INTEGER } from "@wildboar/asn1";
 import * as $ from "@wildboar/asn1/functional";
 
 
@@ -21,7 +21,7 @@ export type CertificationRequestInfo_version = INTEGER;
  * @constant
  * @type {number}
  */
-export const CertificationRequestInfo_version_v1: CertificationRequestInfo_version = 0; /* LONG_NAMED_INTEGER_VALUE */
+export const CertificationRequestInfo_version_v1: 0 = 0 satisfies CertificationRequestInfo_version; /* LONG_NAMED_INTEGER_VALUE */
 
 
 /**
@@ -29,17 +29,17 @@ export const CertificationRequestInfo_version_v1: CertificationRequestInfo_versi
  * @constant
  * @type {number}
  */
-export const v1: CertificationRequestInfo_version = CertificationRequestInfo_version_v1; /* SHORT_NAMED_INTEGER_VALUE */
+export const v1: 0 = CertificationRequestInfo_version_v1; /* SHORT_NAMED_INTEGER_VALUE */
 
 
 
 
-export const _decode_CertificationRequestInfo_version = $._decodeInteger;
+export const _decode_CertificationRequestInfo_version: $.ASN1Decoder<INTEGER> = $._decodeInteger;
 
 
 
 
-export const _encode_CertificationRequestInfo_version = $._encodeInteger;
+export const _encode_CertificationRequestInfo_version: $.ASN1Encoder<INTEGER> = $._encodeInteger;
 
 
 /* eslint-enable */

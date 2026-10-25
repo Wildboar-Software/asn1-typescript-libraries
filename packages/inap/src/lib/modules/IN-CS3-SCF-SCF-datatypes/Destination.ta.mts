@@ -1,13 +1,13 @@
 /* eslint-disable */
 import {
-    OPTIONAL,
-    ASN1Element as _Element,
+    type OPTIONAL,
+    type ASN1Element as _Element,
     ASN1TagClass as _TagClass
 } from "@wildboar/asn1";
 import * as $ from "@wildboar/asn1/functional";
 import { Destination_type, _decode_Destination_type, _encode_Destination_type, _enum_for_Destination_type } from "../IN-CS3-SCF-SCF-datatypes/Destination-type.ta.mjs";
 // export { Destination_type, _enum_for_Destination_type, Destination_type_e164 /* IMPORTED_LONG_ENUMERATION_ITEM */, e164 /* IMPORTED_SHORT_ENUMERATION_ITEM */, Destination_type_x121 /* IMPORTED_LONG_ENUMERATION_ITEM */, x121 /* IMPORTED_SHORT_ENUMERATION_ITEM */, _decode_Destination_type, _encode_Destination_type } from "../IN-CS3-SCF-SCF-datatypes/Destination-type.ta.mjs";
-import { GenericNumber, _decode_GenericNumber, _encode_GenericNumber } from "../IN-CS3-SSF-SCF-datatypes/GenericNumber.ta.mjs";
+import { type GenericNumber, _decode_GenericNumber, _encode_GenericNumber } from "../IN-CS3-SSF-SCF-datatypes/GenericNumber.ta.mjs";
 // export { GenericNumber, _decode_GenericNumber, _encode_GenericNumber } from "../IN-CS3-SSF-SCF-datatypes/GenericNumber.ta.mjs";
 import { PresentationAddress, _decode_PresentationAddress, _encode_PresentationAddress } from "../SelectedAttributeTypes/PresentationAddress.ta.mjs";
 // export { PresentationAddress, _decode_PresentationAddress, _encode_PresentationAddress } from "../SelectedAttributeTypes/PresentationAddress.ta.mjs";
@@ -82,7 +82,7 @@ class Destination {
          * @static
          */
 
-    public static _enum_for_type_ = _enum_for_Destination_type;
+    public static _enum_for_type_: typeof _enum_for_Destination_type = _enum_for_Destination_type;
 }
 
 /**

@@ -55,7 +55,7 @@ type SMReplyPathRequested = _enum_for_SMReplyPathRequested;
  * @enum {number}
  */
 export
-const SMReplyPathRequested = _enum_for_SMReplyPathRequested;
+const SMReplyPathRequested: typeof _enum_for_SMReplyPathRequested = _enum_for_SMReplyPathRequested;
 
 /**
  * @summary SMReplyPathRequested_noReplyPathSet
@@ -63,7 +63,7 @@ const SMReplyPathRequested = _enum_for_SMReplyPathRequested;
  * @type {number}
  */
 export
-const SMReplyPathRequested_noReplyPathSet: SMReplyPathRequested = SMReplyPathRequested.noReplyPathSet; /* LONG_NAMED_ENUMERATED_VALUE */
+const SMReplyPathRequested_noReplyPathSet: _enum_for_SMReplyPathRequested.noReplyPathSet = SMReplyPathRequested.noReplyPathSet; /* LONG_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary noReplyPathSet
@@ -71,7 +71,7 @@ const SMReplyPathRequested_noReplyPathSet: SMReplyPathRequested = SMReplyPathReq
  * @type {number}
  */
 export
-const noReplyPathSet: SMReplyPathRequested = SMReplyPathRequested.noReplyPathSet; /* SHORT_NAMED_ENUMERATED_VALUE */
+const noReplyPathSet: _enum_for_SMReplyPathRequested.noReplyPathSet = SMReplyPathRequested.noReplyPathSet; /* SHORT_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary SMReplyPathRequested_replyPathSet
@@ -79,7 +79,7 @@ const noReplyPathSet: SMReplyPathRequested = SMReplyPathRequested.noReplyPathSet
  * @type {number}
  */
 export
-const SMReplyPathRequested_replyPathSet: SMReplyPathRequested = SMReplyPathRequested.replyPathSet; /* LONG_NAMED_ENUMERATED_VALUE */
+const SMReplyPathRequested_replyPathSet: _enum_for_SMReplyPathRequested.replyPathSet = SMReplyPathRequested.replyPathSet; /* LONG_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary replyPathSet
@@ -87,7 +87,7 @@ const SMReplyPathRequested_replyPathSet: SMReplyPathRequested = SMReplyPathReque
  * @type {number}
  */
 export
-const replyPathSet: SMReplyPathRequested = SMReplyPathRequested.replyPathSet; /* SHORT_NAMED_ENUMERATED_VALUE */
+const replyPathSet: _enum_for_SMReplyPathRequested.replyPathSet = SMReplyPathRequested.replyPathSet; /* SHORT_NAMED_ENUMERATED_VALUE */
 
 export
 const _decode_SMReplyPathRequested: $.ASN1Decoder<SMReplyPathRequested> = $._decodeEnumerated;

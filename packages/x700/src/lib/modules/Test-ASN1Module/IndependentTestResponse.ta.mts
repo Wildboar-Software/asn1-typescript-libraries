@@ -1,7 +1,7 @@
 /* eslint-disable */
 import {
-    OPTIONAL,
-    ASN1Element as _Element,
+    type OPTIONAL,
+    type ASN1Element as _Element,
     ASN1TagClass as _TagClass,
     ASN1Construction as _Construction,
     ASN1UniversalType as _UniversalType,
@@ -12,17 +12,17 @@ import {
 } from '@wildboar/asn1';
 import * as $ from '@wildboar/asn1/functional';
 import {
-    TestInvocationId,
+    type TestInvocationId,
     _decode_TestInvocationId,
     _encode_TestInvocationId,
 } from '../Test-ASN1Module/TestInvocationId.ta.mjs';
 import {
-    TOName,
+    type TOName,
     _decode_TOName,
     _encode_TOName,
 } from '../Test-ASN1Module/TOName.ta.mjs';
 import {
-    AttributeList,
+    type AttributeList,
     _decode_AttributeList,
     _encode_AttributeList,
 } from '@wildboar/attribute-asn1module';
@@ -47,44 +47,52 @@ import {
  *
  */
 export class IndependentTestResponse {
+    /**
+     * @summary `testInvocationId`.
+     * @description
+     *
+     * Invocation id of this single-TO test (may be the TO DN). ITU-T Rec.
+     * X.745 (11/93) §7.3.1.
+     * [§7.3.1](https://www.itu.int/rec/T-REC-X.745-199311-I)
+     *
+     * @public
+     * @readonly
+     */
+    public readonly testInvocationId: TestInvocationId;
+    /**
+     * @summary `tOName`.
+     * @description
+     *
+     * TO name if required: NULL if the conductor named it, otherwise the
+     * performer-assigned instance. ITU-T Rec. X.745 (11/93) §7.3.1, A.7.2.
+     * [§7.3.1](https://www.itu.int/rec/T-REC-X.745-199311-I)
+     *
+     * @public
+     * @readonly
+     */
+    public readonly tOName?: OPTIONAL<TOName>;
+    /**
+     * @summary `tOAttributeList`.
+     * @description
+     *
+     * Initial attribute values the TO behaviour specifies to return. ITU-T
+     * Rec. X.745 (11/93) §9.5.
+     * [§9.5](https://www.itu.int/rec/T-REC-X.745-199311-I)
+     *
+     * @public
+     * @readonly
+     */
+    public readonly tOAttributeList?: OPTIONAL<AttributeList>;
+
     constructor(
-        /**
-         * @summary `testInvocationId`.
-         * @description
-         *
-         * Invocation id of this single-TO test (may be the TO DN). ITU-T Rec.
-         * X.745 (11/93) §7.3.1.
-         * [§7.3.1](https://www.itu.int/rec/T-REC-X.745-199311-I)
-         *
-         * @public
-         * @readonly
-         */
-        readonly testInvocationId: TestInvocationId,
-        /**
-         * @summary `tOName`.
-         * @description
-         *
-         * TO name if required: NULL if the conductor named it, otherwise the
-         * performer-assigned instance. ITU-T Rec. X.745 (11/93) §7.3.1, A.7.2.
-         * [§7.3.1](https://www.itu.int/rec/T-REC-X.745-199311-I)
-         *
-         * @public
-         * @readonly
-         */
-        readonly tOName?: OPTIONAL<TOName>,
-        /**
-         * @summary `tOAttributeList`.
-         * @description
-         *
-         * Initial attribute values the TO behaviour specifies to return. ITU-T
-         * Rec. X.745 (11/93) §9.5.
-         * [§9.5](https://www.itu.int/rec/T-REC-X.745-199311-I)
-         *
-         * @public
-         * @readonly
-         */
-        readonly tOAttributeList?: OPTIONAL<AttributeList>
-    ) {}
+        testInvocationId: TestInvocationId,
+        tOName?: OPTIONAL<TOName>,
+        tOAttributeList?: OPTIONAL<AttributeList>
+    ) {
+        this.testInvocationId = testInvocationId;
+        this.tOName = tOName;
+        this.tOAttributeList = tOAttributeList;
+    }
 
     /**
      * @summary Restructures an object into a IndependentTestResponse

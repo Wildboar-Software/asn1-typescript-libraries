@@ -1,6 +1,6 @@
 /* eslint-disable */
 import {
-  OPTIONAL,
+  type OPTIONAL,
   ASN1Element as _Element,
   ASN1TagClass as _TagClass,
   ASN1Construction as _Construction,
@@ -12,7 +12,7 @@ import {
 } from '@wildboar/asn1';
 import * as $ from '@wildboar/asn1/functional';
 import {
-  BioAPI_BIR_HANDLE,
+  type BioAPI_BIR_HANDLE,
   _decode_BioAPI_BIR_HANDLE,
   _encode_BioAPI_BIR_HANDLE,
 } from '../BIP/BioAPI-BIR-HANDLE.ta.mjs';
@@ -47,7 +47,7 @@ export class Capture_ResponseParams {
    * @public
    * @readonly
    */
-  readonly capturedBIR: BioAPI_BIR_HANDLE;
+  public readonly capturedBIR: BioAPI_BIR_HANDLE;
   /**
    * @summary `auditData`.
    * @description
@@ -59,7 +59,7 @@ export class Capture_ResponseParams {
    * @public
    * @readonly
    */
-  readonly auditData?: OPTIONAL<BioAPI_BIR_HANDLE>;
+  public readonly auditData?: OPTIONAL<BioAPI_BIR_HANDLE>;
 
   constructor(
     capturedBIR: BioAPI_BIR_HANDLE,

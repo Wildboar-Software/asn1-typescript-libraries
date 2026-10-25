@@ -1,8 +1,8 @@
 /* eslint-disable */
 import {
-    OPTIONAL,
-    PrintableString,
-    ASN1Element as _Element,
+    type OPTIONAL,
+    type PrintableString,
+    type ASN1Element as _Element,
     ASN1TagClass as _TagClass,
     ASN1Construction as _Construction,
     ASN1UniversalType as _UniversalType,
@@ -46,37 +46,45 @@ import { EntryControl_feprList_Item, _decode_EntryControl_feprList_Item, _encode
  */
 export
 class EntryControl {
+    /**
+     * @summary `deviceObjectList`.
+     * @description
+     * Names of device objects. Absent ⇒ unchanged; present-empty ⇒
+     * discarded. ISO/IEC 9041-1:1997 §12.2.2.
+     * @public
+     * @readonly
+     */
+    public readonly deviceObjectList?: OPTIONAL<PrintableString[]>;
+    /**
+     * @summary `feirList`.
+     * @description
+     * Field Entry Instruction Records (FEICO name + index). Absent ⇒
+     * unchanged; present-empty ⇒ discarded. ISO/IEC 9040:1997
+     * §3.3.62; ISO/IEC 9041-1:1997 §12.2.2.
+     * @public
+     * @readonly
+     */
+    public readonly feirList?: OPTIONAL<EntryControl_feirList_Item[]>;
+    /**
+     * @summary `feprList`.
+     * @description
+     * Field Entry Pilot Records (FEPCO name + index). Absent ⇒
+     * unchanged; present-empty ⇒ discarded. ISO/IEC 9040:1997
+     * §3.3.63; ISO/IEC 9041-1:1997 §12.2.2.
+     * @public
+     * @readonly
+     */
+    public readonly feprList?: OPTIONAL<EntryControl_feprList_Item[]>;
+
     constructor (
-        /**
-         * @summary `deviceObjectList`.
-         * @description
-         * Names of device objects. Absent ⇒ unchanged; present-empty ⇒
-         * discarded. ISO/IEC 9041-1:1997 §12.2.2.
-         * @public
-         * @readonly
-         */
-        readonly deviceObjectList?: OPTIONAL<PrintableString[]>,
-        /**
-         * @summary `feirList`.
-         * @description
-         * Field Entry Instruction Records (FEICO name + index). Absent ⇒
-         * unchanged; present-empty ⇒ discarded. ISO/IEC 9040:1997
-         * §3.3.62; ISO/IEC 9041-1:1997 §12.2.2.
-         * @public
-         * @readonly
-         */
-        readonly feirList?: OPTIONAL<EntryControl_feirList_Item[]>,
-        /**
-         * @summary `feprList`.
-         * @description
-         * Field Entry Pilot Records (FEPCO name + index). Absent ⇒
-         * unchanged; present-empty ⇒ discarded. ISO/IEC 9040:1997
-         * §3.3.63; ISO/IEC 9041-1:1997 §12.2.2.
-         * @public
-         * @readonly
-         */
-        readonly feprList?: OPTIONAL<EntryControl_feprList_Item[]>
-    ) {}
+        deviceObjectList?: OPTIONAL<PrintableString[]>,
+        feirList?: OPTIONAL<EntryControl_feirList_Item[]>,
+        feprList?: OPTIONAL<EntryControl_feprList_Item[]>
+    ) {
+        this.deviceObjectList = deviceObjectList;
+        this.feirList = feirList;
+        this.feprList = feprList;
+    }
 
     /**
      * @summary Restructures an object into a EntryControl

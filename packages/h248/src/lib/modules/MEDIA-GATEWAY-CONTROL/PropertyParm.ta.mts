@@ -1,13 +1,13 @@
 /* eslint-disable */
 import {
-    OPTIONAL,
-    ASN1Element as _Element,
+    type OPTIONAL,
+    type ASN1Element as _Element,
     ASN1TagClass as _TagClass
 } from "@wildboar/asn1";
 import * as $ from "@wildboar/asn1/functional";
-import { PkgdName, _decode_PkgdName, _encode_PkgdName } from "../MEDIA-GATEWAY-CONTROL/PkgdName.ta.mjs";
-import { PropertyID, _decode_PropertyID, _encode_PropertyID } from "../MEDIA-GATEWAY-CONTROL/PropertyID.ta.mjs";
-import { PropertyParm_extraInfo, _decode_PropertyParm_extraInfo, _encode_PropertyParm_extraInfo } from "../MEDIA-GATEWAY-CONTROL/PropertyParm-extraInfo.ta.mjs";
+import { type PkgdName, _decode_PkgdName, _encode_PkgdName } from "../MEDIA-GATEWAY-CONTROL/PkgdName.ta.mjs";
+import { type PropertyID, _decode_PropertyID, _encode_PropertyID } from "../MEDIA-GATEWAY-CONTROL/PropertyID.ta.mjs";
+import { type PropertyParm_extraInfo, _decode_PropertyParm_extraInfo, _encode_PropertyParm_extraInfo } from "../MEDIA-GATEWAY-CONTROL/PropertyParm-extraInfo.ta.mjs";
 
 
 /**
@@ -63,7 +63,7 @@ class PropertyParm {
      * @public
      * @readonly
      */
-    readonly propertyName: PkgdName;
+    public readonly propertyName: PkgdName;
     /**
      * @summary `value`.
      * @description
@@ -75,7 +75,7 @@ class PropertyParm {
      * @public
      * @readonly
      */
-    readonly value: PropertyID[];
+    public readonly value: PropertyID[];
     /**
      * @summary `extraInfo`.
      * @description
@@ -87,7 +87,7 @@ class PropertyParm {
      * @public
      * @readonly
      */
-    readonly extraInfo?: OPTIONAL<PropertyParm_extraInfo>;
+    public readonly extraInfo?: OPTIONAL<PropertyParm_extraInfo>;
     /**
      * @summary Extensions that are not recognized.
      * @description
@@ -98,7 +98,7 @@ class PropertyParm {
      * @public
      * @readonly
      */
-    readonly _unrecognizedExtensionsList: _Element[];
+    public readonly _unrecognizedExtensionsList: _Element[];
 
     constructor (
         propertyName: PkgdName,

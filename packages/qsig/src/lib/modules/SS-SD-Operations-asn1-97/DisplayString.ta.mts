@@ -1,11 +1,11 @@
 /* eslint-disable */
 import {
-    ASN1Element as _Element,
+    type ASN1Element as _Element,
     ASN1TagClass as _TagClass
 } from "@wildboar/asn1";
 import * as $ from "@wildboar/asn1/functional";
-import { BMPStringNormal, _decode_BMPStringNormal, _encode_BMPStringNormal } from "../SS-SD-Operations-asn1-97/BMPStringNormal.ta.mjs";
-import { BMPStringExtended, _decode_BMPStringExtended, _encode_BMPStringExtended } from "../SS-SD-Operations-asn1-97/BMPStringExtended.ta.mjs";
+import { type BMPStringNormal, _decode_BMPStringNormal, _encode_BMPStringNormal } from "../SS-SD-Operations-asn1-97/BMPStringNormal.ta.mjs";
+import { type BMPStringExtended, _decode_BMPStringExtended, _encode_BMPStringExtended } from "../SS-SD-Operations-asn1-97/BMPStringExtended.ta.mjs";
 
 /**
  * @summary DisplayString

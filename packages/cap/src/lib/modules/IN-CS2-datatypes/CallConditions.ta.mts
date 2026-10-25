@@ -1,8 +1,8 @@
 /* eslint-disable */
 import {
-    INTEGER,
-    NULL,
-    ASN1Element as _Element,
+    type INTEGER,
+    type NULL,
+    type ASN1Element as _Element,
     ASN1TagClass as _TagClass,
     ASN1Construction as _Construction,
     ASN1UniversalType as _UniversalType,
@@ -12,9 +12,9 @@ import {
     ASN1ConstructionError as _ConstructionError,
 } from "@wildboar/asn1";
 import * as $ from "@wildboar/asn1/functional";
-import { CauseValue, _decode_CauseValue, _encode_CauseValue } from "../IN-CS2-datatypes/CauseValue.ta.mjs";
+import { type CauseValue, _decode_CauseValue, _encode_CauseValue } from "../IN-CS2-datatypes/CauseValue.ta.mjs";
 import { InvokableService, _enum_for_InvokableService, _decode_InvokableService, _encode_InvokableService } from "../IN-CS2-datatypes/InvokableService.ta.mjs";
-import { NumberMatch, _decode_NumberMatch, _encode_NumberMatch } from "../IN-CS2-datatypes/NumberMatch.ta.mjs";
+import { type NumberMatch, _decode_NumberMatch, _encode_NumberMatch } from "../IN-CS2-datatypes/NumberMatch.ta.mjs";
 
 
 /**

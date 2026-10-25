@@ -1,20 +1,20 @@
 /* eslint-disable */
 import {
-    OPTIONAL,
-    SEQUENCE,
-    SET,
-    ASN1Element as _Element,
+    type OPTIONAL,
+    type SEQUENCE,
+    type SET,
+    type ASN1Element as _Element,
     ASN1TagClass as _TagClass,
 } from "@wildboar/asn1";
 import * as $ from "@wildboar/asn1/functional";
 import {
-    ObjectClass,
+    type ObjectClass,
     _decode_ObjectClass,
     _encode_ObjectClass,
 } from "../CMIP-1/ObjectClass.ta.mjs";
 
 import {
-    ObjectInstance,
+    type ObjectInstance,
     _decode_ObjectInstance,
     _encode_ObjectInstance,
 } from "../CMIP-1/ObjectInstance.ta.mjs";
@@ -40,32 +40,42 @@ import {
  */
 export
 class TroubleReportAlreadyExists {
+    /**
+     * @summary `managedObjectClass`.
+     * @public
+     * @readonly
+     */
+    public readonly managedObjectClass: OPTIONAL<ObjectClass>;
+    /**
+     * @summary `managedObjectInstance`.
+     * @public
+     * @readonly
+     */
+    public readonly managedObjectInstance: ObjectInstance;
+    /**
+     * @summary `troubleReportInstance`.
+     * @public
+     * @readonly
+     */
+    public readonly troubleReportInstance: ObjectInstance;
+    /**
+     * @summary Extensions that are not recognized.
+     * @public
+     * @readonly
+     */
+    public readonly _unrecognizedExtensionsList: _Element[];
+
     constructor (
-        /**
-         * @summary `managedObjectClass`.
-         * @public
-         * @readonly
-         */
-        readonly managedObjectClass: OPTIONAL<ObjectClass>,
-        /**
-         * @summary `managedObjectInstance`.
-         * @public
-         * @readonly
-         */
-        readonly managedObjectInstance: ObjectInstance,
-        /**
-         * @summary `troubleReportInstance`.
-         * @public
-         * @readonly
-         */
-        readonly troubleReportInstance: ObjectInstance,
-        /**
-         * @summary Extensions that are not recognized.
-         * @public
-         * @readonly
-         */
-        readonly _unrecognizedExtensionsList: _Element[] = []
-    ) {}
+        managedObjectClass: OPTIONAL<ObjectClass>,
+        managedObjectInstance: ObjectInstance,
+        troubleReportInstance: ObjectInstance,
+        _unrecognizedExtensionsList: _Element[] = []
+    ) {
+        this.managedObjectClass = managedObjectClass;
+        this.managedObjectInstance = managedObjectInstance;
+        this.troubleReportInstance = troubleReportInstance;
+        this._unrecognizedExtensionsList = _unrecognizedExtensionsList;
+    }
 
     /**
      * @summary Restructures an object into a TroubleReportAlreadyExists

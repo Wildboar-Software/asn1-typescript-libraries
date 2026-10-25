@@ -1,7 +1,7 @@
 /* eslint-disable */
 import {
-    OPTIONAL,
-    ASN1Element as _Element,
+    type OPTIONAL,
+    type ASN1Element as _Element,
     ASN1TagClass as _TagClass,
     ASN1Construction as _Construction,
     ASN1UniversalType as _UniversalType,
@@ -11,8 +11,8 @@ import {
     ASN1ConstructionError as _ConstructionError,
 } from "@wildboar/asn1";
 import * as $ from "@wildboar/asn1/functional";
-import { ObjectName, _decode_ObjectName, _encode_ObjectName } from "../ISO-9506-MMS-1/ObjectName.ta.mjs";
-import { Priority, _decode_Priority, _encode_Priority } from "../MMS-Object-Module-1/Priority.ta.mjs";
+import { type ObjectName, _decode_ObjectName, _encode_ObjectName } from "../ISO-9506-MMS-1/ObjectName.ta.mjs";
+import { type Priority, _decode_Priority, _encode_Priority } from "../MMS-Object-Module-1/Priority.ta.mjs";
 
 
 /**
@@ -41,35 +41,41 @@ import { Priority, _decode_Priority, _encode_Priority } from "../MMS-Object-Modu
  */
 export
 class TriggerEvent_Request {
+    /**
+     * @summary `eventConditionName`.
+     * @description
+     *
+     * Name of the network-triggered Event Condition to
+     * trigger.
+     *
+     * [ISO 9506-1:2003 §18.2.1.1.1]
+     *
+     * @public
+     * @readonly
+     */
+    public readonly eventConditionName: ObjectName;
+    /**
+     * @summary `priority`.
+     * @description
+     *
+     * Replacement for the Event Condition `&priority`
+     * field. Takes effect immediately, before transition
+     * processing. Omitted: leave `&priority` unchanged.
+     *
+     * [ISO 9506-1:2003 §18.2.1.1.2]
+     *
+     * @public
+     * @readonly
+     */
+    public readonly priority?: OPTIONAL<Priority>;
+
     constructor (
-        /**
-         * @summary `eventConditionName`.
-         * @description
-         *
-         * Name of the network-triggered Event Condition to
-         * trigger.
-         *
-         * [ISO 9506-1:2003 §18.2.1.1.1]
-         *
-         * @public
-         * @readonly
-         */
-        readonly eventConditionName: ObjectName,
-        /**
-         * @summary `priority`.
-         * @description
-         *
-         * Replacement for the Event Condition `&priority`
-         * field. Takes effect immediately, before transition
-         * processing. Omitted: leave `&priority` unchanged.
-         *
-         * [ISO 9506-1:2003 §18.2.1.1.2]
-         *
-         * @public
-         * @readonly
-         */
-        readonly priority?: OPTIONAL<Priority>
-    ) {}
+        eventConditionName: ObjectName,
+        priority?: OPTIONAL<Priority>
+    ) {
+        this.eventConditionName = eventConditionName;
+        this.priority = priority;
+    }
 
     /**
      * @summary Restructures an object into a TriggerEvent_Request

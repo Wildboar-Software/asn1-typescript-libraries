@@ -1,7 +1,7 @@
 /* eslint-disable */
 import {
-    OPTIONAL,
-    ASN1Element as _Element,
+    type OPTIONAL,
+    type ASN1Element as _Element,
     ASN1TagClass as _TagClass,
     ASN1Construction as _Construction,
     ASN1UniversalType as _UniversalType,
@@ -11,13 +11,13 @@ import {
     ASN1ConstructionError as _ConstructionError,
 } from "@wildboar/asn1";
 import * as $ from "@wildboar/asn1/functional";
-import { ObjectName, _decode_ObjectName, _encode_ObjectName } from "../ISO-9506-MMS-1/ObjectName.ta.mjs";
-import { Unsigned8, _decode_Unsigned8, _encode_Unsigned8 } from "../ISO-9506-MMS-1/Unsigned8.ta.mjs";
-import { EC_State, _decode_EC_State, _encode_EC_State } from "../MMS-Object-Module-1/EC-State.ta.mjs";
-import { AlarmSummary_unacknowledgedState, _decode_AlarmSummary_unacknowledgedState, _encode_AlarmSummary_unacknowledgedState } from "../ISO-9506-MMS-1/AlarmSummary-unacknowledgedState.ta.mjs";
-import { Nullable, _get_decoder_for_Nullable, _get_encoder_for_Nullable } from "../ISO-9506-MMS-1/Nullable.ta.mjs";
-import { EN_Additional_Detail, _decode_EN_Additional_Detail, _encode_EN_Additional_Detail } from "../ISO-9506-MMS-1/EN-Additional-Detail.ta.mjs";
-import { EventTime, _decode_EventTime, _encode_EventTime } from "../MMS-Object-Module-1/EventTime.ta.mjs";
+import { type ObjectName, _decode_ObjectName, _encode_ObjectName } from "../ISO-9506-MMS-1/ObjectName.ta.mjs";
+import { type Unsigned8, _decode_Unsigned8, _encode_Unsigned8 } from "../ISO-9506-MMS-1/Unsigned8.ta.mjs";
+import { type EC_State, _decode_EC_State, _encode_EC_State } from "../MMS-Object-Module-1/EC-State.ta.mjs";
+import { type AlarmSummary_unacknowledgedState, _decode_AlarmSummary_unacknowledgedState, _encode_AlarmSummary_unacknowledgedState } from "../ISO-9506-MMS-1/AlarmSummary-unacknowledgedState.ta.mjs";
+import { type Nullable, _get_decoder_for_Nullable, _get_encoder_for_Nullable } from "../ISO-9506-MMS-1/Nullable.ta.mjs";
+import { type EN_Additional_Detail, _decode_EN_Additional_Detail, _encode_EN_Additional_Detail } from "../ISO-9506-MMS-1/EN-Additional-Detail.ta.mjs";
+import { type EventTime, _decode_EventTime, _encode_EventTime } from "../MMS-Object-Module-1/EventTime.ta.mjs";
 
 
 /**
@@ -54,99 +54,115 @@ import { EventTime, _decode_EventTime, _encode_EventTime } from "../MMS-Object-M
  */
 export
 class AlarmSummary {
+    /**
+     * @summary `eventConditionName`.
+     * @description
+     *
+     * `&name` of the monitored Event Condition.
+     *
+     * [ISO 9506-1:2003 §18.5.1.2.1.1]
+     *
+     * @public
+     * @readonly
+     */
+    public readonly eventConditionName: ObjectName;
+    /**
+     * @summary `severity`.
+     * @description
+     *
+     * Event Condition `&severity` (0 most, 127 least).
+     *
+     * [ISO 9506-1:2003 §18.5.1.2.1.2]
+     *
+     * @public
+     * @readonly
+     */
+    public readonly severity: Unsigned8;
+    /**
+     * @summary `currentState`.
+     * @description
+     *
+     * Current Event Condition `&ecState` (`disabled`,
+     * `idle`, or `active`). Disabled conditions do not
+     * notify.
+     *
+     * [ISO 9506-1:2003 §18.5.1.2.1.3]
+     *
+     * @public
+     * @readonly
+     */
+    public readonly currentState: EC_State;
+    /**
+     * @summary `unacknowledgedState`.
+     * @description
+     *
+     * Outstanding acks on enrollments that reference this
+     * condition. `none`, `active`, `idle`, or `both`.
+     *
+     * [ISO 9506-1:2003 §18.5.1.2.1.5]
+     *
+     * @public
+     * @readonly
+     */
+    public readonly unacknowledgedState: AlarmSummary_unacknowledgedState;
+    /**
+     * @summary `displayEnhancement`.
+     * @description
+     *
+     * Present only if `cspi` was negotiated. Enrollment
+     * `&displayEnhancement` if defined and not
+     * undefined; otherwise the Event Condition's.
+     *
+     * [ISO 9506-1:2003 §18.5.1.2.1.4]
+     *
+     * @public
+     * @readonly
+     */
+    public readonly displayEnhancement?: OPTIONAL<Nullable<EN_Additional_Detail>>;
+    /**
+     * @summary `timeOfLastTransitionToActive`.
+     * @description
+     *
+     * Event Condition `&timeToActive`. Omitted if
+     * undefined.
+     *
+     * [ISO 9506-1:2003 §18.5.1.2.1.6]
+     *
+     * @public
+     * @readonly
+     */
+    public readonly timeOfLastTransitionToActive?: OPTIONAL<EventTime>;
+    /**
+     * @summary `timeOfLastTransitionToIdle`.
+     * @description
+     *
+     * Event Condition `&timeToIdle`. Omitted if
+     * undefined.
+     *
+     * [ISO 9506-1:2003 §18.5.1.2.1.7]
+     *
+     * @public
+     * @readonly
+     */
+    public readonly timeOfLastTransitionToIdle?: OPTIONAL<EventTime>;
+
     constructor (
-        /**
-         * @summary `eventConditionName`.
-         * @description
-         *
-         * `&name` of the monitored Event Condition.
-         *
-         * [ISO 9506-1:2003 §18.5.1.2.1.1]
-         *
-         * @public
-         * @readonly
-         */
-        readonly eventConditionName: ObjectName,
-        /**
-         * @summary `severity`.
-         * @description
-         *
-         * Event Condition `&severity` (0 most, 127 least).
-         *
-         * [ISO 9506-1:2003 §18.5.1.2.1.2]
-         *
-         * @public
-         * @readonly
-         */
-        readonly severity: Unsigned8,
-        /**
-         * @summary `currentState`.
-         * @description
-         *
-         * Current Event Condition `&ecState` (`disabled`,
-         * `idle`, or `active`). Disabled conditions do not
-         * notify.
-         *
-         * [ISO 9506-1:2003 §18.5.1.2.1.3]
-         *
-         * @public
-         * @readonly
-         */
-        readonly currentState: EC_State,
-        /**
-         * @summary `unacknowledgedState`.
-         * @description
-         *
-         * Outstanding acks on enrollments that reference this
-         * condition. `none`, `active`, `idle`, or `both`.
-         *
-         * [ISO 9506-1:2003 §18.5.1.2.1.5]
-         *
-         * @public
-         * @readonly
-         */
-        readonly unacknowledgedState: AlarmSummary_unacknowledgedState,
-        /**
-         * @summary `displayEnhancement`.
-         * @description
-         *
-         * Present only if `cspi` was negotiated. Enrollment
-         * `&displayEnhancement` if defined and not
-         * undefined; otherwise the Event Condition's.
-         *
-         * [ISO 9506-1:2003 §18.5.1.2.1.4]
-         *
-         * @public
-         * @readonly
-         */
-        readonly displayEnhancement?: OPTIONAL<Nullable<EN_Additional_Detail>>,
-        /**
-         * @summary `timeOfLastTransitionToActive`.
-         * @description
-         *
-         * Event Condition `&timeToActive`. Omitted if
-         * undefined.
-         *
-         * [ISO 9506-1:2003 §18.5.1.2.1.6]
-         *
-         * @public
-         * @readonly
-         */
-        readonly timeOfLastTransitionToActive?: OPTIONAL<EventTime>,
-        /**
-         * @summary `timeOfLastTransitionToIdle`.
-         * @description
-         *
-         * Event Condition `&timeToIdle`. Omitted if
-         * undefined.
-         *
-         * [ISO 9506-1:2003 §18.5.1.2.1.7]
-         *
-         * @public
-         * @readonly
-         */
-        readonly timeOfLastTransitionToIdle?: OPTIONAL<EventTime>
-    ) {}
+        eventConditionName: ObjectName,
+        severity: Unsigned8,
+        currentState: EC_State,
+        unacknowledgedState: AlarmSummary_unacknowledgedState,
+        displayEnhancement?: OPTIONAL<Nullable<EN_Additional_Detail>>,
+        timeOfLastTransitionToActive?: OPTIONAL<EventTime>,
+        timeOfLastTransitionToIdle?: OPTIONAL<EventTime>
+    ) {
+        this.eventConditionName = eventConditionName;
+        this.severity = severity;
+        this.currentState = currentState;
+        this.unacknowledgedState = unacknowledgedState;
+        this.displayEnhancement = displayEnhancement;
+        this.timeOfLastTransitionToActive = timeOfLastTransitionToActive;
+        this.timeOfLastTransitionToIdle = timeOfLastTransitionToIdle;
+    }
 
     /**
      * @summary Restructures an object into a AlarmSummary

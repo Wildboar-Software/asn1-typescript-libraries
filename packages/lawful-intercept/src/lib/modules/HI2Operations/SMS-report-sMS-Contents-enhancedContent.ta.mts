@@ -1,12 +1,12 @@
 /* eslint-disable */
 import {
-    OCTET_STRING,
+    type OCTET_STRING,
     ASN1ConstructionError as _ConstructionError,
-    ASN1Element as _Element,
+    type ASN1Element as _Element,
     ASN1TagClass as _TagClass
 } from "@wildboar/asn1";
 import * as $ from "@wildboar/asn1/functional";
-import { SMS_report_sMS_Contents_enhancedContent_character_encoding, _decode_SMS_report_sMS_Contents_enhancedContent_character_encoding, _encode_SMS_report_sMS_Contents_enhancedContent_character_encoding, _enum_for_SMS_report_sMS_Contents_enhancedContent_character_encoding } from "../HI2Operations/SMS-report-sMS-Contents-enhancedContent-character-encoding.ta.mjs";
+import { type SMS_report_sMS_Contents_enhancedContent_character_encoding, _decode_SMS_report_sMS_Contents_enhancedContent_character_encoding, _encode_SMS_report_sMS_Contents_enhancedContent_character_encoding, _enum_for_SMS_report_sMS_Contents_enhancedContent_character_encoding } from "../HI2Operations/SMS-report-sMS-Contents-enhancedContent-character-encoding.ta.mjs";
 // export { SMS_report_sMS_Contents_enhancedContent_character_encoding, _enum_for_SMS_report_sMS_Contents_enhancedContent_character_encoding, SMS_report_sMS_Contents_enhancedContent_character_encoding_gsm_7_bit_ascii /* IMPORTED_LONG_ENUMERATION_ITEM */, gsm_7_bit_ascii /* IMPORTED_SHORT_ENUMERATION_ITEM */, SMS_report_sMS_Contents_enhancedContent_character_encoding_eight_bit_ascii /* IMPORTED_LONG_ENUMERATION_ITEM */, eight_bit_ascii /* IMPORTED_SHORT_ENUMERATION_ITEM */, SMS_report_sMS_Contents_enhancedContent_character_encoding_eight_bit_binary /* IMPORTED_LONG_ENUMERATION_ITEM */, eight_bit_binary /* IMPORTED_SHORT_ENUMERATION_ITEM */, SMS_report_sMS_Contents_enhancedContent_character_encoding_ucs_2 /* IMPORTED_LONG_ENUMERATION_ITEM */, ucs_2 /* IMPORTED_SHORT_ENUMERATION_ITEM */, SMS_report_sMS_Contents_enhancedContent_character_encoding_utf_8 /* IMPORTED_LONG_ENUMERATION_ITEM */, utf_8 /* IMPORTED_SHORT_ENUMERATION_ITEM */, SMS_report_sMS_Contents_enhancedContent_character_encoding_utf_16 /* IMPORTED_LONG_ENUMERATION_ITEM */, utf_16 /* IMPORTED_SHORT_ENUMERATION_ITEM */, SMS_report_sMS_Contents_enhancedContent_character_encoding_other /* IMPORTED_LONG_ENUMERATION_ITEM */, other /* IMPORTED_SHORT_ENUMERATION_ITEM */, _decode_SMS_report_sMS_Contents_enhancedContent_character_encoding, _encode_SMS_report_sMS_Contents_enhancedContent_character_encoding } from "../HI2Operations/SMS-report-sMS-Contents-enhancedContent-character-encoding.ta.mjs";
 
 
@@ -119,7 +119,7 @@ class SMS_report_sMS_Contents_enhancedContent {
          * @static
          */
 
-    public static _enum_for_character_encoding = _enum_for_SMS_report_sMS_Contents_enhancedContent_character_encoding;
+    public static _enum_for_character_encoding: typeof _enum_for_SMS_report_sMS_Contents_enhancedContent_character_encoding = _enum_for_SMS_report_sMS_Contents_enhancedContent_character_encoding;
 }
 
 /**

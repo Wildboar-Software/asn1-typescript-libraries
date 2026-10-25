@@ -10,7 +10,7 @@ import {
   ASN1ConstructionError as _ConstructionError,
 } from '@wildboar/asn1';
 import * as $ from '@wildboar/asn1/functional';
-import { Token, _decode_Token, _encode_Token } from '../XSD/Token.ta.mjs';
+import { type Token, _decode_Token, _encode_Token } from '../XSD/Token.ta.mjs';
 
 /**
  * @summary NMTOKEN
@@ -26,26 +26,13 @@ import { Token, _decode_Token, _encode_Token } from '../XSD/Token.ta.mjs';
  */
 export type NMTOKEN = Token; // DefinedType
 
-
-let _cached_decoder_for_NMTOKEN: $.ASN1Decoder<NMTOKEN> | null = null;
-
-
 /**
  * @summary Decodes an ASN.1 element into a(n) NMTOKEN
  * @function
  * @param {_Element} el The element being decoded.
  * @returns {NMTOKEN} The decoded data structure.
  */
-export function _decode_NMTOKEN(el: _Element): NMTOKEN {
-  if (!_cached_decoder_for_NMTOKEN) {
-    _cached_decoder_for_NMTOKEN = _decode_Token;
-  }
-  return _cached_decoder_for_NMTOKEN(el);
-}
-
-
-let _cached_encoder_for_NMTOKEN: $.ASN1Encoder<NMTOKEN> | null = null;
-
+export const _decode_NMTOKEN: $.ASN1Decoder<NMTOKEN> = _decode_Token;
 
 /**
  * @summary Encodes a(n) NMTOKEN into an ASN.1 Element.
@@ -54,15 +41,7 @@ let _cached_encoder_for_NMTOKEN: $.ASN1Encoder<NMTOKEN> | null = null;
  * @param elGetter A function that can be used to get new ASN.1 elements.
  * @returns {_Element} The NMTOKEN, encoded as an ASN.1 Element.
  */
-export function _encode_NMTOKEN(
-  value: NMTOKEN,
-  elGetter: $.ASN1Encoder<NMTOKEN>
-): _Element {
-  if (!_cached_encoder_for_NMTOKEN) {
-    _cached_encoder_for_NMTOKEN = _encode_Token;
-  }
-  return _cached_encoder_for_NMTOKEN(value, elGetter);
-}
+export const _encode_NMTOKEN: $.ASN1Encoder<NMTOKEN> = _encode_Token;
 
 
 /* eslint-enable */

@@ -1,9 +1,9 @@
 /* eslint-disable */
 import {
-    ASN1Element as _Element,
+    type ASN1Element as _Element,
     ASN1TagClass as _TagClass,
-    INTEGER,
-    OPTIONAL,
+    type INTEGER,
+    type OPTIONAL,
 } from "@wildboar/asn1";
 import * as $ from "@wildboar/asn1/functional";
 import {
@@ -45,7 +45,7 @@ export class DomainParameters {
      * @public
      * @readonly
      */
-    readonly p: INTEGER;
+    public readonly p: INTEGER;
     /**
      * @summary `g`.
      * @description
@@ -57,7 +57,7 @@ export class DomainParameters {
      * @public
      * @readonly
      */
-    readonly g: INTEGER;
+    public readonly g: INTEGER;
     /**
      * @summary `q`.
      * @description
@@ -68,7 +68,7 @@ export class DomainParameters {
      * @public
      * @readonly
      */
-    readonly q: INTEGER;
+    public readonly q: INTEGER;
     /**
      * @summary `j`.
      * @description
@@ -80,7 +80,7 @@ export class DomainParameters {
      * @public
      * @readonly
      */
-    readonly j?: OPTIONAL<INTEGER>;
+    public readonly j?: OPTIONAL<INTEGER>;
     /**
      * @summary `validationParms`.
      * @description
@@ -93,7 +93,7 @@ export class DomainParameters {
      * @public
      * @readonly
      */
-    readonly validationParms?: OPTIONAL<ValidationParms>;
+    public readonly validationParms?: OPTIONAL<ValidationParms>;
 
     constructor(
         p: INTEGER,

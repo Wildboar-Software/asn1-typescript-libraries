@@ -1,14 +1,14 @@
 /* eslint-disable */
-import { INTEGER, OBJECT_IDENTIFIER } from "@wildboar/asn1";
+import { type INTEGER, type OBJECT_IDENTIFIER } from "@wildboar/asn1";
 import * as $ from "@wildboar/asn1/functional";
-import { FamilyGrouping } from "../DirectoryAbstractService/FamilyGrouping.ta.mjs";
+import { type FamilyGrouping } from "../DirectoryAbstractService/FamilyGrouping.ta.mjs";
 import { FamilyReturn } from "../DirectoryAbstractService/FamilyReturn.ta.mjs";
-import { AttributeType } from "../InformationFramework/AttributeType.ta.mjs";
-import { AllowedSubset } from "../ServiceAdministration/AllowedSubset.ta.mjs";
-import { AttributeCombination } from "../ServiceAdministration/AttributeCombination.ta.mjs";
+import { type AttributeType } from "../InformationFramework/AttributeType.ta.mjs";
+import { type AllowedSubset } from "../ServiceAdministration/AllowedSubset.ta.mjs";
+import { type AttributeCombination } from "../ServiceAdministration/AttributeCombination.ta.mjs";
 import { ControlOptions } from "../ServiceAdministration/ControlOptions.ta.mjs";
 import { EntryLimit } from "../ServiceAdministration/EntryLimit.ta.mjs";
-import { ImposedSubset } from "../ServiceAdministration/ImposedSubset.ta.mjs";
+import { type ImposedSubset } from "../ServiceAdministration/ImposedSubset.ta.mjs";
 import { RelaxationPolicy } from "../ServiceAdministration/RelaxationPolicy.ta.mjs";
 import { type REQUEST_ATTRIBUTE } from "../ServiceAdministration/REQUEST-ATTRIBUTE.oca.mjs";
 import { type RESULT_ATTRIBUTE } from "../ServiceAdministration/RESULT-ATTRIBUTE.oca.mjs";
@@ -25,21 +25,21 @@ import { type RESULT_ATTRIBUTE } from "../ServiceAdministration/RESULT-ATTRIBUTE
  * ```asn1
  * SEARCH-RULE ::= CLASS {
  *   &dmdId                 OBJECT IDENTIFIER,
- *   &serviceType           OBJECT IDENTIFIER               OPTIONAL,
- *   &userClass             INTEGER                         OPTIONAL,
- *   &InputAttributeTypes   REQUEST-ATTRIBUTE               OPTIONAL,
- *   &combination           AttributeCombination            OPTIONAL,
- *   &OutputAttributeTypes  RESULT-ATTRIBUTE                OPTIONAL,
- *   &defaultControls       ControlOptions                  OPTIONAL,
- *   &mandatoryControls     ControlOptions                  OPTIONAL,
- *   &searchRuleControls    ControlOptions                  OPTIONAL,
- *   &familyGrouping        FamilyGrouping                  OPTIONAL,
- *   &familyReturn          FamilyReturn                    OPTIONAL,
- *   &additionalControl     AttributeType                   OPTIONAL,
- *   &relaxation            RelaxationPolicy                OPTIONAL,
+ *   &serviceType           OBJECT IDENTIFIER               type OPTIONAL,
+ *   &userClass             INTEGER                         type OPTIONAL,
+ *   &InputAttributeTypes   REQUEST-ATTRIBUTE               type OPTIONAL,
+ *   &combination           AttributeCombination            type OPTIONAL,
+ *   &OutputAttributeTypes  RESULT-ATTRIBUTE                type OPTIONAL,
+ *   &defaultControls       ControlOptions                  type OPTIONAL,
+ *   &mandatoryControls     ControlOptions                  type OPTIONAL,
+ *   &searchRuleControls    ControlOptions                  type OPTIONAL,
+ *   &familyGrouping        FamilyGrouping                  type OPTIONAL,
+ *   &familyReturn          FamilyReturn                    type OPTIONAL,
+ *   &additionalControl     AttributeType                   type OPTIONAL,
+ *   &relaxation            RelaxationPolicy                type OPTIONAL,
  *   &allowedSubset         AllowedSubset                   DEFAULT '111'B,
- *   &imposedSubset         ImposedSubset                   OPTIONAL,
- *   &entryLimit            EntryLimit                      OPTIONAL,
+ *   &imposedSubset         ImposedSubset                   type OPTIONAL,
+ *   &entryLimit            EntryLimit                      type OPTIONAL,
  *   &id                    INTEGER                         UNIQUE }
  * WITH SYNTAX {
  *   DMD ID                 &dmdId

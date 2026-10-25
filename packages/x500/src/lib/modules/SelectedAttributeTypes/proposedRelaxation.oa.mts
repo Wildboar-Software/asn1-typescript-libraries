@@ -5,7 +5,7 @@ import {
 } from "../InformationFramework/AttributeUsage.ta.mjs";
 import { id_not_proposedRelaxation } from "../SelectedAttributeTypes/id-not-proposedRelaxation.va.mjs";
 import {
-    MRMappings,
+    type MRMappings,
     _decode_MRMappings,
     _encode_MRMappings,
 } from "../SelectedAttributeTypes/MRMappings.ta.mjs";

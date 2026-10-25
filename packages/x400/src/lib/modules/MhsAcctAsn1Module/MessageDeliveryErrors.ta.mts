@@ -1,6 +1,6 @@
 /* eslint-disable */
 import {
-    ASN1Element as _Element,
+    type ASN1Element as _Element,
     ASN1TagClass as _TagClass,
     ASN1Construction as _Construction,
     ASN1UniversalType as _UniversalType,
@@ -11,7 +11,7 @@ import {
 } from '@wildboar/asn1';
 import * as $ from '@wildboar/asn1/functional';
 import {
-    DeliveryError,
+    type DeliveryError,
     _decode_DeliveryError,
     _encode_DeliveryError,
 } from '../MhsAcctAsn1Module/DeliveryError.ta.mjs';
@@ -30,22 +30,13 @@ import {
  */
 export type MessageDeliveryErrors = DeliveryError; // DefinedType
 
-let _cached_decoder_for_MessageDeliveryErrors: $.ASN1Decoder<MessageDeliveryErrors> | null = null;
-
 /**
  * @summary Decodes an ASN.1 element into a(n) MessageDeliveryErrors
  * @function
  * @param {_Element} el The element being decoded.
  * @returns {MessageDeliveryErrors} The decoded data structure.
  */
-export function _decode_MessageDeliveryErrors(el: _Element): MessageDeliveryErrors {
-    if (!_cached_decoder_for_MessageDeliveryErrors) {
-        _cached_decoder_for_MessageDeliveryErrors = _decode_DeliveryError;
-    }
-    return _cached_decoder_for_MessageDeliveryErrors(el);
-}
-
-let _cached_encoder_for_MessageDeliveryErrors: $.ASN1Encoder<MessageDeliveryErrors> | null = null;
+export const _decode_MessageDeliveryErrors: $.ASN1Decoder<MessageDeliveryErrors> = _decode_DeliveryError;
 
 /**
  * @summary Encodes a(n) MessageDeliveryErrors into an ASN.1 Element.
@@ -54,15 +45,7 @@ let _cached_encoder_for_MessageDeliveryErrors: $.ASN1Encoder<MessageDeliveryErro
  * @param elGetter A function that can be used to get new ASN.1 elements.
  * @returns {_Element} The MessageDeliveryErrors, encoded as an ASN.1 Element.
  */
-export function _encode_MessageDeliveryErrors(
-    value: MessageDeliveryErrors,
-    elGetter: $.ASN1Encoder<MessageDeliveryErrors>
-): _Element {
-    if (!_cached_encoder_for_MessageDeliveryErrors) {
-        _cached_encoder_for_MessageDeliveryErrors = _encode_DeliveryError;
-    }
-    return _cached_encoder_for_MessageDeliveryErrors(value, elGetter);
-}
+export const _encode_MessageDeliveryErrors: $.ASN1Encoder<MessageDeliveryErrors> = _encode_DeliveryError;
 
 
 /* eslint-enable */

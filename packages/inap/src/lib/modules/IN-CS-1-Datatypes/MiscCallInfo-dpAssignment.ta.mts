@@ -1,4 +1,5 @@
 /* eslint-disable */
+import { ASN1Element as _Element, ASN1ConstructionError as _ConstructionError } from "@wildboar/asn1";
 import * as $ from "@wildboar/asn1/functional";
 
 
@@ -65,7 +66,7 @@ type MiscCallInfo_dpAssignment = _enum_for_MiscCallInfo_dpAssignment;
  * @enum {number}
  */
 export
-const MiscCallInfo_dpAssignment = _enum_for_MiscCallInfo_dpAssignment;
+const MiscCallInfo_dpAssignment: typeof _enum_for_MiscCallInfo_dpAssignment = _enum_for_MiscCallInfo_dpAssignment;
 
 /**
  * @summary MiscCallInfo_dpAssignment_individualLine
@@ -73,7 +74,7 @@ const MiscCallInfo_dpAssignment = _enum_for_MiscCallInfo_dpAssignment;
  * @type {number}
  */
 export
-const MiscCallInfo_dpAssignment_individualLine: MiscCallInfo_dpAssignment = MiscCallInfo_dpAssignment.individualLine; /* LONG_NAMED_ENUMERATED_VALUE */
+const MiscCallInfo_dpAssignment_individualLine: _enum_for_MiscCallInfo_dpAssignment.individualLine = MiscCallInfo_dpAssignment.individualLine; /* LONG_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary individualLine
@@ -81,7 +82,7 @@ const MiscCallInfo_dpAssignment_individualLine: MiscCallInfo_dpAssignment = Misc
  * @type {number}
  */
 export
-const individualLine: MiscCallInfo_dpAssignment = MiscCallInfo_dpAssignment.individualLine; /* SHORT_NAMED_ENUMERATED_VALUE */
+const individualLine: _enum_for_MiscCallInfo_dpAssignment.individualLine = MiscCallInfo_dpAssignment.individualLine; /* SHORT_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary MiscCallInfo_dpAssignment_groupBased
@@ -89,7 +90,7 @@ const individualLine: MiscCallInfo_dpAssignment = MiscCallInfo_dpAssignment.indi
  * @type {number}
  */
 export
-const MiscCallInfo_dpAssignment_groupBased: MiscCallInfo_dpAssignment = MiscCallInfo_dpAssignment.groupBased; /* LONG_NAMED_ENUMERATED_VALUE */
+const MiscCallInfo_dpAssignment_groupBased: _enum_for_MiscCallInfo_dpAssignment.groupBased = MiscCallInfo_dpAssignment.groupBased; /* LONG_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary groupBased
@@ -97,7 +98,7 @@ const MiscCallInfo_dpAssignment_groupBased: MiscCallInfo_dpAssignment = MiscCall
  * @type {number}
  */
 export
-const groupBased: MiscCallInfo_dpAssignment = MiscCallInfo_dpAssignment.groupBased; /* SHORT_NAMED_ENUMERATED_VALUE */
+const groupBased: _enum_for_MiscCallInfo_dpAssignment.groupBased = MiscCallInfo_dpAssignment.groupBased; /* SHORT_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary MiscCallInfo_dpAssignment_officeBased
@@ -105,7 +106,7 @@ const groupBased: MiscCallInfo_dpAssignment = MiscCallInfo_dpAssignment.groupBas
  * @type {number}
  */
 export
-const MiscCallInfo_dpAssignment_officeBased: MiscCallInfo_dpAssignment = MiscCallInfo_dpAssignment.officeBased; /* LONG_NAMED_ENUMERATED_VALUE */
+const MiscCallInfo_dpAssignment_officeBased: _enum_for_MiscCallInfo_dpAssignment.officeBased = MiscCallInfo_dpAssignment.officeBased; /* LONG_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary officeBased
@@ -113,12 +114,24 @@ const MiscCallInfo_dpAssignment_officeBased: MiscCallInfo_dpAssignment = MiscCal
  * @type {number}
  */
 export
-const officeBased: MiscCallInfo_dpAssignment = MiscCallInfo_dpAssignment.officeBased; /* SHORT_NAMED_ENUMERATED_VALUE */
+const officeBased: _enum_for_MiscCallInfo_dpAssignment.officeBased = MiscCallInfo_dpAssignment.officeBased; /* SHORT_NAMED_ENUMERATED_VALUE */
 
 export
-const _decode_MiscCallInfo_dpAssignment: $.ASN1Decoder<MiscCallInfo_dpAssignment> = $._decodeEnumerated;
+function _decode_MiscCallInfo_dpAssignment(el: _Element): MiscCallInfo_dpAssignment {
+    const enumerated = $._decodeEnumerated(el);
+    switch (enumerated) {
+        case MiscCallInfo_dpAssignment.individualLine: return MiscCallInfo_dpAssignment.individualLine;
+        case MiscCallInfo_dpAssignment.groupBased: return MiscCallInfo_dpAssignment.groupBased;
+        case MiscCallInfo_dpAssignment.officeBased: return MiscCallInfo_dpAssignment.officeBased;
+        default:
+            throw new _ConstructionError(
+                "Invalid ENUMERATED value " + enumerated + " for MiscCallInfo_dpAssignment.",
+                el,
+            );
+    }
+}
 
 export
-const _encode_MiscCallInfo_dpAssignment: $.ASN1Encoder<MiscCallInfo_dpAssignment> = $._encodeEnumerated;
+const _encode_MiscCallInfo_dpAssignment: $.ASN1Encoder<MiscCallInfo_dpAssignment> = $._encodeEnumerated as $.ASN1Encoder<MiscCallInfo_dpAssignment>;
 
 /* eslint-enable */

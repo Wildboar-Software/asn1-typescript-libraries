@@ -1,8 +1,8 @@
 import {
-    OPTIONAL,
-    OCTET_STRING,
-    NULL,
-    ASN1Element as _Element,
+    type OPTIONAL,
+    type OCTET_STRING,
+    type NULL,
+    type ASN1Element as _Element,
     ASN1SizeError,
     ASN1TagClass as _TagClass,
 } from "@wildboar/asn1";
@@ -38,106 +38,125 @@ import { ConnectedNumberTreatmentInd, _enum_for_ConnectedNumberTreatmentInd, _de
  *
  */
 export class ServiceInteractionIndicatorsTwo {
+    /**
+     * @summary `forwardServiceInteractionInd`.
+     * @description
+     *
+     * Applicable to InitialDP, Connect and ContinueWithArgument. (3GPP TS
+     * 29.078 V19.0.0 clause 5.1)
+     *
+     * @public
+     * @readonly
+     */
+    public readonly forwardServiceInteractionInd?: OPTIONAL<ForwardServiceInteractionInd>;
+    /**
+     * @summary `backwardServiceInteractionInd`.
+     * @description
+     *
+     * Applicable to Connect and ContinueWithArgument. (3GPP TS 29.078 V19.0.0
+     * clause 5.1)
+     *
+     * @public
+     * @readonly
+     */
+    public readonly backwardServiceInteractionInd?: OPTIONAL<BackwardServiceInteractionInd>;
+    /**
+     * @summary `bothwayThroughConnectionInd`.
+     * @description
+     *
+     * Applicable to ConnectToResource and EstablishTemporaryConnection. (3GPP
+     * TS 29.078 V19.0.0 clause 5.1)
+     *
+     * @public
+     * @readonly
+     */
+    public readonly bothwayThroughConnectionInd?: OPTIONAL<BothwayThroughConnectionInd>;
+    /**
+     * @summary `connectedNumberTreatmentInd`.
+     * @description
+     *
+     * Applicable to Connect and ContinueWithArgument. (3GPP TS 29.078 V19.0.0
+     * clause 5.1)
+     *
+     * @public
+     * @readonly
+     */
+    public readonly connectedNumberTreatmentInd?: OPTIONAL<ConnectedNumberTreatmentInd>;
+    /**
+     * @summary `nonCUGCall`.
+     * @description
+     *
+     * Applicable to Connect and ContinueWithArgument. Present: no CUG
+     * parameters shall be used (non-CUG call). Absent: continue with modified
+     * CUG information (if CUG Interlock Code and/or Outgoing Access Indicator
+     * are present), original CUG information (if neither is present), or the
+     * original non-CUG call. (3GPP TS 29.078 V19.0.0 clause 5.1)
+     *
+     * @public
+     * @readonly
+     */
+    public readonly nonCUGCall?: OPTIONAL<NULL>;
+    /**
+     * @summary `holdTreatmentIndicator`.
+     * @description
+     *
+     * Applicable to InitialDP, Connect and ContinueWithArgument. Accept hold
+     * `'xxxx xx01'B`; reject `'xxxx xx10'B`. If absent from Connect or
+     * ContinueWithArgument, CAMEL does not affect call-hold treatment. (3GPP TS
+     * 29.078 V19.0.0 clause 5.1)
+     *
+     * @public
+     * @readonly
+     */
+    public readonly holdTreatmentIndicator?: OPTIONAL<OCTET_STRING>;
+    /**
+     * @summary `cwTreatmentIndicator`.
+     * @description
+     *
+     * Applicable to InitialDP, Connect and ContinueWithArgument. Accept CW
+     * `'xxxx xx01'B`; reject `'xxxx xx10'B`. If absent from Connect or
+     * ContinueWithArgument, CAMEL does not affect call-waiting treatment. (3GPP
+     * TS 29.078 V19.0.0 clause 5.1)
+     *
+     * @public
+     * @readonly
+     */
+    public readonly cwTreatmentIndicator?: OPTIONAL<OCTET_STRING>;
+    /**
+     * @summary `ectTreatmentIndicator`.
+     * @description
+     *
+     * Applicable to InitialDP, Connect and ContinueWithArgument. Accept ECT
+     * `'xxxx xx01'B`; reject `'xxxx xx10'B`. If absent from Connect or
+     * ContinueWithArgument, CAMEL does not affect explicit call transfer
+     * treatment. (3GPP TS 29.078 V19.0.0 clause 5.1)
+     *
+     * @public
+     * @readonly
+     */
+    public readonly ectTreatmentIndicator?: OPTIONAL<OCTET_STRING>;
+    public readonly _unrecognizedExtensionsList: _Element[];
+
     constructor (
-        /**
-         * @summary `forwardServiceInteractionInd`.
-         * @description
-         *
-         * Applicable to InitialDP, Connect and ContinueWithArgument. (3GPP TS
-         * 29.078 V19.0.0 clause 5.1)
-         *
-         * @public
-         * @readonly
-         */
-        readonly forwardServiceInteractionInd?: OPTIONAL<ForwardServiceInteractionInd>,
-        /**
-         * @summary `backwardServiceInteractionInd`.
-         * @description
-         *
-         * Applicable to Connect and ContinueWithArgument. (3GPP TS 29.078 V19.0.0
-         * clause 5.1)
-         *
-         * @public
-         * @readonly
-         */
-        readonly backwardServiceInteractionInd?: OPTIONAL<BackwardServiceInteractionInd>,
-        /**
-         * @summary `bothwayThroughConnectionInd`.
-         * @description
-         *
-         * Applicable to ConnectToResource and EstablishTemporaryConnection. (3GPP
-         * TS 29.078 V19.0.0 clause 5.1)
-         *
-         * @public
-         * @readonly
-         */
-        readonly bothwayThroughConnectionInd?: OPTIONAL<BothwayThroughConnectionInd>,
-        /**
-         * @summary `connectedNumberTreatmentInd`.
-         * @description
-         *
-         * Applicable to Connect and ContinueWithArgument. (3GPP TS 29.078 V19.0.0
-         * clause 5.1)
-         *
-         * @public
-         * @readonly
-         */
-        readonly connectedNumberTreatmentInd?: OPTIONAL<ConnectedNumberTreatmentInd>,
-        /**
-         * @summary `nonCUGCall`.
-         * @description
-         *
-         * Applicable to Connect and ContinueWithArgument. Present: no CUG
-         * parameters shall be used (non-CUG call). Absent: continue with modified
-         * CUG information (if CUG Interlock Code and/or Outgoing Access Indicator
-         * are present), original CUG information (if neither is present), or the
-         * original non-CUG call. (3GPP TS 29.078 V19.0.0 clause 5.1)
-         *
-         * @public
-         * @readonly
-         */
-        readonly nonCUGCall?: OPTIONAL<NULL>,
-        /**
-         * @summary `holdTreatmentIndicator`.
-         * @description
-         *
-         * Applicable to InitialDP, Connect and ContinueWithArgument. Accept hold
-         * `'xxxx xx01'B`; reject `'xxxx xx10'B`. If absent from Connect or
-         * ContinueWithArgument, CAMEL does not affect call-hold treatment. (3GPP TS
-         * 29.078 V19.0.0 clause 5.1)
-         *
-         * @public
-         * @readonly
-         */
-        readonly holdTreatmentIndicator?: OPTIONAL<OCTET_STRING>,
-        /**
-         * @summary `cwTreatmentIndicator`.
-         * @description
-         *
-         * Applicable to InitialDP, Connect and ContinueWithArgument. Accept CW
-         * `'xxxx xx01'B`; reject `'xxxx xx10'B`. If absent from Connect or
-         * ContinueWithArgument, CAMEL does not affect call-waiting treatment. (3GPP
-         * TS 29.078 V19.0.0 clause 5.1)
-         *
-         * @public
-         * @readonly
-         */
-        readonly cwTreatmentIndicator?: OPTIONAL<OCTET_STRING>,
-        /**
-         * @summary `ectTreatmentIndicator`.
-         * @description
-         *
-         * Applicable to InitialDP, Connect and ContinueWithArgument. Accept ECT
-         * `'xxxx xx01'B`; reject `'xxxx xx10'B`. If absent from Connect or
-         * ContinueWithArgument, CAMEL does not affect explicit call transfer
-         * treatment. (3GPP TS 29.078 V19.0.0 clause 5.1)
-         *
-         * @public
-         * @readonly
-         */
-        readonly ectTreatmentIndicator?: OPTIONAL<OCTET_STRING>,
-        readonly _unrecognizedExtensionsList: _Element[] = [],
+        forwardServiceInteractionInd?: OPTIONAL<ForwardServiceInteractionInd>,
+        backwardServiceInteractionInd?: OPTIONAL<BackwardServiceInteractionInd>,
+        bothwayThroughConnectionInd?: OPTIONAL<BothwayThroughConnectionInd>,
+        connectedNumberTreatmentInd?: OPTIONAL<ConnectedNumberTreatmentInd>,
+        nonCUGCall?: OPTIONAL<NULL>,
+        holdTreatmentIndicator?: OPTIONAL<OCTET_STRING>,
+        cwTreatmentIndicator?: OPTIONAL<OCTET_STRING>,
+        ectTreatmentIndicator?: OPTIONAL<OCTET_STRING>,
+        _unrecognizedExtensionsList: _Element[] = [],
     ) {
+        this.forwardServiceInteractionInd = forwardServiceInteractionInd;
+        this.backwardServiceInteractionInd = backwardServiceInteractionInd;
+        this.bothwayThroughConnectionInd = bothwayThroughConnectionInd;
+        this.connectedNumberTreatmentInd = connectedNumberTreatmentInd;
+        this.nonCUGCall = nonCUGCall;
+        this.holdTreatmentIndicator = holdTreatmentIndicator;
+        this.cwTreatmentIndicator = cwTreatmentIndicator;
+        this.ectTreatmentIndicator = ectTreatmentIndicator;
+        this._unrecognizedExtensionsList = _unrecognizedExtensionsList;
         if (holdTreatmentIndicator !== undefined && holdTreatmentIndicator.length !== 1) {
             throw new ASN1SizeError("ServiceInteractionIndicatorsTwo.holdTreatmentIndicator violates SIZE constraint");
         }
@@ -153,8 +172,8 @@ export class ServiceInteractionIndicatorsTwo {
         return new ServiceInteractionIndicatorsTwo(_o.forwardServiceInteractionInd, _o.backwardServiceInteractionInd, _o.bothwayThroughConnectionInd, _o.connectedNumberTreatmentInd, _o.nonCUGCall, _o.holdTreatmentIndicator, _o.cwTreatmentIndicator, _o.ectTreatmentIndicator, _o._unrecognizedExtensionsList);
     }
 
-    public static _enum_for_bothwayThroughConnectionInd = _enum_for_BothwayThroughConnectionInd;
-    public static _enum_for_connectedNumberTreatmentInd = _enum_for_ConnectedNumberTreatmentInd;
+    public static _enum_for_bothwayThroughConnectionInd: typeof _enum_for_BothwayThroughConnectionInd = _enum_for_BothwayThroughConnectionInd;
+    public static _enum_for_connectedNumberTreatmentInd: typeof _enum_for_ConnectedNumberTreatmentInd = _enum_for_ConnectedNumberTreatmentInd;
 }
 
 export const _root_component_type_list_1_spec_for_ServiceInteractionIndicatorsTwo: $.ComponentSpec[] = [

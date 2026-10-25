@@ -1,11 +1,11 @@
 /* eslint-disable */
 import {
-    ASN1Element as _Element,
+    type ASN1Element as _Element,
     ASN1TagClass as _TagClass
 } from "@wildboar/asn1";
 import * as $ from "@wildboar/asn1/functional";
 import { InitiateAuthenticationOkEs9, _decode_InitiateAuthenticationOkEs9, _encode_InitiateAuthenticationOkEs9 } from "../RSPDefinitions/InitiateAuthenticationOkEs9.ta.mjs";
-import { InitiateAuthenticationResponse_initiateAuthenticationError, _decode_InitiateAuthenticationResponse_initiateAuthenticationError, _encode_InitiateAuthenticationResponse_initiateAuthenticationError } from "../RSPDefinitions/InitiateAuthenticationResponse-initiateAuthenticationError.ta.mjs";
+import { type InitiateAuthenticationResponse_initiateAuthenticationError, _decode_InitiateAuthenticationResponse_initiateAuthenticationError, _encode_InitiateAuthenticationResponse_initiateAuthenticationError } from "../RSPDefinitions/InitiateAuthenticationResponse-initiateAuthenticationError.ta.mjs";
 
 
 /**

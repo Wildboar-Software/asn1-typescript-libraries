@@ -1,7 +1,7 @@
 /* eslint-disable */
 import {
-    OPTIONAL,
-    ASN1Element as _Element,
+    type OPTIONAL,
+    type ASN1Element as _Element,
     ASN1TagClass as _TagClass,
     ASN1Construction as _Construction,
     ASN1UniversalType as _UniversalType,
@@ -12,17 +12,17 @@ import {
 } from '@wildboar/asn1';
 import * as $ from '@wildboar/asn1/functional';
 import {
-    MTAName,
+    type MTAName,
     _decode_MTAName,
     _encode_MTAName,
 } from '../MTSAbstractService/MTAName.ta.mjs';
 import {
-    InitiatorCredentials,
+    type InitiatorCredentials,
     _decode_InitiatorCredentials,
     _encode_InitiatorCredentials,
 } from '../MTSAbstractService/InitiatorCredentials.ta.mjs';
 import {
-    SecurityContext,
+    type SecurityContext,
     _decode_SecurityContext,
     _encode_SecurityContext,
 } from '../MTSAbstractService/SecurityContext.ta.mjs';
@@ -40,26 +40,34 @@ import {
  *
  */
 export class MTABindArgument_authenticated {
+    /**
+     * @summary `initiator_name`.
+     * @public
+     * @readonly
+     */
+    public readonly initiator_name: MTAName;
+    /**
+     * @summary `initiator_credentials`.
+     * @public
+     * @readonly
+     */
+    public readonly initiator_credentials: InitiatorCredentials;
+    /**
+     * @summary `security_context`.
+     * @public
+     * @readonly
+     */
+    public readonly security_context?: OPTIONAL<SecurityContext>;
+
     constructor(
-        /**
-         * @summary `initiator_name`.
-         * @public
-         * @readonly
-         */
-        readonly initiator_name: MTAName,
-        /**
-         * @summary `initiator_credentials`.
-         * @public
-         * @readonly
-         */
-        readonly initiator_credentials: InitiatorCredentials,
-        /**
-         * @summary `security_context`.
-         * @public
-         * @readonly
-         */
-        readonly security_context?: OPTIONAL<SecurityContext>
-    ) {}
+        initiator_name: MTAName,
+        initiator_credentials: InitiatorCredentials,
+        security_context?: OPTIONAL<SecurityContext>
+    ) {
+        this.initiator_name = initiator_name;
+        this.initiator_credentials = initiator_credentials;
+        this.security_context = security_context;
+    }
 
     /**
      * @summary Restructures an object into a MTABindArgument_authenticated

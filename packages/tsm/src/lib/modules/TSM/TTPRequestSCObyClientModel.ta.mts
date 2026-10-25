@@ -1,6 +1,6 @@
 /* eslint-disable */
 import {
-    ASN1Element as _Element,
+    type ASN1Element as _Element,
     ASN1TagClass as _TagClass,
     ASN1Construction as _Construction,
     ASN1UniversalType as _UniversalType,
@@ -10,7 +10,7 @@ import {
     ASN1ConstructionError as _ConstructionError,
 } from "@wildboar/asn1";
 import * as $ from "@wildboar/asn1/functional";
-import { SampleData, _decode_SampleData, _encode_SampleData } from "../TSM/SampleData.ta.mjs";
+import { type SampleData, _decode_SampleData, _encode_SampleData } from "../TSM/SampleData.ta.mjs";
 
 
 
@@ -33,19 +33,23 @@ import { SampleData, _decode_SampleData, _encode_SampleData } from "../TSM/Sampl
  */
 export
 class TTPRequestSCObyClientModel {
+    /**
+     * @summary `sampleData`.
+     * @description
+     *
+     * Captured sample as BioAPI BIR (includes BSP/device info).
+     * [ISO/IEC 19784-1]; X.1084 §11.3–§11.4.
+     *
+     * @public
+     * @readonly
+     */
+    public readonly sampleData: SampleData;
+
     constructor (
-        /**
-         * @summary `sampleData`.
-         * @description
-         *
-         * Captured sample as BioAPI BIR (includes BSP/device info).
-         * [ISO/IEC 19784-1]; X.1084 §11.3–§11.4.
-         *
-         * @public
-         * @readonly
-         */
-        readonly sampleData: SampleData
-    ) {}
+        sampleData: SampleData
+    ) {
+        this.sampleData = sampleData;
+    }
 
     /**
      * @summary Restructures an object into a TTPRequestSCObyClientModel

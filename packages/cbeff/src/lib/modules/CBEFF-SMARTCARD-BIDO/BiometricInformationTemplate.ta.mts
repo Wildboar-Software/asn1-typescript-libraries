@@ -1,8 +1,8 @@
 /* eslint-disable */
 import {
-  OPTIONAL,
-  OCTET_STRING,
-  EXTERNAL,
+  type OPTIONAL,
+  type OCTET_STRING,
+  type EXTERNAL,
   ASN1Element as _Element,
   ASN1TagClass as _TagClass,
   ASN1Construction as _Construction,
@@ -46,31 +46,31 @@ export class BiometricInformationTemplate {
    * @public
    * @readonly
    */
-  readonly algorithmReference: OPTIONAL<OCTET_STRING>;
+  public readonly algorithmReference: OPTIONAL<OCTET_STRING>;
   /**
    * @summary `referenceDataQualifier`.
    * @public
    * @readonly
    */
-  readonly referenceDataQualifier: OPTIONAL<OCTET_STRING>;
+  public readonly referenceDataQualifier: OPTIONAL<OCTET_STRING>;
   /**
    * @summary `biometricHeaderTemplate`.
    * @public
    * @readonly
    */
-  readonly biometricHeaderTemplate: BiometricHeaderTemplate;
+  public readonly biometricHeaderTemplate: BiometricHeaderTemplate;
   /**
    * @summary `bdbReferenceData`.
    * @public
    * @readonly
    */
-  readonly bdbReferenceData?: OPTIONAL<EXTERNAL>;
+  public readonly bdbReferenceData?: OPTIONAL<EXTERNAL>;
   /**
    * @summary `birPayLoad`.
    * @public
    * @readonly
    */
-  readonly birPayLoad?: OPTIONAL<OCTET_STRING>;
+  public readonly birPayLoad?: OPTIONAL<OCTET_STRING>;
 
   constructor(
     algorithmReference: OPTIONAL<OCTET_STRING>,

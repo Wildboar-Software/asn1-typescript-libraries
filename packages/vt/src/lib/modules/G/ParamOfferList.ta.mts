@@ -1,7 +1,7 @@
 /* eslint-disable */
 import {
-    OPTIONAL,
-    ASN1Element as _Element,
+    type OPTIONAL,
+    type ASN1Element as _Element,
     ASN1TagClass as _TagClass,
     ASN1Construction as _Construction,
     ASN1UniversalType as _UniversalType,
@@ -11,7 +11,7 @@ import {
     ASN1ConstructionError as _ConstructionError,
 } from "@wildboar/asn1";
 import * as $ from "@wildboar/asn1/functional";
-import { ParamOfferList_deliveryControl, _decode_ParamOfferList_deliveryControl, _encode_ParamOfferList_deliveryControl } from "../G/ParamOfferList-deliveryControl.ta.mjs";
+import { type ParamOfferList_deliveryControl, _decode_ParamOfferList_deliveryControl, _encode_ParamOfferList_deliveryControl } from "../G/ParamOfferList-deliveryControl.ta.mjs";
 import { type Offer as CDS_Offer, _decode_Offer as CDS__decode_Offer, _encode_Offer as CDS__encode_Offer } from "../CDS/Offer.ta.mjs";
 import { type Offer as CSS_Offer, _decode_Offer as CSS__decode_Offer, _encode_Offer as CSS__encode_Offer } from "../CSS/Offer.ta.mjs";
 import { type Offer as DEV_Offer, _decode_Offer as DEV__decode_Offer, _encode_Offer as DEV__encode_Offer } from "../DEV/Offer.ta.mjs";
@@ -43,45 +43,55 @@ import { type Offer as DEV_Offer, _decode_Offer as DEV__decode_Offer, _encode_Of
  */
 export
 class ParamOfferList {
+    /**
+     * @summary `displayObjects`.
+     * @description
+     * Offered CDS display-object parameters. ISO/IEC 9041-1:1997
+     * §6.17.2, §12.2.
+     * @public
+     * @readonly
+     */
+    public readonly displayObjects?: OPTIONAL<CDS_Offer>;
+    /**
+     * @summary `controlObjects`.
+     * @description
+     * Offered CSS control-object parameters. ISO/IEC 9041-1:1997
+     * §6.17.2, §12.2.
+     * @public
+     * @readonly
+     */
+    public readonly controlObjects?: OPTIONAL<CSS_Offer>;
+    /**
+     * @summary `deviceObjects`.
+     * @description
+     * Offered DEV device-object parameters. ISO/IEC 9041-1:1997
+     * §6.17.2, §12.2.
+     * @public
+     * @readonly
+     */
+    public readonly deviceObjects?: OPTIONAL<DEV_Offer>;
+    /**
+     * @summary `deliveryControl`.
+     * @description
+     * Offered delivery-control values; bit=1 means offered. Applies
+     * only to DO updates and COs with CO-priority `"normal"`.
+     * ISO/IEC 9040:1997 §24, table 15.
+     * @public
+     * @readonly
+     */
+    public readonly deliveryControl?: OPTIONAL<ParamOfferList_deliveryControl>;
+
     constructor (
-        /**
-         * @summary `displayObjects`.
-         * @description
-         * Offered CDS display-object parameters. ISO/IEC 9041-1:1997
-         * §6.17.2, §12.2.
-         * @public
-         * @readonly
-         */
-        readonly displayObjects?: OPTIONAL<CDS_Offer>,
-        /**
-         * @summary `controlObjects`.
-         * @description
-         * Offered CSS control-object parameters. ISO/IEC 9041-1:1997
-         * §6.17.2, §12.2.
-         * @public
-         * @readonly
-         */
-        readonly controlObjects?: OPTIONAL<CSS_Offer>,
-        /**
-         * @summary `deviceObjects`.
-         * @description
-         * Offered DEV device-object parameters. ISO/IEC 9041-1:1997
-         * §6.17.2, §12.2.
-         * @public
-         * @readonly
-         */
-        readonly deviceObjects?: OPTIONAL<DEV_Offer>,
-        /**
-         * @summary `deliveryControl`.
-         * @description
-         * Offered delivery-control values; bit=1 means offered. Applies
-         * only to DO updates and COs with CO-priority `"normal"`.
-         * ISO/IEC 9040:1997 §24, table 15.
-         * @public
-         * @readonly
-         */
-        readonly deliveryControl?: OPTIONAL<ParamOfferList_deliveryControl>
-    ) {}
+        displayObjects?: OPTIONAL<CDS_Offer>,
+        controlObjects?: OPTIONAL<CSS_Offer>,
+        deviceObjects?: OPTIONAL<DEV_Offer>,
+        deliveryControl?: OPTIONAL<ParamOfferList_deliveryControl>
+    ) {
+        this.displayObjects = displayObjects;
+        this.controlObjects = controlObjects;
+        this.deviceObjects = deviceObjects;
+        this.deliveryControl = deliveryControl;
+    }
 
     /**
      * @summary Restructures an object into a ParamOfferList

@@ -1,9 +1,9 @@
 /* eslint-disable */
 import {
     ASN1ConstructionError as _ConstructionError,
-    ASN1Element as _Element,
+    type ASN1Element as _Element,
     ASN1TagClass as _TagClass,
-    BIT_STRING,
+    type BIT_STRING,
 } from "@wildboar/asn1";
 import * as $ from "@wildboar/asn1/functional";
 import {
@@ -28,34 +28,42 @@ import {
  *
  */
 export class SenderDhPublicKey {
+    /**
+     * @summary `algorithm`.
+     * @description
+     *
+     * From `SupportedDHPublicKeyAlgorithms`.
+     *
+     * @public
+     * @readonly
+     */
+    public readonly algorithm: AlgorithmIdentifier;
+    /**
+     * @summary `publicKey`.
+     * @description
+     *
+     * Ephemeral DH public key BIT STRING.
+     *
+     * @public
+     * @readonly
+     */
+    public readonly publicKey: BIT_STRING;
+    /**
+     * @summary Extensions that are not recognized.
+     * @public
+     * @readonly
+     */
+    public readonly _unrecognizedExtensionsList: _Element[];
+
     constructor(
-        /**
-         * @summary `algorithm`.
-         * @description
-         *
-         * From `SupportedDHPublicKeyAlgorithms`.
-         *
-         * @public
-         * @readonly
-         */
-        readonly algorithm: AlgorithmIdentifier,
-        /**
-         * @summary `publicKey`.
-         * @description
-         *
-         * Ephemeral DH public key BIT STRING.
-         *
-         * @public
-         * @readonly
-         */
-        readonly publicKey: BIT_STRING,
-        /**
-         * @summary Extensions that are not recognized.
-         * @public
-         * @readonly
-         */
-        readonly _unrecognizedExtensionsList: _Element[] = []
-    ) {}
+        algorithm: AlgorithmIdentifier,
+        publicKey: BIT_STRING,
+        _unrecognizedExtensionsList: _Element[] = []
+    ) {
+        this.algorithm = algorithm;
+        this.publicKey = publicKey;
+        this._unrecognizedExtensionsList = _unrecognizedExtensionsList;
+    }
 
     /**
      * @summary Restructures an object into a SenderDhPublicKey

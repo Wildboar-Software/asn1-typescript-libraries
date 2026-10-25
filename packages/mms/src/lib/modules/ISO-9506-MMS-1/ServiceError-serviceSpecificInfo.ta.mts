@@ -1,7 +1,7 @@
 /* eslint-disable */
 import {
-    NULL,
-    ASN1Element as _Element,
+    type NULL,
+    type ASN1Element as _Element,
     ASN1TagClass as _TagClass,
     ASN1Construction as _Construction,
     ASN1UniversalType as _UniversalType,
@@ -11,18 +11,18 @@ import {
     ASN1ConstructionError as _ConstructionError,
 } from "@wildboar/asn1";
 import * as $ from "@wildboar/asn1/functional";
-import { ObtainFile_Error, _decode_ObtainFile_Error, _encode_ObtainFile_Error } from "../ISO-9506-MMS-1A/ObtainFile-Error.ta.mjs";
-import { Start_Error, _decode_Start_Error, _encode_Start_Error } from "../ISO-9506-MMS-1/Start-Error.ta.mjs";
-import { Stop_Error, _decode_Stop_Error, _encode_Stop_Error } from "../ISO-9506-MMS-1/Stop-Error.ta.mjs";
-import { Resume_Error, _decode_Resume_Error, _encode_Resume_Error } from "../ISO-9506-MMS-1/Resume-Error.ta.mjs";
-import { Reset_Error, _decode_Reset_Error, _encode_Reset_Error } from "../ISO-9506-MMS-1/Reset-Error.ta.mjs";
-import { DeleteVariableAccess_Error, _decode_DeleteVariableAccess_Error, _encode_DeleteVariableAccess_Error } from "../ISO-9506-MMS-1/DeleteVariableAccess-Error.ta.mjs";
-import { DeleteNamedVariableList_Error, _decode_DeleteNamedVariableList_Error, _encode_DeleteNamedVariableList_Error } from "../ISO-9506-MMS-1/DeleteNamedVariableList-Error.ta.mjs";
-import { DeleteNamedType_Error, _decode_DeleteNamedType_Error, _encode_DeleteNamedType_Error } from "../ISO-9506-MMS-1/DeleteNamedType-Error.ta.mjs";
-import { DefineEventEnrollment_Error, _decode_DefineEventEnrollment_Error, _encode_DefineEventEnrollment_Error } from "../ISO-9506-MMS-1/DefineEventEnrollment-Error.ta.mjs";
-import { FileRename_Error, _decode_FileRename_Error, _encode_FileRename_Error } from "../ISO-9506-MMS-1A/FileRename-Error.ta.mjs";
-import { AdditionalService_Error, _decode_AdditionalService_Error, _encode_AdditionalService_Error } from "../ISO-9506-MMS-1/AdditionalService-Error.ta.mjs";
-import { ChangeAccessControl_Error, _decode_ChangeAccessControl_Error, _encode_ChangeAccessControl_Error } from "../ISO-9506-MMS-1/ChangeAccessControl-Error.ta.mjs";
+import { type ObtainFile_Error, _decode_ObtainFile_Error, _encode_ObtainFile_Error } from "../ISO-9506-MMS-1A/ObtainFile-Error.ta.mjs";
+import { type Start_Error, _decode_Start_Error, _encode_Start_Error } from "../ISO-9506-MMS-1/Start-Error.ta.mjs";
+import { type Stop_Error, _decode_Stop_Error, _encode_Stop_Error } from "../ISO-9506-MMS-1/Stop-Error.ta.mjs";
+import { type Resume_Error, _decode_Resume_Error, _encode_Resume_Error } from "../ISO-9506-MMS-1/Resume-Error.ta.mjs";
+import { type Reset_Error, _decode_Reset_Error, _encode_Reset_Error } from "../ISO-9506-MMS-1/Reset-Error.ta.mjs";
+import { type DeleteVariableAccess_Error, _decode_DeleteVariableAccess_Error, _encode_DeleteVariableAccess_Error } from "../ISO-9506-MMS-1/DeleteVariableAccess-Error.ta.mjs";
+import { type DeleteNamedVariableList_Error, _decode_DeleteNamedVariableList_Error, _encode_DeleteNamedVariableList_Error } from "../ISO-9506-MMS-1/DeleteNamedVariableList-Error.ta.mjs";
+import { type DeleteNamedType_Error, _decode_DeleteNamedType_Error, _encode_DeleteNamedType_Error } from "../ISO-9506-MMS-1/DeleteNamedType-Error.ta.mjs";
+import { type DefineEventEnrollment_Error, _decode_DefineEventEnrollment_Error, _encode_DefineEventEnrollment_Error } from "../ISO-9506-MMS-1/DefineEventEnrollment-Error.ta.mjs";
+import { type FileRename_Error, _decode_FileRename_Error, _encode_FileRename_Error } from "../ISO-9506-MMS-1A/FileRename-Error.ta.mjs";
+import { type AdditionalService_Error, _decode_AdditionalService_Error, _encode_AdditionalService_Error } from "../ISO-9506-MMS-1/AdditionalService-Error.ta.mjs";
+import { type ChangeAccessControl_Error, _decode_ChangeAccessControl_Error, _encode_ChangeAccessControl_Error } from "../ISO-9506-MMS-1/ChangeAccessControl-Error.ta.mjs";
 
 
 /**

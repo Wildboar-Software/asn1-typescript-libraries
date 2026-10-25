@@ -1,12 +1,12 @@
 /* eslint-disable */
 import {
-    OPTIONAL,
-    ASN1Element as _Element,
+    type OPTIONAL,
+    type ASN1Element as _Element,
     ASN1TagClass as _TagClass
 } from "@wildboar/asn1";
 import * as $ from "@wildboar/asn1/functional";
 import { AuthWtmRes_autWtmResValue, _decode_AuthWtmRes_autWtmResValue, _encode_AuthWtmRes_autWtmResValue, _enum_for_AuthWtmRes_autWtmResValue } from "../WTM-Authentication-Operations-asn1-97/AuthWtmRes-autWtmResValue.ta.mjs";
-import { DummyExtension, _decode_DummyExtension, _encode_DummyExtension } from "../WTM-Authentication-Operations-asn1-97/DummyExtension.ta.mjs";
+import { type DummyExtension, _decode_DummyExtension, _encode_DummyExtension } from "../WTM-Authentication-Operations-asn1-97/DummyExtension.ta.mjs";
 
 /**
  * @summary AuthWtmRes
@@ -85,7 +85,7 @@ class AuthWtmRes {
          * @static
          */
 
-    public static _enum_for_autWtmResValue = _enum_for_AuthWtmRes_autWtmResValue;
+    public static _enum_for_autWtmResValue: typeof _enum_for_AuthWtmRes_autWtmResValue = _enum_for_AuthWtmRes_autWtmResValue;
 }
 
 /**

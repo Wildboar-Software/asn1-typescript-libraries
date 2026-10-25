@@ -1,12 +1,12 @@
 /* eslint-disable */
 import {
-    OPTIONAL,
-    ASN1Element as _Element,
+    type OPTIONAL,
+    type ASN1Element as _Element,
     ASN1TagClass as _TagClass
 } from "@wildboar/asn1";
 import * as $ from "@wildboar/asn1/functional";
-import { EventName, _decode_EventName, _encode_EventName } from "../MEDIA-GATEWAY-CONTROL/EventName.ta.mjs";
-import { StreamID, _decode_StreamID, _encode_StreamID } from "../MEDIA-GATEWAY-CONTROL/StreamID.ta.mjs";
+import { type EventName, _decode_EventName, _encode_EventName } from "../MEDIA-GATEWAY-CONTROL/EventName.ta.mjs";
+import { type StreamID, _decode_StreamID, _encode_StreamID } from "../MEDIA-GATEWAY-CONTROL/StreamID.ta.mjs";
 import { EventParameter, _decode_EventParameter, _encode_EventParameter } from "../MEDIA-GATEWAY-CONTROL/EventParameter.ta.mjs";
 import { TimeNotation, _decode_TimeNotation, _encode_TimeNotation } from "../MEDIA-GATEWAY-CONTROL/TimeNotation.ta.mjs";
 
@@ -47,7 +47,7 @@ class ObservedEvent {
      * @public
      * @readonly
      */
-    readonly eventName: EventName;
+    public readonly eventName: EventName;
     /**
      * @summary `streamID`.
      * @description
@@ -58,7 +58,7 @@ class ObservedEvent {
      * @public
      * @readonly
      */
-    readonly streamID: OPTIONAL<StreamID>;
+    public readonly streamID: OPTIONAL<StreamID>;
     /**
      * @summary `eventParList`.
      * @description
@@ -68,7 +68,7 @@ class ObservedEvent {
      * @public
      * @readonly
      */
-    readonly eventParList: EventParameter[];
+    public readonly eventParList: EventParameter[];
     /**
      * @summary `timeNotation`.
      * @description
@@ -80,7 +80,7 @@ class ObservedEvent {
      * @public
      * @readonly
      */
-    readonly timeNotation?: OPTIONAL<TimeNotation>;
+    public readonly timeNotation?: OPTIONAL<TimeNotation>;
     /**
      * @summary Extensions that are not recognized.
      * @description
@@ -91,7 +91,7 @@ class ObservedEvent {
      * @public
      * @readonly
      */
-    readonly _unrecognizedExtensionsList: _Element[];
+    public readonly _unrecognizedExtensionsList: _Element[];
 
     constructor (
         eventName: EventName,

@@ -1,8 +1,8 @@
 /* eslint-disable */
 import {
-    BOOLEAN,
-    INTEGER,
-    ASN1Element as _Element,
+    type BOOLEAN,
+    type INTEGER,
+    type ASN1Element as _Element,
     ASN1TagClass as _TagClass,
     ASN1Construction as _Construction,
     ASN1UniversalType as _UniversalType,
@@ -42,7 +42,7 @@ class CounterThreshold_Item {
      * @public
      * @readonly
      */
-    readonly comparisonLevel: INTEGER;
+    public readonly comparisonLevel: INTEGER;
     /**
      * @summary `offsetValue`.
      * @description
@@ -54,7 +54,7 @@ class CounterThreshold_Item {
      * @public
      * @readonly
      */
-    readonly offsetValue: INTEGER;
+    public readonly offsetValue: INTEGER;
     /**
      * @summary `notificationOnOff`.
      * @description
@@ -65,7 +65,7 @@ class CounterThreshold_Item {
      * @public
      * @readonly
      */
-    readonly notificationOnOff: BOOLEAN;
+    public readonly notificationOnOff: BOOLEAN;
 
     constructor (
         comparisonLevel: INTEGER,

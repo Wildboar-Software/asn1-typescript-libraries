@@ -1,7 +1,7 @@
 /* eslint-disable */
 import {
-    OPTIONAL,
-    ASN1Element as _Element,
+    type OPTIONAL,
+    type ASN1Element as _Element,
     ASN1TagClass as _TagClass,
     ASN1Construction as _Construction,
     ASN1UniversalType as _UniversalType,
@@ -12,12 +12,12 @@ import {
 } from '@wildboar/asn1';
 import * as $ from '@wildboar/asn1/functional';
 import {
-    ContentTypes,
+    type ContentTypes,
     _decode_ContentTypes,
     _encode_ContentTypes,
 } from '../MTSAbstractService/ContentTypes.ta.mjs';
 import {
-    ContentLength,
+    type ContentLength,
     _decode_ContentLength,
     _encode_ContentLength,
 } from '../MTSAbstractService/ContentLength.ta.mjs';
@@ -27,17 +27,17 @@ import {
     _encode_EncodedInformationTypesConstraints,
 } from '../MTSAbstractService/EncodedInformationTypesConstraints.ta.mjs';
 import {
-    SecurityContext,
+    type SecurityContext,
     _decode_SecurityContext,
     _encode_SecurityContext,
 } from '../MTSAbstractService/SecurityContext.ta.mjs';
 import {
-    Priority,
+    type Priority,
     _decode_Priority,
     _encode_Priority,
 } from '../MTSAbstractService/Priority.ta.mjs';
 import {
-    MessageClass_objects,
+    type MessageClass_objects,
     _enum_for_MessageClass_objects,
     MessageClass_objects_both /* IMPORTED_LONG_ENUMERATION_ITEM */,
     _decode_MessageClass_objects,
@@ -80,56 +80,74 @@ import {
  *
  */
 export class MessageClass {
+    /**
+     * @summary `content_types`.
+     * @public
+     * @readonly
+     */
+    public readonly content_types?: OPTIONAL<ContentTypes>;
+    /**
+     * @summary `maximum_content_length`.
+     * @public
+     * @readonly
+     */
+    public readonly maximum_content_length?: OPTIONAL<ContentLength>;
+    /**
+     * @summary `encoded_information_types_constraints`.
+     * @public
+     * @readonly
+     */
+    public readonly encoded_information_types_constraints?: OPTIONAL<EncodedInformationTypesConstraints>;
+    /**
+     * @summary `security_labels`.
+     * @public
+     * @readonly
+     */
+    public readonly security_labels?: OPTIONAL<SecurityContext>;
+    /**
+     * @summary `priority`.
+     * @public
+     * @readonly
+     */
+    public readonly priority?: OPTIONAL<Priority[]>;
+    /**
+     * @summary `objects`.
+     * @public
+     * @readonly
+     */
+    public readonly objects?: OPTIONAL<MessageClass_objects>;
+    /**
+     * @summary `applies_only_to`.
+     * @public
+     * @readonly
+     */
+    public readonly applies_only_to?: OPTIONAL<Restriction[]>;
+    /**
+     * @summary `extensions`.
+     * @public
+     * @readonly
+     */
+    public readonly extensions?: OPTIONAL<ExtensionField[]>;
+
     constructor(
-        /**
-         * @summary `content_types`.
-         * @public
-         * @readonly
-         */
-        readonly content_types?: OPTIONAL<ContentTypes>,
-        /**
-         * @summary `maximum_content_length`.
-         * @public
-         * @readonly
-         */
-        readonly maximum_content_length?: OPTIONAL<ContentLength>,
-        /**
-         * @summary `encoded_information_types_constraints`.
-         * @public
-         * @readonly
-         */
-        readonly encoded_information_types_constraints?: OPTIONAL<EncodedInformationTypesConstraints>,
-        /**
-         * @summary `security_labels`.
-         * @public
-         * @readonly
-         */
-        readonly security_labels?: OPTIONAL<SecurityContext>,
-        /**
-         * @summary `priority`.
-         * @public
-         * @readonly
-         */
-        readonly priority?: OPTIONAL<Priority[]>,
-        /**
-         * @summary `objects`.
-         * @public
-         * @readonly
-         */
-        readonly objects?: OPTIONAL<MessageClass_objects>,
-        /**
-         * @summary `applies_only_to`.
-         * @public
-         * @readonly
-         */
-        readonly applies_only_to?: OPTIONAL<Restriction[]>,
-        /**
-         * @summary `extensions`.
-         * @public
-         * @readonly
-         */
-        readonly extensions?: OPTIONAL<ExtensionField[]>
-    ) {}
+        content_types?: OPTIONAL<ContentTypes>,
+        maximum_content_length?: OPTIONAL<ContentLength>,
+        encoded_information_types_constraints?: OPTIONAL<EncodedInformationTypesConstraints>,
+        security_labels?: OPTIONAL<SecurityContext>,
+        priority?: OPTIONAL<Priority[]>,
+        objects?: OPTIONAL<MessageClass_objects>,
+        applies_only_to?: OPTIONAL<Restriction[]>,
+        extensions?: OPTIONAL<ExtensionField[]>
+    ) {
+        this.content_types = content_types;
+        this.maximum_content_length = maximum_content_length;
+        this.encoded_information_types_constraints = encoded_information_types_constraints;
+        this.security_labels = security_labels;
+        this.priority = priority;
+        this.objects = objects;
+        this.applies_only_to = applies_only_to;
+        this.extensions = extensions;
+    }
 
     /**
      * @summary Restructures an object into a MessageClass
@@ -182,7 +200,7 @@ export class MessageClass {
      * @static
      */
 
-    public static _enum_for_objects = _enum_for_MessageClass_objects;
+    public static _enum_for_objects: typeof _enum_for_MessageClass_objects = _enum_for_MessageClass_objects;
 }
 
 /**

@@ -1,8 +1,8 @@
 /* eslint-disable */
 import {
-    ASN1Element as _Element,
+    type ASN1Element as _Element,
     ASN1SizeError,
-    BIT_STRING
+    type BIT_STRING
 } from "@wildboar/asn1";
 import * as $ from "@wildboar/asn1/functional";
 import { maxChargingControlIndicatorsLen } from "../Tariffing-Data-Types/maxChargingControlIndicatorsLen.va.mjs";
@@ -137,7 +137,7 @@ export const _decode_ChargingControlIndicators = (el: _Element): ChargingControl
     }
     return value;
 };
-export const _encode_ChargingControlIndicators = $._encodeBitString;
+export const _encode_ChargingControlIndicators: $.ASN1Encoder<BIT_STRING> = $._encodeBitString;
 
 
 /* eslint-enable */

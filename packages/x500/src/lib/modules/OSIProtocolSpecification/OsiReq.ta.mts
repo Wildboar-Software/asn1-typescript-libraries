@@ -1,17 +1,17 @@
 /* eslint-disable */
 import {
     ASN1ConstructionError as _ConstructionError,
-    ASN1Element as _Element,
+    type ASN1Element as _Element,
     ASN1TagClass as _TagClass,
 } from "@wildboar/asn1";
 import * as $ from "@wildboar/asn1/functional";
 import {
-    Code,
+    type Code,
     _decode_Code,
     _encode_Code,
 } from "../CommonProtocolSpecification/Code.ta.mjs";
 import {
-    InvokeId,
+    type InvokeId,
     _decode_InvokeId,
     _encode_InvokeId,
 } from "../CommonProtocolSpecification/InvokeId.ta.mjs";
@@ -30,26 +30,34 @@ import {
  *
  */
 export class OsiReq {
+    /**
+     * @summary `invokeId`.
+     * @public
+     * @readonly
+     */
+    public readonly invokeId: InvokeId;
+    /**
+     * @summary `opcode`.
+     * @public
+     * @readonly
+     */
+    public readonly opcode: Code;
+    /**
+     * @summary `argument`.
+     * @public
+     * @readonly
+     */
+    public readonly argument: _Element;
+
     constructor(
-        /**
-         * @summary `invokeId`.
-         * @public
-         * @readonly
-         */
-        readonly invokeId: InvokeId,
-        /**
-         * @summary `opcode`.
-         * @public
-         * @readonly
-         */
-        readonly opcode: Code,
-        /**
-         * @summary `argument`.
-         * @public
-         * @readonly
-         */
-        readonly argument: _Element
-    ) {}
+        invokeId: InvokeId,
+        opcode: Code,
+        argument: _Element
+    ) {
+        this.invokeId = invokeId;
+        this.opcode = opcode;
+        this.argument = argument;
+    }
 
     /**
      * @summary Restructures an object into a OsiReq

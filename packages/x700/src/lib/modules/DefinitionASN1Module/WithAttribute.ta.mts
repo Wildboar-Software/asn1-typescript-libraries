@@ -1,6 +1,6 @@
 /* eslint-disable */
 import {
-    ASN1Element as _Element,
+    type ASN1Element as _Element,
     ASN1TagClass as _TagClass,
     ASN1Construction as _Construction,
     ASN1UniversalType as _UniversalType,
@@ -35,22 +35,13 @@ import {
  */
 export type WithAttribute = TemplateLabel; // DefinedType
 
-let _cached_decoder_for_WithAttribute: $.ASN1Decoder<WithAttribute> | null = null;
-
 /**
  * @summary Decodes an ASN.1 element into a(n) WithAttribute
  * @function
  * @param {_Element} el The element being decoded.
  * @returns {WithAttribute} The decoded data structure.
  */
-export function _decode_WithAttribute(el: _Element): WithAttribute {
-    if (!_cached_decoder_for_WithAttribute) {
-        _cached_decoder_for_WithAttribute = _decode_TemplateLabel;
-    }
-    return _cached_decoder_for_WithAttribute(el);
-}
-
-let _cached_encoder_for_WithAttribute: $.ASN1Encoder<WithAttribute> | null = null;
+export const _decode_WithAttribute: $.ASN1Decoder<WithAttribute> = _decode_TemplateLabel;
 
 /**
  * @summary Encodes a(n) WithAttribute into an ASN.1 Element.
@@ -59,15 +50,7 @@ let _cached_encoder_for_WithAttribute: $.ASN1Encoder<WithAttribute> | null = nul
  * @param elGetter A function that can be used to get new ASN.1 elements.
  * @returns {_Element} The WithAttribute, encoded as an ASN.1 Element.
  */
-export function _encode_WithAttribute(
-    value: WithAttribute,
-    elGetter: $.ASN1Encoder<WithAttribute>
-): _Element {
-    if (!_cached_encoder_for_WithAttribute) {
-        _cached_encoder_for_WithAttribute = _encode_TemplateLabel;
-    }
-    return _cached_encoder_for_WithAttribute(value, elGetter);
-}
+export const _encode_WithAttribute: $.ASN1Encoder<WithAttribute> = _encode_TemplateLabel;
 
 
 /* eslint-enable */

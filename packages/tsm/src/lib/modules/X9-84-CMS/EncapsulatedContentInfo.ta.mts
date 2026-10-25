@@ -1,8 +1,8 @@
 /* eslint-disable */
 import {
-    OPTIONAL,
-    OCTET_STRING,
-    ASN1Element as _Element,
+    type OPTIONAL,
+    type OCTET_STRING,
+    type ASN1Element as _Element,
     ASN1TagClass as _TagClass,
     ASN1Construction as _Construction,
     ASN1UniversalType as _UniversalType,
@@ -12,7 +12,7 @@ import {
     ASN1ConstructionError as _ConstructionError,
 } from "@wildboar/asn1";
 import * as $ from "@wildboar/asn1/functional";
-import { ContentType, _decode_ContentType, _encode_ContentType } from "../X9-84-CMS/ContentType.ta.mjs";
+import { type ContentType, _decode_ContentType, _encode_ContentType } from "../X9-84-CMS/ContentType.ta.mjs";
 
 
 
@@ -33,20 +33,26 @@ import { ContentType, _decode_ContentType, _encode_ContentType } from "../X9-84-
  */
 export
 class EncapsulatedContentInfo {
+    /**
+     * @summary `eContentType`.
+     * @public
+     * @readonly
+     */
+    public readonly eContentType: ContentType;
+    /**
+     * @summary `eContent`.
+     * @public
+     * @readonly
+     */
+    public readonly eContent?: OPTIONAL<OCTET_STRING>;
+
     constructor (
-        /**
-         * @summary `eContentType`.
-         * @public
-         * @readonly
-         */
-        readonly eContentType: ContentType,
-        /**
-         * @summary `eContent`.
-         * @public
-         * @readonly
-         */
-        readonly eContent?: OPTIONAL<OCTET_STRING>
-    ) {}
+        eContentType: ContentType,
+        eContent?: OPTIONAL<OCTET_STRING>
+    ) {
+        this.eContentType = eContentType;
+        this.eContent = eContent;
+    }
 
     /**
      * @summary Restructures an object into a EncapsulatedContentInfo

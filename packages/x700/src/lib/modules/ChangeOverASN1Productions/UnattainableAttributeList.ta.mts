@@ -1,7 +1,7 @@
 /* eslint-disable */
 import {
-    OPTIONAL,
-    ASN1Element as _Element,
+    type OPTIONAL,
+    type ASN1Element as _Element,
     ASN1TagClass as _TagClass,
     ASN1Construction as _Construction,
     ASN1UniversalType as _UniversalType,
@@ -12,7 +12,7 @@ import {
 } from '@wildboar/asn1';
 import * as $ from '@wildboar/asn1/functional';
 import {
-    ExpectedAttributeList,
+    type ExpectedAttributeList,
     _decode_ExpectedAttributeList,
     _encode_ExpectedAttributeList,
 } from '../ChangeOverASN1Productions/ExpectedAttributeList.ta.mjs';
@@ -38,30 +38,36 @@ import {
  *
  */
 export class UnattainableAttributeList {
+    /**
+     * @summary `primaryChanges`.
+     * @description
+     *
+     * Unattainable modifications requested on the primary (or
+     * backed-up) object. ITU-T Rec. X.751 (11/95)
+     * [§8.7.4](https://www.itu.int/rec/T-REC-X.751-199511-I).
+     * @public
+     * @readonly
+     */
+    public readonly primaryChanges?: OPTIONAL<ExpectedAttributeList>;
+    /**
+     * @summary `secondaryChanges`.
+     * @description
+     *
+     * Unattainable modifications requested on the secondary (or
+     * back-up) object. ITU-T Rec. X.751 (11/95)
+     * [§8.7.4](https://www.itu.int/rec/T-REC-X.751-199511-I).
+     * @public
+     * @readonly
+     */
+    public readonly secondaryChanges?: OPTIONAL<ExpectedAttributeList>;
+
     constructor(
-        /**
-         * @summary `primaryChanges`.
-         * @description
-         *
-         * Unattainable modifications requested on the primary (or
-         * backed-up) object. ITU-T Rec. X.751 (11/95)
-         * [§8.7.4](https://www.itu.int/rec/T-REC-X.751-199511-I).
-         * @public
-         * @readonly
-         */
-        readonly primaryChanges?: OPTIONAL<ExpectedAttributeList>,
-        /**
-         * @summary `secondaryChanges`.
-         * @description
-         *
-         * Unattainable modifications requested on the secondary (or
-         * back-up) object. ITU-T Rec. X.751 (11/95)
-         * [§8.7.4](https://www.itu.int/rec/T-REC-X.751-199511-I).
-         * @public
-         * @readonly
-         */
-        readonly secondaryChanges?: OPTIONAL<ExpectedAttributeList>
-    ) {}
+        primaryChanges?: OPTIONAL<ExpectedAttributeList>,
+        secondaryChanges?: OPTIONAL<ExpectedAttributeList>
+    ) {
+        this.primaryChanges = primaryChanges;
+        this.secondaryChanges = secondaryChanges;
+    }
 
     /**
      * @summary Restructures an object into a UnattainableAttributeList

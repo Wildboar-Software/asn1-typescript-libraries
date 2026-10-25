@@ -1,7 +1,7 @@
 /* eslint-disable */
 import {
-    ASN1Element as _Element,
-    ENUMERATED
+    type ASN1Element as _Element,
+    type ENUMERATED
 } from "@wildboar/asn1";
 import * as $ from "@wildboar/asn1/functional";
 
@@ -47,7 +47,7 @@ type KeyStatus = _enum_for_KeyStatus | ENUMERATED;
  * @type {number}
  */
 export
-const KeyStatus_old: KeyStatus = 0; /* LONG_NAMED_ENUMERATED_VALUE */
+const KeyStatus_old: _enum_for_KeyStatus.old = _enum_for_KeyStatus.old; /* LONG_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary old
@@ -60,7 +60,7 @@ const KeyStatus_old: KeyStatus = 0; /* LONG_NAMED_ENUMERATED_VALUE */
  * @type {number}
  */
 export
-const old: KeyStatus = KeyStatus_old; /* SHORT_NAMED_ENUMERATED_VALUE */
+const old: _enum_for_KeyStatus.old = KeyStatus_old; /* SHORT_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary KeyStatus_new_
@@ -73,7 +73,7 @@ const old: KeyStatus = KeyStatus_old; /* SHORT_NAMED_ENUMERATED_VALUE */
  * @type {number}
  */
 export
-const KeyStatus_new_: KeyStatus = 1; /* LONG_NAMED_ENUMERATED_VALUE */
+const KeyStatus_new_: _enum_for_KeyStatus.new_ = _enum_for_KeyStatus.new_; /* LONG_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary new_
@@ -86,7 +86,7 @@ const KeyStatus_new_: KeyStatus = 1; /* LONG_NAMED_ENUMERATED_VALUE */
  * @type {number}
  */
 export
-const new_: KeyStatus = KeyStatus_new_; /* SHORT_NAMED_ENUMERATED_VALUE */
+const new_: _enum_for_KeyStatus.new_ = KeyStatus_new_; /* SHORT_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary Decodes an ASN.1 element into a(n) KeyStatus
@@ -94,7 +94,7 @@ const new_: KeyStatus = KeyStatus_new_; /* SHORT_NAMED_ENUMERATED_VALUE */
  * @param el The element being decoded.
  * @returns The decoded data structure.
  */
-export const _decode_KeyStatus = $._decodeEnumerated;
+export const _decode_KeyStatus: $.ASN1Decoder<number> = $._decodeEnumerated;
 
 /**
  * @summary Encodes a(n) KeyStatus into an ASN.1 Element.
@@ -103,7 +103,7 @@ export const _decode_KeyStatus = $._decodeEnumerated;
  * @param elGetter A function that can be used to get new ASN.1 elements.
  * @returns {_Element} The KeyStatus, encoded as an ASN.1 Element.
  */
-export const _encode_KeyStatus = $._encodeEnumerated;
+export const _encode_KeyStatus: $.ASN1Encoder<number> = $._encodeEnumerated;
 
 
 /* eslint-enable */

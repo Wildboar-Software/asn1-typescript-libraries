@@ -1,6 +1,6 @@
 /* eslint-disable */
 import {
-    ASN1Element as _Element,
+    type ASN1Element as _Element,
     ASN1TagClass as _TagClass,
     ASN1Construction as _Construction,
     ASN1UniversalType as _UniversalType,
@@ -10,9 +10,9 @@ import {
     ASN1ConstructionError as _ConstructionError,
 } from "@wildboar/asn1";
 import * as $ from "@wildboar/asn1/functional";
-import { Name, _decode_Name, _encode_Name } from "@wildboar/dn";
-import { CertificateSerialNumber, _decode_CertificateSerialNumber, _encode_CertificateSerialNumber } from "@wildboar/x500/AuthenticationFramework";
-import { KeyUsage, _decode_KeyUsage, _encode_KeyUsage } from "@wildboar/x500/CertificateExtensions";
+import { type Name, _decode_Name, _encode_Name } from "@wildboar/dn";
+import { type CertificateSerialNumber, _decode_CertificateSerialNumber, _encode_CertificateSerialNumber } from "@wildboar/x500/AuthenticationFramework";
+import { type KeyUsage, _decode_KeyUsage, _encode_KeyUsage } from "@wildboar/x500/CertificateExtensions";
 
 /**
  * @summary PublicKeyCert
@@ -35,38 +35,46 @@ import { KeyUsage, _decode_KeyUsage, _encode_KeyUsage } from "@wildboar/x500/Cer
  */
 export
 class PublicKeyCert {
+    /**
+     * @summary `pkcIssuer`.
+     * @description
+     *
+     * Issuer of the associated PKC. X.1089 §11.1.
+     *
+     * @public
+     * @readonly
+     */
+    public readonly pkcIssuer: Name;
+    /**
+     * @summary `pkcSerialNumber`.
+     * @description
+     *
+     * Serial number of the associated PKC. X.1089 §11.1.
+     *
+     * @public
+     * @readonly
+     */
+    public readonly pkcSerialNumber: CertificateSerialNumber;
+    /**
+     * @summary `pkcUsage`.
+     * @description
+     *
+     * Key usage of the associated PKC. X.1089 §11.1.
+     *
+     * @public
+     * @readonly
+     */
+    public readonly pkcUsage: KeyUsage;
+
     constructor (
-        /**
-         * @summary `pkcIssuer`.
-         * @description
-         *
-         * Issuer of the associated PKC. X.1089 §11.1.
-         *
-         * @public
-         * @readonly
-         */
-        readonly pkcIssuer: Name,
-        /**
-         * @summary `pkcSerialNumber`.
-         * @description
-         *
-         * Serial number of the associated PKC. X.1089 §11.1.
-         *
-         * @public
-         * @readonly
-         */
-        readonly pkcSerialNumber: CertificateSerialNumber,
-        /**
-         * @summary `pkcUsage`.
-         * @description
-         *
-         * Key usage of the associated PKC. X.1089 §11.1.
-         *
-         * @public
-         * @readonly
-         */
-        readonly pkcUsage: KeyUsage
-    ) {}
+        pkcIssuer: Name,
+        pkcSerialNumber: CertificateSerialNumber,
+        pkcUsage: KeyUsage
+    ) {
+        this.pkcIssuer = pkcIssuer;
+        this.pkcSerialNumber = pkcSerialNumber;
+        this.pkcUsage = pkcUsage;
+    }
 
     /**
      * @summary Restructures an object into a PublicKeyCert

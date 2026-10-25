@@ -1,17 +1,17 @@
 /* eslint-disable */
 import {
-    OPTIONAL,
-    ASN1Element as _Element,
+    type OPTIONAL,
+    type ASN1Element as _Element,
     ASN1TagClass as _TagClass
 } from "@wildboar/asn1";
 import * as $ from "@wildboar/asn1/functional";
-import { BasicServiceCode, _decode_BasicServiceCode, _encode_BasicServiceCode } from "../MAP-CommonDataTypes/BasicServiceCode.ta.mjs";
-import { FTN_AddressString, _decode_FTN_AddressString, _encode_FTN_AddressString } from "../MAP-CommonDataTypes/FTN-AddressString.ta.mjs";
-import { ISDN_AddressString, _decode_ISDN_AddressString, _encode_ISDN_AddressString } from "../MAP-CommonDataTypes/ISDN-AddressString.ta.mjs";
-import { ISDN_SubaddressString, _decode_ISDN_SubaddressString, _encode_ISDN_SubaddressString } from "../MAP-CommonDataTypes/ISDN-SubaddressString.ta.mjs";
-import { ForwardingOptions, _decode_ForwardingOptions, _encode_ForwardingOptions } from "../MAP-SS-DataTypes/ForwardingOptions.ta.mjs";
-import { NoReplyConditionTime, _decode_NoReplyConditionTime, _encode_NoReplyConditionTime } from "../MAP-SS-DataTypes/NoReplyConditionTime.ta.mjs";
-import { SS_Status, _decode_SS_Status, _encode_SS_Status } from "../MAP-SS-DataTypes/SS-Status.ta.mjs";
+import { type BasicServiceCode, _decode_BasicServiceCode, _encode_BasicServiceCode } from "../MAP-CommonDataTypes/BasicServiceCode.ta.mjs";
+import { type FTN_AddressString, _decode_FTN_AddressString, _encode_FTN_AddressString } from "../MAP-CommonDataTypes/FTN-AddressString.ta.mjs";
+import { type ISDN_AddressString, _decode_ISDN_AddressString, _encode_ISDN_AddressString } from "../MAP-CommonDataTypes/ISDN-AddressString.ta.mjs";
+import { type ISDN_SubaddressString, _decode_ISDN_SubaddressString, _encode_ISDN_SubaddressString } from "../MAP-CommonDataTypes/ISDN-SubaddressString.ta.mjs";
+import { type ForwardingOptions, _decode_ForwardingOptions, _encode_ForwardingOptions } from "../MAP-SS-DataTypes/ForwardingOptions.ta.mjs";
+import { type NoReplyConditionTime, _decode_NoReplyConditionTime, _encode_NoReplyConditionTime } from "../MAP-SS-DataTypes/NoReplyConditionTime.ta.mjs";
+import { type SS_Status, _decode_SS_Status, _encode_SS_Status } from "../MAP-SS-DataTypes/SS-Status.ta.mjs";
 
 
 /**
@@ -27,12 +27,12 @@ import { SS_Status, _decode_SS_Status, _encode_SS_Status } from "../MAP-SS-DataT
  * 
  * ```asn1
  * ForwardingFeature ::= SEQUENCE {
- *     basicService    BasicServiceCode    OPTIONAL,
- *     ss-Status    [4] SS-Status    OPTIONAL,
- *     forwardedToNumber    [5] ISDN-AddressString    OPTIONAL,
- *     forwardedToSubaddress    [8] ISDN-SubaddressString    OPTIONAL,
- *     forwardingOptions    [6] ForwardingOptions    OPTIONAL,
- *     noReplyConditionTime    [7] NoReplyConditionTime    OPTIONAL,
+ *     basicService    BasicServiceCode    type OPTIONAL,
+ *     ss-Status    [4] SS-Status    type OPTIONAL,
+ *     forwardedToNumber    [5] ISDN-AddressString    type OPTIONAL,
+ *     forwardedToSubaddress    [8] ISDN-SubaddressString    type OPTIONAL,
+ *     forwardingOptions    [6] ForwardingOptions    type OPTIONAL,
+ *     noReplyConditionTime    [7] NoReplyConditionTime    type OPTIONAL,
  *     ...,
  *     longForwardedToNumber    [9] FTN-AddressString    OPTIONAL }
  * ```
@@ -41,85 +41,103 @@ import { SS_Status, _decode_SS_Status, _encode_SS_Status } from "../MAP-SS-DataT
  */
 export
 class ForwardingFeature {
+    /**
+     * @summary `basicService`.
+     * @description
+     *
+     * Basic Service Group (clause 7.6.4.40).
+     *
+     * @public
+     * @readonly
+     */
+    public readonly basicService?: OPTIONAL<BasicServiceCode>;
+    /**
+     * @summary `ss_Status`.
+     * @description
+     *
+     * SS state as in 3GPP TS 23.011 (3GPP TS 29.002 V19.1.0 clause
+     * 7.6.4.2).
+     *
+     * @public
+     * @readonly
+     */
+    public readonly ss_Status?: OPTIONAL<SS_Status>;
+    /**
+     * @summary `forwardedToNumber`.
+     * @description
+     *
+     * Forwarded-to number (clause 7.6.2.22).
+     *
+     * @public
+     * @readonly
+     */
+    public readonly forwardedToNumber?: OPTIONAL<ISDN_AddressString>;
+    /**
+     * @summary `forwardedToSubaddress`.
+     * @description
+     *
+     * Forwarded-to subaddress (clause 7.6.2.23).
+     *
+     * @public
+     * @readonly
+     */
+    public readonly forwardedToSubaddress?: OPTIONAL<ISDN_SubaddressString>;
+    /**
+     * @summary `forwardingOptions`.
+     * @description
+     *
+     * Notification and forwarding reason (clause 7.6.4.6).
+     *
+     * @public
+     * @readonly
+     */
+    public readonly forwardingOptions?: OPTIONAL<ForwardingOptions>;
+    /**
+     * @summary `noReplyConditionTime`.
+     * @description
+     *
+     * CFNRy timer (clause 7.6.4.7).
+     *
+     * @public
+     * @readonly
+     */
+    public readonly noReplyConditionTime?: OPTIONAL<NoReplyConditionTime>;
+    /**
+     * @summary `longForwardedToNumber`.
+     * @description
+     *
+     * Long forwarded-to number (clause 7.6.2.22A).
+     *
+     * @public
+     * @readonly
+     */
+    public readonly longForwardedToNumber?: OPTIONAL<FTN_AddressString>;
+    /**
+     * @summary Extensions that are not recognized.
+     * @public
+     * @readonly
+     */
+    public readonly _unrecognizedExtensionsList: _Element[];
+
     constructor (
-        /**
-         * @summary `basicService`.
-         * @description
-         *
-         * Basic Service Group (clause 7.6.4.40).
-         *
-         * @public
-         * @readonly
-         */
-        readonly basicService?: OPTIONAL<BasicServiceCode>,
-        /**
-         * @summary `ss_Status`.
-         * @description
-         *
-         * SS state as in 3GPP TS 23.011 (3GPP TS 29.002 V19.1.0 clause
-         * 7.6.4.2).
-         *
-         * @public
-         * @readonly
-         */
-        readonly ss_Status?: OPTIONAL<SS_Status>,
-        /**
-         * @summary `forwardedToNumber`.
-         * @description
-         *
-         * Forwarded-to number (clause 7.6.2.22).
-         *
-         * @public
-         * @readonly
-         */
-        readonly forwardedToNumber?: OPTIONAL<ISDN_AddressString>,
-        /**
-         * @summary `forwardedToSubaddress`.
-         * @description
-         *
-         * Forwarded-to subaddress (clause 7.6.2.23).
-         *
-         * @public
-         * @readonly
-         */
-        readonly forwardedToSubaddress?: OPTIONAL<ISDN_SubaddressString>,
-        /**
-         * @summary `forwardingOptions`.
-         * @description
-         *
-         * Notification and forwarding reason (clause 7.6.4.6).
-         *
-         * @public
-         * @readonly
-         */
-        readonly forwardingOptions?: OPTIONAL<ForwardingOptions>,
-        /**
-         * @summary `noReplyConditionTime`.
-         * @description
-         *
-         * CFNRy timer (clause 7.6.4.7).
-         *
-         * @public
-         * @readonly
-         */
-        readonly noReplyConditionTime?: OPTIONAL<NoReplyConditionTime>,
-        /**
-         * @summary `longForwardedToNumber`.
-         * @description
-         *
-         * Long forwarded-to number (clause 7.6.2.22A).
-         *
-         * @public
-         * @readonly
-         */
-        readonly longForwardedToNumber?: OPTIONAL<FTN_AddressString>,
-        /**
-         * @summary Extensions that are not recognized.
-         * @public
-         * @readonly
-         */
-        readonly _unrecognizedExtensionsList: _Element[] = []
-    ) {}
+        basicService?: OPTIONAL<BasicServiceCode>,
+        ss_Status?: OPTIONAL<SS_Status>,
+        forwardedToNumber?: OPTIONAL<ISDN_AddressString>,
+        forwardedToSubaddress?: OPTIONAL<ISDN_SubaddressString>,
+        forwardingOptions?: OPTIONAL<ForwardingOptions>,
+        noReplyConditionTime?: OPTIONAL<NoReplyConditionTime>,
+        longForwardedToNumber?: OPTIONAL<FTN_AddressString>,
+        _unrecognizedExtensionsList: _Element[] = []
+    ) {
+        this.basicService = basicService;
+        this.ss_Status = ss_Status;
+        this.forwardedToNumber = forwardedToNumber;
+        this.forwardedToSubaddress = forwardedToSubaddress;
+        this.forwardingOptions = forwardingOptions;
+        this.noReplyConditionTime = noReplyConditionTime;
+        this.longForwardedToNumber = longForwardedToNumber;
+        this._unrecognizedExtensionsList = _unrecognizedExtensionsList;
+    }
 
     /**
      * @summary Restructures an object into a ForwardingFeature

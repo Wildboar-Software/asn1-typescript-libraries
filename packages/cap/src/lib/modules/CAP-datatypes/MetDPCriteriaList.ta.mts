@@ -1,5 +1,5 @@
 import {
-    ASN1Element as _Element,
+    type ASN1Element as _Element,
     ASN1SizeError,
 } from "@wildboar/asn1";
 import * as $ from "@wildboar/asn1/functional";
@@ -24,4 +24,4 @@ export const _decode_MetDPCriteriaList = (el: _Element): MetDPCriteriaList => {
     }
     return value;
 };
-export const _encode_MetDPCriteriaList = $._encodeSequenceOf<MetDPCriterion>(() => _encode_MetDPCriterion, $.BER);
+export const _encode_MetDPCriteriaList: $.SequenceOfEncoder<MetDPCriterion> = $._encodeSequenceOf<MetDPCriterion>(() => _encode_MetDPCriterion, $.BER);

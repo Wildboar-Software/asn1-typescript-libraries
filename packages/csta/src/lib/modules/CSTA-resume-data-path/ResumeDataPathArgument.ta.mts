@@ -2,15 +2,15 @@
 
 import * as $ from "@wildboar/asn1/functional";
 import {
-    OPTIONAL,
-    SEQUENCE,
-    SET,
-    ASN1Element as _Element,
+    type OPTIONAL,
+    type SEQUENCE,
+    type SET,
+    type ASN1Element as _Element,
     ASN1TagClass as _TagClass
 } from "@wildboar/asn1";
-import { IOCrossRefID, _decode_IOCrossRefID, _encode_IOCrossRefID } from "../CSTA-device-feature-types/IOCrossRefID.ta.mjs";
+import { type IOCrossRefID, _decode_IOCrossRefID, _encode_IOCrossRefID } from "../CSTA-device-feature-types/IOCrossRefID.ta.mjs";
 
-import { IORegisterReqID, _decode_IORegisterReqID, _encode_IORegisterReqID } from "../CSTA-device-feature-types/IORegisterReqID.ta.mjs";
+import { type IORegisterReqID, _decode_IORegisterReqID, _encode_IORegisterReqID } from "../CSTA-device-feature-types/IORegisterReqID.ta.mjs";
 
 import { CSTACommonArguments, _decode_CSTACommonArguments, _encode_CSTACommonArguments } from "../CSTA-extension-types/CSTACommonArguments.ta.mjs";
 
@@ -31,7 +31,7 @@ import { CSTACommonArguments, _decode_CSTACommonArguments, _encode_CSTACommonArg
  * ```asn1
  * ResumeDataPathArgument ::= SEQUENCE
  * {    ioCrossRefID            IOCrossRefID,
- *     ioRegisterReqID            IORegisterReqID                OPTIONAL,
+ *     ioRegisterReqID            IORegisterReqID                type OPTIONAL,
  *     extensions            CSTACommonArguments            OPTIONAL }
  * ```
  * 
@@ -39,42 +39,50 @@ import { CSTACommonArguments, _decode_CSTACommonArguments, _encode_CSTACommonArg
  */
 export
 class ResumeDataPathArgument {
+    /**
+     * @summary `ioCrossRefID`.
+     * @description
+     *
+     * Cross-reference for the data path, including which side started it
+     * (ECMA-269 §6.2.1 / §6.2.3).
+     *
+     * @public
+     * @readonly
+     */
+    public readonly ioCrossRefID: IOCrossRefID;
+    /**
+     * @summary `ioRegisterReqID`.
+     * @description
+     *
+     * I/O registration identifier. Mandatory if the switching function
+     * supports I/O registration and the data path was requested by the
+     * switching function; otherwise absent (ECMA-269 §6.2.2).
+     *
+     * @public
+     * @readonly
+     */
+    public readonly ioRegisterReqID?: OPTIONAL<IORegisterReqID>;
+    /**
+     * @summary `extensions`.
+     * @description
+     *
+     * CSTACommonArguments carrying the service-table security and
+     * privateData parameters.
+     *
+     * @public
+     * @readonly
+     */
+    public readonly extensions?: OPTIONAL<CSTACommonArguments>;
+
     constructor (
-        /**
-         * @summary `ioCrossRefID`.
-         * @description
-         *
-         * Cross-reference for the data path, including which side started it
-         * (ECMA-269 §6.2.1 / §6.2.3).
-         *
-         * @public
-         * @readonly
-         */
-        readonly ioCrossRefID: IOCrossRefID,
-        /**
-         * @summary `ioRegisterReqID`.
-         * @description
-         *
-         * I/O registration identifier. Mandatory if the switching function
-         * supports I/O registration and the data path was requested by the
-         * switching function; otherwise absent (ECMA-269 §6.2.2).
-         *
-         * @public
-         * @readonly
-         */
-        readonly ioRegisterReqID?: OPTIONAL<IORegisterReqID>,
-        /**
-         * @summary `extensions`.
-         * @description
-         *
-         * CSTACommonArguments carrying the service-table security and
-         * privateData parameters.
-         *
-         * @public
-         * @readonly
-         */
-        readonly extensions?: OPTIONAL<CSTACommonArguments>
-    ) {}
+        ioCrossRefID: IOCrossRefID,
+        ioRegisterReqID?: OPTIONAL<IORegisterReqID>,
+        extensions?: OPTIONAL<CSTACommonArguments>
+    ) {
+        this.ioCrossRefID = ioCrossRefID;
+        this.ioRegisterReqID = ioRegisterReqID;
+        this.extensions = extensions;
+    }
 
     /**
      * @summary Restructures an object into a ResumeDataPathArgument

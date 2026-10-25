@@ -1,9 +1,9 @@
 /* eslint-disable */
 import {
-    ASN1Element as _Element,
+    type ASN1Element as _Element,
     ASN1TagClass as _TagClass,
-    OBJECT_IDENTIFIER,
-    OPTIONAL,
+    type OBJECT_IDENTIFIER,
+    type OPTIONAL,
 } from "@wildboar/asn1";
 import * as $ from "@wildboar/asn1/functional";
 
@@ -37,7 +37,7 @@ export class AlgorithmIdentifier {
      * @public
      * @readonly
      */
-    readonly algorithm: OBJECT_IDENTIFIER;
+    public readonly algorithm: OBJECT_IDENTIFIER;
     /**
      * @summary `parameters`.
      * @description
@@ -49,7 +49,7 @@ export class AlgorithmIdentifier {
      * @public
      * @readonly
      */
-    readonly parameters?: OPTIONAL<_Element>;
+    public readonly parameters?: OPTIONAL<_Element>;
 
     constructor(
         algorithm: OBJECT_IDENTIFIER,

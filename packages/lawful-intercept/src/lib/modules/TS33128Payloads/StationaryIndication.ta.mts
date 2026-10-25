@@ -85,7 +85,7 @@ type StationaryIndication = _enum_for_StationaryIndication;
  * @enum {number}
  */
 export
-const StationaryIndication = _enum_for_StationaryIndication;
+const StationaryIndication: typeof _enum_for_StationaryIndication = _enum_for_StationaryIndication;
 
 /**
  * @summary StationaryIndication_stationary
@@ -93,7 +93,7 @@ const StationaryIndication = _enum_for_StationaryIndication;
  * @type {number}
  */
 export
-const StationaryIndication_stationary: StationaryIndication = StationaryIndication.stationary; /* LONG_NAMED_ENUMERATED_VALUE */
+const StationaryIndication_stationary: _enum_for_StationaryIndication.stationary = StationaryIndication.stationary; /* LONG_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary stationary
@@ -101,7 +101,7 @@ const StationaryIndication_stationary: StationaryIndication = StationaryIndicati
  * @type {number}
  */
 export
-const stationary: StationaryIndication = StationaryIndication.stationary; /* SHORT_NAMED_ENUMERATED_VALUE */
+const stationary: _enum_for_StationaryIndication.stationary = StationaryIndication.stationary; /* SHORT_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary StationaryIndication_mobile
@@ -109,7 +109,7 @@ const stationary: StationaryIndication = StationaryIndication.stationary; /* SHO
  * @type {number}
  */
 export
-const StationaryIndication_mobile: StationaryIndication = StationaryIndication.mobile; /* LONG_NAMED_ENUMERATED_VALUE */
+const StationaryIndication_mobile: _enum_for_StationaryIndication.mobile = StationaryIndication.mobile; /* LONG_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary mobile
@@ -117,7 +117,7 @@ const StationaryIndication_mobile: StationaryIndication = StationaryIndication.m
  * @type {number}
  */
 export
-const mobile: StationaryIndication = StationaryIndication.mobile; /* SHORT_NAMED_ENUMERATED_VALUE */
+const mobile: _enum_for_StationaryIndication.mobile = StationaryIndication.mobile; /* SHORT_NAMED_ENUMERATED_VALUE */
 export const _decode_StationaryIndication: $.ASN1Decoder<StationaryIndication> = $._decodeEnumerated;
 export const _encode_StationaryIndication: $.ASN1Encoder<StationaryIndication> = $._encodeEnumerated;
 

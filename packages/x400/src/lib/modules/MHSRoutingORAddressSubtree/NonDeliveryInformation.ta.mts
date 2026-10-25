@@ -1,7 +1,7 @@
 /* eslint-disable */
 import {
-    OPTIONAL,
-    ASN1Element as _Element,
+    type OPTIONAL,
+    type ASN1Element as _Element,
     ASN1TagClass as _TagClass,
     ASN1Construction as _Construction,
     ASN1UniversalType as _UniversalType,
@@ -12,17 +12,17 @@ import {
 } from '@wildboar/asn1';
 import * as $ from '@wildboar/asn1/functional';
 import {
-    NonDeliveryReasonCode,
+    type NonDeliveryReasonCode,
     _decode_NonDeliveryReasonCode,
     _encode_NonDeliveryReasonCode,
 } from '../MTSAbstractService/NonDeliveryReasonCode.ta.mjs';
 import {
-    NonDeliveryDiagnosticCode,
+    type NonDeliveryDiagnosticCode,
     _decode_NonDeliveryDiagnosticCode,
     _encode_NonDeliveryDiagnosticCode,
 } from '../MTSAbstractService/NonDeliveryDiagnosticCode.ta.mjs';
 import {
-    SupplementaryInformation,
+    type SupplementaryInformation,
     _decode_SupplementaryInformation,
     _encode_SupplementaryInformation,
 } from '../MTSAbstractService/SupplementaryInformation.ta.mjs';
@@ -44,26 +44,34 @@ import {
  *
  */
 export class NonDeliveryInformation {
+    /**
+     * @summary `reason`.
+     * @public
+     * @readonly
+     */
+    public readonly reason: NonDeliveryReasonCode;
+    /**
+     * @summary `diagnostic`.
+     * @public
+     * @readonly
+     */
+    public readonly diagnostic?: OPTIONAL<NonDeliveryDiagnosticCode>;
+    /**
+     * @summary `supplementary_information`.
+     * @public
+     * @readonly
+     */
+    public readonly supplementary_information?: OPTIONAL<SupplementaryInformation>;
+
     constructor(
-        /**
-         * @summary `reason`.
-         * @public
-         * @readonly
-         */
-        readonly reason: NonDeliveryReasonCode,
-        /**
-         * @summary `diagnostic`.
-         * @public
-         * @readonly
-         */
-        readonly diagnostic?: OPTIONAL<NonDeliveryDiagnosticCode>,
-        /**
-         * @summary `supplementary_information`.
-         * @public
-         * @readonly
-         */
-        readonly supplementary_information?: OPTIONAL<SupplementaryInformation>
-    ) {}
+        reason: NonDeliveryReasonCode,
+        diagnostic?: OPTIONAL<NonDeliveryDiagnosticCode>,
+        supplementary_information?: OPTIONAL<SupplementaryInformation>
+    ) {
+        this.reason = reason;
+        this.diagnostic = diagnostic;
+        this.supplementary_information = supplementary_information;
+    }
 
     /**
      * @summary Restructures an object into a NonDeliveryInformation

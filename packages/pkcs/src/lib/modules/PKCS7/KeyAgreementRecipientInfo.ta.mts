@@ -1,27 +1,27 @@
 /* eslint-disable */
 import {
-    ASN1Element as _Element,
+    type ASN1Element as _Element,
     ASN1TagClass as _TagClass,
-    OCTET_STRING,
-    OPTIONAL,
+    type OCTET_STRING,
+    type OPTIONAL,
 } from "@wildboar/asn1";
 import * as $ from "@wildboar/asn1/functional";
 import {
-    KeyEncryptionAlgorithmIdentifier,
+    type KeyEncryptionAlgorithmIdentifier,
     _decode_KeyEncryptionAlgorithmIdentifier,
     _encode_KeyEncryptionAlgorithmIdentifier,
 } from "../PKCS7/KeyEncryptionAlgorithmIdentifier.ta.mjs";
 import {
-    OriginatorIdentifierOrKey,
+    type OriginatorIdentifierOrKey,
     _decode_OriginatorIdentifierOrKey,
     _encode_OriginatorIdentifierOrKey,
 } from "../PKCS7/OriginatorIdentifierOrKey.ta.mjs";
 import {
-    RecipientEncryptedKeys,
+    type RecipientEncryptedKeys,
     _decode_RecipientEncryptedKeys,
     _encode_RecipientEncryptedKeys,
 } from "../PKCS7/RecipientEncryptedKeys.ta.mjs";
-import { Version, _decode_Version, _encode_Version } from "../PKCS7/Version.ta.mjs";
+import { type Version, _decode_Version, _encode_Version } from "../PKCS7/Version.ta.mjs";
 
 /**
  * @summary KeyAgreementRecipientInfo
@@ -41,38 +41,50 @@ import { Version, _decode_Version, _encode_Version } from "../PKCS7/Version.ta.m
  *
  */
 export class KeyAgreementRecipientInfo {
+    /**
+     * @summary `version`.
+     * @public
+     * @readonly
+     */
+    public readonly version: Version;
+    /**
+     * @summary `originator`.
+     * @public
+     * @readonly
+     */
+    public readonly originator: OriginatorIdentifierOrKey;
+    /**
+     * @summary `userKeyingMaterial`.
+     * @public
+     * @readonly
+     */
+    public readonly userKeyingMaterial: OPTIONAL<OCTET_STRING>;
+    /**
+     * @summary `keyEncryptionAlgorithm`.
+     * @public
+     * @readonly
+     */
+    public readonly keyEncryptionAlgorithm: KeyEncryptionAlgorithmIdentifier;
+    /**
+     * @summary `recipientEncryptedKeys`.
+     * @public
+     * @readonly
+     */
+    public readonly recipientEncryptedKeys: RecipientEncryptedKeys;
+
     constructor(
-        /**
-         * @summary `version`.
-         * @public
-         * @readonly
-         */
-        readonly version: Version,
-        /**
-         * @summary `originator`.
-         * @public
-         * @readonly
-         */
-        readonly originator: OriginatorIdentifierOrKey,
-        /**
-         * @summary `userKeyingMaterial`.
-         * @public
-         * @readonly
-         */
-        readonly userKeyingMaterial: OPTIONAL<OCTET_STRING>,
-        /**
-         * @summary `keyEncryptionAlgorithm`.
-         * @public
-         * @readonly
-         */
-        readonly keyEncryptionAlgorithm: KeyEncryptionAlgorithmIdentifier,
-        /**
-         * @summary `recipientEncryptedKeys`.
-         * @public
-         * @readonly
-         */
-        readonly recipientEncryptedKeys: RecipientEncryptedKeys
-    ) {}
+        version: Version,
+        originator: OriginatorIdentifierOrKey,
+        userKeyingMaterial: OPTIONAL<OCTET_STRING>,
+        keyEncryptionAlgorithm: KeyEncryptionAlgorithmIdentifier,
+        recipientEncryptedKeys: RecipientEncryptedKeys
+    ) {
+        this.version = version;
+        this.originator = originator;
+        this.userKeyingMaterial = userKeyingMaterial;
+        this.keyEncryptionAlgorithm = keyEncryptionAlgorithm;
+        this.recipientEncryptedKeys = recipientEncryptedKeys;
+    }
 
     /**
      * @summary Restructures an object into a KeyAgreementRecipientInfo

@@ -1,6 +1,6 @@
 /* eslint-disable */
 import {
-    ASN1Element as _Element,
+    type ASN1Element as _Element,
     ASN1TagClass as _TagClass
 } from "@wildboar/asn1";
 import * as $ from "@wildboar/asn1/functional";
@@ -9,12 +9,12 @@ import { MediaDescriptor, _decode_MediaDescriptor, _encode_MediaDescriptor } fro
 import { ModemDescriptor, _decode_ModemDescriptor, _encode_ModemDescriptor } from "../MEDIA-GATEWAY-CONTROL/ModemDescriptor.ta.mjs";
 import { MuxDescriptor, _decode_MuxDescriptor, _encode_MuxDescriptor } from "../MEDIA-GATEWAY-CONTROL/MuxDescriptor.ta.mjs";
 import { EventsDescriptor, _decode_EventsDescriptor, _encode_EventsDescriptor } from "../MEDIA-GATEWAY-CONTROL/EventsDescriptor.ta.mjs";
-import { EventBufferDescriptor, _decode_EventBufferDescriptor, _encode_EventBufferDescriptor } from "../MEDIA-GATEWAY-CONTROL/EventBufferDescriptor.ta.mjs";
-import { SignalsDescriptor, _decode_SignalsDescriptor, _encode_SignalsDescriptor } from "../MEDIA-GATEWAY-CONTROL/SignalsDescriptor.ta.mjs";
+import { type EventBufferDescriptor, _decode_EventBufferDescriptor, _encode_EventBufferDescriptor } from "../MEDIA-GATEWAY-CONTROL/EventBufferDescriptor.ta.mjs";
+import { type SignalsDescriptor, _decode_SignalsDescriptor, _encode_SignalsDescriptor } from "../MEDIA-GATEWAY-CONTROL/SignalsDescriptor.ta.mjs";
 import { DigitMapDescriptor, _decode_DigitMapDescriptor, _encode_DigitMapDescriptor } from "../MEDIA-GATEWAY-CONTROL/DigitMapDescriptor.ta.mjs";
 import { ObservedEventsDescriptor, _decode_ObservedEventsDescriptor, _encode_ObservedEventsDescriptor } from "../MEDIA-GATEWAY-CONTROL/ObservedEventsDescriptor.ta.mjs";
-import { StatisticsDescriptor, _decode_StatisticsDescriptor, _encode_StatisticsDescriptor } from "../MEDIA-GATEWAY-CONTROL/StatisticsDescriptor.ta.mjs";
-import { PackagesDescriptor, _decode_PackagesDescriptor, _encode_PackagesDescriptor } from "../MEDIA-GATEWAY-CONTROL/PackagesDescriptor.ta.mjs";
+import { type StatisticsDescriptor, _decode_StatisticsDescriptor, _encode_StatisticsDescriptor } from "../MEDIA-GATEWAY-CONTROL/StatisticsDescriptor.ta.mjs";
+import { type PackagesDescriptor, _decode_PackagesDescriptor, _encode_PackagesDescriptor } from "../MEDIA-GATEWAY-CONTROL/PackagesDescriptor.ta.mjs";
 import { AuditDescriptor, _decode_AuditDescriptor, _encode_AuditDescriptor } from "../MEDIA-GATEWAY-CONTROL/AuditDescriptor.ta.mjs";
 
 

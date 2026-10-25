@@ -1,9 +1,9 @@
 /* eslint-disable */
 import {
-    BOOLEAN,
-    NULL,
-    OPTIONAL,
-    ASN1Element as _Element,
+    type BOOLEAN,
+    type NULL,
+    type OPTIONAL,
+    type ASN1Element as _Element,
     ASN1TagClass as _TagClass
 } from "@wildboar/asn1";
 import * as $ from "@wildboar/asn1/functional";
@@ -13,7 +13,7 @@ import { BackwardServiceInteractionInd, _decode_BackwardServiceInteractionInd, _
 // export { BackwardServiceInteractionInd, _decode_BackwardServiceInteractionInd, _encode_BackwardServiceInteractionInd } from "../IN-SSF-SCF-datatypes/BackwardServiceInteractionInd.ta.mjs";
 import { BothwayThroughConnectionInd, _decode_BothwayThroughConnectionInd, _encode_BothwayThroughConnectionInd, _enum_for_BothwayThroughConnectionInd } from "../IN-SSF-SCF-datatypes/BothwayThroughConnectionInd.ta.mjs";
 // export { BothwayThroughConnectionInd, _enum_for_BothwayThroughConnectionInd, BothwayThroughConnectionInd_bothwayPathRequired /* IMPORTED_LONG_ENUMERATION_ITEM */, bothwayPathRequired /* IMPORTED_SHORT_ENUMERATION_ITEM */, BothwayThroughConnectionInd_bothwayPathNotRequired /* IMPORTED_LONG_ENUMERATION_ITEM */, bothwayPathNotRequired /* IMPORTED_SHORT_ENUMERATION_ITEM */, _decode_BothwayThroughConnectionInd, _encode_BothwayThroughConnectionInd } from "../IN-SSF-SCF-datatypes/BothwayThroughConnectionInd.ta.mjs";
-import { SuspendTimer, _decode_SuspendTimer, _encode_SuspendTimer } from "../IN-SSF-SCF-datatypes/SuspendTimer.ta.mjs";
+import { type SuspendTimer, _decode_SuspendTimer, _encode_SuspendTimer } from "../IN-SSF-SCF-datatypes/SuspendTimer.ta.mjs";
 // export { SuspendTimer, _decode_SuspendTimer, _encode_SuspendTimer } from "../IN-SSF-SCF-datatypes/SuspendTimer.ta.mjs";
 import { ConnectedNumberTreatmentInd, _decode_ConnectedNumberTreatmentInd, _encode_ConnectedNumberTreatmentInd, _enum_for_ConnectedNumberTreatmentInd } from "../IN-SSF-SCF-datatypes/ConnectedNumberTreatmentInd.ta.mjs";
 // export { ConnectedNumberTreatmentInd, _enum_for_ConnectedNumberTreatmentInd, ConnectedNumberTreatmentInd_noINImpact /* IMPORTED_LONG_ENUMERATION_ITEM */, noINImpact /* IMPORTED_SHORT_ENUMERATION_ITEM */, ConnectedNumberTreatmentInd_presentationRestricted /* IMPORTED_LONG_ENUMERATION_ITEM */, presentationRestricted /* IMPORTED_SHORT_ENUMERATION_ITEM */, ConnectedNumberTreatmentInd_presentCalledINNumber /* IMPORTED_LONG_ENUMERATION_ITEM */, presentCalledINNumber /* IMPORTED_SHORT_ENUMERATION_ITEM */, ConnectedNumberTreatmentInd_presentCalledINNumberRestricted /* IMPORTED_LONG_ENUMERATION_ITEM */, presentCalledINNumberRestricted /* IMPORTED_SHORT_ENUMERATION_ITEM */, _decode_ConnectedNumberTreatmentInd, _encode_ConnectedNumberTreatmentInd } from "../IN-SSF-SCF-datatypes/ConnectedNumberTreatmentInd.ta.mjs";
@@ -274,13 +274,13 @@ class ServiceInteractionIndicatorsTwo {
          * @static
          */
 
-    public static _enum_for_bothwayThroughConnectionInd = _enum_for_BothwayThroughConnectionInd;        /**
+    public static _enum_for_bothwayThroughConnectionInd: typeof _enum_for_BothwayThroughConnectionInd = _enum_for_BothwayThroughConnectionInd;        /**
          * @summary The enum used as the type of the component `connectedNumberTreatmentInd`
          * @public
          * @static
          */
 
-    public static _enum_for_connectedNumberTreatmentInd = _enum_for_ConnectedNumberTreatmentInd;
+    public static _enum_for_connectedNumberTreatmentInd: typeof _enum_for_ConnectedNumberTreatmentInd = _enum_for_ConnectedNumberTreatmentInd;
 }
 
 /**

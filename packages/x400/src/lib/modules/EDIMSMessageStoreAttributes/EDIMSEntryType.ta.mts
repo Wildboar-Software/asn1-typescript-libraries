@@ -1,6 +1,6 @@
 /* eslint-disable */
 import {
-    ASN1Element as _Element,
+    type ASN1Element as _Element,
     ASN1TagClass as _TagClass,
     ASN1Construction as _Construction,
     ASN1UniversalType as _UniversalType,
@@ -58,14 +58,14 @@ export type EDIMSEntryType = _enum_for_EDIMSEntryType;
  *
  * @enum {number}
  */
-export const EDIMSEntryType = _enum_for_EDIMSEntryType;
+export const EDIMSEntryType: typeof _enum_for_EDIMSEntryType = _enum_for_EDIMSEntryType;
 
 /**
  * @summary EDIMSEntryType_edim
  * @constant
  * @type {number}
  */
-export const EDIMSEntryType_edim: EDIMSEntryType =
+export const EDIMSEntryType_edim: _enum_for_EDIMSEntryType.edim =
     EDIMSEntryType.edim; /* LONG_NAMED_ENUMERATED_VALUE */
 
 /**
@@ -73,7 +73,7 @@ export const EDIMSEntryType_edim: EDIMSEntryType =
  * @constant
  * @type {number}
  */
-export const edim: EDIMSEntryType =
+export const edim: _enum_for_EDIMSEntryType.edim =
     EDIMSEntryType.edim; /* SHORT_NAMED_ENUMERATED_VALUE */
 
 /**
@@ -81,7 +81,7 @@ export const edim: EDIMSEntryType =
  * @constant
  * @type {number}
  */
-export const EDIMSEntryType_pn: EDIMSEntryType =
+export const EDIMSEntryType_pn: _enum_for_EDIMSEntryType.pn =
     EDIMSEntryType.pn; /* LONG_NAMED_ENUMERATED_VALUE */
 
 /**
@@ -89,7 +89,7 @@ export const EDIMSEntryType_pn: EDIMSEntryType =
  * @constant
  * @type {number}
  */
-export const pn: EDIMSEntryType =
+export const pn: _enum_for_EDIMSEntryType.pn =
     EDIMSEntryType.pn; /* SHORT_NAMED_ENUMERATED_VALUE */
 
 /**
@@ -97,7 +97,7 @@ export const pn: EDIMSEntryType =
  * @constant
  * @type {number}
  */
-export const EDIMSEntryType_nn: EDIMSEntryType =
+export const EDIMSEntryType_nn: _enum_for_EDIMSEntryType.nn =
     EDIMSEntryType.nn; /* LONG_NAMED_ENUMERATED_VALUE */
 
 /**
@@ -105,7 +105,7 @@ export const EDIMSEntryType_nn: EDIMSEntryType =
  * @constant
  * @type {number}
  */
-export const nn: EDIMSEntryType =
+export const nn: _enum_for_EDIMSEntryType.nn =
     EDIMSEntryType.nn; /* SHORT_NAMED_ENUMERATED_VALUE */
 
 /**
@@ -113,7 +113,7 @@ export const nn: EDIMSEntryType =
  * @constant
  * @type {number}
  */
-export const EDIMSEntryType_fn: EDIMSEntryType =
+export const EDIMSEntryType_fn: _enum_for_EDIMSEntryType.fn =
     EDIMSEntryType.fn; /* LONG_NAMED_ENUMERATED_VALUE */
 
 /**
@@ -121,14 +121,27 @@ export const EDIMSEntryType_fn: EDIMSEntryType =
  * @constant
  * @type {number}
  */
-export const fn: EDIMSEntryType =
+export const fn: _enum_for_EDIMSEntryType.fn =
     EDIMSEntryType.fn; /* SHORT_NAMED_ENUMERATED_VALUE */
 
 
-export const _decode_EDIMSEntryType = $._decodeEnumerated;
+export function _decode_EDIMSEntryType(el: _Element): EDIMSEntryType {
+    const enumerated = $._decodeEnumerated(el);
+    switch (enumerated) {
+        case EDIMSEntryType.edim: return EDIMSEntryType.edim;
+        case EDIMSEntryType.pn: return EDIMSEntryType.pn;
+        case EDIMSEntryType.nn: return EDIMSEntryType.nn;
+        case EDIMSEntryType.fn: return EDIMSEntryType.fn;
+        default:
+            throw new _ConstructionError(
+                'Invalid ENUMERATED value ' + enumerated + ' for EDIMSEntryType.',
+                el,
+            );
+    }
+}
 
 
-export const _encode_EDIMSEntryType = $._encodeEnumerated;
+export const _encode_EDIMSEntryType: $.ASN1Encoder<EDIMSEntryType> = $._encodeEnumerated as $.ASN1Encoder<EDIMSEntryType>;
 
 
 /* eslint-enable */

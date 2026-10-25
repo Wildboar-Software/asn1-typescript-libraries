@@ -1,6 +1,6 @@
 /* eslint-disable */
 import {
-    ASN1Element as _Element,
+    type ASN1Element as _Element,
     ASN1TagClass as _TagClass
 } from "@wildboar/asn1";
 import * as $ from "@wildboar/asn1/functional";
@@ -21,12 +21,12 @@ import { EventSpecificInformationBCUSM_associationReleaseRequestedSpecificInfo, 
  *   componentReceivedSpecificInfo
  *     [0]  SEQUENCE {componentReceivedInfo
  *                      [0]  OCTET STRING
- *                              OPTIONAL,
+ *                              type OPTIONAL,
  *                    ...},
  *   associationReleaseRequestedSpecificInfo
  *     [1]  SEQUENCE {associationReleaseInfo
  *                      [0]  OCTET STRING
- *                              OPTIONAL,
+ *                              type OPTIONAL,
  *                    releaseCause            [1]  Cause OPTIONAL,
  *                    ...}
  * }

@@ -1,6 +1,6 @@
 /* eslint-disable */
 import {
-    ASN1Element as _Element,
+    type ASN1Element as _Element,
     ASN1TagClass as _TagClass,
     ASN1Construction as _Construction,
     ASN1UniversalType as _UniversalType,
@@ -10,7 +10,7 @@ import {
     ASN1ConstructionError as _ConstructionError,
 } from "@wildboar/asn1";
 import * as $ from "@wildboar/asn1/functional";
-import { DfrEntryName, _decode_DfrEntryName, _encode_DfrEntryName } from "../DFRAbstractService/DfrEntryName.ta.mjs";
+import { type DfrEntryName, _decode_DfrEntryName, _encode_DfrEntryName } from "../DFRAbstractService/DfrEntryName.ta.mjs";
 import { AccessProblem, _enum_for_AccessProblem, _decode_AccessProblem, _encode_AccessProblem } from "../DFRAbstractService/AccessProblem.ta.mjs";
 
 
@@ -33,26 +33,32 @@ import { AccessProblem, _enum_for_AccessProblem, _decode_AccessProblem, _encode_
  */
 export
 class accessError_ParameterType_Item {
+    /**
+     * @summary `entry`.
+     * @description
+     *
+     * Entry that could not be accessed.
+     * @public
+     * @readonly
+     */
+    public readonly entry: DfrEntryName;
+    /**
+     * @summary `problem`.
+     * @description
+     *
+     * Why.
+     * @public
+     * @readonly
+     */
+    public readonly problem: AccessProblem;
+
     constructor (
-        /**
-         * @summary `entry`.
-         * @description
-         *
-         * Entry that could not be accessed.
-         * @public
-         * @readonly
-         */
-        readonly entry: DfrEntryName,
-        /**
-         * @summary `problem`.
-         * @description
-         *
-         * Why.
-         * @public
-         * @readonly
-         */
-        readonly problem: AccessProblem
-    ) {}
+        entry: DfrEntryName,
+        problem: AccessProblem
+    ) {
+        this.entry = entry;
+        this.problem = problem;
+    }
 
     /**
      * @summary Restructures an object into a accessError_ParameterType_Item
@@ -76,7 +82,7 @@ class accessError_ParameterType_Item {
          * @static
          */
 
-    public static _enum_for_problem = _enum_for_AccessProblem;
+    public static _enum_for_problem: typeof _enum_for_AccessProblem = _enum_for_AccessProblem;
 }
 
 /**

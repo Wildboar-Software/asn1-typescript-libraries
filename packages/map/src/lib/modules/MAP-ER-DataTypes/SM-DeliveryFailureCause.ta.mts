@@ -1,11 +1,11 @@
 /* eslint-disable */
 import {
-    OPTIONAL,
-    ASN1Element as _Element,
+    type OPTIONAL,
+    type ASN1Element as _Element,
     ASN1TagClass as _TagClass
 } from "@wildboar/asn1";
 import * as $ from "@wildboar/asn1/functional";
-import { SignalInfo, _decode_SignalInfo, _encode_SignalInfo } from "../MAP-CommonDataTypes/SignalInfo.ta.mjs";
+import { type SignalInfo, _decode_SignalInfo, _encode_SignalInfo } from "../MAP-CommonDataTypes/SignalInfo.ta.mjs";
 import { SM_EnumeratedDeliveryFailureCause, _decode_SM_EnumeratedDeliveryFailureCause, _encode_SM_EnumeratedDeliveryFailureCause, _enum_for_SM_EnumeratedDeliveryFailureCause } from "../MAP-ER-DataTypes/SM-EnumeratedDeliveryFailureCause.ta.mjs";
 import { ExtensionContainer, _decode_ExtensionContainer, _encode_ExtensionContainer } from "../MAP-ExtensionDataTypes/ExtensionContainer.ta.mjs";
 
@@ -25,8 +25,8 @@ import { ExtensionContainer, _decode_ExtensionContainer, _encode_ExtensionContai
  * ```asn1
  * SM-DeliveryFailureCause ::= SEQUENCE {
  *     sm-EnumeratedDeliveryFailureCause    SM-EnumeratedDeliveryFailureCause,
- *     diagnosticInfo    SignalInfo    OPTIONAL,
- *     extensionContainer    ExtensionContainer    OPTIONAL,
+ *     diagnosticInfo    SignalInfo    type OPTIONAL,
+ *     extensionContainer    ExtensionContainer    type OPTIONAL,
  *     ...}
  * ```
  * 
@@ -34,43 +34,53 @@ import { ExtensionContainer, _decode_ExtensionContainer, _encode_ExtensionContai
  */
 export
 class SM_DeliveryFailureCause {
+    /**
+     * @summary `sm_EnumeratedDeliveryFailureCause`.
+     * @description
+     *
+     * Enumerated delivery-failure reason (3GPP TS 29.002 V19.1.0 clauses
+     * 7.6.1.4 and 17.7.7).
+     *
+     * @public
+     * @readonly
+     */
+    public readonly sm_EnumeratedDeliveryFailureCause: SM_EnumeratedDeliveryFailureCause;
+    /**
+     * @summary `diagnosticInfo`.
+     * @description
+     *
+     * Detailed diagnostic information coded as specified in 3GPP TS 23.040
+     * under SMS-SUBMIT-REPORT and SMS-DELIVERY-REPORT (3GPP TS 29.002
+     * V19.1.0 clause 7.6.1.4).
+     *
+     * @public
+     * @readonly
+     */
+    public readonly diagnosticInfo?: OPTIONAL<SignalInfo>;
+    /**
+     * @summary `extensionContainer`.
+     * @public
+     * @readonly
+     */
+    public readonly extensionContainer?: OPTIONAL<ExtensionContainer>;
+    /**
+     * @summary Extensions that are not recognized.
+     * @public
+     * @readonly
+     */
+    public readonly _unrecognizedExtensionsList: _Element[];
+
     constructor (
-        /**
-         * @summary `sm_EnumeratedDeliveryFailureCause`.
-         * @description
-         *
-         * Enumerated delivery-failure reason (3GPP TS 29.002 V19.1.0 clauses
-         * 7.6.1.4 and 17.7.7).
-         *
-         * @public
-         * @readonly
-         */
-        readonly sm_EnumeratedDeliveryFailureCause: SM_EnumeratedDeliveryFailureCause,
-        /**
-         * @summary `diagnosticInfo`.
-         * @description
-         *
-         * Detailed diagnostic information coded as specified in 3GPP TS 23.040
-         * under SMS-SUBMIT-REPORT and SMS-DELIVERY-REPORT (3GPP TS 29.002
-         * V19.1.0 clause 7.6.1.4).
-         *
-         * @public
-         * @readonly
-         */
-        readonly diagnosticInfo?: OPTIONAL<SignalInfo>,
-        /**
-         * @summary `extensionContainer`.
-         * @public
-         * @readonly
-         */
-        readonly extensionContainer?: OPTIONAL<ExtensionContainer>,
-        /**
-         * @summary Extensions that are not recognized.
-         * @public
-         * @readonly
-         */
-        readonly _unrecognizedExtensionsList: _Element[] = []
-    ) {}
+        sm_EnumeratedDeliveryFailureCause: SM_EnumeratedDeliveryFailureCause,
+        diagnosticInfo?: OPTIONAL<SignalInfo>,
+        extensionContainer?: OPTIONAL<ExtensionContainer>,
+        _unrecognizedExtensionsList: _Element[] = []
+    ) {
+        this.sm_EnumeratedDeliveryFailureCause = sm_EnumeratedDeliveryFailureCause;
+        this.diagnosticInfo = diagnosticInfo;
+        this.extensionContainer = extensionContainer;
+        this._unrecognizedExtensionsList = _unrecognizedExtensionsList;
+    }
 
     /**
      * @summary Restructures an object into a SM_DeliveryFailureCause
@@ -94,7 +104,7 @@ class SM_DeliveryFailureCause {
          * @static
          */
 
-    public static _enum_for_sm_EnumeratedDeliveryFailureCause = _enum_for_SM_EnumeratedDeliveryFailureCause;
+    public static _enum_for_sm_EnumeratedDeliveryFailureCause: typeof _enum_for_SM_EnumeratedDeliveryFailureCause = _enum_for_SM_EnumeratedDeliveryFailureCause;
 }
 
 /**

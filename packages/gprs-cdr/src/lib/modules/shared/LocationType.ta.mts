@@ -1,13 +1,13 @@
 /* eslint-disable */
 import {
-    ASN1Element as _Element,
+    type ASN1Element as _Element,
     ASN1TagClass as _TagClass,
-    OPTIONAL,
+    type OPTIONAL,
     ASN1SizeError
 } from "@wildboar/asn1";
 import * as $ from "@wildboar/asn1/functional";
-import { _decode_LocationType_locationEstimateType, _encode_LocationType_locationEstimateType, _enum_for_LocationType_locationEstimateType, LocationType_locationEstimateType } from "./LocationType-locationEstimateType.ta.mjs";
-import { _decode_LocationType_deferredLocationEventType, _encode_LocationType_deferredLocationEventType, LocationType_deferredLocationEventType } from "./LocationType-deferredLocationEventType.ta.mjs";
+import { _decode_LocationType_locationEstimateType, _encode_LocationType_locationEstimateType, _enum_for_LocationType_locationEstimateType, type LocationType_locationEstimateType } from "./LocationType-locationEstimateType.ta.mjs";
+import { _decode_LocationType_deferredLocationEventType, _encode_LocationType_deferredLocationEventType, type LocationType_deferredLocationEventType } from "./LocationType-deferredLocationEventType.ta.mjs";
 
 
 /**
@@ -133,7 +133,7 @@ class LocationType {
          * @static
          */
 
-    public static _enum_for_locationEstimateType = _enum_for_LocationType_locationEstimateType;
+    public static _enum_for_locationEstimateType: typeof _enum_for_LocationType_locationEstimateType = _enum_for_LocationType_locationEstimateType;
 }
 
 /**

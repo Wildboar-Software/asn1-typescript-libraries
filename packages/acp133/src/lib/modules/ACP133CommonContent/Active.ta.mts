@@ -1,6 +1,6 @@
 /* eslint-disable */
 import {
-    BOOLEAN
+    type BOOLEAN
 } from "@wildboar/asn1";
 import * as $ from "@wildboar/asn1/functional";
 
@@ -22,8 +22,8 @@ import * as $ from "@wildboar/asn1/functional";
  */
 export
 type Active = BOOLEAN; // BooleanType
-export const _decode_Active = $._decodeBoolean;
-export const _encode_Active = $._encodeBoolean;
+export const _decode_Active: $.ASN1Decoder<boolean> = $._decodeBoolean;
+export const _encode_Active: $.ASN1Encoder<boolean> = $._encodeBoolean;
 
 
 /* eslint-enable */

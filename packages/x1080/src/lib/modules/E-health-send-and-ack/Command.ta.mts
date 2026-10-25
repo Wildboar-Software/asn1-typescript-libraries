@@ -1,7 +1,7 @@
 /* eslint-disable */
 import {
-    OCTET_STRING,
-    ASN1Element as _Element,
+    type OCTET_STRING,
+    type ASN1Element as _Element,
     ASN1TagClass as _TagClass,
     ASN1Construction as _Construction,
     ASN1UniversalType as _UniversalType,
@@ -12,12 +12,12 @@ import {
 } from '@wildboar/asn1';
 import * as $ from '@wildboar/asn1/functional';
 import {
-    EncryptionOptions,
+    type EncryptionOptions,
     _decode_EncryptionOptions,
     _encode_EncryptionOptions,
 } from '../E-health-setup/EncryptionOptions.ta.mjs';
 import {
-    IntegrityOptions,
+    type IntegrityOptions,
     _decode_IntegrityOptions,
     _encode_IntegrityOptions,
 } from '../E-health-setup/IntegrityOptions.ta.mjs';
@@ -48,43 +48,51 @@ import {
  *
  */
 export class Command {
+    /**
+     * @summary `encryptionOptions`.
+     * @description
+     *
+     * Whether CMS encryption is applied to `content`. ITU-T Rec.
+     * X.1080.1 (10/2011) module E-health-send-and-ack.
+     *
+     * @public
+     * @readonly
+     */
+    public readonly encryptionOptions: EncryptionOptions;
+    /**
+     * @summary `integrityOptions`.
+     * @description
+     *
+     * Whether CMS integrity is applied to `content`. ITU-T Rec.
+     * X.1080.1 (10/2011) module E-health-send-and-ack.
+     *
+     * @public
+     * @readonly
+     */
+    public readonly integrityOptions: IntegrityOptions;
+    /**
+     * @summary `content`.
+     * @description
+     *
+     * Encoding of an `Identified-Simple-Message` under the
+     * current encoding rules, in a CMS `ContentInfo` for
+     * encryption and/or integrity if needed. ITU-T Rec.
+     * X.1080.1 (10/2011) module E-health-send-and-ack.
+     *
+     * @public
+     * @readonly
+     */
+    public readonly content: OCTET_STRING;
+
     constructor(
-        /**
-         * @summary `encryptionOptions`.
-         * @description
-         *
-         * Whether CMS encryption is applied to `content`. ITU-T Rec.
-         * X.1080.1 (10/2011) module E-health-send-and-ack.
-         *
-         * @public
-         * @readonly
-         */
-        readonly encryptionOptions: EncryptionOptions,
-        /**
-         * @summary `integrityOptions`.
-         * @description
-         *
-         * Whether CMS integrity is applied to `content`. ITU-T Rec.
-         * X.1080.1 (10/2011) module E-health-send-and-ack.
-         *
-         * @public
-         * @readonly
-         */
-        readonly integrityOptions: IntegrityOptions,
-        /**
-         * @summary `content`.
-         * @description
-         *
-         * Encoding of an `Identified-Simple-Message` under the
-         * current encoding rules, in a CMS `ContentInfo` for
-         * encryption and/or integrity if needed. ITU-T Rec.
-         * X.1080.1 (10/2011) module E-health-send-and-ack.
-         *
-         * @public
-         * @readonly
-         */
-        readonly content: OCTET_STRING
-    ) {}
+        encryptionOptions: EncryptionOptions,
+        integrityOptions: IntegrityOptions,
+        content: OCTET_STRING
+    ) {
+        this.encryptionOptions = encryptionOptions;
+        this.integrityOptions = integrityOptions;
+        this.content = content;
+    }
 
     /**
      * @summary Restructures an object into a Command

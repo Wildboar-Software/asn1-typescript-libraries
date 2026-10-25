@@ -1,8 +1,8 @@
 /* eslint-disable */
 import {
-    BOOLEAN,
-    PrintableString,
-    ASN1Element as _Element,
+    type BOOLEAN,
+    type PrintableString,
+    type ASN1Element as _Element,
     ASN1TagClass as _TagClass
 } from "@wildboar/asn1";
 import * as $ from "@wildboar/asn1/functional";
@@ -120,13 +120,13 @@ class RIParametersDeprecated {
          * @static
          */
 
-    public static _enum_for_rIType = _enum_for_RIParametersDeprecated_rIType;        /**
+    public static _enum_for_rIType: typeof _enum_for_RIParametersDeprecated_rIType = _enum_for_RIParametersDeprecated_rIType;        /**
          * @summary The enum used as the type of the component `classification`
          * @public
          * @static
          */
 
-    public static _enum_for_classification = _enum_for_Classification;
+    public static _enum_for_classification: typeof _enum_for_Classification = _enum_for_Classification;
 }
 
 /**

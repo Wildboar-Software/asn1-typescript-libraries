@@ -1,7 +1,7 @@
 /* eslint-disable */
 import {
-    OPTIONAL,
-    ASN1Element as _Element,
+    type OPTIONAL,
+    type ASN1Element as _Element,
     ASN1TagClass as _TagClass,
     ASN1Construction as _Construction,
     ASN1UniversalType as _UniversalType,
@@ -12,12 +12,12 @@ import {
 } from '@wildboar/asn1';
 import * as $ from '@wildboar/asn1/functional';
 import {
-    RecipientCertificate,
+    type RecipientCertificate,
     _decode_RecipientCertificate,
     _encode_RecipientCertificate,
 } from '../MTSAbstractService/RecipientCertificate.ta.mjs';
 import {
-    ProofOfDelivery,
+    type ProofOfDelivery,
     _decode_ProofOfDelivery,
     _encode_ProofOfDelivery,
 } from '../MTSAbstractService/ProofOfDelivery.ta.mjs';
@@ -46,32 +46,42 @@ import {
  *
  */
 export class MessageDeliveryResult {
+    /**
+     * @summary `recipient_certificate`.
+     * @public
+     * @readonly
+     */
+    public readonly recipient_certificate?: OPTIONAL<RecipientCertificate>;
+    /**
+     * @summary `proof_of_delivery`.
+     * @public
+     * @readonly
+     */
+    public readonly proof_of_delivery?: OPTIONAL<ProofOfDelivery>;
+    /**
+     * @summary `extensions`.
+     * @public
+     * @readonly
+     */
+    public readonly extensions?: OPTIONAL<ExtensionField[]>;
+    /**
+     * @summary Extensions that are not recognized.
+     * @public
+     * @readonly
+     */
+    public readonly _unrecognizedExtensionsList: _Element[];
+
     constructor(
-        /**
-         * @summary `recipient_certificate`.
-         * @public
-         * @readonly
-         */
-        readonly recipient_certificate?: OPTIONAL<RecipientCertificate>,
-        /**
-         * @summary `proof_of_delivery`.
-         * @public
-         * @readonly
-         */
-        readonly proof_of_delivery?: OPTIONAL<ProofOfDelivery>,
-        /**
-         * @summary `extensions`.
-         * @public
-         * @readonly
-         */
-        readonly extensions?: OPTIONAL<ExtensionField[]>,
-        /**
-         * @summary Extensions that are not recognized.
-         * @public
-         * @readonly
-         */
-        readonly _unrecognizedExtensionsList: _Element[] = []
-    ) {}
+        recipient_certificate?: OPTIONAL<RecipientCertificate>,
+        proof_of_delivery?: OPTIONAL<ProofOfDelivery>,
+        extensions?: OPTIONAL<ExtensionField[]>,
+        _unrecognizedExtensionsList: _Element[] = []
+    ) {
+        this.recipient_certificate = recipient_certificate;
+        this.proof_of_delivery = proof_of_delivery;
+        this.extensions = extensions;
+        this._unrecognizedExtensionsList = _unrecognizedExtensionsList;
+    }
 
     /**
      * @summary Restructures an object into a MessageDeliveryResult

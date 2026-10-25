@@ -1,7 +1,7 @@
 /* eslint-disable */
 import {
-    ASN1Element as _Element,
-    BIT_STRING
+    type ASN1Element as _Element,
+    type BIT_STRING
 } from "@wildboar/asn1";
 import * as $ from "@wildboar/asn1/functional";
 
@@ -71,8 +71,8 @@ const ISDRProprietaryApplicationTemplate_lpaeSupport_lpaeUsingScws: number = 1; 
  */
 export
 const lpaeUsingScws: number = ISDRProprietaryApplicationTemplate_lpaeSupport_lpaeUsingScws; /* SHORT_NAMED_BIT */
-export const _decode_ISDRProprietaryApplicationTemplate_lpaeSupport = $._decodeBitString;
-export const _encode_ISDRProprietaryApplicationTemplate_lpaeSupport = $._encodeBitString;
+export const _decode_ISDRProprietaryApplicationTemplate_lpaeSupport: $.ASN1Decoder<BIT_STRING> = $._decodeBitString;
+export const _encode_ISDRProprietaryApplicationTemplate_lpaeSupport: $.ASN1Encoder<BIT_STRING> = $._encodeBitString;
 
 
 /* eslint-enable */

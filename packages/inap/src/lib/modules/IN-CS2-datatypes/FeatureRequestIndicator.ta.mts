@@ -1,4 +1,5 @@
 /* eslint-disable */
+import { ASN1Element as _Element, ASN1ConstructionError as _ConstructionError } from "@wildboar/asn1";
 import * as $ from "@wildboar/asn1/functional";
 
 
@@ -55,7 +56,7 @@ type FeatureRequestIndicator = _enum_for_FeatureRequestIndicator;
  * @enum {number}
  */
 export
-const FeatureRequestIndicator = _enum_for_FeatureRequestIndicator;
+const FeatureRequestIndicator: typeof _enum_for_FeatureRequestIndicator = _enum_for_FeatureRequestIndicator;
 
 /**
  * @summary FeatureRequestIndicator_hold
@@ -63,7 +64,7 @@ const FeatureRequestIndicator = _enum_for_FeatureRequestIndicator;
  * @type {number}
  */
 export
-const FeatureRequestIndicator_hold: FeatureRequestIndicator = FeatureRequestIndicator.hold; /* LONG_NAMED_ENUMERATED_VALUE */
+const FeatureRequestIndicator_hold: _enum_for_FeatureRequestIndicator.hold = FeatureRequestIndicator.hold; /* LONG_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary hold
@@ -71,7 +72,7 @@ const FeatureRequestIndicator_hold: FeatureRequestIndicator = FeatureRequestIndi
  * @type {number}
  */
 export
-const hold: FeatureRequestIndicator = FeatureRequestIndicator.hold; /* SHORT_NAMED_ENUMERATED_VALUE */
+const hold: _enum_for_FeatureRequestIndicator.hold = FeatureRequestIndicator.hold; /* SHORT_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary FeatureRequestIndicator_retrieve
@@ -79,7 +80,7 @@ const hold: FeatureRequestIndicator = FeatureRequestIndicator.hold; /* SHORT_NAM
  * @type {number}
  */
 export
-const FeatureRequestIndicator_retrieve: FeatureRequestIndicator = FeatureRequestIndicator.retrieve; /* LONG_NAMED_ENUMERATED_VALUE */
+const FeatureRequestIndicator_retrieve: _enum_for_FeatureRequestIndicator.retrieve = FeatureRequestIndicator.retrieve; /* LONG_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary retrieve
@@ -87,7 +88,7 @@ const FeatureRequestIndicator_retrieve: FeatureRequestIndicator = FeatureRequest
  * @type {number}
  */
 export
-const retrieve: FeatureRequestIndicator = FeatureRequestIndicator.retrieve; /* SHORT_NAMED_ENUMERATED_VALUE */
+const retrieve: _enum_for_FeatureRequestIndicator.retrieve = FeatureRequestIndicator.retrieve; /* SHORT_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary FeatureRequestIndicator_featureActivation
@@ -95,7 +96,7 @@ const retrieve: FeatureRequestIndicator = FeatureRequestIndicator.retrieve; /* S
  * @type {number}
  */
 export
-const FeatureRequestIndicator_featureActivation: FeatureRequestIndicator = FeatureRequestIndicator.featureActivation; /* LONG_NAMED_ENUMERATED_VALUE */
+const FeatureRequestIndicator_featureActivation: _enum_for_FeatureRequestIndicator.featureActivation = FeatureRequestIndicator.featureActivation; /* LONG_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary featureActivation
@@ -103,7 +104,7 @@ const FeatureRequestIndicator_featureActivation: FeatureRequestIndicator = Featu
  * @type {number}
  */
 export
-const featureActivation: FeatureRequestIndicator = FeatureRequestIndicator.featureActivation; /* SHORT_NAMED_ENUMERATED_VALUE */
+const featureActivation: _enum_for_FeatureRequestIndicator.featureActivation = FeatureRequestIndicator.featureActivation; /* SHORT_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary FeatureRequestIndicator_spare1
@@ -111,7 +112,7 @@ const featureActivation: FeatureRequestIndicator = FeatureRequestIndicator.featu
  * @type {number}
  */
 export
-const FeatureRequestIndicator_spare1: FeatureRequestIndicator = FeatureRequestIndicator.spare1; /* LONG_NAMED_ENUMERATED_VALUE */
+const FeatureRequestIndicator_spare1: _enum_for_FeatureRequestIndicator.spare1 = FeatureRequestIndicator.spare1; /* LONG_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary spare1
@@ -119,7 +120,7 @@ const FeatureRequestIndicator_spare1: FeatureRequestIndicator = FeatureRequestIn
  * @type {number}
  */
 export
-const spare1: FeatureRequestIndicator = FeatureRequestIndicator.spare1; /* SHORT_NAMED_ENUMERATED_VALUE */
+const spare1: _enum_for_FeatureRequestIndicator.spare1 = FeatureRequestIndicator.spare1; /* SHORT_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary FeatureRequestIndicator_sparen
@@ -127,7 +128,7 @@ const spare1: FeatureRequestIndicator = FeatureRequestIndicator.spare1; /* SHORT
  * @type {number}
  */
 export
-const FeatureRequestIndicator_sparen: FeatureRequestIndicator = FeatureRequestIndicator.sparen; /* LONG_NAMED_ENUMERATED_VALUE */
+const FeatureRequestIndicator_sparen: _enum_for_FeatureRequestIndicator.sparen = FeatureRequestIndicator.sparen; /* LONG_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary sparen
@@ -135,12 +136,26 @@ const FeatureRequestIndicator_sparen: FeatureRequestIndicator = FeatureRequestIn
  * @type {number}
  */
 export
-const sparen: FeatureRequestIndicator = FeatureRequestIndicator.sparen; /* SHORT_NAMED_ENUMERATED_VALUE */
+const sparen: _enum_for_FeatureRequestIndicator.sparen = FeatureRequestIndicator.sparen; /* SHORT_NAMED_ENUMERATED_VALUE */
 
 export
-const _decode_FeatureRequestIndicator: $.ASN1Decoder<FeatureRequestIndicator> = $._decodeEnumerated;
+function _decode_FeatureRequestIndicator(el: _Element): FeatureRequestIndicator {
+    const enumerated = $._decodeEnumerated(el);
+    switch (enumerated) {
+        case FeatureRequestIndicator.hold: return FeatureRequestIndicator.hold;
+        case FeatureRequestIndicator.retrieve: return FeatureRequestIndicator.retrieve;
+        case FeatureRequestIndicator.featureActivation: return FeatureRequestIndicator.featureActivation;
+        case FeatureRequestIndicator.spare1: return FeatureRequestIndicator.spare1;
+        case FeatureRequestIndicator.sparen: return FeatureRequestIndicator.sparen;
+        default:
+            throw new _ConstructionError(
+                "Invalid ENUMERATED value " + enumerated + " for FeatureRequestIndicator.",
+                el,
+            );
+    }
+}
 
 export
-const _encode_FeatureRequestIndicator: $.ASN1Encoder<FeatureRequestIndicator> = $._encodeEnumerated;
+const _encode_FeatureRequestIndicator: $.ASN1Encoder<FeatureRequestIndicator> = $._encodeEnumerated as $.ASN1Encoder<FeatureRequestIndicator>;
 
 /* eslint-enable */

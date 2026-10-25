@@ -1,7 +1,7 @@
 /* eslint-disable */
 import {
     ASN1ConstructionError as _ConstructionError,
-    ASN1Element as _Element,
+    type ASN1Element as _Element,
     ASN1TagClass as _TagClass,
 } from "@wildboar/asn1";
 import * as $ from "@wildboar/asn1/functional";
@@ -11,7 +11,7 @@ import {
     _encode_AlgorithmIdentifier,
 } from "../AuthenticationFramework/AlgorithmIdentifier.ta.mjs";
 import {
-    Integrity,
+    type Integrity,
     _decode_Integrity,
     _encode_Integrity,
 } from "../SpkmGssTokens/Integrity.ta.mjs";
@@ -40,38 +40,46 @@ import {
  *
  */
 export class REP_TI_TOKEN {
+    /**
+     * @summary `rep_ti_contents`.
+     * @description
+     *
+     * The "token" over which `rep_ti_integ` is computed.
+     *
+     * @public
+     * @readonly
+     */
+    public readonly rep_ti_contents: Rep_ti_contents;
+    /**
+     * @summary `algId`.
+     * @description
+     *
+     * Signature or MAC algorithm for `rep_ti_integ`.
+     *
+     * @public
+     * @readonly
+     */
+    public readonly algId: AlgorithmIdentifier;
+    /**
+     * @summary `rep_ti_integ`.
+     * @description
+     *
+     * Signature or MAC of DER(`rep-ti-contents`) per `algId`.
+     *
+     * @public
+     * @readonly
+     */
+    public readonly rep_ti_integ: Integrity;
+
     constructor(
-        /**
-         * @summary `rep_ti_contents`.
-         * @description
-         *
-         * The "token" over which `rep_ti_integ` is computed.
-         *
-         * @public
-         * @readonly
-         */
-        readonly rep_ti_contents: Rep_ti_contents,
-        /**
-         * @summary `algId`.
-         * @description
-         *
-         * Signature or MAC algorithm for `rep_ti_integ`.
-         *
-         * @public
-         * @readonly
-         */
-        readonly algId: AlgorithmIdentifier,
-        /**
-         * @summary `rep_ti_integ`.
-         * @description
-         *
-         * Signature or MAC of DER(`rep-ti-contents`) per `algId`.
-         *
-         * @public
-         * @readonly
-         */
-        readonly rep_ti_integ: Integrity
-    ) {}
+        rep_ti_contents: Rep_ti_contents,
+        algId: AlgorithmIdentifier,
+        rep_ti_integ: Integrity
+    ) {
+        this.rep_ti_contents = rep_ti_contents;
+        this.algId = algId;
+        this.rep_ti_integ = rep_ti_integ;
+    }
 
     /**
      * @summary Restructures an object into a REP_TI_TOKEN

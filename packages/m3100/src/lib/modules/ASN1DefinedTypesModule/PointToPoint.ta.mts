@@ -1,6 +1,6 @@
 /* eslint-disable */
 import {
-    ASN1Element as _Element,
+    type ASN1Element as _Element,
     ASN1TagClass as _TagClass,
     ASN1Construction as _Construction,
     ASN1UniversalType as _UniversalType,
@@ -11,7 +11,7 @@ import {
 } from '@wildboar/asn1';
 import * as $ from '@wildboar/asn1/functional';
 import {
-    ObjectInstance,
+    type ObjectInstance,
     _decode_ObjectInstance,
     _encode_ObjectInstance,
 } from '@wildboar/cmip';
@@ -32,26 +32,34 @@ import {
  *
  */
 export class PointToPoint {
+    /**
+     * @summary `fromTp`.
+     * @public
+     * @readonly
+     */
+    public readonly fromTp: ObjectInstance;
+    /**
+     * @summary `toTp`.
+     * @public
+     * @readonly
+     */
+    public readonly toTp: ObjectInstance;
+    /**
+     * @summary `xCon`.
+     * @public
+     * @readonly
+     */
+    public readonly xCon: ObjectInstance;
+
     constructor(
-        /**
-         * @summary `fromTp`.
-         * @public
-         * @readonly
-         */
-        readonly fromTp: ObjectInstance,
-        /**
-         * @summary `toTp`.
-         * @public
-         * @readonly
-         */
-        readonly toTp: ObjectInstance,
-        /**
-         * @summary `xCon`.
-         * @public
-         * @readonly
-         */
-        readonly xCon: ObjectInstance
-    ) {}
+        fromTp: ObjectInstance,
+        toTp: ObjectInstance,
+        xCon: ObjectInstance
+    ) {
+        this.fromTp = fromTp;
+        this.toTp = toTp;
+        this.xCon = xCon;
+    }
 
     /**
      * @summary Restructures an object into a PointToPoint

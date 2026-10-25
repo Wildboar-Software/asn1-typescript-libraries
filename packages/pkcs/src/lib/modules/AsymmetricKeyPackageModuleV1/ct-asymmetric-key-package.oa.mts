@@ -1,6 +1,6 @@
 /* eslint-disable */
 import {
-    AsymmetricKeyPackage,
+    type AsymmetricKeyPackage,
     _decode_AsymmetricKeyPackage,
     _encode_AsymmetricKeyPackage,
 } from "../AsymmetricKeyPackageModuleV1/AsymmetricKeyPackage.ta.mjs";

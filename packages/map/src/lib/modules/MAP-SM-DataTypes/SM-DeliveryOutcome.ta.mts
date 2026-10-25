@@ -71,7 +71,7 @@ type SM_DeliveryOutcome = _enum_for_SM_DeliveryOutcome;
  * @enum {number}
  */
 export
-const SM_DeliveryOutcome = _enum_for_SM_DeliveryOutcome;
+const SM_DeliveryOutcome: typeof _enum_for_SM_DeliveryOutcome = _enum_for_SM_DeliveryOutcome;
 
 /**
  * @summary SM_DeliveryOutcome_memoryCapacityExceeded
@@ -83,7 +83,7 @@ const SM_DeliveryOutcome = _enum_for_SM_DeliveryOutcome;
  * @type {number}
  */
 export
-const SM_DeliveryOutcome_memoryCapacityExceeded: SM_DeliveryOutcome = SM_DeliveryOutcome.memoryCapacityExceeded; /* LONG_NAMED_ENUMERATED_VALUE */
+const SM_DeliveryOutcome_memoryCapacityExceeded: _enum_for_SM_DeliveryOutcome.memoryCapacityExceeded = SM_DeliveryOutcome.memoryCapacityExceeded; /* LONG_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary memoryCapacityExceeded
@@ -95,7 +95,7 @@ const SM_DeliveryOutcome_memoryCapacityExceeded: SM_DeliveryOutcome = SM_Deliver
  * @type {number}
  */
 export
-const memoryCapacityExceeded: SM_DeliveryOutcome = SM_DeliveryOutcome.memoryCapacityExceeded; /* SHORT_NAMED_ENUMERATED_VALUE */
+const memoryCapacityExceeded: _enum_for_SM_DeliveryOutcome.memoryCapacityExceeded = SM_DeliveryOutcome.memoryCapacityExceeded; /* SHORT_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary SM_DeliveryOutcome_absentSubscriber
@@ -107,7 +107,7 @@ const memoryCapacityExceeded: SM_DeliveryOutcome = SM_DeliveryOutcome.memoryCapa
  * @type {number}
  */
 export
-const SM_DeliveryOutcome_absentSubscriber: SM_DeliveryOutcome = SM_DeliveryOutcome.absentSubscriber; /* LONG_NAMED_ENUMERATED_VALUE */
+const SM_DeliveryOutcome_absentSubscriber: _enum_for_SM_DeliveryOutcome.absentSubscriber = SM_DeliveryOutcome.absentSubscriber; /* LONG_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary absentSubscriber
@@ -119,7 +119,7 @@ const SM_DeliveryOutcome_absentSubscriber: SM_DeliveryOutcome = SM_DeliveryOutco
  * @type {number}
  */
 export
-const absentSubscriber: SM_DeliveryOutcome = SM_DeliveryOutcome.absentSubscriber; /* SHORT_NAMED_ENUMERATED_VALUE */
+const absentSubscriber: _enum_for_SM_DeliveryOutcome.absentSubscriber = SM_DeliveryOutcome.absentSubscriber; /* SHORT_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary SM_DeliveryOutcome_successfulTransfer
@@ -131,7 +131,7 @@ const absentSubscriber: SM_DeliveryOutcome = SM_DeliveryOutcome.absentSubscriber
  * @type {number}
  */
 export
-const SM_DeliveryOutcome_successfulTransfer: SM_DeliveryOutcome = SM_DeliveryOutcome.successfulTransfer; /* LONG_NAMED_ENUMERATED_VALUE */
+const SM_DeliveryOutcome_successfulTransfer: _enum_for_SM_DeliveryOutcome.successfulTransfer = SM_DeliveryOutcome.successfulTransfer; /* LONG_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary successfulTransfer
@@ -143,7 +143,7 @@ const SM_DeliveryOutcome_successfulTransfer: SM_DeliveryOutcome = SM_DeliveryOut
  * @type {number}
  */
 export
-const successfulTransfer: SM_DeliveryOutcome = SM_DeliveryOutcome.successfulTransfer; /* SHORT_NAMED_ENUMERATED_VALUE */
+const successfulTransfer: _enum_for_SM_DeliveryOutcome.successfulTransfer = SM_DeliveryOutcome.successfulTransfer; /* SHORT_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary Decodes an ASN.1 element into a(n) SM_DeliveryOutcome
@@ -151,7 +151,7 @@ const successfulTransfer: SM_DeliveryOutcome = SM_DeliveryOutcome.successfulTran
  * @param el The element being decoded.
  * @returns The decoded data structure.
  */
-export const _decode_SM_DeliveryOutcome = $._decodeEnumerated;
+export const _decode_SM_DeliveryOutcome: $.ASN1Decoder<number> = $._decodeEnumerated;
 
 /**
  * @summary Encodes a(n) SM_DeliveryOutcome into an ASN.1 Element.
@@ -160,7 +160,7 @@ export const _decode_SM_DeliveryOutcome = $._decodeEnumerated;
  * @param elGetter A function that can be used to get new ASN.1 elements.
  * @returns {_Element} The SM_DeliveryOutcome, encoded as an ASN.1 Element.
  */
-export const _encode_SM_DeliveryOutcome = $._encodeEnumerated;
+export const _encode_SM_DeliveryOutcome: $.ASN1Encoder<number> = $._encodeEnumerated;
 
 
 /* eslint-enable */

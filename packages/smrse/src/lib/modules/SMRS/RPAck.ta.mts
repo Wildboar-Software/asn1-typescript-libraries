@@ -1,11 +1,11 @@
 /* eslint-disable */
 import {
     ASN1ConstructionError as _ConstructionError,
-    ASN1Element as _Element,
+    type ASN1Element as _Element,
     ASN1TagClass as _TagClass
 } from "@wildboar/asn1";
 import * as $ from "@wildboar/asn1/functional";
-import { RP_MR, _decode_RP_MR, _encode_RP_MR } from "../SMRS/RP-MR.ta.mjs";
+import { type RP_MR, _decode_RP_MR, _encode_RP_MR } from "../SMRS/RP-MR.ta.mjs";
 
 
 /**
@@ -44,7 +44,7 @@ class RPAck {
      * @public
      * @readonly
      */
-    readonly message_reference: RP_MR;
+    public readonly message_reference: RP_MR;
     /**
      * @summary Extensions that are not recognized.
      * @description
@@ -55,7 +55,7 @@ class RPAck {
      * @public
      * @readonly
      */
-    readonly _unrecognizedExtensionsList: _Element[];
+    public readonly _unrecognizedExtensionsList: _Element[];
 
     constructor (
         message_reference: RP_MR,

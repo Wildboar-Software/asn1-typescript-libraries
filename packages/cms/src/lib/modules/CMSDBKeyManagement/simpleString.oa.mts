@@ -1,7 +1,7 @@
 /* eslint-disable */
 import { type DBEKM } from "../CMSDBKeyManagement/DBEKM.oca.mjs";
 import {
-    SimpleString,
+    type SimpleString,
     _decode_SimpleString,
     _encode_SimpleString,
 } from "../CMSDBKeyManagement/SimpleString.ta.mjs";

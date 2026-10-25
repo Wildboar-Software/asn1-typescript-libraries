@@ -1,7 +1,7 @@
 /* eslint-disable */
 import {
-    OPTIONAL,
-    ASN1Element as _Element,
+    type OPTIONAL,
+    type ASN1Element as _Element,
     ASN1TagClass as _TagClass,
     ASN1Construction as _Construction,
     ASN1UniversalType as _UniversalType,
@@ -41,32 +41,38 @@ import { Journal_Variable, _decode_Journal_Variable, _encode_Journal_Variable } 
  */
 export
 class EntryContent_entryForm_data {
+    /**
+     * @summary `event`.
+     * @description
+     *
+     * Event transition record: Event Condition name and
+     * `&ecState` after processing. Sets `&informationType` to
+     * `event-data`. ISO 9506-1:2003 §23.1.2.8, §23.3.1.1.2.2.1.
+     *
+     * @public
+     * @readonly
+     */
+    public readonly event?: OPTIONAL<EntryContent_entryForm_data_event>;
+    /**
+     * @summary `listOfVariables`.
+     * @description
+     *
+     * Journal variables (tag ≤ 255 chars plus value). Present
+     * only for `data` or `event-data`. ISO 9506-1:2003
+     * §23.1.2.9, §23.3.1.1.2.2.1.
+     *
+     * @public
+     * @readonly
+     */
+    public readonly listOfVariables?: OPTIONAL<Journal_Variable[]>;
+
     constructor (
-        /**
-         * @summary `event`.
-         * @description
-         *
-         * Event transition record: Event Condition name and
-         * `&ecState` after processing. Sets `&informationType` to
-         * `event-data`. ISO 9506-1:2003 §23.1.2.8, §23.3.1.1.2.2.1.
-         *
-         * @public
-         * @readonly
-         */
-        readonly event?: OPTIONAL<EntryContent_entryForm_data_event>,
-        /**
-         * @summary `listOfVariables`.
-         * @description
-         *
-         * Journal variables (tag ≤ 255 chars plus value). Present
-         * only for `data` or `event-data`. ISO 9506-1:2003
-         * §23.1.2.9, §23.3.1.1.2.2.1.
-         *
-         * @public
-         * @readonly
-         */
-        readonly listOfVariables?: OPTIONAL<Journal_Variable[]>
-    ) {}
+        event?: OPTIONAL<EntryContent_entryForm_data_event>,
+        listOfVariables?: OPTIONAL<Journal_Variable[]>
+    ) {
+        this.event = event;
+        this.listOfVariables = listOfVariables;
+    }
 
     /**
      * @summary Restructures an object into a EntryContent_entryForm_data

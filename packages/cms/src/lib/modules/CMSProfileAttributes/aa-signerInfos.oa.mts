@@ -4,7 +4,7 @@ import {
 } from "@wildboar/x500/InformationFramework";
 import { id_signerInfos } from "./id-signerInfos.va.mjs";
 import {
-    SignerInfos,
+    type SignerInfos,
     _decode_SignerInfos,
     _encode_SignerInfos,
 } from "../CryptographicMessageSyntax-2010/SignerInfos.ta.mjs";

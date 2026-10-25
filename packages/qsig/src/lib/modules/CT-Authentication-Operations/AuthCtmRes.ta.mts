@@ -1,13 +1,13 @@
 /* eslint-disable */
 import {
-    OPTIONAL,
-    ASN1Element as _Element,
+    type OPTIONAL,
+    type ASN1Element as _Element,
     ASN1TagClass as _TagClass
 } from "@wildboar/asn1";
 import * as $ from "@wildboar/asn1/functional";
 import { AuthCtmRes_result, _decode_AuthCtmRes_result, _encode_AuthCtmRes_result, _enum_for_AuthCtmRes_result } from "../CT-Authentication-Operations/AuthCtmRes-result.ta.mjs";
 // export { AuthCtmRes_result, _enum_for_AuthCtmRes_result, AuthCtmRes_result_auth_res_correct /* IMPORTED_LONG_ENUMERATION_ITEM */, auth_res_correct /* IMPORTED_SHORT_ENUMERATION_ITEM */, AuthCtmRes_result_auth_res_incorrect /* IMPORTED_LONG_ENUMERATION_ITEM */, auth_res_incorrect /* IMPORTED_SHORT_ENUMERATION_ITEM */, _decode_AuthCtmRes_result, _encode_AuthCtmRes_result } from "../CT-Authentication-Operations/AuthCtmRes-result.ta.mjs";
-import { DummyExtension, _decode_DummyExtension, _encode_DummyExtension } from "../CT-Authentication-Operations/DummyExtension.ta.mjs";
+import { type DummyExtension, _decode_DummyExtension, _encode_DummyExtension } from "../CT-Authentication-Operations/DummyExtension.ta.mjs";
 // export { DummyExtension, _decode_DummyExtension, _encode_DummyExtension } from "../CT-Authentication-Operations/DummyExtension.ta.mjs";
 
 
@@ -87,7 +87,7 @@ class AuthCtmRes {
          * @static
          */
 
-    public static _enum_for_result = _enum_for_AuthCtmRes_result;
+    public static _enum_for_result: typeof _enum_for_AuthCtmRes_result = _enum_for_AuthCtmRes_result;
 }
 
 /**
@@ -172,7 +172,7 @@ let _cached_encoder_for_AuthCtmRes: $.ASN1Encoder<AuthCtmRes> | null = null;
  */
 export
 function _encode_AuthCtmRes (value: AuthCtmRes, elGetter: $.ASN1Encoder<any>): _Element {
-    if (!_cached_encoder_for_AuthCtmRes) { _cached_encoder_for_AuthCtmRes = function (value: AuthCtmRes, elGetter: $.ASN1Encoder<AuthCtmRes>): _Element {
+    if (!_cached_encoder_for_AuthCtmRes) { _cached_encoder_for_AuthCtmRes = function (value: AuthCtmRes): _Element {
     const _components: _Element[] = [];
     _components.push(/* REQUIRED   */ _encode_AuthCtmRes_result(value.result, $.BER));
     if (value.dummyExtension !== undefined) {

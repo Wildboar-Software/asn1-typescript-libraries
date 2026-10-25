@@ -1,8 +1,8 @@
 /* eslint-disable */
 import {
-    OPTIONAL,
-    BOOLEAN,
-    ASN1Element as _Element,
+    type OPTIONAL,
+    type BOOLEAN,
+    type ASN1Element as _Element,
     ASN1TagClass as _TagClass,
     ASN1Construction as _Construction,
     ASN1UniversalType as _UniversalType,
@@ -12,9 +12,9 @@ import {
     ASN1ConstructionError as _ConstructionError,
 } from "@wildboar/asn1";
 import * as $ from "@wildboar/asn1/functional";
-import { Identifier, _decode_Identifier, _encode_Identifier } from "../ISO-9506-MMS-1/Identifier.ta.mjs";
-import { MMSString, _decode_MMSString, _encode_MMSString } from "../ISO-9506-MMS-1/MMSString.ta.mjs";
-import { LoadData, _decode_LoadData, _encode_LoadData } from "../ISO-9506-MMS-1/LoadData.ta.mjs";
+import { type Identifier, _decode_Identifier, _encode_Identifier } from "../ISO-9506-MMS-1/Identifier.ta.mjs";
+import { type MMSString, _decode_MMSString, _encode_MMSString } from "../ISO-9506-MMS-1/MMSString.ta.mjs";
+import { type LoadData, _decode_LoadData, _encode_LoadData } from "../ISO-9506-MMS-1/LoadData.ta.mjs";
 
 
 /**
@@ -39,48 +39,58 @@ import { LoadData, _decode_LoadData, _encode_LoadData } from "../ISO-9506-MMS-1/
  */
 export
 class ControlElement_beginDomainDef {
+    /**
+     * @summary `domainName`.
+     * @description
+     *
+     * Domain to create. ISO 9506-1:2003 §13.2.1.1.1.
+     *
+     * @public
+     * @readonly
+     */
+    public readonly domainName: Identifier;
+    /**
+     * @summary `capabilities`.
+     * @description
+     *
+     * `&Capabilities` for the Domain. ISO 9506-1:2003 §13.2.1.1.2.
+     *
+     * @public
+     * @readonly
+     */
+    public readonly capabilities: MMSString[];
+    /**
+     * @summary `sharable`.
+     * @description
+     *
+     * `&sharable` of the Domain. ISO 9506-1:2003 §13.2.1.1.3.
+     *
+     * @public
+     * @readonly
+     */
+    public readonly sharable: BOOLEAN;
+    /**
+     * @summary `loadData`.
+     * @description
+     *
+     * Initial partial or total Domain content. ISO 9506-1:2003 §13.2.1.1.4.
+     *
+     * @public
+     * @readonly
+     */
+    public readonly loadData?: OPTIONAL<LoadData>;
+
     constructor (
-        /**
-         * @summary `domainName`.
-         * @description
-         *
-         * Domain to create. ISO 9506-1:2003 §13.2.1.1.1.
-         *
-         * @public
-         * @readonly
-         */
-        readonly domainName: Identifier,
-        /**
-         * @summary `capabilities`.
-         * @description
-         *
-         * `&Capabilities` for the Domain. ISO 9506-1:2003 §13.2.1.1.2.
-         *
-         * @public
-         * @readonly
-         */
-        readonly capabilities: MMSString[],
-        /**
-         * @summary `sharable`.
-         * @description
-         *
-         * `&sharable` of the Domain. ISO 9506-1:2003 §13.2.1.1.3.
-         *
-         * @public
-         * @readonly
-         */
-        readonly sharable: BOOLEAN,
-        /**
-         * @summary `loadData`.
-         * @description
-         *
-         * Initial partial or total Domain content. ISO 9506-1:2003 §13.2.1.1.4.
-         *
-         * @public
-         * @readonly
-         */
-        readonly loadData?: OPTIONAL<LoadData>
-    ) {}
+        domainName: Identifier,
+        capabilities: MMSString[],
+        sharable: BOOLEAN,
+        loadData?: OPTIONAL<LoadData>
+    ) {
+        this.domainName = domainName;
+        this.capabilities = capabilities;
+        this.sharable = sharable;
+        this.loadData = loadData;
+    }
 
     /**
      * @summary Restructures an object into a ControlElement_beginDomainDef

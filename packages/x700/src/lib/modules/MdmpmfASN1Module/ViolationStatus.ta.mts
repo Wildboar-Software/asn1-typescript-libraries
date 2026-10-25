@@ -1,6 +1,6 @@
 /* eslint-disable */
 import {
-    ASN1Element as _Element,
+    type ASN1Element as _Element,
     ASN1TagClass as _TagClass,
     ASN1Construction as _Construction,
     ASN1UniversalType as _UniversalType,
@@ -85,7 +85,7 @@ export type ViolationStatus = _enum_for_ViolationStatus;
  *
  * @enum {number}
  */
-export const ViolationStatus = _enum_for_ViolationStatus;
+export const ViolationStatus: typeof _enum_for_ViolationStatus = _enum_for_ViolationStatus;
 
 /**
  * @summary ViolationStatus_unknown
@@ -97,7 +97,7 @@ export const ViolationStatus = _enum_for_ViolationStatus;
  * @constant
  * @type {number}
  */
-export const ViolationStatus_unknown: ViolationStatus =
+export const ViolationStatus_unknown: _enum_for_ViolationStatus.unknown =
     ViolationStatus.unknown; /* LONG_NAMED_ENUMERATED_VALUE */
 
 /**
@@ -110,7 +110,7 @@ export const ViolationStatus_unknown: ViolationStatus =
  * @constant
  * @type {number}
  */
-export const unknown: ViolationStatus =
+export const unknown: _enum_for_ViolationStatus.unknown =
     ViolationStatus.unknown; /* SHORT_NAMED_ENUMERATED_VALUE */
 
 /**
@@ -122,7 +122,7 @@ export const unknown: ViolationStatus =
  * @constant
  * @type {number}
  */
-export const ViolationStatus_no_violation: ViolationStatus =
+export const ViolationStatus_no_violation: _enum_for_ViolationStatus.no_violation =
     ViolationStatus.no_violation; /* LONG_NAMED_ENUMERATED_VALUE */
 
 /**
@@ -134,7 +134,7 @@ export const ViolationStatus_no_violation: ViolationStatus =
  * @constant
  * @type {number}
  */
-export const no_violation: ViolationStatus =
+export const no_violation: _enum_for_ViolationStatus.no_violation =
     ViolationStatus.no_violation; /* SHORT_NAMED_ENUMERATED_VALUE */
 
 /**
@@ -146,7 +146,7 @@ export const no_violation: ViolationStatus =
  * @constant
  * @type {number}
  */
-export const ViolationStatus_violation_detected: ViolationStatus =
+export const ViolationStatus_violation_detected: _enum_for_ViolationStatus.violation_detected =
     ViolationStatus.violation_detected; /* LONG_NAMED_ENUMERATED_VALUE */
 
 /**
@@ -158,14 +158,26 @@ export const ViolationStatus_violation_detected: ViolationStatus =
  * @constant
  * @type {number}
  */
-export const violation_detected: ViolationStatus =
+export const violation_detected: _enum_for_ViolationStatus.violation_detected =
     ViolationStatus.violation_detected; /* SHORT_NAMED_ENUMERATED_VALUE */
 
 
-export const _decode_ViolationStatus = $._decodeEnumerated;
+export function _decode_ViolationStatus(el: _Element): ViolationStatus {
+    const enumerated = $._decodeEnumerated(el);
+    switch (enumerated) {
+        case ViolationStatus.unknown: return ViolationStatus.unknown;
+        case ViolationStatus.no_violation: return ViolationStatus.no_violation;
+        case ViolationStatus.violation_detected: return ViolationStatus.violation_detected;
+        default:
+            throw new _ConstructionError(
+                'Invalid ENUMERATED value ' + enumerated + ' for ViolationStatus.',
+                el,
+            );
+    }
+}
 
 
-export const _encode_ViolationStatus = $._encodeEnumerated;
+export const _encode_ViolationStatus: $.ASN1Encoder<ViolationStatus> = $._encodeEnumerated as $.ASN1Encoder<ViolationStatus>;
 
 
 /* eslint-enable */

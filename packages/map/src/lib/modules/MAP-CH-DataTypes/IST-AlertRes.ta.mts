@@ -1,14 +1,14 @@
 /* eslint-disable */
 import {
-    NULL,
-    OPTIONAL,
-    ASN1Element as _Element,
+    type NULL,
+    type OPTIONAL,
+    type ASN1Element as _Element,
     ASN1TagClass as _TagClass
 } from "@wildboar/asn1";
 import * as $ from "@wildboar/asn1/functional";
-import { CallTerminationIndicator, _decode_CallTerminationIndicator, _encode_CallTerminationIndicator, _enum_for_CallTerminationIndicator } from "../MAP-CH-DataTypes/CallTerminationIndicator.ta.mjs";
+import { type CallTerminationIndicator, _decode_CallTerminationIndicator, _encode_CallTerminationIndicator, _enum_for_CallTerminationIndicator } from "../MAP-CH-DataTypes/CallTerminationIndicator.ta.mjs";
 import { ExtensionContainer, _decode_ExtensionContainer, _encode_ExtensionContainer } from "../MAP-ExtensionDataTypes/ExtensionContainer.ta.mjs";
-import { IST_AlertTimerValue, _decode_IST_AlertTimerValue, _encode_IST_AlertTimerValue } from "../MAP-MS-DataTypes/IST-AlertTimerValue.ta.mjs";
+import { type IST_AlertTimerValue, _decode_IST_AlertTimerValue, _encode_IST_AlertTimerValue } from "../MAP-MS-DataTypes/IST-AlertTimerValue.ta.mjs";
 
 
 /**
@@ -21,10 +21,10 @@ import { IST_AlertTimerValue, _decode_IST_AlertTimerValue, _encode_IST_AlertTime
  * 
  * ```asn1
  * IST-AlertRes ::= SEQUENCE{
- *     istAlertTimer    [0]    IST-AlertTimerValue    OPTIONAL,
- *     istInformationWithdraw    [1]    NULL    OPTIONAL,
- *     callTerminationIndicator    [2]    CallTerminationIndicator    OPTIONAL,
- *     extensionContainer    [3]    ExtensionContainer    OPTIONAL,
+ *     istAlertTimer    [0]    IST-AlertTimerValue    type OPTIONAL,
+ *     istInformationWithdraw    [1]    NULL    type OPTIONAL,
+ *     callTerminationIndicator    [2]    CallTerminationIndicator    type OPTIONAL,
+ *     extensionContainer    [3]    ExtensionContainer    type OPTIONAL,
  *     ...}
  * ```
  * 
@@ -32,54 +32,66 @@ import { IST_AlertTimerValue, _decode_IST_AlertTimerValue, _encode_IST_AlertTime
  */
 export
 class IST_AlertRes {
+    /**
+     * @summary `istAlertTimer`.
+     * @description
+     *
+     * IST alert timer value.
+     *
+     * @public
+     * @readonly
+     */
+    public readonly istAlertTimer?: OPTIONAL<IST_AlertTimerValue>;
+    /**
+     * @summary `istInformationWithdraw`.
+     * @description
+     *
+     * Withdraw IST information.
+     *
+     * @public
+     * @readonly
+     */
+    public readonly istInformationWithdraw?: OPTIONAL<NULL>;
+    /**
+     * @summary `callTerminationIndicator`.
+     * @description
+     *
+     * Which call activities to terminate.
+     *
+     * @public
+     * @readonly
+     */
+    public readonly callTerminationIndicator?: OPTIONAL<CallTerminationIndicator>;
+    /**
+     * @summary `extensionContainer`.
+     * @description
+     *
+     * Private or PCS extensions (3GPP TS 29.002 V19.1.0 clause 17.7.11).
+     *
+     * @public
+     * @readonly
+     */
+    public readonly extensionContainer?: OPTIONAL<ExtensionContainer>;
+    /**
+     * @summary Extensions that are not recognized.
+     * @public
+     * @readonly
+     */
+    public readonly _unrecognizedExtensionsList: _Element[];
+
     constructor (
-        /**
-         * @summary `istAlertTimer`.
-         * @description
-         *
-         * IST alert timer value.
-         *
-         * @public
-         * @readonly
-         */
-        readonly istAlertTimer?: OPTIONAL<IST_AlertTimerValue>,
-        /**
-         * @summary `istInformationWithdraw`.
-         * @description
-         *
-         * Withdraw IST information.
-         *
-         * @public
-         * @readonly
-         */
-        readonly istInformationWithdraw?: OPTIONAL<NULL>,
-        /**
-         * @summary `callTerminationIndicator`.
-         * @description
-         *
-         * Which call activities to terminate.
-         *
-         * @public
-         * @readonly
-         */
-        readonly callTerminationIndicator?: OPTIONAL<CallTerminationIndicator>,
-        /**
-         * @summary `extensionContainer`.
-         * @description
-         *
-         * Private or PCS extensions (3GPP TS 29.002 V19.1.0 clause 17.7.11).
-         *
-         * @public
-         * @readonly
-         */
-        readonly extensionContainer?: OPTIONAL<ExtensionContainer>,
-        /**
-         * @summary Extensions that are not recognized.
-         * @public
-         * @readonly
-         */
-        readonly _unrecognizedExtensionsList: _Element[] = []
-    ) {}
+        istAlertTimer?: OPTIONAL<IST_AlertTimerValue>,
+        istInformationWithdraw?: OPTIONAL<NULL>,
+        callTerminationIndicator?: OPTIONAL<CallTerminationIndicator>,
+        extensionContainer?: OPTIONAL<ExtensionContainer>,
+        _unrecognizedExtensionsList: _Element[] = []
+    ) {
+        this.istAlertTimer = istAlertTimer;
+        this.istInformationWithdraw = istInformationWithdraw;
+        this.callTerminationIndicator = callTerminationIndicator;
+        this.extensionContainer = extensionContainer;
+        this._unrecognizedExtensionsList = _unrecognizedExtensionsList;
+    }
 
     /**
      * @summary Restructures an object into a IST_AlertRes
@@ -103,7 +115,7 @@ class IST_AlertRes {
          * @static
          */
 
-    public static _enum_for_callTerminationIndicator = _enum_for_CallTerminationIndicator;
+    public static _enum_for_callTerminationIndicator: typeof _enum_for_CallTerminationIndicator = _enum_for_CallTerminationIndicator;
 }
 
 /**

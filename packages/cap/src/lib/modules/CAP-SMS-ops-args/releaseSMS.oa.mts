@@ -1,6 +1,6 @@
 /* eslint-disable */
 import {
-    ASN1Element as _Element,
+    type ASN1Element as _Element,
     ASN1TagClass as _TagClass,
     ASN1Construction as _Construction,
     ASN1UniversalType as _UniversalType,
@@ -12,7 +12,7 @@ import {
 import { type OPERATION } from "../Remote-Operations-Information-Objects/OPERATION.oca.mjs";
 import { _decode_Priority, _encode_Priority } from "../Remote-Operations-Information-Objects/Priority.ta.mjs";
 import { _decode_Code, _encode_Code } from "../Remote-Operations-Information-Objects/Code.ta.mjs";
-import { ReleaseSMSArg, _decode_ReleaseSMSArg, _encode_ReleaseSMSArg } from "../CAP-SMS-ops-args/ReleaseSMSArg.ta.mjs";
+import { type ReleaseSMSArg, _decode_ReleaseSMSArg, _encode_ReleaseSMSArg } from "../CAP-SMS-ops-args/ReleaseSMSArg.ta.mjs";
 import { opcode_releaseSMS } from "../CAP-operationcodes/opcode-releaseSMS.va.mjs";
 
 

@@ -11,7 +11,7 @@ import {
 } from '@wildboar/asn1';
 import * as $ from '@wildboar/asn1/functional';
 import {
-  AttributeId,
+  type AttributeId,
   _decode_AttributeId,
   _encode_AttributeId,
 } from '../CMIP-1/AttributeId.ta.mjs';

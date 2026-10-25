@@ -1,6 +1,6 @@
 /* eslint-disable */
 import {
-    ENUMERATED
+    type ENUMERATED
 } from "@wildboar/asn1";
 import * as $ from "@wildboar/asn1/functional";
 
@@ -111,7 +111,7 @@ type EndReason = _enum_for_EndReason | ENUMERATED;
  * @type {number}
  */
 export
-const EndReason_undefined: EndReason = 0; /* LONG_NAMED_ENUMERATED_VALUE */
+const EndReason_undefined: _enum_for_EndReason.undefined = _enum_for_EndReason.undefined; /* LONG_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary undefined
@@ -128,7 +128,7 @@ const EndReason_undefined: EndReason = 0; /* LONG_NAMED_ENUMERATED_VALUE */
  * @type {number}
  */
 export
-const undefined: EndReason = EndReason_undefined; /* SHORT_NAMED_ENUMERATED_VALUE */
+const undefined: _enum_for_EndReason.undefined = EndReason_undefined; /* SHORT_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary EndReason_regularLogoff
@@ -147,7 +147,7 @@ const undefined: EndReason = EndReason_undefined; /* SHORT_NAMED_ENUMERATED_VALU
  * @type {number}
  */
 export
-const EndReason_regularLogoff: EndReason = 1; /* LONG_NAMED_ENUMERATED_VALUE */
+const EndReason_regularLogoff: _enum_for_EndReason.regularLogoff = _enum_for_EndReason.regularLogoff; /* LONG_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary regularLogoff
@@ -166,7 +166,7 @@ const EndReason_regularLogoff: EndReason = 1; /* LONG_NAMED_ENUMERATED_VALUE */
  * @type {number}
  */
 export
-const regularLogoff: EndReason = EndReason_regularLogoff; /* SHORT_NAMED_ENUMERATED_VALUE */
+const regularLogoff: _enum_for_EndReason.regularLogoff = EndReason_regularLogoff; /* SHORT_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary EndReason_connectionLoss
@@ -184,7 +184,7 @@ const regularLogoff: EndReason = EndReason_regularLogoff; /* SHORT_NAMED_ENUMERA
  * @type {number}
  */
 export
-const EndReason_connectionLoss: EndReason = 2; /* LONG_NAMED_ENUMERATED_VALUE */
+const EndReason_connectionLoss: _enum_for_EndReason.connectionLoss = _enum_for_EndReason.connectionLoss; /* LONG_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary connectionLoss
@@ -202,7 +202,7 @@ const EndReason_connectionLoss: EndReason = 2; /* LONG_NAMED_ENUMERATED_VALUE */
  * @type {number}
  */
 export
-const connectionLoss: EndReason = EndReason_connectionLoss; /* SHORT_NAMED_ENUMERATED_VALUE */
+const connectionLoss: _enum_for_EndReason.connectionLoss = EndReason_connectionLoss; /* SHORT_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary EndReason_connectionTimeout
@@ -220,7 +220,7 @@ const connectionLoss: EndReason = EndReason_connectionLoss; /* SHORT_NAMED_ENUME
  * @type {number}
  */
 export
-const EndReason_connectionTimeout: EndReason = 3; /* LONG_NAMED_ENUMERATED_VALUE */
+const EndReason_connectionTimeout: _enum_for_EndReason.connectionTimeout = _enum_for_EndReason.connectionTimeout; /* LONG_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary connectionTimeout
@@ -238,7 +238,7 @@ const EndReason_connectionTimeout: EndReason = 3; /* LONG_NAMED_ENUMERATED_VALUE
  * @type {number}
  */
 export
-const connectionTimeout: EndReason = EndReason_connectionTimeout; /* SHORT_NAMED_ENUMERATED_VALUE */
+const connectionTimeout: _enum_for_EndReason.connectionTimeout = EndReason_connectionTimeout; /* SHORT_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary EndReason_leaseExpired
@@ -253,7 +253,7 @@ const connectionTimeout: EndReason = EndReason_connectionTimeout; /* SHORT_NAMED
  * @type {number}
  */
 export
-const EndReason_leaseExpired: EndReason = 4; /* LONG_NAMED_ENUMERATED_VALUE */
+const EndReason_leaseExpired: _enum_for_EndReason.leaseExpired = _enum_for_EndReason.leaseExpired; /* LONG_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary leaseExpired
@@ -268,7 +268,7 @@ const EndReason_leaseExpired: EndReason = 4; /* LONG_NAMED_ENUMERATED_VALUE */
  * @type {number}
  */
 export
-const leaseExpired: EndReason = EndReason_leaseExpired; /* SHORT_NAMED_ENUMERATED_VALUE */
+const leaseExpired: _enum_for_EndReason.leaseExpired = EndReason_leaseExpired; /* SHORT_NAMED_ENUMERATED_VALUE */
 export const _decode_EndReason: $.ASN1Decoder<EndReason> = $._decodeEnumerated;
 export const _encode_EndReason: $.ASN1Encoder<EndReason> = $._encodeEnumerated;
 

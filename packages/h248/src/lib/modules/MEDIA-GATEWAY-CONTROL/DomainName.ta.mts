@@ -1,10 +1,10 @@
 /* eslint-disable */
 import {
-    ASN1Element as _Element,
+    type ASN1Element as _Element,
     ASN1TagClass as _TagClass,
-    IA5String,
-    INTEGER,
-    OPTIONAL,
+    type IA5String,
+    type INTEGER,
+    type OPTIONAL,
     ASN1OverflowError
 } from "@wildboar/asn1";
 import * as $ from "@wildboar/asn1/functional";
@@ -49,7 +49,7 @@ class DomainName {
      * @public
      * @readonly
      */
-    readonly name: IA5String;
+    public readonly name: IA5String;
     /**
      * @summary `portNumber`.
      * @description
@@ -59,7 +59,7 @@ class DomainName {
      * @public
      * @readonly
      */
-    readonly portNumber?: OPTIONAL<INTEGER>;
+    public readonly portNumber?: OPTIONAL<INTEGER>;
 
     constructor (
         name: IA5String,

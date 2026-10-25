@@ -1,13 +1,13 @@
 /* eslint-disable */
 import {
-    ASN1Element as _Element,
+    type ASN1Element as _Element,
     ASN1TagClass as _TagClass,
-    GeneralizedTime,
-    OPTIONAL,
+    type GeneralizedTime,
+    type OPTIONAL,
 } from "@wildboar/asn1";
 import * as $ from "@wildboar/asn1/functional";
 import {
-    GeneralName,
+    type GeneralName,
     _decode_GeneralName,
     _encode_GeneralName,
 } from "../CertificateExtensions/GeneralName.ta.mjs";
@@ -29,26 +29,34 @@ import {
  *
  */
 export class DeltaRefInfo {
+    /**
+     * @summary `deltaLocation`.
+     * @public
+     * @readonly
+     */
+    public readonly deltaLocation: GeneralName;
+    /**
+     * @summary `lastDelta`.
+     * @public
+     * @readonly
+     */
+    public readonly lastDelta?: OPTIONAL<GeneralizedTime>;
+    /**
+     * @summary Extensions that are not recognized.
+     * @public
+     * @readonly
+     */
+    public readonly _unrecognizedExtensionsList: _Element[];
+
     constructor(
-        /**
-         * @summary `deltaLocation`.
-         * @public
-         * @readonly
-         */
-        readonly deltaLocation: GeneralName,
-        /**
-         * @summary `lastDelta`.
-         * @public
-         * @readonly
-         */
-        readonly lastDelta?: OPTIONAL<GeneralizedTime>,
-        /**
-         * @summary Extensions that are not recognized.
-         * @public
-         * @readonly
-         */
-        readonly _unrecognizedExtensionsList: _Element[] = []
-    ) {}
+        deltaLocation: GeneralName,
+        lastDelta?: OPTIONAL<GeneralizedTime>,
+        _unrecognizedExtensionsList: _Element[] = []
+    ) {
+        this.deltaLocation = deltaLocation;
+        this.lastDelta = lastDelta;
+        this._unrecognizedExtensionsList = _unrecognizedExtensionsList;
+    }
 
     /**
      * @summary Restructures an object into a DeltaRefInfo

@@ -1,12 +1,12 @@
 /* eslint-disable */
 import {
-    OCTET_STRING,
+    type OCTET_STRING,
     ASN1ConstructionError as _ConstructionError,
-    ASN1Element as _Element,
+    type ASN1Element as _Element,
     ASN1TagClass as _TagClass
 } from "@wildboar/asn1";
 import * as $ from "@wildboar/asn1/functional";
-import { DataGroupNumber, _decode_DataGroupNumber, _encode_DataGroupNumber } from "../LDSSecurityObjectV1/DataGroupNumber.ta.mjs";
+import { type DataGroupNumber, _decode_DataGroupNumber, _encode_DataGroupNumber } from "../LDSSecurityObjectV1/DataGroupNumber.ta.mjs";
 // export { DataGroupNumber, DataGroupNumber_dataGroup1 /* IMPORTED_LONG_NAMED_INTEGER */, dataGroup1 /* IMPORTED_SHORT_NAMED_INTEGER */, DataGroupNumber_dataGroup2 /* IMPORTED_LONG_NAMED_INTEGER */, dataGroup2 /* IMPORTED_SHORT_NAMED_INTEGER */, DataGroupNumber_dataGroup3 /* IMPORTED_LONG_NAMED_INTEGER */, dataGroup3 /* IMPORTED_SHORT_NAMED_INTEGER */, DataGroupNumber_dataGroup4 /* IMPORTED_LONG_NAMED_INTEGER */, dataGroup4 /* IMPORTED_SHORT_NAMED_INTEGER */, DataGroupNumber_dataGroup5 /* IMPORTED_LONG_NAMED_INTEGER */, dataGroup5 /* IMPORTED_SHORT_NAMED_INTEGER */, DataGroupNumber_dataGroup6 /* IMPORTED_LONG_NAMED_INTEGER */, dataGroup6 /* IMPORTED_SHORT_NAMED_INTEGER */, DataGroupNumber_dataGroup7 /* IMPORTED_LONG_NAMED_INTEGER */, dataGroup7 /* IMPORTED_SHORT_NAMED_INTEGER */, DataGroupNumber_dataGroup8 /* IMPORTED_LONG_NAMED_INTEGER */, dataGroup8 /* IMPORTED_SHORT_NAMED_INTEGER */, DataGroupNumber_dataGroup9 /* IMPORTED_LONG_NAMED_INTEGER */, dataGroup9 /* IMPORTED_SHORT_NAMED_INTEGER */, DataGroupNumber_dataGroup10 /* IMPORTED_LONG_NAMED_INTEGER */, dataGroup10 /* IMPORTED_SHORT_NAMED_INTEGER */, DataGroupNumber_dataGroup11 /* IMPORTED_LONG_NAMED_INTEGER */, dataGroup11 /* IMPORTED_SHORT_NAMED_INTEGER */, DataGroupNumber_dataGroup12 /* IMPORTED_LONG_NAMED_INTEGER */, dataGroup12 /* IMPORTED_SHORT_NAMED_INTEGER */, DataGroupNumber_dataGroup13 /* IMPORTED_LONG_NAMED_INTEGER */, dataGroup13 /* IMPORTED_SHORT_NAMED_INTEGER */, DataGroupNumber_dataGroup14 /* IMPORTED_LONG_NAMED_INTEGER */, dataGroup14 /* IMPORTED_SHORT_NAMED_INTEGER */, DataGroupNumber_dataGroup15 /* IMPORTED_LONG_NAMED_INTEGER */, dataGroup15 /* IMPORTED_SHORT_NAMED_INTEGER */, DataGroupNumber_dataGroup16 /* IMPORTED_LONG_NAMED_INTEGER */, dataGroup16 /* IMPORTED_SHORT_NAMED_INTEGER */, _decode_DataGroupNumber, _encode_DataGroupNumber } from "../LDSSecurityObjectV1/DataGroupNumber.ta.mjs";
 
 
@@ -27,20 +27,26 @@ import { DataGroupNumber, _decode_DataGroupNumber, _encode_DataGroupNumber } fro
  */
 export
 class DataGroupHash {
+    /**
+     * @summary `dataGroupNumber`.
+     * @public
+     * @readonly
+     */
+    public readonly dataGroupNumber: DataGroupNumber;
+    /**
+     * @summary `dataGroupHashValue`.
+     * @public
+     * @readonly
+     */
+    public readonly dataGroupHashValue: OCTET_STRING;
+
     constructor (
-        /**
-         * @summary `dataGroupNumber`.
-         * @public
-         * @readonly
-         */
-        readonly dataGroupNumber: DataGroupNumber,
-        /**
-         * @summary `dataGroupHashValue`.
-         * @public
-         * @readonly
-         */
-        readonly dataGroupHashValue: OCTET_STRING
-    ) {}
+        dataGroupNumber: DataGroupNumber,
+        dataGroupHashValue: OCTET_STRING
+    ) {
+        this.dataGroupNumber = dataGroupNumber;
+        this.dataGroupHashValue = dataGroupHashValue;
+    }
 
     /**
      * @summary Restructures an object into a DataGroupHash

@@ -2,16 +2,16 @@
 
 import * as $ from "@wildboar/asn1/functional";
 import {
-    OPTIONAL,
-    OCTET_STRING,
-    SEQUENCE,
-    SET,
-    ASN1Element as _Element,
+    type OPTIONAL,
+    type OCTET_STRING,
+    type SEQUENCE,
+    type SET,
+    type ASN1Element as _Element,
     ASN1TagClass as _TagClass
 } from "@wildboar/asn1";
-import { IOCrossRefID, _decode_IOCrossRefID, _encode_IOCrossRefID } from "../CSTA-device-feature-types/IOCrossRefID.ta.mjs";
+import { type IOCrossRefID, _decode_IOCrossRefID, _encode_IOCrossRefID } from "../CSTA-device-feature-types/IOCrossRefID.ta.mjs";
 
-import { IORegisterReqID, _decode_IORegisterReqID, _encode_IORegisterReqID } from "../CSTA-device-feature-types/IORegisterReqID.ta.mjs";
+import { type IORegisterReqID, _decode_IORegisterReqID, _encode_IORegisterReqID } from "../CSTA-device-feature-types/IORegisterReqID.ta.mjs";
 
 import { DisplayAttributeList, _decode_DisplayAttributeList, _encode_DisplayAttributeList } from "../CSTA-device-feature-types/DisplayAttributeList.ta.mjs";
 
@@ -42,10 +42,10 @@ import { CSTACommonArguments, _decode_CSTACommonArguments, _encode_CSTACommonArg
  * ```asn1
  * SendDataArgument ::= SEQUENCE
  * {    ioCrossRefID            IOCrossRefID,
- *     ioRegisterReqID            [0] IMPLICIT IORegisterReqID        OPTIONAL,
- *     displayAttributes        DisplayAttributeList            OPTIONAL,
+ *     ioRegisterReqID            [0] IMPLICIT IORegisterReqID        type OPTIONAL,
+ *     displayAttributes        DisplayAttributeList            type OPTIONAL,
  *     ioData                OCTET STRING,
- *     ioCause                EventCause                OPTIONAL,
+ *     ioCause                EventCause                type OPTIONAL,
  *     extensions             CSTACommonArguments            OPTIONAL }
  * ```
  * 
@@ -53,75 +53,89 @@ import { CSTACommonArguments, _decode_CSTACommonArguments, _encode_CSTACommonArg
  */
 export
 class SendDataArgument {
+    /**
+     * @summary `ioCrossRefID`.
+     * @description
+     *
+     * Cross-reference for the data path, including which side started it
+     * (ECMA-269 §6.2.1 / §6.2.3).
+     *
+     * @public
+     * @readonly
+     */
+    public readonly ioCrossRefID: IOCrossRefID;
+    /**
+     * @summary `ioRegisterReqID`.
+     * @description
+     *
+     * I/O registration identifier. Mandatory if the switching function
+     * supports I/O registration and the data path was requested by the
+     * switching function; otherwise absent (ECMA-269 §6.2.2).
+     *
+     * @public
+     * @readonly
+     */
+    public readonly ioRegisterReqID: OPTIONAL<IORegisterReqID>;
+    /**
+     * @summary `displayAttributes`.
+     * @description
+     *
+     * Only when `ioData` updates a device display (ECMA-269 §24.2.6.1).
+     *
+     * @public
+     * @readonly
+     */
+    public readonly displayAttributes: OPTIONAL<DisplayAttributeList>;
+    /**
+     * @summary `ioData`.
+     * @description
+     *
+     * Data to send. For a display, concatenated row text (including
+     * spaces); a null string clears the display (ECMA-269 §24.2.6.1).
+     *
+     * @public
+     * @readonly
+     */
+    public readonly ioData: OCTET_STRING;
+    /**
+     * @summary `ioCause`.
+     * @description
+     *
+     * Why data is sent, using `EventCause`: terminationCharacterReceived,
+     * characterCountReached, timeout, or switchingFunctionTerminated
+     * (ECMA-269 §24.2.6.1).
+     *
+     * @public
+     * @readonly
+     */
+    public readonly ioCause?: OPTIONAL<EventCause>;
+    /**
+     * @summary `extensions`.
+     * @description
+     *
+     * CSTACommonArguments carrying the service-table security and
+     * privateData parameters.
+     *
+     * @public
+     * @readonly
+     */
+    public readonly extensions?: OPTIONAL<CSTACommonArguments>;
+
     constructor (
-        /**
-         * @summary `ioCrossRefID`.
-         * @description
-         *
-         * Cross-reference for the data path, including which side started it
-         * (ECMA-269 §6.2.1 / §6.2.3).
-         *
-         * @public
-         * @readonly
-         */
-        readonly ioCrossRefID: IOCrossRefID,
-        /**
-         * @summary `ioRegisterReqID`.
-         * @description
-         *
-         * I/O registration identifier. Mandatory if the switching function
-         * supports I/O registration and the data path was requested by the
-         * switching function; otherwise absent (ECMA-269 §6.2.2).
-         *
-         * @public
-         * @readonly
-         */
-        readonly ioRegisterReqID: OPTIONAL<IORegisterReqID>,
-        /**
-         * @summary `displayAttributes`.
-         * @description
-         *
-         * Only when `ioData` updates a device display (ECMA-269 §24.2.6.1).
-         *
-         * @public
-         * @readonly
-         */
-        readonly displayAttributes: OPTIONAL<DisplayAttributeList>,
-        /**
-         * @summary `ioData`.
-         * @description
-         *
-         * Data to send. For a display, concatenated row text (including
-         * spaces); a null string clears the display (ECMA-269 §24.2.6.1).
-         *
-         * @public
-         * @readonly
-         */
-        readonly ioData: OCTET_STRING,
-        /**
-         * @summary `ioCause`.
-         * @description
-         *
-         * Why data is sent, using `EventCause`: terminationCharacterReceived,
-         * characterCountReached, timeout, or switchingFunctionTerminated
-         * (ECMA-269 §24.2.6.1).
-         *
-         * @public
-         * @readonly
-         */
-        readonly ioCause?: OPTIONAL<EventCause>,
-        /**
-         * @summary `extensions`.
-         * @description
-         *
-         * CSTACommonArguments carrying the service-table security and
-         * privateData parameters.
-         *
-         * @public
-         * @readonly
-         */
-        readonly extensions?: OPTIONAL<CSTACommonArguments>
-    ) {}
+        ioCrossRefID: IOCrossRefID,
+        ioRegisterReqID: OPTIONAL<IORegisterReqID>,
+        displayAttributes: OPTIONAL<DisplayAttributeList>,
+        ioData: OCTET_STRING,
+        ioCause?: OPTIONAL<EventCause>,
+        extensions?: OPTIONAL<CSTACommonArguments>
+    ) {
+        this.ioCrossRefID = ioCrossRefID;
+        this.ioRegisterReqID = ioRegisterReqID;
+        this.displayAttributes = displayAttributes;
+        this.ioData = ioData;
+        this.ioCause = ioCause;
+        this.extensions = extensions;
+    }
 
     /**
      * @summary Restructures an object into a SendDataArgument
@@ -145,7 +159,7 @@ class SendDataArgument {
          * @static
          */
 
-    public static _enum_for_ioCause = _enum_for_EventCause;
+    public static _enum_for_ioCause: typeof _enum_for_EventCause = _enum_for_EventCause;
 }
 
 /**

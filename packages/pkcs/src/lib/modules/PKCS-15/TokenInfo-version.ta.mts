@@ -1,5 +1,5 @@
 /* eslint-disable */
-import { ASN1Element as _Element, INTEGER } from "@wildboar/asn1";
+import { ASN1Element as _Element, type INTEGER } from "@wildboar/asn1";
 import * as $ from "@wildboar/asn1/functional";
 
 
@@ -21,7 +21,7 @@ export type TokenInfo_version = INTEGER;
  * @constant
  * @type {number}
  */
-export const TokenInfo_version_v1: TokenInfo_version = 0; /* LONG_NAMED_INTEGER_VALUE */
+export const TokenInfo_version_v1: 0 = 0 satisfies TokenInfo_version; /* LONG_NAMED_INTEGER_VALUE */
 
 
 /**
@@ -29,17 +29,17 @@ export const TokenInfo_version_v1: TokenInfo_version = 0; /* LONG_NAMED_INTEGER_
  * @constant
  * @type {number}
  */
-export const v1: TokenInfo_version = TokenInfo_version_v1; /* SHORT_NAMED_INTEGER_VALUE */
+export const v1: 0 = TokenInfo_version_v1; /* SHORT_NAMED_INTEGER_VALUE */
 
 
 
 
-export const _decode_TokenInfo_version = $._decodeInteger;
+export const _decode_TokenInfo_version: $.ASN1Decoder<INTEGER> = $._decodeInteger;
 
 
 
 
-export const _encode_TokenInfo_version = $._encodeInteger;
+export const _encode_TokenInfo_version: $.ASN1Encoder<INTEGER> = $._encodeInteger;
 
 
 /* eslint-enable */

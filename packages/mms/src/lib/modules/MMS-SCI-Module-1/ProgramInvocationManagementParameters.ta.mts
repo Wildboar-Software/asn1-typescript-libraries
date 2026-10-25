@@ -1,9 +1,9 @@
 /* eslint-disable */
 import {
-    BOOLEAN,
-    INTEGER,
-    OBJECT_IDENTIFIER,
-    ASN1Element as _Element,
+    type BOOLEAN,
+    type INTEGER,
+    type OBJECT_IDENTIFIER,
+    type ASN1Element as _Element,
     ASN1TagClass as _TagClass,
     ASN1Construction as _Construction,
     ASN1UniversalType as _UniversalType,
@@ -13,7 +13,7 @@ import {
     ASN1ConstructionError as _ConstructionError,
 } from "@wildboar/asn1";
 import * as $ from "@wildboar/asn1/functional";
-import { MMSString, _decode_MMSString, _encode_MMSString } from "../ISO-9506-MMS-1/MMSString.ta.mjs";
+import { type MMSString, _decode_MMSString, _encode_MMSString } from "../ISO-9506-MMS-1/MMSString.ta.mjs";
 
 
 /**
@@ -43,61 +43,73 @@ import { MMSString, _decode_MMSString, _encode_MMSString } from "../ISO-9506-MMS
  */
 export
 class ProgramInvocationManagementParameters {
+    /**
+     * @summary `executionArgMaxSize`.
+     * @description
+     *
+     * Max Execution Argument size. ISO 9506-2:2003 Annex B.2.4.
+     *
+     * @public
+     * @readonly
+     */
+    public readonly executionArgMaxSize: INTEGER;
+    /**
+     * @summary `executionArgParseRules`.
+     * @description
+     *
+     * Execution Argument parse rules. ISO 9506-2:2003 Annex B.2.4.
+     *
+     * @public
+     * @readonly
+     */
+    public readonly executionArgParseRules: MMSString;
+    /**
+     * @summary `executionArgSyntaxes`.
+     * @description
+     *
+     * Abstract syntaxes for Execution Argument. ISO 9506-2:2003 Annex
+     * B.2.4.
+     *
+     * @public
+     * @readonly
+     */
+    public readonly executionArgSyntaxes: OBJECT_IDENTIFIER[];
+    /**
+     * @summary `programLoction`.
+     * @description
+     *
+     * Syntax of program-location notation (spec spelling). ISO 9506-2:2003
+     * Annex B.2.4; ISO 9506-1:2003 §12.1.1.15.
+     *
+     * @public
+     * @readonly
+     */
+    public readonly programLoction: MMSString;
+    /**
+     * @summary `stepMode`.
+     * @description
+     *
+     * true if step-limited running mode is supported. ISO 9506-2:2003 Annex
+     * B.2.4; ISO 9506-1:2003 §12.1.1.16.
+     *
+     * @public
+     * @readonly
+     */
+    public readonly stepMode: BOOLEAN;
+
     constructor (
-        /**
-         * @summary `executionArgMaxSize`.
-         * @description
-         *
-         * Max Execution Argument size. ISO 9506-2:2003 Annex B.2.4.
-         *
-         * @public
-         * @readonly
-         */
-        readonly executionArgMaxSize: INTEGER,
-        /**
-         * @summary `executionArgParseRules`.
-         * @description
-         *
-         * Execution Argument parse rules. ISO 9506-2:2003 Annex B.2.4.
-         *
-         * @public
-         * @readonly
-         */
-        readonly executionArgParseRules: MMSString,
-        /**
-         * @summary `executionArgSyntaxes`.
-         * @description
-         *
-         * Abstract syntaxes for Execution Argument. ISO 9506-2:2003 Annex
-         * B.2.4.
-         *
-         * @public
-         * @readonly
-         */
-        readonly executionArgSyntaxes: OBJECT_IDENTIFIER[],
-        /**
-         * @summary `programLoction`.
-         * @description
-         *
-         * Syntax of program-location notation (spec spelling). ISO 9506-2:2003
-         * Annex B.2.4; ISO 9506-1:2003 §12.1.1.15.
-         *
-         * @public
-         * @readonly
-         */
-        readonly programLoction: MMSString,
-        /**
-         * @summary `stepMode`.
-         * @description
-         *
-         * true if step-limited running mode is supported. ISO 9506-2:2003 Annex
-         * B.2.4; ISO 9506-1:2003 §12.1.1.16.
-         *
-         * @public
-         * @readonly
-         */
-        readonly stepMode: BOOLEAN
-    ) {}
+        executionArgMaxSize: INTEGER,
+        executionArgParseRules: MMSString,
+        executionArgSyntaxes: OBJECT_IDENTIFIER[],
+        programLoction: MMSString,
+        stepMode: BOOLEAN
+    ) {
+        this.executionArgMaxSize = executionArgMaxSize;
+        this.executionArgParseRules = executionArgParseRules;
+        this.executionArgSyntaxes = executionArgSyntaxes;
+        this.programLoction = programLoction;
+        this.stepMode = stepMode;
+    }
 
     /**
      * @summary Restructures an object into a ProgramInvocationManagementParameters

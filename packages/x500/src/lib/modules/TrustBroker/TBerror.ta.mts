@@ -1,13 +1,13 @@
 /* eslint-disable */
 import {
-    ASN1Element as _Element,
+    type ASN1Element as _Element,
     ASN1TagClass as _TagClass,
-    OPTIONAL,
-    UTF8String,
+    type OPTIONAL,
+    type UTF8String,
 } from "@wildboar/asn1";
 import * as $ from "@wildboar/asn1/functional";
 import {
-    TBerror_code,
+    type TBerror_code,
     _decode_TBerror_code,
     _encode_TBerror_code,
     _enum_for_TBerror_code,
@@ -39,34 +39,42 @@ import {
  *
  */
 export class TBerror {
+    /**
+     * @summary `code`.
+     * @description
+     *
+     * No value 0. `other`(99) requires `diagnostic`. `pathValidationFailed` and `timeOut` may succeed later.
+     *
+     * @public
+     * @readonly
+     */
+    public readonly code: TBerror_code;
+    /**
+     * @summary `diagnostic`.
+     * @description
+     *
+     * Optional text for client logs/display. Mandatory when `code` is `other`(99).
+     *
+     * @public
+     * @readonly
+     */
+    public readonly diagnostic?: OPTIONAL<UTF8String>;
+    /**
+     * @summary Extensions that are not recognized.
+     * @public
+     * @readonly
+     */
+    public readonly _unrecognizedExtensionsList: _Element[];
+
     constructor(
-        /**
-         * @summary `code`.
-         * @description
-         *
-         * No value 0. `other`(99) requires `diagnostic`. `pathValidationFailed` and `timeOut` may succeed later.
-         *
-         * @public
-         * @readonly
-         */
-        readonly code: TBerror_code,
-        /**
-         * @summary `diagnostic`.
-         * @description
-         *
-         * Optional text for client logs/display. Mandatory when `code` is `other`(99).
-         *
-         * @public
-         * @readonly
-         */
-        readonly diagnostic?: OPTIONAL<UTF8String>,
-        /**
-         * @summary Extensions that are not recognized.
-         * @public
-         * @readonly
-         */
-        readonly _unrecognizedExtensionsList: _Element[] = []
-    ) {}
+        code: TBerror_code,
+        diagnostic?: OPTIONAL<UTF8String>,
+        _unrecognizedExtensionsList: _Element[] = []
+    ) {
+        this.code = code;
+        this.diagnostic = diagnostic;
+        this._unrecognizedExtensionsList = _unrecognizedExtensionsList;
+    }
 
     /**
      * @summary Restructures an object into a TBerror
@@ -96,7 +104,7 @@ export class TBerror {
      * @static
      */
 
-    public static _enum_for_code = _enum_for_TBerror_code;
+    public static _enum_for_code: typeof _enum_for_TBerror_code = _enum_for_TBerror_code;
 }
 
 /**

@@ -1,12 +1,12 @@
 /* eslint-disable */
 import {
-    OPTIONAL,
-    ASN1Element as _Element,
+    type OPTIONAL,
+    type ASN1Element as _Element,
     ASN1TagClass as _TagClass
 } from "@wildboar/asn1";
 import * as $ from "@wildboar/asn1/functional";
-import { Name, _decode_Name, _encode_Name } from "../Name-Operations-asn1-97/Name.ta.mjs";
-import { NameExtension, _decode_NameExtension, _encode_NameExtension } from "../Name-Operations-asn1-97/NameExtension.ta.mjs";
+import { type Name, _decode_Name, _encode_Name } from "../Name-Operations-asn1-97/Name.ta.mjs";
+import { type NameExtension, _decode_NameExtension, _encode_NameExtension } from "../Name-Operations-asn1-97/NameExtension.ta.mjs";
 
 /**
  * @summary NameArg_nameSequence

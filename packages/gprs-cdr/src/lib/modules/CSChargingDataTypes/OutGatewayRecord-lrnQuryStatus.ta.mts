@@ -1,6 +1,6 @@
 /* eslint-disable */
 import {
-    INTEGER
+    type INTEGER
 } from "@wildboar/asn1";
 import * as $ from "@wildboar/asn1/functional";
 
@@ -33,7 +33,7 @@ type OutGatewayRecord_lrnQuryStatus = INTEGER;
  * @type {number}
  */
 export
-const OutGatewayRecord_lrnQuryStatus_successfulQuery: OutGatewayRecord_lrnQuryStatus = 1; /* LONG_NAMED_INTEGER_VALUE */
+const OutGatewayRecord_lrnQuryStatus_successfulQuery: 1 = 1 satisfies OutGatewayRecord_lrnQuryStatus; /* LONG_NAMED_INTEGER_VALUE */
 
 /**
  * @summary OutGatewayRecord_lrnQuryStatus_successfulQuery
@@ -41,7 +41,7 @@ const OutGatewayRecord_lrnQuryStatus_successfulQuery: OutGatewayRecord_lrnQurySt
  * @type {number}
  */
 export
-const successfulQuery: OutGatewayRecord_lrnQuryStatus = OutGatewayRecord_lrnQuryStatus_successfulQuery; /* SHORT_NAMED_INTEGER_VALUE */
+const successfulQuery: 1 = OutGatewayRecord_lrnQuryStatus_successfulQuery; /* SHORT_NAMED_INTEGER_VALUE */
 
 /**
  * @summary OutGatewayRecord_lrnQuryStatus_noQueryResponseMsg
@@ -49,7 +49,7 @@ const successfulQuery: OutGatewayRecord_lrnQuryStatus = OutGatewayRecord_lrnQury
  * @type {number}
  */
 export
-const OutGatewayRecord_lrnQuryStatus_noQueryResponseMsg: OutGatewayRecord_lrnQuryStatus = 2; /* LONG_NAMED_INTEGER_VALUE */
+const OutGatewayRecord_lrnQuryStatus_noQueryResponseMsg: 2 = 2 satisfies OutGatewayRecord_lrnQuryStatus; /* LONG_NAMED_INTEGER_VALUE */
 
 /**
  * @summary OutGatewayRecord_lrnQuryStatus_noQueryResponseMsg
@@ -57,7 +57,7 @@ const OutGatewayRecord_lrnQuryStatus_noQueryResponseMsg: OutGatewayRecord_lrnQur
  * @type {number}
  */
 export
-const noQueryResponseMsg: OutGatewayRecord_lrnQuryStatus = OutGatewayRecord_lrnQuryStatus_noQueryResponseMsg; /* SHORT_NAMED_INTEGER_VALUE */
+const noQueryResponseMsg: 2 = OutGatewayRecord_lrnQuryStatus_noQueryResponseMsg; /* SHORT_NAMED_INTEGER_VALUE */
 
 /**
  * @summary OutGatewayRecord_lrnQuryStatus_queryProtocolErr
@@ -65,7 +65,7 @@ const noQueryResponseMsg: OutGatewayRecord_lrnQuryStatus = OutGatewayRecord_lrnQ
  * @type {number}
  */
 export
-const OutGatewayRecord_lrnQuryStatus_queryProtocolErr: OutGatewayRecord_lrnQuryStatus = 4; /* LONG_NAMED_INTEGER_VALUE */
+const OutGatewayRecord_lrnQuryStatus_queryProtocolErr: 4 = 4 satisfies OutGatewayRecord_lrnQuryStatus; /* LONG_NAMED_INTEGER_VALUE */
 
 /**
  * @summary OutGatewayRecord_lrnQuryStatus_queryProtocolErr
@@ -73,7 +73,7 @@ const OutGatewayRecord_lrnQuryStatus_queryProtocolErr: OutGatewayRecord_lrnQuryS
  * @type {number}
  */
 export
-const queryProtocolErr: OutGatewayRecord_lrnQuryStatus = OutGatewayRecord_lrnQuryStatus_queryProtocolErr; /* SHORT_NAMED_INTEGER_VALUE */
+const queryProtocolErr: 4 = OutGatewayRecord_lrnQuryStatus_queryProtocolErr; /* SHORT_NAMED_INTEGER_VALUE */
 
 /**
  * @summary OutGatewayRecord_lrnQuryStatus_queryResponseDataErr
@@ -81,7 +81,7 @@ const queryProtocolErr: OutGatewayRecord_lrnQuryStatus = OutGatewayRecord_lrnQur
  * @type {number}
  */
 export
-const OutGatewayRecord_lrnQuryStatus_queryResponseDataErr: OutGatewayRecord_lrnQuryStatus = 5; /* LONG_NAMED_INTEGER_VALUE */
+const OutGatewayRecord_lrnQuryStatus_queryResponseDataErr: 5 = 5 satisfies OutGatewayRecord_lrnQuryStatus; /* LONG_NAMED_INTEGER_VALUE */
 
 /**
  * @summary OutGatewayRecord_lrnQuryStatus_queryResponseDataErr
@@ -89,7 +89,7 @@ const OutGatewayRecord_lrnQuryStatus_queryResponseDataErr: OutGatewayRecord_lrnQ
  * @type {number}
  */
 export
-const queryResponseDataErr: OutGatewayRecord_lrnQuryStatus = OutGatewayRecord_lrnQuryStatus_queryResponseDataErr; /* SHORT_NAMED_INTEGER_VALUE */
+const queryResponseDataErr: 5 = OutGatewayRecord_lrnQuryStatus_queryResponseDataErr; /* SHORT_NAMED_INTEGER_VALUE */
 
 /**
  * @summary OutGatewayRecord_lrnQuryStatus_queryRejected
@@ -97,7 +97,7 @@ const queryResponseDataErr: OutGatewayRecord_lrnQuryStatus = OutGatewayRecord_lr
  * @type {number}
  */
 export
-const OutGatewayRecord_lrnQuryStatus_queryRejected: OutGatewayRecord_lrnQuryStatus = 6; /* LONG_NAMED_INTEGER_VALUE */
+const OutGatewayRecord_lrnQuryStatus_queryRejected: 6 = 6 satisfies OutGatewayRecord_lrnQuryStatus; /* LONG_NAMED_INTEGER_VALUE */
 
 /**
  * @summary OutGatewayRecord_lrnQuryStatus_queryRejected
@@ -105,7 +105,7 @@ const OutGatewayRecord_lrnQuryStatus_queryRejected: OutGatewayRecord_lrnQuryStat
  * @type {number}
  */
 export
-const queryRejected: OutGatewayRecord_lrnQuryStatus = OutGatewayRecord_lrnQuryStatus_queryRejected; /* SHORT_NAMED_INTEGER_VALUE */
+const queryRejected: 6 = OutGatewayRecord_lrnQuryStatus_queryRejected; /* SHORT_NAMED_INTEGER_VALUE */
 
 /**
  * @summary OutGatewayRecord_lrnQuryStatus_queryNotPerformed
@@ -113,7 +113,7 @@ const queryRejected: OutGatewayRecord_lrnQuryStatus = OutGatewayRecord_lrnQurySt
  * @type {number}
  */
 export
-const OutGatewayRecord_lrnQuryStatus_queryNotPerformed: OutGatewayRecord_lrnQuryStatus = 9; /* LONG_NAMED_INTEGER_VALUE */
+const OutGatewayRecord_lrnQuryStatus_queryNotPerformed: 9 = 9 satisfies OutGatewayRecord_lrnQuryStatus; /* LONG_NAMED_INTEGER_VALUE */
 
 /**
  * @summary OutGatewayRecord_lrnQuryStatus_queryNotPerformed
@@ -121,7 +121,7 @@ const OutGatewayRecord_lrnQuryStatus_queryNotPerformed: OutGatewayRecord_lrnQury
  * @type {number}
  */
 export
-const queryNotPerformed: OutGatewayRecord_lrnQuryStatus = OutGatewayRecord_lrnQuryStatus_queryNotPerformed; /* SHORT_NAMED_INTEGER_VALUE */
+const queryNotPerformed: 9 = OutGatewayRecord_lrnQuryStatus_queryNotPerformed; /* SHORT_NAMED_INTEGER_VALUE */
 
 /**
  * @summary OutGatewayRecord_lrnQuryStatus_queryUnsuccessful
@@ -129,7 +129,7 @@ const queryNotPerformed: OutGatewayRecord_lrnQuryStatus = OutGatewayRecord_lrnQu
  * @type {number}
  */
 export
-const OutGatewayRecord_lrnQuryStatus_queryUnsuccessful: OutGatewayRecord_lrnQuryStatus = 99; /* LONG_NAMED_INTEGER_VALUE */
+const OutGatewayRecord_lrnQuryStatus_queryUnsuccessful: 99 = 99 satisfies OutGatewayRecord_lrnQuryStatus; /* LONG_NAMED_INTEGER_VALUE */
 
 /**
  * @summary OutGatewayRecord_lrnQuryStatus_queryUnsuccessful
@@ -137,7 +137,7 @@ const OutGatewayRecord_lrnQuryStatus_queryUnsuccessful: OutGatewayRecord_lrnQury
  * @type {number}
  */
 export
-const queryUnsuccessful: OutGatewayRecord_lrnQuryStatus = OutGatewayRecord_lrnQuryStatus_queryUnsuccessful; /* SHORT_NAMED_INTEGER_VALUE */
+const queryUnsuccessful: 99 = OutGatewayRecord_lrnQuryStatus_queryUnsuccessful; /* SHORT_NAMED_INTEGER_VALUE */
 
 export
 const _decode_OutGatewayRecord_lrnQuryStatus: $.ASN1Decoder<OutGatewayRecord_lrnQuryStatus> = $._decodeInteger;

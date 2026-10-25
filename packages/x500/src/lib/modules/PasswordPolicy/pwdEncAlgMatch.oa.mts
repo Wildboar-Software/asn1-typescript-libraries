@@ -2,7 +2,7 @@
 import { type MATCHING_RULE } from "../InformationFramework/MATCHING-RULE.oca.mjs";
 import { id_mr_pwdEncAlgMatch } from "../PasswordPolicy/id-mr-pwdEncAlgMatch.va.mjs";
 import {
-    PwdEncAlg,
+    type PwdEncAlg,
     _decode_PwdEncAlg,
     _encode_PwdEncAlg,
 } from "../PasswordPolicy/PwdEncAlg.ta.mjs";

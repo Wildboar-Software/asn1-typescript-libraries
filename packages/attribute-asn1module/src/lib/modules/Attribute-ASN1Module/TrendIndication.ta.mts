@@ -1,6 +1,6 @@
 /* eslint-disable */
 import {
-    ASN1Element as _Element,
+    type ASN1Element as _Element,
     ASN1TagClass as _TagClass,
     ASN1Construction as _Construction,
     ASN1UniversalType as _UniversalType,
@@ -36,7 +36,8 @@ const _enum_for_TrendIndication = {
     moreSevere: 2,
 } as const;
 
-export type _enum_for_TrendIndication = (typeof _enum_for_TrendIndication)[keyof typeof _enum_for_TrendIndication];
+export
+type _enum_for_TrendIndication = (typeof _enum_for_TrendIndication)[keyof typeof _enum_for_TrendIndication];
 
 /**
  * @summary TrendIndication
@@ -74,7 +75,7 @@ type TrendIndication = _enum_for_TrendIndication;
  * @enum {number}
  */
 export
-const TrendIndication = _enum_for_TrendIndication;
+const TrendIndication: typeof _enum_for_TrendIndication = _enum_for_TrendIndication;
 
 /**
  * @summary TrendIndication_lessSevere
@@ -87,7 +88,7 @@ const TrendIndication = _enum_for_TrendIndication;
  * @type {number}
  */
 export
-const TrendIndication_lessSevere: TrendIndication = TrendIndication.lessSevere; /* LONG_NAMED_ENUMERATED_VALUE */
+const TrendIndication_lessSevere: 0 = TrendIndication.lessSevere; /* LONG_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary lessSevere
@@ -100,7 +101,7 @@ const TrendIndication_lessSevere: TrendIndication = TrendIndication.lessSevere; 
  * @type {number}
  */
 export
-const lessSevere: TrendIndication = TrendIndication.lessSevere; /* SHORT_NAMED_ENUMERATED_VALUE */
+const lessSevere: 0 = TrendIndication.lessSevere; /* SHORT_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary TrendIndication_noChange
@@ -113,7 +114,7 @@ const lessSevere: TrendIndication = TrendIndication.lessSevere; /* SHORT_NAMED_E
  * @type {number}
  */
 export
-const TrendIndication_noChange: TrendIndication = TrendIndication.noChange; /* LONG_NAMED_ENUMERATED_VALUE */
+const TrendIndication_noChange: 1 = TrendIndication.noChange; /* LONG_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary noChange
@@ -126,7 +127,7 @@ const TrendIndication_noChange: TrendIndication = TrendIndication.noChange; /* L
  * @type {number}
  */
 export
-const noChange: TrendIndication = TrendIndication.noChange; /* SHORT_NAMED_ENUMERATED_VALUE */
+const noChange: 1 = TrendIndication.noChange; /* SHORT_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary TrendIndication_moreSevere
@@ -139,7 +140,7 @@ const noChange: TrendIndication = TrendIndication.noChange; /* SHORT_NAMED_ENUME
  * @type {number}
  */
 export
-const TrendIndication_moreSevere: TrendIndication = TrendIndication.moreSevere; /* LONG_NAMED_ENUMERATED_VALUE */
+const TrendIndication_moreSevere: 2 = TrendIndication.moreSevere; /* LONG_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary moreSevere
@@ -152,13 +153,25 @@ const TrendIndication_moreSevere: TrendIndication = TrendIndication.moreSevere; 
  * @type {number}
  */
 export
-const moreSevere: TrendIndication = TrendIndication.moreSevere; /* SHORT_NAMED_ENUMERATED_VALUE */
+const moreSevere: 2 = TrendIndication.moreSevere; /* SHORT_NAMED_ENUMERATED_VALUE */
 
 
-export const _decode_TrendIndication = $._decodeEnumerated as $.ASN1Decoder<TrendIndication>;
+export function _decode_TrendIndication(el: _Element): TrendIndication {
+    const enumerated = $._decodeEnumerated(el);
+    switch (enumerated) {
+        case TrendIndication.lessSevere: return TrendIndication.lessSevere;
+        case TrendIndication.noChange: return TrendIndication.noChange;
+        case TrendIndication.moreSevere: return TrendIndication.moreSevere;
+        default:
+            throw new _ConstructionError(
+                "Invalid ENUMERATED value " + enumerated + " for TrendIndication.",
+                el,
+            );
+    }
+}
 
 
-export const _encode_TrendIndication = $._encodeEnumerated as $.ASN1Encoder<TrendIndication>;
+export const _encode_TrendIndication: $.ASN1Encoder<TrendIndication> = $._encodeEnumerated as $.ASN1Encoder<TrendIndication>;
 
 
 /* eslint-enable */

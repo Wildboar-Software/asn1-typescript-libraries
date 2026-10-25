@@ -1,9 +1,9 @@
 /* eslint-disable */
 import {
-    ASN1Element as _Element,
+    type ASN1Element as _Element,
     ASN1TagClass as _TagClass,
-    BOOLEAN,
-    OPTIONAL,
+    type BOOLEAN,
+    type OPTIONAL,
 } from "@wildboar/asn1";
 import * as $ from "@wildboar/asn1/functional";
 import {
@@ -22,7 +22,7 @@ import {
     _encode_Attribute,
 } from "../InformationFramework/Attribute.ta.mjs";
 import {
-    DistinguishedName,
+    type DistinguishedName,
     _decode_DistinguishedName,
     _encode_DistinguishedName,
 } from "../InformationFramework/DistinguishedName.ta.mjs";
@@ -56,78 +56,94 @@ import {
  *
  */
 export class DsaReferralData implements CommonResults {
+    /**
+     * @summary `reference`.
+     * @description
+     *
+     * ContinuationReference to follow (possibly LDAP).
+     *
+     * @public
+     * @readonly
+     */
+    public readonly reference: ContinuationReference;
+    /**
+     * @summary `contextPrefix`.
+     * @description
+     *
+     * Only if request `returnCrossRefs` was TRUE and the referral is
+     * based on a subordinate or cross reference; else absent. Admin
+     * decides which knowledge may be returned.
+     *
+     * @public
+     * @readonly
+     */
+    public readonly contextPrefix?: OPTIONAL<DistinguishedName>;
+    /**
+     * @summary Extensions that are not recognized.
+     * @public
+     * @readonly
+     */
+    public readonly _unrecognizedExtensionsList: _Element[];
+    /**
+     * @summary `securityParameters`.
+     * @description
+     *
+     * Required if the error is signed; absence ≡ empty set.
+     *
+     * @public
+     * @readonly
+     */
+    public readonly securityParameters?: OPTIONAL<SecurityParameters>; /* REPLICATED_COMPONENT */
+    /**
+     * @summary `performer`.
+     * @description
+     *
+     * DN of the DSA that signed; needed when the error is signed.
+     *
+     * @public
+     * @readonly
+     */
+    public readonly performer?: OPTIONAL<DistinguishedName>; /* REPLICATED_COMPONENT */
+    /**
+     * @summary `aliasDereferenced`.
+     * @description
+     *
+     * DEFAULT FALSE. TRUE if any alias in the purported name was
+     * dereferenced.
+     *
+     * @public
+     * @readonly
+     */
+    public readonly aliasDereferenced?: OPTIONAL<BOOLEAN>; /* REPLICATED_COMPONENT */
+    /**
+     * @summary `notification`.
+     * @description
+     *
+     * SEQUENCE SIZE (1..MAX). Qualifies the error; not necessarily
+     * stored attributes.
+     *
+     * @public
+     * @readonly
+     */
+    public readonly notification?: OPTIONAL<Attribute[]>; /* REPLICATED_COMPONENT */
+
     constructor(
-        /**
-         * @summary `reference`.
-         * @description
-         *
-         * ContinuationReference to follow (possibly LDAP).
-         *
-         * @public
-         * @readonly
-         */
-        readonly reference: ContinuationReference,
-        /**
-         * @summary `contextPrefix`.
-         * @description
-         *
-         * Only if request `returnCrossRefs` was TRUE and the referral is
-         * based on a subordinate or cross reference; else absent. Admin
-         * decides which knowledge may be returned.
-         *
-         * @public
-         * @readonly
-         */
-        readonly contextPrefix?: OPTIONAL<DistinguishedName>,
-        /**
-         * @summary Extensions that are not recognized.
-         * @public
-         * @readonly
-         */
-        readonly _unrecognizedExtensionsList: _Element[] = [],
-        /**
-         * @summary `securityParameters`.
-         * @description
-         *
-         * Required if the error is signed; absence ≡ empty set.
-         *
-         * @public
-         * @readonly
-         */
-        readonly securityParameters?: OPTIONAL<SecurityParameters> /* REPLICATED_COMPONENT */,
-        /**
-         * @summary `performer`.
-         * @description
-         *
-         * DN of the DSA that signed; needed when the error is signed.
-         *
-         * @public
-         * @readonly
-         */
-        readonly performer?: OPTIONAL<DistinguishedName> /* REPLICATED_COMPONENT */,
-        /**
-         * @summary `aliasDereferenced`.
-         * @description
-         *
-         * DEFAULT FALSE. TRUE if any alias in the purported name was
-         * dereferenced.
-         *
-         * @public
-         * @readonly
-         */
-        readonly aliasDereferenced?: OPTIONAL<BOOLEAN> /* REPLICATED_COMPONENT */,
-        /**
-         * @summary `notification`.
-         * @description
-         *
-         * SEQUENCE SIZE (1..MAX). Qualifies the error; not necessarily
-         * stored attributes.
-         *
-         * @public
-         * @readonly
-         */
-        readonly notification?: OPTIONAL<Attribute[]> /* REPLICATED_COMPONENT */
-    ) {}
+        reference: ContinuationReference,
+        contextPrefix?: OPTIONAL<DistinguishedName>,
+        _unrecognizedExtensionsList: _Element[] = [],
+        securityParameters?: OPTIONAL<SecurityParameters>,
+        performer?: OPTIONAL<DistinguishedName>,
+        aliasDereferenced?: OPTIONAL<BOOLEAN>,
+        notification?: OPTIONAL<Attribute[]>
+    ) {
+        this.reference = reference;
+        this.contextPrefix = contextPrefix;
+        this._unrecognizedExtensionsList = _unrecognizedExtensionsList;
+        this.securityParameters = securityParameters;
+        this.performer = performer;
+        this.aliasDereferenced = aliasDereferenced;
+        this.notification = notification;
+    }
 
     /**
      * @summary Restructures an object into a DsaReferralData

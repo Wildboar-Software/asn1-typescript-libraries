@@ -2,18 +2,18 @@
 
 import * as $ from "@wildboar/asn1/functional";
 import {
-    OPTIONAL,
-    BOOLEAN,
-    SEQUENCE,
-    SET,
-    ASN1Element as _Element,
+    type OPTIONAL,
+    type BOOLEAN,
+    type SEQUENCE,
+    type SET,
+    type ASN1Element as _Element,
     ASN1TagClass as _TagClass
 } from "@wildboar/asn1";
-import { ConnectionID, _decode_ConnectionID, _encode_ConnectionID } from "../CSTA-call-connection-identifiers/ConnectionID.ta.mjs";
+import { type ConnectionID, _decode_ConnectionID, _encode_ConnectionID } from "../CSTA-call-connection-identifiers/ConnectionID.ta.mjs";
 
 import { DeviceID, _decode_DeviceID, _encode_DeviceID } from "../CSTA-device-identifiers/DeviceID.ta.mjs";
 
-import { CallCharacteristics, _decode_CallCharacteristics, _encode_CallCharacteristics } from "../CSTA-call-control/CallCharacteristics.ta.mjs";
+import { type CallCharacteristics, _decode_CallCharacteristics, _encode_CallCharacteristics } from "../CSTA-call-control/CallCharacteristics.ta.mjs";
 
 import { MediaCallCharacteristics, _decode_MediaCallCharacteristics, _encode_MediaCallCharacteristics } from "../CSTA-media-services/MediaCallCharacteristics.ta.mjs";
 
@@ -28,21 +28,21 @@ import {
     _encode_ConsultOptions
 } from "../CSTA-call-control/ConsultOptions.ta.mjs";
 
-import { SubjectOfCall, _decode_SubjectOfCall, _encode_SubjectOfCall } from "../CSTA-device-feature-types/SubjectOfCall.ta.mjs";
+import { type SubjectOfCall, _decode_SubjectOfCall, _encode_SubjectOfCall } from "../CSTA-device-feature-types/SubjectOfCall.ta.mjs";
 
-import { LanguagePreferences, _decode_LanguagePreferences, _encode_LanguagePreferences } from "../CSTA-device-feature-types/LanguagePreferences.ta.mjs";
+import { type LanguagePreferences, _decode_LanguagePreferences, _encode_LanguagePreferences } from "../CSTA-device-feature-types/LanguagePreferences.ta.mjs";
 
 import { CSTACommonArguments, _decode_CSTACommonArguments, _encode_CSTACommonArguments } from "../CSTA-extension-types/CSTACommonArguments.ta.mjs";
 
 
 
-import { AccountInfo, _decode_AccountInfo, _encode_AccountInfo } from "../CSTA-device-feature-types/AccountInfo.ta.mjs";
+import { type AccountInfo, _decode_AccountInfo, _encode_AccountInfo } from "../CSTA-device-feature-types/AccountInfo.ta.mjs";
 
-import { AuthCode, _decode_AuthCode, _encode_AuthCode } from "../CSTA-device-feature-types/AuthCode.ta.mjs";
+import { type AuthCode, _decode_AuthCode, _encode_AuthCode } from "../CSTA-device-feature-types/AuthCode.ta.mjs";
 
-import { CorrelatorData, _decode_CorrelatorData, _encode_CorrelatorData } from "../CSTA-device-feature-types/CorrelatorData.ta.mjs";
+import { type CorrelatorData, _decode_CorrelatorData, _encode_CorrelatorData } from "../CSTA-device-feature-types/CorrelatorData.ta.mjs";
 
-import { UserData, _decode_UserData, _encode_UserData } from "../CSTA-device-feature-types/UserData.ta.mjs";
+import { type UserData, _decode_UserData, _encode_UserData } from "../CSTA-device-feature-types/UserData.ta.mjs";
 
 /**
  * @summary ConsultationCallArgument
@@ -62,17 +62,17 @@ import { UserData, _decode_UserData, _encode_UserData } from "../CSTA-device-fea
  * ConsultationCallArgument ::= SEQUENCE
  * {     existingCall             [ 0] IMPLICIT ConnectionID,
  *     consultedDevice         [ 1] DeviceID,
- *     connectionReservation         [ 2] IMPLICIT BOOLEAN                 OPTIONAL,
- *     accountCode             [ 3] IMPLICIT AccountInfo             OPTIONAL,
- *     authCode             [ 4] IMPLICIT AuthCode                 OPTIONAL,
- *     correlatorData             [ 5] IMPLICIT CorrelatorData             OPTIONAL,
- *     userData             [ 6] IMPLICIT UserData                 OPTIONAL,
- *     callCharacteristics         [ 7] IMPLICIT CallCharacteristics         OPTIONAL,
- *     mediaCallCharacteristics     [ 8] IMPLICIT MediaCallCharacteristics         OPTIONAL,
- *     callingConnectionInfo         [ 9] IMPLICIT ConnectionInformation         OPTIONAL,
+ *     connectionReservation         [ 2] IMPLICIT BOOLEAN                 type OPTIONAL,
+ *     accountCode             [ 3] IMPLICIT AccountInfo             type OPTIONAL,
+ *     authCode             [ 4] IMPLICIT AuthCode                 type OPTIONAL,
+ *     correlatorData             [ 5] IMPLICIT CorrelatorData             type OPTIONAL,
+ *     userData             [ 6] IMPLICIT UserData                 type OPTIONAL,
+ *     callCharacteristics         [ 7] IMPLICIT CallCharacteristics         type OPTIONAL,
+ *     mediaCallCharacteristics     [ 8] IMPLICIT MediaCallCharacteristics         type OPTIONAL,
+ *     callingConnectionInfo         [ 9] IMPLICIT ConnectionInformation         type OPTIONAL,
  *     consultOptions             [10] IMPLICIT ConsultOptions             DEFAULT unrestricted,
- *     subjectOfCall            [11] IMPLICIT SubjectOfCall            OPTIONAL,
- *     languagePreferences        [12] IMPLICIT LanguagePreferences        OPTIONAL,
+ *     subjectOfCall            [11] IMPLICIT SubjectOfCall            type OPTIONAL,
+ *     languagePreferences        [12] IMPLICIT LanguagePreferences        type OPTIONAL,
  *     extensions             CSTACommonArguments                 OPTIONAL }
  * ```
  * 
@@ -80,169 +80,199 @@ import { UserData, _decode_UserData, _encode_UserData } from "../CSTA-device-fea
  */
 export
 class ConsultationCallArgument {
+    /**
+     * @summary `existingCall`.
+     * @description
+     *
+     * Mandatory. Active connection at the consulting device.
+     * Becomes Hold.
+     *
+     * @public
+     * @readonly
+     */
+    public readonly existingCall: ConnectionID;
+    /**
+     * @summary `consultedDevice`.
+     * @description
+     *
+     * Mandatory. Destination of the consultation. May be a
+     * null DeviceID or a Diallable Digits string ending in
+     * `;` to stage dialling via Dial Digits (FR 6–7). Other
+     * formats must be a complete sequence. Active features at
+     * this device are honoured (FR 1).
+     *
+     * @public
+     * @readonly
+     */
+    public readonly consultedDevice: DeviceID;
+    /**
+     * @summary `connectionReservation`.
+     * @description
+     *
+     * Optional. When TRUE, reserve the held call's
+     * media-stream channel(s) for later Retrieve/Reconnect.
+     *
+     * @public
+     * @readonly
+     */
+    public readonly connectionReservation?: OPTIONAL<BOOLEAN>;
+    /**
+     * @summary `accountCode`.
+     * @description
+     *
+     * Optional account code for the consultation call
+     * (§12.2.1). A null string clears it.
+     *
+     * @public
+     * @readonly
+     */
+    public readonly accountCode?: OPTIONAL<AccountInfo>;
+    /**
+     * @summary `authCode`.
+     * @description
+     *
+     * Optional authorization code for this request (§12.2.3).
+     *
+     * @public
+     * @readonly
+     */
+    public readonly authCode?: OPTIONAL<AuthCode>;
+    /**
+     * @summary `correlatorData`.
+     * @description
+     *
+     * Optional correlator data for the secondary call only; it
+     * does not change correlator data on the primary call
+     * (§12.2.10 FR 5). A null string clears data on the
+     * secondary call.
+     *
+     * @public
+     * @readonly
+     */
+    public readonly correlatorData?: OPTIONAL<CorrelatorData>;
+    /**
+     * @summary `userData`.
+     * @description
+     *
+     * Optional user data sent with the consultation (§12.2.30).
+     *
+     * @public
+     * @readonly
+     */
+    public readonly userData?: OPTIONAL<UserData>;
+    /**
+     * @summary `callCharacteristics`.
+     * @description
+     *
+     * Optional call characteristics for the consultation
+     * (§12.2.4).
+     *
+     * @public
+     * @readonly
+     */
+    public readonly callCharacteristics?: OPTIONAL<CallCharacteristics>;
+    /**
+     * @summary `mediaCallCharacteristics`.
+     * @description
+     *
+     * Optional media class/characteristics (§12.2.20). The
+     * switching function may adjust digital-data values and
+     * return them in the result (FR 8).
+     *
+     * @public
+     * @readonly
+     */
+    public readonly mediaCallCharacteristics?: OPTIONAL<MediaCallCharacteristics>;
+    /**
+     * @summary `callingConnectionInfo`.
+     * @description
+     *
+     * Optional connection information for the originating
+     * connection of the consultation (§12.2.8).
+     *
+     * @public
+     * @readonly
+     */
+    public readonly callingConnectionInfo?: OPTIONAL<ConnectionInformation>;
+    /**
+     * @summary `consultOptions`.
+     * @description
+     *
+     * Default `unrestricted`. When supported, send a
+     * capability-advertised value so transfer/conference
+     * resources can be reserved. Conference vs Transfer
+     * restricts which service may complete the consultation
+     * (FR 2–5).
+     *
+     * @public
+     * @readonly
+     */
+    public readonly consultOptions?: OPTIONAL<ConsultOptions>;
+    /**
+     * @summary `subjectOfCall`.
+     * @description
+     *
+     * Optional subject or intent of the consultation call
+     * (§12.2.27).
+     *
+     * @public
+     * @readonly
+     */
+    public readonly subjectOfCall?: OPTIONAL<SubjectOfCall>;
+    /**
+     * @summary `languagePreferences`.
+     * @description
+     *
+     * Optional preferred language(s) for the consultation
+     * (§12.2.16).
+     *
+     * @public
+     * @readonly
+     */
+    public readonly languagePreferences?: OPTIONAL<LanguagePreferences>;
+    /**
+     * @summary `extensions`.
+     * @description
+     *
+     * Optional `CSTACommonArguments` carrying the security and
+     * privateData parameters from the ECMA-269 service table.
+     *
+     * @public
+     * @readonly
+     */
+    public readonly extensions?: OPTIONAL<CSTACommonArguments>;
+
     constructor (
-        /**
-         * @summary `existingCall`.
-         * @description
-         *
-         * Mandatory. Active connection at the consulting device.
-         * Becomes Hold.
-         *
-         * @public
-         * @readonly
-         */
-        readonly existingCall: ConnectionID,
-        /**
-         * @summary `consultedDevice`.
-         * @description
-         *
-         * Mandatory. Destination of the consultation. May be a
-         * null DeviceID or a Diallable Digits string ending in
-         * `;` to stage dialling via Dial Digits (FR 6–7). Other
-         * formats must be a complete sequence. Active features at
-         * this device are honoured (FR 1).
-         *
-         * @public
-         * @readonly
-         */
-        readonly consultedDevice: DeviceID,
-        /**
-         * @summary `connectionReservation`.
-         * @description
-         *
-         * Optional. When TRUE, reserve the held call's
-         * media-stream channel(s) for later Retrieve/Reconnect.
-         *
-         * @public
-         * @readonly
-         */
-        readonly connectionReservation?: OPTIONAL<BOOLEAN>,
-        /**
-         * @summary `accountCode`.
-         * @description
-         *
-         * Optional account code for the consultation call
-         * (§12.2.1). A null string clears it.
-         *
-         * @public
-         * @readonly
-         */
-        readonly accountCode?: OPTIONAL<AccountInfo>,
-        /**
-         * @summary `authCode`.
-         * @description
-         *
-         * Optional authorization code for this request (§12.2.3).
-         *
-         * @public
-         * @readonly
-         */
-        readonly authCode?: OPTIONAL<AuthCode>,
-        /**
-         * @summary `correlatorData`.
-         * @description
-         *
-         * Optional correlator data for the secondary call only; it
-         * does not change correlator data on the primary call
-         * (§12.2.10 FR 5). A null string clears data on the
-         * secondary call.
-         *
-         * @public
-         * @readonly
-         */
-        readonly correlatorData?: OPTIONAL<CorrelatorData>,
-        /**
-         * @summary `userData`.
-         * @description
-         *
-         * Optional user data sent with the consultation (§12.2.30).
-         *
-         * @public
-         * @readonly
-         */
-        readonly userData?: OPTIONAL<UserData>,
-        /**
-         * @summary `callCharacteristics`.
-         * @description
-         *
-         * Optional call characteristics for the consultation
-         * (§12.2.4).
-         *
-         * @public
-         * @readonly
-         */
-        readonly callCharacteristics?: OPTIONAL<CallCharacteristics>,
-        /**
-         * @summary `mediaCallCharacteristics`.
-         * @description
-         *
-         * Optional media class/characteristics (§12.2.20). The
-         * switching function may adjust digital-data values and
-         * return them in the result (FR 8).
-         *
-         * @public
-         * @readonly
-         */
-        readonly mediaCallCharacteristics?: OPTIONAL<MediaCallCharacteristics>,
-        /**
-         * @summary `callingConnectionInfo`.
-         * @description
-         *
-         * Optional connection information for the originating
-         * connection of the consultation (§12.2.8).
-         *
-         * @public
-         * @readonly
-         */
-        readonly callingConnectionInfo?: OPTIONAL<ConnectionInformation>,
-        /**
-         * @summary `consultOptions`.
-         * @description
-         *
-         * Default `unrestricted`. When supported, send a
-         * capability-advertised value so transfer/conference
-         * resources can be reserved. Conference vs Transfer
-         * restricts which service may complete the consultation
-         * (FR 2–5).
-         *
-         * @public
-         * @readonly
-         */
-        readonly consultOptions?: OPTIONAL<ConsultOptions>,
-        /**
-         * @summary `subjectOfCall`.
-         * @description
-         *
-         * Optional subject or intent of the consultation call
-         * (§12.2.27).
-         *
-         * @public
-         * @readonly
-         */
-        readonly subjectOfCall?: OPTIONAL<SubjectOfCall>,
-        /**
-         * @summary `languagePreferences`.
-         * @description
-         *
-         * Optional preferred language(s) for the consultation
-         * (§12.2.16).
-         *
-         * @public
-         * @readonly
-         */
-        readonly languagePreferences?: OPTIONAL<LanguagePreferences>,
-        /**
-         * @summary `extensions`.
-         * @description
-         *
-         * Optional `CSTACommonArguments` carrying the security and
-         * privateData parameters from the ECMA-269 service table.
-         *
-         * @public
-         * @readonly
-         */
-        readonly extensions?: OPTIONAL<CSTACommonArguments>
-    ) {}
+        existingCall: ConnectionID,
+        consultedDevice: DeviceID,
+        connectionReservation?: OPTIONAL<BOOLEAN>,
+        accountCode?: OPTIONAL<AccountInfo>,
+        authCode?: OPTIONAL<AuthCode>,
+        correlatorData?: OPTIONAL<CorrelatorData>,
+        userData?: OPTIONAL<UserData>,
+        callCharacteristics?: OPTIONAL<CallCharacteristics>,
+        mediaCallCharacteristics?: OPTIONAL<MediaCallCharacteristics>,
+        callingConnectionInfo?: OPTIONAL<ConnectionInformation>,
+        consultOptions?: OPTIONAL<ConsultOptions>,
+        subjectOfCall?: OPTIONAL<SubjectOfCall>,
+        languagePreferences?: OPTIONAL<LanguagePreferences>,
+        extensions?: OPTIONAL<CSTACommonArguments>
+    ) {
+        this.existingCall = existingCall;
+        this.consultedDevice = consultedDevice;
+        this.connectionReservation = connectionReservation;
+        this.accountCode = accountCode;
+        this.authCode = authCode;
+        this.correlatorData = correlatorData;
+        this.userData = userData;
+        this.callCharacteristics = callCharacteristics;
+        this.mediaCallCharacteristics = mediaCallCharacteristics;
+        this.callingConnectionInfo = callingConnectionInfo;
+        this.consultOptions = consultOptions;
+        this.subjectOfCall = subjectOfCall;
+        this.languagePreferences = languagePreferences;
+        this.extensions = extensions;
+    }
 
     /**
      * @summary Restructures an object into a ConsultationCallArgument
@@ -266,13 +296,13 @@ class ConsultationCallArgument {
      * @static
      * @method
      */
-    public static get _default_value_for_consultOptions () { return ConsultOptions_unrestricted; }        /**
+    public static get _default_value_for_consultOptions (): _enum_for_ConsultOptions.unrestricted { return ConsultOptions_unrestricted; }        /**
          * @summary The enum used as the type of the component `consultOptions`
          * @public
          * @static
          */
 
-    public static _enum_for_consultOptions = _enum_for_ConsultOptions;
+    public static _enum_for_consultOptions: typeof _enum_for_ConsultOptions = _enum_for_ConsultOptions;
 }
 
 /**

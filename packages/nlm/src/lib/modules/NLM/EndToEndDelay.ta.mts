@@ -1,7 +1,7 @@
 /* eslint-disable */
 import {
-    INTEGER,
-    ASN1Element as _Element,
+    type INTEGER,
+    type ASN1Element as _Element,
     ASN1TagClass as _TagClass,
     ASN1Construction as _Construction,
     ASN1UniversalType as _UniversalType,
@@ -34,12 +34,12 @@ export type EndToEndDelay = INTEGER;
 
 
 
-export const _decode_EndToEndDelay = $._decodeInteger;
+export const _decode_EndToEndDelay: $.ASN1Decoder<INTEGER> = $._decodeInteger;
 
 
 
 
-export const _encode_EndToEndDelay = $._encodeInteger;
+export const _encode_EndToEndDelay: $.ASN1Encoder<INTEGER> = $._encodeInteger;
 
 
 /* eslint-enable */

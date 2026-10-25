@@ -1,6 +1,6 @@
 /* eslint-disable */
 import {
-    ASN1Element as _Element,
+    type ASN1Element as _Element,
     ASN1TagClass as _TagClass,
     ASN1Construction as _Construction,
     ASN1UniversalType as _UniversalType,
@@ -16,7 +16,7 @@ import {
     _encode_ORAddressFilter,
 } from '../MHSRoutingORAddressSubtree/ORAddressFilter.ta.mjs';
 import {
-    RoutingAdvice,
+    type RoutingAdvice,
     _decode_RoutingAdvice,
     _encode_RoutingAdvice,
 } from '../MHSRoutingORAddressSubtree/RoutingAdvice.ta.mjs';
@@ -39,20 +39,26 @@ import {
  *
  */
 export class ExpressionMatch {
+    /**
+     * @summary `filter_set`.
+     * @public
+     * @readonly
+     */
+    public readonly filter_set: ORAddressFilter[];
+    /**
+     * @summary `routing_advice`.
+     * @public
+     * @readonly
+     */
+    public readonly routing_advice: RoutingAdvice;
+
     constructor(
-        /**
-         * @summary `filter_set`.
-         * @public
-         * @readonly
-         */
-        readonly filter_set: ORAddressFilter[],
-        /**
-         * @summary `routing_advice`.
-         * @public
-         * @readonly
-         */
-        readonly routing_advice: RoutingAdvice
-    ) {}
+        filter_set: ORAddressFilter[],
+        routing_advice: RoutingAdvice
+    ) {
+        this.filter_set = filter_set;
+        this.routing_advice = routing_advice;
+    }
 
     /**
      * @summary Restructures an object into a ExpressionMatch

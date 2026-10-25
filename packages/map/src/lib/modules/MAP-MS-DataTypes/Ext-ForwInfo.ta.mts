@@ -1,13 +1,13 @@
 /* eslint-disable */
 import {
-    OPTIONAL,
-    ASN1Element as _Element,
+    type OPTIONAL,
+    type ASN1Element as _Element,
     ASN1TagClass as _TagClass
 } from "@wildboar/asn1";
 import * as $ from "@wildboar/asn1/functional";
 import { ExtensionContainer, _decode_ExtensionContainer, _encode_ExtensionContainer } from "../MAP-ExtensionDataTypes/ExtensionContainer.ta.mjs";
-import { Ext_ForwFeatureList, _decode_Ext_ForwFeatureList, _encode_Ext_ForwFeatureList } from "../MAP-MS-DataTypes/Ext-ForwFeatureList.ta.mjs";
-import { SS_Code, _decode_SS_Code, _encode_SS_Code } from "../MAP-SS-Code/SS-Code.ta.mjs";
+import { type Ext_ForwFeatureList, _decode_Ext_ForwFeatureList, _encode_Ext_ForwFeatureList } from "../MAP-MS-DataTypes/Ext-ForwFeatureList.ta.mjs";
+import { type SS_Code, _decode_SS_Code, _encode_SS_Code } from "../MAP-SS-Code/SS-Code.ta.mjs";
 
 
 /**
@@ -26,7 +26,7 @@ import { SS_Code, _decode_SS_Code, _encode_SS_Code } from "../MAP-SS-Code/SS-Cod
  * Ext-ForwInfo ::= SEQUENCE {
  *     ss-Code    SS-Code,
  *     forwardingFeatureList    Ext-ForwFeatureList,
- *     extensionContainer    [0] ExtensionContainer    OPTIONAL,
+ *     extensionContainer    [0] ExtensionContainer    type OPTIONAL,
  *     ...}
  * ```
  * 
@@ -34,42 +34,52 @@ import { SS_Code, _decode_SS_Code, _encode_SS_Code } from "../MAP-SS-Code/SS-Cod
  */
 export
 class Ext_ForwInfo {
+    /**
+     * @summary `ss_Code`.
+     * @description
+     *
+     * SS-Code of the relevant call forwarding service (3GPP TS 29.002
+     * V19.1.0 clause 7.6.3.15).
+     *
+     * @public
+     * @readonly
+     */
+    public readonly ss_Code: SS_Code;
+    /**
+     * @summary `forwardingFeatureList`.
+     * @description
+     *
+     * Extensible forwarding features, one item per Basic Service Group
+     * (3GPP TS 29.002 V19.1.0 clause 7.6.3.15).
+     *
+     * @public
+     * @readonly
+     */
+    public readonly forwardingFeatureList: Ext_ForwFeatureList;
+    /**
+     * @summary `extensionContainer`.
+     * @public
+     * @readonly
+     */
+    public readonly extensionContainer?: OPTIONAL<ExtensionContainer>;
+    /**
+     * @summary Extensions that are not recognized.
+     * @public
+     * @readonly
+     */
+    public readonly _unrecognizedExtensionsList: _Element[];
+
     constructor (
-        /**
-         * @summary `ss_Code`.
-         * @description
-         *
-         * SS-Code of the relevant call forwarding service (3GPP TS 29.002
-         * V19.1.0 clause 7.6.3.15).
-         *
-         * @public
-         * @readonly
-         */
-        readonly ss_Code: SS_Code,
-        /**
-         * @summary `forwardingFeatureList`.
-         * @description
-         *
-         * Extensible forwarding features, one item per Basic Service Group
-         * (3GPP TS 29.002 V19.1.0 clause 7.6.3.15).
-         *
-         * @public
-         * @readonly
-         */
-        readonly forwardingFeatureList: Ext_ForwFeatureList,
-        /**
-         * @summary `extensionContainer`.
-         * @public
-         * @readonly
-         */
-        readonly extensionContainer?: OPTIONAL<ExtensionContainer>,
-        /**
-         * @summary Extensions that are not recognized.
-         * @public
-         * @readonly
-         */
-        readonly _unrecognizedExtensionsList: _Element[] = []
-    ) {}
+        ss_Code: SS_Code,
+        forwardingFeatureList: Ext_ForwFeatureList,
+        extensionContainer?: OPTIONAL<ExtensionContainer>,
+        _unrecognizedExtensionsList: _Element[] = []
+    ) {
+        this.ss_Code = ss_Code;
+        this.forwardingFeatureList = forwardingFeatureList;
+        this.extensionContainer = extensionContainer;
+        this._unrecognizedExtensionsList = _unrecognizedExtensionsList;
+    }
 
     /**
      * @summary Restructures an object into a Ext_ForwInfo

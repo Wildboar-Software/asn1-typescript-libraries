@@ -1,8 +1,8 @@
 /* eslint-disable */
 import {
-    OPTIONAL,
-    BOOLEAN,
-    ASN1Element as _Element,
+    type OPTIONAL,
+    type BOOLEAN,
+    type ASN1Element as _Element,
     ASN1TagClass as _TagClass,
     ASN1Construction as _Construction,
     ASN1UniversalType as _UniversalType,
@@ -12,7 +12,7 @@ import {
     ASN1ConstructionError as _ConstructionError,
 } from "@wildboar/asn1";
 import * as $ from "@wildboar/asn1/functional";
-import { Identifier, _decode_Identifier, _encode_Identifier } from "../CryptographicInformationFramework/Identifier.ta.mjs";
+import { type Identifier, _decode_Identifier, _encode_Identifier } from "../CryptographicInformationFramework/Identifier.ta.mjs";
 import { CredentialIdentifier, _decode_CredentialIdentifier, _encode_CredentialIdentifier } from "../CryptographicInformationFramework/CredentialIdentifier.ta.mjs";
 import { CertHash, _decode_CertHash, _encode_CertHash } from "../CryptographicInformationFramework/CertHash.ta.mjs";
 import { Usage, _decode_Usage, _encode_Usage } from "../CryptographicInformationFramework/Usage.ta.mjs";
@@ -46,79 +46,97 @@ import { Validity, _decode_Validity, _encode_Validity } from "../AuthenticationF
  */
 export
 class CommonCertificateAttributes {
+    /**
+     * @summary `iD`.
+     * @description
+     * Shared with the matching private-key CIO and sibling certificates.
+     * ISO/IEC 7816-15:2016 §8.2.15.
+     * @public
+     * @readonly
+     */
+    public readonly iD: Identifier;
+    /**
+     * @summary `authority`.
+     * @description
+     * TRUE if the certificate is for an authority (e.g. CA). DEFAULT FALSE.
+     * ISO/IEC 7816-15:2016 §8.2.15.
+     * @public
+     * @readonly
+     */
+    public readonly authority?: OPTIONAL<BOOLEAN>;
+    /**
+     * @summary `identifier`.
+     * @description
+     * Historical; use `identifiers` instead. ISO/IEC 7816-15:2016 §8.2.15.
+     * @public
+     * @readonly
+     */
+    public readonly identifier?: OPTIONAL<CredentialIdentifier>;
+    /**
+     * @summary `certHash`.
+     * @description
+     * Integrity check when the certificate is stored off-card (`url` of
+     * `ReferencedValue`). ISO/IEC 7816-15:2016 §8.2.15.
+     * @public
+     * @readonly
+     */
+    public readonly certHash?: OPTIONAL<CertHash>;
+    /**
+     * @summary `trustedUsage`.
+     * @description
+     * Purposes for which the cardholder trusts the certified public key.
+     * Intersect with the certificate's keyUsage extension when present.
+     * Absent means all usage. "Trust" semantics are out of scope. ISO/IEC
+     * 7816-15:2016 §8.2.15.
+     * @public
+     * @readonly
+     */
+    public readonly trustedUsage?: OPTIONAL<Usage>;
+    /**
+     * @summary `identifiers`.
+     * @description
+     * Distinguishing info a requester already knows (e.g.
+     * subjectNameHash/issuerNameHash for chain building). ISO/IEC
+     * 7816-15:2016 §8.2.15.
+     * @public
+     * @readonly
+     */
+    public readonly identifiers?: OPTIONAL<CredentialIdentifier[]>;
+    /**
+     * @summary `validity`.
+     * @description
+     * Certificate validity period (ISO/IEC 9594-8). ISO/IEC 7816-15:2016
+     * §8.2.15.
+     * @public
+     * @readonly
+     */
+    public readonly validity?: OPTIONAL<Validity>;
+    /**
+     * @summary Extensions that are not recognized.
+     * @public
+     * @readonly
+     */
+    public readonly _unrecognizedExtensionsList: _Element[];
+
     constructor (
-        /**
-         * @summary `iD`.
-         * @description
-         * Shared with the matching private-key CIO and sibling certificates.
-         * ISO/IEC 7816-15:2016 §8.2.15.
-         * @public
-         * @readonly
-         */
-        readonly iD: Identifier,
-        /**
-         * @summary `authority`.
-         * @description
-         * TRUE if the certificate is for an authority (e.g. CA). DEFAULT FALSE.
-         * ISO/IEC 7816-15:2016 §8.2.15.
-         * @public
-         * @readonly
-         */
-        readonly authority?: OPTIONAL<BOOLEAN>,
-        /**
-         * @summary `identifier`.
-         * @description
-         * Historical; use `identifiers` instead. ISO/IEC 7816-15:2016 §8.2.15.
-         * @public
-         * @readonly
-         */
-        readonly identifier?: OPTIONAL<CredentialIdentifier>,
-        /**
-         * @summary `certHash`.
-         * @description
-         * Integrity check when the certificate is stored off-card (`url` of
-         * `ReferencedValue`). ISO/IEC 7816-15:2016 §8.2.15.
-         * @public
-         * @readonly
-         */
-        readonly certHash?: OPTIONAL<CertHash>,
-        /**
-         * @summary `trustedUsage`.
-         * @description
-         * Purposes for which the cardholder trusts the certified public key.
-         * Intersect with the certificate's keyUsage extension when present.
-         * Absent means all usage. "Trust" semantics are out of scope. ISO/IEC
-         * 7816-15:2016 §8.2.15.
-         * @public
-         * @readonly
-         */
-        readonly trustedUsage?: OPTIONAL<Usage>,
-        /**
-         * @summary `identifiers`.
-         * @description
-         * Distinguishing info a requester already knows (e.g.
-         * subjectNameHash/issuerNameHash for chain building). ISO/IEC
-         * 7816-15:2016 §8.2.15.
-         * @public
-         * @readonly
-         */
-        readonly identifiers?: OPTIONAL<CredentialIdentifier[]>,
-        /**
-         * @summary `validity`.
-         * @description
-         * Certificate validity period (ISO/IEC 9594-8). ISO/IEC 7816-15:2016
-         * §8.2.15.
-         * @public
-         * @readonly
-         */
-        readonly validity?: OPTIONAL<Validity>,
-        /**
-         * @summary Extensions that are not recognized.
-         * @public
-         * @readonly
-         */
-        readonly _unrecognizedExtensionsList: _Element[] = []
-    ) {}
+        iD: Identifier,
+        authority?: OPTIONAL<BOOLEAN>,
+        identifier?: OPTIONAL<CredentialIdentifier>,
+        certHash?: OPTIONAL<CertHash>,
+        trustedUsage?: OPTIONAL<Usage>,
+        identifiers?: OPTIONAL<CredentialIdentifier[]>,
+        validity?: OPTIONAL<Validity>,
+        _unrecognizedExtensionsList: _Element[] = []
+    ) {
+        this.iD = iD;
+        this.authority = authority;
+        this.identifier = identifier;
+        this.certHash = certHash;
+        this.trustedUsage = trustedUsage;
+        this.identifiers = identifiers;
+        this.validity = validity;
+        this._unrecognizedExtensionsList = _unrecognizedExtensionsList;
+    }
 
     /**
      * @summary Restructures an object into a CommonCertificateAttributes

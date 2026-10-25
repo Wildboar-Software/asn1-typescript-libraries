@@ -1,6 +1,6 @@
 /* eslint-disable */
 import {
-    ASN1Element as _Element,
+    type ASN1Element as _Element,
     ASN1TagClass as _TagClass,
     ASN1Construction as _Construction,
     ASN1UniversalType as _UniversalType,
@@ -11,7 +11,7 @@ import {
 } from '@wildboar/asn1';
 import * as $ from '@wildboar/asn1/functional';
 import {
-    ObjectInstance,
+    type ObjectInstance,
     _decode_ObjectInstance,
     _encode_ObjectInstance,
 } from '@wildboar/cmip';
@@ -32,26 +32,34 @@ import {
  *
  */
 export class ProtectedXC {
+    /**
+     * @summary `conProtGroup`.
+     * @public
+     * @readonly
+     */
+    public readonly conProtGroup: ObjectInstance;
+    /**
+     * @summary `conProtA`.
+     * @public
+     * @readonly
+     */
+    public readonly conProtA: ObjectInstance;
+    /**
+     * @summary `conProtB`.
+     * @public
+     * @readonly
+     */
+    public readonly conProtB: ObjectInstance;
+
     constructor(
-        /**
-         * @summary `conProtGroup`.
-         * @public
-         * @readonly
-         */
-        readonly conProtGroup: ObjectInstance,
-        /**
-         * @summary `conProtA`.
-         * @public
-         * @readonly
-         */
-        readonly conProtA: ObjectInstance,
-        /**
-         * @summary `conProtB`.
-         * @public
-         * @readonly
-         */
-        readonly conProtB: ObjectInstance
-    ) {}
+        conProtGroup: ObjectInstance,
+        conProtA: ObjectInstance,
+        conProtB: ObjectInstance
+    ) {
+        this.conProtGroup = conProtGroup;
+        this.conProtA = conProtA;
+        this.conProtB = conProtB;
+    }
 
     /**
      * @summary Restructures an object into a ProtectedXC

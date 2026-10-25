@@ -1,7 +1,7 @@
 /* eslint-disable */
 import {
-    OPTIONAL,
-    ASN1Element as _Element,
+    type OPTIONAL,
+    type ASN1Element as _Element,
     ASN1TagClass as _TagClass,
     ASN1Construction as _Construction,
     ASN1UniversalType as _UniversalType,
@@ -18,7 +18,7 @@ import {
     _encode_InvalidAccessControlFilter_errorId,
 } from '../AccessControl-ASN1Module/InvalidAccessControlFilter-errorId.ta.mjs';
 import {
-    CMISFilter,
+    type CMISFilter,
     _decode_CMISFilter,
     _encode_CMISFilter,
 } from '@wildboar/cmip';
@@ -46,29 +46,35 @@ import {
  *
  */
 export class InvalidAccessControlFilter {
+    /**
+     * @summary `errorId`.
+     * @description
+     *
+     * Why the filter was rejected: `duplicateId`,
+     * `heterogeneousId`, or `invalidId`. X.741 §8.2.1,
+     * A.4.1.
+     * @public
+     * @readonly
+     */
+    public readonly errorId: InvalidAccessControlFilter_errorId;
+    /**
+     * @summary `filter`.
+     * @description
+     *
+     * The CMIS filter in error, if the implementation
+     * supplies it. X.741 §8.2.1, A.4.1.
+     * @public
+     * @readonly
+     */
+    public readonly filter?: OPTIONAL<CMISFilter>;
+
     constructor(
-        /**
-         * @summary `errorId`.
-         * @description
-         *
-         * Why the filter was rejected: `duplicateId`,
-         * `heterogeneousId`, or `invalidId`. X.741 §8.2.1,
-         * A.4.1.
-         * @public
-         * @readonly
-         */
-        readonly errorId: InvalidAccessControlFilter_errorId,
-        /**
-         * @summary `filter`.
-         * @description
-         *
-         * The CMIS filter in error, if the implementation
-         * supplies it. X.741 §8.2.1, A.4.1.
-         * @public
-         * @readonly
-         */
-        readonly filter?: OPTIONAL<CMISFilter>
-    ) {}
+        errorId: InvalidAccessControlFilter_errorId,
+        filter?: OPTIONAL<CMISFilter>
+    ) {
+        this.errorId = errorId;
+        this.filter = filter;
+    }
 
     /**
      * @summary Restructures an object into a InvalidAccessControlFilter
@@ -96,7 +102,7 @@ export class InvalidAccessControlFilter {
      * @static
      */
 
-    public static _enum_for_errorId = _enum_for_InvalidAccessControlFilter_errorId;
+    public static _enum_for_errorId: typeof _enum_for_InvalidAccessControlFilter_errorId = _enum_for_InvalidAccessControlFilter_errorId;
 }
 
 /**

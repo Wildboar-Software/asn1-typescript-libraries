@@ -1,7 +1,7 @@
 /* eslint-disable */
 import {
-    OPTIONAL,
-    ASN1Element as _Element,
+    type OPTIONAL,
+    type ASN1Element as _Element,
     ASN1TagClass as _TagClass,
     ASN1Construction as _Construction,
     ASN1UniversalType as _UniversalType,
@@ -12,7 +12,7 @@ import {
 } from "@wildboar/asn1";
 import * as $ from "@wildboar/asn1/functional";
 import { _decode_IntegerOffer, _encode_IntegerOffer, type IntegerOffer } from "../G/IntegerOffer.ta.mjs";
-import { RepertoireFontOffer, _decode_RepertoireFontOffer, _encode_RepertoireFontOffer } from "../CDS/RepertoireFontOffer.ta.mjs";
+import { type RepertoireFontOffer, _decode_RepertoireFontOffer, _encode_RepertoireFontOffer } from "../CDS/RepertoireFontOffer.ta.mjs";
 
 
 /**
@@ -37,26 +37,32 @@ import { RepertoireFontOffer, _decode_RepertoireFontOffer, _encode_RepertoireFon
  */
 export
 class CompoundRepertoireOffer {
+    /**
+     * @summary `repertoireCapability`.
+     * @description
+     * Offered `repertoire-capability` (how many assignment
+     * slots; default 1). ISO/IEC 9040:1997 §18.1.
+     * @public
+     * @readonly
+     */
+    public readonly repertoireCapability?: OPTIONAL<IntegerOffer>;
+    /**
+     * @summary `fontOffers`.
+     * @description
+     * Offers for positions in the repertoire list (placeholder or
+     * alternatives). ISO/IEC 9041-1:1997 §12.3.2.
+     * @public
+     * @readonly
+     */
+    public readonly fontOffers?: OPTIONAL<RepertoireFontOffer[]>;
+
     constructor (
-        /**
-         * @summary `repertoireCapability`.
-         * @description
-         * Offered `repertoire-capability` (how many assignment
-         * slots; default 1). ISO/IEC 9040:1997 §18.1.
-         * @public
-         * @readonly
-         */
-        readonly repertoireCapability?: OPTIONAL<IntegerOffer>,
-        /**
-         * @summary `fontOffers`.
-         * @description
-         * Offers for positions in the repertoire list (placeholder or
-         * alternatives). ISO/IEC 9041-1:1997 §12.3.2.
-         * @public
-         * @readonly
-         */
-        readonly fontOffers?: OPTIONAL<RepertoireFontOffer[]>
-    ) {}
+        repertoireCapability?: OPTIONAL<IntegerOffer>,
+        fontOffers?: OPTIONAL<RepertoireFontOffer[]>
+    ) {
+        this.repertoireCapability = repertoireCapability;
+        this.fontOffers = fontOffers;
+    }
 
     /**
      * @summary Restructures an object into a CompoundRepertoireOffer

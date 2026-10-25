@@ -1,7 +1,7 @@
 /* eslint-disable */
 import {
-  VisibleString,
-  DURATION,
+  type VisibleString,
+  type DURATION,
   ASN1Element as _Element,
   ASN1TagClass as _TagClass,
   ASN1Construction as _Construction,
@@ -13,7 +13,7 @@ import {
 } from '@wildboar/asn1';
 import * as $ from '@wildboar/asn1/functional';
 import {
-  GenericTimeTypeChoice,
+  type GenericTimeTypeChoice,
   _get_decoder_for_GenericTimeTypeChoice,
   _get_encoder_for_GenericTimeTypeChoice,
 } from '../XSD/GenericTimeTypeChoice.ta.mjs';

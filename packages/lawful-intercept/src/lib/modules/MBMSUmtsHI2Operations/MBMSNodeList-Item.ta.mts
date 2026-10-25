@@ -1,7 +1,7 @@
 /* eslint-disable */
 import {
     ASN1ConstructionError as _ConstructionError,
-    ASN1Element as _Element,
+    type ASN1Element as _Element,
     ASN1TagClass as _TagClass
 } from "@wildboar/asn1";
 import * as $ from "@wildboar/asn1/functional";
@@ -24,8 +24,8 @@ import { MBMSNodeList_Item_mBMSNODELIST, _decode_MBMSNodeList_Item_mBMSNODELIST,
  * MBMSNodeList-Item ::= SEQUENCE {
  *     mBMSNODELIST    [1]    SEQUENCE
  *     {
- *         mbmsnodeIPAdress    [1]      IPAddress     OPTIONAL,
- *         mbmsnodeName        [2]        UTF8String    OPTIONAL,
+ *         mbmsnodeIPAdress    [1]      IPAddress     type OPTIONAL,
+ *         mbmsnodeName        [2]        UTF8String    type OPTIONAL,
  *         ...
  *     }
  *     ,

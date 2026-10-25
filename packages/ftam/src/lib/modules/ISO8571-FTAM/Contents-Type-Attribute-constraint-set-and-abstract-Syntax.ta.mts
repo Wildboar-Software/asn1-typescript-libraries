@@ -11,12 +11,12 @@ import {
 } from '@wildboar/asn1';
 import * as $ from '@wildboar/asn1/functional';
 import {
-  Constraint_Set_Name,
+  type Constraint_Set_Name,
   _decode_Constraint_Set_Name,
   _encode_Constraint_Set_Name,
 } from '../ISO8571-FTAM/Constraint-Set-Name.ta.mjs';
 import {
-  Abstract_Syntax_Name,
+  type Abstract_Syntax_Name,
   _decode_Abstract_Syntax_Name,
   _encode_Abstract_Syntax_Name,
 } from '../ISO8571-FTAM/Abstract-Syntax-Name.ta.mjs';
@@ -48,7 +48,7 @@ export class Contents_Type_Attribute_constraint_set_and_abstract_Syntax {
    * @public
    * @readonly
    */
-  readonly constraint_set_name: Constraint_Set_Name;
+  public readonly constraint_set_name: Constraint_Set_Name;
   /**
    * @summary `abstract_Syntax_name`.
    * @description
@@ -59,7 +59,7 @@ export class Contents_Type_Attribute_constraint_set_and_abstract_Syntax {
    * @public
    * @readonly
    */
-  readonly abstract_Syntax_name: Abstract_Syntax_Name;
+  public readonly abstract_Syntax_name: Abstract_Syntax_Name;
 
   constructor(
     constraint_set_name: Constraint_Set_Name,

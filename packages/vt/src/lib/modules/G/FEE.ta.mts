@@ -18,7 +18,7 @@ import * as $ from "@wildboar/asn1/functional";
  * ```
  */
 export type FEE = _Element;
-export const _decode_FEE = $._decodeAny;
-export const _encode_FEE = $._encodeAny;
+export const _decode_FEE: $.ASN1Decoder<_Element> = $._decodeAny;
+export const _encode_FEE: $.ASN1Encoder<_Element> = $._encodeAny;
 
 /* eslint-enable */

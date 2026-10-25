@@ -17,7 +17,7 @@ import {
   _encode_CancelProblem,
 } from '../TCAP-Tools/CancelProblem.ta.mjs';
 import {
-  TCInvokeIdSet,
+  type TCInvokeIdSet,
   _decode_TCInvokeIdSet,
   _encode_TCInvokeIdSet,
 } from '../TCAPMessages/TCInvokeIdSet.ta.mjs';
@@ -33,20 +33,26 @@ import {
  *
  */
 export class cancelFailed_ParameterType {
+  /**
+   * @summary `problem`.
+   * @public
+   * @readonly
+   */
+  public readonly problem: CancelProblem;
+  /**
+   * @summary `invokeId`.
+   * @public
+   * @readonly
+   */
+  public readonly invokeId: $.Selection<TCInvokeIdSet, 'present'>;
+
   constructor(
-    /**
-     * @summary `problem`.
-     * @public
-     * @readonly
-     */
-    readonly problem: CancelProblem,
-    /**
-     * @summary `invokeId`.
-     * @public
-     * @readonly
-     */
-    readonly invokeId: $.Selection<TCInvokeIdSet, 'present'>
-  ) {}
+    problem: CancelProblem,
+    invokeId: $.Selection<TCInvokeIdSet, 'present'>
+  ) {
+    this.problem = problem;
+    this.invokeId = invokeId;
+  }
 
   /**
    * @summary Restructures an object into a cancelFailed_ParameterType
@@ -74,7 +80,7 @@ export class cancelFailed_ParameterType {
    * @static
    */
 
-  public static _enum_for_problem = _enum_for_CancelProblem;
+  public static _enum_for_problem: typeof _enum_for_CancelProblem = _enum_for_CancelProblem;
 }
 
 /**

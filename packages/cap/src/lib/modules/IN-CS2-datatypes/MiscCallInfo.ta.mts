@@ -1,7 +1,7 @@
 /* eslint-disable */
 import {
-    OPTIONAL,
-    ASN1Element as _Element,
+    type OPTIONAL,
+    type ASN1Element as _Element,
     ASN1TagClass as _TagClass,
     ASN1Construction as _Construction,
     ASN1UniversalType as _UniversalType,
@@ -33,20 +33,26 @@ import { MiscCallInfo_dpAssignment, _enum_for_MiscCallInfo_dpAssignment, _decode
  */
 export
 class MiscCallInfo {
+    /**
+     * @summary `messageType`.
+     * @public
+     * @readonly
+     */
+    public readonly messageType: MiscCallInfo_messageType;
+    /**
+     * @summary `dpAssignment`.
+     * @public
+     * @readonly
+     */
+    public readonly dpAssignment?: OPTIONAL<MiscCallInfo_dpAssignment>;
+
     constructor (
-        /**
-         * @summary `messageType`.
-         * @public
-         * @readonly
-         */
-        readonly messageType: MiscCallInfo_messageType,
-        /**
-         * @summary `dpAssignment`.
-         * @public
-         * @readonly
-         */
-        readonly dpAssignment?: OPTIONAL<MiscCallInfo_dpAssignment>
-    ) {}
+        messageType: MiscCallInfo_messageType,
+        dpAssignment?: OPTIONAL<MiscCallInfo_dpAssignment>
+    ) {
+        this.messageType = messageType;
+        this.dpAssignment = dpAssignment;
+    }
 
     /**
      * @summary Restructures an object into a MiscCallInfo
@@ -70,13 +76,13 @@ class MiscCallInfo {
          * @static
          */
 
-    public static _enum_for_messageType = _enum_for_MiscCallInfo_messageType;        /**
+    public static _enum_for_messageType: typeof _enum_for_MiscCallInfo_messageType = _enum_for_MiscCallInfo_messageType;        /**
          * @summary The enum used as the type of the component `dpAssignment`
          * @public
          * @static
          */
 
-    public static _enum_for_dpAssignment = _enum_for_MiscCallInfo_dpAssignment;
+    public static _enum_for_dpAssignment: typeof _enum_for_MiscCallInfo_dpAssignment = _enum_for_MiscCallInfo_dpAssignment;
 }
 
 /**

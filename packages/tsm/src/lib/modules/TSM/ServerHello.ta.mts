@@ -1,6 +1,6 @@
 /* eslint-disable */
 import {
-    ASN1Element as _Element,
+    type ASN1Element as _Element,
     ASN1TagClass as _TagClass,
     ASN1Construction as _Construction,
     ASN1UniversalType as _UniversalType,
@@ -14,13 +14,13 @@ import { ProtocolVersion, _decode_ProtocolVersion, _encode_ProtocolVersion } fro
 
 import { ServerRandom, _decode_ServerRandom, _encode_ServerRandom } from "../TSM/ServerRandom.ta.mjs";
 
-import { SessionID, _decode_SessionID, _encode_SessionID } from "../TSM/SessionID.ta.mjs";
+import { type SessionID, _decode_SessionID, _encode_SessionID } from "../TSM/SessionID.ta.mjs";
 
-import { CipherSuite, _enum_for_CipherSuite, _decode_CipherSuite, _encode_CipherSuite } from "../TSM/CipherSuite.ta.mjs";
+import { type CipherSuite, _enum_for_CipherSuite, _decode_CipherSuite, _encode_CipherSuite } from "../TSM/CipherSuite.ta.mjs";
 
-import { CompressionMethod, _enum_for_CompressionMethod, _decode_CompressionMethod, _encode_CompressionMethod } from "../TSM/CompressionMethod.ta.mjs";
+import { type CompressionMethod, _enum_for_CompressionMethod, _decode_CompressionMethod, _encode_CompressionMethod } from "../TSM/CompressionMethod.ta.mjs";
 
-import { ExtensionValues, _decode_ExtensionValues, _encode_ExtensionValues } from "../TSM/ExtensionValues.ta.mjs";
+import { type ExtensionValues, _decode_ExtensionValues, _encode_ExtensionValues } from "../TSM/ExtensionValues.ta.mjs";
 
 
 
@@ -51,74 +51,90 @@ import { ExtensionValues, _decode_ExtensionValues, _encode_ExtensionValues } fro
  */
 export
 class ServerHello {
+    /**
+     * @summary `server_version`.
+     * @description
+     *
+     * Protocol version the server selects. X.1084 §10.3.2.
+     *
+     * @public
+     * @readonly
+     */
+    public readonly server_version: ProtocolVersion;
+    /**
+     * @summary `random`.
+     * @description
+     *
+     * Hello random (challenge). X.1084 §10.3.2.
+     *
+     * @public
+     * @readonly
+     */
+    public readonly random: ServerRandom;
+    /**
+     * @summary `session_id`.
+     * @description
+     *
+     * TLS session identifier (`UINT32` in Annex A). X.1084 §10.3.2.
+     *
+     * @public
+     * @readonly
+     */
+    public readonly session_id: SessionID;
+    /**
+     * @summary `cipher_suite`.
+     * @description
+     *
+     * Cipher suite the server selects. X.1084 §10.3.2.
+     *
+     * @public
+     * @readonly
+     */
+    public readonly cipher_suite: CipherSuite;
+    /**
+     * @summary `compression_method`.
+     * @description
+     *
+     * Compression method the server selects. X.1084 §10.3.2.
+     *
+     * @public
+     * @readonly
+     */
+    public readonly compression_method: CompressionMethod;
+    /**
+     * @summary Extensions that are not recognized.
+     * @public
+     * @readonly
+     */
+    public readonly _unrecognizedExtensionsList: _Element[];
+    /**
+     * @summary `server_hello_extension_list`.
+     * @description
+     *
+     * TLS-style hello extensions. X.1084 §10.3.2.
+     *
+     * @public
+     * @readonly
+     */
+    public readonly server_hello_extension_list: ExtensionValues;
+
     constructor (
-        /**
-         * @summary `server_version`.
-         * @description
-         *
-         * Protocol version the server selects. X.1084 §10.3.2.
-         *
-         * @public
-         * @readonly
-         */
-        readonly server_version: ProtocolVersion,
-        /**
-         * @summary `random`.
-         * @description
-         *
-         * Hello random (challenge). X.1084 §10.3.2.
-         *
-         * @public
-         * @readonly
-         */
-        readonly random: ServerRandom,
-        /**
-         * @summary `session_id`.
-         * @description
-         *
-         * TLS session identifier (`UINT32` in Annex A). X.1084 §10.3.2.
-         *
-         * @public
-         * @readonly
-         */
-        readonly session_id: SessionID,
-        /**
-         * @summary `cipher_suite`.
-         * @description
-         *
-         * Cipher suite the server selects. X.1084 §10.3.2.
-         *
-         * @public
-         * @readonly
-         */
-        readonly cipher_suite: CipherSuite,
-        /**
-         * @summary `compression_method`.
-         * @description
-         *
-         * Compression method the server selects. X.1084 §10.3.2.
-         *
-         * @public
-         * @readonly
-         */
-        readonly compression_method: CompressionMethod,
-        /**
-         * @summary Extensions that are not recognized.
-         * @public
-         * @readonly
-         */
-        readonly _unrecognizedExtensionsList: _Element[] = [],
-        /**
-         * @summary `server_hello_extension_list`.
-         * @description
-         *
-         * TLS-style hello extensions. X.1084 §10.3.2.
-         *
-         * @public
-         * @readonly
-         */
-        readonly server_hello_extension_list: ExtensionValues
-    ) {}
+        server_version: ProtocolVersion,
+        random: ServerRandom,
+        session_id: SessionID,
+        cipher_suite: CipherSuite,
+        compression_method: CompressionMethod,
+        _unrecognizedExtensionsList: _Element[] = [],
+        server_hello_extension_list: ExtensionValues
+    ) {
+        this.server_version = server_version;
+        this.random = random;
+        this.session_id = session_id;
+        this.cipher_suite = cipher_suite;
+        this.compression_method = compression_method;
+        this._unrecognizedExtensionsList = _unrecognizedExtensionsList;
+        this.server_hello_extension_list = server_hello_extension_list;
+    }
 
     /**
      * @summary Restructures an object into a ServerHello
@@ -142,13 +158,13 @@ class ServerHello {
          * @static
          */
 
-    public static _enum_for_cipher_suite = _enum_for_CipherSuite;        /**
+    public static _enum_for_cipher_suite: typeof _enum_for_CipherSuite = _enum_for_CipherSuite;        /**
          * @summary The enum used as the type of the component `compression_method`
          * @public
          * @static
          */
 
-    public static _enum_for_compression_method = _enum_for_CompressionMethod;
+    public static _enum_for_compression_method: typeof _enum_for_CompressionMethod = _enum_for_CompressionMethod;
 }
 
 /**

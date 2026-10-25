@@ -1,7 +1,7 @@
 /* eslint-disable */
 import {
-    OPTIONAL,
-    ASN1Element as _Element,
+    type OPTIONAL,
+    type ASN1Element as _Element,
     ASN1TagClass as _TagClass,
     ASN1Construction as _Construction,
     ASN1UniversalType as _UniversalType,
@@ -11,7 +11,7 @@ import {
     ASN1ConstructionError as _ConstructionError,
 } from "@wildboar/asn1";
 import * as $ from "@wildboar/asn1/functional";
-import { ServiceKey, _decode_ServiceKey, _encode_ServiceKey } from "../IN-CS2-datatypes/ServiceKey.ta.mjs";
+import { type ServiceKey, _decode_ServiceKey, _encode_ServiceKey } from "../IN-CS2-datatypes/ServiceKey.ta.mjs";
 import { MiscCallInfo, _decode_MiscCallInfo, _encode_MiscCallInfo } from "../IN-CS2-datatypes/MiscCallInfo.ta.mjs";
 import { TriggerType, _enum_for_TriggerType, _decode_TriggerType, _encode_TriggerType } from "../IN-CS2-datatypes/TriggerType.ta.mjs";
 
@@ -34,26 +34,34 @@ import { TriggerType, _enum_for_TriggerType, _decode_TriggerType, _encode_Trigge
  */
 export
 class ServiceAddressInformation {
+    /**
+     * @summary `serviceKey`.
+     * @public
+     * @readonly
+     */
+    public readonly serviceKey: OPTIONAL<ServiceKey>;
+    /**
+     * @summary `miscCallInfo`.
+     * @public
+     * @readonly
+     */
+    public readonly miscCallInfo: MiscCallInfo;
+    /**
+     * @summary `triggerType`.
+     * @public
+     * @readonly
+     */
+    public readonly triggerType?: OPTIONAL<TriggerType>;
+
     constructor (
-        /**
-         * @summary `serviceKey`.
-         * @public
-         * @readonly
-         */
-        readonly serviceKey: OPTIONAL<ServiceKey>,
-        /**
-         * @summary `miscCallInfo`.
-         * @public
-         * @readonly
-         */
-        readonly miscCallInfo: MiscCallInfo,
-        /**
-         * @summary `triggerType`.
-         * @public
-         * @readonly
-         */
-        readonly triggerType?: OPTIONAL<TriggerType>
-    ) {}
+        serviceKey: OPTIONAL<ServiceKey>,
+        miscCallInfo: MiscCallInfo,
+        triggerType?: OPTIONAL<TriggerType>
+    ) {
+        this.serviceKey = serviceKey;
+        this.miscCallInfo = miscCallInfo;
+        this.triggerType = triggerType;
+    }
 
     /**
      * @summary Restructures an object into a ServiceAddressInformation
@@ -77,7 +85,7 @@ class ServiceAddressInformation {
          * @static
          */
 
-    public static _enum_for_triggerType = _enum_for_TriggerType;
+    public static _enum_for_triggerType: typeof _enum_for_TriggerType = _enum_for_TriggerType;
 }
 
 /**

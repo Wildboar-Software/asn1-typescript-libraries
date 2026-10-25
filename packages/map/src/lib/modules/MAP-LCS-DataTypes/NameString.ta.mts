@@ -3,7 +3,7 @@ import {
     ASN1Element as _Element
 } from "@wildboar/asn1";
 import * as $ from "@wildboar/asn1/functional";
-import { _decode_USSD_String, _encode_USSD_String, USSD_String } from "../MAP-SS-DataTypes/USSD-String.ta.mjs";
+import { _decode_USSD_String, _encode_USSD_String, type USSD_String } from "../MAP-SS-DataTypes/USSD-String.ta.mjs";
 
 
 
@@ -23,21 +23,13 @@ import { _decode_USSD_String, _encode_USSD_String, USSD_String } from "../MAP-SS
 export
 type NameString = USSD_String; // DefinedType
 
-let _cached_decoder_for_NameString: $.ASN1Decoder<NameString> | null = null;
-
 /**
  * @summary Decodes an ASN.1 element into a(n) NameString
  * @function
  * @param el The element being decoded.
  * @returns The decoded data structure.
  */
-export
-function _decode_NameString (el: _Element): NameString {
-    if (!_cached_decoder_for_NameString) { _cached_decoder_for_NameString = _decode_USSD_String; }
-    return _cached_decoder_for_NameString(el);
-}
-
-let _cached_encoder_for_NameString: $.ASN1Encoder<NameString> | null = null;
+export const _decode_NameString: $.ASN1Decoder<NameString> = _decode_USSD_String;
 
 /**
  * @summary Encodes a(n) NameString into an ASN.1 Element.
@@ -46,11 +38,7 @@ let _cached_encoder_for_NameString: $.ASN1Encoder<NameString> | null = null;
  * @param elGetter A function that can be used to get new ASN.1 elements.
  * @returns {_Element} The NameString, encoded as an ASN.1 Element.
  */
-export
-function _encode_NameString (value: NameString, elGetter: $.ASN1Encoder<any>): _Element {
-    if (!_cached_encoder_for_NameString) { _cached_encoder_for_NameString = _encode_USSD_String; }
-    return _cached_encoder_for_NameString(value, elGetter);
-}
+export const _encode_NameString: $.ASN1Encoder<NameString> = _encode_USSD_String;
 
 
 /* eslint-enable */

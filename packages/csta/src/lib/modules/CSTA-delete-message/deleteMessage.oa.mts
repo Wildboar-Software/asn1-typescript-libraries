@@ -8,7 +8,7 @@ import { type OPERATION } from "../Remote-Operations-Information-Objects/OPERATI
 
 import { DeleteMessageArgument, _decode_DeleteMessageArgument, _encode_DeleteMessageArgument } from "../CSTA-delete-message/DeleteMessageArgument.ta.mjs";
 
-import { DeleteMessageResult, _decode_DeleteMessageResult, _encode_DeleteMessageResult } from "../CSTA-delete-message/DeleteMessageResult.ta.mjs";
+import { type DeleteMessageResult, _decode_DeleteMessageResult, _encode_DeleteMessageResult } from "../CSTA-delete-message/DeleteMessageResult.ta.mjs";
 
 import { universalFailure } from "../CSTA-error-definition/universalFailure.oa.mjs";
 

@@ -1,7 +1,7 @@
 /* eslint-disable */
 import {
-    OPTIONAL,
-    ASN1Element as _Element,
+    type OPTIONAL,
+    type ASN1Element as _Element,
     ASN1TagClass as _TagClass,
     ASN1Construction as _Construction,
     ASN1UniversalType as _UniversalType,
@@ -12,12 +12,12 @@ import {
 } from '@wildboar/asn1';
 import * as $ from '@wildboar/asn1/functional';
 import {
-    NNUAMSBasicCodeField,
+    type NNUAMSBasicCodeField,
     _decode_NNUAMSBasicCodeField,
     _encode_NNUAMSBasicCodeField,
 } from '../EDIMSInformationObjects/NNUAMSBasicCodeField.ta.mjs';
 import {
-    NNUAMSDiagnosticField,
+    type NNUAMSDiagnosticField,
     _decode_NNUAMSDiagnosticField,
     _encode_NNUAMSDiagnosticField,
 } from '../EDIMSInformationObjects/NNUAMSDiagnosticField.ta.mjs';
@@ -38,20 +38,26 @@ import {
  *
  */
 export class NNUAMSReasonCodeField {
+    /**
+     * @summary `nn_ua_ms_basic_code`.
+     * @public
+     * @readonly
+     */
+    public readonly nn_ua_ms_basic_code: NNUAMSBasicCodeField;
+    /**
+     * @summary `nn_ua_ms_diagnostic`.
+     * @public
+     * @readonly
+     */
+    public readonly nn_ua_ms_diagnostic?: OPTIONAL<NNUAMSDiagnosticField>;
+
     constructor(
-        /**
-         * @summary `nn_ua_ms_basic_code`.
-         * @public
-         * @readonly
-         */
-        readonly nn_ua_ms_basic_code: NNUAMSBasicCodeField,
-        /**
-         * @summary `nn_ua_ms_diagnostic`.
-         * @public
-         * @readonly
-         */
-        readonly nn_ua_ms_diagnostic?: OPTIONAL<NNUAMSDiagnosticField>
-    ) {}
+        nn_ua_ms_basic_code: NNUAMSBasicCodeField,
+        nn_ua_ms_diagnostic?: OPTIONAL<NNUAMSDiagnosticField>
+    ) {
+        this.nn_ua_ms_basic_code = nn_ua_ms_basic_code;
+        this.nn_ua_ms_diagnostic = nn_ua_ms_diagnostic;
+    }
 
     /**
      * @summary Restructures an object into a NNUAMSReasonCodeField

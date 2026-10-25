@@ -172,7 +172,7 @@ type MMSDeleteResponseStatus = _enum_for_MMSDeleteResponseStatus;
  * @enum {number}
  */
 export
-const MMSDeleteResponseStatus = _enum_for_MMSDeleteResponseStatus;
+const MMSDeleteResponseStatus: typeof _enum_for_MMSDeleteResponseStatus = _enum_for_MMSDeleteResponseStatus;
 
 /**
  * @summary MMSDeleteResponseStatus_ok
@@ -180,7 +180,7 @@ const MMSDeleteResponseStatus = _enum_for_MMSDeleteResponseStatus;
  * @type {number}
  */
 export
-const MMSDeleteResponseStatus_ok: MMSDeleteResponseStatus = MMSDeleteResponseStatus.ok; /* LONG_NAMED_ENUMERATED_VALUE */
+const MMSDeleteResponseStatus_ok: _enum_for_MMSDeleteResponseStatus.ok = MMSDeleteResponseStatus.ok; /* LONG_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary ok
@@ -188,7 +188,7 @@ const MMSDeleteResponseStatus_ok: MMSDeleteResponseStatus = MMSDeleteResponseSta
  * @type {number}
  */
 export
-const ok: MMSDeleteResponseStatus = MMSDeleteResponseStatus.ok; /* SHORT_NAMED_ENUMERATED_VALUE */
+const ok: _enum_for_MMSDeleteResponseStatus.ok = MMSDeleteResponseStatus.ok; /* SHORT_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary MMSDeleteResponseStatus_errorUnspecified
@@ -196,7 +196,7 @@ const ok: MMSDeleteResponseStatus = MMSDeleteResponseStatus.ok; /* SHORT_NAMED_E
  * @type {number}
  */
 export
-const MMSDeleteResponseStatus_errorUnspecified: MMSDeleteResponseStatus = MMSDeleteResponseStatus.errorUnspecified; /* LONG_NAMED_ENUMERATED_VALUE */
+const MMSDeleteResponseStatus_errorUnspecified: _enum_for_MMSDeleteResponseStatus.errorUnspecified = MMSDeleteResponseStatus.errorUnspecified; /* LONG_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary errorUnspecified
@@ -204,7 +204,7 @@ const MMSDeleteResponseStatus_errorUnspecified: MMSDeleteResponseStatus = MMSDel
  * @type {number}
  */
 export
-const errorUnspecified: MMSDeleteResponseStatus = MMSDeleteResponseStatus.errorUnspecified; /* SHORT_NAMED_ENUMERATED_VALUE */
+const errorUnspecified: _enum_for_MMSDeleteResponseStatus.errorUnspecified = MMSDeleteResponseStatus.errorUnspecified; /* SHORT_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary MMSDeleteResponseStatus_errorServiceDenied
@@ -212,7 +212,7 @@ const errorUnspecified: MMSDeleteResponseStatus = MMSDeleteResponseStatus.errorU
  * @type {number}
  */
 export
-const MMSDeleteResponseStatus_errorServiceDenied: MMSDeleteResponseStatus = MMSDeleteResponseStatus.errorServiceDenied; /* LONG_NAMED_ENUMERATED_VALUE */
+const MMSDeleteResponseStatus_errorServiceDenied: _enum_for_MMSDeleteResponseStatus.errorServiceDenied = MMSDeleteResponseStatus.errorServiceDenied; /* LONG_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary errorServiceDenied
@@ -220,7 +220,7 @@ const MMSDeleteResponseStatus_errorServiceDenied: MMSDeleteResponseStatus = MMSD
  * @type {number}
  */
 export
-const errorServiceDenied: MMSDeleteResponseStatus = MMSDeleteResponseStatus.errorServiceDenied; /* SHORT_NAMED_ENUMERATED_VALUE */
+const errorServiceDenied: _enum_for_MMSDeleteResponseStatus.errorServiceDenied = MMSDeleteResponseStatus.errorServiceDenied; /* SHORT_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary MMSDeleteResponseStatus_errorMessageFormatCorrupt
@@ -228,7 +228,7 @@ const errorServiceDenied: MMSDeleteResponseStatus = MMSDeleteResponseStatus.erro
  * @type {number}
  */
 export
-const MMSDeleteResponseStatus_errorMessageFormatCorrupt: MMSDeleteResponseStatus = MMSDeleteResponseStatus.errorMessageFormatCorrupt; /* LONG_NAMED_ENUMERATED_VALUE */
+const MMSDeleteResponseStatus_errorMessageFormatCorrupt: _enum_for_MMSDeleteResponseStatus.errorMessageFormatCorrupt = MMSDeleteResponseStatus.errorMessageFormatCorrupt; /* LONG_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary errorMessageFormatCorrupt
@@ -236,7 +236,7 @@ const MMSDeleteResponseStatus_errorMessageFormatCorrupt: MMSDeleteResponseStatus
  * @type {number}
  */
 export
-const errorMessageFormatCorrupt: MMSDeleteResponseStatus = MMSDeleteResponseStatus.errorMessageFormatCorrupt; /* SHORT_NAMED_ENUMERATED_VALUE */
+const errorMessageFormatCorrupt: _enum_for_MMSDeleteResponseStatus.errorMessageFormatCorrupt = MMSDeleteResponseStatus.errorMessageFormatCorrupt; /* SHORT_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary MMSDeleteResponseStatus_errorSendingAddressUnresolved
@@ -244,7 +244,7 @@ const errorMessageFormatCorrupt: MMSDeleteResponseStatus = MMSDeleteResponseStat
  * @type {number}
  */
 export
-const MMSDeleteResponseStatus_errorSendingAddressUnresolved: MMSDeleteResponseStatus = MMSDeleteResponseStatus.errorSendingAddressUnresolved; /* LONG_NAMED_ENUMERATED_VALUE */
+const MMSDeleteResponseStatus_errorSendingAddressUnresolved: _enum_for_MMSDeleteResponseStatus.errorSendingAddressUnresolved = MMSDeleteResponseStatus.errorSendingAddressUnresolved; /* LONG_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary errorSendingAddressUnresolved
@@ -252,7 +252,7 @@ const MMSDeleteResponseStatus_errorSendingAddressUnresolved: MMSDeleteResponseSt
  * @type {number}
  */
 export
-const errorSendingAddressUnresolved: MMSDeleteResponseStatus = MMSDeleteResponseStatus.errorSendingAddressUnresolved; /* SHORT_NAMED_ENUMERATED_VALUE */
+const errorSendingAddressUnresolved: _enum_for_MMSDeleteResponseStatus.errorSendingAddressUnresolved = MMSDeleteResponseStatus.errorSendingAddressUnresolved; /* SHORT_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary MMSDeleteResponseStatus_errorMessageNotFound
@@ -260,7 +260,7 @@ const errorSendingAddressUnresolved: MMSDeleteResponseStatus = MMSDeleteResponse
  * @type {number}
  */
 export
-const MMSDeleteResponseStatus_errorMessageNotFound: MMSDeleteResponseStatus = MMSDeleteResponseStatus.errorMessageNotFound; /* LONG_NAMED_ENUMERATED_VALUE */
+const MMSDeleteResponseStatus_errorMessageNotFound: _enum_for_MMSDeleteResponseStatus.errorMessageNotFound = MMSDeleteResponseStatus.errorMessageNotFound; /* LONG_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary errorMessageNotFound
@@ -268,7 +268,7 @@ const MMSDeleteResponseStatus_errorMessageNotFound: MMSDeleteResponseStatus = MM
  * @type {number}
  */
 export
-const errorMessageNotFound: MMSDeleteResponseStatus = MMSDeleteResponseStatus.errorMessageNotFound; /* SHORT_NAMED_ENUMERATED_VALUE */
+const errorMessageNotFound: _enum_for_MMSDeleteResponseStatus.errorMessageNotFound = MMSDeleteResponseStatus.errorMessageNotFound; /* SHORT_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary MMSDeleteResponseStatus_errorNetworkProblem
@@ -276,7 +276,7 @@ const errorMessageNotFound: MMSDeleteResponseStatus = MMSDeleteResponseStatus.er
  * @type {number}
  */
 export
-const MMSDeleteResponseStatus_errorNetworkProblem: MMSDeleteResponseStatus = MMSDeleteResponseStatus.errorNetworkProblem; /* LONG_NAMED_ENUMERATED_VALUE */
+const MMSDeleteResponseStatus_errorNetworkProblem: _enum_for_MMSDeleteResponseStatus.errorNetworkProblem = MMSDeleteResponseStatus.errorNetworkProblem; /* LONG_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary errorNetworkProblem
@@ -284,7 +284,7 @@ const MMSDeleteResponseStatus_errorNetworkProblem: MMSDeleteResponseStatus = MMS
  * @type {number}
  */
 export
-const errorNetworkProblem: MMSDeleteResponseStatus = MMSDeleteResponseStatus.errorNetworkProblem; /* SHORT_NAMED_ENUMERATED_VALUE */
+const errorNetworkProblem: _enum_for_MMSDeleteResponseStatus.errorNetworkProblem = MMSDeleteResponseStatus.errorNetworkProblem; /* SHORT_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary MMSDeleteResponseStatus_errorContentNotAccepted
@@ -292,7 +292,7 @@ const errorNetworkProblem: MMSDeleteResponseStatus = MMSDeleteResponseStatus.err
  * @type {number}
  */
 export
-const MMSDeleteResponseStatus_errorContentNotAccepted: MMSDeleteResponseStatus = MMSDeleteResponseStatus.errorContentNotAccepted; /* LONG_NAMED_ENUMERATED_VALUE */
+const MMSDeleteResponseStatus_errorContentNotAccepted: _enum_for_MMSDeleteResponseStatus.errorContentNotAccepted = MMSDeleteResponseStatus.errorContentNotAccepted; /* LONG_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary errorContentNotAccepted
@@ -300,7 +300,7 @@ const MMSDeleteResponseStatus_errorContentNotAccepted: MMSDeleteResponseStatus =
  * @type {number}
  */
 export
-const errorContentNotAccepted: MMSDeleteResponseStatus = MMSDeleteResponseStatus.errorContentNotAccepted; /* SHORT_NAMED_ENUMERATED_VALUE */
+const errorContentNotAccepted: _enum_for_MMSDeleteResponseStatus.errorContentNotAccepted = MMSDeleteResponseStatus.errorContentNotAccepted; /* SHORT_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary MMSDeleteResponseStatus_errorUnsupportedMessage
@@ -308,7 +308,7 @@ const errorContentNotAccepted: MMSDeleteResponseStatus = MMSDeleteResponseStatus
  * @type {number}
  */
 export
-const MMSDeleteResponseStatus_errorUnsupportedMessage: MMSDeleteResponseStatus = MMSDeleteResponseStatus.errorUnsupportedMessage; /* LONG_NAMED_ENUMERATED_VALUE */
+const MMSDeleteResponseStatus_errorUnsupportedMessage: _enum_for_MMSDeleteResponseStatus.errorUnsupportedMessage = MMSDeleteResponseStatus.errorUnsupportedMessage; /* LONG_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary errorUnsupportedMessage
@@ -316,7 +316,7 @@ const MMSDeleteResponseStatus_errorUnsupportedMessage: MMSDeleteResponseStatus =
  * @type {number}
  */
 export
-const errorUnsupportedMessage: MMSDeleteResponseStatus = MMSDeleteResponseStatus.errorUnsupportedMessage; /* SHORT_NAMED_ENUMERATED_VALUE */
+const errorUnsupportedMessage: _enum_for_MMSDeleteResponseStatus.errorUnsupportedMessage = MMSDeleteResponseStatus.errorUnsupportedMessage; /* SHORT_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary MMSDeleteResponseStatus_errorTransientFailure
@@ -324,7 +324,7 @@ const errorUnsupportedMessage: MMSDeleteResponseStatus = MMSDeleteResponseStatus
  * @type {number}
  */
 export
-const MMSDeleteResponseStatus_errorTransientFailure: MMSDeleteResponseStatus = MMSDeleteResponseStatus.errorTransientFailure; /* LONG_NAMED_ENUMERATED_VALUE */
+const MMSDeleteResponseStatus_errorTransientFailure: _enum_for_MMSDeleteResponseStatus.errorTransientFailure = MMSDeleteResponseStatus.errorTransientFailure; /* LONG_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary errorTransientFailure
@@ -332,7 +332,7 @@ const MMSDeleteResponseStatus_errorTransientFailure: MMSDeleteResponseStatus = M
  * @type {number}
  */
 export
-const errorTransientFailure: MMSDeleteResponseStatus = MMSDeleteResponseStatus.errorTransientFailure; /* SHORT_NAMED_ENUMERATED_VALUE */
+const errorTransientFailure: _enum_for_MMSDeleteResponseStatus.errorTransientFailure = MMSDeleteResponseStatus.errorTransientFailure; /* SHORT_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary MMSDeleteResponseStatus_errorTransientSendingAddressUnresolved
@@ -340,7 +340,7 @@ const errorTransientFailure: MMSDeleteResponseStatus = MMSDeleteResponseStatus.e
  * @type {number}
  */
 export
-const MMSDeleteResponseStatus_errorTransientSendingAddressUnresolved: MMSDeleteResponseStatus = MMSDeleteResponseStatus.errorTransientSendingAddressUnresolved; /* LONG_NAMED_ENUMERATED_VALUE */
+const MMSDeleteResponseStatus_errorTransientSendingAddressUnresolved: _enum_for_MMSDeleteResponseStatus.errorTransientSendingAddressUnresolved = MMSDeleteResponseStatus.errorTransientSendingAddressUnresolved; /* LONG_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary errorTransientSendingAddressUnresolved
@@ -348,7 +348,7 @@ const MMSDeleteResponseStatus_errorTransientSendingAddressUnresolved: MMSDeleteR
  * @type {number}
  */
 export
-const errorTransientSendingAddressUnresolved: MMSDeleteResponseStatus = MMSDeleteResponseStatus.errorTransientSendingAddressUnresolved; /* SHORT_NAMED_ENUMERATED_VALUE */
+const errorTransientSendingAddressUnresolved: _enum_for_MMSDeleteResponseStatus.errorTransientSendingAddressUnresolved = MMSDeleteResponseStatus.errorTransientSendingAddressUnresolved; /* SHORT_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary MMSDeleteResponseStatus_errorTransientMessageNotFound
@@ -356,7 +356,7 @@ const errorTransientSendingAddressUnresolved: MMSDeleteResponseStatus = MMSDelet
  * @type {number}
  */
 export
-const MMSDeleteResponseStatus_errorTransientMessageNotFound: MMSDeleteResponseStatus = MMSDeleteResponseStatus.errorTransientMessageNotFound; /* LONG_NAMED_ENUMERATED_VALUE */
+const MMSDeleteResponseStatus_errorTransientMessageNotFound: _enum_for_MMSDeleteResponseStatus.errorTransientMessageNotFound = MMSDeleteResponseStatus.errorTransientMessageNotFound; /* LONG_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary errorTransientMessageNotFound
@@ -364,7 +364,7 @@ const MMSDeleteResponseStatus_errorTransientMessageNotFound: MMSDeleteResponseSt
  * @type {number}
  */
 export
-const errorTransientMessageNotFound: MMSDeleteResponseStatus = MMSDeleteResponseStatus.errorTransientMessageNotFound; /* SHORT_NAMED_ENUMERATED_VALUE */
+const errorTransientMessageNotFound: _enum_for_MMSDeleteResponseStatus.errorTransientMessageNotFound = MMSDeleteResponseStatus.errorTransientMessageNotFound; /* SHORT_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary MMSDeleteResponseStatus_errorTransientNetworkProblem
@@ -372,7 +372,7 @@ const errorTransientMessageNotFound: MMSDeleteResponseStatus = MMSDeleteResponse
  * @type {number}
  */
 export
-const MMSDeleteResponseStatus_errorTransientNetworkProblem: MMSDeleteResponseStatus = MMSDeleteResponseStatus.errorTransientNetworkProblem; /* LONG_NAMED_ENUMERATED_VALUE */
+const MMSDeleteResponseStatus_errorTransientNetworkProblem: _enum_for_MMSDeleteResponseStatus.errorTransientNetworkProblem = MMSDeleteResponseStatus.errorTransientNetworkProblem; /* LONG_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary errorTransientNetworkProblem
@@ -380,7 +380,7 @@ const MMSDeleteResponseStatus_errorTransientNetworkProblem: MMSDeleteResponseSta
  * @type {number}
  */
 export
-const errorTransientNetworkProblem: MMSDeleteResponseStatus = MMSDeleteResponseStatus.errorTransientNetworkProblem; /* SHORT_NAMED_ENUMERATED_VALUE */
+const errorTransientNetworkProblem: _enum_for_MMSDeleteResponseStatus.errorTransientNetworkProblem = MMSDeleteResponseStatus.errorTransientNetworkProblem; /* SHORT_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary MMSDeleteResponseStatus_errorTransientPartialSuccess
@@ -388,7 +388,7 @@ const errorTransientNetworkProblem: MMSDeleteResponseStatus = MMSDeleteResponseS
  * @type {number}
  */
 export
-const MMSDeleteResponseStatus_errorTransientPartialSuccess: MMSDeleteResponseStatus = MMSDeleteResponseStatus.errorTransientPartialSuccess; /* LONG_NAMED_ENUMERATED_VALUE */
+const MMSDeleteResponseStatus_errorTransientPartialSuccess: _enum_for_MMSDeleteResponseStatus.errorTransientPartialSuccess = MMSDeleteResponseStatus.errorTransientPartialSuccess; /* LONG_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary errorTransientPartialSuccess
@@ -396,7 +396,7 @@ const MMSDeleteResponseStatus_errorTransientPartialSuccess: MMSDeleteResponseSta
  * @type {number}
  */
 export
-const errorTransientPartialSuccess: MMSDeleteResponseStatus = MMSDeleteResponseStatus.errorTransientPartialSuccess; /* SHORT_NAMED_ENUMERATED_VALUE */
+const errorTransientPartialSuccess: _enum_for_MMSDeleteResponseStatus.errorTransientPartialSuccess = MMSDeleteResponseStatus.errorTransientPartialSuccess; /* SHORT_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary MMSDeleteResponseStatus_errorPermanentFailure
@@ -404,7 +404,7 @@ const errorTransientPartialSuccess: MMSDeleteResponseStatus = MMSDeleteResponseS
  * @type {number}
  */
 export
-const MMSDeleteResponseStatus_errorPermanentFailure: MMSDeleteResponseStatus = MMSDeleteResponseStatus.errorPermanentFailure; /* LONG_NAMED_ENUMERATED_VALUE */
+const MMSDeleteResponseStatus_errorPermanentFailure: _enum_for_MMSDeleteResponseStatus.errorPermanentFailure = MMSDeleteResponseStatus.errorPermanentFailure; /* LONG_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary errorPermanentFailure
@@ -412,7 +412,7 @@ const MMSDeleteResponseStatus_errorPermanentFailure: MMSDeleteResponseStatus = M
  * @type {number}
  */
 export
-const errorPermanentFailure: MMSDeleteResponseStatus = MMSDeleteResponseStatus.errorPermanentFailure; /* SHORT_NAMED_ENUMERATED_VALUE */
+const errorPermanentFailure: _enum_for_MMSDeleteResponseStatus.errorPermanentFailure = MMSDeleteResponseStatus.errorPermanentFailure; /* SHORT_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary MMSDeleteResponseStatus_errorPermanentServiceDenied
@@ -420,7 +420,7 @@ const errorPermanentFailure: MMSDeleteResponseStatus = MMSDeleteResponseStatus.e
  * @type {number}
  */
 export
-const MMSDeleteResponseStatus_errorPermanentServiceDenied: MMSDeleteResponseStatus = MMSDeleteResponseStatus.errorPermanentServiceDenied; /* LONG_NAMED_ENUMERATED_VALUE */
+const MMSDeleteResponseStatus_errorPermanentServiceDenied: _enum_for_MMSDeleteResponseStatus.errorPermanentServiceDenied = MMSDeleteResponseStatus.errorPermanentServiceDenied; /* LONG_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary errorPermanentServiceDenied
@@ -428,7 +428,7 @@ const MMSDeleteResponseStatus_errorPermanentServiceDenied: MMSDeleteResponseStat
  * @type {number}
  */
 export
-const errorPermanentServiceDenied: MMSDeleteResponseStatus = MMSDeleteResponseStatus.errorPermanentServiceDenied; /* SHORT_NAMED_ENUMERATED_VALUE */
+const errorPermanentServiceDenied: _enum_for_MMSDeleteResponseStatus.errorPermanentServiceDenied = MMSDeleteResponseStatus.errorPermanentServiceDenied; /* SHORT_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary MMSDeleteResponseStatus_errorPermanentMessageFormatCorrupt
@@ -436,7 +436,7 @@ const errorPermanentServiceDenied: MMSDeleteResponseStatus = MMSDeleteResponseSt
  * @type {number}
  */
 export
-const MMSDeleteResponseStatus_errorPermanentMessageFormatCorrupt: MMSDeleteResponseStatus = MMSDeleteResponseStatus.errorPermanentMessageFormatCorrupt; /* LONG_NAMED_ENUMERATED_VALUE */
+const MMSDeleteResponseStatus_errorPermanentMessageFormatCorrupt: _enum_for_MMSDeleteResponseStatus.errorPermanentMessageFormatCorrupt = MMSDeleteResponseStatus.errorPermanentMessageFormatCorrupt; /* LONG_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary errorPermanentMessageFormatCorrupt
@@ -444,7 +444,7 @@ const MMSDeleteResponseStatus_errorPermanentMessageFormatCorrupt: MMSDeleteRespo
  * @type {number}
  */
 export
-const errorPermanentMessageFormatCorrupt: MMSDeleteResponseStatus = MMSDeleteResponseStatus.errorPermanentMessageFormatCorrupt; /* SHORT_NAMED_ENUMERATED_VALUE */
+const errorPermanentMessageFormatCorrupt: _enum_for_MMSDeleteResponseStatus.errorPermanentMessageFormatCorrupt = MMSDeleteResponseStatus.errorPermanentMessageFormatCorrupt; /* SHORT_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary MMSDeleteResponseStatus_errorPermanentSendingAddressUnresolved
@@ -452,7 +452,7 @@ const errorPermanentMessageFormatCorrupt: MMSDeleteResponseStatus = MMSDeleteRes
  * @type {number}
  */
 export
-const MMSDeleteResponseStatus_errorPermanentSendingAddressUnresolved: MMSDeleteResponseStatus = MMSDeleteResponseStatus.errorPermanentSendingAddressUnresolved; /* LONG_NAMED_ENUMERATED_VALUE */
+const MMSDeleteResponseStatus_errorPermanentSendingAddressUnresolved: _enum_for_MMSDeleteResponseStatus.errorPermanentSendingAddressUnresolved = MMSDeleteResponseStatus.errorPermanentSendingAddressUnresolved; /* LONG_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary errorPermanentSendingAddressUnresolved
@@ -460,7 +460,7 @@ const MMSDeleteResponseStatus_errorPermanentSendingAddressUnresolved: MMSDeleteR
  * @type {number}
  */
 export
-const errorPermanentSendingAddressUnresolved: MMSDeleteResponseStatus = MMSDeleteResponseStatus.errorPermanentSendingAddressUnresolved; /* SHORT_NAMED_ENUMERATED_VALUE */
+const errorPermanentSendingAddressUnresolved: _enum_for_MMSDeleteResponseStatus.errorPermanentSendingAddressUnresolved = MMSDeleteResponseStatus.errorPermanentSendingAddressUnresolved; /* SHORT_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary MMSDeleteResponseStatus_errorPermanentMessageNotFound
@@ -468,7 +468,7 @@ const errorPermanentSendingAddressUnresolved: MMSDeleteResponseStatus = MMSDelet
  * @type {number}
  */
 export
-const MMSDeleteResponseStatus_errorPermanentMessageNotFound: MMSDeleteResponseStatus = MMSDeleteResponseStatus.errorPermanentMessageNotFound; /* LONG_NAMED_ENUMERATED_VALUE */
+const MMSDeleteResponseStatus_errorPermanentMessageNotFound: _enum_for_MMSDeleteResponseStatus.errorPermanentMessageNotFound = MMSDeleteResponseStatus.errorPermanentMessageNotFound; /* LONG_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary errorPermanentMessageNotFound
@@ -476,7 +476,7 @@ const MMSDeleteResponseStatus_errorPermanentMessageNotFound: MMSDeleteResponseSt
  * @type {number}
  */
 export
-const errorPermanentMessageNotFound: MMSDeleteResponseStatus = MMSDeleteResponseStatus.errorPermanentMessageNotFound; /* SHORT_NAMED_ENUMERATED_VALUE */
+const errorPermanentMessageNotFound: _enum_for_MMSDeleteResponseStatus.errorPermanentMessageNotFound = MMSDeleteResponseStatus.errorPermanentMessageNotFound; /* SHORT_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary MMSDeleteResponseStatus_errorPermanentContentNotAccepted
@@ -484,7 +484,7 @@ const errorPermanentMessageNotFound: MMSDeleteResponseStatus = MMSDeleteResponse
  * @type {number}
  */
 export
-const MMSDeleteResponseStatus_errorPermanentContentNotAccepted: MMSDeleteResponseStatus = MMSDeleteResponseStatus.errorPermanentContentNotAccepted; /* LONG_NAMED_ENUMERATED_VALUE */
+const MMSDeleteResponseStatus_errorPermanentContentNotAccepted: _enum_for_MMSDeleteResponseStatus.errorPermanentContentNotAccepted = MMSDeleteResponseStatus.errorPermanentContentNotAccepted; /* LONG_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary errorPermanentContentNotAccepted
@@ -492,7 +492,7 @@ const MMSDeleteResponseStatus_errorPermanentContentNotAccepted: MMSDeleteRespons
  * @type {number}
  */
 export
-const errorPermanentContentNotAccepted: MMSDeleteResponseStatus = MMSDeleteResponseStatus.errorPermanentContentNotAccepted; /* SHORT_NAMED_ENUMERATED_VALUE */
+const errorPermanentContentNotAccepted: _enum_for_MMSDeleteResponseStatus.errorPermanentContentNotAccepted = MMSDeleteResponseStatus.errorPermanentContentNotAccepted; /* SHORT_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary MMSDeleteResponseStatus_errorPermanentReplyChargingLimitationsNotMet
@@ -500,7 +500,7 @@ const errorPermanentContentNotAccepted: MMSDeleteResponseStatus = MMSDeleteRespo
  * @type {number}
  */
 export
-const MMSDeleteResponseStatus_errorPermanentReplyChargingLimitationsNotMet: MMSDeleteResponseStatus = MMSDeleteResponseStatus.errorPermanentReplyChargingLimitationsNotMet; /* LONG_NAMED_ENUMERATED_VALUE */
+const MMSDeleteResponseStatus_errorPermanentReplyChargingLimitationsNotMet: _enum_for_MMSDeleteResponseStatus.errorPermanentReplyChargingLimitationsNotMet = MMSDeleteResponseStatus.errorPermanentReplyChargingLimitationsNotMet; /* LONG_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary errorPermanentReplyChargingLimitationsNotMet
@@ -508,7 +508,7 @@ const MMSDeleteResponseStatus_errorPermanentReplyChargingLimitationsNotMet: MMSD
  * @type {number}
  */
 export
-const errorPermanentReplyChargingLimitationsNotMet: MMSDeleteResponseStatus = MMSDeleteResponseStatus.errorPermanentReplyChargingLimitationsNotMet; /* SHORT_NAMED_ENUMERATED_VALUE */
+const errorPermanentReplyChargingLimitationsNotMet: _enum_for_MMSDeleteResponseStatus.errorPermanentReplyChargingLimitationsNotMet = MMSDeleteResponseStatus.errorPermanentReplyChargingLimitationsNotMet; /* SHORT_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary MMSDeleteResponseStatus_errorPermanentReplyChargingRequestNotAccepted
@@ -516,7 +516,7 @@ const errorPermanentReplyChargingLimitationsNotMet: MMSDeleteResponseStatus = MM
  * @type {number}
  */
 export
-const MMSDeleteResponseStatus_errorPermanentReplyChargingRequestNotAccepted: MMSDeleteResponseStatus = MMSDeleteResponseStatus.errorPermanentReplyChargingRequestNotAccepted; /* LONG_NAMED_ENUMERATED_VALUE */
+const MMSDeleteResponseStatus_errorPermanentReplyChargingRequestNotAccepted: _enum_for_MMSDeleteResponseStatus.errorPermanentReplyChargingRequestNotAccepted = MMSDeleteResponseStatus.errorPermanentReplyChargingRequestNotAccepted; /* LONG_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary errorPermanentReplyChargingRequestNotAccepted
@@ -524,7 +524,7 @@ const MMSDeleteResponseStatus_errorPermanentReplyChargingRequestNotAccepted: MMS
  * @type {number}
  */
 export
-const errorPermanentReplyChargingRequestNotAccepted: MMSDeleteResponseStatus = MMSDeleteResponseStatus.errorPermanentReplyChargingRequestNotAccepted; /* SHORT_NAMED_ENUMERATED_VALUE */
+const errorPermanentReplyChargingRequestNotAccepted: _enum_for_MMSDeleteResponseStatus.errorPermanentReplyChargingRequestNotAccepted = MMSDeleteResponseStatus.errorPermanentReplyChargingRequestNotAccepted; /* SHORT_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary MMSDeleteResponseStatus_errorPermanentReplyChargingForwardingDenied
@@ -532,7 +532,7 @@ const errorPermanentReplyChargingRequestNotAccepted: MMSDeleteResponseStatus = M
  * @type {number}
  */
 export
-const MMSDeleteResponseStatus_errorPermanentReplyChargingForwardingDenied: MMSDeleteResponseStatus = MMSDeleteResponseStatus.errorPermanentReplyChargingForwardingDenied; /* LONG_NAMED_ENUMERATED_VALUE */
+const MMSDeleteResponseStatus_errorPermanentReplyChargingForwardingDenied: _enum_for_MMSDeleteResponseStatus.errorPermanentReplyChargingForwardingDenied = MMSDeleteResponseStatus.errorPermanentReplyChargingForwardingDenied; /* LONG_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary errorPermanentReplyChargingForwardingDenied
@@ -540,7 +540,7 @@ const MMSDeleteResponseStatus_errorPermanentReplyChargingForwardingDenied: MMSDe
  * @type {number}
  */
 export
-const errorPermanentReplyChargingForwardingDenied: MMSDeleteResponseStatus = MMSDeleteResponseStatus.errorPermanentReplyChargingForwardingDenied; /* SHORT_NAMED_ENUMERATED_VALUE */
+const errorPermanentReplyChargingForwardingDenied: _enum_for_MMSDeleteResponseStatus.errorPermanentReplyChargingForwardingDenied = MMSDeleteResponseStatus.errorPermanentReplyChargingForwardingDenied; /* SHORT_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary MMSDeleteResponseStatus_errorPermanentReplyChargingNotSupported
@@ -548,7 +548,7 @@ const errorPermanentReplyChargingForwardingDenied: MMSDeleteResponseStatus = MMS
  * @type {number}
  */
 export
-const MMSDeleteResponseStatus_errorPermanentReplyChargingNotSupported: MMSDeleteResponseStatus = MMSDeleteResponseStatus.errorPermanentReplyChargingNotSupported; /* LONG_NAMED_ENUMERATED_VALUE */
+const MMSDeleteResponseStatus_errorPermanentReplyChargingNotSupported: _enum_for_MMSDeleteResponseStatus.errorPermanentReplyChargingNotSupported = MMSDeleteResponseStatus.errorPermanentReplyChargingNotSupported; /* LONG_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary errorPermanentReplyChargingNotSupported
@@ -556,7 +556,7 @@ const MMSDeleteResponseStatus_errorPermanentReplyChargingNotSupported: MMSDelete
  * @type {number}
  */
 export
-const errorPermanentReplyChargingNotSupported: MMSDeleteResponseStatus = MMSDeleteResponseStatus.errorPermanentReplyChargingNotSupported; /* SHORT_NAMED_ENUMERATED_VALUE */
+const errorPermanentReplyChargingNotSupported: _enum_for_MMSDeleteResponseStatus.errorPermanentReplyChargingNotSupported = MMSDeleteResponseStatus.errorPermanentReplyChargingNotSupported; /* SHORT_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary MMSDeleteResponseStatus_errorPermanentAddressHidingNotSupported
@@ -564,7 +564,7 @@ const errorPermanentReplyChargingNotSupported: MMSDeleteResponseStatus = MMSDele
  * @type {number}
  */
 export
-const MMSDeleteResponseStatus_errorPermanentAddressHidingNotSupported: MMSDeleteResponseStatus = MMSDeleteResponseStatus.errorPermanentAddressHidingNotSupported; /* LONG_NAMED_ENUMERATED_VALUE */
+const MMSDeleteResponseStatus_errorPermanentAddressHidingNotSupported: _enum_for_MMSDeleteResponseStatus.errorPermanentAddressHidingNotSupported = MMSDeleteResponseStatus.errorPermanentAddressHidingNotSupported; /* LONG_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary errorPermanentAddressHidingNotSupported
@@ -572,7 +572,7 @@ const MMSDeleteResponseStatus_errorPermanentAddressHidingNotSupported: MMSDelete
  * @type {number}
  */
 export
-const errorPermanentAddressHidingNotSupported: MMSDeleteResponseStatus = MMSDeleteResponseStatus.errorPermanentAddressHidingNotSupported; /* SHORT_NAMED_ENUMERATED_VALUE */
+const errorPermanentAddressHidingNotSupported: _enum_for_MMSDeleteResponseStatus.errorPermanentAddressHidingNotSupported = MMSDeleteResponseStatus.errorPermanentAddressHidingNotSupported; /* SHORT_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary MMSDeleteResponseStatus_errorPermanentLackOfPrepaid
@@ -580,7 +580,7 @@ const errorPermanentAddressHidingNotSupported: MMSDeleteResponseStatus = MMSDele
  * @type {number}
  */
 export
-const MMSDeleteResponseStatus_errorPermanentLackOfPrepaid: MMSDeleteResponseStatus = MMSDeleteResponseStatus.errorPermanentLackOfPrepaid; /* LONG_NAMED_ENUMERATED_VALUE */
+const MMSDeleteResponseStatus_errorPermanentLackOfPrepaid: _enum_for_MMSDeleteResponseStatus.errorPermanentLackOfPrepaid = MMSDeleteResponseStatus.errorPermanentLackOfPrepaid; /* LONG_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary errorPermanentLackOfPrepaid
@@ -588,7 +588,7 @@ const MMSDeleteResponseStatus_errorPermanentLackOfPrepaid: MMSDeleteResponseStat
  * @type {number}
  */
 export
-const errorPermanentLackOfPrepaid: MMSDeleteResponseStatus = MMSDeleteResponseStatus.errorPermanentLackOfPrepaid; /* SHORT_NAMED_ENUMERATED_VALUE */
+const errorPermanentLackOfPrepaid: _enum_for_MMSDeleteResponseStatus.errorPermanentLackOfPrepaid = MMSDeleteResponseStatus.errorPermanentLackOfPrepaid; /* SHORT_NAMED_ENUMERATED_VALUE */
 export const _decode_MMSDeleteResponseStatus: $.ASN1Decoder<MMSDeleteResponseStatus> = $._decodeEnumerated;
 export const _encode_MMSDeleteResponseStatus: $.ASN1Encoder<MMSDeleteResponseStatus> = $._encodeEnumerated;
 

@@ -1,10 +1,10 @@
 /* eslint-disable */
 import {
-    ASN1Element as _Element,
+    type ASN1Element as _Element,
     ASN1TagClass as _TagClass,
-    IA5String,
-    INTEGER,
-    OPTIONAL
+    type IA5String,
+    type INTEGER,
+    type OPTIONAL
 } from "@wildboar/asn1";
 import * as $ from "@wildboar/asn1/functional";
 
@@ -39,7 +39,7 @@ class LogotypeAudioInfo {
      * @public
      * @readonly
      */
-    readonly fileSize: INTEGER;
+    public readonly fileSize: INTEGER;
     /**
      * Duration in milliseconds. At least one audio file of the
      * logotype should last between 1 and 30 seconds (1000 through
@@ -49,20 +49,20 @@ class LogotypeAudioInfo {
      * @public
      * @readonly
      */
-    readonly playTime: INTEGER;
+    public readonly playTime: INTEGER;
     /**
      * Channel count. 1 is mono, 2 is stereo, and 4 is quad.
      * RFC 3709 assigns no meaning to any other value.
      * @public
      * @readonly
      */
-    readonly channels: INTEGER;
+    public readonly channels: INTEGER;
     /**
      * Samples per second. Absent when not stated.
      * @public
      * @readonly
      */
-    readonly sampleRate?: OPTIONAL<INTEGER>;
+    public readonly sampleRate?: OPTIONAL<INTEGER>;
     /**
      * Language of the spoken content, as an
      * [RFC 3066](https://www.rfc-editor.org/rfc/rfc3066) language
@@ -74,7 +74,7 @@ class LogotypeAudioInfo {
      * @public
      * @readonly
      */
-    readonly language?: OPTIONAL<IA5String>;
+    public readonly language?: OPTIONAL<IA5String>;
 
     constructor (
         fileSize: INTEGER,

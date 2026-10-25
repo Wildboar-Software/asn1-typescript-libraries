@@ -1,16 +1,16 @@
 /* eslint-disable */
 import {
-    INTEGER,
-    OPTIONAL,
-    ASN1Element as _Element,
+    type INTEGER,
+    type OPTIONAL,
+    type ASN1Element as _Element,
     ASN1TagClass as _TagClass,
     ASN1OverflowError,
 } from "@wildboar/asn1";
 import * as $ from "@wildboar/asn1/functional";
 import { DiversionReason, _decode_DiversionReason, _encode_DiversionReason, _enum_for_DiversionReason } from "../Call-Diversion-Operations-asn1-97/DiversionReason.ta.mjs";
-import { PresentedNumberUnscreened, _decode_PresentedNumberUnscreened, _encode_PresentedNumberUnscreened } from "../Addressing-Data-Elements-asn1-97/PresentedNumberUnscreened.ta.mjs";
-import { Name, _decode_Name, _encode_Name } from "../Name-Operations-asn1-97/Name.ta.mjs";
-import { _decode_divertingLegInformation2_ArgumentType_extension, _encode_divertingLegInformation2_ArgumentType_extension, divertingLegInformation2_ArgumentType_extension } from "../Call-Diversion-Operations-asn1-97/divertingLegInformation2-ArgumentType-extension.ta.mjs";
+import { type PresentedNumberUnscreened, _decode_PresentedNumberUnscreened, _encode_PresentedNumberUnscreened } from "../Addressing-Data-Elements-asn1-97/PresentedNumberUnscreened.ta.mjs";
+import { type Name, _decode_Name, _encode_Name } from "../Name-Operations-asn1-97/Name.ta.mjs";
+import { _decode_divertingLegInformation2_ArgumentType_extension, _encode_divertingLegInformation2_ArgumentType_extension, type divertingLegInformation2_ArgumentType_extension } from "../Call-Diversion-Operations-asn1-97/divertingLegInformation2-ArgumentType-extension.ta.mjs";
 
 /**
  * @summary divertingLegInformation2_ArgumentType
@@ -181,13 +181,13 @@ class divertingLegInformation2_ArgumentType {
          * @static
          */
 
-    public static _enum_for_diversionReason = _enum_for_DiversionReason;        /**
+    public static _enum_for_diversionReason: typeof _enum_for_DiversionReason = _enum_for_DiversionReason;        /**
          * @summary The enum used as the type of the component `originalDiversionReason`
          * @public
          * @static
          */
 
-    public static _enum_for_originalDiversionReason = _enum_for_DiversionReason;
+    public static _enum_for_originalDiversionReason: typeof _enum_for_DiversionReason = _enum_for_DiversionReason;
 }
 
 /**

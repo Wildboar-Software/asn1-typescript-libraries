@@ -79,7 +79,7 @@ type MCDataRequestType = _enum_for_MCDataRequestType;
  * @enum {number}
  */
 export
-const MCDataRequestType = _enum_for_MCDataRequestType;
+const MCDataRequestType: typeof _enum_for_MCDataRequestType = _enum_for_MCDataRequestType;
 
 /**
  * @summary MCDataRequestType_oneToOneFD
@@ -87,7 +87,7 @@ const MCDataRequestType = _enum_for_MCDataRequestType;
  * @type {number}
  */
 export
-const MCDataRequestType_oneToOneFD: MCDataRequestType = MCDataRequestType.oneToOneFD; /* LONG_NAMED_ENUMERATED_VALUE */
+const MCDataRequestType_oneToOneFD: _enum_for_MCDataRequestType.oneToOneFD = MCDataRequestType.oneToOneFD; /* LONG_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary oneToOneFD
@@ -95,7 +95,7 @@ const MCDataRequestType_oneToOneFD: MCDataRequestType = MCDataRequestType.oneToO
  * @type {number}
  */
 export
-const oneToOneFD: MCDataRequestType = MCDataRequestType.oneToOneFD; /* SHORT_NAMED_ENUMERATED_VALUE */
+const oneToOneFD: _enum_for_MCDataRequestType.oneToOneFD = MCDataRequestType.oneToOneFD; /* SHORT_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary MCDataRequestType_groupFD
@@ -103,7 +103,7 @@ const oneToOneFD: MCDataRequestType = MCDataRequestType.oneToOneFD; /* SHORT_NAM
  * @type {number}
  */
 export
-const MCDataRequestType_groupFD: MCDataRequestType = MCDataRequestType.groupFD; /* LONG_NAMED_ENUMERATED_VALUE */
+const MCDataRequestType_groupFD: _enum_for_MCDataRequestType.groupFD = MCDataRequestType.groupFD; /* LONG_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary groupFD
@@ -111,7 +111,7 @@ const MCDataRequestType_groupFD: MCDataRequestType = MCDataRequestType.groupFD; 
  * @type {number}
  */
 export
-const groupFD: MCDataRequestType = MCDataRequestType.groupFD; /* SHORT_NAMED_ENUMERATED_VALUE */
+const groupFD: _enum_for_MCDataRequestType.groupFD = MCDataRequestType.groupFD; /* SHORT_NAMED_ENUMERATED_VALUE */
 export const _decode_MCDataRequestType: $.ASN1Decoder<MCDataRequestType> = $._decodeEnumerated;
 export const _encode_MCDataRequestType: $.ASN1Encoder<MCDataRequestType> = $._encodeEnumerated;
 

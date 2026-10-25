@@ -1,6 +1,6 @@
 /* eslint-disable */
 import {
-    ASN1Element as _Element,
+    type ASN1Element as _Element,
     ASN1TagClass as _TagClass,
     ASN1Construction as _Construction,
     ASN1UniversalType as _UniversalType,
@@ -60,7 +60,7 @@ type Media = _enum_for_Media;
  * @enum {number}
  */
 export
-const Media = _enum_for_Media;
+const Media: typeof _enum_for_Media = _enum_for_Media;
 
 /**
  * @summary Media_voiceMail
@@ -68,7 +68,7 @@ const Media = _enum_for_Media;
  * @type {number}
  */
 export
-const Media_voiceMail: Media = Media.voiceMail; /* LONG_NAMED_ENUMERATED_VALUE */
+const Media_voiceMail: _enum_for_Media.voiceMail = Media.voiceMail; /* LONG_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary voiceMail
@@ -76,7 +76,7 @@ const Media_voiceMail: Media = Media.voiceMail; /* LONG_NAMED_ENUMERATED_VALUE *
  * @type {number}
  */
 export
-const voiceMail: Media = Media.voiceMail; /* SHORT_NAMED_ENUMERATED_VALUE */
+const voiceMail: _enum_for_Media.voiceMail = Media.voiceMail; /* SHORT_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary Media_faxGroup3
@@ -84,7 +84,7 @@ const voiceMail: Media = Media.voiceMail; /* SHORT_NAMED_ENUMERATED_VALUE */
  * @type {number}
  */
 export
-const Media_faxGroup3: Media = Media.faxGroup3; /* LONG_NAMED_ENUMERATED_VALUE */
+const Media_faxGroup3: _enum_for_Media.faxGroup3 = Media.faxGroup3; /* LONG_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary faxGroup3
@@ -92,7 +92,7 @@ const Media_faxGroup3: Media = Media.faxGroup3; /* LONG_NAMED_ENUMERATED_VALUE *
  * @type {number}
  */
 export
-const faxGroup3: Media = Media.faxGroup3; /* SHORT_NAMED_ENUMERATED_VALUE */
+const faxGroup3: _enum_for_Media.faxGroup3 = Media.faxGroup3; /* SHORT_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary Media_faxGroup4
@@ -100,7 +100,7 @@ const faxGroup3: Media = Media.faxGroup3; /* SHORT_NAMED_ENUMERATED_VALUE */
  * @type {number}
  */
 export
-const Media_faxGroup4: Media = Media.faxGroup4; /* LONG_NAMED_ENUMERATED_VALUE */
+const Media_faxGroup4: _enum_for_Media.faxGroup4 = Media.faxGroup4; /* LONG_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary faxGroup4
@@ -108,9 +108,9 @@ const Media_faxGroup4: Media = Media.faxGroup4; /* LONG_NAMED_ENUMERATED_VALUE *
  * @type {number}
  */
 export
-const faxGroup4: Media = Media.faxGroup4; /* SHORT_NAMED_ENUMERATED_VALUE */
-export const _decode_Media = $._decodeEnumerated;
-export const _encode_Media = $._encodeEnumerated;
+const faxGroup4: _enum_for_Media.faxGroup4 = Media.faxGroup4; /* SHORT_NAMED_ENUMERATED_VALUE */
+export const _decode_Media: $.ASN1Decoder<number> = $._decodeEnumerated;
+export const _encode_Media: $.ASN1Encoder<number> = $._encodeEnumerated;
 
 
 /* eslint-enable */

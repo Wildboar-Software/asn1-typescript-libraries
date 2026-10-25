@@ -1,7 +1,7 @@
 /* eslint-disable */
 import {
-    OPTIONAL,
-    ASN1Element as _Element,
+    type OPTIONAL,
+    type ASN1Element as _Element,
     ASN1TagClass as _TagClass,
     ASN1Construction as _Construction,
     ASN1UniversalType as _UniversalType,
@@ -105,116 +105,154 @@ import {
  *
  */
 export class FileAttributes {
+    /**
+     * @summary `pathname`.
+     * @public
+     * @readonly
+     */
+    public readonly pathname?: OPTIONAL<Pathname_Attribute>;
+    /**
+     * @summary `permitted_actions`.
+     * @public
+     * @readonly
+     */
+    public readonly permitted_actions?: OPTIONAL<Permitted_Actions_Attribute>;
+    /**
+     * @summary `storage_account`.
+     * @public
+     * @readonly
+     */
+    public readonly storage_account?: OPTIONAL<Account_Attribute>;
+    /**
+     * @summary `date_and_time_of_creation`.
+     * @public
+     * @readonly
+     */
+    public readonly date_and_time_of_creation?: OPTIONAL<Date_and_Time_Attribute>;
+    /**
+     * @summary `date_and_time_of_last_modification`.
+     * @public
+     * @readonly
+     */
+    public readonly date_and_time_of_last_modification?: OPTIONAL<Date_and_Time_Attribute>;
+    /**
+     * @summary `date_and_time_of_last_read_access`.
+     * @public
+     * @readonly
+     */
+    public readonly date_and_time_of_last_read_access?: OPTIONAL<Date_and_Time_Attribute>;
+    /**
+     * @summary `date_and_time_of_last_attribute_modification`.
+     * @public
+     * @readonly
+     */
+    public readonly date_and_time_of_last_attribute_modification?: OPTIONAL<Date_and_Time_Attribute>;
+    /**
+     * @summary `identity_of_creator`.
+     * @public
+     * @readonly
+     */
+    public readonly identity_of_creator?: OPTIONAL<User_Identity_Attribute>;
+    /**
+     * @summary `identity_of_last_modifier`.
+     * @public
+     * @readonly
+     */
+    public readonly identity_of_last_modifier?: OPTIONAL<User_Identity_Attribute>;
+    /**
+     * @summary `identity_of_last_reader`.
+     * @public
+     * @readonly
+     */
+    public readonly identity_of_last_reader?: OPTIONAL<User_Identity_Attribute>;
+    /**
+     * @summary `identity_of_last_attribute_modifier`.
+     * @public
+     * @readonly
+     */
+    public readonly identity_of_last_attribute_modifier?: OPTIONAL<User_Identity_Attribute>;
+    /**
+     * @summary `object_availability`.
+     * @public
+     * @readonly
+     */
+    public readonly object_availability?: OPTIONAL<Object_Availability_Attribute>;
+    /**
+     * @summary `object_size`.
+     * @public
+     * @readonly
+     */
+    public readonly object_size?: OPTIONAL<Object_Size_Attribute>;
+    /**
+     * @summary `future_object_size`.
+     * @public
+     * @readonly
+     */
+    public readonly future_object_size?: OPTIONAL<Object_Size_Attribute>;
+    /**
+     * @summary `access_control`.
+     * @public
+     * @readonly
+     */
+    public readonly access_control?: OPTIONAL<Access_Control_Attribute>;
+    /**
+     * @summary `legal_qualifications`.
+     * @public
+     * @readonly
+     */
+    public readonly legal_qualifications?: OPTIONAL<Legal_Qualification_Attribute>;
+    /**
+     * @summary `private_use`.
+     * @public
+     * @readonly
+     */
+    public readonly private_use?: OPTIONAL<Private_Use_Attribute>;
+    /**
+     * @summary `attribute_extensions`.
+     * @public
+     * @readonly
+     */
+    public readonly attribute_extensions?: OPTIONAL<Attribute_Extensions>;
+
     constructor(
-        /**
-         * @summary `pathname`.
-         * @public
-         * @readonly
-         */
-        readonly pathname?: OPTIONAL<Pathname_Attribute>,
-        /**
-         * @summary `permitted_actions`.
-         * @public
-         * @readonly
-         */
-        readonly permitted_actions?: OPTIONAL<Permitted_Actions_Attribute>,
-        /**
-         * @summary `storage_account`.
-         * @public
-         * @readonly
-         */
-        readonly storage_account?: OPTIONAL<Account_Attribute>,
-        /**
-         * @summary `date_and_time_of_creation`.
-         * @public
-         * @readonly
-         */
-        readonly date_and_time_of_creation?: OPTIONAL<Date_and_Time_Attribute>,
-        /**
-         * @summary `date_and_time_of_last_modification`.
-         * @public
-         * @readonly
-         */
-        readonly date_and_time_of_last_modification?: OPTIONAL<Date_and_Time_Attribute>,
-        /**
-         * @summary `date_and_time_of_last_read_access`.
-         * @public
-         * @readonly
-         */
-        readonly date_and_time_of_last_read_access?: OPTIONAL<Date_and_Time_Attribute>,
-        /**
-         * @summary `date_and_time_of_last_attribute_modification`.
-         * @public
-         * @readonly
-         */
-        readonly date_and_time_of_last_attribute_modification?: OPTIONAL<Date_and_Time_Attribute>,
-        /**
-         * @summary `identity_of_creator`.
-         * @public
-         * @readonly
-         */
-        readonly identity_of_creator?: OPTIONAL<User_Identity_Attribute>,
-        /**
-         * @summary `identity_of_last_modifier`.
-         * @public
-         * @readonly
-         */
-        readonly identity_of_last_modifier?: OPTIONAL<User_Identity_Attribute>,
-        /**
-         * @summary `identity_of_last_reader`.
-         * @public
-         * @readonly
-         */
-        readonly identity_of_last_reader?: OPTIONAL<User_Identity_Attribute>,
-        /**
-         * @summary `identity_of_last_attribute_modifier`.
-         * @public
-         * @readonly
-         */
-        readonly identity_of_last_attribute_modifier?: OPTIONAL<User_Identity_Attribute>,
-        /**
-         * @summary `object_availability`.
-         * @public
-         * @readonly
-         */
-        readonly object_availability?: OPTIONAL<Object_Availability_Attribute>,
-        /**
-         * @summary `object_size`.
-         * @public
-         * @readonly
-         */
-        readonly object_size?: OPTIONAL<Object_Size_Attribute>,
-        /**
-         * @summary `future_object_size`.
-         * @public
-         * @readonly
-         */
-        readonly future_object_size?: OPTIONAL<Object_Size_Attribute>,
-        /**
-         * @summary `access_control`.
-         * @public
-         * @readonly
-         */
-        readonly access_control?: OPTIONAL<Access_Control_Attribute>,
-        /**
-         * @summary `legal_qualifications`.
-         * @public
-         * @readonly
-         */
-        readonly legal_qualifications?: OPTIONAL<Legal_Qualification_Attribute>,
-        /**
-         * @summary `private_use`.
-         * @public
-         * @readonly
-         */
-        readonly private_use?: OPTIONAL<Private_Use_Attribute>,
-        /**
-         * @summary `attribute_extensions`.
-         * @public
-         * @readonly
-         */
-        readonly attribute_extensions?: OPTIONAL<Attribute_Extensions>
-    ) {}
+        pathname?: OPTIONAL<Pathname_Attribute>,
+        permitted_actions?: OPTIONAL<Permitted_Actions_Attribute>,
+        storage_account?: OPTIONAL<Account_Attribute>,
+        date_and_time_of_creation?: OPTIONAL<Date_and_Time_Attribute>,
+        date_and_time_of_last_modification?: OPTIONAL<Date_and_Time_Attribute>,
+        date_and_time_of_last_read_access?: OPTIONAL<Date_and_Time_Attribute>,
+        date_and_time_of_last_attribute_modification?: OPTIONAL<Date_and_Time_Attribute>,
+        identity_of_creator?: OPTIONAL<User_Identity_Attribute>,
+        identity_of_last_modifier?: OPTIONAL<User_Identity_Attribute>,
+        identity_of_last_reader?: OPTIONAL<User_Identity_Attribute>,
+        identity_of_last_attribute_modifier?: OPTIONAL<User_Identity_Attribute>,
+        object_availability?: OPTIONAL<Object_Availability_Attribute>,
+        object_size?: OPTIONAL<Object_Size_Attribute>,
+        future_object_size?: OPTIONAL<Object_Size_Attribute>,
+        access_control?: OPTIONAL<Access_Control_Attribute>,
+        legal_qualifications?: OPTIONAL<Legal_Qualification_Attribute>,
+        private_use?: OPTIONAL<Private_Use_Attribute>,
+        attribute_extensions?: OPTIONAL<Attribute_Extensions>
+    ) {
+        this.pathname = pathname;
+        this.permitted_actions = permitted_actions;
+        this.storage_account = storage_account;
+        this.date_and_time_of_creation = date_and_time_of_creation;
+        this.date_and_time_of_last_modification = date_and_time_of_last_modification;
+        this.date_and_time_of_last_read_access = date_and_time_of_last_read_access;
+        this.date_and_time_of_last_attribute_modification = date_and_time_of_last_attribute_modification;
+        this.identity_of_creator = identity_of_creator;
+        this.identity_of_last_modifier = identity_of_last_modifier;
+        this.identity_of_last_reader = identity_of_last_reader;
+        this.identity_of_last_attribute_modifier = identity_of_last_attribute_modifier;
+        this.object_availability = object_availability;
+        this.object_size = object_size;
+        this.future_object_size = future_object_size;
+        this.access_control = access_control;
+        this.legal_qualifications = legal_qualifications;
+        this.private_use = private_use;
+        this.attribute_extensions = attribute_extensions;
+    }
 
     /**
      * @summary Restructures an object into a FileAttributes

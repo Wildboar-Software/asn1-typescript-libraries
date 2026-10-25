@@ -1,4 +1,5 @@
 /* eslint-disable */
+import { ASN1Element as _Element, ASN1ConstructionError as _ConstructionError } from "@wildboar/asn1";
 import * as $ from "@wildboar/asn1/functional";
 
 
@@ -49,7 +50,7 @@ type CreateOrRemoveIndicator = _enum_for_CreateOrRemoveIndicator;
  * @enum {number}
  */
 export
-const CreateOrRemoveIndicator = _enum_for_CreateOrRemoveIndicator;
+const CreateOrRemoveIndicator: typeof _enum_for_CreateOrRemoveIndicator = _enum_for_CreateOrRemoveIndicator;
 
 /**
  * @summary CreateOrRemoveIndicator_create
@@ -57,7 +58,7 @@ const CreateOrRemoveIndicator = _enum_for_CreateOrRemoveIndicator;
  * @type {number}
  */
 export
-const CreateOrRemoveIndicator_create: CreateOrRemoveIndicator = CreateOrRemoveIndicator.create; /* LONG_NAMED_ENUMERATED_VALUE */
+const CreateOrRemoveIndicator_create: _enum_for_CreateOrRemoveIndicator.create = CreateOrRemoveIndicator.create; /* LONG_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary create
@@ -65,7 +66,7 @@ const CreateOrRemoveIndicator_create: CreateOrRemoveIndicator = CreateOrRemoveIn
  * @type {number}
  */
 export
-const create: CreateOrRemoveIndicator = CreateOrRemoveIndicator.create; /* SHORT_NAMED_ENUMERATED_VALUE */
+const create: _enum_for_CreateOrRemoveIndicator.create = CreateOrRemoveIndicator.create; /* SHORT_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary CreateOrRemoveIndicator_remove
@@ -73,7 +74,7 @@ const create: CreateOrRemoveIndicator = CreateOrRemoveIndicator.create; /* SHORT
  * @type {number}
  */
 export
-const CreateOrRemoveIndicator_remove: CreateOrRemoveIndicator = CreateOrRemoveIndicator.remove; /* LONG_NAMED_ENUMERATED_VALUE */
+const CreateOrRemoveIndicator_remove: _enum_for_CreateOrRemoveIndicator.remove = CreateOrRemoveIndicator.remove; /* LONG_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary remove
@@ -81,12 +82,23 @@ const CreateOrRemoveIndicator_remove: CreateOrRemoveIndicator = CreateOrRemoveIn
  * @type {number}
  */
 export
-const remove: CreateOrRemoveIndicator = CreateOrRemoveIndicator.remove; /* SHORT_NAMED_ENUMERATED_VALUE */
+const remove: _enum_for_CreateOrRemoveIndicator.remove = CreateOrRemoveIndicator.remove; /* SHORT_NAMED_ENUMERATED_VALUE */
 
 export
-const _decode_CreateOrRemoveIndicator: $.ASN1Decoder<CreateOrRemoveIndicator> = $._decodeEnumerated;
+function _decode_CreateOrRemoveIndicator(el: _Element): CreateOrRemoveIndicator {
+    const enumerated = $._decodeEnumerated(el);
+    switch (enumerated) {
+        case CreateOrRemoveIndicator.create: return CreateOrRemoveIndicator.create;
+        case CreateOrRemoveIndicator.remove: return CreateOrRemoveIndicator.remove;
+        default:
+            throw new _ConstructionError(
+                "Invalid ENUMERATED value " + enumerated + " for CreateOrRemoveIndicator.",
+                el,
+            );
+    }
+}
 
 export
-const _encode_CreateOrRemoveIndicator: $.ASN1Encoder<CreateOrRemoveIndicator> = $._encodeEnumerated;
+const _encode_CreateOrRemoveIndicator: $.ASN1Encoder<CreateOrRemoveIndicator> = $._encodeEnumerated as $.ASN1Encoder<CreateOrRemoveIndicator>;
 
 /* eslint-enable */

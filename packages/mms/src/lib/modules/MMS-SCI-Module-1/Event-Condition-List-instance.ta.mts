@@ -1,6 +1,6 @@
 /* eslint-disable */
 import {
-    ASN1Element as _Element,
+    type ASN1Element as _Element,
     ASN1TagClass as _TagClass,
     ASN1Construction as _Construction,
     ASN1UniversalType as _UniversalType,
@@ -10,8 +10,8 @@ import {
     ASN1ConstructionError as _ConstructionError,
 } from "@wildboar/asn1";
 import * as $ from "@wildboar/asn1/functional";
-import { ObjectName, _decode_ObjectName, _encode_ObjectName } from "../ISO-9506-MMS-1/ObjectName.ta.mjs";
-import { Event_Condition_List_instance_definition, _decode_Event_Condition_List_instance_definition, _encode_Event_Condition_List_instance_definition } from "../MMS-SCI-Module-1/Event-Condition-List-instance-definition.ta.mjs";
+import { type ObjectName, _decode_ObjectName, _encode_ObjectName } from "../ISO-9506-MMS-1/ObjectName.ta.mjs";
+import { type Event_Condition_List_instance_definition, _decode_Event_Condition_List_instance_definition, _encode_Event_Condition_List_instance_definition } from "../MMS-SCI-Module-1/Event-Condition-List-instance-definition.ta.mjs";
 
 
 /**
@@ -45,29 +45,35 @@ import { Event_Condition_List_instance_definition, _decode_Event_Condition_List_
  */
 export
 class Event_Condition_List_instance {
+    /**
+     * @summary `name`.
+     * @description
+     *
+     * Configured object name in the SCI file. ISO 9506-2:2003 Annex B.
+     *
+     * @public
+     * @readonly
+     */
+    public readonly name: ObjectName;
+    /**
+     * @summary `definition`.
+     * @description
+     *
+     * Standardized Name OID (`reference`) or inline `details`. ISO
+     * 9506-2:2003 Annex B.
+     *
+     * @public
+     * @readonly
+     */
+    public readonly definition: Event_Condition_List_instance_definition;
+
     constructor (
-        /**
-         * @summary `name`.
-         * @description
-         *
-         * Configured object name in the SCI file. ISO 9506-2:2003 Annex B.
-         *
-         * @public
-         * @readonly
-         */
-        readonly name: ObjectName,
-        /**
-         * @summary `definition`.
-         * @description
-         *
-         * Standardized Name OID (`reference`) or inline `details`. ISO
-         * 9506-2:2003 Annex B.
-         *
-         * @public
-         * @readonly
-         */
-        readonly definition: Event_Condition_List_instance_definition
-    ) {}
+        name: ObjectName,
+        definition: Event_Condition_List_instance_definition
+    ) {
+        this.name = name;
+        this.definition = definition;
+    }
 
     /**
      * @summary Restructures an object into a Event_Condition_List_instance

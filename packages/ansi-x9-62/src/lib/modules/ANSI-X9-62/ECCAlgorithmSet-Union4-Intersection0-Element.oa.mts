@@ -2,7 +2,7 @@
 import { type ALGORITHM } from "../ANSI-X9-62/ALGORITHM.oca.mjs";
 import { ecdsa_with_Specified } from "../ANSI-X9-62/ecdsa-with-Specified.va.mjs";
 import {
-    HashAlgorithm,
+    type HashAlgorithm,
     _decode_HashAlgorithm,
     _encode_HashAlgorithm,
 } from "../ANSI-X9-62/HashAlgorithm.ta.mjs";

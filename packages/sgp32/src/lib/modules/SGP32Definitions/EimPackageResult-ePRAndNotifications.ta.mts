@@ -1,12 +1,12 @@
 /* eslint-disable */
 import {
     ASN1ConstructionError as _ConstructionError,
-    ASN1Element as _Element,
+    type ASN1Element as _Element,
     ASN1TagClass as _TagClass
 } from "@wildboar/asn1";
 import * as $ from "@wildboar/asn1/functional";
-import { EuiccPackageResult, _decode_EuiccPackageResult, _encode_EuiccPackageResult } from "../SGP32Definitions/EuiccPackageResult.ta.mjs";
-import { PendingNotificationList, _decode_PendingNotificationList, _encode_PendingNotificationList } from "../SGP32Definitions/PendingNotificationList.ta.mjs";
+import { type EuiccPackageResult, _decode_EuiccPackageResult, _encode_EuiccPackageResult } from "../SGP32Definitions/EuiccPackageResult.ta.mjs";
+import { type PendingNotificationList, _decode_PendingNotificationList, _encode_PendingNotificationList } from "../SGP32Definitions/PendingNotificationList.ta.mjs";
 
 
 /**
@@ -32,28 +32,34 @@ import { PendingNotificationList, _decode_PendingNotificationList, _encode_Pendi
  */
 export
 class EimPackageResult_ePRAndNotifications {
+    /**
+     * @summary `euiccPackageResult`.
+     * @description
+     * eUICC Package Result placed ahead of the Notification list in the same eIM
+     * Package Result (SGP.32 v1.2, sections 2.11.2 and 5.14.4).
+     * @public
+     * @readonly
+     */
+    public readonly euiccPackageResult: EuiccPackageResult;
+    /**
+     * @summary `notificationList`.
+     * @description
+     * Pending Notifications the IPA retrieved with ES10b.RetrieveNotificationsList
+     * after a package that contained PSMOs (SGP.32 v1.2, section 5.14.4). Tag
+     * 'A0'. Compact encoding should be used when the IPA has minimizeEsipaBytes
+     * (section 5.14.7).
+     * @public
+     * @readonly
+     */
+    public readonly notificationList: PendingNotificationList;
+
     constructor (
-        /**
-         * @summary `euiccPackageResult`.
-         * @description
-         * eUICC Package Result placed ahead of the Notification list in the same eIM
-         * Package Result (SGP.32 v1.2, sections 2.11.2 and 5.14.4).
-         * @public
-         * @readonly
-         */
-        readonly euiccPackageResult: EuiccPackageResult,
-        /**
-         * @summary `notificationList`.
-         * @description
-         * Pending Notifications the IPA retrieved with ES10b.RetrieveNotificationsList
-         * after a package that contained PSMOs (SGP.32 v1.2, section 5.14.4). Tag
-         * 'A0'. Compact encoding should be used when the IPA has minimizeEsipaBytes
-         * (section 5.14.7).
-         * @public
-         * @readonly
-         */
-        readonly notificationList: PendingNotificationList
-    ) {}
+        euiccPackageResult: EuiccPackageResult,
+        notificationList: PendingNotificationList
+    ) {
+        this.euiccPackageResult = euiccPackageResult;
+        this.notificationList = notificationList;
+    }
 
     /**
      * @summary Restructures an object into a EimPackageResult_ePRAndNotifications

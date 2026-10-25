@@ -1,29 +1,29 @@
 /* eslint-disable */
 import {
-    NULL,
-    OPTIONAL,
-    ASN1Element as _Element,
+    type NULL,
+    type OPTIONAL,
+    type ASN1Element as _Element,
     ASN1TagClass as _TagClass
 } from "@wildboar/asn1";
 import * as $ from "@wildboar/asn1/functional";
 import { ExtensionContainer, _decode_ExtensionContainer, _encode_ExtensionContainer } from "../MAP-ExtensionDataTypes/ExtensionContainer.ta.mjs";
 import { AMBR, _decode_AMBR, _encode_AMBR } from "../MAP-MS-DataTypes/AMBR.ta.mjs";
-import { APN_OI_Replacement, _decode_APN_OI_Replacement, _encode_APN_OI_Replacement } from "../MAP-MS-DataTypes/APN-OI-Replacement.ta.mjs";
-import { APN, _decode_APN, _encode_APN } from "../MAP-MS-DataTypes/APN.ta.mjs";
-import { ChargingCharacteristics, _decode_ChargingCharacteristics, _encode_ChargingCharacteristics } from "../MAP-MS-DataTypes/ChargingCharacteristics.ta.mjs";
-import { ContextId, _decode_ContextId, _encode_ContextId } from "../MAP-MS-DataTypes/ContextId.ta.mjs";
-import { Ext_PDP_Type, _decode_Ext_PDP_Type, _encode_Ext_PDP_Type } from "../MAP-MS-DataTypes/Ext-PDP-Type.ta.mjs";
-import { Ext_QoS_Subscribed, _decode_Ext_QoS_Subscribed, _encode_Ext_QoS_Subscribed } from "../MAP-MS-DataTypes/Ext-QoS-Subscribed.ta.mjs";
-import { Ext2_QoS_Subscribed, _decode_Ext2_QoS_Subscribed, _encode_Ext2_QoS_Subscribed } from "../MAP-MS-DataTypes/Ext2-QoS-Subscribed.ta.mjs";
-import { Ext3_QoS_Subscribed, _decode_Ext3_QoS_Subscribed, _encode_Ext3_QoS_Subscribed } from "../MAP-MS-DataTypes/Ext3-QoS-Subscribed.ta.mjs";
-import { Ext4_QoS_Subscribed, _decode_Ext4_QoS_Subscribed, _encode_Ext4_QoS_Subscribed } from "../MAP-MS-DataTypes/Ext4-QoS-Subscribed.ta.mjs";
-import { FQDN, _decode_FQDN, _encode_FQDN } from "../MAP-MS-DataTypes/FQDN.ta.mjs";
+import { type APN_OI_Replacement, _decode_APN_OI_Replacement, _encode_APN_OI_Replacement } from "../MAP-MS-DataTypes/APN-OI-Replacement.ta.mjs";
+import { type APN, _decode_APN, _encode_APN } from "../MAP-MS-DataTypes/APN.ta.mjs";
+import { type ChargingCharacteristics, _decode_ChargingCharacteristics, _encode_ChargingCharacteristics } from "../MAP-MS-DataTypes/ChargingCharacteristics.ta.mjs";
+import { type ContextId, _decode_ContextId, _encode_ContextId } from "../MAP-MS-DataTypes/ContextId.ta.mjs";
+import { type Ext_PDP_Type, _decode_Ext_PDP_Type, _encode_Ext_PDP_Type } from "../MAP-MS-DataTypes/Ext-PDP-Type.ta.mjs";
+import { type Ext_QoS_Subscribed, _decode_Ext_QoS_Subscribed, _encode_Ext_QoS_Subscribed } from "../MAP-MS-DataTypes/Ext-QoS-Subscribed.ta.mjs";
+import { type Ext2_QoS_Subscribed, _decode_Ext2_QoS_Subscribed, _encode_Ext2_QoS_Subscribed } from "../MAP-MS-DataTypes/Ext2-QoS-Subscribed.ta.mjs";
+import { type Ext3_QoS_Subscribed, _decode_Ext3_QoS_Subscribed, _encode_Ext3_QoS_Subscribed } from "../MAP-MS-DataTypes/Ext3-QoS-Subscribed.ta.mjs";
+import { type Ext4_QoS_Subscribed, _decode_Ext4_QoS_Subscribed, _encode_Ext4_QoS_Subscribed } from "../MAP-MS-DataTypes/Ext4-QoS-Subscribed.ta.mjs";
+import { type FQDN, _decode_FQDN, _encode_FQDN } from "../MAP-MS-DataTypes/FQDN.ta.mjs";
 import { LIPA_Permission, _decode_LIPA_Permission, _encode_LIPA_Permission, _enum_for_LIPA_Permission } from "../MAP-MS-DataTypes/LIPA-Permission.ta.mjs";
 import { NIDD_Mechanism, _decode_NIDD_Mechanism, _encode_NIDD_Mechanism, _enum_for_NIDD_Mechanism } from "../MAP-MS-DataTypes/NIDD-Mechanism.ta.mjs";
-import { PDP_Address, _decode_PDP_Address, _encode_PDP_Address } from "../MAP-MS-DataTypes/PDP-Address.ta.mjs";
-import { PDP_Type, _decode_PDP_Type, _encode_PDP_Type } from "../MAP-MS-DataTypes/PDP-Type.ta.mjs";
-import { QoS_Subscribed, _decode_QoS_Subscribed, _encode_QoS_Subscribed } from "../MAP-MS-DataTypes/QoS-Subscribed.ta.mjs";
-import { Restoration_Priority, _decode_Restoration_Priority, _encode_Restoration_Priority } from "../MAP-MS-DataTypes/Restoration-Priority.ta.mjs";
+import { type PDP_Address, _decode_PDP_Address, _encode_PDP_Address } from "../MAP-MS-DataTypes/PDP-Address.ta.mjs";
+import { type PDP_Type, _decode_PDP_Type, _encode_PDP_Type } from "../MAP-MS-DataTypes/PDP-Type.ta.mjs";
+import { type QoS_Subscribed, _decode_QoS_Subscribed, _encode_QoS_Subscribed } from "../MAP-MS-DataTypes/QoS-Subscribed.ta.mjs";
+import { type Restoration_Priority, _decode_Restoration_Priority, _encode_Restoration_Priority } from "../MAP-MS-DataTypes/Restoration-Priority.ta.mjs";
 import { SIPTO_Local_Network_Permission, _decode_SIPTO_Local_Network_Permission, _encode_SIPTO_Local_Network_Permission, _enum_for_SIPTO_Local_Network_Permission } from "../MAP-MS-DataTypes/SIPTO-Local-Network-Permission.ta.mjs";
 import { SIPTO_Permission, _decode_SIPTO_Permission, _encode_SIPTO_Permission, _enum_for_SIPTO_Permission } from "../MAP-MS-DataTypes/SIPTO-Permission.ta.mjs";
 
@@ -44,40 +44,40 @@ import { SIPTO_Permission, _decode_SIPTO_Permission, _encode_SIPTO_Permission, _
  * PDP-Context ::= SEQUENCE {
  *     pdp-ContextId    ContextId,
  *     pdp-Type    [16] PDP-Type,
- *     pdp-Address    [17] PDP-Address    OPTIONAL,
+ *     pdp-Address    [17] PDP-Address    type OPTIONAL,
  *     qos-Subscribed    [18] QoS-Subscribed,
- *     vplmnAddressAllowed    [19] NULL    OPTIONAL,
+ *     vplmnAddressAllowed    [19] NULL    type OPTIONAL,
  *     apn    [20] APN,
- *     extensionContainer    [21] ExtensionContainer    OPTIONAL,
+ *     extensionContainer    [21] ExtensionContainer    type OPTIONAL,
  *     ... ,
- *     ext-QoS-Subscribed    [0] Ext-QoS-Subscribed    OPTIONAL, 
- *     pdp-ChargingCharacteristics    [1] ChargingCharacteristics    OPTIONAL,
- *     ext2-QoS-Subscribed    [2] Ext2-QoS-Subscribed    OPTIONAL,
+ *     ext-QoS-Subscribed    [0] Ext-QoS-Subscribed    type OPTIONAL, 
+ *     pdp-ChargingCharacteristics    [1] ChargingCharacteristics    type OPTIONAL,
+ *     ext2-QoS-Subscribed    [2] Ext2-QoS-Subscribed    type OPTIONAL,
  *     -- ext2-QoS-Subscribed may be present only if ext-QoS-Subscribed is present.
- *     ext3-QoS-Subscribed    [3] Ext3-QoS-Subscribed    OPTIONAL,
+ *     ext3-QoS-Subscribed    [3] Ext3-QoS-Subscribed    type OPTIONAL,
  *     -- ext3-QoS-Subscribed may be present only if ext2-QoS-Subscribed is present.
- *     ext4-QoS-Subscribed    [4] Ext4-QoS-Subscribed    OPTIONAL,
+ *     ext4-QoS-Subscribed    [4] Ext4-QoS-Subscribed    type OPTIONAL,
  *     -- ext4-QoS-Subscribed may be present only if ext3-QoS-Subscribed is present. 
- *     apn-oi-Replacement    [5]    APN-OI-Replacement    OPTIONAL,
+ *     apn-oi-Replacement    [5]    APN-OI-Replacement    type OPTIONAL,
  *     -- this apn-oi-Replacement refers to the APN level apn-oi-Replacement and has
  *     -- higher priority than UE level apn-oi-Replacement.
- *     ext-pdp-Type    [6] Ext-PDP-Type    OPTIONAL,
+ *     ext-pdp-Type    [6] Ext-PDP-Type    type OPTIONAL,
  *     -- contains the value IPv4v6 defined in 3GPP TS 29.060 [105], if the PDP can be
  *     -- accessed by dual-stack UEs
- *     ext-pdp-Address    [7] PDP-Address    OPTIONAL,
+ *     ext-pdp-Address    [7] PDP-Address    type OPTIONAL,
  *     -- contains an additional IP address in case of dual-stack static IP address assignment
  *     -- for the UE.
  *     -- it may contain an IPv4 or an IPv6 address/prefix, and it may be present
  *     -- only if pdp-Address is present; if both are present, each parameter shall
  *     -- contain a different type of address (IPv4 or IPv6).
- *     ambr    [10] AMBR    OPTIONAL,
+ *     ambr    [10] AMBR    type OPTIONAL,
  *     -- this ambr contains the AMBR associated to the APN included in the 
  *     -- PDP-Context (APN-AMBR).
- *     sipto-Permission    [8] SIPTO-Permission    OPTIONAL,
- *     lipa-Permission    [9] LIPA-Permission    OPTIONAL,
- *     restoration-Priority    [11] Restoration-Priority    OPTIONAL,
- *     sipto-local-network-Permission    [12] SIPTO-Local-Network-Permission    OPTIONAL,
- *     nIDD-Mechanism    [13]    NIDD-Mechanism    OPTIONAL,
+ *     sipto-Permission    [8] SIPTO-Permission    type OPTIONAL,
+ *     lipa-Permission    [9] LIPA-Permission    type OPTIONAL,
+ *     restoration-Priority    [11] Restoration-Priority    type OPTIONAL,
+ *     sipto-local-network-Permission    [12] SIPTO-Local-Network-Permission    type OPTIONAL,
+ *     nIDD-Mechanism    [13]    NIDD-Mechanism    type OPTIONAL,
  *     sCEF-ID    [14]    FQDN    OPTIONAL
  *     }
  * ```
@@ -86,284 +86,332 @@ import { SIPTO_Permission, _decode_SIPTO_Permission, _encode_SIPTO_Permission, _
  */
 export
 class PDP_Context {
+    /**
+     * @summary `pdp_ContextId`.
+     * @description
+     *
+     * Identifies this PDP context in the subscriber's GPRS subscription.
+     *
+     * (3GPP TS 29.002 V19.1.0 clause 7.6.3.55).
+     *
+     * @public
+     * @readonly
+     */
+    public readonly pdp_ContextId: ContextId;
+    /**
+     * @summary `pdp_Type`.
+     * @description
+     *
+     * PDP protocol type as in 3GPP TS 23.060 / 29.060.
+     *
+     * (3GPP TS 29.002 V19.1.0 clause 7.6.2.44).
+     *
+     * @public
+     * @readonly
+     */
+    public readonly pdp_Type: PDP_Type;
+    /**
+     * @summary `pdp_Address`.
+     * @description
+     *
+     * PDP address as in 3GPP TS 23.060 / 29.060.
+     *
+     * (3GPP TS 29.002 V19.1.0 clause 7.6.2.45).
+     *
+     * @public
+     * @readonly
+     */
+    public readonly pdp_Address: OPTIONAL<PDP_Address>;
+    /**
+     * @summary `qos_Subscribed`.
+     * @description
+     *
+     * Subscribed QoS for the PDP context, as in 3GPP TS 23.060.
+     *
+     * (3GPP TS 29.002 V19.1.0 clause 7.6.3.47).
+     *
+     * @public
+     * @readonly
+     */
+    public readonly qos_Subscribed: QoS_Subscribed;
+    /**
+     * @summary `vplmnAddressAllowed`.
+     * @description
+     *
+     * MS may use a dynamic address allocated in the VPLMN (3GPP TS 23.060).
+     *
+     * (3GPP TS 29.002 V19.1.0 clause 7.6.3.48).
+     *
+     * @public
+     * @readonly
+     */
+    public readonly vplmnAddressAllowed: OPTIONAL<NULL>;
+    /**
+     * @summary `apn`.
+     * @description
+     *
+     * APN as in 3GPP TS 23.060 (DNS name of a GGSN / PDN connection).
+     *
+     * (3GPP TS 29.002 V19.1.0 clause 7.6.2.42).
+     *
+     * @public
+     * @readonly
+     */
+    public readonly apn: APN;
+    /**
+     * @summary `extensionContainer`.
+     * @public
+     * @readonly
+     */
+    public readonly extensionContainer?: OPTIONAL<ExtensionContainer>;
+    /**
+     * @summary `ext_QoS_Subscribed`.
+     * @description
+     *
+     * Enhanced subscribed QoS (extension to QoS-Subscribed), as in 3GPP TS
+     * 23.060.
+     *
+     * (3GPP TS 29.002 V19.1.0 clause 7.6.3.74).
+     *
+     * @public
+     * @readonly
+     */
+    public readonly ext_QoS_Subscribed?: OPTIONAL<Ext_QoS_Subscribed>;
+    /**
+     * @summary `pdp_ChargingCharacteristics`.
+     * @description
+     *
+     * Charging characteristics of this PDP context (3GPP TS 32.215).
+     *
+     * (3GPP TS 29.002 V19.1.0 clause 7.6.2.55).
+     *
+     * @public
+     * @readonly
+     */
+    public readonly pdp_ChargingCharacteristics?: OPTIONAL<ChargingCharacteristics>;
+    /**
+     * @summary `ext2_QoS_Subscribed`.
+     * @description
+     *
+     * Further QoS extension when maximum bit rate exceeds 8640 kbit/s (3GPP
+     * TS 24.008). Present only if `ext-QoS-Subscribed` is present.
+     *
+     * (3GPP TS 29.002 V19.1.0 clauses 7.6.3.75A and 17.7.1).
+     *
+     * @public
+     * @readonly
+     */
+    public readonly ext2_QoS_Subscribed?: OPTIONAL<Ext2_QoS_Subscribed>;
+    /**
+     * @summary `ext3_QoS_Subscribed`.
+     * @description
+     *
+     * Further QoS extension when maximum/guaranteed uplink bit rate exceeds
+     * 8640 kbit/s (3GPP TS 24.008). Present only if `ext2-QoS-Subscribed`
+     * is present.
+     *
+     * (3GPP TS 29.002 V19.1.0 clauses 7.6.3.75B and 17.7.1).
+     *
+     * @public
+     * @readonly
+     */
+    public readonly ext3_QoS_Subscribed?: OPTIONAL<Ext3_QoS_Subscribed>;
+    /**
+     * @summary `ext4_QoS_Subscribed`.
+     * @description
+     *
+     * Evolved Allocation/Retention Priority (priority level, pre-emption
+     * capability and vulnerability) as in 3GPP TS 29.060. Present only if
+     * `ext3-QoS-Subscribed` is present.
+     *
+     * (3GPP TS 29.002 V19.1.0 clauses 7.6.3.75C and 17.7.1).
+     *
+     * @public
+     * @readonly
+     */
+    public readonly ext4_QoS_Subscribed?: OPTIONAL<Ext4_QoS_Subscribed>;
+    /**
+     * @summary `apn_oi_Replacement`.
+     * @description
+     *
+     * APN-level APN-OI replacement; higher priority than UE-level APN-OI
+     * replacement.
+     *
+     * (3GPP TS 29.002 V19.1.0 clause 17.7.1).
+     *
+     * @public
+     * @readonly
+     */
+    public readonly apn_oi_Replacement?: OPTIONAL<APN_OI_Replacement>;
+    /**
+     * @summary `ext_pdp_Type`.
+     * @description
+     *
+     * Dual-stack PDP-type IPv4v6 (HEX `8D` in 3GPP TS 29.060) if the PDP
+     * can be accessed by dual-stack UEs.
+     *
+     * (3GPP TS 29.002 V19.1.0 clauses 7.6.2.44A and 17.7.1).
+     *
+     * @public
+     * @readonly
+     */
+    public readonly ext_pdp_Type?: OPTIONAL<Ext_PDP_Type>;
+    /**
+     * @summary `ext_pdp_Address`.
+     * @description
+     *
+     * Additional IP address for dual-stack static assignment. Present only
+     * if `pdp-Address` is present; the two shall hold different address
+     * types (IPv4 vs IPv6).
+     *
+     * (3GPP TS 29.002 V19.1.0 clauses 7.6.2.45A and 17.7.1).
+     *
+     * @public
+     * @readonly
+     */
+    public readonly ext_pdp_Address?: OPTIONAL<PDP_Address>;
+    /**
+     * @summary `ambr`.
+     * @description
+     *
+     * APN-AMBR associated with the APN in this PDP context.
+     *
+     * (3GPP TS 29.002 V19.1.0 clause 17.7.1).
+     *
+     * @public
+     * @readonly
+     */
+    public readonly ambr?: OPTIONAL<AMBR>;
+    /**
+     * @summary `sipto_Permission`.
+     * @description
+     *
+     * SIPTO-above-RAN permission. SGSN handling as in 3GPP TS 29.272 clause
+     * 5.2.1.1.2.
+     *
+     * (3GPP TS 29.002 V19.1.0 clause 8.8.1.3).
+     *
+     * @public
+     * @readonly
+     */
+    public readonly sipto_Permission?: OPTIONAL<SIPTO_Permission>;
+    /**
+     * @summary `lipa_Permission`.
+     * @description
+     *
+     * LIPA permission. SGSN handling as in 3GPP TS 29.272 clause 5.2.1.1.2.
+     *
+     * (3GPP TS 29.002 V19.1.0 clause 8.8.1.3).
+     *
+     * @public
+     * @readonly
+     */
+    public readonly lipa_Permission?: OPTIONAL<LIPA_Permission>;
+    /**
+     * @summary `restoration_Priority`.
+     * @description
+     *
+     * Restoration priority as in 3GPP TS 29.272.
+     *
+     * (3GPP TS 29.002 V19.1.0 clause 17.7.1).
+     *
+     * @public
+     * @readonly
+     */
+    public readonly restoration_Priority?: OPTIONAL<Restoration_Priority>;
+    /**
+     * @summary `sipto_local_network_Permission`.
+     * @description
+     *
+     * SIPTO at local network permission. SGSN handling as in 3GPP TS 29.272
+     * clause 5.2.1.1.2.
+     *
+     * (3GPP TS 29.002 V19.1.0 clause 8.8.1.3).
+     *
+     * @public
+     * @readonly
+     */
+    public readonly sipto_local_network_Permission?: OPTIONAL<SIPTO_Local_Network_Permission>;
+    /**
+     * @summary `nIDD_Mechanism`.
+     * @description
+     *
+     * NIDD delivery mechanism for this APN.
+     *
+     * (3GPP TS 29.002 V19.1.0 clause 17.7.1).
+     *
+     * @public
+     * @readonly
+     */
+    public readonly nIDD_Mechanism?: OPTIONAL<NIDD_Mechanism>;
+    /**
+     * @summary `sCEF_ID`.
+     * @description
+     *
+     * SCEF identity for SCEF-based NIDD.
+     *
+     * (3GPP TS 29.002 V19.1.0 clause 17.7.1).
+     *
+     * @public
+     * @readonly
+     */
+    public readonly sCEF_ID?: OPTIONAL<FQDN>;
+    /**
+     * @summary Extensions that are not recognized.
+     * @public
+     * @readonly
+     */
+    public readonly _unrecognizedExtensionsList: _Element[];
+
     constructor (
-        /**
-         * @summary `pdp_ContextId`.
-         * @description
-         *
-         * Identifies this PDP context in the subscriber's GPRS subscription.
-         *
-         * (3GPP TS 29.002 V19.1.0 clause 7.6.3.55).
-         *
-         * @public
-         * @readonly
-         */
-        readonly pdp_ContextId: ContextId,
-        /**
-         * @summary `pdp_Type`.
-         * @description
-         *
-         * PDP protocol type as in 3GPP TS 23.060 / 29.060.
-         *
-         * (3GPP TS 29.002 V19.1.0 clause 7.6.2.44).
-         *
-         * @public
-         * @readonly
-         */
-        readonly pdp_Type: PDP_Type,
-        /**
-         * @summary `pdp_Address`.
-         * @description
-         *
-         * PDP address as in 3GPP TS 23.060 / 29.060.
-         *
-         * (3GPP TS 29.002 V19.1.0 clause 7.6.2.45).
-         *
-         * @public
-         * @readonly
-         */
-        readonly pdp_Address: OPTIONAL<PDP_Address>,
-        /**
-         * @summary `qos_Subscribed`.
-         * @description
-         *
-         * Subscribed QoS for the PDP context, as in 3GPP TS 23.060.
-         *
-         * (3GPP TS 29.002 V19.1.0 clause 7.6.3.47).
-         *
-         * @public
-         * @readonly
-         */
-        readonly qos_Subscribed: QoS_Subscribed,
-        /**
-         * @summary `vplmnAddressAllowed`.
-         * @description
-         *
-         * MS may use a dynamic address allocated in the VPLMN (3GPP TS 23.060).
-         *
-         * (3GPP TS 29.002 V19.1.0 clause 7.6.3.48).
-         *
-         * @public
-         * @readonly
-         */
-        readonly vplmnAddressAllowed: OPTIONAL<NULL>,
-        /**
-         * @summary `apn`.
-         * @description
-         *
-         * APN as in 3GPP TS 23.060 (DNS name of a GGSN / PDN connection).
-         *
-         * (3GPP TS 29.002 V19.1.0 clause 7.6.2.42).
-         *
-         * @public
-         * @readonly
-         */
-        readonly apn: APN,
-        /**
-         * @summary `extensionContainer`.
-         * @public
-         * @readonly
-         */
-        readonly extensionContainer?: OPTIONAL<ExtensionContainer>,
-        /**
-         * @summary `ext_QoS_Subscribed`.
-         * @description
-         *
-         * Enhanced subscribed QoS (extension to QoS-Subscribed), as in 3GPP TS
-         * 23.060.
-         *
-         * (3GPP TS 29.002 V19.1.0 clause 7.6.3.74).
-         *
-         * @public
-         * @readonly
-         */
-        readonly ext_QoS_Subscribed?: OPTIONAL<Ext_QoS_Subscribed>,
-        /**
-         * @summary `pdp_ChargingCharacteristics`.
-         * @description
-         *
-         * Charging characteristics of this PDP context (3GPP TS 32.215).
-         *
-         * (3GPP TS 29.002 V19.1.0 clause 7.6.2.55).
-         *
-         * @public
-         * @readonly
-         */
-        readonly pdp_ChargingCharacteristics?: OPTIONAL<ChargingCharacteristics>,
-        /**
-         * @summary `ext2_QoS_Subscribed`.
-         * @description
-         *
-         * Further QoS extension when maximum bit rate exceeds 8640 kbit/s (3GPP
-         * TS 24.008). Present only if `ext-QoS-Subscribed` is present.
-         *
-         * (3GPP TS 29.002 V19.1.0 clauses 7.6.3.75A and 17.7.1).
-         *
-         * @public
-         * @readonly
-         */
-        readonly ext2_QoS_Subscribed?: OPTIONAL<Ext2_QoS_Subscribed>,
-        /**
-         * @summary `ext3_QoS_Subscribed`.
-         * @description
-         *
-         * Further QoS extension when maximum/guaranteed uplink bit rate exceeds
-         * 8640 kbit/s (3GPP TS 24.008). Present only if `ext2-QoS-Subscribed`
-         * is present.
-         *
-         * (3GPP TS 29.002 V19.1.0 clauses 7.6.3.75B and 17.7.1).
-         *
-         * @public
-         * @readonly
-         */
-        readonly ext3_QoS_Subscribed?: OPTIONAL<Ext3_QoS_Subscribed>,
-        /**
-         * @summary `ext4_QoS_Subscribed`.
-         * @description
-         *
-         * Evolved Allocation/Retention Priority (priority level, pre-emption
-         * capability and vulnerability) as in 3GPP TS 29.060. Present only if
-         * `ext3-QoS-Subscribed` is present.
-         *
-         * (3GPP TS 29.002 V19.1.0 clauses 7.6.3.75C and 17.7.1).
-         *
-         * @public
-         * @readonly
-         */
-        readonly ext4_QoS_Subscribed?: OPTIONAL<Ext4_QoS_Subscribed>,
-        /**
-         * @summary `apn_oi_Replacement`.
-         * @description
-         *
-         * APN-level APN-OI replacement; higher priority than UE-level APN-OI
-         * replacement.
-         *
-         * (3GPP TS 29.002 V19.1.0 clause 17.7.1).
-         *
-         * @public
-         * @readonly
-         */
-        readonly apn_oi_Replacement?: OPTIONAL<APN_OI_Replacement>,
-        /**
-         * @summary `ext_pdp_Type`.
-         * @description
-         *
-         * Dual-stack PDP-type IPv4v6 (HEX `8D` in 3GPP TS 29.060) if the PDP
-         * can be accessed by dual-stack UEs.
-         *
-         * (3GPP TS 29.002 V19.1.0 clauses 7.6.2.44A and 17.7.1).
-         *
-         * @public
-         * @readonly
-         */
-        readonly ext_pdp_Type?: OPTIONAL<Ext_PDP_Type>,
-        /**
-         * @summary `ext_pdp_Address`.
-         * @description
-         *
-         * Additional IP address for dual-stack static assignment. Present only
-         * if `pdp-Address` is present; the two shall hold different address
-         * types (IPv4 vs IPv6).
-         *
-         * (3GPP TS 29.002 V19.1.0 clauses 7.6.2.45A and 17.7.1).
-         *
-         * @public
-         * @readonly
-         */
-        readonly ext_pdp_Address?: OPTIONAL<PDP_Address>,
-        /**
-         * @summary `ambr`.
-         * @description
-         *
-         * APN-AMBR associated with the APN in this PDP context.
-         *
-         * (3GPP TS 29.002 V19.1.0 clause 17.7.1).
-         *
-         * @public
-         * @readonly
-         */
-        readonly ambr?: OPTIONAL<AMBR>,
-        /**
-         * @summary `sipto_Permission`.
-         * @description
-         *
-         * SIPTO-above-RAN permission. SGSN handling as in 3GPP TS 29.272 clause
-         * 5.2.1.1.2.
-         *
-         * (3GPP TS 29.002 V19.1.0 clause 8.8.1.3).
-         *
-         * @public
-         * @readonly
-         */
-        readonly sipto_Permission?: OPTIONAL<SIPTO_Permission>,
-        /**
-         * @summary `lipa_Permission`.
-         * @description
-         *
-         * LIPA permission. SGSN handling as in 3GPP TS 29.272 clause 5.2.1.1.2.
-         *
-         * (3GPP TS 29.002 V19.1.0 clause 8.8.1.3).
-         *
-         * @public
-         * @readonly
-         */
-        readonly lipa_Permission?: OPTIONAL<LIPA_Permission>,
-        /**
-         * @summary `restoration_Priority`.
-         * @description
-         *
-         * Restoration priority as in 3GPP TS 29.272.
-         *
-         * (3GPP TS 29.002 V19.1.0 clause 17.7.1).
-         *
-         * @public
-         * @readonly
-         */
-        readonly restoration_Priority?: OPTIONAL<Restoration_Priority>,
-        /**
-         * @summary `sipto_local_network_Permission`.
-         * @description
-         *
-         * SIPTO at local network permission. SGSN handling as in 3GPP TS 29.272
-         * clause 5.2.1.1.2.
-         *
-         * (3GPP TS 29.002 V19.1.0 clause 8.8.1.3).
-         *
-         * @public
-         * @readonly
-         */
-        readonly sipto_local_network_Permission?: OPTIONAL<SIPTO_Local_Network_Permission>,
-        /**
-         * @summary `nIDD_Mechanism`.
-         * @description
-         *
-         * NIDD delivery mechanism for this APN.
-         *
-         * (3GPP TS 29.002 V19.1.0 clause 17.7.1).
-         *
-         * @public
-         * @readonly
-         */
-        readonly nIDD_Mechanism?: OPTIONAL<NIDD_Mechanism>,
-        /**
-         * @summary `sCEF_ID`.
-         * @description
-         *
-         * SCEF identity for SCEF-based NIDD.
-         *
-         * (3GPP TS 29.002 V19.1.0 clause 17.7.1).
-         *
-         * @public
-         * @readonly
-         */
-        readonly sCEF_ID?: OPTIONAL<FQDN>,
-        /**
-         * @summary Extensions that are not recognized.
-         * @public
-         * @readonly
-         */
-        readonly _unrecognizedExtensionsList: _Element[] = []
-    ) {}
+        pdp_ContextId: ContextId,
+        pdp_Type: PDP_Type,
+        pdp_Address: OPTIONAL<PDP_Address>,
+        qos_Subscribed: QoS_Subscribed,
+        vplmnAddressAllowed: OPTIONAL<NULL>,
+        apn: APN,
+        extensionContainer?: OPTIONAL<ExtensionContainer>,
+        ext_QoS_Subscribed?: OPTIONAL<Ext_QoS_Subscribed>,
+        pdp_ChargingCharacteristics?: OPTIONAL<ChargingCharacteristics>,
+        ext2_QoS_Subscribed?: OPTIONAL<Ext2_QoS_Subscribed>,
+        ext3_QoS_Subscribed?: OPTIONAL<Ext3_QoS_Subscribed>,
+        ext4_QoS_Subscribed?: OPTIONAL<Ext4_QoS_Subscribed>,
+        apn_oi_Replacement?: OPTIONAL<APN_OI_Replacement>,
+        ext_pdp_Type?: OPTIONAL<Ext_PDP_Type>,
+        ext_pdp_Address?: OPTIONAL<PDP_Address>,
+        ambr?: OPTIONAL<AMBR>,
+        sipto_Permission?: OPTIONAL<SIPTO_Permission>,
+        lipa_Permission?: OPTIONAL<LIPA_Permission>,
+        restoration_Priority?: OPTIONAL<Restoration_Priority>,
+        sipto_local_network_Permission?: OPTIONAL<SIPTO_Local_Network_Permission>,
+        nIDD_Mechanism?: OPTIONAL<NIDD_Mechanism>,
+        sCEF_ID?: OPTIONAL<FQDN>,
+        _unrecognizedExtensionsList: _Element[] = []
+    ) {
+        this.pdp_ContextId = pdp_ContextId;
+        this.pdp_Type = pdp_Type;
+        this.pdp_Address = pdp_Address;
+        this.qos_Subscribed = qos_Subscribed;
+        this.vplmnAddressAllowed = vplmnAddressAllowed;
+        this.apn = apn;
+        this.extensionContainer = extensionContainer;
+        this.ext_QoS_Subscribed = ext_QoS_Subscribed;
+        this.pdp_ChargingCharacteristics = pdp_ChargingCharacteristics;
+        this.ext2_QoS_Subscribed = ext2_QoS_Subscribed;
+        this.ext3_QoS_Subscribed = ext3_QoS_Subscribed;
+        this.ext4_QoS_Subscribed = ext4_QoS_Subscribed;
+        this.apn_oi_Replacement = apn_oi_Replacement;
+        this.ext_pdp_Type = ext_pdp_Type;
+        this.ext_pdp_Address = ext_pdp_Address;
+        this.ambr = ambr;
+        this.sipto_Permission = sipto_Permission;
+        this.lipa_Permission = lipa_Permission;
+        this.restoration_Priority = restoration_Priority;
+        this.sipto_local_network_Permission = sipto_local_network_Permission;
+        this.nIDD_Mechanism = nIDD_Mechanism;
+        this.sCEF_ID = sCEF_ID;
+        this._unrecognizedExtensionsList = _unrecognizedExtensionsList;
+    }
 
     /**
      * @summary Restructures an object into a PDP_Context
@@ -387,25 +435,25 @@ class PDP_Context {
          * @static
          */
 
-    public static _enum_for_sipto_Permission = _enum_for_SIPTO_Permission;        /**
+    public static _enum_for_sipto_Permission: typeof _enum_for_SIPTO_Permission = _enum_for_SIPTO_Permission;        /**
          * @summary The enum used as the type of the component `lipa_Permission`
          * @public
          * @static
          */
 
-    public static _enum_for_lipa_Permission = _enum_for_LIPA_Permission;        /**
+    public static _enum_for_lipa_Permission: typeof _enum_for_LIPA_Permission = _enum_for_LIPA_Permission;        /**
          * @summary The enum used as the type of the component `sipto_local_network_Permission`
          * @public
          * @static
          */
 
-    public static _enum_for_sipto_local_network_Permission = _enum_for_SIPTO_Local_Network_Permission;        /**
+    public static _enum_for_sipto_local_network_Permission: typeof _enum_for_SIPTO_Local_Network_Permission = _enum_for_SIPTO_Local_Network_Permission;        /**
          * @summary The enum used as the type of the component `nIDD_Mechanism`
          * @public
          * @static
          */
 
-    public static _enum_for_nIDD_Mechanism = _enum_for_NIDD_Mechanism;
+    public static _enum_for_nIDD_Mechanism: typeof _enum_for_NIDD_Mechanism = _enum_for_NIDD_Mechanism;
 }
 
 /**

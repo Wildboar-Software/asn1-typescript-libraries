@@ -2,11 +2,11 @@
 
 import * as $ from "@wildboar/asn1/functional";
 import {
-    OPTIONAL,
-    ENUMERATED,
-    SEQUENCE,
-    SET,
-    ASN1Element as _Element,
+    type OPTIONAL,
+    type ENUMERATED,
+    type SEQUENCE,
+    type SET,
+    type ASN1Element as _Element,
     ASN1TagClass as _TagClass
 } from "@wildboar/asn1";
 import {
@@ -22,7 +22,7 @@ import {
 } from "../CSTA-call-control/NetworkCapability-networkType.ta.mjs";
 
 import {
-    NetworkCapability_eventsProvided,
+    type NetworkCapability_eventsProvided,
     bridged /* IMPORTED_SHORT_NAMED_BIT */,
     allCleared /* IMPORTED_SHORT_NAMED_BIT */,
     conferenced /* IMPORTED_SHORT_NAMED_BIT */,
@@ -94,30 +94,36 @@ import {
  */
 export
 class NetworkCapability {
+    /**
+     * @summary `networkType`.
+     * @description
+     *
+     * ISDN/non-ISDN public or private, or other. ECMA-269
+     * Network Capabilities Changed.
+     *
+     * @public
+     * @readonly
+     */
+    public readonly networkType: NetworkCapability_networkType;
+    /**
+     * @summary `eventsProvided`.
+     * @description
+     *
+     * Bitmap of Call Control events the network can report.
+     * ECMA-269 Network Capabilities Changed.
+     *
+     * @public
+     * @readonly
+     */
+    public readonly eventsProvided?: OPTIONAL<NetworkCapability_eventsProvided>;
+
     constructor (
-        /**
-         * @summary `networkType`.
-         * @description
-         *
-         * ISDN/non-ISDN public or private, or other. ECMA-269
-         * Network Capabilities Changed.
-         *
-         * @public
-         * @readonly
-         */
-        readonly networkType: NetworkCapability_networkType,
-        /**
-         * @summary `eventsProvided`.
-         * @description
-         *
-         * Bitmap of Call Control events the network can report.
-         * ECMA-269 Network Capabilities Changed.
-         *
-         * @public
-         * @readonly
-         */
-        readonly eventsProvided?: OPTIONAL<NetworkCapability_eventsProvided>
-    ) {}
+        networkType: NetworkCapability_networkType,
+        eventsProvided?: OPTIONAL<NetworkCapability_eventsProvided>
+    ) {
+        this.networkType = networkType;
+        this.eventsProvided = eventsProvided;
+    }
 
     /**
      * @summary Restructures an object into a NetworkCapability
@@ -141,7 +147,7 @@ class NetworkCapability {
          * @static
          */
 
-    public static _enum_for_networkType = _enum_for_NetworkCapability_networkType;
+    public static _enum_for_networkType: typeof _enum_for_NetworkCapability_networkType = _enum_for_NetworkCapability_networkType;
 }
 
 /**

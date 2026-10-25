@@ -1,26 +1,26 @@
 /* eslint-disable */
 import {
-    OBJECT_IDENTIFIER,
-    OCTET_STRING,
-    OPTIONAL,
-    ASN1Element as _Element,
+    type OBJECT_IDENTIFIER,
+    type OCTET_STRING,
+    type OPTIONAL,
+    type ASN1Element as _Element,
     ASN1TagClass as _TagClass,
     ASN1Error,
     ASN1SizeError
 } from "@wildboar/asn1";
 import * as $ from "@wildboar/asn1/functional";
 import { hi2OperationId } from "../HI2Operations/hi2OperationId.va.mjs";
-import { IRI_Parameters_iRIversion, _decode_IRI_Parameters_iRIversion, _encode_IRI_Parameters_iRIversion, _enum_for_IRI_Parameters_iRIversion } from "../HI2Operations/IRI-Parameters-iRIversion.ta.mjs";
+import { type IRI_Parameters_iRIversion, _decode_IRI_Parameters_iRIversion, _encode_IRI_Parameters_iRIversion, _enum_for_IRI_Parameters_iRIversion } from "../HI2Operations/IRI-Parameters-iRIversion.ta.mjs";
 // export { IRI_Parameters_iRIversion, _enum_for_IRI_Parameters_iRIversion, IRI_Parameters_iRIversion_version2 /* IMPORTED_LONG_ENUMERATION_ITEM */, version2 /* IMPORTED_SHORT_ENUMERATION_ITEM */, IRI_Parameters_iRIversion_version3 /* IMPORTED_LONG_ENUMERATION_ITEM */, version3 /* IMPORTED_SHORT_ENUMERATION_ITEM */, IRI_Parameters_iRIversion_version4 /* IMPORTED_LONG_ENUMERATION_ITEM */, version4 /* IMPORTED_SHORT_ENUMERATION_ITEM */, IRI_Parameters_iRIversion_version5 /* IMPORTED_LONG_ENUMERATION_ITEM */, version5 /* IMPORTED_SHORT_ENUMERATION_ITEM */, IRI_Parameters_iRIversion_version6 /* IMPORTED_LONG_ENUMERATION_ITEM */, version6 /* IMPORTED_SHORT_ENUMERATION_ITEM */, IRI_Parameters_iRIversion_version7 /* IMPORTED_LONG_ENUMERATION_ITEM */, version7 /* IMPORTED_SHORT_ENUMERATION_ITEM */, IRI_Parameters_iRIversion_lastVersion /* IMPORTED_LONG_ENUMERATION_ITEM */, lastVersion /* IMPORTED_SHORT_ENUMERATION_ITEM */, _decode_IRI_Parameters_iRIversion, _encode_IRI_Parameters_iRIversion } from "../HI2Operations/IRI-Parameters-iRIversion.ta.mjs";
-import { LawfulInterceptionIdentifier, _decode_LawfulInterceptionIdentifier, _encode_LawfulInterceptionIdentifier } from "../HI2Operations/LawfulInterceptionIdentifier.ta.mjs";
+import { type LawfulInterceptionIdentifier, _decode_LawfulInterceptionIdentifier, _encode_LawfulInterceptionIdentifier } from "../HI2Operations/LawfulInterceptionIdentifier.ta.mjs";
 // export { LawfulInterceptionIdentifier, _decode_LawfulInterceptionIdentifier, _encode_LawfulInterceptionIdentifier } from "../HI2Operations/LawfulInterceptionIdentifier.ta.mjs";
 import { CommunicationIdentifier, _decode_CommunicationIdentifier, _encode_CommunicationIdentifier } from "../HI2Operations/CommunicationIdentifier.ta.mjs";
 // export { CommunicationIdentifier, _decode_CommunicationIdentifier, _encode_CommunicationIdentifier } from "../HI2Operations/CommunicationIdentifier.ta.mjs";
-import { TimeStamp, _decode_TimeStamp, _encode_TimeStamp } from "../HI2Operations/TimeStamp.ta.mjs";
+import { type TimeStamp, _decode_TimeStamp, _encode_TimeStamp } from "../HI2Operations/TimeStamp.ta.mjs";
 // export { TimeStamp, _decode_TimeStamp, _encode_TimeStamp } from "../HI2Operations/TimeStamp.ta.mjs";
-import { IRI_Parameters_intercepted_Call_Direct, _decode_IRI_Parameters_intercepted_Call_Direct, _encode_IRI_Parameters_intercepted_Call_Direct, _enum_for_IRI_Parameters_intercepted_Call_Direct } from "../HI2Operations/IRI-Parameters-intercepted-Call-Direct.ta.mjs";
+import { type IRI_Parameters_intercepted_Call_Direct, _decode_IRI_Parameters_intercepted_Call_Direct, _encode_IRI_Parameters_intercepted_Call_Direct, _enum_for_IRI_Parameters_intercepted_Call_Direct } from "../HI2Operations/IRI-Parameters-intercepted-Call-Direct.ta.mjs";
 // export { IRI_Parameters_intercepted_Call_Direct, _enum_for_IRI_Parameters_intercepted_Call_Direct, IRI_Parameters_intercepted_Call_Direct_not_Available /* IMPORTED_LONG_ENUMERATION_ITEM */, not_Available /* IMPORTED_SHORT_ENUMERATION_ITEM */, IRI_Parameters_intercepted_Call_Direct_originating_Target /* IMPORTED_LONG_ENUMERATION_ITEM */, originating_Target /* IMPORTED_SHORT_ENUMERATION_ITEM */, IRI_Parameters_intercepted_Call_Direct_terminating_Target /* IMPORTED_LONG_ENUMERATION_ITEM */, terminating_Target /* IMPORTED_SHORT_ENUMERATION_ITEM */, _decode_IRI_Parameters_intercepted_Call_Direct, _encode_IRI_Parameters_intercepted_Call_Direct } from "../HI2Operations/IRI-Parameters-intercepted-Call-Direct.ta.mjs";
-import { Intercepted_Call_State, _decode_Intercepted_Call_State, _encode_Intercepted_Call_State, _enum_for_Intercepted_Call_State } from "../HI2Operations/Intercepted-Call-State.ta.mjs";
+import { type Intercepted_Call_State, _decode_Intercepted_Call_State, _encode_Intercepted_Call_State, _enum_for_Intercepted_Call_State } from "../HI2Operations/Intercepted-Call-State.ta.mjs";
 // export { Intercepted_Call_State, _enum_for_Intercepted_Call_State, Intercepted_Call_State_idle /* IMPORTED_LONG_ENUMERATION_ITEM */, idle /* IMPORTED_SHORT_ENUMERATION_ITEM */, Intercepted_Call_State_setUpInProcess /* IMPORTED_LONG_ENUMERATION_ITEM */, setUpInProcess /* IMPORTED_SHORT_ENUMERATION_ITEM */, Intercepted_Call_State_connected /* IMPORTED_LONG_ENUMERATION_ITEM */, connected /* IMPORTED_SHORT_ENUMERATION_ITEM */, _decode_Intercepted_Call_State, _encode_Intercepted_Call_State } from "../HI2Operations/Intercepted-Call-State.ta.mjs";
 import { Location, _decode_Location, _encode_Location } from "../HI2Operations/Location.ta.mjs";
 // export { Location, _decode_Location, _encode_Location } from "../HI2Operations/Location.ta.mjs";
@@ -28,33 +28,33 @@ import { PartyInformation, _decode_PartyInformation, _encode_PartyInformation } 
 // export { PartyInformation, _decode_PartyInformation, _encode_PartyInformation } from "../HI2Operations/PartyInformation.ta.mjs";
 import { IRI_Parameters_callContentLinkInformation, _decode_IRI_Parameters_callContentLinkInformation, _encode_IRI_Parameters_callContentLinkInformation } from "../HI2Operations/IRI-Parameters-callContentLinkInformation.ta.mjs";
 // export { IRI_Parameters_callContentLinkInformation, _decode_IRI_Parameters_callContentLinkInformation, _encode_IRI_Parameters_callContentLinkInformation } from "../HI2Operations/IRI-Parameters-callContentLinkInformation.ta.mjs";
-import { IRI_Parameters_nature_Of_The_intercepted_call, _decode_IRI_Parameters_nature_Of_The_intercepted_call, _encode_IRI_Parameters_nature_Of_The_intercepted_call, _enum_for_IRI_Parameters_nature_Of_The_intercepted_call } from "../HI2Operations/IRI-Parameters-nature-Of-The-intercepted-call.ta.mjs";
+import { type IRI_Parameters_nature_Of_The_intercepted_call, _decode_IRI_Parameters_nature_Of_The_intercepted_call, _encode_IRI_Parameters_nature_Of_The_intercepted_call, _enum_for_IRI_Parameters_nature_Of_The_intercepted_call } from "../HI2Operations/IRI-Parameters-nature-Of-The-intercepted-call.ta.mjs";
 // export { IRI_Parameters_nature_Of_The_intercepted_call, _enum_for_IRI_Parameters_nature_Of_The_intercepted_call, IRI_Parameters_nature_Of_The_intercepted_call_gSM_ISDN_PSTN_circuit_call /* IMPORTED_LONG_ENUMERATION_ITEM */, gSM_ISDN_PSTN_circuit_call /* IMPORTED_SHORT_ENUMERATION_ITEM */, IRI_Parameters_nature_Of_The_intercepted_call_gSM_SMS_Message /* IMPORTED_LONG_ENUMERATION_ITEM */, gSM_SMS_Message /* IMPORTED_SHORT_ENUMERATION_ITEM */, IRI_Parameters_nature_Of_The_intercepted_call_uUS4_Messages /* IMPORTED_LONG_ENUMERATION_ITEM */, uUS4_Messages /* IMPORTED_SHORT_ENUMERATION_ITEM */, IRI_Parameters_nature_Of_The_intercepted_call_tETRA_circuit_call /* IMPORTED_LONG_ENUMERATION_ITEM */, tETRA_circuit_call /* IMPORTED_SHORT_ENUMERATION_ITEM */, IRI_Parameters_nature_Of_The_intercepted_call_teTRA_Packet_Data /* IMPORTED_LONG_ENUMERATION_ITEM */, teTRA_Packet_Data /* IMPORTED_SHORT_ENUMERATION_ITEM */, IRI_Parameters_nature_Of_The_intercepted_call_gPRS_Packet_Data /* IMPORTED_LONG_ENUMERATION_ITEM */, gPRS_Packet_Data /* IMPORTED_SHORT_ENUMERATION_ITEM */, IRI_Parameters_nature_Of_The_intercepted_call_uMTS_circuit_call /* IMPORTED_LONG_ENUMERATION_ITEM */, uMTS_circuit_call /* IMPORTED_SHORT_ENUMERATION_ITEM */, IRI_Parameters_nature_Of_The_intercepted_call_lTE_SMS_Message /* IMPORTED_LONG_ENUMERATION_ITEM */, lTE_SMS_Message /* IMPORTED_SHORT_ENUMERATION_ITEM */, IRI_Parameters_nature_Of_The_intercepted_call_lTE_circuit_call /* IMPORTED_LONG_ENUMERATION_ITEM */, lTE_circuit_call /* IMPORTED_SHORT_ENUMERATION_ITEM */, _decode_IRI_Parameters_nature_Of_The_intercepted_call, _encode_IRI_Parameters_nature_Of_The_intercepted_call } from "../HI2Operations/IRI-Parameters-nature-Of-The-intercepted-call.ta.mjs";
 import { SMS_report, _decode_SMS_report, _encode_SMS_report } from "../HI2Operations/SMS-report.ta.mjs";
 // export { SMS_report, _decode_SMS_report, _encode_SMS_report } from "../HI2Operations/SMS-report.ta.mjs";
-import { CC_Link_Identifier, _decode_CC_Link_Identifier, _encode_CC_Link_Identifier } from "../HI2Operations/CC-Link-Identifier.ta.mjs";
+import { type CC_Link_Identifier, _decode_CC_Link_Identifier, _encode_CC_Link_Identifier } from "../HI2Operations/CC-Link-Identifier.ta.mjs";
 // export { CC_Link_Identifier, _decode_CC_Link_Identifier, _encode_CC_Link_Identifier } from "../HI2Operations/CC-Link-Identifier.ta.mjs";
-import { National_Parameters, _decode_National_Parameters, _encode_National_Parameters } from "../HI2Operations/National-Parameters.ta.mjs";
+import { type National_Parameters, _decode_National_Parameters, _encode_National_Parameters } from "../HI2Operations/National-Parameters.ta.mjs";
 // export { National_Parameters, _decode_National_Parameters, _encode_National_Parameters } from "../HI2Operations/National-Parameters.ta.mjs";
-import { GPRSCorrelationNumber, _decode_GPRSCorrelationNumber, _encode_GPRSCorrelationNumber } from "../HI2Operations/GPRSCorrelationNumber.ta.mjs";
+import { type GPRSCorrelationNumber, _decode_GPRSCorrelationNumber, _encode_GPRSCorrelationNumber } from "../HI2Operations/GPRSCorrelationNumber.ta.mjs";
 // export { GPRSCorrelationNumber, _decode_GPRSCorrelationNumber, _encode_GPRSCorrelationNumber } from "../HI2Operations/GPRSCorrelationNumber.ta.mjs";
-import { GPRSEvent, _decode_GPRSEvent, _encode_GPRSEvent, _enum_for_GPRSEvent } from "../HI2Operations/GPRSEvent.ta.mjs";
+import { type GPRSEvent, _decode_GPRSEvent, _encode_GPRSEvent, _enum_for_GPRSEvent } from "../HI2Operations/GPRSEvent.ta.mjs";
 // export { GPRSEvent, _enum_for_GPRSEvent, GPRSEvent_pDPContextActivation /* IMPORTED_LONG_ENUMERATION_ITEM */, pDPContextActivation /* IMPORTED_SHORT_ENUMERATION_ITEM */, GPRSEvent_startOfInterceptionWithPDPContextActive /* IMPORTED_LONG_ENUMERATION_ITEM */, startOfInterceptionWithPDPContextActive /* IMPORTED_SHORT_ENUMERATION_ITEM */, GPRSEvent_pDPContextDeactivation /* IMPORTED_LONG_ENUMERATION_ITEM */, pDPContextDeactivation /* IMPORTED_SHORT_ENUMERATION_ITEM */, GPRSEvent_gPRSAttach /* IMPORTED_LONG_ENUMERATION_ITEM */, gPRSAttach /* IMPORTED_SHORT_ENUMERATION_ITEM */, GPRSEvent_gPRSDetach /* IMPORTED_LONG_ENUMERATION_ITEM */, gPRSDetach /* IMPORTED_SHORT_ENUMERATION_ITEM */, GPRSEvent_cellOrRAUpdate /* IMPORTED_LONG_ENUMERATION_ITEM */, cellOrRAUpdate /* IMPORTED_SHORT_ENUMERATION_ITEM */, GPRSEvent_sMS /* IMPORTED_LONG_ENUMERATION_ITEM */, sMS /* IMPORTED_SHORT_ENUMERATION_ITEM */, GPRSEvent_pDPContextModification /* IMPORTED_LONG_ENUMERATION_ITEM */, pDPContextModification /* IMPORTED_SHORT_ENUMERATION_ITEM */, GPRSEvent_endOfInterceptionWithPDPContextActive /* IMPORTED_LONG_ENUMERATION_ITEM */, endOfInterceptionWithPDPContextActive /* IMPORTED_SHORT_ENUMERATION_ITEM */, _decode_GPRSEvent, _encode_GPRSEvent } from "../HI2Operations/GPRSEvent.ta.mjs";
-import { DataNodeAddress, _decode_DataNodeAddress, _encode_DataNodeAddress } from "../HI2Operations/DataNodeAddress.ta.mjs";
+import { type DataNodeAddress, _decode_DataNodeAddress, _encode_DataNodeAddress } from "../HI2Operations/DataNodeAddress.ta.mjs";
 // export { DataNodeAddress, _decode_DataNodeAddress, _encode_DataNodeAddress } from "../HI2Operations/DataNodeAddress.ta.mjs";
-import { GPRSOperationErrorCode, _decode_GPRSOperationErrorCode, _encode_GPRSOperationErrorCode } from "../HI2Operations/GPRSOperationErrorCode.ta.mjs";
+import { type GPRSOperationErrorCode, _decode_GPRSOperationErrorCode, _encode_GPRSOperationErrorCode } from "../HI2Operations/GPRSOperationErrorCode.ta.mjs";
 // export { GPRSOperationErrorCode, _decode_GPRSOperationErrorCode, _encode_GPRSOperationErrorCode } from "../HI2Operations/GPRSOperationErrorCode.ta.mjs";
-import { UmtsQos, _decode_UmtsQos, _encode_UmtsQos } from "../UmtsHI2Operations/UmtsQos.ta.mjs";
+import { type UmtsQos, _decode_UmtsQos, _encode_UmtsQos } from "../UmtsHI2Operations/UmtsQos.ta.mjs";
 // export { UmtsQos, _decode_UmtsQos, _encode_UmtsQos } from "../UmtsHI2Operations/UmtsQos.ta.mjs";
 import { Network_Identifier, _decode_Network_Identifier, _encode_Network_Identifier } from "../HI2Operations/Network-Identifier.ta.mjs";
 // export { Network_Identifier, _decode_Network_Identifier, _encode_Network_Identifier } from "../HI2Operations/Network-Identifier.ta.mjs";
-import { IMSevent, _decode_IMSevent, _encode_IMSevent, _enum_for_IMSevent } from "../UmtsHI2Operations/IMSevent.ta.mjs";
+import { type IMSevent, _decode_IMSevent, _encode_IMSevent, _enum_for_IMSevent } from "../UmtsHI2Operations/IMSevent.ta.mjs";
 // export { IMSevent, _enum_for_IMSevent, IMSevent_unfilteredSIPmessage /* IMPORTED_LONG_ENUMERATION_ITEM */, unfilteredSIPmessage /* IMPORTED_SHORT_ENUMERATION_ITEM */, IMSevent_sIPheaderOnly /* IMPORTED_LONG_ENUMERATION_ITEM */, sIPheaderOnly /* IMPORTED_SHORT_ENUMERATION_ITEM */, IMSevent_decryptionKeysAvailable /* IMPORTED_LONG_ENUMERATION_ITEM */, decryptionKeysAvailable /* IMPORTED_SHORT_ENUMERATION_ITEM */, IMSevent_startOfInterceptionForIMSEstablishedSession /* IMPORTED_LONG_ENUMERATION_ITEM */, startOfInterceptionForIMSEstablishedSession /* IMPORTED_SHORT_ENUMERATION_ITEM */, IMSevent_xCAPRequest /* IMPORTED_LONG_ENUMERATION_ITEM */, xCAPRequest /* IMPORTED_SHORT_ENUMERATION_ITEM */, IMSevent_xCAPResponse /* IMPORTED_LONG_ENUMERATION_ITEM */, xCAPResponse /* IMPORTED_SHORT_ENUMERATION_ITEM */, IMSevent_ccUnavailable /* IMPORTED_LONG_ENUMERATION_ITEM */, ccUnavailable /* IMPORTED_SHORT_ENUMERATION_ITEM */, _decode_IMSevent, _encode_IMSevent } from "../UmtsHI2Operations/IMSevent.ta.mjs";
 import { TARGETACTIVITYMONITOR_1, _decode_TARGETACTIVITYMONITOR_1, _encode_TARGETACTIVITYMONITOR_1 } from "../TS101909201/TARGETACTIVITYMONITOR-1.ta.mjs";
 // export { TARGETACTIVITYMONITOR_1, _decode_TARGETACTIVITYMONITOR_1, _encode_TARGETACTIVITYMONITOR_1 } from "../TS101909201/TARGETACTIVITYMONITOR-1.ta.mjs";
-import { LDIevent, _decode_LDIevent, _encode_LDIevent, _enum_for_LDIevent } from "../UmtsHI2Operations/LDIevent.ta.mjs";
+import { type LDIevent, _decode_LDIevent, _encode_LDIevent, _enum_for_LDIevent } from "../UmtsHI2Operations/LDIevent.ta.mjs";
 // export { LDIevent, _enum_for_LDIevent, LDIevent_targetEntersIA /* IMPORTED_LONG_ENUMERATION_ITEM */, targetEntersIA /* IMPORTED_SHORT_ENUMERATION_ITEM */, LDIevent_targetLeavesIA /* IMPORTED_LONG_ENUMERATION_ITEM */, targetLeavesIA /* IMPORTED_SHORT_ENUMERATION_ITEM */, _decode_LDIevent, _encode_LDIevent } from "../UmtsHI2Operations/LDIevent.ta.mjs";
-import { CorrelationValues, _decode_CorrelationValues, _encode_CorrelationValues } from "../UmtsHI2Operations/CorrelationValues.ta.mjs";
+import { type CorrelationValues, _decode_CorrelationValues, _encode_CorrelationValues } from "../UmtsHI2Operations/CorrelationValues.ta.mjs";
 // export { CorrelationValues, _decode_CorrelationValues, _encode_CorrelationValues } from "../UmtsHI2Operations/CorrelationValues.ta.mjs";
 import { TARGETACTIVITYMONITORind, _decode_TARGETACTIVITYMONITORind, _encode_TARGETACTIVITYMONITORind } from "../EN301040/TARGETACTIVITYMONITORind.ta.mjs";
 // export { TARGETACTIVITYMONITORind, _decode_TARGETACTIVITYMONITORind, _encode_TARGETACTIVITYMONITORind } from "../EN301040/TARGETACTIVITYMONITORind.ta.mjs";
@@ -64,7 +64,7 @@ import { TTRAFFICind, _decode_TTRAFFICind, _encode_TTRAFFICind } from "../EN3010
 // export { TTRAFFICind, _decode_TTRAFFICind, _encode_TTRAFFICind } from "../EN301040/TTRAFFICind.ta.mjs";
 import { CTTRAFFICind, _decode_CTTRAFFICind, _encode_CTTRAFFICind } from "../EN301040/CTTRAFFICind.ta.mjs";
 // export { CTTRAFFICind, _decode_CTTRAFFICind, _encode_CTTRAFFICind } from "../EN301040/CTTRAFFICind.ta.mjs";
-import { Network_Element_Identifier, _decode_Network_Element_Identifier, _encode_Network_Element_Identifier } from "../HI2Operations/Network-Element-Identifier.ta.mjs";
+import { type Network_Element_Identifier, _decode_Network_Element_Identifier, _encode_Network_Element_Identifier } from "../HI2Operations/Network-Element-Identifier.ta.mjs";
 // export { Network_Element_Identifier, _decode_Network_Element_Identifier, _encode_Network_Element_Identifier } from "../HI2Operations/Network-Element-Identifier.ta.mjs";
 import { National_HI2_ASN1parameters, _decode_National_HI2_ASN1parameters, _encode_National_HI2_ASN1parameters } from "../HI2Operations/National-HI2-ASN1parameters.ta.mjs";
 // export { National_HI2_ASN1parameters, _decode_National_HI2_ASN1parameters, _encode_National_HI2_ASN1parameters } from "../HI2Operations/National-HI2-ASN1parameters.ta.mjs";
@@ -1034,7 +1034,7 @@ class IRI_Parameters {
          * @static
          */
 
-    public static _enum_for_iRIversion = _enum_for_IRI_Parameters_iRIversion;        /**
+    public static _enum_for_iRIversion: typeof _enum_for_IRI_Parameters_iRIversion = _enum_for_IRI_Parameters_iRIversion;        /**
          * @summary The enum used as the type of the component `intercepted_Call_Direct`
          * @description
          *
@@ -1049,7 +1049,7 @@ class IRI_Parameters {
          * @static
          */
 
-    public static _enum_for_intercepted_Call_Direct = _enum_for_IRI_Parameters_intercepted_Call_Direct;        /**
+    public static _enum_for_intercepted_Call_Direct: typeof _enum_for_IRI_Parameters_intercepted_Call_Direct = _enum_for_IRI_Parameters_intercepted_Call_Direct;        /**
          * @summary The enum used as the type of the component `intercepted_Call_State`
          * @description
          *
@@ -1064,7 +1064,7 @@ class IRI_Parameters {
          * @static
          */
 
-    public static _enum_for_intercepted_Call_State = _enum_for_Intercepted_Call_State;        /**
+    public static _enum_for_intercepted_Call_State: typeof _enum_for_Intercepted_Call_State = _enum_for_Intercepted_Call_State;        /**
          * @summary The enum used as the type of the component `nature_Of_The_intercepted_call`
          * @description
          *
@@ -1079,7 +1079,7 @@ class IRI_Parameters {
          * @static
          */
 
-    public static _enum_for_nature_Of_The_intercepted_call = _enum_for_IRI_Parameters_nature_Of_The_intercepted_call;        /**
+    public static _enum_for_nature_Of_The_intercepted_call: typeof _enum_for_IRI_Parameters_nature_Of_The_intercepted_call = _enum_for_IRI_Parameters_nature_Of_The_intercepted_call;        /**
          * @summary The enum used as the type of the component `gPRSevent`
          * @description
          *
@@ -1094,7 +1094,7 @@ class IRI_Parameters {
          * @static
          */
 
-    public static _enum_for_gPRSevent = _enum_for_GPRSEvent;        /**
+    public static _enum_for_gPRSevent: typeof _enum_for_GPRSEvent = _enum_for_GPRSEvent;        /**
          * @summary The enum used as the type of the component `iMSevent`
          * @description
          *
@@ -1109,7 +1109,7 @@ class IRI_Parameters {
          * @static
          */
 
-    public static _enum_for_iMSevent = _enum_for_IMSevent;        /**
+    public static _enum_for_iMSevent: typeof _enum_for_IMSevent = _enum_for_IMSevent;        /**
          * @summary The enum used as the type of the component `ldiEvent`
          * @description
          *
@@ -1123,7 +1123,7 @@ class IRI_Parameters {
          * @static
          */
 
-    public static _enum_for_ldiEvent = _enum_for_LDIevent;
+    public static _enum_for_ldiEvent: typeof _enum_for_LDIevent = _enum_for_LDIevent;
 }
 
 /**

@@ -73,7 +73,7 @@ type UDMDefinedCause = _enum_for_UDMDefinedCause;
  * @enum {number}
  */
 export
-const UDMDefinedCause = _enum_for_UDMDefinedCause;
+const UDMDefinedCause: typeof _enum_for_UDMDefinedCause = _enum_for_UDMDefinedCause;
 
 /**
  * @summary UDMDefinedCause_userNotFound
@@ -81,7 +81,7 @@ const UDMDefinedCause = _enum_for_UDMDefinedCause;
  * @type {number}
  */
 export
-const UDMDefinedCause_userNotFound: UDMDefinedCause = UDMDefinedCause.userNotFound; /* LONG_NAMED_ENUMERATED_VALUE */
+const UDMDefinedCause_userNotFound: _enum_for_UDMDefinedCause.userNotFound = UDMDefinedCause.userNotFound; /* LONG_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary userNotFound
@@ -89,7 +89,7 @@ const UDMDefinedCause_userNotFound: UDMDefinedCause = UDMDefinedCause.userNotFou
  * @type {number}
  */
 export
-const userNotFound: UDMDefinedCause = UDMDefinedCause.userNotFound; /* SHORT_NAMED_ENUMERATED_VALUE */
+const userNotFound: _enum_for_UDMDefinedCause.userNotFound = UDMDefinedCause.userNotFound; /* SHORT_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary UDMDefinedCause_dataNotFound
@@ -97,7 +97,7 @@ const userNotFound: UDMDefinedCause = UDMDefinedCause.userNotFound; /* SHORT_NAM
  * @type {number}
  */
 export
-const UDMDefinedCause_dataNotFound: UDMDefinedCause = UDMDefinedCause.dataNotFound; /* LONG_NAMED_ENUMERATED_VALUE */
+const UDMDefinedCause_dataNotFound: _enum_for_UDMDefinedCause.dataNotFound = UDMDefinedCause.dataNotFound; /* LONG_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary dataNotFound
@@ -105,7 +105,7 @@ const UDMDefinedCause_dataNotFound: UDMDefinedCause = UDMDefinedCause.dataNotFou
  * @type {number}
  */
 export
-const dataNotFound: UDMDefinedCause = UDMDefinedCause.dataNotFound; /* SHORT_NAMED_ENUMERATED_VALUE */
+const dataNotFound: _enum_for_UDMDefinedCause.dataNotFound = UDMDefinedCause.dataNotFound; /* SHORT_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary UDMDefinedCause_contextNotFound
@@ -113,7 +113,7 @@ const dataNotFound: UDMDefinedCause = UDMDefinedCause.dataNotFound; /* SHORT_NAM
  * @type {number}
  */
 export
-const UDMDefinedCause_contextNotFound: UDMDefinedCause = UDMDefinedCause.contextNotFound; /* LONG_NAMED_ENUMERATED_VALUE */
+const UDMDefinedCause_contextNotFound: _enum_for_UDMDefinedCause.contextNotFound = UDMDefinedCause.contextNotFound; /* LONG_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary contextNotFound
@@ -121,7 +121,7 @@ const UDMDefinedCause_contextNotFound: UDMDefinedCause = UDMDefinedCause.context
  * @type {number}
  */
 export
-const contextNotFound: UDMDefinedCause = UDMDefinedCause.contextNotFound; /* SHORT_NAMED_ENUMERATED_VALUE */
+const contextNotFound: _enum_for_UDMDefinedCause.contextNotFound = UDMDefinedCause.contextNotFound; /* SHORT_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary UDMDefinedCause_subscriptionNotFound
@@ -129,7 +129,7 @@ const contextNotFound: UDMDefinedCause = UDMDefinedCause.contextNotFound; /* SHO
  * @type {number}
  */
 export
-const UDMDefinedCause_subscriptionNotFound: UDMDefinedCause = UDMDefinedCause.subscriptionNotFound; /* LONG_NAMED_ENUMERATED_VALUE */
+const UDMDefinedCause_subscriptionNotFound: _enum_for_UDMDefinedCause.subscriptionNotFound = UDMDefinedCause.subscriptionNotFound; /* LONG_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary subscriptionNotFound
@@ -137,7 +137,7 @@ const UDMDefinedCause_subscriptionNotFound: UDMDefinedCause = UDMDefinedCause.su
  * @type {number}
  */
 export
-const subscriptionNotFound: UDMDefinedCause = UDMDefinedCause.subscriptionNotFound; /* SHORT_NAMED_ENUMERATED_VALUE */
+const subscriptionNotFound: _enum_for_UDMDefinedCause.subscriptionNotFound = UDMDefinedCause.subscriptionNotFound; /* SHORT_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary UDMDefinedCause_other
@@ -145,7 +145,7 @@ const subscriptionNotFound: UDMDefinedCause = UDMDefinedCause.subscriptionNotFou
  * @type {number}
  */
 export
-const UDMDefinedCause_other: UDMDefinedCause = UDMDefinedCause.other; /* LONG_NAMED_ENUMERATED_VALUE */
+const UDMDefinedCause_other: _enum_for_UDMDefinedCause.other = UDMDefinedCause.other; /* LONG_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary other
@@ -153,7 +153,7 @@ const UDMDefinedCause_other: UDMDefinedCause = UDMDefinedCause.other; /* LONG_NA
  * @type {number}
  */
 export
-const other: UDMDefinedCause = UDMDefinedCause.other; /* SHORT_NAMED_ENUMERATED_VALUE */
+const other: _enum_for_UDMDefinedCause.other = UDMDefinedCause.other; /* SHORT_NAMED_ENUMERATED_VALUE */
 export const _decode_UDMDefinedCause: $.ASN1Decoder<UDMDefinedCause> = $._decodeEnumerated;
 export const _encode_UDMDefinedCause: $.ASN1Encoder<UDMDefinedCause> = $._encodeEnumerated;
 

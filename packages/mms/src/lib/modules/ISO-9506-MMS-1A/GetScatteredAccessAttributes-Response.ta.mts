@@ -1,8 +1,8 @@
 /* eslint-disable */
 import {
-    OPTIONAL,
-    BOOLEAN,
-    ASN1Element as _Element,
+    type OPTIONAL,
+    type BOOLEAN,
+    type ASN1Element as _Element,
     ASN1TagClass as _TagClass,
     ASN1Construction as _Construction,
     ASN1UniversalType as _UniversalType,
@@ -12,8 +12,8 @@ import {
     ASN1ConstructionError as _ConstructionError,
 } from "@wildboar/asn1";
 import * as $ from "@wildboar/asn1/functional";
-import { ScatteredAccessDescription, _decode_ScatteredAccessDescription, _encode_ScatteredAccessDescription } from "../ISO-9506-MMS-1A/ScatteredAccessDescription.ta.mjs";
-import { Identifier, _decode_Identifier, _encode_Identifier } from "../ISO-9506-MMS-1/Identifier.ta.mjs";
+import { type ScatteredAccessDescription, _decode_ScatteredAccessDescription, _encode_ScatteredAccessDescription } from "../ISO-9506-MMS-1A/ScatteredAccessDescription.ta.mjs";
+import { type Identifier, _decode_Identifier, _encode_Identifier } from "../ISO-9506-MMS-1/Identifier.ta.mjs";
 
 
 /**
@@ -43,52 +43,60 @@ import { Identifier, _decode_Identifier, _encode_Identifier } from "../ISO-9506-
  */
 export
 class GetScatteredAccessAttributes_Response {
+    /**
+     * @summary `mmsDeletable`.
+     * @description
+     *
+     * MMS Deletable attribute of the referenced
+     * Scattered Access object. Subclause 9.1.4
+     * specifies the value returned.
+     *
+     * [ISO 9506-1:2003 Annex E, E.4.1.2.1]
+     *
+     * @public
+     * @readonly
+     */
+    public readonly mmsDeletable: BOOLEAN;
+    /**
+     * @summary `scatteredAccessDescription`.
+     * @description
+     *
+     * Component variables (one or more) accessed
+     * using the object. See E.2.1.
+     *
+     * [ISO 9506-1:2003 Annex E, E.4.1.2.2]
+     *
+     * @public
+     * @readonly
+     */
+    public readonly scatteredAccessDescription: ScatteredAccessDescription;
+    /**
+     * @summary `accessControlList`.
+     * @description
+     *
+     * Name of the Access Control List that
+     * controls access to this object. Shall
+     * appear if and only if CBB `aco` has been
+     * negotiated. Shall not appear in minor
+     * version one or two.
+     *
+     * [ISO 9506-1:2003 Annex E, E.4.1.2.3]
+     * [ISO 9506-2:2003 Annex E, E.3.2.1]
+     *
+     * @public
+     * @readonly
+     */
+    public readonly accessControlList?: OPTIONAL<Identifier>;
+
     constructor (
-        /**
-         * @summary `mmsDeletable`.
-         * @description
-         *
-         * MMS Deletable attribute of the referenced
-         * Scattered Access object. Subclause 9.1.4
-         * specifies the value returned.
-         *
-         * [ISO 9506-1:2003 Annex E, E.4.1.2.1]
-         *
-         * @public
-         * @readonly
-         */
-        readonly mmsDeletable: BOOLEAN,
-        /**
-         * @summary `scatteredAccessDescription`.
-         * @description
-         *
-         * Component variables (one or more) accessed
-         * using the object. See E.2.1.
-         *
-         * [ISO 9506-1:2003 Annex E, E.4.1.2.2]
-         *
-         * @public
-         * @readonly
-         */
-        readonly scatteredAccessDescription: ScatteredAccessDescription,
-        /**
-         * @summary `accessControlList`.
-         * @description
-         *
-         * Name of the Access Control List that
-         * controls access to this object. Shall
-         * appear if and only if CBB `aco` has been
-         * negotiated. Shall not appear in minor
-         * version one or two.
-         *
-         * [ISO 9506-1:2003 Annex E, E.4.1.2.3]
-         * [ISO 9506-2:2003 Annex E, E.3.2.1]
-         *
-         * @public
-         * @readonly
-         */
-        readonly accessControlList?: OPTIONAL<Identifier>
-    ) {}
+        mmsDeletable: BOOLEAN,
+        scatteredAccessDescription: ScatteredAccessDescription,
+        accessControlList?: OPTIONAL<Identifier>
+    ) {
+        this.mmsDeletable = mmsDeletable;
+        this.scatteredAccessDescription = scatteredAccessDescription;
+        this.accessControlList = accessControlList;
+    }
 
     /**
      * @summary Restructures an object into a GetScatteredAccessAttributes_Response

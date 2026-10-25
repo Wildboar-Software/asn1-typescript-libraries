@@ -1,22 +1,22 @@
 /* eslint-disable */
 import {
-    ASN1Element as _Element,
+    type ASN1Element as _Element,
     ASN1TagClass as _TagClass,
-    OPTIONAL,
+    type OPTIONAL,
 } from "@wildboar/asn1";
 import * as $ from "@wildboar/asn1/functional";
 import {
-    AttributeProblem,
+    type AttributeProblem,
     _decode_AttributeProblem,
     _encode_AttributeProblem,
 } from "../DirectoryAbstractService/AttributeProblem.ta.mjs";
 import {
-    AttributeType,
+    type AttributeType,
     _decode_AttributeType,
     _encode_AttributeType,
 } from "../InformationFramework/AttributeType.ta.mjs";
 import {
-    AttributeValue,
+    type AttributeValue,
     _decode_AttributeValue,
     _encode_AttributeValue,
 } from "../InformationFramework/AttributeValue.ta.mjs";
@@ -35,44 +35,54 @@ import {
  *
  */
 export class AttributeErrorData_problems_Item {
+    /**
+     * @summary `problem`.
+     * @description
+     *
+     * `AttributeProblem` 1–7 (no 0).
+     *
+     * @public
+     * @readonly
+     */
+    public readonly problem: AttributeProblem;
+    /**
+     * @summary `type_`.
+     * @description
+     *
+     * Attribute type of the problem (`type` in ASN.1).
+     *
+     * @public
+     * @readonly
+     */
+    public readonly type_: AttributeType;
+    /**
+     * @summary `value`.
+     * @description
+     *
+     * Present when needed to disambiguate which value is at fault.
+     *
+     * @public
+     * @readonly
+     */
+    public readonly value?: OPTIONAL<AttributeValue>;
+    /**
+     * @summary Extensions that are not recognized.
+     * @public
+     * @readonly
+     */
+    public readonly _unrecognizedExtensionsList: _Element[];
+
     constructor(
-        /**
-         * @summary `problem`.
-         * @description
-         *
-         * `AttributeProblem` 1–7 (no 0).
-         *
-         * @public
-         * @readonly
-         */
-        readonly problem: AttributeProblem,
-        /**
-         * @summary `type_`.
-         * @description
-         *
-         * Attribute type of the problem (`type` in ASN.1).
-         *
-         * @public
-         * @readonly
-         */
-        readonly type_: AttributeType,
-        /**
-         * @summary `value`.
-         * @description
-         *
-         * Present when needed to disambiguate which value is at fault.
-         *
-         * @public
-         * @readonly
-         */
-        readonly value?: OPTIONAL<AttributeValue>,
-        /**
-         * @summary Extensions that are not recognized.
-         * @public
-         * @readonly
-         */
-        readonly _unrecognizedExtensionsList: _Element[] = []
-    ) {}
+        problem: AttributeProblem,
+        type_: AttributeType,
+        value?: OPTIONAL<AttributeValue>,
+        _unrecognizedExtensionsList: _Element[] = []
+    ) {
+        this.problem = problem;
+        this.type_ = type_;
+        this.value = value;
+        this._unrecognizedExtensionsList = _unrecognizedExtensionsList;
+    }
 
     /**
      * @summary Restructures an object into a AttributeErrorData_problems_Item

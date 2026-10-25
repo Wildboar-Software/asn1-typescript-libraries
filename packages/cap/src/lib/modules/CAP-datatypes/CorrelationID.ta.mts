@@ -1,8 +1,10 @@
 import {
-    ASN1Element as _Element,
+    type ASN1Element as _Element,
     ASN1TagClass as _TagClass,
+    type OCTET_STRING,
 } from "@wildboar/asn1";
 import { type Digits, _decode_Digits, _encode_Digits } from "./Digits.ta.mjs";
+import type { ASN1Decoder, ASN1Encoder } from "@wildboar/asn1/functional";
 
 /**
  * @summary CorrelationID
@@ -21,5 +23,5 @@ import { type Digits, _decode_Digits, _encode_Digits } from "./Digits.ta.mjs";
  *
  */
 export type CorrelationID = Digits;
-export const _decode_CorrelationID = _decode_Digits;
-export const _encode_CorrelationID = _encode_Digits;
+export const _decode_CorrelationID: ASN1Decoder<OCTET_STRING> = _decode_Digits;
+export const _encode_CorrelationID: ASN1Encoder<OCTET_STRING> = _encode_Digits;

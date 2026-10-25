@@ -1,6 +1,6 @@
 /* eslint-disable */
 import {
-    ASN1Element as _Element,
+    type ASN1Element as _Element,
     ASN1TagClass as _TagClass,
     ASN1Construction as _Construction,
     ASN1UniversalType as _UniversalType,
@@ -17,7 +17,7 @@ import {
     _encode_WeekDay,
 } from '../Schedulerev1-ASN1Module/WeekDay.ta.mjs';
 import {
-    TypeOfDay,
+    type TypeOfDay,
     _decode_TypeOfDay,
     _encode_TypeOfDay,
 } from '../Schedulerev1-ASN1Module/TypeOfDay.ta.mjs';
@@ -38,31 +38,37 @@ import {
  *
  */
 export class WeekDayTranslationList_Item {
+    /**
+     * @summary `weekDay`.
+     * @description
+     *
+     * Weekday being classified. Shall occur only once in the
+     * list. ITU-T Rec. X.746 (02/00)
+     * [A.4.15](https://www.itu.int/rec/T-REC-X.746-200002-I).
+     * @public
+     * @readonly
+     */
+    public readonly weekDay: WeekDay;
+    /**
+     * @summary `typeOfDay`.
+     * @description
+     *
+     * Category assigned to this weekday unless a date mapping
+     * overrides it. ITU-T Rec. X.746 (02/00)
+     * [A.1.12](https://www.itu.int/rec/T-REC-X.746-200002-I),
+     * A.4.15.
+     * @public
+     * @readonly
+     */
+    public readonly typeOfDay: TypeOfDay;
+
     constructor(
-        /**
-         * @summary `weekDay`.
-         * @description
-         *
-         * Weekday being classified. Shall occur only once in the
-         * list. ITU-T Rec. X.746 (02/00)
-         * [A.4.15](https://www.itu.int/rec/T-REC-X.746-200002-I).
-         * @public
-         * @readonly
-         */
-        readonly weekDay: WeekDay,
-        /**
-         * @summary `typeOfDay`.
-         * @description
-         *
-         * Category assigned to this weekday unless a date mapping
-         * overrides it. ITU-T Rec. X.746 (02/00)
-         * [A.1.12](https://www.itu.int/rec/T-REC-X.746-200002-I),
-         * A.4.15.
-         * @public
-         * @readonly
-         */
-        readonly typeOfDay: TypeOfDay
-    ) {}
+        weekDay: WeekDay,
+        typeOfDay: TypeOfDay
+    ) {
+        this.weekDay = weekDay;
+        this.typeOfDay = typeOfDay;
+    }
 
     /**
      * @summary Restructures an object into a WeekDayTranslationList_Item
@@ -90,7 +96,7 @@ export class WeekDayTranslationList_Item {
      * @static
      */
 
-    public static _enum_for_weekDay = _enum_for_WeekDay;
+    public static _enum_for_weekDay: typeof _enum_for_WeekDay = _enum_for_WeekDay;
 }
 
 

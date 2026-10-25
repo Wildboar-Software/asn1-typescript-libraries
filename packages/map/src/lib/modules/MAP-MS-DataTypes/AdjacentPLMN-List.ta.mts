@@ -1,10 +1,10 @@
 /* eslint-disable */
 import {
-    ASN1Element as _Element,
+    type ASN1Element as _Element,
     ASN1SizeError
 } from "@wildboar/asn1";
 import * as $ from "@wildboar/asn1/functional";
-import { _decode_PLMN_Id, _encode_PLMN_Id, PLMN_Id } from "../MAP-CommonDataTypes/PLMN-Id.ta.mjs";
+import { _decode_PLMN_Id, _encode_PLMN_Id, type PLMN_Id } from "../MAP-CommonDataTypes/PLMN-Id.ta.mjs";
 
 
 /**

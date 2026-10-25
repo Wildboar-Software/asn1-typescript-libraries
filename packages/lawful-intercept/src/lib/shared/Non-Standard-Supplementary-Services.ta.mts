@@ -1,10 +1,10 @@
 /* eslint-disable */
 import {
-    ASN1Element as _Element,
+    type ASN1Element as _Element,
     ASN1SizeError
 } from "@wildboar/asn1";
 import * as $ from "@wildboar/asn1/functional";
-import { Non_Standard_Supplementary_Services_Item, _decode_Non_Standard_Supplementary_Services_Item, _encode_Non_Standard_Supplementary_Services_Item } from "./Non-Standard-Supplementary-Services-Item.ta.mjs";
+import { type Non_Standard_Supplementary_Services_Item, _decode_Non_Standard_Supplementary_Services_Item, _encode_Non_Standard_Supplementary_Services_Item } from "./Non-Standard-Supplementary-Services-Item.ta.mjs";
 // export { Non_Standard_Supplementary_Services_Item, _decode_Non_Standard_Supplementary_Services_Item, _encode_Non_Standard_Supplementary_Services_Item } from "./Non-Standard-Supplementary-Services-Item.ta.mjs";
 
 

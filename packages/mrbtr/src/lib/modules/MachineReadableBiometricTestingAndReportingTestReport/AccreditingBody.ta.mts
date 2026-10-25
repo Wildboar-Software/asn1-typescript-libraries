@@ -1,9 +1,9 @@
 /* eslint-disable */
 import {
-    OCTET_STRING,
-    OBJECT_IDENTIFIER,
-    VisibleString,
-    ASN1Element as _Element,
+    type OCTET_STRING,
+    type OBJECT_IDENTIFIER,
+    type VisibleString,
+    type ASN1Element as _Element,
     ASN1TagClass as _TagClass,
     ASN1Construction as _Construction,
     ASN1UniversalType as _UniversalType,
@@ -37,41 +37,49 @@ import * as $ from "@wildboar/asn1/functional";
  */
 export
 class AccreditingBody {
+    /**
+     * @summary `nameAccreditingBody`.
+     * @description
+     *
+     * Name of the accrediting body (Clause 6.4.3, Annex B.5).
+     *
+     * @public
+     * @readonly
+     */
+    public readonly nameAccreditingBody: VisibleString;
+    /**
+     * @summary `identifierCertificate`.
+     * @description
+     *
+     * Identifier of the accreditation result (Annex B.5 Table B.3).
+     * Clause 6.4.3 does not further specify this OID.
+     *
+     * @public
+     * @readonly
+     */
+    public readonly identifierCertificate: OBJECT_IDENTIFIER;
+    /**
+     * @summary `signatory`.
+     * @description
+     *
+     * Annex B.5 Table B.3: location, contact point, pointer, URI, or
+     * other reference to the laboratory's accreditation
+     * certificate. Clause 6.4.3 does not describe the octets.
+     *
+     * @public
+     * @readonly
+     */
+    public readonly signatory: OCTET_STRING;
+
     constructor (
-        /**
-         * @summary `nameAccreditingBody`.
-         * @description
-         *
-         * Name of the accrediting body (Clause 6.4.3, Annex B.5).
-         *
-         * @public
-         * @readonly
-         */
-        readonly nameAccreditingBody: VisibleString,
-        /**
-         * @summary `identifierCertificate`.
-         * @description
-         *
-         * Identifier of the accreditation result (Annex B.5 Table B.3).
-         * Clause 6.4.3 does not further specify this OID.
-         *
-         * @public
-         * @readonly
-         */
-        readonly identifierCertificate: OBJECT_IDENTIFIER,
-        /**
-         * @summary `signatory`.
-         * @description
-         *
-         * Annex B.5 Table B.3: location, contact point, pointer, URI, or
-         * other reference to the laboratory's accreditation
-         * certificate. Clause 6.4.3 does not describe the octets.
-         *
-         * @public
-         * @readonly
-         */
-        readonly signatory: OCTET_STRING
-    ) {}
+        nameAccreditingBody: VisibleString,
+        identifierCertificate: OBJECT_IDENTIFIER,
+        signatory: OCTET_STRING
+    ) {
+        this.nameAccreditingBody = nameAccreditingBody;
+        this.identifierCertificate = identifierCertificate;
+        this.signatory = signatory;
+    }
 
     /**
      * @summary Restructures an object into a AccreditingBody

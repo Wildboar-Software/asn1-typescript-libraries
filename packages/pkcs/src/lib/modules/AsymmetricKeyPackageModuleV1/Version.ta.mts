@@ -1,5 +1,5 @@
 /* eslint-disable */
-import { ASN1Element as _Element, INTEGER } from "@wildboar/asn1";
+import { ASN1Element as _Element, type INTEGER } from "@wildboar/asn1";
 import * as $ from "@wildboar/asn1/functional";
 
 
@@ -21,7 +21,7 @@ export type Version = INTEGER;
  * @constant
  * @type {number}
  */
-export const Version_v1: Version = 0; /* LONG_NAMED_INTEGER_VALUE */
+export const Version_v1: 0 = 0 satisfies Version; /* LONG_NAMED_INTEGER_VALUE */
 
 
 /**
@@ -29,7 +29,7 @@ export const Version_v1: Version = 0; /* LONG_NAMED_INTEGER_VALUE */
  * @constant
  * @type {number}
  */
-export const v1: Version = Version_v1; /* SHORT_NAMED_INTEGER_VALUE */
+export const v1: 0 = Version_v1; /* SHORT_NAMED_INTEGER_VALUE */
 
 
 /**
@@ -37,7 +37,7 @@ export const v1: Version = Version_v1; /* SHORT_NAMED_INTEGER_VALUE */
  * @constant
  * @type {number}
  */
-export const Version_v2: Version = 1; /* LONG_NAMED_INTEGER_VALUE */
+export const Version_v2: 1 = 1 satisfies Version; /* LONG_NAMED_INTEGER_VALUE */
 
 
 /**
@@ -45,17 +45,17 @@ export const Version_v2: Version = 1; /* LONG_NAMED_INTEGER_VALUE */
  * @constant
  * @type {number}
  */
-export const v2: Version = Version_v2; /* SHORT_NAMED_INTEGER_VALUE */
+export const v2: 1 = Version_v2; /* SHORT_NAMED_INTEGER_VALUE */
 
 
 
 
-export const _decode_Version = $._decodeInteger;
+export const _decode_Version: $.ASN1Decoder<INTEGER> = $._decodeInteger;
 
 
 
 
-export const _encode_Version = $._encodeInteger;
+export const _encode_Version: $.ASN1Encoder<INTEGER> = $._encodeInteger;
 
 
 /* eslint-enable */

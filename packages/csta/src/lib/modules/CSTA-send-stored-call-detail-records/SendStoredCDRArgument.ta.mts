@@ -2,13 +2,13 @@
 
 import * as $ from "@wildboar/asn1/functional";
 import {
-    OPTIONAL,
-    SEQUENCE,
-    SET,
-    ASN1Element as _Element,
+    type OPTIONAL,
+    type SEQUENCE,
+    type SET,
+    type ASN1Element as _Element,
     ASN1TagClass as _TagClass
 } from "@wildboar/asn1";
-import { CDRCrossRefID, _decode_CDRCrossRefID, _encode_CDRCrossRefID } from "../CSTA-call-detail-record/CDRCrossRefID.ta.mjs";
+import { type CDRCrossRefID, _decode_CDRCrossRefID, _encode_CDRCrossRefID } from "../CSTA-call-detail-record/CDRCrossRefID.ta.mjs";
 
 import { CDRTimePeriod, _decode_CDRTimePeriod, _encode_CDRTimePeriod } from "../CSTA-call-detail-record/CDRTimePeriod.ta.mjs";
 
@@ -31,7 +31,7 @@ import { CSTACommonArguments, _decode_CSTACommonArguments, _encode_CSTACommonArg
  * ```asn1
  * SendStoredCDRArgument ::= SEQUENCE
  * {    cdrCrossRefID            CDRCrossRefID,              --corrected 06/2001
- *     timePeriod            CDRTimePeriod                OPTIONAL,
+ *     timePeriod            CDRTimePeriod                type OPTIONAL,
  *     extensions            CSTACommonArguments             OPTIONAL }
  * ```
  * 
@@ -39,42 +39,50 @@ import { CSTACommonArguments, _decode_CSTACommonArguments, _encode_CSTACommonArg
  */
 export
 class SendStoredCDRArgument {
+    /**
+     * @summary `cdrCrossRefID`.
+     * @description
+     *
+     * CDR transmission cross-reference from Start Call Detail Records
+     * Transmission (ECMA-269 §27.1.4).
+     *
+     * @public
+     * @readonly
+     */
+    public readonly cdrCrossRefID: CDRCrossRefID;
+    /**
+     * @summary `timePeriod`.
+     * @description
+     *
+     * Interval (beginningOfCDR, endOfCDR) of recordCreationTime. If
+     * unsupported, all not-yet-transmitted stored records are sent
+     * (ECMA-269 §27.1.3.1 / FR 3).
+     *
+     * @public
+     * @readonly
+     */
+    public readonly timePeriod?: OPTIONAL<CDRTimePeriod>;
+    /**
+     * @summary `extensions`.
+     * @description
+     *
+     * CSTACommonArguments carrying the service-table security and
+     * privateData parameters.
+     *
+     * @public
+     * @readonly
+     */
+    public readonly extensions?: OPTIONAL<CSTACommonArguments>;
+
     constructor (
-        /**
-         * @summary `cdrCrossRefID`.
-         * @description
-         *
-         * CDR transmission cross-reference from Start Call Detail Records
-         * Transmission (ECMA-269 §27.1.4).
-         *
-         * @public
-         * @readonly
-         */
-        readonly cdrCrossRefID: CDRCrossRefID,
-        /**
-         * @summary `timePeriod`.
-         * @description
-         *
-         * Interval (beginningOfCDR, endOfCDR) of recordCreationTime. If
-         * unsupported, all not-yet-transmitted stored records are sent
-         * (ECMA-269 §27.1.3.1 / FR 3).
-         *
-         * @public
-         * @readonly
-         */
-        readonly timePeriod?: OPTIONAL<CDRTimePeriod>,
-        /**
-         * @summary `extensions`.
-         * @description
-         *
-         * CSTACommonArguments carrying the service-table security and
-         * privateData parameters.
-         *
-         * @public
-         * @readonly
-         */
-        readonly extensions?: OPTIONAL<CSTACommonArguments>
-    ) {}
+        cdrCrossRefID: CDRCrossRefID,
+        timePeriod?: OPTIONAL<CDRTimePeriod>,
+        extensions?: OPTIONAL<CSTACommonArguments>
+    ) {
+        this.cdrCrossRefID = cdrCrossRefID;
+        this.timePeriod = timePeriod;
+        this.extensions = extensions;
+    }
 
     /**
      * @summary Restructures an object into a SendStoredCDRArgument

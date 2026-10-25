@@ -1,7 +1,7 @@
 /* eslint-disable */
 import {
-    EXTERNAL,
-    ASN1Element as _Element,
+    type EXTERNAL,
+    type ASN1Element as _Element,
     ASN1TagClass as _TagClass,
     ASN1Construction as _Construction,
     ASN1UniversalType as _UniversalType,
@@ -29,8 +29,8 @@ import * as $ from "@wildboar/asn1/functional";
  */
 export
 type BindSecurity = EXTERNAL; // ExternalType
-export const _decode_BindSecurity = $._decodeExternal;
-export const _encode_BindSecurity = $._encodeExternal;
+export const _decode_BindSecurity: $.ASN1Decoder<_External> = $._decodeExternal;
+export const _encode_BindSecurity: $.ASN1Encoder<_External> = $._encodeExternal;
 
 
 /* eslint-enable */

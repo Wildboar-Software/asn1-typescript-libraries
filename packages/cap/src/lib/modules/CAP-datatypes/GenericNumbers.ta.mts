@@ -1,6 +1,7 @@
 import {
-    ASN1Element as _Element,
+    type ASN1Element as _Element,
     ASN1SizeError,
+    type OCTET_STRING,
 } from "@wildboar/asn1";
 import * as $ from "@wildboar/asn1/functional";
 import { type GenericNumber, _decode_GenericNumber, _encode_GenericNumber } from "./GenericNumber.ta.mjs";
@@ -24,4 +25,4 @@ export const _decode_GenericNumbers = (el: _Element): GenericNumbers => {
     }
     return value;
 };
-export const _encode_GenericNumbers = $._encodeSetOf<GenericNumber>(() => _encode_GenericNumber, $.BER);
+export const _encode_GenericNumbers: $.SetOfEncoder<OCTET_STRING> = $._encodeSetOf<GenericNumber>(() => _encode_GenericNumber, $.BER);

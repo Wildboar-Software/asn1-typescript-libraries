@@ -1,7 +1,7 @@
 /* eslint-disable */
 import {
-    OPTIONAL,
-    ASN1Element as _Element,
+    type OPTIONAL,
+    type ASN1Element as _Element,
     ASN1TagClass as _TagClass,
     ASN1Construction as _Construction,
     ASN1UniversalType as _UniversalType,
@@ -12,17 +12,17 @@ import {
 } from '@wildboar/asn1';
 import * as $ from '@wildboar/asn1/functional';
 import {
-    OriginalContentIntegrityCheck,
+    type OriginalContentIntegrityCheck,
     _decode_OriginalContentIntegrityCheck,
     _encode_OriginalContentIntegrityCheck,
 } from '../IPMSSecurityExtensions/OriginalContentIntegrityCheck.ta.mjs';
 import {
-    OriginalMessageOriginAuthenticationCheck,
+    type OriginalMessageOriginAuthenticationCheck,
     _decode_OriginalMessageOriginAuthenticationCheck,
     _encode_OriginalMessageOriginAuthenticationCheck,
 } from '../IPMSSecurityExtensions/OriginalMessageOriginAuthenticationCheck.ta.mjs';
 import {
-    OriginalMessageToken,
+    type OriginalMessageToken,
     _decode_OriginalMessageToken,
     _encode_OriginalMessageToken,
 } from '../IPMSSecurityExtensions/OriginalMessageToken.ta.mjs';
@@ -40,26 +40,34 @@ import {
  *
  */
 export class IpnSecurityResponse_content_or_arguments_original_security_arguments {
+    /**
+     * @summary `original_content_integrity_check`.
+     * @public
+     * @readonly
+     */
+    public readonly original_content_integrity_check?: OPTIONAL<OriginalContentIntegrityCheck>;
+    /**
+     * @summary `original_message_origin_authentication_check`.
+     * @public
+     * @readonly
+     */
+    public readonly original_message_origin_authentication_check?: OPTIONAL<OriginalMessageOriginAuthenticationCheck>;
+    /**
+     * @summary `original_message_token`.
+     * @public
+     * @readonly
+     */
+    public readonly original_message_token?: OPTIONAL<OriginalMessageToken>;
+
     constructor(
-        /**
-         * @summary `original_content_integrity_check`.
-         * @public
-         * @readonly
-         */
-        readonly original_content_integrity_check?: OPTIONAL<OriginalContentIntegrityCheck>,
-        /**
-         * @summary `original_message_origin_authentication_check`.
-         * @public
-         * @readonly
-         */
-        readonly original_message_origin_authentication_check?: OPTIONAL<OriginalMessageOriginAuthenticationCheck>,
-        /**
-         * @summary `original_message_token`.
-         * @public
-         * @readonly
-         */
-        readonly original_message_token?: OPTIONAL<OriginalMessageToken>
-    ) {}
+        original_content_integrity_check?: OPTIONAL<OriginalContentIntegrityCheck>,
+        original_message_origin_authentication_check?: OPTIONAL<OriginalMessageOriginAuthenticationCheck>,
+        original_message_token?: OPTIONAL<OriginalMessageToken>
+    ) {
+        this.original_content_integrity_check = original_content_integrity_check;
+        this.original_message_origin_authentication_check = original_message_origin_authentication_check;
+        this.original_message_token = original_message_token;
+    }
 
     /**
      * @summary Restructures an object into a IpnSecurityResponse_content_or_arguments_original_security_arguments

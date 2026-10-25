@@ -1,6 +1,6 @@
 /* eslint-disable */
 import {
-    ASN1Element as _Element,
+    type ASN1Element as _Element,
     ASN1TagClass as _TagClass,
     ASN1Construction as _Construction,
     ASN1UniversalType as _UniversalType,
@@ -72,7 +72,7 @@ export type DialogueMode = _enum_for_DialogueMode;
  *
  * @enum {number}
  */
-export const DialogueMode = _enum_for_DialogueMode;
+export const DialogueMode: typeof _enum_for_DialogueMode = _enum_for_DialogueMode;
 
 /**
  * @summary DialogueMode_structured
@@ -84,7 +84,7 @@ export const DialogueMode = _enum_for_DialogueMode;
  * @constant
  * @type {number}
  */
-export const DialogueMode_structured: DialogueMode =
+export const DialogueMode_structured: _enum_for_DialogueMode.structured =
     DialogueMode.structured; /* LONG_NAMED_ENUMERATED_VALUE */
 
 /**
@@ -92,7 +92,7 @@ export const DialogueMode_structured: DialogueMode =
  * @constant
  * @type {number}
  */
-export const structured: DialogueMode =
+export const structured: _enum_for_DialogueMode.structured =
     DialogueMode.structured; /* SHORT_NAMED_ENUMERATED_VALUE */
 
 /**
@@ -105,7 +105,7 @@ export const structured: DialogueMode =
  * @constant
  * @type {number}
  */
-export const DialogueMode_unstructured: DialogueMode =
+export const DialogueMode_unstructured: _enum_for_DialogueMode.unstructured =
     DialogueMode.unstructured; /* LONG_NAMED_ENUMERATED_VALUE */
 
 /**
@@ -113,14 +113,14 @@ export const DialogueMode_unstructured: DialogueMode =
  * @constant
  * @type {number}
  */
-export const unstructured: DialogueMode =
+export const unstructured: _enum_for_DialogueMode.unstructured =
     DialogueMode.unstructured; /* SHORT_NAMED_ENUMERATED_VALUE */
 
 
-export const _decode_DialogueMode = $._decodeEnumerated;
+export const _decode_DialogueMode: $.ASN1Decoder<number> = $._decodeEnumerated;
 
 
-export const _encode_DialogueMode = $._encodeEnumerated;
+export const _encode_DialogueMode: $.ASN1Encoder<number> = $._encodeEnumerated;
 
 
 /* eslint-enable */

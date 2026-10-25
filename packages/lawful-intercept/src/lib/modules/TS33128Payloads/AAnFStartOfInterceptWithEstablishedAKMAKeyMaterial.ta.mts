@@ -1,13 +1,13 @@
 /* eslint-disable */
 import {
-    OPTIONAL,
-    ASN1Element as _Element,
+    type OPTIONAL,
+    type ASN1Element as _Element,
     ASN1TagClass as _TagClass
 } from "@wildboar/asn1";
 import * as $ from "@wildboar/asn1/functional";
-import { NAI, _decode_NAI, _encode_NAI } from "../TS33128Payloads/NAI.ta.mjs";
+import { type NAI, _decode_NAI, _encode_NAI } from "../TS33128Payloads/NAI.ta.mjs";
 // export { NAI, _decode_NAI, _encode_NAI } from "../TS33128Payloads/NAI.ta.mjs";
-import { KAKMA, _decode_KAKMA, _encode_KAKMA } from "../TS33128Payloads/KAKMA.ta.mjs";
+import { type KAKMA, _decode_KAKMA, _encode_KAKMA } from "../TS33128Payloads/KAKMA.ta.mjs";
 // export { KAKMA, _decode_KAKMA, _encode_KAKMA } from "../TS33128Payloads/KAKMA.ta.mjs";
 import { AFKeyInfo, _decode_AFKeyInfo, _encode_AFKeyInfo } from "../TS33128Payloads/AFKeyInfo.ta.mjs";
 // export { AFKeyInfo, _decode_AFKeyInfo, _encode_AFKeyInfo } from "../TS33128Payloads/AFKeyInfo.ta.mjs";

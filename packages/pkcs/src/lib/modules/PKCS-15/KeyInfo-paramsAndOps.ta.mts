@@ -1,5 +1,5 @@
 /* eslint-disable */
-import { ASN1Element as _Element, OPTIONAL } from "@wildboar/asn1";
+import { ASN1Element as _Element, type OPTIONAL } from "@wildboar/asn1";
 import * as $ from "@wildboar/asn1/functional";
 
 
@@ -15,20 +15,26 @@ import * as $ from "@wildboar/asn1/functional";
  *
  */
 export class KeyInfo_paramsAndOps<ParameterType, OperationsType> {
+    /**
+     * @summary `parameters`.
+     * @public
+     * @readonly
+     */
+    public readonly parameters: ParameterType;
+    /**
+     * @summary `supportedOperations`.
+     * @public
+     * @readonly
+     */
+    public readonly supportedOperations?: OPTIONAL<OperationsType>;
+
     constructor(
-        /**
-         * @summary `parameters`.
-         * @public
-         * @readonly
-         */
-        readonly parameters: ParameterType,
-        /**
-         * @summary `supportedOperations`.
-         * @public
-         * @readonly
-         */
-        readonly supportedOperations?: OPTIONAL<OperationsType>
-    ) {}
+        parameters: ParameterType,
+        supportedOperations?: OPTIONAL<OperationsType>
+    ) {
+        this.parameters = parameters;
+        this.supportedOperations = supportedOperations;
+    }
 
     /**
      * @summary Restructures an object into a KeyInfo_paramsAndOps

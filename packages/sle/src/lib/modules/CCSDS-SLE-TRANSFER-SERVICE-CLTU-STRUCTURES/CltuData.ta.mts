@@ -3,7 +3,7 @@ import {
     ASN1Element as _Element
 } from "@wildboar/asn1";
 import * as $ from "@wildboar/asn1/functional";
-import { SpaceLinkDataUnit, _decode_SpaceLinkDataUnit, _encode_SpaceLinkDataUnit } from "../CCSDS-SLE-TRANSFER-SERVICE-COMMON-TYPES/SpaceLinkDataUnit.ta.mjs";
+import { type SpaceLinkDataUnit, _decode_SpaceLinkDataUnit, _encode_SpaceLinkDataUnit } from "../CCSDS-SLE-TRANSFER-SERVICE-COMMON-TYPES/SpaceLinkDataUnit.ta.mjs";
 
 
 /**
@@ -24,21 +24,13 @@ import { SpaceLinkDataUnit, _decode_SpaceLinkDataUnit, _encode_SpaceLinkDataUnit
 export
 type CltuData = SpaceLinkDataUnit; // DefinedType
 
-let _cached_decoder_for_CltuData: $.ASN1Decoder<CltuData> | null = null;
-
 /**
  * @summary Decodes an ASN.1 element into a(n) CltuData
  * @function
  * @param el The element being decoded.
  * @returns The decoded data structure.
  */
-export
-function _decode_CltuData (el: _Element): CltuData {
-    if (!_cached_decoder_for_CltuData) { _cached_decoder_for_CltuData = _decode_SpaceLinkDataUnit; }
-    return _cached_decoder_for_CltuData(el);
-}
-
-let _cached_encoder_for_CltuData: $.ASN1Encoder<CltuData> | null = null;
+export const _decode_CltuData: $.ASN1Decoder<CltuData> = _decode_SpaceLinkDataUnit;
 
 /**
  * @summary Encodes a(n) CltuData into an ASN.1 Element.
@@ -47,11 +39,7 @@ let _cached_encoder_for_CltuData: $.ASN1Encoder<CltuData> | null = null;
  * @param elGetter A function that can be used to get new ASN.1 elements.
  * @returns {_Element} The CltuData, encoded as an ASN.1 Element.
  */
-export
-function _encode_CltuData (value: CltuData, elGetter: $.ASN1Encoder<any>): _Element {
-    if (!_cached_encoder_for_CltuData) { _cached_encoder_for_CltuData = _encode_SpaceLinkDataUnit; }
-    return _cached_encoder_for_CltuData(value, elGetter);
-}
+export const _encode_CltuData: $.ASN1Encoder<CltuData> = _encode_SpaceLinkDataUnit;
 
 
 /* eslint-enable */

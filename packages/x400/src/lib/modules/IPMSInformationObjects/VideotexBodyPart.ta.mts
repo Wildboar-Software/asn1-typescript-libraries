@@ -1,6 +1,6 @@
 /* eslint-disable */
 import {
-    ASN1Element as _Element,
+    type ASN1Element as _Element,
     ASN1TagClass as _TagClass,
     ASN1Construction as _Construction,
     ASN1UniversalType as _UniversalType,
@@ -16,7 +16,7 @@ import {
     _encode_VideotexParameters,
 } from '../IPMSInformationObjects/VideotexParameters.ta.mjs';
 import {
-    VideotexData,
+    type VideotexData,
     _decode_VideotexData,
     _encode_VideotexData,
 } from '../IPMSInformationObjects/VideotexData.ta.mjs';
@@ -37,20 +37,26 @@ import {
  *
  */
 export class VideotexBodyPart {
+    /**
+     * @summary `parameters`.
+     * @public
+     * @readonly
+     */
+    public readonly parameters: VideotexParameters;
+    /**
+     * @summary `data`.
+     * @public
+     * @readonly
+     */
+    public readonly data: VideotexData;
+
     constructor(
-        /**
-         * @summary `parameters`.
-         * @public
-         * @readonly
-         */
-        readonly parameters: VideotexParameters,
-        /**
-         * @summary `data`.
-         * @public
-         * @readonly
-         */
-        readonly data: VideotexData
-    ) {}
+        parameters: VideotexParameters,
+        data: VideotexData
+    ) {
+        this.parameters = parameters;
+        this.data = data;
+    }
 
     /**
      * @summary Restructures an object into a VideotexBodyPart

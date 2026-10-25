@@ -2,15 +2,15 @@
 
 import * as $ from "@wildboar/asn1/functional";
 import {
-    OPTIONAL,
-    SEQUENCE,
-    SET,
-    ASN1Element as _Element,
+    type OPTIONAL,
+    type SEQUENCE,
+    type SET,
+    type ASN1Element as _Element,
     ASN1TagClass as _TagClass
 } from "@wildboar/asn1";
-import { LampModeList, _decode_LampModeList, _encode_LampModeList } from "../CSTA-get-lamp-mode/LampModeList.ta.mjs";
+import { type LampModeList, _decode_LampModeList, _encode_LampModeList } from "../CSTA-get-lamp-mode/LampModeList.ta.mjs";
 
-import { LampID, _decode_LampID, _encode_LampID } from "../CSTA-physical-device-feature/LampID.ta.mjs";
+import { type LampID, _decode_LampID, _encode_LampID } from "../CSTA-physical-device-feature/LampID.ta.mjs";
 
 import { CSTACommonArguments, _decode_CSTACommonArguments, _encode_CSTACommonArguments } from "../CSTA-extension-types/CSTACommonArguments.ta.mjs";
 
@@ -30,7 +30,7 @@ import { CSTACommonArguments, _decode_CSTACommonArguments, _encode_CSTACommonArg
  * ```asn1
  * GetLampModeResult ::= SEQUENCE
  * {    lampModeList            LampModeList,
- *     lamp                LampID                    OPTIONAL,
+ *     lamp                LampID                    type OPTIONAL,
  *     extensions             CSTACommonArguments            OPTIONAL }
  * ```
  * 
@@ -38,36 +38,44 @@ import { CSTACommonArguments, _decode_CSTACommonArguments, _encode_CSTACommonArg
  */
 export
 class GetLampModeResult {
+    /**
+     * @summary `lampModeList`.
+     * @description
+     *
+     * One entry per queried lamp.
+     * @public
+     * @readonly
+     */
+    public readonly lampModeList: LampModeList;
+    /**
+     * @summary `lamp`.
+     * @description
+     *
+     * Lamp identifier; also listed per entry in `lampModeList`.
+     * @public
+     * @readonly
+     */
+    public readonly lamp?: OPTIONAL<LampID>;
+    /**
+     * @summary `extensions`.
+     * @description
+     *
+     * Optional security (timestamp, sequence, securityInfo) and
+     * privateData.
+     * @public
+     * @readonly
+     */
+    public readonly extensions?: OPTIONAL<CSTACommonArguments>;
+
     constructor (
-        /**
-         * @summary `lampModeList`.
-         * @description
-         *
-         * One entry per queried lamp.
-         * @public
-         * @readonly
-         */
-        readonly lampModeList: LampModeList,
-        /**
-         * @summary `lamp`.
-         * @description
-         *
-         * Lamp identifier; also listed per entry in `lampModeList`.
-         * @public
-         * @readonly
-         */
-        readonly lamp?: OPTIONAL<LampID>,
-        /**
-         * @summary `extensions`.
-         * @description
-         *
-         * Optional security (timestamp, sequence, securityInfo) and
-         * privateData.
-         * @public
-         * @readonly
-         */
-        readonly extensions?: OPTIONAL<CSTACommonArguments>
-    ) {}
+        lampModeList: LampModeList,
+        lamp?: OPTIONAL<LampID>,
+        extensions?: OPTIONAL<CSTACommonArguments>
+    ) {
+        this.lampModeList = lampModeList;
+        this.lamp = lamp;
+        this.extensions = extensions;
+    }
 
     /**
      * @summary Restructures an object into a GetLampModeResult

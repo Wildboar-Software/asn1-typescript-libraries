@@ -1,14 +1,14 @@
 /* eslint-disable */
 import {
-    NULL,
-    OPTIONAL,
-    ASN1Element as _Element,
+    type NULL,
+    type OPTIONAL,
+    type ASN1Element as _Element,
     ASN1TagClass as _TagClass
 } from "@wildboar/asn1";
 import * as $ from "@wildboar/asn1/functional";
 import { ExtensionContainer, _decode_ExtensionContainer, _encode_ExtensionContainer } from "../MAP-ExtensionDataTypes/ExtensionContainer.ta.mjs";
-import { CamelCapabilityHandling, _decode_CamelCapabilityHandling, _encode_CamelCapabilityHandling } from "../MAP-MS-DataTypes/CamelCapabilityHandling.ta.mjs";
-import { DP_AnalysedInfoCriteriaList, _decode_DP_AnalysedInfoCriteriaList, _encode_DP_AnalysedInfoCriteriaList } from "../MAP-MS-DataTypes/DP-AnalysedInfoCriteriaList.ta.mjs";
+import { type CamelCapabilityHandling, _decode_CamelCapabilityHandling, _encode_CamelCapabilityHandling } from "../MAP-MS-DataTypes/CamelCapabilityHandling.ta.mjs";
+import { type DP_AnalysedInfoCriteriaList, _decode_DP_AnalysedInfoCriteriaList, _encode_DP_AnalysedInfoCriteriaList } from "../MAP-MS-DataTypes/DP-AnalysedInfoCriteriaList.ta.mjs";
 
 
 /**
@@ -30,11 +30,11 @@ import { DP_AnalysedInfoCriteriaList, _decode_DP_AnalysedInfoCriteriaList, _enco
  * 
  * ```asn1
  * D-CSI ::= SEQUENCE {
- *     dp-AnalysedInfoCriteriaList    [0] DP-AnalysedInfoCriteriaList    OPTIONAL,
- *     camelCapabilityHandling    [1] CamelCapabilityHandling    OPTIONAL,
- *     extensionContainer    [2] ExtensionContainer    OPTIONAL,
- *     notificationToCSE    [3]    NULL    OPTIONAL,
- *     csi-Active    [4]    NULL    OPTIONAL,
+ *     dp-AnalysedInfoCriteriaList    [0] DP-AnalysedInfoCriteriaList    type OPTIONAL,
+ *     camelCapabilityHandling    [1] CamelCapabilityHandling    type OPTIONAL,
+ *     extensionContainer    [2] ExtensionContainer    type OPTIONAL,
+ *     notificationToCSE    [3]    NULL    type OPTIONAL,
+ *     csi-Active    [4]    NULL    type OPTIONAL,
  *     ...}
  * ```
  * 
@@ -42,66 +42,80 @@ import { DP_AnalysedInfoCriteriaList, _decode_DP_AnalysedInfoCriteriaList, _enco
  */
 export
 class D_CSI {
+    /**
+     * @summary `dp_AnalysedInfoCriteriaList`.
+     * @description
+     *
+     * Shall be present in the D-CSI sequence. If segmented, the first
+     * segment shall contain this list (3GPP TS 29.002 V19.1.0 clause
+     * 17.7.1).
+     *
+     * @public
+     * @readonly
+     */
+    public readonly dp_AnalysedInfoCriteriaList?: OPTIONAL<DP_AnalysedInfoCriteriaList>;
+    /**
+     * @summary `camelCapabilityHandling`.
+     * @description
+     *
+     * Shall be present in the D-CSI sequence. If segmented, only the first
+     * segment shall contain this parameter (3GPP TS 29.002 V19.1.0 clause
+     * 17.7.1).
+     *
+     * @public
+     * @readonly
+     */
+    public readonly camelCapabilityHandling?: OPTIONAL<CamelCapabilityHandling>;
+    /**
+     * @summary `extensionContainer`.
+     * @public
+     * @readonly
+     */
+    public readonly extensionContainer?: OPTIONAL<ExtensionContainer>;
+    /**
+     * @summary `notificationToCSE`.
+     * @description
+     *
+     * Shall not be present when D-CSI is sent to VLR/GMSC. May only be
+     * included in ATSI/ATM ack/NSDC (3GPP TS 29.002 V19.1.0 clause 17.7.1).
+     *
+     * @public
+     * @readonly
+     */
+    public readonly notificationToCSE?: OPTIONAL<NULL>;
+    /**
+     * @summary `csi_Active`.
+     * @description
+     *
+     * Shall not be present when D-CSI is sent to VLR/GMSC. May only be
+     * included in ATSI/ATM ack/NSDC (3GPP TS 29.002 V19.1.0 clause 17.7.1).
+     *
+     * @public
+     * @readonly
+     */
+    public readonly csi_Active?: OPTIONAL<NULL>;
+    /**
+     * @summary Extensions that are not recognized.
+     * @public
+     * @readonly
+     */
+    public readonly _unrecognizedExtensionsList: _Element[];
+
     constructor (
-        /**
-         * @summary `dp_AnalysedInfoCriteriaList`.
-         * @description
-         *
-         * Shall be present in the D-CSI sequence. If segmented, the first
-         * segment shall contain this list (3GPP TS 29.002 V19.1.0 clause
-         * 17.7.1).
-         *
-         * @public
-         * @readonly
-         */
-        readonly dp_AnalysedInfoCriteriaList?: OPTIONAL<DP_AnalysedInfoCriteriaList>,
-        /**
-         * @summary `camelCapabilityHandling`.
-         * @description
-         *
-         * Shall be present in the D-CSI sequence. If segmented, only the first
-         * segment shall contain this parameter (3GPP TS 29.002 V19.1.0 clause
-         * 17.7.1).
-         *
-         * @public
-         * @readonly
-         */
-        readonly camelCapabilityHandling?: OPTIONAL<CamelCapabilityHandling>,
-        /**
-         * @summary `extensionContainer`.
-         * @public
-         * @readonly
-         */
-        readonly extensionContainer?: OPTIONAL<ExtensionContainer>,
-        /**
-         * @summary `notificationToCSE`.
-         * @description
-         *
-         * Shall not be present when D-CSI is sent to VLR/GMSC. May only be
-         * included in ATSI/ATM ack/NSDC (3GPP TS 29.002 V19.1.0 clause 17.7.1).
-         *
-         * @public
-         * @readonly
-         */
-        readonly notificationToCSE?: OPTIONAL<NULL>,
-        /**
-         * @summary `csi_Active`.
-         * @description
-         *
-         * Shall not be present when D-CSI is sent to VLR/GMSC. May only be
-         * included in ATSI/ATM ack/NSDC (3GPP TS 29.002 V19.1.0 clause 17.7.1).
-         *
-         * @public
-         * @readonly
-         */
-        readonly csi_Active?: OPTIONAL<NULL>,
-        /**
-         * @summary Extensions that are not recognized.
-         * @public
-         * @readonly
-         */
-        readonly _unrecognizedExtensionsList: _Element[] = []
-    ) {}
+        dp_AnalysedInfoCriteriaList?: OPTIONAL<DP_AnalysedInfoCriteriaList>,
+        camelCapabilityHandling?: OPTIONAL<CamelCapabilityHandling>,
+        extensionContainer?: OPTIONAL<ExtensionContainer>,
+        notificationToCSE?: OPTIONAL<NULL>,
+        csi_Active?: OPTIONAL<NULL>,
+        _unrecognizedExtensionsList: _Element[] = []
+    ) {
+        this.dp_AnalysedInfoCriteriaList = dp_AnalysedInfoCriteriaList;
+        this.camelCapabilityHandling = camelCapabilityHandling;
+        this.extensionContainer = extensionContainer;
+        this.notificationToCSE = notificationToCSE;
+        this.csi_Active = csi_Active;
+        this._unrecognizedExtensionsList = _unrecognizedExtensionsList;
+    }
 
     /**
      * @summary Restructures an object into a D_CSI

@@ -1,11 +1,11 @@
 /* eslint-disable */
 import {
     ASN1ConstructionError as _ConstructionError,
-    ASN1Element as _Element,
+    type ASN1Element as _Element,
     ASN1TagClass as _TagClass
 } from "@wildboar/asn1";
 import * as $ from "@wildboar/asn1/functional";
-import { _decode_Connect_fail, _encode_Connect_fail, Connect_fail } from "../SMRS/Connect-fail.ta.mjs";
+import { _decode_Connect_fail, _encode_Connect_fail, type Connect_fail } from "../SMRS/Connect-fail.ta.mjs";
 
 
 /**
@@ -48,7 +48,7 @@ class SMR_Bind_Failure {
      * @public
      * @readonly
      */
-    readonly connect_fail_reason: Connect_fail;
+    public readonly connect_fail_reason: Connect_fail;
     /**
      * @summary Extensions that are not recognized.
      * @description
@@ -59,7 +59,7 @@ class SMR_Bind_Failure {
      * @public
      * @readonly
      */
-    readonly _unrecognizedExtensionsList: _Element[];
+    public readonly _unrecognizedExtensionsList: _Element[];
 
     constructor (
         connect_fail_reason: Connect_fail,

@@ -1,12 +1,12 @@
 /* eslint-disable */
 import {
     ASN1ConstructionError as _ConstructionError,
-    ASN1Element as _Element,
+    type ASN1Element as _Element,
     ASN1TagClass as _TagClass
 } from "@wildboar/asn1";
 import * as $ from "@wildboar/asn1/functional";
-import { KeyQuality, _decode_KeyQuality, _encode_KeyQuality } from "../PKIS/KeyQuality.ta.mjs";
-import { CryptoProcessQuality, _decode_CryptoProcessQuality, _encode_CryptoProcessQuality } from "../PKIS/CryptoProcessQuality.ta.mjs";
+import { type KeyQuality, _decode_KeyQuality, _encode_KeyQuality } from "../PKIS/KeyQuality.ta.mjs";
+import { type CryptoProcessQuality, _decode_CryptoProcessQuality, _encode_CryptoProcessQuality } from "../PKIS/CryptoProcessQuality.ta.mjs";
 import { CertificateClass, _decode_CertificateClass, _encode_CertificateClass } from "../PKIS/CertificateClass.ta.mjs";
 import { EnterpriseId, _decode_EnterpriseId, _encode_EnterpriseId } from "../PKIS/EnterpriseId.ta.mjs";
 

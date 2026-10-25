@@ -1,8 +1,8 @@
 /* eslint-disable */
 import {
-    NULL,
-    GeneralizedTime,
-    ASN1Element as _Element,
+    type NULL,
+    type GeneralizedTime,
+    type ASN1Element as _Element,
 } from "@wildboar/asn1";
 import * as $ from "@wildboar/asn1/functional";
 

@@ -1,7 +1,7 @@
 /* eslint-disable */
 import {
     ASN1ConstructionError as _ConstructionError,
-    ASN1Element as _Element,
+    type ASN1Element as _Element,
     ASN1TagClass as _TagClass
 } from "@wildboar/asn1";
 import * as $ from "@wildboar/asn1/functional";
@@ -80,13 +80,13 @@ class BCUSMEvent {
          * @static
          */
 
-    public static _enum_for_eventType = _enum_for_EventTypeBCUSM;        /**
+    public static _enum_for_eventType: typeof _enum_for_EventTypeBCUSM = _enum_for_EventTypeBCUSM;        /**
          * @summary The enum used as the type of the component `monitorMode`
          * @public
          * @static
          */
 
-    public static _enum_for_monitorMode = _enum_for_MonitorMode;
+    public static _enum_for_monitorMode: typeof _enum_for_MonitorMode = _enum_for_MonitorMode;
 }
 
 /**

@@ -1,18 +1,18 @@
 /* eslint-disable */
 import {
-    INTEGER,
-    OPTIONAL,
-    ASN1Element as _Element,
+    type INTEGER,
+    type OPTIONAL,
+    type ASN1Element as _Element,
     ASN1TagClass as _TagClass,
     ASN1OverflowError,
 } from "@wildboar/asn1";
 import * as $ from "@wildboar/asn1/functional";
-import { PartyNumber, _decode_PartyNumber, _encode_PartyNumber } from "../Addressing-Data-Elements-asn1-97/PartyNumber.ta.mjs";
+import { type PartyNumber, _decode_PartyNumber, _encode_PartyNumber } from "../Addressing-Data-Elements-asn1-97/PartyNumber.ta.mjs";
 import { BasicService, _decode_BasicService, _encode_BasicService, _enum_for_BasicService } from "../MWI-Operations-asn1-97/BasicService.ta.mjs";
-import { MsgCentreId, _decode_MsgCentreId, _encode_MsgCentreId } from "../MWI-Operations-asn1-97/MsgCentreId.ta.mjs";
-import { NbOfMessages, _decode_NbOfMessages, _encode_NbOfMessages } from "../MWI-Operations-asn1-97/NbOfMessages.ta.mjs";
-import { TimeStamp, _decode_TimeStamp, _encode_TimeStamp } from "../MWI-Operations-asn1-97/TimeStamp.ta.mjs";
-import { MWIActivateArg_argumentExt, _decode_MWIActivateArg_argumentExt, _encode_MWIActivateArg_argumentExt } from "../MWI-Operations-asn1-97/MWIActivateArg-argumentExt.ta.mjs";
+import { type MsgCentreId, _decode_MsgCentreId, _encode_MsgCentreId } from "../MWI-Operations-asn1-97/MsgCentreId.ta.mjs";
+import { type NbOfMessages, _decode_NbOfMessages, _encode_NbOfMessages } from "../MWI-Operations-asn1-97/NbOfMessages.ta.mjs";
+import { type TimeStamp, _decode_TimeStamp, _encode_TimeStamp } from "../MWI-Operations-asn1-97/TimeStamp.ta.mjs";
+import { type MWIActivateArg_argumentExt, _decode_MWIActivateArg_argumentExt, _encode_MWIActivateArg_argumentExt } from "../MWI-Operations-asn1-97/MWIActivateArg-argumentExt.ta.mjs";
 
 /**
  * @summary MWIActivateArg
@@ -179,7 +179,7 @@ class MWIActivateArg {
          * @static
          */
 
-    public static _enum_for_basicService = _enum_for_BasicService;
+    public static _enum_for_basicService: typeof _enum_for_BasicService = _enum_for_BasicService;
 }
 
 /**

@@ -1,11 +1,11 @@
 /* eslint-disable */
 import {
     ASN1ConstructionError as _ConstructionError,
-    ASN1Element as _Element,
+    type ASN1Element as _Element,
     ASN1TagClass as _TagClass
 } from "@wildboar/asn1";
 import * as $ from "@wildboar/asn1/functional";
-import { PropertyGroup, _decode_PropertyGroup, _encode_PropertyGroup } from "../MEDIA-GATEWAY-CONTROL/PropertyGroup.ta.mjs";
+import { type PropertyGroup, _decode_PropertyGroup, _encode_PropertyGroup } from "../MEDIA-GATEWAY-CONTROL/PropertyGroup.ta.mjs";
 
 
 /**
@@ -54,7 +54,7 @@ class LocalRemoteDescriptor {
      * @public
      * @readonly
      */
-    readonly propGrps: PropertyGroup[];
+    public readonly propGrps: PropertyGroup[];
     /**
      * @summary Extensions that are not recognized.
      * @description
@@ -65,7 +65,7 @@ class LocalRemoteDescriptor {
      * @public
      * @readonly
      */
-    readonly _unrecognizedExtensionsList: _Element[];
+    public readonly _unrecognizedExtensionsList: _Element[];
 
     constructor (
         propGrps: PropertyGroup[],

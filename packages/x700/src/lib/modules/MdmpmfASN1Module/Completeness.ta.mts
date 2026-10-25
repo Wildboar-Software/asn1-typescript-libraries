@@ -1,6 +1,6 @@
 /* eslint-disable */
 import {
-    ASN1Element as _Element,
+    type ASN1Element as _Element,
     ASN1TagClass as _TagClass,
     ASN1Construction as _Construction,
     ASN1UniversalType as _UniversalType,
@@ -85,7 +85,7 @@ export type Completeness = _enum_for_Completeness;
  *
  * @enum {number}
  */
-export const Completeness = _enum_for_Completeness;
+export const Completeness: typeof _enum_for_Completeness = _enum_for_Completeness;
 
 /**
  * @summary Completeness_completenessUnknown
@@ -97,7 +97,7 @@ export const Completeness = _enum_for_Completeness;
  * @constant
  * @type {number}
  */
-export const Completeness_completenessUnknown: Completeness =
+export const Completeness_completenessUnknown: _enum_for_Completeness.completenessUnknown =
     Completeness.completenessUnknown; /* LONG_NAMED_ENUMERATED_VALUE */
 
 /**
@@ -110,7 +110,7 @@ export const Completeness_completenessUnknown: Completeness =
  * @constant
  * @type {number}
  */
-export const completenessUnknown: Completeness =
+export const completenessUnknown: _enum_for_Completeness.completenessUnknown =
     Completeness.completenessUnknown; /* SHORT_NAMED_ENUMERATED_VALUE */
 
 /**
@@ -123,7 +123,7 @@ export const completenessUnknown: Completeness =
  * @constant
  * @type {number}
  */
-export const Completeness_knownComplete: Completeness =
+export const Completeness_knownComplete: _enum_for_Completeness.knownComplete =
     Completeness.knownComplete; /* LONG_NAMED_ENUMERATED_VALUE */
 
 /**
@@ -136,7 +136,7 @@ export const Completeness_knownComplete: Completeness =
  * @constant
  * @type {number}
  */
-export const knownComplete: Completeness =
+export const knownComplete: _enum_for_Completeness.knownComplete =
     Completeness.knownComplete; /* SHORT_NAMED_ENUMERATED_VALUE */
 
 /**
@@ -149,7 +149,7 @@ export const knownComplete: Completeness =
  * @constant
  * @type {number}
  */
-export const Completeness_knownNotComplete: Completeness =
+export const Completeness_knownNotComplete: _enum_for_Completeness.knownNotComplete =
     Completeness.knownNotComplete; /* LONG_NAMED_ENUMERATED_VALUE */
 
 /**
@@ -162,14 +162,26 @@ export const Completeness_knownNotComplete: Completeness =
  * @constant
  * @type {number}
  */
-export const knownNotComplete: Completeness =
+export const knownNotComplete: _enum_for_Completeness.knownNotComplete =
     Completeness.knownNotComplete; /* SHORT_NAMED_ENUMERATED_VALUE */
 
 
-export const _decode_Completeness = $._decodeEnumerated;
+export function _decode_Completeness(el: _Element): Completeness {
+    const enumerated = $._decodeEnumerated(el);
+    switch (enumerated) {
+        case Completeness.completenessUnknown: return Completeness.completenessUnknown;
+        case Completeness.knownComplete: return Completeness.knownComplete;
+        case Completeness.knownNotComplete: return Completeness.knownNotComplete;
+        default:
+            throw new _ConstructionError(
+                'Invalid ENUMERATED value ' + enumerated + ' for Completeness.',
+                el,
+            );
+    }
+}
 
 
-export const _encode_Completeness = $._encodeEnumerated;
+export const _encode_Completeness: $.ASN1Encoder<Completeness> = $._encodeEnumerated as $.ASN1Encoder<Completeness>;
 
 
 /* eslint-enable */

@@ -3,9 +3,9 @@ import {
     ASN1Element as _Element
 } from "@wildboar/asn1";
 import * as $ from "@wildboar/asn1/functional";
-import { IWLANUmtsIRIContent, _decode_IWLANUmtsIRIContent, _encode_IWLANUmtsIRIContent } from "../IWLANUmtsHI2Operations/IWLANUmtsIRIContent.ta.mjs";
+import { type IWLANUmtsIRIContent, _decode_IWLANUmtsIRIContent, _encode_IWLANUmtsIRIContent } from "../IWLANUmtsHI2Operations/IWLANUmtsIRIContent.ta.mjs";
 // export { IWLANUmtsIRIContent, _decode_IWLANUmtsIRIContent, _encode_IWLANUmtsIRIContent } from "../IWLANUmtsHI2Operations/IWLANUmtsIRIContent.ta.mjs";
-import { IWLANUmtsIRISequence, _decode_IWLANUmtsIRISequence, _encode_IWLANUmtsIRISequence } from "../IWLANUmtsHI2Operations/IWLANUmtsIRISequence.ta.mjs";
+import { type IWLANUmtsIRISequence, _decode_IWLANUmtsIRISequence, _encode_IWLANUmtsIRISequence } from "../IWLANUmtsHI2Operations/IWLANUmtsIRISequence.ta.mjs";
 // export { IWLANUmtsIRISequence, _decode_IWLANUmtsIRISequence, _encode_IWLANUmtsIRISequence } from "../IWLANUmtsHI2Operations/IWLANUmtsIRISequence.ta.mjs";
 
 

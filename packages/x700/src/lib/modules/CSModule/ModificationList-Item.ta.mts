@@ -1,8 +1,8 @@
 /* eslint-disable */
 import {
-    OPTIONAL,
-    OBJECT_IDENTIFIER,
-    ASN1Element as _Element,
+    type OPTIONAL,
+    type OBJECT_IDENTIFIER,
+    type ASN1Element as _Element,
     ASN1TagClass as _TagClass,
     ASN1Construction as _Construction,
     ASN1UniversalType as _UniversalType,
@@ -13,7 +13,7 @@ import {
 } from '@wildboar/asn1';
 import * as $ from '@wildboar/asn1/functional';
 import {
-    ModifyOperator,
+    type ModifyOperator,
     replace /* IMPORTED_SHORT_NAMED_INTEGER */,
     _decode_ModifyOperator,
     _encode_ModifyOperator,
@@ -34,39 +34,47 @@ import {
  *
  */
 export class ModificationList_Item {
+    /**
+     * @summary `modifyOperator`.
+     * @description
+     *
+     * How to apply the change (CMIP `ModifyOperator`; default
+     * `replace`). ITU-T Rec. X.753 (10/97) A.8; X.711.
+     * @public
+     * @readonly
+     */
+    public readonly modifyOperator: OPTIONAL<ModifyOperator>;
+    /**
+     * @summary `attributeId`.
+     * @description
+     *
+     * Attribute to modify. Constrained by the
+     * `ModificationLists` TYPE-IDENTIFIER set. ITU-T Rec.
+     * X.753 (10/97) A.8, D.9.
+     * @public
+     * @readonly
+     */
+    public readonly attributeId: OBJECT_IDENTIFIER;
+    /**
+     * @summary `attributeValue`.
+     * @description
+     *
+     * New value. Absent when `modifyOperator` is
+     * `setToDefault`. ITU-T Rec. X.753 (10/97) A.8.
+     * @public
+     * @readonly
+     */
+    public readonly attributeValue?: OPTIONAL<_Element>;
+
     constructor(
-        /**
-         * @summary `modifyOperator`.
-         * @description
-         *
-         * How to apply the change (CMIP `ModifyOperator`; default
-         * `replace`). ITU-T Rec. X.753 (10/97) A.8; X.711.
-         * @public
-         * @readonly
-         */
-        readonly modifyOperator: OPTIONAL<ModifyOperator>,
-        /**
-         * @summary `attributeId`.
-         * @description
-         *
-         * Attribute to modify. Constrained by the
-         * `ModificationLists` TYPE-IDENTIFIER set. ITU-T Rec.
-         * X.753 (10/97) A.8, D.9.
-         * @public
-         * @readonly
-         */
-        readonly attributeId: OBJECT_IDENTIFIER,
-        /**
-         * @summary `attributeValue`.
-         * @description
-         *
-         * New value. Absent when `modifyOperator` is
-         * `setToDefault`. ITU-T Rec. X.753 (10/97) A.8.
-         * @public
-         * @readonly
-         */
-        readonly attributeValue?: OPTIONAL<_Element>
-    ) {}
+        modifyOperator: OPTIONAL<ModifyOperator>,
+        attributeId: OBJECT_IDENTIFIER,
+        attributeValue?: OPTIONAL<_Element>
+    ) {
+        this.modifyOperator = modifyOperator;
+        this.attributeId = attributeId;
+        this.attributeValue = attributeValue;
+    }
 
     /**
      * @summary Restructures an object into a ModificationList_Item

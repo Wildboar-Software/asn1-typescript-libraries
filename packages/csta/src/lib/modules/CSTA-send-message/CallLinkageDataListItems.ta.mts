@@ -2,9 +2,9 @@
 
 import * as $ from "@wildboar/asn1/functional";
 import {
-    SEQUENCE,
-    SET,
-    ASN1Element as _Element,
+    type SEQUENCE,
+    type SET,
+    type ASN1Element as _Element,
     ASN1TagClass as _TagClass,
     ASN1ConstructionError as _ConstructionError
 } from "@wildboar/asn1";
@@ -33,19 +33,23 @@ import { CallLinkageData, _decode_CallLinkageData, _encode_CallLinkageData } fro
  */
 export
 class CallLinkageDataListItems {
+    /**
+     * @summary `callLinkageData`.
+     * @description
+     *
+     * Mandatory. Global call data and thread data for
+     * the corresponding connection (§12.2.5).
+     *
+     * @public
+     * @readonly
+     */
+    public readonly callLinkageData: CallLinkageData;
+
     constructor (
-        /**
-         * @summary `callLinkageData`.
-         * @description
-         *
-         * Mandatory. Global call data and thread data for
-         * the corresponding connection (§12.2.5).
-         *
-         * @public
-         * @readonly
-         */
-        readonly callLinkageData: CallLinkageData
-    ) {}
+        callLinkageData: CallLinkageData
+    ) {
+        this.callLinkageData = callLinkageData;
+    }
 
     /**
      * @summary Restructures an object into a CallLinkageDataListItems

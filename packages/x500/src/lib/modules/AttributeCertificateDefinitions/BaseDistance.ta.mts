@@ -1,5 +1,5 @@
 /* eslint-disable */
-import { ASN1Element as _Element, INTEGER } from "@wildboar/asn1";
+import { ASN1Element as _Element, type INTEGER } from "@wildboar/asn1";
 import * as $ from "@wildboar/asn1/functional";
 
 /**
@@ -17,10 +17,10 @@ import * as $ from "@wildboar/asn1/functional";
 export type BaseDistance = INTEGER;
 
 
-export const _decode_BaseDistance = $._decodeInteger;
+export const _decode_BaseDistance: $.ASN1Decoder<INTEGER> = $._decodeInteger;
 
 
-export const _encode_BaseDistance = $._encodeInteger;
+export const _encode_BaseDistance: $.ASN1Encoder<INTEGER> = $._encodeInteger;
 
 
 /* eslint-enable */

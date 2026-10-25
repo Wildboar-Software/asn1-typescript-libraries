@@ -1,10 +1,10 @@
 /* eslint-disable */
 import {
-    ASN1Element as _Element,
+    type ASN1Element as _Element,
     ASN1TagClass as _TagClass,
-    IA5String,
-    OCTET_STRING,
-    OPTIONAL,
+    type IA5String,
+    type OCTET_STRING,
+    type OPTIONAL,
 } from "@wildboar/asn1";
 import * as $ from "@wildboar/asn1/functional";
 import {
@@ -41,65 +41,77 @@ import {
  *
  */
 export class BiometricData {
+    /**
+     * @summary `typeOfBiometricData`.
+     * @description
+     *
+     * Identifies the biometric data kind: a
+     * `PredefinedBiometricType` (`picture` or
+     * `handwritten-signature`) or an OID
+     * ([RFC 3739 §3.2.5](https://datatracker.ietf.org/doc/html/rfc3739#section-3.2.5)).
+     *
+     * @public
+     * @readonly
+     */
+    public readonly typeOfBiometricData: TypeOfBiometricData;
+    /**
+     * @summary `hashAlgorithm`.
+     * @description
+     *
+     * Algorithm used to compute `biometricDataHash`
+     * ([RFC 3739 §3.2.5](https://datatracker.ietf.org/doc/html/rfc3739#section-3.2.5)).
+     *
+     * @public
+     * @readonly
+     */
+    public readonly hashAlgorithm: AlgorithmIdentifier;
+    /**
+     * @summary `biometricDataHash`.
+     * @description
+     *
+     * Hash of the biometric template (e.g., over the whole
+     * referenced image file for `picture` or
+     * `handwritten-signature`)
+     * ([RFC 3739 §3.2.5](https://datatracker.ietf.org/doc/html/rfc3739#section-3.2.5)).
+     *
+     * @public
+     * @readonly
+     */
+    public readonly biometricDataHash: OCTET_STRING;
+    /**
+     * @summary `sourceDataUri`.
+     * @description
+     *
+     * Optional URI referencing a file with the biometric data
+     * corresponding to this hash. If present, MUST use `http://`
+     * or `https://`. Encoding format of that file is outside this
+     * specification
+     * ([RFC 3739 §3.2.5](https://datatracker.ietf.org/doc/html/rfc3739#section-3.2.5)).
+     *
+     * @public
+     * @readonly
+     */
+    public readonly sourceDataUri?: OPTIONAL<IA5String>;
+    /**
+     * @summary Extensions that are not recognized.
+     * @public
+     * @readonly
+     */
+    public readonly _unrecognizedExtensionsList: _Element[];
+
     constructor(
-        /**
-         * @summary `typeOfBiometricData`.
-         * @description
-         *
-         * Identifies the biometric data kind: a
-         * `PredefinedBiometricType` (`picture` or
-         * `handwritten-signature`) or an OID
-         * ([RFC 3739 §3.2.5](https://datatracker.ietf.org/doc/html/rfc3739#section-3.2.5)).
-         *
-         * @public
-         * @readonly
-         */
-        readonly typeOfBiometricData: TypeOfBiometricData,
-        /**
-         * @summary `hashAlgorithm`.
-         * @description
-         *
-         * Algorithm used to compute `biometricDataHash`
-         * ([RFC 3739 §3.2.5](https://datatracker.ietf.org/doc/html/rfc3739#section-3.2.5)).
-         *
-         * @public
-         * @readonly
-         */
-        readonly hashAlgorithm: AlgorithmIdentifier,
-        /**
-         * @summary `biometricDataHash`.
-         * @description
-         *
-         * Hash of the biometric template (e.g., over the whole
-         * referenced image file for `picture` or
-         * `handwritten-signature`)
-         * ([RFC 3739 §3.2.5](https://datatracker.ietf.org/doc/html/rfc3739#section-3.2.5)).
-         *
-         * @public
-         * @readonly
-         */
-        readonly biometricDataHash: OCTET_STRING,
-        /**
-         * @summary `sourceDataUri`.
-         * @description
-         *
-         * Optional URI referencing a file with the biometric data
-         * corresponding to this hash. If present, MUST use `http://`
-         * or `https://`. Encoding format of that file is outside this
-         * specification
-         * ([RFC 3739 §3.2.5](https://datatracker.ietf.org/doc/html/rfc3739#section-3.2.5)).
-         *
-         * @public
-         * @readonly
-         */
-        readonly sourceDataUri?: OPTIONAL<IA5String>,
-        /**
-         * @summary Extensions that are not recognized.
-         * @public
-         * @readonly
-         */
-        readonly _unrecognizedExtensionsList: _Element[] = []
-    ) {}
+        typeOfBiometricData: TypeOfBiometricData,
+        hashAlgorithm: AlgorithmIdentifier,
+        biometricDataHash: OCTET_STRING,
+        sourceDataUri?: OPTIONAL<IA5String>,
+        _unrecognizedExtensionsList: _Element[] = []
+    ) {
+        this.typeOfBiometricData = typeOfBiometricData;
+        this.hashAlgorithm = hashAlgorithm;
+        this.biometricDataHash = biometricDataHash;
+        this.sourceDataUri = sourceDataUri;
+        this._unrecognizedExtensionsList = _unrecognizedExtensionsList;
+    }
 
     /**
      * @summary Restructures an object into a BiometricData

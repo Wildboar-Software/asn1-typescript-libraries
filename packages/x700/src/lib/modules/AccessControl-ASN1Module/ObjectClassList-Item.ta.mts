@@ -1,8 +1,8 @@
 /* eslint-disable */
 import {
-    OPTIONAL,
-    OBJECT_IDENTIFIER,
-    ASN1Element as _Element,
+    type OPTIONAL,
+    type OBJECT_IDENTIFIER,
+    type ASN1Element as _Element,
     ASN1TagClass as _TagClass,
     ASN1Construction as _Construction,
     ASN1UniversalType as _UniversalType,
@@ -13,7 +13,7 @@ import {
 } from '@wildboar/asn1';
 import * as $ from '@wildboar/asn1/functional';
 import {
-    ObjectClass,
+    type ObjectClass,
     _decode_ObjectClass,
     _encode_ObjectClass,
 } from '@wildboar/cmip';
@@ -35,28 +35,34 @@ import {
  *
  */
 export class ObjectClassList_Item {
+    /**
+     * @summary `objectClass`.
+     * @description
+     *
+     * Protected managed object class. Must be known in the
+     * domain. X.741 A.5.18, A.2.5.
+     * @public
+     * @readonly
+     */
+    public readonly objectClass: ObjectClass;
+    /**
+     * @summary `nameBinding`.
+     * @description
+     *
+     * Optional name binding restricting which instances of
+     * `objectClass` are selected. X.741 A.2.5.
+     * @public
+     * @readonly
+     */
+    public readonly nameBinding?: OPTIONAL<OBJECT_IDENTIFIER>;
+
     constructor(
-        /**
-         * @summary `objectClass`.
-         * @description
-         *
-         * Protected managed object class. Must be known in the
-         * domain. X.741 A.5.18, A.2.5.
-         * @public
-         * @readonly
-         */
-        readonly objectClass: ObjectClass,
-        /**
-         * @summary `nameBinding`.
-         * @description
-         *
-         * Optional name binding restricting which instances of
-         * `objectClass` are selected. X.741 A.2.5.
-         * @public
-         * @readonly
-         */
-        readonly nameBinding?: OPTIONAL<OBJECT_IDENTIFIER>
-    ) {}
+        objectClass: ObjectClass,
+        nameBinding?: OPTIONAL<OBJECT_IDENTIFIER>
+    ) {
+        this.objectClass = objectClass;
+        this.nameBinding = nameBinding;
+    }
 
     /**
      * @summary Restructures an object into a ObjectClassList_Item

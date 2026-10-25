@@ -1,7 +1,7 @@
 /* eslint-disable */
 import {
-    OPTIONAL,
-    ASN1Element as _Element,
+    type OPTIONAL,
+    type ASN1Element as _Element,
     ASN1TagClass as _TagClass,
     ASN1Construction as _Construction,
     ASN1UniversalType as _UniversalType,
@@ -12,12 +12,12 @@ import {
 } from '@wildboar/asn1';
 import * as $ from '@wildboar/asn1/functional';
 import {
-    ObjectInstance,
+    type ObjectInstance,
     _decode_ObjectInstance,
     _encode_ObjectInstance,
 } from '@wildboar/cmip';
 import {
-    AttributeId,
+    type AttributeId,
     _decode_AttributeId,
     _encode_AttributeId,
 } from '@wildboar/cmip';
@@ -38,33 +38,39 @@ import {
  *
  */
 export class ScheduledManagedObjectsList_Item {
+    /**
+     * @summary `objectInstance`.
+     * @description
+     *
+     * SMO instance using this SO. Removed from the list if the
+     * SMO is deleted. ITU-T Rec. X.746 (02/00)
+     * [§7.4](https://www.itu.int/rec/T-REC-X.746-200002-I),
+     * 8.3.2.2.
+     * @public
+     * @readonly
+     */
+    public readonly objectInstance: ObjectInstance;
+    /**
+     * @summary `activity`.
+     * @description
+     *
+     * Identifier of the SMO attribute that describes the
+     * activity being scheduled (e.g. `onDuty` or a derived
+     * attribute). ITU-T Rec. X.746 (02/00)
+     * [§8.3.2.2](https://www.itu.int/rec/T-REC-X.746-200002-I),
+     * 8.4.1.2.
+     * @public
+     * @readonly
+     */
+    public readonly activity?: OPTIONAL<AttributeId>;
+
     constructor(
-        /**
-         * @summary `objectInstance`.
-         * @description
-         *
-         * SMO instance using this SO. Removed from the list if the
-         * SMO is deleted. ITU-T Rec. X.746 (02/00)
-         * [§7.4](https://www.itu.int/rec/T-REC-X.746-200002-I),
-         * 8.3.2.2.
-         * @public
-         * @readonly
-         */
-        readonly objectInstance: ObjectInstance,
-        /**
-         * @summary `activity`.
-         * @description
-         *
-         * Identifier of the SMO attribute that describes the
-         * activity being scheduled (e.g. `onDuty` or a derived
-         * attribute). ITU-T Rec. X.746 (02/00)
-         * [§8.3.2.2](https://www.itu.int/rec/T-REC-X.746-200002-I),
-         * 8.4.1.2.
-         * @public
-         * @readonly
-         */
-        readonly activity?: OPTIONAL<AttributeId>
-    ) {}
+        objectInstance: ObjectInstance,
+        activity?: OPTIONAL<AttributeId>
+    ) {
+        this.objectInstance = objectInstance;
+        this.activity = activity;
+    }
 
     /**
      * @summary Restructures an object into a ScheduledManagedObjectsList_Item

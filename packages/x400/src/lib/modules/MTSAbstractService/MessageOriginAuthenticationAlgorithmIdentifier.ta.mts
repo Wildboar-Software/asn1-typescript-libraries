@@ -1,6 +1,6 @@
 /* eslint-disable */
 import {
-    ASN1Element as _Element,
+    type ASN1Element as _Element,
     ASN1TagClass as _TagClass,
     ASN1Construction as _Construction,
     ASN1UniversalType as _UniversalType,
@@ -31,26 +31,13 @@ import {
  */
 export type MessageOriginAuthenticationAlgorithmIdentifier = AlgorithmIdentifier; // DefinedType
 
-let _cached_decoder_for_MessageOriginAuthenticationAlgorithmIdentifier: $.ASN1Decoder<MessageOriginAuthenticationAlgorithmIdentifier> | null = null;
-
 /**
  * @summary Decodes an ASN.1 element into a(n) MessageOriginAuthenticationAlgorithmIdentifier
  * @function
  * @param {_Element} el The element being decoded.
  * @returns {MessageOriginAuthenticationAlgorithmIdentifier} The decoded data structure.
  */
-export function _decode_MessageOriginAuthenticationAlgorithmIdentifier(
-    el: _Element
-): MessageOriginAuthenticationAlgorithmIdentifier {
-    if (!_cached_decoder_for_MessageOriginAuthenticationAlgorithmIdentifier) {
-        _cached_decoder_for_MessageOriginAuthenticationAlgorithmIdentifier = _decode_AlgorithmIdentifier;
-    }
-    return _cached_decoder_for_MessageOriginAuthenticationAlgorithmIdentifier(
-        el
-    );
-}
-
-let _cached_encoder_for_MessageOriginAuthenticationAlgorithmIdentifier: $.ASN1Encoder<MessageOriginAuthenticationAlgorithmIdentifier> | null = null;
+export const _decode_MessageOriginAuthenticationAlgorithmIdentifier: $.ASN1Decoder<MessageOriginAuthenticationAlgorithmIdentifier> = _decode_AlgorithmIdentifier;
 
 /**
  * @summary Encodes a(n) MessageOriginAuthenticationAlgorithmIdentifier into an ASN.1 Element.
@@ -59,18 +46,7 @@ let _cached_encoder_for_MessageOriginAuthenticationAlgorithmIdentifier: $.ASN1En
  * @param elGetter A function that can be used to get new ASN.1 elements.
  * @returns {_Element} The MessageOriginAuthenticationAlgorithmIdentifier, encoded as an ASN.1 Element.
  */
-export function _encode_MessageOriginAuthenticationAlgorithmIdentifier(
-    value: MessageOriginAuthenticationAlgorithmIdentifier,
-    elGetter: $.ASN1Encoder<MessageOriginAuthenticationAlgorithmIdentifier>
-): _Element {
-    if (!_cached_encoder_for_MessageOriginAuthenticationAlgorithmIdentifier) {
-        _cached_encoder_for_MessageOriginAuthenticationAlgorithmIdentifier = _encode_AlgorithmIdentifier;
-    }
-    return _cached_encoder_for_MessageOriginAuthenticationAlgorithmIdentifier(
-        value,
-        elGetter
-    );
-}
+export const _encode_MessageOriginAuthenticationAlgorithmIdentifier: $.ASN1Encoder<MessageOriginAuthenticationAlgorithmIdentifier> = _encode_AlgorithmIdentifier;
 
 
 /* eslint-enable */

@@ -48,7 +48,7 @@ class SMR_Bind_Confirm {
      * @public
      * @readonly
      */
-    readonly _unrecognizedExtensionsList: _Element[];
+    public readonly _unrecognizedExtensionsList: _Element[];
 
     constructor (
         _unrecognizedExtensionsList: _Element[] = []

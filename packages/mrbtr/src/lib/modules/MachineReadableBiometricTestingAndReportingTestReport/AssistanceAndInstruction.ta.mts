@@ -1,6 +1,6 @@
 /* eslint-disable */
 import {
-    ASN1Element as _Element,
+    type ASN1Element as _Element,
     ASN1TagClass as _TagClass,
     ASN1Construction as _Construction,
     ASN1UniversalType as _UniversalType,
@@ -36,42 +36,50 @@ import { InstructionMode, _enum_for_InstructionMode, _decode_InstructionMode, _e
  */
 export
 class AssistanceAndInstruction {
+    /**
+     * @summary `assistanceLocation`.
+     * @description
+     *
+     * Before and separate from the transaction, during/interactively
+     * with it, or after a failure (Clause 6.5.2, Annex C.3).
+     *
+     * @public
+     * @readonly
+     */
+    public readonly assistanceLocation: AssistanceLocation;
+    /**
+     * @summary `assistanceMode`.
+     * @description
+     *
+     * How assistance was provided: physical, audio-only,
+     * audio-video, none, or video-only (Clause 6.5.2). Annex C.3
+     * describes this as human assistance to the subject.
+     *
+     * @public
+     * @readonly
+     */
+    public readonly assistanceMode: AssistanceMode;
+    /**
+     * @summary `instructionMode`.
+     * @description
+     *
+     * Written manual, poster, video, or personal (Clause 6.5.2).
+     * `video` covers slides or other sets of static images.
+     *
+     * @public
+     * @readonly
+     */
+    public readonly instructionMode: InstructionMode;
+
     constructor (
-        /**
-         * @summary `assistanceLocation`.
-         * @description
-         *
-         * Before and separate from the transaction, during/interactively
-         * with it, or after a failure (Clause 6.5.2, Annex C.3).
-         *
-         * @public
-         * @readonly
-         */
-        readonly assistanceLocation: AssistanceLocation,
-        /**
-         * @summary `assistanceMode`.
-         * @description
-         *
-         * How assistance was provided: physical, audio-only,
-         * audio-video, none, or video-only (Clause 6.5.2). Annex C.3
-         * describes this as human assistance to the subject.
-         *
-         * @public
-         * @readonly
-         */
-        readonly assistanceMode: AssistanceMode,
-        /**
-         * @summary `instructionMode`.
-         * @description
-         *
-         * Written manual, poster, video, or personal (Clause 6.5.2).
-         * `video` covers slides or other sets of static images.
-         *
-         * @public
-         * @readonly
-         */
-        readonly instructionMode: InstructionMode
-    ) {}
+        assistanceLocation: AssistanceLocation,
+        assistanceMode: AssistanceMode,
+        instructionMode: InstructionMode
+    ) {
+        this.assistanceLocation = assistanceLocation;
+        this.assistanceMode = assistanceMode;
+        this.instructionMode = instructionMode;
+    }
 
     /**
      * @summary Restructures an object into a AssistanceAndInstruction
@@ -95,19 +103,19 @@ class AssistanceAndInstruction {
          * @static
          */
 
-    public static _enum_for_assistanceLocation = _enum_for_AssistanceLocation;        /**
+    public static _enum_for_assistanceLocation: typeof _enum_for_AssistanceLocation = _enum_for_AssistanceLocation;        /**
          * @summary The enum used as the type of the component `assistanceMode`
          * @public
          * @static
          */
 
-    public static _enum_for_assistanceMode = _enum_for_AssistanceMode;        /**
+    public static _enum_for_assistanceMode: typeof _enum_for_AssistanceMode = _enum_for_AssistanceMode;        /**
          * @summary The enum used as the type of the component `instructionMode`
          * @public
          * @static
          */
 
-    public static _enum_for_instructionMode = _enum_for_InstructionMode;
+    public static _enum_for_instructionMode: typeof _enum_for_InstructionMode = _enum_for_InstructionMode;
 }
 
 /**

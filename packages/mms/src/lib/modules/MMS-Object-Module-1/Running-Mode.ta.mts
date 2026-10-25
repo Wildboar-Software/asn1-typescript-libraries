@@ -1,7 +1,7 @@
 /* eslint-disable */
 import {
-    INTEGER,
-    ASN1Element as _Element,
+    type INTEGER,
+    type ASN1Element as _Element,
     ASN1TagClass as _TagClass,
     ASN1Construction as _Construction,
     ASN1UniversalType as _UniversalType,
@@ -48,7 +48,7 @@ type Running_Mode = INTEGER;
  * @type {number}
  */
 export
-const Running_Mode_free_run: Running_Mode = 0; /* LONG_NAMED_INTEGER_VALUE */
+const Running_Mode_free_run: 0 = 0 satisfies Running_Mode; /* LONG_NAMED_INTEGER_VALUE */
 
 /**
  * @summary Running_Mode_free_run
@@ -61,7 +61,7 @@ const Running_Mode_free_run: Running_Mode = 0; /* LONG_NAMED_INTEGER_VALUE */
  * @type {number}
  */
 export
-const free_run: Running_Mode = Running_Mode_free_run; /* SHORT_NAMED_INTEGER_VALUE */
+const free_run: 0 = Running_Mode_free_run; /* SHORT_NAMED_INTEGER_VALUE */
 
 /**
  * @summary Running_Mode_cycle_limited
@@ -74,7 +74,7 @@ const free_run: Running_Mode = Running_Mode_free_run; /* SHORT_NAMED_INTEGER_VAL
  * @type {number}
  */
 export
-const Running_Mode_cycle_limited: Running_Mode = 1; /* LONG_NAMED_INTEGER_VALUE */
+const Running_Mode_cycle_limited: 1 = 1 satisfies Running_Mode; /* LONG_NAMED_INTEGER_VALUE */
 
 /**
  * @summary Running_Mode_cycle_limited
@@ -87,7 +87,7 @@ const Running_Mode_cycle_limited: Running_Mode = 1; /* LONG_NAMED_INTEGER_VALUE 
  * @type {number}
  */
 export
-const cycle_limited: Running_Mode = Running_Mode_cycle_limited; /* SHORT_NAMED_INTEGER_VALUE */
+const cycle_limited: 1 = Running_Mode_cycle_limited; /* SHORT_NAMED_INTEGER_VALUE */
 
 /**
  * @summary Running_Mode_step_limited
@@ -100,7 +100,7 @@ const cycle_limited: Running_Mode = Running_Mode_cycle_limited; /* SHORT_NAMED_I
  * @type {number}
  */
 export
-const Running_Mode_step_limited: Running_Mode = 2; /* LONG_NAMED_INTEGER_VALUE */
+const Running_Mode_step_limited: 2 = 2 satisfies Running_Mode; /* LONG_NAMED_INTEGER_VALUE */
 
 /**
  * @summary Running_Mode_step_limited
@@ -113,9 +113,9 @@ const Running_Mode_step_limited: Running_Mode = 2; /* LONG_NAMED_INTEGER_VALUE *
  * @type {number}
  */
 export
-const step_limited: Running_Mode = Running_Mode_step_limited; /* SHORT_NAMED_INTEGER_VALUE */
-export const _decode_Running_Mode = $._decodeInteger;
-export const _encode_Running_Mode = $._encodeInteger;
+const step_limited: 2 = Running_Mode_step_limited; /* SHORT_NAMED_INTEGER_VALUE */
+export const _decode_Running_Mode: $.ASN1Decoder<INTEGER> = $._decodeInteger;
+export const _encode_Running_Mode: $.ASN1Encoder<INTEGER> = $._encodeInteger;
 
 
 /* eslint-enable */

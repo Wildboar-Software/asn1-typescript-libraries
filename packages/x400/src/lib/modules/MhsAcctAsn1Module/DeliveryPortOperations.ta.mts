@@ -1,6 +1,6 @@
 /* eslint-disable */
 import {
-    ASN1Element as _Element,
+    type ASN1Element as _Element,
     ASN1TagClass as _TagClass,
     ASN1Construction as _Construction,
     ASN1UniversalType as _UniversalType,
@@ -11,7 +11,7 @@ import {
 } from '@wildboar/asn1';
 import * as $ from '@wildboar/asn1/functional';
 import {
-    EventTypeId,
+    type EventTypeId,
     _decode_EventTypeId,
     _encode_EventTypeId,
 } from '@wildboar/cmip';
@@ -30,22 +30,13 @@ import {
  */
 export type DeliveryPortOperations = EventTypeId; // DefinedType
 
-let _cached_decoder_for_DeliveryPortOperations: $.ASN1Decoder<DeliveryPortOperations> | null = null;
-
 /**
  * @summary Decodes an ASN.1 element into a(n) DeliveryPortOperations
  * @function
  * @param {_Element} el The element being decoded.
  * @returns {DeliveryPortOperations} The decoded data structure.
  */
-export function _decode_DeliveryPortOperations(el: _Element): DeliveryPortOperations {
-    if (!_cached_decoder_for_DeliveryPortOperations) {
-        _cached_decoder_for_DeliveryPortOperations = _decode_EventTypeId;
-    }
-    return _cached_decoder_for_DeliveryPortOperations(el);
-}
-
-let _cached_encoder_for_DeliveryPortOperations: $.ASN1Encoder<DeliveryPortOperations> | null = null;
+export const _decode_DeliveryPortOperations: $.ASN1Decoder<DeliveryPortOperations> = _decode_EventTypeId;
 
 /**
  * @summary Encodes a(n) DeliveryPortOperations into an ASN.1 Element.
@@ -54,15 +45,7 @@ let _cached_encoder_for_DeliveryPortOperations: $.ASN1Encoder<DeliveryPortOperat
  * @param elGetter A function that can be used to get new ASN.1 elements.
  * @returns {_Element} The DeliveryPortOperations, encoded as an ASN.1 Element.
  */
-export function _encode_DeliveryPortOperations(
-    value: DeliveryPortOperations,
-    elGetter: $.ASN1Encoder<DeliveryPortOperations>
-): _Element {
-    if (!_cached_encoder_for_DeliveryPortOperations) {
-        _cached_encoder_for_DeliveryPortOperations = _encode_EventTypeId;
-    }
-    return _cached_encoder_for_DeliveryPortOperations(value, elGetter);
-}
+export const _encode_DeliveryPortOperations: $.ASN1Encoder<DeliveryPortOperations> = _encode_EventTypeId;
 
 
 /* eslint-enable */

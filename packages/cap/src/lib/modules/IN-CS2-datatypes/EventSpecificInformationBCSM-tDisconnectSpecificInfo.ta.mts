@@ -1,7 +1,7 @@
 /* eslint-disable */
 import {
-    OPTIONAL,
-    ASN1Element as _Element,
+    type OPTIONAL,
+    type ASN1Element as _Element,
     ASN1TagClass as _TagClass,
     ASN1Construction as _Construction,
     ASN1UniversalType as _UniversalType,
@@ -11,8 +11,8 @@ import {
     ASN1ConstructionError as _ConstructionError,
 } from "@wildboar/asn1";
 import * as $ from "@wildboar/asn1/functional";
-import { Cause, _decode_Cause, _encode_Cause } from "../IN-CS2-datatypes/Cause.ta.mjs";
-import { Integer4, _decode_Integer4, _encode_Integer4 } from "../IN-CS2-datatypes/Integer4.ta.mjs";
+import { type Cause, _decode_Cause, _encode_Cause } from "../IN-CS2-datatypes/Cause.ta.mjs";
+import { type Integer4, _decode_Integer4, _encode_Integer4 } from "../IN-CS2-datatypes/Integer4.ta.mjs";
 
 
 /**
@@ -33,26 +33,34 @@ import { Integer4, _decode_Integer4, _encode_Integer4 } from "../IN-CS2-datatype
  */
 export
 class EventSpecificInformationBCSM_tDisconnectSpecificInfo {
+    /**
+     * @summary `releaseCause`.
+     * @public
+     * @readonly
+     */
+    public readonly releaseCause?: OPTIONAL<Cause>;
+    /**
+     * @summary `connectTime`.
+     * @public
+     * @readonly
+     */
+    public readonly connectTime?: OPTIONAL<Integer4>;
+    /**
+     * @summary Extensions that are not recognized.
+     * @public
+     * @readonly
+     */
+    public readonly _unrecognizedExtensionsList: _Element[];
+
     constructor (
-        /**
-         * @summary `releaseCause`.
-         * @public
-         * @readonly
-         */
-        readonly releaseCause?: OPTIONAL<Cause>,
-        /**
-         * @summary `connectTime`.
-         * @public
-         * @readonly
-         */
-        readonly connectTime?: OPTIONAL<Integer4>,
-        /**
-         * @summary Extensions that are not recognized.
-         * @public
-         * @readonly
-         */
-        readonly _unrecognizedExtensionsList: _Element[] = []
-    ) {}
+        releaseCause?: OPTIONAL<Cause>,
+        connectTime?: OPTIONAL<Integer4>,
+        _unrecognizedExtensionsList: _Element[] = []
+    ) {
+        this.releaseCause = releaseCause;
+        this.connectTime = connectTime;
+        this._unrecognizedExtensionsList = _unrecognizedExtensionsList;
+    }
 
     /**
      * @summary Restructures an object into a EventSpecificInformationBCSM_tDisconnectSpecificInfo

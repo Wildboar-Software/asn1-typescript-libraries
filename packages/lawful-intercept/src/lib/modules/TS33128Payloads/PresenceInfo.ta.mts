@@ -1,7 +1,7 @@
 /* eslint-disable */
 import {
-    OPTIONAL,
-    ASN1Element as _Element,
+    type OPTIONAL,
+    type ASN1Element as _Element,
     ASN1TagClass as _TagClass
 } from "@wildboar/asn1";
 import * as $ from "@wildboar/asn1/functional";
@@ -175,7 +175,7 @@ class PresenceInfo {
          * @static
          */
 
-    public static _enum_for_presenceState = _enum_for_PresenceState;
+    public static _enum_for_presenceState: typeof _enum_for_PresenceState = _enum_for_PresenceState;
 }
 
 /**

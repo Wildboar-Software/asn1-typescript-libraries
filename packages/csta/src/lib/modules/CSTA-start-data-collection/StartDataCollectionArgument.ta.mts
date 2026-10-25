@@ -2,13 +2,13 @@
 
 import * as $ from "@wildboar/asn1/functional";
 import {
-    OPTIONAL,
-    SEQUENCE,
-    SET,
-    ASN1Element as _Element,
+    type OPTIONAL,
+    type SEQUENCE,
+    type SET,
+    type ASN1Element as _Element,
     ASN1TagClass as _TagClass
 } from "@wildboar/asn1";
-import { CallObject, _decode_CallObject, _encode_CallObject } from "../CSTA-start-data-collection/CallObject.ta.mjs";
+import { type CallObject, _decode_CallObject, _encode_CallObject } from "../CSTA-start-data-collection/CallObject.ta.mjs";
 
 import {
     DataCollType,
@@ -39,8 +39,8 @@ import { CSTACommonArguments, _decode_CSTACommonArguments, _encode_CSTACommonArg
  * ```asn1
  * StartDataCollectionArgument ::= SEQUENCE
  * {    object                CallObject,
- *     dataCollType            DataCollType                OPTIONAL,
- *     digitsReportingCriteria        DigitsReportingCriteria            OPTIONAL,
+ *     dataCollType            DataCollType                type OPTIONAL,
+ *     digitsReportingCriteria        DigitsReportingCriteria            type OPTIONAL,
  *     extensions             CSTACommonArguments             OPTIONAL }
  * ```
  * 
@@ -48,49 +48,59 @@ import { CSTACommonArguments, _decode_CSTACommonArguments, _encode_CSTACommonArg
  */
 export
 class StartDataCollectionArgument {
+    /**
+     * @summary `object`.
+     * @description
+     *
+     * Device (next connection) or specific connection (ECMA-269 §25.1.5.1).
+     *
+     * @public
+     * @readonly
+     */
+    public readonly object: CallObject;
+    /**
+     * @summary `dataCollType`.
+     * @description
+     *
+     * Digits or telephony tones (ECMA-269 §25.1.5.1).
+     *
+     * @public
+     * @readonly
+     */
+    public readonly dataCollType?: OPTIONAL<DataCollType>;
+    /**
+     * @summary `digitsReportingCriteria`.
+     * @description
+     *
+     * Only when `dataCollType` is digits (ECMA-269 §25.1.5.1).
+     *
+     * @public
+     * @readonly
+     */
+    public readonly digitsReportingCriteria?: OPTIONAL<DigitsReportingCriteria>;
+    /**
+     * @summary `extensions`.
+     * @description
+     *
+     * CSTACommonArguments carrying the service-table security and
+     * privateData parameters.
+     *
+     * @public
+     * @readonly
+     */
+    public readonly extensions?: OPTIONAL<CSTACommonArguments>;
+
     constructor (
-        /**
-         * @summary `object`.
-         * @description
-         *
-         * Device (next connection) or specific connection (ECMA-269 §25.1.5.1).
-         *
-         * @public
-         * @readonly
-         */
-        readonly object: CallObject,
-        /**
-         * @summary `dataCollType`.
-         * @description
-         *
-         * Digits or telephony tones (ECMA-269 §25.1.5.1).
-         *
-         * @public
-         * @readonly
-         */
-        readonly dataCollType?: OPTIONAL<DataCollType>,
-        /**
-         * @summary `digitsReportingCriteria`.
-         * @description
-         *
-         * Only when `dataCollType` is digits (ECMA-269 §25.1.5.1).
-         *
-         * @public
-         * @readonly
-         */
-        readonly digitsReportingCriteria?: OPTIONAL<DigitsReportingCriteria>,
-        /**
-         * @summary `extensions`.
-         * @description
-         *
-         * CSTACommonArguments carrying the service-table security and
-         * privateData parameters.
-         *
-         * @public
-         * @readonly
-         */
-        readonly extensions?: OPTIONAL<CSTACommonArguments>
-    ) {}
+        object: CallObject,
+        dataCollType?: OPTIONAL<DataCollType>,
+        digitsReportingCriteria?: OPTIONAL<DigitsReportingCriteria>,
+        extensions?: OPTIONAL<CSTACommonArguments>
+    ) {
+        this.object = object;
+        this.dataCollType = dataCollType;
+        this.digitsReportingCriteria = digitsReportingCriteria;
+        this.extensions = extensions;
+    }
 
     /**
      * @summary Restructures an object into a StartDataCollectionArgument
@@ -114,7 +124,7 @@ class StartDataCollectionArgument {
          * @static
          */
 
-    public static _enum_for_dataCollType = _enum_for_DataCollType;
+    public static _enum_for_dataCollType: typeof _enum_for_DataCollType = _enum_for_DataCollType;
 }
 
 /**

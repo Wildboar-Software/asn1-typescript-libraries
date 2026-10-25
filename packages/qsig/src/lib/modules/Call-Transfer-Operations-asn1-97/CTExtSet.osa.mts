@@ -1,5 +1,5 @@
 /* eslint-disable */
-import { EXTENSION } from "../Manufacturer-specific-service-extension-class-asn1-97/EXTENSION.oca.mjs";
+import { type EXTENSION } from "../Manufacturer-specific-service-extension-class-asn1-97/EXTENSION.oca.mjs";
 
 /**
  * @summary CTExtSet

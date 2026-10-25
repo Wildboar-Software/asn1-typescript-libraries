@@ -1,11 +1,11 @@
 /* eslint-disable */
 import {
-    OPTIONAL,
-    ASN1Element as _Element,
+    type OPTIONAL,
+    type ASN1Element as _Element,
     ASN1TagClass as _TagClass
 } from "@wildboar/asn1";
 import * as $ from "@wildboar/asn1/functional";
-import { GSN_Address, _decode_GSN_Address, _encode_GSN_Address } from "../MAP-CommonDataTypes/GSN-Address.ta.mjs";
+import { type GSN_Address, _decode_GSN_Address, _encode_GSN_Address } from "../MAP-CommonDataTypes/GSN-Address.ta.mjs";
 import { ExtensionContainer, _decode_ExtensionContainer, _encode_ExtensionContainer } from "../MAP-ExtensionDataTypes/ExtensionContainer.ta.mjs";
 
 
@@ -21,8 +21,8 @@ import { ExtensionContainer, _decode_ExtensionContainer, _encode_ExtensionContai
  * 
  * ```asn1
  * FailureReportRes ::= SEQUENCE {
- *     ggsn-Address    [0] GSN-Address    OPTIONAL,
- *     extensionContainer    [1] ExtensionContainer    OPTIONAL,
+ *     ggsn-Address    [0] GSN-Address    type OPTIONAL,
+ *     extensionContainer    [1] ExtensionContainer    type OPTIONAL,
  *     ...}
  * ```
  * 
@@ -30,31 +30,39 @@ import { ExtensionContainer, _decode_ExtensionContainer, _encode_ExtensionContai
  */
 export
 class FailureReportRes {
+    /**
+     * @summary `ggsn_Address`.
+     * @description
+     *
+     * GGSN IP-address as defined in 3GPP TS 23.003 (3GPP TS 29.002 V19.1.0
+     * clauses 13.2.2 and 7.6.2.40).
+     *
+     * @public
+     * @readonly
+     */
+    public readonly ggsn_Address?: OPTIONAL<GSN_Address>;
+    /**
+     * @summary `extensionContainer`.
+     * @public
+     * @readonly
+     */
+    public readonly extensionContainer?: OPTIONAL<ExtensionContainer>;
+    /**
+     * @summary Extensions that are not recognized.
+     * @public
+     * @readonly
+     */
+    public readonly _unrecognizedExtensionsList: _Element[];
+
     constructor (
-        /**
-         * @summary `ggsn_Address`.
-         * @description
-         *
-         * GGSN IP-address as defined in 3GPP TS 23.003 (3GPP TS 29.002 V19.1.0
-         * clauses 13.2.2 and 7.6.2.40).
-         *
-         * @public
-         * @readonly
-         */
-        readonly ggsn_Address?: OPTIONAL<GSN_Address>,
-        /**
-         * @summary `extensionContainer`.
-         * @public
-         * @readonly
-         */
-        readonly extensionContainer?: OPTIONAL<ExtensionContainer>,
-        /**
-         * @summary Extensions that are not recognized.
-         * @public
-         * @readonly
-         */
-        readonly _unrecognizedExtensionsList: _Element[] = []
-    ) {}
+        ggsn_Address?: OPTIONAL<GSN_Address>,
+        extensionContainer?: OPTIONAL<ExtensionContainer>,
+        _unrecognizedExtensionsList: _Element[] = []
+    ) {
+        this.ggsn_Address = ggsn_Address;
+        this.extensionContainer = extensionContainer;
+        this._unrecognizedExtensionsList = _unrecognizedExtensionsList;
+    }
 
     /**
      * @summary Restructures an object into a FailureReportRes

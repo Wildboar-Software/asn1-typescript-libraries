@@ -1,7 +1,7 @@
 /* eslint-disable */
 import {
-  OPTIONAL,
-  UTF8String,
+  type OPTIONAL,
+  type UTF8String,
   ASN1Element as _Element,
   ASN1TagClass as _TagClass,
   ASN1Construction as _Construction,
@@ -13,7 +13,7 @@ import {
 } from '@wildboar/asn1';
 import * as $ from '@wildboar/asn1/functional';
 import {
-  CVStatusCode,
+  type CVStatusCode,
   _enum_for_CVStatusCode,
   CVStatusCode_okay /* IMPORTED_LONG_ENUMERATION_ITEM */,
   _decode_CVStatusCode,
@@ -37,28 +37,34 @@ import {
  *
  */
 export class ResponseStatus {
+  /**
+   * @summary `statusCode`.
+   * @description
+   *
+   * `CVStatusCode` for the whole request ([RFC 5055 §4.4](https://datatracker.ietf.org/doc/html/rfc5055#section-4.4)).
+   *
+   * @public
+   * @readonly
+   */
+  public readonly statusCode?: OPTIONAL<CVStatusCode>;
+  /**
+   * @summary `errorMessage`.
+   * @description
+   *
+   * Optional human-readable UTF-8 status text ([RFC 5055 §4.4](https://datatracker.ietf.org/doc/html/rfc5055#section-4.4)).
+   *
+   * @public
+   * @readonly
+   */
+  public readonly errorMessage?: OPTIONAL<UTF8String>;
+
   constructor(
-    /**
-     * @summary `statusCode`.
-     * @description
-     *
-     * `CVStatusCode` for the whole request ([RFC 5055 §4.4](https://datatracker.ietf.org/doc/html/rfc5055#section-4.4)).
-     *
-     * @public
-     * @readonly
-     */
-    readonly statusCode?: OPTIONAL<CVStatusCode>,
-    /**
-     * @summary `errorMessage`.
-     * @description
-     *
-     * Optional human-readable UTF-8 status text ([RFC 5055 §4.4](https://datatracker.ietf.org/doc/html/rfc5055#section-4.4)).
-     *
-     * @public
-     * @readonly
-     */
-    readonly errorMessage?: OPTIONAL<UTF8String>
-  ) {}
+    statusCode?: OPTIONAL<CVStatusCode>,
+    errorMessage?: OPTIONAL<UTF8String>
+  ) {
+    this.statusCode = statusCode;
+    this.errorMessage = errorMessage;
+  }
 
   /**
    * @summary Restructures an object into a ResponseStatus
@@ -93,7 +99,7 @@ export class ResponseStatus {
    * @static
    */
 
-  public static _enum_for_statusCode = _enum_for_CVStatusCode;
+  public static _enum_for_statusCode: typeof _enum_for_CVStatusCode = _enum_for_CVStatusCode;
 }
 
 /**

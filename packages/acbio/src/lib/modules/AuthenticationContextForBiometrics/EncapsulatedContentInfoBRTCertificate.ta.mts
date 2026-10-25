@@ -1,6 +1,6 @@
 /* eslint-disable */
 import {
-    ASN1Element as _Element,
+    type ASN1Element as _Element,
     ASN1TagClass as _TagClass,
     ASN1Construction as _Construction,
     ASN1UniversalType as _UniversalType,
@@ -25,20 +25,26 @@ import * as $ from '@wildboar/asn1/functional';
  *
  */
 export class EncapsulatedContentInfoBRTCertificate {
+    /**
+     * @summary `eContentType`.
+     * @public
+     * @readonly
+     */
+    public readonly eContentType: _Element; /* COULD_NOT_RESOLVE_OBJECT_CLASS_DEF */
+    /**
+     * @summary `eContent`.
+     * @public
+     * @readonly
+     */
+    public readonly eContent: _Element; /* COULD_NOT_RESOLVE_OBJECT_CLASS_DEF */
+
     constructor(
-        /**
-         * @summary `eContentType`.
-         * @public
-         * @readonly
-         */
-        readonly eContentType: _Element /* COULD_NOT_RESOLVE_OBJECT_CLASS_DEF */,
-        /**
-         * @summary `eContent`.
-         * @public
-         * @readonly
-         */
-        readonly eContent: _Element /* COULD_NOT_RESOLVE_OBJECT_CLASS_DEF */
-    ) {}
+        eContentType: _Element,
+        eContent: _Element
+    ) {
+        this.eContentType = eContentType;
+        this.eContent = eContent;
+    }
 
     /**
      * @summary Restructures an object into a EncapsulatedContentInfoBRTCertificate

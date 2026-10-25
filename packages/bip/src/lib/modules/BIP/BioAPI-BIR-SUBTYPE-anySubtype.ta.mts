@@ -1,6 +1,6 @@
 /* eslint-disable */
 import {
-  BIT_STRING,
+  type BIT_STRING,
   ASN1Element as _Element,
   ASN1TagClass as _TagClass,
   ASN1Construction as _Construction,
@@ -132,12 +132,12 @@ export const littleFinger: number = BioAPI_BIR_SUBTYPE_anySubtype_littleFinger; 
 
 
 
-export const _decode_BioAPI_BIR_SUBTYPE_anySubtype = $._decodeBitString;
+export const _decode_BioAPI_BIR_SUBTYPE_anySubtype: $.ASN1Decoder<BIT_STRING> = $._decodeBitString;
 
 
 
 
-export const _encode_BioAPI_BIR_SUBTYPE_anySubtype = $._encodeBitString;
+export const _encode_BioAPI_BIR_SUBTYPE_anySubtype: $.ASN1Encoder<BIT_STRING> = $._encodeBitString;
 
 
 /* eslint-enable */

@@ -7,7 +7,7 @@ import {
     _encode_OtherRevocationInfoFormat,
 } from "../CryptographicMessageSyntax-2010/OtherRevocationInfoFormat.ta.mjs";
 import {
-    CertificateList,
+    type CertificateList,
     _decode_CertificateList,
     _encode_CertificateList,
 } from "@wildboar/x500/AuthenticationFramework";

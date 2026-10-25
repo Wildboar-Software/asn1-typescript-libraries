@@ -1,7 +1,7 @@
 /* eslint-disable */
 import {
-    OPTIONAL,
-    ASN1Element as _Element,
+    type OPTIONAL,
+    type ASN1Element as _Element,
     ASN1TagClass as _TagClass,
     ASN1Construction as _Construction,
     ASN1UniversalType as _UniversalType,
@@ -12,12 +12,12 @@ import {
 } from '@wildboar/asn1';
 import * as $ from '@wildboar/asn1/functional';
 import {
-    SequenceNumber,
+    type SequenceNumber,
     _decode_SequenceNumber,
     _encode_SequenceNumber,
 } from '../MSAbstractService/SequenceNumber.ta.mjs';
 import {
-    MSExtensions,
+    type MSExtensions,
     _decode_MSExtensions,
     _encode_MSExtensions,
 } from '../MSAbstractService/MSExtensions.ta.mjs';
@@ -40,20 +40,26 @@ import {
  *
  */
 export class ModifyResult {
+    /**
+     * @summary `entries_modified`.
+     * @public
+     * @readonly
+     */
+    public readonly entries_modified?: OPTIONAL<SequenceNumber[]>;
+    /**
+     * @summary `modify_result_extensions`.
+     * @public
+     * @readonly
+     */
+    public readonly modify_result_extensions?: OPTIONAL<MSExtensions>;
+
     constructor(
-        /**
-         * @summary `entries_modified`.
-         * @public
-         * @readonly
-         */
-        readonly entries_modified?: OPTIONAL<SequenceNumber[]>,
-        /**
-         * @summary `modify_result_extensions`.
-         * @public
-         * @readonly
-         */
-        readonly modify_result_extensions?: OPTIONAL<MSExtensions>
-    ) {}
+        entries_modified?: OPTIONAL<SequenceNumber[]>,
+        modify_result_extensions?: OPTIONAL<MSExtensions>
+    ) {
+        this.entries_modified = entries_modified;
+        this.modify_result_extensions = modify_result_extensions;
+    }
 
     /**
      * @summary Restructures an object into a ModifyResult

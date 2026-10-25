@@ -1,15 +1,15 @@
 /* eslint-disable */
 import {
-    NULL,
-    OPTIONAL,
-    ASN1Element as _Element,
+    type NULL,
+    type OPTIONAL,
+    type ASN1Element as _Element,
     ASN1TagClass as _TagClass
 } from "@wildboar/asn1";
 import * as $ from "@wildboar/asn1/functional";
 import { ExtensionContainer, _decode_ExtensionContainer, _encode_ExtensionContainer } from "../MAP-ExtensionDataTypes/ExtensionContainer.ta.mjs";
-import { Ext_CallBarFeatureList, _decode_Ext_CallBarFeatureList, _encode_Ext_CallBarFeatureList } from "../MAP-MS-DataTypes/Ext-CallBarFeatureList.ta.mjs";
-import { WrongPasswordAttemptsCounter, _decode_WrongPasswordAttemptsCounter, _encode_WrongPasswordAttemptsCounter } from "../MAP-MS-DataTypes/WrongPasswordAttemptsCounter.ta.mjs";
-import { Password, _decode_Password, _encode_Password } from "../MAP-SS-DataTypes/Password.ta.mjs";
+import { type Ext_CallBarFeatureList, _decode_Ext_CallBarFeatureList, _encode_Ext_CallBarFeatureList } from "../MAP-MS-DataTypes/Ext-CallBarFeatureList.ta.mjs";
+import { type WrongPasswordAttemptsCounter, _decode_WrongPasswordAttemptsCounter, _encode_WrongPasswordAttemptsCounter } from "../MAP-MS-DataTypes/WrongPasswordAttemptsCounter.ta.mjs";
+import { type Password, _decode_Password, _encode_Password } from "../MAP-SS-DataTypes/Password.ta.mjs";
 
 
 /**
@@ -24,10 +24,10 @@ import { Password, _decode_Password, _encode_Password } from "../MAP-SS-DataType
  * ```asn1
  * CallBarringData ::= SEQUENCE {
  *     callBarringFeatureList    Ext-CallBarFeatureList,
- *     password    Password    OPTIONAL,
- *     wrongPasswordAttemptsCounter    WrongPasswordAttemptsCounter    OPTIONAL,
- *     notificationToCSE    NULL    OPTIONAL,
- *     extensionContainer    ExtensionContainer    OPTIONAL,
+ *     password    Password    type OPTIONAL,
+ *     wrongPasswordAttemptsCounter    WrongPasswordAttemptsCounter    type OPTIONAL,
+ *     notificationToCSE    NULL    type OPTIONAL,
+ *     extensionContainer    ExtensionContainer    type OPTIONAL,
  *     ...}
  * ```
  * 
@@ -35,53 +35,67 @@ import { Password, _decode_Password, _encode_Password } from "../MAP-SS-DataType
  */
 export
 class CallBarringData {
+    /**
+     * @summary `callBarringFeatureList`.
+     * @description
+     *
+     * Extensible call barring feature list (3GPP TS 29.002 V19.1.0 clause
+     * 7.6.3.83).
+     *
+     * @public
+     * @readonly
+     */
+    public readonly callBarringFeatureList: Ext_CallBarFeatureList;
+    /**
+     * @summary `password`.
+     * @public
+     * @readonly
+     */
+    public readonly password?: OPTIONAL<Password>;
+    /**
+     * @summary `wrongPasswordAttemptsCounter`.
+     * @public
+     * @readonly
+     */
+    public readonly wrongPasswordAttemptsCounter?: OPTIONAL<WrongPasswordAttemptsCounter>;
+    /**
+     * @summary `notificationToCSE`.
+     * @description
+     *
+     * Notification to CSE flag (3GPP TS 29.002 V19.1.0 clause 7.6.3.83).
+     *
+     * @public
+     * @readonly
+     */
+    public readonly notificationToCSE?: OPTIONAL<NULL>;
+    /**
+     * @summary `extensionContainer`.
+     * @public
+     * @readonly
+     */
+    public readonly extensionContainer?: OPTIONAL<ExtensionContainer>;
+    /**
+     * @summary Extensions that are not recognized.
+     * @public
+     * @readonly
+     */
+    public readonly _unrecognizedExtensionsList: _Element[];
+
     constructor (
-        /**
-         * @summary `callBarringFeatureList`.
-         * @description
-         *
-         * Extensible call barring feature list (3GPP TS 29.002 V19.1.0 clause
-         * 7.6.3.83).
-         *
-         * @public
-         * @readonly
-         */
-        readonly callBarringFeatureList: Ext_CallBarFeatureList,
-        /**
-         * @summary `password`.
-         * @public
-         * @readonly
-         */
-        readonly password?: OPTIONAL<Password>,
-        /**
-         * @summary `wrongPasswordAttemptsCounter`.
-         * @public
-         * @readonly
-         */
-        readonly wrongPasswordAttemptsCounter?: OPTIONAL<WrongPasswordAttemptsCounter>,
-        /**
-         * @summary `notificationToCSE`.
-         * @description
-         *
-         * Notification to CSE flag (3GPP TS 29.002 V19.1.0 clause 7.6.3.83).
-         *
-         * @public
-         * @readonly
-         */
-        readonly notificationToCSE?: OPTIONAL<NULL>,
-        /**
-         * @summary `extensionContainer`.
-         * @public
-         * @readonly
-         */
-        readonly extensionContainer?: OPTIONAL<ExtensionContainer>,
-        /**
-         * @summary Extensions that are not recognized.
-         * @public
-         * @readonly
-         */
-        readonly _unrecognizedExtensionsList: _Element[] = []
-    ) {}
+        callBarringFeatureList: Ext_CallBarFeatureList,
+        password?: OPTIONAL<Password>,
+        wrongPasswordAttemptsCounter?: OPTIONAL<WrongPasswordAttemptsCounter>,
+        notificationToCSE?: OPTIONAL<NULL>,
+        extensionContainer?: OPTIONAL<ExtensionContainer>,
+        _unrecognizedExtensionsList: _Element[] = []
+    ) {
+        this.callBarringFeatureList = callBarringFeatureList;
+        this.password = password;
+        this.wrongPasswordAttemptsCounter = wrongPasswordAttemptsCounter;
+        this.notificationToCSE = notificationToCSE;
+        this.extensionContainer = extensionContainer;
+        this._unrecognizedExtensionsList = _unrecognizedExtensionsList;
+    }
 
     /**
      * @summary Restructures an object into a CallBarringData

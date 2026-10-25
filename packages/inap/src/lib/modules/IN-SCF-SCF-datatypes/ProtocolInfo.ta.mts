@@ -1,12 +1,12 @@
 /* eslint-disable */
 import {
-    ASN1Element as _Element,
+    type ASN1Element as _Element,
     ASN1TagClass as _TagClass
 } from "@wildboar/asn1";
 import * as $ from "@wildboar/asn1/functional";
 import { SDFProtocolInfo, _decode_SDFProtocolInfo, _encode_SDFProtocolInfo } from "../IN-SCF-SCF-datatypes/SDFProtocolInfo.ta.mjs";
 // export { SDFProtocolInfo, _decode_SDFProtocolInfo, _encode_SDFProtocolInfo } from "../IN-SCF-SCF-datatypes/SDFProtocolInfo.ta.mjs";
-import { SCFProtocolInfo, _decode_SCFProtocolInfo, _encode_SCFProtocolInfo } from "../IN-SCF-SCF-datatypes/SCFProtocolInfo.ta.mjs";
+import { type SCFProtocolInfo, _decode_SCFProtocolInfo, _encode_SCFProtocolInfo } from "../IN-SCF-SCF-datatypes/SCFProtocolInfo.ta.mjs";
 // export { SCFProtocolInfo, _decode_SCFProtocolInfo, _encode_SCFProtocolInfo } from "../IN-SCF-SCF-datatypes/SCFProtocolInfo.ta.mjs";
 
 

@@ -1,18 +1,18 @@
 /* eslint-disable */
 import {
-    OPTIONAL,
-    ASN1Element as _Element,
+    type OPTIONAL,
+    type ASN1Element as _Element,
     ASN1TagClass as _TagClass,
     ASN1SizeError,
 } from "@wildboar/asn1";
 import * as $ from "@wildboar/asn1/functional";
-import { RequestedType, _decode_RequestedType, _encode_RequestedType } from "../IN-SCF-SCF-datatypes/RequestedType.ta.mjs";
+import { type RequestedType, _decode_RequestedType, _encode_RequestedType } from "../IN-SCF-SCF-datatypes/RequestedType.ta.mjs";
 // export { RequestedType, _decode_RequestedType, _encode_RequestedType } from "../IN-SCF-SCF-datatypes/RequestedType.ta.mjs";
 import { DestinationRelatedInfo, _decode_DestinationRelatedInfo, _encode_DestinationRelatedInfo } from "../IN-SCF-SCF-datatypes/DestinationRelatedInfo.ta.mjs";
 // export { DestinationRelatedInfo, _decode_DestinationRelatedInfo, _encode_DestinationRelatedInfo } from "../IN-SCF-SCF-datatypes/DestinationRelatedInfo.ta.mjs";
 import { SecurityParameters, _decode_SecurityParameters, _encode_SecurityParameters } from "../DirectoryAbstractService/SecurityParameters.ta.mjs";
 // export { SecurityParameters, _decode_SecurityParameters, _encode_SecurityParameters } from "../DirectoryAbstractService/SecurityParameters.ta.mjs";
-import { Extensions, _decode_Extensions, _encode_Extensions } from "../IN-common-datatypes/Extensions.ta.mjs";
+import { type Extensions, _decode_Extensions, _encode_Extensions } from "../IN-common-datatypes/Extensions.ta.mjs";
 // export { Extensions, _decode_Extensions, _encode_Extensions } from "../IN-common-datatypes/Extensions.ta.mjs";
 
 

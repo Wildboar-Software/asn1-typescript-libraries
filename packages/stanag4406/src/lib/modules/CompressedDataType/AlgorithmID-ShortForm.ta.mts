@@ -1,7 +1,7 @@
 /* eslint-disable */
 import {
-    ASN1Element as _Element,
-    INTEGER
+    type ASN1Element as _Element,
+    type INTEGER
 } from "@wildboar/asn1";
 import * as $ from "@wildboar/asn1/functional";
 
@@ -36,7 +36,7 @@ type AlgorithmID_ShortForm = INTEGER;
  * @type {number}
  */
 export
-const AlgorithmID_ShortForm_zlibCompress: AlgorithmID_ShortForm = 0; /* LONG_NAMED_INTEGER_VALUE */
+const AlgorithmID_ShortForm_zlibCompress: 0 = 0 satisfies AlgorithmID_ShortForm; /* LONG_NAMED_INTEGER_VALUE */
 
 /**
  * @summary AlgorithmID_ShortForm_zlibCompress
@@ -49,7 +49,7 @@ const AlgorithmID_ShortForm_zlibCompress: AlgorithmID_ShortForm = 0; /* LONG_NAM
  * @type {number}
  */
 export
-const zlibCompress: AlgorithmID_ShortForm = AlgorithmID_ShortForm_zlibCompress; /* SHORT_NAMED_INTEGER_VALUE */
+const zlibCompress: 0 = AlgorithmID_ShortForm_zlibCompress; /* SHORT_NAMED_INTEGER_VALUE */
 export const _decode_AlgorithmID_ShortForm: $.ASN1Decoder<AlgorithmID_ShortForm> = $._decodeInteger;
 export const _encode_AlgorithmID_ShortForm: $.ASN1Encoder<AlgorithmID_ShortForm> = $._encodeInteger;
 

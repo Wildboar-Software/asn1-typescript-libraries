@@ -11,7 +11,7 @@ import {
 } from '@wildboar/asn1';
 import * as $ from '@wildboar/asn1/functional';
 import {
-  VisibleEndpoint,
+  type VisibleEndpoint,
   _decode_VisibleEndpoint,
   _encode_VisibleEndpoint,
 } from '../BIP/VisibleEndpoint.ta.mjs';

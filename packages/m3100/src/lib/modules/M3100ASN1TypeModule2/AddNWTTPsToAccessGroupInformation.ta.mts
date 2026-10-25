@@ -1,7 +1,7 @@
 /* eslint-disable */
 import {
-    OPTIONAL,
-    ASN1Element as _Element,
+    type OPTIONAL,
+    type ASN1Element as _Element,
     ASN1TagClass as _TagClass,
     ASN1Construction as _Construction,
     ASN1UniversalType as _UniversalType,
@@ -12,7 +12,7 @@ import {
 } from '@wildboar/asn1';
 import * as $ from '@wildboar/asn1/functional';
 import {
-    ObjectInstance,
+    type ObjectInstance,
     _decode_ObjectInstance,
     _encode_ObjectInstance,
 } from '@wildboar/cmip';
@@ -32,20 +32,26 @@ import {
  *
  */
 export class AddNWTTPsToAccessGroupInformation {
+    /**
+     * @summary `nwTTPs`.
+     * @public
+     * @readonly
+     */
+    public readonly nwTTPs: ObjectInstance[];
+    /**
+     * @summary `accessGroup`.
+     * @public
+     * @readonly
+     */
+    public readonly accessGroup?: OPTIONAL<ObjectInstance>;
+
     constructor(
-        /**
-         * @summary `nwTTPs`.
-         * @public
-         * @readonly
-         */
-        readonly nwTTPs: ObjectInstance[],
-        /**
-         * @summary `accessGroup`.
-         * @public
-         * @readonly
-         */
-        readonly accessGroup?: OPTIONAL<ObjectInstance>
-    ) {}
+        nwTTPs: ObjectInstance[],
+        accessGroup?: OPTIONAL<ObjectInstance>
+    ) {
+        this.nwTTPs = nwTTPs;
+        this.accessGroup = accessGroup;
+    }
 
     /**
      * @summary Restructures an object into a AddNWTTPsToAccessGroupInformation

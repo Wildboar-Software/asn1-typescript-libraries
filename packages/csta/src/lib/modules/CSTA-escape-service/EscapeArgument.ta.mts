@@ -2,17 +2,17 @@
 
 import * as $ from "@wildboar/asn1/functional";
 import {
-    OPTIONAL,
-    SEQUENCE,
-    SET,
-    ASN1Element as _Element,
+    type OPTIONAL,
+    type SEQUENCE,
+    type SET,
+    type ASN1Element as _Element,
     ASN1TagClass as _TagClass
 } from "@wildboar/asn1";
-import { EscapeRegisterID, _decode_EscapeRegisterID, _encode_EscapeRegisterID } from "../CSTA-escape-types/EscapeRegisterID.ta.mjs";
+import { type EscapeRegisterID, _decode_EscapeRegisterID, _encode_EscapeRegisterID } from "../CSTA-escape-types/EscapeRegisterID.ta.mjs";
 
 import { CSTASecurityData, _decode_CSTASecurityData, _encode_CSTASecurityData } from "../CSTA-security/CSTASecurityData.ta.mjs";
 
-import { CSTAPrivateData, _decode_CSTAPrivateData, _encode_CSTAPrivateData } from "../CSTA-extension-types/CSTAPrivateData.ta.mjs";
+import { type CSTAPrivateData, _decode_CSTAPrivateData, _encode_CSTAPrivateData } from "../CSTA-extension-types/CSTAPrivateData.ta.mjs";
 
 
 
@@ -31,8 +31,8 @@ import { CSTAPrivateData, _decode_CSTAPrivateData, _encode_CSTAPrivateData } fro
  * 
  * ```asn1
  * EscapeArgument ::= SEQUENCE 
- * {    escapeRegisterID        EscapeRegisterID            OPTIONAL,
- *     security            CSTASecurityData            OPTIONAL,
+ * {    escapeRegisterID        EscapeRegisterID            type OPTIONAL,
+ *     security            CSTASecurityData            type OPTIONAL,
  *     privateData            CSTAPrivateData                         }
  * ```
  * 
@@ -40,42 +40,50 @@ import { CSTAPrivateData, _decode_CSTAPrivateData, _encode_CSTAPrivateData } fro
  */
 export
 class EscapeArgument {
+    /**
+     * @summary `escapeRegisterID`.
+     * @description
+     *
+     * Associated escape registration. Present on SF→CF invokes when
+     * registration is supported; a CF→SF request shall not include it
+     * (ECMA-269 §9.4.2.3).
+     *
+     * @public
+     * @readonly
+     */
+    public readonly escapeRegisterID: OPTIONAL<EscapeRegisterID>;
+    /**
+     * @summary `security`.
+     * @description
+     *
+     * Timestamp, sequence number, and security information (ECMA-269
+     * service tables).
+     *
+     * @public
+     * @readonly
+     */
+    public readonly security: OPTIONAL<CSTASecurityData>;
+    /**
+     * @summary `privateData`.
+     * @description
+     *
+     * Vendor-defined Escape parameters. CSTA does not specify the contents
+     * (ECMA-269 §9.4.1 / §9.4.2.3).
+     *
+     * @public
+     * @readonly
+     */
+    public readonly privateData: CSTAPrivateData;
+
     constructor (
-        /**
-         * @summary `escapeRegisterID`.
-         * @description
-         *
-         * Associated escape registration. Present on SF→CF invokes when
-         * registration is supported; a CF→SF request shall not include it
-         * (ECMA-269 §9.4.2.3).
-         *
-         * @public
-         * @readonly
-         */
-        readonly escapeRegisterID: OPTIONAL<EscapeRegisterID>,
-        /**
-         * @summary `security`.
-         * @description
-         *
-         * Timestamp, sequence number, and security information (ECMA-269
-         * service tables).
-         *
-         * @public
-         * @readonly
-         */
-        readonly security: OPTIONAL<CSTASecurityData>,
-        /**
-         * @summary `privateData`.
-         * @description
-         *
-         * Vendor-defined Escape parameters. CSTA does not specify the contents
-         * (ECMA-269 §9.4.1 / §9.4.2.3).
-         *
-         * @public
-         * @readonly
-         */
-        readonly privateData: CSTAPrivateData
-    ) {}
+        escapeRegisterID: OPTIONAL<EscapeRegisterID>,
+        security: OPTIONAL<CSTASecurityData>,
+        privateData: CSTAPrivateData
+    ) {
+        this.escapeRegisterID = escapeRegisterID;
+        this.security = security;
+        this.privateData = privateData;
+    }
 
     /**
      * @summary Restructures an object into a EscapeArgument

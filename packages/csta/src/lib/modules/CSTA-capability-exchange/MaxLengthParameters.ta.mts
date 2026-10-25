@@ -2,10 +2,10 @@
 
 import * as $ from "@wildboar/asn1/functional";
 import {
-    INTEGER,
-    SEQUENCE,
-    SET,
-    ASN1Element as _Element,
+    type INTEGER,
+    type SEQUENCE,
+    type SET,
+    type ASN1Element as _Element,
     ASN1TagClass as _TagClass,
     ASN1ConstructionError as _ConstructionError
 } from "@wildboar/asn1";
@@ -46,104 +46,130 @@ import {
  */
 export
 class MaxLengthParameters {
+    /**
+     * @summary `accountInfo`.
+     * @public
+     * @readonly
+     * @description
+     * max length of AccountInfo; 0 means unsupported
+     */
+    public readonly accountInfo: INTEGER;
+    /**
+     * @summary `authCode`.
+     * @public
+     * @readonly
+     * @description
+     * max length of AuthCode; 0 means unsupported
+     */
+    public readonly authCode: INTEGER;
+    /**
+     * @summary `agentID`.
+     * @public
+     * @readonly
+     * @description
+     * max length of AgentID; 0 means unsupported
+     */
+    public readonly agentID: INTEGER;
+    /**
+     * @summary `agentPassword`.
+     * @public
+     * @readonly
+     * @description
+     * max length of AgentPassword; 0 means unsupported
+     */
+    public readonly agentPassword: INTEGER;
+    /**
+     * @summary `callIDInConnectionID`.
+     * @public
+     * @readonly
+     * @description
+     * max length of callID in ConnectionID; 0 means unsupported
+     */
+    public readonly callIDInConnectionID: INTEGER;
+    /**
+     * @summary `correlatorData`.
+     * @public
+     * @readonly
+     * @description
+     * max length of CorrelatorData; 0 means unsupported
+     */
+    public readonly correlatorData: INTEGER;
+    /**
+     * @summary `privateData`.
+     * @public
+     * @readonly
+     * @description
+     * max length of CSTAPrivateData; 0 means unsupported
+     */
+    public readonly privateData: INTEGER;
+    /**
+     * @summary `deviceIdentifiers`.
+     * @public
+     * @readonly
+     * @description
+     * max length of Device Identifier types; 0 means unsupported
+     */
+    public readonly deviceIdentifiers: INTEGER;
+    /**
+     * @summary `userData`.
+     * @public
+     * @readonly
+     * @description
+     * max length of UserData; 0 means unsupported
+     */
+    public readonly userData: INTEGER;
+    /**
+     * @summary `buttonLabel`.
+     * @public
+     * @readonly
+     * @description
+     * max length of buttonLabel; 0 means unsupported
+     */
+    public readonly buttonLabel: INTEGER;
+    /**
+     * @summary `lampLabel`.
+     * @public
+     * @readonly
+     * @description
+     * max length of lampLabel; 0 means unsupported
+     */
+    public readonly lampLabel: INTEGER;
+    /**
+     * @summary `charactersToSend`.
+     * @public
+     * @readonly
+     * @description
+     * max length of charactersToSend (spec max 64); 0 means unsupported
+     */
+    public readonly charactersToSend: INTEGER;
+
     constructor (
-        /**
-         * @summary `accountInfo`.
-         * @public
-         * @readonly
-         * @description
-         * max length of AccountInfo; 0 means unsupported
-         */
-        readonly accountInfo: INTEGER,
-        /**
-         * @summary `authCode`.
-         * @public
-         * @readonly
-         * @description
-         * max length of AuthCode; 0 means unsupported
-         */
-        readonly authCode: INTEGER,
-        /**
-         * @summary `agentID`.
-         * @public
-         * @readonly
-         * @description
-         * max length of AgentID; 0 means unsupported
-         */
-        readonly agentID: INTEGER,
-        /**
-         * @summary `agentPassword`.
-         * @public
-         * @readonly
-         * @description
-         * max length of AgentPassword; 0 means unsupported
-         */
-        readonly agentPassword: INTEGER,
-        /**
-         * @summary `callIDInConnectionID`.
-         * @public
-         * @readonly
-         * @description
-         * max length of callID in ConnectionID; 0 means unsupported
-         */
-        readonly callIDInConnectionID: INTEGER,
-        /**
-         * @summary `correlatorData`.
-         * @public
-         * @readonly
-         * @description
-         * max length of CorrelatorData; 0 means unsupported
-         */
-        readonly correlatorData: INTEGER,
-        /**
-         * @summary `privateData`.
-         * @public
-         * @readonly
-         * @description
-         * max length of CSTAPrivateData; 0 means unsupported
-         */
-        readonly privateData: INTEGER,
-        /**
-         * @summary `deviceIdentifiers`.
-         * @public
-         * @readonly
-         * @description
-         * max length of Device Identifier types; 0 means unsupported
-         */
-        readonly deviceIdentifiers: INTEGER,
-        /**
-         * @summary `userData`.
-         * @public
-         * @readonly
-         * @description
-         * max length of UserData; 0 means unsupported
-         */
-        readonly userData: INTEGER,
-        /**
-         * @summary `buttonLabel`.
-         * @public
-         * @readonly
-         * @description
-         * max length of buttonLabel; 0 means unsupported
-         */
-        readonly buttonLabel: INTEGER,
-        /**
-         * @summary `lampLabel`.
-         * @public
-         * @readonly
-         * @description
-         * max length of lampLabel; 0 means unsupported
-         */
-        readonly lampLabel: INTEGER,
-        /**
-         * @summary `charactersToSend`.
-         * @public
-         * @readonly
-         * @description
-         * max length of charactersToSend (spec max 64); 0 means unsupported
-         */
-        readonly charactersToSend: INTEGER
-    ) {}
+        accountInfo: INTEGER,
+        authCode: INTEGER,
+        agentID: INTEGER,
+        agentPassword: INTEGER,
+        callIDInConnectionID: INTEGER,
+        correlatorData: INTEGER,
+        privateData: INTEGER,
+        deviceIdentifiers: INTEGER,
+        userData: INTEGER,
+        buttonLabel: INTEGER,
+        lampLabel: INTEGER,
+        charactersToSend: INTEGER
+    ) {
+        this.accountInfo = accountInfo;
+        this.authCode = authCode;
+        this.agentID = agentID;
+        this.agentPassword = agentPassword;
+        this.callIDInConnectionID = callIDInConnectionID;
+        this.correlatorData = correlatorData;
+        this.privateData = privateData;
+        this.deviceIdentifiers = deviceIdentifiers;
+        this.userData = userData;
+        this.buttonLabel = buttonLabel;
+        this.lampLabel = lampLabel;
+        this.charactersToSend = charactersToSend;
+    }
 
     /**
      * @summary Restructures an object into a MaxLengthParameters

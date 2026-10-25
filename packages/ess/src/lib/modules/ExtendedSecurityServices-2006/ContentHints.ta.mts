@@ -1,13 +1,13 @@
 /* eslint-disable */
 import {
-    ASN1Element as _Element,
+    type ASN1Element as _Element,
     ASN1TagClass as _TagClass,
-    OPTIONAL,
-    UTF8String,
+    type OPTIONAL,
+    type UTF8String,
 } from "@wildboar/asn1";
 import * as $ from "@wildboar/asn1/functional";
 import {
-    ContentType,
+    type ContentType,
     _decode_ContentType,
     _encode_ContentType,
 } from "../CryptographicMessageSyntax2004/ContentType.ta.mjs";
@@ -37,32 +37,38 @@ import {
  *
  */
 export class ContentHints {
+    /**
+     * @summary `contentDescription`.
+     * @description
+     *
+     * Optional UTF-8 text (`SIZE (1..MAX)`) the recipient may use to select
+     * protected messages for processing (for example a subject). If set, the
+     * attribute is expected on the `SignedData` enclosing an `EnvelopedData`,
+     * not on the inner `SignedData`. Implementations choose their own upper
+     * bound ([RFC 2634 §2.9](https://datatracker.ietf.org/doc/html/rfc2634#section-2.9)).
+     *
+     * @public
+     * @readonly
+     */
+    public readonly contentDescription: OPTIONAL<UTF8String>;
+    /**
+     * @summary `contentType`.
+     * @description
+     *
+     * Content type of the described inner content ([RFC 2634 §2.9](https://datatracker.ietf.org/doc/html/rfc2634#section-2.9)).
+     *
+     * @public
+     * @readonly
+     */
+    public readonly contentType: ContentType;
+
     constructor(
-        /**
-         * @summary `contentDescription`.
-         * @description
-         *
-         * Optional UTF-8 text (`SIZE (1..MAX)`) the recipient may use to select
-         * protected messages for processing (for example a subject). If set, the
-         * attribute is expected on the `SignedData` enclosing an `EnvelopedData`,
-         * not on the inner `SignedData`. Implementations choose their own upper
-         * bound ([RFC 2634 §2.9](https://datatracker.ietf.org/doc/html/rfc2634#section-2.9)).
-         *
-         * @public
-         * @readonly
-         */
-        readonly contentDescription: OPTIONAL<UTF8String>,
-        /**
-         * @summary `contentType`.
-         * @description
-         *
-         * Content type of the described inner content ([RFC 2634 §2.9](https://datatracker.ietf.org/doc/html/rfc2634#section-2.9)).
-         *
-         * @public
-         * @readonly
-         */
-        readonly contentType: ContentType
-    ) {}
+        contentDescription: OPTIONAL<UTF8String>,
+        contentType: ContentType
+    ) {
+        this.contentDescription = contentDescription;
+        this.contentType = contentType;
+    }
 
     /**
      * @summary Restructures an object into a ContentHints

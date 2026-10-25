@@ -1,7 +1,7 @@
 /* eslint-disable */
 import {
-    INTEGER,
-    ASN1Element as _Element,
+    type INTEGER,
+    type ASN1Element as _Element,
     ASN1TagClass as _TagClass,
     ASN1Construction as _Construction,
     ASN1UniversalType as _UniversalType,
@@ -11,7 +11,7 @@ import {
     ASN1ConstructionError as _ConstructionError,
 } from "@wildboar/asn1";
 import * as $ from "@wildboar/asn1/functional";
-import { CS_GetProgramInvocationAttributes_Response_control, _decode_CS_GetProgramInvocationAttributes_Response_control, _encode_CS_GetProgramInvocationAttributes_Response_control } from "../ISO-9506-MMS-1/CS-GetProgramInvocationAttributes-Response-control.ta.mjs";
+import { type CS_GetProgramInvocationAttributes_Response_control, _decode_CS_GetProgramInvocationAttributes_Response_control, _encode_CS_GetProgramInvocationAttributes_Response_control } from "../ISO-9506-MMS-1/CS-GetProgramInvocationAttributes-Response-control.ta.mjs";
 
 
 /**
@@ -47,30 +47,36 @@ import { CS_GetProgramInvocationAttributes_Response_control, _decode_CS_GetProgr
  */
 export
 class CS_GetProgramInvocationAttributes_Response {
+    /**
+     * @summary `errorCode`.
+     * @description
+     *
+     * `&errorCode`: last recorded execution error; zero means none. Other
+     * values are a local matter. ISO 9506-1:2003 §12.1.1.11, §12.9.1.2.8.
+     *
+     * @public
+     * @readonly
+     */
+    public readonly errorCode: INTEGER;
+    /**
+     * @summary `control`.
+     * @description
+     *
+     * `&control`: controlling, controlled, or normal, with matching extras.
+     * ISO 9506-1:2003 §12.9.1.2.9.
+     *
+     * @public
+     * @readonly
+     */
+    public readonly control: CS_GetProgramInvocationAttributes_Response_control;
+
     constructor (
-        /**
-         * @summary `errorCode`.
-         * @description
-         *
-         * `&errorCode`: last recorded execution error; zero means none. Other
-         * values are a local matter. ISO 9506-1:2003 §12.1.1.11, §12.9.1.2.8.
-         *
-         * @public
-         * @readonly
-         */
-        readonly errorCode: INTEGER,
-        /**
-         * @summary `control`.
-         * @description
-         *
-         * `&control`: controlling, controlled, or normal, with matching extras.
-         * ISO 9506-1:2003 §12.9.1.2.9.
-         *
-         * @public
-         * @readonly
-         */
-        readonly control: CS_GetProgramInvocationAttributes_Response_control
-    ) {}
+        errorCode: INTEGER,
+        control: CS_GetProgramInvocationAttributes_Response_control
+    ) {
+        this.errorCode = errorCode;
+        this.control = control;
+    }
 
     /**
      * @summary Restructures an object into a CS_GetProgramInvocationAttributes_Response

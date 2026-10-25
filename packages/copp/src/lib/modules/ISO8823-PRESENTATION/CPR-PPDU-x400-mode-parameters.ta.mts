@@ -1,7 +1,7 @@
 /* eslint-disable */
 import {
-    OPTIONAL,
-    ASN1Element as _Element,
+    type OPTIONAL,
+    type ASN1Element as _Element,
     ASN1TagClass as _TagClass,
     ASN1Construction as _Construction,
     ASN1UniversalType as _UniversalType,
@@ -14,7 +14,7 @@ import * as $ from '@wildboar/asn1/functional';
 import {
     _decode_RTORJapdu,
     _encode_RTORJapdu,
-    RefuseReason,
+    type RefuseReason,
     _decode_RefuseReason,
     _encode_RefuseReason,
 } from '@wildboar/rtse';

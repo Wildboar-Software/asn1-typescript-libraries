@@ -1,7 +1,7 @@
 /* eslint-disable */
 import {
-    ASN1Element as _Element,
-    OCTET_STRING
+    type ASN1Element as _Element,
+    type OCTET_STRING
 } from "@wildboar/asn1";
 import { ASN1SizeError } from "@wildboar/asn1";
 import * as $ from "@wildboar/asn1/functional";
@@ -33,7 +33,7 @@ export function _decode_VersionType (el: _Element): VersionType {
     }
     return value;
 }
-export const _encode_VersionType = $._encodeOctetString;
+export const _encode_VersionType: $.ASN1Encoder<OCTET_STRING> = $._encodeOctetString;
 
 
 /* eslint-enable */

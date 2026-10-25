@@ -1,6 +1,6 @@
 /* eslint-disable */
 import {
-    ASN1Element as _Element,
+    type ASN1Element as _Element,
     ASN1TagClass as _TagClass,
     ASN1Construction as _Construction,
     ASN1UniversalType as _UniversalType,
@@ -11,12 +11,12 @@ import {
 } from '@wildboar/asn1';
 import * as $ from '@wildboar/asn1/functional';
 import {
-    TriggerId,
+    type TriggerId,
     _decode_TriggerId,
     _encode_TriggerId,
 } from '../CSModule/TriggerId.ta.mjs';
 import {
-    ExecutionParameterList,
+    type ExecutionParameterList,
     _decode_ExecutionParameterList,
     _encode_ExecutionParameterList,
 } from '../CSModule/ExecutionParameterList.ta.mjs';
@@ -43,31 +43,37 @@ import {
  *
  */
 export class TriggerParameters {
+    /**
+     * @summary `triggerId`.
+     * @description
+     *
+     * Identifies this trigger. Mandatory in the trigger action
+     * service. Correlated in later result notifications and in
+     * suspend/resume/terminate. ITU-T Rec. X.753 (10/97)
+     * §8.3.4, §9.4 Table 8.
+     * @public
+     * @readonly
+     */
+    public readonly triggerId: TriggerId;
+    /**
+     * @summary `executionParameterList`.
+     * @description
+     *
+     * Scripts and inputs to run (single, sequential, or
+     * parallel). User-optional as "Attribute list" in Table 8.
+     * ITU-T Rec. X.753 (10/97) §7.1, §8.3.4, §9.4.
+     * @public
+     * @readonly
+     */
+    public readonly executionParameterList: ExecutionParameterList;
+
     constructor(
-        /**
-         * @summary `triggerId`.
-         * @description
-         *
-         * Identifies this trigger. Mandatory in the trigger action
-         * service. Correlated in later result notifications and in
-         * suspend/resume/terminate. ITU-T Rec. X.753 (10/97)
-         * §8.3.4, §9.4 Table 8.
-         * @public
-         * @readonly
-         */
-        readonly triggerId: TriggerId,
-        /**
-         * @summary `executionParameterList`.
-         * @description
-         *
-         * Scripts and inputs to run (single, sequential, or
-         * parallel). User-optional as "Attribute list" in Table 8.
-         * ITU-T Rec. X.753 (10/97) §7.1, §8.3.4, §9.4.
-         * @public
-         * @readonly
-         */
-        readonly executionParameterList: ExecutionParameterList
-    ) {}
+        triggerId: TriggerId,
+        executionParameterList: ExecutionParameterList
+    ) {
+        this.triggerId = triggerId;
+        this.executionParameterList = executionParameterList;
+    }
 
     /**
      * @summary Restructures an object into a TriggerParameters

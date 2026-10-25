@@ -1,7 +1,7 @@
 /* eslint-disable */
 import {
-    OPTIONAL,
-    ASN1Element as _Element,
+    type OPTIONAL,
+    type ASN1Element as _Element,
     ASN1TagClass as _TagClass,
     ASN1Construction as _Construction,
     ASN1UniversalType as _UniversalType,
@@ -18,32 +18,32 @@ import {
     _encode_SourceIndicator,
 } from '@wildboar/attribute-asn1module';
 import {
-    AttributeIdentifierList,
+    type AttributeIdentifierList,
     _decode_AttributeIdentifierList,
     _encode_AttributeIdentifierList,
 } from '@wildboar/attribute-asn1module';
 import {
-    AttributeValueChangeDefinition,
+    type AttributeValueChangeDefinition,
     _decode_AttributeValueChangeDefinition,
     _encode_AttributeValueChangeDefinition,
 } from '@wildboar/attribute-asn1module';
 import {
-    NotificationIdentifier,
+    type NotificationIdentifier,
     _decode_NotificationIdentifier,
     _encode_NotificationIdentifier,
 } from '@wildboar/attribute-asn1module';
 import {
-    CorrelatedNotifications,
+    type CorrelatedNotifications,
     _decode_CorrelatedNotifications,
     _encode_CorrelatedNotifications,
 } from '@wildboar/attribute-asn1module';
 import {
-    AdditionalText,
+    type AdditionalText,
     _decode_AdditionalText,
     _encode_AdditionalText,
 } from '@wildboar/attribute-asn1module';
 import {
-    AdditionalInformation,
+    type AdditionalInformation,
     _decode_AdditionalInformation,
     _encode_AdditionalInformation,
 } from '@wildboar/attribute-asn1module';
@@ -80,85 +80,101 @@ import {
  *
  */
 export class AttributeValueChangeInfo {
+    /**
+     * @summary `sourceIndicator`.
+     * @description
+     *
+     * Source of the change: `resourceOperation` (internal
+     * operation of the resource), `managementOperation`
+     * (SMI operation across the object boundary), or
+     * `unknown`. ITU-T Rec. X.730 (01/92) §8.2.3.1.
+     * @public
+     * @readonly
+     */
+    public readonly sourceIndicator: OPTIONAL<SourceIndicator>;
+    /**
+     * @summary `attributeIdentifierList`.
+     * @description
+     *
+     * Identifiers of the attributes whose value changes are
+     * reported. ITU-T Rec. X.730 (01/92) §8.2.3.2.
+     * @public
+     * @readonly
+     */
+    public readonly attributeIdentifierList: OPTIONAL<AttributeIdentifierList>;
+    /**
+     * @summary `attributeValueChangeDefinition`.
+     * @description
+     *
+     * One sequence per changed attribute: identifier, optional
+     * old value, and new (current) value. At least one new
+     * value shall be present. ITU-T Rec. X.730 (01/92)
+     * §8.2.3.3.
+     * @public
+     * @readonly
+     */
+    public readonly attributeValueChangeDefinition: AttributeValueChangeDefinition;
+    /**
+     * @summary `notificationIdentifier`.
+     * @description
+     *
+     * Identifier that later notifications may cite in
+     * `correlatedNotifications`. ITU-T Rec. X.730 (01/92)
+     * §8.2.3.4; X.733 (02/92) §8.1.2.8.
+     * @public
+     * @readonly
+     */
+    public readonly notificationIdentifier?: OPTIONAL<NotificationIdentifier>;
+    /**
+     * @summary `correlatedNotifications`.
+     * @description
+     *
+     * Notifications correlated with this one. ITU-T Rec.
+     * X.730 (01/92) §8.2.3.4; X.733 (02/92) §8.1.2.9.
+     * @public
+     * @readonly
+     */
+    public readonly correlatedNotifications?: OPTIONAL<CorrelatedNotifications>;
+    /**
+     * @summary `additionalText`.
+     * @description
+     *
+     * Free-form text; not required to interpret the
+     * notification. ITU-T Rec. X.730 (01/92) §8.2.3.4;
+     * X.733 (02/92) §8.1.2.13.
+     * @public
+     * @readonly
+     */
+    public readonly additionalText?: OPTIONAL<AdditionalText>;
+    /**
+     * @summary `additionalInformation`.
+     * @description
+     *
+     * Extra identifier/significance/information structures.
+     * ITU-T Rec. X.730 (01/92) §8.2.3.4; X.733 (02/92)
+     * §8.1.2.14.
+     * @public
+     * @readonly
+     */
+    public readonly additionalInformation?: OPTIONAL<AdditionalInformation>;
+
     constructor(
-        /**
-         * @summary `sourceIndicator`.
-         * @description
-         *
-         * Source of the change: `resourceOperation` (internal
-         * operation of the resource), `managementOperation`
-         * (SMI operation across the object boundary), or
-         * `unknown`. ITU-T Rec. X.730 (01/92) §8.2.3.1.
-         * @public
-         * @readonly
-         */
-        readonly sourceIndicator: OPTIONAL<SourceIndicator>,
-        /**
-         * @summary `attributeIdentifierList`.
-         * @description
-         *
-         * Identifiers of the attributes whose value changes are
-         * reported. ITU-T Rec. X.730 (01/92) §8.2.3.2.
-         * @public
-         * @readonly
-         */
-        readonly attributeIdentifierList: OPTIONAL<AttributeIdentifierList>,
-        /**
-         * @summary `attributeValueChangeDefinition`.
-         * @description
-         *
-         * One sequence per changed attribute: identifier, optional
-         * old value, and new (current) value. At least one new
-         * value shall be present. ITU-T Rec. X.730 (01/92)
-         * §8.2.3.3.
-         * @public
-         * @readonly
-         */
-        readonly attributeValueChangeDefinition: AttributeValueChangeDefinition,
-        /**
-         * @summary `notificationIdentifier`.
-         * @description
-         *
-         * Identifier that later notifications may cite in
-         * `correlatedNotifications`. ITU-T Rec. X.730 (01/92)
-         * §8.2.3.4; X.733 (02/92) §8.1.2.8.
-         * @public
-         * @readonly
-         */
-        readonly notificationIdentifier?: OPTIONAL<NotificationIdentifier>,
-        /**
-         * @summary `correlatedNotifications`.
-         * @description
-         *
-         * Notifications correlated with this one. ITU-T Rec.
-         * X.730 (01/92) §8.2.3.4; X.733 (02/92) §8.1.2.9.
-         * @public
-         * @readonly
-         */
-        readonly correlatedNotifications?: OPTIONAL<CorrelatedNotifications>,
-        /**
-         * @summary `additionalText`.
-         * @description
-         *
-         * Free-form text; not required to interpret the
-         * notification. ITU-T Rec. X.730 (01/92) §8.2.3.4;
-         * X.733 (02/92) §8.1.2.13.
-         * @public
-         * @readonly
-         */
-        readonly additionalText?: OPTIONAL<AdditionalText>,
-        /**
-         * @summary `additionalInformation`.
-         * @description
-         *
-         * Extra identifier/significance/information structures.
-         * ITU-T Rec. X.730 (01/92) §8.2.3.4; X.733 (02/92)
-         * §8.1.2.14.
-         * @public
-         * @readonly
-         */
-        readonly additionalInformation?: OPTIONAL<AdditionalInformation>
-    ) {}
+        sourceIndicator: OPTIONAL<SourceIndicator>,
+        attributeIdentifierList: OPTIONAL<AttributeIdentifierList>,
+        attributeValueChangeDefinition: AttributeValueChangeDefinition,
+        notificationIdentifier?: OPTIONAL<NotificationIdentifier>,
+        correlatedNotifications?: OPTIONAL<CorrelatedNotifications>,
+        additionalText?: OPTIONAL<AdditionalText>,
+        additionalInformation?: OPTIONAL<AdditionalInformation>
+    ) {
+        this.sourceIndicator = sourceIndicator;
+        this.attributeIdentifierList = attributeIdentifierList;
+        this.attributeValueChangeDefinition = attributeValueChangeDefinition;
+        this.notificationIdentifier = notificationIdentifier;
+        this.correlatedNotifications = correlatedNotifications;
+        this.additionalText = additionalText;
+        this.additionalInformation = additionalInformation;
+    }
 
     /**
      * @summary Restructures an object into a AttributeValueChangeInfo
@@ -194,7 +210,7 @@ export class AttributeValueChangeInfo {
      * @static
      */
 
-    public static _enum_for_sourceIndicator = _enum_for_SourceIndicator;
+    public static _enum_for_sourceIndicator: typeof _enum_for_SourceIndicator = _enum_for_SourceIndicator;
 }
 
 /**

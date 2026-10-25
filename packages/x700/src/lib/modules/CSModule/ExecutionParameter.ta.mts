@@ -1,6 +1,6 @@
 /* eslint-disable */
 import {
-    ASN1Element as _Element,
+    type ASN1Element as _Element,
     ASN1TagClass as _TagClass,
     ASN1Construction as _Construction,
     ASN1UniversalType as _UniversalType,
@@ -11,7 +11,7 @@ import {
 } from '@wildboar/asn1';
 import * as $ from '@wildboar/asn1/functional';
 import {
-    ScriptId,
+    type ScriptId,
     _decode_ScriptId,
     _encode_ScriptId,
 } from '../CSModule/ScriptId.ta.mjs';
@@ -42,34 +42,40 @@ import {
  *
  */
 export class ExecutionParameter {
+    /**
+     * @summary `scriptId`.
+     * @description
+     *
+     * Launch-script instance to execute. Must also appear in
+     * the launch pad's `availableScriptList` or it is skipped
+     * (all missing → `scriptRejectedError`). ITU-T Rec. X.753
+     * (10/97) §7.1, §8.1.6.3.1.
+     * @public
+     * @readonly
+     */
+    public readonly scriptId: ScriptId;
+    /**
+     * @summary `scriptParameters`.
+     * @description
+     *
+     * Input values for that script (CMIP `Attribute` values).
+     * May be empty. Type, value, and count mismatches yield
+     * `invalidParameterTypeError`,
+     * `invalidParameterValueError`, or
+     * `invalidParmeterNumber` (spec spelling). ITU-T Rec.
+     * X.753 (10/97) §7.1, §8.2.1–§8.2.2.
+     * @public
+     * @readonly
+     */
+    public readonly scriptParameters: Attribute[];
+
     constructor(
-        /**
-         * @summary `scriptId`.
-         * @description
-         *
-         * Launch-script instance to execute. Must also appear in
-         * the launch pad's `availableScriptList` or it is skipped
-         * (all missing → `scriptRejectedError`). ITU-T Rec. X.753
-         * (10/97) §7.1, §8.1.6.3.1.
-         * @public
-         * @readonly
-         */
-        readonly scriptId: ScriptId,
-        /**
-         * @summary `scriptParameters`.
-         * @description
-         *
-         * Input values for that script (CMIP `Attribute` values).
-         * May be empty. Type, value, and count mismatches yield
-         * `invalidParameterTypeError`,
-         * `invalidParameterValueError`, or
-         * `invalidParmeterNumber` (spec spelling). ITU-T Rec.
-         * X.753 (10/97) §7.1, §8.2.1–§8.2.2.
-         * @public
-         * @readonly
-         */
-        readonly scriptParameters: Attribute[]
-    ) {}
+        scriptId: ScriptId,
+        scriptParameters: Attribute[]
+    ) {
+        this.scriptId = scriptId;
+        this.scriptParameters = scriptParameters;
+    }
 
     /**
      * @summary Restructures an object into a ExecutionParameter

@@ -1,7 +1,7 @@
 /* eslint-disable */
 import {
-    ENUMERATED,
-    ASN1Element as _Element,
+    type ENUMERATED,
+    type ASN1Element as _Element,
     ASN1TagClass as _TagClass,
     ASN1Construction as _Construction,
     ASN1UniversalType as _UniversalType,
@@ -70,7 +70,7 @@ type NetworkAuthenticationModel = _enum_for_NetworkAuthenticationModel | ENUMERA
  * @type {number}
  */
 export
-const NetworkAuthenticationModel_no_value: NetworkAuthenticationModel = 0; /* LONG_NAMED_ENUMERATED_VALUE */
+const NetworkAuthenticationModel_no_value: _enum_for_NetworkAuthenticationModel.no_value = _enum_for_NetworkAuthenticationModel.no_value; /* LONG_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary no_value
@@ -79,7 +79,7 @@ const NetworkAuthenticationModel_no_value: NetworkAuthenticationModel = 0; /* LO
  * @type {number}
  */
 export
-const no_value: NetworkAuthenticationModel = NetworkAuthenticationModel_no_value; /* SHORT_NAMED_ENUMERATED_VALUE */
+const no_value: _enum_for_NetworkAuthenticationModel.no_value = NetworkAuthenticationModel_no_value; /* SHORT_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary NetworkAuthenticationModel_local_model
@@ -92,7 +92,7 @@ const no_value: NetworkAuthenticationModel = NetworkAuthenticationModel_no_value
  * @type {number}
  */
 export
-const NetworkAuthenticationModel_local_model: NetworkAuthenticationModel = 1; /* LONG_NAMED_ENUMERATED_VALUE */
+const NetworkAuthenticationModel_local_model: _enum_for_NetworkAuthenticationModel.local_model = _enum_for_NetworkAuthenticationModel.local_model; /* LONG_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary local_model
@@ -105,7 +105,7 @@ const NetworkAuthenticationModel_local_model: NetworkAuthenticationModel = 1; /*
  * @type {number}
  */
 export
-const local_model: NetworkAuthenticationModel = NetworkAuthenticationModel_local_model; /* SHORT_NAMED_ENUMERATED_VALUE */
+const local_model: _enum_for_NetworkAuthenticationModel.local_model = NetworkAuthenticationModel_local_model; /* SHORT_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary NetworkAuthenticationModel_download_model
@@ -117,7 +117,7 @@ const local_model: NetworkAuthenticationModel = NetworkAuthenticationModel_local
  * @type {number}
  */
 export
-const NetworkAuthenticationModel_download_model: NetworkAuthenticationModel = 2; /* LONG_NAMED_ENUMERATED_VALUE */
+const NetworkAuthenticationModel_download_model: _enum_for_NetworkAuthenticationModel.download_model = _enum_for_NetworkAuthenticationModel.download_model; /* LONG_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary download_model
@@ -129,7 +129,7 @@ const NetworkAuthenticationModel_download_model: NetworkAuthenticationModel = 2;
  * @type {number}
  */
 export
-const download_model: NetworkAuthenticationModel = NetworkAuthenticationModel_download_model; /* SHORT_NAMED_ENUMERATED_VALUE */
+const download_model: _enum_for_NetworkAuthenticationModel.download_model = NetworkAuthenticationModel_download_model; /* SHORT_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary NetworkAuthenticationModel_attached_model
@@ -141,7 +141,7 @@ const download_model: NetworkAuthenticationModel = NetworkAuthenticationModel_do
  * @type {number}
  */
 export
-const NetworkAuthenticationModel_attached_model: NetworkAuthenticationModel = 3; /* LONG_NAMED_ENUMERATED_VALUE */
+const NetworkAuthenticationModel_attached_model: _enum_for_NetworkAuthenticationModel.attached_model = _enum_for_NetworkAuthenticationModel.attached_model; /* LONG_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary attached_model
@@ -153,7 +153,7 @@ const NetworkAuthenticationModel_attached_model: NetworkAuthenticationModel = 3;
  * @type {number}
  */
 export
-const attached_model: NetworkAuthenticationModel = NetworkAuthenticationModel_attached_model; /* SHORT_NAMED_ENUMERATED_VALUE */
+const attached_model: _enum_for_NetworkAuthenticationModel.attached_model = NetworkAuthenticationModel_attached_model; /* SHORT_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary NetworkAuthenticationModel_center_model
@@ -165,7 +165,7 @@ const attached_model: NetworkAuthenticationModel = NetworkAuthenticationModel_at
  * @type {number}
  */
 export
-const NetworkAuthenticationModel_center_model: NetworkAuthenticationModel = 4; /* LONG_NAMED_ENUMERATED_VALUE */
+const NetworkAuthenticationModel_center_model: _enum_for_NetworkAuthenticationModel.center_model = _enum_for_NetworkAuthenticationModel.center_model; /* LONG_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary center_model
@@ -177,7 +177,7 @@ const NetworkAuthenticationModel_center_model: NetworkAuthenticationModel = 4; /
  * @type {number}
  */
 export
-const center_model: NetworkAuthenticationModel = NetworkAuthenticationModel_center_model; /* SHORT_NAMED_ENUMERATED_VALUE */
+const center_model: _enum_for_NetworkAuthenticationModel.center_model = NetworkAuthenticationModel_center_model; /* SHORT_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary NetworkAuthenticationModel_ref_onttp_for_local_model
@@ -189,7 +189,7 @@ const center_model: NetworkAuthenticationModel = NetworkAuthenticationModel_cent
  * @type {number}
  */
 export
-const NetworkAuthenticationModel_ref_onttp_for_local_model: NetworkAuthenticationModel = 5; /* LONG_NAMED_ENUMERATED_VALUE */
+const NetworkAuthenticationModel_ref_onttp_for_local_model: _enum_for_NetworkAuthenticationModel.ref_onttp_for_local_model = _enum_for_NetworkAuthenticationModel.ref_onttp_for_local_model; /* LONG_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary ref_onttp_for_local_model
@@ -201,7 +201,7 @@ const NetworkAuthenticationModel_ref_onttp_for_local_model: NetworkAuthenticatio
  * @type {number}
  */
 export
-const ref_onttp_for_local_model: NetworkAuthenticationModel = NetworkAuthenticationModel_ref_onttp_for_local_model; /* SHORT_NAMED_ENUMERATED_VALUE */
+const ref_onttp_for_local_model: _enum_for_NetworkAuthenticationModel.ref_onttp_for_local_model = NetworkAuthenticationModel_ref_onttp_for_local_model; /* SHORT_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary NetworkAuthenticationModel_ref_onttp_for_center_model
@@ -213,7 +213,7 @@ const ref_onttp_for_local_model: NetworkAuthenticationModel = NetworkAuthenticat
  * @type {number}
  */
 export
-const NetworkAuthenticationModel_ref_onttp_for_center_model: NetworkAuthenticationModel = 6; /* LONG_NAMED_ENUMERATED_VALUE */
+const NetworkAuthenticationModel_ref_onttp_for_center_model: _enum_for_NetworkAuthenticationModel.ref_onttp_for_center_model = _enum_for_NetworkAuthenticationModel.ref_onttp_for_center_model; /* LONG_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary ref_onttp_for_center_model
@@ -225,7 +225,7 @@ const NetworkAuthenticationModel_ref_onttp_for_center_model: NetworkAuthenticati
  * @type {number}
  */
 export
-const ref_onttp_for_center_model: NetworkAuthenticationModel = NetworkAuthenticationModel_ref_onttp_for_center_model; /* SHORT_NAMED_ENUMERATED_VALUE */
+const ref_onttp_for_center_model: _enum_for_NetworkAuthenticationModel.ref_onttp_for_center_model = NetworkAuthenticationModel_ref_onttp_for_center_model; /* SHORT_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary NetworkAuthenticationModel_comparison_outsourcing_by_client_model
@@ -237,7 +237,7 @@ const ref_onttp_for_center_model: NetworkAuthenticationModel = NetworkAuthentica
  * @type {number}
  */
 export
-const NetworkAuthenticationModel_comparison_outsourcing_by_client_model: NetworkAuthenticationModel = 7; /* LONG_NAMED_ENUMERATED_VALUE */
+const NetworkAuthenticationModel_comparison_outsourcing_by_client_model: _enum_for_NetworkAuthenticationModel.comparison_outsourcing_by_client_model = _enum_for_NetworkAuthenticationModel.comparison_outsourcing_by_client_model; /* LONG_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary comparison_outsourcing_by_client_model
@@ -249,7 +249,7 @@ const NetworkAuthenticationModel_comparison_outsourcing_by_client_model: Network
  * @type {number}
  */
 export
-const comparison_outsourcing_by_client_model: NetworkAuthenticationModel = NetworkAuthenticationModel_comparison_outsourcing_by_client_model; /* SHORT_NAMED_ENUMERATED_VALUE */
+const comparison_outsourcing_by_client_model: _enum_for_NetworkAuthenticationModel.comparison_outsourcing_by_client_model = NetworkAuthenticationModel_comparison_outsourcing_by_client_model; /* SHORT_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary NetworkAuthenticationModel_comparison_outsourcing_by_server_model
@@ -261,7 +261,7 @@ const comparison_outsourcing_by_client_model: NetworkAuthenticationModel = Netwo
  * @type {number}
  */
 export
-const NetworkAuthenticationModel_comparison_outsourcing_by_server_model: NetworkAuthenticationModel = 8; /* LONG_NAMED_ENUMERATED_VALUE */
+const NetworkAuthenticationModel_comparison_outsourcing_by_server_model: _enum_for_NetworkAuthenticationModel.comparison_outsourcing_by_server_model = _enum_for_NetworkAuthenticationModel.comparison_outsourcing_by_server_model; /* LONG_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary comparison_outsourcing_by_server_model
@@ -273,7 +273,7 @@ const NetworkAuthenticationModel_comparison_outsourcing_by_server_model: Network
  * @type {number}
  */
 export
-const comparison_outsourcing_by_server_model: NetworkAuthenticationModel = NetworkAuthenticationModel_comparison_outsourcing_by_server_model; /* SHORT_NAMED_ENUMERATED_VALUE */
+const comparison_outsourcing_by_server_model: _enum_for_NetworkAuthenticationModel.comparison_outsourcing_by_server_model = NetworkAuthenticationModel_comparison_outsourcing_by_server_model; /* SHORT_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary NetworkAuthenticationModel_storage_comparison_outsourcing_by_client_model
@@ -285,7 +285,7 @@ const comparison_outsourcing_by_server_model: NetworkAuthenticationModel = Netwo
  * @type {number}
  */
 export
-const NetworkAuthenticationModel_storage_comparison_outsourcing_by_client_model: NetworkAuthenticationModel = 9; /* LONG_NAMED_ENUMERATED_VALUE */
+const NetworkAuthenticationModel_storage_comparison_outsourcing_by_client_model: _enum_for_NetworkAuthenticationModel.storage_comparison_outsourcing_by_client_model = _enum_for_NetworkAuthenticationModel.storage_comparison_outsourcing_by_client_model; /* LONG_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary storage_comparison_outsourcing_by_client_model
@@ -297,7 +297,7 @@ const NetworkAuthenticationModel_storage_comparison_outsourcing_by_client_model:
  * @type {number}
  */
 export
-const storage_comparison_outsourcing_by_client_model: NetworkAuthenticationModel = NetworkAuthenticationModel_storage_comparison_outsourcing_by_client_model; /* SHORT_NAMED_ENUMERATED_VALUE */
+const storage_comparison_outsourcing_by_client_model: _enum_for_NetworkAuthenticationModel.storage_comparison_outsourcing_by_client_model = NetworkAuthenticationModel_storage_comparison_outsourcing_by_client_model; /* SHORT_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary NetworkAuthenticationModel_storage_comparison_outsourcing_by_server_model
@@ -310,7 +310,7 @@ const storage_comparison_outsourcing_by_client_model: NetworkAuthenticationModel
  * @type {number}
  */
 export
-const NetworkAuthenticationModel_storage_comparison_outsourcing_by_server_model: NetworkAuthenticationModel = 10; /* LONG_NAMED_ENUMERATED_VALUE */
+const NetworkAuthenticationModel_storage_comparison_outsourcing_by_server_model: _enum_for_NetworkAuthenticationModel.storage_comparison_outsourcing_by_server_model = _enum_for_NetworkAuthenticationModel.storage_comparison_outsourcing_by_server_model; /* LONG_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary storage_comparison_outsourcing_by_server_model
@@ -323,9 +323,9 @@ const NetworkAuthenticationModel_storage_comparison_outsourcing_by_server_model:
  * @type {number}
  */
 export
-const storage_comparison_outsourcing_by_server_model: NetworkAuthenticationModel = NetworkAuthenticationModel_storage_comparison_outsourcing_by_server_model; /* SHORT_NAMED_ENUMERATED_VALUE */
-export const _decode_NetworkAuthenticationModel = $._decodeEnumerated;
-export const _encode_NetworkAuthenticationModel = $._encodeEnumerated;
+const storage_comparison_outsourcing_by_server_model: _enum_for_NetworkAuthenticationModel.storage_comparison_outsourcing_by_server_model = NetworkAuthenticationModel_storage_comparison_outsourcing_by_server_model; /* SHORT_NAMED_ENUMERATED_VALUE */
+export const _decode_NetworkAuthenticationModel: $.ASN1Decoder<number> = $._decodeEnumerated;
+export const _encode_NetworkAuthenticationModel: $.ASN1Encoder<number> = $._encodeEnumerated;
 
 
 /* eslint-enable */

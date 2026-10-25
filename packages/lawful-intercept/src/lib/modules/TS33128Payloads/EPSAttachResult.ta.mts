@@ -93,7 +93,7 @@ type EPSAttachResult = _enum_for_EPSAttachResult;
  * @enum {number}
  */
 export
-const EPSAttachResult = _enum_for_EPSAttachResult;
+const EPSAttachResult: typeof _enum_for_EPSAttachResult = _enum_for_EPSAttachResult;
 
 /**
  * @summary EPSAttachResult_ePSOnly
@@ -107,7 +107,7 @@ const EPSAttachResult = _enum_for_EPSAttachResult;
  * @type {number}
  */
 export
-const EPSAttachResult_ePSOnly: EPSAttachResult = EPSAttachResult.ePSOnly; /* LONG_NAMED_ENUMERATED_VALUE */
+const EPSAttachResult_ePSOnly: _enum_for_EPSAttachResult.ePSOnly = EPSAttachResult.ePSOnly; /* LONG_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary ePSOnly
@@ -121,7 +121,7 @@ const EPSAttachResult_ePSOnly: EPSAttachResult = EPSAttachResult.ePSOnly; /* LON
  * @type {number}
  */
 export
-const ePSOnly: EPSAttachResult = EPSAttachResult.ePSOnly; /* SHORT_NAMED_ENUMERATED_VALUE */
+const ePSOnly: _enum_for_EPSAttachResult.ePSOnly = EPSAttachResult.ePSOnly; /* SHORT_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary EPSAttachResult_combinedEPSIMSI
@@ -135,7 +135,7 @@ const ePSOnly: EPSAttachResult = EPSAttachResult.ePSOnly; /* SHORT_NAMED_ENUMERA
  * @type {number}
  */
 export
-const EPSAttachResult_combinedEPSIMSI: EPSAttachResult = EPSAttachResult.combinedEPSIMSI; /* LONG_NAMED_ENUMERATED_VALUE */
+const EPSAttachResult_combinedEPSIMSI: _enum_for_EPSAttachResult.combinedEPSIMSI = EPSAttachResult.combinedEPSIMSI; /* LONG_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary combinedEPSIMSI
@@ -149,7 +149,7 @@ const EPSAttachResult_combinedEPSIMSI: EPSAttachResult = EPSAttachResult.combine
  * @type {number}
  */
 export
-const combinedEPSIMSI: EPSAttachResult = EPSAttachResult.combinedEPSIMSI; /* SHORT_NAMED_ENUMERATED_VALUE */
+const combinedEPSIMSI: _enum_for_EPSAttachResult.combinedEPSIMSI = EPSAttachResult.combinedEPSIMSI; /* SHORT_NAMED_ENUMERATED_VALUE */
 export const _decode_EPSAttachResult: $.ASN1Decoder<EPSAttachResult> = $._decodeEnumerated;
 export const _encode_EPSAttachResult: $.ASN1Encoder<EPSAttachResult> = $._encodeEnumerated;
 

@@ -1,9 +1,9 @@
 /* eslint-disable */
 import {
     ASN1ConstructionError as _ConstructionError,
-    ASN1Element as _Element,
+    type ASN1Element as _Element,
     ASN1TagClass as _TagClass,
-    INTEGER,
+    type INTEGER,
 } from "@wildboar/asn1";
 import * as $ from "@wildboar/asn1/functional";
 
@@ -29,26 +29,34 @@ import * as $ from "@wildboar/asn1/functional";
  *
  */
 export class OperationalBindingID {
+    /**
+     * @summary `identifier`.
+     * @public
+     * @readonly
+     */
+    public readonly identifier: INTEGER;
+    /**
+     * @summary `version`.
+     * @public
+     * @readonly
+     */
+    public readonly version: INTEGER;
+    /**
+     * @summary Extensions that are not recognized.
+     * @public
+     * @readonly
+     */
+    public readonly _unrecognizedExtensionsList: _Element[];
+
     constructor(
-        /**
-         * @summary `identifier`.
-         * @public
-         * @readonly
-         */
-        readonly identifier: INTEGER,
-        /**
-         * @summary `version`.
-         * @public
-         * @readonly
-         */
-        readonly version: INTEGER,
-        /**
-         * @summary Extensions that are not recognized.
-         * @public
-         * @readonly
-         */
-        readonly _unrecognizedExtensionsList: _Element[] = []
-    ) {}
+        identifier: INTEGER,
+        version: INTEGER,
+        _unrecognizedExtensionsList: _Element[] = []
+    ) {
+        this.identifier = identifier;
+        this.version = version;
+        this._unrecognizedExtensionsList = _unrecognizedExtensionsList;
+    }
 
     /**
      * @summary Restructures an object into a OperationalBindingID

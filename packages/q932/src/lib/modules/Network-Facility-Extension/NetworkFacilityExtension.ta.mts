@@ -1,12 +1,12 @@
 /* eslint-disable */
 import {
-    OPTIONAL,
-    ASN1Element as _Element,
+    type OPTIONAL,
+    type ASN1Element as _Element,
     ASN1TagClass as _TagClass
 } from "@wildboar/asn1";
 import * as $ from "@wildboar/asn1/functional";
 import { EntityType, _decode_EntityType, _encode_EntityType, _enum_for_EntityType } from "../Network-Facility-Extension/EntityType.ta.mjs";
-import { AddressInformation, _decode_AddressInformation, _encode_AddressInformation } from "../Network-Facility-Extension/AddressInformation.ta.mjs";
+import { type AddressInformation, _decode_AddressInformation, _encode_AddressInformation } from "../Network-Facility-Extension/AddressInformation.ta.mjs";
 
 
 /**
@@ -120,13 +120,13 @@ class NetworkFacilityExtension {
          * @static
          */
 
-    public static _enum_for_sourceEntity = _enum_for_EntityType;        /**
+    public static _enum_for_sourceEntity: typeof _enum_for_EntityType = _enum_for_EntityType;        /**
          * @summary The enum used as the type of the component `destinationEntity`
          * @public
          * @static
          */
 
-    public static _enum_for_destinationEntity = _enum_for_EntityType;
+    public static _enum_for_destinationEntity: typeof _enum_for_EntityType = _enum_for_EntityType;
 }
 
 /**

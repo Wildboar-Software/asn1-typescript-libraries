@@ -1,11 +1,11 @@
 /* eslint-disable */
 import {
     ASN1ConstructionError as _ConstructionError,
-    ASN1Element as _Element,
+    type ASN1Element as _Element,
     ASN1TagClass as _TagClass
 } from "@wildboar/asn1";
 import * as $ from "@wildboar/asn1/functional";
-import { _decode_SetDefaultDpAddressResponse_setDefaultDpAddressResult, _encode_SetDefaultDpAddressResponse_setDefaultDpAddressResult, SetDefaultDpAddressResponse_setDefaultDpAddressResult } from "../SGP32Definitions/SetDefaultDpAddressResponse-setDefaultDpAddressResult.ta.mjs";
+import { _decode_SetDefaultDpAddressResponse_setDefaultDpAddressResult, _encode_SetDefaultDpAddressResponse_setDefaultDpAddressResult, type SetDefaultDpAddressResponse_setDefaultDpAddressResult } from "../SGP32Definitions/SetDefaultDpAddressResponse-setDefaultDpAddressResult.ta.mjs";
 
 
 /**
@@ -28,17 +28,21 @@ import { _decode_SetDefaultDpAddressResponse_setDefaultDpAddressResult, _encode_
  */
 export
 class SetDefaultDpAddressResponse {
+    /**
+     * @summary `setDefaultDpAddressResult`.
+     * @description
+     * ok after the address is stored or removed. undefinedError when immediate
+     * enable is configured. SGP.32 v1.2, section 5.9.25.
+     * @public
+     * @readonly
+     */
+    public readonly setDefaultDpAddressResult: SetDefaultDpAddressResponse_setDefaultDpAddressResult;
+
     constructor (
-        /**
-         * @summary `setDefaultDpAddressResult`.
-         * @description
-         * ok after the address is stored or removed. undefinedError when immediate
-         * enable is configured. SGP.32 v1.2, section 5.9.25.
-         * @public
-         * @readonly
-         */
-        readonly setDefaultDpAddressResult: SetDefaultDpAddressResponse_setDefaultDpAddressResult
-    ) {}
+        setDefaultDpAddressResult: SetDefaultDpAddressResponse_setDefaultDpAddressResult
+    ) {
+        this.setDefaultDpAddressResult = setDefaultDpAddressResult;
+    }
 
     /**
      * @summary Restructures an object into a SetDefaultDpAddressResponse

@@ -2,16 +2,16 @@
 
 import * as $ from "@wildboar/asn1/functional";
 import {
-    OPTIONAL,
-    SEQUENCE,
-    SET,
-    IA5String,
-    ASN1Element as _Element,
+    type OPTIONAL,
+    type SEQUENCE,
+    type SET,
+    type IA5String,
+    type ASN1Element as _Element,
     ASN1TagClass as _TagClass
 } from "@wildboar/asn1";
-import { ThreadLinkageID, _decode_ThreadLinkageID, _encode_ThreadLinkageID } from "../CSTA-call-control/ThreadLinkageID.ta.mjs";
+import { type ThreadLinkageID, _decode_ThreadLinkageID, _encode_ThreadLinkageID } from "../CSTA-call-control/ThreadLinkageID.ta.mjs";
 
-import { TimeInfo, _decode_TimeInfo, _encode_TimeInfo } from "../CSTA-security/TimeInfo.ta.mjs";
+import { type TimeInfo, _decode_TimeInfo, _encode_TimeInfo } from "../CSTA-security/TimeInfo.ta.mjs";
 
 
 
@@ -31,7 +31,7 @@ import { TimeInfo, _decode_TimeInfo, _encode_TimeInfo } from "../CSTA-security/T
  * 
  * ```asn1
  * ThreadData ::= SEQUENCE
- * {     threadSwitchingSubDomainName             IA5String (SIZE(1..64))     OPTIONAL,
+ * {     threadSwitchingSubDomainName             IA5String (SIZE(1..64))     type OPTIONAL,
  *     threadLinkageID                 ThreadLinkageID,
  *     threadIDTimeStamp                 TimeInfo             OPTIONAL }
  * ```
@@ -40,43 +40,51 @@ import { TimeInfo, _decode_TimeInfo, _encode_TimeInfo } from "../CSTA-security/T
  */
 export
 class ThreadData {
+    /**
+     * @summary `threadSwitchingSubDomainName`.
+     * @description
+     *
+     * Sub-domain that created this thread data. Required if
+     * `threadLinkageID` is not itself globally unique.
+     * ECMA-269 §12.2.5.
+     *
+     * @public
+     * @readonly
+     */
+    public readonly threadSwitchingSubDomainName: OPTIONAL<IA5String>;
+    /**
+     * @summary `threadLinkageID`.
+     * @description
+     *
+     * Sub-domain-specific or H.225 globally unique thread ID.
+     * ECMA-269 §12.2.5.
+     *
+     * @public
+     * @readonly
+     */
+    public readonly threadLinkageID: ThreadLinkageID;
+    /**
+     * @summary `threadIDTimeStamp`.
+     * @description
+     *
+     * Time this `threadData` was created or last updated.
+     * Format as `TimeInfo` (ECMA-269 §12.2.29). ECMA-269
+     * §12.2.5.
+     *
+     * @public
+     * @readonly
+     */
+    public readonly threadIDTimeStamp?: OPTIONAL<TimeInfo>;
+
     constructor (
-        /**
-         * @summary `threadSwitchingSubDomainName`.
-         * @description
-         *
-         * Sub-domain that created this thread data. Required if
-         * `threadLinkageID` is not itself globally unique.
-         * ECMA-269 §12.2.5.
-         *
-         * @public
-         * @readonly
-         */
-        readonly threadSwitchingSubDomainName: OPTIONAL<IA5String>,
-        /**
-         * @summary `threadLinkageID`.
-         * @description
-         *
-         * Sub-domain-specific or H.225 globally unique thread ID.
-         * ECMA-269 §12.2.5.
-         *
-         * @public
-         * @readonly
-         */
-        readonly threadLinkageID: ThreadLinkageID,
-        /**
-         * @summary `threadIDTimeStamp`.
-         * @description
-         *
-         * Time this `threadData` was created or last updated.
-         * Format as `TimeInfo` (ECMA-269 §12.2.29). ECMA-269
-         * §12.2.5.
-         *
-         * @public
-         * @readonly
-         */
-        readonly threadIDTimeStamp?: OPTIONAL<TimeInfo>
-    ) {}
+        threadSwitchingSubDomainName: OPTIONAL<IA5String>,
+        threadLinkageID: ThreadLinkageID,
+        threadIDTimeStamp?: OPTIONAL<TimeInfo>
+    ) {
+        this.threadSwitchingSubDomainName = threadSwitchingSubDomainName;
+        this.threadLinkageID = threadLinkageID;
+        this.threadIDTimeStamp = threadIDTimeStamp;
+    }
 
     /**
      * @summary Restructures an object into a ThreadData

@@ -2,65 +2,65 @@
 
 import * as $ from "@wildboar/asn1/functional";
 import {
-    OPTIONAL,
-    SEQUENCE,
-    SET,
-    ASN1Element as _Element,
+    type OPTIONAL,
+    type SEQUENCE,
+    type SET,
+    type ASN1Element as _Element,
     ASN1TagClass as _TagClass
 } from "@wildboar/asn1";
-import { AcceptCall, _decode_AcceptCall, _encode_AcceptCall } from "../CSTA-capability-exchange/AcceptCall.ta.mjs";
+import { type AcceptCall, _decode_AcceptCall, _encode_AcceptCall } from "../CSTA-capability-exchange/AcceptCall.ta.mjs";
 
-import { AlternateCall, _decode_AlternateCall, _encode_AlternateCall } from "../CSTA-capability-exchange/AlternateCall.ta.mjs";
+import { type AlternateCall, _decode_AlternateCall, _encode_AlternateCall } from "../CSTA-capability-exchange/AlternateCall.ta.mjs";
 
-import { AnswerCall, _decode_AnswerCall, _encode_AnswerCall } from "../CSTA-capability-exchange/AnswerCall.ta.mjs";
+import { type AnswerCall, _decode_AnswerCall, _encode_AnswerCall } from "../CSTA-capability-exchange/AnswerCall.ta.mjs";
 
-import { CallBack, _decode_CallBack, _encode_CallBack } from "../CSTA-capability-exchange/CallBack.ta.mjs";
+import { type CallBack, _decode_CallBack, _encode_CallBack } from "../CSTA-capability-exchange/CallBack.ta.mjs";
 
-import { CallBackMessage, _decode_CallBackMessage, _encode_CallBackMessage } from "../CSTA-capability-exchange/CallBackMessage.ta.mjs";
+import { type CallBackMessage, _decode_CallBackMessage, _encode_CallBackMessage } from "../CSTA-capability-exchange/CallBackMessage.ta.mjs";
 
-import { CampOnCall, _decode_CampOnCall, _encode_CampOnCall } from "../CSTA-capability-exchange/CampOnCall.ta.mjs";
+import { type CampOnCall, _decode_CampOnCall, _encode_CampOnCall } from "../CSTA-capability-exchange/CampOnCall.ta.mjs";
 
-import { ClearCall, _decode_ClearCall, _encode_ClearCall } from "../CSTA-capability-exchange/ClearCall.ta.mjs";
+import { type ClearCall, _decode_ClearCall, _encode_ClearCall } from "../CSTA-capability-exchange/ClearCall.ta.mjs";
 
-import { ClearConnection, _decode_ClearConnection, _encode_ClearConnection } from "../CSTA-capability-exchange/ClearConnection.ta.mjs";
+import { type ClearConnection, _decode_ClearConnection, _encode_ClearConnection } from "../CSTA-capability-exchange/ClearConnection.ta.mjs";
 
-import { ConferenceCall, _decode_ConferenceCall, _encode_ConferenceCall } from "../CSTA-capability-exchange/ConferenceCall.ta.mjs";
+import { type ConferenceCall, _decode_ConferenceCall, _encode_ConferenceCall } from "../CSTA-capability-exchange/ConferenceCall.ta.mjs";
 
-import { ConsultationCall, _decode_ConsultationCall, _encode_ConsultationCall } from "../CSTA-capability-exchange/ConsultationCall.ta.mjs";
+import { type ConsultationCall, _decode_ConsultationCall, _encode_ConsultationCall } from "../CSTA-capability-exchange/ConsultationCall.ta.mjs";
 
-import { DeflectCall, _decode_DeflectCall, _encode_DeflectCall } from "../CSTA-capability-exchange/DeflectCall.ta.mjs";
+import { type DeflectCall, _decode_DeflectCall, _encode_DeflectCall } from "../CSTA-capability-exchange/DeflectCall.ta.mjs";
 
-import { DialDigits, _decode_DialDigits, _encode_DialDigits } from "../CSTA-capability-exchange/DialDigits.ta.mjs";
+import { type DialDigits, _decode_DialDigits, _encode_DialDigits } from "../CSTA-capability-exchange/DialDigits.ta.mjs";
 
-import { DirectedPickupCall, _decode_DirectedPickupCall, _encode_DirectedPickupCall } from "../CSTA-capability-exchange/DirectedPickupCall.ta.mjs";
+import { type DirectedPickupCall, _decode_DirectedPickupCall, _encode_DirectedPickupCall } from "../CSTA-capability-exchange/DirectedPickupCall.ta.mjs";
 
-import { GroupPickupCall, _decode_GroupPickupCall, _encode_GroupPickupCall } from "../CSTA-capability-exchange/GroupPickupCall.ta.mjs";
+import { type GroupPickupCall, _decode_GroupPickupCall, _encode_GroupPickupCall } from "../CSTA-capability-exchange/GroupPickupCall.ta.mjs";
 
-import { HoldCall, _decode_HoldCall, _encode_HoldCall } from "../CSTA-capability-exchange/HoldCall.ta.mjs";
+import { type HoldCall, _decode_HoldCall, _encode_HoldCall } from "../CSTA-capability-exchange/HoldCall.ta.mjs";
 
-import { IntrudeCall, _decode_IntrudeCall, _encode_IntrudeCall } from "../CSTA-capability-exchange/IntrudeCall.ta.mjs";
+import { type IntrudeCall, _decode_IntrudeCall, _encode_IntrudeCall } from "../CSTA-capability-exchange/IntrudeCall.ta.mjs";
 
-import { JoinCall, _decode_JoinCall, _encode_JoinCall } from "../CSTA-capability-exchange/JoinCall.ta.mjs";
+import { type JoinCall, _decode_JoinCall, _encode_JoinCall } from "../CSTA-capability-exchange/JoinCall.ta.mjs";
 
-import { MakeCall, _decode_MakeCall, _encode_MakeCall } from "../CSTA-capability-exchange/MakeCall.ta.mjs";
+import { type MakeCall, _decode_MakeCall, _encode_MakeCall } from "../CSTA-capability-exchange/MakeCall.ta.mjs";
 
-import { MakeConnection, _decode_MakeConnection, _encode_MakeConnection } from "../CSTA-capability-exchange/MakeConnection.ta.mjs";
+import { type MakeConnection, _decode_MakeConnection, _encode_MakeConnection } from "../CSTA-capability-exchange/MakeConnection.ta.mjs";
 
-import { MakePredictiveCall, _decode_MakePredictiveCall, _encode_MakePredictiveCall } from "../CSTA-capability-exchange/MakePredictiveCall.ta.mjs";
+import { type MakePredictiveCall, _decode_MakePredictiveCall, _encode_MakePredictiveCall } from "../CSTA-capability-exchange/MakePredictiveCall.ta.mjs";
 
-import { ParkCall, _decode_ParkCall, _encode_ParkCall } from "../CSTA-capability-exchange/ParkCall.ta.mjs";
+import { type ParkCall, _decode_ParkCall, _encode_ParkCall } from "../CSTA-capability-exchange/ParkCall.ta.mjs";
 
-import { ReconnectCall, _decode_ReconnectCall, _encode_ReconnectCall } from "../CSTA-capability-exchange/ReconnectCall.ta.mjs";
+import { type ReconnectCall, _decode_ReconnectCall, _encode_ReconnectCall } from "../CSTA-capability-exchange/ReconnectCall.ta.mjs";
 
-import { RetrieveCall, _decode_RetrieveCall, _encode_RetrieveCall } from "../CSTA-capability-exchange/RetrieveCall.ta.mjs";
+import { type RetrieveCall, _decode_RetrieveCall, _encode_RetrieveCall } from "../CSTA-capability-exchange/RetrieveCall.ta.mjs";
 
-import { SendMessage, _decode_SendMessage, _encode_SendMessage } from "../CSTA-capability-exchange/SendMessage.ta.mjs";
+import { type SendMessage, _decode_SendMessage, _encode_SendMessage } from "../CSTA-capability-exchange/SendMessage.ta.mjs";
 
-import { SingleStepConference, _decode_SingleStepConference, _encode_SingleStepConference } from "../CSTA-capability-exchange/SingleStepConference.ta.mjs";
+import { type SingleStepConference, _decode_SingleStepConference, _encode_SingleStepConference } from "../CSTA-capability-exchange/SingleStepConference.ta.mjs";
 
-import { SingleStepTransfer, _decode_SingleStepTransfer, _encode_SingleStepTransfer } from "../CSTA-capability-exchange/SingleStepTransfer.ta.mjs";
+import { type SingleStepTransfer, _decode_SingleStepTransfer, _encode_SingleStepTransfer } from "../CSTA-capability-exchange/SingleStepTransfer.ta.mjs";
 
-import { TransferCall, _decode_TransferCall, _encode_TransferCall } from "../CSTA-capability-exchange/TransferCall.ta.mjs";
+import { type TransferCall, _decode_TransferCall, _encode_TransferCall } from "../CSTA-capability-exchange/TransferCall.ta.mjs";
 
 
 
@@ -78,32 +78,32 @@ import { TransferCall, _decode_TransferCall, _encode_TransferCall } from "../CST
  * 
  * ```asn1
  * CallControlServList ::= SEQUENCE
- * {     acceptCall             [ 0] IMPLICIT AcceptCall             OPTIONAL,
- *     alternateCall             [ 1] IMPLICIT AlternateCall             OPTIONAL,
- *     answerCall             [ 2] IMPLICIT AnswerCall             OPTIONAL,
- *     callBack             [ 3] IMPLICIT CallBack                 OPTIONAL,
- *     callBackMessage         [ 4] IMPLICIT CallBackMessage             OPTIONAL,
- *     campOnCall             [ 5] IMPLICIT CampOnCall             OPTIONAL,
- *     clearCall             [ 6] IMPLICIT ClearCall             OPTIONAL,
- *     clearConnection         [ 7] IMPLICIT ClearConnection             OPTIONAL,
- *     conferenceCall             [ 8] IMPLICIT ConferenceCall             OPTIONAL,
- *     consultationCall         [ 9] IMPLICIT ConsultationCall             OPTIONAL,
- *     deflectCall             [10] IMPLICIT DeflectCall             OPTIONAL,
- *     dialDigits             [11] IMPLICIT DialDigits             OPTIONAL,
- *     directedPickupCall         [12] IMPLICIT DirectedPickupCall         OPTIONAL,
- *     groupPickupCall         [13] IMPLICIT GroupPickupCall             OPTIONAL,
- *     holdCall             [14] IMPLICIT HoldCall                 OPTIONAL,
- *     intrudeCall             [15] IMPLICIT IntrudeCall             OPTIONAL,
- *     joinCall             [16] IMPLICIT JoinCall                 OPTIONAL,
- *     makeCall             [17] IMPLICIT MakeCall                 OPTIONAL,
- *     makeConnection            [25] IMPLICIT MakeConnection            OPTIONAL,
- *     makePredictiveCall         [18] IMPLICIT MakePredictiveCall         OPTIONAL,
- *     parkCall             [19] IMPLICIT ParkCall                 OPTIONAL,
- *     reconnectCall             [20] IMPLICIT ReconnectCall             OPTIONAL,
- *     retrieveCall             [21] IMPLICIT RetrieveCall             OPTIONAL,
- *     sendMessage            [26] IMPLICIT SendMessage            OPTIONAL,
- *     singleStepConference         [22] IMPLICIT SingleStepConference         OPTIONAL,
- *     singleStepTransfer         [23] IMPLICIT SingleStepTransfer         OPTIONAL,
+ * {     acceptCall             [ 0] IMPLICIT AcceptCall             type OPTIONAL,
+ *     alternateCall             [ 1] IMPLICIT AlternateCall             type OPTIONAL,
+ *     answerCall             [ 2] IMPLICIT AnswerCall             type OPTIONAL,
+ *     callBack             [ 3] IMPLICIT CallBack                 type OPTIONAL,
+ *     callBackMessage         [ 4] IMPLICIT CallBackMessage             type OPTIONAL,
+ *     campOnCall             [ 5] IMPLICIT CampOnCall             type OPTIONAL,
+ *     clearCall             [ 6] IMPLICIT ClearCall             type OPTIONAL,
+ *     clearConnection         [ 7] IMPLICIT ClearConnection             type OPTIONAL,
+ *     conferenceCall             [ 8] IMPLICIT ConferenceCall             type OPTIONAL,
+ *     consultationCall         [ 9] IMPLICIT ConsultationCall             type OPTIONAL,
+ *     deflectCall             [10] IMPLICIT DeflectCall             type OPTIONAL,
+ *     dialDigits             [11] IMPLICIT DialDigits             type OPTIONAL,
+ *     directedPickupCall         [12] IMPLICIT DirectedPickupCall         type OPTIONAL,
+ *     groupPickupCall         [13] IMPLICIT GroupPickupCall             type OPTIONAL,
+ *     holdCall             [14] IMPLICIT HoldCall                 type OPTIONAL,
+ *     intrudeCall             [15] IMPLICIT IntrudeCall             type OPTIONAL,
+ *     joinCall             [16] IMPLICIT JoinCall                 type OPTIONAL,
+ *     makeCall             [17] IMPLICIT MakeCall                 type OPTIONAL,
+ *     makeConnection            [25] IMPLICIT MakeConnection            type OPTIONAL,
+ *     makePredictiveCall         [18] IMPLICIT MakePredictiveCall         type OPTIONAL,
+ *     parkCall             [19] IMPLICIT ParkCall                 type OPTIONAL,
+ *     reconnectCall             [20] IMPLICIT ReconnectCall             type OPTIONAL,
+ *     retrieveCall             [21] IMPLICIT RetrieveCall             type OPTIONAL,
+ *     sendMessage            [26] IMPLICIT SendMessage            type OPTIONAL,
+ *     singleStepConference         [22] IMPLICIT SingleStepConference         type OPTIONAL,
+ *     singleStepTransfer         [23] IMPLICIT SingleStepTransfer         type OPTIONAL,
  *     transferCall             [24] IMPLICIT TransferCall             OPTIONAL }
  * ```
  * 
@@ -111,251 +111,307 @@ import { TransferCall, _decode_TransferCall, _encode_TransferCall } from "../CST
  */
 export
 class CallControlServList {
+    /**
+     * @summary `acceptCall`.
+     * @public
+     * @readonly
+     * @description
+     * Capability bitmap for this service; omit if the SF does not support
+     * it (ECMA-269 Annex C).
+     */
+    public readonly acceptCall?: OPTIONAL<AcceptCall>;
+    /**
+     * @summary `alternateCall`.
+     * @public
+     * @readonly
+     * @description
+     * Capability bitmap for this service; omit if the SF does not support
+     * it (ECMA-269 Annex C).
+     */
+    public readonly alternateCall?: OPTIONAL<AlternateCall>;
+    /**
+     * @summary `answerCall`.
+     * @public
+     * @readonly
+     * @description
+     * Capability bitmap for this service; omit if the SF does not support
+     * it (ECMA-269 Annex C).
+     */
+    public readonly answerCall?: OPTIONAL<AnswerCall>;
+    /**
+     * @summary `callBack`.
+     * @public
+     * @readonly
+     * @description
+     * Capability bitmap for this service; omit if the SF does not support
+     * it (ECMA-269 Annex C).
+     */
+    public readonly callBack?: OPTIONAL<CallBack>;
+    /**
+     * @summary `callBackMessage`.
+     * @public
+     * @readonly
+     * @description
+     * Capability bitmap for this service; omit if the SF does not support
+     * it (ECMA-269 Annex C).
+     */
+    public readonly callBackMessage?: OPTIONAL<CallBackMessage>;
+    /**
+     * @summary `campOnCall`.
+     * @public
+     * @readonly
+     * @description
+     * Capability bitmap for this service; omit if the SF does not support
+     * it (ECMA-269 Annex C).
+     */
+    public readonly campOnCall?: OPTIONAL<CampOnCall>;
+    /**
+     * @summary `clearCall`.
+     * @public
+     * @readonly
+     * @description
+     * Capability bitmap for this service; omit if the SF does not support
+     * it (ECMA-269 Annex C).
+     */
+    public readonly clearCall?: OPTIONAL<ClearCall>;
+    /**
+     * @summary `clearConnection`.
+     * @public
+     * @readonly
+     * @description
+     * Capability bitmap for this service; omit if the SF does not support
+     * it (ECMA-269 Annex C).
+     */
+    public readonly clearConnection?: OPTIONAL<ClearConnection>;
+    /**
+     * @summary `conferenceCall`.
+     * @public
+     * @readonly
+     * @description
+     * Capability bitmap for this service; omit if the SF does not support
+     * it (ECMA-269 Annex C).
+     */
+    public readonly conferenceCall?: OPTIONAL<ConferenceCall>;
+    /**
+     * @summary `consultationCall`.
+     * @public
+     * @readonly
+     * @description
+     * Capability bitmap for this service; omit if the SF does not support
+     * it (ECMA-269 Annex C).
+     */
+    public readonly consultationCall?: OPTIONAL<ConsultationCall>;
+    /**
+     * @summary `deflectCall`.
+     * @public
+     * @readonly
+     * @description
+     * Capability bitmap for this service; omit if the SF does not support
+     * it (ECMA-269 Annex C).
+     */
+    public readonly deflectCall?: OPTIONAL<DeflectCall>;
+    /**
+     * @summary `dialDigits`.
+     * @public
+     * @readonly
+     * @description
+     * Capability bitmap for this service; omit if the SF does not support
+     * it (ECMA-269 Annex C).
+     */
+    public readonly dialDigits?: OPTIONAL<DialDigits>;
+    /**
+     * @summary `directedPickupCall`.
+     * @public
+     * @readonly
+     * @description
+     * Capability bitmap for this service; omit if the SF does not support
+     * it (ECMA-269 Annex C).
+     */
+    public readonly directedPickupCall?: OPTIONAL<DirectedPickupCall>;
+    /**
+     * @summary `groupPickupCall`.
+     * @public
+     * @readonly
+     * @description
+     * Capability bitmap for this service; omit if the SF does not support
+     * it (ECMA-269 Annex C).
+     */
+    public readonly groupPickupCall?: OPTIONAL<GroupPickupCall>;
+    /**
+     * @summary `holdCall`.
+     * @public
+     * @readonly
+     * @description
+     * Capability bitmap for this service; omit if the SF does not support
+     * it (ECMA-269 Annex C).
+     */
+    public readonly holdCall?: OPTIONAL<HoldCall>;
+    /**
+     * @summary `intrudeCall`.
+     * @public
+     * @readonly
+     * @description
+     * Capability bitmap for this service; omit if the SF does not support
+     * it (ECMA-269 Annex C).
+     */
+    public readonly intrudeCall?: OPTIONAL<IntrudeCall>;
+    /**
+     * @summary `joinCall`.
+     * @public
+     * @readonly
+     * @description
+     * Capability bitmap for this service; omit if the SF does not support
+     * it (ECMA-269 Annex C).
+     */
+    public readonly joinCall?: OPTIONAL<JoinCall>;
+    /**
+     * @summary `makeCall`.
+     * @public
+     * @readonly
+     * @description
+     * Capability bitmap for this service; omit if the SF does not support
+     * it (ECMA-269 Annex C).
+     */
+    public readonly makeCall?: OPTIONAL<MakeCall>;
+    /**
+     * @summary `makeConnection`.
+     * @public
+     * @readonly
+     * @description
+     * Capability bitmap for this service; omit if the SF does not support
+     * it (ECMA-269 Annex C).
+     */
+    public readonly makeConnection?: OPTIONAL<MakeConnection>;
+    /**
+     * @summary `makePredictiveCall`.
+     * @public
+     * @readonly
+     * @description
+     * Capability bitmap for this service; omit if the SF does not support
+     * it (ECMA-269 Annex C).
+     */
+    public readonly makePredictiveCall?: OPTIONAL<MakePredictiveCall>;
+    /**
+     * @summary `parkCall`.
+     * @public
+     * @readonly
+     * @description
+     * Capability bitmap for this service; omit if the SF does not support
+     * it (ECMA-269 Annex C).
+     */
+    public readonly parkCall?: OPTIONAL<ParkCall>;
+    /**
+     * @summary `reconnectCall`.
+     * @public
+     * @readonly
+     * @description
+     * Capability bitmap for this service; omit if the SF does not support
+     * it (ECMA-269 Annex C).
+     */
+    public readonly reconnectCall?: OPTIONAL<ReconnectCall>;
+    /**
+     * @summary `retrieveCall`.
+     * @public
+     * @readonly
+     * @description
+     * Capability bitmap for this service; omit if the SF does not support
+     * it (ECMA-269 Annex C).
+     */
+    public readonly retrieveCall?: OPTIONAL<RetrieveCall>;
+    /**
+     * @summary `sendMessage`.
+     * @public
+     * @readonly
+     * @description
+     * Capability bitmap for this service; omit if the SF does not support
+     * it (ECMA-269 Annex C).
+     */
+    public readonly sendMessage?: OPTIONAL<SendMessage>;
+    /**
+     * @summary `singleStepConference`.
+     * @public
+     * @readonly
+     * @description
+     * Capability bitmap for this service; omit if the SF does not support
+     * it (ECMA-269 Annex C).
+     */
+    public readonly singleStepConference?: OPTIONAL<SingleStepConference>;
+    /**
+     * @summary `singleStepTransfer`.
+     * @public
+     * @readonly
+     * @description
+     * Capability bitmap for this service; omit if the SF does not support
+     * it (ECMA-269 Annex C).
+     */
+    public readonly singleStepTransfer?: OPTIONAL<SingleStepTransfer>;
+    /**
+     * @summary `transferCall`.
+     * @public
+     * @readonly
+     * @description
+     * Capability bitmap for this service; omit if the SF does not support
+     * it (ECMA-269 Annex C).
+     */
+    public readonly transferCall?: OPTIONAL<TransferCall>;
+
     constructor (
-        /**
-         * @summary `acceptCall`.
-         * @public
-         * @readonly
-         * @description
-         * Capability bitmap for this service; omit if the SF does not support
-         * it (ECMA-269 Annex C).
-         */
-        readonly acceptCall?: OPTIONAL<AcceptCall>,
-        /**
-         * @summary `alternateCall`.
-         * @public
-         * @readonly
-         * @description
-         * Capability bitmap for this service; omit if the SF does not support
-         * it (ECMA-269 Annex C).
-         */
-        readonly alternateCall?: OPTIONAL<AlternateCall>,
-        /**
-         * @summary `answerCall`.
-         * @public
-         * @readonly
-         * @description
-         * Capability bitmap for this service; omit if the SF does not support
-         * it (ECMA-269 Annex C).
-         */
-        readonly answerCall?: OPTIONAL<AnswerCall>,
-        /**
-         * @summary `callBack`.
-         * @public
-         * @readonly
-         * @description
-         * Capability bitmap for this service; omit if the SF does not support
-         * it (ECMA-269 Annex C).
-         */
-        readonly callBack?: OPTIONAL<CallBack>,
-        /**
-         * @summary `callBackMessage`.
-         * @public
-         * @readonly
-         * @description
-         * Capability bitmap for this service; omit if the SF does not support
-         * it (ECMA-269 Annex C).
-         */
-        readonly callBackMessage?: OPTIONAL<CallBackMessage>,
-        /**
-         * @summary `campOnCall`.
-         * @public
-         * @readonly
-         * @description
-         * Capability bitmap for this service; omit if the SF does not support
-         * it (ECMA-269 Annex C).
-         */
-        readonly campOnCall?: OPTIONAL<CampOnCall>,
-        /**
-         * @summary `clearCall`.
-         * @public
-         * @readonly
-         * @description
-         * Capability bitmap for this service; omit if the SF does not support
-         * it (ECMA-269 Annex C).
-         */
-        readonly clearCall?: OPTIONAL<ClearCall>,
-        /**
-         * @summary `clearConnection`.
-         * @public
-         * @readonly
-         * @description
-         * Capability bitmap for this service; omit if the SF does not support
-         * it (ECMA-269 Annex C).
-         */
-        readonly clearConnection?: OPTIONAL<ClearConnection>,
-        /**
-         * @summary `conferenceCall`.
-         * @public
-         * @readonly
-         * @description
-         * Capability bitmap for this service; omit if the SF does not support
-         * it (ECMA-269 Annex C).
-         */
-        readonly conferenceCall?: OPTIONAL<ConferenceCall>,
-        /**
-         * @summary `consultationCall`.
-         * @public
-         * @readonly
-         * @description
-         * Capability bitmap for this service; omit if the SF does not support
-         * it (ECMA-269 Annex C).
-         */
-        readonly consultationCall?: OPTIONAL<ConsultationCall>,
-        /**
-         * @summary `deflectCall`.
-         * @public
-         * @readonly
-         * @description
-         * Capability bitmap for this service; omit if the SF does not support
-         * it (ECMA-269 Annex C).
-         */
-        readonly deflectCall?: OPTIONAL<DeflectCall>,
-        /**
-         * @summary `dialDigits`.
-         * @public
-         * @readonly
-         * @description
-         * Capability bitmap for this service; omit if the SF does not support
-         * it (ECMA-269 Annex C).
-         */
-        readonly dialDigits?: OPTIONAL<DialDigits>,
-        /**
-         * @summary `directedPickupCall`.
-         * @public
-         * @readonly
-         * @description
-         * Capability bitmap for this service; omit if the SF does not support
-         * it (ECMA-269 Annex C).
-         */
-        readonly directedPickupCall?: OPTIONAL<DirectedPickupCall>,
-        /**
-         * @summary `groupPickupCall`.
-         * @public
-         * @readonly
-         * @description
-         * Capability bitmap for this service; omit if the SF does not support
-         * it (ECMA-269 Annex C).
-         */
-        readonly groupPickupCall?: OPTIONAL<GroupPickupCall>,
-        /**
-         * @summary `holdCall`.
-         * @public
-         * @readonly
-         * @description
-         * Capability bitmap for this service; omit if the SF does not support
-         * it (ECMA-269 Annex C).
-         */
-        readonly holdCall?: OPTIONAL<HoldCall>,
-        /**
-         * @summary `intrudeCall`.
-         * @public
-         * @readonly
-         * @description
-         * Capability bitmap for this service; omit if the SF does not support
-         * it (ECMA-269 Annex C).
-         */
-        readonly intrudeCall?: OPTIONAL<IntrudeCall>,
-        /**
-         * @summary `joinCall`.
-         * @public
-         * @readonly
-         * @description
-         * Capability bitmap for this service; omit if the SF does not support
-         * it (ECMA-269 Annex C).
-         */
-        readonly joinCall?: OPTIONAL<JoinCall>,
-        /**
-         * @summary `makeCall`.
-         * @public
-         * @readonly
-         * @description
-         * Capability bitmap for this service; omit if the SF does not support
-         * it (ECMA-269 Annex C).
-         */
-        readonly makeCall?: OPTIONAL<MakeCall>,
-        /**
-         * @summary `makeConnection`.
-         * @public
-         * @readonly
-         * @description
-         * Capability bitmap for this service; omit if the SF does not support
-         * it (ECMA-269 Annex C).
-         */
-        readonly makeConnection?: OPTIONAL<MakeConnection>,
-        /**
-         * @summary `makePredictiveCall`.
-         * @public
-         * @readonly
-         * @description
-         * Capability bitmap for this service; omit if the SF does not support
-         * it (ECMA-269 Annex C).
-         */
-        readonly makePredictiveCall?: OPTIONAL<MakePredictiveCall>,
-        /**
-         * @summary `parkCall`.
-         * @public
-         * @readonly
-         * @description
-         * Capability bitmap for this service; omit if the SF does not support
-         * it (ECMA-269 Annex C).
-         */
-        readonly parkCall?: OPTIONAL<ParkCall>,
-        /**
-         * @summary `reconnectCall`.
-         * @public
-         * @readonly
-         * @description
-         * Capability bitmap for this service; omit if the SF does not support
-         * it (ECMA-269 Annex C).
-         */
-        readonly reconnectCall?: OPTIONAL<ReconnectCall>,
-        /**
-         * @summary `retrieveCall`.
-         * @public
-         * @readonly
-         * @description
-         * Capability bitmap for this service; omit if the SF does not support
-         * it (ECMA-269 Annex C).
-         */
-        readonly retrieveCall?: OPTIONAL<RetrieveCall>,
-        /**
-         * @summary `sendMessage`.
-         * @public
-         * @readonly
-         * @description
-         * Capability bitmap for this service; omit if the SF does not support
-         * it (ECMA-269 Annex C).
-         */
-        readonly sendMessage?: OPTIONAL<SendMessage>,
-        /**
-         * @summary `singleStepConference`.
-         * @public
-         * @readonly
-         * @description
-         * Capability bitmap for this service; omit if the SF does not support
-         * it (ECMA-269 Annex C).
-         */
-        readonly singleStepConference?: OPTIONAL<SingleStepConference>,
-        /**
-         * @summary `singleStepTransfer`.
-         * @public
-         * @readonly
-         * @description
-         * Capability bitmap for this service; omit if the SF does not support
-         * it (ECMA-269 Annex C).
-         */
-        readonly singleStepTransfer?: OPTIONAL<SingleStepTransfer>,
-        /**
-         * @summary `transferCall`.
-         * @public
-         * @readonly
-         * @description
-         * Capability bitmap for this service; omit if the SF does not support
-         * it (ECMA-269 Annex C).
-         */
-        readonly transferCall?: OPTIONAL<TransferCall>
-    ) {}
+        acceptCall?: OPTIONAL<AcceptCall>,
+        alternateCall?: OPTIONAL<AlternateCall>,
+        answerCall?: OPTIONAL<AnswerCall>,
+        callBack?: OPTIONAL<CallBack>,
+        callBackMessage?: OPTIONAL<CallBackMessage>,
+        campOnCall?: OPTIONAL<CampOnCall>,
+        clearCall?: OPTIONAL<ClearCall>,
+        clearConnection?: OPTIONAL<ClearConnection>,
+        conferenceCall?: OPTIONAL<ConferenceCall>,
+        consultationCall?: OPTIONAL<ConsultationCall>,
+        deflectCall?: OPTIONAL<DeflectCall>,
+        dialDigits?: OPTIONAL<DialDigits>,
+        directedPickupCall?: OPTIONAL<DirectedPickupCall>,
+        groupPickupCall?: OPTIONAL<GroupPickupCall>,
+        holdCall?: OPTIONAL<HoldCall>,
+        intrudeCall?: OPTIONAL<IntrudeCall>,
+        joinCall?: OPTIONAL<JoinCall>,
+        makeCall?: OPTIONAL<MakeCall>,
+        makeConnection?: OPTIONAL<MakeConnection>,
+        makePredictiveCall?: OPTIONAL<MakePredictiveCall>,
+        parkCall?: OPTIONAL<ParkCall>,
+        reconnectCall?: OPTIONAL<ReconnectCall>,
+        retrieveCall?: OPTIONAL<RetrieveCall>,
+        sendMessage?: OPTIONAL<SendMessage>,
+        singleStepConference?: OPTIONAL<SingleStepConference>,
+        singleStepTransfer?: OPTIONAL<SingleStepTransfer>,
+        transferCall?: OPTIONAL<TransferCall>
+    ) {
+        this.acceptCall = acceptCall;
+        this.alternateCall = alternateCall;
+        this.answerCall = answerCall;
+        this.callBack = callBack;
+        this.callBackMessage = callBackMessage;
+        this.campOnCall = campOnCall;
+        this.clearCall = clearCall;
+        this.clearConnection = clearConnection;
+        this.conferenceCall = conferenceCall;
+        this.consultationCall = consultationCall;
+        this.deflectCall = deflectCall;
+        this.dialDigits = dialDigits;
+        this.directedPickupCall = directedPickupCall;
+        this.groupPickupCall = groupPickupCall;
+        this.holdCall = holdCall;
+        this.intrudeCall = intrudeCall;
+        this.joinCall = joinCall;
+        this.makeCall = makeCall;
+        this.makeConnection = makeConnection;
+        this.makePredictiveCall = makePredictiveCall;
+        this.parkCall = parkCall;
+        this.reconnectCall = reconnectCall;
+        this.retrieveCall = retrieveCall;
+        this.sendMessage = sendMessage;
+        this.singleStepConference = singleStepConference;
+        this.singleStepTransfer = singleStepTransfer;
+        this.transferCall = transferCall;
+    }
 
     /**
      * @summary Restructures an object into a CallControlServList

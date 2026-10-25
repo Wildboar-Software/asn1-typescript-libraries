@@ -1,8 +1,8 @@
 /* eslint-disable */
 import {
-    OPTIONAL,
-    BOOLEAN,
-    ASN1Element as _Element,
+    type OPTIONAL,
+    type BOOLEAN,
+    type ASN1Element as _Element,
     ASN1TagClass as _TagClass,
     ASN1Construction as _Construction,
     ASN1UniversalType as _UniversalType,
@@ -10,13 +10,14 @@ import {
     External as _External,
     EmbeddedPDV as _PDV,
     ASN1ConstructionError as _ConstructionError,
+    type INTEGER,
 } from "@wildboar/asn1";
 import * as $ from "@wildboar/asn1/functional";
-import { ObjectName, _decode_ObjectName, _encode_ObjectName } from "../ISO-9506-MMS-1/ObjectName.ta.mjs";
-import { Identifier, _decode_Identifier, _encode_Identifier } from "../ISO-9506-MMS-1/Identifier.ta.mjs";
-import { Priority, _decode_Priority, _encode_Priority } from "../MMS-Object-Module-1/Priority.ta.mjs";
+import { type ObjectName, _decode_ObjectName, _encode_ObjectName } from "../ISO-9506-MMS-1/ObjectName.ta.mjs";
+import { type Identifier, _decode_Identifier, _encode_Identifier } from "../ISO-9506-MMS-1/Identifier.ta.mjs";
+import { type Priority, _decode_Priority, _encode_Priority } from "../MMS-Object-Module-1/Priority.ta.mjs";
 import { normalPriority } from "../MMS-Object-Module-1/normalPriority.va.mjs";
-import { Unsigned32, _decode_Unsigned32, _encode_Unsigned32 } from "../ISO-9506-MMS-1/Unsigned32.ta.mjs";
+import { type Unsigned32, _decode_Unsigned32, _encode_Unsigned32 } from "../ISO-9506-MMS-1/Unsigned32.ta.mjs";
 import { ApplicationReference, _decode_ApplicationReference, _encode_ApplicationReference } from "../MMS-Environment-1/ApplicationReference.ta.mjs";
 
 
@@ -50,103 +51,121 @@ import { ApplicationReference, _decode_ApplicationReference, _encode_Application
  */
 export
 class TakeControl_Request {
+    /**
+     * @summary `semaphoreName`.
+     * @description
+     *
+     * Semaphore whose control is requested.
+     * ISO 9506-1:2003 §16.2.1.1.1.
+     *
+     * @public
+     * @readonly
+     */
+    public readonly semaphoreName: ObjectName;
+    /**
+     * @summary `namedToken`.
+     * @description
+     *
+     * Pool semaphore only. Names the named-token to take; omit to
+     * let the server allocate one. Shall not appear for a token
+     * semaphore. ISO 9506-1:2003 §16.2.1.1.2.
+     *
+     * @public
+     * @readonly
+     */
+    public readonly namedToken?: OPTIONAL<Identifier>;
+    /**
+     * @summary `priority`.
+     * @description
+     *
+     * Queue rank vs other TakeControl and AttachToSemaphore
+     * waiters. 0 highest, 64 normal, 127 lowest. Default
+     * `normalPriority`. ISO 9506-1:2003 §16.1.3.8, §16.2.1.1.3.
+     *
+     * @public
+     * @readonly
+     */
+    public readonly priority?: OPTIONAL<Priority>;
+    /**
+     * @summary `acceptableDelay`.
+     * @description
+     *
+     * Max wait in milliseconds for control. Zero fails at once if
+     * not free. Absent means forever. ISO 9506-1:2003
+     * §16.2.1.1.4. ISO 9506-2:2003 §16.2.1.
+     *
+     * @public
+     * @readonly
+     */
+    public readonly acceptableDelay?: OPTIONAL<Unsigned32>;
+    /**
+     * @summary `controlTimeOut`.
+     * @description
+     *
+     * Max hold time in milliseconds after control is granted.
+     * Absent means forever. On expiry, abort or hung per
+     * `abortOnTimeOut`. ISO 9506-1:2003 §16.2.1.1.5.
+     * ISO 9506-2:2003 §16.2.1.
+     *
+     * @public
+     * @readonly
+     */
+    public readonly controlTimeOut?: OPTIONAL<Unsigned32>;
+    /**
+     * @summary `abortOnTimeOut`.
+     * @description
+     *
+     * Present iff `controlTimeOut` is present. True aborts the
+     * association on timeout; false signals the semaphore Event
+     * Condition and hung. ISO 9506-1:2003 §16.2.1.1.6.
+     *
+     * @public
+     * @readonly
+     */
+    public readonly abortOnTimeOut?: OPTIONAL<BOOLEAN>;
+    /**
+     * @summary `relinquishIfConnectionLost`.
+     * @description
+     *
+     * True (default) releases control if the association is lost;
+     * false leaves the entry hung. ISO 9506-1:2003 §16.1.3.13,
+     * §16.2.1.1.7.
+     *
+     * @public
+     * @readonly
+     */
+    public readonly relinquishIfConnectionLost?: OPTIONAL<BOOLEAN>;
+    /**
+     * @summary `applicationToPreempt`.
+     * @description
+     *
+     * Preempt a hung entry owned by this application. CBB `tpy`.
+     * ISO 9506-1:2003 §16.2.1.1.8. ISO 9506-2:2003 §16.2.
+     *
+     * @public
+     * @readonly
+     */
+    public readonly applicationToPreempt?: OPTIONAL<ApplicationReference>;
+
     constructor (
-        /**
-         * @summary `semaphoreName`.
-         * @description
-         *
-         * Semaphore whose control is requested.
-         * ISO 9506-1:2003 §16.2.1.1.1.
-         *
-         * @public
-         * @readonly
-         */
-        readonly semaphoreName: ObjectName,
-        /**
-         * @summary `namedToken`.
-         * @description
-         *
-         * Pool semaphore only. Names the named-token to take; omit to
-         * let the server allocate one. Shall not appear for a token
-         * semaphore. ISO 9506-1:2003 §16.2.1.1.2.
-         *
-         * @public
-         * @readonly
-         */
-        readonly namedToken?: OPTIONAL<Identifier>,
-        /**
-         * @summary `priority`.
-         * @description
-         *
-         * Queue rank vs other TakeControl and AttachToSemaphore
-         * waiters. 0 highest, 64 normal, 127 lowest. Default
-         * `normalPriority`. ISO 9506-1:2003 §16.1.3.8, §16.2.1.1.3.
-         *
-         * @public
-         * @readonly
-         */
-        readonly priority?: OPTIONAL<Priority>,
-        /**
-         * @summary `acceptableDelay`.
-         * @description
-         *
-         * Max wait in milliseconds for control. Zero fails at once if
-         * not free. Absent means forever. ISO 9506-1:2003
-         * §16.2.1.1.4. ISO 9506-2:2003 §16.2.1.
-         *
-         * @public
-         * @readonly
-         */
-        readonly acceptableDelay?: OPTIONAL<Unsigned32>,
-        /**
-         * @summary `controlTimeOut`.
-         * @description
-         *
-         * Max hold time in milliseconds after control is granted.
-         * Absent means forever. On expiry, abort or hung per
-         * `abortOnTimeOut`. ISO 9506-1:2003 §16.2.1.1.5.
-         * ISO 9506-2:2003 §16.2.1.
-         *
-         * @public
-         * @readonly
-         */
-        readonly controlTimeOut?: OPTIONAL<Unsigned32>,
-        /**
-         * @summary `abortOnTimeOut`.
-         * @description
-         *
-         * Present iff `controlTimeOut` is present. True aborts the
-         * association on timeout; false signals the semaphore Event
-         * Condition and hung. ISO 9506-1:2003 §16.2.1.1.6.
-         *
-         * @public
-         * @readonly
-         */
-        readonly abortOnTimeOut?: OPTIONAL<BOOLEAN>,
-        /**
-         * @summary `relinquishIfConnectionLost`.
-         * @description
-         *
-         * True (default) releases control if the association is lost;
-         * false leaves the entry hung. ISO 9506-1:2003 §16.1.3.13,
-         * §16.2.1.1.7.
-         *
-         * @public
-         * @readonly
-         */
-        readonly relinquishIfConnectionLost?: OPTIONAL<BOOLEAN>,
-        /**
-         * @summary `applicationToPreempt`.
-         * @description
-         *
-         * Preempt a hung entry owned by this application. CBB `tpy`.
-         * ISO 9506-1:2003 §16.2.1.1.8. ISO 9506-2:2003 §16.2.
-         *
-         * @public
-         * @readonly
-         */
-        readonly applicationToPreempt?: OPTIONAL<ApplicationReference>
-    ) {}
+        semaphoreName: ObjectName,
+        namedToken?: OPTIONAL<Identifier>,
+        priority?: OPTIONAL<Priority>,
+        acceptableDelay?: OPTIONAL<Unsigned32>,
+        controlTimeOut?: OPTIONAL<Unsigned32>,
+        abortOnTimeOut?: OPTIONAL<BOOLEAN>,
+        relinquishIfConnectionLost?: OPTIONAL<BOOLEAN>,
+        applicationToPreempt?: OPTIONAL<ApplicationReference>
+    ) {
+        this.semaphoreName = semaphoreName;
+        this.namedToken = namedToken;
+        this.priority = priority;
+        this.acceptableDelay = acceptableDelay;
+        this.controlTimeOut = controlTimeOut;
+        this.abortOnTimeOut = abortOnTimeOut;
+        this.relinquishIfConnectionLost = relinquishIfConnectionLost;
+        this.applicationToPreempt = applicationToPreempt;
+    }
 
     /**
      * @summary Restructures an object into a TakeControl_Request
@@ -170,7 +189,7 @@ class TakeControl_Request {
      * @static
      * @method
      */
-    public static get _default_value_for_priority () { return normalPriority; }
+    public static get _default_value_for_priority (): INTEGER { return normalPriority; }
     /**
      * @summary Getter that returns the default value for `relinquishIfConnectionLost`.
      * @public

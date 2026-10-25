@@ -1,14 +1,14 @@
 /* eslint-disable */
 import {
-    OPTIONAL,
-    ASN1Element as _Element,
+    type OPTIONAL,
+    type ASN1Element as _Element,
     ASN1TagClass as _TagClass
 } from "@wildboar/asn1";
 import * as $ from "@wildboar/asn1/functional";
 import { ExtensionContainer, _decode_ExtensionContainer, _encode_ExtensionContainer } from "../MAP-ExtensionDataTypes/ExtensionContainer.ta.mjs";
-import { AuthenticationSetList, _decode_AuthenticationSetList, _encode_AuthenticationSetList } from "../MAP-MS-DataTypes/AuthenticationSetList.ta.mjs";
-import { EPS_AuthenticationSetList, _decode_EPS_AuthenticationSetList, _encode_EPS_AuthenticationSetList } from "../MAP-MS-DataTypes/EPS-AuthenticationSetList.ta.mjs";
-import { UE_UsageType, _decode_UE_UsageType, _encode_UE_UsageType } from "../MAP-MS-DataTypes/UE-UsageType.ta.mjs";
+import { type AuthenticationSetList, _decode_AuthenticationSetList, _encode_AuthenticationSetList } from "../MAP-MS-DataTypes/AuthenticationSetList.ta.mjs";
+import { type EPS_AuthenticationSetList, _decode_EPS_AuthenticationSetList, _encode_EPS_AuthenticationSetList } from "../MAP-MS-DataTypes/EPS-AuthenticationSetList.ta.mjs";
+import { type UE_UsageType, _decode_UE_UsageType, _encode_UE_UsageType } from "../MAP-MS-DataTypes/UE-UsageType.ta.mjs";
 
 
 /**
@@ -26,10 +26,10 @@ import { UE_UsageType, _decode_UE_UsageType, _encode_UE_UsageType } from "../MAP
  * 
  * ```asn1
  * SendAuthenticationInfoRes ::= [3] SEQUENCE {
- *     authenticationSetList    AuthenticationSetList    OPTIONAL,
- *     extensionContainer    ExtensionContainer    OPTIONAL,
+ *     authenticationSetList    AuthenticationSetList    type OPTIONAL,
+ *     extensionContainer    ExtensionContainer    type OPTIONAL,
  *     ...,
- *     eps-AuthenticationSetList    [2] EPS-AuthenticationSetList    OPTIONAL,
+ *     eps-AuthenticationSetList    [2] EPS-AuthenticationSetList    type OPTIONAL,
  *     ueUsageType    [3] UE-UsageType    OPTIONAL }
  * ```
  * 
@@ -37,60 +37,72 @@ import { UE_UsageType, _decode_UE_UsageType, _encode_UE_UsageType } from "../MAP
  */
 export
 class SendAuthenticationInfoRes {
+    /**
+     * @summary `authenticationSetList`.
+     * @description
+     *
+     * One to five GSM triplets or UMTS quintuplets if the service
+     * succeeded.
+     *
+     * (3GPP TS 29.002 V19.1.0 clauses 7.6.7.1 and 8.5.2.3).
+     *
+     * @public
+     * @readonly
+     */
+    public readonly authenticationSetList?: OPTIONAL<AuthenticationSetList>;
+    /**
+     * @summary `extensionContainer`.
+     * @public
+     * @readonly
+     */
+    public readonly extensionContainer?: OPTIONAL<ExtensionContainer>;
+    /**
+     * @summary `eps_AuthenticationSetList`.
+     * @description
+     *
+     * EPS authentication vectors when the requesting node type is MME (or
+     * additional EPS vectors for combined MME/SGSN).
+     *
+     * (3GPP TS 29.002 V19.1.0 clause 8.5.2.1).
+     *
+     * @public
+     * @readonly
+     */
+    public readonly eps_AuthenticationSetList?: OPTIONAL<EPS_AuthenticationSetList>;
+    /**
+     * @summary `ueUsageType`.
+     * @description
+     *
+     * Present if requested, the HLR supports DCN (3GPP TS 23.060), and a UE
+     * Usage Type is in the subscription. If Immediate Response Preferred is
+     * not set, HLR may return no authentication vectors in that case.
+     *
+     * (3GPP TS 29.002 V19.1.0 clause 8.5.2.3).
+     *
+     * @public
+     * @readonly
+     */
+    public readonly ueUsageType?: OPTIONAL<UE_UsageType>;
+    /**
+     * @summary Extensions that are not recognized.
+     * @public
+     * @readonly
+     */
+    public readonly _unrecognizedExtensionsList: _Element[];
+
     constructor (
-        /**
-         * @summary `authenticationSetList`.
-         * @description
-         *
-         * One to five GSM triplets or UMTS quintuplets if the service
-         * succeeded.
-         *
-         * (3GPP TS 29.002 V19.1.0 clauses 7.6.7.1 and 8.5.2.3).
-         *
-         * @public
-         * @readonly
-         */
-        readonly authenticationSetList?: OPTIONAL<AuthenticationSetList>,
-        /**
-         * @summary `extensionContainer`.
-         * @public
-         * @readonly
-         */
-        readonly extensionContainer?: OPTIONAL<ExtensionContainer>,
-        /**
-         * @summary `eps_AuthenticationSetList`.
-         * @description
-         *
-         * EPS authentication vectors when the requesting node type is MME (or
-         * additional EPS vectors for combined MME/SGSN).
-         *
-         * (3GPP TS 29.002 V19.1.0 clause 8.5.2.1).
-         *
-         * @public
-         * @readonly
-         */
-        readonly eps_AuthenticationSetList?: OPTIONAL<EPS_AuthenticationSetList>,
-        /**
-         * @summary `ueUsageType`.
-         * @description
-         *
-         * Present if requested, the HLR supports DCN (3GPP TS 23.060), and a UE
-         * Usage Type is in the subscription. If Immediate Response Preferred is
-         * not set, HLR may return no authentication vectors in that case.
-         *
-         * (3GPP TS 29.002 V19.1.0 clause 8.5.2.3).
-         *
-         * @public
-         * @readonly
-         */
-        readonly ueUsageType?: OPTIONAL<UE_UsageType>,
-        /**
-         * @summary Extensions that are not recognized.
-         * @public
-         * @readonly
-         */
-        readonly _unrecognizedExtensionsList: _Element[] = []
-    ) {}
+        authenticationSetList?: OPTIONAL<AuthenticationSetList>,
+        extensionContainer?: OPTIONAL<ExtensionContainer>,
+        eps_AuthenticationSetList?: OPTIONAL<EPS_AuthenticationSetList>,
+        ueUsageType?: OPTIONAL<UE_UsageType>,
+        _unrecognizedExtensionsList: _Element[] = []
+    ) {
+        this.authenticationSetList = authenticationSetList;
+        this.extensionContainer = extensionContainer;
+        this.eps_AuthenticationSetList = eps_AuthenticationSetList;
+        this.ueUsageType = ueUsageType;
+        this._unrecognizedExtensionsList = _unrecognizedExtensionsList;
+    }
 
     /**
      * @summary Restructures an object into a SendAuthenticationInfoRes

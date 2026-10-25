@@ -7,7 +7,7 @@ import {
     _encode_AccessPointInformation,
 } from "../DistributedOperations/AccessPointInformation.ta.mjs";
 import {
-    DistinguishedName,
+    type DistinguishedName,
     _decode_DistinguishedName,
     _encode_DistinguishedName,
 } from "../InformationFramework/DistinguishedName.ta.mjs";
@@ -28,34 +28,42 @@ import {
  *
  */
 export class CrossReference {
+    /**
+     * @summary `contextPrefix`.
+     * @description
+     *
+     * Naming-context prefix that matched.
+     *
+     * @public
+     * @readonly
+     */
+    public readonly contextPrefix: DistinguishedName;
+    /**
+     * @summary `accessPoint`.
+     * @description
+     *
+     * AccessPointInformation for that context.
+     *
+     * @public
+     * @readonly
+     */
+    public readonly accessPoint: AccessPointInformation;
+    /**
+     * @summary Extensions that are not recognized.
+     * @public
+     * @readonly
+     */
+    public readonly _unrecognizedExtensionsList: _Element[];
+
     constructor(
-        /**
-         * @summary `contextPrefix`.
-         * @description
-         *
-         * Naming-context prefix that matched.
-         *
-         * @public
-         * @readonly
-         */
-        readonly contextPrefix: DistinguishedName,
-        /**
-         * @summary `accessPoint`.
-         * @description
-         *
-         * AccessPointInformation for that context.
-         *
-         * @public
-         * @readonly
-         */
-        readonly accessPoint: AccessPointInformation,
-        /**
-         * @summary Extensions that are not recognized.
-         * @public
-         * @readonly
-         */
-        readonly _unrecognizedExtensionsList: _Element[] = []
-    ) {}
+        contextPrefix: DistinguishedName,
+        accessPoint: AccessPointInformation,
+        _unrecognizedExtensionsList: _Element[] = []
+    ) {
+        this.contextPrefix = contextPrefix;
+        this.accessPoint = accessPoint;
+        this._unrecognizedExtensionsList = _unrecognizedExtensionsList;
+    }
 
     /**
      * @summary Restructures an object into a CrossReference

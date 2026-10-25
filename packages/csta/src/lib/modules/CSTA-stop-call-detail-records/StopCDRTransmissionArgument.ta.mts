@@ -2,13 +2,13 @@
 
 import * as $ from "@wildboar/asn1/functional";
 import {
-    OPTIONAL,
-    SEQUENCE,
-    SET,
-    ASN1Element as _Element,
+    type OPTIONAL,
+    type SEQUENCE,
+    type SET,
+    type ASN1Element as _Element,
     ASN1TagClass as _TagClass
 } from "@wildboar/asn1";
-import { CDRCrossRefID, _decode_CDRCrossRefID, _encode_CDRCrossRefID } from "../CSTA-call-detail-record/CDRCrossRefID.ta.mjs";
+import { type CDRCrossRefID, _decode_CDRCrossRefID, _encode_CDRCrossRefID } from "../CSTA-call-detail-record/CDRCrossRefID.ta.mjs";
 
 import {
     CDRTermReason,
@@ -36,7 +36,7 @@ import { CSTACommonArguments, _decode_CSTACommonArguments, _encode_CSTACommonArg
  * ```asn1
  * StopCDRTransmissionArgument ::= SEQUENCE
  * {    cdrCrossRefID            CDRCrossRefID,           --corrected 06/2001
- *     cdrTermReason            CDRTermReason                OPTIONAL,
+ *     cdrTermReason            CDRTermReason                type OPTIONAL,
  *     extensions            CSTACommonArguments            OPTIONAL }
  * ```
  * 
@@ -44,42 +44,50 @@ import { CSTACommonArguments, _decode_CSTACommonArguments, _encode_CSTACommonArg
  */
 export
 class StopCDRTransmissionArgument {
+    /**
+     * @summary `cdrCrossRefID`.
+     * @description
+     *
+     * CDR transmission cross-reference from Start Call Detail Records
+     * Transmission (ECMA-269 §27.1.4).
+     *
+     * @public
+     * @readonly
+     */
+    public readonly cdrCrossRefID: CDRCrossRefID;
+    /**
+     * @summary `cdrTermReason`.
+     * @description
+     *
+     * endOfDataDetected, errorDetected, thresholdReached, or other. Shall
+     * not be provided when the computing function sends this service
+     * (ECMA-269 §27.1.5.1).
+     *
+     * @public
+     * @readonly
+     */
+    public readonly cdrTermReason?: OPTIONAL<CDRTermReason>;
+    /**
+     * @summary `extensions`.
+     * @description
+     *
+     * CSTACommonArguments carrying the service-table security and
+     * privateData parameters.
+     *
+     * @public
+     * @readonly
+     */
+    public readonly extensions?: OPTIONAL<CSTACommonArguments>;
+
     constructor (
-        /**
-         * @summary `cdrCrossRefID`.
-         * @description
-         *
-         * CDR transmission cross-reference from Start Call Detail Records
-         * Transmission (ECMA-269 §27.1.4).
-         *
-         * @public
-         * @readonly
-         */
-        readonly cdrCrossRefID: CDRCrossRefID,
-        /**
-         * @summary `cdrTermReason`.
-         * @description
-         *
-         * endOfDataDetected, errorDetected, thresholdReached, or other. Shall
-         * not be provided when the computing function sends this service
-         * (ECMA-269 §27.1.5.1).
-         *
-         * @public
-         * @readonly
-         */
-        readonly cdrTermReason?: OPTIONAL<CDRTermReason>,
-        /**
-         * @summary `extensions`.
-         * @description
-         *
-         * CSTACommonArguments carrying the service-table security and
-         * privateData parameters.
-         *
-         * @public
-         * @readonly
-         */
-        readonly extensions?: OPTIONAL<CSTACommonArguments>
-    ) {}
+        cdrCrossRefID: CDRCrossRefID,
+        cdrTermReason?: OPTIONAL<CDRTermReason>,
+        extensions?: OPTIONAL<CSTACommonArguments>
+    ) {
+        this.cdrCrossRefID = cdrCrossRefID;
+        this.cdrTermReason = cdrTermReason;
+        this.extensions = extensions;
+    }
 
     /**
      * @summary Restructures an object into a StopCDRTransmissionArgument
@@ -103,7 +111,7 @@ class StopCDRTransmissionArgument {
          * @static
          */
 
-    public static _enum_for_cdrTermReason = _enum_for_CDRTermReason;
+    public static _enum_for_cdrTermReason: typeof _enum_for_CDRTermReason = _enum_for_CDRTermReason;
 }
 
 /**

@@ -2,13 +2,13 @@
 
 import * as $ from "@wildboar/asn1/functional";
 import {
-    SEQUENCE,
-    SET,
-    ASN1Element as _Element,
+    type SEQUENCE,
+    type SET,
+    type ASN1Element as _Element,
     ASN1TagClass as _TagClass,
     ASN1ConstructionError as _ConstructionError
 } from "@wildboar/asn1";
-import { CSTAVersion, _decode_CSTAVersion, _encode_CSTAVersion } from "../CSTA-application-context-information-csta3/CSTAVersion.ta.mjs";
+import { type CSTAVersion, _decode_CSTAVersion, _encode_CSTAVersion } from "../CSTA-application-context-information-csta3/CSTAVersion.ta.mjs";
 
 import { CSTAFunctionality, _decode_CSTAFunctionality, _encode_CSTAFunctionality } from "../CSTA-application-context-information-csta3/CSTAFunctionality.ta.mjs";
 
@@ -36,30 +36,38 @@ import { CSTAFunctionality, _decode_CSTAFunctionality, _encode_CSTAFunctionality
  */
 export
 class OldACSEUserInformationForCSTA {
+    /**
+     * @summary `cSTAVersion`.
+     * @description Protocol versions offered or selected.
+     * @public
+     * @readonly
+     */
+    public readonly cSTAVersion: CSTAVersion;
+    /**
+     * @summary `cSTAFunctionsRequiredByApplication`.
+     * @description
+     * CSTA services/events this application requires from the peer.
+     * @public
+     * @readonly
+     */
+    public readonly cSTAFunctionsRequiredByApplication: CSTAFunctionality;
+    /**
+     * @summary `cSTAFunctionsThatCanBeSupplied`.
+     * @description CSTA services/events this application can supply.
+     * @public
+     * @readonly
+     */
+    public readonly cSTAFunctionsThatCanBeSupplied: CSTAFunctionality;
+
     constructor (
-        /**
-         * @summary `cSTAVersion`.
-         * @description Protocol versions offered or selected.
-         * @public
-         * @readonly
-         */
-        readonly cSTAVersion: CSTAVersion,
-        /**
-         * @summary `cSTAFunctionsRequiredByApplication`.
-         * @description
-         * CSTA services/events this application requires from the peer.
-         * @public
-         * @readonly
-         */
-        readonly cSTAFunctionsRequiredByApplication: CSTAFunctionality,
-        /**
-         * @summary `cSTAFunctionsThatCanBeSupplied`.
-         * @description CSTA services/events this application can supply.
-         * @public
-         * @readonly
-         */
-        readonly cSTAFunctionsThatCanBeSupplied: CSTAFunctionality
-    ) {}
+        cSTAVersion: CSTAVersion,
+        cSTAFunctionsRequiredByApplication: CSTAFunctionality,
+        cSTAFunctionsThatCanBeSupplied: CSTAFunctionality
+    ) {
+        this.cSTAVersion = cSTAVersion;
+        this.cSTAFunctionsRequiredByApplication = cSTAFunctionsRequiredByApplication;
+        this.cSTAFunctionsThatCanBeSupplied = cSTAFunctionsThatCanBeSupplied;
+    }
 
     /**
      * @summary Restructures an object into a OldACSEUserInformationForCSTA

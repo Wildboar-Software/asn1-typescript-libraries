@@ -1,4 +1,5 @@
 /* eslint-disable */
+import { ASN1Element as _Element, ASN1ConstructionError as _ConstructionError } from "@wildboar/asn1";
 import * as $ from "@wildboar/asn1/functional";
 
 
@@ -59,7 +60,7 @@ type ControlType = _enum_for_ControlType;
  * @enum {number}
  */
 export
-const ControlType = _enum_for_ControlType;
+const ControlType: typeof _enum_for_ControlType = _enum_for_ControlType;
 
 /**
  * @summary ControlType_sCPOverloaded
@@ -67,7 +68,7 @@ const ControlType = _enum_for_ControlType;
  * @type {number}
  */
 export
-const ControlType_sCPOverloaded: ControlType = ControlType.sCPOverloaded; /* LONG_NAMED_ENUMERATED_VALUE */
+const ControlType_sCPOverloaded: _enum_for_ControlType.sCPOverloaded = ControlType.sCPOverloaded; /* LONG_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary sCPOverloaded
@@ -75,7 +76,7 @@ const ControlType_sCPOverloaded: ControlType = ControlType.sCPOverloaded; /* LON
  * @type {number}
  */
 export
-const sCPOverloaded: ControlType = ControlType.sCPOverloaded; /* SHORT_NAMED_ENUMERATED_VALUE */
+const sCPOverloaded: _enum_for_ControlType.sCPOverloaded = ControlType.sCPOverloaded; /* SHORT_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary ControlType_manuallyInitiated
@@ -83,7 +84,7 @@ const sCPOverloaded: ControlType = ControlType.sCPOverloaded; /* SHORT_NAMED_ENU
  * @type {number}
  */
 export
-const ControlType_manuallyInitiated: ControlType = ControlType.manuallyInitiated; /* LONG_NAMED_ENUMERATED_VALUE */
+const ControlType_manuallyInitiated: _enum_for_ControlType.manuallyInitiated = ControlType.manuallyInitiated; /* LONG_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary manuallyInitiated
@@ -91,7 +92,7 @@ const ControlType_manuallyInitiated: ControlType = ControlType.manuallyInitiated
  * @type {number}
  */
 export
-const manuallyInitiated: ControlType = ControlType.manuallyInitiated; /* SHORT_NAMED_ENUMERATED_VALUE */
+const manuallyInitiated: _enum_for_ControlType.manuallyInitiated = ControlType.manuallyInitiated; /* SHORT_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary ControlType_destinationOverload
@@ -99,7 +100,7 @@ const manuallyInitiated: ControlType = ControlType.manuallyInitiated; /* SHORT_N
  * @type {number}
  */
 export
-const ControlType_destinationOverload: ControlType = ControlType.destinationOverload; /* LONG_NAMED_ENUMERATED_VALUE */
+const ControlType_destinationOverload: _enum_for_ControlType.destinationOverload = ControlType.destinationOverload; /* LONG_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary destinationOverload
@@ -107,12 +108,24 @@ const ControlType_destinationOverload: ControlType = ControlType.destinationOver
  * @type {number}
  */
 export
-const destinationOverload: ControlType = ControlType.destinationOverload; /* SHORT_NAMED_ENUMERATED_VALUE */
+const destinationOverload: _enum_for_ControlType.destinationOverload = ControlType.destinationOverload; /* SHORT_NAMED_ENUMERATED_VALUE */
 
 export
-const _decode_ControlType: $.ASN1Decoder<ControlType> = $._decodeEnumerated;
+function _decode_ControlType(el: _Element): ControlType {
+    const enumerated = $._decodeEnumerated(el);
+    switch (enumerated) {
+        case ControlType.sCPOverloaded: return ControlType.sCPOverloaded;
+        case ControlType.manuallyInitiated: return ControlType.manuallyInitiated;
+        case ControlType.destinationOverload: return ControlType.destinationOverload;
+        default:
+            throw new _ConstructionError(
+                "Invalid ENUMERATED value " + enumerated + " for ControlType.",
+                el,
+            );
+    }
+}
 
 export
-const _encode_ControlType: $.ASN1Encoder<ControlType> = $._encodeEnumerated;
+const _encode_ControlType: $.ASN1Encoder<ControlType> = $._encodeEnumerated as $.ASN1Encoder<ControlType>;
 
 /* eslint-enable */

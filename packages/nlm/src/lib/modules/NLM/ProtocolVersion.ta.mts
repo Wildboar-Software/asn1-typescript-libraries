@@ -1,6 +1,6 @@
 /* eslint-disable */
 import {
-    ASN1Element as _Element,
+    type ASN1Element as _Element,
     ASN1TagClass as _TagClass,
     ASN1Construction as _Construction,
     ASN1UniversalType as _UniversalType,
@@ -79,7 +79,7 @@ export type ProtocolVersion = _enum_for_ProtocolVersion;
  *
  * @enum {number}
  */
-export const ProtocolVersion = _enum_for_ProtocolVersion;
+export const ProtocolVersion: typeof _enum_for_ProtocolVersion = _enum_for_ProtocolVersion;
 
 
 /**
@@ -93,7 +93,7 @@ export const ProtocolVersion = _enum_for_ProtocolVersion;
  * @constant
  * @type {number}
  */
-export const ProtocolVersion_iSO8208V1: ProtocolVersion =
+export const ProtocolVersion_iSO8208V1: 0 =
     ProtocolVersion.iSO8208V1; /* LONG_NAMED_ENUMERATED_VALUE */
 
 
@@ -108,7 +108,7 @@ export const ProtocolVersion_iSO8208V1: ProtocolVersion =
  * @constant
  * @type {number}
  */
-export const iSO8208V1: ProtocolVersion =
+export const iSO8208V1: 0 =
     ProtocolVersion.iSO8208V1; /* SHORT_NAMED_ENUMERATED_VALUE */
 
 
@@ -123,7 +123,7 @@ export const iSO8208V1: ProtocolVersion =
  * @constant
  * @type {number}
  */
-export const ProtocolVersion_iSO8208V2: ProtocolVersion =
+export const ProtocolVersion_iSO8208V2: 1 =
     ProtocolVersion.iSO8208V2; /* LONG_NAMED_ENUMERATED_VALUE */
 
 
@@ -138,7 +138,7 @@ export const ProtocolVersion_iSO8208V2: ProtocolVersion =
  * @constant
  * @type {number}
  */
-export const iSO8208V2: ProtocolVersion =
+export const iSO8208V2: 1 =
     ProtocolVersion.iSO8208V2; /* SHORT_NAMED_ENUMERATED_VALUE */
 
 
@@ -153,7 +153,7 @@ export const iSO8208V2: ProtocolVersion =
  * @constant
  * @type {number}
  */
-export const ProtocolVersion_x2584: ProtocolVersion =
+export const ProtocolVersion_x2584: 2 =
     ProtocolVersion.x2584; /* LONG_NAMED_ENUMERATED_VALUE */
 
 
@@ -168,7 +168,7 @@ export const ProtocolVersion_x2584: ProtocolVersion =
  * @constant
  * @type {number}
  */
-export const x2584: ProtocolVersion =
+export const x2584: 2 =
     ProtocolVersion.x2584; /* SHORT_NAMED_ENUMERATED_VALUE */
 
 
@@ -183,7 +183,7 @@ export const x2584: ProtocolVersion =
  * @constant
  * @type {number}
  */
-export const ProtocolVersion_x2588: ProtocolVersion =
+export const ProtocolVersion_x2588: 3 =
     ProtocolVersion.x2588; /* LONG_NAMED_ENUMERATED_VALUE */
 
 
@@ -198,18 +198,31 @@ export const ProtocolVersion_x2588: ProtocolVersion =
  * @constant
  * @type {number}
  */
-export const x2588: ProtocolVersion =
+export const x2588: 3 =
     ProtocolVersion.x2588; /* SHORT_NAMED_ENUMERATED_VALUE */
 
 
 
 
-export const _decode_ProtocolVersion = $._decodeEnumerated as $.ASN1Decoder<ProtocolVersion>;
+export function _decode_ProtocolVersion(el: _Element): ProtocolVersion {
+    const enumerated = $._decodeEnumerated(el);
+    switch (enumerated) {
+        case ProtocolVersion.iSO8208V1: return ProtocolVersion.iSO8208V1;
+        case ProtocolVersion.iSO8208V2: return ProtocolVersion.iSO8208V2;
+        case ProtocolVersion.x2584: return ProtocolVersion.x2584;
+        case ProtocolVersion.x2588: return ProtocolVersion.x2588;
+        default:
+            throw new _ConstructionError(
+                'Invalid ENUMERATED value ' + enumerated + ' for ProtocolVersion.',
+                el,
+            );
+    }
+}
 
 
 
 
-export const _encode_ProtocolVersion = $._encodeEnumerated as $.ASN1Encoder<ProtocolVersion>;
+export const _encode_ProtocolVersion: $.ASN1Encoder<ProtocolVersion> = $._encodeEnumerated as $.ASN1Encoder<ProtocolVersion>;
 
 
 /* eslint-enable */

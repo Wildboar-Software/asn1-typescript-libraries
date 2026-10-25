@@ -1,12 +1,12 @@
 /* eslint-disable */
 import {
-    OCTET_STRING,
-    ASN1Element as _Element,
+    type OCTET_STRING,
+    type ASN1Element as _Element,
     ASN1TagClass as _TagClass
 } from "@wildboar/asn1";
 import * as $ from "@wildboar/asn1/functional";
 import { MMState, _decode_MMState, _encode_MMState, _enum_for_MMState } from "../MMSChargingDataTypes/MMState.ta.mjs";
-import { StoreStatus, _decode_StoreStatus, _encode_StoreStatus } from "../MMSChargingDataTypes/StoreStatus.ta.mjs";
+import { type StoreStatus, _decode_StoreStatus, _encode_StoreStatus } from "../MMSChargingDataTypes/StoreStatus.ta.mjs";
 
 
 /**
@@ -159,7 +159,7 @@ class MMBoxStorageInformation {
          * @static
          */
 
-    public static _enum_for_mmState = _enum_for_MMState;
+    public static _enum_for_mmState: typeof _enum_for_MMState = _enum_for_MMState;
 }
 
 /**

@@ -1,6 +1,6 @@
 /* eslint-disable */
 import {
-    ASN1Element as _Element,
+    type ASN1Element as _Element,
     ASN1TagClass as _TagClass,
     ASN1Construction as _Construction,
     ASN1UniversalType as _UniversalType,
@@ -10,7 +10,7 @@ import {
     ASN1ConstructionError as _ConstructionError,
 } from "@wildboar/asn1";
 import * as $ from "@wildboar/asn1/functional";
-import { DfrEntryName, _decode_DfrEntryName, _encode_DfrEntryName } from "../DFRAbstractService/DfrEntryName.ta.mjs";
+import { type DfrEntryName, _decode_DfrEntryName, _encode_DfrEntryName } from "../DFRAbstractService/DfrEntryName.ta.mjs";
 import { NameProblem, _enum_for_NameProblem, _decode_NameProblem, _encode_NameProblem } from "../DFRAbstractService/NameProblem.ta.mjs";
 
 
@@ -34,26 +34,32 @@ import { NameProblem, _enum_for_NameProblem, _decode_NameProblem, _encode_NamePr
  */
 export
 class nameError_ParameterType_Item {
+    /**
+     * @summary `entry`.
+     * @description
+     *
+     * Name that failed.
+     * @public
+     * @readonly
+     */
+    public readonly entry: DfrEntryName;
+    /**
+     * @summary `problem`.
+     * @description
+     *
+     * Why.
+     * @public
+     * @readonly
+     */
+    public readonly problem: NameProblem;
+
     constructor (
-        /**
-         * @summary `entry`.
-         * @description
-         *
-         * Name that failed.
-         * @public
-         * @readonly
-         */
-        readonly entry: DfrEntryName,
-        /**
-         * @summary `problem`.
-         * @description
-         *
-         * Why.
-         * @public
-         * @readonly
-         */
-        readonly problem: NameProblem
-    ) {}
+        entry: DfrEntryName,
+        problem: NameProblem
+    ) {
+        this.entry = entry;
+        this.problem = problem;
+    }
 
     /**
      * @summary Restructures an object into a nameError_ParameterType_Item
@@ -77,7 +83,7 @@ class nameError_ParameterType_Item {
          * @static
          */
 
-    public static _enum_for_problem = _enum_for_NameProblem;
+    public static _enum_for_problem: typeof _enum_for_NameProblem = _enum_for_NameProblem;
 }
 
 /**

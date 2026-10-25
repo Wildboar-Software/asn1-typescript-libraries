@@ -1,7 +1,7 @@
 /* eslint-disable */
 import {
-    INTEGER,
-    ASN1Element as _Element,
+    type INTEGER,
+    type ASN1Element as _Element,
     ASN1TagClass as _TagClass,
     ASN1Construction as _Construction,
     ASN1UniversalType as _UniversalType,
@@ -47,7 +47,7 @@ type ServiceError_errorClass_vmd_state = INTEGER;
  * @type {number}
  */
 export
-const ServiceError_errorClass_vmd_state_other: ServiceError_errorClass_vmd_state = 0; /* LONG_NAMED_INTEGER_VALUE */
+const ServiceError_errorClass_vmd_state_other: 0 = 0 satisfies ServiceError_errorClass_vmd_state; /* LONG_NAMED_INTEGER_VALUE */
 
 /**
  * @summary ServiceError_errorClass_vmd_state_other
@@ -59,7 +59,7 @@ const ServiceError_errorClass_vmd_state_other: ServiceError_errorClass_vmd_state
  * @type {number}
  */
 export
-const other: ServiceError_errorClass_vmd_state = ServiceError_errorClass_vmd_state_other; /* SHORT_NAMED_INTEGER_VALUE */
+const other: 0 = ServiceError_errorClass_vmd_state_other; /* SHORT_NAMED_INTEGER_VALUE */
 
 /**
  * @summary ServiceError_errorClass_vmd_state_vmd_state_conflict
@@ -72,7 +72,7 @@ const other: ServiceError_errorClass_vmd_state = ServiceError_errorClass_vmd_sta
  * @type {number}
  */
 export
-const ServiceError_errorClass_vmd_state_vmd_state_conflict: ServiceError_errorClass_vmd_state = 1; /* LONG_NAMED_INTEGER_VALUE */
+const ServiceError_errorClass_vmd_state_vmd_state_conflict: 1 = 1 satisfies ServiceError_errorClass_vmd_state; /* LONG_NAMED_INTEGER_VALUE */
 
 /**
  * @summary ServiceError_errorClass_vmd_state_vmd_state_conflict
@@ -85,7 +85,7 @@ const ServiceError_errorClass_vmd_state_vmd_state_conflict: ServiceError_errorCl
  * @type {number}
  */
 export
-const vmd_state_conflict: ServiceError_errorClass_vmd_state = ServiceError_errorClass_vmd_state_vmd_state_conflict; /* SHORT_NAMED_INTEGER_VALUE */
+const vmd_state_conflict: 1 = ServiceError_errorClass_vmd_state_vmd_state_conflict; /* SHORT_NAMED_INTEGER_VALUE */
 
 /**
  * @summary ServiceError_errorClass_vmd_state_vmd_operational_problem
@@ -98,7 +98,7 @@ const vmd_state_conflict: ServiceError_errorClass_vmd_state = ServiceError_error
  * @type {number}
  */
 export
-const ServiceError_errorClass_vmd_state_vmd_operational_problem: ServiceError_errorClass_vmd_state = 2; /* LONG_NAMED_INTEGER_VALUE */
+const ServiceError_errorClass_vmd_state_vmd_operational_problem: 2 = 2 satisfies ServiceError_errorClass_vmd_state; /* LONG_NAMED_INTEGER_VALUE */
 
 /**
  * @summary ServiceError_errorClass_vmd_state_vmd_operational_problem
@@ -111,7 +111,7 @@ const ServiceError_errorClass_vmd_state_vmd_operational_problem: ServiceError_er
  * @type {number}
  */
 export
-const vmd_operational_problem: ServiceError_errorClass_vmd_state = ServiceError_errorClass_vmd_state_vmd_operational_problem; /* SHORT_NAMED_INTEGER_VALUE */
+const vmd_operational_problem: 2 = ServiceError_errorClass_vmd_state_vmd_operational_problem; /* SHORT_NAMED_INTEGER_VALUE */
 
 /**
  * @summary ServiceError_errorClass_vmd_state_domain_transfer_problem
@@ -124,7 +124,7 @@ const vmd_operational_problem: ServiceError_errorClass_vmd_state = ServiceError_
  * @type {number}
  */
 export
-const ServiceError_errorClass_vmd_state_domain_transfer_problem: ServiceError_errorClass_vmd_state = 3; /* LONG_NAMED_INTEGER_VALUE */
+const ServiceError_errorClass_vmd_state_domain_transfer_problem: 3 = 3 satisfies ServiceError_errorClass_vmd_state; /* LONG_NAMED_INTEGER_VALUE */
 
 /**
  * @summary ServiceError_errorClass_vmd_state_domain_transfer_problem
@@ -137,7 +137,7 @@ const ServiceError_errorClass_vmd_state_domain_transfer_problem: ServiceError_er
  * @type {number}
  */
 export
-const domain_transfer_problem: ServiceError_errorClass_vmd_state = ServiceError_errorClass_vmd_state_domain_transfer_problem; /* SHORT_NAMED_INTEGER_VALUE */
+const domain_transfer_problem: 3 = ServiceError_errorClass_vmd_state_domain_transfer_problem; /* SHORT_NAMED_INTEGER_VALUE */
 
 /**
  * @summary ServiceError_errorClass_vmd_state_state_machine_id_invalid
@@ -150,7 +150,7 @@ const domain_transfer_problem: ServiceError_errorClass_vmd_state = ServiceError_
  * @type {number}
  */
 export
-const ServiceError_errorClass_vmd_state_state_machine_id_invalid: ServiceError_errorClass_vmd_state = 4; /* LONG_NAMED_INTEGER_VALUE */
+const ServiceError_errorClass_vmd_state_state_machine_id_invalid: 4 = 4 satisfies ServiceError_errorClass_vmd_state; /* LONG_NAMED_INTEGER_VALUE */
 
 /**
  * @summary ServiceError_errorClass_vmd_state_state_machine_id_invalid
@@ -163,9 +163,9 @@ const ServiceError_errorClass_vmd_state_state_machine_id_invalid: ServiceError_e
  * @type {number}
  */
 export
-const state_machine_id_invalid: ServiceError_errorClass_vmd_state = ServiceError_errorClass_vmd_state_state_machine_id_invalid; /* SHORT_NAMED_INTEGER_VALUE */
-export const _decode_ServiceError_errorClass_vmd_state = $._decodeInteger;
-export const _encode_ServiceError_errorClass_vmd_state = $._encodeInteger;
+const state_machine_id_invalid: 4 = ServiceError_errorClass_vmd_state_state_machine_id_invalid; /* SHORT_NAMED_INTEGER_VALUE */
+export const _decode_ServiceError_errorClass_vmd_state: $.ASN1Decoder<INTEGER> = $._decodeInteger;
+export const _encode_ServiceError_errorClass_vmd_state: $.ASN1Encoder<INTEGER> = $._encodeInteger;
 
 
 /* eslint-enable */

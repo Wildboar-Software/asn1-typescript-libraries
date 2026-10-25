@@ -1,9 +1,9 @@
 /* eslint-disable */
 import {
-    OPTIONAL,
-    BIT_STRING,
-    OBJECT_IDENTIFIER,
-    ASN1Element as _Element,
+    type OPTIONAL,
+    type BIT_STRING,
+    type OBJECT_IDENTIFIER,
+    type ASN1Element as _Element,
     ASN1TagClass as _TagClass,
     ASN1Construction as _Construction,
     ASN1UniversalType as _UniversalType,
@@ -154,7 +154,7 @@ export class ObjectDigestInfo {
      * @static
      */
 
-    public static _enum_for_digestedObjectType =
+    public static _enum_for_digestedObjectType: typeof _enum_for_ObjectDigestInfo_digestedObjectType =
         _enum_for_ObjectDigestInfo_digestedObjectType;
 
     /**

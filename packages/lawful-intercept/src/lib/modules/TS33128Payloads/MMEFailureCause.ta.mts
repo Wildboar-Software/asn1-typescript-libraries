@@ -1,12 +1,12 @@
 /* eslint-disable */
 import {
-    ASN1Element as _Element,
+    type ASN1Element as _Element,
     ASN1TagClass as _TagClass
 } from "@wildboar/asn1";
 import * as $ from "@wildboar/asn1/functional";
-import { EMMCause, _decode_EMMCause, _encode_EMMCause } from "../TS33128Payloads/EMMCause.ta.mjs";
+import { type EMMCause, _decode_EMMCause, _encode_EMMCause } from "../TS33128Payloads/EMMCause.ta.mjs";
 // export { EMMCause, _decode_EMMCause, _encode_EMMCause } from "../TS33128Payloads/EMMCause.ta.mjs";
-import { ESMCause, _decode_ESMCause, _encode_ESMCause } from "../TS33128Payloads/ESMCause.ta.mjs";
+import { type ESMCause, _decode_ESMCause, _encode_ESMCause } from "../TS33128Payloads/ESMCause.ta.mjs";
 // export { ESMCause, _decode_ESMCause, _encode_ESMCause } from "../TS33128Payloads/ESMCause.ta.mjs";
 
 

@@ -1,7 +1,7 @@
 /* eslint-disable */
 import {
-    INTEGER,
-    ASN1Element as _Element,
+    type INTEGER,
+    type ASN1Element as _Element,
     ASN1TagClass as _TagClass,
     ASN1Construction as _Construction,
     ASN1UniversalType as _UniversalType,
@@ -11,7 +11,7 @@ import {
     ASN1ConstructionError as _ConstructionError,
 } from "@wildboar/asn1";
 import * as $ from "@wildboar/asn1/functional";
-import { EXQcontent_exceptionType_stdException, _decode_EXQcontent_exceptionType_stdException, _encode_EXQcontent_exceptionType_stdException } from "../ISO9041-VTP/EXQcontent-exceptionType-stdException.ta.mjs";
+import { type EXQcontent_exceptionType_stdException, _decode_EXQcontent_exceptionType_stdException, _encode_EXQcontent_exceptionType_stdException } from "../ISO9041-VTP/EXQcontent-exceptionType-stdException.ta.mjs";
 
 
 /**

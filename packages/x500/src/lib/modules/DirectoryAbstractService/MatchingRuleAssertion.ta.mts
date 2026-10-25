@@ -1,14 +1,14 @@
 /* eslint-disable */
 import {
-    ASN1Element as _Element,
+    type ASN1Element as _Element,
     ASN1TagClass as _TagClass,
-    BOOLEAN,
-    OBJECT_IDENTIFIER,
-    OPTIONAL,
+    type BOOLEAN,
+    type OBJECT_IDENTIFIER,
+    type OPTIONAL,
 } from "@wildboar/asn1";
 import * as $ from "@wildboar/asn1/functional";
 import {
-    AttributeType,
+    type AttributeType,
     _decode_AttributeType,
     _encode_AttributeType,
 } from "../InformationFramework/AttributeType.ta.mjs";
@@ -38,54 +38,66 @@ import {
  *
  */
 export class MatchingRuleAssertion {
+    /**
+     * @summary `matchingRule`.
+     * @description
+     *
+     * SET SIZE (1..MAX). Several ⇒ locally-defined combination.
+     *
+     * @public
+     * @readonly
+     */
+    public readonly matchingRule: OBJECT_IDENTIFIER[];
+    /**
+     * @summary `type_`.
+     * @description
+     *
+     * Omitted ⇒ match all types compatible with the matching rules.
+     *
+     * @public
+     * @readonly
+     */
+    public readonly type_: OPTIONAL<AttributeType>;
+    /**
+     * @summary `matchValue`.
+     * @description
+     *
+     * Shall be `&AssertionType` of one of the identified matching rules.
+     *
+     * @public
+     * @readonly
+     */
+    public readonly matchValue: _Element;
+    /**
+     * @summary `dnAttributes`.
+     * @description
+     *
+     * DEFAULT FALSE. TRUE ⇒ also match DN attributes of the entry.
+     *
+     * @public
+     * @readonly
+     */
+    public readonly dnAttributes?: OPTIONAL<BOOLEAN>;
+    /**
+     * @summary Extensions that are not recognized.
+     * @public
+     * @readonly
+     */
+    public readonly _unrecognizedExtensionsList: _Element[];
+
     constructor(
-        /**
-         * @summary `matchingRule`.
-         * @description
-         *
-         * SET SIZE (1..MAX). Several ⇒ locally-defined combination.
-         *
-         * @public
-         * @readonly
-         */
-        readonly matchingRule: OBJECT_IDENTIFIER[],
-        /**
-         * @summary `type_`.
-         * @description
-         *
-         * Omitted ⇒ match all types compatible with the matching rules.
-         *
-         * @public
-         * @readonly
-         */
-        readonly type_: OPTIONAL<AttributeType>,
-        /**
-         * @summary `matchValue`.
-         * @description
-         *
-         * Shall be `&AssertionType` of one of the identified matching rules.
-         *
-         * @public
-         * @readonly
-         */
-        readonly matchValue: _Element,
-        /**
-         * @summary `dnAttributes`.
-         * @description
-         *
-         * DEFAULT FALSE. TRUE ⇒ also match DN attributes of the entry.
-         *
-         * @public
-         * @readonly
-         */
-        readonly dnAttributes?: OPTIONAL<BOOLEAN>,
-        /**
-         * @summary Extensions that are not recognized.
-         * @public
-         * @readonly
-         */
-        readonly _unrecognizedExtensionsList: _Element[] = []
-    ) {}
+        matchingRule: OBJECT_IDENTIFIER[],
+        type_: OPTIONAL<AttributeType>,
+        matchValue: _Element,
+        dnAttributes?: OPTIONAL<BOOLEAN>,
+        _unrecognizedExtensionsList: _Element[] = []
+    ) {
+        this.matchingRule = matchingRule;
+        this.type_ = type_;
+        this.matchValue = matchValue;
+        this.dnAttributes = dnAttributes;
+        this._unrecognizedExtensionsList = _unrecognizedExtensionsList;
+    }
 
     /**
      * @summary Restructures an object into a MatchingRuleAssertion

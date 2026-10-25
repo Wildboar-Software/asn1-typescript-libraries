@@ -1,6 +1,6 @@
 /* eslint-disable */
 import {
-    ASN1Element as _Element,
+    type ASN1Element as _Element,
     ASN1TagClass as _TagClass,
     ASN1Construction as _Construction,
     ASN1UniversalType as _UniversalType,
@@ -89,7 +89,7 @@ type AssistanceMode = _enum_for_AssistanceMode;
  * @enum {number}
  */
 export
-const AssistanceMode = _enum_for_AssistanceMode;
+const AssistanceMode: typeof _enum_for_AssistanceMode = _enum_for_AssistanceMode;
 
 /**
  * @summary AssistanceMode_physical
@@ -97,7 +97,7 @@ const AssistanceMode = _enum_for_AssistanceMode;
  * @type {number}
  */
 export
-const AssistanceMode_physical: AssistanceMode = AssistanceMode.physical; /* LONG_NAMED_ENUMERATED_VALUE */
+const AssistanceMode_physical: _enum_for_AssistanceMode.physical = AssistanceMode.physical; /* LONG_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary physical
@@ -105,7 +105,7 @@ const AssistanceMode_physical: AssistanceMode = AssistanceMode.physical; /* LONG
  * @type {number}
  */
 export
-const physical: AssistanceMode = AssistanceMode.physical; /* SHORT_NAMED_ENUMERATED_VALUE */
+const physical: _enum_for_AssistanceMode.physical = AssistanceMode.physical; /* SHORT_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary AssistanceMode_audio_only
@@ -113,7 +113,7 @@ const physical: AssistanceMode = AssistanceMode.physical; /* SHORT_NAMED_ENUMERA
  * @type {number}
  */
 export
-const AssistanceMode_audio_only: AssistanceMode = AssistanceMode.audio_only; /* LONG_NAMED_ENUMERATED_VALUE */
+const AssistanceMode_audio_only: _enum_for_AssistanceMode.audio_only = AssistanceMode.audio_only; /* LONG_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary audio_only
@@ -121,7 +121,7 @@ const AssistanceMode_audio_only: AssistanceMode = AssistanceMode.audio_only; /* 
  * @type {number}
  */
 export
-const audio_only: AssistanceMode = AssistanceMode.audio_only; /* SHORT_NAMED_ENUMERATED_VALUE */
+const audio_only: _enum_for_AssistanceMode.audio_only = AssistanceMode.audio_only; /* SHORT_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary AssistanceMode_audio_video
@@ -129,7 +129,7 @@ const audio_only: AssistanceMode = AssistanceMode.audio_only; /* SHORT_NAMED_ENU
  * @type {number}
  */
 export
-const AssistanceMode_audio_video: AssistanceMode = AssistanceMode.audio_video; /* LONG_NAMED_ENUMERATED_VALUE */
+const AssistanceMode_audio_video: _enum_for_AssistanceMode.audio_video = AssistanceMode.audio_video; /* LONG_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary audio_video
@@ -137,7 +137,7 @@ const AssistanceMode_audio_video: AssistanceMode = AssistanceMode.audio_video; /
  * @type {number}
  */
 export
-const audio_video: AssistanceMode = AssistanceMode.audio_video; /* SHORT_NAMED_ENUMERATED_VALUE */
+const audio_video: _enum_for_AssistanceMode.audio_video = AssistanceMode.audio_video; /* SHORT_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary AssistanceMode_none
@@ -145,7 +145,7 @@ const audio_video: AssistanceMode = AssistanceMode.audio_video; /* SHORT_NAMED_E
  * @type {number}
  */
 export
-const AssistanceMode_none: AssistanceMode = AssistanceMode.none; /* LONG_NAMED_ENUMERATED_VALUE */
+const AssistanceMode_none: _enum_for_AssistanceMode.none = AssistanceMode.none; /* LONG_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary none
@@ -153,7 +153,7 @@ const AssistanceMode_none: AssistanceMode = AssistanceMode.none; /* LONG_NAMED_E
  * @type {number}
  */
 export
-const none: AssistanceMode = AssistanceMode.none; /* SHORT_NAMED_ENUMERATED_VALUE */
+const none: _enum_for_AssistanceMode.none = AssistanceMode.none; /* SHORT_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary AssistanceMode_video_only
@@ -161,7 +161,7 @@ const none: AssistanceMode = AssistanceMode.none; /* SHORT_NAMED_ENUMERATED_VALU
  * @type {number}
  */
 export
-const AssistanceMode_video_only: AssistanceMode = AssistanceMode.video_only; /* LONG_NAMED_ENUMERATED_VALUE */
+const AssistanceMode_video_only: _enum_for_AssistanceMode.video_only = AssistanceMode.video_only; /* LONG_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary video_only
@@ -169,7 +169,7 @@ const AssistanceMode_video_only: AssistanceMode = AssistanceMode.video_only; /* 
  * @type {number}
  */
 export
-const video_only: AssistanceMode = AssistanceMode.video_only; /* SHORT_NAMED_ENUMERATED_VALUE */
+const video_only: _enum_for_AssistanceMode.video_only = AssistanceMode.video_only; /* SHORT_NAMED_ENUMERATED_VALUE */
 
 
 /**
@@ -178,7 +178,7 @@ const video_only: AssistanceMode = AssistanceMode.video_only; /* SHORT_NAMED_ENU
  * @param el The element being decoded.
  * @returns The decoded data structure.
  */
-export const _decode_AssistanceMode = $._decodeEnumerated;
+export const _decode_AssistanceMode: $.ASN1Decoder<number> = $._decodeEnumerated;
 
 
 /**
@@ -188,7 +188,7 @@ export const _decode_AssistanceMode = $._decodeEnumerated;
  * @param elGetter A function that can be used to get new ASN.1 elements.
  * @returns {_Element} The AssistanceMode, encoded as an ASN.1 Element.
  */
-export const _encode_AssistanceMode = $._encodeEnumerated;
+export const _encode_AssistanceMode: $.ASN1Encoder<number> = $._encodeEnumerated;
 
 
 /* eslint-enable */

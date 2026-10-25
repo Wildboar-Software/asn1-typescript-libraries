@@ -1,5 +1,5 @@
 /* eslint-disable */
-import { ASN1Element as _Element, BIT_STRING } from "@wildboar/asn1";
+import { ASN1Element as _Element, type BIT_STRING } from "@wildboar/asn1";
 import * as $ from "@wildboar/asn1/functional";
 
 /**
@@ -304,10 +304,10 @@ export const SearchControlOptions_searchFamily: number = 11; /* LONG_NAMED_BIT *
 export const searchFamily: number = SearchControlOptions_searchFamily; /* SHORT_NAMED_BIT */
 
 
-export const _decode_SearchControlOptions = $._decodeBitString;
+export const _decode_SearchControlOptions: $.ASN1Decoder<BIT_STRING> = $._decodeBitString;
 
 
-export const _encode_SearchControlOptions = $._encodeBitString;
+export const _encode_SearchControlOptions: $.ASN1Encoder<BIT_STRING> = $._encodeBitString;
 
 
 /* eslint-enable */

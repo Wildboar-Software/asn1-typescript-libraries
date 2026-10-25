@@ -1,7 +1,7 @@
 /* eslint-disable */
 import {
-    INTEGER,
-    ASN1Element as _Element,
+    type INTEGER,
+    type ASN1Element as _Element,
     ASN1TagClass as _TagClass,
     ASN1Construction as _Construction,
     ASN1UniversalType as _UniversalType,
@@ -41,7 +41,7 @@ type MRTDBTRVersion = INTEGER;
  * @type {number}
  */
 export
-const MRTDBTRVersion_v0: MRTDBTRVersion = 0; /* LONG_NAMED_INTEGER_VALUE */
+const MRTDBTRVersion_v0: 0 = 0 satisfies MRTDBTRVersion; /* LONG_NAMED_INTEGER_VALUE */
 
 /**
  * @summary MRTDBTRVersion_v0
@@ -49,7 +49,7 @@ const MRTDBTRVersion_v0: MRTDBTRVersion = 0; /* LONG_NAMED_INTEGER_VALUE */
  * @type {number}
  */
 export
-const v0: MRTDBTRVersion = MRTDBTRVersion_v0; /* SHORT_NAMED_INTEGER_VALUE */
+const v0: 0 = MRTDBTRVersion_v0; /* SHORT_NAMED_INTEGER_VALUE */
 
 
 /**
@@ -58,7 +58,7 @@ const v0: MRTDBTRVersion = MRTDBTRVersion_v0; /* SHORT_NAMED_INTEGER_VALUE */
  * @param el The element being decoded.
  * @returns The decoded data structure.
  */
-export const _decode_MRTDBTRVersion = $._decodeInteger;
+export const _decode_MRTDBTRVersion: $.ASN1Decoder<INTEGER> = $._decodeInteger;
 
 
 /**
@@ -68,7 +68,7 @@ export const _decode_MRTDBTRVersion = $._decodeInteger;
  * @param elGetter A function that can be used to get new ASN.1 elements.
  * @returns {_Element} The MRTDBTRVersion, encoded as an ASN.1 Element.
  */
-export const _encode_MRTDBTRVersion = $._encodeInteger;
+export const _encode_MRTDBTRVersion: $.ASN1Encoder<INTEGER> = $._encodeInteger;
 
 
 /* eslint-enable */

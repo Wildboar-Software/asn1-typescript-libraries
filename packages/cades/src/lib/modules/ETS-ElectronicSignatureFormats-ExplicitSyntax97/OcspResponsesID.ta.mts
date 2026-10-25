@@ -1,7 +1,7 @@
 /* eslint-disable */
 import {
-    OPTIONAL,
-    ASN1Element as _Element,
+    type OPTIONAL,
+    type ASN1Element as _Element,
     ASN1TagClass as _TagClass,
     ASN1Construction as _Construction,
     ASN1UniversalType as _UniversalType,
@@ -12,7 +12,7 @@ import {
 } from "@wildboar/asn1";
 import * as $ from "@wildboar/asn1/functional";
 import { OcspIdentifier, _decode_OcspIdentifier, _encode_OcspIdentifier } from "../ETS-ElectronicSignatureFormats-ExplicitSyntax97/OcspIdentifier.ta.mjs";
-import { OtherHash, _decode_OtherHash, _encode_OtherHash } from "../ETS-ElectronicSignatureFormats-ExplicitSyntax97/OtherHash.ta.mjs";
+import { type OtherHash, _decode_OtherHash, _encode_OtherHash } from "../ETS-ElectronicSignatureFormats-ExplicitSyntax97/OtherHash.ta.mjs";
 /**
  * @summary OcspResponsesID
  * @description
@@ -34,29 +34,35 @@ import { OtherHash, _decode_OtherHash, _encode_OtherHash } from "../ETS-Electron
  */
 export
 class OcspResponsesID {
+    /**
+     * @summary `ocspIdentifier`.
+     * @description
+     *
+     * Responder id and `producedAt` from the OCSP response.
+     *
+     * @public
+     * @readonly
+     */
+    public readonly ocspIdentifier: OcspIdentifier;
+    /**
+     * @summary `ocspRepHash`.
+     * @description
+     *
+     * Hash of the OCSP response. Optional in the ASN.1 for
+     * backwards compatibility; strongly recommended.
+     *
+     * @public
+     * @readonly
+     */
+    public readonly ocspRepHash?: OPTIONAL<OtherHash>;
+
     constructor (
-        /**
-         * @summary `ocspIdentifier`.
-         * @description
-         *
-         * Responder id and `producedAt` from the OCSP response.
-         *
-         * @public
-         * @readonly
-         */
-        readonly ocspIdentifier: OcspIdentifier,
-        /**
-         * @summary `ocspRepHash`.
-         * @description
-         *
-         * Hash of the OCSP response. Optional in the ASN.1 for
-         * backwards compatibility; strongly recommended.
-         *
-         * @public
-         * @readonly
-         */
-        readonly ocspRepHash?: OPTIONAL<OtherHash>
-    ) {}
+        ocspIdentifier: OcspIdentifier,
+        ocspRepHash?: OPTIONAL<OtherHash>
+    ) {
+        this.ocspIdentifier = ocspIdentifier;
+        this.ocspRepHash = ocspRepHash;
+    }
 
     /**
      * @summary Restructures an object into a OcspResponsesID

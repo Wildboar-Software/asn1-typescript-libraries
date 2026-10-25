@@ -1,9 +1,9 @@
 /* eslint-disable */
 import {
-    ASN1Element as _Element,
+    type ASN1Element as _Element,
     ASN1TagClass as _TagClass,
-    OCTET_STRING,
-    OPTIONAL,
+    type OCTET_STRING,
+    type OPTIONAL,
 } from "@wildboar/asn1";
 import * as $ from "@wildboar/asn1/functional";
 
@@ -29,46 +29,56 @@ import * as $ from "@wildboar/asn1/functional";
  *
  */
 export class NumberRange {
+    /**
+     * @summary `startingNumber`.
+     * @description
+     *
+     * Inclusive lower bound after optional modulus. Omitted = no lower
+     * bound.
+     *
+     * @public
+     * @readonly
+     */
+    public readonly startingNumber?: OPTIONAL<OCTET_STRING>;
+    /**
+     * @summary `endingNumber`.
+     * @description
+     *
+     * Exclusive upper bound after optional modulus (X.509: less than).
+     * Omitted = no upper bound.
+     *
+     * @public
+     * @readonly
+     */
+    public readonly endingNumber?: OPTIONAL<OCTET_STRING>;
+    /**
+     * @summary `modulus`.
+     * @description
+     *
+     * If present, reduce the serial/key-id modulo this before range check.
+     *
+     * @public
+     * @readonly
+     */
+    public readonly modulus?: OPTIONAL<OCTET_STRING>;
+    /**
+     * @summary Extensions that are not recognized.
+     * @public
+     * @readonly
+     */
+    public readonly _unrecognizedExtensionsList: _Element[];
+
     constructor(
-        /**
-         * @summary `startingNumber`.
-         * @description
-         *
-         * Inclusive lower bound after optional modulus. Omitted = no lower
-         * bound.
-         *
-         * @public
-         * @readonly
-         */
-        readonly startingNumber?: OPTIONAL<OCTET_STRING>,
-        /**
-         * @summary `endingNumber`.
-         * @description
-         *
-         * Exclusive upper bound after optional modulus (X.509: less than).
-         * Omitted = no upper bound.
-         *
-         * @public
-         * @readonly
-         */
-        readonly endingNumber?: OPTIONAL<OCTET_STRING>,
-        /**
-         * @summary `modulus`.
-         * @description
-         *
-         * If present, reduce the serial/key-id modulo this before range check.
-         *
-         * @public
-         * @readonly
-         */
-        readonly modulus?: OPTIONAL<OCTET_STRING>,
-        /**
-         * @summary Extensions that are not recognized.
-         * @public
-         * @readonly
-         */
-        readonly _unrecognizedExtensionsList: _Element[] = []
-    ) {}
+        startingNumber?: OPTIONAL<OCTET_STRING>,
+        endingNumber?: OPTIONAL<OCTET_STRING>,
+        modulus?: OPTIONAL<OCTET_STRING>,
+        _unrecognizedExtensionsList: _Element[] = []
+    ) {
+        this.startingNumber = startingNumber;
+        this.endingNumber = endingNumber;
+        this.modulus = modulus;
+        this._unrecognizedExtensionsList = _unrecognizedExtensionsList;
+    }
 
     /**
      * @summary Restructures an object into a NumberRange

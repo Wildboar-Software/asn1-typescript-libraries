@@ -10,7 +10,7 @@ import {
   ASN1ConstructionError as _ConstructionError,
 } from '@wildboar/asn1';
 import {
-  InvokeId,
+  type InvokeId,
   _decode_InvokeId,
   _encode_InvokeId,
 } from '../Remote-Operations-Generic-ROS-PDUs/InvokeId.ta.mjs';

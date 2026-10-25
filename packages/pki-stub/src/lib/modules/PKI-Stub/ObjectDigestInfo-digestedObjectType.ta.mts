@@ -1,6 +1,6 @@
 /* eslint-disable */
 import {
-    ASN1Element as _Element,
+    type ASN1Element as _Element,
     ASN1TagClass as _TagClass,
     ASN1Construction as _Construction,
     ASN1UniversalType as _UniversalType,
@@ -77,7 +77,7 @@ export type ObjectDigestInfo_digestedObjectType =
  *
  * @enum {number}
  */
-export const ObjectDigestInfo_digestedObjectType =
+export const ObjectDigestInfo_digestedObjectType: typeof _enum_for_ObjectDigestInfo_digestedObjectType =
     _enum_for_ObjectDigestInfo_digestedObjectType;
 
 /**
@@ -85,7 +85,7 @@ export const ObjectDigestInfo_digestedObjectType =
  * @constant
  * @type {number}
  */
-export const ObjectDigestInfo_digestedObjectType_publicKey: ObjectDigestInfo_digestedObjectType =
+export const ObjectDigestInfo_digestedObjectType_publicKey: 0 =
     ObjectDigestInfo_digestedObjectType.publicKey; /* LONG_NAMED_ENUMERATED_VALUE */
 
 /**
@@ -93,7 +93,7 @@ export const ObjectDigestInfo_digestedObjectType_publicKey: ObjectDigestInfo_dig
  * @constant
  * @type {number}
  */
-export const publicKey: ObjectDigestInfo_digestedObjectType =
+export const publicKey: 0 =
     ObjectDigestInfo_digestedObjectType.publicKey; /* SHORT_NAMED_ENUMERATED_VALUE */
 
 /**
@@ -101,7 +101,7 @@ export const publicKey: ObjectDigestInfo_digestedObjectType =
  * @constant
  * @type {number}
  */
-export const ObjectDigestInfo_digestedObjectType_publicKeyCert: ObjectDigestInfo_digestedObjectType =
+export const ObjectDigestInfo_digestedObjectType_publicKeyCert: 1 =
     ObjectDigestInfo_digestedObjectType.publicKeyCert; /* LONG_NAMED_ENUMERATED_VALUE */
 
 /**
@@ -109,7 +109,7 @@ export const ObjectDigestInfo_digestedObjectType_publicKeyCert: ObjectDigestInfo
  * @constant
  * @type {number}
  */
-export const publicKeyCert: ObjectDigestInfo_digestedObjectType =
+export const publicKeyCert: 1 =
     ObjectDigestInfo_digestedObjectType.publicKeyCert; /* SHORT_NAMED_ENUMERATED_VALUE */
 
 /**
@@ -117,7 +117,7 @@ export const publicKeyCert: ObjectDigestInfo_digestedObjectType =
  * @constant
  * @type {number}
  */
-export const ObjectDigestInfo_digestedObjectType_otherObjectTypes: ObjectDigestInfo_digestedObjectType =
+export const ObjectDigestInfo_digestedObjectType_otherObjectTypes: 2 =
     ObjectDigestInfo_digestedObjectType.otherObjectTypes; /* LONG_NAMED_ENUMERATED_VALUE */
 
 /**
@@ -125,7 +125,7 @@ export const ObjectDigestInfo_digestedObjectType_otherObjectTypes: ObjectDigestI
  * @constant
  * @type {number}
  */
-export const otherObjectTypes: ObjectDigestInfo_digestedObjectType =
+export const otherObjectTypes: 2 =
     ObjectDigestInfo_digestedObjectType.otherObjectTypes; /* SHORT_NAMED_ENUMERATED_VALUE */
 
 /**

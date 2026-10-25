@@ -1,6 +1,6 @@
 /* eslint-disable */
 import {
-    ENUMERATED
+    type ENUMERATED
 } from "@wildboar/asn1";
 import * as $ from "@wildboar/asn1/functional";
 
@@ -68,7 +68,7 @@ type EventBufferControl = _enum_for_EventBufferControl | ENUMERATED;
  * @type {number}
  */
 export
-const EventBufferControl_off: EventBufferControl = 0; /* LONG_NAMED_ENUMERATED_VALUE */
+const EventBufferControl_off: 0 = _enum_for_EventBufferControl.off; /* LONG_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary off
@@ -76,7 +76,7 @@ const EventBufferControl_off: EventBufferControl = 0; /* LONG_NAMED_ENUMERATED_V
  * @type {number}
  */
 export
-const off: EventBufferControl = EventBufferControl_off; /* SHORT_NAMED_ENUMERATED_VALUE */
+const off: 0 = EventBufferControl_off; /* SHORT_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary EventBufferControl_lockStep
@@ -91,7 +91,7 @@ const off: EventBufferControl = EventBufferControl_off; /* SHORT_NAMED_ENUMERATE
  * @type {number}
  */
 export
-const EventBufferControl_lockStep: EventBufferControl = 1; /* LONG_NAMED_ENUMERATED_VALUE */
+const EventBufferControl_lockStep: 1 = _enum_for_EventBufferControl.lockStep; /* LONG_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary lockStep
@@ -99,9 +99,9 @@ const EventBufferControl_lockStep: EventBufferControl = 1; /* LONG_NAMED_ENUMERA
  * @type {number}
  */
 export
-const lockStep: EventBufferControl = EventBufferControl_lockStep; /* SHORT_NAMED_ENUMERATED_VALUE */
-export const _decode_EventBufferControl = $._decodeEnumerated as $.ASN1Decoder<EventBufferControl>;
-export const _encode_EventBufferControl = $._encodeEnumerated as $.ASN1Encoder<EventBufferControl>;
+const lockStep: 1 = EventBufferControl_lockStep; /* SHORT_NAMED_ENUMERATED_VALUE */
+export const _decode_EventBufferControl: $.ASN1Decoder<EventBufferControl> = $._decodeEnumerated as $.ASN1Decoder<EventBufferControl>;
+export const _encode_EventBufferControl: $.ASN1Encoder<EventBufferControl> = $._encodeEnumerated as $.ASN1Encoder<EventBufferControl>;
 
 
 /* eslint-enable */

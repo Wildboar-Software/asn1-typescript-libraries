@@ -1,11 +1,11 @@
 /* eslint-disable */
 import {
-    OPTIONAL,
-    ASN1Element as _Element,
+    type OPTIONAL,
+    type ASN1Element as _Element,
     ASN1TagClass as _TagClass
 } from "@wildboar/asn1";
 import * as $ from "@wildboar/asn1/functional";
-import { GeocodedLocationData, _decode_GeocodedLocationData, _encode_GeocodedLocationData } from "../ILHIPDU/GeocodedLocationData.ta.mjs";
+import { type GeocodedLocationData, _decode_GeocodedLocationData, _encode_GeocodedLocationData } from "../ILHIPDU/GeocodedLocationData.ta.mjs";
 // export { GeocodedLocationData, _decode_GeocodedLocationData, _encode_GeocodedLocationData } from "../ILHIPDU/GeocodedLocationData.ta.mjs";
 import { SupplementaryLocationData, _decode_SupplementaryLocationData, _encode_SupplementaryLocationData } from "../ILHIPDU/SupplementaryLocationData.ta.mjs";
 // export { SupplementaryLocationData, _decode_SupplementaryLocationData, _encode_SupplementaryLocationData } from "../ILHIPDU/SupplementaryLocationData.ta.mjs";

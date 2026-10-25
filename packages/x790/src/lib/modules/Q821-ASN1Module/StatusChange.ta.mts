@@ -1,9 +1,9 @@
 /* eslint-disable */
 import {
-    OPTIONAL,
-    SEQUENCE,
-    SET,
-    ASN1Element as _Element,
+    type OPTIONAL,
+    type SEQUENCE,
+    type SET,
+    type ASN1Element as _Element,
 } from "@wildboar/asn1";
 import * as $ from "@wildboar/asn1/functional";
 import {
@@ -28,7 +28,7 @@ import {
  *               oldStatusValue
  *                 [1]  Q821-ATTRIBUTE.&Type
  *                        ({SupportedStatusAttributes}{@.statusAttributeID})
- *                   OPTIONAL,
+ *                   type OPTIONAL,
  *               newStatusValue
  *                 [2]  Q821-ATTRIBUTE.&Type
  *                        ({SupportedStatusAttributes}{@.statusAttributeID})

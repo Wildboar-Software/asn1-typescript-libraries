@@ -1,10 +1,10 @@
 /* eslint-disable */
 import {
-    ASN1Element as _Element,
+    type ASN1Element as _Element,
     ASN1TagClass as _TagClass,
-    INTEGER,
-    OCTET_STRING,
-    OPTIONAL,
+    type INTEGER,
+    type OCTET_STRING,
+    type OPTIONAL,
 } from "@wildboar/asn1";
 import * as $ from "@wildboar/asn1/functional";
 
@@ -25,26 +25,34 @@ import * as $ from "@wildboar/asn1/functional";
  *
  */
 export class DHParameter {
+    /**
+     * @summary `prime`.
+     * @public
+     * @readonly
+     */
+    public readonly prime: OCTET_STRING;
+    /**
+     * @summary `base`.
+     * @public
+     * @readonly
+     */
+    public readonly base: OCTET_STRING;
+    /**
+     * @summary `privateValueLength`.
+     * @public
+     * @readonly
+     */
+    public readonly privateValueLength?: OPTIONAL<INTEGER>;
+
     constructor(
-        /**
-         * @summary `prime`.
-         * @public
-         * @readonly
-         */
-        readonly prime: OCTET_STRING,
-        /**
-         * @summary `base`.
-         * @public
-         * @readonly
-         */
-        readonly base: OCTET_STRING,
-        /**
-         * @summary `privateValueLength`.
-         * @public
-         * @readonly
-         */
-        readonly privateValueLength?: OPTIONAL<INTEGER>
-    ) {}
+        prime: OCTET_STRING,
+        base: OCTET_STRING,
+        privateValueLength?: OPTIONAL<INTEGER>
+    ) {
+        this.prime = prime;
+        this.base = base;
+        this.privateValueLength = privateValueLength;
+    }
 
     /**
      * @summary Restructures an object into a DHParameter

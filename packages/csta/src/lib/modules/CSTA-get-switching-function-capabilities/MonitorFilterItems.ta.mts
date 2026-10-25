@@ -2,10 +2,10 @@
 
 import * as $ from "@wildboar/asn1/functional";
 import {
-    OPTIONAL,
-    SEQUENCE,
-    SET,
-    ASN1Element as _Element,
+    type OPTIONAL,
+    type SEQUENCE,
+    type SET,
+    type ASN1Element as _Element,
     ASN1TagClass as _TagClass
 } from "@wildboar/asn1";
 import { MonitorFilter, _decode_MonitorFilter, _encode_MonitorFilter } from "../CSTA-status-reporting/MonitorFilter.ta.mjs";
@@ -27,9 +27,9 @@ import { MonitorFilter, _decode_MonitorFilter, _encode_MonitorFilter } from "../
  * 
  * ```asn1
  * MonitorFilterItems ::= SEQUENCE
- * {     deviceOnDeviceMonitorFilter         [0] IMPLICIT     MonitorFilter             OPTIONAL,
- *     deviceOnConnectionMonitorFilter     [1] IMPLICIT     MonitorFilter             OPTIONAL,
- *     callOnDeviceMonitorFilter         [2] IMPLICIT     MonitorFilter             OPTIONAL,
+ * {     deviceOnDeviceMonitorFilter         [0] IMPLICIT     MonitorFilter             type OPTIONAL,
+ *     deviceOnConnectionMonitorFilter     [1] IMPLICIT     MonitorFilter             type OPTIONAL,
+ *     callOnDeviceMonitorFilter         [2] IMPLICIT     MonitorFilter             type OPTIONAL,
  *     callOnConnectionMonitorFilter         [3] IMPLICIT     MonitorFilter             OPTIONAL }
  * ```
  * 
@@ -37,44 +37,54 @@ import { MonitorFilter, _decode_MonitorFilter, _encode_MonitorFilter } from "../
  */
 export
 class MonitorFilterItems {
+    /**
+     * @summary `deviceOnDeviceMonitorFilter`.
+     * @description
+     *
+     * Device-type monitoring of a device.
+     * @public
+     * @readonly
+     */
+    public readonly deviceOnDeviceMonitorFilter?: OPTIONAL<MonitorFilter>;
+    /**
+     * @summary `deviceOnConnectionMonitorFilter`.
+     * @description
+     *
+     * Device-type monitoring of a connection.
+     * @public
+     * @readonly
+     */
+    public readonly deviceOnConnectionMonitorFilter?: OPTIONAL<MonitorFilter>;
+    /**
+     * @summary `callOnDeviceMonitorFilter`.
+     * @description
+     *
+     * Call-type monitoring of a device.
+     * @public
+     * @readonly
+     */
+    public readonly callOnDeviceMonitorFilter?: OPTIONAL<MonitorFilter>;
+    /**
+     * @summary `callOnConnectionMonitorFilter`.
+     * @description
+     *
+     * Call-type monitoring of a connection.
+     * @public
+     * @readonly
+     */
+    public readonly callOnConnectionMonitorFilter?: OPTIONAL<MonitorFilter>;
+
     constructor (
-        /**
-         * @summary `deviceOnDeviceMonitorFilter`.
-         * @description
-         *
-         * Device-type monitoring of a device.
-         * @public
-         * @readonly
-         */
-        readonly deviceOnDeviceMonitorFilter?: OPTIONAL<MonitorFilter>,
-        /**
-         * @summary `deviceOnConnectionMonitorFilter`.
-         * @description
-         *
-         * Device-type monitoring of a connection.
-         * @public
-         * @readonly
-         */
-        readonly deviceOnConnectionMonitorFilter?: OPTIONAL<MonitorFilter>,
-        /**
-         * @summary `callOnDeviceMonitorFilter`.
-         * @description
-         *
-         * Call-type monitoring of a device.
-         * @public
-         * @readonly
-         */
-        readonly callOnDeviceMonitorFilter?: OPTIONAL<MonitorFilter>,
-        /**
-         * @summary `callOnConnectionMonitorFilter`.
-         * @description
-         *
-         * Call-type monitoring of a connection.
-         * @public
-         * @readonly
-         */
-        readonly callOnConnectionMonitorFilter?: OPTIONAL<MonitorFilter>
-    ) {}
+        deviceOnDeviceMonitorFilter?: OPTIONAL<MonitorFilter>,
+        deviceOnConnectionMonitorFilter?: OPTIONAL<MonitorFilter>,
+        callOnDeviceMonitorFilter?: OPTIONAL<MonitorFilter>,
+        callOnConnectionMonitorFilter?: OPTIONAL<MonitorFilter>
+    ) {
+        this.deviceOnDeviceMonitorFilter = deviceOnDeviceMonitorFilter;
+        this.deviceOnConnectionMonitorFilter = deviceOnConnectionMonitorFilter;
+        this.callOnDeviceMonitorFilter = callOnDeviceMonitorFilter;
+        this.callOnConnectionMonitorFilter = callOnConnectionMonitorFilter;
+    }
 
     /**
      * @summary Restructures an object into a MonitorFilterItems

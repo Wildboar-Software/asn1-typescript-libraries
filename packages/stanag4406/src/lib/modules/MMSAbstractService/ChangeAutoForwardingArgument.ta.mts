@@ -1,14 +1,14 @@
 /* eslint-disable */
 import {
-    ASN1Element as _Element,
+    type ASN1Element as _Element,
     ASN1TagClass as _TagClass,
-    BOOLEAN,
-    OPTIONAL
+    type BOOLEAN,
+    type OPTIONAL
 } from "@wildboar/asn1";
 import * as $ from "@wildboar/asn1/functional";
 
 import {
-    AutoForwardComment,
+    type AutoForwardComment,
     _decode_AutoForwardComment,
     _encode_AutoForwardComment,
     Heading,

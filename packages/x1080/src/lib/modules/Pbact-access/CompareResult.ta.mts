@@ -1,6 +1,6 @@
 /* eslint-disable */
 import {
-    ASN1Element as _Element,
+    type ASN1Element as _Element,
     ASN1TagClass as _TagClass,
     ASN1Construction as _Construction,
     ASN1UniversalType as _UniversalType,
@@ -11,12 +11,12 @@ import {
 } from '@wildboar/asn1';
 import * as $ from '@wildboar/asn1/functional';
 import {
-    DistinguishedName,
+    type DistinguishedName,
     _decode_DistinguishedName,
     _encode_DistinguishedName,
 } from '@wildboar/dn';
 import {
-    CompareResult_result,
+    type CompareResult_result,
     _decode_CompareResult_result,
     _encode_CompareResult_result,
 } from '../Pbact-access/CompareResult-result.ta.mjs';
@@ -43,38 +43,46 @@ import {
  *
  */
 export class CompareResult {
+    /**
+     * @summary `object`.
+     * @description
+     *
+     * Distinguished name of the object that was compared.
+     * ITU-T Rec. X.1080.0 (2017) Cor.1
+     * [§8.5](https://www.itu.int/rec/T-REC-X.1080.0-201703-I!Cor1).
+     *
+     * @public
+     * @readonly
+     */
+    public readonly object: DistinguishedName;
+    /**
+     * @summary `result`.
+     * @description
+     *
+     * Success (`CompareOK`) or failure (`AccessdErr`).
+     * ITU-T Rec. X.1080.0 (2017) Cor.1
+     * [§8.5](https://www.itu.int/rec/T-REC-X.1080.0-201703-I!Cor1).
+     *
+     * @public
+     * @readonly
+     */
+    public readonly result: CompareResult_result;
+    /**
+     * @summary Extensions that are not recognized.
+     * @public
+     * @readonly
+     */
+    public readonly _unrecognizedExtensionsList: _Element[];
+
     constructor(
-        /**
-         * @summary `object`.
-         * @description
-         *
-         * Distinguished name of the object that was compared.
-         * ITU-T Rec. X.1080.0 (2017) Cor.1
-         * [§8.5](https://www.itu.int/rec/T-REC-X.1080.0-201703-I!Cor1).
-         *
-         * @public
-         * @readonly
-         */
-        readonly object: DistinguishedName,
-        /**
-         * @summary `result`.
-         * @description
-         *
-         * Success (`CompareOK`) or failure (`AccessdErr`).
-         * ITU-T Rec. X.1080.0 (2017) Cor.1
-         * [§8.5](https://www.itu.int/rec/T-REC-X.1080.0-201703-I!Cor1).
-         *
-         * @public
-         * @readonly
-         */
-        readonly result: CompareResult_result,
-        /**
-         * @summary Extensions that are not recognized.
-         * @public
-         * @readonly
-         */
-        readonly _unrecognizedExtensionsList: _Element[] = []
-    ) {}
+        object: DistinguishedName,
+        result: CompareResult_result,
+        _unrecognizedExtensionsList: _Element[] = []
+    ) {
+        this.object = object;
+        this.result = result;
+        this._unrecognizedExtensionsList = _unrecognizedExtensionsList;
+    }
 
     /**
      * @summary Restructures an object into a CompareResult

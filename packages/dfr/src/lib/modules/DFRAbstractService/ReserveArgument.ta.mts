@@ -1,7 +1,7 @@
 /* eslint-disable */
 import {
-    OPTIONAL,
-    ASN1Element as _Element,
+    type OPTIONAL,
+    type ASN1Element as _Element,
     ASN1TagClass as _TagClass,
     ASN1Construction as _Construction,
     ASN1UniversalType as _UniversalType,
@@ -11,11 +11,11 @@ import {
     ASN1ConstructionError as _ConstructionError,
 } from "@wildboar/asn1";
 import * as $ from "@wildboar/asn1/functional";
-import { DfrEntryName, _decode_DfrEntryName, _encode_DfrEntryName } from "../DFRAbstractService/DfrEntryName.ta.mjs";
+import { type DfrEntryName, _decode_DfrEntryName, _encode_DfrEntryName } from "../DFRAbstractService/DfrEntryName.ta.mjs";
 import { _decode_CommonArguments, _encode_CommonArguments } from "../DFRAbstractService/CommonArguments.ta.mjs";
-import { TaskId, _decode_TaskId, _encode_TaskId } from "../DFRAbstractService/TaskId.ta.mjs";
+import { type TaskId, _decode_TaskId, _encode_TaskId } from "../DFRAbstractService/TaskId.ta.mjs";
 import { Reservation, _decode_Reservation, _encode_Reservation } from "../DFRAbstractService/Reservation.ta.mjs";
-import { ErrorHandlingMode, _decode_ErrorHandlingMode, _encode_ErrorHandlingMode } from "../DFRAbstractService/ErrorHandlingMode.ta.mjs";
+import { type ErrorHandlingMode, _decode_ErrorHandlingMode, _encode_ErrorHandlingMode } from "../DFRAbstractService/ErrorHandlingMode.ta.mjs";
 import { Priority, _enum_for_Priority, Priority_medium /* IMPORTED_LONG_ENUMERATION_ITEM */, _decode_Priority, _encode_Priority } from "../DFRAbstractService/Priority.ta.mjs";
 import { Privileges, _decode_Privileges, _encode_Privileges } from "../DFRAbstractService/Privileges.ta.mjs";
 
@@ -44,75 +44,88 @@ import { Privileges, _decode_Privileges, _encode_Privileges } from "../DFRAbstra
  */
 export
 class ReserveArgument {
+    /**
+     * @summary `entry`.
+     * @description
+     *
+     * Entry whose reservation is changed. ISO/IEC 10166-1:1991
+     * §8.2.9.1.
+     * @public
+     * @readonly
+     */
+    public readonly entry: DfrEntryName;
+    /**
+     * @summary `task_id`.
+     * @description
+     *
+     * Optional identifier for this invocation, so it can later be
+     * abandoned or continued. Must not be reused until the operation
+     * completes or is abandoned. A List/Search continuation value returned
+     * after a limit may be reused here. ISO/IEC 10166-1:1991 §8.1.3.1.
+     * @public
+     * @readonly
+     */
+    public readonly task_id?: OPTIONAL<TaskId>; /* REPLICATED_COMPONENT */
+    /**
+     * @summary `reservation`.
+     * @description
+     *
+     * Required. Duration, level, and committed/uncommitted status to
+     * apply to `entry`. Raising the level or committing is done first;
+     * lowering an uncommitted reservation is done last. ISO/IEC
+     * 10166-1:1991 §8.1.3.2, §8.2.9.
+     * @public
+     * @readonly
+     */
+    public readonly reservation?: OPTIONAL<Reservation>; /* REPLICATED_COMPONENT */
+    /**
+     * @summary `error_handling`.
+     * @description
+     *
+     * Constrained absent on this operation (not a List or Copy-of-group).
+     * ISO/IEC 10166-1:1991 §8.1.3.3.
+     * @public
+     * @readonly
+     */
+    public readonly error_handling?: OPTIONAL<ErrorHandlingMode>; /* REPLICATED_COMPONENT */
+    /**
+     * @summary `priority`.
+     * @description
+     *
+     * Operational priority for a loaded server; overrides the bind default
+     * (`medium`). The server need not honour it. Unrelated to
+     * communications QoS. ISO/IEC 10166-1:1991 §8.1.3.4, §7.1.1.
+     * @public
+     * @readonly
+     */
+    public readonly priority?: OPTIONAL<Priority>; /* REPLICATED_COMPONENT */
+    /**
+     * @summary `privileges`.
+     * @description
+     *
+     * Per-operation PACs that modify bind privileges for this request only
+     * (`operation-Pac`) and/or a `proxy-pac` the server may present when
+     * accessing another application on the user's behalf. ISO/IEC
+     * 10166-1:1991 §8.1.3.5.
+     * @public
+     * @readonly
+     */
+    public readonly privileges?: OPTIONAL<Privileges>; /* REPLICATED_COMPONENT */
+
     constructor (
-        /**
-         * @summary `entry`.
-         * @description
-         *
-         * Entry whose reservation is changed. ISO/IEC 10166-1:1991
-         * §8.2.9.1.
-         * @public
-         * @readonly
-         */
-        readonly entry: DfrEntryName,
-        /**
-         * @summary `task_id`.
-         * @description
-         *
-         * Optional identifier for this invocation, so it can later be
-         * abandoned or continued. Must not be reused until the operation
-         * completes or is abandoned. A List/Search continuation value returned
-         * after a limit may be reused here. ISO/IEC 10166-1:1991 §8.1.3.1.
-         * @public
-         * @readonly
-         */
-        readonly task_id?: OPTIONAL<TaskId> /* REPLICATED_COMPONENT */,
-        /**
-         * @summary `reservation`.
-         * @description
-         *
-         * Required. Duration, level, and committed/uncommitted status to
-         * apply to `entry`. Raising the level or committing is done first;
-         * lowering an uncommitted reservation is done last. ISO/IEC
-         * 10166-1:1991 §8.1.3.2, §8.2.9.
-         * @public
-         * @readonly
-         */
-        readonly reservation?: OPTIONAL<Reservation> /* REPLICATED_COMPONENT */,
-        /**
-         * @summary `error_handling`.
-         * @description
-         *
-         * Constrained absent on this operation (not a List or Copy-of-group).
-         * ISO/IEC 10166-1:1991 §8.1.3.3.
-         * @public
-         * @readonly
-         */
-        readonly error_handling?: OPTIONAL<ErrorHandlingMode> /* REPLICATED_COMPONENT */,
-        /**
-         * @summary `priority`.
-         * @description
-         *
-         * Operational priority for a loaded server; overrides the bind default
-         * (`medium`). The server need not honour it. Unrelated to
-         * communications QoS. ISO/IEC 10166-1:1991 §8.1.3.4, §7.1.1.
-         * @public
-         * @readonly
-         */
-        readonly priority?: OPTIONAL<Priority> /* REPLICATED_COMPONENT */,
-        /**
-         * @summary `privileges`.
-         * @description
-         *
-         * Per-operation PACs that modify bind privileges for this request only
-         * (`operation-Pac`) and/or a `proxy-pac` the server may present when
-         * accessing another application on the user's behalf. ISO/IEC
-         * 10166-1:1991 §8.1.3.5.
-         * @public
-         * @readonly
-         */
-        readonly privileges?: OPTIONAL<Privileges> /* REPLICATED_COMPONENT */
+        entry: DfrEntryName,
+        task_id?: OPTIONAL<TaskId>,
+        reservation?: OPTIONAL<Reservation>,
+        error_handling?: OPTIONAL<ErrorHandlingMode>,
+        priority?: OPTIONAL<Priority>,
+        privileges?: OPTIONAL<Privileges>
     ) {
+        this.entry = entry;
+        this.task_id = task_id;
+        this.reservation = reservation;
+        this.error_handling = error_handling;
+        this.priority = priority;
+        this.privileges = privileges;
         if (reservation === undefined) {
             throw new _ConstructionError("ReserveArgument.reservation shall be present");
         }
@@ -150,13 +163,13 @@ class ReserveArgument {
      * @static
      * @method
      */
-    public static get _default_value_for_priority () { return Priority_medium; }        /**
+    public static get _default_value_for_priority (): _enum_for_Priority.medium { return Priority_medium; }        /**
          * @summary The enum used as the type of the component `priority`
          * @public
          * @static
          */
 
-    public static _enum_for_priority = _enum_for_Priority;
+    public static _enum_for_priority: typeof _enum_for_Priority = _enum_for_Priority;
 }
 
 /**

@@ -1,7 +1,7 @@
 /* eslint-disable */
 import {
-    OPTIONAL,
-    ASN1Element as _Element,
+    type OPTIONAL,
+    type ASN1Element as _Element,
     ASN1TagClass as _TagClass,
     ASN1Construction as _Construction,
     ASN1UniversalType as _UniversalType,
@@ -11,9 +11,9 @@ import {
     ASN1ConstructionError as _ConstructionError,
 } from "@wildboar/asn1";
 import * as $ from "@wildboar/asn1/functional";
-import { CorrelationID, _decode_CorrelationID, _encode_CorrelationID } from "../Core-INAP-CS1-DataTypes/CorrelationID.ta.mjs";
-import { IPAvailable, _decode_IPAvailable, _encode_IPAvailable } from "../Core-INAP-CS1-DataTypes/IPAvailable.ta.mjs";
-import { IPSSPCapabilities, _decode_IPSSPCapabilities, _encode_IPSSPCapabilities } from "../Core-INAP-CS1-DataTypes/IPSSPCapabilities.ta.mjs";
+import { type CorrelationID, _decode_CorrelationID, _encode_CorrelationID } from "../Core-INAP-CS1-DataTypes/CorrelationID.ta.mjs";
+import { type IPAvailable, _decode_IPAvailable, _encode_IPAvailable } from "../Core-INAP-CS1-DataTypes/IPAvailable.ta.mjs";
+import { type IPSSPCapabilities, _decode_IPSSPCapabilities, _encode_IPSSPCapabilities } from "../Core-INAP-CS1-DataTypes/IPSSPCapabilities.ta.mjs";
 import { ExtensionField, _decode_ExtensionField, _encode_ExtensionField } from "../Core-INAP-CS1-DataTypes/ExtensionField.ta.mjs";
 
 
@@ -26,8 +26,8 @@ import { ExtensionField, _decode_ExtensionField, _encode_ExtensionField } from "
  * ```asn1
  * AssistRequestInstructionsArg ::= SEQUENCE {
  *      correlationID     [0] CorrelationID,
- *      iPAvailable     [1] IPAvailable     OPTIONAL,
- *      iPSSPCapabilities     [2] IPSSPCapabilities     OPTIONAL,
+ *      iPAvailable     [1] IPAvailable     type OPTIONAL,
+ *      iPSSPCapabilities     [2] IPSSPCapabilities     type OPTIONAL,
  *      extensions     [3] SEQUENCE SIZE(1..numOfExtensions) OF ExtensionField     OPTIONAL
  * --  ...
  *      }
@@ -37,32 +37,42 @@ import { ExtensionField, _decode_ExtensionField, _encode_ExtensionField } from "
  */
 export
 class AssistRequestInstructionsArg {
+    /**
+     * @summary `correlationID`.
+     * @public
+     * @readonly
+     */
+    public readonly correlationID: CorrelationID;
+    /**
+     * @summary `iPAvailable`.
+     * @public
+     * @readonly
+     */
+    public readonly iPAvailable?: OPTIONAL<IPAvailable>;
+    /**
+     * @summary `iPSSPCapabilities`.
+     * @public
+     * @readonly
+     */
+    public readonly iPSSPCapabilities?: OPTIONAL<IPSSPCapabilities>;
+    /**
+     * @summary `extensions`.
+     * @public
+     * @readonly
+     */
+    public readonly extensions?: OPTIONAL<ExtensionField[]>;
+
     constructor (
-        /**
-         * @summary `correlationID`.
-         * @public
-         * @readonly
-         */
-        readonly correlationID: CorrelationID,
-        /**
-         * @summary `iPAvailable`.
-         * @public
-         * @readonly
-         */
-        readonly iPAvailable?: OPTIONAL<IPAvailable>,
-        /**
-         * @summary `iPSSPCapabilities`.
-         * @public
-         * @readonly
-         */
-        readonly iPSSPCapabilities?: OPTIONAL<IPSSPCapabilities>,
-        /**
-         * @summary `extensions`.
-         * @public
-         * @readonly
-         */
-        readonly extensions?: OPTIONAL<ExtensionField[]>
-    ) {}
+        correlationID: CorrelationID,
+        iPAvailable?: OPTIONAL<IPAvailable>,
+        iPSSPCapabilities?: OPTIONAL<IPSSPCapabilities>,
+        extensions?: OPTIONAL<ExtensionField[]>
+    ) {
+        this.correlationID = correlationID;
+        this.iPAvailable = iPAvailable;
+        this.iPSSPCapabilities = iPSSPCapabilities;
+        this.extensions = extensions;
+    }
 
     /**
      * @summary Restructures an object into a AssistRequestInstructionsArg

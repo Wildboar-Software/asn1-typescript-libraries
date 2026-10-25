@@ -1,7 +1,7 @@
 /* eslint-disable */
 import {
-    OPTIONAL,
-    ASN1Element as _Element,
+    type OPTIONAL,
+    type ASN1Element as _Element,
     ASN1TagClass as _TagClass,
     ASN1Construction as _Construction,
     ASN1UniversalType as _UniversalType,
@@ -12,12 +12,12 @@ import {
 } from '@wildboar/asn1';
 import * as $ from '@wildboar/asn1/functional';
 import {
-    FNUserBasicCodeField,
+    type FNUserBasicCodeField,
     _decode_FNUserBasicCodeField,
     _encode_FNUserBasicCodeField,
 } from '../EDIMSInformationObjects/FNUserBasicCodeField.ta.mjs';
 import {
-    FNUserDiagnosticField,
+    type FNUserDiagnosticField,
     _decode_FNUserDiagnosticField,
     _encode_FNUserDiagnosticField,
 } from '../EDIMSInformationObjects/FNUserDiagnosticField.ta.mjs';
@@ -38,20 +38,26 @@ import {
  *
  */
 export class FNUserReasonCodeField {
+    /**
+     * @summary `fn_user_basic_code`.
+     * @public
+     * @readonly
+     */
+    public readonly fn_user_basic_code: FNUserBasicCodeField;
+    /**
+     * @summary `fn_user_diagnostic`.
+     * @public
+     * @readonly
+     */
+    public readonly fn_user_diagnostic?: OPTIONAL<FNUserDiagnosticField>;
+
     constructor(
-        /**
-         * @summary `fn_user_basic_code`.
-         * @public
-         * @readonly
-         */
-        readonly fn_user_basic_code: FNUserBasicCodeField,
-        /**
-         * @summary `fn_user_diagnostic`.
-         * @public
-         * @readonly
-         */
-        readonly fn_user_diagnostic?: OPTIONAL<FNUserDiagnosticField>
-    ) {}
+        fn_user_basic_code: FNUserBasicCodeField,
+        fn_user_diagnostic?: OPTIONAL<FNUserDiagnosticField>
+    ) {
+        this.fn_user_basic_code = fn_user_basic_code;
+        this.fn_user_diagnostic = fn_user_diagnostic;
+    }
 
     /**
      * @summary Restructures an object into a FNUserReasonCodeField

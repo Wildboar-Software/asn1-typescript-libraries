@@ -1,7 +1,7 @@
 /* eslint-disable */
 import {
-    ASN1Element as _Element,
-    ENUMERATED
+    type ASN1Element as _Element,
+    type ENUMERATED
 } from "@wildboar/asn1";
 import * as $ from "@wildboar/asn1/functional";
 
@@ -48,7 +48,7 @@ type GPRS_TriggerDetectionPoint = _enum_for_GPRS_TriggerDetectionPoint | ENUMERA
  * @type {number}
  */
 export
-const GPRS_TriggerDetectionPoint_attach: GPRS_TriggerDetectionPoint = 1; /* LONG_NAMED_ENUMERATED_VALUE */
+const GPRS_TriggerDetectionPoint_attach: _enum_for_GPRS_TriggerDetectionPoint.attach = _enum_for_GPRS_TriggerDetectionPoint.attach; /* LONG_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary attach
@@ -56,7 +56,7 @@ const GPRS_TriggerDetectionPoint_attach: GPRS_TriggerDetectionPoint = 1; /* LONG
  * @type {number}
  */
 export
-const attach: GPRS_TriggerDetectionPoint = GPRS_TriggerDetectionPoint_attach; /* SHORT_NAMED_ENUMERATED_VALUE */
+const attach: _enum_for_GPRS_TriggerDetectionPoint.attach = GPRS_TriggerDetectionPoint_attach; /* SHORT_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary GPRS_TriggerDetectionPoint_attachChangeOfPosition
@@ -64,7 +64,7 @@ const attach: GPRS_TriggerDetectionPoint = GPRS_TriggerDetectionPoint_attach; /*
  * @type {number}
  */
 export
-const GPRS_TriggerDetectionPoint_attachChangeOfPosition: GPRS_TriggerDetectionPoint = 2; /* LONG_NAMED_ENUMERATED_VALUE */
+const GPRS_TriggerDetectionPoint_attachChangeOfPosition: _enum_for_GPRS_TriggerDetectionPoint.attachChangeOfPosition = _enum_for_GPRS_TriggerDetectionPoint.attachChangeOfPosition; /* LONG_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary attachChangeOfPosition
@@ -72,7 +72,7 @@ const GPRS_TriggerDetectionPoint_attachChangeOfPosition: GPRS_TriggerDetectionPo
  * @type {number}
  */
 export
-const attachChangeOfPosition: GPRS_TriggerDetectionPoint = GPRS_TriggerDetectionPoint_attachChangeOfPosition; /* SHORT_NAMED_ENUMERATED_VALUE */
+const attachChangeOfPosition: _enum_for_GPRS_TriggerDetectionPoint.attachChangeOfPosition = GPRS_TriggerDetectionPoint_attachChangeOfPosition; /* SHORT_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary GPRS_TriggerDetectionPoint_pdp_ContextEstablishment
@@ -80,7 +80,7 @@ const attachChangeOfPosition: GPRS_TriggerDetectionPoint = GPRS_TriggerDetection
  * @type {number}
  */
 export
-const GPRS_TriggerDetectionPoint_pdp_ContextEstablishment: GPRS_TriggerDetectionPoint = 11; /* LONG_NAMED_ENUMERATED_VALUE */
+const GPRS_TriggerDetectionPoint_pdp_ContextEstablishment: _enum_for_GPRS_TriggerDetectionPoint.pdp_ContextEstablishment = _enum_for_GPRS_TriggerDetectionPoint.pdp_ContextEstablishment; /* LONG_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary pdp_ContextEstablishment
@@ -88,7 +88,7 @@ const GPRS_TriggerDetectionPoint_pdp_ContextEstablishment: GPRS_TriggerDetection
  * @type {number}
  */
 export
-const pdp_ContextEstablishment: GPRS_TriggerDetectionPoint = GPRS_TriggerDetectionPoint_pdp_ContextEstablishment; /* SHORT_NAMED_ENUMERATED_VALUE */
+const pdp_ContextEstablishment: _enum_for_GPRS_TriggerDetectionPoint.pdp_ContextEstablishment = GPRS_TriggerDetectionPoint_pdp_ContextEstablishment; /* SHORT_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary GPRS_TriggerDetectionPoint_pdp_ContextEstablishmentAcknowledgement
@@ -96,7 +96,7 @@ const pdp_ContextEstablishment: GPRS_TriggerDetectionPoint = GPRS_TriggerDetecti
  * @type {number}
  */
 export
-const GPRS_TriggerDetectionPoint_pdp_ContextEstablishmentAcknowledgement: GPRS_TriggerDetectionPoint = 12; /* LONG_NAMED_ENUMERATED_VALUE */
+const GPRS_TriggerDetectionPoint_pdp_ContextEstablishmentAcknowledgement: _enum_for_GPRS_TriggerDetectionPoint.pdp_ContextEstablishmentAcknowledgement = _enum_for_GPRS_TriggerDetectionPoint.pdp_ContextEstablishmentAcknowledgement; /* LONG_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary pdp_ContextEstablishmentAcknowledgement
@@ -104,7 +104,7 @@ const GPRS_TriggerDetectionPoint_pdp_ContextEstablishmentAcknowledgement: GPRS_T
  * @type {number}
  */
 export
-const pdp_ContextEstablishmentAcknowledgement: GPRS_TriggerDetectionPoint = GPRS_TriggerDetectionPoint_pdp_ContextEstablishmentAcknowledgement; /* SHORT_NAMED_ENUMERATED_VALUE */
+const pdp_ContextEstablishmentAcknowledgement: _enum_for_GPRS_TriggerDetectionPoint.pdp_ContextEstablishmentAcknowledgement = GPRS_TriggerDetectionPoint_pdp_ContextEstablishmentAcknowledgement; /* SHORT_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary GPRS_TriggerDetectionPoint_pdp_ContextChangeOfPosition
@@ -112,7 +112,7 @@ const pdp_ContextEstablishmentAcknowledgement: GPRS_TriggerDetectionPoint = GPRS
  * @type {number}
  */
 export
-const GPRS_TriggerDetectionPoint_pdp_ContextChangeOfPosition: GPRS_TriggerDetectionPoint = 14; /* LONG_NAMED_ENUMERATED_VALUE */
+const GPRS_TriggerDetectionPoint_pdp_ContextChangeOfPosition: _enum_for_GPRS_TriggerDetectionPoint.pdp_ContextChangeOfPosition = _enum_for_GPRS_TriggerDetectionPoint.pdp_ContextChangeOfPosition; /* LONG_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary pdp_ContextChangeOfPosition
@@ -120,7 +120,7 @@ const GPRS_TriggerDetectionPoint_pdp_ContextChangeOfPosition: GPRS_TriggerDetect
  * @type {number}
  */
 export
-const pdp_ContextChangeOfPosition: GPRS_TriggerDetectionPoint = GPRS_TriggerDetectionPoint_pdp_ContextChangeOfPosition; /* SHORT_NAMED_ENUMERATED_VALUE */
+const pdp_ContextChangeOfPosition: _enum_for_GPRS_TriggerDetectionPoint.pdp_ContextChangeOfPosition = GPRS_TriggerDetectionPoint_pdp_ContextChangeOfPosition; /* SHORT_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary Decodes an ASN.1 element into a(n) GPRS_TriggerDetectionPoint
@@ -128,7 +128,7 @@ const pdp_ContextChangeOfPosition: GPRS_TriggerDetectionPoint = GPRS_TriggerDete
  * @param el The element being decoded.
  * @returns The decoded data structure.
  */
-export const _decode_GPRS_TriggerDetectionPoint = $._decodeEnumerated;
+export const _decode_GPRS_TriggerDetectionPoint: $.ASN1Decoder<number> = $._decodeEnumerated;
 
 /**
  * @summary Encodes a(n) GPRS_TriggerDetectionPoint into an ASN.1 Element.
@@ -137,7 +137,7 @@ export const _decode_GPRS_TriggerDetectionPoint = $._decodeEnumerated;
  * @param elGetter A function that can be used to get new ASN.1 elements.
  * @returns {_Element} The GPRS_TriggerDetectionPoint, encoded as an ASN.1 Element.
  */
-export const _encode_GPRS_TriggerDetectionPoint = $._encodeEnumerated;
+export const _encode_GPRS_TriggerDetectionPoint: $.ASN1Encoder<number> = $._encodeEnumerated;
 
 
 /* eslint-enable */

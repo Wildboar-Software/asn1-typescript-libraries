@@ -1,7 +1,7 @@
 /* eslint-disable */
 import {
-    ASN1Element as _Element,
-    INTEGER
+    type ASN1Element as _Element,
+    type INTEGER
 } from "@wildboar/asn1";
 import * as $ from "@wildboar/asn1/functional";
 
@@ -35,7 +35,7 @@ type ProfileDownloadTriggerResult_profileDownloadTriggerResultData_profileDownlo
  * @type {number}
  */
 export
-const ProfileDownloadTriggerResult_profileDownloadTriggerResultData_profileDownloadError_profileDownloadErrorReason_ecallActive: ProfileDownloadTriggerResult_profileDownloadTriggerResultData_profileDownloadError_profileDownloadErrorReason = 104; /* LONG_NAMED_INTEGER_VALUE */
+const ProfileDownloadTriggerResult_profileDownloadTriggerResultData_profileDownloadError_profileDownloadErrorReason_ecallActive: 104 = 104 satisfies ProfileDownloadTriggerResult_profileDownloadTriggerResultData_profileDownloadError_profileDownloadErrorReason; /* LONG_NAMED_INTEGER_VALUE */
 
 /**
  * @summary ProfileDownloadTriggerResult_profileDownloadTriggerResultData_profileDownloadError_profileDownloadErrorReason_ecallActive
@@ -46,7 +46,7 @@ const ProfileDownloadTriggerResult_profileDownloadTriggerResultData_profileDownl
  * @type {number}
  */
 export
-const ecallActive: ProfileDownloadTriggerResult_profileDownloadTriggerResultData_profileDownloadError_profileDownloadErrorReason = ProfileDownloadTriggerResult_profileDownloadTriggerResultData_profileDownloadError_profileDownloadErrorReason_ecallActive; /* SHORT_NAMED_INTEGER_VALUE */
+const ecallActive: 104 = ProfileDownloadTriggerResult_profileDownloadTriggerResultData_profileDownloadError_profileDownloadErrorReason_ecallActive; /* SHORT_NAMED_INTEGER_VALUE */
 
 /**
  * @summary ProfileDownloadTriggerResult_profileDownloadTriggerResultData_profileDownloadError_profileDownloadErrorReason_undefinedError
@@ -57,7 +57,7 @@ const ecallActive: ProfileDownloadTriggerResult_profileDownloadTriggerResultData
  * @type {number}
  */
 export
-const ProfileDownloadTriggerResult_profileDownloadTriggerResultData_profileDownloadError_profileDownloadErrorReason_undefinedError: ProfileDownloadTriggerResult_profileDownloadTriggerResultData_profileDownloadError_profileDownloadErrorReason = 127; /* LONG_NAMED_INTEGER_VALUE */
+const ProfileDownloadTriggerResult_profileDownloadTriggerResultData_profileDownloadError_profileDownloadErrorReason_undefinedError: 127 = 127 satisfies ProfileDownloadTriggerResult_profileDownloadTriggerResultData_profileDownloadError_profileDownloadErrorReason; /* LONG_NAMED_INTEGER_VALUE */
 
 /**
  * @summary ProfileDownloadTriggerResult_profileDownloadTriggerResultData_profileDownloadError_profileDownloadErrorReason_undefinedError
@@ -67,7 +67,7 @@ const ProfileDownloadTriggerResult_profileDownloadTriggerResultData_profileDownl
  * @type {number}
  */
 export
-const undefinedError: ProfileDownloadTriggerResult_profileDownloadTriggerResultData_profileDownloadError_profileDownloadErrorReason = ProfileDownloadTriggerResult_profileDownloadTriggerResultData_profileDownloadError_profileDownloadErrorReason_undefinedError; /* SHORT_NAMED_INTEGER_VALUE */
+const undefinedError: 127 = ProfileDownloadTriggerResult_profileDownloadTriggerResultData_profileDownloadError_profileDownloadErrorReason_undefinedError; /* SHORT_NAMED_INTEGER_VALUE */
 export const _decode_ProfileDownloadTriggerResult_profileDownloadTriggerResultData_profileDownloadError_profileDownloadErrorReason: $.ASN1Decoder<ProfileDownloadTriggerResult_profileDownloadTriggerResultData_profileDownloadError_profileDownloadErrorReason> = $._decodeInteger;
 export const _encode_ProfileDownloadTriggerResult_profileDownloadTriggerResultData_profileDownloadError_profileDownloadErrorReason: $.ASN1Encoder<ProfileDownloadTriggerResult_profileDownloadTriggerResultData_profileDownloadError_profileDownloadErrorReason> = $._encodeInteger;
 

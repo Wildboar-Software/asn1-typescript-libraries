@@ -1,9 +1,9 @@
 /* eslint-disable */
 import {
-    OPTIONAL,
-    INTEGER,
-    OCTET_STRING,
-    ASN1Element as _Element,
+    type OPTIONAL,
+    type INTEGER,
+    type OCTET_STRING,
+    type ASN1Element as _Element,
     ASN1TagClass as _TagClass,
     ASN1Construction as _Construction,
     ASN1UniversalType as _UniversalType,
@@ -37,25 +37,31 @@ import * as $ from "@wildboar/asn1/functional";
  */
 export
 class BiometricInformationTemplate_templateAndMaxBitLength {
+    /**
+     * @summary `maxBITLength`.
+     * @description
+     * Max size in bytes of DO '7F60' for later enrolment. ISO/IEC
+     * 7816-15:2016 §8.9.3.
+     * @public
+     * @readonly
+     */
+    public readonly maxBITLength: OPTIONAL<INTEGER>;
+    /**
+     * @summary `biometricInformationTemplate`.
+     * @description
+     * ISO/IEC 7816-11 BIT value. ISO/IEC 7816-15:2016 §8.9.3.
+     * @public
+     * @readonly
+     */
+    public readonly biometricInformationTemplate: OCTET_STRING;
+
     constructor (
-        /**
-         * @summary `maxBITLength`.
-         * @description
-         * Max size in bytes of DO '7F60' for later enrolment. ISO/IEC
-         * 7816-15:2016 §8.9.3.
-         * @public
-         * @readonly
-         */
-        readonly maxBITLength: OPTIONAL<INTEGER>,
-        /**
-         * @summary `biometricInformationTemplate`.
-         * @description
-         * ISO/IEC 7816-11 BIT value. ISO/IEC 7816-15:2016 §8.9.3.
-         * @public
-         * @readonly
-         */
-        readonly biometricInformationTemplate: OCTET_STRING
-    ) {}
+        maxBITLength: OPTIONAL<INTEGER>,
+        biometricInformationTemplate: OCTET_STRING
+    ) {
+        this.maxBITLength = maxBITLength;
+        this.biometricInformationTemplate = biometricInformationTemplate;
+    }
 
     /**
      * @summary Restructures an object into a BiometricInformationTemplate_templateAndMaxBitLength

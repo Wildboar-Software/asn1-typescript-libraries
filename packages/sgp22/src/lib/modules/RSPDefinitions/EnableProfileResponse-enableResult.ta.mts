@@ -1,7 +1,7 @@
 /* eslint-disable */
 import {
-    ASN1Element as _Element,
-    INTEGER
+    type ASN1Element as _Element,
+    type INTEGER
 } from "@wildboar/asn1";
 import * as $ from "@wildboar/asn1/functional";
 
@@ -41,7 +41,7 @@ type EnableProfileResponse_enableResult = INTEGER;
  * @type {number}
  */
 export
-const EnableProfileResponse_enableResult_ok: EnableProfileResponse_enableResult = 0; /* LONG_NAMED_INTEGER_VALUE */
+const EnableProfileResponse_enableResult_ok: 0 = 0 satisfies EnableProfileResponse_enableResult; /* LONG_NAMED_INTEGER_VALUE */
 
 /**
  * @summary EnableProfileResponse_enableResult_ok
@@ -54,7 +54,7 @@ const EnableProfileResponse_enableResult_ok: EnableProfileResponse_enableResult 
  * @type {number}
  */
 export
-const ok: EnableProfileResponse_enableResult = EnableProfileResponse_enableResult_ok; /* SHORT_NAMED_INTEGER_VALUE */
+const ok: 0 = EnableProfileResponse_enableResult_ok; /* SHORT_NAMED_INTEGER_VALUE */
 
 /**
  * @summary EnableProfileResponse_enableResult_iccidOrAidNotFound
@@ -66,7 +66,7 @@ const ok: EnableProfileResponse_enableResult = EnableProfileResponse_enableResul
  * @type {number}
  */
 export
-const EnableProfileResponse_enableResult_iccidOrAidNotFound: EnableProfileResponse_enableResult = 1; /* LONG_NAMED_INTEGER_VALUE */
+const EnableProfileResponse_enableResult_iccidOrAidNotFound: 1 = 1 satisfies EnableProfileResponse_enableResult; /* LONG_NAMED_INTEGER_VALUE */
 
 /**
  * @summary EnableProfileResponse_enableResult_iccidOrAidNotFound
@@ -78,7 +78,7 @@ const EnableProfileResponse_enableResult_iccidOrAidNotFound: EnableProfileRespon
  * @type {number}
  */
 export
-const iccidOrAidNotFound: EnableProfileResponse_enableResult = EnableProfileResponse_enableResult_iccidOrAidNotFound; /* SHORT_NAMED_INTEGER_VALUE */
+const iccidOrAidNotFound: 1 = EnableProfileResponse_enableResult_iccidOrAidNotFound; /* SHORT_NAMED_INTEGER_VALUE */
 
 /**
  * @summary EnableProfileResponse_enableResult_profileNotInDisabledState
@@ -90,7 +90,7 @@ const iccidOrAidNotFound: EnableProfileResponse_enableResult = EnableProfileResp
  * @type {number}
  */
 export
-const EnableProfileResponse_enableResult_profileNotInDisabledState: EnableProfileResponse_enableResult = 2; /* LONG_NAMED_INTEGER_VALUE */
+const EnableProfileResponse_enableResult_profileNotInDisabledState: 2 = 2 satisfies EnableProfileResponse_enableResult; /* LONG_NAMED_INTEGER_VALUE */
 
 /**
  * @summary EnableProfileResponse_enableResult_profileNotInDisabledState
@@ -102,7 +102,7 @@ const EnableProfileResponse_enableResult_profileNotInDisabledState: EnableProfil
  * @type {number}
  */
 export
-const profileNotInDisabledState: EnableProfileResponse_enableResult = EnableProfileResponse_enableResult_profileNotInDisabledState; /* SHORT_NAMED_INTEGER_VALUE */
+const profileNotInDisabledState: 2 = EnableProfileResponse_enableResult_profileNotInDisabledState; /* SHORT_NAMED_INTEGER_VALUE */
 
 /**
  * @summary EnableProfileResponse_enableResult_disallowedByPolicy
@@ -115,7 +115,7 @@ const profileNotInDisabledState: EnableProfileResponse_enableResult = EnableProf
  * @type {number}
  */
 export
-const EnableProfileResponse_enableResult_disallowedByPolicy: EnableProfileResponse_enableResult = 3; /* LONG_NAMED_INTEGER_VALUE */
+const EnableProfileResponse_enableResult_disallowedByPolicy: 3 = 3 satisfies EnableProfileResponse_enableResult; /* LONG_NAMED_INTEGER_VALUE */
 
 /**
  * @summary EnableProfileResponse_enableResult_disallowedByPolicy
@@ -128,7 +128,7 @@ const EnableProfileResponse_enableResult_disallowedByPolicy: EnableProfileRespon
  * @type {number}
  */
 export
-const disallowedByPolicy: EnableProfileResponse_enableResult = EnableProfileResponse_enableResult_disallowedByPolicy; /* SHORT_NAMED_INTEGER_VALUE */
+const disallowedByPolicy: 3 = EnableProfileResponse_enableResult_disallowedByPolicy; /* SHORT_NAMED_INTEGER_VALUE */
 
 /**
  * @summary EnableProfileResponse_enableResult_wrongProfileReenabling
@@ -142,7 +142,7 @@ const disallowedByPolicy: EnableProfileResponse_enableResult = EnableProfileResp
  * @type {number}
  */
 export
-const EnableProfileResponse_enableResult_wrongProfileReenabling: EnableProfileResponse_enableResult = 4; /* LONG_NAMED_INTEGER_VALUE */
+const EnableProfileResponse_enableResult_wrongProfileReenabling: 4 = 4 satisfies EnableProfileResponse_enableResult; /* LONG_NAMED_INTEGER_VALUE */
 
 /**
  * @summary EnableProfileResponse_enableResult_wrongProfileReenabling
@@ -156,7 +156,7 @@ const EnableProfileResponse_enableResult_wrongProfileReenabling: EnableProfileRe
  * @type {number}
  */
 export
-const wrongProfileReenabling: EnableProfileResponse_enableResult = EnableProfileResponse_enableResult_wrongProfileReenabling; /* SHORT_NAMED_INTEGER_VALUE */
+const wrongProfileReenabling: 4 = EnableProfileResponse_enableResult_wrongProfileReenabling; /* SHORT_NAMED_INTEGER_VALUE */
 
 /**
  * @summary EnableProfileResponse_enableResult_catBusy
@@ -169,7 +169,7 @@ const wrongProfileReenabling: EnableProfileResponse_enableResult = EnableProfile
  * @type {number}
  */
 export
-const EnableProfileResponse_enableResult_catBusy: EnableProfileResponse_enableResult = 5; /* LONG_NAMED_INTEGER_VALUE */
+const EnableProfileResponse_enableResult_catBusy: 5 = 5 satisfies EnableProfileResponse_enableResult; /* LONG_NAMED_INTEGER_VALUE */
 
 /**
  * @summary EnableProfileResponse_enableResult_catBusy
@@ -182,7 +182,7 @@ const EnableProfileResponse_enableResult_catBusy: EnableProfileResponse_enableRe
  * @type {number}
  */
 export
-const catBusy: EnableProfileResponse_enableResult = EnableProfileResponse_enableResult_catBusy; /* SHORT_NAMED_INTEGER_VALUE */
+const catBusy: 5 = EnableProfileResponse_enableResult_catBusy; /* SHORT_NAMED_INTEGER_VALUE */
 
 /**
  * @summary EnableProfileResponse_enableResult_undefinedError
@@ -194,7 +194,7 @@ const catBusy: EnableProfileResponse_enableResult = EnableProfileResponse_enable
  * @type {number}
  */
 export
-const EnableProfileResponse_enableResult_undefinedError: EnableProfileResponse_enableResult = 127; /* LONG_NAMED_INTEGER_VALUE */
+const EnableProfileResponse_enableResult_undefinedError: 127 = 127 satisfies EnableProfileResponse_enableResult; /* LONG_NAMED_INTEGER_VALUE */
 
 /**
  * @summary EnableProfileResponse_enableResult_undefinedError
@@ -206,9 +206,9 @@ const EnableProfileResponse_enableResult_undefinedError: EnableProfileResponse_e
  * @type {number}
  */
 export
-const undefinedError: EnableProfileResponse_enableResult = EnableProfileResponse_enableResult_undefinedError; /* SHORT_NAMED_INTEGER_VALUE */
-export const _decode_EnableProfileResponse_enableResult = $._decodeInteger;
-export const _encode_EnableProfileResponse_enableResult = $._encodeInteger;
+const undefinedError: 127 = EnableProfileResponse_enableResult_undefinedError; /* SHORT_NAMED_INTEGER_VALUE */
+export const _decode_EnableProfileResponse_enableResult: $.ASN1Decoder<INTEGER> = $._decodeInteger;
+export const _encode_EnableProfileResponse_enableResult: $.ASN1Encoder<INTEGER> = $._encodeInteger;
 
 
 /* eslint-enable */

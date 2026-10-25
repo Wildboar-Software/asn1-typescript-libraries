@@ -1,6 +1,6 @@
 /* eslint-disable */
 import {
-    ASN1Element as _Element,
+    type ASN1Element as _Element,
     ASN1TagClass as _TagClass,
     ASN1Construction as _Construction,
     ASN1UniversalType as _UniversalType,
@@ -89,7 +89,7 @@ export type IntermediateResourceBoundaryTestOutcome = _enum_for_IntermediateReso
  *
  * @enum {number}
  */
-export const IntermediateResourceBoundaryTestOutcome = _enum_for_IntermediateResourceBoundaryTestOutcome;
+export const IntermediateResourceBoundaryTestOutcome: typeof _enum_for_IntermediateResourceBoundaryTestOutcome = _enum_for_IntermediateResourceBoundaryTestOutcome;
 
 /**
  * @summary IntermediateResourceBoundaryTestOutcome_passed
@@ -99,7 +99,7 @@ export const IntermediateResourceBoundaryTestOutcome = _enum_for_IntermediateRes
  * @constant
  * @type {number}
  */
-export const IntermediateResourceBoundaryTestOutcome_passed: IntermediateResourceBoundaryTestOutcome =
+export const IntermediateResourceBoundaryTestOutcome_passed: _enum_for_IntermediateResourceBoundaryTestOutcome.passed =
     IntermediateResourceBoundaryTestOutcome.passed; /* LONG_NAMED_ENUMERATED_VALUE */
 
 /**
@@ -110,7 +110,7 @@ export const IntermediateResourceBoundaryTestOutcome_passed: IntermediateResourc
  * @constant
  * @type {number}
  */
-export const passed: IntermediateResourceBoundaryTestOutcome =
+export const passed: _enum_for_IntermediateResourceBoundaryTestOutcome.passed =
     IntermediateResourceBoundaryTestOutcome.passed; /* SHORT_NAMED_ENUMERATED_VALUE */
 
 /**
@@ -121,7 +121,7 @@ export const passed: IntermediateResourceBoundaryTestOutcome =
  * @constant
  * @type {number}
  */
-export const IntermediateResourceBoundaryTestOutcome_unexpected: IntermediateResourceBoundaryTestOutcome =
+export const IntermediateResourceBoundaryTestOutcome_unexpected: _enum_for_IntermediateResourceBoundaryTestOutcome.unexpected =
     IntermediateResourceBoundaryTestOutcome.unexpected; /* LONG_NAMED_ENUMERATED_VALUE */
 
 /**
@@ -132,7 +132,7 @@ export const IntermediateResourceBoundaryTestOutcome_unexpected: IntermediateRes
  * @constant
  * @type {number}
  */
-export const unexpected: IntermediateResourceBoundaryTestOutcome =
+export const unexpected: _enum_for_IntermediateResourceBoundaryTestOutcome.unexpected =
     IntermediateResourceBoundaryTestOutcome.unexpected; /* SHORT_NAMED_ENUMERATED_VALUE */
 
 /**
@@ -143,7 +143,7 @@ export const unexpected: IntermediateResourceBoundaryTestOutcome =
  * @constant
  * @type {number}
  */
-export const IntermediateResourceBoundaryTestOutcome_wrongSignalReceived: IntermediateResourceBoundaryTestOutcome =
+export const IntermediateResourceBoundaryTestOutcome_wrongSignalReceived: _enum_for_IntermediateResourceBoundaryTestOutcome.wrongSignalReceived =
     IntermediateResourceBoundaryTestOutcome.wrongSignalReceived; /* LONG_NAMED_ENUMERATED_VALUE */
 
 /**
@@ -154,7 +154,7 @@ export const IntermediateResourceBoundaryTestOutcome_wrongSignalReceived: Interm
  * @constant
  * @type {number}
  */
-export const wrongSignalReceived: IntermediateResourceBoundaryTestOutcome =
+export const wrongSignalReceived: _enum_for_IntermediateResourceBoundaryTestOutcome.wrongSignalReceived =
     IntermediateResourceBoundaryTestOutcome.wrongSignalReceived; /* SHORT_NAMED_ENUMERATED_VALUE */
 
 /**
@@ -165,7 +165,7 @@ export const wrongSignalReceived: IntermediateResourceBoundaryTestOutcome =
  * @constant
  * @type {number}
  */
-export const IntermediateResourceBoundaryTestOutcome_waitDurationTimerExpired: IntermediateResourceBoundaryTestOutcome =
+export const IntermediateResourceBoundaryTestOutcome_waitDurationTimerExpired: _enum_for_IntermediateResourceBoundaryTestOutcome.waitDurationTimerExpired =
     IntermediateResourceBoundaryTestOutcome.waitDurationTimerExpired; /* LONG_NAMED_ENUMERATED_VALUE */
 
 /**
@@ -176,7 +176,7 @@ export const IntermediateResourceBoundaryTestOutcome_waitDurationTimerExpired: I
  * @constant
  * @type {number}
  */
-export const waitDurationTimerExpired: IntermediateResourceBoundaryTestOutcome =
+export const waitDurationTimerExpired: _enum_for_IntermediateResourceBoundaryTestOutcome.waitDurationTimerExpired =
     IntermediateResourceBoundaryTestOutcome.waitDurationTimerExpired; /* SHORT_NAMED_ENUMERATED_VALUE */
 
 let _cached_decoder_for_IntermediateResourceBoundaryTestOutcome: $.ASN1Decoder<IntermediateResourceBoundaryTestOutcome> | null = null;
@@ -190,7 +190,20 @@ let _cached_decoder_for_IntermediateResourceBoundaryTestOutcome: $.ASN1Decoder<I
 export function _decode_IntermediateResourceBoundaryTestOutcome(el: _Element): IntermediateResourceBoundaryTestOutcome {
     if (!_cached_decoder_for_IntermediateResourceBoundaryTestOutcome) {
         _cached_decoder_for_IntermediateResourceBoundaryTestOutcome =
-            $._decodeEnumerated;
+            function (el: _Element): IntermediateResourceBoundaryTestOutcome {
+                const enumerated = $._decodeEnumerated(el);
+                switch (enumerated) {
+                    case IntermediateResourceBoundaryTestOutcome.passed: return IntermediateResourceBoundaryTestOutcome.passed;
+                    case IntermediateResourceBoundaryTestOutcome.unexpected: return IntermediateResourceBoundaryTestOutcome.unexpected;
+                    case IntermediateResourceBoundaryTestOutcome.wrongSignalReceived: return IntermediateResourceBoundaryTestOutcome.wrongSignalReceived;
+                    case IntermediateResourceBoundaryTestOutcome.waitDurationTimerExpired: return IntermediateResourceBoundaryTestOutcome.waitDurationTimerExpired;
+                    default:
+                        throw new _ConstructionError(
+                            'Invalid ENUMERATED value ' + enumerated + ' for IntermediateResourceBoundaryTestOutcome.',
+                            el,
+                        );
+                }
+            };
     }
     return _cached_decoder_for_IntermediateResourceBoundaryTestOutcome(el);
 }
@@ -210,7 +223,7 @@ export function _encode_IntermediateResourceBoundaryTestOutcome(
 ): _Element {
     if (!_cached_encoder_for_IntermediateResourceBoundaryTestOutcome) {
         _cached_encoder_for_IntermediateResourceBoundaryTestOutcome =
-            $._encodeEnumerated;
+            $._encodeEnumerated as $.ASN1Encoder<IntermediateResourceBoundaryTestOutcome>;
     }
     return _cached_encoder_for_IntermediateResourceBoundaryTestOutcome(
         value,

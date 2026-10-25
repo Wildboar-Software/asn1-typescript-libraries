@@ -1,6 +1,6 @@
 /* eslint-disable */
 import {
-    ASN1Element as _Element,
+    type ASN1Element as _Element,
     ASN1TagClass as _TagClass,
     ASN1Construction as _Construction,
     ASN1UniversalType as _UniversalType,
@@ -11,12 +11,12 @@ import {
 } from '@wildboar/asn1';
 import * as $ from '@wildboar/asn1/functional';
 import {
-    RelativeDistinguishedName,
+    type RelativeDistinguishedName,
     _decode_RelativeDistinguishedName,
     _encode_RelativeDistinguishedName,
 } from '@wildboar/dn';
 import {
-    LastAttemptResult,
+    type LastAttemptResult,
     _decode_LastAttemptResult,
     _encode_LastAttemptResult,
 } from '../SDHProtASN1/LastAttemptResult.ta.mjs';
@@ -33,20 +33,26 @@ import {
  *
  */
 export class InvokeExerciseReply_Item {
+    /**
+     * @summary `protectionUnit`.
+     * @public
+     * @readonly
+     */
+    public readonly protectionUnit: RelativeDistinguishedName;
+    /**
+     * @summary `result`.
+     * @public
+     * @readonly
+     */
+    public readonly result: LastAttemptResult;
+
     constructor(
-        /**
-         * @summary `protectionUnit`.
-         * @public
-         * @readonly
-         */
-        readonly protectionUnit: RelativeDistinguishedName,
-        /**
-         * @summary `result`.
-         * @public
-         * @readonly
-         */
-        readonly result: LastAttemptResult
-    ) {}
+        protectionUnit: RelativeDistinguishedName,
+        result: LastAttemptResult
+    ) {
+        this.protectionUnit = protectionUnit;
+        this.result = result;
+    }
 
     /**
      * @summary Restructures an object into a InvokeExerciseReply_Item

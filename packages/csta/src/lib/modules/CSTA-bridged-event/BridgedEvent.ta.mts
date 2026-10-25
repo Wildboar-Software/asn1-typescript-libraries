@@ -2,15 +2,15 @@
 
 import * as $ from "@wildboar/asn1/functional";
 import {
-    OPTIONAL,
-    SEQUENCE,
-    SET,
-    ASN1Element as _Element,
+    type OPTIONAL,
+    type SEQUENCE,
+    type SET,
+    type ASN1Element as _Element,
     ASN1TagClass as _TagClass
 } from "@wildboar/asn1";
-import { ConnectionID, _decode_ConnectionID, _encode_ConnectionID } from "../CSTA-call-connection-identifiers/ConnectionID.ta.mjs";
+import { type ConnectionID, _decode_ConnectionID, _encode_ConnectionID } from "../CSTA-call-connection-identifiers/ConnectionID.ta.mjs";
 
-import { SubjectDeviceID, _decode_SubjectDeviceID, _encode_SubjectDeviceID } from "../CSTA-device-identifiers/SubjectDeviceID.ta.mjs";
+import { type SubjectDeviceID, _decode_SubjectDeviceID, _encode_SubjectDeviceID } from "../CSTA-device-identifiers/SubjectDeviceID.ta.mjs";
 
 import { LocalConnectionState, _decode_LocalConnectionState, _encode_LocalConnectionState } from "../CSTA-connection-states/LocalConnectionState.ta.mjs";
 
@@ -25,21 +25,21 @@ import { MediaCallCharacteristics, _decode_MediaCallCharacteristics, _encode_Med
 
 import { ConnectionInformation, _decode_ConnectionInformation, _encode_ConnectionInformation } from "../CSTA-media-services/ConnectionInformation.ta.mjs";
 
-import { LanguagePreferences, _decode_LanguagePreferences, _encode_LanguagePreferences } from "../CSTA-device-feature-types/LanguagePreferences.ta.mjs";
+import { type LanguagePreferences, _decode_LanguagePreferences, _encode_LanguagePreferences } from "../CSTA-device-feature-types/LanguagePreferences.ta.mjs";
 
-import { LocationInfoList, _decode_LocationInfoList, _encode_LocationInfoList } from "../CSTA-call-control/LocationInfoList.ta.mjs";
+import { type LocationInfoList, _decode_LocationInfoList, _encode_LocationInfoList } from "../CSTA-call-control/LocationInfoList.ta.mjs";
 
 import { CSTACommonArguments, _decode_CSTACommonArguments, _encode_CSTACommonArguments } from "../CSTA-extension-types/CSTACommonArguments.ta.mjs";
 
 
 
-import { CorrelatorData, _decode_CorrelatorData, _encode_CorrelatorData } from "../CSTA-device-feature-types/CorrelatorData.ta.mjs";
+import { type CorrelatorData, _decode_CorrelatorData, _encode_CorrelatorData } from "../CSTA-device-feature-types/CorrelatorData.ta.mjs";
 
-import { UserData, _decode_UserData, _encode_UserData } from "../CSTA-device-feature-types/UserData.ta.mjs";
+import { type UserData, _decode_UserData, _encode_UserData } from "../CSTA-device-feature-types/UserData.ta.mjs";
 
 import { ServicesPermitted, _decode_ServicesPermitted, _encode_ServicesPermitted } from "../CSTA-call-control/ServicesPermitted.ta.mjs";
 
-import { CallCharacteristics, _decode_CallCharacteristics, _encode_CallCharacteristics } from "../CSTA-call-control/CallCharacteristics.ta.mjs";
+import { type CallCharacteristics, _decode_CallCharacteristics, _encode_CallCharacteristics } from "../CSTA-call-control/CallCharacteristics.ta.mjs";
 
 import { CallLinkageData, _decode_CallLinkageData, _encode_CallLinkageData } from "../CSTA-call-control/CallLinkageData.ta.mjs";
 
@@ -62,17 +62,17 @@ import { CallLinkageData, _decode_CallLinkageData, _encode_CallLinkageData } fro
  * BridgedEvent ::= SEQUENCE
  * {     bridgedConnection         ConnectionID,
  *     bridgedAppearance         SubjectDeviceID,
- *     localConnectionInfo         LocalConnectionState             OPTIONAL,
- *     correlatorData             [0] IMPLICIT CorrelatorData         OPTIONAL,
- *     userData             UserData                 OPTIONAL,
+ *     localConnectionInfo         LocalConnectionState             type OPTIONAL,
+ *     correlatorData             [0] IMPLICIT CorrelatorData         type OPTIONAL,
+ *     userData             UserData                 type OPTIONAL,
  *     cause                 EventCause,
- *     servicesPermitted         [1] IMPLICIT ServicesPermitted         OPTIONAL,
- *     mediaCallCharacteristics    [2] IMPLICIT MediaCallCharacteristics     OPTIONAL,
- *     callCharacteristics         [3] IMPLICIT CallCharacteristics     OPTIONAL,
- *     bridgedConnectionInfo         [4] IMPLICIT ConnectionInformation     OPTIONAL,
- *     callLinkageData         [5] IMPLICIT CallLinkageData         OPTIONAL,
- *     languagePreferences        [6] IMPLICIT LanguagePreferences    OPTIONAL,
- *     locationInfo            [7] IMPLICIT LocationInfoList        OPTIONAL,
+ *     servicesPermitted         [1] IMPLICIT ServicesPermitted         type OPTIONAL,
+ *     mediaCallCharacteristics    [2] IMPLICIT MediaCallCharacteristics     type OPTIONAL,
+ *     callCharacteristics         [3] IMPLICIT CallCharacteristics     type OPTIONAL,
+ *     bridgedConnectionInfo         [4] IMPLICIT ConnectionInformation     type OPTIONAL,
+ *     callLinkageData         [5] IMPLICIT CallLinkageData         type OPTIONAL,
+ *     languagePreferences        [6] IMPLICIT LanguagePreferences    type OPTIONAL,
+ *     locationInfo            [7] IMPLICIT LocationInfoList        type OPTIONAL,
  *     extensions             CSTACommonArguments             OPTIONAL }
  * ```
  * 
@@ -80,161 +80,191 @@ import { CallLinkageData, _decode_CallLinkageData, _encode_CallLinkageData } fro
  */
 export
 class BridgedEvent {
+    /**
+     * @summary `bridgedConnection`.
+     * @description
+     *
+     * Mandatory. Connection of the appearance placed in
+     * inactive mode.
+     *
+     * @public
+     * @readonly
+     */
+    public readonly bridgedConnection: ConnectionID;
+    /**
+     * @summary `bridgedAppearance`.
+     * @description
+     *
+     * Mandatory. Appearance placed in inactive mode.
+     *
+     * @public
+     * @readonly
+     */
+    public readonly bridgedAppearance: SubjectDeviceID;
+    /**
+     * @summary `localConnectionInfo`.
+     * @description
+     *
+     * Device-type monitors only (§9.5.2, §12.2.17). For
+     * the bridged appearance: Queued.
+     *
+     * @public
+     * @readonly
+     */
+    public readonly localConnectionInfo: OPTIONAL<LocalConnectionState>;
+    /**
+     * @summary `correlatorData`.
+     * @description
+     *
+     * Optional current correlator data (§12.2.10). This
+     * event may omit it (FR 6).
+     *
+     * @public
+     * @readonly
+     */
+    public readonly correlatorData: OPTIONAL<CorrelatorData>;
+    /**
+     * @summary `userData`.
+     * @description
+     *
+     * Conditional. Present when user data is sent and
+     * supported (§12.2.30).
+     *
+     * @public
+     * @readonly
+     */
+    public readonly userData: OPTIONAL<UserData>;
+    /**
+     * @summary `cause`.
+     * @description
+     *
+     * Mandatory. Table 17-152 lists Normal.
+     *
+     * @public
+     * @readonly
+     */
+    public readonly cause: EventCause;
+    /**
+     * @summary `servicesPermitted`.
+     * @description
+     *
+     * Device-type monitors only (§9.5.2, §12.2.25).
+     * Mandatory if Dynamic Feature Availability is
+     * supported.
+     *
+     * @public
+     * @readonly
+     */
+    public readonly servicesPermitted?: OPTIONAL<ServicesPermitted>;
+    /**
+     * @summary `mediaCallCharacteristics`.
+     * @description
+     *
+     * Optional media class and characteristics
+     * (§12.2.20).
+     *
+     * @public
+     * @readonly
+     */
+    public readonly mediaCallCharacteristics?: OPTIONAL<MediaCallCharacteristics>;
+    /**
+     * @summary `callCharacteristics`.
+     * @description
+     *
+     * Optional high-level call characteristics
+     * (§12.2.4).
+     *
+     * @public
+     * @readonly
+     */
+    public readonly callCharacteristics?: OPTIONAL<CallCharacteristics>;
+    /**
+     * @summary `bridgedConnectionInfo`.
+     * @description
+     *
+     * Optional connection information. Omitted values
+     * are switching-function specific (§12.2.8).
+     *
+     * @public
+     * @readonly
+     */
+    public readonly bridgedConnectionInfo?: OPTIONAL<ConnectionInformation>;
+    /**
+     * @summary `callLinkageData`.
+     * @description
+     *
+     * Optional global call data and thread data
+     * (§12.2.5).
+     *
+     * @public
+     * @readonly
+     */
+    public readonly callLinkageData?: OPTIONAL<CallLinkageData>;
+    /**
+     * @summary `languagePreferences`.
+     * @description
+     *
+     * Optional preferred language(s) (§12.2.16).
+     *
+     * @public
+     * @readonly
+     */
+    public readonly languagePreferences?: OPTIONAL<LanguagePreferences>;
+    /**
+     * @summary `locationInfo`.
+     * @description
+     *
+     * Optional location information for devices in the
+     * call.
+     *
+     * @public
+     * @readonly
+     */
+    public readonly locationInfo?: OPTIONAL<LocationInfoList>;
+    /**
+     * @summary `extensions`.
+     * @description
+     *
+     * Optional `CSTACommonArguments` carrying the
+     * security and privateData parameters from the
+     * ECMA-269 event table.
+     *
+     * @public
+     * @readonly
+     */
+    public readonly extensions?: OPTIONAL<CSTACommonArguments>;
+
     constructor (
-        /**
-         * @summary `bridgedConnection`.
-         * @description
-         *
-         * Mandatory. Connection of the appearance placed in
-         * inactive mode.
-         *
-         * @public
-         * @readonly
-         */
-        readonly bridgedConnection: ConnectionID,
-        /**
-         * @summary `bridgedAppearance`.
-         * @description
-         *
-         * Mandatory. Appearance placed in inactive mode.
-         *
-         * @public
-         * @readonly
-         */
-        readonly bridgedAppearance: SubjectDeviceID,
-        /**
-         * @summary `localConnectionInfo`.
-         * @description
-         *
-         * Device-type monitors only (§9.5.2, §12.2.17). For
-         * the bridged appearance: Queued.
-         *
-         * @public
-         * @readonly
-         */
-        readonly localConnectionInfo: OPTIONAL<LocalConnectionState>,
-        /**
-         * @summary `correlatorData`.
-         * @description
-         *
-         * Optional current correlator data (§12.2.10). This
-         * event may omit it (FR 6).
-         *
-         * @public
-         * @readonly
-         */
-        readonly correlatorData: OPTIONAL<CorrelatorData>,
-        /**
-         * @summary `userData`.
-         * @description
-         *
-         * Conditional. Present when user data is sent and
-         * supported (§12.2.30).
-         *
-         * @public
-         * @readonly
-         */
-        readonly userData: OPTIONAL<UserData>,
-        /**
-         * @summary `cause`.
-         * @description
-         *
-         * Mandatory. Table 17-152 lists Normal.
-         *
-         * @public
-         * @readonly
-         */
-        readonly cause: EventCause,
-        /**
-         * @summary `servicesPermitted`.
-         * @description
-         *
-         * Device-type monitors only (§9.5.2, §12.2.25).
-         * Mandatory if Dynamic Feature Availability is
-         * supported.
-         *
-         * @public
-         * @readonly
-         */
-        readonly servicesPermitted?: OPTIONAL<ServicesPermitted>,
-        /**
-         * @summary `mediaCallCharacteristics`.
-         * @description
-         *
-         * Optional media class and characteristics
-         * (§12.2.20).
-         *
-         * @public
-         * @readonly
-         */
-        readonly mediaCallCharacteristics?: OPTIONAL<MediaCallCharacteristics>,
-        /**
-         * @summary `callCharacteristics`.
-         * @description
-         *
-         * Optional high-level call characteristics
-         * (§12.2.4).
-         *
-         * @public
-         * @readonly
-         */
-        readonly callCharacteristics?: OPTIONAL<CallCharacteristics>,
-        /**
-         * @summary `bridgedConnectionInfo`.
-         * @description
-         *
-         * Optional connection information. Omitted values
-         * are switching-function specific (§12.2.8).
-         *
-         * @public
-         * @readonly
-         */
-        readonly bridgedConnectionInfo?: OPTIONAL<ConnectionInformation>,
-        /**
-         * @summary `callLinkageData`.
-         * @description
-         *
-         * Optional global call data and thread data
-         * (§12.2.5).
-         *
-         * @public
-         * @readonly
-         */
-        readonly callLinkageData?: OPTIONAL<CallLinkageData>,
-        /**
-         * @summary `languagePreferences`.
-         * @description
-         *
-         * Optional preferred language(s) (§12.2.16).
-         *
-         * @public
-         * @readonly
-         */
-        readonly languagePreferences?: OPTIONAL<LanguagePreferences>,
-        /**
-         * @summary `locationInfo`.
-         * @description
-         *
-         * Optional location information for devices in the
-         * call.
-         *
-         * @public
-         * @readonly
-         */
-        readonly locationInfo?: OPTIONAL<LocationInfoList>,
-        /**
-         * @summary `extensions`.
-         * @description
-         *
-         * Optional `CSTACommonArguments` carrying the
-         * security and privateData parameters from the
-         * ECMA-269 event table.
-         *
-         * @public
-         * @readonly
-         */
-        readonly extensions?: OPTIONAL<CSTACommonArguments>
-    ) {}
+        bridgedConnection: ConnectionID,
+        bridgedAppearance: SubjectDeviceID,
+        localConnectionInfo: OPTIONAL<LocalConnectionState>,
+        correlatorData: OPTIONAL<CorrelatorData>,
+        userData: OPTIONAL<UserData>,
+        cause: EventCause,
+        servicesPermitted?: OPTIONAL<ServicesPermitted>,
+        mediaCallCharacteristics?: OPTIONAL<MediaCallCharacteristics>,
+        callCharacteristics?: OPTIONAL<CallCharacteristics>,
+        bridgedConnectionInfo?: OPTIONAL<ConnectionInformation>,
+        callLinkageData?: OPTIONAL<CallLinkageData>,
+        languagePreferences?: OPTIONAL<LanguagePreferences>,
+        locationInfo?: OPTIONAL<LocationInfoList>,
+        extensions?: OPTIONAL<CSTACommonArguments>
+    ) {
+        this.bridgedConnection = bridgedConnection;
+        this.bridgedAppearance = bridgedAppearance;
+        this.localConnectionInfo = localConnectionInfo;
+        this.correlatorData = correlatorData;
+        this.userData = userData;
+        this.cause = cause;
+        this.servicesPermitted = servicesPermitted;
+        this.mediaCallCharacteristics = mediaCallCharacteristics;
+        this.callCharacteristics = callCharacteristics;
+        this.bridgedConnectionInfo = bridgedConnectionInfo;
+        this.callLinkageData = callLinkageData;
+        this.languagePreferences = languagePreferences;
+        this.locationInfo = locationInfo;
+        this.extensions = extensions;
+    }
 
     /**
      * @summary Restructures an object into a BridgedEvent
@@ -258,7 +288,7 @@ class BridgedEvent {
          * @static
          */
 
-    public static _enum_for_cause = _enum_for_EventCause;
+    public static _enum_for_cause: typeof _enum_for_EventCause = _enum_for_EventCause;
 }
 
 /**

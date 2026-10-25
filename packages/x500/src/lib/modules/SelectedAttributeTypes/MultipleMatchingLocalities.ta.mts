@@ -1,9 +1,9 @@
 /* eslint-disable */
 import {
-    ASN1Element as _Element,
+    type ASN1Element as _Element,
     ASN1TagClass as _TagClass,
-    OBJECT_IDENTIFIER,
-    OPTIONAL,
+    type OBJECT_IDENTIFIER,
+    type OPTIONAL,
 } from "@wildboar/asn1";
 import * as $ from "@wildboar/asn1/functional";
 import {
@@ -29,34 +29,42 @@ import {
  *
  */
 export class MultipleMatchingLocalities {
+    /**
+     * @summary `matchingRuleUsed`.
+     * @description
+     *
+     * OPTIONAL mapping-based matching rule that was used.
+     *
+     * @public
+     * @readonly
+     */
+    public readonly matchingRuleUsed: OPTIONAL<OBJECT_IDENTIFIER>;
+    /**
+     * @summary `attributeList`.
+     * @description
+     *
+     * AVAs that, AND'ed, uniquely match one gazetteer entry.
+     *
+     * @public
+     * @readonly
+     */
+    public readonly attributeList: AttributeValueAssertion[];
+    /**
+     * @summary Extensions that are not recognized.
+     * @public
+     * @readonly
+     */
+    public readonly _unrecognizedExtensionsList: _Element[];
+
     constructor(
-        /**
-         * @summary `matchingRuleUsed`.
-         * @description
-         *
-         * OPTIONAL mapping-based matching rule that was used.
-         *
-         * @public
-         * @readonly
-         */
-        readonly matchingRuleUsed: OPTIONAL<OBJECT_IDENTIFIER>,
-        /**
-         * @summary `attributeList`.
-         * @description
-         *
-         * AVAs that, AND'ed, uniquely match one gazetteer entry.
-         *
-         * @public
-         * @readonly
-         */
-        readonly attributeList: AttributeValueAssertion[],
-        /**
-         * @summary Extensions that are not recognized.
-         * @public
-         * @readonly
-         */
-        readonly _unrecognizedExtensionsList: _Element[] = []
-    ) {}
+        matchingRuleUsed: OPTIONAL<OBJECT_IDENTIFIER>,
+        attributeList: AttributeValueAssertion[],
+        _unrecognizedExtensionsList: _Element[] = []
+    ) {
+        this.matchingRuleUsed = matchingRuleUsed;
+        this.attributeList = attributeList;
+        this._unrecognizedExtensionsList = _unrecognizedExtensionsList;
+    }
 
     /**
      * @summary Restructures an object into a MultipleMatchingLocalities

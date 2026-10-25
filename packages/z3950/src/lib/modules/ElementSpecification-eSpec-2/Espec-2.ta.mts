@@ -1,15 +1,15 @@
 /* eslint-disable */
 import {
-    INTEGER,
-    OBJECT_IDENTIFIER,
-    OPTIONAL,
-    ASN1Element as _Element,
+    type INTEGER,
+    type OBJECT_IDENTIFIER,
+    type OPTIONAL,
+    type ASN1Element as _Element,
     ASN1TagClass as _TagClass
 } from "@wildboar/asn1";
 import * as $ from "@wildboar/asn1/functional";
-import { InternationalString, _decode_InternationalString, _encode_InternationalString } from "../Z39-50-APDU-2001/InternationalString.ta.mjs";
+import { type InternationalString, _decode_InternationalString, _encode_InternationalString } from "../Z39-50-APDU-2001/InternationalString.ta.mjs";
 import { Variant, _decode_Variant, _encode_Variant } from "../RecordSyntax-generic/Variant.ta.mjs";
-import { ElementRequest, _decode_ElementRequest, _encode_ElementRequest } from "../ElementSpecification-eSpec-2/ElementRequest.ta.mjs";
+import { type ElementRequest, _decode_ElementRequest, _encode_ElementRequest } from "../ElementSpecification-eSpec-2/ElementRequest.ta.mjs";
 
 
 /**

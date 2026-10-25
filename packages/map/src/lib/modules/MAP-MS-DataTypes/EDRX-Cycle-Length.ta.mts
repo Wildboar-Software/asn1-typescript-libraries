@@ -1,12 +1,12 @@
 /* eslint-disable */
 import {
     ASN1ConstructionError as _ConstructionError,
-    ASN1Element as _Element,
+    type ASN1Element as _Element,
     ASN1TagClass as _TagClass
 } from "@wildboar/asn1";
 import * as $ from "@wildboar/asn1/functional";
-import { EDRX_Cycle_Length_Value, _decode_EDRX_Cycle_Length_Value, _encode_EDRX_Cycle_Length_Value } from "../MAP-MS-DataTypes/EDRX-Cycle-Length-Value.ta.mjs";
-import { Used_RAT_Type, _decode_Used_RAT_Type, _encode_Used_RAT_Type, _enum_for_Used_RAT_Type } from "../MAP-MS-DataTypes/Used-RAT-Type.ta.mjs";
+import { type EDRX_Cycle_Length_Value, _decode_EDRX_Cycle_Length_Value, _encode_EDRX_Cycle_Length_Value } from "../MAP-MS-DataTypes/EDRX-Cycle-Length-Value.ta.mjs";
+import { type Used_RAT_Type, _decode_Used_RAT_Type, _encode_Used_RAT_Type, _enum_for_Used_RAT_Type } from "../MAP-MS-DataTypes/Used-RAT-Type.ta.mjs";
 
 
 /**
@@ -29,36 +29,44 @@ import { Used_RAT_Type, _decode_Used_RAT_Type, _encode_Used_RAT_Type, _enum_for_
  */
 export
 class EDRX_Cycle_Length {
+    /**
+     * @summary `rat_Type`.
+     * @description
+     *
+     * RAT type to which this subscribed eDRX cycle length applies (3GPP TS
+     * 29.002 V19.1.0 clauses 8.8.1.3 and 17.7.1).
+     *
+     * @public
+     * @readonly
+     */
+    public readonly rat_Type: Used_RAT_Type;
+    /**
+     * @summary `eDRX_Cycle_Length_Value`.
+     * @description
+     *
+     * Subscribed eDRX cycle length value (3GPP TS 29.272 clause 7.3.216)
+     * (3GPP TS 29.002 V19.1.0 clause 17.7.1).
+     *
+     * @public
+     * @readonly
+     */
+    public readonly eDRX_Cycle_Length_Value: EDRX_Cycle_Length_Value;
+    /**
+     * @summary Extensions that are not recognized.
+     * @public
+     * @readonly
+     */
+    public readonly _unrecognizedExtensionsList: _Element[];
+
     constructor (
-        /**
-         * @summary `rat_Type`.
-         * @description
-         *
-         * RAT type to which this subscribed eDRX cycle length applies (3GPP TS
-         * 29.002 V19.1.0 clauses 8.8.1.3 and 17.7.1).
-         *
-         * @public
-         * @readonly
-         */
-        readonly rat_Type: Used_RAT_Type,
-        /**
-         * @summary `eDRX_Cycle_Length_Value`.
-         * @description
-         *
-         * Subscribed eDRX cycle length value (3GPP TS 29.272 clause 7.3.216)
-         * (3GPP TS 29.002 V19.1.0 clause 17.7.1).
-         *
-         * @public
-         * @readonly
-         */
-        readonly eDRX_Cycle_Length_Value: EDRX_Cycle_Length_Value,
-        /**
-         * @summary Extensions that are not recognized.
-         * @public
-         * @readonly
-         */
-        readonly _unrecognizedExtensionsList: _Element[] = []
-    ) {}
+        rat_Type: Used_RAT_Type,
+        eDRX_Cycle_Length_Value: EDRX_Cycle_Length_Value,
+        _unrecognizedExtensionsList: _Element[] = []
+    ) {
+        this.rat_Type = rat_Type;
+        this.eDRX_Cycle_Length_Value = eDRX_Cycle_Length_Value;
+        this._unrecognizedExtensionsList = _unrecognizedExtensionsList;
+    }
 
     /**
      * @summary Restructures an object into a EDRX_Cycle_Length
@@ -82,7 +90,7 @@ class EDRX_Cycle_Length {
          * @static
          */
 
-    public static _enum_for_rat_Type = _enum_for_Used_RAT_Type;
+    public static _enum_for_rat_Type: typeof _enum_for_Used_RAT_Type = _enum_for_Used_RAT_Type;
 }
 
 /**

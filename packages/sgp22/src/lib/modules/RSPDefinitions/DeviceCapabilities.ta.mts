@@ -1,13 +1,13 @@
 /* eslint-disable */
 import {
-    OPTIONAL,
-    ASN1Element as _Element,
+    type OPTIONAL,
+    type ASN1Element as _Element,
     ASN1TagClass as _TagClass
 } from "@wildboar/asn1";
 import * as $ from "@wildboar/asn1/functional";
-import { VersionType, _decode_VersionType, _encode_VersionType } from "../RSPDefinitions/VersionType.ta.mjs";
-import { CatSupportedClasses, _decode_CatSupportedClasses, _encode_CatSupportedClasses } from "../RSPDefinitions/CatSupportedClasses.ta.mjs";
-import { EuiccFormFactorType, _decode_EuiccFormFactorType, _encode_EuiccFormFactorType } from "../RSPDefinitions/EuiccFormFactorType.ta.mjs";
+import { type VersionType, _decode_VersionType, _encode_VersionType } from "../RSPDefinitions/VersionType.ta.mjs";
+import { type CatSupportedClasses, _decode_CatSupportedClasses, _encode_CatSupportedClasses } from "../RSPDefinitions/CatSupportedClasses.ta.mjs";
+import { type EuiccFormFactorType, _decode_EuiccFormFactorType, _encode_EuiccFormFactorType } from "../RSPDefinitions/EuiccFormFactorType.ta.mjs";
 import { DeviceAdditionalFeatureSupport, _decode_DeviceAdditionalFeatureSupport, _encode_DeviceAdditionalFeatureSupport } from "../RSPDefinitions/DeviceAdditionalFeatureSupport.ta.mjs";
 
 
@@ -57,7 +57,7 @@ class DeviceCapabilities {
      * @public
      * @readonly
      */
-    readonly gsmSupportedRelease?: OPTIONAL<VersionType>;
+    public readonly gsmSupportedRelease?: OPTIONAL<VersionType>;
     /**
      * @summary `utranSupportedRelease`.
      * @description
@@ -68,7 +68,7 @@ class DeviceCapabilities {
      * @public
      * @readonly
      */
-    readonly utranSupportedRelease?: OPTIONAL<VersionType>;
+    public readonly utranSupportedRelease?: OPTIONAL<VersionType>;
     /**
      * @summary `cdma2000onexSupportedRelease`.
      * @description
@@ -79,7 +79,7 @@ class DeviceCapabilities {
      * @public
      * @readonly
      */
-    readonly cdma2000onexSupportedRelease?: OPTIONAL<VersionType>;
+    public readonly cdma2000onexSupportedRelease?: OPTIONAL<VersionType>;
     /**
      * @summary `cdma2000hrpdSupportedRelease`.
      * @description
@@ -90,7 +90,7 @@ class DeviceCapabilities {
      * @public
      * @readonly
      */
-    readonly cdma2000hrpdSupportedRelease?: OPTIONAL<VersionType>;
+    public readonly cdma2000hrpdSupportedRelease?: OPTIONAL<VersionType>;
     /**
      * @summary `cdma2000ehrpdSupportedRelease`.
      * @description
@@ -101,7 +101,7 @@ class DeviceCapabilities {
      * @public
      * @readonly
      */
-    readonly cdma2000ehrpdSupportedRelease?: OPTIONAL<VersionType>;
+    public readonly cdma2000ehrpdSupportedRelease?: OPTIONAL<VersionType>;
     /**
      * @summary `eutranEpcSupportedRelease`.
      * @description
@@ -112,7 +112,7 @@ class DeviceCapabilities {
      * @public
      * @readonly
      */
-    readonly eutranEpcSupportedRelease?: OPTIONAL<VersionType>;
+    public readonly eutranEpcSupportedRelease?: OPTIONAL<VersionType>;
     /**
      * @summary `contactlessSupportedRelease`.
      * @description
@@ -124,7 +124,7 @@ class DeviceCapabilities {
      * @public
      * @readonly
      */
-    readonly contactlessSupportedRelease?: OPTIONAL<VersionType>;
+    public readonly contactlessSupportedRelease?: OPTIONAL<VersionType>;
     /**
      * @summary `rspCrlSupportedVersion`.
      * @description
@@ -136,7 +136,7 @@ class DeviceCapabilities {
      * @public
      * @readonly
      */
-    readonly rspCrlSupportedVersion?: OPTIONAL<VersionType>;
+    public readonly rspCrlSupportedVersion?: OPTIONAL<VersionType>;
     /**
      * @summary `nrEpcSupportedRelease`.
      * @description
@@ -148,7 +148,7 @@ class DeviceCapabilities {
      * @public
      * @readonly
      */
-    readonly nrEpcSupportedRelease?: OPTIONAL<VersionType>;
+    public readonly nrEpcSupportedRelease?: OPTIONAL<VersionType>;
     /**
      * @summary `nr5gcSupportedRelease`.
      * @description
@@ -159,7 +159,7 @@ class DeviceCapabilities {
      * @public
      * @readonly
      */
-    readonly nr5gcSupportedRelease?: OPTIONAL<VersionType>;
+    public readonly nr5gcSupportedRelease?: OPTIONAL<VersionType>;
     /**
      * @summary `eutran5gcSupportedRelease`.
      * @description
@@ -171,7 +171,7 @@ class DeviceCapabilities {
      * @public
      * @readonly
      */
-    readonly eutran5gcSupportedRelease?: OPTIONAL<VersionType>;
+    public readonly eutran5gcSupportedRelease?: OPTIONAL<VersionType>;
     /**
      * @summary `lpaSvn`.
      * @description
@@ -183,7 +183,7 @@ class DeviceCapabilities {
      * @public
      * @readonly
      */
-    readonly lpaSvn?: OPTIONAL<VersionType>;
+    public readonly lpaSvn?: OPTIONAL<VersionType>;
     /**
      * @summary `catSupportedClasses`.
      * @description
@@ -194,7 +194,7 @@ class DeviceCapabilities {
      * @public
      * @readonly
      */
-    readonly catSupportedClasses?: OPTIONAL<CatSupportedClasses>;
+    public readonly catSupportedClasses?: OPTIONAL<CatSupportedClasses>;
     /**
      * @summary `euiccFormFactorType`.
      * @description
@@ -205,7 +205,7 @@ class DeviceCapabilities {
      * @public
      * @readonly
      */
-    readonly euiccFormFactorType?: OPTIONAL<EuiccFormFactorType>;
+    public readonly euiccFormFactorType?: OPTIONAL<EuiccFormFactorType>;
     /**
      * @summary `deviceAdditionalFeatureSupport`.
      * @description
@@ -215,7 +215,7 @@ class DeviceCapabilities {
      * @public
      * @readonly
      */
-    readonly deviceAdditionalFeatureSupport?: OPTIONAL<DeviceAdditionalFeatureSupport>;
+    public readonly deviceAdditionalFeatureSupport?: OPTIONAL<DeviceAdditionalFeatureSupport>;
 
     constructor (
         gsmSupportedRelease?: OPTIONAL<VersionType>,

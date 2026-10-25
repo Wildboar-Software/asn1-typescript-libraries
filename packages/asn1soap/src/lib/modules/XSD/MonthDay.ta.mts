@@ -11,7 +11,7 @@ import {
 } from '@wildboar/asn1';
 import * as $ from '@wildboar/asn1/functional';
 import {
-  DateTimeType,
+  type DateTimeType,
   _decode_DateTimeType,
   _encode_DateTimeType,
 } from '../XSD/DateTimeType.ta.mjs';
@@ -32,26 +32,13 @@ import {
  */
 export type MonthDay = DateTimeType; // DefinedType
 
-
-let _cached_decoder_for_MonthDay: $.ASN1Decoder<MonthDay> | null = null;
-
-
 /**
  * @summary Decodes an ASN.1 element into a(n) MonthDay
  * @function
  * @param {_Element} el The element being decoded.
  * @returns {MonthDay} The decoded data structure.
  */
-export function _decode_MonthDay(el: _Element): MonthDay {
-  if (!_cached_decoder_for_MonthDay) {
-    _cached_decoder_for_MonthDay = _decode_DateTimeType;
-  }
-  return _cached_decoder_for_MonthDay(el);
-}
-
-
-let _cached_encoder_for_MonthDay: $.ASN1Encoder<MonthDay> | null = null;
-
+export const _decode_MonthDay: $.ASN1Decoder<MonthDay> = _decode_DateTimeType;
 
 /**
  * @summary Encodes a(n) MonthDay into an ASN.1 Element.
@@ -60,15 +47,7 @@ let _cached_encoder_for_MonthDay: $.ASN1Encoder<MonthDay> | null = null;
  * @param elGetter A function that can be used to get new ASN.1 elements.
  * @returns {_Element} The MonthDay, encoded as an ASN.1 Element.
  */
-export function _encode_MonthDay(
-  value: MonthDay,
-  elGetter: $.ASN1Encoder<MonthDay>
-): _Element {
-  if (!_cached_encoder_for_MonthDay) {
-    _cached_encoder_for_MonthDay = _encode_DateTimeType;
-  }
-  return _cached_encoder_for_MonthDay(value, elGetter);
-}
+export const _encode_MonthDay: $.ASN1Encoder<MonthDay> = _encode_DateTimeType;
 
 
 /* eslint-enable */

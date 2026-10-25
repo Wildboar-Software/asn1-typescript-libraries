@@ -1,7 +1,7 @@
 /* eslint-disable */
 import {
-  OPTIONAL,
-  OCTET_STRING,
+  type OPTIONAL,
+  type OCTET_STRING,
   ASN1Element as _Element,
   ASN1TagClass as _TagClass,
   ASN1Construction as _Construction,
@@ -13,17 +13,17 @@ import {
 } from '@wildboar/asn1';
 import * as $ from '@wildboar/asn1/functional';
 import {
-  KerberosTime,
+  type KerberosTime,
   _decode_KerberosTime,
   _encode_KerberosTime,
 } from '../KerberosV5Spec2/KerberosTime.ta.mjs';
 import {
-  Microseconds,
+  type Microseconds,
   _decode_Microseconds,
   _encode_Microseconds,
 } from '../KerberosV5Spec2/Microseconds.ta.mjs';
 import {
-  UInt32,
+  type UInt32,
   _decode_UInt32,
   _encode_UInt32,
 } from '../KerberosV5Spec2/UInt32.ta.mjs';
@@ -64,7 +64,7 @@ export class EncKrbPrivPart {
    * @public
    * @readonly
    */
-  readonly user_data: OCTET_STRING;
+  public readonly user_data: OCTET_STRING;
   /**
    * @summary `timestamp`.
    * @description
@@ -74,7 +74,7 @@ export class EncKrbPrivPart {
    * @public
    * @readonly
    */
-  readonly timestamp: OPTIONAL<KerberosTime>;
+  public readonly timestamp: OPTIONAL<KerberosTime>;
   /**
    * @summary `usec`.
    * @description
@@ -84,7 +84,7 @@ export class EncKrbPrivPart {
    * @public
    * @readonly
    */
-  readonly usec: OPTIONAL<Microseconds>;
+  public readonly usec: OPTIONAL<Microseconds>;
   /**
    * @summary `seq_number`.
    * @description
@@ -94,7 +94,7 @@ export class EncKrbPrivPart {
    * @public
    * @readonly
    */
-  readonly seq_number: OPTIONAL<UInt32>;
+  public readonly seq_number: OPTIONAL<UInt32>;
   /**
    * @summary `s_address`.
    * @description
@@ -104,7 +104,7 @@ export class EncKrbPrivPart {
    * @public
    * @readonly
    */
-  readonly s_address: HostAddress;
+  public readonly s_address: HostAddress;
   /**
    * @summary `r_address`.
    * @description
@@ -114,7 +114,7 @@ export class EncKrbPrivPart {
    * @public
    * @readonly
    */
-  readonly r_address?: OPTIONAL<HostAddress>;
+  public readonly r_address?: OPTIONAL<HostAddress>;
 
   constructor(
     user_data: OCTET_STRING,

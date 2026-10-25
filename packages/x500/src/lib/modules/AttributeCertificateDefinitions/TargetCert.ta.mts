@@ -1,8 +1,8 @@
 /* eslint-disable */
 import {
-    ASN1Element as _Element,
+    type ASN1Element as _Element,
     ASN1TagClass as _TagClass,
-    OPTIONAL,
+    type OPTIONAL,
 } from "@wildboar/asn1";
 import * as $ from "@wildboar/asn1/functional";
 import {
@@ -16,7 +16,7 @@ import {
     _encode_ObjectDigestInfo,
 } from "../AttributeCertificateDefinitions/ObjectDigestInfo.ta.mjs";
 import {
-    GeneralName,
+    type GeneralName,
     _decode_GeneralName,
     _encode_GeneralName,
 } from "../CertificateExtensions/GeneralName.ta.mjs";
@@ -38,26 +38,34 @@ import {
  *
  */
 export class TargetCert {
+    /**
+     * @summary `targetCertificate`.
+     * @public
+     * @readonly
+     */
+    public readonly targetCertificate: IssuerSerial;
+    /**
+     * @summary `targetName`.
+     * @public
+     * @readonly
+     */
+    public readonly targetName?: OPTIONAL<GeneralName>;
+    /**
+     * @summary `certDigestInfo`.
+     * @public
+     * @readonly
+     */
+    public readonly certDigestInfo?: OPTIONAL<ObjectDigestInfo>;
+
     constructor(
-        /**
-         * @summary `targetCertificate`.
-         * @public
-         * @readonly
-         */
-        readonly targetCertificate: IssuerSerial,
-        /**
-         * @summary `targetName`.
-         * @public
-         * @readonly
-         */
-        readonly targetName?: OPTIONAL<GeneralName>,
-        /**
-         * @summary `certDigestInfo`.
-         * @public
-         * @readonly
-         */
-        readonly certDigestInfo?: OPTIONAL<ObjectDigestInfo>
-    ) {}
+        targetCertificate: IssuerSerial,
+        targetName?: OPTIONAL<GeneralName>,
+        certDigestInfo?: OPTIONAL<ObjectDigestInfo>
+    ) {
+        this.targetCertificate = targetCertificate;
+        this.targetName = targetName;
+        this.certDigestInfo = certDigestInfo;
+    }
 
     /**
      * @summary Restructures an object into a TargetCert

@@ -2,7 +2,7 @@
 import { type OPERATION } from "../Remote-Operations-Information-Objects/OPERATION.oca.mjs";
 // export { Priority, _decode_Priority, _encode_Priority } from "../Remote-Operations-Information-Objects/Priority.ta.mjs";
 // export { Code, _decode_Code, _encode_Code } from "../Remote-Operations-Information-Objects/Code.ta.mjs";
-import { SpecializedResourceReportArg, _decode_SpecializedResourceReportArg, _encode_SpecializedResourceReportArg } from "../IN-CS-1-Datatypes/SpecializedResourceReportArg.ta.mjs";
+import { type SpecializedResourceReportArg, _decode_SpecializedResourceReportArg, _encode_SpecializedResourceReportArg } from "../IN-CS-1-Datatypes/SpecializedResourceReportArg.ta.mjs";
 // export { SpecializedResourceReportArg, _decode_SpecializedResourceReportArg, _encode_SpecializedResourceReportArg } from "../IN-CS-1-Datatypes/SpecializedResourceReportArg.ta.mjs";
 import { op_specializedResourceReport } from "../IN-CS-1-Codes/op-specializedResourceReport.va.mjs";
 // export { op_specializedResourceReport } from "../IN-CS-1-Codes/op-specializedResourceReport.va.mjs";

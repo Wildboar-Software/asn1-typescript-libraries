@@ -1,7 +1,7 @@
 /* eslint-disable */
 import {
-    OPTIONAL,
-    ASN1Element as _Element,
+    type OPTIONAL,
+    type ASN1Element as _Element,
     ASN1TagClass as _TagClass,
     ASN1Construction as _Construction,
     ASN1UniversalType as _UniversalType,
@@ -11,17 +11,17 @@ import {
     ASN1ConstructionError as _ConstructionError,
 } from "@wildboar/asn1";
 import * as $ from "@wildboar/asn1/functional";
-import { CMSVersion, _decode_CMSVersion, _encode_CMSVersion } from "../X9-84-CMS/CMSVersion.ta.mjs";
+import { type CMSVersion, _decode_CMSVersion, _encode_CMSVersion } from "../X9-84-CMS/CMSVersion.ta.mjs";
 
-import { DigestAlgorithmIdentifiers, _decode_DigestAlgorithmIdentifiers, _encode_DigestAlgorithmIdentifiers } from "../X9-84-CMS/DigestAlgorithmIdentifiers.ta.mjs";
+import { type DigestAlgorithmIdentifiers, _decode_DigestAlgorithmIdentifiers, _encode_DigestAlgorithmIdentifiers } from "../X9-84-CMS/DigestAlgorithmIdentifiers.ta.mjs";
 
 import { EncapsulatedContentInfo, _decode_EncapsulatedContentInfo, _encode_EncapsulatedContentInfo } from "../X9-84-CMS/EncapsulatedContentInfo.ta.mjs";
 
-import { CertificateSet, _decode_CertificateSet, _encode_CertificateSet } from "../X9-84-CMS/CertificateSet.ta.mjs";
+import { type CertificateSet, _decode_CertificateSet, _encode_CertificateSet } from "../X9-84-CMS/CertificateSet.ta.mjs";
 
-import { CertificateRevocationLists, _decode_CertificateRevocationLists, _encode_CertificateRevocationLists } from "../X9-84-CMS/CertificateRevocationLists.ta.mjs";
+import { type CertificateRevocationLists, _decode_CertificateRevocationLists, _encode_CertificateRevocationLists } from "../X9-84-CMS/CertificateRevocationLists.ta.mjs";
 
-import { SignerInfos, _decode_SignerInfos, _encode_SignerInfos } from "../X9-84-CMS/SignerInfos.ta.mjs";
+import { type SignerInfos, _decode_SignerInfos, _encode_SignerInfos } from "../X9-84-CMS/SignerInfos.ta.mjs";
 
 
 
@@ -51,44 +51,58 @@ import { SignerInfos, _decode_SignerInfos, _encode_SignerInfos } from "../X9-84-
  */
 export
 class SignedData {
+    /**
+     * @summary `version`.
+     * @public
+     * @readonly
+     */
+    public readonly version: CMSVersion;
+    /**
+     * @summary `digestAlgorithms`.
+     * @public
+     * @readonly
+     */
+    public readonly digestAlgorithms: DigestAlgorithmIdentifiers;
+    /**
+     * @summary `encapContentInfo`.
+     * @public
+     * @readonly
+     */
+    public readonly encapContentInfo: EncapsulatedContentInfo;
+    /**
+     * @summary `certificates`.
+     * @public
+     * @readonly
+     */
+    public readonly certificates: OPTIONAL<CertificateSet>;
+    /**
+     * @summary `crls`.
+     * @public
+     * @readonly
+     */
+    public readonly crls: OPTIONAL<CertificateRevocationLists>;
+    /**
+     * @summary `signerInfos`.
+     * @public
+     * @readonly
+     */
+    public readonly signerInfos: SignerInfos;
+
     constructor (
-        /**
-         * @summary `version`.
-         * @public
-         * @readonly
-         */
-        readonly version: CMSVersion,
-        /**
-         * @summary `digestAlgorithms`.
-         * @public
-         * @readonly
-         */
-        readonly digestAlgorithms: DigestAlgorithmIdentifiers,
-        /**
-         * @summary `encapContentInfo`.
-         * @public
-         * @readonly
-         */
-        readonly encapContentInfo: EncapsulatedContentInfo,
-        /**
-         * @summary `certificates`.
-         * @public
-         * @readonly
-         */
-        readonly certificates: OPTIONAL<CertificateSet>,
-        /**
-         * @summary `crls`.
-         * @public
-         * @readonly
-         */
-        readonly crls: OPTIONAL<CertificateRevocationLists>,
-        /**
-         * @summary `signerInfos`.
-         * @public
-         * @readonly
-         */
-        readonly signerInfos: SignerInfos
-    ) {}
+        version: CMSVersion,
+        digestAlgorithms: DigestAlgorithmIdentifiers,
+        encapContentInfo: EncapsulatedContentInfo,
+        certificates: OPTIONAL<CertificateSet>,
+        crls: OPTIONAL<CertificateRevocationLists>,
+        signerInfos: SignerInfos
+    ) {
+        this.version = version;
+        this.digestAlgorithms = digestAlgorithms;
+        this.encapContentInfo = encapContentInfo;
+        this.certificates = certificates;
+        this.crls = crls;
+        this.signerInfos = signerInfos;
+    }
 
     /**
      * @summary Restructures an object into a SignedData

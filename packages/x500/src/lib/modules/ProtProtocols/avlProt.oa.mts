@@ -1,6 +1,6 @@
 /* eslint-disable */
 import {
-    AvlProt,
+    type AvlProt,
     _decode_AvlProt,
     _encode_AvlProt,
 } from "../AVL-management/AvlProt.ta.mjs";

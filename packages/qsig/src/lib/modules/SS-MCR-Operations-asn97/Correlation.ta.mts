@@ -1,12 +1,12 @@
 /* eslint-disable */
 import {
-    OPTIONAL,
-    ASN1Element as _Element,
+    type OPTIONAL,
+    type ASN1Element as _Element,
     ASN1TagClass as _TagClass
 } from "@wildboar/asn1";
 import * as $ from "@wildboar/asn1/functional";
-import { CallIdentity, _decode_CallIdentity, _encode_CallIdentity } from "../Path-Replacement-Operations-asn1-97/CallIdentity.ta.mjs";
-import { CorrelationReason, _decode_CorrelationReason, _encode_CorrelationReason } from "../SS-MCR-Operations-asn97/CorrelationReason.ta.mjs";
+import { type CallIdentity, _decode_CallIdentity, _encode_CallIdentity } from "../Path-Replacement-Operations-asn1-97/CallIdentity.ta.mjs";
+import { type CorrelationReason, _decode_CorrelationReason, _encode_CorrelationReason } from "../SS-MCR-Operations-asn97/CorrelationReason.ta.mjs";
 
 /**
  * @summary Correlation

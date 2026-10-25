@@ -1,11 +1,11 @@
 /* eslint-disable */
 import {
-    OPTIONAL,
-    ASN1Element as _Element,
+    type OPTIONAL,
+    type ASN1Element as _Element,
     ASN1TagClass as _TagClass
 } from "@wildboar/asn1";
 import * as $ from "@wildboar/asn1/functional";
-import { ContextID, _decode_ContextID, _encode_ContextID } from "../MEDIA-GATEWAY-CONTROL/ContextID.ta.mjs";
+import { type ContextID, _decode_ContextID, _encode_ContextID } from "../MEDIA-GATEWAY-CONTROL/ContextID.ta.mjs";
 import { ContextRequest, _decode_ContextRequest, _encode_ContextRequest } from "../MEDIA-GATEWAY-CONTROL/ContextRequest.ta.mjs";
 import { ContextAttrAuditRequest, _decode_ContextAttrAuditRequest, _encode_ContextAttrAuditRequest } from "../MEDIA-GATEWAY-CONTROL/ContextAttrAuditRequest.ta.mjs";
 import { CommandRequest, _decode_CommandRequest, _encode_CommandRequest } from "../MEDIA-GATEWAY-CONTROL/CommandRequest.ta.mjs";
@@ -53,7 +53,7 @@ class ActionRequest {
      * @public
      * @readonly
      */
-    readonly contextId: ContextID;
+    public readonly contextId: ContextID;
     /**
      * @summary `contextRequest`.
      * @description
@@ -67,7 +67,7 @@ class ActionRequest {
      * @public
      * @readonly
      */
-    readonly contextRequest: OPTIONAL<ContextRequest>;
+    public readonly contextRequest: OPTIONAL<ContextRequest>;
     /**
      * @summary `contextAttrAuditReq`.
      * @description
@@ -81,7 +81,7 @@ class ActionRequest {
      * @public
      * @readonly
      */
-    readonly contextAttrAuditReq: OPTIONAL<ContextAttrAuditRequest>;
+    public readonly contextAttrAuditReq: OPTIONAL<ContextAttrAuditRequest>;
     /**
      * @summary `commandRequests`.
      * @description
@@ -93,7 +93,7 @@ class ActionRequest {
      * @public
      * @readonly
      */
-    readonly commandRequests: CommandRequest[];
+    public readonly commandRequests: CommandRequest[];
 
     constructor (
         contextId: ContextID,

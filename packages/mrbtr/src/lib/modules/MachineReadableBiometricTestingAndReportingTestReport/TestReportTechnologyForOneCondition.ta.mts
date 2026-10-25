@@ -1,7 +1,7 @@
 /* eslint-disable */
 import {
-    OPTIONAL,
-    ASN1Element as _Element,
+    type OPTIONAL,
+    type ASN1Element as _Element,
     ASN1TagClass as _TagClass,
     ASN1Construction as _Construction,
     ASN1UniversalType as _UniversalType,
@@ -12,8 +12,8 @@ import {
 } from "@wildboar/asn1";
 import * as $ from "@wildboar/asn1/functional";
 import { CorpusInformation, _decode_CorpusInformation, _encode_CorpusInformation } from "../MachineReadableBiometricTestingAndReportingTestReport/CorpusInformation.ta.mjs";
-import { Date, _decode_Date, _encode_Date } from "../MachineReadableBiometricTestingAndReportingTestReport/Date.ta.mjs";
-import { TestResult, _decode_TestResult, _encode_TestResult } from "../MachineReadableBiometricTestingAndReportingTestReport/TestResult.ta.mjs";
+import { type Date, _decode_Date, _encode_Date } from "../MachineReadableBiometricTestingAndReportingTestReport/Date.ta.mjs";
+import { type TestResult, _decode_TestResult, _encode_TestResult } from "../MachineReadableBiometricTestingAndReportingTestReport/TestResult.ta.mjs";
 
 
 /**
@@ -38,49 +38,59 @@ import { TestResult, _decode_TestResult, _encode_TestResult } from "../MachineRe
  */
 export
 class TestReportTechnologyForOneCondition {
+    /**
+     * @summary `corpusInfo`.
+     * @description
+     *
+     * Corpus used in the evaluation (Clause 6.4.4.1).
+     *
+     * @public
+     * @readonly
+     */
+    public readonly corpusInfo: CorpusInformation;
+    /**
+     * @summary `dateStarted`.
+     * @description
+     *
+     * Date the test trials started (Clause 6.4.4.1, Annex C.2).
+     *
+     * @public
+     * @readonly
+     */
+    public readonly dateStarted: OPTIONAL<Date>;
+    /**
+     * @summary `dateEnded`.
+     * @description
+     *
+     * Date the test trials ended (Clause 6.4.4.1, Annex C.2).
+     *
+     * @public
+     * @readonly
+     */
+    public readonly dateEnded: OPTIONAL<Date>;
+    /**
+     * @summary `testResult`.
+     * @description
+     *
+     * Enrolment, acquisition, verification, and/or identification
+     * results for this condition (Clause 6.4.4.3).
+     *
+     * @public
+     * @readonly
+     */
+    public readonly testResult: TestResult[];
+
     constructor (
-        /**
-         * @summary `corpusInfo`.
-         * @description
-         *
-         * Corpus used in the evaluation (Clause 6.4.4.1).
-         *
-         * @public
-         * @readonly
-         */
-        readonly corpusInfo: CorpusInformation,
-        /**
-         * @summary `dateStarted`.
-         * @description
-         *
-         * Date the test trials started (Clause 6.4.4.1, Annex C.2).
-         *
-         * @public
-         * @readonly
-         */
-        readonly dateStarted: OPTIONAL<Date>,
-        /**
-         * @summary `dateEnded`.
-         * @description
-         *
-         * Date the test trials ended (Clause 6.4.4.1, Annex C.2).
-         *
-         * @public
-         * @readonly
-         */
-        readonly dateEnded: OPTIONAL<Date>,
-        /**
-         * @summary `testResult`.
-         * @description
-         *
-         * Enrolment, acquisition, verification, and/or identification
-         * results for this condition (Clause 6.4.4.3).
-         *
-         * @public
-         * @readonly
-         */
-        readonly testResult: TestResult[]
-    ) {}
+        corpusInfo: CorpusInformation,
+        dateStarted: OPTIONAL<Date>,
+        dateEnded: OPTIONAL<Date>,
+        testResult: TestResult[]
+    ) {
+        this.corpusInfo = corpusInfo;
+        this.dateStarted = dateStarted;
+        this.dateEnded = dateEnded;
+        this.testResult = testResult;
+    }
 
     /**
      * @summary Restructures an object into a TestReportTechnologyForOneCondition

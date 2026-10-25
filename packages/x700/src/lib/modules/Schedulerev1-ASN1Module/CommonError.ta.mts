@@ -1,7 +1,7 @@
 /* eslint-disable */
 import {
-    OPTIONAL,
-    ASN1Element as _Element,
+    type OPTIONAL,
+    type ASN1Element as _Element,
     ASN1TagClass as _TagClass,
     ASN1Construction as _Construction,
     ASN1UniversalType as _UniversalType,
@@ -12,16 +12,16 @@ import {
 } from '@wildboar/asn1';
 import * as $ from '@wildboar/asn1/functional';
 import {
-    ObjectClass,
+    type ObjectClass,
     _decode_ObjectClass,
     _encode_ObjectClass,
 } from '@wildboar/cmip';
 import {
-    ObjectInstance,
+    type ObjectInstance,
     _decode_ObjectInstance,
     _encode_ObjectInstance,
 } from '@wildboar/cmip';
-import { ErrorId, _decode_ErrorId, _encode_ErrorId } from '../Schedulerev1-ASN1Module/ErrorId.ta.mjs';
+import { type ErrorId, _decode_ErrorId, _encode_ErrorId } from '../Schedulerev1-ASN1Module/ErrorId.ta.mjs';
 
 
 /**
@@ -51,56 +51,66 @@ import { ErrorId, _decode_ErrorId, _encode_ErrorId } from '../Schedulerev1-ASN1M
  *
  */
 export class CommonError {
+    /**
+     * @summary `managedObjectClass`.
+     * @description
+     *
+     * Class of the SMO on which the scheduled operation failed.
+     * Shall be present in the notification. ITU-T Rec. X.746
+     * (02/00)
+     * [§7.3.3](https://www.itu.int/rec/T-REC-X.746-200002-I).
+     * @public
+     * @readonly
+     */
+    public readonly managedObjectClass: ObjectClass;
+    /**
+     * @summary `managedObjectInstance`.
+     * @description
+     *
+     * SMO instance on which the scheduled operation failed.
+     * Shall be present in the notification. ITU-T Rec. X.746
+     * (02/00)
+     * [§7.3.3](https://www.itu.int/rec/T-REC-X.746-200002-I).
+     * @public
+     * @readonly
+     */
+    public readonly managedObjectInstance: ObjectInstance;
+    /**
+     * @summary `errorId`.
+     * @description
+     *
+     * Identifies a `SCHED-ERROR` in `CommonErrorSet`. ITU-T
+     * Rec. X.746 (02/00)
+     * [A.6](https://www.itu.int/rec/T-REC-X.746-200002-I),
+     * Erratum 1.
+     * @public
+     * @readonly
+     */
+    public readonly errorId: ErrorId;
+    /**
+     * @summary `errorValue`.
+     * @description
+     *
+     * Associated `SCHED-ERROR.&Value` for `errorId`, if the
+     * error object defines one. ITU-T Rec. X.746 (02/00)
+     * [A.6](https://www.itu.int/rec/T-REC-X.746-200002-I),
+     * Erratum 1.
+     * @public
+     * @readonly
+     */
+    public readonly errorValue?: OPTIONAL<_Element>;
+
     constructor(
-        /**
-         * @summary `managedObjectClass`.
-         * @description
-         *
-         * Class of the SMO on which the scheduled operation failed.
-         * Shall be present in the notification. ITU-T Rec. X.746
-         * (02/00)
-         * [§7.3.3](https://www.itu.int/rec/T-REC-X.746-200002-I).
-         * @public
-         * @readonly
-         */
-        readonly managedObjectClass: ObjectClass,
-        /**
-         * @summary `managedObjectInstance`.
-         * @description
-         *
-         * SMO instance on which the scheduled operation failed.
-         * Shall be present in the notification. ITU-T Rec. X.746
-         * (02/00)
-         * [§7.3.3](https://www.itu.int/rec/T-REC-X.746-200002-I).
-         * @public
-         * @readonly
-         */
-        readonly managedObjectInstance: ObjectInstance,
-        /**
-         * @summary `errorId`.
-         * @description
-         *
-         * Identifies a `SCHED-ERROR` in `CommonErrorSet`. ITU-T
-         * Rec. X.746 (02/00)
-         * [A.6](https://www.itu.int/rec/T-REC-X.746-200002-I),
-         * Erratum 1.
-         * @public
-         * @readonly
-         */
-        readonly errorId: ErrorId,
-        /**
-         * @summary `errorValue`.
-         * @description
-         *
-         * Associated `SCHED-ERROR.&Value` for `errorId`, if the
-         * error object defines one. ITU-T Rec. X.746 (02/00)
-         * [A.6](https://www.itu.int/rec/T-REC-X.746-200002-I),
-         * Erratum 1.
-         * @public
-         * @readonly
-         */
-        readonly errorValue?: OPTIONAL<_Element>
-    ) {}
+        managedObjectClass: ObjectClass,
+        managedObjectInstance: ObjectInstance,
+        errorId: ErrorId,
+        errorValue?: OPTIONAL<_Element>
+    ) {
+        this.managedObjectClass = managedObjectClass;
+        this.managedObjectInstance = managedObjectInstance;
+        this.errorId = errorId;
+        this.errorValue = errorValue;
+    }
 
     /**
      * @summary Restructures an object into a CommonError

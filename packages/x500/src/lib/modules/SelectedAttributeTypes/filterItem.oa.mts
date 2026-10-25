@@ -1,6 +1,6 @@
 /* eslint-disable */
 import {
-    FilterItem,
+    type FilterItem,
     _decode_FilterItem,
     _encode_FilterItem,
 } from "../DirectoryAbstractService/FilterItem.ta.mjs";

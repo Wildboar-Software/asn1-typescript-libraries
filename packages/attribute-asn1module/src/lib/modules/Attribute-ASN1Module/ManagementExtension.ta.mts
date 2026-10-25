@@ -1,9 +1,9 @@
 /* eslint-disable */
 import {
-    OPTIONAL,
-    BOOLEAN,
-    OBJECT_IDENTIFIER,
-    ASN1Element as _Element,
+    type OPTIONAL,
+    type BOOLEAN,
+    type OBJECT_IDENTIFIER,
+    type ASN1Element as _Element,
     ASN1TagClass as _TagClass,
     ASN1Construction as _Construction,
     ASN1UniversalType as _UniversalType,
@@ -45,7 +45,7 @@ class ManagementExtension {
      * @public
      * @readonly
      */
-    readonly identifier: OBJECT_IDENTIFIER;
+    public readonly identifier: OBJECT_IDENTIFIER;
     /**
      * @summary `significance`.
      * @description
@@ -57,7 +57,7 @@ class ManagementExtension {
      * @public
      * @readonly
      */
-    readonly significance: OPTIONAL<BOOLEAN>;
+    public readonly significance: OPTIONAL<BOOLEAN>;
     /**
      * @summary `information`.
      * @description
@@ -68,7 +68,7 @@ class ManagementExtension {
      * @public
      * @readonly
      */
-    readonly information: _Element;
+    public readonly information: _Element;
 
     constructor (
         identifier: OBJECT_IDENTIFIER,

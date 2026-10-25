@@ -1,7 +1,7 @@
 /* eslint-disable */
 import {
-    OPTIONAL,
-    ASN1Element as _Element,
+    type OPTIONAL,
+    type ASN1Element as _Element,
     ASN1TagClass as _TagClass,
     ASN1Construction as _Construction,
     ASN1UniversalType as _UniversalType,
@@ -12,7 +12,7 @@ import {
 } from '@wildboar/asn1';
 import * as $ from '@wildboar/asn1/functional';
 import {
-    ProtectionStatus,
+    type ProtectionStatus,
     _decode_ProtectionStatus,
     _encode_ProtectionStatus,
 } from '../SDHProtASN1/ProtectionStatus.ta.mjs';
@@ -40,26 +40,34 @@ import {
  *
  */
 export class ProtectionStatusParameter {
+    /**
+     * @summary `oldProtectionStatus`.
+     * @public
+     * @readonly
+     */
+    public readonly oldProtectionStatus: ProtectionStatus;
+    /**
+     * @summary `newProtectionStatus`.
+     * @public
+     * @readonly
+     */
+    public readonly newProtectionStatus: ProtectionStatus;
+    /**
+     * @summary `psDirection`.
+     * @public
+     * @readonly
+     */
+    public readonly psDirection?: OPTIONAL<ProtectionDirection>;
+
     constructor(
-        /**
-         * @summary `oldProtectionStatus`.
-         * @public
-         * @readonly
-         */
-        readonly oldProtectionStatus: ProtectionStatus,
-        /**
-         * @summary `newProtectionStatus`.
-         * @public
-         * @readonly
-         */
-        readonly newProtectionStatus: ProtectionStatus,
-        /**
-         * @summary `psDirection`.
-         * @public
-         * @readonly
-         */
-        readonly psDirection?: OPTIONAL<ProtectionDirection>
-    ) {}
+        oldProtectionStatus: ProtectionStatus,
+        newProtectionStatus: ProtectionStatus,
+        psDirection?: OPTIONAL<ProtectionDirection>
+    ) {
+        this.oldProtectionStatus = oldProtectionStatus;
+        this.newProtectionStatus = newProtectionStatus;
+        this.psDirection = psDirection;
+    }
 
     /**
      * @summary Restructures an object into a ProtectionStatusParameter
@@ -91,7 +99,7 @@ export class ProtectionStatusParameter {
      * @static
      * @method
      */
-    public static get _default_value_for_psDirection() {
+    public static get _default_value_for_psDirection(): _enum_for_ProtectionDirection.bidirectional {
         return ProtectionDirection_bidirectional;
     }
     /**
@@ -100,7 +108,7 @@ export class ProtectionStatusParameter {
      * @static
      */
 
-    public static _enum_for_psDirection = _enum_for_ProtectionDirection;
+    public static _enum_for_psDirection: typeof _enum_for_ProtectionDirection = _enum_for_ProtectionDirection;
 }
 
 

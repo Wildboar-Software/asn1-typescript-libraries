@@ -1,4 +1,5 @@
 /* eslint-disable */
+import { ASN1Element as _Element, ASN1ConstructionError as _ConstructionError } from "@wildboar/asn1";
 import * as $ from "@wildboar/asn1/functional";
 
 
@@ -61,7 +62,7 @@ type MidCallControlInfo_Item_midCallReportType = _enum_for_MidCallControlInfo_It
  * @enum {number}
  */
 export
-const MidCallControlInfo_Item_midCallReportType = _enum_for_MidCallControlInfo_Item_midCallReportType;
+const MidCallControlInfo_Item_midCallReportType: typeof _enum_for_MidCallControlInfo_Item_midCallReportType = _enum_for_MidCallControlInfo_Item_midCallReportType;
 
 /**
  * @summary MidCallControlInfo_Item_midCallReportType_inMonitoringState
@@ -69,7 +70,7 @@ const MidCallControlInfo_Item_midCallReportType = _enum_for_MidCallControlInfo_I
  * @type {number}
  */
 export
-const MidCallControlInfo_Item_midCallReportType_inMonitoringState: MidCallControlInfo_Item_midCallReportType = MidCallControlInfo_Item_midCallReportType.inMonitoringState; /* LONG_NAMED_ENUMERATED_VALUE */
+const MidCallControlInfo_Item_midCallReportType_inMonitoringState: _enum_for_MidCallControlInfo_Item_midCallReportType.inMonitoringState = MidCallControlInfo_Item_midCallReportType.inMonitoringState; /* LONG_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary inMonitoringState
@@ -77,7 +78,7 @@ const MidCallControlInfo_Item_midCallReportType_inMonitoringState: MidCallContro
  * @type {number}
  */
 export
-const inMonitoringState: MidCallControlInfo_Item_midCallReportType = MidCallControlInfo_Item_midCallReportType.inMonitoringState; /* SHORT_NAMED_ENUMERATED_VALUE */
+const inMonitoringState: _enum_for_MidCallControlInfo_Item_midCallReportType.inMonitoringState = MidCallControlInfo_Item_midCallReportType.inMonitoringState; /* SHORT_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary MidCallControlInfo_Item_midCallReportType_inAnyState
@@ -85,7 +86,7 @@ const inMonitoringState: MidCallControlInfo_Item_midCallReportType = MidCallCont
  * @type {number}
  */
 export
-const MidCallControlInfo_Item_midCallReportType_inAnyState: MidCallControlInfo_Item_midCallReportType = MidCallControlInfo_Item_midCallReportType.inAnyState; /* LONG_NAMED_ENUMERATED_VALUE */
+const MidCallControlInfo_Item_midCallReportType_inAnyState: _enum_for_MidCallControlInfo_Item_midCallReportType.inAnyState = MidCallControlInfo_Item_midCallReportType.inAnyState; /* LONG_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary inAnyState
@@ -93,12 +94,23 @@ const MidCallControlInfo_Item_midCallReportType_inAnyState: MidCallControlInfo_I
  * @type {number}
  */
 export
-const inAnyState: MidCallControlInfo_Item_midCallReportType = MidCallControlInfo_Item_midCallReportType.inAnyState; /* SHORT_NAMED_ENUMERATED_VALUE */
+const inAnyState: _enum_for_MidCallControlInfo_Item_midCallReportType.inAnyState = MidCallControlInfo_Item_midCallReportType.inAnyState; /* SHORT_NAMED_ENUMERATED_VALUE */
 
 export
-const _decode_MidCallControlInfo_Item_midCallReportType: $.ASN1Decoder<MidCallControlInfo_Item_midCallReportType> = $._decodeEnumerated;
+function _decode_MidCallControlInfo_Item_midCallReportType(el: _Element): MidCallControlInfo_Item_midCallReportType {
+    const enumerated = $._decodeEnumerated(el);
+    switch (enumerated) {
+        case MidCallControlInfo_Item_midCallReportType.inMonitoringState: return MidCallControlInfo_Item_midCallReportType.inMonitoringState;
+        case MidCallControlInfo_Item_midCallReportType.inAnyState: return MidCallControlInfo_Item_midCallReportType.inAnyState;
+        default:
+            throw new _ConstructionError(
+                "Invalid ENUMERATED value " + enumerated + " for MidCallControlInfo_Item_midCallReportType.",
+                el,
+            );
+    }
+}
 
 export
-const _encode_MidCallControlInfo_Item_midCallReportType: $.ASN1Encoder<MidCallControlInfo_Item_midCallReportType> = $._encodeEnumerated;
+const _encode_MidCallControlInfo_Item_midCallReportType: $.ASN1Encoder<MidCallControlInfo_Item_midCallReportType> = $._encodeEnumerated as $.ASN1Encoder<MidCallControlInfo_Item_midCallReportType>;
 
 /* eslint-enable */

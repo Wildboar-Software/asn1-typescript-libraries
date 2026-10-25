@@ -1,13 +1,13 @@
 /* eslint-disable */
 import {
-    OPTIONAL,
-    ASN1Element as _Element,
+    type OPTIONAL,
+    type ASN1Element as _Element,
     ASN1TagClass as _TagClass
 } from "@wildboar/asn1";
 import * as $ from "@wildboar/asn1/functional";
-import { AdditionalNetworkResource, _decode_AdditionalNetworkResource, _encode_AdditionalNetworkResource, _enum_for_AdditionalNetworkResource } from "../MAP-CommonDataTypes/AdditionalNetworkResource.ta.mjs";
+import { type AdditionalNetworkResource, _decode_AdditionalNetworkResource, _encode_AdditionalNetworkResource, _enum_for_AdditionalNetworkResource } from "../MAP-CommonDataTypes/AdditionalNetworkResource.ta.mjs";
 import { NetworkResource, _decode_NetworkResource, _encode_NetworkResource, _enum_for_NetworkResource } from "../MAP-CommonDataTypes/NetworkResource.ta.mjs";
-import { FailureCauseParam, _decode_FailureCauseParam, _encode_FailureCauseParam, _enum_for_FailureCauseParam } from "../MAP-ER-DataTypes/FailureCauseParam.ta.mjs";
+import { type FailureCauseParam, _decode_FailureCauseParam, _encode_FailureCauseParam, _enum_for_FailureCauseParam } from "../MAP-ER-DataTypes/FailureCauseParam.ta.mjs";
 import { ExtensionContainer, _decode_ExtensionContainer, _encode_ExtensionContainer } from "../MAP-ExtensionDataTypes/ExtensionContainer.ta.mjs";
 
 
@@ -25,10 +25,10 @@ import { ExtensionContainer, _decode_ExtensionContainer, _encode_ExtensionContai
  * 
  * ```asn1
  * ExtensibleSystemFailureParam ::= SEQUENCE {
- *     networkResource    NetworkResource    OPTIONAL,
- *     extensionContainer    ExtensionContainer    OPTIONAL,
+ *     networkResource    NetworkResource    type OPTIONAL,
+ *     extensionContainer    ExtensionContainer    type OPTIONAL,
  *     ...,
- *     additionalNetworkResource    [0] AdditionalNetworkResource    OPTIONAL,
+ *     additionalNetworkResource    [0] AdditionalNetworkResource    type OPTIONAL,
  *     failureCauseParam    [1] FailureCauseParam    OPTIONAL }
  * ```
  * 
@@ -36,54 +36,66 @@ import { ExtensionContainer, _decode_ExtensionContainer, _encode_ExtensionContai
  */
 export
 class ExtensibleSystemFailureParam {
+    /**
+     * @summary `networkResource`.
+     * @description
+     *
+     * Class or type of network resource: PLMN, HLR, VLR (current or
+     * previous), MSC (controlling or current), EIR, or radio sub-system
+     * (3GPP TS 29.002 V19.1.0 clause 7.6.10.1).
+     *
+     * @public
+     * @readonly
+     */
+    public readonly networkResource?: OPTIONAL<NetworkResource>;
+    /**
+     * @summary `extensionContainer`.
+     * @public
+     * @readonly
+     */
+    public readonly extensionContainer?: OPTIONAL<ExtensionContainer>;
+    /**
+     * @summary `additionalNetworkResource`.
+     * @description
+     *
+     * Class or type of additional network resource: SGSN, GGSN, GMLC,
+     * gsmSCF, NPLR, or AuC (3GPP TS 29.002 V19.1.0 clause 7.6.10.4).
+     *
+     * @public
+     * @readonly
+     */
+    public readonly additionalNetworkResource?: OPTIONAL<AdditionalNetworkResource>;
+    /**
+     * @summary `failureCauseParam`.
+     * @description
+     *
+     * Shall be included if and only if the problem is in the entity
+     * reporting the error (3GPP TS 29.002 V19.1.0 clause 7.6.1.4).
+     *
+     * @public
+     * @readonly
+     */
+    public readonly failureCauseParam?: OPTIONAL<FailureCauseParam>;
+    /**
+     * @summary Extensions that are not recognized.
+     * @public
+     * @readonly
+     */
+    public readonly _unrecognizedExtensionsList: _Element[];
+
     constructor (
-        /**
-         * @summary `networkResource`.
-         * @description
-         *
-         * Class or type of network resource: PLMN, HLR, VLR (current or
-         * previous), MSC (controlling or current), EIR, or radio sub-system
-         * (3GPP TS 29.002 V19.1.0 clause 7.6.10.1).
-         *
-         * @public
-         * @readonly
-         */
-        readonly networkResource?: OPTIONAL<NetworkResource>,
-        /**
-         * @summary `extensionContainer`.
-         * @public
-         * @readonly
-         */
-        readonly extensionContainer?: OPTIONAL<ExtensionContainer>,
-        /**
-         * @summary `additionalNetworkResource`.
-         * @description
-         *
-         * Class or type of additional network resource: SGSN, GGSN, GMLC,
-         * gsmSCF, NPLR, or AuC (3GPP TS 29.002 V19.1.0 clause 7.6.10.4).
-         *
-         * @public
-         * @readonly
-         */
-        readonly additionalNetworkResource?: OPTIONAL<AdditionalNetworkResource>,
-        /**
-         * @summary `failureCauseParam`.
-         * @description
-         *
-         * Shall be included if and only if the problem is in the entity
-         * reporting the error (3GPP TS 29.002 V19.1.0 clause 7.6.1.4).
-         *
-         * @public
-         * @readonly
-         */
-        readonly failureCauseParam?: OPTIONAL<FailureCauseParam>,
-        /**
-         * @summary Extensions that are not recognized.
-         * @public
-         * @readonly
-         */
-        readonly _unrecognizedExtensionsList: _Element[] = []
-    ) {}
+        networkResource?: OPTIONAL<NetworkResource>,
+        extensionContainer?: OPTIONAL<ExtensionContainer>,
+        additionalNetworkResource?: OPTIONAL<AdditionalNetworkResource>,
+        failureCauseParam?: OPTIONAL<FailureCauseParam>,
+        _unrecognizedExtensionsList: _Element[] = []
+    ) {
+        this.networkResource = networkResource;
+        this.extensionContainer = extensionContainer;
+        this.additionalNetworkResource = additionalNetworkResource;
+        this.failureCauseParam = failureCauseParam;
+        this._unrecognizedExtensionsList = _unrecognizedExtensionsList;
+    }
 
     /**
      * @summary Restructures an object into a ExtensibleSystemFailureParam
@@ -107,19 +119,19 @@ class ExtensibleSystemFailureParam {
          * @static
          */
 
-    public static _enum_for_networkResource = _enum_for_NetworkResource;        /**
+    public static _enum_for_networkResource: typeof _enum_for_NetworkResource = _enum_for_NetworkResource;        /**
          * @summary The enum used as the type of the component `additionalNetworkResource`
          * @public
          * @static
          */
 
-    public static _enum_for_additionalNetworkResource = _enum_for_AdditionalNetworkResource;        /**
+    public static _enum_for_additionalNetworkResource: typeof _enum_for_AdditionalNetworkResource = _enum_for_AdditionalNetworkResource;        /**
          * @summary The enum used as the type of the component `failureCauseParam`
          * @public
          * @static
          */
 
-    public static _enum_for_failureCauseParam = _enum_for_FailureCauseParam;
+    public static _enum_for_failureCauseParam: typeof _enum_for_FailureCauseParam = _enum_for_FailureCauseParam;
 }
 
 /**

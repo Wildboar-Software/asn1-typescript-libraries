@@ -2,12 +2,12 @@
 
 import * as $ from "@wildboar/asn1/functional";
 import {
-    OPTIONAL,
-    BOOLEAN,
-    INTEGER,
-    SEQUENCE,
-    SET,
-    ASN1Element as _Element,
+    type OPTIONAL,
+    type BOOLEAN,
+    type INTEGER,
+    type SEQUENCE,
+    type SET,
+    type ASN1Element as _Element,
     ASN1TagClass as _TagClass
 } from "@wildboar/asn1";
 import {
@@ -17,9 +17,9 @@ import {
     _encode_MediaServiceType
 } from "../CSTA-media-services/MediaServiceType.ta.mjs";
 
-import { MediaServiceInstanceID, _decode_MediaServiceInstanceID, _encode_MediaServiceInstanceID } from "../CSTA-media-services/MediaServiceInstanceID.ta.mjs";
+import { type MediaServiceInstanceID, _decode_MediaServiceInstanceID, _encode_MediaServiceInstanceID } from "../CSTA-media-services/MediaServiceInstanceID.ta.mjs";
 
-import { ConnectionModeBMap, _decode_ConnectionModeBMap, _encode_ConnectionModeBMap } from "../CSTA-media-services/ConnectionModeBMap.ta.mjs";
+import { type ConnectionModeBMap, _decode_ConnectionModeBMap, _encode_ConnectionModeBMap } from "../CSTA-media-services/ConnectionModeBMap.ta.mjs";
 
 
 
@@ -49,49 +49,61 @@ import { ConnectionModeBMap, _decode_ConnectionModeBMap, _encode_ConnectionModeB
  */
 export
 class MediaServiceCapsList_Item {
+    /**
+     * @summary `mediaServiceType`.
+     * @public
+     * @readonly
+     * @description
+     * Media service type identifying the service (ECMA-269 Table 13-9)
+     */
+    public readonly mediaServiceType: MediaServiceType;
+    /**
+     * @summary `mediaServiceVersion`.
+     * @public
+     * @readonly
+     * @description
+     * Version of the media service
+     */
+    public readonly mediaServiceVersion: OPTIONAL<INTEGER>;
+    /**
+     * @summary `mediaServiceInstance`.
+     * @public
+     * @readonly
+     * @description
+     * Media service instance associated with the type/version
+     */
+    public readonly mediaServiceInstance: OPTIONAL<MediaServiceInstanceID>;
+    /**
+     * @summary `connectionMode`.
+     * @public
+     * @readonly
+     * @description
+     * Supported connection modes (consultationConference, deflect, join,
+     * transfer, direct, etc.)
+     */
+    public readonly connectionMode: OPTIONAL<ConnectionModeBMap>;
+    /**
+     * @summary `mediaStreamIDSupported`.
+     * @public
+     * @readonly
+     * @description
+     * TRUE if the SF provides `mediaStreamID` where specified
+     */
+    public readonly mediaStreamIDSupported: BOOLEAN;
+
     constructor (
-        /**
-         * @summary `mediaServiceType`.
-         * @public
-         * @readonly
-         * @description
-         * Media service type identifying the service (ECMA-269 Table 13-9)
-         */
-        readonly mediaServiceType: MediaServiceType,
-        /**
-         * @summary `mediaServiceVersion`.
-         * @public
-         * @readonly
-         * @description
-         * Version of the media service
-         */
-        readonly mediaServiceVersion: OPTIONAL<INTEGER>,
-        /**
-         * @summary `mediaServiceInstance`.
-         * @public
-         * @readonly
-         * @description
-         * Media service instance associated with the type/version
-         */
-        readonly mediaServiceInstance: OPTIONAL<MediaServiceInstanceID>,
-        /**
-         * @summary `connectionMode`.
-         * @public
-         * @readonly
-         * @description
-         * Supported connection modes (consultationConference, deflect, join,
-         * transfer, direct, etc.)
-         */
-        readonly connectionMode: OPTIONAL<ConnectionModeBMap>,
-        /**
-         * @summary `mediaStreamIDSupported`.
-         * @public
-         * @readonly
-         * @description
-         * TRUE if the SF provides `mediaStreamID` where specified
-         */
-        readonly mediaStreamIDSupported: BOOLEAN
-    ) {}
+        mediaServiceType: MediaServiceType,
+        mediaServiceVersion: OPTIONAL<INTEGER>,
+        mediaServiceInstance: OPTIONAL<MediaServiceInstanceID>,
+        connectionMode: OPTIONAL<ConnectionModeBMap>,
+        mediaStreamIDSupported: BOOLEAN
+    ) {
+        this.mediaServiceType = mediaServiceType;
+        this.mediaServiceVersion = mediaServiceVersion;
+        this.mediaServiceInstance = mediaServiceInstance;
+        this.connectionMode = connectionMode;
+        this.mediaStreamIDSupported = mediaStreamIDSupported;
+    }
 
     /**
      * @summary Restructures an object into a MediaServiceCapsList_Item
@@ -115,7 +127,7 @@ class MediaServiceCapsList_Item {
          * @static
          */
 
-    public static _enum_for_mediaServiceType = _enum_for_MediaServiceType;
+    public static _enum_for_mediaServiceType: typeof _enum_for_MediaServiceType = _enum_for_MediaServiceType;
 }
 
 /**

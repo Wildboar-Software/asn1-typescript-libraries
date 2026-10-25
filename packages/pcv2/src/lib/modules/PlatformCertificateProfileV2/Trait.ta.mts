@@ -1,13 +1,13 @@
 /* eslint-disable */
 import {
-    ASN1Element as _Element,
+    type ASN1Element as _Element,
     ASN1TagClass as _TagClass,
     ASN1SizeError,
-    IA5String,
-    OBJECT_IDENTIFIER,
-    OCTET_STRING,
-    OPTIONAL,
-    UTF8String
+    type IA5String,
+    type OBJECT_IDENTIFIER,
+    type OCTET_STRING,
+    type OPTIONAL,
+    type UTF8String
 } from "@wildboar/asn1";
 import * as $ from "@wildboar/asn1/functional";
 import { strmax } from "../PlatformCertificateProfileV2/strmax.va.mjs";

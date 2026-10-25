@@ -1,8 +1,8 @@
 /* eslint-disable */
 import {
-    ASN1Element as _Element,
+    type ASN1Element as _Element,
     ASN1TagClass as _TagClass,
-    OCTET_STRING,
+    type OCTET_STRING,
 } from "@wildboar/asn1";
 import * as $ from "@wildboar/asn1/functional";
 import {
@@ -11,7 +11,7 @@ import {
     _get_encoder_for_HASH,
 } from "../AuthenticationFramework/HASH.ta.mjs";
 import {
-    UserPwd,
+    type UserPwd,
     _decode_UserPwd,
     _encode_UserPwd,
 } from "../PasswordPolicy/UserPwd.ta.mjs";

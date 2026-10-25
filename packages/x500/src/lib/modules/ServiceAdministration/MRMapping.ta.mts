@@ -1,8 +1,8 @@
 /* eslint-disable */
 import {
-    ASN1Element as _Element,
+    type ASN1Element as _Element,
     ASN1TagClass as _TagClass,
-    OPTIONAL,
+    type OPTIONAL,
 } from "@wildboar/asn1";
 import * as $ from "@wildboar/asn1/functional";
 import {
@@ -35,26 +35,34 @@ import {
  *
  */
 export class MRMapping {
+    /**
+     * @summary `mapping`.
+     * @public
+     * @readonly
+     */
+    public readonly mapping?: OPTIONAL<Mapping[]>;
+    /**
+     * @summary `substitution`.
+     * @public
+     * @readonly
+     */
+    public readonly substitution?: OPTIONAL<MRSubstitution[]>;
+    /**
+     * @summary Extensions that are not recognized.
+     * @public
+     * @readonly
+     */
+    public readonly _unrecognizedExtensionsList: _Element[];
+
     constructor(
-        /**
-         * @summary `mapping`.
-         * @public
-         * @readonly
-         */
-        readonly mapping?: OPTIONAL<Mapping[]>,
-        /**
-         * @summary `substitution`.
-         * @public
-         * @readonly
-         */
-        readonly substitution?: OPTIONAL<MRSubstitution[]>,
-        /**
-         * @summary Extensions that are not recognized.
-         * @public
-         * @readonly
-         */
-        readonly _unrecognizedExtensionsList: _Element[] = []
-    ) {}
+        mapping?: OPTIONAL<Mapping[]>,
+        substitution?: OPTIONAL<MRSubstitution[]>,
+        _unrecognizedExtensionsList: _Element[] = []
+    ) {
+        this.mapping = mapping;
+        this.substitution = substitution;
+        this._unrecognizedExtensionsList = _unrecognizedExtensionsList;
+    }
 
     /**
      * @summary Restructures an object into a MRMapping

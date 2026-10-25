@@ -3,7 +3,7 @@ import {
     ASN1Element as _Element
 } from "@wildboar/asn1";
 import * as $ from "@wildboar/asn1/functional";
-import { InvokeIdType, _decode_InvokeIdType, _encode_InvokeIdType } from "../IN-CS-1-Datatypes/InvokeIdType.ta.mjs";
+import { type InvokeIdType, _decode_InvokeIdType, _encode_InvokeIdType } from "../IN-CS-1-Datatypes/InvokeIdType.ta.mjs";
 // export { InvokeIdType, _decode_InvokeIdType, _encode_InvokeIdType } from "../IN-CS-1-Datatypes/InvokeIdType.ta.mjs";
 
 
@@ -21,21 +21,13 @@ import { InvokeIdType, _decode_InvokeIdType, _encode_InvokeIdType } from "../IN-
 export
 type InvokeID = InvokeIdType; // DefinedType
 
-let _cached_decoder_for_InvokeID: $.ASN1Decoder<InvokeID> | null = null;
-
 /**
  * @summary Decodes an ASN.1 element into a(n) InvokeID
  * @function
  * @param el The element being decoded.
  * @returns The decoded data structure.
  */
-export
-function _decode_InvokeID (el: _Element): InvokeID {
-    if (!_cached_decoder_for_InvokeID) { _cached_decoder_for_InvokeID = _decode_InvokeIdType; }
-    return _cached_decoder_for_InvokeID(el);
-}
-
-let _cached_encoder_for_InvokeID: $.ASN1Encoder<InvokeID> | null = null;
+export const _decode_InvokeID: $.ASN1Decoder<InvokeID> = _decode_InvokeIdType;
 
 /**
  * @summary Encodes a(n) InvokeID into an ASN.1 Element.
@@ -44,11 +36,7 @@ let _cached_encoder_for_InvokeID: $.ASN1Encoder<InvokeID> | null = null;
  * @param elGetter A function that can be used to get new ASN.1 elements.
  * @returns {_Element} The InvokeID, encoded as an ASN.1 Element.
  */
-export
-function _encode_InvokeID (value: InvokeID, elGetter: $.ASN1Encoder<any>): _Element {
-    if (!_cached_encoder_for_InvokeID) { _cached_encoder_for_InvokeID = _encode_InvokeIdType; }
-    return _cached_encoder_for_InvokeID(value, elGetter);
-}
+export const _encode_InvokeID: $.ASN1Encoder<InvokeID> = _encode_InvokeIdType;
 
 
 /* eslint-enable */

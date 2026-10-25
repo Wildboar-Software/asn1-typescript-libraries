@@ -1,6 +1,6 @@
 /* eslint-disable */
 import {
-    ASN1Element as _Element,
+    type ASN1Element as _Element,
     ASN1TagClass as _TagClass,
     ASN1Construction as _Construction,
     ASN1UniversalType as _UniversalType,
@@ -10,8 +10,8 @@ import {
     ASN1ConstructionError as _ConstructionError,
 } from "@wildboar/asn1";
 import * as $ from "@wildboar/asn1/functional";
-import { ObjectInstance, _decode_ObjectInstance, _encode_ObjectInstance } from "@wildboar/cmip";
-import { PrioritisedObject_Item_priority, _decode_PrioritisedObject_Item_priority, _encode_PrioritisedObject_Item_priority } from "../Attribute-ASN1Module/PrioritisedObject-Item-priority.ta.mjs";
+import { type ObjectInstance, _decode_ObjectInstance, _encode_ObjectInstance } from "@wildboar/cmip";
+import { type PrioritisedObject_Item_priority, _decode_PrioritisedObject_Item_priority, _encode_PrioritisedObject_Item_priority } from "../Attribute-ASN1Module/PrioritisedObject-Item-priority.ta.mjs";
 /**
  * @summary PrioritisedObject_Item
  * @description
@@ -37,7 +37,7 @@ class PrioritisedObject_Item {
      * @public
      * @readonly
      */
-    readonly object: ObjectInstance;
+    public readonly object: ObjectInstance;
     /**
      * @summary `priority`.
      * @description
@@ -47,7 +47,7 @@ class PrioritisedObject_Item {
      * @public
      * @readonly
      */
-    readonly priority: PrioritisedObject_Item_priority;
+    public readonly priority: PrioritisedObject_Item_priority;
 
     constructor (
         object: ObjectInstance,

@@ -1,16 +1,16 @@
 /* eslint-disable */
 import {
-    NULL,
-    OPTIONAL,
-    ASN1Element as _Element,
+    type NULL,
+    type OPTIONAL,
+    type ASN1Element as _Element,
     ASN1TagClass as _TagClass
 } from "@wildboar/asn1";
 import * as $ from "@wildboar/asn1/functional";
 import { ExtensionContainer, _decode_ExtensionContainer, _encode_ExtensionContainer } from "../MAP-ExtensionDataTypes/ExtensionContainer.ta.mjs";
-import { Horizontal_Accuracy, _decode_Horizontal_Accuracy, _encode_Horizontal_Accuracy } from "../MAP-LCS-DataTypes/Horizontal-Accuracy.ta.mjs";
-import { LCS_QoS_Class, _decode_LCS_QoS_Class, _encode_LCS_QoS_Class, _enum_for_LCS_QoS_Class } from "../MAP-LCS-DataTypes/LCS-QoS-Class.ta.mjs";
+import { type Horizontal_Accuracy, _decode_Horizontal_Accuracy, _encode_Horizontal_Accuracy } from "../MAP-LCS-DataTypes/Horizontal-Accuracy.ta.mjs";
+import { type LCS_QoS_Class, _decode_LCS_QoS_Class, _encode_LCS_QoS_Class, _enum_for_LCS_QoS_Class } from "../MAP-LCS-DataTypes/LCS-QoS-Class.ta.mjs";
 import { ResponseTime, _decode_ResponseTime, _encode_ResponseTime } from "../MAP-LCS-DataTypes/ResponseTime.ta.mjs";
-import { Vertical_Accuracy, _decode_Vertical_Accuracy, _encode_Vertical_Accuracy } from "../MAP-LCS-DataTypes/Vertical-Accuracy.ta.mjs";
+import { type Vertical_Accuracy, _decode_Vertical_Accuracy, _encode_Vertical_Accuracy } from "../MAP-LCS-DataTypes/Vertical-Accuracy.ta.mjs";
 
 
 /**
@@ -24,12 +24,12 @@ import { Vertical_Accuracy, _decode_Vertical_Accuracy, _encode_Vertical_Accuracy
  * 
  * ```asn1
  * LCS-QoS ::= SEQUENCE {
- *     horizontal-accuracy    [0] Horizontal-Accuracy    OPTIONAL,
- *     verticalCoordinateRequest    [1] NULL    OPTIONAL,
- *     vertical-accuracy    [2] Vertical-Accuracy    OPTIONAL,    responseTime    [3] ResponseTime    OPTIONAL,
- *     extensionContainer    [4] ExtensionContainer    OPTIONAL,
+ *     horizontal-accuracy    [0] Horizontal-Accuracy    type OPTIONAL,
+ *     verticalCoordinateRequest    [1] NULL    type OPTIONAL,
+ *     vertical-accuracy    [2] Vertical-Accuracy    type OPTIONAL,    responseTime    [3] ResponseTime    type OPTIONAL,
+ *     extensionContainer    [4] ExtensionContainer    type OPTIONAL,
  *     ...,
- *     velocityRequest    [5] NULL    OPTIONAL,
+ *     velocityRequest    [5] NULL    type OPTIONAL,
  *     lcs-qos-class    [6] LCS-QoS-Class    OPTIONAL
  * }
  * ```
@@ -38,85 +38,103 @@ import { Vertical_Accuracy, _decode_Vertical_Accuracy, _encode_Vertical_Accuracy
  */
 export
 class LCS_QoS {
+    /**
+     * @summary `horizontal_accuracy`.
+     * @description
+     *
+     * Required horizontal accuracy (clause 7.6.11.8).
+     *
+     * @public
+     * @readonly
+     */
+    public readonly horizontal_accuracy?: OPTIONAL<Horizontal_Accuracy>;
+    /**
+     * @summary `verticalCoordinateRequest`.
+     * @description
+     *
+     * Vertical coordinate required (clause 7.6.11.8).
+     *
+     * @public
+     * @readonly
+     */
+    public readonly verticalCoordinateRequest?: OPTIONAL<NULL>;
+    /**
+     * @summary `vertical_accuracy`.
+     * @description
+     *
+     * Optional required vertical accuracy (clause 7.6.11.8).
+     *
+     * @public
+     * @readonly
+     */
+    public readonly vertical_accuracy?: OPTIONAL<Vertical_Accuracy>;
+    /**
+     * @summary `responseTime`.
+     * @description
+     *
+     * low delay or delay tolerant (clause 7.6.11.8).
+     *
+     * @public
+     * @readonly
+     */
+    public readonly responseTime?: OPTIONAL<ResponseTime>;
+    /**
+     * @summary `extensionContainer`.
+     * @description
+     *
+     * Private or PCS extensions (3GPP TS 29.002 V19.1.0 clause 17.7.11).
+     *
+     * @public
+     * @readonly
+     */
+    public readonly extensionContainer?: OPTIONAL<ExtensionContainer>;
+    /**
+     * @summary `velocityRequest`.
+     * @description
+     *
+     * Return velocity if available (clause 7.6.11.8).
+     *
+     * @public
+     * @readonly
+     */
+    public readonly velocityRequest?: OPTIONAL<NULL>;
+    /**
+     * @summary `lcs_qos_class`.
+     * @description
+     *
+     * best effort or assured; MO-LR from UE only (clauses 7.6.11.8 and
+     * 17.7.13).
+     *
+     * @public
+     * @readonly
+     */
+    public readonly lcs_qos_class?: OPTIONAL<LCS_QoS_Class>;
+    /**
+     * @summary Extensions that are not recognized.
+     * @public
+     * @readonly
+     */
+    public readonly _unrecognizedExtensionsList: _Element[];
+
     constructor (
-        /**
-         * @summary `horizontal_accuracy`.
-         * @description
-         *
-         * Required horizontal accuracy (clause 7.6.11.8).
-         *
-         * @public
-         * @readonly
-         */
-        readonly horizontal_accuracy?: OPTIONAL<Horizontal_Accuracy>,
-        /**
-         * @summary `verticalCoordinateRequest`.
-         * @description
-         *
-         * Vertical coordinate required (clause 7.6.11.8).
-         *
-         * @public
-         * @readonly
-         */
-        readonly verticalCoordinateRequest?: OPTIONAL<NULL>,
-        /**
-         * @summary `vertical_accuracy`.
-         * @description
-         *
-         * Optional required vertical accuracy (clause 7.6.11.8).
-         *
-         * @public
-         * @readonly
-         */
-        readonly vertical_accuracy?: OPTIONAL<Vertical_Accuracy>,
-        /**
-         * @summary `responseTime`.
-         * @description
-         *
-         * low delay or delay tolerant (clause 7.6.11.8).
-         *
-         * @public
-         * @readonly
-         */
-        readonly responseTime?: OPTIONAL<ResponseTime>,
-        /**
-         * @summary `extensionContainer`.
-         * @description
-         *
-         * Private or PCS extensions (3GPP TS 29.002 V19.1.0 clause 17.7.11).
-         *
-         * @public
-         * @readonly
-         */
-        readonly extensionContainer?: OPTIONAL<ExtensionContainer>,
-        /**
-         * @summary `velocityRequest`.
-         * @description
-         *
-         * Return velocity if available (clause 7.6.11.8).
-         *
-         * @public
-         * @readonly
-         */
-        readonly velocityRequest?: OPTIONAL<NULL>,
-        /**
-         * @summary `lcs_qos_class`.
-         * @description
-         *
-         * best effort or assured; MO-LR from UE only (clauses 7.6.11.8 and
-         * 17.7.13).
-         *
-         * @public
-         * @readonly
-         */
-        readonly lcs_qos_class?: OPTIONAL<LCS_QoS_Class>,
-        /**
-         * @summary Extensions that are not recognized.
-         * @public
-         * @readonly
-         */
-        readonly _unrecognizedExtensionsList: _Element[] = []
-    ) {}
+        horizontal_accuracy?: OPTIONAL<Horizontal_Accuracy>,
+        verticalCoordinateRequest?: OPTIONAL<NULL>,
+        vertical_accuracy?: OPTIONAL<Vertical_Accuracy>,
+        responseTime?: OPTIONAL<ResponseTime>,
+        extensionContainer?: OPTIONAL<ExtensionContainer>,
+        velocityRequest?: OPTIONAL<NULL>,
+        lcs_qos_class?: OPTIONAL<LCS_QoS_Class>,
+        _unrecognizedExtensionsList: _Element[] = []
+    ) {
+        this.horizontal_accuracy = horizontal_accuracy;
+        this.verticalCoordinateRequest = verticalCoordinateRequest;
+        this.vertical_accuracy = vertical_accuracy;
+        this.responseTime = responseTime;
+        this.extensionContainer = extensionContainer;
+        this.velocityRequest = velocityRequest;
+        this.lcs_qos_class = lcs_qos_class;
+        this._unrecognizedExtensionsList = _unrecognizedExtensionsList;
+    }
 
     /**
      * @summary Restructures an object into a LCS_QoS
@@ -140,7 +158,7 @@ class LCS_QoS {
          * @static
          */
 
-    public static _enum_for_lcs_qos_class = _enum_for_LCS_QoS_Class;
+    public static _enum_for_lcs_qos_class: typeof _enum_for_LCS_QoS_Class = _enum_for_LCS_QoS_Class;
 }
 
 /**

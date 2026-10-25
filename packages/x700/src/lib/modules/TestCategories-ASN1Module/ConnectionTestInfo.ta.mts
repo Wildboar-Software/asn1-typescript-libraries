@@ -1,7 +1,7 @@
 /* eslint-disable */
 import {
-    OPTIONAL,
-    ASN1Element as _Element,
+    type OPTIONAL,
+    type ASN1Element as _Element,
     ASN1TagClass as _TagClass,
     ASN1Construction as _Construction,
     ASN1UniversalType as _UniversalType,
@@ -12,22 +12,22 @@ import {
 } from '@wildboar/asn1';
 import * as $ from '@wildboar/asn1/functional';
 import {
-    TestPattern,
+    type TestPattern,
     _decode_TestPattern,
     _encode_TestPattern,
 } from '../TestCategories-ASN1Module/TestPattern.ta.mjs';
 import {
-    TestDirection,
+    type TestDirection,
     _decode_TestDirection,
     _encode_TestDirection,
 } from '../TestCategories-ASN1Module/TestDirection.ta.mjs';
 import {
-    TestDuration,
+    type TestDuration,
     _decode_TestDuration,
     _encode_TestDuration,
 } from '../TestCategories-ASN1Module/TestDuration.ta.mjs';
 import {
-    Timespec,
+    type Timespec,
     _decode_Timespec,
     _encode_Timespec,
 } from '../Test-ASN1Module/Timespec.ta.mjs';
@@ -59,52 +59,62 @@ import {
  *
  */
 export class ConnectionTestInfo {
+    /**
+     * @summary `testPattern`.
+     * @description
+     *
+     * Pattern sent into the path. If omitted, the
+     * pattern is implementation-specific. X.737 §7.1.6, A.7.
+     * @public
+     * @readonly
+     */
+    public readonly testPattern?: OPTIONAL<TestPattern>;
+    /**
+     * @summary `testDirection`.
+     * @description
+     *
+     * Direction(s) exercised on the MORT. If
+     * omitted, the MORT is the transmitting direction at the near end
+     * of a uni-directional path. Bidirectional paths run each direction
+     * in an implementation-dependent order. X.737 §7.1.2, §7.1.6.
+     * @public
+     * @readonly
+     */
+    public readonly testDirection?: OPTIONAL<TestDirection>;
+    /**
+     * @summary `testDuration`.
+     * @description
+     *
+     * How long the exercise runs. If omitted,
+     * implementation-specific. X.737 §7.1.6.
+     * @public
+     * @readonly
+     */
+    public readonly testDuration?: OPTIONAL<TestDuration>;
+    /**
+     * @summary `reportingInterval`.
+     * @description
+     *
+     * Interval for intermediate result
+     * reports. If omitted, there is no intermediate reporting or the
+     * interval is implementation-specific. Expiry of this interval is
+     * an implicit intermediate-report trigger. X.737 §7.1.6, §7.1.7.
+     * @public
+     * @readonly
+     */
+    public readonly reportingInterval?: OPTIONAL<Timespec>;
+
     constructor(
-        /**
-         * @summary `testPattern`.
-         * @description
-         *
-         * Pattern sent into the path. If omitted, the
-         * pattern is implementation-specific. X.737 §7.1.6, A.7.
-         * @public
-         * @readonly
-         */
-        readonly testPattern?: OPTIONAL<TestPattern>,
-        /**
-         * @summary `testDirection`.
-         * @description
-         *
-         * Direction(s) exercised on the MORT. If
-         * omitted, the MORT is the transmitting direction at the near end
-         * of a uni-directional path. Bidirectional paths run each direction
-         * in an implementation-dependent order. X.737 §7.1.2, §7.1.6.
-         * @public
-         * @readonly
-         */
-        readonly testDirection?: OPTIONAL<TestDirection>,
-        /**
-         * @summary `testDuration`.
-         * @description
-         *
-         * How long the exercise runs. If omitted,
-         * implementation-specific. X.737 §7.1.6.
-         * @public
-         * @readonly
-         */
-        readonly testDuration?: OPTIONAL<TestDuration>,
-        /**
-         * @summary `reportingInterval`.
-         * @description
-         *
-         * Interval for intermediate result
-         * reports. If omitted, there is no intermediate reporting or the
-         * interval is implementation-specific. Expiry of this interval is
-         * an implicit intermediate-report trigger. X.737 §7.1.6, §7.1.7.
-         * @public
-         * @readonly
-         */
-        readonly reportingInterval?: OPTIONAL<Timespec>
-    ) {}
+        testPattern?: OPTIONAL<TestPattern>,
+        testDirection?: OPTIONAL<TestDirection>,
+        testDuration?: OPTIONAL<TestDuration>,
+        reportingInterval?: OPTIONAL<Timespec>
+    ) {
+        this.testPattern = testPattern;
+        this.testDirection = testDirection;
+        this.testDuration = testDuration;
+        this.reportingInterval = reportingInterval;
+    }
 
     /**
      * @summary Restructures an object into a ConnectionTestInfo

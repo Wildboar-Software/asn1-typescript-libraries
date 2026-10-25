@@ -1,6 +1,6 @@
 /* eslint-disable */
 import {
-    ASN1Element as _Element,
+    type ASN1Element as _Element,
     ASN1TagClass as _TagClass,
     ASN1Construction as _Construction,
     ASN1UniversalType as _UniversalType,
@@ -64,14 +64,14 @@ export type DiscardReasonField = _enum_for_DiscardReasonField;
  *
  * @enum {number}
  */
-export const DiscardReasonField = _enum_for_DiscardReasonField;
+export const DiscardReasonField: typeof _enum_for_DiscardReasonField = _enum_for_DiscardReasonField;
 
 /**
  * @summary DiscardReasonField_ipm_expired
  * @constant
  * @type {number}
  */
-export const DiscardReasonField_ipm_expired: DiscardReasonField =
+export const DiscardReasonField_ipm_expired: _enum_for_DiscardReasonField.ipm_expired =
     DiscardReasonField.ipm_expired; /* LONG_NAMED_ENUMERATED_VALUE */
 
 /**
@@ -79,7 +79,7 @@ export const DiscardReasonField_ipm_expired: DiscardReasonField =
  * @constant
  * @type {number}
  */
-export const ipm_expired: DiscardReasonField =
+export const ipm_expired: _enum_for_DiscardReasonField.ipm_expired =
     DiscardReasonField.ipm_expired; /* SHORT_NAMED_ENUMERATED_VALUE */
 
 /**
@@ -87,7 +87,7 @@ export const ipm_expired: DiscardReasonField =
  * @constant
  * @type {number}
  */
-export const DiscardReasonField_ipm_obsoleted: DiscardReasonField =
+export const DiscardReasonField_ipm_obsoleted: _enum_for_DiscardReasonField.ipm_obsoleted =
     DiscardReasonField.ipm_obsoleted; /* LONG_NAMED_ENUMERATED_VALUE */
 
 /**
@@ -95,7 +95,7 @@ export const DiscardReasonField_ipm_obsoleted: DiscardReasonField =
  * @constant
  * @type {number}
  */
-export const ipm_obsoleted: DiscardReasonField =
+export const ipm_obsoleted: _enum_for_DiscardReasonField.ipm_obsoleted =
     DiscardReasonField.ipm_obsoleted; /* SHORT_NAMED_ENUMERATED_VALUE */
 
 /**
@@ -103,7 +103,7 @@ export const ipm_obsoleted: DiscardReasonField =
  * @constant
  * @type {number}
  */
-export const DiscardReasonField_user_subscription_terminated: DiscardReasonField =
+export const DiscardReasonField_user_subscription_terminated: _enum_for_DiscardReasonField.user_subscription_terminated =
     DiscardReasonField.user_subscription_terminated; /* LONG_NAMED_ENUMERATED_VALUE */
 
 /**
@@ -111,7 +111,7 @@ export const DiscardReasonField_user_subscription_terminated: DiscardReasonField
  * @constant
  * @type {number}
  */
-export const user_subscription_terminated: DiscardReasonField =
+export const user_subscription_terminated: _enum_for_DiscardReasonField.user_subscription_terminated =
     DiscardReasonField.user_subscription_terminated; /* SHORT_NAMED_ENUMERATED_VALUE */
 
 /**
@@ -119,7 +119,7 @@ export const user_subscription_terminated: DiscardReasonField =
  * @constant
  * @type {number}
  */
-export const DiscardReasonField_not_used: DiscardReasonField =
+export const DiscardReasonField_not_used: _enum_for_DiscardReasonField.not_used =
     DiscardReasonField.not_used; /* LONG_NAMED_ENUMERATED_VALUE */
 
 /**
@@ -127,14 +127,27 @@ export const DiscardReasonField_not_used: DiscardReasonField =
  * @constant
  * @type {number}
  */
-export const not_used: DiscardReasonField =
+export const not_used: _enum_for_DiscardReasonField.not_used =
     DiscardReasonField.not_used; /* SHORT_NAMED_ENUMERATED_VALUE */
 
 
-export const _decode_DiscardReasonField = $._decodeEnumerated;
+export function _decode_DiscardReasonField(el: _Element): DiscardReasonField {
+    const enumerated = $._decodeEnumerated(el);
+    switch (enumerated) {
+        case DiscardReasonField.ipm_expired: return DiscardReasonField.ipm_expired;
+        case DiscardReasonField.ipm_obsoleted: return DiscardReasonField.ipm_obsoleted;
+        case DiscardReasonField.user_subscription_terminated: return DiscardReasonField.user_subscription_terminated;
+        case DiscardReasonField.not_used: return DiscardReasonField.not_used;
+        default:
+            throw new _ConstructionError(
+                'Invalid ENUMERATED value ' + enumerated + ' for DiscardReasonField.',
+                el,
+            );
+    }
+}
 
 
-export const _encode_DiscardReasonField = $._encodeEnumerated;
+export const _encode_DiscardReasonField: $.ASN1Encoder<DiscardReasonField> = $._encodeEnumerated as $.ASN1Encoder<DiscardReasonField>;
 
 
 /* eslint-enable */

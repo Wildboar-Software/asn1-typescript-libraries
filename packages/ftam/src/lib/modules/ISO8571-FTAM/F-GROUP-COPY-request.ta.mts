@@ -1,6 +1,6 @@
 /* eslint-disable */
 import {
-  OPTIONAL,
+  type OPTIONAL,
   ASN1Element as _Element,
   ASN1TagClass as _TagClass,
   ASN1Construction as _Construction,
@@ -12,23 +12,23 @@ import {
 } from '@wildboar/asn1';
 import * as $ from '@wildboar/asn1/functional';
 import {
-  Destination_File_Directory,
+  type Destination_File_Directory,
   _decode_Destination_File_Directory,
   _encode_Destination_File_Directory,
 } from '../ISO8571-FTAM/Destination-File-Directory.ta.mjs';
 import {
-  Override,
+  type Override,
   create_failure /* IMPORTED_SHORT_NAMED_INTEGER */,
   _decode_Override,
   _encode_Override,
 } from '../ISO8571-FTAM/Override.ta.mjs';
 import {
-  Error_Action,
+  type Error_Action,
   _decode_Error_Action,
   _encode_Error_Action,
 } from '../ISO8571-FTAM/Error-Action.ta.mjs';
 import {
-  Password,
+  type Password,
   _decode_Password,
   _encode_Password,
 } from '../ISO8571-FTAM/Password.ta.mjs';
@@ -38,12 +38,12 @@ import {
   _encode_Access_Passwords,
 } from '../ISO8571-FTAM/Access-Passwords.ta.mjs';
 import {
-  Path_Access_Passwords,
+  type Path_Access_Passwords,
   _decode_Path_Access_Passwords,
   _encode_Path_Access_Passwords,
 } from '../ISO8571-FTAM/Path-Access-Passwords.ta.mjs';
 import {
-  Request_Operation_Result,
+  type Request_Operation_Result,
   _decode_Request_Operation_Result,
   _encode_Request_Operation_Result,
 } from '../ISO8571-FTAM/Request-Operation-Result.ta.mjs';
@@ -92,7 +92,7 @@ export class F_GROUP_COPY_request {
    * @public
    * @readonly
    */
-  readonly destination_file_directory: Destination_File_Directory;
+  public readonly destination_file_directory: Destination_File_Directory;
   /**
    * @summary `override`.
    * @description
@@ -106,7 +106,7 @@ export class F_GROUP_COPY_request {
    * @public
    * @readonly
    */
-  readonly override: OPTIONAL<Override>;
+  public readonly override: OPTIONAL<Override>;
   /**
    * @summary `error_action`.
    * @description
@@ -117,7 +117,7 @@ export class F_GROUP_COPY_request {
    * @public
    * @readonly
    */
-  readonly error_action: Error_Action;
+  public readonly error_action: Error_Action;
   /**
    * @summary `create_password`.
    * @description
@@ -128,7 +128,7 @@ export class F_GROUP_COPY_request {
    * @public
    * @readonly
    */
-  readonly create_password?: OPTIONAL<Password>;
+  public readonly create_password?: OPTIONAL<Password>;
   /**
    * @summary `access_passwords`.
    * @description
@@ -140,7 +140,7 @@ export class F_GROUP_COPY_request {
    * @public
    * @readonly
    */
-  readonly access_passwords?: OPTIONAL<Access_Passwords>;
+  public readonly access_passwords?: OPTIONAL<Access_Passwords>;
   /**
    * @summary `path_access_passwords`.
    * @description
@@ -153,7 +153,7 @@ export class F_GROUP_COPY_request {
    * @public
    * @readonly
    */
-  readonly path_access_passwords?: OPTIONAL<Path_Access_Passwords>;
+  public readonly path_access_passwords?: OPTIONAL<Path_Access_Passwords>;
   /**
    * @summary `request_Operation_result`.
    * @description
@@ -164,7 +164,7 @@ export class F_GROUP_COPY_request {
    * @public
    * @readonly
    */
-  readonly request_Operation_result?: OPTIONAL<Request_Operation_Result>;
+  public readonly request_Operation_result?: OPTIONAL<Request_Operation_Result>;
   /**
    * @summary `attributes`.
    * @description
@@ -175,7 +175,7 @@ export class F_GROUP_COPY_request {
    * @public
    * @readonly
    */
-  readonly attributes?: OPTIONAL<Change_Attributes>;
+  public readonly attributes?: OPTIONAL<Change_Attributes>;
 
   constructor(
     destination_file_directory: Destination_File_Directory,

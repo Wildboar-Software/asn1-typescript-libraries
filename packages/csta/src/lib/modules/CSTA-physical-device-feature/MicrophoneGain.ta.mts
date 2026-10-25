@@ -2,7 +2,7 @@
 
 import * as $ from "@wildboar/asn1/functional";
 import { ASN1Element as _Element } from "@wildboar/asn1";
-import { MicGainAbs, _decode_MicGainAbs, _encode_MicGainAbs } from "../CSTA-physical-device-feature/MicGainAbs.ta.mjs";
+import { type MicGainAbs, _decode_MicGainAbs, _encode_MicGainAbs } from "../CSTA-physical-device-feature/MicGainAbs.ta.mjs";
 
 import { MicGainInc, _decode_MicGainInc, _encode_MicGainInc } from "../CSTA-physical-device-feature/MicGainInc.ta.mjs";
 

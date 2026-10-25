@@ -2,22 +2,22 @@
 import { ASN1Element as _Element } from "@wildboar/asn1";
 import * as $ from "@wildboar/asn1/functional";
 import {
-    Address,
+    type Address,
     _decode_Address,
     _encode_Address,
 } from "../CMSProfileAttributes/Address.ta.mjs";
 import {
-    DBRecord,
+    type DBRecord,
     _decode_DBRecord,
     _encode_DBRecord,
 } from "../CMSProfileAttributes/DBRecord.ta.mjs";
-import { GPS, _decode_GPS, _encode_GPS } from "../CMSProfileAttributes/GPS.ta.mjs";
+import { type GPS, _decode_GPS, _encode_GPS } from "../CMSProfileAttributes/GPS.ta.mjs";
 import {
-    RFID,
+    type RFID,
     _decode_RFID,
     _encode_RFID,
 } from "../CMSProfileAttributes/RFID.ta.mjs";
-import { URI, _decode_URI, _encode_URI } from "../CMSProfileAttributes/URI.ta.mjs";
+import { type URI, _decode_URI, _encode_URI } from "../CMSProfileAttributes/URI.ta.mjs";
 
 /**
  * @summary Pointer

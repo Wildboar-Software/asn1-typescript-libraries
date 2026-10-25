@@ -1,22 +1,22 @@
 /* eslint-disable */
 import {
-    ASN1Element as _Element,
+    type ASN1Element as _Element,
     ASN1TagClass as _TagClass,
-    OPTIONAL,
+    type OPTIONAL,
 } from "@wildboar/asn1";
 import * as $ from "@wildboar/asn1/functional";
 import {
-    ContentEncryptionAlgorithmIdentifier,
+    type ContentEncryptionAlgorithmIdentifier,
     _decode_ContentEncryptionAlgorithmIdentifier,
     _encode_ContentEncryptionAlgorithmIdentifier,
 } from "../CryptographicMessageSyntax/ContentEncryptionAlgorithmIdentifier.ta.mjs";
 import {
-    ContentType,
+    type ContentType,
     _decode_ContentType,
     _encode_ContentType,
 } from "../CryptographicMessageSyntax/ContentType.ta.mjs";
 import {
-    EncryptedContent,
+    type EncryptedContent,
     _decode_EncryptedContent,
     _encode_EncryptedContent,
 } from "../CryptographicMessageSyntax/EncryptedContent.ta.mjs";
@@ -37,26 +37,34 @@ import {
  *
  */
 export class EncryptedContentInfo {
+    /**
+     * @summary `contentType`.
+     * @public
+     * @readonly
+     */
+    public readonly contentType: ContentType;
+    /**
+     * @summary `contentEncryptionAlgorithm`.
+     * @public
+     * @readonly
+     */
+    public readonly contentEncryptionAlgorithm: ContentEncryptionAlgorithmIdentifier;
+    /**
+     * @summary `encryptedContent`.
+     * @public
+     * @readonly
+     */
+    public readonly encryptedContent?: OPTIONAL<EncryptedContent>;
+
     constructor(
-        /**
-         * @summary `contentType`.
-         * @public
-         * @readonly
-         */
-        readonly contentType: ContentType,
-        /**
-         * @summary `contentEncryptionAlgorithm`.
-         * @public
-         * @readonly
-         */
-        readonly contentEncryptionAlgorithm: ContentEncryptionAlgorithmIdentifier,
-        /**
-         * @summary `encryptedContent`.
-         * @public
-         * @readonly
-         */
-        readonly encryptedContent?: OPTIONAL<EncryptedContent>
-    ) {}
+        contentType: ContentType,
+        contentEncryptionAlgorithm: ContentEncryptionAlgorithmIdentifier,
+        encryptedContent?: OPTIONAL<EncryptedContent>
+    ) {
+        this.contentType = contentType;
+        this.contentEncryptionAlgorithm = contentEncryptionAlgorithm;
+        this.encryptedContent = encryptedContent;
+    }
 
     /**
      * @summary Restructures an object into a EncryptedContentInfo

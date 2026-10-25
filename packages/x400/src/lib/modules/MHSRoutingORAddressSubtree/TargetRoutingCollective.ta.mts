@@ -1,7 +1,7 @@
 /* eslint-disable */
 import {
-    OPTIONAL,
-    ASN1Element as _Element,
+    type OPTIONAL,
+    type ASN1Element as _Element,
     ASN1TagClass as _TagClass,
     ASN1Construction as _Construction,
     ASN1UniversalType as _UniversalType,
@@ -12,7 +12,7 @@ import {
 } from '@wildboar/asn1';
 import * as $ from '@wildboar/asn1/functional';
 import {
-    RoutingCollectiveName,
+    type RoutingCollectiveName,
     _decode_RoutingCollectiveName,
     _encode_RoutingCollectiveName,
 } from '../MHSRoutingDirectoryObjects/RoutingCollectiveName.ta.mjs';
@@ -43,20 +43,26 @@ import {
  *
  */
 export class TargetRoutingCollective {
+    /**
+     * @summary `target_routing_collective`.
+     * @public
+     * @readonly
+     */
+    public readonly target_routing_collective: RoutingCollectiveName;
+    /**
+     * @summary `local_user_identifier`.
+     * @public
+     * @readonly
+     */
+    public readonly local_user_identifier?: OPTIONAL<UniversalOrBMPString>;
+
     constructor(
-        /**
-         * @summary `target_routing_collective`.
-         * @public
-         * @readonly
-         */
-        readonly target_routing_collective: RoutingCollectiveName,
-        /**
-         * @summary `local_user_identifier`.
-         * @public
-         * @readonly
-         */
-        readonly local_user_identifier?: OPTIONAL<UniversalOrBMPString>
-    ) {}
+        target_routing_collective: RoutingCollectiveName,
+        local_user_identifier?: OPTIONAL<UniversalOrBMPString>
+    ) {
+        this.target_routing_collective = target_routing_collective;
+        this.local_user_identifier = local_user_identifier;
+    }
 
     /**
      * @summary Restructures an object into a TargetRoutingCollective

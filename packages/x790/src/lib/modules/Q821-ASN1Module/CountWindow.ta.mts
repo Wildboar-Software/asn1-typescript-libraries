@@ -1,9 +1,9 @@
 /* eslint-disable */
 import {
-    INTEGER,
-    SEQUENCE,
-    SET,
-    ASN1Element as _Element,
+    type INTEGER,
+    type SEQUENCE,
+    type SET,
+    type ASN1Element as _Element,
     ASN1TagClass as _TagClass,
     ASN1ConstructionError as _ConstructionError,
 } from "@wildboar/asn1";
@@ -32,20 +32,26 @@ import {
  */
 export
 class CountWindow {
+    /**
+     * @summary `count`.
+     * @public
+     * @readonly
+     */
+    public readonly count: INTEGER;
+    /**
+     * @summary `window`.
+     * @public
+     * @readonly
+     */
+    public readonly window: TimeInterval;
+
     constructor (
-        /**
-         * @summary `count`.
-         * @public
-         * @readonly
-         */
-        readonly count: INTEGER,
-        /**
-         * @summary `window`.
-         * @public
-         * @readonly
-         */
-        readonly window: TimeInterval
-    ) {}
+        count: INTEGER,
+        window: TimeInterval
+    ) {
+        this.count = count;
+        this.window = window;
+    }
 
     /**
      * @summary Restructures an object into a CountWindow

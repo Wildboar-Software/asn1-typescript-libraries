@@ -1,17 +1,17 @@
 /* eslint-disable */
 import {
-    OPTIONAL,
-    ASN1Element as _Element,
+    type OPTIONAL,
+    type ASN1Element as _Element,
     ASN1TagClass as _TagClass
 } from "@wildboar/asn1";
 import * as $ from "@wildboar/asn1/functional";
-import { IMSI, _decode_IMSI, _encode_IMSI } from "../MAP-CommonDataTypes/IMSI.ta.mjs";
-import { SignalInfo, _decode_SignalInfo, _encode_SignalInfo } from "../MAP-CommonDataTypes/SignalInfo.ta.mjs";
+import { type IMSI, _decode_IMSI, _encode_IMSI } from "../MAP-CommonDataTypes/IMSI.ta.mjs";
+import { type SignalInfo, _decode_SignalInfo, _encode_SignalInfo } from "../MAP-CommonDataTypes/SignalInfo.ta.mjs";
 import { ExtensionContainer, _decode_ExtensionContainer, _encode_ExtensionContainer } from "../MAP-ExtensionDataTypes/ExtensionContainer.ta.mjs";
 import { CorrelationID, _decode_CorrelationID, _encode_CorrelationID } from "../MAP-SM-DataTypes/CorrelationID.ta.mjs";
 import { SM_DeliveryOutcome, _decode_SM_DeliveryOutcome, _encode_SM_DeliveryOutcome, _enum_for_SM_DeliveryOutcome } from "../MAP-SM-DataTypes/SM-DeliveryOutcome.ta.mjs";
-import { SM_RP_DA, _decode_SM_RP_DA, _encode_SM_RP_DA } from "../MAP-SM-DataTypes/SM-RP-DA.ta.mjs";
-import { SM_RP_OA, _decode_SM_RP_OA, _encode_SM_RP_OA } from "../MAP-SM-DataTypes/SM-RP-OA.ta.mjs";
+import { type SM_RP_DA, _decode_SM_RP_DA, _encode_SM_RP_DA } from "../MAP-SM-DataTypes/SM-RP-DA.ta.mjs";
+import { type SM_RP_OA, _decode_SM_RP_OA, _encode_SM_RP_OA } from "../MAP-SM-DataTypes/SM-RP-OA.ta.mjs";
 
 
 /**
@@ -28,10 +28,10 @@ import { SM_RP_OA, _decode_SM_RP_OA, _encode_SM_RP_OA } from "../MAP-SM-DataType
  *     sm-RP-DA    SM-RP-DA,
  *     sm-RP-OA    SM-RP-OA,
  *     sm-RP-UI    SignalInfo,
- *     extensionContainer    ExtensionContainer    OPTIONAL,
+ *     extensionContainer    ExtensionContainer    type OPTIONAL,
  *     ... ,
- *     imsi    IMSI    OPTIONAL,
- *     correlationID    [0] CorrelationID    OPTIONAL,
+ *     imsi    IMSI    type OPTIONAL,
+ *     correlationID    [0] CorrelationID    type OPTIONAL,
  *     sm-DeliveryOutcome    [1] SM-DeliveryOutcome    OPTIONAL
  *  }
  * ```
@@ -40,84 +40,102 @@ import { SM_RP_OA, _decode_SM_RP_OA, _encode_SM_RP_OA } from "../MAP-SM-DataType
  */
 export
 class MO_ForwardSM_Arg {
+    /**
+     * @summary `sm_RP_DA`.
+     * @description
+     *
+     * Destination address (IMSI, LMSI, SC or none).
+     *
+     * @public
+     * @readonly
+     */
+    public readonly sm_RP_DA: SM_RP_DA;
+    /**
+     * @summary `sm_RP_OA`.
+     * @description
+     *
+     * Originating address (MSISDN, SC or none).
+     *
+     * @public
+     * @readonly
+     */
+    public readonly sm_RP_OA: SM_RP_OA;
+    /**
+     * @summary `sm_RP_UI`.
+     * @description
+     *
+     * Short message TPDU (SignalInfo).
+     *
+     * @public
+     * @readonly
+     */
+    public readonly sm_RP_UI: SignalInfo;
+    /**
+     * @summary `extensionContainer`.
+     * @description
+     *
+     * Private or PCS extensions (3GPP TS 29.002 V19.1.0 clause 17.7.11).
+     *
+     * @public
+     * @readonly
+     */
+    public readonly extensionContainer?: OPTIONAL<ExtensionContainer>;
+    /**
+     * @summary `imsi`.
+     * @description
+     *
+     * Subscriber IMSI if present.
+     *
+     * @public
+     * @readonly
+     */
+    public readonly imsi?: OPTIONAL<IMSI>;
+    /**
+     * @summary `correlationID`.
+     * @description
+     *
+     * HLR / SIP URI correlation.
+     *
+     * @public
+     * @readonly
+     */
+    public readonly correlationID?: OPTIONAL<CorrelationID>;
+    /**
+     * @summary `sm_DeliveryOutcome`.
+     * @description
+     *
+     * Delivery outcome when reporting via this operation.
+     *
+     * @public
+     * @readonly
+     */
+    public readonly sm_DeliveryOutcome?: OPTIONAL<SM_DeliveryOutcome>;
+    /**
+     * @summary Extensions that are not recognized.
+     * @public
+     * @readonly
+     */
+    public readonly _unrecognizedExtensionsList: _Element[];
+
     constructor (
-        /**
-         * @summary `sm_RP_DA`.
-         * @description
-         *
-         * Destination address (IMSI, LMSI, SC or none).
-         *
-         * @public
-         * @readonly
-         */
-        readonly sm_RP_DA: SM_RP_DA,
-        /**
-         * @summary `sm_RP_OA`.
-         * @description
-         *
-         * Originating address (MSISDN, SC or none).
-         *
-         * @public
-         * @readonly
-         */
-        readonly sm_RP_OA: SM_RP_OA,
-        /**
-         * @summary `sm_RP_UI`.
-         * @description
-         *
-         * Short message TPDU (SignalInfo).
-         *
-         * @public
-         * @readonly
-         */
-        readonly sm_RP_UI: SignalInfo,
-        /**
-         * @summary `extensionContainer`.
-         * @description
-         *
-         * Private or PCS extensions (3GPP TS 29.002 V19.1.0 clause 17.7.11).
-         *
-         * @public
-         * @readonly
-         */
-        readonly extensionContainer?: OPTIONAL<ExtensionContainer>,
-        /**
-         * @summary `imsi`.
-         * @description
-         *
-         * Subscriber IMSI if present.
-         *
-         * @public
-         * @readonly
-         */
-        readonly imsi?: OPTIONAL<IMSI>,
-        /**
-         * @summary `correlationID`.
-         * @description
-         *
-         * HLR / SIP URI correlation.
-         *
-         * @public
-         * @readonly
-         */
-        readonly correlationID?: OPTIONAL<CorrelationID>,
-        /**
-         * @summary `sm_DeliveryOutcome`.
-         * @description
-         *
-         * Delivery outcome when reporting via this operation.
-         *
-         * @public
-         * @readonly
-         */
-        readonly sm_DeliveryOutcome?: OPTIONAL<SM_DeliveryOutcome>,
-        /**
-         * @summary Extensions that are not recognized.
-         * @public
-         * @readonly
-         */
-        readonly _unrecognizedExtensionsList: _Element[] = []
-    ) {}
+        sm_RP_DA: SM_RP_DA,
+        sm_RP_OA: SM_RP_OA,
+        sm_RP_UI: SignalInfo,
+        extensionContainer?: OPTIONAL<ExtensionContainer>,
+        imsi?: OPTIONAL<IMSI>,
+        correlationID?: OPTIONAL<CorrelationID>,
+        sm_DeliveryOutcome?: OPTIONAL<SM_DeliveryOutcome>,
+        _unrecognizedExtensionsList: _Element[] = []
+    ) {
+        this.sm_RP_DA = sm_RP_DA;
+        this.sm_RP_OA = sm_RP_OA;
+        this.sm_RP_UI = sm_RP_UI;
+        this.extensionContainer = extensionContainer;
+        this.imsi = imsi;
+        this.correlationID = correlationID;
+        this.sm_DeliveryOutcome = sm_DeliveryOutcome;
+        this._unrecognizedExtensionsList = _unrecognizedExtensionsList;
+    }
 
     /**
      * @summary Restructures an object into a MO_ForwardSM_Arg
@@ -141,7 +159,7 @@ class MO_ForwardSM_Arg {
          * @static
          */
 
-    public static _enum_for_sm_DeliveryOutcome = _enum_for_SM_DeliveryOutcome;
+    public static _enum_for_sm_DeliveryOutcome: typeof _enum_for_SM_DeliveryOutcome = _enum_for_SM_DeliveryOutcome;
 }
 
 /**

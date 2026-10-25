@@ -1,7 +1,7 @@
 import {
-    OPTIONAL,
-    INTEGER,
-    ASN1Element as _Element,
+    type OPTIONAL,
+    type INTEGER,
+    type ASN1Element as _Element,
     ASN1OverflowError,
     ASN1TagClass as _TagClass,
 } from "@wildboar/asn1";
@@ -23,30 +23,35 @@ import * as $ from "@wildboar/asn1/functional";
  *
  */
 export class ElapsedTimeRollOver_rO_TimeGPRSIfTariffSwitch {
+    /**
+     * @summary `rO_TimeGPRSSinceLastTariffSwitch`.
+     * @description
+     *
+     * How many times `timeGPRSSinceLastTariffSwitch` rolled over. May be
+     * absent if none. (3GPP TS 29.078 V19.0.0 clauses 5.1 and 13.3).
+     *
+     * @public
+     * @readonly
+     */
+    public readonly rO_TimeGPRSSinceLastTariffSwitch?: OPTIONAL<INTEGER>;
+    /**
+     * @summary `rO_TimeGPRSTariffSwitchInterval`.
+     * @description
+     *
+     * How many times `timeGPRSTariffSwitchInterval` rolled over. May be
+     * absent if none. (3GPP TS 29.078 V19.0.0 clauses 5.1 and 13.3).
+     *
+     * @public
+     * @readonly
+     */
+    public readonly rO_TimeGPRSTariffSwitchInterval?: OPTIONAL<INTEGER>;
+
     constructor (
-        /**
-         * @summary `rO_TimeGPRSSinceLastTariffSwitch`.
-         * @description
-         *
-         * How many times `timeGPRSSinceLastTariffSwitch` rolled over. May be
-         * absent if none. (3GPP TS 29.078 V19.0.0 clauses 5.1 and 13.3).
-         *
-         * @public
-         * @readonly
-         */
-        readonly rO_TimeGPRSSinceLastTariffSwitch?: OPTIONAL<INTEGER>,
-        /**
-         * @summary `rO_TimeGPRSTariffSwitchInterval`.
-         * @description
-         *
-         * How many times `timeGPRSTariffSwitchInterval` rolled over. May be
-         * absent if none. (3GPP TS 29.078 V19.0.0 clauses 5.1 and 13.3).
-         *
-         * @public
-         * @readonly
-         */
-        readonly rO_TimeGPRSTariffSwitchInterval?: OPTIONAL<INTEGER>,
+        rO_TimeGPRSSinceLastTariffSwitch?: OPTIONAL<INTEGER>,
+        rO_TimeGPRSTariffSwitchInterval?: OPTIONAL<INTEGER>,
     ) {
+        this.rO_TimeGPRSSinceLastTariffSwitch = rO_TimeGPRSSinceLastTariffSwitch;
+        this.rO_TimeGPRSTariffSwitchInterval = rO_TimeGPRSTariffSwitchInterval;
         if (rO_TimeGPRSSinceLastTariffSwitch !== undefined && (typeof rO_TimeGPRSSinceLastTariffSwitch === "bigint" ? (rO_TimeGPRSSinceLastTariffSwitch < 0n || rO_TimeGPRSSinceLastTariffSwitch > 255n) : (rO_TimeGPRSSinceLastTariffSwitch < 0 || rO_TimeGPRSSinceLastTariffSwitch > 255))) {
             throw new ASN1OverflowError("ElapsedTimeRollOver_rO_TimeGPRSIfTariffSwitch.rO_TimeGPRSSinceLastTariffSwitch violates INTEGER constraint");
         }

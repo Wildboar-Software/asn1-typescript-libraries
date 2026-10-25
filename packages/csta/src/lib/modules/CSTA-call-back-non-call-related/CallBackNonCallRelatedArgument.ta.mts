@@ -2,10 +2,10 @@
 
 import * as $ from "@wildboar/asn1/functional";
 import {
-    OPTIONAL,
-    SEQUENCE,
-    SET,
-    ASN1Element as _Element,
+    type OPTIONAL,
+    type SEQUENCE,
+    type SET,
+    type ASN1Element as _Element,
     ASN1TagClass as _TagClass
 } from "@wildboar/asn1";
 import { DeviceID, _decode_DeviceID, _encode_DeviceID } from "../CSTA-device-identifiers/DeviceID.ta.mjs";
@@ -36,36 +36,44 @@ import { CSTACommonArguments, _decode_CSTACommonArguments, _encode_CSTACommonArg
  */
 export
 class CallBackNonCallRelatedArgument {
+    /**
+     * @summary `originatingDevice`.
+     * @description
+     *
+     * Originating device for the call-back call.
+     * @public
+     * @readonly
+     */
+    public readonly originatingDevice: DeviceID;
+    /**
+     * @summary `targetDevice`.
+     * @description
+     *
+     * Target device for the call-back call.
+     * @public
+     * @readonly
+     */
+    public readonly targetDevice: DeviceID;
+    /**
+     * @summary `extensions`.
+     * @description
+     *
+     * Optional security (timestamp, sequence, securityInfo) and
+     * privateData.
+     * @public
+     * @readonly
+     */
+    public readonly extensions?: OPTIONAL<CSTACommonArguments>;
+
     constructor (
-        /**
-         * @summary `originatingDevice`.
-         * @description
-         *
-         * Originating device for the call-back call.
-         * @public
-         * @readonly
-         */
-        readonly originatingDevice: DeviceID,
-        /**
-         * @summary `targetDevice`.
-         * @description
-         *
-         * Target device for the call-back call.
-         * @public
-         * @readonly
-         */
-        readonly targetDevice: DeviceID,
-        /**
-         * @summary `extensions`.
-         * @description
-         *
-         * Optional security (timestamp, sequence, securityInfo) and
-         * privateData.
-         * @public
-         * @readonly
-         */
-        readonly extensions?: OPTIONAL<CSTACommonArguments>
-    ) {}
+        originatingDevice: DeviceID,
+        targetDevice: DeviceID,
+        extensions?: OPTIONAL<CSTACommonArguments>
+    ) {
+        this.originatingDevice = originatingDevice;
+        this.targetDevice = targetDevice;
+        this.extensions = extensions;
+    }
 
     /**
      * @summary Restructures an object into a CallBackNonCallRelatedArgument

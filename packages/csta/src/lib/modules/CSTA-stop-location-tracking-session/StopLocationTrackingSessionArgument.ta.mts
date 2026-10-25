@@ -2,13 +2,13 @@
 
 import * as $ from "@wildboar/asn1/functional";
 import {
-    OPTIONAL,
-    SEQUENCE,
-    SET,
-    ASN1Element as _Element,
+    type OPTIONAL,
+    type SEQUENCE,
+    type SET,
+    type ASN1Element as _Element,
     ASN1TagClass as _TagClass
 } from "@wildboar/asn1";
-import { LocCrossRefID, _decode_LocCrossRefID, _encode_LocCrossRefID } from "../CSTA-device-feature-types/LocCrossRefID.ta.mjs";
+import { type LocCrossRefID, _decode_LocCrossRefID, _encode_LocCrossRefID } from "../CSTA-device-feature-types/LocCrossRefID.ta.mjs";
 
 import {
     EventCause,
@@ -36,7 +36,7 @@ import { CSTACommonArguments, _decode_CSTACommonArguments, _encode_CSTACommonArg
  * ```asn1
  * StopLocationTrackingSessionArgument ::= SEQUENCE
  * {    locCrossRefID            LocCrossRefID,
- *     reason                EventCause                OPTIONAL,
+ *     reason                EventCause                type OPTIONAL,
  *     extensions            CSTACommonArguments            OPTIONAL }
  * ```
  * 
@@ -44,39 +44,47 @@ import { CSTACommonArguments, _decode_CSTACommonArguments, _encode_CSTACommonArg
  */
 export
 class StopLocationTrackingSessionArgument {
+    /**
+     * @summary `locCrossRefID`.
+     * @description
+     *
+     * Identifies the location tracking session (ECMA-269 §6.8.4).
+     *
+     * @public
+     * @readonly
+     */
+    public readonly locCrossRefID: LocCrossRefID;
+    /**
+     * @summary `reason`.
+     * @description
+     *
+     * Why the session is stopped, when provided (ECMA-269 §28.1.8.1).
+     *
+     * @public
+     * @readonly
+     */
+    public readonly reason?: OPTIONAL<EventCause>;
+    /**
+     * @summary `extensions`.
+     * @description
+     *
+     * CSTACommonArguments carrying the service-table security and
+     * privateData parameters.
+     *
+     * @public
+     * @readonly
+     */
+    public readonly extensions?: OPTIONAL<CSTACommonArguments>;
+
     constructor (
-        /**
-         * @summary `locCrossRefID`.
-         * @description
-         *
-         * Identifies the location tracking session (ECMA-269 §6.8.4).
-         *
-         * @public
-         * @readonly
-         */
-        readonly locCrossRefID: LocCrossRefID,
-        /**
-         * @summary `reason`.
-         * @description
-         *
-         * Why the session is stopped, when provided (ECMA-269 §28.1.8.1).
-         *
-         * @public
-         * @readonly
-         */
-        readonly reason?: OPTIONAL<EventCause>,
-        /**
-         * @summary `extensions`.
-         * @description
-         *
-         * CSTACommonArguments carrying the service-table security and
-         * privateData parameters.
-         *
-         * @public
-         * @readonly
-         */
-        readonly extensions?: OPTIONAL<CSTACommonArguments>
-    ) {}
+        locCrossRefID: LocCrossRefID,
+        reason?: OPTIONAL<EventCause>,
+        extensions?: OPTIONAL<CSTACommonArguments>
+    ) {
+        this.locCrossRefID = locCrossRefID;
+        this.reason = reason;
+        this.extensions = extensions;
+    }
 
     /**
      * @summary Restructures an object into a StopLocationTrackingSessionArgument
@@ -100,7 +108,7 @@ class StopLocationTrackingSessionArgument {
          * @static
          */
 
-    public static _enum_for_reason = _enum_for_EventCause;
+    public static _enum_for_reason: typeof _enum_for_EventCause = _enum_for_EventCause;
 }
 
 /**

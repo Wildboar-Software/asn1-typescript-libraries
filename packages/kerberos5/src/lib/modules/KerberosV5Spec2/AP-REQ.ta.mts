@@ -1,6 +1,6 @@
 /* eslint-disable */
 import {
-  INTEGER,
+  type INTEGER,
   ASN1Element as _Element,
   ASN1TagClass as _TagClass,
   ASN1Construction as _Construction,
@@ -12,7 +12,7 @@ import {
 } from '@wildboar/asn1';
 import * as $ from '@wildboar/asn1/functional';
 import {
-  APOptions,
+  type APOptions,
   _decode_APOptions,
   _encode_APOptions,
 } from '../KerberosV5Spec2/APOptions.ta.mjs';
@@ -58,7 +58,7 @@ export class AP_REQ {
    * @public
    * @readonly
    */
-  readonly pvno: INTEGER;
+  public readonly pvno: INTEGER;
   /**
    * @summary `msg_type`.
    * @description
@@ -68,7 +68,7 @@ export class AP_REQ {
    * @public
    * @readonly
    */
-  readonly msg_type: INTEGER;
+  public readonly msg_type: INTEGER;
   /**
    * @summary `ap_options`.
    * @description
@@ -79,7 +79,7 @@ export class AP_REQ {
    * @public
    * @readonly
    */
-  readonly ap_options: APOptions;
+  public readonly ap_options: APOptions;
   /**
    * @summary `ticket`.
    * @description
@@ -90,7 +90,7 @@ export class AP_REQ {
    * @public
    * @readonly
    */
-  readonly ticket: Ticket;
+  public readonly ticket: Ticket;
   /**
    * @summary `authenticator`.
    * @description
@@ -102,7 +102,7 @@ export class AP_REQ {
    * @public
    * @readonly
    */
-  readonly authenticator: EncryptedData;
+  public readonly authenticator: EncryptedData;
 
   constructor(
     pvno: INTEGER,

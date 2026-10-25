@@ -1,19 +1,19 @@
 /* eslint-disable */
 import {
-    ASN1Element as _Element,
+    type ASN1Element as _Element,
     ASN1TagClass as _TagClass,
-    BIT_STRING,
-    INTEGER,
-    OPTIONAL,
+    type BIT_STRING,
+    type INTEGER,
+    type OPTIONAL,
 } from "@wildboar/asn1";
 import * as $ from "@wildboar/asn1/functional";
 import {
-    Name,
+    type Name,
     _decode_Name,
     _encode_Name,
 } from "../InformationFramework/Name.ta.mjs";
 import {
-    Random_Integer,
+    type Random_Integer,
     _decode_Random_Integer,
     _encode_Random_Integer,
 } from "../SpkmGssTokens/Random-Integer.ta.mjs";
@@ -42,79 +42,95 @@ import {
  *
  */
 export class REP_IT_TOKEN {
+    /**
+     * @summary `tok_id`.
+     * @description
+     *
+     * Must be 768 (0x0300).
+     *
+     * @public
+     * @readonly
+     */
+    public readonly tok_id: INTEGER;
+    /**
+     * @summary `context_id`.
+     * @description
+     *
+     * The concatenated context-id from REP-TI.
+     *
+     * @public
+     * @readonly
+     */
+    public readonly context_id: Random_Integer;
+    /**
+     * @summary `randSrc`.
+     * @description
+     *
+     * Echo of the initiator nonce.
+     *
+     * @public
+     * @readonly
+     */
+    public readonly randSrc: Random_Integer;
+    /**
+     * @summary `randTarg`.
+     * @description
+     *
+     * Echo of the target nonce (binds this token to REP-TI).
+     *
+     * @public
+     * @readonly
+     */
+    public readonly randTarg: Random_Integer;
+    /**
+     * @summary `targ_name`.
+     * @description
+     *
+     * Must be the `targ-name` from REP-TI.
+     *
+     * @public
+     * @readonly
+     */
+    public readonly targ_name: Name;
+    /**
+     * @summary `src_name`.
+     * @description
+     *
+     * Must contain whatever value was in the REQ token.
+     *
+     * @public
+     * @readonly
+     */
+    public readonly src_name?: OPTIONAL<Name>;
+    /**
+     * @summary `key_estb_rep`.
+     * @description
+     *
+     * Initiator's half/response when the target selected a two-pass
+     * K-ALG (e.g. DH). Omit for one-pass K-ALGs.
+     *
+     * @public
+     * @readonly
+     */
+    public readonly key_estb_rep?: OPTIONAL<BIT_STRING>;
+
     constructor(
-        /**
-         * @summary `tok_id`.
-         * @description
-         *
-         * Must be 768 (0x0300).
-         *
-         * @public
-         * @readonly
-         */
-        readonly tok_id: INTEGER,
-        /**
-         * @summary `context_id`.
-         * @description
-         *
-         * The concatenated context-id from REP-TI.
-         *
-         * @public
-         * @readonly
-         */
-        readonly context_id: Random_Integer,
-        /**
-         * @summary `randSrc`.
-         * @description
-         *
-         * Echo of the initiator nonce.
-         *
-         * @public
-         * @readonly
-         */
-        readonly randSrc: Random_Integer,
-        /**
-         * @summary `randTarg`.
-         * @description
-         *
-         * Echo of the target nonce (binds this token to REP-TI).
-         *
-         * @public
-         * @readonly
-         */
-        readonly randTarg: Random_Integer,
-        /**
-         * @summary `targ_name`.
-         * @description
-         *
-         * Must be the `targ-name` from REP-TI.
-         *
-         * @public
-         * @readonly
-         */
-        readonly targ_name: Name,
-        /**
-         * @summary `src_name`.
-         * @description
-         *
-         * Must contain whatever value was in the REQ token.
-         *
-         * @public
-         * @readonly
-         */
-        readonly src_name?: OPTIONAL<Name>,
-        /**
-         * @summary `key_estb_rep`.
-         * @description
-         *
-         * Initiator's half/response when the target selected a two-pass
-         * K-ALG (e.g. DH). Omit for one-pass K-ALGs.
-         *
-         * @public
-         * @readonly
-         */
-        readonly key_estb_rep?: OPTIONAL<BIT_STRING>
-    ) {}
+        tok_id: INTEGER,
+        context_id: Random_Integer,
+        randSrc: Random_Integer,
+        randTarg: Random_Integer,
+        targ_name: Name,
+        src_name?: OPTIONAL<Name>,
+        key_estb_rep?: OPTIONAL<BIT_STRING>
+    ) {
+        this.tok_id = tok_id;
+        this.context_id = context_id;
+        this.randSrc = randSrc;
+        this.randTarg = randTarg;
+        this.targ_name = targ_name;
+        this.src_name = src_name;
+        this.key_estb_rep = key_estb_rep;
+    }
 
     /**
      * @summary Restructures an object into a REP_IT_TOKEN

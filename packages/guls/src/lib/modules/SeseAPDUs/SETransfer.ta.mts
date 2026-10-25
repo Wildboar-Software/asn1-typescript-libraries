@@ -1,7 +1,7 @@
 /* eslint-disable */
 import {
-  OPTIONAL,
-  BOOLEAN,
+  type OPTIONAL,
+  type BOOLEAN,
   ASN1Element as _Element,
   ASN1TagClass as _TagClass,
   ASN1Construction as _Construction,
@@ -13,13 +13,13 @@ import {
 } from '@wildboar/asn1';
 import * as $ from '@wildboar/asn1/functional';
 import {
-  InvocationId,
+  type InvocationId,
   _decode_InvocationId,
   _encode_InvocationId,
 } from '../SeseAPDUs/InvocationId.ta.mjs';
 import { noInvocationId } from '../SeseAPDUs/noInvocationId.va.mjs';
 import {
-    Identifier,
+    type Identifier,
     _decode_Identifier,
     _encode_Identifier,
 } from '../Notation/Identifier.ta.mjs';
@@ -73,77 +73,91 @@ import {
  *
  */
 export class SETransfer {
+  /**
+   * @summary `seIdentifier`.
+   * @description
+   *
+   * Which of the SESE's supported security exchanges this
+   * SEI belongs to. ITU-T Rec. X.832 (04/95) §7.1.
+   *
+   * @public
+   * @readonly
+   */
+  public readonly seIdentifier: Identifier;
+  /**
+   * @summary `itemIdentifier`.
+   * @description
+   *
+   * Which SEI of that exchange is carried (`&itemId`).
+   * ITU-T Rec. X.832 (04/95) §7.1.
+   *
+   * @public
+   * @readonly
+   */
+  public readonly itemIdentifier: _Element;
+  /**
+   * @summary `seItem`.
+   * @description
+   *
+   * The SEI value (`&ItemType` of the identified item).
+   * ITU-T Rec. X.832 (04/95) §7.1.
+   *
+   * @public
+   * @readonly
+   */
+  public readonly seItem: _Element;
+  /**
+   * @summary `invocationId`.
+   * @description
+   *
+   * Correlates this transfer with an active exchange.
+   * Must match an active invocation unless `startFlag` is
+   * true. Default `noInvocationId`. ITU-T Rec. X.832
+   * (04/95) §7.1.
+   *
+   * @public
+   * @readonly
+   */
+  public readonly invocationId?: OPTIONAL<InvocationId>;
+  /**
+   * @summary `startFlag`.
+   * @description
+   *
+   * Set only on the first SEI of an exchange. Default
+   * FALSE. ITU-T Rec. X.832 (04/95) §7.1.
+   *
+   * @public
+   * @readonly
+   */
+  public readonly startFlag?: OPTIONAL<BOOLEAN>;
+  /**
+   * @summary `endFlag`.
+   * @description
+   *
+   * Set on the last SEI of an exchange (needed when the
+   * number of transfers is not known a priori). Default
+   * FALSE. ITU-T Rec. X.832 (04/95) §7.1.
+   *
+   * @public
+   * @readonly
+   */
+  public readonly endFlag?: OPTIONAL<BOOLEAN>;
+
   constructor(
-    /**
-     * @summary `seIdentifier`.
-     * @description
-     *
-     * Which of the SESE's supported security exchanges this
-     * SEI belongs to. ITU-T Rec. X.832 (04/95) §7.1.
-     *
-     * @public
-     * @readonly
-     */
-    readonly seIdentifier: Identifier,
-    /**
-     * @summary `itemIdentifier`.
-     * @description
-     *
-     * Which SEI of that exchange is carried (`&itemId`).
-     * ITU-T Rec. X.832 (04/95) §7.1.
-     *
-     * @public
-     * @readonly
-     */
-    readonly itemIdentifier: _Element,
-    /**
-     * @summary `seItem`.
-     * @description
-     *
-     * The SEI value (`&ItemType` of the identified item).
-     * ITU-T Rec. X.832 (04/95) §7.1.
-     *
-     * @public
-     * @readonly
-     */
-    readonly seItem: _Element,
-    /**
-     * @summary `invocationId`.
-     * @description
-     *
-     * Correlates this transfer with an active exchange.
-     * Must match an active invocation unless `startFlag` is
-     * true. Default `noInvocationId`. ITU-T Rec. X.832
-     * (04/95) §7.1.
-     *
-     * @public
-     * @readonly
-     */
-    readonly invocationId?: OPTIONAL<InvocationId>,
-    /**
-     * @summary `startFlag`.
-     * @description
-     *
-     * Set only on the first SEI of an exchange. Default
-     * FALSE. ITU-T Rec. X.832 (04/95) §7.1.
-     *
-     * @public
-     * @readonly
-     */
-    readonly startFlag?: OPTIONAL<BOOLEAN>,
-    /**
-     * @summary `endFlag`.
-     * @description
-     *
-     * Set on the last SEI of an exchange (needed when the
-     * number of transfers is not known a priori). Default
-     * FALSE. ITU-T Rec. X.832 (04/95) §7.1.
-     *
-     * @public
-     * @readonly
-     */
-    readonly endFlag?: OPTIONAL<BOOLEAN>
-  ) {}
+    seIdentifier: Identifier,
+    itemIdentifier: _Element,
+    seItem: _Element,
+    invocationId?: OPTIONAL<InvocationId>,
+    startFlag?: OPTIONAL<BOOLEAN>,
+    endFlag?: OPTIONAL<BOOLEAN>
+  ) {
+    this.seIdentifier = seIdentifier;
+    this.itemIdentifier = itemIdentifier;
+    this.seItem = seItem;
+    this.invocationId = invocationId;
+    this.startFlag = startFlag;
+    this.endFlag = endFlag;
+  }
 
   /**
    * @summary Restructures an object into a SETransfer

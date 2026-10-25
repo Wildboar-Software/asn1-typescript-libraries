@@ -65,7 +65,7 @@ export type GeneralProblem = _enum_for_GeneralProblem;
  *
  * @enum {number}
  */
-export const GeneralProblem = _enum_for_GeneralProblem;
+export const GeneralProblem: typeof _enum_for_GeneralProblem = _enum_for_GeneralProblem;
 
 
 /**
@@ -78,7 +78,7 @@ export const GeneralProblem = _enum_for_GeneralProblem;
  * @constant
  * @type {number}
  */
-export const GeneralProblem_invalidAPDU: GeneralProblem =
+export const GeneralProblem_invalidAPDU: _enum_for_GeneralProblem.invalidAPDU =
   GeneralProblem.invalidAPDU; /* LONG_NAMED_ENUMERATED_VALUE */
 
 
@@ -87,18 +87,28 @@ export const GeneralProblem_invalidAPDU: GeneralProblem =
  * @constant
  * @type {number}
  */
-export const invalidAPDU: GeneralProblem =
+export const invalidAPDU: _enum_for_GeneralProblem.invalidAPDU =
   GeneralProblem.invalidAPDU; /* SHORT_NAMED_ENUMERATED_VALUE */
 
 
 
 
-export const _decode_GeneralProblem = $._decodeEnumerated;
+export function _decode_GeneralProblem(el: _Element): GeneralProblem {
+  const enumerated = $._decodeEnumerated(el);
+  switch (enumerated) {
+    case GeneralProblem.invalidAPDU: return GeneralProblem.invalidAPDU;
+    default:
+      throw new _ConstructionError(
+        'Invalid ENUMERATED value ' + enumerated + ' for GeneralProblem.',
+        el,
+      );
+  }
+}
 
 
 
 
-export const _encode_GeneralProblem = $._encodeEnumerated;
+export const _encode_GeneralProblem: $.ASN1Encoder<GeneralProblem> = $._encodeEnumerated as $.ASN1Encoder<GeneralProblem>;
 
 
 /* eslint-enable */

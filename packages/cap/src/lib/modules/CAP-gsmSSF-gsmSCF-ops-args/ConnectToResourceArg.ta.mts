@@ -1,7 +1,7 @@
 /* eslint-disable */
 import {
-    OPTIONAL,
-    ASN1Element as _Element,
+    type OPTIONAL,
+    type ASN1Element as _Element,
     ASN1TagClass as _TagClass,
     ASN1Construction as _Construction,
     ASN1UniversalType as _UniversalType,
@@ -14,7 +14,7 @@ import * as $ from "@wildboar/asn1/functional";
 import { type CallSegmentID, _decode_CallSegmentID, _encode_CallSegmentID } from "../CAP-datatypes/CallSegmentID.ta.mjs";
 import { type Extensions, _decode_Extensions, _encode_Extensions } from "../CAP-datatypes/Extensions.ta.mjs";
 import { ServiceInteractionIndicatorsTwo, _decode_ServiceInteractionIndicatorsTwo, _encode_ServiceInteractionIndicatorsTwo } from "../CAP-datatypes/ServiceInteractionIndicatorsTwo.ta.mjs";
-import { ConnectToResourceArg_resourceAddress, _decode_ConnectToResourceArg_resourceAddress, _encode_ConnectToResourceArg_resourceAddress } from "../CAP-gsmSSF-gsmSCF-ops-args/ConnectToResourceArg-resourceAddress.ta.mjs";
+import { type ConnectToResourceArg_resourceAddress, _decode_ConnectToResourceArg_resourceAddress, _encode_ConnectToResourceArg_resourceAddress } from "../CAP-gsmSSF-gsmSCF-ops-args/ConnectToResourceArg-resourceAddress.ta.mjs";
 
 
 /**
@@ -32,9 +32,9 @@ import { ConnectToResourceArg_resourceAddress, _decode_ConnectToResourceArg_reso
  *     ipRoutingAddress            [0] IPRoutingAddress {bound},
  *     none                [3] NULL
  *     },
- *     extensions                [4] Extensions {bound}            OPTIONAL,
- *     serviceInteractionIndicatorsTwo    [7] ServiceInteractionIndicatorsTwo        OPTIONAL,
- *     callSegmentID            [50] CallSegmentID {bound}            OPTIONAL,
+ *     extensions                [4] Extensions {bound}            type OPTIONAL,
+ *     serviceInteractionIndicatorsTwo    [7] ServiceInteractionIndicatorsTwo        type OPTIONAL,
+ *     callSegmentID            [50] CallSegmentID {bound}            type OPTIONAL,
  *     ...
  *     }
  * ```
@@ -43,56 +43,68 @@ import { ConnectToResourceArg_resourceAddress, _decode_ConnectToResourceArg_reso
  */
 export
 class ConnectToResourceArg {
+    /**
+     * @summary `resourceAddress`.
+     * @description
+     *
+     * Physical location of the gsmSRF: `ipRoutingAddress` (routing address
+     * to set up the connection) or `none` (connect the call segment to a
+     * predefined gsmSRF). (3GPP TS 29.078 V19.0.0 clause 11.10.1.1).
+     *
+     * @public
+     * @readonly
+     */
+    public readonly resourceAddress: ConnectToResourceArg_resourceAddress;
+    /**
+     * @summary `extensions`.
+     * @public
+     * @readonly
+     */
+    public readonly extensions?: OPTIONAL<Extensions>;
+    /**
+     * @summary `serviceInteractionIndicatorsTwo`.
+     * @description
+     *
+     * Controls through-connection to the Calling Party. The segment need
+     * not contain a calling-party leg. Assisting gsmSSF always assumes
+     * bothway through-connection and ignores this if received. (3GPP TS
+     * 29.078 V19.0.0 clause 11.10.1.1).
+     *
+     * @public
+     * @readonly
+     */
+    public readonly serviceInteractionIndicatorsTwo?: OPTIONAL<ServiceInteractionIndicatorsTwo>;
+    /**
+     * @summary `callSegmentID`.
+     * @description
+     *
+     * Call segment to which ConnectToResource applies. (3GPP TS 29.078
+     * V19.0.0 clause 11.10.1.1).
+     *
+     * @public
+     * @readonly
+     */
+    public readonly callSegmentID?: OPTIONAL<CallSegmentID>;
+    /**
+     * @summary Extensions that are not recognized.
+     * @public
+     * @readonly
+     */
+    public readonly _unrecognizedExtensionsList: _Element[];
+
     constructor (
-        /**
-         * @summary `resourceAddress`.
-         * @description
-         *
-         * Physical location of the gsmSRF: `ipRoutingAddress` (routing address
-         * to set up the connection) or `none` (connect the call segment to a
-         * predefined gsmSRF). (3GPP TS 29.078 V19.0.0 clause 11.10.1.1).
-         *
-         * @public
-         * @readonly
-         */
-        readonly resourceAddress: ConnectToResourceArg_resourceAddress,
-        /**
-         * @summary `extensions`.
-         * @public
-         * @readonly
-         */
-        readonly extensions?: OPTIONAL<Extensions>,
-        /**
-         * @summary `serviceInteractionIndicatorsTwo`.
-         * @description
-         *
-         * Controls through-connection to the Calling Party. The segment need
-         * not contain a calling-party leg. Assisting gsmSSF always assumes
-         * bothway through-connection and ignores this if received. (3GPP TS
-         * 29.078 V19.0.0 clause 11.10.1.1).
-         *
-         * @public
-         * @readonly
-         */
-        readonly serviceInteractionIndicatorsTwo?: OPTIONAL<ServiceInteractionIndicatorsTwo>,
-        /**
-         * @summary `callSegmentID`.
-         * @description
-         *
-         * Call segment to which ConnectToResource applies. (3GPP TS 29.078
-         * V19.0.0 clause 11.10.1.1).
-         *
-         * @public
-         * @readonly
-         */
-        readonly callSegmentID?: OPTIONAL<CallSegmentID>,
-        /**
-         * @summary Extensions that are not recognized.
-         * @public
-         * @readonly
-         */
-        readonly _unrecognizedExtensionsList: _Element[] = []
-    ) {}
+        resourceAddress: ConnectToResourceArg_resourceAddress,
+        extensions?: OPTIONAL<Extensions>,
+        serviceInteractionIndicatorsTwo?: OPTIONAL<ServiceInteractionIndicatorsTwo>,
+        callSegmentID?: OPTIONAL<CallSegmentID>,
+        _unrecognizedExtensionsList: _Element[] = []
+    ) {
+        this.resourceAddress = resourceAddress;
+        this.extensions = extensions;
+        this.serviceInteractionIndicatorsTwo = serviceInteractionIndicatorsTwo;
+        this.callSegmentID = callSegmentID;
+        this._unrecognizedExtensionsList = _unrecognizedExtensionsList;
+    }
 
     /**
      * @summary Restructures an object into a ConnectToResourceArg

@@ -1,6 +1,6 @@
 /* eslint-disable */
 import {
-    ENUMERATED
+    type ENUMERATED
 } from "@wildboar/asn1";
 import * as $ from "@wildboar/asn1/functional";
 
@@ -66,7 +66,7 @@ type Messaging_Call_Event = _enum_for_Messaging_Call_Event | ENUMERATED;
  * @type {number}
  */
 export
-const Messaging_Call_Event_callout: Messaging_Call_Event = 1; /* LONG_NAMED_ENUMERATED_VALUE */
+const Messaging_Call_Event_callout: _enum_for_Messaging_Call_Event.callout = _enum_for_Messaging_Call_Event.callout; /* LONG_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary callout
@@ -81,7 +81,7 @@ const Messaging_Call_Event_callout: Messaging_Call_Event = 1; /* LONG_NAMED_ENUM
  * @type {number}
  */
 export
-const callout: Messaging_Call_Event = Messaging_Call_Event_callout; /* SHORT_NAMED_ENUMERATED_VALUE */
+const callout: _enum_for_Messaging_Call_Event.callout = Messaging_Call_Event_callout; /* SHORT_NAMED_ENUMERATED_VALUE */
 export const _decode_Messaging_Call_Event: $.ASN1Decoder<Messaging_Call_Event> = $._decodeEnumerated;
 export const _encode_Messaging_Call_Event: $.ASN1Encoder<Messaging_Call_Event> = $._encodeEnumerated;
 

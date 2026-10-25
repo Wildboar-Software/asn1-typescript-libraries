@@ -1,6 +1,6 @@
 /* eslint-disable */
 import {
-    ASN1Element as _Element,
+    type ASN1Element as _Element,
     ASN1TagClass as _TagClass,
     ASN1Construction as _Construction,
     ASN1UniversalType as _UniversalType,
@@ -36,10 +36,7 @@ type UniqueIdentifierOfBioParaInfo = UniqueIdentifier; // DefinedType
  * @param {_Element} el The element being decoded.
  * @returns {UniqueIdentifierOfBioParaInfo} The decoded data structure.
  */
-export
-function _decode_UniqueIdentifierOfBioParaInfo (el: _Element): UniqueIdentifierOfBioParaInfo {
-    return _decode_UniqueIdentifier(el);
-}
+export const _decode_UniqueIdentifierOfBioParaInfo: $.ASN1Decoder<UniqueIdentifierOfBioParaInfo> = _decode_UniqueIdentifier;
 
 /**
  * @summary Encodes a(n) UniqueIdentifierOfBioParaInfo into an ASN.1 Element.
@@ -48,9 +45,6 @@ function _decode_UniqueIdentifierOfBioParaInfo (el: _Element): UniqueIdentifierO
  * @param elGetter A function that can be used to get new ASN.1 elements.
  * @returns {_Element} The UniqueIdentifierOfBioParaInfo, encoded as an ASN.1 Element.
  */
-export
-function _encode_UniqueIdentifierOfBioParaInfo (value: UniqueIdentifierOfBioParaInfo, elGetter: $.ASN1Encoder<UniqueIdentifierOfBioParaInfo>): _Element {
-    return _encode_UniqueIdentifier(value, elGetter);
-}
+export const _encode_UniqueIdentifierOfBioParaInfo: $.ASN1Encoder<UniqueIdentifierOfBioParaInfo> = _encode_UniqueIdentifier;
 
 /* eslint-enable */

@@ -1,6 +1,6 @@
 /* eslint-disable */
 import {
-    ASN1Element as _Element,
+    type ASN1Element as _Element,
     ASN1TagClass as _TagClass,
     ASN1Construction as _Construction,
     ASN1UniversalType as _UniversalType,
@@ -10,7 +10,7 @@ import {
     ASN1ConstructionError as _ConstructionError,
 } from "@wildboar/asn1";
 import * as $ from "@wildboar/asn1/functional";
-import { PrivateEnterpriseNumber, _decode_PrivateEnterpriseNumber, _encode_PrivateEnterpriseNumber } from "../PlatformCertificateProfile/PrivateEnterpriseNumber.ta.mjs";
+import { type PrivateEnterpriseNumber, _decode_PrivateEnterpriseNumber, _encode_PrivateEnterpriseNumber } from "../PlatformCertificateProfile/PrivateEnterpriseNumber.ta.mjs";
 /**
  * @summary ManufacturerId
  * @description
@@ -32,21 +32,25 @@ import { PrivateEnterpriseNumber, _decode_PrivateEnterpriseNumber, _encode_Priva
  */
 export
 class ManufacturerId {
+    /**
+     * @summary `manufacturerIdentifier`.
+     * @description
+     *
+     * IANA Private Enterprise Number OID of the manufacturer.
+     * Assigned numbers:
+     * http://www.iana.org/assignments/enterprise-numbers/enterprise-numbers
+     * §3.1.2.
+     *
+     * @public
+     * @readonly
+     */
+    public readonly manufacturerIdentifier: PrivateEnterpriseNumber;
+
     constructor (
-        /**
-         * @summary `manufacturerIdentifier`.
-         * @description
-         *
-         * IANA Private Enterprise Number OID of the manufacturer.
-         * Assigned numbers:
-         * http://www.iana.org/assignments/enterprise-numbers/enterprise-numbers
-         * §3.1.2.
-         *
-         * @public
-         * @readonly
-         */
-        readonly manufacturerIdentifier: PrivateEnterpriseNumber
-    ) {}
+        manufacturerIdentifier: PrivateEnterpriseNumber
+    ) {
+        this.manufacturerIdentifier = manufacturerIdentifier;
+    }
 
     /**
      * @summary Restructures an object into a ManufacturerId

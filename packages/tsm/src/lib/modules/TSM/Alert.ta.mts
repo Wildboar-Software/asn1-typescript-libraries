@@ -1,6 +1,6 @@
 /* eslint-disable */
 import {
-    ASN1Element as _Element,
+    type ASN1Element as _Element,
     ASN1TagClass as _TagClass,
     ASN1Construction as _Construction,
     ASN1UniversalType as _UniversalType,
@@ -37,31 +37,37 @@ import { AlertDescription, _enum_for_AlertDescription, _decode_AlertDescription,
  */
 export
 class Alert {
+    /**
+     * @summary `level`.
+     * @description
+     *
+     * `warning` (1) or `fatal` (2). TSM biometric alerts 115–117 are
+     * always fatal. X.1084 §10.2.
+     *
+     * @public
+     * @readonly
+     */
+    public readonly level: AlertLevel;
+    /**
+     * @summary `description`.
+     * @description
+     *
+     * TLS descriptions 0–114 plus TSM `unacceptable-model` (115),
+     * `unacceptable-biometrics` (116), and `unsupported-biometrics`
+     * (117). X.1084 §10.2.
+     *
+     * @public
+     * @readonly
+     */
+    public readonly description: AlertDescription;
+
     constructor (
-        /**
-         * @summary `level`.
-         * @description
-         *
-         * `warning` (1) or `fatal` (2). TSM biometric alerts 115–117 are
-         * always fatal. X.1084 §10.2.
-         *
-         * @public
-         * @readonly
-         */
-        readonly level: AlertLevel,
-        /**
-         * @summary `description`.
-         * @description
-         *
-         * TLS descriptions 0–114 plus TSM `unacceptable-model` (115),
-         * `unacceptable-biometrics` (116), and `unsupported-biometrics`
-         * (117). X.1084 §10.2.
-         *
-         * @public
-         * @readonly
-         */
-        readonly description: AlertDescription
-    ) {}
+        level: AlertLevel,
+        description: AlertDescription
+    ) {
+        this.level = level;
+        this.description = description;
+    }
 
     /**
      * @summary Restructures an object into a Alert
@@ -85,13 +91,13 @@ class Alert {
          * @static
          */
 
-    public static _enum_for_level = _enum_for_AlertLevel;        /**
+    public static _enum_for_level: typeof _enum_for_AlertLevel = _enum_for_AlertLevel;        /**
          * @summary The enum used as the type of the component `description`
          * @public
          * @static
          */
 
-    public static _enum_for_description = _enum_for_AlertDescription;
+    public static _enum_for_description: typeof _enum_for_AlertDescription = _enum_for_AlertDescription;
 }
 
 /**

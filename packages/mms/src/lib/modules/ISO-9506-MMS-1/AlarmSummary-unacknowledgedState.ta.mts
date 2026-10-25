@@ -1,7 +1,7 @@
 /* eslint-disable */
 import {
-    INTEGER,
-    ASN1Element as _Element,
+    type INTEGER,
+    type ASN1Element as _Element,
     ASN1TagClass as _TagClass,
     ASN1Construction as _Construction,
     ASN1UniversalType as _UniversalType,
@@ -50,7 +50,7 @@ type AlarmSummary_unacknowledgedState = INTEGER;
  * @type {number}
  */
 export
-const AlarmSummary_unacknowledgedState_none: AlarmSummary_unacknowledgedState = 0; /* LONG_NAMED_INTEGER_VALUE */
+const AlarmSummary_unacknowledgedState_none: 0 = 0 satisfies AlarmSummary_unacknowledgedState; /* LONG_NAMED_INTEGER_VALUE */
 
 /**
  * @summary AlarmSummary_unacknowledgedState_none
@@ -64,7 +64,7 @@ const AlarmSummary_unacknowledgedState_none: AlarmSummary_unacknowledgedState = 
  * @type {number}
  */
 export
-const none: AlarmSummary_unacknowledgedState = AlarmSummary_unacknowledgedState_none; /* SHORT_NAMED_INTEGER_VALUE */
+const none: 0 = AlarmSummary_unacknowledgedState_none; /* SHORT_NAMED_INTEGER_VALUE */
 
 /**
  * @summary AlarmSummary_unacknowledgedState_active
@@ -79,7 +79,7 @@ const none: AlarmSummary_unacknowledgedState = AlarmSummary_unacknowledgedState_
  * @type {number}
  */
 export
-const AlarmSummary_unacknowledgedState_active: AlarmSummary_unacknowledgedState = 1; /* LONG_NAMED_INTEGER_VALUE */
+const AlarmSummary_unacknowledgedState_active: 1 = 1 satisfies AlarmSummary_unacknowledgedState; /* LONG_NAMED_INTEGER_VALUE */
 
 /**
  * @summary AlarmSummary_unacknowledgedState_active
@@ -93,7 +93,7 @@ const AlarmSummary_unacknowledgedState_active: AlarmSummary_unacknowledgedState 
  * @type {number}
  */
 export
-const active: AlarmSummary_unacknowledgedState = AlarmSummary_unacknowledgedState_active; /* SHORT_NAMED_INTEGER_VALUE */
+const active: 1 = AlarmSummary_unacknowledgedState_active; /* SHORT_NAMED_INTEGER_VALUE */
 
 /**
  * @summary AlarmSummary_unacknowledgedState_idle
@@ -108,7 +108,7 @@ const active: AlarmSummary_unacknowledgedState = AlarmSummary_unacknowledgedStat
  * @type {number}
  */
 export
-const AlarmSummary_unacknowledgedState_idle: AlarmSummary_unacknowledgedState = 2; /* LONG_NAMED_INTEGER_VALUE */
+const AlarmSummary_unacknowledgedState_idle: 2 = 2 satisfies AlarmSummary_unacknowledgedState; /* LONG_NAMED_INTEGER_VALUE */
 
 /**
  * @summary AlarmSummary_unacknowledgedState_idle
@@ -122,7 +122,7 @@ const AlarmSummary_unacknowledgedState_idle: AlarmSummary_unacknowledgedState = 
  * @type {number}
  */
 export
-const idle: AlarmSummary_unacknowledgedState = AlarmSummary_unacknowledgedState_idle; /* SHORT_NAMED_INTEGER_VALUE */
+const idle: 2 = AlarmSummary_unacknowledgedState_idle; /* SHORT_NAMED_INTEGER_VALUE */
 
 /**
  * @summary AlarmSummary_unacknowledgedState_both
@@ -137,7 +137,7 @@ const idle: AlarmSummary_unacknowledgedState = AlarmSummary_unacknowledgedState_
  * @type {number}
  */
 export
-const AlarmSummary_unacknowledgedState_both: AlarmSummary_unacknowledgedState = 3; /* LONG_NAMED_INTEGER_VALUE */
+const AlarmSummary_unacknowledgedState_both: 3 = 3 satisfies AlarmSummary_unacknowledgedState; /* LONG_NAMED_INTEGER_VALUE */
 
 /**
  * @summary AlarmSummary_unacknowledgedState_both
@@ -151,9 +151,9 @@ const AlarmSummary_unacknowledgedState_both: AlarmSummary_unacknowledgedState = 
  * @type {number}
  */
 export
-const both: AlarmSummary_unacknowledgedState = AlarmSummary_unacknowledgedState_both; /* SHORT_NAMED_INTEGER_VALUE */
-export const _decode_AlarmSummary_unacknowledgedState = $._decodeInteger;
-export const _encode_AlarmSummary_unacknowledgedState = $._encodeInteger;
+const both: 3 = AlarmSummary_unacknowledgedState_both; /* SHORT_NAMED_INTEGER_VALUE */
+export const _decode_AlarmSummary_unacknowledgedState: $.ASN1Decoder<INTEGER> = $._decodeInteger;
+export const _encode_AlarmSummary_unacknowledgedState: $.ASN1Encoder<INTEGER> = $._encodeInteger;
 
 
 /* eslint-enable */

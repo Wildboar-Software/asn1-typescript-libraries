@@ -1,6 +1,6 @@
 /* eslint-disable */
 import {
-    ASN1Element as _Element,
+    type ASN1Element as _Element,
     ASN1TagClass as _TagClass,
     ASN1Construction as _Construction,
     ASN1UniversalType as _UniversalType,
@@ -30,22 +30,13 @@ import {
  */
 export type ORAddressAndOrDirectoryName = ORName; // DefinedType
 
-let _cached_decoder_for_ORAddressAndOrDirectoryName: $.ASN1Decoder<ORAddressAndOrDirectoryName> | null = null;
-
 /**
  * @summary Decodes an ASN.1 element into a(n) ORAddressAndOrDirectoryName
  * @function
  * @param {_Element} el The element being decoded.
  * @returns {ORAddressAndOrDirectoryName} The decoded data structure.
  */
-export function _decode_ORAddressAndOrDirectoryName(el: _Element): ORAddressAndOrDirectoryName {
-    if (!_cached_decoder_for_ORAddressAndOrDirectoryName) {
-        _cached_decoder_for_ORAddressAndOrDirectoryName = _decode_ORName;
-    }
-    return _cached_decoder_for_ORAddressAndOrDirectoryName(el);
-}
-
-let _cached_encoder_for_ORAddressAndOrDirectoryName: $.ASN1Encoder<ORAddressAndOrDirectoryName> | null = null;
+export const _decode_ORAddressAndOrDirectoryName: $.ASN1Decoder<ORAddressAndOrDirectoryName> = _decode_ORName;
 
 /**
  * @summary Encodes a(n) ORAddressAndOrDirectoryName into an ASN.1 Element.
@@ -54,15 +45,7 @@ let _cached_encoder_for_ORAddressAndOrDirectoryName: $.ASN1Encoder<ORAddressAndO
  * @param elGetter A function that can be used to get new ASN.1 elements.
  * @returns {_Element} The ORAddressAndOrDirectoryName, encoded as an ASN.1 Element.
  */
-export function _encode_ORAddressAndOrDirectoryName(
-    value: ORAddressAndOrDirectoryName,
-    elGetter: $.ASN1Encoder<ORAddressAndOrDirectoryName>
-): _Element {
-    if (!_cached_encoder_for_ORAddressAndOrDirectoryName) {
-        _cached_encoder_for_ORAddressAndOrDirectoryName = _encode_ORName;
-    }
-    return _cached_encoder_for_ORAddressAndOrDirectoryName(value, elGetter);
-}
+export const _encode_ORAddressAndOrDirectoryName: $.ASN1Encoder<ORAddressAndOrDirectoryName> = _encode_ORName;
 
 
 /* eslint-enable */

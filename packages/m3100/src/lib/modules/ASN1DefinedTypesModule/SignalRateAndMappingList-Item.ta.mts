@@ -1,7 +1,7 @@
 /* eslint-disable */
 import {
-    OPTIONAL,
-    ASN1Element as _Element,
+    type OPTIONAL,
+    type ASN1Element as _Element,
     ASN1TagClass as _TagClass,
     ASN1Construction as _Construction,
     ASN1UniversalType as _UniversalType,
@@ -12,17 +12,17 @@ import {
 } from '@wildboar/asn1';
 import * as $ from '@wildboar/asn1/functional';
 import {
-    SignalRate,
+    type SignalRate,
     _decode_SignalRate,
     _encode_SignalRate,
 } from '../M3100ASN1TypeModule2/SignalRate.ta.mjs';
 import {
-    MappingList,
+    type MappingList,
     _decode_MappingList,
     _encode_MappingList,
 } from '../M3100ASN1TypeModule2/MappingList.ta.mjs';
 import {
-    WaveLength,
+    type WaveLength,
     _decode_WaveLength,
     _encode_WaveLength,
 } from '../ASN1DefinedTypesModule/WaveLength.ta.mjs';
@@ -39,26 +39,34 @@ import {
  *
  */
 export class SignalRateAndMappingList_Item {
+    /**
+     * @summary `signalRate`.
+     * @public
+     * @readonly
+     */
+    public readonly signalRate: SignalRate;
+    /**
+     * @summary `mappingList`.
+     * @public
+     * @readonly
+     */
+    public readonly mappingList?: OPTIONAL<MappingList>;
+    /**
+     * @summary `wavelength`.
+     * @public
+     * @readonly
+     */
+    public readonly wavelength?: OPTIONAL<WaveLength>;
+
     constructor(
-        /**
-         * @summary `signalRate`.
-         * @public
-         * @readonly
-         */
-        readonly signalRate: SignalRate,
-        /**
-         * @summary `mappingList`.
-         * @public
-         * @readonly
-         */
-        readonly mappingList?: OPTIONAL<MappingList>,
-        /**
-         * @summary `wavelength`.
-         * @public
-         * @readonly
-         */
-        readonly wavelength?: OPTIONAL<WaveLength>
-    ) {}
+        signalRate: SignalRate,
+        mappingList?: OPTIONAL<MappingList>,
+        wavelength?: OPTIONAL<WaveLength>
+    ) {
+        this.signalRate = signalRate;
+        this.mappingList = mappingList;
+        this.wavelength = wavelength;
+    }
 
     /**
      * @summary Restructures an object into a SignalRateAndMappingList_Item

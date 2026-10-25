@@ -1,9 +1,9 @@
 /* eslint-disable */
 import {
-    ASN1Element as _Element,
+    type ASN1Element as _Element,
     ASN1TagClass as _TagClass,
-    BOOLEAN,
-    OPTIONAL,
+    type BOOLEAN,
+    type OPTIONAL,
 } from "@wildboar/asn1";
 import * as $ from "@wildboar/asn1/functional";
 import {
@@ -27,12 +27,12 @@ import {
     _encode_Attribute,
 } from "../InformationFramework/Attribute.ta.mjs";
 import {
-    DistinguishedName,
+    type DistinguishedName,
     _decode_DistinguishedName,
     _encode_DistinguishedName,
 } from "../InformationFramework/DistinguishedName.ta.mjs";
 import {
-    Name,
+    type Name,
     _decode_Name,
     _encode_Name,
 } from "../InformationFramework/Name.ta.mjs";
@@ -59,69 +59,87 @@ import {
  *
  */
 export class ListResultData_listInfo implements CommonResults {
+    /**
+     * @summary `name`.
+     * @description
+     *
+     * Present if an alias was deref'd and the returned name ≠ `object`.
+     *
+     * @public
+     * @readonly
+     */
+    public readonly name: OPTIONAL<Name>;
+    /**
+     * @summary `subordinates`.
+     * @description
+     *
+     * SET OF. Order insignificant unless paging/sort.
+     *
+     * @public
+     * @readonly
+     */
+    public readonly subordinates: ListResultData_listInfo_subordinates_Item[];
+    /**
+     * @summary `partialOutcomeQualifier`.
+     * @description
+     *
+     * Present for incomplete lists / limit problems. Partial results
+     * are an arbitrary selection.
+     *
+     * @public
+     * @readonly
+     */
+    public readonly partialOutcomeQualifier?: OPTIONAL<PartialOutcomeQualifier>;
+    /**
+     * @summary Extensions that are not recognized.
+     * @public
+     * @readonly
+     */
+    public readonly _unrecognizedExtensionsList: _Element[];
+    /**
+     * @summary `securityParameters`.
+     * @public
+     * @readonly
+     */
+    public readonly securityParameters?: OPTIONAL<SecurityParameters>; /* REPLICATED_COMPONENT */
+    /**
+     * @summary `performer`.
+     * @public
+     * @readonly
+     */
+    public readonly performer?: OPTIONAL<DistinguishedName>; /* REPLICATED_COMPONENT */
+    /**
+     * @summary `aliasDereferenced`.
+     * @public
+     * @readonly
+     */
+    public readonly aliasDereferenced?: OPTIONAL<BOOLEAN>; /* REPLICATED_COMPONENT */
+    /**
+     * @summary `notification`.
+     * @public
+     * @readonly
+     */
+    public readonly notification?: OPTIONAL<Attribute[]>; /* REPLICATED_COMPONENT */
+
     constructor(
-        /**
-         * @summary `name`.
-         * @description
-         *
-         * Present if an alias was deref'd and the returned name ≠ `object`.
-         *
-         * @public
-         * @readonly
-         */
-        readonly name: OPTIONAL<Name>,
-        /**
-         * @summary `subordinates`.
-         * @description
-         *
-         * SET OF. Order insignificant unless paging/sort.
-         *
-         * @public
-         * @readonly
-         */
-        readonly subordinates: ListResultData_listInfo_subordinates_Item[],
-        /**
-         * @summary `partialOutcomeQualifier`.
-         * @description
-         *
-         * Present for incomplete lists / limit problems. Partial results
-         * are an arbitrary selection.
-         *
-         * @public
-         * @readonly
-         */
-        readonly partialOutcomeQualifier?: OPTIONAL<PartialOutcomeQualifier>,
-        /**
-         * @summary Extensions that are not recognized.
-         * @public
-         * @readonly
-         */
-        readonly _unrecognizedExtensionsList: _Element[] = [],
-        /**
-         * @summary `securityParameters`.
-         * @public
-         * @readonly
-         */
-        readonly securityParameters?: OPTIONAL<SecurityParameters> /* REPLICATED_COMPONENT */,
-        /**
-         * @summary `performer`.
-         * @public
-         * @readonly
-         */
-        readonly performer?: OPTIONAL<DistinguishedName> /* REPLICATED_COMPONENT */,
-        /**
-         * @summary `aliasDereferenced`.
-         * @public
-         * @readonly
-         */
-        readonly aliasDereferenced?: OPTIONAL<BOOLEAN> /* REPLICATED_COMPONENT */,
-        /**
-         * @summary `notification`.
-         * @public
-         * @readonly
-         */
-        readonly notification?: OPTIONAL<Attribute[]> /* REPLICATED_COMPONENT */
-    ) {}
+        name: OPTIONAL<Name>,
+        subordinates: ListResultData_listInfo_subordinates_Item[],
+        partialOutcomeQualifier?: OPTIONAL<PartialOutcomeQualifier>,
+        _unrecognizedExtensionsList: _Element[] = [],
+        securityParameters?: OPTIONAL<SecurityParameters>,
+        performer?: OPTIONAL<DistinguishedName>,
+        aliasDereferenced?: OPTIONAL<BOOLEAN>,
+        notification?: OPTIONAL<Attribute[]>
+    ) {
+        this.name = name;
+        this.subordinates = subordinates;
+        this.partialOutcomeQualifier = partialOutcomeQualifier;
+        this._unrecognizedExtensionsList = _unrecognizedExtensionsList;
+        this.securityParameters = securityParameters;
+        this.performer = performer;
+        this.aliasDereferenced = aliasDereferenced;
+        this.notification = notification;
+    }
 
     /**
      * @summary Restructures an object into a ListResultData_listInfo

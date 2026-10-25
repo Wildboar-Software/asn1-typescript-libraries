@@ -1,7 +1,7 @@
 /* eslint-disable */
 import {
-    OPTIONAL,
-    ASN1Element as _Element,
+    type OPTIONAL,
+    type ASN1Element as _Element,
     ASN1TagClass as _TagClass,
     ASN1Construction as _Construction,
     ASN1UniversalType as _UniversalType,
@@ -11,8 +11,8 @@ import {
     ASN1ConstructionError as _ConstructionError,
 } from "@wildboar/asn1";
 import * as $ from "@wildboar/asn1/functional";
-import { DistributionIntegerReal, _decode_DistributionIntegerReal, _encode_DistributionIntegerReal } from "../MachineReadableBiometricTestingAndReportingTestReport/DistributionIntegerReal.ta.mjs";
-import { ExpressionHistogram, _decode_ExpressionHistogram, _encode_ExpressionHistogram } from "../MachineReadableBiometricTestingAndReportingTestReport/ExpressionHistogram.ta.mjs";
+import { type DistributionIntegerReal, _decode_DistributionIntegerReal, _encode_DistributionIntegerReal } from "../MachineReadableBiometricTestingAndReportingTestReport/DistributionIntegerReal.ta.mjs";
+import { type ExpressionHistogram, _decode_ExpressionHistogram, _encode_ExpressionHistogram } from "../MachineReadableBiometricTestingAndReportingTestReport/ExpressionHistogram.ta.mjs";
 import { StatisticInformationSet, _decode_StatisticInformationSet, _encode_StatisticInformationSet } from "../MachineReadableBiometricTestingAndReportingTestReport/StatisticInformationSet.ta.mjs";
 
 
@@ -38,40 +38,48 @@ import { StatisticInformationSet, _decode_StatisticInformationSet, _encode_Stati
  */
 export
 class ResultMatchClosedIdentify {
+    /**
+     * @summary `cmcCurveClosed`.
+     * @description
+     *
+     * Closed-set CMC curve (Clause 6.4.4.3.4).
+     *
+     * @public
+     * @readonly
+     */
+    public readonly cmcCurveClosed: DistributionIntegerReal;
+    /**
+     * @summary `srchExecDistr`.
+     * @description
+     *
+     * Histogram of number of searches executed in closed-set
+     * identification (Clause 6.4.4.3.4).
+     *
+     * @public
+     * @readonly
+     */
+    public readonly srchExecDistr: ExpressionHistogram;
+    /**
+     * @summary `durationClosedIdentify`.
+     * @description
+     *
+     * Closed-set search duration; covers successful and failed
+     * searches (Clause 6.4.4.3.4, Annex C.2).
+     *
+     * @public
+     * @readonly
+     */
+    public readonly durationClosedIdentify?: OPTIONAL<StatisticInformationSet>;
+
     constructor (
-        /**
-         * @summary `cmcCurveClosed`.
-         * @description
-         *
-         * Closed-set CMC curve (Clause 6.4.4.3.4).
-         *
-         * @public
-         * @readonly
-         */
-        readonly cmcCurveClosed: DistributionIntegerReal,
-        /**
-         * @summary `srchExecDistr`.
-         * @description
-         *
-         * Histogram of number of searches executed in closed-set
-         * identification (Clause 6.4.4.3.4).
-         *
-         * @public
-         * @readonly
-         */
-        readonly srchExecDistr: ExpressionHistogram,
-        /**
-         * @summary `durationClosedIdentify`.
-         * @description
-         *
-         * Closed-set search duration; covers successful and failed
-         * searches (Clause 6.4.4.3.4, Annex C.2).
-         *
-         * @public
-         * @readonly
-         */
-        readonly durationClosedIdentify?: OPTIONAL<StatisticInformationSet>
-    ) {}
+        cmcCurveClosed: DistributionIntegerReal,
+        srchExecDistr: ExpressionHistogram,
+        durationClosedIdentify?: OPTIONAL<StatisticInformationSet>
+    ) {
+        this.cmcCurveClosed = cmcCurveClosed;
+        this.srchExecDistr = srchExecDistr;
+        this.durationClosedIdentify = durationClosedIdentify;
+    }
 
     /**
      * @summary Restructures an object into a ResultMatchClosedIdentify

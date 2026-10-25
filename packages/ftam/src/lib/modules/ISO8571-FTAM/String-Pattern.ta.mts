@@ -11,12 +11,12 @@ import {
 } from '@wildboar/asn1';
 import * as $ from '@wildboar/asn1/functional';
 import {
-  Equality_Comparision,
+  type Equality_Comparision,
   _decode_Equality_Comparision,
   _encode_Equality_Comparision,
 } from '../ISO8571-FTAM/Equality-Comparision.ta.mjs';
 import {
-  String_Pattern_string_value_Item,
+  type String_Pattern_string_value_Item,
   _decode_String_Pattern_string_value_Item,
   _encode_String_Pattern_string_value_Item,
 } from '../ISO8571-FTAM/String-Pattern-string-value-Item.ta.mjs';
@@ -54,7 +54,7 @@ export class String_Pattern {
    * @public
    * @readonly
    */
-  readonly equality_comparision: Equality_Comparision;
+  public readonly equality_comparision: Equality_Comparision;
   /**
    * @summary `string_value`.
    * @description
@@ -64,7 +64,7 @@ export class String_Pattern {
    * @public
    * @readonly
    */
-  readonly string_value: String_Pattern_string_value_Item[];
+  public readonly string_value: String_Pattern_string_value_Item[];
 
   constructor(
     equality_comparision: Equality_Comparision,

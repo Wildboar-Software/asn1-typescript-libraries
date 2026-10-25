@@ -2,7 +2,7 @@
 import { ASN1Element as _Element, ASN1TagClass as _TagClass } from "@wildboar/asn1";
 import * as $ from "@wildboar/asn1/functional";
 import {
-    LocalName,
+    type LocalName,
     _decode_LocalName,
     _encode_LocalName,
 } from "../InformationFramework/LocalName.ta.mjs";

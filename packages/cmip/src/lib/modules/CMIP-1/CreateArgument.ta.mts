@@ -1,6 +1,6 @@
 /* eslint-disable */
 import {
-  OPTIONAL,
+  type OPTIONAL,
   ASN1Element as _Element,
   ASN1TagClass as _TagClass,
   ASN1Construction as _Construction,
@@ -12,22 +12,22 @@ import {
 } from '@wildboar/asn1';
 import * as $ from '@wildboar/asn1/functional';
 import {
-  ObjectClass,
+  type ObjectClass,
   _decode_ObjectClass,
   _encode_ObjectClass,
 } from '../CMIP-1/ObjectClass.ta.mjs';
 import {
-  CreateArgument_managedOrSuperiorObjectInstance,
+  type CreateArgument_managedOrSuperiorObjectInstance,
   _decode_CreateArgument_managedOrSuperiorObjectInstance,
   _encode_CreateArgument_managedOrSuperiorObjectInstance,
 } from '../CMIP-1/CreateArgument-managedOrSuperiorObjectInstance.ta.mjs';
 import {
-  AccessControl,
+  type AccessControl,
   _decode_AccessControl,
   _encode_AccessControl,
 } from '../CMIP-1/AccessControl.ta.mjs';
 import {
-  ObjectInstance,
+  type ObjectInstance,
   _decode_ObjectInstance,
   _encode_ObjectInstance,
 } from '../CMIP-1/ObjectInstance.ta.mjs';
@@ -76,7 +76,7 @@ export class CreateArgument {
    * @public
    * @readonly
    */
-  readonly managedObjectClass: ObjectClass;
+  public readonly managedObjectClass: ObjectClass;
   /**
    * @summary `managedOrSuperiorObjectInstance`.
    * @description
@@ -88,7 +88,7 @@ export class CreateArgument {
    * @public
    * @readonly
    */
-  readonly managedOrSuperiorObjectInstance?: OPTIONAL<CreateArgument_managedOrSuperiorObjectInstance>;
+  public readonly managedOrSuperiorObjectInstance?: OPTIONAL<CreateArgument_managedOrSuperiorObjectInstance>;
   /**
    * @summary `accessControl`.
    * @description
@@ -98,7 +98,7 @@ export class CreateArgument {
    * @public
    * @readonly
    */
-  readonly accessControl?: OPTIONAL<AccessControl>;
+  public readonly accessControl?: OPTIONAL<AccessControl>;
   /**
    * @summary `referenceObjectInstance`.
    * @description
@@ -110,7 +110,7 @@ export class CreateArgument {
    * @public
    * @readonly
    */
-  readonly referenceObjectInstance?: OPTIONAL<ObjectInstance>;
+  public readonly referenceObjectInstance?: OPTIONAL<ObjectInstance>;
   /**
    * @summary `attributeList`.
    * @description
@@ -121,13 +121,13 @@ export class CreateArgument {
    * @public
    * @readonly
    */
-  readonly attributeList?: OPTIONAL<Attribute[]>;
+  public readonly attributeList?: OPTIONAL<Attribute[]>;
   /**
    * @summary Extensions that are not recognized.
    * @public
    * @readonly
    */
-  readonly _unrecognizedExtensionsList: _Element[];
+  public readonly _unrecognizedExtensionsList: _Element[];
 
   constructor(
     managedObjectClass: ObjectClass,

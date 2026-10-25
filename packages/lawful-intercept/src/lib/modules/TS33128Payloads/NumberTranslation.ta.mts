@@ -1,13 +1,13 @@
 /* eslint-disable */
 import {
     ASN1ConstructionError as _ConstructionError,
-    ASN1Element as _Element,
+    type ASN1Element as _Element,
     ASN1TagClass as _TagClass
 } from "@wildboar/asn1";
 import * as $ from "@wildboar/asn1/functional";
 import { PartyIndication, _decode_PartyIndication, _encode_PartyIndication, _enum_for_PartyIndication } from "../TS33128Payloads/PartyIndication.ta.mjs";
 // export { PartyIndication, _enum_for_PartyIndication, PartyIndication_callingParty /* IMPORTED_LONG_ENUMERATION_ITEM */, callingParty /* IMPORTED_SHORT_ENUMERATION_ITEM */, PartyIndication_calledParty /* IMPORTED_LONG_ENUMERATION_ITEM */, calledParty /* IMPORTED_SHORT_ENUMERATION_ITEM */, _decode_PartyIndication, _encode_PartyIndication } from "../TS33128Payloads/PartyIndication.ta.mjs";
-import { TranslationInput, _decode_TranslationInput, _encode_TranslationInput } from "../TS33128Payloads/TranslationInput.ta.mjs";
+import { type TranslationInput, _decode_TranslationInput, _encode_TranslationInput } from "../TS33128Payloads/TranslationInput.ta.mjs";
 // export { TranslationInput, _decode_TranslationInput, _encode_TranslationInput } from "../TS33128Payloads/TranslationInput.ta.mjs";
 
 
@@ -80,7 +80,7 @@ class NumberTranslation {
          * @static
          */
 
-    public static _enum_for_partyIndication = _enum_for_PartyIndication;
+    public static _enum_for_partyIndication: typeof _enum_for_PartyIndication = _enum_for_PartyIndication;
 }
 
 /**

@@ -1,13 +1,13 @@
 /* eslint-disable */
 import {
-    ASN1Element as _Element,
+    type ASN1Element as _Element,
     ASN1TagClass as _TagClass,
-    OPTIONAL,
+    type OPTIONAL,
     TRUE_BIT,
 } from "@wildboar/asn1";
 import * as $ from "@wildboar/asn1/functional";
 import {
-    DirectoryBindError_OPTIONALLY_PROTECTED_Parameter1_error,
+    type DirectoryBindError_OPTIONALLY_PROTECTED_Parameter1_error,
     _decode_DirectoryBindError_OPTIONALLY_PROTECTED_Parameter1_error,
     _encode_DirectoryBindError_OPTIONALLY_PROTECTED_Parameter1_error,
 } from "../DirectoryAbstractService/DirectoryBindError-OPTIONALLY-PROTECTED-Parameter1-error.ta.mjs";
@@ -17,7 +17,7 @@ import {
     _encode_SecurityParameters,
 } from "../DirectoryAbstractService/SecurityParameters.ta.mjs";
 import {
-    Versions,
+    type Versions,
     Versions_v1 /* IMPORTED_LONG_NAMED_BIT */,
     _decode_Versions,
     _encode_Versions,
@@ -43,43 +43,51 @@ import {
  *
  */
 export class DirectoryBindError_OPTIONALLY_PROTECTED_Parameter1 {
+    /**
+     * @summary `versions`.
+     * @description
+     *
+     * Versions the DSA supports. DEFAULT `{v1}`.
+     *
+     * @public
+     * @readonly
+     */
+    public readonly versions: OPTIONAL<Versions>;
+    /**
+     * @summary `error`.
+     * @description
+     *
+     * CHOICE `serviceError` / `securityError`. Bind service:
+     * `unavailable`, `saslBindInProgress`. Bind security:
+     * `inappropriateAuthentication`, `invalidCredentials`,
+     * `blockedCredentials`, `spkmError`,
+     * `unsupportedAuthenticationMethod`, `passwordExpired`,
+     * `inappropriateAlgorithms`.
+     *
+     * @public
+     * @readonly
+     */
+    public readonly error: DirectoryBindError_OPTIONALLY_PROTECTED_Parameter1_error;
+    /**
+     * @summary `securityParameters`.
+     * @description
+     *
+     * Shall be included if this error is signed.
+     *
+     * @public
+     * @readonly
+     */
+    public readonly securityParameters?: OPTIONAL<SecurityParameters>;
+
     constructor(
-        /**
-         * @summary `versions`.
-         * @description
-         *
-         * Versions the DSA supports. DEFAULT `{v1}`.
-         *
-         * @public
-         * @readonly
-         */
-        readonly versions: OPTIONAL<Versions>,
-        /**
-         * @summary `error`.
-         * @description
-         *
-         * CHOICE `serviceError` / `securityError`. Bind service:
-         * `unavailable`, `saslBindInProgress`. Bind security:
-         * `inappropriateAuthentication`, `invalidCredentials`,
-         * `blockedCredentials`, `spkmError`,
-         * `unsupportedAuthenticationMethod`, `passwordExpired`,
-         * `inappropriateAlgorithms`.
-         *
-         * @public
-         * @readonly
-         */
-        readonly error: DirectoryBindError_OPTIONALLY_PROTECTED_Parameter1_error,
-        /**
-         * @summary `securityParameters`.
-         * @description
-         *
-         * Shall be included if this error is signed.
-         *
-         * @public
-         * @readonly
-         */
-        readonly securityParameters?: OPTIONAL<SecurityParameters>
-    ) {}
+        versions: OPTIONAL<Versions>,
+        error: DirectoryBindError_OPTIONALLY_PROTECTED_Parameter1_error,
+        securityParameters?: OPTIONAL<SecurityParameters>
+    ) {
+        this.versions = versions;
+        this.error = error;
+        this.securityParameters = securityParameters;
+    }
 
     /**
      * @summary Restructures an object into a DirectoryBindError_OPTIONALLY_PROTECTED_Parameter1

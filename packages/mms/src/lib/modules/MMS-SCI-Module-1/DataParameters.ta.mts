@@ -1,9 +1,9 @@
 /* eslint-disable */
 import {
-    OPTIONAL,
-    BOOLEAN,
-    INTEGER,
-    ASN1Element as _Element,
+    type OPTIONAL,
+    type BOOLEAN,
+    type INTEGER,
+    type ASN1Element as _Element,
     ASN1TagClass as _TagClass,
     ASN1Construction as _Construction,
     ASN1UniversalType as _UniversalType,
@@ -46,78 +46,98 @@ import { DataParameters_floating_point, _decode_DataParameters_floating_point, _
  */
 export
 class DataParameters {
+    /**
+     * @summary `bit_string`.
+     * @public
+     * @readonly
+     */
+    public readonly bit_string?: OPTIONAL<INTEGER>;
+    /**
+     * @summary `integer`.
+     * @description
+     *
+     * Max integer size, if constrained. ISO 9506-2:2003 Annex B.2.6.
+     *
+     * @public
+     * @readonly
+     */
+    public readonly integer?: OPTIONAL<INTEGER>;
+    /**
+     * @summary `unsigned`.
+     * @description
+     *
+     * Max unsigned size, if constrained. ISO 9506-2:2003 Annex B.2.6.
+     *
+     * @public
+     * @readonly
+     */
+    public readonly unsigned?: OPTIONAL<INTEGER>;
+    /**
+     * @summary `floating_point`.
+     * @public
+     * @readonly
+     */
+    public readonly floating_point?: OPTIONAL<DataParameters_floating_point>;
+    /**
+     * @summary `octet_string`.
+     * @public
+     * @readonly
+     */
+    public readonly octet_string?: OPTIONAL<INTEGER>;
+    /**
+     * @summary `visible_string`.
+     * @public
+     * @readonly
+     */
+    public readonly visible_string?: OPTIONAL<INTEGER>;
+    /**
+     * @summary `binary_time`.
+     * @public
+     * @readonly
+     */
+    public readonly binary_time?: OPTIONAL<BOOLEAN>;
+    /**
+     * @summary `bcd`.
+     * @description
+     *
+     * BCD size, if constrained. ISO 9506-2:2003 Annex B.2.6.
+     *
+     * @public
+     * @readonly
+     */
+    public readonly bcd?: OPTIONAL<INTEGER>;
+    /**
+     * @summary `mmsString`.
+     * @description
+     *
+     * Max MMSString size, if constrained. ISO 9506-2:2003 Annex B.2.6.
+     *
+     * @public
+     * @readonly
+     */
+    public readonly mmsString?: OPTIONAL<INTEGER>;
+
     constructor (
-        /**
-         * @summary `bit_string`.
-         * @public
-         * @readonly
-         */
-        readonly bit_string?: OPTIONAL<INTEGER>,
-        /**
-         * @summary `integer`.
-         * @description
-         *
-         * Max integer size, if constrained. ISO 9506-2:2003 Annex B.2.6.
-         *
-         * @public
-         * @readonly
-         */
-        readonly integer?: OPTIONAL<INTEGER>,
-        /**
-         * @summary `unsigned`.
-         * @description
-         *
-         * Max unsigned size, if constrained. ISO 9506-2:2003 Annex B.2.6.
-         *
-         * @public
-         * @readonly
-         */
-        readonly unsigned?: OPTIONAL<INTEGER>,
-        /**
-         * @summary `floating_point`.
-         * @public
-         * @readonly
-         */
-        readonly floating_point?: OPTIONAL<DataParameters_floating_point>,
-        /**
-         * @summary `octet_string`.
-         * @public
-         * @readonly
-         */
-        readonly octet_string?: OPTIONAL<INTEGER>,
-        /**
-         * @summary `visible_string`.
-         * @public
-         * @readonly
-         */
-        readonly visible_string?: OPTIONAL<INTEGER>,
-        /**
-         * @summary `binary_time`.
-         * @public
-         * @readonly
-         */
-        readonly binary_time?: OPTIONAL<BOOLEAN>,
-        /**
-         * @summary `bcd`.
-         * @description
-         *
-         * BCD size, if constrained. ISO 9506-2:2003 Annex B.2.6.
-         *
-         * @public
-         * @readonly
-         */
-        readonly bcd?: OPTIONAL<INTEGER>,
-        /**
-         * @summary `mmsString`.
-         * @description
-         *
-         * Max MMSString size, if constrained. ISO 9506-2:2003 Annex B.2.6.
-         *
-         * @public
-         * @readonly
-         */
-        readonly mmsString?: OPTIONAL<INTEGER>
-    ) {}
+        bit_string?: OPTIONAL<INTEGER>,
+        integer?: OPTIONAL<INTEGER>,
+        unsigned?: OPTIONAL<INTEGER>,
+        floating_point?: OPTIONAL<DataParameters_floating_point>,
+        octet_string?: OPTIONAL<INTEGER>,
+        visible_string?: OPTIONAL<INTEGER>,
+        binary_time?: OPTIONAL<BOOLEAN>,
+        bcd?: OPTIONAL<INTEGER>,
+        mmsString?: OPTIONAL<INTEGER>
+    ) {
+        this.bit_string = bit_string;
+        this.integer = integer;
+        this.unsigned = unsigned;
+        this.floating_point = floating_point;
+        this.octet_string = octet_string;
+        this.visible_string = visible_string;
+        this.binary_time = binary_time;
+        this.bcd = bcd;
+        this.mmsString = mmsString;
+    }
 
     /**
      * @summary Restructures an object into a DataParameters

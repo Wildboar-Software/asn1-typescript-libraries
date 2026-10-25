@@ -1,12 +1,12 @@
 /* eslint-disable */
 import {
-    OPTIONAL,
-    ASN1Element as _Element,
+    type OPTIONAL,
+    type ASN1Element as _Element,
     ASN1TagClass as _TagClass
 } from "@wildboar/asn1";
 import * as $ from "@wildboar/asn1/functional";
 import { IndAudTerminationStateDescriptor, _decode_IndAudTerminationStateDescriptor, _encode_IndAudTerminationStateDescriptor } from "../MEDIA-GATEWAY-CONTROL/IndAudTerminationStateDescriptor.ta.mjs";
-import { IndAudMediaDescriptor_streams, _decode_IndAudMediaDescriptor_streams, _encode_IndAudMediaDescriptor_streams } from "../MEDIA-GATEWAY-CONTROL/IndAudMediaDescriptor-streams.ta.mjs";
+import { type IndAudMediaDescriptor_streams, _decode_IndAudMediaDescriptor_streams, _encode_IndAudMediaDescriptor_streams } from "../MEDIA-GATEWAY-CONTROL/IndAudMediaDescriptor-streams.ta.mjs";
 
 
 /**
@@ -45,7 +45,7 @@ class IndAudMediaDescriptor {
      * @public
      * @readonly
      */
-    readonly termStateDescr?: OPTIONAL<IndAudTerminationStateDescriptor>;
+    public readonly termStateDescr?: OPTIONAL<IndAudTerminationStateDescriptor>;
     /**
      * @summary `streams`.
      * @description
@@ -57,7 +57,7 @@ class IndAudMediaDescriptor {
      * @public
      * @readonly
      */
-    readonly streams?: OPTIONAL<IndAudMediaDescriptor_streams>;
+    public readonly streams?: OPTIONAL<IndAudMediaDescriptor_streams>;
     /**
      * @summary Extensions that are not recognized.
      * @description
@@ -68,7 +68,7 @@ class IndAudMediaDescriptor {
      * @public
      * @readonly
      */
-    readonly _unrecognizedExtensionsList: _Element[];
+    public readonly _unrecognizedExtensionsList: _Element[];
 
     constructor (
         termStateDescr?: OPTIONAL<IndAudTerminationStateDescriptor>,

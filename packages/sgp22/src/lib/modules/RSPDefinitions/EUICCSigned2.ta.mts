@@ -1,13 +1,13 @@
 /* eslint-disable */
 import {
-    OCTET_STRING,
-    OPTIONAL,
-    ASN1Element as _Element,
+    type OCTET_STRING,
+    type OPTIONAL,
+    type ASN1Element as _Element,
     ASN1TagClass as _TagClass
 } from "@wildboar/asn1";
 import * as $ from "@wildboar/asn1/functional";
-import { TransactionId, _decode_TransactionId, _encode_TransactionId } from "../RSPDefinitions/TransactionId.ta.mjs";
-import { Octet32, _decode_Octet32, _encode_Octet32 } from "../RSPDefinitions/Octet32.ta.mjs";
+import { type TransactionId, _decode_TransactionId, _encode_TransactionId } from "../RSPDefinitions/TransactionId.ta.mjs";
+import { type Octet32, _decode_Octet32, _encode_Octet32 } from "../RSPDefinitions/Octet32.ta.mjs";
 
 
 /**
@@ -44,7 +44,7 @@ class EUICCSigned2 {
      * @public
      * @readonly
      */
-    readonly transactionId: TransactionId;
+    public readonly transactionId: TransactionId;
     /**
      * @summary `euiccOtpk`.
      * @description
@@ -55,7 +55,7 @@ class EUICCSigned2 {
      * @public
      * @readonly
      */
-    readonly euiccOtpk: OCTET_STRING;
+    public readonly euiccOtpk: OCTET_STRING;
     /**
      * @summary `hashCc`.
      * @description
@@ -67,7 +67,7 @@ class EUICCSigned2 {
      * @public
      * @readonly
      */
-    readonly hashCc?: OPTIONAL<Octet32>;
+    public readonly hashCc?: OPTIONAL<Octet32>;
 
     constructor (
         transactionId: TransactionId,

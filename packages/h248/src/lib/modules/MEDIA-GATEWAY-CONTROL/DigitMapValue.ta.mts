@@ -1,10 +1,10 @@
 /* eslint-disable */
 import {
-    ASN1Element as _Element,
+    type ASN1Element as _Element,
     ASN1TagClass as _TagClass,
-    IA5String,
-    INTEGER,
-    OPTIONAL,
+    type IA5String,
+    type INTEGER,
+    type OPTIONAL,
     ASN1OverflowError
 } from "@wildboar/asn1";
 import * as $ from "@wildboar/asn1/functional";
@@ -56,7 +56,7 @@ class DigitMapValue {
      * @public
      * @readonly
      */
-    readonly startTimer: OPTIONAL<INTEGER>;
+    public readonly startTimer: OPTIONAL<INTEGER>;
     /**
      * @summary `shortTimer`.
      * @description
@@ -68,7 +68,7 @@ class DigitMapValue {
      * @public
      * @readonly
      */
-    readonly shortTimer: OPTIONAL<INTEGER>;
+    public readonly shortTimer: OPTIONAL<INTEGER>;
     /**
      * @summary `longTimer`.
      * @description
@@ -79,7 +79,7 @@ class DigitMapValue {
      * @public
      * @readonly
      */
-    readonly longTimer: OPTIONAL<INTEGER>;
+    public readonly longTimer: OPTIONAL<INTEGER>;
     /**
      * @summary `digitMapBody`.
      * @description
@@ -93,7 +93,7 @@ class DigitMapValue {
      * @public
      * @readonly
      */
-    readonly digitMapBody: IA5String;
+    public readonly digitMapBody: IA5String;
     /**
      * @summary `durationTimer`.
      * @description
@@ -105,7 +105,7 @@ class DigitMapValue {
      * @public
      * @readonly
      */
-    readonly durationTimer?: OPTIONAL<INTEGER>;
+    public readonly durationTimer?: OPTIONAL<INTEGER>;
     /**
      * @summary Extensions that are not recognized.
      * @description
@@ -116,7 +116,7 @@ class DigitMapValue {
      * @public
      * @readonly
      */
-    readonly _unrecognizedExtensionsList: _Element[];
+    public readonly _unrecognizedExtensionsList: _Element[];
 
     constructor (
         startTimer: OPTIONAL<INTEGER>,

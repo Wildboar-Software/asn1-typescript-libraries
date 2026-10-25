@@ -1,7 +1,7 @@
 /* eslint-disable */
 import {
-    ABSTRACT_SYNTAX,
-    ASN1Element as _Element,
+    type ABSTRACT_SYNTAX,
+    type ASN1Element as _Element,
     ASN1TagClass as _TagClass,
     ASN1Construction as _Construction,
     ASN1UniversalType as _UniversalType,
@@ -11,7 +11,7 @@ import {
     ASN1ConstructionError as _ConstructionError,
 } from '@wildboar/asn1';
 import {
-    MessageDeliveryPDUs88,
+    type MessageDeliveryPDUs88,
     _decode_MessageDeliveryPDUs88,
     _encode_MessageDeliveryPDUs88,
 } from '../MTSAccessProtocol/MessageDeliveryPDUs88.ta.mjs';

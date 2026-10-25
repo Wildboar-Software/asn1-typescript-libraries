@@ -1,11 +1,11 @@
 /* eslint-disable */
 import {
-    ASN1Element as _Element,
+    type ASN1Element as _Element,
     ASN1TagClass as _TagClass
 } from "@wildboar/asn1";
 import * as $ from "@wildboar/asn1/functional";
 import { GetCertsResponse_certs, _decode_GetCertsResponse_certs, _encode_GetCertsResponse_certs } from "../SGP32Definitions/GetCertsResponse-certs.ta.mjs";
-import { GetCertsResponse_getCertsError, _decode_GetCertsResponse_getCertsError, _encode_GetCertsResponse_getCertsError } from "../SGP32Definitions/GetCertsResponse-getCertsError.ta.mjs";
+import { type GetCertsResponse_getCertsError, _decode_GetCertsResponse_getCertsError, _encode_GetCertsResponse_getCertsError } from "../SGP32Definitions/GetCertsResponse-getCertsError.ta.mjs";
 
 
 /**

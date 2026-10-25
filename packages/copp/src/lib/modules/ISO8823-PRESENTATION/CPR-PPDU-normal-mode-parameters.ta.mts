@@ -1,8 +1,8 @@
 /* eslint-disable */
 import {
-    OPTIONAL,
+    type OPTIONAL,
     TRUE_BIT,
-    ASN1Element as _Element,
+    type ASN1Element as _Element,
     ASN1TagClass as _TagClass,
     ASN1Construction as _Construction,
     ASN1UniversalType as _UniversalType,
@@ -13,33 +13,33 @@ import {
 } from '@wildboar/asn1';
 import * as $ from '@wildboar/asn1/functional';
 import {
-    Protocol_version,
+    type Protocol_version,
     Protocol_version_version_1 /* IMPORTED_LONG_NAMED_BIT */,
     _decode_Protocol_version,
     _encode_Protocol_version,
 } from '../ISO8823-PRESENTATION/Protocol-version.ta.mjs';
 import {
-    Responding_presentation_selector,
+    type Responding_presentation_selector,
     _decode_Responding_presentation_selector,
     _encode_Responding_presentation_selector,
 } from '../ISO8823-PRESENTATION/Responding-presentation-selector.ta.mjs';
 import {
-    Presentation_context_definition_result_list,
+    type Presentation_context_definition_result_list,
     _decode_Presentation_context_definition_result_list,
     _encode_Presentation_context_definition_result_list,
 } from '../ISO8823-PRESENTATION/Presentation-context-definition-result-list.ta.mjs';
 import {
-    Default_context_result,
+    type Default_context_result,
     _decode_Default_context_result,
     _encode_Default_context_result,
 } from '../ISO8823-PRESENTATION/Default-context-result.ta.mjs';
 import {
-    Provider_reason,
+    type Provider_reason,
     _decode_Provider_reason,
     _encode_Provider_reason,
 } from '../ISO8823-PRESENTATION/Provider-reason.ta.mjs';
 import {
-    User_data,
+    type User_data,
     _decode_User_data,
     _encode_User_data,
 } from '../ISO8823-PRESENTATION/User-data.ta.mjs';

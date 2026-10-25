@@ -1,6 +1,6 @@
 /* eslint-disable */
 import {
-    ASN1Element as _Element,
+    type ASN1Element as _Element,
     ASN1TagClass as _TagClass,
     ASN1Construction as _Construction,
     ASN1UniversalType as _UniversalType,
@@ -69,7 +69,7 @@ export type SuspendResumeChoice = _enum_for_SuspendResumeChoice;
  *
  * @enum {number}
  */
-export const SuspendResumeChoice = _enum_for_SuspendResumeChoice;
+export const SuspendResumeChoice: typeof _enum_for_SuspendResumeChoice = _enum_for_SuspendResumeChoice;
 
 /**
  * @summary SuspendResumeChoice_suspend
@@ -82,7 +82,7 @@ export const SuspendResumeChoice = _enum_for_SuspendResumeChoice;
  * @constant
  * @type {number}
  */
-export const SuspendResumeChoice_suspend: SuspendResumeChoice =
+export const SuspendResumeChoice_suspend: _enum_for_SuspendResumeChoice.suspend =
     SuspendResumeChoice.suspend; /* LONG_NAMED_ENUMERATED_VALUE */
 
 /**
@@ -96,7 +96,7 @@ export const SuspendResumeChoice_suspend: SuspendResumeChoice =
  * @constant
  * @type {number}
  */
-export const suspend: SuspendResumeChoice =
+export const suspend: _enum_for_SuspendResumeChoice.suspend =
     SuspendResumeChoice.suspend; /* SHORT_NAMED_ENUMERATED_VALUE */
 
 /**
@@ -110,7 +110,7 @@ export const suspend: SuspendResumeChoice =
  * @constant
  * @type {number}
  */
-export const SuspendResumeChoice_resume: SuspendResumeChoice =
+export const SuspendResumeChoice_resume: _enum_for_SuspendResumeChoice.resume =
     SuspendResumeChoice.resume; /* LONG_NAMED_ENUMERATED_VALUE */
 
 /**
@@ -124,14 +124,25 @@ export const SuspendResumeChoice_resume: SuspendResumeChoice =
  * @constant
  * @type {number}
  */
-export const resume: SuspendResumeChoice =
+export const resume: _enum_for_SuspendResumeChoice.resume =
     SuspendResumeChoice.resume; /* SHORT_NAMED_ENUMERATED_VALUE */
 
 
-export const _decode_SuspendResumeChoice = $._decodeEnumerated;
+export function _decode_SuspendResumeChoice(el: _Element): SuspendResumeChoice {
+    const enumerated = $._decodeEnumerated(el);
+    switch (enumerated) {
+        case SuspendResumeChoice.suspend: return SuspendResumeChoice.suspend;
+        case SuspendResumeChoice.resume: return SuspendResumeChoice.resume;
+        default:
+            throw new _ConstructionError(
+                'Invalid ENUMERATED value ' + enumerated + ' for SuspendResumeChoice.',
+                el,
+            );
+    }
+}
 
 
-export const _encode_SuspendResumeChoice = $._encodeEnumerated;
+export const _encode_SuspendResumeChoice: $.ASN1Encoder<SuspendResumeChoice> = $._encodeEnumerated as $.ASN1Encoder<SuspendResumeChoice>;
 
 
 /* eslint-enable */

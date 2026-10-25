@@ -1,6 +1,6 @@
 /* eslint-disable */
 import {
-    ASN1Element as _Element,
+    type ASN1Element as _Element,
     ASN1TagClass as _TagClass,
     ASN1Construction as _Construction,
     ASN1UniversalType as _UniversalType,
@@ -94,7 +94,7 @@ export type TONotCreated_reason = _enum_for_TONotCreated_reason;
  *
  * @enum {number}
  */
-export const TONotCreated_reason = _enum_for_TONotCreated_reason;
+export const TONotCreated_reason: typeof _enum_for_TONotCreated_reason = _enum_for_TONotCreated_reason;
 
 /**
  * @summary TONotCreated_reason_invalidTOclass
@@ -107,7 +107,7 @@ export const TONotCreated_reason = _enum_for_TONotCreated_reason;
  * @constant
  * @type {number}
  */
-export const TONotCreated_reason_invalidTOclass: TONotCreated_reason =
+export const TONotCreated_reason_invalidTOclass: _enum_for_TONotCreated_reason.invalidTOclass =
     TONotCreated_reason.invalidTOclass; /* LONG_NAMED_ENUMERATED_VALUE */
 
 /**
@@ -121,7 +121,7 @@ export const TONotCreated_reason_invalidTOclass: TONotCreated_reason =
  * @constant
  * @type {number}
  */
-export const invalidTOclass: TONotCreated_reason =
+export const invalidTOclass: _enum_for_TONotCreated_reason.invalidTOclass =
     TONotCreated_reason.invalidTOclass; /* SHORT_NAMED_ENUMERATED_VALUE */
 
 /**
@@ -134,7 +134,7 @@ export const invalidTOclass: TONotCreated_reason =
  * @constant
  * @type {number}
  */
-export const TONotCreated_reason_duplicateTOInstance: TONotCreated_reason =
+export const TONotCreated_reason_duplicateTOInstance: _enum_for_TONotCreated_reason.duplicateTOInstance =
     TONotCreated_reason.duplicateTOInstance; /* LONG_NAMED_ENUMERATED_VALUE */
 
 /**
@@ -147,7 +147,7 @@ export const TONotCreated_reason_duplicateTOInstance: TONotCreated_reason =
  * @constant
  * @type {number}
  */
-export const duplicateTOInstance: TONotCreated_reason =
+export const duplicateTOInstance: _enum_for_TONotCreated_reason.duplicateTOInstance =
     TONotCreated_reason.duplicateTOInstance; /* SHORT_NAMED_ENUMERATED_VALUE */
 
 /**
@@ -160,7 +160,7 @@ export const duplicateTOInstance: TONotCreated_reason =
  * @constant
  * @type {number}
  */
-export const TONotCreated_reason_invalidMORTClass: TONotCreated_reason =
+export const TONotCreated_reason_invalidMORTClass: _enum_for_TONotCreated_reason.invalidMORTClass =
     TONotCreated_reason.invalidMORTClass; /* LONG_NAMED_ENUMERATED_VALUE */
 
 /**
@@ -173,7 +173,7 @@ export const TONotCreated_reason_invalidMORTClass: TONotCreated_reason =
  * @constant
  * @type {number}
  */
-export const invalidMORTClass: TONotCreated_reason =
+export const invalidMORTClass: _enum_for_TONotCreated_reason.invalidMORTClass =
     TONotCreated_reason.invalidMORTClass; /* SHORT_NAMED_ENUMERATED_VALUE */
 
 /**
@@ -187,7 +187,7 @@ export const invalidMORTClass: TONotCreated_reason =
  * @constant
  * @type {number}
  */
-export const TONotCreated_reason_invalidAssociatedObjectClass: TONotCreated_reason =
+export const TONotCreated_reason_invalidAssociatedObjectClass: _enum_for_TONotCreated_reason.invalidAssociatedObjectClass =
     TONotCreated_reason.invalidAssociatedObjectClass; /* LONG_NAMED_ENUMERATED_VALUE */
 
 /**
@@ -201,7 +201,7 @@ export const TONotCreated_reason_invalidAssociatedObjectClass: TONotCreated_reas
  * @constant
  * @type {number}
  */
-export const invalidAssociatedObjectClass: TONotCreated_reason =
+export const invalidAssociatedObjectClass: _enum_for_TONotCreated_reason.invalidAssociatedObjectClass =
     TONotCreated_reason.invalidAssociatedObjectClass; /* SHORT_NAMED_ENUMERATED_VALUE */
 
 /**
@@ -215,7 +215,7 @@ export const invalidAssociatedObjectClass: TONotCreated_reason =
  * @constant
  * @type {number}
  */
-export const TONotCreated_reason_mORTNotAvailable: TONotCreated_reason =
+export const TONotCreated_reason_mORTNotAvailable: _enum_for_TONotCreated_reason.mORTNotAvailable =
     TONotCreated_reason.mORTNotAvailable; /* LONG_NAMED_ENUMERATED_VALUE */
 
 /**
@@ -229,7 +229,7 @@ export const TONotCreated_reason_mORTNotAvailable: TONotCreated_reason =
  * @constant
  * @type {number}
  */
-export const mORTNotAvailable: TONotCreated_reason =
+export const mORTNotAvailable: _enum_for_TONotCreated_reason.mORTNotAvailable =
     TONotCreated_reason.mORTNotAvailable; /* SHORT_NAMED_ENUMERATED_VALUE */
 
 /**
@@ -243,7 +243,7 @@ export const mORTNotAvailable: TONotCreated_reason =
  * @constant
  * @type {number}
  */
-export const TONotCreated_reason_associatedObjectNotAvailable: TONotCreated_reason =
+export const TONotCreated_reason_associatedObjectNotAvailable: _enum_for_TONotCreated_reason.associatedObjectNotAvailable =
     TONotCreated_reason.associatedObjectNotAvailable; /* LONG_NAMED_ENUMERATED_VALUE */
 
 /**
@@ -257,14 +257,29 @@ export const TONotCreated_reason_associatedObjectNotAvailable: TONotCreated_reas
  * @constant
  * @type {number}
  */
-export const associatedObjectNotAvailable: TONotCreated_reason =
+export const associatedObjectNotAvailable: _enum_for_TONotCreated_reason.associatedObjectNotAvailable =
     TONotCreated_reason.associatedObjectNotAvailable; /* SHORT_NAMED_ENUMERATED_VALUE */
 
 
-export const _decode_TONotCreated_reason = $._decodeEnumerated;
+export function _decode_TONotCreated_reason(el: _Element): TONotCreated_reason {
+    const enumerated = $._decodeEnumerated(el);
+    switch (enumerated) {
+        case TONotCreated_reason.invalidTOclass: return TONotCreated_reason.invalidTOclass;
+        case TONotCreated_reason.duplicateTOInstance: return TONotCreated_reason.duplicateTOInstance;
+        case TONotCreated_reason.invalidMORTClass: return TONotCreated_reason.invalidMORTClass;
+        case TONotCreated_reason.invalidAssociatedObjectClass: return TONotCreated_reason.invalidAssociatedObjectClass;
+        case TONotCreated_reason.mORTNotAvailable: return TONotCreated_reason.mORTNotAvailable;
+        case TONotCreated_reason.associatedObjectNotAvailable: return TONotCreated_reason.associatedObjectNotAvailable;
+        default:
+            throw new _ConstructionError(
+                'Invalid ENUMERATED value ' + enumerated + ' for TONotCreated_reason.',
+                el,
+            );
+    }
+}
 
 
-export const _encode_TONotCreated_reason = $._encodeEnumerated;
+export const _encode_TONotCreated_reason: $.ASN1Encoder<TONotCreated_reason> = $._encodeEnumerated as $.ASN1Encoder<TONotCreated_reason>;
 
 
 /* eslint-enable */

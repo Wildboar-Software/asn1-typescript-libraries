@@ -1,12 +1,12 @@
 /* eslint-disable */
 import {
-    ASN1Element as _Element,
+    type ASN1Element as _Element,
     ASN1TagClass as _TagClass
 } from "@wildboar/asn1";
 import * as $ from "@wildboar/asn1/functional";
 import { EuiccPackageRequest, _decode_EuiccPackageRequest, _encode_EuiccPackageRequest } from "../SGP32Definitions/EuiccPackageRequest.ta.mjs";
 import { IpaEuiccDataRequest, _decode_IpaEuiccDataRequest, _encode_IpaEuiccDataRequest } from "../SGP32Definitions/IpaEuiccDataRequest.ta.mjs";
-import { EimAcknowledgements, _decode_EimAcknowledgements, _encode_EimAcknowledgements } from "../SGP32Definitions/EimAcknowledgements.ta.mjs";
+import { type EimAcknowledgements, _decode_EimAcknowledgements, _encode_EimAcknowledgements } from "../SGP32Definitions/EimAcknowledgements.ta.mjs";
 import { ProfileDownloadTriggerRequest, _decode_ProfileDownloadTriggerRequest, _encode_ProfileDownloadTriggerRequest } from "../SGP32Definitions/ProfileDownloadTriggerRequest.ta.mjs";
 
 

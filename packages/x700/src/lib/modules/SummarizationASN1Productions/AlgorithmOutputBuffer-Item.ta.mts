@@ -1,6 +1,6 @@
 /* eslint-disable */
 import {
-    ASN1Element as _Element,
+    type ASN1Element as _Element,
     ASN1TagClass as _TagClass,
     ASN1Construction as _Construction,
     ASN1UniversalType as _UniversalType,
@@ -11,12 +11,12 @@ import {
 } from '@wildboar/asn1';
 import * as $ from '@wildboar/asn1/functional';
 import {
-    AttributeId,
+    type AttributeId,
     _decode_AttributeId,
     _encode_AttributeId,
 } from '@wildboar/cmip';
 import {
-    ObservedValue,
+    type ObservedValue,
     _decode_ObservedValue,
     _encode_ObservedValue,
 } from '@wildboar/attribute-asn1module';
@@ -40,30 +40,36 @@ import {
  *
  */
 export class AlgorithmOutputBuffer_Item {
+    /**
+     * @summary `attributeId`.
+     * @description
+     *
+     * Numeric attribute to which `algorithmOutput`
+     * applies. X.738 §8.2.2.2.3.
+     * @public
+     * @readonly
+     */
+    public readonly attributeId: AttributeId;
+    /**
+     * @summary `algorithmOutput`.
+     * @description
+     *
+     * Ordered results. Mean: N, mean. Mean-variance: N,
+     * mean, variance. Min-max: N, min, max, optional
+     * mean. Percentile: N, min, jth, median, (100−j)th,
+     * max, optional mean. X.738 §8.1.4.2–8.1.7.2.
+     * @public
+     * @readonly
+     */
+    public readonly algorithmOutput: ObservedValue[];
+
     constructor(
-        /**
-         * @summary `attributeId`.
-         * @description
-         *
-         * Numeric attribute to which `algorithmOutput`
-         * applies. X.738 §8.2.2.2.3.
-         * @public
-         * @readonly
-         */
-        readonly attributeId: AttributeId,
-        /**
-         * @summary `algorithmOutput`.
-         * @description
-         *
-         * Ordered results. Mean: N, mean. Mean-variance: N,
-         * mean, variance. Min-max: N, min, max, optional
-         * mean. Percentile: N, min, jth, median, (100−j)th,
-         * max, optional mean. X.738 §8.1.4.2–8.1.7.2.
-         * @public
-         * @readonly
-         */
-        readonly algorithmOutput: ObservedValue[]
-    ) {}
+        attributeId: AttributeId,
+        algorithmOutput: ObservedValue[]
+    ) {
+        this.attributeId = attributeId;
+        this.algorithmOutput = algorithmOutput;
+    }
 
     /**
      * @summary Restructures an object into a AlgorithmOutputBuffer_Item

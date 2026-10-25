@@ -2,7 +2,7 @@
 import { ASN1Element as _Element, ASN1TagClass as _TagClass } from "@wildboar/asn1";
 import * as $ from "@wildboar/asn1/functional";
 import {
-    AuthenticationObject,
+    type AuthenticationObject,
     _get_decoder_for_AuthenticationObject,
     _get_encoder_for_AuthenticationObject,
 } from "../PKCS-15/AuthenticationObject.ta.mjs";
@@ -17,7 +17,7 @@ import {
     _encode_BiometricAttributes,
 } from "../PKCS-15/BiometricAttributes.ta.mjs";
 import {
-    ExternalAuthObjectAttributes,
+    type ExternalAuthObjectAttributes,
     _decode_ExternalAuthObjectAttributes,
     _encode_ExternalAuthObjectAttributes,
 } from "../PKCS-15/ExternalAuthObjectAttributes.ta.mjs";

@@ -1,12 +1,12 @@
 /* eslint-disable */
 import {
-    UTF8String,
+    type UTF8String,
     ASN1ConstructionError as _ConstructionError,
-    ASN1Element as _Element,
+    type ASN1Element as _Element,
     ASN1TagClass as _TagClass
 } from "@wildboar/asn1";
 import * as $ from "@wildboar/asn1/functional";
-import { PFDs, _decode_PFDs, _encode_PFDs } from "../TS33128Payloads/PFDs.ta.mjs";
+import { type PFDs, _decode_PFDs, _encode_PFDs } from "../TS33128Payloads/PFDs.ta.mjs";
 // export { PFDs, _decode_PFDs, _encode_PFDs } from "../TS33128Payloads/PFDs.ta.mjs";
 
 

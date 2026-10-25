@@ -1,6 +1,6 @@
 /* eslint-disable */
 import {
-    ASN1Element as _Element,
+    type ASN1Element as _Element,
     ASN1TagClass as _TagClass,
     ASN1Construction as _Construction,
     ASN1UniversalType as _UniversalType,
@@ -11,12 +11,12 @@ import {
 } from '@wildboar/asn1';
 import * as $ from '@wildboar/asn1/functional';
 import {
-    AttributeProblem,
+    type AttributeProblem,
     _decode_AttributeProblem,
     _encode_AttributeProblem,
 } from '../MSAbstractService/AttributeProblem.ta.mjs';
 import {
-    AttributeType,
+    type AttributeType,
     _decode_AttributeType,
     _encode_AttributeType,
 } from '../MSAbstractService/AttributeType.ta.mjs';
@@ -34,20 +34,26 @@ import {
  *
  */
 export class AttributeError_problems_Item {
+    /**
+     * @summary `problem`.
+     * @public
+     * @readonly
+     */
+    public readonly problem: AttributeProblem;
+    /**
+     * @summary `type_`.
+     * @public
+     * @readonly
+     */
+    public readonly type_: AttributeType;
+
     constructor(
-        /**
-         * @summary `problem`.
-         * @public
-         * @readonly
-         */
-        readonly problem: AttributeProblem,
-        /**
-         * @summary `type_`.
-         * @public
-         * @readonly
-         */
-        readonly type_: AttributeType
-    ) {}
+        problem: AttributeProblem,
+        type_: AttributeType
+    ) {
+        this.problem = problem;
+        this.type_ = type_;
+    }
 
     /**
      * @summary Restructures an object into a AttributeError_problems_Item

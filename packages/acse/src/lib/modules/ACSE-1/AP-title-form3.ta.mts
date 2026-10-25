@@ -1,6 +1,6 @@
 /* eslint-disable */
 import {
-  PrintableString,
+  type PrintableString,
   ASN1Element as _Element,
   ASN1TagClass as _TagClass,
   ASN1Construction as _Construction,
@@ -28,10 +28,10 @@ import * as $ from '@wildboar/asn1/functional';
 export type AP_title_form3 = PrintableString; // PrintableString
 
 
-export const _decode_AP_title_form3 = $._decodePrintableString;
+export const _decode_AP_title_form3: $.ASN1Decoder<string> = $._decodePrintableString;
 
 
-export const _encode_AP_title_form3 = $._encodePrintableString;
+export const _encode_AP_title_form3: $.ASN1Encoder<string> = $._encodePrintableString;
 
 
 /* eslint-enable */

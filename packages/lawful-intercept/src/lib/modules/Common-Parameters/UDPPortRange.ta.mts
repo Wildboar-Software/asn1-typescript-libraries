@@ -1,11 +1,11 @@
 /* eslint-disable */
 import {
     ASN1ConstructionError as _ConstructionError,
-    ASN1Element as _Element,
+    type ASN1Element as _Element,
     ASN1TagClass as _TagClass
 } from "@wildboar/asn1";
 import * as $ from "@wildboar/asn1/functional";
-import { UDPPort, _decode_UDPPort, _encode_UDPPort } from "../Common-Parameters/UDPPort.ta.mjs";
+import { type UDPPort, _decode_UDPPort, _encode_UDPPort } from "../Common-Parameters/UDPPort.ta.mjs";
 // export { UDPPort, _decode_UDPPort, _encode_UDPPort } from "../Common-Parameters/UDPPort.ta.mjs";
 
 

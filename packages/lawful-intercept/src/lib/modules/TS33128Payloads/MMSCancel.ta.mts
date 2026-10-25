@@ -1,8 +1,8 @@
 /* eslint-disable */
 import {
-    UTF8String,
+    type UTF8String,
     ASN1ConstructionError as _ConstructionError,
-    ASN1Element as _Element,
+    type ASN1Element as _Element,
     ASN1TagClass as _TagClass
 } from "@wildboar/asn1";
 import * as $ from "@wildboar/asn1/functional";
@@ -133,7 +133,7 @@ class MMSCancel {
          * @static
          */
 
-    public static _enum_for_direction = _enum_for_MMSDirection;
+    public static _enum_for_direction: typeof _enum_for_MMSDirection = _enum_for_MMSDirection;
 }
 
 /**

@@ -1,9 +1,9 @@
 /* eslint-disable */
 import {
-    INTEGER,
-    OCTET_STRING,
-    OPTIONAL,
-    ASN1Element as _Element,
+    type INTEGER,
+    type OCTET_STRING,
+    type OPTIONAL,
+    type ASN1Element as _Element,
     ASN1TagClass as _TagClass,
     ASN1SizeError
 } from "@wildboar/asn1";
@@ -129,7 +129,7 @@ class ProximityRequestRenewalInfoBlock {
          * @static
          */
 
-    public static _enum_for_rangeClass = _enum_for_RangeClass;
+    public static _enum_for_rangeClass: typeof _enum_for_RangeClass = _enum_for_RangeClass;
 }
 
 /**

@@ -1,7 +1,7 @@
 /* eslint-disable */
 import {
-    OPTIONAL,
-    ASN1Element as _Element,
+    type OPTIONAL,
+    type ASN1Element as _Element,
     ASN1TagClass as _TagClass,
     ASN1Construction as _Construction,
     ASN1UniversalType as _UniversalType,
@@ -29,7 +29,7 @@ import { type PDPID, _decode_PDPID, _encode_PDPID } from "../CAP-datatypes/PDPID
  * ```asn1
  * ConnectGPRSArg {PARAMETERS-BOUND: bound} ::= SEQUENCE {
  *     accessPointName    [0] AccessPointName {bound},
- *     pdpID    [1] PDPID        OPTIONAL,
+ *     pdpID    [1] PDPID        type OPTIONAL,
  *     ...
  *     }
  * ```
@@ -38,38 +38,46 @@ import { type PDPID, _decode_PDPID, _encode_PDPID } from "../CAP-datatypes/PDPID
  */
 export
 class ConnectGPRSArg {
+    /**
+     * @summary `accessPointName`.
+     * @description
+     *
+     * Access Point Name towards which the PDP Context shall be
+     * established. See 3GPP TS 29.060.
+     * (3GPP TS 29.078 V19.0.0 clause 13.5.1.1).
+     *
+     * @public
+     * @readonly
+     */
+    public readonly accessPointName: AccessPointName;
+    /**
+     * @summary `pdpID`.
+     * @description
+     *
+     * Identifies the PDP Context, within a GPRS Session dialogue,
+     * for which this APN shall be used (spec: pDPID). unknownPDPID
+     * if unknown. (3GPP TS 29.078 V19.0.0 clause 13.5.1.1).
+     *
+     * @public
+     * @readonly
+     */
+    public readonly pdpID?: OPTIONAL<PDPID>;
+    /**
+     * @summary Extensions that are not recognized.
+     * @public
+     * @readonly
+     */
+    public readonly _unrecognizedExtensionsList: _Element[];
+
     constructor (
-        /**
-         * @summary `accessPointName`.
-         * @description
-         *
-         * Access Point Name towards which the PDP Context shall be
-         * established. See 3GPP TS 29.060.
-         * (3GPP TS 29.078 V19.0.0 clause 13.5.1.1).
-         *
-         * @public
-         * @readonly
-         */
-        readonly accessPointName: AccessPointName,
-        /**
-         * @summary `pdpID`.
-         * @description
-         *
-         * Identifies the PDP Context, within a GPRS Session dialogue,
-         * for which this APN shall be used (spec: pDPID). unknownPDPID
-         * if unknown. (3GPP TS 29.078 V19.0.0 clause 13.5.1.1).
-         *
-         * @public
-         * @readonly
-         */
-        readonly pdpID?: OPTIONAL<PDPID>,
-        /**
-         * @summary Extensions that are not recognized.
-         * @public
-         * @readonly
-         */
-        readonly _unrecognizedExtensionsList: _Element[] = []
-    ) {}
+        accessPointName: AccessPointName,
+        pdpID?: OPTIONAL<PDPID>,
+        _unrecognizedExtensionsList: _Element[] = []
+    ) {
+        this.accessPointName = accessPointName;
+        this.pdpID = pdpID;
+        this._unrecognizedExtensionsList = _unrecognizedExtensionsList;
+    }
 
     /**
      * @summary Restructures an object into a ConnectGPRSArg

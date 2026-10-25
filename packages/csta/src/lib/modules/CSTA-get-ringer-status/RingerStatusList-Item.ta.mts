@@ -2,14 +2,14 @@
 
 import * as $ from "@wildboar/asn1/functional";
 import {
-    OPTIONAL,
-    INTEGER,
-    SEQUENCE,
-    SET,
-    ASN1Element as _Element,
+    type OPTIONAL,
+    type INTEGER,
+    type SEQUENCE,
+    type SET,
+    type ASN1Element as _Element,
     ASN1TagClass as _TagClass
 } from "@wildboar/asn1";
-import { RingerID, _decode_RingerID, _encode_RingerID } from "../CSTA-physical-device-feature/RingerID.ta.mjs";
+import { type RingerID, _decode_RingerID, _encode_RingerID } from "../CSTA-physical-device-feature/RingerID.ta.mjs";
 
 import {
     RingMode,
@@ -46,66 +46,80 @@ import {
  */
 export
 class RingerStatusList_Item {
+    /**
+     * @summary `ringer`.
+     * @description
+     *
+     * RingerID.
+     * @public
+     * @readonly
+     */
+    public readonly ringer: RingerID;
+    /**
+     * @summary `ringMode`.
+     * @description
+     *
+     * `ringing` includes the quiet phase of a ring cycle; `not ringing`
+     * means not in an active cycle.
+     * @public
+     * @readonly
+     */
+    public readonly ringMode: RingMode;
+    /**
+     * @summary `ringCount`.
+     * @description
+     *
+     * Complete ring cycles 0–999; 1000 means greater than 999. Do not send
+     * with `ringDuration`.
+     * @public
+     * @readonly
+     */
+    public readonly ringCount?: OPTIONAL<INTEGER>;
+    /**
+     * @summary `ringDuration`.
+     * @description
+     *
+     * Seconds ringing. Omit if `ringCount` is provided.
+     * @public
+     * @readonly
+     */
+    public readonly ringDuration?: OPTIONAL<INTEGER>;
+    /**
+     * @summary `ringPattern`.
+     * @description
+     *
+     * Device-specific pattern. Held until reset by the switching function
+     * or Set Ringer Status.
+     * @public
+     * @readonly
+     */
+    public readonly ringPattern?: OPTIONAL<INTEGER>;
+    /**
+     * @summary `ringVolAbs`.
+     * @description
+     *
+     * Absolute volume. 0 silence, 100 maximum; 1–99 device-specific.
+     * Absent: unknown. Loudness is ringer-specific.
+     * @public
+     * @readonly
+     */
+    public readonly ringVolAbs?: OPTIONAL<INTEGER>;
+
     constructor (
-        /**
-         * @summary `ringer`.
-         * @description
-         *
-         * RingerID.
-         * @public
-         * @readonly
-         */
-        readonly ringer: RingerID,
-        /**
-         * @summary `ringMode`.
-         * @description
-         *
-         * `ringing` includes the quiet phase of a ring cycle; `not ringing`
-         * means not in an active cycle.
-         * @public
-         * @readonly
-         */
-        readonly ringMode: RingMode,
-        /**
-         * @summary `ringCount`.
-         * @description
-         *
-         * Complete ring cycles 0–999; 1000 means greater than 999. Do not send
-         * with `ringDuration`.
-         * @public
-         * @readonly
-         */
-        readonly ringCount?: OPTIONAL<INTEGER>,
-        /**
-         * @summary `ringDuration`.
-         * @description
-         *
-         * Seconds ringing. Omit if `ringCount` is provided.
-         * @public
-         * @readonly
-         */
-        readonly ringDuration?: OPTIONAL<INTEGER>,
-        /**
-         * @summary `ringPattern`.
-         * @description
-         *
-         * Device-specific pattern. Held until reset by the switching function
-         * or Set Ringer Status.
-         * @public
-         * @readonly
-         */
-        readonly ringPattern?: OPTIONAL<INTEGER>,
-        /**
-         * @summary `ringVolAbs`.
-         * @description
-         *
-         * Absolute volume. 0 silence, 100 maximum; 1–99 device-specific.
-         * Absent: unknown. Loudness is ringer-specific.
-         * @public
-         * @readonly
-         */
-        readonly ringVolAbs?: OPTIONAL<INTEGER>
-    ) {}
+        ringer: RingerID,
+        ringMode: RingMode,
+        ringCount?: OPTIONAL<INTEGER>,
+        ringDuration?: OPTIONAL<INTEGER>,
+        ringPattern?: OPTIONAL<INTEGER>,
+        ringVolAbs?: OPTIONAL<INTEGER>
+    ) {
+        this.ringer = ringer;
+        this.ringMode = ringMode;
+        this.ringCount = ringCount;
+        this.ringDuration = ringDuration;
+        this.ringPattern = ringPattern;
+        this.ringVolAbs = ringVolAbs;
+    }
 
     /**
      * @summary Restructures an object into a RingerStatusList_Item
@@ -129,7 +143,7 @@ class RingerStatusList_Item {
          * @static
          */
 
-    public static _enum_for_ringMode = _enum_for_RingMode;
+    public static _enum_for_ringMode: typeof _enum_for_RingMode = _enum_for_RingMode;
 }
 
 /**

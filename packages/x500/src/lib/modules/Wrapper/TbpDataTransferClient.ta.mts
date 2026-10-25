@@ -1,33 +1,33 @@
 /* eslint-disable */
 import {
-    ASN1Element as _Element,
+    type ASN1Element as _Element,
     ASN1TagClass as _TagClass,
-    OPTIONAL,
+    type OPTIONAL,
 } from "@wildboar/asn1";
 import * as $ from "@wildboar/asn1/functional";
 import {
-    AlgoInvoke,
+    type AlgoInvoke,
     _decode_AlgoInvoke,
     _encode_AlgoInvoke,
 } from "@wildboar/pki-stub";
-import { AssoID, _decode_AssoID, _encode_AssoID } from "../Wrapper/AssoID.ta.mjs";
+import { type AssoID, _decode_AssoID, _encode_AssoID } from "../Wrapper/AssoID.ta.mjs";
 import {
-    InvokeID,
+    type InvokeID,
     _decode_InvokeID,
     _encode_InvokeID,
 } from "../Wrapper/InvokeID.ta.mjs";
 import {
-    SequenceNumber,
+    type SequenceNumber,
     _decode_SequenceNumber,
     _encode_SequenceNumber,
 } from "../Wrapper/SequenceNumber.ta.mjs";
 import {
-    TbpDataTransferClient_conf,
+    type TbpDataTransferClient_conf,
     _decode_TbpDataTransferClient_conf,
     _encode_TbpDataTransferClient_conf,
 } from "../Wrapper/TbpDataTransferClient-conf.ta.mjs";
 import {
-    TimeStamp,
+    type TimeStamp,
     _decode_TimeStamp,
     _encode_TimeStamp,
 } from "../Wrapper/TimeStamp.ta.mjs";
@@ -61,96 +61,113 @@ import {
  *
  */
 export class TbpDataTransferClient extends AadClient {
+    /**
+     * @summary `invokeID`.
+     * @description
+     *
+     * Optional. SIZE (6): ASCII `REQ` or `RSP` then numerals `000`–`127`
+     * from the protected protocol. Distinct from AVMP/CASP INTEGER
+     * InvokeID.
+     *
+     * @public
+     * @readonly
+     */
+    public override readonly invokeID: OPTIONAL<InvokeID>; /* REPLICATED_COMPONENT */
+    /**
+     * @summary `assoID`.
+     * @description
+     *
+     * Association identifier agreed at handshake for this association.
+     *
+     * @public
+     * @readonly
+     */
+    public override readonly assoID: AssoID; /* REPLICATED_COMPONENT */
+    /**
+     * @summary `time`.
+     * @description
+     *
+     * UTC GeneralizedTime of creation.
+     *
+     * @public
+     * @readonly
+     */
+    public override readonly time: TimeStamp; /* REPLICATED_COMPONENT */
+    /**
+     * @summary `seq`.
+     * @description
+     *
+     * Per-direction client sequence. First data-transfer WrPDU of the
+     * association is `0`, then +1; wraps to `0` at 2147483647. Replay/loss
+     * detection. Not used on handshake.
+     *
+     * @public
+     * @readonly
+     */
+    public override readonly seq: SequenceNumber; /* REPLICATED_COMPONENT */
+    /**
+     * @summary `keyEst`.
+     * @description
+     *
+     * Present = client rekey (prose "rekey component"). New DH pair +
+     * nonce in Payload. Do not send another until a server PDU with
+     * `changedKey` TRUE for the outstanding rekey. Only the client
+     * initiates; interval 15 min–24 h.
+     *
+     * @public
+     * @readonly
+     */
+    public override readonly keyEst: OPTIONAL<AlgoInvoke>; /* REPLICATED_COMPONENT */
+    /**
+     * @summary `encEnvoke`.
+     * @description
+     *
+     * Spec spelling. Symmetric-key dyn parms (e.g. AES-CBC IV of 16
+     * octets). Present if encryption is required and the algorithm has
+     * dyn parms; otherwise absent.
+     *
+     * @public
+     * @readonly
+     */
+    public readonly encEnvoke: OPTIONAL<AlgoInvoke>;
+    /**
+     * @summary `conf`.
+     * @description
+     *
+     * `clear` if confidentiality is not required (plain WrappedProt);
+     * `protected` if required (ENCIPHERED PrPDU). TS alternative is
+     * `protected_`.
+     *
+     * @public
+     * @readonly
+     */
+    public readonly conf: TbpDataTransferClient_conf;
+    /**
+     * @summary Extensions that are not recognized.
+     * @public
+     * @readonly
+     */
+    public readonly _unrecognizedExtensionsList: _Element[];
+
     constructor(
-        /**
-         * @summary `invokeID`.
-         * @description
-         *
-         * Optional. SIZE (6): ASCII `REQ` or `RSP` then numerals `000`–`127`
-         * from the protected protocol. Distinct from AVMP/CASP INTEGER
-         * InvokeID.
-         *
-         * @public
-         * @readonly
-         */
-        override readonly invokeID: OPTIONAL<InvokeID> /* REPLICATED_COMPONENT */,
-        /**
-         * @summary `assoID`.
-         * @description
-         *
-         * Association identifier agreed at handshake for this association.
-         *
-         * @public
-         * @readonly
-         */
-        override readonly assoID: AssoID /* REPLICATED_COMPONENT */,
-        /**
-         * @summary `time`.
-         * @description
-         *
-         * UTC GeneralizedTime of creation.
-         *
-         * @public
-         * @readonly
-         */
-        override readonly time: TimeStamp /* REPLICATED_COMPONENT */,
-        /**
-         * @summary `seq`.
-         * @description
-         *
-         * Per-direction client sequence. First data-transfer WrPDU of the
-         * association is `0`, then +1; wraps to `0` at 2147483647. Replay/loss
-         * detection. Not used on handshake.
-         *
-         * @public
-         * @readonly
-         */
-        override readonly seq: SequenceNumber /* REPLICATED_COMPONENT */,
-        /**
-         * @summary `keyEst`.
-         * @description
-         *
-         * Present = client rekey (prose "rekey component"). New DH pair +
-         * nonce in Payload. Do not send another until a server PDU with
-         * `changedKey` TRUE for the outstanding rekey. Only the client
-         * initiates; interval 15 min–24 h.
-         *
-         * @public
-         * @readonly
-         */
-        override readonly keyEst: OPTIONAL<AlgoInvoke> /* REPLICATED_COMPONENT */,
-        /**
-         * @summary `encEnvoke`.
-         * @description
-         *
-         * Spec spelling. Symmetric-key dyn parms (e.g. AES-CBC IV of 16
-         * octets). Present if encryption is required and the algorithm has
-         * dyn parms; otherwise absent.
-         *
-         * @public
-         * @readonly
-         */
-        readonly encEnvoke: OPTIONAL<AlgoInvoke>,
-        /**
-         * @summary `conf`.
-         * @description
-         *
-         * `clear` if confidentiality is not required (plain WrappedProt);
-         * `protected` if required (ENCIPHERED PrPDU). TS alternative is
-         * `protected_`.
-         *
-         * @public
-         * @readonly
-         */
-        readonly conf: TbpDataTransferClient_conf,
-        /**
-         * @summary Extensions that are not recognized.
-         * @public
-         * @readonly
-         */
-        readonly _unrecognizedExtensionsList: _Element[] = []
+        invokeID: OPTIONAL<InvokeID>,
+        assoID: AssoID,
+        time: TimeStamp,
+        seq: SequenceNumber,
+        keyEst: OPTIONAL<AlgoInvoke>,
+        encEnvoke: OPTIONAL<AlgoInvoke>,
+        conf: TbpDataTransferClient_conf,
+        _unrecognizedExtensionsList: _Element[] = []
     ) {
         super(invokeID, assoID, time, seq, keyEst);
+        this.invokeID = invokeID;
+        this.assoID = assoID;
+        this.time = time;
+        this.seq = seq;
+        this.keyEst = keyEst;
+        this.encEnvoke = encEnvoke;
+        this.conf = conf;
+        this._unrecognizedExtensionsList = _unrecognizedExtensionsList;
     }
 
     /**

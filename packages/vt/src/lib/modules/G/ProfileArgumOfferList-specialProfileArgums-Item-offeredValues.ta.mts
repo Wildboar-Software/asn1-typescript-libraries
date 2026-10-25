@@ -1,8 +1,8 @@
 /* eslint-disable */
 import {
-    OBJECT_IDENTIFIER,
-    PrintableString,
-    ASN1Element as _Element,
+    type OBJECT_IDENTIFIER,
+    type PrintableString,
+    type ASN1Element as _Element,
     ASN1TagClass as _TagClass,
     ASN1Construction as _Construction,
     ASN1UniversalType as _UniversalType,
@@ -12,8 +12,8 @@ import {
     ASN1ConstructionError as _ConstructionError,
 } from "@wildboar/asn1";
 import * as $ from "@wildboar/asn1/functional";
-import { ProfileArgumOfferList_specialProfileArgums_Item_offeredValues_boolean, _decode_ProfileArgumOfferList_specialProfileArgums_Item_offeredValues_boolean, _encode_ProfileArgumOfferList_specialProfileArgums_Item_offeredValues_boolean } from "../G/ProfileArgumOfferList-specialProfileArgums-Item-offeredValues-boolean.ta.mjs";
-import { IntegerOffer, _decode_IntegerOffer, _encode_IntegerOffer } from "../G/IntegerOffer.ta.mjs";
+import { type ProfileArgumOfferList_specialProfileArgums_Item_offeredValues_boolean, _decode_ProfileArgumOfferList_specialProfileArgums_Item_offeredValues_boolean, _encode_ProfileArgumOfferList_specialProfileArgums_Item_offeredValues_boolean } from "../G/ProfileArgumOfferList-specialProfileArgums-Item-offeredValues-boolean.ta.mjs";
+import { type IntegerOffer, _decode_IntegerOffer, _encode_IntegerOffer } from "../G/IntegerOffer.ta.mjs";
 
 
 /**

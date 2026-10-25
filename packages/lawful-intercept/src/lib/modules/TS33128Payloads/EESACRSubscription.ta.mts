@@ -1,20 +1,20 @@
 /* eslint-disable */
 import {
-    OPTIONAL,
-    UTF8String,
-    ASN1Element as _Element,
+    type OPTIONAL,
+    type UTF8String,
+    type ASN1Element as _Element,
     ASN1TagClass as _TagClass
 } from "@wildboar/asn1";
 import * as $ from "@wildboar/asn1/functional";
-import { GPSI, _decode_GPSI, _encode_GPSI } from "../TS33128Payloads/GPSI.ta.mjs";
+import { type GPSI, _decode_GPSI, _encode_GPSI } from "../TS33128Payloads/GPSI.ta.mjs";
 // export { GPSI, _decode_GPSI, _encode_GPSI } from "../TS33128Payloads/GPSI.ta.mjs";
 import { SubscriptionType, _decode_SubscriptionType, _encode_SubscriptionType, _enum_for_SubscriptionType } from "../TS33128Payloads/SubscriptionType.ta.mjs";
 // export { SubscriptionType, _enum_for_SubscriptionType, SubscriptionType_subscription /* IMPORTED_LONG_ENUMERATION_ITEM */, subscription /* IMPORTED_SHORT_ENUMERATION_ITEM */, SubscriptionType_subscriptionUpdate /* IMPORTED_LONG_ENUMERATION_ITEM */, subscriptionUpdate /* IMPORTED_SHORT_ENUMERATION_ITEM */, SubscriptionType_unsubscription /* IMPORTED_LONG_ENUMERATION_ITEM */, unsubscription /* IMPORTED_SHORT_ENUMERATION_ITEM */, _decode_SubscriptionType, _encode_SubscriptionType } from "../TS33128Payloads/SubscriptionType.ta.mjs";
-import { Timestamp, _decode_Timestamp, _encode_Timestamp } from "../TS33128Payloads/Timestamp.ta.mjs";
+import { type Timestamp, _decode_Timestamp, _encode_Timestamp } from "../TS33128Payloads/Timestamp.ta.mjs";
 // export { Timestamp, _decode_Timestamp, _encode_Timestamp } from "../TS33128Payloads/Timestamp.ta.mjs";
-import { EASIDs, _decode_EASIDs, _encode_EASIDs } from "../TS33128Payloads/EASIDs.ta.mjs";
+import { type EASIDs, _decode_EASIDs, _encode_EASIDs } from "../TS33128Payloads/EASIDs.ta.mjs";
 // export { EASIDs, _decode_EASIDs, _encode_EASIDs } from "../TS33128Payloads/EASIDs.ta.mjs";
-import { ACIDs, _decode_ACIDs, _encode_ACIDs } from "../TS33128Payloads/ACIDs.ta.mjs";
+import { type ACIDs, _decode_ACIDs, _encode_ACIDs } from "../TS33128Payloads/ACIDs.ta.mjs";
 // export { ACIDs, _decode_ACIDs, _encode_ACIDs } from "../TS33128Payloads/ACIDs.ta.mjs";
 import { ACREventIDs, _decode_ACREventIDs, _encode_ACREventIDs, _enum_for_ACREventIDs } from "../TS33128Payloads/ACREventIDs.ta.mjs";
 // export { ACREventIDs, _enum_for_ACREventIDs, ACREventIDs_targetInformation /* IMPORTED_LONG_ENUMERATION_ITEM */, targetInformation /* IMPORTED_SHORT_ENUMERATION_ITEM */, ACREventIDs_aCRComplete /* IMPORTED_LONG_ENUMERATION_ITEM */, aCRComplete /* IMPORTED_SHORT_ENUMERATION_ITEM */, _decode_ACREventIDs, _encode_ACREventIDs } from "../TS33128Payloads/ACREventIDs.ta.mjs";
@@ -235,19 +235,19 @@ class EESACRSubscription {
          * @static
          */
 
-    public static _enum_for_subscriptionType = _enum_for_SubscriptionType;        /**
+    public static _enum_for_subscriptionType: typeof _enum_for_SubscriptionType = _enum_for_SubscriptionType;        /**
          * @summary The enum used as the type of the component `eventIDs`
          * @public
          * @static
          */
 
-    public static _enum_for_eventIDs = _enum_for_ACREventIDs;        /**
+    public static _enum_for_eventIDs: typeof _enum_for_ACREventIDs = _enum_for_ACREventIDs;        /**
          * @summary The enum used as the type of the component `failureResponse`
          * @public
          * @static
          */
 
-    public static _enum_for_failureResponse = _enum_for_FailureResponse;
+    public static _enum_for_failureResponse: typeof _enum_for_FailureResponse = _enum_for_FailureResponse;
 }
 
 /**

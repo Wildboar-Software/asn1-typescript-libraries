@@ -1,7 +1,7 @@
 /* eslint-disable */
 import {
-    GraphicString,
-    ASN1Element as _Element,
+    type GraphicString,
+    type ASN1Element as _Element,
     ASN1TagClass as _TagClass,
     ASN1Construction as _Construction,
     ASN1UniversalType as _UniversalType,
@@ -28,12 +28,12 @@ export type PersonRespon = GraphicString; // GraphicString
 
 
 
-export const _decode_PersonRespon = $._decodeGraphicString;
+export const _decode_PersonRespon: $.ASN1Decoder<string> = $._decodeGraphicString;
 
 
 
 
-export const _encode_PersonRespon = $._encodeGraphicString;
+export const _encode_PersonRespon: $.ASN1Encoder<string> = $._encodeGraphicString;
 
 
 /* eslint-enable */

@@ -2,17 +2,17 @@
 
 import * as $ from "@wildboar/asn1/functional";
 import {
-    OPTIONAL,
-    SEQUENCE,
-    SET,
-    ASN1Element as _Element,
+    type OPTIONAL,
+    type SEQUENCE,
+    type SET,
+    type ASN1Element as _Element,
     ASN1TagClass as _TagClass
 } from "@wildboar/asn1";
-import { CSTAVersion, _decode_CSTAVersion, _encode_CSTAVersion } from "../CSTA-application-context-information-csta3/CSTAVersion.ta.mjs";
+import { type CSTAVersion, _decode_CSTAVersion, _encode_CSTAVersion } from "../CSTA-application-context-information-csta3/CSTAVersion.ta.mjs";
 
 import { CSTAFunctionality, _decode_CSTAFunctionality, _encode_CSTAFunctionality } from "../CSTA-application-context-information-csta3/CSTAFunctionality.ta.mjs";
 
-import { CSTAPrivateDataVersionList, _decode_CSTAPrivateDataVersionList, _encode_CSTAPrivateDataVersionList } from "../CSTA-application-context-information-csta3/CSTAPrivateDataVersionList.ta.mjs";
+import { type CSTAPrivateDataVersionList, _decode_CSTAPrivateDataVersionList, _encode_CSTAPrivateDataVersionList } from "../CSTA-application-context-information-csta3/CSTAPrivateDataVersionList.ta.mjs";
 
 
 
@@ -39,8 +39,8 @@ import { CSTAPrivateDataVersionList, _decode_CSTAPrivateDataVersionList, _encode
  * --    For CSTA Phase III (and later), implementations should use CSTA Capability Exchange Services
  * --    to determine the Services and Events supported by a switching function.
  * --
- *     cSTAFunctionsRequiredByApplication    [0] IMPLICIT CSTAFunctionality            OPTIONAL,
- *     cSTAFunctionsThatCanBeSupplied            [1] IMPLICIT CSTAFunctionality            OPTIONAL,
+ *     cSTAFunctionsRequiredByApplication    [0] IMPLICIT CSTAFunctionality            type OPTIONAL,
+ *     cSTAFunctionsThatCanBeSupplied            [1] IMPLICIT CSTAFunctionality            type OPTIONAL,
  *     cSTAPrivateDataVersionList            [2] IMPLICIT CSTAPrivateDataVersionList            OPTIONAL }
  * ```
  * 
@@ -48,38 +48,48 @@ import { CSTAPrivateDataVersionList, _decode_CSTAPrivateDataVersionList, _encode
  */
 export
 class NewACSEUserInformationForCSTA {
+    /**
+     * @summary `cSTAVersion`.
+     * @description Protocol versions offered or selected.
+     * @public
+     * @readonly
+     */
+    public readonly cSTAVersion: CSTAVersion;
+    /**
+     * @summary `cSTAFunctionsRequiredByApplication`.
+     * @description
+     * Phase II functionality this application requires (optional).
+     * @public
+     * @readonly
+     */
+    public readonly cSTAFunctionsRequiredByApplication?: OPTIONAL<CSTAFunctionality>;
+    /**
+     * @summary `cSTAFunctionsThatCanBeSupplied`.
+     * @description
+     * Phase II functionality this application can supply (optional).
+     * @public
+     * @readonly
+     */
+    public readonly cSTAFunctionsThatCanBeSupplied?: OPTIONAL<CSTAFunctionality>;
+    /**
+     * @summary `cSTAPrivateDataVersionList`.
+     * @description Private-data versions for this association.
+     * @public
+     * @readonly
+     */
+    public readonly cSTAPrivateDataVersionList?: OPTIONAL<CSTAPrivateDataVersionList>;
+
     constructor (
-        /**
-         * @summary `cSTAVersion`.
-         * @description Protocol versions offered or selected.
-         * @public
-         * @readonly
-         */
-        readonly cSTAVersion: CSTAVersion,
-        /**
-         * @summary `cSTAFunctionsRequiredByApplication`.
-         * @description
-         * Phase II functionality this application requires (optional).
-         * @public
-         * @readonly
-         */
-        readonly cSTAFunctionsRequiredByApplication?: OPTIONAL<CSTAFunctionality>,
-        /**
-         * @summary `cSTAFunctionsThatCanBeSupplied`.
-         * @description
-         * Phase II functionality this application can supply (optional).
-         * @public
-         * @readonly
-         */
-        readonly cSTAFunctionsThatCanBeSupplied?: OPTIONAL<CSTAFunctionality>,
-        /**
-         * @summary `cSTAPrivateDataVersionList`.
-         * @description Private-data versions for this association.
-         * @public
-         * @readonly
-         */
-        readonly cSTAPrivateDataVersionList?: OPTIONAL<CSTAPrivateDataVersionList>
-    ) {}
+        cSTAVersion: CSTAVersion,
+        cSTAFunctionsRequiredByApplication?: OPTIONAL<CSTAFunctionality>,
+        cSTAFunctionsThatCanBeSupplied?: OPTIONAL<CSTAFunctionality>,
+        cSTAPrivateDataVersionList?: OPTIONAL<CSTAPrivateDataVersionList>
+    ) {
+        this.cSTAVersion = cSTAVersion;
+        this.cSTAFunctionsRequiredByApplication = cSTAFunctionsRequiredByApplication;
+        this.cSTAFunctionsThatCanBeSupplied = cSTAFunctionsThatCanBeSupplied;
+        this.cSTAPrivateDataVersionList = cSTAPrivateDataVersionList;
+    }
 
     /**
      * @summary Restructures an object into a NewACSEUserInformationForCSTA

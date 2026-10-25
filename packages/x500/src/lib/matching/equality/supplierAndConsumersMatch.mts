@@ -6,7 +6,7 @@ import {
     _decode_SupplierAndConsumers,
 } from "../../modules/DSAOperationalAttributeTypes/SupplierAndConsumers.ta.mjs";
 import {
-    Name,
+    type Name,
     _decode_Name,
 } from "../../modules/InformationFramework/Name.ta.mjs";
 import { compareName } from "@wildboar/dn";

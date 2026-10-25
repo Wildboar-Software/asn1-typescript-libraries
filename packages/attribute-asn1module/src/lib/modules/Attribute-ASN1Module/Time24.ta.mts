@@ -1,7 +1,7 @@
 /* eslint-disable */
 import {
-    INTEGER,
-    ASN1Element as _Element,
+    type INTEGER,
+    type ASN1Element as _Element,
     ASN1TagClass as _TagClass,
     ASN1Construction as _Construction,
     ASN1UniversalType as _UniversalType,
@@ -40,7 +40,7 @@ class Time24 {
      * @public
      * @readonly
      */
-    readonly hour: INTEGER;
+    public readonly hour: INTEGER;
     /**
      * @summary `minute`.
      * @description
@@ -50,7 +50,7 @@ class Time24 {
      * @public
      * @readonly
      */
-    readonly minute: INTEGER;
+    public readonly minute: INTEGER;
 
     constructor (
         hour: INTEGER,

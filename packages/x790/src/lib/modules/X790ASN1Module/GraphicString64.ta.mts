@@ -1,11 +1,11 @@
 /* eslint-disable */
 import {
-    ASN1Element as _Element,
+    type ASN1Element as _Element,
     ASN1SizeError,
 } from "@wildboar/asn1";
 import * as $ from "@wildboar/asn1/functional";
 import {
-    GraphicStringBase,
+    type GraphicStringBase,
     _decode_GraphicStringBase,
     _encode_GraphicStringBase,
 } from "../X790ASN1Module/GraphicStringBase.ta.mjs";
@@ -43,8 +43,6 @@ function _decode_GraphicString64 (el: _Element): GraphicString64 {
     return value;
 }
 
-let _cached_encoder_for_GraphicString64: $.ASN1Encoder<GraphicString64> | null = null;
-
 /**
  * @summary Encodes a(n) GraphicString64 into an ASN.1 Element.
  * @function
@@ -52,11 +50,7 @@ let _cached_encoder_for_GraphicString64: $.ASN1Encoder<GraphicString64> | null =
  * @param elGetter A function that can be used to get new ASN.1 elements.
  * @returns {_Element} The GraphicString64, encoded as an ASN.1 Element.
  */
-export
-function _encode_GraphicString64 (value: GraphicString64, elGetter: $.ASN1Encoder<any>): _Element {
-    if (!_cached_encoder_for_GraphicString64) { _cached_encoder_for_GraphicString64 = _encode_GraphicStringBase; }
-    return _cached_encoder_for_GraphicString64(value, elGetter);
-}
+export const _encode_GraphicString64: $.ASN1Encoder<GraphicString64> = _encode_GraphicStringBase;
 
 
 /* eslint-enable */

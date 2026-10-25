@@ -1,14 +1,14 @@
 /* eslint-disable */
 import {
-    OCTET_STRING,
-    OPTIONAL,
-    ASN1Element as _Element,
+    type OCTET_STRING,
+    type OPTIONAL,
+    type ASN1Element as _Element,
     ASN1TagClass as _TagClass
 } from "@wildboar/asn1";
 import * as $ from "@wildboar/asn1/functional";
-import { PayloadType, _decode_PayloadType, _encode_PayloadType } from "../GDT/PayloadType.ta.mjs";
-import { DataRetentionAction, _decode_DataRetentionAction, _encode_DataRetentionAction } from "../GDT/DataRetentionAction.ta.mjs";
-import { Parameters, _decode_Parameters, _encode_Parameters } from "../GDT/Parameters.ta.mjs";
+import { type PayloadType, _decode_PayloadType, _encode_PayloadType } from "../GDT/PayloadType.ta.mjs";
+import { type DataRetentionAction, _decode_DataRetentionAction, _encode_DataRetentionAction } from "../GDT/DataRetentionAction.ta.mjs";
+import { type Parameters, _decode_Parameters, _encode_Parameters } from "../GDT/Parameters.ta.mjs";
 
 
 /**
@@ -36,31 +36,31 @@ class DataRetentionMessage {
      * @public
      * @readonly
      */
-    readonly payload_type: OPTIONAL<PayloadType>;
+    public readonly payload_type: OPTIONAL<PayloadType>;
     /**
      * @summary `payload`.
      * @public
      * @readonly
      */
-    readonly payload: OPTIONAL<OCTET_STRING>;
+    public readonly payload: OPTIONAL<OCTET_STRING>;
     /**
      * @summary `dr_action`.
      * @public
      * @readonly
      */
-    readonly dr_action: DataRetentionAction;
+    public readonly dr_action: DataRetentionAction;
     /**
      * @summary `params`.
      * @public
      * @readonly
      */
-    readonly params?: OPTIONAL<Parameters>;
+    public readonly params?: OPTIONAL<Parameters>;
     /**
      * @summary Extensions that are not recognized.
      * @public
      * @readonly
      */
-    readonly _unrecognizedExtensionsList: _Element[];
+    public readonly _unrecognizedExtensionsList: _Element[];
 
     constructor (
         payload_type: OPTIONAL<PayloadType>,

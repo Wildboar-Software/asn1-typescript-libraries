@@ -1,8 +1,8 @@
 /* eslint-disable */
 import {
-    NULL,
-    SEQUENCE,
-    ASN1Element as _Element,
+    type NULL,
+    type SEQUENCE,
+    type ASN1Element as _Element,
 } from "@wildboar/asn1";
 import * as $ from "@wildboar/asn1/functional";
 import {

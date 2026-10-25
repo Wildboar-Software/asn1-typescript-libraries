@@ -1,6 +1,6 @@
 /* eslint-disable */
 import {
-  ENUMERATED,
+  type ENUMERATED,
   ASN1Element as _Element,
   ASN1TagClass as _TagClass,
   ASN1Construction as _Construction,
@@ -49,7 +49,7 @@ export type BioAPI_POWER_MODE = _enum_for_BioAPI_POWER_MODE | ENUMERATED;
  * @constant
  * @type {number}
  */
-export const BioAPI_POWER_MODE_normal: BioAPI_POWER_MODE = 0; /* LONG_NAMED_ENUMERATED_VALUE */
+export const BioAPI_POWER_MODE_normal: 0 = _enum_for_BioAPI_POWER_MODE.normal; /* LONG_NAMED_ENUMERATED_VALUE */
 
 
 /**
@@ -57,7 +57,7 @@ export const BioAPI_POWER_MODE_normal: BioAPI_POWER_MODE = 0; /* LONG_NAMED_ENUM
  * @constant
  * @type {number}
  */
-export const normal: BioAPI_POWER_MODE = BioAPI_POWER_MODE_normal; /* SHORT_NAMED_ENUMERATED_VALUE */
+export const normal: 0 = BioAPI_POWER_MODE_normal; /* SHORT_NAMED_ENUMERATED_VALUE */
 
 
 /**
@@ -65,7 +65,7 @@ export const normal: BioAPI_POWER_MODE = BioAPI_POWER_MODE_normal; /* SHORT_NAME
  * @constant
  * @type {number}
  */
-export const BioAPI_POWER_MODE_detect: BioAPI_POWER_MODE = 1; /* LONG_NAMED_ENUMERATED_VALUE */
+export const BioAPI_POWER_MODE_detect: 1 = _enum_for_BioAPI_POWER_MODE.detect; /* LONG_NAMED_ENUMERATED_VALUE */
 
 
 /**
@@ -73,7 +73,7 @@ export const BioAPI_POWER_MODE_detect: BioAPI_POWER_MODE = 1; /* LONG_NAMED_ENUM
  * @constant
  * @type {number}
  */
-export const detect: BioAPI_POWER_MODE = BioAPI_POWER_MODE_detect; /* SHORT_NAMED_ENUMERATED_VALUE */
+export const detect: 1 = BioAPI_POWER_MODE_detect; /* SHORT_NAMED_ENUMERATED_VALUE */
 
 
 /**
@@ -81,7 +81,7 @@ export const detect: BioAPI_POWER_MODE = BioAPI_POWER_MODE_detect; /* SHORT_NAME
  * @constant
  * @type {number}
  */
-export const BioAPI_POWER_MODE_sleep: BioAPI_POWER_MODE = 2; /* LONG_NAMED_ENUMERATED_VALUE */
+export const BioAPI_POWER_MODE_sleep: 2 = _enum_for_BioAPI_POWER_MODE.sleep; /* LONG_NAMED_ENUMERATED_VALUE */
 
 
 /**
@@ -89,17 +89,17 @@ export const BioAPI_POWER_MODE_sleep: BioAPI_POWER_MODE = 2; /* LONG_NAMED_ENUME
  * @constant
  * @type {number}
  */
-export const sleep: BioAPI_POWER_MODE = BioAPI_POWER_MODE_sleep; /* SHORT_NAMED_ENUMERATED_VALUE */
+export const sleep: 2 = BioAPI_POWER_MODE_sleep; /* SHORT_NAMED_ENUMERATED_VALUE */
 
 
 
 
-export const _decode_BioAPI_POWER_MODE = $._decodeEnumerated;
+export const _decode_BioAPI_POWER_MODE: $.ASN1Decoder<BioAPI_POWER_MODE> = $._decodeEnumerated as $.ASN1Decoder<BioAPI_POWER_MODE>;
 
 
 
 
-export const _encode_BioAPI_POWER_MODE = $._encodeEnumerated;
+export const _encode_BioAPI_POWER_MODE: $.ASN1Encoder<BioAPI_POWER_MODE> = $._encodeEnumerated as $.ASN1Encoder<BioAPI_POWER_MODE>;
 
 
 /* eslint-enable */

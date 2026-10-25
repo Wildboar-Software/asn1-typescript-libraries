@@ -1,8 +1,8 @@
 /* eslint-disable */
 import {
-    OCTET_STRING,
+    type OCTET_STRING,
     ASN1ConstructionError as _ConstructionError,
-    ASN1Element as _Element,
+    type ASN1Element as _Element,
     ASN1TagClass as _TagClass
 } from "@wildboar/asn1";
 import * as $ from "@wildboar/asn1/functional";
@@ -44,7 +44,7 @@ class OtherSignedNotification {
      * @public
      * @readonly
      */
-    readonly tbsOtherNotification: NotificationMetadata;
+    public readonly tbsOtherNotification: NotificationMetadata;
     /**
      * @summary `euiccNotificationSignature`.
      * @description
@@ -55,7 +55,7 @@ class OtherSignedNotification {
      * @public
      * @readonly
      */
-    readonly euiccNotificationSignature: OCTET_STRING;
+    public readonly euiccNotificationSignature: OCTET_STRING;
     /**
      * @summary `euiccCertificate`.
      * @description
@@ -65,7 +65,7 @@ class OtherSignedNotification {
      * @public
      * @readonly
      */
-    readonly euiccCertificate: Certificate;
+    public readonly euiccCertificate: Certificate;
     /**
      * @summary `eumCertificate`.
      * @description
@@ -76,7 +76,7 @@ class OtherSignedNotification {
      * @public
      * @readonly
      */
-    readonly eumCertificate: Certificate;
+    public readonly eumCertificate: Certificate;
 
     constructor (
         tbsOtherNotification: NotificationMetadata,

@@ -1,5 +1,5 @@
 /* eslint-disable */
-import { ASN1Element as _Element, INTEGER } from "@wildboar/asn1";
+import { ASN1Element as _Element, type INTEGER } from "@wildboar/asn1";
 import * as $ from "@wildboar/asn1/functional";
 
 /**
@@ -29,7 +29,7 @@ export type ResourceSyntax = INTEGER;
  * @constant
  * @type {number}
  */
-export const ResourceSyntax_insufficientMemory: ResourceSyntax = 0; /* LONG_NAMED_INTEGER_VALUE */
+export const ResourceSyntax_insufficientMemory: 0 = 0 satisfies ResourceSyntax; /* LONG_NAMED_INTEGER_VALUE */
 
 /**
  * @summary ResourceSyntax_insufficientMemory
@@ -40,35 +40,35 @@ export const ResourceSyntax_insufficientMemory: ResourceSyntax = 0; /* LONG_NAME
  * @constant
  * @type {number}
  */
-export const insufficientMemory: ResourceSyntax = ResourceSyntax_insufficientMemory; /* SHORT_NAMED_INTEGER_VALUE */
+export const insufficientMemory: 0 = ResourceSyntax_insufficientMemory; /* SHORT_NAMED_INTEGER_VALUE */
 
 /**
  * @summary ResourceSyntax_insufficientAssociations
  * @constant
  * @type {number}
  */
-export const ResourceSyntax_insufficientAssociations: ResourceSyntax = 1; /* LONG_NAMED_INTEGER_VALUE */
+export const ResourceSyntax_insufficientAssociations: 1 = 1 satisfies ResourceSyntax; /* LONG_NAMED_INTEGER_VALUE */
 
 /**
  * @summary ResourceSyntax_insufficientAssociations
  * @constant
  * @type {number}
  */
-export const insufficientAssociations: ResourceSyntax = ResourceSyntax_insufficientAssociations; /* SHORT_NAMED_INTEGER_VALUE */
+export const insufficientAssociations: 1 = ResourceSyntax_insufficientAssociations; /* SHORT_NAMED_INTEGER_VALUE */
 
 /**
  * @summary ResourceSyntax_insufficientDiskSpace
  * @constant
  * @type {number}
  */
-export const ResourceSyntax_insufficientDiskSpace: ResourceSyntax = 2; /* LONG_NAMED_INTEGER_VALUE */
+export const ResourceSyntax_insufficientDiskSpace: 2 = 2 satisfies ResourceSyntax; /* LONG_NAMED_INTEGER_VALUE */
 
 /**
  * @summary ResourceSyntax_insufficientDiskSpace
  * @constant
  * @type {number}
  */
-export const insufficientDiskSpace: ResourceSyntax = ResourceSyntax_insufficientDiskSpace; /* SHORT_NAMED_INTEGER_VALUE */
+export const insufficientDiskSpace: 2 = ResourceSyntax_insufficientDiskSpace; /* SHORT_NAMED_INTEGER_VALUE */
 
 /**
  * @summary ResourceSyntax_miscellaneousResourceExhausted
@@ -79,7 +79,7 @@ export const insufficientDiskSpace: ResourceSyntax = ResourceSyntax_insufficient
  * @constant
  * @type {number}
  */
-export const ResourceSyntax_miscellaneousResourceExhausted: ResourceSyntax = 4; /* LONG_NAMED_INTEGER_VALUE */
+export const ResourceSyntax_miscellaneousResourceExhausted: 4 = 4 satisfies ResourceSyntax; /* LONG_NAMED_INTEGER_VALUE */
 
 /**
  * @summary ResourceSyntax_miscellaneousResourceExhausted
@@ -90,13 +90,13 @@ export const ResourceSyntax_miscellaneousResourceExhausted: ResourceSyntax = 4; 
  * @constant
  * @type {number}
  */
-export const miscellaneousResourceExhausted: ResourceSyntax = ResourceSyntax_miscellaneousResourceExhausted; /* SHORT_NAMED_INTEGER_VALUE */
+export const miscellaneousResourceExhausted: 4 = ResourceSyntax_miscellaneousResourceExhausted; /* SHORT_NAMED_INTEGER_VALUE */
 
 
-export const _decode_ResourceSyntax = $._decodeInteger;
+export const _decode_ResourceSyntax: $.ASN1Decoder<INTEGER> = $._decodeInteger;
 
 
-export const _encode_ResourceSyntax = $._encodeInteger;
+export const _encode_ResourceSyntax: $.ASN1Encoder<INTEGER> = $._encodeInteger;
 
 
 /* eslint-enable */

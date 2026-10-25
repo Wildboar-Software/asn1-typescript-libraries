@@ -1,21 +1,21 @@
 /* eslint-disable */
 import {
-    OCTET_STRING,
-    OPTIONAL,
-    UTF8String,
-    ASN1Element as _Element,
+    type OCTET_STRING,
+    type OPTIONAL,
+    type UTF8String,
+    type ASN1Element as _Element,
     ASN1TagClass as _TagClass
 } from "@wildboar/asn1";
 import { ASN1SizeError } from "@wildboar/asn1";
 import * as $ from "@wildboar/asn1/functional";
-import { VersionType, _decode_VersionType, _encode_VersionType } from "../RSPDefinitions/VersionType.ta.mjs";
-import { UICCCapability, _decode_UICCCapability, _encode_UICCCapability } from "../PEDefinitions/UICCCapability.ta.mjs";
-import { RspCapability, _decode_RspCapability, _encode_RspCapability } from "../RSPDefinitions/RspCapability.ta.mjs";
-import { EUICCInfo2_euiccCategory, _decode_EUICCInfo2_euiccCategory, _encode_EUICCInfo2_euiccCategory } from "../RSPDefinitions/EUICCInfo2-euiccCategory.ta.mjs";
-import { PprIds, _decode_PprIds, _encode_PprIds } from "../RSPDefinitions/PprIds.ta.mjs";
+import { type VersionType, _decode_VersionType, _encode_VersionType } from "../RSPDefinitions/VersionType.ta.mjs";
+import { type UICCCapability, _decode_UICCCapability, _encode_UICCCapability } from "../PEDefinitions/UICCCapability.ta.mjs";
+import { type RspCapability, _decode_RspCapability, _encode_RspCapability } from "../RSPDefinitions/RspCapability.ta.mjs";
+import { type EUICCInfo2_euiccCategory, _decode_EUICCInfo2_euiccCategory, _encode_EUICCInfo2_euiccCategory } from "../RSPDefinitions/EUICCInfo2-euiccCategory.ta.mjs";
+import { type PprIds, _decode_PprIds, _encode_PprIds } from "../RSPDefinitions/PprIds.ta.mjs";
 import { CertificationDataObject, _decode_CertificationDataObject, _encode_CertificationDataObject } from "../RSPDefinitions/CertificationDataObject.ta.mjs";
-import { EUICCInfo2_treProperties, _decode_EUICCInfo2_treProperties, _encode_EUICCInfo2_treProperties } from "../RSPDefinitions/EUICCInfo2-treProperties.ta.mjs";
-import { LpaMode, _decode_LpaMode, _encode_LpaMode } from "../RSPDefinitions/LpaMode.ta.mjs";
+import { type EUICCInfo2_treProperties, _decode_EUICCInfo2_treProperties, _encode_EUICCInfo2_treProperties } from "../RSPDefinitions/EUICCInfo2-treProperties.ta.mjs";
+import { type LpaMode, _decode_LpaMode, _encode_LpaMode } from "../RSPDefinitions/LpaMode.ta.mjs";
 import { IoTSpecificInfo, _decode_IoTSpecificInfo, _encode_IoTSpecificInfo } from "../RSPDefinitions/IoTSpecificInfo.ta.mjs";
 
 
@@ -93,7 +93,7 @@ class EUICCInfo2 {
      * @public
      * @readonly
      */
-    readonly profileVersion: VersionType;
+    public readonly profileVersion: VersionType;
     /**
      * @summary `svn`.
      * @description
@@ -105,7 +105,7 @@ class EUICCInfo2 {
      * @public
      * @readonly
      */
-    readonly svn: VersionType;
+    public readonly svn: VersionType;
     /**
      * @summary `euiccFirmwareVer`.
      * @description
@@ -116,7 +116,7 @@ class EUICCInfo2 {
      * @public
      * @readonly
      */
-    readonly euiccFirmwareVer: VersionType;
+    public readonly euiccFirmwareVer: VersionType;
     /**
      * @summary `extCardResource`.
      * @description
@@ -128,7 +128,7 @@ class EUICCInfo2 {
      * @public
      * @readonly
      */
-    readonly extCardResource: OCTET_STRING;
+    public readonly extCardResource: OCTET_STRING;
     /**
      * @summary `uiccCapability`.
      * @description
@@ -139,7 +139,7 @@ class EUICCInfo2 {
      * @public
      * @readonly
      */
-    readonly uiccCapability: UICCCapability;
+    public readonly uiccCapability: UICCCapability;
     /**
      * @summary `ts102241Version`.
      * @description
@@ -150,7 +150,7 @@ class EUICCInfo2 {
      * @public
      * @readonly
      */
-    readonly ts102241Version: OPTIONAL<VersionType>;
+    public readonly ts102241Version: OPTIONAL<VersionType>;
     /**
      * @summary `globalplatformVersion`.
      * @description
@@ -161,7 +161,7 @@ class EUICCInfo2 {
      * @public
      * @readonly
      */
-    readonly globalplatformVersion: OPTIONAL<VersionType>;
+    public readonly globalplatformVersion: OPTIONAL<VersionType>;
     /**
      * @summary `rspCapability`.
      * @description
@@ -172,7 +172,7 @@ class EUICCInfo2 {
      * @public
      * @readonly
      */
-    readonly rspCapability: RspCapability;
+    public readonly rspCapability: RspCapability;
     /**
      * @summary `euiccCiPKIdListForVerification`.
      * @description
@@ -183,7 +183,7 @@ class EUICCInfo2 {
      * @public
      * @readonly
      */
-    readonly euiccCiPKIdListForVerification: OCTET_STRING[];
+    public readonly euiccCiPKIdListForVerification: OCTET_STRING[];
     /**
      * @summary `euiccCiPKIdListForSigning`.
      * @description
@@ -194,7 +194,7 @@ class EUICCInfo2 {
      * @public
      * @readonly
      */
-    readonly euiccCiPKIdListForSigning: OCTET_STRING[];
+    public readonly euiccCiPKIdListForSigning: OCTET_STRING[];
     /**
      * @summary `euiccCategory`.
      * @description
@@ -206,7 +206,7 @@ class EUICCInfo2 {
      * @public
      * @readonly
      */
-    readonly euiccCategory: OPTIONAL<EUICCInfo2_euiccCategory>;
+    public readonly euiccCategory: OPTIONAL<EUICCInfo2_euiccCategory>;
     /**
      * @summary `forbiddenProfilePolicyRules`.
      * @description
@@ -217,7 +217,7 @@ class EUICCInfo2 {
      * @public
      * @readonly
      */
-    readonly forbiddenProfilePolicyRules: OPTIONAL<PprIds>;
+    public readonly forbiddenProfilePolicyRules: OPTIONAL<PprIds>;
     /**
      * @summary `ppVersion`.
      * @description
@@ -229,7 +229,7 @@ class EUICCInfo2 {
      * @public
      * @readonly
      */
-    readonly ppVersion: VersionType;
+    public readonly ppVersion: VersionType;
     /**
      * @summary `sasAcreditationNumber`.
      * @description
@@ -240,7 +240,7 @@ class EUICCInfo2 {
      * @public
      * @readonly
      */
-    readonly sasAcreditationNumber: UTF8String;
+    public readonly sasAcreditationNumber: UTF8String;
     /**
      * @summary `certificationDataObject`.
      * @description
@@ -251,7 +251,7 @@ class EUICCInfo2 {
      * @public
      * @readonly
      */
-    readonly certificationDataObject?: OPTIONAL<CertificationDataObject>;
+    public readonly certificationDataObject?: OPTIONAL<CertificationDataObject>;
     /**
      * @summary `treProperties`.
      * @description
@@ -263,7 +263,7 @@ class EUICCInfo2 {
      * @public
      * @readonly
      */
-    readonly treProperties?: OPTIONAL<EUICCInfo2_treProperties>;
+    public readonly treProperties?: OPTIONAL<EUICCInfo2_treProperties>;
     /**
      * @summary `treProductReference`.
      * @description
@@ -274,7 +274,7 @@ class EUICCInfo2 {
      * @public
      * @readonly
      */
-    readonly treProductReference?: OPTIONAL<UTF8String>;
+    public readonly treProductReference?: OPTIONAL<UTF8String>;
     /**
      * @summary `additionalEuiccProfilePackageVersions`.
      * @description
@@ -286,7 +286,7 @@ class EUICCInfo2 {
      * @public
      * @readonly
      */
-    readonly additionalEuiccProfilePackageVersions?: OPTIONAL<VersionType[]>;
+    public readonly additionalEuiccProfilePackageVersions?: OPTIONAL<VersionType[]>;
     /**
      * @summary `lpaMode`.
      * @description
@@ -298,7 +298,7 @@ class EUICCInfo2 {
      * @public
      * @readonly
      */
-    readonly lpaMode?: OPTIONAL<LpaMode>;
+    public readonly lpaMode?: OPTIONAL<LpaMode>;
     /**
      * @summary `euiccCiPKIdListForSigningV3`.
      * @description
@@ -311,7 +311,7 @@ class EUICCInfo2 {
      * @public
      * @readonly
      */
-    readonly euiccCiPKIdListForSigningV3?: OPTIONAL<OCTET_STRING[]>;
+    public readonly euiccCiPKIdListForSigningV3?: OPTIONAL<OCTET_STRING[]>;
     /**
      * @summary `additionalEuiccInfo`.
      * @description
@@ -323,7 +323,7 @@ class EUICCInfo2 {
      * @public
      * @readonly
      */
-    readonly additionalEuiccInfo?: OPTIONAL<OCTET_STRING>;
+    public readonly additionalEuiccInfo?: OPTIONAL<OCTET_STRING>;
     /**
      * @summary `highestSvn`.
      * @description
@@ -335,7 +335,7 @@ class EUICCInfo2 {
      * @public
      * @readonly
      */
-    readonly highestSvn?: OPTIONAL<VersionType>;
+    public readonly highestSvn?: OPTIONAL<VersionType>;
     /**
      * @summary `iotSpecificInfo`.
      * @description
@@ -345,7 +345,7 @@ class EUICCInfo2 {
      * @public
      * @readonly
      */
-    readonly iotSpecificInfo?: OPTIONAL<IoTSpecificInfo>;
+    public readonly iotSpecificInfo?: OPTIONAL<IoTSpecificInfo>;
     /**
      * @summary `euiccMinimumSecurityLevel`.
      * @description
@@ -357,7 +357,7 @@ class EUICCInfo2 {
      * @public
      * @readonly
      */
-    readonly euiccMinimumSecurityLevel?: OPTIONAL<OCTET_STRING>;
+    public readonly euiccMinimumSecurityLevel?: OPTIONAL<OCTET_STRING>;
 
     constructor (
         profileVersion: VersionType,

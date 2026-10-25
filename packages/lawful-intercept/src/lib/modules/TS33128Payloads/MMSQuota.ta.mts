@@ -1,8 +1,8 @@
 /* eslint-disable */
 import {
-    INTEGER,
+    type INTEGER,
     ASN1ConstructionError as _ConstructionError,
-    ASN1Element as _Element,
+    type ASN1Element as _Element,
     ASN1TagClass as _TagClass
 } from "@wildboar/asn1";
 import * as $ from "@wildboar/asn1/functional";
@@ -87,7 +87,7 @@ class MMSQuota {
          * @static
          */
 
-    public static _enum_for_quotaUnit = _enum_for_MMSQuotaUnit;
+    public static _enum_for_quotaUnit: typeof _enum_for_MMSQuotaUnit = _enum_for_MMSQuotaUnit;
 }
 
 /**

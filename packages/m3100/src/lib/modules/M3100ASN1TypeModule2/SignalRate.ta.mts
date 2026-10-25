@@ -1,7 +1,7 @@
 /* eslint-disable */
 import {
-    OBJECT_IDENTIFIER,
-    ASN1Element as _Element,
+    type OBJECT_IDENTIFIER,
+    type ASN1Element as _Element,
     ASN1TagClass as _TagClass,
     ASN1Construction as _Construction,
     ASN1UniversalType as _UniversalType,
@@ -12,7 +12,7 @@ import {
 } from '@wildboar/asn1';
 import * as $ from '@wildboar/asn1/functional';
 import {
-    CharacteristicInformation,
+    type CharacteristicInformation,
     _decode_CharacteristicInformation,
     _encode_CharacteristicInformation,
 } from '../ASN1DefinedTypesModule/CharacteristicInformation.ta.mjs';

@@ -1,17 +1,17 @@
 /* eslint-disable */
 import {
-    OPTIONAL,
-    ASN1Element as _Element,
+    type OPTIONAL,
+    type ASN1Element as _Element,
     ASN1TagClass as _TagClass
 } from "@wildboar/asn1";
 import * as $ from "@wildboar/asn1/functional";
-import { SRFGapCriteria, _decode_SRFGapCriteria, _encode_SRFGapCriteria } from "../IN-SCF-SRF-datatypes/SRFGapCriteria.ta.mjs";
+import { type SRFGapCriteria, _decode_SRFGapCriteria, _encode_SRFGapCriteria } from "../IN-SCF-SRF-datatypes/SRFGapCriteria.ta.mjs";
 // export { SRFGapCriteria, _decode_SRFGapCriteria, _encode_SRFGapCriteria } from "../IN-SCF-SRF-datatypes/SRFGapCriteria.ta.mjs";
 import { GapIndicators, _decode_GapIndicators, _encode_GapIndicators } from "../IN-SSF-SCF-datatypes/GapIndicators.ta.mjs";
 // export { GapIndicators, _decode_GapIndicators, _encode_GapIndicators } from "../IN-SSF-SCF-datatypes/GapIndicators.ta.mjs";
 import { ControlType, _decode_ControlType, _encode_ControlType, _enum_for_ControlType } from "../IN-SSF-SCF-datatypes/ControlType.ta.mjs";
 // export { ControlType, _enum_for_ControlType, ControlType_sCPOverloaded /* IMPORTED_LONG_ENUMERATION_ITEM */, sCPOverloaded /* IMPORTED_SHORT_ENUMERATION_ITEM */, ControlType_manuallyInitiated /* IMPORTED_LONG_ENUMERATION_ITEM */, manuallyInitiated /* IMPORTED_SHORT_ENUMERATION_ITEM */, ControlType_destinationOverload /* IMPORTED_LONG_ENUMERATION_ITEM */, destinationOverload /* IMPORTED_SHORT_ENUMERATION_ITEM */, _decode_ControlType, _encode_ControlType } from "../IN-SSF-SCF-datatypes/ControlType.ta.mjs";
-import { Extensions, _decode_Extensions, _encode_Extensions } from "../IN-common-datatypes/Extensions.ta.mjs";
+import { type Extensions, _decode_Extensions, _encode_Extensions } from "../IN-common-datatypes/Extensions.ta.mjs";
 // export { Extensions, _decode_Extensions, _encode_Extensions } from "../IN-common-datatypes/Extensions.ta.mjs";
 
 
@@ -103,7 +103,7 @@ class SRFCallGapArg {
          * @static
          */
 
-    public static _enum_for_controlType = _enum_for_ControlType;
+    public static _enum_for_controlType: typeof _enum_for_ControlType = _enum_for_ControlType;
 }
 
 /**

@@ -1,7 +1,7 @@
 /* eslint-disable */
 import {
-    OPTIONAL,
-    ASN1Element as _Element,
+    type OPTIONAL,
+    type ASN1Element as _Element,
     ASN1TagClass as _TagClass,
     ASN1Construction as _Construction,
     ASN1UniversalType as _UniversalType,
@@ -18,7 +18,7 @@ import {
     _encode_OperationalState,
 } from '@wildboar/attribute-asn1module';
 import {
-    ActivateReply_responseCode,
+    type ActivateReply_responseCode,
     _decode_ActivateReply_responseCode,
     _encode_ActivateReply_responseCode,
 } from '../ActionModule/ActivateReply-responseCode.ta.mjs';
@@ -55,42 +55,50 @@ import {
  *
  */
 export class ActivateReply {
+    /**
+     * @summary `operationalStatus`.
+     * @description
+     *
+     * Operational state of the object after the example
+     * `activate` action. ITU-T Rec. X.722 (01/92) A.7, A.10.
+     * @public
+     * @readonly
+     */
+    public readonly operationalStatus: OperationalState;
+    /**
+     * @summary `responseCode`.
+     * @description
+     *
+     * `successResponse` (0) if activate succeeded;
+     * `serviceProviderErrorResponse` (1) if it failed
+     * because of the underlying service provider. ITU-T Rec.
+     * X.722 (01/92) A.7.
+     * @public
+     * @readonly
+     */
+    public readonly responseCode: ActivateReply_responseCode;
+    /**
+     * @summary `responseParams`.
+     * @description
+     *
+     * Optional management extensions. When
+     * `responseCode` is `serviceProviderErrorResponse`,
+     * carries `serviceProviderErrorResponseReason`. ITU-T
+     * Rec. X.722 (01/92) A.3, A.7.
+     * @public
+     * @readonly
+     */
+    public readonly responseParams?: OPTIONAL<ManagementExtension[]>;
+
     constructor(
-        /**
-         * @summary `operationalStatus`.
-         * @description
-         *
-         * Operational state of the object after the example
-         * `activate` action. ITU-T Rec. X.722 (01/92) A.7, A.10.
-         * @public
-         * @readonly
-         */
-        readonly operationalStatus: OperationalState,
-        /**
-         * @summary `responseCode`.
-         * @description
-         *
-         * `successResponse` (0) if activate succeeded;
-         * `serviceProviderErrorResponse` (1) if it failed
-         * because of the underlying service provider. ITU-T Rec.
-         * X.722 (01/92) A.7.
-         * @public
-         * @readonly
-         */
-        readonly responseCode: ActivateReply_responseCode,
-        /**
-         * @summary `responseParams`.
-         * @description
-         *
-         * Optional management extensions. When
-         * `responseCode` is `serviceProviderErrorResponse`,
-         * carries `serviceProviderErrorResponseReason`. ITU-T
-         * Rec. X.722 (01/92) A.3, A.7.
-         * @public
-         * @readonly
-         */
-        readonly responseParams?: OPTIONAL<ManagementExtension[]>
-    ) {}
+        operationalStatus: OperationalState,
+        responseCode: ActivateReply_responseCode,
+        responseParams?: OPTIONAL<ManagementExtension[]>
+    ) {
+        this.operationalStatus = operationalStatus;
+        this.responseCode = responseCode;
+        this.responseParams = responseParams;
+    }
 
     /**
      * @summary Restructures an object into a ActivateReply
@@ -120,7 +128,7 @@ export class ActivateReply {
      * @static
      */
 
-    public static _enum_for_operationalStatus = _enum_for_OperationalState;
+    public static _enum_for_operationalStatus: typeof _enum_for_OperationalState = _enum_for_OperationalState;
 }
 
 /**

@@ -1,7 +1,7 @@
 /* eslint-disable */
 import {
-    OPTIONAL,
-    ASN1Element as _Element,
+    type OPTIONAL,
+    type ASN1Element as _Element,
     ASN1TagClass as _TagClass,
     ASN1Construction as _Construction,
     ASN1UniversalType as _UniversalType,
@@ -12,12 +12,12 @@ import {
 } from '@wildboar/asn1';
 import * as $ from '@wildboar/asn1/functional';
 import {
-    BodyPart,
+    type BodyPart,
     _decode_BodyPart,
     _encode_BodyPart,
 } from '../IPMSInformationObjects/BodyPart.ta.mjs';
 import {
-    Time,
+    type Time,
     _decode_Time,
     _encode_Time,
 } from '../IPMSInformationObjects/Time.ta.mjs';
@@ -42,20 +42,26 @@ import {
  *
  */
 export class AbsenceAdvice {
+    /**
+     * @summary `advice`.
+     * @public
+     * @readonly
+     */
+    public readonly advice?: OPTIONAL<BodyPart>;
+    /**
+     * @summary `next_available`.
+     * @public
+     * @readonly
+     */
+    public readonly next_available?: OPTIONAL<Time>;
+
     constructor(
-        /**
-         * @summary `advice`.
-         * @public
-         * @readonly
-         */
-        readonly advice?: OPTIONAL<BodyPart>,
-        /**
-         * @summary `next_available`.
-         * @public
-         * @readonly
-         */
-        readonly next_available?: OPTIONAL<Time>
-    ) {}
+        advice?: OPTIONAL<BodyPart>,
+        next_available?: OPTIONAL<Time>
+    ) {
+        this.advice = advice;
+        this.next_available = next_available;
+    }
 
     /**
      * @summary Restructures an object into a AbsenceAdvice

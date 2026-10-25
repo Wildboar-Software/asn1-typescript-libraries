@@ -1,18 +1,18 @@
 /* eslint-disable */
 import {
-    ASN1Element as _Element,
+    type ASN1Element as _Element,
     ASN1TagClass as _TagClass,
-    OPTIONAL,
-    INTEGER,
+    type OPTIONAL,
+    type INTEGER,
 } from "@wildboar/asn1";
 import * as $ from "@wildboar/asn1/functional";
 import {
-    BaseDistance,
+    type BaseDistance,
     _decode_BaseDistance,
     _encode_BaseDistance,
 } from "../AttributeCertificateDefinitions/BaseDistance.ta.mjs";
 import {
-    GeneralName,
+    type GeneralName,
     _decode_GeneralName,
     _encode_GeneralName,
 } from "../CertificateExtensions/GeneralName.ta.mjs";
@@ -35,32 +35,42 @@ import {
  *
  */
 export class GeneralSubtree {
+    /**
+     * @summary `base`.
+     * @public
+     * @readonly
+     */
+    public readonly base: GeneralName;
+    /**
+     * @summary `minimum`.
+     * @public
+     * @readonly
+     */
+    public readonly minimum?: OPTIONAL<BaseDistance>;
+    /**
+     * @summary `maximum`.
+     * @public
+     * @readonly
+     */
+    public readonly maximum?: OPTIONAL<BaseDistance>;
+    /**
+     * @summary Extensions that are not recognized.
+     * @public
+     * @readonly
+     */
+    public readonly _unrecognizedExtensionsList: _Element[];
+
     constructor(
-        /**
-         * @summary `base`.
-         * @public
-         * @readonly
-         */
-        readonly base: GeneralName,
-        /**
-         * @summary `minimum`.
-         * @public
-         * @readonly
-         */
-        readonly minimum?: OPTIONAL<BaseDistance>,
-        /**
-         * @summary `maximum`.
-         * @public
-         * @readonly
-         */
-        readonly maximum?: OPTIONAL<BaseDistance>,
-        /**
-         * @summary Extensions that are not recognized.
-         * @public
-         * @readonly
-         */
-        readonly _unrecognizedExtensionsList: _Element[] = []
-    ) {}
+        base: GeneralName,
+        minimum?: OPTIONAL<BaseDistance>,
+        maximum?: OPTIONAL<BaseDistance>,
+        _unrecognizedExtensionsList: _Element[] = []
+    ) {
+        this.base = base;
+        this.minimum = minimum;
+        this.maximum = maximum;
+        this._unrecognizedExtensionsList = _unrecognizedExtensionsList;
+    }
 
     /**
      * @summary Restructures an object into a GeneralSubtree

@@ -1,6 +1,6 @@
 /* eslint-disable */
 import {
-    ASN1Element as _Element,
+    type ASN1Element as _Element,
     ASN1TagClass as _TagClass,
     ASN1Construction as _Construction,
     ASN1UniversalType as _UniversalType,
@@ -11,12 +11,12 @@ import {
 } from '@wildboar/asn1';
 import * as $ from '@wildboar/asn1/functional';
 import {
-    SecurityDomainAuthorityName,
+    type SecurityDomainAuthorityName,
     _decode_SecurityDomainAuthorityName,
     _encode_SecurityDomainAuthorityName,
 } from '../AccessControl-ASN1Module/SecurityDomainAuthorityName.ta.mjs';
 import {
-    OperationType,
+    type OperationType,
     _decode_OperationType,
     _encode_OperationType,
 } from '../AccessControl-ASN1Module/OperationType.ta.mjs';
@@ -38,28 +38,34 @@ import {
  *
  */
 export class SdaList_Item {
+    /**
+     * @summary `securityDomainAuthorityName`.
+     * @description
+     *
+     * Security domain authority that issued or constrains
+     * this capability. X.741 Annex H.4, A.6.
+     * @public
+     * @readonly
+     */
+    public readonly securityDomainAuthorityName: SecurityDomainAuthorityName;
+    /**
+     * @summary `operationType`.
+     * @description
+     *
+     * Operation type allowed under that authority. X.741
+     * Annex H.4, A.6.
+     * @public
+     * @readonly
+     */
+    public readonly operationType: OperationType;
+
     constructor(
-        /**
-         * @summary `securityDomainAuthorityName`.
-         * @description
-         *
-         * Security domain authority that issued or constrains
-         * this capability. X.741 Annex H.4, A.6.
-         * @public
-         * @readonly
-         */
-        readonly securityDomainAuthorityName: SecurityDomainAuthorityName,
-        /**
-         * @summary `operationType`.
-         * @description
-         *
-         * Operation type allowed under that authority. X.741
-         * Annex H.4, A.6.
-         * @public
-         * @readonly
-         */
-        readonly operationType: OperationType
-    ) {}
+        securityDomainAuthorityName: SecurityDomainAuthorityName,
+        operationType: OperationType
+    ) {
+        this.securityDomainAuthorityName = securityDomainAuthorityName;
+        this.operationType = operationType;
+    }
 
     /**
      * @summary Restructures an object into a SdaList_Item

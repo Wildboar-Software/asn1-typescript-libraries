@@ -1,7 +1,7 @@
 /* eslint-disable */
 import {
-    OPTIONAL,
-    ASN1Element as _Element,
+    type OPTIONAL,
+    type ASN1Element as _Element,
     ASN1TagClass as _TagClass,
     ASN1Construction as _Construction,
     ASN1UniversalType as _UniversalType,
@@ -11,8 +11,8 @@ import {
     ASN1ConstructionError as _ConstructionError,
 } from "@wildboar/asn1";
 import * as $ from "@wildboar/asn1/functional";
-import { Identifier, _decode_Identifier, _encode_Identifier } from "../CryptographicInformationFramework/Identifier.ta.mjs";
-import { Reference, _decode_Reference, _encode_Reference } from "../CryptographicInformationFramework/Reference.ta.mjs";
+import { type Identifier, _decode_Identifier, _encode_Identifier } from "../CryptographicInformationFramework/Identifier.ta.mjs";
+import { type Reference, _decode_Reference, _encode_Reference } from "../CryptographicInformationFramework/Reference.ta.mjs";
 
 
 /**
@@ -37,41 +37,51 @@ import { Reference, _decode_Reference, _encode_Reference } from "../Cryptographi
  */
 export
 class CommonAuthenticationObjectAttributes {
+    /**
+     * @summary `authId`.
+     * @description
+     * Unique id used as `CommonObjectAttributes.authId` on protected CIOs.
+     * ISO/IEC 7816-15:2016 §8.2.18.
+     * @public
+     * @readonly
+     */
+    public readonly authId?: OPTIONAL<Identifier>;
+    /**
+     * @summary `authReference`.
+     * @description
+     * ISO/IEC 7816-4 key-reference object for naming this authenticator in
+     * Security Environments. ISO/IEC 7816-15:2016 §8.2.18.
+     * @public
+     * @readonly
+     */
+    public readonly authReference?: OPTIONAL<Reference>;
+    /**
+     * @summary `seIdentifier`.
+     * @description
+     * Security environment to which this authentication object belongs.
+     * ISO/IEC 7816-15:2016 §8.2.18.
+     * @public
+     * @readonly
+     */
+    public readonly seIdentifier?: OPTIONAL<Reference>;
+    /**
+     * @summary Extensions that are not recognized.
+     * @public
+     * @readonly
+     */
+    public readonly _unrecognizedExtensionsList: _Element[];
+
     constructor (
-        /**
-         * @summary `authId`.
-         * @description
-         * Unique id used as `CommonObjectAttributes.authId` on protected CIOs.
-         * ISO/IEC 7816-15:2016 §8.2.18.
-         * @public
-         * @readonly
-         */
-        readonly authId?: OPTIONAL<Identifier>,
-        /**
-         * @summary `authReference`.
-         * @description
-         * ISO/IEC 7816-4 key-reference object for naming this authenticator in
-         * Security Environments. ISO/IEC 7816-15:2016 §8.2.18.
-         * @public
-         * @readonly
-         */
-        readonly authReference?: OPTIONAL<Reference>,
-        /**
-         * @summary `seIdentifier`.
-         * @description
-         * Security environment to which this authentication object belongs.
-         * ISO/IEC 7816-15:2016 §8.2.18.
-         * @public
-         * @readonly
-         */
-        readonly seIdentifier?: OPTIONAL<Reference>,
-        /**
-         * @summary Extensions that are not recognized.
-         * @public
-         * @readonly
-         */
-        readonly _unrecognizedExtensionsList: _Element[] = []
-    ) {}
+        authId?: OPTIONAL<Identifier>,
+        authReference?: OPTIONAL<Reference>,
+        seIdentifier?: OPTIONAL<Reference>,
+        _unrecognizedExtensionsList: _Element[] = []
+    ) {
+        this.authId = authId;
+        this.authReference = authReference;
+        this.seIdentifier = seIdentifier;
+        this._unrecognizedExtensionsList = _unrecognizedExtensionsList;
+    }
 
     /**
      * @summary Restructures an object into a CommonAuthenticationObjectAttributes

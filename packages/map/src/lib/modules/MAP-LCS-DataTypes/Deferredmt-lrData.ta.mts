@@ -1,13 +1,13 @@
 /* eslint-disable */
 import {
-    OPTIONAL,
-    ASN1Element as _Element,
+    type OPTIONAL,
+    type ASN1Element as _Element,
     ASN1TagClass as _TagClass
 } from "@wildboar/asn1";
 import * as $ from "@wildboar/asn1/functional";
-import { DeferredLocationEventType, _decode_DeferredLocationEventType, _encode_DeferredLocationEventType } from "../MAP-LCS-DataTypes/DeferredLocationEventType.ta.mjs";
+import { type DeferredLocationEventType, _decode_DeferredLocationEventType, _encode_DeferredLocationEventType } from "../MAP-LCS-DataTypes/DeferredLocationEventType.ta.mjs";
 import { LCSLocationInfo, _decode_LCSLocationInfo, _encode_LCSLocationInfo } from "../MAP-LCS-DataTypes/LCSLocationInfo.ta.mjs";
-import { TerminationCause, _decode_TerminationCause, _encode_TerminationCause, _enum_for_TerminationCause } from "../MAP-LCS-DataTypes/TerminationCause.ta.mjs";
+import { type TerminationCause, _decode_TerminationCause, _encode_TerminationCause, _enum_for_TerminationCause } from "../MAP-LCS-DataTypes/TerminationCause.ta.mjs";
 
 
 /**
@@ -23,8 +23,8 @@ import { TerminationCause, _decode_TerminationCause, _encode_TerminationCause, _
  * ```asn1
  * Deferredmt-lrData ::= SEQUENCE {
  *     deferredLocationEventType    DeferredLocationEventType,
- *     terminationCause    [0] TerminationCause    OPTIONAL,
- *     lcsLocationInfo    [1] LCSLocationInfo    OPTIONAL,
+ *     terminationCause    [0] TerminationCause    type OPTIONAL,
+ *     lcsLocationInfo    [1] LCSLocationInfo    type OPTIONAL,
  *     ...}
  * ```
  * 
@@ -32,44 +32,54 @@ import { TerminationCause, _decode_TerminationCause, _encode_TerminationCause, _
  */
 export
 class Deferredmt_lrData {
+    /**
+     * @summary `deferredLocationEventType`.
+     * @description
+     *
+     * Deferred event type.
+     *
+     * @public
+     * @readonly
+     */
+    public readonly deferredLocationEventType: DeferredLocationEventType;
+    /**
+     * @summary `terminationCause`.
+     * @description
+     *
+     * Why monitoring stopped.
+     *
+     * @public
+     * @readonly
+     */
+    public readonly terminationCause?: OPTIONAL<TerminationCause>;
+    /**
+     * @summary `lcsLocationInfo`.
+     * @description
+     *
+     * Only if terminationCause is mt-lrRestart (clause 17.7.13).
+     *
+     * @public
+     * @readonly
+     */
+    public readonly lcsLocationInfo?: OPTIONAL<LCSLocationInfo>;
+    /**
+     * @summary Extensions that are not recognized.
+     * @public
+     * @readonly
+     */
+    public readonly _unrecognizedExtensionsList: _Element[];
+
     constructor (
-        /**
-         * @summary `deferredLocationEventType`.
-         * @description
-         *
-         * Deferred event type.
-         *
-         * @public
-         * @readonly
-         */
-        readonly deferredLocationEventType: DeferredLocationEventType,
-        /**
-         * @summary `terminationCause`.
-         * @description
-         *
-         * Why monitoring stopped.
-         *
-         * @public
-         * @readonly
-         */
-        readonly terminationCause?: OPTIONAL<TerminationCause>,
-        /**
-         * @summary `lcsLocationInfo`.
-         * @description
-         *
-         * Only if terminationCause is mt-lrRestart (clause 17.7.13).
-         *
-         * @public
-         * @readonly
-         */
-        readonly lcsLocationInfo?: OPTIONAL<LCSLocationInfo>,
-        /**
-         * @summary Extensions that are not recognized.
-         * @public
-         * @readonly
-         */
-        readonly _unrecognizedExtensionsList: _Element[] = []
-    ) {}
+        deferredLocationEventType: DeferredLocationEventType,
+        terminationCause?: OPTIONAL<TerminationCause>,
+        lcsLocationInfo?: OPTIONAL<LCSLocationInfo>,
+        _unrecognizedExtensionsList: _Element[] = []
+    ) {
+        this.deferredLocationEventType = deferredLocationEventType;
+        this.terminationCause = terminationCause;
+        this.lcsLocationInfo = lcsLocationInfo;
+        this._unrecognizedExtensionsList = _unrecognizedExtensionsList;
+    }
 
     /**
      * @summary Restructures an object into a Deferredmt_lrData
@@ -93,7 +103,7 @@ class Deferredmt_lrData {
          * @static
          */
 
-    public static _enum_for_terminationCause = _enum_for_TerminationCause;
+    public static _enum_for_terminationCause: typeof _enum_for_TerminationCause = _enum_for_TerminationCause;
 }
 
 /**

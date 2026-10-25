@@ -1,6 +1,6 @@
 /* eslint-disable */
 import {
-    ASN1Element as _Element,
+    type ASN1Element as _Element,
     ASN1TagClass as _TagClass,
     ASN1Construction as _Construction,
     ASN1UniversalType as _UniversalType,
@@ -9,7 +9,7 @@ import {
     EmbeddedPDV as _PDV,
     ASN1ConstructionError as _ConstructionError,
 } from "@wildboar/asn1";
-import { CONTENT_TYPE } from "../CryptographicMessageSyntax-2009/CONTENT-TYPE.oca.mjs";
+import { type CONTENT_TYPE } from "../CryptographicMessageSyntax-2009/CONTENT-TYPE.oca.mjs";
 import { testReportTechnology } from "../MachineReadableBiometricTestingAndReportingTestReport/testReportTechnology.oa.mjs";
 import { testReportScenario } from "../MachineReadableBiometricTestingAndReportingTestReport/testReportScenario.oa.mjs";
 import { signedTestReport } from "../MachineReadableBiometricTestingAndReportingTestReport/signedTestReport.oa.mjs";

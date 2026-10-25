@@ -1,6 +1,6 @@
 /* eslint-disable */
 import {
-    ASN1Element as _Element,
+    type ASN1Element as _Element,
     ASN1TagClass as _TagClass,
     ASN1Construction as _Construction,
     ASN1UniversalType as _UniversalType,
@@ -61,14 +61,14 @@ export type DLExpansionProhibited = _enum_for_DLExpansionProhibited;
  *
  * @enum {number}
  */
-export const DLExpansionProhibited = _enum_for_DLExpansionProhibited;
+export const DLExpansionProhibited: typeof _enum_for_DLExpansionProhibited = _enum_for_DLExpansionProhibited;
 
 /**
  * @summary DLExpansionProhibited_dl_expansion_allowed
  * @constant
  * @type {number}
  */
-export const DLExpansionProhibited_dl_expansion_allowed: DLExpansionProhibited =
+export const DLExpansionProhibited_dl_expansion_allowed: _enum_for_DLExpansionProhibited.dl_expansion_allowed =
     DLExpansionProhibited.dl_expansion_allowed; /* LONG_NAMED_ENUMERATED_VALUE */
 
 /**
@@ -76,7 +76,7 @@ export const DLExpansionProhibited_dl_expansion_allowed: DLExpansionProhibited =
  * @constant
  * @type {number}
  */
-export const dl_expansion_allowed: DLExpansionProhibited =
+export const dl_expansion_allowed: _enum_for_DLExpansionProhibited.dl_expansion_allowed =
     DLExpansionProhibited.dl_expansion_allowed; /* SHORT_NAMED_ENUMERATED_VALUE */
 
 /**
@@ -84,7 +84,7 @@ export const dl_expansion_allowed: DLExpansionProhibited =
  * @constant
  * @type {number}
  */
-export const DLExpansionProhibited_dl_expansion_prohibited: DLExpansionProhibited =
+export const DLExpansionProhibited_dl_expansion_prohibited: _enum_for_DLExpansionProhibited.dl_expansion_prohibited =
     DLExpansionProhibited.dl_expansion_prohibited; /* LONG_NAMED_ENUMERATED_VALUE */
 
 /**
@@ -92,14 +92,25 @@ export const DLExpansionProhibited_dl_expansion_prohibited: DLExpansionProhibite
  * @constant
  * @type {number}
  */
-export const dl_expansion_prohibited: DLExpansionProhibited =
+export const dl_expansion_prohibited: _enum_for_DLExpansionProhibited.dl_expansion_prohibited =
     DLExpansionProhibited.dl_expansion_prohibited; /* SHORT_NAMED_ENUMERATED_VALUE */
 
 
-export const _decode_DLExpansionProhibited = $._decodeEnumerated;
+export function _decode_DLExpansionProhibited(el: _Element): DLExpansionProhibited {
+    const enumerated = $._decodeEnumerated(el);
+    switch (enumerated) {
+        case DLExpansionProhibited.dl_expansion_allowed: return DLExpansionProhibited.dl_expansion_allowed;
+        case DLExpansionProhibited.dl_expansion_prohibited: return DLExpansionProhibited.dl_expansion_prohibited;
+        default:
+            throw new _ConstructionError(
+                'Invalid ENUMERATED value ' + enumerated + ' for DLExpansionProhibited.',
+                el,
+            );
+    }
+}
 
 
-export const _encode_DLExpansionProhibited = $._encodeEnumerated;
+export const _encode_DLExpansionProhibited: $.ASN1Encoder<DLExpansionProhibited> = $._encodeEnumerated as $.ASN1Encoder<DLExpansionProhibited>;
 
 
 /* eslint-enable */

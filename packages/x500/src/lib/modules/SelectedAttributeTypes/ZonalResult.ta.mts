@@ -1,5 +1,5 @@
 /* eslint-disable */
-import { ASN1Element as _Element, ENUMERATED } from "@wildboar/asn1";
+import { ASN1Element as _Element, type ENUMERATED } from "@wildboar/asn1";
 import * as $ from "@wildboar/asn1/functional";
 
 export enum _enum_for_ZonalResult {
@@ -39,7 +39,7 @@ export type ZonalResult = _enum_for_ZonalResult | ENUMERATED;
  * @constant
  * @type {number}
  */
-export const ZonalResult_cannot_select_mapping: ZonalResult = 0; /* LONG_NAMED_ENUMERATED_VALUE */
+export const ZonalResult_cannot_select_mapping: _enum_for_ZonalResult.cannot_select_mapping = _enum_for_ZonalResult.cannot_select_mapping; /* LONG_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary cannot_select_mapping
@@ -50,7 +50,7 @@ export const ZonalResult_cannot_select_mapping: ZonalResult = 0; /* LONG_NAMED_E
  * @constant
  * @type {number}
  */
-export const cannot_select_mapping: ZonalResult = ZonalResult_cannot_select_mapping; /* SHORT_NAMED_ENUMERATED_VALUE */
+export const cannot_select_mapping: _enum_for_ZonalResult.cannot_select_mapping = ZonalResult_cannot_select_mapping; /* SHORT_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary ZonalResult_zero_mappings
@@ -62,7 +62,7 @@ export const cannot_select_mapping: ZonalResult = ZonalResult_cannot_select_mapp
  * @constant
  * @type {number}
  */
-export const ZonalResult_zero_mappings: ZonalResult = 2; /* LONG_NAMED_ENUMERATED_VALUE */
+export const ZonalResult_zero_mappings: _enum_for_ZonalResult.zero_mappings = _enum_for_ZonalResult.zero_mappings; /* LONG_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary zero_mappings
@@ -74,7 +74,7 @@ export const ZonalResult_zero_mappings: ZonalResult = 2; /* LONG_NAMED_ENUMERATE
  * @constant
  * @type {number}
  */
-export const zero_mappings: ZonalResult = ZonalResult_zero_mappings; /* SHORT_NAMED_ENUMERATED_VALUE */
+export const zero_mappings: _enum_for_ZonalResult.zero_mappings = ZonalResult_zero_mappings; /* SHORT_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary ZonalResult_multiple_mappings
@@ -86,7 +86,7 @@ export const zero_mappings: ZonalResult = ZonalResult_zero_mappings; /* SHORT_NA
  * @constant
  * @type {number}
  */
-export const ZonalResult_multiple_mappings: ZonalResult = 3; /* LONG_NAMED_ENUMERATED_VALUE */
+export const ZonalResult_multiple_mappings: _enum_for_ZonalResult.multiple_mappings = _enum_for_ZonalResult.multiple_mappings; /* LONG_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary multiple_mappings
@@ -98,13 +98,13 @@ export const ZonalResult_multiple_mappings: ZonalResult = 3; /* LONG_NAMED_ENUME
  * @constant
  * @type {number}
  */
-export const multiple_mappings: ZonalResult = ZonalResult_multiple_mappings; /* SHORT_NAMED_ENUMERATED_VALUE */
+export const multiple_mappings: _enum_for_ZonalResult.multiple_mappings = ZonalResult_multiple_mappings; /* SHORT_NAMED_ENUMERATED_VALUE */
 
 
-export const _decode_ZonalResult = $._decodeEnumerated;
+export const _decode_ZonalResult: $.ASN1Decoder<number> = $._decodeEnumerated;
 
 
-export const _encode_ZonalResult = $._encodeEnumerated;
+export const _encode_ZonalResult: $.ASN1Encoder<number> = $._encodeEnumerated;
 
 
 /* eslint-enable */

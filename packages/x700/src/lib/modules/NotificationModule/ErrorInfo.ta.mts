@@ -1,7 +1,7 @@
 /* eslint-disable */
 import {
-    OPTIONAL,
-    ASN1Element as _Element,
+    type OPTIONAL,
+    type ASN1Element as _Element,
     ASN1TagClass as _TagClass,
     ASN1Construction as _Construction,
     ASN1UniversalType as _UniversalType,
@@ -12,7 +12,7 @@ import {
 } from '@wildboar/asn1';
 import * as $ from '@wildboar/asn1/functional';
 import {
-    ProbableCause,
+    type ProbableCause,
     _decode_ProbableCause,
     _encode_ProbableCause,
 } from '@wildboar/attribute-asn1module';
@@ -29,12 +29,12 @@ import {
     _encode_TrendIndication,
 } from '@wildboar/attribute-asn1module';
 import {
-    BackedUpStatus,
+    type BackedUpStatus,
     _decode_BackedUpStatus,
     _encode_BackedUpStatus,
 } from '@wildboar/attribute-asn1module';
 import {
-    ProposedRepairActions,
+    type ProposedRepairActions,
     _decode_ProposedRepairActions,
     _encode_ProposedRepairActions,
 } from '@wildboar/attribute-asn1module';
@@ -44,7 +44,7 @@ import {
     _encode_ThresholdInfo,
 } from '@wildboar/attribute-asn1module';
 import {
-    OtherInfo,
+    type OtherInfo,
     _decode_OtherInfo,
     _encode_OtherInfo,
 } from '../NotificationModule/OtherInfo.ta.mjs';
@@ -79,78 +79,94 @@ import {
  *
  */
 export class ErrorInfo {
+    /**
+     * @summary `probableCause`.
+     * @description
+     *
+     * Optional probable cause of the example communication
+     * error. ITU-T Rec. X.722 (01/92) A.9.
+     * @public
+     * @readonly
+     */
+    public readonly probableCause?: OPTIONAL<ProbableCause>;
+    /**
+     * @summary `perceivedSeverity`.
+     * @description
+     *
+     * Optional perceived severity of the example
+     * communication error. ITU-T Rec. X.722 (01/92) A.9.
+     * @public
+     * @readonly
+     */
+    public readonly perceivedSeverity?: OPTIONAL<PerceivedSeverity>;
+    /**
+     * @summary `trendIndication`.
+     * @description
+     *
+     * Optional severity trend for the example communication
+     * error. ITU-T Rec. X.722 (01/92) A.9.
+     * @public
+     * @readonly
+     */
+    public readonly trendIndication?: OPTIONAL<TrendIndication>;
+    /**
+     * @summary `backedUpStatus`.
+     * @description
+     *
+     * Optional backed-up status for the example
+     * communication error. ITU-T Rec. X.722 (01/92) A.9.
+     * @public
+     * @readonly
+     */
+    public readonly backedUpStatus?: OPTIONAL<BackedUpStatus>;
+    /**
+     * @summary `proposedRepairActions`.
+     * @description
+     *
+     * Optional proposed repair actions for the example
+     * communication error. ITU-T Rec. X.722 (01/92) A.9.
+     * @public
+     * @readonly
+     */
+    public readonly proposedRepairActions?: OPTIONAL<ProposedRepairActions>;
+    /**
+     * @summary `thresholdInfo`.
+     * @description
+     *
+     * Optional threshold information for the example
+     * communication error. ITU-T Rec. X.722 (01/92) A.9.
+     * @public
+     * @readonly
+     */
+    public readonly thresholdInfo?: OPTIONAL<ThresholdInfo>;
+    /**
+     * @summary `otherInfo`.
+     * @description
+     *
+     * Optional extra information for the example
+     * communication error. ITU-T Rec. X.722 (01/92) A.9.
+     * @public
+     * @readonly
+     */
+    public readonly otherInfo?: OPTIONAL<OtherInfo>;
+
     constructor(
-        /**
-         * @summary `probableCause`.
-         * @description
-         *
-         * Optional probable cause of the example communication
-         * error. ITU-T Rec. X.722 (01/92) A.9.
-         * @public
-         * @readonly
-         */
-        readonly probableCause?: OPTIONAL<ProbableCause>,
-        /**
-         * @summary `perceivedSeverity`.
-         * @description
-         *
-         * Optional perceived severity of the example
-         * communication error. ITU-T Rec. X.722 (01/92) A.9.
-         * @public
-         * @readonly
-         */
-        readonly perceivedSeverity?: OPTIONAL<PerceivedSeverity>,
-        /**
-         * @summary `trendIndication`.
-         * @description
-         *
-         * Optional severity trend for the example communication
-         * error. ITU-T Rec. X.722 (01/92) A.9.
-         * @public
-         * @readonly
-         */
-        readonly trendIndication?: OPTIONAL<TrendIndication>,
-        /**
-         * @summary `backedUpStatus`.
-         * @description
-         *
-         * Optional backed-up status for the example
-         * communication error. ITU-T Rec. X.722 (01/92) A.9.
-         * @public
-         * @readonly
-         */
-        readonly backedUpStatus?: OPTIONAL<BackedUpStatus>,
-        /**
-         * @summary `proposedRepairActions`.
-         * @description
-         *
-         * Optional proposed repair actions for the example
-         * communication error. ITU-T Rec. X.722 (01/92) A.9.
-         * @public
-         * @readonly
-         */
-        readonly proposedRepairActions?: OPTIONAL<ProposedRepairActions>,
-        /**
-         * @summary `thresholdInfo`.
-         * @description
-         *
-         * Optional threshold information for the example
-         * communication error. ITU-T Rec. X.722 (01/92) A.9.
-         * @public
-         * @readonly
-         */
-        readonly thresholdInfo?: OPTIONAL<ThresholdInfo>,
-        /**
-         * @summary `otherInfo`.
-         * @description
-         *
-         * Optional extra information for the example
-         * communication error. ITU-T Rec. X.722 (01/92) A.9.
-         * @public
-         * @readonly
-         */
-        readonly otherInfo?: OPTIONAL<OtherInfo>
-    ) {}
+        probableCause?: OPTIONAL<ProbableCause>,
+        perceivedSeverity?: OPTIONAL<PerceivedSeverity>,
+        trendIndication?: OPTIONAL<TrendIndication>,
+        backedUpStatus?: OPTIONAL<BackedUpStatus>,
+        proposedRepairActions?: OPTIONAL<ProposedRepairActions>,
+        thresholdInfo?: OPTIONAL<ThresholdInfo>,
+        otherInfo?: OPTIONAL<OtherInfo>
+    ) {
+        this.probableCause = probableCause;
+        this.perceivedSeverity = perceivedSeverity;
+        this.trendIndication = trendIndication;
+        this.backedUpStatus = backedUpStatus;
+        this.proposedRepairActions = proposedRepairActions;
+        this.thresholdInfo = thresholdInfo;
+        this.otherInfo = otherInfo;
+    }
 
     /**
      * @summary Restructures an object into a ErrorInfo
@@ -184,14 +200,14 @@ export class ErrorInfo {
      * @static
      */
 
-    public static _enum_for_perceivedSeverity = _enum_for_PerceivedSeverity;
+    public static _enum_for_perceivedSeverity: typeof _enum_for_PerceivedSeverity = _enum_for_PerceivedSeverity;
     /**
      * @summary The enum used as the type of the component `trendIndication`
      * @public
      * @static
      */
 
-    public static _enum_for_trendIndication = _enum_for_TrendIndication;
+    public static _enum_for_trendIndication: typeof _enum_for_TrendIndication = _enum_for_TrendIndication;
 }
 
 /**

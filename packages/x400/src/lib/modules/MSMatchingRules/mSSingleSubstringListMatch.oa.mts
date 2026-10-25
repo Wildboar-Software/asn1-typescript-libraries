@@ -1,6 +1,6 @@
 /* eslint-disable */
 import {
-    ASN1Element as _Element,
+    type ASN1Element as _Element,
     ASN1TagClass as _TagClass,
     ASN1Construction as _Construction,
     ASN1UniversalType as _UniversalType,
@@ -12,7 +12,7 @@ import {
 import * as $ from '@wildboar/asn1/functional';
 import { type MATCHING_RULE } from '@wildboar/x500/InformationFramework';
 import {
-    MSString,
+    type MSString,
     _decode_MSString,
     _encode_MSString,
 } from '../MSMatchingRules/MSString.ta.mjs';

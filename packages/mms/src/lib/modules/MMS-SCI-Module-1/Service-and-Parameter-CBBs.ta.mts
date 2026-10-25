@@ -1,7 +1,7 @@
 /* eslint-disable */
 import {
-    INTEGER,
-    ASN1Element as _Element,
+    type INTEGER,
+    type ASN1Element as _Element,
     ASN1TagClass as _TagClass,
     ASN1Construction as _Construction,
     ASN1UniversalType as _UniversalType,
@@ -11,10 +11,10 @@ import {
     ASN1ConstructionError as _ConstructionError,
 } from "@wildboar/asn1";
 import * as $ from "@wildboar/asn1/functional";
-import { ServiceSupportOptions, _decode_ServiceSupportOptions, _encode_ServiceSupportOptions } from "../MMS-Object-Module-1/ServiceSupportOptions.ta.mjs";
-import { ParameterSupportOptions, _decode_ParameterSupportOptions, _encode_ParameterSupportOptions } from "../MMS-Object-Module-1/ParameterSupportOptions.ta.mjs";
-import { NullableAdditionalSupportOptions, _decode_NullableAdditionalSupportOptions, _encode_NullableAdditionalSupportOptions } from "../MMS-SCI-Module-1/NullableAdditionalSupportOptions.ta.mjs";
-import { NullableAdditionalCBBOptions, _decode_NullableAdditionalCBBOptions, _encode_NullableAdditionalCBBOptions } from "../MMS-SCI-Module-1/NullableAdditionalCBBOptions.ta.mjs";
+import { type ServiceSupportOptions, _decode_ServiceSupportOptions, _encode_ServiceSupportOptions } from "../MMS-Object-Module-1/ServiceSupportOptions.ta.mjs";
+import { type ParameterSupportOptions, _decode_ParameterSupportOptions, _encode_ParameterSupportOptions } from "../MMS-Object-Module-1/ParameterSupportOptions.ta.mjs";
+import { type NullableAdditionalSupportOptions, _decode_NullableAdditionalSupportOptions, _encode_NullableAdditionalSupportOptions } from "../MMS-SCI-Module-1/NullableAdditionalSupportOptions.ta.mjs";
+import { type NullableAdditionalCBBOptions, _decode_NullableAdditionalCBBOptions, _encode_NullableAdditionalCBBOptions } from "../MMS-SCI-Module-1/NullableAdditionalCBBOptions.ta.mjs";
 import { GeneralManagementParameters, _decode_GeneralManagementParameters, _encode_GeneralManagementParameters } from "../MMS-SCI-Module-1/GeneralManagementParameters.ta.mjs";
 import { VMDSupportParameters, _decode_VMDSupportParameters, _encode_VMDSupportParameters } from "../MMS-SCI-Module-1/VMDSupportParameters.ta.mjs";
 import { DomainManagementParameters, _decode_DomainManagementParameters, _encode_DomainManagementParameters } from "../MMS-SCI-Module-1/DomainManagementParameters.ta.mjs";
@@ -67,166 +67,202 @@ import { FileManagementParameters, _decode_FileManagementParameters, _encode_Fil
  */
 export
 class Service_and_Parameter_CBBs {
+    /**
+     * @summary `services_Client`.
+     * @public
+     * @readonly
+     */
+    public readonly services_Client: ServiceSupportOptions;
+    /**
+     * @summary `services_Server`.
+     * @public
+     * @readonly
+     */
+    public readonly services_Server: ServiceSupportOptions;
+    /**
+     * @summary `parameters`.
+     * @description
+     *
+     * Parameter CBB bits. ISO 9506-1:2003 §8.1.3.15; ISO 9506-2:2003 Annex
+     * B.2.
+     *
+     * @public
+     * @readonly
+     */
+    public readonly parameters: ParameterSupportOptions;
+    /**
+     * @summary `nest`.
+     * @description
+     *
+     * Max type-tree nest depth. ISO 9506-1:2003 §8.1.3.16; ISO 9506-2:2003
+     * Annex B.2.
+     *
+     * @public
+     * @readonly
+     */
+    public readonly nest: INTEGER;
+    /**
+     * @summary `extendedServices_Client`.
+     * @public
+     * @readonly
+     */
+    public readonly extendedServices_Client: NullableAdditionalSupportOptions;
+    /**
+     * @summary `extendedServices_Server`.
+     * @public
+     * @readonly
+     */
+    public readonly extendedServices_Server: NullableAdditionalSupportOptions;
+    /**
+     * @summary `extendedParameters`.
+     * @description
+     *
+     * AdditionalCBBOptions, or NULL if not cspi. ISO 9506-1:2003 §8.1.3.19;
+     * ISO 9506-2:2003 Annex B.2.
+     *
+     * @public
+     * @readonly
+     */
+    public readonly extendedParameters: NullableAdditionalCBBOptions;
+    /**
+     * @summary `generalManagement`.
+     * @description
+     *
+     * Table 21 CIS parameters. ISO 9506-2:2003 Annex B.2.1.
+     *
+     * @public
+     * @readonly
+     */
+    public readonly generalManagement: GeneralManagementParameters;
+    /**
+     * @summary `vMDSupport`.
+     * @description
+     *
+     * Table 25 CIS parameters. ISO 9506-2:2003 Annex B.2.2.
+     *
+     * @public
+     * @readonly
+     */
+    public readonly vMDSupport: VMDSupportParameters;
+    /**
+     * @summary `domainManagement`.
+     * @description
+     *
+     * Table 27 CIS parameters. ISO 9506-2:2003 Annex B.2.3.
+     *
+     * @public
+     * @readonly
+     */
+    public readonly domainManagement: DomainManagementParameters;
+    /**
+     * @summary `programInvocation`.
+     * @description
+     *
+     * Table 28 CIS parameters, or a linked PI instance in object records.
+     * ISO 9506-2:2003 Annex B.
+     *
+     * @public
+     * @readonly
+     */
+    public readonly programInvocation: ProgramInvocationManagementParameters;
+    /**
+     * @summary `variableAccess`.
+     * @description
+     *
+     * Table 32 CIS parameters. ISO 9506-2:2003 Annex B.2.5.
+     *
+     * @public
+     * @readonly
+     */
+    public readonly variableAccess: VariableAccessParameters;
+    /**
+     * @summary `dataParameters`.
+     * @description
+     *
+     * Table 33 CIS parameters. ISO 9506-2:2003 Annex B.2.6.
+     *
+     * @public
+     * @readonly
+     */
+    public readonly dataParameters: DataParameters;
+    /**
+     * @summary `semaphoreManagement`.
+     * @description
+     *
+     * Table 36 CIS parameters. ISO 9506-2:2003 Annex B.2.7.
+     *
+     * @public
+     * @readonly
+     */
+    public readonly semaphoreManagement: SemaphoreManagementParameters;
+    /**
+     * @summary `operatorCommunication`.
+     * @description
+     *
+     * Table 37 CIS parameters. ISO 9506-2:2003 Annex B.2.8.
+     *
+     * @public
+     * @readonly
+     */
+    public readonly operatorCommunication: OperatorCommunicationParameters;
+    /**
+     * @summary `errors`.
+     * @description
+     *
+     * Table 47 CIS parameters. ISO 9506-2:2003 Annex B.2.9.
+     *
+     * @public
+     * @readonly
+     */
+    public readonly errors: ErrorParameters;
+    /**
+     * @summary `fileManagement`.
+     * @description
+     *
+     * Table 50 CIS parameters. ISO 9506-2:2003 Annex B.2.10.
+     *
+     * @public
+     * @readonly
+     */
+    public readonly fileManagement: FileManagementParameters;
+
     constructor (
-        /**
-         * @summary `services_Client`.
-         * @public
-         * @readonly
-         */
-        readonly services_Client: ServiceSupportOptions,
-        /**
-         * @summary `services_Server`.
-         * @public
-         * @readonly
-         */
-        readonly services_Server: ServiceSupportOptions,
-        /**
-         * @summary `parameters`.
-         * @description
-         *
-         * Parameter CBB bits. ISO 9506-1:2003 §8.1.3.15; ISO 9506-2:2003 Annex
-         * B.2.
-         *
-         * @public
-         * @readonly
-         */
-        readonly parameters: ParameterSupportOptions,
-        /**
-         * @summary `nest`.
-         * @description
-         *
-         * Max type-tree nest depth. ISO 9506-1:2003 §8.1.3.16; ISO 9506-2:2003
-         * Annex B.2.
-         *
-         * @public
-         * @readonly
-         */
-        readonly nest: INTEGER,
-        /**
-         * @summary `extendedServices_Client`.
-         * @public
-         * @readonly
-         */
-        readonly extendedServices_Client: NullableAdditionalSupportOptions,
-        /**
-         * @summary `extendedServices_Server`.
-         * @public
-         * @readonly
-         */
-        readonly extendedServices_Server: NullableAdditionalSupportOptions,
-        /**
-         * @summary `extendedParameters`.
-         * @description
-         *
-         * AdditionalCBBOptions, or NULL if not cspi. ISO 9506-1:2003 §8.1.3.19;
-         * ISO 9506-2:2003 Annex B.2.
-         *
-         * @public
-         * @readonly
-         */
-        readonly extendedParameters: NullableAdditionalCBBOptions,
-        /**
-         * @summary `generalManagement`.
-         * @description
-         *
-         * Table 21 CIS parameters. ISO 9506-2:2003 Annex B.2.1.
-         *
-         * @public
-         * @readonly
-         */
-        readonly generalManagement: GeneralManagementParameters,
-        /**
-         * @summary `vMDSupport`.
-         * @description
-         *
-         * Table 25 CIS parameters. ISO 9506-2:2003 Annex B.2.2.
-         *
-         * @public
-         * @readonly
-         */
-        readonly vMDSupport: VMDSupportParameters,
-        /**
-         * @summary `domainManagement`.
-         * @description
-         *
-         * Table 27 CIS parameters. ISO 9506-2:2003 Annex B.2.3.
-         *
-         * @public
-         * @readonly
-         */
-        readonly domainManagement: DomainManagementParameters,
-        /**
-         * @summary `programInvocation`.
-         * @description
-         *
-         * Table 28 CIS parameters, or a linked PI instance in object records.
-         * ISO 9506-2:2003 Annex B.
-         *
-         * @public
-         * @readonly
-         */
-        readonly programInvocation: ProgramInvocationManagementParameters,
-        /**
-         * @summary `variableAccess`.
-         * @description
-         *
-         * Table 32 CIS parameters. ISO 9506-2:2003 Annex B.2.5.
-         *
-         * @public
-         * @readonly
-         */
-        readonly variableAccess: VariableAccessParameters,
-        /**
-         * @summary `dataParameters`.
-         * @description
-         *
-         * Table 33 CIS parameters. ISO 9506-2:2003 Annex B.2.6.
-         *
-         * @public
-         * @readonly
-         */
-        readonly dataParameters: DataParameters,
-        /**
-         * @summary `semaphoreManagement`.
-         * @description
-         *
-         * Table 36 CIS parameters. ISO 9506-2:2003 Annex B.2.7.
-         *
-         * @public
-         * @readonly
-         */
-        readonly semaphoreManagement: SemaphoreManagementParameters,
-        /**
-         * @summary `operatorCommunication`.
-         * @description
-         *
-         * Table 37 CIS parameters. ISO 9506-2:2003 Annex B.2.8.
-         *
-         * @public
-         * @readonly
-         */
-        readonly operatorCommunication: OperatorCommunicationParameters,
-        /**
-         * @summary `errors`.
-         * @description
-         *
-         * Table 47 CIS parameters. ISO 9506-2:2003 Annex B.2.9.
-         *
-         * @public
-         * @readonly
-         */
-        readonly errors: ErrorParameters,
-        /**
-         * @summary `fileManagement`.
-         * @description
-         *
-         * Table 50 CIS parameters. ISO 9506-2:2003 Annex B.2.10.
-         *
-         * @public
-         * @readonly
-         */
-        readonly fileManagement: FileManagementParameters
-    ) {}
+        services_Client: ServiceSupportOptions,
+        services_Server: ServiceSupportOptions,
+        parameters: ParameterSupportOptions,
+        nest: INTEGER,
+        extendedServices_Client: NullableAdditionalSupportOptions,
+        extendedServices_Server: NullableAdditionalSupportOptions,
+        extendedParameters: NullableAdditionalCBBOptions,
+        generalManagement: GeneralManagementParameters,
+        vMDSupport: VMDSupportParameters,
+        domainManagement: DomainManagementParameters,
+        programInvocation: ProgramInvocationManagementParameters,
+        variableAccess: VariableAccessParameters,
+        dataParameters: DataParameters,
+        semaphoreManagement: SemaphoreManagementParameters,
+        operatorCommunication: OperatorCommunicationParameters,
+        errors: ErrorParameters,
+        fileManagement: FileManagementParameters
+    ) {
+        this.services_Client = services_Client;
+        this.services_Server = services_Server;
+        this.parameters = parameters;
+        this.nest = nest;
+        this.extendedServices_Client = extendedServices_Client;
+        this.extendedServices_Server = extendedServices_Server;
+        this.extendedParameters = extendedParameters;
+        this.generalManagement = generalManagement;
+        this.vMDSupport = vMDSupport;
+        this.domainManagement = domainManagement;
+        this.programInvocation = programInvocation;
+        this.variableAccess = variableAccess;
+        this.dataParameters = dataParameters;
+        this.semaphoreManagement = semaphoreManagement;
+        this.operatorCommunication = operatorCommunication;
+        this.errors = errors;
+        this.fileManagement = fileManagement;
+    }
 
     /**
      * @summary Restructures an object into a Service_and_Parameter_CBBs

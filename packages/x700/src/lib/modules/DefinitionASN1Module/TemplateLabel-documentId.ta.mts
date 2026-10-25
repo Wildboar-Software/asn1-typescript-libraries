@@ -1,6 +1,6 @@
 /* eslint-disable */
 import {
-    ASN1Element as _Element,
+    type ASN1Element as _Element,
     ASN1TagClass as _TagClass,
     ASN1Construction as _Construction,
     ASN1UniversalType as _UniversalType,
@@ -11,12 +11,12 @@ import {
 } from '@wildboar/asn1';
 import * as $ from '@wildboar/asn1/functional';
 import {
-    DocumentName,
+    type DocumentName,
     _decode_DocumentName,
     _encode_DocumentName,
 } from '../DefinitionASN1Module/DocumentName.ta.mjs';
 import {
-    DocumentObjectIdentifier,
+    type DocumentObjectIdentifier,
     _decode_DocumentObjectIdentifier,
     _encode_DocumentObjectIdentifier,
 } from '../DefinitionASN1Module/DocumentObjectIdentifier.ta.mjs';

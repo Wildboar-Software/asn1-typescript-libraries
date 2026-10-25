@@ -1,11 +1,11 @@
 /* eslint-disable */
 import {
-    NULL,
-    ASN1Element as _Element,
+    type NULL,
+    type ASN1Element as _Element,
     ASN1TagClass as _TagClass
 } from "@wildboar/asn1";
 import * as $ from "@wildboar/asn1/functional";
-import { CompleteInfo, _decode_CompleteInfo, _encode_CompleteInfo } from "../SS-MCM-Operations-asn1-97/CompleteInfo.ta.mjs";
+import { type CompleteInfo, _decode_CompleteInfo, _encode_CompleteInfo } from "../SS-MCM-Operations-asn1-97/CompleteInfo.ta.mjs";
 import { CompressedInfo, _decode_CompressedInfo, _encode_CompressedInfo } from "../SS-MCM-Operations-asn1-97/CompressedInfo.ta.mjs";
 
 /**

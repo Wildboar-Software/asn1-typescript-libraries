@@ -1,6 +1,6 @@
 /* eslint-disable */
 import {
-    ASN1Element as _Element,
+    type ASN1Element as _Element,
     ASN1TagClass as _TagClass,
     ASN1Construction as _Construction,
     ASN1UniversalType as _UniversalType,
@@ -59,7 +59,7 @@ type USIMonitorMode = _enum_for_USIMonitorMode;
  * @enum {number}
  */
 export
-const USIMonitorMode = _enum_for_USIMonitorMode;
+const USIMonitorMode: typeof _enum_for_USIMonitorMode = _enum_for_USIMonitorMode;
 
 /**
  * @summary USIMonitorMode_monitoringActive
@@ -67,7 +67,7 @@ const USIMonitorMode = _enum_for_USIMonitorMode;
  * @type {number}
  */
 export
-const USIMonitorMode_monitoringActive: USIMonitorMode = USIMonitorMode.monitoringActive; /* LONG_NAMED_ENUMERATED_VALUE */
+const USIMonitorMode_monitoringActive: _enum_for_USIMonitorMode.monitoringActive = USIMonitorMode.monitoringActive; /* LONG_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary monitoringActive
@@ -75,7 +75,7 @@ const USIMonitorMode_monitoringActive: USIMonitorMode = USIMonitorMode.monitorin
  * @type {number}
  */
 export
-const monitoringActive: USIMonitorMode = USIMonitorMode.monitoringActive; /* SHORT_NAMED_ENUMERATED_VALUE */
+const monitoringActive: _enum_for_USIMonitorMode.monitoringActive = USIMonitorMode.monitoringActive; /* SHORT_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary USIMonitorMode_monitoringInactive
@@ -83,7 +83,7 @@ const monitoringActive: USIMonitorMode = USIMonitorMode.monitoringActive; /* SHO
  * @type {number}
  */
 export
-const USIMonitorMode_monitoringInactive: USIMonitorMode = USIMonitorMode.monitoringInactive; /* LONG_NAMED_ENUMERATED_VALUE */
+const USIMonitorMode_monitoringInactive: _enum_for_USIMonitorMode.monitoringInactive = USIMonitorMode.monitoringInactive; /* LONG_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary monitoringInactive
@@ -91,9 +91,9 @@ const USIMonitorMode_monitoringInactive: USIMonitorMode = USIMonitorMode.monitor
  * @type {number}
  */
 export
-const monitoringInactive: USIMonitorMode = USIMonitorMode.monitoringInactive; /* SHORT_NAMED_ENUMERATED_VALUE */
-export const _decode_USIMonitorMode = $._decodeEnumerated;
-export const _encode_USIMonitorMode = $._encodeEnumerated;
+const monitoringInactive: _enum_for_USIMonitorMode.monitoringInactive = USIMonitorMode.monitoringInactive; /* SHORT_NAMED_ENUMERATED_VALUE */
+export const _decode_USIMonitorMode: $.ASN1Decoder<number> = $._decodeEnumerated;
+export const _encode_USIMonitorMode: $.ASN1Encoder<number> = $._encodeEnumerated;
 
 
 /* eslint-enable */

@@ -1,16 +1,16 @@
 /* eslint-disable */
 import {
-    BOOLEAN,
-    INTEGER,
-    NULL,
-    OPTIONAL,
-    ASN1Element as _Element,
+    type BOOLEAN,
+    type INTEGER,
+    type NULL,
+    type OPTIONAL,
+    type ASN1Element as _Element,
     ASN1TagClass as _TagClass,
     ASN1OverflowError
 } from "@wildboar/asn1";
 import * as $ from "@wildboar/asn1/functional";
 import { IndAudPropertyParm, _decode_IndAudPropertyParm, _encode_IndAudPropertyParm } from "../MEDIA-GATEWAY-CONTROL/IndAudPropertyParm.ta.mjs";
-import { SelectLogic, _decode_SelectLogic, _encode_SelectLogic } from "../MEDIA-GATEWAY-CONTROL/SelectLogic.ta.mjs";
+import { type SelectLogic, _decode_SelectLogic, _encode_SelectLogic } from "../MEDIA-GATEWAY-CONTROL/SelectLogic.ta.mjs";
 
 
 /**
@@ -61,7 +61,7 @@ class ContextAttrAuditRequest {
      * @public
      * @readonly
      */
-    readonly topology?: OPTIONAL<NULL>;
+    public readonly topology?: OPTIONAL<NULL>;
     /**
      * @summary `emergency`.
      * @description
@@ -71,7 +71,7 @@ class ContextAttrAuditRequest {
      * @public
      * @readonly
      */
-    readonly emergency?: OPTIONAL<NULL>;
+    public readonly emergency?: OPTIONAL<NULL>;
     /**
      * @summary `priority`.
      * @description
@@ -81,7 +81,7 @@ class ContextAttrAuditRequest {
      * @public
      * @readonly
      */
-    readonly priority?: OPTIONAL<NULL>;
+    public readonly priority?: OPTIONAL<NULL>;
     /**
      * @summary `iepscallind`.
      * @description
@@ -91,7 +91,7 @@ class ContextAttrAuditRequest {
      * @public
      * @readonly
      */
-    readonly iepscallind?: OPTIONAL<NULL>;
+    public readonly iepscallind?: OPTIONAL<NULL>;
     /**
      * @summary `contextPropAud`.
      * @description
@@ -103,7 +103,7 @@ class ContextAttrAuditRequest {
      * @public
      * @readonly
      */
-    readonly contextPropAud?: OPTIONAL<IndAudPropertyParm[]>;
+    public readonly contextPropAud?: OPTIONAL<IndAudPropertyParm[]>;
     /**
      * @summary `selectpriority`.
      * @description
@@ -114,7 +114,7 @@ class ContextAttrAuditRequest {
      * @public
      * @readonly
      */
-    readonly selectpriority?: OPTIONAL<INTEGER>;
+    public readonly selectpriority?: OPTIONAL<INTEGER>;
     /**
      * @summary `selectemergency`.
      * @description
@@ -126,7 +126,7 @@ class ContextAttrAuditRequest {
      * @public
      * @readonly
      */
-    readonly selectemergency?: OPTIONAL<BOOLEAN>;
+    public readonly selectemergency?: OPTIONAL<BOOLEAN>;
     /**
      * @summary `selectiepscallind`.
      * @description
@@ -137,7 +137,7 @@ class ContextAttrAuditRequest {
      * @public
      * @readonly
      */
-    readonly selectiepscallind?: OPTIONAL<BOOLEAN>;
+    public readonly selectiepscallind?: OPTIONAL<BOOLEAN>;
     /**
      * @summary `selectLogic`.
      * @description
@@ -148,7 +148,7 @@ class ContextAttrAuditRequest {
      * @public
      * @readonly
      */
-    readonly selectLogic?: OPTIONAL<SelectLogic>;
+    public readonly selectLogic?: OPTIONAL<SelectLogic>;
     /**
      * @summary Extensions that are not recognized.
      * @description
@@ -159,7 +159,7 @@ class ContextAttrAuditRequest {
      * @public
      * @readonly
      */
-    readonly _unrecognizedExtensionsList: _Element[];
+    public readonly _unrecognizedExtensionsList: _Element[];
 
     constructor (
         topology?: OPTIONAL<NULL>,

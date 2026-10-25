@@ -1,10 +1,10 @@
 /* eslint-disable */
 import {
-    ABSTRACT_SYNTAX,
+    type ABSTRACT_SYNTAX,
     ObjectIdentifier as _OID
 } from "@wildboar/asn1";
 import { id_as_inSESEAS } from "../IN-CS2-object-identifiers/id-as-inSESEAS.va.mjs";
-import { SESEapdus, _decode_SESEapdus, _encode_SESEapdus } from "../SeseAPDUs/SESEapdus.ta.mjs";
+import { type SESEapdus, _decode_SESEapdus, _encode_SESEapdus } from "../SeseAPDUs/SESEapdus.ta.mjs";
 // export { SESEapdus, _decode_SESEapdus, _encode_SESEapdus } from "../SeseAPDUs/SESEapdus.ta.mjs";
 
 

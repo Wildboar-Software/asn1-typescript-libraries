@@ -1,8 +1,8 @@
 /* eslint-disable */
 import {
-    INTEGER,
-    OPTIONAL,
-    ASN1Element as _Element,
+    type INTEGER,
+    type OPTIONAL,
+    type ASN1Element as _Element,
     ASN1TagClass as _TagClass,
     ASN1OverflowError
 } from "@wildboar/asn1";
@@ -11,7 +11,7 @@ import { IPAddress, _decode_IPAddress, _encode_IPAddress } from "../HI2Operation
 // export { IPAddress, _decode_IPAddress, _encode_IPAddress } from "../HI2Operations/IPAddress.ta.mjs";
 import { ReportInterval, _decode_ReportInterval, _encode_ReportInterval } from "../UmtsHI2Operations/ReportInterval.ta.mjs";
 // export { ReportInterval, _decode_ReportInterval, _encode_ReportInterval } from "../UmtsHI2Operations/ReportInterval.ta.mjs";
-import { ReportReason, _decode_ReportReason, _encode_ReportReason, _enum_for_ReportReason } from "../UmtsHI2Operations/ReportReason.ta.mjs";
+import { type ReportReason, _decode_ReportReason, _encode_ReportReason, _enum_for_ReportReason } from "../UmtsHI2Operations/ReportReason.ta.mjs";
 // export { ReportReason, _enum_for_ReportReason, ReportReason_timerExpired /* IMPORTED_LONG_ENUMERATION_ITEM */, timerExpired /* IMPORTED_SHORT_ENUMERATION_ITEM */, ReportReason_countThresholdHit /* IMPORTED_LONG_ENUMERATION_ITEM */, countThresholdHit /* IMPORTED_SHORT_ENUMERATION_ITEM */, ReportReason_pDPComtextDeactivated /* IMPORTED_LONG_ENUMERATION_ITEM */, pDPComtextDeactivated /* IMPORTED_SHORT_ENUMERATION_ITEM */, ReportReason_pDPContextModification /* IMPORTED_LONG_ENUMERATION_ITEM */, pDPContextModification /* IMPORTED_SHORT_ENUMERATION_ITEM */, ReportReason_otherOrUnknown /* IMPORTED_LONG_ENUMERATION_ITEM */, otherOrUnknown /* IMPORTED_SHORT_ENUMERATION_ITEM */, _decode_ReportReason, _encode_ReportReason } from "../UmtsHI2Operations/ReportReason.ta.mjs";
 
 
@@ -241,7 +241,7 @@ class PacketFlowSummary {
          * @static
          */
 
-    public static _enum_for_packetDataSummaryReason = _enum_for_ReportReason;
+    public static _enum_for_packetDataSummaryReason: typeof _enum_for_ReportReason = _enum_for_ReportReason;
 }
 
 /**

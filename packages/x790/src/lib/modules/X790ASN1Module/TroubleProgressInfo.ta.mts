@@ -1,20 +1,20 @@
 /* eslint-disable */
 import {
-    OPTIONAL,
-    SEQUENCE,
-    SET,
-    ASN1Element as _Element,
+    type OPTIONAL,
+    type SEQUENCE,
+    type SET,
+    type ASN1Element as _Element,
     ASN1TagClass as _TagClass,
 } from "@wildboar/asn1";
 import * as $ from "@wildboar/asn1/functional";
 import {
-    TroubleReportStatus,
+    type TroubleReportStatus,
     _decode_TroubleReportStatus,
     _encode_TroubleReportStatus,
 } from "../X790ASN1Module/TroubleReportStatus.ta.mjs";
 
 import {
-    AdditionalTroubleStatusInfo,
+    type AdditionalTroubleStatusInfo,
     _decode_AdditionalTroubleStatusInfo,
     _encode_AdditionalTroubleStatusInfo,
 } from "../X790ASN1Module/AdditionalTroubleStatusInfo.ta.mjs";
@@ -39,26 +39,34 @@ import {
  */
 export
 class TroubleProgressInfo {
+    /**
+     * @summary `troubleReportStatus`.
+     * @public
+     * @readonly
+     */
+    public readonly troubleReportStatus: TroubleReportStatus;
+    /**
+     * @summary `additionalTroubleStatusInfo`.
+     * @public
+     * @readonly
+     */
+    public readonly additionalTroubleStatusInfo?: OPTIONAL<AdditionalTroubleStatusInfo>;
+    /**
+     * @summary Extensions that are not recognized.
+     * @public
+     * @readonly
+     */
+    public readonly _unrecognizedExtensionsList: _Element[];
+
     constructor (
-        /**
-         * @summary `troubleReportStatus`.
-         * @public
-         * @readonly
-         */
-        readonly troubleReportStatus: TroubleReportStatus,
-        /**
-         * @summary `additionalTroubleStatusInfo`.
-         * @public
-         * @readonly
-         */
-        readonly additionalTroubleStatusInfo?: OPTIONAL<AdditionalTroubleStatusInfo>,
-        /**
-         * @summary Extensions that are not recognized.
-         * @public
-         * @readonly
-         */
-        readonly _unrecognizedExtensionsList: _Element[] = []
-    ) {}
+        troubleReportStatus: TroubleReportStatus,
+        additionalTroubleStatusInfo?: OPTIONAL<AdditionalTroubleStatusInfo>,
+        _unrecognizedExtensionsList: _Element[] = []
+    ) {
+        this.troubleReportStatus = troubleReportStatus;
+        this.additionalTroubleStatusInfo = additionalTroubleStatusInfo;
+        this._unrecognizedExtensionsList = _unrecognizedExtensionsList;
+    }
 
     /**
      * @summary Restructures an object into a TroubleProgressInfo

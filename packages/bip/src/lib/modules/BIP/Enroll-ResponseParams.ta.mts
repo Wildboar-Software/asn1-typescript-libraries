@@ -1,6 +1,6 @@
 /* eslint-disable */
 import {
-  OPTIONAL,
+  type OPTIONAL,
   ASN1Element as _Element,
   ASN1TagClass as _TagClass,
   ASN1Construction as _Construction,
@@ -12,12 +12,12 @@ import {
 } from '@wildboar/asn1';
 import * as $ from '@wildboar/asn1/functional';
 import {
-  BioAPI_BIR_HANDLE,
+  type BioAPI_BIR_HANDLE,
   _decode_BioAPI_BIR_HANDLE,
   _encode_BioAPI_BIR_HANDLE,
 } from '../BIP/BioAPI-BIR-HANDLE.ta.mjs';
 import {
-  BioAPI_UUID,
+  type BioAPI_UUID,
   _decode_BioAPI_UUID,
   _encode_BioAPI_UUID,
 } from '../BIP/BioAPI-UUID.ta.mjs';
@@ -55,7 +55,7 @@ export class Enroll_ResponseParams {
    * @public
    * @readonly
    */
-  readonly newTemplate: BioAPI_BIR_HANDLE;
+  public readonly newTemplate: BioAPI_BIR_HANDLE;
   /**
    * @summary `auditData`.
    * @description
@@ -66,7 +66,7 @@ export class Enroll_ResponseParams {
    * @public
    * @readonly
    */
-  readonly auditData?: OPTIONAL<BioAPI_BIR_HANDLE>;
+  public readonly auditData?: OPTIONAL<BioAPI_BIR_HANDLE>;
   /**
    * @summary `templateUuid`.
    * @description
@@ -77,7 +77,7 @@ export class Enroll_ResponseParams {
    * @public
    * @readonly
    */
-  readonly templateUuid?: OPTIONAL<BioAPI_UUID>;
+  public readonly templateUuid?: OPTIONAL<BioAPI_UUID>;
 
   constructor(
     newTemplate: BioAPI_BIR_HANDLE,

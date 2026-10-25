@@ -1,7 +1,7 @@
 /* eslint-disable */
 
 import * as $ from "@wildboar/asn1/functional";
-import { ENUMERATED, ASN1Element as _Element } from "@wildboar/asn1";
+import { type ENUMERATED, ASN1Element as _Element } from "@wildboar/asn1";
 
 
 
@@ -69,7 +69,7 @@ type MicGainInc = _enum_for_MicGainInc;
  * @enum {number}
  */
 export
-const MicGainInc = _enum_for_MicGainInc;
+const MicGainInc: typeof _enum_for_MicGainInc = _enum_for_MicGainInc;
 
 /**
  * @summary MicGainInc_increment
@@ -81,7 +81,7 @@ const MicGainInc = _enum_for_MicGainInc;
  * @type {number}
  */
 export
-const MicGainInc_increment: MicGainInc = MicGainInc.increment; /* LONG_NAMED_ENUMERATED_VALUE */
+const MicGainInc_increment: _enum_for_MicGainInc.increment = MicGainInc.increment; /* LONG_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary increment
@@ -89,7 +89,7 @@ const MicGainInc_increment: MicGainInc = MicGainInc.increment; /* LONG_NAMED_ENU
  * @type {number}
  */
 export
-const increment: MicGainInc = MicGainInc.increment; /* SHORT_NAMED_ENUMERATED_VALUE */
+const increment: _enum_for_MicGainInc.increment = MicGainInc.increment; /* SHORT_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary MicGainInc_decrement
@@ -101,7 +101,7 @@ const increment: MicGainInc = MicGainInc.increment; /* SHORT_NAMED_ENUMERATED_VA
  * @type {number}
  */
 export
-const MicGainInc_decrement: MicGainInc = MicGainInc.decrement; /* LONG_NAMED_ENUMERATED_VALUE */
+const MicGainInc_decrement: _enum_for_MicGainInc.decrement = MicGainInc.decrement; /* LONG_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary decrement
@@ -109,7 +109,7 @@ const MicGainInc_decrement: MicGainInc = MicGainInc.decrement; /* LONG_NAMED_ENU
  * @type {number}
  */
 export
-const decrement: MicGainInc = MicGainInc.decrement; /* SHORT_NAMED_ENUMERATED_VALUE */
+const decrement: _enum_for_MicGainInc.decrement = MicGainInc.decrement; /* SHORT_NAMED_ENUMERATED_VALUE */
 
 let _cached_decoder_for_MicGainInc: $.ASN1Decoder<MicGainInc> | null = null;
 

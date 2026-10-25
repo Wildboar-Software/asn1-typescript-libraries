@@ -1,12 +1,12 @@
 /* eslint-disable */
 import {
-    OPTIONAL,
-    ASN1Element as _Element,
+    type OPTIONAL,
+    type ASN1Element as _Element,
     ASN1TagClass as _TagClass
 } from "@wildboar/asn1";
 import * as $ from "@wildboar/asn1/functional";
-import { DisplayString, _decode_DisplayString, _encode_DisplayString } from "../SS-SD-Operations-asn1-97/DisplayString.ta.mjs";
-import { SDExtension, _decode_SDExtension, _encode_SDExtension } from "../SS-SD-Operations-asn1-97/SDExtension.ta.mjs";
+import { type DisplayString, _decode_DisplayString, _encode_DisplayString } from "../SS-SD-Operations-asn1-97/DisplayString.ta.mjs";
+import { type SDExtension, _decode_SDExtension, _encode_SDExtension } from "../SS-SD-Operations-asn1-97/SDExtension.ta.mjs";
 
 /**
  * @summary DisplayArg

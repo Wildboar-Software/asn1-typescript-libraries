@@ -2,16 +2,16 @@
 
 import * as $ from "@wildboar/asn1/functional";
 import {
-    OPTIONAL,
-    INTEGER,
-    SEQUENCE,
-    SET,
-    ASN1Element as _Element,
+    type OPTIONAL,
+    type INTEGER,
+    type SEQUENCE,
+    type SET,
+    type ASN1Element as _Element,
     ASN1TagClass as _TagClass
 } from "@wildboar/asn1";
-import { ConnectionID, _decode_ConnectionID, _encode_ConnectionID } from "../CSTA-call-connection-identifiers/ConnectionID.ta.mjs";
+import { type ConnectionID, _decode_ConnectionID, _encode_ConnectionID } from "../CSTA-call-connection-identifiers/ConnectionID.ta.mjs";
 
-import { SubjectDeviceID, _decode_SubjectDeviceID, _encode_SubjectDeviceID } from "../CSTA-device-identifiers/SubjectDeviceID.ta.mjs";
+import { type SubjectDeviceID, _decode_SubjectDeviceID, _encode_SubjectDeviceID } from "../CSTA-device-identifiers/SubjectDeviceID.ta.mjs";
 
 import {
     MediaServiceType,
@@ -20,13 +20,13 @@ import {
     _encode_MediaServiceType
 } from "../CSTA-media-services/MediaServiceType.ta.mjs";
 
-import { MediaServiceInstanceID, _decode_MediaServiceInstanceID, _encode_MediaServiceInstanceID } from "../CSTA-media-services/MediaServiceInstanceID.ta.mjs";
+import { type MediaServiceInstanceID, _decode_MediaServiceInstanceID, _encode_MediaServiceInstanceID } from "../CSTA-media-services/MediaServiceInstanceID.ta.mjs";
 
-import { MediaStreamID, _decode_MediaStreamID, _encode_MediaStreamID } from "../CSTA-media-services/MediaStreamID.ta.mjs";
+import { type MediaStreamID, _decode_MediaStreamID, _encode_MediaStreamID } from "../CSTA-media-services/MediaStreamID.ta.mjs";
 
 import { MediaCallCharacteristics, _decode_MediaCallCharacteristics, _encode_MediaCallCharacteristics } from "../CSTA-media-services/MediaCallCharacteristics.ta.mjs";
 
-import { CallCharacteristics, _decode_CallCharacteristics, _encode_CallCharacteristics } from "../CSTA-call-control/CallCharacteristics.ta.mjs";
+import { type CallCharacteristics, _decode_CallCharacteristics, _encode_CallCharacteristics } from "../CSTA-call-control/CallCharacteristics.ta.mjs";
 
 import { LocalConnectionState, _decode_LocalConnectionState, _encode_LocalConnectionState } from "../CSTA-connection-states/LocalConnectionState.ta.mjs";
 
@@ -55,13 +55,13 @@ import { CSTACommonArguments, _decode_CSTACommonArguments, _encode_CSTACommonArg
  * {    mediaConnection             ConnectionID,
  *     mediaDevice             SubjectDeviceID,
  *     mediaServiceType         MediaServiceType,
- *     mediaServiceVersion        INTEGER                    OPTIONAL,
- *     mediaServiceInstanceID        [0] IMPLICIT MediaServiceInstanceID     OPTIONAL,
- *     mediaStreamID             [1] IMPLICIT MediaStreamID        OPTIONAL,
- *     mediaCallCharacteristics    [2] IMPLICIT MediaCallCharacteristics    OPTIONAL,
- *     callCharacteristics        CallCharacteristics            OPTIONAL,
- *     localConnectionInfo        LocalConnectionState            OPTIONAL,
- *     mediaConnectionInfo         [3] IMPLICIT ConnectionInformation    OPTIONAL,
+ *     mediaServiceVersion        INTEGER                    type OPTIONAL,
+ *     mediaServiceInstanceID        [0] IMPLICIT MediaServiceInstanceID     type OPTIONAL,
+ *     mediaStreamID             [1] IMPLICIT MediaStreamID        type OPTIONAL,
+ *     mediaCallCharacteristics    [2] IMPLICIT MediaCallCharacteristics    type OPTIONAL,
+ *     callCharacteristics        CallCharacteristics            type OPTIONAL,
+ *     localConnectionInfo        LocalConnectionState            type OPTIONAL,
+ *     mediaConnectionInfo         [3] IMPLICIT ConnectionInformation    type OPTIONAL,
  *     extension            CSTACommonArguments            OPTIONAL }
  * ```
  * 
@@ -69,108 +69,132 @@ import { CSTACommonArguments, _decode_CSTACommonArguments, _encode_CSTACommonArg
  */
 export
 class MediaAttachedEvent {
+    /**
+     * @summary `mediaConnection`.
+     * @description
+     *
+     * Connection bound to the media service.
+     * @public
+     * @readonly
+     */
+    public readonly mediaConnection: ConnectionID;
+    /**
+     * @summary `mediaDevice`.
+     * @description
+     *
+     * Device identifier of the attached media service.
+     * @public
+     * @readonly
+     */
+    public readonly mediaDevice: SubjectDeviceID;
+    /**
+     * @summary `mediaServiceType`.
+     * @description
+     *
+     * Media service type.
+     * @public
+     * @readonly
+     */
+    public readonly mediaServiceType: MediaServiceType;
+    /**
+     * @summary `mediaServiceVersion`.
+     * @description
+     *
+     * Version of the media service.
+     * @public
+     * @readonly
+     */
+    public readonly mediaServiceVersion?: OPTIONAL<INTEGER>;
+    /**
+     * @summary `mediaServiceInstanceID`.
+     * @description
+     *
+     * Instance associated with the attachment.
+     * @public
+     * @readonly
+     */
+    public readonly mediaServiceInstanceID?: OPTIONAL<MediaServiceInstanceID>;
+    /**
+     * @summary `mediaStreamID`.
+     * @description
+     *
+     * Stream ID for accessing the instance, if supported.
+     * @public
+     * @readonly
+     */
+    public readonly mediaStreamID?: OPTIONAL<MediaStreamID>;
+    /**
+     * @summary `mediaCallCharacteristics`.
+     * @description
+     *
+     * Media characteristics of the call.
+     * @public
+     * @readonly
+     */
+    public readonly mediaCallCharacteristics?: OPTIONAL<MediaCallCharacteristics>;
+    /**
+     * @summary `callCharacteristics`.
+     * @description
+     *
+     * Call characterisation bits.
+     * @public
+     * @readonly
+     */
+    public readonly callCharacteristics?: OPTIONAL<CallCharacteristics>;
+    /**
+     * @summary `localConnectionInfo`.
+     * @description
+     *
+     * Local connection state of the media connection.
+     * @public
+     * @readonly
+     */
+    public readonly localConnectionInfo?: OPTIONAL<LocalConnectionState>;
+    /**
+     * @summary `mediaConnectionInfo`.
+     * @description
+     *
+     * Connection information of the media connection.
+     * @public
+     * @readonly
+     */
+    public readonly mediaConnectionInfo?: OPTIONAL<ConnectionInformation>;
+    /**
+     * @summary `extension`.
+     * @description
+     *
+     * Optional security (timestamp, sequence, securityInfo) and
+     * privateData.
+     * @public
+     * @readonly
+     */
+    public readonly extension?: OPTIONAL<CSTACommonArguments>;
+
     constructor (
-        /**
-         * @summary `mediaConnection`.
-         * @description
-         *
-         * Connection bound to the media service.
-         * @public
-         * @readonly
-         */
-        readonly mediaConnection: ConnectionID,
-        /**
-         * @summary `mediaDevice`.
-         * @description
-         *
-         * Device identifier of the attached media service.
-         * @public
-         * @readonly
-         */
-        readonly mediaDevice: SubjectDeviceID,
-        /**
-         * @summary `mediaServiceType`.
-         * @description
-         *
-         * Media service type.
-         * @public
-         * @readonly
-         */
-        readonly mediaServiceType: MediaServiceType,
-        /**
-         * @summary `mediaServiceVersion`.
-         * @description
-         *
-         * Version of the media service.
-         * @public
-         * @readonly
-         */
-        readonly mediaServiceVersion?: OPTIONAL<INTEGER>,
-        /**
-         * @summary `mediaServiceInstanceID`.
-         * @description
-         *
-         * Instance associated with the attachment.
-         * @public
-         * @readonly
-         */
-        readonly mediaServiceInstanceID?: OPTIONAL<MediaServiceInstanceID>,
-        /**
-         * @summary `mediaStreamID`.
-         * @description
-         *
-         * Stream ID for accessing the instance, if supported.
-         * @public
-         * @readonly
-         */
-        readonly mediaStreamID?: OPTIONAL<MediaStreamID>,
-        /**
-         * @summary `mediaCallCharacteristics`.
-         * @description
-         *
-         * Media characteristics of the call.
-         * @public
-         * @readonly
-         */
-        readonly mediaCallCharacteristics?: OPTIONAL<MediaCallCharacteristics>,
-        /**
-         * @summary `callCharacteristics`.
-         * @description
-         *
-         * Call characterisation bits.
-         * @public
-         * @readonly
-         */
-        readonly callCharacteristics?: OPTIONAL<CallCharacteristics>,
-        /**
-         * @summary `localConnectionInfo`.
-         * @description
-         *
-         * Local connection state of the media connection.
-         * @public
-         * @readonly
-         */
-        readonly localConnectionInfo?: OPTIONAL<LocalConnectionState>,
-        /**
-         * @summary `mediaConnectionInfo`.
-         * @description
-         *
-         * Connection information of the media connection.
-         * @public
-         * @readonly
-         */
-        readonly mediaConnectionInfo?: OPTIONAL<ConnectionInformation>,
-        /**
-         * @summary `extension`.
-         * @description
-         *
-         * Optional security (timestamp, sequence, securityInfo) and
-         * privateData.
-         * @public
-         * @readonly
-         */
-        readonly extension?: OPTIONAL<CSTACommonArguments>
-    ) {}
+        mediaConnection: ConnectionID,
+        mediaDevice: SubjectDeviceID,
+        mediaServiceType: MediaServiceType,
+        mediaServiceVersion?: OPTIONAL<INTEGER>,
+        mediaServiceInstanceID?: OPTIONAL<MediaServiceInstanceID>,
+        mediaStreamID?: OPTIONAL<MediaStreamID>,
+        mediaCallCharacteristics?: OPTIONAL<MediaCallCharacteristics>,
+        callCharacteristics?: OPTIONAL<CallCharacteristics>,
+        localConnectionInfo?: OPTIONAL<LocalConnectionState>,
+        mediaConnectionInfo?: OPTIONAL<ConnectionInformation>,
+        extension?: OPTIONAL<CSTACommonArguments>
+    ) {
+        this.mediaConnection = mediaConnection;
+        this.mediaDevice = mediaDevice;
+        this.mediaServiceType = mediaServiceType;
+        this.mediaServiceVersion = mediaServiceVersion;
+        this.mediaServiceInstanceID = mediaServiceInstanceID;
+        this.mediaStreamID = mediaStreamID;
+        this.mediaCallCharacteristics = mediaCallCharacteristics;
+        this.callCharacteristics = callCharacteristics;
+        this.localConnectionInfo = localConnectionInfo;
+        this.mediaConnectionInfo = mediaConnectionInfo;
+        this.extension = extension;
+    }
 
     /**
      * @summary Restructures an object into a MediaAttachedEvent
@@ -194,7 +218,7 @@ class MediaAttachedEvent {
          * @static
          */
 
-    public static _enum_for_mediaServiceType = _enum_for_MediaServiceType;
+    public static _enum_for_mediaServiceType: typeof _enum_for_MediaServiceType = _enum_for_MediaServiceType;
 }
 
 /**

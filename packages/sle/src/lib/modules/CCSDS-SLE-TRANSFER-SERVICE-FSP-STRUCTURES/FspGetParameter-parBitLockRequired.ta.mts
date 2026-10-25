@@ -1,15 +1,15 @@
 /* eslint-disable */
 import {
     ASN1ConstructionError as _ConstructionError,
-    ASN1Element as _Element,
+    type ASN1Element as _Element,
     ASN1TagClass as _TagClass,
     ASN1Error
 } from "@wildboar/asn1";
 import * as $ from "@wildboar/asn1/functional";
-import { _decode_ParameterName, _encode_ParameterName, ParameterName,
+import { _decode_ParameterName, _encode_ParameterName, type ParameterName,
     ParameterName_bitLockRequired
 } from "../CCSDS-SLE-TRANSFER-SERVICE-COMMON-TYPES/ParameterName.ta.mjs";
-import { _decode_FspGetParameter_parBitLockRequired_parameterValue, _encode_FspGetParameter_parBitLockRequired_parameterValue, FspGetParameter_parBitLockRequired_parameterValue } from "../CCSDS-SLE-TRANSFER-SERVICE-FSP-STRUCTURES/FspGetParameter-parBitLockRequired-parameterValue.ta.mjs";
+import { _decode_FspGetParameter_parBitLockRequired_parameterValue, _encode_FspGetParameter_parBitLockRequired_parameterValue, type FspGetParameter_parBitLockRequired_parameterValue } from "../CCSDS-SLE-TRANSFER-SERVICE-FSP-STRUCTURES/FspGetParameter-parBitLockRequired-parameterValue.ta.mjs";
 
 
 

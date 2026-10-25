@@ -1,8 +1,8 @@
 /* eslint-disable */
 import {
-    OPTIONAL,
-    GeneralizedTime,
-    ASN1Element as _Element,
+    type OPTIONAL,
+    type GeneralizedTime,
+    type ASN1Element as _Element,
     ASN1TagClass as _TagClass,
     ASN1Construction as _Construction,
     ASN1UniversalType as _UniversalType,
@@ -39,36 +39,44 @@ import { ReservationStatus, _enum_for_ReservationStatus, ReservationStatus_uncom
  */
 export
 class Reservation {
+    /**
+     * @summary `reservation_duration`.
+     * @description
+     *
+     * When the reservation ends. Omit for indefinite duration.
+     * @public
+     * @readonly
+     */
+    public readonly reservation_duration: OPTIONAL<GeneralizedTime>;
+    /**
+     * @summary `reservation_level`.
+     * @description
+     *
+     * unreserved .. read-only2. ISO/IEC 10166-1:1991 §8.1.3.2.
+     * @public
+     * @readonly
+     */
+    public readonly reservation_level: ReservationLevel;
+    /**
+     * @summary `reservation_Status`.
+     * @description
+     *
+     * uncommitted (default) or committed. Committed cannot be downgraded
+     * or uncommitted.
+     * @public
+     * @readonly
+     */
+    public readonly reservation_Status?: OPTIONAL<ReservationStatus>;
+
     constructor (
-        /**
-         * @summary `reservation_duration`.
-         * @description
-         *
-         * When the reservation ends. Omit for indefinite duration.
-         * @public
-         * @readonly
-         */
-        readonly reservation_duration: OPTIONAL<GeneralizedTime>,
-        /**
-         * @summary `reservation_level`.
-         * @description
-         *
-         * unreserved .. read-only2. ISO/IEC 10166-1:1991 §8.1.3.2.
-         * @public
-         * @readonly
-         */
-        readonly reservation_level: ReservationLevel,
-        /**
-         * @summary `reservation_Status`.
-         * @description
-         *
-         * uncommitted (default) or committed. Committed cannot be downgraded
-         * or uncommitted.
-         * @public
-         * @readonly
-         */
-        readonly reservation_Status?: OPTIONAL<ReservationStatus>
-    ) {}
+        reservation_duration: OPTIONAL<GeneralizedTime>,
+        reservation_level: ReservationLevel,
+        reservation_Status?: OPTIONAL<ReservationStatus>
+    ) {
+        this.reservation_duration = reservation_duration;
+        this.reservation_level = reservation_level;
+        this.reservation_Status = reservation_Status;
+    }
 
     /**
      * @summary Restructures an object into a Reservation
@@ -92,19 +100,19 @@ class Reservation {
      * @static
      * @method
      */
-    public static get _default_value_for_reservation_Status () { return ReservationStatus_uncommitted; }        /**
+    public static get _default_value_for_reservation_Status (): _enum_for_ReservationStatus { return ReservationStatus_uncommitted; }        /**
          * @summary The enum used as the type of the component `reservation_level`
          * @public
          * @static
          */
 
-    public static _enum_for_reservation_level = _enum_for_ReservationLevel;        /**
+    public static _enum_for_reservation_level: typeof _enum_for_ReservationLevel = _enum_for_ReservationLevel;        /**
          * @summary The enum used as the type of the component `reservation_Status`
          * @public
          * @static
          */
 
-    public static _enum_for_reservation_Status = _enum_for_ReservationStatus;
+    public static _enum_for_reservation_Status: typeof _enum_for_ReservationStatus = _enum_for_ReservationStatus;
 }
 
 /**

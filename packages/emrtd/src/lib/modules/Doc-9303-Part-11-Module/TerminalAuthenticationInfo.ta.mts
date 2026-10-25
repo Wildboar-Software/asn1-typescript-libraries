@@ -1,11 +1,11 @@
 /* eslint-disable */
 import {
     ASN1ConstructionError as _ConstructionError,
-    ASN1Element as _Element,
+    type ASN1Element as _Element,
     ASN1Error,
     ASN1TagClass as _TagClass,
-    INTEGER,
-    OBJECT_IDENTIFIER
+    type INTEGER,
+    type OBJECT_IDENTIFIER
 } from "@wildboar/asn1";
 import * as $ from "@wildboar/asn1/functional";
 import { id_TA } from "../Doc-9303-Part-11-Module/id-TA.va.mjs";
@@ -41,22 +41,27 @@ import { id_TA } from "../Doc-9303-Part-11-Module/id-TA.va.mjs";
  */
 export
 class TerminalAuthenticationInfo {
+    /**
+     * `id-TA`. The signature algorithm is not selected here.
+     * @summary `protocol`.
+     * @public
+     * @readonly
+     */
+    public readonly protocol: OBJECT_IDENTIFIER;
+    /**
+     * Protocol version. This specification supports only version 1.
+     * @summary `version`.
+     * @public
+     * @readonly
+     */
+    public readonly version: INTEGER;
+
     constructor (
-        /**
-         * `id-TA`. The signature algorithm is not selected here.
-         * @summary `protocol`.
-         * @public
-         * @readonly
-         */
-        readonly protocol: OBJECT_IDENTIFIER,
-        /**
-         * Protocol version. This specification supports only version 1.
-         * @summary `version`.
-         * @public
-         * @readonly
-         */
-        readonly version: INTEGER
+        protocol: OBJECT_IDENTIFIER,
+        version: INTEGER
     ) {
+        this.protocol = protocol;
+        this.version = version;
         if (!id_TA.isEqualTo(protocol)) {
             throw new ASN1Error("TerminalAuthenticationInfo.protocol violates permitted OBJECT IDENTIFIER constraint");
         }

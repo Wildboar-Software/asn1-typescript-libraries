@@ -2,16 +2,16 @@
 
 import * as $ from "@wildboar/asn1/functional";
 import {
-    OPTIONAL,
-    BOOLEAN,
-    SEQUENCE,
-    SET,
-    ASN1Element as _Element,
+    type OPTIONAL,
+    type BOOLEAN,
+    type SEQUENCE,
+    type SET,
+    type ASN1Element as _Element,
     ASN1TagClass as _TagClass
 } from "@wildboar/asn1";
-import { SubjectDeviceID, _decode_SubjectDeviceID, _encode_SubjectDeviceID } from "../CSTA-device-identifiers/SubjectDeviceID.ta.mjs";
+import { type SubjectDeviceID, _decode_SubjectDeviceID, _encode_SubjectDeviceID } from "../CSTA-device-identifiers/SubjectDeviceID.ta.mjs";
 
-import { HookswitchID, _decode_HookswitchID, _encode_HookswitchID } from "../CSTA-physical-device-feature/HookswitchID.ta.mjs";
+import { type HookswitchID, _decode_HookswitchID, _encode_HookswitchID } from "../CSTA-physical-device-feature/HookswitchID.ta.mjs";
 
 import { CSTACommonArguments, _decode_CSTACommonArguments, _encode_CSTACommonArguments } from "../CSTA-extension-types/CSTACommonArguments.ta.mjs";
 
@@ -43,45 +43,55 @@ import { CSTACommonArguments, _decode_CSTACommonArguments, _encode_CSTACommonArg
  */
 export
 class HookswitchEvent {
+    /**
+     * @summary `device`.
+     * @description
+     *
+     * Device whose hookswitch changed.
+     * @public
+     * @readonly
+     */
+    public readonly device: SubjectDeviceID;
+    /**
+     * @summary `hookswitch`.
+     * @description
+     *
+     * Hookswitch that changed.
+     * @public
+     * @readonly
+     */
+    public readonly hookswitch: HookswitchID;
+    /**
+     * @summary `hookswitchOnHook`.
+     * @description
+     *
+     * TRUE = on-hook; FALSE = off-hook.
+     * @public
+     * @readonly
+     */
+    public readonly hookswitchOnHook: BOOLEAN;
+    /**
+     * @summary `extensions`.
+     * @description
+     *
+     * Optional security (timestamp, sequence, securityInfo) and
+     * privateData.
+     * @public
+     * @readonly
+     */
+    public readonly extensions?: OPTIONAL<CSTACommonArguments>;
+
     constructor (
-        /**
-         * @summary `device`.
-         * @description
-         *
-         * Device whose hookswitch changed.
-         * @public
-         * @readonly
-         */
-        readonly device: SubjectDeviceID,
-        /**
-         * @summary `hookswitch`.
-         * @description
-         *
-         * Hookswitch that changed.
-         * @public
-         * @readonly
-         */
-        readonly hookswitch: HookswitchID,
-        /**
-         * @summary `hookswitchOnHook`.
-         * @description
-         *
-         * TRUE = on-hook; FALSE = off-hook.
-         * @public
-         * @readonly
-         */
-        readonly hookswitchOnHook: BOOLEAN,
-        /**
-         * @summary `extensions`.
-         * @description
-         *
-         * Optional security (timestamp, sequence, securityInfo) and
-         * privateData.
-         * @public
-         * @readonly
-         */
-        readonly extensions?: OPTIONAL<CSTACommonArguments>
-    ) {}
+        device: SubjectDeviceID,
+        hookswitch: HookswitchID,
+        hookswitchOnHook: BOOLEAN,
+        extensions?: OPTIONAL<CSTACommonArguments>
+    ) {
+        this.device = device;
+        this.hookswitch = hookswitch;
+        this.hookswitchOnHook = hookswitchOnHook;
+        this.extensions = extensions;
+    }
 
     /**
      * @summary Restructures an object into a HookswitchEvent

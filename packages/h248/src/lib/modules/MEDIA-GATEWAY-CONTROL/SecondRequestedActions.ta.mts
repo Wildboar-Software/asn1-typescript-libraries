@@ -1,15 +1,15 @@
 /* eslint-disable */
 import {
-    BOOLEAN,
-    NULL,
-    OPTIONAL,
-    ASN1Element as _Element,
+    type BOOLEAN,
+    type NULL,
+    type OPTIONAL,
+    type ASN1Element as _Element,
     ASN1TagClass as _TagClass
 } from "@wildboar/asn1";
 import * as $ from "@wildboar/asn1/functional";
-import { EventDM, _decode_EventDM, _encode_EventDM } from "../MEDIA-GATEWAY-CONTROL/EventDM.ta.mjs";
-import { SignalsDescriptor, _decode_SignalsDescriptor, _encode_SignalsDescriptor } from "../MEDIA-GATEWAY-CONTROL/SignalsDescriptor.ta.mjs";
-import { NotifyBehaviour, _decode_NotifyBehaviour, _encode_NotifyBehaviour } from "../MEDIA-GATEWAY-CONTROL/NotifyBehaviour.ta.mjs";
+import { type EventDM, _decode_EventDM, _encode_EventDM } from "../MEDIA-GATEWAY-CONTROL/EventDM.ta.mjs";
+import { type SignalsDescriptor, _decode_SignalsDescriptor, _encode_SignalsDescriptor } from "../MEDIA-GATEWAY-CONTROL/SignalsDescriptor.ta.mjs";
+import { type NotifyBehaviour, _decode_NotifyBehaviour, _encode_NotifyBehaviour } from "../MEDIA-GATEWAY-CONTROL/NotifyBehaviour.ta.mjs";
 
 
 /**
@@ -51,7 +51,7 @@ class SecondRequestedActions {
      * @public
      * @readonly
      */
-    readonly keepActive?: OPTIONAL<BOOLEAN>;
+    public readonly keepActive?: OPTIONAL<BOOLEAN>;
     /**
      * @summary `eventDM`.
      * @description
@@ -62,7 +62,7 @@ class SecondRequestedActions {
      * @public
      * @readonly
      */
-    readonly eventDM?: OPTIONAL<EventDM>;
+    public readonly eventDM?: OPTIONAL<EventDM>;
     /**
      * @summary `signalsDescriptor`.
      * @description
@@ -72,7 +72,7 @@ class SecondRequestedActions {
      * @public
      * @readonly
      */
-    readonly signalsDescriptor?: OPTIONAL<SignalsDescriptor>;
+    public readonly signalsDescriptor?: OPTIONAL<SignalsDescriptor>;
     /**
      * @summary `notifyBehaviour`.
      * @description
@@ -84,7 +84,7 @@ class SecondRequestedActions {
      * @public
      * @readonly
      */
-    readonly notifyBehaviour?: OPTIONAL<NotifyBehaviour>;
+    public readonly notifyBehaviour?: OPTIONAL<NotifyBehaviour>;
     /**
      * @summary `resetEventsDescriptor`.
      * @description
@@ -96,7 +96,7 @@ class SecondRequestedActions {
      * @public
      * @readonly
      */
-    readonly resetEventsDescriptor?: OPTIONAL<NULL>;
+    public readonly resetEventsDescriptor?: OPTIONAL<NULL>;
     /**
      * @summary Extensions that are not recognized.
      * @description
@@ -107,7 +107,7 @@ class SecondRequestedActions {
      * @public
      * @readonly
      */
-    readonly _unrecognizedExtensionsList: _Element[];
+    public readonly _unrecognizedExtensionsList: _Element[];
 
     constructor (
         keepActive?: OPTIONAL<BOOLEAN>,

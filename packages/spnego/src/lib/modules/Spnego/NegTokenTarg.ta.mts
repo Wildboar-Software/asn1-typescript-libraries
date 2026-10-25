@@ -1,14 +1,14 @@
 /* eslint-disable */
 import {
-    OCTET_STRING,
-    OPTIONAL,
-    ASN1Element as _Element,
+    type OCTET_STRING,
+    type OPTIONAL,
+    type ASN1Element as _Element,
     ASN1TagClass as _TagClass
 } from "@wildboar/asn1";
 import * as $ from "@wildboar/asn1/functional";
 import { NegTokenTarg_negResult, _decode_NegTokenTarg_negResult, _encode_NegTokenTarg_negResult, _enum_for_NegTokenTarg_negResult } from "../Spnego/NegTokenTarg-negResult.ta.mjs";
-import { MechType, _decode_MechType, _encode_MechType } from "../Spnego/MechType.ta.mjs";
-import { MechTypeList, _decode_MechTypeList, _encode_MechTypeList } from "../Spnego/MechTypeList.ta.mjs";
+import { type MechType, _decode_MechType, _encode_MechType } from "../Spnego/MechType.ta.mjs";
+import { type MechTypeList, _decode_MechTypeList, _encode_MechTypeList } from "../Spnego/MechTypeList.ta.mjs";
 
 
 /**
@@ -23,10 +23,10 @@ import { MechTypeList, _decode_MechTypeList, _encode_MechTypeList } from "../Spn
  *                             accept-completed    (0),
  *                             accept-incomplete   (1),
  *                             reject              (2),
- *                             request-mic         (3) }          OPTIONAL,
- *     supportedMech  [1] MechType                                OPTIONAL,
- *     responseToken  [2] OCTET STRING                            OPTIONAL,
- *     mechListMIC    [3] OCTET STRING                            OPTIONAL,
+ *                             request-mic         (3) }          type OPTIONAL,
+ *     supportedMech  [1] MechType                                type OPTIONAL,
+ *     responseToken  [2] OCTET STRING                            type OPTIONAL,
+ *     mechListMIC    [3] OCTET STRING                            type OPTIONAL,
  *     -- [MS-SPNG] Late Fallback Mechanism
  *     mechTypes      [4] MechTypeList                            OPTIONAL
  * }
@@ -41,31 +41,31 @@ class NegTokenTarg {
      * @public
      * @readonly
      */
-    readonly negResult?: OPTIONAL<NegTokenTarg_negResult>;
+    public readonly negResult?: OPTIONAL<NegTokenTarg_negResult>;
     /**
      * @summary `supportedMech`.
      * @public
      * @readonly
      */
-    readonly supportedMech?: OPTIONAL<MechType>;
+    public readonly supportedMech?: OPTIONAL<MechType>;
     /**
      * @summary `responseToken`.
      * @public
      * @readonly
      */
-    readonly responseToken?: OPTIONAL<OCTET_STRING>;
+    public readonly responseToken?: OPTIONAL<OCTET_STRING>;
     /**
      * @summary `mechListMIC`.
      * @public
      * @readonly
      */
-    readonly mechListMIC?: OPTIONAL<OCTET_STRING>;
+    public readonly mechListMIC?: OPTIONAL<OCTET_STRING>;
     /**
      * @summary `mechTypes`.
      * @public
      * @readonly
      */
-    readonly mechTypes?: OPTIONAL<MechTypeList>;
+    public readonly mechTypes?: OPTIONAL<MechTypeList>;
 
     constructor (
         negResult?: OPTIONAL<NegTokenTarg_negResult>,
@@ -103,7 +103,7 @@ class NegTokenTarg {
          * @static
          */
 
-    public static _enum_for_negResult = _enum_for_NegTokenTarg_negResult;
+    public static _enum_for_negResult: typeof _enum_for_NegTokenTarg_negResult = _enum_for_NegTokenTarg_negResult;
 }
 
 /**

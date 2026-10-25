@@ -1,11 +1,11 @@
 /* eslint-disable */
 import {
-    OPTIONAL,
-    ASN1Element as _Element,
+    type OPTIONAL,
+    type ASN1Element as _Element,
     ASN1TagClass as _TagClass
 } from "@wildboar/asn1";
 import * as $ from "@wildboar/asn1/functional";
-import { RedirectReason, _decode_RedirectReason, _encode_RedirectReason } from "../IN-CS3-SSF-SCF-datatypes/RedirectReason.ta.mjs";
+import { type RedirectReason, _decode_RedirectReason, _encode_RedirectReason } from "../IN-CS3-SSF-SCF-datatypes/RedirectReason.ta.mjs";
 // export { RedirectReason, _decode_RedirectReason, _encode_RedirectReason } from "../IN-CS3-SSF-SCF-datatypes/RedirectReason.ta.mjs";
 
 

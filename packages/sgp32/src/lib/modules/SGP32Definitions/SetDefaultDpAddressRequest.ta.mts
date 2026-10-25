@@ -1,9 +1,9 @@
 /* eslint-disable */
 import {
     ASN1ConstructionError as _ConstructionError,
-    ASN1Element as _Element,
+    type ASN1Element as _Element,
     ASN1TagClass as _TagClass,
-    UTF8String
+    type UTF8String
 } from "@wildboar/asn1";
 import * as $ from "@wildboar/asn1/functional";
 
@@ -33,18 +33,22 @@ import * as $ from "@wildboar/asn1/functional";
  */
 export
 class SetDefaultDpAddressRequest {
+    /**
+     * @summary `defaultDpAddress`.
+     * @description
+     * Default SM-DP+ address as an FQDN. A non-empty value replaces the address
+     * stored in the eUICC. An empty value removes the stored address. SGP.32 v1.2,
+     * section 5.9.25.
+     * @public
+     * @readonly
+     */
+    public readonly defaultDpAddress: UTF8String;
+
     constructor (
-        /**
-         * @summary `defaultDpAddress`.
-         * @description
-         * Default SM-DP+ address as an FQDN. A non-empty value replaces the address
-         * stored in the eUICC. An empty value removes the stored address. SGP.32 v1.2,
-         * section 5.9.25.
-         * @public
-         * @readonly
-         */
-        readonly defaultDpAddress: UTF8String
-    ) {}
+        defaultDpAddress: UTF8String
+    ) {
+        this.defaultDpAddress = defaultDpAddress;
+    }
 
     /**
      * @summary Restructures an object into a SetDefaultDpAddressRequest

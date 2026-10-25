@@ -1,6 +1,6 @@
 /* eslint-disable */
 import {
-    ASN1Element as _Element,
+    type ASN1Element as _Element,
     ASN1TagClass as _TagClass,
     ASN1Construction as _Construction,
     ASN1UniversalType as _UniversalType,
@@ -17,7 +17,7 @@ import {
     _encode_Completeness,
 } from '../MdmpmfASN1Module/Completeness.ta.mjs';
 import {
-    Membership,
+    type Membership,
     _decode_Membership,
     _encode_Membership,
 } from '../MdmpmfASN1Module/Membership.ta.mjs';
@@ -42,30 +42,36 @@ import {
  *
  */
 export class ListMembershipReply {
+    /**
+     * @summary `completeness`.
+     * @description
+     *
+     * Whether `membership` is known complete, known incomplete, or
+     * unknown. ITU-T Rec. X.749 (08/97)
+     * [§8.4.1](https://www.itu.int/rec/T-REC-X.749-199708-I).
+     * @public
+     * @readonly
+     */
+    public readonly completeness: Completeness;
+    /**
+     * @summary `membership`.
+     * @description
+     *
+     * Names of objects that satisfy the membership (or direct-
+     * membership) criteria. ITU-T Rec. X.749 (08/97)
+     * [§8.4.1](https://www.itu.int/rec/T-REC-X.749-199708-I).
+     * @public
+     * @readonly
+     */
+    public readonly membership: Membership;
+
     constructor(
-        /**
-         * @summary `completeness`.
-         * @description
-         *
-         * Whether `membership` is known complete, known incomplete, or
-         * unknown. ITU-T Rec. X.749 (08/97)
-         * [§8.4.1](https://www.itu.int/rec/T-REC-X.749-199708-I).
-         * @public
-         * @readonly
-         */
-        readonly completeness: Completeness,
-        /**
-         * @summary `membership`.
-         * @description
-         *
-         * Names of objects that satisfy the membership (or direct-
-         * membership) criteria. ITU-T Rec. X.749 (08/97)
-         * [§8.4.1](https://www.itu.int/rec/T-REC-X.749-199708-I).
-         * @public
-         * @readonly
-         */
-        readonly membership: Membership
-    ) {}
+        completeness: Completeness,
+        membership: Membership
+    ) {
+        this.completeness = completeness;
+        this.membership = membership;
+    }
 
     /**
      * @summary Restructures an object into a ListMembershipReply
@@ -91,7 +97,7 @@ export class ListMembershipReply {
      * @static
      */
 
-    public static _enum_for_completeness = _enum_for_Completeness;
+    public static _enum_for_completeness: typeof _enum_for_Completeness = _enum_for_Completeness;
 }
 
 /**

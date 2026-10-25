@@ -1,9 +1,9 @@
 /* eslint-disable */
 import {
-    ASN1Element as _Element,
+    type ASN1Element as _Element,
     ASN1TagClass as _TagClass,
-    OBJECT_IDENTIFIER,
-    OPTIONAL
+    type OBJECT_IDENTIFIER,
+    type OPTIONAL
 } from "@wildboar/asn1";
 import * as $ from "@wildboar/asn1/functional";
 // export { METHOD } from "../IN-CS3-SCF-SDF-Classes/METHOD.oca.mjs";
@@ -21,7 +21,7 @@ import * as $ from "@wildboar/asn1/functional";
  *   methodid         METHOD.&id({SupportedMethods}),
  *   inputAttributes
  *     SET OF METHOD.&InputAttributes.&id({SupportedMethods}{@methodid})
- *       OPTIONAL,
+ *       type OPTIONAL,
  *   --EDITOR: check this, for METHOD.&InputAttributes is a set of information object classes
  *   --and cannot be the governor of a component of a SEQUENCE
  *   specific-Input

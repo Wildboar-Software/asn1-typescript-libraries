@@ -1,12 +1,12 @@
 /* eslint-disable */
 import {
     ASN1ConstructionError as _ConstructionError,
-    ASN1Element as _Element,
+    type ASN1Element as _Element,
     ASN1TagClass as _TagClass
 } from "@wildboar/asn1";
 import * as $ from "@wildboar/asn1/functional";
 import { ProfileInstallationResultData, _decode_ProfileInstallationResultData, _encode_ProfileInstallationResultData } from "../RSPDefinitions/ProfileInstallationResultData.ta.mjs";
-import { EuiccSignPIR, _decode_EuiccSignPIR, _encode_EuiccSignPIR } from "../RSPDefinitions/EuiccSignPIR.ta.mjs";
+import { type EuiccSignPIR, _decode_EuiccSignPIR, _encode_EuiccSignPIR } from "../RSPDefinitions/EuiccSignPIR.ta.mjs";
 
 
 /**
@@ -42,7 +42,7 @@ class ProfileInstallationResult {
      * @public
      * @readonly
      */
-    readonly profileInstallationResultData: ProfileInstallationResultData;
+    public readonly profileInstallationResultData: ProfileInstallationResultData;
     /**
      * @summary `euiccSignPIR`.
      * @description
@@ -53,7 +53,7 @@ class ProfileInstallationResult {
      * @public
      * @readonly
      */
-    readonly euiccSignPIR: EuiccSignPIR;
+    public readonly euiccSignPIR: EuiccSignPIR;
 
     constructor (
         profileInstallationResultData: ProfileInstallationResultData,

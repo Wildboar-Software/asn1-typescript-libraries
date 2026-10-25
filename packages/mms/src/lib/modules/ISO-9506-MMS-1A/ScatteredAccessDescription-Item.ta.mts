@@ -1,7 +1,7 @@
 /* eslint-disable */
 import {
-    OPTIONAL,
-    ASN1Element as _Element,
+    type OPTIONAL,
+    type ASN1Element as _Element,
     ASN1TagClass as _TagClass,
     ASN1Construction as _Construction,
     ASN1UniversalType as _UniversalType,
@@ -11,9 +11,9 @@ import {
     ASN1ConstructionError as _ConstructionError,
 } from "@wildboar/asn1";
 import * as $ from "@wildboar/asn1/functional";
-import { Identifier, _decode_Identifier, _encode_Identifier } from "../ISO-9506-MMS-1/Identifier.ta.mjs";
-import { VariableSpecification, _decode_VariableSpecification, _encode_VariableSpecification } from "../ISO-9506-MMS-1/VariableSpecification.ta.mjs";
-import { AlternateAccess, _decode_AlternateAccess, _encode_AlternateAccess } from "../ISO-9506-MMS-1/AlternateAccess.ta.mjs";
+import { type Identifier, _decode_Identifier, _encode_Identifier } from "../ISO-9506-MMS-1/Identifier.ta.mjs";
+import { type VariableSpecification, _decode_VariableSpecification, _encode_VariableSpecification } from "../ISO-9506-MMS-1/VariableSpecification.ta.mjs";
+import { type AlternateAccess, _decode_AlternateAccess, _encode_AlternateAccess } from "../ISO-9506-MMS-1/AlternateAccess.ta.mjs";
 
 
 /**
@@ -42,53 +42,61 @@ import { AlternateAccess, _decode_AlternateAccess, _encode_AlternateAccess } fro
  */
 export
 class ScatteredAccessDescription_Item {
+    /**
+     * @summary `componentName`.
+     * @description
+     *
+     * If omitted, this component may not be
+     * referenced by alternate access. If present,
+     * the name used if alternate access is
+     * requested. CBB `valt`.
+     *
+     * [ISO 9506-1:2003 Annex E, E.2.1.1.1]
+     *
+     * @public
+     * @readonly
+     */
+    public readonly componentName: OPTIONAL<Identifier>;
+    /**
+     * @summary `variableSpecification`.
+     * @description
+     *
+     * Named Variable, Unnamed Variable, or
+     * Scattered Access object that defines
+     * location, type, and grouping of this
+     * component's data elements.
+     *
+     * [ISO 9506-1:2003 Annex E, E.2.1.1.2]
+     *
+     * @public
+     * @readonly
+     */
+    public readonly variableSpecification: VariableSpecification;
+    /**
+     * @summary `alternateAccess`.
+     * @description
+     *
+     * Desired access to the data elements of the
+     * variable specification. Omitted: full
+     * access. Omit if Variable Specification is
+     * a single simple data element. CBB `valt`.
+     *
+     * [ISO 9506-1:2003 Annex E, E.2.1.1.3]
+     *
+     * @public
+     * @readonly
+     */
+    public readonly alternateAccess?: OPTIONAL<AlternateAccess>;
+
     constructor (
-        /**
-         * @summary `componentName`.
-         * @description
-         *
-         * If omitted, this component may not be
-         * referenced by alternate access. If present,
-         * the name used if alternate access is
-         * requested. CBB `valt`.
-         *
-         * [ISO 9506-1:2003 Annex E, E.2.1.1.1]
-         *
-         * @public
-         * @readonly
-         */
-        readonly componentName: OPTIONAL<Identifier>,
-        /**
-         * @summary `variableSpecification`.
-         * @description
-         *
-         * Named Variable, Unnamed Variable, or
-         * Scattered Access object that defines
-         * location, type, and grouping of this
-         * component's data elements.
-         *
-         * [ISO 9506-1:2003 Annex E, E.2.1.1.2]
-         *
-         * @public
-         * @readonly
-         */
-        readonly variableSpecification: VariableSpecification,
-        /**
-         * @summary `alternateAccess`.
-         * @description
-         *
-         * Desired access to the data elements of the
-         * variable specification. Omitted: full
-         * access. Omit if Variable Specification is
-         * a single simple data element. CBB `valt`.
-         *
-         * [ISO 9506-1:2003 Annex E, E.2.1.1.3]
-         *
-         * @public
-         * @readonly
-         */
-        readonly alternateAccess?: OPTIONAL<AlternateAccess>
-    ) {}
+        componentName: OPTIONAL<Identifier>,
+        variableSpecification: VariableSpecification,
+        alternateAccess?: OPTIONAL<AlternateAccess>
+    ) {
+        this.componentName = componentName;
+        this.variableSpecification = variableSpecification;
+        this.alternateAccess = alternateAccess;
+    }
 
     /**
      * @summary Restructures an object into a ScatteredAccessDescription_Item

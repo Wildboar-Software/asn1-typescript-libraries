@@ -1,7 +1,7 @@
 /* eslint-disable */
 import {
-    ASN1Element as _Element,
-    ENUMERATED
+    type ASN1Element as _Element,
+    type ENUMERATED
 } from "@wildboar/asn1";
 import * as $ from "@wildboar/asn1/functional";
 
@@ -46,7 +46,7 @@ type RequestedInfo = _enum_for_RequestedInfo | ENUMERATED;
  * @type {number}
  */
 export
-const RequestedInfo_anchorMSC_AddressAndASCI_CallReference: RequestedInfo = 0; /* LONG_NAMED_ENUMERATED_VALUE */
+const RequestedInfo_anchorMSC_AddressAndASCI_CallReference: _enum_for_RequestedInfo.anchorMSC_AddressAndASCI_CallReference = _enum_for_RequestedInfo.anchorMSC_AddressAndASCI_CallReference; /* LONG_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary anchorMSC_AddressAndASCI_CallReference
@@ -59,7 +59,7 @@ const RequestedInfo_anchorMSC_AddressAndASCI_CallReference: RequestedInfo = 0; /
  * @type {number}
  */
 export
-const anchorMSC_AddressAndASCI_CallReference: RequestedInfo = RequestedInfo_anchorMSC_AddressAndASCI_CallReference; /* SHORT_NAMED_ENUMERATED_VALUE */
+const anchorMSC_AddressAndASCI_CallReference: _enum_for_RequestedInfo.anchorMSC_AddressAndASCI_CallReference = RequestedInfo_anchorMSC_AddressAndASCI_CallReference; /* SHORT_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary RequestedInfo_imsiAndAdditionalInfoAndAdditionalSubscription
@@ -72,7 +72,7 @@ const anchorMSC_AddressAndASCI_CallReference: RequestedInfo = RequestedInfo_anch
  * @type {number}
  */
 export
-const RequestedInfo_imsiAndAdditionalInfoAndAdditionalSubscription: RequestedInfo = 1; /* LONG_NAMED_ENUMERATED_VALUE */
+const RequestedInfo_imsiAndAdditionalInfoAndAdditionalSubscription: _enum_for_RequestedInfo.imsiAndAdditionalInfoAndAdditionalSubscription = _enum_for_RequestedInfo.imsiAndAdditionalInfoAndAdditionalSubscription; /* LONG_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary imsiAndAdditionalInfoAndAdditionalSubscription
@@ -85,7 +85,7 @@ const RequestedInfo_imsiAndAdditionalInfoAndAdditionalSubscription: RequestedInf
  * @type {number}
  */
 export
-const imsiAndAdditionalInfoAndAdditionalSubscription: RequestedInfo = RequestedInfo_imsiAndAdditionalInfoAndAdditionalSubscription; /* SHORT_NAMED_ENUMERATED_VALUE */
+const imsiAndAdditionalInfoAndAdditionalSubscription: _enum_for_RequestedInfo.imsiAndAdditionalInfoAndAdditionalSubscription = RequestedInfo_imsiAndAdditionalInfoAndAdditionalSubscription; /* SHORT_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary Decodes an ASN.1 element into a(n) RequestedInfo
@@ -93,7 +93,7 @@ const imsiAndAdditionalInfoAndAdditionalSubscription: RequestedInfo = RequestedI
  * @param el The element being decoded.
  * @returns The decoded data structure.
  */
-export const _decode_RequestedInfo = $._decodeEnumerated;
+export const _decode_RequestedInfo: $.ASN1Decoder<number> = $._decodeEnumerated;
 
 /**
  * @summary Encodes a(n) RequestedInfo into an ASN.1 Element.
@@ -102,7 +102,7 @@ export const _decode_RequestedInfo = $._decodeEnumerated;
  * @param elGetter A function that can be used to get new ASN.1 elements.
  * @returns {_Element} The RequestedInfo, encoded as an ASN.1 Element.
  */
-export const _encode_RequestedInfo = $._encodeEnumerated;
+export const _encode_RequestedInfo: $.ASN1Encoder<number> = $._encodeEnumerated;
 
 
 /* eslint-enable */

@@ -8,7 +8,7 @@ import { type OPERATION } from "../Remote-Operations-Information-Objects/OPERATI
 
 import { CancelCallBackMessageArgument, _decode_CancelCallBackMessageArgument, _encode_CancelCallBackMessageArgument } from "../CSTA-cancel-call-back-message/CancelCallBackMessageArgument.ta.mjs";
 
-import { CancelCallBackMessageResult, _decode_CancelCallBackMessageResult, _encode_CancelCallBackMessageResult } from "../CSTA-cancel-call-back-message/CancelCallBackMessageResult.ta.mjs";
+import { type CancelCallBackMessageResult, _decode_CancelCallBackMessageResult, _encode_CancelCallBackMessageResult } from "../CSTA-cancel-call-back-message/CancelCallBackMessageResult.ta.mjs";
 
 import { universalFailure } from "../CSTA-error-definition/universalFailure.oa.mjs";
 

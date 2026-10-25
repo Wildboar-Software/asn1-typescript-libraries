@@ -1,6 +1,6 @@
 /* eslint-disable */
 import {
-    ENUMERATED
+    type ENUMERATED
 } from "@wildboar/asn1";
 import * as $ from "@wildboar/asn1/functional";
 
@@ -61,7 +61,7 @@ type TopologyRequest_topologyDirectionExtension = _enum_for_TopologyRequest_topo
  * @type {number}
  */
 export
-const TopologyRequest_topologyDirectionExtension_onewayexternal: TopologyRequest_topologyDirectionExtension = 0; /* LONG_NAMED_ENUMERATED_VALUE */
+const TopologyRequest_topologyDirectionExtension_onewayexternal: 0 = _enum_for_TopologyRequest_topologyDirectionExtension.onewayexternal; /* LONG_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary onewayexternal
@@ -69,7 +69,7 @@ const TopologyRequest_topologyDirectionExtension_onewayexternal: TopologyRequest
  * @type {number}
  */
 export
-const onewayexternal: TopologyRequest_topologyDirectionExtension = TopologyRequest_topologyDirectionExtension_onewayexternal; /* SHORT_NAMED_ENUMERATED_VALUE */
+const onewayexternal: 0 = TopologyRequest_topologyDirectionExtension_onewayexternal; /* SHORT_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary TopologyRequest_topologyDirectionExtension_onewayboth
@@ -82,7 +82,7 @@ const onewayexternal: TopologyRequest_topologyDirectionExtension = TopologyReque
  * @type {number}
  */
 export
-const TopologyRequest_topologyDirectionExtension_onewayboth: TopologyRequest_topologyDirectionExtension = 1; /* LONG_NAMED_ENUMERATED_VALUE */
+const TopologyRequest_topologyDirectionExtension_onewayboth: 1 = _enum_for_TopologyRequest_topologyDirectionExtension.onewayboth; /* LONG_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary onewayboth
@@ -90,9 +90,9 @@ const TopologyRequest_topologyDirectionExtension_onewayboth: TopologyRequest_top
  * @type {number}
  */
 export
-const onewayboth: TopologyRequest_topologyDirectionExtension = TopologyRequest_topologyDirectionExtension_onewayboth; /* SHORT_NAMED_ENUMERATED_VALUE */
-export const _decode_TopologyRequest_topologyDirectionExtension = $._decodeEnumerated as $.ASN1Decoder<TopologyRequest_topologyDirectionExtension>;
-export const _encode_TopologyRequest_topologyDirectionExtension = $._encodeEnumerated as $.ASN1Encoder<TopologyRequest_topologyDirectionExtension>;
+const onewayboth: 1 = TopologyRequest_topologyDirectionExtension_onewayboth; /* SHORT_NAMED_ENUMERATED_VALUE */
+export const _decode_TopologyRequest_topologyDirectionExtension: $.ASN1Decoder<TopologyRequest_topologyDirectionExtension> = $._decodeEnumerated as $.ASN1Decoder<TopologyRequest_topologyDirectionExtension>;
+export const _encode_TopologyRequest_topologyDirectionExtension: $.ASN1Encoder<TopologyRequest_topologyDirectionExtension> = $._encodeEnumerated as $.ASN1Encoder<TopologyRequest_topologyDirectionExtension>;
 
 
 /* eslint-enable */

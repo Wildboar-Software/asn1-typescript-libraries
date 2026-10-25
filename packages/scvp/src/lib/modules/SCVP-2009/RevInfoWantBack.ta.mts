@@ -1,6 +1,6 @@
 /* eslint-disable */
 import {
-  OPTIONAL,
+  type OPTIONAL,
   ASN1Element as _Element,
   ASN1TagClass as _TagClass,
   ASN1Construction as _Construction,
@@ -12,12 +12,12 @@ import {
 } from '@wildboar/asn1';
 import * as $ from '@wildboar/asn1/functional';
 import {
-  RevocationInfos,
+  type RevocationInfos,
   _decode_RevocationInfos,
   _encode_RevocationInfos,
 } from '../SCVP-2009/RevocationInfos.ta.mjs';
 import {
-  CertBundle,
+  type CertBundle,
   _decode_CertBundle,
   _encode_CertBundle,
 } from '../SCVP-2009/CertBundle.ta.mjs';
@@ -39,20 +39,26 @@ import {
  *
  */
 export class RevInfoWantBack {
+  /**
+   * @summary `revocationInfo`.
+   * @public
+   * @readonly
+   */
+  public readonly revocationInfo: RevocationInfos;
+  /**
+   * @summary `extraCerts`.
+   * @public
+   * @readonly
+   */
+  public readonly extraCerts?: OPTIONAL<CertBundle>;
+
   constructor(
-    /**
-     * @summary `revocationInfo`.
-     * @public
-     * @readonly
-     */
-    readonly revocationInfo: RevocationInfos,
-    /**
-     * @summary `extraCerts`.
-     * @public
-     * @readonly
-     */
-    readonly extraCerts?: OPTIONAL<CertBundle>
-  ) {}
+    revocationInfo: RevocationInfos,
+    extraCerts?: OPTIONAL<CertBundle>
+  ) {
+    this.revocationInfo = revocationInfo;
+    this.extraCerts = extraCerts;
+  }
 
   /**
    * @summary Restructures an object into a RevInfoWantBack

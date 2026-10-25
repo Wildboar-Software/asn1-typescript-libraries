@@ -1,6 +1,6 @@
 /* eslint-disable */
 import {
-    INTEGER,
+    type INTEGER,
 } from "@wildboar/asn1";
 import * as $ from "@wildboar/asn1/functional";
 
@@ -18,8 +18,8 @@ import * as $ from "@wildboar/asn1/functional";
  */
 export
 type TRFormatID = INTEGER;
-export const _decode_TRFormatID = $._decodeInteger;
-export const _encode_TRFormatID = $._encodeInteger;
+export const _decode_TRFormatID: $.ASN1Decoder<INTEGER> = $._decodeInteger;
+export const _encode_TRFormatID: $.ASN1Encoder<INTEGER> = $._encodeInteger;
 
 
 /* eslint-enable */

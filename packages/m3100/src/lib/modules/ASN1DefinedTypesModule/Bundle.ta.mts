@@ -1,7 +1,7 @@
 /* eslint-disable */
 import {
-    INTEGER,
-    ASN1Element as _Element,
+    type INTEGER,
+    type ASN1Element as _Element,
     ASN1TagClass as _TagClass,
     ASN1Construction as _Construction,
     ASN1UniversalType as _UniversalType,
@@ -12,7 +12,7 @@ import {
 } from '@wildboar/asn1';
 import * as $ from '@wildboar/asn1/functional';
 import {
-    CharacteristicInformation,
+    type CharacteristicInformation,
     _decode_CharacteristicInformation,
     _encode_CharacteristicInformation,
 } from '../ASN1DefinedTypesModule/CharacteristicInformation.ta.mjs';
@@ -32,20 +32,26 @@ import {
  *
  */
 export class Bundle {
+    /**
+     * @summary `characteristicInfoType`.
+     * @public
+     * @readonly
+     */
+    public readonly characteristicInfoType: CharacteristicInformation;
+    /**
+     * @summary `bundlingFactor`.
+     * @public
+     * @readonly
+     */
+    public readonly bundlingFactor: INTEGER;
+
     constructor(
-        /**
-         * @summary `characteristicInfoType`.
-         * @public
-         * @readonly
-         */
-        readonly characteristicInfoType: CharacteristicInformation,
-        /**
-         * @summary `bundlingFactor`.
-         * @public
-         * @readonly
-         */
-        readonly bundlingFactor: INTEGER
-    ) {}
+        characteristicInfoType: CharacteristicInformation,
+        bundlingFactor: INTEGER
+    ) {
+        this.characteristicInfoType = characteristicInfoType;
+        this.bundlingFactor = bundlingFactor;
+    }
 
     /**
      * @summary Restructures an object into a Bundle

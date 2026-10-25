@@ -1,7 +1,7 @@
 /* eslint-disable */
 import {
-    BOOLEAN,
-    ASN1Element as _Element,
+    type BOOLEAN,
+    type ASN1Element as _Element,
     ASN1TagClass as _TagClass,
     ASN1Construction as _Construction,
     ASN1UniversalType as _UniversalType,
@@ -12,7 +12,7 @@ import {
 } from '@wildboar/asn1';
 import * as $ from '@wildboar/asn1/functional';
 import {
-    ObjectInstance,
+    type ObjectInstance,
     _decode_ObjectInstance,
     _encode_ObjectInstance,
 } from '@wildboar/cmip';
@@ -33,28 +33,34 @@ import {
  *
  */
 export class BackupResult_local {
+    /**
+     * @summary `destination`.
+     * @description
+     *
+     * Local object instance that received the backup (same class
+     * as the source). ITU-T Rec. X.744 (10/96) A.8.
+     * @public
+     * @readonly
+     */
+    public readonly destination: ObjectInstance;
+    /**
+     * @summary `success`.
+     * @description
+     *
+     * `TRUE` if the local backup succeeded. ITU-T Rec. X.744
+     * (10/96) A.8.
+     * @public
+     * @readonly
+     */
+    public readonly success: BOOLEAN;
+
     constructor(
-        /**
-         * @summary `destination`.
-         * @description
-         *
-         * Local object instance that received the backup (same class
-         * as the source). ITU-T Rec. X.744 (10/96) A.8.
-         * @public
-         * @readonly
-         */
-        readonly destination: ObjectInstance,
-        /**
-         * @summary `success`.
-         * @description
-         *
-         * `TRUE` if the local backup succeeded. ITU-T Rec. X.744
-         * (10/96) A.8.
-         * @public
-         * @readonly
-         */
-        readonly success: BOOLEAN
-    ) {}
+        destination: ObjectInstance,
+        success: BOOLEAN
+    ) {
+        this.destination = destination;
+        this.success = success;
+    }
 
     /**
      * @summary Restructures an object into a BackupResult_local

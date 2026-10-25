@@ -1,12 +1,12 @@
 /* eslint-disable */
 import {
     ASN1ConstructionError as _ConstructionError,
-    ASN1Element as _Element,
+    type ASN1Element as _Element,
     ASN1TagClass as _TagClass
 } from "@wildboar/asn1";
 import * as $ from "@wildboar/asn1/functional";
-import { TransactionId, _decode_TransactionId, _encode_TransactionId } from "../RSPDefinitions/TransactionId.ta.mjs";
-import { DownloadErrorCode, _decode_DownloadErrorCode, _encode_DownloadErrorCode } from "../RSPDefinitions/DownloadErrorCode.ta.mjs";
+import { type TransactionId, _decode_TransactionId, _encode_TransactionId } from "../RSPDefinitions/TransactionId.ta.mjs";
+import { type DownloadErrorCode, _decode_DownloadErrorCode, _encode_DownloadErrorCode } from "../RSPDefinitions/DownloadErrorCode.ta.mjs";
 
 
 /**
@@ -38,7 +38,7 @@ class PrepareDownloadResponseError {
      * @public
      * @readonly
      */
-    readonly transactionId: TransactionId;
+    public readonly transactionId: TransactionId;
     /**
      * @summary `downloadErrorCode`.
      * @description
@@ -49,7 +49,7 @@ class PrepareDownloadResponseError {
      * @public
      * @readonly
      */
-    readonly downloadErrorCode: DownloadErrorCode;
+    public readonly downloadErrorCode: DownloadErrorCode;
 
     constructor (
         transactionId: TransactionId,

@@ -1,7 +1,7 @@
 /* eslint-disable */
 import {
-    BIT_STRING,
-    ASN1Element as _Element,
+    type BIT_STRING,
+    type ASN1Element as _Element,
     ASN1TagClass as _TagClass,
     ASN1Construction as _Construction,
     ASN1UniversalType as _UniversalType,
@@ -102,12 +102,12 @@ export const packed_encoding_rules: number = Protocol_options_packed_encoding_ru
 
 
 
-export const _decode_Protocol_options = $._decodeBitString;
+export const _decode_Protocol_options: $.ASN1Decoder<BIT_STRING> = $._decodeBitString;
 
 
 
 
-export const _encode_Protocol_options = $._encodeBitString;
+export const _encode_Protocol_options: $.ASN1Encoder<BIT_STRING> = $._encodeBitString;
 
 
 /* eslint-enable */

@@ -1,7 +1,7 @@
 import {
-    OPTIONAL,
-    NULL,
-    ASN1Element as _Element,
+    type OPTIONAL,
+    type NULL,
+    type ASN1Element as _Element,
     ASN1TagClass as _TagClass,
 } from "@wildboar/asn1";
 import * as $ from "@wildboar/asn1/functional";
@@ -23,17 +23,25 @@ import { InitiatingEntity, _enum_for_InitiatingEntity, _decode_InitiatingEntity,
  *
  */
 export class GPRSEventSpecificInformation_detachSpecificInformation {
+    public readonly initiatingEntity?: OPTIONAL<InitiatingEntity>;
+    public readonly routeingAreaUpdate?: OPTIONAL<NULL>;
+    public readonly _unrecognizedExtensionsList: _Element[];
+
     constructor (
-        readonly initiatingEntity?: OPTIONAL<InitiatingEntity>,
-        readonly routeingAreaUpdate?: OPTIONAL<NULL>,
-        readonly _unrecognizedExtensionsList: _Element[] = [],
-    ) {}
+        initiatingEntity?: OPTIONAL<InitiatingEntity>,
+        routeingAreaUpdate?: OPTIONAL<NULL>,
+        _unrecognizedExtensionsList: _Element[] = [],
+    ) {
+        this.initiatingEntity = initiatingEntity;
+        this.routeingAreaUpdate = routeingAreaUpdate;
+        this._unrecognizedExtensionsList = _unrecognizedExtensionsList;
+    }
 
     public static _from_object (_o: { [_K in keyof (GPRSEventSpecificInformation_detachSpecificInformation)]: (GPRSEventSpecificInformation_detachSpecificInformation)[_K] }): GPRSEventSpecificInformation_detachSpecificInformation {
         return new GPRSEventSpecificInformation_detachSpecificInformation(_o.initiatingEntity, _o.routeingAreaUpdate, _o._unrecognizedExtensionsList);
     }
 
-    public static _enum_for_initiatingEntity = _enum_for_InitiatingEntity;
+    public static _enum_for_initiatingEntity: typeof _enum_for_InitiatingEntity = _enum_for_InitiatingEntity;
 }
 
 export const _root_component_type_list_1_spec_for_GPRSEventSpecificInformation_detachSpecificInformation: $.ComponentSpec[] = [

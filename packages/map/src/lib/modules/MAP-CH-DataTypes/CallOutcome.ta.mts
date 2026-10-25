@@ -1,7 +1,7 @@
 /* eslint-disable */
 import {
-    ASN1Element as _Element,
-    ENUMERATED
+    type ASN1Element as _Element,
+    type ENUMERATED
 } from "@wildboar/asn1";
 import * as $ from "@wildboar/asn1/functional";
 
@@ -46,7 +46,7 @@ type CallOutcome = _enum_for_CallOutcome | ENUMERATED;
  * @type {number}
  */
 export
-const CallOutcome_success: CallOutcome = 0; /* LONG_NAMED_ENUMERATED_VALUE */
+const CallOutcome_success: _enum_for_CallOutcome.success = _enum_for_CallOutcome.success; /* LONG_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary success
@@ -58,7 +58,7 @@ const CallOutcome_success: CallOutcome = 0; /* LONG_NAMED_ENUMERATED_VALUE */
  * @type {number}
  */
 export
-const success: CallOutcome = CallOutcome_success; /* SHORT_NAMED_ENUMERATED_VALUE */
+const success: _enum_for_CallOutcome.success = CallOutcome_success; /* SHORT_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary CallOutcome_failure
@@ -70,7 +70,7 @@ const success: CallOutcome = CallOutcome_success; /* SHORT_NAMED_ENUMERATED_VALU
  * @type {number}
  */
 export
-const CallOutcome_failure: CallOutcome = 1; /* LONG_NAMED_ENUMERATED_VALUE */
+const CallOutcome_failure: _enum_for_CallOutcome.failure = _enum_for_CallOutcome.failure; /* LONG_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary failure
@@ -82,7 +82,7 @@ const CallOutcome_failure: CallOutcome = 1; /* LONG_NAMED_ENUMERATED_VALUE */
  * @type {number}
  */
 export
-const failure: CallOutcome = CallOutcome_failure; /* SHORT_NAMED_ENUMERATED_VALUE */
+const failure: _enum_for_CallOutcome.failure = CallOutcome_failure; /* SHORT_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary CallOutcome_busy
@@ -94,7 +94,7 @@ const failure: CallOutcome = CallOutcome_failure; /* SHORT_NAMED_ENUMERATED_VALU
  * @type {number}
  */
 export
-const CallOutcome_busy: CallOutcome = 2; /* LONG_NAMED_ENUMERATED_VALUE */
+const CallOutcome_busy: _enum_for_CallOutcome.busy = _enum_for_CallOutcome.busy; /* LONG_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary busy
@@ -106,7 +106,7 @@ const CallOutcome_busy: CallOutcome = 2; /* LONG_NAMED_ENUMERATED_VALUE */
  * @type {number}
  */
 export
-const busy: CallOutcome = CallOutcome_busy; /* SHORT_NAMED_ENUMERATED_VALUE */
+const busy: _enum_for_CallOutcome.busy = CallOutcome_busy; /* SHORT_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary Decodes an ASN.1 element into a(n) CallOutcome
@@ -114,7 +114,7 @@ const busy: CallOutcome = CallOutcome_busy; /* SHORT_NAMED_ENUMERATED_VALUE */
  * @param el The element being decoded.
  * @returns The decoded data structure.
  */
-export const _decode_CallOutcome = $._decodeEnumerated;
+export const _decode_CallOutcome: $.ASN1Decoder<number> = $._decodeEnumerated;
 
 /**
  * @summary Encodes a(n) CallOutcome into an ASN.1 Element.
@@ -123,7 +123,7 @@ export const _decode_CallOutcome = $._decodeEnumerated;
  * @param elGetter A function that can be used to get new ASN.1 elements.
  * @returns {_Element} The CallOutcome, encoded as an ASN.1 Element.
  */
-export const _encode_CallOutcome = $._encodeEnumerated;
+export const _encode_CallOutcome: $.ASN1Encoder<number> = $._encodeEnumerated;
 
 
 /* eslint-enable */

@@ -1,5 +1,5 @@
 /* eslint-disable */
-import { ASN1Element as _Element, INTEGER } from "@wildboar/asn1";
+import { ASN1Element as _Element, type INTEGER } from "@wildboar/asn1";
 import * as $ from "@wildboar/asn1/functional";
 
 
@@ -18,12 +18,12 @@ export type Reference = INTEGER;
 
 
 
-export const _decode_Reference = $._decodeInteger;
+export const _decode_Reference: $.ASN1Decoder<INTEGER> = $._decodeInteger;
 
 
 
 
-export const _encode_Reference = $._encodeInteger;
+export const _encode_Reference: $.ASN1Encoder<INTEGER> = $._encodeInteger;
 
 
 /* eslint-enable */

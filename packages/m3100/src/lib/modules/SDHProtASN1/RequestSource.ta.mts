@@ -1,6 +1,6 @@
 /* eslint-disable */
 import {
-    ASN1Element as _Element,
+    type ASN1Element as _Element,
     ASN1TagClass as _TagClass,
     ASN1Construction as _Construction,
     ASN1UniversalType as _UniversalType,
@@ -57,7 +57,7 @@ export type RequestSource = _enum_for_RequestSource;
  *
  * @enum {number}
  */
-export const RequestSource = _enum_for_RequestSource;
+export const RequestSource: typeof _enum_for_RequestSource = _enum_for_RequestSource;
 
 
 /**
@@ -65,7 +65,7 @@ export const RequestSource = _enum_for_RequestSource;
  * @constant
  * @type {number}
  */
-export const RequestSource_local: RequestSource =
+export const RequestSource_local: _enum_for_RequestSource.local =
     RequestSource.local; /* LONG_NAMED_ENUMERATED_VALUE */
 
 
@@ -74,7 +74,7 @@ export const RequestSource_local: RequestSource =
  * @constant
  * @type {number}
  */
-export const local: RequestSource =
+export const local: _enum_for_RequestSource.local =
     RequestSource.local; /* SHORT_NAMED_ENUMERATED_VALUE */
 
 
@@ -83,7 +83,7 @@ export const local: RequestSource =
  * @constant
  * @type {number}
  */
-export const RequestSource_remote: RequestSource =
+export const RequestSource_remote: _enum_for_RequestSource.remote =
     RequestSource.remote; /* LONG_NAMED_ENUMERATED_VALUE */
 
 
@@ -92,18 +92,29 @@ export const RequestSource_remote: RequestSource =
  * @constant
  * @type {number}
  */
-export const remote: RequestSource =
+export const remote: _enum_for_RequestSource.remote =
     RequestSource.remote; /* SHORT_NAMED_ENUMERATED_VALUE */
 
 
 
 
-export const _decode_RequestSource = $._decodeEnumerated;
+export function _decode_RequestSource(el: _Element): RequestSource {
+    const enumerated = $._decodeEnumerated(el);
+    switch (enumerated) {
+        case RequestSource.local: return RequestSource.local;
+        case RequestSource.remote: return RequestSource.remote;
+        default:
+            throw new _ConstructionError(
+                'Invalid ENUMERATED value ' + enumerated + ' for RequestSource.',
+                el,
+            );
+    }
+}
 
 
 
 
-export const _encode_RequestSource = $._encodeEnumerated;
+export const _encode_RequestSource: $.ASN1Encoder<RequestSource> = $._encodeEnumerated as $.ASN1Encoder<RequestSource>;
 
 
 /* eslint-enable */

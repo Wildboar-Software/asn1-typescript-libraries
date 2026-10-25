@@ -1,6 +1,6 @@
 /* eslint-disable */
 import {
-    ASN1Element as _Element,
+    type ASN1Element as _Element,
     ASN1TagClass as _TagClass,
     ASN1Construction as _Construction,
     ASN1UniversalType as _UniversalType,
@@ -16,7 +16,7 @@ import {
     _encode_Heading,
 } from '../IPMSInformationObjects/Heading.ta.mjs';
 import {
-    Body,
+    type Body,
     _decode_Body,
     _encode_Body,
 } from '../IPMSInformationObjects/Body.ta.mjs';
@@ -38,20 +38,26 @@ import {
  *
  */
 export class IPM {
+    /**
+     * @summary `heading`.
+     * @public
+     * @readonly
+     */
+    public readonly heading: Heading;
+    /**
+     * @summary `body`.
+     * @public
+     * @readonly
+     */
+    public readonly body: Body;
+
     constructor(
-        /**
-         * @summary `heading`.
-         * @public
-         * @readonly
-         */
-        readonly heading: Heading,
-        /**
-         * @summary `body`.
-         * @public
-         * @readonly
-         */
-        readonly body: Body
-    ) {}
+        heading: Heading,
+        body: Body
+    ) {
+        this.heading = heading;
+        this.body = body;
+    }
 
     /**
      * @summary Restructures an object into a IPM

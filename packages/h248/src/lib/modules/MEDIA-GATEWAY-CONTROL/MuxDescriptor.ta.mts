@@ -1,11 +1,11 @@
 /* eslint-disable */
 import {
-    OPTIONAL,
-    ASN1Element as _Element,
+    type OPTIONAL,
+    type ASN1Element as _Element,
     ASN1TagClass as _TagClass
 } from "@wildboar/asn1";
 import * as $ from "@wildboar/asn1/functional";
-import { MuxType, _decode_MuxType, _encode_MuxType, _enum_for_MuxType } from "../MEDIA-GATEWAY-CONTROL/MuxType.ta.mjs";
+import { type MuxType, _decode_MuxType, _encode_MuxType, _enum_for_MuxType } from "../MEDIA-GATEWAY-CONTROL/MuxType.ta.mjs";
 import { TerminationID, _decode_TerminationID, _encode_TerminationID } from "../MEDIA-GATEWAY-CONTROL/TerminationID.ta.mjs";
 import { NonStandardData, _decode_NonStandardData, _encode_NonStandardData } from "../MEDIA-GATEWAY-CONTROL/NonStandardData.ta.mjs";
 
@@ -51,7 +51,7 @@ class MuxDescriptor {
      * @public
      * @readonly
      */
-    readonly muxType: MuxType;
+    public readonly muxType: MuxType;
     /**
      * @summary `termList`.
      * @description
@@ -63,7 +63,7 @@ class MuxDescriptor {
      * @public
      * @readonly
      */
-    readonly termList: TerminationID[];
+    public readonly termList: TerminationID[];
     /**
      * @summary `nonStandardData`.
      * @description
@@ -75,7 +75,7 @@ class MuxDescriptor {
      * @public
      * @readonly
      */
-    readonly nonStandardData?: OPTIONAL<NonStandardData>;
+    public readonly nonStandardData?: OPTIONAL<NonStandardData>;
     /**
      * @summary Extensions that are not recognized.
      * @description
@@ -86,7 +86,7 @@ class MuxDescriptor {
      * @public
      * @readonly
      */
-    readonly _unrecognizedExtensionsList: _Element[];
+    public readonly _unrecognizedExtensionsList: _Element[];
 
     constructor (
         muxType: MuxType,
@@ -122,7 +122,7 @@ class MuxDescriptor {
          * @static
          */
 
-    public static _enum_for_muxType = _enum_for_MuxType;
+    public static _enum_for_muxType: typeof _enum_for_MuxType = _enum_for_MuxType;
 }
 
 /**

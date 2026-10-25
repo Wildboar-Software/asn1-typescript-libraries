@@ -1,7 +1,7 @@
 /* eslint-disable */
 import {
-    INTEGER,
-    ASN1Element as _Element,
+    type INTEGER,
+    type ASN1Element as _Element,
     ASN1TagClass as _TagClass,
     ASN1Construction as _Construction,
     ASN1UniversalType as _UniversalType,
@@ -11,7 +11,7 @@ import {
     ASN1ConstructionError as _ConstructionError,
 } from "@wildboar/asn1";
 import * as $ from "@wildboar/asn1/functional";
-import { ECPoint, _decode_ECPoint, _encode_ECPoint } from "../SEC1-v1-9/ECPoint.ta.mjs";
+import { type ECPoint, _decode_ECPoint, _encode_ECPoint } from "../SEC1-v1-9/ECPoint.ta.mjs";
 /**
  * @summary ECDSA_Full_R
  * @description
@@ -41,7 +41,7 @@ class ECDSA_Full_R {
      * @public
      * @readonly
      */
-    readonly r: ECPoint;
+    public readonly r: ECPoint;
     /**
      * @summary `s`.
      * @description
@@ -51,7 +51,7 @@ class ECDSA_Full_R {
      * @public
      * @readonly
      */
-    readonly s: INTEGER;
+    public readonly s: INTEGER;
 
     constructor (
         r: ECPoint,

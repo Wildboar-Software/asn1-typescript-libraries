@@ -1,7 +1,7 @@
 /* eslint-disable */
 import {
-    OPTIONAL,
-    ASN1Element as _Element,
+    type OPTIONAL,
+    type ASN1Element as _Element,
     ASN1TagClass as _TagClass,
     ASN1Construction as _Construction,
     ASN1UniversalType as _UniversalType,
@@ -12,7 +12,7 @@ import {
 } from '@wildboar/asn1';
 import * as $ from '@wildboar/asn1/functional';
 import {
-    EntryClass,
+    type EntryClass,
     delivery /* IMPORTED_SHORT_NAMED_INTEGER */,
     _decode_EntryClass,
     _encode_EntryClass,
@@ -23,12 +23,12 @@ import {
     _encode_Selector,
 } from '../MSAbstractService/Selector.ta.mjs';
 import {
-    MSExtensions,
+    type MSExtensions,
     _decode_MSExtensions,
     _encode_MSExtensions,
 } from '../MSAbstractService/MSExtensions.ta.mjs';
 import {
-    AttributeType,
+    type AttributeType,
     _decode_AttributeType,
     _encode_AttributeType,
 } from "./AttributeType.ta.mjs";
@@ -56,32 +56,42 @@ import {
  *
  */
 export class SummarizeArgument {
+    /**
+     * @summary `entry_class`.
+     * @public
+     * @readonly
+     */
+    public readonly entry_class: OPTIONAL<EntryClass>;
+    /**
+     * @summary `selector`.
+     * @public
+     * @readonly
+     */
+    public readonly selector: Selector;
+    /**
+     * @summary `summary_requests`.
+     * @public
+     * @readonly
+     */
+    public readonly summary_requests?: OPTIONAL<AttributeType[]>;
+    /**
+     * @summary `summarize_extensions`.
+     * @public
+     * @readonly
+     */
+    public readonly summarize_extensions?: OPTIONAL<MSExtensions>;
+
     constructor(
-        /**
-         * @summary `entry_class`.
-         * @public
-         * @readonly
-         */
-        readonly entry_class: OPTIONAL<EntryClass>,
-        /**
-         * @summary `selector`.
-         * @public
-         * @readonly
-         */
-        readonly selector: Selector,
-        /**
-         * @summary `summary_requests`.
-         * @public
-         * @readonly
-         */
-        readonly summary_requests?: OPTIONAL<AttributeType[]>,
-        /**
-         * @summary `summarize_extensions`.
-         * @public
-         * @readonly
-         */
-        readonly summarize_extensions?: OPTIONAL<MSExtensions>
-    ) {}
+        entry_class: OPTIONAL<EntryClass>,
+        selector: Selector,
+        summary_requests?: OPTIONAL<AttributeType[]>,
+        summarize_extensions?: OPTIONAL<MSExtensions>
+    ) {
+        this.entry_class = entry_class;
+        this.selector = selector;
+        this.summary_requests = summary_requests;
+        this.summarize_extensions = summarize_extensions;
+    }
 
     /**
      * @summary Restructures an object into a SummarizeArgument

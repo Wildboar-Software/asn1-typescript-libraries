@@ -2,10 +2,10 @@
 
 import * as $ from "@wildboar/asn1/functional";
 import {
-    ENUMERATED,
-    SEQUENCE,
-    SET,
-    ASN1Element as _Element,
+    type ENUMERATED,
+    type SEQUENCE,
+    type SET,
+    type ASN1Element as _Element,
     ASN1TagClass as _TagClass,
     ASN1ConstructionError as _ConstructionError
 } from "@wildboar/asn1";
@@ -71,30 +71,36 @@ import {
  */
 export
 class ProgressIndicator {
+    /**
+     * @summary `progressLocation`.
+     * @description
+     *
+     * Where the progress indication originated (user, local/remote public
+     * or private network, transit, local interface, international, beyond
+     * interworking, other).
+     *
+     * @public
+     * @readonly
+     */
+    public readonly progressLocation: ProgressIndicator_progressLocation;
+    /**
+     * @summary `progressDescription`.
+     * @description
+     *
+     * ISDN progress (ETSI ETS 300 182:1993), QSIG (ECMA-143), or other.
+     *
+     * @public
+     * @readonly
+     */
+    public readonly progressDescription: ProgressIndicator_progressDescription;
+
     constructor (
-        /**
-         * @summary `progressLocation`.
-         * @description
-         *
-         * Where the progress indication originated (user, local/remote public
-         * or private network, transit, local interface, international, beyond
-         * interworking, other).
-         *
-         * @public
-         * @readonly
-         */
-        readonly progressLocation: ProgressIndicator_progressLocation,
-        /**
-         * @summary `progressDescription`.
-         * @description
-         *
-         * ISDN progress (ETSI ETS 300 182:1993), QSIG (ECMA-143), or other.
-         *
-         * @public
-         * @readonly
-         */
-        readonly progressDescription: ProgressIndicator_progressDescription
-    ) {}
+        progressLocation: ProgressIndicator_progressLocation,
+        progressDescription: ProgressIndicator_progressDescription
+    ) {
+        this.progressLocation = progressLocation;
+        this.progressDescription = progressDescription;
+    }
 
     /**
      * @summary Restructures an object into a ProgressIndicator
@@ -118,13 +124,13 @@ class ProgressIndicator {
          * @static
          */
 
-    public static _enum_for_progressLocation = _enum_for_ProgressIndicator_progressLocation;        /**
+    public static _enum_for_progressLocation: typeof _enum_for_ProgressIndicator_progressLocation = _enum_for_ProgressIndicator_progressLocation;        /**
          * @summary The enum used as the type of the component `progressDescription`
          * @public
          * @static
          */
 
-    public static _enum_for_progressDescription = _enum_for_ProgressIndicator_progressDescription;
+    public static _enum_for_progressDescription: typeof _enum_for_ProgressIndicator_progressDescription = _enum_for_ProgressIndicator_progressDescription;
 }
 
 /**

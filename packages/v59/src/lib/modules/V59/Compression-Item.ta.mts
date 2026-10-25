@@ -1,8 +1,8 @@
 /* eslint-disable */
 import {
-    OPTIONAL,
-    INTEGER,
-    ASN1Element as _Element,
+    type OPTIONAL,
+    type INTEGER,
+    type ASN1Element as _Element,
     ASN1TagClass as _TagClass,
     ASN1Construction as _Construction,
     ASN1UniversalType as _UniversalType,
@@ -13,7 +13,7 @@ import {
 import * as $ from "@wildboar/asn1/functional";
 import { Compression_Item_compressionNegotiationResult, _enum_for_Compression_Item_compressionNegotiationResult, _decode_Compression_Item_compressionNegotiationResult, _encode_Compression_Item_compressionNegotiationResult } from "../V59/Compression-Item-compressionNegotiationResult.ta.mjs";
 
-import { Capabilities, _decode_Capabilities, _encode_Capabilities } from "../V59/Capabilities.ta.mjs";
+import { type Capabilities, _decode_Capabilities, _encode_Capabilities } from "../V59/Capabilities.ta.mjs";
 
 import { Compression_Item_v42bisCompressionActive, _enum_for_Compression_Item_v42bisCompressionActive, _decode_Compression_Item_v42bisCompressionActive, _encode_Compression_Item_v42bisCompressionActive } from "../V59/Compression-Item-v42bisCompressionActive.ta.mjs";
 
@@ -62,7 +62,7 @@ class Compression_Item {
      * @public
      * @readonly
      */
-    readonly compressionNegotiationResult: Compression_Item_compressionNegotiationResult;
+    public readonly compressionNegotiationResult: Compression_Item_compressionNegotiationResult;
     /**
      * @summary `modeV42B`.
      * @description
@@ -73,7 +73,7 @@ class Compression_Item {
      * @public
      * @readonly
      */
-    readonly modeV42B: Capabilities;
+    public readonly modeV42B: Capabilities;
     /**
      * @summary `v42bisCompressionActive`.
      * @description
@@ -83,7 +83,7 @@ class Compression_Item {
      * @public
      * @readonly
      */
-    readonly v42bisCompressionActive: Compression_Item_v42bisCompressionActive;
+    public readonly v42bisCompressionActive: Compression_Item_v42bisCompressionActive;
     /**
      * @summary `v42bisDictionarySize`.
      * @description
@@ -93,7 +93,7 @@ class Compression_Item {
      * @public
      * @readonly
      */
-    readonly v42bisDictionarySize: OPTIONAL<INTEGER>;
+    public readonly v42bisDictionarySize: OPTIONAL<INTEGER>;
     /**
      * @summary `v42bisStringLength`.
      * @description
@@ -103,7 +103,7 @@ class Compression_Item {
      * @public
      * @readonly
      */
-    readonly v42bisStringLength: OPTIONAL<INTEGER>;
+    public readonly v42bisStringLength: OPTIONAL<INTEGER>;
     /**
      * @summary `modeV44`.
      * @description
@@ -114,7 +114,7 @@ class Compression_Item {
      * @public
      * @readonly
      */
-    readonly modeV44: Capabilities;
+    public readonly modeV44: Capabilities;
     /**
      * @summary `v44CompressionActive`.
      * @description
@@ -124,7 +124,7 @@ class Compression_Item {
      * @public
      * @readonly
      */
-    readonly v44CompressionActive: Compression_Item_v44CompressionActive;
+    public readonly v44CompressionActive: Compression_Item_v44CompressionActive;
     /**
      * @summary `v44EncoderDictionarySize`.
      * @description
@@ -134,7 +134,7 @@ class Compression_Item {
      * @public
      * @readonly
      */
-    readonly v44EncoderDictionarySize?: OPTIONAL<INTEGER>;
+    public readonly v44EncoderDictionarySize?: OPTIONAL<INTEGER>;
     /**
      * @summary `v44EncoderHistorySize`.
      * @description
@@ -144,7 +144,7 @@ class Compression_Item {
      * @public
      * @readonly
      */
-    readonly v44EncoderHistorySize?: OPTIONAL<INTEGER>;
+    public readonly v44EncoderHistorySize?: OPTIONAL<INTEGER>;
     /**
      * @summary `v44EncoderStringLength`.
      * @description
@@ -154,7 +154,7 @@ class Compression_Item {
      * @public
      * @readonly
      */
-    readonly v44EncoderStringLength?: OPTIONAL<INTEGER>;
+    public readonly v44EncoderStringLength?: OPTIONAL<INTEGER>;
     /**
      * @summary `v44DecoderDictionarySize`.
      * @description
@@ -164,7 +164,7 @@ class Compression_Item {
      * @public
      * @readonly
      */
-    readonly v44DecoderDictionarySize?: OPTIONAL<INTEGER>;
+    public readonly v44DecoderDictionarySize?: OPTIONAL<INTEGER>;
     /**
      * @summary `v44DecoderHistorySize`.
      * @description
@@ -174,7 +174,7 @@ class Compression_Item {
      * @public
      * @readonly
      */
-    readonly v44DecoderHistorySize?: OPTIONAL<INTEGER>;
+    public readonly v44DecoderHistorySize?: OPTIONAL<INTEGER>;
     /**
      * @summary `v44DecoderStringLength`.
      * @description
@@ -184,13 +184,13 @@ class Compression_Item {
      * @public
      * @readonly
      */
-    readonly v44DecoderStringLength?: OPTIONAL<INTEGER>;
+    public readonly v44DecoderStringLength?: OPTIONAL<INTEGER>;
     /**
      * @summary Extensions that are not recognized.
      * @public
      * @readonly
      */
-    readonly _unrecognizedExtensionsList: _Element[];
+    public readonly _unrecognizedExtensionsList: _Element[];
 
     constructor (
         compressionNegotiationResult: Compression_Item_compressionNegotiationResult,
@@ -300,19 +300,19 @@ class Compression_Item {
          * @static
          */
 
-    public static _enum_for_compressionNegotiationResult = _enum_for_Compression_Item_compressionNegotiationResult;        /**
+    public static _enum_for_compressionNegotiationResult: typeof _enum_for_Compression_Item_compressionNegotiationResult = _enum_for_Compression_Item_compressionNegotiationResult;        /**
          * @summary The enum used as the type of the component `v42bisCompressionActive`
          * @public
          * @static
          */
 
-    public static _enum_for_v42bisCompressionActive = _enum_for_Compression_Item_v42bisCompressionActive;        /**
+    public static _enum_for_v42bisCompressionActive: typeof _enum_for_Compression_Item_v42bisCompressionActive = _enum_for_Compression_Item_v42bisCompressionActive;        /**
          * @summary The enum used as the type of the component `v44CompressionActive`
          * @public
          * @static
          */
 
-    public static _enum_for_v44CompressionActive = _enum_for_Compression_Item_v44CompressionActive;
+    public static _enum_for_v44CompressionActive: typeof _enum_for_Compression_Item_v44CompressionActive = _enum_for_Compression_Item_v44CompressionActive;
 }
 
 /**

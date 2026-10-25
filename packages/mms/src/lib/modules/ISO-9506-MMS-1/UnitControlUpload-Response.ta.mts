@@ -1,7 +1,7 @@
 /* eslint-disable */
 import {
-    OPTIONAL,
-    ASN1Element as _Element,
+    type OPTIONAL,
+    type ASN1Element as _Element,
     ASN1TagClass as _TagClass,
     ASN1Construction as _Construction,
     ASN1UniversalType as _UniversalType,
@@ -11,8 +11,8 @@ import {
     ASN1ConstructionError as _ConstructionError,
 } from "@wildboar/asn1";
 import * as $ from "@wildboar/asn1/functional";
-import { ControlElement, _decode_ControlElement, _encode_ControlElement } from "../ISO-9506-MMS-1/ControlElement.ta.mjs";
-import { UnitControlUpload_Response_nextElement, _decode_UnitControlUpload_Response_nextElement, _encode_UnitControlUpload_Response_nextElement } from "../ISO-9506-MMS-1/UnitControlUpload-Response-nextElement.ta.mjs";
+import { type ControlElement, _decode_ControlElement, _encode_ControlElement } from "../ISO-9506-MMS-1/ControlElement.ta.mjs";
+import { type UnitControlUpload_Response_nextElement, _decode_UnitControlUpload_Response_nextElement, _encode_UnitControlUpload_Response_nextElement } from "../ISO-9506-MMS-1/UnitControlUpload-Response-nextElement.ta.mjs";
 
 
 /**
@@ -38,30 +38,36 @@ import { UnitControlUpload_Response_nextElement, _decode_UnitControlUpload_Respo
  */
 export
 class UnitControlUpload_Response {
+    /**
+     * @summary `controlElements`.
+     * @description
+     *
+     * Domain/PI records; each PI definition includes
+     * `&programInvocationState`. ISO 9506-1:2003 §13.5.1.2.1.
+     *
+     * @public
+     * @readonly
+     */
+    public readonly controlElements: ControlElement[];
+    /**
+     * @summary `nextElement`.
+     * @description
+     *
+     * First unsent element for a follow-up request. Absent: this response
+     * finished the Unit Control. ISO 9506-1:2003 §13.5.1.2.2.
+     *
+     * @public
+     * @readonly
+     */
+    public readonly nextElement?: OPTIONAL<UnitControlUpload_Response_nextElement>;
+
     constructor (
-        /**
-         * @summary `controlElements`.
-         * @description
-         *
-         * Domain/PI records; each PI definition includes
-         * `&programInvocationState`. ISO 9506-1:2003 §13.5.1.2.1.
-         *
-         * @public
-         * @readonly
-         */
-        readonly controlElements: ControlElement[],
-        /**
-         * @summary `nextElement`.
-         * @description
-         *
-         * First unsent element for a follow-up request. Absent: this response
-         * finished the Unit Control. ISO 9506-1:2003 §13.5.1.2.2.
-         *
-         * @public
-         * @readonly
-         */
-        readonly nextElement?: OPTIONAL<UnitControlUpload_Response_nextElement>
-    ) {}
+        controlElements: ControlElement[],
+        nextElement?: OPTIONAL<UnitControlUpload_Response_nextElement>
+    ) {
+        this.controlElements = controlElements;
+        this.nextElement = nextElement;
+    }
 
     /**
      * @summary Restructures an object into a UnitControlUpload_Response

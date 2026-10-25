@@ -1,7 +1,7 @@
 /* eslint-disable */
 import {
-    INTEGER,
-    ASN1Element as _Element,
+    type INTEGER,
+    type ASN1Element as _Element,
     ASN1TagClass as _TagClass,
     ASN1Construction as _Construction,
     ASN1UniversalType as _UniversalType,
@@ -31,7 +31,7 @@ export type CanNotClose = INTEGER;
  * @constant
  * @type {number}
  */
-export const CanNotClose_alreadyCleared: CanNotClose = 0; /* LONG_NAMED_INTEGER_VALUE */
+export const CanNotClose_alreadyCleared: 0 = 0 satisfies CanNotClose; /* LONG_NAMED_INTEGER_VALUE */
 
 
 /**
@@ -39,17 +39,17 @@ export const CanNotClose_alreadyCleared: CanNotClose = 0; /* LONG_NAMED_INTEGER_
  * @constant
  * @type {number}
  */
-export const alreadyCleared: CanNotClose = CanNotClose_alreadyCleared; /* SHORT_NAMED_INTEGER_VALUE */
+export const alreadyCleared: 0 = CanNotClose_alreadyCleared; /* SHORT_NAMED_INTEGER_VALUE */
 
 
 
 
-export const _decode_CanNotClose = $._decodeInteger;
+export const _decode_CanNotClose: $.ASN1Decoder<INTEGER> = $._decodeInteger;
 
 
 
 
-export const _encode_CanNotClose = $._encodeInteger;
+export const _encode_CanNotClose: $.ASN1Encoder<INTEGER> = $._encodeInteger;
 
 
 /* eslint-enable */

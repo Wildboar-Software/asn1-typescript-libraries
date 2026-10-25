@@ -1,11 +1,11 @@
 /* eslint-disable */
 import {
     ASN1ConstructionError as _ConstructionError,
-    ASN1Element as _Element,
+    type ASN1Element as _Element,
     ASN1TagClass as _TagClass
 } from "@wildboar/asn1";
 import * as $ from "@wildboar/asn1/functional";
-import { _decode_ReturnFromFallbackResponse_returnFromFallbackResult, _encode_ReturnFromFallbackResponse_returnFromFallbackResult, ReturnFromFallbackResponse_returnFromFallbackResult } from "../SGP32Definitions/ReturnFromFallbackResponse-returnFromFallbackResult.ta.mjs";
+import { _decode_ReturnFromFallbackResponse_returnFromFallbackResult, _encode_ReturnFromFallbackResponse_returnFromFallbackResult, type ReturnFromFallbackResponse_returnFromFallbackResult } from "../SGP32Definitions/ReturnFromFallbackResponse-returnFromFallbackResult.ta.mjs";
 
 
 /**
@@ -35,17 +35,21 @@ import { _decode_ReturnFromFallbackResponse_returnFromFallbackResult, _encode_Re
  */
 export
 class ReturnFromFallbackResponse {
+    /**
+     * @summary `returnFromFallbackResult`.
+     * @description
+     * ok, catBusy, fallbackNotAvailable, commandError, or undefinedError, as
+     * defined for ES10b.ReturnFromFallback. SGP.32 v1.2, section 5.9.21.
+     * @public
+     * @readonly
+     */
+    public readonly returnFromFallbackResult: ReturnFromFallbackResponse_returnFromFallbackResult;
+
     constructor (
-        /**
-         * @summary `returnFromFallbackResult`.
-         * @description
-         * ok, catBusy, fallbackNotAvailable, commandError, or undefinedError, as
-         * defined for ES10b.ReturnFromFallback. SGP.32 v1.2, section 5.9.21.
-         * @public
-         * @readonly
-         */
-        readonly returnFromFallbackResult: ReturnFromFallbackResponse_returnFromFallbackResult
-    ) {}
+        returnFromFallbackResult: ReturnFromFallbackResponse_returnFromFallbackResult
+    ) {
+        this.returnFromFallbackResult = returnFromFallbackResult;
+    }
 
     /**
      * @summary Restructures an object into a ReturnFromFallbackResponse

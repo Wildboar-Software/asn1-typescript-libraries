@@ -2,13 +2,13 @@
 
 import * as $ from "@wildboar/asn1/functional";
 import {
-    SEQUENCE,
-    SET,
-    ASN1Element as _Element,
+    type SEQUENCE,
+    type SET,
+    type ASN1Element as _Element,
     ASN1TagClass as _TagClass,
     ASN1ConstructionError as _ConstructionError
 } from "@wildboar/asn1";
-import { MonitorCrossRefID, _decode_MonitorCrossRefID, _encode_MonitorCrossRefID } from "../CSTA-status-reporting/MonitorCrossRefID.ta.mjs";
+import { type MonitorCrossRefID, _decode_MonitorCrossRefID, _encode_MonitorCrossRefID } from "../CSTA-status-reporting/MonitorCrossRefID.ta.mjs";
 
 import { DeviceID, _decode_DeviceID, _encode_DeviceID } from "../CSTA-device-identifiers/DeviceID.ta.mjs";
 
@@ -35,29 +35,35 @@ import { DeviceID, _decode_DeviceID, _encode_DeviceID } from "../CSTA-device-ide
  */
 export
 class MonitorListEntry {
+    /**
+     * @summary `monitorCrossRefID`.
+     * @description
+     *
+     * Cross-reference assigned when the monitor was created. ECMA-269
+     * §15.1.5.
+     *
+     * @public
+     * @readonly
+     */
+    public readonly monitorCrossRefID: MonitorCrossRefID;
+    /**
+     * @summary `monitorObject`.
+     * @description
+     *
+     * Device that is the monitor object. ECMA-269 §15.1.5.
+     *
+     * @public
+     * @readonly
+     */
+    public readonly monitorObject: DeviceID;
+
     constructor (
-        /**
-         * @summary `monitorCrossRefID`.
-         * @description
-         *
-         * Cross-reference assigned when the monitor was created. ECMA-269
-         * §15.1.5.
-         *
-         * @public
-         * @readonly
-         */
-        readonly monitorCrossRefID: MonitorCrossRefID,
-        /**
-         * @summary `monitorObject`.
-         * @description
-         *
-         * Device that is the monitor object. ECMA-269 §15.1.5.
-         *
-         * @public
-         * @readonly
-         */
-        readonly monitorObject: DeviceID
-    ) {}
+        monitorCrossRefID: MonitorCrossRefID,
+        monitorObject: DeviceID
+    ) {
+        this.monitorCrossRefID = monitorCrossRefID;
+        this.monitorObject = monitorObject;
+    }
 
     /**
      * @summary Restructures an object into a MonitorListEntry

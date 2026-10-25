@@ -1,7 +1,7 @@
 /* eslint-disable */
 import {
-    INTEGER,
-    ASN1Element as _Element,
+    type INTEGER,
+    type ASN1Element as _Element,
     ASN1TagClass as _TagClass,
     ASN1Construction as _Construction,
     ASN1UniversalType as _UniversalType,
@@ -45,7 +45,7 @@ class Pentanomial {
      * @public
      * @readonly
      */
-    readonly k1: INTEGER;
+    public readonly k1: INTEGER;
     /**
      * @summary `k2`.
      * @description
@@ -55,7 +55,7 @@ class Pentanomial {
      * @public
      * @readonly
      */
-    readonly k2: INTEGER;
+    public readonly k2: INTEGER;
     /**
      * @summary `k3`.
      * @description
@@ -65,7 +65,7 @@ class Pentanomial {
      * @public
      * @readonly
      */
-    readonly k3: INTEGER;
+    public readonly k3: INTEGER;
 
     constructor (
         k1: INTEGER,

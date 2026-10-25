@@ -1,15 +1,15 @@
 /* eslint-disable */
 import {
-    OPTIONAL,
-    ASN1Element as _Element,
+    type OPTIONAL,
+    type ASN1Element as _Element,
     ASN1TagClass as _TagClass
 } from "@wildboar/asn1";
 import * as $ from "@wildboar/asn1/functional";
-import { PartyNumber, _decode_PartyNumber, _encode_PartyNumber } from "../Addressing-Data-Elements-asn1-97/PartyNumber.ta.mjs";
+import { type PartyNumber, _decode_PartyNumber, _encode_PartyNumber } from "../Addressing-Data-Elements-asn1-97/PartyNumber.ta.mjs";
 // export { PartyNumber, _decode_PartyNumber, _encode_PartyNumber } from "../Addressing-Data-Elements-asn1-97/PartyNumber.ta.mjs";
-import { CanCompute, _decode_CanCompute, _encode_CanCompute } from "../CT-Authentication-Operations/CanCompute.ta.mjs";
+import { type CanCompute, _decode_CanCompute, _encode_CanCompute } from "../CT-Authentication-Operations/CanCompute.ta.mjs";
 // export { CanCompute, _decode_CanCompute, _encode_CanCompute } from "../CT-Authentication-Operations/CanCompute.ta.mjs";
-import { DummyExtension, _decode_DummyExtension, _encode_DummyExtension } from "../CT-Authentication-Operations/DummyExtension.ta.mjs";
+import { type DummyExtension, _decode_DummyExtension, _encode_DummyExtension } from "../CT-Authentication-Operations/DummyExtension.ta.mjs";
 // export { DummyExtension, _decode_DummyExtension, _encode_DummyExtension } from "../CT-Authentication-Operations/DummyExtension.ta.mjs";
 
 
@@ -182,7 +182,7 @@ let _cached_encoder_for_CtatParamArg: $.ASN1Encoder<CtatParamArg> | null = null;
  */
 export
 function _encode_CtatParamArg (value: CtatParamArg, elGetter: $.ASN1Encoder<any>): _Element {
-    if (!_cached_encoder_for_CtatParamArg) { _cached_encoder_for_CtatParamArg = function (value: CtatParamArg, elGetter: $.ASN1Encoder<CtatParamArg>): _Element {
+    if (!_cached_encoder_for_CtatParamArg) { _cached_encoder_for_CtatParamArg = function (value: CtatParamArg): _Element {
     const _components: _Element[] = [];
     _components.push(/* REQUIRED   */ _encode_PartyNumber(value.pisnNumber, $.BER));
     if (value.canCompute !== undefined) {

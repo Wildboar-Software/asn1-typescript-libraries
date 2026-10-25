@@ -1,6 +1,6 @@
 /* eslint-disable */
 import {
-  OPTIONAL,
+  type OPTIONAL,
   ASN1Element as _Element,
   ASN1TagClass as _TagClass,
   ASN1Construction as _Construction,
@@ -12,7 +12,7 @@ import {
 } from '@wildboar/asn1';
 import * as $ from '@wildboar/asn1/functional';
 import {
-  Access_Request,
+  type Access_Request,
   _decode_Access_Request,
   _encode_Access_Request,
 } from '../ISO8571-FTAM/Access-Request.ta.mjs';
@@ -22,7 +22,7 @@ import {
   _encode_Concurrency_Access,
 } from '../ISO8571-FTAM/Concurrency-Access.ta.mjs';
 import {
-  User_Identity,
+  type User_Identity,
   _decode_User_Identity,
   _encode_User_Identity,
 } from '../ISO8571-FTAM/User-Identity.ta.mjs';
@@ -32,7 +32,7 @@ import {
   _encode_Access_Passwords,
 } from '../ISO8571-FTAM/Access-Passwords.ta.mjs';
 import {
-  Application_Entity_Title,
+  type Application_Entity_Title,
   _decode_Application_Entity_Title,
   _encode_Application_Entity_Title,
 } from '../ISO8571-FTAM/Application-Entity-Title.ta.mjs';
@@ -74,7 +74,7 @@ export class Access_Control_Element {
    * @public
    * @readonly
    */
-  readonly action_list: Access_Request;
+  public readonly action_list: Access_Request;
   /**
    * @summary `concurrency_access`.
    * @description
@@ -87,7 +87,7 @@ export class Access_Control_Element {
    * @public
    * @readonly
    */
-  readonly concurrency_access?: OPTIONAL<Concurrency_Access>;
+  public readonly concurrency_access?: OPTIONAL<Concurrency_Access>;
   /**
    * @summary `identity`.
    * @description
@@ -99,7 +99,7 @@ export class Access_Control_Element {
    * @public
    * @readonly
    */
-  readonly identity?: OPTIONAL<User_Identity>;
+  public readonly identity?: OPTIONAL<User_Identity>;
   /**
    * @summary `passwords`.
    * @description
@@ -111,7 +111,7 @@ export class Access_Control_Element {
    * @public
    * @readonly
    */
-  readonly passwords?: OPTIONAL<Access_Passwords>;
+  public readonly passwords?: OPTIONAL<Access_Passwords>;
   /**
    * @summary `location`.
    * @description
@@ -122,7 +122,7 @@ export class Access_Control_Element {
    * @public
    * @readonly
    */
-  readonly location?: OPTIONAL<Application_Entity_Title>;
+  public readonly location?: OPTIONAL<Application_Entity_Title>;
 
   constructor(
     action_list: Access_Request,

@@ -4,7 +4,7 @@ import {
     userApplications /* IMPORTED_SHORT_ENUMERATION_ITEM */,
 } from "../InformationFramework/AttributeUsage.ta.mjs";
 import {
-    CountryCode3n,
+    type CountryCode3n,
     _decode_CountryCode3n,
     _encode_CountryCode3n,
 } from "../SelectedAttributeTypes/CountryCode3n.ta.mjs";

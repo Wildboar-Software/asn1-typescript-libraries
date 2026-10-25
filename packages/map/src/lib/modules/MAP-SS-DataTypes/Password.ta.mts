@@ -1,8 +1,8 @@
 /* eslint-disable */
 import {
-    ASN1Element as _Element,
+    type ASN1Element as _Element,
     ASN1SizeError,
-    NumericString
+    type NumericString
 } from "@wildboar/asn1";
 import * as $ from "@wildboar/asn1/functional";
 
@@ -47,7 +47,7 @@ export const _decode_Password = (el: _Element): Password => {
  * @param elGetter A function that can be used to get new ASN.1 elements.
  * @returns {_Element} The Password, encoded as an ASN.1 Element.
  */
-export const _encode_Password = $._encodeNumericString;
+export const _encode_Password: $.ASN1Encoder<string> = $._encodeNumericString;
 
 
 /* eslint-enable */

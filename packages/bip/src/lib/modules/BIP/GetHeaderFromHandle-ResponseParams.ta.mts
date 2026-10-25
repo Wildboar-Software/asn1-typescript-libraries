@@ -44,7 +44,7 @@ export class GetHeaderFromHandle_ResponseParams {
    * @public
    * @readonly
    */
-  readonly header: BioAPI_BIR_HEADER;
+  public readonly header: BioAPI_BIR_HEADER;
 
   constructor(
     header: BioAPI_BIR_HEADER

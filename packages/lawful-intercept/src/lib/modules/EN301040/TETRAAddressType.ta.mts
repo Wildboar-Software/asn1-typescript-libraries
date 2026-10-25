@@ -1,15 +1,15 @@
 /* eslint-disable */
 import {
-    BIT_STRING,
-    NumericString,
-    ASN1Element as _Element,
+    type BIT_STRING,
+    type NumericString,
+    type ASN1Element as _Element,
     ASN1TagClass as _TagClass,
     ASN1SizeError
 } from "@wildboar/asn1";
 import * as $ from "@wildboar/asn1/functional";
 import { TSIType, _decode_TSIType, _encode_TSIType } from "../EN301040/TSIType.ta.mjs";
 // export { TSIType, _decode_TSIType, _encode_TSIType } from "../EN301040/TSIType.ta.mjs";
-import { TEIType, _decode_TEIType, _encode_TEIType } from "../EN301040/TEIType.ta.mjs";
+import { type TEIType, _decode_TEIType, _encode_TEIType } from "../EN301040/TEIType.ta.mjs";
 // export { TEIType, _decode_TEIType, _encode_TEIType } from "../EN301040/TEIType.ta.mjs";
 
 

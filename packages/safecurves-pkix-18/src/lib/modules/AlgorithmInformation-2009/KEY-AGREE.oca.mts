@@ -1,7 +1,7 @@
 /* eslint-disable */
 import {
-    OBJECT_IDENTIFIER,
-    ASN1Element as _Element,
+    type OBJECT_IDENTIFIER,
+    type ASN1Element as _Element,
     ASN1TagClass as _TagClass,
     ASN1Construction as _Construction,
     ASN1UniversalType as _UniversalType,
@@ -11,7 +11,7 @@ import {
     ASN1ConstructionError as _ConstructionError,
 } from "@wildboar/asn1";
 import * as $ from "@wildboar/asn1/functional";
-import { ParamOptions, _enum_for_ParamOptions, _decode_ParamOptions, _encode_ParamOptions } from "../AlgorithmInformation-2009/ParamOptions.ta.mjs";
+import { type ParamOptions, _enum_for_ParamOptions, _decode_ParamOptions, _encode_ParamOptions } from "../AlgorithmInformation-2009/ParamOptions.ta.mjs";
 import { type PUBLIC_KEY } from "../AlgorithmInformation-2009/PUBLIC-KEY.oca.mjs";
 import { type SMIME_CAPS } from "../AlgorithmInformation-2009/SMIME-CAPS.oca.mjs";
 
@@ -29,10 +29,10 @@ import { type SMIME_CAPS } from "../AlgorithmInformation-2009/SMIME-CAPS.oca.mjs
  * ```asn1
  * KEY-AGREE ::= CLASS {
  * &id                OBJECT IDENTIFIER UNIQUE,
- * &Params        OPTIONAL,
+ * &Params        type OPTIONAL,
  * &paramPresence    ParamOptions DEFAULT absent,
  * &PublicKeySet    PUBLIC-KEY OPTIONAL,
- * &Ukm            OPTIONAL,
+ * &Ukm            type OPTIONAL,
  * &ukmPresence    ParamOptions DEFAULT absent,
  * &smimeCaps        SMIME-CAPS OPTIONAL
  * } WITH SYNTAX {

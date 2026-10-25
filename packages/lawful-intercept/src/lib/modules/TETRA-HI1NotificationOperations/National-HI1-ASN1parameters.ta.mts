@@ -1,10 +1,10 @@
 /* eslint-disable */
 import {
-    ASN1Element as _Element,
+    type ASN1Element as _Element,
     ASN1TagClass as _TagClass,
-    OBJECT_IDENTIFIER,
-    OPTIONAL,
-    PrintableString,
+    type OBJECT_IDENTIFIER,
+    type OPTIONAL,
+    type PrintableString,
     ASN1Error,
     ASN1SizeError
 } from "@wildboar/asn1";

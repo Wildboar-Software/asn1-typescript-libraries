@@ -1,6 +1,6 @@
 /* eslint-disable */
 import {
-    ASN1Element as _Element,
+    type ASN1Element as _Element,
     ASN1TagClass as _TagClass,
     ASN1Construction as _Construction,
     ASN1UniversalType as _UniversalType,
@@ -10,7 +10,7 @@ import {
     ASN1ConstructionError as _ConstructionError,
 } from "@wildboar/asn1";
 import * as $ from "@wildboar/asn1/functional";
-import { Identifier, _decode_Identifier, _encode_Identifier } from "../ISO-9506-MMS-1/Identifier.ta.mjs";
+import { type Identifier, _decode_Identifier, _encode_Identifier } from "../ISO-9506-MMS-1/Identifier.ta.mjs";
 
 
 /**
@@ -34,41 +34,49 @@ import { Identifier, _decode_Identifier, _encode_Identifier } from "../ISO-9506-
  */
 export
 class RemoveFromUnitControl_Request {
+    /**
+     * @summary `unitControl`.
+     * @description
+     *
+     * Unit Control whose constituent lists are reduced. ISO 9506-1:2003
+     * §13.10.1.1.1.
+     *
+     * @public
+     * @readonly
+     */
+    public readonly unitControl: Identifier;
+    /**
+     * @summary `domains`.
+     * @description
+     *
+     * Zero or more Domains to remove from `&Domains`. ISO 9506-1:2003
+     * §13.10.1.1.2.
+     *
+     * @public
+     * @readonly
+     */
+    public readonly domains: Identifier[];
+    /**
+     * @summary `programInvocations`.
+     * @description
+     *
+     * Zero or more Program Invocations to remove from
+     * `&ProgramInvocations`. ISO 9506-1:2003 §13.10.1.1.3.
+     *
+     * @public
+     * @readonly
+     */
+    public readonly programInvocations: Identifier[];
+
     constructor (
-        /**
-         * @summary `unitControl`.
-         * @description
-         *
-         * Unit Control whose constituent lists are reduced. ISO 9506-1:2003
-         * §13.10.1.1.1.
-         *
-         * @public
-         * @readonly
-         */
-        readonly unitControl: Identifier,
-        /**
-         * @summary `domains`.
-         * @description
-         *
-         * Zero or more Domains to remove from `&Domains`. ISO 9506-1:2003
-         * §13.10.1.1.2.
-         *
-         * @public
-         * @readonly
-         */
-        readonly domains: Identifier[],
-        /**
-         * @summary `programInvocations`.
-         * @description
-         *
-         * Zero or more Program Invocations to remove from
-         * `&ProgramInvocations`. ISO 9506-1:2003 §13.10.1.1.3.
-         *
-         * @public
-         * @readonly
-         */
-        readonly programInvocations: Identifier[]
-    ) {}
+        unitControl: Identifier,
+        domains: Identifier[],
+        programInvocations: Identifier[]
+    ) {
+        this.unitControl = unitControl;
+        this.domains = domains;
+        this.programInvocations = programInvocations;
+    }
 
     /**
      * @summary Restructures an object into a RemoveFromUnitControl_Request

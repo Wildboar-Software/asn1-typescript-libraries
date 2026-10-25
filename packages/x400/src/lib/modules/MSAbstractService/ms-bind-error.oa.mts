@@ -1,6 +1,6 @@
 /* eslint-disable */
 import {
-    ASN1Element as _Element,
+    type ASN1Element as _Element,
     ASN1TagClass as _TagClass,
     ASN1Construction as _Construction,
     ASN1UniversalType as _UniversalType,
@@ -18,7 +18,7 @@ import {
     _encode_Code,
 } from '@wildboar/rose';
 import {
-    ms_bind_error_ParameterType,
+    type ms_bind_error_ParameterType,
     _decode_ms_bind_error_ParameterType,
     _encode_ms_bind_error_ParameterType,
 } from '../MSAbstractService/ms-bind-error-ParameterType.ta.mjs';
@@ -41,7 +41,7 @@ import { type ABSTRACT_ERROR } from '../MTSAbstractService/ABSTRACT-ERROR.oca.mj
  *               SET {bind-problem               [0]  BindProblem,
  *                    supplementary-information
  *                      [1]  GeneralString(SIZE (1..ub-supplementary-info-length))
- *                        OPTIONAL,
+ *                        type OPTIONAL,
  *                    bind-extension-errors
  *                      [2]  SET SIZE (1..ub-extensions) OF OBJECT IDENTIFIER
  *                        OPTIONAL}}

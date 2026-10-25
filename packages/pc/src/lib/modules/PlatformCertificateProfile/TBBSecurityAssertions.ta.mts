@@ -1,9 +1,9 @@
 /* eslint-disable */
 import {
-    OPTIONAL,
-    BOOLEAN,
-    IA5String,
-    ASN1Element as _Element,
+    type OPTIONAL,
+    type BOOLEAN,
+    type IA5String,
+    type ASN1Element as _Element,
     ASN1TagClass as _TagClass,
     ASN1Construction as _Construction,
     ASN1UniversalType as _UniversalType,
@@ -17,7 +17,7 @@ import { CommonCriteriaMeasures, _decode_CommonCriteriaMeasures, _encode_CommonC
 import { FIPSLevel, _decode_FIPSLevel, _encode_FIPSLevel } from "../PlatformCertificateProfile/FIPSLevel.ta.mjs";
 import { MeasurementRootType, _enum_for_MeasurementRootType, _decode_MeasurementRootType, _encode_MeasurementRootType } from "../PlatformCertificateProfile/MeasurementRootType.ta.mjs";
 import {
-    Version,
+    type Version,
     _decode_Version,
     _encode_Version,
     v1,
@@ -53,75 +53,89 @@ import {
  */
 export
 class TBBSecurityAssertions {
+    /**
+     * @summary `version`.
+     * @description
+     *
+     * Assertion syntax version. Default `v1` (0). Later profile
+     * versions append fields and increase this value. §3.1.1.
+     *
+     * @public
+     * @readonly
+     */
+    public readonly version?: OPTIONAL<Version>;
+    /**
+     * @summary `ccInfo`.
+     * @description
+     *
+     * Common Criteria evaluation of the TBB. Profile and target
+     * may be given as an OID, a URI, or both. §3.1.1.
+     *
+     * @public
+     * @readonly
+     */
+    public readonly ccInfo?: OPTIONAL<CommonCriteriaMeasures>;
+    /**
+     * @summary `fipsLevel`.
+     * @description
+     *
+     * FIPS 140 evaluation of the TBB. §3.1.1.
+     *
+     * @public
+     * @readonly
+     */
+    public readonly fipsLevel?: OPTIONAL<FIPSLevel>;
+    /**
+     * @summary `rtmType`.
+     * @description
+     *
+     * Root of Trust for Measurement types implemented as part of
+     * the platform TBB. A static RTM is required; a dynamic RTM
+     * is optional. §3.1.1.
+     *
+     * @public
+     * @readonly
+     */
+    public readonly rtmType?: OPTIONAL<MeasurementRootType>;
+    /**
+     * @summary `iso9000Certified`.
+     * @description
+     *
+     * Default `FALSE`. The profile lists this field but does not
+     * define further semantics. §3.1.1.
+     *
+     * @public
+     * @readonly
+     */
+    public readonly iso9000Certified?: OPTIONAL<BOOLEAN>;
+    /**
+     * @summary `iso9000Uri`.
+     * @description
+     *
+     * URI related to ISO 9000. Bounded by `urimax`. The profile
+     * lists this field but does not define further semantics.
+     * §3.1.1.
+     *
+     * @public
+     * @readonly
+     */
+    public readonly iso9000Uri?: OPTIONAL<IA5String>;
+
     constructor (
-        /**
-         * @summary `version`.
-         * @description
-         *
-         * Assertion syntax version. Default `v1` (0). Later profile
-         * versions append fields and increase this value. §3.1.1.
-         *
-         * @public
-         * @readonly
-         */
-        readonly version?: OPTIONAL<Version>,
-        /**
-         * @summary `ccInfo`.
-         * @description
-         *
-         * Common Criteria evaluation of the TBB. Profile and target
-         * may be given as an OID, a URI, or both. §3.1.1.
-         *
-         * @public
-         * @readonly
-         */
-        readonly ccInfo?: OPTIONAL<CommonCriteriaMeasures>,
-        /**
-         * @summary `fipsLevel`.
-         * @description
-         *
-         * FIPS 140 evaluation of the TBB. §3.1.1.
-         *
-         * @public
-         * @readonly
-         */
-        readonly fipsLevel?: OPTIONAL<FIPSLevel>,
-        /**
-         * @summary `rtmType`.
-         * @description
-         *
-         * Root of Trust for Measurement types implemented as part of
-         * the platform TBB. A static RTM is required; a dynamic RTM
-         * is optional. §3.1.1.
-         *
-         * @public
-         * @readonly
-         */
-        readonly rtmType?: OPTIONAL<MeasurementRootType>,
-        /**
-         * @summary `iso9000Certified`.
-         * @description
-         *
-         * Default `FALSE`. The profile lists this field but does not
-         * define further semantics. §3.1.1.
-         *
-         * @public
-         * @readonly
-         */
-        readonly iso9000Certified?: OPTIONAL<BOOLEAN>,
-        /**
-         * @summary `iso9000Uri`.
-         * @description
-         *
-         * URI related to ISO 9000. Bounded by `urimax`. The profile
-         * lists this field but does not define further semantics.
-         * §3.1.1.
-         *
-         * @public
-         * @readonly
-         */
-        readonly iso9000Uri?: OPTIONAL<IA5String>
-    ) {}
+        version?: OPTIONAL<Version>,
+        ccInfo?: OPTIONAL<CommonCriteriaMeasures>,
+        fipsLevel?: OPTIONAL<FIPSLevel>,
+        rtmType?: OPTIONAL<MeasurementRootType>,
+        iso9000Certified?: OPTIONAL<BOOLEAN>,
+        iso9000Uri?: OPTIONAL<IA5String>
+    ) {
+        this.version = version;
+        this.ccInfo = ccInfo;
+        this.fipsLevel = fipsLevel;
+        this.rtmType = rtmType;
+        this.iso9000Certified = iso9000Certified;
+        this.iso9000Uri = iso9000Uri;
+    }
 
     /**
      * @summary Restructures an object into a TBBSecurityAssertions
@@ -158,7 +172,7 @@ class TBBSecurityAssertions {
      * @public
      * @static
      */
-    public static _enum_for_rtmType = _enum_for_MeasurementRootType;
+    public static _enum_for_rtmType: typeof _enum_for_MeasurementRootType = _enum_for_MeasurementRootType;
 }
 
 /**

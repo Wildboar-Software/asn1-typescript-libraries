@@ -1,7 +1,7 @@
 /* eslint-disable */
 import {
-    INTEGER,
-    ASN1Element as _Element,
+    type INTEGER,
+    type ASN1Element as _Element,
     ASN1TagClass as _TagClass,
     ASN1Construction as _Construction,
     ASN1UniversalType as _UniversalType,
@@ -29,8 +29,8 @@ import * as $ from "@wildboar/asn1/functional";
  */
 export
 type KeyReference = INTEGER;
-export const _decode_KeyReference = $._decodeInteger;
-export const _encode_KeyReference = $._encodeInteger;
+export const _decode_KeyReference: $.ASN1Decoder<INTEGER> = $._decodeInteger;
+export const _encode_KeyReference: $.ASN1Encoder<INTEGER> = $._encodeInteger;
 
 
 /* eslint-enable */

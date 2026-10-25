@@ -1,8 +1,8 @@
 /* eslint-disable */
 import {
-    OPTIONAL,
-    GeneralString,
-    ASN1Element as _Element,
+    type OPTIONAL,
+    type GeneralString,
+    type ASN1Element as _Element,
     ASN1TagClass as _TagClass,
     ASN1Construction as _Construction,
     ASN1UniversalType as _UniversalType,
@@ -13,7 +13,7 @@ import {
 } from '@wildboar/asn1';
 import * as $ from '@wildboar/asn1/functional';
 import {
-    MessageGroupName,
+    type MessageGroupName,
     _decode_MessageGroupName,
     _encode_MessageGroupName,
 } from '../MSAbstractService/MessageGroupName.ta.mjs';
@@ -35,20 +35,26 @@ import {
  *
  */
 export class MessageGroupNameAndDescriptor {
+    /**
+     * @summary `message_group_name`.
+     * @public
+     * @readonly
+     */
+    public readonly message_group_name: MessageGroupName;
+    /**
+     * @summary `message_group_descriptor`.
+     * @public
+     * @readonly
+     */
+    public readonly message_group_descriptor?: OPTIONAL<GeneralString>;
+
     constructor(
-        /**
-         * @summary `message_group_name`.
-         * @public
-         * @readonly
-         */
-        readonly message_group_name: MessageGroupName,
-        /**
-         * @summary `message_group_descriptor`.
-         * @public
-         * @readonly
-         */
-        readonly message_group_descriptor?: OPTIONAL<GeneralString>
-    ) {}
+        message_group_name: MessageGroupName,
+        message_group_descriptor?: OPTIONAL<GeneralString>
+    ) {
+        this.message_group_name = message_group_name;
+        this.message_group_descriptor = message_group_descriptor;
+    }
 
     /**
      * @summary Restructures an object into a MessageGroupNameAndDescriptor

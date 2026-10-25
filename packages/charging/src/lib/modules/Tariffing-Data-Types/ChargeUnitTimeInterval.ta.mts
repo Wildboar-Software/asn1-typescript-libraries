@@ -1,8 +1,8 @@
 /* eslint-disable */
 import {
-    ASN1Element as _Element,
+    type ASN1Element as _Element,
     ASN1SizeError,
-    OCTET_STRING
+    type OCTET_STRING
 } from "@wildboar/asn1";
 import * as $ from "@wildboar/asn1/functional";
 
@@ -44,7 +44,7 @@ export const _decode_ChargeUnitTimeInterval = (el: _Element): ChargeUnitTimeInte
     }
     return value;
 };
-export const _encode_ChargeUnitTimeInterval = $._encodeOctetString;
+export const _encode_ChargeUnitTimeInterval: $.ASN1Encoder<OCTET_STRING> = $._encodeOctetString;
 
 
 /* eslint-enable */

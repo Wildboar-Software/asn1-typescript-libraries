@@ -1,6 +1,6 @@
 /* eslint-disable */
 import {
-    OBJECT_IDENTIFIER,
+    type OBJECT_IDENTIFIER,
     ObjectIdentifier as _OID,
 } from "@wildboar/asn1";
 

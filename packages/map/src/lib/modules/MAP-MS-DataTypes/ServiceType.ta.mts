@@ -1,14 +1,14 @@
 /* eslint-disable */
 import {
-    OPTIONAL,
-    ASN1Element as _Element,
+    type OPTIONAL,
+    type ASN1Element as _Element,
     ASN1TagClass as _TagClass
 } from "@wildboar/asn1";
 import * as $ from "@wildboar/asn1/functional";
-import { LCSServiceTypeID, _decode_LCSServiceTypeID, _encode_LCSServiceTypeID } from "../MAP-CommonDataTypes/LCSServiceTypeID.ta.mjs";
+import { type LCSServiceTypeID, _decode_LCSServiceTypeID, _encode_LCSServiceTypeID } from "../MAP-CommonDataTypes/LCSServiceTypeID.ta.mjs";
 import { ExtensionContainer, _decode_ExtensionContainer, _encode_ExtensionContainer } from "../MAP-ExtensionDataTypes/ExtensionContainer.ta.mjs";
-import { GMLC_Restriction, _decode_GMLC_Restriction, _encode_GMLC_Restriction, _enum_for_GMLC_Restriction } from "../MAP-MS-DataTypes/GMLC-Restriction.ta.mjs";
-import { NotificationToMSUser, _decode_NotificationToMSUser, _encode_NotificationToMSUser, _enum_for_NotificationToMSUser } from "../MAP-MS-DataTypes/NotificationToMSUser.ta.mjs";
+import { type GMLC_Restriction, _decode_GMLC_Restriction, _encode_GMLC_Restriction, _enum_for_GMLC_Restriction } from "../MAP-MS-DataTypes/GMLC-Restriction.ta.mjs";
+import { type NotificationToMSUser, _decode_NotificationToMSUser, _encode_NotificationToMSUser, _enum_for_NotificationToMSUser } from "../MAP-MS-DataTypes/NotificationToMSUser.ta.mjs";
 
 
 /**
@@ -27,11 +27,11 @@ import { NotificationToMSUser, _decode_NotificationToMSUser, _encode_Notificatio
  * ```asn1
  * ServiceType ::= SEQUENCE {
  *     serviceTypeIdentity    LCSServiceTypeID,
- *     gmlc-Restriction    [0] GMLC-Restriction    OPTIONAL,
- *     notificationToMSUser    [1] NotificationToMSUser    OPTIONAL,
+ *     gmlc-Restriction    [0] GMLC-Restriction    type OPTIONAL,
+ *     notificationToMSUser    [1] NotificationToMSUser    type OPTIONAL,
  *     -- If notificationToMSUser is not received, the default value according to 
  *     -- 3GPP TS 23.271 shall be assumed.
- *     extensionContainer    [2] ExtensionContainer    OPTIONAL,
+ *     extensionContainer    [2] ExtensionContainer    type OPTIONAL,
  *     ... }
  * ```
  * 
@@ -39,57 +39,69 @@ import { NotificationToMSUser, _decode_NotificationToMSUser, _encode_Notificatio
  */
 export
 class ServiceType {
+    /**
+     * @summary `serviceTypeIdentity`.
+     * @description
+     *
+     * LCS Service Type of the positioning request (3GPP TS 22.071).
+     *
+     * (3GPP TS 29.002 V19.1.0 clause 7.6.11.15).
+     *
+     * @public
+     * @readonly
+     */
+    public readonly serviceTypeIdentity: LCSServiceTypeID;
+    /**
+     * @summary `gmlc_Restriction`.
+     * @description
+     *
+     * GMLC restriction for this service type.
+     *
+     * (3GPP TS 29.002 V19.1.0 clause 17.7.1).
+     *
+     * @public
+     * @readonly
+     */
+    public readonly gmlc_Restriction?: OPTIONAL<GMLC_Restriction>;
+    /**
+     * @summary `notificationToMSUser`.
+     * @description
+     *
+     * Privacy notification to the MS user. If omitted, the default in 3GPP
+     * TS 23.271 shall be assumed.
+     *
+     * (3GPP TS 29.002 V19.1.0 clause 17.7.1).
+     *
+     * @public
+     * @readonly
+     */
+    public readonly notificationToMSUser?: OPTIONAL<NotificationToMSUser>;
+    /**
+     * @summary `extensionContainer`.
+     * @public
+     * @readonly
+     */
+    public readonly extensionContainer?: OPTIONAL<ExtensionContainer>;
+    /**
+     * @summary Extensions that are not recognized.
+     * @public
+     * @readonly
+     */
+    public readonly _unrecognizedExtensionsList: _Element[];
+
     constructor (
-        /**
-         * @summary `serviceTypeIdentity`.
-         * @description
-         *
-         * LCS Service Type of the positioning request (3GPP TS 22.071).
-         *
-         * (3GPP TS 29.002 V19.1.0 clause 7.6.11.15).
-         *
-         * @public
-         * @readonly
-         */
-        readonly serviceTypeIdentity: LCSServiceTypeID,
-        /**
-         * @summary `gmlc_Restriction`.
-         * @description
-         *
-         * GMLC restriction for this service type.
-         *
-         * (3GPP TS 29.002 V19.1.0 clause 17.7.1).
-         *
-         * @public
-         * @readonly
-         */
-        readonly gmlc_Restriction?: OPTIONAL<GMLC_Restriction>,
-        /**
-         * @summary `notificationToMSUser`.
-         * @description
-         *
-         * Privacy notification to the MS user. If omitted, the default in 3GPP
-         * TS 23.271 shall be assumed.
-         *
-         * (3GPP TS 29.002 V19.1.0 clause 17.7.1).
-         *
-         * @public
-         * @readonly
-         */
-        readonly notificationToMSUser?: OPTIONAL<NotificationToMSUser>,
-        /**
-         * @summary `extensionContainer`.
-         * @public
-         * @readonly
-         */
-        readonly extensionContainer?: OPTIONAL<ExtensionContainer>,
-        /**
-         * @summary Extensions that are not recognized.
-         * @public
-         * @readonly
-         */
-        readonly _unrecognizedExtensionsList: _Element[] = []
-    ) {}
+        serviceTypeIdentity: LCSServiceTypeID,
+        gmlc_Restriction?: OPTIONAL<GMLC_Restriction>,
+        notificationToMSUser?: OPTIONAL<NotificationToMSUser>,
+        extensionContainer?: OPTIONAL<ExtensionContainer>,
+        _unrecognizedExtensionsList: _Element[] = []
+    ) {
+        this.serviceTypeIdentity = serviceTypeIdentity;
+        this.gmlc_Restriction = gmlc_Restriction;
+        this.notificationToMSUser = notificationToMSUser;
+        this.extensionContainer = extensionContainer;
+        this._unrecognizedExtensionsList = _unrecognizedExtensionsList;
+    }
 
     /**
      * @summary Restructures an object into a ServiceType
@@ -113,13 +125,13 @@ class ServiceType {
          * @static
          */
 
-    public static _enum_for_gmlc_Restriction = _enum_for_GMLC_Restriction;        /**
+    public static _enum_for_gmlc_Restriction: typeof _enum_for_GMLC_Restriction = _enum_for_GMLC_Restriction;        /**
          * @summary The enum used as the type of the component `notificationToMSUser`
          * @public
          * @static
          */
 
-    public static _enum_for_notificationToMSUser = _enum_for_NotificationToMSUser;
+    public static _enum_for_notificationToMSUser: typeof _enum_for_NotificationToMSUser = _enum_for_NotificationToMSUser;
 }
 
 /**

@@ -11,12 +11,12 @@ import {
 } from '@wildboar/asn1';
 import * as $ from '@wildboar/asn1/functional';
 import {
-  ObjectClass,
+  type ObjectClass,
   _decode_ObjectClass,
   _encode_ObjectClass,
 } from '../CMIP-1/ObjectClass.ta.mjs';
 import {
-    EventTypeId,
+    type EventTypeId,
     _decode_EventTypeId,
     _encode_EventTypeId,
 } from '../CMIP-1/EventTypeId.ta.mjs';
@@ -51,7 +51,7 @@ export class NoSuchEventType {
    * @public
    * @readonly
    */
-  readonly managedObjectClass: ObjectClass;
+  public readonly managedObjectClass: ObjectClass;
   /**
    * @summary `eventType`.
    * @description
@@ -61,13 +61,13 @@ export class NoSuchEventType {
    * @public
    * @readonly
    */
-  readonly eventType: EventTypeId;
+  public readonly eventType: EventTypeId;
   /**
    * @summary Extensions that are not recognized.
    * @public
    * @readonly
    */
-  readonly _unrecognizedExtensionsList: _Element[];
+  public readonly _unrecognizedExtensionsList: _Element[];
 
   constructor(
     managedObjectClass: ObjectClass,

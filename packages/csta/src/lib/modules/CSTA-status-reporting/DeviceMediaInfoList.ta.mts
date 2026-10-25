@@ -1,7 +1,7 @@
 /* eslint-disable */
 
 import * as $ from "@wildboar/asn1/functional";
-import { OPTIONAL, SEQUENCE, ASN1Element as _Element } from "@wildboar/asn1";
+import type { OPTIONAL, SEQUENCE, ASN1Element as _Element } from "@wildboar/asn1";
 import { DeviceMediaInfoList_Item, _decode_DeviceMediaInfoList_Item, _encode_DeviceMediaInfoList_Item } from "../CSTA-status-reporting/DeviceMediaInfoList-Item.ta.mjs";
 
 
@@ -18,7 +18,7 @@ import { DeviceMediaInfoList_Item, _decode_DeviceMediaInfoList_Item, _encode_Dev
  * 
  * ```asn1
  * DeviceMediaInfoList  ::=  SEQUENCE OF SEQUENCE
- * {     mediaStreamID            MediaStreamID                OPTIONAL,
+ * {     mediaStreamID            MediaStreamID                type OPTIONAL,
  *     connectionInformation         ConnectionInformation             OPTIONAL }
  * ```
  */

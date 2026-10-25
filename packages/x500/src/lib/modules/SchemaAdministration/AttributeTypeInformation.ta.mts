@@ -1,21 +1,21 @@
 /* eslint-disable */
 import {
-    ASN1Element as _Element,
+    type ASN1Element as _Element,
     ASN1TagClass as _TagClass,
-    BOOLEAN,
-    OBJECT_IDENTIFIER,
-    OPTIONAL,
+    type BOOLEAN,
+    type OBJECT_IDENTIFIER,
+    type OPTIONAL,
 } from "@wildboar/asn1";
 import * as $ from "@wildboar/asn1/functional";
 import {
-    AttributeUsage,
+    type AttributeUsage,
     AttributeUsage_userApplications /* IMPORTED_LONG_ENUMERATION_ITEM */,
     _decode_AttributeUsage,
     _encode_AttributeUsage,
     _enum_for_AttributeUsage,
 } from "../InformationFramework/AttributeUsage.ta.mjs";
 import {
-    UnboundedDirectoryString,
+    type UnboundedDirectoryString,
     _decode_UnboundedDirectoryString,
     _encode_UnboundedDirectoryString,
 } from "../SelectedAttributeTypes/UnboundedDirectoryString.ta.mjs";
@@ -35,10 +35,10 @@ import {
  *
  * ```asn1
  * AttributeTypeInformation ::= SEQUENCE {
- *   derivation       [0]  ATTRIBUTE.&id             OPTIONAL,
- *   equalityMatch    [1]  MATCHING-RULE.&id         OPTIONAL,
- *   orderingMatch    [2]  MATCHING-RULE.&id         OPTIONAL,
- *   substringsMatch  [3]  MATCHING-RULE.&id         OPTIONAL,
+ *   derivation       [0]  ATTRIBUTE.&id             type OPTIONAL,
+ *   equalityMatch    [1]  MATCHING-RULE.&id         type OPTIONAL,
+ *   orderingMatch    [2]  MATCHING-RULE.&id         type OPTIONAL,
+ *   substringsMatch  [3]  MATCHING-RULE.&id         type OPTIONAL,
  *   attributeSyntax  [4]  UnboundedDirectoryString  OPTIONAL,
  *   multi-valued     [5]  BOOLEAN                   DEFAULT TRUE,
  *   collective       [6]  BOOLEAN                   DEFAULT FALSE,
@@ -185,7 +185,7 @@ export class AttributeTypeInformation {
      * @static
      */
 
-    public static _enum_for_application = _enum_for_AttributeUsage;
+    public static _enum_for_application: typeof _enum_for_AttributeUsage = _enum_for_AttributeUsage;
 }
 
 /**

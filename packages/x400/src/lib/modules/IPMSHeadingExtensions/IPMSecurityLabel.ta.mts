@@ -1,7 +1,7 @@
 /* eslint-disable */
 import {
-    OPTIONAL,
-    ASN1Element as _Element,
+    type OPTIONAL,
+    type ASN1Element as _Element,
     ASN1TagClass as _TagClass,
     ASN1Construction as _Construction,
     ASN1UniversalType as _UniversalType,
@@ -17,7 +17,7 @@ import {
     _encode_SecurityLabel,
 } from '../MTSAbstractService/SecurityLabel.ta.mjs';
 import {
-    BodyPartSecurityLabel,
+    type BodyPartSecurityLabel,
     _decode_BodyPartSecurityLabel,
     _encode_BodyPartSecurityLabel,
 } from '../IPMSHeadingExtensions/BodyPartSecurityLabel.ta.mjs';
@@ -39,26 +39,34 @@ import {
  *
  */
 export class IPMSecurityLabel {
+    /**
+     * @summary `content_security_label`.
+     * @public
+     * @readonly
+     */
+    public readonly content_security_label: SecurityLabel;
+    /**
+     * @summary `heading_security_label`.
+     * @public
+     * @readonly
+     */
+    public readonly heading_security_label?: OPTIONAL<SecurityLabel>;
+    /**
+     * @summary `body_part_security_labels`.
+     * @public
+     * @readonly
+     */
+    public readonly body_part_security_labels?: OPTIONAL<BodyPartSecurityLabel[]>;
+
     constructor(
-        /**
-         * @summary `content_security_label`.
-         * @public
-         * @readonly
-         */
-        readonly content_security_label: SecurityLabel,
-        /**
-         * @summary `heading_security_label`.
-         * @public
-         * @readonly
-         */
-        readonly heading_security_label?: OPTIONAL<SecurityLabel>,
-        /**
-         * @summary `body_part_security_labels`.
-         * @public
-         * @readonly
-         */
-        readonly body_part_security_labels?: OPTIONAL<BodyPartSecurityLabel[]>
-    ) {}
+        content_security_label: SecurityLabel,
+        heading_security_label?: OPTIONAL<SecurityLabel>,
+        body_part_security_labels?: OPTIONAL<BodyPartSecurityLabel[]>
+    ) {
+        this.content_security_label = content_security_label;
+        this.heading_security_label = heading_security_label;
+        this.body_part_security_labels = body_part_security_labels;
+    }
 
     /**
      * @summary Restructures an object into a IPMSecurityLabel

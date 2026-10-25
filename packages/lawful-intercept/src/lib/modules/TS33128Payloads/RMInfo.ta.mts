@@ -1,7 +1,7 @@
 /* eslint-disable */
 import {
     ASN1ConstructionError as _ConstructionError,
-    ASN1Element as _Element,
+    type ASN1Element as _Element,
     ASN1TagClass as _TagClass
 } from "@wildboar/asn1";
 import * as $ from "@wildboar/asn1/functional";
@@ -100,13 +100,13 @@ class RMInfo {
          * @static
          */
 
-    public static _enum_for_rMState = _enum_for_RMState;        /**
+    public static _enum_for_rMState: typeof _enum_for_RMState = _enum_for_RMState;        /**
          * @summary The enum used as the type of the component `accessType`
          * @public
          * @static
          */
 
-    public static _enum_for_accessType = _enum_for_AccessType;
+    public static _enum_for_accessType: typeof _enum_for_AccessType = _enum_for_AccessType;
 }
 
 /**

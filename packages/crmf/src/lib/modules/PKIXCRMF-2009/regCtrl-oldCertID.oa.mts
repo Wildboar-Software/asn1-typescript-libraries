@@ -2,7 +2,7 @@
 import type { ATTRIBUTE } from "@wildboar/x500/InformationFramework";
 import { id_regCtrl_oldCertID } from "../PKIXCRMF-2009/id-regCtrl-oldCertID.va.mjs";
 import {
-    OldCertId,
+    type OldCertId,
     _decode_OldCertId,
     _encode_OldCertId,
 } from "../PKIXCRMF-2009/OldCertId.ta.mjs";

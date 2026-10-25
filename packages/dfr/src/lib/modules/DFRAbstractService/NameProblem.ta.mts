@@ -1,6 +1,6 @@
 /* eslint-disable */
 import {
-    ASN1Element as _Element,
+    type ASN1Element as _Element,
     ASN1TagClass as _TagClass,
     ASN1Construction as _Construction,
     ASN1UniversalType as _UniversalType,
@@ -82,7 +82,7 @@ type NameProblem = _enum_for_NameProblem;
  * @enum {number}
  */
 export
-const NameProblem = _enum_for_NameProblem;
+const NameProblem: typeof _enum_for_NameProblem = _enum_for_NameProblem;
 
 /**
  * @summary NameProblem_invalid_upi
@@ -94,7 +94,7 @@ const NameProblem = _enum_for_NameProblem;
  * @type {number}
  */
 export
-const NameProblem_invalid_upi: NameProblem = NameProblem.invalid_upi; /* LONG_NAMED_ENUMERATED_VALUE */
+const NameProblem_invalid_upi: _enum_for_NameProblem.invalid_upi = NameProblem.invalid_upi; /* LONG_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary invalid_upi
@@ -106,7 +106,7 @@ const NameProblem_invalid_upi: NameProblem = NameProblem.invalid_upi; /* LONG_NA
  * @type {number}
  */
 export
-const invalid_upi: NameProblem = NameProblem.invalid_upi; /* SHORT_NAMED_ENUMERATED_VALUE */
+const invalid_upi: _enum_for_NameProblem.invalid_upi = NameProblem.invalid_upi; /* SHORT_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary NameProblem_invalid_path_name
@@ -118,7 +118,7 @@ const invalid_upi: NameProblem = NameProblem.invalid_upi; /* SHORT_NAMED_ENUMERA
  * @type {number}
  */
 export
-const NameProblem_invalid_path_name: NameProblem = NameProblem.invalid_path_name; /* LONG_NAMED_ENUMERATED_VALUE */
+const NameProblem_invalid_path_name: _enum_for_NameProblem.invalid_path_name = NameProblem.invalid_path_name; /* LONG_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary invalid_path_name
@@ -130,7 +130,7 @@ const NameProblem_invalid_path_name: NameProblem = NameProblem.invalid_path_name
  * @type {number}
  */
 export
-const invalid_path_name: NameProblem = NameProblem.invalid_path_name; /* SHORT_NAMED_ENUMERATED_VALUE */
+const invalid_path_name: _enum_for_NameProblem.invalid_path_name = NameProblem.invalid_path_name; /* SHORT_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary NameProblem_ambiguous_path_name
@@ -141,7 +141,7 @@ const invalid_path_name: NameProblem = NameProblem.invalid_path_name; /* SHORT_N
  * @type {number}
  */
 export
-const NameProblem_ambiguous_path_name: NameProblem = NameProblem.ambiguous_path_name; /* LONG_NAMED_ENUMERATED_VALUE */
+const NameProblem_ambiguous_path_name: _enum_for_NameProblem.ambiguous_path_name = NameProblem.ambiguous_path_name; /* LONG_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary ambiguous_path_name
@@ -152,7 +152,7 @@ const NameProblem_ambiguous_path_name: NameProblem = NameProblem.ambiguous_path_
  * @type {number}
  */
 export
-const ambiguous_path_name: NameProblem = NameProblem.ambiguous_path_name; /* SHORT_NAMED_ENUMERATED_VALUE */
+const ambiguous_path_name: _enum_for_NameProblem.ambiguous_path_name = NameProblem.ambiguous_path_name; /* SHORT_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary NameProblem_inappropriate_object_class
@@ -164,7 +164,7 @@ const ambiguous_path_name: NameProblem = NameProblem.ambiguous_path_name; /* SHO
  * @type {number}
  */
 export
-const NameProblem_inappropriate_object_class: NameProblem = NameProblem.inappropriate_object_class; /* LONG_NAMED_ENUMERATED_VALUE */
+const NameProblem_inappropriate_object_class: _enum_for_NameProblem.inappropriate_object_class = NameProblem.inappropriate_object_class; /* LONG_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary inappropriate_object_class
@@ -176,9 +176,22 @@ const NameProblem_inappropriate_object_class: NameProblem = NameProblem.inapprop
  * @type {number}
  */
 export
-const inappropriate_object_class: NameProblem = NameProblem.inappropriate_object_class; /* SHORT_NAMED_ENUMERATED_VALUE */
-export const _decode_NameProblem = $._decodeEnumerated;
-export const _encode_NameProblem = $._encodeEnumerated;
+const inappropriate_object_class: _enum_for_NameProblem.inappropriate_object_class = NameProblem.inappropriate_object_class; /* SHORT_NAMED_ENUMERATED_VALUE */
+export function _decode_NameProblem(el: _Element): NameProblem {
+    const enumerated = $._decodeEnumerated(el);
+    switch (enumerated) {
+        case NameProblem.invalid_upi: return NameProblem.invalid_upi;
+        case NameProblem.invalid_path_name: return NameProblem.invalid_path_name;
+        case NameProblem.ambiguous_path_name: return NameProblem.ambiguous_path_name;
+        case NameProblem.inappropriate_object_class: return NameProblem.inappropriate_object_class;
+        default:
+            throw new _ConstructionError(
+                "Invalid ENUMERATED value " + enumerated + " for NameProblem.",
+                el,
+            );
+    }
+}
+export const _encode_NameProblem: $.ASN1Encoder<NameProblem> = $._encodeEnumerated as $.ASN1Encoder<NameProblem>;
 
 
 /* eslint-enable */

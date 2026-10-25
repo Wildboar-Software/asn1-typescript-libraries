@@ -1,7 +1,7 @@
 /* eslint-disable */
 import {
-    OPTIONAL,
-    ASN1Element as _Element,
+    type OPTIONAL,
+    type ASN1Element as _Element,
     ASN1TagClass as _TagClass,
     ASN1Construction as _Construction,
     ASN1UniversalType as _UniversalType,
@@ -11,7 +11,7 @@ import {
     ASN1ConstructionError as _ConstructionError,
 } from "@wildboar/asn1";
 import * as $ from "@wildboar/asn1/functional";
-import { ProcessedLevel, _enum_for_ProcessedLevel, _decode_ProcessedLevel, _encode_ProcessedLevel } from "../MachineReadableBiometricTestingAndReportingTestReport/ProcessedLevel.ta.mjs";
+import { type ProcessedLevel, _enum_for_ProcessedLevel, _decode_ProcessedLevel, _encode_ProcessedLevel } from "../MachineReadableBiometricTestingAndReportingTestReport/ProcessedLevel.ta.mjs";
 import { Purpose, _enum_for_Purpose, _decode_Purpose, _encode_Purpose } from "../MachineReadableBiometricTestingAndReportingTestReport/Purpose.ta.mjs";
 
 
@@ -35,30 +35,36 @@ import { Purpose, _enum_for_Purpose, _decode_Purpose, _encode_Purpose } from "..
  */
 export
 class DataType {
+    /**
+     * @summary `processedLevel`.
+     * @description
+     *
+     * `raw-data`, `intermediate-data`, `processed-data`,
+     * `comparison-score`, or `comparison-result` (Clause 6.4.2.3).
+     *
+     * @public
+     * @readonly
+     */
+    public readonly processedLevel: ProcessedLevel;
+    /**
+     * @summary `purpose`.
+     * @description
+     *
+     * `reference` (biometric reference) or `sample` (biometric
+     * sample) (Clause 6.4.2.3).
+     *
+     * @public
+     * @readonly
+     */
+    public readonly purpose?: OPTIONAL<Purpose>;
+
     constructor (
-        /**
-         * @summary `processedLevel`.
-         * @description
-         *
-         * `raw-data`, `intermediate-data`, `processed-data`,
-         * `comparison-score`, or `comparison-result` (Clause 6.4.2.3).
-         *
-         * @public
-         * @readonly
-         */
-        readonly processedLevel: ProcessedLevel,
-        /**
-         * @summary `purpose`.
-         * @description
-         *
-         * `reference` (biometric reference) or `sample` (biometric
-         * sample) (Clause 6.4.2.3).
-         *
-         * @public
-         * @readonly
-         */
-        readonly purpose?: OPTIONAL<Purpose>
-    ) {}
+        processedLevel: ProcessedLevel,
+        purpose?: OPTIONAL<Purpose>
+    ) {
+        this.processedLevel = processedLevel;
+        this.purpose = purpose;
+    }
 
     /**
      * @summary Restructures an object into a DataType
@@ -82,13 +88,13 @@ class DataType {
          * @static
          */
 
-    public static _enum_for_processedLevel = _enum_for_ProcessedLevel;        /**
+    public static _enum_for_processedLevel: typeof _enum_for_ProcessedLevel = _enum_for_ProcessedLevel;        /**
          * @summary The enum used as the type of the component `purpose`
          * @public
          * @static
          */
 
-    public static _enum_for_purpose = _enum_for_Purpose;
+    public static _enum_for_purpose: typeof _enum_for_Purpose = _enum_for_Purpose;
 }
 
 /**

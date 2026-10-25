@@ -1,21 +1,21 @@
 /* eslint-disable */
 import {
-    NULL,
-    OPTIONAL,
-    ASN1Element as _Element,
+    type NULL,
+    type OPTIONAL,
+    type ASN1Element as _Element,
     ASN1TagClass as _TagClass
 } from "@wildboar/asn1";
 import * as $ from "@wildboar/asn1/functional";
-import { CallReferenceNumber, _decode_CallReferenceNumber, _encode_CallReferenceNumber } from "../MAP-CH-DataTypes/CallReferenceNumber.ta.mjs";
+import { type CallReferenceNumber, _decode_CallReferenceNumber, _encode_CallReferenceNumber } from "../MAP-CH-DataTypes/CallReferenceNumber.ta.mjs";
 import { CUG_CheckInfo, _decode_CUG_CheckInfo, _encode_CUG_CheckInfo } from "../MAP-CH-DataTypes/CUG-CheckInfo.ta.mjs";
 import { ForwardingData, _decode_ForwardingData, _encode_ForwardingData } from "../MAP-CH-DataTypes/ForwardingData.ta.mjs";
 import { UU_Data, _decode_UU_Data, _encode_UU_Data } from "../MAP-CH-DataTypes/UU-Data.ta.mjs";
-import { Ext_BasicServiceCode, _decode_Ext_BasicServiceCode, _encode_Ext_BasicServiceCode } from "../MAP-CommonDataTypes/Ext-BasicServiceCode.ta.mjs";
-import { IMSI, _decode_IMSI, _encode_IMSI } from "../MAP-CommonDataTypes/IMSI.ta.mjs";
-import { ISDN_AddressString, _decode_ISDN_AddressString, _encode_ISDN_AddressString } from "../MAP-CommonDataTypes/ISDN-AddressString.ta.mjs";
+import { type Ext_BasicServiceCode, _decode_Ext_BasicServiceCode, _encode_Ext_BasicServiceCode } from "../MAP-CommonDataTypes/Ext-BasicServiceCode.ta.mjs";
+import { type IMSI, _decode_IMSI, _encode_IMSI } from "../MAP-CommonDataTypes/IMSI.ta.mjs";
+import { type ISDN_AddressString, _decode_ISDN_AddressString, _encode_ISDN_AddressString } from "../MAP-CommonDataTypes/ISDN-AddressString.ta.mjs";
 import { ExtensionContainer, _decode_ExtensionContainer, _encode_ExtensionContainer } from "../MAP-ExtensionDataTypes/ExtensionContainer.ta.mjs";
 import { D_CSI, _decode_D_CSI, _encode_D_CSI } from "../MAP-MS-DataTypes/D-CSI.ta.mjs";
-import { O_BcsmCamelTDPCriteriaList, _decode_O_BcsmCamelTDPCriteriaList, _encode_O_BcsmCamelTDPCriteriaList } from "../MAP-MS-DataTypes/O-BcsmCamelTDPCriteriaList.ta.mjs";
+import { type O_BcsmCamelTDPCriteriaList, _decode_O_BcsmCamelTDPCriteriaList, _encode_O_BcsmCamelTDPCriteriaList } from "../MAP-MS-DataTypes/O-BcsmCamelTDPCriteriaList.ta.mjs";
 import { O_CSI, _decode_O_CSI, _encode_O_CSI } from "../MAP-MS-DataTypes/O-CSI.ta.mjs";
 
 
@@ -30,21 +30,21 @@ import { O_CSI, _decode_O_CSI, _encode_O_CSI } from "../MAP-MS-DataTypes/O-CSI.t
  * 
  * ```asn1
  * ResumeCallHandlingArg ::= SEQUENCE {
- *     callReferenceNumber    [0] CallReferenceNumber    OPTIONAL,
- *     basicServiceGroup    [1] Ext-BasicServiceCode    OPTIONAL,
- *     forwardingData    [2] ForwardingData    OPTIONAL,
- *     imsi    [3] IMSI    OPTIONAL,
- *     cug-CheckInfo    [4] CUG-CheckInfo    OPTIONAL,
- *     o-CSI    [5] O-CSI    OPTIONAL,
- *     extensionContainer    [7] ExtensionContainer    OPTIONAL,
- *     ccbs-Possible    [8]    NULL    OPTIONAL,
- *     msisdn    [9]    ISDN-AddressString    OPTIONAL,
- *     uu-Data    [10] UU-Data    OPTIONAL,
- *     allInformationSent    [11] NULL    OPTIONAL,
+ *     callReferenceNumber    [0] CallReferenceNumber    type OPTIONAL,
+ *     basicServiceGroup    [1] Ext-BasicServiceCode    type OPTIONAL,
+ *     forwardingData    [2] ForwardingData    type OPTIONAL,
+ *     imsi    [3] IMSI    type OPTIONAL,
+ *     cug-CheckInfo    [4] CUG-CheckInfo    type OPTIONAL,
+ *     o-CSI    [5] O-CSI    type OPTIONAL,
+ *     extensionContainer    [7] ExtensionContainer    type OPTIONAL,
+ *     ccbs-Possible    [8]    NULL    type OPTIONAL,
+ *     msisdn    [9]    ISDN-AddressString    type OPTIONAL,
+ *     uu-Data    [10] UU-Data    type OPTIONAL,
+ *     allInformationSent    [11] NULL    type OPTIONAL,
  *     ...,
- *     d-csi    [12]    D-CSI    OPTIONAL,
- *     o-BcsmCamelTDPCriteriaList    [13]    O-BcsmCamelTDPCriteriaList    OPTIONAL,
- *     basicServiceGroup2    [14] Ext-BasicServiceCode    OPTIONAL,
+ *     d-csi    [12]    D-CSI    type OPTIONAL,
+ *     o-BcsmCamelTDPCriteriaList    [13]    O-BcsmCamelTDPCriteriaList    type OPTIONAL,
+ *     basicServiceGroup2    [14] Ext-BasicServiceCode    type OPTIONAL,
  *     mtRoamingRetry    [15] NULL    OPTIONAL
  *     }
  * ```
@@ -53,164 +53,198 @@ import { O_CSI, _decode_O_CSI, _encode_O_CSI } from "../MAP-MS-DataTypes/O-CSI.t
  */
 export
 class ResumeCallHandlingArg {
+    /**
+     * @summary `callReferenceNumber`.
+     * @description
+     *
+     * Call reference.
+     *
+     * @public
+     * @readonly
+     */
+    public readonly callReferenceNumber?: OPTIONAL<CallReferenceNumber>;
+    /**
+     * @summary `basicServiceGroup`.
+     * @description
+     *
+     * Basic service group.
+     *
+     * @public
+     * @readonly
+     */
+    public readonly basicServiceGroup?: OPTIONAL<Ext_BasicServiceCode>;
+    /**
+     * @summary `forwardingData`.
+     * @description
+     *
+     * Forwarding destination.
+     *
+     * @public
+     * @readonly
+     */
+    public readonly forwardingData?: OPTIONAL<ForwardingData>;
+    /**
+     * @summary `imsi`.
+     * @description
+     *
+     * IMSI.
+     *
+     * @public
+     * @readonly
+     */
+    public readonly imsi?: OPTIONAL<IMSI>;
+    /**
+     * @summary `cug_CheckInfo`.
+     * @description
+     *
+     * CUG check info.
+     *
+     * @public
+     * @readonly
+     */
+    public readonly cug_CheckInfo?: OPTIONAL<CUG_CheckInfo>;
+    /**
+     * @summary `o_CSI`.
+     * @description
+     *
+     * O-CSI.
+     *
+     * @public
+     * @readonly
+     */
+    public readonly o_CSI?: OPTIONAL<O_CSI>;
+    /**
+     * @summary `extensionContainer`.
+     * @description
+     *
+     * Private or PCS extensions (3GPP TS 29.002 V19.1.0 clause 17.7.11).
+     *
+     * @public
+     * @readonly
+     */
+    public readonly extensionContainer?: OPTIONAL<ExtensionContainer>;
+    /**
+     * @summary `ccbs_Possible`.
+     * @description
+     *
+     * CCBS possible.
+     *
+     * @public
+     * @readonly
+     */
+    public readonly ccbs_Possible?: OPTIONAL<NULL>;
+    /**
+     * @summary `msisdn`.
+     * @description
+     *
+     * MSISDN.
+     *
+     * @public
+     * @readonly
+     */
+    public readonly msisdn?: OPTIONAL<ISDN_AddressString>;
+    /**
+     * @summary `uu_Data`.
+     * @description
+     *
+     * User-to-user data (ETS 300 356).
+     *
+     * @public
+     * @readonly
+     */
+    public readonly uu_Data?: OPTIONAL<UU_Data>;
+    /**
+     * @summary `allInformationSent`.
+     * @description
+     *
+     * All information has been sent.
+     *
+     * @public
+     * @readonly
+     */
+    public readonly allInformationSent?: OPTIONAL<NULL>;
+    /**
+     * @summary `d_csi`.
+     * @description
+     *
+     * D-CSI.
+     *
+     * @public
+     * @readonly
+     */
+    public readonly d_csi?: OPTIONAL<D_CSI>;
+    /**
+     * @summary `o_BcsmCamelTDPCriteriaList`.
+     * @description
+     *
+     * O-BCSM CAMEL TDP criteria.
+     *
+     * @public
+     * @readonly
+     */
+    public readonly o_BcsmCamelTDPCriteriaList?: OPTIONAL<O_BcsmCamelTDPCriteriaList>;
+    /**
+     * @summary `basicServiceGroup2`.
+     * @description
+     *
+     * Second basic service (3GPP TS 23.172).
+     *
+     * @public
+     * @readonly
+     */
+    public readonly basicServiceGroup2?: OPTIONAL<Ext_BasicServiceCode>;
+    /**
+     * @summary `mtRoamingRetry`.
+     * @description
+     *
+     * MT roaming retry.
+     *
+     * @public
+     * @readonly
+     */
+    public readonly mtRoamingRetry?: OPTIONAL<NULL>;
+    /**
+     * @summary Extensions that are not recognized.
+     * @public
+     * @readonly
+     */
+    public readonly _unrecognizedExtensionsList: _Element[];
+
     constructor (
-        /**
-         * @summary `callReferenceNumber`.
-         * @description
-         *
-         * Call reference.
-         *
-         * @public
-         * @readonly
-         */
-        readonly callReferenceNumber?: OPTIONAL<CallReferenceNumber>,
-        /**
-         * @summary `basicServiceGroup`.
-         * @description
-         *
-         * Basic service group.
-         *
-         * @public
-         * @readonly
-         */
-        readonly basicServiceGroup?: OPTIONAL<Ext_BasicServiceCode>,
-        /**
-         * @summary `forwardingData`.
-         * @description
-         *
-         * Forwarding destination.
-         *
-         * @public
-         * @readonly
-         */
-        readonly forwardingData?: OPTIONAL<ForwardingData>,
-        /**
-         * @summary `imsi`.
-         * @description
-         *
-         * IMSI.
-         *
-         * @public
-         * @readonly
-         */
-        readonly imsi?: OPTIONAL<IMSI>,
-        /**
-         * @summary `cug_CheckInfo`.
-         * @description
-         *
-         * CUG check info.
-         *
-         * @public
-         * @readonly
-         */
-        readonly cug_CheckInfo?: OPTIONAL<CUG_CheckInfo>,
-        /**
-         * @summary `o_CSI`.
-         * @description
-         *
-         * O-CSI.
-         *
-         * @public
-         * @readonly
-         */
-        readonly o_CSI?: OPTIONAL<O_CSI>,
-        /**
-         * @summary `extensionContainer`.
-         * @description
-         *
-         * Private or PCS extensions (3GPP TS 29.002 V19.1.0 clause 17.7.11).
-         *
-         * @public
-         * @readonly
-         */
-        readonly extensionContainer?: OPTIONAL<ExtensionContainer>,
-        /**
-         * @summary `ccbs_Possible`.
-         * @description
-         *
-         * CCBS possible.
-         *
-         * @public
-         * @readonly
-         */
-        readonly ccbs_Possible?: OPTIONAL<NULL>,
-        /**
-         * @summary `msisdn`.
-         * @description
-         *
-         * MSISDN.
-         *
-         * @public
-         * @readonly
-         */
-        readonly msisdn?: OPTIONAL<ISDN_AddressString>,
-        /**
-         * @summary `uu_Data`.
-         * @description
-         *
-         * User-to-user data (ETS 300 356).
-         *
-         * @public
-         * @readonly
-         */
-        readonly uu_Data?: OPTIONAL<UU_Data>,
-        /**
-         * @summary `allInformationSent`.
-         * @description
-         *
-         * All information has been sent.
-         *
-         * @public
-         * @readonly
-         */
-        readonly allInformationSent?: OPTIONAL<NULL>,
-        /**
-         * @summary `d_csi`.
-         * @description
-         *
-         * D-CSI.
-         *
-         * @public
-         * @readonly
-         */
-        readonly d_csi?: OPTIONAL<D_CSI>,
-        /**
-         * @summary `o_BcsmCamelTDPCriteriaList`.
-         * @description
-         *
-         * O-BCSM CAMEL TDP criteria.
-         *
-         * @public
-         * @readonly
-         */
-        readonly o_BcsmCamelTDPCriteriaList?: OPTIONAL<O_BcsmCamelTDPCriteriaList>,
-        /**
-         * @summary `basicServiceGroup2`.
-         * @description
-         *
-         * Second basic service (3GPP TS 23.172).
-         *
-         * @public
-         * @readonly
-         */
-        readonly basicServiceGroup2?: OPTIONAL<Ext_BasicServiceCode>,
-        /**
-         * @summary `mtRoamingRetry`.
-         * @description
-         *
-         * MT roaming retry.
-         *
-         * @public
-         * @readonly
-         */
-        readonly mtRoamingRetry?: OPTIONAL<NULL>,
-        /**
-         * @summary Extensions that are not recognized.
-         * @public
-         * @readonly
-         */
-        readonly _unrecognizedExtensionsList: _Element[] = []
-    ) {}
+        callReferenceNumber?: OPTIONAL<CallReferenceNumber>,
+        basicServiceGroup?: OPTIONAL<Ext_BasicServiceCode>,
+        forwardingData?: OPTIONAL<ForwardingData>,
+        imsi?: OPTIONAL<IMSI>,
+        cug_CheckInfo?: OPTIONAL<CUG_CheckInfo>,
+        o_CSI?: OPTIONAL<O_CSI>,
+        extensionContainer?: OPTIONAL<ExtensionContainer>,
+        ccbs_Possible?: OPTIONAL<NULL>,
+        msisdn?: OPTIONAL<ISDN_AddressString>,
+        uu_Data?: OPTIONAL<UU_Data>,
+        allInformationSent?: OPTIONAL<NULL>,
+        d_csi?: OPTIONAL<D_CSI>,
+        o_BcsmCamelTDPCriteriaList?: OPTIONAL<O_BcsmCamelTDPCriteriaList>,
+        basicServiceGroup2?: OPTIONAL<Ext_BasicServiceCode>,
+        mtRoamingRetry?: OPTIONAL<NULL>,
+        _unrecognizedExtensionsList: _Element[] = []
+    ) {
+        this.callReferenceNumber = callReferenceNumber;
+        this.basicServiceGroup = basicServiceGroup;
+        this.forwardingData = forwardingData;
+        this.imsi = imsi;
+        this.cug_CheckInfo = cug_CheckInfo;
+        this.o_CSI = o_CSI;
+        this.extensionContainer = extensionContainer;
+        this.ccbs_Possible = ccbs_Possible;
+        this.msisdn = msisdn;
+        this.uu_Data = uu_Data;
+        this.allInformationSent = allInformationSent;
+        this.d_csi = d_csi;
+        this.o_BcsmCamelTDPCriteriaList = o_BcsmCamelTDPCriteriaList;
+        this.basicServiceGroup2 = basicServiceGroup2;
+        this.mtRoamingRetry = mtRoamingRetry;
+        this._unrecognizedExtensionsList = _unrecognizedExtensionsList;
+    }
 
     /**
      * @summary Restructures an object into a ResumeCallHandlingArg

@@ -16,18 +16,18 @@ import {
   _encode_HashValueType,
 } from '../CMAIL/HashValueType.ta.mjs';
 import {
-  SignatureType,
+  type SignatureType,
   _decode_SignatureType,
   _encode_SignatureType,
 } from '../CMAIL/SignatureType.ta.mjs';
 import {
-  DigitalPostmarkType_deliveryType,
+  type DigitalPostmarkType_deliveryType,
   _enum_for_DigitalPostmarkType_deliveryType,
   _decode_DigitalPostmarkType_deliveryType,
   _encode_DigitalPostmarkType_deliveryType,
 } from '../CMAIL/DigitalPostmarkType-deliveryType.ta.mjs';
 import {
-    String,
+    type String,
     _decode_String,
     _encode_String,
 } from '../XSD/String.ta.mjs';
@@ -73,7 +73,7 @@ export class DigitalPostmarkType {
    * @public
    * @readonly
    */
-  readonly mimeMessageHash: HashValueType[];
+  public readonly mimeMessageHash: HashValueType[];
   /**
    * @summary `signature`.
    * @description Signatures over the postmark
@@ -84,7 +84,7 @@ export class DigitalPostmarkType {
    * @public
    * @readonly
    */
-  readonly signature: SignatureType[];
+  public readonly signature: SignatureType[];
   /**
    * @summary `envelopeId`.
    * @description Identifier of this ENVELOPE. XER
@@ -93,7 +93,7 @@ export class DigitalPostmarkType {
    * @public
    * @readonly
    */
-  readonly envelopeId: String;
+  public readonly envelopeId: String;
   /**
    * @summary `deliveryType`.
    * @description CMTP `DELV` mode. Root value
@@ -103,7 +103,7 @@ export class DigitalPostmarkType {
    * @public
    * @readonly
    */
-  readonly deliveryType: DigitalPostmarkType_deliveryType;
+  public readonly deliveryType: DigitalPostmarkType_deliveryType;
 
   constructor(
     mimeMessageHash: HashValueType[],
@@ -146,7 +146,7 @@ export class DigitalPostmarkType {
    * @static
    */
 
-  public static _enum_for_deliveryType = _enum_for_DigitalPostmarkType_deliveryType;
+  public static _enum_for_deliveryType: typeof _enum_for_DigitalPostmarkType_deliveryType = _enum_for_DigitalPostmarkType_deliveryType;
 }
 
 

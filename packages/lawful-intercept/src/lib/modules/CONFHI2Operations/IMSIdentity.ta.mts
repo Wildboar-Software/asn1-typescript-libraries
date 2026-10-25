@@ -1,9 +1,9 @@
 /* eslint-disable */
 import {
-    ASN1Element as _Element,
+    type ASN1Element as _Element,
     ASN1TagClass as _TagClass,
-    OCTET_STRING,
-    OPTIONAL
+    type OCTET_STRING,
+    type OPTIONAL
 } from "@wildboar/asn1";
 import * as $ from "@wildboar/asn1/functional";
 
@@ -22,10 +22,10 @@ import * as $ from "@wildboar/asn1/functional";
  * ```asn1
  * IMSIdentity ::= SEQUENCE
  * {
- *         sip-uri                    [1] OCTET STRING     OPTIONAL,
+ *         sip-uri                    [1] OCTET STRING     type OPTIONAL,
  *             -- See [REF 26 of 33.108]
  * 
- *         tel-uri                    [2] OCTET STRING     OPTIONAL,
+ *         tel-uri                    [2] OCTET STRING     type OPTIONAL,
  *             -- See [REF 67 of 33.108]
  * 
  *     ...

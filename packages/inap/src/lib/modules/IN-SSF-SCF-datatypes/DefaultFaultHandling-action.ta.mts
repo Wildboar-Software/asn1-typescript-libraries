@@ -1,6 +1,6 @@
 /* eslint-disable */
 import {
-    ENUMERATED
+    type ENUMERATED
 } from "@wildboar/asn1";
 import * as $ from "@wildboar/asn1/functional";
 
@@ -38,7 +38,7 @@ type DefaultFaultHandling_action = _enum_for_DefaultFaultHandling_action | ENUME
  * @type {number}
  */
 export
-const DefaultFaultHandling_action_resumeCallProcessing: DefaultFaultHandling_action = 0; /* LONG_NAMED_ENUMERATED_VALUE */
+const DefaultFaultHandling_action_resumeCallProcessing: _enum_for_DefaultFaultHandling_action.resumeCallProcessing = _enum_for_DefaultFaultHandling_action.resumeCallProcessing; /* LONG_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary resumeCallProcessing
@@ -46,7 +46,7 @@ const DefaultFaultHandling_action_resumeCallProcessing: DefaultFaultHandling_act
  * @type {number}
  */
 export
-const resumeCallProcessing: DefaultFaultHandling_action = DefaultFaultHandling_action_resumeCallProcessing; /* SHORT_NAMED_ENUMERATED_VALUE */
+const resumeCallProcessing: _enum_for_DefaultFaultHandling_action.resumeCallProcessing = DefaultFaultHandling_action_resumeCallProcessing; /* SHORT_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary DefaultFaultHandling_action_releaseCall
@@ -54,7 +54,7 @@ const resumeCallProcessing: DefaultFaultHandling_action = DefaultFaultHandling_a
  * @type {number}
  */
 export
-const DefaultFaultHandling_action_releaseCall: DefaultFaultHandling_action = 1; /* LONG_NAMED_ENUMERATED_VALUE */
+const DefaultFaultHandling_action_releaseCall: _enum_for_DefaultFaultHandling_action.releaseCall = _enum_for_DefaultFaultHandling_action.releaseCall; /* LONG_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary releaseCall
@@ -62,7 +62,7 @@ const DefaultFaultHandling_action_releaseCall: DefaultFaultHandling_action = 1; 
  * @type {number}
  */
 export
-const releaseCall: DefaultFaultHandling_action = DefaultFaultHandling_action_releaseCall; /* SHORT_NAMED_ENUMERATED_VALUE */
+const releaseCall: _enum_for_DefaultFaultHandling_action.releaseCall = DefaultFaultHandling_action_releaseCall; /* SHORT_NAMED_ENUMERATED_VALUE */
 
 export
 const _decode_DefaultFaultHandling_action: $.ASN1Decoder<DefaultFaultHandling_action> = $._decodeEnumerated;

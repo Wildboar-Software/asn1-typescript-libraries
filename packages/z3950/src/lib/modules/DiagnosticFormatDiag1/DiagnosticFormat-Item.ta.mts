@@ -1,12 +1,12 @@
 /* eslint-disable */
 import {
-    OPTIONAL,
-    ASN1Element as _Element,
+    type OPTIONAL,
+    type ASN1Element as _Element,
     ASN1TagClass as _TagClass
 } from "@wildboar/asn1";
 import * as $ from "@wildboar/asn1/functional";
-import { DiagnosticFormat_Item_diagnostic, _decode_DiagnosticFormat_Item_diagnostic, _encode_DiagnosticFormat_Item_diagnostic } from "../DiagnosticFormatDiag1/DiagnosticFormat-Item-diagnostic.ta.mjs";
-import { InternationalString, _decode_InternationalString, _encode_InternationalString } from "../Z39-50-APDU-2001/InternationalString.ta.mjs";
+import { type DiagnosticFormat_Item_diagnostic, _decode_DiagnosticFormat_Item_diagnostic, _encode_DiagnosticFormat_Item_diagnostic } from "../DiagnosticFormatDiag1/DiagnosticFormat-Item-diagnostic.ta.mjs";
+import { type InternationalString, _decode_InternationalString, _encode_InternationalString } from "../Z39-50-APDU-2001/InternationalString.ta.mjs";
 
 
 /**

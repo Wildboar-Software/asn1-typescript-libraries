@@ -1,6 +1,6 @@
 /* eslint-disable */
 import {
-    ASN1Element as _Element,
+    type ASN1Element as _Element,
     ASN1TagClass as _TagClass,
     ASN1Construction as _Construction,
     ASN1UniversalType as _UniversalType,
@@ -9,7 +9,7 @@ import {
     EmbeddedPDV as _PDV,
     ASN1ConstructionError as _ConstructionError,
 } from "@wildboar/asn1";
-import { Trinomial, _decode_Trinomial, _encode_Trinomial } from "../SEC1-v1-9/Trinomial.ta.mjs";
+import { type Trinomial, _decode_Trinomial, _encode_Trinomial } from "../SEC1-v1-9/Trinomial.ta.mjs";
 import { tpBasis } from "../SEC1-v1-9/tpBasis.va.mjs";
 import { type CHARACTERISTIC_TWO } from "../SEC1-v1-9/CHARACTERISTIC-TWO.oca.mjs";
 /**

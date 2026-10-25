@@ -1,7 +1,7 @@
 /* eslint-disable */
 import {
-    OCTET_STRING,
-    ASN1Element as _Element,
+    type OCTET_STRING,
+    type ASN1Element as _Element,
     ASN1TagClass as _TagClass,
     ASN1Construction as _Construction,
     ASN1UniversalType as _UniversalType,
@@ -47,7 +47,7 @@ class CAMClientVersion {
      * @public
      * @readonly
      */
-    readonly hWVersion: OCTET_STRING;
+    public readonly hWVersion: OCTET_STRING;
     /**
      * @summary `sWversion`.
      * @description
@@ -58,7 +58,7 @@ class CAMClientVersion {
      * @public
      * @readonly
      */
-    readonly sWversion: OCTET_STRING;
+    public readonly sWversion: OCTET_STRING;
     /**
      * @summary `cAMClientInfo`.
      * @description
@@ -69,7 +69,7 @@ class CAMClientVersion {
      * @public
      * @readonly
      */
-    readonly cAMClientInfo: CAMClientInfo[];
+    public readonly cAMClientInfo: CAMClientInfo[];
 
     constructor (
         hWVersion: OCTET_STRING,

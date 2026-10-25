@@ -11,12 +11,12 @@ import {
 } from '@wildboar/asn1';
 import * as $ from '@wildboar/asn1/functional';
 import {
-  BioAPI_HANDLE,
+  type BioAPI_HANDLE,
   _decode_BioAPI_HANDLE,
   _encode_BioAPI_HANDLE,
 } from '../BIP/BioAPI-HANDLE.ta.mjs';
 import {
-  BioAPI_BIR_HANDLE,
+  type BioAPI_BIR_HANDLE,
   _decode_BioAPI_BIR_HANDLE,
   _encode_BioAPI_BIR_HANDLE,
 } from '../BIP/BioAPI-BIR-HANDLE.ta.mjs';
@@ -51,7 +51,7 @@ export class GetBIRFromHandle_RequestParams {
    * @public
    * @readonly
    */
-  readonly originalBSPHandle: BioAPI_HANDLE;
+  public readonly originalBSPHandle: BioAPI_HANDLE;
   /**
    * @summary `birHandle`.
    * @description
@@ -61,7 +61,7 @@ export class GetBIRFromHandle_RequestParams {
    * @public
    * @readonly
    */
-  readonly birHandle: BioAPI_BIR_HANDLE;
+  public readonly birHandle: BioAPI_BIR_HANDLE;
 
   constructor(
     originalBSPHandle: BioAPI_HANDLE,

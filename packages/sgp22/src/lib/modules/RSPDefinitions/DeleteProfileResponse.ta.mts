@@ -1,11 +1,11 @@
 /* eslint-disable */
 import {
     ASN1ConstructionError as _ConstructionError,
-    ASN1Element as _Element,
+    type ASN1Element as _Element,
     ASN1TagClass as _TagClass
 } from "@wildboar/asn1";
 import * as $ from "@wildboar/asn1/functional";
-import { _decode_DeleteProfileResponse_deleteResult, _encode_DeleteProfileResponse_deleteResult, DeleteProfileResponse_deleteResult } from "../RSPDefinitions/DeleteProfileResponse-deleteResult.ta.mjs";
+import { _decode_DeleteProfileResponse_deleteResult, _encode_DeleteProfileResponse_deleteResult, type DeleteProfileResponse_deleteResult } from "../RSPDefinitions/DeleteProfileResponse-deleteResult.ta.mjs";
 
 
 /**
@@ -37,7 +37,7 @@ class DeleteProfileResponse {
      * @public
      * @readonly
      */
-    readonly deleteResult: DeleteProfileResponse_deleteResult;
+    public readonly deleteResult: DeleteProfileResponse_deleteResult;
 
     constructor (
         deleteResult: DeleteProfileResponse_deleteResult

@@ -1,6 +1,6 @@
 import {
-    OPTIONAL,
-    ASN1Element as _Element,
+    type OPTIONAL,
+    type ASN1Element as _Element,
     ASN1TagClass as _TagClass,
 } from "@wildboar/asn1";
 import * as $ from "@wildboar/asn1/functional";
@@ -21,10 +21,16 @@ import { type MT_SMSCause, _decode_MT_SMSCause, _encode_MT_SMSCause } from "./MT
  *
  */
 export class EventSpecificInformationSMS_t_smsFailureSpecificInfo {
+    public readonly failureCause?: OPTIONAL<MT_SMSCause>;
+    public readonly _unrecognizedExtensionsList: _Element[];
+
     constructor (
-        readonly failureCause?: OPTIONAL<MT_SMSCause>,
-        readonly _unrecognizedExtensionsList: _Element[] = [],
-    ) {}
+        failureCause?: OPTIONAL<MT_SMSCause>,
+        _unrecognizedExtensionsList: _Element[] = [],
+    ) {
+        this.failureCause = failureCause;
+        this._unrecognizedExtensionsList = _unrecognizedExtensionsList;
+    }
 
     public static _from_object (_o: { [_K in keyof (EventSpecificInformationSMS_t_smsFailureSpecificInfo)]: (EventSpecificInformationSMS_t_smsFailureSpecificInfo)[_K] }): EventSpecificInformationSMS_t_smsFailureSpecificInfo {
         return new EventSpecificInformationSMS_t_smsFailureSpecificInfo(_o.failureCause, _o._unrecognizedExtensionsList);

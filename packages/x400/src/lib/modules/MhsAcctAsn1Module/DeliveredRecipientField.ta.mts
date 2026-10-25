@@ -1,7 +1,7 @@
 /* eslint-disable */
 import {
-    OPTIONAL,
-    ASN1Element as _Element,
+    type OPTIONAL,
+    type ASN1Element as _Element,
     ASN1TagClass as _TagClass,
     ASN1Construction as _Construction,
     ASN1UniversalType as _UniversalType,
@@ -12,12 +12,12 @@ import {
 } from '@wildboar/asn1';
 import * as $ from '@wildboar/asn1/functional';
 import {
-    ORAddressAndOptionalDirectoryName,
+    type ORAddressAndOptionalDirectoryName,
     _decode_ORAddressAndOptionalDirectoryName,
     _encode_ORAddressAndOptionalDirectoryName,
 } from '../MTSAbstractService/ORAddressAndOptionalDirectoryName.ta.mjs';
 import {
-    Time,
+    type Time,
     _decode_Time,
     _encode_Time,
 } from '../MTSAbstractService/Time.ta.mjs';
@@ -52,38 +52,50 @@ import {
  *
  */
 export class DeliveredRecipientField {
+    /**
+     * @summary `recipient_name`.
+     * @public
+     * @readonly
+     */
+    public readonly recipient_name: ORAddressAndOptionalDirectoryName;
+    /**
+     * @summary `message_delivery_time`.
+     * @public
+     * @readonly
+     */
+    public readonly message_delivery_time: Time;
+    /**
+     * @summary `delivery_service`.
+     * @public
+     * @readonly
+     */
+    public readonly delivery_service?: OPTIONAL<DeliveryService>;
+    /**
+     * @summary `conversion_statistics`.
+     * @public
+     * @readonly
+     */
+    public readonly conversion_statistics?: OPTIONAL<ConversionStatistics>;
+    /**
+     * @summary `edirector_name`.
+     * @public
+     * @readonly
+     */
+    public readonly edirector_name?: OPTIONAL<ORAddressAndOptionalDirectoryName>;
+
     constructor(
-        /**
-         * @summary `recipient_name`.
-         * @public
-         * @readonly
-         */
-        readonly recipient_name: ORAddressAndOptionalDirectoryName,
-        /**
-         * @summary `message_delivery_time`.
-         * @public
-         * @readonly
-         */
-        readonly message_delivery_time: Time,
-        /**
-         * @summary `delivery_service`.
-         * @public
-         * @readonly
-         */
-        readonly delivery_service?: OPTIONAL<DeliveryService>,
-        /**
-         * @summary `conversion_statistics`.
-         * @public
-         * @readonly
-         */
-        readonly conversion_statistics?: OPTIONAL<ConversionStatistics>,
-        /**
-         * @summary `edirector_name`.
-         * @public
-         * @readonly
-         */
-        readonly edirector_name?: OPTIONAL<ORAddressAndOptionalDirectoryName>
-    ) {}
+        recipient_name: ORAddressAndOptionalDirectoryName,
+        message_delivery_time: Time,
+        delivery_service?: OPTIONAL<DeliveryService>,
+        conversion_statistics?: OPTIONAL<ConversionStatistics>,
+        edirector_name?: OPTIONAL<ORAddressAndOptionalDirectoryName>
+    ) {
+        this.recipient_name = recipient_name;
+        this.message_delivery_time = message_delivery_time;
+        this.delivery_service = delivery_service;
+        this.conversion_statistics = conversion_statistics;
+        this.edirector_name = edirector_name;
+    }
 
     /**
      * @summary Restructures an object into a DeliveredRecipientField

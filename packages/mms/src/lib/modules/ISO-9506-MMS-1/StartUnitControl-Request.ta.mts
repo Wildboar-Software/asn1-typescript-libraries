@@ -1,7 +1,7 @@
 /* eslint-disable */
 import {
-    OPTIONAL,
-    ASN1Element as _Element,
+    type OPTIONAL,
+    type ASN1Element as _Element,
     ASN1TagClass as _TagClass,
     ASN1Construction as _Construction,
     ASN1UniversalType as _UniversalType,
@@ -11,8 +11,8 @@ import {
     ASN1ConstructionError as _ConstructionError,
 } from "@wildboar/asn1";
 import * as $ from "@wildboar/asn1/functional";
-import { Identifier, _decode_Identifier, _encode_Identifier } from "../ISO-9506-MMS-1/Identifier.ta.mjs";
-import { StartUnitControl_Request_executionArgument, _decode_StartUnitControl_Request_executionArgument, _encode_StartUnitControl_Request_executionArgument } from "../ISO-9506-MMS-1/StartUnitControl-Request-executionArgument.ta.mjs";
+import { type Identifier, _decode_Identifier, _encode_Identifier } from "../ISO-9506-MMS-1/Identifier.ta.mjs";
+import { type StartUnitControl_Request_executionArgument, _decode_StartUnitControl_Request_executionArgument, _encode_StartUnitControl_Request_executionArgument } from "../ISO-9506-MMS-1/StartUnitControl-Request-executionArgument.ta.mjs";
 
 
 /**
@@ -40,29 +40,35 @@ import { StartUnitControl_Request_executionArgument, _decode_StartUnitControl_Re
  */
 export
 class StartUnitControl_Request {
+    /**
+     * @summary `unitControlName`.
+     * @description
+     *
+     * Unit Control whose Program Invocations are started. ISO 9506-1:2003
+     * §13.6.1.1.1.
+     *
+     * @public
+     * @readonly
+     */
+    public readonly unitControlName: Identifier;
+    /**
+     * @summary `executionArgument`.
+     * @description
+     *
+     * Optional data passed to the Program Invocations being started. ISO 9506-1:2003 §13.6.1.1.2.
+     *
+     * @public
+     * @readonly
+     */
+    public readonly executionArgument?: OPTIONAL<StartUnitControl_Request_executionArgument>;
+
     constructor (
-        /**
-         * @summary `unitControlName`.
-         * @description
-         *
-         * Unit Control whose Program Invocations are started. ISO 9506-1:2003
-         * §13.6.1.1.1.
-         *
-         * @public
-         * @readonly
-         */
-        readonly unitControlName: Identifier,
-        /**
-         * @summary `executionArgument`.
-         * @description
-         *
-         * Optional data passed to the Program Invocations being started. ISO 9506-1:2003 §13.6.1.1.2.
-         *
-         * @public
-         * @readonly
-         */
-        readonly executionArgument?: OPTIONAL<StartUnitControl_Request_executionArgument>
-    ) {}
+        unitControlName: Identifier,
+        executionArgument?: OPTIONAL<StartUnitControl_Request_executionArgument>
+    ) {
+        this.unitControlName = unitControlName;
+        this.executionArgument = executionArgument;
+    }
 
     /**
      * @summary Restructures an object into a StartUnitControl_Request

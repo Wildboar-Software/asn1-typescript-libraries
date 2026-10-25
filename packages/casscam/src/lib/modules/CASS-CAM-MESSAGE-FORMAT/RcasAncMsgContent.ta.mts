@@ -1,7 +1,7 @@
 /* eslint-disable */
 import {
-    OCTET_STRING,
-    ASN1Element as _Element,
+    type OCTET_STRING,
+    type ASN1Element as _Element,
     ASN1TagClass as _TagClass,
     ASN1Construction as _Construction,
     ASN1UniversalType as _UniversalType,
@@ -54,7 +54,7 @@ class RcasAncMsgContent {
      * @public
      * @readonly
      */
-    readonly protocolTypeFlag: OCTET_STRING;
+    public readonly protocolTypeFlag: OCTET_STRING;
     /**
      * @summary `cAMClientVersion`.
      * @description
@@ -65,7 +65,7 @@ class RcasAncMsgContent {
      * @public
      * @readonly
      */
-    readonly cAMClientVersion: CAMClientVersion[];
+    public readonly cAMClientVersion: CAMClientVersion[];
     /**
      * @summary `cASSInfo`.
      * @description
@@ -76,7 +76,7 @@ class RcasAncMsgContent {
      * @public
      * @readonly
      */
-    readonly cASSInfo: CASSInfo;
+    public readonly cASSInfo: CASSInfo;
 
     constructor (
         protocolTypeFlag: OCTET_STRING,

@@ -1,13 +1,13 @@
 /* eslint-disable */
 import {
-    OPTIONAL,
-    ASN1Element as _Element,
+    type OPTIONAL,
+    type ASN1Element as _Element,
     ASN1TagClass as _TagClass
 } from "@wildboar/asn1";
 import * as $ from "@wildboar/asn1/functional";
-import { SwitchingSubDomainName, _decode_SwitchingSubDomainName, _encode_SwitchingSubDomainName } from "../Call-Identification-and-Call-Linkage-Operations-asn1-97/SwitchingSubDomainName.ta.mjs";
-import { CallIdentificationData_linkageID, _decode_CallIdentificationData_linkageID, _encode_CallIdentificationData_linkageID } from "../Call-Identification-and-Call-Linkage-Operations-asn1-97/CallIdentificationData-linkageID.ta.mjs";
-import { TimeStamp, _decode_TimeStamp, _encode_TimeStamp } from "../Call-Identification-and-Call-Linkage-Operations-asn1-97/TimeStamp.ta.mjs";
+import { type SwitchingSubDomainName, _decode_SwitchingSubDomainName, _encode_SwitchingSubDomainName } from "../Call-Identification-and-Call-Linkage-Operations-asn1-97/SwitchingSubDomainName.ta.mjs";
+import { type CallIdentificationData_linkageID, _decode_CallIdentificationData_linkageID, _encode_CallIdentificationData_linkageID } from "../Call-Identification-and-Call-Linkage-Operations-asn1-97/CallIdentificationData-linkageID.ta.mjs";
+import { type TimeStamp, _decode_TimeStamp, _encode_TimeStamp } from "../Call-Identification-and-Call-Linkage-Operations-asn1-97/TimeStamp.ta.mjs";
 
 /**
  * @summary CallIdentificationData

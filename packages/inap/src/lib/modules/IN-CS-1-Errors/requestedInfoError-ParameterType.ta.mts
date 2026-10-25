@@ -1,4 +1,5 @@
 /* eslint-disable */
+import { ASN1Element as _Element, ASN1ConstructionError as _ConstructionError } from "@wildboar/asn1";
 import * as $ from "@wildboar/asn1/functional";
 
 
@@ -61,7 +62,7 @@ type requestedInfoError_ParameterType = _enum_for_requestedInfoError_ParameterTy
  * @enum {number}
  */
 export
-const requestedInfoError_ParameterType = _enum_for_requestedInfoError_ParameterType;
+const requestedInfoError_ParameterType: typeof _enum_for_requestedInfoError_ParameterType = _enum_for_requestedInfoError_ParameterType;
 
 /**
  * @summary requestedInfoError_ParameterType_unknownRequestedInfo
@@ -69,7 +70,7 @@ const requestedInfoError_ParameterType = _enum_for_requestedInfoError_ParameterT
  * @type {number}
  */
 export
-const requestedInfoError_ParameterType_unknownRequestedInfo: requestedInfoError_ParameterType = requestedInfoError_ParameterType.unknownRequestedInfo; /* LONG_NAMED_ENUMERATED_VALUE */
+const requestedInfoError_ParameterType_unknownRequestedInfo: _enum_for_requestedInfoError_ParameterType.unknownRequestedInfo = requestedInfoError_ParameterType.unknownRequestedInfo; /* LONG_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary unknownRequestedInfo
@@ -77,7 +78,7 @@ const requestedInfoError_ParameterType_unknownRequestedInfo: requestedInfoError_
  * @type {number}
  */
 export
-const unknownRequestedInfo: requestedInfoError_ParameterType = requestedInfoError_ParameterType.unknownRequestedInfo; /* SHORT_NAMED_ENUMERATED_VALUE */
+const unknownRequestedInfo: _enum_for_requestedInfoError_ParameterType.unknownRequestedInfo = requestedInfoError_ParameterType.unknownRequestedInfo; /* SHORT_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary requestedInfoError_ParameterType_requestedInfoNotAvailable
@@ -85,7 +86,7 @@ const unknownRequestedInfo: requestedInfoError_ParameterType = requestedInfoErro
  * @type {number}
  */
 export
-const requestedInfoError_ParameterType_requestedInfoNotAvailable: requestedInfoError_ParameterType = requestedInfoError_ParameterType.requestedInfoNotAvailable; /* LONG_NAMED_ENUMERATED_VALUE */
+const requestedInfoError_ParameterType_requestedInfoNotAvailable: _enum_for_requestedInfoError_ParameterType.requestedInfoNotAvailable = requestedInfoError_ParameterType.requestedInfoNotAvailable; /* LONG_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary requestedInfoNotAvailable
@@ -93,12 +94,23 @@ const requestedInfoError_ParameterType_requestedInfoNotAvailable: requestedInfoE
  * @type {number}
  */
 export
-const requestedInfoNotAvailable: requestedInfoError_ParameterType = requestedInfoError_ParameterType.requestedInfoNotAvailable; /* SHORT_NAMED_ENUMERATED_VALUE */
+const requestedInfoNotAvailable: _enum_for_requestedInfoError_ParameterType.requestedInfoNotAvailable = requestedInfoError_ParameterType.requestedInfoNotAvailable; /* SHORT_NAMED_ENUMERATED_VALUE */
 
 export
-const _decode_requestedInfoError_ParameterType: $.ASN1Decoder<requestedInfoError_ParameterType> = $._decodeEnumerated;
+function _decode_requestedInfoError_ParameterType(el: _Element): requestedInfoError_ParameterType {
+    const enumerated = $._decodeEnumerated(el);
+    switch (enumerated) {
+        case requestedInfoError_ParameterType.unknownRequestedInfo: return requestedInfoError_ParameterType.unknownRequestedInfo;
+        case requestedInfoError_ParameterType.requestedInfoNotAvailable: return requestedInfoError_ParameterType.requestedInfoNotAvailable;
+        default:
+            throw new _ConstructionError(
+                "Invalid ENUMERATED value " + enumerated + " for requestedInfoError_ParameterType.",
+                el,
+            );
+    }
+}
 
 export
-const _encode_requestedInfoError_ParameterType: $.ASN1Encoder<requestedInfoError_ParameterType> = $._encodeEnumerated;
+const _encode_requestedInfoError_ParameterType: $.ASN1Encoder<requestedInfoError_ParameterType> = $._encodeEnumerated as $.ASN1Encoder<requestedInfoError_ParameterType>;
 
 /* eslint-enable */

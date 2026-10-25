@@ -1,25 +1,25 @@
 /* eslint-disable */
 import {
-    OCTET_STRING,
-    OPTIONAL,
-    ASN1Element as _Element,
+    type OCTET_STRING,
+    type OPTIONAL,
+    type ASN1Element as _Element,
     ASN1TagClass as _TagClass,
     ASN1SizeError
 } from "@wildboar/asn1";
 import * as $ from "@wildboar/asn1/functional";
-import { GlobalCellID, _decode_GlobalCellID, _encode_GlobalCellID } from "../UmtsHI2Operations/GlobalCellID.ta.mjs";
+import { type GlobalCellID, _decode_GlobalCellID, _encode_GlobalCellID } from "../UmtsHI2Operations/GlobalCellID.ta.mjs";
 // export { GlobalCellID, _decode_GlobalCellID, _encode_GlobalCellID } from "../UmtsHI2Operations/GlobalCellID.ta.mjs";
-import { Rai, _decode_Rai, _encode_Rai } from "../UmtsHI2Operations/Rai.ta.mjs";
+import { type Rai, _decode_Rai, _encode_Rai } from "../UmtsHI2Operations/Rai.ta.mjs";
 // export { Rai, _decode_Rai, _encode_Rai } from "../UmtsHI2Operations/Rai.ta.mjs";
-import { GSMLocation, _decode_GSMLocation, _encode_GSMLocation } from "../UmtsHI2Operations/GSMLocation.ta.mjs";
+import { type GSMLocation, _decode_GSMLocation, _encode_GSMLocation } from "../UmtsHI2Operations/GSMLocation.ta.mjs";
 // export { GSMLocation, _decode_GSMLocation, _encode_GSMLocation } from "../UmtsHI2Operations/GSMLocation.ta.mjs";
-import { UMTSLocation, _decode_UMTSLocation, _encode_UMTSLocation } from "../UmtsHI2Operations/UMTSLocation.ta.mjs";
+import { type UMTSLocation, _decode_UMTSLocation, _encode_UMTSLocation } from "../UmtsHI2Operations/UMTSLocation.ta.mjs";
 // export { UMTSLocation, _decode_UMTSLocation, _encode_UMTSLocation } from "../UmtsHI2Operations/UMTSLocation.ta.mjs";
-import { Sai, _decode_Sai, _encode_Sai } from "../UmtsHI2Operations/Sai.ta.mjs";
+import { type Sai, _decode_Sai, _encode_Sai } from "../UmtsHI2Operations/Sai.ta.mjs";
 // export { Sai, _decode_Sai, _encode_Sai } from "../UmtsHI2Operations/Sai.ta.mjs";
-import { CivicAddress, _decode_CivicAddress, _encode_CivicAddress } from "../UmtsHI2Operations/CivicAddress.ta.mjs";
+import { type CivicAddress, _decode_CivicAddress, _encode_CivicAddress } from "../UmtsHI2Operations/CivicAddress.ta.mjs";
 // export { CivicAddress, _decode_CivicAddress, _encode_CivicAddress } from "../UmtsHI2Operations/CivicAddress.ta.mjs";
-import { Location_uELocationTimestamp, _decode_Location_uELocationTimestamp, _encode_Location_uELocationTimestamp } from "../UmtsHI2Operations/Location-uELocationTimestamp.ta.mjs";
+import { type Location_uELocationTimestamp, _decode_Location_uELocationTimestamp, _encode_Location_uELocationTimestamp } from "../UmtsHI2Operations/Location-uELocationTimestamp.ta.mjs";
 // export { Location_uELocationTimestamp, _decode_Location_uELocationTimestamp, _encode_Location_uELocationTimestamp } from "../UmtsHI2Operations/Location-uELocationTimestamp.ta.mjs";
 
 
@@ -47,25 +47,25 @@ import { Location_uELocationTimestamp, _decode_Location_uELocationTimestamp, _en
  *     e164-Number         [1] OCTET STRING (SIZE (1..25)) OPTIONAL,
  *         -- Coded in the same format as the ISUP location number (parameter
  *         -- field) of the ISUP (see EN 300 356 [30]).
- *     globalCellID        [2] GlobalCellID    OPTIONAL,
+ *     globalCellID        [2] GlobalCellID    type OPTIONAL,
  *         --see MAP format (see [4])
- *     rAI                    [4] Rai        OPTIONAL,
+ *     rAI                    [4] Rai        type OPTIONAL,
  *         -- the Routeing Area Identifier in the current  SGSN is coded in accordance with the
  *         --  10.5.5.15 of document [9] without the Routing Area Identification IEI
  *         -- (only the last 6 octets are used)
  *     gsmLocation            [5] GSMLocation OPTIONAL,
  *      umtsLocation        [6] UMTSLocation OPTIONAL,
- *     sAI                    [7] Sai    OPTIONAL,
+ *     sAI                    [7] Sai    type OPTIONAL,
  *         -- format:    PLMN-ID    3 octets (no. 1 - 3)
  *         --            LAC        2 octets (no. 4 - 5)
  *         --            SAC        2 octets (no. 6 - 7)
  *         --            (according to 3GPP TS 25.413 [62])
  *     ...,
- *     oldRAI                [8] Rai        OPTIONAL,
+ *     oldRAI                [8] Rai        type OPTIONAL,
  *         -- the Routeing Area Identifier in the old SGSN is coded in accordance with the
  *         --  10.5.5.15 of document [9] without the Routing Area Identification IEI
  *         -- (only the last 6 octets are used).
- *     tAI                    [9] OCTET STRING (SIZE (6))    OPTIONAL,
+ *     tAI                    [9] OCTET STRING (SIZE (6))    type OPTIONAL,
  *         -- The TAI is coded according to the TS 29.118 [64] without the TAI IEI.
  *         -- The tAI parameter is applicable only to the CS traffic cases where
  *         -- the available location information is the one received from the the MME.

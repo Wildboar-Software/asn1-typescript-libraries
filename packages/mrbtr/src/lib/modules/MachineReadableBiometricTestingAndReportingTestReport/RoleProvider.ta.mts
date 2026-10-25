@@ -1,6 +1,6 @@
 /* eslint-disable */
 import {
-    ASN1Element as _Element,
+    type ASN1Element as _Element,
     ASN1TagClass as _TagClass,
     ASN1Construction as _Construction,
     ASN1UniversalType as _UniversalType,
@@ -91,7 +91,7 @@ type RoleProvider = _enum_for_RoleProvider;
  * @enum {number}
  */
 export
-const RoleProvider = _enum_for_RoleProvider;
+const RoleProvider: typeof _enum_for_RoleProvider = _enum_for_RoleProvider;
 
 /**
  * @summary RoleProvider_manufacturer
@@ -104,7 +104,7 @@ const RoleProvider = _enum_for_RoleProvider;
  * @type {number}
  */
 export
-const RoleProvider_manufacturer: RoleProvider = RoleProvider.manufacturer; /* LONG_NAMED_ENUMERATED_VALUE */
+const RoleProvider_manufacturer: _enum_for_RoleProvider.manufacturer = RoleProvider.manufacturer; /* LONG_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary manufacturer
@@ -112,7 +112,7 @@ const RoleProvider_manufacturer: RoleProvider = RoleProvider.manufacturer; /* LO
  * @type {number}
  */
 export
-const manufacturer: RoleProvider = RoleProvider.manufacturer; /* SHORT_NAMED_ENUMERATED_VALUE */
+const manufacturer: _enum_for_RoleProvider.manufacturer = RoleProvider.manufacturer; /* SHORT_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary RoleProvider_reseller
@@ -124,7 +124,7 @@ const manufacturer: RoleProvider = RoleProvider.manufacturer; /* SHORT_NAMED_ENU
  * @type {number}
  */
 export
-const RoleProvider_reseller: RoleProvider = RoleProvider.reseller; /* LONG_NAMED_ENUMERATED_VALUE */
+const RoleProvider_reseller: _enum_for_RoleProvider.reseller = RoleProvider.reseller; /* LONG_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary reseller
@@ -132,7 +132,7 @@ const RoleProvider_reseller: RoleProvider = RoleProvider.reseller; /* LONG_NAMED
  * @type {number}
  */
 export
-const reseller: RoleProvider = RoleProvider.reseller; /* SHORT_NAMED_ENUMERATED_VALUE */
+const reseller: _enum_for_RoleProvider.reseller = RoleProvider.reseller; /* SHORT_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary RoleProvider_integrator
@@ -145,7 +145,7 @@ const reseller: RoleProvider = RoleProvider.reseller; /* SHORT_NAMED_ENUMERATED_
  * @type {number}
  */
 export
-const RoleProvider_integrator: RoleProvider = RoleProvider.integrator; /* LONG_NAMED_ENUMERATED_VALUE */
+const RoleProvider_integrator: _enum_for_RoleProvider.integrator = RoleProvider.integrator; /* LONG_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary integrator
@@ -153,7 +153,7 @@ const RoleProvider_integrator: RoleProvider = RoleProvider.integrator; /* LONG_N
  * @type {number}
  */
 export
-const integrator: RoleProvider = RoleProvider.integrator; /* SHORT_NAMED_ENUMERATED_VALUE */
+const integrator: _enum_for_RoleProvider.integrator = RoleProvider.integrator; /* SHORT_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary RoleProvider_other
@@ -161,7 +161,7 @@ const integrator: RoleProvider = RoleProvider.integrator; /* SHORT_NAMED_ENUMERA
  * @type {number}
  */
 export
-const RoleProvider_other: RoleProvider = RoleProvider.other; /* LONG_NAMED_ENUMERATED_VALUE */
+const RoleProvider_other: _enum_for_RoleProvider.other = RoleProvider.other; /* LONG_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary other
@@ -169,7 +169,7 @@ const RoleProvider_other: RoleProvider = RoleProvider.other; /* LONG_NAMED_ENUME
  * @type {number}
  */
 export
-const other: RoleProvider = RoleProvider.other; /* SHORT_NAMED_ENUMERATED_VALUE */
+const other: _enum_for_RoleProvider.other = RoleProvider.other; /* SHORT_NAMED_ENUMERATED_VALUE */
 
 
 /**
@@ -178,7 +178,7 @@ const other: RoleProvider = RoleProvider.other; /* SHORT_NAMED_ENUMERATED_VALUE 
  * @param el The element being decoded.
  * @returns The decoded data structure.
  */
-export const _decode_RoleProvider = $._decodeEnumerated;
+export const _decode_RoleProvider: $.ASN1Decoder<number> = $._decodeEnumerated;
 
 
 /**
@@ -188,7 +188,7 @@ export const _decode_RoleProvider = $._decodeEnumerated;
  * @param elGetter A function that can be used to get new ASN.1 elements.
  * @returns {_Element} The RoleProvider, encoded as an ASN.1 Element.
  */
-export const _encode_RoleProvider = $._encodeEnumerated;
+export const _encode_RoleProvider: $.ASN1Encoder<number> = $._encodeEnumerated;
 
 
 /* eslint-enable */

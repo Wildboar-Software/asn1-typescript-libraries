@@ -1,20 +1,20 @@
 /* eslint-disable */
 import {
-    OPTIONAL,
-    ASN1Element as _Element,
+    type OPTIONAL,
+    type ASN1Element as _Element,
     ASN1TagClass as _TagClass
 } from "@wildboar/asn1";
 import * as $ from "@wildboar/asn1/functional";
-import { GlobalCellId, _decode_GlobalCellId, _encode_GlobalCellId } from "../MAP-CommonDataTypes/GlobalCellId.ta.mjs";
-import { IMSI, _decode_IMSI, _encode_IMSI } from "../MAP-CommonDataTypes/IMSI.ta.mjs";
-import { TMSI, _decode_TMSI, _encode_TMSI } from "../MAP-CommonDataTypes/TMSI.ta.mjs";
+import { type GlobalCellId, _decode_GlobalCellId, _encode_GlobalCellId } from "../MAP-CommonDataTypes/GlobalCellId.ta.mjs";
+import { type IMSI, _decode_IMSI, _encode_IMSI } from "../MAP-CommonDataTypes/IMSI.ta.mjs";
+import { type TMSI, _decode_TMSI, _encode_TMSI } from "../MAP-CommonDataTypes/TMSI.ta.mjs";
 import { ExtensionContainer, _decode_ExtensionContainer, _encode_ExtensionContainer } from "../MAP-ExtensionDataTypes/ExtensionContainer.ta.mjs";
-import { RequestedInfo, _decode_RequestedInfo, _encode_RequestedInfo, _enum_for_RequestedInfo } from "../MAP-GR-DataTypes/RequestedInfo.ta.mjs";
+import { type RequestedInfo, _decode_RequestedInfo, _encode_RequestedInfo, _enum_for_RequestedInfo } from "../MAP-GR-DataTypes/RequestedInfo.ta.mjs";
 import { TalkerPriority, _decode_TalkerPriority, _encode_TalkerPriority, _enum_for_TalkerPriority } from "../MAP-GR-DataTypes/TalkerPriority.ta.mjs";
-import { AdditionalInfo, _decode_AdditionalInfo, _encode_AdditionalInfo } from "../MAP-MS-DataTypes/AdditionalInfo.ta.mjs";
-import { Cksn, _decode_Cksn, _encode_Cksn } from "../MAP-MS-DataTypes/Cksn.ta.mjs";
-import { Long_GroupId, _decode_Long_GroupId, _encode_Long_GroupId } from "../MAP-MS-DataTypes/Long-GroupId.ta.mjs";
-import { Ext_TeleserviceCode, _decode_Ext_TeleserviceCode, _encode_Ext_TeleserviceCode } from "../MAP-TS-Code/Ext-TeleserviceCode.ta.mjs";
+import { type AdditionalInfo, _decode_AdditionalInfo, _encode_AdditionalInfo } from "../MAP-MS-DataTypes/AdditionalInfo.ta.mjs";
+import { type Cksn, _decode_Cksn, _encode_Cksn } from "../MAP-MS-DataTypes/Cksn.ta.mjs";
+import { type Long_GroupId, _decode_Long_GroupId, _encode_Long_GroupId } from "../MAP-MS-DataTypes/Long-GroupId.ta.mjs";
+import { type Ext_TeleserviceCode, _decode_Ext_TeleserviceCode, _encode_Ext_TeleserviceCode } from "../MAP-TS-Code/Ext-TeleserviceCode.ta.mjs";
 
 
 /**
@@ -32,13 +32,13 @@ import { Ext_TeleserviceCode, _decode_Ext_TeleserviceCode, _encode_Ext_Teleservi
  *     requestedInfo    RequestedInfo,
  *     groupId    Long-GroupId, 
  *     teleservice    Ext-TeleserviceCode,
- *     cellId    [0] GlobalCellId    OPTIONAL,
- *     imsi    [1] IMSI    OPTIONAL,
- *     tmsi    [2] TMSI    OPTIONAL,
- *     additionalInfo    [3] AdditionalInfo    OPTIONAL,
- *     talkerPriority    [4] TalkerPriority    OPTIONAL,
- *     cksn    [5] Cksn    OPTIONAL,
- *     extensionContainer    [6] ExtensionContainer    OPTIONAL,
+ *     cellId    [0] GlobalCellId    type OPTIONAL,
+ *     imsi    [1] IMSI    type OPTIONAL,
+ *     tmsi    [2] TMSI    type OPTIONAL,
+ *     additionalInfo    [3] AdditionalInfo    type OPTIONAL,
+ *     talkerPriority    [4] TalkerPriority    type OPTIONAL,
+ *     cksn    [5] Cksn    type OPTIONAL,
+ *     extensionContainer    [6] ExtensionContainer    type OPTIONAL,
  *     ... }
  * ```
  * 
@@ -46,116 +46,140 @@ import { Ext_TeleserviceCode, _decode_Ext_TeleserviceCode, _encode_Ext_Teleservi
  */
 export
 class SendGroupCallInfoArg {
+    /**
+     * @summary `requestedInfo`.
+     * @description
+     *
+     * See 3GPP TS 43.068 (clause 10.7A.3).
+     *
+     * @public
+     * @readonly
+     */
+    public readonly requestedInfo: RequestedInfo;
+    /**
+     * @summary `groupId`.
+     * @description
+     *
+     * See 3GPP TS 43.068 and 43.069. If prefixes are used with group IDs,
+     * the most significant digit contains the prefix (clause 10.7A.3).
+     *
+     * @public
+     * @readonly
+     */
+    public readonly groupId: Long_GroupId;
+    /**
+     * @summary `teleservice`.
+     * @description
+     *
+     * VBS or VGCS (clause 10.7A.3).
+     *
+     * @public
+     * @readonly
+     */
+    public readonly teleservice: Ext_TeleserviceCode;
+    /**
+     * @summary `cellId`.
+     * @description
+     *
+     * Initiating service subscriber's current cell (clause 10.7A.3).
+     *
+     * @public
+     * @readonly
+     */
+    public readonly cellId?: OPTIONAL<GlobalCellId>;
+    /**
+     * @summary `imsi`.
+     * @description
+     *
+     * In the request: call originator. In the response: uplink requesting
+     * subscriber (clause 10.7A.3).
+     *
+     * @public
+     * @readonly
+     */
+    public readonly imsi?: OPTIONAL<IMSI>;
+    /**
+     * @summary `tmsi`.
+     * @description
+     *
+     * See clause 7.6.2 (clause 10.7A.3).
+     *
+     * @public
+     * @readonly
+     */
+    public readonly tmsi?: OPTIONAL<TMSI>;
+    /**
+     * @summary `additionalInfo`.
+     * @description
+     *
+     * See 3GPP TS 43.068 (clause 10.7A.3).
+     *
+     * @public
+     * @readonly
+     */
+    public readonly additionalInfo?: OPTIONAL<AdditionalInfo>;
+    /**
+     * @summary `talkerPriority`.
+     * @description
+     *
+     * See 3GPP TS 43.068 (clause 10.7A.3).
+     *
+     * @public
+     * @readonly
+     */
+    public readonly talkerPriority?: OPTIONAL<TalkerPriority>;
+    /**
+     * @summary `cksn`.
+     * @description
+     *
+     * See clause 7.6.7 (clause 10.7A.3).
+     *
+     * @public
+     * @readonly
+     */
+    public readonly cksn?: OPTIONAL<Cksn>;
+    /**
+     * @summary `extensionContainer`.
+     * @description
+     *
+     * Private or PCS extensions (3GPP TS 29.002 V19.1.0 clause 17.7.11).
+     *
+     * @public
+     * @readonly
+     */
+    public readonly extensionContainer?: OPTIONAL<ExtensionContainer>;
+    /**
+     * @summary Extensions that are not recognized.
+     * @public
+     * @readonly
+     */
+    public readonly _unrecognizedExtensionsList: _Element[];
+
     constructor (
-        /**
-         * @summary `requestedInfo`.
-         * @description
-         *
-         * See 3GPP TS 43.068 (clause 10.7A.3).
-         *
-         * @public
-         * @readonly
-         */
-        readonly requestedInfo: RequestedInfo,
-        /**
-         * @summary `groupId`.
-         * @description
-         *
-         * See 3GPP TS 43.068 and 43.069. If prefixes are used with group IDs,
-         * the most significant digit contains the prefix (clause 10.7A.3).
-         *
-         * @public
-         * @readonly
-         */
-        readonly groupId: Long_GroupId,
-        /**
-         * @summary `teleservice`.
-         * @description
-         *
-         * VBS or VGCS (clause 10.7A.3).
-         *
-         * @public
-         * @readonly
-         */
-        readonly teleservice: Ext_TeleserviceCode,
-        /**
-         * @summary `cellId`.
-         * @description
-         *
-         * Initiating service subscriber's current cell (clause 10.7A.3).
-         *
-         * @public
-         * @readonly
-         */
-        readonly cellId?: OPTIONAL<GlobalCellId>,
-        /**
-         * @summary `imsi`.
-         * @description
-         *
-         * In the request: call originator. In the response: uplink requesting
-         * subscriber (clause 10.7A.3).
-         *
-         * @public
-         * @readonly
-         */
-        readonly imsi?: OPTIONAL<IMSI>,
-        /**
-         * @summary `tmsi`.
-         * @description
-         *
-         * See clause 7.6.2 (clause 10.7A.3).
-         *
-         * @public
-         * @readonly
-         */
-        readonly tmsi?: OPTIONAL<TMSI>,
-        /**
-         * @summary `additionalInfo`.
-         * @description
-         *
-         * See 3GPP TS 43.068 (clause 10.7A.3).
-         *
-         * @public
-         * @readonly
-         */
-        readonly additionalInfo?: OPTIONAL<AdditionalInfo>,
-        /**
-         * @summary `talkerPriority`.
-         * @description
-         *
-         * See 3GPP TS 43.068 (clause 10.7A.3).
-         *
-         * @public
-         * @readonly
-         */
-        readonly talkerPriority?: OPTIONAL<TalkerPriority>,
-        /**
-         * @summary `cksn`.
-         * @description
-         *
-         * See clause 7.6.7 (clause 10.7A.3).
-         *
-         * @public
-         * @readonly
-         */
-        readonly cksn?: OPTIONAL<Cksn>,
-        /**
-         * @summary `extensionContainer`.
-         * @description
-         *
-         * Private or PCS extensions (3GPP TS 29.002 V19.1.0 clause 17.7.11).
-         *
-         * @public
-         * @readonly
-         */
-        readonly extensionContainer?: OPTIONAL<ExtensionContainer>,
-        /**
-         * @summary Extensions that are not recognized.
-         * @public
-         * @readonly
-         */
-        readonly _unrecognizedExtensionsList: _Element[] = []
-    ) {}
+        requestedInfo: RequestedInfo,
+        groupId: Long_GroupId,
+        teleservice: Ext_TeleserviceCode,
+        cellId?: OPTIONAL<GlobalCellId>,
+        imsi?: OPTIONAL<IMSI>,
+        tmsi?: OPTIONAL<TMSI>,
+        additionalInfo?: OPTIONAL<AdditionalInfo>,
+        talkerPriority?: OPTIONAL<TalkerPriority>,
+        cksn?: OPTIONAL<Cksn>,
+        extensionContainer?: OPTIONAL<ExtensionContainer>,
+        _unrecognizedExtensionsList: _Element[] = []
+    ) {
+        this.requestedInfo = requestedInfo;
+        this.groupId = groupId;
+        this.teleservice = teleservice;
+        this.cellId = cellId;
+        this.imsi = imsi;
+        this.tmsi = tmsi;
+        this.additionalInfo = additionalInfo;
+        this.talkerPriority = talkerPriority;
+        this.cksn = cksn;
+        this.extensionContainer = extensionContainer;
+        this._unrecognizedExtensionsList = _unrecognizedExtensionsList;
+    }
 
     /**
      * @summary Restructures an object into a SendGroupCallInfoArg
@@ -179,13 +203,13 @@ class SendGroupCallInfoArg {
          * @static
          */
 
-    public static _enum_for_requestedInfo = _enum_for_RequestedInfo;        /**
+    public static _enum_for_requestedInfo: typeof _enum_for_RequestedInfo = _enum_for_RequestedInfo;        /**
          * @summary The enum used as the type of the component `talkerPriority`
          * @public
          * @static
          */
 
-    public static _enum_for_talkerPriority = _enum_for_TalkerPriority;
+    public static _enum_for_talkerPriority: typeof _enum_for_TalkerPriority = _enum_for_TalkerPriority;
 }
 
 /**

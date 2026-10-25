@@ -1,6 +1,6 @@
 /* eslint-disable */
 import {
-    ASN1Element as _Element,
+    type ASN1Element as _Element,
     ASN1TagClass as _TagClass,
     ASN1Construction as _Construction,
     ASN1UniversalType as _UniversalType,
@@ -11,7 +11,7 @@ import {
 } from '@wildboar/asn1';
 import * as $ from '@wildboar/asn1/functional';
 import {
-    Capacity,
+    type Capacity,
     _decode_Capacity,
     _encode_Capacity,
 } from '../M3100ASN1TypeModule2/Capacity.ta.mjs';
@@ -33,32 +33,42 @@ import {
  *
  */
 export class Capacities {
+    /**
+     * @summary `availableLinkCapacity`.
+     * @public
+     * @readonly
+     */
+    public readonly availableLinkCapacity: Capacity;
+    /**
+     * @summary `maxProvisionableCapacity`.
+     * @public
+     * @readonly
+     */
+    public readonly maxProvisionableCapacity: Capacity;
+    /**
+     * @summary `potentialLinkCapacity`.
+     * @public
+     * @readonly
+     */
+    public readonly potentialLinkCapacity: Capacity;
+    /**
+     * @summary `provisionedLinkCapacity`.
+     * @public
+     * @readonly
+     */
+    public readonly provisionedLinkCapacity: Capacity;
+
     constructor(
-        /**
-         * @summary `availableLinkCapacity`.
-         * @public
-         * @readonly
-         */
-        readonly availableLinkCapacity: Capacity,
-        /**
-         * @summary `maxProvisionableCapacity`.
-         * @public
-         * @readonly
-         */
-        readonly maxProvisionableCapacity: Capacity,
-        /**
-         * @summary `potentialLinkCapacity`.
-         * @public
-         * @readonly
-         */
-        readonly potentialLinkCapacity: Capacity,
-        /**
-         * @summary `provisionedLinkCapacity`.
-         * @public
-         * @readonly
-         */
-        readonly provisionedLinkCapacity: Capacity
-    ) {}
+        availableLinkCapacity: Capacity,
+        maxProvisionableCapacity: Capacity,
+        potentialLinkCapacity: Capacity,
+        provisionedLinkCapacity: Capacity
+    ) {
+        this.availableLinkCapacity = availableLinkCapacity;
+        this.maxProvisionableCapacity = maxProvisionableCapacity;
+        this.potentialLinkCapacity = potentialLinkCapacity;
+        this.provisionedLinkCapacity = provisionedLinkCapacity;
+    }
 
     /**
      * @summary Restructures an object into a Capacities

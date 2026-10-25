@@ -1,7 +1,7 @@
 import {
-    OPTIONAL,
-    INTEGER,
-    ASN1Element as _Element,
+    type OPTIONAL,
+    type INTEGER,
+    type ASN1Element as _Element,
     ASN1OverflowError,
     ASN1TagClass as _TagClass,
 } from "@wildboar/asn1";
@@ -24,22 +24,29 @@ import { Burst, _decode_Burst, _encode_Burst } from "./Burst.ta.mjs";
  *
  */
 export class BurstList {
+    /**
+     * @summary `warningPeriod`.
+     * @description
+     *
+     * Time before Max Call Period Duration expiry when playing the burst
+     * list starts. Measured in 1 second units.
+     * (3GPP TS 29.078 V19.0.0 clauses 5.1 and 11.2).
+     *
+     * @public
+     * @readonly
+     */
+    public readonly warningPeriod: OPTIONAL<INTEGER>;
+    public readonly bursts: Burst;
+    public readonly _unrecognizedExtensionsList: _Element[];
+
     constructor (
-        /**
-         * @summary `warningPeriod`.
-         * @description
-         *
-         * Time before Max Call Period Duration expiry when playing the burst
-         * list starts. Measured in 1 second units.
-         * (3GPP TS 29.078 V19.0.0 clauses 5.1 and 11.2).
-         *
-         * @public
-         * @readonly
-         */
-        readonly warningPeriod: OPTIONAL<INTEGER>,
-        readonly bursts: Burst,
-        readonly _unrecognizedExtensionsList: _Element[] = [],
+        warningPeriod: OPTIONAL<INTEGER>,
+        bursts: Burst,
+        _unrecognizedExtensionsList: _Element[] = [],
     ) {
+        this.warningPeriod = warningPeriod;
+        this.bursts = bursts;
+        this._unrecognizedExtensionsList = _unrecognizedExtensionsList;
         if (warningPeriod !== undefined && (typeof warningPeriod === "bigint" ? (warningPeriod < 1n || warningPeriod > 1200n) : (warningPeriod < 1 || warningPeriod > 1200))) {
             throw new ASN1OverflowError("BurstList.warningPeriod violates INTEGER constraint");
         }

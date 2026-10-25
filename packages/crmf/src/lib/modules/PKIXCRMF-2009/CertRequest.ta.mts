@@ -1,9 +1,9 @@
 /* eslint-disable */
 import {
-    ASN1Element as _Element,
+    type ASN1Element as _Element,
     ASN1TagClass as _TagClass,
-    INTEGER,
-    OPTIONAL,
+    type INTEGER,
+    type OPTIONAL,
 } from "@wildboar/asn1";
 import * as $ from "@wildboar/asn1/functional";
 import {
@@ -12,7 +12,7 @@ import {
     _encode_CertTemplate,
 } from "../PKIXCRMF-2009/CertTemplate.ta.mjs";
 import {
-    Controls,
+    type Controls,
     _decode_Controls,
     _encode_Controls,
 } from "../PKIXCRMF-2009/Controls.ta.mjs";
@@ -37,42 +37,50 @@ import {
  *
  */
 export class CertRequest {
+    /**
+     * @summary `certReqId`.
+     * @description
+     *
+     * Integer used by the requestor to match a request with its
+     * response ([RFC 4211 §5](https://datatracker.ietf.org/doc/html/rfc4211#section-5)).
+     *
+     * @public
+     * @readonly
+     */
+    public readonly certReqId: INTEGER;
+    /**
+     * @summary `certTemplate`.
+     * @description
+     *
+     * Template of an X.509 certificate; requestor fills fields for
+     * which specific values are desired ([RFC 4211 §5](https://datatracker.ietf.org/doc/html/rfc4211#section-5)).
+     *
+     * @public
+     * @readonly
+     */
+    public readonly certTemplate: CertTemplate;
+    /**
+     * @summary `controls`.
+     * @description
+     *
+     * Attributes that are not part of the certificate but control
+     * issuance context (e.g. `regToken`, archive options)
+     * ([RFC 4211 §5](https://datatracker.ietf.org/doc/html/rfc4211#section-5), §6).
+     *
+     * @public
+     * @readonly
+     */
+    public readonly controls?: OPTIONAL<Controls>;
+
     constructor(
-        /**
-         * @summary `certReqId`.
-         * @description
-         *
-         * Integer used by the requestor to match a request with its
-         * response ([RFC 4211 §5](https://datatracker.ietf.org/doc/html/rfc4211#section-5)).
-         *
-         * @public
-         * @readonly
-         */
-        readonly certReqId: INTEGER,
-        /**
-         * @summary `certTemplate`.
-         * @description
-         *
-         * Template of an X.509 certificate; requestor fills fields for
-         * which specific values are desired ([RFC 4211 §5](https://datatracker.ietf.org/doc/html/rfc4211#section-5)).
-         *
-         * @public
-         * @readonly
-         */
-        readonly certTemplate: CertTemplate,
-        /**
-         * @summary `controls`.
-         * @description
-         *
-         * Attributes that are not part of the certificate but control
-         * issuance context (e.g. `regToken`, archive options)
-         * ([RFC 4211 §5](https://datatracker.ietf.org/doc/html/rfc4211#section-5), §6).
-         *
-         * @public
-         * @readonly
-         */
-        readonly controls?: OPTIONAL<Controls>
-    ) {}
+        certReqId: INTEGER,
+        certTemplate: CertTemplate,
+        controls?: OPTIONAL<Controls>
+    ) {
+        this.certReqId = certReqId;
+        this.certTemplate = certTemplate;
+        this.controls = controls;
+    }
 
     /**
      * @summary Restructures an object into a CertRequest

@@ -1,24 +1,24 @@
 /* eslint-disable */
 import {
-    INTEGER,
-    OBJECT_IDENTIFIER,
-    OPTIONAL,
-    ASN1Element as _Element,
+    type INTEGER,
+    type OBJECT_IDENTIFIER,
+    type OPTIONAL,
+    type ASN1Element as _Element,
     ASN1TagClass as _TagClass,
     ASN1OverflowError
 } from "@wildboar/asn1";
 import * as $ from "@wildboar/asn1/functional";
-import { LawfulInterceptionIdentifier, _decode_LawfulInterceptionIdentifier, _encode_LawfulInterceptionIdentifier } from "../HI2Operations/LawfulInterceptionIdentifier.ta.mjs";
+import { type LawfulInterceptionIdentifier, _decode_LawfulInterceptionIdentifier, _encode_LawfulInterceptionIdentifier } from "../HI2Operations/LawfulInterceptionIdentifier.ta.mjs";
 // export { LawfulInterceptionIdentifier, _decode_LawfulInterceptionIdentifier, _encode_LawfulInterceptionIdentifier } from "../HI2Operations/LawfulInterceptionIdentifier.ta.mjs";
-import { EPSCorrelationNumber, _decode_EPSCorrelationNumber, _encode_EPSCorrelationNumber } from "../EpsHI2Operations/EPSCorrelationNumber.ta.mjs";
+import { type EPSCorrelationNumber, _decode_EPSCorrelationNumber, _encode_EPSCorrelationNumber } from "../EpsHI2Operations/EPSCorrelationNumber.ta.mjs";
 // export { EPSCorrelationNumber, _decode_EPSCorrelationNumber, _encode_EPSCorrelationNumber } from "../EpsHI2Operations/EPSCorrelationNumber.ta.mjs";
-import { TimeStamp, _decode_TimeStamp, _encode_TimeStamp } from "../HI2Operations/TimeStamp.ta.mjs";
+import { type TimeStamp, _decode_TimeStamp, _encode_TimeStamp } from "../HI2Operations/TimeStamp.ta.mjs";
 // export { TimeStamp, _decode_TimeStamp, _encode_TimeStamp } from "../HI2Operations/TimeStamp.ta.mjs";
 import { TPDU_direction, _decode_TPDU_direction, _encode_TPDU_direction, _enum_for_TPDU_direction } from "../Eps-HI3-PS/TPDU-direction.ta.mjs";
 // export { TPDU_direction, _enum_for_TPDU_direction, TPDU_direction_from_target /* IMPORTED_LONG_ENUMERATION_ITEM */, from_target /* IMPORTED_SHORT_ENUMERATION_ITEM */, TPDU_direction_to_target /* IMPORTED_LONG_ENUMERATION_ITEM */, to_target /* IMPORTED_SHORT_ENUMERATION_ITEM */, TPDU_direction_unknown /* IMPORTED_LONG_ENUMERATION_ITEM */, unknown /* IMPORTED_SHORT_ENUMERATION_ITEM */, _decode_TPDU_direction, _encode_TPDU_direction } from "../Eps-HI3-PS/TPDU-direction.ta.mjs";
 import { National_HI3_ASN1parameters, _decode_National_HI3_ASN1parameters, _encode_National_HI3_ASN1parameters } from "../Eps-HI3-PS/National-HI3-ASN1parameters.ta.mjs";
 // export { National_HI3_ASN1parameters, _decode_National_HI3_ASN1parameters, _encode_National_HI3_ASN1parameters } from "../Eps-HI3-PS/National-HI3-ASN1parameters.ta.mjs";
-import { ICE_type, _decode_ICE_type, _encode_ICE_type, _enum_for_ICE_type } from "../Eps-HI3-PS/ICE-type.ta.mjs";
+import { type ICE_type, _decode_ICE_type, _encode_ICE_type, _enum_for_ICE_type } from "../Eps-HI3-PS/ICE-type.ta.mjs";
 // export { ICE_type, _enum_for_ICE_type, ICE_type_sgsn /* IMPORTED_LONG_ENUMERATION_ITEM */, sgsn /* IMPORTED_SHORT_ENUMERATION_ITEM */, ICE_type_ggsn /* IMPORTED_LONG_ENUMERATION_ITEM */, ggsn /* IMPORTED_SHORT_ENUMERATION_ITEM */, ICE_type_s_GW /* IMPORTED_LONG_ENUMERATION_ITEM */, s_GW /* IMPORTED_SHORT_ENUMERATION_ITEM */, ICE_type_pDN_GW /* IMPORTED_LONG_ENUMERATION_ITEM */, pDN_GW /* IMPORTED_SHORT_ENUMERATION_ITEM */, ICE_type_colocated_SAE_GWs /* IMPORTED_LONG_ENUMERATION_ITEM */, colocated_SAE_GWs /* IMPORTED_SHORT_ENUMERATION_ITEM */, ICE_type_ePDG /* IMPORTED_LONG_ENUMERATION_ITEM */, ePDG /* IMPORTED_SHORT_ENUMERATION_ITEM */, _decode_ICE_type, _encode_ICE_type } from "../Eps-HI3-PS/ICE-type.ta.mjs";
 
 
@@ -202,13 +202,13 @@ class ULIC_header {
          * @static
          */
 
-    public static _enum_for_t_PDU_direction = _enum_for_TPDU_direction;        /**
+    public static _enum_for_t_PDU_direction: typeof _enum_for_TPDU_direction = _enum_for_TPDU_direction;        /**
          * @summary The enum used as the type of the component `ice_type`
          * @public
          * @static
          */
 
-    public static _enum_for_ice_type = _enum_for_ICE_type;
+    public static _enum_for_ice_type: typeof _enum_for_ICE_type = _enum_for_ICE_type;
 }
 
 /**

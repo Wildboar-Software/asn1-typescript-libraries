@@ -1,13 +1,13 @@
 /* eslint-disable */
 import {
-    OPTIONAL,
-    ASN1Element as _Element,
+    type OPTIONAL,
+    type ASN1Element as _Element,
     ASN1TagClass as _TagClass
 } from "@wildboar/asn1";
 import * as $ from "@wildboar/asn1/functional";
-import { PresentedNumberScreened, _decode_PresentedNumberScreened, _encode_PresentedNumberScreened } from "../Addressing-Data-Elements-asn1-97/PresentedNumberScreened.ta.mjs";
-import { Name, _decode_Name, _encode_Name } from "../Name-Operations-asn1-97/Name.ta.mjs";
-import { ReAlertingArg_argumentExtension, _decode_ReAlertingArg_argumentExtension, _encode_ReAlertingArg_argumentExtension } from "../Recall-Operations-asn1-97/ReAlertingArg-argumentExtension.ta.mjs";
+import { type PresentedNumberScreened, _decode_PresentedNumberScreened, _encode_PresentedNumberScreened } from "../Addressing-Data-Elements-asn1-97/PresentedNumberScreened.ta.mjs";
+import { type Name, _decode_Name, _encode_Name } from "../Name-Operations-asn1-97/Name.ta.mjs";
+import { type ReAlertingArg_argumentExtension, _decode_ReAlertingArg_argumentExtension, _encode_ReAlertingArg_argumentExtension } from "../Recall-Operations-asn1-97/ReAlertingArg-argumentExtension.ta.mjs";
 
 /**
  * @summary ReAlertingArg

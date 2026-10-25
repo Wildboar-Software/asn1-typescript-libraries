@@ -2,13 +2,13 @@
 
 import * as $ from "@wildboar/asn1/functional";
 import {
-    SEQUENCE,
-    SET,
-    ASN1Element as _Element,
+    type SEQUENCE,
+    type SET,
+    type ASN1Element as _Element,
     ASN1TagClass as _TagClass,
     ASN1ConstructionError as _ConstructionError
 } from "@wildboar/asn1";
-import { LocCrossRefID, _decode_LocCrossRefID, _encode_LocCrossRefID } from "../CSTA-device-feature-types/LocCrossRefID.ta.mjs";
+import { type LocCrossRefID, _decode_LocCrossRefID, _encode_LocCrossRefID } from "../CSTA-device-feature-types/LocCrossRefID.ta.mjs";
 
 import { DeviceID, _decode_DeviceID, _encode_DeviceID } from "../CSTA-device-identifiers/DeviceID.ta.mjs";
 
@@ -34,29 +34,35 @@ import { DeviceID, _decode_DeviceID, _encode_DeviceID } from "../CSTA-device-ide
  */
 export
 class LocationSessionListEntry {
+    /**
+     * @summary `locCrossRefID`.
+     * @description
+     *
+     * Cross-reference assigned when the session was created. ECMA-269
+     * §28.1.12.
+     *
+     * @public
+     * @readonly
+     */
+    public readonly locCrossRefID: LocCrossRefID;
+    /**
+     * @summary `locDevice`.
+     * @description
+     *
+     * DeviceID of the tracked resource. ECMA-269 §28.1.12.
+     *
+     * @public
+     * @readonly
+     */
+    public readonly locDevice: DeviceID;
+
     constructor (
-        /**
-         * @summary `locCrossRefID`.
-         * @description
-         *
-         * Cross-reference assigned when the session was created. ECMA-269
-         * §28.1.12.
-         *
-         * @public
-         * @readonly
-         */
-        readonly locCrossRefID: LocCrossRefID,
-        /**
-         * @summary `locDevice`.
-         * @description
-         *
-         * DeviceID of the tracked resource. ECMA-269 §28.1.12.
-         *
-         * @public
-         * @readonly
-         */
-        readonly locDevice: DeviceID
-    ) {}
+        locCrossRefID: LocCrossRefID,
+        locDevice: DeviceID
+    ) {
+        this.locCrossRefID = locCrossRefID;
+        this.locDevice = locDevice;
+    }
 
     /**
      * @summary Restructures an object into a LocationSessionListEntry

@@ -1,7 +1,7 @@
 /* eslint-disable */
 import {
-    INTEGER,
-    ASN1Element as _Element,
+    type INTEGER,
+    type ASN1Element as _Element,
     ASN1TagClass as _TagClass,
     ASN1Construction as _Construction,
     ASN1UniversalType as _UniversalType,
@@ -12,7 +12,7 @@ import {
 } from '@wildboar/asn1';
 import * as $ from '@wildboar/asn1/functional';
 import {
-    ObjectInstance,
+    type ObjectInstance,
     _decode_ObjectInstance,
     _encode_ObjectInstance,
 } from '@wildboar/cmip';
@@ -29,20 +29,26 @@ import {
  *
  */
 export class ToTPPools_Item {
+    /**
+     * @summary `tpPoolId`.
+     * @public
+     * @readonly
+     */
+    public readonly tpPoolId: ObjectInstance;
+    /**
+     * @summary `numberOfTPs`.
+     * @public
+     * @readonly
+     */
+    public readonly numberOfTPs: INTEGER;
+
     constructor(
-        /**
-         * @summary `tpPoolId`.
-         * @public
-         * @readonly
-         */
-        readonly tpPoolId: ObjectInstance,
-        /**
-         * @summary `numberOfTPs`.
-         * @public
-         * @readonly
-         */
-        readonly numberOfTPs: INTEGER
-    ) {}
+        tpPoolId: ObjectInstance,
+        numberOfTPs: INTEGER
+    ) {
+        this.tpPoolId = tpPoolId;
+        this.numberOfTPs = numberOfTPs;
+    }
 
     /**
      * @summary Restructures an object into a ToTPPools_Item

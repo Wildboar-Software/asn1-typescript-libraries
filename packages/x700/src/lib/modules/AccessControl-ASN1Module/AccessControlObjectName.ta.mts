@@ -1,7 +1,7 @@
 /* eslint-disable */
 import {
-    GraphicString,
-    ASN1Element as _Element,
+    type GraphicString,
+    type ASN1Element as _Element,
     ASN1TagClass as _TagClass,
     ASN1Construction as _Construction,
     ASN1UniversalType as _UniversalType,
@@ -32,10 +32,10 @@ import * as $ from '@wildboar/asn1/functional';
 export type AccessControlObjectName = GraphicString; // GraphicString
 
 
-export const _decode_AccessControlObjectName = $._decodeGraphicString;
+export const _decode_AccessControlObjectName: $.ASN1Decoder<string> = $._decodeGraphicString;
 
 
-export const _encode_AccessControlObjectName = $._encodeGraphicString;
+export const _encode_AccessControlObjectName: $.ASN1Encoder<string> = $._encodeGraphicString;
 
 
 /* eslint-enable */

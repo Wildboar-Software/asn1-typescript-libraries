@@ -1,26 +1,26 @@
 /* eslint-disable */
 import {
-    NULL,
-    OPTIONAL,
-    ASN1Element as _Element,
+    type NULL,
+    type OPTIONAL,
+    type ASN1Element as _Element,
     ASN1TagClass as _TagClass
 } from "@wildboar/asn1";
 import * as $ from "@wildboar/asn1/functional";
-import { AgeOfLocationInformation, _decode_AgeOfLocationInformation, _encode_AgeOfLocationInformation } from "../MAP-CommonDataTypes/AgeOfLocationInformation.ta.mjs";
-import { CellGlobalIdOrServiceAreaIdOrLAI, _decode_CellGlobalIdOrServiceAreaIdOrLAI, _encode_CellGlobalIdOrServiceAreaIdOrLAI } from "../MAP-CommonDataTypes/CellGlobalIdOrServiceAreaIdOrLAI.ta.mjs";
+import { type AgeOfLocationInformation, _decode_AgeOfLocationInformation, _encode_AgeOfLocationInformation } from "../MAP-CommonDataTypes/AgeOfLocationInformation.ta.mjs";
+import { type CellGlobalIdOrServiceAreaIdOrLAI, _decode_CellGlobalIdOrServiceAreaIdOrLAI, _encode_CellGlobalIdOrServiceAreaIdOrLAI } from "../MAP-CommonDataTypes/CellGlobalIdOrServiceAreaIdOrLAI.ta.mjs";
 import { ExtensionContainer, _decode_ExtensionContainer, _encode_ExtensionContainer } from "../MAP-ExtensionDataTypes/ExtensionContainer.ta.mjs";
-import { AccuracyFulfilmentIndicator, _decode_AccuracyFulfilmentIndicator, _encode_AccuracyFulfilmentIndicator, _enum_for_AccuracyFulfilmentIndicator } from "../MAP-LCS-DataTypes/AccuracyFulfilmentIndicator.ta.mjs";
-import { Add_GeographicalInformation, _decode_Add_GeographicalInformation, _encode_Add_GeographicalInformation } from "../MAP-LCS-DataTypes/Add-GeographicalInformation.ta.mjs";
-import { Ext_GeographicalInformation, _decode_Ext_GeographicalInformation, _encode_Ext_GeographicalInformation } from "../MAP-LCS-DataTypes/Ext-GeographicalInformation.ta.mjs";
-import { GeranGANSSpositioningData, _decode_GeranGANSSpositioningData, _encode_GeranGANSSpositioningData } from "../MAP-LCS-DataTypes/GeranGANSSpositioningData.ta.mjs";
-import { PositioningDataInformation, _decode_PositioningDataInformation, _encode_PositioningDataInformation } from "../MAP-LCS-DataTypes/PositioningDataInformation.ta.mjs";
-import { ServingNodeAddress, _decode_ServingNodeAddress, _encode_ServingNodeAddress } from "../MAP-LCS-DataTypes/ServingNodeAddress.ta.mjs";
-import { UtranAdditionalPositioningData, _decode_UtranAdditionalPositioningData, _encode_UtranAdditionalPositioningData } from "../MAP-LCS-DataTypes/UtranAdditionalPositioningData.ta.mjs";
-import { UtranBaroPressureMeas, _decode_UtranBaroPressureMeas, _encode_UtranBaroPressureMeas } from "../MAP-LCS-DataTypes/UtranBaroPressureMeas.ta.mjs";
-import { UtranCivicAddress, _decode_UtranCivicAddress, _encode_UtranCivicAddress } from "../MAP-LCS-DataTypes/UtranCivicAddress.ta.mjs";
-import { UtranGANSSpositioningData, _decode_UtranGANSSpositioningData, _encode_UtranGANSSpositioningData } from "../MAP-LCS-DataTypes/UtranGANSSpositioningData.ta.mjs";
-import { UtranPositioningDataInfo, _decode_UtranPositioningDataInfo, _encode_UtranPositioningDataInfo } from "../MAP-LCS-DataTypes/UtranPositioningDataInfo.ta.mjs";
-import { VelocityEstimate, _decode_VelocityEstimate, _encode_VelocityEstimate } from "../MAP-LCS-DataTypes/VelocityEstimate.ta.mjs";
+import { type AccuracyFulfilmentIndicator, _decode_AccuracyFulfilmentIndicator, _encode_AccuracyFulfilmentIndicator, _enum_for_AccuracyFulfilmentIndicator } from "../MAP-LCS-DataTypes/AccuracyFulfilmentIndicator.ta.mjs";
+import { type Add_GeographicalInformation, _decode_Add_GeographicalInformation, _encode_Add_GeographicalInformation } from "../MAP-LCS-DataTypes/Add-GeographicalInformation.ta.mjs";
+import { type Ext_GeographicalInformation, _decode_Ext_GeographicalInformation, _encode_Ext_GeographicalInformation } from "../MAP-LCS-DataTypes/Ext-GeographicalInformation.ta.mjs";
+import { type GeranGANSSpositioningData, _decode_GeranGANSSpositioningData, _encode_GeranGANSSpositioningData } from "../MAP-LCS-DataTypes/GeranGANSSpositioningData.ta.mjs";
+import { type PositioningDataInformation, _decode_PositioningDataInformation, _encode_PositioningDataInformation } from "../MAP-LCS-DataTypes/PositioningDataInformation.ta.mjs";
+import { type ServingNodeAddress, _decode_ServingNodeAddress, _encode_ServingNodeAddress } from "../MAP-LCS-DataTypes/ServingNodeAddress.ta.mjs";
+import { type UtranAdditionalPositioningData, _decode_UtranAdditionalPositioningData, _encode_UtranAdditionalPositioningData } from "../MAP-LCS-DataTypes/UtranAdditionalPositioningData.ta.mjs";
+import { type UtranBaroPressureMeas, _decode_UtranBaroPressureMeas, _encode_UtranBaroPressureMeas } from "../MAP-LCS-DataTypes/UtranBaroPressureMeas.ta.mjs";
+import { type UtranCivicAddress, _decode_UtranCivicAddress, _encode_UtranCivicAddress } from "../MAP-LCS-DataTypes/UtranCivicAddress.ta.mjs";
+import { type UtranGANSSpositioningData, _decode_UtranGANSSpositioningData, _encode_UtranGANSSpositioningData } from "../MAP-LCS-DataTypes/UtranGANSSpositioningData.ta.mjs";
+import { type UtranPositioningDataInfo, _decode_UtranPositioningDataInfo, _encode_UtranPositioningDataInfo } from "../MAP-LCS-DataTypes/UtranPositioningDataInfo.ta.mjs";
+import { type VelocityEstimate, _decode_VelocityEstimate, _encode_VelocityEstimate } from "../MAP-LCS-DataTypes/VelocityEstimate.ta.mjs";
 
 
 /**
@@ -39,22 +39,22 @@ import { VelocityEstimate, _decode_VelocityEstimate, _encode_VelocityEstimate } 
  * ```asn1
  * ProvideSubscriberLocation-Res ::= SEQUENCE {
  *     locationEstimate    Ext-GeographicalInformation,
- *     ageOfLocationEstimate    [0] AgeOfLocationInformation    OPTIONAL,
- *     extensionContainer    [1] ExtensionContainer    OPTIONAL,
+ *     ageOfLocationEstimate    [0] AgeOfLocationInformation    type OPTIONAL,
+ *     extensionContainer    [1] ExtensionContainer    type OPTIONAL,
  *     ... ,
- *     add-LocationEstimate    [2] Add-GeographicalInformation    OPTIONAL,
- *     deferredmt-lrResponseIndicator    [3] NULL    OPTIONAL,
- *     geranPositioningData    [4] PositioningDataInformation    OPTIONAL,
- *     utranPositioningData    [5] UtranPositioningDataInfo    OPTIONAL,
- *     cellIdOrSai    [6] CellGlobalIdOrServiceAreaIdOrLAI    OPTIONAL,
- *     sai-Present    [7] NULL    OPTIONAL,
- *     accuracyFulfilmentIndicator    [8] AccuracyFulfilmentIndicator    OPTIONAL,
- *     velocityEstimate    [9] VelocityEstimate    OPTIONAL,
- *     mo-lrShortCircuitIndicator    [10] NULL    OPTIONAL,
- *     geranGANSSpositioningData    [11] GeranGANSSpositioningData    OPTIONAL,
- *     utranGANSSpositioningData    [12] UtranGANSSpositioningData    OPTIONAL,    targetServingNodeForHandover    [13] ServingNodeAddress    OPTIONAL,
- *     utranAdditionalPositioningData    [14] UtranAdditionalPositioningData    OPTIONAL,
- *     utranBaroPressureMeas    [15] UtranBaroPressureMeas    OPTIONAL,
+ *     add-LocationEstimate    [2] Add-GeographicalInformation    type OPTIONAL,
+ *     deferredmt-lrResponseIndicator    [3] NULL    type OPTIONAL,
+ *     geranPositioningData    [4] PositioningDataInformation    type OPTIONAL,
+ *     utranPositioningData    [5] UtranPositioningDataInfo    type OPTIONAL,
+ *     cellIdOrSai    [6] CellGlobalIdOrServiceAreaIdOrLAI    type OPTIONAL,
+ *     sai-Present    [7] NULL    type OPTIONAL,
+ *     accuracyFulfilmentIndicator    [8] AccuracyFulfilmentIndicator    type OPTIONAL,
+ *     velocityEstimate    [9] VelocityEstimate    type OPTIONAL,
+ *     mo-lrShortCircuitIndicator    [10] NULL    type OPTIONAL,
+ *     geranGANSSpositioningData    [11] GeranGANSSpositioningData    type OPTIONAL,
+ *     utranGANSSpositioningData    [12] UtranGANSSpositioningData    type OPTIONAL,    targetServingNodeForHandover    [13] ServingNodeAddress    type OPTIONAL,
+ *     utranAdditionalPositioningData    [14] UtranAdditionalPositioningData    type OPTIONAL,
+ *     utranBaroPressureMeas    [15] UtranBaroPressureMeas    type OPTIONAL,
  *     utranCivicAddress    [16] UtranCivicAddress    OPTIONAL }
  * ```
  * 
@@ -62,206 +62,246 @@ import { VelocityEstimate, _decode_VelocityEstimate, _encode_VelocityEstimate } 
  */
 export
 class ProvideSubscriberLocation_Res {
+    /**
+     * @summary `locationEstimate`.
+     * @description
+     *
+     * Location estimate as in 3GPP TS 23.032 (3GPP TS 29.002 V19.1.0 clause
+     * 7.6.11.11).
+     *
+     * @public
+     * @readonly
+     */
+    public readonly locationEstimate: Ext_GeographicalInformation;
+    /**
+     * @summary `ageOfLocationEstimate`.
+     * @description
+     *
+     * How long ago the estimate was obtained (3GPP TS 29.002 V19.1.0 clause
+     * 7.6.11.1).
+     *
+     * @public
+     * @readonly
+     */
+    public readonly ageOfLocationEstimate?: OPTIONAL<AgeOfLocationInformation>;
+    /**
+     * @summary `extensionContainer`.
+     * @description
+     *
+     * Private or PCS extensions (3GPP TS 29.002 V19.1.0 clause 17.7.11).
+     *
+     * @public
+     * @readonly
+     */
+    public readonly extensionContainer?: OPTIONAL<ExtensionContainer>;
+    /**
+     * @summary `add_LocationEstimate`.
+     * @description
+     *
+     * Any 3GPP TS 23.032 shape (3GPP TS 29.002 V19.1.0 clause 7.6.11.21).
+     *
+     * @public
+     * @readonly
+     */
+    public readonly add_LocationEstimate?: OPTIONAL<Add_GeographicalInformation>;
+    /**
+     * @summary `deferredmt_lrResponseIndicator`.
+     * @description
+     *
+     * Response to a deferred MT-LR (3GPP TS 29.002 V19.1.0 clause
+     * 7.6.11.2).
+     *
+     * @public
+     * @readonly
+     */
+    public readonly deferredmt_lrResponseIndicator?: OPTIONAL<NULL>;
+    /**
+     * @summary `geranPositioningData`.
+     * @description
+     *
+     * GERAN positioning data, 3GPP TS 49.031 (3GPP TS 29.002 V19.1.0 clause
+     * 7.6.11.11A).
+     *
+     * @public
+     * @readonly
+     */
+    public readonly geranPositioningData?: OPTIONAL<PositioningDataInformation>;
+    /**
+     * @summary `utranPositioningData`.
+     * @description
+     *
+     * UTRAN positioningDataDiscriminator and set, 3GPP TS 25.413 (3GPP TS
+     * 29.002 V19.1.0 clause 7.6.11.11B).
+     *
+     * @public
+     * @readonly
+     */
+    public readonly utranPositioningData?: OPTIONAL<UtranPositioningDataInfo>;
+    /**
+     * @summary `cellIdOrSai`.
+     * @description
+     *
+     * CGI (GERAN) or SAI (UTRAN) (3GPP TS 29.002 V19.1.0 clause 7.6.11.22).
+     *
+     * @public
+     * @readonly
+     */
+    public readonly cellIdOrSai?: OPTIONAL<CellGlobalIdOrServiceAreaIdOrLAI>;
+    /**
+     * @summary `sai_Present`.
+     * @description
+     *
+     * cellIdOrSai contains a Service Area Identity.
+     *
+     * @public
+     * @readonly
+     */
+    public readonly sai_Present?: OPTIONAL<NULL>;
+    /**
+     * @summary `accuracyFulfilmentIndicator`.
+     * @description
+     *
+     * Whether requested accuracy was fulfilled (3GPP TS 29.002 V19.1.0
+     * clause 7.6.11.28).
+     *
+     * @public
+     * @readonly
+     */
+    public readonly accuracyFulfilmentIndicator?: OPTIONAL<AccuracyFulfilmentIndicator>;
+    /**
+     * @summary `velocityEstimate`.
+     * @description
+     *
+     * Velocity as in 3GPP TS 23.032 (3GPP TS 29.002 V19.1.0 clause
+     * 7.6.11.27).
+     *
+     * @public
+     * @readonly
+     */
+    public readonly velocityEstimate?: OPTIONAL<VelocityEstimate>;
+    /**
+     * @summary `mo_lrShortCircuitIndicator`.
+     * @description
+     *
+     * MO-LR short circuit (3GPP TS 29.002 V19.1.0 clause 7.6.11.29).
+     *
+     * @public
+     * @readonly
+     */
+    public readonly mo_lrShortCircuitIndicator?: OPTIONAL<NULL>;
+    /**
+     * @summary `geranGANSSpositioningData`.
+     * @description
+     *
+     * GERAN GANSS data, 3GPP TS 49.031 (3GPP TS 29.002 V19.1.0 clause
+     * 7.6.11.11C).
+     *
+     * @public
+     * @readonly
+     */
+    public readonly geranGANSSpositioningData?: OPTIONAL<GeranGANSSpositioningData>;
+    /**
+     * @summary `utranGANSSpositioningData`.
+     * @description
+     *
+     * UTRAN GANSS-PositioningDataSet, 3GPP TS 25.413 (3GPP TS 29.002
+     * V19.1.0 clause 7.6.11.11D).
+     *
+     * @public
+     * @readonly
+     */
+    public readonly utranGANSSpositioningData?: OPTIONAL<UtranGANSSpositioningData>;
+    /**
+     * @summary `targetServingNodeForHandover`.
+     * @description
+     *
+     * Serving node after handover.
+     *
+     * @public
+     * @readonly
+     */
+    public readonly targetServingNodeForHandover?: OPTIONAL<ServingNodeAddress>;
+    /**
+     * @summary `utranAdditionalPositioningData`.
+     * @description
+     *
+     * Additional-PositioningDataSet, 3GPP TS 25.413 (3GPP TS 29.002 V19.1.0
+     * clause 7.6.11.11E).
+     *
+     * @public
+     * @readonly
+     */
+    public readonly utranAdditionalPositioningData?: OPTIONAL<UtranAdditionalPositioningData>;
+    /**
+     * @summary `utranBaroPressureMeas`.
+     * @description
+     *
+     * Barometric pressure, 3GPP TS 25.413 (3GPP TS 29.002 V19.1.0 clause
+     * 7.6.11.11F).
+     *
+     * @public
+     * @readonly
+     */
+    public readonly utranBaroPressureMeas?: OPTIONAL<UtranBaroPressureMeas>;
+    /**
+     * @summary `utranCivicAddress`.
+     * @description
+     *
+     * Civic address, 3GPP TS 25.413 (3GPP TS 29.002 V19.1.0 clause
+     * 7.6.11.11G).
+     *
+     * @public
+     * @readonly
+     */
+    public readonly utranCivicAddress?: OPTIONAL<UtranCivicAddress>;
+    /**
+     * @summary Extensions that are not recognized.
+     * @public
+     * @readonly
+     */
+    public readonly _unrecognizedExtensionsList: _Element[];
+
     constructor (
-        /**
-         * @summary `locationEstimate`.
-         * @description
-         *
-         * Location estimate as in 3GPP TS 23.032 (3GPP TS 29.002 V19.1.0 clause
-         * 7.6.11.11).
-         *
-         * @public
-         * @readonly
-         */
-        readonly locationEstimate: Ext_GeographicalInformation,
-        /**
-         * @summary `ageOfLocationEstimate`.
-         * @description
-         *
-         * How long ago the estimate was obtained (3GPP TS 29.002 V19.1.0 clause
-         * 7.6.11.1).
-         *
-         * @public
-         * @readonly
-         */
-        readonly ageOfLocationEstimate?: OPTIONAL<AgeOfLocationInformation>,
-        /**
-         * @summary `extensionContainer`.
-         * @description
-         *
-         * Private or PCS extensions (3GPP TS 29.002 V19.1.0 clause 17.7.11).
-         *
-         * @public
-         * @readonly
-         */
-        readonly extensionContainer?: OPTIONAL<ExtensionContainer>,
-        /**
-         * @summary `add_LocationEstimate`.
-         * @description
-         *
-         * Any 3GPP TS 23.032 shape (3GPP TS 29.002 V19.1.0 clause 7.6.11.21).
-         *
-         * @public
-         * @readonly
-         */
-        readonly add_LocationEstimate?: OPTIONAL<Add_GeographicalInformation>,
-        /**
-         * @summary `deferredmt_lrResponseIndicator`.
-         * @description
-         *
-         * Response to a deferred MT-LR (3GPP TS 29.002 V19.1.0 clause
-         * 7.6.11.2).
-         *
-         * @public
-         * @readonly
-         */
-        readonly deferredmt_lrResponseIndicator?: OPTIONAL<NULL>,
-        /**
-         * @summary `geranPositioningData`.
-         * @description
-         *
-         * GERAN positioning data, 3GPP TS 49.031 (3GPP TS 29.002 V19.1.0 clause
-         * 7.6.11.11A).
-         *
-         * @public
-         * @readonly
-         */
-        readonly geranPositioningData?: OPTIONAL<PositioningDataInformation>,
-        /**
-         * @summary `utranPositioningData`.
-         * @description
-         *
-         * UTRAN positioningDataDiscriminator and set, 3GPP TS 25.413 (3GPP TS
-         * 29.002 V19.1.0 clause 7.6.11.11B).
-         *
-         * @public
-         * @readonly
-         */
-        readonly utranPositioningData?: OPTIONAL<UtranPositioningDataInfo>,
-        /**
-         * @summary `cellIdOrSai`.
-         * @description
-         *
-         * CGI (GERAN) or SAI (UTRAN) (3GPP TS 29.002 V19.1.0 clause 7.6.11.22).
-         *
-         * @public
-         * @readonly
-         */
-        readonly cellIdOrSai?: OPTIONAL<CellGlobalIdOrServiceAreaIdOrLAI>,
-        /**
-         * @summary `sai_Present`.
-         * @description
-         *
-         * cellIdOrSai contains a Service Area Identity.
-         *
-         * @public
-         * @readonly
-         */
-        readonly sai_Present?: OPTIONAL<NULL>,
-        /**
-         * @summary `accuracyFulfilmentIndicator`.
-         * @description
-         *
-         * Whether requested accuracy was fulfilled (3GPP TS 29.002 V19.1.0
-         * clause 7.6.11.28).
-         *
-         * @public
-         * @readonly
-         */
-        readonly accuracyFulfilmentIndicator?: OPTIONAL<AccuracyFulfilmentIndicator>,
-        /**
-         * @summary `velocityEstimate`.
-         * @description
-         *
-         * Velocity as in 3GPP TS 23.032 (3GPP TS 29.002 V19.1.0 clause
-         * 7.6.11.27).
-         *
-         * @public
-         * @readonly
-         */
-        readonly velocityEstimate?: OPTIONAL<VelocityEstimate>,
-        /**
-         * @summary `mo_lrShortCircuitIndicator`.
-         * @description
-         *
-         * MO-LR short circuit (3GPP TS 29.002 V19.1.0 clause 7.6.11.29).
-         *
-         * @public
-         * @readonly
-         */
-        readonly mo_lrShortCircuitIndicator?: OPTIONAL<NULL>,
-        /**
-         * @summary `geranGANSSpositioningData`.
-         * @description
-         *
-         * GERAN GANSS data, 3GPP TS 49.031 (3GPP TS 29.002 V19.1.0 clause
-         * 7.6.11.11C).
-         *
-         * @public
-         * @readonly
-         */
-        readonly geranGANSSpositioningData?: OPTIONAL<GeranGANSSpositioningData>,
-        /**
-         * @summary `utranGANSSpositioningData`.
-         * @description
-         *
-         * UTRAN GANSS-PositioningDataSet, 3GPP TS 25.413 (3GPP TS 29.002
-         * V19.1.0 clause 7.6.11.11D).
-         *
-         * @public
-         * @readonly
-         */
-        readonly utranGANSSpositioningData?: OPTIONAL<UtranGANSSpositioningData>,
-        /**
-         * @summary `targetServingNodeForHandover`.
-         * @description
-         *
-         * Serving node after handover.
-         *
-         * @public
-         * @readonly
-         */
-        readonly targetServingNodeForHandover?: OPTIONAL<ServingNodeAddress>,
-        /**
-         * @summary `utranAdditionalPositioningData`.
-         * @description
-         *
-         * Additional-PositioningDataSet, 3GPP TS 25.413 (3GPP TS 29.002 V19.1.0
-         * clause 7.6.11.11E).
-         *
-         * @public
-         * @readonly
-         */
-        readonly utranAdditionalPositioningData?: OPTIONAL<UtranAdditionalPositioningData>,
-        /**
-         * @summary `utranBaroPressureMeas`.
-         * @description
-         *
-         * Barometric pressure, 3GPP TS 25.413 (3GPP TS 29.002 V19.1.0 clause
-         * 7.6.11.11F).
-         *
-         * @public
-         * @readonly
-         */
-        readonly utranBaroPressureMeas?: OPTIONAL<UtranBaroPressureMeas>,
-        /**
-         * @summary `utranCivicAddress`.
-         * @description
-         *
-         * Civic address, 3GPP TS 25.413 (3GPP TS 29.002 V19.1.0 clause
-         * 7.6.11.11G).
-         *
-         * @public
-         * @readonly
-         */
-        readonly utranCivicAddress?: OPTIONAL<UtranCivicAddress>,
-        /**
-         * @summary Extensions that are not recognized.
-         * @public
-         * @readonly
-         */
-        readonly _unrecognizedExtensionsList: _Element[] = []
-    ) {}
+        locationEstimate: Ext_GeographicalInformation,
+        ageOfLocationEstimate?: OPTIONAL<AgeOfLocationInformation>,
+        extensionContainer?: OPTIONAL<ExtensionContainer>,
+        add_LocationEstimate?: OPTIONAL<Add_GeographicalInformation>,
+        deferredmt_lrResponseIndicator?: OPTIONAL<NULL>,
+        geranPositioningData?: OPTIONAL<PositioningDataInformation>,
+        utranPositioningData?: OPTIONAL<UtranPositioningDataInfo>,
+        cellIdOrSai?: OPTIONAL<CellGlobalIdOrServiceAreaIdOrLAI>,
+        sai_Present?: OPTIONAL<NULL>,
+        accuracyFulfilmentIndicator?: OPTIONAL<AccuracyFulfilmentIndicator>,
+        velocityEstimate?: OPTIONAL<VelocityEstimate>,
+        mo_lrShortCircuitIndicator?: OPTIONAL<NULL>,
+        geranGANSSpositioningData?: OPTIONAL<GeranGANSSpositioningData>,
+        utranGANSSpositioningData?: OPTIONAL<UtranGANSSpositioningData>,
+        targetServingNodeForHandover?: OPTIONAL<ServingNodeAddress>,
+        utranAdditionalPositioningData?: OPTIONAL<UtranAdditionalPositioningData>,
+        utranBaroPressureMeas?: OPTIONAL<UtranBaroPressureMeas>,
+        utranCivicAddress?: OPTIONAL<UtranCivicAddress>,
+        _unrecognizedExtensionsList: _Element[] = []
+    ) {
+        this.locationEstimate = locationEstimate;
+        this.ageOfLocationEstimate = ageOfLocationEstimate;
+        this.extensionContainer = extensionContainer;
+        this.add_LocationEstimate = add_LocationEstimate;
+        this.deferredmt_lrResponseIndicator = deferredmt_lrResponseIndicator;
+        this.geranPositioningData = geranPositioningData;
+        this.utranPositioningData = utranPositioningData;
+        this.cellIdOrSai = cellIdOrSai;
+        this.sai_Present = sai_Present;
+        this.accuracyFulfilmentIndicator = accuracyFulfilmentIndicator;
+        this.velocityEstimate = velocityEstimate;
+        this.mo_lrShortCircuitIndicator = mo_lrShortCircuitIndicator;
+        this.geranGANSSpositioningData = geranGANSSpositioningData;
+        this.utranGANSSpositioningData = utranGANSSpositioningData;
+        this.targetServingNodeForHandover = targetServingNodeForHandover;
+        this.utranAdditionalPositioningData = utranAdditionalPositioningData;
+        this.utranBaroPressureMeas = utranBaroPressureMeas;
+        this.utranCivicAddress = utranCivicAddress;
+        this._unrecognizedExtensionsList = _unrecognizedExtensionsList;
+    }
 
     /**
      * @summary Restructures an object into a ProvideSubscriberLocation_Res
@@ -285,7 +325,7 @@ class ProvideSubscriberLocation_Res {
          * @static
          */
 
-    public static _enum_for_accuracyFulfilmentIndicator = _enum_for_AccuracyFulfilmentIndicator;
+    public static _enum_for_accuracyFulfilmentIndicator: typeof _enum_for_AccuracyFulfilmentIndicator = _enum_for_AccuracyFulfilmentIndicator;
 }
 
 /**

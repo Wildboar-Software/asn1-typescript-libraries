@@ -1,13 +1,13 @@
 /* eslint-disable */
 import {
-    OPTIONAL,
-    ASN1Element as _Element,
+    type OPTIONAL,
+    type ASN1Element as _Element,
     ASN1TagClass as _TagClass
 } from "@wildboar/asn1";
 import * as $ from "@wildboar/asn1/functional";
 import { PrivateCapabilities_operators_Item, _decode_PrivateCapabilities_operators_Item, _encode_PrivateCapabilities_operators_Item } from "../RecordSyntax-explain/PrivateCapabilities-operators-Item.ta.mjs";
 import { SearchKey, _decode_SearchKey, _encode_SearchKey } from "../RecordSyntax-explain/SearchKey.ta.mjs";
-import { HumanString, _decode_HumanString, _encode_HumanString } from "../RecordSyntax-explain/HumanString.ta.mjs";
+import { type HumanString, _decode_HumanString, _encode_HumanString } from "../RecordSyntax-explain/HumanString.ta.mjs";
 
 
 /**

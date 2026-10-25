@@ -1,16 +1,16 @@
 /* eslint-disable */
 import {
-    NULL,
-    OPTIONAL,
-    ASN1Element as _Element,
+    type NULL,
+    type OPTIONAL,
+    type ASN1Element as _Element,
     ASN1TagClass as _TagClass
 } from "@wildboar/asn1";
 import * as $ from "@wildboar/asn1/functional";
-import { IMSI, _decode_IMSI, _encode_IMSI } from "../MAP-CommonDataTypes/IMSI.ta.mjs";
-import { ISDN_AddressString, _decode_ISDN_AddressString, _encode_ISDN_AddressString } from "../MAP-CommonDataTypes/ISDN-AddressString.ta.mjs";
+import { type IMSI, _decode_IMSI, _encode_IMSI } from "../MAP-CommonDataTypes/IMSI.ta.mjs";
+import { type ISDN_AddressString, _decode_ISDN_AddressString, _encode_ISDN_AddressString } from "../MAP-CommonDataTypes/ISDN-AddressString.ta.mjs";
 import { ExtensionContainer, _decode_ExtensionContainer, _encode_ExtensionContainer } from "../MAP-ExtensionDataTypes/ExtensionContainer.ta.mjs";
 import { CAMEL_SubscriptionInfo, _decode_CAMEL_SubscriptionInfo, _encode_CAMEL_SubscriptionInfo } from "../MAP-MS-DataTypes/CAMEL-SubscriptionInfo.ta.mjs";
-import { CSG_SubscriptionDataList, _decode_CSG_SubscriptionDataList, _encode_CSG_SubscriptionDataList } from "../MAP-MS-DataTypes/CSG-SubscriptionDataList.ta.mjs";
+import { type CSG_SubscriptionDataList, _decode_CSG_SubscriptionDataList, _encode_CSG_SubscriptionDataList } from "../MAP-MS-DataTypes/CSG-SubscriptionDataList.ta.mjs";
 import { CallHoldData, _decode_CallHoldData, _encode_CallHoldData } from "../MAP-MS-DataTypes/CallHoldData.ta.mjs";
 import { CallWaitingData, _decode_CallWaitingData, _encode_CallWaitingData } from "../MAP-MS-DataTypes/CallWaitingData.ta.mjs";
 import { ClipData, _decode_ClipData, _encode_ClipData } from "../MAP-MS-DataTypes/ClipData.ta.mjs";
@@ -19,7 +19,7 @@ import { EctData, _decode_EctData, _encode_EctData } from "../MAP-MS-DataTypes/E
 import { Ext_CallBarringInfoFor_CSE, _decode_Ext_CallBarringInfoFor_CSE, _encode_Ext_CallBarringInfoFor_CSE } from "../MAP-MS-DataTypes/Ext-CallBarringInfoFor-CSE.ta.mjs";
 import { Ext_ForwardingInfoFor_CSE, _decode_Ext_ForwardingInfoFor_CSE, _encode_Ext_ForwardingInfoFor_CSE } from "../MAP-MS-DataTypes/Ext-ForwardingInfoFor-CSE.ta.mjs";
 import { ODB_Info, _decode_ODB_Info, _encode_ODB_Info } from "../MAP-MS-DataTypes/ODB-Info.ta.mjs";
-import { ServingNode, _decode_ServingNode, _encode_ServingNode } from "../MAP-MS-DataTypes/ServingNode.ta.mjs";
+import { type ServingNode, _decode_ServingNode, _encode_ServingNode } from "../MAP-MS-DataTypes/ServingNode.ta.mjs";
 
 
 /**
@@ -39,19 +39,19 @@ import { ServingNode, _decode_ServingNode, _encode_ServingNode } from "../MAP-MS
  * NoteSubscriberDataModifiedArg ::= SEQUENCE {
  *     imsi    IMSI,
  *     msisdn    ISDN-AddressString,
- *     forwardingInfoFor-CSE    [0] Ext-ForwardingInfoFor-CSE    OPTIONAL,
- *     callBarringInfoFor-CSE    [1] Ext-CallBarringInfoFor-CSE    OPTIONAL,
- *     odb-Info    [2] ODB-Info    OPTIONAL,
- *     camel-SubscriptionInfo    [3] CAMEL-SubscriptionInfo    OPTIONAL,
- *     allInformationSent    [4] NULL    OPTIONAL,
- *     extensionContainer    ExtensionContainer    OPTIONAL,
+ *     forwardingInfoFor-CSE    [0] Ext-ForwardingInfoFor-CSE    type OPTIONAL,
+ *     callBarringInfoFor-CSE    [1] Ext-CallBarringInfoFor-CSE    type OPTIONAL,
+ *     odb-Info    [2] ODB-Info    type OPTIONAL,
+ *     camel-SubscriptionInfo    [3] CAMEL-SubscriptionInfo    type OPTIONAL,
+ *     allInformationSent    [4] NULL    type OPTIONAL,
+ *     extensionContainer    ExtensionContainer    type OPTIONAL,
  *     ...,
- *     ue-reachable    [5] ServingNode    OPTIONAL,
- *     csg-SubscriptionDataList    [6] CSG-SubscriptionDataList    OPTIONAL,
- *     cw-Data    [7]    CallWaitingData    OPTIONAL,
- *     ch-Data    [8]    CallHoldData    OPTIONAL,
- *     clip-Data    [9] ClipData    OPTIONAL,
- *     clir-Data    [10]    ClirData    OPTIONAL,
+ *     ue-reachable    [5] ServingNode    type OPTIONAL,
+ *     csg-SubscriptionDataList    [6] CSG-SubscriptionDataList    type OPTIONAL,
+ *     cw-Data    [7]    CallWaitingData    type OPTIONAL,
+ *     ch-Data    [8]    CallHoldData    type OPTIONAL,
+ *     clip-Data    [9] ClipData    type OPTIONAL,
+ *     clir-Data    [10]    ClirData    type OPTIONAL,
  *     ect-data    [11] EctData    OPTIONAL }
  * ```
  * 
@@ -59,169 +59,203 @@ import { ServingNode, _decode_ServingNode, _encode_ServingNode } from "../MAP-MS
  */
 export
 class NoteSubscriberDataModifiedArg {
+    /**
+     * @summary `imsi`.
+     * @description
+     *
+     * IMSI of the subscriber. (3GPP TS 29.002 V19.1.0 clauses 8.11.5 and
+     * 7.6.2.1)
+     *
+     * @public
+     * @readonly
+     */
+    public readonly imsi: IMSI;
+    /**
+     * @summary `msisdn`.
+     * @description
+     *
+     * MSISDN of the subscriber. (3GPP TS 29.002 V19.1.0 clauses 8.11.5 and
+     * 7.6.2.17)
+     *
+     * @public
+     * @readonly
+     */
+    public readonly msisdn: ISDN_AddressString;
+    /**
+     * @summary `forwardingInfoFor_CSE`.
+     * @description
+     *
+     * Extensible forwarding information for the CSE. (3GPP TS 29.002
+     * V19.1.0 clause 7.6.3.80)
+     *
+     * @public
+     * @readonly
+     */
+    public readonly forwardingInfoFor_CSE?: OPTIONAL<Ext_ForwardingInfoFor_CSE>;
+    /**
+     * @summary `callBarringInfoFor_CSE`.
+     * @description
+     *
+     * Extensible call-barring information for the CSE. (3GPP TS 29.002
+     * V19.1.0 clause 7.6.3.79)
+     *
+     * @public
+     * @readonly
+     */
+    public readonly callBarringInfoFor_CSE?: OPTIONAL<Ext_CallBarringInfoFor_CSE>;
+    /**
+     * @summary `odb_Info`.
+     * @description
+     *
+     * ODB data and notification-to-CSE flag. (3GPP TS 29.002 V19.1.0 clause
+     * 7.6.3.88)
+     *
+     * @public
+     * @readonly
+     */
+    public readonly odb_Info?: OPTIONAL<ODB_Info>;
+    /**
+     * @summary `camel_SubscriptionInfo`.
+     * @description
+     *
+     * CAMEL subscription information. (3GPP TS 29.002 V19.1.0 clause
+     * 7.6.3.78)
+     *
+     * @public
+     * @readonly
+     */
+    public readonly camel_SubscriptionInfo?: OPTIONAL<CAMEL_SubscriptionInfo>;
+    /**
+     * @summary `allInformationSent`.
+     * @description
+     *
+     * Sending entity has sent all necessary information. (3GPP TS 29.002
+     * V19.1.0 clause 7.6.1.5)
+     *
+     * @public
+     * @readonly
+     */
+    public readonly allInformationSent?: OPTIONAL<NULL>;
+    /**
+     * @summary `extensionContainer`.
+     * @public
+     * @readonly
+     */
+    public readonly extensionContainer?: OPTIONAL<ExtensionContainer>;
+    /**
+     * @summary `ue_reachable`.
+     * @description
+     *
+     * Informs a service-related entity (e.g. IP-SM-GW) that the UE has
+     * become reachable (3GPP TS 23.204). (3GPP TS 29.002 V19.1.0 clause
+     * 8.11.5.1)
+     *
+     * @public
+     * @readonly
+     */
+    public readonly ue_reachable?: OPTIONAL<ServingNode>;
+    /**
+     * @summary `csg_SubscriptionDataList`.
+     * @description
+     *
+     * CSG subscription data. (3GPP TS 29.002 V19.1.0 clause 8.11.5)
+     *
+     * @public
+     * @readonly
+     */
+    public readonly csg_SubscriptionDataList?: OPTIONAL<CSG_SubscriptionDataList>;
+    /**
+     * @summary `cw_Data`.
+     * @description
+     *
+     * Call waiting data. (3GPP TS 29.002 V19.1.0 clause 8.11.5)
+     *
+     * @public
+     * @readonly
+     */
+    public readonly cw_Data?: OPTIONAL<CallWaitingData>;
+    /**
+     * @summary `ch_Data`.
+     * @description
+     *
+     * Call hold data. (3GPP TS 29.002 V19.1.0 clause 8.11.5)
+     *
+     * @public
+     * @readonly
+     */
+    public readonly ch_Data?: OPTIONAL<CallHoldData>;
+    /**
+     * @summary `clip_Data`.
+     * @description
+     *
+     * CLIP data. (3GPP TS 29.002 V19.1.0 clause 8.11.5)
+     *
+     * @public
+     * @readonly
+     */
+    public readonly clip_Data?: OPTIONAL<ClipData>;
+    /**
+     * @summary `clir_Data`.
+     * @description
+     *
+     * CLIR data. (3GPP TS 29.002 V19.1.0 clause 8.11.5)
+     *
+     * @public
+     * @readonly
+     */
+    public readonly clir_Data?: OPTIONAL<ClirData>;
+    /**
+     * @summary `ect_data`.
+     * @description
+     *
+     * ECT data. (3GPP TS 29.002 V19.1.0 clause 8.11.5)
+     *
+     * @public
+     * @readonly
+     */
+    public readonly ect_data?: OPTIONAL<EctData>;
+    /**
+     * @summary Extensions that are not recognized.
+     * @public
+     * @readonly
+     */
+    public readonly _unrecognizedExtensionsList: _Element[];
+
     constructor (
-        /**
-         * @summary `imsi`.
-         * @description
-         *
-         * IMSI of the subscriber. (3GPP TS 29.002 V19.1.0 clauses 8.11.5 and
-         * 7.6.2.1)
-         *
-         * @public
-         * @readonly
-         */
-        readonly imsi: IMSI,
-        /**
-         * @summary `msisdn`.
-         * @description
-         *
-         * MSISDN of the subscriber. (3GPP TS 29.002 V19.1.0 clauses 8.11.5 and
-         * 7.6.2.17)
-         *
-         * @public
-         * @readonly
-         */
-        readonly msisdn: ISDN_AddressString,
-        /**
-         * @summary `forwardingInfoFor_CSE`.
-         * @description
-         *
-         * Extensible forwarding information for the CSE. (3GPP TS 29.002
-         * V19.1.0 clause 7.6.3.80)
-         *
-         * @public
-         * @readonly
-         */
-        readonly forwardingInfoFor_CSE?: OPTIONAL<Ext_ForwardingInfoFor_CSE>,
-        /**
-         * @summary `callBarringInfoFor_CSE`.
-         * @description
-         *
-         * Extensible call-barring information for the CSE. (3GPP TS 29.002
-         * V19.1.0 clause 7.6.3.79)
-         *
-         * @public
-         * @readonly
-         */
-        readonly callBarringInfoFor_CSE?: OPTIONAL<Ext_CallBarringInfoFor_CSE>,
-        /**
-         * @summary `odb_Info`.
-         * @description
-         *
-         * ODB data and notification-to-CSE flag. (3GPP TS 29.002 V19.1.0 clause
-         * 7.6.3.88)
-         *
-         * @public
-         * @readonly
-         */
-        readonly odb_Info?: OPTIONAL<ODB_Info>,
-        /**
-         * @summary `camel_SubscriptionInfo`.
-         * @description
-         *
-         * CAMEL subscription information. (3GPP TS 29.002 V19.1.0 clause
-         * 7.6.3.78)
-         *
-         * @public
-         * @readonly
-         */
-        readonly camel_SubscriptionInfo?: OPTIONAL<CAMEL_SubscriptionInfo>,
-        /**
-         * @summary `allInformationSent`.
-         * @description
-         *
-         * Sending entity has sent all necessary information. (3GPP TS 29.002
-         * V19.1.0 clause 7.6.1.5)
-         *
-         * @public
-         * @readonly
-         */
-        readonly allInformationSent?: OPTIONAL<NULL>,
-        /**
-         * @summary `extensionContainer`.
-         * @public
-         * @readonly
-         */
-        readonly extensionContainer?: OPTIONAL<ExtensionContainer>,
-        /**
-         * @summary `ue_reachable`.
-         * @description
-         *
-         * Informs a service-related entity (e.g. IP-SM-GW) that the UE has
-         * become reachable (3GPP TS 23.204). (3GPP TS 29.002 V19.1.0 clause
-         * 8.11.5.1)
-         *
-         * @public
-         * @readonly
-         */
-        readonly ue_reachable?: OPTIONAL<ServingNode>,
-        /**
-         * @summary `csg_SubscriptionDataList`.
-         * @description
-         *
-         * CSG subscription data. (3GPP TS 29.002 V19.1.0 clause 8.11.5)
-         *
-         * @public
-         * @readonly
-         */
-        readonly csg_SubscriptionDataList?: OPTIONAL<CSG_SubscriptionDataList>,
-        /**
-         * @summary `cw_Data`.
-         * @description
-         *
-         * Call waiting data. (3GPP TS 29.002 V19.1.0 clause 8.11.5)
-         *
-         * @public
-         * @readonly
-         */
-        readonly cw_Data?: OPTIONAL<CallWaitingData>,
-        /**
-         * @summary `ch_Data`.
-         * @description
-         *
-         * Call hold data. (3GPP TS 29.002 V19.1.0 clause 8.11.5)
-         *
-         * @public
-         * @readonly
-         */
-        readonly ch_Data?: OPTIONAL<CallHoldData>,
-        /**
-         * @summary `clip_Data`.
-         * @description
-         *
-         * CLIP data. (3GPP TS 29.002 V19.1.0 clause 8.11.5)
-         *
-         * @public
-         * @readonly
-         */
-        readonly clip_Data?: OPTIONAL<ClipData>,
-        /**
-         * @summary `clir_Data`.
-         * @description
-         *
-         * CLIR data. (3GPP TS 29.002 V19.1.0 clause 8.11.5)
-         *
-         * @public
-         * @readonly
-         */
-        readonly clir_Data?: OPTIONAL<ClirData>,
-        /**
-         * @summary `ect_data`.
-         * @description
-         *
-         * ECT data. (3GPP TS 29.002 V19.1.0 clause 8.11.5)
-         *
-         * @public
-         * @readonly
-         */
-        readonly ect_data?: OPTIONAL<EctData>,
-        /**
-         * @summary Extensions that are not recognized.
-         * @public
-         * @readonly
-         */
-        readonly _unrecognizedExtensionsList: _Element[] = []
-    ) {}
+        imsi: IMSI,
+        msisdn: ISDN_AddressString,
+        forwardingInfoFor_CSE?: OPTIONAL<Ext_ForwardingInfoFor_CSE>,
+        callBarringInfoFor_CSE?: OPTIONAL<Ext_CallBarringInfoFor_CSE>,
+        odb_Info?: OPTIONAL<ODB_Info>,
+        camel_SubscriptionInfo?: OPTIONAL<CAMEL_SubscriptionInfo>,
+        allInformationSent?: OPTIONAL<NULL>,
+        extensionContainer?: OPTIONAL<ExtensionContainer>,
+        ue_reachable?: OPTIONAL<ServingNode>,
+        csg_SubscriptionDataList?: OPTIONAL<CSG_SubscriptionDataList>,
+        cw_Data?: OPTIONAL<CallWaitingData>,
+        ch_Data?: OPTIONAL<CallHoldData>,
+        clip_Data?: OPTIONAL<ClipData>,
+        clir_Data?: OPTIONAL<ClirData>,
+        ect_data?: OPTIONAL<EctData>,
+        _unrecognizedExtensionsList: _Element[] = []
+    ) {
+        this.imsi = imsi;
+        this.msisdn = msisdn;
+        this.forwardingInfoFor_CSE = forwardingInfoFor_CSE;
+        this.callBarringInfoFor_CSE = callBarringInfoFor_CSE;
+        this.odb_Info = odb_Info;
+        this.camel_SubscriptionInfo = camel_SubscriptionInfo;
+        this.allInformationSent = allInformationSent;
+        this.extensionContainer = extensionContainer;
+        this.ue_reachable = ue_reachable;
+        this.csg_SubscriptionDataList = csg_SubscriptionDataList;
+        this.cw_Data = cw_Data;
+        this.ch_Data = ch_Data;
+        this.clip_Data = clip_Data;
+        this.clir_Data = clir_Data;
+        this.ect_data = ect_data;
+        this._unrecognizedExtensionsList = _unrecognizedExtensionsList;
+    }
 
     /**
      * @summary Restructures an object into a NoteSubscriberDataModifiedArg

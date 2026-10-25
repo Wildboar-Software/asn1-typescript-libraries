@@ -1,7 +1,7 @@
 /* eslint-disable */
 import {
-    OPTIONAL,
-    ASN1Element as _Element,
+    type OPTIONAL,
+    type ASN1Element as _Element,
     ASN1TagClass as _TagClass,
     ASN1Construction as _Construction,
     ASN1UniversalType as _UniversalType,
@@ -36,20 +36,26 @@ import {
  *
  */
 export class ProtectionStatus_Item_lockout {
+    /**
+     * @summary `requestSource`.
+     * @public
+     * @readonly
+     */
+    public readonly requestSource: OPTIONAL<RequestSource>;
+    /**
+     * @summary `switchStatus`.
+     * @public
+     * @readonly
+     */
+    public readonly switchStatus: SwitchStatus;
+
     constructor(
-        /**
-         * @summary `requestSource`.
-         * @public
-         * @readonly
-         */
-        readonly requestSource: OPTIONAL<RequestSource>,
-        /**
-         * @summary `switchStatus`.
-         * @public
-         * @readonly
-         */
-        readonly switchStatus: SwitchStatus
-    ) {}
+        requestSource: OPTIONAL<RequestSource>,
+        switchStatus: SwitchStatus
+    ) {
+        this.requestSource = requestSource;
+        this.switchStatus = switchStatus;
+    }
 
     /**
      * @summary Restructures an object into a ProtectionStatus_Item_lockout
@@ -80,14 +86,14 @@ export class ProtectionStatus_Item_lockout {
      * @static
      */
 
-    public static _enum_for_requestSource = _enum_for_RequestSource;
+    public static _enum_for_requestSource: typeof _enum_for_RequestSource = _enum_for_RequestSource;
     /**
      * @summary The enum used as the type of the component `switchStatus`
      * @public
      * @static
      */
 
-    public static _enum_for_switchStatus = _enum_for_SwitchStatus;
+    public static _enum_for_switchStatus: typeof _enum_for_SwitchStatus = _enum_for_SwitchStatus;
 }
 
 

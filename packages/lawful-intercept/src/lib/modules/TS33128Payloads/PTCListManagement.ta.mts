@@ -1,7 +1,7 @@
 /* eslint-disable */
 import {
-    OPTIONAL,
-    ASN1Element as _Element,
+    type OPTIONAL,
+    type ASN1Element as _Element,
     ASN1TagClass as _TagClass
 } from "@wildboar/asn1";
 import * as $ from "@wildboar/asn1/functional";
@@ -228,25 +228,25 @@ class PTCListManagement {
          * @static
          */
 
-    public static _enum_for_pTCDirection = _enum_for_Direction;        /**
+    public static _enum_for_pTCDirection: typeof _enum_for_Direction = _enum_for_Direction;        /**
          * @summary The enum used as the type of the component `pTCListManagementType`
          * @public
          * @static
          */
 
-    public static _enum_for_pTCListManagementType = _enum_for_PTCListManagementType;        /**
+    public static _enum_for_pTCListManagementType: typeof _enum_for_PTCListManagementType = _enum_for_PTCListManagementType;        /**
          * @summary The enum used as the type of the component `pTCListManagementAction`
          * @public
          * @static
          */
 
-    public static _enum_for_pTCListManagementAction = _enum_for_PTCListManagementAction;        /**
+    public static _enum_for_pTCListManagementAction: typeof _enum_for_PTCListManagementAction = _enum_for_PTCListManagementAction;        /**
          * @summary The enum used as the type of the component `pTCListManagementFailure`
          * @public
          * @static
          */
 
-    public static _enum_for_pTCListManagementFailure = _enum_for_PTCListManagementFailure;
+    public static _enum_for_pTCListManagementFailure: typeof _enum_for_PTCListManagementFailure = _enum_for_PTCListManagementFailure;
 }
 
 /**

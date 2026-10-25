@@ -1,16 +1,16 @@
 /* eslint-disable */
 import {
-    OPTIONAL,
-    ASN1Element as _Element,
+    type OPTIONAL,
+    type ASN1Element as _Element,
     ASN1TagClass as _TagClass,
     ASN1SizeError,
 } from "@wildboar/asn1";
 import * as $ from "@wildboar/asn1/functional";
-import { ChargingControlIndicators, _decode_ChargingControlIndicators, _encode_ChargingControlIndicators } from "../Tariffing-Data-Types/ChargingControlIndicators.ta.mjs";
-import { ChargingTariffInformation_chargingTariff, _decode_ChargingTariffInformation_chargingTariff, _encode_ChargingTariffInformation_chargingTariff } from "../Tariffing-Data-Types/ChargingTariffInformation-chargingTariff.ta.mjs";
+import { type ChargingControlIndicators, _decode_ChargingControlIndicators, _encode_ChargingControlIndicators } from "../Tariffing-Data-Types/ChargingControlIndicators.ta.mjs";
+import { type ChargingTariffInformation_chargingTariff, _decode_ChargingTariffInformation_chargingTariff, _encode_ChargingTariffInformation_chargingTariff } from "../Tariffing-Data-Types/ChargingTariffInformation-chargingTariff.ta.mjs";
 import { ExtensionField, _decode_ExtensionField, _encode_ExtensionField } from "../Tariffing-Data-Types/ExtensionField.ta.mjs";
 import { ChargingReferenceIdentification, _decode_ChargingReferenceIdentification, _encode_ChargingReferenceIdentification } from "../Tariffing-Data-Types/ChargingReferenceIdentification.ta.mjs";
-import { Currency, _decode_Currency, _encode_Currency, _enum_for_Currency } from "../Tariffing-Data-Types/Currency.ta.mjs";
+import { type Currency, _decode_Currency, _encode_Currency, _enum_for_Currency } from "../Tariffing-Data-Types/Currency.ta.mjs";
 import { numOfExtensions } from "../Tariffing-Data-Types/numOfExtensions.va.mjs";
 
 
@@ -160,7 +160,7 @@ class ChargingTariffInformation {
          * @static
          */
 
-    public static _enum_for_currency = _enum_for_Currency;
+    public static _enum_for_currency: typeof _enum_for_Currency = _enum_for_Currency;
 }
 
 /**

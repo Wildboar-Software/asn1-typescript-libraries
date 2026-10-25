@@ -1,14 +1,14 @@
 /* eslint-disable */
 import {
-    ASN1Element as _Element,
+    type ASN1Element as _Element,
     ASN1TagClass as _TagClass,
-    BOOLEAN,
-    INTEGER,
-    OPTIONAL,
+    type BOOLEAN,
+    type INTEGER,
+    type OPTIONAL,
 } from "@wildboar/asn1";
 import * as $ from "@wildboar/asn1/functional";
 import {
-    AuthenticationLevel_basicLevels_level,
+    type AuthenticationLevel_basicLevels_level,
     _decode_AuthenticationLevel_basicLevels_level,
     _encode_AuthenticationLevel_basicLevels_level,
     _enum_for_AuthenticationLevel_basicLevels_level,
@@ -30,35 +30,45 @@ import {
  *
  */
 export class AuthenticationLevel_basicLevels {
+    /**
+     * @summary `level`.
+     * @description `none`(0) < `simple`(1) < `strong`(2); requestor must meet or exceed.
+     * @public
+     * @readonly
+     */
+    public readonly level: AuthenticationLevel_basicLevels_level;
+    /**
+     * @summary `localQualifier`.
+     * @description Compared only if present; requestor must be arithmetically ≥ this INTEGER.
+     * @public
+     * @readonly
+     */
+    public readonly localQualifier?: OPTIONAL<INTEGER>;
+    /**
+     * @summary `signed`.
+     * @description DEFAULT FALSE. TRUE requires the Directory request to be signed.
+     * @public
+     * @readonly
+     */
+    public readonly signed?: OPTIONAL<BOOLEAN>;
+    /**
+     * @summary Extensions that are not recognized.
+     * @public
+     * @readonly
+     */
+    public readonly _unrecognizedExtensionsList: _Element[];
+
     constructor(
-        /**
-         * @summary `level`.
-         * @description `none`(0) < `simple`(1) < `strong`(2); requestor must meet or exceed.
-         * @public
-         * @readonly
-         */
-        readonly level: AuthenticationLevel_basicLevels_level,
-        /**
-         * @summary `localQualifier`.
-         * @description Compared only if present; requestor must be arithmetically ≥ this INTEGER.
-         * @public
-         * @readonly
-         */
-        readonly localQualifier?: OPTIONAL<INTEGER>,
-        /**
-         * @summary `signed`.
-         * @description DEFAULT FALSE. TRUE requires the Directory request to be signed.
-         * @public
-         * @readonly
-         */
-        readonly signed?: OPTIONAL<BOOLEAN>,
-        /**
-         * @summary Extensions that are not recognized.
-         * @public
-         * @readonly
-         */
-        readonly _unrecognizedExtensionsList: _Element[] = []
-    ) {}
+        level: AuthenticationLevel_basicLevels_level,
+        localQualifier?: OPTIONAL<INTEGER>,
+        signed?: OPTIONAL<BOOLEAN>,
+        _unrecognizedExtensionsList: _Element[] = []
+    ) {
+        this.level = level;
+        this.localQualifier = localQualifier;
+        this.signed = signed;
+        this._unrecognizedExtensionsList = _unrecognizedExtensionsList;
+    }
 
     /**
      * @summary Restructures an object into a AuthenticationLevel_basicLevels
@@ -100,7 +110,7 @@ export class AuthenticationLevel_basicLevels {
      * @static
      */
 
-    public static _enum_for_level = _enum_for_AuthenticationLevel_basicLevels_level;
+    public static _enum_for_level: typeof _enum_for_AuthenticationLevel_basicLevels_level = _enum_for_AuthenticationLevel_basicLevels_level;
 }
 
 /**

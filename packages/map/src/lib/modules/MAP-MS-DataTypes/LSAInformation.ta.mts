@@ -1,13 +1,13 @@
 /* eslint-disable */
 import {
-    NULL,
-    OPTIONAL,
-    ASN1Element as _Element,
+    type NULL,
+    type OPTIONAL,
+    type ASN1Element as _Element,
     ASN1TagClass as _TagClass
 } from "@wildboar/asn1";
 import * as $ from "@wildboar/asn1/functional";
 import { ExtensionContainer, _decode_ExtensionContainer, _encode_ExtensionContainer } from "../MAP-ExtensionDataTypes/ExtensionContainer.ta.mjs";
-import { LSADataList, _decode_LSADataList, _encode_LSADataList } from "../MAP-MS-DataTypes/LSADataList.ta.mjs";
+import { type LSADataList, _decode_LSADataList, _encode_LSADataList } from "../MAP-MS-DataTypes/LSADataList.ta.mjs";
 import { LSAOnlyAccessIndicator, _decode_LSAOnlyAccessIndicator, _encode_LSAOnlyAccessIndicator, _enum_for_LSAOnlyAccessIndicator } from "../MAP-MS-DataTypes/LSAOnlyAccessIndicator.ta.mjs";
 
 
@@ -26,13 +26,13 @@ import { LSAOnlyAccessIndicator, _decode_LSAOnlyAccessIndicator, _encode_LSAOnly
  * 
  * ```asn1
  * LSAInformation ::= SEQUENCE {
- *     completeDataListIncluded    NULL    OPTIONAL,
+ *     completeDataListIncluded    NULL    type OPTIONAL,
  * 
  *     -- If segmentation is used, completeDataListIncluded may only be present in the
  *     -- first segment.
- *     lsaOnlyAccessIndicator    [1]    LSAOnlyAccessIndicator    OPTIONAL,
- *     lsaDataList    [2]    LSADataList    OPTIONAL,
- *     extensionContainer    [3] ExtensionContainer    OPTIONAL,
+ *     lsaOnlyAccessIndicator    [1]    LSAOnlyAccessIndicator    type OPTIONAL,
+ *     lsaDataList    [2]    LSADataList    type OPTIONAL,
+ *     extensionContainer    [3] ExtensionContainer    type OPTIONAL,
  *     ...}
  * ```
  * 
@@ -40,53 +40,65 @@ import { LSAOnlyAccessIndicator, _decode_LSAOnlyAccessIndicator, _encode_LSAOnly
  */
 export
 class LSAInformation {
+    /**
+     * @summary `completeDataListIncluded`.
+     * @description
+     *
+     * If segmentation is used, may only be present in the first segment.
+     * (3GPP TS 29.002 V19.1.0 clause 17.7.1)
+     *
+     * @public
+     * @readonly
+     */
+    public readonly completeDataListIncluded?: OPTIONAL<NULL>;
+    /**
+     * @summary `lsaOnlyAccessIndicator`.
+     * @description
+     *
+     * Access right outside the listed LSAs. (3GPP TS 29.002 V19.1.0 clauses
+     * 7.6.3.56 and 17.7.1)
+     *
+     * @public
+     * @readonly
+     */
+    public readonly lsaOnlyAccessIndicator?: OPTIONAL<LSAOnlyAccessIndicator>;
+    /**
+     * @summary `lsaDataList`.
+     * @description
+     *
+     * LSA identities with attributes for this VPLMN. (3GPP TS 29.002
+     * V19.1.0 clause 7.6.3.56)
+     *
+     * @public
+     * @readonly
+     */
+    public readonly lsaDataList?: OPTIONAL<LSADataList>;
+    /**
+     * @summary `extensionContainer`.
+     * @public
+     * @readonly
+     */
+    public readonly extensionContainer?: OPTIONAL<ExtensionContainer>;
+    /**
+     * @summary Extensions that are not recognized.
+     * @public
+     * @readonly
+     */
+    public readonly _unrecognizedExtensionsList: _Element[];
+
     constructor (
-        /**
-         * @summary `completeDataListIncluded`.
-         * @description
-         *
-         * If segmentation is used, may only be present in the first segment.
-         * (3GPP TS 29.002 V19.1.0 clause 17.7.1)
-         *
-         * @public
-         * @readonly
-         */
-        readonly completeDataListIncluded?: OPTIONAL<NULL>,
-        /**
-         * @summary `lsaOnlyAccessIndicator`.
-         * @description
-         *
-         * Access right outside the listed LSAs. (3GPP TS 29.002 V19.1.0 clauses
-         * 7.6.3.56 and 17.7.1)
-         *
-         * @public
-         * @readonly
-         */
-        readonly lsaOnlyAccessIndicator?: OPTIONAL<LSAOnlyAccessIndicator>,
-        /**
-         * @summary `lsaDataList`.
-         * @description
-         *
-         * LSA identities with attributes for this VPLMN. (3GPP TS 29.002
-         * V19.1.0 clause 7.6.3.56)
-         *
-         * @public
-         * @readonly
-         */
-        readonly lsaDataList?: OPTIONAL<LSADataList>,
-        /**
-         * @summary `extensionContainer`.
-         * @public
-         * @readonly
-         */
-        readonly extensionContainer?: OPTIONAL<ExtensionContainer>,
-        /**
-         * @summary Extensions that are not recognized.
-         * @public
-         * @readonly
-         */
-        readonly _unrecognizedExtensionsList: _Element[] = []
-    ) {}
+        completeDataListIncluded?: OPTIONAL<NULL>,
+        lsaOnlyAccessIndicator?: OPTIONAL<LSAOnlyAccessIndicator>,
+        lsaDataList?: OPTIONAL<LSADataList>,
+        extensionContainer?: OPTIONAL<ExtensionContainer>,
+        _unrecognizedExtensionsList: _Element[] = []
+    ) {
+        this.completeDataListIncluded = completeDataListIncluded;
+        this.lsaOnlyAccessIndicator = lsaOnlyAccessIndicator;
+        this.lsaDataList = lsaDataList;
+        this.extensionContainer = extensionContainer;
+        this._unrecognizedExtensionsList = _unrecognizedExtensionsList;
+    }
 
     /**
      * @summary Restructures an object into a LSAInformation
@@ -110,7 +122,7 @@ class LSAInformation {
          * @static
          */
 
-    public static _enum_for_lsaOnlyAccessIndicator = _enum_for_LSAOnlyAccessIndicator;
+    public static _enum_for_lsaOnlyAccessIndicator: typeof _enum_for_LSAOnlyAccessIndicator = _enum_for_LSAOnlyAccessIndicator;
 }
 
 /**

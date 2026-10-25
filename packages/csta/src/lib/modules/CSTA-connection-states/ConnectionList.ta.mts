@@ -2,9 +2,9 @@
 
 import * as $ from "@wildboar/asn1/functional";
 import {
-    OPTIONAL,
-    NULL,
-    SEQUENCE,
+    type OPTIONAL,
+    type NULL,
+    type SEQUENCE,
     ASN1Element as _Element
 } from "@wildboar/asn1";
 import { ConnectionList_Item, _decode_ConnectionList_Item, _encode_ConnectionList_Item } from "../CSTA-connection-states/ConnectionList-Item.ta.mjs";
@@ -27,15 +27,15 @@ import { ConnectionList_Item, _decode_ConnectionList_Item, _encode_ConnectionLis
  * 
  * ```asn1
  * ConnectionList  ::=  SEQUENCE OF SEQUENCE
- * {    newConnection         [0] ConnectionID         OPTIONAL,
- *     oldConnection         [1] ConnectionID         OPTIONAL,
+ * {    newConnection         [0] ConnectionID         type OPTIONAL,
+ *     oldConnection         [1] ConnectionID         type OPTIONAL,
  *     endpoint         [2] CHOICE
  *         {    deviceID         DeviceID,
  *             notKnown         NULL,
- *             restricted        [1] NULL }         OPTIONAL,
+ *             restricted        [1] NULL }         type OPTIONAL,
  *     associatedNID         [3] CHOICE
  *         {    deviceID         DeviceID,
- *             notKnown         NULL }             OPTIONAL,
+ *             notKnown         NULL }             type OPTIONAL,
  *     resultingConnectionInfo     ConnectionInformation         OPTIONAL }
  * ```
  */

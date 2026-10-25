@@ -2,13 +2,13 @@
 
 import * as $ from "@wildboar/asn1/functional";
 import {
-    OPTIONAL,
-    SEQUENCE,
-    SET,
-    ASN1Element as _Element,
+    type OPTIONAL,
+    type SEQUENCE,
+    type SET,
+    type ASN1Element as _Element,
     ASN1TagClass as _TagClass
 } from "@wildboar/asn1";
-import { DcollCrossRefID, _decode_DcollCrossRefID, _encode_DcollCrossRefID } from "../CSTA-data-collection/DcollCrossRefID.ta.mjs";
+import { type DcollCrossRefID, _decode_DcollCrossRefID, _encode_DcollCrossRefID } from "../CSTA-data-collection/DcollCrossRefID.ta.mjs";
 
 import { CSTACommonArguments, _decode_CSTACommonArguments, _encode_CSTACommonArguments } from "../CSTA-extension-types/CSTACommonArguments.ta.mjs";
 
@@ -37,29 +37,35 @@ import { CSTACommonArguments, _decode_CSTACommonArguments, _encode_CSTACommonArg
  */
 export
 class StartDataCollectionResult {
+    /**
+     * @summary `dcollCrossRefID`.
+     * @description
+     *
+     * Identifier for this collection (ECMA-269 §25.1.5.2.1).
+     *
+     * @public
+     * @readonly
+     */
+    public readonly dcollCrossRefID: DcollCrossRefID;
+    /**
+     * @summary `extensions`.
+     * @description
+     *
+     * CSTACommonArguments carrying the service-table security and
+     * privateData parameters.
+     *
+     * @public
+     * @readonly
+     */
+    public readonly extensions?: OPTIONAL<CSTACommonArguments>;
+
     constructor (
-        /**
-         * @summary `dcollCrossRefID`.
-         * @description
-         *
-         * Identifier for this collection (ECMA-269 §25.1.5.2.1).
-         *
-         * @public
-         * @readonly
-         */
-        readonly dcollCrossRefID: DcollCrossRefID,
-        /**
-         * @summary `extensions`.
-         * @description
-         *
-         * CSTACommonArguments carrying the service-table security and
-         * privateData parameters.
-         *
-         * @public
-         * @readonly
-         */
-        readonly extensions?: OPTIONAL<CSTACommonArguments>
-    ) {}
+        dcollCrossRefID: DcollCrossRefID,
+        extensions?: OPTIONAL<CSTACommonArguments>
+    ) {
+        this.dcollCrossRefID = dcollCrossRefID;
+        this.extensions = extensions;
+    }
 
     /**
      * @summary Restructures an object into a StartDataCollectionResult

@@ -1,19 +1,19 @@
 /* eslint-disable */
 import {
-    OPTIONAL,
-    ASN1Element as _Element,
+    type OPTIONAL,
+    type ASN1Element as _Element,
     ASN1TagClass as _TagClass
 } from "@wildboar/asn1";
 import * as $ from "@wildboar/asn1/functional";
-import { PartyNumber, _decode_PartyNumber, _encode_PartyNumber } from "../Addressing-Data-Elements-asn1-97/PartyNumber.ta.mjs";
+import { type PartyNumber, _decode_PartyNumber, _encode_PartyNumber } from "../Addressing-Data-Elements-asn1-97/PartyNumber.ta.mjs";
 // export { PartyNumber, _decode_PartyNumber, _encode_PartyNumber } from "../Addressing-Data-Elements-asn1-97/PartyNumber.ta.mjs";
-import { AuthChallenge, _decode_AuthChallenge, _encode_AuthChallenge } from "../CT-Authentication-Operations/AuthChallenge.ta.mjs";
+import { type AuthChallenge, _decode_AuthChallenge, _encode_AuthChallenge } from "../CT-Authentication-Operations/AuthChallenge.ta.mjs";
 // export { AuthChallenge, _decode_AuthChallenge, _encode_AuthChallenge } from "../CT-Authentication-Operations/AuthChallenge.ta.mjs";
-import { AuthAlgorithm, _decode_AuthAlgorithm, _encode_AuthAlgorithm } from "../CT-Authentication-Operations/AuthAlgorithm.ta.mjs";
+import { type AuthAlgorithm, _decode_AuthAlgorithm, _encode_AuthAlgorithm } from "../CT-Authentication-Operations/AuthAlgorithm.ta.mjs";
 // export { AuthAlgorithm, AuthAlgorithm_ct2 /* IMPORTED_LONG_NAMED_INTEGER */, ct2 /* IMPORTED_SHORT_NAMED_INTEGER */, AuthAlgorithm_dect /* IMPORTED_LONG_NAMED_INTEGER */, dect /* IMPORTED_SHORT_NAMED_INTEGER */, AuthAlgorithm_gsm /* IMPORTED_LONG_NAMED_INTEGER */, gsm /* IMPORTED_SHORT_NAMED_INTEGER */, AuthAlgorithm_us_ct2 /* IMPORTED_LONG_NAMED_INTEGER */, us_ct2 /* IMPORTED_SHORT_NAMED_INTEGER */, AuthAlgorithm_us_dect /* IMPORTED_LONG_NAMED_INTEGER */, us_dect /* IMPORTED_SHORT_NAMED_INTEGER */, AuthAlgorithm_us_gsm /* IMPORTED_LONG_NAMED_INTEGER */, us_gsm /* IMPORTED_SHORT_NAMED_INTEGER */, _decode_AuthAlgorithm, _encode_AuthAlgorithm } from "../CT-Authentication-Operations/AuthAlgorithm.ta.mjs";
-import { CanCompute, _decode_CanCompute, _encode_CanCompute } from "../CT-Authentication-Operations/CanCompute.ta.mjs";
+import { type CanCompute, _decode_CanCompute, _encode_CanCompute } from "../CT-Authentication-Operations/CanCompute.ta.mjs";
 // export { CanCompute, _decode_CanCompute, _encode_CanCompute } from "../CT-Authentication-Operations/CanCompute.ta.mjs";
-import { DummyExtension, _decode_DummyExtension, _encode_DummyExtension } from "../CT-Authentication-Operations/DummyExtension.ta.mjs";
+import { type DummyExtension, _decode_DummyExtension, _encode_DummyExtension } from "../CT-Authentication-Operations/DummyExtension.ta.mjs";
 // export { DummyExtension, _decode_DummyExtension, _encode_DummyExtension } from "../CT-Authentication-Operations/DummyExtension.ta.mjs";
 
 
@@ -221,7 +221,7 @@ let _cached_encoder_for_CtanParamArg: $.ASN1Encoder<CtanParamArg> | null = null;
  */
 export
 function _encode_CtanParamArg (value: CtanParamArg, elGetter: $.ASN1Encoder<any>): _Element {
-    if (!_cached_encoder_for_CtanParamArg) { _cached_encoder_for_CtanParamArg = function (value: CtanParamArg, elGetter: $.ASN1Encoder<CtanParamArg>): _Element {
+    if (!_cached_encoder_for_CtanParamArg) { _cached_encoder_for_CtanParamArg = function (value: CtanParamArg): _Element {
     const _components: _Element[] = [];
     _components.push(/* REQUIRED   */ _encode_PartyNumber(value.pisnNumber, $.BER));
     _components.push(/* REQUIRED   */ _encode_AuthChallenge(value.authChallenge, $.BER));

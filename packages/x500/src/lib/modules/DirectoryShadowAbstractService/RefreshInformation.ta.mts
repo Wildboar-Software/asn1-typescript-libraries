@@ -1,13 +1,13 @@
 /* eslint-disable */
 import {
-    ASN1Element as _Element,
+    type ASN1Element as _Element,
     ASN1TagClass as _TagClass,
-    EXTERNAL,
-    NULL,
+    type EXTERNAL,
+    type NULL,
 } from "@wildboar/asn1";
 import * as $ from "@wildboar/asn1/functional";
 import {
-    IncrementalRefresh,
+    type IncrementalRefresh,
     _decode_IncrementalRefresh,
     _encode_IncrementalRefresh,
 } from "../DirectoryShadowAbstractService/IncrementalRefresh.ta.mjs";

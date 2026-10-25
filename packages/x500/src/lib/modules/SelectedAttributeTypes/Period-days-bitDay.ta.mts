@@ -1,5 +1,5 @@
 /* eslint-disable */
-import { ASN1Element as _Element, BIT_STRING } from "@wildboar/asn1";
+import { ASN1Element as _Element, type BIT_STRING } from "@wildboar/asn1";
 import * as $ from "@wildboar/asn1/functional";
 
 /**
@@ -109,10 +109,10 @@ export const Period_days_bitDay_saturday: number = 6; /* LONG_NAMED_BIT */
 export const saturday: number = Period_days_bitDay_saturday; /* SHORT_NAMED_BIT */
 
 
-export const _decode_Period_days_bitDay = $._decodeBitString;
+export const _decode_Period_days_bitDay: $.ASN1Decoder<BIT_STRING> = $._decodeBitString;
 
 
-export const _encode_Period_days_bitDay = $._encodeBitString;
+export const _encode_Period_days_bitDay: $.ASN1Encoder<BIT_STRING> = $._encodeBitString;
 
 
 /* eslint-enable */

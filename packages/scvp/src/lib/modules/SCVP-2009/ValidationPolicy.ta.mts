@@ -1,8 +1,8 @@
 /* eslint-disable */
 import {
-  OPTIONAL,
-  BOOLEAN,
-  OBJECT_IDENTIFIER,
+  type OPTIONAL,
+  type BOOLEAN,
+  type OBJECT_IDENTIFIER,
   ASN1Element as _Element,
   ASN1TagClass as _TagClass,
   ASN1Construction as _Construction,
@@ -67,119 +67,141 @@ import {
  *
  */
 export class ValidationPolicy {
+  /**
+   * @summary `validationPolRef`.
+   * @description
+   *
+   * Reference to a named validation policy (and optional parameters)
+   * ([RFC 5055 §3.2.4.1](https://datatracker.ietf.org/doc/html/rfc5055#section-3.2.4.1)).
+   *
+   * @public
+   * @readonly
+   */
+  public readonly validationPolRef: ValidationPolRef;
+  /**
+   * @summary `validationAlg`.
+   * @description
+   *
+   * Optional validation algorithm (basic, name, or other)
+   * ([RFC 5055 §3.2.4.2](https://datatracker.ietf.org/doc/html/rfc5055#section-3.2.4.2)).
+   *
+   * @public
+   * @readonly
+   */
+  public readonly validationAlg?: OPTIONAL<ValidationAlg>;
+  /**
+   * @summary `userPolicySet`.
+   * @description
+   *
+   * Optional initial user-certificate policy set OIDs
+   * ([RFC 5055 §3.2.4.3](https://datatracker.ietf.org/doc/html/rfc5055#section-3.2.4.3)).
+   *
+   * @public
+   * @readonly
+   */
+  public readonly userPolicySet?: OPTIONAL<OBJECT_IDENTIFIER[]>;
+  /**
+   * @summary `inhibitPolicyMapping`.
+   * @description
+   *
+   * Optional initial `inhibit_policy_mapping` boolean
+   * ([RFC 5055 §3.2.4.4](https://datatracker.ietf.org/doc/html/rfc5055#section-3.2.4.4)).
+   *
+   * @public
+   * @readonly
+   */
+  public readonly inhibitPolicyMapping?: OPTIONAL<BOOLEAN>;
+  /**
+   * @summary `requireExplicitPolicy`.
+   * @description
+   *
+   * Optional initial `explicit_policy` requirement
+   * ([RFC 5055 §3.2.4.5](https://datatracker.ietf.org/doc/html/rfc5055#section-3.2.4.5)).
+   *
+   * @public
+   * @readonly
+   */
+  public readonly requireExplicitPolicy?: OPTIONAL<BOOLEAN>;
+  /**
+   * @summary `inhibitAnyPolicy`.
+   * @description
+   *
+   * Optional initial `inhibit_anyPolicy` boolean
+   * ([RFC 5055 §3.2.4.6](https://datatracker.ietf.org/doc/html/rfc5055#section-3.2.4.6)).
+   *
+   * @public
+   * @readonly
+   */
+  public readonly inhibitAnyPolicy?: OPTIONAL<BOOLEAN>;
+  /**
+   * @summary `trustAnchors`.
+   * @description
+   *
+   * Optional client-specified trust anchors; otherwise server
+   * default policy anchors apply ([RFC 5055 §3.2.4.7](https://datatracker.ietf.org/doc/html/rfc5055#section-3.2.4.7)).
+   *
+   * @public
+   * @readonly
+   */
+  public readonly trustAnchors?: OPTIONAL<TrustAnchors>;
+  /**
+   * @summary `keyUsages`.
+   * @description
+   *
+   * Optional acceptable `KeyUsage` values for the end certificate
+   * ([RFC 5055 §3.2.4.8](https://datatracker.ietf.org/doc/html/rfc5055#section-3.2.4.8)).
+   *
+   * @public
+   * @readonly
+   */
+  public readonly keyUsages?: OPTIONAL<KeyUsage[]>;
+  /**
+   * @summary `extendedKeyUsages`.
+   * @description
+   *
+   * Optional acceptable extended key usage OIDs; presence of any
+   * listed purpose is acceptable unless `specifiedKeyUsages` is
+   * used ([RFC 5055 §3.2.4.9](https://datatracker.ietf.org/doc/html/rfc5055#section-3.2.4.9)).
+   *
+   * @public
+   * @readonly
+   */
+  public readonly extendedKeyUsages?: OPTIONAL<KeyPurposeId[]>;
+  /**
+   * @summary `specifiedKeyUsages`.
+   * @description
+   *
+   * Optional EKUs that must all be present (stricter than
+   * `extendedKeyUsages`) ([RFC 5055 §3.2.4.10](https://datatracker.ietf.org/doc/html/rfc5055#section-3.2.4.10)).
+   *
+   * @public
+   * @readonly
+   */
+  public readonly specifiedKeyUsages?: OPTIONAL<KeyPurposeId[]>;
+
   constructor(
-    /**
-     * @summary `validationPolRef`.
-     * @description
-     *
-     * Reference to a named validation policy (and optional parameters)
-     * ([RFC 5055 §3.2.4.1](https://datatracker.ietf.org/doc/html/rfc5055#section-3.2.4.1)).
-     *
-     * @public
-     * @readonly
-     */
-    readonly validationPolRef: ValidationPolRef,
-    /**
-     * @summary `validationAlg`.
-     * @description
-     *
-     * Optional validation algorithm (basic, name, or other)
-     * ([RFC 5055 §3.2.4.2](https://datatracker.ietf.org/doc/html/rfc5055#section-3.2.4.2)).
-     *
-     * @public
-     * @readonly
-     */
-    readonly validationAlg?: OPTIONAL<ValidationAlg>,
-    /**
-     * @summary `userPolicySet`.
-     * @description
-     *
-     * Optional initial user-certificate policy set OIDs
-     * ([RFC 5055 §3.2.4.3](https://datatracker.ietf.org/doc/html/rfc5055#section-3.2.4.3)).
-     *
-     * @public
-     * @readonly
-     */
-    readonly userPolicySet?: OPTIONAL<OBJECT_IDENTIFIER[]>,
-    /**
-     * @summary `inhibitPolicyMapping`.
-     * @description
-     *
-     * Optional initial `inhibit_policy_mapping` boolean
-     * ([RFC 5055 §3.2.4.4](https://datatracker.ietf.org/doc/html/rfc5055#section-3.2.4.4)).
-     *
-     * @public
-     * @readonly
-     */
-    readonly inhibitPolicyMapping?: OPTIONAL<BOOLEAN>,
-    /**
-     * @summary `requireExplicitPolicy`.
-     * @description
-     *
-     * Optional initial `explicit_policy` requirement
-     * ([RFC 5055 §3.2.4.5](https://datatracker.ietf.org/doc/html/rfc5055#section-3.2.4.5)).
-     *
-     * @public
-     * @readonly
-     */
-    readonly requireExplicitPolicy?: OPTIONAL<BOOLEAN>,
-    /**
-     * @summary `inhibitAnyPolicy`.
-     * @description
-     *
-     * Optional initial `inhibit_anyPolicy` boolean
-     * ([RFC 5055 §3.2.4.6](https://datatracker.ietf.org/doc/html/rfc5055#section-3.2.4.6)).
-     *
-     * @public
-     * @readonly
-     */
-    readonly inhibitAnyPolicy?: OPTIONAL<BOOLEAN>,
-    /**
-     * @summary `trustAnchors`.
-     * @description
-     *
-     * Optional client-specified trust anchors; otherwise server
-     * default policy anchors apply ([RFC 5055 §3.2.4.7](https://datatracker.ietf.org/doc/html/rfc5055#section-3.2.4.7)).
-     *
-     * @public
-     * @readonly
-     */
-    readonly trustAnchors?: OPTIONAL<TrustAnchors>,
-    /**
-     * @summary `keyUsages`.
-     * @description
-     *
-     * Optional acceptable `KeyUsage` values for the end certificate
-     * ([RFC 5055 §3.2.4.8](https://datatracker.ietf.org/doc/html/rfc5055#section-3.2.4.8)).
-     *
-     * @public
-     * @readonly
-     */
-    readonly keyUsages?: OPTIONAL<KeyUsage[]>,
-    /**
-     * @summary `extendedKeyUsages`.
-     * @description
-     *
-     * Optional acceptable extended key usage OIDs; presence of any
-     * listed purpose is acceptable unless `specifiedKeyUsages` is
-     * used ([RFC 5055 §3.2.4.9](https://datatracker.ietf.org/doc/html/rfc5055#section-3.2.4.9)).
-     *
-     * @public
-     * @readonly
-     */
-    readonly extendedKeyUsages?: OPTIONAL<KeyPurposeId[]>,
-    /**
-     * @summary `specifiedKeyUsages`.
-     * @description
-     *
-     * Optional EKUs that must all be present (stricter than
-     * `extendedKeyUsages`) ([RFC 5055 §3.2.4.10](https://datatracker.ietf.org/doc/html/rfc5055#section-3.2.4.10)).
-     *
-     * @public
-     * @readonly
-     */
-    readonly specifiedKeyUsages?: OPTIONAL<KeyPurposeId[]>
-  ) {}
+    validationPolRef: ValidationPolRef,
+    validationAlg?: OPTIONAL<ValidationAlg>,
+    userPolicySet?: OPTIONAL<OBJECT_IDENTIFIER[]>,
+    inhibitPolicyMapping?: OPTIONAL<BOOLEAN>,
+    requireExplicitPolicy?: OPTIONAL<BOOLEAN>,
+    inhibitAnyPolicy?: OPTIONAL<BOOLEAN>,
+    trustAnchors?: OPTIONAL<TrustAnchors>,
+    keyUsages?: OPTIONAL<KeyUsage[]>,
+    extendedKeyUsages?: OPTIONAL<KeyPurposeId[]>,
+    specifiedKeyUsages?: OPTIONAL<KeyPurposeId[]>
+  ) {
+    this.validationPolRef = validationPolRef;
+    this.validationAlg = validationAlg;
+    this.userPolicySet = userPolicySet;
+    this.inhibitPolicyMapping = inhibitPolicyMapping;
+    this.requireExplicitPolicy = requireExplicitPolicy;
+    this.inhibitAnyPolicy = inhibitAnyPolicy;
+    this.trustAnchors = trustAnchors;
+    this.keyUsages = keyUsages;
+    this.extendedKeyUsages = extendedKeyUsages;
+    this.specifiedKeyUsages = specifiedKeyUsages;
+  }
 
   /**
    * @summary Restructures an object into a ValidationPolicy

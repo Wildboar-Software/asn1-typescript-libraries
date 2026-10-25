@@ -1,9 +1,9 @@
 /* eslint-disable */
 import {
-    BOOLEAN
+    type BOOLEAN
 } from "@wildboar/asn1";
 import * as $ from "@wildboar/asn1/functional";
-import { TwoPartMessage, _decode_TwoPartMessage, _encode_TwoPartMessage } from "../IN-CS3-SCF-SDF-datatypes/TwoPartMessage.ta.mjs";
+import { type TwoPartMessage, _decode_TwoPartMessage, _encode_TwoPartMessage } from "../IN-CS3-SCF-SDF-datatypes/TwoPartMessage.ta.mjs";
 // export { TwoPartMessage, _decode_TwoPartMessage, _encode_TwoPartMessage } from "../IN-CS3-SCF-SDF-datatypes/TwoPartMessage.ta.mjs";
 import { id_mt_conformCredentials } from "../IN-CS3-object-identifiers/id-mt-conformCredentials.va.mjs";
 // export { id_mt_conformCredentials } from "../IN-CS3-object-identifiers/id-mt-conformCredentials.va.mjs";

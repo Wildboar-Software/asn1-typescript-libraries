@@ -1,4 +1,4 @@
-import EqualityMatcher from "../../types/EqualityMatcher.mjs";
+import type EqualityMatcher from "../../types/EqualityMatcher.mjs";
 import type { ASN1Element } from "@wildboar/asn1";
 import {
     _decode_UnboundedDirectoryString,

@@ -11,22 +11,22 @@ import {
 } from '@wildboar/asn1';
 import * as $ from '@wildboar/asn1/functional';
 import {
-  BioAPI_HANDLE,
+  type BioAPI_HANDLE,
   _decode_BioAPI_HANDLE,
   _encode_BioAPI_HANDLE,
 } from '../BIP/BioAPI-HANDLE.ta.mjs';
 import {
-  BioAPI_UNIT_ID,
+  type BioAPI_UNIT_ID,
   _decode_BioAPI_UNIT_ID,
   _encode_BioAPI_UNIT_ID,
 } from '../BIP/BioAPI-UNIT-ID.ta.mjs';
 import {
-  UnsignedInt,
+  type UnsignedInt,
   _decode_UnsignedInt,
   _encode_UnsignedInt,
 } from '../BIP/UnsignedInt.ta.mjs';
 import {
-  BioAPI_DATA,
+  type BioAPI_DATA,
   _decode_BioAPI_DATA,
   _encode_BioAPI_DATA,
 } from '../BIP/BioAPI-DATA.ta.mjs';
@@ -63,7 +63,7 @@ export class ControlUnit_RequestParams {
    * @public
    * @readonly
    */
-  readonly originalBSPHandle: BioAPI_HANDLE;
+  public readonly originalBSPHandle: BioAPI_HANDLE;
   /**
    * @summary `unitID`.
    * @description
@@ -73,7 +73,7 @@ export class ControlUnit_RequestParams {
    * @public
    * @readonly
    */
-  readonly unitID: BioAPI_UNIT_ID;
+  public readonly unitID: BioAPI_UNIT_ID;
   /**
    * @summary `controlCode`.
    * @description
@@ -83,7 +83,7 @@ export class ControlUnit_RequestParams {
    * @public
    * @readonly
    */
-  readonly controlCode: UnsignedInt;
+  public readonly controlCode: UnsignedInt;
   /**
    * @summary `inputData`.
    * @description
@@ -95,7 +95,7 @@ export class ControlUnit_RequestParams {
    * @public
    * @readonly
    */
-  readonly inputData: BioAPI_DATA;
+  public readonly inputData: BioAPI_DATA;
 
   constructor(
     originalBSPHandle: BioAPI_HANDLE,

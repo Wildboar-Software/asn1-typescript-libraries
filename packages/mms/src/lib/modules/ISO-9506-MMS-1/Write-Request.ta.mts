@@ -1,6 +1,6 @@
 /* eslint-disable */
 import {
-    ASN1Element as _Element,
+    type ASN1Element as _Element,
     ASN1TagClass as _TagClass,
     ASN1Construction as _Construction,
     ASN1UniversalType as _UniversalType,
@@ -10,8 +10,8 @@ import {
     ASN1ConstructionError as _ConstructionError,
 } from "@wildboar/asn1";
 import * as $ from "@wildboar/asn1/functional";
-import { VariableAccessSpecification, _decode_VariableAccessSpecification, _encode_VariableAccessSpecification } from "../ISO-9506-MMS-1/VariableAccessSpecification.ta.mjs";
-import { Data, _decode_Data, _encode_Data } from "../ISO-9506-MMS-1/Data.ta.mjs";
+import { type VariableAccessSpecification, _decode_VariableAccessSpecification, _encode_VariableAccessSpecification } from "../ISO-9506-MMS-1/VariableAccessSpecification.ta.mjs";
+import { type Data, _decode_Data, _encode_Data } from "../ISO-9506-MMS-1/Data.ta.mjs";
 
 
 /**
@@ -36,31 +36,37 @@ import { Data, _decode_Data, _encode_Data } from "../ISO-9506-MMS-1/Data.ta.mjs"
  */
 export
 class Write_Request {
+    /**
+     * @summary `variableAccessSpecification`.
+     * @description
+     *
+     * Variables to write. ISO 9506-1:2003 §14.7.1.1.1,
+     * §14.5.1.
+     *
+     * @public
+     * @readonly
+     */
+    public readonly variableAccessSpecification: VariableAccessSpecification;
+    /**
+     * @summary `listOfData`.
+     * @description
+     *
+     * Values in VAS order. Abstract syntax follows each
+     * variable's type and alternate access.
+     * ISO 9506-1:2003 §14.7.1.1.2, §14.4.2.
+     *
+     * @public
+     * @readonly
+     */
+    public readonly listOfData: Data[];
+
     constructor (
-        /**
-         * @summary `variableAccessSpecification`.
-         * @description
-         *
-         * Variables to write. ISO 9506-1:2003 §14.7.1.1.1,
-         * §14.5.1.
-         *
-         * @public
-         * @readonly
-         */
-        readonly variableAccessSpecification: VariableAccessSpecification,
-        /**
-         * @summary `listOfData`.
-         * @description
-         *
-         * Values in VAS order. Abstract syntax follows each
-         * variable's type and alternate access.
-         * ISO 9506-1:2003 §14.7.1.1.2, §14.4.2.
-         *
-         * @public
-         * @readonly
-         */
-        readonly listOfData: Data[]
-    ) {}
+        variableAccessSpecification: VariableAccessSpecification,
+        listOfData: Data[]
+    ) {
+        this.variableAccessSpecification = variableAccessSpecification;
+        this.listOfData = listOfData;
+    }
 
     /**
      * @summary Restructures an object into a Write_Request

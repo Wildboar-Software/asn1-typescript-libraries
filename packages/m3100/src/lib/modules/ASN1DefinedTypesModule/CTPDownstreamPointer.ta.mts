@@ -1,6 +1,6 @@
 /* eslint-disable */
 import {
-    ASN1Element as _Element,
+    type ASN1Element as _Element,
     ASN1TagClass as _TagClass,
     ASN1Construction as _Construction,
     ASN1UniversalType as _UniversalType,
@@ -11,7 +11,7 @@ import {
 } from '@wildboar/asn1';
 import * as $ from '@wildboar/asn1/functional';
 import {
-    DownstreamConnectivityPointer,
+    type DownstreamConnectivityPointer,
     _decode_DownstreamConnectivityPointer,
     _encode_DownstreamConnectivityPointer,
 } from '../ASN1DefinedTypesModule/DownstreamConnectivityPointer.ta.mjs';
@@ -36,26 +36,13 @@ import {
  */
 export type CTPDownstreamPointer = DownstreamConnectivityPointer; // DefinedType
 
-
-let _cached_decoder_for_CTPDownstreamPointer: $.ASN1Decoder<CTPDownstreamPointer> | null = null;
-
-
 /**
  * @summary Decodes an ASN.1 element into a(n) CTPDownstreamPointer
  * @function
  * @param {_Element} el The element being decoded.
  * @returns {CTPDownstreamPointer} The decoded data structure.
  */
-export function _decode_CTPDownstreamPointer(el: _Element): CTPDownstreamPointer {
-    if (!_cached_decoder_for_CTPDownstreamPointer) {
-        _cached_decoder_for_CTPDownstreamPointer = _decode_DownstreamConnectivityPointer;
-    }
-    return _cached_decoder_for_CTPDownstreamPointer(el);
-}
-
-
-let _cached_encoder_for_CTPDownstreamPointer: $.ASN1Encoder<CTPDownstreamPointer> | null = null;
-
+export const _decode_CTPDownstreamPointer: $.ASN1Decoder<CTPDownstreamPointer> = _decode_DownstreamConnectivityPointer;
 
 /**
  * @summary Encodes a(n) CTPDownstreamPointer into an ASN.1 Element.
@@ -64,15 +51,7 @@ let _cached_encoder_for_CTPDownstreamPointer: $.ASN1Encoder<CTPDownstreamPointer
  * @param elGetter A function that can be used to get new ASN.1 elements.
  * @returns {_Element} The CTPDownstreamPointer, encoded as an ASN.1 Element.
  */
-export function _encode_CTPDownstreamPointer(
-    value: CTPDownstreamPointer,
-    elGetter: $.ASN1Encoder<CTPDownstreamPointer>
-): _Element {
-    if (!_cached_encoder_for_CTPDownstreamPointer) {
-        _cached_encoder_for_CTPDownstreamPointer = _encode_DownstreamConnectivityPointer;
-    }
-    return _cached_encoder_for_CTPDownstreamPointer(value, elGetter);
-}
+export const _encode_CTPDownstreamPointer: $.ASN1Encoder<CTPDownstreamPointer> = _encode_DownstreamConnectivityPointer;
 
 
 /* eslint-enable */

@@ -1,12 +1,12 @@
 /* eslint-disable */
 import {
-    OPTIONAL,
-    ASN1Element as _Element,
+    type OPTIONAL,
+    type ASN1Element as _Element,
     ASN1TagClass as _TagClass
 } from "@wildboar/asn1";
 import * as $ from "@wildboar/asn1/functional";
-import { AuditDescriptor_auditToken, _decode_AuditDescriptor_auditToken, _encode_AuditDescriptor_auditToken } from "../MEDIA-GATEWAY-CONTROL/AuditDescriptor-auditToken.ta.mjs";
-import { IndAuditParameter, _decode_IndAuditParameter, _encode_IndAuditParameter } from "../MEDIA-GATEWAY-CONTROL/IndAuditParameter.ta.mjs";
+import { type AuditDescriptor_auditToken, _decode_AuditDescriptor_auditToken, _encode_AuditDescriptor_auditToken } from "../MEDIA-GATEWAY-CONTROL/AuditDescriptor-auditToken.ta.mjs";
+import { type IndAuditParameter, _decode_IndAuditParameter, _encode_IndAuditParameter } from "../MEDIA-GATEWAY-CONTROL/IndAuditParameter.ta.mjs";
 
 
 /**
@@ -64,7 +64,7 @@ class AuditDescriptor {
      * @public
      * @readonly
      */
-    readonly auditToken?: OPTIONAL<AuditDescriptor_auditToken>;
+    public readonly auditToken?: OPTIONAL<AuditDescriptor_auditToken>;
     /**
      * @summary `auditPropertyToken`.
      * @description
@@ -77,7 +77,7 @@ class AuditDescriptor {
      * @public
      * @readonly
      */
-    readonly auditPropertyToken?: OPTIONAL<IndAuditParameter[]>;
+    public readonly auditPropertyToken?: OPTIONAL<IndAuditParameter[]>;
     /**
      * @summary Extensions that are not recognized.
      * @description
@@ -88,7 +88,7 @@ class AuditDescriptor {
      * @public
      * @readonly
      */
-    readonly _unrecognizedExtensionsList: _Element[];
+    public readonly _unrecognizedExtensionsList: _Element[];
 
     constructor (
         auditToken?: OPTIONAL<AuditDescriptor_auditToken>,

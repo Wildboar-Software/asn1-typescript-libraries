@@ -2,10 +2,10 @@
 
 import * as $ from "@wildboar/asn1/functional";
 import {
-    OPTIONAL,
-    SEQUENCE,
-    SET,
-    ASN1Element as _Element,
+    type OPTIONAL,
+    type SEQUENCE,
+    type SET,
+    type ASN1Element as _Element,
     ASN1TagClass as _TagClass
 } from "@wildboar/asn1";
 import { ConnectionInformation, _decode_ConnectionInformation, _encode_ConnectionInformation } from "../CSTA-media-services/ConnectionInformation.ta.mjs";
@@ -35,27 +35,33 @@ import { CSTACommonArguments, _decode_CSTACommonArguments, _encode_CSTACommonArg
  */
 export
 class ChangeConnectionInformationResult {
+    /**
+     * @summary `actualConnectionInfo`.
+     * @description
+     *
+     * Connection information the SF actually applied.
+     * @public
+     * @readonly
+     */
+    public readonly actualConnectionInfo: ConnectionInformation;
+    /**
+     * @summary `extensions`.
+     * @description
+     *
+     * Optional security (timestamp, sequence, securityInfo) and
+     * privateData.
+     * @public
+     * @readonly
+     */
+    public readonly extensions?: OPTIONAL<CSTACommonArguments>;
+
     constructor (
-        /**
-         * @summary `actualConnectionInfo`.
-         * @description
-         *
-         * Connection information the SF actually applied.
-         * @public
-         * @readonly
-         */
-        readonly actualConnectionInfo: ConnectionInformation,
-        /**
-         * @summary `extensions`.
-         * @description
-         *
-         * Optional security (timestamp, sequence, securityInfo) and
-         * privateData.
-         * @public
-         * @readonly
-         */
-        readonly extensions?: OPTIONAL<CSTACommonArguments>
-    ) {}
+        actualConnectionInfo: ConnectionInformation,
+        extensions?: OPTIONAL<CSTACommonArguments>
+    ) {
+        this.actualConnectionInfo = actualConnectionInfo;
+        this.extensions = extensions;
+    }
 
     /**
      * @summary Restructures an object into a ChangeConnectionInformationResult

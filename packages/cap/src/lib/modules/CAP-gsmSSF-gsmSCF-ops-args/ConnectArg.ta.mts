@@ -1,8 +1,8 @@
 /* eslint-disable */
 import {
-    OPTIONAL,
-    NULL,
-    ASN1Element as _Element,
+    type OPTIONAL,
+    type NULL,
+    type ASN1Element as _Element,
     ASN1TagClass as _TagClass,
     ASN1Construction as _Construction,
     ASN1UniversalType as _UniversalType,
@@ -23,11 +23,11 @@ import { type OCSIApplicable, _decode_OCSIApplicable, _encode_OCSIApplicable } f
 import { type OriginalCalledPartyID, _decode_OriginalCalledPartyID, _encode_OriginalCalledPartyID } from "../CAP-datatypes/OriginalCalledPartyID.ta.mjs";
 import { type RedirectingPartyID, _decode_RedirectingPartyID, _encode_RedirectingPartyID } from "../CAP-datatypes/RedirectingPartyID.ta.mjs";
 import { ServiceInteractionIndicatorsTwo, _decode_ServiceInteractionIndicatorsTwo, _encode_ServiceInteractionIndicatorsTwo } from "../CAP-datatypes/ServiceInteractionIndicatorsTwo.ta.mjs";
-import { CallingPartysCategory, _decode_CallingPartysCategory, _encode_CallingPartysCategory } from "../Core-INAP-CS1-DataTypes/CallingPartysCategory.ta.mjs";
-import { RedirectionInformation, _decode_RedirectionInformation, _encode_RedirectionInformation } from "../Core-INAP-CS1-DataTypes/RedirectionInformation.ta.mjs";
-import { LegID, _decode_LegID, _encode_LegID } from "../Core-INAP-CS1-DataTypes/LegID.ta.mjs";
-import { CUG_Interlock, _decode_CUG_Interlock, _encode_CUG_Interlock } from "../MAP-MS-DataTypes/CUG-Interlock.ta.mjs";
-import { SuppressionOfAnnouncement, _decode_SuppressionOfAnnouncement, _encode_SuppressionOfAnnouncement } from "../MAP-CH-DataTypes/SuppressionOfAnnouncement.ta.mjs";
+import { type CallingPartysCategory, _decode_CallingPartysCategory, _encode_CallingPartysCategory } from "../Core-INAP-CS1-DataTypes/CallingPartysCategory.ta.mjs";
+import { type RedirectionInformation, _decode_RedirectionInformation, _encode_RedirectionInformation } from "../Core-INAP-CS1-DataTypes/RedirectionInformation.ta.mjs";
+import { type LegID, _decode_LegID, _encode_LegID } from "../Core-INAP-CS1-DataTypes/LegID.ta.mjs";
+import { type CUG_Interlock, _decode_CUG_Interlock, _encode_CUG_Interlock } from "../MAP-MS-DataTypes/CUG-Interlock.ta.mjs";
+import { type SuppressionOfAnnouncement, _decode_SuppressionOfAnnouncement, _encode_SuppressionOfAnnouncement } from "../MAP-CH-DataTypes/SuppressionOfAnnouncement.ta.mjs";
 
 
 /**
@@ -43,23 +43,23 @@ import { SuppressionOfAnnouncement, _decode_SuppressionOfAnnouncement, _encode_S
  * ```asn1
  * ConnectArg {PARAMETERS-BOUND : bound} ::= SEQUENCE {
  *     destinationRoutingAddress        [0] DestinationRoutingAddress {bound},
- *     alertingPattern            [1] AlertingPattern                OPTIONAL,
- *     originalCalledPartyID        [6] OriginalCalledPartyID {bound}        OPTIONAL,
- *     extensions                [10] Extensions {bound}            OPTIONAL,
- *     carrier                [11] Carrier {bound}            OPTIONAL,
- *     callingPartysCategory        [28] CallingPartysCategory            OPTIONAL,
- *     redirectingPartyID            [29] RedirectingPartyID {bound}        OPTIONAL,
- *     redirectionInformation        [30] RedirectionInformation            OPTIONAL,
- *     genericNumbers            [14] GenericNumbers {bound}            OPTIONAL,
- *     serviceInteractionIndicatorsTwo    [15] ServiceInteractionIndicatorsTwo    OPTIONAL,
- *     chargeNumber            [19] ChargeNumber {bound}            OPTIONAL,
- *     legToBeConnected            [21] LegID                    OPTIONAL,
- *     cug-Interlock            [31] CUG-Interlock                OPTIONAL,
- *     cug-OutgoingAccess            [32] NULL                    OPTIONAL,
- *     suppressionOfAnnouncement        [55] SuppressionOfAnnouncement        OPTIONAL,
- *     oCSIApplicable            [56] OCSIApplicable                OPTIONAL,
- *     naOliInfo                [57] NAOliInfo                OPTIONAL,
- *     bor-InterrogationRequested        [58] NULL                    OPTIONAL,
+ *     alertingPattern            [1] AlertingPattern                type OPTIONAL,
+ *     originalCalledPartyID        [6] OriginalCalledPartyID {bound}        type OPTIONAL,
+ *     extensions                [10] Extensions {bound}            type OPTIONAL,
+ *     carrier                [11] Carrier {bound}            type OPTIONAL,
+ *     callingPartysCategory        [28] CallingPartysCategory            type OPTIONAL,
+ *     redirectingPartyID            [29] RedirectingPartyID {bound}        type OPTIONAL,
+ *     redirectionInformation        [30] RedirectionInformation            type OPTIONAL,
+ *     genericNumbers            [14] GenericNumbers {bound}            type OPTIONAL,
+ *     serviceInteractionIndicatorsTwo    [15] ServiceInteractionIndicatorsTwo    type OPTIONAL,
+ *     chargeNumber            [19] ChargeNumber {bound}            type OPTIONAL,
+ *     legToBeConnected            [21] LegID                    type OPTIONAL,
+ *     cug-Interlock            [31] CUG-Interlock                type OPTIONAL,
+ *     cug-OutgoingAccess            [32] NULL                    type OPTIONAL,
+ *     suppressionOfAnnouncement        [55] SuppressionOfAnnouncement        type OPTIONAL,
+ *     oCSIApplicable            [56] OCSIApplicable                type OPTIONAL,
+ *     naOliInfo                [57] NAOliInfo                type OPTIONAL,
+ *     bor-InterrogationRequested        [58] NULL                    type OPTIONAL,
  *     ... ,
  *     suppress-N-CSI            [59] NULL                    OPTIONAL
  *     }
@@ -69,224 +69,266 @@ import { SuppressionOfAnnouncement, _decode_SuppressionOfAnnouncement, _encode_S
  */
 export
 class ConnectArg {
+    /**
+     * @summary `destinationRoutingAddress`.
+     * @description
+     *
+     * Called party number(s) towards which the call shall be routed. (3GPP
+     * TS 29.078 V19.0.0 clause 11.9.1.1).
+     *
+     * @public
+     * @readonly
+     */
+    public readonly destinationRoutingAddress: DestinationRoutingAddress;
+    /**
+     * @summary `alertingPattern`.
+     * @description
+     *
+     * Type of alerting to apply (3GPP TS 29.002). (3GPP TS 29.078 V19.0.0
+     * clause 11.9.1.1).
+     *
+     * @public
+     * @readonly
+     */
+    public readonly alertingPattern?: OPTIONAL<AlertingPattern>;
+    /**
+     * @summary `originalCalledPartyID`.
+     * @description
+     *
+     * If gsmSCF forwards the call, carries the dialled digits. (3GPP TS
+     * 29.078 V19.0.0 clause 11.9.1.1).
+     *
+     * @public
+     * @readonly
+     */
+    public readonly originalCalledPartyID?: OPTIONAL<OriginalCalledPartyID>;
+    /**
+     * @summary `extensions`.
+     * @public
+     * @readonly
+     */
+    public readonly extensions?: OPTIONAL<Extensions>;
+    /**
+     * @summary `carrier`.
+     * @description
+     *
+     * Carrier selection field (how the carrier is provided, e.g.
+     * pre-subscribed) followed by carrier ID digits for routing to a
+     * carrier. (3GPP TS 29.078 V19.0.0 clause 11.9.1.1).
+     *
+     * @public
+     * @readonly
+     */
+    public readonly carrier?: OPTIONAL<Carrier>;
+    /**
+     * @summary `callingPartysCategory`.
+     * @description
+     *
+     * Type of calling party (e.g. operator, pay phone, ordinary
+     * subscriber). (3GPP TS 29.078 V19.0.0 clause 11.9.1.1).
+     *
+     * @public
+     * @readonly
+     */
+    public readonly callingPartysCategory?: OPTIONAL<CallingPartysCategory>;
+    /**
+     * @summary `redirectingPartyID`.
+     * @description
+     *
+     * Last directory number the call was redirected from. (3GPP TS 29.078
+     * V19.0.0 clause 11.9.1.1).
+     *
+     * @public
+     * @readonly
+     */
+    public readonly redirectingPartyID?: OPTIONAL<RedirectingPartyID>;
+    /**
+     * @summary `redirectionInformation`.
+     * @description
+     *
+     * Forwarding-related information such as the redirecting counter. (3GPP
+     * TS 29.078 V19.0.0 clause 11.9.1.1).
+     *
+     * @public
+     * @readonly
+     */
+    public readonly redirectionInformation?: OPTIONAL<RedirectionInformation>;
+    /**
+     * @summary `genericNumbers`.
+     * @description
+     *
+     * Lets gsmSCF set the network Generic Number; used to transfer
+     * Additional Calling Party Number. (3GPP TS 29.078 V19.0.0 clause
+     * 11.9.1.1).
+     *
+     * @public
+     * @readonly
+     */
+    public readonly genericNumbers?: OPTIONAL<GenericNumbers>;
+    /**
+     * @summary `serviceInteractionIndicatorsTwo`.
+     * @description
+     *
+     * Resolves interactions between CAMEL-based and network-based services.
+     * (3GPP TS 29.078 V19.0.0 clause 11.9.1.1).
+     *
+     * @public
+     * @readonly
+     */
+    public readonly serviceInteractionIndicatorsTwo?: OPTIONAL<ServiceInteractionIndicatorsTwo>;
+    /**
+     * @summary `chargeNumber`.
+     * @description
+     *
+     * Number identifying the entity to be charged; chargeable number for a
+     * North American long-distance carrier (ANSI T1.113-1995). (3GPP TS
+     * 29.078 V19.0.0 clause 11.9.1.1).
+     *
+     * @public
+     * @readonly
+     */
+    public readonly chargeNumber?: OPTIONAL<ChargeNumber>;
+    /**
+     * @summary `legToBeConnected`.
+     * @description
+     *
+     * Leg to be connected. Sending Side LegID. (3GPP TS 29.078 V19.0.0
+     * clauses 4.1.5 and 11.9.1.1).
+     *
+     * @public
+     * @readonly
+     */
+    public readonly legToBeConnected?: OPTIONAL<LegID>;
+    /**
+     * @summary `cug_Interlock`.
+     * @description
+     *
+     * Uniquely identifies a CUG within a network. (3GPP TS 29.078 V19.0.0
+     * clause 11.9.1.1).
+     *
+     * @public
+     * @readonly
+     */
+    public readonly cug_Interlock?: OPTIONAL<CUG_Interlock>;
+    /**
+     * @summary `cug_OutgoingAccess`.
+     * @description
+     *
+     * Presence means the calling user has subscribed to outgoing access
+     * inter-CUG accessibility. (3GPP TS 29.078 V19.0.0 clause 11.9.1.1).
+     *
+     * @public
+     * @readonly
+     */
+    public readonly cug_OutgoingAccess?: OPTIONAL<NULL>;
+    /**
+     * @summary `suppressionOfAnnouncement`.
+     * @description
+     *
+     * Announcements and tones played in the exchange at unsuccessful
+     * call-setup attempts shall be suppressed. (3GPP TS 29.078 V19.0.0
+     * clause 11.9.1.1).
+     *
+     * @public
+     * @readonly
+     */
+    public readonly suppressionOfAnnouncement?: OPTIONAL<SuppressionOfAnnouncement>;
+    /**
+     * @summary `oCSIApplicable`.
+     * @description
+     *
+     * GMSC/gsmSSF or VMSC/gsmSSF shall apply Originating CAMEL Subscription
+     * Information, if present, on the outgoing leg created by Connect (see
+     * 3GPP TS 23.078). (3GPP TS 29.078 V19.0.0 clause 11.9.1.1).
+     *
+     * @public
+     * @readonly
+     */
+    public readonly oCSIApplicable?: OPTIONAL<OCSIApplicable>;
+    /**
+     * @summary `naOliInfo`.
+     * @description
+     *
+     * Originating line information identifying the charged-party number
+     * type to the carrier. Included at gsmSCF operator discretion (ASN.1
+     * `na-Info` note). (3GPP TS 29.078 V19.0.0 clause 11.9.1.1).
+     *
+     * @public
+     * @readonly
+     */
+    public readonly naOliInfo?: OPTIONAL<NAOliInfo>;
+    /**
+     * @summary `bor_InterrogationRequested`.
+     * @description
+     *
+     * Presence means Basic Optimal Routeing is requested for the call.
+     * (3GPP TS 29.078 V19.0.0 clause 11.9.1.1).
+     *
+     * @public
+     * @readonly
+     */
+    public readonly bor_InterrogationRequested?: OPTIONAL<NULL>;
+    /**
+     * @summary `suppress_N_CSI`.
+     * @description
+     *
+     * Presence means N-CSI shall be suppressed. (3GPP TS 29.078 V19.0.0
+     * clause 11.9.1.1).
+     *
+     * @public
+     * @readonly
+     */
+    public readonly suppress_N_CSI?: OPTIONAL<NULL>;
+    /**
+     * @summary Extensions that are not recognized.
+     * @public
+     * @readonly
+     */
+    public readonly _unrecognizedExtensionsList: _Element[];
+
     constructor (
-        /**
-         * @summary `destinationRoutingAddress`.
-         * @description
-         *
-         * Called party number(s) towards which the call shall be routed. (3GPP
-         * TS 29.078 V19.0.0 clause 11.9.1.1).
-         *
-         * @public
-         * @readonly
-         */
-        readonly destinationRoutingAddress: DestinationRoutingAddress,
-        /**
-         * @summary `alertingPattern`.
-         * @description
-         *
-         * Type of alerting to apply (3GPP TS 29.002). (3GPP TS 29.078 V19.0.0
-         * clause 11.9.1.1).
-         *
-         * @public
-         * @readonly
-         */
-        readonly alertingPattern?: OPTIONAL<AlertingPattern>,
-        /**
-         * @summary `originalCalledPartyID`.
-         * @description
-         *
-         * If gsmSCF forwards the call, carries the dialled digits. (3GPP TS
-         * 29.078 V19.0.0 clause 11.9.1.1).
-         *
-         * @public
-         * @readonly
-         */
-        readonly originalCalledPartyID?: OPTIONAL<OriginalCalledPartyID>,
-        /**
-         * @summary `extensions`.
-         * @public
-         * @readonly
-         */
-        readonly extensions?: OPTIONAL<Extensions>,
-        /**
-         * @summary `carrier`.
-         * @description
-         *
-         * Carrier selection field (how the carrier is provided, e.g.
-         * pre-subscribed) followed by carrier ID digits for routing to a
-         * carrier. (3GPP TS 29.078 V19.0.0 clause 11.9.1.1).
-         *
-         * @public
-         * @readonly
-         */
-        readonly carrier?: OPTIONAL<Carrier>,
-        /**
-         * @summary `callingPartysCategory`.
-         * @description
-         *
-         * Type of calling party (e.g. operator, pay phone, ordinary
-         * subscriber). (3GPP TS 29.078 V19.0.0 clause 11.9.1.1).
-         *
-         * @public
-         * @readonly
-         */
-        readonly callingPartysCategory?: OPTIONAL<CallingPartysCategory>,
-        /**
-         * @summary `redirectingPartyID`.
-         * @description
-         *
-         * Last directory number the call was redirected from. (3GPP TS 29.078
-         * V19.0.0 clause 11.9.1.1).
-         *
-         * @public
-         * @readonly
-         */
-        readonly redirectingPartyID?: OPTIONAL<RedirectingPartyID>,
-        /**
-         * @summary `redirectionInformation`.
-         * @description
-         *
-         * Forwarding-related information such as the redirecting counter. (3GPP
-         * TS 29.078 V19.0.0 clause 11.9.1.1).
-         *
-         * @public
-         * @readonly
-         */
-        readonly redirectionInformation?: OPTIONAL<RedirectionInformation>,
-        /**
-         * @summary `genericNumbers`.
-         * @description
-         *
-         * Lets gsmSCF set the network Generic Number; used to transfer
-         * Additional Calling Party Number. (3GPP TS 29.078 V19.0.0 clause
-         * 11.9.1.1).
-         *
-         * @public
-         * @readonly
-         */
-        readonly genericNumbers?: OPTIONAL<GenericNumbers>,
-        /**
-         * @summary `serviceInteractionIndicatorsTwo`.
-         * @description
-         *
-         * Resolves interactions between CAMEL-based and network-based services.
-         * (3GPP TS 29.078 V19.0.0 clause 11.9.1.1).
-         *
-         * @public
-         * @readonly
-         */
-        readonly serviceInteractionIndicatorsTwo?: OPTIONAL<ServiceInteractionIndicatorsTwo>,
-        /**
-         * @summary `chargeNumber`.
-         * @description
-         *
-         * Number identifying the entity to be charged; chargeable number for a
-         * North American long-distance carrier (ANSI T1.113-1995). (3GPP TS
-         * 29.078 V19.0.0 clause 11.9.1.1).
-         *
-         * @public
-         * @readonly
-         */
-        readonly chargeNumber?: OPTIONAL<ChargeNumber>,
-        /**
-         * @summary `legToBeConnected`.
-         * @description
-         *
-         * Leg to be connected. Sending Side LegID. (3GPP TS 29.078 V19.0.0
-         * clauses 4.1.5 and 11.9.1.1).
-         *
-         * @public
-         * @readonly
-         */
-        readonly legToBeConnected?: OPTIONAL<LegID>,
-        /**
-         * @summary `cug_Interlock`.
-         * @description
-         *
-         * Uniquely identifies a CUG within a network. (3GPP TS 29.078 V19.0.0
-         * clause 11.9.1.1).
-         *
-         * @public
-         * @readonly
-         */
-        readonly cug_Interlock?: OPTIONAL<CUG_Interlock>,
-        /**
-         * @summary `cug_OutgoingAccess`.
-         * @description
-         *
-         * Presence means the calling user has subscribed to outgoing access
-         * inter-CUG accessibility. (3GPP TS 29.078 V19.0.0 clause 11.9.1.1).
-         *
-         * @public
-         * @readonly
-         */
-        readonly cug_OutgoingAccess?: OPTIONAL<NULL>,
-        /**
-         * @summary `suppressionOfAnnouncement`.
-         * @description
-         *
-         * Announcements and tones played in the exchange at unsuccessful
-         * call-setup attempts shall be suppressed. (3GPP TS 29.078 V19.0.0
-         * clause 11.9.1.1).
-         *
-         * @public
-         * @readonly
-         */
-        readonly suppressionOfAnnouncement?: OPTIONAL<SuppressionOfAnnouncement>,
-        /**
-         * @summary `oCSIApplicable`.
-         * @description
-         *
-         * GMSC/gsmSSF or VMSC/gsmSSF shall apply Originating CAMEL Subscription
-         * Information, if present, on the outgoing leg created by Connect (see
-         * 3GPP TS 23.078). (3GPP TS 29.078 V19.0.0 clause 11.9.1.1).
-         *
-         * @public
-         * @readonly
-         */
-        readonly oCSIApplicable?: OPTIONAL<OCSIApplicable>,
-        /**
-         * @summary `naOliInfo`.
-         * @description
-         *
-         * Originating line information identifying the charged-party number
-         * type to the carrier. Included at gsmSCF operator discretion (ASN.1
-         * `na-Info` note). (3GPP TS 29.078 V19.0.0 clause 11.9.1.1).
-         *
-         * @public
-         * @readonly
-         */
-        readonly naOliInfo?: OPTIONAL<NAOliInfo>,
-        /**
-         * @summary `bor_InterrogationRequested`.
-         * @description
-         *
-         * Presence means Basic Optimal Routeing is requested for the call.
-         * (3GPP TS 29.078 V19.0.0 clause 11.9.1.1).
-         *
-         * @public
-         * @readonly
-         */
-        readonly bor_InterrogationRequested?: OPTIONAL<NULL>,
-        /**
-         * @summary `suppress_N_CSI`.
-         * @description
-         *
-         * Presence means N-CSI shall be suppressed. (3GPP TS 29.078 V19.0.0
-         * clause 11.9.1.1).
-         *
-         * @public
-         * @readonly
-         */
-        readonly suppress_N_CSI?: OPTIONAL<NULL>,
-        /**
-         * @summary Extensions that are not recognized.
-         * @public
-         * @readonly
-         */
-        readonly _unrecognizedExtensionsList: _Element[] = []
-    ) {}
+        destinationRoutingAddress: DestinationRoutingAddress,
+        alertingPattern?: OPTIONAL<AlertingPattern>,
+        originalCalledPartyID?: OPTIONAL<OriginalCalledPartyID>,
+        extensions?: OPTIONAL<Extensions>,
+        carrier?: OPTIONAL<Carrier>,
+        callingPartysCategory?: OPTIONAL<CallingPartysCategory>,
+        redirectingPartyID?: OPTIONAL<RedirectingPartyID>,
+        redirectionInformation?: OPTIONAL<RedirectionInformation>,
+        genericNumbers?: OPTIONAL<GenericNumbers>,
+        serviceInteractionIndicatorsTwo?: OPTIONAL<ServiceInteractionIndicatorsTwo>,
+        chargeNumber?: OPTIONAL<ChargeNumber>,
+        legToBeConnected?: OPTIONAL<LegID>,
+        cug_Interlock?: OPTIONAL<CUG_Interlock>,
+        cug_OutgoingAccess?: OPTIONAL<NULL>,
+        suppressionOfAnnouncement?: OPTIONAL<SuppressionOfAnnouncement>,
+        oCSIApplicable?: OPTIONAL<OCSIApplicable>,
+        naOliInfo?: OPTIONAL<NAOliInfo>,
+        bor_InterrogationRequested?: OPTIONAL<NULL>,
+        suppress_N_CSI?: OPTIONAL<NULL>,
+        _unrecognizedExtensionsList: _Element[] = []
+    ) {
+        this.destinationRoutingAddress = destinationRoutingAddress;
+        this.alertingPattern = alertingPattern;
+        this.originalCalledPartyID = originalCalledPartyID;
+        this.extensions = extensions;
+        this.carrier = carrier;
+        this.callingPartysCategory = callingPartysCategory;
+        this.redirectingPartyID = redirectingPartyID;
+        this.redirectionInformation = redirectionInformation;
+        this.genericNumbers = genericNumbers;
+        this.serviceInteractionIndicatorsTwo = serviceInteractionIndicatorsTwo;
+        this.chargeNumber = chargeNumber;
+        this.legToBeConnected = legToBeConnected;
+        this.cug_Interlock = cug_Interlock;
+        this.cug_OutgoingAccess = cug_OutgoingAccess;
+        this.suppressionOfAnnouncement = suppressionOfAnnouncement;
+        this.oCSIApplicable = oCSIApplicable;
+        this.naOliInfo = naOliInfo;
+        this.bor_InterrogationRequested = bor_InterrogationRequested;
+        this.suppress_N_CSI = suppress_N_CSI;
+        this._unrecognizedExtensionsList = _unrecognizedExtensionsList;
+    }
 
     /**
      * @summary Restructures an object into a ConnectArg

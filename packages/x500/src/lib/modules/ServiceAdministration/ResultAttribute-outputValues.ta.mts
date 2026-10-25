@@ -1,5 +1,5 @@
 /* eslint-disable */
-import { ASN1Element as _Element, NULL } from "@wildboar/asn1";
+import { ASN1Element as _Element, type NULL } from "@wildboar/asn1";
 import * as $ from "@wildboar/asn1/functional";
 /**
  * @summary ResultAttribute_outputValues

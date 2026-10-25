@@ -110,7 +110,7 @@ type PublicTypeOfNumber = _enum_for_PublicTypeOfNumber;
  * @enum {number}
  */
 export
-const PublicTypeOfNumber = _enum_for_PublicTypeOfNumber;
+const PublicTypeOfNumber: typeof _enum_for_PublicTypeOfNumber = _enum_for_PublicTypeOfNumber;
 
 /**
  * @summary PublicTypeOfNumber_unknown
@@ -123,7 +123,7 @@ const PublicTypeOfNumber = _enum_for_PublicTypeOfNumber;
  * @type {number}
  */
 export
-const PublicTypeOfNumber_unknown: PublicTypeOfNumber = PublicTypeOfNumber.unknown; /* LONG_NAMED_ENUMERATED_VALUE */
+const PublicTypeOfNumber_unknown: _enum_for_PublicTypeOfNumber.unknown = PublicTypeOfNumber.unknown; /* LONG_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary unknown
@@ -136,7 +136,7 @@ const PublicTypeOfNumber_unknown: PublicTypeOfNumber = PublicTypeOfNumber.unknow
  * @type {number}
  */
 export
-const unknown: PublicTypeOfNumber = PublicTypeOfNumber.unknown; /* SHORT_NAMED_ENUMERATED_VALUE */
+const unknown: _enum_for_PublicTypeOfNumber.unknown = PublicTypeOfNumber.unknown; /* SHORT_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary PublicTypeOfNumber_internationalNumber
@@ -148,7 +148,7 @@ const unknown: PublicTypeOfNumber = PublicTypeOfNumber.unknown; /* SHORT_NAMED_E
  * @type {number}
  */
 export
-const PublicTypeOfNumber_internationalNumber: PublicTypeOfNumber = PublicTypeOfNumber.internationalNumber; /* LONG_NAMED_ENUMERATED_VALUE */
+const PublicTypeOfNumber_internationalNumber: _enum_for_PublicTypeOfNumber.internationalNumber = PublicTypeOfNumber.internationalNumber; /* LONG_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary internationalNumber
@@ -160,7 +160,7 @@ const PublicTypeOfNumber_internationalNumber: PublicTypeOfNumber = PublicTypeOfN
  * @type {number}
  */
 export
-const internationalNumber: PublicTypeOfNumber = PublicTypeOfNumber.internationalNumber; /* SHORT_NAMED_ENUMERATED_VALUE */
+const internationalNumber: _enum_for_PublicTypeOfNumber.internationalNumber = PublicTypeOfNumber.internationalNumber; /* SHORT_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary PublicTypeOfNumber_nationalNumber
@@ -172,7 +172,7 @@ const internationalNumber: PublicTypeOfNumber = PublicTypeOfNumber.international
  * @type {number}
  */
 export
-const PublicTypeOfNumber_nationalNumber: PublicTypeOfNumber = PublicTypeOfNumber.nationalNumber; /* LONG_NAMED_ENUMERATED_VALUE */
+const PublicTypeOfNumber_nationalNumber: _enum_for_PublicTypeOfNumber.nationalNumber = PublicTypeOfNumber.nationalNumber; /* LONG_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary nationalNumber
@@ -184,7 +184,7 @@ const PublicTypeOfNumber_nationalNumber: PublicTypeOfNumber = PublicTypeOfNumber
  * @type {number}
  */
 export
-const nationalNumber: PublicTypeOfNumber = PublicTypeOfNumber.nationalNumber; /* SHORT_NAMED_ENUMERATED_VALUE */
+const nationalNumber: _enum_for_PublicTypeOfNumber.nationalNumber = PublicTypeOfNumber.nationalNumber; /* SHORT_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary PublicTypeOfNumber_networkSpecificNumber
@@ -196,7 +196,7 @@ const nationalNumber: PublicTypeOfNumber = PublicTypeOfNumber.nationalNumber; /*
  * @type {number}
  */
 export
-const PublicTypeOfNumber_networkSpecificNumber: PublicTypeOfNumber = PublicTypeOfNumber.networkSpecificNumber; /* LONG_NAMED_ENUMERATED_VALUE */
+const PublicTypeOfNumber_networkSpecificNumber: _enum_for_PublicTypeOfNumber.networkSpecificNumber = PublicTypeOfNumber.networkSpecificNumber; /* LONG_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary networkSpecificNumber
@@ -208,7 +208,7 @@ const PublicTypeOfNumber_networkSpecificNumber: PublicTypeOfNumber = PublicTypeO
  * @type {number}
  */
 export
-const networkSpecificNumber: PublicTypeOfNumber = PublicTypeOfNumber.networkSpecificNumber; /* SHORT_NAMED_ENUMERATED_VALUE */
+const networkSpecificNumber: _enum_for_PublicTypeOfNumber.networkSpecificNumber = PublicTypeOfNumber.networkSpecificNumber; /* SHORT_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary PublicTypeOfNumber_subscriberNumber
@@ -220,7 +220,7 @@ const networkSpecificNumber: PublicTypeOfNumber = PublicTypeOfNumber.networkSpec
  * @type {number}
  */
 export
-const PublicTypeOfNumber_subscriberNumber: PublicTypeOfNumber = PublicTypeOfNumber.subscriberNumber; /* LONG_NAMED_ENUMERATED_VALUE */
+const PublicTypeOfNumber_subscriberNumber: _enum_for_PublicTypeOfNumber.subscriberNumber = PublicTypeOfNumber.subscriberNumber; /* LONG_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary subscriberNumber
@@ -232,7 +232,7 @@ const PublicTypeOfNumber_subscriberNumber: PublicTypeOfNumber = PublicTypeOfNumb
  * @type {number}
  */
 export
-const subscriberNumber: PublicTypeOfNumber = PublicTypeOfNumber.subscriberNumber; /* SHORT_NAMED_ENUMERATED_VALUE */
+const subscriberNumber: _enum_for_PublicTypeOfNumber.subscriberNumber = PublicTypeOfNumber.subscriberNumber; /* SHORT_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary PublicTypeOfNumber_abbreviatedNumber
@@ -245,7 +245,7 @@ const subscriberNumber: PublicTypeOfNumber = PublicTypeOfNumber.subscriberNumber
  * @type {number}
  */
 export
-const PublicTypeOfNumber_abbreviatedNumber: PublicTypeOfNumber = PublicTypeOfNumber.abbreviatedNumber; /* LONG_NAMED_ENUMERATED_VALUE */
+const PublicTypeOfNumber_abbreviatedNumber: _enum_for_PublicTypeOfNumber.abbreviatedNumber = PublicTypeOfNumber.abbreviatedNumber; /* LONG_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary abbreviatedNumber
@@ -258,7 +258,7 @@ const PublicTypeOfNumber_abbreviatedNumber: PublicTypeOfNumber = PublicTypeOfNum
  * @type {number}
  */
 export
-const abbreviatedNumber: PublicTypeOfNumber = PublicTypeOfNumber.abbreviatedNumber; /* SHORT_NAMED_ENUMERATED_VALUE */
+const abbreviatedNumber: _enum_for_PublicTypeOfNumber.abbreviatedNumber = PublicTypeOfNumber.abbreviatedNumber; /* SHORT_NAMED_ENUMERATED_VALUE */
 export const _decode_PublicTypeOfNumber: $.ASN1Decoder<PublicTypeOfNumber> = $._decodeEnumerated;
 export const _encode_PublicTypeOfNumber: $.ASN1Encoder<PublicTypeOfNumber> = $._encodeEnumerated;
 

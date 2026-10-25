@@ -1,14 +1,14 @@
 /* eslint-disable */
 import {
-    INTEGER,
-    OPTIONAL,
-    UTF8String,
-    ASN1Element as _Element,
+    type INTEGER,
+    type OPTIONAL,
+    type UTF8String,
+    type ASN1Element as _Element,
     ASN1TagClass as _TagClass
 } from "@wildboar/asn1";
 import * as $ from "@wildboar/asn1/functional";
-import { NotificationEvent, _decode_NotificationEvent, _encode_NotificationEvent } from "../RSPDefinitions/NotificationEvent.ta.mjs";
-import { Iccid, _decode_Iccid, _encode_Iccid } from "../RSPDefinitions/Iccid.ta.mjs";
+import { type NotificationEvent, _decode_NotificationEvent, _encode_NotificationEvent } from "../RSPDefinitions/NotificationEvent.ta.mjs";
+import { type Iccid, _decode_Iccid, _encode_Iccid } from "../RSPDefinitions/Iccid.ta.mjs";
 
 
 /**
@@ -46,7 +46,7 @@ class NotificationMetadata {
      * @public
      * @readonly
      */
-    readonly seqNumber: INTEGER;
+    public readonly seqNumber: INTEGER;
     /**
      * @summary `profileManagementOperation`.
      * @description
@@ -57,7 +57,7 @@ class NotificationMetadata {
      * @public
      * @readonly
      */
-    readonly profileManagementOperation: NotificationEvent;
+    public readonly profileManagementOperation: NotificationEvent;
     /**
      * @summary `notificationAddress`.
      * @description
@@ -68,7 +68,7 @@ class NotificationMetadata {
      * @public
      * @readonly
      */
-    readonly notificationAddress: UTF8String;
+    public readonly notificationAddress: UTF8String;
     /**
      * @summary `iccid`.
      * @description
@@ -79,7 +79,7 @@ class NotificationMetadata {
      * @public
      * @readonly
      */
-    readonly iccid?: OPTIONAL<Iccid>;
+    public readonly iccid?: OPTIONAL<Iccid>;
 
     constructor (
         seqNumber: INTEGER,

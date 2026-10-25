@@ -1,6 +1,6 @@
 /* eslint-disable */
 import {
-    ASN1Element as _Element,
+    type ASN1Element as _Element,
     ASN1TagClass as _TagClass,
     ASN1Construction as _Construction,
     ASN1UniversalType as _UniversalType,
@@ -43,7 +43,8 @@ const _enum_for_PerceivedSeverity = {
     cleared: 5,
 } as const;
 
-export type _enum_for_PerceivedSeverity = (typeof _enum_for_PerceivedSeverity)[keyof typeof _enum_for_PerceivedSeverity];
+export
+type _enum_for_PerceivedSeverity = (typeof _enum_for_PerceivedSeverity)[keyof typeof _enum_for_PerceivedSeverity];
 
 /**
  * @summary PerceivedSeverity
@@ -89,7 +90,7 @@ type PerceivedSeverity = _enum_for_PerceivedSeverity;
  * @enum {number}
  */
 export
-const PerceivedSeverity = _enum_for_PerceivedSeverity;
+const PerceivedSeverity: typeof _enum_for_PerceivedSeverity = _enum_for_PerceivedSeverity;
 
 /**
  * @summary PerceivedSeverity_indeterminate
@@ -102,7 +103,7 @@ const PerceivedSeverity = _enum_for_PerceivedSeverity;
  * @type {number}
  */
 export
-const PerceivedSeverity_indeterminate: PerceivedSeverity = PerceivedSeverity.indeterminate; /* LONG_NAMED_ENUMERATED_VALUE */
+const PerceivedSeverity_indeterminate: 0 = PerceivedSeverity.indeterminate; /* LONG_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary indeterminate
@@ -115,7 +116,7 @@ const PerceivedSeverity_indeterminate: PerceivedSeverity = PerceivedSeverity.ind
  * @type {number}
  */
 export
-const indeterminate: PerceivedSeverity = PerceivedSeverity.indeterminate; /* SHORT_NAMED_ENUMERATED_VALUE */
+const indeterminate: 0 = PerceivedSeverity.indeterminate; /* SHORT_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary PerceivedSeverity_critical
@@ -128,7 +129,7 @@ const indeterminate: PerceivedSeverity = PerceivedSeverity.indeterminate; /* SHO
  * @type {number}
  */
 export
-const PerceivedSeverity_critical: PerceivedSeverity = PerceivedSeverity.critical; /* LONG_NAMED_ENUMERATED_VALUE */
+const PerceivedSeverity_critical: 1 = PerceivedSeverity.critical; /* LONG_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary critical
@@ -141,7 +142,7 @@ const PerceivedSeverity_critical: PerceivedSeverity = PerceivedSeverity.critical
  * @type {number}
  */
 export
-const critical: PerceivedSeverity = PerceivedSeverity.critical; /* SHORT_NAMED_ENUMERATED_VALUE */
+const critical: 1 = PerceivedSeverity.critical; /* SHORT_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary PerceivedSeverity_major
@@ -154,7 +155,7 @@ const critical: PerceivedSeverity = PerceivedSeverity.critical; /* SHORT_NAMED_E
  * @type {number}
  */
 export
-const PerceivedSeverity_major: PerceivedSeverity = PerceivedSeverity.major; /* LONG_NAMED_ENUMERATED_VALUE */
+const PerceivedSeverity_major: 2 = PerceivedSeverity.major; /* LONG_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary major
@@ -167,7 +168,7 @@ const PerceivedSeverity_major: PerceivedSeverity = PerceivedSeverity.major; /* L
  * @type {number}
  */
 export
-const major: PerceivedSeverity = PerceivedSeverity.major; /* SHORT_NAMED_ENUMERATED_VALUE */
+const major: 2 = PerceivedSeverity.major; /* SHORT_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary PerceivedSeverity_minor
@@ -181,7 +182,7 @@ const major: PerceivedSeverity = PerceivedSeverity.major; /* SHORT_NAMED_ENUMERA
  * @type {number}
  */
 export
-const PerceivedSeverity_minor: PerceivedSeverity = PerceivedSeverity.minor; /* LONG_NAMED_ENUMERATED_VALUE */
+const PerceivedSeverity_minor: 3 = PerceivedSeverity.minor; /* LONG_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary minor
@@ -195,7 +196,7 @@ const PerceivedSeverity_minor: PerceivedSeverity = PerceivedSeverity.minor; /* L
  * @type {number}
  */
 export
-const minor: PerceivedSeverity = PerceivedSeverity.minor; /* SHORT_NAMED_ENUMERATED_VALUE */
+const minor: 3 = PerceivedSeverity.minor; /* SHORT_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary PerceivedSeverity_warning
@@ -209,7 +210,7 @@ const minor: PerceivedSeverity = PerceivedSeverity.minor; /* SHORT_NAMED_ENUMERA
  * @type {number}
  */
 export
-const PerceivedSeverity_warning: PerceivedSeverity = PerceivedSeverity.warning; /* LONG_NAMED_ENUMERATED_VALUE */
+const PerceivedSeverity_warning: 4 = PerceivedSeverity.warning; /* LONG_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary warning
@@ -223,7 +224,7 @@ const PerceivedSeverity_warning: PerceivedSeverity = PerceivedSeverity.warning; 
  * @type {number}
  */
 export
-const warning: PerceivedSeverity = PerceivedSeverity.warning; /* SHORT_NAMED_ENUMERATED_VALUE */
+const warning: 4 = PerceivedSeverity.warning; /* SHORT_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary PerceivedSeverity_cleared
@@ -236,7 +237,7 @@ const warning: PerceivedSeverity = PerceivedSeverity.warning; /* SHORT_NAMED_ENU
  * @type {number}
  */
 export
-const PerceivedSeverity_cleared: PerceivedSeverity = PerceivedSeverity.cleared; /* LONG_NAMED_ENUMERATED_VALUE */
+const PerceivedSeverity_cleared: 5 = PerceivedSeverity.cleared; /* LONG_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary cleared
@@ -249,13 +250,28 @@ const PerceivedSeverity_cleared: PerceivedSeverity = PerceivedSeverity.cleared; 
  * @type {number}
  */
 export
-const cleared: PerceivedSeverity = PerceivedSeverity.cleared; /* SHORT_NAMED_ENUMERATED_VALUE */
+const cleared: 5 = PerceivedSeverity.cleared; /* SHORT_NAMED_ENUMERATED_VALUE */
 
 
-export const _decode_PerceivedSeverity = $._decodeEnumerated as $.ASN1Decoder<PerceivedSeverity>;
+export function _decode_PerceivedSeverity(el: _Element): PerceivedSeverity {
+    const enumerated = $._decodeEnumerated(el);
+    switch (enumerated) {
+        case PerceivedSeverity.indeterminate: return PerceivedSeverity.indeterminate;
+        case PerceivedSeverity.critical: return PerceivedSeverity.critical;
+        case PerceivedSeverity.major: return PerceivedSeverity.major;
+        case PerceivedSeverity.minor: return PerceivedSeverity.minor;
+        case PerceivedSeverity.warning: return PerceivedSeverity.warning;
+        case PerceivedSeverity.cleared: return PerceivedSeverity.cleared;
+        default:
+            throw new _ConstructionError(
+                "Invalid ENUMERATED value " + enumerated + " for PerceivedSeverity.",
+                el,
+            );
+    }
+}
 
 
-export const _encode_PerceivedSeverity = $._encodeEnumerated as $.ASN1Encoder<PerceivedSeverity>;
+export const _encode_PerceivedSeverity: $.ASN1Encoder<PerceivedSeverity> = $._encodeEnumerated as $.ASN1Encoder<PerceivedSeverity>;
 
 
 /* eslint-enable */

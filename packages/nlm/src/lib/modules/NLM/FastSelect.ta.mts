@@ -1,6 +1,6 @@
 /* eslint-disable */
 import {
-    ASN1Element as _Element,
+    type ASN1Element as _Element,
     ASN1TagClass as _TagClass,
     ASN1Construction as _Construction,
     ASN1UniversalType as _UniversalType,
@@ -85,7 +85,7 @@ export type FastSelect = _enum_for_FastSelect;
  *
  * @enum {number}
  */
-export const FastSelect = _enum_for_FastSelect;
+export const FastSelect: typeof _enum_for_FastSelect = _enum_for_FastSelect;
 
 
 /**
@@ -99,7 +99,7 @@ export const FastSelect = _enum_for_FastSelect;
  * @constant
  * @type {number}
  */
-export const FastSelect_notSpecified: FastSelect =
+export const FastSelect_notSpecified: 0 =
     FastSelect.notSpecified; /* LONG_NAMED_ENUMERATED_VALUE */
 
 
@@ -114,7 +114,7 @@ export const FastSelect_notSpecified: FastSelect =
  * @constant
  * @type {number}
  */
-export const notSpecified: FastSelect =
+export const notSpecified: 0 =
     FastSelect.notSpecified; /* SHORT_NAMED_ENUMERATED_VALUE */
 
 
@@ -129,7 +129,7 @@ export const notSpecified: FastSelect =
  * @constant
  * @type {number}
  */
-export const FastSelect_fastSelect: FastSelect =
+export const FastSelect_fastSelect: 1 =
     FastSelect.fastSelect; /* LONG_NAMED_ENUMERATED_VALUE */
 
 
@@ -144,7 +144,7 @@ export const FastSelect_fastSelect: FastSelect =
  * @constant
  * @type {number}
  */
-export const fastSelect: FastSelect =
+export const fastSelect: 1 =
     FastSelect.fastSelect; /* SHORT_NAMED_ENUMERATED_VALUE */
 
 
@@ -159,7 +159,7 @@ export const fastSelect: FastSelect =
  * @constant
  * @type {number}
  */
-export const FastSelect_fastSelectWithRestrictedResponse: FastSelect =
+export const FastSelect_fastSelectWithRestrictedResponse: 2 =
     FastSelect.fastSelectWithRestrictedResponse; /* LONG_NAMED_ENUMERATED_VALUE */
 
 
@@ -174,7 +174,7 @@ export const FastSelect_fastSelectWithRestrictedResponse: FastSelect =
  * @constant
  * @type {number}
  */
-export const fastSelectWithRestrictedResponse: FastSelect =
+export const fastSelectWithRestrictedResponse: 2 =
     FastSelect.fastSelectWithRestrictedResponse; /* SHORT_NAMED_ENUMERATED_VALUE */
 
 
@@ -189,7 +189,7 @@ export const fastSelectWithRestrictedResponse: FastSelect =
  * @constant
  * @type {number}
  */
-export const FastSelect_noFastSelect: FastSelect =
+export const FastSelect_noFastSelect: 3 =
     FastSelect.noFastSelect; /* LONG_NAMED_ENUMERATED_VALUE */
 
 
@@ -204,18 +204,31 @@ export const FastSelect_noFastSelect: FastSelect =
  * @constant
  * @type {number}
  */
-export const noFastSelect: FastSelect =
+export const noFastSelect: 3 =
     FastSelect.noFastSelect; /* SHORT_NAMED_ENUMERATED_VALUE */
 
 
 
 
-export const _decode_FastSelect = $._decodeEnumerated as $.ASN1Decoder<FastSelect>;
+export function _decode_FastSelect(el: _Element): FastSelect {
+    const enumerated = $._decodeEnumerated(el);
+    switch (enumerated) {
+        case FastSelect.notSpecified: return FastSelect.notSpecified;
+        case FastSelect.fastSelect: return FastSelect.fastSelect;
+        case FastSelect.fastSelectWithRestrictedResponse: return FastSelect.fastSelectWithRestrictedResponse;
+        case FastSelect.noFastSelect: return FastSelect.noFastSelect;
+        default:
+            throw new _ConstructionError(
+                'Invalid ENUMERATED value ' + enumerated + ' for FastSelect.',
+                el,
+            );
+    }
+}
 
 
 
 
-export const _encode_FastSelect = $._encodeEnumerated as $.ASN1Encoder<FastSelect>;
+export const _encode_FastSelect: $.ASN1Encoder<FastSelect> = $._encodeEnumerated as $.ASN1Encoder<FastSelect>;
 
 
 /* eslint-enable */

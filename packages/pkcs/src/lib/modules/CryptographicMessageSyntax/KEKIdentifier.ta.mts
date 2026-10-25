@@ -1,10 +1,10 @@
 /* eslint-disable */
 import {
-    ASN1Element as _Element,
+    type ASN1Element as _Element,
     ASN1TagClass as _TagClass,
-    GeneralizedTime,
-    OCTET_STRING,
-    OPTIONAL,
+    type GeneralizedTime,
+    type OCTET_STRING,
+    type OPTIONAL,
 } from "@wildboar/asn1";
 import * as $ from "@wildboar/asn1/functional";
 import {
@@ -29,26 +29,34 @@ import {
  *
  */
 export class KEKIdentifier {
+    /**
+     * @summary `keyIdentifier`.
+     * @public
+     * @readonly
+     */
+    public readonly keyIdentifier: OCTET_STRING;
+    /**
+     * @summary `date`.
+     * @public
+     * @readonly
+     */
+    public readonly date?: OPTIONAL<GeneralizedTime>;
+    /**
+     * @summary `other`.
+     * @public
+     * @readonly
+     */
+    public readonly other?: OPTIONAL<OtherKeyAttribute>;
+
     constructor(
-        /**
-         * @summary `keyIdentifier`.
-         * @public
-         * @readonly
-         */
-        readonly keyIdentifier: OCTET_STRING,
-        /**
-         * @summary `date`.
-         * @public
-         * @readonly
-         */
-        readonly date?: OPTIONAL<GeneralizedTime>,
-        /**
-         * @summary `other`.
-         * @public
-         * @readonly
-         */
-        readonly other?: OPTIONAL<OtherKeyAttribute>
-    ) {}
+        keyIdentifier: OCTET_STRING,
+        date?: OPTIONAL<GeneralizedTime>,
+        other?: OPTIONAL<OtherKeyAttribute>
+    ) {
+        this.keyIdentifier = keyIdentifier;
+        this.date = date;
+        this.other = other;
+    }
 
     /**
      * @summary Restructures an object into a KEKIdentifier

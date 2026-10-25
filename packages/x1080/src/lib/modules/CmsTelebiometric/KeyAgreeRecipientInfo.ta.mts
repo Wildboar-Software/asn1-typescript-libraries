@@ -1,7 +1,7 @@
 /* eslint-disable */
 import {
-    OPTIONAL,
-    ASN1Element as _Element,
+    type OPTIONAL,
+    type ASN1Element as _Element,
     ASN1TagClass as _TagClass,
     ASN1Construction as _Construction,
     ASN1UniversalType as _UniversalType,
@@ -12,27 +12,27 @@ import {
 } from '@wildboar/asn1';
 import * as $ from '@wildboar/asn1/functional';
 import {
-    CMSVersion,
+    type CMSVersion,
     _decode_CMSVersion,
     _encode_CMSVersion,
 } from '../CmsTelebiometric/CMSVersion.ta.mjs';
 import {
-    OriginatorIdentifierOrKey,
+    type OriginatorIdentifierOrKey,
     _decode_OriginatorIdentifierOrKey,
     _encode_OriginatorIdentifierOrKey,
 } from '../CmsTelebiometric/OriginatorIdentifierOrKey.ta.mjs';
 import {
-    UserKeyingMaterial,
+    type UserKeyingMaterial,
     _decode_UserKeyingMaterial,
     _encode_UserKeyingMaterial,
 } from '../CmsTelebiometric/UserKeyingMaterial.ta.mjs';
 import {
-    KeyEncryptionAlgorithmIdentifier,
+    type KeyEncryptionAlgorithmIdentifier,
     _decode_KeyEncryptionAlgorithmIdentifier,
     _encode_KeyEncryptionAlgorithmIdentifier,
 } from '../CmsTelebiometric/KeyEncryptionAlgorithmIdentifier.ta.mjs';
 import {
-    RecipientEncryptedKeys,
+    type RecipientEncryptedKeys,
     _decode_RecipientEncryptedKeys,
     _encode_RecipientEncryptedKeys,
 } from '../CmsTelebiometric/RecipientEncryptedKeys.ta.mjs';
@@ -63,76 +63,90 @@ import {
  *
  */
 export class KeyAgreeRecipientInfo {
+    /**
+     * @summary `version`.
+     * @description
+     *
+     * Always `v3`.
+     * ITU-T Rec. X.1080.0 (2017) Cor.1 Annex B.3.3.
+     *
+     * @public
+     * @readonly
+     */
+    public readonly version: CMSVersion;
+    /**
+     * @summary `originator`.
+     * @description
+     *
+     * Sender identification or ephemeral public key.
+     * `issuerAndSerialNumber` for static-static (sender's DH
+     * PKC); `originatorKey` for ephemeral-static.
+     * `subjectKeyIdentifier` shall not be taken.
+     * ITU-T Rec. X.1080.0 (2017) Cor.1 Annex B.3.3.
+     *
+     * @public
+     * @readonly
+     */
+    public readonly originator: OriginatorIdentifierOrKey;
+    /**
+     * @summary `ukm`.
+     * @description
+     *
+     * User keying material. Present for static-static. SIZE (64)
+     * OCTET STRING. Combined with the DH shared secret to form
+     * the KEK used to wrap the CEK.
+     * ITU-T Rec. X.1080.0 (2017) Cor.1 Annex B.3.3.
+     *
+     * @public
+     * @readonly
+     */
+    public readonly ukm: OPTIONAL<UserKeyingMaterial>;
+    /**
+     * @summary `keyEncryptionAlgorithm`.
+     * @description
+     *
+     * Key-wrapping algorithm (AES Key Wrap, RFC 3394, is
+     * mentioned; not mandated). From
+     * `SupportedKeyIncryptAlgorithms`.
+     * ITU-T Rec. X.1080.0 (2017) Cor.1 Annex B.3.3.
+     *
+     * @public
+     * @readonly
+     */
+    public readonly keyEncryptionAlgorithm: KeyEncryptionAlgorithmIdentifier;
+    /**
+     * @summary `recipientEncryptedKeys`.
+     * @description
+     *
+     * Exactly one wrapped CEK for the recipient.
+     * ITU-T Rec. X.1080.0 (2017) Cor.1 Annex B.3.3.
+     *
+     * @public
+     * @readonly
+     */
+    public readonly recipientEncryptedKeys: RecipientEncryptedKeys;
+    /**
+     * @summary Extensions that are not recognized.
+     * @public
+     * @readonly
+     */
+    public readonly _unrecognizedExtensionsList: _Element[];
+
     constructor(
-        /**
-         * @summary `version`.
-         * @description
-         *
-         * Always `v3`.
-         * ITU-T Rec. X.1080.0 (2017) Cor.1 Annex B.3.3.
-         *
-         * @public
-         * @readonly
-         */
-        readonly version: CMSVersion,
-        /**
-         * @summary `originator`.
-         * @description
-         *
-         * Sender identification or ephemeral public key.
-         * `issuerAndSerialNumber` for static-static (sender's DH
-         * PKC); `originatorKey` for ephemeral-static.
-         * `subjectKeyIdentifier` shall not be taken.
-         * ITU-T Rec. X.1080.0 (2017) Cor.1 Annex B.3.3.
-         *
-         * @public
-         * @readonly
-         */
-        readonly originator: OriginatorIdentifierOrKey,
-        /**
-         * @summary `ukm`.
-         * @description
-         *
-         * User keying material. Present for static-static. SIZE (64)
-         * OCTET STRING. Combined with the DH shared secret to form
-         * the KEK used to wrap the CEK.
-         * ITU-T Rec. X.1080.0 (2017) Cor.1 Annex B.3.3.
-         *
-         * @public
-         * @readonly
-         */
-        readonly ukm: OPTIONAL<UserKeyingMaterial>,
-        /**
-         * @summary `keyEncryptionAlgorithm`.
-         * @description
-         *
-         * Key-wrapping algorithm (AES Key Wrap, RFC 3394, is
-         * mentioned; not mandated). From
-         * `SupportedKeyIncryptAlgorithms`.
-         * ITU-T Rec. X.1080.0 (2017) Cor.1 Annex B.3.3.
-         *
-         * @public
-         * @readonly
-         */
-        readonly keyEncryptionAlgorithm: KeyEncryptionAlgorithmIdentifier,
-        /**
-         * @summary `recipientEncryptedKeys`.
-         * @description
-         *
-         * Exactly one wrapped CEK for the recipient.
-         * ITU-T Rec. X.1080.0 (2017) Cor.1 Annex B.3.3.
-         *
-         * @public
-         * @readonly
-         */
-        readonly recipientEncryptedKeys: RecipientEncryptedKeys,
-        /**
-         * @summary Extensions that are not recognized.
-         * @public
-         * @readonly
-         */
-        readonly _unrecognizedExtensionsList: _Element[] = []
-    ) {}
+        version: CMSVersion,
+        originator: OriginatorIdentifierOrKey,
+        ukm: OPTIONAL<UserKeyingMaterial>,
+        keyEncryptionAlgorithm: KeyEncryptionAlgorithmIdentifier,
+        recipientEncryptedKeys: RecipientEncryptedKeys,
+        _unrecognizedExtensionsList: _Element[] = []
+    ) {
+        this.version = version;
+        this.originator = originator;
+        this.ukm = ukm;
+        this.keyEncryptionAlgorithm = keyEncryptionAlgorithm;
+        this.recipientEncryptedKeys = recipientEncryptedKeys;
+        this._unrecognizedExtensionsList = _unrecognizedExtensionsList;
+    }
 
     /**
      * @summary Restructures an object into a KeyAgreeRecipientInfo

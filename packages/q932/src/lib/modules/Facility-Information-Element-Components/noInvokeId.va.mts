@@ -1,5 +1,5 @@
 /* eslint-disable */
-import { InvokeId } from "../Facility-Information-Element-Components/InvokeId.ta.mjs";
+import { type InvokeId } from "../Facility-Information-Element-Components/InvokeId.ta.mjs";
 
 
 /**

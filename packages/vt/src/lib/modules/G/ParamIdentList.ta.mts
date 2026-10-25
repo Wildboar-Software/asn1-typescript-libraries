@@ -1,8 +1,8 @@
 /* eslint-disable */
 import {
-    OPTIONAL,
-    NULL,
-    ASN1Element as _Element,
+    type OPTIONAL,
+    type NULL,
+    type ASN1Element as _Element,
     ASN1TagClass as _TagClass,
     ASN1Construction as _Construction,
     ASN1UniversalType as _UniversalType,
@@ -41,44 +41,54 @@ import { type Identifier as DEV_Identifier, _decode_Identifier as DEV__decode_Id
  */
 export
 class ParamIdentList {
+    /**
+     * @summary `displayObjects`.
+     * @description
+     * CDS display-object identifiers to invite or reject. ISO/IEC
+     * 9041-1:1997 §6.15.2, §12.2.
+     * @public
+     * @readonly
+     */
+    public readonly displayObjects?: OPTIONAL<CDS_Identifier>;
+    /**
+     * @summary `controlObjects`.
+     * @description
+     * CSS control-object identifiers to invite or reject. ISO/IEC
+     * 9041-1:1997 §6.15.2, §12.2.
+     * @public
+     * @readonly
+     */
+    public readonly controlObjects?: OPTIONAL<CSS_Identifier>;
+    /**
+     * @summary `deviceObjects`.
+     * @description
+     * DEV device-object identifiers to invite or reject. ISO/IEC
+     * 9041-1:1997 §6.15.2, §12.2.
+     * @public
+     * @readonly
+     */
+    public readonly deviceObjects?: OPTIONAL<DEV_Identifier>;
+    /**
+     * @summary `deliveryControl`.
+     * @description
+     * Present to invite or reject the delivery-control VTE-parameter.
+     * ISO/IEC 9040:1997 §24; ISO/IEC 9041-1:1997 §12.2.
+     * @public
+     * @readonly
+     */
+    public readonly deliveryControl?: OPTIONAL<NULL>;
+
     constructor (
-        /**
-         * @summary `displayObjects`.
-         * @description
-         * CDS display-object identifiers to invite or reject. ISO/IEC
-         * 9041-1:1997 §6.15.2, §12.2.
-         * @public
-         * @readonly
-         */
-        readonly displayObjects?: OPTIONAL<CDS_Identifier>,
-        /**
-         * @summary `controlObjects`.
-         * @description
-         * CSS control-object identifiers to invite or reject. ISO/IEC
-         * 9041-1:1997 §6.15.2, §12.2.
-         * @public
-         * @readonly
-         */
-        readonly controlObjects?: OPTIONAL<CSS_Identifier>,
-        /**
-         * @summary `deviceObjects`.
-         * @description
-         * DEV device-object identifiers to invite or reject. ISO/IEC
-         * 9041-1:1997 §6.15.2, §12.2.
-         * @public
-         * @readonly
-         */
-        readonly deviceObjects?: OPTIONAL<DEV_Identifier>,
-        /**
-         * @summary `deliveryControl`.
-         * @description
-         * Present to invite or reject the delivery-control VTE-parameter.
-         * ISO/IEC 9040:1997 §24; ISO/IEC 9041-1:1997 §12.2.
-         * @public
-         * @readonly
-         */
-        readonly deliveryControl?: OPTIONAL<NULL>
-    ) {}
+        displayObjects?: OPTIONAL<CDS_Identifier>,
+        controlObjects?: OPTIONAL<CSS_Identifier>,
+        deviceObjects?: OPTIONAL<DEV_Identifier>,
+        deliveryControl?: OPTIONAL<NULL>
+    ) {
+        this.displayObjects = displayObjects;
+        this.controlObjects = controlObjects;
+        this.deviceObjects = deviceObjects;
+        this.deliveryControl = deliveryControl;
+    }
 
     /**
      * @summary Restructures an object into a ParamIdentList

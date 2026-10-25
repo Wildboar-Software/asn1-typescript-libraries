@@ -1,12 +1,12 @@
 /* eslint-disable */
 import {
-    BOOLEAN,
-    OPTIONAL,
-    ASN1Element as _Element,
+    type BOOLEAN,
+    type OPTIONAL,
+    type ASN1Element as _Element,
     ASN1TagClass as _TagClass
 } from "@wildboar/asn1";
 import * as $ from "@wildboar/asn1/functional";
-import { SubaddressInformation, _decode_SubaddressInformation, _encode_SubaddressInformation } from "../Addressing-Data-Elements/SubaddressInformation.ta.mjs";
+import { type SubaddressInformation, _decode_SubaddressInformation, _encode_SubaddressInformation } from "../Addressing-Data-Elements/SubaddressInformation.ta.mjs";
 
 
 /**

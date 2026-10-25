@@ -1,14 +1,14 @@
 /* eslint-disable */
 import {
-    OPTIONAL,
-    ASN1Element as _Element,
+    type OPTIONAL,
+    type ASN1Element as _Element,
     ASN1TagClass as _TagClass
 } from "@wildboar/asn1";
 import * as $ from "@wildboar/asn1/functional";
-import { PartyNumber, _decode_PartyNumber, _encode_PartyNumber } from "../Addressing-Data-Elements-asn1-97/PartyNumber.ta.mjs";
+import { type PartyNumber, _decode_PartyNumber, _encode_PartyNumber } from "../Addressing-Data-Elements-asn1-97/PartyNumber.ta.mjs";
 import { MessageType, _decode_MessageType, _encode_MessageType, _enum_for_MessageType } from "../SS-MCM-Operations-asn1-97/MessageType.ta.mjs";
-import { MsgCentreId, _decode_MsgCentreId, _encode_MsgCentreId } from "../SS-MCM-Operations-asn1-97/MsgCentreId.ta.mjs";
-import { MCMNoNewMsgArg_argumentExt, _decode_MCMNoNewMsgArg_argumentExt, _encode_MCMNoNewMsgArg_argumentExt } from "../SS-MCM-Operations-asn1-97/MCMNoNewMsgArg-argumentExt.ta.mjs";
+import { type MsgCentreId, _decode_MsgCentreId, _encode_MsgCentreId } from "../SS-MCM-Operations-asn1-97/MsgCentreId.ta.mjs";
+import { type MCMNoNewMsgArg_argumentExt, _decode_MCMNoNewMsgArg_argumentExt, _encode_MCMNoNewMsgArg_argumentExt } from "../SS-MCM-Operations-asn1-97/MCMNoNewMsgArg-argumentExt.ta.mjs";
 
 /**
  * @summary MCMNoNewMsgArg
@@ -116,7 +116,7 @@ class MCMNoNewMsgArg {
          * @static
          */
 
-    public static _enum_for_specificMessageType = _enum_for_MessageType;
+    public static _enum_for_specificMessageType: typeof _enum_for_MessageType = _enum_for_MessageType;
 }
 
 /**

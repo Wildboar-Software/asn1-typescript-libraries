@@ -1,16 +1,16 @@
 /* eslint-disable */
 import {
-    OPTIONAL,
-    ASN1Element as _Element,
+    type OPTIONAL,
+    type ASN1Element as _Element,
     ASN1TagClass as _TagClass
 } from "@wildboar/asn1";
 import * as $ from "@wildboar/asn1/functional";
 import { ExtensionContainer, _decode_ExtensionContainer, _encode_ExtensionContainer } from "../MAP-ExtensionDataTypes/ExtensionContainer.ta.mjs";
-import { BasicServiceCriteria, _decode_BasicServiceCriteria, _encode_BasicServiceCriteria } from "../MAP-MS-DataTypes/BasicServiceCriteria.ta.mjs";
+import { type BasicServiceCriteria, _decode_BasicServiceCriteria, _encode_BasicServiceCriteria } from "../MAP-MS-DataTypes/BasicServiceCriteria.ta.mjs";
 import { CallTypeCriteria, _decode_CallTypeCriteria, _encode_CallTypeCriteria, _enum_for_CallTypeCriteria } from "../MAP-MS-DataTypes/CallTypeCriteria.ta.mjs";
 import { DestinationNumberCriteria, _decode_DestinationNumberCriteria, _encode_DestinationNumberCriteria } from "../MAP-MS-DataTypes/DestinationNumberCriteria.ta.mjs";
-import { O_BcsmTriggerDetectionPoint, _decode_O_BcsmTriggerDetectionPoint, _encode_O_BcsmTriggerDetectionPoint, _enum_for_O_BcsmTriggerDetectionPoint } from "../MAP-MS-DataTypes/O-BcsmTriggerDetectionPoint.ta.mjs";
-import { O_CauseValueCriteria, _decode_O_CauseValueCriteria, _encode_O_CauseValueCriteria } from "../MAP-MS-DataTypes/O-CauseValueCriteria.ta.mjs";
+import { type O_BcsmTriggerDetectionPoint, _decode_O_BcsmTriggerDetectionPoint, _encode_O_BcsmTriggerDetectionPoint, _enum_for_O_BcsmTriggerDetectionPoint } from "../MAP-MS-DataTypes/O-BcsmTriggerDetectionPoint.ta.mjs";
+import { type O_CauseValueCriteria, _decode_O_CauseValueCriteria, _encode_O_CauseValueCriteria } from "../MAP-MS-DataTypes/O-CauseValueCriteria.ta.mjs";
 
 
 /**
@@ -27,11 +27,11 @@ import { O_CauseValueCriteria, _decode_O_CauseValueCriteria, _encode_O_CauseValu
  * ```asn1
  * O-BcsmCamelTDP-Criteria ::= SEQUENCE {
  *     o-BcsmTriggerDetectionPoint    O-BcsmTriggerDetectionPoint,    
- *     destinationNumberCriteria    [0] DestinationNumberCriteria    OPTIONAL,
- *     basicServiceCriteria    [1] BasicServiceCriteria    OPTIONAL,
- *     callTypeCriteria    [2] CallTypeCriteria    OPTIONAL,
+ *     destinationNumberCriteria    [0] DestinationNumberCriteria    type OPTIONAL,
+ *     basicServiceCriteria    [1] BasicServiceCriteria    type OPTIONAL,
+ *     callTypeCriteria    [2] CallTypeCriteria    type OPTIONAL,
  *     ...,
- *     o-CauseValueCriteria    [3] O-CauseValueCriteria    OPTIONAL,
+ *     o-CauseValueCriteria    [3] O-CauseValueCriteria    type OPTIONAL,
  *     extensionContainer    [4] ExtensionContainer    OPTIONAL }
  * ```
  * 
@@ -39,76 +39,92 @@ import { O_CauseValueCriteria, _decode_O_CauseValueCriteria, _encode_O_CauseValu
  */
 export
 class O_BcsmCamelTDP_Criteria {
+    /**
+     * @summary `o_BcsmTriggerDetectionPoint`.
+     * @description
+     *
+     * Other values than `collectedInfo` / `routeSelectFailure`: ignore this
+     * sequence. (3GPP TS 29.002 V19.1.0 clause 17.7.1)
+     *
+     * @public
+     * @readonly
+     */
+    public readonly o_BcsmTriggerDetectionPoint: O_BcsmTriggerDetectionPoint;
+    /**
+     * @summary `destinationNumberCriteria`.
+     * @description
+     *
+     * Destination-number match (match type plus number and/or length lists;
+     * one or both lists shall be present). (3GPP TS 29.002 V19.1.0 clause
+     * 17.7.1)
+     *
+     * @public
+     * @readonly
+     */
+    public readonly destinationNumberCriteria?: OPTIONAL<DestinationNumberCriteria>;
+    /**
+     * @summary `basicServiceCriteria`.
+     * @description
+     *
+     * Basic-service criteria (SIZE 1..5). (3GPP TS 29.002 V19.1.0 clause
+     * 17.7.1)
+     *
+     * @public
+     * @readonly
+     */
+    public readonly basicServiceCriteria?: OPTIONAL<BasicServiceCriteria>;
+    /**
+     * @summary `callTypeCriteria`.
+     * @description
+     *
+     * Whether the call is forwarded or not forwarded. (3GPP TS 29.002
+     * V19.1.0 clause 17.7.1)
+     *
+     * @public
+     * @readonly
+     */
+    public readonly callTypeCriteria?: OPTIONAL<CallTypeCriteria>;
+    /**
+     * @summary `o_CauseValueCriteria`.
+     * @description
+     *
+     * O-BCSM cause values (SIZE 1..5). (3GPP TS 29.002 V19.1.0 clause
+     * 17.7.1)
+     *
+     * @public
+     * @readonly
+     */
+    public readonly o_CauseValueCriteria?: OPTIONAL<O_CauseValueCriteria>;
+    /**
+     * @summary `extensionContainer`.
+     * @public
+     * @readonly
+     */
+    public readonly extensionContainer?: OPTIONAL<ExtensionContainer>;
+    /**
+     * @summary Extensions that are not recognized.
+     * @public
+     * @readonly
+     */
+    public readonly _unrecognizedExtensionsList: _Element[];
+
     constructor (
-        /**
-         * @summary `o_BcsmTriggerDetectionPoint`.
-         * @description
-         *
-         * Other values than `collectedInfo` / `routeSelectFailure`: ignore this
-         * sequence. (3GPP TS 29.002 V19.1.0 clause 17.7.1)
-         *
-         * @public
-         * @readonly
-         */
-        readonly o_BcsmTriggerDetectionPoint: O_BcsmTriggerDetectionPoint,
-        /**
-         * @summary `destinationNumberCriteria`.
-         * @description
-         *
-         * Destination-number match (match type plus number and/or length lists;
-         * one or both lists shall be present). (3GPP TS 29.002 V19.1.0 clause
-         * 17.7.1)
-         *
-         * @public
-         * @readonly
-         */
-        readonly destinationNumberCriteria?: OPTIONAL<DestinationNumberCriteria>,
-        /**
-         * @summary `basicServiceCriteria`.
-         * @description
-         *
-         * Basic-service criteria (SIZE 1..5). (3GPP TS 29.002 V19.1.0 clause
-         * 17.7.1)
-         *
-         * @public
-         * @readonly
-         */
-        readonly basicServiceCriteria?: OPTIONAL<BasicServiceCriteria>,
-        /**
-         * @summary `callTypeCriteria`.
-         * @description
-         *
-         * Whether the call is forwarded or not forwarded. (3GPP TS 29.002
-         * V19.1.0 clause 17.7.1)
-         *
-         * @public
-         * @readonly
-         */
-        readonly callTypeCriteria?: OPTIONAL<CallTypeCriteria>,
-        /**
-         * @summary `o_CauseValueCriteria`.
-         * @description
-         *
-         * O-BCSM cause values (SIZE 1..5). (3GPP TS 29.002 V19.1.0 clause
-         * 17.7.1)
-         *
-         * @public
-         * @readonly
-         */
-        readonly o_CauseValueCriteria?: OPTIONAL<O_CauseValueCriteria>,
-        /**
-         * @summary `extensionContainer`.
-         * @public
-         * @readonly
-         */
-        readonly extensionContainer?: OPTIONAL<ExtensionContainer>,
-        /**
-         * @summary Extensions that are not recognized.
-         * @public
-         * @readonly
-         */
-        readonly _unrecognizedExtensionsList: _Element[] = []
-    ) {}
+        o_BcsmTriggerDetectionPoint: O_BcsmTriggerDetectionPoint,
+        destinationNumberCriteria?: OPTIONAL<DestinationNumberCriteria>,
+        basicServiceCriteria?: OPTIONAL<BasicServiceCriteria>,
+        callTypeCriteria?: OPTIONAL<CallTypeCriteria>,
+        o_CauseValueCriteria?: OPTIONAL<O_CauseValueCriteria>,
+        extensionContainer?: OPTIONAL<ExtensionContainer>,
+        _unrecognizedExtensionsList: _Element[] = []
+    ) {
+        this.o_BcsmTriggerDetectionPoint = o_BcsmTriggerDetectionPoint;
+        this.destinationNumberCriteria = destinationNumberCriteria;
+        this.basicServiceCriteria = basicServiceCriteria;
+        this.callTypeCriteria = callTypeCriteria;
+        this.o_CauseValueCriteria = o_CauseValueCriteria;
+        this.extensionContainer = extensionContainer;
+        this._unrecognizedExtensionsList = _unrecognizedExtensionsList;
+    }
 
     /**
      * @summary Restructures an object into a O_BcsmCamelTDP_Criteria
@@ -132,13 +148,13 @@ class O_BcsmCamelTDP_Criteria {
          * @static
          */
 
-    public static _enum_for_o_BcsmTriggerDetectionPoint = _enum_for_O_BcsmTriggerDetectionPoint;        /**
+    public static _enum_for_o_BcsmTriggerDetectionPoint: typeof _enum_for_O_BcsmTriggerDetectionPoint = _enum_for_O_BcsmTriggerDetectionPoint;        /**
          * @summary The enum used as the type of the component `callTypeCriteria`
          * @public
          * @static
          */
 
-    public static _enum_for_callTypeCriteria = _enum_for_CallTypeCriteria;
+    public static _enum_for_callTypeCriteria: typeof _enum_for_CallTypeCriteria = _enum_for_CallTypeCriteria;
 }
 
 /**

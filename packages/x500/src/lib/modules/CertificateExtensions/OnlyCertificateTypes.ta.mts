@@ -1,5 +1,5 @@
 /* eslint-disable */
-import { ASN1Element as _Element, BIT_STRING } from "@wildboar/asn1";
+import { ASN1Element as _Element, type BIT_STRING } from "@wildboar/asn1";
 import * as $ from "@wildboar/asn1/functional";
 
 /**
@@ -58,10 +58,10 @@ export const OnlyCertificateTypes_attribute: number = 2; /* LONG_NAMED_BIT */
 export const attribute: number = OnlyCertificateTypes_attribute; /* SHORT_NAMED_BIT */
 
 
-export const _decode_OnlyCertificateTypes = $._decodeBitString;
+export const _decode_OnlyCertificateTypes: $.ASN1Decoder<BIT_STRING> = $._decodeBitString;
 
 
-export const _encode_OnlyCertificateTypes = $._encodeBitString;
+export const _encode_OnlyCertificateTypes: $.ASN1Encoder<BIT_STRING> = $._encodeBitString;
 
 
 /* eslint-enable */

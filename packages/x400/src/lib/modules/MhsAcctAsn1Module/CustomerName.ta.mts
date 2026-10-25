@@ -1,7 +1,7 @@
 /* eslint-disable */
 import {
-    UniversalString,
-    ASN1Element as _Element,
+    type UniversalString,
+    type ASN1Element as _Element,
     ASN1TagClass as _TagClass,
     ASN1Construction as _Construction,
     ASN1UniversalType as _UniversalType,
@@ -27,10 +27,10 @@ import * as $ from '@wildboar/asn1/functional';
 export type CustomerName = UniversalString; // UniversalString
 
 
-export const _decode_CustomerName = $._decodeUniversalString;
+export const _decode_CustomerName: $.ASN1Decoder<string> = $._decodeUniversalString;
 
 
-export const _encode_CustomerName = $._encodeUniversalString;
+export const _encode_CustomerName: $.ASN1Encoder<string> = $._encodeUniversalString;
 
 
 /* eslint-enable */

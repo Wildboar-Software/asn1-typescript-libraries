@@ -1,8 +1,8 @@
 /* eslint-disable */
 import {
-    INTEGER,
-    REAL,
-    ASN1Element as _Element,
+    type INTEGER,
+    type REAL,
+    type ASN1Element as _Element,
     ASN1TagClass as _TagClass,
 } from "@wildboar/asn1";
 import * as $ from "@wildboar/asn1/functional";
@@ -25,7 +25,7 @@ import {
 } from "../Q821-ASN1Module/ValueDuration.ta.mjs";
 
 import {
-    GaugeParameters,
+    type GaugeParameters,
     _decode_GaugeParameters,
     _encode_GaugeParameters,
 } from "../Q821-ASN1Module/GaugeParameters.ta.mjs";

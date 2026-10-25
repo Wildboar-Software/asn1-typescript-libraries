@@ -1,7 +1,7 @@
 /* eslint-disable */
 import {
-    OPTIONAL,
-    ASN1Element as _Element,
+    type OPTIONAL,
+    type ASN1Element as _Element,
     ASN1TagClass as _TagClass,
     ASN1Construction as _Construction,
     ASN1UniversalType as _UniversalType,
@@ -12,17 +12,17 @@ import {
 } from '@wildboar/asn1';
 import * as $ from '@wildboar/asn1/functional';
 import {
-    CertificateSerialNumber,
+    type CertificateSerialNumber,
     _decode_CertificateSerialNumber,
     _encode_CertificateSerialNumber,
 } from '@wildboar/x500/AuthenticationFramework';
 import {
-    Name,
+    type Name,
     _decode_Name,
     _encode_Name,
 } from '@wildboar/dn';
 import {
-    UniqueIdentifier,
+    type UniqueIdentifier,
     _decode_UniqueIdentifier,
     _encode_UniqueIdentifier,
 } from '@wildboar/x500/SelectedAttributeTypes';
@@ -42,26 +42,34 @@ import {
  *
  */
 export class PKICertificateInformation {
+    /**
+     * @summary `pkiCertificateSerialNumber`.
+     * @public
+     * @readonly
+     */
+    public readonly pkiCertificateSerialNumber: CertificateSerialNumber;
+    /**
+     * @summary `pkiCertificateIssuerName`.
+     * @public
+     * @readonly
+     */
+    public readonly pkiCertificateIssuerName: Name;
+    /**
+     * @summary `pkiCertificateIssuerUniqueIdentifier`.
+     * @public
+     * @readonly
+     */
+    public readonly pkiCertificateIssuerUniqueIdentifier?: OPTIONAL<UniqueIdentifier>;
+
     constructor(
-        /**
-         * @summary `pkiCertificateSerialNumber`.
-         * @public
-         * @readonly
-         */
-        readonly pkiCertificateSerialNumber: CertificateSerialNumber,
-        /**
-         * @summary `pkiCertificateIssuerName`.
-         * @public
-         * @readonly
-         */
-        readonly pkiCertificateIssuerName: Name,
-        /**
-         * @summary `pkiCertificateIssuerUniqueIdentifier`.
-         * @public
-         * @readonly
-         */
-        readonly pkiCertificateIssuerUniqueIdentifier?: OPTIONAL<UniqueIdentifier>
-    ) {}
+        pkiCertificateSerialNumber: CertificateSerialNumber,
+        pkiCertificateIssuerName: Name,
+        pkiCertificateIssuerUniqueIdentifier?: OPTIONAL<UniqueIdentifier>
+    ) {
+        this.pkiCertificateSerialNumber = pkiCertificateSerialNumber;
+        this.pkiCertificateIssuerName = pkiCertificateIssuerName;
+        this.pkiCertificateIssuerUniqueIdentifier = pkiCertificateIssuerUniqueIdentifier;
+    }
 
     /**
      * @summary Restructures an object into a PKICertificateInformation

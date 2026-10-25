@@ -1,6 +1,6 @@
 /* eslint-disable */
 import {
-    ASN1Element as _Element,
+    type ASN1Element as _Element,
     ASN1TagClass as _TagClass,
     ASN1Construction as _Construction,
     ASN1UniversalType as _UniversalType,
@@ -58,7 +58,7 @@ export type ProtectionDirection = _enum_for_ProtectionDirection;
  *
  * @enum {number}
  */
-export const ProtectionDirection = _enum_for_ProtectionDirection;
+export const ProtectionDirection: typeof _enum_for_ProtectionDirection = _enum_for_ProtectionDirection;
 
 
 /**
@@ -66,7 +66,7 @@ export const ProtectionDirection = _enum_for_ProtectionDirection;
  * @constant
  * @type {number}
  */
-export const ProtectionDirection_transmit: ProtectionDirection =
+export const ProtectionDirection_transmit: _enum_for_ProtectionDirection.transmit =
     ProtectionDirection.transmit; /* LONG_NAMED_ENUMERATED_VALUE */
 
 
@@ -75,7 +75,7 @@ export const ProtectionDirection_transmit: ProtectionDirection =
  * @constant
  * @type {number}
  */
-export const transmit: ProtectionDirection =
+export const transmit: _enum_for_ProtectionDirection.transmit =
     ProtectionDirection.transmit; /* SHORT_NAMED_ENUMERATED_VALUE */
 
 
@@ -84,7 +84,7 @@ export const transmit: ProtectionDirection =
  * @constant
  * @type {number}
  */
-export const ProtectionDirection_receive: ProtectionDirection =
+export const ProtectionDirection_receive: _enum_for_ProtectionDirection.receive =
     ProtectionDirection.receive; /* LONG_NAMED_ENUMERATED_VALUE */
 
 
@@ -93,7 +93,7 @@ export const ProtectionDirection_receive: ProtectionDirection =
  * @constant
  * @type {number}
  */
-export const receive: ProtectionDirection =
+export const receive: _enum_for_ProtectionDirection.receive =
     ProtectionDirection.receive; /* SHORT_NAMED_ENUMERATED_VALUE */
 
 
@@ -102,7 +102,7 @@ export const receive: ProtectionDirection =
  * @constant
  * @type {number}
  */
-export const ProtectionDirection_bidirectional: ProtectionDirection =
+export const ProtectionDirection_bidirectional: _enum_for_ProtectionDirection.bidirectional =
     ProtectionDirection.bidirectional; /* LONG_NAMED_ENUMERATED_VALUE */
 
 
@@ -111,18 +111,30 @@ export const ProtectionDirection_bidirectional: ProtectionDirection =
  * @constant
  * @type {number}
  */
-export const bidirectional: ProtectionDirection =
+export const bidirectional: _enum_for_ProtectionDirection.bidirectional =
     ProtectionDirection.bidirectional; /* SHORT_NAMED_ENUMERATED_VALUE */
 
 
 
 
-export const _decode_ProtectionDirection = $._decodeEnumerated;
+export function _decode_ProtectionDirection(el: _Element): ProtectionDirection {
+    const enumerated = $._decodeEnumerated(el);
+    switch (enumerated) {
+        case ProtectionDirection.transmit: return ProtectionDirection.transmit;
+        case ProtectionDirection.receive: return ProtectionDirection.receive;
+        case ProtectionDirection.bidirectional: return ProtectionDirection.bidirectional;
+        default:
+            throw new _ConstructionError(
+                'Invalid ENUMERATED value ' + enumerated + ' for ProtectionDirection.',
+                el,
+            );
+    }
+}
 
 
 
 
-export const _encode_ProtectionDirection = $._encodeEnumerated;
+export const _encode_ProtectionDirection: $.ASN1Encoder<ProtectionDirection> = $._encodeEnumerated as $.ASN1Encoder<ProtectionDirection>;
 
 
 /* eslint-enable */

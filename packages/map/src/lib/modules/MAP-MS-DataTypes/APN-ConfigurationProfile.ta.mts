@@ -1,14 +1,14 @@
 /* eslint-disable */
 import {
-    NULL,
-    OPTIONAL,
-    ASN1Element as _Element,
+    type NULL,
+    type OPTIONAL,
+    type ASN1Element as _Element,
     ASN1TagClass as _TagClass
 } from "@wildboar/asn1";
 import * as $ from "@wildboar/asn1/functional";
 import { ExtensionContainer, _decode_ExtensionContainer, _encode_ExtensionContainer } from "../MAP-ExtensionDataTypes/ExtensionContainer.ta.mjs";
-import { ContextId, _decode_ContextId, _encode_ContextId } from "../MAP-MS-DataTypes/ContextId.ta.mjs";
-import { EPS_DataList, _decode_EPS_DataList, _encode_EPS_DataList } from "../MAP-MS-DataTypes/EPS-DataList.ta.mjs";
+import { type ContextId, _decode_ContextId, _encode_ContextId } from "../MAP-MS-DataTypes/ContextId.ta.mjs";
+import { type EPS_DataList, _decode_EPS_DataList, _encode_EPS_DataList } from "../MAP-MS-DataTypes/EPS-DataList.ta.mjs";
 
 
 /**
@@ -26,11 +26,11 @@ import { EPS_DataList, _decode_EPS_DataList, _encode_EPS_DataList } from "../MAP
  * ```asn1
  * APN-ConfigurationProfile ::= SEQUENCE {
  *     defaultContext    ContextId,
- *     completeDataListIncluded    NULL    OPTIONAL,
+ *     completeDataListIncluded    NULL    type OPTIONAL,
  *     -- If segmentation is used, completeDataListIncluded may only be present in the
  *     -- first segment of APN-ConfigurationProfile.
  *     epsDataList    [1]    EPS-DataList,
- *     extensionContainer    [2]    ExtensionContainer    OPTIONAL,
+ *     extensionContainer    [2]    ExtensionContainer    type OPTIONAL,
  *     ... ,
  *     additionalDefaultContext    [3]    ContextId    OPTIONAL
  *     --    for details see the 3GPP TS 29.272 [144].
@@ -41,53 +41,67 @@ import { EPS_DataList, _decode_EPS_DataList, _encode_EPS_DataList } from "../MAP
  */
 export
 class APN_ConfigurationProfile {
+    /**
+     * @summary `defaultContext`.
+     * @public
+     * @readonly
+     */
+    public readonly defaultContext: ContextId;
+    /**
+     * @summary `completeDataListIncluded`.
+     * @description
+     *
+     * If segmentation is used, may only be present in the first segment
+     * (3GPP TS 29.002 V19.1.0 clause 17.7.1).
+     *
+     * @public
+     * @readonly
+     */
+    public readonly completeDataListIncluded: OPTIONAL<NULL>;
+    /**
+     * @summary `epsDataList`.
+     * @public
+     * @readonly
+     */
+    public readonly epsDataList: EPS_DataList;
+    /**
+     * @summary `extensionContainer`.
+     * @public
+     * @readonly
+     */
+    public readonly extensionContainer?: OPTIONAL<ExtensionContainer>;
+    /**
+     * @summary `additionalDefaultContext`.
+     * @description
+     *
+     * See 3GPP TS 29.272 (3GPP TS 29.002 V19.1.0 clause 17.7.1).
+     *
+     * @public
+     * @readonly
+     */
+    public readonly additionalDefaultContext?: OPTIONAL<ContextId>;
+    /**
+     * @summary Extensions that are not recognized.
+     * @public
+     * @readonly
+     */
+    public readonly _unrecognizedExtensionsList: _Element[];
+
     constructor (
-        /**
-         * @summary `defaultContext`.
-         * @public
-         * @readonly
-         */
-        readonly defaultContext: ContextId,
-        /**
-         * @summary `completeDataListIncluded`.
-         * @description
-         *
-         * If segmentation is used, may only be present in the first segment
-         * (3GPP TS 29.002 V19.1.0 clause 17.7.1).
-         *
-         * @public
-         * @readonly
-         */
-        readonly completeDataListIncluded: OPTIONAL<NULL>,
-        /**
-         * @summary `epsDataList`.
-         * @public
-         * @readonly
-         */
-        readonly epsDataList: EPS_DataList,
-        /**
-         * @summary `extensionContainer`.
-         * @public
-         * @readonly
-         */
-        readonly extensionContainer?: OPTIONAL<ExtensionContainer>,
-        /**
-         * @summary `additionalDefaultContext`.
-         * @description
-         *
-         * See 3GPP TS 29.272 (3GPP TS 29.002 V19.1.0 clause 17.7.1).
-         *
-         * @public
-         * @readonly
-         */
-        readonly additionalDefaultContext?: OPTIONAL<ContextId>,
-        /**
-         * @summary Extensions that are not recognized.
-         * @public
-         * @readonly
-         */
-        readonly _unrecognizedExtensionsList: _Element[] = []
-    ) {}
+        defaultContext: ContextId,
+        completeDataListIncluded: OPTIONAL<NULL>,
+        epsDataList: EPS_DataList,
+        extensionContainer?: OPTIONAL<ExtensionContainer>,
+        additionalDefaultContext?: OPTIONAL<ContextId>,
+        _unrecognizedExtensionsList: _Element[] = []
+    ) {
+        this.defaultContext = defaultContext;
+        this.completeDataListIncluded = completeDataListIncluded;
+        this.epsDataList = epsDataList;
+        this.extensionContainer = extensionContainer;
+        this.additionalDefaultContext = additionalDefaultContext;
+        this._unrecognizedExtensionsList = _unrecognizedExtensionsList;
+    }
 
     /**
      * @summary Restructures an object into a APN_ConfigurationProfile

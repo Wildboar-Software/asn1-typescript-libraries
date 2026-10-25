@@ -1,6 +1,6 @@
 /* eslint-disable */
 import {
-    ASN1Element as _Element,
+    type ASN1Element as _Element,
     ASN1TagClass as _TagClass,
     ASN1Construction as _Construction,
     ASN1UniversalType as _UniversalType,
@@ -10,8 +10,8 @@ import {
     ASN1ConstructionError as _ConstructionError,
 } from "@wildboar/asn1";
 import * as $ from "@wildboar/asn1/functional";
-import { Identifier, _decode_Identifier, _encode_Identifier } from "../ISO-9506-MMS-1/Identifier.ta.mjs";
-import { MMSString, _decode_MMSString, _encode_MMSString } from "../ISO-9506-MMS-1/MMSString.ta.mjs";
+import { type Identifier, _decode_Identifier, _encode_Identifier } from "../ISO-9506-MMS-1/Identifier.ta.mjs";
+import { type MMSString, _decode_MMSString, _encode_MMSString } from "../ISO-9506-MMS-1/MMSString.ta.mjs";
 
 
 /**
@@ -34,30 +34,36 @@ import { MMSString, _decode_MMSString, _encode_MMSString } from "../ISO-9506-MMS
  */
 export
 class Output_Request {
+    /**
+     * @summary `operatorStationName`.
+     * @description
+     *
+     * Operator Station on which to display.
+     * ISO 9506-1:2003 §17.3.1.1.1.
+     *
+     * @public
+     * @readonly
+     */
+    public readonly operatorStationName: Identifier;
+    /**
+     * @summary `listOfOutputData`.
+     * @description
+     *
+     * Lines to display; each element is one display line.
+     * ISO 9506-1:2003 §17.3.1.1.2.
+     *
+     * @public
+     * @readonly
+     */
+    public readonly listOfOutputData: MMSString[];
+
     constructor (
-        /**
-         * @summary `operatorStationName`.
-         * @description
-         *
-         * Operator Station on which to display.
-         * ISO 9506-1:2003 §17.3.1.1.1.
-         *
-         * @public
-         * @readonly
-         */
-        readonly operatorStationName: Identifier,
-        /**
-         * @summary `listOfOutputData`.
-         * @description
-         *
-         * Lines to display; each element is one display line.
-         * ISO 9506-1:2003 §17.3.1.1.2.
-         *
-         * @public
-         * @readonly
-         */
-        readonly listOfOutputData: MMSString[]
-    ) {}
+        operatorStationName: Identifier,
+        listOfOutputData: MMSString[]
+    ) {
+        this.operatorStationName = operatorStationName;
+        this.listOfOutputData = listOfOutputData;
+    }
 
     /**
      * @summary Restructures an object into a Output_Request

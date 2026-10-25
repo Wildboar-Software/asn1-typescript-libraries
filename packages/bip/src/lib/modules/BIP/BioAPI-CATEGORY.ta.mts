@@ -1,6 +1,6 @@
 /* eslint-disable */
 import {
-  ENUMERATED,
+  type ENUMERATED,
   ASN1Element as _Element,
   ASN1TagClass as _TagClass,
   ASN1Construction as _Construction,
@@ -54,7 +54,7 @@ export type BioAPI_CATEGORY = _enum_for_BioAPI_CATEGORY | ENUMERATED;
  * @constant
  * @type {number}
  */
-export const BioAPI_CATEGORY_archive: BioAPI_CATEGORY = 0; /* LONG_NAMED_ENUMERATED_VALUE */
+export const BioAPI_CATEGORY_archive: 0 = _enum_for_BioAPI_CATEGORY.archive; /* LONG_NAMED_ENUMERATED_VALUE */
 
 
 /**
@@ -62,7 +62,7 @@ export const BioAPI_CATEGORY_archive: BioAPI_CATEGORY = 0; /* LONG_NAMED_ENUMERA
  * @constant
  * @type {number}
  */
-export const archive: BioAPI_CATEGORY = BioAPI_CATEGORY_archive; /* SHORT_NAMED_ENUMERATED_VALUE */
+export const archive: 0 = BioAPI_CATEGORY_archive; /* SHORT_NAMED_ENUMERATED_VALUE */
 
 
 /**
@@ -70,7 +70,7 @@ export const archive: BioAPI_CATEGORY = BioAPI_CATEGORY_archive; /* SHORT_NAMED_
  * @constant
  * @type {number}
  */
-export const BioAPI_CATEGORY_comparisonAlgorithm: BioAPI_CATEGORY = 1; /* LONG_NAMED_ENUMERATED_VALUE */
+export const BioAPI_CATEGORY_comparisonAlgorithm: 1 = _enum_for_BioAPI_CATEGORY.comparisonAlgorithm; /* LONG_NAMED_ENUMERATED_VALUE */
 
 
 /**
@@ -78,7 +78,7 @@ export const BioAPI_CATEGORY_comparisonAlgorithm: BioAPI_CATEGORY = 1; /* LONG_N
  * @constant
  * @type {number}
  */
-export const comparisonAlgorithm: BioAPI_CATEGORY = BioAPI_CATEGORY_comparisonAlgorithm; /* SHORT_NAMED_ENUMERATED_VALUE */
+export const comparisonAlgorithm: 1 = BioAPI_CATEGORY_comparisonAlgorithm; /* SHORT_NAMED_ENUMERATED_VALUE */
 
 
 /**
@@ -86,7 +86,7 @@ export const comparisonAlgorithm: BioAPI_CATEGORY = BioAPI_CATEGORY_comparisonAl
  * @constant
  * @type {number}
  */
-export const BioAPI_CATEGORY_processingAlgorithm: BioAPI_CATEGORY = 2; /* LONG_NAMED_ENUMERATED_VALUE */
+export const BioAPI_CATEGORY_processingAlgorithm: 2 = _enum_for_BioAPI_CATEGORY.processingAlgorithm; /* LONG_NAMED_ENUMERATED_VALUE */
 
 
 /**
@@ -94,7 +94,7 @@ export const BioAPI_CATEGORY_processingAlgorithm: BioAPI_CATEGORY = 2; /* LONG_N
  * @constant
  * @type {number}
  */
-export const processingAlgorithm: BioAPI_CATEGORY = BioAPI_CATEGORY_processingAlgorithm; /* SHORT_NAMED_ENUMERATED_VALUE */
+export const processingAlgorithm: 2 = BioAPI_CATEGORY_processingAlgorithm; /* SHORT_NAMED_ENUMERATED_VALUE */
 
 
 /**
@@ -102,7 +102,7 @@ export const processingAlgorithm: BioAPI_CATEGORY = BioAPI_CATEGORY_processingAl
  * @constant
  * @type {number}
  */
-export const BioAPI_CATEGORY_sensor: BioAPI_CATEGORY = 3; /* LONG_NAMED_ENUMERATED_VALUE */
+export const BioAPI_CATEGORY_sensor: 3 = _enum_for_BioAPI_CATEGORY.sensor; /* LONG_NAMED_ENUMERATED_VALUE */
 
 
 /**
@@ -110,17 +110,17 @@ export const BioAPI_CATEGORY_sensor: BioAPI_CATEGORY = 3; /* LONG_NAMED_ENUMERAT
  * @constant
  * @type {number}
  */
-export const sensor: BioAPI_CATEGORY = BioAPI_CATEGORY_sensor; /* SHORT_NAMED_ENUMERATED_VALUE */
+export const sensor: 3 = BioAPI_CATEGORY_sensor; /* SHORT_NAMED_ENUMERATED_VALUE */
 
 
 
 
-export const _decode_BioAPI_CATEGORY = $._decodeEnumerated;
+export const _decode_BioAPI_CATEGORY: $.ASN1Decoder<BioAPI_CATEGORY> = $._decodeEnumerated as $.ASN1Decoder<BioAPI_CATEGORY>;
 
 
 
 
-export const _encode_BioAPI_CATEGORY = $._encodeEnumerated;
+export const _encode_BioAPI_CATEGORY: $.ASN1Encoder<BioAPI_CATEGORY> = $._encodeEnumerated as $.ASN1Encoder<BioAPI_CATEGORY>;
 
 
 /* eslint-enable */

@@ -1,6 +1,6 @@
 /* eslint-disable */
 import {
-    ASN1Element as _Element,
+    type ASN1Element as _Element,
     ASN1TagClass as _TagClass,
     ASN1Construction as _Construction,
     ASN1UniversalType as _UniversalType,
@@ -11,7 +11,7 @@ import {
 } from '@wildboar/asn1';
 import * as $ from '@wildboar/asn1/functional';
 import {
-    ObjectInstance,
+    type ObjectInstance,
     _decode_ObjectInstance,
     _encode_ObjectInstance,
 } from '@wildboar/cmip';
@@ -31,20 +31,26 @@ import {
  *
  */
 export class TpsAddedToTpPool {
+    /**
+     * @summary `tpPool`.
+     * @public
+     * @readonly
+     */
+    public readonly tpPool: ObjectInstance;
+    /**
+     * @summary `tps`.
+     * @public
+     * @readonly
+     */
+    public readonly tps: ObjectInstance[];
+
     constructor(
-        /**
-         * @summary `tpPool`.
-         * @public
-         * @readonly
-         */
-        readonly tpPool: ObjectInstance,
-        /**
-         * @summary `tps`.
-         * @public
-         * @readonly
-         */
-        readonly tps: ObjectInstance[]
-    ) {}
+        tpPool: ObjectInstance,
+        tps: ObjectInstance[]
+    ) {
+        this.tpPool = tpPool;
+        this.tps = tps;
+    }
 
     /**
      * @summary Restructures an object into a TpsAddedToTpPool

@@ -1,9 +1,9 @@
 /* eslint-disable */
 import {
-    ASN1Element as _Element,
+    type ASN1Element as _Element,
     ASN1TagClass as _TagClass,
-    BIT_STRING,
-    OPTIONAL,
+    type BIT_STRING,
+    type OPTIONAL,
 } from "@wildboar/asn1";
 import * as $ from "@wildboar/asn1/functional";
 import {
@@ -35,61 +35,75 @@ import {
  *
  */
 export class ICV_Total<ToBeProtected> {
+    /**
+     * @summary `toBeProtected`.
+     * @public
+     * @readonly
+     */
+    public readonly toBeProtected: ToBeProtected;
+    /**
+     * @summary `algorithmIdentifier`.
+     * @description
+     *
+     * ICV alg (not previously agreed) plus PARMS/DYN-PARMS as required by
+     * `&Type`/`&DynParms`.
+     *
+     * @public
+     * @readonly
+     */
+    public readonly algorithmIdentifier: AlgorithmWithInvoke;
+    /**
+     * @summary `icv`.
+     * @description
+     *
+     * BIT STRING (ignore prose OCTET STRING).
+     *
+     * @public
+     * @readonly
+     */
+    public readonly icv: BIT_STRING;
+    /**
+     * @summary `altAlgorithmIdentifier`.
+     * @description
+     *
+     * Present iff `altIcv` present.
+     *
+     * @public
+     * @readonly
+     */
+    public readonly altAlgorithmIdentifier?: OPTIONAL<AlgorithmWithInvoke>;
+    /**
+     * @summary `altIcv`.
+     * @description
+     *
+     * Present iff `altAlgorithmIdentifier` present.
+     *
+     * @public
+     * @readonly
+     */
+    public readonly altIcv?: OPTIONAL<BIT_STRING>;
+    /**
+     * @summary Extensions that are not recognized.
+     * @public
+     * @readonly
+     */
+    public readonly _unrecognizedExtensionsList: _Element[];
+
     constructor(
-        /**
-         * @summary `toBeProtected`.
-         * @public
-         * @readonly
-         */
-        readonly toBeProtected: ToBeProtected,
-        /**
-         * @summary `algorithmIdentifier`.
-         * @description
-         *
-         * ICV alg (not previously agreed) plus PARMS/DYN-PARMS as required by
-         * `&Type`/`&DynParms`.
-         *
-         * @public
-         * @readonly
-         */
-        readonly algorithmIdentifier: AlgorithmWithInvoke,
-        /**
-         * @summary `icv`.
-         * @description
-         *
-         * BIT STRING (ignore prose OCTET STRING).
-         *
-         * @public
-         * @readonly
-         */
-        readonly icv: BIT_STRING,
-        /**
-         * @summary `altAlgorithmIdentifier`.
-         * @description
-         *
-         * Present iff `altIcv` present.
-         *
-         * @public
-         * @readonly
-         */
-        readonly altAlgorithmIdentifier?: OPTIONAL<AlgorithmWithInvoke>,
-        /**
-         * @summary `altIcv`.
-         * @description
-         *
-         * Present iff `altAlgorithmIdentifier` present.
-         *
-         * @public
-         * @readonly
-         */
-        readonly altIcv?: OPTIONAL<BIT_STRING>,
-        /**
-         * @summary Extensions that are not recognized.
-         * @public
-         * @readonly
-         */
-        readonly _unrecognizedExtensionsList: _Element[] = []
-    ) {}
+        toBeProtected: ToBeProtected,
+        algorithmIdentifier: AlgorithmWithInvoke,
+        icv: BIT_STRING,
+        altAlgorithmIdentifier?: OPTIONAL<AlgorithmWithInvoke>,
+        altIcv?: OPTIONAL<BIT_STRING>,
+        _unrecognizedExtensionsList: _Element[] = []
+    ) {
+        this.toBeProtected = toBeProtected;
+        this.algorithmIdentifier = algorithmIdentifier;
+        this.icv = icv;
+        this.altAlgorithmIdentifier = altAlgorithmIdentifier;
+        this.altIcv = altIcv;
+        this._unrecognizedExtensionsList = _unrecognizedExtensionsList;
+    }
 
     /**
      * @summary Restructures an object into a ICV_Total

@@ -2,15 +2,15 @@
 
 import * as $ from "@wildboar/asn1/functional";
 import {
-    OPTIONAL,
-    SEQUENCE,
-    SET,
-    ASN1Element as _Element,
+    type OPTIONAL,
+    type SEQUENCE,
+    type SET,
+    type ASN1Element as _Element,
     ASN1TagClass as _TagClass
 } from "@wildboar/asn1";
 import { CSTASecurityData, _decode_CSTASecurityData, _encode_CSTASecurityData } from "../CSTA-security/CSTASecurityData.ta.mjs";
 
-import { CSTAPrivateData, _decode_CSTAPrivateData, _encode_CSTAPrivateData } from "../CSTA-extension-types/CSTAPrivateData.ta.mjs";
+import { type CSTAPrivateData, _decode_CSTAPrivateData, _encode_CSTAPrivateData } from "../CSTA-extension-types/CSTAPrivateData.ta.mjs";
 
 
 
@@ -30,7 +30,7 @@ import { CSTAPrivateData, _decode_CSTAPrivateData, _encode_CSTAPrivateData } fro
  * 
  * ```asn1
  * CSTACommonArguments ::= [APPLICATION 30] IMPLICIT SEQUENCE
- * {    security         [0] IMPLICIT     CSTASecurityData         OPTIONAL,
+ * {    security         [0] IMPLICIT     CSTASecurityData         type OPTIONAL,
  *     privateData         [1] IMPLICIT     SEQUENCE OF CSTAPrivateData     OPTIONAL }
  * ```
  * 
@@ -38,30 +38,36 @@ import { CSTAPrivateData, _decode_CSTAPrivateData, _encode_CSTAPrivateData } fro
  */
 export
 class CSTACommonArguments {
+    /**
+     * @summary `security`.
+     * @description
+     *
+     * Timestamp, message sequence number, and opaque security info
+     * (ECMA-269 §12.2.12).
+     *
+     * @public
+     * @readonly
+     */
+    public readonly security?: OPTIONAL<CSTASecurityData>;
+    /**
+     * @summary `privateData`.
+     * @description
+     *
+     * Non-standard parameters (ECMA-269 §12.2.11). Discard if
+     * unrecognised (ECMA-285 §5.5).
+     *
+     * @public
+     * @readonly
+     */
+    public readonly privateData?: OPTIONAL<CSTAPrivateData[]>;
+
     constructor (
-        /**
-         * @summary `security`.
-         * @description
-         *
-         * Timestamp, message sequence number, and opaque security info
-         * (ECMA-269 §12.2.12).
-         *
-         * @public
-         * @readonly
-         */
-        readonly security?: OPTIONAL<CSTASecurityData>,
-        /**
-         * @summary `privateData`.
-         * @description
-         *
-         * Non-standard parameters (ECMA-269 §12.2.11). Discard if
-         * unrecognised (ECMA-285 §5.5).
-         *
-         * @public
-         * @readonly
-         */
-        readonly privateData?: OPTIONAL<CSTAPrivateData[]>
-    ) {}
+        security?: OPTIONAL<CSTASecurityData>,
+        privateData?: OPTIONAL<CSTAPrivateData[]>
+    ) {
+        this.security = security;
+        this.privateData = privateData;
+    }
 
     /**
      * @summary Restructures an object into a CSTACommonArguments

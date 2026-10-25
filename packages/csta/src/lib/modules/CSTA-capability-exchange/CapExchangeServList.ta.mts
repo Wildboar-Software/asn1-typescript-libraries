@@ -2,27 +2,27 @@
 
 import * as $ from "@wildboar/asn1/functional";
 import {
-    OPTIONAL,
-    SEQUENCE,
-    SET,
-    ASN1Element as _Element,
+    type OPTIONAL,
+    type SEQUENCE,
+    type SET,
+    type ASN1Element as _Element,
     ASN1TagClass as _TagClass
 } from "@wildboar/asn1";
-import { GetCSTAFeatures, _decode_GetCSTAFeatures, _encode_GetCSTAFeatures } from "../CSTA-capability-exchange/GetCSTAFeatures.ta.mjs";
+import { type GetCSTAFeatures, _decode_GetCSTAFeatures, _encode_GetCSTAFeatures } from "../CSTA-capability-exchange/GetCSTAFeatures.ta.mjs";
 
-import { GetLogicalDeviceInformation, _decode_GetLogicalDeviceInformation, _encode_GetLogicalDeviceInformation } from "../CSTA-capability-exchange/GetLogicalDeviceInformation.ta.mjs";
+import { type GetLogicalDeviceInformation, _decode_GetLogicalDeviceInformation, _encode_GetLogicalDeviceInformation } from "../CSTA-capability-exchange/GetLogicalDeviceInformation.ta.mjs";
 
-import { GetPhysicalDeviceInformation, _decode_GetPhysicalDeviceInformation, _encode_GetPhysicalDeviceInformation } from "../CSTA-capability-exchange/GetPhysicalDeviceInformation.ta.mjs";
+import { type GetPhysicalDeviceInformation, _decode_GetPhysicalDeviceInformation, _encode_GetPhysicalDeviceInformation } from "../CSTA-capability-exchange/GetPhysicalDeviceInformation.ta.mjs";
 
 import {
-    GetSwitchingFunctionCapabilities,
+    type GetSwitchingFunctionCapabilities,
     _decode_GetSwitchingFunctionCapabilities,
     _encode_GetSwitchingFunctionCapabilities
 } from "../CSTA-capability-exchange/GetSwitchingFunctionCapabilities.ta.mjs";
 
-import { GetSwitchingFunctionDevices, _decode_GetSwitchingFunctionDevices, _encode_GetSwitchingFunctionDevices } from "../CSTA-capability-exchange/GetSwitchingFunctionDevices.ta.mjs";
+import { type GetSwitchingFunctionDevices, _decode_GetSwitchingFunctionDevices, _encode_GetSwitchingFunctionDevices } from "../CSTA-capability-exchange/GetSwitchingFunctionDevices.ta.mjs";
 
-import { SwitchingFunctionDevices, _decode_SwitchingFunctionDevices, _encode_SwitchingFunctionDevices } from "../CSTA-capability-exchange/SwitchingFunctionDevices.ta.mjs";
+import { type SwitchingFunctionDevices, _decode_SwitchingFunctionDevices, _encode_SwitchingFunctionDevices } from "../CSTA-capability-exchange/SwitchingFunctionDevices.ta.mjs";
 
 
 
@@ -41,11 +41,11 @@ import { SwitchingFunctionDevices, _decode_SwitchingFunctionDevices, _encode_Swi
  * 
  * ```asn1
  * CapExchangeServList ::= SEQUENCE
- * {     getCSTAFeatures            [5] IMPLICIT GetCSTAFeatures            OPTIONAL,
- *     getLogicalDeviceInformation     [0] IMPLICIT GetLogicalDeviceInformation     OPTIONAL,
- *     getPhysicalDeviceInformation     [1] IMPLICIT GetPhysicalDeviceInformation     OPTIONAL,
- *     getSwitchingFunctionCaps    [4] IMPLICIT GetSwitchingFunctionCapabilities    OPTIONAL,
- *     getSwitchingFunctionDevices     [2] IMPLICIT GetSwitchingFunctionDevices     OPTIONAL,
+ * {     getCSTAFeatures            [5] IMPLICIT GetCSTAFeatures            type OPTIONAL,
+ *     getLogicalDeviceInformation     [0] IMPLICIT GetLogicalDeviceInformation     type OPTIONAL,
+ *     getPhysicalDeviceInformation     [1] IMPLICIT GetPhysicalDeviceInformation     type OPTIONAL,
+ *     getSwitchingFunctionCaps    [4] IMPLICIT GetSwitchingFunctionCapabilities    type OPTIONAL,
+ *     getSwitchingFunctionDevices     [2] IMPLICIT GetSwitchingFunctionDevices     type OPTIONAL,
  *     switchingFunctionDevices     [3] IMPLICIT SwitchingFunctionDevices         OPTIONAL }
  * ```
  * 
@@ -53,62 +53,76 @@ import { SwitchingFunctionDevices, _decode_SwitchingFunctionDevices, _encode_Swi
  */
 export
 class CapExchangeServList {
+    /**
+     * @summary `getCSTAFeatures`.
+     * @public
+     * @readonly
+     * @description
+     * Capability bitmap for this service; omit if the SF does not support
+     * it (ECMA-269 Annex C).
+     */
+    public readonly getCSTAFeatures?: OPTIONAL<GetCSTAFeatures>;
+    /**
+     * @summary `getLogicalDeviceInformation`.
+     * @public
+     * @readonly
+     * @description
+     * Capability bitmap for this service; omit if the SF does not support
+     * it (ECMA-269 Annex C).
+     */
+    public readonly getLogicalDeviceInformation?: OPTIONAL<GetLogicalDeviceInformation>;
+    /**
+     * @summary `getPhysicalDeviceInformation`.
+     * @public
+     * @readonly
+     * @description
+     * Capability bitmap for this service; omit if the SF does not support
+     * it (ECMA-269 Annex C).
+     */
+    public readonly getPhysicalDeviceInformation?: OPTIONAL<GetPhysicalDeviceInformation>;
+    /**
+     * @summary `getSwitchingFunctionCaps`.
+     * @public
+     * @readonly
+     * @description
+     * Capability bitmap for this service; omit if the SF does not support
+     * it (ECMA-269 Annex C).
+     */
+    public readonly getSwitchingFunctionCaps?: OPTIONAL<GetSwitchingFunctionCapabilities>;
+    /**
+     * @summary `getSwitchingFunctionDevices`.
+     * @public
+     * @readonly
+     * @description
+     * Capability bitmap for this service; omit if the SF does not support
+     * it (ECMA-269 Annex C).
+     */
+    public readonly getSwitchingFunctionDevices?: OPTIONAL<GetSwitchingFunctionDevices>;
+    /**
+     * @summary `switchingFunctionDevices`.
+     * @public
+     * @readonly
+     * @description
+     * Capability bitmap for this service; omit if the SF does not support
+     * it (ECMA-269 Annex C).
+     */
+    public readonly switchingFunctionDevices?: OPTIONAL<SwitchingFunctionDevices>;
+
     constructor (
-        /**
-         * @summary `getCSTAFeatures`.
-         * @public
-         * @readonly
-         * @description
-         * Capability bitmap for this service; omit if the SF does not support
-         * it (ECMA-269 Annex C).
-         */
-        readonly getCSTAFeatures?: OPTIONAL<GetCSTAFeatures>,
-        /**
-         * @summary `getLogicalDeviceInformation`.
-         * @public
-         * @readonly
-         * @description
-         * Capability bitmap for this service; omit if the SF does not support
-         * it (ECMA-269 Annex C).
-         */
-        readonly getLogicalDeviceInformation?: OPTIONAL<GetLogicalDeviceInformation>,
-        /**
-         * @summary `getPhysicalDeviceInformation`.
-         * @public
-         * @readonly
-         * @description
-         * Capability bitmap for this service; omit if the SF does not support
-         * it (ECMA-269 Annex C).
-         */
-        readonly getPhysicalDeviceInformation?: OPTIONAL<GetPhysicalDeviceInformation>,
-        /**
-         * @summary `getSwitchingFunctionCaps`.
-         * @public
-         * @readonly
-         * @description
-         * Capability bitmap for this service; omit if the SF does not support
-         * it (ECMA-269 Annex C).
-         */
-        readonly getSwitchingFunctionCaps?: OPTIONAL<GetSwitchingFunctionCapabilities>,
-        /**
-         * @summary `getSwitchingFunctionDevices`.
-         * @public
-         * @readonly
-         * @description
-         * Capability bitmap for this service; omit if the SF does not support
-         * it (ECMA-269 Annex C).
-         */
-        readonly getSwitchingFunctionDevices?: OPTIONAL<GetSwitchingFunctionDevices>,
-        /**
-         * @summary `switchingFunctionDevices`.
-         * @public
-         * @readonly
-         * @description
-         * Capability bitmap for this service; omit if the SF does not support
-         * it (ECMA-269 Annex C).
-         */
-        readonly switchingFunctionDevices?: OPTIONAL<SwitchingFunctionDevices>
-    ) {}
+        getCSTAFeatures?: OPTIONAL<GetCSTAFeatures>,
+        getLogicalDeviceInformation?: OPTIONAL<GetLogicalDeviceInformation>,
+        getPhysicalDeviceInformation?: OPTIONAL<GetPhysicalDeviceInformation>,
+        getSwitchingFunctionCaps?: OPTIONAL<GetSwitchingFunctionCapabilities>,
+        getSwitchingFunctionDevices?: OPTIONAL<GetSwitchingFunctionDevices>,
+        switchingFunctionDevices?: OPTIONAL<SwitchingFunctionDevices>
+    ) {
+        this.getCSTAFeatures = getCSTAFeatures;
+        this.getLogicalDeviceInformation = getLogicalDeviceInformation;
+        this.getPhysicalDeviceInformation = getPhysicalDeviceInformation;
+        this.getSwitchingFunctionCaps = getSwitchingFunctionCaps;
+        this.getSwitchingFunctionDevices = getSwitchingFunctionDevices;
+        this.switchingFunctionDevices = switchingFunctionDevices;
+    }
 
     /**
      * @summary Restructures an object into a CapExchangeServList

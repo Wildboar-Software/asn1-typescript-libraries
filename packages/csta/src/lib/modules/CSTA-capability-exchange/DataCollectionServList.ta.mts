@@ -2,25 +2,25 @@
 
 import * as $ from "@wildboar/asn1/functional";
 import {
-    OPTIONAL,
-    SEQUENCE,
-    SET,
-    ASN1Element as _Element,
+    type OPTIONAL,
+    type SEQUENCE,
+    type SET,
+    type ASN1Element as _Element,
     ASN1TagClass as _TagClass
 } from "@wildboar/asn1";
-import { DataCollected, _decode_DataCollected, _encode_DataCollected } from "../CSTA-capability-exchange/DataCollected.ta.mjs";
+import { type DataCollected, _decode_DataCollected, _encode_DataCollected } from "../CSTA-capability-exchange/DataCollected.ta.mjs";
 
-import { DataCollectionResumed, _decode_DataCollectionResumed, _encode_DataCollectionResumed } from "../CSTA-capability-exchange/DataCollectionResumed.ta.mjs";
+import { type DataCollectionResumed, _decode_DataCollectionResumed, _encode_DataCollectionResumed } from "../CSTA-capability-exchange/DataCollectionResumed.ta.mjs";
 
-import { DataCollectionSuspended, _decode_DataCollectionSuspended, _encode_DataCollectionSuspended } from "../CSTA-capability-exchange/DataCollectionSuspended.ta.mjs";
+import { type DataCollectionSuspended, _decode_DataCollectionSuspended, _encode_DataCollectionSuspended } from "../CSTA-capability-exchange/DataCollectionSuspended.ta.mjs";
 
-import { ResumeDataCollection, _decode_ResumeDataCollection, _encode_ResumeDataCollection } from "../CSTA-capability-exchange/ResumeDataCollection.ta.mjs";
+import { type ResumeDataCollection, _decode_ResumeDataCollection, _encode_ResumeDataCollection } from "../CSTA-capability-exchange/ResumeDataCollection.ta.mjs";
 
-import { StartDataCollection, _decode_StartDataCollection, _encode_StartDataCollection } from "../CSTA-capability-exchange/StartDataCollection.ta.mjs";
+import { type StartDataCollection, _decode_StartDataCollection, _encode_StartDataCollection } from "../CSTA-capability-exchange/StartDataCollection.ta.mjs";
 
-import { StopDataCollection, _decode_StopDataCollection, _encode_StopDataCollection } from "../CSTA-capability-exchange/StopDataCollection.ta.mjs";
+import { type StopDataCollection, _decode_StopDataCollection, _encode_StopDataCollection } from "../CSTA-capability-exchange/StopDataCollection.ta.mjs";
 
-import { SuspendDataCollection, _decode_SuspendDataCollection, _encode_SuspendDataCollection } from "../CSTA-capability-exchange/SuspendDataCollection.ta.mjs";
+import { type SuspendDataCollection, _decode_SuspendDataCollection, _encode_SuspendDataCollection } from "../CSTA-capability-exchange/SuspendDataCollection.ta.mjs";
 
 
 
@@ -38,12 +38,12 @@ import { SuspendDataCollection, _decode_SuspendDataCollection, _encode_SuspendDa
  * 
  * ```asn1
  * DataCollectionServList ::= SEQUENCE
- * {     dataCollected             [ 0] IMPLICIT     DataCollected             OPTIONAL,
- *     dataCollectionResumed         [ 1] IMPLICIT     DataCollectionResumed         OPTIONAL,
- *     dataCollectionSuspended     [ 2] IMPLICIT     DataCollectionSuspended     OPTIONAL,
- *     resumeDataCollection         [ 3] IMPLICIT     ResumeDataCollection         OPTIONAL,
- *     startDataCollection         [ 4] IMPLICIT     StartDataCollection         OPTIONAL,
- *     stopDataCollection         [ 5] IMPLICIT     StopDataCollection         OPTIONAL,
+ * {     dataCollected             [ 0] IMPLICIT     DataCollected             type OPTIONAL,
+ *     dataCollectionResumed         [ 1] IMPLICIT     DataCollectionResumed         type OPTIONAL,
+ *     dataCollectionSuspended     [ 2] IMPLICIT     DataCollectionSuspended     type OPTIONAL,
+ *     resumeDataCollection         [ 3] IMPLICIT     ResumeDataCollection         type OPTIONAL,
+ *     startDataCollection         [ 4] IMPLICIT     StartDataCollection         type OPTIONAL,
+ *     stopDataCollection         [ 5] IMPLICIT     StopDataCollection         type OPTIONAL,
  *     suspendDataCollection         [ 6] IMPLICIT     SuspendDataCollection         OPTIONAL }
  * ```
  * 
@@ -51,71 +51,87 @@ import { SuspendDataCollection, _decode_SuspendDataCollection, _encode_SuspendDa
  */
 export
 class DataCollectionServList {
+    /**
+     * @summary `dataCollected`.
+     * @public
+     * @readonly
+     * @description
+     * Capability bitmap for this service; omit if the SF does not support
+     * it (ECMA-269 Annex C).
+     */
+    public readonly dataCollected?: OPTIONAL<DataCollected>;
+    /**
+     * @summary `dataCollectionResumed`.
+     * @public
+     * @readonly
+     * @description
+     * Capability bitmap for this service; omit if the SF does not support
+     * it (ECMA-269 Annex C).
+     */
+    public readonly dataCollectionResumed?: OPTIONAL<DataCollectionResumed>;
+    /**
+     * @summary `dataCollectionSuspended`.
+     * @public
+     * @readonly
+     * @description
+     * Capability bitmap for this service; omit if the SF does not support
+     * it (ECMA-269 Annex C).
+     */
+    public readonly dataCollectionSuspended?: OPTIONAL<DataCollectionSuspended>;
+    /**
+     * @summary `resumeDataCollection`.
+     * @public
+     * @readonly
+     * @description
+     * Capability bitmap for this service; omit if the SF does not support
+     * it (ECMA-269 Annex C).
+     */
+    public readonly resumeDataCollection?: OPTIONAL<ResumeDataCollection>;
+    /**
+     * @summary `startDataCollection`.
+     * @public
+     * @readonly
+     * @description
+     * Capability bitmap for this service; omit if the SF does not support
+     * it (ECMA-269 Annex C).
+     */
+    public readonly startDataCollection?: OPTIONAL<StartDataCollection>;
+    /**
+     * @summary `stopDataCollection`.
+     * @public
+     * @readonly
+     * @description
+     * Capability bitmap for this service; omit if the SF does not support
+     * it (ECMA-269 Annex C).
+     */
+    public readonly stopDataCollection?: OPTIONAL<StopDataCollection>;
+    /**
+     * @summary `suspendDataCollection`.
+     * @public
+     * @readonly
+     * @description
+     * Capability bitmap for this service; omit if the SF does not support
+     * it (ECMA-269 Annex C).
+     */
+    public readonly suspendDataCollection?: OPTIONAL<SuspendDataCollection>;
+
     constructor (
-        /**
-         * @summary `dataCollected`.
-         * @public
-         * @readonly
-         * @description
-         * Capability bitmap for this service; omit if the SF does not support
-         * it (ECMA-269 Annex C).
-         */
-        readonly dataCollected?: OPTIONAL<DataCollected>,
-        /**
-         * @summary `dataCollectionResumed`.
-         * @public
-         * @readonly
-         * @description
-         * Capability bitmap for this service; omit if the SF does not support
-         * it (ECMA-269 Annex C).
-         */
-        readonly dataCollectionResumed?: OPTIONAL<DataCollectionResumed>,
-        /**
-         * @summary `dataCollectionSuspended`.
-         * @public
-         * @readonly
-         * @description
-         * Capability bitmap for this service; omit if the SF does not support
-         * it (ECMA-269 Annex C).
-         */
-        readonly dataCollectionSuspended?: OPTIONAL<DataCollectionSuspended>,
-        /**
-         * @summary `resumeDataCollection`.
-         * @public
-         * @readonly
-         * @description
-         * Capability bitmap for this service; omit if the SF does not support
-         * it (ECMA-269 Annex C).
-         */
-        readonly resumeDataCollection?: OPTIONAL<ResumeDataCollection>,
-        /**
-         * @summary `startDataCollection`.
-         * @public
-         * @readonly
-         * @description
-         * Capability bitmap for this service; omit if the SF does not support
-         * it (ECMA-269 Annex C).
-         */
-        readonly startDataCollection?: OPTIONAL<StartDataCollection>,
-        /**
-         * @summary `stopDataCollection`.
-         * @public
-         * @readonly
-         * @description
-         * Capability bitmap for this service; omit if the SF does not support
-         * it (ECMA-269 Annex C).
-         */
-        readonly stopDataCollection?: OPTIONAL<StopDataCollection>,
-        /**
-         * @summary `suspendDataCollection`.
-         * @public
-         * @readonly
-         * @description
-         * Capability bitmap for this service; omit if the SF does not support
-         * it (ECMA-269 Annex C).
-         */
-        readonly suspendDataCollection?: OPTIONAL<SuspendDataCollection>
-    ) {}
+        dataCollected?: OPTIONAL<DataCollected>,
+        dataCollectionResumed?: OPTIONAL<DataCollectionResumed>,
+        dataCollectionSuspended?: OPTIONAL<DataCollectionSuspended>,
+        resumeDataCollection?: OPTIONAL<ResumeDataCollection>,
+        startDataCollection?: OPTIONAL<StartDataCollection>,
+        stopDataCollection?: OPTIONAL<StopDataCollection>,
+        suspendDataCollection?: OPTIONAL<SuspendDataCollection>
+    ) {
+        this.dataCollected = dataCollected;
+        this.dataCollectionResumed = dataCollectionResumed;
+        this.dataCollectionSuspended = dataCollectionSuspended;
+        this.resumeDataCollection = resumeDataCollection;
+        this.startDataCollection = startDataCollection;
+        this.stopDataCollection = stopDataCollection;
+        this.suspendDataCollection = suspendDataCollection;
+    }
 
     /**
      * @summary Restructures an object into a DataCollectionServList

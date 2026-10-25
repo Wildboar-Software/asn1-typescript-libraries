@@ -1,7 +1,7 @@
 /* eslint-disable */
 import {
-    BIT_STRING,
-    ASN1Element as _Element,
+    type BIT_STRING,
+    type ASN1Element as _Element,
     ASN1TagClass as _TagClass,
     ASN1Construction as _Construction,
     ASN1UniversalType as _UniversalType,
@@ -2389,8 +2389,8 @@ const ServiceSupportOptions_reconfigureProgramInvocation: number = 92; /* LONG_N
  */
 export
 const reconfigureProgramInvocation: number = ServiceSupportOptions_reconfigureProgramInvocation; /* SHORT_NAMED_BIT */
-export const _decode_ServiceSupportOptions = $._decodeBitString;
-export const _encode_ServiceSupportOptions = $._encodeBitString;
+export const _decode_ServiceSupportOptions: $.ASN1Decoder<BIT_STRING> = $._decodeBitString;
+export const _encode_ServiceSupportOptions: $.ASN1Encoder<BIT_STRING> = $._encodeBitString;
 
 
 /* eslint-enable */

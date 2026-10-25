@@ -1,6 +1,6 @@
 /* eslint-disable */
 import {
-    ASN1Element as _Element,
+    type ASN1Element as _Element,
     ASN1TagClass as _TagClass,
     ASN1Construction as _Construction,
     ASN1UniversalType as _UniversalType,
@@ -36,20 +36,26 @@ import {
  *
  */
 export class CoincidentProtectedUnidirectionalConnections {
+    /**
+     * @summary `protectedXC`.
+     * @public
+     * @readonly
+     */
+    public readonly protectedXC: ProtectedXC;
+    /**
+     * @summary `multicastXC`.
+     * @public
+     * @readonly
+     */
+    public readonly multicastXC: MulticastXC;
+
     constructor(
-        /**
-         * @summary `protectedXC`.
-         * @public
-         * @readonly
-         */
-        readonly protectedXC: ProtectedXC,
-        /**
-         * @summary `multicastXC`.
-         * @public
-         * @readonly
-         */
-        readonly multicastXC: MulticastXC
-    ) {}
+        protectedXC: ProtectedXC,
+        multicastXC: MulticastXC
+    ) {
+        this.protectedXC = protectedXC;
+        this.multicastXC = multicastXC;
+    }
 
     /**
      * @summary Restructures an object into a CoincidentProtectedUnidirectionalConnections

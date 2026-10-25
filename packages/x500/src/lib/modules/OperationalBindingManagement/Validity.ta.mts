@@ -1,17 +1,17 @@
 /* eslint-disable */
 import {
-    ASN1Element as _Element,
+    type ASN1Element as _Element,
     ASN1TagClass as _TagClass,
-    OPTIONAL,
+    type OPTIONAL,
 } from "@wildboar/asn1";
 import * as $ from "@wildboar/asn1/functional";
 import {
-    Validity_validFrom,
+    type Validity_validFrom,
     _decode_Validity_validFrom,
     _encode_Validity_validFrom,
 } from "../OperationalBindingManagement/Validity-validFrom.ta.mjs";
 import {
-    Validity_validUntil,
+    type Validity_validUntil,
     _decode_Validity_validUntil,
     _encode_Validity_validUntil,
 } from "../OperationalBindingManagement/Validity-validUntil.ta.mjs";
@@ -41,26 +41,34 @@ import {
  *
  */
 export class Validity {
+    /**
+     * @summary `validFrom`.
+     * @public
+     * @readonly
+     */
+    public readonly validFrom?: OPTIONAL<Validity_validFrom>;
+    /**
+     * @summary `validUntil`.
+     * @public
+     * @readonly
+     */
+    public readonly validUntil?: OPTIONAL<Validity_validUntil>;
+    /**
+     * @summary Extensions that are not recognized.
+     * @public
+     * @readonly
+     */
+    public readonly _unrecognizedExtensionsList: _Element[];
+
     constructor(
-        /**
-         * @summary `validFrom`.
-         * @public
-         * @readonly
-         */
-        readonly validFrom?: OPTIONAL<Validity_validFrom>,
-        /**
-         * @summary `validUntil`.
-         * @public
-         * @readonly
-         */
-        readonly validUntil?: OPTIONAL<Validity_validUntil>,
-        /**
-         * @summary Extensions that are not recognized.
-         * @public
-         * @readonly
-         */
-        readonly _unrecognizedExtensionsList: _Element[] = []
-    ) {}
+        validFrom?: OPTIONAL<Validity_validFrom>,
+        validUntil?: OPTIONAL<Validity_validUntil>,
+        _unrecognizedExtensionsList: _Element[] = []
+    ) {
+        this.validFrom = validFrom;
+        this.validUntil = validUntil;
+        this._unrecognizedExtensionsList = _unrecognizedExtensionsList;
+    }
 
     /**
      * @summary Restructures an object into a Validity

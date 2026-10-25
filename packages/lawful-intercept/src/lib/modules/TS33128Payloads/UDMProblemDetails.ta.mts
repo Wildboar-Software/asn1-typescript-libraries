@@ -1,11 +1,11 @@
 /* eslint-disable */
 import {
-    OPTIONAL,
-    ASN1Element as _Element,
+    type OPTIONAL,
+    type ASN1Element as _Element,
     ASN1TagClass as _TagClass
 } from "@wildboar/asn1";
 import * as $ from "@wildboar/asn1/functional";
-import { UDMProblemDetailsCause, _decode_UDMProblemDetailsCause, _encode_UDMProblemDetailsCause } from "../TS33128Payloads/UDMProblemDetailsCause.ta.mjs";
+import { type UDMProblemDetailsCause, _decode_UDMProblemDetailsCause, _encode_UDMProblemDetailsCause } from "../TS33128Payloads/UDMProblemDetailsCause.ta.mjs";
 // export { UDMProblemDetailsCause, _decode_UDMProblemDetailsCause, _encode_UDMProblemDetailsCause } from "../TS33128Payloads/UDMProblemDetailsCause.ta.mjs";
 
 

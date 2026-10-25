@@ -47,7 +47,7 @@ export class IdentifyMatch_ResponseParams {
    * @public
    * @readonly
    */
-  readonly candidates: BioAPI_CANDIDATE[];
+  public readonly candidates: BioAPI_CANDIDATE[];
 
   constructor(
     candidates: BioAPI_CANDIDATE[]

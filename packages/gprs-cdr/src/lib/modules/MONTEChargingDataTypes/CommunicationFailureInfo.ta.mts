@@ -1,9 +1,9 @@
 /* eslint-disable */
 import {
-    ASN1Element as _Element,
+    type ASN1Element as _Element,
     ASN1TagClass as _TagClass,
-    INTEGER,
-    OPTIONAL
+    type INTEGER,
+    type OPTIONAL
 } from "@wildboar/asn1";
 import * as $ from "@wildboar/asn1/functional";
 import { _decode_CauseType, _encode_CauseType, _enum_for_CauseType, CauseType } from "../MONTEChargingDataTypes/CauseType.ta.mjs";
@@ -162,7 +162,7 @@ class CommunicationFailureInfo {
          * @static
          */
 
-    public static _enum_for_causeType = _enum_for_CauseType;
+    public static _enum_for_causeType: typeof _enum_for_CauseType = _enum_for_CauseType;
 }
 
 /**

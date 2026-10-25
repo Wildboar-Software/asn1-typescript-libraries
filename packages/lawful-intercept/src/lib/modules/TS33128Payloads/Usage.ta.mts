@@ -129,7 +129,7 @@ type Usage = _enum_for_Usage;
  * @enum {number}
  */
 export
-const Usage = _enum_for_Usage;
+const Usage: typeof _enum_for_Usage = _enum_for_Usage;
 
 /**
  * @summary Usage_unsuccess
@@ -143,7 +143,7 @@ const Usage = _enum_for_Usage;
  * @type {number}
  */
 export
-const Usage_unsuccess: Usage = Usage.unsuccess; /* LONG_NAMED_ENUMERATED_VALUE */
+const Usage_unsuccess: _enum_for_Usage.unsuccess = Usage.unsuccess; /* LONG_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary unsuccess
@@ -157,7 +157,7 @@ const Usage_unsuccess: Usage = Usage.unsuccess; /* LONG_NAMED_ENUMERATED_VALUE *
  * @type {number}
  */
 export
-const unsuccess: Usage = Usage.unsuccess; /* SHORT_NAMED_ENUMERATED_VALUE */
+const unsuccess: _enum_for_Usage.unsuccess = Usage.unsuccess; /* SHORT_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary Usage_successResultsNotUsed
@@ -171,7 +171,7 @@ const unsuccess: Usage = Usage.unsuccess; /* SHORT_NAMED_ENUMERATED_VALUE */
  * @type {number}
  */
 export
-const Usage_successResultsNotUsed: Usage = Usage.successResultsNotUsed; /* LONG_NAMED_ENUMERATED_VALUE */
+const Usage_successResultsNotUsed: _enum_for_Usage.successResultsNotUsed = Usage.successResultsNotUsed; /* LONG_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary successResultsNotUsed
@@ -185,7 +185,7 @@ const Usage_successResultsNotUsed: Usage = Usage.successResultsNotUsed; /* LONG_
  * @type {number}
  */
 export
-const successResultsNotUsed: Usage = Usage.successResultsNotUsed; /* SHORT_NAMED_ENUMERATED_VALUE */
+const successResultsNotUsed: _enum_for_Usage.successResultsNotUsed = Usage.successResultsNotUsed; /* SHORT_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary Usage_successResultsUsedToVerifyLocation
@@ -199,7 +199,7 @@ const successResultsNotUsed: Usage = Usage.successResultsNotUsed; /* SHORT_NAMED
  * @type {number}
  */
 export
-const Usage_successResultsUsedToVerifyLocation: Usage = Usage.successResultsUsedToVerifyLocation; /* LONG_NAMED_ENUMERATED_VALUE */
+const Usage_successResultsUsedToVerifyLocation: _enum_for_Usage.successResultsUsedToVerifyLocation = Usage.successResultsUsedToVerifyLocation; /* LONG_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary successResultsUsedToVerifyLocation
@@ -213,7 +213,7 @@ const Usage_successResultsUsedToVerifyLocation: Usage = Usage.successResultsUsed
  * @type {number}
  */
 export
-const successResultsUsedToVerifyLocation: Usage = Usage.successResultsUsedToVerifyLocation; /* SHORT_NAMED_ENUMERATED_VALUE */
+const successResultsUsedToVerifyLocation: _enum_for_Usage.successResultsUsedToVerifyLocation = Usage.successResultsUsedToVerifyLocation; /* SHORT_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary Usage_successResultsUsedToGenerateLocation
@@ -227,7 +227,7 @@ const successResultsUsedToVerifyLocation: Usage = Usage.successResultsUsedToVeri
  * @type {number}
  */
 export
-const Usage_successResultsUsedToGenerateLocation: Usage = Usage.successResultsUsedToGenerateLocation; /* LONG_NAMED_ENUMERATED_VALUE */
+const Usage_successResultsUsedToGenerateLocation: _enum_for_Usage.successResultsUsedToGenerateLocation = Usage.successResultsUsedToGenerateLocation; /* LONG_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary successResultsUsedToGenerateLocation
@@ -241,7 +241,7 @@ const Usage_successResultsUsedToGenerateLocation: Usage = Usage.successResultsUs
  * @type {number}
  */
 export
-const successResultsUsedToGenerateLocation: Usage = Usage.successResultsUsedToGenerateLocation; /* SHORT_NAMED_ENUMERATED_VALUE */
+const successResultsUsedToGenerateLocation: _enum_for_Usage.successResultsUsedToGenerateLocation = Usage.successResultsUsedToGenerateLocation; /* SHORT_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary Usage_successMethodNotDetermined
@@ -255,7 +255,7 @@ const successResultsUsedToGenerateLocation: Usage = Usage.successResultsUsedToGe
  * @type {number}
  */
 export
-const Usage_successMethodNotDetermined: Usage = Usage.successMethodNotDetermined; /* LONG_NAMED_ENUMERATED_VALUE */
+const Usage_successMethodNotDetermined: _enum_for_Usage.successMethodNotDetermined = Usage.successMethodNotDetermined; /* LONG_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary successMethodNotDetermined
@@ -269,7 +269,7 @@ const Usage_successMethodNotDetermined: Usage = Usage.successMethodNotDetermined
  * @type {number}
  */
 export
-const successMethodNotDetermined: Usage = Usage.successMethodNotDetermined; /* SHORT_NAMED_ENUMERATED_VALUE */
+const successMethodNotDetermined: _enum_for_Usage.successMethodNotDetermined = Usage.successMethodNotDetermined; /* SHORT_NAMED_ENUMERATED_VALUE */
 export const _decode_Usage: $.ASN1Decoder<Usage> = $._decodeEnumerated;
 export const _encode_Usage: $.ASN1Encoder<Usage> = $._encodeEnumerated;
 

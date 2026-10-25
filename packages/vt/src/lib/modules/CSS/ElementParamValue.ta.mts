@@ -1,8 +1,8 @@
 /* eslint-disable */
 import {
-    OPTIONAL,
-    INTEGER,
-    ASN1Element as _Element,
+    type OPTIONAL,
+    type INTEGER,
+    type ASN1Element as _Element,
     ASN1TagClass as _TagClass,
     ASN1Construction as _Construction,
     ASN1UniversalType as _UniversalType,
@@ -12,7 +12,7 @@ import {
     ASN1ConstructionError as _ConstructionError,
 } from "@wildboar/asn1";
 import * as $ from "@wildboar/asn1/functional";
-import { ElementParamValue_category, _decode_ElementParamValue_category, _encode_ElementParamValue_category } from "../CSS/ElementParamValue-category.ta.mjs";
+import { type ElementParamValue_category, _decode_ElementParamValue_category, _encode_ElementParamValue_category } from "../CSS/ElementParamValue-category.ta.mjs";
 import { _decode_RepertoireAssignment, _encode_RepertoireAssignment, RepertoireAssignment } from "../CDS/RepertoireAssignment.ta.mjs";
 
 
@@ -46,45 +46,55 @@ import { _decode_RepertoireAssignment, _encode_RepertoireAssignment, RepertoireA
  */
 export
 class ElementParamValue {
+    /**
+     * @summary `elementIdentifier`.
+     * @description
+     * `CO-element-id`: 1-based in structure order, 1..N.
+     * ISO/IEC 9040:1997 §20.2.1.
+     * @public
+     * @readonly
+     */
+    public readonly elementIdentifier: INTEGER;
+    /**
+     * @summary `size`.
+     * @description
+     * Selected `CO-size` for this element. Meaning depends
+     * on category (see `CO-size` defaults).
+     * ISO/IEC 9040:1997 §20.2.2.
+     * @public
+     * @readonly
+     */
+    public readonly size?: OPTIONAL<INTEGER>;
+    /**
+     * @summary `category`.
+     * @description
+     * Selected `CO-category`. Default `"boolean"`.
+     * ISO/IEC 9040:1997 table 9, §20.2.3–§20.2.6.
+     * @public
+     * @readonly
+     */
+    public readonly category?: OPTIONAL<ElementParamValue_category>;
+    /**
+     * @summary `repertoire`.
+     * @description
+     * Selected `CO-repertoire-assignment` (character
+     * category). ISO/IEC 9040:1997 §20.2.5.
+     * @public
+     * @readonly
+     */
+    public readonly repertoire?: OPTIONAL<RepertoireAssignment>;
+
     constructor (
-        /**
-         * @summary `elementIdentifier`.
-         * @description
-         * `CO-element-id`: 1-based in structure order, 1..N.
-         * ISO/IEC 9040:1997 §20.2.1.
-         * @public
-         * @readonly
-         */
-        readonly elementIdentifier: INTEGER,
-        /**
-         * @summary `size`.
-         * @description
-         * Selected `CO-size` for this element. Meaning depends
-         * on category (see `CO-size` defaults).
-         * ISO/IEC 9040:1997 §20.2.2.
-         * @public
-         * @readonly
-         */
-        readonly size?: OPTIONAL<INTEGER>,
-        /**
-         * @summary `category`.
-         * @description
-         * Selected `CO-category`. Default `"boolean"`.
-         * ISO/IEC 9040:1997 table 9, §20.2.3–§20.2.6.
-         * @public
-         * @readonly
-         */
-        readonly category?: OPTIONAL<ElementParamValue_category>,
-        /**
-         * @summary `repertoire`.
-         * @description
-         * Selected `CO-repertoire-assignment` (character
-         * category). ISO/IEC 9040:1997 §20.2.5.
-         * @public
-         * @readonly
-         */
-        readonly repertoire?: OPTIONAL<RepertoireAssignment>
-    ) {}
+        elementIdentifier: INTEGER,
+        size?: OPTIONAL<INTEGER>,
+        category?: OPTIONAL<ElementParamValue_category>,
+        repertoire?: OPTIONAL<RepertoireAssignment>
+    ) {
+        this.elementIdentifier = elementIdentifier;
+        this.size = size;
+        this.category = category;
+        this.repertoire = repertoire;
+    }
 
     /**
      * @summary Restructures an object into a ElementParamValue

@@ -1,7 +1,7 @@
 /* eslint-disable */
 import {
     ASN1ConstructionError as _ConstructionError,
-    ASN1Element as _Element,
+    type ASN1Element as _Element,
     ASN1TagClass as _TagClass
 } from "@wildboar/asn1";
 import * as $ from "@wildboar/asn1/functional";
@@ -9,7 +9,7 @@ import { LocationEventType, _decode_LocationEventType, _encode_LocationEventType
 // export { LocationEventType, _enum_for_LocationEventType, LocationEventType_direct /* IMPORTED_LONG_ENUMERATION_ITEM */, direct /* IMPORTED_SHORT_ENUMERATION_ITEM */, LocationEventType_changeOfServeCell /* IMPORTED_LONG_ENUMERATION_ITEM */, changeOfServeCell /* IMPORTED_SHORT_ENUMERATION_ITEM */, LocationEventType_uEPrescenceInAreaOfInterest /* IMPORTED_LONG_ENUMERATION_ITEM */, uEPrescenceInAreaOfInterest /* IMPORTED_SHORT_ENUMERATION_ITEM */, LocationEventType_stopChangeOfServeCell /* IMPORTED_LONG_ENUMERATION_ITEM */, stopChangeOfServeCell /* IMPORTED_SHORT_ENUMERATION_ITEM */, LocationEventType_stopUEPresenceInAreaOfInterest /* IMPORTED_LONG_ENUMERATION_ITEM */, stopUEPresenceInAreaOfInterest /* IMPORTED_SHORT_ENUMERATION_ITEM */, LocationEventType_cancelLocationReportingForTheUE /* IMPORTED_LONG_ENUMERATION_ITEM */, cancelLocationReportingForTheUE /* IMPORTED_SHORT_ENUMERATION_ITEM */, _decode_LocationEventType, _encode_LocationEventType } from "../TS33128Payloads/LocationEventType.ta.mjs";
 import { LocationReportArea, _decode_LocationReportArea, _encode_LocationReportArea, _enum_for_LocationReportArea } from "../TS33128Payloads/LocationReportArea.ta.mjs";
 // export { LocationReportArea, _enum_for_LocationReportArea, LocationReportArea_cell /* IMPORTED_LONG_ENUMERATION_ITEM */, cell /* IMPORTED_SHORT_ENUMERATION_ITEM */, _decode_LocationReportArea, _encode_LocationReportArea } from "../TS33128Payloads/LocationReportArea.ta.mjs";
-import { LocationAreaOfInterestList, _decode_LocationAreaOfInterestList, _encode_LocationAreaOfInterestList } from "../TS33128Payloads/LocationAreaOfInterestList.ta.mjs";
+import { type LocationAreaOfInterestList, _decode_LocationAreaOfInterestList, _encode_LocationAreaOfInterestList } from "../TS33128Payloads/LocationAreaOfInterestList.ta.mjs";
 // export { LocationAreaOfInterestList, _decode_LocationAreaOfInterestList, _encode_LocationAreaOfInterestList } from "../TS33128Payloads/LocationAreaOfInterestList.ta.mjs";
 
 
@@ -97,13 +97,13 @@ class LocationReportingRequestType {
          * @static
          */
 
-    public static _enum_for_eventType = _enum_for_LocationEventType;        /**
+    public static _enum_for_eventType: typeof _enum_for_LocationEventType = _enum_for_LocationEventType;        /**
          * @summary The enum used as the type of the component `reportArea`
          * @public
          * @static
          */
 
-    public static _enum_for_reportArea = _enum_for_LocationReportArea;
+    public static _enum_for_reportArea: typeof _enum_for_LocationReportArea = _enum_for_LocationReportArea;
 }
 
 /**

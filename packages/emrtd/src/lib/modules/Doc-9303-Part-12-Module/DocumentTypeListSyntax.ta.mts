@@ -2,15 +2,15 @@
 import {
     ASN1CharactersError,
     ASN1ConstructionError as _ConstructionError,
-    ASN1Element as _Element,
+    type ASN1Element as _Element,
     ASN1SizeError,
     ASN1TagClass as _TagClass,
     isPrintableCharacter,
 } from "@wildboar/asn1";
 import * as $ from "@wildboar/asn1/functional";
-import { DocumentTypeListVersion, _decode_DocumentTypeListVersion, _encode_DocumentTypeListVersion } from "../Doc-9303-Part-12-Module/DocumentTypeListVersion.ta.mjs";
+import { type DocumentTypeListVersion, _decode_DocumentTypeListVersion, _encode_DocumentTypeListVersion } from "../Doc-9303-Part-12-Module/DocumentTypeListVersion.ta.mjs";
 // export { DocumentTypeListVersion, DocumentTypeListVersion_v0 /* IMPORTED_LONG_NAMED_INTEGER */, v0 /* IMPORTED_SHORT_NAMED_INTEGER */, _decode_DocumentTypeListVersion, _encode_DocumentTypeListVersion } from "../Doc-9303-Part-12-Module/DocumentTypeListVersion.ta.mjs";
-import { DocumentType, _decode_DocumentType, _encode_DocumentType } from "../Doc-9303-Part-12-Module/DocumentType.ta.mjs";
+import { type DocumentType, _decode_DocumentType, _encode_DocumentType } from "../Doc-9303-Part-12-Module/DocumentType.ta.mjs";
 // export { DocumentType, _decode_DocumentType, _encode_DocumentType } from "../Doc-9303-Part-12-Module/DocumentType.ta.mjs";
 
 
@@ -35,23 +35,28 @@ import { DocumentType, _decode_DocumentType, _encode_DocumentType } from "../Doc
  */
 export
 class DocumentTypeListSyntax {
+    /**
+     * List syntax version. Only `v0` is assigned.
+     * @summary `version`.
+     * @public
+     * @readonly
+     */
+    public readonly version: DocumentTypeListVersion;
+    /**
+     * Document types this signer may produce. A one-character value covers
+     * every MRZ document type that starts with that character.
+     * @summary `docTypeList`.
+     * @public
+     * @readonly
+     */
+    public readonly docTypeList: DocumentType[];
+
     constructor (
-        /**
-         * List syntax version. Only `v0` is assigned.
-         * @summary `version`.
-         * @public
-         * @readonly
-         */
-        readonly version: DocumentTypeListVersion,
-        /**
-         * Document types this signer may produce. A one-character value covers
-         * every MRZ document type that starts with that character.
-         * @summary `docTypeList`.
-         * @public
-         * @readonly
-         */
-        readonly docTypeList: DocumentType[]
+        version: DocumentTypeListVersion,
+        docTypeList: DocumentType[]
     ) {
+        this.version = version;
+        this.docTypeList = docTypeList;
         for (const docType of docTypeList) {
             if (docType.length < 1 || docType.length > 2) {
                 throw new ASN1SizeError("DocumentType violates SIZE constraint");

@@ -1,7 +1,7 @@
 /* eslint-disable */
 import {
-    OPTIONAL,
-    ASN1Element as _Element,
+    type OPTIONAL,
+    type ASN1Element as _Element,
     ASN1TagClass as _TagClass,
     ASN1Construction as _Construction,
     ASN1UniversalType as _UniversalType,
@@ -11,7 +11,7 @@ import {
     ASN1ConstructionError as _ConstructionError,
 } from "@wildboar/asn1";
 import * as $ from "@wildboar/asn1/functional";
-import { CharacterData, _decode_CharacterData, _encode_CharacterData } from "../DFRAbstractService/CharacterData.ta.mjs";
+import { type CharacterData, _decode_CharacterData, _encode_CharacterData } from "../DFRAbstractService/CharacterData.ta.mjs";
 
 
 /**
@@ -38,53 +38,65 @@ import { CharacterData, _decode_CharacterData, _encode_CharacterData } from "../
  */
 export
 class Person {
+    /**
+     * @summary `surname`.
+     * @description
+     *
+     * Family name.
+     * @public
+     * @readonly
+     */
+    public readonly surname?: OPTIONAL<CharacterData>;
+    /**
+     * @summary `givenname`.
+     * @description
+     *
+     * Given name.
+     * @public
+     * @readonly
+     */
+    public readonly givenname?: OPTIONAL<CharacterData>;
+    /**
+     * @summary `initials`.
+     * @description
+     *
+     * Initials.
+     * @public
+     * @readonly
+     */
+    public readonly initials?: OPTIONAL<CharacterData>;
+    /**
+     * @summary `title`.
+     * @description
+     *
+     * Courtesy or job title.
+     * @public
+     * @readonly
+     */
+    public readonly title?: OPTIONAL<CharacterData>;
+    /**
+     * @summary `organization`.
+     * @description
+     *
+     * Associated organization.
+     * @public
+     * @readonly
+     */
+    public readonly organization?: OPTIONAL<CharacterData>;
+
     constructor (
-        /**
-         * @summary `surname`.
-         * @description
-         *
-         * Family name.
-         * @public
-         * @readonly
-         */
-        readonly surname?: OPTIONAL<CharacterData>,
-        /**
-         * @summary `givenname`.
-         * @description
-         *
-         * Given name.
-         * @public
-         * @readonly
-         */
-        readonly givenname?: OPTIONAL<CharacterData>,
-        /**
-         * @summary `initials`.
-         * @description
-         *
-         * Initials.
-         * @public
-         * @readonly
-         */
-        readonly initials?: OPTIONAL<CharacterData>,
-        /**
-         * @summary `title`.
-         * @description
-         *
-         * Courtesy or job title.
-         * @public
-         * @readonly
-         */
-        readonly title?: OPTIONAL<CharacterData>,
-        /**
-         * @summary `organization`.
-         * @description
-         *
-         * Associated organization.
-         * @public
-         * @readonly
-         */
-        readonly organization?: OPTIONAL<CharacterData>
-    ) {}
+        surname?: OPTIONAL<CharacterData>,
+        givenname?: OPTIONAL<CharacterData>,
+        initials?: OPTIONAL<CharacterData>,
+        title?: OPTIONAL<CharacterData>,
+        organization?: OPTIONAL<CharacterData>
+    ) {
+        this.surname = surname;
+        this.givenname = givenname;
+        this.initials = initials;
+        this.title = title;
+        this.organization = organization;
+    }
 
     /**
      * @summary Restructures an object into a Person

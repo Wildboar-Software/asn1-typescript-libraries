@@ -1,13 +1,13 @@
 /* eslint-disable */
 import {
-    INTEGER,
-    OPTIONAL,
-    ASN1Element as _Element,
+    type INTEGER,
+    type OPTIONAL,
+    type ASN1Element as _Element,
     ASN1TagClass as _TagClass
 } from "@wildboar/asn1";
 import * as $ from "@wildboar/asn1/functional";
 import { APNRateControlParameters_additionalExceptionReports, _decode_APNRateControlParameters_additionalExceptionReports, _encode_APNRateControlParameters_additionalExceptionReports, _enum_for_APNRateControlParameters_additionalExceptionReports } from "../CPDTChargingDataTypes/APNRateControlParameters-additionalExceptionReports.ta.mjs";
-import { APNRateControlParameters_rateControlTimeUnit, _decode_APNRateControlParameters_rateControlTimeUnit, _encode_APNRateControlParameters_rateControlTimeUnit } from "../CPDTChargingDataTypes/APNRateControlParameters-rateControlTimeUnit.ta.mjs";
+import { type APNRateControlParameters_rateControlTimeUnit, _decode_APNRateControlParameters_rateControlTimeUnit, _encode_APNRateControlParameters_rateControlTimeUnit } from "../CPDTChargingDataTypes/APNRateControlParameters-rateControlTimeUnit.ta.mjs";
 
 
 /**
@@ -102,7 +102,7 @@ class APNRateControlParameters {
          * @static
          */
 
-    public static _enum_for_additionalExceptionReports = _enum_for_APNRateControlParameters_additionalExceptionReports;
+    public static _enum_for_additionalExceptionReports: typeof _enum_for_APNRateControlParameters_additionalExceptionReports = _enum_for_APNRateControlParameters_additionalExceptionReports;
 }
 
 /**

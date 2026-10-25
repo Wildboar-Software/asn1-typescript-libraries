@@ -1,6 +1,6 @@
 /* eslint-disable */
 import {
-  INTEGER,
+  type INTEGER,
   ASN1Element as _Element,
   ASN1TagClass as _TagClass,
   ASN1Construction as _Construction,
@@ -44,7 +44,7 @@ export type Action_Result = INTEGER;
  * @constant
  * @type {number}
  */
-export const Action_Result_success: Action_Result = 0; /* LONG_NAMED_INTEGER_VALUE */
+export const Action_Result_success: 0 = 0 satisfies Action_Result; /* LONG_NAMED_INTEGER_VALUE */
 
 
 /**
@@ -52,7 +52,7 @@ export const Action_Result_success: Action_Result = 0; /* LONG_NAMED_INTEGER_VAL
  * @constant
  * @type {number}
  */
-export const success: Action_Result = Action_Result_success; /* SHORT_NAMED_INTEGER_VALUE */
+export const success: 0 = Action_Result_success; /* SHORT_NAMED_INTEGER_VALUE */
 
 
 /**
@@ -65,7 +65,7 @@ export const success: Action_Result = Action_Result_success; /* SHORT_NAMED_INTE
  * @constant
  * @type {number}
  */
-export const Action_Result_transient_error: Action_Result = 1; /* LONG_NAMED_INTEGER_VALUE */
+export const Action_Result_transient_error: 1 = 1 satisfies Action_Result; /* LONG_NAMED_INTEGER_VALUE */
 
 
 /**
@@ -73,7 +73,7 @@ export const Action_Result_transient_error: Action_Result = 1; /* LONG_NAMED_INT
  * @constant
  * @type {number}
  */
-export const transient_error: Action_Result = Action_Result_transient_error; /* SHORT_NAMED_INTEGER_VALUE */
+export const transient_error: 1 = Action_Result_transient_error; /* SHORT_NAMED_INTEGER_VALUE */
 
 
 /**
@@ -86,7 +86,7 @@ export const transient_error: Action_Result = Action_Result_transient_error; /* 
  * @constant
  * @type {number}
  */
-export const Action_Result_permanent_error: Action_Result = 2; /* LONG_NAMED_INTEGER_VALUE */
+export const Action_Result_permanent_error: 2 = 2 satisfies Action_Result; /* LONG_NAMED_INTEGER_VALUE */
 
 
 /**
@@ -94,7 +94,7 @@ export const Action_Result_permanent_error: Action_Result = 2; /* LONG_NAMED_INT
  * @constant
  * @type {number}
  */
-export const permanent_error: Action_Result = Action_Result_permanent_error; /* SHORT_NAMED_INTEGER_VALUE */
+export const permanent_error: 2 = Action_Result_permanent_error; /* SHORT_NAMED_INTEGER_VALUE */
 
 
 let _cached_decoder_for_Action_Result: $.ASN1Decoder<Action_Result> | null = null;

@@ -2,9 +2,9 @@
 
 import * as $ from "@wildboar/asn1/functional";
 import { ASN1Element as _Element } from "@wildboar/asn1";
-import { ServiceCrossRefID, _decode_ServiceCrossRefID, _encode_ServiceCrossRefID } from "../CSTA-capability-exchange/ServiceCrossRefID.ta.mjs";
+import { type ServiceCrossRefID, _decode_ServiceCrossRefID, _encode_ServiceCrossRefID } from "../CSTA-capability-exchange/ServiceCrossRefID.ta.mjs";
 
-import { MonitorList, _decode_MonitorList, _encode_MonitorList } from "../CSTA-status-reporting/MonitorList.ta.mjs";
+import { type MonitorList, _decode_MonitorList, _encode_MonitorList } from "../CSTA-status-reporting/MonitorList.ta.mjs";
 
 
 

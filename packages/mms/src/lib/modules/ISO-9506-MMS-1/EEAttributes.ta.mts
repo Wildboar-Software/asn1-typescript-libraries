@@ -1,8 +1,8 @@
 /* eslint-disable */
 import {
-    OPTIONAL,
-    BOOLEAN,
-    ASN1Element as _Element,
+    type OPTIONAL,
+    type BOOLEAN,
+    type ASN1Element as _Element,
     ASN1TagClass as _TagClass,
     ASN1Construction as _Construction,
     ASN1UniversalType as _UniversalType,
@@ -12,16 +12,16 @@ import {
     ASN1ConstructionError as _ConstructionError,
 } from "@wildboar/asn1";
 import * as $ from "@wildboar/asn1/functional";
-import { ObjectName, _decode_ObjectName, _encode_ObjectName } from "../ISO-9506-MMS-1/ObjectName.ta.mjs";
-import { EEAttributes_eventConditionName, _decode_EEAttributes_eventConditionName, _encode_EEAttributes_eventConditionName } from "../ISO-9506-MMS-1/EEAttributes-eventConditionName.ta.mjs";
-import { EEAttributes_eventActionName, _decode_EEAttributes_eventActionName, _encode_EEAttributes_eventActionName } from "../ISO-9506-MMS-1/EEAttributes-eventActionName.ta.mjs";
-import { Nullable, _get_decoder_for_Nullable, _get_encoder_for_Nullable } from "../ISO-9506-MMS-1/Nullable.ta.mjs";
+import { type ObjectName, _decode_ObjectName, _encode_ObjectName } from "../ISO-9506-MMS-1/ObjectName.ta.mjs";
+import { type EEAttributes_eventConditionName, _decode_EEAttributes_eventConditionName, _encode_EEAttributes_eventConditionName } from "../ISO-9506-MMS-1/EEAttributes-eventConditionName.ta.mjs";
+import { type EEAttributes_eventActionName, _decode_EEAttributes_eventActionName, _encode_EEAttributes_eventActionName } from "../ISO-9506-MMS-1/EEAttributes-eventActionName.ta.mjs";
+import { type Nullable, _get_decoder_for_Nullable, _get_encoder_for_Nullable } from "../ISO-9506-MMS-1/Nullable.ta.mjs";
 import { ApplicationReference, _decode_ApplicationReference, _encode_ApplicationReference } from "../MMS-Environment-1/ApplicationReference.ta.mjs";
-import { EE_Class, _decode_EE_Class, _encode_EE_Class } from "../MMS-Object-Module-1/EE-Class.ta.mjs";
-import { EE_Duration, current /* IMPORTED_SHORT_NAMED_INTEGER */, _decode_EE_Duration, _encode_EE_Duration } from "../MMS-Object-Module-1/EE-Duration.ta.mjs";
-import { Unsigned32, _decode_Unsigned32, _encode_Unsigned32 } from "../ISO-9506-MMS-1/Unsigned32.ta.mjs";
-import { EEAttributes_displayEnhancement, _decode_EEAttributes_displayEnhancement, _encode_EEAttributes_displayEnhancement } from "../ISO-9506-MMS-1/EEAttributes-displayEnhancement.ta.mjs";
-import { Identifier, _decode_Identifier, _encode_Identifier } from "../ISO-9506-MMS-1/Identifier.ta.mjs";
+import { type EE_Class, _decode_EE_Class, _encode_EE_Class } from "../MMS-Object-Module-1/EE-Class.ta.mjs";
+import { type EE_Duration, current /* IMPORTED_SHORT_NAMED_INTEGER */, _decode_EE_Duration, _encode_EE_Duration } from "../MMS-Object-Module-1/EE-Duration.ta.mjs";
+import { type Unsigned32, _decode_Unsigned32, _encode_Unsigned32 } from "../ISO-9506-MMS-1/Unsigned32.ta.mjs";
+import { type EEAttributes_displayEnhancement, _decode_EEAttributes_displayEnhancement, _encode_EEAttributes_displayEnhancement } from "../ISO-9506-MMS-1/EEAttributes-displayEnhancement.ta.mjs";
+import { type Identifier, _decode_Identifier, _encode_Identifier } from "../ISO-9506-MMS-1/Identifier.ta.mjs";
 
 
 /**
@@ -67,146 +67,170 @@ import { Identifier, _decode_Identifier, _encode_Identifier } from "../ISO-9506-
  */
 export
 class EEAttributes {
+    /**
+     * @summary `eventEnrollmentName`.
+     * @description
+     *
+     * Enrollment `&name`.
+     *
+     * [ISO 9506-1:2003 §21.4.1.2.1.1]
+     *
+     * @public
+     * @readonly
+     */
+    public readonly eventEnrollmentName: ObjectName;
+    /**
+     * @summary `eventConditionName`.
+     * @description
+     *
+     * Referenced Event Condition, or `undefined` if unavailable.
+     *
+     * [ISO 9506-1:2003 §21.4.1.2.1.2]
+     * [ISO 9506-2:2003 §21.4.2.1.1]
+     *
+     * @public
+     * @readonly
+     */
+    public readonly eventConditionName: EEAttributes_eventConditionName;
+    /**
+     * @summary `eventActionName`.
+     * @description
+     *
+     * Referenced Event Action if any; `undefined` if unavailable. Omitted if none.
+     *
+     * [ISO 9506-1:2003 §21.4.1.2.1.3]
+     * [ISO 9506-2:2003 §21.4.2.1.2]
+     *
+     * @public
+     * @readonly
+     */
+    public readonly eventActionName: OPTIONAL<EEAttributes_eventActionName>;
+    /**
+     * @summary `clientApplication`.
+     * @description
+     *
+     * Notification enrollments: enrolled client. Requires `tpy`.
+     *
+     * [ISO 9506-1:2003 §21.4.1.2.1.4]
+     *
+     * @public
+     * @readonly
+     */
+    public readonly clientApplication: OPTIONAL<Nullable<ApplicationReference>>;
+    /**
+     * @summary `mmsDeletable`.
+     * @description
+     *
+     * Whether DeleteEventEnrollment may delete this object. Default false.
+     * Modifier enrollments are not deletable this way.
+     *
+     * [ISO 9506-1:2003 §21.4.1.2.1.5]
+     *
+     * @public
+     * @readonly
+     */
+    public readonly mmsDeletable: OPTIONAL<BOOLEAN>;
+    /**
+     * @summary `enrollmentClass`.
+     * @description
+     *
+     * `modifier` or `notification`.
+     *
+     * [ISO 9506-1:2003 §21.4.1.2.1.6]
+     *
+     * @public
+     * @readonly
+     */
+    public readonly enrollmentClass: EE_Class;
+    /**
+     * @summary `duration`.
+     * @description
+     *
+     * Notification only: `current` (this AA) or `permanent` (until deleted).
+     * Default `current`.
+     *
+     * [ISO 9506-1:2003 §21.4.1.2.1.7]
+     *
+     * @public
+     * @readonly
+     */
+    public readonly duration: OPTIONAL<EE_Duration>;
+    /**
+     * @summary `invokeID`.
+     * @description
+     *
+     * Modifier only: invoke ID of the delayed confirmed service.
+     *
+     * [ISO 9506-1:2003 §21.4.1.2.1.8]
+     *
+     * @public
+     * @readonly
+     */
+    public readonly invokeID: OPTIONAL<Unsigned32>;
+    /**
+     * @summary `remainingAcceptableDelay`.
+     * @description
+     *
+     * Modifier only: remaining wait in seconds, if not forever.
+     *
+     * [ISO 9506-1:2003 §21.4.1.2.1.9]
+     *
+     * @public
+     * @readonly
+     */
+    public readonly remainingAcceptableDelay: OPTIONAL<Unsigned32>;
+    /**
+     * @summary `displayEnhancement`.
+     * @description
+     *
+     * CS Display Enhancement if `cspi`. Not transmitted if NULL.
+     *
+     * [ISO 9506-1:2003 §21.4.1.2.1.10]
+     *
+     * @public
+     * @readonly
+     */
+    public readonly displayEnhancement: EEAttributes_displayEnhancement;
+    /**
+     * @summary `accessControlList`.
+     * @description
+     *
+     * Access Control List name. Iff `aco`. Shall not appear in minor version 1 or
+     * 2.
+     *
+     * [ISO 9506-1:2003 §21.4.1.2.1.11]
+     * [ISO 9506-2:2003 §21.4.2.1.3]
+     *
+     * @public
+     * @readonly
+     */
+    public readonly accessControlList: Identifier;
+
     constructor (
-        /**
-         * @summary `eventEnrollmentName`.
-         * @description
-         *
-         * Enrollment `&name`.
-         *
-         * [ISO 9506-1:2003 §21.4.1.2.1.1]
-         *
-         * @public
-         * @readonly
-         */
-        readonly eventEnrollmentName: ObjectName,
-        /**
-         * @summary `eventConditionName`.
-         * @description
-         *
-         * Referenced Event Condition, or `undefined` if unavailable.
-         *
-         * [ISO 9506-1:2003 §21.4.1.2.1.2]
-         * [ISO 9506-2:2003 §21.4.2.1.1]
-         *
-         * @public
-         * @readonly
-         */
-        readonly eventConditionName: EEAttributes_eventConditionName,
-        /**
-         * @summary `eventActionName`.
-         * @description
-         *
-         * Referenced Event Action if any; `undefined` if unavailable. Omitted if none.
-         *
-         * [ISO 9506-1:2003 §21.4.1.2.1.3]
-         * [ISO 9506-2:2003 §21.4.2.1.2]
-         *
-         * @public
-         * @readonly
-         */
-        readonly eventActionName: OPTIONAL<EEAttributes_eventActionName>,
-        /**
-         * @summary `clientApplication`.
-         * @description
-         *
-         * Notification enrollments: enrolled client. Requires `tpy`.
-         *
-         * [ISO 9506-1:2003 §21.4.1.2.1.4]
-         *
-         * @public
-         * @readonly
-         */
-        readonly clientApplication: OPTIONAL<Nullable<ApplicationReference>>,
-        /**
-         * @summary `mmsDeletable`.
-         * @description
-         *
-         * Whether DeleteEventEnrollment may delete this object. Default false.
-         * Modifier enrollments are not deletable this way.
-         *
-         * [ISO 9506-1:2003 §21.4.1.2.1.5]
-         *
-         * @public
-         * @readonly
-         */
-        readonly mmsDeletable: OPTIONAL<BOOLEAN>,
-        /**
-         * @summary `enrollmentClass`.
-         * @description
-         *
-         * `modifier` or `notification`.
-         *
-         * [ISO 9506-1:2003 §21.4.1.2.1.6]
-         *
-         * @public
-         * @readonly
-         */
-        readonly enrollmentClass: EE_Class,
-        /**
-         * @summary `duration`.
-         * @description
-         *
-         * Notification only: `current` (this AA) or `permanent` (until deleted).
-         * Default `current`.
-         *
-         * [ISO 9506-1:2003 §21.4.1.2.1.7]
-         *
-         * @public
-         * @readonly
-         */
-        readonly duration: OPTIONAL<EE_Duration>,
-        /**
-         * @summary `invokeID`.
-         * @description
-         *
-         * Modifier only: invoke ID of the delayed confirmed service.
-         *
-         * [ISO 9506-1:2003 §21.4.1.2.1.8]
-         *
-         * @public
-         * @readonly
-         */
-        readonly invokeID: OPTIONAL<Unsigned32>,
-        /**
-         * @summary `remainingAcceptableDelay`.
-         * @description
-         *
-         * Modifier only: remaining wait in seconds, if not forever.
-         *
-         * [ISO 9506-1:2003 §21.4.1.2.1.9]
-         *
-         * @public
-         * @readonly
-         */
-        readonly remainingAcceptableDelay: OPTIONAL<Unsigned32>,
-        /**
-         * @summary `displayEnhancement`.
-         * @description
-         *
-         * CS Display Enhancement if `cspi`. Not transmitted if NULL.
-         *
-         * [ISO 9506-1:2003 §21.4.1.2.1.10]
-         *
-         * @public
-         * @readonly
-         */
-        readonly displayEnhancement: EEAttributes_displayEnhancement,
-        /**
-         * @summary `accessControlList`.
-         * @description
-         *
-         * Access Control List name. Iff `aco`. Shall not appear in minor version 1 or
-         * 2.
-         *
-         * [ISO 9506-1:2003 §21.4.1.2.1.11]
-         * [ISO 9506-2:2003 §21.4.2.1.3]
-         *
-         * @public
-         * @readonly
-         */
-        readonly accessControlList: Identifier
-    ) {}
+        eventEnrollmentName: ObjectName,
+        eventConditionName: EEAttributes_eventConditionName,
+        eventActionName: OPTIONAL<EEAttributes_eventActionName>,
+        clientApplication: OPTIONAL<Nullable<ApplicationReference>>,
+        mmsDeletable: OPTIONAL<BOOLEAN>,
+        enrollmentClass: EE_Class,
+        duration: OPTIONAL<EE_Duration>,
+        invokeID: OPTIONAL<Unsigned32>,
+        remainingAcceptableDelay: OPTIONAL<Unsigned32>,
+        displayEnhancement: EEAttributes_displayEnhancement,
+        accessControlList: Identifier
+    ) {
+        this.eventEnrollmentName = eventEnrollmentName;
+        this.eventConditionName = eventConditionName;
+        this.eventActionName = eventActionName;
+        this.clientApplication = clientApplication;
+        this.mmsDeletable = mmsDeletable;
+        this.enrollmentClass = enrollmentClass;
+        this.duration = duration;
+        this.invokeID = invokeID;
+        this.remainingAcceptableDelay = remainingAcceptableDelay;
+        this.displayEnhancement = displayEnhancement;
+        this.accessControlList = accessControlList;
+    }
 
     /**
      * @summary Restructures an object into a EEAttributes
@@ -237,7 +261,7 @@ class EEAttributes {
      * @static
      * @method
      */
-    public static get _default_value_for_duration () { return current; }
+    public static get _default_value_for_duration (): number { return current; }
 }
 
 /**

@@ -1,6 +1,6 @@
 /* eslint-disable */
 import {
-  OPTIONAL,
+  type OPTIONAL,
   ASN1Element as _Element,
   ASN1TagClass as _TagClass,
   ASN1Construction as _Construction,
@@ -12,18 +12,18 @@ import {
 } from '@wildboar/asn1';
 import * as $ from '@wildboar/asn1/functional';
 import {
-  AttributeError_errorStatus,
+  type AttributeError_errorStatus,
   _enum_for_AttributeError_errorStatus,
   _decode_AttributeError_errorStatus,
   _encode_AttributeError_errorStatus,
 } from '../CMIP-1/AttributeError-errorStatus.ta.mjs';
 import {
-  ModifyOperator,
+  type ModifyOperator,
   _decode_ModifyOperator,
   _encode_ModifyOperator,
 } from '../CMIP-1/ModifyOperator.ta.mjs';
 import {
-    AttributeId,
+    type AttributeId,
     _decode_AttributeId,
     _encode_AttributeId,
 } from '../CMIP-1/AttributeId.ta.mjs';
@@ -71,7 +71,7 @@ export class AttributeError {
    * @public
    * @readonly
    */
-  readonly errorStatus: AttributeError_errorStatus;
+  public readonly errorStatus: AttributeError_errorStatus;
   /**
    * @summary `modifyOperator`.
    * @description
@@ -82,7 +82,7 @@ export class AttributeError {
    * @public
    * @readonly
    */
-  readonly modifyOperator: OPTIONAL<ModifyOperator>;
+  public readonly modifyOperator: OPTIONAL<ModifyOperator>;
   /**
    * @summary `attributeId`.
    * @description
@@ -92,7 +92,7 @@ export class AttributeError {
    * @public
    * @readonly
    */
-  readonly attributeId: AttributeId;
+  public readonly attributeId: AttributeId;
   /**
    * @summary `attributeValue`.
    * @description
@@ -102,7 +102,7 @@ export class AttributeError {
    * @public
    * @readonly
    */
-  readonly attributeValue?: OPTIONAL<_Element>;
+  public readonly attributeValue?: OPTIONAL<_Element>;
 
   constructor(
     errorStatus: AttributeError_errorStatus,
@@ -145,7 +145,7 @@ export class AttributeError {
    * @static
    */
 
-  public static _enum_for_errorStatus = _enum_for_AttributeError_errorStatus;
+  public static _enum_for_errorStatus: typeof _enum_for_AttributeError_errorStatus = _enum_for_AttributeError_errorStatus;
 }
 
 

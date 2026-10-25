@@ -1,7 +1,7 @@
 import {
-    OPTIONAL,
-    INTEGER,
-    ASN1Element as _Element,
+    type OPTIONAL,
+    type INTEGER,
+    type ASN1Element as _Element,
     ASN1OverflowError,
     ASN1TagClass as _TagClass,
 } from "@wildboar/asn1";
@@ -26,28 +26,33 @@ import * as $ from "@wildboar/asn1/functional";
  *
  */
 export class TransferredVolumeRollOver_rO_VolumeIfTariffSwitch {
+    /**
+     * @summary `rO_VolumeSinceLastTariffSwitch`.
+     * @description
+     *
+     * Count of parameter-range rollovers. (3GPP TS 29.078 V19.0.0 clause 5.1)
+     *
+     * @public
+     * @readonly
+     */
+    public readonly rO_VolumeSinceLastTariffSwitch?: OPTIONAL<INTEGER>;
+    /**
+     * @summary `rO_VolumeTariffSwitchInterval`.
+     * @description
+     *
+     * Count of parameter-range rollovers. (3GPP TS 29.078 V19.0.0 clause 5.1)
+     *
+     * @public
+     * @readonly
+     */
+    public readonly rO_VolumeTariffSwitchInterval?: OPTIONAL<INTEGER>;
+
     constructor (
-        /**
-         * @summary `rO_VolumeSinceLastTariffSwitch`.
-         * @description
-         *
-         * Count of parameter-range rollovers. (3GPP TS 29.078 V19.0.0 clause 5.1)
-         *
-         * @public
-         * @readonly
-         */
-        readonly rO_VolumeSinceLastTariffSwitch?: OPTIONAL<INTEGER>,
-        /**
-         * @summary `rO_VolumeTariffSwitchInterval`.
-         * @description
-         *
-         * Count of parameter-range rollovers. (3GPP TS 29.078 V19.0.0 clause 5.1)
-         *
-         * @public
-         * @readonly
-         */
-        readonly rO_VolumeTariffSwitchInterval?: OPTIONAL<INTEGER>,
+        rO_VolumeSinceLastTariffSwitch?: OPTIONAL<INTEGER>,
+        rO_VolumeTariffSwitchInterval?: OPTIONAL<INTEGER>,
     ) {
+        this.rO_VolumeSinceLastTariffSwitch = rO_VolumeSinceLastTariffSwitch;
+        this.rO_VolumeTariffSwitchInterval = rO_VolumeTariffSwitchInterval;
         if (rO_VolumeSinceLastTariffSwitch !== undefined && (typeof rO_VolumeSinceLastTariffSwitch === "bigint" ? (rO_VolumeSinceLastTariffSwitch < 0n || rO_VolumeSinceLastTariffSwitch > 255n) : (rO_VolumeSinceLastTariffSwitch < 0 || rO_VolumeSinceLastTariffSwitch > 255))) {
             throw new ASN1OverflowError("TransferredVolumeRollOver_rO_VolumeIfTariffSwitch.rO_VolumeSinceLastTariffSwitch violates INTEGER constraint");
         }

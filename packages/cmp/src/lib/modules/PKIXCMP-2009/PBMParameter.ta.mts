@@ -1,7 +1,7 @@
 /* eslint-disable */
 import {
-  INTEGER,
-  OCTET_STRING,
+  type INTEGER,
+  type OCTET_STRING,
   ASN1Element as _Element,
   ASN1TagClass as _TagClass,
   ASN1Construction as _Construction,
@@ -59,53 +59,63 @@ import {
  *
  */
 export class PBMParameter {
+  /**
+   * @summary `salt`.
+   * @description
+   *
+   * Salt appended to the shared secret before the OWF iterations.
+   * Implementations MAY limit acceptable sizes to reduce DoS risk
+   * ([RFC 4210 §5.1.3.1](https://datatracker.ietf.org/doc/html/rfc4210#section-5.1.3.1)).
+   *
+   * @public
+   * @readonly
+   */
+  public readonly salt: OCTET_STRING;
+  /**
+   * @summary `owf`.
+   * @description
+   *
+   * AlgorithmIdentifier for a one-way function (SHA-1 recommended)
+   * ([RFC 4210 §5.1.3.1](https://datatracker.ietf.org/doc/html/rfc4210#section-5.1.3.1)).
+   *
+   * @public
+   * @readonly
+   */
+  public readonly owf: AlgorithmIdentifier;
+  /**
+   * @summary `iterationCount`.
+   * @description
+   *
+   * Number of times the OWF is applied. Implementations MAY limit
+   * acceptable sizes to reduce DoS risk ([RFC 4210 §5.1.3.1](https://datatracker.ietf.org/doc/html/rfc4210#section-5.1.3.1)).
+   *
+   * @public
+   * @readonly
+   */
+  public readonly iterationCount: INTEGER;
+  /**
+   * @summary `mac`.
+   * @description
+   *
+   * MAC AlgorithmIdentifier (e.g., DES-MAC, Triple-DES-MAC, or HMAC)
+   * ([RFC 4210 §5.1.3.1](https://datatracker.ietf.org/doc/html/rfc4210#section-5.1.3.1)).
+   *
+   * @public
+   * @readonly
+   */
+  public readonly mac: AlgorithmIdentifier;
+
   constructor(
-    /**
-     * @summary `salt`.
-     * @description
-     *
-     * Salt appended to the shared secret before the OWF iterations.
-     * Implementations MAY limit acceptable sizes to reduce DoS risk
-     * ([RFC 4210 §5.1.3.1](https://datatracker.ietf.org/doc/html/rfc4210#section-5.1.3.1)).
-     *
-     * @public
-     * @readonly
-     */
-    readonly salt: OCTET_STRING,
-    /**
-     * @summary `owf`.
-     * @description
-     *
-     * AlgorithmIdentifier for a one-way function (SHA-1 recommended)
-     * ([RFC 4210 §5.1.3.1](https://datatracker.ietf.org/doc/html/rfc4210#section-5.1.3.1)).
-     *
-     * @public
-     * @readonly
-     */
-    readonly owf: AlgorithmIdentifier,
-    /**
-     * @summary `iterationCount`.
-     * @description
-     *
-     * Number of times the OWF is applied. Implementations MAY limit
-     * acceptable sizes to reduce DoS risk ([RFC 4210 §5.1.3.1](https://datatracker.ietf.org/doc/html/rfc4210#section-5.1.3.1)).
-     *
-     * @public
-     * @readonly
-     */
-    readonly iterationCount: INTEGER,
-    /**
-     * @summary `mac`.
-     * @description
-     *
-     * MAC AlgorithmIdentifier (e.g., DES-MAC, Triple-DES-MAC, or HMAC)
-     * ([RFC 4210 §5.1.3.1](https://datatracker.ietf.org/doc/html/rfc4210#section-5.1.3.1)).
-     *
-     * @public
-     * @readonly
-     */
-    readonly mac: AlgorithmIdentifier
-  ) {}
+    salt: OCTET_STRING,
+    owf: AlgorithmIdentifier,
+    iterationCount: INTEGER,
+    mac: AlgorithmIdentifier
+  ) {
+    this.salt = salt;
+    this.owf = owf;
+    this.iterationCount = iterationCount;
+    this.mac = mac;
+  }
 
   /**
    * @summary Restructures an object into a PBMParameter

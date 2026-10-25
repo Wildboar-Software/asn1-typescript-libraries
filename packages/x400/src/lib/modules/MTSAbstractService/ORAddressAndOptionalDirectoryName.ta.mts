@@ -1,6 +1,6 @@
 /* eslint-disable */
 import {
-    ASN1Element as _Element,
+    type ASN1Element as _Element,
     ASN1TagClass as _TagClass,
     ASN1Construction as _Construction,
     ASN1UniversalType as _UniversalType,
@@ -30,22 +30,13 @@ import {
  */
 export type ORAddressAndOptionalDirectoryName = ORName; // DefinedType
 
-let _cached_decoder_for_ORAddressAndOptionalDirectoryName: $.ASN1Decoder<ORAddressAndOptionalDirectoryName> | null = null;
-
 /**
  * @summary Decodes an ASN.1 element into a(n) ORAddressAndOptionalDirectoryName
  * @function
  * @param {_Element} el The element being decoded.
  * @returns {ORAddressAndOptionalDirectoryName} The decoded data structure.
  */
-export function _decode_ORAddressAndOptionalDirectoryName(el: _Element): ORAddressAndOptionalDirectoryName {
-    if (!_cached_decoder_for_ORAddressAndOptionalDirectoryName) {
-        _cached_decoder_for_ORAddressAndOptionalDirectoryName = _decode_ORName;
-    }
-    return _cached_decoder_for_ORAddressAndOptionalDirectoryName(el);
-}
-
-let _cached_encoder_for_ORAddressAndOptionalDirectoryName: $.ASN1Encoder<ORAddressAndOptionalDirectoryName> | null = null;
+export const _decode_ORAddressAndOptionalDirectoryName: $.ASN1Decoder<ORAddressAndOptionalDirectoryName> = _decode_ORName;
 
 /**
  * @summary Encodes a(n) ORAddressAndOptionalDirectoryName into an ASN.1 Element.
@@ -54,18 +45,7 @@ let _cached_encoder_for_ORAddressAndOptionalDirectoryName: $.ASN1Encoder<ORAddre
  * @param elGetter A function that can be used to get new ASN.1 elements.
  * @returns {_Element} The ORAddressAndOptionalDirectoryName, encoded as an ASN.1 Element.
  */
-export function _encode_ORAddressAndOptionalDirectoryName(
-    value: ORAddressAndOptionalDirectoryName,
-    elGetter: $.ASN1Encoder<ORAddressAndOptionalDirectoryName>
-): _Element {
-    if (!_cached_encoder_for_ORAddressAndOptionalDirectoryName) {
-        _cached_encoder_for_ORAddressAndOptionalDirectoryName = _encode_ORName;
-    }
-    return _cached_encoder_for_ORAddressAndOptionalDirectoryName(
-        value,
-        elGetter
-    );
-}
+export const _encode_ORAddressAndOptionalDirectoryName: $.ASN1Encoder<ORAddressAndOptionalDirectoryName> = _encode_ORName;
 
 
 /* eslint-enable */

@@ -1,9 +1,9 @@
 /* eslint-disable */
 import {
     ASN1ConstructionError as _ConstructionError,
-    ASN1Element as _Element,
+    type ASN1Element as _Element,
     ASN1TagClass as _TagClass,
-    INTEGER,
+    type INTEGER,
 } from "@wildboar/asn1";
 import * as $ from "@wildboar/asn1/functional";
 
@@ -26,20 +26,26 @@ import * as $ from "@wildboar/asn1/functional";
  *
  */
 export class ECDSA_Sig_Value {
+    /**
+     * @summary `r`.
+     * @public
+     * @readonly
+     */
+    public readonly r: INTEGER;
+    /**
+     * @summary `s`.
+     * @public
+     * @readonly
+     */
+    public readonly s: INTEGER;
+
     constructor(
-        /**
-         * @summary `r`.
-         * @public
-         * @readonly
-         */
-        readonly r: INTEGER,
-        /**
-         * @summary `s`.
-         * @public
-         * @readonly
-         */
-        readonly s: INTEGER
-    ) {}
+        r: INTEGER,
+        s: INTEGER
+    ) {
+        this.r = r;
+        this.s = s;
+    }
 
     /**
      * @summary Restructures an object into a ECDSA_Sig_Value

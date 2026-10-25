@@ -1,8 +1,8 @@
 /* eslint-disable */
 import {
-    ASN1Element as _Element,
+    type ASN1Element as _Element,
     ASN1TagClass as _TagClass,
-    OPTIONAL,
+    type OPTIONAL,
 } from "@wildboar/asn1";
 import * as $ from "@wildboar/asn1/functional";
 import {
@@ -11,17 +11,17 @@ import {
     _encode_SecurityParameters,
 } from "../DirectoryAbstractService/SecurityParameters.ta.mjs";
 import {
-    AgreementID,
+    type AgreementID,
     _decode_AgreementID,
     _encode_AgreementID,
 } from "../DirectoryShadowAbstractService/AgreementID.ta.mjs";
 import {
-    RefreshInformation,
+    type RefreshInformation,
     _decode_RefreshInformation,
     _encode_RefreshInformation,
 } from "../DirectoryShadowAbstractService/RefreshInformation.ta.mjs";
 import {
-    Time,
+    type Time,
     _decode_Time,
     _encode_Time,
 } from "../DirectoryShadowAbstractService/Time.ta.mjs";
@@ -52,68 +52,82 @@ import {
  *
  */
 export class UpdateShadowArgumentData {
+    /**
+     * @summary `agreementID`.
+     * @description
+     *
+     * Must match the preceding coordinate/request. No prior
+     * coordinate/request → `invalidSequencing`.
+     *
+     * @public
+     * @readonly
+     */
+    public readonly agreementID: AgreementID;
+    /**
+     * @summary `updateTime`.
+     * @description
+     *
+     * Supplier-assigned. Used as `lastUpdate` on the next coordinate
+     * or request so both sides share a view of the copy.
+     *
+     * @public
+     * @readonly
+     */
+    public readonly updateTime: Time;
+    /**
+     * @summary `updateWindow`.
+     * @description
+     *
+     * Next window the supplier expects to send. Allowed only if the
+     * agreement's `SchedulingParameters.othertimes` is TRUE.
+     *
+     * @public
+     * @readonly
+     */
+    public readonly updateWindow: OPTIONAL<UpdateWindow>;
+    /**
+     * @summary `updatedInfo`.
+     * @description
+     *
+     * Total, incremental, `noRefresh`, or an external strategy. Applied
+     * independently of previously transmitted updates.
+     *
+     * @public
+     * @readonly
+     */
+    public readonly updatedInfo: RefreshInformation;
+    /**
+     * @summary `securityParameters`.
+     * @description
+     *
+     * Required if this argument is signed. `target` is `none`.
+     *
+     * @public
+     * @readonly
+     */
+    public readonly securityParameters?: OPTIONAL<SecurityParameters>;
+    /**
+     * @summary Extensions that are not recognized.
+     * @public
+     * @readonly
+     */
+    public readonly _unrecognizedExtensionsList: _Element[];
+
     constructor(
-        /**
-         * @summary `agreementID`.
-         * @description
-         *
-         * Must match the preceding coordinate/request. No prior
-         * coordinate/request → `invalidSequencing`.
-         *
-         * @public
-         * @readonly
-         */
-        readonly agreementID: AgreementID,
-        /**
-         * @summary `updateTime`.
-         * @description
-         *
-         * Supplier-assigned. Used as `lastUpdate` on the next coordinate
-         * or request so both sides share a view of the copy.
-         *
-         * @public
-         * @readonly
-         */
-        readonly updateTime: Time,
-        /**
-         * @summary `updateWindow`.
-         * @description
-         *
-         * Next window the supplier expects to send. Allowed only if the
-         * agreement's `SchedulingParameters.othertimes` is TRUE.
-         *
-         * @public
-         * @readonly
-         */
-        readonly updateWindow: OPTIONAL<UpdateWindow>,
-        /**
-         * @summary `updatedInfo`.
-         * @description
-         *
-         * Total, incremental, `noRefresh`, or an external strategy. Applied
-         * independently of previously transmitted updates.
-         *
-         * @public
-         * @readonly
-         */
-        readonly updatedInfo: RefreshInformation,
-        /**
-         * @summary `securityParameters`.
-         * @description
-         *
-         * Required if this argument is signed. `target` is `none`.
-         *
-         * @public
-         * @readonly
-         */
-        readonly securityParameters?: OPTIONAL<SecurityParameters>,
-        /**
-         * @summary Extensions that are not recognized.
-         * @public
-         * @readonly
-         */
-        readonly _unrecognizedExtensionsList: _Element[] = []
-    ) {}
+        agreementID: AgreementID,
+        updateTime: Time,
+        updateWindow: OPTIONAL<UpdateWindow>,
+        updatedInfo: RefreshInformation,
+        securityParameters?: OPTIONAL<SecurityParameters>,
+        _unrecognizedExtensionsList: _Element[] = []
+    ) {
+        this.agreementID = agreementID;
+        this.updateTime = updateTime;
+        this.updateWindow = updateWindow;
+        this.updatedInfo = updatedInfo;
+        this.securityParameters = securityParameters;
+        this._unrecognizedExtensionsList = _unrecognizedExtensionsList;
+    }
 
     /**
      * @summary Restructures an object into a UpdateShadowArgumentData

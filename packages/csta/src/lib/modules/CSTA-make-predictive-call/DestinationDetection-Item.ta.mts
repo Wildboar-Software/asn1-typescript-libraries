@@ -2,9 +2,9 @@
 
 import * as $ from "@wildboar/asn1/functional";
 import {
-    SEQUENCE,
-    SET,
-    ASN1Element as _Element,
+    type SEQUENCE,
+    type SET,
+    type ASN1Element as _Element,
     ASN1TagClass as _TagClass,
     ASN1ConstructionError as _ConstructionError
 } from "@wildboar/asn1";
@@ -47,30 +47,36 @@ import {
  */
 export
 class DestinationDetection_Item {
+    /**
+     * @summary `destinationCondition`.
+     * @description
+     *
+     * Mandatory. `humanVoice`, `answeringMachine`, or
+     * `facsimileMachine`.
+     *
+     * @public
+     * @readonly
+     */
+    public readonly destinationCondition: DestinationCondition;
+    /**
+     * @summary `detectionAction`.
+     * @description
+     *
+     * Mandatory. `clearCalledConnection` or
+     * `remainConnected` when the condition is detected.
+     *
+     * @public
+     * @readonly
+     */
+    public readonly detectionAction: DetectionAction;
+
     constructor (
-        /**
-         * @summary `destinationCondition`.
-         * @description
-         *
-         * Mandatory. `humanVoice`, `answeringMachine`, or
-         * `facsimileMachine`.
-         *
-         * @public
-         * @readonly
-         */
-        readonly destinationCondition: DestinationCondition,
-        /**
-         * @summary `detectionAction`.
-         * @description
-         *
-         * Mandatory. `clearCalledConnection` or
-         * `remainConnected` when the condition is detected.
-         *
-         * @public
-         * @readonly
-         */
-        readonly detectionAction: DetectionAction
-    ) {}
+        destinationCondition: DestinationCondition,
+        detectionAction: DetectionAction
+    ) {
+        this.destinationCondition = destinationCondition;
+        this.detectionAction = detectionAction;
+    }
 
     /**
      * @summary Restructures an object into a DestinationDetection_Item
@@ -94,13 +100,13 @@ class DestinationDetection_Item {
          * @static
          */
 
-    public static _enum_for_destinationCondition = _enum_for_DestinationCondition;        /**
+    public static _enum_for_destinationCondition: typeof _enum_for_DestinationCondition = _enum_for_DestinationCondition;        /**
          * @summary The enum used as the type of the component `detectionAction`
          * @public
          * @static
          */
 
-    public static _enum_for_detectionAction = _enum_for_DetectionAction;
+    public static _enum_for_detectionAction: typeof _enum_for_DetectionAction = _enum_for_DetectionAction;
 }
 
 /**

@@ -1,7 +1,7 @@
 /* eslint-disable */
 import {
-    OBJECT_IDENTIFIER,
-    ASN1Element as _Element,
+    type OBJECT_IDENTIFIER,
+    type ASN1Element as _Element,
     ASN1TagClass as _TagClass,
     ASN1Construction as _Construction,
     ASN1UniversalType as _UniversalType,
@@ -11,8 +11,8 @@ import {
     ASN1ConstructionError as _ConstructionError,
 } from "@wildboar/asn1";
 import * as $ from "@wildboar/asn1/functional";
-import { ParamOptions, _enum_for_ParamOptions, _decode_ParamOptions, _encode_ParamOptions } from "../AlgorithmInformation-2009/ParamOptions.ta.mjs";
-import { KeyUsage } from "@wildboar/x500/CertificateExtensions";
+import { type ParamOptions, _enum_for_ParamOptions, _decode_ParamOptions, _encode_ParamOptions } from "../AlgorithmInformation-2009/ParamOptions.ta.mjs";
+import { type KeyUsage } from "@wildboar/x500/CertificateExtensions";
 
 
 
@@ -31,8 +31,8 @@ import { KeyUsage } from "@wildboar/x500/CertificateExtensions";
  * ```asn1
  * PUBLIC-KEY ::= CLASS {
  * &id                OBJECT IDENTIFIER UNIQUE,
- * &KeyValue        OPTIONAL,
- * &Params        OPTIONAL,
+ * &KeyValue        type OPTIONAL,
+ * &Params        type OPTIONAL,
  * &paramPresence    ParamOptions DEFAULT absent,
  * &keyUsage        KeyUsage OPTIONAL,
  * &PrivateKey        OPTIONAL

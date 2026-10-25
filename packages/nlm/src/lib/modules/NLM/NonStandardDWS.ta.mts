@@ -1,9 +1,9 @@
 /* eslint-disable */
 import {
-    OPTIONAL,
-    BOOLEAN,
-    INTEGER,
-    ASN1Element as _Element,
+    type OPTIONAL,
+    type BOOLEAN,
+    type INTEGER,
+    type ASN1Element as _Element,
     ASN1TagClass as _TagClass,
     ASN1Construction as _Construction,
     ASN1UniversalType as _UniversalType,
@@ -53,7 +53,7 @@ export class NonStandardDWS {
      * @public
      * @readonly
      */
-    readonly subscription: BOOLEAN;
+    public readonly subscription: BOOLEAN;
     /**
      * @summary `supportedWindowSizes`.
      * @description
@@ -65,7 +65,7 @@ export class NonStandardDWS {
      * @public
      * @readonly
      */
-    readonly supportedWindowSizes?: OPTIONAL<INTEGER[]>;
+    public readonly supportedWindowSizes?: OPTIONAL<INTEGER[]>;
     /**
      * @summary `selectedWindowSizes`.
      * @description
@@ -77,7 +77,7 @@ export class NonStandardDWS {
      * @public
      * @readonly
      */
-    readonly selectedWindowSizes?: OPTIONAL<BidirectionalValues>;
+    public readonly selectedWindowSizes?: OPTIONAL<BidirectionalValues>;
 
     constructor(
         subscription: BOOLEAN,

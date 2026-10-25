@@ -1,6 +1,6 @@
 /* eslint-disable */
 import {
-    ASN1Element as _Element,
+    type ASN1Element as _Element,
     ASN1TagClass as _TagClass,
     ASN1Construction as _Construction,
     ASN1UniversalType as _UniversalType,
@@ -16,7 +16,7 @@ import {
     _encode_DefinedType,
 } from '../DefinitionASN1Module/DefinedType.ta.mjs';
 import {
-    Identifier,
+    type Identifier,
     _decode_Identifier,
     _encode_Identifier,
 } from '../DefinitionASN1Module/Identifier.ta.mjs';
@@ -40,26 +40,32 @@ import {
  *
  */
 export class Context_keyword {
+    /**
+     * @summary `type_reference`.
+     * @description
+     *
+     * ASN.1 type of the management PDU that defines the context.
+     * @public
+     * @readonly
+     */
+    public readonly type_reference: DefinedType;
+    /**
+     * @summary `field`.
+     * @description
+     *
+     * Identifier of the PDU field to which the parameter applies.
+     * @public
+     * @readonly
+     */
+    public readonly field: Identifier;
+
     constructor(
-        /**
-         * @summary `type_reference`.
-         * @description
-         *
-         * ASN.1 type of the management PDU that defines the context.
-         * @public
-         * @readonly
-         */
-        readonly type_reference: DefinedType,
-        /**
-         * @summary `field`.
-         * @description
-         *
-         * Identifier of the PDU field to which the parameter applies.
-         * @public
-         * @readonly
-         */
-        readonly field: Identifier
-    ) {}
+        type_reference: DefinedType,
+        field: Identifier
+    ) {
+        this.type_reference = type_reference;
+        this.field = field;
+    }
 
     /**
      * @summary Restructures an object into a Context_keyword

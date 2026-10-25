@@ -1,7 +1,7 @@
 /* eslint-disable */
 import {
-    OPTIONAL,
-    ASN1Element as _Element,
+    type OPTIONAL,
+    type ASN1Element as _Element,
     ASN1TagClass as _TagClass,
     ASN1Construction as _Construction,
     ASN1UniversalType as _UniversalType,
@@ -12,13 +12,13 @@ import {
 } from '@wildboar/asn1';
 import * as $ from '@wildboar/asn1/functional';
 import {
-    RequestState,
+    type RequestState,
     _enum_for_RequestState,
     _decode_RequestState,
     _encode_RequestState,
 } from '../X790ASN1Module/RequestState.ta.mjs';
 import {
-    EscalationTime,
+    type EscalationTime,
     _decode_EscalationTime,
     _encode_EscalationTime,
 } from '../X790ASN1Module/EscalationTime.ta.mjs';
@@ -28,7 +28,7 @@ import {
     _encode_PersonReach,
 } from '../X790ASN1Module/PersonReach.ta.mjs';
 import {
-    OrgLevel,
+    type OrgLevel,
     _decode_OrgLevel,
     _encode_OrgLevel,
 } from '../X790ASN1Module/OrgLevel.ta.mjs';
@@ -45,44 +45,58 @@ import {
  *
  */
 export class EscalationList_Item {
+    /**
+     * @summary `state`.
+     * @public
+     * @readonly
+     */
+    public readonly state: RequestState;
+    /**
+     * @summary `escTime`.
+     * @public
+     * @readonly
+     */
+    public readonly escTime: EscalationTime;
+    /**
+     * @summary `requestPerson`.
+     * @public
+     * @readonly
+     */
+    public readonly requestPerson: PersonReach;
+    /**
+     * @summary `level`.
+     * @public
+     * @readonly
+     */
+    public readonly level?: OPTIONAL<OrgLevel>;
+    /**
+     * @summary `escPerson`.
+     * @public
+     * @readonly
+     */
+    public readonly escPerson?: OPTIONAL<PersonReach>;
+    /**
+     * @summary Extensions that are not recognized.
+     * @public
+     * @readonly
+     */
+    public readonly _unrecognizedExtensionsList: _Element[];
+
     constructor(
-        /**
-         * @summary `state`.
-         * @public
-         * @readonly
-         */
-        readonly state: RequestState,
-        /**
-         * @summary `escTime`.
-         * @public
-         * @readonly
-         */
-        readonly escTime: EscalationTime,
-        /**
-         * @summary `requestPerson`.
-         * @public
-         * @readonly
-         */
-        readonly requestPerson: PersonReach,
-        /**
-         * @summary `level`.
-         * @public
-         * @readonly
-         */
-        readonly level?: OPTIONAL<OrgLevel>,
-        /**
-         * @summary `escPerson`.
-         * @public
-         * @readonly
-         */
-        readonly escPerson?: OPTIONAL<PersonReach>,
-        /**
-         * @summary Extensions that are not recognized.
-         * @public
-         * @readonly
-         */
-        readonly _unrecognizedExtensionsList: _Element[] = []
-    ) {}
+        state: RequestState,
+        escTime: EscalationTime,
+        requestPerson: PersonReach,
+        level?: OPTIONAL<OrgLevel>,
+        escPerson?: OPTIONAL<PersonReach>,
+        _unrecognizedExtensionsList: _Element[] = []
+    ) {
+        this.state = state;
+        this.escTime = escTime;
+        this.requestPerson = requestPerson;
+        this.level = level;
+        this.escPerson = escPerson;
+        this._unrecognizedExtensionsList = _unrecognizedExtensionsList;
+    }
 
     /**
      * @summary Restructures an object into a EscalationList_Item
@@ -115,7 +129,7 @@ export class EscalationList_Item {
      * @static
      */
 
-    public static _enum_for_state = _enum_for_RequestState;
+    public static _enum_for_state: typeof _enum_for_RequestState = _enum_for_RequestState;
 }
 
 

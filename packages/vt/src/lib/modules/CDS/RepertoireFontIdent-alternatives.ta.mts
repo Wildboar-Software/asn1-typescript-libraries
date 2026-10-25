@@ -1,8 +1,8 @@
 /* eslint-disable */
 import {
-    OPTIONAL,
-    NULL,
-    ASN1Element as _Element,
+    type OPTIONAL,
+    type NULL,
+    type ASN1Element as _Element,
     ASN1TagClass as _TagClass,
     ASN1Construction as _Construction,
     ASN1UniversalType as _UniversalType,
@@ -12,7 +12,7 @@ import {
     ASN1ConstructionError as _ConstructionError,
 } from "@wildboar/asn1";
 import * as $ from "@wildboar/asn1/functional";
-import { AssignmentIdent, _decode_AssignmentIdent, _encode_AssignmentIdent } from "../CDS/AssignmentIdent.ta.mjs";
+import { type AssignmentIdent, _decode_AssignmentIdent, _encode_AssignmentIdent } from "../CDS/AssignmentIdent.ta.mjs";
 
 
 /**
@@ -37,35 +37,43 @@ import { AssignmentIdent, _decode_AssignmentIdent, _encode_AssignmentIdent } fro
  */
 export
 class RepertoireFontIdent_alternatives {
+    /**
+     * @summary `assignment`.
+     * @description
+     * Invite repertoire-assignment for this slot. ISO/IEC
+     * 9040:1997 §18.2.4.
+     * @public
+     * @readonly
+     */
+    public readonly assignment?: OPTIONAL<NULL>;
+    /**
+     * @summary `fontCapability`.
+     * @description
+     * Invite `font-capability` for this repertoire (default 1).
+     * ISO/IEC 9040:1997 §18.3.
+     * @public
+     * @readonly
+     */
+    public readonly fontCapability?: OPTIONAL<NULL>;
+    /**
+     * @summary `fontNames`.
+     * @description
+     * Invite font-assignment names for this repertoire slot.
+     * ISO/IEC 9040:1997 §18.3.
+     * @public
+     * @readonly
+     */
+    public readonly fontNames?: OPTIONAL<AssignmentIdent[]>;
+
     constructor (
-        /**
-         * @summary `assignment`.
-         * @description
-         * Invite repertoire-assignment for this slot. ISO/IEC
-         * 9040:1997 §18.2.4.
-         * @public
-         * @readonly
-         */
-        readonly assignment?: OPTIONAL<NULL>,
-        /**
-         * @summary `fontCapability`.
-         * @description
-         * Invite `font-capability` for this repertoire (default 1).
-         * ISO/IEC 9040:1997 §18.3.
-         * @public
-         * @readonly
-         */
-        readonly fontCapability?: OPTIONAL<NULL>,
-        /**
-         * @summary `fontNames`.
-         * @description
-         * Invite font-assignment names for this repertoire slot.
-         * ISO/IEC 9040:1997 §18.3.
-         * @public
-         * @readonly
-         */
-        readonly fontNames?: OPTIONAL<AssignmentIdent[]>
-    ) {}
+        assignment?: OPTIONAL<NULL>,
+        fontCapability?: OPTIONAL<NULL>,
+        fontNames?: OPTIONAL<AssignmentIdent[]>
+    ) {
+        this.assignment = assignment;
+        this.fontCapability = fontCapability;
+        this.fontNames = fontNames;
+    }
 
     /**
      * @summary Restructures an object into a RepertoireFontIdent_alternatives

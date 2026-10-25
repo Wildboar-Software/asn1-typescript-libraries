@@ -1,6 +1,6 @@
 /* eslint-disable */
 import {
-    ASN1Element as _Element,
+    type ASN1Element as _Element,
     ASN1TagClass as _TagClass,
     ASN1Construction as _Construction,
     ASN1UniversalType as _UniversalType,
@@ -10,8 +10,8 @@ import {
     ASN1ConstructionError as _ConstructionError,
 } from "@wildboar/asn1";
 import * as $ from "@wildboar/asn1/functional";
-import { InformationToSend, _decode_InformationToSend, _encode_InformationToSend } from "../Core-INAP-CS1-DataTypes/InformationToSend.ta.mjs";
-import { Cause, _decode_Cause, _encode_Cause } from "../Core-INAP-CS1-DataTypes/Cause.ta.mjs";
+import { type InformationToSend, _decode_InformationToSend, _encode_InformationToSend } from "../Core-INAP-CS1-DataTypes/InformationToSend.ta.mjs";
+import { type Cause, _decode_Cause, _encode_Cause } from "../Core-INAP-CS1-DataTypes/Cause.ta.mjs";
 
 
 /**
@@ -31,20 +31,26 @@ import { Cause, _decode_Cause, _encode_Cause } from "../Core-INAP-CS1-DataTypes/
  */
 export
 class GapTreatment_both {
+    /**
+     * @summary `informationToSend`.
+     * @public
+     * @readonly
+     */
+    public readonly informationToSend: InformationToSend;
+    /**
+     * @summary `releaseCause`.
+     * @public
+     * @readonly
+     */
+    public readonly releaseCause: Cause;
+
     constructor (
-        /**
-         * @summary `informationToSend`.
-         * @public
-         * @readonly
-         */
-        readonly informationToSend: InformationToSend,
-        /**
-         * @summary `releaseCause`.
-         * @public
-         * @readonly
-         */
-        readonly releaseCause: Cause
-    ) {}
+        informationToSend: InformationToSend,
+        releaseCause: Cause
+    ) {
+        this.informationToSend = informationToSend;
+        this.releaseCause = releaseCause;
+    }
 
     /**
      * @summary Restructures an object into a GapTreatment_both

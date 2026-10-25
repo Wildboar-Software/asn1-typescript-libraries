@@ -1,8 +1,8 @@
 /* eslint-disable */
 import {
-    OPTIONAL,
-    OBJECT_IDENTIFIER,
-    ASN1Element as _Element,
+    type OPTIONAL,
+    type OBJECT_IDENTIFIER,
+    type ASN1Element as _Element,
     ASN1TagClass as _TagClass,
     ASN1Construction as _Construction,
     ASN1UniversalType as _UniversalType,
@@ -13,7 +13,7 @@ import {
 } from '@wildboar/asn1';
 import * as $ from '@wildboar/asn1/functional';
 import {
-    SchemeName,
+    type SchemeName,
     _decode_SchemeName,
     _encode_SchemeName,
 } from './SchemeName.ta.mjs';
@@ -45,52 +45,62 @@ import {
  *
  */
 export class MedicalStaffIdentification {
+    /**
+     * @summary `scheme`.
+     * @description
+     *
+     * `MEDICAL-STAFF-SCHEME.&id` of the identification scheme.
+     *
+     * @public
+     * @readonly
+     */
+    public readonly scheme: OBJECT_IDENTIFIER;
+    /**
+     * @summary `schemeName`.
+     * @description
+     *
+     * Optional `MEDICAL-STAFF-SCHEME.&name`. ISO646String is not
+     * necessarily unique.
+     *
+     * @public
+     * @readonly
+     */
+    public readonly schemeName: OPTIONAL<SchemeName>;
+    /**
+     * @summary `medicalStaffId`.
+     * @description
+     *
+     * `MEDICAL-STAFF-SCHEME.&Identification`. Typically unique
+     * number, name, and category or role.
+     *
+     * @public
+     * @readonly
+     */
+    public readonly medicalStaffId: _Element;
+    /**
+     * @summary `qualifications`.
+     * @description
+     *
+     * Optional `MEDICAL-STAFF-SCHEME.&Qualifications`. Typically
+     * signed by known authorities; type often includes X.509
+     * public-key certificates.
+     *
+     * @public
+     * @readonly
+     */
+    public readonly qualifications?: OPTIONAL<_Element>;
+
     constructor(
-        /**
-         * @summary `scheme`.
-         * @description
-         *
-         * `MEDICAL-STAFF-SCHEME.&id` of the identification scheme.
-         *
-         * @public
-         * @readonly
-         */
-        readonly scheme: OBJECT_IDENTIFIER,
-        /**
-         * @summary `schemeName`.
-         * @description
-         *
-         * Optional `MEDICAL-STAFF-SCHEME.&name`. ISO646String is not
-         * necessarily unique.
-         *
-         * @public
-         * @readonly
-         */
-        readonly schemeName: OPTIONAL<SchemeName>,
-        /**
-         * @summary `medicalStaffId`.
-         * @description
-         *
-         * `MEDICAL-STAFF-SCHEME.&Identification`. Typically unique
-         * number, name, and category or role.
-         *
-         * @public
-         * @readonly
-         */
-        readonly medicalStaffId: _Element,
-        /**
-         * @summary `qualifications`.
-         * @description
-         *
-         * Optional `MEDICAL-STAFF-SCHEME.&Qualifications`. Typically
-         * signed by known authorities; type often includes X.509
-         * public-key certificates.
-         *
-         * @public
-         * @readonly
-         */
-        readonly qualifications?: OPTIONAL<_Element>
-    ) {}
+        scheme: OBJECT_IDENTIFIER,
+        schemeName: OPTIONAL<SchemeName>,
+        medicalStaffId: _Element,
+        qualifications?: OPTIONAL<_Element>
+    ) {
+        this.scheme = scheme;
+        this.schemeName = schemeName;
+        this.medicalStaffId = medicalStaffId;
+        this.qualifications = qualifications;
+    }
 
     /**
      * @summary Restructures an object into a MedicalStaffIdentification

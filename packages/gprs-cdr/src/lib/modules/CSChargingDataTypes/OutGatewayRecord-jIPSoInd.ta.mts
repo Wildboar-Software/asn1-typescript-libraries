@@ -1,6 +1,6 @@
 /* eslint-disable */
 import {
-    INTEGER
+    type INTEGER
 } from "@wildboar/asn1";
 import * as $ from "@wildboar/asn1/functional";
 
@@ -30,7 +30,7 @@ type OutGatewayRecord_jIPSoInd = INTEGER;
  * @type {number}
  */
 export
-const OutGatewayRecord_jIPSoInd_lRN_NP_Database: OutGatewayRecord_jIPSoInd = 1; /* LONG_NAMED_INTEGER_VALUE */
+const OutGatewayRecord_jIPSoInd_lRN_NP_Database: 1 = 1 satisfies OutGatewayRecord_jIPSoInd; /* LONG_NAMED_INTEGER_VALUE */
 
 /**
  * @summary OutGatewayRecord_jIPSoInd_lRN_NP_Database
@@ -38,7 +38,7 @@ const OutGatewayRecord_jIPSoInd_lRN_NP_Database: OutGatewayRecord_jIPSoInd = 1; 
  * @type {number}
  */
 export
-const lRN_NP_Database: OutGatewayRecord_jIPSoInd = OutGatewayRecord_jIPSoInd_lRN_NP_Database; /* SHORT_NAMED_INTEGER_VALUE */
+const lRN_NP_Database: 1 = OutGatewayRecord_jIPSoInd_lRN_NP_Database; /* SHORT_NAMED_INTEGER_VALUE */
 
 /**
  * @summary OutGatewayRecord_jIPSoInd_switchingSystemData
@@ -46,7 +46,7 @@ const lRN_NP_Database: OutGatewayRecord_jIPSoInd = OutGatewayRecord_jIPSoInd_lRN
  * @type {number}
  */
 export
-const OutGatewayRecord_jIPSoInd_switchingSystemData: OutGatewayRecord_jIPSoInd = 2; /* LONG_NAMED_INTEGER_VALUE */
+const OutGatewayRecord_jIPSoInd_switchingSystemData: 2 = 2 satisfies OutGatewayRecord_jIPSoInd; /* LONG_NAMED_INTEGER_VALUE */
 
 /**
  * @summary OutGatewayRecord_jIPSoInd_switchingSystemData
@@ -54,7 +54,7 @@ const OutGatewayRecord_jIPSoInd_switchingSystemData: OutGatewayRecord_jIPSoInd =
  * @type {number}
  */
 export
-const switchingSystemData: OutGatewayRecord_jIPSoInd = OutGatewayRecord_jIPSoInd_switchingSystemData; /* SHORT_NAMED_INTEGER_VALUE */
+const switchingSystemData: 2 = OutGatewayRecord_jIPSoInd_switchingSystemData; /* SHORT_NAMED_INTEGER_VALUE */
 
 /**
  * @summary OutGatewayRecord_jIPSoInd_incomingsignaling
@@ -62,7 +62,7 @@ const switchingSystemData: OutGatewayRecord_jIPSoInd = OutGatewayRecord_jIPSoInd
  * @type {number}
  */
 export
-const OutGatewayRecord_jIPSoInd_incomingsignaling: OutGatewayRecord_jIPSoInd = 3; /* LONG_NAMED_INTEGER_VALUE */
+const OutGatewayRecord_jIPSoInd_incomingsignaling: 3 = 3 satisfies OutGatewayRecord_jIPSoInd; /* LONG_NAMED_INTEGER_VALUE */
 
 /**
  * @summary OutGatewayRecord_jIPSoInd_incomingsignaling
@@ -70,7 +70,7 @@ const OutGatewayRecord_jIPSoInd_incomingsignaling: OutGatewayRecord_jIPSoInd = 3
  * @type {number}
  */
 export
-const incomingsignaling: OutGatewayRecord_jIPSoInd = OutGatewayRecord_jIPSoInd_incomingsignaling; /* SHORT_NAMED_INTEGER_VALUE */
+const incomingsignaling: 3 = OutGatewayRecord_jIPSoInd_incomingsignaling; /* SHORT_NAMED_INTEGER_VALUE */
 
 /**
  * @summary OutGatewayRecord_jIPSoInd_unknown
@@ -78,7 +78,7 @@ const incomingsignaling: OutGatewayRecord_jIPSoInd = OutGatewayRecord_jIPSoInd_i
  * @type {number}
  */
 export
-const OutGatewayRecord_jIPSoInd_unknown: OutGatewayRecord_jIPSoInd = 9; /* LONG_NAMED_INTEGER_VALUE */
+const OutGatewayRecord_jIPSoInd_unknown: 9 = 9 satisfies OutGatewayRecord_jIPSoInd; /* LONG_NAMED_INTEGER_VALUE */
 
 /**
  * @summary OutGatewayRecord_jIPSoInd_unknown
@@ -86,7 +86,7 @@ const OutGatewayRecord_jIPSoInd_unknown: OutGatewayRecord_jIPSoInd = 9; /* LONG_
  * @type {number}
  */
 export
-const unknown: OutGatewayRecord_jIPSoInd = OutGatewayRecord_jIPSoInd_unknown; /* SHORT_NAMED_INTEGER_VALUE */
+const unknown: 9 = OutGatewayRecord_jIPSoInd_unknown; /* SHORT_NAMED_INTEGER_VALUE */
 
 export
 const _decode_OutGatewayRecord_jIPSoInd: $.ASN1Decoder<OutGatewayRecord_jIPSoInd> = $._decodeInteger;

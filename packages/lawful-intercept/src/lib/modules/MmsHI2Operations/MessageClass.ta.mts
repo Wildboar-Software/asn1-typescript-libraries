@@ -1,11 +1,11 @@
 /* eslint-disable */
 import {
-    OCTET_STRING,
-    ASN1Element as _Element,
+    type OCTET_STRING,
+    type ASN1Element as _Element,
     ASN1TagClass as _TagClass
 } from "@wildboar/asn1";
 import * as $ from "@wildboar/asn1/functional";
-import { ClassIdentifier, _decode_ClassIdentifier, _encode_ClassIdentifier } from "../MmsHI2Operations/ClassIdentifier.ta.mjs";
+import { type ClassIdentifier, _decode_ClassIdentifier, _encode_ClassIdentifier } from "../MmsHI2Operations/ClassIdentifier.ta.mjs";
 // export { ClassIdentifier, _enum_for_ClassIdentifier, ClassIdentifier_personal /* IMPORTED_LONG_ENUMERATION_ITEM */, personal /* IMPORTED_SHORT_ENUMERATION_ITEM */, ClassIdentifier_advertisement /* IMPORTED_LONG_ENUMERATION_ITEM */, advertisement /* IMPORTED_SHORT_ENUMERATION_ITEM */, ClassIdentifier_informational /* IMPORTED_LONG_ENUMERATION_ITEM */, informational /* IMPORTED_SHORT_ENUMERATION_ITEM */, ClassIdentifier_auto /* IMPORTED_LONG_ENUMERATION_ITEM */, auto /* IMPORTED_SHORT_ENUMERATION_ITEM */, _decode_ClassIdentifier, _encode_ClassIdentifier } from "../MmsHI2Operations/ClassIdentifier.ta.mjs";
 
 

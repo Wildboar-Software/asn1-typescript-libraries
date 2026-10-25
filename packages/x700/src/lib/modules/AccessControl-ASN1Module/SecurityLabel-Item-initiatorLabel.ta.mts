@@ -1,8 +1,8 @@
 /* eslint-disable */
 import {
-    OPTIONAL,
-    BIT_STRING,
-    ASN1Element as _Element,
+    type OPTIONAL,
+    type BIT_STRING,
+    type ASN1Element as _Element,
     ASN1TagClass as _TagClass,
     ASN1Construction as _Construction,
     ASN1UniversalType as _UniversalType,
@@ -13,7 +13,7 @@ import {
 } from '@wildboar/asn1';
 import * as $ from '@wildboar/asn1/functional';
 import {
-    SecurityLabel_Item_initiatorLabel_clearance,
+    type SecurityLabel_Item_initiatorLabel_clearance,
     _decode_SecurityLabel_Item_initiatorLabel_clearance,
     _encode_SecurityLabel_Item_initiatorLabel_clearance,
 } from '../AccessControl-ASN1Module/SecurityLabel-Item-initiatorLabel-clearance.ta.mjs';
@@ -36,29 +36,35 @@ import {
  *
  */
 export class SecurityLabel_Item_initiatorLabel {
+    /**
+     * @summary `clearance`.
+     * @description
+     *
+     * Security clearance: `localForm` (integer) or
+     * `globalForm` (OID). Meaning of values is not specified
+     * by X.741. X.741 A.6.
+     * @public
+     * @readonly
+     */
+    public readonly clearance: SecurityLabel_Item_initiatorLabel_clearance;
+    /**
+     * @summary `category`.
+     * @description
+     *
+     * Optional category bits of the label. Bit assignment is
+     * not specified by X.741. X.741 A.6.
+     * @public
+     * @readonly
+     */
+    public readonly category?: OPTIONAL<BIT_STRING>;
+
     constructor(
-        /**
-         * @summary `clearance`.
-         * @description
-         *
-         * Security clearance: `localForm` (integer) or
-         * `globalForm` (OID). Meaning of values is not specified
-         * by X.741. X.741 A.6.
-         * @public
-         * @readonly
-         */
-        readonly clearance: SecurityLabel_Item_initiatorLabel_clearance,
-        /**
-         * @summary `category`.
-         * @description
-         *
-         * Optional category bits of the label. Bit assignment is
-         * not specified by X.741. X.741 A.6.
-         * @public
-         * @readonly
-         */
-        readonly category?: OPTIONAL<BIT_STRING>
-    ) {}
+        clearance: SecurityLabel_Item_initiatorLabel_clearance,
+        category?: OPTIONAL<BIT_STRING>
+    ) {
+        this.clearance = clearance;
+        this.category = category;
+    }
 
     /**
      * @summary Restructures an object into a SecurityLabel_Item_initiatorLabel

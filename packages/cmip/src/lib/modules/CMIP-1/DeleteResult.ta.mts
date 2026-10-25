@@ -1,7 +1,7 @@
 /* eslint-disable */
 import {
-  OPTIONAL,
-  GeneralizedTime,
+  type OPTIONAL,
+  type GeneralizedTime,
   ASN1Element as _Element,
   ASN1TagClass as _TagClass,
   ASN1Construction as _Construction,
@@ -13,12 +13,12 @@ import {
 } from '@wildboar/asn1';
 import * as $ from '@wildboar/asn1/functional';
 import {
-  ObjectClass,
+  type ObjectClass,
   _decode_ObjectClass,
   _encode_ObjectClass,
 } from '../CMIP-1/ObjectClass.ta.mjs';
 import {
-  ObjectInstance,
+  type ObjectInstance,
   _decode_ObjectInstance,
   _encode_ObjectInstance,
 } from '../CMIP-1/ObjectInstance.ta.mjs';
@@ -56,7 +56,7 @@ export class DeleteResult {
    * @public
    * @readonly
    */
-  readonly managedObjectClass?: OPTIONAL<ObjectClass>;
+  public readonly managedObjectClass?: OPTIONAL<ObjectClass>;
   /**
    * @summary `managedObjectInstance`.
    * @description
@@ -66,7 +66,7 @@ export class DeleteResult {
    * @public
    * @readonly
    */
-  readonly managedObjectInstance?: OPTIONAL<ObjectInstance>;
+  public readonly managedObjectInstance?: OPTIONAL<ObjectInstance>;
   /**
    * @summary `currentTime`.
    * @description
@@ -76,13 +76,13 @@ export class DeleteResult {
    * @public
    * @readonly
    */
-  readonly currentTime?: OPTIONAL<GeneralizedTime>;
+  public readonly currentTime?: OPTIONAL<GeneralizedTime>;
   /**
    * @summary Extensions that are not recognized.
    * @public
    * @readonly
    */
-  readonly _unrecognizedExtensionsList: _Element[];
+  public readonly _unrecognizedExtensionsList: _Element[];
 
   constructor(
     managedObjectClass?: OPTIONAL<ObjectClass>,

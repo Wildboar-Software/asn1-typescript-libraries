@@ -2,10 +2,10 @@
 
 import * as $ from "@wildboar/asn1/functional";
 import {
-    OPTIONAL,
-    SEQUENCE,
-    SET,
-    ASN1Element as _Element,
+    type OPTIONAL,
+    type SEQUENCE,
+    type SET,
+    type ASN1Element as _Element,
     ASN1TagClass as _TagClass
 } from "@wildboar/asn1";
 import { DeviceID, _decode_DeviceID, _encode_DeviceID } from "../CSTA-device-identifiers/DeviceID.ta.mjs";
@@ -17,7 +17,7 @@ import {
     _encode_EventCause
 } from "../CSTA-event-causes/EventCause.ta.mjs";
 
-import { ConnectionID, _decode_ConnectionID, _encode_ConnectionID } from "../CSTA-call-connection-identifiers/ConnectionID.ta.mjs";
+import { type ConnectionID, _decode_ConnectionID, _encode_ConnectionID } from "../CSTA-call-connection-identifiers/ConnectionID.ta.mjs";
 
 
 
@@ -39,7 +39,7 @@ import { ConnectionID, _decode_ConnectionID, _encode_ConnectionID } from "../CST
  * ```asn1
  * DeviceHistory ::= SEQUENCE
  * {    oldDeviceID            DeviceID,
- *     eventCause            [1] IMPLICIT    EventCause        OPTIONAL,
+ *     eventCause            [1] IMPLICIT    EventCause        type OPTIONAL,
  *     oldConnectionID            [2] IMPLICIT    ConnectionID        OPTIONAL }
  * ```
  * 
@@ -47,36 +47,44 @@ import { ConnectionID, _decode_ConnectionID, _encode_ConnectionID } from "../CST
  */
 export
 class DeviceHistory {
+    /**
+     * @summary `oldDeviceID`.
+     * @description
+     * Device that left the call. Should match the subject device in the
+     * Diverted, Transferred, or Connection Cleared event. May be Not Known,
+     * Restricted, Not Required, or Not Specified.
+     * @public
+     * @readonly
+     */
+    public readonly oldDeviceID: DeviceID;
+    /**
+     * @summary `eventCause`.
+     * @description
+     * Why the device left or was redirected. Should match the cause in that
+     * leaving event.
+     * @public
+     * @readonly
+     */
+    public readonly eventCause?: OPTIONAL<EventCause>;
+    /**
+     * @summary `oldConnectionID`.
+     * @description
+     * Last ConnectionID for the device that left. Should match the subject
+     * connection in that leaving event.
+     * @public
+     * @readonly
+     */
+    public readonly oldConnectionID?: OPTIONAL<ConnectionID>;
+
     constructor (
-        /**
-         * @summary `oldDeviceID`.
-         * @description
-         * Device that left the call. Should match the subject device in the
-         * Diverted, Transferred, or Connection Cleared event. May be Not Known,
-         * Restricted, Not Required, or Not Specified.
-         * @public
-         * @readonly
-         */
-        readonly oldDeviceID: DeviceID,
-        /**
-         * @summary `eventCause`.
-         * @description
-         * Why the device left or was redirected. Should match the cause in that
-         * leaving event.
-         * @public
-         * @readonly
-         */
-        readonly eventCause?: OPTIONAL<EventCause>,
-        /**
-         * @summary `oldConnectionID`.
-         * @description
-         * Last ConnectionID for the device that left. Should match the subject
-         * connection in that leaving event.
-         * @public
-         * @readonly
-         */
-        readonly oldConnectionID?: OPTIONAL<ConnectionID>
-    ) {}
+        oldDeviceID: DeviceID,
+        eventCause?: OPTIONAL<EventCause>,
+        oldConnectionID?: OPTIONAL<ConnectionID>
+    ) {
+        this.oldDeviceID = oldDeviceID;
+        this.eventCause = eventCause;
+        this.oldConnectionID = oldConnectionID;
+    }
 
     /**
      * @summary Restructures an object into a DeviceHistory
@@ -100,7 +108,7 @@ class DeviceHistory {
          * @static
          */
 
-    public static _enum_for_eventCause = _enum_for_EventCause;
+    public static _enum_for_eventCause: typeof _enum_for_EventCause = _enum_for_EventCause;
 }
 
 /**

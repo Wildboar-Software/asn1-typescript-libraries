@@ -2,13 +2,13 @@
 
 import * as $ from "@wildboar/asn1/functional";
 import {
-    OPTIONAL,
-    SEQUENCE,
-    SET,
-    ASN1Element as _Element,
+    type OPTIONAL,
+    type SEQUENCE,
+    type SET,
+    type ASN1Element as _Element,
     ASN1TagClass as _TagClass
 } from "@wildboar/asn1";
-import { SpeakerMuteList, _decode_SpeakerMuteList, _encode_SpeakerMuteList } from "../CSTA-get-speaker-mute/SpeakerMuteList.ta.mjs";
+import { type SpeakerMuteList, _decode_SpeakerMuteList, _encode_SpeakerMuteList } from "../CSTA-get-speaker-mute/SpeakerMuteList.ta.mjs";
 
 import { CSTACommonArguments, _decode_CSTACommonArguments, _encode_CSTACommonArguments } from "../CSTA-extension-types/CSTACommonArguments.ta.mjs";
 
@@ -35,27 +35,33 @@ import { CSTACommonArguments, _decode_CSTACommonArguments, _encode_CSTACommonArg
  */
 export
 class GetSpeakerMuteResult {
+    /**
+     * @summary `speakerMuteList`.
+     * @description
+     *
+     * One entry per queried apparatus.
+     * @public
+     * @readonly
+     */
+    public readonly speakerMuteList: SpeakerMuteList;
+    /**
+     * @summary `extensions`.
+     * @description
+     *
+     * Optional security (timestamp, sequence, securityInfo) and
+     * privateData.
+     * @public
+     * @readonly
+     */
+    public readonly extensions?: OPTIONAL<CSTACommonArguments>;
+
     constructor (
-        /**
-         * @summary `speakerMuteList`.
-         * @description
-         *
-         * One entry per queried apparatus.
-         * @public
-         * @readonly
-         */
-        readonly speakerMuteList: SpeakerMuteList,
-        /**
-         * @summary `extensions`.
-         * @description
-         *
-         * Optional security (timestamp, sequence, securityInfo) and
-         * privateData.
-         * @public
-         * @readonly
-         */
-        readonly extensions?: OPTIONAL<CSTACommonArguments>
-    ) {}
+        speakerMuteList: SpeakerMuteList,
+        extensions?: OPTIONAL<CSTACommonArguments>
+    ) {
+        this.speakerMuteList = speakerMuteList;
+        this.extensions = extensions;
+    }
 
     /**
      * @summary Restructures an object into a GetSpeakerMuteResult

@@ -1,8 +1,8 @@
 /* eslint-disable */
 import {
-    ASN1Element as _Element,
+    type ASN1Element as _Element,
     ASN1OverflowError,
-    INTEGER
+    type INTEGER
 } from "@wildboar/asn1";
 import * as $ from "@wildboar/asn1/functional";
 
@@ -48,7 +48,7 @@ export const _decode_SM_TC = (el: _Element): SM_TC => {
  * @param elGetter A function that can be used to get new ASN.1 elements.
  * @returns {_Element} The SM_TC, encoded as an ASN.1 Element.
  */
-export const _encode_SM_TC = $._encodeInteger;
+export const _encode_SM_TC: $.ASN1Encoder<INTEGER> = $._encodeInteger;
 
 
 /* eslint-enable */

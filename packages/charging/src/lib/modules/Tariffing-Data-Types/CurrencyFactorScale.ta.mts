@@ -1,13 +1,14 @@
 /* eslint-disable */
 import {
-    OPTIONAL,
-    ASN1Element as _Element,
+    type INTEGER,
+    type OPTIONAL,
+    type ASN1Element as _Element,
     ASN1TagClass as _TagClass
 } from "@wildboar/asn1";
 import * as $ from "@wildboar/asn1/functional";
-import { CurrencyFactor, _decode_CurrencyFactor, _encode_CurrencyFactor } from "../Tariffing-Data-Types/CurrencyFactor.ta.mjs";
+import { type CurrencyFactor, _decode_CurrencyFactor, _encode_CurrencyFactor } from "../Tariffing-Data-Types/CurrencyFactor.ta.mjs";
 import { noCharge } from "../Tariffing-Data-Types/noCharge.va.mjs";
-import { CurrencyScale, _decode_CurrencyScale, _encode_CurrencyScale } from "../Tariffing-Data-Types/CurrencyScale.ta.mjs";
+import { type CurrencyScale, _decode_CurrencyScale, _encode_CurrencyScale } from "../Tariffing-Data-Types/CurrencyScale.ta.mjs";
 import { noScale } from "../Tariffing-Data-Types/noScale.va.mjs";
 
 
@@ -80,14 +81,14 @@ class CurrencyFactorScale {
      * @static
      * @method
      */
-    public static get _default_value_for_currencyFactor () { return noCharge; }
+    public static get _default_value_for_currencyFactor (): INTEGER { return noCharge; }
     /**
      * @summary Getter that returns the default value for `currencyScale`.
      * @public
      * @static
      * @method
      */
-    public static get _default_value_for_currencyScale () { return noScale; }
+    public static get _default_value_for_currencyScale (): INTEGER { return noScale; }
 }
 
 /**

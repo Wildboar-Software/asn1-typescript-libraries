@@ -1,4 +1,5 @@
 /* eslint-disable */
+import { ASN1Element as _Element, ASN1ConstructionError as _ConstructionError } from "@wildboar/asn1";
 import * as $ from "@wildboar/asn1/functional";
 
 
@@ -65,7 +66,7 @@ type taskRefused_ParameterType = _enum_for_taskRefused_ParameterType;
  * @enum {number}
  */
 export
-const taskRefused_ParameterType = _enum_for_taskRefused_ParameterType;
+const taskRefused_ParameterType: typeof _enum_for_taskRefused_ParameterType = _enum_for_taskRefused_ParameterType;
 
 /**
  * @summary taskRefused_ParameterType_generic
@@ -73,7 +74,7 @@ const taskRefused_ParameterType = _enum_for_taskRefused_ParameterType;
  * @type {number}
  */
 export
-const taskRefused_ParameterType_generic: taskRefused_ParameterType = taskRefused_ParameterType.generic; /* LONG_NAMED_ENUMERATED_VALUE */
+const taskRefused_ParameterType_generic: _enum_for_taskRefused_ParameterType.generic = taskRefused_ParameterType.generic; /* LONG_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary generic
@@ -81,7 +82,7 @@ const taskRefused_ParameterType_generic: taskRefused_ParameterType = taskRefused
  * @type {number}
  */
 export
-const generic: taskRefused_ParameterType = taskRefused_ParameterType.generic; /* SHORT_NAMED_ENUMERATED_VALUE */
+const generic: _enum_for_taskRefused_ParameterType.generic = taskRefused_ParameterType.generic; /* SHORT_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary taskRefused_ParameterType_unobtainable
@@ -89,7 +90,7 @@ const generic: taskRefused_ParameterType = taskRefused_ParameterType.generic; /*
  * @type {number}
  */
 export
-const taskRefused_ParameterType_unobtainable: taskRefused_ParameterType = taskRefused_ParameterType.unobtainable; /* LONG_NAMED_ENUMERATED_VALUE */
+const taskRefused_ParameterType_unobtainable: _enum_for_taskRefused_ParameterType.unobtainable = taskRefused_ParameterType.unobtainable; /* LONG_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary unobtainable
@@ -97,7 +98,7 @@ const taskRefused_ParameterType_unobtainable: taskRefused_ParameterType = taskRe
  * @type {number}
  */
 export
-const unobtainable: taskRefused_ParameterType = taskRefused_ParameterType.unobtainable; /* SHORT_NAMED_ENUMERATED_VALUE */
+const unobtainable: _enum_for_taskRefused_ParameterType.unobtainable = taskRefused_ParameterType.unobtainable; /* SHORT_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary taskRefused_ParameterType_congestion
@@ -105,7 +106,7 @@ const unobtainable: taskRefused_ParameterType = taskRefused_ParameterType.unobta
  * @type {number}
  */
 export
-const taskRefused_ParameterType_congestion: taskRefused_ParameterType = taskRefused_ParameterType.congestion; /* LONG_NAMED_ENUMERATED_VALUE */
+const taskRefused_ParameterType_congestion: _enum_for_taskRefused_ParameterType.congestion = taskRefused_ParameterType.congestion; /* LONG_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary congestion
@@ -113,12 +114,24 @@ const taskRefused_ParameterType_congestion: taskRefused_ParameterType = taskRefu
  * @type {number}
  */
 export
-const congestion: taskRefused_ParameterType = taskRefused_ParameterType.congestion; /* SHORT_NAMED_ENUMERATED_VALUE */
+const congestion: _enum_for_taskRefused_ParameterType.congestion = taskRefused_ParameterType.congestion; /* SHORT_NAMED_ENUMERATED_VALUE */
 
 export
-const _decode_taskRefused_ParameterType: $.ASN1Decoder<taskRefused_ParameterType> = $._decodeEnumerated;
+function _decode_taskRefused_ParameterType(el: _Element): taskRefused_ParameterType {
+    const enumerated = $._decodeEnumerated(el);
+    switch (enumerated) {
+        case taskRefused_ParameterType.generic: return taskRefused_ParameterType.generic;
+        case taskRefused_ParameterType.unobtainable: return taskRefused_ParameterType.unobtainable;
+        case taskRefused_ParameterType.congestion: return taskRefused_ParameterType.congestion;
+        default:
+            throw new _ConstructionError(
+                "Invalid ENUMERATED value " + enumerated + " for taskRefused_ParameterType.",
+                el,
+            );
+    }
+}
 
 export
-const _encode_taskRefused_ParameterType: $.ASN1Encoder<taskRefused_ParameterType> = $._encodeEnumerated;
+const _encode_taskRefused_ParameterType: $.ASN1Encoder<taskRefused_ParameterType> = $._encodeEnumerated as $.ASN1Encoder<taskRefused_ParameterType>;
 
 /* eslint-enable */

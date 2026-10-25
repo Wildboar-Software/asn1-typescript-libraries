@@ -11,13 +11,13 @@ import {
 } from '@wildboar/asn1';
 import * as $ from '@wildboar/asn1/functional';
 import {
-  BioAPI_BIR_DATA_TYPE_processedLevel,
+  type BioAPI_BIR_DATA_TYPE_processedLevel,
   _enum_for_BioAPI_BIR_DATA_TYPE_processedLevel,
   _decode_BioAPI_BIR_DATA_TYPE_processedLevel,
   _encode_BioAPI_BIR_DATA_TYPE_processedLevel,
 } from '../BIP/BioAPI-BIR-DATA-TYPE-processedLevel.ta.mjs';
 import {
-  BioAPI_BIR_DATA_TYPE_flags,
+  type BioAPI_BIR_DATA_TYPE_flags,
   _decode_BioAPI_BIR_DATA_TYPE_flags,
   _encode_BioAPI_BIR_DATA_TYPE_flags,
 } from '../BIP/BioAPI-BIR-DATA-TYPE-flags.ta.mjs';
@@ -57,7 +57,7 @@ export class BioAPI_BIR_DATA_TYPE {
    * @public
    * @readonly
    */
-  readonly processedLevel: BioAPI_BIR_DATA_TYPE_processedLevel;
+  public readonly processedLevel: BioAPI_BIR_DATA_TYPE_processedLevel;
   /**
    * @summary `flags`.
    * @description
@@ -69,7 +69,7 @@ export class BioAPI_BIR_DATA_TYPE {
    * @public
    * @readonly
    */
-  readonly flags: BioAPI_BIR_DATA_TYPE_flags;
+  public readonly flags: BioAPI_BIR_DATA_TYPE_flags;
 
   constructor(
     processedLevel: BioAPI_BIR_DATA_TYPE_processedLevel,
@@ -103,7 +103,7 @@ export class BioAPI_BIR_DATA_TYPE {
    * @static
    */
 
-  public static _enum_for_processedLevel = _enum_for_BioAPI_BIR_DATA_TYPE_processedLevel;
+  public static _enum_for_processedLevel: typeof _enum_for_BioAPI_BIR_DATA_TYPE_processedLevel = _enum_for_BioAPI_BIR_DATA_TYPE_processedLevel;
 }
 
 

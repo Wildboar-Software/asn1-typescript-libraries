@@ -1,4 +1,5 @@
 /* eslint-disable */
+import { ASN1Element as _Element, ASN1ConstructionError as _ConstructionError } from "@wildboar/asn1";
 import * as $ from "@wildboar/asn1/functional";
 
 
@@ -50,7 +51,7 @@ type Message = _enum_for_Message;
  * @enum {number}
  */
 export
-const Message = _enum_for_Message;
+const Message: typeof _enum_for_Message = _enum_for_Message;
 
 /**
  * @summary Message_rELease
@@ -58,7 +59,7 @@ const Message = _enum_for_Message;
  * @type {number}
  */
 export
-const Message_rELease: Message = Message.rELease; /* LONG_NAMED_ENUMERATED_VALUE */
+const Message_rELease: _enum_for_Message.rELease = Message.rELease; /* LONG_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary rELease
@@ -66,7 +67,7 @@ const Message_rELease: Message = Message.rELease; /* LONG_NAMED_ENUMERATED_VALUE
  * @type {number}
  */
 export
-const rELease: Message = Message.rELease; /* SHORT_NAMED_ENUMERATED_VALUE */
+const rELease: _enum_for_Message.rELease = Message.rELease; /* SHORT_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary Message_rELeaseCOMPlete
@@ -74,7 +75,7 @@ const rELease: Message = Message.rELease; /* SHORT_NAMED_ENUMERATED_VALUE */
  * @type {number}
  */
 export
-const Message_rELeaseCOMPlete: Message = Message.rELeaseCOMPlete; /* LONG_NAMED_ENUMERATED_VALUE */
+const Message_rELeaseCOMPlete: _enum_for_Message.rELeaseCOMPlete = Message.rELeaseCOMPlete; /* LONG_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary rELeaseCOMPlete
@@ -82,7 +83,7 @@ const Message_rELeaseCOMPlete: Message = Message.rELeaseCOMPlete; /* LONG_NAMED_
  * @type {number}
  */
 export
-const rELeaseCOMPlete: Message = Message.rELeaseCOMPlete; /* SHORT_NAMED_ENUMERATED_VALUE */
+const rELeaseCOMPlete: _enum_for_Message.rELeaseCOMPlete = Message.rELeaseCOMPlete; /* SHORT_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary Message_fACility
@@ -90,7 +91,7 @@ const rELeaseCOMPlete: Message = Message.rELeaseCOMPlete; /* SHORT_NAMED_ENUMERA
  * @type {number}
  */
 export
-const Message_fACility: Message = Message.fACility; /* LONG_NAMED_ENUMERATED_VALUE */
+const Message_fACility: _enum_for_Message.fACility = Message.fACility; /* LONG_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary fACility
@@ -98,12 +99,24 @@ const Message_fACility: Message = Message.fACility; /* LONG_NAMED_ENUMERATED_VAL
  * @type {number}
  */
 export
-const fACility: Message = Message.fACility; /* SHORT_NAMED_ENUMERATED_VALUE */
+const fACility: _enum_for_Message.fACility = Message.fACility; /* SHORT_NAMED_ENUMERATED_VALUE */
 
 export
-const _decode_Message: $.ASN1Decoder<Message> = $._decodeEnumerated;
+function _decode_Message(el: _Element): Message {
+    const enumerated = $._decodeEnumerated(el);
+    switch (enumerated) {
+        case Message.rELease: return Message.rELease;
+        case Message.rELeaseCOMPlete: return Message.rELeaseCOMPlete;
+        case Message.fACility: return Message.fACility;
+        default:
+            throw new _ConstructionError(
+                "Invalid ENUMERATED value " + enumerated + " for Message.",
+                el,
+            );
+    }
+}
 
 export
-const _encode_Message: $.ASN1Encoder<Message> = $._encodeEnumerated;
+const _encode_Message: $.ASN1Encoder<Message> = $._encodeEnumerated as $.ASN1Encoder<Message>;
 
 /* eslint-enable */

@@ -1,6 +1,6 @@
 /* eslint-disable */
 import {
-    ASN1Element as _Element,
+    type ASN1Element as _Element,
     ASN1TagClass as _TagClass,
     ASN1Construction as _Construction,
     ASN1UniversalType as _UniversalType,
@@ -11,12 +11,12 @@ import {
 } from '@wildboar/asn1';
 import * as $ from '@wildboar/asn1/functional';
 import {
-    RefusedOperation_refused_argument,
+    type RefusedOperation_refused_argument,
     _decode_RefusedOperation_refused_argument,
     _encode_RefusedOperation_refused_argument,
 } from '../MTSAbstractService/RefusedOperation-refused-argument.ta.mjs';
 import {
-    RefusalReason,
+    type RefusalReason,
     _decode_RefusalReason,
     _encode_RefusalReason,
 } from '../MTSAbstractService/RefusalReason.ta.mjs';
@@ -39,20 +39,26 @@ import {
  *
  */
 export class RefusedOperation {
+    /**
+     * @summary `refused_argument`.
+     * @public
+     * @readonly
+     */
+    public readonly refused_argument: RefusedOperation_refused_argument;
+    /**
+     * @summary `refusal_reason`.
+     * @public
+     * @readonly
+     */
+    public readonly refusal_reason: RefusalReason;
+
     constructor(
-        /**
-         * @summary `refused_argument`.
-         * @public
-         * @readonly
-         */
-        readonly refused_argument: RefusedOperation_refused_argument,
-        /**
-         * @summary `refusal_reason`.
-         * @public
-         * @readonly
-         */
-        readonly refusal_reason: RefusalReason
-    ) {}
+        refused_argument: RefusedOperation_refused_argument,
+        refusal_reason: RefusalReason
+    ) {
+        this.refused_argument = refused_argument;
+        this.refusal_reason = refusal_reason;
+    }
 
     /**
      * @summary Restructures an object into a RefusedOperation

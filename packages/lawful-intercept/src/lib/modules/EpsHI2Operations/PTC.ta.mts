@@ -1,59 +1,59 @@
 /* eslint-disable */
 import {
-    BOOLEAN,
-    INTEGER,
-    OPTIONAL,
-    UTF8String,
-    ASN1Element as _Element,
+    type BOOLEAN,
+    type INTEGER,
+    type OPTIONAL,
+    type UTF8String,
+    type ASN1Element as _Element,
     ASN1TagClass as _TagClass,
     ASN1OverflowError
 } from "@wildboar/asn1";
 import * as $ from "@wildboar/asn1/functional";
 import { AccessPolicyType, _decode_AccessPolicyType, _encode_AccessPolicyType } from "../EpsHI2Operations/AccessPolicyType.ta.mjs";
 // export { AccessPolicyType, _decode_AccessPolicyType, _encode_AccessPolicyType } from "../EpsHI2Operations/AccessPolicyType.ta.mjs";
-import { AlertIndicator, _decode_AlertIndicator, _encode_AlertIndicator, _enum_for_AlertIndicator } from "../EpsHI2Operations/AlertIndicator.ta.mjs";
+import { type AlertIndicator, _decode_AlertIndicator, _encode_AlertIndicator, _enum_for_AlertIndicator } from "../EpsHI2Operations/AlertIndicator.ta.mjs";
 // export { AlertIndicator, _enum_for_AlertIndicator, AlertIndicator_sent /* IMPORTED_LONG_ENUMERATION_ITEM */, sent /* IMPORTED_SHORT_ENUMERATION_ITEM */, AlertIndicator_received /* IMPORTED_LONG_ENUMERATION_ITEM */, AlertIndicator_cancelled /* IMPORTED_LONG_ENUMERATION_ITEM */, cancelled /* IMPORTED_SHORT_ENUMERATION_ITEM */, _decode_AlertIndicator, _encode_AlertIndicator } from "../EpsHI2Operations/AlertIndicator.ta.mjs";
 import { AssociatePresenceStatus, _decode_AssociatePresenceStatus, _encode_AssociatePresenceStatus } from "../EpsHI2Operations/AssociatePresenceStatus.ta.mjs";
 // export { AssociatePresenceStatus, _decode_AssociatePresenceStatus, _encode_AssociatePresenceStatus } from "../EpsHI2Operations/AssociatePresenceStatus.ta.mjs";
-import { Emergency, _decode_Emergency, _encode_Emergency, _enum_for_Emergency } from "../EpsHI2Operations/Emergency.ta.mjs";
+import { type Emergency, _decode_Emergency, _encode_Emergency, _enum_for_Emergency } from "../EpsHI2Operations/Emergency.ta.mjs";
 // export { Emergency, _enum_for_Emergency, Emergency_imminent /* IMPORTED_LONG_ENUMERATION_ITEM */, imminent /* IMPORTED_SHORT_ENUMERATION_ITEM */, Emergency_peril /* IMPORTED_LONG_ENUMERATION_ITEM */, peril /* IMPORTED_SHORT_ENUMERATION_ITEM */, Emergency_cancel /* IMPORTED_LONG_ENUMERATION_ITEM */, _decode_Emergency, _encode_Emergency } from "../EpsHI2Operations/Emergency.ta.mjs";
 import { EmergencyGroupState, _decode_EmergencyGroupState, _encode_EmergencyGroupState } from "../EpsHI2Operations/EmergencyGroupState.ta.mjs";
 // export { EmergencyGroupState, _decode_EmergencyGroupState, _encode_EmergencyGroupState } from "../EpsHI2Operations/EmergencyGroupState.ta.mjs";
-import { TimeStamp, _decode_TimeStamp, _encode_TimeStamp } from "../HI2Operations/TimeStamp.ta.mjs";
+import { type TimeStamp, _decode_TimeStamp, _encode_TimeStamp } from "../HI2Operations/TimeStamp.ta.mjs";
 // export { TimeStamp, _decode_TimeStamp, _encode_TimeStamp } from "../HI2Operations/TimeStamp.ta.mjs";
-import { PTCType, _decode_PTCType, _encode_PTCType, _enum_for_PTCType } from "../EpsHI2Operations/PTCType.ta.mjs";
+import { type PTCType, _decode_PTCType, _encode_PTCType, _enum_for_PTCType } from "../EpsHI2Operations/PTCType.ta.mjs";
 // export { PTCType, _enum_for_PTCType, PTCType_pTCStartofInterception /* IMPORTED_LONG_ENUMERATION_ITEM */, pTCStartofInterception /* IMPORTED_SHORT_ENUMERATION_ITEM */, PTCType_pTCServinSystem /* IMPORTED_LONG_ENUMERATION_ITEM */, pTCServinSystem /* IMPORTED_SHORT_ENUMERATION_ITEM */, PTCType_pTCSessionInitiation /* IMPORTED_LONG_ENUMERATION_ITEM */, pTCSessionInitiation /* IMPORTED_SHORT_ENUMERATION_ITEM */, PTCType_pTCSessionAbandonEndRecord /* IMPORTED_LONG_ENUMERATION_ITEM */, pTCSessionAbandonEndRecord /* IMPORTED_SHORT_ENUMERATION_ITEM */, PTCType_pTCSessionStartContinueRecord /* IMPORTED_LONG_ENUMERATION_ITEM */, pTCSessionStartContinueRecord /* IMPORTED_SHORT_ENUMERATION_ITEM */, PTCType_pTCSessionEndRecord /* IMPORTED_LONG_ENUMERATION_ITEM */, pTCSessionEndRecord /* IMPORTED_SHORT_ENUMERATION_ITEM */, PTCType_pTCPre_EstablishedSessionSessionRecord /* IMPORTED_LONG_ENUMERATION_ITEM */, pTCPre_EstablishedSessionSessionRecord /* IMPORTED_SHORT_ENUMERATION_ITEM */, PTCType_pTCInstantPersonalAlert /* IMPORTED_LONG_ENUMERATION_ITEM */, pTCInstantPersonalAlert /* IMPORTED_SHORT_ENUMERATION_ITEM */, PTCType_pTCPartyJoin /* IMPORTED_LONG_ENUMERATION_ITEM */, pTCPartyJoin /* IMPORTED_SHORT_ENUMERATION_ITEM */, PTCType_pTCPartyDrop /* IMPORTED_LONG_ENUMERATION_ITEM */, pTCPartyDrop /* IMPORTED_SHORT_ENUMERATION_ITEM */, PTCType_pTCPartyHold_RetrieveRecord /* IMPORTED_LONG_ENUMERATION_ITEM */, pTCPartyHold_RetrieveRecord /* IMPORTED_SHORT_ENUMERATION_ITEM */, PTCType_pTCMediaModification /* IMPORTED_LONG_ENUMERATION_ITEM */, pTCMediaModification /* IMPORTED_SHORT_ENUMERATION_ITEM */, PTCType_pTCGroupAdvertizement /* IMPORTED_LONG_ENUMERATION_ITEM */, pTCGroupAdvertizement /* IMPORTED_SHORT_ENUMERATION_ITEM */, PTCType_pTCFloorConttrol /* IMPORTED_LONG_ENUMERATION_ITEM */, pTCFloorConttrol /* IMPORTED_SHORT_ENUMERATION_ITEM */, PTCType_pTCTargetPressence /* IMPORTED_LONG_ENUMERATION_ITEM */, pTCTargetPressence /* IMPORTED_SHORT_ENUMERATION_ITEM */, PTCType_pTCAssociatePressence /* IMPORTED_LONG_ENUMERATION_ITEM */, pTCAssociatePressence /* IMPORTED_SHORT_ENUMERATION_ITEM */, PTCType_pTCListManagementEvents /* IMPORTED_LONG_ENUMERATION_ITEM */, pTCListManagementEvents /* IMPORTED_SHORT_ENUMERATION_ITEM */, PTCType_pTCAccessPolicyEvents /* IMPORTED_LONG_ENUMERATION_ITEM */, pTCAccessPolicyEvents /* IMPORTED_SHORT_ENUMERATION_ITEM */, PTCType_pTCMediaTypeNotification /* IMPORTED_LONG_ENUMERATION_ITEM */, pTCMediaTypeNotification /* IMPORTED_SHORT_ENUMERATION_ITEM */, PTCType_pTCGroupCallRequest /* IMPORTED_LONG_ENUMERATION_ITEM */, pTCGroupCallRequest /* IMPORTED_SHORT_ENUMERATION_ITEM */, PTCType_pTCGroupCallCancel /* IMPORTED_LONG_ENUMERATION_ITEM */, pTCGroupCallCancel /* IMPORTED_SHORT_ENUMERATION_ITEM */, PTCType_pTCGroupCallResponse /* IMPORTED_LONG_ENUMERATION_ITEM */, pTCGroupCallResponse /* IMPORTED_SHORT_ENUMERATION_ITEM */, PTCType_pTCGroupCallInterrogate /* IMPORTED_LONG_ENUMERATION_ITEM */, pTCGroupCallInterrogate /* IMPORTED_SHORT_ENUMERATION_ITEM */, PTCType_pTCMCPTTImminentGroupCall /* IMPORTED_LONG_ENUMERATION_ITEM */, pTCMCPTTImminentGroupCall /* IMPORTED_SHORT_ENUMERATION_ITEM */, PTCType_pTCCC /* IMPORTED_LONG_ENUMERATION_ITEM */, pTCCC /* IMPORTED_SHORT_ENUMERATION_ITEM */, PTCType_pTCRegistration /* IMPORTED_LONG_ENUMERATION_ITEM */, pTCRegistration /* IMPORTED_SHORT_ENUMERATION_ITEM */, PTCType_pTCEncryption /* IMPORTED_LONG_ENUMERATION_ITEM */, pTCEncryption /* IMPORTED_SHORT_ENUMERATION_ITEM */, _decode_PTCType, _encode_PTCType } from "../EpsHI2Operations/PTCType.ta.mjs";
 import { FloorActivity, _decode_FloorActivity, _encode_FloorActivity } from "../EpsHI2Operations/FloorActivity.ta.mjs";
 // export { FloorActivity, _decode_FloorActivity, _encode_FloorActivity } from "../EpsHI2Operations/FloorActivity.ta.mjs";
 import { PTCAddress, _decode_PTCAddress, _encode_PTCAddress } from "../EpsHI2Operations/PTCAddress.ta.mjs";
 // export { PTCAddress, _decode_PTCAddress, _encode_PTCAddress } from "../EpsHI2Operations/PTCAddress.ta.mjs";
-import { GroupAuthRule, _decode_GroupAuthRule, _encode_GroupAuthRule, _enum_for_GroupAuthRule } from "../EpsHI2Operations/GroupAuthRule.ta.mjs";
+import { type GroupAuthRule, _decode_GroupAuthRule, _encode_GroupAuthRule, _enum_for_GroupAuthRule } from "../EpsHI2Operations/GroupAuthRule.ta.mjs";
 // export { GroupAuthRule, _enum_for_GroupAuthRule, GroupAuthRule_allow_Initiating_PtcSession /* IMPORTED_LONG_ENUMERATION_ITEM */, allow_Initiating_PtcSession /* IMPORTED_SHORT_ENUMERATION_ITEM */, GroupAuthRule_block_Initiating_PtcSession /* IMPORTED_LONG_ENUMERATION_ITEM */, block_Initiating_PtcSession /* IMPORTED_SHORT_ENUMERATION_ITEM */, GroupAuthRule_allow_Joining_PtcSession /* IMPORTED_LONG_ENUMERATION_ITEM */, allow_Joining_PtcSession /* IMPORTED_SHORT_ENUMERATION_ITEM */, GroupAuthRule_block_Joining_PtcSession /* IMPORTED_LONG_ENUMERATION_ITEM */, block_Joining_PtcSession /* IMPORTED_SHORT_ENUMERATION_ITEM */, GroupAuthRule_allow_Add_Participants /* IMPORTED_LONG_ENUMERATION_ITEM */, allow_Add_Participants /* IMPORTED_SHORT_ENUMERATION_ITEM */, GroupAuthRule_block_Add_Participants /* IMPORTED_LONG_ENUMERATION_ITEM */, block_Add_Participants /* IMPORTED_SHORT_ENUMERATION_ITEM */, GroupAuthRule_allow_Subscription_PtcSession_State /* IMPORTED_LONG_ENUMERATION_ITEM */, allow_Subscription_PtcSession_State /* IMPORTED_SHORT_ENUMERATION_ITEM */, GroupAuthRule_block_Subscription_PtcSession_State /* IMPORTED_LONG_ENUMERATION_ITEM */, block_Subscription_PtcSession_State /* IMPORTED_SHORT_ENUMERATION_ITEM */, GroupAuthRule_allow_Anonymity /* IMPORTED_LONG_ENUMERATION_ITEM */, allow_Anonymity /* IMPORTED_SHORT_ENUMERATION_ITEM */, GroupAuthRule_forbid_Anonymity /* IMPORTED_LONG_ENUMERATION_ITEM */, forbid_Anonymity /* IMPORTED_SHORT_ENUMERATION_ITEM */, _decode_GroupAuthRule, _encode_GroupAuthRule } from "../EpsHI2Operations/GroupAuthRule.ta.mjs";
-import { ImminentPerilInd, _decode_ImminentPerilInd, _encode_ImminentPerilInd, _enum_for_ImminentPerilInd } from "../EpsHI2Operations/ImminentPerilInd.ta.mjs";
+import { type ImminentPerilInd, _decode_ImminentPerilInd, _encode_ImminentPerilInd, _enum_for_ImminentPerilInd } from "../EpsHI2Operations/ImminentPerilInd.ta.mjs";
 // export { ImminentPerilInd, _enum_for_ImminentPerilInd, ImminentPerilInd_request /* IMPORTED_LONG_ENUMERATION_ITEM */, request /* IMPORTED_SHORT_ENUMERATION_ITEM */, ImminentPerilInd_response /* IMPORTED_LONG_ENUMERATION_ITEM */, response /* IMPORTED_SHORT_ENUMERATION_ITEM */, ImminentPerilInd_cancel /* IMPORTED_LONG_ENUMERATION_ITEM */, _decode_ImminentPerilInd, _encode_ImminentPerilInd } from "../EpsHI2Operations/ImminentPerilInd.ta.mjs";
-import { ImplicitFloorReq, _decode_ImplicitFloorReq, _encode_ImplicitFloorReq, _enum_for_ImplicitFloorReq } from "../EpsHI2Operations/ImplicitFloorReq.ta.mjs";
+import { type ImplicitFloorReq, _decode_ImplicitFloorReq, _encode_ImplicitFloorReq, _enum_for_ImplicitFloorReq } from "../EpsHI2Operations/ImplicitFloorReq.ta.mjs";
 // export { ImplicitFloorReq, _enum_for_ImplicitFloorReq, ImplicitFloorReq_join /* IMPORTED_LONG_ENUMERATION_ITEM */, join /* IMPORTED_SHORT_ENUMERATION_ITEM */, ImplicitFloorReq_rejoin /* IMPORTED_LONG_ENUMERATION_ITEM */, rejoin /* IMPORTED_SHORT_ENUMERATION_ITEM */, ImplicitFloorReq_release /* IMPORTED_LONG_ENUMERATION_ITEM */, release /* IMPORTED_SHORT_ENUMERATION_ITEM */, _decode_ImplicitFloorReq, _encode_ImplicitFloorReq } from "../EpsHI2Operations/ImplicitFloorReq.ta.mjs";
-import { InitiationCause, _decode_InitiationCause, _encode_InitiationCause, _enum_for_InitiationCause } from "../EpsHI2Operations/InitiationCause.ta.mjs";
+import { type InitiationCause, _decode_InitiationCause, _encode_InitiationCause, _enum_for_InitiationCause } from "../EpsHI2Operations/InitiationCause.ta.mjs";
 // export { InitiationCause, _enum_for_InitiationCause, InitiationCause_requests /* IMPORTED_LONG_ENUMERATION_ITEM */, requests /* IMPORTED_SHORT_ENUMERATION_ITEM */, InitiationCause_received /* IMPORTED_LONG_ENUMERATION_ITEM */, InitiationCause_pTCOriginatingId /* IMPORTED_LONG_ENUMERATION_ITEM */, pTCOriginatingId /* IMPORTED_SHORT_ENUMERATION_ITEM */, _decode_InitiationCause, _encode_InitiationCause } from "../EpsHI2Operations/InitiationCause.ta.mjs";
-import { IPADirection, _decode_IPADirection, _encode_IPADirection, _enum_for_IPADirection } from "../EpsHI2Operations/IPADirection.ta.mjs";
+import { type IPADirection, _decode_IPADirection, _encode_IPADirection, _enum_for_IPADirection } from "../EpsHI2Operations/IPADirection.ta.mjs";
 // export { IPADirection, _enum_for_IPADirection, IPADirection_toTarget /* IMPORTED_LONG_ENUMERATION_ITEM */, toTarget /* IMPORTED_SHORT_ENUMERATION_ITEM */, IPADirection_fromTarget /* IMPORTED_LONG_ENUMERATION_ITEM */, fromTarget /* IMPORTED_SHORT_ENUMERATION_ITEM */, _decode_IPADirection, _encode_IPADirection } from "../EpsHI2Operations/IPADirection.ta.mjs";
-import { ListManagementAction, _decode_ListManagementAction, _encode_ListManagementAction, _enum_for_ListManagementAction } from "../EpsHI2Operations/ListManagementAction.ta.mjs";
+import { type ListManagementAction, _decode_ListManagementAction, _encode_ListManagementAction, _enum_for_ListManagementAction } from "../EpsHI2Operations/ListManagementAction.ta.mjs";
 // export { ListManagementAction, _enum_for_ListManagementAction, ListManagementAction_create /* IMPORTED_LONG_ENUMERATION_ITEM */, create /* IMPORTED_SHORT_ENUMERATION_ITEM */, ListManagementAction_modify /* IMPORTED_LONG_ENUMERATION_ITEM */, ListManagementAction_retrieve /* IMPORTED_LONG_ENUMERATION_ITEM */, retrieve /* IMPORTED_SHORT_ENUMERATION_ITEM */, ListManagementAction_delete /* IMPORTED_LONG_ENUMERATION_ITEM */, delete_ /* IMPORTED_SHORT_ENUMERATION_ITEM */, ListManagementAction_notify /* IMPORTED_LONG_ENUMERATION_ITEM */, notify /* IMPORTED_SHORT_ENUMERATION_ITEM */, _decode_ListManagementAction, _encode_ListManagementAction } from "../EpsHI2Operations/ListManagementAction.ta.mjs";
-import { ListManagementType, _decode_ListManagementType, _encode_ListManagementType, _enum_for_ListManagementType } from "../EpsHI2Operations/ListManagementType.ta.mjs";
+import { type ListManagementType, _decode_ListManagementType, _encode_ListManagementType, _enum_for_ListManagementType } from "../EpsHI2Operations/ListManagementType.ta.mjs";
 // export { ListManagementType, _enum_for_ListManagementType, ListManagementType_contactListManagementAttempt /* IMPORTED_LONG_ENUMERATION_ITEM */, contactListManagementAttempt /* IMPORTED_SHORT_ENUMERATION_ITEM */, ListManagementType_groupListManagementAttempt /* IMPORTED_LONG_ENUMERATION_ITEM */, groupListManagementAttempt /* IMPORTED_SHORT_ENUMERATION_ITEM */, ListManagementType_contactListManagementResult /* IMPORTED_LONG_ENUMERATION_ITEM */, contactListManagementResult /* IMPORTED_SHORT_ENUMERATION_ITEM */, ListManagementType_groupListManagementResult /* IMPORTED_LONG_ENUMERATION_ITEM */, groupListManagementResult /* IMPORTED_SHORT_ENUMERATION_ITEM */, ListManagementType_requestSuccessful /* IMPORTED_LONG_ENUMERATION_ITEM */, requestSuccessful /* IMPORTED_SHORT_ENUMERATION_ITEM */, _decode_ListManagementType, _encode_ListManagementType } from "../EpsHI2Operations/ListManagementType.ta.mjs";
 import { Location, _decode_Location, _encode_Location } from "../EpsHI2Operations/Location.ta.mjs";
 // export { Location, _decode_Location, _encode_Location } from "../EpsHI2Operations/Location.ta.mjs";
-import { Priority_Level, _decode_Priority_Level, _encode_Priority_Level, _enum_for_Priority_Level } from "../EpsHI2Operations/Priority-Level.ta.mjs";
+import { type Priority_Level, _decode_Priority_Level, _encode_Priority_Level, _enum_for_Priority_Level } from "../EpsHI2Operations/Priority-Level.ta.mjs";
 // export { Priority_Level, _enum_for_Priority_Level, Priority_Level_pre_emptive /* IMPORTED_LONG_ENUMERATION_ITEM */, pre_emptive /* IMPORTED_SHORT_ENUMERATION_ITEM */, Priority_Level_high_priority /* IMPORTED_LONG_ENUMERATION_ITEM */, high_priority /* IMPORTED_SHORT_ENUMERATION_ITEM */, Priority_Level_normal_priority /* IMPORTED_LONG_ENUMERATION_ITEM */, normal_priority /* IMPORTED_SHORT_ENUMERATION_ITEM */, Priority_Level_listen_only /* IMPORTED_LONG_ENUMERATION_ITEM */, listen_only /* IMPORTED_SHORT_ENUMERATION_ITEM */, _decode_Priority_Level, _encode_Priority_Level } from "../EpsHI2Operations/Priority-Level.ta.mjs";
-import { PreEstStatus, _decode_PreEstStatus, _encode_PreEstStatus, _enum_for_PreEstStatus } from "../EpsHI2Operations/PreEstStatus.ta.mjs";
+import { type PreEstStatus, _decode_PreEstStatus, _encode_PreEstStatus, _enum_for_PreEstStatus } from "../EpsHI2Operations/PreEstStatus.ta.mjs";
 // export { PreEstStatus, _enum_for_PreEstStatus, PreEstStatus_established /* IMPORTED_LONG_ENUMERATION_ITEM */, established /* IMPORTED_SHORT_ENUMERATION_ITEM */, PreEstStatus_modify /* IMPORTED_LONG_ENUMERATION_ITEM */, PreEstStatus_released /* IMPORTED_LONG_ENUMERATION_ITEM */, released /* IMPORTED_SHORT_ENUMERATION_ITEM */, _decode_PreEstStatus, _encode_PreEstStatus } from "../EpsHI2Operations/PreEstStatus.ta.mjs";
-import { RegistrationRequest, _decode_RegistrationRequest, _encode_RegistrationRequest, _enum_for_RegistrationRequest } from "../EpsHI2Operations/RegistrationRequest.ta.mjs";
+import { type RegistrationRequest, _decode_RegistrationRequest, _encode_RegistrationRequest, _enum_for_RegistrationRequest } from "../EpsHI2Operations/RegistrationRequest.ta.mjs";
 // export { RegistrationRequest, _enum_for_RegistrationRequest, RegistrationRequest_register /* IMPORTED_LONG_ENUMERATION_ITEM */, register /* IMPORTED_SHORT_ENUMERATION_ITEM */, RegistrationRequest_re_register /* IMPORTED_LONG_ENUMERATION_ITEM */, re_register /* IMPORTED_SHORT_ENUMERATION_ITEM */, RegistrationRequest_de_register /* IMPORTED_LONG_ENUMERATION_ITEM */, de_register /* IMPORTED_SHORT_ENUMERATION_ITEM */, _decode_RegistrationRequest, _encode_RegistrationRequest } from "../EpsHI2Operations/RegistrationRequest.ta.mjs";
-import { RegistrationOutcome, _decode_RegistrationOutcome, _encode_RegistrationOutcome, _enum_for_RegistrationOutcome } from "../EpsHI2Operations/RegistrationOutcome.ta.mjs";
+import { type RegistrationOutcome, _decode_RegistrationOutcome, _encode_RegistrationOutcome, _enum_for_RegistrationOutcome } from "../EpsHI2Operations/RegistrationOutcome.ta.mjs";
 // export { RegistrationOutcome, _enum_for_RegistrationOutcome, RegistrationOutcome_success /* IMPORTED_LONG_ENUMERATION_ITEM */, success /* IMPORTED_SHORT_ENUMERATION_ITEM */, RegistrationOutcome_failure /* IMPORTED_LONG_ENUMERATION_ITEM */, failure /* IMPORTED_SHORT_ENUMERATION_ITEM */, _decode_RegistrationOutcome, _encode_RegistrationOutcome } from "../EpsHI2Operations/RegistrationOutcome.ta.mjs";
 import { RTPSetting, _decode_RTPSetting, _encode_RTPSetting } from "../EpsHI2Operations/RTPSetting.ta.mjs";
 // export { RTPSetting, _decode_RTPSetting, _encode_RTPSetting } from "../EpsHI2Operations/RTPSetting.ta.mjs";
-import { Talk_burst_reason_code, _decode_Talk_burst_reason_code, _encode_Talk_burst_reason_code } from "../EpsHI2Operations/Talk-burst-reason-code.ta.mjs";
+import { type Talk_burst_reason_code, _decode_Talk_burst_reason_code, _encode_Talk_burst_reason_code } from "../EpsHI2Operations/Talk-burst-reason-code.ta.mjs";
 // export { Talk_burst_reason_code, _decode_Talk_burst_reason_code, _encode_Talk_burst_reason_code } from "../EpsHI2Operations/Talk-burst-reason-code.ta.mjs";
 import { TalkburstControlSetting, _decode_TalkburstControlSetting, _encode_TalkburstControlSetting } from "../EpsHI2Operations/TalkburstControlSetting.ta.mjs";
 // export { TalkburstControlSetting, _decode_TalkburstControlSetting, _encode_TalkburstControlSetting } from "../EpsHI2Operations/TalkburstControlSetting.ta.mjs";
@@ -77,20 +77,20 @@ import { TalkburstControlSetting, _decode_TalkburstControlSetting, _encode_Talkb
  * ```asn1
  * PTC ::= SEQUENCE {
  *     abandonCause                [1] UTF8String OPTIONAL,
- *     accessPolicyFailure        [2] UTF8String    OPTIONAL,
+ *     accessPolicyFailure        [2] UTF8String    type OPTIONAL,
  *     accessPolicyType            [3] AccessPolicyType OPTIONAL,
  *     alertIndicator                [5] AlertIndicator OPTIONAL,
  *     associatePresenceStatus    [6] AssociatePresenceStatus OPTIONAL,
  *     bearer-capability            [7] UTF8String OPTIONAL,
  *         -- identifies the Bearer capability information element (value part)
- *     broadcastIndicator            [8] BOOLEAN    OPTIONAL,
+ *     broadcastIndicator            [8] BOOLEAN    type OPTIONAL,
  *     -- default False, true indicates this is a braodcast to a group
  *     contactID                      [9] UTF8String OPTIONAL,
  *     emergency                     [10] Emergency OPTIONAL,
  *     emergencyGroupState        [11] EmergencyGroupState OPTIONAL,
  *     timeStamp                    [12] TimeStamp,
  *     pTCType                        [13] PTCType OPTIONAL,
- *     failureCode                    [14] UTF8String    OPTIONAL,
+ *     failureCode                    [14] UTF8String    type OPTIONAL,
  *     floorActivity                [15] FloorActivity OPTIONAL,
  *     floorSpeakerID                [16] PTCAddress OPTIONAL,
  *     groupAdSender                [17] UTF8String OPTIONAL,
@@ -143,7 +143,7 @@ import { TalkburstControlSetting, _decode_TalkburstControlSetting, _encode_Talkb
  *     registrationOutcome        [58] RegistrationOutcome OPTIONAL,
  *     retrieveID                    [59] UTF8String OPTIONAL,
  *     rTPSetting                    [60] RTPSetting OPTIONAL,
- *     talkBurstPriority            [61] Priority-Level    OPTIONAL,
+ *     talkBurstPriority            [61] Priority-Level    type OPTIONAL,
  *     talkBurstReason                [62] Talk-burst-reason-code OPTIONAL,
  *     -- Talk-burst-reason-code Defined according to the rules and procedures
  *     -- in (OMA-PoC-AD [97])
@@ -995,7 +995,7 @@ class PTC {
          * @static
          */
 
-    public static _enum_for_alertIndicator = _enum_for_AlertIndicator;        /**
+    public static _enum_for_alertIndicator: typeof _enum_for_AlertIndicator = _enum_for_AlertIndicator;        /**
          * @summary The enum used as the type of the component `emergency`
          * @description
          * 
@@ -1004,7 +1004,7 @@ class PTC {
          * @static
          */
 
-    public static _enum_for_emergency = _enum_for_Emergency;        /**
+    public static _enum_for_emergency: typeof _enum_for_Emergency = _enum_for_Emergency;        /**
          * @summary The enum used as the type of the component `pTCType`
          * @description
          * 
@@ -1013,7 +1013,7 @@ class PTC {
          * @static
          */
 
-    public static _enum_for_pTCType = _enum_for_PTCType;        /**
+    public static _enum_for_pTCType: typeof _enum_for_PTCType = _enum_for_PTCType;        /**
          * @summary The enum used as the type of the component `groupAuthRule`
          * @description
          * 
@@ -1023,7 +1023,7 @@ class PTC {
          * @static
          */
 
-    public static _enum_for_groupAuthRule = _enum_for_GroupAuthRule;        /**
+    public static _enum_for_groupAuthRule: typeof _enum_for_GroupAuthRule = _enum_for_GroupAuthRule;        /**
          * @summary The enum used as the type of the component `imminentPerilInd`
          * @description
          * 
@@ -1032,7 +1032,7 @@ class PTC {
          * @static
          */
 
-    public static _enum_for_imminentPerilInd = _enum_for_ImminentPerilInd;        /**
+    public static _enum_for_imminentPerilInd: typeof _enum_for_ImminentPerilInd = _enum_for_ImminentPerilInd;        /**
          * @summary The enum used as the type of the component `implicitFloorReq`
          * @description
          * 
@@ -1042,7 +1042,7 @@ class PTC {
          * @static
          */
 
-    public static _enum_for_implicitFloorReq = _enum_for_ImplicitFloorReq;        /**
+    public static _enum_for_implicitFloorReq: typeof _enum_for_ImplicitFloorReq = _enum_for_ImplicitFloorReq;        /**
          * @summary The enum used as the type of the component `initiationCause`
          * @description
          * 
@@ -1051,7 +1051,7 @@ class PTC {
          * @static
          */
 
-    public static _enum_for_initiationCause = _enum_for_InitiationCause;        /**
+    public static _enum_for_initiationCause: typeof _enum_for_InitiationCause = _enum_for_InitiationCause;        /**
          * @summary The enum used as the type of the component `iPADirection`
          * @description
          * 
@@ -1061,7 +1061,7 @@ class PTC {
          * @static
          */
 
-    public static _enum_for_iPADirection = _enum_for_IPADirection;        /**
+    public static _enum_for_iPADirection: typeof _enum_for_IPADirection = _enum_for_IPADirection;        /**
          * @summary The enum used as the type of the component `listManagementAction`
          * @description
          * 
@@ -1071,7 +1071,7 @@ class PTC {
          * @static
          */
 
-    public static _enum_for_listManagementAction = _enum_for_ListManagementAction;        /**
+    public static _enum_for_listManagementAction: typeof _enum_for_ListManagementAction = _enum_for_ListManagementAction;        /**
          * @summary The enum used as the type of the component `listManagementType`
          * @description
          * 
@@ -1080,7 +1080,7 @@ class PTC {
          * @static
          */
 
-    public static _enum_for_listManagementType = _enum_for_ListManagementType;        /**
+    public static _enum_for_listManagementType: typeof _enum_for_ListManagementType = _enum_for_ListManagementType;        /**
          * @summary The enum used as the type of the component `priority_Level`
          * @description
          * 
@@ -1090,7 +1090,7 @@ class PTC {
          * @static
          */
 
-    public static _enum_for_priority_Level = _enum_for_Priority_Level;        /**
+    public static _enum_for_priority_Level: typeof _enum_for_Priority_Level = _enum_for_Priority_Level;        /**
          * @summary The enum used as the type of the component `preEstStatus`
          * @description
          * 
@@ -1100,7 +1100,7 @@ class PTC {
          * @static
          */
 
-    public static _enum_for_preEstStatus = _enum_for_PreEstStatus;        /**
+    public static _enum_for_preEstStatus: typeof _enum_for_PreEstStatus = _enum_for_PreEstStatus;        /**
          * @summary The enum used as the type of the component `registrationRequest`
          * @description
          * 
@@ -1109,7 +1109,7 @@ class PTC {
          * @static
          */
 
-    public static _enum_for_registrationRequest = _enum_for_RegistrationRequest;        /**
+    public static _enum_for_registrationRequest: typeof _enum_for_RegistrationRequest = _enum_for_RegistrationRequest;        /**
          * @summary The enum used as the type of the component `registrationOutcome`
          * @description
          * 
@@ -1118,7 +1118,7 @@ class PTC {
          * @static
          */
 
-    public static _enum_for_registrationOutcome = _enum_for_RegistrationOutcome;        /**
+    public static _enum_for_registrationOutcome: typeof _enum_for_RegistrationOutcome = _enum_for_RegistrationOutcome;        /**
          * @summary The enum used as the type of the component `talkBurstPriority`
          * @description
          * 
@@ -1128,7 +1128,7 @@ class PTC {
          * @static
          */
 
-    public static _enum_for_talkBurstPriority = _enum_for_Priority_Level;
+    public static _enum_for_talkBurstPriority: typeof _enum_for_Priority_Level = _enum_for_Priority_Level;
 }
 
 /**

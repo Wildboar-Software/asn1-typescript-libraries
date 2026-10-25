@@ -1,8 +1,8 @@
 /* eslint-disable */
 import {
-    OPTIONAL,
-    BOOLEAN,
-    ASN1Element as _Element,
+    type OPTIONAL,
+    type BOOLEAN,
+    type ASN1Element as _Element,
     ASN1TagClass as _TagClass,
     ASN1Construction as _Construction,
     ASN1UniversalType as _UniversalType,
@@ -13,7 +13,7 @@ import {
 } from '@wildboar/asn1';
 import * as $ from '@wildboar/asn1/functional';
 import {
-    ObservedValue,
+    type ObservedValue,
     _decode_ObservedValue,
     _encode_ObservedValue,
 } from '@wildboar/attribute-asn1module';
@@ -47,45 +47,53 @@ import {
  *
  */
 export class SeverityIndicatingThreshold {
+    /**
+     * @summary `threshold`.
+     * @description
+     *
+     * Observed value compared against the derived gauge (or
+     * estimate of mean). ITU-T Rec. X.739 (11/93)
+     * [§8.1.9.4.2](https://www.itu.int/rec/T-REC-X.739-199311-I).
+     * @public
+     * @readonly
+     */
+    public readonly threshold: ObservedValue;
+    /**
+     * @summary `notifyOnOff`.
+     * @description
+     *
+     * Notification switch for this submember. If false, this
+     * submember does not emit notifications. If true,
+     * `severityIndication` shall be present. ITU-T Rec. X.739
+     * (11/93)
+     * [§8.1.9.4.2](https://www.itu.int/rec/T-REC-X.739-199311-I).
+     * @public
+     * @readonly
+     */
+    public readonly notifyOnOff: BOOLEAN;
+    /**
+     * @summary `severityIndication`.
+     * @description
+     *
+     * Perceived severity of the alarm for this submember. If
+     * both notify-high and notify-low switches are true for
+     * one threshold level, one of the two values shall be
+     * `clear`. ITU-T Rec. X.739 (11/93)
+     * [§8.1.9.4.2](https://www.itu.int/rec/T-REC-X.739-199311-I).
+     * @public
+     * @readonly
+     */
+    public readonly severityIndication?: OPTIONAL<PerceivedSeverity>;
+
     constructor(
-        /**
-         * @summary `threshold`.
-         * @description
-         *
-         * Observed value compared against the derived gauge (or
-         * estimate of mean). ITU-T Rec. X.739 (11/93)
-         * [§8.1.9.4.2](https://www.itu.int/rec/T-REC-X.739-199311-I).
-         * @public
-         * @readonly
-         */
-        readonly threshold: ObservedValue,
-        /**
-         * @summary `notifyOnOff`.
-         * @description
-         *
-         * Notification switch for this submember. If false, this
-         * submember does not emit notifications. If true,
-         * `severityIndication` shall be present. ITU-T Rec. X.739
-         * (11/93)
-         * [§8.1.9.4.2](https://www.itu.int/rec/T-REC-X.739-199311-I).
-         * @public
-         * @readonly
-         */
-        readonly notifyOnOff: BOOLEAN,
-        /**
-         * @summary `severityIndication`.
-         * @description
-         *
-         * Perceived severity of the alarm for this submember. If
-         * both notify-high and notify-low switches are true for
-         * one threshold level, one of the two values shall be
-         * `clear`. ITU-T Rec. X.739 (11/93)
-         * [§8.1.9.4.2](https://www.itu.int/rec/T-REC-X.739-199311-I).
-         * @public
-         * @readonly
-         */
-        readonly severityIndication?: OPTIONAL<PerceivedSeverity>
-    ) {}
+        threshold: ObservedValue,
+        notifyOnOff: BOOLEAN,
+        severityIndication?: OPTIONAL<PerceivedSeverity>
+    ) {
+        this.threshold = threshold;
+        this.notifyOnOff = notifyOnOff;
+        this.severityIndication = severityIndication;
+    }
 
     /**
      * @summary Restructures an object into a SeverityIndicatingThreshold
@@ -117,7 +125,7 @@ export class SeverityIndicatingThreshold {
      * @static
      */
 
-    public static _enum_for_severityIndication = _enum_for_PerceivedSeverity;
+    public static _enum_for_severityIndication: typeof _enum_for_PerceivedSeverity = _enum_for_PerceivedSeverity;
 }
 
 /**

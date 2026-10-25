@@ -1,7 +1,7 @@
 /* eslint-disable */
 import {
-    INTEGER,
-    ASN1Element as _Element,
+    type INTEGER,
+    type ASN1Element as _Element,
     ASN1TagClass as _TagClass,
     ASN1Construction as _Construction,
     ASN1UniversalType as _UniversalType,
@@ -35,26 +35,32 @@ import * as $ from "@wildboar/asn1/functional";
  */
 export
 class TimeOffer_Item_value {
+    /**
+     * @summary `multiplier`.
+     * @description
+     * Timeout multiplier T. Must not be negative; T=0 means
+     * infinite. ISO/IEC 9040:1997 §23.4.
+     * @public
+     * @readonly
+     */
+    public readonly multiplier: INTEGER;
+    /**
+     * @summary `exponent`.
+     * @description
+     * Timeout exponent E. T and E encode the timeout per ISO/IEC
+     * 9040:1997 §23.4.
+     * @public
+     * @readonly
+     */
+    public readonly exponent: INTEGER;
+
     constructor (
-        /**
-         * @summary `multiplier`.
-         * @description
-         * Timeout multiplier T. Must not be negative; T=0 means
-         * infinite. ISO/IEC 9040:1997 §23.4.
-         * @public
-         * @readonly
-         */
-        readonly multiplier: INTEGER,
-        /**
-         * @summary `exponent`.
-         * @description
-         * Timeout exponent E. T and E encode the timeout per ISO/IEC
-         * 9040:1997 §23.4.
-         * @public
-         * @readonly
-         */
-        readonly exponent: INTEGER
-    ) {}
+        multiplier: INTEGER,
+        exponent: INTEGER
+    ) {
+        this.multiplier = multiplier;
+        this.exponent = exponent;
+    }
 
     /**
      * @summary Restructures an object into a TimeOffer_Item_value

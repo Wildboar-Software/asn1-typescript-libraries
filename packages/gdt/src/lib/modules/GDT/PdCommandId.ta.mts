@@ -1,6 +1,6 @@
 /* eslint-disable */
 import {
-    INTEGER
+    type INTEGER
 } from "@wildboar/asn1";
 import * as $ from "@wildboar/asn1/functional";
 
@@ -29,7 +29,7 @@ type PdCommandId = INTEGER;
  * @type {number}
  */
 export
-const PdCommandId_pdci_add: PdCommandId = 1; /* LONG_NAMED_INTEGER_VALUE */
+const PdCommandId_pdci_add: 1 = 1 satisfies PdCommandId; /* LONG_NAMED_INTEGER_VALUE */
 
 /**
  * @summary PdCommandId_pdci_add
@@ -37,7 +37,7 @@ const PdCommandId_pdci_add: PdCommandId = 1; /* LONG_NAMED_INTEGER_VALUE */
  * @type {number}
  */
 export
-const pdci_add: PdCommandId = PdCommandId_pdci_add; /* SHORT_NAMED_INTEGER_VALUE */
+const pdci_add: 1 = PdCommandId_pdci_add; /* SHORT_NAMED_INTEGER_VALUE */
 
 /**
  * @summary PdCommandId_pdci_del
@@ -45,7 +45,7 @@ const pdci_add: PdCommandId = PdCommandId_pdci_add; /* SHORT_NAMED_INTEGER_VALUE
  * @type {number}
  */
 export
-const PdCommandId_pdci_del: PdCommandId = 2; /* LONG_NAMED_INTEGER_VALUE */
+const PdCommandId_pdci_del: 2 = 2 satisfies PdCommandId; /* LONG_NAMED_INTEGER_VALUE */
 
 /**
  * @summary PdCommandId_pdci_del
@@ -53,7 +53,7 @@ const PdCommandId_pdci_del: PdCommandId = 2; /* LONG_NAMED_INTEGER_VALUE */
  * @type {number}
  */
 export
-const pdci_del: PdCommandId = PdCommandId_pdci_del; /* SHORT_NAMED_INTEGER_VALUE */
+const pdci_del: 2 = PdCommandId_pdci_del; /* SHORT_NAMED_INTEGER_VALUE */
 
 /**
  * @summary PdCommandId_pdci_match
@@ -61,7 +61,7 @@ const pdci_del: PdCommandId = PdCommandId_pdci_del; /* SHORT_NAMED_INTEGER_VALUE
  * @type {number}
  */
 export
-const PdCommandId_pdci_match: PdCommandId = 3; /* LONG_NAMED_INTEGER_VALUE */
+const PdCommandId_pdci_match: 3 = 3 satisfies PdCommandId; /* LONG_NAMED_INTEGER_VALUE */
 
 /**
  * @summary PdCommandId_pdci_match
@@ -69,9 +69,9 @@ const PdCommandId_pdci_match: PdCommandId = 3; /* LONG_NAMED_INTEGER_VALUE */
  * @type {number}
  */
 export
-const pdci_match: PdCommandId = PdCommandId_pdci_match; /* SHORT_NAMED_INTEGER_VALUE */
-export const _decode_PdCommandId = $._decodeInteger;
-export const _encode_PdCommandId = $._encodeInteger;
+const pdci_match: 3 = PdCommandId_pdci_match; /* SHORT_NAMED_INTEGER_VALUE */
+export const _decode_PdCommandId: $.ASN1Decoder<INTEGER> = $._decodeInteger;
+export const _encode_PdCommandId: $.ASN1Encoder<INTEGER> = $._encodeInteger;
 
 
 /* eslint-enable */

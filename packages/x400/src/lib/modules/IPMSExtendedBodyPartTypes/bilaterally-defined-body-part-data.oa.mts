@@ -1,7 +1,7 @@
 /* eslint-disable */
 import {
-    TYPE_IDENTIFIER,
-    ASN1Element as _Element,
+    type TYPE_IDENTIFIER,
+    type ASN1Element as _Element,
     ASN1TagClass as _TagClass,
     ASN1Construction as _Construction,
     ASN1UniversalType as _UniversalType,
@@ -11,7 +11,7 @@ import {
     ASN1ConstructionError as _ConstructionError,
 } from '@wildboar/asn1';
 import {
-    BilaterallyDefinedBodyPart,
+    type BilaterallyDefinedBodyPart,
     _decode_BilaterallyDefinedBodyPart,
     _encode_BilaterallyDefinedBodyPart,
 } from '../IPMSInformationObjects/BilaterallyDefinedBodyPart.ta.mjs';

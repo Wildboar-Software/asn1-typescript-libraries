@@ -2,9 +2,9 @@
 
 import * as $ from "@wildboar/asn1/functional";
 import {
-    OPTIONAL,
-    SEQUENCE,
-    IA5String,
+    type OPTIONAL,
+    type SEQUENCE,
+    type IA5String,
     ASN1Element as _Element
 } from "@wildboar/asn1";
 import { DeviceList_Item, _decode_DeviceList_Item, _encode_DeviceList_Item } from "../CSTA-switching-function-devices/DeviceList-Item.ta.mjs";
@@ -26,9 +26,9 @@ import { DeviceList_Item, _decode_DeviceList_Item, _encode_DeviceList_Item } fro
  * DeviceList  ::=  SEQUENCE OF SEQUENCE
  * {     deviceID             DeviceID,
  *     deviceCategory             [0] IMPLICIT DeviceCategory     DEFAULT station,
- *     namedDeviceTypes         [1] IMPLICIT NamedDeviceTypes     OPTIONAL,
- *     deviceAttributes         DeviceAttributes         OPTIONAL,
- *     deviceModelName         IA5String (SIZE(0..64))     OPTIONAL, 
+ *     namedDeviceTypes         [1] IMPLICIT NamedDeviceTypes     type OPTIONAL,
+ *     deviceAttributes         DeviceAttributes         type OPTIONAL,
+ *     deviceModelName         IA5String (SIZE(0..64))     type OPTIONAL, 
  *     nidGroup            DeviceID            OPTIONAL }
  * ```
  */

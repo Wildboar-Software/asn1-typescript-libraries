@@ -2,7 +2,7 @@
 import {
     ObjectIdentifier as _OID
 } from "@wildboar/asn1";
-import { ID } from "../LabelingObjectIdentifiers/ID.ta.mjs";
+import { type ID } from "../LabelingObjectIdentifiers/ID.ta.mjs";
 import { id_policy } from "../MMSObjectIdentifiers/id-policy.va.mjs";
 
 

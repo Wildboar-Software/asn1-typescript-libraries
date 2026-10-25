@@ -2,7 +2,7 @@
 import { type SYNTAX_NAME } from "../InformationFramework/SYNTAX-NAME.oca.mjs";
 import { id_asx_pwdEncAlgDescription } from "../PasswordPolicy/id-asx-pwdEncAlgDescription.va.mjs";
 import {
-    PwdEncAlg,
+    type PwdEncAlg,
     _decode_PwdEncAlg,
     _encode_PwdEncAlg,
 } from "../PasswordPolicy/PwdEncAlg.ta.mjs";

@@ -1,13 +1,13 @@
 /* eslint-disable */
 import {
-    OPTIONAL,
-    ASN1Element as _Element,
+    type OPTIONAL,
+    type ASN1Element as _Element,
     ASN1TagClass as _TagClass
 } from "@wildboar/asn1";
 import * as $ from "@wildboar/asn1/functional";
 import { ExtensionContainer, _decode_ExtensionContainer, _encode_ExtensionContainer } from "../MAP-ExtensionDataTypes/ExtensionContainer.ta.mjs";
-import { PermittedEncryptionAlgorithms, _decode_PermittedEncryptionAlgorithms, _encode_PermittedEncryptionAlgorithms } from "../MAP-MS-DataTypes/PermittedEncryptionAlgorithms.ta.mjs";
-import { PermittedIntegrityProtectionAlgorithms, _decode_PermittedIntegrityProtectionAlgorithms, _encode_PermittedIntegrityProtectionAlgorithms } from "../MAP-MS-DataTypes/PermittedIntegrityProtectionAlgorithms.ta.mjs";
+import { type PermittedEncryptionAlgorithms, _decode_PermittedEncryptionAlgorithms, _encode_PermittedEncryptionAlgorithms } from "../MAP-MS-DataTypes/PermittedEncryptionAlgorithms.ta.mjs";
+import { type PermittedIntegrityProtectionAlgorithms, _decode_PermittedIntegrityProtectionAlgorithms, _encode_PermittedIntegrityProtectionAlgorithms } from "../MAP-MS-DataTypes/PermittedIntegrityProtectionAlgorithms.ta.mjs";
 
 
 /**
@@ -22,9 +22,9 @@ import { PermittedIntegrityProtectionAlgorithms, _decode_PermittedIntegrityProte
  * 
  * ```asn1
  * AllowedUMTS-Algorithms ::= SEQUENCE {
- *     integrityProtectionAlgorithms    [0]    PermittedIntegrityProtectionAlgorithms    OPTIONAL,
- *     encryptionAlgorithms    [1]    PermittedEncryptionAlgorithms    OPTIONAL,
- *     extensionContainer    [2]    ExtensionContainer    OPTIONAL,
+ *     integrityProtectionAlgorithms    [0]    PermittedIntegrityProtectionAlgorithms    type OPTIONAL,
+ *     encryptionAlgorithms    [1]    PermittedEncryptionAlgorithms    type OPTIONAL,
+ *     extensionContainer    [2]    ExtensionContainer    type OPTIONAL,
  *     ...}
  * ```
  * 
@@ -32,42 +32,52 @@ import { PermittedIntegrityProtectionAlgorithms, _decode_PermittedIntegrityProte
  */
 export
 class AllowedUMTS_Algorithms {
+    /**
+     * @summary `integrityProtectionAlgorithms`.
+     * @description
+     *
+     * Permitted integrity protection algorithms as in 3GPP TS 25.413 (3GPP
+     * TS 29.002 V19.1.0 clauses 7.6.6.14 and 17.7.1).
+     *
+     * @public
+     * @readonly
+     */
+    public readonly integrityProtectionAlgorithms?: OPTIONAL<PermittedIntegrityProtectionAlgorithms>;
+    /**
+     * @summary `encryptionAlgorithms`.
+     * @description
+     *
+     * Permitted encryption algorithms as in 3GPP TS 25.413 (3GPP TS 29.002
+     * V19.1.0 clauses 7.6.6.14 and 17.7.1).
+     *
+     * @public
+     * @readonly
+     */
+    public readonly encryptionAlgorithms?: OPTIONAL<PermittedEncryptionAlgorithms>;
+    /**
+     * @summary `extensionContainer`.
+     * @public
+     * @readonly
+     */
+    public readonly extensionContainer?: OPTIONAL<ExtensionContainer>;
+    /**
+     * @summary Extensions that are not recognized.
+     * @public
+     * @readonly
+     */
+    public readonly _unrecognizedExtensionsList: _Element[];
+
     constructor (
-        /**
-         * @summary `integrityProtectionAlgorithms`.
-         * @description
-         *
-         * Permitted integrity protection algorithms as in 3GPP TS 25.413 (3GPP
-         * TS 29.002 V19.1.0 clauses 7.6.6.14 and 17.7.1).
-         *
-         * @public
-         * @readonly
-         */
-        readonly integrityProtectionAlgorithms?: OPTIONAL<PermittedIntegrityProtectionAlgorithms>,
-        /**
-         * @summary `encryptionAlgorithms`.
-         * @description
-         *
-         * Permitted encryption algorithms as in 3GPP TS 25.413 (3GPP TS 29.002
-         * V19.1.0 clauses 7.6.6.14 and 17.7.1).
-         *
-         * @public
-         * @readonly
-         */
-        readonly encryptionAlgorithms?: OPTIONAL<PermittedEncryptionAlgorithms>,
-        /**
-         * @summary `extensionContainer`.
-         * @public
-         * @readonly
-         */
-        readonly extensionContainer?: OPTIONAL<ExtensionContainer>,
-        /**
-         * @summary Extensions that are not recognized.
-         * @public
-         * @readonly
-         */
-        readonly _unrecognizedExtensionsList: _Element[] = []
-    ) {}
+        integrityProtectionAlgorithms?: OPTIONAL<PermittedIntegrityProtectionAlgorithms>,
+        encryptionAlgorithms?: OPTIONAL<PermittedEncryptionAlgorithms>,
+        extensionContainer?: OPTIONAL<ExtensionContainer>,
+        _unrecognizedExtensionsList: _Element[] = []
+    ) {
+        this.integrityProtectionAlgorithms = integrityProtectionAlgorithms;
+        this.encryptionAlgorithms = encryptionAlgorithms;
+        this.extensionContainer = extensionContainer;
+        this._unrecognizedExtensionsList = _unrecognizedExtensionsList;
+    }
 
     /**
      * @summary Restructures an object into a AllowedUMTS_Algorithms

@@ -1,13 +1,13 @@
 /* eslint-disable */
 import {
     ASN1ConstructionError as _ConstructionError,
-    ASN1Element as _Element,
+    type ASN1Element as _Element,
     ASN1TagClass as _TagClass
 } from "@wildboar/asn1";
 import * as $ from "@wildboar/asn1/functional";
 import { _decode_cancelFailed_ParameterType_problem, _encode_cancelFailed_ParameterType_problem, _enum_for_cancelFailed_ParameterType_problem, cancelFailed_ParameterType_problem } from "../IN-CS3-errortypes/cancelFailed-ParameterType-problem.ta.mjs";
 // export { cancelFailed_ParameterType_problem, _enum_for_cancelFailed_ParameterType_problem, cancelFailed_ParameterType_problem_unknownOperation /* IMPORTED_LONG_ENUMERATION_ITEM */, unknownOperation /* IMPORTED_SHORT_ENUMERATION_ITEM */, cancelFailed_ParameterType_problem_tooLate /* IMPORTED_LONG_ENUMERATION_ITEM */, tooLate /* IMPORTED_SHORT_ENUMERATION_ITEM */, cancelFailed_ParameterType_problem_operationNotCancellable /* IMPORTED_LONG_ENUMERATION_ITEM */, operationNotCancellable /* IMPORTED_SHORT_ENUMERATION_ITEM */, _decode_cancelFailed_ParameterType_problem, _encode_cancelFailed_ParameterType_problem } from "../IN-CS3-errortypes/cancelFailed-ParameterType-problem.ta.mjs";
-import { InvokeID, _decode_InvokeID, _encode_InvokeID } from "../IN-CS3-common-datatypes/InvokeID.ta.mjs";
+import { type InvokeID, _decode_InvokeID, _encode_InvokeID } from "../IN-CS3-common-datatypes/InvokeID.ta.mjs";
 // export { InvokeID, _decode_InvokeID, _encode_InvokeID } from "../IN-CS3-common-datatypes/InvokeID.ta.mjs";
 
 
@@ -76,7 +76,7 @@ class cancelFailed_ParameterType {
          * @static
          */
 
-    public static _enum_for_problem = _enum_for_cancelFailed_ParameterType_problem;
+    public static _enum_for_problem: typeof _enum_for_cancelFailed_ParameterType_problem = _enum_for_cancelFailed_ParameterType_problem;
 }
 
 /**

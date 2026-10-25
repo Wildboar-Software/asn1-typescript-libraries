@@ -1,7 +1,7 @@
 /* eslint-disable */
 
 import * as $ from "@wildboar/asn1/functional";
-import { OPTIONAL, SEQUENCE, ASN1Element as _Element } from "@wildboar/asn1";
+import type { OPTIONAL, SEQUENCE, ASN1Element as _Element } from "@wildboar/asn1";
 import { LampModeList_Item, _decode_LampModeList_Item, _encode_LampModeList_Item } from "../CSTA-get-lamp-mode/LampModeList-Item.ta.mjs";
 
 
@@ -21,8 +21,8 @@ import { LampModeList_Item, _decode_LampModeList_Item, _encode_LampModeList_Item
  * LampModeList  ::=  SEQUENCE OF SEQUENCE
  * {    lamp                LampID,
  *     lampMode            LampMode,
- *     lampBrightness            [0] IMPLICIT LampBrightness        OPTIONAL,
- *     lampColor            [1] IMPLICIT LampColor            OPTIONAL,
+ *     lampBrightness            [0] IMPLICIT LampBrightness        type OPTIONAL,
+ *     lampColor            [1] IMPLICIT LampColor            type OPTIONAL,
  *     button                [2] IMPLICIT ButtonID            OPTIONAL }
  * ```
  */

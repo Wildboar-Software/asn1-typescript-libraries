@@ -1,6 +1,6 @@
 /* eslint-disable */
 import { iso, ObjectIdentifier as _OID } from "@wildboar/asn1";
-import { OID } from "../CMSObjectIdentifiers/OID.ta.mjs";
+import { type OID } from "../CMSObjectIdentifiers/OID.ta.mjs";
 
 /**
  * @summary id_dbekm_recip_info

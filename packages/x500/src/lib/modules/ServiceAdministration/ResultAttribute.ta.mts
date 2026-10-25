@@ -1,9 +1,9 @@
 /* eslint-disable */
 import {
-    ASN1Element as _Element,
+    type ASN1Element as _Element,
     ASN1TagClass as _TagClass,
-    OBJECT_IDENTIFIER,
-    OPTIONAL,
+    type OBJECT_IDENTIFIER,
+    type OPTIONAL,
 } from "@wildboar/asn1";
 import * as $ from "@wildboar/asn1/functional";
 import {
@@ -12,7 +12,7 @@ import {
     _encode_ContextProfile,
 } from "../ServiceAdministration/ContextProfile.ta.mjs";
 import {
-    ResultAttribute_outputValues,
+    type ResultAttribute_outputValues,
     _decode_ResultAttribute_outputValues,
     _encode_ResultAttribute_outputValues,
 } from "../ServiceAdministration/ResultAttribute-outputValues.ta.mjs";
@@ -42,32 +42,42 @@ import {
  *
  */
 export class ResultAttribute {
+    /**
+     * @summary `attributeType`.
+     * @public
+     * @readonly
+     */
+    public readonly attributeType: OBJECT_IDENTIFIER;
+    /**
+     * @summary `outputValues`.
+     * @public
+     * @readonly
+     */
+    public readonly outputValues?: OPTIONAL<ResultAttribute_outputValues>;
+    /**
+     * @summary `contexts`.
+     * @public
+     * @readonly
+     */
+    public readonly contexts?: OPTIONAL<ContextProfile[]>;
+    /**
+     * @summary Extensions that are not recognized.
+     * @public
+     * @readonly
+     */
+    public readonly _unrecognizedExtensionsList: _Element[];
+
     constructor(
-        /**
-         * @summary `attributeType`.
-         * @public
-         * @readonly
-         */
-        readonly attributeType: OBJECT_IDENTIFIER,
-        /**
-         * @summary `outputValues`.
-         * @public
-         * @readonly
-         */
-        readonly outputValues?: OPTIONAL<ResultAttribute_outputValues>,
-        /**
-         * @summary `contexts`.
-         * @public
-         * @readonly
-         */
-        readonly contexts?: OPTIONAL<ContextProfile[]>,
-        /**
-         * @summary Extensions that are not recognized.
-         * @public
-         * @readonly
-         */
-        readonly _unrecognizedExtensionsList: _Element[] = []
-    ) {}
+        attributeType: OBJECT_IDENTIFIER,
+        outputValues?: OPTIONAL<ResultAttribute_outputValues>,
+        contexts?: OPTIONAL<ContextProfile[]>,
+        _unrecognizedExtensionsList: _Element[] = []
+    ) {
+        this.attributeType = attributeType;
+        this.outputValues = outputValues;
+        this.contexts = contexts;
+        this._unrecognizedExtensionsList = _unrecognizedExtensionsList;
+    }
 
     /**
      * @summary Restructures an object into a ResultAttribute

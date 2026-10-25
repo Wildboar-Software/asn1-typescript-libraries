@@ -1,13 +1,13 @@
 /* eslint-disable */
 import {
-    OPTIONAL,
-    ASN1Element as _Element,
+    type OPTIONAL,
+    type ASN1Element as _Element,
     ASN1TagClass as _TagClass
 } from "@wildboar/asn1";
 import * as $ from "@wildboar/asn1/functional";
-import { CountersValue, _decode_CountersValue, _encode_CountersValue } from "../IN-CS2-datatypes/CountersValue.ta.mjs";
+import { type CountersValue, _decode_CountersValue, _encode_CountersValue } from "../IN-CS2-datatypes/CountersValue.ta.mjs";
 // export { CountersValue, _decode_CountersValue, _encode_CountersValue } from "../IN-CS2-datatypes/CountersValue.ta.mjs";
-import { FilteringCriteria, _decode_FilteringCriteria, _encode_FilteringCriteria } from "../IN-CS2-datatypes/FilteringCriteria.ta.mjs";
+import { type FilteringCriteria, _decode_FilteringCriteria, _encode_FilteringCriteria } from "../IN-CS2-datatypes/FilteringCriteria.ta.mjs";
 // export { FilteringCriteria, _decode_FilteringCriteria, _encode_FilteringCriteria } from "../IN-CS2-datatypes/FilteringCriteria.ta.mjs";
 import { ExtensionField, _decode_ExtensionField, _encode_ExtensionField } from "../IN-CS2-datatypes/ExtensionField.ta.mjs";
 // export { ExtensionField, _decode_ExtensionField, _encode_ExtensionField } from "../IN-CS2-datatypes/ExtensionField.ta.mjs";
@@ -104,7 +104,7 @@ class ServiceFilteringResponseArg {
          * @static
          */
 
-    public static _enum_for_responseCondition = _enum_for_ResponseCondition;
+    public static _enum_for_responseCondition: typeof _enum_for_ResponseCondition = _enum_for_ResponseCondition;
 }
 
 /**

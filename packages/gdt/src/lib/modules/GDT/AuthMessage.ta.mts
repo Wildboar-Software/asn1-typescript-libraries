@@ -1,12 +1,12 @@
 /* eslint-disable */
 import {
-    OPTIONAL,
-    ASN1Element as _Element,
+    type OPTIONAL,
+    type ASN1Element as _Element,
     ASN1TagClass as _TagClass
 } from "@wildboar/asn1";
 import * as $ from "@wildboar/asn1/functional";
-import { AuthAction, _decode_AuthAction, _encode_AuthAction } from "../GDT/AuthAction.ta.mjs";
-import { Parameters, _decode_Parameters, _encode_Parameters } from "../GDT/Parameters.ta.mjs";
+import { type AuthAction, _decode_AuthAction, _encode_AuthAction } from "../GDT/AuthAction.ta.mjs";
+import { type Parameters, _decode_Parameters, _encode_Parameters } from "../GDT/Parameters.ta.mjs";
 
 
 /**
@@ -32,19 +32,19 @@ class AuthMessage {
      * @public
      * @readonly
      */
-    readonly auth_action: AuthAction;
+    public readonly auth_action: AuthAction;
     /**
      * @summary `params`.
      * @public
      * @readonly
      */
-    readonly params?: OPTIONAL<Parameters>;
+    public readonly params?: OPTIONAL<Parameters>;
     /**
      * @summary Extensions that are not recognized.
      * @public
      * @readonly
      */
-    readonly _unrecognizedExtensionsList: _Element[];
+    public readonly _unrecognizedExtensionsList: _Element[];
 
     constructor (
         auth_action: AuthAction,

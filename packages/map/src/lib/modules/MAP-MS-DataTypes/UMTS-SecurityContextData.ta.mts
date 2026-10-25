@@ -1,13 +1,13 @@
 /* eslint-disable */
 import {
     ASN1ConstructionError as _ConstructionError,
-    ASN1Element as _Element,
+    type ASN1Element as _Element,
     ASN1TagClass as _TagClass
 } from "@wildboar/asn1";
 import * as $ from "@wildboar/asn1/functional";
-import { CK, _decode_CK, _encode_CK } from "../MAP-MS-DataTypes/CK.ta.mjs";
-import { IK, _decode_IK, _encode_IK } from "../MAP-MS-DataTypes/IK.ta.mjs";
-import { KSI, _decode_KSI, _encode_KSI } from "../MAP-MS-DataTypes/KSI.ta.mjs";
+import { type CK, _decode_CK, _encode_CK } from "../MAP-MS-DataTypes/CK.ta.mjs";
+import { type IK, _decode_IK, _encode_IK } from "../MAP-MS-DataTypes/IK.ta.mjs";
+import { type KSI, _decode_KSI, _encode_KSI } from "../MAP-MS-DataTypes/KSI.ta.mjs";
 
 
 /**
@@ -32,50 +32,60 @@ import { KSI, _decode_KSI, _encode_KSI } from "../MAP-MS-DataTypes/KSI.ta.mjs";
  */
 export
 class UMTS_SecurityContextData {
+    /**
+     * @summary `ck`.
+     * @description
+     *
+     * UMTS ciphering key.
+     *
+     * (3GPP TS 29.002 V19.1.0 clause 7.6.7.5A).
+     *
+     * @public
+     * @readonly
+     */
+    public readonly ck: CK;
+    /**
+     * @summary `ik`.
+     * @description
+     *
+     * UMTS integrity key.
+     *
+     * (3GPP TS 29.002 V19.1.0 clause 7.6.7.5B).
+     *
+     * @public
+     * @readonly
+     */
+    public readonly ik: IK;
+    /**
+     * @summary `ksi`.
+     * @description
+     *
+     * Key set identifier. Internal structure in 3GPP TS 24.008.
+     *
+     * (3GPP TS 29.002 V19.1.0 clause 7.6.7.6A).
+     *
+     * @public
+     * @readonly
+     */
+    public readonly ksi: KSI;
+    /**
+     * @summary Extensions that are not recognized.
+     * @public
+     * @readonly
+     */
+    public readonly _unrecognizedExtensionsList: _Element[];
+
     constructor (
-        /**
-         * @summary `ck`.
-         * @description
-         *
-         * UMTS ciphering key.
-         *
-         * (3GPP TS 29.002 V19.1.0 clause 7.6.7.5A).
-         *
-         * @public
-         * @readonly
-         */
-        readonly ck: CK,
-        /**
-         * @summary `ik`.
-         * @description
-         *
-         * UMTS integrity key.
-         *
-         * (3GPP TS 29.002 V19.1.0 clause 7.6.7.5B).
-         *
-         * @public
-         * @readonly
-         */
-        readonly ik: IK,
-        /**
-         * @summary `ksi`.
-         * @description
-         *
-         * Key set identifier. Internal structure in 3GPP TS 24.008.
-         *
-         * (3GPP TS 29.002 V19.1.0 clause 7.6.7.6A).
-         *
-         * @public
-         * @readonly
-         */
-        readonly ksi: KSI,
-        /**
-         * @summary Extensions that are not recognized.
-         * @public
-         * @readonly
-         */
-        readonly _unrecognizedExtensionsList: _Element[] = []
-    ) {}
+        ck: CK,
+        ik: IK,
+        ksi: KSI,
+        _unrecognizedExtensionsList: _Element[] = []
+    ) {
+        this.ck = ck;
+        this.ik = ik;
+        this.ksi = ksi;
+        this._unrecognizedExtensionsList = _unrecognizedExtensionsList;
+    }
 
     /**
      * @summary Restructures an object into a UMTS_SecurityContextData

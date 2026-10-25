@@ -1,9 +1,9 @@
 /* eslint-disable */
 import {
     ASN1ConstructionError as _ConstructionError,
-    ASN1Element as _Element,
+    type ASN1Element as _Element,
     ASN1TagClass as _TagClass,
-    UTF8String
+    type UTF8String
 } from "@wildboar/asn1";
 import * as $ from "@wildboar/asn1/functional";
 
@@ -34,21 +34,25 @@ import * as $ from "@wildboar/asn1/functional";
  */
 export
 class Eco_deleteEim {
+    /**
+     * @summary `eimId`.
+     * @description
+     *
+     * eimId of the target Associated eIM. It uniquely identifies that eIM in the
+     * eUICC list. The text is at most 128 bytes. A missing eimId yields
+     * commandError on DeleteEimResult.
+     *
+     * SGP.32 v1.2, sections 3.5.1.2 and 4.3.
+     * @public
+     * @readonly
+     */
+    public readonly eimId: UTF8String;
+
     constructor (
-        /**
-         * @summary `eimId`.
-         * @description
-         *
-         * eimId of the target Associated eIM. It uniquely identifies that eIM in the
-         * eUICC list. The text is at most 128 bytes. A missing eimId yields
-         * commandError on DeleteEimResult.
-         *
-         * SGP.32 v1.2, sections 3.5.1.2 and 4.3.
-         * @public
-         * @readonly
-         */
-        readonly eimId: UTF8String
-    ) {}
+        eimId: UTF8String
+    ) {
+        this.eimId = eimId;
+    }
 
     /**
      * @summary Restructures an object into a Eco_deleteEim

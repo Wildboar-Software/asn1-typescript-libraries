@@ -46,7 +46,7 @@ export class BioAPI_BIR_ARRAY_POPULATION {
    * @public
    * @readonly
    */
-  readonly members: BioAPI_BIR[];
+  public readonly members: BioAPI_BIR[];
 
   constructor(
     members: BioAPI_BIR[]

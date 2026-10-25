@@ -1,7 +1,7 @@
 /* eslint-disable */
 import {
-    OPTIONAL,
-    ASN1Element as _Element,
+    type OPTIONAL,
+    type ASN1Element as _Element,
     ASN1TagClass as _TagClass,
     ASN1Construction as _Construction,
     ASN1UniversalType as _UniversalType,
@@ -12,7 +12,7 @@ import {
 } from '@wildboar/asn1';
 import * as $ from '@wildboar/asn1/functional';
 import {
-    Identifier,
+    type Identifier,
     _decode_Identifier,
     _encode_Identifier,
 } from '../DefinitionASN1Module/Identifier.ta.mjs';
@@ -37,26 +37,32 @@ import {
  *
  */
 export class DefinedType {
+    /**
+     * @summary `module_`.
+     * @description
+     *
+     * ASN.1 module of the type, if the reference is not unique in context.
+     * @public
+     * @readonly
+     */
+    public readonly module_: OPTIONAL<Identifier>;
+    /**
+     * @summary `reference`.
+     * @description
+     *
+     * ASN.1 type identifier.
+     * @public
+     * @readonly
+     */
+    public readonly reference: Identifier;
+
     constructor(
-        /**
-         * @summary `module_`.
-         * @description
-         *
-         * ASN.1 module of the type, if the reference is not unique in context.
-         * @public
-         * @readonly
-         */
-        readonly module_: OPTIONAL<Identifier>,
-        /**
-         * @summary `reference`.
-         * @description
-         *
-         * ASN.1 type identifier.
-         * @public
-         * @readonly
-         */
-        readonly reference: Identifier
-    ) {}
+        module_: OPTIONAL<Identifier>,
+        reference: Identifier
+    ) {
+        this.module_ = module_;
+        this.reference = reference;
+    }
 
     /**
      * @summary Restructures an object into a DefinedType

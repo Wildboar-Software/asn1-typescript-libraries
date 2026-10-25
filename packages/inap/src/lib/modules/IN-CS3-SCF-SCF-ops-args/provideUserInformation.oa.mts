@@ -3,9 +3,9 @@ import { type ERROR } from "../Remote-Operations-Information-Objects/ERROR.oca.m
 import { type OPERATION } from "../Remote-Operations-Information-Objects/OPERATION.oca.mjs";
 // export { Priority, _decode_Priority, _encode_Priority } from "../Remote-Operations-Information-Objects/Priority.ta.mjs";
 // export { Code, _decode_Code, _encode_Code } from "../Remote-Operations-Information-Objects/Code.ta.mjs";
-import { ProvideUserInformationArg, _decode_ProvideUserInformationArg, _encode_ProvideUserInformationArg } from "../IN-CS3-SCF-SCF-ops-args/ProvideUserInformationArg.ta.mjs";
+import { type ProvideUserInformationArg, _decode_ProvideUserInformationArg, _encode_ProvideUserInformationArg } from "../IN-CS3-SCF-SCF-ops-args/ProvideUserInformationArg.ta.mjs";
 // export { ProvideUserInformationArg, _decode_ProvideUserInformationArg, _encode_ProvideUserInformationArg } from "../IN-CS3-SCF-SCF-ops-args/ProvideUserInformationArg.ta.mjs";
-import { ProvideUserInformationResultArg, _decode_ProvideUserInformationResultArg, _encode_ProvideUserInformationResultArg } from "../IN-CS3-SCF-SCF-ops-args/ProvideUserInformationResultArg.ta.mjs";
+import { type ProvideUserInformationResultArg, _decode_ProvideUserInformationResultArg, _encode_ProvideUserInformationResultArg } from "../IN-CS3-SCF-SCF-ops-args/ProvideUserInformationResultArg.ta.mjs";
 // export { ProvideUserInformationResultArg, _decode_ProvideUserInformationResultArg, _encode_ProvideUserInformationResultArg } from "../IN-CS3-SCF-SCF-ops-args/ProvideUserInformationResultArg.ta.mjs";
 import { missingCustomerRecord } from "../IN-CS3-errortypes/missingCustomerRecord.oa.mjs";
 // export { missingCustomerRecord } from "../IN-CS3-errortypes/missingCustomerRecord.oa.mjs";

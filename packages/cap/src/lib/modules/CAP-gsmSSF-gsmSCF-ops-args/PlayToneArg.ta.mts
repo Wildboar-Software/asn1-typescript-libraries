@@ -1,7 +1,7 @@
 /* eslint-disable */
 import {
-    OPTIONAL,
-    ASN1Element as _Element,
+    type OPTIONAL,
+    type ASN1Element as _Element,
     ASN1TagClass as _TagClass,
     ASN1Construction as _Construction,
     ASN1UniversalType as _UniversalType,
@@ -30,7 +30,7 @@ import { type LegOrCallSegment, _decode_LegOrCallSegment, _encode_LegOrCallSegme
  * PlayToneArg {PARAMETERS-BOUND : bound} ::= SEQUENCE {
  *     legOrCallSegment            [0] LegOrCallSegment {bound},
  *     bursts                [1] Burst,
- *     extensions                [2] Extensions {bound}            OPTIONAL,
+ *     extensions                [2] Extensions {bound}            type OPTIONAL,
  *     ...
  *     }
  * ```
@@ -39,47 +39,57 @@ import { type LegOrCallSegment, _decode_LegOrCallSegment, _encode_LegOrCallSegme
  */
 export
 class PlayToneArg {
+    /**
+     * @summary `legOrCallSegment`.
+     * @description
+     *
+     * Leg or Call Segment to which PlayTone applies. (3GPP TS 29.078
+     * V19.0.0 clause 11.24.1.1).
+     *
+     * @public
+     * @readonly
+     */
+    public readonly legOrCallSegment: LegOrCallSegment;
+    /**
+     * @summary `bursts`.
+     * @description
+     *
+     * Variable sequence of tones. `numberOfBursts` (1..3, default 1);
+     * `burstInterval` between successive bursts (1..1200, default 2);
+     * `numberOfTonesInBurst` (1..3, default 3); `toneDuration` of a single
+     * tone (1..20, default 2); `toneInterval` between successive tones
+     * (1..20, default 2). `burstInterval`, `toneDuration`, and
+     * `toneInterval` are in 100 ms units. (3GPP TS 29.078 V19.0.0 clause
+     * 11.24.1.1).
+     *
+     * @public
+     * @readonly
+     */
+    public readonly bursts: Burst;
+    /**
+     * @summary `extensions`.
+     * @public
+     * @readonly
+     */
+    public readonly extensions?: OPTIONAL<Extensions>;
+    /**
+     * @summary Extensions that are not recognized.
+     * @public
+     * @readonly
+     */
+    public readonly _unrecognizedExtensionsList: _Element[];
+
     constructor (
-        /**
-         * @summary `legOrCallSegment`.
-         * @description
-         *
-         * Leg or Call Segment to which PlayTone applies. (3GPP TS 29.078
-         * V19.0.0 clause 11.24.1.1).
-         *
-         * @public
-         * @readonly
-         */
-        readonly legOrCallSegment: LegOrCallSegment,
-        /**
-         * @summary `bursts`.
-         * @description
-         *
-         * Variable sequence of tones. `numberOfBursts` (1..3, default 1);
-         * `burstInterval` between successive bursts (1..1200, default 2);
-         * `numberOfTonesInBurst` (1..3, default 3); `toneDuration` of a single
-         * tone (1..20, default 2); `toneInterval` between successive tones
-         * (1..20, default 2). `burstInterval`, `toneDuration`, and
-         * `toneInterval` are in 100 ms units. (3GPP TS 29.078 V19.0.0 clause
-         * 11.24.1.1).
-         *
-         * @public
-         * @readonly
-         */
-        readonly bursts: Burst,
-        /**
-         * @summary `extensions`.
-         * @public
-         * @readonly
-         */
-        readonly extensions?: OPTIONAL<Extensions>,
-        /**
-         * @summary Extensions that are not recognized.
-         * @public
-         * @readonly
-         */
-        readonly _unrecognizedExtensionsList: _Element[] = []
-    ) {}
+        legOrCallSegment: LegOrCallSegment,
+        bursts: Burst,
+        extensions?: OPTIONAL<Extensions>,
+        _unrecognizedExtensionsList: _Element[] = []
+    ) {
+        this.legOrCallSegment = legOrCallSegment;
+        this.bursts = bursts;
+        this.extensions = extensions;
+        this._unrecognizedExtensionsList = _unrecognizedExtensionsList;
+    }
 
     /**
      * @summary Restructures an object into a PlayToneArg

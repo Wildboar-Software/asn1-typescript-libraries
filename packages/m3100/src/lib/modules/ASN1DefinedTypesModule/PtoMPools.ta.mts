@@ -1,6 +1,6 @@
 /* eslint-disable */
 import {
-    ASN1Element as _Element,
+    type ASN1Element as _Element,
     ASN1TagClass as _TagClass,
     ASN1Construction as _Construction,
     ASN1UniversalType as _UniversalType,
@@ -11,12 +11,12 @@ import {
 } from '@wildboar/asn1';
 import * as $ from '@wildboar/asn1/functional';
 import {
-    ExplicitTP,
+    type ExplicitTP,
     _decode_ExplicitTP,
     _encode_ExplicitTP,
 } from '../ASN1DefinedTypesModule/ExplicitTP.ta.mjs';
 import {
-    ToTPPools,
+    type ToTPPools,
     _decode_ToTPPools,
     _encode_ToTPPools,
 } from '../ASN1DefinedTypesModule/ToTPPools.ta.mjs';
@@ -35,20 +35,26 @@ import {
  *
  */
 export class PtoMPools {
+    /**
+     * @summary `fromTp`.
+     * @public
+     * @readonly
+     */
+    public readonly fromTp: ExplicitTP;
+    /**
+     * @summary `toTPPools`.
+     * @public
+     * @readonly
+     */
+    public readonly toTPPools: ToTPPools;
+
     constructor(
-        /**
-         * @summary `fromTp`.
-         * @public
-         * @readonly
-         */
-        readonly fromTp: ExplicitTP,
-        /**
-         * @summary `toTPPools`.
-         * @public
-         * @readonly
-         */
-        readonly toTPPools: ToTPPools
-    ) {}
+        fromTp: ExplicitTP,
+        toTPPools: ToTPPools
+    ) {
+        this.fromTp = fromTp;
+        this.toTPPools = toTPPools;
+    }
 
     /**
      * @summary Restructures an object into a PtoMPools

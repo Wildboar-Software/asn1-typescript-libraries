@@ -1,6 +1,6 @@
 /* eslint-disable */
 import {
-    ASN1Element as _Element,
+    type ASN1Element as _Element,
     ASN1TagClass as _TagClass,
     ASN1Construction as _Construction,
     ASN1UniversalType as _UniversalType,
@@ -11,7 +11,7 @@ import {
 } from '@wildboar/asn1';
 import * as $ from '@wildboar/asn1/functional';
 import {
-    ORAddressAndOrDirectoryName,
+    type ORAddressAndOrDirectoryName,
     _decode_ORAddressAndOrDirectoryName,
     _encode_ORAddressAndOrDirectoryName,
 } from '../MTSAbstractService/ORAddressAndOrDirectoryName.ta.mjs';
@@ -30,22 +30,13 @@ import {
  */
 export type RecipientAssignedAlternateRecipient = ORAddressAndOrDirectoryName; // DefinedType
 
-let _cached_decoder_for_RecipientAssignedAlternateRecipient: $.ASN1Decoder<RecipientAssignedAlternateRecipient> | null = null;
-
 /**
  * @summary Decodes an ASN.1 element into a(n) RecipientAssignedAlternateRecipient
  * @function
  * @param {_Element} el The element being decoded.
  * @returns {RecipientAssignedAlternateRecipient} The decoded data structure.
  */
-export function _decode_RecipientAssignedAlternateRecipient(el: _Element): RecipientAssignedAlternateRecipient {
-    if (!_cached_decoder_for_RecipientAssignedAlternateRecipient) {
-        _cached_decoder_for_RecipientAssignedAlternateRecipient = _decode_ORAddressAndOrDirectoryName;
-    }
-    return _cached_decoder_for_RecipientAssignedAlternateRecipient(el);
-}
-
-let _cached_encoder_for_RecipientAssignedAlternateRecipient: $.ASN1Encoder<RecipientAssignedAlternateRecipient> | null = null;
+export const _decode_RecipientAssignedAlternateRecipient: $.ASN1Decoder<RecipientAssignedAlternateRecipient> = _decode_ORAddressAndOrDirectoryName;
 
 /**
  * @summary Encodes a(n) RecipientAssignedAlternateRecipient into an ASN.1 Element.
@@ -54,18 +45,7 @@ let _cached_encoder_for_RecipientAssignedAlternateRecipient: $.ASN1Encoder<Recip
  * @param elGetter A function that can be used to get new ASN.1 elements.
  * @returns {_Element} The RecipientAssignedAlternateRecipient, encoded as an ASN.1 Element.
  */
-export function _encode_RecipientAssignedAlternateRecipient(
-    value: RecipientAssignedAlternateRecipient,
-    elGetter: $.ASN1Encoder<RecipientAssignedAlternateRecipient>
-): _Element {
-    if (!_cached_encoder_for_RecipientAssignedAlternateRecipient) {
-        _cached_encoder_for_RecipientAssignedAlternateRecipient = _encode_ORAddressAndOrDirectoryName;
-    }
-    return _cached_encoder_for_RecipientAssignedAlternateRecipient(
-        value,
-        elGetter
-    );
-}
+export const _encode_RecipientAssignedAlternateRecipient: $.ASN1Encoder<RecipientAssignedAlternateRecipient> = _encode_ORAddressAndOrDirectoryName;
 
 
 /* eslint-enable */

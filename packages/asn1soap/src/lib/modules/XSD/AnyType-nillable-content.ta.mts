@@ -10,7 +10,7 @@ import {
   ASN1ConstructionError as _ConstructionError,
 } from '@wildboar/asn1';
 import * as $ from '@wildboar/asn1/functional';
-import { String, _decode_String, _encode_String } from '../XSD/String.ta.mjs';
+import { type String, _decode_String, _encode_String } from '../XSD/String.ta.mjs';
 
 /**
  * @summary AnyType_nillable_content
@@ -35,7 +35,7 @@ export class AnyType_nillable_content {
    * @public
    * @readonly
    */
-  readonly elem_list: String[];
+  public readonly elem_list: String[];
 
   constructor(
     elem_list: String[]

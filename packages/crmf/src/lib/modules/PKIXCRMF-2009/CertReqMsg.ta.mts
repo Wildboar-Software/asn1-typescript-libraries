@@ -1,8 +1,8 @@
 /* eslint-disable */
 import {
-    ASN1Element as _Element,
+    type ASN1Element as _Element,
     ASN1TagClass as _TagClass,
-    OPTIONAL,
+    type OPTIONAL,
 } from "@wildboar/asn1";
 import * as $ from "@wildboar/asn1/functional";
 import {
@@ -16,7 +16,7 @@ import {
     _encode_CertRequest,
 } from "../PKIXCRMF-2009/CertRequest.ta.mjs";
 import {
-    ProofOfPossession,
+    type ProofOfPossession,
     _decode_ProofOfPossession,
     _encode_ProofOfPossession,
 } from "../PKIXCRMF-2009/ProofOfPossession.ta.mjs";
@@ -47,47 +47,55 @@ import {
  *
  */
 export class CertReqMsg {
+    /**
+     * @summary `certReq`.
+     * @description
+     *
+     * Template of the certificate being requested, filled in by
+     * (or on behalf of) the Subject; not all template fields need
+     * be specified ([RFC 4211 §3](https://datatracker.ietf.org/doc/html/rfc4211#section-3), §5).
+     *
+     * @public
+     * @readonly
+     */
+    public readonly certReq: CertRequest;
+    /**
+     * @summary `popo`.
+     * @description
+     *
+     * Proof that the entity identified as Subject possesses the
+     * corresponding private key. Structure depends on public-key
+     * algorithm and intended key usage
+     * ([RFC 4211 §3](https://datatracker.ietf.org/doc/html/rfc4211#section-3), §4). Omit when POP is done
+     * out-of-band.
+     *
+     * @public
+     * @readonly
+     */
+    public readonly popo?: OPTIONAL<ProofOfPossession>;
+    /**
+     * @summary `regInfo`.
+     * @description
+     *
+     * Supplementary information for fulfilling the request (contact,
+     * billing, ancillary data). SHOULD NOT duplicate certificate
+     * content that belongs in `certReq` ([RFC 4211 §3](https://datatracker.ietf.org/doc/html/rfc4211#section-3)).
+     * Controls for this field: §7 (`utf8Pairs`, `certReq`).
+     *
+     * @public
+     * @readonly
+     */
+    public readonly regInfo?: OPTIONAL<SingleAttribute[]>;
+
     constructor(
-        /**
-         * @summary `certReq`.
-         * @description
-         *
-         * Template of the certificate being requested, filled in by
-         * (or on behalf of) the Subject; not all template fields need
-         * be specified ([RFC 4211 §3](https://datatracker.ietf.org/doc/html/rfc4211#section-3), §5).
-         *
-         * @public
-         * @readonly
-         */
-        readonly certReq: CertRequest,
-        /**
-         * @summary `popo`.
-         * @description
-         *
-         * Proof that the entity identified as Subject possesses the
-         * corresponding private key. Structure depends on public-key
-         * algorithm and intended key usage
-         * ([RFC 4211 §3](https://datatracker.ietf.org/doc/html/rfc4211#section-3), §4). Omit when POP is done
-         * out-of-band.
-         *
-         * @public
-         * @readonly
-         */
-        readonly popo?: OPTIONAL<ProofOfPossession>,
-        /**
-         * @summary `regInfo`.
-         * @description
-         *
-         * Supplementary information for fulfilling the request (contact,
-         * billing, ancillary data). SHOULD NOT duplicate certificate
-         * content that belongs in `certReq` ([RFC 4211 §3](https://datatracker.ietf.org/doc/html/rfc4211#section-3)).
-         * Controls for this field: §7 (`utf8Pairs`, `certReq`).
-         *
-         * @public
-         * @readonly
-         */
-        readonly regInfo?: OPTIONAL<SingleAttribute[]>
-    ) {}
+        certReq: CertRequest,
+        popo?: OPTIONAL<ProofOfPossession>,
+        regInfo?: OPTIONAL<SingleAttribute[]>
+    ) {
+        this.certReq = certReq;
+        this.popo = popo;
+        this.regInfo = regInfo;
+    }
 
     /**
      * @summary Restructures an object into a CertReqMsg

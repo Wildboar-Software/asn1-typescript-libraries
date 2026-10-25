@@ -1,12 +1,12 @@
 /* eslint-disable */
 import {
-    OPTIONAL,
-    ASN1Element as _Element,
+    type OPTIONAL,
+    type ASN1Element as _Element,
     ASN1TagClass as _TagClass
 } from "@wildboar/asn1";
 import * as $ from "@wildboar/asn1/functional";
-import { MSNetworkCapability, _decode_MSNetworkCapability, _encode_MSNetworkCapability } from "../MAP-MS-DataTypes/MSNetworkCapability.ta.mjs";
-import { MSRadioAccessCapability, _decode_MSRadioAccessCapability, _encode_MSRadioAccessCapability } from "../MAP-MS-DataTypes/MSRadioAccessCapability.ta.mjs";
+import { type MSNetworkCapability, _decode_MSNetworkCapability, _encode_MSNetworkCapability } from "../MAP-MS-DataTypes/MSNetworkCapability.ta.mjs";
+import { type MSRadioAccessCapability, _decode_MSRadioAccessCapability, _encode_MSRadioAccessCapability } from "../MAP-MS-DataTypes/MSRadioAccessCapability.ta.mjs";
 
 
 /**
@@ -30,30 +30,36 @@ import { MSRadioAccessCapability, _decode_MSRadioAccessCapability, _encode_MSRad
  */
 export
 class GPRSMSClass {
+    /**
+     * @summary `mSNetworkCapability`.
+     * @description
+     *
+     * MS Network Capability of the GPRS MS (3GPP TS 29.002 V19.1.0 clause
+     * 17.7.1).
+     *
+     * @public
+     * @readonly
+     */
+    public readonly mSNetworkCapability: MSNetworkCapability;
+    /**
+     * @summary `mSRadioAccessCapability`.
+     * @description
+     *
+     * MS Radio Access Capability of the GPRS MS (3GPP TS 29.002 V19.1.0
+     * clause 17.7.1).
+     *
+     * @public
+     * @readonly
+     */
+    public readonly mSRadioAccessCapability?: OPTIONAL<MSRadioAccessCapability>;
+
     constructor (
-        /**
-         * @summary `mSNetworkCapability`.
-         * @description
-         *
-         * MS Network Capability of the GPRS MS (3GPP TS 29.002 V19.1.0 clause
-         * 17.7.1).
-         *
-         * @public
-         * @readonly
-         */
-        readonly mSNetworkCapability: MSNetworkCapability,
-        /**
-         * @summary `mSRadioAccessCapability`.
-         * @description
-         *
-         * MS Radio Access Capability of the GPRS MS (3GPP TS 29.002 V19.1.0
-         * clause 17.7.1).
-         *
-         * @public
-         * @readonly
-         */
-        readonly mSRadioAccessCapability?: OPTIONAL<MSRadioAccessCapability>
-    ) {}
+        mSNetworkCapability: MSNetworkCapability,
+        mSRadioAccessCapability?: OPTIONAL<MSRadioAccessCapability>
+    ) {
+        this.mSNetworkCapability = mSNetworkCapability;
+        this.mSRadioAccessCapability = mSRadioAccessCapability;
+    }
 
     /**
      * @summary Restructures an object into a GPRSMSClass

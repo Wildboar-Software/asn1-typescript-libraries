@@ -1,8 +1,8 @@
 /* eslint-disable */
 import {
-    OPTIONAL,
-    OBJECT_IDENTIFIER,
-    ASN1Element as _Element,
+    type OPTIONAL,
+    type OBJECT_IDENTIFIER,
+    type ASN1Element as _Element,
     ASN1TagClass as _TagClass,
     ASN1Construction as _Construction,
     ASN1UniversalType as _UniversalType,
@@ -13,12 +13,12 @@ import {
 } from '@wildboar/asn1';
 import * as $ from '@wildboar/asn1/functional';
 import {
-    ObjectInstance,
+    type ObjectInstance,
     _decode_ObjectInstance,
     _encode_ObjectInstance,
 } from '@wildboar/cmip';
 import {
-    AttributeList,
+    type AttributeList,
     _decode_AttributeList,
     _encode_AttributeList,
 } from '@wildboar/attribute-asn1module';
@@ -38,59 +38,69 @@ import {
  *
  */
 export class TestObjectList_Item {
+    /**
+     * @summary `tOClass`.
+     * @description
+     *
+     * Managed object class of the TO to instantiate. Mandatory. ITU-T Rec.
+     * X.745 (11/93) §8.4.2.5.
+     * [§8.4.2.5](https://www.itu.int/rec/T-REC-X.745-199311-I)
+     *
+     * @public
+     * @readonly
+     */
+    public readonly tOClass: OBJECT_IDENTIFIER;
+    /**
+     * @summary `tOInstance`.
+     * @description
+     *
+     * Optional conductor-assigned TO name. Shall be omitted if
+     * scoping/filtering selects multiple TARRs. If omitted, the performer
+     * assigns the name and returns it. ITU-T Rec. X.745 (11/93) §9.5, A.4.
+     * [§9.5](https://www.itu.int/rec/T-REC-X.745-199311-I)
+     *
+     * @public
+     * @readonly
+     */
+    public readonly tOInstance?: OPTIONAL<ObjectInstance>;
+    /**
+     * @summary `referenceTOInstance`.
+     * @description
+     *
+     * Optional existing TO whose attributes seed this TO.
+     * initialAttributeList overrides those values. ITU-T Rec. X.745 (11/93)
+     * §A.7.2.
+     * [§A.7.2](https://www.itu.int/rec/T-REC-X.745-199311-I)
+     *
+     * @public
+     * @readonly
+     */
+    public readonly referenceTOInstance?: OPTIONAL<ObjectInstance>;
+    /**
+     * @summary `initialAttributeList`.
+     * @description
+     *
+     * Optional initial TO attributes. Overrides any referenceTOInstance
+     * values. A positive reply returns only those attributes the TO
+     * behaviour specifies. ITU-T Rec. X.745 (11/93) §A.7.2, 9.5.
+     * [§A.7.2](https://www.itu.int/rec/T-REC-X.745-199311-I)
+     *
+     * @public
+     * @readonly
+     */
+    public readonly initialAttributeList?: OPTIONAL<AttributeList>;
+
     constructor(
-        /**
-         * @summary `tOClass`.
-         * @description
-         *
-         * Managed object class of the TO to instantiate. Mandatory. ITU-T Rec.
-         * X.745 (11/93) §8.4.2.5.
-         * [§8.4.2.5](https://www.itu.int/rec/T-REC-X.745-199311-I)
-         *
-         * @public
-         * @readonly
-         */
-        readonly tOClass: OBJECT_IDENTIFIER,
-        /**
-         * @summary `tOInstance`.
-         * @description
-         *
-         * Optional conductor-assigned TO name. Shall be omitted if
-         * scoping/filtering selects multiple TARRs. If omitted, the performer
-         * assigns the name and returns it. ITU-T Rec. X.745 (11/93) §9.5, A.4.
-         * [§9.5](https://www.itu.int/rec/T-REC-X.745-199311-I)
-         *
-         * @public
-         * @readonly
-         */
-        readonly tOInstance?: OPTIONAL<ObjectInstance>,
-        /**
-         * @summary `referenceTOInstance`.
-         * @description
-         *
-         * Optional existing TO whose attributes seed this TO.
-         * initialAttributeList overrides those values. ITU-T Rec. X.745 (11/93)
-         * §A.7.2.
-         * [§A.7.2](https://www.itu.int/rec/T-REC-X.745-199311-I)
-         *
-         * @public
-         * @readonly
-         */
-        readonly referenceTOInstance?: OPTIONAL<ObjectInstance>,
-        /**
-         * @summary `initialAttributeList`.
-         * @description
-         *
-         * Optional initial TO attributes. Overrides any referenceTOInstance
-         * values. A positive reply returns only those attributes the TO
-         * behaviour specifies. ITU-T Rec. X.745 (11/93) §A.7.2, 9.5.
-         * [§A.7.2](https://www.itu.int/rec/T-REC-X.745-199311-I)
-         *
-         * @public
-         * @readonly
-         */
-        readonly initialAttributeList?: OPTIONAL<AttributeList>
-    ) {}
+        tOClass: OBJECT_IDENTIFIER,
+        tOInstance?: OPTIONAL<ObjectInstance>,
+        referenceTOInstance?: OPTIONAL<ObjectInstance>,
+        initialAttributeList?: OPTIONAL<AttributeList>
+    ) {
+        this.tOClass = tOClass;
+        this.tOInstance = tOInstance;
+        this.referenceTOInstance = referenceTOInstance;
+        this.initialAttributeList = initialAttributeList;
+    }
 
     /**
      * @summary Restructures an object into a TestObjectList_Item

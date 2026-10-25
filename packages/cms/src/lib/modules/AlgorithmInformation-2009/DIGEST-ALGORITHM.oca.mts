@@ -1,7 +1,7 @@
 /* eslint-disable */
-import { OBJECT_IDENTIFIER } from "@wildboar/asn1";
+import { type OBJECT_IDENTIFIER } from "@wildboar/asn1";
 import * as $ from "@wildboar/asn1/functional";
-import { ParamOptions } from "../AlgorithmInformation-2009/ParamOptions.ta.mjs";
+import { type ParamOptions } from "../AlgorithmInformation-2009/ParamOptions.ta.mjs";
 
 /**
  * @summary DIGEST_ALGORITHM
@@ -19,7 +19,7 @@ import { ParamOptions } from "../AlgorithmInformation-2009/ParamOptions.ta.mjs";
  * ```asn1
  * DIGEST-ALGORITHM ::= CLASS {
  * &id                OBJECT IDENTIFIER UNIQUE,
- * &Params        OPTIONAL,
+ * &Params        type OPTIONAL,
  * &paramPresence    ParamOptions DEFAULT absent
  * } WITH SYNTAX {
  * IDENTIFIER &id

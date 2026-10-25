@@ -1,11 +1,11 @@
 /* eslint-disable */
 import {
-    NULL,
-    ASN1Element as _Element,
+    type NULL,
+    type ASN1Element as _Element,
     ASN1TagClass as _TagClass
 } from "@wildboar/asn1";
 import * as $ from "@wildboar/asn1/functional";
-import { AgeIndicator, _decode_AgeIndicator, _encode_AgeIndicator } from "../MAP-MS-DataTypes/AgeIndicator.ta.mjs";
+import { type AgeIndicator, _decode_AgeIndicator, _encode_AgeIndicator } from "../MAP-MS-DataTypes/AgeIndicator.ta.mjs";
 
 
 /**

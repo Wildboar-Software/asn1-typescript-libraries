@@ -1,6 +1,6 @@
 /* eslint-disable */
 import {
-    ASN1Element as _Element,
+    type ASN1Element as _Element,
     ASN1TagClass as _TagClass,
     ASN1Construction as _Construction,
     ASN1UniversalType as _UniversalType,
@@ -11,12 +11,12 @@ import {
 } from '@wildboar/asn1';
 import * as $ from '@wildboar/asn1/functional';
 import {
-    ORAddressFilter_attribute_type,
+    type ORAddressFilter_attribute_type,
     _decode_ORAddressFilter_attribute_type,
     _encode_ORAddressFilter_attribute_type,
 } from '../MHSRoutingORAddressSubtree/ORAddressFilter-attribute-type.ta.mjs';
 import {
-    ExtendedRegularExpression,
+    type ExtendedRegularExpression,
     _decode_ExtendedRegularExpression,
     _encode_ExtendedRegularExpression,
 } from '../MHSRoutingORAddressSubtree/ExtendedRegularExpression.ta.mjs';
@@ -43,20 +43,26 @@ import {
  *
  */
 export class ORAddressFilter {
+    /**
+     * @summary `attribute_type`.
+     * @public
+     * @readonly
+     */
+    public readonly attribute_type: ORAddressFilter_attribute_type;
+    /**
+     * @summary `pattern`.
+     * @public
+     * @readonly
+     */
+    public readonly pattern: ExtendedRegularExpression;
+
     constructor(
-        /**
-         * @summary `attribute_type`.
-         * @public
-         * @readonly
-         */
-        readonly attribute_type: ORAddressFilter_attribute_type,
-        /**
-         * @summary `pattern`.
-         * @public
-         * @readonly
-         */
-        readonly pattern: ExtendedRegularExpression
-    ) {}
+        attribute_type: ORAddressFilter_attribute_type,
+        pattern: ExtendedRegularExpression
+    ) {
+        this.attribute_type = attribute_type;
+        this.pattern = pattern;
+    }
 
     /**
      * @summary Restructures an object into a ORAddressFilter

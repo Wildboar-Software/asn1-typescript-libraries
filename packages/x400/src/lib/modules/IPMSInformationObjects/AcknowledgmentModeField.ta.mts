@@ -1,6 +1,6 @@
 /* eslint-disable */
 import {
-    ASN1Element as _Element,
+    type ASN1Element as _Element,
     ASN1TagClass as _TagClass,
     ASN1Construction as _Construction,
     ASN1UniversalType as _UniversalType,
@@ -56,14 +56,14 @@ export type AcknowledgmentModeField = _enum_for_AcknowledgmentModeField;
  *
  * @enum {number}
  */
-export const AcknowledgmentModeField = _enum_for_AcknowledgmentModeField;
+export const AcknowledgmentModeField: typeof _enum_for_AcknowledgmentModeField = _enum_for_AcknowledgmentModeField;
 
 /**
  * @summary AcknowledgmentModeField_manual
  * @constant
  * @type {number}
  */
-export const AcknowledgmentModeField_manual: AcknowledgmentModeField =
+export const AcknowledgmentModeField_manual: _enum_for_AcknowledgmentModeField.manual =
     AcknowledgmentModeField.manual; /* LONG_NAMED_ENUMERATED_VALUE */
 
 /**
@@ -71,7 +71,7 @@ export const AcknowledgmentModeField_manual: AcknowledgmentModeField =
  * @constant
  * @type {number}
  */
-export const manual: AcknowledgmentModeField =
+export const manual: _enum_for_AcknowledgmentModeField.manual =
     AcknowledgmentModeField.manual; /* SHORT_NAMED_ENUMERATED_VALUE */
 
 /**
@@ -79,7 +79,7 @@ export const manual: AcknowledgmentModeField =
  * @constant
  * @type {number}
  */
-export const AcknowledgmentModeField_automatic: AcknowledgmentModeField =
+export const AcknowledgmentModeField_automatic: _enum_for_AcknowledgmentModeField.automatic =
     AcknowledgmentModeField.automatic; /* LONG_NAMED_ENUMERATED_VALUE */
 
 /**
@@ -87,14 +87,25 @@ export const AcknowledgmentModeField_automatic: AcknowledgmentModeField =
  * @constant
  * @type {number}
  */
-export const automatic: AcknowledgmentModeField =
+export const automatic: _enum_for_AcknowledgmentModeField.automatic =
     AcknowledgmentModeField.automatic; /* SHORT_NAMED_ENUMERATED_VALUE */
 
 
-export const _decode_AcknowledgmentModeField = $._decodeEnumerated;
+export function _decode_AcknowledgmentModeField(el: _Element): AcknowledgmentModeField {
+    const enumerated = $._decodeEnumerated(el);
+    switch (enumerated) {
+        case AcknowledgmentModeField.manual: return AcknowledgmentModeField.manual;
+        case AcknowledgmentModeField.automatic: return AcknowledgmentModeField.automatic;
+        default:
+            throw new _ConstructionError(
+                'Invalid ENUMERATED value ' + enumerated + ' for AcknowledgmentModeField.',
+                el,
+            );
+    }
+}
 
 
-export const _encode_AcknowledgmentModeField = $._encodeEnumerated;
+export const _encode_AcknowledgmentModeField: $.ASN1Encoder<AcknowledgmentModeField> = $._encodeEnumerated as $.ASN1Encoder<AcknowledgmentModeField>;
 
 
 /* eslint-enable */

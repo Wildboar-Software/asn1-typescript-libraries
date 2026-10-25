@@ -1,10 +1,10 @@
 /* eslint-disable */
 import {
-    ASN1Element as _Element,
+    type ASN1Element as _Element,
     ASN1SizeError
 } from "@wildboar/asn1";
 import * as $ from "@wildboar/asn1/functional";
-import { _decode_Ext_BasicServiceCode, _encode_Ext_BasicServiceCode, Ext_BasicServiceCode } from "../MAP-CommonDataTypes/Ext-BasicServiceCode.ta.mjs";
+import { _decode_Ext_BasicServiceCode, _encode_Ext_BasicServiceCode, type Ext_BasicServiceCode } from "../MAP-CommonDataTypes/Ext-BasicServiceCode.ta.mjs";
 
 
 import { maxNumOfCamelBasicServiceCriteria } from "./maxNumOfCamelBasicServiceCriteria.va.mjs";

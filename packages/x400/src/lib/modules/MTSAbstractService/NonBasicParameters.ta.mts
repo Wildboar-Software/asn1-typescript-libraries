@@ -1,7 +1,7 @@
 /* eslint-disable */
 import {
-    OPTIONAL,
-    ASN1Element as _Element,
+    type OPTIONAL,
+    type ASN1Element as _Element,
     ASN1TagClass as _TagClass,
     ASN1Construction as _Construction,
     ASN1UniversalType as _UniversalType,
@@ -12,7 +12,7 @@ import {
 } from '@wildboar/asn1';
 import * as $ from '@wildboar/asn1/functional';
 import {
-    G3FacsimileNonBasicParameters,
+    type G3FacsimileNonBasicParameters,
     _decode_G3FacsimileNonBasicParameters,
     _encode_G3FacsimileNonBasicParameters,
 } from '../MTSAbstractService/G3FacsimileNonBasicParameters.ta.mjs';
@@ -38,20 +38,26 @@ import {
  *
  */
 export class NonBasicParameters {
+    /**
+     * @summary `g3_facsimile`.
+     * @public
+     * @readonly
+     */
+    public readonly g3_facsimile?: OPTIONAL<G3FacsimileNonBasicParameters>;
+    /**
+     * @summary `teletex`.
+     * @public
+     * @readonly
+     */
+    public readonly teletex?: OPTIONAL<TeletexNonBasicParameters>;
+
     constructor(
-        /**
-         * @summary `g3_facsimile`.
-         * @public
-         * @readonly
-         */
-        readonly g3_facsimile?: OPTIONAL<G3FacsimileNonBasicParameters>,
-        /**
-         * @summary `teletex`.
-         * @public
-         * @readonly
-         */
-        readonly teletex?: OPTIONAL<TeletexNonBasicParameters>
-    ) {}
+        g3_facsimile?: OPTIONAL<G3FacsimileNonBasicParameters>,
+        teletex?: OPTIONAL<TeletexNonBasicParameters>
+    ) {
+        this.g3_facsimile = g3_facsimile;
+        this.teletex = teletex;
+    }
 
     /**
      * @summary Restructures an object into a NonBasicParameters

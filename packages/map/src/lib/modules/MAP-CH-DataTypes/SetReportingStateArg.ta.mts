@@ -1,13 +1,13 @@
 /* eslint-disable */
 import {
-    OPTIONAL,
-    ASN1Element as _Element,
+    type OPTIONAL,
+    type ASN1Element as _Element,
     ASN1TagClass as _TagClass
 } from "@wildboar/asn1";
 import * as $ from "@wildboar/asn1/functional";
-import { ReportingState, _decode_ReportingState, _encode_ReportingState, _enum_for_ReportingState } from "../MAP-CH-DataTypes/ReportingState.ta.mjs";
-import { IMSI, _decode_IMSI, _encode_IMSI } from "../MAP-CommonDataTypes/IMSI.ta.mjs";
-import { LMSI, _decode_LMSI, _encode_LMSI } from "../MAP-CommonDataTypes/LMSI.ta.mjs";
+import { type ReportingState, _decode_ReportingState, _encode_ReportingState, _enum_for_ReportingState } from "../MAP-CH-DataTypes/ReportingState.ta.mjs";
+import { type IMSI, _decode_IMSI, _encode_IMSI } from "../MAP-CommonDataTypes/IMSI.ta.mjs";
+import { type LMSI, _decode_LMSI, _encode_LMSI } from "../MAP-CommonDataTypes/LMSI.ta.mjs";
 import { ExtensionContainer, _decode_ExtensionContainer, _encode_ExtensionContainer } from "../MAP-ExtensionDataTypes/ExtensionContainer.ta.mjs";
 
 
@@ -22,10 +22,10 @@ import { ExtensionContainer, _decode_ExtensionContainer, _encode_ExtensionContai
  * 
  * ```asn1
  * SetReportingStateArg ::= SEQUENCE {
- *     imsi    [0]    IMSI    OPTIONAL,
- *     lmsi    [1]    LMSI    OPTIONAL,
- *     ccbs-Monitoring    [2]    ReportingState    OPTIONAL,
- *     extensionContainer    [3]    ExtensionContainer    OPTIONAL,
+ *     imsi    [0]    IMSI    type OPTIONAL,
+ *     lmsi    [1]    LMSI    type OPTIONAL,
+ *     ccbs-Monitoring    [2]    ReportingState    type OPTIONAL,
+ *     extensionContainer    [3]    ExtensionContainer    type OPTIONAL,
  *     ...}
  * ```
  * 
@@ -33,54 +33,66 @@ import { ExtensionContainer, _decode_ExtensionContainer, _encode_ExtensionContai
  */
 export
 class SetReportingStateArg {
+    /**
+     * @summary `imsi`.
+     * @description
+     *
+     * Subscriber IMSI.
+     *
+     * @public
+     * @readonly
+     */
+    public readonly imsi?: OPTIONAL<IMSI>;
+    /**
+     * @summary `lmsi`.
+     * @description
+     *
+     * LMSI.
+     *
+     * @public
+     * @readonly
+     */
+    public readonly lmsi?: OPTIONAL<LMSI>;
+    /**
+     * @summary `ccbs_Monitoring`.
+     * @description
+     *
+     * Start or stop CCBS monitoring.
+     *
+     * @public
+     * @readonly
+     */
+    public readonly ccbs_Monitoring?: OPTIONAL<ReportingState>;
+    /**
+     * @summary `extensionContainer`.
+     * @description
+     *
+     * Private or PCS extensions (3GPP TS 29.002 V19.1.0 clause 17.7.11).
+     *
+     * @public
+     * @readonly
+     */
+    public readonly extensionContainer?: OPTIONAL<ExtensionContainer>;
+    /**
+     * @summary Extensions that are not recognized.
+     * @public
+     * @readonly
+     */
+    public readonly _unrecognizedExtensionsList: _Element[];
+
     constructor (
-        /**
-         * @summary `imsi`.
-         * @description
-         *
-         * Subscriber IMSI.
-         *
-         * @public
-         * @readonly
-         */
-        readonly imsi?: OPTIONAL<IMSI>,
-        /**
-         * @summary `lmsi`.
-         * @description
-         *
-         * LMSI.
-         *
-         * @public
-         * @readonly
-         */
-        readonly lmsi?: OPTIONAL<LMSI>,
-        /**
-         * @summary `ccbs_Monitoring`.
-         * @description
-         *
-         * Start or stop CCBS monitoring.
-         *
-         * @public
-         * @readonly
-         */
-        readonly ccbs_Monitoring?: OPTIONAL<ReportingState>,
-        /**
-         * @summary `extensionContainer`.
-         * @description
-         *
-         * Private or PCS extensions (3GPP TS 29.002 V19.1.0 clause 17.7.11).
-         *
-         * @public
-         * @readonly
-         */
-        readonly extensionContainer?: OPTIONAL<ExtensionContainer>,
-        /**
-         * @summary Extensions that are not recognized.
-         * @public
-         * @readonly
-         */
-        readonly _unrecognizedExtensionsList: _Element[] = []
-    ) {}
+        imsi?: OPTIONAL<IMSI>,
+        lmsi?: OPTIONAL<LMSI>,
+        ccbs_Monitoring?: OPTIONAL<ReportingState>,
+        extensionContainer?: OPTIONAL<ExtensionContainer>,
+        _unrecognizedExtensionsList: _Element[] = []
+    ) {
+        this.imsi = imsi;
+        this.lmsi = lmsi;
+        this.ccbs_Monitoring = ccbs_Monitoring;
+        this.extensionContainer = extensionContainer;
+        this._unrecognizedExtensionsList = _unrecognizedExtensionsList;
+    }
 
     /**
      * @summary Restructures an object into a SetReportingStateArg
@@ -104,7 +116,7 @@ class SetReportingStateArg {
          * @static
          */
 
-    public static _enum_for_ccbs_Monitoring = _enum_for_ReportingState;
+    public static _enum_for_ccbs_Monitoring: typeof _enum_for_ReportingState = _enum_for_ReportingState;
 }
 
 /**

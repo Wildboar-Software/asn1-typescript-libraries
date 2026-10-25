@@ -1,13 +1,13 @@
 /* eslint-disable */
 import {
-    OPTIONAL,
-    ASN1Element as _Element,
+    type OPTIONAL,
+    type ASN1Element as _Element,
     ASN1TagClass as _TagClass
 } from "@wildboar/asn1";
 import * as $ from "@wildboar/asn1/functional";
 import { PropertyParm, _decode_PropertyParm, _encode_PropertyParm } from "../MEDIA-GATEWAY-CONTROL/PropertyParm.ta.mjs";
-import { EventBufferControl, _decode_EventBufferControl, _encode_EventBufferControl, _enum_for_EventBufferControl } from "../MEDIA-GATEWAY-CONTROL/EventBufferControl.ta.mjs";
-import { ServiceState, _decode_ServiceState, _encode_ServiceState, _enum_for_ServiceState } from "../MEDIA-GATEWAY-CONTROL/ServiceState.ta.mjs";
+import { type EventBufferControl, _decode_EventBufferControl, _encode_EventBufferControl, _enum_for_EventBufferControl } from "../MEDIA-GATEWAY-CONTROL/EventBufferControl.ta.mjs";
+import { type ServiceState, _decode_ServiceState, _encode_ServiceState, _enum_for_ServiceState } from "../MEDIA-GATEWAY-CONTROL/ServiceState.ta.mjs";
 
 
 /**
@@ -49,7 +49,7 @@ class TerminationStateDescriptor {
      * @public
      * @readonly
      */
-    readonly propertyParms: PropertyParm[];
+    public readonly propertyParms: PropertyParm[];
     /**
      * @summary `eventBufferControl`.
      * @description
@@ -60,7 +60,7 @@ class TerminationStateDescriptor {
      * @public
      * @readonly
      */
-    readonly eventBufferControl?: OPTIONAL<EventBufferControl>;
+    public readonly eventBufferControl?: OPTIONAL<EventBufferControl>;
     /**
      * @summary `serviceState`.
      * @description
@@ -71,7 +71,7 @@ class TerminationStateDescriptor {
      * @public
      * @readonly
      */
-    readonly serviceState?: OPTIONAL<ServiceState>;
+    public readonly serviceState?: OPTIONAL<ServiceState>;
     /**
      * @summary Extensions that are not recognized.
      * @description
@@ -82,7 +82,7 @@ class TerminationStateDescriptor {
      * @public
      * @readonly
      */
-    readonly _unrecognizedExtensionsList: _Element[];
+    public readonly _unrecognizedExtensionsList: _Element[];
 
     constructor (
         propertyParms: PropertyParm[],
@@ -118,13 +118,13 @@ class TerminationStateDescriptor {
          * @static
          */
 
-    public static _enum_for_eventBufferControl = _enum_for_EventBufferControl;        /**
+    public static _enum_for_eventBufferControl: typeof _enum_for_EventBufferControl = _enum_for_EventBufferControl;        /**
          * @summary The enum used as the type of the component `serviceState`
          * @public
          * @static
          */
 
-    public static _enum_for_serviceState = _enum_for_ServiceState;
+    public static _enum_for_serviceState: typeof _enum_for_ServiceState = _enum_for_ServiceState;
 }
 
 /**

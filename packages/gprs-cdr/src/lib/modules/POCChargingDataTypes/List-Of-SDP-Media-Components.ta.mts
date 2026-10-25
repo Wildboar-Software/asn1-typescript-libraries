@@ -1,18 +1,18 @@
 /* eslint-disable */
 import {
-    GraphicString,
-    INTEGER,
-    NULL,
-    OCTET_STRING,
-    OPTIONAL,
-    ASN1Element as _Element,
+    type GraphicString,
+    type INTEGER,
+    type NULL,
+    type OCTET_STRING,
+    type OPTIONAL,
+    type ASN1Element as _Element,
     ASN1TagClass as _TagClass,
     ASN1SizeError,
     ASN1OverflowError
 } from "@wildboar/asn1";
 import * as $ from "@wildboar/asn1/functional";
 import { SDP_Media_Components, _decode_SDP_Media_Components, _encode_SDP_Media_Components } from "../POCChargingDataTypes/SDP-Media-Components.ta.mjs";
-import { InvolvedParty, _decode_InvolvedParty, _encode_InvolvedParty } from "../POCChargingDataTypes/InvolvedParty.ta.mjs";
+import { type InvolvedParty, _decode_InvolvedParty, _encode_InvolvedParty } from "../POCChargingDataTypes/InvolvedParty.ta.mjs";
 import { List_Of_SDP_Media_Components_sDP_Type, _decode_List_Of_SDP_Media_Components_sDP_Type, _encode_List_Of_SDP_Media_Components_sDP_Type, _enum_for_List_Of_SDP_Media_Components_sDP_Type } from "../POCChargingDataTypes/List-Of-SDP-Media-Components-sDP-Type.ta.mjs";
 
 
@@ -242,7 +242,7 @@ class List_Of_SDP_Media_Components {
          * @static
          */
 
-    public static _enum_for_sDP_Type = _enum_for_List_Of_SDP_Media_Components_sDP_Type;
+    public static _enum_for_sDP_Type: typeof _enum_for_List_Of_SDP_Media_Components_sDP_Type = _enum_for_List_Of_SDP_Media_Components_sDP_Type;
 }
 
 /**

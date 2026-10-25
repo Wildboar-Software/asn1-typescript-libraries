@@ -1,6 +1,6 @@
 /* eslint-disable */
 import {
-    ASN1Element as _Element,
+    type ASN1Element as _Element,
     ASN1TagClass as _TagClass,
     ASN1Construction as _Construction,
     ASN1UniversalType as _UniversalType,
@@ -10,7 +10,7 @@ import {
     ASN1ConstructionError as _ConstructionError,
 } from "@wildboar/asn1";
 import * as $ from "@wildboar/asn1/functional";
-import { Digits, _decode_Digits, _encode_Digits } from "../Core-INAP-CS1-DataTypes/Digits.ta.mjs";
+import { type Digits, _decode_Digits, _encode_Digits } from "../Core-INAP-CS1-DataTypes/Digits.ta.mjs";
 import { GapOnService, _decode_GapOnService, _encode_GapOnService } from "../Core-INAP-CS1-DataTypes/GapOnService.ta.mjs";
 import { GapCriteria_calledAddressAndService, _decode_GapCriteria_calledAddressAndService, _encode_GapCriteria_calledAddressAndService } from "../Core-INAP-CS1-DataTypes/GapCriteria-calledAddressAndService.ta.mjs";
 import { GapCriteria_callingAddressAndService, _decode_GapCriteria_callingAddressAndService, _encode_GapCriteria_callingAddressAndService } from "../Core-INAP-CS1-DataTypes/GapCriteria-callingAddressAndService.ta.mjs";

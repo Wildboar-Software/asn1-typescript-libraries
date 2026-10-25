@@ -1,8 +1,8 @@
 /* eslint-disable */
 import {
-    ASN1Element as _Element,
+    type ASN1Element as _Element,
     ASN1TagClass as _TagClass,
-    OPTIONAL,
+    type OPTIONAL,
 } from "@wildboar/asn1";
 import * as $ from "@wildboar/asn1/functional";
 import {
@@ -11,23 +11,23 @@ import {
     _encode_AlgorithmIdentifier,
 } from "../AuthenticationFramework/AlgorithmIdentifier.ta.mjs";
 import {
-    PkiPath,
+    type PkiPath,
     _decode_PkiPath,
     _encode_PkiPath,
 } from "../AuthenticationFramework/PkiPath.ta.mjs";
 import {
     v1 /* IMPORTED_SHORT_NAMED_INTEGER */,
-    Version,
+    type Version,
     _decode_Version,
     _encode_Version,
 } from "../AuthenticationFramework/Version.ta.mjs";
 import {
-    SignedAttributes,
+    type SignedAttributes,
     _decode_SignedAttributes,
     _encode_SignedAttributes,
 } from "../PkiPmiWrapper/SignedAttributes.ta.mjs";
 import {
-    TBSPDU_wrapper_conf,
+    type TBSPDU_wrapper_conf,
     _decode_TBSPDU_wrapper_conf,
     _encode_TBSPDU_wrapper_conf,
 } from "../PkiPmiWrapper/TBSPDU-wrapper-conf.ta.mjs";
@@ -60,67 +60,81 @@ import {
  *
  */
 export class TBSPDU_wrapper {
+    /**
+     * @summary `version`.
+     * @description
+     *
+     * AuthenticationFramework INTEGER Version DEFAULT v1 — not the
+     * X.510 Wrapper BIT STRING Version.
+     *
+     * @public
+     * @readonly
+     */
+    public readonly version: OPTIONAL<Version>;
+    /**
+     * @summary `signatureAlgorithm`.
+     * @description
+     *
+     * Constrained to `SupportedSignatureAlgorithms`.
+     *
+     * @public
+     * @readonly
+     */
+    public readonly signatureAlgorithm: AlgorithmIdentifier;
+    /**
+     * @summary `certPath`.
+     * @description
+     *
+     * [0] IMPLICIT PkiPath — required.
+     *
+     * @public
+     * @readonly
+     */
+    public readonly certPath: PkiPath;
+    /**
+     * @summary `signedAttrs`.
+     * @description
+     *
+     * [1] IMPLICIT OPTIONAL. SET SIZE (1..MAX) — empty illegal; only
+     * `contentType` | `messageDigest` (RFC 5652 / PKCS #9).
+     *
+     * @public
+     * @readonly
+     */
+    public readonly signedAttrs: OPTIONAL<SignedAttributes>;
+    /**
+     * @summary `conf`.
+     * @description
+     *
+     * `clear` WrappedPDUInfo vs `protected` EncryptedInfo (DH +
+     * encrypted PDU). TS alternative is `protected_`.
+     *
+     * @public
+     * @readonly
+     */
+    public readonly conf: TBSPDU_wrapper_conf;
+    /**
+     * @summary Extensions that are not recognized.
+     * @public
+     * @readonly
+     */
+    public readonly _unrecognizedExtensionsList: _Element[];
+
     constructor(
-        /**
-         * @summary `version`.
-         * @description
-         *
-         * AuthenticationFramework INTEGER Version DEFAULT v1 — not the
-         * X.510 Wrapper BIT STRING Version.
-         *
-         * @public
-         * @readonly
-         */
-        readonly version: OPTIONAL<Version>,
-        /**
-         * @summary `signatureAlgorithm`.
-         * @description
-         *
-         * Constrained to `SupportedSignatureAlgorithms`.
-         *
-         * @public
-         * @readonly
-         */
-        readonly signatureAlgorithm: AlgorithmIdentifier,
-        /**
-         * @summary `certPath`.
-         * @description
-         *
-         * [0] IMPLICIT PkiPath — required.
-         *
-         * @public
-         * @readonly
-         */
-        readonly certPath: PkiPath,
-        /**
-         * @summary `signedAttrs`.
-         * @description
-         *
-         * [1] IMPLICIT OPTIONAL. SET SIZE (1..MAX) — empty illegal; only
-         * `contentType` | `messageDigest` (RFC 5652 / PKCS #9).
-         *
-         * @public
-         * @readonly
-         */
-        readonly signedAttrs: OPTIONAL<SignedAttributes>,
-        /**
-         * @summary `conf`.
-         * @description
-         *
-         * `clear` WrappedPDUInfo vs `protected` EncryptedInfo (DH +
-         * encrypted PDU). TS alternative is `protected_`.
-         *
-         * @public
-         * @readonly
-         */
-        readonly conf: TBSPDU_wrapper_conf,
-        /**
-         * @summary Extensions that are not recognized.
-         * @public
-         * @readonly
-         */
-        readonly _unrecognizedExtensionsList: _Element[] = []
-    ) {}
+        version: OPTIONAL<Version>,
+        signatureAlgorithm: AlgorithmIdentifier,
+        certPath: PkiPath,
+        signedAttrs: OPTIONAL<SignedAttributes>,
+        conf: TBSPDU_wrapper_conf,
+        _unrecognizedExtensionsList: _Element[] = []
+    ) {
+        this.version = version;
+        this.signatureAlgorithm = signatureAlgorithm;
+        this.certPath = certPath;
+        this.signedAttrs = signedAttrs;
+        this.conf = conf;
+        this._unrecognizedExtensionsList = _unrecognizedExtensionsList;
+    }
 
     /**
      * @summary Restructures an object into a TBSPDU_wrapper

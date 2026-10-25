@@ -3,17 +3,17 @@ import { ASN1Element as _Element, ASN1TagClass as _TagClass } from "@wildboar/as
 import * as $ from "@wildboar/asn1/functional";
 import { type ERROR, type OPERATION } from "@wildboar/rose";
 import {
-    OPTIONALLY_PROTECTED,
+    type OPTIONALLY_PROTECTED,
     _get_decoder_for_OPTIONALLY_PROTECTED,
     _get_encoder_for_OPTIONALLY_PROTECTED,
 } from "../EnhancedSecurity/OPTIONALLY-PROTECTED.ta.mjs";
 import {
-    IN_ChainingArguments,
+    type IN_ChainingArguments,
     _decode_IN_ChainingArguments,
     _encode_IN_ChainingArguments,
 } from "../IN-CS3-SDF-SDF-Operations/IN-ChainingArguments.ta.mjs";
 import {
-    IN_ChainingResults,
+    type IN_ChainingResults,
     _decode_IN_ChainingResults,
     _encode_IN_ChainingResults,
 } from "../IN-CS3-SDF-SDF-Operations/IN-ChainingResults.ta.mjs";
@@ -92,7 +92,7 @@ function _encode_InChainedArgument<Argument>(
 ): $.ASN1Encoder<InChainedArgument<Argument>> {
     return (value: InChainedArgument<Argument>, elGetter: $.ASN1Encoder<InChainedArgument<Argument>>): _Element => {
         const components: _Element[] = [
-            _encode_IN_ChainingArguments(value.in_chainedArgument, elGetter),
+            _encode_IN_ChainingArguments(value.in_chainedArgument, elGetter as unknown as $.ASN1Encoder<IN_ChainingArguments>),
         ];
         if (encodeArgument) {
             components.push(
@@ -129,7 +129,7 @@ function _encode_InChainedResult<Result>(
 ): $.ASN1Encoder<InChainedResult<Result>> {
     return (value: InChainedResult<Result>, elGetter: $.ASN1Encoder<InChainedResult<Result>>): _Element => {
         const components: _Element[] = [
-            _encode_IN_ChainingResults(value.in_chainedResult, elGetter),
+            _encode_IN_ChainingResults(value.in_chainedResult, elGetter as unknown as $.ASN1Encoder<IN_ChainingResults>),
         ];
         if (encodeResult) {
             components.push(

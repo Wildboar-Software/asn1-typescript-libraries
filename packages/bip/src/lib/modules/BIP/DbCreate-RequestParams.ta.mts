@@ -11,22 +11,22 @@ import {
 } from '@wildboar/asn1';
 import * as $ from '@wildboar/asn1/functional';
 import {
-  BioAPI_HANDLE,
+  type BioAPI_HANDLE,
   _decode_BioAPI_HANDLE,
   _encode_BioAPI_HANDLE,
 } from '../BIP/BioAPI-HANDLE.ta.mjs';
 import {
-  BioAPI_UUID,
+  type BioAPI_UUID,
   _decode_BioAPI_UUID,
   _encode_BioAPI_UUID,
 } from '../BIP/BioAPI-UUID.ta.mjs';
 import {
-  UnsignedInt,
+  type UnsignedInt,
   _decode_UnsignedInt,
   _encode_UnsignedInt,
 } from '../BIP/UnsignedInt.ta.mjs';
 import {
-  BioAPI_DB_ACCESS_TYPE,
+  type BioAPI_DB_ACCESS_TYPE,
   _decode_BioAPI_DB_ACCESS_TYPE,
   _encode_BioAPI_DB_ACCESS_TYPE,
 } from '../BIP/BioAPI-DB-ACCESS-TYPE.ta.mjs';
@@ -67,7 +67,7 @@ export class DbCreate_RequestParams {
    * @public
    * @readonly
    */
-  readonly originalBSPHandle: BioAPI_HANDLE;
+  public readonly originalBSPHandle: BioAPI_HANDLE;
   /**
    * @summary `dbUuid`.
    * @description
@@ -78,7 +78,7 @@ export class DbCreate_RequestParams {
    * @public
    * @readonly
    */
-  readonly dbUuid: BioAPI_UUID;
+  public readonly dbUuid: BioAPI_UUID;
   /**
    * @summary `numberOfRecords`.
    * @description
@@ -88,7 +88,7 @@ export class DbCreate_RequestParams {
    * @public
    * @readonly
    */
-  readonly numberOfRecords: UnsignedInt;
+  public readonly numberOfRecords: UnsignedInt;
   /**
    * @summary `accessRequest`.
    * @description
@@ -99,7 +99,7 @@ export class DbCreate_RequestParams {
    * @public
    * @readonly
    */
-  readonly accessRequest: BioAPI_DB_ACCESS_TYPE;
+  public readonly accessRequest: BioAPI_DB_ACCESS_TYPE;
 
   constructor(
     originalBSPHandle: BioAPI_HANDLE,

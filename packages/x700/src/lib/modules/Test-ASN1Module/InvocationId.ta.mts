@@ -1,7 +1,7 @@
 /* eslint-disable */
 import {
-    INTEGER,
-    ASN1Element as _Element,
+    type INTEGER,
+    type ASN1Element as _Element,
     ASN1TagClass as _TagClass,
     ASN1Construction as _Construction,
     ASN1UniversalType as _UniversalType,
@@ -12,7 +12,7 @@ import {
 } from '@wildboar/asn1';
 import * as $ from '@wildboar/asn1/functional';
 import {
-    DistinguishedName,
+    type DistinguishedName,
     _decode_DistinguishedName,
     _encode_DistinguishedName,
 } from '@wildboar/dn';
@@ -36,32 +36,38 @@ import {
  *
  */
 export class InvocationId {
+    /**
+     * @summary `tARRName`.
+     * @description
+     *
+     * Distinguished name of the managed object with TARR functionality that
+     * received the test request. ITU-T Rec. X.745 (11/93) §8.1.3.
+     * [§8.1.3](https://www.itu.int/rec/T-REC-X.745-199311-I)
+     *
+     * @public
+     * @readonly
+     */
+    public readonly tARRName: DistinguishedName;
+    /**
+     * @summary `testId`.
+     * @description
+     *
+     * Integer assigned by the test performer that, with tARRName, uniquely
+     * identifies this test invocation. ITU-T Rec. X.745 (11/93) §7.3.1.
+     * [§7.3.1](https://www.itu.int/rec/T-REC-X.745-199311-I)
+     *
+     * @public
+     * @readonly
+     */
+    public readonly testId: INTEGER;
+
     constructor(
-        /**
-         * @summary `tARRName`.
-         * @description
-         *
-         * Distinguished name of the managed object with TARR functionality that
-         * received the test request. ITU-T Rec. X.745 (11/93) §8.1.3.
-         * [§8.1.3](https://www.itu.int/rec/T-REC-X.745-199311-I)
-         *
-         * @public
-         * @readonly
-         */
-        readonly tARRName: DistinguishedName,
-        /**
-         * @summary `testId`.
-         * @description
-         *
-         * Integer assigned by the test performer that, with tARRName, uniquely
-         * identifies this test invocation. ITU-T Rec. X.745 (11/93) §7.3.1.
-         * [§7.3.1](https://www.itu.int/rec/T-REC-X.745-199311-I)
-         *
-         * @public
-         * @readonly
-         */
-        readonly testId: INTEGER
-    ) {}
+        tARRName: DistinguishedName,
+        testId: INTEGER
+    ) {
+        this.tARRName = tARRName;
+        this.testId = testId;
+    }
 
     /**
      * @summary Restructures an object into a InvocationId

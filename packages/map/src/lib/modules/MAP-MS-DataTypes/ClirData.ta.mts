@@ -1,12 +1,12 @@
 /* eslint-disable */
 import {
-    NULL,
-    OPTIONAL,
-    ASN1Element as _Element,
+    type NULL,
+    type OPTIONAL,
+    type ASN1Element as _Element,
     ASN1TagClass as _TagClass
 } from "@wildboar/asn1";
 import * as $ from "@wildboar/asn1/functional";
-import { Ext_SS_Status, _decode_Ext_SS_Status, _encode_Ext_SS_Status } from "../MAP-CommonDataTypes/Ext-SS-Status.ta.mjs";
+import { type Ext_SS_Status, _decode_Ext_SS_Status, _encode_Ext_SS_Status } from "../MAP-CommonDataTypes/Ext-SS-Status.ta.mjs";
 import { CliRestrictionOption, _decode_CliRestrictionOption, _encode_CliRestrictionOption, _enum_for_CliRestrictionOption } from "../MAP-SS-DataTypes/CliRestrictionOption.ta.mjs";
 
 
@@ -23,8 +23,8 @@ import { CliRestrictionOption, _decode_CliRestrictionOption, _encode_CliRestrict
  * ```asn1
  * ClirData ::= SEQUENCE {
  *     ss-Status    [1] Ext-SS-Status,
- *     cliRestrictionOption    [2] CliRestrictionOption    OPTIONAL,
- *     notificationToCSE    [3] NULL    OPTIONAL,
+ *     cliRestrictionOption    [2] CliRestrictionOption    type OPTIONAL,
+ *     notificationToCSE    [3] NULL    type OPTIONAL,
  *     ... }
  * ```
  * 
@@ -32,41 +32,51 @@ import { CliRestrictionOption, _decode_CliRestrictionOption, _encode_CliRestrict
  */
 export
 class ClirData {
+    /**
+     * @summary `ss_Status`.
+     * @public
+     * @readonly
+     */
+    public readonly ss_Status: Ext_SS_Status;
+    /**
+     * @summary `cliRestrictionOption`.
+     * @description
+     *
+     * CLI restriction option (3GPP TS 29.002 V19.1.0 clauses 7.6.4.5 and
+     * 17.7.1).
+     *
+     * @public
+     * @readonly
+     */
+    public readonly cliRestrictionOption?: OPTIONAL<CliRestrictionOption>;
+    /**
+     * @summary `notificationToCSE`.
+     * @description
+     *
+     * Notification to CSE flag (3GPP TS 29.002 V19.1.0 clause 17.7.1).
+     *
+     * @public
+     * @readonly
+     */
+    public readonly notificationToCSE?: OPTIONAL<NULL>;
+    /**
+     * @summary Extensions that are not recognized.
+     * @public
+     * @readonly
+     */
+    public readonly _unrecognizedExtensionsList: _Element[];
+
     constructor (
-        /**
-         * @summary `ss_Status`.
-         * @public
-         * @readonly
-         */
-        readonly ss_Status: Ext_SS_Status,
-        /**
-         * @summary `cliRestrictionOption`.
-         * @description
-         *
-         * CLI restriction option (3GPP TS 29.002 V19.1.0 clauses 7.6.4.5 and
-         * 17.7.1).
-         *
-         * @public
-         * @readonly
-         */
-        readonly cliRestrictionOption?: OPTIONAL<CliRestrictionOption>,
-        /**
-         * @summary `notificationToCSE`.
-         * @description
-         *
-         * Notification to CSE flag (3GPP TS 29.002 V19.1.0 clause 17.7.1).
-         *
-         * @public
-         * @readonly
-         */
-        readonly notificationToCSE?: OPTIONAL<NULL>,
-        /**
-         * @summary Extensions that are not recognized.
-         * @public
-         * @readonly
-         */
-        readonly _unrecognizedExtensionsList: _Element[] = []
-    ) {}
+        ss_Status: Ext_SS_Status,
+        cliRestrictionOption?: OPTIONAL<CliRestrictionOption>,
+        notificationToCSE?: OPTIONAL<NULL>,
+        _unrecognizedExtensionsList: _Element[] = []
+    ) {
+        this.ss_Status = ss_Status;
+        this.cliRestrictionOption = cliRestrictionOption;
+        this.notificationToCSE = notificationToCSE;
+        this._unrecognizedExtensionsList = _unrecognizedExtensionsList;
+    }
 
     /**
      * @summary Restructures an object into a ClirData
@@ -90,7 +100,7 @@ class ClirData {
          * @static
          */
 
-    public static _enum_for_cliRestrictionOption = _enum_for_CliRestrictionOption;
+    public static _enum_for_cliRestrictionOption: typeof _enum_for_CliRestrictionOption = _enum_for_CliRestrictionOption;
 }
 
 /**

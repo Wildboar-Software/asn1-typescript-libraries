@@ -1,7 +1,7 @@
 /* eslint-disable */
 import {
-    OPTIONAL,
-    ASN1Element as _Element,
+    type OPTIONAL,
+    type ASN1Element as _Element,
     ASN1TagClass as _TagClass,
     ASN1Construction as _Construction,
     ASN1UniversalType as _UniversalType,
@@ -12,12 +12,12 @@ import {
 } from '@wildboar/asn1';
 import * as $ from '@wildboar/asn1/functional';
 import {
-    IpnSecurityResponse_content_or_arguments,
+    type IpnSecurityResponse_content_or_arguments,
     _decode_IpnSecurityResponse_content_or_arguments,
     _encode_IpnSecurityResponse_content_or_arguments,
 } from '../IPMSSecurityExtensions/IpnSecurityResponse-content-or-arguments.ta.mjs';
 import {
-    SecurityDiagnosticCode,
+    type SecurityDiagnosticCode,
     _decode_SecurityDiagnosticCode,
     _encode_SecurityDiagnosticCode,
 } from '../IPMSSecurityExtensions/SecurityDiagnosticCode.ta.mjs';
@@ -46,20 +46,26 @@ import {
  *
  */
 export class IpnSecurityResponse {
+    /**
+     * @summary `content_or_arguments`.
+     * @public
+     * @readonly
+     */
+    public readonly content_or_arguments: IpnSecurityResponse_content_or_arguments;
+    /**
+     * @summary `security_diagnostic_code`.
+     * @public
+     * @readonly
+     */
+    public readonly security_diagnostic_code?: OPTIONAL<SecurityDiagnosticCode>;
+
     constructor(
-        /**
-         * @summary `content_or_arguments`.
-         * @public
-         * @readonly
-         */
-        readonly content_or_arguments: IpnSecurityResponse_content_or_arguments,
-        /**
-         * @summary `security_diagnostic_code`.
-         * @public
-         * @readonly
-         */
-        readonly security_diagnostic_code?: OPTIONAL<SecurityDiagnosticCode>
-    ) {}
+        content_or_arguments: IpnSecurityResponse_content_or_arguments,
+        security_diagnostic_code?: OPTIONAL<SecurityDiagnosticCode>
+    ) {
+        this.content_or_arguments = content_or_arguments;
+        this.security_diagnostic_code = security_diagnostic_code;
+    }
 
     /**
      * @summary Restructures an object into a IpnSecurityResponse

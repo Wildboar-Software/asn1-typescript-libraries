@@ -1,8 +1,8 @@
 /* eslint-disable */
 import {
-    OPTIONAL,
-    BOOLEAN,
-    ASN1Element as _Element,
+    type OPTIONAL,
+    type BOOLEAN,
+    type ASN1Element as _Element,
     ASN1TagClass as _TagClass,
     ASN1Construction as _Construction,
     ASN1UniversalType as _UniversalType,
@@ -10,16 +10,17 @@ import {
     External as _External,
     EmbeddedPDV as _PDV,
     ASN1ConstructionError as _ConstructionError,
+    type INTEGER,
 } from "@wildboar/asn1";
 import * as $ from "@wildboar/asn1/functional";
-import { ObjectName, _decode_ObjectName, _encode_ObjectName } from "../ISO-9506-MMS-1/ObjectName.ta.mjs";
-import { EC_Class, _decode_EC_Class, _encode_EC_Class } from "../MMS-Object-Module-1/EC-Class.ta.mjs";
-import { Priority, _decode_Priority, _encode_Priority } from "../MMS-Object-Module-1/Priority.ta.mjs";
+import { type ObjectName, _decode_ObjectName, _encode_ObjectName } from "../ISO-9506-MMS-1/ObjectName.ta.mjs";
+import { type EC_Class, _decode_EC_Class, _encode_EC_Class } from "../MMS-Object-Module-1/EC-Class.ta.mjs";
+import { type Priority, _decode_Priority, _encode_Priority } from "../MMS-Object-Module-1/Priority.ta.mjs";
 import { normalPriority } from "../MMS-Object-Module-1/normalPriority.va.mjs";
-import { Unsigned8, _decode_Unsigned8, _encode_Unsigned8 } from "../ISO-9506-MMS-1/Unsigned8.ta.mjs";
+import { type Unsigned8, _decode_Unsigned8, _encode_Unsigned8 } from "../ISO-9506-MMS-1/Unsigned8.ta.mjs";
 import { normalSeverity } from "../MMS-Object-Module-1/normalSeverity.va.mjs";
-import { VariableSpecification, _decode_VariableSpecification, _encode_VariableSpecification } from "../ISO-9506-MMS-1/VariableSpecification.ta.mjs";
-import { Unsigned32, _decode_Unsigned32, _encode_Unsigned32 } from "../ISO-9506-MMS-1/Unsigned32.ta.mjs";
+import { type VariableSpecification, _decode_VariableSpecification, _encode_VariableSpecification } from "../ISO-9506-MMS-1/VariableSpecification.ta.mjs";
+import { type Unsigned32, _decode_Unsigned32, _encode_Unsigned32 } from "../ISO-9506-MMS-1/Unsigned32.ta.mjs";
 
 
 /**
@@ -53,97 +54,113 @@ import { Unsigned32, _decode_Unsigned32, _encode_Unsigned32 } from "../ISO-9506-
  */
 export
 class DefineEventCondition_Request {
+    /**
+     * @summary `eventConditionName`.
+     * @description
+     *
+     * Name assigned to the created Event Condition. Unique in its scope.
+     *
+     * [ISO 9506-1:2003 §19.2.1.1.1]
+     *
+     * @public
+     * @readonly
+     */
+    public readonly eventConditionName: ObjectName;
+    /**
+     * @summary `class_`.
+     * @description
+     *
+     * Initial `&ecClass`: `network-triggered` (0) or `monitored` (1).
+     *
+     * [ISO 9506-1:2003 §19.2.1.1.2]
+     *
+     * @public
+     * @readonly
+     */
+    public readonly class_: EC_Class;
+    /**
+     * @summary `priority`.
+     * @description
+     *
+     * Initial `&priority` (0 highest, 127 lowest, 64 normal). Default
+     * normalPriority.
+     *
+     * [ISO 9506-1:2003 §19.2.1.1.3]
+     *
+     * @public
+     * @readonly
+     */
+    public readonly priority?: OPTIONAL<Priority>;
+    /**
+     * @summary `severity`.
+     * @description
+     *
+     * Initial `&severity` (0 most severe, 127 least, 64 normal). Default
+     * normalSeverity.
+     *
+     * [ISO 9506-1:2003 §19.2.1.1.4]
+     *
+     * @public
+     * @readonly
+     */
+    public readonly severity?: OPTIONAL<Unsigned8>;
+    /**
+     * @summary `alarmSummaryReports`.
+     * @description
+     *
+     * Monitored only. Initial `&alarmSummaryReports`. Present iff class is
+     * monitored.
+     *
+     * [ISO 9506-1:2003 §19.2.1.1.5]
+     *
+     * @public
+     * @readonly
+     */
+    public readonly alarmSummaryReports?: OPTIONAL<BOOLEAN>;
+    /**
+     * @summary `monitoredVariable`.
+     * @description
+     *
+     * Monitored only. Boolean Named or Unnamed Variable for `&monitoredVariable`.
+     * Present iff class is monitored.
+     *
+     * [ISO 9506-1:2003 §19.2.1.1.6]
+     *
+     * @public
+     * @readonly
+     */
+    public readonly monitoredVariable?: OPTIONAL<VariableSpecification>;
+    /**
+     * @summary `evaluationInterval`.
+     * @description
+     *
+     * Monitored only. Max milliseconds between `&ecState` evaluations; guidance.
+     * Zero means any interval. Server may return TIME-RESOLUTION.
+     *
+     * [ISO 9506-1:2003 §19.2.1.1.7]
+     *
+     * @public
+     * @readonly
+     */
+    public readonly evaluationInterval?: OPTIONAL<Unsigned32>;
+
     constructor (
-        /**
-         * @summary `eventConditionName`.
-         * @description
-         *
-         * Name assigned to the created Event Condition. Unique in its scope.
-         *
-         * [ISO 9506-1:2003 §19.2.1.1.1]
-         *
-         * @public
-         * @readonly
-         */
-        readonly eventConditionName: ObjectName,
-        /**
-         * @summary `class_`.
-         * @description
-         *
-         * Initial `&ecClass`: `network-triggered` (0) or `monitored` (1).
-         *
-         * [ISO 9506-1:2003 §19.2.1.1.2]
-         *
-         * @public
-         * @readonly
-         */
-        readonly class_: EC_Class,
-        /**
-         * @summary `priority`.
-         * @description
-         *
-         * Initial `&priority` (0 highest, 127 lowest, 64 normal). Default
-         * normalPriority.
-         *
-         * [ISO 9506-1:2003 §19.2.1.1.3]
-         *
-         * @public
-         * @readonly
-         */
-        readonly priority?: OPTIONAL<Priority>,
-        /**
-         * @summary `severity`.
-         * @description
-         *
-         * Initial `&severity` (0 most severe, 127 least, 64 normal). Default
-         * normalSeverity.
-         *
-         * [ISO 9506-1:2003 §19.2.1.1.4]
-         *
-         * @public
-         * @readonly
-         */
-        readonly severity?: OPTIONAL<Unsigned8>,
-        /**
-         * @summary `alarmSummaryReports`.
-         * @description
-         *
-         * Monitored only. Initial `&alarmSummaryReports`. Present iff class is
-         * monitored.
-         *
-         * [ISO 9506-1:2003 §19.2.1.1.5]
-         *
-         * @public
-         * @readonly
-         */
-        readonly alarmSummaryReports?: OPTIONAL<BOOLEAN>,
-        /**
-         * @summary `monitoredVariable`.
-         * @description
-         *
-         * Monitored only. Boolean Named or Unnamed Variable for `&monitoredVariable`.
-         * Present iff class is monitored.
-         *
-         * [ISO 9506-1:2003 §19.2.1.1.6]
-         *
-         * @public
-         * @readonly
-         */
-        readonly monitoredVariable?: OPTIONAL<VariableSpecification>,
-        /**
-         * @summary `evaluationInterval`.
-         * @description
-         *
-         * Monitored only. Max milliseconds between `&ecState` evaluations; guidance.
-         * Zero means any interval. Server may return TIME-RESOLUTION.
-         *
-         * [ISO 9506-1:2003 §19.2.1.1.7]
-         *
-         * @public
-         * @readonly
-         */
-        readonly evaluationInterval?: OPTIONAL<Unsigned32>
-    ) {}
+        eventConditionName: ObjectName,
+        class_: EC_Class,
+        priority?: OPTIONAL<Priority>,
+        severity?: OPTIONAL<Unsigned8>,
+        alarmSummaryReports?: OPTIONAL<BOOLEAN>,
+        monitoredVariable?: OPTIONAL<VariableSpecification>,
+        evaluationInterval?: OPTIONAL<Unsigned32>
+    ) {
+        this.eventConditionName = eventConditionName;
+        this.class_ = class_;
+        this.priority = priority;
+        this.severity = severity;
+        this.alarmSummaryReports = alarmSummaryReports;
+        this.monitoredVariable = monitoredVariable;
+        this.evaluationInterval = evaluationInterval;
+    }
 
     /**
      * @summary Restructures an object into a DefineEventCondition_Request
@@ -167,14 +184,14 @@ class DefineEventCondition_Request {
      * @static
      * @method
      */
-    public static get _default_value_for_priority () { return normalPriority; }
+    public static get _default_value_for_priority (): INTEGER { return normalPriority; }
     /**
      * @summary Getter that returns the default value for `severity`.
      * @public
      * @static
      * @method
      */
-    public static get _default_value_for_severity () { return normalSeverity; }
+    public static get _default_value_for_severity (): INTEGER { return normalSeverity; }
 }
 
 /**

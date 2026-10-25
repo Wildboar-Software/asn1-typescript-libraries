@@ -1,7 +1,7 @@
 /* eslint-disable */
 import {
-    OPTIONAL,
-    ASN1Element as _Element,
+    type OPTIONAL,
+    type ASN1Element as _Element,
     ASN1TagClass as _TagClass,
     ASN1Construction as _Construction,
     ASN1UniversalType as _UniversalType,
@@ -11,7 +11,7 @@ import {
     ASN1ConstructionError as _ConstructionError,
 } from "@wildboar/asn1";
 import * as $ from "@wildboar/asn1/functional";
-import { RequestedInformationTypeList, _decode_RequestedInformationTypeList, _encode_RequestedInformationTypeList } from "../Core-INAP-CS1-DataTypes/RequestedInformationTypeList.ta.mjs";
+import { type RequestedInformationTypeList, _decode_RequestedInformationTypeList, _encode_RequestedInformationTypeList } from "../Core-INAP-CS1-DataTypes/RequestedInformationTypeList.ta.mjs";
 import { ExtensionField, _decode_ExtensionField, _encode_ExtensionField } from "../Core-INAP-CS1-DataTypes/ExtensionField.ta.mjs";
 
 
@@ -33,20 +33,26 @@ import { ExtensionField, _decode_ExtensionField, _encode_ExtensionField } from "
  */
 export
 class CallInformationRequestArg {
+    /**
+     * @summary `requestedInformationTypeList`.
+     * @public
+     * @readonly
+     */
+    public readonly requestedInformationTypeList: RequestedInformationTypeList;
+    /**
+     * @summary `extensions`.
+     * @public
+     * @readonly
+     */
+    public readonly extensions?: OPTIONAL<ExtensionField[]>;
+
     constructor (
-        /**
-         * @summary `requestedInformationTypeList`.
-         * @public
-         * @readonly
-         */
-        readonly requestedInformationTypeList: RequestedInformationTypeList,
-        /**
-         * @summary `extensions`.
-         * @public
-         * @readonly
-         */
-        readonly extensions?: OPTIONAL<ExtensionField[]>
-    ) {}
+        requestedInformationTypeList: RequestedInformationTypeList,
+        extensions?: OPTIONAL<ExtensionField[]>
+    ) {
+        this.requestedInformationTypeList = requestedInformationTypeList;
+        this.extensions = extensions;
+    }
 
     /**
      * @summary Restructures an object into a CallInformationRequestArg

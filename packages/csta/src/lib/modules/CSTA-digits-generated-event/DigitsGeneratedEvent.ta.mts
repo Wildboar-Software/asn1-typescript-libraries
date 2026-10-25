@@ -2,15 +2,15 @@
 
 import * as $ from "@wildboar/asn1/functional";
 import {
-    OPTIONAL,
-    INTEGER,
-    SEQUENCE,
-    SET,
-    IA5String,
-    ASN1Element as _Element,
+    type OPTIONAL,
+    type INTEGER,
+    type SEQUENCE,
+    type SET,
+    type IA5String,
+    type ASN1Element as _Element,
     ASN1TagClass as _TagClass
 } from "@wildboar/asn1";
-import { ConnectionID, _decode_ConnectionID, _encode_ConnectionID } from "../CSTA-call-connection-identifiers/ConnectionID.ta.mjs";
+import { type ConnectionID, _decode_ConnectionID, _encode_ConnectionID } from "../CSTA-call-connection-identifiers/ConnectionID.ta.mjs";
 
 import { ConnectionInformation, _decode_ConnectionInformation, _encode_ConnectionInformation } from "../CSTA-media-services/ConnectionInformation.ta.mjs";
 
@@ -35,9 +35,9 @@ import { CSTACommonArguments, _decode_CSTACommonArguments, _encode_CSTACommonArg
  * DigitsGeneratedEvent ::= SEQUENCE
  * {    connection            ConnectionID,
  *     digitGeneratedList        IA5String,
- *     digitDurationList        [0] IMPLICIT SEQUENCE OF INTEGER    OPTIONAL,
- *     pauseDurationList        [1] IMPLICIT SEQUENCE OF INTEGER    OPTIONAL,
- *     connectionInfo            ConnectionInformation            OPTIONAL,
+ *     digitDurationList        [0] IMPLICIT SEQUENCE OF INTEGER    type OPTIONAL,
+ *     pauseDurationList        [1] IMPLICIT SEQUENCE OF INTEGER    type OPTIONAL,
+ *     connectionInfo            ConnectionInformation            type OPTIONAL,
  *     extensions             CSTACommonArguments             OPTIONAL }
  * ```
  * 
@@ -45,63 +45,77 @@ import { CSTACommonArguments, _decode_CSTACommonArguments, _encode_CSTACommonArg
  */
 export
 class DigitsGeneratedEvent {
+    /**
+     * @summary `connection`.
+     * @description
+     *
+     * Connection at which digits were generated.
+     * @public
+     * @readonly
+     */
+    public readonly connection: ConnectionID;
+    /**
+     * @summary `digitGeneratedList`.
+     * @description
+     *
+     * Digits that were generated.
+     * @public
+     * @readonly
+     */
+    public readonly digitGeneratedList: IA5String;
+    /**
+     * @summary `digitDurationList`.
+     * @description
+     *
+     * Per-digit durations, if provided.
+     * @public
+     * @readonly
+     */
+    public readonly digitDurationList?: OPTIONAL<INTEGER[]>;
+    /**
+     * @summary `pauseDurationList`.
+     * @description
+     *
+     * Per-pause durations, if provided.
+     * @public
+     * @readonly
+     */
+    public readonly pauseDurationList?: OPTIONAL<INTEGER[]>;
+    /**
+     * @summary `connectionInfo`.
+     * @description
+     *
+     * Connection information for `connection`.
+     * @public
+     * @readonly
+     */
+    public readonly connectionInfo?: OPTIONAL<ConnectionInformation>;
+    /**
+     * @summary `extensions`.
+     * @description
+     *
+     * Optional security (timestamp, sequence, securityInfo) and
+     * privateData.
+     * @public
+     * @readonly
+     */
+    public readonly extensions?: OPTIONAL<CSTACommonArguments>;
+
     constructor (
-        /**
-         * @summary `connection`.
-         * @description
-         *
-         * Connection at which digits were generated.
-         * @public
-         * @readonly
-         */
-        readonly connection: ConnectionID,
-        /**
-         * @summary `digitGeneratedList`.
-         * @description
-         *
-         * Digits that were generated.
-         * @public
-         * @readonly
-         */
-        readonly digitGeneratedList: IA5String,
-        /**
-         * @summary `digitDurationList`.
-         * @description
-         *
-         * Per-digit durations, if provided.
-         * @public
-         * @readonly
-         */
-        readonly digitDurationList?: OPTIONAL<INTEGER[]>,
-        /**
-         * @summary `pauseDurationList`.
-         * @description
-         *
-         * Per-pause durations, if provided.
-         * @public
-         * @readonly
-         */
-        readonly pauseDurationList?: OPTIONAL<INTEGER[]>,
-        /**
-         * @summary `connectionInfo`.
-         * @description
-         *
-         * Connection information for `connection`.
-         * @public
-         * @readonly
-         */
-        readonly connectionInfo?: OPTIONAL<ConnectionInformation>,
-        /**
-         * @summary `extensions`.
-         * @description
-         *
-         * Optional security (timestamp, sequence, securityInfo) and
-         * privateData.
-         * @public
-         * @readonly
-         */
-        readonly extensions?: OPTIONAL<CSTACommonArguments>
-    ) {}
+        connection: ConnectionID,
+        digitGeneratedList: IA5String,
+        digitDurationList?: OPTIONAL<INTEGER[]>,
+        pauseDurationList?: OPTIONAL<INTEGER[]>,
+        connectionInfo?: OPTIONAL<ConnectionInformation>,
+        extensions?: OPTIONAL<CSTACommonArguments>
+    ) {
+        this.connection = connection;
+        this.digitGeneratedList = digitGeneratedList;
+        this.digitDurationList = digitDurationList;
+        this.pauseDurationList = pauseDurationList;
+        this.connectionInfo = connectionInfo;
+        this.extensions = extensions;
+    }
 
     /**
      * @summary Restructures an object into a DigitsGeneratedEvent

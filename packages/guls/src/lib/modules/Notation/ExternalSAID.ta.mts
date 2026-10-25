@@ -1,7 +1,7 @@
 /* eslint-disable */
 import {
-  OPTIONAL,
-  INTEGER,
+  type OPTIONAL,
+  type INTEGER,
   ASN1Element as _Element,
   ASN1TagClass as _TagClass,
   ASN1Construction as _Construction,
@@ -13,7 +13,7 @@ import {
 } from '@wildboar/asn1';
 import * as $ from '@wildboar/asn1/functional';
 import {
-  SecurityIdentity,
+  type SecurityIdentity,
   _decode_SecurityIdentity,
   _encode_SecurityIdentity,
 } from '../Notation/SecurityIdentity.ta.mjs';
@@ -40,31 +40,37 @@ import {
  *
  */
 export class ExternalSAID {
+  /**
+   * @summary `localSAID`.
+   * @description
+   *
+   * Integer assigned by `assignerIdentity` (or by an implicit
+   * party). ITU-T Rec. X.830 (04/95) §7.1.2, Annex A.
+   *
+   * @public
+   * @readonly
+   */
+  public readonly localSAID: INTEGER;
+  /**
+   * @summary `assignerIdentity`.
+   * @description
+   *
+   * System that assigned `localSAID`. Omit when that identity
+   * is known implicitly. ITU-T Rec. X.830 (04/95) §7.1.2,
+   * Annex A.
+   *
+   * @public
+   * @readonly
+   */
+  public readonly assignerIdentity?: OPTIONAL<SecurityIdentity>;
+
   constructor(
-    /**
-     * @summary `localSAID`.
-     * @description
-     *
-     * Integer assigned by `assignerIdentity` (or by an implicit
-     * party). ITU-T Rec. X.830 (04/95) §7.1.2, Annex A.
-     *
-     * @public
-     * @readonly
-     */
-    readonly localSAID: INTEGER,
-    /**
-     * @summary `assignerIdentity`.
-     * @description
-     *
-     * System that assigned `localSAID`. Omit when that identity
-     * is known implicitly. ITU-T Rec. X.830 (04/95) §7.1.2,
-     * Annex A.
-     *
-     * @public
-     * @readonly
-     */
-    readonly assignerIdentity?: OPTIONAL<SecurityIdentity>
-  ) {}
+    localSAID: INTEGER,
+    assignerIdentity?: OPTIONAL<SecurityIdentity>
+  ) {
+    this.localSAID = localSAID;
+    this.assignerIdentity = assignerIdentity;
+  }
 
   /**
    * @summary Restructures an object into a ExternalSAID

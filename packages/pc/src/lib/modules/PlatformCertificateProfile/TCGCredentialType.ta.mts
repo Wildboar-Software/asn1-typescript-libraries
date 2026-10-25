@@ -1,6 +1,6 @@
 /* eslint-disable */
 import {
-    ASN1Element as _Element,
+    type ASN1Element as _Element,
     ASN1TagClass as _TagClass,
     ASN1Construction as _Construction,
     ASN1UniversalType as _UniversalType,
@@ -10,7 +10,7 @@ import {
     ASN1ConstructionError as _ConstructionError,
 } from "@wildboar/asn1";
 import * as $ from "@wildboar/asn1/functional";
-import { CredentialType, _decode_CredentialType, _encode_CredentialType } from "../PlatformCertificateProfile/CredentialType.ta.mjs";
+import { type CredentialType, _decode_CredentialType, _encode_CredentialType } from "../PlatformCertificateProfile/CredentialType.ta.mjs";
 /**
  * @summary TCGCredentialType
  * @description
@@ -32,19 +32,23 @@ import { CredentialType, _decode_CredentialType, _encode_CredentialType } from "
  */
 export
 class TCGCredentialType {
+    /**
+     * @summary `certificateType`.
+     * @description
+     *
+     * `tcg-kp-PlatformAttributeCertificate` or
+     * `tcg-kp-DeltaPlatformAttributeCertificate`. §3.1.4.
+     *
+     * @public
+     * @readonly
+     */
+    public readonly certificateType: CredentialType;
+
     constructor (
-        /**
-         * @summary `certificateType`.
-         * @description
-         *
-         * `tcg-kp-PlatformAttributeCertificate` or
-         * `tcg-kp-DeltaPlatformAttributeCertificate`. §3.1.4.
-         *
-         * @public
-         * @readonly
-         */
-        readonly certificateType: CredentialType
-    ) {}
+        certificateType: CredentialType
+    ) {
+        this.certificateType = certificateType;
+    }
 
     /**
      * @summary Restructures an object into a TCGCredentialType

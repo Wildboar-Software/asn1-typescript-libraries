@@ -1,9 +1,9 @@
 /* eslint-disable */
 import {
-    OPTIONAL,
-    BOOLEAN,
-    INTEGER,
-    ASN1Element as _Element,
+    type OPTIONAL,
+    type BOOLEAN,
+    type INTEGER,
+    type ASN1Element as _Element,
     ASN1TagClass as _TagClass,
     ASN1Construction as _Construction,
     ASN1UniversalType as _UniversalType,
@@ -54,7 +54,7 @@ export class DefaultTCA {
      * @public
      * @readonly
      */
-    readonly subscription: BOOLEAN;
+    public readonly subscription: BOOLEAN;
     /**
      * @summary `supportedThroughClasses`.
      * @description
@@ -67,7 +67,7 @@ export class DefaultTCA {
      * @public
      * @readonly
      */
-    readonly supportedThroughClasses?: OPTIONAL<INTEGER[]>;
+    public readonly supportedThroughClasses?: OPTIONAL<INTEGER[]>;
     /**
      * @summary `selectedThroughputClasses`.
      * @description
@@ -79,7 +79,7 @@ export class DefaultTCA {
      * @public
      * @readonly
      */
-    readonly selectedThroughputClasses?: OPTIONAL<BidirectionalValues>;
+    public readonly selectedThroughputClasses?: OPTIONAL<BidirectionalValues>;
 
     constructor(
         subscription: BOOLEAN,

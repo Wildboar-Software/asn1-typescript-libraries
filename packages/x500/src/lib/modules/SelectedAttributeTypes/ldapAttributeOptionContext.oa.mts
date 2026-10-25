@@ -2,7 +2,7 @@
 import { FALSE } from "@wildboar/asn1";
 import { type CONTEXT } from "../InformationFramework/CONTEXT.oca.mjs";
 import {
-    AttributeOptionList,
+    type AttributeOptionList,
     _decode_AttributeOptionList,
     _encode_AttributeOptionList,
 } from "../SelectedAttributeTypes/AttributeOptionList.ta.mjs";

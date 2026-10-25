@@ -1,7 +1,7 @@
 /* eslint-disable */
 import {
-    NULL,
-    ASN1Element as _Element,
+    type NULL,
+    type ASN1Element as _Element,
     ASN1TagClass as _TagClass,
     ASN1Construction as _Construction,
     ASN1UniversalType as _UniversalType,
@@ -34,10 +34,10 @@ import * as $ from '@wildboar/asn1/functional';
 export type LoopbackTxDelayInfo = NULL; // NullType
 
 
-export const _decode_LoopbackTxDelayInfo = $._decodeNull;
+export const _decode_LoopbackTxDelayInfo: $.ASN1Decoder<null> = $._decodeNull;
 
 
-export const _encode_LoopbackTxDelayInfo = $._encodeNull;
+export const _encode_LoopbackTxDelayInfo: $.ASN1Encoder<null> = $._encodeNull;
 
 
 /* eslint-enable */

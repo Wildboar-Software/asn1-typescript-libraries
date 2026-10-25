@@ -1,8 +1,8 @@
 /* eslint-disable */
 import {
-    OPTIONAL,
-    BOOLEAN,
-    ASN1Element as _Element,
+    type OPTIONAL,
+    type BOOLEAN,
+    type ASN1Element as _Element,
     ASN1TagClass as _TagClass,
     ASN1Construction as _Construction,
     ASN1UniversalType as _UniversalType,
@@ -13,24 +13,24 @@ import {
 } from '@wildboar/asn1';
 import * as $ from '@wildboar/asn1/functional';
 import {
-    DLPolicy_report_propagation,
+    type DLPolicy_report_propagation,
     previous_dl_or_originator /* IMPORTED_SHORT_NAMED_INTEGER */,
     _decode_DLPolicy_report_propagation,
     _encode_DLPolicy_report_propagation,
 } from '../MHSDirectoryObjectsAndAttributes/DLPolicy-report-propagation.ta.mjs';
 import {
-    DLPolicy_report_from_dl,
+    type DLPolicy_report_from_dl,
     whenever_requested /* IMPORTED_SHORT_NAMED_INTEGER */,
     _decode_DLPolicy_report_from_dl,
     _encode_DLPolicy_report_from_dl,
 } from '../MHSDirectoryObjectsAndAttributes/DLPolicy-report-from-dl.ta.mjs';
 import {
-    DLPolicy_originating_MTA_report,
+    type DLPolicy_originating_MTA_report,
     _decode_DLPolicy_originating_MTA_report,
     _encode_DLPolicy_originating_MTA_report,
 } from '../MHSDirectoryObjectsAndAttributes/DLPolicy-originating-MTA-report.ta.mjs';
 import {
-    DLPolicy_originator_report,
+    type DLPolicy_originator_report,
     _decode_DLPolicy_originator_report,
     _encode_DLPolicy_originator_report,
 } from '../MHSDirectoryObjectsAndAttributes/DLPolicy-originator-report.ta.mjs';
@@ -42,7 +42,7 @@ import {
     _encode_DLPolicy_return_of_content,
 } from '../MHSDirectoryObjectsAndAttributes/DLPolicy-return-of-content.ta.mjs';
 import {
-    DLPolicy_priority,
+    type DLPolicy_priority,
     _decode_DLPolicy_priority,
     _encode_DLPolicy_priority,
 } from '../MHSDirectoryObjectsAndAttributes/DLPolicy-priority.ta.mjs';
@@ -68,13 +68,13 @@ import {
     _encode_DLPolicy_conversion_with_loss_prohibited,
 } from '../MHSDirectoryObjectsAndAttributes/DLPolicy-conversion-with-loss-prohibited.ta.mjs';
 import {
-    DLPolicy_proof_of_delivery,
+    type DLPolicy_proof_of_delivery,
     dl_members /* IMPORTED_SHORT_NAMED_INTEGER */,
     _decode_DLPolicy_proof_of_delivery,
     _encode_DLPolicy_proof_of_delivery,
 } from '../MHSDirectoryObjectsAndAttributes/DLPolicy-proof-of-delivery.ta.mjs';
 import {
-    DLPolicy_requested_delivery_method,
+    type DLPolicy_requested_delivery_method,
     _decode_DLPolicy_requested_delivery_method,
     _encode_DLPolicy_requested_delivery_method,
 } from '../MHSDirectoryObjectsAndAttributes/DLPolicy-requested-delivery-method.ta.mjs';
@@ -141,108 +141,146 @@ import {
  *
  */
 export class DLPolicy {
+    /**
+     * @summary `report_propagation`.
+     * @public
+     * @readonly
+     */
+    public readonly report_propagation?: OPTIONAL<DLPolicy_report_propagation>;
+    /**
+     * @summary `report_from_dl`.
+     * @public
+     * @readonly
+     */
+    public readonly report_from_dl?: OPTIONAL<DLPolicy_report_from_dl>;
+    /**
+     * @summary `originating_MTA_report`.
+     * @public
+     * @readonly
+     */
+    public readonly originating_MTA_report?: OPTIONAL<DLPolicy_originating_MTA_report>;
+    /**
+     * @summary `originator_report`.
+     * @public
+     * @readonly
+     */
+    public readonly originator_report?: OPTIONAL<DLPolicy_originator_report>;
+    /**
+     * @summary `return_of_content`.
+     * @public
+     * @readonly
+     */
+    public readonly return_of_content?: OPTIONAL<DLPolicy_return_of_content>;
+    /**
+     * @summary `priority`.
+     * @public
+     * @readonly
+     */
+    public readonly priority?: OPTIONAL<DLPolicy_priority>;
+    /**
+     * @summary `disclosure_of_other_recipients`.
+     * @public
+     * @readonly
+     */
+    public readonly disclosure_of_other_recipients?: OPTIONAL<DLPolicy_disclosure_of_other_recipients>;
+    /**
+     * @summary `implicit_conversion_prohibited`.
+     * @public
+     * @readonly
+     */
+    public readonly implicit_conversion_prohibited?: OPTIONAL<DLPolicy_implicit_conversion_prohibited>;
+    /**
+     * @summary `conversion_with_loss_prohibited`.
+     * @public
+     * @readonly
+     */
+    public readonly conversion_with_loss_prohibited?: OPTIONAL<DLPolicy_conversion_with_loss_prohibited>;
+    /**
+     * @summary `further_dl_expansion_allowed`.
+     * @public
+     * @readonly
+     */
+    public readonly further_dl_expansion_allowed?: OPTIONAL<BOOLEAN>;
+    /**
+     * @summary `originator_requested_alternate_recipient_removed`.
+     * @public
+     * @readonly
+     */
+    public readonly originator_requested_alternate_recipient_removed?: OPTIONAL<BOOLEAN>;
+    /**
+     * @summary `proof_of_delivery`.
+     * @public
+     * @readonly
+     */
+    public readonly proof_of_delivery?: OPTIONAL<DLPolicy_proof_of_delivery>;
+    /**
+     * @summary `requested_delivery_method`.
+     * @public
+     * @readonly
+     */
+    public readonly requested_delivery_method?: OPTIONAL<DLPolicy_requested_delivery_method>;
+    /**
+     * @summary `token_encryption_algorithm_preference`.
+     * @public
+     * @readonly
+     */
+    public readonly token_encryption_algorithm_preference?: OPTIONAL<
+            AlgorithmInformation[]
+        >;
+    /**
+     * @summary `token_signature_algorithm_preference`.
+     * @public
+     * @readonly
+     */
+    public readonly token_signature_algorithm_preference?: OPTIONAL<
+            AlgorithmInformation[]
+        >;
+    /**
+     * @summary Extensions that are not recognized.
+     * @public
+     * @readonly
+     */
+    public readonly _unrecognizedExtensionsList: _Element[];
+
     constructor(
-        /**
-         * @summary `report_propagation`.
-         * @public
-         * @readonly
-         */
-        readonly report_propagation?: OPTIONAL<DLPolicy_report_propagation>,
-        /**
-         * @summary `report_from_dl`.
-         * @public
-         * @readonly
-         */
-        readonly report_from_dl?: OPTIONAL<DLPolicy_report_from_dl>,
-        /**
-         * @summary `originating_MTA_report`.
-         * @public
-         * @readonly
-         */
-        readonly originating_MTA_report?: OPTIONAL<DLPolicy_originating_MTA_report>,
-        /**
-         * @summary `originator_report`.
-         * @public
-         * @readonly
-         */
-        readonly originator_report?: OPTIONAL<DLPolicy_originator_report>,
-        /**
-         * @summary `return_of_content`.
-         * @public
-         * @readonly
-         */
-        readonly return_of_content?: OPTIONAL<DLPolicy_return_of_content>,
-        /**
-         * @summary `priority`.
-         * @public
-         * @readonly
-         */
-        readonly priority?: OPTIONAL<DLPolicy_priority>,
-        /**
-         * @summary `disclosure_of_other_recipients`.
-         * @public
-         * @readonly
-         */
-        readonly disclosure_of_other_recipients?: OPTIONAL<DLPolicy_disclosure_of_other_recipients>,
-        /**
-         * @summary `implicit_conversion_prohibited`.
-         * @public
-         * @readonly
-         */
-        readonly implicit_conversion_prohibited?: OPTIONAL<DLPolicy_implicit_conversion_prohibited>,
-        /**
-         * @summary `conversion_with_loss_prohibited`.
-         * @public
-         * @readonly
-         */
-        readonly conversion_with_loss_prohibited?: OPTIONAL<DLPolicy_conversion_with_loss_prohibited>,
-        /**
-         * @summary `further_dl_expansion_allowed`.
-         * @public
-         * @readonly
-         */
-        readonly further_dl_expansion_allowed?: OPTIONAL<BOOLEAN>,
-        /**
-         * @summary `originator_requested_alternate_recipient_removed`.
-         * @public
-         * @readonly
-         */
-        readonly originator_requested_alternate_recipient_removed?: OPTIONAL<BOOLEAN>,
-        /**
-         * @summary `proof_of_delivery`.
-         * @public
-         * @readonly
-         */
-        readonly proof_of_delivery?: OPTIONAL<DLPolicy_proof_of_delivery>,
-        /**
-         * @summary `requested_delivery_method`.
-         * @public
-         * @readonly
-         */
-        readonly requested_delivery_method?: OPTIONAL<DLPolicy_requested_delivery_method>,
-        /**
-         * @summary `token_encryption_algorithm_preference`.
-         * @public
-         * @readonly
-         */
-        readonly token_encryption_algorithm_preference?: OPTIONAL<
+        report_propagation?: OPTIONAL<DLPolicy_report_propagation>,
+        report_from_dl?: OPTIONAL<DLPolicy_report_from_dl>,
+        originating_MTA_report?: OPTIONAL<DLPolicy_originating_MTA_report>,
+        originator_report?: OPTIONAL<DLPolicy_originator_report>,
+        return_of_content?: OPTIONAL<DLPolicy_return_of_content>,
+        priority?: OPTIONAL<DLPolicy_priority>,
+        disclosure_of_other_recipients?: OPTIONAL<DLPolicy_disclosure_of_other_recipients>,
+        implicit_conversion_prohibited?: OPTIONAL<DLPolicy_implicit_conversion_prohibited>,
+        conversion_with_loss_prohibited?: OPTIONAL<DLPolicy_conversion_with_loss_prohibited>,
+        further_dl_expansion_allowed?: OPTIONAL<BOOLEAN>,
+        originator_requested_alternate_recipient_removed?: OPTIONAL<BOOLEAN>,
+        proof_of_delivery?: OPTIONAL<DLPolicy_proof_of_delivery>,
+        requested_delivery_method?: OPTIONAL<DLPolicy_requested_delivery_method>,
+        token_encryption_algorithm_preference?: OPTIONAL<
             AlgorithmInformation[]
         >,
-        /**
-         * @summary `token_signature_algorithm_preference`.
-         * @public
-         * @readonly
-         */
-        readonly token_signature_algorithm_preference?: OPTIONAL<
+        token_signature_algorithm_preference?: OPTIONAL<
             AlgorithmInformation[]
         >,
-        /**
-         * @summary Extensions that are not recognized.
-         * @public
-         * @readonly
-         */
-        readonly _unrecognizedExtensionsList: _Element[] = []
-    ) {}
+        _unrecognizedExtensionsList: _Element[] = []
+    ) {
+        this.report_propagation = report_propagation;
+        this.report_from_dl = report_from_dl;
+        this.originating_MTA_report = originating_MTA_report;
+        this.originator_report = originator_report;
+        this.return_of_content = return_of_content;
+        this.priority = priority;
+        this.disclosure_of_other_recipients = disclosure_of_other_recipients;
+        this.implicit_conversion_prohibited = implicit_conversion_prohibited;
+        this.conversion_with_loss_prohibited = conversion_with_loss_prohibited;
+        this.further_dl_expansion_allowed = further_dl_expansion_allowed;
+        this.originator_requested_alternate_recipient_removed = originator_requested_alternate_recipient_removed;
+        this.proof_of_delivery = proof_of_delivery;
+        this.requested_delivery_method = requested_delivery_method;
+        this.token_encryption_algorithm_preference = token_encryption_algorithm_preference;
+        this.token_signature_algorithm_preference = token_signature_algorithm_preference;
+        this._unrecognizedExtensionsList = _unrecognizedExtensionsList;
+    }
 
     /**
      * @summary Restructures an object into a DLPolicy
@@ -402,28 +440,28 @@ export class DLPolicy {
      * @static
      */
 
-    public static _enum_for_return_of_content = _enum_for_DLPolicy_return_of_content;
+    public static _enum_for_return_of_content: typeof _enum_for_DLPolicy_return_of_content = _enum_for_DLPolicy_return_of_content;
     /**
      * @summary The enum used as the type of the component `disclosure_of_other_recipients`
      * @public
      * @static
      */
 
-    public static _enum_for_disclosure_of_other_recipients = _enum_for_DLPolicy_disclosure_of_other_recipients;
+    public static _enum_for_disclosure_of_other_recipients: typeof _enum_for_DLPolicy_disclosure_of_other_recipients = _enum_for_DLPolicy_disclosure_of_other_recipients;
     /**
      * @summary The enum used as the type of the component `implicit_conversion_prohibited`
      * @public
      * @static
      */
 
-    public static _enum_for_implicit_conversion_prohibited = _enum_for_DLPolicy_implicit_conversion_prohibited;
+    public static _enum_for_implicit_conversion_prohibited: typeof _enum_for_DLPolicy_implicit_conversion_prohibited = _enum_for_DLPolicy_implicit_conversion_prohibited;
     /**
      * @summary The enum used as the type of the component `conversion_with_loss_prohibited`
      * @public
      * @static
      */
 
-    public static _enum_for_conversion_with_loss_prohibited = _enum_for_DLPolicy_conversion_with_loss_prohibited;
+    public static _enum_for_conversion_with_loss_prohibited: typeof _enum_for_DLPolicy_conversion_with_loss_prohibited = _enum_for_DLPolicy_conversion_with_loss_prohibited;
 }
 
 /**

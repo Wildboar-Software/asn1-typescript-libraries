@@ -1,9 +1,9 @@
 /* eslint-disable */
 import {
     ASN1ConstructionError as _ConstructionError,
-    ASN1Element as _Element,
+    type ASN1Element as _Element,
     ASN1TagClass as _TagClass,
-    OBJECT_IDENTIFIER,
+    type OBJECT_IDENTIFIER,
 } from "@wildboar/asn1";
 import * as $ from "@wildboar/asn1/functional";
 import {
@@ -31,36 +31,44 @@ import {
  *
  */
 export class FamilyEntries {
+    /**
+     * @summary `family_class`.
+     * @description
+     *
+     * Structural object class of the family (members immediately
+     * subordinate to the designated source).
+     *
+     * @public
+     * @readonly
+     */
+    public readonly family_class: OBJECT_IDENTIFIER;
+    /**
+     * @summary `familyEntries`.
+     * @description
+     *
+     * SEQUENCE OF selected members. Unselected members omitted unless
+     * superior to a selected member.
+     *
+     * @public
+     * @readonly
+     */
+    public readonly familyEntries: FamilyEntry[];
+    /**
+     * @summary Extensions that are not recognized.
+     * @public
+     * @readonly
+     */
+    public readonly _unrecognizedExtensionsList: _Element[];
+
     constructor(
-        /**
-         * @summary `family_class`.
-         * @description
-         *
-         * Structural object class of the family (members immediately
-         * subordinate to the designated source).
-         *
-         * @public
-         * @readonly
-         */
-        readonly family_class: OBJECT_IDENTIFIER,
-        /**
-         * @summary `familyEntries`.
-         * @description
-         *
-         * SEQUENCE OF selected members. Unselected members omitted unless
-         * superior to a selected member.
-         *
-         * @public
-         * @readonly
-         */
-        readonly familyEntries: FamilyEntry[],
-        /**
-         * @summary Extensions that are not recognized.
-         * @public
-         * @readonly
-         */
-        readonly _unrecognizedExtensionsList: _Element[] = []
-    ) {}
+        family_class: OBJECT_IDENTIFIER,
+        familyEntries: FamilyEntry[],
+        _unrecognizedExtensionsList: _Element[] = []
+    ) {
+        this.family_class = family_class;
+        this.familyEntries = familyEntries;
+        this._unrecognizedExtensionsList = _unrecognizedExtensionsList;
+    }
 
     /**
      * @summary Restructures an object into a FamilyEntries

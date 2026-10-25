@@ -1,7 +1,7 @@
 /* eslint-disable */
 import {
-    OPTIONAL,
-    ASN1Element as _Element,
+    type OPTIONAL,
+    type ASN1Element as _Element,
     ASN1TagClass as _TagClass,
     ASN1Construction as _Construction,
     ASN1UniversalType as _UniversalType,
@@ -11,15 +11,15 @@ import {
     ASN1ConstructionError as _ConstructionError,
 } from "@wildboar/asn1";
 import * as $ from "@wildboar/asn1/functional";
-import { Capabilities, _decode_Capabilities, _encode_Capabilities } from "../V59/Capabilities.ta.mjs";
+import { type Capabilities, _decode_Capabilities, _encode_Capabilities } from "../V59/Capabilities.ta.mjs";
 
-import { V59String, _decode_V59String, _encode_V59String } from "../V59/V59String.ta.mjs";
+import { type V59String, _decode_V59String, _encode_V59String } from "../V59/V59String.ta.mjs";
 
-import { TxPowerLevel, _decode_TxPowerLevel, _encode_TxPowerLevel } from "../V59/TxPowerLevel.ta.mjs";
+import { type TxPowerLevel, _decode_TxPowerLevel, _encode_TxPowerLevel } from "../V59/TxPowerLevel.ta.mjs";
 
-import { SymbolRate, _decode_SymbolRate, _encode_SymbolRate } from "../V59/SymbolRate.ta.mjs";
+import { type SymbolRate, _decode_SymbolRate, _encode_SymbolRate } from "../V59/SymbolRate.ta.mjs";
 
-import { CarrierFreq, _decode_CarrierFreq, _encode_CarrierFreq } from "../V59/CarrierFreq.ta.mjs";
+import { type CarrierFreq, _decode_CarrierFreq, _encode_CarrierFreq } from "../V59/CarrierFreq.ta.mjs";
 
 /**
  * @summary V34Diag_Item
@@ -71,7 +71,7 @@ class V34Diag_Item {
      * @public
      * @readonly
      */
-    readonly modeV34: Capabilities;
+    public readonly modeV34: Capabilities;
     /**
      * @summary `iNFO0Tx`.
      * @description
@@ -83,7 +83,7 @@ class V34Diag_Item {
      * @public
      * @readonly
      */
-    readonly iNFO0Tx: V59String;
+    public readonly iNFO0Tx: V59String;
     /**
      * @summary `iNFO0Rx`.
      * @description
@@ -95,7 +95,7 @@ class V34Diag_Item {
      * @public
      * @readonly
      */
-    readonly iNFO0Rx: V59String;
+    public readonly iNFO0Rx: V59String;
     /**
      * @summary `iNFO1c`.
      * @description
@@ -107,7 +107,7 @@ class V34Diag_Item {
      * @public
      * @readonly
      */
-    readonly iNFO1c: V59String;
+    public readonly iNFO1c: V59String;
     /**
      * @summary `iNFO1a`.
      * @description
@@ -119,7 +119,7 @@ class V34Diag_Item {
      * @public
      * @readonly
      */
-    readonly iNFO1a: V59String;
+    public readonly iNFO1a: V59String;
     /**
      * @summary `mPTx`.
      * @description
@@ -131,7 +131,7 @@ class V34Diag_Item {
      * @public
      * @readonly
      */
-    readonly mPTx: V59String;
+    public readonly mPTx: V59String;
     /**
      * @summary `mPRx`.
      * @description
@@ -143,7 +143,7 @@ class V34Diag_Item {
      * @public
      * @readonly
      */
-    readonly mPRx: V59String;
+    public readonly mPRx: V59String;
     /**
      * @summary `precodeCoeffTx`.
      * @description
@@ -157,7 +157,7 @@ class V34Diag_Item {
      * @public
      * @readonly
      */
-    readonly precodeCoeffTx: OPTIONAL<V59String>;
+    public readonly precodeCoeffTx: OPTIONAL<V59String>;
     /**
      * @summary `precodeCoeffRx`.
      * @description
@@ -167,7 +167,7 @@ class V34Diag_Item {
      * @public
      * @readonly
      */
-    readonly precodeCoeffRx: OPTIONAL<V59String>;
+    public readonly precodeCoeffRx: OPTIONAL<V59String>;
     /**
      * @summary `v34TxLevel`.
      * @description
@@ -177,7 +177,7 @@ class V34Diag_Item {
      * @public
      * @readonly
      */
-    readonly v34TxLevel: TxPowerLevel;
+    public readonly v34TxLevel: TxPowerLevel;
     /**
      * @summary `txSymbolRate`.
      * @description
@@ -187,7 +187,7 @@ class V34Diag_Item {
      * @public
      * @readonly
      */
-    readonly txSymbolRate: OPTIONAL<SymbolRate>;
+    public readonly txSymbolRate: OPTIONAL<SymbolRate>;
     /**
      * @summary `rxSymbolRate`.
      * @description
@@ -197,7 +197,7 @@ class V34Diag_Item {
      * @public
      * @readonly
      */
-    readonly rxSymbolRate: OPTIONAL<SymbolRate>;
+    public readonly rxSymbolRate: OPTIONAL<SymbolRate>;
     /**
      * @summary `txCarrierFreq`.
      * @description
@@ -207,7 +207,7 @@ class V34Diag_Item {
      * @public
      * @readonly
      */
-    readonly txCarrierFreq: OPTIONAL<CarrierFreq>;
+    public readonly txCarrierFreq: OPTIONAL<CarrierFreq>;
     /**
      * @summary `rxCarrierFreq`.
      * @description
@@ -217,7 +217,7 @@ class V34Diag_Item {
      * @public
      * @readonly
      */
-    readonly rxCarrierFreq: OPTIONAL<CarrierFreq>;
+    public readonly rxCarrierFreq: OPTIONAL<CarrierFreq>;
     /**
      * @summary `txDataHistory`.
      * @description
@@ -229,7 +229,7 @@ class V34Diag_Item {
      * @public
      * @readonly
      */
-    readonly txDataHistory: V59String;
+    public readonly txDataHistory: V59String;
     /**
      * @summary `rxDataHistory`.
      * @description
@@ -240,7 +240,7 @@ class V34Diag_Item {
      * @public
      * @readonly
      */
-    readonly rxDataHistory: V59String;
+    public readonly rxDataHistory: V59String;
     /**
      * @summary `rxLevelEstimate`.
      * @description
@@ -251,7 +251,7 @@ class V34Diag_Item {
      * @public
      * @readonly
      */
-    readonly rxLevelEstimate?: OPTIONAL<V59String>;
+    public readonly rxLevelEstimate?: OPTIONAL<V59String>;
     /**
      * @summary `noiseEstimate`.
      * @description
@@ -261,7 +261,7 @@ class V34Diag_Item {
      * @public
      * @readonly
      */
-    readonly noiseEstimate?: OPTIONAL<V59String>;
+    public readonly noiseEstimate?: OPTIONAL<V59String>;
     /**
      * @summary `rxSignalQuality`.
      * @description
@@ -273,7 +273,7 @@ class V34Diag_Item {
      * @public
      * @readonly
      */
-    readonly rxSignalQuality?: OPTIONAL<V59String>;
+    public readonly rxSignalQuality?: OPTIONAL<V59String>;
     /**
      * @summary `nearEchoEstimate`.
      * @description
@@ -284,7 +284,7 @@ class V34Diag_Item {
      * @public
      * @readonly
      */
-    readonly nearEchoEstimate?: OPTIONAL<V59String>;
+    public readonly nearEchoEstimate?: OPTIONAL<V59String>;
     /**
      * @summary `farEchoEstimate`.
      * @description
@@ -295,7 +295,7 @@ class V34Diag_Item {
      * @public
      * @readonly
      */
-    readonly farEchoEstimate?: OPTIONAL<V59String>;
+    public readonly farEchoEstimate?: OPTIONAL<V59String>;
     /**
      * @summary `roundTripDelay`.
      * @description
@@ -306,13 +306,13 @@ class V34Diag_Item {
      * @public
      * @readonly
      */
-    readonly roundTripDelay?: OPTIONAL<V59String>;
+    public readonly roundTripDelay?: OPTIONAL<V59String>;
     /**
      * @summary Extensions that are not recognized.
      * @public
      * @readonly
      */
-    readonly _unrecognizedExtensionsList: _Element[];
+    public readonly _unrecognizedExtensionsList: _Element[];
 
     constructor (
         modeV34: Capabilities,

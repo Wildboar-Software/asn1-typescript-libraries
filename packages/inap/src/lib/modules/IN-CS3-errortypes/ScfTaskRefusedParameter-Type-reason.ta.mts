@@ -1,4 +1,5 @@
 /* eslint-disable */
+import { ASN1Element as _Element, ASN1ConstructionError as _ConstructionError } from "@wildboar/asn1";
 import * as $ from "@wildboar/asn1/functional";
 
 
@@ -68,7 +69,7 @@ type ScfTaskRefusedParameter_Type_reason = _enum_for_ScfTaskRefusedParameter_Typ
  * @enum {number}
  */
 export
-const ScfTaskRefusedParameter_Type_reason = _enum_for_ScfTaskRefusedParameter_Type_reason;
+const ScfTaskRefusedParameter_Type_reason: typeof _enum_for_ScfTaskRefusedParameter_Type_reason = _enum_for_ScfTaskRefusedParameter_Type_reason;
 
 /**
  * @summary ScfTaskRefusedParameter_Type_reason_generic
@@ -76,7 +77,7 @@ const ScfTaskRefusedParameter_Type_reason = _enum_for_ScfTaskRefusedParameter_Ty
  * @type {number}
  */
 export
-const ScfTaskRefusedParameter_Type_reason_generic: ScfTaskRefusedParameter_Type_reason = ScfTaskRefusedParameter_Type_reason.generic; /* LONG_NAMED_ENUMERATED_VALUE */
+const ScfTaskRefusedParameter_Type_reason_generic: _enum_for_ScfTaskRefusedParameter_Type_reason.generic = ScfTaskRefusedParameter_Type_reason.generic; /* LONG_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary generic
@@ -84,7 +85,7 @@ const ScfTaskRefusedParameter_Type_reason_generic: ScfTaskRefusedParameter_Type_
  * @type {number}
  */
 export
-const generic: ScfTaskRefusedParameter_Type_reason = ScfTaskRefusedParameter_Type_reason.generic; /* SHORT_NAMED_ENUMERATED_VALUE */
+const generic: _enum_for_ScfTaskRefusedParameter_Type_reason.generic = ScfTaskRefusedParameter_Type_reason.generic; /* SHORT_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary ScfTaskRefusedParameter_Type_reason_unobtainable
@@ -92,7 +93,7 @@ const generic: ScfTaskRefusedParameter_Type_reason = ScfTaskRefusedParameter_Typ
  * @type {number}
  */
 export
-const ScfTaskRefusedParameter_Type_reason_unobtainable: ScfTaskRefusedParameter_Type_reason = ScfTaskRefusedParameter_Type_reason.unobtainable; /* LONG_NAMED_ENUMERATED_VALUE */
+const ScfTaskRefusedParameter_Type_reason_unobtainable: _enum_for_ScfTaskRefusedParameter_Type_reason.unobtainable = ScfTaskRefusedParameter_Type_reason.unobtainable; /* LONG_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary unobtainable
@@ -100,7 +101,7 @@ const ScfTaskRefusedParameter_Type_reason_unobtainable: ScfTaskRefusedParameter_
  * @type {number}
  */
 export
-const unobtainable: ScfTaskRefusedParameter_Type_reason = ScfTaskRefusedParameter_Type_reason.unobtainable; /* SHORT_NAMED_ENUMERATED_VALUE */
+const unobtainable: _enum_for_ScfTaskRefusedParameter_Type_reason.unobtainable = ScfTaskRefusedParameter_Type_reason.unobtainable; /* SHORT_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary ScfTaskRefusedParameter_Type_reason_congestion
@@ -108,7 +109,7 @@ const unobtainable: ScfTaskRefusedParameter_Type_reason = ScfTaskRefusedParamete
  * @type {number}
  */
 export
-const ScfTaskRefusedParameter_Type_reason_congestion: ScfTaskRefusedParameter_Type_reason = ScfTaskRefusedParameter_Type_reason.congestion; /* LONG_NAMED_ENUMERATED_VALUE */
+const ScfTaskRefusedParameter_Type_reason_congestion: _enum_for_ScfTaskRefusedParameter_Type_reason.congestion = ScfTaskRefusedParameter_Type_reason.congestion; /* LONG_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary congestion
@@ -116,12 +117,24 @@ const ScfTaskRefusedParameter_Type_reason_congestion: ScfTaskRefusedParameter_Ty
  * @type {number}
  */
 export
-const congestion: ScfTaskRefusedParameter_Type_reason = ScfTaskRefusedParameter_Type_reason.congestion; /* SHORT_NAMED_ENUMERATED_VALUE */
+const congestion: _enum_for_ScfTaskRefusedParameter_Type_reason.congestion = ScfTaskRefusedParameter_Type_reason.congestion; /* SHORT_NAMED_ENUMERATED_VALUE */
 
 export
-const _decode_ScfTaskRefusedParameter_Type_reason: $.ASN1Decoder<ScfTaskRefusedParameter_Type_reason> = $._decodeEnumerated;
+function _decode_ScfTaskRefusedParameter_Type_reason(el: _Element): ScfTaskRefusedParameter_Type_reason {
+    const enumerated = $._decodeEnumerated(el);
+    switch (enumerated) {
+        case ScfTaskRefusedParameter_Type_reason.generic: return ScfTaskRefusedParameter_Type_reason.generic;
+        case ScfTaskRefusedParameter_Type_reason.unobtainable: return ScfTaskRefusedParameter_Type_reason.unobtainable;
+        case ScfTaskRefusedParameter_Type_reason.congestion: return ScfTaskRefusedParameter_Type_reason.congestion;
+        default:
+            throw new _ConstructionError(
+                "Invalid ENUMERATED value " + enumerated + " for ScfTaskRefusedParameter_Type_reason.",
+                el,
+            );
+    }
+}
 
 export
-const _encode_ScfTaskRefusedParameter_Type_reason: $.ASN1Encoder<ScfTaskRefusedParameter_Type_reason> = $._encodeEnumerated;
+const _encode_ScfTaskRefusedParameter_Type_reason: $.ASN1Encoder<ScfTaskRefusedParameter_Type_reason> = $._encodeEnumerated as $.ASN1Encoder<ScfTaskRefusedParameter_Type_reason>;
 
 /* eslint-enable */

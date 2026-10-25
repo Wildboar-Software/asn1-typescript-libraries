@@ -1,12 +1,12 @@
 /* eslint-disable */
 import {
-    ASN1Element as _Element,
+    type ASN1Element as _Element,
     ASN1TagClass as _TagClass,
-    OPTIONAL,
+    type OPTIONAL,
 } from "@wildboar/asn1";
 import * as $ from "@wildboar/asn1/functional";
 import {
-    UiiFormat_next,
+    type UiiFormat_next,
     _decode_UiiFormat_next,
     _encode_UiiFormat_next,
 } from "../SelectedAttributeTypes/UiiFormat-next.ta.mjs";
@@ -18,7 +18,7 @@ import {
     _enum_for_UiiFormat_subset,
 } from "../SelectedAttributeTypes/UiiFormat-subset.ta.mjs";
 import {
-    URI,
+    type URI,
     _decode_URI,
     _encode_URI,
 } from "../SelectedAttributeTypes/URI.ta.mjs";
@@ -46,39 +46,47 @@ import {
  *
  */
 export class UiiFormat {
+    /**
+     * @summary `baseObject`.
+     * @description
+     *
+     * URI of search base; omitted ⇒ start at root.
+     *
+     * @public
+     * @readonly
+     */
+    public readonly baseObject: OPTIONAL<URI>;
+    /**
+     * @summary `subset`.
+     * @description
+     *
+     * DEFAULT baseObject. Recommended Search subset.
+     *
+     * @public
+     * @readonly
+     */
+    public readonly subset: OPTIONAL<UiiFormat_subset>;
+    /**
+     * @summary `next`.
+     * @description
+     *
+     * Following UII field: fixed `length` vs `filter` for remaining
+     * bits.
+     *
+     * @public
+     * @readonly
+     */
+    public readonly next: UiiFormat_next;
+
     constructor(
-        /**
-         * @summary `baseObject`.
-         * @description
-         *
-         * URI of search base; omitted ⇒ start at root.
-         *
-         * @public
-         * @readonly
-         */
-        readonly baseObject: OPTIONAL<URI>,
-        /**
-         * @summary `subset`.
-         * @description
-         *
-         * DEFAULT baseObject. Recommended Search subset.
-         *
-         * @public
-         * @readonly
-         */
-        readonly subset: OPTIONAL<UiiFormat_subset>,
-        /**
-         * @summary `next`.
-         * @description
-         *
-         * Following UII field: fixed `length` vs `filter` for remaining
-         * bits.
-         *
-         * @public
-         * @readonly
-         */
-        readonly next: UiiFormat_next
-    ) {}
+        baseObject: OPTIONAL<URI>,
+        subset: OPTIONAL<UiiFormat_subset>,
+        next: UiiFormat_next
+    ) {
+        this.baseObject = baseObject;
+        this.subset = subset;
+        this.next = next;
+    }
 
     /**
      * @summary Restructures an object into a UiiFormat
@@ -113,7 +121,7 @@ export class UiiFormat {
      * @static
      */
 
-    public static _enum_for_subset = _enum_for_UiiFormat_subset;
+    public static _enum_for_subset: typeof _enum_for_UiiFormat_subset = _enum_for_UiiFormat_subset;
 }
 
 /**

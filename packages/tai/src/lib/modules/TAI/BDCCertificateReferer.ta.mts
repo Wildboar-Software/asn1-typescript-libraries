@@ -1,6 +1,6 @@
 /* eslint-disable */
 import {
-    ASN1Element as _Element,
+    type ASN1Element as _Element,
     ASN1TagClass as _TagClass,
     ASN1Construction as _Construction,
     ASN1UniversalType as _UniversalType,
@@ -36,38 +36,46 @@ import { type KeyUsage, _decode_KeyUsage, _encode_KeyUsage } from "@wildboar/x50
  */
 export
 class BDCCertificateReferer {
+    /**
+     * @summary `bdcIssuer`.
+     * @description
+     *
+     * Issuer of the referenced BDC. X.1089 §11.6.
+     *
+     * @public
+     * @readonly
+     */
+    public readonly bdcIssuer: Name;
+    /**
+     * @summary `bdcSerialNumber`.
+     * @description
+     *
+     * Serial number of the referenced BDC. X.1089 §11.6.
+     *
+     * @public
+     * @readonly
+     */
+    public readonly bdcSerialNumber: CertificateSerialNumber;
+    /**
+     * @summary `bdcUsage`.
+     * @description
+     *
+     * Key usage of the referenced BDC. X.1089 §11.6.
+     *
+     * @public
+     * @readonly
+     */
+    public readonly bdcUsage: KeyUsage;
+
     constructor (
-        /**
-         * @summary `bdcIssuer`.
-         * @description
-         *
-         * Issuer of the referenced BDC. X.1089 §11.6.
-         *
-         * @public
-         * @readonly
-         */
-        readonly bdcIssuer: Name,
-        /**
-         * @summary `bdcSerialNumber`.
-         * @description
-         *
-         * Serial number of the referenced BDC. X.1089 §11.6.
-         *
-         * @public
-         * @readonly
-         */
-        readonly bdcSerialNumber: CertificateSerialNumber,
-        /**
-         * @summary `bdcUsage`.
-         * @description
-         *
-         * Key usage of the referenced BDC. X.1089 §11.6.
-         *
-         * @public
-         * @readonly
-         */
-        readonly bdcUsage: KeyUsage
-    ) {}
+        bdcIssuer: Name,
+        bdcSerialNumber: CertificateSerialNumber,
+        bdcUsage: KeyUsage
+    ) {
+        this.bdcIssuer = bdcIssuer;
+        this.bdcSerialNumber = bdcSerialNumber;
+        this.bdcUsage = bdcUsage;
+    }
 
     /**
      * @summary Restructures an object into a BDCCertificateReferer

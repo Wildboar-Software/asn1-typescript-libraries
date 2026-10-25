@@ -1,6 +1,6 @@
 /* eslint-disable */
 import {
-    ASN1Element as _Element,
+    type ASN1Element as _Element,
     ASN1TagClass as _TagClass,
     ASN1Construction as _Construction,
     ASN1UniversalType as _UniversalType,
@@ -10,7 +10,7 @@ import {
     ASN1ConstructionError as _ConstructionError,
 } from '@wildboar/asn1';
 import {
-    BodyPartReferences,
+    type BodyPartReferences,
     _decode_BodyPartReferences,
     _encode_BodyPartReferences,
 } from '../IPMSInformationObjects/BodyPartReferences.ta.mjs';

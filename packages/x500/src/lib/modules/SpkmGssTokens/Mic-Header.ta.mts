@@ -1,9 +1,9 @@
 /* eslint-disable */
 import {
-    ASN1Element as _Element,
+    type ASN1Element as _Element,
     ASN1TagClass as _TagClass,
-    INTEGER,
-    OPTIONAL,
+    type INTEGER,
+    type OPTIONAL,
 } from "@wildboar/asn1";
 import * as $ from "@wildboar/asn1/functional";
 import {
@@ -12,7 +12,7 @@ import {
     _encode_AlgorithmIdentifier,
 } from "../AuthenticationFramework/AlgorithmIdentifier.ta.mjs";
 import {
-    Random_Integer,
+    type Random_Integer,
     _decode_Random_Integer,
     _encode_Random_Integer,
 } from "../SpkmGssTokens/Random-Integer.ta.mjs";
@@ -42,50 +42,60 @@ import {
  *
  */
 export class Mic_Header {
+    /**
+     * @summary `tok_id`.
+     * @description
+     *
+     * Must be 257 (0x0101). Cryptographically bound into the checksum
+     * so a MIC cannot be spliced onto another token type.
+     *
+     * @public
+     * @readonly
+     */
+    public readonly tok_id: INTEGER;
+    /**
+     * @summary `context_id`.
+     * @description
+     *
+     * Established context-id.
+     *
+     * @public
+     * @readonly
+     */
+    public readonly context_id: Random_Integer;
+    /**
+     * @summary `int_alg`.
+     * @description
+     *
+     * Must be one of the agreed I-ALGs. Omit for the default (first
+     * agreed I-ALG).
+     *
+     * @public
+     * @readonly
+     */
+    public readonly int_alg?: OPTIONAL<AlgorithmIdentifier>;
+    /**
+     * @summary `snd_seq`.
+     * @description
+     *
+     * Sender sequence number; increment by 1 after emitting the token.
+     *
+     * @public
+     * @readonly
+     */
+    public readonly snd_seq?: OPTIONAL<SeqNum>;
+
     constructor(
-        /**
-         * @summary `tok_id`.
-         * @description
-         *
-         * Must be 257 (0x0101). Cryptographically bound into the checksum
-         * so a MIC cannot be spliced onto another token type.
-         *
-         * @public
-         * @readonly
-         */
-        readonly tok_id: INTEGER,
-        /**
-         * @summary `context_id`.
-         * @description
-         *
-         * Established context-id.
-         *
-         * @public
-         * @readonly
-         */
-        readonly context_id: Random_Integer,
-        /**
-         * @summary `int_alg`.
-         * @description
-         *
-         * Must be one of the agreed I-ALGs. Omit for the default (first
-         * agreed I-ALG).
-         *
-         * @public
-         * @readonly
-         */
-        readonly int_alg?: OPTIONAL<AlgorithmIdentifier>,
-        /**
-         * @summary `snd_seq`.
-         * @description
-         *
-         * Sender sequence number; increment by 1 after emitting the token.
-         *
-         * @public
-         * @readonly
-         */
-        readonly snd_seq?: OPTIONAL<SeqNum>
-    ) {}
+        tok_id: INTEGER,
+        context_id: Random_Integer,
+        int_alg?: OPTIONAL<AlgorithmIdentifier>,
+        snd_seq?: OPTIONAL<SeqNum>
+    ) {
+        this.tok_id = tok_id;
+        this.context_id = context_id;
+        this.int_alg = int_alg;
+        this.snd_seq = snd_seq;
+    }
 
     /**
      * @summary Restructures an object into a Mic_Header

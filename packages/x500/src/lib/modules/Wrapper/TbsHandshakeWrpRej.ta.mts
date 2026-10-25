@@ -1,35 +1,35 @@
 /* eslint-disable */
 import {
-    ASN1Element as _Element,
+    type ASN1Element as _Element,
     ASN1TagClass as _TagClass,
-    OPTIONAL,
+    type OPTIONAL,
     TRUE_BIT,
 } from "@wildboar/asn1";
 import * as $ from "@wildboar/asn1/functional";
-import { AssoID, _decode_AssoID, _encode_AssoID } from "../Wrapper/AssoID.ta.mjs";
+import { type AssoID, _decode_AssoID, _encode_AssoID } from "../Wrapper/AssoID.ta.mjs";
 import {
-    DER_PkiPath,
+    type DER_PkiPath,
     _decode_DER_PkiPath,
     _encode_DER_PkiPath,
 } from "../Wrapper/DER-PkiPath.ta.mjs";
 import {
-    TbsHandshakeWrpRej_sigSel,
+    type TbsHandshakeWrpRej_sigSel,
     _decode_TbsHandshakeWrpRej_sigSel,
     _encode_TbsHandshakeWrpRej_sigSel,
 } from "../Wrapper/TbsHandshakeWrpRej-sigSel.ta.mjs";
 import {
-    TimeStamp,
+    type TimeStamp,
     _decode_TimeStamp,
     _encode_TimeStamp,
 } from "../Wrapper/TimeStamp.ta.mjs";
 import {
-    Version,
+    type Version,
     Version_v1 /* IMPORTED_LONG_NAMED_BIT */,
     _decode_Version,
     _encode_Version,
 } from "../Wrapper/Version.ta.mjs";
 import {
-    WrpError,
+    type WrpError,
     _decode_WrpError,
     _encode_WrpError,
     _enum_for_WrpError,
@@ -61,56 +61,72 @@ import {
  *
  */
 export class TbsHandshakeWrpRej {
+    /**
+     * @summary `version`.
+     * @description Exactly one bit; prefer among those in the `HandshakeReq`. If none of those is supported, still return a version the server supports. DEFAULT `{v1}`.
+     * @public
+     * @readonly
+     */
+    public readonly version: OPTIONAL<Version>;
+    /**
+     * @summary `sigSel`.
+     * @description `altSigAlg` iff the client offered it and the server supports it; else `sigAlg`. If neither is supported, put a supported alg in `sigAlg`. Signs this PDU; `altSignature` absent.
+     * @public
+     * @readonly
+     */
+    public readonly sigSel: TbsHandshakeWrpRej_sigSel;
+    /**
+     * @summary `assoID`.
+     * @description Same value as in the corresponding `HandshakeReq`.
+     * @public
+     * @readonly
+     */
+    public readonly assoID: AssoID;
+    /**
+     * @summary `time`.
+     * @description UTC GeneralizedTime of creation (clause 8.2).
+     * @public
+     * @readonly
+     */
+    public readonly time: TimeStamp;
+    /**
+     * @summary `pkiPath`.
+     * @description DER-encapsulated certification path verifying this signature.
+     * @public
+     * @readonly
+     */
+    public readonly pkiPath: DER_PkiPath;
+    /**
+     * @summary `diag`.
+     * @description `WrpError` when not an alert; **absent if alert** (possible adversary).
+     * @public
+     * @readonly
+     */
+    public readonly diag?: OPTIONAL<WrpError>;
+    /**
+     * @summary Extensions that are not recognized.
+     * @public
+     * @readonly
+     */
+    public readonly _unrecognizedExtensionsList: _Element[];
+
     constructor(
-        /**
-         * @summary `version`.
-         * @description Exactly one bit; prefer among those in the `HandshakeReq`. If none of those is supported, still return a version the server supports. DEFAULT `{v1}`.
-         * @public
-         * @readonly
-         */
-        readonly version: OPTIONAL<Version>,
-        /**
-         * @summary `sigSel`.
-         * @description `altSigAlg` iff the client offered it and the server supports it; else `sigAlg`. If neither is supported, put a supported alg in `sigAlg`. Signs this PDU; `altSignature` absent.
-         * @public
-         * @readonly
-         */
-        readonly sigSel: TbsHandshakeWrpRej_sigSel,
-        /**
-         * @summary `assoID`.
-         * @description Same value as in the corresponding `HandshakeReq`.
-         * @public
-         * @readonly
-         */
-        readonly assoID: AssoID,
-        /**
-         * @summary `time`.
-         * @description UTC GeneralizedTime of creation (clause 8.2).
-         * @public
-         * @readonly
-         */
-        readonly time: TimeStamp,
-        /**
-         * @summary `pkiPath`.
-         * @description DER-encapsulated certification path verifying this signature.
-         * @public
-         * @readonly
-         */
-        readonly pkiPath: DER_PkiPath,
-        /**
-         * @summary `diag`.
-         * @description `WrpError` when not an alert; **absent if alert** (possible adversary).
-         * @public
-         * @readonly
-         */
-        readonly diag?: OPTIONAL<WrpError>,
-        /**
-         * @summary Extensions that are not recognized.
-         * @public
-         * @readonly
-         */
-        readonly _unrecognizedExtensionsList: _Element[] = []
-    ) {}
+        version: OPTIONAL<Version>,
+        sigSel: TbsHandshakeWrpRej_sigSel,
+        assoID: AssoID,
+        time: TimeStamp,
+        pkiPath: DER_PkiPath,
+        diag?: OPTIONAL<WrpError>,
+        _unrecognizedExtensionsList: _Element[] = []
+    ) {
+        this.version = version;
+        this.sigSel = sigSel;
+        this.assoID = assoID;
+        this.time = time;
+        this.pkiPath = pkiPath;
+        this.diag = diag;
+        this._unrecognizedExtensionsList = _unrecognizedExtensionsList;
+    }
 
     /**
      * @summary Restructures an object into a TbsHandshakeWrpRej
@@ -157,7 +173,7 @@ export class TbsHandshakeWrpRej {
      * @static
      */
 
-    public static _enum_for_diag = _enum_for_WrpError;
+    public static _enum_for_diag: typeof _enum_for_WrpError = _enum_for_WrpError;
 }
 
 /**

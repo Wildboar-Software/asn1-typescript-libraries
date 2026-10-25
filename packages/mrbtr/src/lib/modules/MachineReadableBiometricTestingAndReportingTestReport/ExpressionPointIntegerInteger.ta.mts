@@ -1,7 +1,7 @@
 /* eslint-disable */
 import {
-    INTEGER,
-    ASN1Element as _Element,
+    type INTEGER,
+    type ASN1Element as _Element,
     ASN1TagClass as _TagClass,
     ASN1Construction as _Construction,
     ASN1UniversalType as _UniversalType,
@@ -34,28 +34,34 @@ import * as $ from "@wildboar/asn1/functional";
  */
 export
 class ExpressionPointIntegerInteger {
+    /**
+     * @summary `subjectId`.
+     * @description
+     *
+     * Subject identifier (Clause 6.4.4.2).
+     *
+     * @public
+     * @readonly
+     */
+    public readonly subjectId: INTEGER;
+    /**
+     * @summary `numberOfSamples`.
+     * @description
+     *
+     * Samples for this `subjectId` (Clause 6.4.4.2).
+     *
+     * @public
+     * @readonly
+     */
+    public readonly numberOfSamples: INTEGER;
+
     constructor (
-        /**
-         * @summary `subjectId`.
-         * @description
-         *
-         * Subject identifier (Clause 6.4.4.2).
-         *
-         * @public
-         * @readonly
-         */
-        readonly subjectId: INTEGER,
-        /**
-         * @summary `numberOfSamples`.
-         * @description
-         *
-         * Samples for this `subjectId` (Clause 6.4.4.2).
-         *
-         * @public
-         * @readonly
-         */
-        readonly numberOfSamples: INTEGER
-    ) {}
+        subjectId: INTEGER,
+        numberOfSamples: INTEGER
+    ) {
+        this.subjectId = subjectId;
+        this.numberOfSamples = numberOfSamples;
+    }
 
     /**
      * @summary Restructures an object into a ExpressionPointIntegerInteger

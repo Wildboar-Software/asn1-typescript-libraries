@@ -1,6 +1,6 @@
 /* eslint-disable */
 import {
-    ASN1Element as _Element,
+    type ASN1Element as _Element,
     ASN1TagClass as _TagClass,
     ASN1Construction as _Construction,
     ASN1UniversalType as _UniversalType,
@@ -11,12 +11,12 @@ import {
 } from '@wildboar/asn1';
 import * as $ from '@wildboar/asn1/functional';
 import {
-    FetchRestrictionProblem,
+    type FetchRestrictionProblem,
     _decode_FetchRestrictionProblem,
     _encode_FetchRestrictionProblem,
 } from '../MSAbstractService/FetchRestrictionProblem.ta.mjs';
 import {
-    fetch_restriction_error_ParameterType_problems_Item_restriction,
+    type fetch_restriction_error_ParameterType_problems_Item_restriction,
     _decode_fetch_restriction_error_ParameterType_problems_Item_restriction,
     _encode_fetch_restriction_error_ParameterType_problems_Item_restriction,
 } from '../MSAbstractService/fetch-restriction-error-ParameterType-problems-Item-restriction.ta.mjs';
@@ -34,20 +34,26 @@ import {
  *
  */
 export class fetch_restriction_error_ParameterType_problems_Item {
+    /**
+     * @summary `problem`.
+     * @public
+     * @readonly
+     */
+    public readonly problem: FetchRestrictionProblem;
+    /**
+     * @summary `restriction`.
+     * @public
+     * @readonly
+     */
+    public readonly restriction: fetch_restriction_error_ParameterType_problems_Item_restriction;
+
     constructor(
-        /**
-         * @summary `problem`.
-         * @public
-         * @readonly
-         */
-        readonly problem: FetchRestrictionProblem,
-        /**
-         * @summary `restriction`.
-         * @public
-         * @readonly
-         */
-        readonly restriction: fetch_restriction_error_ParameterType_problems_Item_restriction
-    ) {}
+        problem: FetchRestrictionProblem,
+        restriction: fetch_restriction_error_ParameterType_problems_Item_restriction
+    ) {
+        this.problem = problem;
+        this.restriction = restriction;
+    }
 
     /**
      * @summary Restructures an object into a fetch_restriction_error_ParameterType_problems_Item

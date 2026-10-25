@@ -1,7 +1,7 @@
 /* eslint-disable */
 
 import * as $ from "@wildboar/asn1/functional";
-import { ENUMERATED, ASN1Element as _Element } from "@wildboar/asn1";
+import { type ENUMERATED, ASN1Element as _Element } from "@wildboar/asn1";
 
 
 
@@ -82,7 +82,7 @@ type ParticipationType = _enum_for_ParticipationType;
  * @enum {number}
  */
 export
-const ParticipationType = _enum_for_ParticipationType;
+const ParticipationType: typeof _enum_for_ParticipationType = _enum_for_ParticipationType;
 
 /**
  * @summary ParticipationType_silent
@@ -92,7 +92,7 @@ const ParticipationType = _enum_for_ParticipationType;
  * @see https://ecma-international.org/publications-and-standards/standards/ecma-269/
  */
 export
-const ParticipationType_silent: ParticipationType = ParticipationType.silent; /* LONG_NAMED_ENUMERATED_VALUE */
+const ParticipationType_silent: _enum_for_ParticipationType.silent = ParticipationType.silent; /* LONG_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary silent
@@ -101,7 +101,7 @@ const ParticipationType_silent: ParticipationType = ParticipationType.silent; /*
  * @type {number}
  */
 export
-const silent: ParticipationType = ParticipationType.silent; /* SHORT_NAMED_ENUMERATED_VALUE */
+const silent: _enum_for_ParticipationType.silent = ParticipationType.silent; /* SHORT_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary ParticipationType_active
@@ -111,7 +111,7 @@ const silent: ParticipationType = ParticipationType.silent; /* SHORT_NAMED_ENUME
  * @see https://ecma-international.org/publications-and-standards/standards/ecma-269/
  */
 export
-const ParticipationType_active: ParticipationType = ParticipationType.active; /* LONG_NAMED_ENUMERATED_VALUE */
+const ParticipationType_active: _enum_for_ParticipationType.active = ParticipationType.active; /* LONG_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary active
@@ -120,7 +120,7 @@ const ParticipationType_active: ParticipationType = ParticipationType.active; /*
  * @type {number}
  */
 export
-const active: ParticipationType = ParticipationType.active; /* SHORT_NAMED_ENUMERATED_VALUE */
+const active: _enum_for_ParticipationType.active = ParticipationType.active; /* SHORT_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary ParticipationType_none
@@ -130,7 +130,7 @@ const active: ParticipationType = ParticipationType.active; /* SHORT_NAMED_ENUME
  * @see https://ecma-international.org/publications-and-standards/standards/ecma-269/
  */
 export
-const ParticipationType_none: ParticipationType = ParticipationType.none; /* LONG_NAMED_ENUMERATED_VALUE */
+const ParticipationType_none: _enum_for_ParticipationType.none = ParticipationType.none; /* LONG_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary none
@@ -139,7 +139,7 @@ const ParticipationType_none: ParticipationType = ParticipationType.none; /* LON
  * @type {number}
  */
 export
-const none: ParticipationType = ParticipationType.none; /* SHORT_NAMED_ENUMERATED_VALUE */
+const none: _enum_for_ParticipationType.none = ParticipationType.none; /* SHORT_NAMED_ENUMERATED_VALUE */
 
 let _cached_decoder_for_ParticipationType: $.ASN1Decoder<ParticipationType> | null = null;
 

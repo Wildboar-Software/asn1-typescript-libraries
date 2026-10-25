@@ -5,7 +5,7 @@ import {
 import * as $ from "@wildboar/asn1/functional";
 import { CurrencyValue, _decode_CurrencyValue, _encode_CurrencyValue } from "../IN-CS3-SCF-SCF-datatypes/CurrencyValue.ta.mjs";
 // export { CurrencyValue, _decode_CurrencyValue, _encode_CurrencyValue } from "../IN-CS3-SCF-SCF-datatypes/CurrencyValue.ta.mjs";
-import { CreditUnit, _decode_CreditUnit, _encode_CreditUnit } from "../IN-CS3-SCF-SCF-datatypes/CreditUnit.ta.mjs";
+import { type CreditUnit, _decode_CreditUnit, _encode_CreditUnit } from "../IN-CS3-SCF-SCF-datatypes/CreditUnit.ta.mjs";
 // export { CreditUnit, _decode_CreditUnit, _encode_CreditUnit } from "../IN-CS3-SCF-SCF-datatypes/CreditUnit.ta.mjs";
 
 

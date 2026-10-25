@@ -1,11 +1,11 @@
 /* eslint-disable */
 import {
-    OPTIONAL,
-    BOOLEAN,
-    INTEGER,
-    OBJECT_IDENTIFIER,
-    GeneralString,
-    ASN1Element as _Element,
+    type OPTIONAL,
+    type BOOLEAN,
+    type INTEGER,
+    type OBJECT_IDENTIFIER,
+    type GeneralString,
+    type ASN1Element as _Element,
     ASN1TagClass as _TagClass,
     ASN1Construction as _Construction,
     ASN1UniversalType as _UniversalType,
@@ -16,32 +16,32 @@ import {
 } from '@wildboar/asn1';
 import * as $ from '@wildboar/asn1/functional';
 import {
-    ResponderCredentials,
+    type ResponderCredentials,
     _decode_ResponderCredentials,
     _encode_ResponderCredentials,
 } from '../MTSAbstractService/ResponderCredentials.ta.mjs';
 import {
-    EntryClass,
+    type EntryClass,
     _decode_EntryClass,
     _encode_EntryClass,
 } from '../MSAbstractService/EntryClass.ta.mjs';
 import {
-    MSExtensions,
+    type MSExtensions,
     _decode_MSExtensions,
     _encode_MSExtensions,
 } from '../MSAbstractService/MSExtensions.ta.mjs';
 import {
-    AutoActionErrorIndication,
+    type AutoActionErrorIndication,
     _decode_AutoActionErrorIndication,
     _encode_AutoActionErrorIndication,
 } from '../MSAbstractService/AutoActionErrorIndication.ta.mjs';
 import {
-    AttributeType,
+    type AttributeType,
     _decode_AttributeType,
     _encode_AttributeType,
 } from "./AttributeType.ta.mjs";
 import {
-    AutoActionType,
+    type AutoActionType,
     _decode_AutoActionType,
     _encode_AutoActionType,
 } from "./AutoActionType.ta.mjs";
@@ -84,86 +84,114 @@ import {
  *
  */
 export class MSBindResult {
+    /**
+     * @summary `responder_credentials`.
+     * @public
+     * @readonly
+     */
+    public readonly responder_credentials: ResponderCredentials;
+    /**
+     * @summary `available_auto_actions`.
+     * @public
+     * @readonly
+     */
+    public readonly available_auto_actions?: OPTIONAL<AutoActionType[]>;
+    /**
+     * @summary `available_attribute_types`.
+     * @public
+     * @readonly
+     */
+    public readonly available_attribute_types?: OPTIONAL<AttributeType[]>;
+    /**
+     * @summary `alert_indication`.
+     * @public
+     * @readonly
+     */
+    public readonly alert_indication?: OPTIONAL<BOOLEAN>;
+    /**
+     * @summary `content_types_supported`.
+     * @public
+     * @readonly
+     */
+    public readonly content_types_supported?: OPTIONAL<OBJECT_IDENTIFIER[]>;
+    /**
+     * @summary `entry_classes_supported`.
+     * @public
+     * @readonly
+     */
+    public readonly entry_classes_supported?: OPTIONAL<EntryClass[]>;
+    /**
+     * @summary `matching_rules_supported`.
+     * @public
+     * @readonly
+     */
+    public readonly matching_rules_supported?: OPTIONAL<OBJECT_IDENTIFIER[]>;
+    /**
+     * @summary `bind_result_extensions`.
+     * @public
+     * @readonly
+     */
+    public readonly bind_result_extensions?: OPTIONAL<MSExtensions>;
+    /**
+     * @summary `message_group_depth`.
+     * @public
+     * @readonly
+     */
+    public readonly message_group_depth?: OPTIONAL<INTEGER>;
+    /**
+     * @summary `auto_action_error_indication`.
+     * @public
+     * @readonly
+     */
+    public readonly auto_action_error_indication?: OPTIONAL<AutoActionErrorIndication>;
+    /**
+     * @summary `unsupported_extensions`.
+     * @public
+     * @readonly
+     */
+    public readonly unsupported_extensions?: OPTIONAL<OBJECT_IDENTIFIER[]>;
+    /**
+     * @summary `ua_registration_id_unknown`.
+     * @public
+     * @readonly
+     */
+    public readonly ua_registration_id_unknown?: OPTIONAL<BOOLEAN>;
+    /**
+     * @summary `service_information`.
+     * @public
+     * @readonly
+     */
+    public readonly service_information?: OPTIONAL<GeneralString>;
+
     constructor(
-        /**
-         * @summary `responder_credentials`.
-         * @public
-         * @readonly
-         */
-        readonly responder_credentials: ResponderCredentials,
-        /**
-         * @summary `available_auto_actions`.
-         * @public
-         * @readonly
-         */
-        readonly available_auto_actions?: OPTIONAL<AutoActionType[]>,
-        /**
-         * @summary `available_attribute_types`.
-         * @public
-         * @readonly
-         */
-        readonly available_attribute_types?: OPTIONAL<AttributeType[]>,
-        /**
-         * @summary `alert_indication`.
-         * @public
-         * @readonly
-         */
-        readonly alert_indication?: OPTIONAL<BOOLEAN>,
-        /**
-         * @summary `content_types_supported`.
-         * @public
-         * @readonly
-         */
-        readonly content_types_supported?: OPTIONAL<OBJECT_IDENTIFIER[]>,
-        /**
-         * @summary `entry_classes_supported`.
-         * @public
-         * @readonly
-         */
-        readonly entry_classes_supported?: OPTIONAL<EntryClass[]>,
-        /**
-         * @summary `matching_rules_supported`.
-         * @public
-         * @readonly
-         */
-        readonly matching_rules_supported?: OPTIONAL<OBJECT_IDENTIFIER[]>,
-        /**
-         * @summary `bind_result_extensions`.
-         * @public
-         * @readonly
-         */
-        readonly bind_result_extensions?: OPTIONAL<MSExtensions>,
-        /**
-         * @summary `message_group_depth`.
-         * @public
-         * @readonly
-         */
-        readonly message_group_depth?: OPTIONAL<INTEGER>,
-        /**
-         * @summary `auto_action_error_indication`.
-         * @public
-         * @readonly
-         */
-        readonly auto_action_error_indication?: OPTIONAL<AutoActionErrorIndication>,
-        /**
-         * @summary `unsupported_extensions`.
-         * @public
-         * @readonly
-         */
-        readonly unsupported_extensions?: OPTIONAL<OBJECT_IDENTIFIER[]>,
-        /**
-         * @summary `ua_registration_id_unknown`.
-         * @public
-         * @readonly
-         */
-        readonly ua_registration_id_unknown?: OPTIONAL<BOOLEAN>,
-        /**
-         * @summary `service_information`.
-         * @public
-         * @readonly
-         */
-        readonly service_information?: OPTIONAL<GeneralString>
-    ) {}
+        responder_credentials: ResponderCredentials,
+        available_auto_actions?: OPTIONAL<AutoActionType[]>,
+        available_attribute_types?: OPTIONAL<AttributeType[]>,
+        alert_indication?: OPTIONAL<BOOLEAN>,
+        content_types_supported?: OPTIONAL<OBJECT_IDENTIFIER[]>,
+        entry_classes_supported?: OPTIONAL<EntryClass[]>,
+        matching_rules_supported?: OPTIONAL<OBJECT_IDENTIFIER[]>,
+        bind_result_extensions?: OPTIONAL<MSExtensions>,
+        message_group_depth?: OPTIONAL<INTEGER>,
+        auto_action_error_indication?: OPTIONAL<AutoActionErrorIndication>,
+        unsupported_extensions?: OPTIONAL<OBJECT_IDENTIFIER[]>,
+        ua_registration_id_unknown?: OPTIONAL<BOOLEAN>,
+        service_information?: OPTIONAL<GeneralString>
+    ) {
+        this.responder_credentials = responder_credentials;
+        this.available_auto_actions = available_auto_actions;
+        this.available_attribute_types = available_attribute_types;
+        this.alert_indication = alert_indication;
+        this.content_types_supported = content_types_supported;
+        this.entry_classes_supported = entry_classes_supported;
+        this.matching_rules_supported = matching_rules_supported;
+        this.bind_result_extensions = bind_result_extensions;
+        this.message_group_depth = message_group_depth;
+        this.auto_action_error_indication = auto_action_error_indication;
+        this.unsupported_extensions = unsupported_extensions;
+        this.ua_registration_id_unknown = ua_registration_id_unknown;
+        this.service_information = service_information;
+    }
 
     /**
      * @summary Restructures an object into a MSBindResult

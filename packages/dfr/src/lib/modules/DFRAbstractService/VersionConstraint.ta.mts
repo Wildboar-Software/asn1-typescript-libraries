@@ -1,6 +1,6 @@
 /* eslint-disable */
 import {
-    ASN1Element as _Element,
+    type ASN1Element as _Element,
     ASN1TagClass as _TagClass,
     ASN1Construction as _Construction,
     ASN1UniversalType as _UniversalType,
@@ -77,7 +77,7 @@ type VersionConstraint = _enum_for_VersionConstraint;
  * @enum {number}
  */
 export
-const VersionConstraint = _enum_for_VersionConstraint;
+const VersionConstraint: typeof _enum_for_VersionConstraint = _enum_for_VersionConstraint;
 
 /**
  * @summary VersionConstraint_no_version_constraint
@@ -88,7 +88,7 @@ const VersionConstraint = _enum_for_VersionConstraint;
  * @type {number}
  */
 export
-const VersionConstraint_no_version_constraint: VersionConstraint = VersionConstraint.no_version_constraint; /* LONG_NAMED_ENUMERATED_VALUE */
+const VersionConstraint_no_version_constraint: _enum_for_VersionConstraint.no_version_constraint = VersionConstraint.no_version_constraint; /* LONG_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary no_version_constraint
@@ -99,7 +99,7 @@ const VersionConstraint_no_version_constraint: VersionConstraint = VersionConstr
  * @type {number}
  */
 export
-const no_version_constraint: VersionConstraint = VersionConstraint.no_version_constraint; /* SHORT_NAMED_ENUMERATED_VALUE */
+const no_version_constraint: _enum_for_VersionConstraint.no_version_constraint = VersionConstraint.no_version_constraint; /* SHORT_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary VersionConstraint_version_unambiguity
@@ -111,7 +111,7 @@ const no_version_constraint: VersionConstraint = VersionConstraint.no_version_co
  * @type {number}
  */
 export
-const VersionConstraint_version_unambiguity: VersionConstraint = VersionConstraint.version_unambiguity; /* LONG_NAMED_ENUMERATED_VALUE */
+const VersionConstraint_version_unambiguity: _enum_for_VersionConstraint.version_unambiguity = VersionConstraint.version_unambiguity; /* LONG_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary version_unambiguity
@@ -123,9 +123,20 @@ const VersionConstraint_version_unambiguity: VersionConstraint = VersionConstrai
  * @type {number}
  */
 export
-const version_unambiguity: VersionConstraint = VersionConstraint.version_unambiguity; /* SHORT_NAMED_ENUMERATED_VALUE */
-export const _decode_VersionConstraint = $._decodeEnumerated;
-export const _encode_VersionConstraint = $._encodeEnumerated;
+const version_unambiguity: _enum_for_VersionConstraint.version_unambiguity = VersionConstraint.version_unambiguity; /* SHORT_NAMED_ENUMERATED_VALUE */
+export function _decode_VersionConstraint(el: _Element): VersionConstraint {
+    const enumerated = $._decodeEnumerated(el);
+    switch (enumerated) {
+        case VersionConstraint.no_version_constraint: return VersionConstraint.no_version_constraint;
+        case VersionConstraint.version_unambiguity: return VersionConstraint.version_unambiguity;
+        default:
+            throw new _ConstructionError(
+                "Invalid ENUMERATED value " + enumerated + " for VersionConstraint.",
+                el,
+            );
+    }
+}
+export const _encode_VersionConstraint: $.ASN1Encoder<VersionConstraint> = $._encodeEnumerated as $.ASN1Encoder<VersionConstraint>;
 
 
 /* eslint-enable */

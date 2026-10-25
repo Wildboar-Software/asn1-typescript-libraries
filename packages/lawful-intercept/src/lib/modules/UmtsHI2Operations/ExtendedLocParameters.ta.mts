@@ -1,14 +1,14 @@
 /* eslint-disable */
 import {
-    BOOLEAN,
-    OPTIONAL,
-    PrintableString,
-    UTF8String,
-    ASN1Element as _Element,
+    type BOOLEAN,
+    type OPTIONAL,
+    type PrintableString,
+    type UTF8String,
+    type ASN1Element as _Element,
     ASN1TagClass as _TagClass
 } from "@wildboar/asn1";
 import * as $ from "@wildboar/asn1/functional";
-import { ExtendedLocParameters_mapData, _decode_ExtendedLocParameters_mapData, _encode_ExtendedLocParameters_mapData } from "../UmtsHI2Operations/ExtendedLocParameters-mapData.ta.mjs";
+import { type ExtendedLocParameters_mapData, _decode_ExtendedLocParameters_mapData, _encode_ExtendedLocParameters_mapData } from "../UmtsHI2Operations/ExtendedLocParameters-mapData.ta.mjs";
 // export { ExtendedLocParameters_mapData, _decode_ExtendedLocParameters_mapData, _encode_ExtendedLocParameters_mapData } from "../UmtsHI2Operations/ExtendedLocParameters-mapData.ta.mjs";
 import { ExtendedLocParameters_altitude, _decode_ExtendedLocParameters_altitude, _encode_ExtendedLocParameters_altitude } from "../UmtsHI2Operations/ExtendedLocParameters-altitude.ta.mjs";
 // export { ExtendedLocParameters_altitude, _decode_ExtendedLocParameters_altitude, _encode_ExtendedLocParameters_altitude } from "../UmtsHI2Operations/ExtendedLocParameters-altitude.ta.mjs";

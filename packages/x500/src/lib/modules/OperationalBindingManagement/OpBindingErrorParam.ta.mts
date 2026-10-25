@@ -1,10 +1,10 @@
 /* eslint-disable */
 import {
-    ASN1Element as _Element,
+    type ASN1Element as _Element,
     ASN1TagClass as _TagClass,
-    BOOLEAN,
-    OBJECT_IDENTIFIER,
-    OPTIONAL,
+    type BOOLEAN,
+    type OBJECT_IDENTIFIER,
+    type OPTIONAL,
 } from "@wildboar/asn1";
 import * as $ from "@wildboar/asn1/functional";
 import {
@@ -18,18 +18,18 @@ import {
     _encode_Attribute,
 } from "../InformationFramework/Attribute.ta.mjs";
 import {
-    DistinguishedName,
+    type DistinguishedName,
     _decode_DistinguishedName,
     _encode_DistinguishedName,
 } from "../InformationFramework/DistinguishedName.ta.mjs";
 import {
-    OpBindingErrorParam_problem,
+    type OpBindingErrorParam_problem,
     _decode_OpBindingErrorParam_problem,
     _encode_OpBindingErrorParam_problem,
     _enum_for_OpBindingErrorParam_problem,
 } from "../OperationalBindingManagement/OpBindingErrorParam-problem.ta.mjs";
 import {
-    Time,
+    type Time,
     _decode_Time,
     _encode_Time,
 } from "../OperationalBindingManagement/Time.ta.mjs";
@@ -76,62 +76,82 @@ import {
  *
  */
 export class OpBindingErrorParam implements CommonResultsSeq {
+    /**
+     * @summary `problem`.
+     * @public
+     * @readonly
+     */
+    public readonly problem: OpBindingErrorParam_problem;
+    /**
+     * @summary `bindingType`.
+     * @public
+     * @readonly
+     */
+    public readonly bindingType?: OPTIONAL<OBJECT_IDENTIFIER>;
+    /**
+     * @summary `agreementProposal`.
+     * @public
+     * @readonly
+     */
+    public readonly agreementProposal?: OPTIONAL<_Element>;
+    /**
+     * @summary `retryAt`.
+     * @public
+     * @readonly
+     */
+    public readonly retryAt?: OPTIONAL<Time>;
+    /**
+     * @summary Extensions that are not recognized.
+     * @public
+     * @readonly
+     */
+    public readonly _unrecognizedExtensionsList: _Element[];
+    /**
+     * @summary `securityParameters`.
+     * @public
+     * @readonly
+     */
+    public readonly securityParameters?: OPTIONAL<SecurityParameters>; /* REPLICATED_COMPONENT */
+    /**
+     * @summary `performer`.
+     * @public
+     * @readonly
+     */
+    public readonly performer?: OPTIONAL<DistinguishedName>; /* REPLICATED_COMPONENT */
+    /**
+     * @summary `aliasDereferenced`.
+     * @public
+     * @readonly
+     */
+    public readonly aliasDereferenced?: OPTIONAL<BOOLEAN>; /* REPLICATED_COMPONENT */
+    /**
+     * @summary `notification`.
+     * @public
+     * @readonly
+     */
+    public readonly notification?: OPTIONAL<Attribute[]>; /* REPLICATED_COMPONENT */
+
     constructor(
-        /**
-         * @summary `problem`.
-         * @public
-         * @readonly
-         */
-        readonly problem: OpBindingErrorParam_problem,
-        /**
-         * @summary `bindingType`.
-         * @public
-         * @readonly
-         */
-        readonly bindingType?: OPTIONAL<OBJECT_IDENTIFIER>,
-        /**
-         * @summary `agreementProposal`.
-         * @public
-         * @readonly
-         */
-        readonly agreementProposal?: OPTIONAL<_Element>,
-        /**
-         * @summary `retryAt`.
-         * @public
-         * @readonly
-         */
-        readonly retryAt?: OPTIONAL<Time>,
-        /**
-         * @summary Extensions that are not recognized.
-         * @public
-         * @readonly
-         */
-        readonly _unrecognizedExtensionsList: _Element[] = [],
-        /**
-         * @summary `securityParameters`.
-         * @public
-         * @readonly
-         */
-        readonly securityParameters?: OPTIONAL<SecurityParameters> /* REPLICATED_COMPONENT */,
-        /**
-         * @summary `performer`.
-         * @public
-         * @readonly
-         */
-        readonly performer?: OPTIONAL<DistinguishedName> /* REPLICATED_COMPONENT */,
-        /**
-         * @summary `aliasDereferenced`.
-         * @public
-         * @readonly
-         */
-        readonly aliasDereferenced?: OPTIONAL<BOOLEAN> /* REPLICATED_COMPONENT */,
-        /**
-         * @summary `notification`.
-         * @public
-         * @readonly
-         */
-        readonly notification?: OPTIONAL<Attribute[]> /* REPLICATED_COMPONENT */
-    ) {}
+        problem: OpBindingErrorParam_problem,
+        bindingType?: OPTIONAL<OBJECT_IDENTIFIER>,
+        agreementProposal?: OPTIONAL<_Element>,
+        retryAt?: OPTIONAL<Time>,
+        _unrecognizedExtensionsList: _Element[] = [],
+        securityParameters?: OPTIONAL<SecurityParameters>,
+        performer?: OPTIONAL<DistinguishedName>,
+        aliasDereferenced?: OPTIONAL<BOOLEAN>,
+        notification?: OPTIONAL<Attribute[]>
+    ) {
+        this.problem = problem;
+        this.bindingType = bindingType;
+        this.agreementProposal = agreementProposal;
+        this.retryAt = retryAt;
+        this._unrecognizedExtensionsList = _unrecognizedExtensionsList;
+        this.securityParameters = securityParameters;
+        this.performer = performer;
+        this.aliasDereferenced = aliasDereferenced;
+        this.notification = notification;
+    }
 
     /**
      * @summary Restructures an object into a OpBindingErrorParam
@@ -176,7 +196,7 @@ export class OpBindingErrorParam implements CommonResultsSeq {
      * @static
      */
 
-    public static _enum_for_problem = _enum_for_OpBindingErrorParam_problem;
+    public static _enum_for_problem: typeof _enum_for_OpBindingErrorParam_problem = _enum_for_OpBindingErrorParam_problem;
 }
 
 /**

@@ -2,21 +2,21 @@
 
 import * as $ from "@wildboar/asn1/functional";
 import {
-    OPTIONAL,
-    SEQUENCE,
-    SET,
-    ASN1Element as _Element,
+    type OPTIONAL,
+    type SEQUENCE,
+    type SET,
+    type ASN1Element as _Element,
     ASN1TagClass as _TagClass
 } from "@wildboar/asn1";
-import { ConnectionID, _decode_ConnectionID, _encode_ConnectionID } from "../CSTA-call-connection-identifiers/ConnectionID.ta.mjs";
+import { type ConnectionID, _decode_ConnectionID, _encode_ConnectionID } from "../CSTA-call-connection-identifiers/ConnectionID.ta.mjs";
 
 import { DeviceID, _decode_DeviceID, _encode_DeviceID } from "../CSTA-device-identifiers/DeviceID.ta.mjs";
 
-import { CallCharacteristics, _decode_CallCharacteristics, _encode_CallCharacteristics } from "../CSTA-call-control/CallCharacteristics.ta.mjs";
+import { type CallCharacteristics, _decode_CallCharacteristics, _encode_CallCharacteristics } from "../CSTA-call-control/CallCharacteristics.ta.mjs";
 
-import { SubjectOfCall, _decode_SubjectOfCall, _encode_SubjectOfCall } from "../CSTA-device-feature-types/SubjectOfCall.ta.mjs";
+import { type SubjectOfCall, _decode_SubjectOfCall, _encode_SubjectOfCall } from "../CSTA-device-feature-types/SubjectOfCall.ta.mjs";
 
-import { LanguagePreferences, _decode_LanguagePreferences, _encode_LanguagePreferences } from "../CSTA-device-feature-types/LanguagePreferences.ta.mjs";
+import { type LanguagePreferences, _decode_LanguagePreferences, _encode_LanguagePreferences } from "../CSTA-device-feature-types/LanguagePreferences.ta.mjs";
 
 import {
     EventCause,
@@ -29,13 +29,13 @@ import { CSTACommonArguments, _decode_CSTACommonArguments, _encode_CSTACommonArg
 
 
 
-import { AccountInfo, _decode_AccountInfo, _encode_AccountInfo } from "../CSTA-device-feature-types/AccountInfo.ta.mjs";
+import { type AccountInfo, _decode_AccountInfo, _encode_AccountInfo } from "../CSTA-device-feature-types/AccountInfo.ta.mjs";
 
-import { AuthCode, _decode_AuthCode, _encode_AuthCode } from "../CSTA-device-feature-types/AuthCode.ta.mjs";
+import { type AuthCode, _decode_AuthCode, _encode_AuthCode } from "../CSTA-device-feature-types/AuthCode.ta.mjs";
 
-import { CorrelatorData, _decode_CorrelatorData, _encode_CorrelatorData } from "../CSTA-device-feature-types/CorrelatorData.ta.mjs";
+import { type CorrelatorData, _decode_CorrelatorData, _encode_CorrelatorData } from "../CSTA-device-feature-types/CorrelatorData.ta.mjs";
 
-import { UserData, _decode_UserData, _encode_UserData } from "../CSTA-device-feature-types/UserData.ta.mjs";
+import { type UserData, _decode_UserData, _encode_UserData } from "../CSTA-device-feature-types/UserData.ta.mjs";
 
 /**
  * @summary SingleStepTransArgument
@@ -55,14 +55,14 @@ import { UserData, _decode_UserData, _encode_UserData } from "../CSTA-device-fea
  * SingleStepTransArgument ::= SEQUENCE
  * {    activeCall             ConnectionID,
  *     transferredTo             DeviceID,
- *     accountCode             [0] IMPLICIT AccountInfo         OPTIONAL,
- *     authCode             [1] IMPLICIT AuthCode             OPTIONAL,
- *     correlatorData             [2] IMPLICIT CorrelatorData         OPTIONAL,
- *     userData             UserData                 OPTIONAL,
- *     callCharacteristics        [3] IMPLICIT CallCharacteristics    OPTIONAL,
- *     subjectOfCall            [4] IMPLICIT SubjectOfCall        OPTIONAL,
- *     languagePreferences        [5] IMPLICIT LanguagePreferences    OPTIONAL,
- *     reason                [6] IMPLICIT EventCause            OPTIONAL,
+ *     accountCode             [0] IMPLICIT AccountInfo         type OPTIONAL,
+ *     authCode             [1] IMPLICIT AuthCode             type OPTIONAL,
+ *     correlatorData             [2] IMPLICIT CorrelatorData         type OPTIONAL,
+ *     userData             UserData                 type OPTIONAL,
+ *     callCharacteristics        [3] IMPLICIT CallCharacteristics    type OPTIONAL,
+ *     subjectOfCall            [4] IMPLICIT SubjectOfCall        type OPTIONAL,
+ *     languagePreferences        [5] IMPLICIT LanguagePreferences    type OPTIONAL,
+ *     reason                [6] IMPLICIT EventCause            type OPTIONAL,
  *     extensions             CSTACommonArguments             OPTIONAL }
  * ```
  * 
@@ -70,126 +70,150 @@ import { UserData, _decode_UserData, _encode_UserData } from "../CSTA-device-fea
  */
 export
 class SingleStepTransArgument {
+    /**
+     * @summary `activeCall`.
+     * @description
+     *
+     * Mandatory. Transferring device's connection. Initial
+     * Connected, Alerting, Failed, Held, or Queued; resulting
+     * Null.
+     *
+     * @public
+     * @readonly
+     */
+    public readonly activeCall: ConnectionID;
+    /**
+     * @summary `transferredTo`.
+     * @description
+     *
+     * Mandatory. Device that replaces the transferring
+     * device. Must be complete (no null, no multi-stage `;`).
+     *
+     * @public
+     * @readonly
+     */
+    public readonly transferredTo: DeviceID;
+    /**
+     * @summary `accountCode`.
+     * @description
+     *
+     * Optional account code (§12.2.1).
+     *
+     * @public
+     * @readonly
+     */
+    public readonly accountCode?: OPTIONAL<AccountInfo>;
+    /**
+     * @summary `authCode`.
+     * @description
+     *
+     * Optional authorization code (§12.2.3).
+     *
+     * @public
+     * @readonly
+     */
+    public readonly authCode?: OPTIONAL<AuthCode>;
+    /**
+     * @summary `correlatorData`.
+     * @description
+     *
+     * Optional correlator data attached before resulting
+     * state transitions (§12.2.10).
+     *
+     * @public
+     * @readonly
+     */
+    public readonly correlatorData?: OPTIONAL<CorrelatorData>;
+    /**
+     * @summary `userData`.
+     * @description
+     *
+     * Optional user data associated with this request
+     * (§12.2.30).
+     *
+     * @public
+     * @readonly
+     */
+    public readonly userData?: OPTIONAL<UserData>;
+    /**
+     * @summary `callCharacteristics`.
+     * @description
+     *
+     * Optional call characteristics (§12.2.4).
+     *
+     * @public
+     * @readonly
+     */
+    public readonly callCharacteristics?: OPTIONAL<CallCharacteristics>;
+    /**
+     * @summary `subjectOfCall`.
+     * @description
+     *
+     * Optional subject or intent (§12.2.27).
+     *
+     * @public
+     * @readonly
+     */
+    public readonly subjectOfCall?: OPTIONAL<SubjectOfCall>;
+    /**
+     * @summary `languagePreferences`.
+     * @description
+     *
+     * Optional preferred language(s) (§12.2.16).
+     *
+     * @public
+     * @readonly
+     */
+    public readonly languagePreferences?: OPTIONAL<LanguagePreferences>;
+    /**
+     * @summary `reason`.
+     * @description
+     *
+     * Optional `EventCause` for underlying signalling
+     * (§12.2.15).
+     *
+     * @public
+     * @readonly
+     */
+    public readonly reason?: OPTIONAL<EventCause>;
+    /**
+     * @summary `extensions`.
+     * @description
+     *
+     * Optional `CSTACommonArguments` carrying the security
+     * and privateData parameters from the ECMA-269 service
+     * table.
+     *
+     * @public
+     * @readonly
+     */
+    public readonly extensions?: OPTIONAL<CSTACommonArguments>;
+
     constructor (
-        /**
-         * @summary `activeCall`.
-         * @description
-         *
-         * Mandatory. Transferring device's connection. Initial
-         * Connected, Alerting, Failed, Held, or Queued; resulting
-         * Null.
-         *
-         * @public
-         * @readonly
-         */
-        readonly activeCall: ConnectionID,
-        /**
-         * @summary `transferredTo`.
-         * @description
-         *
-         * Mandatory. Device that replaces the transferring
-         * device. Must be complete (no null, no multi-stage `;`).
-         *
-         * @public
-         * @readonly
-         */
-        readonly transferredTo: DeviceID,
-        /**
-         * @summary `accountCode`.
-         * @description
-         *
-         * Optional account code (§12.2.1).
-         *
-         * @public
-         * @readonly
-         */
-        readonly accountCode?: OPTIONAL<AccountInfo>,
-        /**
-         * @summary `authCode`.
-         * @description
-         *
-         * Optional authorization code (§12.2.3).
-         *
-         * @public
-         * @readonly
-         */
-        readonly authCode?: OPTIONAL<AuthCode>,
-        /**
-         * @summary `correlatorData`.
-         * @description
-         *
-         * Optional correlator data attached before resulting
-         * state transitions (§12.2.10).
-         *
-         * @public
-         * @readonly
-         */
-        readonly correlatorData?: OPTIONAL<CorrelatorData>,
-        /**
-         * @summary `userData`.
-         * @description
-         *
-         * Optional user data associated with this request
-         * (§12.2.30).
-         *
-         * @public
-         * @readonly
-         */
-        readonly userData?: OPTIONAL<UserData>,
-        /**
-         * @summary `callCharacteristics`.
-         * @description
-         *
-         * Optional call characteristics (§12.2.4).
-         *
-         * @public
-         * @readonly
-         */
-        readonly callCharacteristics?: OPTIONAL<CallCharacteristics>,
-        /**
-         * @summary `subjectOfCall`.
-         * @description
-         *
-         * Optional subject or intent (§12.2.27).
-         *
-         * @public
-         * @readonly
-         */
-        readonly subjectOfCall?: OPTIONAL<SubjectOfCall>,
-        /**
-         * @summary `languagePreferences`.
-         * @description
-         *
-         * Optional preferred language(s) (§12.2.16).
-         *
-         * @public
-         * @readonly
-         */
-        readonly languagePreferences?: OPTIONAL<LanguagePreferences>,
-        /**
-         * @summary `reason`.
-         * @description
-         *
-         * Optional `EventCause` for underlying signalling
-         * (§12.2.15).
-         *
-         * @public
-         * @readonly
-         */
-        readonly reason?: OPTIONAL<EventCause>,
-        /**
-         * @summary `extensions`.
-         * @description
-         *
-         * Optional `CSTACommonArguments` carrying the security
-         * and privateData parameters from the ECMA-269 service
-         * table.
-         *
-         * @public
-         * @readonly
-         */
-        readonly extensions?: OPTIONAL<CSTACommonArguments>
-    ) {}
+        activeCall: ConnectionID,
+        transferredTo: DeviceID,
+        accountCode?: OPTIONAL<AccountInfo>,
+        authCode?: OPTIONAL<AuthCode>,
+        correlatorData?: OPTIONAL<CorrelatorData>,
+        userData?: OPTIONAL<UserData>,
+        callCharacteristics?: OPTIONAL<CallCharacteristics>,
+        subjectOfCall?: OPTIONAL<SubjectOfCall>,
+        languagePreferences?: OPTIONAL<LanguagePreferences>,
+        reason?: OPTIONAL<EventCause>,
+        extensions?: OPTIONAL<CSTACommonArguments>
+    ) {
+        this.activeCall = activeCall;
+        this.transferredTo = transferredTo;
+        this.accountCode = accountCode;
+        this.authCode = authCode;
+        this.correlatorData = correlatorData;
+        this.userData = userData;
+        this.callCharacteristics = callCharacteristics;
+        this.subjectOfCall = subjectOfCall;
+        this.languagePreferences = languagePreferences;
+        this.reason = reason;
+        this.extensions = extensions;
+    }
 
     /**
      * @summary Restructures an object into a SingleStepTransArgument
@@ -213,7 +237,7 @@ class SingleStepTransArgument {
          * @static
          */
 
-    public static _enum_for_reason = _enum_for_EventCause;
+    public static _enum_for_reason: typeof _enum_for_EventCause = _enum_for_EventCause;
 }
 
 /**

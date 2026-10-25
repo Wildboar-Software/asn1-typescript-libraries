@@ -99,7 +99,7 @@ type MonitoringEventConfigurationActivity = _enum_for_MonitoringEventConfigurati
  * @enum {number}
  */
 export
-const MonitoringEventConfigurationActivity = _enum_for_MonitoringEventConfigurationActivity;
+const MonitoringEventConfigurationActivity: typeof _enum_for_MonitoringEventConfigurationActivity = _enum_for_MonitoringEventConfigurationActivity;
 
 /**
  * @summary MonitoringEventConfigurationActivity_create
@@ -114,7 +114,7 @@ const MonitoringEventConfigurationActivity = _enum_for_MonitoringEventConfigurat
  * @type {number}
  */
 export
-const MonitoringEventConfigurationActivity_create: MonitoringEventConfigurationActivity = MonitoringEventConfigurationActivity.create; /* LONG_NAMED_ENUMERATED_VALUE */
+const MonitoringEventConfigurationActivity_create: _enum_for_MonitoringEventConfigurationActivity.create = MonitoringEventConfigurationActivity.create; /* LONG_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary create
@@ -127,7 +127,7 @@ const MonitoringEventConfigurationActivity_create: MonitoringEventConfigurationA
  * @type {number}
  */
 export
-const create: MonitoringEventConfigurationActivity = MonitoringEventConfigurationActivity.create; /* SHORT_NAMED_ENUMERATED_VALUE */
+const create: _enum_for_MonitoringEventConfigurationActivity.create = MonitoringEventConfigurationActivity.create; /* SHORT_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary MonitoringEventConfigurationActivity_transfer
@@ -142,7 +142,7 @@ const create: MonitoringEventConfigurationActivity = MonitoringEventConfiguratio
  * @type {number}
  */
 export
-const MonitoringEventConfigurationActivity_transfer: MonitoringEventConfigurationActivity = MonitoringEventConfigurationActivity.transfer; /* LONG_NAMED_ENUMERATED_VALUE */
+const MonitoringEventConfigurationActivity_transfer: _enum_for_MonitoringEventConfigurationActivity.transfer = MonitoringEventConfigurationActivity.transfer; /* LONG_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary transfer
@@ -155,7 +155,7 @@ const MonitoringEventConfigurationActivity_transfer: MonitoringEventConfiguratio
  * @type {number}
  */
 export
-const transfer: MonitoringEventConfigurationActivity = MonitoringEventConfigurationActivity.transfer; /* SHORT_NAMED_ENUMERATED_VALUE */
+const transfer: _enum_for_MonitoringEventConfigurationActivity.transfer = MonitoringEventConfigurationActivity.transfer; /* SHORT_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary MonitoringEventConfigurationActivity_update
@@ -170,7 +170,7 @@ const transfer: MonitoringEventConfigurationActivity = MonitoringEventConfigurat
  * @type {number}
  */
 export
-const MonitoringEventConfigurationActivity_update: MonitoringEventConfigurationActivity = MonitoringEventConfigurationActivity.update; /* LONG_NAMED_ENUMERATED_VALUE */
+const MonitoringEventConfigurationActivity_update: _enum_for_MonitoringEventConfigurationActivity.update = MonitoringEventConfigurationActivity.update; /* LONG_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary update
@@ -183,7 +183,7 @@ const MonitoringEventConfigurationActivity_update: MonitoringEventConfigurationA
  * @type {number}
  */
 export
-const update: MonitoringEventConfigurationActivity = MonitoringEventConfigurationActivity.update; /* SHORT_NAMED_ENUMERATED_VALUE */
+const update: _enum_for_MonitoringEventConfigurationActivity.update = MonitoringEventConfigurationActivity.update; /* SHORT_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary MonitoringEventConfigurationActivity_delete_
@@ -198,7 +198,7 @@ const update: MonitoringEventConfigurationActivity = MonitoringEventConfiguratio
  * @type {number}
  */
 export
-const MonitoringEventConfigurationActivity_delete_: MonitoringEventConfigurationActivity = MonitoringEventConfigurationActivity.delete_; /* LONG_NAMED_ENUMERATED_VALUE */
+const MonitoringEventConfigurationActivity_delete_: _enum_for_MonitoringEventConfigurationActivity.delete_ = MonitoringEventConfigurationActivity.delete_; /* LONG_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary delete_
@@ -211,7 +211,7 @@ const MonitoringEventConfigurationActivity_delete_: MonitoringEventConfiguration
  * @type {number}
  */
 export
-const delete_: MonitoringEventConfigurationActivity = MonitoringEventConfigurationActivity.delete_; /* SHORT_NAMED_ENUMERATED_VALUE */
+const delete_: _enum_for_MonitoringEventConfigurationActivity.delete_ = MonitoringEventConfigurationActivity.delete_; /* SHORT_NAMED_ENUMERATED_VALUE */
 
 export
 const _decode_MonitoringEventConfigurationActivity: $.ASN1Decoder<MonitoringEventConfigurationActivity> = $._decodeEnumerated;

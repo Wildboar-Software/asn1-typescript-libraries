@@ -1,7 +1,7 @@
 /* eslint-disable */
 import {
-    OPTIONAL,
-    ASN1Element as _Element,
+    type OPTIONAL,
+    type ASN1Element as _Element,
     ASN1TagClass as _TagClass,
     ASN1Construction as _Construction,
     ASN1UniversalType as _UniversalType,
@@ -12,12 +12,12 @@ import {
 } from '@wildboar/asn1';
 import * as $ from '@wildboar/asn1/functional';
 import {
-    BiometricProcessQualityInformation,
+    type BiometricProcessQualityInformation,
     _decode_BiometricProcessQualityInformation,
     _encode_BiometricProcessQualityInformation,
 } from '../AuthenticationContextForBiometrics/BiometricProcessQualityInformation.ta.mjs';
 import {
-    QualityEvaluationExtensionInformation,
+    type QualityEvaluationExtensionInformation,
     _decode_QualityEvaluationExtensionInformation,
     _encode_QualityEvaluationExtensionInformation,
 } from '../AuthenticationContextForBiometrics/QualityEvaluationExtensionInformation.ta.mjs';
@@ -36,20 +36,26 @@ import {
  *
  */
 export class QualityEvaluation {
+    /**
+     * @summary `biometricProcessQualityInformation`.
+     * @public
+     * @readonly
+     */
+    public readonly biometricProcessQualityInformation?: OPTIONAL<BiometricProcessQualityInformation>;
+    /**
+     * @summary `qualityEvaluationExtensionInformation`.
+     * @public
+     * @readonly
+     */
+    public readonly qualityEvaluationExtensionInformation?: OPTIONAL<QualityEvaluationExtensionInformation>;
+
     constructor(
-        /**
-         * @summary `biometricProcessQualityInformation`.
-         * @public
-         * @readonly
-         */
-        readonly biometricProcessQualityInformation?: OPTIONAL<BiometricProcessQualityInformation>,
-        /**
-         * @summary `qualityEvaluationExtensionInformation`.
-         * @public
-         * @readonly
-         */
-        readonly qualityEvaluationExtensionInformation?: OPTIONAL<QualityEvaluationExtensionInformation>
-    ) {}
+        biometricProcessQualityInformation?: OPTIONAL<BiometricProcessQualityInformation>,
+        qualityEvaluationExtensionInformation?: OPTIONAL<QualityEvaluationExtensionInformation>
+    ) {
+        this.biometricProcessQualityInformation = biometricProcessQualityInformation;
+        this.qualityEvaluationExtensionInformation = qualityEvaluationExtensionInformation;
+    }
 
     /**
      * @summary Restructures an object into a QualityEvaluation

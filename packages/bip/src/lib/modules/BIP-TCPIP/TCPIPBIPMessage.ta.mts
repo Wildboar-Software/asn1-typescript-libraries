@@ -1,6 +1,6 @@
 /* eslint-disable */
 import {
-  OCTET_STRING,
+  type OCTET_STRING,
   ASN1Element as _Element,
   ASN1TagClass as _TagClass,
   ASN1Construction as _Construction,
@@ -12,12 +12,12 @@ import {
 } from '@wildboar/asn1';
 import * as $ from '@wildboar/asn1/functional';
 import {
-  TCPIPBIPMessage_version,
+  type TCPIPBIPMessage_version,
   _decode_TCPIPBIPMessage_version,
   _encode_TCPIPBIPMessage_version,
 } from '../BIP-TCPIP/TCPIPBIPMessage-version.ta.mjs';
 import {
-  TCPIPBIPMessage_content,
+  type TCPIPBIPMessage_content,
   _decode_TCPIPBIPMessage_content,
   _encode_TCPIPBIPMessage_content,
 } from '../BIP-TCPIP/TCPIPBIPMessage-content.ta.mjs';
@@ -62,7 +62,7 @@ export class TCPIPBIPMessage {
    * @public
    * @readonly
    */
-  readonly magicNumber: OCTET_STRING;
+  public readonly magicNumber: OCTET_STRING;
   /**
    * @summary `version`.
    * @description
@@ -73,7 +73,7 @@ export class TCPIPBIPMessage {
    * @public
    * @readonly
    */
-  readonly version: TCPIPBIPMessage_version;
+  public readonly version: TCPIPBIPMessage_version;
   /**
    * @summary `content`.
    * @description
@@ -86,7 +86,7 @@ export class TCPIPBIPMessage {
    * @public
    * @readonly
    */
-  readonly content: TCPIPBIPMessage_content;
+  public readonly content: TCPIPBIPMessage_content;
 
   constructor(
     magicNumber: OCTET_STRING,

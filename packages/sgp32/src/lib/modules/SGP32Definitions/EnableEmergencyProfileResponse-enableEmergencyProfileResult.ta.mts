@@ -1,7 +1,7 @@
 /* eslint-disable */
 import {
-    ASN1Element as _Element,
-    INTEGER
+    type ASN1Element as _Element,
+    type INTEGER
 } from "@wildboar/asn1";
 import * as $ from "@wildboar/asn1/functional";
 
@@ -38,7 +38,7 @@ type EnableEmergencyProfileResponse_enableEmergencyProfileResult = INTEGER;
  * No Notification is generated for this enablement.
  */
 export
-const EnableEmergencyProfileResponse_enableEmergencyProfileResult_ok: EnableEmergencyProfileResponse_enableEmergencyProfileResult = 0; /* LONG_NAMED_INTEGER_VALUE */
+const EnableEmergencyProfileResponse_enableEmergencyProfileResult_ok: 0 = 0 satisfies EnableEmergencyProfileResponse_enableEmergencyProfileResult; /* LONG_NAMED_INTEGER_VALUE */
 
 /**
  * @summary EnableEmergencyProfileResponse_enableEmergencyProfileResult_ok
@@ -48,7 +48,7 @@ const EnableEmergencyProfileResponse_enableEmergencyProfileResult_ok: EnableEmer
  * The Emergency Profile enablement succeeded (SGP.32 v1.2, section 5.9.22).
  */
 export
-const ok: EnableEmergencyProfileResponse_enableEmergencyProfileResult = EnableEmergencyProfileResponse_enableEmergencyProfileResult_ok; /* SHORT_NAMED_INTEGER_VALUE */
+const ok: 0 = EnableEmergencyProfileResponse_enableEmergencyProfileResult_ok; /* SHORT_NAMED_INTEGER_VALUE */
 
 /**
  * @summary EnableEmergencyProfileResponse_enableEmergencyProfileResult_profileNotInDisabledState
@@ -59,7 +59,7 @@ const ok: EnableEmergencyProfileResponse_enableEmergencyProfileResult = EnableEm
  * v1.2, section 5.9.22).
  */
 export
-const EnableEmergencyProfileResponse_enableEmergencyProfileResult_profileNotInDisabledState: EnableEmergencyProfileResponse_enableEmergencyProfileResult = 2; /* LONG_NAMED_INTEGER_VALUE */
+const EnableEmergencyProfileResponse_enableEmergencyProfileResult_profileNotInDisabledState: 2 = 2 satisfies EnableEmergencyProfileResponse_enableEmergencyProfileResult; /* LONG_NAMED_INTEGER_VALUE */
 
 /**
  * @summary EnableEmergencyProfileResponse_enableEmergencyProfileResult_profileNotInDisabledState
@@ -69,7 +69,7 @@ const EnableEmergencyProfileResponse_enableEmergencyProfileResult_profileNotInDi
  * The Emergency Profile is already enabled (SGP.32 v1.2, section 5.9.22).
  */
 export
-const profileNotInDisabledState: EnableEmergencyProfileResponse_enableEmergencyProfileResult = EnableEmergencyProfileResponse_enableEmergencyProfileResult_profileNotInDisabledState; /* SHORT_NAMED_INTEGER_VALUE */
+const profileNotInDisabledState: 2 = EnableEmergencyProfileResponse_enableEmergencyProfileResult_profileNotInDisabledState; /* SHORT_NAMED_INTEGER_VALUE */
 
 /**
  * @summary EnableEmergencyProfileResponse_enableEmergencyProfileResult_catBusy
@@ -81,7 +81,7 @@ const profileNotInDisabledState: EnableEmergencyProfileResponse_enableEmergencyP
  * continue.
  */
 export
-const EnableEmergencyProfileResponse_enableEmergencyProfileResult_catBusy: EnableEmergencyProfileResponse_enableEmergencyProfileResult = 5; /* LONG_NAMED_INTEGER_VALUE */
+const EnableEmergencyProfileResponse_enableEmergencyProfileResult_catBusy: 5 = 5 satisfies EnableEmergencyProfileResponse_enableEmergencyProfileResult; /* LONG_NAMED_INTEGER_VALUE */
 
 /**
  * @summary EnableEmergencyProfileResponse_enableEmergencyProfileResult_catBusy
@@ -92,7 +92,7 @@ const EnableEmergencyProfileResponse_enableEmergencyProfileResult_catBusy: Enabl
  * section 5.9.22).
  */
 export
-const catBusy: EnableEmergencyProfileResponse_enableEmergencyProfileResult = EnableEmergencyProfileResponse_enableEmergencyProfileResult_catBusy; /* SHORT_NAMED_INTEGER_VALUE */
+const catBusy: 5 = EnableEmergencyProfileResponse_enableEmergencyProfileResult_catBusy; /* SHORT_NAMED_INTEGER_VALUE */
 
 /**
  * @summary EnableEmergencyProfileResponse_enableEmergencyProfileResult_ecallNotAvailable
@@ -104,7 +104,7 @@ const catBusy: EnableEmergencyProfileResponse_enableEmergencyProfileResult = Ena
  * comment in that section names the missing-Profile case.
  */
 export
-const EnableEmergencyProfileResponse_enableEmergencyProfileResult_ecallNotAvailable: EnableEmergencyProfileResponse_enableEmergencyProfileResult = 8; /* LONG_NAMED_INTEGER_VALUE */
+const EnableEmergencyProfileResponse_enableEmergencyProfileResult_ecallNotAvailable: 8 = 8 satisfies EnableEmergencyProfileResponse_enableEmergencyProfileResult; /* LONG_NAMED_INTEGER_VALUE */
 
 /**
  * @summary EnableEmergencyProfileResponse_enableEmergencyProfileResult_ecallNotAvailable
@@ -115,7 +115,7 @@ const EnableEmergencyProfileResponse_enableEmergencyProfileResult_ecallNotAvaila
  * v1.2, section 5.9.22).
  */
 export
-const ecallNotAvailable: EnableEmergencyProfileResponse_enableEmergencyProfileResult = EnableEmergencyProfileResponse_enableEmergencyProfileResult_ecallNotAvailable; /* SHORT_NAMED_INTEGER_VALUE */
+const ecallNotAvailable: 8 = EnableEmergencyProfileResponse_enableEmergencyProfileResult_ecallNotAvailable; /* SHORT_NAMED_INTEGER_VALUE */
 
 /**
  * @summary EnableEmergencyProfileResponse_enableEmergencyProfileResult_undefinedError
@@ -126,7 +126,7 @@ const ecallNotAvailable: EnableEmergencyProfileResponse_enableEmergencyProfileRe
  * define the condition that produces it.
  */
 export
-const EnableEmergencyProfileResponse_enableEmergencyProfileResult_undefinedError: EnableEmergencyProfileResponse_enableEmergencyProfileResult = 127; /* LONG_NAMED_INTEGER_VALUE */
+const EnableEmergencyProfileResponse_enableEmergencyProfileResult_undefinedError: 127 = 127 satisfies EnableEmergencyProfileResponse_enableEmergencyProfileResult; /* LONG_NAMED_INTEGER_VALUE */
 
 /**
  * @summary EnableEmergencyProfileResponse_enableEmergencyProfileResult_undefinedError
@@ -137,7 +137,7 @@ const EnableEmergencyProfileResponse_enableEmergencyProfileResult_undefinedError
  * the condition that produces it.
  */
 export
-const undefinedError: EnableEmergencyProfileResponse_enableEmergencyProfileResult = EnableEmergencyProfileResponse_enableEmergencyProfileResult_undefinedError; /* SHORT_NAMED_INTEGER_VALUE */
+const undefinedError: 127 = EnableEmergencyProfileResponse_enableEmergencyProfileResult_undefinedError; /* SHORT_NAMED_INTEGER_VALUE */
 export const _decode_EnableEmergencyProfileResponse_enableEmergencyProfileResult: $.ASN1Decoder<EnableEmergencyProfileResponse_enableEmergencyProfileResult> = $._decodeInteger;
 export const _encode_EnableEmergencyProfileResponse_enableEmergencyProfileResult: $.ASN1Encoder<EnableEmergencyProfileResponse_enableEmergencyProfileResult> = $._encodeInteger;
 

@@ -1,6 +1,6 @@
 /* eslint-disable */
 import {
-  ENUMERATED,
+  type ENUMERATED,
   ASN1Element as _Element,
   ASN1TagClass as _TagClass,
   ASN1Construction as _Construction,
@@ -50,7 +50,7 @@ export type BioAPI_GUI_MOMENT = _enum_for_BioAPI_GUI_MOMENT | ENUMERATED;
  * @constant
  * @type {number}
  */
-export const BioAPI_GUI_MOMENT_beforeStart: BioAPI_GUI_MOMENT = 0; /* LONG_NAMED_ENUMERATED_VALUE */
+export const BioAPI_GUI_MOMENT_beforeStart: 0 = _enum_for_BioAPI_GUI_MOMENT.beforeStart; /* LONG_NAMED_ENUMERATED_VALUE */
 
 
 /**
@@ -58,7 +58,7 @@ export const BioAPI_GUI_MOMENT_beforeStart: BioAPI_GUI_MOMENT = 0; /* LONG_NAMED
  * @constant
  * @type {number}
  */
-export const beforeStart: BioAPI_GUI_MOMENT = BioAPI_GUI_MOMENT_beforeStart; /* SHORT_NAMED_ENUMERATED_VALUE */
+export const beforeStart: 0 = BioAPI_GUI_MOMENT_beforeStart; /* SHORT_NAMED_ENUMERATED_VALUE */
 
 
 /**
@@ -66,7 +66,7 @@ export const beforeStart: BioAPI_GUI_MOMENT = BioAPI_GUI_MOMENT_beforeStart; /* 
  * @constant
  * @type {number}
  */
-export const BioAPI_GUI_MOMENT_during: BioAPI_GUI_MOMENT = 1; /* LONG_NAMED_ENUMERATED_VALUE */
+export const BioAPI_GUI_MOMENT_during: 1 = _enum_for_BioAPI_GUI_MOMENT.during; /* LONG_NAMED_ENUMERATED_VALUE */
 
 
 /**
@@ -74,7 +74,7 @@ export const BioAPI_GUI_MOMENT_during: BioAPI_GUI_MOMENT = 1; /* LONG_NAMED_ENUM
  * @constant
  * @type {number}
  */
-export const during: BioAPI_GUI_MOMENT = BioAPI_GUI_MOMENT_during; /* SHORT_NAMED_ENUMERATED_VALUE */
+export const during: 1 = BioAPI_GUI_MOMENT_during; /* SHORT_NAMED_ENUMERATED_VALUE */
 
 
 /**
@@ -82,7 +82,7 @@ export const during: BioAPI_GUI_MOMENT = BioAPI_GUI_MOMENT_during; /* SHORT_NAME
  * @constant
  * @type {number}
  */
-export const BioAPI_GUI_MOMENT_afterEnd: BioAPI_GUI_MOMENT = 2; /* LONG_NAMED_ENUMERATED_VALUE */
+export const BioAPI_GUI_MOMENT_afterEnd: 2 = _enum_for_BioAPI_GUI_MOMENT.afterEnd; /* LONG_NAMED_ENUMERATED_VALUE */
 
 
 /**
@@ -90,17 +90,17 @@ export const BioAPI_GUI_MOMENT_afterEnd: BioAPI_GUI_MOMENT = 2; /* LONG_NAMED_EN
  * @constant
  * @type {number}
  */
-export const afterEnd: BioAPI_GUI_MOMENT = BioAPI_GUI_MOMENT_afterEnd; /* SHORT_NAMED_ENUMERATED_VALUE */
+export const afterEnd: 2 = BioAPI_GUI_MOMENT_afterEnd; /* SHORT_NAMED_ENUMERATED_VALUE */
 
 
 
 
-export const _decode_BioAPI_GUI_MOMENT = $._decodeEnumerated;
+export const _decode_BioAPI_GUI_MOMENT: $.ASN1Decoder<BioAPI_GUI_MOMENT> = $._decodeEnumerated as $.ASN1Decoder<BioAPI_GUI_MOMENT>;
 
 
 
 
-export const _encode_BioAPI_GUI_MOMENT = $._encodeEnumerated;
+export const _encode_BioAPI_GUI_MOMENT: $.ASN1Encoder<BioAPI_GUI_MOMENT> = $._encodeEnumerated as $.ASN1Encoder<BioAPI_GUI_MOMENT>;
 
 
 /* eslint-enable */

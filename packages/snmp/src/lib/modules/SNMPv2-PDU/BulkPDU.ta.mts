@@ -1,7 +1,7 @@
 /* eslint-disable */
 import {
-    INTEGER,
-    ASN1Element as _Element,
+    type INTEGER,
+    type ASN1Element as _Element,
     ASN1TagClass as _TagClass,
     ASN1Construction as _Construction,
     ASN1UniversalType as _UniversalType,
@@ -12,7 +12,7 @@ import {
 } from "@wildboar/asn1";
 import * as $ from "@wildboar/asn1/functional";
 import {
-    VarBindList,
+    type VarBindList,
     _decode_VarBindList,
     _encode_VarBindList,
 } from "./VarBindList.ta.mjs";
@@ -55,7 +55,7 @@ class BulkPDU {
      * @public
      * @readonly
      */
-    readonly request_id: INTEGER;
+    public readonly request_id: INTEGER;
     /**
      * @summary `non_repeaters`.
      * @description
@@ -69,7 +69,7 @@ class BulkPDU {
      * @public
      * @readonly
      */
-    readonly non_repeaters: INTEGER;
+    public readonly non_repeaters: INTEGER;
     /**
      * @summary `max_repetitions`.
      * @description
@@ -82,7 +82,7 @@ class BulkPDU {
      * @public
      * @readonly
      */
-    readonly max_repetitions: INTEGER;
+    public readonly max_repetitions: INTEGER;
     /**
      * @summary `variable_bindings`.
      * @description
@@ -94,7 +94,7 @@ class BulkPDU {
      * @public
      * @readonly
      */
-    readonly variable_bindings: VarBindList;
+    public readonly variable_bindings: VarBindList;
 
     constructor (
         request_id: INTEGER,

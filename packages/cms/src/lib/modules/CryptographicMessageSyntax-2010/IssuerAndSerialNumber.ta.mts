@@ -1,17 +1,17 @@
 /* eslint-disable */
 import {
     ASN1ConstructionError as _ConstructionError,
-    ASN1Element as _Element,
+    type ASN1Element as _Element,
     ASN1TagClass as _TagClass,
 } from "@wildboar/asn1";
 import * as $ from "@wildboar/asn1/functional";
 import {
-    CertificateSerialNumber,
+    type CertificateSerialNumber,
     _decode_CertificateSerialNumber,
     _encode_CertificateSerialNumber,
 } from "@wildboar/x500/AuthenticationFramework";
 import {
-    Name,
+    type Name,
     _decode_Name,
     _encode_Name,
 } from "@wildboar/dn";
@@ -34,28 +34,34 @@ import {
  *
  */
 export class IssuerAndSerialNumber {
+    /**
+     * @summary `issuer`.
+     * @description
+     *
+     * Certificate issuer `Name` ([RFC 5652 §10.2.4](https://datatracker.ietf.org/doc/html/rfc5652#section-10.2.4)).
+     *
+     * @public
+     * @readonly
+     */
+    public readonly issuer: Name;
+    /**
+     * @summary `serialNumber`.
+     * @description
+     *
+     * Certificate serial number ([RFC 5652 §10.2.4](https://datatracker.ietf.org/doc/html/rfc5652#section-10.2.4)).
+     *
+     * @public
+     * @readonly
+     */
+    public readonly serialNumber: CertificateSerialNumber;
+
     constructor(
-        /**
-         * @summary `issuer`.
-         * @description
-         *
-         * Certificate issuer `Name` ([RFC 5652 §10.2.4](https://datatracker.ietf.org/doc/html/rfc5652#section-10.2.4)).
-         *
-         * @public
-         * @readonly
-         */
-        readonly issuer: Name,
-        /**
-         * @summary `serialNumber`.
-         * @description
-         *
-         * Certificate serial number ([RFC 5652 §10.2.4](https://datatracker.ietf.org/doc/html/rfc5652#section-10.2.4)).
-         *
-         * @public
-         * @readonly
-         */
-        readonly serialNumber: CertificateSerialNumber
-    ) {}
+        issuer: Name,
+        serialNumber: CertificateSerialNumber
+    ) {
+        this.issuer = issuer;
+        this.serialNumber = serialNumber;
+    }
 
     /**
      * @summary Restructures an object into a IssuerAndSerialNumber

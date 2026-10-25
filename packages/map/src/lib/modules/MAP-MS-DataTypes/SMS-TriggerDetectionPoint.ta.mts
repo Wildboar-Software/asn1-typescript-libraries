@@ -1,7 +1,7 @@
 /* eslint-disable */
 import {
-    ASN1Element as _Element,
-    ENUMERATED
+    type ASN1Element as _Element,
+    type ENUMERATED
 } from "@wildboar/asn1";
 import * as $ from "@wildboar/asn1/functional";
 
@@ -45,7 +45,7 @@ type SMS_TriggerDetectionPoint = _enum_for_SMS_TriggerDetectionPoint | ENUMERATE
  * @type {number}
  */
 export
-const SMS_TriggerDetectionPoint_sms_CollectedInfo: SMS_TriggerDetectionPoint = 1; /* LONG_NAMED_ENUMERATED_VALUE */
+const SMS_TriggerDetectionPoint_sms_CollectedInfo: _enum_for_SMS_TriggerDetectionPoint.sms_CollectedInfo = _enum_for_SMS_TriggerDetectionPoint.sms_CollectedInfo; /* LONG_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary sms_CollectedInfo
@@ -53,7 +53,7 @@ const SMS_TriggerDetectionPoint_sms_CollectedInfo: SMS_TriggerDetectionPoint = 1
  * @type {number}
  */
 export
-const sms_CollectedInfo: SMS_TriggerDetectionPoint = SMS_TriggerDetectionPoint_sms_CollectedInfo; /* SHORT_NAMED_ENUMERATED_VALUE */
+const sms_CollectedInfo: _enum_for_SMS_TriggerDetectionPoint.sms_CollectedInfo = SMS_TriggerDetectionPoint_sms_CollectedInfo; /* SHORT_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary SMS_TriggerDetectionPoint_sms_DeliveryRequest
@@ -61,7 +61,7 @@ const sms_CollectedInfo: SMS_TriggerDetectionPoint = SMS_TriggerDetectionPoint_s
  * @type {number}
  */
 export
-const SMS_TriggerDetectionPoint_sms_DeliveryRequest: SMS_TriggerDetectionPoint = 2; /* LONG_NAMED_ENUMERATED_VALUE */
+const SMS_TriggerDetectionPoint_sms_DeliveryRequest: _enum_for_SMS_TriggerDetectionPoint.sms_DeliveryRequest = _enum_for_SMS_TriggerDetectionPoint.sms_DeliveryRequest; /* LONG_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary sms_DeliveryRequest
@@ -69,7 +69,7 @@ const SMS_TriggerDetectionPoint_sms_DeliveryRequest: SMS_TriggerDetectionPoint =
  * @type {number}
  */
 export
-const sms_DeliveryRequest: SMS_TriggerDetectionPoint = SMS_TriggerDetectionPoint_sms_DeliveryRequest; /* SHORT_NAMED_ENUMERATED_VALUE */
+const sms_DeliveryRequest: _enum_for_SMS_TriggerDetectionPoint.sms_DeliveryRequest = SMS_TriggerDetectionPoint_sms_DeliveryRequest; /* SHORT_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary Decodes an ASN.1 element into a(n) SMS_TriggerDetectionPoint
@@ -77,7 +77,7 @@ const sms_DeliveryRequest: SMS_TriggerDetectionPoint = SMS_TriggerDetectionPoint
  * @param el The element being decoded.
  * @returns The decoded data structure.
  */
-export const _decode_SMS_TriggerDetectionPoint = $._decodeEnumerated;
+export const _decode_SMS_TriggerDetectionPoint: $.ASN1Decoder<number> = $._decodeEnumerated;
 
 /**
  * @summary Encodes a(n) SMS_TriggerDetectionPoint into an ASN.1 Element.
@@ -86,7 +86,7 @@ export const _decode_SMS_TriggerDetectionPoint = $._decodeEnumerated;
  * @param elGetter A function that can be used to get new ASN.1 elements.
  * @returns {_Element} The SMS_TriggerDetectionPoint, encoded as an ASN.1 Element.
  */
-export const _encode_SMS_TriggerDetectionPoint = $._encodeEnumerated;
+export const _encode_SMS_TriggerDetectionPoint: $.ASN1Encoder<number> = $._encodeEnumerated;
 
 
 /* eslint-enable */

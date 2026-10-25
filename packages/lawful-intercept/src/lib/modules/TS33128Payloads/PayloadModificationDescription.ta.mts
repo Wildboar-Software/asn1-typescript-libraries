@@ -1,13 +1,13 @@
 /* eslint-disable */
 import {
     ASN1ConstructionError as _ConstructionError,
-    ASN1Element as _Element,
+    type ASN1Element as _Element,
     ASN1TagClass as _TagClass
 } from "@wildboar/asn1";
 import * as $ from "@wildboar/asn1/functional";
-import { ModificationLocation, _decode_ModificationLocation, _encode_ModificationLocation } from "../TS33128Payloads/ModificationLocation.ta.mjs";
+import { type ModificationLocation, _decode_ModificationLocation, _encode_ModificationLocation } from "../TS33128Payloads/ModificationLocation.ta.mjs";
 // export { ModificationLocation, _decode_ModificationLocation, _encode_ModificationLocation } from "../TS33128Payloads/ModificationLocation.ta.mjs";
-import { ModificationType, _decode_ModificationType, _encode_ModificationType } from "../TS33128Payloads/ModificationType.ta.mjs";
+import { type ModificationType, _decode_ModificationType, _encode_ModificationType } from "../TS33128Payloads/ModificationType.ta.mjs";
 // export { ModificationType, _decode_ModificationType, _encode_ModificationType } from "../TS33128Payloads/ModificationType.ta.mjs";
 
 

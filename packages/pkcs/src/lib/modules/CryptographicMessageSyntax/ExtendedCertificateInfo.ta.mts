@@ -1,22 +1,22 @@
 /* eslint-disable */
 import {
     ASN1ConstructionError as _ConstructionError,
-    ASN1Element as _Element,
+    type ASN1Element as _Element,
     ASN1TagClass as _TagClass,
 } from "@wildboar/asn1";
 import * as $ from "@wildboar/asn1/functional";
 import {
-    Certificate,
+    type Certificate,
     _decode_Certificate,
     _encode_Certificate,
 } from "@wildboar/x500/AuthenticationFramework";
 import {
-    CMSVersion,
+    type CMSVersion,
     _decode_CMSVersion,
     _encode_CMSVersion,
 } from "../CryptographicMessageSyntax/CMSVersion.ta.mjs";
 import {
-    UnauthAttributes,
+    type UnauthAttributes,
     _decode_UnauthAttributes,
     _encode_UnauthAttributes,
 } from "../CryptographicMessageSyntax/UnauthAttributes.ta.mjs";
@@ -38,26 +38,34 @@ import {
  *
  */
 export class ExtendedCertificateInfo {
+    /**
+     * @summary `version`.
+     * @public
+     * @readonly
+     */
+    public readonly version: CMSVersion;
+    /**
+     * @summary `certificate`.
+     * @public
+     * @readonly
+     */
+    public readonly certificate: Certificate;
+    /**
+     * @summary `attributes`.
+     * @public
+     * @readonly
+     */
+    public readonly attributes: UnauthAttributes;
+
     constructor(
-        /**
-         * @summary `version`.
-         * @public
-         * @readonly
-         */
-        readonly version: CMSVersion,
-        /**
-         * @summary `certificate`.
-         * @public
-         * @readonly
-         */
-        readonly certificate: Certificate,
-        /**
-         * @summary `attributes`.
-         * @public
-         * @readonly
-         */
-        readonly attributes: UnauthAttributes
-    ) {}
+        version: CMSVersion,
+        certificate: Certificate,
+        attributes: UnauthAttributes
+    ) {
+        this.version = version;
+        this.certificate = certificate;
+        this.attributes = attributes;
+    }
 
     /**
      * @summary Restructures an object into a ExtendedCertificateInfo

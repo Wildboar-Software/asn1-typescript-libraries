@@ -1,6 +1,6 @@
 /* eslint-disable */
 import {
-    ASN1Element as _Element,
+    type ASN1Element as _Element,
     ASN1TagClass as _TagClass,
     ASN1Construction as _Construction,
     ASN1UniversalType as _UniversalType,
@@ -10,7 +10,7 @@ import {
     ASN1ConstructionError as _ConstructionError,
 } from "@wildboar/asn1";
 import * as $ from "@wildboar/asn1/functional";
-import { CMSVersion, _decode_CMSVersion, _encode_CMSVersion } from "../X9-84-CMS/CMSVersion.ta.mjs";
+import { type CMSVersion, _decode_CMSVersion, _encode_CMSVersion } from "../X9-84-CMS/CMSVersion.ta.mjs";
 
 import { EncryptedContentInfo, _decode_EncryptedContentInfo, _encode_EncryptedContentInfo } from "../X9-84-CMS/EncryptedContentInfo.ta.mjs";
 
@@ -33,20 +33,26 @@ import { EncryptedContentInfo, _decode_EncryptedContentInfo, _encode_EncryptedCo
  */
 export
 class EncryptedData {
+    /**
+     * @summary `version`.
+     * @public
+     * @readonly
+     */
+    public readonly version: CMSVersion;
+    /**
+     * @summary `encryptedContentInfo`.
+     * @public
+     * @readonly
+     */
+    public readonly encryptedContentInfo: EncryptedContentInfo;
+
     constructor (
-        /**
-         * @summary `version`.
-         * @public
-         * @readonly
-         */
-        readonly version: CMSVersion,
-        /**
-         * @summary `encryptedContentInfo`.
-         * @public
-         * @readonly
-         */
-        readonly encryptedContentInfo: EncryptedContentInfo
-    ) {}
+        version: CMSVersion,
+        encryptedContentInfo: EncryptedContentInfo
+    ) {
+        this.version = version;
+        this.encryptedContentInfo = encryptedContentInfo;
+    }
 
     /**
      * @summary Restructures an object into a EncryptedData

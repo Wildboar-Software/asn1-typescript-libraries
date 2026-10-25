@@ -1,24 +1,24 @@
 /* eslint-disable */
 import {
-    ASN1Element as _Element,
+    type ASN1Element as _Element,
     ASN1TagClass as _TagClass,
-    INTEGER,
-    NULL,
-    OPTIONAL,
+    type INTEGER,
+    type NULL,
+    type OPTIONAL,
 } from "@wildboar/asn1";
 import * as $ from "@wildboar/asn1/functional";
 import {
-    KeyInfo,
+    type KeyInfo,
     _get_decoder_for_KeyInfo,
     _get_encoder_for_KeyInfo,
 } from "../PKCS-15/KeyInfo.ta.mjs";
 import {
-    ObjectValue,
+    type ObjectValue,
     _get_decoder_for_ObjectValue,
     _get_encoder_for_ObjectValue,
 } from "../PKCS-15/ObjectValue.ta.mjs";
 import {
-    PublicKeyOperations,
+    type PublicKeyOperations,
     _decode_PublicKeyOperations,
     _encode_PublicKeyOperations,
 } from "../PKCS-15/PublicKeyOperations.ta.mjs";
@@ -45,32 +45,42 @@ import {
  *
  */
 export class PrivateRSAKeyAttributes {
+    /**
+     * @summary `value`.
+     * @public
+     * @readonly
+     */
+    public readonly value: ObjectValue<RSAPrivateKeyObject>;
+    /**
+     * @summary `modulusLength`.
+     * @public
+     * @readonly
+     */
+    public readonly modulusLength: INTEGER;
+    /**
+     * @summary `keyInfo`.
+     * @public
+     * @readonly
+     */
+    public readonly keyInfo?: OPTIONAL<KeyInfo<NULL, PublicKeyOperations>>;
+    /**
+     * @summary Extensions that are not recognized.
+     * @public
+     * @readonly
+     */
+    public readonly _unrecognizedExtensionsList: _Element[];
+
     constructor(
-        /**
-         * @summary `value`.
-         * @public
-         * @readonly
-         */
-        readonly value: ObjectValue<RSAPrivateKeyObject>,
-        /**
-         * @summary `modulusLength`.
-         * @public
-         * @readonly
-         */
-        readonly modulusLength: INTEGER,
-        /**
-         * @summary `keyInfo`.
-         * @public
-         * @readonly
-         */
-        readonly keyInfo?: OPTIONAL<KeyInfo<NULL, PublicKeyOperations>>,
-        /**
-         * @summary Extensions that are not recognized.
-         * @public
-         * @readonly
-         */
-        readonly _unrecognizedExtensionsList: _Element[] = []
-    ) {}
+        value: ObjectValue<RSAPrivateKeyObject>,
+        modulusLength: INTEGER,
+        keyInfo?: OPTIONAL<KeyInfo<NULL, PublicKeyOperations>>,
+        _unrecognizedExtensionsList: _Element[] = []
+    ) {
+        this.value = value;
+        this.modulusLength = modulusLength;
+        this.keyInfo = keyInfo;
+        this._unrecognizedExtensionsList = _unrecognizedExtensionsList;
+    }
 
     /**
      * @summary Restructures an object into a PrivateRSAKeyAttributes

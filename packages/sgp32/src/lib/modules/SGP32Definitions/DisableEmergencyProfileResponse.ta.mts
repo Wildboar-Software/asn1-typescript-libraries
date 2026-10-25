@@ -1,11 +1,11 @@
 /* eslint-disable */
 import {
     ASN1ConstructionError as _ConstructionError,
-    ASN1Element as _Element,
+    type ASN1Element as _Element,
     ASN1TagClass as _TagClass
 } from "@wildboar/asn1";
 import * as $ from "@wildboar/asn1/functional";
-import { _decode_DisableEmergencyProfileResponse_disableEmergencyProfileResult, _encode_DisableEmergencyProfileResponse_disableEmergencyProfileResult, DisableEmergencyProfileResponse_disableEmergencyProfileResult } from "../SGP32Definitions/DisableEmergencyProfileResponse-disableEmergencyProfileResult.ta.mjs";
+import { _decode_DisableEmergencyProfileResponse_disableEmergencyProfileResult, _encode_DisableEmergencyProfileResponse_disableEmergencyProfileResult, type DisableEmergencyProfileResponse_disableEmergencyProfileResult } from "../SGP32Definitions/DisableEmergencyProfileResponse-disableEmergencyProfileResult.ta.mjs";
 
 
 /**
@@ -38,21 +38,25 @@ import { _decode_DisableEmergencyProfileResponse_disableEmergencyProfileResult, 
  */
 export
 class DisableEmergencyProfileResponse {
+    /**
+     * @summary `disableEmergencyProfileResult`.
+     * @description
+     *
+     * ok on success, profileNotInEnabledState when the Emergency Profile is not
+     * enabled, catBusy when a proactive session is left open, or ecallNotAvailable
+     * when emergency is unsupported or no Emergency Profile exists.
+     *
+     * SGP.32 v1.2, section 5.9.23.
+     * @public
+     * @readonly
+     */
+    public readonly disableEmergencyProfileResult: DisableEmergencyProfileResponse_disableEmergencyProfileResult;
+
     constructor (
-        /**
-         * @summary `disableEmergencyProfileResult`.
-         * @description
-         *
-         * ok on success, profileNotInEnabledState when the Emergency Profile is not
-         * enabled, catBusy when a proactive session is left open, or ecallNotAvailable
-         * when emergency is unsupported or no Emergency Profile exists.
-         *
-         * SGP.32 v1.2, section 5.9.23.
-         * @public
-         * @readonly
-         */
-        readonly disableEmergencyProfileResult: DisableEmergencyProfileResponse_disableEmergencyProfileResult
-    ) {}
+        disableEmergencyProfileResult: DisableEmergencyProfileResponse_disableEmergencyProfileResult
+    ) {
+        this.disableEmergencyProfileResult = disableEmergencyProfileResult;
+    }
 
     /**
      * @summary Restructures an object into a DisableEmergencyProfileResponse

@@ -1,11 +1,11 @@
 /* eslint-disable */
 import {
     ASN1ConstructionError as _ConstructionError,
-    ASN1Element as _Element,
+    type ASN1Element as _Element,
     ASN1TagClass as _TagClass
 } from "@wildboar/asn1";
 import * as $ from "@wildboar/asn1/functional";
-import { _decode_EnableEmergencyProfileResponse_enableEmergencyProfileResult, _encode_EnableEmergencyProfileResponse_enableEmergencyProfileResult, EnableEmergencyProfileResponse_enableEmergencyProfileResult } from "../SGP32Definitions/EnableEmergencyProfileResponse-enableEmergencyProfileResult.ta.mjs";
+import { _decode_EnableEmergencyProfileResponse_enableEmergencyProfileResult, _encode_EnableEmergencyProfileResponse_enableEmergencyProfileResult, type EnableEmergencyProfileResponse_enableEmergencyProfileResult } from "../SGP32Definitions/EnableEmergencyProfileResponse-enableEmergencyProfileResult.ta.mjs";
 
 
 /**
@@ -34,17 +34,21 @@ import { _decode_EnableEmergencyProfileResponse_enableEmergencyProfileResult, _e
  */
 export
 class EnableEmergencyProfileResponse {
+    /**
+     * @summary `enableEmergencyProfileResult`.
+     * @description
+     * Outcome of enabling the Emergency Profile. Codes are defined in section
+     * 5.9.22. SGP.32 v1.2 does not further define undefinedError(127).
+     * @public
+     * @readonly
+     */
+    public readonly enableEmergencyProfileResult: EnableEmergencyProfileResponse_enableEmergencyProfileResult;
+
     constructor (
-        /**
-         * @summary `enableEmergencyProfileResult`.
-         * @description
-         * Outcome of enabling the Emergency Profile. Codes are defined in section
-         * 5.9.22. SGP.32 v1.2 does not further define undefinedError(127).
-         * @public
-         * @readonly
-         */
-        readonly enableEmergencyProfileResult: EnableEmergencyProfileResponse_enableEmergencyProfileResult
-    ) {}
+        enableEmergencyProfileResult: EnableEmergencyProfileResponse_enableEmergencyProfileResult
+    ) {
+        this.enableEmergencyProfileResult = enableEmergencyProfileResult;
+    }
 
     /**
      * @summary Restructures an object into a EnableEmergencyProfileResponse

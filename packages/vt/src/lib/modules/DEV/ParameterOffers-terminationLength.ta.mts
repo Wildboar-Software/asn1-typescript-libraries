@@ -1,6 +1,6 @@
 /* eslint-disable */
 import {
-    ASN1Element as _Element,
+    type ASN1Element as _Element,
     ASN1TagClass as _TagClass,
     ASN1Construction as _Construction,
     ASN1UniversalType as _UniversalType,
@@ -37,26 +37,32 @@ import { ParameterOffers_terminationLength_eventId, _decode_ParameterOffers_term
  */
 export
 class ParameterOffers_terminationLength {
+    /**
+     * @summary `length`.
+     * @description
+     * Offered update counts after which to terminate if no event
+     * fired first. ISO/IEC 9040:1997 §23.4 table 14.
+     * @public
+     * @readonly
+     */
+    public readonly length: IntegerOffer;
+    /**
+     * @summary `eventId`.
+     * @description
+     * Offered event-id: non-zero positive integer or `"null"`.
+     * ISO/IEC 9040:1997 §23.4.
+     * @public
+     * @readonly
+     */
+    public readonly eventId: ParameterOffers_terminationLength_eventId;
+
     constructor (
-        /**
-         * @summary `length`.
-         * @description
-         * Offered update counts after which to terminate if no event
-         * fired first. ISO/IEC 9040:1997 §23.4 table 14.
-         * @public
-         * @readonly
-         */
-        readonly length: IntegerOffer,
-        /**
-         * @summary `eventId`.
-         * @description
-         * Offered event-id: non-zero positive integer or `"null"`.
-         * ISO/IEC 9040:1997 §23.4.
-         * @public
-         * @readonly
-         */
-        readonly eventId: ParameterOffers_terminationLength_eventId
-    ) {}
+        length: IntegerOffer,
+        eventId: ParameterOffers_terminationLength_eventId
+    ) {
+        this.length = length;
+        this.eventId = eventId;
+    }
 
     /**
      * @summary Restructures an object into a ParameterOffers_terminationLength

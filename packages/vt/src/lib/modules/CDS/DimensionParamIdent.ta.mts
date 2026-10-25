@@ -1,8 +1,8 @@
 /* eslint-disable */
 import {
-    OPTIONAL,
-    NULL,
-    ASN1Element as _Element,
+    type OPTIONAL,
+    type NULL,
+    type ASN1Element as _Element,
     ASN1TagClass as _TagClass,
     ASN1Construction as _Construction,
     ASN1UniversalType as _UniversalType,
@@ -39,46 +39,56 @@ import * as $ from "@wildboar/asn1/functional";
  */
 export
 class DimensionParamIdent {
+    /**
+     * @summary `bound`.
+     * @description
+     * Invite `d-bound`. X default unbounded; if blocks or fields
+     * are used, x-bound MUST be bounded. ISO/IEC 9040:1997
+     * §18.2.3.
+     * @public
+     * @readonly
+     */
+    public readonly bound?: OPTIONAL<NULL>;
+    /**
+     * @summary `addressing`.
+     * @description
+     * Invite `d-addressing` (default `"higher only"`). ISO/IEC
+     * 9040:1997 §18.2.3.
+     * @public
+     * @readonly
+     */
+    public readonly addressing?: OPTIONAL<NULL>;
+    /**
+     * @summary `absolute`.
+     * @description
+     * Invite `d-absolute` (default `"no"`). ISO/IEC 9040:1997
+     * §18.2.3.
+     * @public
+     * @readonly
+     */
+    public readonly absolute?: OPTIONAL<NULL>;
+    /**
+     * @summary `window`.
+     * @description
+     * Invite `d-window` (update-window-size). Unused for X/Y when
+     * blocks or fields are selected. ISO/IEC 9040:1997 §18.2.3,
+     * §19.1.1.3.
+     * @public
+     * @readonly
+     */
+    public readonly window?: OPTIONAL<NULL>;
+
     constructor (
-        /**
-         * @summary `bound`.
-         * @description
-         * Invite `d-bound`. X default unbounded; if blocks or fields
-         * are used, x-bound MUST be bounded. ISO/IEC 9040:1997
-         * §18.2.3.
-         * @public
-         * @readonly
-         */
-        readonly bound?: OPTIONAL<NULL>,
-        /**
-         * @summary `addressing`.
-         * @description
-         * Invite `d-addressing` (default `"higher only"`). ISO/IEC
-         * 9040:1997 §18.2.3.
-         * @public
-         * @readonly
-         */
-        readonly addressing?: OPTIONAL<NULL>,
-        /**
-         * @summary `absolute`.
-         * @description
-         * Invite `d-absolute` (default `"no"`). ISO/IEC 9040:1997
-         * §18.2.3.
-         * @public
-         * @readonly
-         */
-        readonly absolute?: OPTIONAL<NULL>,
-        /**
-         * @summary `window`.
-         * @description
-         * Invite `d-window` (update-window-size). Unused for X/Y when
-         * blocks or fields are selected. ISO/IEC 9040:1997 §18.2.3,
-         * §19.1.1.3.
-         * @public
-         * @readonly
-         */
-        readonly window?: OPTIONAL<NULL>
-    ) {}
+        bound?: OPTIONAL<NULL>,
+        addressing?: OPTIONAL<NULL>,
+        absolute?: OPTIONAL<NULL>,
+        window?: OPTIONAL<NULL>
+    ) {
+        this.bound = bound;
+        this.addressing = addressing;
+        this.absolute = absolute;
+        this.window = window;
+    }
 
     /**
      * @summary Restructures an object into a DimensionParamIdent

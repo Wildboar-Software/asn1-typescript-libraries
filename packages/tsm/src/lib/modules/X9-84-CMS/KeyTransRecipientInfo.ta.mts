@@ -1,6 +1,6 @@
 /* eslint-disable */
 import {
-    ASN1Element as _Element,
+    type ASN1Element as _Element,
     ASN1TagClass as _TagClass,
     ASN1Construction as _Construction,
     ASN1UniversalType as _UniversalType,
@@ -10,13 +10,13 @@ import {
     ASN1ConstructionError as _ConstructionError,
 } from "@wildboar/asn1";
 import * as $ from "@wildboar/asn1/functional";
-import { CMSVersion, _decode_CMSVersion, _encode_CMSVersion } from "../X9-84-CMS/CMSVersion.ta.mjs";
+import { type CMSVersion, _decode_CMSVersion, _encode_CMSVersion } from "../X9-84-CMS/CMSVersion.ta.mjs";
 
-import { RecipientIdentifier, _decode_RecipientIdentifier, _encode_RecipientIdentifier } from "../X9-84-CMS/RecipientIdentifier.ta.mjs";
+import { type RecipientIdentifier, _decode_RecipientIdentifier, _encode_RecipientIdentifier } from "../X9-84-CMS/RecipientIdentifier.ta.mjs";
 
-import { KeyEncryptionAlgorithmIdentifier, _decode_KeyEncryptionAlgorithmIdentifier, _encode_KeyEncryptionAlgorithmIdentifier } from "../X9-84-CMS/KeyEncryptionAlgorithmIdentifier.ta.mjs";
+import { type KeyEncryptionAlgorithmIdentifier, _decode_KeyEncryptionAlgorithmIdentifier, _encode_KeyEncryptionAlgorithmIdentifier } from "../X9-84-CMS/KeyEncryptionAlgorithmIdentifier.ta.mjs";
 
-import { EncryptedKey, _decode_EncryptedKey, _encode_EncryptedKey } from "../X9-84-CMS/EncryptedKey.ta.mjs";
+import { type EncryptedKey, _decode_EncryptedKey, _encode_EncryptedKey } from "../X9-84-CMS/EncryptedKey.ta.mjs";
 
 
 
@@ -39,32 +39,42 @@ import { EncryptedKey, _decode_EncryptedKey, _encode_EncryptedKey } from "../X9-
  */
 export
 class KeyTransRecipientInfo {
+    /**
+     * @summary `version`.
+     * @public
+     * @readonly
+     */
+    public readonly version: CMSVersion;
+    /**
+     * @summary `rid`.
+     * @public
+     * @readonly
+     */
+    public readonly rid: RecipientIdentifier;
+    /**
+     * @summary `keyEncryptionAlgorithm`.
+     * @public
+     * @readonly
+     */
+    public readonly keyEncryptionAlgorithm: KeyEncryptionAlgorithmIdentifier;
+    /**
+     * @summary `encryptedKey`.
+     * @public
+     * @readonly
+     */
+    public readonly encryptedKey: EncryptedKey;
+
     constructor (
-        /**
-         * @summary `version`.
-         * @public
-         * @readonly
-         */
-        readonly version: CMSVersion,
-        /**
-         * @summary `rid`.
-         * @public
-         * @readonly
-         */
-        readonly rid: RecipientIdentifier,
-        /**
-         * @summary `keyEncryptionAlgorithm`.
-         * @public
-         * @readonly
-         */
-        readonly keyEncryptionAlgorithm: KeyEncryptionAlgorithmIdentifier,
-        /**
-         * @summary `encryptedKey`.
-         * @public
-         * @readonly
-         */
-        readonly encryptedKey: EncryptedKey
-    ) {}
+        version: CMSVersion,
+        rid: RecipientIdentifier,
+        keyEncryptionAlgorithm: KeyEncryptionAlgorithmIdentifier,
+        encryptedKey: EncryptedKey
+    ) {
+        this.version = version;
+        this.rid = rid;
+        this.keyEncryptionAlgorithm = keyEncryptionAlgorithm;
+        this.encryptedKey = encryptedKey;
+    }
 
     /**
      * @summary Restructures an object into a KeyTransRecipientInfo

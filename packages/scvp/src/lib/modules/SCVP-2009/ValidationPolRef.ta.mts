@@ -1,7 +1,7 @@
 /* eslint-disable */
 import {
-  OPTIONAL,
-  OBJECT_IDENTIFIER,
+  type OPTIONAL,
+  type OBJECT_IDENTIFIER,
   ASN1Element as _Element,
   ASN1TagClass as _TagClass,
   ASN1Construction as _Construction,
@@ -30,20 +30,26 @@ import * as $ from '@wildboar/asn1/functional';
  *
  */
 export class ValidationPolRef {
+  /**
+   * @summary `valPolId`.
+   * @public
+   * @readonly
+   */
+  public readonly valPolId: OBJECT_IDENTIFIER;
+  /**
+   * @summary `valPolParams`.
+   * @public
+   * @readonly
+   */
+  public readonly valPolParams?: OPTIONAL<_Element>;
+
   constructor(
-    /**
-     * @summary `valPolId`.
-     * @public
-     * @readonly
-     */
-    readonly valPolId: OBJECT_IDENTIFIER,
-    /**
-     * @summary `valPolParams`.
-     * @public
-     * @readonly
-     */
-    readonly valPolParams?: OPTIONAL<_Element>
-  ) {}
+    valPolId: OBJECT_IDENTIFIER,
+    valPolParams?: OPTIONAL<_Element>
+  ) {
+    this.valPolId = valPolId;
+    this.valPolParams = valPolParams;
+  }
 
   /**
    * @summary Restructures an object into a ValidationPolRef

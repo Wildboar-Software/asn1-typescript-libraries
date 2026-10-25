@@ -1,6 +1,6 @@
 /* eslint-disable */
 import {
-    ASN1Element as _Element,
+    type ASN1Element as _Element,
     ASN1TagClass as _TagClass,
     ASN1Construction as _Construction,
     ASN1UniversalType as _UniversalType,
@@ -10,8 +10,8 @@ import {
     ASN1ConstructionError as _ConstructionError,
 } from "@wildboar/asn1";
 import * as $ from "@wildboar/asn1/functional";
-import { ObjectName, _decode_ObjectName, _encode_ObjectName } from "../ISO-9506-MMS-1/ObjectName.ta.mjs";
-import { EventNotification_actionResult_successOrFailure, _decode_EventNotification_actionResult_successOrFailure, _encode_EventNotification_actionResult_successOrFailure } from "../ISO-9506-MMS-1/EventNotification-actionResult-successOrFailure.ta.mjs";
+import { type ObjectName, _decode_ObjectName, _encode_ObjectName } from "../ISO-9506-MMS-1/ObjectName.ta.mjs";
+import { type EventNotification_actionResult_successOrFailure, _decode_EventNotification_actionResult_successOrFailure, _encode_EventNotification_actionResult_successOrFailure } from "../ISO-9506-MMS-1/EventNotification-actionResult-successOrFailure.ta.mjs";
 
 
 /**
@@ -48,36 +48,42 @@ import { EventNotification_actionResult_successOrFailure, _decode_EventNotificat
  */
 export
 class EventNotification_actionResult {
+    /**
+     * @summary `eventActionName`.
+     * @description
+     *
+     * `&name` of the Event Action referenced by the
+     * enrollment's `&eventAction`.
+     *
+     * [ISO 9506-1:2003 §18.3.1.1.8.1]
+     *
+     * @public
+     * @readonly
+     */
+    public readonly eventActionName: ObjectName;
+    /**
+     * @summary `successOrFailure`.
+     * @description
+     *
+     * Whether Event Action execution succeeded. `success`
+     * carries Result(+); `failure` carries Result(-) or
+     * the failing modifier position.
+     *
+     * [ISO 9506-1:2003 §18.3.1.1.8.2]
+     * [ISO 9506-2:2003 §18.3.1.1]
+     *
+     * @public
+     * @readonly
+     */
+    public readonly successOrFailure: EventNotification_actionResult_successOrFailure;
+
     constructor (
-        /**
-         * @summary `eventActionName`.
-         * @description
-         *
-         * `&name` of the Event Action referenced by the
-         * enrollment's `&eventAction`.
-         *
-         * [ISO 9506-1:2003 §18.3.1.1.8.1]
-         *
-         * @public
-         * @readonly
-         */
-        readonly eventActionName: ObjectName,
-        /**
-         * @summary `successOrFailure`.
-         * @description
-         *
-         * Whether Event Action execution succeeded. `success`
-         * carries Result(+); `failure` carries Result(-) or
-         * the failing modifier position.
-         *
-         * [ISO 9506-1:2003 §18.3.1.1.8.2]
-         * [ISO 9506-2:2003 §18.3.1.1]
-         *
-         * @public
-         * @readonly
-         */
-        readonly successOrFailure: EventNotification_actionResult_successOrFailure
-    ) {}
+        eventActionName: ObjectName,
+        successOrFailure: EventNotification_actionResult_successOrFailure
+    ) {
+        this.eventActionName = eventActionName;
+        this.successOrFailure = successOrFailure;
+    }
 
     /**
      * @summary Restructures an object into a EventNotification_actionResult

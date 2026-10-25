@@ -3,9 +3,9 @@ import { type ERROR } from "../Remote-Operations-Information-Objects/ERROR.oca.m
 import { type OPERATION } from "../Remote-Operations-Information-Objects/OPERATION.oca.mjs";
 // export { Priority, _decode_Priority, _encode_Priority } from "../Remote-Operations-Information-Objects/Priority.ta.mjs";
 // export { Code, _decode_Code, _encode_Code } from "../Remote-Operations-Information-Objects/Code.ta.mjs";
-import { NetworkCapabilityArg, _decode_NetworkCapabilityArg, _encode_NetworkCapabilityArg } from "../IN-SCF-SCF-ops-args/NetworkCapabilityArg.ta.mjs";
+import { type NetworkCapabilityArg, _decode_NetworkCapabilityArg, _encode_NetworkCapabilityArg } from "../IN-SCF-SCF-ops-args/NetworkCapabilityArg.ta.mjs";
 // export { NetworkCapabilityArg, _decode_NetworkCapabilityArg, _encode_NetworkCapabilityArg } from "../IN-SCF-SCF-ops-args/NetworkCapabilityArg.ta.mjs";
-import { NetworkCapabilityResultArg, _decode_NetworkCapabilityResultArg, _encode_NetworkCapabilityResultArg } from "../IN-SCF-SCF-ops-args/NetworkCapabilityResultArg.ta.mjs";
+import { type NetworkCapabilityResultArg, _decode_NetworkCapabilityResultArg, _encode_NetworkCapabilityResultArg } from "../IN-SCF-SCF-ops-args/NetworkCapabilityResultArg.ta.mjs";
 // export { NetworkCapabilityResultArg, _decode_NetworkCapabilityResultArg, _encode_NetworkCapabilityResultArg } from "../IN-SCF-SCF-ops-args/NetworkCapabilityResultArg.ta.mjs";
 import { missingCustomerRecord } from "../IN-errortypes/missingCustomerRecord.oa.mjs";
 // export { missingCustomerRecord } from "../IN-errortypes/missingCustomerRecord.oa.mjs";

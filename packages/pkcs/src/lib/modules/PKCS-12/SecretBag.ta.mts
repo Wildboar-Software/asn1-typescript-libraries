@@ -1,9 +1,9 @@
 /* eslint-disable */
 import {
     ASN1ConstructionError as _ConstructionError,
-    ASN1Element as _Element,
+    type ASN1Element as _Element,
     ASN1TagClass as _TagClass,
-    OBJECT_IDENTIFIER,
+    type OBJECT_IDENTIFIER,
 } from "@wildboar/asn1";
 import * as $ from "@wildboar/asn1/functional";
 
@@ -23,20 +23,26 @@ import * as $ from "@wildboar/asn1/functional";
  *
  */
 export class SecretBag {
+    /**
+     * @summary `secretTypeId`.
+     * @public
+     * @readonly
+     */
+    public readonly secretTypeId: OBJECT_IDENTIFIER;
+    /**
+     * @summary `secretValue`.
+     * @public
+     * @readonly
+     */
+    public readonly secretValue: _Element;
+
     constructor(
-        /**
-         * @summary `secretTypeId`.
-         * @public
-         * @readonly
-         */
-        readonly secretTypeId: OBJECT_IDENTIFIER,
-        /**
-         * @summary `secretValue`.
-         * @public
-         * @readonly
-         */
-        readonly secretValue: _Element
-    ) {}
+        secretTypeId: OBJECT_IDENTIFIER,
+        secretValue: _Element
+    ) {
+        this.secretTypeId = secretTypeId;
+        this.secretValue = secretValue;
+    }
 
     /**
      * @summary Restructures an object into a SecretBag

@@ -8,7 +8,7 @@ import { type OPERATION } from "../Remote-Operations-Information-Objects/OPERATI
 
 import { SetSpeakerMuteArgument, _decode_SetSpeakerMuteArgument, _encode_SetSpeakerMuteArgument } from "../CSTA-set-speaker-mute/SetSpeakerMuteArgument.ta.mjs";
 
-import { SetSpeakerMuteResult, _decode_SetSpeakerMuteResult, _encode_SetSpeakerMuteResult } from "../CSTA-set-speaker-mute/SetSpeakerMuteResult.ta.mjs";
+import { type SetSpeakerMuteResult, _decode_SetSpeakerMuteResult, _encode_SetSpeakerMuteResult } from "../CSTA-set-speaker-mute/SetSpeakerMuteResult.ta.mjs";
 
 import { universalFailure } from "../CSTA-error-definition/universalFailure.oa.mjs";
 

@@ -1,8 +1,8 @@
 /* eslint-disable */
 import {
-    OCTET_STRING,
-    OPTIONAL,
-    ASN1Element as _Element,
+    type OCTET_STRING,
+    type OPTIONAL,
+    type ASN1Element as _Element,
     ASN1TagClass as _TagClass,
     ASN1SizeError
 } from "@wildboar/asn1";
@@ -11,13 +11,13 @@ import { CommunicationIdentifier, _decode_CommunicationIdentifier, _encode_Commu
 // export { CommunicationIdentifier, _decode_CommunicationIdentifier, _encode_CommunicationIdentifier } from "../HI2Operations/CommunicationIdentifier.ta.mjs";
 import { Network_Identifier, _decode_Network_Identifier, _encode_Network_Identifier } from "../HI2Operations/Network-Identifier.ta.mjs";
 // export { Network_Identifier, _decode_Network_Identifier, _encode_Network_Identifier } from "../HI2Operations/Network-Identifier.ta.mjs";
-import { TargetType, _decode_TargetType, _encode_TargetType, _enum_for_TargetType } from "../ThreeGPP-HI1NotificationOperations/TargetType.ta.mjs";
+import { type TargetType, _decode_TargetType, _encode_TargetType, _enum_for_TargetType } from "../ThreeGPP-HI1NotificationOperations/TargetType.ta.mjs";
 // export { TargetType, _enum_for_TargetType, TargetType_mSISDN /* IMPORTED_LONG_ENUMERATION_ITEM */, mSISDN /* IMPORTED_SHORT_ENUMERATION_ITEM */, TargetType_iMSI /* IMPORTED_LONG_ENUMERATION_ITEM */, iMSI /* IMPORTED_SHORT_ENUMERATION_ITEM */, TargetType_iMEI /* IMPORTED_LONG_ENUMERATION_ITEM */, iMEI /* IMPORTED_SHORT_ENUMERATION_ITEM */, TargetType_e164_Format /* IMPORTED_LONG_ENUMERATION_ITEM */, e164_Format /* IMPORTED_SHORT_ENUMERATION_ITEM */, TargetType_nAI /* IMPORTED_LONG_ENUMERATION_ITEM */, nAI /* IMPORTED_SHORT_ENUMERATION_ITEM */, TargetType_sip_URI /* IMPORTED_LONG_ENUMERATION_ITEM */, sip_URI /* IMPORTED_SHORT_ENUMERATION_ITEM */, TargetType_tel_URI /* IMPORTED_LONG_ENUMERATION_ITEM */, tel_URI /* IMPORTED_SHORT_ENUMERATION_ITEM */, TargetType_iMPU /* IMPORTED_LONG_ENUMERATION_ITEM */, iMPU /* IMPORTED_SHORT_ENUMERATION_ITEM */, TargetType_iMPI /* IMPORTED_LONG_ENUMERATION_ITEM */, iMPI /* IMPORTED_SHORT_ENUMERATION_ITEM */, _decode_TargetType, _encode_TargetType } from "../ThreeGPP-HI1NotificationOperations/TargetType.ta.mjs";
 import { DeliveryInformation, _decode_DeliveryInformation, _encode_DeliveryInformation } from "../ThreeGPP-HI1NotificationOperations/DeliveryInformation.ta.mjs";
 // export { DeliveryInformation, _decode_DeliveryInformation, _encode_DeliveryInformation } from "../ThreeGPP-HI1NotificationOperations/DeliveryInformation.ta.mjs";
-import { TimeStamp, _decode_TimeStamp, _encode_TimeStamp } from "../HI2Operations/TimeStamp.ta.mjs";
+import { type TimeStamp, _decode_TimeStamp, _encode_TimeStamp } from "../HI2Operations/TimeStamp.ta.mjs";
 // export { TimeStamp, _decode_TimeStamp, _encode_TimeStamp } from "../HI2Operations/TimeStamp.ta.mjs";
-import { InterceptionType, _decode_InterceptionType, _encode_InterceptionType, _enum_for_InterceptionType } from "../ThreeGPP-HI1NotificationOperations/InterceptionType.ta.mjs";
+import { type InterceptionType, _decode_InterceptionType, _encode_InterceptionType, _enum_for_InterceptionType } from "../ThreeGPP-HI1NotificationOperations/InterceptionType.ta.mjs";
 // export { InterceptionType, _enum_for_InterceptionType, InterceptionType_voiceIriCc /* IMPORTED_LONG_ENUMERATION_ITEM */, voiceIriCc /* IMPORTED_SHORT_ENUMERATION_ITEM */, InterceptionType_voiceIriOnly /* IMPORTED_LONG_ENUMERATION_ITEM */, voiceIriOnly /* IMPORTED_SHORT_ENUMERATION_ITEM */, InterceptionType_dataIriCc /* IMPORTED_LONG_ENUMERATION_ITEM */, dataIriCc /* IMPORTED_SHORT_ENUMERATION_ITEM */, InterceptionType_dataIriOnly /* IMPORTED_LONG_ENUMERATION_ITEM */, dataIriOnly /* IMPORTED_SHORT_ENUMERATION_ITEM */, InterceptionType_voiceAndDataIriCc /* IMPORTED_LONG_ENUMERATION_ITEM */, voiceAndDataIriCc /* IMPORTED_SHORT_ENUMERATION_ITEM */, InterceptionType_voiceAndDataIriOnly /* IMPORTED_LONG_ENUMERATION_ITEM */, voiceAndDataIriOnly /* IMPORTED_SHORT_ENUMERATION_ITEM */, _decode_InterceptionType, _encode_InterceptionType } from "../ThreeGPP-HI1NotificationOperations/InterceptionType.ta.mjs";
 
 
@@ -242,13 +242,13 @@ class Target_Information {
          * @static
          */
 
-    public static _enum_for_targetType = _enum_for_TargetType;        /**
+    public static _enum_for_targetType: typeof _enum_for_TargetType = _enum_for_TargetType;        /**
          * @summary The enum used as the type of the component `interceptionType`
          * @public
          * @static
          */
 
-    public static _enum_for_interceptionType = _enum_for_InterceptionType;
+    public static _enum_for_interceptionType: typeof _enum_for_InterceptionType = _enum_for_InterceptionType;
 }
 
 /**

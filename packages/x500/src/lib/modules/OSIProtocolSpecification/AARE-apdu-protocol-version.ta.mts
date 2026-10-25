@@ -1,5 +1,5 @@
 /* eslint-disable */
-import { ASN1Element as _Element, BIT_STRING } from "@wildboar/asn1";
+import { ASN1Element as _Element, type BIT_STRING } from "@wildboar/asn1";
 import * as $ from "@wildboar/asn1/functional";
 
 /**
@@ -27,10 +27,10 @@ export const AARE_apdu_protocol_version_version1: number = 0; /* LONG_NAMED_BIT 
 export const version1: number = AARE_apdu_protocol_version_version1; /* SHORT_NAMED_BIT */
 
 
-export const _decode_AARE_apdu_protocol_version = $._decodeBitString;
+export const _decode_AARE_apdu_protocol_version: $.ASN1Decoder<BIT_STRING> = $._decodeBitString;
 
 
-export const _encode_AARE_apdu_protocol_version = $._encodeBitString;
+export const _encode_AARE_apdu_protocol_version: $.ASN1Encoder<BIT_STRING> = $._encodeBitString;
 
 
 /* eslint-enable */

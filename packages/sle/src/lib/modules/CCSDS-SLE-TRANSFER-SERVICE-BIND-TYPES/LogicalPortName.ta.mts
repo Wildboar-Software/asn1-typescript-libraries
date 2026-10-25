@@ -1,10 +1,10 @@
 /* eslint-disable */
 import {
-    ASN1Element as _Element,
+    type ASN1Element as _Element,
     ASN1SizeError
 } from "@wildboar/asn1";
 import * as $ from "@wildboar/asn1/functional";
-import { IdentifierString, _decode_IdentifierString, _encode_IdentifierString } from "../CCSDS-SLE-TRANSFER-SERVICE-BIND-TYPES/IdentifierString.ta.mjs";
+import { type IdentifierString, _decode_IdentifierString, _encode_IdentifierString } from "../CCSDS-SLE-TRANSFER-SERVICE-BIND-TYPES/IdentifierString.ta.mjs";
 
 
 /**
@@ -44,8 +44,6 @@ function _decode_LogicalPortName (el: _Element): LogicalPortName {
     return _decoded;
 }
 
-let _cached_encoder_for_LogicalPortName: $.ASN1Encoder<LogicalPortName> | null = null;
-
 /**
  * @summary Encodes a(n) LogicalPortName into an ASN.1 Element.
  * @function
@@ -53,11 +51,7 @@ let _cached_encoder_for_LogicalPortName: $.ASN1Encoder<LogicalPortName> | null =
  * @param elGetter A function that can be used to get new ASN.1 elements.
  * @returns {_Element} The LogicalPortName, encoded as an ASN.1 Element.
  */
-export
-function _encode_LogicalPortName (value: LogicalPortName, elGetter: $.ASN1Encoder<any>): _Element {
-    if (!_cached_encoder_for_LogicalPortName) { _cached_encoder_for_LogicalPortName = _encode_IdentifierString; }
-    return _cached_encoder_for_LogicalPortName(value, elGetter);
-}
+export const _encode_LogicalPortName: $.ASN1Encoder<LogicalPortName> = _encode_IdentifierString;
 
 
 /* eslint-enable */

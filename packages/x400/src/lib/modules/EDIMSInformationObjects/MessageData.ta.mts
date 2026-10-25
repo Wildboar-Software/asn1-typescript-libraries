@@ -1,6 +1,6 @@
 /* eslint-disable */
 import {
-    ASN1Element as _Element,
+    type ASN1Element as _Element,
     ASN1TagClass as _TagClass,
     ASN1Construction as _Construction,
     ASN1UniversalType as _UniversalType,
@@ -36,20 +36,26 @@ import {
  *
  */
 export class MessageData {
+    /**
+     * @summary `heading`.
+     * @public
+     * @readonly
+     */
+    public readonly heading: Heading;
+    /**
+     * @summary `body`.
+     * @public
+     * @readonly
+     */
+    public readonly body: BodyOrRemoved;
+
     constructor(
-        /**
-         * @summary `heading`.
-         * @public
-         * @readonly
-         */
-        readonly heading: Heading,
-        /**
-         * @summary `body`.
-         * @public
-         * @readonly
-         */
-        readonly body: BodyOrRemoved
-    ) {}
+        heading: Heading,
+        body: BodyOrRemoved
+    ) {
+        this.heading = heading;
+        this.body = body;
+    }
 
     /**
      * @summary Restructures an object into a MessageData

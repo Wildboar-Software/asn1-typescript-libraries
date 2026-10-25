@@ -1,12 +1,12 @@
 /* eslint-disable */
 import {
-    OPTIONAL,
-    ASN1Element as _Element,
+    type OPTIONAL,
+    type ASN1Element as _Element,
     ASN1TagClass as _TagClass
 } from "@wildboar/asn1";
 import * as $ from "@wildboar/asn1/functional";
-import { ProfileRollbackResponse_cmdResult, _decode_ProfileRollbackResponse_cmdResult, _encode_ProfileRollbackResponse_cmdResult } from "../SGP32Definitions/ProfileRollbackResponse-cmdResult.ta.mjs";
-import { EuiccPackageResult, _decode_EuiccPackageResult, _encode_EuiccPackageResult } from "../SGP32Definitions/EuiccPackageResult.ta.mjs";
+import { type ProfileRollbackResponse_cmdResult, _decode_ProfileRollbackResponse_cmdResult, _encode_ProfileRollbackResponse_cmdResult } from "../SGP32Definitions/ProfileRollbackResponse-cmdResult.ta.mjs";
+import { type EuiccPackageResult, _decode_EuiccPackageResult, _encode_EuiccPackageResult } from "../SGP32Definitions/EuiccPackageResult.ta.mjs";
 
 
 /**
@@ -36,30 +36,36 @@ import { EuiccPackageResult, _decode_EuiccPackageResult, _encode_EuiccPackageRes
  */
 export
 class ProfileRollbackResponse {
+    /**
+     * @summary `cmdResult`.
+     * @description
+     * ok when rollback ran. rollbackNotAllowed when the last enable PSMO did not
+     * grant it. commandError when no Profile is enabled. catBusy when a proactive
+     * session is still open. SGP.32 v1.2, section 5.9.16.
+     * @public
+     * @readonly
+     */
+    public readonly cmdResult: ProfileRollbackResponse_cmdResult;
+    /**
+     * @summary `eUICCPackageResult`.
+     * @description
+     * Present when cmdResult is ok. Same eimId, counterValue, and eimTransactionId
+     * as the result of the previous eUICC Package. seqNumber is one higher.
+     * euiccResultData repeats the previous PSMO results and then adds
+     * RollbackProfileResult. The previous eUICC Package Result is removed. SGP.32
+     * v1.2, section 5.9.16.
+     * @public
+     * @readonly
+     */
+    public readonly eUICCPackageResult?: OPTIONAL<EuiccPackageResult>;
+
     constructor (
-        /**
-         * @summary `cmdResult`.
-         * @description
-         * ok when rollback ran. rollbackNotAllowed when the last enable PSMO did not
-         * grant it. commandError when no Profile is enabled. catBusy when a proactive
-         * session is still open. SGP.32 v1.2, section 5.9.16.
-         * @public
-         * @readonly
-         */
-        readonly cmdResult: ProfileRollbackResponse_cmdResult,
-        /**
-         * @summary `eUICCPackageResult`.
-         * @description
-         * Present when cmdResult is ok. Same eimId, counterValue, and eimTransactionId
-         * as the result of the previous eUICC Package. seqNumber is one higher.
-         * euiccResultData repeats the previous PSMO results and then adds
-         * RollbackProfileResult. The previous eUICC Package Result is removed. SGP.32
-         * v1.2, section 5.9.16.
-         * @public
-         * @readonly
-         */
-        readonly eUICCPackageResult?: OPTIONAL<EuiccPackageResult>
-    ) {}
+        cmdResult: ProfileRollbackResponse_cmdResult,
+        eUICCPackageResult?: OPTIONAL<EuiccPackageResult>
+    ) {
+        this.cmdResult = cmdResult;
+        this.eUICCPackageResult = eUICCPackageResult;
+    }
 
     /**
      * @summary Restructures an object into a ProfileRollbackResponse

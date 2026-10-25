@@ -1,15 +1,15 @@
 /* eslint-disable */
 import {
-    ASN1Element as _Element,
+    type ASN1Element as _Element,
     ASN1TagClass as _TagClass,
     ASN1SizeError
 } from "@wildboar/asn1";
 import * as $ from "@wildboar/asn1/functional";
-import { IMPI, _decode_IMPI, _encode_IMPI } from "../TS33128Payloads/IMPI.ta.mjs";
+import { type IMPI, _decode_IMPI, _encode_IMPI } from "../TS33128Payloads/IMPI.ta.mjs";
 // export { IMPI, _decode_IMPI, _encode_IMPI } from "../TS33128Payloads/IMPI.ta.mjs";
-import { IMPU, _decode_IMPU, _encode_IMPU } from "../TS33128Payloads/IMPU.ta.mjs";
+import { type IMPU, _decode_IMPU, _encode_IMPU } from "../TS33128Payloads/IMPU.ta.mjs";
 // export { IMPU, _decode_IMPU, _encode_IMPU } from "../TS33128Payloads/IMPU.ta.mjs";
-import { IMSSubscriberIdentity, _decode_IMSSubscriberIdentity, _encode_IMSSubscriberIdentity } from "../TS33128Payloads/IMSSubscriberIdentity.ta.mjs";
+import { type IMSSubscriberIdentity, _decode_IMSSubscriberIdentity, _encode_IMSSubscriberIdentity } from "../TS33128Payloads/IMSSubscriberIdentity.ta.mjs";
 // export { IMSSubscriberIdentity, _decode_IMSSubscriberIdentity, _encode_IMSSubscriberIdentity } from "../TS33128Payloads/IMSSubscriberIdentity.ta.mjs";
 
 

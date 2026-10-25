@@ -1,6 +1,6 @@
 /* eslint-disable */
 import {
-    ASN1Element as _Element,
+    type ASN1Element as _Element,
     ASN1TagClass as _TagClass,
     ASN1Construction as _Construction,
     ASN1UniversalType as _UniversalType,
@@ -11,7 +11,7 @@ import {
 } from '@wildboar/asn1';
 import * as $ from '@wildboar/asn1/functional';
 import {
-    ObjectInstance,
+    type ObjectInstance,
     _decode_ObjectInstance,
     _encode_ObjectInstance,
 } from '@wildboar/cmip';
@@ -37,22 +37,13 @@ import {
  */
 export type ScriptId = ObjectInstance; // DefinedType
 
-let _cached_decoder_for_ScriptId: $.ASN1Decoder<ScriptId> | null = null;
-
 /**
  * @summary Decodes an ASN.1 element into a(n) ScriptId
  * @function
  * @param {_Element} el The element being decoded.
  * @returns {ScriptId} The decoded data structure.
  */
-export function _decode_ScriptId(el: _Element): ScriptId {
-    if (!_cached_decoder_for_ScriptId) {
-        _cached_decoder_for_ScriptId = _decode_ObjectInstance;
-    }
-    return _cached_decoder_for_ScriptId(el);
-}
-
-let _cached_encoder_for_ScriptId: $.ASN1Encoder<ScriptId> | null = null;
+export const _decode_ScriptId: $.ASN1Decoder<ScriptId> = _decode_ObjectInstance;
 
 /**
  * @summary Encodes a(n) ScriptId into an ASN.1 Element.
@@ -61,15 +52,7 @@ let _cached_encoder_for_ScriptId: $.ASN1Encoder<ScriptId> | null = null;
  * @param elGetter A function that can be used to get new ASN.1 elements.
  * @returns {_Element} The ScriptId, encoded as an ASN.1 Element.
  */
-export function _encode_ScriptId(
-    value: ScriptId,
-    elGetter: $.ASN1Encoder<ScriptId>
-): _Element {
-    if (!_cached_encoder_for_ScriptId) {
-        _cached_encoder_for_ScriptId = _encode_ObjectInstance;
-    }
-    return _cached_encoder_for_ScriptId(value, elGetter);
-}
+export const _encode_ScriptId: $.ASN1Encoder<ScriptId> = _encode_ObjectInstance;
 
 
 /* eslint-enable */

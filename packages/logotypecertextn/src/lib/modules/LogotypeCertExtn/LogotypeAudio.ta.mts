@@ -1,7 +1,7 @@
 /* eslint-disable */
 import {
-    OPTIONAL,
-    ASN1Element as _Element,
+    type OPTIONAL,
+    type ASN1Element as _Element,
     ASN1TagClass as _TagClass
 } from "@wildboar/asn1";
 import * as $ from "@wildboar/asn1/functional";
@@ -38,14 +38,14 @@ class LogotypeAudio {
      * @public
      * @readonly
      */
-    readonly audioDetails: LogotypeDetails;
+    public readonly audioDetails: LogotypeDetails;
     /**
      * Duration, channel layout, sample rate, and language. Absent
      * when the issuer supplies none.
      * @public
      * @readonly
      */
-    readonly audioInfo?: OPTIONAL<LogotypeAudioInfo>;
+    public readonly audioInfo?: OPTIONAL<LogotypeAudioInfo>;
 
     constructor (
         audioDetails: LogotypeDetails,

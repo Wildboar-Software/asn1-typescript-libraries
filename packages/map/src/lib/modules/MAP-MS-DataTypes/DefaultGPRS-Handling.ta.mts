@@ -1,7 +1,7 @@
 /* eslint-disable */
 import {
-    ASN1Element as _Element,
-    ENUMERATED
+    type ASN1Element as _Element,
+    type ENUMERATED
 } from "@wildboar/asn1";
 import * as $ from "@wildboar/asn1/functional";
 
@@ -42,7 +42,7 @@ type DefaultGPRS_Handling = _enum_for_DefaultGPRS_Handling | ENUMERATED;
  * @type {number}
  */
 export
-const DefaultGPRS_Handling_continueTransaction: DefaultGPRS_Handling = 0; /* LONG_NAMED_ENUMERATED_VALUE */
+const DefaultGPRS_Handling_continueTransaction: _enum_for_DefaultGPRS_Handling.continueTransaction = _enum_for_DefaultGPRS_Handling.continueTransaction; /* LONG_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary continueTransaction
@@ -50,7 +50,7 @@ const DefaultGPRS_Handling_continueTransaction: DefaultGPRS_Handling = 0; /* LON
  * @type {number}
  */
 export
-const continueTransaction: DefaultGPRS_Handling = DefaultGPRS_Handling_continueTransaction; /* SHORT_NAMED_ENUMERATED_VALUE */
+const continueTransaction: _enum_for_DefaultGPRS_Handling.continueTransaction = DefaultGPRS_Handling_continueTransaction; /* SHORT_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary DefaultGPRS_Handling_releaseTransaction
@@ -58,7 +58,7 @@ const continueTransaction: DefaultGPRS_Handling = DefaultGPRS_Handling_continueT
  * @type {number}
  */
 export
-const DefaultGPRS_Handling_releaseTransaction: DefaultGPRS_Handling = 1; /* LONG_NAMED_ENUMERATED_VALUE */
+const DefaultGPRS_Handling_releaseTransaction: _enum_for_DefaultGPRS_Handling.releaseTransaction = _enum_for_DefaultGPRS_Handling.releaseTransaction; /* LONG_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary releaseTransaction
@@ -66,7 +66,7 @@ const DefaultGPRS_Handling_releaseTransaction: DefaultGPRS_Handling = 1; /* LONG
  * @type {number}
  */
 export
-const releaseTransaction: DefaultGPRS_Handling = DefaultGPRS_Handling_releaseTransaction; /* SHORT_NAMED_ENUMERATED_VALUE */
+const releaseTransaction: _enum_for_DefaultGPRS_Handling.releaseTransaction = DefaultGPRS_Handling_releaseTransaction; /* SHORT_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary Decodes an ASN.1 element into a(n) DefaultGPRS_Handling
@@ -74,7 +74,7 @@ const releaseTransaction: DefaultGPRS_Handling = DefaultGPRS_Handling_releaseTra
  * @param el The element being decoded.
  * @returns The decoded data structure.
  */
-export const _decode_DefaultGPRS_Handling = $._decodeEnumerated;
+export const _decode_DefaultGPRS_Handling: $.ASN1Decoder<number> = $._decodeEnumerated;
 
 /**
  * @summary Encodes a(n) DefaultGPRS_Handling into an ASN.1 Element.
@@ -83,7 +83,7 @@ export const _decode_DefaultGPRS_Handling = $._decodeEnumerated;
  * @param elGetter A function that can be used to get new ASN.1 elements.
  * @returns {_Element} The DefaultGPRS_Handling, encoded as an ASN.1 Element.
  */
-export const _encode_DefaultGPRS_Handling = $._encodeEnumerated;
+export const _encode_DefaultGPRS_Handling: $.ASN1Encoder<number> = $._encodeEnumerated;
 
 
 /* eslint-enable */

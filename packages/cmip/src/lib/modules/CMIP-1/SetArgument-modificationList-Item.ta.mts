@@ -1,6 +1,6 @@
 /* eslint-disable */
 import {
-  OPTIONAL,
+  type OPTIONAL,
   ASN1Element as _Element,
   ASN1TagClass as _TagClass,
   ASN1Construction as _Construction,
@@ -12,13 +12,13 @@ import {
 } from '@wildboar/asn1';
 import * as $ from '@wildboar/asn1/functional';
 import {
-  ModifyOperator,
+  type ModifyOperator,
   replace /* IMPORTED_SHORT_NAMED_INTEGER */,
   _decode_ModifyOperator,
   _encode_ModifyOperator,
 } from '../CMIP-1/ModifyOperator.ta.mjs';
 import {
-    AttributeId,
+    type AttributeId,
     _decode_AttributeId,
     _encode_AttributeId,
 } from '../CMIP-1/AttributeId.ta.mjs';
@@ -50,7 +50,7 @@ export class SetArgument_modificationList_Item {
    * @public
    * @readonly
    */
-  readonly modifyOperator: OPTIONAL<ModifyOperator>;
+  public readonly modifyOperator: OPTIONAL<ModifyOperator>;
   /**
    * @summary `attributeId`.
    * @description
@@ -60,7 +60,7 @@ export class SetArgument_modificationList_Item {
    * @public
    * @readonly
    */
-  readonly attributeId: AttributeId;
+  public readonly attributeId: AttributeId;
   /**
    * @summary `attributeValue`.
    * @description
@@ -70,7 +70,7 @@ export class SetArgument_modificationList_Item {
    * @public
    * @readonly
    */
-  readonly attributeValue?: OPTIONAL<_Element>;
+  public readonly attributeValue?: OPTIONAL<_Element>;
 
   constructor(
     modifyOperator: OPTIONAL<ModifyOperator>,

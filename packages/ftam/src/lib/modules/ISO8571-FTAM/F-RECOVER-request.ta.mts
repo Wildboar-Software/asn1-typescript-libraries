@@ -1,7 +1,7 @@
 /* eslint-disable */
 import {
-  OPTIONAL,
-  INTEGER,
+  type OPTIONAL,
+  type INTEGER,
   ASN1Element as _Element,
   ASN1TagClass as _TagClass,
   ASN1Construction as _Construction,
@@ -13,12 +13,12 @@ import {
 } from '@wildboar/asn1';
 import * as $ from '@wildboar/asn1/functional';
 import {
-  Activity_Identifier,
+  type Activity_Identifier,
   _decode_Activity_Identifier,
   _encode_Activity_Identifier,
 } from '../ISO8571-FTAM/Activity-Identifier.ta.mjs';
 import {
-  Access_Request,
+  type Access_Request,
   _decode_Access_Request,
   _encode_Access_Request,
 } from '../ISO8571-FTAM/Access-Request.ta.mjs';
@@ -28,7 +28,7 @@ import {
   _encode_Access_Passwords,
 } from '../ISO8571-FTAM/Access-Passwords.ta.mjs';
 import {
-  Abstract_Syntax_Name,
+  type Abstract_Syntax_Name,
   _decode_Abstract_Syntax_Name,
   _encode_Abstract_Syntax_Name,
 } from '../ISO8571-FTAM/Abstract-Syntax-Name.ta.mjs';
@@ -82,7 +82,7 @@ export class F_RECOVER_request {
    * @public
    * @readonly
    */
-  readonly activity_identifier: Activity_Identifier;
+  public readonly activity_identifier: Activity_Identifier;
   /**
    * @summary `bulk_transfer_number`.
    * @description
@@ -94,7 +94,7 @@ export class F_RECOVER_request {
    * @public
    * @readonly
    */
-  readonly bulk_transfer_number: INTEGER;
+  public readonly bulk_transfer_number: INTEGER;
   /**
    * @summary `requested_access`.
    * @description
@@ -106,7 +106,7 @@ export class F_RECOVER_request {
    * @public
    * @readonly
    */
-  readonly requested_access: Access_Request;
+  public readonly requested_access: Access_Request;
   /**
    * @summary `access_passwords`.
    * @description
@@ -116,7 +116,7 @@ export class F_RECOVER_request {
    * @public
    * @readonly
    */
-  readonly access_passwords?: OPTIONAL<Access_Passwords>;
+  public readonly access_passwords?: OPTIONAL<Access_Passwords>;
   /**
    * @summary `recovefy_Point`.
    * @description
@@ -129,7 +129,7 @@ export class F_RECOVER_request {
    * @public
    * @readonly
    */
-  readonly recovefy_Point?: OPTIONAL<INTEGER>;
+  public readonly recovefy_Point?: OPTIONAL<INTEGER>;
   /**
    * @summary `remove_contexts`.
    * @description
@@ -140,7 +140,7 @@ export class F_RECOVER_request {
    * @public
    * @readonly
    */
-  readonly remove_contexts?: OPTIONAL<Abstract_Syntax_Name[]>;
+  public readonly remove_contexts?: OPTIONAL<Abstract_Syntax_Name[]>;
   /**
    * @summary `define_contexts`.
    * @description
@@ -151,7 +151,7 @@ export class F_RECOVER_request {
    * @public
    * @readonly
    */
-  readonly define_contexts?: OPTIONAL<Abstract_Syntax_Name[]>;
+  public readonly define_contexts?: OPTIONAL<Abstract_Syntax_Name[]>;
   /**
    * @summary `concurrent_bulk_transfer_number`.
    * @description
@@ -162,7 +162,7 @@ export class F_RECOVER_request {
    * @public
    * @readonly
    */
-  readonly concurrent_bulk_transfer_number?: OPTIONAL<INTEGER>;
+  public readonly concurrent_bulk_transfer_number?: OPTIONAL<INTEGER>;
   /**
    * @summary `concurrent_recovery_point`.
    * @description
@@ -173,7 +173,7 @@ export class F_RECOVER_request {
    * @public
    * @readonly
    */
-  readonly concurrent_recovery_point?: OPTIONAL<INTEGER>;
+  public readonly concurrent_recovery_point?: OPTIONAL<INTEGER>;
   /**
    * @summary `last_transfer_end_read_response`.
    * @description
@@ -183,7 +183,7 @@ export class F_RECOVER_request {
    * @public
    * @readonly
    */
-  readonly last_transfer_end_read_response?: OPTIONAL<INTEGER>;
+  public readonly last_transfer_end_read_response?: OPTIONAL<INTEGER>;
   /**
    * @summary `last_transfer_end_write_response`.
    * @description
@@ -193,7 +193,7 @@ export class F_RECOVER_request {
    * @public
    * @readonly
    */
-  readonly last_transfer_end_write_response?: OPTIONAL<INTEGER>;
+  public readonly last_transfer_end_write_response?: OPTIONAL<INTEGER>;
 
   constructor(
     activity_identifier: Activity_Identifier,

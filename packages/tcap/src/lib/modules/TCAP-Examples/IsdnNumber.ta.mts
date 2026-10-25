@@ -1,6 +1,6 @@
 /* eslint-disable */
 import {
-    ASN1Element as _Element,
+    type ASN1Element as _Element,
     ASN1TagClass as _TagClass,
     ASN1Construction as _Construction,
     ASN1UniversalType as _UniversalType,
@@ -17,7 +17,7 @@ import {
     _encode_TypeOfAddress,
 } from '../TCAP-Examples/TypeOfAddress.ta.mjs';
 import {
-    TelephonyString,
+    type TelephonyString,
     _decode_TelephonyString,
     _encode_TelephonyString,
 } from '../TCAP-Examples/TelephonyString.ta.mjs';
@@ -36,20 +36,26 @@ import {
  *
  */
 export class IsdnNumber {
+    /**
+     * @summary `typeOfAddress`.
+     * @public
+     * @readonly
+     */
+    public readonly typeOfAddress: TypeOfAddress;
+    /**
+     * @summary `digits`.
+     * @public
+     * @readonly
+     */
+    public readonly digits: TelephonyString;
+
     constructor(
-        /**
-         * @summary `typeOfAddress`.
-         * @public
-         * @readonly
-         */
-        readonly typeOfAddress: TypeOfAddress,
-        /**
-         * @summary `digits`.
-         * @public
-         * @readonly
-         */
-        readonly digits: TelephonyString
-    ) {}
+        typeOfAddress: TypeOfAddress,
+        digits: TelephonyString
+    ) {
+        this.typeOfAddress = typeOfAddress;
+        this.digits = digits;
+    }
 
     /**
      * @summary Restructures an object into a IsdnNumber
@@ -75,7 +81,7 @@ export class IsdnNumber {
      * @static
      */
 
-    public static _enum_for_typeOfAddress = _enum_for_TypeOfAddress;
+    public static _enum_for_typeOfAddress: typeof _enum_for_TypeOfAddress = _enum_for_TypeOfAddress;
 }
 
 /**

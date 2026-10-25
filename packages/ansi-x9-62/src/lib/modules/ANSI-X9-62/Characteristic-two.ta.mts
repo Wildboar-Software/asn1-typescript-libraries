@@ -1,10 +1,10 @@
 /* eslint-disable */
 import {
     ASN1ConstructionError as _ConstructionError,
-    ASN1Element as _Element,
+    type ASN1Element as _Element,
     ASN1TagClass as _TagClass,
-    INTEGER,
-    OBJECT_IDENTIFIER,
+    type INTEGER,
+    type OBJECT_IDENTIFIER,
 } from "@wildboar/asn1";
 import * as $ from "@wildboar/asn1/functional";
 /**
@@ -37,7 +37,7 @@ export class Characteristic_two {
      * @public
      * @readonly
      */
-    readonly m: INTEGER;
+    public readonly m: INTEGER;
     /**
      * @summary `basis`.
      * @description
@@ -48,7 +48,7 @@ export class Characteristic_two {
      * @public
      * @readonly
      */
-    readonly basis: OBJECT_IDENTIFIER;
+    public readonly basis: OBJECT_IDENTIFIER;
     /**
      * @summary `parameters`.
      * @description
@@ -59,7 +59,7 @@ export class Characteristic_two {
      * @public
      * @readonly
      */
-    readonly parameters: _Element;
+    public readonly parameters: _Element;
 
     constructor(
         m: INTEGER,

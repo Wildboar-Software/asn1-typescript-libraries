@@ -1,7 +1,7 @@
 /* eslint-disable */
 import {
-    INTEGER,
-    ASN1Element as _Element,
+    type INTEGER,
+    type ASN1Element as _Element,
     ASN1TagClass as _TagClass,
     ASN1Construction as _Construction,
     ASN1UniversalType as _UniversalType,
@@ -32,12 +32,12 @@ export type RedirectHoldingTime_Permitted = INTEGER;
 
 
 
-export const _decode_RedirectHoldingTime_Permitted = $._decodeInteger;
+export const _decode_RedirectHoldingTime_Permitted: $.ASN1Decoder<INTEGER> = $._decodeInteger;
 
 
 
 
-export const _encode_RedirectHoldingTime_Permitted = $._encodeInteger;
+export const _encode_RedirectHoldingTime_Permitted: $.ASN1Encoder<INTEGER> = $._encodeInteger;
 
 
 /* eslint-enable */

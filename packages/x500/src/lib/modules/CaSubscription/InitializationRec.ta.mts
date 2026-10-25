@@ -1,12 +1,12 @@
 /* eslint-disable */
 import {
     ASN1ConstructionError as _ConstructionError,
-    ASN1Element as _Element,
+    type ASN1Element as _Element,
     ASN1TagClass as _TagClass,
 } from "@wildboar/asn1";
 import * as $ from "@wildboar/asn1/functional";
 import {
-    Version,
+    type Version,
     _decode_Version,
     _encode_Version,
 } from "../Wrapper/Version.ta.mjs";
@@ -27,24 +27,30 @@ import {
  *
  */
 export class InitializationRec {
+    /**
+     * @summary `version`.
+     * @description
+     *
+     * Client may set multiple bits; server shall pick exactly one among
+     * those suggested (highest should be chosen). Current version is v1.
+     * @public
+     * @readonly
+     */
+    public readonly version: Version;
+    /**
+     * @summary Extensions that are not recognized.
+     * @public
+     * @readonly
+     */
+    public readonly _unrecognizedExtensionsList: _Element[];
+
     constructor(
-        /**
-         * @summary `version`.
-         * @description
-         *
-         * Client may set multiple bits; server shall pick exactly one among
-         * those suggested (highest should be chosen). Current version is v1.
-         * @public
-         * @readonly
-         */
-        readonly version: Version,
-        /**
-         * @summary Extensions that are not recognized.
-         * @public
-         * @readonly
-         */
-        readonly _unrecognizedExtensionsList: _Element[] = []
-    ) {}
+        version: Version,
+        _unrecognizedExtensionsList: _Element[] = []
+    ) {
+        this.version = version;
+        this._unrecognizedExtensionsList = _unrecognizedExtensionsList;
+    }
 
     /**
      * @summary Restructures an object into a InitializationRec

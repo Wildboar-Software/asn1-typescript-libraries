@@ -1,18 +1,18 @@
 /* eslint-disable */
 import {
-    INTEGER,
-    NULL,
-    OPTIONAL,
-    ASN1Element as _Element,
+    type INTEGER,
+    type NULL,
+    type OPTIONAL,
+    type ASN1Element as _Element,
     ASN1TagClass as _TagClass,
     ASN1OverflowError
 } from "@wildboar/asn1";
 import * as $ from "@wildboar/asn1/functional";
-import { ServiceChangeMethod, _decode_ServiceChangeMethod, _encode_ServiceChangeMethod, _enum_for_ServiceChangeMethod } from "../MEDIA-GATEWAY-CONTROL/ServiceChangeMethod.ta.mjs";
-import { ServiceChangeAddress, _decode_ServiceChangeAddress, _encode_ServiceChangeAddress } from "../MEDIA-GATEWAY-CONTROL/ServiceChangeAddress.ta.mjs";
+import { type ServiceChangeMethod, _decode_ServiceChangeMethod, _encode_ServiceChangeMethod, _enum_for_ServiceChangeMethod } from "../MEDIA-GATEWAY-CONTROL/ServiceChangeMethod.ta.mjs";
+import { type ServiceChangeAddress, _decode_ServiceChangeAddress, _encode_ServiceChangeAddress } from "../MEDIA-GATEWAY-CONTROL/ServiceChangeAddress.ta.mjs";
 import { ServiceChangeProfile, _decode_ServiceChangeProfile, _encode_ServiceChangeProfile } from "../MEDIA-GATEWAY-CONTROL/ServiceChangeProfile.ta.mjs";
-import { SCreasonValue, _decode_SCreasonValue, _encode_SCreasonValue } from "../MEDIA-GATEWAY-CONTROL/SCreasonValue.ta.mjs";
-import { MId, _decode_MId, _encode_MId } from "../MEDIA-GATEWAY-CONTROL/MId.ta.mjs";
+import { type SCreasonValue, _decode_SCreasonValue, _encode_SCreasonValue } from "../MEDIA-GATEWAY-CONTROL/SCreasonValue.ta.mjs";
+import { type MId, _decode_MId, _encode_MId } from "../MEDIA-GATEWAY-CONTROL/MId.ta.mjs";
 import { TimeNotation, _decode_TimeNotation, _encode_TimeNotation } from "../MEDIA-GATEWAY-CONTROL/TimeNotation.ta.mjs";
 import { NonStandardData, _decode_NonStandardData, _encode_NonStandardData } from "../MEDIA-GATEWAY-CONTROL/NonStandardData.ta.mjs";
 import { AuditDescriptor, _decode_AuditDescriptor, _encode_AuditDescriptor } from "../MEDIA-GATEWAY-CONTROL/AuditDescriptor.ta.mjs";
@@ -79,7 +79,7 @@ class ServiceChangeParm {
      * @public
      * @readonly
      */
-    readonly serviceChangeMethod: ServiceChangeMethod;
+    public readonly serviceChangeMethod: ServiceChangeMethod;
     /**
      * @summary `serviceChangeAddress`.
      * @description
@@ -93,7 +93,7 @@ class ServiceChangeParm {
      * @public
      * @readonly
      */
-    readonly serviceChangeAddress: OPTIONAL<ServiceChangeAddress>;
+    public readonly serviceChangeAddress: OPTIONAL<ServiceChangeAddress>;
     /**
      * @summary `serviceChangeVersion`.
      * @description
@@ -105,7 +105,7 @@ class ServiceChangeParm {
      * @public
      * @readonly
      */
-    readonly serviceChangeVersion: OPTIONAL<INTEGER>;
+    public readonly serviceChangeVersion: OPTIONAL<INTEGER>;
     /**
      * @summary `serviceChangeProfile`.
      * @description
@@ -119,7 +119,7 @@ class ServiceChangeParm {
      * @public
      * @readonly
      */
-    readonly serviceChangeProfile: OPTIONAL<ServiceChangeProfile>;
+    public readonly serviceChangeProfile: OPTIONAL<ServiceChangeProfile>;
     /**
      * @summary `serviceChangeReason`.
      * @description
@@ -132,7 +132,7 @@ class ServiceChangeParm {
      * @public
      * @readonly
      */
-    readonly serviceChangeReason: SCreasonValue;
+    public readonly serviceChangeReason: SCreasonValue;
     /**
      * @summary `serviceChangeDelay`.
      * @description
@@ -147,7 +147,7 @@ class ServiceChangeParm {
      * @public
      * @readonly
      */
-    readonly serviceChangeDelay?: OPTIONAL<INTEGER>;
+    public readonly serviceChangeDelay?: OPTIONAL<INTEGER>;
     /**
      * @summary `serviceChangeMgcId`.
      * @description
@@ -159,7 +159,7 @@ class ServiceChangeParm {
      * @public
      * @readonly
      */
-    readonly serviceChangeMgcId?: OPTIONAL<MId>;
+    public readonly serviceChangeMgcId?: OPTIONAL<MId>;
     /**
      * @summary `timeStamp`.
      * @description
@@ -173,7 +173,7 @@ class ServiceChangeParm {
      * @public
      * @readonly
      */
-    readonly timeStamp?: OPTIONAL<TimeNotation>;
+    public readonly timeStamp?: OPTIONAL<TimeNotation>;
     /**
      * @summary `nonStandardData`.
      * @description
@@ -187,7 +187,7 @@ class ServiceChangeParm {
      * @public
      * @readonly
      */
-    readonly nonStandardData?: OPTIONAL<NonStandardData>;
+    public readonly nonStandardData?: OPTIONAL<NonStandardData>;
     /**
      * @summary `serviceChangeInfo`.
      * @description
@@ -198,7 +198,7 @@ class ServiceChangeParm {
      * @public
      * @readonly
      */
-    readonly serviceChangeInfo?: OPTIONAL<AuditDescriptor>;
+    public readonly serviceChangeInfo?: OPTIONAL<AuditDescriptor>;
     /**
      * @summary `serviceChangeIncompleteFlag`.
      * @description
@@ -211,7 +211,7 @@ class ServiceChangeParm {
      * @public
      * @readonly
      */
-    readonly serviceChangeIncompleteFlag?: OPTIONAL<NULL>;
+    public readonly serviceChangeIncompleteFlag?: OPTIONAL<NULL>;
     /**
      * @summary Extensions that are not recognized.
      * @description
@@ -222,7 +222,7 @@ class ServiceChangeParm {
      * @public
      * @readonly
      */
-    readonly _unrecognizedExtensionsList: _Element[];
+    public readonly _unrecognizedExtensionsList: _Element[];
 
     constructor (
         serviceChangeMethod: ServiceChangeMethod,
@@ -286,7 +286,7 @@ class ServiceChangeParm {
          * @static
          */
 
-    public static _enum_for_serviceChangeMethod = _enum_for_ServiceChangeMethod;
+    public static _enum_for_serviceChangeMethod: typeof _enum_for_ServiceChangeMethod = _enum_for_ServiceChangeMethod;
 }
 
 /**

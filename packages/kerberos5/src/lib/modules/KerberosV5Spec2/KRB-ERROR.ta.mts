@@ -1,8 +1,8 @@
 /* eslint-disable */
 import {
-  OPTIONAL,
-  INTEGER,
-  OCTET_STRING,
+  type OPTIONAL,
+  type INTEGER,
+  type OCTET_STRING,
   ASN1Element as _Element,
   ASN1TagClass as _TagClass,
   ASN1Construction as _Construction,
@@ -14,22 +14,22 @@ import {
 } from '@wildboar/asn1';
 import * as $ from '@wildboar/asn1/functional';
 import {
-  KerberosTime,
+  type KerberosTime,
   _decode_KerberosTime,
   _encode_KerberosTime,
 } from '../KerberosV5Spec2/KerberosTime.ta.mjs';
 import {
-  Microseconds,
+  type Microseconds,
   _decode_Microseconds,
   _encode_Microseconds,
 } from '../KerberosV5Spec2/Microseconds.ta.mjs';
 import {
-  Int32,
+  type Int32,
   _decode_Int32,
   _encode_Int32,
 } from '../KerberosV5Spec2/Int32.ta.mjs';
 import {
-  Realm,
+  type Realm,
   _decode_Realm,
   _encode_Realm,
 } from '../KerberosV5Spec2/Realm.ta.mjs';
@@ -39,7 +39,7 @@ import {
   _encode_PrincipalName,
 } from '../KerberosV5Spec2/PrincipalName.ta.mjs';
 import {
-  KerberosString,
+  type KerberosString,
   _decode_KerberosString,
   _encode_KerberosString,
 } from '../KerberosV5Spec2/KerberosString.ta.mjs';
@@ -91,7 +91,7 @@ export class KRB_ERROR {
    * @public
    * @readonly
    */
-  readonly pvno: INTEGER;
+  public readonly pvno: INTEGER;
   /**
    * @summary `msg_type`.
    * @description
@@ -101,7 +101,7 @@ export class KRB_ERROR {
    * @public
    * @readonly
    */
-  readonly msg_type: INTEGER;
+  public readonly msg_type: INTEGER;
   /**
    * @summary `ctime`.
    * @description
@@ -112,7 +112,7 @@ export class KRB_ERROR {
    * @public
    * @readonly
    */
-  readonly ctime: OPTIONAL<KerberosTime>;
+  public readonly ctime: OPTIONAL<KerberosTime>;
   /**
    * @summary `cusec`.
    * @description
@@ -122,7 +122,7 @@ export class KRB_ERROR {
    * @public
    * @readonly
    */
-  readonly cusec: OPTIONAL<Microseconds>;
+  public readonly cusec: OPTIONAL<Microseconds>;
   /**
    * @summary `stime`.
    * @description
@@ -132,7 +132,7 @@ export class KRB_ERROR {
    * @public
    * @readonly
    */
-  readonly stime: KerberosTime;
+  public readonly stime: KerberosTime;
   /**
    * @summary `susec`.
    * @description
@@ -143,7 +143,7 @@ export class KRB_ERROR {
    * @public
    * @readonly
    */
-  readonly susec: Microseconds;
+  public readonly susec: Microseconds;
   /**
    * @summary `error_code`.
    * @description
@@ -153,7 +153,7 @@ export class KRB_ERROR {
    * @public
    * @readonly
    */
-  readonly error_code: Int32;
+  public readonly error_code: Int32;
   /**
    * @summary `crealm`.
    * @description
@@ -163,7 +163,7 @@ export class KRB_ERROR {
    * @public
    * @readonly
    */
-  readonly crealm: OPTIONAL<Realm>;
+  public readonly crealm: OPTIONAL<Realm>;
   /**
    * @summary `cname`.
    * @description
@@ -173,7 +173,7 @@ export class KRB_ERROR {
    * @public
    * @readonly
    */
-  readonly cname: OPTIONAL<PrincipalName>;
+  public readonly cname: OPTIONAL<PrincipalName>;
   /**
    * @summary `realm`.
    * @description
@@ -183,7 +183,7 @@ export class KRB_ERROR {
    * @public
    * @readonly
    */
-  readonly realm: Realm;
+  public readonly realm: Realm;
   /**
    * @summary `sname`.
    * @description
@@ -193,7 +193,7 @@ export class KRB_ERROR {
    * @public
    * @readonly
    */
-  readonly sname: PrincipalName;
+  public readonly sname: PrincipalName;
   /**
    * @summary `e_text`.
    * @description
@@ -203,7 +203,7 @@ export class KRB_ERROR {
    * @public
    * @readonly
    */
-  readonly e_text?: OPTIONAL<KerberosString>;
+  public readonly e_text?: OPTIONAL<KerberosString>;
   /**
    * @summary `e_data`.
    * @description
@@ -215,7 +215,7 @@ export class KRB_ERROR {
    * @public
    * @readonly
    */
-  readonly e_data?: OPTIONAL<OCTET_STRING>;
+  public readonly e_data?: OPTIONAL<OCTET_STRING>;
 
   constructor(
     pvno: INTEGER,

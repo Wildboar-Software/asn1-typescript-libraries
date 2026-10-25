@@ -1,9 +1,9 @@
 /* eslint-disable */
 import {
-    OBJECT_IDENTIFIER,
-    UniversalString,
-    RELATIVE_OID_IRI,
-    ASN1Element as _Element,
+    type OBJECT_IDENTIFIER,
+    type UniversalString,
+    type RELATIVE_OID_IRI,
+    type ASN1Element as _Element,
     ASN1TagClass as _TagClass,
     ASN1Construction as _Construction,
     ASN1UniversalType as _UniversalType,
@@ -14,7 +14,7 @@ import {
 } from '@wildboar/asn1';
 import * as $ from '@wildboar/asn1/functional';
 import {
-    StringAttributes,
+    type StringAttributes,
     _decode_StringAttributes,
     _encode_StringAttributes,
 } from '../E-health-quantities-and-units/StringAttributes.ta.mjs';

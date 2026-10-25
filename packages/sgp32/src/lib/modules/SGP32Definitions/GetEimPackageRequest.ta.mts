@@ -1,9 +1,9 @@
 /* eslint-disable */
 import {
-    NULL,
-    OCTET_STRING,
-    OPTIONAL,
-    ASN1Element as _Element,
+    type NULL,
+    type OCTET_STRING,
+    type OPTIONAL,
+    type ASN1Element as _Element,
     ASN1TagClass as _TagClass
 } from "@wildboar/asn1";
 import { ASN1SizeError } from "@wildboar/asn1";
@@ -39,55 +39,64 @@ import { type StateChangeCause, _decode_StateChangeCause, _encode_StateChangeCau
  */
 export
 class GetEimPackageRequest {
+    /**
+     * @summary `eidValue`.
+     * @description
+     * EID of the eUICC whose package is requested. Mandatory. Invalid format maps
+     * to `invalidEid` (status 8.1.1 / 2.1). Unknown to the eIM maps to
+     * `eidNotFound` (8.1.1 / 3.9). The format is defined in SGP.02 section 2.2.2.
+     * SGP.32 v1.2, section 5.14.5.
+     * @public
+     * @readonly
+     */
+    public readonly eidValue: Octet16;
+    /**
+     * @summary `notifyStateChange`.
+     * @description
+     * Present when one or more eUICC changes occurred, for example the Profile
+     * list or Profile states. The eIM SHOULD update the information it holds for
+     * this eUICC. SGP.32 v1.2, section 5.14.5.
+     * @public
+     * @readonly
+     */
+    public readonly notifyStateChange?: OPTIONAL<NULL>;
+    /**
+     * @summary `stateChangeCause`.
+     * @description
+     * Cause of the notified change. Required when `notifyStateChange` is present.
+     * Section 6.3.2.6 defines `otherEim(0)` for a change requested by another
+     * registered eIM, `fallback(1)` after IPA-requested fallback,
+     * `emergencyProfile(2)` after an IPA-requested Emergency Profile swap,
+     * `local(3)` for a local change (RFU, not supported in this version),
+     * `reset(4)` after an eUICC reset, `immediateEnableProfile(5)` after
+     * IPA-requested immediate enabling, `deviceChange(6)` detected by IPAe after
+     * an IoT Device change for a removable eSIM, and `undefined(127)` for an
+     * unknown cause. SGP.32 v1.2, sections 5.14.5 and 6.3.2.6.
+     * @public
+     * @readonly
+     */
+    public readonly stateChangeCause?: OPTIONAL<StateChangeCause>;
+    /**
+     * @summary `rPLMN`.
+     * @description
+     * Optional MCC and MNC of the last registered PLMN, three octets coded as
+     * defined in 3GPP TS 24.008. The eIM uses it to detect roaming. SGP.32 v1.2,
+     * sections 5.14.5 and 6.3.2.6.
+     * @public
+     * @readonly
+     */
+    public readonly rPLMN?: OPTIONAL<OCTET_STRING>;
+
     constructor (
-        /**
-         * @summary `eidValue`.
-         * @description
-         * EID of the eUICC whose package is requested. Mandatory. Invalid format maps
-         * to `invalidEid` (status 8.1.1 / 2.1). Unknown to the eIM maps to
-         * `eidNotFound` (8.1.1 / 3.9). The format is defined in SGP.02 section 2.2.2.
-         * SGP.32 v1.2, section 5.14.5.
-         * @public
-         * @readonly
-         */
-        readonly eidValue: Octet16,
-        /**
-         * @summary `notifyStateChange`.
-         * @description
-         * Present when one or more eUICC changes occurred, for example the Profile
-         * list or Profile states. The eIM SHOULD update the information it holds for
-         * this eUICC. SGP.32 v1.2, section 5.14.5.
-         * @public
-         * @readonly
-         */
-        readonly notifyStateChange?: OPTIONAL<NULL>,
-        /**
-         * @summary `stateChangeCause`.
-         * @description
-         * Cause of the notified change. Required when `notifyStateChange` is present.
-         * Section 6.3.2.6 defines `otherEim(0)` for a change requested by another
-         * registered eIM, `fallback(1)` after IPA-requested fallback,
-         * `emergencyProfile(2)` after an IPA-requested Emergency Profile swap,
-         * `local(3)` for a local change (RFU, not supported in this version),
-         * `reset(4)` after an eUICC reset, `immediateEnableProfile(5)` after
-         * IPA-requested immediate enabling, `deviceChange(6)` detected by IPAe after
-         * an IoT Device change for a removable eSIM, and `undefined(127)` for an
-         * unknown cause. SGP.32 v1.2, sections 5.14.5 and 6.3.2.6.
-         * @public
-         * @readonly
-         */
-        readonly stateChangeCause?: OPTIONAL<StateChangeCause>,
-        /**
-         * @summary `rPLMN`.
-         * @description
-         * Optional MCC and MNC of the last registered PLMN, three octets coded as
-         * defined in 3GPP TS 24.008. The eIM uses it to detect roaming. SGP.32 v1.2,
-         * sections 5.14.5 and 6.3.2.6.
-         * @public
-         * @readonly
-         */
-        readonly rPLMN?: OPTIONAL<OCTET_STRING>
+        eidValue: Octet16,
+        notifyStateChange?: OPTIONAL<NULL>,
+        stateChangeCause?: OPTIONAL<StateChangeCause>,
+        rPLMN?: OPTIONAL<OCTET_STRING>
     ) {
+        this.eidValue = eidValue;
+        this.notifyStateChange = notifyStateChange;
+        this.stateChangeCause = stateChangeCause;
+        this.rPLMN = rPLMN;
         if (this.rPLMN !== undefined && this.rPLMN.length !== 3) {
             throw new ASN1SizeError("GetEimPackageRequest.rPLMN violates SIZE constraint");
         }

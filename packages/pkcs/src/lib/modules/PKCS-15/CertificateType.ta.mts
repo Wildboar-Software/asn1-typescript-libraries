@@ -2,7 +2,7 @@
 import { ASN1Element as _Element, ASN1TagClass as _TagClass } from "@wildboar/asn1";
 import * as $ from "@wildboar/asn1/functional";
 import {
-    CertificateObject,
+    type CertificateObject,
     _get_decoder_for_CertificateObject,
     _get_encoder_for_CertificateObject,
 } from "../PKCS-15/CertificateObject.ta.mjs";

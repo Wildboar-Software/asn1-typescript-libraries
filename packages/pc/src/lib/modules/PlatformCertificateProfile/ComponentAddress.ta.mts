@@ -1,7 +1,7 @@
 /* eslint-disable */
 import {
-    UTF8String,
-    ASN1Element as _Element,
+    type UTF8String,
+    type ASN1Element as _Element,
     ASN1TagClass as _TagClass,
     ASN1Construction as _Construction,
     ASN1UniversalType as _UniversalType,
@@ -11,7 +11,7 @@ import {
     ASN1ConstructionError as _ConstructionError,
 } from "@wildboar/asn1";
 import * as $ from "@wildboar/asn1/functional";
-import { AddressType, _decode_AddressType, _encode_AddressType } from "../PlatformCertificateProfile/AddressType.ta.mjs";
+import { type AddressType, _decode_AddressType, _encode_AddressType } from "../PlatformCertificateProfile/AddressType.ta.mjs";
 /**
  * @summary ComponentAddress
  * @description
@@ -31,30 +31,36 @@ import { AddressType, _decode_AddressType, _encode_AddressType } from "../Platfo
  */
 export
 class ComponentAddress {
+    /**
+     * @summary `addressType`.
+     * @description
+     *
+     * Address kind: `tcg-address-ethernetmac`,
+     * `tcg-address-wlanmac`, or `tcg-address-bluetoothmac`.
+     * §3.1.6, §4.
+     *
+     * @public
+     * @readonly
+     */
+    public readonly addressType: AddressType;
+    /**
+     * @summary `addressValue`.
+     * @description
+     *
+     * Address encoded as UTF-8. Bounded by `strmax`. §3.1.6.
+     *
+     * @public
+     * @readonly
+     */
+    public readonly addressValue: UTF8String;
+
     constructor (
-        /**
-         * @summary `addressType`.
-         * @description
-         *
-         * Address kind: `tcg-address-ethernetmac`,
-         * `tcg-address-wlanmac`, or `tcg-address-bluetoothmac`.
-         * §3.1.6, §4.
-         *
-         * @public
-         * @readonly
-         */
-        readonly addressType: AddressType,
-        /**
-         * @summary `addressValue`.
-         * @description
-         *
-         * Address encoded as UTF-8. Bounded by `strmax`. §3.1.6.
-         *
-         * @public
-         * @readonly
-         */
-        readonly addressValue: UTF8String
-    ) {}
+        addressType: AddressType,
+        addressValue: UTF8String
+    ) {
+        this.addressType = addressType;
+        this.addressValue = addressValue;
+    }
 
     /**
      * @summary Restructures an object into a ComponentAddress

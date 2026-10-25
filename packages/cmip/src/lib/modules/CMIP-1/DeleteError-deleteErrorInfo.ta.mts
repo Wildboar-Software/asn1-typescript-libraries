@@ -1,6 +1,6 @@
 /* eslint-disable */
 import {
-  ENUMERATED,
+  type ENUMERATED,
   ASN1Element as _Element,
   ASN1TagClass as _TagClass,
   ASN1Construction as _Construction,
@@ -47,7 +47,7 @@ export type DeleteError_deleteErrorInfo =
  * @constant
  * @type {number}
  */
-export const DeleteError_deleteErrorInfo_accessDenied: DeleteError_deleteErrorInfo = 2; /* LONG_NAMED_ENUMERATED_VALUE */
+export const DeleteError_deleteErrorInfo_accessDenied: 2 = _enum_for_DeleteError_deleteErrorInfo.accessDenied; /* LONG_NAMED_ENUMERATED_VALUE */
 
 
 /**
@@ -55,17 +55,17 @@ export const DeleteError_deleteErrorInfo_accessDenied: DeleteError_deleteErrorIn
  * @constant
  * @type {number}
  */
-export const accessDenied: DeleteError_deleteErrorInfo = DeleteError_deleteErrorInfo_accessDenied; /* SHORT_NAMED_ENUMERATED_VALUE */
+export const accessDenied: 2 = DeleteError_deleteErrorInfo_accessDenied; /* SHORT_NAMED_ENUMERATED_VALUE */
 
 
 
 
-export const _decode_DeleteError_deleteErrorInfo = $._decodeEnumerated as $.ASN1Decoder<DeleteError_deleteErrorInfo>;
+export const _decode_DeleteError_deleteErrorInfo: $.ASN1Decoder<DeleteError_deleteErrorInfo> = $._decodeEnumerated as $.ASN1Decoder<DeleteError_deleteErrorInfo>;
 
 
 
 
-export const _encode_DeleteError_deleteErrorInfo = $._encodeEnumerated as $.ASN1Encoder<DeleteError_deleteErrorInfo>;
+export const _encode_DeleteError_deleteErrorInfo: $.ASN1Encoder<DeleteError_deleteErrorInfo> = $._encodeEnumerated as $.ASN1Encoder<DeleteError_deleteErrorInfo>;
 
 
 /* eslint-enable */

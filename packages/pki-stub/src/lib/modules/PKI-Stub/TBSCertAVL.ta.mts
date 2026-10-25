@@ -1,8 +1,8 @@
 /* eslint-disable */
 import {
-    OPTIONAL,
-    BOOLEAN,
-    ASN1Element as _Element,
+    type OPTIONAL,
+    type BOOLEAN,
+    type ASN1Element as _Element,
     ASN1TagClass as _TagClass,
     ASN1Construction as _Construction,
     ASN1UniversalType as _UniversalType,
@@ -13,13 +13,13 @@ import {
 } from "@wildboar/asn1";
 import * as $ from "@wildboar/asn1/functional";
 import {
-    Version,
+    type Version,
     v1 /* IMPORTED_SHORT_NAMED_INTEGER */,
     _decode_Version,
     _encode_Version,
 } from "../PKI-Stub/Version.ta.mjs";
 import {
-    AvlSerialNumber,
+    type AvlSerialNumber,
     _decode_AvlSerialNumber,
     _encode_AvlSerialNumber,
 } from "../PKI-Stub/AvlSerialNumber.ta.mjs";
@@ -28,14 +28,14 @@ import {
     _decode_AlgorithmIdentifier,
     _encode_AlgorithmIdentifier,
 } from "../PKI-Stub/AlgorithmIdentifier.ta.mjs";
-import { Name, _decode_Name, _encode_Name } from "../PKI-Stub/Name.ta.mjs";
+import { type Name, _decode_Name, _encode_Name } from "../PKI-Stub/Name.ta.mjs";
 import {
     TBSCertAVL_entries_Item,
     _decode_TBSCertAVL_entries_Item,
     _encode_TBSCertAVL_entries_Item,
 } from "../PKI-Stub/TBSCertAVL-entries-Item.ta.mjs";
 import {
-    Extensions,
+    type Extensions,
     _decode_Extensions,
     _encode_Extensions,
 } from "../PKI-Stub/Extensions.ta.mjs";

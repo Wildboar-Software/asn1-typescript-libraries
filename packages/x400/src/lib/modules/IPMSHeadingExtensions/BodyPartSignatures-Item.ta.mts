@@ -1,7 +1,7 @@
 /* eslint-disable */
 import {
-    OPTIONAL,
-    ASN1Element as _Element,
+    type OPTIONAL,
+    type ASN1Element as _Element,
     ASN1TagClass as _TagClass,
     ASN1Construction as _Construction,
     ASN1UniversalType as _UniversalType,
@@ -12,12 +12,12 @@ import {
 } from '@wildboar/asn1';
 import * as $ from '@wildboar/asn1/functional';
 import {
-    BodyPartNumber,
+    type BodyPartNumber,
     _decode_BodyPartNumber,
     _encode_BodyPartNumber,
 } from '../IPMSHeadingExtensions/BodyPartNumber.ta.mjs';
 import {
-    BodyPartSignature,
+    type BodyPartSignature,
     _decode_BodyPartSignature,
     _encode_BodyPartSignature,
 } from '../IPMSHeadingExtensions/BodyPartSignature.ta.mjs';
@@ -27,7 +27,7 @@ import {
     _encode_CertificateAssertion,
 } from '@wildboar/x500/CertificateExtensions';
 import {
-    ExtendedCertificates,
+    type ExtendedCertificates,
     _decode_ExtendedCertificates,
     _encode_ExtendedCertificates,
 } from '../MTSAbstractService/ExtendedCertificates.ta.mjs';
@@ -45,38 +45,50 @@ import {
  *
  */
 export class BodyPartSignatures_Item {
+    /**
+     * @summary `body_part_number`.
+     * @public
+     * @readonly
+     */
+    public readonly body_part_number: BodyPartNumber;
+    /**
+     * @summary `body_part_signature`.
+     * @public
+     * @readonly
+     */
+    public readonly body_part_signature: BodyPartSignature;
+    /**
+     * @summary `originator_certificate_selector`.
+     * @public
+     * @readonly
+     */
+    public readonly originator_certificate_selector?: OPTIONAL<CertificateAssertion>;
+    /**
+     * @summary `originator_certificates`.
+     * @public
+     * @readonly
+     */
+    public readonly originator_certificates?: OPTIONAL<ExtendedCertificates>;
+    /**
+     * @summary Extensions that are not recognized.
+     * @public
+     * @readonly
+     */
+    public readonly _unrecognizedExtensionsList: _Element[];
+
     constructor(
-        /**
-         * @summary `body_part_number`.
-         * @public
-         * @readonly
-         */
-        readonly body_part_number: BodyPartNumber,
-        /**
-         * @summary `body_part_signature`.
-         * @public
-         * @readonly
-         */
-        readonly body_part_signature: BodyPartSignature,
-        /**
-         * @summary `originator_certificate_selector`.
-         * @public
-         * @readonly
-         */
-        readonly originator_certificate_selector?: OPTIONAL<CertificateAssertion>,
-        /**
-         * @summary `originator_certificates`.
-         * @public
-         * @readonly
-         */
-        readonly originator_certificates?: OPTIONAL<ExtendedCertificates>,
-        /**
-         * @summary Extensions that are not recognized.
-         * @public
-         * @readonly
-         */
-        readonly _unrecognizedExtensionsList: _Element[] = []
-    ) {}
+        body_part_number: BodyPartNumber,
+        body_part_signature: BodyPartSignature,
+        originator_certificate_selector?: OPTIONAL<CertificateAssertion>,
+        originator_certificates?: OPTIONAL<ExtendedCertificates>,
+        _unrecognizedExtensionsList: _Element[] = []
+    ) {
+        this.body_part_number = body_part_number;
+        this.body_part_signature = body_part_signature;
+        this.originator_certificate_selector = originator_certificate_selector;
+        this.originator_certificates = originator_certificates;
+        this._unrecognizedExtensionsList = _unrecognizedExtensionsList;
+    }
 
     /**
      * @summary Restructures an object into a BodyPartSignatures_Item

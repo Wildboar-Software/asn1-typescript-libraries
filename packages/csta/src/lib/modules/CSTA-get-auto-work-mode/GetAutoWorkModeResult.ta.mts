@@ -2,12 +2,12 @@
 
 import * as $ from "@wildboar/asn1/functional";
 import {
-    OPTIONAL,
-    BOOLEAN,
-    INTEGER,
-    SEQUENCE,
-    SET,
-    ASN1Element as _Element,
+    type OPTIONAL,
+    type BOOLEAN,
+    type INTEGER,
+    type SEQUENCE,
+    type SET,
+    type ASN1Element as _Element,
     ASN1TagClass as _TagClass
 } from "@wildboar/asn1";
 import { CSTACommonArguments, _decode_CSTACommonArguments, _encode_CSTACommonArguments } from "../CSTA-extension-types/CSTACommonArguments.ta.mjs";
@@ -28,7 +28,7 @@ import { CSTACommonArguments, _decode_CSTACommonArguments, _encode_CSTACommonArg
  * ```asn1
  * GetAutoWorkModeResult ::= SEQUENCE
  * {    autoWorkOn            BOOLEAN,
- *     autoWorkInterval        INTEGER                    OPTIONAL,
+ *     autoWorkInterval        INTEGER                    type OPTIONAL,
  *     extensions            CSTACommonArguments             OPTIONAL }
  * ```
  * 
@@ -36,37 +36,45 @@ import { CSTACommonArguments, _decode_CSTACommonArguments, _encode_CSTACommonArg
  */
 export
 class GetAutoWorkModeResult {
+    /**
+     * @summary `autoWorkOn`.
+     * @description
+     *
+     * FALSE = off; TRUE = on.
+     * @public
+     * @readonly
+     */
+    public readonly autoWorkOn: BOOLEAN;
+    /**
+     * @summary `autoWorkInterval`.
+     * @description
+     *
+     * Seconds in WorkingAfterCall. 0: do not auto-exit; change state
+     * manually or via Set Agent State.
+     * @public
+     * @readonly
+     */
+    public readonly autoWorkInterval?: OPTIONAL<INTEGER>;
+    /**
+     * @summary `extensions`.
+     * @description
+     *
+     * Optional security (timestamp, sequence, securityInfo) and
+     * privateData.
+     * @public
+     * @readonly
+     */
+    public readonly extensions?: OPTIONAL<CSTACommonArguments>;
+
     constructor (
-        /**
-         * @summary `autoWorkOn`.
-         * @description
-         *
-         * FALSE = off; TRUE = on.
-         * @public
-         * @readonly
-         */
-        readonly autoWorkOn: BOOLEAN,
-        /**
-         * @summary `autoWorkInterval`.
-         * @description
-         *
-         * Seconds in WorkingAfterCall. 0: do not auto-exit; change state
-         * manually or via Set Agent State.
-         * @public
-         * @readonly
-         */
-        readonly autoWorkInterval?: OPTIONAL<INTEGER>,
-        /**
-         * @summary `extensions`.
-         * @description
-         *
-         * Optional security (timestamp, sequence, securityInfo) and
-         * privateData.
-         * @public
-         * @readonly
-         */
-        readonly extensions?: OPTIONAL<CSTACommonArguments>
-    ) {}
+        autoWorkOn: BOOLEAN,
+        autoWorkInterval?: OPTIONAL<INTEGER>,
+        extensions?: OPTIONAL<CSTACommonArguments>
+    ) {
+        this.autoWorkOn = autoWorkOn;
+        this.autoWorkInterval = autoWorkInterval;
+        this.extensions = extensions;
+    }
 
     /**
      * @summary Restructures an object into a GetAutoWorkModeResult

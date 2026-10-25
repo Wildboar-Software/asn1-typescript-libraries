@@ -11,7 +11,7 @@ import {
 } from '@wildboar/asn1';
 import * as $ from '@wildboar/asn1/functional';
 import {
-  BioAPI_HANDLE,
+  type BioAPI_HANDLE,
   _decode_BioAPI_HANDLE,
   _encode_BioAPI_HANDLE,
 } from '../BIP/BioAPI-HANDLE.ta.mjs';
@@ -52,7 +52,7 @@ export class PresetIdentifyPopulation_RequestParams {
    * @public
    * @readonly
    */
-  readonly originalBSPHandle: BioAPI_HANDLE;
+  public readonly originalBSPHandle: BioAPI_HANDLE;
   /**
    * @summary `population`.
    * @description
@@ -64,7 +64,7 @@ export class PresetIdentifyPopulation_RequestParams {
    * @public
    * @readonly
    */
-  readonly population: BioAPI_IDENTIFY_POPULATION;
+  public readonly population: BioAPI_IDENTIFY_POPULATION;
 
   constructor(
     originalBSPHandle: BioAPI_HANDLE,

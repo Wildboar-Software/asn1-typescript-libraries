@@ -1,7 +1,7 @@
 /* eslint-disable */
 import {
-    BIT_STRING,
-    ASN1Element as _Element,
+    type BIT_STRING,
+    type ASN1Element as _Element,
     ASN1TagClass as _TagClass,
     ASN1Construction as _Construction,
     ASN1UniversalType as _UniversalType,
@@ -27,10 +27,10 @@ import * as $ from '@wildboar/asn1/functional';
 export type RandomNumber = BIT_STRING;
 
 
-export const _decode_RandomNumber = $._decodeBitString;
+export const _decode_RandomNumber: $.ASN1Decoder<BIT_STRING> = $._decodeBitString;
 
 
-export const _encode_RandomNumber = $._encodeBitString;
+export const _encode_RandomNumber: $.ASN1Encoder<BIT_STRING> = $._encodeBitString;
 
 
 /* eslint-enable */

@@ -1,7 +1,7 @@
 /* eslint-disable */
 import {
-    INTEGER,
-    ASN1Element as _Element,
+    type INTEGER,
+    type ASN1Element as _Element,
     ASN1TagClass as _TagClass,
     ASN1Construction as _Construction,
     ASN1UniversalType as _UniversalType,
@@ -12,7 +12,7 @@ import {
 } from '@wildboar/asn1';
 import * as $ from '@wildboar/asn1/functional';
 import {
-    AttributeType,
+    type AttributeType,
     _decode_AttributeType,
     _encode_AttributeType,
 } from "./AttributeType.ta.mjs";
@@ -31,26 +31,34 @@ import {
  *
  */
 export class Summary_present_Item {
+    /**
+     * @summary `type_`.
+     * @public
+     * @readonly
+     */
+    public readonly type_: AttributeType;
+    /**
+     * @summary `value`.
+     * @public
+     * @readonly
+     */
+    public readonly value: _Element;
+    /**
+     * @summary `count`.
+     * @public
+     * @readonly
+     */
+    public readonly count: INTEGER;
+
     constructor(
-        /**
-         * @summary `type_`.
-         * @public
-         * @readonly
-         */
-        readonly type_: AttributeType,
-        /**
-         * @summary `value`.
-         * @public
-         * @readonly
-         */
-        readonly value: _Element,
-        /**
-         * @summary `count`.
-         * @public
-         * @readonly
-         */
-        readonly count: INTEGER
-    ) {}
+        type_: AttributeType,
+        value: _Element,
+        count: INTEGER
+    ) {
+        this.type_ = type_;
+        this.value = value;
+        this.count = count;
+    }
 
     /**
      * @summary Restructures an object into a Summary_present_Item

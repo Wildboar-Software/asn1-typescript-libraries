@@ -1,9 +1,9 @@
 /* eslint-disable */
 import {
     ASN1ConstructionError as _ConstructionError,
-    ASN1Element as _Element,
+    type ASN1Element as _Element,
     ASN1TagClass as _TagClass,
-    INTEGER,
+    type INTEGER,
 } from "@wildboar/asn1";
 import * as $ from "@wildboar/asn1/functional";
 
@@ -38,7 +38,7 @@ export class ECDSA_Sig_Value {
      * @public
      * @readonly
      */
-    readonly r: INTEGER;
+    public readonly r: INTEGER;
     /**
      * @summary `s`.
      * @description
@@ -49,7 +49,7 @@ export class ECDSA_Sig_Value {
      * @public
      * @readonly
      */
-    readonly s: INTEGER;
+    public readonly s: INTEGER;
 
     constructor(
         r: INTEGER,

@@ -1,6 +1,6 @@
 /* eslint-disable */
 import {
-  INTEGER,
+  type INTEGER,
   ASN1Element as _Element,
   ASN1TagClass as _TagClass,
   ASN1Construction as _Construction,
@@ -29,20 +29,20 @@ export type CBEFFVersion_cbeff_major = INTEGER;
  * @constant
  * @type {number}
  */
-export const CBEFFVersion_cbeff_major_version2: CBEFFVersion_cbeff_major = 2; /* LONG_NAMED_INTEGER_VALUE */
+export const CBEFFVersion_cbeff_major_version2: 2 = 2 satisfies CBEFFVersion_cbeff_major; /* LONG_NAMED_INTEGER_VALUE */
 
 /**
  * @summary CBEFFVersion_cbeff_major_version2
  * @constant
  * @type {number}
  */
-export const version2: CBEFFVersion_cbeff_major = CBEFFVersion_cbeff_major_version2; /* SHORT_NAMED_INTEGER_VALUE */
+export const version2: 2 = CBEFFVersion_cbeff_major_version2; /* SHORT_NAMED_INTEGER_VALUE */
 
 
-export const _decode_CBEFFVersion_cbeff_major = $._decodeInteger;
+export const _decode_CBEFFVersion_cbeff_major: $.ASN1Decoder<INTEGER> = $._decodeInteger;
 
 
-export const _encode_CBEFFVersion_cbeff_major = $._encodeInteger;
+export const _encode_CBEFFVersion_cbeff_major: $.ASN1Encoder<INTEGER> = $._encodeInteger;
 
 
 /* eslint-enable */

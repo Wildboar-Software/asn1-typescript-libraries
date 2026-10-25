@@ -1,22 +1,22 @@
 /* eslint-disable */
 import {
-    ASN1Element as _Element,
+    type ASN1Element as _Element,
     ASN1TagClass as _TagClass,
-    OPTIONAL,
+    type OPTIONAL,
 } from "@wildboar/asn1";
 import * as $ from "@wildboar/asn1/functional";
 import {
-    KeyManagementInfo,
+    type KeyManagementInfo,
     _decode_KeyManagementInfo,
     _encode_KeyManagementInfo,
 } from "../PKCS-15/KeyManagementInfo.ta.mjs";
 import {
-    PKCS15Objects,
+    type PKCS15Objects,
     _decode_PKCS15Objects,
     _encode_PKCS15Objects,
 } from "../PKCS-15/PKCS15Objects.ta.mjs";
 import {
-    PKCS15Token_version,
+    type PKCS15Token_version,
     _decode_PKCS15Token_version,
     _encode_PKCS15Token_version,
 } from "../PKCS-15/PKCS15Token-version.ta.mjs";
@@ -37,26 +37,34 @@ import {
  *
  */
 export class PKCS15Token {
+    /**
+     * @summary `version`.
+     * @public
+     * @readonly
+     */
+    public readonly version: PKCS15Token_version;
+    /**
+     * @summary `keyManagementInfo`.
+     * @public
+     * @readonly
+     */
+    public readonly keyManagementInfo: OPTIONAL<KeyManagementInfo>;
+    /**
+     * @summary `pkcs15Objects`.
+     * @public
+     * @readonly
+     */
+    public readonly pkcs15Objects: PKCS15Objects[];
+
     constructor(
-        /**
-         * @summary `version`.
-         * @public
-         * @readonly
-         */
-        readonly version: PKCS15Token_version,
-        /**
-         * @summary `keyManagementInfo`.
-         * @public
-         * @readonly
-         */
-        readonly keyManagementInfo: OPTIONAL<KeyManagementInfo>,
-        /**
-         * @summary `pkcs15Objects`.
-         * @public
-         * @readonly
-         */
-        readonly pkcs15Objects: PKCS15Objects[]
-    ) {}
+        version: PKCS15Token_version,
+        keyManagementInfo: OPTIONAL<KeyManagementInfo>,
+        pkcs15Objects: PKCS15Objects[]
+    ) {
+        this.version = version;
+        this.keyManagementInfo = keyManagementInfo;
+        this.pkcs15Objects = pkcs15Objects;
+    }
 
     /**
      * @summary Restructures an object into a PKCS15Token

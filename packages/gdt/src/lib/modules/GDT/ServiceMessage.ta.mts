@@ -1,13 +1,13 @@
 /* eslint-disable */
 import {
-    OPTIONAL,
-    ASN1Element as _Element,
+    type OPTIONAL,
+    type ASN1Element as _Element,
     ASN1TagClass as _TagClass
 } from "@wildboar/asn1";
 import * as $ from "@wildboar/asn1/functional";
-import { ServiceId, _decode_ServiceId, _encode_ServiceId } from "../GDT/ServiceId.ta.mjs";
-import { ServiceAction, _decode_ServiceAction, _encode_ServiceAction } from "../GDT/ServiceAction.ta.mjs";
-import { Parameters, _decode_Parameters, _encode_Parameters } from "../GDT/Parameters.ta.mjs";
+import { type ServiceId, _decode_ServiceId, _encode_ServiceId } from "../GDT/ServiceId.ta.mjs";
+import { type ServiceAction, _decode_ServiceAction, _encode_ServiceAction } from "../GDT/ServiceAction.ta.mjs";
+import { type Parameters, _decode_Parameters, _encode_Parameters } from "../GDT/Parameters.ta.mjs";
 
 
 /**
@@ -34,25 +34,25 @@ class ServiceMessage {
      * @public
      * @readonly
      */
-    readonly service_id: ServiceId;
+    public readonly service_id: ServiceId;
     /**
      * @summary `service_action`.
      * @public
      * @readonly
      */
-    readonly service_action: ServiceAction;
+    public readonly service_action: ServiceAction;
     /**
      * @summary `params`.
      * @public
      * @readonly
      */
-    readonly params?: OPTIONAL<Parameters>;
+    public readonly params?: OPTIONAL<Parameters>;
     /**
      * @summary Extensions that are not recognized.
      * @public
      * @readonly
      */
-    readonly _unrecognizedExtensionsList: _Element[];
+    public readonly _unrecognizedExtensionsList: _Element[];
 
     constructor (
         service_id: ServiceId,

@@ -1,7 +1,7 @@
 /* eslint-disable */
 import {
-    NULL,
-    ASN1Element as _Element,
+    type NULL,
+    type ASN1Element as _Element,
     ASN1TagClass as _TagClass,
     ASN1Construction as _Construction,
     ASN1UniversalType as _UniversalType,
@@ -33,10 +33,10 @@ export
 type SignaturePolicyImplied = NULL; // NullType
 
 
-export const _decode_SignaturePolicyImplied = $._decodeNull;
+export const _decode_SignaturePolicyImplied: $.ASN1Decoder<null> = $._decodeNull;
 
 
-export const _encode_SignaturePolicyImplied = $._encodeNull;
+export const _encode_SignaturePolicyImplied: $.ASN1Encoder<null> = $._encodeNull;
 
 
 /* eslint-enable */

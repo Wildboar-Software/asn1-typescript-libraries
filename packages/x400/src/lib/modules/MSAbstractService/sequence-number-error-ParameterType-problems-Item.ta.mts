@@ -1,6 +1,6 @@
 /* eslint-disable */
 import {
-    ASN1Element as _Element,
+    type ASN1Element as _Element,
     ASN1TagClass as _TagClass,
     ASN1Construction as _Construction,
     ASN1UniversalType as _UniversalType,
@@ -11,12 +11,12 @@ import {
 } from '@wildboar/asn1';
 import * as $ from '@wildboar/asn1/functional';
 import {
-    SequenceNumberProblem,
+    type SequenceNumberProblem,
     _decode_SequenceNumberProblem,
     _encode_SequenceNumberProblem,
 } from '../MSAbstractService/SequenceNumberProblem.ta.mjs';
 import {
-    SequenceNumber,
+    type SequenceNumber,
     _decode_SequenceNumber,
     _encode_SequenceNumber,
 } from '../MSAbstractService/SequenceNumber.ta.mjs';
@@ -34,20 +34,26 @@ import {
  *
  */
 export class sequence_number_error_ParameterType_problems_Item {
+    /**
+     * @summary `problem`.
+     * @public
+     * @readonly
+     */
+    public readonly problem: SequenceNumberProblem;
+    /**
+     * @summary `sequence_number`.
+     * @public
+     * @readonly
+     */
+    public readonly sequence_number: SequenceNumber;
+
     constructor(
-        /**
-         * @summary `problem`.
-         * @public
-         * @readonly
-         */
-        readonly problem: SequenceNumberProblem,
-        /**
-         * @summary `sequence_number`.
-         * @public
-         * @readonly
-         */
-        readonly sequence_number: SequenceNumber
-    ) {}
+        problem: SequenceNumberProblem,
+        sequence_number: SequenceNumber
+    ) {
+        this.problem = problem;
+        this.sequence_number = sequence_number;
+    }
 
     /**
      * @summary Restructures an object into a sequence_number_error_ParameterType_problems_Item

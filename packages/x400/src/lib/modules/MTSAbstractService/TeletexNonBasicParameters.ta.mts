@@ -1,9 +1,9 @@
 /* eslint-disable */
 import {
-    OPTIONAL,
-    OCTET_STRING,
-    TeletexString,
-    ASN1Element as _Element,
+    type OPTIONAL,
+    type OCTET_STRING,
+    type TeletexString,
+    type ASN1Element as _Element,
     ASN1TagClass as _TagClass,
     ASN1Construction as _Construction,
     ASN1UniversalType as _UniversalType,
@@ -36,38 +36,50 @@ import * as $ from '@wildboar/asn1/functional';
  *
  */
 export class TeletexNonBasicParameters {
+    /**
+     * @summary `graphic_character_sets`.
+     * @public
+     * @readonly
+     */
+    public readonly graphic_character_sets?: OPTIONAL<TeletexString>;
+    /**
+     * @summary `control_character_sets`.
+     * @public
+     * @readonly
+     */
+    public readonly control_character_sets?: OPTIONAL<TeletexString>;
+    /**
+     * @summary `page_formats`.
+     * @public
+     * @readonly
+     */
+    public readonly page_formats?: OPTIONAL<OCTET_STRING>;
+    /**
+     * @summary `miscellaneous_terminal_capabilities`.
+     * @public
+     * @readonly
+     */
+    public readonly miscellaneous_terminal_capabilities?: OPTIONAL<TeletexString>;
+    /**
+     * @summary `private_use`.
+     * @public
+     * @readonly
+     */
+    public readonly private_use?: OPTIONAL<OCTET_STRING>;
+
     constructor(
-        /**
-         * @summary `graphic_character_sets`.
-         * @public
-         * @readonly
-         */
-        readonly graphic_character_sets?: OPTIONAL<TeletexString>,
-        /**
-         * @summary `control_character_sets`.
-         * @public
-         * @readonly
-         */
-        readonly control_character_sets?: OPTIONAL<TeletexString>,
-        /**
-         * @summary `page_formats`.
-         * @public
-         * @readonly
-         */
-        readonly page_formats?: OPTIONAL<OCTET_STRING>,
-        /**
-         * @summary `miscellaneous_terminal_capabilities`.
-         * @public
-         * @readonly
-         */
-        readonly miscellaneous_terminal_capabilities?: OPTIONAL<TeletexString>,
-        /**
-         * @summary `private_use`.
-         * @public
-         * @readonly
-         */
-        readonly private_use?: OPTIONAL<OCTET_STRING>
-    ) {}
+        graphic_character_sets?: OPTIONAL<TeletexString>,
+        control_character_sets?: OPTIONAL<TeletexString>,
+        page_formats?: OPTIONAL<OCTET_STRING>,
+        miscellaneous_terminal_capabilities?: OPTIONAL<TeletexString>,
+        private_use?: OPTIONAL<OCTET_STRING>
+    ) {
+        this.graphic_character_sets = graphic_character_sets;
+        this.control_character_sets = control_character_sets;
+        this.page_formats = page_formats;
+        this.miscellaneous_terminal_capabilities = miscellaneous_terminal_capabilities;
+        this.private_use = private_use;
+    }
 
     /**
      * @summary Restructures an object into a TeletexNonBasicParameters

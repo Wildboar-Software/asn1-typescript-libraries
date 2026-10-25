@@ -2,10 +2,10 @@
 
 import * as $ from "@wildboar/asn1/functional";
 import {
-    OPTIONAL,
-    SEQUENCE,
-    SET,
-    ASN1Element as _Element,
+    type OPTIONAL,
+    type SEQUENCE,
+    type SET,
+    type ASN1Element as _Element,
     ASN1TagClass as _TagClass
 } from "@wildboar/asn1";
 import { ConnectionListItems, _decode_ConnectionListItems, _encode_ConnectionListItems } from "../CSTA-send-message/ConnectionListItems.ta.mjs";
@@ -36,8 +36,8 @@ import { CSTACommonArguments, _decode_CSTACommonArguments, _encode_CSTACommonArg
  * ```asn1
  * SendMessageResult ::= SEQUENCE
  * {     connectionList             ConnectionListItems,
- *     mediaCallCharacteristics    MediaCallCharacteristics            OPTIONAL,
- *     listOfCallLinkageData         [1] IMPLICIT CallLinkageDataListItems        OPTIONAL,
+ *     mediaCallCharacteristics    MediaCallCharacteristics            type OPTIONAL,
+ *     listOfCallLinkageData         [1] IMPLICIT CallLinkageDataListItems        type OPTIONAL,
  *     extensions             CSTACommonArguments                 OPTIONAL }
  * ```
  * 
@@ -45,54 +45,64 @@ import { CSTACommonArguments, _decode_CSTACommonArguments, _encode_CSTACommonArg
  */
 export
 class SendMessageResult {
+    /**
+     * @summary `connectionList`.
+     * @description
+     *
+     * Mandatory. Connections created at the calling
+     * device. DeviceID may differ from the request when
+     * `callingDevice` named a group (Table 17-131).
+     *
+     * @public
+     * @readonly
+     */
+    public readonly connectionList: ConnectionListItems;
+    /**
+     * @summary `mediaCallCharacteristics`.
+     * @description
+     *
+     * Conditional. Required when media characteristics
+     * were adjusted; otherwise optional (Table 17-131).
+     *
+     * @public
+     * @readonly
+     */
+    public readonly mediaCallCharacteristics?: OPTIONAL<MediaCallCharacteristics>;
+    /**
+     * @summary `listOfCallLinkageData`.
+     * @description
+     *
+     * Optional. Call-linkage items in the same order as
+     * `connectionList` (Table 17-131, §12.2.5).
+     *
+     * @public
+     * @readonly
+     */
+    public readonly listOfCallLinkageData?: OPTIONAL<CallLinkageDataListItems>;
+    /**
+     * @summary `extensions`.
+     * @description
+     *
+     * Optional `CSTACommonArguments` carrying the security
+     * and privateData parameters from the ECMA-269 service
+     * table.
+     *
+     * @public
+     * @readonly
+     */
+    public readonly extensions?: OPTIONAL<CSTACommonArguments>;
+
     constructor (
-        /**
-         * @summary `connectionList`.
-         * @description
-         *
-         * Mandatory. Connections created at the calling
-         * device. DeviceID may differ from the request when
-         * `callingDevice` named a group (Table 17-131).
-         *
-         * @public
-         * @readonly
-         */
-        readonly connectionList: ConnectionListItems,
-        /**
-         * @summary `mediaCallCharacteristics`.
-         * @description
-         *
-         * Conditional. Required when media characteristics
-         * were adjusted; otherwise optional (Table 17-131).
-         *
-         * @public
-         * @readonly
-         */
-        readonly mediaCallCharacteristics?: OPTIONAL<MediaCallCharacteristics>,
-        /**
-         * @summary `listOfCallLinkageData`.
-         * @description
-         *
-         * Optional. Call-linkage items in the same order as
-         * `connectionList` (Table 17-131, §12.2.5).
-         *
-         * @public
-         * @readonly
-         */
-        readonly listOfCallLinkageData?: OPTIONAL<CallLinkageDataListItems>,
-        /**
-         * @summary `extensions`.
-         * @description
-         *
-         * Optional `CSTACommonArguments` carrying the security
-         * and privateData parameters from the ECMA-269 service
-         * table.
-         *
-         * @public
-         * @readonly
-         */
-        readonly extensions?: OPTIONAL<CSTACommonArguments>
-    ) {}
+        connectionList: ConnectionListItems,
+        mediaCallCharacteristics?: OPTIONAL<MediaCallCharacteristics>,
+        listOfCallLinkageData?: OPTIONAL<CallLinkageDataListItems>,
+        extensions?: OPTIONAL<CSTACommonArguments>
+    ) {
+        this.connectionList = connectionList;
+        this.mediaCallCharacteristics = mediaCallCharacteristics;
+        this.listOfCallLinkageData = listOfCallLinkageData;
+        this.extensions = extensions;
+    }
 
     /**
      * @summary Restructures an object into a SendMessageResult

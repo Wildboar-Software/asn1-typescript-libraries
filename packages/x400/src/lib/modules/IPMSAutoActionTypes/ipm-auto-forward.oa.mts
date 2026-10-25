@@ -1,6 +1,6 @@
 /* eslint-disable */
 import {
-    ASN1Element as _Element,
+    type ASN1Element as _Element,
     ASN1TagClass as _TagClass,
     ASN1Construction as _Construction,
     ASN1UniversalType as _UniversalType,
@@ -14,7 +14,7 @@ import {
     _encode_AutoActionType,
 } from '../MSAbstractService/AutoActionType.ta.mjs';
 import {
-    ipm_auto_forward_RegistrationParameter,
+    type ipm_auto_forward_RegistrationParameter,
     _decode_ipm_auto_forward_RegistrationParameter,
     _encode_ipm_auto_forward_RegistrationParameter,
 } from '../IPMSAutoActionTypes/ipm-auto-forward-RegistrationParameter.ta.mjs';

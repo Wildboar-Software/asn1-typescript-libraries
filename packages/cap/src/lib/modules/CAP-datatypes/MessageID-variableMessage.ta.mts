@@ -1,6 +1,6 @@
 import {
-    INTEGER,
-    ASN1Element as _Element,
+    type INTEGER,
+    type ASN1Element as _Element,
     ASN1TagClass as _TagClass,
     ASN1SizeError,
 } from "@wildboar/asn1";
@@ -22,10 +22,15 @@ import { type VariablePart, _decode_VariablePart, _encode_VariablePart } from ".
  *
  */
 export class MessageID_variableMessage {
+    public readonly elementaryMessageID: INTEGER;
+    public readonly variableParts: VariablePart[];
+
     constructor (
-        readonly elementaryMessageID: INTEGER,
-        readonly variableParts: VariablePart[],
+        elementaryMessageID: INTEGER,
+        variableParts: VariablePart[],
     ) {
+        this.elementaryMessageID = elementaryMessageID;
+        this.variableParts = variableParts;
         if (variableParts.length < 1 || variableParts.length > 5) {
             throw new ASN1SizeError("MessageID_variableMessage.variableParts violates SIZE constraint");
         }

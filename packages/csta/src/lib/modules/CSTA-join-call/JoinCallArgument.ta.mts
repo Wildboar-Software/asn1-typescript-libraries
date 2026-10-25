@@ -2,13 +2,13 @@
 
 import * as $ from "@wildboar/asn1/functional";
 import {
-    OPTIONAL,
-    SEQUENCE,
-    SET,
-    ASN1Element as _Element,
+    type OPTIONAL,
+    type SEQUENCE,
+    type SET,
+    type ASN1Element as _Element,
     ASN1TagClass as _TagClass
 } from "@wildboar/asn1";
-import { ConnectionID, _decode_ConnectionID, _encode_ConnectionID } from "../CSTA-call-connection-identifiers/ConnectionID.ta.mjs";
+import { type ConnectionID, _decode_ConnectionID, _encode_ConnectionID } from "../CSTA-call-connection-identifiers/ConnectionID.ta.mjs";
 
 import { DeviceID, _decode_DeviceID, _encode_DeviceID } from "../CSTA-device-identifiers/DeviceID.ta.mjs";
 
@@ -30,13 +30,13 @@ import {
     _encode_ParticipationType
 } from "../CSTA-device-feature-types/ParticipationType.ta.mjs";
 
-import { AccountInfo, _decode_AccountInfo, _encode_AccountInfo } from "../CSTA-device-feature-types/AccountInfo.ta.mjs";
+import { type AccountInfo, _decode_AccountInfo, _encode_AccountInfo } from "../CSTA-device-feature-types/AccountInfo.ta.mjs";
 
-import { AuthCode, _decode_AuthCode, _encode_AuthCode } from "../CSTA-device-feature-types/AuthCode.ta.mjs";
+import { type AuthCode, _decode_AuthCode, _encode_AuthCode } from "../CSTA-device-feature-types/AuthCode.ta.mjs";
 
-import { CorrelatorData, _decode_CorrelatorData, _encode_CorrelatorData } from "../CSTA-device-feature-types/CorrelatorData.ta.mjs";
+import { type CorrelatorData, _decode_CorrelatorData, _encode_CorrelatorData } from "../CSTA-device-feature-types/CorrelatorData.ta.mjs";
 
-import { UserData, _decode_UserData, _encode_UserData } from "../CSTA-device-feature-types/UserData.ta.mjs";
+import { type UserData, _decode_UserData, _encode_UserData } from "../CSTA-device-feature-types/UserData.ta.mjs";
 
 import { CSTACommonArguments, _decode_CSTACommonArguments, _encode_CSTACommonArguments } from "../CSTA-extension-types/CSTACommonArguments.ta.mjs";
 
@@ -60,10 +60,10 @@ import { CSTACommonArguments, _decode_CSTACommonArguments, _encode_CSTACommonArg
  *     joiningDevice             DeviceID,
  *     autoOriginate             [0] IMPLICIT     AutoOriginate         DEFAULT prompt,
  *     participationType         [1] IMPLICIT     ParticipationType     DEFAULT active,
- *     accountCode             [2] IMPLICIT     AccountInfo         OPTIONAL,
- *     authCode             [3] IMPLICIT     AuthCode         OPTIONAL,
- *     correlatorData             [4] IMPLICIT     CorrelatorData         OPTIONAL,
- *     userData             UserData                 OPTIONAL,
+ *     accountCode             [2] IMPLICIT     AccountInfo         type OPTIONAL,
+ *     authCode             [3] IMPLICIT     AuthCode         type OPTIONAL,
+ *     correlatorData             [4] IMPLICIT     CorrelatorData         type OPTIONAL,
+ *     userData             UserData                 type OPTIONAL,
  *     extensions             CSTACommonArguments             OPTIONAL }
  * ```
  * 
@@ -71,106 +71,126 @@ import { CSTACommonArguments, _decode_CSTACommonArguments, _encode_CSTACommonArg
  */
 export
 class JoinCallArgument {
+    /**
+     * @summary `activeCall`.
+     * @description
+     *
+     * Mandatory. A connection already in the call the device
+     * will join. Existing connections are unaffected.
+     *
+     * @public
+     * @readonly
+     */
+    public readonly activeCall: ConnectionID;
+    /**
+     * @summary `joiningDevice`.
+     * @description
+     *
+     * Mandatory. Device to add. Must be a complete DeviceID
+     * (FR 2). Becomes Connected.
+     *
+     * @public
+     * @readonly
+     */
+    public readonly joiningDevice: DeviceID;
+    /**
+     * @summary `autoOriginate`.
+     * @description
+     *
+     * Default `prompt`. `doNotPrompt` expects a device that
+     * can auto-answer; otherwise processing is
+     * switching-function specific (FR 4).
+     *
+     * @public
+     * @readonly
+     */
+    public readonly autoOriginate?: OPTIONAL<AutoOriginate>;
+    /**
+     * @summary `participationType`.
+     * @description
+     *
+     * Default `active`. Speak (`active`) or listen only
+     * (`silent`). Also controls digital-data flow direction
+     * (FR 8).
+     *
+     * @public
+     * @readonly
+     */
+    public readonly participationType?: OPTIONAL<ParticipationType>;
+    /**
+     * @summary `accountCode`.
+     * @description
+     *
+     * Optional account code for the join (§12.2.1).
+     *
+     * @public
+     * @readonly
+     */
+    public readonly accountCode?: OPTIONAL<AccountInfo>;
+    /**
+     * @summary `authCode`.
+     * @description
+     *
+     * Optional authorization code (§12.2.3).
+     *
+     * @public
+     * @readonly
+     */
+    public readonly authCode?: OPTIONAL<AuthCode>;
+    /**
+     * @summary `correlatorData`.
+     * @description
+     *
+     * Optional correlator data attached before resulting state
+     * transitions (§12.2.10).
+     *
+     * @public
+     * @readonly
+     */
+    public readonly correlatorData?: OPTIONAL<CorrelatorData>;
+    /**
+     * @summary `userData`.
+     * @description
+     *
+     * Optional user data sent with the join (§12.2.30).
+     *
+     * @public
+     * @readonly
+     */
+    public readonly userData?: OPTIONAL<UserData>;
+    /**
+     * @summary `extensions`.
+     * @description
+     *
+     * Optional `CSTACommonArguments` carrying the security and
+     * privateData parameters from the ECMA-269 service table.
+     *
+     * @public
+     * @readonly
+     */
+    public readonly extensions?: OPTIONAL<CSTACommonArguments>;
+
     constructor (
-        /**
-         * @summary `activeCall`.
-         * @description
-         *
-         * Mandatory. A connection already in the call the device
-         * will join. Existing connections are unaffected.
-         *
-         * @public
-         * @readonly
-         */
-        readonly activeCall: ConnectionID,
-        /**
-         * @summary `joiningDevice`.
-         * @description
-         *
-         * Mandatory. Device to add. Must be a complete DeviceID
-         * (FR 2). Becomes Connected.
-         *
-         * @public
-         * @readonly
-         */
-        readonly joiningDevice: DeviceID,
-        /**
-         * @summary `autoOriginate`.
-         * @description
-         *
-         * Default `prompt`. `doNotPrompt` expects a device that
-         * can auto-answer; otherwise processing is
-         * switching-function specific (FR 4).
-         *
-         * @public
-         * @readonly
-         */
-        readonly autoOriginate?: OPTIONAL<AutoOriginate>,
-        /**
-         * @summary `participationType`.
-         * @description
-         *
-         * Default `active`. Speak (`active`) or listen only
-         * (`silent`). Also controls digital-data flow direction
-         * (FR 8).
-         *
-         * @public
-         * @readonly
-         */
-        readonly participationType?: OPTIONAL<ParticipationType>,
-        /**
-         * @summary `accountCode`.
-         * @description
-         *
-         * Optional account code for the join (§12.2.1).
-         *
-         * @public
-         * @readonly
-         */
-        readonly accountCode?: OPTIONAL<AccountInfo>,
-        /**
-         * @summary `authCode`.
-         * @description
-         *
-         * Optional authorization code (§12.2.3).
-         *
-         * @public
-         * @readonly
-         */
-        readonly authCode?: OPTIONAL<AuthCode>,
-        /**
-         * @summary `correlatorData`.
-         * @description
-         *
-         * Optional correlator data attached before resulting state
-         * transitions (§12.2.10).
-         *
-         * @public
-         * @readonly
-         */
-        readonly correlatorData?: OPTIONAL<CorrelatorData>,
-        /**
-         * @summary `userData`.
-         * @description
-         *
-         * Optional user data sent with the join (§12.2.30).
-         *
-         * @public
-         * @readonly
-         */
-        readonly userData?: OPTIONAL<UserData>,
-        /**
-         * @summary `extensions`.
-         * @description
-         *
-         * Optional `CSTACommonArguments` carrying the security and
-         * privateData parameters from the ECMA-269 service table.
-         *
-         * @public
-         * @readonly
-         */
-        readonly extensions?: OPTIONAL<CSTACommonArguments>
-    ) {}
+        activeCall: ConnectionID,
+        joiningDevice: DeviceID,
+        autoOriginate?: OPTIONAL<AutoOriginate>,
+        participationType?: OPTIONAL<ParticipationType>,
+        accountCode?: OPTIONAL<AccountInfo>,
+        authCode?: OPTIONAL<AuthCode>,
+        correlatorData?: OPTIONAL<CorrelatorData>,
+        userData?: OPTIONAL<UserData>,
+        extensions?: OPTIONAL<CSTACommonArguments>
+    ) {
+        this.activeCall = activeCall;
+        this.joiningDevice = joiningDevice;
+        this.autoOriginate = autoOriginate;
+        this.participationType = participationType;
+        this.accountCode = accountCode;
+        this.authCode = authCode;
+        this.correlatorData = correlatorData;
+        this.userData = userData;
+        this.extensions = extensions;
+    }
 
     /**
      * @summary Restructures an object into a JoinCallArgument
@@ -194,26 +214,26 @@ class JoinCallArgument {
      * @static
      * @method
      */
-    public static get _default_value_for_autoOriginate () { return AutoOriginate_prompt; }
+    public static get _default_value_for_autoOriginate (): _enum_for_AutoOriginate.prompt { return AutoOriginate_prompt; }
     /**
      * @summary Getter that returns the default value for `participationType`.
      * @public
      * @static
      * @method
      */
-    public static get _default_value_for_participationType () { return ParticipationType_active; }        /**
+    public static get _default_value_for_participationType (): _enum_for_ParticipationType.active { return ParticipationType_active; }        /**
          * @summary The enum used as the type of the component `autoOriginate`
          * @public
          * @static
          */
 
-    public static _enum_for_autoOriginate = _enum_for_AutoOriginate;        /**
+    public static _enum_for_autoOriginate: typeof _enum_for_AutoOriginate = _enum_for_AutoOriginate;        /**
          * @summary The enum used as the type of the component `participationType`
          * @public
          * @static
          */
 
-    public static _enum_for_participationType = _enum_for_ParticipationType;
+    public static _enum_for_participationType: typeof _enum_for_ParticipationType = _enum_for_ParticipationType;
 }
 
 /**

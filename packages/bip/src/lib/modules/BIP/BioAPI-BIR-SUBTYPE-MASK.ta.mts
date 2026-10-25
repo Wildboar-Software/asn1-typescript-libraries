@@ -1,6 +1,6 @@
 /* eslint-disable */
 import {
-  BIT_STRING,
+  type BIT_STRING,
   ASN1Element as _Element,
   ASN1TagClass as _TagClass,
   ASN1Construction as _Construction,
@@ -293,12 +293,12 @@ export const right_vein_wrist: number = BioAPI_BIR_SUBTYPE_MASK_right_vein_wrist
 
 
 
-export const _decode_BioAPI_BIR_SUBTYPE_MASK = $._decodeBitString;
+export const _decode_BioAPI_BIR_SUBTYPE_MASK: $.ASN1Decoder<BIT_STRING> = $._decodeBitString;
 
 
 
 
-export const _encode_BioAPI_BIR_SUBTYPE_MASK = $._encodeBitString;
+export const _encode_BioAPI_BIR_SUBTYPE_MASK: $.ASN1Encoder<BIT_STRING> = $._encodeBitString;
 
 
 /* eslint-enable */

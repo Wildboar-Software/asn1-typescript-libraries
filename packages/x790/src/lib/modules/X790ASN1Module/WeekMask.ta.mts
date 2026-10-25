@@ -1,14 +1,14 @@
 /* eslint-disable */
 import {
-    OPTIONAL,
-    SEQUENCE,
-    SET,
-    ASN1Element as _Element,
+    type OPTIONAL,
+    type SEQUENCE,
+    type SET,
+    type ASN1Element as _Element,
     ASN1TagClass as _TagClass,
 } from "@wildboar/asn1";
 import * as $ from "@wildboar/asn1/functional";
 import {
-    WeekMask_daysOfWeek,
+    type WeekMask_daysOfWeek,
     sunday,
     monday,
     tuesday,
@@ -57,26 +57,34 @@ import {
  */
 export
 class WeekMask {
+    /**
+     * @summary `daysOfWeek`.
+     * @public
+     * @readonly
+     */
+    public readonly daysOfWeek?: OPTIONAL<WeekMask_daysOfWeek>;
+    /**
+     * @summary `intervalsOfDay`.
+     * @public
+     * @readonly
+     */
+    public readonly intervalsOfDay?: OPTIONAL<WeekMask_intervalsOfDay_Item[]>;
+    /**
+     * @summary Extensions that are not recognized.
+     * @public
+     * @readonly
+     */
+    public readonly _unrecognizedExtensionsList: _Element[];
+
     constructor (
-        /**
-         * @summary `daysOfWeek`.
-         * @public
-         * @readonly
-         */
-        readonly daysOfWeek?: OPTIONAL<WeekMask_daysOfWeek>,
-        /**
-         * @summary `intervalsOfDay`.
-         * @public
-         * @readonly
-         */
-        readonly intervalsOfDay?: OPTIONAL<WeekMask_intervalsOfDay_Item[]>,
-        /**
-         * @summary Extensions that are not recognized.
-         * @public
-         * @readonly
-         */
-        readonly _unrecognizedExtensionsList: _Element[] = []
-    ) {}
+        daysOfWeek?: OPTIONAL<WeekMask_daysOfWeek>,
+        intervalsOfDay?: OPTIONAL<WeekMask_intervalsOfDay_Item[]>,
+        _unrecognizedExtensionsList: _Element[] = []
+    ) {
+        this.daysOfWeek = daysOfWeek;
+        this.intervalsOfDay = intervalsOfDay;
+        this._unrecognizedExtensionsList = _unrecognizedExtensionsList;
+    }
 
     /**
      * @summary Restructures an object into a WeekMask
@@ -100,14 +108,14 @@ class WeekMask {
      * @static
      * @method
      */
-    public static get _default_value_for_daysOfWeek () { return new Uint8ClampedArray([ 1, 1, 1, 1, 1, 1, 1 ]); }
+    public static get _default_value_for_daysOfWeek (): Uint8ClampedArray<ArrayBuffer> { return new Uint8ClampedArray([ 1, 1, 1, 1, 1, 1, 1 ]); }
     /**
      * @summary Getter that returns the default value for `intervalsOfDay`.
      * @public
      * @static
      * @method
      */
-    public static get _default_value_for_intervalsOfDay () { return [ new WeekMask_intervalsOfDay_Item(new Time24(0, 0), new Time24(23, 59)) ]; }
+    public static get _default_value_for_intervalsOfDay (): WeekMask_intervalsOfDay_Item[] { return [ new WeekMask_intervalsOfDay_Item(new Time24(0, 0), new Time24(23, 59)) ]; }
 }
 
 /**

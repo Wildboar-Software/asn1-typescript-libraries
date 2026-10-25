@@ -1,7 +1,7 @@
 /* eslint-disable */
 import {
-    OPTIONAL,
-    ASN1Element as _Element,
+    type OPTIONAL,
+    type ASN1Element as _Element,
     ASN1TagClass as _TagClass,
     ASN1Construction as _Construction,
     ASN1UniversalType as _UniversalType,
@@ -11,11 +11,11 @@ import {
     ASN1ConstructionError as _ConstructionError,
 } from "@wildboar/asn1";
 import * as $ from "@wildboar/asn1/functional";
-import { ObjectValue, _get_decoder_for_ObjectValue, _get_encoder_for_ObjectValue } from "../CryptographicInformationFramework/ObjectValue.ta.mjs";
-import { DHPublicKeyChoice, _decode_DHPublicKeyChoice, _encode_DHPublicKeyChoice } from "../CryptographicInformationFramework/DHPublicKeyChoice.ta.mjs";
-import { KeyInfo, _get_decoder_for_KeyInfo, _get_encoder_for_KeyInfo } from "../CryptographicInformationFramework/KeyInfo.ta.mjs";
+import { type ObjectValue, _get_decoder_for_ObjectValue, _get_encoder_for_ObjectValue } from "../CryptographicInformationFramework/ObjectValue.ta.mjs";
+import { type DHPublicKeyChoice, _decode_DHPublicKeyChoice, _encode_DHPublicKeyChoice } from "../CryptographicInformationFramework/DHPublicKeyChoice.ta.mjs";
+import { type KeyInfo, _get_decoder_for_KeyInfo, _get_encoder_for_KeyInfo } from "../CryptographicInformationFramework/KeyInfo.ta.mjs";
 import { DomainParameters, _decode_DomainParameters, _encode_DomainParameters } from "../ANSI-X9-42/DomainParameters.ta.mjs";
-import { PublicKeyOperations, _decode_PublicKeyOperations, _encode_PublicKeyOperations } from "../CryptographicInformationFramework/PublicKeyOperations.ta.mjs";
+import { type PublicKeyOperations, _decode_PublicKeyOperations, _encode_PublicKeyOperations } from "../CryptographicInformationFramework/PublicKeyOperations.ta.mjs";
 
 
 /**
@@ -38,33 +38,41 @@ import { PublicKeyOperations, _decode_PublicKeyOperations, _encode_PublicKeyOper
  */
 export
 class PublicDHKeyAttributes {
+    /**
+     * @summary `value`.
+     * @description
+     * `ObjectValue` of `DHPublicKeyChoice` or a card-specific DH public
+     * key. ISO/IEC 7816-15:2016 §8.5.4.
+     * @public
+     * @readonly
+     */
+    public readonly value: ObjectValue<DHPublicKeyChoice>;
+    /**
+     * @summary `keyInfo`.
+     * @description
+     * If present, overrides `CIAInfo.supportedAlgorithms` referenced by
+     * `CommonKeyAttributes.algReference`. Omit when available by other
+     * means. ISO/IEC 7816-15:2016 §8.4.2.
+     * @public
+     * @readonly
+     */
+    public readonly keyInfo?: OPTIONAL<KeyInfo<DomainParameters, PublicKeyOperations>>;
+    /**
+     * @summary Extensions that are not recognized.
+     * @public
+     * @readonly
+     */
+    public readonly _unrecognizedExtensionsList: _Element[];
+
     constructor (
-        /**
-         * @summary `value`.
-         * @description
-         * `ObjectValue` of `DHPublicKeyChoice` or a card-specific DH public
-         * key. ISO/IEC 7816-15:2016 §8.5.4.
-         * @public
-         * @readonly
-         */
-        readonly value: ObjectValue<DHPublicKeyChoice>,
-        /**
-         * @summary `keyInfo`.
-         * @description
-         * If present, overrides `CIAInfo.supportedAlgorithms` referenced by
-         * `CommonKeyAttributes.algReference`. Omit when available by other
-         * means. ISO/IEC 7816-15:2016 §8.4.2.
-         * @public
-         * @readonly
-         */
-        readonly keyInfo?: OPTIONAL<KeyInfo<DomainParameters, PublicKeyOperations>>,
-        /**
-         * @summary Extensions that are not recognized.
-         * @public
-         * @readonly
-         */
-        readonly _unrecognizedExtensionsList: _Element[] = []
-    ) {}
+        value: ObjectValue<DHPublicKeyChoice>,
+        keyInfo?: OPTIONAL<KeyInfo<DomainParameters, PublicKeyOperations>>,
+        _unrecognizedExtensionsList: _Element[] = []
+    ) {
+        this.value = value;
+        this.keyInfo = keyInfo;
+        this._unrecognizedExtensionsList = _unrecognizedExtensionsList;
+    }
 
     /**
      * @summary Restructures an object into a PublicDHKeyAttributes

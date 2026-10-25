@@ -5,8 +5,8 @@ import {
 } from "../Remote-Operations-Information-Objects/Code.ta.mjs";
 /* eslint-disable */
 import {
-    OPTIONAL,
-    ASN1Element as _Element,
+    type OPTIONAL,
+    type ASN1Element as _Element,
     ASN1TagClass as _TagClass
 } from "@wildboar/asn1";
 import * as $ from "@wildboar/asn1/functional";
@@ -86,13 +86,13 @@ class ExtensionField {
      * @static
      * @method
      */
-    public static get _default_value_for_criticality () { return CriticalityType_ignore; }        /**
+    public static get _default_value_for_criticality (): _enum_for_CriticalityType.ignore { return CriticalityType_ignore; }        /**
          * @summary The enum used as the type of the component `criticality`
          * @public
          * @static
          */
 
-    public static _enum_for_criticality = _enum_for_CriticalityType;
+    public static _enum_for_criticality: typeof _enum_for_CriticalityType = _enum_for_CriticalityType;
 }
 
 /**

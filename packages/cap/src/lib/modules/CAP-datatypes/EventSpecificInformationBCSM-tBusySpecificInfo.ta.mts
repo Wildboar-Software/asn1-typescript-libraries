@@ -1,7 +1,7 @@
 import {
-    OPTIONAL,
-    NULL,
-    ASN1Element as _Element,
+    type OPTIONAL,
+    type NULL,
+    type ASN1Element as _Element,
     ASN1TagClass as _TagClass,
 } from "@wildboar/asn1";
 import * as $ from "@wildboar/asn1/functional";
@@ -29,56 +29,68 @@ import { type CalledPartyNumber, _decode_CalledPartyNumber, _encode_CalledPartyN
  *
  */
 export class EventSpecificInformationBCSM_tBusySpecificInfo {
+    /**
+     * @summary `busyCause`.
+     * @description
+     *
+     * If ISUP release: copy of that cause. If MAP error: mapped ISUP cause.
+     * If forwarding/deflection at GMSC/VMSC: mapping in 3GPP TS 23.078; at
+     * GMSC reflects forwarding reason (absent 20 or busy 17) and
+     * `callForwarded` is also present. If omitted, gsmSCF shall assume
+     * busy. (3GPP TS 29.078 V19.0.0 clause 11.18).
+     *
+     * @public
+     * @readonly
+     */
+    public readonly busyCause?: OPTIONAL<Cause>;
+    /**
+     * @summary `callForwarded`.
+     * @description
+     *
+     * Busy event triggered by call forwarding at GMSC or VMSC.
+     * (3GPP TS 29.078 V19.0.0 clause 11.18).
+     *
+     * @public
+     * @readonly
+     */
+    public readonly callForwarded?: OPTIONAL<NULL>;
+    /**
+     * @summary `routeNotPermitted`.
+     * @description
+     *
+     * Busy because call forwarding was not invoked in this GMSC due to
+     * Basic Optimal Routeing rules. (3GPP TS 29.078 V19.0.0 clause 11.18).
+     *
+     * @public
+     * @readonly
+     */
+    public readonly routeNotPermitted?: OPTIONAL<NULL>;
+    /**
+     * @summary `forwardingDestinationNumber`.
+     * @description
+     *
+     * Forwarding destination, if available.
+     * (3GPP TS 29.078 V19.0.0 clause 11.18).
+     *
+     * @public
+     * @readonly
+     */
+    public readonly forwardingDestinationNumber?: OPTIONAL<CalledPartyNumber>;
+    public readonly _unrecognizedExtensionsList: _Element[];
+
     constructor (
-        /**
-         * @summary `busyCause`.
-         * @description
-         *
-         * If ISUP release: copy of that cause. If MAP error: mapped ISUP cause.
-         * If forwarding/deflection at GMSC/VMSC: mapping in 3GPP TS 23.078; at
-         * GMSC reflects forwarding reason (absent 20 or busy 17) and
-         * `callForwarded` is also present. If omitted, gsmSCF shall assume
-         * busy. (3GPP TS 29.078 V19.0.0 clause 11.18).
-         *
-         * @public
-         * @readonly
-         */
-        readonly busyCause?: OPTIONAL<Cause>,
-        /**
-         * @summary `callForwarded`.
-         * @description
-         *
-         * Busy event triggered by call forwarding at GMSC or VMSC.
-         * (3GPP TS 29.078 V19.0.0 clause 11.18).
-         *
-         * @public
-         * @readonly
-         */
-        readonly callForwarded?: OPTIONAL<NULL>,
-        /**
-         * @summary `routeNotPermitted`.
-         * @description
-         *
-         * Busy because call forwarding was not invoked in this GMSC due to
-         * Basic Optimal Routeing rules. (3GPP TS 29.078 V19.0.0 clause 11.18).
-         *
-         * @public
-         * @readonly
-         */
-        readonly routeNotPermitted?: OPTIONAL<NULL>,
-        /**
-         * @summary `forwardingDestinationNumber`.
-         * @description
-         *
-         * Forwarding destination, if available.
-         * (3GPP TS 29.078 V19.0.0 clause 11.18).
-         *
-         * @public
-         * @readonly
-         */
-        readonly forwardingDestinationNumber?: OPTIONAL<CalledPartyNumber>,
-        readonly _unrecognizedExtensionsList: _Element[] = [],
-    ) {}
+        busyCause?: OPTIONAL<Cause>,
+        callForwarded?: OPTIONAL<NULL>,
+        routeNotPermitted?: OPTIONAL<NULL>,
+        forwardingDestinationNumber?: OPTIONAL<CalledPartyNumber>,
+        _unrecognizedExtensionsList: _Element[] = [],
+    ) {
+        this.busyCause = busyCause;
+        this.callForwarded = callForwarded;
+        this.routeNotPermitted = routeNotPermitted;
+        this.forwardingDestinationNumber = forwardingDestinationNumber;
+        this._unrecognizedExtensionsList = _unrecognizedExtensionsList;
+    }
 
     public static _from_object (_o: { [_K in keyof (EventSpecificInformationBCSM_tBusySpecificInfo)]: (EventSpecificInformationBCSM_tBusySpecificInfo)[_K] }): EventSpecificInformationBCSM_tBusySpecificInfo {
         return new EventSpecificInformationBCSM_tBusySpecificInfo(_o.busyCause, _o.callForwarded, _o.routeNotPermitted, _o.forwardingDestinationNumber, _o._unrecognizedExtensionsList);

@@ -1,10 +1,10 @@
 /* eslint-disable */
 import {
-    ASN1Element as _Element,
+    type ASN1Element as _Element,
     ASN1TagClass as _TagClass,
-    BOOLEAN,
-    INTEGER,
-    OPTIONAL,
+    type BOOLEAN,
+    type INTEGER,
+    type OPTIONAL,
 } from "@wildboar/asn1";
 import * as $ from "@wildboar/asn1/functional";
 
@@ -29,36 +29,44 @@ import * as $ from "@wildboar/asn1/functional";
  *
  */
 export class BasicConstraintsSyntax {
+    /**
+     * @summary `cA`.
+     * @description
+     *
+     * DEFAULT FALSE. TRUE required (and critical) on CA certs. keyCertSign
+     * requires this TRUE.
+     *
+     * @public
+     * @readonly
+     */
+    public readonly cA?: OPTIONAL<BOOLEAN>;
+    /**
+     * @summary `pathLenConstraint`.
+     * @description
+     *
+     * Only if cA TRUE. 0 = issue end-entity certs only. Absent = no limit
+     * from this cert.
+     *
+     * @public
+     * @readonly
+     */
+    public readonly pathLenConstraint?: OPTIONAL<INTEGER>;
+    /**
+     * @summary Extensions that are not recognized.
+     * @public
+     * @readonly
+     */
+    public readonly _unrecognizedExtensionsList: _Element[];
+
     constructor(
-        /**
-         * @summary `cA`.
-         * @description
-         *
-         * DEFAULT FALSE. TRUE required (and critical) on CA certs. keyCertSign
-         * requires this TRUE.
-         *
-         * @public
-         * @readonly
-         */
-        readonly cA?: OPTIONAL<BOOLEAN>,
-        /**
-         * @summary `pathLenConstraint`.
-         * @description
-         *
-         * Only if cA TRUE. 0 = issue end-entity certs only. Absent = no limit
-         * from this cert.
-         *
-         * @public
-         * @readonly
-         */
-        readonly pathLenConstraint?: OPTIONAL<INTEGER>,
-        /**
-         * @summary Extensions that are not recognized.
-         * @public
-         * @readonly
-         */
-        readonly _unrecognizedExtensionsList: _Element[] = []
-    ) {}
+        cA?: OPTIONAL<BOOLEAN>,
+        pathLenConstraint?: OPTIONAL<INTEGER>,
+        _unrecognizedExtensionsList: _Element[] = []
+    ) {
+        this.cA = cA;
+        this.pathLenConstraint = pathLenConstraint;
+        this._unrecognizedExtensionsList = _unrecognizedExtensionsList;
+    }
 
     /**
      * @summary Restructures an object into a BasicConstraintsSyntax

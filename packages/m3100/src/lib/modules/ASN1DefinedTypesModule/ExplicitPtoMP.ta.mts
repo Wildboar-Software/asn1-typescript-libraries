@@ -1,6 +1,6 @@
 /* eslint-disable */
 import {
-    ASN1Element as _Element,
+    type ASN1Element as _Element,
     ASN1TagClass as _TagClass,
     ASN1Construction as _Construction,
     ASN1UniversalType as _UniversalType,
@@ -11,7 +11,7 @@ import {
 } from '@wildboar/asn1';
 import * as $ from '@wildboar/asn1/functional';
 import {
-    ExplicitTP,
+    type ExplicitTP,
     _decode_ExplicitTP,
     _encode_ExplicitTP,
 } from '../ASN1DefinedTypesModule/ExplicitTP.ta.mjs';
@@ -30,20 +30,26 @@ import {
  *
  */
 export class ExplicitPtoMP {
+    /**
+     * @summary `fromTp`.
+     * @public
+     * @readonly
+     */
+    public readonly fromTp: ExplicitTP;
+    /**
+     * @summary `toTPs`.
+     * @public
+     * @readonly
+     */
+    public readonly toTPs: ExplicitTP[];
+
     constructor(
-        /**
-         * @summary `fromTp`.
-         * @public
-         * @readonly
-         */
-        readonly fromTp: ExplicitTP,
-        /**
-         * @summary `toTPs`.
-         * @public
-         * @readonly
-         */
-        readonly toTPs: ExplicitTP[]
-    ) {}
+        fromTp: ExplicitTP,
+        toTPs: ExplicitTP[]
+    ) {
+        this.fromTp = fromTp;
+        this.toTPs = toTPs;
+    }
 
     /**
      * @summary Restructures an object into a ExplicitPtoMP

@@ -1,8 +1,8 @@
 /* eslint-disable */
 import {
-    ASN1Element as _Element,
+    type ASN1Element as _Element,
     ASN1SizeError,
-    OCTET_STRING
+    type OCTET_STRING
 } from "@wildboar/asn1";
 import * as $ from "@wildboar/asn1/functional";
 
@@ -45,7 +45,7 @@ export const _decode_LCS_Priority = (el: _Element): LCS_Priority => {
  * @param elGetter A function that can be used to get new ASN.1 elements.
  * @returns {_Element} The LCS_Priority, encoded as an ASN.1 Element.
  */
-export const _encode_LCS_Priority = $._encodeOctetString;
+export const _encode_LCS_Priority: $.ASN1Encoder<OCTET_STRING> = $._encodeOctetString;
 
 
 /* eslint-enable */

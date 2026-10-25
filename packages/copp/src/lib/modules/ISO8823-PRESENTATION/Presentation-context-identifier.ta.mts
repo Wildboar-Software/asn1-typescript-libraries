@@ -1,7 +1,7 @@
 /* eslint-disable */
 import {
-    INTEGER,
-    ASN1Element as _Element,
+    type INTEGER,
+    type ASN1Element as _Element,
     ASN1TagClass as _TagClass,
     ASN1Construction as _Construction,
     ASN1UniversalType as _UniversalType,
@@ -33,12 +33,12 @@ export type Presentation_context_identifier = INTEGER;
 
 
 
-export const _decode_Presentation_context_identifier = $._decodeInteger;
+export const _decode_Presentation_context_identifier: $.ASN1Decoder<INTEGER> = $._decodeInteger;
 
 
 
 
-export const _encode_Presentation_context_identifier = $._encodeInteger;
+export const _encode_Presentation_context_identifier: $.ASN1Encoder<INTEGER> = $._encodeInteger;
 
 
 /* eslint-enable */

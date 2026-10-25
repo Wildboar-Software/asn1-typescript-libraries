@@ -1,7 +1,7 @@
 /* eslint-disable */
 import {
-    OPTIONAL,
-    ASN1Element as _Element,
+    type OPTIONAL,
+    type ASN1Element as _Element,
     ASN1TagClass as _TagClass,
     ASN1Construction as _Construction,
     ASN1UniversalType as _UniversalType,
@@ -11,13 +11,13 @@ import {
     ASN1ConstructionError as _ConstructionError,
 } from "@wildboar/asn1";
 import * as $ from "@wildboar/asn1/functional";
-import { ParameterOffers_typeIdentifier_Item, _decode_ParameterOffers_typeIdentifier_Item, _encode_ParameterOffers_typeIdentifier_Item } from "../CSS/ParameterOffers-typeIdentifier-Item.ta.mjs";
-import { AccessRuleOffer, _decode_AccessRuleOffer, _encode_AccessRuleOffer } from "../CSS/AccessRuleOffer.ta.mjs";
-import { ParameterOffers_trigger, _decode_ParameterOffers_trigger, _encode_ParameterOffers_trigger } from "../CSS/ParameterOffers-trigger.ta.mjs";
+import { type ParameterOffers_typeIdentifier_Item, _decode_ParameterOffers_typeIdentifier_Item, _encode_ParameterOffers_typeIdentifier_Item } from "../CSS/ParameterOffers-typeIdentifier-Item.ta.mjs";
+import { type AccessRuleOffer, _decode_AccessRuleOffer, _encode_AccessRuleOffer } from "../CSS/AccessRuleOffer.ta.mjs";
+import { type ParameterOffers_trigger, _decode_ParameterOffers_trigger, _encode_ParameterOffers_trigger } from "../CSS/ParameterOffers-trigger.ta.mjs";
 import { _decode_IntegerOffer, _encode_IntegerOffer, type IntegerOffer } from "../G/IntegerOffer.ta.mjs";
-import { ParameterOffers_category, _decode_ParameterOffers_category, _encode_ParameterOffers_category } from "../CSS/ParameterOffers-category.ta.mjs";
+import { type ParameterOffers_category, _decode_ParameterOffers_category, _encode_ParameterOffers_category } from "../CSS/ParameterOffers-category.ta.mjs";
 import { _decode_RepertoireAssignment, _encode_RepertoireAssignment, RepertoireAssignment } from "../CDS/RepertoireAssignment.ta.mjs";
-import { ParameterOffers_priority, _decode_ParameterOffers_priority, _encode_ParameterOffers_priority } from "../CSS/ParameterOffers-priority.ta.mjs";
+import { type ParameterOffers_priority, _decode_ParameterOffers_priority, _encode_ParameterOffers_priority } from "../CSS/ParameterOffers-priority.ta.mjs";
 import { ParameterOffers_structure, _decode_ParameterOffers_structure, _encode_ParameterOffers_structure } from "../CSS/ParameterOffers-structure.ta.mjs";
 import { ElementParamOffer, _decode_ElementParamOffer, _encode_ElementParamOffer } from "../CSS/ElementParamOffer.ta.mjs";
 
@@ -70,103 +70,123 @@ import { ElementParamOffer, _decode_ElementParamOffer, _encode_ElementParamOffer
  */
 export
 class ParameterOffers {
+    /**
+     * @summary `typeIdentifier`.
+     * @description
+     * Offered `CO-type-identifier` alternatives (OID and/or
+     * PrintableString). ISO/IEC 9040:1997 §14, §20.1.1.
+     * @public
+     * @readonly
+     */
+    public readonly typeIdentifier: ParameterOffers_typeIdentifier_Item[];
+    /**
+     * @summary `access`.
+     * @description
+     * Offered `CO-access` rules; set bits are offered.
+     * Default `"NSAC"`. Combined rules and `"no-access"`
+     * need Enhanced Access-rules FU.
+     * ISO/IEC 9040:1997 §9, §10.5, §20.1.3, table 1,
+     * table 11.
+     * @public
+     * @readonly
+     */
+    public readonly access?: OPTIONAL<AccessRuleOffer>;
+    /**
+     * @summary `trigger`.
+     * @description
+     * Offered `CO-trigger`; bits `yes`(0) / `no`(1). Valid
+     * only if priority is `"normal"`. Default
+     * `"not selected"`. ISO/IEC 9040:1997 §3.3.43,
+     * §20.1.5, §24.1.
+     * @public
+     * @readonly
+     */
+    public readonly trigger?: OPTIONAL<ParameterOffers_trigger>;
+    /**
+     * @summary `size`.
+     * @description
+     * Offered `CO-size`. Meaning depends on category:
+     * character max string length (default 16); boolean
+     * max booleans (default 16); symbolic max distinct
+     * values (default 256); integer max value (default
+     * 65535); transparent max bits (default 16).
+     * ISO/IEC 9040:1997 §20.2.2.
+     * @public
+     * @readonly
+     */
+    public readonly size?: OPTIONAL<IntegerOffer>;
+    /**
+     * @summary `category`.
+     * @description
+     * Offered `CO-category` values; set bits are offered.
+     * Default `"boolean"`.
+     * ISO/IEC 9040:1997 table 9, §20.2.3–§20.2.6.
+     * @public
+     * @readonly
+     */
+    public readonly category?: OPTIONAL<ParameterOffers_category>;
+    /**
+     * @summary `repertoire`.
+     * @description
+     * Offered `CO-repertoire-assignment` alternatives
+     * (same form as CDS). Used when category is
+     * character. ISO/IEC 9040:1997 table 9, §20.2.5.
+     * @public
+     * @readonly
+     */
+    public readonly repertoire?: OPTIONAL<RepertoireAssignment[]>;
+    /**
+     * @summary `priority`.
+     * @description
+     * Offered `CO-priority` values; set bits are offered.
+     * Default `"normal"`. Selects NDQ / HDQ / UDQ.
+     * ISO/IEC 9040:1997 §20.1.4, §24.5;
+     * ISO/IEC 9041-1:1997 §6.12, §6.14, §6.25.
+     * @public
+     * @readonly
+     */
+    public readonly priority?: OPTIONAL<ParameterOffers_priority>;
+    /**
+     * @summary `structure`.
+     * @description
+     * Offered `CO-structure`: non-parametric and/or
+     * parametric element count.
+     * ISO/IEC 9040:1997 §10.6, §14.1, §20.1.2.
+     * @public
+     * @readonly
+     */
+    public readonly structure?: OPTIONAL<ParameterOffers_structure>;
+    /**
+     * @summary `multiElement`.
+     * @description
+     * Per-element offers (`CO-element-id`, size, category,
+     * repertoire). ISO/IEC 9040:1997 §20.2.1.
+     * @public
+     * @readonly
+     */
+    public readonly multiElement?: OPTIONAL<ElementParamOffer[]>;
+
     constructor (
-        /**
-         * @summary `typeIdentifier`.
-         * @description
-         * Offered `CO-type-identifier` alternatives (OID and/or
-         * PrintableString). ISO/IEC 9040:1997 §14, §20.1.1.
-         * @public
-         * @readonly
-         */
-        readonly typeIdentifier: ParameterOffers_typeIdentifier_Item[],
-        /**
-         * @summary `access`.
-         * @description
-         * Offered `CO-access` rules; set bits are offered.
-         * Default `"NSAC"`. Combined rules and `"no-access"`
-         * need Enhanced Access-rules FU.
-         * ISO/IEC 9040:1997 §9, §10.5, §20.1.3, table 1,
-         * table 11.
-         * @public
-         * @readonly
-         */
-        readonly access?: OPTIONAL<AccessRuleOffer>,
-        /**
-         * @summary `trigger`.
-         * @description
-         * Offered `CO-trigger`; bits `yes`(0) / `no`(1). Valid
-         * only if priority is `"normal"`. Default
-         * `"not selected"`. ISO/IEC 9040:1997 §3.3.43,
-         * §20.1.5, §24.1.
-         * @public
-         * @readonly
-         */
-        readonly trigger?: OPTIONAL<ParameterOffers_trigger>,
-        /**
-         * @summary `size`.
-         * @description
-         * Offered `CO-size`. Meaning depends on category:
-         * character max string length (default 16); boolean
-         * max booleans (default 16); symbolic max distinct
-         * values (default 256); integer max value (default
-         * 65535); transparent max bits (default 16).
-         * ISO/IEC 9040:1997 §20.2.2.
-         * @public
-         * @readonly
-         */
-        readonly size?: OPTIONAL<IntegerOffer>,
-        /**
-         * @summary `category`.
-         * @description
-         * Offered `CO-category` values; set bits are offered.
-         * Default `"boolean"`.
-         * ISO/IEC 9040:1997 table 9, §20.2.3–§20.2.6.
-         * @public
-         * @readonly
-         */
-        readonly category?: OPTIONAL<ParameterOffers_category>,
-        /**
-         * @summary `repertoire`.
-         * @description
-         * Offered `CO-repertoire-assignment` alternatives
-         * (same form as CDS). Used when category is
-         * character. ISO/IEC 9040:1997 table 9, §20.2.5.
-         * @public
-         * @readonly
-         */
-        readonly repertoire?: OPTIONAL<RepertoireAssignment[]>,
-        /**
-         * @summary `priority`.
-         * @description
-         * Offered `CO-priority` values; set bits are offered.
-         * Default `"normal"`. Selects NDQ / HDQ / UDQ.
-         * ISO/IEC 9040:1997 §20.1.4, §24.5;
-         * ISO/IEC 9041-1:1997 §6.12, §6.14, §6.25.
-         * @public
-         * @readonly
-         */
-        readonly priority?: OPTIONAL<ParameterOffers_priority>,
-        /**
-         * @summary `structure`.
-         * @description
-         * Offered `CO-structure`: non-parametric and/or
-         * parametric element count.
-         * ISO/IEC 9040:1997 §10.6, §14.1, §20.1.2.
-         * @public
-         * @readonly
-         */
-        readonly structure?: OPTIONAL<ParameterOffers_structure>,
-        /**
-         * @summary `multiElement`.
-         * @description
-         * Per-element offers (`CO-element-id`, size, category,
-         * repertoire). ISO/IEC 9040:1997 §20.2.1.
-         * @public
-         * @readonly
-         */
-        readonly multiElement?: OPTIONAL<ElementParamOffer[]>
-    ) {}
+        typeIdentifier: ParameterOffers_typeIdentifier_Item[],
+        access?: OPTIONAL<AccessRuleOffer>,
+        trigger?: OPTIONAL<ParameterOffers_trigger>,
+        size?: OPTIONAL<IntegerOffer>,
+        category?: OPTIONAL<ParameterOffers_category>,
+        repertoire?: OPTIONAL<RepertoireAssignment[]>,
+        priority?: OPTIONAL<ParameterOffers_priority>,
+        structure?: OPTIONAL<ParameterOffers_structure>,
+        multiElement?: OPTIONAL<ElementParamOffer[]>
+    ) {
+        this.typeIdentifier = typeIdentifier;
+        this.access = access;
+        this.trigger = trigger;
+        this.size = size;
+        this.category = category;
+        this.repertoire = repertoire;
+        this.priority = priority;
+        this.structure = structure;
+        this.multiElement = multiElement;
+    }
 
     /**
      * @summary Restructures an object into a ParameterOffers

@@ -1,6 +1,6 @@
 /* eslint-disable */
 import {
-  GeneralizedTime,
+  type GeneralizedTime,
   ASN1Element as _Element,
   ASN1TagClass as _TagClass,
   ASN1Construction as _Construction,
@@ -12,7 +12,7 @@ import {
 } from '@wildboar/asn1';
 import * as $ from '@wildboar/asn1/functional';
 import {
-  Equality_Comparision,
+  type Equality_Comparision,
   _decode_Equality_Comparision,
   _encode_Equality_Comparision,
 } from '../ISO8571-FTAM/Equality-Comparision.ta.mjs';
@@ -46,7 +46,7 @@ export class Date_and_Time_Pattern {
    * @public
    * @readonly
    */
-  readonly relational_camparision: Equality_Comparision;
+  public readonly relational_camparision: Equality_Comparision;
   /**
    * @summary `time_and_date_value`.
    * @description
@@ -56,7 +56,7 @@ export class Date_and_Time_Pattern {
    * @public
    * @readonly
    */
-  readonly time_and_date_value: GeneralizedTime;
+  public readonly time_and_date_value: GeneralizedTime;
 
   constructor(
     relational_camparision: Equality_Comparision,

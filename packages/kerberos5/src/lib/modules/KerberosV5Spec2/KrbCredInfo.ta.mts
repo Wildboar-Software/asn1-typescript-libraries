@@ -1,6 +1,6 @@
 /* eslint-disable */
 import {
-  OPTIONAL,
+  type OPTIONAL,
   ASN1Element as _Element,
   ASN1TagClass as _TagClass,
   ASN1Construction as _Construction,
@@ -17,7 +17,7 @@ import {
   _encode_EncryptionKey,
 } from '../KerberosV5Spec2/EncryptionKey.ta.mjs';
 import {
-  Realm,
+  type Realm,
   _decode_Realm,
   _encode_Realm,
 } from '../KerberosV5Spec2/Realm.ta.mjs';
@@ -27,17 +27,17 @@ import {
   _encode_PrincipalName,
 } from '../KerberosV5Spec2/PrincipalName.ta.mjs';
 import {
-  TicketFlags,
+  type TicketFlags,
   _decode_TicketFlags,
   _encode_TicketFlags,
 } from '../KerberosV5Spec2/TicketFlags.ta.mjs';
 import {
-  KerberosTime,
+  type KerberosTime,
   _decode_KerberosTime,
   _encode_KerberosTime,
 } from '../KerberosV5Spec2/KerberosTime.ta.mjs';
 import {
-  HostAddresses,
+  type HostAddresses,
   _decode_HostAddresses,
   _encode_HostAddresses,
 } from '../KerberosV5Spec2/HostAddresses.ta.mjs';
@@ -80,7 +80,7 @@ export class KrbCredInfo {
    * @public
    * @readonly
    */
-  readonly key: EncryptionKey;
+  public readonly key: EncryptionKey;
   /**
    * @summary `prealm`.
    * @description
@@ -90,7 +90,7 @@ export class KrbCredInfo {
    * @public
    * @readonly
    */
-  readonly prealm?: OPTIONAL<Realm>;
+  public readonly prealm?: OPTIONAL<Realm>;
   /**
    * @summary `pname`.
    * @description
@@ -100,7 +100,7 @@ export class KrbCredInfo {
    * @public
    * @readonly
    */
-  readonly pname?: OPTIONAL<PrincipalName>;
+  public readonly pname?: OPTIONAL<PrincipalName>;
   /**
    * @summary `flags`.
    * @description
@@ -111,7 +111,7 @@ export class KrbCredInfo {
    * @public
    * @readonly
    */
-  readonly flags?: OPTIONAL<TicketFlags>;
+  public readonly flags?: OPTIONAL<TicketFlags>;
   /**
    * @summary `authtime`.
    * @description
@@ -121,7 +121,7 @@ export class KrbCredInfo {
    * @public
    * @readonly
    */
-  readonly authtime?: OPTIONAL<KerberosTime>;
+  public readonly authtime?: OPTIONAL<KerberosTime>;
   /**
    * @summary `starttime`.
    * @description
@@ -131,7 +131,7 @@ export class KrbCredInfo {
    * @public
    * @readonly
    */
-  readonly starttime?: OPTIONAL<KerberosTime>;
+  public readonly starttime?: OPTIONAL<KerberosTime>;
   /**
    * @summary `endtime`.
    * @description
@@ -141,7 +141,7 @@ export class KrbCredInfo {
    * @public
    * @readonly
    */
-  readonly endtime?: OPTIONAL<KerberosTime>;
+  public readonly endtime?: OPTIONAL<KerberosTime>;
   /**
    * @summary `renew_till`.
    * @description
@@ -151,7 +151,7 @@ export class KrbCredInfo {
    * @public
    * @readonly
    */
-  readonly renew_till?: OPTIONAL<KerberosTime>;
+  public readonly renew_till?: OPTIONAL<KerberosTime>;
   /**
    * @summary `srealm`.
    * @description
@@ -162,7 +162,7 @@ export class KrbCredInfo {
    * @public
    * @readonly
    */
-  readonly srealm?: OPTIONAL<Realm>;
+  public readonly srealm?: OPTIONAL<Realm>;
   /**
    * @summary `sname`.
    * @description
@@ -173,7 +173,7 @@ export class KrbCredInfo {
    * @public
    * @readonly
    */
-  readonly sname?: OPTIONAL<PrincipalName>;
+  public readonly sname?: OPTIONAL<PrincipalName>;
   /**
    * @summary `caddr`.
    * @description
@@ -184,7 +184,7 @@ export class KrbCredInfo {
    * @public
    * @readonly
    */
-  readonly caddr?: OPTIONAL<HostAddresses>;
+  public readonly caddr?: OPTIONAL<HostAddresses>;
 
   constructor(
     key: EncryptionKey,

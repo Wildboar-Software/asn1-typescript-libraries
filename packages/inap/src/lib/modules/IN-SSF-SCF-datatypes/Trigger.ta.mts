@@ -1,9 +1,9 @@
 /* eslint-disable */
 import {
-    ASN1Element as _Element,
+    type ASN1Element as _Element,
     ASN1TagClass as _TagClass,
-    INTEGER,
-    OPTIONAL
+    type INTEGER,
+    type OPTIONAL
 } from "@wildboar/asn1";
 import * as $ from "@wildboar/asn1/functional";
 import { _decode_EventTypeBCSM, _encode_EventTypeBCSM, _enum_for_EventTypeBCSM, EventTypeBCSM } from "../IN-SSF-SCF-datatypes/EventTypeBCSM.ta.mjs";
@@ -79,7 +79,7 @@ class Trigger {
          * @static
          */
 
-    public static _enum_for_dpName = _enum_for_EventTypeBCSM;
+    public static _enum_for_dpName: typeof _enum_for_EventTypeBCSM = _enum_for_EventTypeBCSM;
 }
 
 /**

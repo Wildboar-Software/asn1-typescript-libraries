@@ -1,13 +1,13 @@
 /* eslint-disable */
 import {
-    OPTIONAL,
-    ASN1Element as _Element,
+    type OPTIONAL,
+    type ASN1Element as _Element,
     ASN1TagClass as _TagClass
 } from "@wildboar/asn1";
 import * as $ from "@wildboar/asn1/functional";
-import { DefaultFaultHandling_action, _decode_DefaultFaultHandling_action, _encode_DefaultFaultHandling_action, _enum_for_DefaultFaultHandling_action } from "../IN-SSF-SCF-datatypes/DefaultFaultHandling-action.ta.mjs";
+import { type DefaultFaultHandling_action, _decode_DefaultFaultHandling_action, _encode_DefaultFaultHandling_action, _enum_for_DefaultFaultHandling_action } from "../IN-SSF-SCF-datatypes/DefaultFaultHandling-action.ta.mjs";
 // export { DefaultFaultHandling_action, _enum_for_DefaultFaultHandling_action, DefaultFaultHandling_action_resumeCallProcessing /* IMPORTED_LONG_ENUMERATION_ITEM */, resumeCallProcessing /* IMPORTED_SHORT_ENUMERATION_ITEM */, DefaultFaultHandling_action_releaseCall /* IMPORTED_LONG_ENUMERATION_ITEM */, releaseCall /* IMPORTED_SHORT_ENUMERATION_ITEM */, _decode_DefaultFaultHandling_action, _encode_DefaultFaultHandling_action } from "../IN-SSF-SCF-datatypes/DefaultFaultHandling-action.ta.mjs";
-import { GapTreatment, _decode_GapTreatment, _encode_GapTreatment } from "../IN-SSF-SCF-datatypes/GapTreatment.ta.mjs";
+import { type GapTreatment, _decode_GapTreatment, _encode_GapTreatment } from "../IN-SSF-SCF-datatypes/GapTreatment.ta.mjs";
 // export { GapTreatment, _decode_GapTreatment, _encode_GapTreatment } from "../IN-SSF-SCF-datatypes/GapTreatment.ta.mjs";
 
 
@@ -81,7 +81,7 @@ class DefaultFaultHandling {
          * @static
          */
 
-    public static _enum_for_action = _enum_for_DefaultFaultHandling_action;
+    public static _enum_for_action: typeof _enum_for_DefaultFaultHandling_action = _enum_for_DefaultFaultHandling_action;
 }
 
 /**

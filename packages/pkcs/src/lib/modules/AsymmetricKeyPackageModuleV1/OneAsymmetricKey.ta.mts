@@ -1,32 +1,32 @@
 /* eslint-disable */
 import {
-    ASN1Element as _Element,
+    type ASN1Element as _Element,
     ASN1TagClass as _TagClass,
-    OPTIONAL,
+    type OPTIONAL,
 } from "@wildboar/asn1";
 import * as $ from "@wildboar/asn1/functional";
 import {
-    Attributes,
+    type Attributes,
     _decode_Attributes,
     _encode_Attributes,
 } from "../AsymmetricKeyPackageModuleV1/Attributes.ta.mjs";
 import {
-    PrivateKey,
+    type PrivateKey,
     _decode_PrivateKey,
     _encode_PrivateKey,
 } from "../AsymmetricKeyPackageModuleV1/PrivateKey.ta.mjs";
 import {
-    PrivateKeyAlgorithmIdentifier,
+    type PrivateKeyAlgorithmIdentifier,
     _decode_PrivateKeyAlgorithmIdentifier,
     _encode_PrivateKeyAlgorithmIdentifier,
 } from "../AsymmetricKeyPackageModuleV1/PrivateKeyAlgorithmIdentifier.ta.mjs";
 import {
-    Version,
+    type Version,
     _decode_Version,
     _encode_Version,
 } from "../AsymmetricKeyPackageModuleV1/Version.ta.mjs";
 import {
-    PublicKey,
+    type PublicKey,
     _decode_PublicKey,
     _encode_PublicKey,
 } from "../AsymmetricKeyPackageModuleV1/PublicKey.ta.mjs";
@@ -52,44 +52,58 @@ import {
  *
  */
 export class OneAsymmetricKey {
+    /**
+     * @summary `version`.
+     * @public
+     * @readonly
+     */
+    public readonly version: Version;
+    /**
+     * @summary `privateKeyAlgorithm`.
+     * @public
+     * @readonly
+     */
+    public readonly privateKeyAlgorithm: PrivateKeyAlgorithmIdentifier;
+    /**
+     * @summary `privateKey`.
+     * @public
+     * @readonly
+     */
+    public readonly privateKey: PrivateKey;
+    /**
+     * @summary `attributes`.
+     * @public
+     * @readonly
+     */
+    public readonly attributes?: OPTIONAL<Attributes>;
+    /**
+     * @summary `publicKey`.
+     * @public
+     * @readonly
+     */
+    public readonly publicKey?: OPTIONAL<PublicKey>;
+    /**
+     * @summary Extensions that are not recognized.
+     * @public
+     * @readonly
+     */
+    public readonly _unrecognizedExtensionsList: _Element[];
+
     constructor(
-        /**
-         * @summary `version`.
-         * @public
-         * @readonly
-         */
-        readonly version: Version,
-        /**
-         * @summary `privateKeyAlgorithm`.
-         * @public
-         * @readonly
-         */
-        readonly privateKeyAlgorithm: PrivateKeyAlgorithmIdentifier,
-        /**
-         * @summary `privateKey`.
-         * @public
-         * @readonly
-         */
-        readonly privateKey: PrivateKey,
-        /**
-         * @summary `attributes`.
-         * @public
-         * @readonly
-         */
-        readonly attributes?: OPTIONAL<Attributes>,
-        /**
-         * @summary `publicKey`.
-         * @public
-         * @readonly
-         */
-        readonly publicKey?: OPTIONAL<PublicKey>,
-        /**
-         * @summary Extensions that are not recognized.
-         * @public
-         * @readonly
-         */
-        readonly _unrecognizedExtensionsList: _Element[] = []
-    ) {}
+        version: Version,
+        privateKeyAlgorithm: PrivateKeyAlgorithmIdentifier,
+        privateKey: PrivateKey,
+        attributes?: OPTIONAL<Attributes>,
+        publicKey?: OPTIONAL<PublicKey>,
+        _unrecognizedExtensionsList: _Element[] = []
+    ) {
+        this.version = version;
+        this.privateKeyAlgorithm = privateKeyAlgorithm;
+        this.privateKey = privateKey;
+        this.attributes = attributes;
+        this.publicKey = publicKey;
+        this._unrecognizedExtensionsList = _unrecognizedExtensionsList;
+    }
 
     /**
      * @summary Restructures an object into a OneAsymmetricKey

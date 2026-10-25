@@ -1,6 +1,6 @@
 /* eslint-disable */
 import {
-    INTEGER
+    type INTEGER
 } from "@wildboar/asn1";
 import * as $ from "@wildboar/asn1/functional";
 
@@ -30,7 +30,7 @@ type RateControlTimeUnit = INTEGER;
  * @type {number}
  */
 export
-const RateControlTimeUnit_unrestricted: RateControlTimeUnit = 0; /* LONG_NAMED_INTEGER_VALUE */
+const RateControlTimeUnit_unrestricted: 0 = 0 satisfies RateControlTimeUnit; /* LONG_NAMED_INTEGER_VALUE */
 
 /**
  * @summary RateControlTimeUnit_unrestricted
@@ -38,7 +38,7 @@ const RateControlTimeUnit_unrestricted: RateControlTimeUnit = 0; /* LONG_NAMED_I
  * @type {number}
  */
 export
-const unrestricted: RateControlTimeUnit = RateControlTimeUnit_unrestricted; /* SHORT_NAMED_INTEGER_VALUE */
+const unrestricted: 0 = RateControlTimeUnit_unrestricted; /* SHORT_NAMED_INTEGER_VALUE */
 
 /**
  * @summary RateControlTimeUnit_minute
@@ -46,7 +46,7 @@ const unrestricted: RateControlTimeUnit = RateControlTimeUnit_unrestricted; /* S
  * @type {number}
  */
 export
-const RateControlTimeUnit_minute: RateControlTimeUnit = 1; /* LONG_NAMED_INTEGER_VALUE */
+const RateControlTimeUnit_minute: 1 = 1 satisfies RateControlTimeUnit; /* LONG_NAMED_INTEGER_VALUE */
 
 /**
  * @summary RateControlTimeUnit_minute
@@ -54,7 +54,7 @@ const RateControlTimeUnit_minute: RateControlTimeUnit = 1; /* LONG_NAMED_INTEGER
  * @type {number}
  */
 export
-const minute: RateControlTimeUnit = RateControlTimeUnit_minute; /* SHORT_NAMED_INTEGER_VALUE */
+const minute: 1 = RateControlTimeUnit_minute; /* SHORT_NAMED_INTEGER_VALUE */
 
 /**
  * @summary RateControlTimeUnit_hour
@@ -62,7 +62,7 @@ const minute: RateControlTimeUnit = RateControlTimeUnit_minute; /* SHORT_NAMED_I
  * @type {number}
  */
 export
-const RateControlTimeUnit_hour: RateControlTimeUnit = 2; /* LONG_NAMED_INTEGER_VALUE */
+const RateControlTimeUnit_hour: 2 = 2 satisfies RateControlTimeUnit; /* LONG_NAMED_INTEGER_VALUE */
 
 /**
  * @summary RateControlTimeUnit_hour
@@ -70,7 +70,7 @@ const RateControlTimeUnit_hour: RateControlTimeUnit = 2; /* LONG_NAMED_INTEGER_V
  * @type {number}
  */
 export
-const hour: RateControlTimeUnit = RateControlTimeUnit_hour; /* SHORT_NAMED_INTEGER_VALUE */
+const hour: 2 = RateControlTimeUnit_hour; /* SHORT_NAMED_INTEGER_VALUE */
 
 /**
  * @summary RateControlTimeUnit_day
@@ -78,7 +78,7 @@ const hour: RateControlTimeUnit = RateControlTimeUnit_hour; /* SHORT_NAMED_INTEG
  * @type {number}
  */
 export
-const RateControlTimeUnit_day: RateControlTimeUnit = 3; /* LONG_NAMED_INTEGER_VALUE */
+const RateControlTimeUnit_day: 3 = 3 satisfies RateControlTimeUnit; /* LONG_NAMED_INTEGER_VALUE */
 
 /**
  * @summary RateControlTimeUnit_day
@@ -86,7 +86,7 @@ const RateControlTimeUnit_day: RateControlTimeUnit = 3; /* LONG_NAMED_INTEGER_VA
  * @type {number}
  */
 export
-const day: RateControlTimeUnit = RateControlTimeUnit_day; /* SHORT_NAMED_INTEGER_VALUE */
+const day: 3 = RateControlTimeUnit_day; /* SHORT_NAMED_INTEGER_VALUE */
 
 /**
  * @summary RateControlTimeUnit_week
@@ -94,7 +94,7 @@ const day: RateControlTimeUnit = RateControlTimeUnit_day; /* SHORT_NAMED_INTEGER
  * @type {number}
  */
 export
-const RateControlTimeUnit_week: RateControlTimeUnit = 4; /* LONG_NAMED_INTEGER_VALUE */
+const RateControlTimeUnit_week: 4 = 4 satisfies RateControlTimeUnit; /* LONG_NAMED_INTEGER_VALUE */
 
 /**
  * @summary RateControlTimeUnit_week
@@ -102,7 +102,7 @@ const RateControlTimeUnit_week: RateControlTimeUnit = 4; /* LONG_NAMED_INTEGER_V
  * @type {number}
  */
 export
-const week: RateControlTimeUnit = RateControlTimeUnit_week; /* SHORT_NAMED_INTEGER_VALUE */
+const week: 4 = RateControlTimeUnit_week; /* SHORT_NAMED_INTEGER_VALUE */
 
 export
 const _decode_RateControlTimeUnit: $.ASN1Decoder<RateControlTimeUnit> = $._decodeInteger;

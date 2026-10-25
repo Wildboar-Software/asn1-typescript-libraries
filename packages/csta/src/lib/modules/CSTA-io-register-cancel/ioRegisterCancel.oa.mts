@@ -8,7 +8,7 @@ import { type OPERATION } from "../Remote-Operations-Information-Objects/OPERATI
 
 import { IORegisterCancelArgument, _decode_IORegisterCancelArgument, _encode_IORegisterCancelArgument } from "../CSTA-io-register-cancel/IORegisterCancelArgument.ta.mjs";
 
-import { IORegisterCancelResult, _decode_IORegisterCancelResult, _encode_IORegisterCancelResult } from "../CSTA-io-register-cancel/IORegisterCancelResult.ta.mjs";
+import { type IORegisterCancelResult, _decode_IORegisterCancelResult, _encode_IORegisterCancelResult } from "../CSTA-io-register-cancel/IORegisterCancelResult.ta.mjs";
 
 import { universalFailure } from "../CSTA-error-definition/universalFailure.oa.mjs";
 

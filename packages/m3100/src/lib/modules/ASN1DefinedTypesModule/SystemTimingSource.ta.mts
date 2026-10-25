@@ -1,7 +1,7 @@
 /* eslint-disable */
 import {
-    OPTIONAL,
-    ASN1Element as _Element,
+    type OPTIONAL,
+    type ASN1Element as _Element,
     ASN1TagClass as _TagClass,
     ASN1Construction as _Construction,
     ASN1UniversalType as _UniversalType,
@@ -32,20 +32,26 @@ import {
  *
  */
 export class SystemTimingSource {
+    /**
+     * @summary `primaryTimingSource`.
+     * @public
+     * @readonly
+     */
+    public readonly primaryTimingSource: SystemTiming;
+    /**
+     * @summary `secondaryTimingSource`.
+     * @public
+     * @readonly
+     */
+    public readonly secondaryTimingSource?: OPTIONAL<SystemTiming>;
+
     constructor(
-        /**
-         * @summary `primaryTimingSource`.
-         * @public
-         * @readonly
-         */
-        readonly primaryTimingSource: SystemTiming,
-        /**
-         * @summary `secondaryTimingSource`.
-         * @public
-         * @readonly
-         */
-        readonly secondaryTimingSource?: OPTIONAL<SystemTiming>
-    ) {}
+        primaryTimingSource: SystemTiming,
+        secondaryTimingSource?: OPTIONAL<SystemTiming>
+    ) {
+        this.primaryTimingSource = primaryTimingSource;
+        this.secondaryTimingSource = secondaryTimingSource;
+    }
 
     /**
      * @summary Restructures an object into a SystemTimingSource

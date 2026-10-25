@@ -1,14 +1,14 @@
 /* eslint-disable */
 import {
-    INTEGER,
-    OPTIONAL,
-    ASN1Element as _Element,
+    type INTEGER,
+    type OPTIONAL,
+    type ASN1Element as _Element,
     ASN1TagClass as _TagClass
 } from "@wildboar/asn1";
 import * as $ from "@wildboar/asn1/functional";
 import { EDNConnectionInfo, _decode_EDNConnectionInfo, _encode_EDNConnectionInfo } from "../TS33128Payloads/EDNConnectionInfo.ta.mjs";
 // export { EDNConnectionInfo, _decode_EDNConnectionInfo, _encode_EDNConnectionInfo } from "../TS33128Payloads/EDNConnectionInfo.ta.mjs";
-import { EESsInfo, _decode_EESsInfo, _encode_EESsInfo } from "../TS33128Payloads/EESsInfo.ta.mjs";
+import { type EESsInfo, _decode_EESsInfo, _encode_EESsInfo } from "../TS33128Payloads/EESsInfo.ta.mjs";
 // export { EESsInfo, _decode_EESsInfo, _encode_EESsInfo } from "../TS33128Payloads/EESsInfo.ta.mjs";
 
 

@@ -2,12 +2,12 @@
 import { id_opcode_linkedLDAP } from "../CommonProtocolSpecification/id-opcode-linkedLDAP.va.mjs";
 import { type OPERATION } from "../CommonProtocolSpecification/OPERATION.oca.mjs";
 import {
-    LinkedArgument,
+    type LinkedArgument,
     _decode_LinkedArgument,
     _encode_LinkedArgument,
 } from "../DirectoryAbstractService/LinkedArgument.ta.mjs";
 import {
-    LinkedResult,
+    type LinkedResult,
     _decode_LinkedResult,
     _encode_LinkedResult,
 } from "../DirectoryAbstractService/LinkedResult.ta.mjs";

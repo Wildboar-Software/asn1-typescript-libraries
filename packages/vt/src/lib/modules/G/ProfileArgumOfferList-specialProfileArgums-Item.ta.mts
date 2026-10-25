@@ -1,7 +1,7 @@
 /* eslint-disable */
 import {
-    INTEGER,
-    ASN1Element as _Element,
+    type INTEGER,
+    type ASN1Element as _Element,
     ASN1TagClass as _TagClass,
     ASN1Construction as _Construction,
     ASN1UniversalType as _UniversalType,
@@ -11,7 +11,7 @@ import {
     ASN1ConstructionError as _ConstructionError,
 } from "@wildboar/asn1";
 import * as $ from "@wildboar/asn1/functional";
-import { ProfileArgumOfferList_specialProfileArgums_Item_offeredValues, _decode_ProfileArgumOfferList_specialProfileArgums_Item_offeredValues, _encode_ProfileArgumOfferList_specialProfileArgums_Item_offeredValues } from "../G/ProfileArgumOfferList-specialProfileArgums-Item-offeredValues.ta.mjs";
+import { type ProfileArgumOfferList_specialProfileArgums_Item_offeredValues, _decode_ProfileArgumOfferList_specialProfileArgums_Item_offeredValues, _encode_ProfileArgumOfferList_specialProfileArgums_Item_offeredValues } from "../G/ProfileArgumOfferList-specialProfileArgums-Item-offeredValues.ta.mjs";
 
 
 /**
@@ -40,25 +40,31 @@ import { ProfileArgumOfferList_specialProfileArgums_Item_offeredValues, _decode_
  */
 export
 class ProfileArgumOfferList_specialProfileArgums_Item {
+    /**
+     * @summary `identifier`.
+     * @description
+     * Profile-defined argument number. ISO/IEC 9040:1997 §3.3.51.
+     * @public
+     * @readonly
+     */
+    public readonly identifier: INTEGER;
+    /**
+     * @summary `offeredValues`.
+     * @description
+     * Boolean bits, integer offer, string set, or OID set. ISO/IEC
+     * 9041-1:1997 §12.2.
+     * @public
+     * @readonly
+     */
+    public readonly offeredValues: ProfileArgumOfferList_specialProfileArgums_Item_offeredValues;
+
     constructor (
-        /**
-         * @summary `identifier`.
-         * @description
-         * Profile-defined argument number. ISO/IEC 9040:1997 §3.3.51.
-         * @public
-         * @readonly
-         */
-        readonly identifier: INTEGER,
-        /**
-         * @summary `offeredValues`.
-         * @description
-         * Boolean bits, integer offer, string set, or OID set. ISO/IEC
-         * 9041-1:1997 §12.2.
-         * @public
-         * @readonly
-         */
-        readonly offeredValues: ProfileArgumOfferList_specialProfileArgums_Item_offeredValues
-    ) {}
+        identifier: INTEGER,
+        offeredValues: ProfileArgumOfferList_specialProfileArgums_Item_offeredValues
+    ) {
+        this.identifier = identifier;
+        this.offeredValues = offeredValues;
+    }
 
     /**
      * @summary Restructures an object into a ProfileArgumOfferList_specialProfileArgums_Item

@@ -1,7 +1,7 @@
 /* eslint-disable */
 
 import * as $ from "@wildboar/asn1/functional";
-import { SEQUENCE, ASN1Element as _Element } from "@wildboar/asn1";
+import { type SEQUENCE, ASN1Element as _Element } from "@wildboar/asn1";
 import { CDRInformationItem, _decode_CDRInformationItem, _encode_CDRInformationItem } from "../CSTA-call-detail-record/CDRInformationItem.ta.mjs";
 
 

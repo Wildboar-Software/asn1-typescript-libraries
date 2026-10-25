@@ -1,7 +1,7 @@
 /* eslint-disable */
 import {
-  OPTIONAL,
-  INTEGER,
+  type OPTIONAL,
+  type INTEGER,
   ASN1Element as _Element,
   ASN1TagClass as _TagClass,
   ASN1Construction as _Construction,
@@ -13,7 +13,7 @@ import {
 } from '@wildboar/asn1';
 import * as $ from '@wildboar/asn1/functional';
 import {
-  PKIFreeText,
+  type PKIFreeText,
   _decode_PKIFreeText,
   _encode_PKIFreeText,
 } from '../PKIXCMP-2009/PKIFreeText.ta.mjs';
@@ -32,40 +32,48 @@ import {
  *
  */
 export class PollRepContent_Item {
+  /**
+   * @summary `certReqId`.
+   * @description
+   *
+   * Certificate request identifier still pending ([RFC 4210 §5.3.22](https://datatracker.ietf.org/doc/html/rfc4210#section-5.3.22)).
+   *
+   * @public
+   * @readonly
+   */
+  public readonly certReqId: INTEGER;
+  /**
+   * @summary `checkAfter`.
+   * @description
+   *
+   * Minimum time in seconds the EE should wait before sending another
+   * `pollReq` ([RFC 4210 §5.3.22](https://datatracker.ietf.org/doc/html/rfc4210#section-5.3.22)).
+   *
+   * @public
+   * @readonly
+   */
+  public readonly checkAfter: INTEGER;
+  /**
+   * @summary `reason`.
+   * @description
+   *
+   * Optional human-readable reason (`PKIFreeText`)
+   * ([RFC 4210 §5.3.22](https://datatracker.ietf.org/doc/html/rfc4210#section-5.3.22)).
+   *
+   * @public
+   * @readonly
+   */
+  public readonly reason?: OPTIONAL<PKIFreeText>;
+
   constructor(
-    /**
-     * @summary `certReqId`.
-     * @description
-     *
-     * Certificate request identifier still pending ([RFC 4210 §5.3.22](https://datatracker.ietf.org/doc/html/rfc4210#section-5.3.22)).
-     *
-     * @public
-     * @readonly
-     */
-    readonly certReqId: INTEGER,
-    /**
-     * @summary `checkAfter`.
-     * @description
-     *
-     * Minimum time in seconds the EE should wait before sending another
-     * `pollReq` ([RFC 4210 §5.3.22](https://datatracker.ietf.org/doc/html/rfc4210#section-5.3.22)).
-     *
-     * @public
-     * @readonly
-     */
-    readonly checkAfter: INTEGER,
-    /**
-     * @summary `reason`.
-     * @description
-     *
-     * Optional human-readable reason (`PKIFreeText`)
-     * ([RFC 4210 §5.3.22](https://datatracker.ietf.org/doc/html/rfc4210#section-5.3.22)).
-     *
-     * @public
-     * @readonly
-     */
-    readonly reason?: OPTIONAL<PKIFreeText>
-  ) {}
+    certReqId: INTEGER,
+    checkAfter: INTEGER,
+    reason?: OPTIONAL<PKIFreeText>
+  ) {
+    this.certReqId = certReqId;
+    this.checkAfter = checkAfter;
+    this.reason = reason;
+  }
 
   /**
    * @summary Restructures an object into a PollRepContent_Item

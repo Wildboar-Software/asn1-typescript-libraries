@@ -1,29 +1,29 @@
 /* eslint-disable */
 import {
-    OPTIONAL,
-    ASN1Element as _Element,
+    type OPTIONAL,
+    type ASN1Element as _Element,
     ASN1TagClass as _TagClass
 } from "@wildboar/asn1";
 import * as $ from "@wildboar/asn1/functional";
-import { AALParameters, _decode_AALParameters, _encode_AALParameters } from "../IN-SSF-SCF-datatypes/AALParameters.ta.mjs";
+import { type AALParameters, _decode_AALParameters, _encode_AALParameters } from "../IN-SSF-SCF-datatypes/AALParameters.ta.mjs";
 // export { AALParameters, _decode_AALParameters, _encode_AALParameters } from "../IN-SSF-SCF-datatypes/AALParameters.ta.mjs";
-import { AdditionalATMCellRate, _decode_AdditionalATMCellRate, _encode_AdditionalATMCellRate } from "../IN-SSF-SCF-datatypes/AdditionalATMCellRate.ta.mjs";
+import { type AdditionalATMCellRate, _decode_AdditionalATMCellRate, _encode_AdditionalATMCellRate } from "../IN-SSF-SCF-datatypes/AdditionalATMCellRate.ta.mjs";
 // export { AdditionalATMCellRate, _decode_AdditionalATMCellRate, _encode_AdditionalATMCellRate } from "../IN-SSF-SCF-datatypes/AdditionalATMCellRate.ta.mjs";
-import { AESACalledParty, _decode_AESACalledParty, _encode_AESACalledParty } from "../IN-SSF-SCF-datatypes/AESACalledParty.ta.mjs";
+import { type AESACalledParty, _decode_AESACalledParty, _encode_AESACalledParty } from "../IN-SSF-SCF-datatypes/AESACalledParty.ta.mjs";
 // export { AESACalledParty, _decode_AESACalledParty, _encode_AESACalledParty } from "../IN-SSF-SCF-datatypes/AESACalledParty.ta.mjs";
-import { AESACallingParty, _decode_AESACallingParty, _encode_AESACallingParty } from "../IN-SSF-SCF-datatypes/AESACallingParty.ta.mjs";
+import { type AESACallingParty, _decode_AESACallingParty, _encode_AESACallingParty } from "../IN-SSF-SCF-datatypes/AESACallingParty.ta.mjs";
 // export { AESACallingParty, _decode_AESACallingParty, _encode_AESACallingParty } from "../IN-SSF-SCF-datatypes/AESACallingParty.ta.mjs";
-import { AlternativeATMTrafficDescriptor, _decode_AlternativeATMTrafficDescriptor, _encode_AlternativeATMTrafficDescriptor } from "../IN-SSF-SCF-datatypes/AlternativeATMTrafficDescriptor.ta.mjs";
+import { type AlternativeATMTrafficDescriptor, _decode_AlternativeATMTrafficDescriptor, _encode_AlternativeATMTrafficDescriptor } from "../IN-SSF-SCF-datatypes/AlternativeATMTrafficDescriptor.ta.mjs";
 // export { AlternativeATMTrafficDescriptor, _decode_AlternativeATMTrafficDescriptor, _encode_AlternativeATMTrafficDescriptor } from "../IN-SSF-SCF-datatypes/AlternativeATMTrafficDescriptor.ta.mjs";
-import { ATMCellRate, _decode_ATMCellRate, _encode_ATMCellRate } from "../IN-SSF-SCF-datatypes/ATMCellRate.ta.mjs";
+import { type ATMCellRate, _decode_ATMCellRate, _encode_ATMCellRate } from "../IN-SSF-SCF-datatypes/ATMCellRate.ta.mjs";
 // export { ATMCellRate, _decode_ATMCellRate, _encode_ATMCellRate } from "../IN-SSF-SCF-datatypes/ATMCellRate.ta.mjs";
-import { CDVTDescriptor, _decode_CDVTDescriptor, _encode_CDVTDescriptor } from "../IN-SSF-SCF-datatypes/CDVTDescriptor.ta.mjs";
+import { type CDVTDescriptor, _decode_CDVTDescriptor, _encode_CDVTDescriptor } from "../IN-SSF-SCF-datatypes/CDVTDescriptor.ta.mjs";
 // export { CDVTDescriptor, _decode_CDVTDescriptor, _encode_CDVTDescriptor } from "../IN-SSF-SCF-datatypes/CDVTDescriptor.ta.mjs";
-import { CumulativeTransitDelay, _decode_CumulativeTransitDelay, _encode_CumulativeTransitDelay } from "../IN-SSF-SCF-datatypes/CumulativeTransitDelay.ta.mjs";
+import { type CumulativeTransitDelay, _decode_CumulativeTransitDelay, _encode_CumulativeTransitDelay } from "../IN-SSF-SCF-datatypes/CumulativeTransitDelay.ta.mjs";
 // export { CumulativeTransitDelay, _decode_CumulativeTransitDelay, _encode_CumulativeTransitDelay } from "../IN-SSF-SCF-datatypes/CumulativeTransitDelay.ta.mjs";
-import { EndToEndTransitDelay, _decode_EndToEndTransitDelay, _encode_EndToEndTransitDelay } from "../IN-SSF-SCF-datatypes/EndToEndTransitDelay.ta.mjs";
+import { type EndToEndTransitDelay, _decode_EndToEndTransitDelay, _encode_EndToEndTransitDelay } from "../IN-SSF-SCF-datatypes/EndToEndTransitDelay.ta.mjs";
 // export { EndToEndTransitDelay, _decode_EndToEndTransitDelay, _encode_EndToEndTransitDelay } from "../IN-SSF-SCF-datatypes/EndToEndTransitDelay.ta.mjs";
-import { MinAcceptableATMTrafficDescriptor, _decode_MinAcceptableATMTrafficDescriptor, _encode_MinAcceptableATMTrafficDescriptor } from "../IN-SSF-SCF-datatypes/MinAcceptableATMTrafficDescriptor.ta.mjs";
+import { type MinAcceptableATMTrafficDescriptor, _decode_MinAcceptableATMTrafficDescriptor, _encode_MinAcceptableATMTrafficDescriptor } from "../IN-SSF-SCF-datatypes/MinAcceptableATMTrafficDescriptor.ta.mjs";
 // export { MinAcceptableATMTrafficDescriptor, _decode_MinAcceptableATMTrafficDescriptor, _encode_MinAcceptableATMTrafficDescriptor } from "../IN-SSF-SCF-datatypes/MinAcceptableATMTrafficDescriptor.ta.mjs";
 
 

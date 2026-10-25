@@ -1,9 +1,9 @@
 /* eslint-disable */
 import {
-    ASN1Element as _Element,
+    type ASN1Element as _Element,
     ASN1TagClass as _TagClass,
-    INTEGER,
-    OPTIONAL
+    type INTEGER,
+    type OPTIONAL
 } from "@wildboar/asn1";
 import * as $ from "@wildboar/asn1/functional";
 import { _decode_ActionPerformed, _encode_ActionPerformed, _enum_for_ActionPerformed, ActionPerformed } from "../IN-CS3-SSF-SCF-datatypes/ActionPerformed.ta.mjs";
@@ -90,13 +90,13 @@ class TriggerResult {
          * @static
          */
 
-    public static _enum_for_actionPerformed = _enum_for_ActionPerformed;        /**
+    public static _enum_for_actionPerformed: typeof _enum_for_ActionPerformed = _enum_for_ActionPerformed;        /**
          * @summary The enum used as the type of the component `dPName`
          * @public
          * @static
          */
 
-    public static _enum_for_dPName = _enum_for_EventTypeBCSM;
+    public static _enum_for_dPName: typeof _enum_for_EventTypeBCSM = _enum_for_EventTypeBCSM;
 }
 
 /**

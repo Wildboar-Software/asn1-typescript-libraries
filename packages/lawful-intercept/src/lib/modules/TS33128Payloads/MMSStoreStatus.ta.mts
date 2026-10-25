@@ -103,7 +103,7 @@ type MMSStoreStatus = _enum_for_MMSStoreStatus;
  * @enum {number}
  */
 export
-const MMSStoreStatus = _enum_for_MMSStoreStatus;
+const MMSStoreStatus: typeof _enum_for_MMSStoreStatus = _enum_for_MMSStoreStatus;
 
 /**
  * @summary MMSStoreStatus_success
@@ -111,7 +111,7 @@ const MMSStoreStatus = _enum_for_MMSStoreStatus;
  * @type {number}
  */
 export
-const MMSStoreStatus_success: MMSStoreStatus = MMSStoreStatus.success; /* LONG_NAMED_ENUMERATED_VALUE */
+const MMSStoreStatus_success: _enum_for_MMSStoreStatus.success = MMSStoreStatus.success; /* LONG_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary success
@@ -119,7 +119,7 @@ const MMSStoreStatus_success: MMSStoreStatus = MMSStoreStatus.success; /* LONG_N
  * @type {number}
  */
 export
-const success: MMSStoreStatus = MMSStoreStatus.success; /* SHORT_NAMED_ENUMERATED_VALUE */
+const success: _enum_for_MMSStoreStatus.success = MMSStoreStatus.success; /* SHORT_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary MMSStoreStatus_errorTransientFailure
@@ -127,7 +127,7 @@ const success: MMSStoreStatus = MMSStoreStatus.success; /* SHORT_NAMED_ENUMERATE
  * @type {number}
  */
 export
-const MMSStoreStatus_errorTransientFailure: MMSStoreStatus = MMSStoreStatus.errorTransientFailure; /* LONG_NAMED_ENUMERATED_VALUE */
+const MMSStoreStatus_errorTransientFailure: _enum_for_MMSStoreStatus.errorTransientFailure = MMSStoreStatus.errorTransientFailure; /* LONG_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary errorTransientFailure
@@ -135,7 +135,7 @@ const MMSStoreStatus_errorTransientFailure: MMSStoreStatus = MMSStoreStatus.erro
  * @type {number}
  */
 export
-const errorTransientFailure: MMSStoreStatus = MMSStoreStatus.errorTransientFailure; /* SHORT_NAMED_ENUMERATED_VALUE */
+const errorTransientFailure: _enum_for_MMSStoreStatus.errorTransientFailure = MMSStoreStatus.errorTransientFailure; /* SHORT_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary MMSStoreStatus_errorTransientNetworkProblem
@@ -143,7 +143,7 @@ const errorTransientFailure: MMSStoreStatus = MMSStoreStatus.errorTransientFailu
  * @type {number}
  */
 export
-const MMSStoreStatus_errorTransientNetworkProblem: MMSStoreStatus = MMSStoreStatus.errorTransientNetworkProblem; /* LONG_NAMED_ENUMERATED_VALUE */
+const MMSStoreStatus_errorTransientNetworkProblem: _enum_for_MMSStoreStatus.errorTransientNetworkProblem = MMSStoreStatus.errorTransientNetworkProblem; /* LONG_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary errorTransientNetworkProblem
@@ -151,7 +151,7 @@ const MMSStoreStatus_errorTransientNetworkProblem: MMSStoreStatus = MMSStoreStat
  * @type {number}
  */
 export
-const errorTransientNetworkProblem: MMSStoreStatus = MMSStoreStatus.errorTransientNetworkProblem; /* SHORT_NAMED_ENUMERATED_VALUE */
+const errorTransientNetworkProblem: _enum_for_MMSStoreStatus.errorTransientNetworkProblem = MMSStoreStatus.errorTransientNetworkProblem; /* SHORT_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary MMSStoreStatus_errorPermanentFailure
@@ -159,7 +159,7 @@ const errorTransientNetworkProblem: MMSStoreStatus = MMSStoreStatus.errorTransie
  * @type {number}
  */
 export
-const MMSStoreStatus_errorPermanentFailure: MMSStoreStatus = MMSStoreStatus.errorPermanentFailure; /* LONG_NAMED_ENUMERATED_VALUE */
+const MMSStoreStatus_errorPermanentFailure: _enum_for_MMSStoreStatus.errorPermanentFailure = MMSStoreStatus.errorPermanentFailure; /* LONG_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary errorPermanentFailure
@@ -167,7 +167,7 @@ const MMSStoreStatus_errorPermanentFailure: MMSStoreStatus = MMSStoreStatus.erro
  * @type {number}
  */
 export
-const errorPermanentFailure: MMSStoreStatus = MMSStoreStatus.errorPermanentFailure; /* SHORT_NAMED_ENUMERATED_VALUE */
+const errorPermanentFailure: _enum_for_MMSStoreStatus.errorPermanentFailure = MMSStoreStatus.errorPermanentFailure; /* SHORT_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary MMSStoreStatus_errorPermanentServiceDenied
@@ -175,7 +175,7 @@ const errorPermanentFailure: MMSStoreStatus = MMSStoreStatus.errorPermanentFailu
  * @type {number}
  */
 export
-const MMSStoreStatus_errorPermanentServiceDenied: MMSStoreStatus = MMSStoreStatus.errorPermanentServiceDenied; /* LONG_NAMED_ENUMERATED_VALUE */
+const MMSStoreStatus_errorPermanentServiceDenied: _enum_for_MMSStoreStatus.errorPermanentServiceDenied = MMSStoreStatus.errorPermanentServiceDenied; /* LONG_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary errorPermanentServiceDenied
@@ -183,7 +183,7 @@ const MMSStoreStatus_errorPermanentServiceDenied: MMSStoreStatus = MMSStoreStatu
  * @type {number}
  */
 export
-const errorPermanentServiceDenied: MMSStoreStatus = MMSStoreStatus.errorPermanentServiceDenied; /* SHORT_NAMED_ENUMERATED_VALUE */
+const errorPermanentServiceDenied: _enum_for_MMSStoreStatus.errorPermanentServiceDenied = MMSStoreStatus.errorPermanentServiceDenied; /* SHORT_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary MMSStoreStatus_errorPermanentMessageFormatCorrupt
@@ -191,7 +191,7 @@ const errorPermanentServiceDenied: MMSStoreStatus = MMSStoreStatus.errorPermanen
  * @type {number}
  */
 export
-const MMSStoreStatus_errorPermanentMessageFormatCorrupt: MMSStoreStatus = MMSStoreStatus.errorPermanentMessageFormatCorrupt; /* LONG_NAMED_ENUMERATED_VALUE */
+const MMSStoreStatus_errorPermanentMessageFormatCorrupt: _enum_for_MMSStoreStatus.errorPermanentMessageFormatCorrupt = MMSStoreStatus.errorPermanentMessageFormatCorrupt; /* LONG_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary errorPermanentMessageFormatCorrupt
@@ -199,7 +199,7 @@ const MMSStoreStatus_errorPermanentMessageFormatCorrupt: MMSStoreStatus = MMSSto
  * @type {number}
  */
 export
-const errorPermanentMessageFormatCorrupt: MMSStoreStatus = MMSStoreStatus.errorPermanentMessageFormatCorrupt; /* SHORT_NAMED_ENUMERATED_VALUE */
+const errorPermanentMessageFormatCorrupt: _enum_for_MMSStoreStatus.errorPermanentMessageFormatCorrupt = MMSStoreStatus.errorPermanentMessageFormatCorrupt; /* SHORT_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary MMSStoreStatus_errorPermanentMessageNotFound
@@ -207,7 +207,7 @@ const errorPermanentMessageFormatCorrupt: MMSStoreStatus = MMSStoreStatus.errorP
  * @type {number}
  */
 export
-const MMSStoreStatus_errorPermanentMessageNotFound: MMSStoreStatus = MMSStoreStatus.errorPermanentMessageNotFound; /* LONG_NAMED_ENUMERATED_VALUE */
+const MMSStoreStatus_errorPermanentMessageNotFound: _enum_for_MMSStoreStatus.errorPermanentMessageNotFound = MMSStoreStatus.errorPermanentMessageNotFound; /* LONG_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary errorPermanentMessageNotFound
@@ -215,7 +215,7 @@ const MMSStoreStatus_errorPermanentMessageNotFound: MMSStoreStatus = MMSStoreSta
  * @type {number}
  */
 export
-const errorPermanentMessageNotFound: MMSStoreStatus = MMSStoreStatus.errorPermanentMessageNotFound; /* SHORT_NAMED_ENUMERATED_VALUE */
+const errorPermanentMessageNotFound: _enum_for_MMSStoreStatus.errorPermanentMessageNotFound = MMSStoreStatus.errorPermanentMessageNotFound; /* SHORT_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary MMSStoreStatus_errorMMBoxFull
@@ -223,7 +223,7 @@ const errorPermanentMessageNotFound: MMSStoreStatus = MMSStoreStatus.errorPerman
  * @type {number}
  */
 export
-const MMSStoreStatus_errorMMBoxFull: MMSStoreStatus = MMSStoreStatus.errorMMBoxFull; /* LONG_NAMED_ENUMERATED_VALUE */
+const MMSStoreStatus_errorMMBoxFull: _enum_for_MMSStoreStatus.errorMMBoxFull = MMSStoreStatus.errorMMBoxFull; /* LONG_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary errorMMBoxFull
@@ -231,7 +231,7 @@ const MMSStoreStatus_errorMMBoxFull: MMSStoreStatus = MMSStoreStatus.errorMMBoxF
  * @type {number}
  */
 export
-const errorMMBoxFull: MMSStoreStatus = MMSStoreStatus.errorMMBoxFull; /* SHORT_NAMED_ENUMERATED_VALUE */
+const errorMMBoxFull: _enum_for_MMSStoreStatus.errorMMBoxFull = MMSStoreStatus.errorMMBoxFull; /* SHORT_NAMED_ENUMERATED_VALUE */
 export const _decode_MMSStoreStatus: $.ASN1Decoder<MMSStoreStatus> = $._decodeEnumerated;
 export const _encode_MMSStoreStatus: $.ASN1Encoder<MMSStoreStatus> = $._encodeEnumerated;
 

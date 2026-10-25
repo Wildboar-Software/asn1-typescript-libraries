@@ -1,12 +1,12 @@
 /* eslint-disable */
 import {
     ASN1ConstructionError as _ConstructionError,
-    ASN1Element as _Element,
+    type ASN1Element as _Element,
     ASN1TagClass as _TagClass,
 } from "@wildboar/asn1";
 import * as $ from "@wildboar/asn1/functional";
 import {
-    CertPolicyId,
+    type CertPolicyId,
     _decode_CertPolicyId,
     _encode_CertPolicyId,
 } from "../CertificateExtensions/CertPolicyId.ta.mjs";
@@ -26,35 +26,43 @@ import {
  *
  */
 export class PolicyMappingsSyntax_Item {
+    /**
+     * @summary `issuerDomainPolicy`.
+     * @description
+     *
+     * Policy in this CA's domain; maps to subjectDomainPolicy. Not
+     * anyPolicy.
+     *
+     * @public
+     * @readonly
+     */
+    public readonly issuerDomainPolicy: CertPolicyId;
+    /**
+     * @summary `subjectDomainPolicy`.
+     * @description
+     *
+     * Equivalent policy in the subject CA's domain. Not anyPolicy.
+     *
+     * @public
+     * @readonly
+     */
+    public readonly subjectDomainPolicy: CertPolicyId;
+    /**
+     * @summary Extensions that are not recognized.
+     * @public
+     * @readonly
+     */
+    public readonly _unrecognizedExtensionsList: _Element[];
+
     constructor(
-        /**
-         * @summary `issuerDomainPolicy`.
-         * @description
-         *
-         * Policy in this CA's domain; maps to subjectDomainPolicy. Not
-         * anyPolicy.
-         *
-         * @public
-         * @readonly
-         */
-        readonly issuerDomainPolicy: CertPolicyId,
-        /**
-         * @summary `subjectDomainPolicy`.
-         * @description
-         *
-         * Equivalent policy in the subject CA's domain. Not anyPolicy.
-         *
-         * @public
-         * @readonly
-         */
-        readonly subjectDomainPolicy: CertPolicyId,
-        /**
-         * @summary Extensions that are not recognized.
-         * @public
-         * @readonly
-         */
-        readonly _unrecognizedExtensionsList: _Element[] = []
-    ) {}
+        issuerDomainPolicy: CertPolicyId,
+        subjectDomainPolicy: CertPolicyId,
+        _unrecognizedExtensionsList: _Element[] = []
+    ) {
+        this.issuerDomainPolicy = issuerDomainPolicy;
+        this.subjectDomainPolicy = subjectDomainPolicy;
+        this._unrecognizedExtensionsList = _unrecognizedExtensionsList;
+    }
 
     /**
      * @summary Restructures an object into a PolicyMappingsSyntax_Item

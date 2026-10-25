@@ -1,6 +1,6 @@
 /* eslint-disable */
 import {
-    ASN1Element as _Element,
+    type ASN1Element as _Element,
     ASN1TagClass as _TagClass,
     ASN1Construction as _Construction,
     ASN1UniversalType as _UniversalType,
@@ -54,14 +54,14 @@ export type BasicServiceIndicator = _enum_for_BasicServiceIndicator;
  *
  * @enum {number}
  */
-export const BasicServiceIndicator = _enum_for_BasicServiceIndicator;
+export const BasicServiceIndicator: typeof _enum_for_BasicServiceIndicator = _enum_for_BasicServiceIndicator;
 
 /**
  * @summary BasicServiceIndicator_speech
  * @constant
  * @type {number}
  */
-export const BasicServiceIndicator_speech: BasicServiceIndicator =
+export const BasicServiceIndicator_speech: _enum_for_BasicServiceIndicator.speech =
     BasicServiceIndicator.speech; /* LONG_NAMED_ENUMERATED_VALUE */
 
 /**
@@ -69,7 +69,7 @@ export const BasicServiceIndicator_speech: BasicServiceIndicator =
  * @constant
  * @type {number}
  */
-export const speech: BasicServiceIndicator =
+export const speech: _enum_for_BasicServiceIndicator.speech =
     BasicServiceIndicator.speech; /* SHORT_NAMED_ENUMERATED_VALUE */
 
 /**
@@ -77,7 +77,7 @@ export const speech: BasicServiceIndicator =
  * @constant
  * @type {number}
  */
-export const BasicServiceIndicator_unrestrictedDigital: BasicServiceIndicator =
+export const BasicServiceIndicator_unrestrictedDigital: _enum_for_BasicServiceIndicator.unrestrictedDigital =
     BasicServiceIndicator.unrestrictedDigital; /* LONG_NAMED_ENUMERATED_VALUE */
 
 /**
@@ -85,14 +85,14 @@ export const BasicServiceIndicator_unrestrictedDigital: BasicServiceIndicator =
  * @constant
  * @type {number}
  */
-export const unrestrictedDigital: BasicServiceIndicator =
+export const unrestrictedDigital: _enum_for_BasicServiceIndicator.unrestrictedDigital =
     BasicServiceIndicator.unrestrictedDigital; /* SHORT_NAMED_ENUMERATED_VALUE */
 
 
-export const _decode_BasicServiceIndicator = $._decodeEnumerated;
+export const _decode_BasicServiceIndicator: $.ASN1Decoder<number> = $._decodeEnumerated;
 
 
-export const _encode_BasicServiceIndicator = $._encodeEnumerated;
+export const _encode_BasicServiceIndicator: $.ASN1Encoder<number> = $._encodeEnumerated;
 
 
 /* eslint-enable */

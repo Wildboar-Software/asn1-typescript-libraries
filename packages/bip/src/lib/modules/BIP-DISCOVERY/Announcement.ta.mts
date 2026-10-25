@@ -1,7 +1,7 @@
 /* eslint-disable */
 import {
-  OPTIONAL,
-  IA5String,
+  type OPTIONAL,
+  type IA5String,
   ASN1Element as _Element,
   ASN1TagClass as _TagClass,
   ASN1Construction as _Construction,
@@ -18,16 +18,16 @@ import {
   _encode_ProtocolVersion,
 } from '../BIP-DISCOVERY/ProtocolVersion.ta.mjs';
 import {
-  IPAddress,
+  type IPAddress,
   _decode_IPAddress,
   _encode_IPAddress,
 } from '../BIP-DISCOVERY/IPAddress.ta.mjs';
 import {
-  MACAddress,
+  type MACAddress,
   _decode_MACAddress,
   _encode_MACAddress,
 } from '../BIP-DISCOVERY/MACAddress.ta.mjs';
-import { Port, _decode_Port, _encode_Port } from '../BIP-DISCOVERY/Port.ta.mjs';
+import { type Port, _decode_Port, _encode_Port } from '../BIP-DISCOVERY/Port.ta.mjs';
 import {
   SecurityProtocol,
   _decode_SecurityProtocol,
@@ -73,7 +73,7 @@ export class Announcement {
    * @public
    * @readonly
    */
-  readonly protocolVersion: ProtocolVersion;
+  public readonly protocolVersion: ProtocolVersion;
   /**
    * @summary `slaveEndpointIPAddress`.
    * @description
@@ -84,7 +84,7 @@ export class Announcement {
    * @public
    * @readonly
    */
-  readonly slaveEndpointIPAddress: IPAddress;
+  public readonly slaveEndpointIPAddress: IPAddress;
   /**
    * @summary `slaveEndpointMACAddress`.
    * @description
@@ -95,7 +95,7 @@ export class Announcement {
    * @public
    * @readonly
    */
-  readonly slaveEndpointMACAddress: MACAddress;
+  public readonly slaveEndpointMACAddress: MACAddress;
   /**
    * @summary `slaveEndpointName`.
    * @description
@@ -107,7 +107,7 @@ export class Announcement {
    * @public
    * @readonly
    */
-  readonly slaveEndpointName: IA5String;
+  public readonly slaveEndpointName: IA5String;
   /**
    * @summary `bipMessagePort`.
    * @description
@@ -119,7 +119,7 @@ export class Announcement {
    * @public
    * @readonly
    */
-  readonly bipMessagePort?: OPTIONAL<Port>;
+  public readonly bipMessagePort?: OPTIONAL<Port>;
   /**
    * @summary `securityProtocols`.
    * @description
@@ -131,13 +131,13 @@ export class Announcement {
    * @public
    * @readonly
    */
-  readonly securityProtocols?: OPTIONAL<SecurityProtocol[]>;
+  public readonly securityProtocols?: OPTIONAL<SecurityProtocol[]>;
   /**
    * @summary Extensions that are not recognized.
    * @public
    * @readonly
    */
-  readonly _unrecognizedExtensionsList: _Element[];
+  public readonly _unrecognizedExtensionsList: _Element[];
 
   constructor(
     protocolVersion: ProtocolVersion,

@@ -1,9 +1,9 @@
 /* eslint-disable */
 import {
-    OPTIONAL,
-    BOOLEAN,
-    IA5String,
-    ASN1Element as _Element,
+    type OPTIONAL,
+    type BOOLEAN,
+    type IA5String,
+    type ASN1Element as _Element,
     ASN1TagClass as _TagClass,
     ASN1Construction as _Construction,
     ASN1UniversalType as _UniversalType,
@@ -12,17 +12,17 @@ import {
     EmbeddedPDV as _PDV,
     ASN1ConstructionError as _ConstructionError, ASN1SizeError } from "@wildboar/asn1";
 import * as $ from "@wildboar/asn1/functional";
-import { Capabilities, _decode_Capabilities, _encode_Capabilities } from "../V59/Capabilities.ta.mjs";
+import { type Capabilities, _decode_Capabilities, _encode_Capabilities } from "../V59/Capabilities.ta.mjs";
 
-import { V59String, _decode_V59String, _encode_V59String } from "../V59/V59String.ta.mjs";
+import { type V59String, _decode_V59String, _encode_V59String } from "../V59/V59String.ta.mjs";
 
-import { TxPowerLevel, _decode_TxPowerLevel, _encode_TxPowerLevel } from "../V59/TxPowerLevel.ta.mjs";
+import { type TxPowerLevel, _decode_TxPowerLevel, _encode_TxPowerLevel } from "../V59/TxPowerLevel.ta.mjs";
 
-import { SymbolRate, _decode_SymbolRate, _encode_SymbolRate } from "../V59/SymbolRate.ta.mjs";
+import { type SymbolRate, _decode_SymbolRate, _encode_SymbolRate } from "../V59/SymbolRate.ta.mjs";
 
-import { RobBitPatt, _decode_RobBitPatt, _encode_RobBitPatt } from "../V59/RobBitPatt.ta.mjs";
+import { type RobBitPatt, _decode_RobBitPatt, _encode_RobBitPatt } from "../V59/RobBitPatt.ta.mjs";
 
-import { V92ModDiag_Item_lastMOHaction, _enum_for_V92ModDiag_Item_lastMOHaction, _decode_V92ModDiag_Item_lastMOHaction, _encode_V92ModDiag_Item_lastMOHaction } from "../V59/V92ModDiag-Item-lastMOHaction.ta.mjs";
+import { type V92ModDiag_Item_lastMOHaction, _enum_for_V92ModDiag_Item_lastMOHaction, _decode_V92ModDiag_Item_lastMOHaction, _encode_V92ModDiag_Item_lastMOHaction } from "../V59/V92ModDiag-Item-lastMOHaction.ta.mjs";
 
 /**
  * @summary V92ModDiag_Item
@@ -99,7 +99,7 @@ class V92ModDiag_Item {
      * @public
      * @readonly
      */
-    readonly modeV92: Capabilities;
+    public readonly modeV92: Capabilities;
     /**
      * @summary `iNFO0d`.
      * @description
@@ -112,7 +112,7 @@ class V92ModDiag_Item {
      * @public
      * @readonly
      */
-    readonly iNFO0d: V59String;
+    public readonly iNFO0d: V59String;
     /**
      * @summary `iNFO0a`.
      * @description
@@ -125,7 +125,7 @@ class V92ModDiag_Item {
      * @public
      * @readonly
      */
-    readonly iNFO0a: V59String;
+    public readonly iNFO0a: V59String;
     /**
      * @summary `iNFO1d`.
      * @description
@@ -137,7 +137,7 @@ class V92ModDiag_Item {
      * @public
      * @readonly
      */
-    readonly iNFO1d: V59String;
+    public readonly iNFO1d: V59String;
     /**
      * @summary `iNFO1a_US`.
      * @description
@@ -149,7 +149,7 @@ class V92ModDiag_Item {
      * @public
      * @readonly
      */
-    readonly iNFO1a_US: V59String;
+    public readonly iNFO1a_US: V59String;
     /**
      * @summary `iNFO1a_SP2`.
      * @description
@@ -161,7 +161,7 @@ class V92ModDiag_Item {
      * @public
      * @readonly
      */
-    readonly iNFO1a_SP2: V59String;
+    public readonly iNFO1a_SP2: V59String;
     /**
      * @summary `jA`.
      * @description
@@ -173,7 +173,7 @@ class V92ModDiag_Item {
      * @public
      * @readonly
      */
-    readonly jA: V59String;
+    public readonly jA: V59String;
     /**
      * @summary `jD`.
      * @description
@@ -185,7 +185,7 @@ class V92ModDiag_Item {
      * @public
      * @readonly
      */
-    readonly jD: V59String;
+    public readonly jD: V59String;
     /**
      * @summary `jDP`.
      * @description
@@ -197,7 +197,7 @@ class V92ModDiag_Item {
      * @public
      * @readonly
      */
-    readonly jDP: V59String;
+    public readonly jDP: V59String;
     /**
      * @summary `cP`.
      * @description
@@ -210,7 +210,7 @@ class V92ModDiag_Item {
      * @public
      * @readonly
      */
-    readonly cP: V59String;
+    public readonly cP: V59String;
     /**
      * @summary `v92TxLevel`.
      * @description
@@ -220,7 +220,7 @@ class V92ModDiag_Item {
      * @public
      * @readonly
      */
-    readonly v92TxLevel: TxPowerLevel;
+    public readonly v92TxLevel: TxPowerLevel;
     /**
      * @summary `v92SymbolRate`.
      * @description
@@ -230,7 +230,7 @@ class V92ModDiag_Item {
      * @public
      * @readonly
      */
-    readonly v92SymbolRate: OPTIONAL<SymbolRate>;
+    public readonly v92SymbolRate: OPTIONAL<SymbolRate>;
     /**
      * @summary `txDataHistory`.
      * @description
@@ -242,7 +242,7 @@ class V92ModDiag_Item {
      * @public
      * @readonly
      */
-    readonly txDataHistory: V59String;
+    public readonly txDataHistory: V59String;
     /**
      * @summary `rxDataHistory`.
      * @description
@@ -253,7 +253,7 @@ class V92ModDiag_Item {
      * @public
      * @readonly
      */
-    readonly rxDataHistory: V59String;
+    public readonly rxDataHistory: V59String;
     /**
      * @summary `rxLevelEstimate`.
      * @description
@@ -264,7 +264,7 @@ class V92ModDiag_Item {
      * @public
      * @readonly
      */
-    readonly rxLevelEstimate: OPTIONAL<V59String>;
+    public readonly rxLevelEstimate: OPTIONAL<V59String>;
     /**
      * @summary `noiseEstimate`.
      * @description
@@ -274,7 +274,7 @@ class V92ModDiag_Item {
      * @public
      * @readonly
      */
-    readonly noiseEstimate: OPTIONAL<V59String>;
+    public readonly noiseEstimate: OPTIONAL<V59String>;
     /**
      * @summary `rxSignalQuality`.
      * @description
@@ -286,7 +286,7 @@ class V92ModDiag_Item {
      * @public
      * @readonly
      */
-    readonly rxSignalQuality: OPTIONAL<V59String>;
+    public readonly rxSignalQuality: OPTIONAL<V59String>;
     /**
      * @summary `nearEchoEstimate`.
      * @description
@@ -297,7 +297,7 @@ class V92ModDiag_Item {
      * @public
      * @readonly
      */
-    readonly nearEchoEstimate: OPTIONAL<V59String>;
+    public readonly nearEchoEstimate: OPTIONAL<V59String>;
     /**
      * @summary `farEchoEstimate`.
      * @description
@@ -308,7 +308,7 @@ class V92ModDiag_Item {
      * @public
      * @readonly
      */
-    readonly farEchoEstimate: OPTIONAL<V59String>;
+    public readonly farEchoEstimate: OPTIONAL<V59String>;
     /**
      * @summary `roundTripDelay`.
      * @description
@@ -319,7 +319,7 @@ class V92ModDiag_Item {
      * @public
      * @readonly
      */
-    readonly roundTripDelay: OPTIONAL<V59String>;
+    public readonly roundTripDelay: OPTIONAL<V59String>;
     /**
      * @summary `rBSpattern`.
      * @description
@@ -331,7 +331,7 @@ class V92ModDiag_Item {
      * @public
      * @readonly
      */
-    readonly rBSpattern: OPTIONAL<RobBitPatt>;
+    public readonly rBSpattern: OPTIONAL<RobBitPatt>;
     /**
      * @summary `digitalPadLoss`.
      * @description
@@ -342,7 +342,7 @@ class V92ModDiag_Item {
      * @public
      * @readonly
      */
-    readonly digitalPadLoss: OPTIONAL<V59String>;
+    public readonly digitalPadLoss: OPTIONAL<V59String>;
     /**
      * @summary `localCodecLaw`.
      * @description
@@ -352,7 +352,7 @@ class V92ModDiag_Item {
      * @public
      * @readonly
      */
-    readonly localCodecLaw: OPTIONAL<BOOLEAN>;
+    public readonly localCodecLaw: OPTIONAL<BOOLEAN>;
     /**
      * @summary `remoteCodecLaw`.
      * @description
@@ -362,7 +362,7 @@ class V92ModDiag_Item {
      * @public
      * @readonly
      */
-    readonly remoteCodecLaw: OPTIONAL<BOOLEAN>;
+    public readonly remoteCodecLaw: OPTIONAL<BOOLEAN>;
     /**
      * @summary `sP1Enable`.
      * @description
@@ -372,7 +372,7 @@ class V92ModDiag_Item {
      * @public
      * @readonly
      */
-    readonly sP1Enable: BOOLEAN;
+    public readonly sP1Enable: BOOLEAN;
     /**
      * @summary `lastCallSP1`.
      * @description
@@ -382,7 +382,7 @@ class V92ModDiag_Item {
      * @public
      * @readonly
      */
-    readonly lastCallSP1: BOOLEAN;
+    public readonly lastCallSP1: BOOLEAN;
     /**
      * @summary `qC1a`.
      * @description
@@ -394,7 +394,7 @@ class V92ModDiag_Item {
      * @public
      * @readonly
      */
-    readonly qC1a: IA5String;
+    public readonly qC1a: IA5String;
     /**
      * @summary `qC1d`.
      * @description
@@ -406,7 +406,7 @@ class V92ModDiag_Item {
      * @public
      * @readonly
      */
-    readonly qC1d: IA5String;
+    public readonly qC1d: IA5String;
     /**
      * @summary `qC2a`.
      * @description
@@ -418,7 +418,7 @@ class V92ModDiag_Item {
      * @public
      * @readonly
      */
-    readonly qC2a: IA5String;
+    public readonly qC2a: IA5String;
     /**
      * @summary `qC2d`.
      * @description
@@ -430,7 +430,7 @@ class V92ModDiag_Item {
      * @public
      * @readonly
      */
-    readonly qC2d: IA5String;
+    public readonly qC2d: IA5String;
     /**
      * @summary `qCA1a`.
      * @description
@@ -442,7 +442,7 @@ class V92ModDiag_Item {
      * @public
      * @readonly
      */
-    readonly qCA1a: IA5String;
+    public readonly qCA1a: IA5String;
     /**
      * @summary `qCA1d`.
      * @description
@@ -454,7 +454,7 @@ class V92ModDiag_Item {
      * @public
      * @readonly
      */
-    readonly qCA1d: IA5String;
+    public readonly qCA1d: IA5String;
     /**
      * @summary `qCA2a`.
      * @description
@@ -466,7 +466,7 @@ class V92ModDiag_Item {
      * @public
      * @readonly
      */
-    readonly qCA2a: IA5String;
+    public readonly qCA2a: IA5String;
     /**
      * @summary `qCA2d`.
      * @description
@@ -478,7 +478,7 @@ class V92ModDiag_Item {
      * @public
      * @readonly
      */
-    readonly qCA2d: IA5String;
+    public readonly qCA2d: IA5String;
     /**
      * @summary `cWDEnable`.
      * @description
@@ -488,7 +488,7 @@ class V92ModDiag_Item {
      * @public
      * @readonly
      */
-    readonly cWDEnable: BOOLEAN;
+    public readonly cWDEnable: BOOLEAN;
     /**
      * @summary `mOHEnable`.
      * @description
@@ -498,7 +498,7 @@ class V92ModDiag_Item {
      * @public
      * @readonly
      */
-    readonly mOHEnable: BOOLEAN;
+    public readonly mOHEnable: BOOLEAN;
     /**
      * @summary `lastMOHaction`.
      * @description
@@ -508,7 +508,7 @@ class V92ModDiag_Item {
      * @public
      * @readonly
      */
-    readonly lastMOHaction: V92ModDiag_Item_lastMOHaction;
+    public readonly lastMOHaction: V92ModDiag_Item_lastMOHaction;
     /**
      * @summary `mohTimeout`.
      * @description
@@ -519,7 +519,7 @@ class V92ModDiag_Item {
      * @public
      * @readonly
      */
-    readonly mohTimeout: V59String;
+    public readonly mohTimeout: V59String;
     /**
      * @summary `lastMOHduration`.
      * @description
@@ -529,7 +529,7 @@ class V92ModDiag_Item {
      * @public
      * @readonly
      */
-    readonly lastMOHduration: V59String;
+    public readonly lastMOHduration: V59String;
     /**
      * @summary `mHreq`.
      * @description
@@ -541,7 +541,7 @@ class V92ModDiag_Item {
      * @public
      * @readonly
      */
-    readonly mHreq: IA5String;
+    public readonly mHreq: IA5String;
     /**
      * @summary `mHack`.
      * @description
@@ -553,7 +553,7 @@ class V92ModDiag_Item {
      * @public
      * @readonly
      */
-    readonly mHack: IA5String;
+    public readonly mHack: IA5String;
     /**
      * @summary `mHnak`.
      * @description
@@ -565,7 +565,7 @@ class V92ModDiag_Item {
      * @public
      * @readonly
      */
-    readonly mHnak: IA5String;
+    public readonly mHnak: IA5String;
     /**
      * @summary `mHcld`.
      * @description
@@ -577,7 +577,7 @@ class V92ModDiag_Item {
      * @public
      * @readonly
      */
-    readonly mHcld: IA5String;
+    public readonly mHcld: IA5String;
     /**
      * @summary `mHcda`.
      * @description
@@ -589,7 +589,7 @@ class V92ModDiag_Item {
      * @public
      * @readonly
      */
-    readonly mHcda: IA5String;
+    public readonly mHcda: IA5String;
     /**
      * @summary `mHfrr`.
      * @description
@@ -601,13 +601,13 @@ class V92ModDiag_Item {
      * @public
      * @readonly
      */
-    readonly mHfrr: IA5String;
+    public readonly mHfrr: IA5String;
     /**
      * @summary Extensions that are not recognized.
      * @public
      * @readonly
      */
-    readonly _unrecognizedExtensionsList: _Element[];
+    public readonly _unrecognizedExtensionsList: _Element[];
 
     constructor (
         modeV92: Capabilities,
@@ -781,7 +781,7 @@ class V92ModDiag_Item {
          * @static
          */
 
-    public static _enum_for_lastMOHaction = _enum_for_V92ModDiag_Item_lastMOHaction;
+    public static _enum_for_lastMOHaction: typeof _enum_for_V92ModDiag_Item_lastMOHaction = _enum_for_V92ModDiag_Item_lastMOHaction;
 }
 
 /**

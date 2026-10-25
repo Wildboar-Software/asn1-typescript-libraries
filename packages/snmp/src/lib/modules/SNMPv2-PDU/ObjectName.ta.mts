@@ -1,7 +1,7 @@
 /* eslint-disable */
 import {
-    OBJECT_IDENTIFIER,
-    ASN1Element as _Element,
+    type OBJECT_IDENTIFIER,
+    type ASN1Element as _Element,
     ASN1TagClass as _TagClass,
     ASN1Construction as _Construction,
     ASN1UniversalType as _UniversalType,
@@ -33,10 +33,10 @@ export
 type ObjectName = OBJECT_IDENTIFIER; // ObjectIdentifierType
 
 
-export const _decode_ObjectName = $._decodeObjectIdentifier;
+export const _decode_ObjectName: $.ASN1Decoder<_OID> = $._decodeObjectIdentifier;
 
 
-export const _encode_ObjectName = $._encodeObjectIdentifier;
+export const _encode_ObjectName: $.ASN1Encoder<_OID> = $._encodeObjectIdentifier;
 
 
 /* eslint-enable */

@@ -1,8 +1,8 @@
 /* eslint-disable */
 import {
-    NULL,
-    OPTIONAL,
-    ASN1Element as _Element,
+    type NULL,
+    type OPTIONAL,
+    type ASN1Element as _Element,
     ASN1TagClass as _TagClass
 } from "@wildboar/asn1";
 import * as $ from "@wildboar/asn1/functional";
@@ -22,8 +22,8 @@ import { ODB_Data, _decode_ODB_Data, _encode_ODB_Data } from "../MAP-MS-DataType
  * ```asn1
  * ODB-Info ::= SEQUENCE {
  *     odb-Data    ODB-Data,
- *     notificationToCSE    NULL    OPTIONAL,
- *     extensionContainer    ExtensionContainer    OPTIONAL,
+ *     notificationToCSE    NULL    type OPTIONAL,
+ *     extensionContainer    ExtensionContainer    type OPTIONAL,
  *     ...}
  * ```
  * 
@@ -31,41 +31,51 @@ import { ODB_Data, _decode_ODB_Data, _encode_ODB_Data } from "../MAP-MS-DataType
  */
 export
 class ODB_Info {
+    /**
+     * @summary `odb_Data`.
+     * @description
+     *
+     * ODB general and optional HPLMN-specific data. (3GPP TS 29.002 V19.1.0
+     * clause 7.6.3.85)
+     *
+     * @public
+     * @readonly
+     */
+    public readonly odb_Data: ODB_Data;
+    /**
+     * @summary `notificationToCSE`.
+     * @description
+     *
+     * Notification-to-CSE flag. (3GPP TS 29.002 V19.1.0 clause 7.6.3.88)
+     *
+     * @public
+     * @readonly
+     */
+    public readonly notificationToCSE?: OPTIONAL<NULL>;
+    /**
+     * @summary `extensionContainer`.
+     * @public
+     * @readonly
+     */
+    public readonly extensionContainer?: OPTIONAL<ExtensionContainer>;
+    /**
+     * @summary Extensions that are not recognized.
+     * @public
+     * @readonly
+     */
+    public readonly _unrecognizedExtensionsList: _Element[];
+
     constructor (
-        /**
-         * @summary `odb_Data`.
-         * @description
-         *
-         * ODB general and optional HPLMN-specific data. (3GPP TS 29.002 V19.1.0
-         * clause 7.6.3.85)
-         *
-         * @public
-         * @readonly
-         */
-        readonly odb_Data: ODB_Data,
-        /**
-         * @summary `notificationToCSE`.
-         * @description
-         *
-         * Notification-to-CSE flag. (3GPP TS 29.002 V19.1.0 clause 7.6.3.88)
-         *
-         * @public
-         * @readonly
-         */
-        readonly notificationToCSE?: OPTIONAL<NULL>,
-        /**
-         * @summary `extensionContainer`.
-         * @public
-         * @readonly
-         */
-        readonly extensionContainer?: OPTIONAL<ExtensionContainer>,
-        /**
-         * @summary Extensions that are not recognized.
-         * @public
-         * @readonly
-         */
-        readonly _unrecognizedExtensionsList: _Element[] = []
-    ) {}
+        odb_Data: ODB_Data,
+        notificationToCSE?: OPTIONAL<NULL>,
+        extensionContainer?: OPTIONAL<ExtensionContainer>,
+        _unrecognizedExtensionsList: _Element[] = []
+    ) {
+        this.odb_Data = odb_Data;
+        this.notificationToCSE = notificationToCSE;
+        this.extensionContainer = extensionContainer;
+        this._unrecognizedExtensionsList = _unrecognizedExtensionsList;
+    }
 
     /**
      * @summary Restructures an object into a ODB_Info

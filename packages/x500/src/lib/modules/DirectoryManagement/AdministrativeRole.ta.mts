@@ -1,5 +1,5 @@
 /* eslint-disable */
-import { ASN1Element as _Element, OBJECT_IDENTIFIER } from "@wildboar/asn1";
+import { ASN1Element as _Element, ObjectIdentifier, type OBJECT_IDENTIFIER } from "@wildboar/asn1";
 import * as $ from "@wildboar/asn1/functional";
 /**
  * @summary AdministrativeRole
@@ -19,10 +19,10 @@ import * as $ from "@wildboar/asn1/functional";
 export type AdministrativeRole = OBJECT_IDENTIFIER; // ObjectClassFieldType
 
 
-export const _decode_AdministrativeRole = $._decodeObjectIdentifier;
+export const _decode_AdministrativeRole: $.ASN1Decoder<ObjectIdentifier> = $._decodeObjectIdentifier;
 
 
-export const _encode_AdministrativeRole = $._encodeObjectIdentifier;
+export const _encode_AdministrativeRole: $.ASN1Encoder<ObjectIdentifier> = $._encodeObjectIdentifier;
 
 
 /* eslint-enable */

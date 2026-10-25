@@ -1,43 +1,43 @@
 /* eslint-disable */
 import {
-    OPTIONAL,
-    ASN1Element as _Element,
+    type OPTIONAL,
+    type ASN1Element as _Element,
     ASN1TagClass as _TagClass,
 } from "@wildboar/asn1";
 import * as $ from "@wildboar/asn1/functional";
 import {
-    ObjectClass,
+    type ObjectClass,
     _decode_ObjectClass,
     _encode_ObjectClass,
 } from "../CMIP-1/ObjectClass.ta.mjs";
 import {
-    ObjectInstance,
+    type ObjectInstance,
     _decode_ObjectInstance,
     _encode_ObjectInstance,
 } from "../CMIP-1/ObjectInstance.ta.mjs";
 import {
-    EventTime,
+    type EventTime,
     _decode_EventTime,
     _encode_EventTime,
 } from "../Attribute-ASN1Module/EventTime.ta.mjs";
 import {
-    EventTypeId,
+    type EventTypeId,
     _decode_EventTypeId,
     _encode_EventTypeId,
 } from "../CMIP-1/EventTypeId.ta.mjs";
 import {
-    AdditionalInformation,
-    AdditionalText,
-    AttributeValueChangeDefinition,
-    BackedUpStatus,
-    CorrelatedNotifications,
-    MonitoredAttributes,
-    NotificationIdentifier,
+    type AdditionalInformation,
+    type AdditionalText,
+    type AttributeValueChangeDefinition,
+    type BackedUpStatus,
+    type CorrelatedNotifications,
+    type MonitoredAttributes,
+    type NotificationIdentifier,
     PerceivedSeverity,
     _enum_for_PerceivedSeverity,
-    ProbableCause,
-    ProposedRepairActions,
-    SpecificProblems,
+    type ProbableCause,
+    type ProposedRepairActions,
+    type SpecificProblems,
     ThresholdInfo,
     TrendIndication,
     _enum_for_TrendIndication,
@@ -91,26 +91,64 @@ import {
  * @class
  */
 export class AlarmSynchronizationData {
+    public readonly alarmManagedObjectClass: ObjectClass;
+    public readonly alarmManagedObjectInstance: ObjectInstance;
+    public readonly eventTime: OPTIONAL<EventTime>;
+    public readonly eventType: EventTypeId;
+    public readonly probableCause: ProbableCause;
+    public readonly specificProblems: OPTIONAL<SpecificProblems>;
+    public readonly perceivedSeverity: PerceivedSeverity;
+    public readonly backedUpStatus?: OPTIONAL<BackedUpStatus>;
+    public readonly backUpObject?: OPTIONAL<ObjectInstance>;
+    public readonly trendIndication?: OPTIONAL<TrendIndication>;
+    public readonly thresholdInfo?: OPTIONAL<ThresholdInfo>;
+    public readonly notificationIdentifier?: OPTIONAL<NotificationIdentifier>;
+    public readonly correlatedNotifications?: OPTIONAL<CorrelatedNotifications>;
+    public readonly stateChangeDefinition?: OPTIONAL<AttributeValueChangeDefinition>;
+    public readonly monitoredAttributes?: OPTIONAL<MonitoredAttributes>;
+    public readonly proposedRepairActions?: OPTIONAL<ProposedRepairActions>;
+    public readonly additionalText?: OPTIONAL<AdditionalText>;
+    public readonly additionalInformation?: OPTIONAL<AdditionalInformation>;
+
     constructor(
-        readonly alarmManagedObjectClass: ObjectClass,
-        readonly alarmManagedObjectInstance: ObjectInstance,
-        readonly eventTime: OPTIONAL<EventTime>,
-        readonly eventType: EventTypeId,
-        readonly probableCause: ProbableCause,
-        readonly specificProblems: OPTIONAL<SpecificProblems>,
-        readonly perceivedSeverity: PerceivedSeverity,
-        readonly backedUpStatus?: OPTIONAL<BackedUpStatus>,
-        readonly backUpObject?: OPTIONAL<ObjectInstance>,
-        readonly trendIndication?: OPTIONAL<TrendIndication>,
-        readonly thresholdInfo?: OPTIONAL<ThresholdInfo>,
-        readonly notificationIdentifier?: OPTIONAL<NotificationIdentifier>,
-        readonly correlatedNotifications?: OPTIONAL<CorrelatedNotifications>,
-        readonly stateChangeDefinition?: OPTIONAL<AttributeValueChangeDefinition>,
-        readonly monitoredAttributes?: OPTIONAL<MonitoredAttributes>,
-        readonly proposedRepairActions?: OPTIONAL<ProposedRepairActions>,
-        readonly additionalText?: OPTIONAL<AdditionalText>,
-        readonly additionalInformation?: OPTIONAL<AdditionalInformation>
-    ) {}
+        alarmManagedObjectClass: ObjectClass,
+        alarmManagedObjectInstance: ObjectInstance,
+        eventTime: OPTIONAL<EventTime>,
+        eventType: EventTypeId,
+        probableCause: ProbableCause,
+        specificProblems: OPTIONAL<SpecificProblems>,
+        perceivedSeverity: PerceivedSeverity,
+        backedUpStatus?: OPTIONAL<BackedUpStatus>,
+        backUpObject?: OPTIONAL<ObjectInstance>,
+        trendIndication?: OPTIONAL<TrendIndication>,
+        thresholdInfo?: OPTIONAL<ThresholdInfo>,
+        notificationIdentifier?: OPTIONAL<NotificationIdentifier>,
+        correlatedNotifications?: OPTIONAL<CorrelatedNotifications>,
+        stateChangeDefinition?: OPTIONAL<AttributeValueChangeDefinition>,
+        monitoredAttributes?: OPTIONAL<MonitoredAttributes>,
+        proposedRepairActions?: OPTIONAL<ProposedRepairActions>,
+        additionalText?: OPTIONAL<AdditionalText>,
+        additionalInformation?: OPTIONAL<AdditionalInformation>
+    ) {
+        this.alarmManagedObjectClass = alarmManagedObjectClass;
+        this.alarmManagedObjectInstance = alarmManagedObjectInstance;
+        this.eventTime = eventTime;
+        this.eventType = eventType;
+        this.probableCause = probableCause;
+        this.specificProblems = specificProblems;
+        this.perceivedSeverity = perceivedSeverity;
+        this.backedUpStatus = backedUpStatus;
+        this.backUpObject = backUpObject;
+        this.trendIndication = trendIndication;
+        this.thresholdInfo = thresholdInfo;
+        this.notificationIdentifier = notificationIdentifier;
+        this.correlatedNotifications = correlatedNotifications;
+        this.stateChangeDefinition = stateChangeDefinition;
+        this.monitoredAttributes = monitoredAttributes;
+        this.proposedRepairActions = proposedRepairActions;
+        this.additionalText = additionalText;
+        this.additionalInformation = additionalInformation;
+    }
 
     public static _from_object(
         _o: { [_K in keyof AlarmSynchronizationData]: AlarmSynchronizationData[_K] }
@@ -137,8 +175,8 @@ export class AlarmSynchronizationData {
         );
     }
 
-    public static _enum_for_perceivedSeverity = _enum_for_PerceivedSeverity;
-    public static _enum_for_trendIndication = _enum_for_TrendIndication;
+    public static _enum_for_perceivedSeverity: typeof _enum_for_PerceivedSeverity = _enum_for_PerceivedSeverity;
+    public static _enum_for_trendIndication: typeof _enum_for_TrendIndication = _enum_for_TrendIndication;
 }
 
 export const _root_component_type_list_1_spec_for_AlarmSynchronizationData: $.ComponentSpec[] = [

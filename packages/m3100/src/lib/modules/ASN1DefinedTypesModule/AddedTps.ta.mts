@@ -1,6 +1,6 @@
 /* eslint-disable */
 import {
-    ASN1Element as _Element,
+    type ASN1Element as _Element,
     ASN1TagClass as _TagClass,
     ASN1Construction as _Construction,
     ASN1UniversalType as _UniversalType,
@@ -11,7 +11,7 @@ import {
 } from '@wildboar/asn1';
 import * as $ from '@wildboar/asn1/functional';
 import {
-    ObjectInstance,
+    type ObjectInstance,
     _decode_ObjectInstance,
     _encode_ObjectInstance,
 } from '@wildboar/cmip';
@@ -31,20 +31,26 @@ import {
  *
  */
 export class AddedTps {
+    /**
+     * @summary `gtp`.
+     * @public
+     * @readonly
+     */
+    public readonly gtp: ObjectInstance;
+    /**
+     * @summary `tpsAdded`.
+     * @public
+     * @readonly
+     */
+    public readonly tpsAdded: ObjectInstance[];
+
     constructor(
-        /**
-         * @summary `gtp`.
-         * @public
-         * @readonly
-         */
-        readonly gtp: ObjectInstance,
-        /**
-         * @summary `tpsAdded`.
-         * @public
-         * @readonly
-         */
-        readonly tpsAdded: ObjectInstance[]
-    ) {}
+        gtp: ObjectInstance,
+        tpsAdded: ObjectInstance[]
+    ) {
+        this.gtp = gtp;
+        this.tpsAdded = tpsAdded;
+    }
 
     /**
      * @summary Restructures an object into a AddedTps

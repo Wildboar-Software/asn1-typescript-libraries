@@ -2,10 +2,10 @@
 
 import * as $ from "@wildboar/asn1/functional";
 import {
-    OPTIONAL,
-    SEQUENCE,
-    SET,
-    ASN1Element as _Element,
+    type OPTIONAL,
+    type SEQUENCE,
+    type SET,
+    type ASN1Element as _Element,
     ASN1TagClass as _TagClass
 } from "@wildboar/asn1";
 import {
@@ -34,7 +34,7 @@ import { CSTACommonArguments, _decode_CSTACommonArguments, _encode_CSTACommonArg
  * 
  * ```asn1
  * SetAgentStateResult ::= SEQUENCE
- * {    pendingAgentState        PendingAgentState            OPTIONAL,
+ * {    pendingAgentState        PendingAgentState            type OPTIONAL,
  *     extensions             CSTACommonArguments            OPTIONAL }
  * ```
  * 
@@ -42,28 +42,34 @@ import { CSTACommonArguments, _decode_CSTACommonArguments, _encode_CSTACommonArg
  */
 export
 class SetAgentStateResult {
+    /**
+     * @summary `pendingAgentState`.
+     * @description
+     *
+     * Working After Call, Not Ready, Ready, or Null — state after
+     * Busy/Working After Call ends.
+     * @public
+     * @readonly
+     */
+    public readonly pendingAgentState?: OPTIONAL<PendingAgentState>;
+    /**
+     * @summary `extensions`.
+     * @description
+     *
+     * Optional security (timestamp, sequence, securityInfo) and
+     * privateData.
+     * @public
+     * @readonly
+     */
+    public readonly extensions?: OPTIONAL<CSTACommonArguments>;
+
     constructor (
-        /**
-         * @summary `pendingAgentState`.
-         * @description
-         *
-         * Working After Call, Not Ready, Ready, or Null — state after
-         * Busy/Working After Call ends.
-         * @public
-         * @readonly
-         */
-        readonly pendingAgentState?: OPTIONAL<PendingAgentState>,
-        /**
-         * @summary `extensions`.
-         * @description
-         *
-         * Optional security (timestamp, sequence, securityInfo) and
-         * privateData.
-         * @public
-         * @readonly
-         */
-        readonly extensions?: OPTIONAL<CSTACommonArguments>
-    ) {}
+        pendingAgentState?: OPTIONAL<PendingAgentState>,
+        extensions?: OPTIONAL<CSTACommonArguments>
+    ) {
+        this.pendingAgentState = pendingAgentState;
+        this.extensions = extensions;
+    }
 
     /**
      * @summary Restructures an object into a SetAgentStateResult
@@ -87,7 +93,7 @@ class SetAgentStateResult {
          * @static
          */
 
-    public static _enum_for_pendingAgentState = _enum_for_PendingAgentState;
+    public static _enum_for_pendingAgentState: typeof _enum_for_PendingAgentState = _enum_for_PendingAgentState;
 }
 
 /**

@@ -1,9 +1,9 @@
 /* eslint-disable */
 import {
     ASN1ConstructionError as _ConstructionError,
-    ASN1Element as _Element,
+    type ASN1Element as _Element,
     ASN1TagClass as _TagClass,
-    UTF8String
+    type UTF8String
 } from "@wildboar/asn1";
 import * as $ from "@wildboar/asn1/functional";
 
@@ -41,7 +41,7 @@ class CertificationDataObject {
      * @public
      * @readonly
      */
-    readonly platformLabel: UTF8String;
+    public readonly platformLabel: UTF8String;
     /**
      * @summary `discoveryBaseURL`.
      * @description
@@ -52,7 +52,7 @@ class CertificationDataObject {
      * @public
      * @readonly
      */
-    readonly discoveryBaseURL: UTF8String;
+    public readonly discoveryBaseURL: UTF8String;
 
     constructor (
         platformLabel: UTF8String,

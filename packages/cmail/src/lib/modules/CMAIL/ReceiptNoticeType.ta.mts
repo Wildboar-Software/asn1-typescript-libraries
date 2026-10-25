@@ -45,7 +45,7 @@ export class ReceiptNoticeType {
    * @public
    * @readonly
    */
-  readonly operatorPostmark: DigitalPostmarkType;
+  public readonly operatorPostmark: DigitalPostmarkType;
 
   constructor(
     operatorPostmark: DigitalPostmarkType

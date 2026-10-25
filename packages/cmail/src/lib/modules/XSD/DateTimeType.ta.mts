@@ -1,6 +1,6 @@
 /* eslint-disable */
 import {
-  VisibleString,
+  type VisibleString,
   ASN1Element as _Element,
   ASN1TagClass as _TagClass,
   ASN1Construction as _Construction,
@@ -29,12 +29,12 @@ export type DateTimeType = VisibleString; // VisibleString
 
 
 
-export const _decode_DateTimeType = $._decodeVisibleString;
+export const _decode_DateTimeType: $.ASN1Decoder<string> = $._decodeVisibleString;
 
 
 
 
-export const _encode_DateTimeType = $._encodeVisibleString;
+export const _encode_DateTimeType: $.ASN1Encoder<string> = $._encodeVisibleString;
 
 
 /* eslint-enable */

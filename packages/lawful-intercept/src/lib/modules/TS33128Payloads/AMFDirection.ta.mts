@@ -79,7 +79,7 @@ type AMFDirection = _enum_for_AMFDirection;
  * @enum {number}
  */
 export
-const AMFDirection = _enum_for_AMFDirection;
+const AMFDirection: typeof _enum_for_AMFDirection = _enum_for_AMFDirection;
 
 /**
  * @summary AMFDirection_networkInitiated
@@ -87,7 +87,7 @@ const AMFDirection = _enum_for_AMFDirection;
  * @type {number}
  */
 export
-const AMFDirection_networkInitiated: AMFDirection = AMFDirection.networkInitiated; /* LONG_NAMED_ENUMERATED_VALUE */
+const AMFDirection_networkInitiated: _enum_for_AMFDirection.networkInitiated = AMFDirection.networkInitiated; /* LONG_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary networkInitiated
@@ -95,7 +95,7 @@ const AMFDirection_networkInitiated: AMFDirection = AMFDirection.networkInitiate
  * @type {number}
  */
 export
-const networkInitiated: AMFDirection = AMFDirection.networkInitiated; /* SHORT_NAMED_ENUMERATED_VALUE */
+const networkInitiated: _enum_for_AMFDirection.networkInitiated = AMFDirection.networkInitiated; /* SHORT_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary AMFDirection_uEInitiated
@@ -103,7 +103,7 @@ const networkInitiated: AMFDirection = AMFDirection.networkInitiated; /* SHORT_N
  * @type {number}
  */
 export
-const AMFDirection_uEInitiated: AMFDirection = AMFDirection.uEInitiated; /* LONG_NAMED_ENUMERATED_VALUE */
+const AMFDirection_uEInitiated: _enum_for_AMFDirection.uEInitiated = AMFDirection.uEInitiated; /* LONG_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary uEInitiated
@@ -111,7 +111,7 @@ const AMFDirection_uEInitiated: AMFDirection = AMFDirection.uEInitiated; /* LONG
  * @type {number}
  */
 export
-const uEInitiated: AMFDirection = AMFDirection.uEInitiated; /* SHORT_NAMED_ENUMERATED_VALUE */
+const uEInitiated: _enum_for_AMFDirection.uEInitiated = AMFDirection.uEInitiated; /* SHORT_NAMED_ENUMERATED_VALUE */
 export const _decode_AMFDirection: $.ASN1Decoder<AMFDirection> = $._decodeEnumerated;
 export const _encode_AMFDirection: $.ASN1Encoder<AMFDirection> = $._encodeEnumerated;
 

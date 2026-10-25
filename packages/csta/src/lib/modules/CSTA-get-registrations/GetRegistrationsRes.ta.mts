@@ -2,14 +2,14 @@
 
 import * as $ from "@wildboar/asn1/functional";
 import {
-    OPTIONAL,
-    SEQUENCE,
-    SET,
-    ASN1Element as _Element,
+    type OPTIONAL,
+    type SEQUENCE,
+    type SET,
+    type ASN1Element as _Element,
     ASN1TagClass as _TagClass
 } from "@wildboar/asn1";
 import {
-    GetRegistrationsRes_crossRefIDorRegistrationData,
+    type GetRegistrationsRes_crossRefIDorRegistrationData,
     _decode_GetRegistrationsRes_crossRefIDorRegistrationData,
     _encode_GetRegistrationsRes_crossRefIDorRegistrationData
 } from "../CSTA-get-registrations/GetRegistrationsRes-crossRefIDorRegistrationData.ta.mjs";
@@ -41,28 +41,34 @@ import { CSTACommonArguments, _decode_CSTACommonArguments, _encode_CSTACommonArg
  */
 export
 class GetRegistrationsRes {
+    /**
+     * @summary `crossRefIDorRegistrationData`.
+     * @description
+     *
+     * `serviceCrossRefID` if Registration Info will follow;
+     * `registrationList` if the data is inline. Mutually exclusive.
+     * @public
+     * @readonly
+     */
+    public readonly crossRefIDorRegistrationData: GetRegistrationsRes_crossRefIDorRegistrationData;
+    /**
+     * @summary `extensions`.
+     * @description
+     *
+     * Optional security (timestamp, sequence, securityInfo) and
+     * privateData. ECMA-269 Table 14-19.
+     * @public
+     * @readonly
+     */
+    public readonly extensions?: OPTIONAL<CSTACommonArguments>;
+
     constructor (
-        /**
-         * @summary `crossRefIDorRegistrationData`.
-         * @description
-         *
-         * `serviceCrossRefID` if Registration Info will follow;
-         * `registrationList` if the data is inline. Mutually exclusive.
-         * @public
-         * @readonly
-         */
-        readonly crossRefIDorRegistrationData: GetRegistrationsRes_crossRefIDorRegistrationData,
-        /**
-         * @summary `extensions`.
-         * @description
-         *
-         * Optional security (timestamp, sequence, securityInfo) and
-         * privateData. ECMA-269 Table 14-19.
-         * @public
-         * @readonly
-         */
-        readonly extensions?: OPTIONAL<CSTACommonArguments>
-    ) {}
+        crossRefIDorRegistrationData: GetRegistrationsRes_crossRefIDorRegistrationData,
+        extensions?: OPTIONAL<CSTACommonArguments>
+    ) {
+        this.crossRefIDorRegistrationData = crossRefIDorRegistrationData;
+        this.extensions = extensions;
+    }
 
     /**
      * @summary Restructures an object into a GetRegistrationsRes

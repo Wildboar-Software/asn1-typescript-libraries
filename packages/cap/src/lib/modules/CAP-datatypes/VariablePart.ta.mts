@@ -1,7 +1,7 @@
 import {
-    INTEGER,
-    OCTET_STRING,
-    ASN1Element as _Element,
+    type INTEGER,
+    type OCTET_STRING,
+    type ASN1Element as _Element,
     ASN1SizeError,
     ASN1TagClass as _TagClass,
 } from "@wildboar/asn1";

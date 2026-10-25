@@ -1,6 +1,6 @@
 /* eslint-disable */
 import {
-    ENUMERATED
+    type ENUMERATED
 } from "@wildboar/asn1";
 import * as $ from "@wildboar/asn1/functional";
 
@@ -49,7 +49,7 @@ type Priority = _enum_for_Priority | ENUMERATED;
  * @type {number}
  */
 export
-const Priority_low: Priority = 0; /* LONG_NAMED_ENUMERATED_VALUE */
+const Priority_low: _enum_for_Priority.low = _enum_for_Priority.low; /* LONG_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary low
@@ -60,7 +60,7 @@ const Priority_low: Priority = 0; /* LONG_NAMED_ENUMERATED_VALUE */
  * @type {number}
  */
 export
-const low: Priority = Priority_low; /* SHORT_NAMED_ENUMERATED_VALUE */
+const low: _enum_for_Priority.low = Priority_low; /* SHORT_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary Priority_normal
@@ -72,7 +72,7 @@ const low: Priority = Priority_low; /* SHORT_NAMED_ENUMERATED_VALUE */
  * @type {number}
  */
 export
-const Priority_normal: Priority = 1; /* LONG_NAMED_ENUMERATED_VALUE */
+const Priority_normal: _enum_for_Priority.normal = _enum_for_Priority.normal; /* LONG_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary normal
@@ -83,7 +83,7 @@ const Priority_normal: Priority = 1; /* LONG_NAMED_ENUMERATED_VALUE */
  * @type {number}
  */
 export
-const normal: Priority = Priority_normal; /* SHORT_NAMED_ENUMERATED_VALUE */
+const normal: _enum_for_Priority.normal = Priority_normal; /* SHORT_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary Priority_high
@@ -95,7 +95,7 @@ const normal: Priority = Priority_normal; /* SHORT_NAMED_ENUMERATED_VALUE */
  * @type {number}
  */
 export
-const Priority_high: Priority = 2; /* LONG_NAMED_ENUMERATED_VALUE */
+const Priority_high: _enum_for_Priority.high = _enum_for_Priority.high; /* LONG_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary high
@@ -106,7 +106,7 @@ const Priority_high: Priority = 2; /* LONG_NAMED_ENUMERATED_VALUE */
  * @type {number}
  */
 export
-const high: Priority = Priority_high; /* SHORT_NAMED_ENUMERATED_VALUE */
+const high: _enum_for_Priority.high = Priority_high; /* SHORT_NAMED_ENUMERATED_VALUE */
 export const _decode_Priority: $.ASN1Decoder<Priority> = $._decodeEnumerated;
 export const _encode_Priority: $.ASN1Encoder<Priority> = $._encodeEnumerated;
 

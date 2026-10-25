@@ -1,12 +1,12 @@
 /* eslint-disable */
 import {
     ASN1ConstructionError as _ConstructionError,
-    ASN1Element as _Element,
+    type ASN1Element as _Element,
     ASN1TagClass as _TagClass,
 } from "@wildboar/asn1";
 import * as $ from "@wildboar/asn1/functional";
 import {
-    KeyPairIdentifier,
+    type KeyPairIdentifier,
     _decode_KeyPairIdentifier,
     _encode_KeyPairIdentifier,
 } from "../CMSSigncryption/KeyPairIdentifier.ta.mjs";
@@ -29,20 +29,26 @@ import {
  *
  */
 export class SigncrypterIDs {
+    /**
+     * @summary `sender`.
+     * @public
+     * @readonly
+     */
+    public readonly sender: KeyPairIdentifier;
+    /**
+     * @summary `recipient`.
+     * @public
+     * @readonly
+     */
+    public readonly recipient: KeyPairIdentifier;
+
     constructor(
-        /**
-         * @summary `sender`.
-         * @public
-         * @readonly
-         */
-        readonly sender: KeyPairIdentifier,
-        /**
-         * @summary `recipient`.
-         * @public
-         * @readonly
-         */
-        readonly recipient: KeyPairIdentifier
-    ) {}
+        sender: KeyPairIdentifier,
+        recipient: KeyPairIdentifier
+    ) {
+        this.sender = sender;
+        this.recipient = recipient;
+    }
 
     /**
      * @summary Restructures an object into a SigncrypterIDs

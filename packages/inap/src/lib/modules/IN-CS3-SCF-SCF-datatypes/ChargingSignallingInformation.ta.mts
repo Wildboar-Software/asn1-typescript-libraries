@@ -1,9 +1,9 @@
 /* eslint-disable */
 import {
     ASN1ConstructionError as _ConstructionError,
-    ASN1Element as _Element,
+    type ASN1Element as _Element,
     ASN1TagClass as _TagClass,
-    INTEGER
+    type INTEGER
 } from "@wildboar/asn1";
 import * as $ from "@wildboar/asn1/functional";
 import { _decode_PartyToBeCharged, _encode_PartyToBeCharged, _enum_for_PartyToBeCharged, PartyToBeCharged } from "../IN-CS3-SCF-SCF-datatypes/PartyToBeCharged.ta.mjs";
@@ -70,7 +70,7 @@ class ChargingSignallingInformation {
          * @static
          */
 
-    public static _enum_for_partyToBeCharged = _enum_for_PartyToBeCharged;
+    public static _enum_for_partyToBeCharged: typeof _enum_for_PartyToBeCharged = _enum_for_PartyToBeCharged;
 }
 
 /**

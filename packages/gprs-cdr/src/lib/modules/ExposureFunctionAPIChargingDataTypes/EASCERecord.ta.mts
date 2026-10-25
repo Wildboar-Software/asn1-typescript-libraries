@@ -1,19 +1,19 @@
 /* eslint-disable */
 import {
-    IA5String,
-    INTEGER,
-    NULL,
-    OCTET_STRING,
-    OPTIONAL,
-    UTF8String,
-    ASN1Element as _Element,
+    type IA5String,
+    type INTEGER,
+    type NULL,
+    type OCTET_STRING,
+    type OPTIONAL,
+    type UTF8String,
+    type ASN1Element as _Element,
     ASN1TagClass as _TagClass,
     ASN1SizeError,
     ASN1OverflowError
 } from "@wildboar/asn1";
 import * as $ from "@wildboar/asn1/functional";
-import { RecordType, _decode_RecordType, _encode_RecordType } from "../ExposureFunctionAPIChargingDataTypes/RecordType.ta.mjs";
-import { IPAddress, _decode_IPAddress, _encode_IPAddress } from "../ExposureFunctionAPIChargingDataTypes/IPAddress.ta.mjs";
+import { type RecordType, _decode_RecordType, _encode_RecordType } from "../ExposureFunctionAPIChargingDataTypes/RecordType.ta.mjs";
+import { type IPAddress, _decode_IPAddress, _encode_IPAddress } from "../ExposureFunctionAPIChargingDataTypes/IPAddress.ta.mjs";
 import { SCSASAddress, _decode_SCSASAddress, _encode_SCSASAddress } from "../ExposureFunctionAPIChargingDataTypes/SCSASAddress.ta.mjs";
 import { APIDirection, _decode_APIDirection, _encode_APIDirection, _enum_for_APIDirection } from "../ExposureFunctionAPIChargingDataTypes/APIDirection.ta.mjs";
 import { APINetworkServiceNode, _decode_APINetworkServiceNode, _encode_APINetworkServiceNode, _enum_for_APINetworkServiceNode } from "../ExposureFunctionAPIChargingDataTypes/APINetworkServiceNode.ta.mjs";
@@ -542,13 +542,13 @@ class EASCERecord {
          * @static
          */
 
-    public static _enum_for_aPIDirection = _enum_for_APIDirection;        /**
+    public static _enum_for_aPIDirection: typeof _enum_for_APIDirection = _enum_for_APIDirection;        /**
          * @summary The enum used as the type of the component `aPINetworkServiceNode`
          * @public
          * @static
          */
 
-    public static _enum_for_aPINetworkServiceNode = _enum_for_APINetworkServiceNode;
+    public static _enum_for_aPINetworkServiceNode: typeof _enum_for_APINetworkServiceNode = _enum_for_APINetworkServiceNode;
 }
 
 /**

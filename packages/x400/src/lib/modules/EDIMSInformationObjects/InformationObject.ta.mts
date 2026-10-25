@@ -1,6 +1,6 @@
 /* eslint-disable */
 import {
-    ASN1Element as _Element,
+    type ASN1Element as _Element,
     ASN1TagClass as _TagClass,
     ASN1Construction as _Construction,
     ASN1UniversalType as _UniversalType,
@@ -16,7 +16,7 @@ import {
     _encode_EDIM,
 } from '../EDIMSInformationObjects/EDIM.ta.mjs';
 import {
-    EDIN,
+    type EDIN,
     _decode_EDIN,
     _encode_EDIN,
 } from '../EDIMSInformationObjects/EDIN.ta.mjs';

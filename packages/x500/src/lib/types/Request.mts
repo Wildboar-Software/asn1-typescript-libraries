@@ -13,4 +13,4 @@ interface Request {
     argument?: ASN1Element;
 }
 
-export default Request;
+export type { Request as default };

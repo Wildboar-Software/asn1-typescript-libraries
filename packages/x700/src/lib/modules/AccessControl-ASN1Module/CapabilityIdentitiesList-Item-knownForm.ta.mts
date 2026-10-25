@@ -1,7 +1,7 @@
 /* eslint-disable */
 import {
-    OPTIONAL,
-    ASN1Element as _Element,
+    type OPTIONAL,
+    type ASN1Element as _Element,
     ASN1TagClass as _TagClass,
     ASN1Construction as _Construction,
     ASN1UniversalType as _UniversalType,
@@ -12,12 +12,12 @@ import {
 } from '@wildboar/asn1';
 import * as $ from '@wildboar/asn1/functional';
 import {
-    InitiatorName,
+    type InitiatorName,
     _decode_InitiatorName,
     _encode_InitiatorName,
 } from '../AccessControl-ASN1Module/InitiatorName.ta.mjs';
 import {
-    SdaList,
+    type SdaList,
     _decode_SdaList,
     _encode_SdaList,
 } from '../AccessControl-ASN1Module/SdaList.ta.mjs';
@@ -40,30 +40,36 @@ import {
  *
  */
 export class CapabilityIdentitiesList_Item_knownForm {
+    /**
+     * @summary `initiatorName`.
+     * @description
+     *
+     * Individual, group, role, or application name of the
+     * initiator allowed to use the capability. X.741 §A.5.7.
+     * @public
+     * @readonly
+     */
+    public readonly initiatorName: InitiatorName;
+    /**
+     * @summary `sdaList`.
+     * @description
+     *
+     * Optional per-authority constraints: security domain
+     * authority names paired with operation types. Omit for
+     * capabilities without specific operations. X.741
+     * Annex H.4.
+     * @public
+     * @readonly
+     */
+    public readonly sdaList?: OPTIONAL<SdaList>;
+
     constructor(
-        /**
-         * @summary `initiatorName`.
-         * @description
-         *
-         * Individual, group, role, or application name of the
-         * initiator allowed to use the capability. X.741 §A.5.7.
-         * @public
-         * @readonly
-         */
-        readonly initiatorName: InitiatorName,
-        /**
-         * @summary `sdaList`.
-         * @description
-         *
-         * Optional per-authority constraints: security domain
-         * authority names paired with operation types. Omit for
-         * capabilities without specific operations. X.741
-         * Annex H.4.
-         * @public
-         * @readonly
-         */
-        readonly sdaList?: OPTIONAL<SdaList>
-    ) {}
+        initiatorName: InitiatorName,
+        sdaList?: OPTIONAL<SdaList>
+    ) {
+        this.initiatorName = initiatorName;
+        this.sdaList = sdaList;
+    }
 
     /**
      * @summary Restructures an object into a CapabilityIdentitiesList_Item_knownForm

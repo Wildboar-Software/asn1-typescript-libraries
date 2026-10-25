@@ -1,5 +1,5 @@
 /* eslint-disable */
-import { ASN1Element as _Element, PrintableString } from "@wildboar/asn1";
+import { ASN1Element as _Element, type PrintableString } from "@wildboar/asn1";
 import * as $ from "@wildboar/asn1/functional";
 
 /**
@@ -18,10 +18,10 @@ import * as $ from "@wildboar/asn1/functional";
 export type LanguageContextSyntax = PrintableString; // PrintableString
 
 
-export const _decode_LanguageContextSyntax = $._decodePrintableString;
+export const _decode_LanguageContextSyntax: $.ASN1Decoder<string> = $._decodePrintableString;
 
 
-export const _encode_LanguageContextSyntax = $._encodePrintableString;
+export const _encode_LanguageContextSyntax: $.ASN1Encoder<string> = $._encodePrintableString;
 
 
 /* eslint-enable */

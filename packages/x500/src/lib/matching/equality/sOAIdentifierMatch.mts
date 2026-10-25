@@ -1,7 +1,7 @@
 import type { ASN1Element } from "@wildboar/asn1";
 import { readDecoded } from "../readValue.mjs";
 import {
-    Certificate,
+    type Certificate,
     _decode_Certificate,
 } from "../../modules/AuthenticationFramework/Certificate.ta.mjs";
 import {

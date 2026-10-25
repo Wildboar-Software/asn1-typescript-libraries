@@ -1,6 +1,6 @@
 /* eslint-disable */
 import {
-    UTF8String
+    type UTF8String
 } from "@wildboar/asn1";
 import * as $ from "@wildboar/asn1/functional";
 

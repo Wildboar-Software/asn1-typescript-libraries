@@ -1,12 +1,12 @@
 /* eslint-disable */
 import {
-    NULL,
-    OPTIONAL,
-    ASN1Element as _Element,
+    type NULL,
+    type OPTIONAL,
+    type ASN1Element as _Element,
     ASN1TagClass as _TagClass
 } from "@wildboar/asn1";
 import * as $ from "@wildboar/asn1/functional";
-import { Command, _decode_Command, _encode_Command } from "../MEDIA-GATEWAY-CONTROL/Command.ta.mjs";
+import { type Command, _decode_Command, _encode_Command } from "../MEDIA-GATEWAY-CONTROL/Command.ta.mjs";
 
 
 /**
@@ -42,7 +42,7 @@ class CommandRequest {
      * @public
      * @readonly
      */
-    readonly command: Command;
+    public readonly command: Command;
     /**
      * @summary `optional`.
      * @description
@@ -53,7 +53,7 @@ class CommandRequest {
      * @public
      * @readonly
      */
-    readonly optional?: OPTIONAL<NULL>;
+    public readonly optional?: OPTIONAL<NULL>;
     /**
      * @summary `wildcardReturn`.
      * @description
@@ -68,7 +68,7 @@ class CommandRequest {
      * @public
      * @readonly
      */
-    readonly wildcardReturn?: OPTIONAL<NULL>;
+    public readonly wildcardReturn?: OPTIONAL<NULL>;
     /**
      * @summary Extensions that are not recognized.
      * @description
@@ -79,7 +79,7 @@ class CommandRequest {
      * @public
      * @readonly
      */
-    readonly _unrecognizedExtensionsList: _Element[];
+    public readonly _unrecognizedExtensionsList: _Element[];
 
     constructor (
         command: Command,

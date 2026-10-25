@@ -1,6 +1,6 @@
 /* eslint-disable */
 import {
-    ASN1Element as _Element,
+    type ASN1Element as _Element,
     ASN1TagClass as _TagClass,
     ASN1Construction as _Construction,
     ASN1UniversalType as _UniversalType,
@@ -16,7 +16,7 @@ import {
     _encode_ConnectivityThreshold_time,
 } from '../TestCategories-ASN1Module/ConnectivityThreshold-time.ta.mjs';
 import {
-    RawData,
+    type RawData,
     _decode_RawData,
     _encode_RawData,
 } from '../TestCategories-ASN1Module/RawData.ta.mjs';

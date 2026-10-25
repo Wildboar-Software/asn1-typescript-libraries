@@ -1,5 +1,5 @@
 /* eslint-disable */
-import { ASN1Element as _Element, ENUMERATED } from "@wildboar/asn1";
+import { ASN1Element as _Element, type ENUMERATED } from "@wildboar/asn1";
 import * as $ from "@wildboar/asn1/functional";
 
 export enum _enum_for_EnvelopedData_error {
@@ -27,20 +27,20 @@ export type EnvelopedData_error = _enum_for_EnvelopedData_error | ENUMERATED;
  * @constant
  * @type {number}
  */
-export const EnvelopedData_error_noReason: EnvelopedData_error = 0; /* LONG_NAMED_ENUMERATED_VALUE */
+export const EnvelopedData_error_noReason: _enum_for_EnvelopedData_error.noReason = _enum_for_EnvelopedData_error.noReason; /* LONG_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary noReason
  * @constant
  * @type {number}
  */
-export const noReason: EnvelopedData_error = EnvelopedData_error_noReason; /* SHORT_NAMED_ENUMERATED_VALUE */
+export const noReason: _enum_for_EnvelopedData_error.noReason = EnvelopedData_error_noReason; /* SHORT_NAMED_ENUMERATED_VALUE */
 
 
-export const _decode_EnvelopedData_error = $._decodeEnumerated;
+export const _decode_EnvelopedData_error: $.ASN1Decoder<number> = $._decodeEnumerated;
 
 
-export const _encode_EnvelopedData_error = $._encodeEnumerated;
+export const _encode_EnvelopedData_error: $.ASN1Encoder<number> = $._encodeEnumerated;
 
 
 /* eslint-enable */

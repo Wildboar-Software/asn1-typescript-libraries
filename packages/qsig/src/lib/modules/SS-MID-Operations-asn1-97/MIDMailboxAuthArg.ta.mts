@@ -1,14 +1,14 @@
 /* eslint-disable */
 import {
-    OPTIONAL,
-    ASN1Element as _Element,
+    type OPTIONAL,
+    type ASN1Element as _Element,
     ASN1TagClass as _TagClass
 } from "@wildboar/asn1";
 import * as $ from "@wildboar/asn1/functional";
 import { PartyInfo, _decode_PartyInfo, _encode_PartyInfo } from "../SS-MID-Operations-asn1-97/PartyInfo.ta.mjs";
-import { Name, _decode_Name, _encode_Name } from "../Name-Operations-asn1-97/Name.ta.mjs";
-import { String, _decode_String, _encode_String } from "../SS-MID-Operations-asn1-97/String.ta.mjs";
-import { MIDExtensions, _decode_MIDExtensions, _encode_MIDExtensions } from "../SS-MID-Operations-asn1-97/MIDExtensions.ta.mjs";
+import { type Name, _decode_Name, _encode_Name } from "../Name-Operations-asn1-97/Name.ta.mjs";
+import { type String, _decode_String, _encode_String } from "../SS-MID-Operations-asn1-97/String.ta.mjs";
+import { type MIDExtensions, _decode_MIDExtensions, _encode_MIDExtensions } from "../SS-MID-Operations-asn1-97/MIDExtensions.ta.mjs";
 
 /**
  * @summary MIDMailboxAuthArg

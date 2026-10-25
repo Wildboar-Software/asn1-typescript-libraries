@@ -1,12 +1,12 @@
 /* eslint-disable */
 import {
-    OCTET_STRING,
-    OPTIONAL,
-    ASN1Element as _Element,
+    type OCTET_STRING,
+    type OPTIONAL,
+    type ASN1Element as _Element,
     ASN1TagClass as _TagClass
 } from "@wildboar/asn1";
 import * as $ from "@wildboar/asn1/functional";
-import { ProfileInfoListRequest_searchCriteria, _decode_ProfileInfoListRequest_searchCriteria, _encode_ProfileInfoListRequest_searchCriteria } from "../RSPDefinitions/ProfileInfoListRequest-searchCriteria.ta.mjs";
+import { type ProfileInfoListRequest_searchCriteria, _decode_ProfileInfoListRequest_searchCriteria, _encode_ProfileInfoListRequest_searchCriteria } from "../RSPDefinitions/ProfileInfoListRequest-searchCriteria.ta.mjs";
 
 
 /**
@@ -51,7 +51,7 @@ class ProfileInfoListRequest {
      * @public
      * @readonly
      */
-    readonly searchCriteria?: OPTIONAL<ProfileInfoListRequest_searchCriteria>;
+    public readonly searchCriteria?: OPTIONAL<ProfileInfoListRequest_searchCriteria>;
     /**
      * @summary `tagList`.
      * @description
@@ -64,7 +64,7 @@ class ProfileInfoListRequest {
      * @public
      * @readonly
      */
-    readonly tagList?: OPTIONAL<OCTET_STRING>;
+    public readonly tagList?: OPTIONAL<OCTET_STRING>;
     /**
      * @summary `iotSpecificTagList`.
      * @description
@@ -75,7 +75,7 @@ class ProfileInfoListRequest {
      * @public
      * @readonly
      */
-    readonly iotSpecificTagList?: OPTIONAL<OCTET_STRING>;
+    public readonly iotSpecificTagList?: OPTIONAL<OCTET_STRING>;
 
     constructor (
         searchCriteria?: OPTIONAL<ProfileInfoListRequest_searchCriteria>,

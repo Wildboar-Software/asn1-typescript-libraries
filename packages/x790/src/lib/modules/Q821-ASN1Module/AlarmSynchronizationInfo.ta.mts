@@ -1,7 +1,7 @@
 /* eslint-disable */
 import {
-    NULL,
-    ASN1Element as _Element,
+    type NULL,
+    type ASN1Element as _Element,
     ASN1TagClass as _TagClass,
 } from "@wildboar/asn1";
 import * as $ from "@wildboar/asn1/functional";
@@ -12,7 +12,7 @@ import {
 } from "../Q821-ASN1Module/ScopedCriteria.ta.mjs";
 
 import {
-    ObjectList,
+    type ObjectList,
     _decode_ObjectList,
     _encode_ObjectList,
 } from "../Q821-ASN1Module/ObjectList.ta.mjs";

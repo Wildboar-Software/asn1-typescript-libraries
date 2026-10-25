@@ -1,10 +1,10 @@
 /* eslint-disable */
 import {
-    ASN1Element as _Element,
+    type ASN1Element as _Element,
     ASN1SizeError
 } from "@wildboar/asn1";
 import * as $ from "@wildboar/asn1/functional";
-import { _decode_CauseValue, _encode_CauseValue, CauseValue } from "../MAP-MS-DataTypes/CauseValue.ta.mjs";
+import { _decode_CauseValue, _encode_CauseValue, type CauseValue } from "../MAP-MS-DataTypes/CauseValue.ta.mjs";
 
 
 import { maxNumOfCAMEL_T_CauseValueCriteria } from "./maxNumOfCAMEL-T-CauseValueCriteria.va.mjs";

@@ -2,15 +2,15 @@
 
 import * as $ from "@wildboar/asn1/functional";
 import {
-    OPTIONAL,
-    SEQUENCE,
-    SET,
-    ASN1Element as _Element,
+    type OPTIONAL,
+    type SEQUENCE,
+    type SET,
+    type ASN1Element as _Element,
     ASN1TagClass as _TagClass
 } from "@wildboar/asn1";
-import { ConnectionID, _decode_ConnectionID, _encode_ConnectionID } from "../CSTA-call-connection-identifiers/ConnectionID.ta.mjs";
+import { type ConnectionID, _decode_ConnectionID, _encode_ConnectionID } from "../CSTA-call-connection-identifiers/ConnectionID.ta.mjs";
 
-import { ResourceID, _decode_ResourceID, _encode_ResourceID } from "../CSTA-device-feature-types/ResourceID.ta.mjs";
+import { type ResourceID, _decode_ResourceID, _encode_ResourceID } from "../CSTA-device-feature-types/ResourceID.ta.mjs";
 
 import {
     EventCause,
@@ -43,9 +43,9 @@ import { CSTACommonArguments, _decode_CSTACommonArguments, _encode_CSTACommonArg
  * ```asn1
  * EmptiedEvent ::= SEQUENCE
  * {    overConnection            ConnectionID,
- *     resource            [0] IMPLICIT ResourceID            OPTIONAL,
- *     cause                EventCause                OPTIONAL,
- *     servicesPermitted        ServicesPermitted            OPTIONAL,
+ *     resource            [0] IMPLICIT ResourceID            type OPTIONAL,
+ *     cause                EventCause                type OPTIONAL,
+ *     servicesPermitted        ServicesPermitted            type OPTIONAL,
  *     extensions            CSTACommonArguments            OPTIONAL }
  * ```
  * 
@@ -53,60 +53,72 @@ import { CSTACommonArguments, _decode_CSTACommonArguments, _encode_CSTACommonArg
  */
 export
 class EmptiedEvent {
+    /**
+     * @summary `overConnection`.
+     * @description
+     *
+     * Connection whose buffer/queue was emptied (ECMA-269 §26.2.4).
+     *
+     * @public
+     * @readonly
+     */
+    public readonly overConnection: ConnectionID;
+    /**
+     * @summary `resource`.
+     * @description
+     *
+     * Interactive voice resource. Required when more than one interactive
+     * voice resource exists on the connection.
+     *
+     * @public
+     * @readonly
+     */
+    public readonly resource?: OPTIONAL<ResourceID>;
+    /**
+     * @summary `cause`.
+     * @description
+     *
+     * Event cause, when the switching function supplies one.
+     *
+     * @public
+     * @readonly
+     */
+    public readonly cause?: OPTIONAL<EventCause>;
+    /**
+     * @summary `servicesPermitted`.
+     * @description
+     *
+     * Services permitted on the connection after this event.
+     *
+     * @public
+     * @readonly
+     */
+    public readonly servicesPermitted?: OPTIONAL<ServicesPermitted>;
+    /**
+     * @summary `extensions`.
+     * @description
+     *
+     * CSTACommonArguments carrying the service-table security and
+     * privateData parameters.
+     *
+     * @public
+     * @readonly
+     */
+    public readonly extensions?: OPTIONAL<CSTACommonArguments>;
+
     constructor (
-        /**
-         * @summary `overConnection`.
-         * @description
-         *
-         * Connection whose buffer/queue was emptied (ECMA-269 §26.2.4).
-         *
-         * @public
-         * @readonly
-         */
-        readonly overConnection: ConnectionID,
-        /**
-         * @summary `resource`.
-         * @description
-         *
-         * Interactive voice resource. Required when more than one interactive
-         * voice resource exists on the connection.
-         *
-         * @public
-         * @readonly
-         */
-        readonly resource?: OPTIONAL<ResourceID>,
-        /**
-         * @summary `cause`.
-         * @description
-         *
-         * Event cause, when the switching function supplies one.
-         *
-         * @public
-         * @readonly
-         */
-        readonly cause?: OPTIONAL<EventCause>,
-        /**
-         * @summary `servicesPermitted`.
-         * @description
-         *
-         * Services permitted on the connection after this event.
-         *
-         * @public
-         * @readonly
-         */
-        readonly servicesPermitted?: OPTIONAL<ServicesPermitted>,
-        /**
-         * @summary `extensions`.
-         * @description
-         *
-         * CSTACommonArguments carrying the service-table security and
-         * privateData parameters.
-         *
-         * @public
-         * @readonly
-         */
-        readonly extensions?: OPTIONAL<CSTACommonArguments>
-    ) {}
+        overConnection: ConnectionID,
+        resource?: OPTIONAL<ResourceID>,
+        cause?: OPTIONAL<EventCause>,
+        servicesPermitted?: OPTIONAL<ServicesPermitted>,
+        extensions?: OPTIONAL<CSTACommonArguments>
+    ) {
+        this.overConnection = overConnection;
+        this.resource = resource;
+        this.cause = cause;
+        this.servicesPermitted = servicesPermitted;
+        this.extensions = extensions;
+    }
 
     /**
      * @summary Restructures an object into a EmptiedEvent
@@ -130,7 +142,7 @@ class EmptiedEvent {
          * @static
          */
 
-    public static _enum_for_cause = _enum_for_EventCause;
+    public static _enum_for_cause: typeof _enum_for_EventCause = _enum_for_EventCause;
 }
 
 /**

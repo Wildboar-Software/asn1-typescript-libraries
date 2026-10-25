@@ -1,6 +1,6 @@
 /* eslint-disable */
 import {
-    ENUMERATED
+    type ENUMERATED
 } from "@wildboar/asn1";
 import * as $ from "@wildboar/asn1/functional";
 
@@ -129,7 +129,7 @@ type Messaging_Notification_Event = _enum_for_Messaging_Notification_Event | ENU
  * @type {number}
  */
 export
-const Messaging_Notification_Event_sms: Messaging_Notification_Event = 1; /* LONG_NAMED_ENUMERATED_VALUE */
+const Messaging_Notification_Event_sms: _enum_for_Messaging_Notification_Event.sms = _enum_for_Messaging_Notification_Event.sms; /* LONG_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary sms
@@ -145,7 +145,7 @@ const Messaging_Notification_Event_sms: Messaging_Notification_Event = 1; /* LON
  * @type {number}
  */
 export
-const sms: Messaging_Notification_Event = Messaging_Notification_Event_sms; /* SHORT_NAMED_ENUMERATED_VALUE */
+const sms: _enum_for_Messaging_Notification_Event.sms = Messaging_Notification_Event_sms; /* SHORT_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary Messaging_Notification_Event_sms_deposit
@@ -160,7 +160,7 @@ const sms: Messaging_Notification_Event = Messaging_Notification_Event_sms; /* S
  * @type {number}
  */
 export
-const Messaging_Notification_Event_sms_deposit: Messaging_Notification_Event = 2; /* LONG_NAMED_ENUMERATED_VALUE */
+const Messaging_Notification_Event_sms_deposit: _enum_for_Messaging_Notification_Event.sms_deposit = _enum_for_Messaging_Notification_Event.sms_deposit; /* LONG_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary sms_deposit
@@ -175,7 +175,7 @@ const Messaging_Notification_Event_sms_deposit: Messaging_Notification_Event = 2
  * @type {number}
  */
 export
-const sms_deposit: Messaging_Notification_Event = Messaging_Notification_Event_sms_deposit; /* SHORT_NAMED_ENUMERATED_VALUE */
+const sms_deposit: _enum_for_Messaging_Notification_Event.sms_deposit = Messaging_Notification_Event_sms_deposit; /* SHORT_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary Messaging_Notification_Event_sms_slamdown
@@ -191,7 +191,7 @@ const sms_deposit: Messaging_Notification_Event = Messaging_Notification_Event_s
  * @type {number}
  */
 export
-const Messaging_Notification_Event_sms_slamdown: Messaging_Notification_Event = 3; /* LONG_NAMED_ENUMERATED_VALUE */
+const Messaging_Notification_Event_sms_slamdown: _enum_for_Messaging_Notification_Event.sms_slamdown = _enum_for_Messaging_Notification_Event.sms_slamdown; /* LONG_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary sms_slamdown
@@ -207,7 +207,7 @@ const Messaging_Notification_Event_sms_slamdown: Messaging_Notification_Event = 
  * @type {number}
  */
 export
-const sms_slamdown: Messaging_Notification_Event = Messaging_Notification_Event_sms_slamdown; /* SHORT_NAMED_ENUMERATED_VALUE */
+const sms_slamdown: _enum_for_Messaging_Notification_Event.sms_slamdown = Messaging_Notification_Event_sms_slamdown; /* SHORT_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary Messaging_Notification_Event_sms_pin_reminder
@@ -222,7 +222,7 @@ const sms_slamdown: Messaging_Notification_Event = Messaging_Notification_Event_
  * @type {number}
  */
 export
-const Messaging_Notification_Event_sms_pin_reminder: Messaging_Notification_Event = 4; /* LONG_NAMED_ENUMERATED_VALUE */
+const Messaging_Notification_Event_sms_pin_reminder: _enum_for_Messaging_Notification_Event.sms_pin_reminder = _enum_for_Messaging_Notification_Event.sms_pin_reminder; /* LONG_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary sms_pin_reminder
@@ -237,7 +237,7 @@ const Messaging_Notification_Event_sms_pin_reminder: Messaging_Notification_Even
  * @type {number}
  */
 export
-const sms_pin_reminder: Messaging_Notification_Event = Messaging_Notification_Event_sms_pin_reminder; /* SHORT_NAMED_ENUMERATED_VALUE */
+const sms_pin_reminder: _enum_for_Messaging_Notification_Event.sms_pin_reminder = Messaging_Notification_Event_sms_pin_reminder; /* SHORT_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary Messaging_Notification_Event_email
@@ -252,7 +252,7 @@ const sms_pin_reminder: Messaging_Notification_Event = Messaging_Notification_Ev
  * @type {number}
  */
 export
-const Messaging_Notification_Event_email: Messaging_Notification_Event = 5; /* LONG_NAMED_ENUMERATED_VALUE */
+const Messaging_Notification_Event_email: _enum_for_Messaging_Notification_Event.email = _enum_for_Messaging_Notification_Event.email; /* LONG_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary email
@@ -267,7 +267,7 @@ const Messaging_Notification_Event_email: Messaging_Notification_Event = 5; /* L
  * @type {number}
  */
 export
-const email: Messaging_Notification_Event = Messaging_Notification_Event_email; /* SHORT_NAMED_ENUMERATED_VALUE */
+const email: _enum_for_Messaging_Notification_Event.email = Messaging_Notification_Event_email; /* SHORT_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary Messaging_Notification_Event_fax_to_email
@@ -282,7 +282,7 @@ const email: Messaging_Notification_Event = Messaging_Notification_Event_email; 
  * @type {number}
  */
 export
-const Messaging_Notification_Event_fax_to_email: Messaging_Notification_Event = 6; /* LONG_NAMED_ENUMERATED_VALUE */
+const Messaging_Notification_Event_fax_to_email: _enum_for_Messaging_Notification_Event.fax_to_email = _enum_for_Messaging_Notification_Event.fax_to_email; /* LONG_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary fax_to_email
@@ -297,7 +297,7 @@ const Messaging_Notification_Event_fax_to_email: Messaging_Notification_Event = 
  * @type {number}
  */
 export
-const fax_to_email: Messaging_Notification_Event = Messaging_Notification_Event_fax_to_email; /* SHORT_NAMED_ENUMERATED_VALUE */
+const fax_to_email: _enum_for_Messaging_Notification_Event.fax_to_email = Messaging_Notification_Event_fax_to_email; /* SHORT_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary Messaging_Notification_Event_mms
@@ -312,7 +312,7 @@ const fax_to_email: Messaging_Notification_Event = Messaging_Notification_Event_
  * @type {number}
  */
 export
-const Messaging_Notification_Event_mms: Messaging_Notification_Event = 7; /* LONG_NAMED_ENUMERATED_VALUE */
+const Messaging_Notification_Event_mms: _enum_for_Messaging_Notification_Event.mms = _enum_for_Messaging_Notification_Event.mms; /* LONG_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary mms
@@ -327,7 +327,7 @@ const Messaging_Notification_Event_mms: Messaging_Notification_Event = 7; /* LON
  * @type {number}
  */
 export
-const mms: Messaging_Notification_Event = Messaging_Notification_Event_mms; /* SHORT_NAMED_ENUMERATED_VALUE */
+const mms: _enum_for_Messaging_Notification_Event.mms = Messaging_Notification_Event_mms; /* SHORT_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary Messaging_Notification_Event_generic
@@ -342,7 +342,7 @@ const mms: Messaging_Notification_Event = Messaging_Notification_Event_mms; /* S
  * @type {number}
  */
 export
-const Messaging_Notification_Event_generic: Messaging_Notification_Event = 8; /* LONG_NAMED_ENUMERATED_VALUE */
+const Messaging_Notification_Event_generic: _enum_for_Messaging_Notification_Event.generic = _enum_for_Messaging_Notification_Event.generic; /* LONG_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary generic
@@ -357,7 +357,7 @@ const Messaging_Notification_Event_generic: Messaging_Notification_Event = 8; /*
  * @type {number}
  */
 export
-const generic: Messaging_Notification_Event = Messaging_Notification_Event_generic; /* SHORT_NAMED_ENUMERATED_VALUE */
+const generic: _enum_for_Messaging_Notification_Event.generic = Messaging_Notification_Event_generic; /* SHORT_NAMED_ENUMERATED_VALUE */
 export const _decode_Messaging_Notification_Event: $.ASN1Decoder<Messaging_Notification_Event> = $._decodeEnumerated;
 export const _encode_Messaging_Notification_Event: $.ASN1Encoder<Messaging_Notification_Event> = $._encodeEnumerated;
 

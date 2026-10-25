@@ -24,7 +24,7 @@ import {
 } from "./lib/modules/RFC1085-PS/ConnectRequest-PDU.ta.mjs";
 import { ConnectRequest_PDU_version_version_1 } from "./lib/modules/RFC1085-PS/ConnectRequest-PDU-version.ta.mjs";
 import {
-    PDUs,
+    type PDUs,
     _decode_PDUs,
     _encode_PDUs,
 } from "./lib/modules/RFC1085-PS/PDUs.ta.mjs";

@@ -1,6 +1,6 @@
 /* eslint-disable */
 import {
-  OPTIONAL,
+  type OPTIONAL,
   ASN1Element as _Element,
   ASN1TagClass as _TagClass,
   ASN1Construction as _Construction,
@@ -12,17 +12,17 @@ import {
 } from '@wildboar/asn1';
 import * as $ from '@wildboar/asn1/functional';
 import {
-  BioAPI_UUID,
+  type BioAPI_UUID,
   _decode_BioAPI_UUID,
   _encode_BioAPI_UUID,
 } from '../BIP/BioAPI-UUID.ta.mjs';
 import {
-  BioAPI_HANDLE,
+  type BioAPI_HANDLE,
   _decode_BioAPI_HANDLE,
   _encode_BioAPI_HANDLE,
 } from '../BIP/BioAPI-HANDLE.ta.mjs';
 import {
-  MemoryAddress,
+  type MemoryAddress,
   _decode_MemoryAddress,
   _encode_MemoryAddress,
 } from '../BIP/MemoryAddress.ta.mjs';
@@ -64,7 +64,7 @@ export class SubscribeToGUIEventsCallParams {
    * @public
    * @readonly
    */
-  readonly guiEventSubscriptionUuid: OPTIONAL<BioAPI_UUID>;
+  public readonly guiEventSubscriptionUuid: OPTIONAL<BioAPI_UUID>;
   /**
    * @summary `bspUuid`.
    * @description
@@ -75,7 +75,7 @@ export class SubscribeToGUIEventsCallParams {
    * @public
    * @readonly
    */
-  readonly bspUuid: OPTIONAL<BioAPI_UUID>;
+  public readonly bspUuid: OPTIONAL<BioAPI_UUID>;
   /**
    * @summary `bspHandle`.
    * @description
@@ -86,7 +86,7 @@ export class SubscribeToGUIEventsCallParams {
    * @public
    * @readonly
    */
-  readonly bspHandle: OPTIONAL<BioAPI_HANDLE>;
+  public readonly bspHandle: OPTIONAL<BioAPI_HANDLE>;
   /**
    * @summary `guiSelectEventHandlerAddress`.
    * @description
@@ -98,7 +98,7 @@ export class SubscribeToGUIEventsCallParams {
    * @public
    * @readonly
    */
-  readonly guiSelectEventHandlerAddress: MemoryAddress;
+  public readonly guiSelectEventHandlerAddress: MemoryAddress;
   /**
    * @summary `guiSelectEventHandlerContext`.
    * @description
@@ -109,7 +109,7 @@ export class SubscribeToGUIEventsCallParams {
    * @public
    * @readonly
    */
-  readonly guiSelectEventHandlerContext: MemoryAddress;
+  public readonly guiSelectEventHandlerContext: MemoryAddress;
   /**
    * @summary `guiStateEventHandlerAddress`.
    * @description
@@ -121,7 +121,7 @@ export class SubscribeToGUIEventsCallParams {
    * @public
    * @readonly
    */
-  readonly guiStateEventHandlerAddress: MemoryAddress;
+  public readonly guiStateEventHandlerAddress: MemoryAddress;
   /**
    * @summary `guiStateEventHandlerContext`.
    * @description
@@ -132,7 +132,7 @@ export class SubscribeToGUIEventsCallParams {
    * @public
    * @readonly
    */
-  readonly guiStateEventHandlerContext: MemoryAddress;
+  public readonly guiStateEventHandlerContext: MemoryAddress;
   /**
    * @summary `guiProgressEventHandlerAddress`.
    * @description
@@ -145,7 +145,7 @@ export class SubscribeToGUIEventsCallParams {
    * @public
    * @readonly
    */
-  readonly guiProgressEventHandlerAddress: MemoryAddress;
+  public readonly guiProgressEventHandlerAddress: MemoryAddress;
   /**
    * @summary `guiProgressEventHandlerContext`.
    * @description
@@ -156,7 +156,7 @@ export class SubscribeToGUIEventsCallParams {
    * @public
    * @readonly
    */
-  readonly guiProgressEventHandlerContext: MemoryAddress;
+  public readonly guiProgressEventHandlerContext: MemoryAddress;
 
   constructor(
     guiEventSubscriptionUuid: OPTIONAL<BioAPI_UUID>,

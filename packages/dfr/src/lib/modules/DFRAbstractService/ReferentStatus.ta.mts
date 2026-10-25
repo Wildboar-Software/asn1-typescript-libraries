@@ -1,6 +1,6 @@
 /* eslint-disable */
 import {
-    ASN1Element as _Element,
+    type ASN1Element as _Element,
     ASN1TagClass as _TagClass,
     ASN1Construction as _Construction,
     ASN1UniversalType as _UniversalType,
@@ -77,7 +77,7 @@ type ReferentStatus = _enum_for_ReferentStatus;
  * @enum {number}
  */
 export
-const ReferentStatus = _enum_for_ReferentStatus;
+const ReferentStatus: typeof _enum_for_ReferentStatus = _enum_for_ReferentStatus;
 
 /**
  * @summary ReferentStatus_not_changed_since_produce
@@ -88,7 +88,7 @@ const ReferentStatus = _enum_for_ReferentStatus;
  * @type {number}
  */
 export
-const ReferentStatus_not_changed_since_produce: ReferentStatus = ReferentStatus.not_changed_since_produce; /* LONG_NAMED_ENUMERATED_VALUE */
+const ReferentStatus_not_changed_since_produce: _enum_for_ReferentStatus.not_changed_since_produce = ReferentStatus.not_changed_since_produce; /* LONG_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary not_changed_since_produce
@@ -99,7 +99,7 @@ const ReferentStatus_not_changed_since_produce: ReferentStatus = ReferentStatus.
  * @type {number}
  */
 export
-const not_changed_since_produce: ReferentStatus = ReferentStatus.not_changed_since_produce; /* SHORT_NAMED_ENUMERATED_VALUE */
+const not_changed_since_produce: _enum_for_ReferentStatus.not_changed_since_produce = ReferentStatus.not_changed_since_produce; /* SHORT_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary ReferentStatus_changed_since_produce
@@ -110,7 +110,7 @@ const not_changed_since_produce: ReferentStatus = ReferentStatus.not_changed_sin
  * @type {number}
  */
 export
-const ReferentStatus_changed_since_produce: ReferentStatus = ReferentStatus.changed_since_produce; /* LONG_NAMED_ENUMERATED_VALUE */
+const ReferentStatus_changed_since_produce: _enum_for_ReferentStatus.changed_since_produce = ReferentStatus.changed_since_produce; /* LONG_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary changed_since_produce
@@ -121,9 +121,20 @@ const ReferentStatus_changed_since_produce: ReferentStatus = ReferentStatus.chan
  * @type {number}
  */
 export
-const changed_since_produce: ReferentStatus = ReferentStatus.changed_since_produce; /* SHORT_NAMED_ENUMERATED_VALUE */
-export const _decode_ReferentStatus = $._decodeEnumerated;
-export const _encode_ReferentStatus = $._encodeEnumerated;
+const changed_since_produce: _enum_for_ReferentStatus.changed_since_produce = ReferentStatus.changed_since_produce; /* SHORT_NAMED_ENUMERATED_VALUE */
+export function _decode_ReferentStatus(el: _Element): ReferentStatus {
+    const enumerated = $._decodeEnumerated(el);
+    switch (enumerated) {
+        case ReferentStatus.not_changed_since_produce: return ReferentStatus.not_changed_since_produce;
+        case ReferentStatus.changed_since_produce: return ReferentStatus.changed_since_produce;
+        default:
+            throw new _ConstructionError(
+                "Invalid ENUMERATED value " + enumerated + " for ReferentStatus.",
+                el,
+            );
+    }
+}
+export const _encode_ReferentStatus: $.ASN1Encoder<ReferentStatus> = $._encodeEnumerated as $.ASN1Encoder<ReferentStatus>;
 
 
 /* eslint-enable */

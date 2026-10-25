@@ -11,12 +11,12 @@ import {
 } from '@wildboar/asn1';
 import * as $ from '@wildboar/asn1/functional';
 import {
-  Equality_Comparision,
+  type Equality_Comparision,
   _decode_Equality_Comparision,
   _encode_Equality_Comparision,
 } from '../ISO8571-FTAM/Equality-Comparision.ta.mjs';
 import {
-  Pathname_Pattern_pathname_value_Item,
+  type Pathname_Pattern_pathname_value_Item,
   _decode_Pathname_Pattern_pathname_value_Item,
   _encode_Pathname_Pattern_pathname_value_Item,
 } from '../ISO8571-FTAM/Pathname-Pattern-pathname-value-Item.ta.mjs';
@@ -51,7 +51,7 @@ export class Pathname_Pattern {
    * @public
    * @readonly
    */
-  readonly equality_comparision: Equality_Comparision;
+  public readonly equality_comparision: Equality_Comparision;
   /**
    * @summary `pathname_value`.
    * @description
@@ -61,7 +61,7 @@ export class Pathname_Pattern {
    * @public
    * @readonly
    */
-  readonly pathname_value: Pathname_Pattern_pathname_value_Item[];
+  public readonly pathname_value: Pathname_Pattern_pathname_value_Item[];
 
   constructor(
     equality_comparision: Equality_Comparision,

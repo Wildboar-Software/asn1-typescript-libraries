@@ -1,7 +1,7 @@
 /* eslint-disable */
 import {
-    OPTIONAL,
-    ASN1Element as _Element,
+    type OPTIONAL,
+    type ASN1Element as _Element,
     ASN1TagClass as _TagClass,
     ASN1Construction as _Construction,
     ASN1UniversalType as _UniversalType,
@@ -11,8 +11,8 @@ import {
     ASN1ConstructionError as _ConstructionError,
 } from "@wildboar/asn1";
 import * as $ from "@wildboar/asn1/functional";
-import { SigPolicyId, _decode_SigPolicyId, _encode_SigPolicyId } from "../ETS-ElectronicSignatureFormats-ExplicitSyntax97/SigPolicyId.ta.mjs";
-import { SigPolicyHash, _decode_SigPolicyHash, _encode_SigPolicyHash } from "../ETS-ElectronicSignatureFormats-ExplicitSyntax97/SigPolicyHash.ta.mjs";
+import { type SigPolicyId, _decode_SigPolicyId, _encode_SigPolicyId } from "../ETS-ElectronicSignatureFormats-ExplicitSyntax97/SigPolicyId.ta.mjs";
+import { type SigPolicyHash, _decode_SigPolicyHash, _encode_SigPolicyHash } from "../ETS-ElectronicSignatureFormats-ExplicitSyntax97/SigPolicyHash.ta.mjs";
 import { SigPolicyQualifierInfo, _decode_SigPolicyQualifierInfo, _encode_SigPolicyQualifierInfo } from "../ETS-ElectronicSignatureFormats-ExplicitSyntax97/SigPolicyQualifierInfo.ta.mjs";
 /**
  * @summary SignaturePolicyId
@@ -36,45 +36,53 @@ import { SigPolicyQualifierInfo, _decode_SigPolicyQualifierInfo, _encode_SigPoli
  */
 export
 class SignaturePolicyId {
+    /**
+     * @summary `sigPolicyId`.
+     * @description
+     *
+     * Object identifier that uniquely identifies a specific
+     * version of the signature policy.
+     *
+     * @public
+     * @readonly
+     */
+    public readonly sigPolicyId: SigPolicyId;
+    /**
+     * @summary `sigPolicyHash`.
+     * @description
+     *
+     * Hash algorithm and hash of the signature policy. The
+     * hash value may be all zeros to indicate that the policy
+     * hash is not known (backwards compatibility); in that
+     * case the hash should not be checked. If the policy is
+     * ASN.1, the hash is over the value without the outer
+     * type and length.
+     *
+     * @public
+     * @readonly
+     */
+    public readonly sigPolicyHash: SigPolicyHash;
+    /**
+     * @summary `sigPolicyQualifiers`.
+     * @description
+     *
+     * Optional extra information about the policy, e.g. a URI
+     * (`spuri`) or a user notice (`sp-user-notice`).
+     *
+     * @public
+     * @readonly
+     */
+    public readonly sigPolicyQualifiers?: OPTIONAL<SigPolicyQualifierInfo[]>;
+
     constructor (
-        /**
-         * @summary `sigPolicyId`.
-         * @description
-         *
-         * Object identifier that uniquely identifies a specific
-         * version of the signature policy.
-         *
-         * @public
-         * @readonly
-         */
-        readonly sigPolicyId: SigPolicyId,
-        /**
-         * @summary `sigPolicyHash`.
-         * @description
-         *
-         * Hash algorithm and hash of the signature policy. The
-         * hash value may be all zeros to indicate that the policy
-         * hash is not known (backwards compatibility); in that
-         * case the hash should not be checked. If the policy is
-         * ASN.1, the hash is over the value without the outer
-         * type and length.
-         *
-         * @public
-         * @readonly
-         */
-        readonly sigPolicyHash: SigPolicyHash,
-        /**
-         * @summary `sigPolicyQualifiers`.
-         * @description
-         *
-         * Optional extra information about the policy, e.g. a URI
-         * (`spuri`) or a user notice (`sp-user-notice`).
-         *
-         * @public
-         * @readonly
-         */
-        readonly sigPolicyQualifiers?: OPTIONAL<SigPolicyQualifierInfo[]>
-    ) {}
+        sigPolicyId: SigPolicyId,
+        sigPolicyHash: SigPolicyHash,
+        sigPolicyQualifiers?: OPTIONAL<SigPolicyQualifierInfo[]>
+    ) {
+        this.sigPolicyId = sigPolicyId;
+        this.sigPolicyHash = sigPolicyHash;
+        this.sigPolicyQualifiers = sigPolicyQualifiers;
+    }
 
     /**
      * @summary Restructures an object into a SignaturePolicyId

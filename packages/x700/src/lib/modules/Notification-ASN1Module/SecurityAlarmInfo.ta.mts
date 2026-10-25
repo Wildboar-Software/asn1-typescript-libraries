@@ -1,7 +1,7 @@
 /* eslint-disable */
 import {
-    OPTIONAL,
-    ASN1Element as _Element,
+    type OPTIONAL,
+    type ASN1Element as _Element,
     ASN1TagClass as _TagClass,
     ASN1Construction as _Construction,
     ASN1UniversalType as _UniversalType,
@@ -12,17 +12,17 @@ import {
 } from '@wildboar/asn1';
 import * as $ from '@wildboar/asn1/functional';
 import {
-    SecurityAlarmCause,
+    type SecurityAlarmCause,
     _decode_SecurityAlarmCause,
     _encode_SecurityAlarmCause,
 } from '@wildboar/attribute-asn1module';
 import {
-    SecurityAlarmSeverity,
+    type SecurityAlarmSeverity,
     _decode_SecurityAlarmSeverity,
     _encode_SecurityAlarmSeverity,
 } from '@wildboar/attribute-asn1module';
 import {
-    SecurityAlarmDetector,
+    type SecurityAlarmDetector,
     _decode_SecurityAlarmDetector,
     _encode_SecurityAlarmDetector,
 } from '@wildboar/attribute-asn1module';
@@ -32,27 +32,27 @@ import {
     _encode_ServiceUser,
 } from '@wildboar/attribute-asn1module';
 import {
-    ServiceProvider,
+    type ServiceProvider,
     _decode_ServiceProvider,
     _encode_ServiceProvider,
 } from '@wildboar/attribute-asn1module';
 import {
-    NotificationIdentifier,
+    type NotificationIdentifier,
     _decode_NotificationIdentifier,
     _encode_NotificationIdentifier,
 } from '@wildboar/attribute-asn1module';
 import {
-    CorrelatedNotifications,
+    type CorrelatedNotifications,
     _decode_CorrelatedNotifications,
     _encode_CorrelatedNotifications,
 } from '@wildboar/attribute-asn1module';
 import {
-    AdditionalText,
+    type AdditionalText,
     _decode_AdditionalText,
     _encode_AdditionalText,
 } from '@wildboar/attribute-asn1module';
 import {
-    AdditionalInformation,
+    type AdditionalInformation,
     _decode_AdditionalInformation,
     _encode_AdditionalInformation,
 } from '@wildboar/attribute-asn1module';
@@ -98,114 +98,134 @@ import {
  *
  */
 export class SecurityAlarmInfo {
+    /**
+     * @summary `securityAlarmCause`.
+     * @description
+     *
+     * Further qualification of the security-alarm cause.
+     * Combined with event type, it determines remaining
+     * parameters and their values. Prefer the most specific
+     * registered cause. In the systems management context,
+     * causes are object identifiers registered in X.721.
+     * X.736 Table 1 maps event types to causes (for example
+     * authentication failure, cable tamper, delayed
+     * information). ITU-T Rec. X.736 (01/92) §8.1.2.1.
+     * @public
+     * @readonly
+     */
+    public readonly securityAlarmCause: SecurityAlarmCause;
+    /**
+     * @summary `securityAlarmSeverity`.
+     * @description
+     *
+     * Significance as perceived by the managed object:
+     * `indeterminate` (attack detected, integrity unknown);
+     * `critical` (compromise; system may no longer support
+     * the security policy); `major` (significant
+     * information or mechanisms compromised); `minor` (less
+     * significant compromise); `warning` (attack detected,
+     * security not believed compromised). ITU-T Rec. X.736
+     * (01/92) §8.1.2.2.
+     * @public
+     * @readonly
+     */
+    public readonly securityAlarmSeverity: SecurityAlarmSeverity;
+    /**
+     * @summary `securityAlarmDetector`.
+     * @description
+     *
+     * Detector of the security alarm. ITU-T Rec. X.736
+     * (01/92) §8.1.2.3.
+     * @public
+     * @readonly
+     */
+    public readonly securityAlarmDetector: SecurityAlarmDetector;
+    /**
+     * @summary `serviceUser`.
+     * @description
+     *
+     * Service-user whose request for service led to this
+     * security alarm. ITU-T Rec. X.736 (01/92) §8.1.2.4.
+     * @public
+     * @readonly
+     */
+    public readonly serviceUser: ServiceUser;
+    /**
+     * @summary `serviceProvider`.
+     * @description
+     *
+     * Intended service-provider of the service that led to
+     * this security alarm. ITU-T Rec. X.736 (01/92)
+     * §8.1.2.5.
+     * @public
+     * @readonly
+     */
+    public readonly serviceProvider: ServiceProvider;
+    /**
+     * @summary `notificationIdentifier`.
+     * @description
+     *
+     * Identifier that later notifications may cite in
+     * `correlatedNotifications`. ITU-T Rec. X.736 (01/92)
+     * §8.3; X.733 (02/92) §8.1.2.8.
+     * @public
+     * @readonly
+     */
+    public readonly notificationIdentifier?: OPTIONAL<NotificationIdentifier>;
+    /**
+     * @summary `correlatedNotifications`.
+     * @description
+     *
+     * Notifications correlated with this one. ITU-T Rec.
+     * X.736 (01/92) §8.3; X.733 (02/92) §8.1.2.9.
+     * @public
+     * @readonly
+     */
+    public readonly correlatedNotifications?: OPTIONAL<CorrelatedNotifications>;
+    /**
+     * @summary `additionalText`.
+     * @description
+     *
+     * Free-form text; not required to interpret the
+     * notification. ITU-T Rec. X.736 (01/92) §8.3; X.733
+     * (02/92) §8.1.2.13.
+     * @public
+     * @readonly
+     */
+    public readonly additionalText?: OPTIONAL<AdditionalText>;
+    /**
+     * @summary `additionalInformation`.
+     * @description
+     *
+     * Extra identifier/significance/information structures.
+     * ITU-T Rec. X.736 (01/92) §8.3; X.733 (02/92)
+     * §8.1.2.14.
+     * @public
+     * @readonly
+     */
+    public readonly additionalInformation?: OPTIONAL<AdditionalInformation>;
+
     constructor(
-        /**
-         * @summary `securityAlarmCause`.
-         * @description
-         *
-         * Further qualification of the security-alarm cause.
-         * Combined with event type, it determines remaining
-         * parameters and their values. Prefer the most specific
-         * registered cause. In the systems management context,
-         * causes are object identifiers registered in X.721.
-         * X.736 Table 1 maps event types to causes (for example
-         * authentication failure, cable tamper, delayed
-         * information). ITU-T Rec. X.736 (01/92) §8.1.2.1.
-         * @public
-         * @readonly
-         */
-        readonly securityAlarmCause: SecurityAlarmCause,
-        /**
-         * @summary `securityAlarmSeverity`.
-         * @description
-         *
-         * Significance as perceived by the managed object:
-         * `indeterminate` (attack detected, integrity unknown);
-         * `critical` (compromise; system may no longer support
-         * the security policy); `major` (significant
-         * information or mechanisms compromised); `minor` (less
-         * significant compromise); `warning` (attack detected,
-         * security not believed compromised). ITU-T Rec. X.736
-         * (01/92) §8.1.2.2.
-         * @public
-         * @readonly
-         */
-        readonly securityAlarmSeverity: SecurityAlarmSeverity,
-        /**
-         * @summary `securityAlarmDetector`.
-         * @description
-         *
-         * Detector of the security alarm. ITU-T Rec. X.736
-         * (01/92) §8.1.2.3.
-         * @public
-         * @readonly
-         */
-        readonly securityAlarmDetector: SecurityAlarmDetector,
-        /**
-         * @summary `serviceUser`.
-         * @description
-         *
-         * Service-user whose request for service led to this
-         * security alarm. ITU-T Rec. X.736 (01/92) §8.1.2.4.
-         * @public
-         * @readonly
-         */
-        readonly serviceUser: ServiceUser,
-        /**
-         * @summary `serviceProvider`.
-         * @description
-         *
-         * Intended service-provider of the service that led to
-         * this security alarm. ITU-T Rec. X.736 (01/92)
-         * §8.1.2.5.
-         * @public
-         * @readonly
-         */
-        readonly serviceProvider: ServiceProvider,
-        /**
-         * @summary `notificationIdentifier`.
-         * @description
-         *
-         * Identifier that later notifications may cite in
-         * `correlatedNotifications`. ITU-T Rec. X.736 (01/92)
-         * §8.3; X.733 (02/92) §8.1.2.8.
-         * @public
-         * @readonly
-         */
-        readonly notificationIdentifier?: OPTIONAL<NotificationIdentifier>,
-        /**
-         * @summary `correlatedNotifications`.
-         * @description
-         *
-         * Notifications correlated with this one. ITU-T Rec.
-         * X.736 (01/92) §8.3; X.733 (02/92) §8.1.2.9.
-         * @public
-         * @readonly
-         */
-        readonly correlatedNotifications?: OPTIONAL<CorrelatedNotifications>,
-        /**
-         * @summary `additionalText`.
-         * @description
-         *
-         * Free-form text; not required to interpret the
-         * notification. ITU-T Rec. X.736 (01/92) §8.3; X.733
-         * (02/92) §8.1.2.13.
-         * @public
-         * @readonly
-         */
-        readonly additionalText?: OPTIONAL<AdditionalText>,
-        /**
-         * @summary `additionalInformation`.
-         * @description
-         *
-         * Extra identifier/significance/information structures.
-         * ITU-T Rec. X.736 (01/92) §8.3; X.733 (02/92)
-         * §8.1.2.14.
-         * @public
-         * @readonly
-         */
-        readonly additionalInformation?: OPTIONAL<AdditionalInformation>
-    ) {}
+        securityAlarmCause: SecurityAlarmCause,
+        securityAlarmSeverity: SecurityAlarmSeverity,
+        securityAlarmDetector: SecurityAlarmDetector,
+        serviceUser: ServiceUser,
+        serviceProvider: ServiceProvider,
+        notificationIdentifier?: OPTIONAL<NotificationIdentifier>,
+        correlatedNotifications?: OPTIONAL<CorrelatedNotifications>,
+        additionalText?: OPTIONAL<AdditionalText>,
+        additionalInformation?: OPTIONAL<AdditionalInformation>
+    ) {
+        this.securityAlarmCause = securityAlarmCause;
+        this.securityAlarmSeverity = securityAlarmSeverity;
+        this.securityAlarmDetector = securityAlarmDetector;
+        this.serviceUser = serviceUser;
+        this.serviceProvider = serviceProvider;
+        this.notificationIdentifier = notificationIdentifier;
+        this.correlatedNotifications = correlatedNotifications;
+        this.additionalText = additionalText;
+        this.additionalInformation = additionalInformation;
+    }
 
     /**
      * @summary Restructures an object into a SecurityAlarmInfo
@@ -241,7 +261,7 @@ export class SecurityAlarmInfo {
      * @static
      */
 
-    public static _enum_for_securityAlarmSeverity = _enum_for_PerceivedSeverity;
+    public static _enum_for_securityAlarmSeverity: typeof _enum_for_PerceivedSeverity = _enum_for_PerceivedSeverity;
 }
 
 /**

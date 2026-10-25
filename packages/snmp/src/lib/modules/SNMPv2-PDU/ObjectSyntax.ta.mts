@@ -1,6 +1,6 @@
 /* eslint-disable */
 import {
-    ASN1Element as _Element,
+    type ASN1Element as _Element,
     ASN1TagClass as _TagClass,
     ASN1Construction as _Construction,
     ASN1UniversalType as _UniversalType,
@@ -10,8 +10,8 @@ import {
     ASN1ConstructionError as _ConstructionError,
 } from "@wildboar/asn1";
 import * as $ from "@wildboar/asn1/functional";
-import { SimpleSyntax, _decode_SimpleSyntax, _encode_SimpleSyntax } from "../SNMPv2-PDU/SimpleSyntax.ta.mjs";
-import { ApplicationSyntax, _decode_ApplicationSyntax, _encode_ApplicationSyntax } from "../SNMPv2-PDU/ApplicationSyntax.ta.mjs";
+import { type SimpleSyntax, _decode_SimpleSyntax, _encode_SimpleSyntax } from "../SNMPv2-PDU/SimpleSyntax.ta.mjs";
+import { type ApplicationSyntax, _decode_ApplicationSyntax, _encode_ApplicationSyntax } from "../SNMPv2-PDU/ApplicationSyntax.ta.mjs";
 /**
  * @summary ObjectSyntax
  * @description

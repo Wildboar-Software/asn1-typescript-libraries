@@ -1,22 +1,22 @@
 /* eslint-disable */
 import {
     ASN1ConstructionError as _ConstructionError,
-    ASN1Element as _Element,
+    type ASN1Element as _Element,
     ASN1TagClass as _TagClass,
 } from "@wildboar/asn1";
 import * as $ from "@wildboar/asn1/functional";
 import {
-    Abstract_syntax_name,
+    type Abstract_syntax_name,
     _decode_Abstract_syntax_name,
     _encode_Abstract_syntax_name,
 } from "../OSIProtocolSpecification/Abstract-syntax-name.ta.mjs";
 import {
-    Presentation_context_identifier,
+    type Presentation_context_identifier,
     _decode_Presentation_context_identifier,
     _encode_Presentation_context_identifier,
 } from "../OSIProtocolSpecification/Presentation-context-identifier.ta.mjs";
 import {
-    Transfer_syntax_name,
+    type Transfer_syntax_name,
     _decode_Transfer_syntax_name,
     _encode_Transfer_syntax_name,
 } from "../OSIProtocolSpecification/Transfer-syntax-name.ta.mjs";
@@ -32,26 +32,34 @@ import {
  *
  */
 export class Context_list_Item {
+    /**
+     * @summary `presentation_context_identifier`.
+     * @public
+     * @readonly
+     */
+    public readonly presentation_context_identifier: Presentation_context_identifier;
+    /**
+     * @summary `abstract_syntax_name`.
+     * @public
+     * @readonly
+     */
+    public readonly abstract_syntax_name: Abstract_syntax_name;
+    /**
+     * @summary `transfer_syntax_name_list`.
+     * @public
+     * @readonly
+     */
+    public readonly transfer_syntax_name_list: Transfer_syntax_name[];
+
     constructor(
-        /**
-         * @summary `presentation_context_identifier`.
-         * @public
-         * @readonly
-         */
-        readonly presentation_context_identifier: Presentation_context_identifier,
-        /**
-         * @summary `abstract_syntax_name`.
-         * @public
-         * @readonly
-         */
-        readonly abstract_syntax_name: Abstract_syntax_name,
-        /**
-         * @summary `transfer_syntax_name_list`.
-         * @public
-         * @readonly
-         */
-        readonly transfer_syntax_name_list: Transfer_syntax_name[]
-    ) {}
+        presentation_context_identifier: Presentation_context_identifier,
+        abstract_syntax_name: Abstract_syntax_name,
+        transfer_syntax_name_list: Transfer_syntax_name[]
+    ) {
+        this.presentation_context_identifier = presentation_context_identifier;
+        this.abstract_syntax_name = abstract_syntax_name;
+        this.transfer_syntax_name_list = transfer_syntax_name_list;
+    }
 
     /**
      * @summary Restructures an object into a Context_list_Item

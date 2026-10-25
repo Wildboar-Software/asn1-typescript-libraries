@@ -2,47 +2,47 @@
 
 import * as $ from "@wildboar/asn1/functional";
 import {
-    OPTIONAL,
-    SEQUENCE,
-    SET,
-    ASN1Element as _Element,
+    type OPTIONAL,
+    type SEQUENCE,
+    type SET,
+    type ASN1Element as _Element,
     ASN1TagClass as _TagClass
 } from "@wildboar/asn1";
-import { BookmarkReached, _decode_BookmarkReached, _encode_BookmarkReached } from "../CSTA-capability-exchange/BookmarkReached.ta.mjs";
+import { type BookmarkReached, _decode_BookmarkReached, _encode_BookmarkReached } from "../CSTA-capability-exchange/BookmarkReached.ta.mjs";
 
-import { Completed, _decode_Completed, _encode_Completed } from "../CSTA-capability-exchange/Completed.ta.mjs";
+import { type Completed, _decode_Completed, _encode_Completed } from "../CSTA-capability-exchange/Completed.ta.mjs";
 
-import { DtmfDetected, _decode_DtmfDetected, _encode_DtmfDetected } from "../CSTA-capability-exchange/DtmfDetected.ta.mjs";
+import { type DtmfDetected, _decode_DtmfDetected, _encode_DtmfDetected } from "../CSTA-capability-exchange/DtmfDetected.ta.mjs";
 
-import { Emptied, _decode_Emptied, _encode_Emptied } from "../CSTA-capability-exchange/Emptied.ta.mjs";
+import { type Emptied, _decode_Emptied, _encode_Emptied } from "../CSTA-capability-exchange/Emptied.ta.mjs";
 
-import { InterruptionDetected, _decode_InterruptionDetected, _encode_InterruptionDetected } from "../CSTA-capability-exchange/InterruptionDetected.ta.mjs";
+import { type InterruptionDetected, _decode_InterruptionDetected, _encode_InterruptionDetected } from "../CSTA-capability-exchange/InterruptionDetected.ta.mjs";
 
-import { NotRecognized, _decode_NotRecognized, _encode_NotRecognized } from "../CSTA-capability-exchange/NotRecognized.ta.mjs";
+import { type NotRecognized, _decode_NotRecognized, _encode_NotRecognized } from "../CSTA-capability-exchange/NotRecognized.ta.mjs";
 
-import { Play, _decode_Play, _encode_Play } from "../CSTA-capability-exchange/Play.ta.mjs";
+import { type Play, _decode_Play, _encode_Play } from "../CSTA-capability-exchange/Play.ta.mjs";
 
-import { Record, _decode_Record, _encode_Record } from "../CSTA-capability-exchange/Record.ta.mjs";
+import { type Record, _decode_Record, _encode_Record } from "../CSTA-capability-exchange/Record.ta.mjs";
 
-import { Recognized, _decode_Recognized, _encode_Recognized } from "../CSTA-capability-exchange/Recognized.ta.mjs";
+import { type Recognized, _decode_Recognized, _encode_Recognized } from "../CSTA-capability-exchange/Recognized.ta.mjs";
 
-import { ReviewEvent, _decode_ReviewEvent, _encode_ReviewEvent } from "../CSTA-capability-exchange/ReviewEvent.ta.mjs";
+import { type ReviewEvent, _decode_ReviewEvent, _encode_ReviewEvent } from "../CSTA-capability-exchange/ReviewEvent.ta.mjs";
 
-import { Started, _decode_Started, _encode_Started } from "../CSTA-capability-exchange/Started.ta.mjs";
+import { type Started, _decode_Started, _encode_Started } from "../CSTA-capability-exchange/Started.ta.mjs";
 
-import { SilenceTimeoutExpired, _decode_SilenceTimeoutExpired, _encode_SilenceTimeoutExpired } from "../CSTA-capability-exchange/SilenceTimeoutExpired.ta.mjs";
+import { type SilenceTimeoutExpired, _decode_SilenceTimeoutExpired, _encode_SilenceTimeoutExpired } from "../CSTA-capability-exchange/SilenceTimeoutExpired.ta.mjs";
 
-import { SpeechDetected, _decode_SpeechDetected, _encode_SpeechDetected } from "../CSTA-capability-exchange/SpeechDetected.ta.mjs";
+import { type SpeechDetected, _decode_SpeechDetected, _encode_SpeechDetected } from "../CSTA-capability-exchange/SpeechDetected.ta.mjs";
 
-import { StopEvent, _decode_StopEvent, _encode_StopEvent } from "../CSTA-capability-exchange/StopEvent.ta.mjs";
+import { type StopEvent, _decode_StopEvent, _encode_StopEvent } from "../CSTA-capability-exchange/StopEvent.ta.mjs";
 
-import { SuspendPlay, _decode_SuspendPlay, _encode_SuspendPlay } from "../CSTA-capability-exchange/SuspendPlay.ta.mjs";
+import { type SuspendPlay, _decode_SuspendPlay, _encode_SuspendPlay } from "../CSTA-capability-exchange/SuspendPlay.ta.mjs";
 
-import { SuspendRecord, _decode_SuspendRecord, _encode_SuspendRecord } from "../CSTA-capability-exchange/SuspendRecord.ta.mjs";
+import { type SuspendRecord, _decode_SuspendRecord, _encode_SuspendRecord } from "../CSTA-capability-exchange/SuspendRecord.ta.mjs";
 
-import { VoiceAttribChanged, _decode_VoiceAttribChanged, _encode_VoiceAttribChanged } from "../CSTA-capability-exchange/VoiceAttribChanged.ta.mjs";
+import { type VoiceAttribChanged, _decode_VoiceAttribChanged, _encode_VoiceAttribChanged } from "../CSTA-capability-exchange/VoiceAttribChanged.ta.mjs";
 
-import { VoiceErrorOccured, _decode_VoiceErrorOccured, _encode_VoiceErrorOccured } from "../CSTA-capability-exchange/VoiceErrorOccured.ta.mjs";
+import { type VoiceErrorOccured, _decode_VoiceErrorOccured, _encode_VoiceErrorOccured } from "../CSTA-capability-exchange/VoiceErrorOccured.ta.mjs";
 
 
 
@@ -60,23 +60,23 @@ import { VoiceErrorOccured, _decode_VoiceErrorOccured, _encode_VoiceErrorOccured
  * 
  * ```asn1
  * VoiceUnitEvtsList ::= SEQUENCE
- * {     bookmarkReached            [ 7] IMPLICIT BookmarkReached            OPTIONAL,
- *     completed            [ 8] IMPLICIT Completed                OPTIONAL,
- *     dtmfDetected            [ 9] IMPLICIT DtmfDetected            OPTIONAL,
- *     emptied                [10] IMPLICIT Emptied                OPTIONAL,
- *     interruptionDetected        [11] IMPLICIT InterruptionDetected        OPTIONAL,
- *     notRecognized            [12] IMPLICIT NotRecognized            OPTIONAL,
- *     play                 [ 0] IMPLICIT Play                 OPTIONAL,
- *     record                 [ 1] IMPLICIT Record                 OPTIONAL,
- *     recognized            [13] IMPLICIT Recognized            OPTIONAL,
- *     review                 [ 2] IMPLICIT ReviewEvent             OPTIONAL,
- *     started                [14] IMPLICIT Started                OPTIONAL,
- *     silenceTimeoutExpired        [15] IMPLICIT SilenceTimeoutExpired        OPTIONAL,
- *     speechDetected            [16] IMPLICIT SpeechDetected            OPTIONAL,
- *     stop                 [ 3] IMPLICIT StopEvent             OPTIONAL,
- *     suspendPlay             [ 4] IMPLICIT SuspendPlay             OPTIONAL,
- *     suspendRecord             [ 5] IMPLICIT SuspendRecord             OPTIONAL,
- *     voiceAttribChanged         [ 6] IMPLICIT VoiceAttribChanged        OPTIONAL,
+ * {     bookmarkReached            [ 7] IMPLICIT BookmarkReached            type OPTIONAL,
+ *     completed            [ 8] IMPLICIT Completed                type OPTIONAL,
+ *     dtmfDetected            [ 9] IMPLICIT DtmfDetected            type OPTIONAL,
+ *     emptied                [10] IMPLICIT Emptied                type OPTIONAL,
+ *     interruptionDetected        [11] IMPLICIT InterruptionDetected        type OPTIONAL,
+ *     notRecognized            [12] IMPLICIT NotRecognized            type OPTIONAL,
+ *     play                 [ 0] IMPLICIT Play                 type OPTIONAL,
+ *     record                 [ 1] IMPLICIT Record                 type OPTIONAL,
+ *     recognized            [13] IMPLICIT Recognized            type OPTIONAL,
+ *     review                 [ 2] IMPLICIT ReviewEvent             type OPTIONAL,
+ *     started                [14] IMPLICIT Started                type OPTIONAL,
+ *     silenceTimeoutExpired        [15] IMPLICIT SilenceTimeoutExpired        type OPTIONAL,
+ *     speechDetected            [16] IMPLICIT SpeechDetected            type OPTIONAL,
+ *     stop                 [ 3] IMPLICIT StopEvent             type OPTIONAL,
+ *     suspendPlay             [ 4] IMPLICIT SuspendPlay             type OPTIONAL,
+ *     suspendRecord             [ 5] IMPLICIT SuspendRecord             type OPTIONAL,
+ *     voiceAttribChanged         [ 6] IMPLICIT VoiceAttribChanged        type OPTIONAL,
  *     voiceErrorOccured        [17] IMPLICIT VoiceErrorOccured            OPTIONAL }
  * ```
  * 
@@ -84,170 +84,208 @@ import { VoiceErrorOccured, _decode_VoiceErrorOccured, _encode_VoiceErrorOccured
  */
 export
 class VoiceUnitEvtsList {
+    /**
+     * @summary `bookmarkReached`.
+     * @public
+     * @readonly
+     * @description
+     * Capability bitmap for this event; omit if the SF does not support it
+     * (ECMA-269 Annex C).
+     */
+    public readonly bookmarkReached?: OPTIONAL<BookmarkReached>;
+    /**
+     * @summary `completed`.
+     * @public
+     * @readonly
+     * @description
+     * Capability bitmap for this event; omit if the SF does not support it
+     * (ECMA-269 Annex C).
+     */
+    public readonly completed?: OPTIONAL<Completed>;
+    /**
+     * @summary `dtmfDetected`.
+     * @public
+     * @readonly
+     * @description
+     * Capability bitmap for this event; omit if the SF does not support it
+     * (ECMA-269 Annex C).
+     */
+    public readonly dtmfDetected?: OPTIONAL<DtmfDetected>;
+    /**
+     * @summary `emptied`.
+     * @public
+     * @readonly
+     * @description
+     * Capability bitmap for this event; omit if the SF does not support it
+     * (ECMA-269 Annex C).
+     */
+    public readonly emptied?: OPTIONAL<Emptied>;
+    /**
+     * @summary `interruptionDetected`.
+     * @public
+     * @readonly
+     * @description
+     * Capability bitmap for this event; omit if the SF does not support it
+     * (ECMA-269 Annex C).
+     */
+    public readonly interruptionDetected?: OPTIONAL<InterruptionDetected>;
+    /**
+     * @summary `notRecognized`.
+     * @public
+     * @readonly
+     * @description
+     * Capability bitmap for this event; omit if the SF does not support it
+     * (ECMA-269 Annex C).
+     */
+    public readonly notRecognized?: OPTIONAL<NotRecognized>;
+    /**
+     * @summary `play`.
+     * @public
+     * @readonly
+     * @description
+     * Capability bitmap for this event; omit if the SF does not support it
+     * (ECMA-269 Annex C).
+     */
+    public readonly play?: OPTIONAL<Play>;
+    /**
+     * @summary `record`.
+     * @public
+     * @readonly
+     * @description
+     * Capability bitmap for this event; omit if the SF does not support it
+     * (ECMA-269 Annex C).
+     */
+    public readonly record?: OPTIONAL<Record>;
+    /**
+     * @summary `recognized`.
+     * @public
+     * @readonly
+     * @description
+     * Capability bitmap for this event; omit if the SF does not support it
+     * (ECMA-269 Annex C).
+     */
+    public readonly recognized?: OPTIONAL<Recognized>;
+    /**
+     * @summary `review`.
+     * @public
+     * @readonly
+     * @description
+     * Capability bitmap for this event; omit if the SF does not support it
+     * (ECMA-269 Annex C).
+     */
+    public readonly review?: OPTIONAL<ReviewEvent>;
+    /**
+     * @summary `started`.
+     * @public
+     * @readonly
+     * @description
+     * Capability bitmap for this event; omit if the SF does not support it
+     * (ECMA-269 Annex C).
+     */
+    public readonly started?: OPTIONAL<Started>;
+    /**
+     * @summary `silenceTimeoutExpired`.
+     * @public
+     * @readonly
+     * @description
+     * Capability bitmap for this event; omit if the SF does not support it
+     * (ECMA-269 Annex C).
+     */
+    public readonly silenceTimeoutExpired?: OPTIONAL<SilenceTimeoutExpired>;
+    /**
+     * @summary `speechDetected`.
+     * @public
+     * @readonly
+     * @description
+     * Capability bitmap for this event; omit if the SF does not support it
+     * (ECMA-269 Annex C).
+     */
+    public readonly speechDetected?: OPTIONAL<SpeechDetected>;
+    /**
+     * @summary `stop`.
+     * @public
+     * @readonly
+     * @description
+     * Capability bitmap for this event; omit if the SF does not support it
+     * (ECMA-269 Annex C).
+     */
+    public readonly stop?: OPTIONAL<StopEvent>;
+    /**
+     * @summary `suspendPlay`.
+     * @public
+     * @readonly
+     * @description
+     * Capability bitmap for this event; omit if the SF does not support it
+     * (ECMA-269 Annex C).
+     */
+    public readonly suspendPlay?: OPTIONAL<SuspendPlay>;
+    /**
+     * @summary `suspendRecord`.
+     * @public
+     * @readonly
+     * @description
+     * Capability bitmap for this event; omit if the SF does not support it
+     * (ECMA-269 Annex C).
+     */
+    public readonly suspendRecord?: OPTIONAL<SuspendRecord>;
+    /**
+     * @summary `voiceAttribChanged`.
+     * @public
+     * @readonly
+     * @description
+     * Capability bitmap for this event; omit if the SF does not support it
+     * (ECMA-269 Annex C).
+     */
+    public readonly voiceAttribChanged?: OPTIONAL<VoiceAttribChanged>;
+    /**
+     * @summary `voiceErrorOccured`.
+     * @public
+     * @readonly
+     * @description
+     * Capability bitmap for this event; omit if the SF does not support it
+     * (ECMA-269 Annex C).
+     */
+    public readonly voiceErrorOccured?: OPTIONAL<VoiceErrorOccured>;
+
     constructor (
-        /**
-         * @summary `bookmarkReached`.
-         * @public
-         * @readonly
-         * @description
-         * Capability bitmap for this event; omit if the SF does not support it
-         * (ECMA-269 Annex C).
-         */
-        readonly bookmarkReached?: OPTIONAL<BookmarkReached>,
-        /**
-         * @summary `completed`.
-         * @public
-         * @readonly
-         * @description
-         * Capability bitmap for this event; omit if the SF does not support it
-         * (ECMA-269 Annex C).
-         */
-        readonly completed?: OPTIONAL<Completed>,
-        /**
-         * @summary `dtmfDetected`.
-         * @public
-         * @readonly
-         * @description
-         * Capability bitmap for this event; omit if the SF does not support it
-         * (ECMA-269 Annex C).
-         */
-        readonly dtmfDetected?: OPTIONAL<DtmfDetected>,
-        /**
-         * @summary `emptied`.
-         * @public
-         * @readonly
-         * @description
-         * Capability bitmap for this event; omit if the SF does not support it
-         * (ECMA-269 Annex C).
-         */
-        readonly emptied?: OPTIONAL<Emptied>,
-        /**
-         * @summary `interruptionDetected`.
-         * @public
-         * @readonly
-         * @description
-         * Capability bitmap for this event; omit if the SF does not support it
-         * (ECMA-269 Annex C).
-         */
-        readonly interruptionDetected?: OPTIONAL<InterruptionDetected>,
-        /**
-         * @summary `notRecognized`.
-         * @public
-         * @readonly
-         * @description
-         * Capability bitmap for this event; omit if the SF does not support it
-         * (ECMA-269 Annex C).
-         */
-        readonly notRecognized?: OPTIONAL<NotRecognized>,
-        /**
-         * @summary `play`.
-         * @public
-         * @readonly
-         * @description
-         * Capability bitmap for this event; omit if the SF does not support it
-         * (ECMA-269 Annex C).
-         */
-        readonly play?: OPTIONAL<Play>,
-        /**
-         * @summary `record`.
-         * @public
-         * @readonly
-         * @description
-         * Capability bitmap for this event; omit if the SF does not support it
-         * (ECMA-269 Annex C).
-         */
-        readonly record?: OPTIONAL<Record>,
-        /**
-         * @summary `recognized`.
-         * @public
-         * @readonly
-         * @description
-         * Capability bitmap for this event; omit if the SF does not support it
-         * (ECMA-269 Annex C).
-         */
-        readonly recognized?: OPTIONAL<Recognized>,
-        /**
-         * @summary `review`.
-         * @public
-         * @readonly
-         * @description
-         * Capability bitmap for this event; omit if the SF does not support it
-         * (ECMA-269 Annex C).
-         */
-        readonly review?: OPTIONAL<ReviewEvent>,
-        /**
-         * @summary `started`.
-         * @public
-         * @readonly
-         * @description
-         * Capability bitmap for this event; omit if the SF does not support it
-         * (ECMA-269 Annex C).
-         */
-        readonly started?: OPTIONAL<Started>,
-        /**
-         * @summary `silenceTimeoutExpired`.
-         * @public
-         * @readonly
-         * @description
-         * Capability bitmap for this event; omit if the SF does not support it
-         * (ECMA-269 Annex C).
-         */
-        readonly silenceTimeoutExpired?: OPTIONAL<SilenceTimeoutExpired>,
-        /**
-         * @summary `speechDetected`.
-         * @public
-         * @readonly
-         * @description
-         * Capability bitmap for this event; omit if the SF does not support it
-         * (ECMA-269 Annex C).
-         */
-        readonly speechDetected?: OPTIONAL<SpeechDetected>,
-        /**
-         * @summary `stop`.
-         * @public
-         * @readonly
-         * @description
-         * Capability bitmap for this event; omit if the SF does not support it
-         * (ECMA-269 Annex C).
-         */
-        readonly stop?: OPTIONAL<StopEvent>,
-        /**
-         * @summary `suspendPlay`.
-         * @public
-         * @readonly
-         * @description
-         * Capability bitmap for this event; omit if the SF does not support it
-         * (ECMA-269 Annex C).
-         */
-        readonly suspendPlay?: OPTIONAL<SuspendPlay>,
-        /**
-         * @summary `suspendRecord`.
-         * @public
-         * @readonly
-         * @description
-         * Capability bitmap for this event; omit if the SF does not support it
-         * (ECMA-269 Annex C).
-         */
-        readonly suspendRecord?: OPTIONAL<SuspendRecord>,
-        /**
-         * @summary `voiceAttribChanged`.
-         * @public
-         * @readonly
-         * @description
-         * Capability bitmap for this event; omit if the SF does not support it
-         * (ECMA-269 Annex C).
-         */
-        readonly voiceAttribChanged?: OPTIONAL<VoiceAttribChanged>,
-        /**
-         * @summary `voiceErrorOccured`.
-         * @public
-         * @readonly
-         * @description
-         * Capability bitmap for this event; omit if the SF does not support it
-         * (ECMA-269 Annex C).
-         */
-        readonly voiceErrorOccured?: OPTIONAL<VoiceErrorOccured>
-    ) {}
+        bookmarkReached?: OPTIONAL<BookmarkReached>,
+        completed?: OPTIONAL<Completed>,
+        dtmfDetected?: OPTIONAL<DtmfDetected>,
+        emptied?: OPTIONAL<Emptied>,
+        interruptionDetected?: OPTIONAL<InterruptionDetected>,
+        notRecognized?: OPTIONAL<NotRecognized>,
+        play?: OPTIONAL<Play>,
+        record?: OPTIONAL<Record>,
+        recognized?: OPTIONAL<Recognized>,
+        review?: OPTIONAL<ReviewEvent>,
+        started?: OPTIONAL<Started>,
+        silenceTimeoutExpired?: OPTIONAL<SilenceTimeoutExpired>,
+        speechDetected?: OPTIONAL<SpeechDetected>,
+        stop?: OPTIONAL<StopEvent>,
+        suspendPlay?: OPTIONAL<SuspendPlay>,
+        suspendRecord?: OPTIONAL<SuspendRecord>,
+        voiceAttribChanged?: OPTIONAL<VoiceAttribChanged>,
+        voiceErrorOccured?: OPTIONAL<VoiceErrorOccured>
+    ) {
+        this.bookmarkReached = bookmarkReached;
+        this.completed = completed;
+        this.dtmfDetected = dtmfDetected;
+        this.emptied = emptied;
+        this.interruptionDetected = interruptionDetected;
+        this.notRecognized = notRecognized;
+        this.play = play;
+        this.record = record;
+        this.recognized = recognized;
+        this.review = review;
+        this.started = started;
+        this.silenceTimeoutExpired = silenceTimeoutExpired;
+        this.speechDetected = speechDetected;
+        this.stop = stop;
+        this.suspendPlay = suspendPlay;
+        this.suspendRecord = suspendRecord;
+        this.voiceAttribChanged = voiceAttribChanged;
+        this.voiceErrorOccured = voiceErrorOccured;
+    }
 
     /**
      * @summary Restructures an object into a VoiceUnitEvtsList

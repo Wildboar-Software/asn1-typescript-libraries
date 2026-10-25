@@ -16,12 +16,12 @@ import {
   _encode_Attribute,
 } from '../CMIP-1/Attribute.ta.mjs';
 import {
-  FilterItem_substrings_Item,
+  type FilterItem_substrings_Item,
   _decode_FilterItem_substrings_Item,
   _encode_FilterItem_substrings_Item,
 } from '../CMIP-1/FilterItem-substrings-Item.ta.mjs';
 import {
-  AttributeId,
+  type AttributeId,
   _decode_AttributeId,
   _encode_AttributeId,
 } from '../CMIP-1/AttributeId.ta.mjs';

@@ -1,6 +1,6 @@
 /* eslint-disable */
 import {
-    ASN1Element as _Element,
+    type ASN1Element as _Element,
     ASN1TagClass as _TagClass,
     ASN1Construction as _Construction,
     ASN1UniversalType as _UniversalType,
@@ -11,12 +11,12 @@ import {
 } from '@wildboar/asn1';
 import * as $ from '@wildboar/asn1/functional';
 import {
-    AutoActionRequestProblem,
+    type AutoActionRequestProblem,
     _decode_AutoActionRequestProblem,
     _encode_AutoActionRequestProblem,
 } from '../MSAbstractService/AutoActionRequestProblem.ta.mjs';
 import {
-    AutoActionType,
+    type AutoActionType,
     _decode_AutoActionType,
     _encode_AutoActionType,
 } from "./AutoActionType.ta.mjs";
@@ -35,20 +35,26 @@ import {
  *
  */
 export class auto_action_request_error_ParameterType_problems_Item {
+    /**
+     * @summary `problem`.
+     * @public
+     * @readonly
+     */
+    public readonly problem: AutoActionRequestProblem;
+    /**
+     * @summary `type_`.
+     * @public
+     * @readonly
+     */
+    public readonly type_: AutoActionType;
+
     constructor(
-        /**
-         * @summary `problem`.
-         * @public
-         * @readonly
-         */
-        readonly problem: AutoActionRequestProblem,
-        /**
-         * @summary `type_`.
-         * @public
-         * @readonly
-         */
-        readonly type_: AutoActionType
-    ) {}
+        problem: AutoActionRequestProblem,
+        type_: AutoActionType
+    ) {
+        this.problem = problem;
+        this.type_ = type_;
+    }
 
     /**
      * @summary Restructures an object into a auto_action_request_error_ParameterType_problems_Item

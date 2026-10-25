@@ -1,6 +1,6 @@
 /* eslint-disable */
 import {
-    ASN1Element as _Element,
+    type ASN1Element as _Element,
     ASN1TagClass as _TagClass,
     ASN1Construction as _Construction,
     ASN1UniversalType as _UniversalType,
@@ -36,19 +36,23 @@ import { BiometricAuthenticationRequest, _decode_BiometricAuthenticationRequest,
  */
 export
 class BiometricServerHello {
+    /**
+     * @summary `request`.
+     * @description
+     *
+     * Selected method and policy (FMR, trials, quality, optional
+     * template). X.1084 §10.1.3.
+     *
+     * @public
+     * @readonly
+     */
+    public readonly request: BiometricAuthenticationRequest;
+
     constructor (
-        /**
-         * @summary `request`.
-         * @description
-         *
-         * Selected method and policy (FMR, trials, quality, optional
-         * template). X.1084 §10.1.3.
-         *
-         * @public
-         * @readonly
-         */
-        readonly request: BiometricAuthenticationRequest
-    ) {}
+        request: BiometricAuthenticationRequest
+    ) {
+        this.request = request;
+    }
 
     /**
      * @summary Restructures an object into a BiometricServerHello

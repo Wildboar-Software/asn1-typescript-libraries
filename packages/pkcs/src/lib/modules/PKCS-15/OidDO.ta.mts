@@ -1,13 +1,13 @@
 /* eslint-disable */
 import {
     ASN1ConstructionError as _ConstructionError,
-    ASN1Element as _Element,
+    type ASN1Element as _Element,
     ASN1TagClass as _TagClass,
-    OBJECT_IDENTIFIER,
+    type OBJECT_IDENTIFIER,
 } from "@wildboar/asn1";
 import * as $ from "@wildboar/asn1/functional";
 import {
-    ObjectValue,
+    type ObjectValue,
     _get_decoder_for_ObjectValue,
     _get_encoder_for_ObjectValue,
 } from "../PKCS-15/ObjectValue.ta.mjs";
@@ -27,20 +27,26 @@ import {
  *
  */
 export class OidDO {
+    /**
+     * @summary `id`.
+     * @public
+     * @readonly
+     */
+    public readonly id: OBJECT_IDENTIFIER;
+    /**
+     * @summary `value`.
+     * @public
+     * @readonly
+     */
+    public readonly value: ObjectValue<_Element>;
+
     constructor(
-        /**
-         * @summary `id`.
-         * @public
-         * @readonly
-         */
-        readonly id: OBJECT_IDENTIFIER,
-        /**
-         * @summary `value`.
-         * @public
-         * @readonly
-         */
-        readonly value: ObjectValue<_Element>
-    ) {}
+        id: OBJECT_IDENTIFIER,
+        value: ObjectValue<_Element>
+    ) {
+        this.id = id;
+        this.value = value;
+    }
 
     /**
      * @summary Restructures an object into a OidDO

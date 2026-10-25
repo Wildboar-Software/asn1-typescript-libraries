@@ -1,7 +1,7 @@
 /* eslint-disable */
 import {
-    OPTIONAL,
-    ASN1Element as _Element,
+    type OPTIONAL,
+    type ASN1Element as _Element,
     ASN1TagClass as _TagClass,
     ASN1Construction as _Construction,
     ASN1UniversalType as _UniversalType,
@@ -12,7 +12,7 @@ import {
 } from '@wildboar/asn1';
 import * as $ from '@wildboar/asn1/functional';
 import {
-    ObjectInstance,
+    type ObjectInstance,
     _decode_ObjectInstance,
     _encode_ObjectInstance,
 } from '@wildboar/cmip';
@@ -22,7 +22,7 @@ import {
     _encode_AttributeMeasure,
 } from '../SummarizationASN1Productions/AttributeMeasure.ta.mjs';
 import {
-    NumericMeasure,
+    type NumericMeasure,
     _decode_NumericMeasure,
     _encode_NumericMeasure,
 } from '../SummarizationASN1Productions/NumericMeasure.ta.mjs';
@@ -54,55 +54,65 @@ import {
  *
  */
 export class BufferedObservationScan {
+    /**
+     * @summary `objectInstance`.
+     * @description
+     *
+     * Name of the observed object. Shall be present if
+     * `suppressObjectInstance` is false. X.738
+     * §8.2.2.3.4, Table 4 note 1.
+     * @public
+     * @readonly
+     */
+    public readonly objectInstance?: OPTIONAL<ObjectInstance>;
+    /**
+     * @summary `reportTimeAttributeList`.
+     * @description
+     *
+     * Attributes from `reportTimeAttributeIdList`,
+     * scanned at reporting time only. Identifiers of
+     * missing values are indicated. X.738 §8.2.2.3.4,
+     * §8.1.9.2.
+     * @public
+     * @readonly
+     */
+    public readonly reportTimeAttributeList?: OPTIONAL<AttributeMeasure[]>;
+    /**
+     * @summary `attributesBuffer`.
+     * @description
+     *
+     * Scan-attribute values with identifiers, each inner
+     * sequence ordered by observation time. Absence of a
+     * value for a scan means missing data. X.738
+     * §8.2.2.3.4.
+     * @public
+     * @readonly
+     */
+    public readonly attributesBuffer?: OPTIONAL<AttributeMeasure[][]>;
+    /**
+     * @summary `numericAttributesBuff`.
+     * @description
+     *
+     * Outer sequence in `numericAttributeIdArray`
+     * order; each inner sequence is time-ordered
+     * numeric measures. Missing values use
+     * `missingData`. X.738 §8.2.2.3.4, Table 4 C2.
+     * @public
+     * @readonly
+     */
+    public readonly numericAttributesBuff?: OPTIONAL<NumericMeasure[][]>;
+
     constructor(
-        /**
-         * @summary `objectInstance`.
-         * @description
-         *
-         * Name of the observed object. Shall be present if
-         * `suppressObjectInstance` is false. X.738
-         * §8.2.2.3.4, Table 4 note 1.
-         * @public
-         * @readonly
-         */
-        readonly objectInstance?: OPTIONAL<ObjectInstance>,
-        /**
-         * @summary `reportTimeAttributeList`.
-         * @description
-         *
-         * Attributes from `reportTimeAttributeIdList`,
-         * scanned at reporting time only. Identifiers of
-         * missing values are indicated. X.738 §8.2.2.3.4,
-         * §8.1.9.2.
-         * @public
-         * @readonly
-         */
-        readonly reportTimeAttributeList?: OPTIONAL<AttributeMeasure[]>,
-        /**
-         * @summary `attributesBuffer`.
-         * @description
-         *
-         * Scan-attribute values with identifiers, each inner
-         * sequence ordered by observation time. Absence of a
-         * value for a scan means missing data. X.738
-         * §8.2.2.3.4.
-         * @public
-         * @readonly
-         */
-        readonly attributesBuffer?: OPTIONAL<AttributeMeasure[][]>,
-        /**
-         * @summary `numericAttributesBuff`.
-         * @description
-         *
-         * Outer sequence in `numericAttributeIdArray`
-         * order; each inner sequence is time-ordered
-         * numeric measures. Missing values use
-         * `missingData`. X.738 §8.2.2.3.4, Table 4 C2.
-         * @public
-         * @readonly
-         */
-        readonly numericAttributesBuff?: OPTIONAL<NumericMeasure[][]>
-    ) {}
+        objectInstance?: OPTIONAL<ObjectInstance>,
+        reportTimeAttributeList?: OPTIONAL<AttributeMeasure[]>,
+        attributesBuffer?: OPTIONAL<AttributeMeasure[][]>,
+        numericAttributesBuff?: OPTIONAL<NumericMeasure[][]>
+    ) {
+        this.objectInstance = objectInstance;
+        this.reportTimeAttributeList = reportTimeAttributeList;
+        this.attributesBuffer = attributesBuffer;
+        this.numericAttributesBuff = numericAttributesBuff;
+    }
 
     /**
      * @summary Restructures an object into a BufferedObservationScan

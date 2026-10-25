@@ -1,7 +1,7 @@
 /* eslint-disable */
 import {
-    OPTIONAL,
-    ASN1Element as _Element,
+    type OPTIONAL,
+    type ASN1Element as _Element,
     ASN1TagClass as _TagClass,
     ASN1Construction as _Construction,
     ASN1UniversalType as _UniversalType,
@@ -12,12 +12,12 @@ import {
 } from '@wildboar/asn1';
 import * as $ from '@wildboar/asn1/functional';
 import {
-    SubprocessIndexList,
+    type SubprocessIndexList,
     _decode_SubprocessIndexList,
     _encode_SubprocessIndexList,
 } from '../AuthenticationContextForBiometrics/SubprocessIndexList.ta.mjs';
 import {
-    BPUIOExecutionInformationList,
+    type BPUIOExecutionInformationList,
     _decode_BPUIOExecutionInformationList,
     _encode_BPUIOExecutionInformationList,
 } from '../AuthenticationContextForBiometrics/BPUIOExecutionInformationList.ta.mjs';
@@ -37,26 +37,34 @@ import {
  *
  */
 export class BiometricProcess {
+    /**
+     * @summary `subprocessIndexList`.
+     * @public
+     * @readonly
+     */
+    public readonly subprocessIndexList: SubprocessIndexList;
+    /**
+     * @summary `bpuInputExecutionInformationList`.
+     * @public
+     * @readonly
+     */
+    public readonly bpuInputExecutionInformationList?: OPTIONAL<BPUIOExecutionInformationList>;
+    /**
+     * @summary `bpuOuputExecutionInformationList`.
+     * @public
+     * @readonly
+     */
+    public readonly bpuOuputExecutionInformationList?: OPTIONAL<BPUIOExecutionInformationList>;
+
     constructor(
-        /**
-         * @summary `subprocessIndexList`.
-         * @public
-         * @readonly
-         */
-        readonly subprocessIndexList: SubprocessIndexList,
-        /**
-         * @summary `bpuInputExecutionInformationList`.
-         * @public
-         * @readonly
-         */
-        readonly bpuInputExecutionInformationList?: OPTIONAL<BPUIOExecutionInformationList>,
-        /**
-         * @summary `bpuOuputExecutionInformationList`.
-         * @public
-         * @readonly
-         */
-        readonly bpuOuputExecutionInformationList?: OPTIONAL<BPUIOExecutionInformationList>
-    ) {}
+        subprocessIndexList: SubprocessIndexList,
+        bpuInputExecutionInformationList?: OPTIONAL<BPUIOExecutionInformationList>,
+        bpuOuputExecutionInformationList?: OPTIONAL<BPUIOExecutionInformationList>
+    ) {
+        this.subprocessIndexList = subprocessIndexList;
+        this.bpuInputExecutionInformationList = bpuInputExecutionInformationList;
+        this.bpuOuputExecutionInformationList = bpuOuputExecutionInformationList;
+    }
 
     /**
      * @summary Restructures an object into a BiometricProcess

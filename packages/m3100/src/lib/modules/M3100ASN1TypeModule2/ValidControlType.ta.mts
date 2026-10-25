@@ -1,6 +1,6 @@
 /* eslint-disable */
 import {
-    ASN1Element as _Element,
+    type ASN1Element as _Element,
     ASN1TagClass as _TagClass,
     ASN1Construction as _Construction,
     ASN1UniversalType as _UniversalType,
@@ -58,7 +58,7 @@ export type ValidControlType = _enum_for_ValidControlType;
  *
  * @enum {number}
  */
-export const ValidControlType = _enum_for_ValidControlType;
+export const ValidControlType: typeof _enum_for_ValidControlType = _enum_for_ValidControlType;
 
 
 /**
@@ -66,7 +66,7 @@ export const ValidControlType = _enum_for_ValidControlType;
  * @constant
  * @type {number}
  */
-export const ValidControlType_momentaryOnly: ValidControlType =
+export const ValidControlType_momentaryOnly: _enum_for_ValidControlType.momentaryOnly =
     ValidControlType.momentaryOnly; /* LONG_NAMED_ENUMERATED_VALUE */
 
 
@@ -75,7 +75,7 @@ export const ValidControlType_momentaryOnly: ValidControlType =
  * @constant
  * @type {number}
  */
-export const momentaryOnly: ValidControlType =
+export const momentaryOnly: _enum_for_ValidControlType.momentaryOnly =
     ValidControlType.momentaryOnly; /* SHORT_NAMED_ENUMERATED_VALUE */
 
 
@@ -84,7 +84,7 @@ export const momentaryOnly: ValidControlType =
  * @constant
  * @type {number}
  */
-export const ValidControlType_continuousOnly: ValidControlType =
+export const ValidControlType_continuousOnly: _enum_for_ValidControlType.continuousOnly =
     ValidControlType.continuousOnly; /* LONG_NAMED_ENUMERATED_VALUE */
 
 
@@ -93,7 +93,7 @@ export const ValidControlType_continuousOnly: ValidControlType =
  * @constant
  * @type {number}
  */
-export const continuousOnly: ValidControlType =
+export const continuousOnly: _enum_for_ValidControlType.continuousOnly =
     ValidControlType.continuousOnly; /* SHORT_NAMED_ENUMERATED_VALUE */
 
 
@@ -102,7 +102,7 @@ export const continuousOnly: ValidControlType =
  * @constant
  * @type {number}
  */
-export const ValidControlType_both: ValidControlType =
+export const ValidControlType_both: _enum_for_ValidControlType.both =
     ValidControlType.both; /* LONG_NAMED_ENUMERATED_VALUE */
 
 
@@ -111,18 +111,30 @@ export const ValidControlType_both: ValidControlType =
  * @constant
  * @type {number}
  */
-export const both: ValidControlType =
+export const both: _enum_for_ValidControlType.both =
     ValidControlType.both; /* SHORT_NAMED_ENUMERATED_VALUE */
 
 
 
 
-export const _decode_ValidControlType = $._decodeEnumerated;
+export function _decode_ValidControlType(el: _Element): ValidControlType {
+    const enumerated = $._decodeEnumerated(el);
+    switch (enumerated) {
+        case ValidControlType.momentaryOnly: return ValidControlType.momentaryOnly;
+        case ValidControlType.continuousOnly: return ValidControlType.continuousOnly;
+        case ValidControlType.both: return ValidControlType.both;
+        default:
+            throw new _ConstructionError(
+                'Invalid ENUMERATED value ' + enumerated + ' for ValidControlType.',
+                el,
+            );
+    }
+}
 
 
 
 
-export const _encode_ValidControlType = $._encodeEnumerated;
+export const _encode_ValidControlType: $.ASN1Encoder<ValidControlType> = $._encodeEnumerated as $.ASN1Encoder<ValidControlType>;
 
 
 /* eslint-enable */

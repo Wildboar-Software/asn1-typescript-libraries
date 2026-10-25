@@ -1,6 +1,6 @@
 /* eslint-disable */
 import {
-    BOOLEAN
+    type BOOLEAN
 } from "@wildboar/asn1";
 import * as $ from "@wildboar/asn1/functional";
 import { tcg_tr_ID_Boolean } from "../PlatformCertificateProfileV2/tcg-tr-ID-Boolean.va.mjs";

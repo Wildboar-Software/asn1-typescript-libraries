@@ -1,7 +1,7 @@
 /* eslint-disable */
 import { type ATTRIBUTE } from "../InformationFramework/ATTRIBUTE.oca.mjs";
 import { userApplications /* IMPORTED_SHORT_ENUMERATION_ITEM */ } from "../InformationFramework/AttributeUsage.ta.mjs";
-import { PlatformOwnership, _decode_PlatformOwnership, _encode_PlatformOwnership } from "../PlatformCertificateProfileV2/PlatformOwnership.ta.mjs";
+import { type PlatformOwnership, _decode_PlatformOwnership, _encode_PlatformOwnership } from "../PlatformCertificateProfileV2/PlatformOwnership.ta.mjs";
 import { tcg_at_platformOwnership } from "../PlatformCertificateProfileV2/tcg-at-platformOwnership.va.mjs";
 
 

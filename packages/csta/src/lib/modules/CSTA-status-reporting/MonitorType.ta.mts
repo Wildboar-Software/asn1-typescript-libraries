@@ -1,7 +1,7 @@
 /* eslint-disable */
 
 import * as $ from "@wildboar/asn1/functional";
-import { ENUMERATED, ASN1Element as _Element } from "@wildboar/asn1";
+import { type ENUMERATED, ASN1Element as _Element } from "@wildboar/asn1";
 
 
 
@@ -72,7 +72,7 @@ type MonitorType = _enum_for_MonitorType;
  * @enum {number}
  */
 export
-const MonitorType = _enum_for_MonitorType;
+const MonitorType: typeof _enum_for_MonitorType = _enum_for_MonitorType;
 
 /**
  * @summary MonitorType_call
@@ -85,7 +85,7 @@ const MonitorType = _enum_for_MonitorType;
  * @type {number}
  */
 export
-const MonitorType_call: MonitorType = MonitorType.call; /* LONG_NAMED_ENUMERATED_VALUE */
+const MonitorType_call: _enum_for_MonitorType.call = MonitorType.call; /* LONG_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary call
@@ -93,7 +93,7 @@ const MonitorType_call: MonitorType = MonitorType.call; /* LONG_NAMED_ENUMERATED
  * @type {number}
  */
 export
-const call: MonitorType = MonitorType.call; /* SHORT_NAMED_ENUMERATED_VALUE */
+const call: _enum_for_MonitorType.call = MonitorType.call; /* SHORT_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary MonitorType_device
@@ -106,7 +106,7 @@ const call: MonitorType = MonitorType.call; /* SHORT_NAMED_ENUMERATED_VALUE */
  * @type {number}
  */
 export
-const MonitorType_device: MonitorType = MonitorType.device; /* LONG_NAMED_ENUMERATED_VALUE */
+const MonitorType_device: _enum_for_MonitorType.device = MonitorType.device; /* LONG_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary device
@@ -114,7 +114,7 @@ const MonitorType_device: MonitorType = MonitorType.device; /* LONG_NAMED_ENUMER
  * @type {number}
  */
 export
-const device: MonitorType = MonitorType.device; /* SHORT_NAMED_ENUMERATED_VALUE */
+const device: _enum_for_MonitorType.device = MonitorType.device; /* SHORT_NAMED_ENUMERATED_VALUE */
 
 let _cached_decoder_for_MonitorType: $.ASN1Decoder<MonitorType> | null = null;
 

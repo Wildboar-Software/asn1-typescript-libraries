@@ -1,8 +1,8 @@
 /* eslint-disable */
 import {
-    OPTIONAL,
-    REAL,
-    ASN1Element as _Element,
+    type OPTIONAL,
+    type REAL,
+    type ASN1Element as _Element,
     ASN1TagClass as _TagClass,
     ASN1Construction as _Construction,
     ASN1UniversalType as _UniversalType,
@@ -13,17 +13,17 @@ import {
 } from '@wildboar/asn1';
 import * as $ from '@wildboar/asn1/functional';
 import {
-    TestPattern,
+    type TestPattern,
     _decode_TestPattern,
     _encode_TestPattern,
 } from '../TestCategories-ASN1Module/TestPattern.ta.mjs';
 import {
-    TestDirection,
+    type TestDirection,
     _decode_TestDirection,
     _encode_TestDirection,
 } from '../TestCategories-ASN1Module/TestDirection.ta.mjs';
 import {
-    Timespec,
+    type Timespec,
     _decode_Timespec,
     _encode_Timespec,
 } from '../Test-ASN1Module/Timespec.ta.mjs';
@@ -56,48 +56,58 @@ import {
  *
  */
 export class ConnectionTestResults {
+    /**
+     * @summary `receivedTestPattern`.
+     * @description
+     *
+     * Signal actually received. Optional
+     * in the result report. X.737 §7.1.8.
+     * @public
+     * @readonly
+     */
+    public readonly receivedTestPattern?: OPTIONAL<TestPattern>;
+    /**
+     * @summary `errorRatio`.
+     * @description
+     *
+     * Error ratio measured through the test.
+     * Optional. Form may follow `ErrorRatioReportType`. X.737 §7.1.8.
+     * @public
+     * @readonly
+     */
+    public readonly errorRatio?: OPTIONAL<REAL>;
+    /**
+     * @summary `testDirection`.
+     * @description
+     *
+     * Direction that was exercised on the
+     * MORT. Optional. X.737 §7.1.8.
+     * @public
+     * @readonly
+     */
+    public readonly testDirection?: OPTIONAL<TestDirection>;
+    /**
+     * @summary `testDurationMade`.
+     * @description
+     *
+     * Duration of the test as performed.
+     * Optional. X.737 §7.1.8.
+     * @public
+     * @readonly
+     */
+    public readonly testDurationMade?: OPTIONAL<Timespec>;
+
     constructor(
-        /**
-         * @summary `receivedTestPattern`.
-         * @description
-         *
-         * Signal actually received. Optional
-         * in the result report. X.737 §7.1.8.
-         * @public
-         * @readonly
-         */
-        readonly receivedTestPattern?: OPTIONAL<TestPattern>,
-        /**
-         * @summary `errorRatio`.
-         * @description
-         *
-         * Error ratio measured through the test.
-         * Optional. Form may follow `ErrorRatioReportType`. X.737 §7.1.8.
-         * @public
-         * @readonly
-         */
-        readonly errorRatio?: OPTIONAL<REAL>,
-        /**
-         * @summary `testDirection`.
-         * @description
-         *
-         * Direction that was exercised on the
-         * MORT. Optional. X.737 §7.1.8.
-         * @public
-         * @readonly
-         */
-        readonly testDirection?: OPTIONAL<TestDirection>,
-        /**
-         * @summary `testDurationMade`.
-         * @description
-         *
-         * Duration of the test as performed.
-         * Optional. X.737 §7.1.8.
-         * @public
-         * @readonly
-         */
-        readonly testDurationMade?: OPTIONAL<Timespec>
-    ) {}
+        receivedTestPattern?: OPTIONAL<TestPattern>,
+        errorRatio?: OPTIONAL<REAL>,
+        testDirection?: OPTIONAL<TestDirection>,
+        testDurationMade?: OPTIONAL<Timespec>
+    ) {
+        this.receivedTestPattern = receivedTestPattern;
+        this.errorRatio = errorRatio;
+        this.testDirection = testDirection;
+        this.testDurationMade = testDurationMade;
+    }
 
     /**
      * @summary Restructures an object into a ConnectionTestResults

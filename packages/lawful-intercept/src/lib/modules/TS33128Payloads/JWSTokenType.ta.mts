@@ -57,7 +57,7 @@ type JWSTokenType = _enum_for_JWSTokenType;
  * @enum {number}
  */
 export
-const JWSTokenType = _enum_for_JWSTokenType;
+const JWSTokenType: typeof _enum_for_JWSTokenType = _enum_for_JWSTokenType;
 
 /**
  * @summary JWSTokenType_passport
@@ -65,7 +65,7 @@ const JWSTokenType = _enum_for_JWSTokenType;
  * @type {number}
  */
 export
-const JWSTokenType_passport: JWSTokenType = JWSTokenType.passport; /* LONG_NAMED_ENUMERATED_VALUE */
+const JWSTokenType_passport: _enum_for_JWSTokenType.passport = JWSTokenType.passport; /* LONG_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary passport
@@ -73,7 +73,7 @@ const JWSTokenType_passport: JWSTokenType = JWSTokenType.passport; /* LONG_NAMED
  * @type {number}
  */
 export
-const passport: JWSTokenType = JWSTokenType.passport; /* SHORT_NAMED_ENUMERATED_VALUE */
+const passport: _enum_for_JWSTokenType.passport = JWSTokenType.passport; /* SHORT_NAMED_ENUMERATED_VALUE */
 export const _decode_JWSTokenType: $.ASN1Decoder<JWSTokenType> = $._decodeEnumerated;
 export const _encode_JWSTokenType: $.ASN1Encoder<JWSTokenType> = $._encodeEnumerated;
 

@@ -1,7 +1,7 @@
 /* eslint-disable */
 import {
-    OPTIONAL,
-    ASN1Element as _Element,
+    type OPTIONAL,
+    type ASN1Element as _Element,
     ASN1TagClass as _TagClass,
     ASN1Construction as _Construction,
     ASN1UniversalType as _UniversalType,
@@ -11,7 +11,7 @@ import {
     ASN1ConstructionError as _ConstructionError,
 } from "@wildboar/asn1";
 import * as $ from "@wildboar/asn1/functional";
-import { InfoToSend, _decode_InfoToSend, _encode_InfoToSend } from "../IN-CS2-datatypes/InfoToSend.ta.mjs";
+import { type InfoToSend, _decode_InfoToSend, _encode_InfoToSend } from "../IN-CS2-datatypes/InfoToSend.ta.mjs";
 import { Constraints, _decode_Constraints, _encode_Constraints } from "../IN-CS2-datatypes/Constraints.ta.mjs";
 
 
@@ -33,26 +33,34 @@ import { Constraints, _decode_Constraints, _encode_Constraints } from "../IN-CS2
  */
 export
 class UserInformation {
+    /**
+     * @summary `infoToSend`.
+     * @public
+     * @readonly
+     */
+    public readonly infoToSend: InfoToSend;
+    /**
+     * @summary `constraints`.
+     * @public
+     * @readonly
+     */
+    public readonly constraints: Constraints;
+    /**
+     * @summary `errorInfo`.
+     * @public
+     * @readonly
+     */
+    public readonly errorInfo?: OPTIONAL<InfoToSend>;
+
     constructor (
-        /**
-         * @summary `infoToSend`.
-         * @public
-         * @readonly
-         */
-        readonly infoToSend: InfoToSend,
-        /**
-         * @summary `constraints`.
-         * @public
-         * @readonly
-         */
-        readonly constraints: Constraints,
-        /**
-         * @summary `errorInfo`.
-         * @public
-         * @readonly
-         */
-        readonly errorInfo?: OPTIONAL<InfoToSend>
-    ) {}
+        infoToSend: InfoToSend,
+        constraints: Constraints,
+        errorInfo?: OPTIONAL<InfoToSend>
+    ) {
+        this.infoToSend = infoToSend;
+        this.constraints = constraints;
+        this.errorInfo = errorInfo;
+    }
 
     /**
      * @summary Restructures an object into a UserInformation

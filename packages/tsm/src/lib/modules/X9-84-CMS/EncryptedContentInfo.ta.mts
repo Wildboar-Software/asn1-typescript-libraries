@@ -1,6 +1,6 @@
 /* eslint-disable */
 import {
-    ASN1Element as _Element,
+    type ASN1Element as _Element,
     ASN1TagClass as _TagClass,
     ASN1Construction as _Construction,
     ASN1UniversalType as _UniversalType,
@@ -10,11 +10,11 @@ import {
     ASN1ConstructionError as _ConstructionError,
 } from "@wildboar/asn1";
 import * as $ from "@wildboar/asn1/functional";
-import { ContentType, _decode_ContentType, _encode_ContentType } from "../X9-84-CMS/ContentType.ta.mjs";
+import { type ContentType, _decode_ContentType, _encode_ContentType } from "../X9-84-CMS/ContentType.ta.mjs";
 
-import { ContentEncryptAlgorithmIdentifier, _decode_ContentEncryptAlgorithmIdentifier, _encode_ContentEncryptAlgorithmIdentifier } from "../X9-84-CMS/ContentEncryptAlgorithmIdentifier.ta.mjs";
+import { type ContentEncryptAlgorithmIdentifier, _decode_ContentEncryptAlgorithmIdentifier, _encode_ContentEncryptAlgorithmIdentifier } from "../X9-84-CMS/ContentEncryptAlgorithmIdentifier.ta.mjs";
 
-import { EncryptedContent, _decode_EncryptedContent, _encode_EncryptedContent } from "../X9-84-CMS/EncryptedContent.ta.mjs";
+import { type EncryptedContent, _decode_EncryptedContent, _encode_EncryptedContent } from "../X9-84-CMS/EncryptedContent.ta.mjs";
 
 
 
@@ -36,26 +36,34 @@ import { EncryptedContent, _decode_EncryptedContent, _encode_EncryptedContent } 
  */
 export
 class EncryptedContentInfo {
+    /**
+     * @summary `contentType`.
+     * @public
+     * @readonly
+     */
+    public readonly contentType: ContentType;
+    /**
+     * @summary `contentEncryptionAlgorithm`.
+     * @public
+     * @readonly
+     */
+    public readonly contentEncryptionAlgorithm: ContentEncryptAlgorithmIdentifier;
+    /**
+     * @summary `encryptedContent`.
+     * @public
+     * @readonly
+     */
+    public readonly encryptedContent: EncryptedContent;
+
     constructor (
-        /**
-         * @summary `contentType`.
-         * @public
-         * @readonly
-         */
-        readonly contentType: ContentType,
-        /**
-         * @summary `contentEncryptionAlgorithm`.
-         * @public
-         * @readonly
-         */
-        readonly contentEncryptionAlgorithm: ContentEncryptAlgorithmIdentifier,
-        /**
-         * @summary `encryptedContent`.
-         * @public
-         * @readonly
-         */
-        readonly encryptedContent: EncryptedContent
-    ) {}
+        contentType: ContentType,
+        contentEncryptionAlgorithm: ContentEncryptAlgorithmIdentifier,
+        encryptedContent: EncryptedContent
+    ) {
+        this.contentType = contentType;
+        this.contentEncryptionAlgorithm = contentEncryptionAlgorithm;
+        this.encryptedContent = encryptedContent;
+    }
 
     /**
      * @summary Restructures an object into a EncryptedContentInfo

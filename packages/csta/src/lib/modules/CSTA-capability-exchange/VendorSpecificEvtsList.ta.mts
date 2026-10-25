@@ -2,13 +2,13 @@
 
 import * as $ from "@wildboar/asn1/functional";
 import {
-    OPTIONAL,
-    SEQUENCE,
-    SET,
-    ASN1Element as _Element,
+    type OPTIONAL,
+    type SEQUENCE,
+    type SET,
+    type ASN1Element as _Element,
     ASN1TagClass as _TagClass
 } from "@wildboar/asn1";
-import { PrivateEvent, _decode_PrivateEvent, _encode_PrivateEvent } from "../CSTA-capability-exchange/PrivateEvent.ta.mjs";
+import { type PrivateEvent, _decode_PrivateEvent, _encode_PrivateEvent } from "../CSTA-capability-exchange/PrivateEvent.ta.mjs";
 
 
 
@@ -33,17 +33,21 @@ import { PrivateEvent, _decode_PrivateEvent, _encode_PrivateEvent } from "../CST
  */
 export
 class VendorSpecificEvtsList {
+    /**
+     * @summary `privateEvent`.
+     * @public
+     * @readonly
+     * @description
+     * Capability bitmap for this event; omit if the SF does not support it
+     * (ECMA-269 Annex C).
+     */
+    public readonly privateEvent?: OPTIONAL<PrivateEvent>;
+
     constructor (
-        /**
-         * @summary `privateEvent`.
-         * @public
-         * @readonly
-         * @description
-         * Capability bitmap for this event; omit if the SF does not support it
-         * (ECMA-269 Annex C).
-         */
-        readonly privateEvent?: OPTIONAL<PrivateEvent>
-    ) {}
+        privateEvent?: OPTIONAL<PrivateEvent>
+    ) {
+        this.privateEvent = privateEvent;
+    }
 
     /**
      * @summary Restructures an object into a VendorSpecificEvtsList

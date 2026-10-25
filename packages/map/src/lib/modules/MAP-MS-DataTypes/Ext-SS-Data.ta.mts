@@ -1,15 +1,15 @@
 /* eslint-disable */
 import {
-    OPTIONAL,
-    ASN1Element as _Element,
+    type OPTIONAL,
+    type ASN1Element as _Element,
     ASN1TagClass as _TagClass
 } from "@wildboar/asn1";
 import * as $ from "@wildboar/asn1/functional";
-import { Ext_SS_Status, _decode_Ext_SS_Status, _encode_Ext_SS_Status } from "../MAP-CommonDataTypes/Ext-SS-Status.ta.mjs";
+import { type Ext_SS_Status, _decode_Ext_SS_Status, _encode_Ext_SS_Status } from "../MAP-CommonDataTypes/Ext-SS-Status.ta.mjs";
 import { ExtensionContainer, _decode_ExtensionContainer, _encode_ExtensionContainer } from "../MAP-ExtensionDataTypes/ExtensionContainer.ta.mjs";
-import { Ext_BasicServiceGroupList, _decode_Ext_BasicServiceGroupList, _encode_Ext_BasicServiceGroupList } from "../MAP-MS-DataTypes/Ext-BasicServiceGroupList.ta.mjs";
-import { SS_Code, _decode_SS_Code, _encode_SS_Code } from "../MAP-SS-Code/SS-Code.ta.mjs";
-import { SS_SubscriptionOption, _decode_SS_SubscriptionOption, _encode_SS_SubscriptionOption } from "../MAP-SS-DataTypes/SS-SubscriptionOption.ta.mjs";
+import { type Ext_BasicServiceGroupList, _decode_Ext_BasicServiceGroupList, _encode_Ext_BasicServiceGroupList } from "../MAP-MS-DataTypes/Ext-BasicServiceGroupList.ta.mjs";
+import { type SS_Code, _decode_SS_Code, _encode_SS_Code } from "../MAP-SS-Code/SS-Code.ta.mjs";
+import { type SS_SubscriptionOption, _decode_SS_SubscriptionOption, _encode_SS_SubscriptionOption } from "../MAP-SS-DataTypes/SS-SubscriptionOption.ta.mjs";
 
 
 /**
@@ -27,9 +27,9 @@ import { SS_SubscriptionOption, _decode_SS_SubscriptionOption, _encode_SS_Subscr
  * Ext-SS-Data ::= SEQUENCE {
  *     ss-Code    SS-Code,
  *     ss-Status    [4] Ext-SS-Status,
- *     ss-SubscriptionOption    SS-SubscriptionOption    OPTIONAL,
- *     basicServiceGroupList    Ext-BasicServiceGroupList    OPTIONAL,
- *     extensionContainer    [5] ExtensionContainer    OPTIONAL,
+ *     ss-SubscriptionOption    SS-SubscriptionOption    type OPTIONAL,
+ *     basicServiceGroupList    Ext-BasicServiceGroupList    type OPTIONAL,
+ *     extensionContainer    [5] ExtensionContainer    type OPTIONAL,
  *     ...}
  * ```
  * 
@@ -37,54 +37,68 @@ import { SS_SubscriptionOption, _decode_SS_SubscriptionOption, _encode_SS_Subscr
  */
 export
 class Ext_SS_Data {
+    /**
+     * @summary `ss_Code`.
+     * @description
+     *
+     * SS-Code of the supplementary service (3GPP TS 29.002 V19.1.0 clause
+     * 7.6.3.29).
+     *
+     * @public
+     * @readonly
+     */
+    public readonly ss_Code: SS_Code;
+    /**
+     * @summary `ss_Status`.
+     * @description
+     *
+     * Extensible SS-Status if applicable (3GPP TS 29.002 V19.1.0 clause
+     * 7.6.3.29).
+     *
+     * @public
+     * @readonly
+     */
+    public readonly ss_Status: Ext_SS_Status;
+    /**
+     * @summary `ss_SubscriptionOption`.
+     * @public
+     * @readonly
+     */
+    public readonly ss_SubscriptionOption?: OPTIONAL<SS_SubscriptionOption>;
+    /**
+     * @summary `basicServiceGroupList`.
+     * @public
+     * @readonly
+     */
+    public readonly basicServiceGroupList?: OPTIONAL<Ext_BasicServiceGroupList>;
+    /**
+     * @summary `extensionContainer`.
+     * @public
+     * @readonly
+     */
+    public readonly extensionContainer?: OPTIONAL<ExtensionContainer>;
+    /**
+     * @summary Extensions that are not recognized.
+     * @public
+     * @readonly
+     */
+    public readonly _unrecognizedExtensionsList: _Element[];
+
     constructor (
-        /**
-         * @summary `ss_Code`.
-         * @description
-         *
-         * SS-Code of the supplementary service (3GPP TS 29.002 V19.1.0 clause
-         * 7.6.3.29).
-         *
-         * @public
-         * @readonly
-         */
-        readonly ss_Code: SS_Code,
-        /**
-         * @summary `ss_Status`.
-         * @description
-         *
-         * Extensible SS-Status if applicable (3GPP TS 29.002 V19.1.0 clause
-         * 7.6.3.29).
-         *
-         * @public
-         * @readonly
-         */
-        readonly ss_Status: Ext_SS_Status,
-        /**
-         * @summary `ss_SubscriptionOption`.
-         * @public
-         * @readonly
-         */
-        readonly ss_SubscriptionOption?: OPTIONAL<SS_SubscriptionOption>,
-        /**
-         * @summary `basicServiceGroupList`.
-         * @public
-         * @readonly
-         */
-        readonly basicServiceGroupList?: OPTIONAL<Ext_BasicServiceGroupList>,
-        /**
-         * @summary `extensionContainer`.
-         * @public
-         * @readonly
-         */
-        readonly extensionContainer?: OPTIONAL<ExtensionContainer>,
-        /**
-         * @summary Extensions that are not recognized.
-         * @public
-         * @readonly
-         */
-        readonly _unrecognizedExtensionsList: _Element[] = []
-    ) {}
+        ss_Code: SS_Code,
+        ss_Status: Ext_SS_Status,
+        ss_SubscriptionOption?: OPTIONAL<SS_SubscriptionOption>,
+        basicServiceGroupList?: OPTIONAL<Ext_BasicServiceGroupList>,
+        extensionContainer?: OPTIONAL<ExtensionContainer>,
+        _unrecognizedExtensionsList: _Element[] = []
+    ) {
+        this.ss_Code = ss_Code;
+        this.ss_Status = ss_Status;
+        this.ss_SubscriptionOption = ss_SubscriptionOption;
+        this.basicServiceGroupList = basicServiceGroupList;
+        this.extensionContainer = extensionContainer;
+        this._unrecognizedExtensionsList = _unrecognizedExtensionsList;
+    }
 
     /**
      * @summary Restructures an object into a Ext_SS_Data

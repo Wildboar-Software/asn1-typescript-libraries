@@ -1,7 +1,7 @@
 /* eslint-disable */
 import {
-    OPTIONAL,
-    ASN1Element as _Element,
+    type OPTIONAL,
+    type ASN1Element as _Element,
     ASN1TagClass as _TagClass,
     ASN1Construction as _Construction,
     ASN1UniversalType as _UniversalType,
@@ -11,7 +11,7 @@ import {
     ASN1ConstructionError as _ConstructionError,
 } from "@wildboar/asn1";
 import * as $ from "@wildboar/asn1/functional";
-import { OtherHash, _decode_OtherHash, _encode_OtherHash } from "../ETS-ElectronicSignatureFormats-ExplicitSyntax97/OtherHash.ta.mjs";
+import { type OtherHash, _decode_OtherHash, _encode_OtherHash } from "../ETS-ElectronicSignatureFormats-ExplicitSyntax97/OtherHash.ta.mjs";
 import { CrlIdentifier, _decode_CrlIdentifier, _encode_CrlIdentifier } from "../ETS-ElectronicSignatureFormats-ExplicitSyntax97/CrlIdentifier.ta.mjs";
 /**
  * @summary CrlValidatedID
@@ -33,30 +33,36 @@ import { CrlIdentifier, _decode_CrlIdentifier, _encode_CrlIdentifier } from "../
  */
 export
 class CrlValidatedID {
+    /**
+     * @summary `crlHash`.
+     * @description
+     *
+     * Hash over the entire DER-encoded CRL, including the
+     * signature.
+     *
+     * @public
+     * @readonly
+     */
+    public readonly crlHash: OtherHash;
+    /**
+     * @summary `crlIdentifier`.
+     * @description
+     *
+     * Issuer name, thisUpdate time, and optional CRL number.
+     * Normally present unless the CRL can be inferred.
+     *
+     * @public
+     * @readonly
+     */
+    public readonly crlIdentifier?: OPTIONAL<CrlIdentifier>;
+
     constructor (
-        /**
-         * @summary `crlHash`.
-         * @description
-         *
-         * Hash over the entire DER-encoded CRL, including the
-         * signature.
-         *
-         * @public
-         * @readonly
-         */
-        readonly crlHash: OtherHash,
-        /**
-         * @summary `crlIdentifier`.
-         * @description
-         *
-         * Issuer name, thisUpdate time, and optional CRL number.
-         * Normally present unless the CRL can be inferred.
-         *
-         * @public
-         * @readonly
-         */
-        readonly crlIdentifier?: OPTIONAL<CrlIdentifier>
-    ) {}
+        crlHash: OtherHash,
+        crlIdentifier?: OPTIONAL<CrlIdentifier>
+    ) {
+        this.crlHash = crlHash;
+        this.crlIdentifier = crlIdentifier;
+    }
 
     /**
      * @summary Restructures an object into a CrlValidatedID

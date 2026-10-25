@@ -1,24 +1,24 @@
 /* eslint-disable */
 import {
-    BOOLEAN,
-    OPTIONAL,
-    ASN1Element as _Element,
+    type BOOLEAN,
+    type OPTIONAL,
+    type ASN1Element as _Element,
     ASN1TagClass as _TagClass
 } from "@wildboar/asn1";
 import * as $ from "@wildboar/asn1/functional";
-import { InformationToSend, _decode_InformationToSend, _encode_InformationToSend } from "../IN-SCF-SRF-datatypes/InformationToSend.ta.mjs";
+import { type InformationToSend, _decode_InformationToSend, _encode_InformationToSend } from "../IN-SCF-SRF-datatypes/InformationToSend.ta.mjs";
 // export { InformationToSend, _decode_InformationToSend, _encode_InformationToSend } from "../IN-SCF-SRF-datatypes/InformationToSend.ta.mjs";
-import { Extensions, _decode_Extensions, _encode_Extensions } from "../IN-common-datatypes/Extensions.ta.mjs";
+import { type Extensions, _decode_Extensions, _encode_Extensions } from "../IN-common-datatypes/Extensions.ta.mjs";
 // export { Extensions, _decode_Extensions, _encode_Extensions } from "../IN-common-datatypes/Extensions.ta.mjs";
-import { GenericNumber, _decode_GenericNumber, _encode_GenericNumber } from "../IN-SSF-SCF-datatypes/GenericNumber.ta.mjs";
+import { type GenericNumber, _decode_GenericNumber, _encode_GenericNumber } from "../IN-SSF-SCF-datatypes/GenericNumber.ta.mjs";
 // export { GenericNumber, _decode_GenericNumber, _encode_GenericNumber } from "../IN-SSF-SCF-datatypes/GenericNumber.ta.mjs";
-import { MailBoxID, _decode_MailBoxID, _encode_MailBoxID } from "../IN-SCF-SRF-datatypes/MailBoxID.ta.mjs";
+import { type MailBoxID, _decode_MailBoxID, _encode_MailBoxID } from "../IN-SCF-SRF-datatypes/MailBoxID.ta.mjs";
 // export { MailBoxID, _decode_MailBoxID, _encode_MailBoxID } from "../IN-SCF-SRF-datatypes/MailBoxID.ta.mjs";
 import { InformationToRecord, _decode_InformationToRecord, _encode_InformationToRecord } from "../IN-SCF-SRF-datatypes/InformationToRecord.ta.mjs";
 // export { InformationToRecord, _decode_InformationToRecord, _encode_InformationToRecord } from "../IN-SCF-SRF-datatypes/InformationToRecord.ta.mjs";
 import { Media, Media_voiceMail /* IMPORTED_LONG_ENUMERATION_ITEM */, _decode_Media, _encode_Media, _enum_for_Media } from "../IN-SCF-SRF-datatypes/Media.ta.mjs";
 // export { Media, _enum_for_Media, Media_voiceMail /* IMPORTED_LONG_ENUMERATION_ITEM */, voiceMail /* IMPORTED_SHORT_ENUMERATION_ITEM */, Media_faxGroup3 /* IMPORTED_LONG_ENUMERATION_ITEM */, faxGroup3 /* IMPORTED_SHORT_ENUMERATION_ITEM */, Media_faxGroup4 /* IMPORTED_LONG_ENUMERATION_ITEM */, faxGroup4 /* IMPORTED_SHORT_ENUMERATION_ITEM */, _decode_Media, _encode_Media } from "../IN-SCF-SRF-datatypes/Media.ta.mjs";
-import { CallSegmentID, _decode_CallSegmentID, _encode_CallSegmentID } from "../IN-SSF-SCF-datatypes/CallSegmentID.ta.mjs";
+import { type CallSegmentID, _decode_CallSegmentID, _encode_CallSegmentID } from "../IN-SSF-SCF-datatypes/CallSegmentID.ta.mjs";
 // export { CallSegmentID, _decode_CallSegmentID, _encode_CallSegmentID } from "../IN-SSF-SCF-datatypes/CallSegmentID.ta.mjs";
 
 
@@ -152,13 +152,13 @@ class PromptAndReceiveMessageArg {
      * @static
      * @method
      */
-    public static get _default_value_for_media () { return Media_voiceMail; }        /**
+    public static get _default_value_for_media (): _enum_for_Media.voiceMail { return Media_voiceMail; }        /**
          * @summary The enum used as the type of the component `media`
          * @public
          * @static
          */
 
-    public static _enum_for_media = _enum_for_Media;
+    public static _enum_for_media: typeof _enum_for_Media = _enum_for_Media;
 }
 
 /**

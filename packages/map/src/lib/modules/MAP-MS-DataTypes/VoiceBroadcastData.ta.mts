@@ -1,14 +1,14 @@
 /* eslint-disable */
 import {
-    NULL,
-    OPTIONAL,
-    ASN1Element as _Element,
+    type NULL,
+    type OPTIONAL,
+    type ASN1Element as _Element,
     ASN1TagClass as _TagClass
 } from "@wildboar/asn1";
 import * as $ from "@wildboar/asn1/functional";
 import { ExtensionContainer, _decode_ExtensionContainer, _encode_ExtensionContainer } from "../MAP-ExtensionDataTypes/ExtensionContainer.ta.mjs";
-import { GroupId, _decode_GroupId, _encode_GroupId } from "../MAP-MS-DataTypes/GroupId.ta.mjs";
-import { Long_GroupId, _decode_Long_GroupId, _encode_Long_GroupId } from "../MAP-MS-DataTypes/Long-GroupId.ta.mjs";
+import { type GroupId, _decode_GroupId, _encode_GroupId } from "../MAP-MS-DataTypes/GroupId.ta.mjs";
+import { type Long_GroupId, _decode_Long_GroupId, _encode_Long_GroupId } from "../MAP-MS-DataTypes/Long-GroupId.ta.mjs";
 
 
 /**
@@ -28,8 +28,8 @@ import { Long_GroupId, _decode_Long_GroupId, _encode_Long_GroupId } from "../MAP
  * VoiceBroadcastData ::= SEQUENCE {
  *     groupid    GroupId, 
  *     -- groupId shall be filled with six TBCD fillers (1111)if the longGroupId is present
- *     broadcastInitEntitlement    NULL    OPTIONAL,
- *     extensionContainer    ExtensionContainer    OPTIONAL,
+ *     broadcastInitEntitlement    NULL    type OPTIONAL,
+ *     extensionContainer    ExtensionContainer    type OPTIONAL,
  *     ...,
  *     longGroupId    [0] Long-GroupId    OPTIONAL }
  * ```
@@ -38,60 +38,72 @@ import { Long_GroupId, _decode_Long_GroupId, _encode_Long_GroupId } from "../MAP
  */
 export
 class VoiceBroadcastData {
+    /**
+     * @summary `groupid`.
+     * @description
+     *
+     * Group Identification as in 3GPP TS 23.003. Filled with six TBCD
+     * fillers (`1111`) if `longGroupId` is present.
+     *
+     * (3GPP TS 29.002 V19.1.0 clauses 7.6.2.33 and 17.7.1).
+     *
+     * @public
+     * @readonly
+     */
+    public readonly groupid: GroupId;
+    /**
+     * @summary `broadcastInitEntitlement`.
+     * @description
+     *
+     * Subscriber may initiate voice broadcast calls for this group, not
+     * only listen.
+     *
+     * (3GPP TS 29.002 V19.1.0 clause 7.6.3.40).
+     *
+     * @public
+     * @readonly
+     */
+    public readonly broadcastInitEntitlement?: OPTIONAL<NULL>;
+    /**
+     * @summary `extensionContainer`.
+     * @public
+     * @readonly
+     */
+    public readonly extensionContainer?: OPTIONAL<ExtensionContainer>;
+    /**
+     * @summary `longGroupId`.
+     * @description
+     *
+     * Long Group Identification as in 3GPP TS 23.003 and 43.068/43.069.
+     * Shall not be sent to VLRs that did not indicate long Group ID
+     * support.
+     *
+     * (3GPP TS 29.002 V19.1.0 clause 17.7.1).
+     *
+     * @public
+     * @readonly
+     */
+    public readonly longGroupId?: OPTIONAL<Long_GroupId>;
+    /**
+     * @summary Extensions that are not recognized.
+     * @public
+     * @readonly
+     */
+    public readonly _unrecognizedExtensionsList: _Element[];
+
     constructor (
-        /**
-         * @summary `groupid`.
-         * @description
-         *
-         * Group Identification as in 3GPP TS 23.003. Filled with six TBCD
-         * fillers (`1111`) if `longGroupId` is present.
-         *
-         * (3GPP TS 29.002 V19.1.0 clauses 7.6.2.33 and 17.7.1).
-         *
-         * @public
-         * @readonly
-         */
-        readonly groupid: GroupId,
-        /**
-         * @summary `broadcastInitEntitlement`.
-         * @description
-         *
-         * Subscriber may initiate voice broadcast calls for this group, not
-         * only listen.
-         *
-         * (3GPP TS 29.002 V19.1.0 clause 7.6.3.40).
-         *
-         * @public
-         * @readonly
-         */
-        readonly broadcastInitEntitlement?: OPTIONAL<NULL>,
-        /**
-         * @summary `extensionContainer`.
-         * @public
-         * @readonly
-         */
-        readonly extensionContainer?: OPTIONAL<ExtensionContainer>,
-        /**
-         * @summary `longGroupId`.
-         * @description
-         *
-         * Long Group Identification as in 3GPP TS 23.003 and 43.068/43.069.
-         * Shall not be sent to VLRs that did not indicate long Group ID
-         * support.
-         *
-         * (3GPP TS 29.002 V19.1.0 clause 17.7.1).
-         *
-         * @public
-         * @readonly
-         */
-        readonly longGroupId?: OPTIONAL<Long_GroupId>,
-        /**
-         * @summary Extensions that are not recognized.
-         * @public
-         * @readonly
-         */
-        readonly _unrecognizedExtensionsList: _Element[] = []
-    ) {}
+        groupid: GroupId,
+        broadcastInitEntitlement?: OPTIONAL<NULL>,
+        extensionContainer?: OPTIONAL<ExtensionContainer>,
+        longGroupId?: OPTIONAL<Long_GroupId>,
+        _unrecognizedExtensionsList: _Element[] = []
+    ) {
+        this.groupid = groupid;
+        this.broadcastInitEntitlement = broadcastInitEntitlement;
+        this.extensionContainer = extensionContainer;
+        this.longGroupId = longGroupId;
+        this._unrecognizedExtensionsList = _unrecognizedExtensionsList;
+    }
 
     /**
      * @summary Restructures an object into a VoiceBroadcastData

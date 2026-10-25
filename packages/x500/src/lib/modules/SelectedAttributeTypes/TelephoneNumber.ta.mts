@@ -1,5 +1,5 @@
 /* eslint-disable */
-import { ASN1Element as _Element, PrintableString } from "@wildboar/asn1";
+import { ASN1Element as _Element, type PrintableString } from "@wildboar/asn1";
 import * as $ from "@wildboar/asn1/functional";
 
 /**
@@ -18,10 +18,10 @@ import * as $ from "@wildboar/asn1/functional";
 export type TelephoneNumber = PrintableString; // PrintableString
 
 
-export const _decode_TelephoneNumber = $._decodePrintableString;
+export const _decode_TelephoneNumber: $.ASN1Decoder<string> = $._decodePrintableString;
 
 
-export const _encode_TelephoneNumber = $._encodePrintableString;
+export const _encode_TelephoneNumber: $.ASN1Encoder<string> = $._encodePrintableString;
 
 
 /* eslint-enable */

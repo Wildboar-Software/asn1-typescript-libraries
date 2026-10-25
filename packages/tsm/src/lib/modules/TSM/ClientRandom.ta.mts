@@ -1,6 +1,6 @@
 /* eslint-disable */
 import {
-    ASN1Element as _Element,
+    type ASN1Element as _Element,
     ASN1TagClass as _TagClass,
     ASN1Construction as _Construction,
     ASN1UniversalType as _UniversalType,
@@ -11,9 +11,9 @@ import {
     ASN1SizeError,
 } from "@wildboar/asn1";
 import * as $ from "@wildboar/asn1/functional";
-import { UINT32, _decode_UINT32, _encode_UINT32 } from "../TSM/UINT32.ta.mjs";
+import { type UINT32, _decode_UINT32, _encode_UINT32 } from "../TSM/UINT32.ta.mjs";
 
-import { Opaque, _decode_Opaque, _encode_Opaque } from "../TSM/Opaque.ta.mjs";
+import { type Opaque, _decode_Opaque, _encode_Opaque } from "../TSM/Opaque.ta.mjs";
 
 
 
@@ -37,29 +37,35 @@ import { Opaque, _decode_Opaque, _encode_Opaque } from "../TSM/Opaque.ta.mjs";
  */
 export
 class ClientRandom {
+    /**
+     * @summary `gmt_unix_time`.
+     * @description
+     *
+     * GMT Unix time in seconds, as in TLS Random. X.1084 Annex A.
+     *
+     * @public
+     * @readonly
+     */
+    public readonly gmt_unix_time: UINT32;
+    /**
+     * @summary `random_bytes`.
+     * @description
+     *
+     * Cryptographic random octets (28 for client, 57 for server in
+     * Annex A). X.1084 Annex A.
+     *
+     * @public
+     * @readonly
+     */
+    public readonly random_bytes: Opaque;
+
     constructor (
-        /**
-         * @summary `gmt_unix_time`.
-         * @description
-         *
-         * GMT Unix time in seconds, as in TLS Random. X.1084 Annex A.
-         *
-         * @public
-         * @readonly
-         */
-        readonly gmt_unix_time: UINT32,
-        /**
-         * @summary `random_bytes`.
-         * @description
-         *
-         * Cryptographic random octets (28 for client, 57 for server in
-         * Annex A). X.1084 Annex A.
-         *
-         * @public
-         * @readonly
-         */
-        readonly random_bytes: Opaque
-    ) {}
+        gmt_unix_time: UINT32,
+        random_bytes: Opaque
+    ) {
+        this.gmt_unix_time = gmt_unix_time;
+        this.random_bytes = random_bytes;
+    }
 
     /**
      * @summary Restructures an object into a ClientRandom

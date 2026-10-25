@@ -1,8 +1,10 @@
 import {
-    ASN1Element as _Element,
+    type ASN1Element as _Element,
     ASN1TagClass as _TagClass,
+    type OCTET_STRING,
 } from "@wildboar/asn1";
 import { type Digits, _decode_Digits, _encode_Digits } from "./Digits.ta.mjs";
+import type { ASN1Decoder, ASN1Encoder } from "@wildboar/asn1/functional";
 
 /**
  * @summary AssistingSSPIPRoutingAddress
@@ -21,5 +23,5 @@ import { type Digits, _decode_Digits, _encode_Digits } from "./Digits.ta.mjs";
  *
  */
 export type AssistingSSPIPRoutingAddress = Digits;
-export const _decode_AssistingSSPIPRoutingAddress = _decode_Digits;
-export const _encode_AssistingSSPIPRoutingAddress = _encode_Digits;
+export const _decode_AssistingSSPIPRoutingAddress: ASN1Decoder<OCTET_STRING> = _decode_Digits;
+export const _encode_AssistingSSPIPRoutingAddress: ASN1Encoder<OCTET_STRING> = _encode_Digits;

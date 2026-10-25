@@ -1,4 +1,5 @@
 /* eslint-disable */
+import { ASN1Element as _Element, ASN1ConstructionError as _ConstructionError } from "@wildboar/asn1";
 import * as $ from "@wildboar/asn1/functional";
 
 
@@ -84,7 +85,7 @@ type TriggerType = _enum_for_TriggerType;
  * @enum {number}
  */
 export
-const TriggerType = _enum_for_TriggerType;
+const TriggerType: typeof _enum_for_TriggerType = _enum_for_TriggerType;
 
 /**
  * @summary TriggerType_featureActivation
@@ -92,7 +93,7 @@ const TriggerType = _enum_for_TriggerType;
  * @type {number}
  */
 export
-const TriggerType_featureActivation: TriggerType = TriggerType.featureActivation; /* LONG_NAMED_ENUMERATED_VALUE */
+const TriggerType_featureActivation: _enum_for_TriggerType.featureActivation = TriggerType.featureActivation; /* LONG_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary featureActivation
@@ -100,7 +101,7 @@ const TriggerType_featureActivation: TriggerType = TriggerType.featureActivation
  * @type {number}
  */
 export
-const featureActivation: TriggerType = TriggerType.featureActivation; /* SHORT_NAMED_ENUMERATED_VALUE */
+const featureActivation: _enum_for_TriggerType.featureActivation = TriggerType.featureActivation; /* SHORT_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary TriggerType_verticalServiceCode
@@ -108,7 +109,7 @@ const featureActivation: TriggerType = TriggerType.featureActivation; /* SHORT_N
  * @type {number}
  */
 export
-const TriggerType_verticalServiceCode: TriggerType = TriggerType.verticalServiceCode; /* LONG_NAMED_ENUMERATED_VALUE */
+const TriggerType_verticalServiceCode: _enum_for_TriggerType.verticalServiceCode = TriggerType.verticalServiceCode; /* LONG_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary verticalServiceCode
@@ -116,7 +117,7 @@ const TriggerType_verticalServiceCode: TriggerType = TriggerType.verticalService
  * @type {number}
  */
 export
-const verticalServiceCode: TriggerType = TriggerType.verticalServiceCode; /* SHORT_NAMED_ENUMERATED_VALUE */
+const verticalServiceCode: _enum_for_TriggerType.verticalServiceCode = TriggerType.verticalServiceCode; /* SHORT_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary TriggerType_customizedAccess
@@ -124,7 +125,7 @@ const verticalServiceCode: TriggerType = TriggerType.verticalServiceCode; /* SHO
  * @type {number}
  */
 export
-const TriggerType_customizedAccess: TriggerType = TriggerType.customizedAccess; /* LONG_NAMED_ENUMERATED_VALUE */
+const TriggerType_customizedAccess: _enum_for_TriggerType.customizedAccess = TriggerType.customizedAccess; /* LONG_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary customizedAccess
@@ -132,7 +133,7 @@ const TriggerType_customizedAccess: TriggerType = TriggerType.customizedAccess; 
  * @type {number}
  */
 export
-const customizedAccess: TriggerType = TriggerType.customizedAccess; /* SHORT_NAMED_ENUMERATED_VALUE */
+const customizedAccess: _enum_for_TriggerType.customizedAccess = TriggerType.customizedAccess; /* SHORT_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary TriggerType_customizedIntercom
@@ -140,7 +141,7 @@ const customizedAccess: TriggerType = TriggerType.customizedAccess; /* SHORT_NAM
  * @type {number}
  */
 export
-const TriggerType_customizedIntercom: TriggerType = TriggerType.customizedIntercom; /* LONG_NAMED_ENUMERATED_VALUE */
+const TriggerType_customizedIntercom: _enum_for_TriggerType.customizedIntercom = TriggerType.customizedIntercom; /* LONG_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary customizedIntercom
@@ -148,7 +149,7 @@ const TriggerType_customizedIntercom: TriggerType = TriggerType.customizedInterc
  * @type {number}
  */
 export
-const customizedIntercom: TriggerType = TriggerType.customizedIntercom; /* SHORT_NAMED_ENUMERATED_VALUE */
+const customizedIntercom: _enum_for_TriggerType.customizedIntercom = TriggerType.customizedIntercom; /* SHORT_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary TriggerType_emergencyService
@@ -156,7 +157,7 @@ const customizedIntercom: TriggerType = TriggerType.customizedIntercom; /* SHORT
  * @type {number}
  */
 export
-const TriggerType_emergencyService: TriggerType = TriggerType.emergencyService; /* LONG_NAMED_ENUMERATED_VALUE */
+const TriggerType_emergencyService: _enum_for_TriggerType.emergencyService = TriggerType.emergencyService; /* LONG_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary emergencyService
@@ -164,7 +165,7 @@ const TriggerType_emergencyService: TriggerType = TriggerType.emergencyService; 
  * @type {number}
  */
 export
-const emergencyService: TriggerType = TriggerType.emergencyService; /* SHORT_NAMED_ENUMERATED_VALUE */
+const emergencyService: _enum_for_TriggerType.emergencyService = TriggerType.emergencyService; /* SHORT_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary TriggerType_aFR
@@ -172,7 +173,7 @@ const emergencyService: TriggerType = TriggerType.emergencyService; /* SHORT_NAM
  * @type {number}
  */
 export
-const TriggerType_aFR: TriggerType = TriggerType.aFR; /* LONG_NAMED_ENUMERATED_VALUE */
+const TriggerType_aFR: _enum_for_TriggerType.aFR = TriggerType.aFR; /* LONG_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary aFR
@@ -180,7 +181,7 @@ const TriggerType_aFR: TriggerType = TriggerType.aFR; /* LONG_NAMED_ENUMERATED_V
  * @type {number}
  */
 export
-const aFR: TriggerType = TriggerType.aFR; /* SHORT_NAMED_ENUMERATED_VALUE */
+const aFR: _enum_for_TriggerType.aFR = TriggerType.aFR; /* SHORT_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary TriggerType_sharedIOTrunk
@@ -188,7 +189,7 @@ const aFR: TriggerType = TriggerType.aFR; /* SHORT_NAMED_ENUMERATED_VALUE */
  * @type {number}
  */
 export
-const TriggerType_sharedIOTrunk: TriggerType = TriggerType.sharedIOTrunk; /* LONG_NAMED_ENUMERATED_VALUE */
+const TriggerType_sharedIOTrunk: _enum_for_TriggerType.sharedIOTrunk = TriggerType.sharedIOTrunk; /* LONG_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary sharedIOTrunk
@@ -196,7 +197,7 @@ const TriggerType_sharedIOTrunk: TriggerType = TriggerType.sharedIOTrunk; /* LON
  * @type {number}
  */
 export
-const sharedIOTrunk: TriggerType = TriggerType.sharedIOTrunk; /* SHORT_NAMED_ENUMERATED_VALUE */
+const sharedIOTrunk: _enum_for_TriggerType.sharedIOTrunk = TriggerType.sharedIOTrunk; /* SHORT_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary TriggerType_offHookDelay
@@ -204,7 +205,7 @@ const sharedIOTrunk: TriggerType = TriggerType.sharedIOTrunk; /* SHORT_NAMED_ENU
  * @type {number}
  */
 export
-const TriggerType_offHookDelay: TriggerType = TriggerType.offHookDelay; /* LONG_NAMED_ENUMERATED_VALUE */
+const TriggerType_offHookDelay: _enum_for_TriggerType.offHookDelay = TriggerType.offHookDelay; /* LONG_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary offHookDelay
@@ -212,7 +213,7 @@ const TriggerType_offHookDelay: TriggerType = TriggerType.offHookDelay; /* LONG_
  * @type {number}
  */
 export
-const offHookDelay: TriggerType = TriggerType.offHookDelay; /* SHORT_NAMED_ENUMERATED_VALUE */
+const offHookDelay: _enum_for_TriggerType.offHookDelay = TriggerType.offHookDelay; /* SHORT_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary TriggerType_channelSetupPRI
@@ -220,7 +221,7 @@ const offHookDelay: TriggerType = TriggerType.offHookDelay; /* SHORT_NAMED_ENUME
  * @type {number}
  */
 export
-const TriggerType_channelSetupPRI: TriggerType = TriggerType.channelSetupPRI; /* LONG_NAMED_ENUMERATED_VALUE */
+const TriggerType_channelSetupPRI: _enum_for_TriggerType.channelSetupPRI = TriggerType.channelSetupPRI; /* LONG_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary channelSetupPRI
@@ -228,7 +229,7 @@ const TriggerType_channelSetupPRI: TriggerType = TriggerType.channelSetupPRI; /*
  * @type {number}
  */
 export
-const channelSetupPRI: TriggerType = TriggerType.channelSetupPRI; /* SHORT_NAMED_ENUMERATED_VALUE */
+const channelSetupPRI: _enum_for_TriggerType.channelSetupPRI = TriggerType.channelSetupPRI; /* SHORT_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary TriggerType_tNoAnswer
@@ -236,7 +237,7 @@ const channelSetupPRI: TriggerType = TriggerType.channelSetupPRI; /* SHORT_NAMED
  * @type {number}
  */
 export
-const TriggerType_tNoAnswer: TriggerType = TriggerType.tNoAnswer; /* LONG_NAMED_ENUMERATED_VALUE */
+const TriggerType_tNoAnswer: _enum_for_TriggerType.tNoAnswer = TriggerType.tNoAnswer; /* LONG_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary tNoAnswer
@@ -244,7 +245,7 @@ const TriggerType_tNoAnswer: TriggerType = TriggerType.tNoAnswer; /* LONG_NAMED_
  * @type {number}
  */
 export
-const tNoAnswer: TriggerType = TriggerType.tNoAnswer; /* SHORT_NAMED_ENUMERATED_VALUE */
+const tNoAnswer: _enum_for_TriggerType.tNoAnswer = TriggerType.tNoAnswer; /* SHORT_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary TriggerType_tBusy
@@ -252,7 +253,7 @@ const tNoAnswer: TriggerType = TriggerType.tNoAnswer; /* SHORT_NAMED_ENUMERATED_
  * @type {number}
  */
 export
-const TriggerType_tBusy: TriggerType = TriggerType.tBusy; /* LONG_NAMED_ENUMERATED_VALUE */
+const TriggerType_tBusy: _enum_for_TriggerType.tBusy = TriggerType.tBusy; /* LONG_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary tBusy
@@ -260,7 +261,7 @@ const TriggerType_tBusy: TriggerType = TriggerType.tBusy; /* LONG_NAMED_ENUMERAT
  * @type {number}
  */
 export
-const tBusy: TriggerType = TriggerType.tBusy; /* SHORT_NAMED_ENUMERATED_VALUE */
+const tBusy: _enum_for_TriggerType.tBusy = TriggerType.tBusy; /* SHORT_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary TriggerType_oCalledPartyBusy
@@ -268,7 +269,7 @@ const tBusy: TriggerType = TriggerType.tBusy; /* SHORT_NAMED_ENUMERATED_VALUE */
  * @type {number}
  */
 export
-const TriggerType_oCalledPartyBusy: TriggerType = TriggerType.oCalledPartyBusy; /* LONG_NAMED_ENUMERATED_VALUE */
+const TriggerType_oCalledPartyBusy: _enum_for_TriggerType.oCalledPartyBusy = TriggerType.oCalledPartyBusy; /* LONG_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary oCalledPartyBusy
@@ -276,7 +277,7 @@ const TriggerType_oCalledPartyBusy: TriggerType = TriggerType.oCalledPartyBusy; 
  * @type {number}
  */
 export
-const oCalledPartyBusy: TriggerType = TriggerType.oCalledPartyBusy; /* SHORT_NAMED_ENUMERATED_VALUE */
+const oCalledPartyBusy: _enum_for_TriggerType.oCalledPartyBusy = TriggerType.oCalledPartyBusy; /* SHORT_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary TriggerType_oNoAnswer
@@ -284,7 +285,7 @@ const oCalledPartyBusy: TriggerType = TriggerType.oCalledPartyBusy; /* SHORT_NAM
  * @type {number}
  */
 export
-const TriggerType_oNoAnswer: TriggerType = TriggerType.oNoAnswer; /* LONG_NAMED_ENUMERATED_VALUE */
+const TriggerType_oNoAnswer: _enum_for_TriggerType.oNoAnswer = TriggerType.oNoAnswer; /* LONG_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary oNoAnswer
@@ -292,7 +293,7 @@ const TriggerType_oNoAnswer: TriggerType = TriggerType.oNoAnswer; /* LONG_NAMED_
  * @type {number}
  */
 export
-const oNoAnswer: TriggerType = TriggerType.oNoAnswer; /* SHORT_NAMED_ENUMERATED_VALUE */
+const oNoAnswer: _enum_for_TriggerType.oNoAnswer = TriggerType.oNoAnswer; /* SHORT_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary TriggerType_originationAttemptAuthorized
@@ -300,7 +301,7 @@ const oNoAnswer: TriggerType = TriggerType.oNoAnswer; /* SHORT_NAMED_ENUMERATED_
  * @type {number}
  */
 export
-const TriggerType_originationAttemptAuthorized: TriggerType = TriggerType.originationAttemptAuthorized; /* LONG_NAMED_ENUMERATED_VALUE */
+const TriggerType_originationAttemptAuthorized: _enum_for_TriggerType.originationAttemptAuthorized = TriggerType.originationAttemptAuthorized; /* LONG_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary originationAttemptAuthorized
@@ -308,7 +309,7 @@ const TriggerType_originationAttemptAuthorized: TriggerType = TriggerType.origin
  * @type {number}
  */
 export
-const originationAttemptAuthorized: TriggerType = TriggerType.originationAttemptAuthorized; /* SHORT_NAMED_ENUMERATED_VALUE */
+const originationAttemptAuthorized: _enum_for_TriggerType.originationAttemptAuthorized = TriggerType.originationAttemptAuthorized; /* SHORT_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary TriggerType_oAnswer
@@ -316,7 +317,7 @@ const originationAttemptAuthorized: TriggerType = TriggerType.originationAttempt
  * @type {number}
  */
 export
-const TriggerType_oAnswer: TriggerType = TriggerType.oAnswer; /* LONG_NAMED_ENUMERATED_VALUE */
+const TriggerType_oAnswer: _enum_for_TriggerType.oAnswer = TriggerType.oAnswer; /* LONG_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary oAnswer
@@ -324,7 +325,7 @@ const TriggerType_oAnswer: TriggerType = TriggerType.oAnswer; /* LONG_NAMED_ENUM
  * @type {number}
  */
 export
-const oAnswer: TriggerType = TriggerType.oAnswer; /* SHORT_NAMED_ENUMERATED_VALUE */
+const oAnswer: _enum_for_TriggerType.oAnswer = TriggerType.oAnswer; /* SHORT_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary TriggerType_oDisconnect
@@ -332,7 +333,7 @@ const oAnswer: TriggerType = TriggerType.oAnswer; /* SHORT_NAMED_ENUMERATED_VALU
  * @type {number}
  */
 export
-const TriggerType_oDisconnect: TriggerType = TriggerType.oDisconnect; /* LONG_NAMED_ENUMERATED_VALUE */
+const TriggerType_oDisconnect: _enum_for_TriggerType.oDisconnect = TriggerType.oDisconnect; /* LONG_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary oDisconnect
@@ -340,7 +341,7 @@ const TriggerType_oDisconnect: TriggerType = TriggerType.oDisconnect; /* LONG_NA
  * @type {number}
  */
 export
-const oDisconnect: TriggerType = TriggerType.oDisconnect; /* SHORT_NAMED_ENUMERATED_VALUE */
+const oDisconnect: _enum_for_TriggerType.oDisconnect = TriggerType.oDisconnect; /* SHORT_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary TriggerType_termAttemptAuthorized
@@ -348,7 +349,7 @@ const oDisconnect: TriggerType = TriggerType.oDisconnect; /* SHORT_NAMED_ENUMERA
  * @type {number}
  */
 export
-const TriggerType_termAttemptAuthorized: TriggerType = TriggerType.termAttemptAuthorized; /* LONG_NAMED_ENUMERATED_VALUE */
+const TriggerType_termAttemptAuthorized: _enum_for_TriggerType.termAttemptAuthorized = TriggerType.termAttemptAuthorized; /* LONG_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary termAttemptAuthorized
@@ -356,7 +357,7 @@ const TriggerType_termAttemptAuthorized: TriggerType = TriggerType.termAttemptAu
  * @type {number}
  */
 export
-const termAttemptAuthorized: TriggerType = TriggerType.termAttemptAuthorized; /* SHORT_NAMED_ENUMERATED_VALUE */
+const termAttemptAuthorized: _enum_for_TriggerType.termAttemptAuthorized = TriggerType.termAttemptAuthorized; /* SHORT_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary TriggerType_tAnswer
@@ -364,7 +365,7 @@ const termAttemptAuthorized: TriggerType = TriggerType.termAttemptAuthorized; /*
  * @type {number}
  */
 export
-const TriggerType_tAnswer: TriggerType = TriggerType.tAnswer; /* LONG_NAMED_ENUMERATED_VALUE */
+const TriggerType_tAnswer: _enum_for_TriggerType.tAnswer = TriggerType.tAnswer; /* LONG_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary tAnswer
@@ -372,7 +373,7 @@ const TriggerType_tAnswer: TriggerType = TriggerType.tAnswer; /* LONG_NAMED_ENUM
  * @type {number}
  */
 export
-const tAnswer: TriggerType = TriggerType.tAnswer; /* SHORT_NAMED_ENUMERATED_VALUE */
+const tAnswer: _enum_for_TriggerType.tAnswer = TriggerType.tAnswer; /* SHORT_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary TriggerType_tDisconnect
@@ -380,7 +381,7 @@ const tAnswer: TriggerType = TriggerType.tAnswer; /* SHORT_NAMED_ENUMERATED_VALU
  * @type {number}
  */
 export
-const TriggerType_tDisconnect: TriggerType = TriggerType.tDisconnect; /* LONG_NAMED_ENUMERATED_VALUE */
+const TriggerType_tDisconnect: _enum_for_TriggerType.tDisconnect = TriggerType.tDisconnect; /* LONG_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary tDisconnect
@@ -388,12 +389,40 @@ const TriggerType_tDisconnect: TriggerType = TriggerType.tDisconnect; /* LONG_NA
  * @type {number}
  */
 export
-const tDisconnect: TriggerType = TriggerType.tDisconnect; /* SHORT_NAMED_ENUMERATED_VALUE */
+const tDisconnect: _enum_for_TriggerType.tDisconnect = TriggerType.tDisconnect; /* SHORT_NAMED_ENUMERATED_VALUE */
 
 export
-const _decode_TriggerType: $.ASN1Decoder<TriggerType> = $._decodeEnumerated;
+function _decode_TriggerType(el: _Element): TriggerType {
+    const enumerated = $._decodeEnumerated(el);
+    switch (enumerated) {
+        case TriggerType.featureActivation: return TriggerType.featureActivation;
+        case TriggerType.verticalServiceCode: return TriggerType.verticalServiceCode;
+        case TriggerType.customizedAccess: return TriggerType.customizedAccess;
+        case TriggerType.customizedIntercom: return TriggerType.customizedIntercom;
+        case TriggerType.emergencyService: return TriggerType.emergencyService;
+        case TriggerType.aFR: return TriggerType.aFR;
+        case TriggerType.sharedIOTrunk: return TriggerType.sharedIOTrunk;
+        case TriggerType.offHookDelay: return TriggerType.offHookDelay;
+        case TriggerType.channelSetupPRI: return TriggerType.channelSetupPRI;
+        case TriggerType.tNoAnswer: return TriggerType.tNoAnswer;
+        case TriggerType.tBusy: return TriggerType.tBusy;
+        case TriggerType.oCalledPartyBusy: return TriggerType.oCalledPartyBusy;
+        case TriggerType.oNoAnswer: return TriggerType.oNoAnswer;
+        case TriggerType.originationAttemptAuthorized: return TriggerType.originationAttemptAuthorized;
+        case TriggerType.oAnswer: return TriggerType.oAnswer;
+        case TriggerType.oDisconnect: return TriggerType.oDisconnect;
+        case TriggerType.termAttemptAuthorized: return TriggerType.termAttemptAuthorized;
+        case TriggerType.tAnswer: return TriggerType.tAnswer;
+        case TriggerType.tDisconnect: return TriggerType.tDisconnect;
+        default:
+            throw new _ConstructionError(
+                "Invalid ENUMERATED value " + enumerated + " for TriggerType.",
+                el,
+            );
+    }
+}
 
 export
-const _encode_TriggerType: $.ASN1Encoder<TriggerType> = $._encodeEnumerated;
+const _encode_TriggerType: $.ASN1Encoder<TriggerType> = $._encodeEnumerated as $.ASN1Encoder<TriggerType>;
 
 /* eslint-enable */

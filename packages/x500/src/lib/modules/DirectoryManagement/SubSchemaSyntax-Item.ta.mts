@@ -1,7 +1,7 @@
 /* eslint-disable */
 import {
     ASN1ConstructionError as _ConstructionError,
-    ASN1Element as _Element,
+    type ASN1Element as _Element,
     ASN1TagClass as _TagClass,
 } from "@wildboar/asn1";
 import * as $ from "@wildboar/asn1/functional";
@@ -11,7 +11,7 @@ import {
     _encode_SubSchemaSyntax_Item_subSchema,
 } from "../DirectoryManagement/SubSchemaSyntax-Item-subSchema.ta.mjs";
 import {
-    Name,
+    type Name,
     _decode_Name,
     _encode_Name,
 } from "../InformationFramework/Name.ta.mjs";
@@ -31,29 +31,35 @@ import {
  *
  */
 export class SubSchemaSyntax_Item {
+    /**
+     * @summary `name`.
+     * @description
+     *
+     * Name of the subschema subentry, not the administrative point.
+     * Tagged [1] EXPLICIT.
+     *
+     * @public
+     * @readonly
+     */
+    public readonly name: Name;
+    /**
+     * @summary `subSchema`.
+     * @description
+     *
+     * Published schema components. Tagged [2] EXPLICIT.
+     *
+     * @public
+     * @readonly
+     */
+    public readonly subSchema: SubSchemaSyntax_Item_subSchema;
+
     constructor(
-        /**
-         * @summary `name`.
-         * @description
-         *
-         * Name of the subschema subentry, not the administrative point.
-         * Tagged [1] EXPLICIT.
-         *
-         * @public
-         * @readonly
-         */
-        readonly name: Name,
-        /**
-         * @summary `subSchema`.
-         * @description
-         *
-         * Published schema components. Tagged [2] EXPLICIT.
-         *
-         * @public
-         * @readonly
-         */
-        readonly subSchema: SubSchemaSyntax_Item_subSchema
-    ) {}
+        name: Name,
+        subSchema: SubSchemaSyntax_Item_subSchema
+    ) {
+        this.name = name;
+        this.subSchema = subSchema;
+    }
 
     /**
      * @summary Restructures an object into a SubSchemaSyntax_Item

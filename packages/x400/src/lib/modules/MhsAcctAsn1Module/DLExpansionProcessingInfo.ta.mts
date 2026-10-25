@@ -1,6 +1,6 @@
 /* eslint-disable */
 import {
-    ASN1Element as _Element,
+    type ASN1Element as _Element,
     ASN1TagClass as _TagClass,
     ASN1Construction as _Construction,
     ASN1UniversalType as _UniversalType,
@@ -11,12 +11,12 @@ import {
 } from '@wildboar/asn1';
 import * as $ from '@wildboar/asn1/functional';
 import {
-    ORAddressAndOptionalDirectoryName,
+    type ORAddressAndOptionalDirectoryName,
     _decode_ORAddressAndOptionalDirectoryName,
     _encode_ORAddressAndOptionalDirectoryName,
 } from '../MTSAbstractService/ORAddressAndOptionalDirectoryName.ta.mjs';
 import {
-    Actions,
+    type Actions,
     _decode_Actions,
     _encode_Actions,
 } from '../MhsAcctAsn1Module/Actions.ta.mjs';
@@ -37,20 +37,26 @@ import {
  *
  */
 export class DLExpansionProcessingInfo {
+    /**
+     * @summary `dlORName`.
+     * @public
+     * @readonly
+     */
+    public readonly dlORName: ORAddressAndOptionalDirectoryName;
+    /**
+     * @summary `actions`.
+     * @public
+     * @readonly
+     */
+    public readonly actions: Actions;
+
     constructor(
-        /**
-         * @summary `dlORName`.
-         * @public
-         * @readonly
-         */
-        readonly dlORName: ORAddressAndOptionalDirectoryName,
-        /**
-         * @summary `actions`.
-         * @public
-         * @readonly
-         */
-        readonly actions: Actions
-    ) {}
+        dlORName: ORAddressAndOptionalDirectoryName,
+        actions: Actions
+    ) {
+        this.dlORName = dlORName;
+        this.actions = actions;
+    }
 
     /**
      * @summary Restructures an object into a DLExpansionProcessingInfo

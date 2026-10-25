@@ -1,7 +1,7 @@
 /* eslint-disable */
 import {
-  OPTIONAL,
-  INTEGER,
+  type OPTIONAL,
+  type INTEGER,
   ASN1Element as _Element,
   ASN1TagClass as _TagClass,
   ASN1Construction as _Construction,
@@ -13,7 +13,7 @@ import {
 } from '@wildboar/asn1';
 import * as $ from '@wildboar/asn1/functional';
 import {
-  Request_Type,
+  type Request_Type,
   _decode_Request_Type,
   _encode_Request_Type,
 } from '../ISO8571-FTAM/Request-Type.ta.mjs';
@@ -55,7 +55,7 @@ export class F_RESTART_response {
    * @public
    * @readonly
    */
-  readonly checkpoint_identifier: INTEGER;
+  public readonly checkpoint_identifier: INTEGER;
   /**
    * @summary `request_type`.
    * @description
@@ -67,7 +67,7 @@ export class F_RESTART_response {
    * @public
    * @readonly
    */
-  readonly request_type: OPTIONAL<Request_Type>;
+  public readonly request_type: OPTIONAL<Request_Type>;
   /**
    * @summary `transfer_number`.
    * @description
@@ -78,7 +78,7 @@ export class F_RESTART_response {
    * @public
    * @readonly
    */
-  readonly transfer_number: INTEGER;
+  public readonly transfer_number: INTEGER;
   /**
    * @summary `last_transfer_end_read_request`.
    * @description
@@ -89,7 +89,7 @@ export class F_RESTART_response {
    * @public
    * @readonly
    */
-  readonly last_transfer_end_read_request?: OPTIONAL<INTEGER>;
+  public readonly last_transfer_end_read_request?: OPTIONAL<INTEGER>;
   /**
    * @summary `last_transfer_end_read_response`.
    * @description
@@ -100,7 +100,7 @@ export class F_RESTART_response {
    * @public
    * @readonly
    */
-  readonly last_transfer_end_read_response?: OPTIONAL<INTEGER>;
+  public readonly last_transfer_end_read_response?: OPTIONAL<INTEGER>;
   /**
    * @summary `last_transfer_end_write_request`.
    * @description
@@ -111,7 +111,7 @@ export class F_RESTART_response {
    * @public
    * @readonly
    */
-  readonly last_transfer_end_write_request?: OPTIONAL<INTEGER>;
+  public readonly last_transfer_end_write_request?: OPTIONAL<INTEGER>;
   /**
    * @summary `last_transfer_end_write_response`.
    * @description
@@ -122,7 +122,7 @@ export class F_RESTART_response {
    * @public
    * @readonly
    */
-  readonly last_transfer_end_write_response?: OPTIONAL<INTEGER>;
+  public readonly last_transfer_end_write_response?: OPTIONAL<INTEGER>;
 
   constructor(
     checkpoint_identifier: INTEGER,

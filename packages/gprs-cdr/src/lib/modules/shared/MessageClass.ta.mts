@@ -63,7 +63,7 @@ type MessageClass = _enum_for_MessageClass;
  * @enum {number}
  */
 export
-const MessageClass = _enum_for_MessageClass;
+const MessageClass: typeof _enum_for_MessageClass = _enum_for_MessageClass;
 
 /**
  * @summary MessageClass_personal
@@ -71,7 +71,7 @@ const MessageClass = _enum_for_MessageClass;
  * @type {number}
  */
 export
-const MessageClass_personal: MessageClass = MessageClass.personal; /* LONG_NAMED_ENUMERATED_VALUE */
+const MessageClass_personal: _enum_for_MessageClass.personal = MessageClass.personal; /* LONG_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary personal
@@ -79,7 +79,7 @@ const MessageClass_personal: MessageClass = MessageClass.personal; /* LONG_NAMED
  * @type {number}
  */
 export
-const personal: MessageClass = MessageClass.personal; /* SHORT_NAMED_ENUMERATED_VALUE */
+const personal: _enum_for_MessageClass.personal = MessageClass.personal; /* SHORT_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary MessageClass_advertisement
@@ -87,7 +87,7 @@ const personal: MessageClass = MessageClass.personal; /* SHORT_NAMED_ENUMERATED_
  * @type {number}
  */
 export
-const MessageClass_advertisement: MessageClass = MessageClass.advertisement; /* LONG_NAMED_ENUMERATED_VALUE */
+const MessageClass_advertisement: _enum_for_MessageClass.advertisement = MessageClass.advertisement; /* LONG_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary advertisement
@@ -95,7 +95,7 @@ const MessageClass_advertisement: MessageClass = MessageClass.advertisement; /* 
  * @type {number}
  */
 export
-const advertisement: MessageClass = MessageClass.advertisement; /* SHORT_NAMED_ENUMERATED_VALUE */
+const advertisement: _enum_for_MessageClass.advertisement = MessageClass.advertisement; /* SHORT_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary MessageClass_information_service
@@ -103,7 +103,7 @@ const advertisement: MessageClass = MessageClass.advertisement; /* SHORT_NAMED_E
  * @type {number}
  */
 export
-const MessageClass_information_service: MessageClass = MessageClass.information_service; /* LONG_NAMED_ENUMERATED_VALUE */
+const MessageClass_information_service: _enum_for_MessageClass.information_service = MessageClass.information_service; /* LONG_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary information_service
@@ -111,7 +111,7 @@ const MessageClass_information_service: MessageClass = MessageClass.information_
  * @type {number}
  */
 export
-const information_service: MessageClass = MessageClass.information_service; /* SHORT_NAMED_ENUMERATED_VALUE */
+const information_service: _enum_for_MessageClass.information_service = MessageClass.information_service; /* SHORT_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary MessageClass_auto
@@ -119,7 +119,7 @@ const information_service: MessageClass = MessageClass.information_service; /* S
  * @type {number}
  */
 export
-const MessageClass_auto: MessageClass = MessageClass.auto; /* LONG_NAMED_ENUMERATED_VALUE */
+const MessageClass_auto: _enum_for_MessageClass.auto = MessageClass.auto; /* LONG_NAMED_ENUMERATED_VALUE */
 
 /**
  * @summary auto
@@ -127,7 +127,7 @@ const MessageClass_auto: MessageClass = MessageClass.auto; /* LONG_NAMED_ENUMERA
  * @type {number}
  */
 export
-const auto: MessageClass = MessageClass.auto; /* SHORT_NAMED_ENUMERATED_VALUE */
+const auto: _enum_for_MessageClass.auto = MessageClass.auto; /* SHORT_NAMED_ENUMERATED_VALUE */
 
 export
 const _decode_MessageClass: $.ASN1Decoder<MessageClass> = $._decodeEnumerated;

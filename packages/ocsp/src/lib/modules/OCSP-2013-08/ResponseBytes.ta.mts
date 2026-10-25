@@ -1,10 +1,10 @@
 /* eslint-disable */
 import {
     ASN1ConstructionError as _ConstructionError,
-    ASN1Element as _Element,
+    type ASN1Element as _Element,
     ASN1TagClass as _TagClass,
-    OBJECT_IDENTIFIER,
-    OCTET_STRING,
+    type OBJECT_IDENTIFIER,
+    type OCTET_STRING,
 } from "@wildboar/asn1";
 import * as $ from "@wildboar/asn1/functional";
 
@@ -34,33 +34,39 @@ import * as $ from "@wildboar/asn1/functional";
  *
  */
 export class ResponseBytes {
+    /**
+     * @summary `responseType`.
+     * @description
+     *
+     * OBJECT IDENTIFIER of the response syntax (e.g.
+     * `id-pkix-ocsp-basic`)
+     * ([RFC 6960 §4.2.1](https://datatracker.ietf.org/doc/html/rfc6960#section-4.2.1)).
+     *
+     * @public
+     * @readonly
+     */
+    public readonly responseType: OBJECT_IDENTIFIER;
+    /**
+     * @summary `response`.
+     * @description
+     *
+     * DER encoding of the response value identified by
+     * `responseType` (for basic OCSP, DER of
+     * `BasicOCSPResponse`)
+     * ([RFC 6960 §4.2.1](https://datatracker.ietf.org/doc/html/rfc6960#section-4.2.1)).
+     *
+     * @public
+     * @readonly
+     */
+    public readonly response: OCTET_STRING;
+
     constructor(
-        /**
-         * @summary `responseType`.
-         * @description
-         *
-         * OBJECT IDENTIFIER of the response syntax (e.g.
-         * `id-pkix-ocsp-basic`)
-         * ([RFC 6960 §4.2.1](https://datatracker.ietf.org/doc/html/rfc6960#section-4.2.1)).
-         *
-         * @public
-         * @readonly
-         */
-        readonly responseType: OBJECT_IDENTIFIER,
-        /**
-         * @summary `response`.
-         * @description
-         *
-         * DER encoding of the response value identified by
-         * `responseType` (for basic OCSP, DER of
-         * `BasicOCSPResponse`)
-         * ([RFC 6960 §4.2.1](https://datatracker.ietf.org/doc/html/rfc6960#section-4.2.1)).
-         *
-         * @public
-         * @readonly
-         */
-        readonly response: OCTET_STRING
-    ) {}
+        responseType: OBJECT_IDENTIFIER,
+        response: OCTET_STRING
+    ) {
+        this.responseType = responseType;
+        this.response = response;
+    }
 
     /**
      * @summary Restructures an object into a ResponseBytes

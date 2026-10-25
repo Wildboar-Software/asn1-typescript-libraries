@@ -2,15 +2,15 @@
 
 import * as $ from "@wildboar/asn1/functional";
 import {
-    OPTIONAL,
-    SEQUENCE,
-    SET,
-    ASN1Element as _Element,
+    type OPTIONAL,
+    type SEQUENCE,
+    type SET,
+    type ASN1Element as _Element,
     ASN1TagClass as _TagClass
 } from "@wildboar/asn1";
-import { SysStatRegisterID, _decode_SysStatRegisterID, _encode_SysStatRegisterID } from "../CSTA-device-feature-types/SysStatRegisterID.ta.mjs";
+import { type SysStatRegisterID, _decode_SysStatRegisterID, _encode_SysStatRegisterID } from "../CSTA-device-feature-types/SysStatRegisterID.ta.mjs";
 
-import { StatusFilter, _decode_StatusFilter, _encode_StatusFilter } from "../CSTA-system-register/StatusFilter.ta.mjs";
+import { type StatusFilter, _decode_StatusFilter, _encode_StatusFilter } from "../CSTA-system-register/StatusFilter.ta.mjs";
 
 import { CSTACommonArguments, _decode_CSTACommonArguments, _encode_CSTACommonArguments } from "../CSTA-extension-types/CSTACommonArguments.ta.mjs";
 
@@ -30,7 +30,7 @@ import { CSTACommonArguments, _decode_CSTACommonArguments, _encode_CSTACommonArg
  * ```asn1
  * SystemRegisterResult ::= SEQUENCE
  * {     sysStatRegisterID         SysStatRegisterID,
- *     actualStatusFilter         StatusFilter             OPTIONAL,
+ *     actualStatusFilter         StatusFilter             type OPTIONAL,
  *     extensions             CSTACommonArguments         OPTIONAL }
  * ```
  * 
@@ -38,36 +38,44 @@ import { CSTACommonArguments, _decode_CSTACommonArguments, _encode_CSTACommonArg
  */
 export
 class SystemRegisterResult {
+    /**
+     * @summary `sysStatRegisterID`.
+     * @description
+     *
+     * SF-allocated registration identifier (ECMA-269 §12.3.31).
+     * @public
+     * @readonly
+     */
+    public readonly sysStatRegisterID: SysStatRegisterID;
+    /**
+     * @summary `actualStatusFilter`.
+     * @description
+     *
+     * Filter the SF will actually apply, if System Status was requested.
+     * @public
+     * @readonly
+     */
+    public readonly actualStatusFilter?: OPTIONAL<StatusFilter>;
+    /**
+     * @summary `extensions`.
+     * @description
+     *
+     * Optional security (timestamp, sequence, securityInfo) and
+     * privateData. ECMA-269 Table 14-5.
+     * @public
+     * @readonly
+     */
+    public readonly extensions?: OPTIONAL<CSTACommonArguments>;
+
     constructor (
-        /**
-         * @summary `sysStatRegisterID`.
-         * @description
-         *
-         * SF-allocated registration identifier (ECMA-269 §12.3.31).
-         * @public
-         * @readonly
-         */
-        readonly sysStatRegisterID: SysStatRegisterID,
-        /**
-         * @summary `actualStatusFilter`.
-         * @description
-         *
-         * Filter the SF will actually apply, if System Status was requested.
-         * @public
-         * @readonly
-         */
-        readonly actualStatusFilter?: OPTIONAL<StatusFilter>,
-        /**
-         * @summary `extensions`.
-         * @description
-         *
-         * Optional security (timestamp, sequence, securityInfo) and
-         * privateData. ECMA-269 Table 14-5.
-         * @public
-         * @readonly
-         */
-        readonly extensions?: OPTIONAL<CSTACommonArguments>
-    ) {}
+        sysStatRegisterID: SysStatRegisterID,
+        actualStatusFilter?: OPTIONAL<StatusFilter>,
+        extensions?: OPTIONAL<CSTACommonArguments>
+    ) {
+        this.sysStatRegisterID = sysStatRegisterID;
+        this.actualStatusFilter = actualStatusFilter;
+        this.extensions = extensions;
+    }
 
     /**
      * @summary Restructures an object into a SystemRegisterResult

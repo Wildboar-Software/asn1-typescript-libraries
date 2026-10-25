@@ -1,7 +1,7 @@
 /* eslint-disable */
 import {
-  OPTIONAL,
-  UTF8String,
+  type OPTIONAL,
+  type UTF8String,
   ASN1Element as _Element,
   ASN1TagClass as _TagClass,
   ASN1Construction as _Construction,
@@ -13,46 +13,46 @@ import {
 } from '@wildboar/asn1';
 import * as $ from '@wildboar/asn1/functional';
 import {
-  BioAPI_UUID,
+  type BioAPI_UUID,
   _decode_BioAPI_UUID,
   _encode_BioAPI_UUID,
 } from '../BIP/BioAPI-UUID.ta.mjs';
 import {
-  BioAPI_UNIT_ID,
+  type BioAPI_UNIT_ID,
   _decode_BioAPI_UNIT_ID,
   _encode_BioAPI_UNIT_ID,
 } from '../BIP/BioAPI-UNIT-ID.ta.mjs';
 import {
-  BioAPI_HANDLE,
+  type BioAPI_HANDLE,
   _decode_BioAPI_HANDLE,
   _encode_BioAPI_HANDLE,
 } from '../BIP/BioAPI-HANDLE.ta.mjs';
 import {
-  BioAPI_GUI_OPERATION,
+  type BioAPI_GUI_OPERATION,
   _enum_for_BioAPI_GUI_OPERATION,
   _decode_BioAPI_GUI_OPERATION,
   _encode_BioAPI_GUI_OPERATION,
 } from '../BIP/BioAPI-GUI-OPERATION.ta.mjs';
 import {
-  BioAPI_GUI_SUBOPERATION,
+  type BioAPI_GUI_SUBOPERATION,
   _enum_for_BioAPI_GUI_SUBOPERATION,
   _decode_BioAPI_GUI_SUBOPERATION,
   _encode_BioAPI_GUI_SUBOPERATION,
 } from '../BIP/BioAPI-GUI-SUBOPERATION.ta.mjs';
 import {
-  BioAPI_BIR_PURPOSE,
+  type BioAPI_BIR_PURPOSE,
   _enum_for_BioAPI_BIR_PURPOSE,
   _decode_BioAPI_BIR_PURPOSE,
   _encode_BioAPI_BIR_PURPOSE,
 } from '../BIP/BioAPI-BIR-PURPOSE.ta.mjs';
 import {
-  BioAPI_GUI_MOMENT,
+  type BioAPI_GUI_MOMENT,
   _enum_for_BioAPI_GUI_MOMENT,
   _decode_BioAPI_GUI_MOMENT,
   _encode_BioAPI_GUI_MOMENT,
 } from '../BIP/BioAPI-GUI-MOMENT.ta.mjs';
 import {
-  UnsignedByte,
+  type UnsignedByte,
   _decode_UnsignedByte,
   _encode_UnsignedByte,
 } from '../BIP/UnsignedByte.ta.mjs';
@@ -108,7 +108,7 @@ export class GUIProgressEvent_NotificationParams {
    * @public
    * @readonly
    */
-  readonly guiEventSubscriptionUuid: OPTIONAL<BioAPI_UUID>;
+  public readonly guiEventSubscriptionUuid: OPTIONAL<BioAPI_UUID>;
   /**
    * @summary `bspProductUuid`.
    * @description
@@ -119,7 +119,7 @@ export class GUIProgressEvent_NotificationParams {
    * @public
    * @readonly
    */
-  readonly bspProductUuid: BioAPI_UUID;
+  public readonly bspProductUuid: BioAPI_UUID;
   /**
    * @summary `unitID`.
    * @description
@@ -130,7 +130,7 @@ export class GUIProgressEvent_NotificationParams {
    * @public
    * @readonly
    */
-  readonly unitID: BioAPI_UNIT_ID;
+  public readonly unitID: BioAPI_UNIT_ID;
   /**
    * @summary `originalBSPHandle`.
    * @description
@@ -141,7 +141,7 @@ export class GUIProgressEvent_NotificationParams {
    * @public
    * @readonly
    */
-  readonly originalBSPHandle: OPTIONAL<BioAPI_HANDLE>;
+  public readonly originalBSPHandle: OPTIONAL<BioAPI_HANDLE>;
   /**
    * @summary `operation`.
    * @description
@@ -151,7 +151,7 @@ export class GUIProgressEvent_NotificationParams {
    * @public
    * @readonly
    */
-  readonly operation: BioAPI_GUI_OPERATION;
+  public readonly operation: BioAPI_GUI_OPERATION;
   /**
    * @summary `suboperation`.
    * @description
@@ -161,7 +161,7 @@ export class GUIProgressEvent_NotificationParams {
    * @public
    * @readonly
    */
-  readonly suboperation: BioAPI_GUI_SUBOPERATION;
+  public readonly suboperation: BioAPI_GUI_SUBOPERATION;
   /**
    * @summary `purpose`.
    * @description
@@ -171,7 +171,7 @@ export class GUIProgressEvent_NotificationParams {
    * @public
    * @readonly
    */
-  readonly purpose: BioAPI_BIR_PURPOSE;
+  public readonly purpose: BioAPI_BIR_PURPOSE;
   /**
    * @summary `moment`.
    * @description
@@ -181,7 +181,7 @@ export class GUIProgressEvent_NotificationParams {
    * @public
    * @readonly
    */
-  readonly moment: BioAPI_GUI_MOMENT;
+  public readonly moment: BioAPI_GUI_MOMENT;
   /**
    * @summary `suboperationProgress`.
    * @description
@@ -192,7 +192,7 @@ export class GUIProgressEvent_NotificationParams {
    * @public
    * @readonly
    */
-  readonly suboperationProgress: UnsignedByte;
+  public readonly suboperationProgress: UnsignedByte;
   /**
    * @summary `bitmaps`.
    * @description
@@ -202,7 +202,7 @@ export class GUIProgressEvent_NotificationParams {
    * @public
    * @readonly
    */
-  readonly bitmaps?: OPTIONAL<BioAPI_GUI_BITMAP_ARRAY>;
+  public readonly bitmaps?: OPTIONAL<BioAPI_GUI_BITMAP_ARRAY>;
   /**
    * @summary `text`.
    * @description
@@ -212,7 +212,7 @@ export class GUIProgressEvent_NotificationParams {
    * @public
    * @readonly
    */
-  readonly text?: OPTIONAL<UTF8String>;
+  public readonly text?: OPTIONAL<UTF8String>;
 
   constructor(
     guiEventSubscriptionUuid: OPTIONAL<BioAPI_UUID>,
@@ -278,28 +278,28 @@ export class GUIProgressEvent_NotificationParams {
    * @static
    */
 
-  public static _enum_for_operation = _enum_for_BioAPI_GUI_OPERATION;
+  public static _enum_for_operation: typeof _enum_for_BioAPI_GUI_OPERATION = _enum_for_BioAPI_GUI_OPERATION;
   /**
    * @summary The enum used as the type of the component `suboperation`
    * @public
    * @static
    */
 
-  public static _enum_for_suboperation = _enum_for_BioAPI_GUI_SUBOPERATION;
+  public static _enum_for_suboperation: typeof _enum_for_BioAPI_GUI_SUBOPERATION = _enum_for_BioAPI_GUI_SUBOPERATION;
   /**
    * @summary The enum used as the type of the component `purpose`
    * @public
    * @static
    */
 
-  public static _enum_for_purpose = _enum_for_BioAPI_BIR_PURPOSE;
+  public static _enum_for_purpose: typeof _enum_for_BioAPI_BIR_PURPOSE = _enum_for_BioAPI_BIR_PURPOSE;
   /**
    * @summary The enum used as the type of the component `moment`
    * @public
    * @static
    */
 
-  public static _enum_for_moment = _enum_for_BioAPI_GUI_MOMENT;
+  public static _enum_for_moment: typeof _enum_for_BioAPI_GUI_MOMENT = _enum_for_BioAPI_GUI_MOMENT;
 }
 
 

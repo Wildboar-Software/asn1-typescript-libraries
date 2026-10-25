@@ -1,12 +1,12 @@
 /* eslint-disable */
 import {
-    ASN1Element as _Element,
+    type ASN1Element as _Element,
     ASN1TagClass as _TagClass
 } from "@wildboar/asn1";
 import * as $ from "@wildboar/asn1/functional";
-import { PacketDataHeaderReport, _decode_PacketDataHeaderReport, _encode_PacketDataHeaderReport } from "../IWLANUmtsHI2Operations/PacketDataHeaderReport.ta.mjs";
+import { type PacketDataHeaderReport, _decode_PacketDataHeaderReport, _encode_PacketDataHeaderReport } from "../IWLANUmtsHI2Operations/PacketDataHeaderReport.ta.mjs";
 // export { PacketDataHeaderReport, _decode_PacketDataHeaderReport, _encode_PacketDataHeaderReport } from "../IWLANUmtsHI2Operations/PacketDataHeaderReport.ta.mjs";
-import { PacketDataSummaryReport, _decode_PacketDataSummaryReport, _encode_PacketDataSummaryReport } from "../IWLANUmtsHI2Operations/PacketDataSummaryReport.ta.mjs";
+import { type PacketDataSummaryReport, _decode_PacketDataSummaryReport, _encode_PacketDataSummaryReport } from "../IWLANUmtsHI2Operations/PacketDataSummaryReport.ta.mjs";
 // export { PacketDataSummaryReport, _decode_PacketDataSummaryReport, _encode_PacketDataSummaryReport } from "../IWLANUmtsHI2Operations/PacketDataSummaryReport.ta.mjs";
 
 
